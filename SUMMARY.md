@@ -1,4 +1,6 @@
 +   [Activiti 5.x 用户指南](docs/actvt-5x-usrgd/README.md)
++   [AndroidStudio 4.1 开发基础知识（Java 版）](docs/as-41-dev-essense-java-ed/README.md)
++   [AndroidStudio 4.2 开发基础知识（Kotlin 版）](docs/as-42-dev-essense-kt-ed/README.md)
 +   [Clojure 入门教程](docs/clj-intro/README.md)
 +   [Effective Java 中文第三版](docs/effective-java-3e/README.md)
 +   [跟我学 Spring 系列](docs/genwoxue-spr/README.md)
