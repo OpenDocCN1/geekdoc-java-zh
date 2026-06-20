@@ -1,0 +1,1018 @@
+- " \n ![](img/cover.jpeg)\n\n快速学习 Kotlin\n\n以及\n\n编程练习\n\nPython 与 Java\n\n初学者编程\n\
+  \n包含实战项目\n\n作者\n\nJ J TAM\n\nKotlin 简介\n\nKotlin：Hello World 程序\n\n在 Eclipse 中设置\
+  \ Kotlin\n\n在 Kotlin 中定义变量\n\nKotlin 数据类型\n\nKotlin：可空类型\n\nKotlin：数字\n\nKotlin：字符\n\
+  \nKotlin：将字符转换为 Int\n\nKotlin：布尔值\n\nKotlin：字符串\n\nKotlin：字符串模板表达式\n\nKotlin：数组\n\
+  \nKotlin：定义空值数组\n\nKotlin：使用工厂函数定义数组\n\nKotlin：打印数组元素\n\nKotlin：位运算符\n\nKotlin：逻辑运算符\n\
+  \nKotlin：控制流语句\n\nKotlin：if 语句\n\nKotlin：if-else 语句\n\nKotlin：if-else if-else\n\n\
+  Kotlin：when 表达式\n\nKotlin：将 when 用作 if-else if 阶梯\n\nKotlin：将 When 用作表达式\n\nKotlin：for\
+  \ 循环\n\nKotlin：while、do-while 循环\n\nKotlin：break 语句\n\nKotlin：continue 语句\n\nKotlin：类与对象\n\
+  \nKotlin：声明属性\n\nKotlin：属性的 getter 和 setter\n\nKotlin：定义类的成员函数\n\nKotlin：const：编译时常量\n\
+  \nKotlin：const 与 val\n\nKotlin：lateinit：延迟初始化属性\n\nKotlin：构造函数\n\nKotlin：次要构造函数\n\
+  \nKotlin：向主构造函数传递默认值\n\nKotlin：定义私有主构造函数\n\nKotlin：如何创建对象\n\nKotlin：继承\n\nKotlin：方法重写\n\
+  \nKotlin：属性重写\n\nKotlin：调用超类方法\n\nKotlin：嵌套类\n\nKotlin：内部类\n\nPython 编程练习\n\n获取\
+  \ Python 版本\n\n检查数字\n\nPython 代码：移除第一项\n\n筛选正数\n\n统计数字 4 的个数\n\n判断数字奇偶\n\n获取给定字符串的\
+  \ n 个副本\n\n打印出不在另一个列表中的列表\n\n在三行中分别显示姓名、年龄、地址\n\n求解程序\n\n金额的未来值\n\n检查文件是否存在\n\n\
+  转换距离\n\n求所有项的和\n\n所有项相乘\n\n获取最大数字\n\n获取最小数字\n\n移除重复项\n\n克隆或复制列表\n\n两个列表的差集\n\n生成所有排列\n\
+  \n找出第二小的数\n\n获取唯一值\n\n获取元素的出现频率\n\n生成所有子列表\n\n查找共同项\n\n创建列表\n\n移除连续重复项\n\n扁平化嵌套结构\n\
+  \nJava 编程练习\n\n打印 hello\n\n打印总和\n\n两数相除\n\n打印结果\n\n打印乘法表\n\n求面积\n\n交换两个变量\n\n打印人脸\n\
+  \n华氏度转摄氏度\n\n英寸转米\n\n求所有数字之和\n\n打印年数和天数\n\n计算 (BMI)\n\n计算速度（米）\n\n两个指定整数相除\n\n两个指定整数相乘\n\
+  \n打印总和\n\n找出三个数中的最大值\n\n显示乘法表\n\n显示图案\n\n打印金字塔图案\n\n显示数字菱形结构\n\n学习\n\n快速学习 Kotlin\n\
+  \n# Kotlin 简介\n\nKotlin 是一种在 **JVM** 上运行的高级编程语言。Kotlin 将源代码编译为 Java 字节码，并使用 **JVM**\
+  \ 运行应用程序。你可以交替使用 Java 和 Kotlin，这意味着你可以从 Java 调用 Kotlin 函数，反之亦然。\n\n## 先决条件\n\n需要具备\
+  \ Java 基础知识。\n\n## Kotlin 是面向对象的吗？\n\n是的，Kotlin 是面向对象的语言，你可以创建类、对象，并应用面向对象编程概念，如多态、继承等。\n\
+  \n## Kotlin 是函数式的吗？\n\n是的，Kotlin 是一种函数式语言。在函数式编程语言中，函数是基本的构建块，你可以返回一个函数，将一个函数作为参数传递给另一个函数等。\n\
+  \n## Kotlin 是开源的吗？\n\n是的。\n\n## 我可以使用 Kotlin 开发什么类型的应用程序？\n\n* 构建移动应用程序\n* 开发服务器端应用程序\n\
+  * 你可以开发任何能用 Java 开发的应用程序\n\n## 我可以在 Web 浏览器中运行 Kotlin 代码吗？\n\nKotlin 可以编译为 JavaScript，因此你可以在浏览器中运行应用程序。\n\
+  \n## Kotlin 是静态类型的吗？\n\n是的，Kotlin 是静态类型语言。对于静态类型语言，变量的类型在编译时已知。你可以参考我的文章《静态类型与动态类型语言》来了解静态类型和动态类型语言之间的区别。\n\
+  \n## Kotlin 可以推断类型吗？\n\n是的，与 Java 不同，你在定义变量时无需指定类型。Kotlin 根据上下文推断类型。\n\n例如：\n\n\
+  ```\nvar name = \"Krishna\"\n```\n\n由于 `\"Krishna\"` 被赋值给变量 `name`，Kotlin 推断其类型为\
+  \ `String`。\n\n```\nvar age = 28\n```\n\n由于数字 `28` 被赋值给变量 `age`，Kotlin 推断其类型为 `int`。\n\
+  \n# Kotlin：Hello World 程序\n\n`.kt` 是 Kotlin 文件的扩展名。创建一个名为 `HelloWorld.kt` 的文件，内容如下。\n\
+  \nHelloWorld.kt\n\n```\nfun main (args:Array<String>){\n\nprintln( \"Hello World\"\
+  \ )\n\n}\n```\n\n\n \n关键字 `fun` 用于定义函数。\n\n`main` 是应用程序的主函数。程序执行从这里开始。\n\n`args:Array<String>`\n\
+  \n在 Kotlin 中，变量名先声明，类型在后。在上面的例子中，`args` 是字符串数组类型的变量。\n\n`println(\"Hello World\"\
+  )`\n\n上面的语句将消息 `Hello World` 打印到控制台。如你所见，与 Java 不同，Kotlin 语句不以 `;` 结尾。\n\n## 编译\
+  \ HelloWorld.kt\n\n打开命令提示符并输入命令 `kotlinc HelloWorld.kt`。\n\n```\nC:\\Users\\Krishna\\\
+  Documents\\Study\\Kotlin\\Programs>kotlinc HelloWorld.kt\n\nC:\\Users\\Krishna\\\
+  Documents\\Study\\Kotlin\\Programs>dir\n\nVolume in drive C is OSDisk\n\nVolume\
+  \ Serial Number is 1034-4F6F\n\nDirectory of C:\\Users\\Krishna\\Documents\\Study\\\
+  Kotlin\\Programs\n\n09/02/2017  11:18 AM    <DIR>          .\n\n09/02/2017  11:18\
+  \ AM    <DIR>          ..\n\n09/02/2017  11:09 AM                57 HelloWorld.kt\n\
+  \n09/02/2017  11:18 AM               980 HelloWorldKt.class\n\n09/02/2017  11:18\
+  \ AM    <DIR>          META-INF\n\n               2 File(s           1,037 bytes\n\
+  \n               3 Dir(s)  63,190,188,032 bytes free\n```\n\n如你所见 `dir` 命令的输出，你可以观察到\
+  \ Kotlin 生成了 `HelloWorldKt.class` 和一个 `META-INF` 目录。\n\n## 运行 HelloWorld.kt\n\n\
+  你可以使用 `kotlin HelloWorldKt` 命令来运行 HelloWorldkt 文件。\n\n```\nC:\\Users\\krishna\\\
+  Documents\\Study\\Kotlin\\Programs>kotlin HelloWorldKt\n\nHello World\n```\n\n##\
+  \ 创建并运行 jar\n\n你也可以创建一个 jar 文件，并使用 Java 启动器来运行该 jar 文件。\n\n使用命令 `kotlinc HelloWorld.kt\
+  \ -include-runtime -d HelloWorld.jar` 来创建 jar 文件。\n\n`include-runtime` 选项告诉 Kotlin\
+  \ 编译器，在 `HelloWorld.jar` 文件中包含 Kotlin 运行时。\n\n```\nC:\\Users\\Krishna\\Documents\\\
+  Study\\Kotlin\\Programs>kotlinc HelloWorld.kt -include-runtime -d HelloWorld.jar\n\
+  \nC:\\Users\\Krishna\\Documents\\Study\\Kotlin\\Programs>dir\n\nVolume in drive\
+  \ C is OSDisk\n\nVolume Serial Number is 1034-4F6F\n\nDirectory of C:\\Users\\Krishna\\\
+  Documents\\Study\\Kotlin\\Programs\n\n09/02/2017  11:24 AM    <DIR>          .\n\
+  \n09/02/2017  11:24 AM    <DIR>          ..\n\n09/02/2017  11:24 AM           869,262\
+  \ HelloWorld.jar\n\n09/02/2017  11:09 AM                57 HelloWorld.kt\n\n   \
+  \            2 File(s)        869,319 bytes\n\n               2 Dir(s)  63,401,816,064\
+  \ bytes free\n```\n\n一旦 jar 文件创建完成，你就可以调用该 jar 文件，就像运行其他 jar 文件一样。使用命令 `java -jar\
+  \ HelloWorld.jar`\n\n```\nC:\\Users\\Krishna\\Documents\\Study\\Kotlin\\Programs>java\
+  \ -jar HelloWorld.jar\n\nHello World\n```\n\n# 在 Eclipse 中设置 Kotlin\n\n打开 Eclipse。Help\
+  \ -> Eclipse Marketplace。\n\n![`4.bp.blogspot.com/--jOmFNqRCgM/Wg2eFHMLi3I/AAAAAAAAJGE/7K-S0KXUm6QiS4xCaRBRLSBr25NxRAhwgCLcBGAs/s400/Eclipse%2BKotlin%2B1.png`](img/Image00000.jpg)\n\
+  \n搜索 kotlin。\n\n![`2.bp.blogspot.com/-jX-DhHd8nMA/Wg2eRkx3gZI/AAAAAAAAJGI/Xxpu-4uILfgsj0dStVJDeD6B1XFY9ffzwCLcBGAs/s400/Eclipse%2BKotlin%2B2.png`](img/Image00001.jpg)\n\
+  \n点击 `Install` 按钮来安装 Kotlin 插件。\n\n安装成功后，Eclipse 会要求重启。重启 Eclipse。\n\n## 创建新的 Kotlin\
+  \ 项目\n\n打开 Eclipse。File -> New -> Other。\n\n![`2.bp.blogspot.com/-ssfP-Jmov0g/Wg2ehC40vPI/AAAAAAAAJGM/PCmtTAP41rgJjSYlkPr03WBxUwIUmB8cQCLcBGAs/s400/eclipse%2Bkotlin%2Bproject1.png`](img/Image00002.jpg)\n\
+  \nKotlin -> Kotlin Project。\n\n![`2.bp.blogspot.com/-vO3pApz8d3M/Wg2es6gBKHI/AAAAAAAAJGU/BNIBQ_-YpxkSyDDpFqjl3lPPvui3e-PCgCLcBGAs/s400/eclipse%2Bkotlin%2Bproject2.png`](img/Image00003.jpg)\n\
+  \n点击 Next。\n\n在 `Kotlin Project` 窗口中，将项目名称设为 `Hello World`，然后点击 Finish 按钮。\n\nKotlin\
+  \ 项目结构如下所示。\n\n![`4.bp.blogspot.com/-2PXfV1Fz8TY/Wg2e4KvUcbI/AAAAAAAAJGY/j4wml-mNTT0t4V1ElYv8154z9y6QBxbvwCLcBGAs/s400/eclipse%2Bkotlin%2Bproject3.png`](img/Image00004.jpg)\n\
+  \n## 创建 HelloWorld.kt 文件\n\n右键点击 `src` 文件夹 -> New -> Other。\n\n![`1.bp.blogspot.com/-7wGQfPyFoEg/Wg2fCzt6imI/AAAAAAAAJGc/UQEtAW7geMgFzk-doAWRVm5-OJITfAM-wCLcBGAs/s400/eclipse%2Bkotlin%2Bproject4.png`](img/Image00005.jpg)\n\
+  \n选择 `Kotlin File` 然后点击 Next。\n\n![`1.bp.blogspot.com/-_y0wpMTJ6E4/Wg2fNKJye_I/AAAAAAAAJGk/dcnwrzQg8CQvDqeR8iTozHsKYQ1vhQ0HwCLcBGAs/s400/eclipse%2Bkotlin%2Bproject5.png`](img/Image00006.jpg)\n\
+  \n将文件名设为 `HelloWorld`，然后点击 `Finish` 按钮。\n\n![`3.bp.blogspot.com/-pEiPDvKjAgk/Wg2fYDnrUxI/AAAAAAAAJGo/BuwP-2ZMTn02-6Aa8UNsZ__U28hPtNpdQCLcBGAs/s400/eclipse%2Bkotlin%2Bproject6.png`](img/Image00007.jpg)\n\
+  \n将下面的代码片段复制到 `HelloWorld.kt` 文件中。\n\n`HelloWorld.kt`\n\n```\nfun main (args: Array<String>)\
+  \ {\n\n    println( \"Hello World\" )\n\n}\n```\n\n## 运行 HelloWorld.kt 文件\n\n右键点击\
+  \ `HelloWorld.kt` 文件的源代码 -> Run As -> Kotlin Application。\n\n![`2.bp.blogspot.com/-SnRNFT2Y4MA/Wg2ftrnVWZI/AAAAAAAAJGw/FuSKFVl-_pU3c-GyYrl6quHvY8K281LnACLcBGAs/s400/eclipse%2Bkotlin%2Bproject7.png`](img/Image00008.jpg)\n\
+  \n如果一切顺利，你可以在控制台中看到消息 `Hello World`。\n\n![`3.bp.blogspot.com/-RL0AgvzfVoo/Wg2f5lOTuYI/AAAAAAAAJG0/sM0FDoh1v3476Hh9krviz5MOf71LOZ3qQCLcBGAs/s400/eclipse%2Bkotlin%2Bproject8.png`](img/Image00009.jpg)\n\
+  \n# 在 Kotlin 中定义变量\n\n变量是用于存储数据的命名内存位置。\n\n## 语法\n\n```\nvar variableName : DataType\
+  \ = value\n\nval variableName : DataType = value\n```\n\n`var` 和 `val` 都是关键字。\n\n\
+  ## 示例\n\n```\nvar a : Int  =10;\n```\n\n`a` 是 int 类型，赋值为 10。\n\n```\nval b : Double\
+  \ = 1.23\n```\n\n`b` 是 Double 类型，赋值为 1.23。关键字 `val` 用于定义常量（不可变对象）。\n\n`HelloWorld.kt`\n\
+  \n```\nfun main (args: Array<String>) {\n\n  var a : Int  = 10 ;\n\n  val b : Double\
+  \ = 1.23\n\n    println( \"a : ${a}\" )\n\n    println( \"b : ${b}\" )\n\n}\n```\n\
+  \n```\nC:\\>kotlinc HelloWorld.kt\n\nC:\\>kotlin HelloWorldKt\n\na : 10\n\nb : 1.23\n\
+  ```\n\n# Kotlin 中的数据类型\n\nJava 有 int、float、char 等原始类型，那么 Kotlin 呢？\n\n从用户的角度来看，Kotlin\
+  \ 将所有东西都设计为对象，但在运行时，布尔值、数字和字符都表示为原始类型。\n\n`HelloWorld.kt`\n\n```\nfun main (args:\
+  \ Array<String>) {\n\n  var doubleVar: Double = 1.23\n\n  var floatVar: Float =\
+  \ 1.23f\n\n  var longVar: Long = 123\n\n  var intVar: Int = 123\n\n  var shortVar:\
+  \ Short = 123\n\n  var byteVar: Byte = 123\n\n    println( \"doubleVar : ${doubleVar}\"\
+  \ )\n\n    println( \"doubleVar : ${floatVar}\" )\n\n    println( \"longVar : ${longVar}\"\
+  \ )\n\n    println( \"intVar : ${intVar}\" )\n\n    println( \"shortVar : ${shortVar}\"\
+  \ )\n\n    println( \"byteVar : ${byteVar}\" )\n\n}\n```\n\n#### 输出\n\n```\ndoubleVar\
+  \ : 1.23\n\ndoubleVar : 1.23\n\nlongVar : 123\n\nintVar : 123\n\nshortVar : 123\n\
+  \nbyteVar : 123\n```\n\n# Kotlin：可空类型\n\n默认情况下，Kotlin 的引用类型（`Int`、`Float`、`Double`、`String`\
+  \ 等）不接受 null 值。Kotlin 引入此特性是为了避免空指针异常。\n\n`Test.kt`\n\n```\nfun main (args: Array<String>)\
+  \ {\n\n  var name : String = \"Krishna\"\n\n    name = null\n\n}\n```\n\n当你尝试编译上面的程序时，Kotlin\
+  \ 会抛出以下错误。\n\n```\nERROR: Null can not be a value of a non-null type String (6,\
+  \ 9)\n```\n\n如何定义一个可以接受 null 值的变量？\n\n通过使用可空类型，你可以定义一个接受 null 值的变量。在引用类型后追加 `?`\
+  \ 以接受 null 值。\n\n| 类型 | 可空类型 |\n|------|---------|\n| Int | Int? |\n| String | String?\
+  \ |\n| Double | Double? |\n| Person | Person? |\n\n## 示例\n\n```\n  var id: Int?\
+  \ = 1\n\n  var name: String? = \"Krishna\"\n\n  var salary: Double? = 123.456\n\n\
+  \  var person: Person? = Person( \"Krishna\" )\n\n    id = null\n\n    name = null\n\
+  \n    salary = null\n\n    person = null\n```\n\n# Kotlin：数字\n\nKotlin 提供以下数据类型来支持数字。\n\
+  \n| 数据类型 | 大小（位） |\n|---------|-----------|\n| Double | 64 |\n| Float | 32 |\n|\
+  \ Long | 64 |\n| Int | 32 |\n| Short | 16 |\n| Byte | 8 |\n\n`Numbers.kt`\n\n```\n\
+  fun main (args: Array<String>) {\n\n  var doubleVar: Double = 1.23\n\n  var floatVar:\
+  \ Float = 1.23f\n\n  var longVar: Long = 123\n\n  var intVar: Int = 123\n\n  var\
+  \ shortVar: Short = 123\n\n  var byteVar: Byte = 123\n\n    println( \"doubleVar\
+  \ : ${doubleVar}\" )\n\n    println( \"doubleVar : ${floatVar}\" )\n\n    println(\
+  \ \"longVar : ${longVar}\" )\n```\n\n\n \n ```\nprintln(\"intVar : ${intVar}\")\n\
+  \nprintln(\"shortVar : ${shortVar}\")\n\nprintln(\"byteVar : ${byteVar}\")\n\n}\n\
+  ```\n\n输出\n\n```\ndoubleVar : 1.23\n\ndoubleVar : 1.23\n\nlongVar : 123\n\nintVar\
+  \ : 123\n\nshortVar : 123\n\nbyteVar : 123\n```\n\n## 十六进制、八进制和二进制字面量表示法\n\nKotlin\
+  \ 支持十六进制和二进制表示法，但不支持八进制表示法。十六进制数通过前缀 `0x` 来表示，\n\n`Numbers.kt`\n\n```\nfun main(args:\
+  \ Array<String>) {\n\n  var hexaNum : Int = 0x123\n\n  var binaryNum : Int = 0b10101010\n\
+  \nprintln(\"hexaNum : ${hexaNum}\")\n\nprintln(\"binaryNum : ${binaryNum}\")\n\n\
+  }\n```\n\n输出\n\n```\nhexaNum : 291\n\nbinaryNum : 170\n```\n\n你也可以使用 `'_'` 来表示数字。\n\
+  \n`Numbers.kt`\n\n```\nfun main(args: Array<String>) {\n\n  var ten = 10\n\n  var\
+  \ hundred = 100\n\n  var thousand = 1000\n\n  var tenThousand = 10_000\n\n  var\
+  \ oneLaksh = 100_000\n\n  var tenLaksh = 1_000_000\n\nprintln(\"ten : ${ten}\")\n\
+  \nprintln(\"hundred : ${hundred}\")\n\nprintln(\"th/thousand : ${thousand}\")\n\n\
+  println(\"tenThousand : ${tenThousand}\")\n\nprintln(\"oneLaksh : ${oneLaksh}\"\
+  )\n\nprintln(\"tenLaksh : ${tenLaksh}\")\n\n}\n```\n\n输出\n\n```\nten : 10\n\nhundred\
+  \ : 100\n\nthousand : 1000\n\ntenThousand : 10000\n\noneLaksh : 100000\n\ntenLaksh\
+  \ : 1000000\n```\n\n# Kotlin：字符\n\n使用 `'Char'` 关键字来定义单个字符。字符用单引号括起来。\n\n示例\n\n```\n\
+  var myChar : Char = 'a'\n```\n\n`HelloWorld.kt`\n\n```\nfun main(args: Array<String>)\
+  \ {\n\n  var myChar : Char = 'a'\n\nprintln(\"Value of myChar is : ${myChar}\")\n\
+  \n}\n```\n\n输出\n\n```\nValue of myChar is : a\n```\n\nKotlin 支持 Java 所支持的所有转义序列。\n\
+  \n# Kotlin：将字符转换为 Int\n\n`Char` 类型提供了 `toInt()` 方法，用于将字符转换为整数。\n\n`IntConverter.kt`\n\
+  \n```\nfun main(args: Array<String>) {\n\n  var myChar : Char = 'a'\n\nprintln(\"\
+  Value of myChar is : ${myChar}\")\n\nprintln(\"Value of myChar in int is : ${myChar.toInt()}\"\
+  )\n\n}\n```\n\n输出\n\n```\nValue of myChar is : a\n\nValue of myChar in int is :\
+  \ 97\n```\n\n# Kotlin：布尔值\n\n`Boolean` 类型用于表示 `true`、`false` 状态。\n\n`Booleans.kt`\n\
+  \n```\nfun main(args: Array<String>) {\n\n  var trueState : Boolean  = true\n\n\
+  \  var falseState : Boolean  = false\n\nprintln(\"Value of trueState is : ${trueState}\"\
+  )\n\nprintln(\"Value of falseState is : ${falseState}\")\n\n}\n```\n\n输出\n\n```\n\
+  Value of trueState is : true\n\nValue of falseState is : false\n```\n\n# Kotlin：字符串\n\
+  \n字符串是字符的集合，用双引号括起来。Kotlin 中的字符串通过关键字 `String` 定义，且这些字符串是不可变的。\n\n示例\n\n```\nvar\
+  \ message: String = \"Good Morning\"\n```\n\n`StringsDemo.kt`\n\n```\nfun main(args:\
+  \ Array<String>)legen {\n\n  var message: String = \"Good Morning\"\n\nprintln(message)\n\
+  \n}\n```\n\n输出\n\n```\nGood Morning\n```\n\nKotlin 支持 Java 所支持的所有转义序列（`\\n`、`\\\
+  t`、`\\a` 等）。\n\n示例\n\n```\nvar message: String = \"Good Morning\\nHow are you\\\
+  nsee you soon\"\n```\n\n`StringDemo.kt`\n\n```\nfun main(args: Array<String>) {\n\
+  \n  var message: String = \"Good Morning\\nHow are you\\nsee you soon\"\n\nprintln(message)\n\
+  \n}\n```\n\n输出\n\n```\nGood Morning\n\nHow are you\n\nsee you soon\n```\n\n如果你不想进行转义，则将字符串嵌入\
+  \ `\"\"\"`（三引号）中。\n\n`StringDemo.kt`\n\n```\nfun main(args: Array<String>) {\n\n\
+  \  var message: String = \"\"\"Good Morning\\nHow are you\\nsee you soon\n\n   \
+  \   After two lines\\bgood bye\"\"\"\n\nprintln(message)\n\n}\n```\n\n输出\n\n```\n\
+  Good Morning\\nHow are you\\nsee you soon\n\n                                  \
+  \           After two lines\\bgood bye\n```\n\n# Kotlin：字符串模板表达式\n\n通过使用模板表达式，你可以在字符串中计算表达式。模板表达式以\
+  \ `$` 符号开头，后跟一个名称。\n\n示例\n\n```\nvar a = 10\n\nprintln(\"Value of a is : $a\")\n\
+  ```\n\n任意表达式用花括号括起来\n\n```\nvar str = \"Hello World\"\n\nprintln(\"$str length is\
+  \ ${str.length}\")\n```\n\n`Expression.kt`\n\n```\nfun main(args: Array<String>)\
+  \ {\n\n  var a = 10\n\n  var str = \"Hello World\"\n\nprintln(\"Value of a is :\
+  \ $a\")\n\nprintln(\"$str length is ${str.length}\")\n\n}\n```\n\n输出\n\n```\nValue\
+  \ of a is : 10\n\nHello World length is 11\n```\n\n# Kotlin：数组\n\n数组表示相同类型元素的集合。Kotlin\
+  \ 提供了 `Array` 类来表示数组。\n\n通过使用库函数 `arrayOf`，你可以定义一个数组。\n\n示例\n\n```\nval numbers:\
+  \ Array<Int> = arrayOf(10, 20, 30, 40, 50)\n```\n\n`ArrayDemo.kt`\n\n```\nfun main(args:\
+  \ Array<String>) {\n\n  val numbers: Array<Int> = arrayOf(10, 20, 30, 40, 50)\n\n\
+  \  for (element in numbers) {\n\n  println(element)\n\n}\n\n}\n```\n\n输出\n\n```\n\
+  10\n\n20\n\n30\n\n40\n\n50\n```\n\nKotlin 提供了以下库函数来定义基本类型数组。\n\n- `byteArrayOf()`\n\
+  - `shortArrayOf()`\n- `intArrayOf()`\n- `longArrayOf()`\n- `floatArrayOf()`\n- `doubleArrayOf()`\n\
+  - `CharArray()`\n- `BooleanArray()`\n\n# Kotlin：定义 null 数组\n\nKotlin 提供了 `arrayOfNulls`\
+  \ 库函数来定义 null 值数组。\n\n`ArrayOfNulls.kt`\n\n```\nfun main(args: Array<String>) {\n\
+  \n  var a: Array<Int?> = arrayOfNulls(5)\n\n  for (element in a) {\n\n  println(element)\n\
+  \n}\n\n}\n```\n\n输出\n\n```\nnull\n\nnull\n\nnull\n\nnull\n\nnull\n```\n\n# Kotlin：使用工厂函数定义数组\n\
+  \nKotlin 提供了一个工厂函数，该函数接受大小和一个函数 `'f'` 作为参数来定义数组。函数 `'f'` 用于为数组提供初始值。\n\n```\nvar\
+  \ squares = Array(5, { i -> i * i })\n```\n\n上面的语句定义了一个大小为 5 的数组 `squares`，并初始化为\
+  \ `{1, 4, 9, 16, 25}`\n\n`ArrayFactoryFunction.kt`\n\n```\nfun main(args: Array<String>)\
+  \ {\n\n  var squares = Array(5, { i -> i * i })\n\n  var cubes = Array(5, { i ->\
+  \ i * i * i })\n\nprintln(\"Elements in squares array : \")\n\n  for (ele in squares)\
+  \ {\n\n  println(ele)\n\n}\n\nprintln(\"\\nElements in cubes array : \")\n\n  for\
+  \ (ele in cubes) {\n\n  println(ele)\n\n}\n\n}\n```\n\n输出\n\n```\nElements in squares\
+  \ array :\n\n0\n\n1\n\n4\n\n9\n\n16\n\nElements in cubes array :\n\n0\n\n1\n\n8\n\
+  \n27\n\n64\n```\n\n# Kotlin：打印数组元素\n\n在这篇文章中，我将展示如何打印数组的元素。\n\n## 使用 for 循环打印数组元素\n\
+  \n`ArrayUtil.kt`\n\n```\nfun main(args: Array<String>) {\n\n  var arr: Array<Int>\
+  \ = arrayOf(1, 2, 3, 4)\n\n  for (ele in arr) {\n\n  println(ele)\n\n}\n\n}\n```\n\
+  \n输出\n\n```\n1\n\n2\n\n3\n\n4\n```\n\n## 使用 `Arrays.toString` 方法打印数组元素\n\n`ArrayUtil.kt`\n\
+  \n```\nimport java.util.Arrays\n\nfun main(args: Array<String>) {\n\n  var arr:\
+  \ Array<Int> = arrayOf(1, 2, 3, 4)\n\nprintln(Arrays.toString(arr))\n\n}\n```\n\n\
+  输出\n\n```\n[1, 2, 3, 4]\n```\n\n## 使用 `array.indices` 打印数组元素\n\n`ArrayUtil.kt`\n\
+  \n```\nfun main(args: Array<String>) {\n\n  var arr: Array<Int> = arrayOf(2, 3,\
+  \ 5, 7)\n\n  for (index in arr.indices) {\n\n  println(arr[index])\n\n}\n\n}\n```\n\
+  \n输出\n\n```\n2\n\n3\n\n5\n\n7\n```\n\n## 使用 `array.withIndex` 打印数组元素\n\n`ArrayUtil.kt`\n\
+  \n```\nfun main(args: Array<String>) {\n\n  var arr: Array<Int> = arrayOf(2, 3,\
+  \ 5, 7)\n\n  for ((index, value) in arr.withIndex()) {\n\n  println(\"index : $index,\
+  \ value : $value\")\n\n}\n\n}\n```\n\n输出\n\n```\nindex : 0, value : 2\n\nindex :\
+  \ 1, value : 3\n\nindex : 2, value : 5\n\nindex : 3, value : 7\n```\n\n## 使用 while\
+  \ 循环打印数组元素\n\n`ArrayUtil.kt`\n\n```\nfun main(args: Array<String>) {\n\n  var arr:\
+  \ Array<Int> = arrayOf(2, 3, 5, 7)\n\n  var sizeOfTheArray = arr.size;\n\n  var\
+  \ index : Int = 0;\n\n  while (index < sizeOfTheArray){\n\n  println(\"index : $index,\
+  \ value : ${arr[index]}\")\n\n  index++\n\n}\n\n}\n```\n\n输出\n\n```\nindex : 0,\
+  \ value : 2\n\nindex : 1, value : 3\n\nindex : 2, value : 5\n\nindex : 3, value\
+  \ : 7\n```\n\n# Kotlin：位运算符\n\n下表总结了 Kotlin 支持的位运算符。\n\n| 运算符 | 描述 | Java 等价 |\n\
+  | --- | --- | --- |\n| `shl` | 执行有符号左移 | `<<` |\n| `shr` | 执行有符号右移 | `>>` |\n| `ushr`\
+  \ | 执行无符号右移 | `>>>` |\n| `and` | 按位与 | `&` |\n| `or` | 按位或 | `|` |\n| `xor` | 按位异或\
+  \ | `^` |\n| `inv()` | 按位取反 | `~` |\n\n除了 `inv()` 之外，所有其他运算符都以中缀形式使用。\n\n示例：\n\n\
+  ```\nvar1 shl var2\n\nvar1 or var2\n```\n\n## 1. `shl`：执行有符号左移\n\n左移运算符将所有位向左移动一位，即，它将值加倍。\n\
+  \n语法：\n\n```\nvariable shl n\n将变量左移 'n' 次。\n```\n\n`Variable shl n` 等于 `variable\
+  \ = variable * 2 的 n 次幂`\n\n```\nvar var1 : Int = 2\n\nvar1 shl 1 = 2 * 2 的 1 次幂\
+  \ = 4\n\nvar1 shl 2 = 2 * 2 的 2 次幂 = 8\n```\n\n\n \n ```\nvar1 shl 9 = 2 * 2 power\
+  \ 9 = 1024\n```\n\n`LeftShift.kt`\n\n```kotlin\nfun main (args: Array<String>) {\n\
+  \  var var1: Int = 2\n  var res1 = var1 shl 1\n  var res2 = var1 shl 2\n  var res3\
+  \ = var1 shl 9\n  println( \"res1 : ${res1}\" )\n  println( \"res2 : ${res2}\" )\n\
+  \  println( \"res3 : ${res3}\" )\n}\n```\n\n**输出**\n\n```\nres1 : 4\nres2 : 8\n\
+  res3 : 1024\n```\n\n## 2. `shr`：执行有符号右移\n\n右移运算符将所有位向右移动一位，即将其值减半（除以 2）\n\n**语法：**\n\
+  \n```\nvariable shr n\n```\n\n将变量右移 `'n'` 次。\n\n`Variable shr n` 等于 `variable =\
+  \ variable / 2 power n`\n\n```\nvar a : Int = 128\na shr 1 = 128 / (2 power 1) =\
+  \ 64\na shr 2 = 128 / (2 power 2) = 32\n```\n\n`RightShift.kt`\n\n```kotlin\nfun\
+  \ main (args: Array<String>) {\n  var a: Int = 128\n  var res1 = a shr 1\n  var\
+  \ res2 = a shr 2\n  var res3 = a shr 3\n  println( \"res1 : ${res1}\" )\n  println(\
+  \ \"res2 : ${res2}\" )\n  println( \"res3 : ${res3}\" )\n}\n```\n\n**输出**\n\n```\n\
+  res1 : 64\nres2 : 32\nres3 : 16\n```\n\n## 3. `ushr`：无符号右移\n\n将所有位向右移动一位，并将最左边的位设为\
+  \ 0\n\n**语法**\n\n```\nVariable ushr n\n```\n\n`UnsignedRightShift.kt`\n\n```kotlin\n\
+  fun main (args: Array<String>) {\n  var a: Int = - 128\n  var res1 = a ushr 1\n\
+  \  println( \"res1 : ${res1}\" )\n}\n```\n\n**输出**\n\n```\nres1 : 2147483584\n```\n\
+  \n**解释**\n\n-128 的补码形式为\n\n```\n11111111 11111111 11111111 10000000\n```\n\n`>>>`\
+  \ 将位向右移动一位，并将最左边的位替换为 0\n\n因此 (`-128 ushr 1`) 的结果如下\n\n```\n01111111 11111111 11111111\
+  \ 11000000\n```\n\n## 4. 位运算 `and`、`or`、`xor`\n\n| Bit1 | Bit2 | and | or | xor\
+  \ |\n| 0 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 1 | 1 |\n| 1 | 0 | 0 | 1 | 1 |\n| 1 |\
+  \ 1 | 1 | 1 | 0 |\n\n`HelloWorld.kt`\n\n```kotlin\nfun main (args: Array<String>)\
+  \ {\n  var a: Int = 8\n  var b: Int = 9\n  println( \"a and b is ${a and b} \" )\n\
+  \  println( \"a or b is ${a or b} \" )\n  println( \"a xor b is ${a xor b}\" )\n\
+  }\n```\n\n**输出**\n\n```\na and b is 8\na or b is 9\na xor b is 1\n```\n\n**解释**\n\
+  \n```\n   a    = 0000 1000\n   b    = 0000 1001\n   a&b = 0000 1000\n   a    = 0000\
+  \ 1000\n   b    = 0000 1001\n   a|b = 0000 10001\n   a     = 0000 1000\n   b   \
+  \  = 0000 1001\n   a^b = 0000 0001\n```\n\n**注意：**\n\n位运算符仅适用于 `byte`、`short` 等整数值，不适用于\
+  \ `float`、`double`、`Boolean`。\n\n## 5. `inv()`：按位取反\n\n取反运算符将位值为 1 的改为 0，位值为 0 的改为\
+  \ 1。\n\n**示例**\n\n```\nvar a : Int = 8\n```\n\n`a` 的二进制格式为 `0 0 0 0 0 1 1 1`\n\n\
+  `a.inv()` 的二进制格式为 `1 1 1 1 1 0 0 0`\n\n`Inverse.kt`\n\n```kotlin\nfun main (args:\
+  \ Array<String>) {\n  var a: Int = 8\n  println( \"Value of a is : ${a}\" )\n  println(\
+  \ \"inversion of a is : ${a.inv()}\" )\n}\n```\n\n**输出**\n\n```\nValue of a is :\
+  \ 8\ninversion of a is : -9\n```\n\n# Kotlin：逻辑运算符\n\nKotlin 支持逻辑运算符（也称为布尔运算符），用于组合多个条件。\n\
+  \n- `||` – 惰性析取\n- `&&` – 惰性合取\n- `!` - 否定\n\n## 1. `||` – 惰性析取\n\n`operand1 ||\
+  \ operand2`：如果任一操作数为 true，则返回 true，否则返回 false。\n\n| Operand1 | Operand | Evaluates\
+  \ To |\n| False | false | false |\n| False | true | true |\n| True | false | true\
+  \ |\n| True | true | true |\n\n`BooleanOr.kt`\n\n```kotlin\nfun main (args: Array<String>)\
+  \ {\n  var operand1: Boolean = false\n  var operand2: Boolean = false\n  println(\
+  \ \"${operand1} || ${operand2}: ${(operand1 || operand2)}\" )\n  operand1 = false\n\
+  \  operand2 = true\n  println( \"${operand1} || ${operand2}: ${(operand1 || operand2)}\"\
+  \ )\n  operand1 = true\n  operand2 = false\n  println( \"${operand1} || ${operand2}:\
+  \ ${(operand1 || operand2)}\" )\n  operand1 = true\n  operand2 = true\n  println(\
+  \ \"${operand1} || ${operand2}: ${(operand1 || operand2)}\" )\n}\n```\n\n**输出**\n\
+  \n```\nfalse || false : false\nfalse || true : true\ntrue || false : true\ntrue\
+  \ || true : true\n```\n\n**为什么 `||` 被称为惰性析取？**\n\n如果第一个表达式求值为 true，那么 Kotlin 不会计算整个表达式。因此逻辑\
+  \ OR 被称为短路 OR（或）惰性析取运算符。\n\n`LazyDisjunciton.kt`\n\n```kotlin\nfun main (args: Array<String>)\
+  \ {\n  var a : Int = 10\n  var b : Int = 21\n  if ((a < b) || (a++ < b)) {\n   \
+  \ System. out .println( \"This statement evaluated\" );\n  }\n  System. out .println(\
+  \ \"a is not incremented \" + a);\n  if ((a > b) || (a++ > b)) {\n    System. out\
+  \ .println( \"This statement is evaluated\" );\n  }\n  System. out .println( \"\
+  a is incremented \" + a);\n}\n```\n\n**输出**\n\n```\nThis statement evaluated\na\
+  \ is not incremented 10\na is incremented 11\n```\n\n## `&&` – 惰性合取\n\n`operand1\
+  \ && operand2`：如果两个操作数都为 true，则返回 true，否则返回 false。\n\n| Operand1 | Operand2 | Evaluates\
+  \ To |\n| False | false | false |\n| False | true | false |\n| True | false | false\
+  \ |\n| True | true | true |\n\n`BooleanAnd.kt`\n\n```kotlin\nfun main (args: Array<String>)\
+  \ {\n  var operand1: Boolean = false\n  var operand2: Boolean = false\n  println(\
+  \ \"${operand1} && ${operand2}: ${(operand1 && operand2)}\" )\n  operand1 = false\n\
+  \  operand2 = true\n  println( \"${operand1} && ${operand2}: ${(operand1 && operand2)}\"\
+  \ )\n  operand1 = true\n  operand2 = false\n  println( \"${operand1} && ${operand2}:\
+  \ ${(operand1 && operand2)}\" )\n  operand1 = true\n  operand2 = true\n  println(\
+  \ \"${operand1} && ${operand2}: ${(operand1 && operand2)}\" )\n}\n```\n\n**输出**\n\
+  \n```\nfalse && false: false\nfalse && true: false\ntrue && false: false\ntrue &&\
+  \ true: true\n```\n\n**为什么 `&&` 被称为惰性合取运算符？**\n\n如果表达式中的第一个语句求值为 false，那么 Kotlin\
+  \ 不会计算整个表达式。因此，逻辑 AND 被称为短路 AND。\n\n`LazyConjunction.kt`\n\n```kotlin\nfun main\
+  \ (args: Array<String>) {\n  var a: Int = 10\n  var b: Int = 21\n  if ((a > b) &&\
+  \ (a++ > b)) {\n    System. out .println( \"This statement not evaluated\" );\n\
+  \  }\n  System. out .println( \"a is not incremented \" + a);\n  if ((a < b) &&\
+  \ (a++ < b)) {\n    System. out .println( \"This statement is evaluated\" );\n \
+  \ }\n  System. out .println( \"a is incremented \" + a);\n}\n```\n\n**输出**\n\n```\n\
+  a is not incremented 10\nThis statement is evaluated\na is incremented 11\n```\n\
+  \n## 3. 逻辑非（`!`）运算符\n\n如果操作数为 false，`!` 运算符将其求值为 true\n\n如果操作数为 true，`!` 运算符将其求值为\
+  \ false\n\n| Operand | Evaluates To |\n| False | true |\n| True | false |\n\n`LogicalNot.kt`\n\
+  \n```kotlin\nfun main (args: Array<String>) {\n  var operand1: Boolean = false\n\
+  \  var operand2: Boolean = true\n  println( \"operand1 : ${operand1}\" )\n  println(\
+  \ \"!operand1 : ${!operand1}\" )\n  println( \"operand2 : ${operand2}\" )\n  println(\
+  \ \"!operand2 : ${!operand2}\" )\n}\n```\n\n**输出**\n\n```\noperand1 : false\n!operand1\
+  \ : true\noperand2 : true\n!operand2 : false\n```\n\n# Kotlin：`===` 与 `==`\n\nKotlin\
+  \ 支持两种类型的相等性。\n\n- 引用相等\n- 结构相等\n\n## 引用相等（`===`）\n\n`===` 运算符用于检查两个引用是否指向同一个对象。\n\
+  \n例如：\n\n```\nref1 === ref2\n```\n\n如果引用 `ref1` 和 `ref2` 指向同一个对象，则上述语句返回 true，否则返回\
+  \ false。\n\n## 结构相等（`==`）\n\n结构相等用于检查两个引用的值是否相等（通过使用 Java 的 `equals()` 方法检查）。\n\n\
+  例如：\n\n```\nref1 == ref2\n```\n\n如果 `ref1.equals(ref2)` 返回 true，则上述语句返回 true，否则返回\
+  \ false。\n\n`Equality.kt`\n\n```kotlin\nfun main (args: Array<String>) {\n  var\
+  \ intVar1 : Int = 10000\n  var intBoundedVar1 : Int? = intVar1\n  var intBounderdVar2\
+  \ : Int? = intVar1\n  println( \"(intBoundedVar1===intBounderdVar2) : ${(intBoundedVar1\
+  \ === intBounderdVar2)}\" )\n  println( \"(intBoundedVar1==intBounderdVar2) : ${(intBoundedVar1\
+  \ == intBounderdVar2)}\" )\n}\n```\n\n**输出**\n\n```\n(intBoundedVar1===intBounderdVar2)\
+  \ : false\n(intBoundedVar1==intBounderdVar2) : true\n```\n\n# Kotlin：控制流语句\n\nKotlin\
+  \ 提供了控制流语句\n\n- 用于决策（`if`、`if-else`、`when`）和\n- 用于循环（`for`、`while`、`do-while`）\n\
+  \n## 决策语句\n\n- `if` 语句\n- `if-else` 语句\n- `if-else if-else` 阶梯\n- `when` 语句\n\n\
+  ## 循环语句\n\n- `for`\n- `while`\n- `do-while`\n\n# Kotlin：`if` 语句\n\n`if` 告诉程序在条件求值为\
+  \ true 时执行代码段。\n\n**语法**\n\n\n \n ```\nif(condition){\n    // 如果条件为真则执行\n}\n```\n\
+  \n`IfStmt.kt`\n\n```kotlin\nfun main(args: Array<String>) {\n    var marks: Int\
+  \ = 20\n    if (marks < 35) {\n        println(\"You failed in the Exam. Better\
+  \ luck next time\");\n    }\n    marks = 55\n    if (marks < 35) {\n        println(\"\
+  You failed in the Exam again. Better luck next time\");\n    }\n}\n```\n\n**输出**\n\
+  \n```\nYou failed in the Exam. Better luck next time\n```\n\n# Kotlin: if-else 语句\n\
+  \n如果条件为真，则执行 `if` 代码块，否则执行 `else` 代码块。\n\n**语法：**\n\n```\nif(condition){\n}else{\n\
+  }\n```\n\n`IfElse.kt`\n\n```kotlin\nfun main(args: Array<String>) {\n    var marks:\
+  \ Int = 65\n    if (marks < 35) {\n        println(\"You failed in the Exam. Better\
+  \ luck next time\");\n    } else {\n        println(\"You passed in the exam\")\n\
+  \    }\n}\n```\n\n**输出**\n\n```\nYou passed in the exam\n```\n\n# Kotlin: if-else\
+  \ if-else\n\n通过使用 `if-else if-else` 结构，你可以在多个选项中进行选择。\n\n`if` 语句后面可以跟一个可选的 `else\
+  \ if...else` 语句，这对于测试各种条件非常有用。\n\n`IfElseIf.kt`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var marks: Int = 65\n    if (marks < 35)\n        println(\"You are failed\"\
+  );\n    else if (marks < 50)\n        println(\"You are passed and got third class\"\
+  );\n    else if (marks < 60)\n        println(\"You are passed and got second class\"\
+  );\n    else if (marks < 70)\n        println(\"You are passed and got first class\"\
+  );\n    else\n        println(\"You are passed and got distinction\");\n}\n```\n\
+  \n**输出**\n\n```\nYou are passed and got first class\n```\n\n# Kotlin: when 表达式\n\
+  \n`when` 相当于 Java 中的 `switch` 语句。\n\n**语法**\n\n```\nwhen(expression){\n    1 ->\
+  \ {//执行某些操作}\n    2 -> {//执行某些操作}\n    else -> {//执行某些操作}\n}\n```\n\n`when` 会按顺序将表达式与所有可能的\
+  \ case 进行匹配。如果没有一个 case 满足条件，则会执行 `else` 代码块。\n\n`WhenDemo.kt`\n\n```kotlin\nfun\
+  \ main(args: Array<String>) {\n    var a: Int = 5\n    when (a) {\n        12 ->\
+  \ println(\"Value 12 is checked\")\n        5 -> println(\"Value 5 is checked\"\
+  )\n        3 -> println(\"Value 3 is checked\")\n        else -> println(\"No value\
+  \ is checked\")\n    }\n}\n```\n\n**输出**\n\n```\nValue 5 is checked\n```\n\n你可以在\
+  \ `when` 表达式中组合多个分支语句。\n\n`WhenDemo.kt`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var a: Int = 5\n    when (a) {\n        2, 3, 5, 7 -> println(\"Prime number\"\
+  )\n        4, 6, 8 -> println(\"Even number other than 2\")\n        else -> println(\"\
+  No value is checked\")\n    }\n}\n```\n\n**输出**\n\n```\nPrime number\n```\n\n你也可以使用任意表达式作为分支条件。例如，我使用了\
+  \ `2+3` 作为分支条件。\n\n`WhenDemo.kt`\n\n```kotlin\nfun main(args: Array<String>) {\n\
+  \    var a: Int = 5\n    when (a) {\n        2 + 3 -> println(\"Checked value 5\"\
+  )\n        4, 6, 8 -> println(\"Even number other than 2\")\n        else -> println(\"\
+  No value is checked\")\n    }\n}\n```\n\n**输出**\n\n```\nChecked value 5\n```\n\n\
+  你也可以在分支条件中检查范围（或不在范围内）。\n\n`WhenDemo.kt`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var a: Int = 5\n    when (a) {\n        in 1..5, in 11..15 -> println(\"\
+  a is in between 1 to 5 (or) 11 to 15\")\n        in 6..10 -> println(\"a is in range\
+  \ of 6 to 10\")\n        else -> println(\"x is not in range\")\n    }\n}\n```\n\
+  \n**输出**\n\n```\na is in between 1 to 5 (or) 11 to 15\n```\n\n# Kotlin: 将 when 用作\
+  \ if-else if 阶梯\n\n你也可以将 `when` 表达式用作 `if-elseif` 阶梯。如果你不为 `when` 表达式指定任何参数，它可以作为\
+  \ `if-else if` 阶梯使用。\n\n`ConditionDemo.kt`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var marks: Int = 65\n    if (marks < 35)\n        println(\"You are failed\"\
+  );\n    else if (marks < 50)\n        println(\"You are passed and got third class\"\
+  );\n    else if (marks < 60)\n        println(\"You are passed and got second class\"\
+  );\n    else if (marks < 70)\n        println(\"You are passed and got first class\"\
+  );\n    else\n        println(\"You are passed and got distinction\");\n}\n```\n\
+  \n**输出**\n\n```\nYou are passed and got first class\n```\n\n你可以使用 `when` 表达式实现上述\
+  \ `if-else if-else` 逻辑，如下所示。\n\n`WhenDemo.kt`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var marks: Int = 65\n    when {\n        (marks < 35) -> println(\"You\
+  \ are failed\")\n        (marks < 50) -> println(\"You are passed and got third\
+  \ class\")\n        (marks < 60) -> println(\"You are passed and got second class\"\
+  )\n        (marks < 70) -> println(\"You are passed and got first class\")\n   \
+  \     else -> println(\"You are passed and got distinction\")\n    }\n}\n```\n\n\
+  **输出**\n\n```\nYou are passed and got first class\n```\n\n# Kotlin: 将 when 用作表达式\n\
+  \n你可以将 `when` 用作表达式。如果你将 `when` 用作表达式，匹配分支的值将成为 `when` 表达式的值。\n\n`WhenDemo.kt`\n\
+  \n```kotlin\nfun main(args: Array<String>) {\n    var a: Int = 2\n    var s: String\
+  \ = \"cube\"\n    var result = when {\n        s.equals(\"double\") -> a * a\n \
+  \       s.equals(\"cube\") -> a * a * a\n        else -> a\n    }\n    println(\"\
+  result is $result\")\n}\n```\n\n**输出**\n\n```\nresult is 8\n```\n\n# Kotlin: for\
+  \ 循环\n\n`for` 循环用于遍历集合、数组、范围等。\n\n通过使用 `for` 循环，你可以遍历任何提供迭代器的东西。\n\n## 遍历数组\n\n\
+  **语法**\n\n```\nfor(ele in array){\n}\n```\n\n`ArrayDemo.kt`\n\n```kotlin\nfun main(args:\
+  \ Array<String>) {\n    var arr: Array<Int> = arrayOf(2, 3, 5, 7)\n    for (ele\
+  \ in arr) {\n        println(ele)\n    }\n}\n```\n\n**输出**\n\n```\n2\n3\n5\n7\n\
+  ```\n\n## 遍历范围\n\n`ArrayDemo.kt`\n\n```kotlin\nfun main(args: Array<String>) {\n\
+  \    for (ele in 1..10) {\n        println(ele)\n    }\n}\n```\n\n**输出**\n\n```\n\
+  1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n```\n\n## 遍历字符串\n\n`ArrayDemo.kt`\n\n```kotlin\n\
+  fun main(args: Array<String>) {\n    var message = \"Good Morning\"\n    for (c\
+  \ in message) {\n        print(c)\n    }\n}\n```\n\n**输出**\n\n```\nGood Morning\n\
+  ```\n\n# Kotlin: while、do-while 循环\n\n## while 循环\n\n`while` 语句在特定条件为真时执行一段语句块。\n\
+  \n**语法**\n\n```\nwhile (expression) {\n    //语句\n```\n\n`while` 语句中的表达式必须计算为布尔值，否则编译器会抛出错误。`while`\
+  \ 语句首先计算表达式，直到表达式计算为真时，它执行 `while` 代码块内的代码，否则跳出 `while` 循环。\n\n**示例：** 使用 `while`\
+  \ 循环打印从 0 到 9 的数字。\n\n`WhileDemo.kt`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var counter: Int = 0\n    while (counter < 10) {\n        println(counter)\n\
+  \        counter++\n    }\n}\n```\n\n**输出**\n\n```\n0\n1\n2\n3\n4\n5\n6\n7\n8\n\
+  9\n```\n\n## do-while 循环\n\n`do-while` 也是一种类似 `while` 的循环结构，但它在循环底部而不是顶部计算表达式。\n\
+  \n**语法**\n\n```\ndo {\n    //语句\n} while (expression)\n```\n\n`DoWhileDemo.kt`\n\
+  \n```kotlin\nfun main(args: Array<String>) {\n    var counter: Int = 0\n    do {\n\
+  \        println(counter)\n        counter++\n    } while (counter < 10)\n}\n```\n\
+  \n**输出**\n\n```\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n```\n\n## while 和 do-while 有什么区别？\n\
+  \n即使表达式计算为假，`do` 代码块内的语句也至少执行一次。\n\n# Kotlin: break 语句\n\n`break` 语句用于终止最近的闭合循环。\n\
+  \n`break` 语句可以以两种形式使用。\n\n- 无标签 break\n- 带标签 break\n\n## 无标签 break\n\n无标签 break\
+  \ 用于跳出最近的闭合循环。\n\n**语法**\n\n```\nbreak\n```\n\n`BreakDemo.kt`\n\n```kotlin\nfun\
+  \ main(args: Array<String>) {\n    for (i in 1..10) {\n        println(i)\n    \
+  \    if (i == 5) {\n            break\n        }\n    }\n}\n```\n\n**输出**\n\n```\n\
+  1\n2\n3\n4\n5\n```\n\n`BreakDemoInnerLoop.kt`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    for (i in 1..5) {\n        for (j in 1..i) {\n            print(\"$j\"\
+  )\n        }\n        println()\n    }\n}\n```\n\n**输出**\n\n```\n1\n12\n123\n1234\n\
+  12345\n```\n\n## 带标签 break\n\nKotlin 允许我们为任何表达式添加标签。\n\n### 如何创建标签？\n\n定义一个标识符，后跟\
+  \ `@` 符号。\n\n例如：\n\n`outerLoop@`、`processState@`\n\n通过指定标签，我们可以跳出该标签。\n\n**语法**\n\
+  \n```\nbreak@labelIdentifier\n```\n\n例如\n\n```\nbreak@outerLoop\nbreak@processState\n\
+  ```\n\n`LabelledBreakDemo.kt`\n\n```kotlin\nfun main(args: Array<String>) {\n  \
+  \  var counter: Int = 0;\n    outerLoop@ for (i in 1..5) {\n        for (j in 1..i)\
+  \ {\n            counter++\n            print(\"$j\")\n            if (counter ==\
+  \ 6) {\n                println(\"\\nBreaking out of the outer loop\")\n       \
+  \         break@outerLoop\n            }\n        }\n        println()\n    }\n\
+  }\n```\n\n**输出**\n\n```\n1\n12\n123\nBreaking out of the outer loop\n```\n\n\n \n\
+  \ # Kotlin：`continue` 语句\n\n`continue` 语句跳过循环的当前迭代（例如：`for`、`while`、`do-while` 循环）。与\
+  \ `break` 类似，`continue` 也有两种形式。\n\n1. 无标签 `continue`\n2. 带标签 `continue`\n\n## 无标签\
+  \ `continue`\n\n语法\n\n```\ncontinue;\n```\n\n`ContinueDemo.kt`\n\n```kotlin\nfun\
+  \ main(args: Array<String>) {\n    for (i in 1..10) {\n        if (i % 2 != 0) {\n\
+  \            continue\n        }\n        print(\"$i \")\n    }\n}\n```\n\n输出\n\n\
+  ```\n2 4 6 8 10\n```\n\n`UnlabelledContinueInnerLoop.kt`\n\n```kotlin\nfun main(args:\
+  \ Array<String>) {\n    for (i in 1..5) {\n        for (j in 1..10) {\n        \
+  \    if (j % 2 != 0) {\n                continue\n            }\n            print(\"\
+  $j \")\n        }\n        println()\n    }\n}\n```\n\n输出\n\n```\n2 4 6 8 10\n2\
+  \ 4 6 8 10\n2 4 6 8 10\n2 4 6 8 10\n2 4 6 8 10\n```\n\n## 带标签 `continue`\n\nKotlin\
+  \ 允许我们为任何表达式添加标签。\n\n### 如何创建标签？\n\n定义一个标识符，后跟 `@` 符号。\n\n例如：\n\n`outerLoop@`、`processState@`\n\
+  \n我们可以将 `continue` 语句与标签一起使用。\n\n语法\n\n```\ncontinue@labelIdentifier\n```\n\n示例\n\
+  \n```\ncontinue@outerLoop\ncontinue@processState\n```\n\n`ContinueLabelledDemo.kt`\n\
+  \n```kotlin\nfun main(args: Array<String>) {\n    outerLoop@ for (i in 1..5) {\n\
+  \        for (j in 1..10) {\n            if (j > 5) {\n                println()\n\
+  \                continue@outerLoop\n            }\n            print(\"$i \")\n\
+  \        }\n    }\n}\n```\n\n输出\n\n```\n1 1 1 1 1\n2 2 2 2 2\n3 3 3 3 3\n4 4 4 4\
+  \ 4\n5 5 5 5 5\n```\n\n# Kotlin：类与对象\n\n## 现实世界中的对象与类\n\n### 对象\n\n对象是现实世界中的实体。例如，书、猫、盒子、公交车、键盘、人、屏幕、手机等，都是对象。\n\
+  \n### 我们如何区分对象\n\n1. 依据它们的属性\n2. 依据它们的行为\n\n#### 基于属性区分两个对象\n\n假设有两个人 A 和 B。\n\n\
+  首先，让我们尝试找出人对象可能的属性\n\n人可能的属性\n\n`height`（身高）、`weight`（体重）、`color`（肤色）、`Education\
+  \ Qualification`（教育资格）、`country`（国家）、`address`（地址）都属于人的属性。\n\n现在通过比较这些属性，我们可以轻松区分两个人。\n\
+  \n| 属性 | 人 A | 人 B |\n| 身高 | 6ft | 5.5ft |\n| 体重 | 75Kg | 60Kg |\n| 肤色 | 白色 | 黑色\
+  \ |\n| 国家 | 印度 | 美国 |\n\n如上面的表格所示，两个人都有各自的属性，因此我们可以依据这些属性来区分他们。\n\n#### 基于行为区分两个对象\n\
+  \n考虑同样的两个人 A 和 B。让我们尝试找出人对象可能的行为\n\n可能的行为有\n\n`walk`（走路）、`run`（跑步）、`swim`（游泳）、`eat`（吃饭）、`sleep`（睡觉）、`see`（看）、`hear`（听）等。现在通过比较这些行为，我们可以轻松区分两个人。\n\
+  \n| 行为 | 人 A | 人 B |\n| 走路 | 10km/hr | 12km/hr |\n| 跑步 | 20km/hr | 18km/hr |\n|\
+  \ 睡觉 | 8 Hrs/day | 6Hrs/day |\n\n### 类\n\n通俗地说，我将类称为类别。\n\n所有人都属于人类别\n\n`cat`（猫）、`lion`（狮子）、`Elephant`（大象）属于动物类别\n\
+  \n因此，类或类别是一组具有相似属性和行为的对象。\n\n## 编程术语中的对象与类\n\n### 什么是对象？\n\n对象是一个包含相关状态和行为的软件包。Kotlin\
+  \ 的主要优势在于你可以将 Kotlin 中的对象与现实世界中的对象进行比较。因此在 Kotlin 中处理对象非常容易。\n\n### 什么是类？\n\n类是创建对象的蓝图或原型。\n\
+  \n你可以使用 `class` 关键字来定义类。\n\n语法\n\n```kotlin\nclass ClassName {\n    // 属性\n    //\
+  \ 函数\n}\n```\n\n示例\n\n```kotlin\nclass Employee {\n    var firstName: String = \"\
+  \"\n    var lastName: String = \"\"\n}\n```\n\n上面的代码片段定义了 `Employee` 类，它定义了两个属性（`firstName`、`lastName`）。\n\
+  \n如何为 `Employee` 类定义对象？\n\n```kotlin\nvar emp1 = Employee()\n```\n\n上面的语句用于为 `Employee`\
+  \ 类定义一个对象。\n\n如何访问与对象 `emp1` 关联的属性？\n\n对象的成员（`firstName` 和 `lastName`）使用 `.` 符号来访问。\n\
+  \n语法\n\n```\nobjName.propertyName\n```\n\n示例\n\n```kotlin\nemp1.firstName = \"Chamu\"\
+  \nemp1.lastName = \"Gurram\"\n```\n\n`Employee.kt`\n\n```kotlin\nclass Employee\
+  \ {\n    var firstName: String = \"\"\n    var lastName: String = \"\"\n}\n```\n\
+  \n`Main.kt`\n\n```kotlin\nfun main(args: Array<String>) {\n    var emp1 = Employee()\n\
+  \    emp1.firstName = \"Chamu\"\n    emp1.lastName = \"Gurram\"\n    println(\"\
+  First name : ${emp1.firstName}\")\n    println(\"Last name : ${emp1.lastName}\"\
+  )\n}\n```\n\n输出\n\n```\nFirst name : Chamu\nLast name : Gurram\n```\n\n# Kotlin：声明属性\n\
+  \n你可以在类中定义属性。属性可以是可变的（mutable）或不可变的（immutable，一旦定义就不能更改）。\n\n### 如何定义可变属性？\n\n可变属性使用\
+  \ `var` 关键字定义。\n\n例如\n\n```kotlin\nvar name: String = \"Krishna\"\n```\n\n### 如何定义不可变属性？\n\
+  \n不可变属性使用 `val` 关键字定义。\n\n例如\n\n```kotlin\nval name: String = \"Krishna\"\n```\n\
+  \n```kotlin\nclass Employee {\n    var name: String = \"Krishna\"\n    var age:\
+  \ Int = 28\n    val orgID: String = \"ORG1234\"\n}\n```\n\n如你所见，在 `Employee` 类中，我将\
+  \ `name` 和 `age` 定义为可变属性，`orgID` 定义为不可变属性。\n\n### 如何在类中访问属性？\n\n通过定义对象，你可以访问类的属性。`.`\
+  \ 符号用于访问类的实例属性。\n\n语法\n\n```\nobjectName.propertyName\n```\n\n`HelloWorld.kt`\n\n\
+  ```kotlin\nclass Employee {\n    var name: String = \"Krishna\"\n    var age: Int\
+  \ = 28\n    val orgID: String = \"ORG1234\"\n}\n\nfun main(args: Array<String>)\
+  \ {\n    var emp = Employee()\n    println(\"name : ${emp.name}\")\n    println(\"\
+  age : ${emp.age}\")\n    println(\"orgID : ${emp.orgID}\")\n}\n```\n\n输出\n\n```\n\
+  name : Krishna\nage : 28\norgID : ORG1234\n```\n\n定义属性时不需要添加属性类型，Kotlin 环境会自动推断。但添加类型可以提高程序的可读性。\n\
+  \n```kotlin\nclass Employee {\n    var name = \"Krishna\"\n    var age = 28\n  \
+  \  val orgID = \"ORG1234\"\n}\n```\n\n# Kotlin：属性的 Getter 和 Setter\n\n在我之前的文章中，我解释了如何定义属性，除了定义之外，我们还可以为属性添加\
+  \ getter 和 setter 方法。\n\n语法\n\n```\nvar <propertyName>[: <PropertyType>] [= <property_initializer>]\n\
+  \    [<getter>]\n    [<setter>]\n```\n\n`PropertyType`、`getter` 和 `setter` 在定义属性时是可选的。\n\
+  \n`HelloWorld.kt`\n\n```kotlin\nclass Employee {\n    var name: String = \"Krishna\"\
+  \n        get() = field\n        set(value) {\n            field = value\n     \
+  \   }\n    var age: Int = 28\n        get() = field\n        set(value) {\n    \
+  \        field = value\n        }\n    val orgID = \"ORG1234\"\n}\n\nfun main(args:\
+  \ Array<String>) {\n    var emp = Employee()\n    println(\"name : ${emp.name}\"\
+  )\n    println(\"age : ${emp.age}\")\n    println(\"orgID : ${emp.orgID}\")\n}\n\
+  ```\n\n输出\n\n```\nname : Krishna\nage : 28\norgID : ORG1234\n```\n\n如你所见，我使用 `field`\
+  \ 标识符来引用幕后字段。按照惯例，setter 方法使用 `value` 作为参数名，但你可以使用任何名称。\n\n### 为什么我需要 getter 和 setter\
+  \ 方法？\n\nGetter 和 setter 方法用于在发送/设置信息之前对数据进行转换/验证。\n\n```kotlin\nvar age: Int =\
+  \ 28\n    get() = field\n    set(value) {\n        if (value < 0 || value > 100)\n\
+  \            field = 3\n    }\n```\n\n例如，在上面的代码片段中，setter 方法在将年龄设置到 `age` 属性之前进行验证。如果用户将年龄设置为\
+  \ `<0` 或 `> 100`，年龄将被设置为 `3`。以下是可运行的应用程序。\n\n`HelloWorld.kt`\n\n```kotlin\nclass\
+  \ Employee {\n    var name: String = \"Krishna\"\n        get() = field\n      \
+  \  set(value) {\n            field = value\n        }\n    var age: Int = 28\n \
+  \       get() = field\n        set(value) {\n            if (value < 0 || value\
+  \ > 100)\n                field = 3\n        }\n    val orgID = \"ORG1234\"\n}\n\
+  \nfun main(args: Array<String>) {\n    var emp = Employee()\n    println(\"name\
+  \ : ${emp.name}\")\n    println(\"age : ${emp.age}\")\n    println(\"orgID : ${emp.orgID}\"\
+  )\n    emp.age = -100\n    println(\"\\nAfter setting the age to -100\")\n    println(\"\
+  name : ${emp.name}\")\n    println(\"age : ${emp.age}\")\n    println(\"orgID :\
+  \ ${emp.orgID}\")\n}\n```\n\n输出\n\n```\nname : Krishna\nage : 28\norgID : ORG1234\n\
+  \nAfter setting the age to -100\nname : Krishna\nage : 3\norgID : ORG1234\n```\n\
+  \n\n \n Kotlin 为可变属性（使用 `var` 关键字定义的属性）提供默认的 getter 和 setter 方法，而对于不可变属性（使用 `val`\
+  \ 关键字定义的属性），则仅提供 getter 方法。\n\n`var name = \"Krishna\"` // 类型为 String，具有默认的 getter\
+  \ 和 setter\n\n`val orfID = \"orf1234\"` // 类型为 String，具有默认的 getter\n\n## Kotlin：定义类的成员函数\n\
+  \nKotlin 中的函数使用 `fun` 关键字定义。\n\n示例：\n\n```kotlin\nfun square(x : Int) : Int{\n \
+  \   return x*x\n}\n```\n\n上面的代码片段定义了一个名为 `square` 的函数，它接受一个 `Int` 类型的参数，并返回整数。\n\
+  \nEmployee.kt\n\n```kotlin\nclass Employee {\n  private var firstName: String =\
+  \ \"\"\n  private var lastName: String = \"\"\n  fun getFirstName (): String {\n\
+  \  return firstName\n}\n  fun getLastName (): String {\n  return lastName\n}\n \
+  \ fun setFirstName (firstName: String) {\n  this .firstName = firstName\n}\n  fun\
+  \ setLastName (lastName: String) {\n  this .lastName = lastName\n}\n}\n```\n\nMain.kt\n\
+  \n```kotlin\nfun main (args: Array<String>) {\n  var emp1 = Employee()\nemp1.setFirstName(\
+  \ \"Chamu\" )\nemp1.setLastName( \"Gurram\" )\nprintln( \"firstName : ${emp1.getFirstName()}\"\
+  \ )\nprintln( \"lastName : ${emp1.getLastName()}\" )\n}\n```\n\n输出\n\n```\nfirstName\
+  \ : Chamu\nlastName : Gurram\n```\n\n## Kotlin：成员属性必须初始化\n\n在 Kotlin 中，成员属性要么初始化，要么必须声明为抽象。让我们通过一个例子来看看。\n\
+  \nEmployee.kt\n\n```kotlin\nclass Employee {\n  private var firstName: String\n\
+  \  private var lastName: String\n  fun getFirstName (): String {\n  return firstName\n\
+  }\n  fun getLastName (): String {\n  return lastName\n}\n  fun setFirstName (firstName:\
+  \ String) {\n  this .firstName = firstName\n}\n  fun setLastName (lastName: String)\
+  \ {\n  this .lastName = lastName\n}\n}\n```\n\n尝试编译上面的程序，你会得到如下错误。\n\n```\nC:\\\
+  >kotlinc Employee.kt\nEmployee.kt:2:2: error: property must be initialized or be\
+  \ abstract\n        private var firstName: String\n^\nEmployee.kt:3:2: error: property\
+  \ must be initialized or be abstract\n        private var lastName: String\n```\n\
+  \n如何消除上述错误？\n\n有两种方法，要么初始化属性，要么将属性设为抽象。\n\n方法 1：初始化属性 `firstName` 和 `lastName`\n\
+  \nEmployee.kt\n\n```kotlin\nclass Employee {\n  private var firstName: String =\
+  \ \"\"\n  private var lastName: String = \"\"\n  fun getFirstName (): String {\n\
+  \  return firstName\n}\n  fun getLastName (): String {\n  return lastName\n}\n \
+  \ fun setFirstName (firstName: String) {\n  this .firstName = firstName\n}\n  fun\
+  \ setLastName (lastName: String) {\n  this .lastName = lastName\n}\n}\n```\n\n方法\
+  \ 2：将属性设为抽象\n\nEmployee.kt\n\n```kotlin\nabstract class Employee {\n  abstract var\
+  \ firstName: String\n  abstract var lastName: String\n}\n```\n\n## Kotlin：const：编译时常量\n\
+  \n你可以使用 `const` 关键字定义编译时常量。\n\n示例\n\n```kotlin\nconst val VENDOR_NAME = \"Self Learning\
+  \ Java blog\"\n```\n\nHelloWorld.kt\n\n```kotlin\nconst val VENDOR_NAME = \"Self\
+  \ Learning Java blog\"\nconst val PI = 3.14\nfun main (args: Array<String>) {\n\
+  println( \"Vendor Name $VENDOR_NAME\" )\nprintln( \"Value of PI : $PI\" )\n}\n```\n\
+  \n输出\n\n```\nVendor Name Self Learning Java blog\nValue of PI : 3.14\n```\n\n在定义编译时常量时，属性必须满足以下条件。\n\
+  \n* 顶层或对象的成员\n* 使用 `String` 类型或基本类型的值进行初始化\n* 没有自定义 getter\n\n## Kotlin：const 与\
+  \ val\n\n`const` 关键字用于定义编译时常量，即 const 变量的值在编译时已知。而 `val` 用于定义运行时常量。\n\n例如，你不能像下面这样定义\
+  \ const。\n\n```kotlin\nconst val PICon = getPI()\n```\n\n当你尝试编译包含上述语句的 Kotlin 程序时，你会得到如下错误。\n\
+  \n`Const 'val' has type 'Unit'. Only primitives and String are allowed`\n\n这是因为\
+  \ `getPI()` 在运行时求值并将值赋给 `PICon`，但 `const` 用于在编译时定义常量。\n\n请看下面的可运行应用程序。\n\nHelloWorld.kt\n\
+  \n```kotlin\nconst val VENDOR_NAME = \"Self Learning Java blog\"\nval PICon = getPI()\n\
+  fun getPI (): Double {\n  return 3.14\n}\nfun main (args: Array<String>) {\nprintln(\
+  \ \"Vendor Name $VENDOR_NAME\" )\nprintln( \"Value of PI : $PICon\" )\n}\n```\n\n\
+  输出\n\n```\nVendor Name Self Learning Java blog\nValue of PI : 3.14\n```\n\n## Kotlin：lateinit：延迟初始化属性\n\
+  \n默认情况下，Kotlin 不允许未初始化的属性。你必须在声明时（或）在构造函数中初始化它们。让我用一个例子来解释。\n\nHelloWorld.kt\n\n\
+  ```kotlin\nclass Employee {\n  var id : String\n  var name : String\n  var city\
+  \ : String\n}\n```\n\n当你尝试编译上面的程序时，你会得到如下错误。\n\n```\nERROR: Property must be initialized\
+  \ or be abstract (2, 2)\nERROR: Property must be initialized or be abstract (3,\
+  \ 2)\nERROR: Property must be initialized or be abstract (4, 2)\n```\n\n如何解决上述问题？\n\
+  \n有三种方法：\n\na. 在声明时初始化变量\n\nb. 在构造函数中定义变量\n\nc. 使用延迟初始化\n\n### 在声明时初始化变量\n\n```kotlin\n\
+  class Employee {\n  var id: String = \"123\"\n  var name: String = \"Krishna\"\n\
+  \  var city: String = \"Ongole\"\n}\n```\n\n### 在构造函数中定义变量\n\n```kotlin\nclass Employee\
+  \ {\n  var id: String\n  var name: String\n  var city: String\nconstructor() {\n\
+  \  id = \"123\"\n  name = \"Krishna\"\n  city = \"Ongole\"\n}\n}\n```\n\n### 使用延迟初始化\n\
+  \n通过使用 `lateinit` 关键字，我们可以告知 Kotlin 该变量将在稍后某个时间点初始化。\n\n```kotlin\nclass Employee\
+  \ {\nlateinit var id: String\nlateinit var name: String\nlateinit var city: String\n\
+  }\n```\n\n我可以在初始化之前访问 lateinit 属性吗？\n\n不可以，如果你尝试在初始化之前访问 `lateinit` 属性，你会遇到 `UninitializedPropertyAccessException`\n\
+  \nHelloWorld.kt\n\n```kotlin\nclass Employee {\nlateinit var id: String\nlateinit\
+  \ var name: String\nlateinit var city: String\n}\nfun main (args: Array<String>)\
+  \ {\n  var obj = Employee()\nprintln( \"Id : ${obj.id}\" )\n}\n```\n\n当你尝试运行上面的程序时，你会遇到如下异常。\n\
+  \n```\nException in thread \"main\" kotlin.UninitializedPropertyAccessException:\
+  \ lateinit property id has not been initialized\n         at Employee.getId(HelloWorld.kt:2)\n\
+  \         at HelloWorldKt.main(HelloWorld.kt:10)\n```\n\n要解决该错误，请在访问之前定义 `lateinit`\
+  \ 属性。\n\nHelloWorld.kt\n\n```kotlin\nclass Employee {\nlateinit var id: String\n\
+  lateinit var name: String\nlateinit var city: String\n}\nfun main (args: Array<String>)\
+  \ {\n  var obj = Employee()\nobj.id = \"123\"\nprintln( \"Id : ${obj.id}\" )\n}\n\
+  ```\n\n输出\n\n```\nId : 123\n```\n\n## Kotlin：构造函数\n\nKotlin 类有一个主构造函数和一个或多个次构造函数。构造函数使用\
+  \ `constructor` 关键字定义。\n\n### 主构造函数\n\n主构造函数定义为类头的一部分。\n\n示例\n\n```kotlin\nclass\
+  \ Employee constructor(fName: String, lName: String) {\n         ....\n        \
+  \ ....\n}\n```\n\nEmployee.kt\n\n```kotlin\nclass Employee constructor (fName: String,\
+  \ lName: String) {\ninit{\n  println( \"fName : $fName, lName : $lName\" )\n}\n\
+  }\n```\n\nMain.kt\n\n```kotlin\nfun main (args: Array<String>) {\n  var emp1 = Employee(\
+  \ \"Hareesh\" , \"Seeram\" )\n}\n```\n\n输出\n\n```\nfName : Hareesh, lName : Seeram\n\
+  ```\n\n`init{}` 相当于 Java 的初始化块，用于放置对象初始化代码。该块在每次对象实例化时调用。\n\n如果主构造函数没有任何修饰符（或）注解与之关联，你可以在定义主构造函数时省略\
+  \ `constructor` 关键字。\n\nEmployee.kt\n\n```kotlin\nclass Employee (fName: String,\
+  \ lName: String) {\ninit{\n  println( \"fName : $fName, lName : $lName\" )\n}\n\
+  }\n```\n\n### 将成员变量定义为主构造函数的一部分\n\n如果你在主构造函数中的类型参数前添加 `var`/`val` 关键字，它会在类中创建一个字段。\n\
+  \nMain.kt\n\n```kotlin\nclass Employee ( var firstName: String, var lastName: String)\
+  \ {\n}\n```\n\n\n \n ```\nfun main(args: Array<String>) {\n  var emp1 = Employee(\"\
+  Hareesh\", \"Seeram\")\n  println(\"firstName : ${emp1.firstName}, lastName : ${emp1.lastName}\"\
+  )\n}\n```\n\n输出\n\n```\nfirstName : Hareesh, lastName : Seeram\n```\n\n在上述代码片段中，我将`firstName`和`lastName`字段作为主构造函数的一部分进行了定义。\n\
+  \n## Kotlin：次构造函数\n\nKotlin 类可以有多个次构造函数。\n\n如何定义次构造函数？\n\n应使用关键字`constructor`来定义次构造函数。\n\
+  \n语法\n\n```\nconstructor(arguments){\n}\n```\n\nConstructorDemo.kt\n\n```\nclass\
+  \ Employee {\n  var firstName: String = \"\"\n  var lastName: String = \"\"\n\n\
+  \  constructor(firstName: String) {\n    this.firstName = firstName\n    this.lastName\
+  \ = firstName\n  }\n\n  constructor(firstName: String, lastName: String) {\n   \
+  \ this.firstName = firstName\n    this.lastName = lastName\n  }\n}\n\nfun printEmployee(emp:\
+  \ Employee) {\n  println(\"firstName : ${emp.firstName}, lastName : ${emp.lastName}\"\
+  )\n}\n\nfun main(args: Array<String>) {\n  var emp1 = Employee(\"Hareesh\", \"Seeram\"\
+  )\n  var emp2 = Employee(\"Praneeth\")\n  printEmployee(emp1)\n  printEmployee(emp2)\n\
+  }\n```\n\n输出\n\n```\nfirstName : Hareesh, lastName : Seeram\nfirstName : Praneeth,\
+  \ lastName : Praneeth\n```\n\n主构造函数必须被次构造函数显式调用。我的意思是，如果一个类有主构造函数，那么次构造函数必须通过其他次构造函数直接或间接地委托给主构造函数。\n\
+  \n```\nclass Employee(var firstName: String) {\n  ....\n  ....\n  constructor(fName:\
+  \ String, lName: String) : this(fName) {\n    this.lastName = lName\n    this.id\
+  \ = \"\"\n  }\n}\n```\n\n在上述示例中，`Employee`类有一个主构造函数，我们在定义次构造函数时使用`this`关键字来调用主构造函数。\n\
+  \nConstructorDemo.kt\n\n```\nclass Employee(var firstName: String) {\n  var lastName:\
+  \ String = \"\"\n  var id: String = \"\"\n\n  constructor(fName: String, lName:\
+  \ String) : this(fName) {\n    this.lastName = lName\n    this.id = \"\"\n  }\n\n\
+  \  constructor(fName: String, lName: String, id: String) : this(fName) {\n    this.lastName\
+  \ = lName\n    this.id = id\n  }\n}\n\nfun printEmployee(emp: Employee) {\n  println(\"\
+  id : ${emp.id}, firstName : ${emp.firstName}, lastName : ${emp.lastName}\")\n}\n\
+  \nfun main(args: Array<String>) {\n  var emp1 = Employee(\"Krishna\")\n  var emp2\
+  \ = Employee(\"Hareesh\", \"Seeram\")\n  var emp3 = Employee(\"Praneeth\", \"Sai\"\
+  , \"123\")\n  printEmployee(emp1)\n  printEmployee(emp2)\n  printEmployee(emp3)\n\
+  }\n```\n\n输出\n\n```\nid : , firstName : Krishna, lastName :\nid : , firstName :\
+  \ Hareesh, lastName : Seeram\nid : 123, firstName : Praneeth, lastName : Sai\n```\n\
+  \n## Kotlin：向主构造函数传递默认值\n\n可以向主构造函数传递默认值。\n\n示例：\n\n```\nclass Employee(var firstName:\
+  \ String = \"Krishna\", var lastName: String = \"Gurram\") {\n}\n```\n\n上述代码片段为`Employee`类定义了一个带有默认值的主构造函数。\n\
+  \n```\nvar emp1 = Employee()\n```\n\n由于我们没有向构造函数传递任何参数，`firstName`和`lastName`将使用默认值进行初始化。`firstName`被初始化为`Krishna`，`lastName`被初始化为`Gurram`。\n\
+  \n```\nvar emp2 = Employee(\"Rachit\")\n```\n\n由于我们只传递了第一个参数，`firstName`被赋值为`Rachit`，`lastName`被赋值为`Gurram`。\n\
+  \n```\nvar emp3 = Employee(\"Shwetha\", \"kam\")\n```\n\n`firstName`被赋值为`Shwetha`，`lastName`被赋值为`Kam`。\n\
+  \nConstructorDemo.kt\n\n```\nclass Employee(var firstName: String = \"Krishna\"\
+  , var lastName: String = \"Gurram\") {\n}\n\nfun printEmployee(emp: Employee) {\n\
+  \  println(\"firstName : ${emp.firstName}, lastName : ${emp.lastName}\")\n}\n\n\
+  fun main(args: Array<String>) {\n  var emp1 = Employee()\n  var emp2 = Employee(\"\
+  Rachit\")\n  var emp3 = Employee(\"Shwetha\", \"kam\")\n  printEmployee(emp1)\n\
+  \  printEmployee(emp2)\n  printEmployee(emp3)\n}\n```\n\n输出\n\n```\nfirstName :\
+  \ Krishna, lastName : Gurram\nfirstName : Rachit, lastName : Gurram\nfirstName :\
+  \ Shwetha, lastName : kam\n```\n\n## Kotlin：定义私有主构造函数\n\n通过在类头中指定`private`访问修饰符，可以定义私有主构造函数。\n\
+  \nPrivateConDemo.kt\n\n```\nclass Employee private constructor(var firstName: String)\
+  \ {\n  var lastName: String = \"\"\n\n  constructor(fName: String, lName: String)\
+  \ : this(fName) {\n    this.lastName = lName\n  }\n}\n\nfun printEmployee(emp: Employee)\
+  \ {\n  println(\"firstName : ${emp.firstName}, lastName : ${emp.lastName}\")\n}\n\
+  \nfun main(args: Array<String>) {\n  var emp1 = Employee(\"Shwetha\", \"kam\")\n\
+  \  printEmployee(emp1)\n}\n```\n\n输出\n\n```\nfirstName : Shwetha, lastName : kam\n\
+  ```\n\n## Kotlin：如何创建对象\n\n与 Java 不同，创建对象时不需要使用`new`关键字。\n\n语法\n\n```\nvar objectName\
+  \ = ClassName(arguments)\n```\n\n示例\n\n```\nvar emp1 = Employee(\"Shwetha\")\nvar\
+  \ emp2 = Employee(\"Krishna\", \"G\")\n```\n\nConstructorDemo.kt\n\n```\nclass Employee\
+  \ {\n  var firstName: String = \"\"\n  var lastName: String = equivalent\n\n  constructor(fName:\
+  \ String) {\n    this.firstName = fName\n    this.lastName = fName\n  }\n\n  constructor(fName:\
+  \ String, lName: String) {\n    this.firstName = fName\n    this.lastName = lName\n\
+  \  }\n}\n\nfun printEmployee(emp: Employee) {\n  println(\"firstName : ${emp.firstName},\
+  \ lastName : ${emp.lastName}\")\n}\n\nfun main(args: Array<String>) {\n  var emp1\
+  \ = Employee(\"Shwetha\")\n  var emp2 = Employee(\"Krishna\", \"G\")\n  printEmployee(emp1)\n\
+  \  printEmployee(emp2)\n}\n```\n\n输出\n\n```\nfirstName : Shwetha, lastName : Shwetha\n\
+  firstName : Krishna, lastName : G\n```\n\n## Kotlin：继承\n\n继承是**可复用性**的概念。通过使用继承，一个类的对象可以获取另一个类对象的属性和方法。\n\
+  \n通过使用继承，可以通过扩展现有类来创建新类。新类称为**派生类**，现有类称为**基类**。\n\n![`1.bp.blogspot.com/-WD15DTV9bWc/Wk4xxMYGpNI/AAAAAAAAJNM/E_A7bbRxAjwRegKs854M-K0UYrXUZmzBgCLcBGAs/s400/kotlinInheritance.png`](img/Image_test_00010.jpg)\n\
+  \n示例\n\n```\nopen class BaseClass {\n}\n\nclass DerivedClass : BaseClass {\n}\n\
+  ```\n\n默认情况下，Kotlin 中的所有类都是 final 的。要使这些类可以被继承，应使用关键字`open`。\n\n让我们通过一个示例来了解继承特性。在每个组织中，有两种类型的员工：\n\
+  \na. 正式员工\nb. 合同员工\n\n正式员工和合同员工都共享`firstName`、`lastName`和`id`等属性。而合同员工有单独的薪酬公司。我们可以将这些共同属性（`firstName`、`lastName`和`id`）放在单独的`Employee`类中，并让`PermanentEmployee`和`ContractEmployee`类从共同的基类`Employee`继承这些属性。\n\
+  \n![`2.bp.blogspot.com/-_nP7xhmaHzQ/Wk4yZNK1f9I/AAAAAAAAJNU/s9WLWX1PFiAZC4Rz0uw-YuuQ-hCla9V4wCLcBGAs/s400/kotlinMultipleInheritance.png`](img/Image_test_00011.jpg)\n\
+  \n```\nopen class Employee {\n}\n\nclass PermanentEmployee : Employee {\n}\n\nclass\
+  \ ContractEmployee : Employee {\n}\n```\n\n请查看下面的可运行应用程序。\n\nInheritance.kt\n\n\
+  ```\nopen class Employee {\n  var firstName: String = \"\"\n  var lastName: String\
+  \ = \"\"\n  var id: String = \"\"\n\n  constructor(firstName: String, lastName:\
+  \ String, id: String) {\n    this.firstName = firstName\n    this.lastName = lastName\n\
+  \    this.id = id\n  }\n\n  open fun getEmployee(): String {\n    return \"firstName\
+  \ : $firstName, lastName: $lastName, id: $id\"\n  }\n}\n\nclass PermanentEmployee\
+  \ : Employee {\n  var healthInsuranceNumber = \"\"\n  var salary: Double = 0.0\n\
+  \n  constructor(firstName: String, lastName: String, id: String, healtInsuranceNumber:\
+  \ String, salary: Double) : super(firstName, lastName, id) {\n    this.healthInsuranceNumber\
+  \ = healtInsuranceNumber\n    this.salary = salary\n  }\n\n  override fun getEmployee():\
+  \ String {\n    return super.getEmployee() + \", healthInsuranceNumber: $healthInsuranceNumber,EXTRA_TAG\
+  \ salary: $salary\"\n  }\n}\n\nclass ContractEmployee : Employee {\n  var payRollCompany\
+  \ = \"ABC\"\n```\n\n\n \n ```kotlin\nconstructor(firstName: String, lastName: String,\
+  \ id: String, payRollCompany: String) : super(firstName, lastName, id) {\n  this.payRollCompany\
+  \ = payRollCompany\n}\n\noverride fun getEmployee(): String {\n  return super.getEmployee()\
+  \ + \", payRollCompany: $payRollCompany\"\n}\n\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var emp = PermanentEmployee(\"krishna\", \"Gurram\", \"123\", \"health3425\"\
+  , 56789.01)\n  println(emp.getEmployee())\n}\n```\n\n输出\n\n```\nfirstName : krishna,\
+  \ lastName: Gurram, id: 123, healthInsuranceNumber: health3425, salary: 56789.01\n\
+  ```\n\n```\nconstructor(firstName: String, lastName: String, id: String, healtInsuranceNumber:\
+  \ String, salary: Double) : super(firstName, lastName, id)\n```\n\n如果超类没有默认构造函数，那么所有子类的构造函数都必须显式调用超类的构造函数。\n\
+  \n默认情况下，所有函数和类都是不可继承的（`final`），要使它们可继承，需要使用关键字 `open`。\n\n```kotlin\nopen class\
+  \ Employee {\n  open fun getEmployee(): String {\n    return \"firstName : $firstName,\
+  \ lastName: $lastName, id: $id\"\n  }\n}\n```\n\n要重写超类的函数，需要使用 `override` 关键字。\n\
+  \n```kotlin\nclass PermanentEmployee : Employee {\n  override fun getEmployee():\
+  \ String {\n    return super.getEmployee() + \", healthInsuranceNumber: $healthInsuranceNumber,\
+  \ salary: $salary\"\n  }\n}\n```\n\n## 重要要点\n\na. 如果类有主构造函数，基类型可以（且必须）在那里直接使用主构造函数的参数进行初始化。\n\
+  \nb. 如果类没有主构造函数，那么每个次构造函数都必须使用 `super` 关键字来初始化基类型，或者委托给另一个执行此操作的构造函数。注意，在这种情况下，不同的次构造函数可以调用基类型的不同构造函数。\n\
+  \n# Kotlin：重写方法\n\n通过使用 `override` 关键字，可以重写基类的方法。默认情况下，类中的所有方法都是 final（不可重写的），可以使用\
+  \ `open` 关键字使它们可重写。\n\n`Override.kt`\n\n```kotlin\nopen class BaseClass {\n  open\
+  \ fun sayHello() {\n    println(\"******Hello World******\")\n  }\n}\n\nclass DerivedClass\
+  \ : BaseClass() {\n  override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\"\
+  )\n  }\n}\n\nfun main(args: Array<String>) {\n  var obj = DerivedClass()\n  obj.sayHello()\n\
+  }\n```\n\n输出\n\n```\n@@@@Hello World@@@@@\n```\n\n如上面的代码片段所示，`DerivedClass` 继承自\
+  \ `BaseClass`。`DerivedClass` 的 `sayHello()` 方法使用 `override` 关键字重写了 `BaseClass` 的\
+  \ `sayHello()` 方法。\n\n使用关键字 `override` 定义的方法本身是开放的，因此 `DerivedClass` 的子类可以重写此方法。\n\
+  \n`Override.kt`\n\n```kotlin\nopen class BaseClass {\n  open fun sayHello() {\n\
+  \    println(\"******Hello World******\")\n  }\n}\n\nopen class DerivedClass : BaseClass()\
+  \ {\n  override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\")\n  }\n}\n\
+  \nclass ChildDerivedClass : DerivedClass() {\n  override fun sayHello() {\n    println(\"\
+  ####Hello World####\")\n  }\n}\n\nfun main(args: Array<String>) {\n  var obj = ChildDerivedClass()\n\
+  \  obj.sayHello()\n}\n```\n\n输出\n\n```\n####Hello World####\n```\n\n如果你想禁止再次重写，使用关键字\
+  \ `final`。\n\n示例\n\n```kotlin\nopen class DerivedClass : BaseClass() {\n  final\
+  \ override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\")\n  }\n}\n```\n\
+  \n`Override.kt`\n\n```kotlin\nopen class BaseClass {\n  open fun sayHello() {\n\
+  \    println(\"******Hello World******\")\n  }\n}\n\nopen class DerivedClass : BaseClass()\
+  \ {\n  final override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\")\n\
+  \  }\n}\n\nclass ChildDerivedClass : DerivedClass() {\n  override fun sayHello()\
+  \ {\n    println(\"####Hello World####\")\n  }\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var obj = ChildDerivedClass()\n  obj.sayHello()\n}\n```\n\n当你尝试编译上述程序时，Kotlin\
+  \ 编译器会抛出以下错误。\n\n```\n'sayHello' in 'DerivedClass' is final and cannot be overridden\n\
+  ```\n\n# Kotlin：重写属性\n\n在我之前的文章中，我解释了如何重写方法，属性的重写与方法的重写类似。\n\n下面的分步过程解释了如何重写属性。\n\
+  \n**步骤 1：** 在基类中使用 `open` 修饰符定义变量。\n\n```kotlin\nopen class BaseClass {\n  open\
+  \ var name: String = \"Base Class\"\n}\n```\n\n**步骤 2：** 在子类中使用 `override` 修饰符重新定义同名变量。\n\
+  \n```kotlin\nopen class DerivedClass : BaseClass() {\n  override var name: String\
+  \ = \"Derived Class\"\n}\n```\n\n以下是完整的可运行应用程序。\n\n`Inheritance.kt`\n\n```kotlin\n\
+  open class BaseClass {\n  open var name: String = \"Base Class\"\n}\n\nopen class\
+  \ DerivedClass : BaseClass() {\n  override var name: String = \"Derived Class\"\n\
+  }\n\nfun main(args: Array<String>) {\n  var obj = DerivedClass()\n  println(\"name\
+  \ : $obj.name\")\n}\n```\n\n输出\n\n```\nname : Derived Class\n```\n\n## 我可以用 var\
+  \ 属性重写 val 属性吗？\n\n是的，你可以用 `var` 属性重写 `val` 属性。\n\n`Inheritance.kt`\n\n```kotlin\n\
+  open class BaseClass {\n  open val name: String = \"Base Class\"\n}\n\nopen class\
+  \ DerivedClass : BaseClass() {\n  override var name: String = \"Derived Class\"\n\
+  }\n\nfun main(args: Array<String>) {\n  var obj = DerivedClass()\n  println(\"name\
+  \ : ${obj.name}\")\n}\n```\n\n## 我可以用 val 属性重写 var 属性吗？\n\n不，你不能用 `val` 属性重写 `var`\
+  \ 属性。\n\n`Inheritance.kt`\n\n```kotlin\nopen class BaseClass {\n  open var name:\
+  \ String = \"Base Class\"\n}\n\nopen class DerivedClass : BaseClass() {\n  override\
+  \ val name: String = \"Derived Class\"\n}\n\nfun main(args: Array<String>) {\n \
+  \ var obj = DerivedClass()\n  println(\"name : ${obj.name}\")\n}\n```\n\n当你尝试编译上述程序时，你会遇到以下编译错误。\n\
+  \n```\nERROR: Var-property public open val name: String defined in DerivedClass\
+  \ cannot be overridden by val-property public open var name: String defined in BaseClass\
+  \ (6, 11)\n```\n\n# Kotlin：调用超类方法\n\n通过使用 `super` 关键字，可以调用超类的方法。\n\n## 语法\n\n```\n\
+  super.methodName\n```\n\n`SuperDemo.kt`\n\n```kotlin\nopen class BaseClass {\n \
+  \ open fun printMsg() {\n    println(\"Hello Base class\")\n  }\n}\n\nopen class\
+  \ DerivedClass : BaseClass() {\n  override fun printMsg() {\n    println(\"Hello\
+  \ Derived class\")\n    super.printMsg()\n  }\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var obj = DerivedClass()\n  obj.printMsg()\n}\n```\n\n输出\n\n```\nHello Derived\
+  \ class\nHello Base class\n```\n\n# Kotlin：嵌套类\n\n一个类可以嵌套在另一个类中。\n\n示例\n\n```kotlin\n\
+  class Outer {\n  class Nested {\n  }\n}\n```\n\n## 如何创建嵌套类的对象？\n\n```kotlin\nvar\
+  \ obj = Outer.Nested()\n```\n\n`NestedClass.kt`\n\n```kotlin\nclass Outer {\n  fun\
+  \ printMsg() {\n    println(\"Inside Outer class\")\n  }\n  class Nested {\n   \
+  \ fun printMsg() {\n      println(\"Inside Nested class\")\n    }\n  }\n}\n\nfun\
+  \ main(args: Array<String>) {\n  var outerObj = Outer()\n  var nestedObj = Outer.Nested()\n\
+  \  outerObj.printMsg()\n  nestedObj.printMsg()\n}\n```\n\n输出\n\n```\nInside Outer\
+  \ class\nInside Nested class\n```\n\n## 我可以在嵌套类中访问外部类中定义的成员变量吗？\n\n不，你不能在嵌套类中访问外部类中定义的成员变量。\n\
+  \n`NestedDemo.kt`\n\n```kotlin\nclass Outer {\n  private var x = 10\n  class Inner\
+  \ {\n    fun getX() = x\n  }\n}\n```\n\n当你尝试编译上述程序时，你会遇到以下错误。\n\n```\nUnresolved\
+  \ reference: x\n```\n\n# Kotlin：内部类\n\n内部类类似于嵌套类，唯一的区别是你可以从内部类访问外部类的成员。\n\n## 如何定义内部类？\n\
+  \n内部类使用关键字 `inner` 定义。\n\n## 如何定义内部类的对象？\n\n```kotlin\nvar innerObj = Outer().Inner()\n\
+  ```\n\n`InnerDemo.kt`\n\n```kotlin\nclass Outer {\n  fun printMsg() {\n    println(\"\
+  Inside Outer class\")\n  }\n  inner class Inner {\n    fun printMsg() {\n      println(\"\
+  Inside Inner class\")\n    }\n  }\n}\n\nfun main(args: Array<String>) {\n  var outerObj\
+  \ = Outer()\n  var innerObj = Outer().Inner()\n  outerObj.printMsg()\n  innerObj.printMsg()\n\
+  }\n```\n\n输出\n\n```\nInside Outer class\nInside Inner class\n```\n\n你可以从内部类访问外部类的成员变量。\n\
+  \n`InnerDemo.kt`\n\n\n \n ```\nclass Outer {\n\n  private var x = 10\n\ninner class\
+  \ Inner {\n\n  fun getX () = x\n\n}\n\n}\n\nfun main (args: Array<String>) {\n\n\
+  \  var innerObj = Outer().Inner()\n\n  var x = innerObj.getX()\n\nprintln( \"x =\
+  \ $x\" )\n\n}\n\nOutput\n\nx = 10\n```\n\n## Python 编程练习\n\n### 初学者编程\n\n#### JJ\
+  \ TAM\n\n#### 获取 Python 版本\n\n##### 代码\n\n```python Hindustan\nimport sys\nprint(\"\
+  Python version\")\nprint (sys.version)\nprint(\"Version info.\")\nprint (sys.version_info)\n\
+  ```\n\n#### 输出\n\n```\nPython version\n3.6.6 (default, Jun 28 2018, 04:42:43)\n\
+  [GCC 5.4.0 20160609]\nVersion info.\nsys.version_info(major=3, minor=6, micro=6,\
+  \ releaselevel='final', serial=0)\n```\n\n#### 检查数字\n\n### Python 代码\n\n```python\n\
+  num = float(input(\"Input a number: \"))\nif num > 0:\n   print(\"It is positive\
+  \ number\")\nelif num == 0:\n   print(\"It is Zero\")\nelse:\n   print(\"It is a\
+  \ negative number\")\n```\n\n#### 输出\n\n```\nInput a number: 200\nIt is positive\
+  \ number\n```\n\n#### 移除第一个元素的 Python 代码\n\n##### 程序\n\n```python\ncolor = [\"Red\"\
+  , \"Black\", \"Green\", \"White\", \"Orange\"]\nprint(\"\\nOriginal Color: \",color)\n\
+  del color[0]\nprint(\"After removing the first color: \",color)\nprint()\n```\n\n\
+  #### 输出\n\n```\nOriginal Color:  ['Red', 'Black', 'Green', 'White', 'Orange']\n\
+  After removing the first color:  ['Black', 'Green', 'White', 'Orange']\n```\n\n\
+  #### 筛选正数\n\n### Python 代码\n\n```python\nnums = [34, 1, 0, -23]\nprint(\"Original\
+  \ numbers in the list: \",nums)\nnew_nums = list(filter(lambda x: x >0, nums))\n\
+  print(\"Positive numbers in the list: \",new_nums)\n```\n\n#### 输出\n\n```\nOriginal\
+  \ numbers in the list:  [34, 1, 0, -23]\nPositive numbers in the list:  [34, 1]\n\
+  ```\n\n#### 统计给定列表中数字 4 的个数\n\n###### 示例程序\n\n```python\ndef list_count_4(nums):\n\
+  \  count = 0\n  for num in nums:\n    if num == 4:\n      count = count + 1\n  return\
+  \ count\nprint(list_count_4([1, 4, 6, 7, 4]))\nprint(list_count_4([1, 4, 6,  Spoon\
+  \ 4, 7, 4]))\n```\n\n#### 输出\n\n```\n2\n3\n```\n\n#### 判断数字是奇数还是偶数\n\n###### 示例程序\n\
+  \n```python\nnum = int(input(\"Enter a number: \"))\nmod = num % 2\nif mod > 0:\n\
+  \    print(\"This is an odd number.\")\nelse:\n    print(\"This is an even number.\"\
+  )\n```\n\n#### 输出\n\n```\nEnter a number: 5\nThis is an odd number.\n```\n\n####\
+  \ 获取给定字符串的 n 个副本\n\n##### 程序\n\n```python\ndef larger_string(str, n):\n   result\
+  \ = \"\"\n   for i in range(n):\n      result = result + str\n   return result\n\
+  print(larger_string('abc', 2))\nprint(larger_string('.py', 3))\n```\n\n#### 输出\n\
+  \n```\nabcabc\n.py.py.py\n```\n\n#### 输出在另一个列表中不存在的元素\n\n###### 数据\n\n```python\n\
+  color_list_1 = set([\"White\", \"Black\", \"Red\"])\ncolor_list_2 = set([\"Red\"\
+  , \"Green\"])\n```\n\n预期输出：\n```\n{'Black', 'White'}\n```\n\n###### 示例程序\n\n```python\n\
+  color_list_1 = set([\"White\", \"Black\", \"Red\"])\ncolor_list_2 = set([\"Red\"\
+  , \"Green\"])\nprint(color_list_1.difference(color_list_2))\n```\n\n#### 输出\n\n\
+  ```\n{'White', 'Black'}\n```\n\n#### 在三行中分别显示姓名、年龄和地址\n\n###### 示例程序\n\n```python\n\
+  def personal_details():\n    name, age = \"JJ Tam\", 28\n    address = \"Bangalore,\
+  \ Karnataka, India\"\n    print(\"Name: {}\\nAge: {}\\nAddress: {}\".format(name,\
+  \ age, address))\npersonal_details()\n```\n\n#### 输出\n\n```\nName: JJ Tam\nAge:\
+  \ 28\nAddress: Bangalore, Karnataka, India\n```\n\n#### 求解 (x + y) * (x + y) 的程序\n\
+  \n###### 数据\n\n求解 `(x + y) * (x + y)` 的程序。\n\n测试数据：`x = 4`，`y = 3`\n\n预期输出：`(4 +\
+  \ 3) ^ 2) = 49`\n\n##### 程序\n\n```python\nx, y = 4, 3\nresult = x * x + 2 * x *\
+  \ y + y * y\nprint(\"({} + {}) ^ 2) = {}\".format(x, y, result))\n```\n\n#### 输出\n\
+  \n```\n(4 + 3) ^ 2) = 49\n```\n\n#### 金额的未来值\n\n##### 给定利率和年数\n\n###### 数据\n\n测试数据：`amt\
+  \ = 10000`，`int = 3.5`，`years = 7`\n\n预期输出：`12722.79`\n\n##### 程序\n\n```python\n\
+  amt = 10000\nint = 3.5\nyears = 7\nfuture_value  = amt*((1+(0.01*int)) ** years)\n\
+  print(round(future_value,2))\n```\n\n#### 输出\n\n```\n12722.79\n```\n\n#### 检查文件是否存在\n\
+  \n##### 程序\n\n```python\nimport os.path\nopen('abc.txt', 'w')\nprint(os.path.isfile('abc.txt'))\n\
+  ```\n\n#### 输出\n\n```\nTrue\n```\n\n#### 转换距离\n\n##### 英尺转换为英寸、码和英里\n\n###### 示例程序\n\
+  \n```python\nd_ft = int(input(\"Input distance in feet: \"))\nd_inches = d_ft *\
+  \ 12\nd_yards = d_ft / 3.0\nd_miles = d_ft / 5280.0\nprint(\"The distance in inches\
+  \ is %i inches.\" % d_inches)\nprint(\"The distance in yards is %.2f yards.\" %\
+  \ d_yards)\nprint(\"The distance in miles is %.2f miles.\" % d_miles)\n```\n\n####\
+  \ 输出\n\n```\nInput distance in feet: 100\nThe distance in inches is 1200 inches.\n\
+  The distance in yards is 33.33 yards.\nThe distance in miles is 0.02 miles.\n```\n\
+  \n#### 求列表中所有元素的和\n\n### Python 代码\n\n```python\ndef sum_list(items):\n    sum_numbers\
+  \ = 0\n    for x in items:\n        sum_numbers += x\n    return sum_numbers\nprint(sum_list([1,2,-8]))\n\
+  ```\n\n#### 输出\n\n```\n-5\n```\n\n#### 列表中所有元素相乘\n\n### Python 代码\n\n```python\n\
+  def multiply_list(items):\n    tot = 1\n    for x in items:\n        tot *= x\n\
+  \    return tot\nprint(multiply_list([1,2,-8]))\n```\n\n#### 输出\n\n```\n-16\n```\n\
+  \n#### 获取列表中的最大数\n\n### Python 代码\n\n```python\ndef max_num_in_list( list ):\n \
+  \   max = list[ 0 ]\n    for a in list:\n        if a > max:\n            max =\
+  \ a\n    return max\nprint(max_num_in_list([1, 2, -8, 0]))\n```\n\n#### 输出\n\n```\n\
+  2\n```\n\n#### 获取列表中的最小数\n\n### Python 代码\n\n```python\ndef smallest_num_in_list(\
+  \ list ):\n    min = list[ 0 ]\n    for a in list:\n        if a < min:\n      \
+  \      min = a\n    return min\nprint(smallest_num_in_list([1, 2, -8, 0]))\n```\n\
+  \n#### 输出\n\n```\n-8\n```\n\n#### 移除列表中的重复项\n\n##### 程序\n\n```python\na = [10,20,30,20,10,50,60,40,80,50,40]\n\
+  dup_items = set()\nuniq_items = []\nfor x in a:\n    if x not in dup_items:\n  \
+  \      uniq_items.append(x)\n        dup_items.add(x)\nprint(dup_items)\n```\n\n\
+  ##### 输出：\n\n```\n{40, 10, 80, 50, 20, 60, 30}\n```\n\n#### 克隆或复制列表\n\n### Python\
+  \ 代码\n\n```python\noriginal_list = [10, 22, 44, 23, 4]\nnew_list = list(original_list)\n\
+  print(original_list)\nprint(new_list)\n```\n\n#### 输出\n\n```\n[10, 22, 44, 23, 4]\n\
+  [10, 22, 44, 23, 4]\n```\n\n#### 两个列表的差集\n\n### Python 代码\n\n```python\nlist1 =\
+  \ [1, 3, 5, 7, 9]\nlist2=[1, 2, 4, 6, 7, 8]\ndiff_list1_list2 = list(set(list1)\
+  \ - set(list2))\ndiff_list2_list1 = list(set(list2) - set(list1))\ntotal_diff =\
+  \ diff_list1_list2 + diff_list2_list1\nprint(total_diff)\n```\n\n#### 输出\n\n```\n\
+  [9, 3, 5, 8, 2, 4, 6]\n```\n\n#### 生成列表的所有排列\n\n### Python 代码\n\n```python\nimport\
+  \ itertools\nprint(list(itertools.permutations([1,2,3])))\n```\n\n#### 输出\n\n```\n\
+  [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]\n```\n\n####\
+  \ 查找列表中第二小的数\n\n##### Python 程序\n\n```python\ndef second_smallest(numbers):\n  if\
+  \ (len(numbers)<2):\n    return\n  if ((len(numbers)==2)  and (numbers[0] == numbers[1])\
+  \ ):\n    return\n  dup_items = set()\n  uniq_items = []\n  for x in numbers:\n\
+  \    if x not in dup_items:\n```\n\n\n \n ```python\nuniq_items.append(x)\n\nuniq_items.append(x)\n\
+  \ndup_items.add(x)\n\nuniq_items.sort()\n\nreturn uniq_items[1]\n\nprint(second_smallest([1,\
+  \ 2, -8, -2, 0, -2]))\n\nprint(second_smallest([1, 1, 0, 0, 2, -2, -2]))\n\nprint(second_smallest([1,\
+  \ 1, 1, 0, 0, 0, 2, -2, -2]))\n\nprint(second_smallest([2,2]))\n\nprint(second_smallest([2]))\n\
+  ```\n\n#### 输出\n\n```\n-2\n0\n0\nNone\nNone\n```\n\n#### 获取列表中的唯一值\n\n### Python\
+  \ 代码\n\n```python\nmy_list = [10, 20, 30, 40, 20, 50, 60, 40]\n\nprint(\"Original\
+  \ List : \",my_list)\n\nmy_set = set(my_list)\n\nmy_new_list = list(my_set)\n\n\
+  print(\"List of unique numbers : \",my_new_list)\n```\n\n#### 输出\n\n```\nOriginal\
+  \ List :  [10, 20, 30, 40, 20, 50, 60, 40]\n\nList of unique numbers :  [40, 10,\
+  \ 50, 20, 60, 30]\n```\n\n#### 获取元素的频率\n\n### Python 代码\n\n```python\nimport collections\n\
+  \nmy_list = [10,10,10,10,20,20,20,20,40,40,50,50,30]\n\nprint(\"Original List :\
+  \ \",my_list)\n\nctr = collections.Counter(my_list)\n\nprint(\"Frequency of the\
+  \ elements in the List : \",ctr)\n```\n\n#### 输出\n\n```\nOriginal List :  [10, 10,\
+  \ 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]\n\nFrequency of the elements in the\
+  \ List :  Counter({10: 4, 20: 4, 40: 2, 50: 2, 30: 1})\n```\n\n#### 生成列表的所有子列表\n\
+  \n### Python 代码\n\n```python\nfrom itertools import combinations\n\ndef sub_lists(my_list):\n\
+  \    subs = []\n    for i in range(0, len(my_list)+1):\n        temp = [list(x)\
+  \ for x in combinations(my_list, i)]\n        if len(temp)>0:\n            subs.extend(temp)\n\
+  \    return subs\n\nl1 = [10, 20, 30, 40]\n\nl2 = ['X', 'Y', 'Z']\n\nprint(\"Original\
+  \ list:\")\n\nprint(l1)\n\nprint(\"S\")\n\nprint(sub_lists(l1))\n\nprint(\"Sublists\
+  \ of the said list:\")\n\nprint(sub_lists(l1))\n\nprint(\"\\nOriginal list:\")\n\
+  \nprint(l2)\n\nprint(\"Sublists of the said list:\")\n\nprint(sub_lists(l2))\n```\n\
+  \n#### 输出\n\n```\nOriginal list:\n\n[10, 20, 30, 40]\n\nS\n\n[[], [10], [20], [30],\
+  \ [40], [10, 20], [10, 30], [10, 40], [20, 30], [20, 40], [30, 40], [10, 20, 30],\
+  \ [10, 20, 40], [10, 30, 40], [20, 30, 40], [10, 20, 30, 40]]\n\nSublists of the\
+  \ said list:\n\n[[], [10], [20], [30], [40], [10, 20], [10, 30], [10, 40], [20,\
+  \ 30], [20, 40], [30, 40], [10, 20, 30], [10, 20, 40], [ consecrate, [10, 30, 40],\
+  \ [20, 30, 40], [10, 20, 30, 40]]\n\nOriginal list:\n\n['X', 'Y', 'Z']\n\nSublists\
+  \ of the said list:\n\n[[], ['X'], ['Y'], ['Z'], ['X', 'Y'], ['X', 'Z'], ['Y', 'Z'],\
+  \ ['X', 'Y', 'Z']]\n```\n\n#### 查找两个列表的公共项\n\n### Python 代码\n\n```python\ncolor1\
+  \ = \"Red\", \"Green\", \"Orange\", \"White\"\n\ncolor2 = \"Black\", \"Green\",\
+  \ \"White\", \"Pink\"\n\nprint(set(color1) & set(color2))\n```\n\n#### 输出\n\n```\n\
+  'Green', 'White'}\n```\n\n#### 创建具有无限元素的列表\n\n### Python 代码\n\n```python\nimport\
+  \ itertools\n\nc = itertools.count()\n\nprint(next(c))\n\nprint(next(c))\n\nprint(next(c))\n\
+  \nprint(next(c))\n\nprint(next(c))\n```\n\n#### 输出\n\n```\n0\n\n1\n\n2\n\n3\n\n\
+  4\n```\n\n#### 移除给定列表中的连续重复项\n\n### Python 代码\n\n```python\nfrom itertools import\
+  \ groupby\n\ndef compress(l_nums):\n    return [key for key, group in groupby(l_nums)]\n\
+  \nn_list = [0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4 ]\n\nprint(\"Original\
+  \ list:\")\n\nprint(n_list)\n\nprint(\"\\nAfter removing consecutive duplicates:\"\
+  )\n\nprint(compress(n_list))\n```\n\n#### 输出\n\n```\nOriginal list:\n\n[0, 0, 1,\
+  \ 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4]\n\nAfter removing consecutive duplicates:\n\
+  \n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4]\n```\n\n#### 扁平化嵌套列表结构\n\n### Python 代码\n\n\
+  ```python\ndef flatten_list(n_list):\n    result_list = []\n    if not n_list: return\
+  \ result_list\n    stack = [list(n_list)]\n    while stack:\n        c_num = stack.pop()\n\
+  \        next = c_num.pop()\n        if c_num: stack.append(c_num)\n        if isinstance(next,\
+  \ list):\n            if next: stack.append(list(next))\n        else: result_list.append(next)\n\
+  \    result_list.reverse()\n    return result_list\n\nn_list = [0, 10, [20, 30],\
+  \ 40, 50, [60, 70, 80], [90, 100, 110, 120]]\n\nprint(\"Original list:\")\n\nprint(n_list)\n\
+  \nprint(\"\\nFlatten list:\")\n\nprint(flatten_list(n_list))\n```\n\n#### 输出\n\n\
+  ```\nOriginal list:\n\n[0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]]\n\
+  \nFlatten list:\n\n[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]\n```\n\
+  \n# Java 编程练习\n\n### 分别打印 hello 和你的名字\n\n#### Java 代码\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args)\n    {\n     \
+  \   Scanner input = new Scanner (System.in);\n        System.out.print(\"Input your\
+  \ first name: \");\n        String fname = input.next();\n        System.out.print(\"\
+  Input your last name: \");\n        String lname = input.next();\n        System.out.println();\n\
+  \        System.out.println(\"Hello \\n\"+fname+\" \"+lname);\n    }\n}\n```\n\n\
+  #### 输出\n\n```\nInput your first name: JJ\nInput your last name: TAM\nHello\nJJ\
+  \ TAM\n```\n\n### 打印两个数的和\n\n#### Java 代码\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args)\n    {\n     \
+  \   Scanner input = new Scanner (System.in);\n        System.out.print(\"Input the\
+  \ first number: \");\n        int num1 = input.nextInt();\n        System.out.print(\"\
+  Input the second number: \");\n        int num2 = input.nextInt();\n        int\
+  \ sum = num1 + num2;\n        System.out.println();\n        System.out.println(\"\
+  Sum: \"+sum);\n    }\n}\n```\n\n#### 输出\n\n```\nInput the first number: 545\nInput\
+  \ the second number: 455\nSum: 1000\n```\n\n### 将两个数相除并打印到屏幕上\n\n#### Java 代码\n\n\
+  ```java\nimport java.util.Scanner;\n\npublic class Main {\n    public static void\
+  \ main(String[] args)\n    {\n        Scanner input = new Scanner (System.in);\n\
+  \        System.out.print(\"Input the first number: \");\n        int a = input.nextInt();\n\
+  \        System.out.print(\"Input the second number: \");\n        int b = input.nextInt();\n\
+  \        int d = (a/b);\n        System.out.println();\n        System.out.println(\"\
+  The division of a and b is:\" +d);\n    }\n}\n```\n\n#### 输出\n\n```\nInput the first\
+  \ number: 100\nInput the second number: 25\nThe division of a and b is:4\n```\n\n\
+  ### 打印指定运算的结果\n\n#### Java 代码\n\n```java\npublic class Main {\n    public static\
+  \ void main(String[] args) {\n        int w = -5 + 8 * 6;\n        int x = (55 +\
+  \ 9) % 9;\n        int y = 20 + (-3 * 5 / 8);\n        int z = 5 + 15 / 3 * 2 -\
+  \ 8 % 3;\n        System.out.print(w + \"\\n\" + x + \"\\n\" + y + \"\\n\" + z);\n\
+  \    }\n}\n```\n\n### 打印乘法表\n\n#### Java 代码\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ in = new Scanner(System.in);\n        System.out.println(\"Input the Number: \"\
+  );\n        int n = in .nextInt();\n        for (int i = 1; i <= 10; i++) {\n  \
+  \          System.out.println(n + \"*\" + i + \" = \" + (n * i));\n        }\n \
+  \   }\n}\n```\n\n#### 输出\n\n```\nInput the Number:\n15\n15*1 = 15\n15*2 = 30\n15*3\
+  \ = 45\n15*4 = 60\n15*5 = 75\n15*6 = 90\n15*7 = 105\n15*8 = 120\n15*9 = 135\n15*10\
+  \ = 150\n```\n\n### 求圆的面积和周长\n\n#### Java 代码\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args) {\n```\n\n\n \n\
+  \ ```\nScanner io = new Scanner(System.in);\n\nSystem.out.println(\"Input the radius\
+  \ of the circle: \");\n\ndouble radius = io.nextDouble();\n\nSystem.out.println(\"\
+  Perimeter is = \" + (2 * radius * Math.PI));\n\nSystem.out.println(\"Area is = \"\
+  \ + (Math.PI * radius * radius));\n\n}\n\n}\n```\n\n#### 输出\n\n```\nInput the radius\
+  \ of the circle:\n\n10\n\nPerimeter is = 62.83185307179586\n\nArea is = 314.1592653589793\n\
+  ```\n\n### 交换两个变量\n\n#### Java 代码\n\n```\nimport java.util.Scanner;\n\npublic class\
+  \ Main {\n\npublic static void main(String[] args) {\n\n   int x, y, z;\n\n   Scanner\
+  \ in = new Scanner(System.in);\n\n   System.out.println(\"Input the first number:\
+  \ \");\n\n   x = in.nextInt();\n\n   System.out.println(\"Input the second number:\
+  \ \");\n\n   y = in.nextInt();\n\n   z = x;\n\n   x = y;\n\n   y = z;\n\n   System.out.println(\"\
+  \ Swapped values are3:\" + x + \" and \" + y);\n\n }\n\n}\n```\n\n#### 输出\n\n```\n\
+  Input the first number:\n\n25\n\nInput the second number:\n\n50\n\nSwapped values\
+  \ are3:50 and 25\n```\n\n### 打印一张脸\n\n#### Java 代码\n\n```\npublic class Main {\n\
+  \npublic static void main(String[] args) {\n\n  String[] arra = new String[5];\n\
+  \n  arra[0] = \" +\\\"\\\"\\\"\\\"\\\"+ \";\n\n  arra[1] = \"[| o o |]\";\n\n  arra[2]\
+  \ = \" |  ^  |\";\n\n  arra[3] = \" | '-' |\";\n\n  arra[4] = \" +-----+\";\n\n\
+  \  for (int i = 0; i < 5; i++) {\n\n   System.out.println(arra[i]);\n\n  }\n\n}\n\
+  \n}\n```\n\n#### 输出\n\n```\n+\"\"\"\"\"'+\n\n[| o o |]\n\n|  ^  |\n\n| '-' |\n\n\
+  +-----+\n```\n\n### 华氏度转摄氏度\n\n#### Java 代码\n\n```\nimport java.util.Scanner;\n\n\
+  public class Main {\n\n    public static void main(String[] Strings) {\n\n     \
+  \   Scanner input = new Scanner(System.in);\n\n        System.out.print(\"Input\
+  \ a degree in Fahrenheit: \");\n\n        double fahrenheit = input.nextDouble();\n\
+  \n        double  celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);\n\n        System.out.println(fahrenheit\
+  \ + \" degree Fahrenheit is equal to \" + celsius + \" in Celsius\");\n\n    }\n\
+  \n}\n```\n\n#### 输出\n\n```\nInput a degree in Fahrenheit: 96\n\n96.0 degree Fahrenheit\
+  \ is equal to 35.55555555555556 in Celsius\n```\n\n### 英寸转米\n\n![](img/Image00012.jpg)\n\
+  \n#### Java 代码\n\n```\nimport java.util.Scanner;\n\npublic class Main {\n\n    public\
+  \ static void main(String[] Strings) {\n\n        Scanner input = new Scanner(System.in);\n\
+  \n        System.out.print(\"Input a value for inch: \");\n\n        double inch\
+  \ = input.nextDouble();\n\n        double meters = inch * 0.0254;\n\n        System.out.println(inch\
+  \ + \" inch is \" + meters + \" meters\");\n\n    }\n\n}\n```\n\n#### 输出\n\n```\n\
+  Input a value for inch: 5\n\n5.0 inch is 0.127 meters\n```\n\n### 求所有数字之和\n\n![](img/Image00013.jpg)\n\
+  \n#### Java 代码\n\n```\nimport java.util.Scanner;\n\npublic class Main {\n\n    public\
+  \ static void main(String[] Strings) {\n\n        Scanner input = new Scanner(System.in);\n\
+  \n        System.out.print(\"Input an integer between 0 and 1000: \");\n\n     \
+  \   int num = input.nextInt();\n\n        int firstDigit = num % 10;\n\n       \
+  \ int remainingNumber = num / 10;\n\n        int SecondDigit = remainingNumber %\
+  \ 10;\n\n        remainingNumber = remainingNumber / 10;\n\n        int thirdDigit\
+  \ = remainingNumber % 10;\n\n        remainingNumber = remainingNumber / 10;\n\n\
+  \        int fourthDigit = remainingNumber % 10;\n\n        int sum = thirdDigit\
+  \ + SecondDigit + firstDigit + fourthDigit;\n\n        System.out.println(\"The\
+  \ sum of all digits in \" + num + \" is \" + sum);\n\n    }\n\n}\n```\n\n#### 输出\n\
+  \n```\nInput an integer between 0 and 1000: 750\n\nThe sum of all digits in 750\
+  \ is 12\n```\n\n### 打印年数和天数\n\n#### 从分钟数转换\n\n![](img/Image00014.jpg)\n\n#### Java\
+  \ 代码\n\n```\nimport java.util.Scanner;\n\npublic class Main {\n\n    public static\
+  \ void main(String[] Strings) {\n\n        double minutesInYear = 60 * 24 * 365;\n\
+  \n        Scanner input = new Scanner(System.in);\n\n        System.out.print(\"\
+  Input the number of minutes: \");\n\n        double min = input.nextDouble();\n\n\
+  \        long years = (long) (min / minutesInYear);\n\n        int days = (int)\
+  \ (min / 60 / 24) % 365;\n\n        System.out.println((int) min + \" minutes is\
+  \ approximately \" + years + \" years and \" + days + \" days\");\n\n    }\n\n}\n\
+  ```\n\n#### 输出\n\n```\nInput the number of minutes: 123456\n\n123456 minutes is\
+  \ approximately 0 years and 85 days\n```\n\n### 计算 (BMI)\n\n#### 身体质量指数\n\n####\
+  \ Java 代码\n\n```\nimport java.util.Scanner;\n\npublic class Main {\n\n    public\
+  \ static void main(String[] Strings) {\n\n        Scanner input = new Scanner(System.in);\n\
+  \n        System.out.print(\"Input weight in pounds: \");\n\n        double weight\
+  \ = input.nextDouble();\n\n        System.out.print(\"Input height in inches: \"\
+  );\n\n        double inches = input.nextDouble();\n\n        double BMI = weight\
+  \ * 0.45359237 / (inches * 0.0254 * inches * 0.0254);\n\n        System.out.print(\"\
+  Body Mass Index is \" + BMI+\"\\n\");\n\n    }\n\n}\n```\n\n#### 输出\n\n```\nInput\
+  \ weight in pounds: 450\n\nInput height in inches: 72\n\nBody Mass Index is 61.03034545478814\n\
+  ```\n\n### 计算以米为单位的速度\n\n#### 每秒、每小时公里和每小时英里\n\n![](img/Image00015.jpg)\n\n####\
+  \ Java 代码\n\n```\nimport java.util.Scanner;\n\npublic class Main {\n\n    public\
+  \ static void main(String[] args) {\n\nScanner scanner = new Scanner(System.in);\n\
+  \nfloat timeSeconds;\n\nfloat mps,kph, mph;\n\nSystem.out.print(\"Input distance\
+  \ in meters: \");\n\nfloat distance = scanner.nextFloat();\n\nSystem.out.print(\"\
+  Input hour: \");\n\nfloat hr = scanner.nextFloat();\n\nSystem.out.print(\"Input\
+  \ minutes: \");\n\nfloat min = scanner.nextFloat();\n\nSystem.out.print(\"Input\
+  \ seconds: \");\n\nfloat sec = scanner.nextFloat();\n\ntimeSeconds = (hr*3600) +\
+  \ (min*60) + sec;\n\nmps = distance / timeSeconds;\n\nkph = ( distance/1000.0f )\
+  \ / ( timeSeconds/3600.0f );\n\nmph = kph / 1.609f;\n\nSystem.out.println(\"Your\
+  \ speed in meters/second is \"+mps);\n\nSystem.out.println(\"Your speed in km/h\
+  \ is \"+kph);\n\nSystem.out.println(\"Your speed in miles/h is \"+mph);\n\nscanner.close();\n\
+  \n}\n\n}\n```\n\n#### 输出\n\n```\nInput distance in meters: 3000\n\nInput hour: 5\n\
+  \nInput minutes: 32\n\nInput seconds: 29\n\nYour speed in meters/second is 0.15038347\n\
+  \nYour speed in km/h is 0.5413805\n\nYour speed in miles/h is 0.3364702\n```\n\n\
+  ### 使用减法运算符\n\n#### 对两个指定整数进行除法运算\n\n#### Java 代码\n\n```\nimport java.util.Scanner;\n\
+  \npublic class Main {\n\npublic static float divide_using_subtraction(int dividend,\
+  \ int divider) {\n\nif (divider == 0) {\n\n      return 0;\n\n}   \n\n    float\
+  \ result = 0;\n\n    while (dividend > divider) {\n\n      dividend -= divider;\n\
+  \n      result++;\n\n    }\n\n    float decimalPart = (float) dividend / (float)\
+  \ divider;\n\n    result += decimalPart;\n\n    return result;\n\n  }\n\n    public\
+  \ static void main(String[] args) {\n\nScanner in = new Scanner(System.in);\n\n\
+  \        System.out.print(\"Input the dividend: \");\n\n        int dividend = in.nextInt();\n\
+  \nSystem.out.print(\"Input the divider: \");\n\n        int divider = in.nextInt();\n\
+  \nSystem.out.println(\"\\nResult: \" + divide_using_subtraction(dividend,divider));\
+  \               \n\n}\n\n}\n```\n\n#### 输出\n\n```\nInput the dividend: 900\n\nInput\
+  \ the divider: 30\n\nResult: 30.0\n```\n\n### 不使用乘法运算符\n\n#### 对两个指定整数进行乘法运算\n\n\
+  #### Java 代码\n\n```\nimport java.util.*;\n\npublic class Main {\n\n  public static\
+  \ int multiply(int n1, int n2) {\n\n    int result = 0;\n\n    boolean negative_num\
+  \ = (n1 < 0 && n2 >= 0) || (n2 < 0 && n1 >= 0);\n\n    boolean positive_num = !negative_num;\n\
+  \n    n1 = Math.abs(n1);\n\n    for (int i = 0; i < n1; i++) {\n```\n\n\n [ attēlu\
+  \ apraksts ]\n\n\n ```java\nif (negative_num && n2 > 0 || positive_num && n2 < 0)\n\
+  \    result -= n2;\nelse\n    result += n2;\n}\n\nreturn result;\n}\n\npublic static\
+  \ void main(String[] args) {\n    Scanner in = new Scanner(System.in);\n    System.out.print(\"\
+  Input the first number: \");\n    int n1 = in.nextInt();\n    System.out.print(\"\
+  Input the second number: \");\n    int n2 = in.nextInt();\n    System.out.println(\"\
+  \\nResult: \" + multiply(n1,n2));\n}\n}\n```\n\n#### 输出\n\n```\nInput the first\
+  \ number: 25\nInput the second number: 30\nResult: 750\n```\n\n### 打印总和\n\n####\
+  \ 差值、乘积、平均值、距离、最大值和最小值\n\n![](img/Image00016.jpg)\n\n#### JAVA 代码\n\n```java\nimport\
+  \ java.util.Scanner;\n\npublic class Main {\n    public static void main(String[]\
+  \ args) {\n        Scanner in = new Scanner(System.in);\n        System.out.print(\"\
+  Input 1st integer: \");\n        int firstInt = in.nextInt();\n        System.out.print(\"\
+  Input 2nd integer: \");\n        int secondInt = in.nextInt();\n        System.out.printf(\"\
+  Sum of two integers: %d%n\", firstInt + secondInt);\n        System.out.printf(\"\
+  Difference of two integers: %d%n\", firstInt - secondInt);\n        System.out.printf(\"\
+  Product of two integers: %d%n\", firstInt * secondInt);\n        System.out.printf(\"\
+  Average of two integers: %.2f%n\", (double) (firstInt + secondInt) / 2);\n     \
+  \   System.out.printf(\"Distance of two integers: %d%n\", Math.abs(firstInt - secondInt));\n\
+  \        System.out.printf(\"Max integer: %d%n\", Math.max(firstInt, secondInt));\n\
+  \        System.out.printf(\"Min integer: %d%n\", Math.min(firstInt, secondInt));\n\
+  \    }\n}\n```\n\n#### 输出\n\n```\nInput 1st integer: 50\nInput 2nd integer: 30\n\
+  Sum of two integers: 80\nDifference of two integers: 20\nProduct of two integers:\
+  \ 1500\nAverage of two integers: 40.00\nDistance of two integers: 20\nMax integer:\
+  \ 50\nMin integer: 30\n```\n\n### 找出三个数中的最大值\n\n#### Java 条件语句\n\n![](img/Image00017.jpg)\n\
+  \n#### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\npublic class Main {\n  \
+  \  public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+  \        System.out.print(\"Input the 1st number: \");\n        int num1 = in.nextInt();\n\
+  \        System.out.print(\"Input the 2nd number: \");\n        int num2 = in.nextInt();\n\
+  \        System.out.print(\"Input the 3rd number: \");\n        int num3 = in.nextInt();\n\
+  \n        if (num1 > num2)\n            if (num1 > num3)\n                System.out.println(\"\
+  The greatest: \" + num1);\n\n        if (num2 > num1)\n            if (num2 > num3)\n\
+  \                System.out.println(\"The greatest: \" + num2);\n\n        if (num3\
+  \ > num1)\n            if (num3 > num2)\n                System.out.println(\"The\
+  \ greatest: \" + num3);\n    }\n}\n```\n\n#### 输出\n\n```\nInput the 1st number:\
+  \ 25\nInput the 2nd number: 58\nInput the 3rd number: 98\nThe greatest: 98\n```\n\
+  \n### 显示乘法表\n\n#### 给定整数的乘法表\n\n#### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args) {\n        int\
+  \ j, n;\n        System.out.print(\"Input the number(Table to be calculated): \"\
+  );\n        {\n            System.out.print(\"Input number of terms : \");\n   \
+  \         Scanner in = new Scanner(System.in);\n            n = in.nextInt();\n\
+  \            System.out.println(\"\\n\");\n            for (j = 0; j <= n; j++)\n\
+  \                System.out.println(n + \" X \" + j + \" = \" + n * j);\n      \
+  \  }\n    }\n}\n```\n\n#### 输出\n\n```\nInput the number(Table to be calculated):\
+  \ Input number of terms : 7\n7 X 0 = 0\n7 X 1 = 7\n7 X 2 = 14\n7 X 3 = 21\n7 X 4\
+  \ = 28\n7 X 5 = 35\n7 X 6 = 42\n7 X 7 = 49\n```\n\n### 显示图案\n\n#### 直角三角形图案\n\n\
+  ##### 使用数字\n\n![](img/Image00018.jpg)\n\n#### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args) {\n        int\
+  \ i, j, n;\n        System.out.print(\"Input number of rows : \");\n        Scanner\
+  \ in = new Scanner(System.in);\n        n = in.nextInt();\n        for (i = 1; i\
+  \ <= n; i++) {\n            for (j = 1; j <= i; j++)\n                System.out.print(j);\n\
+  \            System.out.println(\"\");\n        }\n    }\n}\n```\n\n#### 输出\n\n\
+  ```\nInput number of rows : 9\n1\n12\n123\n1234\n12345\n123456\n1234567\n12345678\n\
+  123456789\n```\n\n### 打印金字塔图案\n\n![](img/Image00019.jpg)\n\n#### JAVA 代码\n\n```java\n\
+  import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[]\
+  \ args) {\n        int i, j, n, s, x;\n        System.out.print(\"Input number of\
+  \ rows : \");\n        Scanner in = new Scanner(System.in);\n        n = in.nextInt();\n\
+  \        s = n + 4 - 1;\n        for (i = 1; i <= n; i++) {\n            for (x\
+  \ = s; x != 0; x--) {\n                System.out.print(\" \");\n            }\n\
+  \            for (j = 1; j <= i; j++) {\n                System.out.print(i + \"\
+  \ \");\n            }\n            System.out.println();\n            s--;\n   \
+  \     }\n    }\n}\n```\n\n#### 输出\n\n```\nInput number of rows : 7\n       1\n \
+  \     2 2\n     3 3 3\n    4 4 4 4\n   5 5 5 5 5\n  6 6 6 6 6 6"

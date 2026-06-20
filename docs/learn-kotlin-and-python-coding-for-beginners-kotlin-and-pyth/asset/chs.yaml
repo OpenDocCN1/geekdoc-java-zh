@@ -1,0 +1,1859 @@
+- " \n ![](img/Image00000.jpg)\n\n# 快速学习 Kotlin 与 Python\n## 面向初学者的编程实战项目\n### 作者：J\
+  \ J TAM\n\n- Kotlin 简介\n- 安装 Kotlin\n- 在命令行模式下安装 Kotlin\n- Kotlin：Hello World 程序\n\
+  - 在 Kotlin 中定义变量\n- Kotlin 中的数据类型\n- Kotlin：可空类型\n- Kotlin：数字\n- Kotlin：字符\n- Kotlin：将字符转换为\
+  \ Int\n- Kotlin：布尔值\n- Kotlin：字符串\n- Kotlin：字符串模板表达式\n- Kotlin：数组\n- Kotlin：定义空值数组\n\
+  - Kotlin：使用工厂函数定义数组\n- Kotlin：打印数组元素\n- Kotlin：位运算符\n- Kotlin：逻辑运算符\n- Kotlin：控制流语句\n\
+  - Kotlin：if 语句\n- Kotlin：if-else 语句\n- Kotlin：if-else if-else\n- Kotlin：when 表达式\n\
+  - Kotlin：将 when 用作 if-else if 阶梯\n- Kotlin：将 When 用作表达式\n- Kotlin：for 循环\n- Kotlin：while、do-while\
+  \ 循环\n- Kotlin：break 语句\n- Kotlin：continue 语句\n- Kotlin：类与对象\n- Kotlin：声明属性\n- Kotlin：为属性添加\
+  \ getter 和 setter\n- Kotlin：定义类的成员函数\n- Kotlin：const：编译期常量\n- Kotlin：const 与 val\
+  \ 的区别\n- Kotlin：lateinit：延迟初始化属性\n- Kotlin：构造函数\n- Kotlin：次构造函数\n- Kotlin：为主构造函数传递默认值\n\
+  - Kotlin：定义私有主构造函数\n- Kotlin：如何创建对象\n- Kotlin：继承\n- Kotlin：方法重写\n- Kotlin：属性重写\n\
+  \n- Kotlin：调用父类方法\n- Kotlin：嵌套类\n- Kotlin：内部类\n- Kotlin：接口\n- Kotlin：实现接口时的重写冲突\n\
+  - Kotlin：对象表达式\n- Kotlin：定义单例对象\n- Kotlin：伴生对象\n- Kotlin：匿名内部类\n- Kotlin：抽象类\n-\
+  \ Kotlin：函数\n- Kotlin：使用参数名调用函数\n- Kotlin：函数默认参数\n- Kotlin：unit（或 void）函数\n- 快速学习\
+  \ PYTHON\n- 在 MAC OS 上安装 Python\n- Python：Hello World 程序\n- Python 交互式命令行\n- Python：运算符\n\
+  - Python 中的算术运算符\n- Python 中的关系运算符\n- Python 中的赋值运算符\n- Python 中的逻辑运算符\n- Python\
+  \ 中的位运算符\n- Python 中的成员运算符\n- Python 中的身份运算符\n- Python：短路运算符\n- Python 中的字符串\n-\
+  \ Python：if 条件\n- Python：while 语句\n- Python：for 语句\n- Python：break 语句\n- Python：continue\
+  \ 语句\n- Python：函数\n- Python：函数：return 语句\n- Python：函数：默认参数值\n- Python：函数：关键字参数\n\
+  - Python 列表\n- Python：list extend：追加给定列表的元素\n- Python：insert：在指定位置插入元素\n- Python：list\
+  \ remove：移除元素\n- Python：[list: pop: 移除列表中的最后一个元素\n- Python：list：清除列表中的所有元素\n- Python：list：index：获取元素的索引\n\
+  - Python：list：对列表元素进行排序\n- Python：count：统计元素出现次数\n- Python：list：反转列表元素\n- Python：list：del：删除元素\n\
+  - Python：遍历列表\n- Python：元组\n- Python：集合\n- Python：求列表的交集与并集\n- Python：字典\n- Python\
+  \ 模块\n- Python：模块中的可执行语句\n- Python：直接从模块导入函数\n- Python：在其他模块中导入模块\n- Python 命令行参数\n\
+  - Python：文件处理\n- Python：读取文件\n- Python：向文件写入数据\n- Python：类与对象\n- Python：类：内置类属性\n\
+  - Python：`__init__` 方法\n- Python：重载 `__init__` 方法\n- Python：类变量与实例变量\n- Python：继承\n\
+  - Python：多重继承\n- Python：异常\n- Python：异常处理\n- Python：用户自定义异常\n- Python global 关键字\n\
+  - Python：获取模块名称\n- Python：获取变量类型\n- Python：生成随机数\n\n# 快速学习 KOTLIN\n## 面向初学者的编程实战项目\n\
+  ### 作者：J J TAM\n\n## Kotlin 简介\n\nKotlin 是一种高级编程语言，运行在 JVM 上。Kotlin 将源代码编译为 Java\
+  \ 字节码，并使用 JVM 运行应用程序。你可以交替使用 Java 和 Kotlin，这意味着你可以从 Java 调用 Kotlin 函数，反之亦然。\n\n\
+  ### 先决条件\n\n需要具备 Java 基础知识。\n\n### Kotlin 是面向对象的吗？\n\n是的，Kotlin 是面向对象的语言，你可以创建类、对象，并应用多态、继承等面向对象编程概念。\n\
+  \n### Kotlin 是函数式语言吗？\n\n是的，Kotlin 是一种函数式语言。在函数式编程语言中，函数是基本的构建块，你可以返回一个函数，将函数作为参数传递给其他函数等。\n\
+  \n### Kotlin 是开源的吗？\n\n是的。\n\n### 使用 Kotlin 可以开发哪类应用程序？\n\n- 构建移动应用程序\n- 开发服务器端应用程序\n\
+  - 你可以开发任何能用 Java 开发的应用程序\n\n\n \n # Kotlin 基础教程\n\n## 常见问题\n\n### 可以在浏览器中运行 Kotlin\
+  \ 代码吗？\n\nKotlin 可以编译为 JavaScript，因此你可以在浏览器中运行应用程序。\n\n### Kotlin 是静态类型语言吗？\n\n\
+  是的，Kotlin 是静态类型语言。对于静态类型语言，变量的类型在编译时已知。你可以参考我的文章 *statically vs dynamically typed\
+  \ languages* 来了解静态类型和动态类型语言的区别。\n\n### Kotlin 可以推断类型吗？\n\n是的，与 Java 不同，你不需要在定义变量时指定类型。Kotlin\
+  \ 会根据上下文推断类型。\n\n例如：\n\n```kotlin\nvar name = \"JJTam\"\n```\n\n由于 `\"JJTam\"` 被赋值给变量\
+  \ `name`，Kotlin 推断其类型为 `String`。\n\n```kotlin\nvar age = 28\n```\n\n由于数字 `28` 被赋值给变量\
+  \ `age`，Kotlin 推断其类型为 `Int`。\n\n## 安装 Kotlin\n\nKotlin 可以通过命令行模式安装，也可以安装在 Eclipse、IntelliJ\
+  \ 等 IDE 中。\n\n- 在命令行模式下安装 Kotlin\n- 在 Eclipse 中安装 Kotlin\n- 在 IntelliJ 中安装 Kotlin\n\
+  \n### 在命令行模式下安装 Kotlin\n\n从以下位置下载 Kotlin。在撰写本文时，`1.1.4` 是最新版本。\n\n`https://github.com/JetBrains/kotlin/releases/tag/v1.1.4`\n\
+  \n解压下载的 zip 文件，并将 `bin` 目录添加到系统路径。\n\n打开新的命令提示符并输入 `kotlinc` 命令。\n\n```\nC:\\>kotlinc\n\
+  Welcome to Kotlin version 1.1.4 (JRE 1.8.0_102-b14)\nType :help for help, :quit\
+  \ for quit\n>>>\n```\n\n如上面的输出所示，它显示了 Kotlin 版本和底层 JRE 版本。\n\n输入命令 `:help` 以列出可用命令。\n\
+  \n```\nC:\\>kotlinc\nWelcome to Kotlin version 1.1.4 (JRE 1.8.0_102-b14)\nType :help\
+  \ for help, :quit for quit\n>>>\n```\n\n你可以在 Kotlin 提示符中计算表达式。\n\n```\n>>> var a\
+  \ = 10\n>>> var b = 20\n>>> a + b\n30\n>>> a-b\n- 10\n>>> a*b\n200\n>>> a/b\n0\n\
+  >>> println(a)\n10\n>>> println( \"value of b : \" + b)\nvalue of b : 20\n```\n\n\
+  ## Kotlin: Hello World 程序\n\n`.kt` 是 Kotlin 文件的扩展名。\n\n创建文件 `HelloWorld.kt`，内容如下。\n\
+  \n**HelloWorld.kt**\n\n```kotlin\nfun main (args:Array<String>){\n    println( \"\
+  Hello World\" )\n}\n```\n\n关键字 `fun` 用于定义函数。\n\n`main` 是应用程序的主函数。程序执行从这里开始。\n\n\
+  `args:Array<String>`\n\n在 Kotlin 中，变量名先声明，然后是类型。在上面的例子中，`args` 是字符串数组类型的变量。\n\n\
+  `println(\"Hello World\")`\n\n上面的语句将消息 `Hello World` 打印到控制台。如你所见，与 Java 不同，Kotlin\
+  \ 语句不以 `;` 结尾。\n\n### 编译 HelloWorld.kt\n\n打开命令提示符并输入命令 `kotlinc HelloWorld.kt`。\n\
+  \n```\nC:\\Users\\JJTam\\Documents\\Study\\Kotlin\\Programs>kotlinc HelloWorld.kt\n\
+  \nC:\\Users\\JJTam\\Documents\\Study\\Kotlin\\Programs>dir\n Volume in drive C is\
+  \ OSDisk\n Volume Serial Number is 1034-4F6F\n\n Directory of C:\\Users\\JJTam\\\
+  Documents\\Study\\Kotlin\\Programs\n\n09/02/2017  11:18 AM    <DIR>          .\n\
+  09/02/2017  11:18 AM    <DIR>          ..\n09/02/2017  11:09 AM                57\
+  \ HelloWorld.kt\n09/02/2017  11:18 AM               980 HelloWorldKt.class\n09/02/2017\
+  \  11:18 AM    <DIR>          META-INF\n               2 File(s)          1,037\
+  \ bytes\n               3 Dir(s)  63,190,188,032 bytes free\n```\n\n如你所见 `dir` 命令的输出，你可以观察到\
+  \ Kotlin 生成了 `HelloWorldKt.class` 和一个 `META-INF` 目录。\n\n### 运行 HelloWorld.kt\n\n\
+  你可以使用 `kotlin HelloWorldKt` 命令运行 HelloWorld 文件。\n\n```\nC:\\Users\\JJTam\\Documents\\\
+  Study\\Kotlin\\Programs>kotlin HelloWorldKt\nHello World\n```\n\n### 创建并运行 JAR\n\
+  \n你也可以创建 JAR 文件，并使用 Java 启动器运行 JAR 文件。\n\n使用命令 `kotlinc HelloWorld.kt -include-runtime\
+  \ -d HelloWorld.jar` 创建 JAR 文件。\n\n`-include-runtime` 选项告诉 Kotlin 编译器，在 `HelloWorld.jar`\
+  \ 文件中包含 Kotlin 运行时。\n\n```\nC:\\Users\\JJTam\\Documents\\Study\\Kotlin\\Programs>kotlinc\
+  \ HelloWorld.kt -include-runtime -d HelloWorld.jar\n\nC:\\Users\\JJTam\\Documents\\\
+  Study\\Kotlin\\Programs>dir\n Volume in drive C is OSDisk\n Volume Serial Number\
+  \ is 1034-4F6F\n\n Directory of C:\\Users\\JJTam\\Documents\\Study\\Kotlin\\Programs\n\
+  \n09/02/2017  11:24 AM    <DIR>          .\n09/02/2017  11:24 AM    <DIR>      \
+  \    ..\n09/02/2017  11:24 AM           869,262 HelloWorld.jar\n09/02/2017  11:09\
+  \ AM                57 HelloWorld.kt\n               2 File(s)        869,319 bytes\n\
+  \               2 Dir(s)  63,401,816,064 bytes free\n```\n\n一旦 JAR 文件创建完成，你可以像运行其他\
+  \ JAR 文件一样调用它。使用命令 `java -jar HelloWorld.jar`\n\n```\nC:\\Users\\JJTam\\Documents\\\
+  Study\\Kotlin\\Programs>java -jar HelloWorld.jar\nHello World\n```\n\n## 在 Eclipse\
+  \ 中设置 Kotlin\n\n打开 Eclipse。Help -> Eclipse Marketplace。\n\n![](img/Image00002.jpg)\n\
+  \n搜索 Kotlin。\n\n![](img/Image00003.jpg)\n\n点击 `Install` 按钮安装 Kotlin 插件。\n\n安装成功后，Eclipse\
+  \ 会要求重启。重启 Eclipse。\n\n### 创建新的 Kotlin 项目\n\n打开 Eclipse。File -> New -> Other。\n\n\
+  ![](img/Image00004.jpg)\n\nKotlin -> Kotlin Project。\n\n![](img/Image00005.jpg)\n\
+  \n按 Next。\n\n在 `Kotlin Project` 窗口中，将项目名命名为 `Hello World`，然后点击 Finish 按钮。\n\nKotlin\
+  \ 项目结构如下所示。\n\n![](img/Image00006.jpg)\n\n### 创建 HelloWorld.kt 文件\n\n右键点击 `src`\
+  \ 文件夹 -> New -> Other。\n\n![](img/Image00007.jpg)\n\n选择 `Kotlin File` 并按 Next。\n\
+  \n![](img/Image00008.jpg)\n\n将文件名命名为 `Hello World` 并按 `Finish` 按钮。\n\n![](img/Image00009.jpg)\n\
+  \n将以下代码片段复制到 `HelloWorld.kt` 文件中。\n\n**HelloWorld.kt**\n\n```kotlin\nfun main (args:\
+  \ Array<String>) {\n    println(\"Hello World\" )\n}\n```\n\n### 运行 HelloWorld.kt\
+  \ 文件\n\n右键点击 HelloWorld.kt 文件的源代码 -> Run As -> Kotlin Application。\n\n![](img/Image00010.jpg)\n\
+  \n如果一切顺利，你可以在控制台中看到消息 `Hello World`。\n\n![](img/Image00011.jpg)\n\n## 在 Kotlin 中定义变量\n\
+  \n变量是用于存储数据的命名内存位置。\n\n### 语法\n\n```kotlin\nvar variableName : DataType = value\n\
+  val variableName : DataType = value\n```\n\n`var` 和 `val` 都是关键字。\n\n例如：\n\n```kotlin\n\
+  var a : Int  =10;\n```\n\n`a` 是 `Int` 类型，赋值为 `10`。\n\n```kotlin\nval b : Double\
+  \ = 1.23\n```\n\n`b` 是 `Double` 类型，赋值为 `1.23`。关键字 `val` 用于定义常量（不可变对象）。\n\n**HelloWorld.kt**\n\
+  \n```kotlin\nfun main (args: Array<String>) {\n    var a : Int  = 10 ;\n    val\
+  \ b : Double = 1.23\n    println( \"a : ${a}\" )\n    println( \"b : ${b}\" )\n\
+  }\n```\n\n```\nC:\\>kotlinc HelloWorld.kt\nC:\\>kotlin HelloWorldKt\na : 10\nb :\
+  \ 1.23\n```\n\n## Kotlin 中的数据类型\n\nJava 有 `int`、`float`、`char` 等原始类型，Kotlin 呢？\n\
+  \n从用户的角度来看，Kotlin 将一切设计为对象，但在运行时布尔值、数字和字符表示为原始类型。\n\n**HelloWorld.kt**\n\n```kotlin\n\
+  fun main (args: Array<String>) {\n    var doubleVar: Double = 1.23\n    var floatVar:\
+  \ Float = 1.23f\n    var longVar: Long = 123\n    var intVar: Int = 123\n    var\
+  \ shortVar: Short = 123\n    var byteVar: Byte = 123\n    println( \"doubleVar :\
+  \ ${doubleVar}\" )\n    println( \"doubleVar : ${floatVar}\" )\n    println( \"\
+  longVar : ${longVar}\" )\n    println( \"intVar : ${intVar}\" )\n    println( \"\
+  shortVar : ${shortVar}\" )\n    println( \"byteVar : ${byteVar}\" )\n}\n```\n\n\
+  **输出**\n\n```\ndoubleVar : 1.23\ndoubleVar : 1.23\nlongVar : 123\nintVar : 123\n\
+  shortVar : 123\nbyteVar : 123\n```\n\n## Kotlin: 可空类型\n\n默认情况下，Kotlin 引用类型（`Int`、`Float`、`Double`、`String`\
+  \ 等）不接受 `null` 值。Kotlin 引入此特性是为了避免空指针异常。\n\n**Test.kt**\n\n```kotlin\nfun main (args:\
+  \ Array<String>) {\n    var name : String = \"JJTam\"\n    name = null\n}\n```\n\
+  \n当你尝试编译上述程序时，Kotlin 会抛出以下错误。\n\n```\nERROR: Null can not be a value of a non-null\
+  \ type String (6, 9)\n```\n\n### 如何定义可以接受 null 值的变量？\n\n通过使用可空类型，你可以定义接受 `null`\
+  \ 值的变量。在引用类型后追加 `?` 以接受 `null` 值。\n\n| Type | Nullable type |\n|------|---------------|\n\
+  | Int | Int? |\n| String | String? |\n| Double | Double? |\n| Person | Person? |\n\
+  \n例如：\n\n```kotlin\nvar id: Int? = 1\nvar name: String? = \"JJTam\"\nvar salary:\
+  \ Double? = 123.456\nvar person: Person? = Person( \"JJTam\" )\n\nid = null\nname\
+  \ = null\nsalary = null\nperson = null\n```\n\n## Kotlin: 数字\n\nKotlin 提供以下数据类型来支持数字。\n\
+  \n| Data Type | Size in Bits |\n|-----------|--------------|\n| Double | 64 |\n\
+  | Float | 32 |\n| Long | 64 |\n| Int | 32 |\n| Short | 16 |\n| Byte | 8 |\n\n\n\
+  \ \n # Kotlin：数字\n\n```kotlin\nfun main(args: Array<String>) {\n    var doubleVar:\
+  \ Double = 1.23\n    var floatVar: Float = 1.23f\n    var longVar: Long = 123\n\
+  \    var intVar: Int = 123\n    var shortVar: Short = 123\n    var byteVar: Byte\
+  \ = 123\n    println(\"doubleVar : ${doubleVar}\")\n    println(\"doubleVar : ${floatVar}\"\
+  )\n    println(\"longVar : ${longVar}\")\n    println(\"intVar : ${intVar}\")\n\
+  \    println(\"shortVar : ${shortVar}\")\n    println(\"byteVar : ${byteVar}\")\n\
+  }\n```\n\n**输出**\n\n```\ndoubleVar : 1.23\ndoubleVar : 1.23\nlongVar : 123\nintVar\
+  \ : 123\nshortVar : 123\nbyteVar : 123\n```\n\n## 十六进制、八进制和二进制字面量表示法\n\nKotlin 支持十六进制和二进制表示法，但不支持八进制表示法。十六进制数通过前缀\
+  \ `0x` 表示。\n\n```kotlin\nfun main(args: Array<String>) {\n    var hexaNum: Int =\
+  \ 0x123\n    var binaryNum: Int = 0b10101010\n    println(\"hexaNum : ${hexaNum}\"\
+  )\n    println(\"binaryNum : ${binaryNum}\")\n}\n```\n\n**输出**\n\n```\nhexaNum :\
+  \ 291\nbinaryNum : 170\n```\n\n你也可以使用 `_` 来表示数字。\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var ten = 10\n    var hundred = 100\n    var thousand = 1000\n    var tenThousand\
+  \ = 10_000\n    var oneLaksh = 100_000\n    var tenLaksh = 1_000_000\n    println(\"\
+  ten : ${ten}\")\n    println(\"hundred : ${hundred}\")\n    println(\"thousand :\
+  \ ${thousand}\")\n    println(\"tenThousand : ${tenThousand}\")\n    println(\"\
+  oneLaksh : ${oneLaksh}\")\n    println(\"tenLaksh : ${tenLaksh}\")\n}\n```\n\n**输出**\n\
+  \n```\nten : 10\nhundred : 100\nthousand : 1000\ntenThousand : 10000\noneLaksh :\
+  \ 100000\ntenLaksh : 1000000\n```\n\n## Kotlin：字符\n\n`Char` 关键字用于定义单个字符。字符用单引号括起来。\n\
+  \n示例\n\n```kotlin\nvar myChar: Char = 'a'\n```\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var myChar: Char = 'a'\n    println(\"Value of myChar is : ${myChar}\"\
+  )\n}\n```\n\n**输出**\n\n```\nValue of myChar is : a\n```\n\nJava 支持的所有转义序列在 Kotlin\
+  \ 中同样支持。\n\n### 将字符转换为整数\n\n`Char` 类型提供了 `toInt()` 方法，用于将字符转换为整数。\n\n```kotlin\n\
+  fun main(args: Array<String>) {\n    var myChar: Char = 'a'\n    println(\"Value\
+  \ of myChar is : ${myChar}\")\n    println(\"Value of myChar in int is : ${myChar.toInt()}\"\
+  )\n}\n```\n\n**输出**\n\n```\nValue of myChar is : a\nValue of myChar in int is :\
+  \ 97\n```\n\n## Kotlin：布尔值\n\n`Boolean` 类型用于表示 `true`、`false` 状态。\n\n```kotlin\n\
+  fun main(args: Array<String>) {\n    var trueState: Boolean = true\n    var falseState:\
+  \ Boolean = false\n    println(\"Value of trueState is : ${trueState}\")\n    println(\"\
+  Value of falseState is : ${falseState}\")\n}\n```\n\n**输出**\n\n```\nValue of trueState\
+  \ is : true\nValue of falseState is : false\n```\n\n## Kotlin：字符串\n\n`String` 是字符的集合，用双引号括起来。Kotlin\
+  \ 中的字符串通过关键字 `String` 定义，且这些字符串是*不可变的*。\n\n示例\n\n```kotlin\nvar message: String\
+  \ = \"Good Morning\"\n```\n\n```kotlin\nfun main(args: Array<String>) {\n    var\
+  \ message: String = \"Good Morning\"\n    println(message)\n}\n```\n\n**输出**\n\n\
+  ```\nGood Morning\n```\n\nJava 支持的所有转义序列（`\\n`、`\\t`、`\\a` 等）在 Kotlin 中同样支持。\n\n\
+  示例\n\n```kotlin\nvar message: String = \"Good Morning\\nHow are you\\nsee you soon\"\
+  \n```\n\n```kotlin\nfun main(args: Array<String>) {\n    var message: String = \"\
+  Good Morning\\nHow are you\\nsee you soon\"\n    println(message)\n}\n```\n\n**输出**\n\
+  \n```\nGood Morning\nHow are you\nsee you soon\n```\n\n如果你不想执行转义，则将字符串嵌入 `\"\"\"\
+  `（三引号）中。\n\n```kotlin\nfun main(args: Array<String>) {\n    var message: String\
+  \ = \"\"\"Good Morning\\nHow are you\\nsee you soon\nAfter two lines\\bgood bye\"\
+  \"\"\n    println(message)\n}\n```\n\n**输出**\n\n```\nGood Morning\\nHow are you\\\
+  nsee you soon\nAfter two lines\\bgood bye\n```\n\n### 字符串模板表达式\n\n通过使用模板表达式，你可以在字符串中计算表达式。模板表达式以\
+  \ `$` 符号开头，后跟一个名称。\n\n示例\n\n```kotlin\nvar a = 10\nprintln(\"Value of a is : $a\"\
+  )\n```\n\n任意表达式用花括号括起来\n\n```kotlin\nvar str = \"Hello World\"\nprintln(\"$str length\
+  \ is ${str.length}\")\n```\n\n```kotlin\nfun main(args: Array<String>) {\n    var\
+  \ a = 10\n    var str = \"Hello World\"\n    println(\"Value of a is : $a\")\n \
+  \   println(\"$str length is ${str.length}\")\n}\n```\n\n**输出**\n\n```\nValue of\
+  \ a is : 10\nHello World length is 11\n```\n\n## Kotlin：数组\n\n`Array` 表示相同类型元素的集合。Kotlin\
+  \ 提供了 `Array` 类来表示数组。\n\n通过使用库函数 `arrayOf`，你可以定义一个数组。\n\n示例\n\n```kotlin\nval numbers:\
+  \ Array<Int> = arrayOf(10, 20, 30, 40, 50)\n```\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    val numbers: Array<Int> = arrayOf(10, 20, 30, 40, 50)\n    for (element\
+  \ in numbers) {\n        println(element)\n    }\n}\n```\n\n**输出**\n\n```\n10\n\
+  20\n30\n40\n50\n```\n\nKotlin 提供了以下库函数来定义基本类型的数组。\n\n- `byteArrayOf()`\n- `shortArrayOf()`\n\
+  - `intArrayOf()`\n- `longArrayOf()`\n- `floatArrayOf()`\n- `doubleArrayOf()`\n-\
+  \ `CharArray()`\n- `BooleanArray()`\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var a: ByteArray = byteArrayOf(1, 2, 3)\n    val b: ShortArray = shortArrayOf(1,\
+  \ 2, 3)\n    val c: IntArray = intArrayOf(1, 2, 3)\n    var d: LongArray = longArrayOf(1L,\
+  \ 2L, 3L)\n    val e: FloatArray = floatArrayOf(1f, 2f, 3f)\n    val f: DoubleArray\
+  \ = doubleArrayOf(1.1, 2.2, 3.3)\n    var g: CharArray = charArrayOf('a', 'b', 'c')\n\
+  \    var h: BooleanArray = booleanArrayOf(true, false, true)\n    println(\"Elements\
+  \ of Byte array are : \")\n    for (ele in a) {\n        println(ele)\n    }\n \
+  \   println(\"\\n\\nElements of Short array are : \")\n    for (ele in b) {\n  \
+  \      println(ele)\n    }\n    println(\"\\n\\nElements of Int array are : \")\n\
+  \    for (ele in c) {\n        println(ele)\n    }\n    println(\"\\n\\nElements\
+  \ of Long array are : \")\n    for (ele in d) {\n        println(ele)\n    }\n \
+  \   println(\"\\n\\nElements of Float array are : \")\n    for (ele in e) {\n  \
+  \      println(ele)\n    }\n    println(\"\\n\\nElements of Double array are : \"\
+  )\n    for (ele in f) {\n        println(ele)\n    }\n    println(\"\\n\\nElements\
+  \ of Char array are : \")\n    for (ele in g) {\n        println(ele)\n    }\n \
+  \   println(\"\\n\\nElements of Boolean array are : \")\n    for (ele in h) {\n\
+  \        println(ele)\n    }\n}\n```\n\n**输出**\n\n```\nElements of Byte array are\
+  \ :\n1\n2\n3\n\nElements of Short array are :\n1\n2\n3\n\nElements of Int array\
+  \ are :\n1\n2\n3\n\nElements of Long array are :\n1\n2\n3\n\nElements of Float array\
+  \ are :\n1.0\n2.0\n3.0\n\nElements of Double array are :\n1.1\n2.2\n3.3\n\nElements\
+  \ of Char array are :\na\nb\nc\n\nElements of Boolean array are :\ntrue\nfalse\n\
+  true\n```\n\n### 定义空值数组\n\nKotlin 提供了 `arrayOfNulls` 库函数来定义空值数组。\n\n```kotlin\n\
+  fun main(args: Array<String>) {\n    var a: Array<Int?> = arrayOfNulls(5)\n    for\
+  \ (element in a) {\n        println(element)\n    }\n}\n```\n\n**输出**\n\n```\nnull\n\
+  null\nnull\nnull\nnull\n```\n\n### 使用工厂函数定义数组\n\nKotlin 提供了一个工厂函数，它接受大小和一个函数 `f`\
+  \ 作为参数来定义数组。函数 `f` 用于为数组提供初始值。\n\n```kotlin\nvar squares = Array(5, { i -> i * i\
+  \ })\n```\n\n上面的语句定义了一个大小为 5 的数组 `squares`，并初始化为 `{1, 4, 9, 16, 25}`\n\n```kotlin\n\
+  fun main(args: Array<String>) {\n    var squares = Array(5, { i -> i * i })\n  \
+  \  var cubes = Array(5, { i -> i * i * i })\n    println(\"Elements in squares array\
+  \ : \")\n    for (ele in squares) {\n        println(ele)\n    }\n    println(\"\
+  \\nElements in cubes array : \")\n    for (ele in cubes) {\n        println(ele)\n\
+  \    }\n}\n```\n\n**输出**\n\n```\nElements in squares array :\n0\n1\n4\n9\n16\n\n\
+  Elements in cubes array :\n0\n1\n8\n27\n64\n```\n\n### 打印数组元素\n\n在我之前的文章中，我解释了什么是数组以及如何在\
+  \ kotlin 中定义它。在这篇文章中，我将展示如何打印数组的元素。\n\n#### 使用 For 循环打印数组元素\n\n```kotlin\nfun main(args:\
+  \ Array<String>) {\n    var arr: Array<Int> = arrayOf(1, 2, 3, 4)\n    for (ele\
+  \ in arr) {\n        println(ele)\n    }\n}\n```\n\n**输出**\n\n```\n1\n2\n3\n4\n\
+  ```\n\n#### 使用 `Arrays.toString` 方法打印数组元素\n\n```kotlin\nimport java.util.Arrays\n\
+  \nfun main(args: Array<String>) {\n    var arr: Array<Int> = arrayOf(1, 2, 3, 4)\n\
+  \    println(Arrays.toString(arr))\n}\n```\n\n**输出**\n\n```\n[1, 2, 3, 4]\n```\n\
+  \n#### 使用 `array.indices` 打印数组元素\n\n```kotlin\nfun main(args: Array<String>) {\n\
+  \    var arr: Array<Int> = arrayOf(2, 3, 5, 7)\n    for (index in arr.indices) {\n\
+  \        println(arr[index])\n    }\n}\n```\n\n**输出**\n\n```\n2\n3\n5\n7\n```\n\n\
+  #### 使用 `array.withIndex` 打印数组元素\n\n```kotlin\nfun main(args: Array<String>) {\n\
+  \    var arr: Array<Int> = arrayOf(2, 3, 5, 7)\n    for ((index, value) in arr.withIndex())\
+  \ {\n        println(\"index : $index, value : $value\")\n    }\n}\n```\n\n**输出**\n\
+  \n```\nindex : 0, value : 2\nindex : 1, value : 3\nindex : 2, value : 5\nindex :\
+  \ 3, value : 7\n```\n\n#### 使用 While 循环打印数组元素\n\n```kotlin\nfun main(args: Array<String>)\
+  \ {\n    var arr: Array<Int> = arrayOf(2, 3, 5, 7)\n    var sizeOfTheArray = arr.size;\n\
+  \    var index: Int = 0;\n    while (index < sizeOfTheArray) {\n        println(\"\
+  index : $index, value : ${arr[index]}\")\n        index++\n    }\n}\n```\n\n**输出**\n\
+  \n```\nindex : 0, value : 2\nindex : 1, value : 3\nindex : 2, value : 5\nindex :\
+  \ 3, value : 7\n```\n\n## Kotlin：位运算符\n\n下表总结了 Kotlin 支持的位运算符。\n\n\n \n | 运算符 |\
+  \ 描述 | Java 等价 |\n| --- | --- | --- |\n| `shl` | 执行有符号左移 | `<<` |\n| `shr` | 执行有符号右移\
+  \ | `>>` |\n| `ushr` | 执行无符号右移 | `>>>` |\n| `and` | 按位与 | `&` |\n| `or` | 按位或 |\
+  \ `&#124;` |\n| `xor` | 按位异或 | `^` |\n| `inv()` | 按位取反 | `~` |\n\n除了 `inv()` 之外，所有其他运算符都以**中缀形式**使用。例如：`var1\
+  \ shl var2`、`var1 or var2`\n\n### 1. `shl`：执行有符号左移\n\n左移运算符将所有位向左移动一位，即**将数值翻倍**。\n\
+  \n语法：\n```\nvariable shl n\n```\n将变量左移 'n' 位。`Variable shl n` 等价于 `variable = variable\
+  \ * 2 的 n 次方`\n```\nvar1 shl 1 = 2 * 2 的 1 次方 = 4\nvar1 shl 2 = 2 * 2 的 2 次方 = 8\n\
+  var1 shl 9 = 2 * 2 的 9 次方 = 1024\n```\n\nLeftShift.kt\n```kotlin\nfun main (args:\
+  \ Array<String>) {\n  var var1: Int = 2\n  var res1 = var1 shl 1\n  var res2 = var1\
+  \ shl 2\n  var res3 = var1 shl 9\n  println( \"res1 : ${res1}\" )\n  println( \"\
+  res2 : ${res2}\" )\n  println( \"res3 : ${res3}\" )\n}\n```\n\n输出\n```\nres1 : 4\n\
+  res2 : 8\nres3 : 1024\n```\n\n### 2. `shr`：执行有符号右移\n\n右移运算符将所有位向右移动一位，即**将数值减半（除以\
+  \ 2）**。\n\n语法：\n```\nvariable shr n\n```\n将变量右移 'n' 位。`Variable shr n` 等价于 `variable\
+  \ = variable / 2 的 n 次方`\n```\nvar a : Int = 128\na shr 1 = 128 / (2 的 1 次方) = 64\n\
+  a shr 2 = 128 / (2 的 2 次方) = 32\n```\n\nRightShift.kt\n```kotlin\nfun main (args:\
+  \ Array<String>) {\n  var a: Int = 128\n  var res1 = a shr 1\n  var res2 = a shr\
+  \ 2\n  var res3 = a shr 3\n  println( \"res1 : ${res1}\" )\n  println( \"res2 :\
+  \ ${res2}\" )\n  println( \"res3 : ${res3}\" )\n}\n```\n\n输出\n```\nres1 : 64\nres2\
+  \ : 32\nres3 : 16\n```\n\n### 3. `ushr`：无符号右移\n\n将所有位向右移动一位，并将最左边的位设为 0。\n\n语法\n\
+  ```\nVariable ushr n\n```\n\nUnsignedRightShift.kt\n```kotlin\nfun main (args: Array<String>)\
+  \ {\n  var a: Int = - 128\n  var res1 = a ushr 1\n  println( \"res1 : ${res1}\"\
+  \ )\n}\n```\n\n输出\n```\nres1 : 2147483584\n```\n\n解释\n\n-128 的补码形式为\n```\n11111111\
+  \ 11111111 11111111 10000000\n```\n`>>>` 将位向右移动一位，并将最左边的位替换为 0。\n\n因此 (`-128 ushr\
+  \ 1`) 的结果如下序列\n```\n01111111 11111111 11111111 11000000\n```\n\n### 4. 按位 `and`、`or`、`xor`\n\
+  \n| Bit1 | Bit2 | and | or |\n| --- | --- | --- | --- |\n| 0 | 0 | 0 | 0 |\n| 0\
+  \ | 1 | 0 | 1 |\n| 1 | 0 | 0 | 1 |\n| 1 | 1 | 1 | 1 |\n\nHelloWorld.kt\n```kotlin\n\
+  fun main (args: Array<String>) {\n  var a: Int = 8\n  var b: Int = 9\n  println(\
+  \ \"a and b is ${a and b} \" )\n  println( \"a or b is ${a or b} \" )\n  println(\
+  \ \"a xor b is ${a xor b}\" )\n}\n```\n\n输出\n```\na and b is 8\na or b is 9\na xor\
+  \ b is 1\n```\n\n解释\n```\na   = 0000 1000\nb   = 0000 1001\na&b = 0000 1000\n\n\
+  a   = 0000 1000\nb   = 0000 1001\na|b = 0000 10001\n\na   = 0000 1000\nb   = 0000\
+  \ 1001\na^b = 0000 0001\n```\n\n注意：按位运算符仅适用于 `byte`、`short` 等整数值，**不适用于** `float`、`double`、`Boolean`。\n\
+  \n### 5. `inv()`：按位取反\n\n取反运算符将 1 变为 0，将 0 变为 1。\n\n示例\n```\nvar a : Int = 8\n```\n\
+  `a` 的二进制格式为\n```\n0 0 0 0 0 1 1 1\n```\n`a.inv()` 的二进制格式为\n```\n1 1 1 1 1 0 0 0\n\
+  ```\n\nInverse.kt\n```kotlin\nfun main (args: Array<String>) {\n  var a: Int = 8\n\
+  \  println( \"Value of a is : ${a}\" )\n  println( \"inversion of a is : ${a.inv()}\"\
+  \ )\n}\n```\n\n输出\n```\nValue of a is : 8\ninversion of a is : -9\n```\n\n## Kotlin：逻辑运算符\n\
+  \nKotlin 支持逻辑运算符（也称为**布尔运算符**），用于组合多个条件。\n\n- `||` – 惰性析取\n- `&&` – 惰性合取\n- `!`\
+  \ - 否定\n\n### 1. `||` – 惰性析取\n\n`operand1 || operand2`：如果任一操作数为 true，则返回 true，否则返回\
+  \ false。\n\n| 操作数 1 | 操作数 2 | 结果 |\n| --- | --- | --- |\n| False | false | false\
+  \ |\n| False | true | true |\n| True | false | true |\n| True | true | true |\n\n\
+  BooleanOr.kt\n```kotlin\nfun main (args: Array<String>) {\n  var operand1: Boolean\
+  \ = false\n  var operand2: Boolean = false\n  println( \"${operand1} || ${operand2}:\
+  \ ${(operand1 || operand2)}\" )\n  operand1 = false\n  operand2 = true\n  println(\
+  \ \"${operand1} || ${operand2}: ${(operand1 || operand2)}\" )\n  operand1 = true\n\
+  \  operand2 = false\n  println( \"${operand1} || ${operand2}: ${(operand1 || operand2)}\"\
+  \ )\n  operand1 = true\n  operand2 = true\n  println( \"${operand1} || ${operand2}:\
+  \ ${(operand1 || operand2)}\" )\n}\n```\n\n输出\n```\nfalse || false : false\nfalse\
+  \ || true : true\ntrue || false : true\ntrue || true : true\n```\n\n为什么 `||` 被称为**惰性析取**？\n\
+  \n如果第一个表达式求值为 true，则 Kotlin 不会计算整个表达式。因此，逻辑 OR 被称为**短路 OR**（或）**惰性析取运算符**。\n\nLazyDisjunciton.kt\n\
+  ```kotlin\nfun main (args: Array<String>) {\n  var a : Int = 10\n  var b : Int =\
+  \ 21\n  if ((a < b) || (a++ < b)) {\n    System. out .println( \"This statement\
+  \ evaluated\" );\n  }\n  System. out .println( \"a is not incremented \" + a);\n\
+  \  if ((a > b) || (a++ > b)) {\n    System. out .println( \"This statement is evaluated\"\
+  \ );\n  }\n  System. out .println( \"a is incremented \" + a);\n}\n```\n\n输出\n```\n\
+  This statement evaluated\na is not incremented 10\na is incremented 11\n```\n\n\
+  ### 2. `&&` – 惰性合取\n\n`operand1 && operand2`：如果两个操作数都为 true，则返回 true，否则返回 false。\n\
+  \n| 操作数 1 | 操作数 2 | 结果 |\n| --- | --- | --- |\n| False | false | false |\n| False\
+  \ | true | false |\n| True | false | false |\n| True | true | true |\n\nBooleanAnd.kt\n\
+  ```kotlin\nfun main (args: Array<String>) {\n  var operand1: Boolean = false\n \
+  \ var operand2: Boolean = false\n  println( \"${operand1} && ${operand2}: ${(operand1\
+  \ && operand2)}\" )\n  operand1 = false\n  operand2 = true\n  println( \"${operand1}\
+  \ && ${operand2}: ${(operand1 && operand2)}\" )\n  operand1 = true\n  operand2 =\
+  \ false\n  println( \"${operand1} && ${operand2}: ${(operand1 && operand2)}\" )\n\
+  \  operand1 = true\n  operand2 = true\n  println( \"${operand1} && ${operand2}:\
+  \ ${(operand1 && operand2)}\" )\n}\n```\n\n输出\n```\nfalse && false: false\nfalse\
+  \ && true: false\ntrue && false: false\ntrue && true: true\n```\n\n为什么 `&&` 被称为**惰性合取运算符**？\n\
+  \n如果表达式中的第一个语句求值为 false，则 Kotlin 不会计算整个表达式。因此，逻辑 AND 被称为**短路 AND**。\n\nLazyConjunction.kt\n\
+  ```kotlin\nfun main (args: Array<String>) {\n  var a: Int = 10\n  var b: Int = 21\n\
+  \  if ((a > b) && (a++ > b)) {\n    System. out .println( \"This statement not evaluated\"\
+  \ );\n  }\n  System. out .println( \"a is not incremented \" + a);\n  if ((a < b)\
+  \ && (a++ < b)) {\n    System. out .println( \"This statement is evaluated\" );\n\
+  \  }\n  System. out .println( \"a is incremented \" + a);\n}\n```\n\n输出\n```\na\
+  \ is not incremented 10\nThis statement is evaluated\na is incremented 11\n```\n\
+  \n### 3. 逻辑非 (`!`) 运算符\n\n如果操作数为 false，`!` 运算符将其求值为 true。\n\n如果操作数为 true，`!` 运算符将其求值为\
+  \ false。\n\n| 操作数 | 结果 |\n| --- | --- |\n| False | true |\n| True | false |\n\n\
+  LogicalNot.kt\n```kotlin\nfun main (args: Array<String>) {\n  var operand1: Boolean\
+  \ = false\n  var operand2: Boolean = true\n  println( \"operand1 : ${operand1}\"\
+  \ )\n  println( \"!operand1 : ${!operand1}\" )\n  println( \"operand2 : ${operand2}\"\
+  \ )\n  println( \"!operand2 : ${!operand2}\" )\n}\n```\n\n输出\n```\noperand1 : false\n\
+  !operand1 : true\noperand2 : true\n!operand2 : false\n```\n\n## Kotlin：`===` 与 `==`\n\
+  \nKotlin 支持两种类型的相等性。\n\n- **引用相等**\n- **结构相等**\n\n\n \n # 引用相等（`===`）\n\n`===` 运算符用于检查两个引用是否指向同一个对象。\n\
+  \n例如：\n\n`ref1 === ref2`\n\n如果引用 `ref1` 和 `ref2` 指向同一个对象，则上述语句返回 `true`，否则返回 `false`。\n\
+  \n### 结构相等（`==`）\n\n结构相等用于检查两个引用的值是否相等（通过使用 Java 的 `equals()` 方法进行检查）。\n\n例如：\n\n\
+  `ref1 == ref2`\n\n如果 `ref1.equals(ref2)` 返回 `true`，则上述语句返回 `true`，否则返回 `false`。\n\
+  \n#### Equality.kt\n\n```\nfun main (args: Array<String>) {\n  var intVar1 : Int\
+  \ = 10000\n  var intBoundedVar1 : Int? = intVar1\n  var intBounderdVar2 : Int? =\
+  \ intVar1\n  println( \"(intBoundedVar1===intBounderdVar2) : ${(intBoundedVar1 ===\
+  \ intBounderdVar2)}\" )\n  println( \"(intBoundedVar1==intBounderdVar2) : ${(intBoundedVar1\
+  \ == intBounderdVar2)}\" )\n}\n```\n\n#### 输出\n\n```\n(intBoundedVar1===intBounderdVar2)\
+  \ : false\n(intBoundedVar1==intBounderdVar2) : true\n```\n\n## Kotlin：控制流语句\n\n\
+  Kotlin 提供了控制流语句\n- 用于决策（`if`、`if-else`、`when`）和\n- 用于循环（`for`、`while`、`do-while`）\n\
+  \n### 决策语句\n\n- `if` 语句\n- `if-else` 语句\n- `if-else if-else` 阶梯\n- `when` 语句\n\n\
+  ### 循环语句\n\n- `for`\n- `while`\n- `do-while`\n\n## Kotlin：`if` 语句\n\n`if` 告诉程序在条件求值为\
+  \ `true` 时执行代码段。\n\n### 语法\n\n```\nif(condition){\n  // 如果条件为真则执行\n}\n```\n\n####\
+  \ IfStmt.kt\n\n```\nfun main (args: Array<String>) {\n  var marks: Int = 20\n  if\
+  \ (marks < 35 ) {\n    println( \"You failed in the Exam. Better luck next time\"\
+  \ );\n  }\n  marks = 55\n  if (marks < 35 ) {\n    println( \"You failed in the\
+  \ Exam again. Better luck next time\" );\n  }\n}\n```\n\n#### 输出\n\n```\nYou failed\
+  \ in the Exam. Better luck next time\n```\n\n## Kotlin：`if-else` 语句\n\n如果条件为 `true`，则执行\
+  \ `if` 块代码，否则执行 `else` 块代码。\n\n### 语法\n\n```\nif(condition){\n}else{}\n```\n\n####\
+  \ IfElse.kt\n\n```\nfun main (args: Array<String>) {\n  var marks: Int = 65\n  if\
+  \ (marks < 35 ) {\n    println( \"You failed in the Exam. Better luck next time\"\
+  \ );\n  } else {\n    println( \"You passed in the exam\" )\n  }\n}\n```\n\n####\
+  \ 输出\n\n```\nYou passed in the exam\n```\n\n## Kotlin：`if-else if-else`\n\n通过使用\
+  \ `if-else if-else` 结构，你可以在多个选项中进行选择。`if` 语句后面可以跟一个可选的 `else if`...`else` 语句，这对于测试各种条件非常有用。\n\
+  \n#### IfElseIf.kt\n\n```\nfun main (args: Array<String>) {\n  var marks: Int =\
+  \ 65\n  if (marks < 35 )\n    println( \"You are failed\" );\n  else if (marks <\
+  \ 50 )\n    println( \"You are passed and got third class\" );\n  else if (marks\
+  \ < 60 )\n    println( \"You are passed and got second class\" );\n  else if (marks\
+  \ < 70 )\n    println( \"You are passed and got first class\" );\n  else\n    println\
+  \ ( \"You are passed and got distinction\" );\n}\n```\n\n#### 输出\n\n```\nYou are\
+  \ passed and got first class\n```\n\n## Kotlin：`when` 表达式\n\n`when` 相当于 Java 中的\
+  \ `switch` 语句。\n\n### 语法\n\n```\nwhen(expression){\n  1 -> {\n    //执行某些操作\n  }\n\
+  \  2 -> {\n    //执行某些操作\n  }\n  else -> {\n    //执行某些操作\n  }\n}\n```\n\n`when` 按顺序将表达式与所有可能的\
+  \ case 进行匹配求值。如果没有一个 case 满足，则执行 `else` 块。\n\n#### WhenDemo.kt\n\n```\nfun main\
+  \ (args: Array<String>) {\n  var a : Int = 5\n  when (a){\n    12 -> println(\"\
+  Value 12 is checked\" )\n    5 -> println(\"Value 5 is checked\" )\n    3 -> println(\"\
+  Value 3 is checked\" )\n    else -> println(\"No value is checked\" )\n  }\n}\n\
+  ```\n\n#### 输出\n\n```\nValue 5 is checked\n```\n\n你可以在 `when` 表达式中组合多个分支语句。\n\n\
+  #### WhenDemo.kt\n\n```\nfun main (args: Array<String>) {\n  var a : Int = 5\n \
+  \ when (a){\n    2 , 3 , 5 , 7 -> println(\"Prime number\" )\n    4 , 6 , 8 -> println(\"\
+  Even number other than 2\" )\n    else -> println(\"No value is checked\" )\n  }\n\
+  }\n```\n\n#### 输出\n\n```\nPrime number\n```\n\n你也可以使用任意表达式作为分支条件。例如，我使用 `2+3` 作为分支条件。\n\
+  \n#### WhenDemo.kt\n\n```\nfun main (args: Array<String>) {\n  var a : Int = 5\n\
+  \  when (a){\n    2 +3 -> println(\"Checked value 5\" )\n    4 , 6 , 8 -> println(\"\
+  Even number other than 2\" )\n    else -> println(\"No value is checked\" )\n  }\n\
+  }\n```\n\n#### 输出\n\n```\nChecked value 5\n```\n\n你也可以在分支条件中检查范围（或）不在范围内。\n\n####\
+  \ WhenDemo.kt\n\n```\nfun main (args: Array<String>) {\n  var a : Int = 5\n  when\
+  \ (a){\n    in 1..5 , in 11..15 -> println(\"a is in between  tight 1 to 5 (or)\
+  \ 11 to 15\" )\n    in 6..10 -> println(\"a is in range of 6 to 10\" )\n    else\
+  \ -> println(\"x is not in range\" )\n  }\n}\n```\n\n#### 输出\n\n```\na is in between\
+  \ 1 to 5 (or) 11 to 15\n```\n\n## Kotlin：将 `when` 用作 `if-else if` 阶梯\n\n你也可以将 `when`\
+  \ 表达式用作 `if-elseif` 阶梯。如果你不为 `when` 表达式指定任何参数，它可以作为 `if-else if` 阶梯使用。\n\n#### ConditionDemo.kt\n\
+  \n```\nfun main (args: Array<String>) {\n  var marks: Int = 65\n  if (marks < 35\
+  \ )\n    println( \"You are failed\" );\n  else if (marks < 50 )\n    println( \"\
+  You are passed and got third class\" );\n  else if (marks < 60 )\n    println( \"\
+  You are passed and got second class\" );\n  else if (marks < 70 )\n    println(\
+  \ \"You are passed and got first class\" );\n  else\n    println ( \"You are passed\
+  \ and got distinction\" );\n}\n```\n\n#### 输出\n\n```\nYou are passed and got first\
+  \ class\n```\n\n你可以使用 `when` 表达式实现上述 `if-else if-else` 逻辑，如下所示。\n\n#### WhenDemo.kt\n\
+  \n```\nfun main (args: Array<String>) {\n  var marks: Int = 65\n  when {\n    (marks\
+  \ < 35 ) -> println( \"You are failed\" )\n    (marks < 50 ) -> println( \"You are\
+  \ passed and got third class\" )\n    (marks < 60 ) -> println( \"You are passed\
+  \ and got second class\" )\n    (marks < 70 ) -> println( \"You are passed and got\
+  \ first class\" )\n    else -> println( \"You are passed and got distinction\" )\n\
+  \  }\n}\n```\n\n#### 输出\n\n```\nYou are passed and got first class\n```\n\n## Kotlin：将\
+  \ `When` 用作表达式\n\n你可以将 `when` 用作表达式。如果将 `when` 用作表达式，则匹配分支的值将成为 `when` 表达式的值。\n\n\
+  #### WhenDemo.kt\n\n```\nfun main (args: Array<String>) {\n  var a : Int = 2\n \
+  \ var s : String = \"cube\"\n  var result = when {\n    s.equals( \"double\" ) ->\
+  \ a * a\n    s.equals( \"cube\" ) -> a * a * a\n    else -> a\n  }\n  println( \"\
+  result is $result\" )\n}\n```\n\n#### 输出\n\n```\nresult is 8\n```\n\n## Kotlin：`for`\
+  \ 循环\n\n`for` 循环用于遍历集合、数组、范围等。通过使用 `for` 循环，你可以遍历任何提供迭代器的东西。\n\n### 遍历数组\n\n###\
+  \ 语法\n\n```\nfor(ele in array){\n}\n```\n\n#### ArrayDemo.kt\n\n```\nfun main (args:\
+  \ Array<String>) {\n  var arr: Array<Int> = arrayOf( 2 , 3 , 5 , 7 )\n  for (ele\
+  \ in arr){\n    println(ele)\n  }\n}\n```\n\n#### 输出\n\n```\n2\n3\n5\n7\n```\n\n\
+  ### 遍历范围\n\n#### ArrayDemo.kt\n\n```\nfun main (args: Array<String>) {\n  for (ele\
+  \ in 1.. 10 ){\n    println(ele)\n  }\n}\n```\n\n#### 输出\n\n```\n1\n2\n3\n4\n5\n\
+  6\n7\n8\n9\n10\n```\n\n### 遍历字符串\n\n#### ArrayDemo.kt\n\n```\nfun main (args: Array<String>)\
+  \ {\n  var message = \"Good Morning\"\n  for (c in message){\n    print(c)\n  }\n\
+  }\n```\n\n#### 输出\n\n```\nGood Morning\n```\n\n## Kotlin：`while`、`do-while` 循环\n\
+  \n### `while` 循环\n\n`while` 语句执行一段语句块，直到某个条件为 `true`\n\n### 语法\n\n```\nwhile (expression)\
+  \ {\n  //statements\n}\n```\n\n`while` 语句中的表达式必须求值为布尔值，否则编译器将抛出错误。`while` 语句首先对表达式求值，直到表达式求值为\
+  \ `true`，它执行 `while` 块内的代码，否则退出 `while` 循环。\n\n示例：使用 `while` 循环打印从 0 到 9 的数字。\n\n\
+  #### WhileDemo.kt\n\n```\nfun main (args: Array<String>) {\n  var counter : Int\
+  \ = 0\n  while (counter < 10 ){\n    println(counter)\n    counter++\n  }\n}\n```\n\
+  \n#### 输出\n\n```\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n```\n\n### `do-while` 循环\n\n`do-while`\
+  \ 也是一种类似 `while` 的循环结构，但它在循环底部而不是顶部对其表达式求值。\n\n### 语法\n\n```\ndo {\n  //statement(s)\n\
+  } while (expression)\n```\n\n#### DoWhileDemo.kt\n\n```\nfun main (args: Array<String>)\
+  \ {\n  var counter : Int = 0\n  do {\n    println(counter)\n    counter++\n  } while\
+  \ (counter < 10 )\n}\n```\n\n#### 输出\n\n```\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n```\n\
+  \n### `while` 和 `do-while` 有什么区别？\n\n\n \n `do` 代码块中的语句至少会执行一次，即使表达式的计算结果为 false。\n\
+  \n## Kotlin：`break` 语句\n\n`break` 语句用于跳出循环。`break` 语句有两种使用形式。\n- 无标签 break\n- 带标签\
+  \ break\n\n### 无标签 break\n\n无标签 break 用于跳出最近的闭合循环。\n\n**语法**\n\n```\nbreak\n```\n\
+  \n**BreakDemo.kt**\n\n```\nfun main(args: Array<String>) {\n    for (i in 1..10)\
+  \ {\n        println(i)\n        if (i == 5) {\n            break\n        }\n \
+  \   }\n}\n```\n\n**输出**\n\n```\n1\n2\n3\n4\n5\n```\n\n**BreakDemoInnerLoop.kt**\n\
+  \n```\nfun main(args: Array<String>) {\n    for (i in 1..5) {\n        for (j in\
+  \ 1..i) {\n            print(\"$j\")\n        }\n        println()\n    }\n}\n```\n\
+  \n**输出**\n\n```\n1\n12\n123\n1234\n12345\n```\n\n### 带标签 break\n\nKotlin 允许我们为任何表达式添加标签。\n\
+  \n**如何创建标签？**\n\n定义一个标识符，后跟 `@` 符号。\n\n例如：`outerLoop@`、`processState@`\n\n通过指定标签，我们可以跳出该标签对应的循环。\n\
+  \n**语法**\n\n```\nbreak@labelIdentifier\n```\n\n例如\n\n```\nbreak@outerLoop\nbreak@processState\n\
+  ```\n\n**LabelledBreakDemo.kt**\n\n```\nfun main(args: Array<String>) {\n    var\
+  \ counter: Int = 0;\n    outerLoop@ for (i in 1..5) {\n        for (j in 1..i) {\n\
+  \            counter++\n            print(\"$j\")\n            if (counter == 6)\
+  \ {\n                println(\"\\nBreaking out of the outer loop\")\n          \
+  \      break@outerLoop\n            }\n        }\n        println()\n    }\n}\n\
+  ```\n\n**输出**\n\n```\n1\n12\n123\nBreaking out of the outer loop\n```\n\n## Kotlin：`continue`\
+  \ 语句\n\n`continue` 语句跳过循环的当前迭代（例如：`for`、`while`、`do-while` 循环）。与 `break` 类似，`continue`\
+  \ 也有两种形式。\n1. 无标签 continue\n2. 带标签 continue\n\n### 无标签 continue\n\n**语法**\n\n```\n\
+  continue;\n```\n\n**ContinueDemo.kt**\n\n```\nfun main(args: Array<String>) {\n\
+  \    for (i in 1..10) {\n        if (i % 2 != 0) {\n            continue\n     \
+  \   }\n        print(\"$i \")\n    }\n}\n```\n\n**输出**\n\n```\n2 4 6 8 10\n```\n\
+  \n**UnlabelledContinueInnerLoop.kt**\n\n```\nfun main(args: Array<String>) {\n \
+  \   for (i in 1..5) {\n        for (j in 1..10) {\n            if (j % 2 != 0) {\n\
+  \                continue\n            }\n            print(\"$j \")\n        }\n\
+  \        println()\n    }\n}\n```\n\n**输出**\n\n```\n2 4 6 8 10\n2 4 6 8 10\n2 4\
+  \ 6 8 10\n2 4 6 8 10\n2 4 6 8 10\n```\n\n### 带标签 continue\n\nKotlin 允许我们为任何表达式添加标签。\n\
+  \n**如何创建标签？**\n\n定义一个标识符，后跟 `@` 符号。\n\n例如：`outerLoop@`、`processState@`\n\n我们可以将\
+  \ `continue` 语句与标签一起使用。\n\n**语法**\n\n```\ncontinue@labelIdentifier\n```\n\n例如\n\n\
+  ```\ncontinue@outerLoop\ncontinue@processState\n```\n\n**ContinueLabelledDemo.kt**\n\
+  \n```\nfun main(args: Array<String>) {\n    outerLoop@ for (i in 1..5) {\n     \
+  \   for (j in 1..10) {\n            if (j > 5) {\n                println()\n  \
+  \              continue@outerLoop\n            }\n            print(\"$i \")\n \
+  \       }\n    }\n}\n```\n\n**输出**\n\n```\n1 1 1 1 1\n2 2 2 2 2\n3 3 3 3 3\n4 4\
+  \ 4 4 4\n5 5 5 5 5\n```\n\n## Kotlin：类与对象\n\n### 现实世界中的对象与类\n\n#### 对象\n\n对象是现实世界中的实体。例如，书、猫、盒子、公交车、键盘、人、屏幕、手机等，都是对象。\n\
+  \n**我们如何区分对象**\n\n1. 依据它们的属性\n2. 依据它们的行为\n\n**基于属性区分两个对象**\n\n假设有两个人 A 和 B。首先，我们尝试找出\"\
+  人\"这一对象可能的属性。\n\n人的可能属性\n\n`height`、`weight`、`color`、`Education Qualification`、`country`、`address`\
+  \ 都属于人的属性。\n\n现在通过比较这些属性，我们可以轻松区分两个人。\n\n| 属性 | 人 A | 人 B |\n| 身高 | 6ft | 5.5ft\
+  \ |\n| 体重 | 75Kg | 60Kg |\n| 肤色 | 白色 | 黑色 |\n| 国家 | 印度 | 美国 |\n\n如上图所示，两个人都有各自的属性，因此我们可以依据这些属性来区分他们。\n\
+  \n**基于行为区分两个对象**\n\n考虑同样的两个人 A 和 B。我们尝试找出\"人\"这一对象可能的行为。\n\n可能的行为有\n\n`walk`、`run`、`swim`、`eat`、`sleep`、`see`、`hear`\
+  \ 等。现在通过比较这些行为，我们可以轻松区分两个人。\n\n| 行为 | 人 A | 人 B |\n| 步行 | 10km/hr | 12km/hr |\n\
+  | 跑步 | 20km/hr | 18km/hr |\n| 睡眠 | 8 小时/天 | 6 小时/天 |\n\n\n \n # 类\n\n用通俗的话来说，我把类称为类别。所有人都属于人类别，猫、狮子、大象属于动物类别。因此，类或类别是一组具有相似属性和行为的对象。\n\
+  \n### 编程术语中的对象与类\n\n#### 什么是对象？\n\n对象是相关状态和行为的软件捆绑体。Kotlin 的主要优势在于，你可以将 Kotlin 中的对象与现实世界中的对象进行比较。因此，在\
+  \ Kotlin 中处理对象非常容易。\n\n#### 什么是类？\n\n类是创建对象的蓝图或原型。你可以使用 `class` 关键字来定义类。\n\n**语法**\n\
+  \n```\nclass ClassName {\n  // 属性\n  // 函数\n}\n```\n\n**示例**\n\n```\nclass Employee\
+  \ {\n  var firstName : String = \"\"\n  var lastName : String = \"\"\n}\n```\n\n\
+  上面的代码片段定义了 `Employee` 类，它定义了两个属性（`firstName`、`lastName`）。\n\n如何为 `Employee` 类定义对象？\n\
+  \n```\nvar emp1 = Employee()\n```\n\n上面的语句用于为 `Employee` 类定义一个对象。\n\n如何访问与对象 `emp1`\
+  \ 相关联的属性？\n\n对象的成员（`firstName` 和 `lastName`）使用 `.` 符号来访问。\n\n**语法**\n\n```\nobjName.propertyName\n\
+  ```\n\n**示例**\n\n```\nemp1.firstName = \"Chamu\"\nemp1.lastName = \"Delhi\"\n```\n\
+  \n**Employee.kt**\n\n```\nclass Employee {\n  var firstName: String = \"\"\n  var\
+  \ lastName: String = \"\"\n}\n```\n\n**Main.kt**\n\n```\nfun main (args: Array<String>)\
+  \ {\n  var emp1 = Employee()\n  emp1.firstName = \"Chamu\"\n  emp1.lastName = \"\
+  Delhi\"\n  println( \"First name : ${emp1.firstName}\" )\n  println( \"Last name\
+  \ : ${emp1.lastName}\" )\n}\n```\n\n**输出**\n\n```\nFirst name : Chamu\nLast name\
+  \ : Delhi\n```\n\n## Kotlin：声明属性\n\n你可以在类中定义属性。属性可以是可变的（mutable）或不可变的（一旦定义便无法更改）。\n\
+  \n### 如何定义可变属性？\n\n可变属性使用 `var` 关键字定义。\n\n**示例**\n\n```\nvar name : String = \"\
+  JJTam\"\n```\n\n### 如何定义不可变属性？\n\n不可变属性使用 `val` 关键字定义。\n\n**示例**\n\n```\nval name\
+  \ : String = \"JJTam\"\n```\n\n```\nclass Employee{\n  var name : String = \"JJTam\"\
+  \n  var age : Int = 28\n  val orgID : String = \"ORG1234\"\n}\n```\n\n如你所见，在 `Employee`\
+  \ 类中，我将 `name` 和 `age` 定义为可变属性，`orgID` 定义为不可变属性。\n\n### 如何访问类中的属性？\n\n通过定义对象，你可以访问类的属性。使用\
+  \ `.` 符号来访问类的实例属性。\n\n**语法**\n\n```\nobjectName.propertyName\n```\n\n**HelloWorld.kt**\n\
+  \n```\nclass Employee {\n  var name: String = \"JJTam\"\n  var age: Int = 28\n \
+  \ val orgID: String = \"ORG1234\"\n}\n\nfun main (args: Array<String>) {\n  var\
+  \ emp = Employee()\n  println( \"name : ${emp.name}\" )\n  println( \"age : ${emp.age}\"\
+  \ )\n  println( \"orgID : ${emp.orgID}\" )\n}\n```\n\n**输出**\n\n```\nname : JJTam\n\
+  age : 28\norgID : ORG1234\n```\n\n定义属性时无需添加属性类型，Kotlin 环境会自动推断。但添加类型可以提高程序的可读性。\n\
+  \n```\nclass Employee {\n  var name = \"JJTam\"\n  var age = 28\n  val orgID = \"\
+  ORG1234\"\n}\n```\n\n## Kotlin：属性的 getter 和 setter\n\n在我之前的文章中，我解释了如何定义属性，除了定义之外，我们还可以为属性添加\
+  \ getter 和 setter 方法。\n\n**语法**\n\n```\nvar <propertyName>[: <PropertyType>] [=\
+  \ <property_initializer>]\n[<getter>]\n[<setter>]\n```\n\n定义属性时，`PropertyType`、`getter`\
+  \ 和 `setter` 都是可选的。\n\n**HelloWorld.kt**\n\n```\nclass Employee {\n  var name: String\
+  \ = \"JJTam\"\n  get () = field\n  set (value) {\n    field = value\n  }\n  var\
+  \ age : Int = 28\n  get () = field\n  set (value) {\n    field = value\n  }\n  val\
+  \ orgID = \"ORG1234\"\n}\n\nfun main (args: Array<String>) {\n  var emp = Employee()\n\
+  \  println(\"name : ${emp.name}\" )\n  println(\"age : ${emp.age}\" )\n  println(\"\
+  orgID : ${emp.orgID}\" )\n}\n```\n\n**输出**\n\n```\nname : JJTam\nage : 28\norgID\
+  \ : ORG1234\n```\n\n如你所见，我使用了 `field` 标识符来引用幕后字段。按照惯例，setter 方法使用 `value` 作为参数名，但你可以使用任何名称。\n\
+  \n### 为什么我需要 getter 和 setter 方法？\n\ngetter 和 setter 方法用于在发送/设置信息之前对数据进行转换/验证。\n\n\
+  ```\nvar age : Int = 28\nget() = field\nset(value) {\n  if(value < 0 || value >\
+  \ 100)\n    field = 3\n}\n```\n\n例如，在上面的代码片段中，setter 方法在将年龄设置到属性之前对其进行验证。如果用户将年龄设置为\
+  \ `<0` 或 `> 100`，年龄将被设置为 `3`。下面是完整的可运行应用。\n\n**HelloWorld.kt**\n\n```\nclass Employee\
+  \ {\n  var name: String = \"JJTam\"\n  get () = field\n  set (value) {\n    field\
+  \ = value\n  }\n  var age: Int = 28\n  get () = field\n  set (value) {\n    if (value\
+  \ < 0 || value > 100 )\n      field = 3\n  }\n  val orgID = \"ORG1234\"\n}\n\nfun\
+  \ main (args: Array<String>) {\n  var emp = Employee()\n  println(\"name : ${emp.name}\"\
+  \ )\n  println(\"age : ${emp.age}\" )\n  println(\"orgID : ${emp.orgID}\" )\n  emp.age\
+  \ = -100\n  println(\"\\nAfter setting the age to -100\" )\n  println(\"name : ${emp.name}\"\
+  \ )\n  println(\"age : ${emp.age}\" )\n  println(\"orgID : ${emp.orgID}\" )\n}\n\
+  ```\n\n**输出**\n\n```\nname : JJTam\nage : 28\norgID : ORG1234\n\nAfter setting the\
+  \ age to -100\nname : JJTam\nage : 3\norgID : ORG1234\n```\n\nKotlin 为可变属性（使用 `var`\
+  \ 关键字定义的属性）提供默认的 getter 和 setter 方法，而为不可变属性（使用 `val` 关键字定义的属性）仅提供 getter 方法。\n\n\
+  ```\nvar name = \"JJTam\" // 类型为 String，具有默认的 getter 和 setter\nval orfID = \"orf1234\"\
+  \ // 类型为 String，具有默认的 getter\n```\n\n## Kotlin：定义类的成员函数\n\nKotlin 中的函数使用 `fun` 关键字定义。\n\
+  \n**示例：**\n\n```\nfun square(x : Int) : Int{\n  return x*x\n}\n```\n\n上面的代码片段定义了一个名为\
+  \ `square` 的函数，它接受一个 `Int` 类型的参数并返回整数。\n\n**Employee.kt**\n\n```\nclass Employee\
+  \ {\n  private var firstName: String = \"\"\n  private var lastName: String = \"\
+  \"\n  fun getFirstName (): String {\n    return firstName\n  }\n  fun getLastName\
+  \ (): String {\n    return lastName\n  }\n  fun setFirstName (firstName: String)\
+  \ {\n    this .firstName = firstName\n  }\n  fun setLastName (lastName: String)\
+  \ {\n    this .lastName = lastName\n  }\n}\n```\n\n**Main.kt**\n\n```\nfun main\
+  \ (args: Array<String>) {\n  var emp1 = Employee()\n  emp1.setFirstName( \"Chamu\"\
+  \ )\n  emp1.setLastName( \"Delhi\" )\n  println( \"firstName : ${emp1.getFirstName()}\"\
+  \ )\n  println( \"lastName : ${emp1.getLastName()}\" )\n}\n```\n\n**输出**\n\n```\n\
+  firstName : Chamu\nlastName : Delhi\n```\n\n## Kotlin：成员属性必须初始化\n\n在 Kotlin 中，成员属性要么被初始化，要么必须声明为抽象。让我们通过一个例子来看看。\n\
+  \n**Employee.kt**\n\n```\nclass Employee {\n  private var firstName: String\n  private\
+  \ var lastName: String\n  fun getFirstName (): String {\n    return firstName\n\
+  \  }\n  fun getLastName (): String {\n    return lastName\n  }\n  fun setFirstName\
+  \ (firstName: String) {\n    this .firstName = firstName\n  }\n  fun setLastName\
+  \ (lastName: String) {\n    this .lastName = lastName\n  }\n}\n```\n\n尝试编译上面的程序，你会得到如下错误。\n\
+  \n```\nC:\\>kotlinc Employee.kt\nEmployee.kt:2:2: error: property must be initialized\
+  \ or be abstract\n        private var firstName: String\n        ^\nEmployee.kt:3:2:\
+  \ error: property must be initialized or be abstract\n        private var lastName:\
+  \ String\n```\n\n### 如何消除上述错误？\n\n有两种方法，要么初始化属性，要么将属性设为抽象。\n\n**方法 1：先初始化 firstName\
+  \ 和 lastName 属性**\n\n**Employee.kt**\n\n```\nclass Employee {\n  private var firstName:\
+  \ String = \"\"\n  private var lastName: String = \"\"\n  fun getFirstName (): String\
+  \ {\n    return firstName\n  }\n  fun getLastName (): String {\n    return lastName\n\
+  \  }\n  fun setFirstName (firstName: String) {\n    this .firstName = firstName\n\
+  \  }\n  fun setLastName (lastName: String) {\n    this .lastName = lastName\n  }\n\
+  }\n```\n\n**方法 2：将属性设为抽象**\n\n**Employee.kt**\n\n```\nabstract class Employee {\n\
+  \  abstract var firstName: String\n  abstract var lastName: String\n}\n```\n\n##\
+  \ Kotlin：const：编译时常量\n\n你可以使用 `const` 关键字定义编译时常量。\n\n**示例**\n\n```\nconst val VENDOR_NAME\
+  \ = \"Self Learning Java blog\"\n```\n\n**HelloWorld.kt**\n\n```\nconst val VENDOR_NAME\
+  \ = \"Self Learning Java blog\"\nconst val PI = 3.14\n\nfun main (args: Array<String>)\
+  \ {\n  println( \"Vendor Name $VENDOR_NAME\" )\n  println( \"Value of PI : $PI\"\
+  \ )\n}\n```\n\n**输出**\n\n```\nVendor Name Self Learning Java blog\nValue of PI :\
+  \ 3.14\n```\n\n定义编译时常量时，属性必须满足以下前提条件。\n\n* 顶层属性或对象的成员\n* 使用 `String` 类型或基本类型的值进行初始化\n\
+  * 没有自定义 getter\n\n\n \n # Kotlin：`const` 与 `val`\n\n`const` 关键字用于定义编译期常量，也就是说，`const`\
+  \ 变量的值在编译时就已经确定。而 `val` 则用于定义运行期常量。\n\n例如，你不能像下面这样定义 `const`。\n\n```kotlin\nconst\
+  \ val PICon = getPI()\n```\n\n当你尝试编译包含上述语句的 Kotlin 程序时，你会遇到如下错误。\n\n> 'Const 'val'\
+  \ has type 'Unit'. Only primitives and String are allowed'.\n\n这是因为 `getPI()` 是在运行期求值并将值赋给\
+  \ `PICon`，但 `const` 是用来在编译期定义常量的。\n\n请看下面的可运行示例。\n\n`HelloWorld.kt`\n\n```kotlin\n\
+  const val VENDOR_NAME = \"Self Learning Java blog\"\nval PICon = getPI()\n\nfun\
+  \ getPI (): Double {\n    return 3.14\n}\n\nfun main (args: Array<String>) {\n \
+  \   println( \"Vendor Name $VENDOR_NAME\" )\n    println( \"Value of PI : $PICon\"\
+  \ )\n}\n```\n\n**输出**\n\n```\nVendor Name Self Learning Java blog\nValue of PI :\
+  \ 3.14\n```\n\n## Kotlin：`lateinit`：延迟初始化属性\n\n默认情况下，Kotlin 不允许存在未初始化的属性。你必须在声明时（或）在构造函数中对其进行初始化。让我用一个例子来说明。\n\
+  \n`HelloWorld.kt`\n\n```kotlin\nclass Employee {\n    var id : String\n    var name\
+  \ : String\n    var city : String\n}\n```\n\n当你尝试编译上述程序时，你会遇到如下错误。\n\n```\nERROR:\
+  \ Property must be initialized or be abstract (2, 2)\nERROR: Property must be initialized\
+  \ or be abstract (3, 2)\nERROR: Property must be initialized or be abstract (4,\
+  \ 2)\n```\n\n### 如何解决上述问题？\n\n有三种方法：\n- a. 在声明时初始化变量\n- b. 在构造函数中定义变量\n- c. 使用延迟初始化\n\
+  \n#### 在声明时初始化变量\n\n```kotlin\nclass Employee {\n    var id: String = \"123\"\n\
+  \    var name: String = \"JJTam\"\n    var city: String = \"Ongole\"\n}\n```\n\n\
+  #### 在构造函数中定义变量\n\n```kotlin\nclass Employee {\n    var id: String\n    var name:\
+  \ String\n    var city: String\n\n    constructor() {\n        id = \"123\"\n  \
+  \      name = \"JJTam\"\n        city = \"Ongole\"\n    }\n}\n```\n\n#### 使用延迟初始化\n\
+  \n通过使用 `lateinit` 关键字，我们可以告知 Kotlin 该变量将在稍后某个时间点进行初始化。\n\n```kotlin\nclass Employee\
+  \ {\n    lateinit var id: String\n    lateinit var name: String\n    lateinit var\
+  \ city: String\n}\n```\n\n### 我可以在初始化之前访问 `lateinit` 属性吗？\n\n不可以。如果你尝试在初始化之前访问 `lateinit`\
+  \ 属性，你会遇到 `UninitializedPropertyAccessException`。\n\n`HelloWorld.kt`\n\n```kotlin\n\
+  class Employee {\n    lateinit var id: String\n    lateinit var name: String\n \
+  \   lateinit var city: String\n}\n\nfun main (args: Array<String>) {\n    var obj\
+  \ = Employee()\n    println( \"Id : ${obj.id}\" )\n}\n```\n\n当你尝试运行上述程序时，你会遇到如下异常。\n\
+  \n```\nException in thread \"main\" kotlin.UninitializedPropertyAccessException:\
+  \ lateinit property id has not been initialized\n    at Employee.getId(HelloWorld.kt:2)\n\
+  \    at HelloWorldKt.main(HelloWorld.kt:10)\n```\n\n要解决该错误，请在访问之前定义 `lateinit` 属性。\n\
+  \n`HelloWorld.kt`\n\n```kotlin\nclass Employee {\n    lateinit var id: String\n\
+  \    lateinit var name: String\n    lateinit var city: String\n}\n\nfun main (args:\
+  \ Array<String>) {\n    var obj = Employee()\n    obj.id = \"123\"\n    println(\
+  \ \"Id : ${obj.id}\" )\n}\n```\n\n**输出**\n\n```\nId : 123\n```\n\n## Kotlin：构造函数\n\
+  \nKotlin 类有一个主构造函数和一个或多个次构造函数。构造函数使用 `constructor` 关键字定义。\n\n### 主构造函数\n\n主构造函数定义为类头的一部分。\n\
+  \n示例\n\n```kotlin\nclass Employee constructor(fName: String, lName: String) {\n\
+  \    ....\n    ....\n}\n```\n\n`Employee.kt`\n\n```kotlin\nclass Employee constructor\
+  \ (fName: String, lName: String) {\n    init{\n        println( \"fName : $fName,\
+  \ lName : $lName\" )\n    }\n}\n```\n\n`Main.kt`\n\n```kotlin\nfun main (args: Array<String>)\
+  \ {\n    var emp1 = Employee( \"Hareesh\" , \"Seeram\" )\n}\n```\n\n**输出**\n\n```\n\
+  fName : Hareesh, lName : Seeram\n```\n\n`init{}` 相当于 Java 的初始化块，用于放置对象初始化代码。该块在每次对象实例化时都会被调用。\n\
+  \n如果主构造函数没有任何修饰符（或）注解，定义主构造函数时可以省略 `constructor` 关键字。\n\n`Employee.kt`\n\n```kotlin\n\
+  class Employee (fName: String, lName: String) {\n    init{\n        println( \"\
+  fName : $fName, lName : $lName\" )\n    }\n}\n```\n\n#### 将成员变量定义为主构造函数的一部分\n\n\
+  如果你在主构造函数的类型参数前添加 `var`/`val` 关键字，它会在类中创建一个字段。\n\n`Main.kt`\n\n```kotlin\nclass\
+  \ Employee ( var firstName: String, var lastName: String) {}\n\nfun main (args:\
+  \ Array<String>) {\n    var emp1 = Employee( \"Hareesh\" , \"Seeram\" )\n    println(\
+  \ \"firstName : ${emp1.firstName}, lastName : ${emp1.lastName}\" )\n}\n```\n\n**输出**\n\
+  \n```\nfirstName : Hareesh, lastName : Seeram\n```\n\n在上述代码片段中，我将 `firstName` 和\
+  \ `lastName` 字段定义为主构造函数的一部分。\n\n## Kotlin：次构造函数\n\nKotlin 类可以有多个次构造函数。\n\n### 如何定义次构造函数？\n\
+  \n你应该使用 `constructor` 关键字来定义次构造函数。\n\n**语法**\n\n```kotlin\nconstructor(arguments){\n\
+  ```\n\n\n \n ```kotlin\nclass Employee {\n  var firstName: String = \"\"\n  var\
+  \ lastName: String = \"\"\n  constructor(firstName: String) {\n    this.firstName\
+  \ = firstName\n    this.lastName = firstName\n  }\n  constructor(firstName: String,\
+  \ lastName: String) {\n    this.firstName = firstName\n    this.lastName = lastName\n\
+  \  }\n}\n\nfun printEmployee(emp: Employee) {\n  println(\"firstName : ${emp.firstName},\
+  \ lastName : ${emp.lastName}\")\n}\n\nfun main(args: Array<String>) {\n  var emp1\
+  \ = Employee(\"Hareesh\", \"Seeram\")\n  var emp2 = Employee(\"Praneeth\")\n  printEmployee(emp1)\n\
+  \  printEmployee(emp2)\n}\n```\n\n输出\n\n```\nfirstName : Hareesh, lastName : Seeram\n\
+  firstName : Praneeth, lastName : Praneeth\n```\n\n主构造函数必须被次构造函数显式调用。我的意思是，如果一个类有主构造函数，那么次构造函数必须直接或通过其他\
+  \ constructors 间接地委托给主构造函数。\n\n```kotlin\nclass Employee(var firstName: String)\
+  \ {\n  ...\n  ...\n  constructor(fName: String, lName: String) : this(fName) {\n\
+  \    this.lastName = lName\n    this.id = \"\"\n  }\n}\n```\n\n在上面的例子中，`Employee`\
+  \ 类有一个主构造函数，我们在定义次构造函数时使用 `this` 关键字调用主构造函数。\n\n`ConstructorDemo.kt`\n\n```kotlin\n\
+  class Employee(var firstName: String) {\n  var lastName: String = \"\"\n  var id:\
+  \ String = \"\"\n  constructor(fName: String, lName: String) : this(fName) {\n \
+  \   this.lastName = lName\n    this.id = \"\"\n  }\n  constructor(fName: String,\
+  \ lName: String, id: String) : this(fName) {\n    this.lastName = lName\n    this.id\
+  \ = id\n  }\n}\n\nfun printEmployee(emp: Employee) {\n  println(\"id : ${emp.id},\
+  \ firstName : ${emp.firstName}, lastName : ${emp.lastName}\")\n}\n\nfun main(args:\
+  \ Array<String>) {\n  var emp1 = Employee(\"JJTam\")\n  var emp2 = Employee(\"Hareesh\"\
+  , \"Seeram\")\n  var emp3 = Employee(\"Praneeth\", \"Sai\", \"123\")\n  printEmployee(emp1)\n\
+  \  printEmployee(emp2)\n  printEmployee(emp3)\n}\n```\n\n输出\n\n```\nid : , firstName\
+  \ : JJTam, lastName :\nid : , firstName : Hareesh, lastName : Seeram\nid : 123,\
+  \ firstName : Praneeth, lastName : Sai\n```\n\n## Kotlin：向主构造函数传递默认值\n\n你可以向主构造函数传递默认值。\n\
+  \n示例：\n\n```kotlin\nclass Employee(var firstName: String = \"JJTam\", var lastName:\
+  \ String = \"Delhi\") {\n}\n```\n\n上面的代码片段为 `Employee` 类定义了一个带有默认值的主构造函数。\n\n```kotlin\n\
+  var emp1 = Employee()\n```\n\n由于我们没有向构造函数传递任何参数，`firstName` 和 `lastName` 将使用默认值进行初始化。`firstName`\
+  \ 被初始化为 `JJTam`，`lastName` 被初始化为 `Delhi`\n\n```kotlin\nvar emp2 = Employee(\"Rachit\"\
+  )\n```\n\n由于我们只传递了第一个参数，`firstName` 被赋值为 `Rachit`，`lastName` 被赋值为 `Delhi`\n\n```kotlin\n\
+  var emp3 = Employee(\"Shwetha\", \"kam\")\n```\n\n`firstName` 被赋值为 `Shwetha`，`lastName`\
+  \ 被赋值为 `Kam`。\n\n`ConstructorDemo.kt`\n\n```kotlin\nclass Employee(var firstName:\
+  \ String = \"JJTam\", var lastName: String = \"Delhi\") {\n}\n\nfun printEmployee(emp:\
+  \ Employee) {\n  println(\"firstName : ${emp.firstName}, lastName : ${emp.lastName}\"\
+  )\n}\n\nfun main(args: Array<String>) {\n  var emp1 = Employee()\n  var emp2 = Employee(\"\
+  Rachit\")\n  var emp3 = Employee(\"Shwetha\", \"kam\")\n  printEmployee(emp1)\n\
+  \  printGrouped: emp2)\n  printEmployee(emp3)\n}\n```\n\n输出\n\n```\nfirstName :\
+  \ JJTam, lastName : Delhi\nfirstName : Rachit, lastName : Delhi\nfirstName : Shwetha,\
+  \ lastName : kam\n```\n\n## Kotlin：定义私有主构造函数\n\n通过在类头中指定 `private` 访问修饰符，你可以定义私有主构造函数。\n\
+  \n`PrivateConDemo.kt`\n\n```kotlin\nclass Employee private constructor(var firstName:\
+  \ String) {\n  var lastName: String = \"\"\n  constructor(fName: String, lName:\
+  \ String) : this(fName) {\n    this.lastName = lName\n  }\n}\n\nfun printEmployee(emp:\
+  \ Employee) {\n  println(\"firstName : ${emp.firstName}, lastName : ${emp.lastName}\"\
+  )\n}\n\nfun main(args: Array<String>) {\n  var emp1 = Employee(\"Shwetha\", \"kam\"\
+  )\n  printEmployee(emp1)\n}\n```\n\n输出\n\n```\nfirstName : Shwetha, lastName : kam\n\
+  ```\n\n## Kotlin：如何创建对象\n\n与 Java 不同，定义对象时不需要 `new` 关键字。\n\n语法\n\n```kotlin\nvar\
+  \ objectName = ClassName(arguments)\n```\n\n示例\n\n```kotlin\nvar emp1 = Employee(\"\
+  Shwetha\")\nvar emp2 = Employee(\"JJTam\", \"G\")\n```\n\n`ConstructorDemo.kt`\n\
+  \n```kotlin\nclass Employee {\n  var firstName: String = \"\"\n  var lastName: String\
+  \ = \"\"\n  constructor(fName: String) {\n    this.firstName = fName\n    this.lastName\
+  \ = fName\n  }\n  constructor(fName: String, lName: String) {\n    this.firstName\
+  \ = fName\n    this.lastName = lName\n  }\n}\n\nfun printEmployee(emp: Employee)\
+  \ {\n  println(\"firstName : ${emp.firstName}, lastName : ${emp.lastName}\")\n}\n\
+  \nfun main(args: Array<String>) {\n  var emp1 = Employee(\"Shwetha\")\n  var emp2\
+  \ = Employee(\"JJTam\", \"G\")\n  printEmployee(emp1)\n  printEmployee(emp2)\n}\n\
+  ```\n\n输出\n\n```\nfirstName : Shwetha, lastName : Shwetha\nfirstName : JJTam, lastName\
+  \ : G\n```\n\n## Kotlin：继承\n\n继承是可重用性的概念。通过使用继承，一个类的对象可以获得另一个类对象的属性和方法。\n\n通过使用继承，你可以通过扩展现有类来创建新类。新类称为派生类，现有类称为基类。\n\
+  \n![](img/Image00012.jpg)\n\n示例\n\n```kotlin\nopen class BaseClass {\n}\n\nclass\
+  \ DerivedClass : BaseClass {\n}\n```\n\n默认情况下，Kotlin 中的所有类都是 final 的。要使这些类可继承，你应该使用关键字\
+  \ `open`。\n\n让我们通过一个例子来了解继承特性。在每个组织中，有两种员工。\n\na. 正式员工\nb. 合同工\n\n正式员工和合同工都共享 `firstName`、`lastName`\
+  \ 和 `id` 等属性。而合同工有单独的薪酬公司。我们可以将这些共同属性（`firstName`、`lastName` 和 `id`）放在单独的类 `Employee`\
+  \ 中，并让 `PermanentEmployee` 和 `ContractEmployee` 类从共同的基类 `Employee` 继承这些属性。\n\n![](img/Image00013.jpg)\n\
+  \n```kotlin\nopen class Employee {\n}\n\nclass PermanentEmployee : Employee {\n\
+  }\n\nclass ContractEmployee : Employee {\n}\n```\n\n找到下面的可运行应用程序。\n\n`Inheritance.kt`\n\
+  \n```kotlin\nopen class Employee {\n  var firstName: String = \"\"\n  var lastName:\
+  \ String = \"\"\n  var id: String = \"\"\n  constructor(firstName: String, lastName:\
+  \ String, id: String) {\n    this.firstName = firstName\n    this.lastName = lastName\n\
+  \    this.id = id\n  }\n  open fun getEmployee(): String {\n    return \"firstName\
+  \ : $firstName, lastName: $lastName, id: $id\"\n  }\n}\n\nclass PermanentEmployee\
+  \ : Employee {\n  var healthInsuranceNumber = \"\"\n  var salary: Double = 0.0\n\
+  \  constructor(firstName: String, lastName: String, id: String, healtInsuranceNumber:\
+  \ String, salary: Double) : super(firstName, lastName, id) {\n    this.healthInsuranceNumber\
+  \ = healtInsuranceNumber\n    this.salary = salary\n  }\n  override fun getEmployee():\
+  \ String {\n    return super.getEmployee() + \", healthInsuranceNumber: $healthInsuranceNumber,\
+  \ salary: $salary\"\n  }\n}\n\nclass ContractEmployee : Employee {\n  var payRollCompany\
+  \ = \"ABC\"\n  constructor(firstName: String, lastName: String, id: String, payRollCompany:\
+  \ String) : super(firstName, lastName, id) {\n    this.payRollCompany = payRollCompany\n\
+  \  }\n  override fun getEmployee(): String {\n    return super.getEmployee() + \"\
+  , payRollCompany: $payRollCompany\"\n  }\n}\n\nfun main(args: Array<String>) {\n\
+  \  var emp = PermanentEmployee(\"JJTam\", \"Delhi\", \"123\", \"health3425\", 56789.01)\n\
+  \  println(emp.getEmployee())\n}\n```\n\n输出\n\n```\nfirstName : JJTam, lastName:\
+  \ Delhi, id: 123, healthInsuranceNumber: health3425, salary: 56789.01\n```\n\n```kotlin\n\
+  constructor(firstName: String, lastName: String, id: String, healtInsuranceNumber:\
+  \ String, salary: Double) : super(firstName, lastName, id)\n```\n\n如果超类没有默认构造函数，那么所有子类构造函数都必须显式调用超类构造函数。\n\
+  \n默认情况下，所有函数和类都是不可继承的（final），要使它们可继承，你应该使用关键字 `open`。\n\n```kotlin\nopen class Employee\
+  \ {\n  open fun getEmployee(): String {\n    return \"firstName : $firstName, lastName:\
+  \ $lastName, id: $id\"\n  }\n}\n```\n\n要覆盖超类的函数，你应该使用 `override` 关键字。\n\n```kotlin\n\
+  class PermanentEmployee : Employee {\n  override fun getEmployee(): String {\n \
+  \   return super.getEmployee() + \", healthInsuranceNumber: $healthInsuranceNumber,\
+  \ salary: $salary\"\n  }\n}\n```\n\n### 重要要点\n\na. 如果类有主构造函数，基类型可以在那里立即初始化，使用主构造函数的参数。\n\
+  \nb. 如果类没有主构造函数，那么每个次构造函数都必须使用 `super` 关键字初始化基类型，或委托给这样做的另一个构造函数。请注意，在这种情况下，不同的次构造函数可以调用基类型的不同构造函数。\n\
+  \n## Kotlin：覆盖方法\n\n通过使用 `override` 关键字，你可以覆盖基类的方法。默认情况下，类中的所有方法都是 final 的（不可覆盖），你可以通过使用\
+  \ `open` 关键字使它们可覆盖。\n\n`Override.kt`\n\n```kotlin\nopen class BaseClass {\n  open\
+  \ fun sayHello() {\n    println(\"******Hello World******\")\n  }\n}\n\nclass DerivedClass\
+  \ : BaseClass() {\n  override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\"\
+  )\n  }\n}\n\nfun main(args: Array<String>) {\n  var obj = DerivedClass()\n  obj.sayHello()\n\
+  }\n```\n\n输出\n\n```\n@@@@Hello World@@@@@\n```\n\n正如你在上面的代码片段中观察到的，`DerivedClass`\
+  \ 继承自 `BaseClass`。`DerivedClass` 的 `sayHello()` 方法使用 `override` 关键字覆盖了 `BaseClass`\
+  \ 的 `sayHello()` 方法。\n\n使用关键字 `override` 定义的方法本身是开放的，因此 `DerivedClass` 的子类可以覆盖此方法。\n\
+  \n`Override.kt`\n\n```kotlin\nopen class BaseClass {\n  open fun sayHello() {\n\
+  \    println(\"******Hello World******\")\n  }\n}\n\nopen class DerivedClass : BaseClass()\
+  \ {\n  override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\")\n  }\n}\n\
+  \nclass ChildDerivedClass : DerivedClass() {\n  override fun sayHello() {\n    println(\"\
+  ####Hello World####\")\n  }\n}\n\nfun main(args: Array<String>) {\n  var obj = ChildDerivedClass()\n\
+  \  obj.sayHello()\n}\n```\n\n输出\n\n```\n####Hello World####\n```\n\n如果你想禁止重新覆盖，请使用关键字\
+  \ `final`。\n\n示例\n\n```kotlin\nopen class DerivedClass : BaseClass() {\n  final\
+  \ override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\")\n  }\n}\n```\n\
+  \n`Override.kt`\n\n```kotlin\nopen class BaseClass {\n  open fun sayHello() {\n\
+  \    println(\"******Hello World******\")\n  }\n}\n\nopen class DerivedClass : BaseClass()\
+  \ {\n  final override fun sayHello() {\n    println(\"@@@@Hello World@@@@@\")\n\
+  \  }\n}\n\nclass ChildDerivedClass : DerivedClass() {\n  override fun sayHello()\
+  \ {\n    println(\"####Hello World####\")\n  }\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var obj = ChildDerivedClass()\n  obj.sayHello()\n}\n```\n\n当你尝试编译上面的程序时，Kotlin\
+  \ 编译器会抛出以下错误。\n\n```\n'sayHello' in 'DerivedClass' is final and cannot be overridden\n\
+  ```\n\n## Kotlin：覆盖属性\n\n在我之前的文章中，我解释了如何覆盖方法，属性的覆盖与方法的覆盖类似。\n\n下面的分步程序解释了如何覆盖属性。\n\
+  \n步骤 1：在基类中使用 `open` 修饰符定义变量。\n\n```kotlin\nopen class BaseClass {\n  open var name:\
+  \ String = \"Base Class\"\n}\n```\n\n步骤 2：在子类中使用相同的名称和 `override` 修饰符重新定义变量。\n\n\
+  ```kotlin\nopen class DerivedClass : BaseClass() {\n  override var name: String\
+  \ = \"Derived Class\"\n}\n```\n\n找到下面的可运行应用程序。\n\n`Inheritance.kt`\n\n```kotlin\n\
+  open class BaseClass {\n  open var name: String = \"Base Class\"\n}\n\nopen class\
+  \ DerivedClass : BaseClass() {\n  override var name: String = \"Derived Class\"\n\
+  }\n\nfun main(args: Array<String>) {\n  var obj = DerivedClass()\n  println(\"name\
+  \ : $obj.name\")\n}\n```\n\n输出\n\n```\nname : Derived Class\n```\n\n### 我可以用 var\
+  \ 属性覆盖 val 属性吗？\n\n是的，你可以用 `var` 属性覆盖 `val` 属性。\n\n`Inheritance.kt`\n\n```kotlin\n\
+  open class BaseClass {\n  open val name: String = \"Base Class\"\n}\n\nopen class\
+  \ DerivedClass : BaseClass() {\n  override var name: String = \"Derived Class\"\n\
+  }\n\nfun main(args: Array<String>) {\n  var obj = DerivedClass()\n  println(\"name\
+  \ : ${obj.name}\")\n}\n```\n\n### 我可以用 val 属性覆盖 var 属性吗？\n\n不，你不能用 `val` 属性覆盖 `var`\
+  \ 属性。\n\n`Inheritance.kt`\n\n```kotlin\nopen class BaseClass {\n  open var name:\
+  \ String = \"Base Class\"\n}\n\nopen class DerivedClass : BaseClass() {\n  override\
+  \ val name: String = \"Derived Class\"\n}\n\nfun main(args: Array<String>) {\n \
+  \ var obj = DerivedClass()\n  println(\"name : ${obj.name}\")\n}\n```\n\n当你尝试编译上面的程序时，你会遇到以下编译错误。\n\
+  \n```\nERROR: Var-property public open val name: String defined in DerivedClass\
+  \ cannot be overridden by val-property public open var name: String defined in BaseClass\
+  \ (6, 11)\n```\n\n## Kotlin：调用超类方法\n\n通过使用 `super` 关键字，你可以调用超类方法。\n\n语法\n\n```kotlin\n\
+  super.methodName\n```\n\n`SuperDemo.kt`\n\n```kotlin\nopen class BaseClass {\n \
+  \ open fun printMsg() {\n    println(\"Hello Base class\")\n  }\n}\n\nopen class\
+  \ DerivedClass : BaseClass() {\n  override fun printMsg() {\n    println(\"Hello\
+  \ Derived class\")\n    super.printMsg()\n  }\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var obj = DerivedClass()\n  obj.printMsg()\n}\n```\n\n输出\n\n```\nHello Derived\
+  \ class\nHello Base class\n```\n\n## Kotlin：嵌套类\n\n一个类可以嵌套在另一个类中。\n\n示例\n\n```kotlin\n\
+  class Outer {\n  class Nested {\n  }\n}\n```\n\n### 如何创建嵌套类的对象？\n\n```kotlin\nvar\
+  \ obj = Outer.Nested()\n```\n\n`NestedClass.kt`\n\n```kotlin\nclass Outer {\n  fun\
+  \ printMsg() {\n    println(\"Inside Outer class\")\n  }\n  class Nested {\n   \
+  \ fun printMsg() {\n      println(\"Inside Nested class\")\n    }\n  }\n}\n\nfun\
+  \ main(args: Array<String>) {\n  var outerObj = Outer()\n  var nestedObj = Outer.Nested()\n\
+  \  outerObj.printMsg()\n  nestedObj.printMsg()\n}\n```\n\n输出\n\n```\nInside Outer\
+  \ class\nInside Nested class\n```\n\n### 我可以在嵌套类中访问外部类中定义的成员变量吗？\n\n不，你不能在嵌套类中访问外部类中定义的成员变量。\n\
+  \n`NestedDemo.kt`\n\n```kotlin\nclass Outer {\n  private var x = 10\n  class Inner\
+  \ {\n    fun getX() = x\n  }\n}\n```\n\n当你尝试编译上面的程序时，你会遇到以下错误。\n\n```\nUnresolved\
+  \ reference: x\n```\n\n## Kotlin：内部类\n\n内部类类似于嵌套类，唯一的区别是你可以从内部类访问外部类的成员。\n\n###\
+  \ 如何定义内部类？\n\n内部类使用关键字 `inner` 定义。\n\n### 如何定义内部类的对象？\n\n```kotlin\nvar innerObj\
+  \ = Outer().Inner()\n```\n\n`InnerDemo.kt`\n\n```kotlin\nclass Outer {\n  fun printMsg()\
+  \ {\n    println(\"Inside Outer class\")\n  }\n  inner class Inner {\n    fun printMsg()\
+  \ {\n      println(\"Inside Inner class\")\n    }\n  }\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var outerObj = Outer()\n  var innerObj = Outer().Inner()\n  outerObj.printMsg()\n\
+  \  innerObj.printMsg()\n}\n```\n\n输出\n\n```\nInside Outer class\nInside Inner class\n\
+  ```\n\n你可以从内部类访问外部类的成员变量。\n\n`InnerDemo.kt`\n\n```kotlin\nclass Outer {\n  private\
+  \ var x = 10\n  inner class Inner {\n    fun getX() = x\n  }\n}\n\nfun main(args:\
+  \ Array<String>) {\n  var innerObj = Outer().Inner()\n  var x = innerObj.getX()\n\
+  \  println(\"x = $x\")\n}\n```\n\n输出\n\n```\nx = 10\n```\n\n## Kotlin：接口\n\n###\
+  \ 什么是接口？\n\n接口是与外部世界的契约。\n\n### 这是什么意思？\n\n举个例子，假设所有手机都有一个标准，根据该标准，以下是手机应提供的基本功能。\n\
+  \n![](https://1.bp.blogspot.com/-BmT-R4h8cDM/Wld5KaEiVUI/AAAAAAAAJOM/GA-J8OYY53IuzCeKXvF4NK27qYfFwHa1gCLcBGAs/s1600/kotlin+interfaces.jpg)\n\
+  \n供应商 1 用 JAVA 语言提供手机功能\n\n供应商 2 用 C++ 语言提供手机功能\n\n供应商 3 用 JAVA 语言提供手机功能\n\n供应商\
+  \ 4 用 C 语言提供手机功能\n\n这意味着所有供应商都提供相同的功能，但他们提供的方式不同。\n\n另一个例子是 IBM JAVA 和 Oracle JAVA\
+  \ 都提供 JAVA 功能，但他们实现功能的方式不同。\n\n### 如何在 Kotlin 中定义接口？\n\n你可以使用 `interface` 关键字定义接口。Kotlin\
+  \ 中的接口类似于 Java8 中的接口。\n\n```kotlin\ninterface InterfaceName {\n  /* 没有函数体的方法 */\n\
+  \  fun method1()\n  /* 有函数体的方法 */\n  fun mehtod2() {\n  }\n}\n```\n\n### 如何实现接口？\n\
+  \nKotlin 类可以实现一个或多个接口。\n\n语法\n\n```kotlin\nclass ClassName : Interface1, Interface2...InterfaceN\
+  \ {\n}\n```\n\n找到下面的可运行应用程序。\n\n`HelloWorld.kt`\n\n```kotlin\ninterface Arithmetic\
+  \ {\n  fun sum(a: Int, b: Int): Int\n  fun sub(a: Int, b: Int): Int\n}\n\nclass\
+  \ ArithmeticImpl : Arithmetic {\n  override fun sum(a: Int, b: Int): Int {\n   \
+  \ return a + b\n  }\n  override fun sub(a: Int, b: Int): Int {\n    return a - b\n\
+  \  }\n}\n\nfun main(args: Array<String>) {\n  var obj = ArithmeticImpl()\n  println(\"\
+  Sum of 10 and 20 is : ${obj.sum(10, 20)}\")\n  println(\"Sub of 10 and 20 is : ${obj.sub(10,\
+  \ 20)}\")\n}\n```\n\n输出\n\n```\nSum of 10 and 20 is : 30\nSub of 10 and 20 is :\
+  \ -10\n```\n\n### 一个类可以实现多个接口吗？\n\n是的，一个类可以实现多个接口。\n\n```kotlin\nclass ArithmeticImpl\
+  \ : Arithmetic, Message {\n}\n```\n\n在上面的例子中，`ArithmeticImpl` 类实现了 `Arithmetic`\
+  \ 和 `Message` 接口。\n\n找到下面的可运行应用程序。\n\n`HelloWorld.kt`\n\n```kotlin\ninterface Arithmetic\
+  \ {\n  fun sum(a: Int, b: Int): Int\n  fun sub(a: Int, b: Int): Int\n}\n\ninterface\
+  \ Message {\n  fun amoutMe(): String\n}\n\nclass ArithmeticImpl : Arithmetic, Message\
+  \ {\n  override fun sum(a: Int, b: Int): Int {\n    return a + b\n  }\n  override\
+  \ fun sub(a: Int, b: Int): Int {\n    return a - b\n  }\n  override fun amoutMe():\
+  \ String {\n    return \"ArithmeticImpl class\"\n  }\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var obj = ArithmeticImpl()\n  println(\"Sum of 10 and 20 is : ${obj.sum(10,\
+  \ 20)}\")\n  println(\"Sub of 10 and 20 is : ${obj.sub(10, 20)}\")\n  println(obj.amoutMe())\n\
+  }\n```\n\n输出\n\n```\nSum of 10 and 20 is : 30\nSub of 10 and 20 is : -10\nArithmeticImpl\
+  \ class\n```\n\n### 我可以在接口中定义属性吗？\n\n是的，你可以在接口中定义属性。属性可以是抽象的，也可以有定义。\n\n`HelloWorld.kt`\n\
+  \n```kotlin\ninterface InterfaceName {\n  /* Function without body */\n  fun method1()\n\
+  \  /* Function with body */\n  fun mehtod2() {\n  }\n}\n```\n\n### 如何实现接口？\n\nKotlin\
+  \ 类可以实现一个或多个接口。\n\n语法\n\n```kotlin\nclass ClassName : Interface1, Interface2...InterfaceN\
+  \ {\n}\n```\n\n找到下面的可运行应用程序。\n\n`HelloWorld.kt`\n\n```kotlin\ninterface Arithmetic\
+  \ {\n  fun sum(a: Int, b: Int): Int\n  fun sub(a: Int, b: Int): Int\n}\n\nclass\
+  \ ArithmeticImpl : Arithmetic {\n  override fun sum(a: Int, b: Int): Int {\n   \
+  \ return a + b\n  }\n  override fun sub(a: Int, b: Int): Int {\n    return a - b\n\
+  \  }\n}\n\nfun main(args: Array<String>) {\n  var obj = ArithmeticImpl()\n  println(\"\
+  10 和 20 的和是：${obj.sum(10, 20)}\")\n  println(\"10 和 20 的 pecified 差是：${obj.sub(10,\
+  \ 20)}\")\n}\n```\n\n输出\n\n```\n10 和 20 的和是：30\n10 和 20 的差是：-10\n```\n\n### 一个类可以实现多个接口吗？\n\
+  \n是的，一个类可以实现多个接口。\n\n```kotlin\nclass ArithmeticImpl : Arithmetic, Message {\n}\n\
+  ```\n\n在上面的例子中，`ArithmeticImpl` 类实现了 `Arithmetic` 和 `Message` 接口。\n\n找到下面的可运行应用程序。\n\
+  \n`HelloWorld.kt`\n\n```kotlin\ninterface Arithmetic {\n  fun sum(a: Int, b: Int):\
+  \ Int\n  fun sub(a: Int, b: Int): Int\n}\n\ninterface Message {\n  fun amoutMe():\
+  \ String\n}\n\nclass ArithmeticImpl : Arithmetic, Message {\n  override fun sum(a:\
+  \ Int, b: Int): Int {\n    return a + b\n  }\n  override fun sub(a: Int, b: Int):\
+  \ Int {\n    return a - b\n  }\n  override fun amoutMe(): String {\n    return \"\
+  ArithmeticImpl class\"\n  }\n}\n\nfun main(args: Array<String>) {\n  var obj = ArithmeticImpl()\n\
+  \  println(\"10 和 20 的和是：${obj.sum(10, 20)}\")\n  println(\"10 和 20 的差是：${obj.sub(10,\
+  \ 20)}\")\n  println(obj.amoutMe())\n}\n```\n\n输出\n\n```\n10 和 20 的和是：30\n10 和 20\
+  \ 的差是：-10\nArithmeticImpl class\n```\n\n### 我可以在接口中定义属性吗？\n\n是的，你可以在接口中定义属性。属性可以是抽象的，也可以有定义。\n\
+  \n`HelloWorld.kt`\n\n```kotlin\ninterface DemoInterface {\n  var variable1: String\n\
+  \  val variable2: String\n    get() = \"Hello World\"\n}\n\nclass MyClass : DemoInterface\
+  \ {\n  override var variable1: String = \"Hello\"\n}\n\nfun main(args: Array<String>)\
+  \ {\n  var obj = MyClass()\n  println(\"variable1 : ${obj.variable1}\")\n  println(\"\
+  variable2 : ${obj.variable2}\")\n}\n```\n\n输出\n\n```\nvariable1 : Hello\nvariable2\
+  \ : Hello World\n```\n\n## Kotlin：实现接口时的覆盖冲突\n\n如果你正在实现多个接口，而这些接口具有相同的方法签名，那么你会遇到冲突场景。\n\
+  \n`HelloWorld.kt`\n\n```kotlin\ninterface Interface1 {\n  fun welcomeMessage(name:\
+  \ String) {\n    println(\"Welcome $name\")\n  }\n}\n\ninterface Interface2 {\n\
+  \  fun welcomeMessage(name: String) {\n    println(\"Good Morning $name\")\n  }\n\
+  }\n\nclass MyClass : Interface1, Interface2 {\n}\n```\n\n当你尝试编译上面的程序时，你会遇到以下错误。\n\
+  \n```\nERROR: Class 'MyClass' must override public open fun welcomeMessage(name:\
+  \ String): Unit defined in Interface1 because it inherits multiple interface methods\
+  \ of it (13, 1)\n```\n\n### 如何解决上述错误？\n\n\n \n通过在 `MyClass` 中重写函数 `welcomeMessage`，你可以消除上述错误。\n\
+  \n```kotlin\nclass MyClass : Interface1, Interface2 {\n    override fun welcomeMessage(name:\
+  \ String) {\n        println(\"Hello $name\")\n    }\n}\n```\n\n查看下面的可运行应用。\n\n\
+  **HelloWorld.kt**\n\n```kotlin\ninterface Interface1 {\n    fun welcomeMessage(name:\
+  \ String) {\n        println(\"Welcome $name\")\n    }\n}\n\ninterface Interface2\
+  \ {\n    fun welcomeMessage(name: String) {\n        println(\"Good Morning $name\"\
+  )\n    }\n}\n\nclass MyClass : Interface1, Interface2 {\n    override fun welcomeMessage(name:\
+  \ String) {\n        println(\"Hello $name\")\n    }\n}\n\nfun main(args: Array<String>)\
+  \ {\n    var obj = MyClass()\n    obj.welcomeMessage(\"JJTam\")\n}\n```\n\n**Output**\n\
+  \n```\nHello JJTam\n```\n\n### 如何从类中调用接口方法的实现？\n\n通过使用 `super` 关键字，你可以从类中调用接口方法的实现。\n\
+  \n**示例**\n\n```kotlin\nclass MyClass : Interface1, Interface2 {\n    override fun\
+  \ welcomeMessage(name: String) {\n        super<Interface1>.welcomeMessage(name)\n\
+  \        super<Interface2>.welcomeMessage(name)\n    }\n}\n```\n\n查看下面的可运行应用。\n\n\
+  **HelloWorld.kt**\n\n```kotlin\ninterface Interface1 {\n    fun welcomeMessage(name:\
+  \ String) {\n        println(\"Welcome $name\")\n    }\n}\n\ninterface Interface2\
+  \ {\n    fun welcomeMessage(name: String) {\n        println(\"Good Morning $name\"\
+  )\n    }\n}\n\nclass MyClass : Interface1, Interface2 {\n    override fun welcomeMessage(name:\
+  \ String) {\n        super<Interface1>.welcomeMessage(name)\n        super<Interface2>.welcomeMessage(name)\n\
+  \    }\n}\n\nfun main(args: Array<String>) {\n    var obj = MyClass()\n    obj.welcomeMessage(\"\
+  JJTam\")\n}\n```\n\n**Output**\n\n```\nWelcome JJTam\nGood Morning JJTam\n```\n\n\
+  ## Kotlin：对象表达式\n\n如果你想创建一个对现有类稍作修改的对象，可以使用匿名类。通过使用对象表达式，你可以创建匿名类。\n\n例如，\n\n```kotlin\n\
+  open class PrintUtil {\n    public open fun welcomeMessage(name: String) {\n   \
+  \     println(\"Hello $name\")\n    }\n}\n```\n\n现在我们可以像下面这样定义匿名类。\n\n```kotlin\n\
+  /* 使用匿名类定义对象 */\nvar anonymousObj: PrintUtil = object : PrintUtil() {\n    override\
+  \ fun welcomeMessage(name: String) {\n        println(\"Welcome $name\")\n    }\n\
+  }\n```\n\n正如你在上面的代码片段中观察到的，我使用对象表达式定义了对象 `anonymousObj`。对象表达式使用关键字 `object` 来定义。\n\
+  \n**HelloWorld.kt**\n\n```kotlin\nopen class PrintUtil {\n    public open fun welcomeMessage(name:\
+  \ String) {\n        println(\"Hello $name\")\n    }\n}\n\nfun main(args: Array<String>)\
+  \ {\n    var obj = PrintUtil()\n    obj.welcomeMessage(\"JJTam\")\n    /* 使用匿名类定义对象\
+  \ */\n    var anonymousObj: PrintUtil = object : PrintUtil() {\n        override\
+  \ fun welcomeMessage(name: String) {\n            println(\"Welcome $name\")\n \
+  \       }\n    }\n    anonymousObj.welcomeMessage(\"JJTam\")\n}\n```\n\n**Output**\n\
+  \n```\nHello JJTam\nWelcome JJTam\n```\n\n在定义匿名类时，你也可以传递带参数的构造函数\n\n```kotlin\n\
+  open class PrintUtil(var greeting: String) {\n    public open fun welcomeMessage(name:\
+  \ String) {\n        println(\"Hello $name\")\n    }\n}\n```\n\n我们可以像下面这样定义匿名类。\n\
+  \n```kotlin\n/* 使用匿名类定义对象 */\nvar anonymousObj: PrintUtil = object : PrintUtil(\"\
+  Good Morning\") {\n    override fun welcomeMessage(name: String) {\n        println(\"\
+  Welcome $name\")\n    }\n}\n```\n\n查看下面的可运行应用。\n\n**HelloWorld.kt**\n\n```kotlin\n\
+  open class PrintUtil(var greeting: String) {\n    public open fun welcomeMessage(name:\
+  \ String) {\n        println(\"Hello $name\")\n    }\n}\n\nfun main(args: Array<String>)\
+  \ {\n    var obj = PrintUtil(\"Good Morning\")\n    obj.welcomeMessage(\"JJTam\"\
+  )\n    /* 使用匿名类定义对象 */\n    var anonymousObj: PrintUtil = object : PrintUtil(\"\
+  Good Morning\") {\n        override fun welcomeMessage(name: String) {\n       \
+  \     println(\"Welcome $name\")\n        }\n    }\n    anonymousObj.welcomeMessage(\"\
+  JJTam\")\n}\n```\n\n### 我可以定义没有任何超类型的匿名对象吗？\n\n是的，你可以定义没有任何超类型的匿名对象。\n\n**示例**\n\
+  \n```kotlin\nval newAnonymousObj = object {\n    var x: Int = 1\n    var y: Int\
+  \ = 2\n    var z: Int = 3\n    fun welcomeUser(name: String) {\n        println(\"\
+  Hello $name\")\n    }\n}\n```\n\n查看下面的可运行应用。\n\n**HelloWorld.kt**\n\n```kotlin\n\
+  fun main(args: Array<String>) {\n    val newAnonymousObj = object {\n        var\
+  \ x: Int = 1\n        var y: Int = 2\n        var z: Int = 3\n        fun welcomeUser(name:\
+  \ String) {\n            println(\"Hello $name\")\n        }\n    }\n    newAnonymousObj.welcomeUser(\"\
+  JJTam\")\n    println(\"Value of x is : ${newAnonymousObj.x}\")\n    println(\"\
+  Value of y is : ${newAnonymousObj.y}\")\n    println(\"Value of z is : ${newAnonymousObj.z}\"\
+  )\n}\n```\n\n**Output**\n\n```\nHello JJTam\nValue of x is : 1\nValue of y is :\
+  \ 2\nValue of z is : 3\n```\n\n### 对象表达式可以访问其封闭块的代码吗？\n\n是的，对象表达式可以访问其封闭块的代码。\n\n\
+  **HelloWorld.kt**\n\n```kotlin\nfun main(args: Array<String>) {\n    var message\
+  \ = \"Hello, Good Morning\"\n    val newAnonymousObj = object {\n        fun welcomeUser(name:\
+  \ String) {\n            println(\"$message $name\")\n        }\n    }\n    newAnonymousObj.welcomeUser(\"\
+  JJTam\")\n}\n```\n\n**Output**\n\n```\nHello, Good Morning JJTam\n```\n\n## Kotlin：定义单例对象\n\
+  \n通过使用 `object` 关键字，你可以定义单例对象。\n\n### 语法\n\n```kotlin\nobject ObjectName {\n}\n\
+  ```\n\n**示例**\n\n```kotlin\nobject mySingleTonObj {\n    var x: Int = 10\n    var\
+  \ y: Int = 20\n}\n```\n\n你可以直接使用对象名访问单例对象的成员变量和函数。\n\n**示例**\n\n```kotlin\nmySingleTonObj.x\n\
+  mySingleTonObj.y\n```\n\n查看下面的可运行应用。\n\n**HelloWorld.kt**\n\n```kotlin\nclass MyClass\
+  \ {\n    object mySingleTonObj {\n        var x: Int = 10\n        var y: Int =\
+  \ 20\n    }\n\n    fun printSingletonObj() {\n        println(\"Value of x is  :\
+  \ ${mySingleTonObj.x}\")\n        println(\"Value of y is  : ${mySingleTonObj.y}\"\
+  )\n    }\n}\n\nfun main(args: Array<String>) {\n    var obj = MyClass()\n    obj.printSingletonObj()\n\
+  }\n```\n\n**Output**\n\n```\nValue of x is  : 10\nValue of y is  : 20\n```\n\n###\
+  \ 单例对象可以有超类型吗？\n\n是的，单例对象可以有超类型。\n\n**示例**\n\n```kotlin\nobject mySingleTonObj :\
+  \ Arithmetic {\n    override fun sum(x: Int, y: Int): Int {\n        return x +\
+  \ y\n    }\n}\n```\n\n查看下面的可运行应用。\n\n**HelloWorld.kt**\n\n```kotlin\ninterface Arithmetic\
+  \ {\n    fun sum(x: Int, y: Int): Int\n}\n\nclass MyClass {\n    object mySingleTonObj\
+  \ : Arithmetic {\n        override fun sum(x: Int, y: Int): Int {\n            return\
+  \ x + y\n        }\n    }\n\n    fun getSum(x: Int, y: Int): Int {\n        return\
+  \ mySingleTonObj.sum(x, y)\n    }\n}\n\nfun main(args: Array<String>) {\n    var\
+  \ obj = MyClass()\n    var result = obj.getSum(10, 20)\n    println(\"Sum of 10\
+  \ and 20 is : $result\")\n}\n```\n\n**Output**\n\n```\nSum of 10 and 20 is : 30\n\
+  ```\n\n### 对象声明可以是局部的吗？\n\n对象声明不能是局部的。例如，你不能在函数内部定义它们。\n\n**HelloWorld.kt**\n\n\
+  ```kotlin\nfun main(args: Array<String>) {\n    object mySingleTonObj {\n      \
+  \  fun sum(x: Int, y: Int): Int {\n            return x + y\n        }\n    }\n\
+  }\n```\n\n当你尝试编译上述程序时，你会遇到如下错误。\n\n```\nNamed object 'mySingleTonObj' is a singleton\
+  \ and cannot be local. Try to use anonymous object instead\n```\n\n## Kotlin：伴生对象\n\
+  \n通过使用伴生对象，你可以使用类名来访问成员（无需定义对象）。\n\n**HelloWorld.kt**\n\n```kotlin\nclass TestClass\
+  \ {\n    companion object {\n        fun sayHello() {\n            println(\"Hello\"\
+  )\n        }\n    }\n}\n\nfun main(args: Array<String>) {\n    TestClass.sayHello()\n\
+  }\n```\n\n**Output**\n\n```\nHello\n```\n\n正如你在上面的代码片段中看到的，我使用 `TestClass` 调用了伴生对象的\
+  \ `sayHello` 函数（没有创建 `TestClass` 的任何对象）。\n\n你可以为伴生对象命名。\n\n```kotlin\ncompanion\
+  \ object FunModules {\n    fun sayHello() {\n        println(\"Hello\")\n    }\n\
+  }\n```\n\n**HelloWorld.kt**\n\n```kotlin\nclass TestClass {\n    companion object\
+  \ FunModules {\n        fun sayHello() {\n            println(\"Hello\")\n     \
+  \   }\n    }\n}\n\nfun main(args: Array<String>) {\n    TestClass.sayHello()\n}\n\
+  ```\n\n**Output**\n\n```\nHello\n```\n\n通过在伴生对象上添加 `@JvmStatic` 注解，你可以在任何 Java 类中将其用作静态成员。\n\
+  \n**HelloWorld.kt**\n\n```kotlin\nimport kotlin.jvm.JvmStatic\n\nclass TestClass\
+  \ {\n    companion object {\n        @JvmStatic\n        fun sayHello() {\n    \
+  \        println(\"Hello\")\n        }\n    }\n}\n```\n\n**CompanionDemo.java**\n\
+  \n```java\npublic class CompanionDemo {\n    public static void main(String args[])\
+  \ {\n        TestClass.sayHello();\n    }\n}\n```\n\n**Output**\n\n```\nHello\n\
+  ```\n\n## Kotlin：匿名内部类\n\n匿名内部类可以使用对象表达式来创建。\n\n**示例**\n\n```kotlin\nprintMessage(object\
+  \ : PrinterUtil() {\n    override fun welcomeMessage() {\n        println(\"Good\
+  \ Morning customer\")\n    }\n})\n```\n\n查看下面的可运行应用。\n\n**HelloWorld.kt**\n\n```kotlin\n\
+  open class PrinterUtil {\n    open fun welcomeMessage() {\n        println(\"Welcome\
+  \ user\")\n    }\n}\n\nfun printMessage(printUtl: PrinterUtil) {\n    printUtl.welcomeMessage()\n\
+  }\n\nfun main(args: Array<String>) {\n    printMessage(object : PrinterUtil() {\n\
+  \        override fun welcomeMessage() {\n            println(\"Good Morning customer\"\
+  )\n        }\n    })\n}\n```\n\n**Output**\n\n```\nGood Morning customer\n```\n\n\
+  ## Kotlin：抽象类\n\n抽象类可以包含没有实现的方法。抽象类使用 `abstract` 关键字定义。\n\n**示例**\n\n```kotlin\n\
+  interface Arithmetic {\n    fun sum(x: Int, y: Int): Int\n    fun sub(x: Int, y:\
+  \ Int): Int\n    fun mul(x: Int, y: Int): Int\n    fun div(x: Int, y: Int): Int\n\
+  }\n\nabstract class ArithmeticImpl : Arithmetic {\n    override fun sum(x: Int,\
+  \ y: Int): Int {\n        return x + y\n    }\n\n    override fun sub(x: Int, y:\
+  \ Int): Int {\n        return x - y\n    }\n}\n```\n\n你不能为抽象类定义实例（对象）。\n\n### 抽象方法\n\
+  \n\n \n就像你定义抽象类一样，你可以使用关键字`abstract`来定义抽象方法（没有实现的方法）。\n\n```kotlin\nabstract class\
+  \ ArithmeticImpl : Arithmetic{\n  override fun sum (x : Int, y : Int) : Int{\n \
+  \   return x + y\n  }\n  override fun sub (x : Int, y : Int) : Int{\n    return\
+  \ x - y\n  }\n  abstract fun areaofCircle (radius : Int) : Int\n}\n```\n\n在上面的代码片段中，我将`areaOfCircle`声明为抽象方法。任何继承此抽象类的具体类都必须为所有抽象方法提供实现。\n\
+  \n```kotlin\nclass ConcreteArithmetic : ArithmeticImpl() {\n  override fun mul (x:\
+  \ Int, y: Int): Int {\n    return x * y\n  }\n  override fun div (x: Int, y: Int):\
+  \ Int {\n    return x / y\n  }\n  override fun areaofCircle (radius: Int): Double\
+  \ {\n    return 3.14 * radius * radius\n  }\n}\n```\n\n以下是可运行的应用程序。\n\n`HelloWorld.kt`\n\
+  ```kotlin\ninterface Arithmetic {\n  fun sum (x: Int, y: Int): Int\n  fun sub (x:\
+  \ Int, y: Int): Int\n  fun mul (x: Int, y: Int): Int\n  fun div (x: Int, y: Int):Int\n\
+  }\n\nabstract class ArithmeticImpl : Arithmetic {\n  override fun sum (x: Int, y:\
+  \ Int): Int {\n    return x + y\n  }\n  override fun sub (x: Int, y: Int): Int {\n\
+  \    return x - y\n  }\n  abstract fun areaofCircle (radius: Int): Double\n}\n\n\
+  class ConcreteArithmetic : ArithmeticImpl() {\n  override fun mul (x: Int, y: Int):\
+  \ Int {\n    return x * y\n  }\n  override fun div (x: Int, y: Int): Int {\n   \
+  \ return x / y\n  }\n  override fun areaofCircle (radius: Int): Double {\n    return\
+  \ 3.14 * radius * radius\n  }\n}\n\nfun main (args: Array<String>) {\n  var obj\
+  \ = ConcreteArithmetic()\n  var sumOf10And20 = obj.sum( 10 , 20 )\n  var subOf10And20\
+  \ = obj.sub( 10 , 20 )\n  var mulOf10And20 = obj.mul( 10 , 20 )\n  var divOf10And20\
+  \ = obj.div( 10 , 20 )\n  var areaOfCircle = obj.areaofCircle( 5 )\n  println( \"\
+  sumOf10And20 = $sumOf10And20\" )\n  println( \"subOf10And20 = $subOf10And20\" )\n\
+  \  println( \"mulOf10And20 = $mulOf10And20\" )\n  println( \"divOf10And20 = $divOf10And20\"\
+  \ )\n  println( \"areaOfCircle = $areaOfCircle\" )\n}\n```\n\n输出\n```\nsumOf10And20\
+  \ = 30\nsubOf10And20 = -10\nmulOf10And20 = 200\ndivOf10And20 = 0\nareaOfCircle =\
+  \ 78.5\n```\n\n## Kotlin：函数\n\n函数是一组语句块，用于复用代码。在 Kotlin 中，有两种类型的函数。\n\n* Kotlin\
+  \ 库函数（例如：`print`、`sqrt`等）\n* 用户自定义函数\n\n\n \nSegment 1:\n # Kotlin 用户自定义函数\n\n在本教程系列中，我将重点介绍用户自定义函数。在\
+  \ Kotlin 中，函数使用 `fun` 关键字定义。\n\n### 语法\n\n```\nfun functionName(parameters) : returnType{\n\
+  }\n```\n\n如果不指定 `returnType`，则将其视为 void 方法。`parameters` 是可选的。参数必须指定类型，多个参数之间用逗号（`,`）分隔。\n\
+  \n### 语法\n\n```\nfun functionName(param1 : type, param2: type …. paramN:type) :\
+  \ returnType{\n}\n```\n\n### 示例\n\n```kotlin\n// 无参数的 void 函数\nfun printWelcomeMessage()\
+  \ {\n    println(\"Welcome buddy\")\n}\n\n// 带一个参数的 void 函数\nfun printWelcomeMessage(name:\
+  \ String) {\n    println(\"Welcome $name\")\n}\n\n// 带两个参数的 void 方法\nfun printWelcomeMessage(firstName:\
+  \ String, lastName: String) {\n    println(\"Welcome [$firstName, $lastName]\")\n\
+  }\n\n// 无参数的非 void 函数\nfun getWelcomeMessage(): String {\n    return \"Welcome\"\
+  \n}\n\n// 带一个参数的非 void 函数\nfun getWelcomeMessage(name: String): String {\n    return\
+  \ \"Welcome $name\"\n}\n\n// 带两个参数的非 void 函数\nfun getWelcomeMessage(firstName: String,\
+  \ lastName: String): String {\n    return \"Welcome [$firstName, $lastName]\"\n\
+  }\n```\n\n#### FunctionsDemo.kt\n\n```kotlin\n// 无参数的 void 函数\nfun printWelcomeMessage\
+  \ () {\n    println( \"Welcome buddy\" )\n}\n\n// 带一个参数的 void 函数\nfun printWelcomeMessage\
+  \ (name: String) {\n    println( \"Welcome $name\" )\n}\n\n// 带两个参数的 void 方法\nfun\
+  \ printWelcomeMessage (firstName: String, lastName: String) {\n    println( \"Welcome\
+  \ [$firstName, $lastName]\" )\n}\n\n// 无参数的非 void 函数\nfun getWelcomeMessage ():\
+  \ String {\n    return \"Welcome\"\n}\n\n// 带一个参数的非 void 函数\nfun getWelcomeMessage\
+  \ (name: String): String {\n    return \"Welcome $name\"\n}\n\n// 带两个参数的非 void 函数\n\
+  fun getWelcomeMessage (firstName: String, lastName: String): String {\n    return\
+  \ \"Welcome [$firstName, $lastName]\"\n}\n\nfun main (args: Array<String>) {\n \
+  \   printWelcomeMessage()\n    printWelcomeMessage( \"Ram\" )\n    printWelcomeMessage(\
+  \ \"Ram\" , \"JJTam\" )\n    var message = getWelcomeMessage()\n    println( \"\
+  ${message}\" )\n    message = getWelcomeMessage( \"Ram\" )\n    println( \"${message}\"\
+  \ )\n    message = getWelcomeMessage( \"Ram\" , \"JJTam\" )\n    println( \"${message}\"\
+  \ )\n}\n```\n\n#### 输出\n\n```\nWelcome buddy\nWelcome Ram\nWelcome [Ram, JJTam]\n\
+  Welcome\nWelcome Ram\nWelcome [Ram, JJTam]\n```\n\n如果函数体只有一条语句，则可以省略花括号 `{}`\n\n\
+  ### 示例\n\n```kotlin\nfun square(x: Int) = x * x\nfun cube(x: Int) = x * x * x\n\
+  fun printMessage() = \"Hello World\"\n```\n\n#### FunctionsDemo.kt\n\n```kotlin\n\
+  fun square (x: Int) = x * x\nfun cube (x: Int) = x * x * x\nfun printMessage ()\
+  \ = \"Hello World\"\n\nfun main (args: Array<String>) {\n    println( \"Square of\
+  \ 10 is ${square(10)}\" )\n    println( \"Cube of 10 is ${cube(10)}\" )\n    println(printMessage())\n\
+  }\n```\n\n#### 输出\n\n```\nSquare of 10 is 100\nCube of 10 is 1000\nHello World\n\
+  ```\n\n## Kotlin：使用参数名调用函数\n\n在 Kotlin 中，可以使用参数名调用函数，这类似于 Python 中的\"关键字参数\"特性。\n\
+  \n```kotlin\nfun printEmployee(id: String, firstName: String, lastName: String,\
+  \ designation: String) {\n    println(\"\\nid : $id\\nfirstName : $firstName\\nlastName\
+  \ : $lastName\\ndesignation : $designation\")\n}\n```\n\n在 Kotlin 中，可以使用参数名来调用函数。\n\
+  \n```kotlin\nprintEmployee(id = \"1\", firstName = \"JJTam\", lastName = \"Delhi\"\
+  , designation = \"engineer\")\n```\n\n指定参数名的一个优点是，在调用函数时可以更改参数的顺序。\n\n```kotlin\n\
+  printEmployee(designation = \"engineer\", firstName = \"JJTam\", lastName = \"Delhi\"\
+  , id = \"1\")\n```\n\n### KeyWordArgsDemo.kt\n\n```kotlin\nfun printEmployee (id:\
+  \ String, firstName: String, lastName: String, designation: String) {\n    println(\
+  \ \"\\nid : $id\\nfirstName : $firstName\\nlastName : $lastName\\ndesignation :\
+  \ $designation\" )\n}\n\nfun main (args: Array<String>) {\n    printEmployee( \"\
+  1\" , \"JJTam\" , \"Delhi\" , \"Engineer\" )\n    printEmployee(id = \"1\" , firstName\
+  \ = \"JJTam\" , lastName = \"Delhi\" , designation = \"engineer\" )\n    printEmployee(designation\
+  \ = \"engineer\" , firstName = \"JJTam\" , lastName = \"Delhi\" , id = \"1\" )\n\
+  }\n```\n\n#### 输出\n\n```\nid : 1\nfirstName : JJTam\nlastName : Delhi\ndesignation\
+  \ : Engineer\n\nid : 1\nfirstName : JJTam\nlastName : Delhi\ndesignation : engineer\n\
+  \nid : 1\nfirstName : JJTam\nlastName : Delhi\ndesignation : engineer\n```\n\n##\
+  \ Kotlin：函数默认参数\n\n我们可以为函数参数指定默认值。当调用函数时未指定任何值时，将使用这些默认值。\n\n```kotlin\nfun readFile(offset:\
+  \ Int = 0, numOfBytes: Int = 1024) {\n    println(\"Reading file from offset : $offset,\
+  \ numOfBytes : $numOfBytes \")\n}\n\nreadFile()\n```\n\n由于 `readFile()` 调用时没有参数，`offset`\
+  \ 和 `numOfBytes` 被设置为默认值。\n\n```kotlin\nreadFile(10)\n```\n\n由于 `readFile()` 调用时带有一个参数\
+  \ `10`，`offset` 被设置为 `10`，`numOfBytes` 被设置为默认值 `1024`。\n\n```kotlin\nreadFile(10,\
+  \ 300)\n```\n\n由于 `readFile()` 调用时带有两个参数，`offset` 被设置为 `10`，`numOfBytes` 被设置为 `1024`。\n\
+  \n### DefaultValues.kt\n\n```kotlin\nfun readFile (offset: Int = 0 , numOfBytes:\
+  \ Int = 1024 ) {\n    println( \"Reading file from offset : $offset, numOfBytes\
+  \ : $numOfBytes \" )\n}\n\nfun main (args: Array<String>) {\n    readFile()\n  \
+  \  readFile( 10 )\n    readFile( 10 , 300 )\n}\n```\n\n#### 输出\n\n```\nReading file\
+  \ from offset : 0, numOfBytes : 1024\nReading file from offset : 10, numOfBytes\
+  \ : 1024\nReading file from offset : 10, numOfBytes : 300\n```\n\n命名参数进一步增强了这个特性，当你想为某些参数设置值，而其余参数使用默认值时。\n\
+  \n```kotlin\nreadFile(numOfBytes=500)\n```\n\n由于 `readFile()` 调用时指定了 `numOfBytes`\
+  \ 为 `500`\n\n#### FunctionsDemo.kt\n\n```kotlin\nfun readFile (offset: Int = 0 ,\
+  \ numOfBytes: Int = 1024 ) {\n    println( \"Reading file from offset : $offset,\
+  \ numOfBytes : $numOfBytes \" )\n}\n\nfun main (args: Array<String>) {\n    readFile(numOfBytes=\
+  \ 500 )\n}\n```\n\n#### 输出\n\n```\nReading file from offset : 10, numOfBytes : 1024,\
+  \ bufferSize :  JaysCode 500\n```\n\n## Kotlin：unit（或）void 函数\n\n返回 `Unit` 的函数类似于\
+  \ Java 中的 void 函数。如果函数不返回任何值，其返回类型为 `Unit`。\n\n### UnitDemo.kt\n\n```kotlin\nfun\
+  \ welcome (name: String) : Unit {\n    println( \"Welcome $name\" )\n    return\
+  \ Unit // 你也可以直接调用 return\n}\n\nfun main (args: Array<String>) {\n    var returnValue\
+  \ = welcome( \"Hari JJTam\" )\n    println( \"Returned value is $returnValue\" )\n\
+  }\n```\n\n#### 输出\n\n```\nWelcome Hari JJTam\nReturned value is kotlin.Unit\n```\n\
+  \n在 unit 函数中，指定 `Unit` 类型和返回 `Unit` 是可选的。\n\n### UnitDemo.kt\n\n```kotlin\nfun welcome\
+  \ (name: String) {\n    println( \"Welcome $name\" )\n}\n\nfun main (args: Array<String>)\
+  \ {\n    var returnValue = welcome( \"Hari JJTam\" )\n    println( \"Returned value\
+  \ is $returnValue\" )\n}\n```\n\n## Kotlin：单表达式函数\n\n当函数返回单个表达式时，可以省略花括号。\n\n###\
+  \ 示例\n\n```kotlin\nfun square(num: Int) = num * num\nfun cube(num: Int) = num *\
+  \ num * num\n```\n\n#### FunctionDemo.kt\n\n```kotlin\nfun square (num: Int) = num\
+  \ * num\nfun cube (num: Int) = num * num * num\n\nfun main (args: Array<String>)\
+  \ {\n    println( \"Square of 5 is ${square(5)}\" )\n    println( \"Cube of 5 is\
+  \ ${cube(5)}\" )\n}\n```\n\n#### 输出\n\n```\nSquare of 5 is 25\nCube of 5 is 125\n\
+  ```\n\n## Kotlin：局部函数\n\n在 Kotlin 中，可以在其他函数内部定义函数。\n\n### 示例\n\n```kotlin\nfun factorial(n:\
+  \ Int): Int {\n    fun fact(n: Int): Int {\n        if (n == 0) return 1\n     \
+  \   return n * fact(n - 1)\n    }\n    if (n < 0) return -1\n    else return fact(n)\n\
+  }\n```\n\n如上面的代码片段所示，我在 `factorial` 函数内部定义了 `fact`。`fact` 是局部函数，而 `factorial` 是外部函数。\n\
+  \n#### FunctionDemo.kt\n\n```kotlin\nfun factorial (n: Int): Int {\n    fun fact\
+  \ (n: Int): Int {\n        ifOxford if (n == 0 ) return 1\n        return n * fact(n\
+  \ - 1 )\n    }\n    if (n < 0 ) return - 1\n    else return fact (n)\n}\n\nfun main\
+  \ (args: Array<String>) {\n    var factorialOf5 = factorial( 5 )\n    println( \"\
+  factorial Of 5 : $factorialOf5\" )\n}\n```\n\n#### 输出\n\n```\nfactorial Of 5 : 120\n\
+  ```\n\n局部函数可以访问外部函数中定义的数据。\n\n## Kotlin：成员函数\n\n在类（或）对象内部定义的函数称为成员函数。\n\n### 示例\n\
+  \n```kotlin\nclass Number {\n    fun isEven(num: Int): Boolean {\n        return\
+  \ num % 2 == 0\n    }\n}\n```\n\n在上面的代码片段中，`isEven` 是一个成员函数。\n\n#### FunctionDemo.kt\n\
+  \n```kotlin\nclass Number {\n    fun isEven (num: Int): Boolean {\n        return\
+  \ num % 2 == 0\n    }\n}\n\nfun main (args: Array<String>) {\n    var obj = Number()\n\
+  \    var is5Even = obj.isEven( 5 )\n    var is6Even = obj.isEven( 6 )\n    println(\
+  \ \"Is 5 Even : $is5Even\" )\n    println( \"Is 6 Even : $is6Even\" )\n}\n```\n\n\
+  #### 输出\n\n```\nIs 5 Even : false\nIs 6 Even : true\n```\n\n---\n\n# 快速学习 Python\n\
+  \n## 面向初学者的编程实战项目\n\n作者：J J Tam\n\n我从事 IT 工作已经快 5 年了，我喜欢使用 Java 工作，并探索开源包。如今我觉得用\
+  \ Java 工作有些无聊，所以想学习一门新语言，我的一个朋友建议我学习 Python。我立刻想到，为什么要学习 Python 呢？\n\n以下是促使我学习 Python\
+  \ 的一些原因……（第一个也是最好的原因是，我已经厌倦了 5 年使用同一种语言工作……:)）\n\na. Python 是开源的，可在 Windows、Mac\
+  \ OS X 和 Unix 操作系统上使用。你可以免费下载和使用 Python。\n\nb. Python 有趣且易于学习。Python 提供了可交互使用的解释器，这使得试验语言特性变得容易。\n\
+  \nc. 你可以用 C 或 C++ 实现的新函数和数据类型来扩展 Python 解释器\n\nd. 与 C、C++ 和 Java 相比，Python 能多次提高开发者的生产力。\n\
+  \ne. 无需编译 Python 程序，开发完成后即可立即运行。\n\nf. 我们可以轻松地将 Python 项目从一个平台移植到另一个平台（当然 Java 也提供了这一特性）\n\
+  \ng. 丰富的内置库。有许多第三方开源库可用于日志记录、Web 开发（Django —— 用 Python 编写的流行开源 Web 应用框架）、网络、数据库访问等。\n\
+  \nh. Python 拥有非常庞大的社区，无论你在 Python 中遇到什么问题，都能快速获得帮助。\n\n## 在 MAC OS 上安装 Python\n\n\
+  **步骤 1：** 从以下位置下载 Python 软件。我下载了 pkg 文件以在 mac os 上安装。\n\n`https://www.python.org/downloads/`\n\
+  \n**步骤 2：** 点击 pkg 文件。\n\n![](img/<Image00015.jpg>)\n\n按继续。\n\n![](img/<Image00016.jpg>)\n\
+  \n按继续。\n\n![](img/<Image00017.jpg>)\n\n接受许可协议并按继续。\n\n![](img/<Image00018.jpg>)\n\
+  \n你可以使用 `Change Install Location` 按钮更改安装位置，然后按安装按钮。\n\n![](img/<Image00019.jpg>)\n\
+  \n安装成功后，你将看到以下屏幕。\n\n![](img/<Image00020.jpg>)\n\n安装成功后，打开终端并输入 `python3`（因为我安装了\
+  \ Python 3.5）。\n\n```\n$ python3\nPython 3.5 . 0 (v3. 5.0 :374 f501f4567, Sep 12\
+  \ 2015 , 11 :00 :19 )\n[GCC 4.2 . 1 (Apple Incutm Inc. build 5666 ) (dot 3 )] on\
+  \ darwin\nType \"help\" , \"copyright\" , \"credits\" or \"license\" for more information.\n\
+  >>> quit()\n```\n\n使用 `quit()` 退出 Python 提示符。\n\n### python3 的位置\n\n```\n$ which\
+  \ python3\n/Library/Frameworks/Python.framework/Versions/3.5/bin/python3\n$ which\
+  \ python3.5\n/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5\n```\n\
+  \n在 Windows 机器上，Python 通常位于 `C:\\Python35`。\n\n## Python：Hello World 程序\n\n打开任意文本编辑器，复制语句\
+  \ `print ('hello world')` 并将文件保存为 `hello.py`。\n\n### hello.py\n\n```python\nprint\
+  \ ('hello world')\n```\n\n打开终端（或）命令提示符，使用命令 `python3 hello.py` 运行文件 `hello.py`。你将获得如下输出\n\
+  \n```\n$ python3 hello.py\nhello world\n```\n\n### 当你指示 Python 运行脚本时会发生什么？\n\nPython\
+  \ 首先将你的源代码编译为字节码，然后将其发送到 Python 虚拟机（PVM）。字节码是源代码的平台无关表示。PVM 逐条读取字节码并执行它们。\n\n![](img/<Image00021.jpg>)\n\
+  \n**注意：**\n\n\n \n字节码不是机器可理解的代码，它是 Python 特有的表示形式。\n\n## Python 交互式命令行\n\n打开命令提示符（或）终端，输入\
+  \ `python3` 命令。这将打开 Python 交互式会话。\n\n```\n$ python3\nPython 3.5.0 (v3.5.0:374f501f4567,\
+  \ Sep 12 2015, 11:00:19)\n[GCC 4.2.1] on darwin\nType \"help\", \"copyright\", \"\
+  credits\" or \"license\" for more information.\n>>>\n```\n\n### 如何退出 Python 解释器\n\
+  \n在 Windows 上，按 `Ctrl-Z` 可以退出此会话；在 Unix 上，请尝试按 `Ctrl-D`。另一种方法是直接调用 `quit()` 函数来退出\
+  \ Python。\n\n```\n$ python3\nPython 3.5.0 (v3.5.0:374f501f4567, Sep 12 2015, 11:00:19)\n\
+  [GCC 4.2.1] on darwin\nType \"help\", \"copyright\", \"credits\" or \"license\"\
+  \ for more information.\n>>> quit()\n$\n```\n\n你可以在 Python 解释器中输入任何语句（或）表达式，解释器会执行这些语句并给出结果。\n\
+  \n```\n>>> 10+20\n30\n>>> 20*20\n400\n>>> print('Hello World')\nHello World\n```\n\
+  \n**注意：** 在 Unix 上，Python 3.x 解释器默认不会以 `python` 名称安装，以避免与其他已安装的 Python 2.x 可执行文件冲突。\n\
+  \n## Python：运算符\n\n运算符是一种符号，用于执行操作。以下是 Python 支持的运算符。\n\n- 算术运算符\n- 关系运算符\n- 赋值运算符\n\
+  - 逻辑运算符\n- 位运算符\n- 成员运算符\n- 身份运算符\n\n### Python 中的算术运算符\n\n以下是 Python 支持的算术运算符。\n\
+  \n| 运算符 | 描述 | 示例 |\n| + | 加法 | `2+3` |\n| - | 减法 | `2-3` |\n| * | 乘法 | `2*3` |\n\
+  | / | 除法始终返回浮点数值。要仅获取整数结果，请使用 `//`。 | `2/3` 返回 `0.6666666666666666` |\n| // | 地板除法，舍弃小数部分\
+  \ | `2//3` 返回 `0` |\n| % | 返回除法的余数。 | `2%3` |\n| ** | 幂运算 | `2**3` 返回 2 的 3 次方 =\
+  \ `8` |\n\n```\n>>> 4 + 2\n6\n>>> 4 - 2\n2\n>>> 4 / 2\n2.0\n>>> 4 * 2\n8\n>>> 4\
+  \ // 2\n2\n>>> 4 ** 2\n16\n```\n\n### Python 中的关系运算符\n\n关系运算符用于判断一个操作数是否大于、小于、等于或不等于另一个操作数。\n\
+  \n| 运算符 | 描述 | 示例 |\n| == | 等于 | `a==b` 如果 a 等于 b 则返回 true，否则返回 false |\n| != |\
+  \ 不等于 | `a!=b` 如果 a 不等于 b 则返回 true，否则返回 false。 |\n| > | 大于 | `a>b` 如果 a > b 则返回\
+  \ true，否则返回 false。 |\n| >= | 大于或等于 | `a>=b` 如果 a >= b 则返回 true，否则返回 false。 |\n|\
+  \ < | 小于 | `a<b` 如果 a < b 则返回 true，否则返回 false。 |\n| <= | 小于或等于 | `a<=b` 如果 a <=\
+  \ b 则返回 true，否则返回 false。 |\n\n```\n>>> a = 10\n>>> b = 12\n>>> a == b\nFalse\n>>>\
+  \ a != b\nTrue\n>>> a > b\nFalse\n>>> a >= b\nFalse\n>>> a < b\nTrue\n>>> a <= b\n\
+  True\n```\n\n### Python 中的赋值运算符\n\n赋值运算符用于给变量赋值。以下是 Python 提供的赋值运算符。\n\n| 运算符 |\
+  \ 描述 |\n| = | `a=10` 将 10 赋值给变量 a |\n| += | `a+=10` 等同于 `a=a+10` |\n| -= | `a-=10`\
+  \ 等同于 `a=a-10` |\n| *= | `a*=10` 等同于 `a=a*10` |\n| /= | `a/=10` 等同于 `a=a/10` |\n\
+  | //= | `a//=10` 等同于 `a=a//10` |\n| %= | `a%=10` 等同于 `a=a%10` |\n| **= | `a**=10`\
+  \ 等同于 `a=a**10` |\n\n```\n>>> a = 10\n>>> a\n10\n>>>\n>>> a += 10\n>>> a\n20\n>>>\n\
+  >>> a -= 10\n>>> a\n10\n>>>\n>>> a *= 10\n>>> a\n100\n>>>\n>>> a /= 10\n>>> a\n\
+  10.0\n>>>\n>>> a //= 10\n>>> a\n1.0\n>>>\n>>> a **= 10\n>>> a\n1.0\n```\n\n####\
+  \ 多重赋值\n\n你可以同时为多个变量赋值。\n\n```\n>>> a, b, c = 10, 'hello', 12.345\n>>> a\n10\n>>>\
+  \ b\n'hello'\n>>> c\n12.345\n```\n\n### Python 中的逻辑运算符\n\n以下是 Python 支持的逻辑运算符。\n\
+  \n| 运算符 | 描述 |\n| and | 'a and b' 如果 a 和 b 都为 true，则返回 true。否则返回 false。 |\n| or\
+  \ | 'a or b' 如果 a 和 b 都为 false，则返回 false，否则返回 true。 |\n| not | 'not a' 如果 a 为 false\
+  \ 则返回 True，否则返回 true |\n\n```\n>>> a = bool(0)\n>>> b = bool(1)\n>>>\n>>> a\nFalse\n\
+  >>> b\nTrue\n>>>\n>>> a and b\nFalse\n>>>\n>>> a or b\nTrue\n>>>\n>>> not a\nTrue\n\
+  >>>\n>>> not(a and b)\nTrue\n>>>\n>>> not(a or b)\nFalse\n```\n\n### Python 中的位运算符\n\
+  \nPython 支持以下位运算符，用于对整数执行位运算。\n\n| 运算符 | 描述 |\n| >> | 位右移 |\n| << | 位左移 |\n| & |\
+  \ 位与 |\n| ^ | 位异或 |\n| &#124; | 位或 |\n| ~ | 位非 |\n\n以下文章清楚地解释了位运算符。http://self-learning-java-tutorial.blogspot.in/2014/02/bit-wise-operators.html\n\
+  \n```\n>>> a = 2\n>>> a >> 1\n1\n>>>\n>>> a << 1\n4\n>>>\n>>> a & 3\n2\n>>> a |\
+  \ 3\n3\n>>>\n>>> ~a\n-3\n```\n\n### Python 中的成员运算符\n\n成员运算符用于测试某个值或变量是否存在于序列（字符串、列表、元组、集合和字典）中。\n\
+  \n| 运算符 | 描述 |\n| in | 如果值/变量在序列中找到，则返回 true，否则返回 false。 |\n| not in | 如果值/变量在序列中未找到，则返回\
+  \ True，否则返回 false |\n\n```\n>>> primeNumbers = [2, 3, 5, 7, 11]\n>>> 2 in primeNumbers\n\
+  True\n>>> 4 in primeNumbers\nFalse\n>>> 4 not in primeNumbers\nTrue\n```\n\n###\
+  \ Python 中的身份运算符\n\n身份运算符用于比较两个对象的内存位置。\n\n| 运算符 | 描述 |\n| is | `a is b` 如果 a 和\
+  \ b 指向同一对象，则返回 true，否则返回 false。 |\n| is not | `a is not b` 如果 a 和 b 不指向同一对象，则返回\
+  \ true，否则返回 false。 |\n\n```\n>>> name1 = \"Hari JJTam\"\n>>> name2 = name1\n>>>\
+  \ name3 = \"Hari JJTam\"\n>>> name4 = \"abc\"\n>>>\n>>> name1 is name2\nTrue\n>>>\
+  \ name1 is name3\nFalse\n>>> name1 is name4\nFalse\n>>> name1 is not name3\nTrue\n\
+  ```\n\n## Python：短路运算符\n\n布尔运算符 `and`、`or` 被称为短路运算符，这是因为一旦结果确定，表达式的求值就会停止。\n\n###\
+  \ 为什么布尔 and 被称为短路运算符？\n\n因为如果表达式中的第一个语句求值为 false，那么 Python 就不会对整个表达式求值。因此布尔 `and`\
+  \ 被称为短路 and。\n\n### 为什么布尔 OR 被称为短路运算符？\n\n因为如果第一个语句求值为 true，那么 Python 就不会对整个表达式求值。\n\
+  \n## Python 中的字符串\n\n字符串是用单引号（'…'）、双引号（\"…\"）（或）三引号（\"\"\"…\"\"\" 或 ''' … '''）指定的一系列字符。Python\
+  \ 中的字符串是不可变的，即具有固定值的对象。\n\n```\n>>> str1 = 'Hello World'\n>>> str2 = \"Hello World\"\
+  \n>>> str3 = \"\"\"Hello\n... World... \"\"\"\n>>> str1\n'Hello World'\n>>> str2\n\
+  'Hello World'\n>>> str3\n'Hello\\nWorld\\n'\n```\n\n特殊字符用反斜杠转义。\n\n```\n>>> message\
+  \ = 'He don\\'t know about this'\n>>> message\n\"He don't know about this\"\n```\n\
+  \n`print` 方法将 \\（反斜杠）开头的字符视为特殊字符。\n\n```\n>>> print('firstline\\nsecondline')\n\
+  firstline\nsecondline\n```\n\n如你所见，`\\n` 输出换行。如果你不希望以 \\ 开头的字符被解释为特殊字符，可以在第一个引号前添加\
+  \ `r` 来使用原始字符串\n\n```\n>>> print(r'firstline\\nsecondline')\nfirstline\\nsecondline\n\
+  ```\n\n### 连接字符串\n\n'+' 运算符用于连接字符串。\n\n```\n>>> hello = \"Hello,\"\n>>> message\
+  \ = \"How are you\"\n>>> info = hello + message\n>>> info\n'Hello,How are you'\n\
+  ```\n\n两个或多个相邻的字符串字面量会自动连接。\n\n```\n>>> 'Hello ' \"How \" 'are ' 'you'\n'HelloHowareyou'\n\
+  ```\n\n### 重复字符串\n\n使用 '*'，我们可以重复字符串。\n\n```\n>>> 'hi' * 2\n'hihi'\n>>> 'hi' * 2\
+  \ + 'hello' * 3\n'hihihellohellohello'\n```\n\n### 从字符串中访问特定字符\n\n你可以使用索引位置访问字符串的特定字符。\n\
+  \n```\n>>> name = \"Hello World\"\n>>> name[0]\n'H'\n>>> name[6]\n'W'\n```\n\n索引\
+  \ 0 表示第 1 个字符，1 表示第 2 个字符，依此类推。\n\n你也可以使用负数进行索引。-1 表示最后一个字符；-2 表示倒数第二个字符，依此类推。\n\
+  \n```\n>>> name\n'Hello World'\n>>> name[-1]\n'd'\n>>> name[-2]\n'l'\n>>> name[-7]\n\
+  'o'\n```\n\n### 切片\n\n切片用于获取给定字符串的子字符串。\n\n| 示例 | 描述 |\n| string[start:end] | 返回从索引\
+  \ start（包含）到 end 索引（不包含）的子字符串。 |\n| string[:end] | 返回从索引 0（包含）到 end 索引（不包含）的子字符串。\
+  \ |\n| string[start:] | 返回从索引 start 到末尾的子字符串。 |\n\n\n \n | `string[-2:]` | 返回从倒数第\
+  \ 2 个字符到末尾的字符。 |\n\n```\n>>> message = \"Hello World\"\n>>> message[0:5]\n'Hello'\n\
+  >>> message[5:]\n' World'\n>>> message[:]\n'Hello World'\n>>> message[-2:]\n'ld'\n\
+  >>> message[-5:-2]\n'Wor'\n```\n\n### 获取字符串长度\n\n函数 `len(str)` 用于获取字符串的长度。\n\n```\n\
+  >>> message\n'Hello World'\n>>> len(message)\n11\n>>> len(\"How are you \")\n11\n\
+  ```\n\n## Python：if 条件语句\n\n### \"if\" 语句\n\n`\"if\"` 告诉程序在条件求值为真时执行该段代码。\n\n**语法**\n\
+  \n```\nif_stmt ::=\n  \"if\" expression \":\" suite\n```\n\n**test.py**\n\n```python\n\
+  a = 10\nif (a < 10):\n    print(\"a is less than 10\")\nif (a == 10):\n    print(\"\
+  a is equal to 10\")\nif (a > 10):\n    print(\"a is greater than 10\")\n```\n\n\
+  ```\n$ python3 test.py\na is equal to 10\n```\n\n### if-else 语句\n\n如果条件为真，则执行 if\
+  \ 代码块。否则执行 else 代码块。\n\n**语法**\n\n```\nif_stmt ::=\n  \"if\" expression \":\" suite\n\
+  \                  [\"else\" \":\" suite]\n```\n\n**test.py**\n\n```python\na =\
+  \ 10\nif (a != 10):\n    print(\"a is not equal to 10\")\nelse:\n    print(\"a is\
+  \ equal to 10\")\n```\n\n### if-elif-else 语句\n\n通过使用 if-elif-else 结构，你可以选择多种替代方案。if\
+  \ 语句后面可以跟可选的 elif...else 语句。\n\n**语法**\n\n```\nif_stmt ::=\n  \"if\" expression\
+  \ \":\" suite\n              ( \"elif\" expression \":\" suite )*\n            \
+  \  [\"else\" \":\" suite]\n```\n\n**test.py**\n\n```python\na = 10\nif (a > 10):\n\
+  \    print(\"a is greater than 10\")\nelif (a < 10):\n    print(\"a is less than\
+  \ 10\")\nelse:\n    print(\"a is equal to 10\")\n```\n\n```\n$ python3 test.py\n\
+  a is equal to 10\n```\n\n**注意：**\n\na. 在 Python 中，任何非零整数值都被视为真；零为假。\n\n**test.py**\n\
+  \n```python\nif (100):\n    print(\"Hello\")\nelse:\n    print(\"Bye\")\n```\n\n\
+  ```\n$ python3 test.py\nHello\n```\n\nb. 任何具有非零长度的序列（字符串、列表等）为真，空序列为假。\n\n**test.py**\n\
+  \n```python\nlist = []\ndata = \"abc\"\nif (list):\n    print(\"list is not empty\"\
+  )\nelse:\n    print(\"list is empty\")\nif (data):\n    print(\"data is not empty\"\
+  )\nelse:\n    print(\"data is empty\")\n```\n\n```\n$ python3 test.py\nlist is empty\n\
+  data is not empty\n```\n\n## Python：while 语句\n\n`while` 语句执行一段代码块，直到某个条件为真。\n\n\
+  **语法**\n\n```\nwhile_stmt ::=\n  \"while\" expression \":\" suite\n            \
+  \              [\"else\" \":\" suite]\n```\n\n`else` 子句是可选的。如果表达式求值为假，则 else 子句将执行（如果存在\
+  \ else），然后终止。\n\n**test.py**\n\n```python\na = 2\nprint(\"Even numbers are \")\n\
+  while (a < 10):\n    print(a, end=' ')\n    a += 2\nelse:\n    print(\"\\nExit from\
+  \ loop\")\nprint(\"Done \")\n```\n\n```\n$ python3 test.py\nEven numbers are\n2\
+  \ 4 6 8\nExit from loop\n\nDone\n```\n\n## Python：for 语句\n\nPython 的 for 语句用于遍历任何序列（如列表、字符串）中的项目。\n\
+  \n**语法**\n\n```\nfor_stmt ::=\n  \"for\" target_list \"in\" expression_list \":\"\
+  \ suite\n              [\"else\" \":\" suite]\n```\n\n`else` 子句是可选的，它在循环终止后执行。\n\
+  \n**test.py**\n\n```python\nnames = [\"Phalgun \", \"Sambith \", \"Mahesh \", \"\
+  swapna \"]\nfor name in names:\n    print(name)\nelse:\n    print(\"Exiting from\
+  \ loop\")\nprint(\"Finsihed Execution \")\n```\n\n```\n$ python3 test.py\nPhalgun\n\
+  Sambith\nMahesh\nswapna\nExiting from loop\nFinsihed Execution\n```\n\n## Python：break\
+  \ 语句\n\n`break` 语句用于跳出 for、while 等循环。\n\n**test.py**\n\n```python\ni = 0\nwhile\
+  \ (1):\n    i += 2\n    print(i)\n    if (i == 10):\n        break\nelse:\n    print(\"\
+  Exiting loop\")\nprint(\"Finished Execution \")\n```\n\n```\n$ python3 test.py\n\
+  2\n4\n6\n8\n10\nFinished Execution\n```\n\n正如你观察到的输出，else 子句中的 print 语句没有打印出来。这是因为，当\
+  \ break 语句终止循环时，else 子句不会执行。\n\n## Python：continue 语句\n\n`continue` 语句跳过 for、while\
+  \ 等循环的当前迭代。\n\n**test.py**\n\n```python\ni = 2\nwhile (i < 20):\n    i += 2\n  \
+  \  if (i % 2 != 0):\n        continue\n    print(i)\nelse:\n    print(\"Exiting\
+  \ loop\")\nprint(\"Finished Execution \")\n```\n\n上面的程序打印所有小于 20 的偶数（不包括 20）。\n\n\
+  ```\n$ python3 test.py\n4\n6\n8\n10\n12\n14\n16\n18\n20\nExiting loop\nFinished\
+  \ Execution\n```\n\n## Python：函数\n\n函数是由名称标识的语句块。关键字 `def` 用于定义函数。函数主要用于两个原因。\n\n\
+  a. 使代码更易于构建和理解\n\nb. 重用代码\n\n**语法**\n\n```\ndef functionName(argument1, argument2\
+  \ …. argumentN):\n```\n\n**test.py**\n\n```python\ndef factorial(n):\n    if (n\
+  \ <= 1):\n        return 1\n    result = 1\n    for i in range(2, n + 1):\n    \
+  \    result *= i\n    return result\n\nprint(factorial(1))\nprint(factorial(2))\n\
+  print(factorial(3))\nprint(factorial(4))\nprint(factorial(5))\n```\n\n```\n$ python3\
+  \ test.py\n1\n2\n6\n24\n120\n```\n\n在函数定义之前创建的变量，只有在函数不修改该值的情况下，才能在函数内部读取。\n\n**test.py**\n\
+  \n```python\n# Create the x variable and set to 44\nx = 44\n\n# Define a simple\
+  \ function that prints x\ndef f():\n    x += 1\n    print(x)\n\n# Call the function\n\
+  f()\n```\n\n运行上面的程序，你会得到以下错误。\n\n```\n$ python3 test.py\nTraceback (most recent\
+  \ call last):\n  File \"test.py\", line 11, in <module>\n    f()\n  File \"test.py\"\
+  , line 7, in f\n    x += 1\nUnboundLocalError: local variable 'x' referenced before\
+  \ assignment\n```\n\n删除 `x += 1` 语句并重新运行上面的程序，`x` 的值将打印到控制台。\n\n## Python：函数：return\
+  \ 语句\n\n`return` 语句用于将值从函数返回给调用者。\n\n**test.py**\n\n```python\ndef factorial(n):\n\
+  \    if (n <= 1):\n        return 1\n    result = 1\n    for i in range(2, n + 1):\n\
+  \        result *= i\n    return result\n\nprint(factorial(1))\nprint(factorial(2))\n\
+  print(factorial(3))\nprint(factorial(4))\nprint(factorial(5))\n```\n\n```\n$ python3\
+  \ test.py\n1\n2\n6\n24\n120\n```\n\n不带表达式参数的 `return` 返回 `None`。\n\n```python\n\
+  def hello():\n    print(\"Hello\")\n\nprint(hello())\n```\n\n```\n$ python3 test.py\n\
+  Hello\nNone\n```\n\n\n \n # Python：函数：默认参数值\n\n在 Python 中，你可以为函数参数传递默认值。\n\n```python\n\
+  def welcomeMessage(name='user', message='Hello'):\n    print(message, name)\n```\n\
+  \n你可以通过以下方式调用上述函数。\n\n`welcomeMessage()` ：打印 `Hello user`\n\n`welcomeMessage('JJTam')`\
+  \ ：打印 `Hello JJTam`\n\n`welcomeMessage('JJTam', \"Welcome\")` ：打印 `Welcome JJTam`\n\
+  \n```python\n# test.py\ndef welcomeMessage(name='user', message='Hello'):\n    print(message,\
+  \ name)\n\nwelcomeMessage()\nwelcomeMessage('JJTam')\nwelcomeMessage('JJTam', \"\
+  Welcome\")\n```\n\n```\n$ python3 test.py\nHello user\nHello JJTam\nWelcome JJTam\n\
+  ```\n\n**注意：** 默认值只计算一次。因此，在使用列表、字典等可变对象时要小心。例如，以下函数在后续调用中会累积结果。\n\n```python\n\
+  # test.py\ndef getEvenNumbers(limit, result=[]):\n    i = 2\n    while (i < limit):\n\
+  \        result.append(i)\n        i += 2\n    return result\n\nprint(getEvenNumbers(4))\n\
+  print(getEvenNumbers(8))\nprint(getEvenNumbers(12))\n```\n\n```\n$ python3 test.py\n\
+  [2]\n[2, 2, 4, 6]\n[2, 2, 4, 6, 2, 4, 6, 8, 10]\n```\n\n如果你不希望默认值在后续调用之间共享，可以像下面这样编写函数：\n\
+  \n```python\ndef getEvenNumbers(limit, result=None):\n    if result is None:\n \
+  \       result = []\n    i = 2\n    while (i < limit):\n        result.append(i)\n\
+  \        i += 2\n    return result\n\nprint(getEvenNumbers(4))\nprint(getEvenNumbers(8))\n\
+  print(getEvenNumbers(12))\n```\n\n```\n$ python3 test.py\n[2]\n[2, 4, 6]\n[2, 4,\
+  \ 6, 8, 10]\n```\n\n## Python：函数：关键字参数\n\n函数也可以使用关键字参数调用，即通过使用参数名称。\n\n```python\n\
+  def printEmployee(id, firstName, lastName, designation='Engineer'):\n    print(id,\
+  \ firstName, lastName, designation)\n```\n\n上述函数可以通过以下方式调用。\n\n```python\nprintEmployee(id=1,\
+  \ lastName='Delhi', firstName='Hari')\nprintEmployee(lastName='JJTam', firstName='Rama',\
+  \ id=2)\nprintEmployee(designation='Tech Lead', lastName='Battu', firstName='Gopi',\
+  \ id=3)\n```\n\n```python\n# test.py\ndef printEmployee(id, firstName, lastName,\
+  \ designation='Engineer'):\n    print(id, firstName, lastName, designation)\n\n\
+  printEmployee(id=1, lastName='Delhi', firstName='Hari')\nprintEmployee(lastName='JJTam',\
+  \ firstName='Rama', id=2)\nprintEmployee(designation='Tech Lead', lastName='Battu',\
+  \ firstName='Gopi', id=3)\n```\n\n```\n$ python3 test.py\n1 Hari Delhi Engineer\n\
+  2 Rama JJTam Engineer\n3 Gopi Battu Tech Lead\n```\n\n**注意：**\n\na. 关键字参数必须跟在位置参数之后。\n\
+  \n```python\ndef printEmployee(id, firstName, lastName, designation='Engineer'):\n\
+  \    print(id, firstName, lastName, designation)\n\nprintEmployee(1, lastName='Delhi',\
+  \ firstName='Hari', \"engineer\")\n```\n\n当你尝试编译上述文件时，你会得到以下错误。\n\n```\n$ python3\
+  \ test.py\n  File \"test.py\", line 4\n    printEmployee(1, lastName='Delhi', firstName='Hari',\
+  \ \"engineer\")\n                                                         ^^^^^^^^^\n\
+  SyntaxError: positional argument follows keyword argument\n```\n\n## Python 列表\n\
+  \n列表是方括号之间用逗号分隔的一组值。\n\n```python\n>>> primes = [2, 3, 5, 7, 11, 13, 17, 19, 23]\n\
+  >>> primes\n[2, 3, 5, 7, 11, 13, 17, 19, 23]\n```\n\n`primes` 是一个包含素数的列表。\n\n```python\n\
+  >>> students = [\"Hari\", \"JJTam\", \"Kiran\", \"Ravi\"]\n>>> students\n['Hari',\
+  \ 'JJTam', 'Kiran', 'Ravi']\n```\n\n`students` 是一个包含所有学生姓名的列表。\n\n列表可以包含任何类型的数据。\n\
+  \n```python\n>>> objects = [1, 3, \"Hello\", 10.23]\n>>> objects\n[1, 3, 'Hello',\
+  \ 10.23]\n```\n\n你可以使用索引访问列表的元素。\n\n```python\n>>> objects\n[1, 3, 'Hello', 10.23]\n\
+  >>> objects[0]\n1\n>>> objects[2]\n'Hello'\n```\n\n`objects[0]` 返回列表 `objects` 的第一个元素。\n\
+  \n`objects[1]` 返回列表 `objects` 的第二个元素。\n\n`-ve` 索引也可用于访问列表的元素。\n\n```python\n>>>\
+  \ objects\n[1, 3, 'Hello', 10.23]\n>>> objects[-1]\n10.23\n>>> objects[-3]\n3\n\
+  ```\n\n### 切片\n\n切片用于获取子列表。\n\n| 示例 | 说明 |\n|---------|-------------|\n| `list[start:end]`\
+  \ | 返回从起始索引（包含）到结束索引（不包含）的子列表。 |\n| `list[:end]` | 返回从索引 0（包含）到结束索引（不包含）的子列表。 |\n\
+  | `list[start:]` | 返回从起始索引到末尾的子列表。 |\n| `list[-2:]` | 返回从倒数第二个到末尾的列表。 |\n\n\n \n\
+  \ ```\n>>> objects[1, 3, 'Hello', 10.23]\n>>> objects[-1]\n10.23\n>>> objects[-3]\n\
+  3\n>>> objects\n[1, 3, 'Hello', 10.23]\n>>>\n>>> objects[:]\n[1, 3, 'Hello', 10.23]\n\
+  >>>\n>>> objects[2:]\n['Hello', 10.23]\n>>>\n>>> objects[:3]\n[1, 3, 'Hello']\n\
+  >>>\n>>> objects[-2:]\n['Hello', 10.23]\n```\n\n### 连接两个列表\n\n`+` 运算符用于连接两个列表。\n\
+  \n```\n>>> even = [2, 4, 6, 8, 10]\n>>> odd = [1, 3, 5, 7, 9]\n>>> numbers = even\
+  \ + odd\n>>> numbers\n[2, 4, 6, 8, 10, 1, 3, 5, 7, 9]\n```\n\n列表是可变的；你可以更改列表中的值。\n\
+  \n```\n>>> numbers\n[2, 4, 6, 8, 10, 1, 3, 5, 7, 9]\n>>> numbers[0] = 12\n>>> numbers[1]\
+  \ = 14\n>>> numbers\n[12, 14, 6, 8, 10, 1, 3, 5, 7, 9]\n```\n\n### 在列表末尾添加元素\n\n\
+  列表提供了 `append` 方法，用于在列表末尾添加新元素。\n\n```\n>>> numbers\n[12, 14, 6, 8, 10, 1, 3, 5,\
+  \ 7, 9]\n>>>\n>>> numbers.append(11)\n>>> numbers.append(13)\n>>>\n>>> numbers\n\
+  [12, 14, 6, 8, 10, 1, 3, 5, 7, 9, 11, 13]\n```\n\n### 切片赋值\n\n如果你想替换列表中的一系列元素，可以使用切片表示法。\n\
+  \n`numbers[2:5] = [21, 22, 23]`\n\n上述语句分别用 21、22、23 替换索引 2、3、4 处的元素。\n\n`numbers[:]\
+  \ = []`\n\n上述语句通过将所有元素替换为空列表来清空列表。\n\n```\n>>> numbers\n[12, 14, 6, 8, 10, 1, 3,\
+  \ 5, 7, 9, 11, 13]\n>>>\n>>> numbers[2:5] = [21, 22, 23]\n>>> numbers\n[12, 14,\
+  \ 21, 22, 23, 1, 3, 5, 7, 9, 11, 13]\n>>>\n>>> numbers[:] = []\n>>> numbers\n[]\n\
+  ```\n\n### 获取列表长度\n\n使用 `len` 函数，你可以获取列表的长度。\n\n```\n>>> vowels = ['a', 'e', 'i',\
+  \ 'o', 'u']\n>>> len(vowels)\n5\n```\n\n### 嵌套列表\n\n一个列表可以嵌套在另一个列表中。例如，在下面的示例中，numbers\
+  \ 包含 3 个列表，第一个列表表示奇数，第二个列表表示偶数，第三个列表表示质数。\n\n```\n>>> numbers = [[1, 3, 5, 7], [2,\
+  \ 4, 6, 8], [2, 3, 5, 7, 11]]\n>>> numbers\n[[1, 3, 5, 7], [2, 4, 6, 8], [2, 3,\
+  \ 5, 7, 11]]\n>>>\n>>> numbers[0]\n[1, 3, 5, 7]\n>>>\n>>> numbers[1]\n[2, 4, 6,\
+  \ 8]\n>>>\n>>> numbers[2]\n[2, 3, 5, 7, 11]\n>>>\n>>>\n>>> len(numbers)\n3\n>>>\
+  \ len(numbers[0])\n4\n>>> len(numbers[1])\n4\n>>> len(numbers[2])\n5\n>>>\n>>> numbers[0][1]\
+  \ = 9\n>>> numbers[1][1:4] = [10, 12, 14]\n>>> numbers\n[[1, 9, 5, 7], [2, 10, 12,\
+  \ 14], [2, 3, 5, 7, 11]]\n```\n\n## Python：list extend：追加给定列表的元素\n\nPython 提供了 `extend`\
+  \ 方法，用于追加给定列表中的所有项目。\n\n`test.py`\n\n```\nevenNumbers = [2, 4, 6]\noddNumbers =\
+  \ [1, 3, 5]\nnumbers = []\nnumbers.extend(evenNumbers)\nprint(numbers)\nnumbers.extend(oddNumbers)\n\
+  print(numbers)\n```\n\n```\n$ python3 test.py\n[2, 4, 6]\n[2, 4, 6, 1, 3, 5]\n```\n\
+  \n## Python：insert：在指定位置插入元素\n\n列表提供了 `insert` 方法，用于在指定位置插入元素。\n\n### 语法\n\n`list.insert(i,\
+  \ x)`\n\n- `list.insert(0, x)`：在列表开头插入元素 x。\n- `list.insert(len(list), x)`：在列表末尾插入元素\
+  \ x。\n- `list.insert(2, x)`：在第 2 个位置插入元素 x。\n\n`test.py`\n\n```\nlist = [2, 4, 6]\n\
+  print(list)\nlist.insert(0, -2)\nprint(list)\nlist.insert(len(list), 8)\nprint(list)\n\
+  list.insert(2, 3)\nprint(list)\n```\n\n```\n$ python3 test.py\n[2, 4, 6]\n[-2, 2,\
+  \ 4, 6]\n[-2, 2, 4, 6, 8]\n[-2, 2, 3, 4, 6, 8]\n```\n\n## Python：list remove：移除元素\n\
+  \n列表提供了 `remove` 方法，用于从中移除元素 `x`。\n\n### 语法\n\n`list.remove(x)`\n\n`remove` 方法移除列表中值为\
+  \ x 的第一个项目。\n\n`test.py`\n\n```\nlist = [2, 4, 6, 6, 4, 2]\nprint(list)\nlist.remove(6)\n\
+  print(list)\n```\n\n```\n$ python3 test.py\n[2, 4, 6, 6, 4, 2]\n[2, 4, 6, 4, 2]\n\
+  ```\n\n如果元素不在列表中，`remove` 方法会抛出错误。\n\n`test.py`\n\n```\nlist = [2, 4, 6, 6, 4, 2]\n\
+  print(list)\nlist.remove(60)\nprint(list)\n```\n\n```\n$ python3 test.py\n[2, 4,\
+  \ 6, 6, 4, 2]\nTraceback (most recent call last):\n  File \"test.py\", line 4, in\
+  \ <module>\n    list.remove(60)\nValueError: list.remove(x): x not in list\n```\n\
+  \n## Python：list：pop：移除列表中的最后一个元素\n\n`list.pop([i])`\n\n不带参数的 `pop` 方法移除列表中的最后一个元素。如果指定位置\
+  \ `i`，则移除位置 `i` 处的元素并返回它。\n\n`test.py`\n\n```\nlist = [2, 4, 6, 6, 4, 2]\nprint(list)\n\
+  print(\"Removing last element \", list.pop())\nprint(list)\nprint(\"Removing element\
+  \ at index 2 \", list.pop(2))\nprint(list)\n```\n\n```\n$ python3 test.py\n[2, 4,\
+  \ 6, 6, 4, 2]\nRemoving last element  2\n[2, 4, 6, 6, 4]\nRemoving element at index\
+  \ 2  6\n[2, 4, 6, 4]\n```\n\n## Python：list：清除列表中的所有元素\n\n列表提供了 `clear` 方法，用于清除列表中的所有元素。\n\
+  \n`test.py`\n\n```\nlist = [2, 4, 6, 6, 4, 2]\nprint(list)\nlist.clear()\nprint(list)\n\
+  ```\n\n```\n$ python3 test.py\n[2, 4, 6, 6, 4, 2]\n[]\n```\n\n## Python：list：index：获取元素的索引\n\
+  \n`list.index(x)`\n\n`list` 提供了 index 方法，返回值为 x 的第一个项目的索引。\n\n`test.py`\n\n```\n\
+  list = [2, 4, 6, 6, 4, 2]\nprint(list)\nprint(\"index of 2 is \", list.index(2))\n\
+  print(\"index of 4 is \", list.index(4))\nprint(\"index of 6 is \", list.index(6))\n\
+  ```\n\n```\n$ python3 test.py\n[2, 4, 6, 6, 4, 2]\nindex of 2 is  0\nindex of 4\
+  \ is  1\nindex of 6 is  2\n```\n\n如果元素不在列表中，会抛出错误。\n\n`test.py`\n\n```\nlist = [2,\
+  \ 4, 6, 6, 4, 2]\nprint(list)\nprint(\"index of 20 is \", list.index(20))\n```\n\
+  \n```\n$ python3 test.py\n[2, 4, 6, 6, 4, 2]\nTraceback (most recent call last):\n\
+  \  File \"test.py\", line 4, in <module>\n    print(\"index of 20 is \", list.index(20))\n\
+  ValueError: 20 is not in list\n```\n\n## Python：list：对列表元素进行排序\n\n`list` 提供了 sort\
+  \ 方法，用于对列表元素进行排序。默认情况下，sort 方法按升序对元素进行排序。要按降序对元素进行排序，请传递 `reverse=True` 参数。\n\n\
+  `test.py`\n\n```\nlist = [12, 5, 32, 43, 21, 356]\nprint(list)\nlist.sort()\nprint(list)\n\
+  list.sort(reverse=True)\nprint(list)\n```\n\n```\n$ python3 test.py\n[12, 5, 32,\
+  \ 43, 21, 356]\n[5, 12, 21, 32, 43, 356]\n[356, 43, 32, 21, 12, 5]\n```\n\n## Python：count：统计元素出现的次数\n\
+  \n列表提供 count 方法，用于统计元素在结果中出现的次数。\n\n`test.py`\n\n```\nlist = [12, 5, 32, 43, 21,\
+  \ 356, 5, 21]\nprint(list)\nprint(\"5 appears \", list.count(5), \" times \")\n\
+  print(\"12 appears \", list.count(12), \" times \")\n```\n\n```\n$ python3 test.py\n\
+  [12, 5, 32, 43, 21, 356, 5, 21]\n5 appears  2  times\n12 appears  1  times\n```\n\
+  \n## Python：list：反转列表元素\n\n列表提供了 reverse 方法，用于反转列表元素。\n\n`test.py`\n\n```\nlist\
+  \ = [12, 5, 32, 43, 21, 356, 5, 21]\nprint(list)\nlist.reverse()\nprint(list)\n\
+  ```\n\n```\n$ python3 test.py\n[12, 5, 32, 43, 21, 356, 5, 21]\n[21, 5, 356, 21,\
+  \ 43, 32, 5, 12]\n```\n\n\n \n ```python\n[21, 5, 356, 21, 43, 32, 5, 12]\n```\n\
+  \n## Python: list: 复制列表元素\n\n`List` 提供了 `copy` 方法，用于获取列表的浅拷贝。\n\n`test.py`\n```\n\
+  list = [12, 5, 32, 43, 21, 356, 5, 21]\nlist1 = list.copy()\nprint(list)\nprint(list1)\n\
+  list1.append(12345)\nprint(list)\nprint(list1)\n```\n\n```\n$ python3 test.py\n\
+  [12, 5, 32, 43, 21, 356, 5, 21]\n[12, 5, 32, 43, 21, 356, 5, 21]\n[12, 5, 32, 43,\
+  \ 21, 356, 5, 21]\n[12, 5, 32, 43, 21, 356, 5, 21, 12345]\n```\n\n## Python: list:\
+  \ del: 删除元素\n\n使用 `del` 语句，可以通过索引从列表中移除元素。\n\n`test.py`\n```\nlist = [12, 5, 32,\
+  \ 43, 21, 356, 5, 21]\nprint(list)\ndel list[0]\ndel list[5]\nprint(list)\n```\n\
+  \n```\n$ python3 test.py\n[12, 5, 32, 43, 21, 356, 5, 21]\n[5, 32, 43, 21, 356,\
+  \ 21]\n```\n\n使用 `del` 语句，可以从列表中移除切片。\n\n`test.py`\n```\nlist = [12, 5, 32, 43,\
+  \ 21, 356, 5, 21]\nprint(list)\ndel list[2:6]\nprint(list)\n```\n\n```\n$ python3\
+  \ test.py\n[12, 5, 32, 43, 21, 356, 5, 21]\n[12, 5, 5, 21]\n```\n\n使用 `del` 语句，可以清空列表。`del\
+  \ list[:]` 会移除列表 `list` 中的所有元素。\n\n`test.py`\n```\nlist = [12, 5, 32, 43, 21, 356,\
+  \ 5, 21]\nprint(list)\ndel list[:]\nprint(list)\n```\n\n```\n$ python3 test.py\n\
+  [12, 5, 32, 43, 21, 356, 5, 21]\n[]\n```\n\n使用 `del` 语句，可以删除变量本身。一旦删除变量，就无法再使用它。如果在删除后尝试使用该变量，将会报错。\n\
+  \n`test.py`\n```\nlist = [12, 5, 32, 43, 21, 356, 5, 21]\nprint(list)\ndel list\n\
+  list[0] = 1\n```\n\n```\n$ python3 test.py\n[12, 5, 32, 43, 21, 356, 5, 21]\nTraceback\
+  \ (most recent call last):\n  File \"test.py\", line 5, in <module>\n    list[0]\
+  \ = 1\nTypeError: 'type' object does not support item assignment\n```\n\n## Python:\
+  \ 遍历列表\n\n### 使用 for 循环\n\n```\nfor var in list:\n    # 在此处进行处理\n```\n\n你可以像上面这样使用\
+  \ `for` 循环来遍历列表。下面的例子解释了这一点。\n\n```\n>>> countries = ['India', 'China', 'Pakisthan',\
+  \ 'Sri Lanka', 'Bangladesh']\n>>> for i in countries:\n...     print(i)\n...\nIndia\n\
+  China\nPakisthan\nSri Lanka\nBangladesh\n```\n\n### 使用 enumerate 方法遍历列表\n\n使用 `enumerate`\
+  \ 函数\n\n`enumerate` 函数返回列表中的位置及其对应的值。\n\n```\n>>> countries\n['India', 'China',\
+  \ 'Pakisthan', 'Sri Lanka', 'Bangladesh']\n>>> for i,v in enumerate(countries):\n\
+  ...     print(i, v)\n...\n0 India\n1 China\n2 Pakisthan\n3 Sri Lanka\n4 Bangladesh\n\
+  ```\n\n### 反向遍历序列\n\n使用 `reversed` 函数来反向遍历序列。\n\n```\n>>> countries\n['India', 'China',\
+  \ 'Pakisthan', 'Sri Lanka', 'Bangladesh']\n>>>\n>>> for i in reversed(countries):\n\
+  ...     print(i)\n...\nBangladesh\nSri Lanka\nPakisthan\nChina\nIndia\n```\n\n###\
+  \ 按排序顺序遍历序列\n\n使用 `sorted` 函数来按排序顺序遍历序列。\n\n```\n>>> for i in sorted(countries):\n\
+  ...     print(i)\n...\nBangladesh\nChina\nIndia\nPakisthan\nSri Lanka\n```\n\n###\
+  \ 同时遍历多个列表\n\n使用 `zip` 函数来同时遍历多个列表。\n\n```\n>>> for country, capital in zip(countries,\
+  \ capitals):\n...     print(country, capital)\n...\nIndia Delhi\nChina Beijing\n\
+  Pakisthan Islamabad\nSri Lanka Sri Jayawardenepura - Kotte\nBangladesh Dhaka\n```\n\
+  \n### 使用索引遍历\n\n```\n>>> countries\n['India', 'China', 'Pakisthan', 'Sri Lanka',\
+  \ 'Bangladesh']\n>>>\n>>> for i in range(len(countries)):\n...     print(countries[i])\n\
+  ...\nIndia\nChina\nPakisthan\nSri Lanka\nBangladesh\n```\n\n## Python: 元组\n\n元组与列表类似，由多个用逗号分隔的值组成。\n\
+  \n### 元组与列表的区别\n\na. 列表是可变的，而元组是不可变的\n\nb. 元组可以包含异构数据，而列表通常包含同构数据。\n\n`test.py`\n\
+  ```\nemployee = (1, \"Hari Krihsna\", \"Delhi\", 12345.678)\nprint(employee)\nprint(employee[0])\n\
+  print(employee[1])\nprint(employee[2])\nprint(employee[3])\n```\n\n```\n$ python3\
+  \ test.py\n(1, 'Hari Krihsna', 'Delhi', 12345.678)\n1\nHari Krihsna\nDelhi\n12345.678\n\
+  ```\n\n如上面的例子所示，元组中的元素用圆括号括起来。尽管元组是不可变的，但你可以创建包含可变对象（如列表）的元组。\n\n`test.py`\n```\n\
+  employee = (1, [])\nprint(employee)\nemployee[1].append(2)\nemployee[1].append(4)\n\
+  employee[1].append(6)\nprint(employee)\n```\n\n```\n$ python3 test.py\n(1, [])\n\
+  (1, [2, 4, 6])\n```\n\n### 打包和解包\n\n你可以不使用圆括号来定义元组。\n\n例如，\n\n```\nemployee=1, \"\
+  Hari Krihsna\", \"Delhi\", 12345.678\n```\n\n上面是元组打包的例子。\n\n```\nid, firstName,\
+  \ lastName, salary = employee\n```\n\n上面是元组解包的例子。序列解包要求等号左侧的变量数量与序列中的元素数量相同。\n\n\
+  `test.py`\n```\nemployee = 1, \"Hari Krihsna\", \"Delhi\", 12345.678\nid, firstName,\
+  \ lastName, salary = employee\nprint(id)\nprint(firstName)\nprint(lastName)\nprint(salary)\n\
+  ```\n\n```\n$ python3 test.py\n1\nHari Krihsna\nDelhi\n12345.678\n```\n\n### 连接元组\n\
+  \n`+` 运算符用于连接元组。\n\n```\n>>> tuple1 = (1, \"HI\", 2, 45.65)\n>>> tuple2 = (\"abcdef\"\
+  , 54, 67)\n>>> tuple3 = tuple1 + tuple2\n>>> tuple3\n(1, 'HI', 2, 45.65, 'abcdef',\
+  \ 54, 67)\n```\n\n### 切片\n\n与列表一样，你可以使用切片符号来访问元组。\n\n| 示例 | 说明 |\n| --- | --- |\n\
+  | `tuple[start:end]` | 返回从索引 start（包含）到 end 索引（不包含）的元组。 |\n| `tuple[:end]` | 返回从索引\
+  \ 0（包含）到 end 索引（不包含）的元组。 |\n| `tuple[start:]` | 返回从索引 start 到末尾的元组。 |\n| `tuple[-2:]`\
+  \ | 返回从倒数第二个到末尾的元素。 |\n\n\n \n ```\n>>> tuple1(1, 'HI', 2, 45.65)>>> tuple1  0 :>>>\
+  \ tuple1:>>> tuple1 : 3 >>> tuple1  2 : 5 \n```\n\n### `'*'`: 重复元组元素\n\n`'*'` 是重复运算符，用于重复元组的元素。\n\
+  \n```\n>>> tuple1(1, 'HI', 2, 45.65)\n>>>\n>>> tuple 1 * 3(1, 'HI', 2, 45.65, 1,\
+  \ 'HI', 2, 45.65, 1, 'HI', 2, 45.65)\n```\n\n### 删除元组元素\n\n正如我所说，元组是不可变的，因此无法从元组中删除元素。但你可以使用\
+  \ `del` 语句删除整个元组。\n\n```\n>>> tuple 1 = ( 1 , \"HI \" , 2 , 45.6 5 )\n>>>\n>>> de\
+  \ l tuple1\n>>> tuple1Traceback (most recent call last):File \"<stdin>\" , line\
+  \ 1 , in <module>NameErro r : name 'tuple1' is not defined\n```\n\n观察输出，抛出了异常；这是因为删除后，元组不再存在。\n\
+  \n## Python：集合\n\n集合是一个无序且不重复的元素集合。我们可以对集合执行并集、交集、差集和对称差集运算。\n\n### 如何创建集合\n\n你可以使用\
+  \ `{}` 或 `set()` 函数创建集合。`set()` 创建空集合。\n\n```\n>>> evenNumbers={2, 4, 6, 8, 8, 4,\
+  \ 10}\n>>> evenNumbers\n{8, 10, 2, 4, 6}\n```\n\n观察上面的代码片段，`evenNumbers` 是一个包含偶数的集合。观察输出，集合不包含重复元素。\n\
+  \n集合支持以下操作。\n\n#### `len(s)`：集合的基数\n\n返回集合的基数（不同元素的数量）。\n\n```\n>>> evenNumber s\
+  \ = { 2 , 4 , 6 , 8 , 8 , 4 , 1 0 }\n>>> len(evenNumbers)\n5\n```\n\n#### `x in\
+  \ s`：检查元素是否在集合中\n\n`'in'` 运算符用于检查元素是否在集合中，如果元素在集合中则返回 true，否则返回 false。\n\n```\n\
+  >>> evenNumbers\n{8, 10, 2, 4, 6}\n>>>\n>>> 10 0 i n evenNumbers\nFalse\n>>>\n>>>\
+  \ 2 i n evenNumbers\nTrue\n```\n\n#### `x not in s`：检查元素是否在集合中\n\n`'not in'` 运算符与\
+  \ `'in'` 运算符相反，如果元素不在集合中则返回 true，否则返回 false。\n\n```\n>>> evenNumbers\n{8, 10, 2,\
+  \ 4, 6}\n>>>\n>>> 1 0 no t i n evenNumbers\nFalse\n>>>\n>>> 10 0 no t i n evenNumbers\n\
+  True\n```\n\n#### `isdisjoint(other)`\n\n如果两个集合不相交则返回 true，否则返回 false。如果两个集合没有共同元素，则称它们为不相交。\n\
+  \n```\n>>> evenNumbers\n{8, 10, 2, 4, 6}\n>>>\n>>> evenNumber s . isdisjoint( {\
+  \ 1 , 3 , 5 , 7 })\nTrue\n>>>\n>>> evenNumber s . isdisjoint( { 1 , 3 , 5 , 7 ,\
+  \ 8 })\nFalse\n```\n\n#### `issubset(other)`\n\n如果此集合是 other 的子集则返回 true，否则返回 false。\n\
+  \n```\n>>> evenNumbers\n{8, 10, 2, 4, 6}\n>>>\n>>> evenNumber s . issubset( { 2\
+  \ , 4 })\nFalse\n>>>\n>>> evenNumber s . issubset( { 2 , 4 , 6 , 8 , 1 0 , 1 2 })\n\
+  True\n```\n\n#### `set <= other`\n\n如果集合中的每个元素都在 other 中则返回 true。\n\n#### `set <\
+  \ other`\n\n如果集合是 other 的真子集则返回 true，即 `set >= other` 且 `set != other`。\n\n```\n\
+  >>> evenNumbers\n{8, 10, 2, 4, 6}\n>>>\n>>> evenNumbers < = { 2 , 4 , 6 , 8 , 1\
+  \ 0 }\nTrue\n>>> evenNumbers < = { 2 , 4 , 6 , 8 , 1 0 , 1 2 }\nTrue\n>>>\n>>> evenNumbers\
+  \ < { 2 , 4 , 6 , 8 , 1 0 }\nFalse\n>>> evenNumbers < { 2 , 4 , 6 , 8 , 1 0 , 1\
+  \ 2 }\nTrue\n```\n\n### 两个集合的并集\n\n`union(other, ...)`\n\n`set | other | ...`\n\n\
+  ```\n>>> evenNumber s = { 2 , 4 , 6 , 8 , 1 0 }\n>>> oddNumber s = { 1 , 3 , 5 ,\
+  \ 7 , 9 }\n>>> resul t = evenNumber s | oddNumbers\n>>> result\n{1, 2, 3, 4, 5,\
+  \ 6, 7, 8, 9, 10}\n```\n\n### 两个集合的交集\n\n`intersection(other, ...)`\n\n`set & other\
+  \ & ...`\n\n```\n>>> evenNumber s = { 2 , 4 , 6 , 8 , 1 0 }\n>>> powersOf 2 = {\
+  \ 1 , 2 , 4 , 8 , 1 6 }\n>>> resul t = evenNumber s & powersOf2\n>>> result\n{8,\
+  \ 2, 4}\n```\n\n### 两个集合的差集\n\n`difference(other, ...)`\n\n`set - other - ...`\n\
+  \n返回一个新集合，包含在集合中但不在其他集合中的元素。\n\n```\n>>> evenNumbers\n{8, 10, 2, 4, 6}\n>>> powersOf2\n\
+  {16, 8, 2, 4, 1}\n>>> evenNumber s - powersOf2\n{10, 6}\n>>> powersOf 2 - evenNumbers\n\
+  {16, 1}\n```\n\n### 两个集合的对称差集\n\n`symmetric_difference(other)`\n\n`set ^ other`\n\
+  \n如果 A 和 B 是两个集合，那么 A 和 B 的对称差集是 `A^B = (A-B) union (B-A)`\n\n```\n>>> evenNumbers\n\
+  {8, 10, 2, 4, 6}\n>>> powersOf2\n{16, 8, 2, 4, 1}\n>>> evenNumber s - powersOf2\n\
+  {10, 6}\n>>> powersOf 2 - evenNumbers\n{16, 1}\n>>>\n>>> evenNumber s ^ powersOf2\n\
+  {1, 6, 10, 16}\n```\n\n### 复制集合元素\n\n`'copy'` 函数返回一个新集合，包含 s 的浅拷贝。\n\n```\n>>> evenNumbers\n\
+  {8, 10, 2, 4, 6}\n>>> tem p = evenNumber s . copy()\n>>> temp\n{8, 10, 2, 4, 6}\n\
+  ```\n\n### 更新集合\n\n`update(other, ...)`\n\n`set |= other | ...`\n\n通过添加其他集合的元素来更新集合。\n\
+  \n```\n>>> evenNumbers\n{8, 10, 2, 4, 6}\n>>> oddNumbers\n{9, 3, 5, 1, 7}\n>>> powersOf2\n\
+  {16, 8, 2, 4, 1}\n>>>\n>>> evenNumber s . update(oddNumbers, powersOf2)\n>>> evenNumbers\n\
+  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16}\n```\n\n### 所有集合的交集\n\n`intersection_update(other,\
+  \ ...)`\n\n`set &= other & ...`\n\n更新集合，只保留在它和所有其他集合中都存在的元素。\n\n```\n>>> numbers\n\
+  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16}\n>>> oddNumbers\n{9, 3, 5, 1, 7}\n>>> powersOf2\n\
+  {16, 8, 2, 4, 1}\n>>> number s . intersection_update(oddNumbers, powersOf2)\n>>>\
+  \ numbers\n{1}\n```\n\n### 差集更新\n\n`difference_update(other, ...)`\n\n`set -= other\
+  \ | ...`\n\n更新集合，删除在其他集合中找到的元素。\n\n```\n>>> oddNumbers\n{9, 3, 5, 1, 7}\n>>> powersOf2\n\
+  {16, 8, 2, 4, 1}\n>>> oddNumber s . difference_update(powersOf2)\n>>> oddNumbers\n\
+  {9, 3, 5, 7}\n```\n\n### 对称差集更新\n\n`symmetric_difference_update`\n\n`set ^= other`\n\
+  \n更新集合，只保留在任一集合中找到但不在两个集合中都存在的元素。\n\n```\n>>> oddNumbers\n{9, 3, 5, 7}\n>>> powersOf2\n\
+  {16, 8, 2, 4, 1}\n>>> oddNumber s . symmetric_difference_update(powersOf2)\n>>>\
+  \ oddNumbers\n{1, 2, 3, 4, 5, 7, 8, 9, 16}\n```\n\n### 向集合添加元素\n\n`'add'` 方法用于向集合添加元素。\n\
+  \n```\n>>> temp\n{2, 3, 5, 7}\n>>>\n>>> tem p . add ( 1 1 )\n>>> tem p . add ( 1\
+  \ 3 )\n>>>\n>>> temp\n{2, 3, 5, 7, 11, 13}\n```\n\n### 从集合中删除元素\n\n`'remove'` 方法用于从集合中删除元素。\n\
+  \n```\n>>> temp\n{2, 3, 5, 7, 11, 13}\n>>>\n>>> tem p . remove ( 2 )\n>>> temp\n\
+  {3, 5, 7, 11, 13}\n>>>\n>>> tem p . remove ( 1 1 )\n>>> temp\n{3, 5, 7, 13}\n```\n\
+  \n如果元素不在集合中，则抛出 `KeyError`。\n\n```\n>>> temp.remove(100)\nTraceback (most recent\
+  \ call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 100\n```\n\n###\
+  \ 删除任意元素\n\n`'pop()'` 用于删除并返回集合中的任意元素。如果集合为空，则抛出 `KeyError`。\n\n```\n>>> temp\n\
+  {5, 7, 13}\n>>> tem p . pop()\n5\n>>>\n>>> tem p . pop()\n7\n>>> tem p . pop()\n\
+  13\n>>> tem p . pop()\nTraceback (most recent call last):File \"<stdin>\" , line\
+  \ 1 , in <module>KeyErro r : 'pop from an empty set'\n```\n\n### 删除集合中的所有元素\n\n\
+  `'clear'` 方法用于删除集合中的所有元素。\n\n```\n>>> powersOf2\n{16, 8, 2, 4, 1}\n>>>\n>>> powersOf\
+  \ 2 . clear()\n>>> powersOf2\nset()\n```\n\n## Python：查找列表的交集和并集\n\n以下程序实现：\na.\
+  \ 列表中的唯一元素\nb. 两个列表的交集\nc. 两个列表的并集。\n\n`test.py`\n\n```python\ndef unique (a):\n\
+  \    return list (set (a))\n\ndef intersect (a, b):\n    return list (set (a) &\
+  \ set (b))\n\ndef union (a, b):\n    return list (set (a) | set (b))\n\nif __name__\
+  \ == \"__main__\" :\n    a = [2 , 4 , 6 , 8 , 10 , 10 , 8 , 6 ]\n    b = [2 , 4\
+  \ , 8 , 16 , 1 , 3 , 5 , 2 , 4 ]\n    print (unique(a))\n    print (intersect(a,\
+  \ b))\n    print (union(a, b))\n```\n\n```\n$ python3 test.py\n[8, 2, 10, 4, 6]\n\
+  [8, 2, 4]\n[1, 2, 3, 4, 5, 6,  Crane, 10, 16]\n```\n\n## Python：字典\n\n字典用于存储键值对，类似于其他语言中的关联数组、映射。\n\
+  \n```\n>>> employee s = { 1 : { \"Hari JJTam \" , \"Delhi \" }, 2 : { \"Prithi \"\
+  \ , \"Nair \" }, 3 : { \"Mohan \" , \"Shekkappa \" }}\n>>> employees [ 1 ]\n{'Hari\
+  \ JJTam', 'Delhi'}\n>>>\n>>> employees [ 2 ]\n{'Prithi', 'Nair'}\n>>>\n>>> employees\
+  \ [ 3 ]\n{'Shekkappa', 'Mohan'}\n```\n\n如上面的示例所示，`employees` 是一个字典，它将员工 ID 映射到他们的姓名（名字和姓氏）。\n\
+  \n| Id | 姓名 |\n|---|---|\n| 1 | {\"Hari JJTam\", \"Delhi\"} |\n| 2 | {\"Prithi\"\
+  , \"Nair\"} |\n| 3 | {\"Mohan\", \"Shekkappa\"} |\n\n\n \n字典通过键进行索引，键是不可变类型。你可以使用字符串、数字或任何其他不可变类型作为键。如果元组只包含字符串、数字或元组，则可以用作键。\n\
+  \n### 使用 dict 构造函数构建字典\n\n`class dict(**kwarg)`\n`class dict(mapping, **kwarg)`\n\
+  `class dict(iterable, **kwarg)`\n\n上述构造函数用于定义字典。\n\n```python\n>>> emps = dict([(1,\
+  \ \"Pradeep\"), (2, \"Srinath\"), (3, \"Thushar\")])\n>>> emps\n{1: 'Pradeep', 2:\
+  \ 'Srinath', 3: 'Thushar'}\n>>> a = dict(one=1, two=2, three=3)\n>>> a\n{'two':\
+  \ 2, 'three': 3, 'one': 1}\n>>> b = dict({'three': 3, 'one': 1, 'two': 2})\n>>>\
+  \ b\n{'two': 2, 'three': 3, 'one': 1}\n```\n\n### 获取字典中的项目数量\n\n使用 `len` 方法获取字典中的项目数量。\n\
+  \n```python\n>>> employees\n{1: {'Hari JJTam', 'Delhi'}, 2: {'Prithi', 'Nair'},\
+  \ 3: {'Shekkappa', 'Mohan'}}\n>>> \n>>> len(employees)\n3\n```\n\n### 获取与键关联的值\n\
+  \n使用 `D[key]` 获取与键关联的值。\n\n```python\n>>> employees[1]\n{'Hari JJTam', 'Delhi'}\n\
+  >>> employees[2]\n{'Prithi', 'Nair'}\n>>> employees[3]\n{'Shekkappa', 'Mohan'}\n\
+  ```\n\n如果键不在字典中，则抛出 `KeyError`。\n\n```python\n>>> employees[5]\nTraceback (most\
+  \ recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 5\n```\n\
+  \n### 覆盖与键关联的值\n\n`d[key] = value`\n\n上述语句覆盖与键关联的值，如果键不存在，则创建新项。\n\n```python\n\
+  >>> employees\n{1: {'Hari JJTam', 'Delhi'}, 2: {'Prithi', 'Nair'}, 3: {'Shekkappa',\
+  \ 'Mohan'}}\n>>> employees[4] = {\"Ranganath\", \"Thippisetty\"}\n>>> employees[1]\
+  \ = {\"Phalgun\", \"Garimella\"}\n>>> \n>>> employees\n{1: {'Garimella', 'Phalgun'},\
+  \ 2: {'Prithi', 'Nair'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n\
+  ```\n\n### 删除与键关联的项\n\n`del d[key]`\n\n使用 `del` 语句删除与键关联的项（项指 `<key, value>` 对）。\n\
+  \n```python\n>>> employees\n{1: {'Garimella', 'Phalgun'}, 2: {'Prithi', 'Nair'},\
+  \ 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n>>> del employees[2]\n\
+  >>> \n>>> employees\n{1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4:\
+  \ {'Ranganath', 'Thippisetty'}}\n```\n\n如果键不在字典中，则抛出 `KeyError`。\n\n```python\n\
+  >>> del employees[2]\nTraceback (most recent call last):\n  File \"<stdin>\", line\
+  \ 1, in <module>\nKeyError: 2\n```\n\n### 检查键是否存在\n\n`key in d`\n\n如果键在字典中，`in`\
+  \ 运算符返回 true，否则返回 false。\n\n```python\n>>> employees\n{1: {'Garimella', 'Phalgun'},\
+  \ 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n>>> \n>>> 2 in employees\n\
+  False\n>>> \n>>> 3 in employees\nTrue\n```\n\n### 检查键是否不存在\n\n`key not in d`\n\n\
+  如果键不在字典中，`not in` 运算符返回 true，否则返回 false。\n\n```python\n>>> employees\n{1: {'Garimella',\
+  \ 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n>>> \n\
+  >>> 2 not in employees\nTrue\n>>> \n>>> 3 not in employees\nFalse\n```\n\n### 获取字典的迭代器\n\
+  \n`iter(d)`\n\n`iter` 函数返回字典键的迭代器。\n\n```python\n>>> for key in iter(employees):\n\
+  ...     print(key, employees[key])\n...\n1 {'Garimella', 'Phalgun'}\n3 {'Shekkappa',\
+  \ 'Mohan'}\n4 {'Ranganath', 'Thippisetty'}\n```\n\n### 删除字典中的所有项\n\n使用 `clear` 函数删除字典中的所有项。\n\
+  \n```python\n>>> employees\n{1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'},\
+  \ 4: {'Ranganath', 'Thippisetty'}}\n>>> \n>>> employees.clear()\n>>> employees\n\
+  {}\n```\n\n### 复制字典\n\n使用 `copy()` 方法获取此字典的浅拷贝。\n\n```python\n>>> employees = {1:\
+  \ {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n\
+  >>> employees\n{1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath',\
+  \ 'Thippisetty'}}\n>>> \n>>> emps = employees.copy()\n>>> emps\n{1: {'Garimella',\
+  \ 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n```\n\
+  \n### 从给定字典的键创建新字典\n\n`fromkeys(seq[, value])`\n\n使用 seq 中的键和设置为 value 的值创建新字典。\n\
+  \n```python\n>>> employees\n{1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'},\
+  \ 4: {'Ranganath', 'Thippisetty'}}\n>>> emps = employees.fromkeys([1, 2, 3], \"\
+  default\")\n>>> emps\n{1: 'default', 2: 'default', 3: 'default'}\n```\n\n### 获取与此键关联的值\n\
+  \n`get(key[, default])`\n\n使用 `get` 方法获取与给定键关联的值。如果键不存在，则返回默认值。如果未给定默认值，则默认为 `None`，因此此方法永远不会引发\
+  \ `KeyError`。\n\n```python\n>>> employees\n{1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa',\
+  \ 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n>>> employees.get(1)\n{'Garimella',\
+  \ 'Phalgun'}\n>>> \n>>> employees.get(5, {\"Kiran Kumar\", \"Darsi\"})\n{'Kiran\
+  \ Kumar', 'Darsi'}\n```\n\n### 获取字典中的所有项\n\n使用 `items` 方法获取字典中的所有项。\n\n```python\n\
+  >>> employees.items()\ndict_items([(1, {'Garimella', 'Phalgun'}), (3, {'Shekkappa',\
+  \ 'Mohan'}), (4, {'Ranganath', 'Thippisetty'})])\n```\n\n### 从字典中获取所有键\n\n使用 `keys()`\
+  \ 方法从字典中获取所有键。\n\n```python\n>>> employees.keys()\ndict_keys([1, 3, 4])\n```\n\n\
+  ### pop(key[, default])\n\n如果键在字典中，pop 方法删除并返回与此键关联的值。如果键不存在，则返回默认值。如果未指定默认值，则抛出\
+  \ `KeyError`。\n\n```python\n>>> employees\n{1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa',\
+  \ 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n>>> \n>>> employees.pop(1)\n{'Garimella',\
+  \ 'Phalgun'}\n>>> \n>>> employees.pop(1, {\"dummy\"})\n{'dummy'}\n>>> \n>>> employees.pop(1)\n\
+  Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError:\
+  \ 1\n```\n\n### 从字典中删除任意项\n\n使用 `popitem()` 方法从字典中删除随机项。如果字典为空，则抛出 `KeyError`。\n\
+  \n```python\n>>> employees\n{3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}\n\
+  >>> \n>>> employees.popitem()\n(3, {'Shekkappa', 'Mohan'})\n>>> \n>>> employees.popitem()\n\
+  (4, {'Ranganath', 'Thippisetty'})\n>>> \n>>> employees.popitem()\nTraceback (most\
+  \ recent call last):\n  File \"<stdin>\", line 1, in <module>\nKeyError: 'popitem():\
+  \ dictionary is empty'\n```\n\n### setdefault(key[, default])\n\n如果键在字典中，setdefault\
+  \ 方法返回与其关联的值，否则将键设置为 default 并返回 default。\n\n```python\n>>> employees\n{}\n>>> employees.setdefault(1,\
+  \ {'Shekkappa', 'Mohan'})\n{'Shekkappa', 'Mohan'}\n>>> \n>>> employees\n{1: {'Shekkappa',\
+  \ 'Mohan'}}\n>>> \n>>> employees.setdefault(1, {'Garimella', 'Phalgun'})\n{'Shekkappa',\
+  \ 'Mohan'}\n>>> \n>>> employees\n{1: {'Shekkappa', 'Mohan'}}\n```\n\n### 从其他字典更新字典\n\
+  \n`update([other])`\n\n使用 `update` 方法从 other 更新字典的键/值对，覆盖现有键。\n\n```python\n>>>\
+  \ emps1 = {1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath',\
+  \ 'Thippisetty'}}\n>>> emps2 = {1: {'Hari JJTam', \"Delhi\"}, 5: {'Sudheer', 'Ganji'}}\n\
+  >>> \n>>> emps1\n{1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath',\
+  \ 'Thippisetty'}}\n>>> \n>>> emps2\n{1: {'Hari JJTam', 'Delhi'}, 5: {'Ganji', 'Sudheer'}}\n\
+  >>> \n>>> emps1.update(emps2)\n>>> \n>>> emps1\n{1: {'Hari JJTam', 'Delhi'}, 3:\
+  \ {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}, 5: {'Ganji', 'Sudheer'}}\n\
+  >>> \n>>> emps2\n{1: {'Hari JJTam', 'Delhi'}, 5: {'Ganji', 'Sudheer'}}\n```\n\n\
+  ### 从字典中获取所有值\n\n使用 `values` 方法从字典中获取所有值。\n\n```python\n>>> emps1\n{1: {'Hari JJTam',\
+  \ 'Delhi'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}, 5: {'Ganji',\
+  \ 'Sudheer'}}\n>>> \n>>> emps1.values()\ndict_values([{'Hari JJTam', 'Delhi'}, {'Shekkappa',\
+  \ 'Mohan'}, {'Ranganath', 'Thippisetty'}, {'Ganji', 'Sudheer'}])\n```\n\n## Python\
+  \ 模块\n\n模块是一个包含定义的文件。我们可以在模块文件中定义类、模块、变量等，并在其他 Python 脚本中重用它们。\n\n例如，创建一个文件 `arithmetic.py`\
+  \ 并复制以下代码。\n\n`arithmetic.py`\n\n```python\ndef sum(a, b):\n    return a + b\n\n\
+  def subtract(a, b):\n    return a - b\n\ndef mul(a, b):\n    return a * b\n\ndef\
+  \ div(a, b):\n    return a / b\n```\n\n打开 Python 解释器，使用 `import` 关键字导入模块并调用模块中定义的函数。\n\
+  \n```python\n>>> import arithmetic\n>>> \n>>> arithmetic.sum(10, 20)\n30\n>>> arithmetic.subtract(10,\
+  \ 20)\n-10\n>>> arithmetic.mul(10, 20)\n200\n>>> arithmetic.div(10, 20)\n0.5\n```\n\
+  \n### 如何获取模块名称\n\n通过使用属性 `__name__`，你可以获取模块名称。\n\n```python\n>>> arithmetic.__name__\n\
+  'arithmetic'\n```\n\n### 将模块的函数用作本地函数\n\n```python\n>>> import arithmetic\n>>> sum\
+  \ = arithmetic.sum\n>>> sub = arithmetic.subtract\n>>> mul = arithmetic.mul\n>>>\
+  \ div = arithmetic.div\n>>> \n>>> sum(10, 20)\n30\n>>> mul(10, 20)\n200\n>>> sub(10,\
+  \ 20)\n-10\n```\n\n## Python：模块中的可执行语句\n\n模块可以包含可执行语句。这些语句仅在 import 语句中首次遇到模块名称时执行。\n\
+  \n`arithmetic.py`\n\n```python\nprint(\"Simple api to perform arithmetic operations\"\
+  )\n\ndef sum(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\
+  \ndef mul(a, b):\n    return a * b\n\ndef div(a, b):\n    return a / b\n```\n\n\
+  ```python\n>>> import arithmetic\nSimple api to perform arithmetic operations\n\
+  >>> \n>>> arithmetic.sum(10, 20)\n30\n>>> import arithmetic\n>>> \n>>> arithmetic.div(10,\
+  \ 20)\n0.5\n```\n\n观察上面的代码片段，print 语句仅在模块首次导入时执行，第二次导入时不执行。\n\n## Python：直接从模块导入函数\n\
+  \n通过使用 from、import 关键字，我们可以直接从模块导入函数。\n\n`arithmetic.py`\n\n```python\nprint(\"\
+  Simple api to perform arithmetic operations\")\n\ndef sum(a, b):\n    return a +\
+  \ b\n\ndef subtract(a, b):\n    return a - b\n\ndef mul(a, b):\n    return a * b\n\
+  \ndef div(a, b):\n    return a / b\n```\n\n```python\n>>> from arithmetic import\
+  \ sum, subtract, mul, div\n>>> \n>>> sum(10, 20)\n30\n>>> subtract(20, 30)\n-10\n\
+  ```\n\n使用语句 `from fibo import *` 导入所有函数。这会导入所有名称，除了以下划线（`_`）开头的名称。\n\n## Python：在其他模块中导入模块\n\
+  \n模块可以使用 import 语句导入其他模块。\n\n`arithmetic.py`\n\n```python\ndef sum(a, b):\n    return\
+  \ a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef mul(a, b):\n    return a\
+  \ * b\n\ndef div(a, b):\n    return a / b\n```\n\n`main.py`\n\n```python\nimport\
+  \ arithmetic\n\nprint(arithmetic.sum(10, 20))\nprint(arithmetic.subtract(10, 20))\n\
+  print(arithmetic.mul(10, 20))\nprint(arithmetic.div(10, 20))\n```\n\n```bash\n$\
+  \ python3 main.py\n30\n-10\n200\n0.5\n```\n\n### 注意\n\n不必将所有 import 语句放在模块的开头。你可以在需要时导入。\n\
+  \n## Python 命令行参数\n\nPython 脚本接受任意数量的命令行参数。此选项方便我们在运行时配置应用程序。\n\n### 如何传递命令行参数\n\
+  \n`python scriptname arg1 arg2 …argN`\n\n通过使用 `sys` 模块，我们可以访问命令行参数。\n\n`sys.argv[0]`\
+  \ 包含文件名\n\n`sys.argv[1]` 包含第一个命令行参数，`sys.argv[2]` 包含第二个命令行参数，等等。\n\n`arithmetic.py`\n\
+  \n```python\ndef sum(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return\
+  \ a - b\n\ndef mul(a, b):\n    return a * b\n\ndef div(a, b):\n    return a / b\n\
+  ```\n\n`main.py`\n\n```python\nimport arithmetic\n\nif __name__ == \"__main__\"\
+  :\n    import sys\n    a = int(sys.argv[1])\n    b = int(sys.argv[2])\n    print(sys.argv[0])\n\
+  \    print(\"a = \", a, \"b = \", b)\n    print(arithmetic.sum(a, b))\n    print(arithmetic.subtract(a,\
+  \ b))\n    print(arithmetic.mul(a, b))\n    print(arithmetic.div(a, b))\n```\n\n\
+  ```bash\n$ python3 main.py 10 11\nmain.py\na =  10 b =  11\n21\n-1\n110\n0.9090909090909091\n\
+  ```\n\n```bash\n$ python3 main.py 8 13\nmain.py\na =  8 b =  13\n21\n-5\n104\n0.6153846153846154\n\
+  ```\n\n## Python：文件处理\n\n在本帖及后续帖子中，我将解释如何打开、读取和写入文件。\n\n### 如何打开文件\n\n要从文件读取数据或向文件写入数据，我们需要一个指向文件的引用对象。使用\
+  \ `open` 方法获取文件对象。\n\n`open(file, mode='r', buffering=-1, encoding=None, errors=None,\
+  \ newline=None, closefd=True, opener=None)`\n\n`open` 函数以特定模式打开文件并返回相应的文件对象。如果无法打开文件，则抛出\
+  \ `OSError`。\n\n\n \n | 参数 | 说明 |\n| file | 要打开的文件的完整路径。 |\n| mode | 指定文件打开的模式。默认情况下文件以读取模式打开。\
+  \ |\n| buffering | `0`：关闭缓冲（仅在二进制模式下允许）`1`：行缓冲（仅在文本模式下可用）`>1`：以字节为单位指定缓冲区大小。如果未指定任何值，默认缓冲行为如下：a.\
+  \ 二进制文件以固定大小的块进行缓冲；缓冲区大小使用启发式方法确定，尝试确定底层设备的\"块大小\"，否则回退到 `io.DEFAULT_BUFFER_SIZE`。b.\
+  \ \"交互式\"文本文件使用行缓冲。 |\n| encoding | 用于对文件进行编码/解码的编码类型。此值应在文本模式下使用。如果未指定编码，则使用的编码取决于平台。\
+  \ |\n| errors | 指定如何处理编码和解码错误。不能在二进制模式下使用 |\n| newline | 控制通用换行模式的工作方式。一种解释文本流的方式，其中以下所有内容都被识别为行结束：Unix\
+  \ 行尾约定 `'\\n'`、Windows 约定 `'\\r\\n'` 以及旧的 Macintosh 约定 `'\\r'`。 |\n| closefd | 如果\
+  \ `closefd` 为 `False` 且给定的是文件描述符而非文件名，则文件关闭时底层文件描述符将保持打开状态。如果给定的是文件名，`closefd` 必须为\
+  \ `True`（默认值），否则会引发错误 |\n\n以下是打开文件时可以使用的不同模式。\n\n| 模式 | 说明 |\n| `'r'` | 打开用于读取 |\n\
+  | `'w'` | 打开用于写入，首先截断文件 |\n| `'x'` | 独占创建，如果文件已存在则失败 |\n| `'a'` | 打开用于写入，如果文件存在则追加到末尾\
+  \ |\n| `'b'` | 二进制模式 |\n| `'t'` | 文本模式（默认） |\n| `'+'` | 打开磁盘文件用于更新（读取和写入） |\n\n\
+  例如，`data.txt` 包含以下数据。\n\n```\ndata.txt\nFirst line\nSecond line\nThird line\nFourth\
+  \ line\n```\n\n```\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\")\n>>>\n>>>\
+  \ f.read()\n'First line\\nSecond line\\nThird line\\nFourth line\\n'\n```\n\n###\
+  \ Python：读取文件\n\n以下方法用于读取文件内容。\n\n- `read`\n- `readline`\n- `readlines`\n\n####\
+  \ `read(size)`\n\n读取 `size` 字节的数据并将其作为字符串或字节对象返回。如果 size 为负数（或）省略，则返回所有文件内容。如果已到达文件末尾，`f.read()`\
+  \ 将返回空字符串（`''`）。\n\n```\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\")\n>>>\
+  \ f.read()\n'First line\\nSecond line\\nThird line\\nFourth line\\n'\n```\n\n####\
+  \ `readline`\n\n从文件中读取单行。字符串末尾保留一个换行符（`\\n`）。如果文件到达末尾，则返回空字符串。\n\n```\n>>> f = open(\"\
+  /Users/hariJJTam_Delhi/data.txt\")\n>>> f.readline()\n'First line\\n'\n>>> f.readline()\n\
+  'Second line\\n'\n>>> f.readline()\n'Third line\\n'\n>>> f.readline()\n'Fourth line\\\
+  n'\n>>> f.readline()\n''\n```\n\n#### `readlines`\n\n`readlines` 方法用于将文件的所有行读取为列表。\n\
+  \n```\n>>> data = f.readlines()\n>>> data\n['First line\\n', 'Second line\\n', 'Third\
+  \ line\\n', 'Fourth line\\n']\n```\n\n#### 使用 for 循环读取文件\n\n要从文件中读取行，可以对文件对象进行循环。\n\
+  \n```\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\")\n>>> for line in f:\n...\
+  \     print(line)\n...\nFirst line\n\nSecond line\n\nThird line\n\nFourth line\n\
+  ```\n\n如您观察到的输出，每行之后都打印了换行。您可以通过向 print 方法传递 `end` 参数来消除这一点。\n\n```\n>>> f = open(\"\
+  /Users/hariJJTam_Delhi/data.txt\")\n>>> for line in f:\n...     print(line, end='')\n\
+  ...\nFirst line\nSecond line\nThird line\nFourth line\n```\n\n### Python：向文件写入数据\n\
+  \nPython 提供以下方法向文件写入数据。\n\n- `write()`：用于向文件写入固定序列的字符。返回写入文件的字符数。\n- `writelines()`：`writelines`\
+  \ 可以写入字符串列表。\n\n```\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\", 'w')\n>>>\n\
+  >>> f.write(\"Hello, How are you\\n\")\n19\n>>> f.write(\"I am fine, How is u\\\
+  n\")\n20\n>>> data = [\"first line\\n\", \"second line\\n\"]\n>>> f.writelines(data)\n\
+  >>> f.close()\n>>>\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\")\n>>> for line\
+  \ in f:\n...     print(line, end='')\n...\nHello, How are you\nI am fine, How is\
+  \ u\nfirst line\nsecond line\n```\n\n`write` 方法只接受字符串参数。如果您尝试插入非字符串数据，将会得到 `TypeError`。\n\
+  \n```\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\", 'w')\n>>> f.write(123)\n\
+  Traceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError:\
+  \ write() argument must be str, not int\n```\n\n要写入字符串以外的内容，需要先将其转换为字符串。通过使用 `str`\
+  \ 函数，您可以将非字符串数据转换为字符串。\n\n```\n>>> a = 123.45\n>>> temp = str(a)\n>>> temp\n'123.45'\n\
+  >>>\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\", 'w')\n>>> f.write(temp)\n\
+  6\n>>>\n>>> f.close()\n>>>\n>>> f = open(\"/Users/hariJJTam_Delhi/data.txt\")\n\
+  >>> f.read()\n'123.45'\n```\n\n## Python：类和对象\n\n类是创建对象的蓝图。\n\n### 语法\n\n```\nclass\
+  \ ClassName:\n    <statement-1>\n    ...\n    <statement-N>\n```\n\n`class` 关键字用于定义类。您可以从一个类实例化任意数量的对象。\n\
+  \n### 语法\n\n```\nobjName = new ClassName(arguments)\n```\n\n`test.py`\n\n```python\n\
+  class Employee:\n    \"\"\" Employee class \"\"\"\n    noOfEmployees = 0  # 类级别变量\n\
+  \n    def __init__(self, id, firstName, lastName):\n        self.id = id\n     \
+  \   self.firstName = firstName\n        self.lastName = lastName\n        Employee.noOfEmployees\
+  \ = Employee.noOfEmployees + 1\n\n    def displayEmployee(self):\n        print(self.id,\
+  \ self.firstName, self.lastName)\n\nemp1 = Employee(1, \"Hari JJTam\", \"Delhi\"\
+  )\nprint(\"Total Employees\", Employee.noOfEmployees)\nemp2 = Employee(2, \"PTR\"\
+  , \"Nayan\")\nprint(\"Total Employees\", Employee.noOfEmployees)\nemp3 = Employee(3,\
+  \ \"Sankalp\", \"Dubey\")\nprint(\"Total Employees\", Employee.noOfEmployees)\n\n\
+  emp1.displayEmployee()\nemp2.displayEmployee()\nemp3.displayEmployee()\n```\n\n\
+  ```\n$ python3 test.py\nTotal Employees 1\nTotal Employees 2\nTotal Employees 3\n\
+  1 Hari JJTam Delhi\n2 PTR Nayan\n3 Sankalp Dubey\n```\n\n### `__init__(arguments)`\n\
+  \n`__init__` 是一个特殊的函数，称为构造函数，用于初始化对象。在 `Employee` 类中，`__init__` 方法用于在创建时将 `id`、`firstName`、`lastName`\
+  \ 初始化到对象。\n\n### `noOfEmployees=0`\n\n`noOfEmployees` 是一个类变量，由所有对象共享。类变量使用类名访问，如\
+  \ `ClassName.variableName`，`Employee.noOfEmployees` 用于访问类变量 `noOfEmployees`。\n\n\
+  ### 实例变量\n\n实例变量具有对象独有的值。通常这些在 `__init__` 方法中定义。`Employee` 类有 3 个实例变量 `id`、`firstName`、`lastName`。\n\
+  \n类中任何方法的第一个参数必须是 `self`。即使函数不使用它，此参数也是必需的。`self` 用于引用当前对象。\n\n## Python：类：内置类属性\n\
+  \n以下是内置类属性。\n\n| 属性 | 说明 |\n| `__dict__` | 包含类命名空间的字典。 |\n| `__doc__` | 指向类的文档字符串\
+  \ |\n| `__name__` | 类名 |\n| `__module__` | 定义该类的模块名 |\n| `__bases__` | 表示该类基类的元组\
+  \ |\n\n\n \n ```python\nclass Employee:\n    \"\"\" Blue print for all employees\
+  \ \"\"\"\n    noOfEmployees = 0   # Class level variable\n\n    def __init__(self,\
+  \ id, firstName, lastName):\n        self.id = id\n        self.firstName = firstName\n\
+  \        self.lastName = lastName\n        Employee.noOfEmployees = Employee.noOfEmployees\
+  \ + 1\n\n    def displayEmployee(self):\n        print(self.id, self.firstName,\
+  \ self.lastName)\n\nprint(\"Employee.__doc__: \", Employee.__doc__)\nprint(\"Employee.__name__:\
+  \ \", Employee.__name__)\nprint(\"Employee.__module__: \", Employee.__module__)\n\
+  print(\"Employee.__bases__: \", Employee.__bases__)\nprint(\"Employee.__dict__:\
+  \ \", Employee.__dict__)\n```\n\n```\n$ python3 test.py\nEmployee.__doc__:  Blue\
+  \ print for all employees\nEmployee.__name__: Employee\nEmployee.__module__: __main__\n\
+  Employee.__bases__: (<class 'object'>,)\nEmployee.__dict__: {'__module__': '__main__',\
+  \ '__dict__': <attribute '__dict__' of 'Employee' objects>, 'displayEmployee': <function\
+  \ Employee.displayEmployee at 0x1006dd7b8>, '__init__': <function Employee.__init__\
+  \ at 0x1006dd730>, 'noOfEmployees': 0, '__weakref__': <attribute '__weakref__' of\
+  \ 'Employee' objects>, '__doc__': ' Blue print for all employees '}\n```\n\n## `__init__`\
+  \ 方法\n\n`__init__` 是一个特殊函数，每当你创建对象时会自动调用（它与 C++、Java 中的构造函数相同）。\n\n```python\nclass\
+  \ Employee:\n    \"\"\" Blue print for all employees \"\"\"\n    noOfEmployees =\
+  \ 0   # Class level variable\n\n    def __init__(self, id, firstName, lastName):\n\
+  \        print(\"Inside Employee constructor\")\n        self.id = id\n        self.firstName\
+  \ = firstName\n        self.lastName = lastName\n        Employee.noOfEmployees\
+  \ = Employee.noOfEmployees + 1\n\n    def displayEmployee(self):\n        print(self.id,\
+  \ self.firstName, self.lastName)\n\nemp1 = Employee(1, \"Hari JJTam \", \"Delhi\
+  \ \")\nprint(\"Total Employees \", Employee.noOfEmployees)\nemp1.displayEmployee()\n\
+  ```\n\n```\n$ python Employee.py\nInside Employee constructor\n('Total Employees',\
+  \ 1)\n(1, 'Hari JJTam', 'Delhi')\n```\n\n观察输出，消息 `Inside Employee constructor` 首先被打印出来，即使程序没有显式调用\
+  \ `__init__` 方法。这是因为，每当你创建对象时，Python 会在内部调用其 `__init__` 方法。\n\n## 重载 `__init__`\
+  \ 方法\n\n如果你熟悉 Java，你可以像下面这样重载构造函数。\n\n```java\npublic class Employee {\n    private\
+  \ int id;\n    private String firstName, lastName;\n\n    Employee() {\n       \
+  \ id = -1;\n        this.firstName = \"Nil\";\n        this.lastName = \"Nil\";\n\
+  \    }\n\n    Employee(int id, String firstName) {\n        this(id, firstName,\
+  \ firstName);\n    }\n\n    Employee(int id, String firstName, String lastName)\
+  \ {\n        this.id = id;\n        this.firstName = firstName;\n        this.lastName\
+  \ = lastName;\n    }\n    ........\n}\n```\n\n在 Python 中，你必须编写一个构造函数来处理所有情况，使用默认参数、类型检查或能力测试。\n\
+  \n例如，使用 `None` 重载 `__init__`\n\n\n \n ```\nclass Employee :\n    \"\"\" Blue print\
+  \ for all employees \"\"\"\n    noOfEmployees= 0   # Class level variable\n    def\
+  \ __init__ (self , id = None , firstName= None , lastName= None ):\n        print\
+  \ (\"Inside Employee constructor\" )\n        if (id is None and firstName is None\
+  \ and lastName is None ):\n            self . id = - 1\n            self . firstName\
+  \ = firstName\n            self . lastName = lastName\n        else :\n        \
+  \    if (firstName is None ):\n                self . firstName = self . lastName\
+  \ = \"Nil\"\n            elif (lastName is None ):\n                self . firstName\
+  \ = firstName\n                self . lastName = firstName\n            else :\n\
+  \                self . firstName = firstName\n                self . lastName =\
+  \ lastName\n            self . id = id\n    def displayEmployee (self ):\n     \
+  \   print (self . id, self . firstName, self . lastName)\n\nemp1 = Employee(1 ,\
+  \ \"Hari JJTam\" , \"Delhi\" )\nemp2 = Employee(2 )\nemp3 = Employee(3 , \"PTR\"\
+  \ )\nemp4 = Employee()\nemp1. displayEmployee()\nemp2. displayEmployee()\nemp3.\
+  \ displayEmployee()\nemp4. displayEmployee()\n```\n\n```\n$ python Employee.py\n\
+  Inside Employee constructor\nInside Employee constructor\nInside Employee constructor\n\
+  Inside Employee constructor\n(1, 'Hari JJTam', 'Delhi')\n(2, 'Nil', 'Nil')\n(3,\
+  \ 'PTR', 'PTR')\n(-1, None, None)\n```\n\n## 使用默认参数重载 `__init__`\n\n```\nclass Employee\
+  \ :\n    \"\"\" Blue print for all employees \"\"\"\n    noOfEmployees= 0   # Class\
+  \ level variable\n    def __init__ (self , id =- 1 , firstName= \"Nil\" , lastName=\
+  \ \"Nil\" ):\n        self . id = - 1\n        self . firstName = firstName\n  \
+  \      self . lastName = lastName\n    def displayEmployee (self ):\n        print\
+  \ (self . id, self . firstName, self . lastName)\n\nemp1 = Employee(id = 1 , firstName=\
+  \ \"Hari JJTam\" , lastName= \"Delhi\" )\nemp2 = Employee(id = 2 )\nemp3 = Employee(id\
+  \ = 3 , firstName= \"PTR\" )\nemp4 = Employee()\nemp1. displayEmployee()\nemp2.\
+  \ displayEmployee()\nemp3. displayEmployee()\nemp4. displayEmployee()\n```\n\n```\n\
+  $ python Employee.py\n(-1, 'Hari JJTam', 'Delhi')\n(-1, 'Nil', 'Nil')\n(-1, 'PTR',\
+  \ 'Nil')\n(-1, 'Nil', 'Nil')\n```\n\n## Python：类变量与实例变量\n\n类变量与类相关联，对该类的所有实例（对象）都可用；而实例变量则是对象独有的，用于唯一标识该对象。\n\
+  \n```\nclass Employee :\n    \"\"\" Blue print for all employees \"\"\"\n    # Class\
+  \ level variables\n    noOfEmployees= 0\n    organization= \"abcde corporation\"\
+  \n    def __init__ (self , id =- 1 , firstName= \"Nil\" , lastName= \"Nil\" ):\n\
+  \        self . id = - 1\n        self . firstName = firstName\n        self . lastName\
+  \ = lastName\n        Employee. noOfEmployees+= 1\n    def displayEmployee (self\
+  \ ):\n        print (self . id, self . firstName, self . lastName)\n\nemp1 = Employee(id\
+  \ = 1 , firstName= \"Hari JJTam\" , lastName= \"Delhi\" )\nemp1. displayEmployee()\n\
+  print ( \"Total Employees : \" , Employe e . noOfEmployees)\nprint ( \"Organization\
+  \ : \" , Employe e . organization)\nemp2 = Employee(id = 3 , firstName= \"PTR\"\
+  \ )\nemp2. displayEmployee()\nprint ( \"Total Employees : \" , Employe e . noOfEmployees)\n\
+  print ( \"Organization : \" , Employe e . organization)\n```\n\n```\n$ python3 Employee.py\n\
+  -1 Hari JJTam Delhi\nTotal Employees :  1\nOrganization :  abcde corporation\n-1\
+  \ PTR Nil\nTotal Employees :  2\nOrganization :  abcde corporation\n```\n\n如你所见，在\
+  \ `Employee.py` 中，`noOfEmployees` 和 `organization` 是类变量，对所有实例都可用。类变量通过 `类名` 后跟点号再跟变量名的方式访问。\n\
+  \n`Employee.noOfEmployees`：用于访问类变量 `noOfEmployees`。\n\n`Employee.organization`：用于访问类变量\
+  \ `organization`。\n\n## Python：继承\n\n继承是**可重用性**的概念。一个类的对象可以通过继承获得另一个类对象的属性和方法。\n\
+  \n### 语法\n\n```\nclass DerivedClassName (BaseClassName1, BaseClassName2 ... BaseClassNameN):\n\
+  \    < statement- 1 >\n    ...\n    < statement- N>\n```\n\n```\nclass Parent :\n\
+  \    def printLastName (self ):\n        print (\"Delhi\" )\n    def printPermAddress\
+  \ (self ):\n        print (\"State : Andhra Pradesh\" )\n        print (\"Country\
+  \ : India\" )\n\nclass Child (Parent):\n    def printName (self ):\n        print\
+  \ (\"Hari JJTam Delhi\" )\n\nchild1 = Child()\nchild1. printName()\nchild1. printLastName()\n\
+  child1. printPermAddress()\n```\n\n```\n$ python3 inheritance.py\nHari JJTam Delhi\n\
+  Delhi\nState : Andhra Pradesh\nCountry : India\n```\n\n观察上面的程序，定义了两个类：父类和子类。`Parent`\
+  \ 类定义了两个方法 `printLastName` 和 `printPermAddress`。`Child` 类定义了一个方法 `printName`。`Child`\
+  \ 类从父类继承了 `printLastName` 和 `printPermAddress` 方法。\n\n### 重写父类的方法\n\n你可以在子类中重写父类的属性和方法。例如，下面的应用程序重写了\
+  \ `Parent` 类的 `printPermAddress` 方法。\n\n```\nclass Parent :\n    def printLastName\
+  \ (self ):\n        print (\"Delhi\" )\n    def printPermAddress (self ):\n    \
+  \    print (\"State : Andhra Pradesh\" )\n        print (\"Country : India\" )\n\
+  \nclass Child (Parent):\n    def printName (self ):\n        print (\"Hari JJTam\"\
+  \ )\n    def printPermAddress (self ):\n        print (\"City : Bangalore\" )\n\
+  \        print (\"State : Karnataka\" )\n        print (\"Country : India\" )\n\n\
+  child1 = Child()\nchild1. printName()\nchild1. printLastName()\nchild1. printPermAddress()\n\
+  ```\n\n```\n$ python3 inheritance.py\nHari JJTam\nDelhi\nCity : Bangalore\nState\
+  \ : Karnataka\nCountry : India\n```\n\n## Python：多重继承\n\n一个类可以从多个类继承属性和方法。\n\n```\n\
+  class A :\n    def printA (self ):\n        print (\"I am in A\" )\n\nclass B :\n\
+  \    def printB (self ):\n        print (\"I am in B\" )\n\nclass C :\n    def printC\
+  \ (self ):\n        print (\"I am in C\" )\n\nclass D (A, B, C):\n    def printD\
+  \ (self ):\n        print (\"I am in D\" )\n\nobj= D()\nobj. printA()\nobj. printB()\n\
+  obj. printC()\nobj. printD()\n```\n\n```\n$ python3 MultipleInheritance.py\nI am\
+  \ in A\nI am in B\nI am in C\nI am in D\n```\n\n## Python：异常\n\n异常是打断正常执行流程的事件。即使程序中的语句在语法上是正确的，它们也可能导致错误。\n\
+  \n```\n>>> 10 / 0\nTraceback (most recent call last):\n  File \"<stdin>\" , line\
+  \ 1 , in <module>\nZeroDivisionErro r : division by zero\n>>>\n>>> tempLis t = []\n\
+  >>> tempList [ 2 0 ]\nTraceback (most recent call last):\n  File \"<stdin>\" , line\
+  \ 1 , in <module>\nIndexErro r : list index out of range\n```\n\n观察上面的代码片段，`10/0`\
+  \ 导致 `ZeroDivisionError`。当程序尝试访问 `tempList` 的第 20 个元素时，导致 `IndexError`。\n\n## Python：异常处理\n\
+  \nPython 提供了 `try`、`except` 关键字来处理异常。\n\n```\nwhile True :\n    try :\n        x\
+  \ = int (input (\"Enter input \" ))\n        print (x)\n        break ;\n    except\
+  \ ValueError :\n        print (\"Please enter valid number\" )\n```\n\n```\n$ python3\
+  \ test.py\nEnter input an\nPlease enter valid number\nEnter input ana\nPlease enter\
+  \ valid number\nEnter input ptr\nPlease enter valid number\nEnter input 10\n10\n\
+  ```\n\n### try 和 except 块如何工作？\n\n首先执行 try 块中的语句。如果没有异常发生，则跳过 except 子句，try 语句的执行结束。如果在\
+  \ try 块的执行过程中发生任何异常，则跳过 try 子句的其余部分。\n\ntry 块后面可以跟多个 except 子句，如果 try 中抛出的异常与任何\
+  \ except 子句后的异常匹配，则执行相应的 except 子句。\n\n如果发生的异常与 except 子句中命名的异常不匹配，则将其传递给外部的 try\
+  \ 语句；如果找不到处理程序，则为未处理的异常，通过抛出异常消息停止执行。\n\ntry 块后面可以跟多个 except 子句\n\n```\nwhile True\
+  \ :\n    try :\n        x = int (input (\"Enter divisor \" ))\n        y = int (input\
+  \ (\"Enter dividend \" ))\n        print (x/ y)\n        break ;\n    except ValueError\
+  \ :\n        print (\"Please enter valid number\" )\n    except ZeroDivisionError\
+  \ :\n        print (\"y should be non zero\" )\n```\n\n```\n$ python3 test.py\n\
+  Enter divisor 2\nEnter dividend 0\ny should be non zero\nEnter divisor 4\nEnter\
+  \ dividend 0\ny should be non zero\nEnter divisor 4\nEnter dividend 2\n2.0\n```\n\
+  \n### 在单个 except 子句中处理多个异常\n\nexcept 子句可以捕获多个异常。例如 `except (ValueError, ZeroDivisionError)`\
+  \ 可以同时处理 `ValueError` 和 `ZeroDivisionError`。\n\n```\nwhile True :\n    try :\n \
+  \       x = int (input (\"Enter divisor \" ))\n        y = int (input (\"Enter dividend\
+  \ \" ))\n        print (x/ y)\n        break ;\n    except (ValueError , ZeroDivisionError\
+  \ ):\n        print (\"Please enter valid number (or) y should be greater than 0\"\
+  \ )\n```\n\n```\n$ python3 test.py\nEnter divisor 2\nEnter dividend 0\nPlease enter\
+  \ valid number (or) y should be greater than 0\nEnter divisor aa\nPlease enter valid\
+  \ number (or) y should be greater than 0\nEnter divisor 2\nEnter dividend 4\n0.5\n\
+  ```\n\n最后一个 except 子句可以省略异常名称。它用作全局异常处理程序。\n\n```\nwhile True :\n    try :\n   \
+  \     tempList= []\n        print (tempList[10 ])\n        break\n    except ValueError\
+  \ :\n        print (\"Please enter valid number\" )\n    except ZeroDivisionError\
+  \ :\n        print (\"y should be non zero\" )\n    except Exception as inst:\n\
+  \        print (\"Global handler\" , inst)\n        break\n```\n\n```\n$ python3\
+  \ test.py\nGlobal handler list index out of range\n```\n\n### try…except…else 子句\n\
+  \n`try…except` 语句可以有可选的 else 子句，它跟在 except 子句之后。如果 try 块没有抛出任何异常，else 子句将会被执行。\n\
+  \n```\nwhile True :\n    try :\n        x = int (input (\"Enter divisor \" ))\n\
+  \        y = int (input (\"Enter dividend \" ))\n        print (x/ y)\n    except\
+  \ ValueError :\n        print (\"Please enter valid number\" )\n    except ZeroDivisionError\
+  \ :\n        print (\"y should be non zero\" )\n    else :\n        print (\"Program\
+  \ executed successfully\" )\n        break\n```\n\n```\n$ python3 test.py\nEnter\
+  \ divisor 4\nEnter dividend 2\n2.0\nProgram executed successfully\n```\n\n### 异常参数\n\
+  \n每当发生异常时，它会与一个称为异常参数的变量相关联。\n\n```\nwhile True :\n    try :\n        x = int (input\
+  \ (\"Enter divisor \" ))\n        y = int (input (\"Enter dividend \" ))\n     \
+  \   print (x/ y)\n    except ValueError as inst:\n        print (inst)\n    except\
+  \ ZeroDivisionError as inst:\n        print (inst)\n    else :\n        print (\"\
+  Program executed successfully\" )\n        break\n```\n\n```\n$ python3 test.py\n\
+  Enter divisor qwerty\ninvalid literal for int() with base 10: 'qwerty'\nEnter divisor\
+  \ 4\nEnter dividend 0\ndivision by zero\nEnter divisor 2\nEnter dividend 4\n0.5\n\
+  Program executed successfully\n```\n\nexcept 子句可以在异常名称后指定一个变量。该变量绑定到一个异常实例，参数存储在\
+  \ `instance.args` 中。\n\n```\nwhile True :\n    try :\n        x = int (input (\"\
+  Enter divisor \" ))\n        y = int (input (\"Enter dividend \" ))\n        if\
+  \ y== 0 :\n            raise Exception (x, y)\n        print (\"x/y = \" ,x/ y)\n\
+  \        break\n    except Exception as inst:\n        arg1, arg2 = inst. args\n\
+  \        print (\"arg1=\" , arg1)\n        print (\"arg2=\" , arg2)\n```\n\n```\n\
+  $ python3 test.py\nEnter divisor 2\nEnter dividend 0\narg1= 2\narg2= 0\nEnter divisor\
+  \ 2\nEnter dividend 4\nx/y =  0.5\n```\n\n如果异常有关联的参数，这些参数将作为异常消息的最后一部分打印出来。\n\n\
+  ```\nwhile True :\n    try :\n        x = int (input (\"Enter divisor \" ))\n  \
+  \      y = int (input (\"Enter dividend \" ))\n        if y== 0 :\n            raise\
+  \ Exception (x, y)\n        print (\"x/y = \" ,x/ y)\n        break\n    except\
+  \ Exception as inst:\n        print (inst)\n```\n\n```\n$ python3 test.py\nEnter\
+  \ divisor 2\nEnter dividend 0\n(2, 0)\nEnter divisor 2\nEnter dividend 4\nx/y =\
+  \  0.5\n```\n\n## Python：抛出异常\n\n`raise` 语句用于抛出异常。\n\n### 语法\n\n```\nraise_stmt\
+  \ ::=  \"raise\" [expression [\"from\" expression]]\n```\n\n如果没有表达式存在，raise 会重新抛出当前作用域中活动的最后一个异常。如果当前作用域中没有活动的异常，则会抛出\
+  \ `RuntimeError` 异常，表明这是一个错误。\n\n```\nwhile True :\n    try :\n        dividend\
+  \ = int (input (\"Enter divisor \" ))\n        divisor = int (input (\"Enter dividend\
+  \ \" ))\n        if divisor== 0 :\n            raise Exception (\"divisor shouldn't\
+  \ be zero\" )\n        print (dividend/ divisor)\n        break\n    except Exception\
+  \ as inst:\n        print (inst)\n```\n\n```\n$ python3 test.py\nEnter divisor 2\n\
+  Enter dividend 0\ndivisor shouldn't be zero\nEnter divisor 23\nEnter dividend 43\n\
+  0.5348837209302325\n```\n\n`raise Exception(\"divisor shouldn't be zero\")` 当 divisor\
+  \ 为 0 时，`raise` 语句抛出异常。\n\n## Python：用户自定义异常\n\n你可以通过扩展 `Exception` 类来创建自定义异常。\n\
+  \n```\nclass PasswordException (Exception ):\n    def __init__ (self , value):\n\
+  \        self . value = value\n    def __str__ (self ):\n        return repr (self\
+  \ . value)\n\npasswor d = input ( \"Enter password \\n \" )\nif (len (password)\
+  \ < 8 ):\n    raise PasswordException(\"Minimum password lenght should be 8 characters\"\
+  \ )\n```\n\n```\n$ python3 test.py\nEnter password\nabcde\nTraceback (most recent\
+  \ call last):\n  File \"test.py\" , line 11 , in <module>\n    raise PasswordException(\"\
+  Minimum password lenght should be 8 characters\" )\n__main__.PasswordExceptio n\
+  \ : 'Minimum password lenght should be 8 characters'\n```\n\n在这个例子中，默认的 `__init__()`\
+  \ 被重写了。新行为只是创建了 value 属性。这替代了创建 args 属性的默认行为。\n\n## Python global 关键字\n\n`global`\
+  \ 关键字用于在局部上下文中创建/修改全局变量（你也可以声明函数、类等）。\n\n```\ndef function1 ():\n    global data\n\
+  \    data= \"Hello World\"\n\ndef function2 ():\n    print (data)\n\nfunction1()\n\
+  function2()\n```\n\n```\n$ python3 test.py\nHello World\n```\n\n观察 `test.py`，即使\
+  \ `data` 是在 `function1` 中声明的，它也能被 `function2` 访问。这是因为 `data` 是在全局作用域中声明的。\n\n##\
+  \ Python：获取模块名称\n\nPython 中的每个模块都有一个预定义属性 `__name__`。如果模块是由用户独立运行的，则模块名称为 `__main__`，否则它会返回完整的模块名称。\n\
+  \n```\ndef sum (a,b):\n    return a+ b\n\nprint ( \"Module name : \" ,__name__)\n\
+  ```\n\n运行上面的程序，你会得到以下输出。\n\n```\nModule name :  __main__\n```\n\n```\nimport arithmetic\n\
+  \nprint ( \"Module name : \" ,arithmeti c . __name__)\n```\n\n运行 `test.py`，你会得到以下输出。\n\
+  \n```\nModule name :  arithmetic\nModule name :  arithmetic\n```\n\n观察输出，模块名称打印了两次。模块可以包含可执行语句。这些语句只在模块名称首次在\
+  \ import 语句中遇到时执行。因此 `arithmetic.py` 中的可执行语句也会被执行。\n\n像下面这样更新 `arithmetic.py`，然后重新运行\
+  \ `test.py`。\n\n```\ndef sum (a,b):\n    return a+ b\n\nif (__name__== \"__main__\"\
+  \ ):\n    print (\"This program is run by itslef\" )\nelse :\n    print (\"This\
+  \ module called by other module\" )\n```\n\n你会得到以下输出。\n\n```\nThis module called\
+  \ by other module\nModule name :  arithmetic\n```\n\n## Python：获取变量类型\n\n你可以使用 `type()`\
+  \ 函数或 `__class__` 属性来获取变量的类型。\n\n```\n>>> dat a = [ 1 , 2 , 3 , 4 ]\n>>> type(data)\n\
+  <class 'list'>\n>>> dat a . __class__\n<class 'list'>\n>>>\n>>> dat a = { 1 : \"\
+  hari \" , 2 : \"JJTam \" }\n>>> type(data)\n<class 'dict'>\n>>> dat a . __class__\n\
+  <class 'dict'>\n```\n\n### 使用 if 语句检查类型\n\n```\ndat a = { 1 : \"hari \" , 2 : \"\
+  JJTam \" }\n\n#Approach 1\nif (data. __class__. __name__ == 'dict' ):\n    print\
+  \ (\"data is of type dictionary\" )\nelse :\n    print (\"data is not dictionary\
+  \ type\" )\n\n#Approach 2\nif (type (data). __name__ == 'dict' ):\n    print (\"\
+  data is of type dictionary\" )\nelse :\n    print (\"data is not dictionary type\"\
+  \ )\n\n#Approach 3 indirectly\nif type (data)== type (dict ()):\n    print (\"data\
+  \ is of type dictionary\" )\nelse :\n    print (\"data is not dictionary type\"\
+  \ )\n```\n\n运行上面的程序，你会得到以下输出。\n\n```\ndata is of type dictionary\ndata is of type\
+  \ dictionary\ndata is of type dictionary\n```\n\n### 检查对象是否是类的实例\n\n`isinstance(object,\
+  \ classinfo)` 方法用于检查对象是否是给定类的实例。如果 object 参数是 classinfo 参数的实例，或是其子类的实例，则返回 true，否则返回\
+  \ false。\n\n```\ndat a = { 1 : \"hari \" , 2 : \"JJTam \" }\n\nclass Employee :\n\
+  \    def __init__ (self , id , firstName, lastName):\n        self . id = id\n \
+  \       self . firstName = firstName\n        self . lastName = lastName\n\nem p\
+  \ = Employee ( 1 , \"Hari \" , \"JJTam \" )\nprint(isinstance(emp, Employee))\n\
+  print(isinstance(emp, dict))\nprint(isinstance(data, dict))\n```\n\n运行上面的程序，你会得到以下输出。\n\
+  \n```\nTrue\nFalse\nTrue\n```\n\n## Python：生成随机数\n\nPython 提供了 random 模块来生成随机数，通过使用\
+  \ `random.seed` 方法可以初始化随机数生成器。\n\n`random.seed(a=None, version=2)`\n\n用于初始化随机数生成器。如果不为\
+  \ `a` 指定值，则默认使用系统时间。`a` 可以是 int 或 string。\n\n如果 `version=1`，则使用 `a` 的哈希值进行初始化；如果\
+  \ `version=2`，则 str、bytes 或 bytearray 对象会被转换为 int，并使用其所有位。\n\n以下方法用于在 Python 中生成随机数和随机打乱列表。\n\
+  \n\n \n | 方法 | 说明 |\n| --- | --- |\n| `random.getrandbits(k)` | 返回一个具有 k 个随机比特位的整数。\
+  \ |\n| `random.randrange(a, b)` | 返回区间 [a, b) 内的一个整数。 |\n| `random.randint(a, b)`\
+  \ | 返回一个随机整数 N，满足 a <= N <= b。它等价于 `random.randrange(a, b+1)` |\n| `random.choice(seq)`\
+  \ | 从非空序列 seq 中返回一个随机元素。如果 seq 为空，则引发 IndexError。 |\n| `random.shuffle(list)` |\
+  \ 就地打乱一个列表，即对其进行随机排列 |\n| `random.random()` | 返回区间 [0.0, 1.0) 内的下一个随机浮点数。 |\n| `random.uniform(a,\
+  \ b)` | 返回一个随机浮点数 N，当 a <= b 时满足 a <= N <= b，当 b < a 时满足 b <= N <= a。 |\n| `random.triangular(low,\
+  \ high, mode)` | 返回一个随机浮点数 N，满足 low <= N <= high，且在该区间内具有指定的众数。low 和 high 的默认值分别为\
+  \ 0 和 1。mode 参数默认为区间的中点，从而得到对称分布。 |\n\n`os.urandom(n)`: 返回一个长度为 n 的随机字节串，适用于加密用途。\n\
+  \n```\n>>> import random\n>>> \n>>> random.getrandbits(20)\n700469\n>>> random.getrandbits(10)\n\
+  216\n>>> \n>>> random.randrange(-10000, 234567)\n160279\n>>> random.randrange(-10000,\
+  \ 234567)\n163448\n>>> random.randrange(-10000, 234567)\n141854\n>>> random.randrange(-10000,\
+  \ 234567)\n113743\n>>> \n>>> \n>>> random.choice(list(range(10, 1000)))\n448\n>>>\
+  \ random.choice(list(range(10, 1000)))\n459\n>>> \n>>> random.choice([2, 4, 6, 8,\
+  \ 10, 12, 14, 16, 18, 20])\n12\n>>> random.choice([2, 4, 6, 8, 10, 12, 14, 16, 18,\
+  \ 20])\n10\n>>> random.choice([2, 4, 6, 8, 10, 12, 14, 16, 18, 20])\n20\n>>> random.choice([2,\
+  \ 4, 6, 8, 10, 12, 14, 16, 18, 20])\n8\n>>> \n>>> list = [2, 4, 6, 8, 10]\n>>> random.shuffle(list)\n\
+  >>> list\n[8, 4, 2, 6, 10]\n>>> \n>>> random.uniform(0, 10)\n4.136505113937443\n\
+  >>> random.uniform(0, 10)\n7.627400639276029\n>>> random.uniform(0, 10)\n8.812919559259498\n\
+  ```\n"
