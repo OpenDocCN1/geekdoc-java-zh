@@ -1,0 +1,2286 @@
+groups:
+- md: '## JAVASCRIPT FRAMEWORKS
+
+
+    ![](img/773d42da20e26ca59cca162d31fc1cf8_0_0.png)
+
+
+    MICHAEL REDCAR
+
+
+    The JavaScript community underwent a few really big changes this past year. ECMAScript
+    6 was finally standardized and printed, and many well-known compilers and web
+    browsers are working hard to accommodate to all of the new regulations and changes.
+    To completely comprehend this type of massive update (the previous ES upgrade
+    was in 2009), it is required to familiarize yourself within a good step-by-step
+    guide which discusses each of the facets of the new benchmark, and the very best
+    such guide we can find comes from Lars Kappert who shared his own ES6 record of
+    changes article in Smashing Mag.
+
+
+    In relation to Implemented ES6 attributes into browsers themselves, Mozilla Firefox
+    (85 percent) and Google Chrome (71 percent) are now leading the package for everybody
+    else to follow. However, JavaScript is a great deal more than only a normal, some
+    genuinely great programs and platforms are constructed and released for people
+    this season, among the newest being OS.js -- a completely functional cloud platform
+    which incorporates Desktop Computer features inside the browser.
+
+
+    JavaScript Is growing quickly, it is getting more native, but most significantly
+    -- it is getting more stable. The amount of internet development frameworks which
+    have come in the JavaScript world at the past years has really boomed, and lots
+    of the frameworks have already established enormous communities about them, Angular,
+    Meteor and React to list a couple. In the present article we''ll take a closer
+    look at the now hottest JavaScript frameworks and we firmly feel that these frameworks
+    will probably be seeing a great deal of expansion, participation, and vulnerability
+    in 2016. Please discuss with us your personal experiences with all the frameworks
+    that you''ve used from our listing since we''d really like to hear more details
+    regarding the usage cases for every individual frame.
+
+
+    ## Reactive JavaScript Frameworks
+
+
+    Reactive Web development is all about responsiveness, resilience, scalability
+    and precision. We would like to construct applications and applications that''s
+    responsive to the real time requirements that are being levied on it, we also
+    need our systems to be resilient from summit performance, or the type of requirements
+    that come from unknown sources, and we all need our endeavors to be scalable so
+    that if the time comes, we can easily upgrade or downgrade our applications for
+    optimum performance. These JavaScript frameworks are constructed with responsive
+    internet development in mind, and we look forward to hearing about more such frameworks
+    that we perhaps left from the specific list.
+
+
+    ## MobX
+
+
+    With MobX You''ll have the ability to start celebrating your information structure,
+    while also being able of creating your functions responsive, meaning that they
+    will reassess themselves if information is changed in real time. Take any part
+    of information out of your arrangement and turn it into another row, then flip
+    your functions to auto-updating formulas. MobX''s assignment is to aid programmers
+    easy and productive perspectives which are always completely left, without having
+    the additional fat that other full-renderer frameworks may bring to the table.
+
+
+    ## Omniscient.js
+
+
+    Omniscient Provides programmers with tools and features to construct operational
+    UIs based on transparent components; allowing a more static version of development.
+    Very much like static web development we''d perform in HTML, however, Omniscient
+    empowers the qualities of programming. You''re still able to control your Perspectives
+    to become eloquent, only minus needing to operate with items like templating engines,
+    or domain particular languages. Omniscient promotes small, composable parts, and
+    shared performance via mixins.
+
+
+    ## Ractive.js
+
+
+    Ractive has Been in existence for some time, many of those top worlds sites have
+    adopted it has native performance for constructing template oriented User Interface
+    elements that support JavaScript characteristics and flexibility. Creating interactive
+    program like adventures inside the browser isn''t a simple endeavor, it never
+    had been, but Ractive is among these rare frameworks which help to bridge this
+    difference and helps to construct to get a simpler experience. Eugene Mirotin
+    from Toptal goes deeper into the capabilities of Ractive and investigates the
+    process of constructing an easy, responsive and interactive program.
+
+
+    ## Mercury
+
+
+    Mercury is Lightweight, easy and powerful modular front framework which gives
+    numerous pre-built net modules and elements which you could begin implementing
+    on your programs straight away. The demonstration page showcases matters like
+    reactive reversal of functions, such as taking the instance of a very simple Canvas
+    picture that has the established colour of ''blue'', inside precisely the identical
+    browser window that you can in real time change the colour to ''red'' as the answer
+    is totally reactive and responsive, giving you more space and room to develop
+    really multi-dimensional web programs.
+
+
+    ## WebRx
+
+
+    WebRx is the Browser-established MVVM Framework for ReactiveX powered Single Page
+    Programs. WebRx, a Model--perspective--viewmodel (MVVM) frame that is built on
+    top of RX.js for blending together functional and responsive programming patterns
+    which encourage visible and observable data binding, customer unwanted routing,
+    and templating attributes. When it is an easy and responsive Hello World you are
+    seeking to construct, or a totally operational one-page ToDo program, WebRx was
+    constructed to help hasten the practice of contemporary internet app development,
+    also delivers on its promise without hesitation. Additionally, it is quite lightweight,
+    coming in at just 30kb once minified and optimized.
+
+
+    ## Deku
+
+
+    Deku is a Manifestation of a much more lightweight solution to React from the
+    group at Segment. Deku''s most important job is to help leave UIs using pure JavaScript
+    functions along with also the virtual Document Object Model (DOM). With Deku you
+    do not have to rely on courses, and rather you are able to use direct purposes
+    to move jobs to third party software such as Redux, also because Segment wishes
+    to keep things simple, Deku will largely work just within new and modern browsers.
+    Works great with the current React advancement community.
+
+
+    ## Riot.js
+
+
+    Riot.js is a React such as user interface micro library. React has Definitely
+    been a massive influencer for the majority of the responsive JavaScript frameworks
+    we see in the present development Earth, and Riot.js is no exclusion. In their
+    own words, Riot.js is React-based UI library which concentrates on micro purposes.
+    Streamdata has researched this approach in enormous detail in their own blog.
+    (Once you are done with that report, scroll to the ground to find out about more
+    Riot.js articles they have printed!) Riot.js has been preserved by the programmers
+    at Muut -- among the most obvious discussion platforms we''ve seen so far, which
+    can be super-reactive and interactive, and so expect the identical type of functionality
+    on your own programs as soon as you start using Riot''s performance on your endeavors.
+
+
+    ## Mithril
+
+
+    Mithril Stands out with its elastic library dimensions (7kb) in addition to a
+    prescient documentation that is constantly updated with fresh contexts and approaches
+    since the library itself excels in development procedure. The benchmarks compared
+    to another famous JavaScript frameworks are shocking, and will leave you curious
+    to check it out.
+
+
+    ## Vue.js
+
+
+    Vue.js is Very small when it comes to describing itself as a frame, it prefers
+    to use the term ''library'' which then blended with different tools could be turned
+    into a completely operational frame. Vue is for creating and developing contemporary
+    and slick internet interfaces. Up until quite recently, it was still a beta job,
+    however, October 2015 indicated the published of the V1 so that Vue is prepared
+    for real-world growth, and so many are already sharing their own opinions and
+    experiences with the frame. If you like to make code which is logical from the
+    instant that you take a look at it, then it is definitely worth mentioning Vue
+    an attempt.'
+  mdcn: '
+
+    ## JavaScript 框架
+
+
+    ![](img/773d42da20e26ca59cca162d31fc1cf8_0_0.png)
+
+
+    MICHAEL REDCAR
+
+
+    过去一年，JavaScript 社区经历了一些重大的变革。ECMAScript 6 终于正式标准化并付印，众多知名编译器和网页浏览器都在努力适应所有新的规范和变更。要完全理解这种大规模的更新（上一次
+    ES 升级是在 2009 年），你需要熟悉一份优秀的分步指南，该指南详细讨论了新基准的各个方面。而我们能找到的最好的指南来自 Lars Kappert，他在
+    Smashing Mag 上分享了他的 ES6 变更记录文章。
+
+
+    在将 ES6 特性引入浏览器方面，Mozilla Firefox（85%）和 Google Chrome（71%）目前遥遥领先，其他浏览器也在紧随其后。然而，JavaScript
+    远不止于一门标准语言——今年有许多真正优秀的程序和平台为开发者构建和发布，其中最新的是 OS.js——一个功能完善的云平台，将桌面计算机功能集成到浏览器中。
+
+
+    JavaScript 正在快速发展，它正变得更加原生化，但最重要的是——它正变得更加稳定。近年来，JavaScript 世界的 Web 开发框架数量大幅增长，许多框架已经建立了庞大的社区，例如
+    Angular、Meteor 和 React 等。在本文中，我们将更深入地了解当前最热门的 JavaScript 框架，我们坚信这些框架在 2016 年将会有大量的发展、参与和曝光。请与我们分享你在使用列表中框架时的个人体验，因为我们非常希望能了解更多关于每个框架的具体使用案例。
+
+
+    ## 响应式 JavaScript 框架
+
+
+    响应式 Web 开发的核心在于响应能力、弹性、可扩展性和精确性。我们希望构建的应用能够实时响应其面临的各种需求，同时我们也希望系统在峰值性能或来自未知来源的需求下依然保持弹性，并且我们的项目需要具备可扩展性，以便在需要时可以轻松地升级或降级应用以获得最佳性能。这些
+    JavaScript 框架正是为响应式 Web 开发而构建的，我们期待听到更多关于可能被遗漏的框架的介绍。
+
+
+    ## MobX
+
+
+    借助 MobX，你将能够开始精心打造你的数据结构，同时让你的函数具有响应性，这意味着当数据实时发生变化时，它们会自动重新计算。从你的数据结构中取出任意一块数据并将其转换为另一行，然后将你的函数转变为自动更新的公式。MobX
+    的使命是帮助程序员轻松高效地构建始终完全响应式的视图，而无需承担其他全渲染框架可能带来的额外开销。
+
+
+    ## Omniscient.js
+
+
+    Omniscient 为程序员提供了基于透明组件构建功能性 UI 的工具和特性，允许一种更静态的开发方式。非常类似于我们在 HTML 中进行的静态 Web
+    开发，但 Omniscient 赋予了编程的能力。你仍然可以将你的视图构建得优雅流畅，只是无需再使用模板引擎或领域特定语言等工具。Omniscient 倡导小型、可组合的组件，以及通过
+    mixins 实现共享性能。
+
+
+    ## Ractive.js
+
+
+    Ractive 已经存在一段时间了，许多世界顶级网站都采用了其原生性能来构建基于模板的用户界面元素，这些元素支持 JavaScript 的特性和灵活性。在浏览器中创建类似交互式应用的体验并非易事，从来都不是，但
+    Ractive 是那些罕见的框架之一，它有助于弥合这一差距，并帮助构建更简单的体验。Toptal 的 Eugene Mirotin 深入探讨了 Ractive
+    的功能，并研究了构建一个简单、响应式且交互式的应用的过程。
+
+
+    ## Mercury
+
+
+    Mercury 是一个轻量、简洁且功能强大的模块化前端框架，提供了众多预构建的网络模块和元素，你可以立即在应用中开始使用。其演示页面展示了诸如函数的响应式反转等功能，例如在一个简单的
+    Canvas 图像示例中，图像的预设颜色为"蓝色"，在同一浏览器窗口中，你可以实时将颜色更改为"红色"，因为其响应完全是响应式的和即时的，为你提供了更大的空间来开发真正的多维度
+    Web 应用。
+
+
+    ## WebRx
+
+
+    WebRx 是一个基于浏览器的 MVVM 框架，专为由 ReactiveX 驱动的单页应用而设计。WebRx 是一个基于 RX.js 构建的模型-视图-视图模型（MVVM）框架，融合了函数式和响应式编程模式，支持可视化和可观察的数据绑定、客户端路由以及模板特性。无论你是想构建一个简单且响应式的
+    Hello World 应用，还是一个功能完善的单页待办事项应用，WebRx 都是为加速现代 Web 应用开发流程而构建的，并且毫不犹豫地兑现了其承诺。此外，它非常轻量，压缩优化后仅约
+    30kb。
+
+
+    ## Deku
+
+
+    Deku 是 Segment 团队提出的一种更轻量级的 React 替代方案。Deku 的主要任务是使用纯 JavaScript 函数和虚拟文档对象模型（DOM）来渲染
+    UI。使用 Deku，你无需依赖类，而是可以直接使用函数将任务委托给 Redux 等第三方工具。由于 Segment 希望保持简单，Deku 主要只在新型现代浏览器中运行。与当前的
+    React 开发社区兼容良好。
+
+
+    ## Riot.js
+
+
+    Riot.js 是一个类似 React 的用户界面微类库。React 无疑对我们当前开发领域中大多数响应式 JavaScript 框架产生了巨大的影响，Riot.js
+    也不例外。用他们自己的话说，Riot.js 是一个基于 React 的 UI 库，专注于微功能。Streamdata 在他们的博客中对这一方法进行了极为详细的探讨。（阅读完那篇报道后，向下滚动即可了解更多他们发布的
+    Riot.js 文章！）Riot.js 由 Muut 的开发人员维护——Muut 是我们目前所见过的最优秀的讨论平台之一，它具有超强的响应性和交互性，因此当你在项目中开始使用
+    Riot 的功能时，可以期待在你的应用中获得同等类型的表现。
+
+
+    ## Mithril
+
+
+    Mithril 以其灵活的库体积（7kb）以及始终随库本身开发过程更新的前瞻性文档而脱颖而出，文档中不断加入新的上下文和方法。与其他知名 JavaScript
+    框架的基准测试对比结果令人惊叹，这将激发你亲自尝试的兴趣。
+
+
+    ## Vue.js
+
+
+    Vue.js 在将自身定位为框架方面非常低调，它更倾向于使用"库"这个词，然后通过与其他工具组合即可构建为一个功能完善的框架。Vue 用于创建和开发现代且精美的
+    Web 界面。直到不久前，它仍是一个测试版项目，然而 2015 年 10 月标志着 V1 的正式发布，因此 Vue 已经可以用于实际的生产开发，许多人也已经在分享他们对该框架的看法和体验。如果你喜欢编写从阅读代码那一刻起就逻辑清晰的代码，那么绝对值得尝试一下
+    Vue。
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # JAVASCRIPT
+
+
+    # # FRAMEWORKS
+
+
+    ![](img/773d42da20e26ca59cca162d31fc1cf8_0_0.png)
+
+
+    MICHAEL REDCAR'
+  - '[PAGE 1]
+
+
+    The JavaScript community underwent a few really big changes this past year. ECMAScript
+    6 was finally standardized and printed, and many well-known compilers and web
+    browsers are working hard to accommodate to all of the new regulations and changes.
+    To completely comprehend this type of massive update (the previous ES upgrade
+    was in 2009), it is required to familiarize yourself within a good step-by-step
+    guide which discusses each of the facets of the new benchmark, and the very best
+    such guide we can find comes from Lars Kappert who shared his own ES6 record of
+    changes article in Smashing Mag.
+
+
+    In relation to Implemented ES6 attributes into browsers themselves, Mozilla Firefox
+    (85 percent) and Google Chrome (71 percent) are now leading the package for everybody
+    else to follow. However, JavaScript is a great deal more than only a normal, some
+    genuinely great programs and platforms are constructed and released for people
+    this season, among the newest being OS.js -- a completely functional cloud platform
+    which incorporates Desktop Computer features inside the browser.
+
+
+    JavaScript Is growing quickly, it is getting more native, but most significantly
+    -- it is getting more stable. The amount of internet development frameworks which
+    have come in the JavaScript world at the past years has really boomed, and lots
+    of the frameworks have already established enormous communities about them, Angular,
+    Meteor and React to list a couple. In the present article we''ll take a closer
+    look at the now hottest JavaScript frameworks and we firmly feel that these frameworks
+    will probably be seeing a great deal of'
+  - '[PAGE 2]
+
+
+    expansion, participation, and vulnerability in 2016. Please discuss with us your
+    personal experiences with all the frameworks that you''ve used from our listing
+    since we''d really like to hear more details regarding the usage cases for every
+    individual frame.
+
+
+    # # Reactive JavaScript Frameworks
+
+
+    Reactive Web development is all about responsiveness, resilience, scalability
+    and precision. We would like to construct applications and applications that''s
+    responsive to the real time requirements that are being levied on it, we also
+    need our systems to be resilient from summit performance, or the type of requirements
+    that come from unknown sources, and we all need our endeavors to be scalable so
+    that if the time comes, we can easily upgrade or downgrade our applications for
+    optimum performance. These JavaScript frameworks are constructed with responsive
+    internet development in mind, and we look forward to hearing about more such frameworks
+    that we perhaps left from the specific list.
+
+
+    # # MobX
+
+
+    With MobX You''ll have the ability to start celebrating your information structure,
+    while also being able of creating your functions responsive, meaning that they
+    will reassess themselves if information is changed in real time. Take any part
+    of information out of your arrangement and turn it into another row, then flip
+    your functions to auto-updating'
+  - '[PAGE 3]
+
+
+    formulas. MobX''s assignment is to aid programmers easy and productive perspectives
+    which are always completely left, without having the additional fat that other
+    full-renderer frameworks may bring to the table.
+
+
+    ...
+
+
+    # Omniscient
+
+
+    # Omniscient.js
+
+
+    Omniscient Provides programmers with tools and features to construct operational
+    UIs based on transparent components; allowing a more static version of development.
+    Very much like static web development we''d perform in HTML, however, Omniscient
+    empowers the qualities of programming. You''re still able to control your Perspectives
+    to become eloquent, only minus needing to operate with items like templating engines,
+    or domain particular languages. Omniscient promotes small, composable parts, and
+    shared performance via mixins.
+
+
+    ...
+
+
+    # Ractive.js
+
+
+    Ractive.js The gemstone era of Internet development'
+  - '[PAGE 4]
+
+
+    Ractive has Been in existence for some time, many of those top worlds sites have
+    adopted it has native performance for constructing template oriented User Interface
+    elements that support JavaScript characteristics and flexibility. Creating interactive
+    program like adventures inside the browser isn''t a simple endeavor, it never
+    had been, but Ractive is among these rare frameworks which help to bridge this
+    difference and helps to construct to get a simpler experience. Eugene Mirotin
+    from Toptal goes deeper into the capabilities of Ractive and investigates the
+    process of constructing an easy, responsive and interactive program.
+
+
+    ...
+
+
+    # Mercury
+
+
+    # Mercury
+
+
+    Mercury is Lightweight, easy and powerful modular front framework which gives
+    numerous pre-built net modules and elements which you could begin implementing
+    on your programs straight away. The demonstration page showcases matters like
+    reactive reversal of functions, such as taking the instance of a very simple Canvas
+    picture that has the established colour of ''blue'', inside precisely the identical
+    browser window that you can in real time change the colour to ''red'' as the answer
+    is totally reactive and responsive, giving you more space and room to develop
+    really multi-dimensional web programs.'
+  - '[PAGE 5]
+
+
+    WebRx
+
+
+    WebRx The Browser established MVVM Framework for ReactiveX powered Single Page
+    Programs
+
+
+    WebRx, a Model--perspective--viewmodel (MVVM) frame that is built on top of RX.js
+    for blending together functional and responsive programming patterns which encourage
+    visible and observable data binding, customer unwanted routing, and templating
+    attributes. When it is an easy and responsive Hello World you are seeking to construct,
+    or a totally operational one-page ToDo program, WebRx was constructed to help
+    hasten the practice of contemporary internet app development, also delivers on
+    its promise without hesitation. Additionally, it is quite lightweight, coming
+    in at just 30kb once minified and optimized.
+
+
+    Deku
+
+
+    Readme Deku
+
+
+    Deku is a Manifestation of a much more lightweight solution to React from the
+    group at Segment. Deku''s most important job is to help leave UIs using pure JavaScript
+    functions along with also the virtual Document Object Model (DOM). With'
+  - '[PAGE 6]
+
+
+    Deku you do not have to rely on courses, and rather you are able to use direct
+    purposes to move jobs to third party software such as Redux, also because Segment
+    wishes to keep things simple, Deku will largely work just within new and modern
+    browsers. Works great with the current React advancement community.
+
+
+    ...
+
+
+    # Riot.js
+
+
+    Riot.js -- A React such as user interface micro library
+
+
+    React has Definitely been a massive influencer for the majority of the responsive
+    JavaScript frameworks we see in the present development Earth, and Riot.js is
+    no exclusion. In their own words, Riot.js is React-based UI library which concentrates
+    on micro purposes. Streamdata has researched this approach in enormous detail
+    in their own blog. (Once you are done with that report, scroll to the ground to
+    find out about more Riot.js articles they have printed!) Riot.js has been preserved
+    by the programmers at Muut -- among the most obvious discussion platforms we''ve
+    seen so far, which can be super-reactive and interactive, and so expect the identical
+    type of functionality on your own programs as soon as you start using Riot''s
+    performance on your endeavors.
+
+
+    ...'
+  - '[PAGE 7]
+
+
+    # Mithril
+
+
+    # Mithril
+
+
+    Mithril Stands out with its elastic library dimensions (7kb) in addition to a
+    prescient documentation that is constantly updated with fresh contexts and approaches
+    since the library itself excels in development procedure. The benchmarks compared
+    to another famous JavaScript frameworks are shocking, and will leave you curious
+    to check it out.
+
+
+    ...
+
+
+    # Vue.js
+
+
+    # vue.js
+
+
+    Vue.js is Very small when it comes to describing itself as a frame, it prefers
+    to use the term ''library'' which then blended with different tools could be turned
+    into a completely operational frame. Vue is for creating and developing contemporary
+    and slick internet interfaces. Up until quite recently, it was still a beta job,
+    however, October 2015 indicated the published of the V1 so that Vue is prepared
+    for real-world growth, and so many are already sharing their own opinions and
+    experiences with the frame. If you like to make code which is logical from the
+    instant that you take a look at it, then it is definitely worth mentioning Vue
+    an attempt.'
+- md: ' MVC is a Software strategy that separates application logic from presentation.
+    In practice, it enables your webpages to include minimum scripting since the demonstration
+    is distinct from the PHP scripting. MVC frameworks which we''re going to be having
+    a look at in a minute have improved extensively through time, and bulk supply
+    features that allow seamless mobile application development also.
+
+
+    Internet Frameworks like Angular (that is shortly coming to V2) and React have
+    shifted the internet development arena for the better, and so much enthusiasm
+    is concealed inside the anticipation of what''s yet to come.
+
+
+    ## Angular.js
+
+
+    ## AngularJS -- Superheroic JavaScript MVW Framework
+
+
+    Google''s Ever-popular web development frame Angular has exploded with popularity
+    lately, and continues to offer a good foundation foundation for programmers that
+    are working strictly with the newest industry standards and skills. Angular.js
+    in itself supplies a set of contemporary design and development features for rapid
+    application development, and Google has become far as developing another region
+    of the website that provides the Material Design specification that will assist
+    you build apps that remain in contact with the most contemporary approaches you
+    will find.
+
+
+    Angular 2 Is coming the first BETA release, which you may learn more about in
+    the most recent article from Angular''s programmer team. And due to the extensive
+    framework temperament of Angular, it completely supports extendable plugins and
+    libraries.
+
+
+    ...
+
+
+    ## jQuery
+
+
+    ## jQuery
+
+
+    Together with the Type of lifespan which this project retains already, even people
+    living under a stone will have known of jQuery before. Whenever somebody wishes
+    to expand their site (or cellular page) and also make it more interactive; they
+    depend on the performance of jQuery. This very small library transforms the entire
+    net to a totally interactive and enjoyable experience, with a documented whopping
+    70 percent+ of the World''s leading sites having something related to jQuery.
+    jQuery widgets and plugins are one of the most hunted components within the front
+    developer orbit.
+
+
+    Firms Such as WordPress, Google, IBM and lots of others rely upon jQuery to offer
+    a one of a kind web browsing experience with its own staff not to mention the
+    huge sea of net users. jQuery can be fully compliant with cellular devices, also
+    contains another jQuery Mobile library to care for everything mobile.
+
+
+    ...
+
+
+    ## React
+
+
+    ## A JavaScript library for constructing user interfaces React
+
+
+    React is The internet programming orbit''s most recent crown stone, even spiritual
+    Angular.js consumers have made the change to React since it allows for simpler
+    back-end growth without the necessity of immersing in the intricacy of a front
+    end framework. React is a JavaScript library that is being preserved by Facebook,
+    and the chief field of experience behind React would be to assist programmers
+    implement a digital DOM; rather output a value known as the Virtual DOM. The Virtual
+    DOM is then diffed with the present condition of the DOM, which creates a listing
+    of DOM surgeries that will make the recent DOM seem like the brand new one. Those
+    operations are implemented quickly in a heap.
+
+
+    In relation to Popularity, a programmer recently released an intriguing finding
+    between the visitors stats of their sub-reddit r/React and r/Angular around Reddit
+    -- and the two appear to be receiving the exact same traffic volume daily today,
+    meaning that React has really caught up with Angular in more ways than you.
+
+
+    ...
+
+
+    ## Socket
+
+
+    ## Socket.IO
+
+
+    Socket''s Gained a lots of effort at the programmer community. With Socket it''s
+    possible to enjoy a fully operational real time communication involving the client
+    and the host. Socket is split into two distinct components -- the first part is
+    really a client-library that runs out of the browser, whereas the server-library
+    is developed on top of Node.js. Both libraries reveal a very similar API, also
+    it''s also event driven; similar to Node.js is. With Socket you are able to execute
+    real time streaming of binary, instant messaging programs, interactive file cooperation,
+    real-time stats to your programs and jobs (analytics), and so much more.
+
+
+    Microsoft Office is determined by Socket to offer much of its real time performance,
+    as does Yammer. Socket works greatly with the WebSocket protocol to offer a clear
+    experience.
+
+
+    ...
+
+
+    ## Polymer
+
+
+    ## Welcome Polymer 1.0
+
+
+    Google''s Polymer project does not just spice up things with the usage of Material
+    Design, this stupefying JavaScript frame is all about quickly and contemporary
+    web design via the capacity to produce and reuse web components. The project spent
+    quite a while at a BETA release, but the past year we watched the very first launch
+    of a V1 and the job has snowballed ever since.
+
+
+    While many Are still wondering what''s the real distinction between Polymer and
+    Angular (because both share many similar characteristics such as code syntax and
+    layout attributes), we all know for a fact that Polymer brings about a new sort
+    of development experience which will propel the remainder of the industry to a
+    modern net component based development strategy.
+
+
+    ...
+
+
+    ## Node.js
+
+
+    ## Node.js
+
+
+    Node.js is Very likely to be the most effective frame that we''ve seen since the
+    beginning of JavaScript, and the job has grown tremendously large in a recent
+    year or two. While many were calling the downfall of Node.js and the increase
+    of additional server-side frameworks, Node.js has managed to keep its leadership
+    glory to this very day. Node.js has gotten immensely scalable and flexible with
+    its capacities, and lots of programmers rank it over specialized programming languages
+    like Java and .NET! (at least to the internet)
+
+
+    Node.js is Constructed on the top of Google''s V8 JavaScript motor and the chief
+    use of the framework would be to help construct interaction vigorous web programs
+    like network websites, content loading sites, feature hefty one-page programs,
+    along with other programs that rely on significant data interaction. This open
+    minded endeavor may be learned by novices just because it could be readily be
+    chosen by programmers who come from different languages. The learning curve is
+    identical for everybody.
+
+
+    This past Year, Node created a complete blend with IO.js -- attracting in a protracted
+    list of characteristics and possible.
+
+
+    ...
+
+
+    ## Meteor
+
+
+    ## Meteor
+
+
+    Meteor has Developed from an easy inspirational idea to a fully operational and
+    financed project that''s home to tens of thousands of passionate developers. Meteor
+    has in many ways revolutionized the developed of real time mobile and internet
+    applications which may be constructed from inside a singular development port.
+    Any web application built with Meteor can also be mechanically compatible with
+    cellular devices -- to the point at which you are able to convert your current
+    web programs into mobile programs and printed them on the very common cellular
+    program shops!
+
+
+    Together with the Recent launch of Galaxy (cloud hosting stage), Meteor is creating
+    front-end and backend improvement a unified, complexity-less encounter. Meteor''s
+    a secure full-stack frame that supports native JavaScript terminology for assisting
+    you to build scalable and modern internet and mobile programs. The general public
+    bundle repository Atmosphere has thousands of published packages which will allow
+    you to build multiplex software on the fly.
+
+
+    ...
+
+
+    ## D3.js
+
+
+    ## D3.js Data Driven Records
+
+
+    Visuals, cartoon, And images are a basic portion of the net. Without the execution
+    of great images within our layouts, we danger of imitating our layouts as gloomy
+    and shallow, based on the given conditions. D3 is a data-driven visual component
+    library which aids designers and developers to use JavaScript to construct truly
+    astonishing visual information reports, including artworks, interactive bullet
+    graphs, sunburst diagrams, and an assortment of information matrixes, phrase clouds,
+    and numerous other kinds of information visualizations that can leave your customers
+    motivated and'
+  mdcn: '
+
+    MVC是一种将应用程序逻辑与表现层分离的软件策略。实践中，它使你的网页能够包含最少的脚本，因为展示与PHP脚本是分离的。我们即将探讨的MVC框架随着时间的推移已经有了显著改进，并且大多数都提供了允许无缝进行移动应用开发的功能。
+
+
+    像Angular（即将推出V2版本）和React这样的互联网框架已经使互联网开发领域向更好的方向发展，并且人们对于未来即将出现的技术充满了期待与热情。
+
+
+    ## Angular.js
+
+
+    ## AngularJS —— 超级JavaScript MVW框架
+
+
+    Google备受喜爱的Web开发框架Angular最近人气激增，并为那些严格遵循最新行业标准和技能的程序员提供了良好的基础。Angular.js本身就提供了一套现代设计和开发功能，用于快速应用开发。Google甚至已经开发了网站的另一个部分，提供Material
+    Design规范，帮助你构建符合最前沿方法的应用。
+
+
+    Angular 2的首个BETA版本即将到来，你可以在Angular开发者团队的最新文章中了解更多。由于Angular具有广泛的框架特性，它完全支持可扩展的插件和库。
+
+
+    ...
+
+
+    ## jQuery
+
+
+    ## jQuery
+
+
+    凭借这个项目已经拥有的生命周期，即使是不常上网的人也听说过jQuery。每当有人想扩展他们的网站（或移动页面）并使其更具交互性时，他们都会依赖jQuery的性能。这个小库将整个网络变成了一个完全交互和愉快的体验，据记录，全球70%以上的顶级网站都使用了与jQuery相关的技术。jQuery小部件和插件是前端开发者领域最受欢迎的组件之一。
+
+
+    WordPress、Google、IBM等许多公司都依赖jQuery为其员工以及庞大的网络用户提供独特的网络浏览体验。jQuery完全兼容移动设备，并且还有一个单独的jQuery
+    Mobile库来处理所有移动相关的内容。
+
+
+    ...
+
+
+    ## React
+
+
+    ## 用于构建用户界面的JavaScript库 React
+
+
+    React是互联网编程领域最新加冕的瑰宝，甚至连Angular.js的忠实用户也已经转向React，因为它允许更简单的后端开发，而无需深入前端框架的复杂性。React是一个由Facebook维护的JavaScript库，其核心专长是帮助程序员实现一个虚拟DOM；或者更准确地说，是输出一个被称为虚拟DOM的值。然后将虚拟DOM与当前的DOM状态进行比较（diff），从而生成一系列DOM操作列表，这些操作将使当前DOM看起来像新的那个。这些操作会在堆中快速执行。
+
+
+    就受欢迎程度而言，一位开发者最近发布了一个关于Reddit上r/React和r/Angular子版块访问量统计的有趣发现——两者目前每天似乎获得了相同的流量，这意味着React在不止一个方面已经赶上了Angular。
+
+
+    ...
+
+
+    ## Socket
+
+
+    ## Socket.IO
+
+
+    Socket在开发者社区中获得了大量关注。使用Socket，你可以享受客户端和服务器之间的全功能实时通信。Socket分为两个不同的部分——第一部分是在浏览器中运行的客户端库，而服务器库则是建立在Node.js之上。这两个库提供了非常相似的API，并且也是事件驱动的；类似于Node.js。使用Socket，你可以实现实时的二进制流传输、即时通讯程序、交互式文件协作、为你的程序和项目提供实时统计数据（分析），以及更多功能。
+
+
+    Microsoft Office和Yammer都依赖Socket来提供其大部分的实时功能。Socket与WebSocket协议配合得非常好，提供了流畅的体验。
+
+
+    ...
+
+
+    ## Polymer
+
+
+    ## 欢迎使用 Polymer 1.0
+
+
+    Google的Polymer项目不仅仅通过使用Material Design让事情变得更有趣，这个令人惊叹的JavaScript框架是关于通过创建和重用Web组件来实现快速和现代的Web设计。该项目在BETA版本中度过了相当长的一段时间，但在过去一年，我们看到了V1的首次发布，此后项目发展势头迅猛。
+
+
+    虽然许多人仍然想知道Polymer和Angular之间的真正区别是什么（因为它们共享许多相似的特性，如代码语法和布局属性），但我们确实知道Polymer带来了一种新的开发体验，这将推动行业其余部分转向基于现代Web组件的开发策略。
+
+
+    ...
+
+
+    ## Node.js
+
+
+    ## Node.js
+
+
+    Node.js很可能是自JavaScript诞生以来我们见过的最有效的框架，并且在过去一两年中，该项目规模增长巨大。尽管许多人曾预言Node.js的衰落和其他服务器端框架的兴起，但Node.js至今仍保持着其领导地位。Node.js的功能已经变得非常可扩展和灵活，许多程序员将其排名高于Java和.NET等专业编程语言！（至少对于Web而言）
+
+
+    Node.js建立在Google的V8 JavaScript引擎之上，该框架的主要用途是帮助构建交互性强的Web应用程序，如网络网站、内容加载网站、功能丰富的一页应用以及其他依赖大量数据交互的应用程序。这个开源项目不仅初学者可以学习，而且来自不同语言的程序员也可以轻松上手。每个人的学习曲线都是一样的。
+
+
+    去年，Node与IO.js进行了完全整合——带来了一系列扩展的特性和可能性。
+
+
+    ...
+
+
+    ## Meteor
+
+
+    ## Meteor
+
+
+    Meteor已经从一个简单的灵感概念发展成为一个功能齐全、资金充足、拥有数千名热情开发者的项目。Meteor在许多方面彻底改变了实时移动和互联网应用的开发方式，这些应用可以在单一的开发环境中构建。任何使用Meteor构建的Web应用程序也都能自动兼容移动设备——甚至可以将你现有的Web应用程序转换为移动应用程序并发布到最受欢迎的移动应用商店！
+
+
+    随着Galaxy（云托管平台）的最近发布，Meteor正在将前端和后端开发变成一个统一、无复杂性的体验。Meteor是一个安全的全栈框架，支持原生JavaScript语言，帮助你构建可扩展的现代Web和移动应用程序。公共包仓库Atmosphere拥有数千个已发布的包，使你能够即时构建多路复用应用程序。
+
+
+    ...
+
+
+    ## D3.js
+
+
+    ## D3.js 数据驱动文档
+
+
+    视觉效果、动画和图像是网络的基本组成部分。如果在我们的设计中没有应用优秀的图像，我们的设计可能会被归咎于平淡和肤浅（取决于具体情况）。D3是一个数据驱动的可视化组件库，它帮助设计师和开发者使用JavaScript构建真正令人惊叹的可视化数据报告，包括艺术作品、交互式子弹图、旭日图，以及各种数据矩阵、词云和许多其他类型的数据可视化，这些都能激发你的客户的灵感并
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 8]
+
+
+    ...
+
+
+    # MVC JavaScript Frameworks
+
+
+    MVC is a Software strategy that separates application logic from presentation.
+    In practice, it enables your webpages to include minimum scripting since the demonstration
+    is distinct from the PHP scripting. MVC frameworks which we''re going to be having
+    a look at in a minute have improved extensively through time, and bulk supply
+    features that allow seamless mobile application development also.
+
+
+    Internet Frameworks like Angular (that is shortly coming to V2) and React have
+    shifted the internet development arena for the better, and so much enthusiasm
+    is concealed inside the anticipation of what''s yet to come.
+
+
+    # Angular.js
+
+
+    # AngularJS -- Superheroic JavaScript MVW Framework
+
+
+    Google''s Ever-popular web development frame Angular has exploded with popularity
+    lately, and continues to offer a good foundation foundation for programmers that
+    are working strictly with the newest industry standards and skills. Angular.js
+    in itself supplies a set of contemporary design and development features for rapid
+    application development, and Google has become far as developing another region
+    of the website that provides the Material Design specification that'
+  - '[PAGE 9]
+
+
+    will assist you build apps that remain in contact with the most contemporary approaches
+    you will find.
+
+
+    Angular 2 Is coming the first BETA release, which you may learn more about in
+    the most recent article from Angular''s programmer team. And due to the extensive
+    framework temperament of Angular, it completely supports extendable plugins and
+    libraries.
+
+
+    ...
+
+
+    # jQuery
+
+
+    # jQuery
+
+
+    Together with the Type of lifespan which this project retains already, even people
+    living under a stone will have known of jQuery before. Whenever somebody wishes
+    to expand their site (or cellular page) and also make it more interactive; they
+    depend on the performance of jQuery. This very small library transforms the entire
+    net to a totally interactive and enjoyable experience, with a documented whopping
+    70 percent+ of the World''s leading sites having something related to jQuery.
+    JQuery widgets and plugins are one of the most hunted components within the front
+    developer orbit.
+
+
+    Firms Such as WordPress, Google, IBM and lots of others rely upon jQuery to offer
+    a one of a kind web browsing experience with its own staff not to mention the
+    huge sea of'
+  - '[PAGE 10]
+
+
+    net users. JQuery can be fully compliant with cellular devices, also contains
+    another jQuery Mobile library to care for everything mobile.
+
+
+    ...
+
+
+    # React
+
+
+    A JavaScript library for constructing user interfaces React
+
+
+    React is The internet programming orbit''s most recent crown stone, even spiritual
+    Angular.js consumers have made the change to React since it allows for simpler
+    back-end growth without the necessity of immersing in the intricacy of a front
+    end framework. React is a JavaScript library that is being preserved by Facebook,
+    and the chief field of experience behind React would be to assist programmers
+    implement a digital DOM; rather output a value known as the Virtual DOM. The Virtual
+    DOM is then diffed with the present condition of the DOM, which creates a listing
+    of DOM surgeries that will make the recent DOM seem like the brand new one. Those
+    operations are implemented quickly in a heap.
+
+
+    In relation to Popularity, a programmer recently released an intriguing finding
+    between the visitors stats of their sub-reddit r/React and r/Angular around Reddit
+    -- and the two appear to be receiving the exact same traffic volume daily today,
+    meaning that React has really caught up with Angular in more ways than you.'
+  - '[PAGE 11]
+
+
+    ...
+
+
+    # Socket
+
+
+    Socket.IO
+
+
+    Socket''s Gained a lots of effort at the programmer community. With Socket it''s
+    possible to enjoy a fully operational real time communication involving the client
+    and the host. Socket is split into two distinct components -- the first part is
+    really a client-library that runs out of the browser, whereas the server-library
+    is developed on top of Node.js. Both libraries reveal a very similar API, also
+    it''s also event driven; similar to Node.js is. With Socket you are able to execute
+    real time streaming of binary, instant messaging programs, interactive file cooperation,
+    real-time stats to your programs and jobs (analytics), and so much more.
+
+
+    Microsoft Office is determined by Socket to offer much of its real time performance,
+    as does Yammer. Socket works greatly with the WebSocket protocol to offer a clear
+    experience.
+
+
+    ...
+
+
+    # Polymer
+
+
+    Welcome Polymer 1.0'
+  - '[PAGE 12]
+
+
+    Google''s Polymer project does not just spice up things with the usage of Material
+    Design, this stupefying JavaScript frame is all about quickly and contemporary
+    web design via the capacity to produce and reuse web components. The project spent
+    quite a while at a BETA release, but the past year we watched the very first launch
+    of a V1 and the job has snowballed ever since.
+
+
+    While many Are still wondering what''s the real distinction between Polymer and
+    Angular (because both share many similar characteristics such as code syntax and
+    layout attributes), we all know for a fact that Polymer brings about a new sort
+    of development experience which will propel the remainder of the industry to a
+    modern net component based development strategy.
+
+
+    ...
+
+
+    # Node.js
+
+
+    # Node.js
+
+
+    Node.js is Very likely to be the most effective frame that we''ve seen since the
+    beginning of JavaScript, and the job has grown tremendously large in a recent
+    year or two. While many were calling the downfall of Node.js and the increase
+    of additional server-side frameworks, Node.js has managed to keep its leadership
+    glory to this very day. Node.js has gotten'
+  - '[PAGE 13]
+
+
+    immensely scalable and flexible with its capacities, and lots of programmers rank
+    it over specialized programming languages like Java and . NET! (at least to the
+    internet)
+
+
+    Node.js is Constructed on the top of Google''s V8 JavaScript motor and the chief
+    use of the framework would be to help construct interaction vigorous web programs
+    like network websites, content loading sites, feature hefty one-page programs,
+    along with other programs that rely on significant data interaction. This open
+    minded endeavor may be learned by novices just because it could be readily be
+    chosen by programmers who come from different languages. The learning curve is
+    identical for everybody.
+
+
+    This past Year, Node created a complete blend with IO.js -- attracting in a protracted
+    list of characteristics and possible.
+
+
+    ...
+
+
+    # Meteor
+
+
+    # Meteor
+
+
+    Meteor has Developed from an easy inspirational idea to a fully operational and
+    financed project that''s home to tens of thousands of passionate developers. Meteor
+    has in many ways revolutionized the developed of real time mobile and internet
+    applications which may be constructed from inside a singular development port.
+    Any web application built with Meteor can'
+  - '[PAGE 14]
+
+
+    also be mechanically compatible with cellular devices -- to the point at which
+    you are able to convert your current web programs into mobile programs and printed
+    them on the very common cellular program shops!
+
+
+    Together with the Recent launch of Galaxy (cloud hosting stage), Meteor is creating
+    front-end and backend improvement a unified, complexity-less encounter. Meteor''s
+    a secure full-stack frame that supports native JavaScript terminology for assisting
+    you to build scalable and modern internet and mobile programs. The general public
+    bundle repository Atmosphere has thousands of printed packages which will allow
+    you to build multiplex software on the fly.
+
+
+    ...
+
+
+    # D3.js
+
+
+    # D3.js Data Driven Records
+
+
+    Visuals, cartoon, And images are a basic portion of the net. Without the execution
+    of great images within our layouts, we danger of imitating our layouts as gloomy
+    and shallow, based on the given conditions. D3 is a data-driven visual component
+    library which aids designers and developers to use JavaScript to construct truly
+    astonishing visual information reports, including artworks, interactive bullet
+    graphs, sunburst diagrams, and an assortment of information matrixes, phrase clouds,
+    and numerous other kinds of information visualizations that can leave your customers
+    motivated and'
+- md: '## D3.js
+
+
+    Happy with the general presentation. It requires time to find out the appropriate
+    syntax use of D3.js, but it''s so well worth it as you''ll notice in the cases
+    within this page.
+
+
+    The founder of D3 -- Mike Bostock -- did an intriguing Ask Me Anything (AMA) about
+    Reddit this past year, and it is packed with insightful questions and answers
+    which will help you better understand the goal, the vision and the drive behind
+    this endeavor. Be ready to invest some time digesting all of the replies.
+
+
+    ...
+
+
+    ## Ember
+
+
+    Ember.js -- A Frame for Producing Ambitious Web Programs.
+
+
+    Ember is a contemporary web development platform for its ambitiously-oriented
+    programmers. Known for its ability to help programmers build complex large-client-side
+    software -- Ember stands out with its ease and flow of performance to generate
+    web app development a smooth experience. Getting started with Ember is painless
+    and quick, and lots of programmers have gone out of the way to make guides and
+    tutorials about the best way to begin with this elastic frame.
+
+
+    Ember has managed to steer clear of gleaming modules and terms which produce contemporary
+    frameworks stick out in the audience, rather, Ember maintains conventional functionality
+    whilst bringing forth electricity and centeredness that is crucial for building
+    great programs, like the Discourse conversation forum.
+
+
+    ## Aurelia
+
+
+    Aurelia
+
+
+    Aurelia is a self-proclaimed next generation internet development framework that
+    mostly focuses on creating programming (web development) a creative procedure.
+    Maybe what makes Aurelia next-generation is the fact that it''s been built only
+    with ES6 (the newest JS standard) and also integrates a number of those accessible
+    ES7 (another JS standard) attributes currently, whilst keeping the capacity to
+    operate on all modern browsers. The frame is constructed upon a module-like frame,
+    meaning that it is made up of many small and large libraries which may be used
+    either jointly, or individually based on the essentials of the sort of program
+    that you''re building.
+
+
+    However, all these are only a couple of the more visionary attributes which Aurelia
+    packs, plus it is strongly suggested that you browse Rob Eisenberg''s writeup
+    around Aurelia to totally comprehend that the framework''s purpose.
+
+
+    ## Knockout
+
+
+    Knockout.js
+
+
+    The predominant characteristics of Knockout.js are declarative bindings, automated
+    UI refresh, and dependency tracking, and templating attributes. Relate your present
+    DOM elements with information units using straightforward syntax. At any time
+    you update your information units, the fluctuations in UI are mirrored in real
+    time. Create links between your information units to unite and change them. Create
+    complex UI versions as part of those functions which you use to your own information
+    units. With assistance from native JavaScript, Knockout can make it amazingly
+    simple to incorporate itself using any other accessible frame on the market, including
+    each and every one on our own roundup here.
+
+
+    ## Keystone
+
+
+    KeystoneJS -- Node.js CMS and Internet Application Platform Constructed on Express
+    and MongoDB
+
+
+    We ought to probably be mentioning this frame in another Node.js framework checklist
+    (which we will), however Keystone''s capabilities actually stick out in contemporary
+    front-end internet development, and it isn''t often that we view a full-fledged
+    Content Management System (CMS) framework accessible. Constructed with assistance
+    from Express.js and MongoDB, Keystone allows performance such as -- lively routes,
+    database area direction, an interactive and lively Admin UI that is accessible
+    even as you are constructing your apps/content systems, an easy to operate with
+    code foundation, type processing, email sending, and direction, in addition to
+    lots of additional attributes which produce great CMS exactly what they''re --
+    great!
+
+
+    ...
+
+
+    ## Backbone
+
+
+    ### Backbone.js
+
+
+    Construction elegant one-page and single-page software having the most conventional
+    web development libraries may transform your code base to some complete spaghetti
+    dinner if you are not paying attention to a code''s structure and coalition. Backbone
+    is constructed with the notion in your mind that all server-side functions must
+    flow via an API, reducing the amount of code that should be written so as to attain
+    the identical complex functionality of more complex web frameworks.
+
+
+    Backbone is amongst a number of the very popular web development frameworks for
+    JavaScript programmers, and partially for 2 reasons -- it''s simple to comprehend
+    usability modules, in addition to the exact simple learning curve.
+
+
+    ## Stapes
+
+
+    Stapes.js -- The Small Javascript Frame That Does Only Enough
+
+
+    Stapes is somewhat of a successor of Backbone, ''boasting'' using its capacity
+    to supply a terrific frame experience whilst keeping just a selection of 20 modules
+    that are active. Stapes main focus is on route production, custom events, and
+    information methods. Stapes is the building block that will assist you to find
+    the difference between a conventional program and an application that is kicking
+    some serious ass! (In their own words!)
+
+
+    ## Selecting The Finest JavaScript Development Framework
+
+
+    Deciding on a frame should not be on the amount of attributes that the specific
+    frame can provide. It is apparent that phrases such as ''next generation'' can
+    seem very attractive, but what it comes down to is that the true functionality
+    of this frame and how that performance may be used in your own project, program,
+    applications which you''re building. Some frameworks supply more expertise in
+    a sense in which the frame is constructed by magnificent programmers with years
+    of experience supporting their backs, whereas smaller net frameworks will concentrate
+    on community-oriented characteristics which may be integrated within distinct
+    frame modules.'
+  mdcn: '
+
+    ## D3.js
+
+
+    总体展示令人满意。找到适合自己的 D3.js 语法用法需要时间，但正如你在本页案例中会注意到的，这是非常值得的。
+
+
+    D3 的创始人——Mike Bostock——今年在 Reddit 上进行了一场引人入胜的"Ask Me Anything"（AMA）活动，其中充满了富有洞察力的问答，将帮助你更好地理解这一目标、愿景和这项努力背后的动力。准备好投入一些时间来消化所有的回复。
+
+
+    ...
+
+
+    ## Ember
+
+
+    Ember.js —— 一个用于构建雄心勃勃的 Web 应用程序的框架。
+
+
+    Ember 是一个面向雄心壮志开发者的现代 Web 开发平台。它以帮助开发者构建复杂的大型客户端软件而闻名——Ember 以其简洁性和流畅的性能表现脱颖而出，使
+    Web 应用开发成为顺畅的体验。入门 Ember 轻松快捷，许多开发者不遗余力地制作指南和教程，介绍如何开始使用这个灵活的框架。
+
+
+    Ember 成功避开了那些让现代框架脱颖而出的华丽模块和术语，相反，Ember 在保持传统功能的同时，带来了构建优秀应用程序所必需的能量和专注，如 Discourse
+    讨论论坛。
+
+
+    ## Aurelia
+
+
+    Aurelia
+
+
+    Aurelia 是一个自诩为下一代 Web 开发框架的项目，主要专注于让编程（Web 开发）成为一个创造性的过程。也许让 Aurelia 称得上"下一代"的是，它完全使用
+    ES6（最新的 JS 标准）构建，并且目前已经集成了一些可用的 ES7（另一个 JS 标准）特性，同时保持在所有现代浏览器上运行的能力。该框架构建于模块化的框架之上，意味着它由许多小型和大型的库组成，可以根据你正在构建的应用程序类型的需求，一起使用或单独使用。
+
+
+    然而，这些都只是 Aurelia 所具备的更有远见的特性中的一小部分，强烈建议你阅读 Rob Eisenberg 关于 Aurelia 的撰写文章，以充分理解该框架的目标。
+
+
+    ## Knockout
+
+
+    Knockout.js
+
+
+    Knockout.js 的主要特性是声明式绑定、自动 UI 刷新、依赖跟踪和模板功能。使用简单的语法将现有的 DOM 元素与数据单元关联起来。每当你更新数据单元时，UI
+    的变化会实时反映出来。在你的数据单元之间创建关联以组合和转换它们。创建复杂的 UI 模型作为用于数据单元的函数的一部分。借助原生 JavaScript 的帮助，Knockout
+    可以非常轻松地将自身与任何其他可用的框架集成，包括我们这里汇总的每一个框架。
+
+
+    ## Keystone
+
+
+    KeystoneJS —— 基于 Express 和 MongoDB 构建的 Node.js CMS 和 Web 应用程序平台
+
+
+    我们或许应该在另一个 Node.js 框架清单中提到这个框架（我们会的），但 Keystone 的能力在现代前端 Web 开发中确实脱颖而出，而且我们并不经常看到功能完备的**内容管理系统**（CMS）框架。借助
+    Express.js 和 MongoDB 的帮助构建，Keystone 实现了动态路由、数据库字段管理、交互式和动态的 Admin UI（在你构建应用程序/内容系统时即可使用）、易于操作的代码库、表单处理、电子邮件发送和管理等功能，以及许多其他使优秀
+    CMS 成为优秀 CMS 的特性！
+
+
+    ...
+
+
+    ## Backbone
+
+
+    ### Backbone.js
+
+
+    使用最传统的 Web 开发库构建优雅的单页和单页面应用程序，如果你不注意代码的结构和联盟，可能会将你的代码库变成一团彻底的意大利面条。Backbone 的构建理念是：所有服务器端功能都应通过
+    API 流动，从而减少需要编写的代码量，以实现与更复杂的 Web 框架相同的功能。
+
+
+    Backbone 是 JavaScript 开发者中最受欢迎的 Web 开发框架之一，部分原因有二——它易于理解的使用模块，以及非常简单的学习曲线。
+
+
+    ## Stapes
+
+
+    Stapes.js —— 做得恰到好处的小型 JavaScript 框架
+
+
+    Stapes 可以说是 Backbone 的某种继承者，" boasting "（自夸）其能够在仅保持 20 个活跃模块精选的同时提供出色的框架体验。Stapes
+    的主要关注点是路由创建、自定义事件和数据方法。Stapes 是帮助你发现传统应用程序和*真正厉害*的应用程序之间差距的构建基石！（用他们自己的话说！）
+
+
+    ## 选择最佳 JavaScript 开发框架
+
+
+    选择框架不应该只看特定框架能提供的功能数量。显然，"next generation"这样的词语听起来很有吸引力，但最终关键在于框架的**实际功能**，以及该功能如何在你正在构建的项目、应用、软件中使用。一些框架提供更多经验，体现在框架由拥有多年经验的出色开发者构建；而较小的
+    Web 框架则侧重于社区导向的特性，可以集成到不同的框架模块中。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 15]
+
+
+    happy with the general presentation. It requires time to find out the appropriate
+    syntax use of D3.js, but it''s so well worth it as you''ll notice in the cases
+    within this page.
+
+
+    The founder Of D3 -- Mike Bostock -- did an intriguing Ask Me Anything (AMA) about
+    Reddit this past year, and it is packed with insightful questions and answers
+    which will help you better understand the goal, the vision and the drive behind
+    this endeavor. Be ready to invest some time digesting all of the replies.
+
+
+    ...
+
+
+    # Ember
+
+
+    Ember.js A Frame for producing ambitious web programs.
+
+
+    Ember is a Contemporary web development platform for its ambitiously-oriented
+    programmers. Known for its ability to help programmers build complex large-client-side
+    software -- Ember stands out with its ease and flow of performance to generate
+    web app development a smooth experience. Getting started with Ember is painless
+    and quick, and lots of programmers have gone out of the way to make guides and
+    tutorials about the best way best to begin with this elastic frame.
+
+
+    Ember has Managed to steer clear of gleaming modules and terms which produce contemporary
+    frameworks stick out in'
+  - '[PAGE 16]
+
+
+    the audience, rather, Ember maintains conventional functionality whilst bringing
+    forth electricity and centeredness that is crucial for building great programs,
+    like the Discourse conversation forum.
+
+
+    ...
+
+
+    # Aurelia
+
+
+    House Aurelia
+
+
+    Aurelia is A self-proclaimed next generation internet development framework that
+    mostly focuses on creating programming (web development) a creative procedure.
+    Maybe what makes Aurelia next-generation is the fact that it''s been built only
+    with ES6 (the newest JS standard) and also integrates a number of those accessible
+    ES7 (another JS standard) attributes currently, whilst keeping the capacity to
+    operate on all modern browsers.) The frame is constructed upon a module-like frame,
+    meaning that it is made up of many small and large libraries which may be used
+    either jointly, or individually based on the essentials of the sort of program
+    that you''re building.
+
+
+    However All these are only a couple of the more visionary attributes which Aurelia
+    packs, plus it is strongly suggested that you browse Rob Eisenberg''s writeup
+    around Aurelia to totally comprehend that the frameworks purpose.'
+  - '[PAGE 17]
+
+
+    Knockout
+
+
+    # Knockout Home
+
+
+    The Predominant characteristics of Knockoutjs are declarative bindings, automated
+    UI refresh, and dependency tracking, and templating attributes. Relate your present
+    DOM elements with information units using straightforward syntax. At any time
+    you update your information units, the fluctuations in UI are mirrored in real
+    time. Create links between your information units to unite and change them. Create
+    complex UI versions as part of those functions which you use to your own information
+    units. With assistance from native JavaScript, Knockout can make it amazingly
+    simple to incorporate itself using any other accessible frame on the market, including
+    each and every one on our own roundup here.
+
+
+    Keystone
+
+
+    KeystoneJS · Node.js cms and internet application platform constructed on Express
+    and MongoDB
+
+
+    We ought to Probably be mentioning this frame in another Node.js framework checklist
+    (which we will), however Keystone''s capabilities actually stick out in contemporary'
+  - '[PAGE 18]
+
+
+    front-end internet development, and it isn''t often that we view a full-fledged
+    Content Management System (CMS) framework accessible. Constructed with assistance
+    from Express.js and MongoDB, Keystone allows performance such as -- lively routes,
+    database area direction, an interactive and lively Admin UI that is accessible
+    even as you are constructing your apps/content systems, an easy to operate with
+    code foundation, type processing, email sending, and direction, in addition to
+    lots of additional attributes which produce great CMS exactly what they''re --
+    great!
+
+
+    ...
+
+
+    # ## Backbone
+
+
+    # ### Backbone.js
+
+
+    Construction Elegant one-page and single-page software having the most conventional
+    web development libraries may transform your code base to some complete spaghetti
+    dinner if you are not paying attention to a code''s structure and coalition. Backbone
+    is constructed with the notion in your mind that all server-side functions must
+    flow via an API, reducing the amount of code that should be written so as to attain
+    the identical complex functionality of more complex web frameworks.
+
+
+    Backbone is Amongst a number of the very popular web development frameworks for
+    JavaScript programmers, and partially for 2 reasons -- it''s simple to comprehend
+    usability'
+  - '[PAGE 19]
+
+
+    modules, in addition to the exact simple learning curve.
+
+
+    ...
+
+
+    # Stapes
+
+
+    Stapes.js The small Javascript frame that does only enough
+
+
+    Stapes is Somewhat of a successor of Backbone, ''boasting'' using its capacity
+    to supply a terrific frame experience whilst keeping just a selection of 20 modules
+    that are active. Stapes main focus is on course production, custom events, and
+    information methods. Stapes is the building block that will assist you to find
+    the difference between a conventional program and an application that is kicking
+    some serious ass! (In their own words!)
+
+
+    ...
+
+
+    # Selecting The finest JavaScript Development Framework
+
+
+    Deciding on a Frame should not be on the amount of attributes that the specific
+    Frame can provide, it is apparent that phrases such as ''next generation'' can
+    seem Very attractive, but what it comes down to is that the true functionality
+    of this Frame and how that performance may be used in your own project, program,
+    Applications which you''re building. Some frameworks supply more expertise in
+    a Sense in which the frame is constructed by magnificent'
+  - '[PAGE 20]
+
+
+    programmers with years of Experience supporting their backs, whereas smaller net
+    frameworks will concentrate on Community-oriented characteristics which may be
+    integrated within distinct frame modules.'
+pages:
+- img_proc: true
+  md: '# # JAVASCRIPT
+
+
+    # # FRAMEWORKS
+
+
+    ![](img/773d42da20e26ca59cca162d31fc1cf8_0_0.png)
+
+
+    MICHAEL REDCAR'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'The JavaScript community underwent a few really big changes this past year.
+    ECMAScript 6 was finally standardized and printed, and many well-known compilers
+    and web browsers are working hard to accommodate to all of the new regulations
+    and changes. To completely comprehend this type of massive update (the previous
+    ES upgrade was in 2009), it is required to familiarize yourself within a good
+    step-by-step guide which discusses each of the facets of the new benchmark, and
+    the very best such guide we can find comes from Lars Kappert who shared his own
+    ES6 record of changes article in Smashing Mag.
+
+
+    In relation to Implemented ES6 attributes into browsers themselves, Mozilla Firefox
+    (85 percent) and Google Chrome (71 percent) are now leading the package for everybody
+    else to follow. However, JavaScript is a great deal more than only a normal, some
+    genuinely great programs and platforms are constructed and released for people
+    this season, among the newest being OS.js -- a completely functional cloud platform
+    which incorporates Desktop Computer features inside the browser.
+
+
+    JavaScript Is growing quickly, it is getting more native, but most significantly
+    -- it is getting more stable. The amount of internet development frameworks which
+    have come in the JavaScript world at the past years has really boomed, and lots
+    of the frameworks have already established enormous communities about them, Angular,
+    Meteor and React to list a couple. In the present article we''ll take a closer
+    look at the now hottest JavaScript frameworks and we firmly feel that these frameworks
+    will probably be seeing a great deal of'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'expansion, participation, and vulnerability in 2016. Please discuss with us
+    your personal experiences with all the frameworks that you''ve used from our listing
+    since we''d really like to hear more details regarding the usage cases for every
+    individual frame.
+
+
+    # # Reactive JavaScript Frameworks
+
+
+    Reactive Web development is all about responsiveness, resilience, scalability
+    and precision. We would like to construct applications and applications that''s
+    responsive to the real time requirements that are being levied on it, we also
+    need our systems to be resilient from summit performance, or the type of requirements
+    that come from unknown sources, and we all need our endeavors to be scalable so
+    that if the time comes, we can easily upgrade or downgrade our applications for
+    optimum performance. These JavaScript frameworks are constructed with responsive
+    internet development in mind, and we look forward to hearing about more such frameworks
+    that we perhaps left from the specific list.
+
+
+    # # MobX
+
+
+    With MobX You''ll have the ability to start celebrating your information structure,
+    while also being able of creating your functions responsive, meaning that they
+    will reassess themselves if information is changed in real time. Take any part
+    of information out of your arrangement and turn it into another row, then flip
+    your functions to auto-updating'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'formulas. MobX''s assignment is to aid programmers easy and productive perspectives
+    which are always completely left, without having the additional fat that other
+    full-renderer frameworks may bring to the table.
+
+
+    ...
+
+
+    # Omniscient
+
+
+    # Omniscient.js
+
+
+    Omniscient Provides programmers with tools and features to construct operational
+    UIs based on transparent components; allowing a more static version of development.
+    Very much like static web development we''d perform in HTML, however, Omniscient
+    empowers the qualities of programming. You''re still able to control your Perspectives
+    to become eloquent, only minus needing to operate with items like templating engines,
+    or domain particular languages. Omniscient promotes small, composable parts, and
+    shared performance via mixins.
+
+
+    ...
+
+
+    # Ractive.js
+
+
+    Ractive.js The gemstone era of Internet development'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Ractive has Been in existence for some time, many of those top worlds sites
+    have adopted it has native performance for constructing template oriented User
+    Interface elements that support JavaScript characteristics and flexibility. Creating
+    interactive program like adventures inside the browser isn''t a simple endeavor,
+    it never had been, but Ractive is among these rare frameworks which help to bridge
+    this difference and helps to construct to get a simpler experience. Eugene Mirotin
+    from Toptal goes deeper into the capabilities of Ractive and investigates the
+    process of constructing an easy, responsive and interactive program.
+
+
+    ...
+
+
+    # Mercury
+
+
+    # Mercury
+
+
+    Mercury is Lightweight, easy and powerful modular front framework which gives
+    numerous pre-built net modules and elements which you could begin implementing
+    on your programs straight away. The demonstration page showcases matters like
+    reactive reversal of functions, such as taking the instance of a very simple Canvas
+    picture that has the established colour of ''blue'', inside precisely the identical
+    browser window that you can in real time change the colour to ''red'' as the answer
+    is totally reactive and responsive, giving you more space and room to develop
+    really multi-dimensional web programs.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'WebRx
+
+
+    WebRx The Browser established MVVM Framework for ReactiveX powered Single Page
+    Programs
+
+
+    WebRx, a Model--perspective--viewmodel (MVVM) frame that is built on top of RX.js
+    for blending together functional and responsive programming patterns which encourage
+    visible and observable data binding, customer unwanted routing, and templating
+    attributes. When it is an easy and responsive Hello World you are seeking to construct,
+    or a totally operational one-page ToDo program, WebRx was constructed to help
+    hasten the practice of contemporary internet app development, also delivers on
+    its promise without hesitation. Additionally, it is quite lightweight, coming
+    in at just 30kb once minified and optimized.
+
+
+    Deku
+
+
+    Readme Deku
+
+
+    Deku is a Manifestation of a much more lightweight solution to React from the
+    group at Segment. Deku''s most important job is to help leave UIs using pure JavaScript
+    functions along with also the virtual Document Object Model (DOM). With'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Deku you do not have to rely on courses, and rather you are able to use direct
+    purposes to move jobs to third party software such as Redux, also because Segment
+    wishes to keep things simple, Deku will largely work just within new and modern
+    browsers. Works great with the current React advancement community.
+
+
+    ...
+
+
+    # Riot.js
+
+
+    Riot.js -- A React such as user interface micro library
+
+
+    React has Definitely been a massive influencer for the majority of the responsive
+    JavaScript frameworks we see in the present development Earth, and Riot.js is
+    no exclusion. In their own words, Riot.js is React-based UI library which concentrates
+    on micro purposes. Streamdata has researched this approach in enormous detail
+    in their own blog. (Once you are done with that report, scroll to the ground to
+    find out about more Riot.js articles they have printed!) Riot.js has been preserved
+    by the programmers at Muut -- among the most obvious discussion platforms we''ve
+    seen so far, which can be super-reactive and interactive, and so expect the identical
+    type of functionality on your own programs as soon as you start using Riot''s
+    performance on your endeavors.
+
+
+    ...'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Mithril
+
+
+    # Mithril
+
+
+    Mithril Stands out with its elastic library dimensions (7kb) in addition to a
+    prescient documentation that is constantly updated with fresh contexts and approaches
+    since the library itself excels in development procedure. The benchmarks compared
+    to another famous JavaScript frameworks are shocking, and will leave you curious
+    to check it out.
+
+
+    ...
+
+
+    # Vue.js
+
+
+    # vue.js
+
+
+    Vue.js is Very small when it comes to describing itself as a frame, it prefers
+    to use the term ''library'' which then blended with different tools could be turned
+    into a completely operational frame. Vue is for creating and developing contemporary
+    and slick internet interfaces. Up until quite recently, it was still a beta job,
+    however, October 2015 indicated the published of the V1 so that Vue is prepared
+    for real-world growth, and so many are already sharing their own opinions and
+    experiences with the frame. If you like to make code which is logical from the
+    instant that you take a look at it, then it is definitely worth mentioning Vue
+    an attempt.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '...
+
+
+    # MVC JavaScript Frameworks
+
+
+    MVC is a Software strategy that separates application logic from presentation.
+    In practice, it enables your webpages to include minimum scripting since the demonstration
+    is distinct from the PHP scripting. MVC frameworks which we''re going to be having
+    a look at in a minute have improved extensively through time, and bulk supply
+    features that allow seamless mobile application development also.
+
+
+    Internet Frameworks like Angular (that is shortly coming to V2) and React have
+    shifted the internet development arena for the better, and so much enthusiasm
+    is concealed inside the anticipation of what''s yet to come.
+
+
+    # Angular.js
+
+
+    # AngularJS -- Superheroic JavaScript MVW Framework
+
+
+    Google''s Ever-popular web development frame Angular has exploded with popularity
+    lately, and continues to offer a good foundation foundation for programmers that
+    are working strictly with the newest industry standards and skills. Angular.js
+    in itself supplies a set of contemporary design and development features for rapid
+    application development, and Google has become far as developing another region
+    of the website that provides the Material Design specification that'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'will assist you build apps that remain in contact with the most contemporary
+    approaches you will find.
+
+
+    Angular 2 Is coming the first BETA release, which you may learn more about in
+    the most recent article from Angular''s programmer team. And due to the extensive
+    framework temperament of Angular, it completely supports extendable plugins and
+    libraries.
+
+
+    ...
+
+
+    # jQuery
+
+
+    # jQuery
+
+
+    Together with the Type of lifespan which this project retains already, even people
+    living under a stone will have known of jQuery before. Whenever somebody wishes
+    to expand their site (or cellular page) and also make it more interactive; they
+    depend on the performance of jQuery. This very small library transforms the entire
+    net to a totally interactive and enjoyable experience, with a documented whopping
+    70 percent+ of the World''s leading sites having something related to jQuery.
+    JQuery widgets and plugins are one of the most hunted components within the front
+    developer orbit.
+
+
+    Firms Such as WordPress, Google, IBM and lots of others rely upon jQuery to offer
+    a one of a kind web browsing experience with its own staff not to mention the
+    huge sea of'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'net users. JQuery can be fully compliant with cellular devices, also contains
+    another jQuery Mobile library to care for everything mobile.
+
+
+    ...
+
+
+    # React
+
+
+    A JavaScript library for constructing user interfaces React
+
+
+    React is The internet programming orbit''s most recent crown stone, even spiritual
+    Angular.js consumers have made the change to React since it allows for simpler
+    back-end growth without the necessity of immersing in the intricacy of a front
+    end framework. React is a JavaScript library that is being preserved by Facebook,
+    and the chief field of experience behind React would be to assist programmers
+    implement a digital DOM; rather output a value known as the Virtual DOM. The Virtual
+    DOM is then diffed with the present condition of the DOM, which creates a listing
+    of DOM surgeries that will make the recent DOM seem like the brand new one. Those
+    operations are implemented quickly in a heap.
+
+
+    In relation to Popularity, a programmer recently released an intriguing finding
+    between the visitors stats of their sub-reddit r/React and r/Angular around Reddit
+    -- and the two appear to be receiving the exact same traffic volume daily today,
+    meaning that React has really caught up with Angular in more ways than you.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '...
+
+
+    # Socket
+
+
+    Socket.IO
+
+
+    Socket''s Gained a lots of effort at the programmer community. With Socket it''s
+    possible to enjoy a fully operational real time communication involving the client
+    and the host. Socket is split into two distinct components -- the first part is
+    really a client-library that runs out of the browser, whereas the server-library
+    is developed on top of Node.js. Both libraries reveal a very similar API, also
+    it''s also event driven; similar to Node.js is. With Socket you are able to execute
+    real time streaming of binary, instant messaging programs, interactive file cooperation,
+    real-time stats to your programs and jobs (analytics), and so much more.
+
+
+    Microsoft Office is determined by Socket to offer much of its real time performance,
+    as does Yammer. Socket works greatly with the WebSocket protocol to offer a clear
+    experience.
+
+
+    ...
+
+
+    # Polymer
+
+
+    Welcome Polymer 1.0'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Google''s Polymer project does not just spice up things with the usage of Material
+    Design, this stupefying JavaScript frame is all about quickly and contemporary
+    web design via the capacity to produce and reuse web components. The project spent
+    quite a while at a BETA release, but the past year we watched the very first launch
+    of a V1 and the job has snowballed ever since.
+
+
+    While many Are still wondering what''s the real distinction between Polymer and
+    Angular (because both share many similar characteristics such as code syntax and
+    layout attributes), we all know for a fact that Polymer brings about a new sort
+    of development experience which will propel the remainder of the industry to a
+    modern net component based development strategy.
+
+
+    ...
+
+
+    # Node.js
+
+
+    # Node.js
+
+
+    Node.js is Very likely to be the most effective frame that we''ve seen since the
+    beginning of JavaScript, and the job has grown tremendously large in a recent
+    year or two. While many were calling the downfall of Node.js and the increase
+    of additional server-side frameworks, Node.js has managed to keep its leadership
+    glory to this very day. Node.js has gotten'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'immensely scalable and flexible with its capacities, and lots of programmers
+    rank it over specialized programming languages like Java and . NET! (at least
+    to the internet)
+
+
+    Node.js is Constructed on the top of Google''s V8 JavaScript motor and the chief
+    use of the framework would be to help construct interaction vigorous web programs
+    like network websites, content loading sites, feature hefty one-page programs,
+    along with other programs that rely on significant data interaction. This open
+    minded endeavor may be learned by novices just because it could be readily be
+    chosen by programmers who come from different languages. The learning curve is
+    identical for everybody.
+
+
+    This past Year, Node created a complete blend with IO.js -- attracting in a protracted
+    list of characteristics and possible.
+
+
+    ...
+
+
+    # Meteor
+
+
+    # Meteor
+
+
+    Meteor has Developed from an easy inspirational idea to a fully operational and
+    financed project that''s home to tens of thousands of passionate developers. Meteor
+    has in many ways revolutionized the developed of real time mobile and internet
+    applications which may be constructed from inside a singular development port.
+    Any web application built with Meteor can'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'also be mechanically compatible with cellular devices -- to the point at which
+    you are able to convert your current web programs into mobile programs and printed
+    them on the very common cellular program shops!
+
+
+    Together with the Recent launch of Galaxy (cloud hosting stage), Meteor is creating
+    front-end and backend improvement a unified, complexity-less encounter. Meteor''s
+    a secure full-stack frame that supports native JavaScript terminology for assisting
+    you to build scalable and modern internet and mobile programs. The general public
+    bundle repository Atmosphere has thousands of printed packages which will allow
+    you to build multiplex software on the fly.
+
+
+    ...
+
+
+    # D3.js
+
+
+    # D3.js Data Driven Records
+
+
+    Visuals, cartoon, And images are a basic portion of the net. Without the execution
+    of great images within our layouts, we danger of imitating our layouts as gloomy
+    and shallow, based on the given conditions. D3 is a data-driven visual component
+    library which aids designers and developers to use JavaScript to construct truly
+    astonishing visual information reports, including artworks, interactive bullet
+    graphs, sunburst diagrams, and an assortment of information matrixes, phrase clouds,
+    and numerous other kinds of information visualizations that can leave your customers
+    motivated and'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'happy with the general presentation. It requires time to find out the appropriate
+    syntax use of D3.js, but it''s so well worth it as you''ll notice in the cases
+    within this page.
+
+
+    The founder Of D3 -- Mike Bostock -- did an intriguing Ask Me Anything (AMA) about
+    Reddit this past year, and it is packed with insightful questions and answers
+    which will help you better understand the goal, the vision and the drive behind
+    this endeavor. Be ready to invest some time digesting all of the replies.
+
+
+    ...
+
+
+    # Ember
+
+
+    Ember.js A Frame for producing ambitious web programs.
+
+
+    Ember is a Contemporary web development platform for its ambitiously-oriented
+    programmers. Known for its ability to help programmers build complex large-client-side
+    software -- Ember stands out with its ease and flow of performance to generate
+    web app development a smooth experience. Getting started with Ember is painless
+    and quick, and lots of programmers have gone out of the way to make guides and
+    tutorials about the best way best to begin with this elastic frame.
+
+
+    Ember has Managed to steer clear of gleaming modules and terms which produce contemporary
+    frameworks stick out in'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'the audience, rather, Ember maintains conventional functionality whilst bringing
+    forth electricity and centeredness that is crucial for building great programs,
+    like the Discourse conversation forum.
+
+
+    ...
+
+
+    # Aurelia
+
+
+    House Aurelia
+
+
+    Aurelia is A self-proclaimed next generation internet development framework that
+    mostly focuses on creating programming (web development) a creative procedure.
+    Maybe what makes Aurelia next-generation is the fact that it''s been built only
+    with ES6 (the newest JS standard) and also integrates a number of those accessible
+    ES7 (another JS standard) attributes currently, whilst keeping the capacity to
+    operate on all modern browsers.) The frame is constructed upon a module-like frame,
+    meaning that it is made up of many small and large libraries which may be used
+    either jointly, or individually based on the essentials of the sort of program
+    that you''re building.
+
+
+    However All these are only a couple of the more visionary attributes which Aurelia
+    packs, plus it is strongly suggested that you browse Rob Eisenberg''s writeup
+    around Aurelia to totally comprehend that the frameworks purpose.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'Knockout
+
+
+    # Knockout Home
+
+
+    The Predominant characteristics of Knockoutjs are declarative bindings, automated
+    UI refresh, and dependency tracking, and templating attributes. Relate your present
+    DOM elements with information units using straightforward syntax. At any time
+    you update your information units, the fluctuations in UI are mirrored in real
+    time. Create links between your information units to unite and change them. Create
+    complex UI versions as part of those functions which you use to your own information
+    units. With assistance from native JavaScript, Knockout can make it amazingly
+    simple to incorporate itself using any other accessible frame on the market, including
+    each and every one on our own roundup here.
+
+
+    Keystone
+
+
+    KeystoneJS · Node.js cms and internet application platform constructed on Express
+    and MongoDB
+
+
+    We ought to Probably be mentioning this frame in another Node.js framework checklist
+    (which we will), however Keystone''s capabilities actually stick out in contemporary'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'front-end internet development, and it isn''t often that we view a full-fledged
+    Content Management System (CMS) framework accessible. Constructed with assistance
+    from Express.js and MongoDB, Keystone allows performance such as -- lively routes,
+    database area direction, an interactive and lively Admin UI that is accessible
+    even as you are constructing your apps/content systems, an easy to operate with
+    code foundation, type processing, email sending, and direction, in addition to
+    lots of additional attributes which produce great CMS exactly what they''re --
+    great!
+
+
+    ...
+
+
+    # ## Backbone
+
+
+    # ### Backbone.js
+
+
+    Construction Elegant one-page and single-page software having the most conventional
+    web development libraries may transform your code base to some complete spaghetti
+    dinner if you are not paying attention to a code''s structure and coalition. Backbone
+    is constructed with the notion in your mind that all server-side functions must
+    flow via an API, reducing the amount of code that should be written so as to attain
+    the identical complex functionality of more complex web frameworks.
+
+
+    Backbone is Amongst a number of the very popular web development frameworks for
+    JavaScript programmers, and partially for 2 reasons -- it''s simple to comprehend
+    usability'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'modules, in addition to the exact simple learning curve.
+
+
+    ...
+
+
+    # Stapes
+
+
+    Stapes.js The small Javascript frame that does only enough
+
+
+    Stapes is Somewhat of a successor of Backbone, ''boasting'' using its capacity
+    to supply a terrific frame experience whilst keeping just a selection of 20 modules
+    that are active. Stapes main focus is on course production, custom events, and
+    information methods. Stapes is the building block that will assist you to find
+    the difference between a conventional program and an application that is kicking
+    some serious ass! (In their own words!)
+
+
+    ...
+
+
+    # Selecting The finest JavaScript Development Framework
+
+
+    Deciding on a Frame should not be on the amount of attributes that the specific
+    Frame can provide, it is apparent that phrases such as ''next generation'' can
+    seem Very attractive, but what it comes down to is that the true functionality
+    of this Frame and how that performance may be used in your own project, program,
+    Applications which you''re building. Some frameworks supply more expertise in
+    a Sense in which the frame is constructed by magnificent'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: programmers with years of Experience supporting their backs, whereas smaller
+    net frameworks will concentrate on Community-oriented characteristics which may
+    be integrated within distinct frame modules.
+  merge: -1
+  pgno: 20
+toc:
+- - '###'
+  - MobX
+- - '###'
+  - Omniscient.js
+- - '###'
+  - Ractive.js
+- - '###'
+  - Mercury
+- - '###'
+  - WebRx
+- - '###'
+  - Deku
+- - '###'
+  - Riot.js
+- - '###'
+  - Mithril
+- - '###'
+  - Vue.js
+- - '####'
+  - AngularJS —— 超级JavaScript MVW框架
+- - '####'
+  - jQuery
+- - '####'
+  - 用于构建用户界面的JavaScript库 React
+- - '####'
+  - Socket.IO
+- - '####'
+  - 欢迎使用 Polymer 1.0
+- - '####'
+  - Node.js
+- - '####'
+  - Meteor
+- - '####'
+  - D3.js
+- - '####'
+  - D3.js 数据驱动文档
+- - '###'
+  - Ember
+- - '###'
+  - Aurelia
+- - '###'
+  - Knockout
+- - '###'
+  - Keystone
+- - '###'
+  - Stapes
+- - '##'
+  - 选择最佳 JavaScript 开发框架
+- - '###'
+  - MobX
+- - '###'
+  - Omniscient.js
+- - '###'
+  - Ractive.js
+- - '###'
+  - Mercury
+- - '###'
+  - WebRx
+- - '###'
+  - Deku
+- - '###'
+  - Riot.js
+- - '###'
+  - Mithril
+- - '###'
+  - Vue.js
+- - '####'
+  - AngularJS —— 超级JavaScript MVW框架
+- - '###'
+  - jQuery
+- - '####'
+  - jQuery
+- - '####'
+  - 用于构建用户界面的JavaScript库 React
+- - '###'
+  - Socket
+- - '####'
+  - Socket.IO
+- - '###'
+  - Polymer
+- - '####'
+  - 欢迎使用 Polymer inka 1.0
+- - '###'
+  - Node.js
+- - '####'
+  - Node.js
+- - '###'
+  - Meteor
+- - '####'
+  - Meteor
+- - '###'
+  - D3.js
+- - '####'
+  - D3.js
+- - '####'
+  - D3.js 数据驱动文档
+- - '###'
+  - Ember
+- - '###'
+  - Aurelia
+- - '###'
+  - Knockout
+- - '###'
+  - Keystone
+- - '###'
+  - Backbone
+- - '####'
+  - Backbone.js
+- - '###'
+  - Stapes
+- - '##'
+  - 选择最佳 JavaScript 开发框架
+- - '##'
+  - Backbone
+- - '###'
+  - Backbone.js
+- - '###'
+  - MobX
+- - '###'
+  - Omniscient.js
+- - '###'
+  - Ractive.js
+- - '###'
+  - Mercury
+- - '###'
+  - WebRx
+- - '###'
+  - Deku
+- - '###'
+  - Riot.js
+- - '###'
+  - Mithril
+- - '###'
+  - Vue.js
+- - '####'
+  - AngularJS —— 超级JavaScript MVW框架
+- - '###'
+  - jQuery
+- - '####'
+  - jQuery
+- - '####'
+  - 用于构建用户界面的JavaScript库 React
+- - '###'
+  - Socket
+- - '####'
+  - Socket.IO
+- - '###'
+  - Polymer
+- - '####'
+  - 欢迎使用 Polymer 1.0
+- - '###'
+  - Node.js
+- - '####'
+  - Node.js
+- - '###'
+  - Meteor
+- - '####'
+  - Meteor
+- - '###'
+  - D3.js
+- - '####'
+  - D3.js
+- - '####'
+  - D3.js 数据驱动文档
+- - '###'
+  - Ember
+- - '###'
+  - Aurelia
+- - '###'
+  - Knockout
+- - '###'
+  - Keystone
+- - '###'
+  - Backbone
+- - '####'
+  - Backbone.js
+- - '###'
+  - Stapes
+- - '##'
+  - 选择最佳 JavaScript 开发框架
