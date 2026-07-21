@@ -1,0 +1,614 @@
+name: ALL-IN-ONE Place Java, Spring, Jpa, Hibernate End To End WebApplication Development
+name_cn: 全合一 Java, Spring, Jpa, Hibernate 端到端 Web 应用开发指南
+slug: all-in-one-place-java-spring-jpa-hibernate-end-to-end-webapp
+toc:
+- - '#'
+  - 全合一 Java, Spring, Jpa, Hibernate 端到端 Web 应用开发指南
+- - '##'
+  - 引言
+- - '##'
+  - 第 1 章：JPA 一对映射
+- - '##'
+  - 第 2 章：JPA 一对多
+- - '##'
+  - 第 3 章：JPA 多对一
+- - '##'
+  - 第 4 章：JPA 多对多
+- - '##'
+  - 引言
+- - '##'
+  - 医院系统（工作流）
+- - '##'
+  - 简介
+- - '###'
+  - 第 1 章：简介
+- - '###'
+  - 第 2 章：简介 - 实验 - 1 - HelloWorld - XML
+- - '###'
+  - 所有实验：
+- - '###'
+  - 第 3 章：注入（将依赖对象注入到调用对象（父对象）通过（Setter、构造函数或其他任何方式）调用对象（父对象））
+- - '##'
+  - 实验 - 2 - Setter 注入 – XML
+- - '###'
+  - Printer.java
+- - '###'
+  - CSVPrinter.java
+- - '###'
+  - JSONPrinter.java
+- - '###'
+  - OutputHelper.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - 客户端完整请求流程 (Client.java)
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 3 - 构造函数注入 - XML
+- - '###'
+  - Printer.java
+- - '###'
+  - CSVPrinter.java
+- - '###'
+  - JSONPrinter.java
+- - '###'
+  - OutputHelper.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - 完整请求流程
+- - '###'
+  - Client.java
+- - '##'
+  - 第 4 章 Spring Beans 注入依赖对象（父对象）通过 Setter 方法
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 5 - 内部 Bean 嵌套 Bean – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 6 - 内部 Bean 构造函数 – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 第 5 章：Spring Bean 作用域
+- - '###'
+  - 注入（将对象注入父对象中）
+- - '###'
+  - 实验 - 7 - Bean 作用域 – XML
+- - '###'
+  - 实验 - 8 - Bean 作用域 – XML
+- - '###'
+  - 实验 - 9 - Bean 作用域注解
+- - '####'
+  - 作用域 = "Singleton"
+- - '####'
+  - 作用域 = "Prototype"
+- - '###'
+  - Client 请求流程
+- - '##'
+  - 实验 - 7 - Bean 作用域 Singleton Scope – XML
+- - '###'
+  - MyService.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 8 - Bean 作用域 Prototype Scope – XML
+- - '###'
+  - MyService.java
+- - '###'
+  - SpringBeans.xml
+- - '##'
+  - 完整的客户端流程
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 9 - Bean 作用 - 注解
+- - '###'
+  - MyService.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 第 6 章：Spring Beans 属性（对象集合）
+- - '###'
+  - 注入（将依赖对象注入到调用对象（父对象）中）
+- - '###'
+  - Spring Beans 属性（对象集合）
+- - '###'
+  - Spring 容器逻辑：
+- - '##'
+  - 实验 - 10 - Beans Properties List Properties – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 11 - Beans Properties ListFactoryBean - XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '##'
+  - 实验 - 12 - Beans 属性 List - XML
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 13 - Beans 属性 Set Properties – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 14 - Beans 属性 Set - XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 15 - Beans 属性 Map Properties – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 16 - Beans Map MapFactoryBean – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 17 - Beans Properties Map
+- - '###'
+  - Customer.java
+- - '##'
+  - 实验 - 18 - Beans Properties Collection - XML
+- - '###'
+  - Customer.java
+- - '##'
+  - 第 7 章：Spring Beans 高级
+- - '##'
+  - 实验 - 19 - Beans 继承 – XML
+- - '##'
+  - 实验 - 20 - Beans 覆盖 – XML
+- - '##'
+  - 实验 - 21 - Beans 初始化与销毁 – XML
+- - '##'
+  - 实验 - 22 - Spring 初始化 方法 - XML
+- - '##'
+  - 实验 - 19 - Beans 继承 – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 20 - Beans 覆盖 – XML
+- - '###'
+  - Customer.java
+- - '###'
+  - Person.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 21 - Beans 初始化与销毁 – XML
+- - '###'
+  - PrinterHelper.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 22 - Spring 初始化 方法 - XML
+- - '###'
+  - PrinterHelper.java
+- - '###'
+  - SpringBeans.xml
+- - '##'
+  - 第 8 章：Spring Beans 属性（自动注入）
+- - '###'
+  - 自动注入（将依赖对象注入到调用对象（父对象））
+- - '###'
+  - Spring 容器逻辑
+- - '##'
+  - 实验 - 23 - Beans 自动装配扫描
+- - '###'
+  - PrinterHelper.java
+- - '###'
+  - Printer.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 24 - Beans 自动装配扫描 - XML
+- - '###'
+  - PrinterHelper.java
+- - '###'
+  - Printer.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 25 - Beans 自动装配 注入 – XML
+- - '###'
+  - Employee.java
+- - '###'
+  - JobTitle.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 26 - Beans 自动装配 Setter 注入 - XML
+- - '###'
+  - Employee.java
+- - '###'
+  - JobTitle.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 第 9 章：Spring 表达式语言 (SpEL)
+- - '###'
+  - Item.java
+- - '###'
+  - Server.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '##'
+  - 实验 - 27 - Spring 表达式语言基础
+- - '###'
+  - Item.java
+- - '###'
+  - Server.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 28 - Spring 表达式语言 - 注解
+- - '###'
+  - Item.java
+- - '###'
+  - Server.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 29 - Spring 表达式语言 - 高级
+- - '###'
+  - Item.java
+- - '###'
+  - Server.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 实验 - 30 - Spring 表达式语言 - 综合
+- - '###'
+  - Item.java
+- - '###'
+  - Server.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 'JPA: 初学者持久化指南'
+- - '##'
+  - 引言
+- - '##'
+  - 第 1 章：JPA 一一对映射
+- - '###'
+  - 示例 1：JPA OneToOne 映射
+- - '###'
+  - Helper.java
+- - '###'
+  - persistence.xml
+- - '###'
+  - applicationContext.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - 3. JPA 一对一连接列映射
+- - '###'
+  - 示例 3
+- - '###'
+  - Person.java
+- - '###'
+  - Department.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 4 JPA 一一一主键连接列映射
+- - '###'
+  - 示例 4
+- - '###'
+  - Person.java
+- - '###'
+  - Department.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '###'
+  - persistence.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - JPA OneToOne 级联映射
+- - '###'
+  - 示例 5
+- - '###'
+  - Person.java
+- - '###'
+  - Department.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '###'
+  - Client.java
+- - '##'
+  - 6 JPA 一对一单向映射
+- - '###'
+  - 示例 6
+- - '###'
+  - Professor.java
+- - '###'
+  - ParkingSpace.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 7 JPA 一对一双向映射
+- - '###'
+  - 示例 7
+- - '###'
+  - Person.java
+- - '###'
+  - Department.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '###'
+  - persistence.xml
+- - '###'
+  - applicationContext.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '##'
+  - 第 2 章：JPA 一对多映射
+- - '###'
+  - 1. JPA OneToMany 映射
+- - '###'
+  - Person.java
+- - '###'
+  - Department.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '###'
+  - persistence.xml
+- - '##'
+  - 2 JPA 一对多连接表映射
+- - '###'
+  - applicationContext.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - 3 JPA 一对多单向映射
+- - '###'
+  - Professor.java
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - 4 JPA 一对多 OrderBy 映射
+- - '###'
+  - Person.java
+- - '###'
+  - Department.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '###'
+  - persistence.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - 5 JPA 一对多 排序列表
+- - '###'
+  - PrintJob.java
+- - '###'
+  - PrintQueue.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '###'
+  - persistence.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - 6. JPA 一对多 Map 映射
+- - '###'
+  - Person.java
+- - '###'
+  - Department.java
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '###'
+  - 7 JPA 一对多 无类型映射
+- - '###'
+  - Employee.java
+- - '###'
+  - Department.java
+- - '###'
+  - Person.java
+- - '###'
+  - PersonDaoImpl.java
+- - '###'
+  - Helper.java
+- - '##'
+  - 第 3 章：JPA 多对一
+- - '###'
+  - 1. JPA ManyToOne 映射
+- - '###'
+  - 2. JPA ManyToOne JoinColumns
+- - '###'
+  - 3. JPA ManyToOne JoinColumn
+- - '###'
+  - 4. JPA ManyToOne 映射
+- - '##'
+  - 第 4 章：JPA 多对多
+- - '###'
+  - 1. JPA ManyToMany 映射
+- - '###'
+  - 2. JPA ManyToMany 连接表映射
+- - '###'
+  - 3. JPA ManyToMany 双向映射
+- - '###'
+  - 4. JPA ManyToMany 嵌入映射
+- - '###'
+  - Client.java
+- - '###'
+  - Server.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - AOPMethod.java
+- - '###'
+  - CustomerService.java
+- - '###'
+  - SpringBeans.xml
+- - '###'
+  - Client.java
+- - '###'
+  - 输出
+- - '#'
+  - 门诊预约系统 - 首页
+- - '###'
+  - 脚本逻辑
+- - '##'
+  - error.jsp

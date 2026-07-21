@@ -1,0 +1,732 @@
+name: 100 MOST ASKED JOB READY QUESTIONS & ANSWERS IN THE TECH SPACE： Here are the
+  most asked questions in PYTHON, SQL, JAVASCRIPT and JAVA that will help you, revise,
+  improve, and crack your interview
+name_cn: 科技领域最常见的 100 个求职面试问答：Python、SQL、JavaScript 和 Java 核心问题详解，助你复习、提升并攻克面试
+slug: 100-most-asked-job-ready-questions-answers-in-the-tech-space
+toc:
+- - '#'
+  - 科技领域最常见的 100 个求职面试问答：Python、SQL、JavaScript 和 Java 核心问题详解，助你复习、提升并攻克面试
+- - '#'
+  - 引言
+- - '#'
+  - 第一章
+- - '##'
+  - 100 道高频 Python 求职面试题
+- - '###'
+  - 什么是 Python 中的生成器（generator）？
+- - '###'
+  - 什么是 Python 中的装饰器（decorators）？
+- - '###'
+  - 什么是 Python 中的 lambda 函数？
+- - '###'
+  - 什么是 Python 中的模块（module）？
+- - '###'
+  - 如何在 Python 中导入模块？
+- - '###'
+  - 什么是 Python 中的虚拟环境（virtual environment）？
+- - '###'
+  - 什么是 Python 中的异常（exceptions）？
+- - '###'
+  - 什么是 Python 中的错误处理（error handling）？
+- - '###'
+  - Python 中 try-except-else-finally 块的作用是什么？
+- - '###'
+  - Python 中的内置数据结构有哪些？
+- - '###'
+  - 什么是 Python 中的列表？
+- - '###'
+  - 什么是 Python 中的元组（tuple)?
+- - '###'
+  - 什么是 Python 中的字典（dictionary)?
+- - '###'
+  - 什么是 Python 中的集合（set）？
+- - '###'
+  - 什么是 Python 中的字符串（string）？
+- - '###'
+  - 如何在 Python 中拼接字符串？
+- - '###'
+  - 如何在 Python 中格式化字符串？
+- - '###'
+  - Python 中的文件操作有哪些？
+- - '###'
+  - 如何在 Python 中打开和关闭文件？
+- - '###'
+  - Python 中不同的文件模式有哪些？
+- - '###'
+  - 文件操作中的异常处理是什么？
+- - '###'
+  - 什么是 Python 中的上下文管理器（context manager）？
+- - '###'
+  - 什么是 Python 中的生成器函数（generator function）？
+- - '###'
+  - 什么是 Python 中的列表推导式（list comprehension）？
+- - '###'
+  - 什么是 Python 中的 pass 语句？
+- - '###'
+  - Python 中 self 参数的作用是什么？
+- - '###'
+  - Python 中浅拷贝（shallow copy）和深拷贝（deep copy）的区别是什么？
+- - '###'
+  - 什么是 Python 中的全局解释器锁（GIL）？
+- - '###'
+  - Python 中的元类（metaclass）是什么？
+- - '###'
+  - 如何在 Python 中处理文件 I/O 错误？
+- - '###'
+  - Python 中 `__name__` 变量的目的是什么？
+- - '###'
+  - Python 中浅比较（shallow comparison）和深比较（deep comparison）的区别是什么？
+- - '###'
+  - 在 Python 中使用虚拟环境（virtual environments）有什么优势？
+- - '###'
+  - Python 中 `__main__` 块的目的是什么？
+- - '###'
+  - Python 中 `__str__` 方法的目的是什么？
+- - '###'
+  - Python 中 `__repr__` 方法的目的是什么？
+- - '###'
+  - Python 中 `__str__` 和 `__repr__` 方法的区别是什么？
+- - '###'
+  - Python 中 `super()` 函数的目的是什么？
+- - '###'
+  - Python 中 `__getitem__` 方法的目的是什么？
+- - '###'
+  - Python 中 `__setitem__` 方法的目的是什么？
+- - '###'
+  - Python 中 `__len__` 方法的目的是什么？
+- - '###'
+  - Python 中 `__iter__` 方法的目的是什么？
+- - '###'
+  - Python 中 `__next__` 方法的目的是什么？
+- - '###'
+  - Python 中 `@property` 装饰器的目的是什么？
+- - '###'
+  - Python 中 `@staticmethod` 装饰器的目的是什么？
+- - '###'
+  - Python 中 `@classmethod` 装饰器的目的是什么？
+- - '###'
+  - Python 中 `__call__` 方法的目的是什么？
+- - '###'
+  - Python 中 `*args` 和 `**kwargs` 的目的是什么？
+- - '###'
+  - Python 中的装饰器（decorators）是什么？
+- - '###'
+  - Python 中的 `lambda` 函数是什么？
+- - '###'
+  - Python 中的模块（modules）是什么？
+- - '###'
+  - Python 中的包（packages）是什么？
+- - '###'
+  - 包中 `__init__.py` 文件的目的是什么？
+- - '###'
+  - Python 中 `sys` 模块的目的是什么？
+- - '###'
+  - Python 中 `os` 模块的目的是什么？
+- - '###'
+  - Python 中 `datetime` 模块的目的是什么？
+- - '###'
+  - 补充说明：
+- - '###'
+  - Python 中 @property 装饰器的作用是什么？
+- - '###'
+  - Python 中 @staticmethod 装饰器的作用是什么？
+- - '###'
+  - Python 中 @classmethod 装饰器的作用是什么？
+- - '###'
+  - Python 中的 lambda 函数是什么？
+- - '###'
+  - Python 中的模块（Modules）是什么？
+- - '###'
+  - Python 中的包（Packages）是什么？
+- - '###'
+  - 包中 `__init__.py` 文件的作用是什么？
+- - '###'
+  - Python 中 sys 模块的作用是什么？
+- - '###'
+  - Python 中 os 模块的作用是什么？
+- - '###'
+  - Python 中 datetime 模块的作用的作用是什么？
+- - '###'
+  - Python 中 random 模块的作用是什么？
+- - '###'
+  - Python 中 json 模块的作用是什么？
+- - '###'
+  - Python 中 pickle 模块的作用是什么？
+- - '###'
+  - Python 中的生成器（Generators）是什么？
+- - '###'
+  - Python 中 yield 关键字是什么？
+- - '###'
+  - Python 中 zip() 函数是什么？
+- - '#'
+  - 第二章
+- - '##'
+  - 100 道高频 SQL 面试题
+- - '###'
+  - 1. 什么是 SQL？
+- - '###'
+  - 2. SQL 语句不同的类型？
+- - '###'
+  - 3. 什么是主键（Primary Key）？
+- - '###'
+  - 4. 什么是外键（Foreign Key）？
+- - '###'
+  - 5. 什么是复合键（Composite Key）？
+- - '###'
+  - 6. DELETE 和 TRUNCATE 之间的区别？
+- - '###'
+  - 7. 什么是子查询（Subquery）？
+- - '###'
+  - 8. 子查询和连接（Join）的区别？
+- - '###'
+  - 9. 什么是自连接（Self-join）？
+- - '###'
+  - 10. 归一化（Normalization）是什么？
+- - '###'
+  - 11. 范式有哪些？
+- - '###'
+  - 12. 什么是索引（Index）？
+- - '###'
+  - 13. 什么是聚集索引（Clustered Index）？
+- - '###'
+  - 14. 什么是非簇索引？
+- - '###'
+  - 15. 主键和唯一键有什么区别？
+- - '###'
+  - 16. 数据库事务 ACID 是什么？
+- - '###'
+  - 17. UNION 和 UNION ALL 有什么区别？
+- - '###'
+  - 18. 什么是视图？
+- - '###'
+  - 19. 什么是存储过程？
+- - '###'
+  - 20. 什么是触发器？
+- - '###'
+  - 21. 什么是事务？
+- - '###'
+  - 22. 什么是死锁？
+- - '###'
+  - 23. CHAR 和 VARCHAR 数据类型区别？
+- - '###'
+  - 24. 函数和存储过程有什么区别？
+- - '###'
+  - 25. GROUP BY 和 HAVING 子句有什么区别？
+- - '###'
+  - 26. 数据库模式（Schema）有什么区别？
+- - '###'
+  - 27. 什么是数据仓库？
+- - '###'
+  - 28. OLTP 和 OLAP 之间的区别？
+- - '###'
+  - 29. 什么是相关查询？
+- - '###'
+  - 30. 临时表和变量有什么区别？
+- - '###'
+  - 31. UNION 和 JOIN 有区别？
+- - '###'
+  - 32. WHERE 和 HAVING 子句有什么区别？
+- - '###'
+  - 33. 数据库和数据仓库区别？
+- - '###'
+  - 34. 主键和候选键有什么区别？
+- - '###'
+  - 35. 模式（Schema）和数据库区别？
+- - '###'
+  - 36. 什么是自连接（Self-join）？
+- - '###'
+  - 37. 什么是递归查询？
+- - '###'
+  - 38. 相关子查询和嵌套子查询有什么区别？
+- - '###'
+  - 39. 自然连接（Natural join）和等值连接（Equijoin）区别？
+- - '###'
+  - 40. 外连接（Outer join）和内连接（Inner join）区别？
+- - '###'
+  - 41. 左连接（Left join）和右连接（Right join）区别？
+- - '###'
+  - 42. 什么是全外连接（Full outer join）？
+- - '###'
+  - 43. 什么是引用外键（Self-referencing foreign key）？
+- - '###'
+  - 44. GROUP BY 子句的作用是什么？
+- - '###'
+  - 45. HAVING 子句的作用是什么？
+- - '###'
+  - 46. ORDER BY 子句的作用是什么？
+- - '###'
+  - 47. DISTINCT 关键字的作用是什么？
+- - '###'
+  - 48. LIKE 运算符的作用是什么？
+- - '###'
+  - 49. IN 运算符的目的是什么？
+- - '###'
+  - 50. BETWEEN 运算符的目的是什么？
+- - '###'
+  - 51. EXISTS 运算符的目的是什么？
+- - '###'
+  - 52. COUNT() 函数的目的是什么？
+- - '###'
+  - 53. SUM() 函数的目的是什么？
+- - '###'
+  - 54. AVG() 函数的目的是什么？
+- - '###'
+  - 55. MAX() 函数的目的是什么？
+- - '###'
+  - 56. MIN() 函数的目的是什么？
+- - '###'
+  - 57. GROUP_CONCAT() 函数的目的是什么？
+- - '###'
+  - 58. JOIN 关键字的目的是什么？
+- - '###'
+  - 59. 什么是自引用表？
+- - '###'
+  - 60. UNION 和 UNION ALL 有什么区别？
+- - '###'
+  - 61. ROW_NUMBER() 函数的目的是什么？
+- - '###'
+  - 62. RANK() 函数的目的是什么？
+- - '###'
+  - 63. DENSE_RANK() 函数的目的是什么？
+- - '###'
+  - 64. LAG() 函数的目的是什么？
+- - '###'
+  - 65. LEAD() 函数的目的是什么？
+- - '###'
+  - 66. COALESCE() 函数的目的是什么？
+- - '###'
+  - 67. CASE 语句的目的是什么？
+- - '###'
+  - 68. TRUNCATE TABLE 语句的目的是什么？
+- - '###'
+  - 69. CONSTRAINT 关键字的目的是什么？
+- - '###'
+  - 70. PRIMARY KEY 约束的目的是什么？
+- - '###'
+  - 71. FOREIGN KEY 约束的目的是什么？
+- - '###'
+  - 72. INDEX 关键字的目的是什么？
+- - '###'
+  - 73. FOREIGN KEY 约束中 CASCADE 关键字的目的是什么？
+- - '###'
+  - 74. UPDATE 语句的目的是什么？
+- - '###'
+  - 75. DELETE 语句的目的是什么？
+- - '###'
+  - 76. COMMIT 语句的目的是什么？
+- - '###'
+  - 77. ROLLBACK 语句的目的是什么？
+- - '###'
+  - 78. SAVEPOINT 语句的目的是什么？
+- - '###'
+  - 79. ALTER TABLE 语句的目的是什么？
+- - '###'
+  - 80. CONSTRAINT 关键字的目的是什么？
+- - '###'
+  - 81. DISTINCT 关键字的目的是什么？
+- - '###'
+  - 82. AS 关键字的目的是什么？
+- - '###'
+  - 83. ORDER BY 子句的目的是什么？
+- - '###'
+  - 84. GROUP BY 子句的目的是什么？
+- - '###'
+  - 85. HAVING 子句的目的是什么？
+- - '###'
+  - 86. LIMIT 子句的作用是什么？
+- - '###'
+  - 87. INNER JOIN 的作用是什么？
+- - '###'
+  - 88. LEFT JOIN 的作用是什么？
+- - '###'
+  - 89. RIGHT JOIN 的作用是什么？
+- - '###'
+  - 90. FULL OUTER JOIN 的作用是什么？
+- - '###'
+  - 91. UNION 运算符的作用是什么？
+- - '###'
+  - 92. ALL 运算符的作用是什么？
+- - '###'
+  - 93. WHERE 子句的作用是什么？
+- - '###'
+  - 94. LIKE 运算符的作用是什么？
+- - '###'
+  - 95. IN 运算符的作用是什么？
+- - '###'
+  - 96. EXISTS 运算符的作用是什么？
+- - '###'
+  - 97. SELECT 语句的作用句的作用是什么？
+- - '###'
+  - 98. GROUP BY 子句的作用是什么？
+- - '###'
+  - 99. ORDER BY 子句的作用是什么？
+- - '###'
+  - 100. DISTINCT 关键字的作用是什么？
+- - '#'
+  - 第三章
+- - '##'
+  - 100 道高频 JavaScript 面试题
+- - '###'
+  - 1. 什么是 JavaScript？
+- - '###'
+  - 2. JavaScript 中的数据类型？
+- - '###'
+  - 3. null 和 undefined 有什么区别？
+- - '###'
+  - 4. JavaScript 中的 DOM 是什么？
+- - '###'
+  - 5. JavaScript 中的事件（event）？
+- - '###'
+  - 6. JavaScript 中的匿名函数（anonymous function）？
+- - '###'
+  - 7. JavaScript 中的闭包（closures）？
+- - '###'
+  - 8. == 和 === 有什么区别？
+- - '###'
+  - 9. JavaScript 中的提升（hoisting）？
+- - '###'
+  - 10. JavaScript 中的 this 关键字
+- - '###'
+  - 11. JavaScript 中定义函数的区别？
+- - '###'
+  - 12. let 关键字的作用？
+- - '###'
+  - 13. const 关键字的作用是什么？
+- - '###'
+  - 14. 什么是模板字符串（template literals）？
+- - '###'
+  - 15. 什么是 Promise（promises）？
+- - '###'
+  - 16. JavaScript 中的 async/await 语法是什么？
+- - '###'
+  - 17. 箭头函数（arrow functions）是什么？
+- - '###'
+  - 18. JavaScript 中的事件委托（event delegation）？
+- - '###'
+  - 19. JavaScript 中 map() 函数的作用是什么？
+- - '###'
+  - 20. JavaScript 中 filter() 函数的作用是什么？
+- - '###'
+  - 21. JavaScript 中 reduce() 函数的目的是什么？
+- - '###'
+  - 22. 什么是 JavaScript 中的回调函数（callback function）？
+- - '###'
+  - 23. JavaScript 中 let 和 var 的区别
+- - '###'
+  - 24. 什么是 JavaScript 模块（modules）？
+- - '###'
+  - 25. 什么是 JavaScript 中的对象解构（object destructuring）？
+- - '###'
+  - 26. 什么是 JavaScript 类（classes）？
+- - '###'
+  - 27. 什么是 JavaScript 中的继承（inheritance）？
+- - '###'
+  - 28. 什么是 JavaScript 的 getters（get）和 setters（set）？
+- - '###'
+  - 29. JavaScript 中 try/catch 语句的目的是什么？
+- - '###'
+  - 30. JavaScript 中 let 和 const 的区别？
+- - '###'
+  - 31. JavaScript 中 forEach() 函数的目的是什么？
+- - '###'
+  - 32. JavaScript 中 localStorage 对象的目的是什么？
+- - '###'
+  - 33. 什么是箭头函数（arrow functions）？它们与普通函数有什么区别？
+- - '###'
+  - 34. JavaScript 中 setTimeout() 函数的目的是什么？
+- - '###'
+  - 35. 什么是 JavaScript 中的事件冒泡（event bubbling）？
+- - '###'
+  - 36. JavaScript 中 fetch() 函数的目的是什么？
+- - '###'
+  - 37. null 和 undefined 有什么区别？
+- - '###'
+  - 38. 什么是 JavaScript 中的传播（event propagation）？
+- - '###'
+  - 39. JavaScript 中 Object.keys() 函数的目的是什么？
+- - '###'
+  - 40. JavaScript 中 null 和 undefined 有什么区别？
+- - '###'
+  - 41. JavaScript 中 addEventListener() 方法的目的是什么？
+- - '###'
+  - 42. JavaScript 中 parentNode 属性的目的是什么？
+- - '###'
+  - 43. JavaScript 中 querySelector() 方法的目的是什么？
+- - '###'
+  - 44. JavaScript 中 querySelectorAll() 方法的目的是什么？
+- - '###'
+  - 45. querySelector() 和 getElementById() 的区别是什么？
+- - '###'
+  - 46. JavaScript 中函数声明（function declarations）和函数表达式（function expressions）的区别是什么？
+- - '###'
+  - 47. JavaScript 中 bind() 方法的目的是什么？
+- - '###'
+  - 48. JavaScript 中 call() 方法的目的是什么？
+- - '###'
+  - 49. JavaScript 中 apply() 方法的目的是什么？
+- - '###'
+  - 50. JavaScript 中 Array.isArray() 方法的目的是什么？
+- - '###'
+  - 51. 什么是 JavaScript 中的事件捕获（event capturing）？
+- - '#'
+  - 什么是 JavaScript 中的事件委托？
+- - '###'
+  - 53. JavaScript 中 startsWith() 方法的作用是什么？
+- - '###'
+  - 54. JavaScript 中 endsWith() 方法的作用是什么？
+- - '###'
+  - 55. JavaScript 中 includes() 方法的作用是什么？
+- - '###'
+  - 56. JavaScript 中 padStart() 方法的作用是什么？
+- - '###'
+  - 57. JavaScript 中 padEnd() 方法的作用是什么？
+- - '###'
+  - 58. JavaScript 中 charAt() 方法的作用是什么？
+- - '###'
+  - 59. JavaScript 中 charCodeAt() 方法的作用是什么？
+- - '###'
+  - 60. JavaScript 中 JSON.stringify() 方法的作用是什么？
+- - '###'
+  - 61. JavaScript 中 JSON.parse() 方法的作用是什么？
+- - '###'
+  - 62. JavaScript 中 encodeURIComponent() 函数的作用是什么？
+- - '###'
+  - 63. JavaScript 中 decodeURIComponent() 函数的作用是什么？
+- - '###'
+  - 64. JavaScript 中 Math.random() 函数的作用是什么？
+- - '###'
+  - 65. JavaScript 中 Math.floor() 函数的作用是什么？
+- - '###'
+  - 66. JavaScript 中 Math.ceil() 函数的作用是什么？
+- - '###'
+  - 67. JavaScript 中 Math.round() 函数的作用是什么？
+- - '###'
+  - 68. JavaScript 中 Math.max() 函数的作用是什么？
+- - '###'
+  - 69. JavaScript 中 Math.min() 函数的作用是什么？
+- - '###'
+  - 70. JavaScript 中 Math.pow() 函数的作用是什么？
+- - '###'
+  - 71. JavaScript 中 Math.sqrt() 函数的作用是什么？
+- - '###'
+  - 72. JavaScript 中 Math.abs() 函数的作用是什么？
+- - '###'
+  - 73. JavaScript 中 Math.floor() 和 Math.random() 函数的作用是什么？
+- - '###'
+  - 74. JavaScript 中 Date() 构造函数是什么？
+- - '###'
+  - 75. JavaScript 中 getFullYear() 方法的作用是什么？
+- - '###'
+  - 76. JavaScript 中 getMonth() 方法的作用是什么？
+- - '###'
+  - 77. JavaScript 中 getDate() 方法的作用是什么？
+- - '###'
+  - 78. JavaScript 中 getDay() 方法的作用是什么？
+- - '###'
+  - 79. JavaScript 中 getHours() 方法的作用是什么？
+- - '###'
+  - 80. JavaScript 中 getMinutes() 方法的作用是什么？
+- - '###'
+  - 81. JavaScript 中 getSeconds() 方法的作用是什么？
+- - '###'
+  - 82. JavaScript 中同步什么方法？
+- - '###'
+  - 83. JavaScript Date 对象中 getFullYear() 和 getMonth() 方法的作用是什么？
+- - '###'
+  - 84. JavaScript Date 对象中 setFullYear() 方法的作用是什么？
+- - '###'
+  - 85. JavaScript Date 对象中的 setMonth() 方法的作用是什么？
+- - '###'
+  - 86. JavaScript Date 对象中的 setDate() 方法的作用是什么？
+- - '###'
+  - 87. JavaScript Date 对象中的 setHours() 方法的作用是什么？
+- - '###'
+  - 88. JavaScript Date 对象中的 setMinutes() 方法的作用是什么？
+- - '###'
+  - 89. JavaScript Date 对象中的 setSeconds() 方法的作用是什么？
+- - '###'
+  - 90. JavaScript Date 对象中的 toLocaleString() 方法的作用是什么？
+- - '###'
+  - 91. JavaScript Date 对象中的 toDateString() 方法的作用是什么？
+- - '###'
+  - 92. JavaScript Date 对象中的 getTime() 方法的作用是什么？
+- - '###'
+  - 93. JavaScript Date 对象中的 setTime() 方法的作用是什么？
+- - '###'
+  - 94. JavaScript 中 setTimeout() 函数的作用是什么？
+- - '###'
+  - 95. JavaScript 中 setInterval() 函数的作用是什么？
+- - '###'
+  - 96. JavaScript 中 clearTimeout() 函数的作用是什么？
+- - '###'
+  - 97. JavaScript 中 clearInterval() 函数的作用是什么？
+- - '###'
+  - 98. JavaScript 中 isNaN() 函数的作用是什么？
+- - '###'
+  - 99. JavaScript 中 isFinite() 函数的作用是什么？
+- - '###'
+  - 100. JavaScript 中 parseFloat() 函数的作用是什么？
+- - '#'
+  - 第四章
+- - '##'
+  - 100 道最高频 Java 求职面试题
+- - '###'
+  - 22. 请列出三个支持绘制的 Component 子类？
+- - '###'
+  - 23. JDK 和 JVM 的区别？
+- - '###'
+  - 24. 为什么 Java 不支持继承？
+- - '###'
+  - 25. 作为外部类成员的内部类可以使用哪些修饰？
+- - '###'
+  - 26. 哪些 java.util 类和接口支持事件？
+- - '###'
+  - 27. 什么是 transient 变量？
+- - '###'
+  - 28. null 是关键字吗？
+- - '###'
+  - 29. 什么是 applet？
+- - '###'
+  - 30. applet 的生命周期是什么？
+- - '###'
+  - 31. JDK 1.2 中的 stop()、suspend() 和 resume() 方法有什么新变化？
+- - '###'
+  - 32. 什么是 Vector 类？
+- - '###'
+  - 33. >> 和 >>> 运算符之间的区别是什么？
+- - '###'
+  - 34. this() 和 super() 的区别是什么？
+- - '###'
+  - 35. 什么是 native 方法？
+- - '###'
+  - 36. readLine() 到达文件末尾时返回值？
+- - '###'
+  - 37. 什么是 Java API？
+- - '###'
+  - 38. 为什么 Java 中没有全局变量？
+- - '###'
+  - 39. 访问修饰符有哪些类型？
+- - '###'
+  - 40. 什么是构造函数（Constructor）？
+- - '###'
+  - 41. 什么是 Iterator（迭代器）？
+- - '###'
+  - 42. Reader/Writer 和 InputStream/OutputStream 的区别是什么？
+- - '###'
+  - 43. 什么是 servlet？
+- - '###'
+  - 44. 什么是裁剪（裁剪）？
+- - '###'
+  - 45. 什么是内存泄漏（memory leak）？
+- - '###'
+  - 46. for 语句可以无限循环吗？
+- - '###'
+  - 47. 解释 Java 方法的规范
+- - '###'
+  - 48. Java Java 不是纯面向对象的语言？
+- - '###'
+  - 49. 访问修饰符有哪些？
+- - '###'
+  - 50. 我们可以重载 main 方法吗？
+- - '###'
+  - 51. Java 中的方法是指什么？
+- - '###'
+  - 52. 解释 Java 中的自动类型转换
+- - '###'
+  - 53. ++ 运算符的前缀和后缀形式的区别是什么？
+- - '###'
+  - 54. Java 中可以通过多少种方式进行异常处理？
+- - '###'
+  - 55. Java 中的 null 代表什么？
+- - '###'
+  - 56. 在 Java 中，可以在 import 语句之后定义 package 语句吗？
+- - '###'
+  - 57. 定义以下代码
+- - '###'
+  - 58. 什么是 JSP？
+- - '###'
+  - 59. Apache Tomcat 的作用？
+- - '###'
+  - 60. 变量是在哪里创建的？
+- - '###'
+  - 61. 可以 catch 语句处理异常吗？
+- - '###'
+  - 62. 什么情况下 finally 块不会执行
+- - '###'
+  - 63. 什么是 UNICODE？
+- - '###'
+  - 64. 解释 main 方法？
+- - '###'
+  - 65. 定义析构函数（destructors）
+- - '###'
+  - 66. 堆（heap）上对象的实际？
+- - '###'
+  - 67. 变量可以同时是静态的（static）？
+- - '###'
+  - 68. 接口（Interface）中有静态方法？
+- - '###'
+  - 69. 在 Java 中可以通过多少方式实现同步（synchronization）？
+- - '###'
+  - 70. 使用同步块（synchronized blocks）
+- - '###'
+  - 71. 同步方法（synchronized methods）？
+- - '###'
+  - 72. 能通过类型转换将其他类型转换为 Boolean 类型吗？
+- - '###'
+  - 73. 访问符（access specifiers）和访问修饰符（access modifiers）区别？
+- - '###'
+  - 74. 使用继承（Inheritance）有什么局限性吗？
+- - '###'
+  - 75. 类可以使用哪些修饰？
+- - '###'
+  - 76. 解释 Java 中的抽象类（abstract classes）？
+- - '###'
+  - 77. 抽象类可以创建构造函数？
+- - '###'
+  - 78. String 和 StringBuffer 都表示字符串。在 Java 中比较它们？
+- - '###'
+  - 79. 在 Java 中可以通过多少方式创建线程？
+- - '###'
+  - 80. 解释实现 Runnable 类创建线程？
+- - '###'
+  - 81. 在 Java 中何时使用同步方法（synchronized methods）？
+- - '###'
+  - 82. 能通过类型转换将其他类型转换为 Boolean 类型吗？
+- - '###'
+  - 83. 同步方法（synchronized methods）和同步语句（synchronized statements）
+- - '###'
+  - 84. 解释 Java 中 finally 块的重要性？
+- - '###'
+  - 85. 我们可以在单个 catch 块中捕获异常吗？
+- - '###'
+  - 86. Java 中的抽象方法（abstract methods）是什么？
+- - '###'
+  - 87. 列举一些 Java 中可能出现异常的情况
+- - '###'
+  - 88. Java 中的异常（exception）是什么？
+- - '###'
+  - 89. Java 中的错误（error）是什么？
+- - '###'
+  - 90. Java 中异常处理的优点是什么？
+- - '###'
+  - 91. 构造函数（constructors）与其他方法之间的区别？
+- - '###'
+  - 92. 使用继承（Inheritance）有什么局限性吗？
+- - '###'
+  - 93. 何以及如何使用私有构造函数（private constructor）？
+- - '###'
+  - 94. 什么是类型转换（type casting）？
+- - '###'
+  - 95. >> 运算符和 >>> 运算符的区别是什么？
+- - '###'
+  - 96. 内部类（inner class）和嵌套类（nested class）的区别是什么？
+- - '###'
+  - 97. 如果类有多个构造函数，可以从一个构造函数调用另一个吗？
+- - '###'
+  - 98. 为什么我们需要包装类（wrapper classes）？
+- - '###'
+  - 99. Java 允许默认参数（Default Arguments）吗？
+- - '###'
+  - 100. Java 中什么数字以零开头？
+- - '#'
+  - 结语

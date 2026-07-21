@@ -1,0 +1,229 @@
+name: Android Studio Iguana Essentials – Java Edition： Developing Android Apps Using
+  Android Studio 2023.2.1 and Java
+name_cn: Android Studio Iguana 核心：Java 版——使用 Android Studio 2023.2.1 和 Java 开发 Android
+  应用
+slug: android-studio-iguana-essentials-java-edition-developing-and
+toc:
+- - '#'
+  - Android Studio Iguana 核心：Java 版——使用 Android Studio 2023.2.1 和 Java 开发 Android
+    应用
+- - '##'
+  - 2. 设置 Android Studio 开发环境
+- - '##'
+  - 3. 在 Android Studio 中创建一个示例 Android 应用
+- - '##'
+  - 4. 在 Android Studio 中创建 Android 虚拟设备 (AVD)
+- - '##'
+  - 5 使用和配置 Android Studio AVD 模拟器
+- - '##'
+  - 6 Android Studio 用户界面导览
+- - '##'
+  - 7. 在实体 Android 设备上测试 Android Studio 应用
+- - '##'
+  - 8. Android Studio 代码编辑器基础
+- - '##'
+  - 9. Android 架构概览
+- - '##'
+  - 10. Android 剖析
+- - '##'
+  - 11. Android 视图绑定 (View Binding)
+- - '##'
+  - 12. 理解 Android 应用和 生命周期
+- - '##'
+  - 13. Activity 和 Fragment 类
+- - '##'
+  - 14. 示例说明 Android
+- - '##'
+  - 15. 保存和恢复 Activity
+- - '##'
+  - 16. 理解 Android 组和布局
+- - '##'
+  - 17. Android Studio 布局编辑器指南
+- - '##'
+  - 18. ConstraintLayout 指南
+- - '##'
+  - 19. 在 Android Studio 中使用 ConstraintLayout 指南
+- - '##'
+  - 20. 在 Android Studio 中使用 ConstraintLayout 链和比例
+- - '##'
+  - 21. Android Studio 编辑器教程
+- - '##'
+  - 22 在 Android Studio 中手动设计 XML 布局
+- - '##'
+  - 23. 使用约束集管理约束
+- - '##'
+  - 24. Android ConstraintSet 教程
+- - '##'
+  - 25. 保存和恢复 Activity
+- - '##'
+  - 26. Gradle 版本目录（Version Catalogs）
+- - '##'
+  - 27. Android 事件概述
+- - '##'
+  - 28. Android 触摸与多点事件
+- - '##'
+  - 29. 使用 GestureDetector 类
+- - '##'
+  - 30. Android 上实现自定义手势和缩放
+- - '##'
+  - 31. Android Fragments 简介
+- - '##'
+  - 32. 在 Android Studio 中使用片段 示例
+- - '##'
+  - 33. 使用 Jetpack 的现代 Android 应用架构
+- - '##'
+  - 34. 一个 Android ViewModel 教程
+- - '##'
+  - 35 一个 Android Jetpack LiveData 教程
+- - '##'
+  - 36.2 数据绑定的关键组件
+- - '##'
+  - 37. Android Jetpack 数据绑定教程
+- - '##'
+  - 38. ViewModel 状态保存
+- - '##'
+  - 39. 与 Android 生命周期组件一起
+- - '##'
+  - 40. Android Jetpack 生命周期教程
+- - '##'
+  - 41. 导航架构组件
+- - '##'
+  - 42. 导航组件
+- - '##'
+  - 43. MotionLayout 简介
+- - '##'
+  - 44. MotionLayout 编辑器教程
+- - '##'
+  - 45. MotionLayout 关键循环 (Cycle)
+- - '##'
+  - 46. 设计库
+- - '##'
+  - 47. 使用 TabLayout 创建标签页界面
+- - '##'
+  - 48 使用 RecyclerView 和 CardView
+- - '##'
+  - 49. RecyclerView 和 CardView 教程
+- - '##'
+  - 50. 布局编辑器示例数据教程
+- - '##'
+  - 51 使用 AppBar 和折叠工具栏布局
+- - '##'
+  - 52 Android 主列表/详情（Primary/Detail Flow）教程
+- - '##'
+  - 53 服务概览
+- - '##'
+  - 54 Android Intents 概述
+- - '##'
+  - 55 Android 显式意图教程
+- - '##'
+  - 56 Android 隐式 intent – 示例
+- - '##'
+  - 57 广播意图和接收器
+- - '##'
+  - 58 本地绑定服务 实例详解
+- - '##'
+  - 59 Android 远程绑定服务 – 实例示例
+- - '##'
+  - 60 Java 线程、处理器和执行器概述
+- - '##'
+  - 61 在 Android 中进行运行时权限请求
+- - '##'
+  - 62 Android 通知教程
+- - '##'
+  - 63. Android 直接回复通知教程
+- - '##'
+  - 64. 折叠屏设备与窗口
+- - '##'
+  - 65. Android 数据库概述
+- - '##'
+  - 66. Android 数据库教程
+- - '##'
+  - '67. Content Providers '
+- - '##'
+  - 68. 内容提供者教程
+- - '##'
+  - 69. 内容提供者客户端
+- - '##'
+  - 70. 持久化库
+- - '##'
+  - 71. 布局布局
+- - '##'
+  - 72. Android 数据库和仓库教程
+- - '##'
+  - 73. 使用 Android 存储框架访问云存储
+- - '##'
+  - '74. Android 存储访问框架示例 '
+- - '##'
+  - 75. 使用 VideoView 和 MediaController 类在 Android 上进行视频播放
+- - '##'
+  - 76. 画中画
+- - '##'
+  - 77. 画中画教程
+- - '##'
+  - 78. MediaPlayer 和 MediaRecorder 进行音频录制和播放
+- - '##'
+  - 79. Google Maps API
+- - '##'
+  - 80. Android 打印框架
+- - '##'
+  - 81. HTML 和 Web 内容
+- - '##'
+  - 82. 自定义打印指南
+- - '##'
+  - 83. Android App Links 简介
+- - '##'
+  - 84. Android Studio App Links 教程
+- - '##'
+  - 85. 生物识别认证
+- - '##'
+  - 86. 创建、测试和上传 Android App Bundle
+- - '##'
+  - 87. Android 内购概览
+- - '##'
+  - 88. 应用购买教程
+- - '##'
+  - 89. 在 Android 上创建和管理溢出菜单（Overflow Menus）
+- - '##'
+  - 90. 使用 Material Design 3 主题
+- - '##'
+  - 91. Material Design 3 题
+- - '##'
+  - 92. Android Studio 概述
+- - '##'
+  - 93. 设备配对
+- - '##'
+  - 94. android
+- - '##'
+  - 95. Android
+- - '##'
+  - 96. Android 开发
+- - '##'
+  - 97. Android 设备
+- - '##'
+  - 98. Android 项目
+- - '##'
+  - 99. Android SDK 路径
+- - '##'
+  - 100. Android SDK 包
+- - '##'
+  - 101. Android 软件栈
+- - '##'
+  - 102. Android Studio
+- - '##'
+  - 103. android
+- - '##'
+  - 104. Android
+- - '##'
+  - 105. Android 开发
+- - '##'
+  - 106. Android 设备
+- - '##'
+  - 107. Android 项目
+- - '##'
+  - 108. Android SDK 路径
+- - '##'
+  - 109. Android SDK 包
+- - '##'
+  - 110. Android 软件栈
+- - '##'
+  - 111. Android Studio

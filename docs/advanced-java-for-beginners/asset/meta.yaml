@@ -1,0 +1,564 @@
+name: Advanced JAVA for Beginners
+name_cn: 初学者级 Java 入门指南
+slug: advanced-java-for-beginners
+toc:
+- - '#'
+  - 初学者级 Java 入门指南
+- - '##'
+  - 关于
+- - '##'
+  - 目录
+- - '###'
+  - 你的第一个 JSP
+- - '###'
+  - 上述代码解释
+- - '###'
+  - Servlet vs JSP
+- - '####'
+  - Servlet
+- - '####'
+  - JSP
+- - '###'
+  - JSP 的优点
+- - '#'
+  - JSP 架构
+- - '#'
+  - Java Server Pages (JSP) 生命周期
+- - '##'
+  - 让我们详细查看 JSP 的周期
+- - '##'
+  - SCRIPTS
+- - '###'
+  - JSP Scriptlets (脚本段)
+- - '###'
+  - 'Scriptlet 的 JSP 到 Servlet 转换 – '
+- - '##'
+  - DECLARATIONS (声明)
+- - '###'
+  - ACTION TAGS (动作标签)
+- - '####'
+  - JSP Actions – Java Server Pages
+- - '#'
+  - 页面详情
+- - '#'
+  - JSP include 动作标签
+- - '##'
+  - 语法
+- - '##'
+  - '示例 1: 不带参数的 <jsp:include>'
+- - '##'
+  - '示例 2: 使用 <jsp:param> 使用 <jsp:include>'
+- - '#'
+  - 带有参数的 JSP include 动作示例
+- - '##'
+  - 示例
+- - '#'
+  - JSP forward 动作
+- - '##'
+  - 语法
+- - '##'
+  - 示例
+- - '##'
+  - 3. `<jsp:param>` Action
+- - '###'
+  - 语法
+- - '##'
+  - 4. `<jsp:useBean>` Action
+- - '###'
+  - 语法
+- - '###'
+  - '`<jsp:useBean>`, `<jsp:setProperty>` & `<jsp:getProperty>` 示例：'
+- - '###'
+  - jsp:useBean, jsp:setProperty 和 jsp:getProperty 动作标签
+- - '###'
+  - useBean, setProperty 和 getProperty 的完整示例：
+- - '#'
+  - 方法声明
+- - '#'
+  - JSP 隐式对象
+- - '###'
+  - 隐式对象及其对应的类
+- - '##'
+  - JSP 中的表达式语言 (EL)
+- - '#'
+  - OUT 隐式对象
+- - '###'
+  - OUT 隐式对象的方法
+- - '###'
+  - OUT 隐式对象示例
+- - '#'
+  - 带有示例的 JSP 中的 request 隐式对象
+- - '###'
+  - request 隐式对象的方法
+- - '###'
+  - request 隐式对象示例
+- - '###'
+  - 上述示例快照
+- - '###'
+  - JSP 中的 Response 隐式对象
+- - '####'
+  - response 隐式对象的方法
+- - '###'
+  - Response 隐式对象示例
+- - '###'
+  - Session 隐式对象
+- - '####'
+  - session 隐式对象的方法
+- - '###'
+  - index.html
+- - '###'
+  - session.jsp
+- - '###'
+  - output.jsp
+- - '###'
+  - 输出屏幕：
+- - '#'
+  - Application 隐式对象
+- - '##'
+  - JSP 中的 Application 隐式对象示例
+- - '###'
+  - 方法：
+- - '###'
+  - Application 隐式对象示例
+- - '#'
+  - Exception 隐式对象
+- - '##'
+  - JSP 中的 Exception 隐式对象示例
+- - '###'
+  - Exception 隐式对象示例
+- - '#'
+  - PageContext 隐式对象
+- - '##'
+  - 带有示例的 JSP PageContext 隐式对象
+- - '###'
+  - pageContext 隐式对象的方法
+- - '##'
+  - PageContext 隐式对象示例
+- - '###'
+  - index.html
+- - '###'
+  - validation.jsp
+- - '###'
+  - display.jsp
+- - '###'
+  - 示例输出截图：
+- - '#'
+  - Config 隐式对象
+- - '##'
+  - 带有示例的 JSP Config 隐式对象
+- - '###'
+  - Config 隐式对象的方法
+- - '##'
+  - Config 对象示例
+- - '###'
+  - web.xml
+- - '###'
+  - index.jsp
+- - '###'
+  - 输出：
+- - '#'
+  - 表达式语言
+- - '##'
+  - JSP 中的表达式语言
+- - '###'
+  - EL 语法：
+- - '###'
+  - 示例 1：表达式语言评估表达式
+- - '###'
+  - 输出：
+- - '###'
+  - 示例 2：使用表达式语言参数变量获取值
+- - '#'
+  - 表达式语言示例 2
+- - '###'
+  - display.jsp
+- - '##'
+  - '示例 3: 从应用对象获取值。'
+- - '###'
+  - index.jsp
+- - '###'
+  - display.jsp
+- - '##'
+  - EL 预定义变量：
+- - '#'
+  - 异常处理
+- - '###'
+  - 异常处理
+- - '####'
+  - 处理异常的方法：
+- - '###'
+  - 使用 exception 隐式对象的异常处理
+- - '###'
+  - 在脚本段（scriptlets）中使用 try-catch 块的异常处理
+- - '#'
+  - 自定义标签 (CUSTOM TAGS)
+- - '###'
+  - 标签处理器类
+- - '###'
+  - TLD 文件
+- - '###'
+  - 在 JSP 中使用自定义标签
+- - '###'
+  - 如何访问自定义标签的主体（Body）
+- - '###'
+  - 示例：
+- - '#'
+  - JSP 指令 (DIRECTIVES)
+- - '##'
+  - JSP 指令
+- - '###'
+  - 1) Page 指令
+- - '####'
+  - '1. Import:'
+- - '####'
+  - '2. Session:'
+- - '####'
+  - '3. isErrorPage:'
+- - '####'
+  - '4. errorPage:'
+- - '####'
+  - '5. ContentType:'
+- - '####'
+  - '6. isThreadSafe:'
+- - '####'
+  - '7. Buffer:'
+- - '####'
+  - '8. Extends:'
+- - '####'
+  - '9. Info:'
+- - '##'
+  - 10. language
+- - '###'
+  - language 的语法：
+- - '###'
+  - language 属性示例：
+- - '##'
+  - 11. AutoFlush
+- - '###'
+  - autoFlush 的语法：
+- - '###'
+  - autoFlush 属性示例：
+- - '##'
+  - 12. isScriptingEnabled
+- - '##'
+  - 13. isELIgnored
+- - '###'
+  - isELIgnored 的语法：
+- - '###'
+  - isELIgnored 属性示例：
+- - '##'
+  - 2) 包含指令 (Include Directive)
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '###'
+  - 必读：[JSP 中的包含指令详解](http://example.com) (占位链接)
+- - '##'
+  - JSP 中的包含指令详解
+- - '###'
+  - 为什么我们需要使用包含指令？难道不能直接将文件内容添加到当前 JSP 中，而是使用指令吗？
+- - '###'
+  - 语法：
+- - '###'
+  - 包含指令示例
+- - '##'
+  - 3) Taglib 直接 (Taglib Directive)
+- - '###'
+  - 语法：
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '###'
+  - Taglib 示例：
+- - '##'
+  - JSTL
+- - '###'
+  - JSTL 核心标签库
+- - '###'
+  - JSTL 核心标签
+- - '###'
+  - <c:out> 标签
+- - '###'
+  - <c:out> 标签示例
+- - '###'
+  - <c:out> 的 escape 属性
+- - '###'
+  - <c:out> 的 default
+- - '###'
+  - <c:out> 标签
+- - '#'
+  - JSTL <c:set> 标签
+- - '###'
+  - display.jsp
+- - '###'
+  - '输出:'
+- - '###'
+  - <c:set> 属性
+- - '#'
+  - JSTL <c:remove> 标签
+- - '###'
+  - '示例:'
+- - '###'
+  - display.jsp
+- - '###'
+  - <c:remove> 属性
+- - '#'
+  - JSTL <c:if> 标签
+- - '###'
+  - '语法:'
+- - '###'
+  - <c:if> 标签
+- - '#'
+  - JSTL <c:choose>, <c:when>, <c:otherwise> 标签
+- - '###'
+  - '语法:'
+- - '###'
+  - <c:choose>, <c:when>, <c:otherwise>
+- - '##'
+  - 变量处理
+- - '###'
+  - 示例
+- - '##'
+  - JSTL <c:import> 标签
+- - '###'
+  - 语法
+- - '###'
+  - <c:import> 属性
+- - '##'
+  - JSTL <c:forEach> 标签
+- - '###'
+  - 语法
+- - '###'
+  - <c:forEach> 标签
+- - '##'
+  - JSTL <c:forTokens> 标签
+- - '###'
+  - 语法
+- - '###'
+  - <c:forTokens> 标签
+- - '##'
+  - JSTL <c:param> 标签
+- - '###'
+  - 语法
+- - '###'
+  - <c:param> 属性
+- - '##'
+  - JSTL <c:redirect> 标签
+- - '###'
+  - 语法
+- - '###'
+  - <c:redirect> 标签
+- - '##'
+  - JSTL 函数
+- - '##'
+  - fn:contains()
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '##'
+  - fn:containsIgnoreCase()
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '##'
+  - fn:indexOf()
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '##'
+  - fn:escapeXML()
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '##'
+  - fn:join() 和 fn:split()
+- - '###'
+  - 语法
+- - '###'
+  - 示例 – 使用 fn:join() 连接字符串
+- - '###'
+  - fn:split()
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '##'
+  - fn:length()
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '##'
+  - fn:trim()
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '##'
+  - fn:endsWith()
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '##'
+  - fn:substring(), fn:substringAfter() & fn:substringBefore()
+- - '###'
+  - '语法:'
+- - '###'
+  - 示例 示例 – 使用 fn:substring() 函数
+- - '###'
+  - fn:substringAfter()
+- - '###'
+  - 语法
+- - '###'
+  - 示例：
+- - '###'
+  - fn:substringBefore()
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '##'
+  - fn:trim() 和 fn:startsWith()
+- - '###'
+  - JSTL fn:trim() 函数
+- - '###'
+  - fn:startsWith() 函数
+- - '##'
+  - fn:toUpperCase()
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '##'
+  - fn:toLowerCase()
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '##'
+  - 15. fn:replace()
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '#'
+  - JSON 教程
+- - '###'
+  - JSON 教程：10 分钟学习 JSON
+- - '####'
+  - JSON 的特性：
+- - '##'
+  - 为什么使用 JSON？
+- - '##'
+  - JSON vs XML
+- - '##'
+  - JSON 数据结构以及如何读取：
+- - '###'
+  - 1. JSON 对象
+- - '###'
+  - 2. 数组中的 JSON 对象
+- - '###'
+  - 3. JSON 对象的嵌套
+- - '##'
+  - JSON 与 JavaScript
+- - '#'
+  - SERVLET 教程
+- - '###'
+  - Servlet 简介
+- - '##'
+  - CGI 的局限性
+- - '##'
+  - 为什么 Servlet 比 CGI 好
+- - '###'
+  - Servlet 如何工作
+- - '##'
+  - Servlet 的特性
+- - '#'
+  - Servlet API
+- - '###'
+  - Servlet 是如何工作的？
+- - '##'
+  - Generic Servlet (通用 Servlet)
+- - '##'
+  - HTTP Servlet (HTTP Servlet)
+- - '###'
+  - javax.servlet 中的接口
+- - '###'
+  - javax.servlet 中的类
+- - '###'
+  - javax.servlet.http 中的接口
+- - '###'
+  - javax.servlet.http 中的类
+- - '#'
+  - 结合示例详解 接口
+- - '##'
+  - Servlet 接口方法
+- - '##'
+  - 示例：
+- - '###'
+  - index.html
+- - '###'
+  - DemoServlet.java
+- - '###'
+  - web.xml
+- - '##'
+  - GenericServlet 类
+- - '###'
+  - 示例的 GenericServlet 类
+- - '###'
+  - Generic Servlet 如何工作？
+- - '###'
+  - Generic Servlet 的层级结构
+- - '###'
+  - GenericServlet 示例
+- - '###'
+  - index.html
+- - '###'
+  - ExampleGeneric.java
+- - '###'
+  - web.xml
+- - '#'
+  - 点击第一个屏幕中的链接后的界面：
+- - '#'
+  - Generic Servlet 示例
+- - '#'
+  - Hello Javabook 的读者们
+- - '##'
+  - GenericServlet 类的方法：
+- - '##'
+  - 带有示例的 HttpServlet 类
+- - '##'
+  - Http Servlet 如何工作？
+- - '##'
+  - Http Servlet 的层次结构
+- - '##'
+  - Http Servlet 示例
+- - '###'
+  - index.html
+- - '###'
+  - ExampleHttpServlet.java
+- - '###'
+  - web.xml
+- - '##'
+  - HttpServlet 类的方法：
+- - '#'
+  - 注意
+- - '#'
+  - 如何在 Eclipse IDE 中创建和运行 Servlet
+- - '##'
+  - 注意
+- - '##'
+  - 如何在 Eclipse IDE 中创建和运行 Servlet
+- - '##'
+  - 注意
+- - '##'
+  - 如何在 Eclipse IDE 中创建和运行 Servlet
+- - '##'
+  - 注意 如何在 Eclipse IDE 中创建和运行 Servlet

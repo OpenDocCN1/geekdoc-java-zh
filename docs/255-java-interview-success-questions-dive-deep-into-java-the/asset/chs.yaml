@@ -1,0 +1,489 @@
+- "# 255 道 Java 面试成功题：深入理解 Java 理论、语法与 API，自信面试\n\n\n\n![](img/Image00000.jpg)\n\n\
+  \n\n\n\n\n## 引言\n“255 道 Java 面试成功题”包含了 255 道严谨的题目，旨在帮助你准备 Java 职位的面试。题目是随机混合的。\n\
+  \n本书涵盖了九个主要主题：\n* Java 基础\n* 处理 Java 数据类型\n* 使用运算符和决策结构\n* 创建和使用数组\n* 使用循环结构\n*\
+  \ 处理方法和封装\n* 处理继承\n* 异常处理\n* 使用 Java API 中的选定类\n\n对于任何寻找或刚开始应用程序开发工作的人来说，强烈建议精通这些领域。请向上滚动查看书籍示例，或者直接果断购买这款高性价比的工具吧！\n\
+  \n## 关于作者\n我于 2012 年获得信息系统科学硕士学位，从那时一直在世界 500 强企业担任软件工程师。我在准备 Oracle 认证关联工程师（ACA）考试时编写了这本书的初版，希望其他人也能发现它的用处。\n\
+  \n我还在 `https://smartdevpreneur.com/` 上博客关于开发者职业、兼职和代码。\n\n\n## 测试 1 题目\n\n### Q1.\n\
+  ```java\npackage Exam;\npublic class Test extends TestAbstract {\n    public static\
+  \ void main(String[] args) {}\n    public void methodRun(){}\n    public void methodHide(){}\n\
+  }\nabstract class TestAbstract {\n    abstract void methodRun();\n    abstract void\
+  \ methodHide();\n}\n```\n对或错：`Test` 类需要 `abstract` 修饰符才能编译。\nA) 对\nB) 错\n\n### Q2.\n\
+  ```java\npackage Exam;\npublic class ArrayCopy {\n    public static void main(String[]\
+  \ args) {\n        char[] copyFrom = {'c', 'r', 'u', 'n', 'c', 'h', 'y', ' ', 'c',\
+  \ 'o', 'o', 'k', 'i', 'e' };\n        char[] copyTo = new char[7];\n        System.arraycopy(copyFrom,\
+  \ 2, copyTo, 0, 7);\n        System.out.println(copyTo);\n    }\n}\n```\n代码将打印什么？选择\
+  \ 1 个选项。\nA) “runchy”\nB) “runchy c”\nC) “unchy c”\nD) “unchy co”\nE) “crunchy”\n\
+  \n### Q3.\n```java\npackage Exam;\npublic class q1 {\n    public static void main(String[]\
+  \ args) {\n        int[][] a = new int[5][];\n        //Line 1\n    }\n}\n```\n\
+  以下哪可以放在第 1 行且代码仍能编译？选择 1 个答案。\nA) `a[1] = new short[5];`\nB) `a[1] = new int[5];`\n\
+  C) `a[1] = new Integer[5];`\nD) `a[1] = new double[5];`\nE) `a[1] = new int[];`\n\
+  \n### Q4.\n```java\npackage Exam;\npublic class TC {\n    static int i2[] = new\
+  \ int[1];\n    public static void main(String[] args) {\n        i2[1] = 0;\n  \
+  \      System.out.println(i2[].getClass());\n    }\n}\n```\n输出将是什么？选择 1 个选项。\nA)\
+  \ “class java.lang.int”\nB) 通过编译\nC) 运行时异常\n\n### Q5.\n```java\n//以下代码位于 Go.java\
+  \ 文件\npackage Exam;\npublic class Go {\n    public static void main(String[] args)\
+  \ {\n        Test t1 = new TestSub();\n        t1.methodGo();\n    }\n}\npublic\
+  \ class Test{\n    public void methodGo(){\n        System.out.println(\"In Super\"\
+  );\n    }\n}\npublic class TestSub extends Test{\n    public void methodGo(){\n\
+  \        System.out.println(\"In Sub\");\n    }\n}\n```\n代码将打印什么？选择 1 个选项。\nA) 不通过编译。\n\
+  B) “In Super”\nC) “In Sub”\nD) 运行时异常\n\n### Q6.\n```java\npackage Exam;\npublic\
+  \ class Construct extends SuperConstruct {\n    Construct(int i) {\n        super(i);\n\
+  \    }\n    Construct(String i) {\n        super(i);\n    }\n    Construct() {\n\
+  \        super();\n    }\n    public static void main(String[] args) {\n       \
+  \ Construct c = new Construct();\n    }\n}\nclass SuperConstruct{\n    SuperConstruct(int\
+  \ i){\n        System.out.println(\"Constructed with integer\");\n    }\n    SuperConstruct(String\
+  \ str){\n        System.out.println(\"Constructed with string\");\n    }\n}\n```\n\
+  以下代码将打印什么？选择 1 个选项。\nA) “Constructed with integer”\nB) “Constructed with string”\n\
+  C) 它什么都不打印。\nD) 它不通过编译。\nE) 它将抛出一个运行时异常。\n\n### Q7.\n在构建服务时，我们在哪个文件中添加 `provides`\
+  \ 语法？\nA) `service.java`\nB) `module.java`\nC) `module-info.java`\nD) `main.java`\n\
+  \n### Q8.\n```java\npackage Exam;\npublic class Test {\n    public static void main(String[]\
+  \ args) {\n        Integer i = new Integer(12);\n        Long l = new Long(12);\n\
+  \        Double d = new Double(12);\n        System.out.println(i.equals(l));\n\
+  \        System.out.println(l.equals(d));\n    }\n}\n```\n上述程序的输出是什么？选择 1 个选项。\n\
+  A) “true” 紧接 “true”\nB) “false” 紧接 “true”\nC) “false” 紧接 “false”\nD) “true” 紧接 “false”\n\
+  E) 不通过编译。\n\n### Q9.\n```java\npackage Exam;\npublic class Test {\n    public static\
+  \ void main(String[] args) {\n        System.out.println(\"Beginning\");\n     \
+  \   Test q = new Test();\n        q.throwException();\n        System.out.println(\"\
+  Past finally\");\n    }\n    public void throwException(){\n        try{\n     \
+  \       int[] arr = new int[5];\n            int i = arr[5];\n        }finally{\n\
+  \            System.out.println(\"In finally\");\n        }\n    }\n}\n```\n代码最后打印什么？选择\
+  \ 1 个选项。\nA) 不通过编译。\nB) “Beginning”\nC) “In finally”\nD) “Past finally”\nE 因为运行时异常什么都没有打印。\n\
+  \n### Q10.\n```java\npackage Exam;\npublic class Test {\n    public static void\
+  \ main(String[] args) {\n        Test q = new Test();\n        q.go(1, \"Will\"\
+  , \" work?\");\n    }\n    public void go(int i, String...k){\n        for(String\
+  \ l:k){\n            System.out.print(l);\n        }\n    }\n}\n```\n代码打印什么？选择 1\
+  \ 个选项。\nA) 编译错误\nB) 运行时错误\nC) “Will work?”\n\n### Q11.\n```java\npackage Exam;\n\
+  public class GC {\n    int g = 10;\n    short c = 20;\n    public static void main(String[]\
+  \ args) {\n        GC gc = new GC();\n        //Line 1\n        gc.g = 12;\n   \
+  \     gc.c = 18;\n        //Line 2\n        gc.go();\n        //Line 3\n       \
+  \ System.gc();\n        //Line 4\n        System.out.println(gc.g);\n        //Line\
+  \ 5\n    }\n    public void go(){\n        System.out.println(\"go\");\n    }\n\
+  }\n```\n哪一行之后对象 `gc` 符合垃圾收集？选择 1 个选项。\nA) Line 1\nB) Line 2\nC) Line 3\nD) Line\
+  \ 4\nE) Line 5\n\n### Q12.\n```java\npackage Exam;\nimport java.util.ArrayList;\n\
+  import java.util.List;\npublic class Test {\n    List<String> dogs = new ArrayList<>();\n\
+  \    public static void main(String[] args) {\n        String dog1 = \"German Sheard\"\
+  ;\n        String dog2 = \"Husky\";\n        String dog3 = \"Mutt\";\n        Character\
+  \ dog4 = new Character('T');\n        Test q = new Test();\n        q.dogs.add(dog1);\n\
+  \        q.dogs.add(dog2);\n        q.dogs.add(dog3);\n        q.dogs.add(dog4);\n\
+  \        for(int i = 0; i<q.dogs.size(); i++){\n            System.out.print(q.dogs.get(i)\
+  \ + \",\");\n        }\n    }\n}\n```\n上述程序的输出是什么？选择 1 个答案。\nA) “German Sheard,Husky,Mutt,T”\n\
+  B) “German Sheard,Husky,Mutt,T,”\nC) 编译错误。\nD) 以上都不是\n\n### Q13.\n```java\npackage\
+  \ Exam;\n//Line 1\npublic class Test {\n    public static void main(String[] args)\
+  \ {\n        out.println(\"Hello World\");\n    }\n}\n```\n在第 1 行独立插入什么可以使代码编译？\n\
+  A) `import java.lang.System.out;`\nB) `import static java.lang.System.out;`\nC)\
+  \ `import java.lang.System.*;`\nD) `import static java.lang.System.*;`\n\n### Q14.\n\
+  ```java\npackage Exam;\npublic class Test{\n    Object obj = new Object();\n   \
+  \ Integer i = new Integer(45);\n    public static void main(String[] args) {\n \
+  \       Test q = new Test();\n        q.obj = \"Hello\";\n        q.obj = i;\n \
+  \       System.out.println(q.obj);\n    }\n}\n```\n程序打印什么？选择 1 个选项。\nA) “45”\nB)\
+  \ 不通过编译。\nC) “Hello”\nD) 运行时错误\n\n### Q15.\n```java\npackage Exam;\npublic class\
+  \ FooYou implements Fool {\n    static int r = 12;\n    public static void main(String[]\
+  \ args) {\n        FooYou fy = new FooYou();\n        fy.methodGo(Fool.r);\n   \
+  \     System.out.println(r);\n    }\n    public void methodGo(int r){\n        System.out.println(r);\n\
+  \    }\n}\ninterface Fool{\n    void methodGo(int r);\n    int r = 10;\n}\n```\n\
+  代码打印什么？选择 1 个答案。\nA) “12” 紧接 “12”\nB) “10” 紧接 “10”\nC) “10” 紧接 “12”\nD) “12” 紧接\
+  \ “10”\nE) 不通过编译。\n\n### Q16.\n什么将强制消费模块导入被消费模块的依赖？\nA) `requires transitive com.module`\n\
+  B) `requires dependency.module`\nC) `import transitive com.module`\nD) `import dependency.module`\n\
+  \n### Q17.\n以下哪个不是有效的类修饰符？选择 1 个选项。\nA) `public`\nB) `private`\nC) `protected`\n\
+  D) `package private`\nE) `package protected`\n\n### Q18.\n```java\npackage Exam;\n\
+  public class Test {\n    String st;\n    int x = 10;\n    public static void main(String[]\
+  \ args) {\n        Test q = new Test();\n        System.out.println(\"Howdy\");\n\
+  \        if(q.x >5 | q.st.length() == 0){\n            System.out.println(\"Hello\"\
+  );\n        }\n    }\n}\n```\n代码打印什么？选择一个 选项。\nA) 不通过编译。\nB) “Howdy” 紧接 “Hello”\n\
+  C) “Howdy”\nD) 运行时异常导致程序立即失败。\nE) 打印 \"Howdy\" 然后运行时异常导致失败。\n\n### Q19.\n```java\n\
+  package Exam;\npublic class Test {\n    public static void main(String[] args) {\n\
+  \        int i = 12;\n        long L = 12;\n        float f = 12.0f;\n        double\
+  \ d = 12.2;\n        System.out.print(i == f + \" \");\n        System.out.print(i\
+  \ == d + \" \");\n        System.out.print(i.equals(f) + \" \");\n    }\n}\n```\n\
+  代码打印什么？选择 1 个答案。\nA) 不通过编译。\nB) “false false”\nC) “true true”\nD) “true false”\n\
+  E) “false false”\n\n### Q20.\n```java\npackage Exam;\npublic class Go {\n    public\
+  \ static void main(String[] args) {\n        TestSub ts = new TestSub();\n     \
+  \   ts.runThis();\n    }\n}\nclass Test{\n    static{System.out.println(\"Super\
+  \ static\");} //Line 1\n    {System.out.println(\"Super non-static\");} //Line 2\n\
+  \    public void runThis(){\n        System.out.println(\"Super runThis\"); //Line\
+  \ 3\n    }\n}\nclass TestSub extends Test{\n    static{System.out.println(\"Sub\
+  \ static\");} //Line 4\n    public void runThis(){\n        System.out.println(\"\
+  Sub runThis\"); //Line 5\n    }\n    {System.out.println(\"Sub non-static\");} //Line\
+  \ 6\n}\n```\n输出的顺序是什么？选择 1 个答案。\nA) 1, 2, 4, 5, 6\nB) 4, 5, 6\nC) 4, 6, 5\nD) 1,\
+  \ 6, 4, 2, 5\nE) 1, 4, 2, 6, 5\n\n### Q21.\n```java\npackage Exam;\npublic class\
+  \ Test {\n    public static void main(String[] args) {\n        Test q = new Test();\n\
+  \        q.subMethod();\n    }\n    public void subMethod(){\n        try{\n   \
+  \         subMethod2();\n        }catch(Exception e){\n            System.out.println(\"\
+  The Exception caught here\");\n        }\n    }\n    public void subMethod2(){\n\
+  \        throw new ArrayIndexOutOfBoundsException();\n    }\n}\n```\n代码的输出是什么？选择\
+  \ 1 个答案。\nA) 编译错误\nB) “Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException”\n\
+  C) “The Exception caught here”\n\n### Q22.\n```java\npackage Exam;\nimport java.util.ArrayList;\n\
+  import java.util.List;\npublic class Test {\n    public static void main(String[]\
+  \ args) {\n        List l = new ArrayList();\n        l.ensureCapacity(20);\n  \
+  \      for(int i = 0; i<10++){\n            l.add(i);\n        }\n        l.trimTo();\n\
+  \        System.out.print(\" \" + l.size());\n    }\n}\n```\n代码的输出是什么？选择 1 个答案。\n\
+  A) 编译错误\nB) “0 10”\nC) “20 20”\nD) “0 10”\n\n### Q23.\n```java\npackage Exam;\n\
+  public class Test {\n    public static void main(String[] args) {\n        double\
+  \ d1 = 2.4;\n        double d2 = 2.40;\n        System.out.print(\" \" + Double.compare(d1,\
+  \ d2));\n    }\n}\n```\n代码的输出是什么？选择 1 个答案。\nA) 编译错误\nB) “0”\nC) “0”\n\n### Q24.\n\
+  以下哪些是可接受的声明？选择两个答案。\nA) `String;`\nB) `String 23;`\nC) `String volatile;`\nD) `String\
+  \ MONEY;`\nE) `String`\n\n### Q25.\n```java\npackage Exam;\npublic class Test extends\
+  \ qqq {\n    Test(int i, int j, Integer integer) { //Line 1\n    }\n    public static\
+  \ void main(String[] args) {\n        Test q = new Test(1,2,new Integer(5));\n \
+  \   }\n}\nclass qqq{\n    public int aa;\n    public int bb;\n    public int cc;\n\
+  \    public qqq(int a, int b, Integer c){\n        aa = a;\n        bb = b;\n  \
+  \      cc = c.intValue();\n    }\n}\n```\n第 1 行需要什么？选择 1 个答案。\nA) 对 `qqq` 默认构造器的调用。\n\
+  B) 对显式构造器 `qqq(int a, int b, Integer c)` 的调用。\nC) 不需要。\n\n### Q26.\n```java\npackage\
+  \ Exam;\npublic class Test extends SuperTest{\n    public static void main(String[]\
+  \ args) {\n        Test q = new Test();\n        try {\n            q.run();\n \
+  \       } catch (Exception e) {\n            e.printStackTrace();\n        }\n \
+  \   }\n    void run() throws Exception{\n        System.out.println(\"Overriding\
+  \ methods can throw more specific exceptions\");\n    }\n}\nclass SuperTest{\n \
+  \   void run() throws FileNotFoundException{\n        System.out.println(\"Overridden\
+  \ methods must throw more general exceptions\");\n    }\n}\n```\n代码的输出是什么？选择 1 个答案。\n\
+  A) “Overriding methods can throw more specific exceptions”\nB) “Overridden methods\
+  \ must throw more general exceptions”\nC) 不通过编译。\n\n### Q27.\n```java\npackage Exam;\n\
+  public class Test extends SuperTest {\n    public static void main(String[] args)\
+  \ {\n        Test q = new Test();\n        q.returnThis();\n    }\n    public Number\
+  \ returnThis(){\n        Number doub = 2.2;\n        System.out.println(doub);\n\
+  \        return integ;\n    }\n}\nclass SuperTest{\n    public Double returnThis(){\n\
+  \        Double num = 3;\n        return num;\n    }\n}\n```\n以下代码打印什么？选择以下内容之一。\n\
+  A) “2.2”\nB) “3”\nC) 不通过编译\n\n### Q28.\n```java\npackage Exam;\nimport java.util.ArrayList;\n\
+  public class Test {\n    ArrayList trainList = new ArrayList();\n    public static\
+  \ void main(String[] args) {\n        Test q = new Test (); \n        //Line 1\n\
+  \        q.addTrain(\"A1\",\"Fort Worth\",trainList); \n        //Line 2\n     \
+  \   q.addTrain(\"A2\",\"Los Angeles\",trainList);\n        q.addTrain(\"A3\",\"\
+  Kansas City\",trainList);\n        System.out.println(((Train) trainList.get(1)).getID());\n\
+  \    }\n    public void addTrain(String id, String dep, ArrayList tL){\n       \
+  \ Train trn = new Train();\n        //Line 3\n        trn.setID(id);\n        trn.setDeparture(dep);\n\
+  \        trn.setDestination(dest);\n        tL.add(trn);\n        //Line 4\n   \
+  \ }\n}\nclass Train{\n    private String trainID;\n    private String departure;\n\
+  \    private String destination;\n    public String getID() {\n        return trainID;\n\
+  \    }\n    public void setID(String trainID) {\n        this.trainID = trainID;\n\
+  \    }\n    public String getDeparture() {\n        return departure;\n    }\n \
+  \   public void setDeparture(String departure) {\n        this.departure = departure;\n\
+  \    }\n    public String getDestination() {\n        return destination;\n    }\n\
+  \    public void setDestination(String destination) {\n        this.destination\
+  \ = destination;\n    }\n}\n```\n哪一行导致异常？选择以下之一。\nA) Line 1\nB) Line 2\nC) Line\
+  \ 3\nD) Line 4\nE) 代码是安全的\n\n### Q29.\n```java\npackage Exam;\nimport java.util.ArrayList;\n\
+  import java.util.List;\npublic class Test{\n    List<Train> trainList = new ArrayList<>();\n\
+  \    public static void main(String[] args) {\n        Test q = new Test();\n  \
+  \      q.addTrain(\"A1\",\"Fort Worth\",trainList);\n        q.addTrain(\"A2\",\"\
+  Los Angeles\",trainList);\n        q.addTrain(\"A3\",\"Kansas City\",trainList);\n\
+  \        System.out.println(q.trainList.get(1).getID());\n    }\n    public void\
+  \ addTrain(String id, String dep, List<Train> tL){\n        Train trn = new Train();\n\
+  \        trn.setID(id);\n        trn.setDeparture(dep);\n        trn.setDestination(dest);\n\
+  \        tL.add(trn);\n    }\n}\nclass Train{\n    private String trainID;\n   \
+  \ private String departure;\n    private String destination;\n    public String\
+  \ getID() {\n        return trainID;\n    }\n    public void setID(String trainID)\
+  \ {\n        this.trainID = trainID;\n    }\n    public String getDeparture() {\n\
+  \        return departure;\n    }\n    public void setDeparture(String departure)\
+  \ {\n        this.departure = departure;\n    }\n    public String getDestination()\
+  \ {\n        return destination;\n    }\n    public void setDestination(String destination)\
+  \ {\n        this.destination = destination;\n    }\n}\n```\n以下代码打印什么？选择以下之一。\n\
+  A) “A1”\nB) “A2”\nC) “A3”\nD) 不通过编译。\n\n### Q30.\n```java\npackage Exam;\npublic\
+  \ class Test {\n    public static void main(String[] args) {\n        Integer in\
+  \ = new Integer(5);\n        Double db = new Double(5.5);\n        System.out.println(in.compareTo(db));\n\
+  \    }\n}\n```\n以下代码打印什么？选择以下之一。\nA) “1”\nB) “0”\nC) “-1”\nD) 不通过编译\n\n### Q31.\n\
+  ```java\npackage Exam;\nimport java.util.ArrayList;\npublic class Test {\n    public\
+  \ static void main(String[] args) {\n        Test q = new Test();\n        ArrayList\
+  \ tr = new ArrayList();\n        for(int i = 0; i<3; i++){\n            tr.add(new\
+  \ StringBuilder(\"str\" + i));\n        }\n        q.change(tr);\n        System.out.println(tr.get(1));\n\
+  \    }\n    public void change(ArrayList ls){\n        for(int i = 0; i < ls.size();\
+  \ i++){\n            ((StringBuilder) (ls.get(i))).append(\" is here\");\n     \
+  \   }\n    }\n}\n```\n以下代码打印什么？选择以下之一。\nA) “str0”\nB) “str0 is here”\nC) “str1”\n\
+  D) “str1 is here”\nE) 不通过编译\n\n### Q32.\n对或错？在 Java 中，对象参数是值传递的？\nA) 对\nB) 错\n\n\
+  ### Q33.\n```java\npackage Exam;\nimport java.util.ArrayList;\npublic class Test\
+  \ {\n    public static void main(String[] args) {\n        ArrayList arr = new ArrayList();\n\
+  \        int i = 0;\n        do{\n            i++;\n        }while(i < 10);\n  \
+  \      System.out.println(i);\n    }\n}\n```\n以下代码打印什么？选择以下之一。\nA) “10”\nB) “9”\n\
+  C) 不通过编译\n\n### Q34.\n```java\npackage Exam;\nimport java.util.ArrayList;\npublic\
+  \ class Test {\n    public static void main(String[] args) {\n        ArrayList\
+  \ arr = new ArrayList();\n        int i = 0;\n        while(i < 10)\n        do{\n\
+  \            i++;\n        }\n        System.out.println(i);\n    }\n}\n```\n以下代码打印什么？选择以下之一。\n\
+  A) “10”\nB) “9”\nC) 不通过编译\n\n### Q35.\n```java\npackage Exam;\nimport java.util.ArrayList;\n\
+  public class Test {\n    public static void main(String[] args) {\n        ArrayList\
+  \ arr = new ArrayList();\n        int counter = 0;\n        for(int i = 5; i > 0;\
+  \ i--){\n            for(int x = 0; x < i; x++){\n                counter++;\n \
+  \           }\n        }\n        System.out.println(counter);\n    }\n}\n```\n\
+  以下代码打印什么？选择以下之一。\nA) “5”\nB) “10”\nC) “15”\nD) “20”\nE) “25”\n\n### Q36.\n```java\n\
+  package Exam;\nimport java.util.ArrayList;\npublic class Test{\n    public static\
+  \ void main(String[] args) {\n        ArrayList arr = new ArrayList();\n       \
+  \ int counter = 0;\n        outer:\n        for(int i = 5; i > 0; i--){\n      \
+  \      inner:\n            for(int x = 0; x < i; x++){\n                if(x ==\
+  \ 3){\n                    break inner;\n                }\n                counter++;\n\
+  \            }\n        }\n        System.out.println(counter);\n    }\n}\n```\n\
+  以下代码打印什么？选择以下之一。\nA) “10”\nB) “12”\nC) “14”\nD) 不通过编译\n\n### Q37.\n```java\npackage\
+  \ Exam;\npublic class Test {\n    public static void main(String[] args) {\n   \
+  \     out.println(\"Hello World\");\n    }\n}\n```\n对或错？代码通过编译。\nA) 对\nB) 错\n\n\
+  ### Q38.\n对或错？默认情况下，Java 模块向其他模块暴露所有的 API？\nA) 对\nB) 错\n\n### Q39.\n```java\npackage\
+  \ Exam;\npublic class Test{\n    public static void main(String[] args) {\n    \
+  \    Test q = new Test();\n        StringBuilder sb = new StringBuilder(\"This\"\
+  );\n        q.changeThis(sb);\n        System.out.println(sb);\n    }\n    public\
+  \ void changeThis(StringBuilder str){\n        System.out.print(str + \" \");\n\
+  \        str.delete(0, 4);\n        str.append(\"That\");\n    }\n}\n```\n以下代码打印什么？选择以下之一。\n\
+  A) “This That”\nB) “That That”\nC) “This This”\nD) 不通过编译\n\n### Q40.\n以下关于 getters\
+  \ 和 setters 的哪些正确？选择两个选项。\nA) getters 和 setters 增加了代码的可重用性\nB) getters 和 setters\
+  \ 是面向对象编程中不可或缺的一部分\nC) getters 和 setters 控制程序的流\nD) getters 和 setters 维护了封装\n\n\n\
+  \n\n\n### Q41\n只有一个抽象方法的接口被称为什么？\nA) 它没有名称\nB) 方法接口 (Method Interface)\nC) 式接口 (Functional\
+  \ Interface)\nD) 抽象接口 (Abstract Interface)\nQ41 已回答.\n\n### Q42\n```java\npackage\
+  \ Exam;\n@FunctionalInterface\ninterface Cube {\n    int calculateVolume(int x);\n\
+  \    int countSides(int y);\n}\n```\n正确或错误：这段代码可以编译\nA) 正确\nB) 错误\nQ42 已回答.\n\n\
+  ### Q43\n```java\npackage Exam;\ninterface TestInterface {\n    public void add(int\
+  \ x);\n    default void print() {\n        System.out.println(\"Default Method Executed\"\
+  );\n    }\n    default void printAnother() {\n        System.out.println(\"Another\
+  \ Default Method Executed\");\n    }\n}\npublic class Test implements TestInterface\
+  \ {\n    public void add(int x) {\n        System.out.println(x+x);\n    }\n   \
+  \ public static void main(String args[]) {\n        Test writer = new Test();\n\
+  \        writer.add(4);\n        writer.print();\n    }\n}\n```\n正确或错误：这段代码可以编译\n\
+  A) 正确\nB) 错误\nQ43 已回答.\n\n### Q44\n正确或错误：接口上的静态方法可以被重写\nA) 正确\nB) 错误\nQ44 已回答.\n\
+  \n### Q45\n```java\npackage Exam;\ninterface LambdaInterface {\n    public void\
+  \ printer(String x);\n    default void printAnother() {\n        System.out.println(\"\
+  Another Print!\");\n    }\n}\npublic class Test {\n    public static void main(String\
+  \ args[]) {\n        LambdaInterface inter = (String x) -> System.out.println(x);\n\
+  \        inter.printer(\"Print Me!\");\n    }\n}\n```\n以下代码打印什么？从以下选项中选择一个。\nA)\
+  \ “Print Me!”\nB) “Another Print!”\nC) 编译\nQ45 已回答.\n\n### Q46\n```java\npackage\
+  \ Exam;\ninterface LambdaInterface {\n    public void printer(String x);\n    public\
+  \ void anotherPrinter();\n    default void printAnother() {\n        System.out.println(\"\
+  Another Print!\");\n    }\n}\npublic class Test {\n    public static void main(String\
+  \ args[]) {\n        LambdaInterface inter = (String x) -> System.out.println(x);\n\
+  \        LambdaInterface anotherInter = () -> System.out.println(\"Print This!\"\
+  );\n        inter.printer(\"Print Me!\");\n    }\n}\n```\n以下代码打印什么？从以下选项中选择一个。\n\
+  A) “Print Me!”\nB) “Print This!”\nC) “Another Print!”\nD) 编译\nQ46 已回答.\n\n### Q47\n\
+  ```java\npackage Exam;\nimport java.clock.LocalDate;\npublic class HelloWorld {\n\
+  \    public static void main(String []args){\n        LocalDate local = LocalDate.new();\n\
+  \        System.out.println(local);\n    }\n}\n```\n以下代码打印什么？从以下选项中选择一个。\nA) 当前时间\n\
+  B) 当前日期\nC) 当前的时间和日期\nD) 编译\nQ47 已回答.\n\n### Q48\n以下哪项不是有效的 `java.time.LocalDate`\
+  \ 方法？\nA) atTIme\nB) equals\nC) getDayOfYear\nD) getWeekDay\nE) isLeapYear\nQ48\
+  \ 已回答.\n\n### Q49\n`Boolean` 对象的默认值是什么？\nA) true\nB) false\nC) undefined\nD) null\n\
+  Q49 已回答.\n\n### Q50\n`int` 原始类型的大小是几字节？\nA) 1 字节\nB) 2 字节\nC) 4 字节\nD) 8 字节\nQ50\
+  \ 已回答.\n\n### Q51\n哪种语法创建一个可选的、仅编译时的依赖？\nA) requires devDependency com.module\n\
+  B) requires static com.module\nC) import optional com.module\nQ51 已回答.\n\n### Q52\n\
+  ```java\npackage Exam;\npublic class Test{\n    public static void main(String[]\
+  \ args) {\n        Test q = new Test();\n        StringBuilder sb = new StringBuilder(\"\
+  This\");\n        q.changeThis(sb);\n        System.out.println(sb);\n    }\n  \
+  \  public void changeThis(StringBuilder str){\n        System.out.print(str + \"\
+  \ \");              //Line 1\n        str = new StringBuilder(\"That\");       \
+  \    //Line 2\n    }\n}\n```\n以下代码打印什么？从以下选项中选择一个。\nA) “This That”\nB) “That That”\n\
+  C) “This This”\nD) 编译\nQ52 已回答.\n\n### Q53\n以下代码片段是有效的。`static int i1, i2[], i3;`\n\
+  选择 1 个选项。\nA) 正确\nB) 错误\nQ53 已回答.\n\n\n\n\n\n## Q54\n```java\npackage Exam;\npublic\
+  \ class Test {\n    public static void main(String[] args) {\n        float f =\
+  \ 5.0;\n        Test q = new Test ();\n        q.runInt(f);\n    }\n    public void\
+  \ runInt(float f) {\n        Integer i = new Integer(new Float(f).intValue());\n\
+  \        System.out.print(i);\n    }\n}\n```\n代码的输出是什么？选择一个选项。\nA) \"5\"\nB) \"\
+  5.0\"\nC) 编译时异常\nD) 运行时异常\n\n## Q55\n哪个命令行命令会显示所有模块？\nA) `java --show-modules`\n\
+  B) `java --list-modules`\nC) `java --module-chart`\nD) `java --modules`\n\n## Test\
+  \ 2 Questions\n\n### Q1\n```java\npackage Exam;\npublic class Test {\n    public\
+  \ static void main(String[] args) {\n        Test q = new Test();\n        String\
+  \ s = \"hello\";\n        StringBuilder sb = new StringBuilder(\"world\");\n   \
+  \     System.out.println(q.addString(s));\n        System.out.println(q.addSB(sb));\n\
+  \        System.out.println(s);\n        System.out.println(sb);\n    }\n    public\
+  \ String addString(String str) {\n        str += \" world\";\n        return str;\n\
+  \    }\n    public StringBuilder addSB(StringBuilder strbl) {\n        strbl.insert(0,\
+  \ \"hello \");\n        return strbl;\n    }\n}\n```\n代码将打印什么？\nA) 四次 \"hello world\"\
+  \nB) \"hello\" 后接 \"hello world\" 后接 \"hello\" 后接 \"hello world\"\nC) \"hello\"\
+  \ 后接 \"world\" 后接 \"hello\" 后接 \"world\"\nD) 两次 \"hello world\" 后接 \"hello\" 后接\
+  \ \"hello world\"\n\n### Q2\n```java\npackage Exam;\npublic class Test {\n    public\
+  \ static void main(String[] args) {\n        switch(2) {\n            case 1: System.out.println(\"\
+  1\");\n            case 2: System.out.println(\"2\");\n            case 3: System.out.println(\"\
+  3\");\n            default: System.out.println(\"None of the above\");\n       \
+  \ }\n    }\n}\n```\n代码打印了什么？选择一个选项。\nA) 打印 \"2\"\nB) 打印 \"1\", \"2\", \"3\", \"\
+  None of the above\"\nC) 打印 \"2\", \"3\"\nD) 打印 \"2\", \"3\", \"None of the above\"\
+  \nE) 无法编译。\n\n### Q3\n```java\npackage Exam;\nimport java.io.BufferedReader;\nimport\
+  \ java.io.FileReader;\nimport java.io.IOException;\npublic class Test {\n    public\
+  \ static void main(String[] args) {\n        try {\n            BufferedReader br\
+  \ = new BufferedReader(new FileReader(\"file.txt\"));\n            try {\n     \
+  \           StringBuilder sb = new StringBuilder();\n                String line\
+  \ = br.readLine();\n                while (line != null) {\n                   \
+  \ sb.append(line);\n                    sb.append('\\n');\n                    line\
+  \ = br.readLine();\n                }\n                String everything = sb.toString();\n\
+  \            } finally {\n                br.close();\n            }\n        }\
+  \ catch (Exception e) {\n            System.out.println(\"Exception caught\");\n\
+  \        } catch (IOException e) {\n            System.out.println(\"IOException\
+  \ caught\");\n        }\n    }\n}\n```\n如果 `file.txt` 为空，代码将生成什么？选择 1 个选项。\nA) 代码将打印\
+  \ \"Exception caught\"\nB) 即使 `file.txt` 不为空，代码也无法编译。\nC) 代码将打印 \"IOException caught\"\
+  \nD) 代码将抛出一个未被捕获的异常，导致程序结束。\n\n### Q4\n```java\npackage Exam;\npublic class Test\
+  \ {\n    public static void main(String[] args) {\n        Test q = new Test();\n\
+  \        q.methodRun();\n        System.out.println(\"Complete\");\n    }\n    public\
+  \ void methodRun();\n    public void methodHide(){ }\n}\nabstract class TestAbstract\
+  \ {\n    abstract void methodRun();\n    abstract void methodHide();\n    abstract\
+  \ void methodSeek();\n}\n```\n该程序的输出是什么？选择一个选项。\nA) \"Complete\"\nB) 无法编译\nC) 运行错误\n\
+  \n### Q5\n```java\npackage Exam\n\npublic class Test {\n    public static void main(String[]\
+  \ args) {\n        int[][] myInt = {{2, 3, 1}, {4, 5, 6}, {7, 8, 9}};\n        System.out.println(myInt[1][1]);\n\
+  \        System.out.println(myInt[3][1]);\n    }\n}\n```\n代码的输出是什么？选择一个答案。\nA) \"\
+  5\" 后接 ArrayIndexException\nB) \"2\" 后接 \"7\"\nC) \"2\" 后接 \"1\"\nD) \"5\" 后接 \"\
+  7\"\nE) 无法编译\n\n### Q6\n以下哪些是有效的 `ArrayList` 方法？选择 3 个选项。\nA) `.size()`\nB) `.isEmpty()`\n\
+  C) `.length()`\nD) `.contains()`\nE) `.removeElement()`\n\n### Q7\n```java\npackage\
+  \ Exam;\nimport java.sql.Array;\nimport java.util.ArrayList;\npublic class Test\
+  \ {\n    Short a = new Short((short) 1);\n    Integer b = new Integer(1);\n    public\
+  \ static void main(String[] args) {\n        Test t = new Test();\n        if (t.b\
+  \ instanceof Short){\n            System.out.println(\"Test\");\n        else System.out.println(\"\
+  Failed\");\n    }\n}\n```\n代码将打印什么？选择 1 个选项。\nA) \"Test\"\nB) \"Failed\"\nC) 无法编译。\n\
+  D) 运行时异常\nE) 什么都不打印。\n\n### Q8\n```java\npackage Exam;\npublic class Test {\n  \
+  \  int i = 0;\n    public static void main(String[] args) {\n        System.out.println(\"\
+  Hello World\");\n    }\n}\n```\n`i` 是类变量是或否\nA) 是\nB) 否\n\n### Q9\n```java\npackage\
+  \ Exam;\nimport java.util.ArrayList;\nimport java.util.List;\npublic class Test\
+  \ {\n    List<String> dogs = new ArrayList<>();\n    public static void main(String[]\
+  \ args) {\n        String dog1 = \"German Sheard\";\n        String dog2 = \"Husky\"\
+  ;\n        String dog3 = \"Mutt\";\n        Character dog4 = new Character('s');\n\
+  \        Test q = new Test();\n        q.dogs.add(dog1);\n        q.dogs.add(dog2);\n\
+  \        q.dogs.add(dog3);\n        for(int i = 0; i<dogs.size(); i++){\n      \
+  \      System.out.print(q.dogs.get(i) + \",\");\n        }\n    }\n}\n```\n上述程序的输出是什么？选择\
+  \ 1 个答案。\nA) \"German Sheard,Husky,Mutt,\"\nB) \"German Sheard,Husky,Mutt\"\nC)\
+  \ 编译时错误。\nD) 以上都不是\n\n### Q10\n```java\npackage Exam;\npublic class Test {\n   \
+  \ public static void main(String[] args) {\n        Integer i = new Integer(1);\
+  \ // Line 1\n        Number n = i; // Line 2\n        System.out.println(n.intValue());\
+  \ // Line 3\n        i = n; // Line 4\n        System.out.println(i.intValue());\
+  \ // Line 5\n    }\n}\n```\n为了使此代码通过编译可以修改什么？选择一个选项。\nA) 将第 4 行改为 `i = (Integer)\
+  \ n;`\nB) 将第 2 行改为 `n = (Number) i;`\nC) 将第 3 和 5 行调用的方法改为 `doubleValue()`\nD) 将第\
+  \ 5 行改为 `System.out.println(i.parseInt(\"1\"));`\nE) 不需要修改。\n\n### Q11\n```java\n\
+  package Exam;\npublic class Test {\n    int i = 0;\n    public static void main(String[]\
+  \ args) {\n        // Line 1\n        for(i = 0; i<10; i++){\n            System.out.println(\"\
+  Hello World\");\n        }\n    }\n}\n```\n上述代码可以修改？选择 2 个选项。\nA) 无需修改\nB) 在第 1\
+  \ 行插入以下代码：`Test q = new Test();` 然后将 `i` 改为 `q.i`\nC) 在 for 语句中将 `i` 声明为 `int` 类型\n\
+  D) 无需修改运行\nE) 将 `i = 0;` 替换为 `i;`\n\n### Q12\n```java\npackage Exam;\npublic class\
+  \ B extends A {\n    public static void main(String[] args) {\n        A q = new\
+  \ B();\n        q.methodA1();\n        q.methodA2();\n    }\n    static void methodA1(){\n\
+  \        System.out.print(\"Static B1,\");\n    }\n    void methodA2(){\n      \
+  \  System.out.print(\" B2\");\n    }\n}\nclass A{\n    static void methodA1(){\n\
+  \        System.out.print(\"Static A1,\");\n    }\n    void methodA2(){\n      \
+  \  System.out.print(\" A2\");\n    }\n}\n```\n代码打印了什么？选择一个选项。\nA) \"Static A1, A2\"\
+  \nB) \"Static A1, B2\"\nC) \"Static B1, A2\"\nD) \"Static B1, B2\"\n\n### Q13\n\
+  ```java\npackage Exam;\npublic class TestSub extends Test {\n    public static void\
+  \ main(String[] args) {\n        Test q = new TestSub();\n        q.out();\n   \
+  \ }\n    public void out(){\n        System.out.println(\"Sub out\");\n    }\n}\n\
+  class Test {\n    protected void out(){\n        System.out.println(\"Super out\"\
+  );\n    }\n}\n```\n代码将打印什么？选择 1 个选项。\nA) 无法编译。\nB) \"Sub out\"\nC) \"Super out\"\
+  \nD) 什么都不打印。\n\n### Q14\n是或否：`!` 运算符返回布尔值。选择一个选项。\nA) 是\nB) 否\n\n### Q15\n```java\n\
+  package Exam;\npublic class Test {\n    public static void main(String[] args) {\n\
+  \        double r = Math.random() * 10; // Line 1\n        Integer x = new Integer((int)r);\
+  \ // Line 2\n        System.out.println(x); // Line 3\n    }\n}\n```\n为了使代码通过编译可以在代码中添加什么？选择\
+  \ 1 个选项。\nA) 它已经编译。\nB) 在 `Integer(r)` 后添加 `.intValue()`。\nC) 在第 1 行将 `r` 声明为 `int`。\n\
+  D) 在第 3 行将 `r` 强制转换为 `int`。\n\n### Q16\n```java\npackage Exam;\npublic class Test\
+  \ {\n    public static void main(String[] args) {\n        Test q = new Test();\n\
+  \        String s = \"hello world\";\n        System.out.println(s.equals(\"hello\
+  \ world\"));\n        System.out.println(s.charAt(0)));\n    }\n}\n```\n代码将打印什么？选择\
+  \ 1 个选项。\nA) \"true\" 后接 \"helloh\"\nB) \"false\" 后接 \"helloh\"\nC) 编译错误\nD) \"\
+  true\" 抛出了运行时异常\n\n### Q17\n```java\npackage Exam;\npublic class Test {\n    public\
+  \ static void main(String[] args) {\n        int[][] myInt[] = {{{1,2},{3,4}},{{1,2},{3,4,5},{6}},{{7}}};\n\
+  \        System.out.println(myInt[0][1]);\n        System.out.println(myInt[1][1]);\n\
+  \        System.out.println(myInt[2][0]);\n    }\n}\n```\n代码的输出是什么？选择一个答案。\nA) \"\
+  5\" 后接 ArrayIndexException\nB) \"2\" 后接 \"7\" 后接 \"1\"\nC) \"2\" 后接 \"1\" 后接 \"\
+  6\"\nD) 无法编译\nE) \"3\" 后接 \"5\" 后接 \"7\"\n\n### Q18\n以下哪个正确描述了方法签名？选择 1 个选项。\nA)\
+  \ 方法的访问修饰符、返回类型和参数。\nB) 方法的返回类型和参数。\nC) 方法的名字和参数。\nD) 方法的名字。\n\n### Q19\n```java\n\
+  package Exam;\npublic class TestSub extends Test {\n    public static void main(String[]\
+  \ args) {\n        Test q = new TestSub();\n        q.out();\n    }\n    public\
+  \ void out(){\n        System.out.println(\"Sub out\");\n    }\n}\nclass Test {\n\
+  \    private void out(){\n        System.out.println(\"Super out\");\n    }\n}\n\
+  ```\n代码将打印什么？选择 1 个选项。\nA) 无法编译。\nB) \"Sub out\"\nC) \"Super out\"\nD) 什么都不打印。\n\
+  \n### Q20\n```java\npackage Exam\npublic class Test {\n    String str1 = \"Hello\
+  \ World!\";\n    String str2;\n    public static void main(String[] args) {\n  \
+  \      Test q = new Test();\n        if (q.str1.equals(\"Hello World!\") | q.str2.equals(\"\
+  \")) {\n            System.out.println(q.str1);\n        }else System.out.println(q.str2.concat(\"\
+  Hello\"));\n    }\n}\n```\n代码打印了什么？选择一个答案。\nA) \"Hello World!\"\nB) 编译错误\nC) 代码打印空行\n\
+  D) \"Hello\"\nE) 运行时异常\n\n### Q21\n```java\npackage Exam;\npublic class Test {\n\
+  \    public static void main(String[] args) {\n        int i = 0; // Line 1\n  \
+  \      for(i = 0; i<10; i++){\n            System.out.println(\"Hello World\");\n\
+  \        }\n    }\n}\n```\n为了使代码通过编译可以进行哪些修改？选择 2 个选项。\nA) 无需修改编译\nB) 在第 1 行插入以下代码：`Test\
+  \ q = new Test();` 然后将 `i` 改为 `q.i`\nC) 在 for 语句中将 `i` 声明为 `int` 类型\nD) 无需修改运行\n\
+  E) 将 `i = 0;` 替换为 `i;`\n\n\n\n\n\n### Q41\n只有一个抽象方法的接口称为什么？\nA) 它没有名称\nB) 方法接口 (Method\
+  \ Interface)\nC) 这里的接口 (Functional Interface)\nD) 抽象接口\n\n答案是 **C**。如果正好有一个抽象方法，并且有零、一个或多个默认方法，则该接口是一个函数接口。\n\
+  \n### Q42\n```java\npackage Exam;\n@FunctionalInterface\ninterface Cube {\n    int\
+  \ calculateVolume(int x);\n    int countSides(int y);\n}\n```\n正确或错误：此代码可以编译\nA)\
+  \ 正确\nB) 错误\n\n答案是 **B**。因为存在多个抽象类方法，编译器会抛出“Unexpected @FunctionalInterface annotation”的错误信息。\n\
+  \n### Q43\n```java\npackage Exam;\ninterface TestInterface {\n    public void add(int\
+  \ x);\n    default void print() {\n        System.out.println(\"Default Method Executed\"\
+  );\n    }\n    default void printAnother() {\n        System.out.println(\"Another\
+  \ Default Method Executed\");\n    }\n}\npublic class Test implements TestInterface\
+  \ {\n    public void add(int x) {\n        System.out.println(x+x);\n    }\n   \
+  \ public static void main(String args[]) {\n        Test writer = new Test();\n\
+  \        writer.add(4);\n        writer.print();\n    }\n}\n```\n正确或错误：此代码可以编译\n\
+  A) 正确\nB) 错误\n\n答案是 **A**。该类没有调用 `printAnother`，这是可以接受的。实现类不需要调用所有的默认方法。\n\n###\
+  \ Q44\n正确或错误：接口上的静态方法可以被重写\nA) 正确\nB) 错误\n\n答案是 **B**。如果一个带有静态方法的接口被类实现，而该类又实现了一个与接口静态方法签名相同的方法，那么接口的静态方法仍然存在于接口中，而类的静态方法存在于类中。\n\
+  \n### Q45\n```java\npackage Exam;\ninterface LambdaInterface {\n    public void\
+  \ printer(String x);\n    default void printAnother() {\n        System.out.println(\"\
+  Another Print!\");\n    }\n}\npublic class Test {\n    public static void main(String\
+  \ args[]) {\n        LambdaInterface inter = (String x) -> System.out.println(x);\n\
+  \        inter.printer(\"Print Me!\");\n    }\n}\n```\n以下代码打印什么？请选择以下之一。\nA) “Print\
+  \ Me!”\nB) “Another Print!”\nC) 无法编译\n\n答案是 **A**。这是一个 lambda 函数实现接口上抽象方法的简单示例。\n\
+  \n### Q46\n```java\npackage Exam;\ninterface LambdaInterface {\n    public void\
+  \ printer(String x);\n    public void anotherPrinter();\n    default void printAnother()\
+  \ {\n        System.out.println(\"Another Print!\");\n    }\n}\npublic class Test\
+  \ {\n    public static void main(String args[]) {\n        LambdaInterface inter\
+  \ = (String x) -> System.out.println(x);\n        LambdaInterface anotherInter =\
+  \ () -> System.out.println(\"Print This!\");\n        inter.printer(\"Print Me!\"\
+  );\n    }\n}\n```\n以下代码打印什么？请选择以下之一。\nA) “Print Me!”\nB) “Print This!”\nC) “Another\
+  \ Print!”\nD) 无法编译\n\n答案是 **D**。编译器不知道哪个抽象函数应该接收该 lambda 函数实现。这也是为什么带有两个抽象函数的接口不是函数接口的原因。\n\
+  \n### Q47\n```java\npackage Exam;\nimport java.clock.LocalDate;\npublic class HelloWorld{\n\
+  \    public static void main(String []args){\n        LocalDate local = LocalDate.new();\n\
+  \        System.out.println(local);\n    }\n}\n```\n以下代码打印什么？请选择以下之一。\nA) 当前时间\n\
+  B) 当前日期\nC) 当前时间和日期\nD) 无法编译\n\n答案是 **D**。`LocalDate` 属于 `java.time` 包。\n\n### Q48\n\
+  以下哪项不是 `java.time.LocalDate` 方法？\nA) atTime\nB) equals\nC) getDayOfYear\nD) getDayDay\n\
+  E) isLeap\n\n答案是 **D**。没有 `getDayDay` 方法，但有一个 `getDayOfWeek`。`atTime` 将日期与时间创建 `LocalDateTime`\
+  \ 对象。`equals` 比较两个日期。`getDayOfYear` 返回 1 到 366（闰年）。`isLeap` 返回 `LocalDate` 对象是否为闰年的布尔值。\n\
+  \n### Q49\n`Boolean` 对象的默认值是什么？\nA) true\nB) false\nC) undefined\nD) null\n\n答案是\
+  \ **D**。`Boolean` 对象（不要与 `boolean` 原类型混淆）默认值为 `null`。`boolean` 原类型默认值为 `false`。\n\
+  \n### Q50\n`int` 原类型的大小是几字节？\nA) 1 字节\nB) 2 字节\nC) 4 字节\nD) 8 字节\n\n答案是 **C**。`int`\
+  \ 原类型可以持有 4 字节的数据，能够存储 -2,147,483,648 到 2,147,483,647 之间的值。\n\n### Q51\n什么语法创建可选的编译时依赖？\n\
+  A) requires dev com.module\nB) requires static com.module\nC) import com.module\n\
+  \n答案是 **B**。\n\n### Q52\n```java\npackage Exam;\npublic class Test{\n    public\
+  \ static void main(String[] args) {\n        Test q = new Test();\n        StringBuilder\
+  \ sb = new StringBuilder(\"This\");\n        q.changeThis(sb);\n        System.out.println(sb);\n\
+  \    }\n    public void changeThis(StringBuilder str){\n        System.out.print(str\
+  \ + \" \"); // 第 1 行\n        str = new StringBuilder(\"That\"); // 第 2 行\n    }\n\
+  }\n```\n以下代码打印什么？请选择以下之一。\nA) “This That”\nB) “That That”\nC) “This This”\nD) 无法编译\n\
+  \n答案是 **C**。记住 Java 是值传递。第 2 行将 `str` 指向了 JVM 内存中的新位置/对象，因此 `str` 原本指向的原始不受该行代码的影响。\n\
+  \n### Q53\n以下代码片段是有效的。\n`static int i1, i2[], i3;`\n选择选项。\nA) 正确\nB) 错误\n\n答案是 **A**。该代码片段可以编译。但它难以处理且不推荐。如果下一行代码是\
+  \ `i2[] = new int[10];`，JVM 将无法编译。推荐写法是：`static int i2[] = new int[10];`。\n\n\n\n\
+  \n\n## Q54 已解答。\n```java\npackage Exam;\npublic class Test {\n    public static\
+  \ void main(String[] args) {\n        float f = 5.0;\n        Test q = new Test\
+  \ ();\n        q.runInt(f);\n    }\n    public void runInt(float f){\n        Integer\
+  \ i = new Integer(new Float(f).intValue());\n        System.out.print(i );\n   \
+  \ }\n}\n```\n代码的输出是什么？选择一个选项。\nA) “5”\nB) “5.0”\nC) 编译时异常\nD) 运行时异常\n答案是 C。`float\
+  \ f = 5.0;` 是无效的。JVM 将该行读取为尝试将 `double` 赋值给 `float`，它不会将 `double` 降级为 `float`，因为可能会丢失数据。\n\
+  \n## Q55 已解答。\n什么命令行命令会显示所有模块？\nA) `java --show-modules`\nB) `java --list-modules`\n\
+  C) `java --module-chart`\nD) `java --modules`\n答案是 B。\n\n## Test 2 答案\n\n### Q1\
+  \ 已解答。\n```java\npackage Exam;\npublic class Test {\n    public static void main(String[]\
+  \ args) {\n        Test q = new Test();\n        String s = \"hello\";\n       \
+  \ StringBuilder sb = new StringBuilder(\"world\");\n        System.out.println(q.addString(s));\n\
+  \        System.out.println(q.addSB(sb));\n        System.out.println(s);\n    \
+  \    System.out.println(sb);\n    }\n    public String addString(String str){\n\
+  \        str += \" world\";\n        return str;\n    }\n    public StringBuilder\
+  \ addSB(StringBuilder strbl){\n        strbl.insert(0, \"hello \");\n        return\
+  \ strbl;\n    }\n}\n```\n代码将打印什么？\nA) 四次 \"hello world\"\nB) “hello” 后面跟着 “hello\
+  \ world” 后面跟着 “hello” 后面跟着 “hello world”\nC) “hello” 后面跟着 “world” 后面跟着 “hello” 后面跟着\
+  \ “world”\nD) 两次 \"hello world\" 后面跟着 “hello” 后面跟着 “hello world”\n答案是 D。`String`\
+  \ 和 `StringBuilder` 都是对象，因此它们通过引用传递。但是，`String` 是不可变的，`StringBuilder` 不是。因此 `s`\
+  \ 从未真正被改变。此外，在 `addString()` 方法中，`str +=` 创建了一个新的 `String` 对象，因此 `return str` 返回了一个值为\
+  \ \"hello world\" 的 `String` 对象。\n\n### Q2 已解答。\n```java\npackage Exam;\npublic\
+  \ class Test {\n    public static void main(String[] args) {\n        switch(2){\n\
+  \            case 1: System.out.println(\"1\");\n            case 2: System.out.println(\"\
+  2\");\n            case 3: System.out.println(\"3\");\n            default: System.out.println(\"\
+  None of the above\");\n        }\n    }\n}\n```\n代码打印什么？选择一个选项。\nA) 打印 \"2\"\nB)\
+  \ 打印 \"1\", \"2\", \"3\", \"None of the above\"\nC) 打印 \"2\", \"3\"\nD) 打印 \"2\"\
+  , \"3\", \"None of the above\"\nE) 无法编译\n答案是 D。`switch` 语句选择了 `case 2`，但随后它会穿透 2\
+  \ 之后的所有 case。\n\n### Q3 已解答。\n```java\npackage Exam;\nimport java.io.BufferedReader;\n\
+  import java.io.FileReader;\nimport java.io.IOException;\npublic class Test {\n \
+  \   public static void main(String[] args) {\n        try {\n            BufferedReader\
+  \ br = new BufferedReader(new FileReader(\"file.txt\"));\n            StringBuilder\
+  \ sb = new StringBuilder();\n            String line = br.readLine();\n        \
+  \    while (line != null) {\n                sb.append(line);\n                sb.append('\\\
+  n');\n                line = br.readLine();\n            }\n            String everything\
+  \ = sb.toString();\n        } finally {\n            br.close();\n        }\n  \
+  \  } catch (Exception e) {\n        System.out.println(\"Exception caught\");\n\
+  \    } catch (IOException e) {\n        System.out.println(\"IOException caught\"\
+  );\n    }\n}\n```\n如果 `file.txt` 为空，代码将生成什么？选择 1 个选项。\nA) 代码将打印 \"Exception caught\"\
+  \nB) 如果 `file.txt` 不为空，代码无法编译。\nC) 代码将打印 \"IOException caught\"\nD) 代码将抛出一个未捕获的异常，导致程序结束。\n\
+  答案是 B。`IOException` 的 `catch` 块必须在 `Exception` 的 `catch` 块之前。否则，编译器会认为 `IOException`\
+  \ `catch` 块中的代码无法被抛出。\n\n### Q4 已解答。\n```java\npackage Exam;\npublic class Test\
+  \ {\n    public static void main(String[] args) {\n        Test q = new Test();\n\
+  \        q.methodRun();\n        System.out.println(\"Complete\");\n    }\n    public\
+  \ void methodRun();\n    public void methodHide(){}\n}\nabstract class TestAbstract\
+  \ {\n    abstract void methodRun();\n    abstract void methodHide();\n    abstract\
+  \ void methodSeek();\n}\n```\n此程序的输出是什么？选择一个选项。\nA) “Complete”\nB) 无法编译\nC) 运行时错误\n\
+  答案是 B。子类 `Test` 中的 `methodRun()` 是抽象的，因为它没有体。因此它必须标记为 `abstract`，否则将无法编译。然而，只有标记为\
+  \ `abstract` 的类可以有抽象方法。\n\n### Q5 已解答。\n```java\npackage exam\npublic class Test\
+  \ {\n    public static void main(String[] args) {\n        int[][] myInt = {{2,\
+  \ 3}, {4, 5, 6}, {7, 8, 9}};\n        System.out.println(myInt[1]);\n        System.out.println(myInt[3]);\n\
+  \    }\n}\n```\n代码的输出是什么？选择一个答案。\nA) “5” 跟着 “ArrayIndexException”\nB) “2” 跟着 “7”\n\
+  C) “2” 跟着 “1”\nD) “5” 跟着 “7”\nE) 无法编译\n答案是 A。`myInt[1]` 的值为 5，因为 Java 从索引 0 开始计数。`myInt`\
+  \ 在 0-9 的位置有元素。上述代码也可以编译，但在 `myInt[3]` 处有运行时异常，因为 `myInt` 只有第一个维度。\n\n### Q6 已解答。\n\
+  以下哪些是有效的 `ArrayList` 对象方法？选择 3 个。\nA) `.size()`\nB) `.isEmpty()`\nC) `.length()`\n\
+  D) `.contains()`\nE) `.removeElement()`\n答案是 A, B, D。`.length()` 是 `String` 对象的方法。`length`\
+  \ 是数组对象的字段。`.removeElement()` 不是有效方法。`.remove()` 是 `ArrayList` 类的有效方法，并接受一个对象作为参数。它移除\
+  \ `ArrayList` 中该对象的首次出现。\n\n"

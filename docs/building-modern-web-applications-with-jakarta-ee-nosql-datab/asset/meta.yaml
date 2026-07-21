@@ -1,0 +1,494 @@
+name: Building Modern Web Applications With Jakarta EE, NoSQL Databases and Microservices：
+  Create Web Applications Jakarta EE with Microservices, JNoSQL, Vaadin, Jmoordb,
+  and MicroProfile easily
+name_cn: Jakarta EE、NoSQL 数据库与微服务构建现代 Web 应用指南：轻松使用微服务、JNoSQL、Vaadin、Jmoordb 和 MicroProfile
+  创建 Jakarta EE Web 应用程序
+slug: building-modern-web-applications-with-jakarta-ee-nosql-datab
+toc:
+- - '#'
+  - Jakarta EE、NoSQL 数据库与微服务构建现代 Web 应用指南：轻松使用微服务、JNoSQL、Vaadin、JMongoDB 和 MicroProfile
+    创建 Jakarta EE Web 应用程序
+- - '#'
+  - 献给
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于评审员
+- - '#'
+  - 致谢
+- - '#'
+  - 下载代码
+- - '#'
+  - '[`rebrand.ly/qble64n`](https://rebrand.ly/qble64n)'
+- - '#'
+  - 勘误表
+- - '#'
+  - BPB 正在寻找像你这样的作者
+- - '#'
+  - 盗版
+- - '#'
+  - 如果你有兴趣成为作者
+- - '#'
+  - 评论
+- - '#'
+  - 历史
+- - '#'
+  - 从 JavaEE 到 Jakarta EE
+- - '#'
+  - Java EE/Jakarta EE 应用程序开发
+- - '#'
+  - 上下文与依赖注入 CDI 2.0 (JSR 365)
+- - '#'
+  - '@Interceptor 拦截器示例'
+- - '#'
+  - Enterprise Java Beans 3.2 (JSR 345)
+- - '#'
+  - '@Producer 示例'
+- - '#'
+  - Java Servlet 4.0 (JSR-369)
+- - '#'
+  - 服务器推送
+- - '#'
+  - Java API for RESTful Web services JAX-RS 2.1 (JSR-370)
+- - '#'
+  - Java EE Security API 1.0 (JSR -375)
+- - '#'
+  - Identity Store
+- - '#'
+  - Java API for JSON Binding JSON-B 1.0 (JSR-367)
+- - '#'
+  - 'JavaServer Faces 2.3 '
+- - '#'
+  - WebSocket
+- - '#'
+  - Java Persistence API 2.2 (JSR-338)
+- - '#'
+  - JPA 提供的一些注解：
+- - '#'
+  - 结论
+- - '#'
+  - 问题
+- - '#'
+  - 第 2 章 NoSQL
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - NoSQL 类型
+- - '##'
+  - 键值对 (Key-value)
+- - '##'
+  - 列族 (Column family)
+- - '##'
+  - 文档集合 (Document collection)
+- - '##'
+  - 图谱 (Graph)
+- - '##'
+  - 可扩展性与复杂性
+- - '##'
+  - BASE 对比 ACID
+- - '##'
+  - CAP 定理
+- - '##'
+  - NoSQL 的多样性
+- - '##'
+  - SQL 的标准
+- - '##'
+  - 为什么选择 Jakarta NoSQL？
+- - '##'
+  - 为什么不使用 JPA 作为 NoSQL 规范？
+- - '##'
+  - 特定行为在 NoSQL 数据库中的性
+- - '##'
+  - 安装数据库
+- - '##'
+  - Maven 项目
+- - '##'
+  - 实体模型
+- - '##'
+  - 键值
+- - '##'
+  - 列族数据库 (Column family database)
+- - '##'
+  - 文档数据库
+- - '##'
+  - 结论
+- - '##'
+  - 问题
+- - '#'
+  - 第 4 章 理解 JMongoDB
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - JMongoDB 简介
+- - '##'
+  - 实体
+- - '##'
+  - 注解
+- - '###'
+  - '@Id'
+- - '###'
+  - '@Embedded'
+- - '###'
+  - '@Referenced'
+- - '##'
+  - Repository
+- - '##'
+  - C.R.U.D.
+- - '###'
+  - 创建
+- - '####'
+  - 表 4.3
+- - '###'
+  - 更新
+- - '####'
+  - 表 4.4
+- - '###'
+  - 删除
+- - '####'
+  - 表 4.5
+- - '###'
+  - 读取
+- - '####'
+  - 按主键搜索
+- - '####'
+  - 表 4.6
+- - '####'
+  - 按辅助键搜索
+- - '####'
+  - 表 4.7
+- - '####'
+  - 按任何属性搜索
+- - '###'
+  - 过滤器 (Filter)
+- - '###'
+  - 搜索嵌入文档
+- - '###'
+  - 搜索嵌入文档列表
+- - '###'
+  - 在仓库中搜索
+- - '###'
+  - 示例
+- - '##'
+  - 构建器 (Builder)
+- - '##'
+  - 分页 (Pagination)
+- - '##'
+  - SQL 支持
+- - '##'
+  - 聚合 (Aggregation)
+- - '###'
+  - $match, $group
+- - '###'
+  - $match 配合 $group 统计总成本
+- - '##'
+  - 页面大小
+- - '##'
+  - createIndex(Document doc)
+- - '##'
+  - listCollections()
+- - '##'
+  - existsCollection(String nameCollection)
+- - '##'
+  - drop()
+- - '##'
+  - toDocument(Object t)
+- - '##'
+  - dropDatabase()
+- - '##'
+  - ListOfPage
+- - '##'
+  - 无模式的数据库
+- - '#'
+  - 第 5 章：探索 Eclipse MicroProfile
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Eclipse MicroProfile 骨架
+- - '##'
+  - 示例代码
+- - '##'
+  - 数据库
+- - '#'
+  - 将技术整合在一起
+- - '##'
+  - 层、层、层层多的层
+- - '##'
+  - 会话服务
+- - '##'
+  - Conference service
+- - '##'
+  - 结论
+- - '##'
+  - 问题
+- - '#'
+  - 第 6 章 Java Server Faces
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Java Server Faces 简介
+- - '##'
+  - Java Server Faces 2.3
+- - '##'
+  - 框架
+- - '##'
+  - Primefaces
+- - '##'
+  - Bootsfaces
+- - '##'
+  - Omnifaces
+- - '##'
+  - JMongoDBjsf
+- - '##'
+  - 示例
+- - '##'
+  - 模型
+- - '##'
+  - 视图
+- - '##'
+  - 恢复 MongoDB 数据库
+- - '##'
+  - n-mongo 插件
+- - '##'
+  - 仓库 (Repository)
+- - '##'
+  - 资源 (Resources)
+- - '##'
+  - web.xml 文件的配置
+- - '##'
+  - 实体 (Entity)
+- - '##'
+  - 服务 (Services)
+- - '##'
+  - 转换器 (Converter)
+- - '##'
+  - 数据模型 (Datamodel)
+- - '##'
+  - 国际化 (Internationalization)
+- - '##'
+  - Primefaces selenium
+- - '##'
+  - 结论
+- - '##'
+  - 问题
+- - '#'
+  - 第 7 章：Vaadin
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Vaadin 简介
+- - '##'
+  - Vaadin 架构
+- - '##'
+  - 表单输入
+- - '###'
+  - 密码字段 (Password Field)
+- - '###'
+  - 单选按钮 (Radio Button)
+- - '###'
+  - 对话框 (Dialog)
+- - '###'
+  - 网格 (Grid)
+- - '###'
+  - 表单布局 (Form Layout)
+- - '###'
+  - 应用布局 (App Layout)
+- - '###'
+  - 菜单栏 (Menu Bar)
+- - '###'
+  - 折叠面板 (Accordion)
+- - '###'
+  - 通知 (Notification)
+- - '###'
+  - 登录 (Login)
+- - '###'
+  - 上传 (Upload)
+- - '###'
+  - 标签页 (Tabs)
+- - '##'
+  - 打开项目
+- - '##'
+  - 什么是 Maven？
+- - '##'
+  - 项目结构
+- - '##'
+  - 配置数据库连接
+- - '##'
+  - 模型
+- - '##'
+  - 类 Role
+- - '##'
+  - 类 User
+- - '##'
+  - 管理
+- - '##'
+  - 配置数据库连接
+- - '##'
+  - 模型
+- - '##'
+  - 类 Role
+- - '##'
+  - 类 User
+- - '##'
+  - 管理
+- - '##'
+  - 配置数据库连接
+- - '##'
+  - 模型
+- - '##'
+  - 类 Role
+- - '##'
+  - 类 User
+- - '##'
+  - 管理
+- - '##'
+  - 配置数据库连接
+- - '##'
+  - 模型
+- - '##'
+  - 类 Role
+- - '##'
+  - 类 User
+- - '##'
+  - 管理
+- - '##'
+  - UserManagement
+- - '##'
+  - RoleManagement 类
+- - '##'
+  - RoleResource 类
+- - '##'
+  - MainView
+- - '##'
+  - 实现删除操作
+- - '##'
+  - 实现删除操作
+- - '##'
+  - 实现删除操作
+- - '##'
+  - 项目执行
+- - '##'
+  - 使用 PWA 运行
+- - '##'
+  - 响应式设计
+- - '##'
+  - 总结
+- - '##'
+  - 问题
+- - '##'
+  - 参考文献
+- - '#'
+  - 第 9 章 Eclipse Krazo 与微服务的安全性
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Eclipse Krazo 简介
+- - '##'
+  - MVCContext
+- - '##'
+  - Controller
+- - '##'
+  - Models
+- - '##'
+  - CDI
+- - '##'
+  - View
+- - '##'
+  - Eclipse MicroProfile 互操作 JWT RBAC
+- - '##'
+  - JSON Web Tokens (JWT)
+- - '##'
+  - Realm
+- - '##'
+  - MP Config Builder
+- - '##'
+  - 分析项目：jnosqljwt
+- - '##'
+  - jnosqlweb
+- - '##'
+  - 结论
+- - '##'
+  - 问题
+- - '#'
+  - 第 10 章 测试与持续集成
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Testcontainers 简介
+- - '##'
+  - 测试 Eclipse Krazo
+- - '##'
+  - WebDriverContainers
+- - '##'
+  - Selenium
+- - '##'
+  - ChromeDriver
+- - '##'
+  - 测试容器
+- - '##'
+  - MicroShed 测试
+- - '##'
+  - 支持的运行时
+- - '##'
+  - Open Liberty
+- - '##'
+  - Payara Micro
+- - '##'
+  - Payara Server
+- - '##'
+  - Wildfly
+- - '##'
+  - 共享容器
+- - '##'
+  - 使用 OpenLiberty 的示例
+- - '###'
+  - 2. 配置项目以发现 OpenLiberty
+- - '###'
+  - 3. 创建并配置 docker 文件
+- - '###'
+  - 4. 使用日志和执行插件增强项目
+- - '##'
+  - GenericContainer
+- - '##'
+  - 持续集成与持续交付 (CI/CD)
+- - '##'
+  - Jenkins
+- - '##'
+  - 创建简单的 Pipeline
+- - '##'
+  - 持续交付
+- - '##'
+  - Starter pipeline
+- - '###'
+  - 从一个最小流水线开始，你可以自定义它来构建和部署你的代码。
+- - '###'
+  - 添加构建、运行测试、部署等操作的步骤：
+- - '###'
+  - https://aka.ms/yaml
+- - '##'
+  - Tekton 框架
+- - '##'
+  - 结论
+- - '##'
+  - 问题

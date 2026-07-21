@@ -1,0 +1,72 @@
+name: C++： The Ultimate Guide to Learn C++ and SQL Programming Fast (C++ for beginners,
+  c programming, JAVA, Coding, CSS, PHP) (Programming, computer language, coding,
+  HTML, Javascript, Developers Book 1)
+name_cn: C++：快速学习 C++ 和 SQL 编程终极指南 (初学者指南，C 编程，JAVA，编码，CSS，PHP) (编程，计算机语言，编码，HTML，Javascript，开发者书籍
+  1)
+slug: c-the-ultimate-guide-to-learn-c-and-sql-programming-fast-c-f
+toc:
+- - '#'
+  - C++：快速学习 C++ 和 SQL 编程终极指南 (初学者指南，C 编程，JAVA，编码，CSS，PHP) (编程，计算机语言，编码，HTML，Javascript，开发者书籍
+    1)
+- - '#'
+  - 引言
+- - '##'
+  - 数据库类型
+- - '#'
+  - 第 1 章 深入了解关系模型
+- - '##'
+  - 表、列和行
+- - '##'
+  - 键 (Keys)
+- - '#'
+  - 第 2 章 – 关系模型示例
+- - '##'
+  - 键 (Keys)
+- - '##'
+  - SQL 命令
+- - '##'
+  - 值的命名
+- - '##'
+  - 在 SQL 中创建数据
+- - '##'
+  - 数据类型
+- - '#'
+  - 第 4 章 - 在 MySQL 中编码
+- - '##'
+  - SELECT 命令结构
+- - '##'
+  - FROM 命令
+- - '##'
+  - 限制结果
+- - '##'
+  - 结论
+- - '#'
+  - 第一章 – 你的程序
+- - '#'
+  - 第二章 – 变量
+- - '##'
+  - 使用变量
+- - '#'
+  - 第三章 - 扩展你的程序
+- - '##'
+  - iostream 库
+- - '#'
+  - 第四章 – 运算符
+- - '#'
+  - 第五章 – 条件判断
+- - '##'
+  - Do While 循环
+- - '##'
+  - For 循环
+- - '#'
+  - 第七章 – 数组
+- - '#'
+  - 第八章 – 函数
+- - '#'
+  - 第九章 – 指针
+- - '#'
+  - 第十章 - 动态内存
+- - '#'
+  - 第十一章 类与对象
+- - '#'
+  - 总结

@@ -1,0 +1,1993 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 526 751" preserveaspectratio="none">
+<image width="526" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="text00000.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>Copyright © All rights reserved</p>
+<p> </p>
+<p>No part of this book may be reproduced, or stored in a retrieval
+system, or transmitted in any form or by any means, electronic,
+mechanical, photocopying, recording, or otherwise, without express
+written permission of the publisher.</p>
+<p> </p>
+<p><span id="text00001.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>I would like to dedicate the book to the students who will be using
+it. I wish you future career success and hope you never stop
+learning.</p>
+<p><span class="text_"><br />
+</span></p>
+<p><span id="text00002.html"></span></p>
+<p><span class="text_1">TABLE OF CONTENT</span></p>
+<p> </p>
+<p><span id="text00002.html_id_toc" class="text_2"></span> <a
+href="#text00003.html_id_Toc68161047" class="calibre2"><span
+class="text_3">Overview</span></a></p>
+<p><a href="#text00004.html_id_Toc68161048" class="calibre2"><span
+class="text_4">Environment Setup</span></a></p>
+<p><a href="#text00005.html_id_Toc68161049" class="calibre2"><span
+class="text_4">Bag Interface</span></a></p>
+<p><a href="#text00006.html_id_Toc68161050" class="calibre2"><span
+class="text_4">BidiMap Interface</span></a></p>
+<p><a href="#text00007.html_id_Toc68161051" class="calibre2"><span
+class="text_4">MapIterator Interface</span></a></p>
+<p><a href="#text00008.html_id_Toc68161052" class="calibre2"><span
+class="text_4">OrderedMap Interface</span></a></p>
+<p><a href="#text00009.html_id_Toc68161053" class="calibre2"><span
+class="text_4">Ignore Null</span></a></p>
+<p><a href="#text00010.html_id_Toc68161054" class="calibre2"><span
+class="text_4">Merge &amp; Sort</span></a></p>
+<p><a href="#text00011.html_id_Toc68161055" class="calibre2"><span
+class="text_4">Transforming Objects</span></a></p>
+<p><a href="#text00012.html_id_Toc68161056" class="calibre2"><span
+class="text_4">Filtering Objects</span></a></p>
+<p><a href="#text00013.html_id_Toc68161057" class="calibre2"><span
+class="text_4">Safe Empty Checks</span></a></p>
+<p><a href="#text00014.html_id_Toc68161058" class="calibre2"><span
+class="text_4">Inclusion</span></a></p>
+<p><a href="#text00015.html_id_Toc68161059" class="calibre2"><span
+class="text_4">Intersection</span></a></p>
+<p><a href="#text00016.html_id_Toc68161060" class="calibre2"><span
+class="text_4">Subtraction</span></a></p>
+<p><a href="#text00017.html_id_Toc68161061" class="calibre2"><span
+class="text_4">Union</span></a></p>
+<h1 class="block_6"><span class="text_5"><br />
+</span></h1>
+<p><span id="text00003.html"></span></p>
+<h1 class="block_6"><span id="text00003.html_id_Toc68161047"
+class="text_6">Overview</span></h1>
+<p>Commons Collections augments Java Collections Framework. It provides
+several features to make collection handling easy. It provides many new
+interfaces, implementations and utilities.</p>
+<p>The main features of Commons Collections are as follows −</p>
+<ul>
+<li><strong>Bag</strong>  − Bag interfaces simplifies the collections,
+which have multiple number of copies of each object.</li>
+<li><strong>BidiMap</strong>  − BidiMap interfaces provide
+Bi-Directional maps, which can be used to lookup values using keys or
+keys using values.</li>
+<li><strong>MapIterator</strong>  − MapIterator interface provide simple
+and easy iteration over maps.</li>
+<li><strong>Transforming Decorators</strong>  − Transforming decorators
+can alter every object of a collection as and when it is added to the
+collection.</li>
+<li><strong>Composite Collections</strong>  − Composite collections are
+used, where multiple collections are required to be handled
+uniformly.</li>
+<li><strong>Ordered Map</strong>  − Ordered Maps retain the order, in
+which elements are added in.</li>
+<li><strong>Ordered Set</strong>  − Ordered Sets retain the order, in
+which elements are added in.</li>
+<li><strong>Reference map</strong>  − Reference map allows key/values to
+be garbage collected under close control.</li>
+<li><strong>Comparator implementations</strong>  − Many Comparator
+implementations are available.</li>
+<li><strong>Iterator implementations</strong>  − Many Iterator
+implementations are available.</li>
+<li><strong>Adapter Classes</strong>  − Adapter classes are available to
+convert array and enumerations to collections.</li>
+<li><strong>Utilities</strong>  − Utilities are available to test or
+create typical set-theory properties of collections such as union,
+intersection. Supports Closure.</li>
+</ul>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00004.html"></span></p>
+<h1 class="block_9"><span id="text00004.html_id_Toc68161048"
+class="calibre5">Environment Setup</span></h1>
+<h2 class="block_10">Local Environment Setup</h2>
+<p>If you are still willing to set up your environment for Java
+programming language, then this section guides you on how to download
+and set up Java on your machine. Please follow the steps mentioned below
+to set up the environment.</p>
+<p>Java SE is freely available from the
+link <strong>https://www.oracle.com/technetwork/java/archive-139210.html</strong>
+ So, you download a version based on your operating system.</p>
+<p>Follow the instructions to download Java and run the .exe to install
+Java on your machine. Once, you have installed Java on your machine, you
+would need to set environment variables to point to correct installation
+directories.</p>
+<h3 class="block_11">Setting up the Path for Windows 2000/XP</h3>
+<p>We are assuming that you have installed Java in <span
+class="text_7">c:\Program Files\java\jdk directory</span></p>
+<ul>
+<li>Right-click on 'My Computer' and select 'Properties'.</li>
+<li>Click on the 'Environment variables' button under the 'Advanced'
+tab.</li>
+<li>Now, alter the 'Path' variable so that it also contains the path to
+the Java executable. Example, if the path is currently set
+to <strong>'C:\WINDOWS\SYSTEM32'</strong> , then change your path to
+read <strong>'C:\WINDOWS\SYSTEM32;c:\Program
+Files\java\jdk\bin'</strong> .</li>
+</ul>
+<h3 class="block_11">Setting up the Path for Windows 95/98/ME</h3>
+<p>We are assuming that you have installed Java in <span
+class="text_7">c:\Program Files\java\jdk directory</span> .</p>
+<ul>
+<li>Edit the 'C:\autoexec.bat' file and add the following line at the
+end − <strong>'SET PATH=%PATH%;C:\Program
+Files\java\jdk\bin'</strong></li>
+</ul>
+<h3 class="block_11">Setting up the Path for Linux, UNIX, Solaris,
+FreeBSD</h3>
+<p>Environment variable PATH should be set to point to where, the Java
+binaries have been installed. Refer to your shell documentation, if you
+have trouble doing this.</p>
+<p>Example, if you use bash as your shell, then you would add the
+following line to the end of your '<strong>.bashrc: export
+PATH=/path/to/java:$PATH'</strong></p>
+<h2 class="block_10">Popular Java Editors</h2>
+<p>To write your Java programs, you need a text editor. There are many
+sophisticated IDEs available in the market. But for now, you can
+consider one of the following −</p>
+<ul>
+<li><strong>Notepad</strong>  − On Windows machine, you can use any
+simple text editor like Notepad (Recommended for this tutorial),
+TextPad.</li>
+<li><strong>Netbeans</strong>  − It is a Java IDE that is open-source
+and free, which can be downloaded
+from <strong>https://netbeans.org</strong> .</li>
+<li><strong>Eclipse</strong>  − It is also a Java IDE developed by the
+eclipse open-source community and can be downloaded
+from <strong>https://www.eclipse.org/</strong> .</li>
+</ul>
+<h2 class="block_10">Download Common Collections Archive</h2>
+<p>Download the latest version of Apache Common Collections jar file
+from commons-collections4-4.1-bin.zip. At the time of writing this
+tutorial, we have downloaded <span
+class="text_7">commons-collections4-4.1-bin.zip</span>  and copied it
+into <strong>C:\&gt;Apache folder</strong> .</p>
+<table class="table_">
+<tbody class="calibre6">
+<tr class="calibre7">
+<td class="td_"><p>OS</p></td>
+<td class="td_"><p>Archive name</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>Windows</p></td>
+<td class="td_1"><p>commons-collections4-4.1-bin.zip</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>Linux</p></td>
+<td class="td_1"><p>commons-collections4-4.1-bin.tar.gz</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>Mac</p></td>
+<td class="td_1"><p>commons-collections4-4.1-bin.tar.gz</p></td>
+</tr>
+</tbody>
+</table>
+<h2 class="block_10">Set Apache Common Collections Environment</h2>
+<p>Set the <strong>APACHE_HOME</strong>  environment variable to point
+to the base directory location where Apache jar is stored on your
+machine. Assuming, we've extracted commons-collections4-4.1-bin.zip in
+Apache folder on various Operating Systems as follows −</p>
+<table class="table_1">
+<tbody class="calibre6">
+<tr class="calibre7">
+<td class="td_2"><p>OS</p></td>
+<td class="td_3"><p>Archive name</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_4"><p>Windows</p></td>
+<td class="td_5"><p>Set the environment variable APACHE_HOME to
+C:\Apache</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_4"><p>Linux</p></td>
+<td class="td_5"><p>export APACHE_HOME=/usr/local/Apache</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_4"><p>Mac</p></td>
+<td class="td_5"><p>export APACHE_HOME=/Library/Apache</p></td>
+</tr>
+</tbody>
+</table>
+<h2 class="block_10">Set CLASSPATH Variable</h2>
+<p>Set the <strong>CLASSPATH</strong>  environment variable to point to
+the Common Collections jar location. Assuming, you have stored
+commons-collections4-4.1-bin.zip in Apache folder on various Operating
+Systems as follows −</p>
+<table class="table_">
+<tbody class="calibre6">
+<tr class="calibre7">
+<td class="td_"><p>OS</p></td>
+<td class="td_"><p>Output</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>Windows</p></td>
+<td class="td_1"><p>Set the environment variable CLASSPATH to
+%CLASSPATH%;%APACHE_HOME%\commons-collections4-4.1-bin.jar;.;</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>Linux</p></td>
+<td class="td_1"><p>export
+CLASSPATH=$CLASSPATH:$APACHE_HOME/commons-collections4-4.1-bin.jar:.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>Mac</p></td>
+<td class="td_1"><p>export
+CLASSPATH=$CLASSPATH:$APACHE_HOME/commons-collections4-4.1-bin.jar:.</p></td>
+</tr>
+</tbody>
+</table>
+<h1 class="block_6"> </h1>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00005.html"></span></p>
+<h1 class="block_9"><span id="text00005.html_id_Toc68161049"
+class="calibre5">Bag Interface</span></h1>
+<p>New Interfaces are added to supports bags. A Bag defines a collection
+which, counts the number of times an object appears in the collection.
+For example, if a Bag contains {a, a, b, c} then getCount("a") will
+return 2 while uniqueSet() returns the unique values.</p>
+<h3 class="block_11">Interface Declaration</h3>
+<p>Following is the declaration for
+org.apache.commons.collections4.Bag&lt;E&gt; interface −</p>
+<p>public interface Bag&lt;E&gt;</p>
+<p>extends Collection&lt;E&gt;</p>
+<h2 class="block_10">Methods</h2>
+<p>The methods for bag inference are as follows −</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre6">
+<tr class="calibre7">
+<td class="td_"><p>Sr.No.</p></td>
+<td class="td_"><p>Method &amp; Description</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>1</p></td>
+<td class="td_1"><p>boolean add(E object)</p>
+<p>(Violation) Adds one copy of the specified object to the
+Bag.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>2</p></td>
+<td class="td_1"><p>boolean add(E object, int nCopies)</p>
+<p>Adds nCopies copies of the specified object to the Bag.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>3</p></td>
+<td class="td_1"><p>boolean containsAll(Collection&lt;?&gt; coll)</p>
+<p>(Violation) Returns true if the bag contains all elements in the
+given collection, respecting cardinality.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>4</p></td>
+<td class="td_1"><p>int getCount(Object object)</p>
+<p>Returns the number of occurrences (cardinality) of the given object
+currently in the bag.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>5</p></td>
+<td class="td_1"><p>Iterator&lt;E&gt; iterator()</p>
+<p>Returns an Iterator over the entire set of members, including copies
+due to cardinality.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>6</p></td>
+<td class="td_1"><p>boolean remove(Object object)</p>
+<p>(Violation) Removes all occurrences of the given object from the
+bag.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>7</p></td>
+<td class="td_1"><p>boolean remove(Object object, int nCopies)</p>
+<p>Removes nCopies copies of the specified object from the Bag.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>8</p></td>
+<td class="td_1"><p>boolean removeAll(Collection&lt;?&gt; coll)</p>
+<p>(Violation) Remove all elements represented in the given collection,
+respecting cardinality.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>9</p></td>
+<td class="td_1"><p>boolean retainAll(Collection&lt;?&gt; coll)</p>
+<p>(Violation) Remove any members of the bag that are not in the given
+collection, respecting cardinality.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>10</p></td>
+<td class="td_1"><p>int size()</p>
+<p>Returns the total number of items in the bag across all
+types.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>11</p></td>
+<td class="td_1"><p>Set&lt;E&gt; uniqueSet()</p>
+<p>Returns a Set of unique elements in the Bag.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 class="block_10">Methods Inherited</h2>
+<p>This interface inherits methods from the following interface −</p>
+<ul>
+<li>java.util.Collection</li>
+</ul>
+<h2 class="block_10">Example of Bag Interface</h2>
+<p>An example of BagTester.java is as follows −</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">Bag</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="calibre5">bag</span> <span
+class="text_9">.</span> <span class="text_10">HashBag</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">BagTester</span> <span class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">Bag</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">bag</span> <span class="text_9">=</span> <span
+class="text_8">new</span> <span class="text_10">HashBag</span> <span
+class="text_9">&lt;&gt;();</span></p>
+<p><span class="text_11">//add "a" two times to the bag.</span></p>
+<p><span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="text_8">add</span> <span class="text_9">(</span> <span
+class="text_12">"a"</span> <span class="text_9">,</span> <span
+class="text_13">2</span> <span class="text_9">);</span></p>
+<p><span class="text_11">//add "b" one time to the bag.</span></p>
+<p><span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="text_8">add</span> <span class="text_9">(</span> <span
+class="text_12">"b"</span> <span class="text_9">);</span></p>
+<p><span class="text_11">//add "c" one time to the bag.</span></p>
+<p><span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="text_8">add</span> <span class="text_9">(</span> <span
+class="text_12">"c"</span> <span class="text_9">);</span></p>
+<p><span class="text_11">//add "d" three times to the bag.</span></p>
+<p><span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="text_8">add</span> <span class="text_9">(</span> <span
+class="text_12">"d"</span> <span class="text_9">,</span> <span
+class="text_13">3</span></p>
+<p><span class="text_11">//get the count of "d" present in
+bag.</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"d is present "</span> <span class="text_9">+</span>
+<span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="calibre5">getCount</span> <span class="text_9">(</span> <span
+class="text_12">"d"</span> <span class="text_9">)</span> <span
+class="text_9">+</span> <span class="text_12">" times."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"bag: "</span> <span class="text_9">+</span> <span
+class="calibre5">bag</span> <span class="text_9">);</span></p>
+<p><span class="text_11">//get the set of unique values from the
+bag</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Unique Set: "</span> <span class="text_9">+</span>
+<span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="calibre5">uniqueSet</span> <span class="text_9">());</span></p>
+<p><span class="text_11">//remove 2 occurrences of "d" from the
+bag</span></p>
+<p><span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="text_8">remove</span> <span class="text_9">(</span> <span
+class="text_12">"d"</span> <span class="text_9">,</span> <span
+class="text_13">2</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"2 occurences of d removed from bag: "</span> <span
+class="text_9">+</span> <span class="calibre5">bag</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"d is present "</span> <span class="text_9">+</span>
+<span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="calibre5">getCount</span> <span class="text_9">(</span> <span
+class="text_12">"d"</span> <span class="text_9">)</span> <span
+class="text_9">+</span> <span class="text_12">" times."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"bag: "</span> <span class="text_9">+</span> <span
+class="calibre5">bag</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Unique Set: "</span> <span class="text_9">+</span>
+<span class="calibre5">bag</span> <span class="text_9">.</span> <span
+class="calibre5">uniqueSet</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_10">Output</h2>
+<p>You will see the following output −</p>
+<p>d is present 3 times.</p>
+<p>bag: [2:a,1:b,1:c,3:d]</p>
+<p>Unique Set: [a, b, c, d]</p>
+<p>2 occurences of d removed from bag: [2:a,1:b,1:c,1:d]</p>
+<p>d is present 1 times.</p>
+<p>bag: [2:a,1:b,1:c,1:d]</p>
+<p>Unique Set: [a, b, c, d]</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00006.html"></span></p>
+<h1 class="block_9"><span id="text00006.html_id_Toc68161050"
+class="calibre5">BidiMap Interface</span></h1>
+<p>New Interfaces are added to supports bidirectional Map. Using
+bidirectional map, a key can be lookup using value and value can be
+lookup using key easily.</p>
+<h3 class="block_11">Interface Declaration</h3>
+<p>Following is the declaration
+for <strong>org.apache.commons.collections4.BidiMap&lt;K,V&gt;</strong>
+ interface −</p>
+<p>public interface BidiMap&lt;K,V&gt;</p>
+<p>extends IterableMap&lt;K,V&gt;</p>
+<h2 class="block_10">Methods</h2>
+<p>The methods for the BidiMap Interface are as follows −</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre6">
+<tr class="calibre7">
+<td class="td_"><p>Sr.No.</p></td>
+<td class="td_"><p>Method &amp; Description</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>1</p></td>
+<td class="td_1"><p>K getKey(Object value)</p>
+<p>Gets the key that is currently mapped to the specified
+value.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>2</p></td>
+<td class="td_1"><p>BidiMap&lt;V,K&gt; inverseBidiMap()</p>
+<p>Gets a view of this map where the keys and values are
+reversed.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>3</p></td>
+<td class="td_1"><p>V put(K key, V value)</p>
+<p>Puts the key-value pair into the map, replacing any previous
+pair.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>4</p></td>
+<td class="td_1"><p>K removeValue(Object value)</p>
+<p>Removes the key-value pair that is currently mapped to the specified
+value (optional operation).</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_1"><p>5</p></td>
+<td class="td_1"><p>Set&lt;V&gt; values()</p>
+<p>Returns a Set view of the values contained in this map.</p></td>
+</tr>
+</tbody>
+</table>
+<h2 class="block_10">Methods Inherited</h2>
+<p>This interface inherits methods from the following interfaces −</p>
+<ul>
+<li>org.apache.commons.collections4.Get</li>
+<li>org.apache.commons.collections4.IterableGet</li>
+<li>org.apache.commons.collections4.Put</li>
+<li>java.util.Map</li>
+</ul>
+<h2 class="block_10">Example of BidiMap Interface</h2>
+<p>An example of BidiMapTester.java is as follows −</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">BidiMap</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="calibre5">bidimap</span> <span
+class="text_9">.</span> <span class="text_10">TreeBidiMap</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">BidiMapTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">BidiMap</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">,</span> <span
+class="text_10">String</span> <span class="text_9">&gt;</span> <span
+class="calibre5">bidi</span> <span class="text_9">=</span> <span
+class="text_8">new</span> <span class="text_10">TreeBidiMap</span> <span
+class="text_9">&lt;&gt;();</span></p>
+<p><span class="calibre5">bidi</span> <span class="text_9">.</span>
+<span class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"One"</span> <span class="text_9">,</span> <span
+class="text_12">"1"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">bidi</span> <span class="text_9">.</span>
+<span class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"Two"</span> <span class="text_9">,</span> <span
+class="text_12">"2"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">bidi</span> <span class="text_9">.</span>
+<span class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"Three"</span> <span class="text_9">,</span> <span
+class="text_12">"3"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">bidi</span> <span class="text_9">.</span> <span
+class="text_8">get</span> <span class="text_9">(</span> <span
+class="text_12">"One"</span> <span class="text_9">));</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">bidi</span> <span class="text_9">.</span> <span
+class="calibre5">getKey</span> <span class="text_9">(</span> <span
+class="text_12">"1"</span> <span class="text_9">));</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Original Map: "</span> <span class="text_9">+</span>
+<span class="calibre5">bidi</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">bidi</span> <span class="text_9">.</span>
+<span class="calibre5">removeValue</span> <span class="text_9">(</span>
+<span class="text_12">"1"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Modified Map: "</span> <span class="text_9">+</span>
+<span class="calibre5">bidi</span> <span class="text_9">);</span></p>
+<p><span class="text_10">BidiMap</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">,</span> <span
+class="text_10">String</span> <span class="text_9">&gt;</span> <span
+class="calibre5">inversedMap</span> <span class="text_9">=</span> <span
+class="calibre5">bidi</span> <span class="text_9">.</span> <span
+class="calibre5">inverseBidiMap</span> <span
+class="text_9">();</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Inversed Map: "</span> <span class="text_9">+</span>
+<span class="calibre5">inversedMap</span> <span
+class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_10">Output</h2>
+<p>When you run the code, you will see the following output −</p>
+<p>1</p>
+<p>One</p>
+<p>Original Map: {One=1, Three=3, Two=2}</p>
+<p>Modified Map: {Three=3, Two=2}</p>
+<p>Inversed Map: {2=Two, 3=Three}</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00007.html"></span></p>
+<h1 class="block_9"><span id="text00007.html_id_Toc68161051"
+class="calibre5">MapIterator Interface</span></h1>
+<p>The JDK Map interface is pretty difficult to iterate as Iteration to
+be done on EntrySet or over the KeySet objects. MapIterator provides
+simple iteration over Map. Following example illustrates the same.</p>
+<h2 class="block_10">Example of MapIterator Interface</h2>
+<p>An example for MapIteratorTester.java is as follows −</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">IterableMap</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">MapIterator</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="calibre5">map</span> <span
+class="text_9">.</span> <span class="text_10">HashedMap</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">MapIteratorTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">IterableMap</span> <span
+class="text_9">&lt;</span> <span class="text_10">String</span> <span
+class="text_9">,</span> <span class="text_10">String</span> <span
+class="text_9">&gt;</span> <span class="calibre5">map</span> <span
+class="text_9">=</span> <span class="text_8">new</span> <span
+class="text_10">HashedMap</span> <span
+class="text_9">&lt;&gt;();</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"1"</span> <span class="text_9">,</span> <span
+class="text_12">"One"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"2"</span> <span class="text_9">,</span> <span
+class="text_12">"Two"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"3"</span> <span class="text_9">,</span> <span
+class="text_12">"Three"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"4"</span> <span class="text_9">,</span> <span
+class="text_12">"Four"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"5"</span> <span class="text_9">,</span> <span
+class="text_12">"Five"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">MapIterator</span> <span
+class="text_9">&lt;</span> <span class="text_10">String</span> <span
+class="text_9">,</span> <span class="text_10">String</span> <span
+class="text_9">&gt;</span> <span class="calibre5">iterator</span> <span
+class="text_9">=</span> <span class="calibre5">map</span> <span
+class="text_9">.</span> <span class="calibre5">mapIterator</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">while</span> <span class="text_9">(</span> <span
+class="calibre5">iterator</span> <span class="text_9">.</span> <span
+class="calibre5">hasNext</span> <span class="text_9">())</span> <span
+class="text_9">{</span></p>
+<p><span class="text_10">Object</span> <span class="calibre5">key</span>
+<span class="text_9">=</span> <span class="calibre5">iterator</span>
+<span class="text_9">.</span> <span class="text_8">next</span> <span
+class="text_9">();</span></p>
+<p><span class="text_10">Object</span> <span class="text_8">value</span>
+<span class="text_9">=</span> <span class="calibre5">iterator</span>
+<span class="text_9">.</span> <span class="calibre5">getValue</span>
+<span class="text_9">();</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"key: "</span> <span class="text_9">+</span> <span
+class="calibre5">key</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Value: "</span> <span class="text_9">+</span> <span
+class="text_8">value</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">iterator</span> <span class="text_9">.</span>
+<span class="calibre5">setValue</span> <span class="text_9">(</span>
+<span class="text_8">value</span> <span class="text_9">+</span> <span
+class="text_12">"_"</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">map</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_10">Output</h2>
+<p>The output is stated below −</p>
+<p>key: 3</p>
+<p>Value: Three</p>
+<p>key: 5</p>
+<p>Value: Five</p>
+<p>key: 2</p>
+<p>Value: Two</p>
+<p>key: 4</p>
+<p>Value: Four</p>
+<p>key: 1</p>
+<p>Value: One</p>
+<p>{3=Three_, 5=Five_, 2=Two_, 4=Four_, 1=One_}</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00008.html"></span></p>
+<h1 class="block_9"><span id="text00008.html_id_Toc68161052"
+class="calibre5">OrderedMap Interface</span></h1>
+<p>OrderedMap is a new interface for maps to retain the order in which
+elements are added. LinkedMap and ListOrderedMap are two available
+implementations. This interfaces supports iterator that of Map and
+allows iteration in both directions either forwards or backwards in a
+Map. Following example illustrates the same.</p>
+<h2 class="block_10">Example of MapIterator Interface</h2>
+<p>An example of OrderedMapTester.java is as given below −</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">OrderedMap</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="calibre5">map</span> <span
+class="text_9">.</span> <span class="text_10">LinkedMap</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">OrderedMapTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">OrderedMap</span> <span
+class="text_9">&lt;</span> <span class="text_10">String</span> <span
+class="text_9">,</span> <span class="text_10">String</span> <span
+class="text_9">&gt;</span> <span class="calibre5">map</span> <span
+class="text_9">=</span> <span class="text_8">new</span> <span
+class="text_10">LinkedMap</span> <span class="text_9">&lt;</span> <span
+class="text_10">String</span> <span class="text_9">,</span> <span
+class="text_10">String</span> <span class="text_9">&gt;();</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"One"</span> <span class="text_9">,</span> <span
+class="text_12">"1"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"Two"</span> <span class="text_9">,</span> <span
+class="text_12">"2"</span> <span class="text_9">);</span></p>
+<p><span class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">put</span> <span class="text_9">(</span> <span
+class="text_12">"Three"</span> <span class="text_9">,</span> <span
+class="text_12">"3"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">firstKey</span> <span class="text_9">());</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">nextKey</span> <span class="text_9">(</span> <span
+class="text_12">"One"</span> <span class="text_9">));</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">map</span> <span class="text_9">.</span> <span
+class="calibre5">nextKey</span> <span class="text_9">(</span> <span
+class="text_12">"Two"</span> <span class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_10">Output</h2>
+<p>The result will be as follows −</p>
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00009.html"></span></p>
+<h1 class="block_9"><span id="text00009.html_id_Toc68161053"
+class="calibre5">Ignore Null</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Check for Not Null Elements</h2>
+<p>addIgnoreNull() method of CollectionUtils can be used to ensure that
+only non-null values are getting added to the collection.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.addIgnoreNull()</strong>
+ method −</p>
+<p>public static &lt;T&gt; boolean addIgnoreNull(Collection&lt;T&gt;
+collection, T object)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>collection</strong>  − The collection to add to, must not be
+null.</li>
+<li><strong>object</strong>  − The object to add, if null it will not be
+added.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>True if the collection changed.</p>
+<h3 class="block_11">Exception</h3>
+<ul>
+<li><strong>NullPointerException</strong>  − If the collection is
+null.</li>
+</ul>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.addIgnoreNull()</strong>
+ method. We are trying to add a null value and a sample non-null
+value.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">LinkedList</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list</span> <span class="text_9">=</span> <span
+class="text_8">new</span> <span class="text_10">LinkedList</span> <span
+class="text_9">&lt;</span> <span class="text_10">String</span> <span
+class="text_9">&gt;();</span></p>
+<p><span class="text_10">CollectionUtils</span> <span
+class="text_9">.</span> <span class="calibre5">addIgnoreNull</span>
+<span class="text_9">(</span> <span class="calibre5">list</span> <span
+class="text_9">,</span> <span class="text_8">null</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">CollectionUtils</span> <span
+class="text_9">.</span> <span class="calibre5">addIgnoreNull</span>
+<span class="text_9">(</span> <span class="calibre5">list</span> <span
+class="text_9">,</span> <span class="text_12">"a"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">list</span> <span class="text_9">);</span></p>
+<p><span class="text_8">if</span> <span class="text_9">(</span> <span
+class="calibre5">list</span> <span class="text_9">.</span> <span
+class="calibre5">contains</span> <span class="text_9">(</span> <span
+class="text_8">null</span> <span class="text_9">))</span> <span
+class="text_9">{</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Null value is present"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_9">}</span> <span class="text_8">else</span> <span
+class="text_9">{</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Null value is not present"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>The output is mentioned below −</p>
+<p>[a]</p>
+<p>Null value is not present</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00010.html"></span></p>
+<h1 class="block_9"><span id="text00010.html_id_Toc68161054"
+class="calibre5">Merge &amp; Sort</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Merging two sorted lists</h2>
+<p>collate() method of CollectionUtils can be used to merge two already
+sorted lists.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.collate()</strong>
+ method −</p>
+<p>public static &lt;O extends Comparable&lt;? super O&gt;&gt;
+List&lt;O&gt;</p>
+<p>collate(Iterable&lt;? extends O&gt; a, Iterable&lt;? extends O&gt;
+b)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>a</strong>  − The first collection, must not be null.</li>
+<li><strong>b</strong>  − The second collection, must not be null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>A new sorted List, containing the elements of Collection a and b.</p>
+<h3 class="block_11">Exception</h3>
+<ul>
+<li><strong>NullPointerException</strong>  − If either collection is
+null.</li>
+</ul>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.collate()</strong>
+ method. We'll merge two sorted lists and then print the merged and
+sorted list.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">sortedList1</span> <span class="text_9">=</span>
+<span class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"C"</span> <span class="text_9">,</span> <span
+class="text_12">"E"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">sortedList2</span> <span class="text_9">=</span>
+<span class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"D"</span> <span class="text_9">,</span> <span
+class="text_12">"F"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">mergedList</span> <span class="text_9">=</span>
+<span class="text_10">CollectionUtils</span> <span
+class="text_9">.</span> <span class="calibre5">collate</span> <span
+class="text_9">(</span> <span class="calibre5">sortedList1</span> <span
+class="text_9">,</span> <span class="calibre5">sortedList2</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">mergedList</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>The output is as follows −</p>
+<p>[A, B, C, D, E, F]</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00011.html"></span></p>
+<h1 class="block_9"><span id="text00011.html_id_Toc68161055"
+class="calibre5">Transforming Objects</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Transforming a list</h2>
+<p>collect() method of CollectionUtils can be used to transform a list
+of one type of objects to list of different type of objects.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.collect()</strong>
+ method −</p>
+<p>public static &lt;I,O&gt; Collection&lt;O&gt;
+collect(Iterable&lt;I&gt; inputCollection,</p>
+<p>Transformer&lt;? super I,? extends O&gt; transformer)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>inputCollection</strong>  − The collection to get the input
+from, may not be null.</li>
+<li><strong>Transformer</strong>  − The transformer to use, may be
+null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>The transformed result (new list).</p>
+<h3 class="block_11">Exception</h3>
+<ul>
+<li><strong>NullPointerException</strong>  − If the input collection is
+null.</li>
+</ul>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.collect()</strong>
+ method. We'll transform a list of string to list of integer by parsing
+the integer value from String.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">Transformer</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">stringList</span> <span class="text_9">=</span>
+<span class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"1"</span> <span class="text_9">,</span> <span
+class="text_12">"2"</span> <span class="text_9">,</span> <span
+class="text_12">"3"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">Integer</span> <span class="text_9">&gt;</span>
+<span class="calibre5">integerList</span> <span class="text_9">=</span>
+<span class="text_9">(</span> <span class="text_10">List</span> <span
+class="text_9">&lt;</span> <span class="text_10">Integer</span> <span
+class="text_9">&gt;)</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">.</span> <span class="calibre5">collect</span>
+<span class="text_9">(</span></p>
+<p><span class="calibre5">stringList</span> <span
+class="text_9">,</span> <span class="text_8">new</span> <span
+class="text_10">Transformer</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">,</span> <span
+class="text_10">Integer</span> <span class="text_9">&gt;()</span> <span
+class="text_9">{</span></p>
+<p><span class="text_13">@Override</span></p>
+<p><span class="text_8">public</span> <span
+class="text_10">Integer</span> <span class="calibre5">transform</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="calibre5">input</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span
+class="text_10">Integer</span> <span class="text_9">.</span> <span
+class="calibre5">parseInt</span> <span class="text_9">(</span> <span
+class="calibre5">input</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">});</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="calibre5">integerList</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_10">Output</h2>
+<p>When you use the code, you will get the following code −</p>
+<p>[1, 2, 3]</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00012.html"></span></p>
+<h1 class="block_9"><span id="text00012.html_id_Toc68161056"
+class="calibre5">Filtering Objects</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">filter() method</h2>
+<p>filter() method of CollectionUtils can be used to filter a list to
+remove objects which do not satisfy condition provided by predicate
+passed.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.filter()</strong>
+ method −</p>
+<p>public static &lt;T&gt; boolean filter(Iterable&lt;T&gt;
+collection,</p>
+<p>Predicate&lt;? super T&gt; predicate)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>collection</strong>  − The collection to get the input from,
+may not be null.</li>
+<li><strong>predicate</strong>  − The predicate to use as a filter, may
+be null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>True if the collection is modified by this call, false otherwise.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.filter()</strong>
+ method. We'll filter a list of integer to get even numbers only.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">ArrayList</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">Predicate</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">Integer</span> <span class="text_9">&gt;</span>
+<span class="calibre5">integerList</span> <span class="text_9">=</span>
+<span class="text_8">new</span> <span class="text_10">ArrayList</span>
+<span class="text_9">&lt;</span> <span class="text_10">Integer</span>
+<span class="text_9">&gt;();</span></p>
+<p><span class="calibre5">integerList</span> <span
+class="text_9">.</span> <span class="calibre5">addAll</span> <span
+class="text_9">(</span> <span class="text_10">Arrays</span> <span
+class="text_9">.</span> <span class="calibre5">asList</span> <span
+class="text_9">(</span> <span class="text_13">1</span> <span
+class="text_9">,</span> <span class="text_13">2</span> <span
+class="text_9">,</span> <span class="text_13">3</span> <span
+class="text_9">,</span> <span class="text_13">4</span> <span
+class="text_9">,</span> <span class="text_13">5</span> <span
+class="text_9">,</span> <span class="text_13">6</span> <span
+class="text_9">,</span> <span class="text_13">7</span> <span
+class="text_9">,</span> <span class="text_13">8</span> <span
+class="text_9">));</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Original List: "</span> <span class="text_9">+</span>
+<span class="calibre5">integerList</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">CollectionUtils</span> <span
+class="text_9">.</span> <span class="calibre5">filter</span> <span
+class="text_9">(</span> <span class="calibre5">integerList</span> <span
+class="text_9">,</span> <span class="text_8">new</span> <span
+class="text_10">Predicate</span> <span class="text_9">&lt;</span> <span
+class="text_10">Integer</span> <span class="text_9">&gt;()</span> <span
+class="text_9">{</span></p>
+<p><span class="text_13">@Override</span></p>
+<p><span class="text_8">public</span> <span
+class="text_8">boolean</span> <span class="calibre5">evaluate</span>
+<span class="text_9">(</span> <span class="text_10">Integer</span> <span
+class="calibre5">input</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">if</span> <span class="text_9">(</span> <span
+class="calibre5">input</span> <span class="text_9">.</span> <span
+class="calibre5">intValue</span> <span class="text_9">()</span> <span
+class="text_9">%</span> <span class="text_13">2</span> <span
+class="text_9">==</span> <span class="text_13">0</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span class="text_8">true</span>
+<span class="text_9">;</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">return</span> <span class="text_8">false</span>
+<span class="text_9">;</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">});</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Filtered List (Even numbers): "</span> <span
+class="text_9">+</span> <span class="calibre5">integerList</span> <span
+class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_10">Output</h2>
+<p>It will produce the following result −</p>
+<p>Original List: [1, 2, 3, 4, 5, 6, 7, 8]</p>
+<p>Filtered List (Even numbers): [2, 4, 6, 8]</p>
+<h2 class="block_10">filterInverse() method</h2>
+<p>filterInverse() method of CollectionUtils can be used to filter a
+list to remove objects, which satisfy condition provided by predicate
+passed.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.filterInverse()</strong>
+ method −</p>
+<p>public static &lt;T&gt; boolean filterInverse(</p>
+<p>Iterable&lt;T&gt; collection, Predicate&lt;? super T&gt;
+predicate)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>collection</strong>  − The collection to get the input from,
+may not be null.</li>
+<li><strong>predicate</strong>  − The predicate to use as a filter, may
+be null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>True if the collection is modified by this call, false otherwise.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.filterInverse()</strong>
+ method. We'll filter a list of integer to get odd numbers only.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">ArrayList</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">Predicate</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">Integer</span> <span class="text_9">&gt;</span>
+<span class="calibre5">integerList</span> <span class="text_9">=</span>
+<span class="text_8">new</span> <span class="text_10">ArrayList</span>
+<span class="text_9">&lt;</span> <span class="text_10">Integer</span>
+<span class="text_9">&gt;();</span></p>
+<p><span class="calibre5">integerList</span> <span
+class="text_9">.</span> <span class="calibre5">addAll</span> <span
+class="text_9">(</span> <span class="text_10">Arrays</span> <span
+class="text_9">.</span> <span class="calibre5">asList</span> <span
+class="text_9">(</span> <span class="text_13">1</span> <span
+class="text_9">,</span> <span class="text_13">2</span> <span
+class="text_9">,</span> <span class="text_13">3</span> <span
+class="text_9">,</span> <span class="text_13">4</span> <span
+class="text_9">,</span> <span class="text_13">5</span> <span
+class="text_9">,</span> <span class="text_13">6</span> <span
+class="text_9">,</span> <span class="text_13">7</span> <span
+class="text_9">,</span> <span class="text_13">8</span> <span
+class="text_9">));</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Original List: "</span> <span class="text_9">+</span>
+<span class="calibre5">integerList</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">CollectionUtils</span> <span
+class="text_9">.</span> <span class="calibre5">filterInverse</span>
+<span class="text_9">(</span> <span class="calibre5">integerList</span>
+<span class="text_9">,</span> <span class="text_8">new</span> <span
+class="text_10">Predicate</span> <span class="text_9">&lt;</span> <span
+class="text_10">Integer</span> <span class="text_9">&gt;()</span> <span
+class="text_9">{</span></p>
+<p><span class="text_13">@Override</span></p>
+<p><span class="text_8">public</span> <span
+class="text_8">boolean</span> <span class="calibre5">evaluate</span>
+<span class="text_9">(</span> <span class="text_10">Integer</span> <span
+class="calibre5">input</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">if</span> <span class="text_9">(</span> <span
+class="calibre5">input</span> <span class="text_9">.</span> <span
+class="calibre5">intValue</span> <span class="text_9">()</span> <span
+class="text_9">%</span> <span class="text_13">2</span> <span
+class="text_9">==</span> <span class="text_13">0</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span class="text_8">true</span>
+<span class="text_9">;</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">return</span> <span class="text_8">false</span>
+<span class="text_9">;</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">});</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Filtered List (Odd numbers): "</span> <span
+class="text_9">+</span> <span class="calibre5">integerList</span> <span
+class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>The result is as stated below −</p>
+<p>Original List: [1, 2, 3, 4, 5, 6, 7, 8]</p>
+<p>Filtered List (Odd numbers): [1, 3, 5, 7]</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00013.html"></span></p>
+<h1 class="block_9"><span id="text00013.html_id_Toc68161057"
+class="calibre5">Safe Empty Checks</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Checking non-empty list</h2>
+<p>isNotEmpty() method of CollectionUtils can be used to check if a list
+is not empty without worrying about null list. So null check is not
+required to be placed everywhere before checking the size of the
+list.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.isNotEmpty()</strong>
+ method −</p>
+<p>public static boolean isNotEmpty(Collection&lt;?&gt; coll)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>coll</strong>  − The collection to check, may be null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>True if non-null and non-empty.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.isNotEmpty()</strong>
+ method. We'll check a list is empty or not.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list</span> <span class="text_9">=</span> <span
+class="calibre5">getList</span> <span class="text_9">();</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Non-Empty List Check: "</span> <span
+class="text_9">+</span> <span class="calibre5">checkNotEmpty1</span>
+<span class="text_9">(</span> <span class="calibre5">list</span> <span
+class="text_9">));</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Non-Empty List Check: "</span> <span
+class="text_9">+</span> <span class="calibre5">checkNotEmpty1</span>
+<span class="text_9">(</span> <span class="calibre5">list</span> <span
+class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">static</span> <span class="text_10">List</span>
+<span class="text_9">&lt;</span> <span class="text_10">String</span>
+<span class="text_9">&gt;</span> <span class="calibre5">getList</span>
+<span class="text_9">()</span> <span class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span class="text_8">null</span>
+<span class="text_9">;</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">static</span> <span
+class="text_8">boolean</span> <span
+class="calibre5">checkNotEmpty1</span> <span class="text_9">(</span>
+<span class="text_10">List</span> <span class="text_9">&lt;</span> <span
+class="text_10">String</span> <span class="text_9">&gt;</span> <span
+class="calibre5">list</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span class="text_9">!(</span>
+<span class="calibre5">list</span> <span class="text_9">==</span> <span
+class="text_8">null</span> <span class="text_9">||</span> <span
+class="calibre5">list</span> <span class="text_9">.</span> <span
+class="calibre5">isEmpty</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">static</span> <span
+class="text_8">boolean</span> <span
+class="calibre5">checkNotEmpty2</span> <span class="text_9">(</span>
+<span class="text_10">List</span> <span class="text_9">&lt;</span> <span
+class="text_10">String</span> <span class="text_9">&gt;</span> <span
+class="calibre5">list</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span
+class="text_10">CollectionUtils</span> <span class="text_9">.</span>
+<span class="calibre5">isNotEmpty</span> <span class="text_9">(</span>
+<span class="calibre5">list</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>The output is given below −</p>
+<p>Non-Empty List Check: false</p>
+<p>Non-Empty List Check: false</p>
+<h2 class="block_10">Checking empty list</h2>
+<p>isEmpty() method of CollectionUtils can be used to check if a list is
+empty without worrying about null list. So null check is not required to
+be placed everywhere before checking the size of the list.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.isEmpty()</strong>
+ method −</p>
+<p>public static boolean isEmpty(Collection&lt;?&gt; coll)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>coll</strong>  − The collection to check, may be null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>True if empty or null.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.isEmpty()</strong>
+ method. We'll check a list is empty or not.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list</span> <span class="text_9">=</span> <span
+class="calibre5">getList</span> <span class="text_9">();</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Empty List Check: "</span> <span
+class="text_9">+</span> <span class="calibre5">checkEmpty1</span> <span
+class="text_9">(</span> <span class="calibre5">list</span> <span
+class="text_9">));</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Empty List Check: "</span> <span
+class="text_9">+</span> <span class="calibre5">checkEmpty1</span> <span
+class="text_9">(</span> <span class="calibre5">list</span> <span
+class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">static</span> <span class="text_10">List</span>
+<span class="text_9">&lt;</span> <span class="text_10">String</span>
+<span class="text_9">&gt;</span> <span class="calibre5">getList</span>
+<span class="text_9">()</span> <span class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span class="text_8">null</span>
+<span class="text_9">;</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">static</span> <span
+class="text_8">boolean</span> <span class="calibre5">checkEmpty1</span>
+<span class="text_9">(</span> <span class="text_10">List</span> <span
+class="text_9">&lt;</span> <span class="text_10">String</span> <span
+class="text_9">&gt;</span> <span class="calibre5">list</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span class="text_9">(</span>
+<span class="calibre5">list</span> <span class="text_9">==</span> <span
+class="text_8">null</span> <span class="text_9">||</span> <span
+class="calibre5">list</span> <span class="text_9">.</span> <span
+class="calibre5">isEmpty</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">static</span> <span
+class="text_8">boolean</span> <span class="calibre5">checkEmpty2</span>
+<span class="text_9">(</span> <span class="text_10">List</span> <span
+class="text_9">&lt;</span> <span class="text_10">String</span> <span
+class="text_9">&gt;</span> <span class="calibre5">list</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">return</span> <span
+class="text_10">CollectionUtils</span> <span class="text_9">.</span>
+<span class="calibre5">isEmpty</span> <span class="text_9">(</span>
+<span class="calibre5">list</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>Given below is the output of the code −</p>
+<p>Empty List Check: true</p>
+<p>Empty List Check: true</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00014.html"></span></p>
+<h1 class="block_9"><span id="text00014.html_id_Toc68161058"
+class="calibre5">Inclusion</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Checking sublist</h2>
+<p>isSubCollection() method of CollectionUtils can be used to check if a
+collection contains the given collection or not.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration for</p>
+<p><strong>org.apache.commons.collections4.CollectionUtils.isSubCollection()</strong>
+ method −</p>
+<p>public static boolean isSubCollection(</p>
+<p><span class="calibre8">Collection&lt;?&gt; a, Collection&lt;?&gt;
+b)</span></p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>a</strong>  − The first (sub) collection, must not be
+null.</li>
+<li><strong>b</strong>  − The second (super) collection, must not be
+null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>True if and only if a is a sub-collection of b.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.isSubCollection()</strong>
+ method. We'll check a list is part of another list or not.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_11">//checking inclusion</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list1</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"C"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list2</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 1: "</span> <span class="text_9">+</span> <span
+class="calibre5">list1</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 2: "</span> <span class="text_9">+</span> <span
+class="calibre5">list2</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Is List 2 contained in List 1: "</span> <span
+class="text_9">+</span></p>
+<p><span class="text_10">CollectionUtils</span> <span
+class="text_9">.</span> <span class="calibre5">isSubCollection</span>
+<span class="text_9">(</span> <span class="calibre5">list2</span> <span
+class="text_9">,</span> <span class="calibre5">list1</span> <span
+class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>You will receive the following output −</p>
+<p>List 1: [A, A, A, C, B, B]</p>
+<p>List 2: [A, A, B, B]</p>
+<p>Is List 2 contained in List 1: true</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00015.html"></span></p>
+<h1 class="block_9"><span id="text00015.html_id_Toc68161059"
+class="calibre5">Intersection</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Checking intersection</h2>
+<p>intersection() method of CollectionUtils can be used to get the
+common objects between two collections(intersection).</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration
+for <strong>org.apache.commons.collections4.CollectionUtils.intersection()</strong>
+ method −</p>
+<p>public static &lt;O&gt; Collection&lt;O&gt;
+intersection(Iterable&lt;? extends O&gt; a,</p>
+<p>Iterable&lt;? extends O&gt; b)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>a</strong>  − The first (sub) collection, must not be
+null.</li>
+<li><strong>b</strong>  − The second (super) collection, must not be
+null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>The intersection of the two collections.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.intersection()</strong>
+ method. We'll get the intersection of two lists.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_11">//checking inclusion</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list1</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"C"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list2</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 1: "</span> <span class="text_9">+</span> <span
+class="calibre5">list1</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 2: "</span> <span class="text_9">+</span> <span
+class="calibre5">list2</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Commons Objects of List 1 and List 2: "</span></p>
+<p><span class="text_9">+</span> <span
+class="text_10">CollectionUtils</span> <span class="text_9">.</span>
+<span class="calibre5">intersection</span> <span class="text_9">(</span>
+<span class="calibre5">list1</span> <span class="text_9">,</span> <span
+class="calibre5">list2</span> <span class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>When you run the code, you will see the following output −</p>
+<p>List 1: [A, A, A, C, B, B]</p>
+<p>List 2: [A, A, B, B]</p>
+<p>Commons Objects of List 1 and List 2: [A, A, B, B]</p>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00016.html"></span></p>
+<h1 class="block_9"><span id="text00016.html_id_Toc68161060"
+class="calibre5">Subtraction</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Checking Substraction</h2>
+<p>subtract() method of CollectionUtils can be used to get the new
+collection by subtracting objects of one collection from other.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration
+for <strong>org.apache.commons.collections4.CollectionUtils.subtract()</strong>
+ method −</p>
+<p>public static &lt;O&gt; Collection&lt;O&gt; subtract(Iterable&lt;?
+extends O&gt; a,</p>
+<p>Iterable&lt;? extends O&gt; b)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>a</strong>  − The collection to subtract from, must not be
+null.</li>
+<li><strong>b</strong>  − The collection to subtract, must not be
+null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>A new collection with the results.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.subtract()</strong>
+ method. We'll get the subtraction of two lists.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_11">//checking inclusion</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list1</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"C"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list2</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 1: "</span> <span class="text_9">+</span> <span
+class="calibre5">list1</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 2: "</span> <span class="text_9">+</span> <span
+class="calibre5">list2</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 1 - List 2: "</span> <span class="text_9">+</span>
+<span class="text_10">CollectionUtils</span> <span
+class="text_9">.</span> <span class="calibre5">subtract</span> <span
+class="text_9">(</span> <span class="calibre5">list1</span> <span
+class="text_9">,</span> <span class="calibre5">list2</span> <span
+class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>When you execute the above code, you should see the following output
+−</p>
+<p>List 1: [A, A, A, C, B, B]</p>
+<p>List 2: [A, A, B, B]</p>
+<p>List 1 - List 2: [A, C]</p>
+<h1 class="block_9"></h1>
+<h1 class="block_9"><br />
+</h1>
+<p><span id="text00017.html"></span></p>
+<h1 class="block_9"><span id="text00017.html_id_Toc68161061"
+class="calibre5">Union</span></h1>
+<p>CollectionUtils class of Apache Commons Collections library provides
+various utility methods for common operations covering wide range of use
+cases. It helps avoid writing boilerplate code. This library is very
+useful prior to jdk 8 as similar functionalities are now provided in
+Java 8's Stream API.</p>
+<h2 class="block_10">Checking union</h2>
+<p>union() method of CollectionUtils can be used to get the union of two
+collections.</p>
+<h3 class="block_11">Declaration</h3>
+<p>Following is the declaration
+for <strong>org.apache.commons.collections4.CollectionUtils.union()</strong>
+ method −</p>
+<p>public static &lt;O&gt; Collection&lt;O&gt; union(</p>
+<p>Iterable&lt;? extends O&gt; a, Iterable&lt;? extends O&gt; b)</p>
+<h3 class="block_11">Parameters</h3>
+<ul>
+<li><strong>a</strong>  − The first collection, must not be null.</li>
+<li><strong>b</strong>  − The second collection, must not be null.</li>
+</ul>
+<h3 class="block_11">Return Value</h3>
+<p>The union of the two collections.</p>
+<h3 class="block_11">Example</h3>
+<p>The following example shows the usage
+of <strong>org.apache.commons.collections4.CollectionUtils.union()</strong>
+ method. We'll get the union of two lists.</p>
+<div class="frame_">
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">Arrays</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">java</span>
+<span class="text_9">.</span> <span class="calibre5">util</span> <span
+class="text_9">.</span> <span class="text_10">List</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre5">org</span>
+<span class="text_9">.</span> <span class="calibre5">apache</span> <span
+class="text_9">.</span> <span class="calibre5">commons</span> <span
+class="text_9">.</span> <span class="calibre5">collections4</span> <span
+class="text_9">.</span> <span class="text_10">CollectionUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_10">CollectionUtilsTester</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre5">main</span>
+<span class="text_9">(</span> <span class="text_10">String</span> <span
+class="text_9">[]</span> <span class="calibre5">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_11">//checking inclusion</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list1</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"C"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">List</span> <span class="text_9">&lt;</span>
+<span class="text_10">String</span> <span class="text_9">&gt;</span>
+<span class="calibre5">list2</span> <span class="text_9">=</span> <span
+class="text_10">Arrays</span> <span class="text_9">.</span> <span
+class="calibre5">asList</span> <span class="text_9">(</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"A"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">,</span> <span
+class="text_12">"B"</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 1: "</span> <span class="text_9">+</span> <span
+class="calibre5">list1</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"List 2: "</span> <span class="text_9">+</span> <span
+class="calibre5">list2</span> <span class="text_9">);</span></p>
+<p><span class="text_10">System</span> <span class="text_9">.</span>
+<span class="text_8">out</span> <span class="text_9">.</span> <span
+class="calibre5">println</span> <span class="text_9">(</span> <span
+class="text_12">"Union of List 1 and List 2: "</span></p>
+<p><span class="text_9">+</span> <span
+class="text_10">CollectionUtils</span> <span class="text_9">.</span>
+<span class="text_8">union</span> <span class="text_9">(</span> <span
+class="calibre5">list1</span> <span class="text_9">,</span> <span
+class="calibre5">list2</span> <span class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h3 class="block_11">Output</h3>
+<p>This produces the following output −</p>
+<p>List 1: [A, A, A, C, B, B]</p>
+<p>List 2: [A, A, B, B]</p>
+<p>Union of List 1 and List 2: [A, A, A, B, B, C]</p>
+<p> </p>

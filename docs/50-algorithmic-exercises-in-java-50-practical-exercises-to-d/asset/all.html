@@ -1,0 +1,2938 @@
+<p><img src="image_rsrc4EG.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveaspectratio="xMidYMid meet" viewbox="0 0 1207 1920" height="100%" width="100%">
+<image xlink:href="image_rsrc4EG.jpg" height="1920" width="1207"></image>
+</svg>
+<p><span id="part0001.xhtml"></span></p>
+<p>50 algorithmic exercises in JAVA</p>
+<p><br />
+</p>
+<p><span id="part0002.xhtml"></span></p>
+<p>Introduction</p>
+<p>Algorithms are at the heart of computer science. It is the art of
+solving problems using sequences of logical instructions. Whether you
+are a beginner looking to master the basics of programming or an
+experienced developer looking to improve your problem-solving skills,
+this book is designed for you.</p>
+<p><span id="part0003.xhtml"></span></p>
+<p>Statement: Bubble sorting in Java</p>
+<p>Write a Java program to sort an array of integers using the bubble
+sort algorithm. The bubble sort algorithm works by comparing and
+swapping adjacent elements if they are in the wrong order, and repeats
+this process until the whole array is sorted.</p>
+<p>You need to code the bubble sort logic in Java and make sure that
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class TriBubbles {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        <span id="part0003.xhtml_page_4"></span>int n =
+scanner.nextInt();</p>
+<p>        int[] array = new int[n];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        // Implementation of the bubble sorting algorithm</p>
+<p>        for (int i = 0; i &lt; n - 1; i++) {</p>
+<p>            for (int j = 0; j &lt; n - 1 - i; j++) {</p>
+<p>                if (array[j] &gt; array[j + 1]) {</p>
+<p>                    int temp = array[j];</p>
+<p>                    array[j] = array[j + 1];</p>
+<p>                    array[j + 1] = temp;</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            System.out.print(array[i] + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<div class="class_sN-1">
+<p>}</p>
+</div>
+<p>In this example, we have used an array of integers to store the
+elements, and the bubble sort algorithm is implemented inside two for
+loops. The program asks the user to enter the size of the array and the
+elements of the array, then displays the sorted array at the end.</p>
+<p><span id="part0004.xhtml"></span></p>
+<p>Statement: Quicksort in Java</p>
+<p>Write a Java program to sort an array of integers using the quicksort
+algorithm. The quicksort algorithm is an efficient sorting algorithm
+based on the divide-and-conquer method. It selects a pivot element,
+partitions the array into two sub-arrays (elements below the pivot and
+elements above the pivot), then recursively sorts these sub-arrays.</p>
+<p>You need to code the quick sort logic in Java and make sure your
+program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class QuickSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        <span id="part0004.xhtml_page_7"></span>int[] array = new
+int[n];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        // Call up the quick sort function</p>
+<p>        quickSort(array, 0, n - 1);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            System.out.print(array[i] + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void quickSort(int[] arr, int low, int high) {</p>
+<p>        if (low &lt; high) {</p>
+<p>            int pivotIndex = partition(arr, low, high);</p>
+<p>            quickSort(arr, low, pivotIndex - 1);</p>
+<p>            quickSort(arr, pivotIndex + 1, high);</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static int partition(int[] arr, int low, int high) {</p>
+<p>        int pivot = arr[high];</p>
+<p>        <span id="part0004.xhtml_page_8"></span>int i = low - 1;</p>
+<p>        for (int j = low; j &lt; high; j++) {</p>
+<p>            if (arr[j] &lt; pivot) {</p>
+<p>                i++;</p>
+<p>                int temp = arr[i];</p>
+<p>                arr[i] = arr[j];</p>
+<p>                arr[j] = temp;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        int temp = arr[i + 1];</p>
+<p>        arr[i + 1] = arr[high];</p>
+<p>        arr[high] = temp;</p>
+<p>        return i + 1;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the quicksort method to sort an array
+of integers. The program asks the user to enter the size of the array
+and the elements, then uses recursion to sort the array.</p>
+<p><span id="part0005.xhtml"></span></p>
+<p>Statement: Mergesort in Java</p>
+<p>Write a Java program to sort an array of integers using the merge
+sort algorithm (Mergesort). The merge sort algorithm is based on the
+"divide and conquer" method by dividing the array into two halves,
+sorting these halves, then merging the sorted halves to obtain a sorted
+array.</p>
+<p>You need to code the fusion sorting logic in Java and make sure that
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class MergeSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0005.xhtml_page_10"></span>System.out.print("Enter the size of
+the table: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        int[] array = new int[n];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        // Call the merge sort function</p>
+<p>        mergeSort(array, 0, n - 1);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            System.out.print(array[i] + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void mergeSort(int[] arr, int left, int right)
+{</p>
+<p>        if (left &lt; right) {</p>
+<p>            int middle = (left + right) / 2;</p>
+<p>            mergeSort(arr, left, middle);</p>
+<p>            mergeSort(arr, middle + 1, right);</p>
+<p>            merge(arr, left, middle, right);</p>
+<p>        }</p>
+<p>    <span id="part0005.xhtml_page_11"></span>}</p>
+<p>    public static void merge(int[] arr, int left, int middle, int
+right) {</p>
+<p>        int n1 = middle - left + 1;</p>
+<p>        int n2 = right - middle;</p>
+<p>        int[] leftArray = new int[n1];</p>
+<p>        int[] rightArray = new int[n2];</p>
+<p>        for (int i = 0; i &lt; n1; i++) {</p>
+<p>            leftArray[i] = arr[left + i];</p>
+<p>        }</p>
+<p>        for (int j = 0; j &lt; n2; j++) {</p>
+<p>            rightArray[j] = arr[middle + 1 + j];</p>
+<p>        }</p>
+<p>        int i = 0, j = 0, k = left;</p>
+<p>        while (i &lt; n1 &amp;&amp; j &lt; n2) {</p>
+<p>            if (leftArray[i] &lt;= rightArray[j]) {</p>
+<p>                arr[k] = leftArray[i];</p>
+<p>                i++;</p>
+<p>            } else {</p>
+<p>                arr[k] = rightArray[j];</p>
+<p>                j++;</p>
+<p>            <span id="part0005.xhtml_page_12"></span>}</p>
+<p>            k++;</p>
+<p>        }</p>
+<p>        while (i &lt; n1) {</p>
+<p>            arr[k] = leftArray[i];</p>
+<p>            i++;</p>
+<p>            k++;</p>
+<p>        }</p>
+<p>        while (j &lt; n2) {</p>
+<p>            arr[k] = rightArray[j];</p>
+<p>            j++;</p>
+<p>            k++;</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the Mergesort algorithm to sort an
+array of integers. The program asks the user to enter the size of the
+array and the elements, then uses recursion to sort the array by
+dividing, sorting and merging the sub-arrays.</p>
+<p><span id="part0006.xhtml"></span></p>
+<p>Statement: Sorting by selection in Java</p>
+<p>Write a Java program to sort an array of integers using the selection
+sort algorithm. The selection sort algorithm consists of finding the
+smallest element in the array and placing it in the first position, then
+repeating this process for the rest of the array.</p>
+<p>You need to code the sort-by-selection logic in Java and make sure
+that your program works correctly. You can also add comments to explain
+your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class SelectionSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        <span id="part0006.xhtml_page_14"></span>int n =
+scanner.nextInt();</p>
+<p>        int[] array = new int[n];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        // Call up the sort by selection function</p>
+<p>        selectionSort(array);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            System.out.print(array[i] + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void selectionSort(int[] arr) {</p>
+<p>        int n = arr.length;</p>
+<p>        for (int i = 0; i &lt; n - 1; i++) {</p>
+<p>            int minIndex = i;</p>
+<p>            for (int j = i + 1; j &lt; n; j++) {</p>
+<p>                if (arr[j] &lt; arr[minIndex]) {</p>
+<p>                    minIndex = j;</p>
+<p>                }</p>
+<p>            <span id="part0006.xhtml_page_15"></span>}</p>
+<p>            int temp = arr[i];</p>
+<p>            arr[i] = arr[minIndex];</p>
+<p>            arr[minIndex] = temp;</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the selection sort algorithm to sort an
+array of integers. The program asks the user to enter the size of the
+array and the elements, then uses a double loop to find the minimum
+element in the unsorted portion of the array and places it in the
+correct position. This operation is repeated until the entire array is
+sorted.</p>
+<p><span id="part0007.xhtml"></span></p>
+<p>Statement: Insertion sorting in Java</p>
+<p>Write a Java program to sort an array of integers using the insertion
+sort algorithm. The insertion sort algorithm consists of successively
+inserting each unsorted element in its correct position among the sorted
+elements, from left to right.</p>
+<p>You need to code the insertion sort logic in Java and make sure that
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class InsertionSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        int[] array = new int[n];</p>
+<p>        <span
+id="part0007.xhtml_page_17"></span>System.out.println("Enter the
+elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        // Call the insertion sort function</p>
+<p>        insertSort(array);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            System.out.print(array[i] + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void insertionSort(int[] arr) {</p>
+<p>        int n = arr.length;</p>
+<p>        for (int i = 1; i &lt; n; i++) {</p>
+<p>            int key = arr[i];</p>
+<p>            int j = i - 1;</p>
+<p>            while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {</p>
+<p>                arr[j + 1] = arr[j];</p>
+<p>                j--;</p>
+<p>            }</p>
+<p>            arr[j + 1] = key;</p>
+<p>        <span id="part0007.xhtml_page_18"></span>}</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the insertion sort algorithm to sort an
+array of integers. The program asks the user to enter the size of the
+array and the elements, then uses a loop to insert each unsorted element
+in its correct position among the sorted elements. This operation is
+repeated until the entire array is sorted.</p>
+<p><span id="part0008.xhtml"></span></p>
+<p>Statement: Binary search in Java</p>
+<p>Write a Java program that performs a binary search in a sorted array
+of integers. Binary search is an efficient algorithm that searches for
+an element in a sorted array by recursively dividing the array into two
+parts and comparing the element searched for with the element in the
+middle. If the element searched for is equal to the element in the
+middle, the algorithm returns the position of this element in the array.
+Otherwise, the algorithm reduces the search to the half of the array in
+which the element could be found.</p>
+<p>You need to code the binary search logic in Java and make sure that
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class BinarySearch {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        <span id="part0008.xhtml_page_20"></span>Scanner scanner =
+new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the sorted array: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        int[] array = new int[n];</p>
+<p>        System.out.println("Enter the elements of the sorted array
+(in ascending order):");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        System.out.print("Enter the item to search for: ");</p>
+<p>        int elementSearch = scanner.nextInt();</p>
+<p>        int position = binarySearch(array, elementSearch);</p>
+<p>        if (position != -1) {</p>
+<p>            System.out.println("The element " + elementSearch + " has
+been found at position " + position + " in the array.");</p>
+<p>        } else {</p>
+<p>            System.out.println("The element " + elementSearch + " was
+not found in the array.");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static int binarySearch(int[] arr, int target) {</p>
+<p>        int left = 0;</p>
+<p>        <span id="part0008.xhtml_page_21"></span>int right =
+arr.length - 1;</p>
+<p>        while (left &lt;= right) {</p>
+<p>            int mid = left + (right - left) / 2;</p>
+<p>            if (arr[mid] == target) {</p>
+<p>                return mid;</p>
+<p>            }</p>
+<p>            if (arr[mid] &lt; target) {</p>
+<p>                left = mid + 1;</p>
+<p>            } else {</p>
+<p>                right = mid - 1;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return -1;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the binary search algorithm to find an
+element in a sorted array. The program asks the user to enter the size
+of the sorted array, the elements of the array and the element to be
+searched for. It then performs the binary search to find the element and
+displays its position if it is found, or indicates if it has not been
+found.</p>
+<p><span id="part0009.xhtml"></span></p>
+<p>Statement: Sequential search in Java</p>
+<p>Write a Java program to perform a sequential search in an array of
+integers. Sequential search is a simple algorithm that consists of going
+through the array element by element until the element you are looking
+for is found or the entire array has been searched.</p>
+<p>You need to code the sequential search logic in Java and make sure
+that your program works correctly. You can also add comments to explain
+your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class SequentialSearch {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        <span id="part0009.xhtml_page_23"></span>int[] array = new
+int[n];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        System.out.print("Enter the item to search for: ");</p>
+<p>        int elementSearch = scanner.nextInt();</p>
+<p>        int position = sequentialSearch(array, elementSearch);</p>
+<p>        if (position != -1) {</p>
+<p>            System.out.println("The element " + elementSearch + " has
+been found at position " + position + " in the array.");</p>
+<p>        } else {</p>
+<p>            System.out.println("The element " + elementSearch + " was
+not found in the array.");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static int sequentialSearch(int[] arr, int target) {</p>
+<p>        for (int i = 0; i &lt; arr.length; i++) {</p>
+<p>            if (arr[i] == target) {</p>
+<p>                return i; // Element found, returns position</p>
+<p>            }</p>
+<p>        }</p>
+<p>        <span id="part0009.xhtml_page_24"></span>return -1; //
+Element not found</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the sequential search algorithm to find
+an element in an array. The program asks the user to enter the size of
+the array, the elements of the array and the element to be searched for.
+It then performs the sequential search to find the element and displays
+its position if it is found, or indicates if it has not been found.
+Sequential search is simple but can be less efficient than other methods
+for large arrays, as it traverses all the elements in the array.</p>
+<p><span id="part0010.xhtml"></span></p>
+<p>Statement: Calculating the factorial of a number in Java</p>
+<p>Write a Java program that calculates the factorial of a given number.
+The factorial of a positive integer n is the product of all the positive
+integers from 1 to n.</p>
+<p>You need to code the logic for calculating the factorial in Java and
+make sure that your program works correctly. You can also add comments
+to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class Factorial {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0010.xhtml_page_26"></span>System.out.print("Enter a positive
+integer: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        if (n &lt; 0) {</p>
+<p>            System.out.println("The factorial is only defined for
+positive integers.");</p>
+<p>        } else {</p>
+<p>            long result = calculateFactorial(n);</p>
+<p>            System.out.println("The factorial of " + n + " is " +
+result);</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static long calculateFactorial(int n) {</p>
+<p>        if (n == 0 || n == 1) {</p>
+<p>            return 1; // The factorial of 0 and 1 is 1</p>
+<p>}</p>
+<p>        long factorial = 1;</p>
+<p>        for (int i = 2; i &lt;= n; i++) {</p>
+<p>            factorial *= i;</p>
+<p>        }</p>
+<p>        return factorial;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a for loop to calculate the factorial
+of a given positive integer. The program asks the user to enter a
+number, then checks whether it is positive. If it is, it calculates the
+factorial by multiplying the integers from 1 to n, otherwise it
+indicates that the factorial is only defined for positive integers. The
+factorial of 0 and 1 is defined as being equal to 1.</p>
+<p><span id="part0011.xhtml"></span></p>
+<p>Statement: Calculating the sum of a series of integers in Java</p>
+<p>Write a Java program that calculates the sum of a series of integers.
+The user must enter the number of integers to be added together, then
+enter the integers. The program must then calculate the sum of these
+integers and display it.</p>
+<p>You need to code the logic for calculating the sum in Java and make
+sure that your program works correctly. You can also add comments to
+explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class SumOfIntegers {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0011.xhtml_page_29"></span>System.out.print("Enter the number of
+integers to be added: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        int[] integers = new int[n];</p>
+<p>        int sum = 0;</p>
+<p>        System.out.println("Enter the integers one by one:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            integers[i] = scanner.nextInt();</p>
+<p>            sum += integers[i];</p>
+<p>        }</p>
+<p>        System.out.println("The sum of the integers is: " + sum);</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a for loop to allow the user to enter
+the integers one at a time. With each iteration of the loop, the integer
+entered is added to the sum variable, which is used to store the total
+sum. Once all the integers have been entered, the program displays the
+sum.</p>
+<p><span id="part0012.xhtml"></span></p>
+<p>Statement: Calculating the power of a number in Java</p>
+<p>Write a Java program that calculates the power of a number. The user
+must enter the base (a number) and the exponent (a non-negative
+integer). The program must calculate the value of the base raised to the
+power of the exponent and display it.</p>
+<p>You need to code the logic for calculating the power in Java, also
+handling the case where the exponent is a negative number, and make sure
+that your program works correctly. You can add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class PowerCalculation {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the base (a number): ");</p>
+<p>        <span id="part0012.xhtml_page_31"></span>double base =
+scanner.nextDouble();</p>
+<p>        System.out.print("Enter the exponent (a non-negative
+integer): ");</p>
+<p>        int exponent = scanner.nextInt();</p>
+<p>        if (exponent &lt; 0) {</p>
+<p>            System.out.println("The exponent must be a non-negative
+integer.");</p>
+<p>        } else {</p>
+<p>            double result = calculatePower(base, exponent);</p>
+<p>            System.out.println(base + "raised to the power" +
+exponent + "equals" + result);</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static double calculatePower(double base, int exponent)
+{</p>
+<p>        if (exponent == 0) {</p>
+<p>            return 1;</p>
+<p>        } else {</p>
+<p>            double result = 1;</p>
+<p>            for (int i = 1; i &lt;= exponent; i++) {</p>
+<p>                result *= base;</p>
+<p>            }</p>
+<p>            <span id="part0012.xhtml_page_32"></span>return
+result;</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a for loop to calculate the power of
+the base raised to the exponent. The program asks the user to enter the
+base and exponent, checks that the exponent is a non-negative integer,
+then calculates the power and displays it. The power of the base to the
+0th power is defined as 1.</p>
+<p><span id="part0013.xhtml"></span></p>
+<p>Statement: Calculating the greatest common divisor (GCD) of two
+numbers in Java</p>
+<p>Write a Java program that calculates the greatest common divisor
+(GCD) of two given numbers. The GCD is the largest integer that divides
+both numbers without leaving a remainder.</p>
+<p>You need to code the logic for calculating the PGCD in Java and make
+sure that your program works correctly. You can also add comments to
+explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class GCDCalculation {</p>
+<p>    <span id="part0013.xhtml_page_34"></span>public static void
+main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the first number: ");</p>
+<p>        int number1 = scanner.nextInt();</p>
+<p>        System.out.print("Enter the second number: ");</p>
+<p>        int number2 = scanner.nextInt();</p>
+<p>        int gcd = calculateGCD(number1, number2);</p>
+<p>        System.out.println("The PGCD of " + number1 + " and " +
+number2 + " is " + gcd);</p>
+<p>    }</p>
+<p>    public static int calculateGCD(int a, int b) {</p>
+<p>        while (b != 0) {</p>
+<p>            int temp = b;</p>
+<p>            b = a % b;</p>
+<p>            a = temp;</p>
+<p>        }</p>
+<p>        return a;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used Euclid's algorithm to calculate the GCD
+of two numbers. The program asks the user to enter the two <span
+id="part0013.xhtml_page_35"></span>numbers, then uses a while loop to
+repeat the steps of Euclid's algorithm until b becomes zero. The PGCD is
+then equal to a. The programme then displays the PGCD of the two numbers
+entered.</p>
+<p><span id="part0014.xhtml"></span></p>
+<p>Statement: Calculation of the least common multiple (LCMM) of two
+numbers in Java</p>
+<p>Write a Java program that calculates the least common multiple (LCMM)
+of two given numbers. The LCMM is the smallest positive integer that is
+a common multiple of the two numbers.</p>
+<p>You need to code the PPCM calculation logic in Java and make sure
+that your program works correctly. You can also add comments to explain
+your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class LCMCalculation {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        <span id="part0014.xhtml_page_37"></span>Scanner scanner =
+new Scanner(System.in);</p>
+<p>        System.out.print("Enter the first number: ");</p>
+<p>        int number1 = scanner.nextInt();</p>
+<p>        System.out.print("Enter the second number: ");</p>
+<p>        int number2 = scanner.nextInt();</p>
+<p>        int lcm = calculateLCM(number1, number2);</p>
+<p>        System.out.println("The PPCM of " + number1 + " and " +
+number2 + " is " + lcm);</p>
+<p>    }</p>
+<p>    public static int calculateLCM(int a, int b) {</p>
+<p>        int gcd = calculateGCD(a, b);</p>
+<p>        return (a * b) / gcd;</p>
+<p>    }</p>
+<p>    public static int calculateGCD(int a, int b) {</p>
+<p>        while (b != 0) {</p>
+<p>            int temp = b;</p>
+<p>            b = a % b;</p>
+<p>            a = temp;</p>
+<p>        }</p>
+<p>        return a;</p>
+<p>    }</p>
+<div class="class_sN-1">
+<p>}</p>
+</div>
+<p>In this example, we have used Euclid's algorithm to calculate the
+PGCD of two numbers, then we have used the relationship between the PGCD
+and the PPCM to calculate the PPCM. The program asks the user to enter
+the two numbers, then calculates the PPCM using the formula (a * b) /
+gcd(a, b). The PPCM is then displayed.</p>
+<p><span id="part0015.xhtml"></span></p>
+<p>Statement : Search for prime numbers in a given range in Java</p>
+<p>Write a Java program that finds and displays all the prime numbers in
+a given range. A prime number is an integer greater than 1 that has only
+two divisors: 1 and itself.</p>
+<p>You need to code the logic for finding prime numbers in Java and make
+sure that your program works correctly. You can also add comments to
+explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class PrimeNumbersInRange {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0015.xhtml_page_40"></span>System.out.print("Enter the minimum
+value for the range: ");</p>
+<p>        int min = scanner.nextInt();</p>
+<p>        System.out.print("Enter the maximum value for the range:
+");</p>
+<p>        int max = scanner.nextInt();</p>
+<p>        if (min &lt; 2) {</p>
+<p>            min = 2; // 2 is the first prime number</p>
+<p>        }</p>
+<p>        System.out.println("Prime numbers in the range " + min + " to
+" + max + " :");</p>
+<p>        findAndDisplayPrimes(min, max);</p>
+<p>    }</p>
+<p>    public static void findAndDisplayPrimes(int min, int max) {</p>
+<p>        for (int number = min; number &lt;= max; number++) {</p>
+<p>            if (isPrime(number)) {</p>
+<p>                System.out.print(number + " ");</p>
+<p>            }</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static boolean isPrime(int num) {</p>
+<p>        if (num &lt;= 1) {</p>
+<p>            <span id="part0015.xhtml_page_41"></span>return
+false;</p>
+<p>        }</p>
+<p>        for (int i = 2; i * i &lt;= num; i++) {</p>
+<p>            if (num % i == 0) {</p>
+<p>                return false;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return true;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used an isPrime function to check whether a
+given number is prime. The program asks the user to enter the minimum
+and maximum value in the range, and then finds and displays all the
+primes in that range using the findAndDisplayPrimes function. The
+isPrime function checks whether a number is prime by checking whether it
+is divisible by a number other than 1 and itself. Note that 2 is
+considered the first prime number, and the program ensures that the
+minimum value in the range is at least 2.</p>
+<p><span id="part0016.xhtml"></span></p>
+<p>Statement: Calculating the sum of the digits of a number in Java</p>
+<p>Write a Java program that calculates the sum of the digits of an
+integer. The user enters an integer, and the program calculates the sum
+of its digits.</p>
+<p>You need to code the logic for calculating the sum of the numbers in
+Java and make sure that your program works correctly. You can also add
+comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class SumOfDigits {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0016.xhtml_page_43"></span>System.out.print("Enter an integer:
+");</p>
+<p>        int number = scanner.nextInt();</p>
+<p>        int sum = calculateSumOfDigits(number);</p>
+<p>        System.out.println("The sum of the numbers in " + number + "
+is " + sum);</p>
+<p>    }</p>
+<p>    public static int calculateSumOfDigits(int num) {</p>
+<p>        int sum = 0;</p>
+<p>        while (num != 0) {</p>
+<p>            int digit = num % 10; // Get the last digit</p>
+<p>            sum += digit; // Add the digit to the sum</p>
+<p>            num /= 10; // Delete the last digit</p>
+<p>        }</p>
+<p>        return sum;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a while loop to calculate the sum of
+the digits of an integer. The program asks the user to enter a number,
+then uses the while loop to extract the last digit at each iteration,
+add it to the sum and remove that digit from the number. The loop
+repeats until the number becomes zero. The program then displays the sum
+of the digits.</p>
+<p><span id="part0017.xhtml"></span></p>
+<p>Statement: Calculating the number of digits in an integer in Java</p>
+<p>Write a Java program that calculates the number of digits in an
+integer. The user enters an integer, and the program counts and displays
+the number of digits in the integer.</p>
+<p>You need to code the logic for calculating the number of digits in
+Java and make sure that your program works correctly. You can also add
+comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class CountDigits {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0017.xhtml_page_45"></span>System.out.print("Enter an integer:
+");</p>
+<p>        int number = scanner.nextInt();</p>
+<p>        int count = countDigits(number);</p>
+<p>        System.out.println("The number " + number + " contains " +
+count + " digits.");</p>
+<p>    }</p>
+<p>    public static int countDigits(int num) {</p>
+<p>        int count = 0;</p>
+<p>        while (num != 0) {</p>
+<p>            count++; // Increment the counter at each iteration</p>
+<p>            num /= 10; // Delete the last digit</p>
+<p>        }</p>
+<p>        return count;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a while loop to count the number of
+digits in an integer. The program asks the user to enter a number, then
+uses the while loop to increment the counter on each iteration and
+delete the last digit of the number. The loop repeats until the number
+becomes zero. The program then displays the number of digits in the
+number entered.</p>
+<p><span id="part0018.xhtml"></span></p>
+<p>Statement : Finding the minimum or maximum in an array in Java</p>
+<p>Write a Java program that finds and displays either the minimum or
+the maximum of an array of integers. The user must first choose whether
+to search for the minimum or the maximum, and then enter the elements of
+the array. The program must then find and display the corresponding
+value (minimum or maximum) in the array.</p>
+<p>You need to code the minimum or maximum search logic in Java and make
+sure that your program works correctly. You can also add comments to
+explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<div class="class_sN-1">
+<p>public class MinMaxInArray {</p>
+</div>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Do you want to search for the minimum or
+maximum? (min/max) : ");</p>
+<p>        String choice = scanner.nextLine();</p>
+<p>        if (choice.equalsIgnoreCase("min")) {</p>
+<p>            findAndDisplayMinimum();</p>
+<p>        } else if (choice.equalsIgnoreCase("max")) {</p>
+<p>            findAndDisplayMaximum();</p>
+<p>        } else {</p>
+<p>            System.out.println("Invalid choice. Please enter 'min' or
+'max'.");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void findAndDisplayMinimum() {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        int[] arr = new int[n];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            <span id="part0018.xhtml_page_48"></span>arr[i] =
+scanner.nextInt();</p>
+<p>        }</p>
+<p>        int min = arr[0];</p>
+<p>        for (int i = 1; i &lt; n; i++) {</p>
+<p>            if (arr[i] &lt; min) {</p>
+<p>                min = arr[i];</p>
+<p>            }</p>
+<p>        }</p>
+<p>        System.out.println("The minimum in the table is: " +
+min);</p>
+<p>    }</p>
+<p>    public static void findAndDisplayMaximum() {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int n = scanner.nextInt();</p>
+<p>        int[] arr = new int[n];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            arr[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        int max = arr[0];</p>
+<p>        for (int i = 1; i &lt; n; i++) {</p>
+<p>            <span id="part0018.xhtml_page_49"></span>if (arr[i] &gt;
+max) {</p>
+<p>                max = arr[i];</p>
+<p>            }</p>
+<p>        }</p>
+<p>        System.out.println("The maximum of the array is: " +
+max);</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have created a program that allows the user to
+choose whether to search for the minimum or the maximum in an array of
+integers. The program first asks for this choice, followed by the size
+of the array and the elements of the array. Depending on the user's
+choice, the program searches for and displays either the minimum or the
+maximum. The code is divided into two functions, findAndDisplayMinimum
+and findAndDisplayMaximum, to handle the two cases.</p>
+<p><span id="part0019.xhtml"></span></p>
+<p>Statement: Inverting a character string in Java</p>
+<p>Write a Java program that inverts a string of characters. The user
+enters a string, and the program inverts the characters in the string
+and displays the result.</p>
+<p>You need to code the string inversion logic in Java and make sure
+that your program works correctly. You can also add comments to explain
+your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class ReverseString {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter a character string: ");</p>
+<p>        <span id="part0019.xhtml_page_51"></span>String input =
+scanner.nextLine();</p>
+<p>        String reversed = reverseString(input);</p>
+<p>        System.out.println("The reversed string is: " +
+reversed);</p>
+<p>    }</p>
+<p>    public static String reverseString(String input) {</p>
+<p>        char[] charArray = input.toCharArray();</p>
+<p>        int left = 0;</p>
+<p>        int right = input.length() - 1;</p>
+<p>        while (left &lt; right) {</p>
+<p>            char temp = charArray[left];</p>
+<p>            charArray[left] = charArray[right];</p>
+<p>            charArray[right] = temp;</p>
+<p>            left++;</p>
+<p>            right--;</p>
+<p>        }</p>
+<p>        return new String(charArray);</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a character array to store the
+characters in the string and then used a two pointer technique to invert
+the characters. The program asks the user to enter <span
+id="part0019.xhtml_page_52"></span>a string, then uses a while loop to
+invert the characters by swapping the characters in the left and right
+positions. The inverted string is then displayed.</p>
+<p><span id="part0020.xhtml"></span></p>
+<p>Statement: Palindrome verification in Java</p>
+<p>Write a Java program that checks whether a character string is a
+palindrome. A palindrome is a sequence of characters that reads the same
+from left to right and right to left, ignoring case, punctuation and
+spaces.</p>
+<p>You need to code the palindrome checking logic in Java and make sure
+that your program works correctly. You can also add comments to explain
+your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class PalindromeChecker {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        <span id="part0020.xhtml_page_54"></span>Scanner scanner =
+new Scanner(System.in);</p>
+<p>        System.out.print("Enter a character string: ");</p>
+<p>        String input = scanner.nextLine();</p>
+<p>        boolean isPalindrome = isPalindrome(input);</p>
+<p>        if (isPalindrome) {</p>
+<p>            System.out.println("The string is a palindrome.");</p>
+<p>        } else {</p>
+<p>            System.out.println("The string is not a
+palindrome.");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static boolean isPalindrome(String str) {</p>
+<p>        // Remove punctuation, case and spaces</p>
+<p>        str = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();</p>
+<p>        int left = 0;</p>
+<p>        int right = str.length() - 1;</p>
+<p>        while (left &lt; right) {</p>
+<p>            if (str.charAt(left) != str.charAt(right)) {</p>
+<p>                return false;</p>
+<p>            }</p>
+<p>            left++;</p>
+<p>            right--;</p>
+<p>        <span id="part0020.xhtml_page_55"></span>}</p>
+<p>        return true;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we've used an isPalindrome function to check whether
+a string is a palindrome. The program asks the user to enter a string,
+then uses the isPalindrome function to remove punctuation, ignore case
+and spaces, and then check whether the string is a palindrome using a
+two pointer technique. The program displays a message indicating whether
+or not the string is a palindrome.</p>
+<p><span id="part0021.xhtml"></span></p>
+<p>Statement: Counting vowels in a character string in Java</p>
+<p>Write a Java program that counts the number of vowels (letters a, e,
+i, o, u) in a string. The user enters a string, and the program counts
+the number of vowels in the string and displays the result.</p>
+<p>You need to code the vowel counting logic in Java and make sure that
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class VowelCounter {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0021.xhtml_page_57"></span>System.out.print("Enter a character
+string: ");</p>
+<p>        String input = scanner.nextLine();</p>
+<p>        int vowelCount = countVowels(input);</p>
+<p>        System.out.println("The number of vowels in the string is: "
++ vowelCount);</p>
+<p>    }</p>
+<p>    public static int countVowels(String str) {</p>
+<p>        str = str.toLowerCase(); // Convert the string to lower case
+to ignore case.</p>
+<p>        int count = 0;</p>
+<p>        for (int i = 0; i &lt; str.length(); i++) {</p>
+<p>            char c = str.charAt(i);</p>
+<p>            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c ==
+'u') {</p>
+<p>                count++;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return count;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a countVowels function to count the
+number of vowels in a string. The program asks the user to enter a
+string, then uses the countVowels function to convert the <span
+id="part0021.xhtml_page_58"></span>string to lower case, then scans the
+string character by character to count the vowels. The program then
+displays the number of vowels in the string.</p>
+<p><span id="part0022.xhtml"></span></p>
+<p>Statement: Calculating the average of an array of numbers in Java</p>
+<p>Write a Java program that calculates the average of the numbers in an
+array. The user must first enter the size of the table, then enter the
+numbers one by one. The program then calculates the average of these
+numbers and displays it.</p>
+<p>You need to code the averaging logic in Java and make sure that your
+program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class AverageCalculator {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0022.xhtml_page_60"></span>System.out.print("Enter the size of
+the table: ");</p>
+<p>        int size = scanner.nextInt();</p>
+<p>        double[] numbers = new double[size];</p>
+<p>        double sum = 0;</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; size; i++) {</p>
+<p>            numbers[i] = scanner.nextDouble();</p>
+<p>            sum += numbers[i];</p>
+<p>        }</p>
+<p>        double average = calculateAverage(sum, size);</p>
+<p>        System.out.println("The average number is: " + average);</p>
+<p>    }</p>
+<p>    public static double calculateAverage(double sum, int count)
+{</p>
+<p>        if (count &gt; 0) {</p>
+<p>            return sum / count;</p>
+<p>        } else {</p>
+<p>            return 0.0; // Avoid division by zero if the array is
+empty</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used an array of numbers and a for loop to
+allow the user to enter the elements of the array one by one. The sum of
+the numbers is calculated at the same time. Then the calculateAverage
+function is used to calculate the average by dividing the sum by the
+number of elements in the array. If the array is empty, the average is
+set to 0 to avoid division by zero. The program then displays the
+average.</p>
+<p><span id="part0023.xhtml"></span></p>
+<p>Statement : Finding the median in an unsorted array in Java</p>
+<p>Write a Java program that finds the median of an unsorted array of
+integers. The median is the central value of a set of sorted or unsorted
+data. You need to find the median in an unsorted array.</p>
+<p>You need to code the median search logic in Java and make sure that
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>import java.util.Arrays;</p>
+<p>public class MedianFinder {</p>
+<p>    <span id="part0023.xhtml_page_63"></span>public static void
+main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int size = scanner.nextInt();</p>
+<p>        int[] numbers = new int[size];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; size; i++) {</p>
+<p>            numbers[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        int median = findMedian(numbers);</p>
+<p>        System.out.println("The median of the table is: " +
+median);</p>
+<p>    }</p>
+<p>    public static int findMedian(int[] array) {</p>
+<p>        // Sort the table</p>
+<p>        Arrays.sort(array);</p>
+<p>        int size = array.length;</p>
+<p>        if (size % 2 == 0) {</p>
+<p>            // If the table has an even number of elements, the
+median is the average of the two central elements.</p>
+<p>            int middleIndex1 = size / 2 - 1;</p>
+<p>            int middleIndex2 = size / 2;</p>
+<p>            <span id="part0023.xhtml_page_64"></span>return
+(array[middleIndex1] + array[middleIndex2]) / 2;</p>
+<p>        } else {</p>
+<p>            // If the table has an odd number of elements, the median
+is the central element.</p>
+<p>            int middleIndex = size / 2;</p>
+<p>            return array[middleIndex];</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we used the Arrays.sort method to sort the array of
+integers, which is essential for finding the median. Then we used logic
+to determine the median based on the parity of the array size. If the
+array has an even number of elements, the median is the average of the
+two central elements. If the array has an odd number of elements, the
+median is the central element. The program then displays the median.</p>
+<p><span id="part0024.xhtml"></span></p>
+<p>Statement: Checking the uniqueness of elements in an array in
+Java</p>
+<p>Write a Java program that checks whether all the elements of an array
+are unique, i.e. there are no duplicates in the array. The user must
+enter the size of the array and the elements of the array, and the
+program must determine whether or not all the elements are unique.</p>
+<p>You need to code the logic for checking the uniqueness of elements in
+Java and make sure that your program works correctly. You can also add
+comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>import java.util.HashSet;</p>
+<div class="class_sN-1">
+<p>public class UniqueElementsChecker {</p>
+</div>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int size = scanner.nextInt();</p>
+<p>        int[] numbers = new int[size];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; size; i++) {</p>
+<p>            numbers[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        boolean hasDuplicates = checkForDuplicates(numbers);</p>
+<p>        if (hasDuplicates) {</p>
+<p>            System.out.println("There are duplicate elements in the
+array.");</p>
+<p>        } else {</p>
+<p>            System.out.println("All the elements in the array are
+unique.");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static boolean checkForDuplicates(int[] array) {</p>
+<p>        HashSet&lt;Integer&gt; set = new
+HashSet&lt;Integer&gt;();</p>
+<p>        for (int element : array) {</p>
+<p>            <span id="part0024.xhtml_page_67"></span>if
+(!set.add(element)) {</p>
+<p>                return true; // If the element cannot be added to the
+set, it is a duplicate.</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return false; // No duplicates found.</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used a HashSet to check the uniqueness of
+the elements in the array. The program asks the user to enter the size
+of the array and the elements, then uses the checkForDuplicates function
+to check whether the array contains any duplicates. If an element cannot
+be added to the set (because it is already present), the program
+concludes that there are duplicates. Otherwise, it displays that all the
+elements are unique.</p>
+<p><span id="part0025.xhtml"></span></p>
+<p>Statement: Merging two sorted arrays in Java</p>
+<p>Write a Java program that merges two sorted arrays into a single
+sorted array. The user must enter the size of the two arrays and their
+elements, and the program must merge the two arrays so that the
+resulting array is also sorted.</p>
+<p>You need to code the logic for merging the two sorted arrays in Java
+and make sure that your program works correctly. You can also add
+comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class SortedArrayMerger {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0025.xhtml_page_69"></span>System.out.print("Enter the size of
+the first array: ");</p>
+<p>        int size1 = scanner.nextInt();</p>
+<p>        int[] array1 = new int[size1];</p>
+<p>        System.out.println("Enter the elements of the first sorted
+array:");</p>
+<p>        for (int i = 0; i &lt; size1; i++) {</p>
+<p>            array1[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        System.out.print("Enter the size of the second array: ");</p>
+<p>        int size2 = scanner.nextInt();</p>
+<p>        int[] array2 = new int[size2];</p>
+<p>        System.out.println("Enter the elements of the second sorted
+array:");</p>
+<p>        for (int i = 0; i &lt; size2; i++) {</p>
+<p>            array2[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        int[] mergedArray = mergeSortedArrays(array1, array2);</p>
+<p>        System.out.println("The sorted result table is:");</p>
+<p>        for (int num : mergedArray) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    <span id="part0025.xhtml_page_70"></span>public static int[]
+mergeSortedArrays(int[] array1, int[] array2) {</p>
+<p>        int size1 = array1.length;</p>
+<p>        int size2 = array2.length;</p>
+<p>        int[] result = new int[size1 + size2];</p>
+<p>        int i = 0, j = 0, k = 0;</p>
+<p>        while (i &lt; size1 &amp;&amp; j &lt; size2) {</p>
+<p>            if (array1[i] &lt; array2[j]) {</p>
+<p>                result[k++] = array1[i++];</p>
+<p>            } else {</p>
+<p>                result[k++] = array2[j++];</p>
+<p>            }</p>
+<p>        }</p>
+<p>        while (i &lt; size1) {</p>
+<p>            result[k++] = array1[i++];</p>
+<p>        }</p>
+<p>        while (j &lt; size2) {</p>
+<p>            result[k++] = array2[j++];</p>
+<p>        }</p>
+<p>        return result;</p>
+<p>    }</p>
+<div class="class_sN-1">
+<p>}</p>
+</div>
+<p>In this example, we've used a mergeSortedArrays function to merge two
+sorted arrays into one resulting sorted array. The program asks the user
+to enter the size and elements of the two sorted arrays, then uses the
+mergeSortedArrays function to perform the merge. The result is then
+displayed. The merge is performed by comparing the elements of the two
+arrays and placing the smaller one in the resulting array, and so on
+until all the elements have been merged.</p>
+<p><span id="part0026.xhtml"></span></p>
+<p>Statement: Calculating the cumulative sum of an array in Java</p>
+<p>Write a Java program that calculates the cumulative sum of an array
+of integers. The cumulative sum is an array in which each element is the
+sum of all the previous elements of the original array, including
+itself. The user must enter the size of the array and its elements, and
+the program must calculate and display the cumulative sum array.</p>
+<p>You need to code the calculation logic for the cumulative sum table
+in Java and make sure that your program works correctly. You can also
+add comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<div class="class_sN-1">
+<p>public class CumulativeSumCalculator {</p>
+</div>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the table: ");</p>
+<p>        int size = scanner.nextInt();</p>
+<p>        int[] array = new int[size];</p>
+<p>        int[] cumulativeSum = new int[size];</p>
+<p>        System.out.println("Enter the elements of the table:");</p>
+<p>        for (int i = 0; i &lt; size; i++) {</p>
+<p>            array[i] = scanner.nextInt();</p>
+<p>        }</p>
+<p>        calculateCumulativeSum(array, cumulativeSum);</p>
+<p>        System.out.println("The cumulative sum table is:");</p>
+<p>        for (int num : cumulativeSum) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void calculateCumulativeSum(int[] input, int[]
+output) {</p>
+<p>        int sum = 0;</p>
+<p>        for (int i = 0; i &lt; input.length; i++) {</p>
+<p>            <span id="part0026.xhtml_page_74"></span>sum +=
+input[i];</p>
+<p>            output[i] = sum;</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the calculateCumulativeSum function to
+calculate the cumulative sum table. The program asks the user to enter
+the size of the array and the elements of the array, then uses the
+calculateCumulativeSum function to calculate the cumulative sum. The
+cumulative sum array is displayed at the end, where each element is the
+sum of all the previous elements, including itself.</p>
+<p><span id="part0027.xhtml"></span></p>
+<p>Statement: Converting a decimal number to binary in Java</p>
+<p>Write a Java program that converts a decimal number into its binary
+representation. The user must enter a decimal number, and the program
+must calculate the binary representation of this number and display
+it.</p>
+<p>You need to code the logic for converting a decimal number to binary
+in Java and make sure that your program works correctly. You can also
+add comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class DecimalToBinaryConverter {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0027.xhtml_page_76"></span>System.out.print("Enter a decimal
+number: ");</p>
+<p>        int decimalNumber = scanner.nextInt();</p>
+<p>        String binaryNumber =
+convertDecimalToBinary(decimalNumber);</p>
+<p>        System.out.println("The binary representation is: " +
+binaryNumber);</p>
+<p>    }</p>
+<p>    public static String convertDecimalToBinary(int decimal) {</p>
+<p>        if (decimal == 0) {</p>
+<p>            return "0";</p>
+<p>        }</p>
+<p>        StringBuilder binary = new StringBuilder();</p>
+<p>        while (decimal &gt; 0) {</p>
+<p>            int remainder = decimal % 2;</p>
+<p>            binary.insert(0, remainder); // Add the remainder at the
+beginning of the string</p>
+<p>            decimal = decimal / 2;</p>
+<p>        }</p>
+<p>        return binary.toString();</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the convertDecimalToBinary function to
+convert a decimal number into its binary representation. The program
+asks the user to enter a decimal number and then uses the function to
+perform the conversion. The conversion logic consists of repeatedly
+dividing the decimal number by 2 and adding the remainders (0 or 1) at
+the beginning of the string to obtain the binary representation. The
+result is then displayed.</p>
+<p><span id="part0028.xhtml"></span></p>
+<p>Statement : Searching for substrings in a string in Java</p>
+<p>Write a Java program that searches for all occurrences of a given
+substring in a string. The user must enter a string and a substring, and
+the program must find and display all the positions where the substring
+appears in the string.</p>
+<p>You need to code the substring search logic in Java and make sure
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>public class SubstringSearch {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        <span
+id="part0028.xhtml_page_79"></span>System.out.print("Enter a character
+string: ");</p>
+<p>       String mainString = scanner.nextLine();</p>
+<p>        System.out.print("Enter the substring to search for: ");</p>
+<p>        String substring = scanner.nextLine();</p>
+<p>        findSubstringPositions(mainString, substring);</p>
+<p>    }</p>
+<p>    public static void findSubstringPositions(String mainString,
+String substring) {</p>
+<p>        int lastIndex = 0;</p>
+<p>        while (lastIndex != -1) {</p>
+<p>            lastIndex = mainString.indexOf(substring, lastIndex);</p>
+<p>            if (lastIndex != -1) {</p>
+<p>                System.out.println("The substring is at position: " +
+lastIndex);</p>
+<p>                lastIndex++;</p>
+<p>            }</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the findSubstringPositions function to
+search for all occurrences of a substring in a string. The program asks
+the user to enter the main string and the <span
+id="part0028.xhtml_page_80"></span>substring to search for, then uses
+the function to find and display all the positions where the substring
+appears. The indexOf method is used to find the positions of the
+substring in the main string, and a while loop is used to find all
+occurrences.</p>
+<p><span id="part0029.xhtml"></span></p>
+<p>Statement: Calculating the intersection of two sets in Java</p>
+<p>Write a Java program that calculates the intersection of two sets of
+integers. The user must enter the elements of the two sets, and the
+program must determine and display the elements that are present in the
+two sets (i.e. the intersection).</p>
+<p>You need to code the logic for calculating the intersection of sets
+in Java and make sure that your program works correctly. You can also
+add comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>import java.util.HashSet;</p>
+<p>import java.util.ArrayList;</p>
+<div class="class_sN-1">
+<p>public class IntersectionOfSets {</p>
+</div>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the first set: ");</p>
+<p>        int size1 = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; set1 = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the first
+set:");</p>
+<p>        for (int i = 0; i &lt; size1; i++) {</p>
+<p>            set1.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        System.out.print("Enter the size of the second set: ");</p>
+<p>        int size2 = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; set2 = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the second
+set:");</p>
+<p>        for (int i = 0; i &lt; size2; i++) {</p>
+<p>            set2.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        ArrayList&lt;Integer&gt; intersection =
+findIntersection(set1, set2);</p>
+<p>        System.out.println("The intersection of the two sets is: " +
+intersection);</p>
+<p>    }</p>
+<p>    <span id="part0029.xhtml_page_83"></span>public static
+ArrayList&lt;Integer&gt; findIntersection(HashSet&lt;Integer&gt; set1,
+HashSet&lt;Integer&gt; set2) {</p>
+<p>        ArrayList&lt;Integer&gt; intersection = new
+ArrayList&lt;Integer&gt;();</p>
+<p>        for (int num : set1) {</p>
+<p>            if (set2.contains(num)) {</p>
+<p>                intersection.add(num);</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return intersection;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the findIntersection function to
+calculate the intersection of two sets of integers. The program asks the
+user to enter the size and elements of the two sets, then uses the
+function to find the elements that are present in both sets. The
+intersection elements are stored in an ArrayList and displayed at the
+end. The contains method is used to check whether an element is present
+in a set.</p>
+<p><span id="part0030.xhtml"></span></p>
+<p>Statement: Calculating the union of two sets in Java</p>
+<p>Write a Java program that calculates the union of two sets of
+integers. The user must enter the elements of the two sets, and the
+program must determine and display the elements that are present in at
+least one of the sets (i.e. the union).</p>
+<p>You need to code the logic for calculating the union of sets in Java
+and make sure that your program works correctly. You can also add
+comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>import java.util.HashSet;</p>
+<p>import java.util.ArrayList;</p>
+<p>public class UnionOfSets {</p>
+<p>    <span id="part0030.xhtml_page_85"></span>public static void
+main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the first set: ");</p>
+<p>        int size1 = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; set1 = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the first
+set:");</p>
+<p>        for (int i = 0; i &lt; size1; i++) {</p>
+<p>            set1.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        System.out.print("Enter the size of the second set: ");</p>
+<p>        int size2 = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; set2 = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the second
+set:");</p>
+<p>        for (int i = 0; i &lt; size2; i++) {</p>
+<p>            set2.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        ArrayList&lt;Integer&gt; union = findUnion(set1, set2);</p>
+<p>        System.out.println("The union of the two sets is: " +
+union);</p>
+<p>    }</p>
+<p>    public static ArrayList&lt;Integer&gt;
+findUnion(HashSet&lt;Integer&gt; set1, HashSet&lt;Integer&gt; set2)
+{</p>
+<p>        <span
+id="part0030.xhtml_page_86"></span>ArrayList&lt;Integer&gt; union = new
+ArrayList&lt;Integer&gt;();</p>
+<p>        union.addAll(set1);</p>
+<p>        union.addAll(set2);</p>
+<p>        return union;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the findUnion function to calculate the
+union of two sets of integers. The program asks the user to enter the
+size and elements of the two sets, then uses the function to find the
+elements that are present in at least one of the sets. The union
+elements are stored in an ArrayList and displayed at the end. Using the
+addAll method adds all the elements of the sets to the union.</p>
+<p><span id="part0031.xhtml"></span></p>
+<p>Statement: Calculating the difference between two sets in Java</p>
+<p>Write a Java program that calculates the difference between two sets
+of integers. The user must enter the elements of the two sets, and the
+program must determine and display the elements that are present in the
+first set but not in the second (i.e. the difference).</p>
+<p>You need to code the logic for calculating the difference of sets in
+Java and make sure that your program works correctly. You can also add
+comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.Scanner;</p>
+<p>import java.util.HashSet;</p>
+<div class="class_sN-1">
+<p>import java.util.ArrayList;</p>
+</div>
+<p>public class DifferenceOfSets {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the first set: ");</p>
+<p>        int size1 = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; set1 = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the first
+set:");</p>
+<p>        for (int i = 0; i &lt; size1; i++) {</p>
+<p>            set1.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        System.out.print("Enter the size of the second set: ");</p>
+<p>        int size2 = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; set2 = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the second
+set:");</p>
+<p>        for (int i = 0; i &lt; size2; i++) {</p>
+<p>            set2.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        ArrayList&lt;Integer&gt; difference = findDifference(set1,
+set2);</p>
+<p>        System.out.println("The difference between the two sets is: "
++ difference);</p>
+<p>    <span id="part0031.xhtml_page_89"></span>}</p>
+<p>    public static ArrayList&lt;Integer&gt;
+findDifference(HashSet&lt;Integer&gt; set1, HashSet&lt;Integer&gt; set2)
+{</p>
+<p>        ArrayList&lt;Integer&gt; difference = new
+ArrayList&lt;Integer&gt;();</p>
+<p>        for (int num : set1) {</p>
+<p>            if (!set2.contains(num)) {</p>
+<p>                difference.add(num);</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return difference;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we've used the findDifference function to calculate
+the difference between two sets of integers. The program asks the user
+to enter the size and elements of the two sets, then uses the function
+to find the elements that are present in the first set but not in the
+second. The difference elements are stored in an ArrayList and displayed
+at the end. The contains method is used to check whether an element is
+present in the second set.</p>
+<p><span id="part0032.xhtml"></span></p>
+<p>Statement: Calculating the complement of a set in Java</p>
+<p>Write a Java program that calculates the complement of a set of
+integers with respect to a given universal set. The user must enter the
+elements of the universal set, then the elements of the set whose
+complement is to be calculated, and the program must determine and
+display the elements that are present in the universal set but not in
+the given set (i.e. the complement).</p>
+<p>You need to code the logic for calculating the complement of sets in
+Java and make sure that your program works correctly. You can also add
+comments to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>java</p>
+<div class="class_sN-1">
+<p>import java.util.Scanner;</p>
+</div>
+<p>import java.util.HashSet;</p>
+<p>import java.util.ArrayList;</p>
+<p>public class SetComplement {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        Scanner scanner = new Scanner(System.in);</p>
+<p>        System.out.print("Enter the size of the universal set:
+");</p>
+<p>        int sizeUniversal = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; universalSet = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the universal
+set:");</p>
+<p>        for (int i = 0; i &lt; sizeUniversal; i++) {</p>
+<p>            universalSet.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        System.out.print("Enter the size of the set whose complement
+you want to calculate: ");</p>
+<p>        int sizeSubset = scanner.nextInt();</p>
+<p>        HashSet&lt;Integer&gt; subset = new
+HashSet&lt;Integer&gt;();</p>
+<p>        System.out.println("Enter the elements of the set:");</p>
+<p>        for (int i = 0; i &lt; sizeSubset; i++) {</p>
+<p>            subset.add(scanner.nextInt());</p>
+<p>        }</p>
+<p>        <span
+id="part0032.xhtml_page_92"></span>ArrayList&lt;Integer&gt; complement =
+findComplement(universalSet, subset);</p>
+<p>        System.out.println("The complement of the given set with
+respect to the universal set is: " + complement);</p>
+<p>    }</p>
+<p>    public static ArrayList&lt;Integer&gt;
+findComplement(HashSet&lt;Integer&gt; universalSet,
+HashSet&lt;Integer&gt; subset) {</p>
+<p>        ArrayList&lt;Integer&gt; complement = new
+ArrayList&lt;Integer&gt;();</p>
+<p>        for (int num : universalSet) {</p>
+<p>            if (!subset.contains(num)) {</p>
+<p>                complement.add(num);</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return complement;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have used the findComplement function to
+calculate the complement of a set to a universal set. The program asks
+the user to enter the size and elements of both the universal set and
+the set whose complement is to be calculated, then uses the function to
+find the elements that are present in the universal set but not in the
+given set. The complement elements <span
+id="part0032.xhtml_page_93"></span>are stored in an ArrayList and
+displayed at the end. The contains method is used to check whether an
+element is present in the given set.</p>
+<p><span id="part0033.xhtml"></span></p>
+<p>Statement: Topological sorting of a directed graph in Java</p>
+<p>Write a Java program that performs a topological sort of a directed
+graph represented as an adjacency list. Topological sorting is a way of
+ordering the nodes of a graph so that each node precedes all the nodes
+it reaches by an edge. The program must take the graph as input and
+display the topological sort order.</p>
+<p>You need to code the topological sorting logic in Java and make sure
+that your program works correctly. You can also add comments to explain
+your code.</p>
+<p>Example of a solution in Java :</p>
+<div class="class_s5F">
+<p>java</p>
+</div>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.LinkedList;</p>
+<p>import java.util.Queue;</p>
+<p>public class TopologicalSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        // Representation of the directed graph as an adjacency
+list</p>
+<p>        int numNodes = 6;</p>
+<p>        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph = new
+ArrayList&lt;&gt;(numNodes);</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            graph.add(new ArrayList&lt;Integer&gt;());</p>
+<p>        }</p>
+<p>        // Add the edges of the graph</p>
+<p>        addEdge(graph, 5, 2);</p>
+<p>        addEdge(graph, 5, 0);</p>
+<p>        addEdge(graph, 4, 0);</p>
+<p>        addEdge(graph, 4, 1);</p>
+<p>        addEdge(graph, 2, 3);</p>
+<p>        addEdge(graph, 3, 1);</p>
+<p>        <span id="part0033.xhtml_page_96"></span>// Perform the
+topological sort and display the result</p>
+<p>        ArrayList&lt;Integer&gt; topologicalOrder =
+topologicalSort(graph);</p>
+<p>        System.out.println("Topological sort order: " +
+topologicalOrder);</p>
+<p>    }</p>
+<p>    public static void
+addEdge(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph, int source, int
+destination) {</p>
+<p>        graph.get(source).add(destination);</p>
+<p>    }</p>
+<p>    public static ArrayList&lt;Integer&gt;
+topologicalSort(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph) {</p>
+<p>        int numNodes = graph.size();</p>
+<p>        int[] inDegree = new int[numNodes];</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            ArrayList&lt;Integer&gt; neighbors = graph.get(i);</p>
+<p>            for (int neighbor : neighbors) {</p>
+<p>                inDegree[neighbor]++;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            <span id="part0033.xhtml_page_97"></span>if (inDegree[i]
+== 0) {</p>
+<p>                queue.add(i);</p>
+<p>            }</p>
+<p>        }</p>
+<p>        ArrayList&lt;Integer&gt; topologicalOrder = new
+ArrayList&lt;&gt;();</p>
+<p>        while (!queue.isEmpty()) {</p>
+<p>            int node = queue.poll();</p>
+<p>            topologicalOrder.add(node);</p>
+<p>            ArrayList&lt;Integer&gt; neighbors = graph.get(node);</p>
+<p>            for (int neighbor : neighbors) {</p>
+<p>                inDegree[neighbor]--;</p>
+<p>                if (inDegree[neighbor] == 0) {</p>
+<p>                    queue.add(neighbor);</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return topologicalOrder;</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have represented a directed graph as an adjacency
+list and performed a topological sort using an <span
+id="part0033.xhtml_page_98"></span>algorithm based on the in-degrees of
+the nodes. The result is displayed as the topological sort order of the
+graph. You can customise the graph by modifying the edges to see how the
+topological sort order changes as a result.</p>
+<p><span id="part0034.xhtml"></span></p>
+<p>Statement: Deep traversal (DFS) of a graph in Java</p>
+<p>Write a Java program that performs a deep traversal (DFS) of an
+undirected graph represented as an adjacency list. Deep traversal is a
+technique for exploring all the nodes of a graph by following the edges
+as far as possible before going back.</p>
+<p>You need to code the path logic in depth in Java and make sure that
+your program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.Stack;</p>
+<p>public class DepthFirstSearch {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        <span id="part0034.xhtml_page_100"></span>// Representation
+of the undirected graph as an adjacency list</p>
+<p>        int numNodes = 6;</p>
+<p>        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph = new
+ArrayList&lt;&gt;(numNodes);</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            graph.add(new ArrayList&lt;Integer&gt;());</p>
+<p>        }</p>
+<p>        // Add the edges of the graph</p>
+<p>        addEdge(graph, 0, 1);</p>
+<p>        addEdge(graph, 0, 2);</p>
+<p>        addEdge(graph, 1, 3);</p>
+<p>        addEdge(graph, 2, 4);</p>
+<p>        addEdge(graph, 3, 5);</p>
+<p>        // Perform the depth run from the start node 0</p>
+<p>        System.out.println("Depth traversal (DFS) from node 0:");</p>
+<p>        depthFirstSearch(graph, 0);</p>
+<p>    }</p>
+<p>    public static void
+addEdge(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph, int node1, int
+node2) {</p>
+<p>        graph.get(node1).add(node2);</p>
+<p>        graph.get(node2).add(node1);</p>
+<p>    <span id="part0034.xhtml_page_101"></span>}</p>
+<p>    public static void
+depthFirstSearch(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph, int
+startNode) {</p>
+<p>        int numNodes = graph.size();</p>
+<p>        boolean[] visited = new boolean[numNodes];</p>
+<p>        Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();</p>
+<p>        stack.push(startNode);</p>
+<p>        while (!stack.isEmpty()) {</p>
+<p>            int currentNode = stack.pop();</p>
+<p>            if (!visited[currentNode]) {</p>
+<p>                System.out.print(currentNode + " ");</p>
+<p>                visited[currentNode] = true;</p>
+<p>                ArrayList&lt;Integer&gt; neighbors =
+graph.get(currentNode);</p>
+<p>                for (int neighbor : neighbors) {</p>
+<p>                    if (!visited[neighbor]) {</p>
+<p>                        stack.push(neighbor);</p>
+<p>                    }</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>    <span id="part0034.xhtml_page_102"></span>}</p>
+<p>}</p>
+<p>In this example, we have represented an undirected graph as an
+adjacency list and performed a deep traversal (DFS) starting from a
+start node. The result is displayed as the order in which the nodes are
+visited during the traversal. You can customise the graph by modifying
+the edges or choosing a different starting node to explore different
+parts of the graph.</p>
+<p><span id="part0035.xhtml"></span></p>
+<p>Statement: Breadth-first graph (BFS) in Java</p>
+<p>Write a Java program that performs a breadth-first traversal (BFS) of
+an undirected graph represented as an adjacency list. Breadth-first
+traversal is a technique for exploring all the nodes in a graph by
+starting with a starting node and iteratively moving to its nearest
+neighbours.</p>
+<p>You need to code the breadth logic in Java and make sure that your
+program works correctly. You can also add comments to explain your
+code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.LinkedList;</p>
+<p>import java.util.Queue;</p>
+<div class="class_sN-1">
+<p>public class BreadthFirstSearch {</p>
+</div>
+<p>    public static void main(String[] args) {</p>
+<p>        // Representation of the undirected graph as an adjacency
+list</p>
+<p>        int numNodes = 6;</p>
+<p>        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph = new
+ArrayList&lt;&gt;(numNodes);</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            graph.add(new ArrayList&lt;Integer&gt;());</p>
+<p>        }</p>
+<p>        // Add the edges of the graph</p>
+<p>        addEdge(graph, 0, 1);</p>
+<p>        addEdge(graph, 0, 2);</p>
+<p>        addEdge(graph, 1, 3);</p>
+<p>        addEdge(graph, 2, 4);</p>
+<p>        addEdge(graph, 3, 5);</p>
+<p>        // Perform the width path from the start node 0</p>
+<p>        System.out.println("Browse width (BFS) from node 0:");</p>
+<p>        breadthFirstSearch(graph, 0);</p>
+<p>    }</p>
+<p>    public static void
+addEdge(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph, int node1, int
+node2) {</p>
+<p>        <span
+id="part0035.xhtml_page_105"></span>graph.get(node1).add(node2);</p>
+<p>        graph.get(node2).add(node1);</p>
+<p>    }</p>
+<p>    public static void
+breadthFirstSearch(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; graph, int
+startNode) {</p>
+<p>        int numNodes = graph.size();</p>
+<p>        boolean[] visited = new boolean[numNodes];</p>
+<p>        Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();</p>
+<p>        queue.add(startNode);</p>
+<p>        visited[startNode] = true;</p>
+<p>        while (!queue.isEmpty()) {</p>
+<p>            int currentNode = queue.poll();</p>
+<p>            System.out.print(currentNode + " ");</p>
+<p>            ArrayList&lt;Integer&gt; neighbors =
+graph.get(currentNode);</p>
+<p>            for (int neighbor : neighbors) {</p>
+<p>                if (!visited[neighbor]) {</p>
+<p>                    queue.add(neighbor);</p>
+<p>                    visited[neighbor] = true;</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>    <span id="part0035.xhtml_page_106"></span>}</p>
+<p>}</p>
+<p>In this example, we have represented an undirected graph as an
+adjacency list and performed a breadth-first traversal (BFS) from a
+start node. The result is displayed as the order in which the nodes are
+visited during the breadth traversal. You can customise the graph by
+modifying the edges or choosing a different starting node to explore
+different parts of the graph.</p>
+<p><span id="part0036.xhtml"></span></p>
+<p>Statement: Dijkstra's shortest path algorithm in Java</p>
+<p>Write a Java program that implements Dijkstra's algorithm to find the
+shortest path between a starting node and all other nodes in a weighted
+directed graph. Dijkstra's algorithm is widely used to solve the
+shortest path problem.</p>
+<p>You need to code the logic of Dijkstra's algorithm in Java and make
+sure that your program works correctly. You can also add comments to
+explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.Arrays;</p>
+<p>import java.util.PriorityQueue;</p>
+<p>public class DijkstraShortestPath {</p>
+<p>    <span id="part0036.xhtml_page_108"></span>public static void
+main(String[] args) {</p>
+<p>        // Representation of the weighted directed graph as an
+adjacency list</p>
+<p>        int numNodes = 6;</p>
+<p>        ArrayList&lt;ArrayList&lt;Node&gt;&gt; graph = new
+ArrayList&lt;&gt;(numNodes);</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            graph.add(new ArrayList&lt;Node&gt;());</p>
+<p>        }</p>
+<p>        // Add graph edges with weights</p>
+<p>        addWeightedEdge(graph, 0, 1, 2);</p>
+<p>        addWeightedEdge(graph, 0, 2, 4);</p>
+<p>        addWeightedEdge(graph, 1, 2, 1);</p>
+<p>        addWeightedEdge(graph, 1, 3, 7);</p>
+<p>        addWeightedEdge(graph, 2, 4, 3);</p>
+<p>        addWeightedEdge(graph, 3, 4, 2);</p>
+<p>        addWeightedEdge(graph, 4, 5, 5);</p>
+<p>        // Start node</p>
+<p>        int startNode = 0;</p>
+<p>        // Perform Dijkstra's algorithm to find the minimum
+distances</p>
+<p>        int[] distances = dijkstra(graph, startNode);</p>
+<p>        <span id="part0036.xhtml_page_109"></span>// Display minimum
+distances</p>
+<p>        System.out.println("Minimum distances from the start node " +
+startNode + " :");</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            System.out.println("Node " + i + " : " +
+distances[i]);</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void
+addWeightedEdge(ArrayList&lt;ArrayList&lt;Node&gt;&gt; graph, int node1,
+int node2, int weight) {</p>
+<p>        graph.get(node1).add(new Node(node2, weight));</p>
+<p>    }</p>
+<p>    public static int[]
+dijkstra(ArrayList&lt;ArrayList&lt;Node&gt;&gt; graph, int startNode)
+{</p>
+<p>        int numNodes = graph.size();</p>
+<p>        int[] distances = new int[numNodes];</p>
+<p>        Arrays.fill(distances, Integer.MAX_VALUE);</p>
+<p>        distances[startNode] = 0;</p>
+<p>        PriorityQueue&lt;Node&gt; priorityQueue = new
+PriorityQueue&lt;&gt;();</p>
+<p>        priorityQueue.add(new Node(startNode, 0));</p>
+<p>        while (!priorityQueue.isEmpty()) {</p>
+<p>            Node currentNode = priorityQueue.poll();</p>
+<p>            <span id="part0036.xhtml_page_110"></span>int node =
+currentNode.node;</p>
+<p>            int distance = currentNode.distance;</p>
+<p>            if (distance &gt; distances[node]) {</p>
+<p>                continues;</p>
+<p>            }</p>
+<p>            for (Node neighbor : graph.get(node)) {</p>
+<p>                int newDistance = distances[node] +
+neighbor.distance;</p>
+<p>                if (newDistance &lt; distances[neighbor.node]) {</p>
+<p>                    distances[neighbor.node] = newDistance;</p>
+<p>                    priorityQueue.add(new Node(neighbor.node,
+newDistance));</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return distances;</p>
+<p>    }</p>
+<p>    static class Node implements Comparable&lt;Node&gt; {</p>
+<p>        int node;</p>
+<p>        int distance;</p>
+<p>        Node(int node, int distance) {</p>
+<p>            this.node = node;</p>
+<p>            <span id="part0036.xhtml_page_111"></span>this.distance =
+distance;</p>
+<p>        }</p>
+<p>        @Override</p>
+<p>        public int compareTo(Node other) {</p>
+<p>            return Integer.compare(this.distance,
+other.distance);</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have represented a weighted directed graph as an
+adjacency list with weights on the edges, then performed Dijkstra's
+algorithm starting from a start node. The program displays the minimum
+distances from the start node to all other nodes. You can customise the
+graph by changing the edges and weights to see how the minimum distances
+are calculated accordingly.</p>
+<p><span id="part0037.xhtml"></span></p>
+<p>Statement: Bellman-Ford shortest path algorithm in Java</p>
+<p>Write a Java program that implements the Bellman-Ford algorithm to
+find the shortest path between a starting node and all other nodes in a
+weighted directed graph, including detection of negative cycles. The
+Bellman-Ford algorithm is used to solve the shortest path problem,
+including graphs with negative weight edges, while detecting negative
+cycles.</p>
+<p>You need to code the logic of the Bellman-Ford algorithm in Java and
+make sure that your program works correctly. You can also add comments
+to explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.Arrays;</p>
+<p>public class BellmanFordShortestPath {</p>
+<p>    <span id="part0037.xhtml_page_113"></span>public static void
+main(String[] args) {</p>
+<p>        // Representation of the weighted directed graph as an
+adjacency list</p>
+<p>        int numNodes = 5;</p>
+<p>        ArrayList&lt;ArrayList&lt;Edge&gt;&gt; graph = new
+ArrayList&lt;&gt;(numNodes);</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            graph.add(new ArrayList&lt;Edge&gt;());</p>
+<p>        }</p>
+<p>        // Add graph edges with weights</p>
+<p>        addWeightedEdge(graph, 0, 1, 6);</p>
+<p>        addWeightedEdge(graph, 0, 2, 7);</p>
+<p>        addWeightedEdge(graph, 1, 3, 5);</p>
+<p>        addWeightedEdge(graph, 2, 1, -2);</p>
+<p>        addWeightedEdge(graph, 2, 4, 2);</p>
+<p>        addWeightedEdge(graph, 3, 4, 7);</p>
+<p>        addWeightedEdge(graph, 4, 3, -3);</p>
+<p>        // Start node</p>
+<p>        int startNode = 0;</p>
+<p>        // Perform the Bellman-Ford algorithm to find the minimum
+distances</p>
+<p>        int[] distances = bellmanFord(graph, startNode);</p>
+<p>        <span id="part0037.xhtml_page_114"></span>// Display minimum
+distances</p>
+<p>        System.out.println("Minimum distances from the start node " +
+startNode + " :");</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            System.out.println("Node " + i + " : " +
+distances[i]);</p>
+<p>        }</p>
+<p>        // Detect negative cycles</p>
+<p>        if (hasNegativeCycle(graph, distances)) {</p>
+<p>            System.out.println("The graph contains a negative
+cycle.");</p>
+<p>        } else {</p>
+<p>            System.out.println("The graph does not contain any
+negative cycles.");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void
+addWeightedEdge(ArrayList&lt;ArrayList&lt;Edge&gt;&gt; graph, int node1,
+int node2, int weight) {</p>
+<p>        graph.get(node1).add(new Edge(node2, weight));</p>
+<p>    }</p>
+<p>    public static int[]
+bellmanFord(ArrayList&lt;ArrayList&lt;Edge&gt;&gt; graph, int startNode)
+{</p>
+<p>        int numNodes = graph.size();</p>
+<p>        <span id="part0037.xhtml_page_115"></span>int[] distances =
+new int[numNodes];</p>
+<p>        Arrays.fill(distances, Integer.MAX_VALUE);</p>
+<p>        distances[startNode] = 0;</p>
+<p>        for (int i = 0; i &lt; numNodes - 1; i++) {</p>
+<p>            for (int node = 0; node &lt; numNodes; node++) {</p>
+<p>                for (Edge edge : graph.get(node)) {</p>
+<p>                    if (distances[node] != Integer.MAX_VALUE
+&amp;&amp; distances[node] + edge.weight &lt; distances[edge.node])
+{</p>
+<p>                        distances[edge.node] = distances[node] +
+edge.weight;</p>
+<p>                    }</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return distances;</p>
+<p>    }</p>
+<p>    public static boolean
+hasNegativeCycle(ArrayList&lt;ArrayList&lt;Edge&gt;&gt; graph, int[]
+distances) {</p>
+<p>        int numNodes = graph.size();</p>
+<p>        for (int node = 0; node &lt; numNodes; node++) {</p>
+<p>            for (Edge edge : graph.get(node)) {</p>
+<p>                <span id="part0037.xhtml_page_116"></span>if
+(distances[node] != Integer.MAX_VALUE &amp;&amp; distances[node] +
+edge.weight &lt; distances[edge.node]) {</p>
+<p>                    return true;</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return false;</p>
+<p>    }</p>
+<p>    static class Edge {</p>
+<p>        int node;</p>
+<p>        int weight;</p>
+<p>        Edge(int node, int weight) {</p>
+<p>            this.node = node;</p>
+<p>            this.weight = weight;</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we have represented a weighted directed graph as an
+adjacency list with weights on the edges, then performed the
+Bellman-Ford algorithm from a starting node. The program displays the
+minimum distances from the start node to all other nodes and detects
+negative cycles if present. You can <span
+id="part0037.xhtml_page_117"></span>customise the graph by changing the
+edges and weights to see how the minimum distances and negative cycle
+detection work accordingly.</p>
+<p><span id="part0038.xhtml"></span></p>
+<p>Statement: Kruskal algorithm for the minimal spanning tree in
+Java</p>
+<p>Write a Java program that implements Kruskal's algorithm to find the
+minimal spanning tree of an undirected weighted graph. The minimal
+spanning tree is a subgraph that is a tree, i.e. it is cycle-free, and
+spans all the nodes of the original graph with minimal total weight.</p>
+<p>You need to code the logic of Kruskal's algorithm in Java and make
+sure that your program works correctly. You can also add comments to
+explain your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.ArrayList;</p>
+<div class="class_sN-1">
+<p>import java.util.Collections;</p>
+</div>
+<p>public class KruskalMinimumSpanningTree {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        // Representation of the undirected weighted graph as a list
+of edges</p>
+<p>        ArrayList&lt;Edge&gt; edges = new ArrayList&lt;&gt;();</p>
+<p>        edges.add(new Edge(0, 1, 2));</p>
+<p>        edges.add(new Edge(0, 2, 3));</p>
+<p>        edges.add(new Edge(1, 2, 1));</p>
+<p>        edges.add(new Edge(1, 3, 7));</p>
+<p>        edges.add(new Edge(2, 3, 5));</p>
+<p>        edges.add(new Edge(2, 4, 2));</p>
+<p>        edges.add(new Edge(3, 4, 7));</p>
+<p>        // Perform the Kruskal algorithm to find the minimal spanning
+tree</p>
+<p>        ArrayList&lt;Edge&gt; minimumSpanningTree =
+kruskal(edges);</p>
+<p>        // Display the edges of the minimal spanning tree and their
+total weight</p>
+<p>        int totalWeight = 0;</p>
+<p>        System.out.println("Edges of the minimal spanning
+tree:");</p>
+<p>        for (Edge edge : minimumSpanningTree) {</p>
+<p>            <span
+id="part0038.xhtml_page_120"></span>System.out.println("Node " +
+edge.node1 + " - Node " + edge.node2 + " : Weight " + edge.weight);</p>
+<p>            totalWeight += edge.weight;</p>
+<p>        }</p>
+<p>        System.out.println("Total weight of the minimal spanning
+tree: " + totalWeight);</p>
+<p>    }</p>
+<p>    public static ArrayList&lt;Edge&gt; kruskal(ArrayList&lt;Edge&gt;
+edges) {</p>
+<p>        // Sort edges by increasing weight</p>
+<p>        Collections.sort(edges);</p>
+<p>        int numNodes = 5; // The total number of nodes in the
+graph</p>
+<p>        ArrayList&lt;Edge&gt; minimumSpanningTree = new
+ArrayList&lt;&gt;();</p>
+<p>        DisjointSet disjointSet = new DisjointSet(numNodes);</p>
+<p>        for (Edge edge : edges) {</p>
+<p>            int root1 = disjointSet.find(edge.node1);</p>
+<p>            int root2 = disjointSet.find(edge.node2);</p>
+<p>            if (root1 != root2) {</p>
+<p>                minimumSpanningTree.add(edge);</p>
+<p>                disjointSet.union(root1, root2);</p>
+<p>            }</p>
+<p>        <span id="part0038.xhtml_page_121"></span>}</p>
+<p>        return minimumSpanningTree;</p>
+<p>    }</p>
+<p>    static class Edge implements Comparable&lt;Edge&gt; {</p>
+<p>        int node1;</p>
+<p>        int node2;</p>
+<p>        int weight;</p>
+<p>        Edge(int node1, int node2, int weight) {</p>
+<p>            this.node1 = node1;</p>
+<p>            this.node2 = node2;</p>
+<p>            this.weight = weight;</p>
+<p>        }</p>
+<p>        @Override</p>
+<p>        public int compareTo(Edge other) {</p>
+<p>            return Integer.compare(this.weight, other.weight);</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we represented an undirected weighted graph as a
+list of edges with weights. We then run Kruskal's algorithm to find the
+minimal spanning tree. The program displays the <span
+id="part0038.xhtml_page_122"></span>edges of the minimal spanning tree
+and their total weights. You can customise the edges of the graph to see
+how Kruskal's algorithm finds the minimal spanning tree in different
+graphs.</p>
+<p><span id="part0039.xhtml"></span></p>
+<p>Statement: Prim's algorithm for the minimal spanning tree in Java</p>
+<p>Write a Java program that implements Prim's algorithm for finding the
+minimal spanning tree of an undirected weighted graph. The minimal
+spanning tree is a subgraph that is a tree, i.e. it is cycle-free, and
+spans all the nodes of the original graph with minimal total weight.</p>
+<p>You need to code the logic of Prim's algorithm in Java and make sure
+that your program works correctly. You can also add comments to explain
+your code.</p>
+<p>Example of a solution in Java :</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.PriorityQueue;</p>
+<div class="class_sN-1">
+<p>public class PrimMinimumSpanningTree {</p>
+</div>
+<p>    public static void main(String[] args) {</p>
+<p>        // Representation of the undirected weighted graph as an
+adjacency list</p>
+<p>        int numNodes = 5;</p>
+<p>        ArrayList&lt;ArrayList&lt;Node&gt;&gt; graph = new
+ArrayList&lt;&gt;(numNodes);</p>
+<p>        for (int i = 0; i &lt; numNodes; i++) {</p>
+<p>            graph.add(new ArrayList&lt;Node&gt;());</p>
+<p>        }</p>
+<p>        // Add graph edges with weights</p>
+<p>        addWeightedEdge(graph, 0, 1, 2);</p>
+<p>        addWeightedEdge(graph, 0, 2, 3);</p>
+<p>        addWeightedEdge(graph, 1, 2, 1);</p>
+<p>        addWeightedEdge(graph, 1, 3, 7);</p>
+<p>        addWeightedEdge(graph, 2, 3, 5);</p>
+<p>        addWeightedEdge(graph, 2, 4, 2);</p>
+<p>        addWeightedEdge(graph, 3, 4, 7);</p>
+<p>        // Perform Prim's algorithm to find the minimal spanning
+tree</p>
+<p>        ArrayList&lt;Edge&gt; minimumSpanningTree = prim(graph);</p>
+<p>        <span id="part0039.xhtml_page_125"></span>// Display the
+edges of the minimal spanning tree and their total weight</p>
+<p>        int totalWeight = 0;</p>
+<p>        System.out.println("Edges of the minimal spanning
+tree:");</p>
+<p>        for (Edge edge : minimumSpanningTree) {</p>
+<p>            System.out.println("Node " + edge.node1 + " - Node " +
+edge.node2 + " : Weight " + edge.weight);</p>
+<p>            totalWeight += edge.weight;</p>
+<p>        }</p>
+<p>        System.out.println("Total weight of the minimal spanning
+tree: " + totalWeight);</p>
+<p>    }</p>
+<p>    public static void
+addWeightedEdge(ArrayList&lt;ArrayList&lt;Node&gt;&gt; graph, int node1,
+int node2, int weight) {</p>
+<p>        graph.get(node1).add(new Node(node2, weight));</p>
+<p>        graph.get(node2).add(new Node(node1, weight));</p>
+<p>    }</p>
+<p>    public static ArrayList&lt;Edge&gt;
+prim(ArrayList&lt;ArrayList&lt;Node&gt;&gt; graph) {</p>
+<p>        int numNodes = graph.size();</p>
+<p>        ArrayList&lt;Edge&gt; minimumSpanningTree = new
+ArrayList&lt;&gt;();</p>
+<p>        <span
+id="part0039.xhtml_page_126"></span>PriorityQueue&lt;Edge&gt;
+priorityQueue = new PriorityQueue&lt;&gt;();</p>
+<p>        boolean[] visited = new boolean[numNodes];</p>
+<p>        // Start with any node</p>
+<p>        int startNode = 0;</p>
+<p>        visited[startNode] = true;</p>
+<p>        for (Node neighbor : graph.get(startNode)) {</p>
+<p>            priorityQueue.add(new Edge(startNode, neighbor.node,
+neighbor.weight));</p>
+<p>        }</p>
+<p>        while (minimumSpanningTree.size() &lt; numNodes - 1) {</p>
+<p>            Edge edge = priorityQueue.poll();</p>
+<p>            int node1 = edge.node1;</p>
+<p>            int node2 = edge.node2;</p>
+<p>            if (visited[node1] &amp;&amp; visited[node2]) {</p>
+<p>                continues;</p>
+<p>            }</p>
+<p>            visited[node1] = true;</p>
+<p>            visited[node2] = true;</p>
+<p>            minimumSpanningTree.add(edge);</p>
+<p>            for (Node neighbor : graph.get(node2)) {</p>
+<p>                if (!visited[neighbor.node]) {</p>
+<p>                    <span
+id="part0039.xhtml_page_127"></span>priorityQueue.add(new Edge(node2,
+neighbor.node, neighbor.weight));</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return minimumSpanningTree;</p>
+<p>    }</p>
+<p>    static class Node {</p>
+<p>        int node;</p>
+<p>        int weight;</p>
+<p>        Node(int node, int weight) {</p>
+<p>            this.node = node;</p>
+<p>            this.weight = weight;</p>
+<p>        }</p>
+<p>    }</p>
+<p>    static class Edge implements Comparable&lt;Edge&gt; {</p>
+<p>        int node1;</p>
+<p>        int node2;</p>
+<p>        int weight;</p>
+<p>        Edge(int node1, int node2, int weight) {</p>
+<p>            this.node1 = node1;</p>
+<p>            <span id="part0039.xhtml_page_128"></span>this.node2 =
+node2;</p>
+<p>            this.weight = weight;</p>
+<p>        }</p>
+<p>        @Override</p>
+<p>        public int compareTo(Edge other) {</p>
+<p>            return Integer.compare(this.weight, other.weight);</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>In this example, we represented an undirected weighted graph as an
+adjacency list with weights on the edges. We then ran Prim's algorithm
+to find the minimal spanning tree. The program displays the edges of the
+minimal spanning tree and their total weights. You can customise the
+graph edges to see how Prim's algorithm finds the minimal spanning tree
+in different graphs.</p>
+<p><span id="part0040.xhtml"></span></p>
+<p>Statement: Travelling Salesman Algorithm (TSP) in Java</p>
+<p>The Travelling Salesman Algorithm (TSP) is a combinatorial
+optimisation problem that involves finding the shortest route through a
+set of cities and back to the starting city. In this exercise, you will
+implement a solution to solve the TSP using the brute force search
+algorithm.</p>
+<p><span id="part0041.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to solve the TSP problem using the exhaustive
+search method. You will need to find the optimal permutation of cities
+(the order in which the traveller visits them) that minimises the total
+distance travelled. You can represent the distances between cities in
+the form of a matrix or an adjacency list.</p>
+<p><span id="part0042.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the exhaustive
+search method to solve the TSP with a matrix of distances between
+cities:</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.List;</p>
+<p>public class TSPBruteForce {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[][] distances = {</p>
+<p>            {0, 29, 20, 21},</p>
+<p>            {29, 0, 15, 17},</p>
+<p>            {20, 15, 0, 28},</p>
+<p>            {21, 17, 28, 0}</p>
+<p>        };</p>
+<p>        List&lt;Integer&gt; tour = new ArrayList&lt;&gt;();</p>
+<p>        <span id="part0042.xhtml_page_132"></span>for (int i = 0; i
+&lt; distances.length; i++) {</p>
+<p>            tour.add(i);</p>
+<p>        }</p>
+<p>        List&lt;Integer&gt; optimalTour = null;</p>
+<p>        int minDistance = Integer.MAX_VALUE;</p>
+<p>        do {</p>
+<p>            int tourDistance = calculateTourDistance(tour,
+distances);</p>
+<p>            if (tourDistance &lt; minDistance) {</p>
+<p>                minDistance = tourDistance;</p>
+<p>                optimalTour = new ArrayList&lt;&gt;(tour);</p>
+<p>            }</p>
+<p>        } while (nextPermutation(tour));</p>
+<p>        System.out.println("Optimal tour: " + optimalTour);</p>
+<p>        System.out.println("Minimum total distance: " +
+minDistance);</p>
+<p>    }</p>
+<p>    public static int calculateTourDistance(List&lt;Integer&gt; tour,
+int[][] distances) {</p>
+<p>        int distance = 0;</p>
+<p>        for (int i = 0; i &lt; tour.size() - 1; i++) {</p>
+<p>            distance += distances[tour.get(i)][tour.get(i + 1)];</p>
+<p>        }</p>
+<p>        <span id="part0042.xhtml_page_133"></span>distance +=
+distances[tour.get(tour.size() - 1)][tour.get(0)]; // Return to the
+starting city</p>
+<p>        return distance;</p>
+<p>    }</p>
+<p>    public static boolean nextPermutation(List&lt;Integer&gt; tour)
+{</p>
+<p>        int n = tour.size();</p>
+<p>        int i = n - 2;</p>
+<p>        while (i &gt;= 0 &amp;&amp; tour.get(i) &gt;= tour.get(i +
+1)) {</p>
+<p>            i--;</p>
+<p>        }</p>
+<p>        if (i &lt; 0) {</p>
+<p>            return false;</p>
+<p>        }</p>
+<p>        int j = n - 1;</p>
+<p>        while (tour.get(j) &lt;= tour.get(i)) {</p>
+<p>            j--;</p>
+<p>        }</p>
+<p>        swap(tour, i, j);</p>
+<p>        reverse(tour, i + 1, n - 1);</p>
+<p>        return true;</p>
+<p>    }</p>
+<p>    <span id="part0042.xhtml_page_134"></span>public static void
+swap(List&lt;Integer&gt; tour, int i, int j) {</p>
+<p>        int temp = tour.get(i);</p>
+<p>        tour.set(i, tour.get(j));</p>
+<p>        tour.set(j, temp);</p>
+<p>    }</p>
+<p>    public static void reverse(List&lt;Integer&gt; tour, int start,
+int end) {</p>
+<p>        while (start &lt; end) {</p>
+<p>            swap(tour, start, end);</p>
+<p>            start++;</p>
+<p>            end--;</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This solution uses the exhaustive search method to find the optimal
+tour for the travelling salesman. It generates all possible permutations
+of cities, calculates the total distance for each permutation and
+identifies the permutation with the minimum distance. You can customise
+the distance matrix to solve other instances of the TSP problem.</p>
+<p><span id="part0043.xhtml"></span></p>
+<p>Statement : Finding cycles in a graph in Java</p>
+<p>The aim of this exercise is to write a Java program to detect the
+presence of cycles in a directed or undirected graph. You can choose to
+work with one of the graph types.</p>
+<p><span id="part0044.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program that allows a user to enter or represent a graph
+with its vertices and edges, and then detects whether it contains
+cycles.</p>
+<p><span id="part0045.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java for detecting cycles in an
+undirected graph using depth-first search (DFS):</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.HashSet;</p>
+<p>import java.util.List;</p>
+<p>import java.util.Set;</p>
+<p>public class GraphCycleDetection {</p>
+<p>    private int V; // Number of vertices</p>
+<p>    private List&lt;List&lt;Integer&gt;&gt; adj; // Adjacency
+list</p>
+<p>    public GraphCycleDetection(int vertices) {</p>
+<p>        V = vertices;</p>
+<p>        adj = new ArrayList&lt;&gt;(vertices);</p>
+<p>        for (int i = 0; i &lt; vertices; i++) {</p>
+<p>            <span id="part0045.xhtml_page_138"></span>adj.add(new
+ArrayList&lt;&gt;());</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public void addEdge(int u, int v) {</p>
+<p>        adj.get(u).add(v);</p>
+<p>        adj.get(v).add(u);</p>
+<p>    }</p>
+<p>    public boolean hasCycle() {</p>
+<p>        Set&lt;Integer&gt; visited = new HashSet&lt;&gt;();</p>
+<p>        for (int v = 0; v &lt; V; v++) {</p>
+<p>            if (!visited.contains(v)) {</p>
+<p>                if (hasCycleUtil(v, -1, visited)) {</p>
+<p>                    return true;</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return false;</p>
+<p>    }</p>
+<p>    private boolean hasCycleUtil(int v, int parent,
+Set&lt;Integer&gt; visited) {</p>
+<p>        visited.add(v);</p>
+<p>        <span id="part0045.xhtml_page_139"></span>for (int neighbor :
+adj.get(v)) {</p>
+<p>            if (!visited.contains(neighbor)) {</p>
+<p>                if (hasCycleUtil(neighbor, v, visited)) {</p>
+<p>                    return true;</p>
+<p>                }</p>
+<p>            } else if (neighbor != parent) {</p>
+<p>                return true;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return false;</p>
+<p>    }</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int V = 4;</p>
+<p>        GraphCycleDetection graph = new GraphCycleDetection(V);</p>
+<p>        graph.addEdge(0, 1);</p>
+<p>        graph.addEdge(0, 2);</p>
+<p>        graph.addEdge(1, 2);</p>
+<p>        graph.addEdge(2, 0);</p>
+<p>        graph.addEdge(2, 3);</p>
+<p>        graph.addEdge(3, 3);</p>
+<p>        if (graph.hasCycle()) {</p>
+<p>            <span
+id="part0045.xhtml_page_140"></span>System.out.println("The graph
+contains a cycle.");</p>
+<p>        } else {</p>
+<p>            System.out.println("The graph contains no cycles.");</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This example shows how to detect cycles in an undirected graph using
+depth-first search (DFS). The program lets you create a graph, add edges
+and then check it for cycles. You can customise the graph by adding or
+modifying edges to test different scenarios.</p>
+<p><span id="part0046.xhtml"></span></p>
+<p>Statement: Bubble sorting optimised in Java</p>
+<p>The exercise involves writing a Java program that implements the
+optimised bubble sort algorithm to sort an array of integers in
+ascending order. Bubble Sort is a simple algorithm that traverses the
+array, comparing neighbouring elements and swapping them if necessary to
+order them correctly. The algorithm continues to traverse the array
+until no swaps are made on a complete pass, indicating that the array is
+sorted.</p>
+<p><span id="part0047.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to sort an array of integers using the optimised
+bubble sort algorithm. Optimised bubble sorting is an improvement on
+classic bubble sorting that stops the sorting process as soon as it
+detects that no exchange is necessary during a complete pass.</p>
+<p><span id="part0048.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the optimised
+bubble sort algorithm to sort an array of integers:</p>
+<p>public class BubbleSortOptimized {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] arr = {64, 34, 25, 12, 22, 11, 90};</p>
+<p>        bubbleSort(arr);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int num : arr) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void bubbleSort(int[] arr) {</p>
+<p>        int n = arr.length;</p>
+<p>        <span id="part0048.xhtml_page_144"></span>boolean
+swapped;</p>
+<p>        for (int i = 0; i &lt; n - 1; i++) {</p>
+<p>            swapped = false;</p>
+<p>            for (int j = 0; j &lt; n - i - 1; j++) {</p>
+<p>                if (arr[j] &gt; arr[j + 1]) {</p>
+<p>                    int temp = arr[j];</p>
+<p>                    arr[j] = arr[j + 1];</p>
+<p>                    arr[j + 1] = temp;</p>
+<p>                    swapped = true;</p>
+<p>                }</p>
+<p>            }</p>
+<p>            if (!swapped) {</p>
+<p>                // If no inversion has been performed, the table is
+already sorted.</p>
+<p>                break;</p>
+<p>            }</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java implements the optimised bubble sort
+algorithm to sort an array of integers. The program takes <span
+id="part0048.xhtml_page_145"></span>an array as input, performs the
+optimised bubble sort and then displays the sorted array. You can
+customise the input array to test the optimised bubble sort with
+different data sets.</p>
+<p><span id="part0049.xhtml"></span></p>
+<p>Statement: Bucket Sort in Java</p>
+<p>The exercise involves writing a Java program that implements the
+Bucket Sort algorithm to sort an array of integers in ascending order.
+Bucket Sort is a non-comparative sorting algorithm that divides the
+elements of the array into 'drawers' or 'buckets' according to their
+value, then sorts these drawers individually. It then combines the
+sorted drawers to obtain the final sorted array.</p>
+<p><span id="part0050.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to sort an array of integers using the
+pigeonhole sorting algorithm. The program must take into account the
+range of possible values of the integers in the array in order to
+distribute the elements into the drawers.</p>
+<p><span id="part0051.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the pigeonhole
+sorting algorithm to sort an array of integers:</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.Collections;</p>
+<p>import java.util.List;</p>
+<p>public class BucketSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] arr = {64, 34, 25, 12, 22, 11, 90, 80, 5};</p>
+<p>        bucketSort(arr);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int num : arr) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        <span id="part0051.xhtml_page_149"></span>}</p>
+<p>    }</p>
+<p>    public static void bucketSort(int[] arr) {</p>
+<p>        int min = arr[0];</p>
+<p>        int max = arr[0];</p>
+<p>        int n = arr.length;</p>
+<p>        // Find the minimum and maximum values in the table</p>
+<p>        for (int i = 1; i &lt; n; i++) {</p>
+<p>            if (arr[i] &lt; min) {</p>
+<p>                min = arr[i];</p>
+<p>            } else if (arr[i] &gt; max) {</p>
+<p>                max = arr[i];</p>
+<p>            }</p>
+<p>        }</p>
+<p>        int range = max - min + 1;</p>
+<p>        // Create buckets</p>
+<p>        List&lt;List&lt;Integer&gt;&gt; buckets = new
+ArrayList&lt;&gt;(range);</p>
+<p>        for (int i = 0; i &lt; range; i++) {</p>
+<p>            buckets.add(new ArrayList&lt;&gt;());</p>
+<p>        }</p>
+<p>        // Place items in drawers</p>
+<p>        <span id="part0051.xhtml_page_150"></span>for (int i = 0; i
+&lt; n; i++) {</p>
+<p>            buckets.get(arr[i] - min).add(arr[i]);</p>
+<p>        }</p>
+<p>        // Sort the items in each drawer</p>
+<p>        for (int i = 0; i &lt; range; i++) {</p>
+<p>            Collections.sort(buckets.get(i));</p>
+<p>        }</p>
+<p>        // Combine the sorted elements of the drawers to obtain the
+sorted array</p>
+<p>        int index = 0;</p>
+<p>        for (int i = 0; i &lt; range; i++) {</p>
+<p>            for (int num : buckets.get(i)) {</p>
+<p>                arr[index++] = num;</p>
+<p>            }</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java uses the pigeonhole sorting algorithm
+to sort an array of integers. The program first determines the range of
+possible values, creates drawers for each possible value, places the
+elements in the drawers, sorts the elements in each drawer and then
+combines the sorted elements <span
+id="part0051.xhtml_page_151"></span>to obtain the final sorted array.
+You can customise the input array to test pigeonhole sorting with
+different data sets.</p>
+<p><span id="part0052.xhtml"></span></p>
+<p>Statement: Sorting by counting in Java</p>
+<p>The exercise involves writing a Java program that implements the
+Counting Sort algorithm to sort an array of integers in ascending order.
+Counting Sort is a non-comparative sorting algorithm that counts the
+number of occurrences of each element in the array, then constructs a
+new sorted array based on these counts.</p>
+<p><span id="part0053.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to sort an array of integers using the count
+sort algorithm. The program needs to determine the range of possible
+values in the array to determine the number of "counters" required.</p>
+<p><span id="part0054.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the counting sort
+algorithm to sort an array of integers:</p>
+<p>public class CountingSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] arr = {4, 2, 2, 8, 3, 3, 1};</p>
+<p>        countingSort(arr);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int num : arr) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void countingSort(int[] arr) {</p>
+<p>        int n = arr.length;</p>
+<p>        <span id="part0054.xhtml_page_155"></span>int max =
+arr[0];</p>
+<p>        int min = arr[0];</p>
+<p>        // Find the maximum and minimum values in the table</p>
+<p>        for (int i = 1; i &lt; n; i++) {</p>
+<p>            if (arr[i] &gt; max) {</p>
+<p>                max = arr[i];</p>
+<p>            } else if (arr[i] &lt; min) {</p>
+<p>                min = arr[i];</p>
+<p>            }</p>
+<p>        }</p>
+<p>        int range = max - min + 1;</p>
+<p>        int[] count = new int[range];</p>
+<p>        int[] output = new int[n];</p>
+<p>        // Count the occurrences of each value</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            count[arr[i] - min]++;</p>
+<p>        }</p>
+<p>        // Update counters to indicate the last position of each
+value</p>
+<p>        for (int i = 1; i &lt; range; i++) {</p>
+<p>            count[i] += count[i - 1];</p>
+<p>        }</p>
+<p>        <span id="part0054.xhtml_page_156"></span>// Build the sorted
+table using counters</p>
+<p>        for (int i = n - 1; i &gt;= 0; i--) {</p>
+<p>            output[count[arr[i] - min] - 1] = arr[i];</p>
+<p>            count[arr[i] - min]--;</p>
+<p>        }</p>
+<p>        // Copy the sorted table to the original table</p>
+<p>        System.arraycopy(output, 0, arr, 0, n);</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java uses the count sort algorithm to sort
+an array of integers. The program first determines the range of possible
+values, counts the occurrences of each value and then constructs a
+sorted array using the counters. You can customise the input array to
+test count sorting with different data sets.</p>
+<p><span id="part0055.xhtml"></span></p>
+<p>Statement: Comb Sort in Java</p>
+<p>The exercise involves writing a Java program that implements the Comb
+Sort algorithm to sort an array of integers in ascending order. Comb
+Sort is a variation of Bubble Sort that swaps elements at a fixed
+distance instead of swapping adjacent elements, making it more
+efficient.</p>
+<p><span id="part0056.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to sort an array of integers using the comb sort
+algorithm. Comb sorting starts with a large gap between the elements to
+be compared, then progressively reduces this gap until it reaches zero,
+thus carrying out comparisons and exchanges efficiently.</p>
+<p><span id="part0057.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the comb sort
+algorithm to sort an array of integers:</p>
+<p>public class CombSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] arr = {8, 4, 1, 56, 3, -44, 23, -6, 28, 0};</p>
+<p>        combSort(arr);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int num : arr) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void combSort(int[] arr) {</p>
+<p>        int n = arr.length;</p>
+<p>        <span id="part0057.xhtml_page_160"></span>int gap = n;</p>
+<p>        double shrink = 1.3; // shrink factor</p>
+<p>        boolean swapped = true;</p>
+<p>        while (gap &gt; 1 || swapped) {</p>
+<p>            // Apply the reduction factor to the gap</p>
+<p>            gap = (int) (gap / shrink);</p>
+<p>            if (gap &lt; 1) {</p>
+<p>                gap = 1;</p>
+<p>            }</p>
+<p>            swapped = false;</p>
+<p>            for (int i = 0; i + gap &lt; n; i++) {</p>
+<p>                if (arr[i] &gt; arr[i + gap]) {</p>
+<p>                    int temp = arr[i];</p>
+<p>                    arr[i] = arr[i + gap];</p>
+<p>                    arr[i + gap] = temp;</p>
+<p>                    swapped = true;</p>
+<p>                }</p>
+<p>            }</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java implements the comb sort algorithm to
+sort an array of integers. The program starts with a large gap between
+the elements to be compared, then progressively reduces this gap using a
+reduction factor. You can customise the input array to test comb sorting
+with different data sets.</p>
+<p><span id="part0058.xhtml"></span></p>
+<p>Statement: Sorting by heap (Heapsort) in Java</p>
+<p>The exercise involves writing a Java program that implements the
+heapsort algorithm to sort an array of integers in ascending order.
+Heapsort is a sorting algorithm based on the heap data structure, which
+allows the array to be sorted efficiently.</p>
+<p><span id="part0059.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to sort an array of integers using the heap sort
+algorithm. The algorithm starts by creating a heap from the array, then
+extracts the elements from the heap one by one and places them in the
+sorted array.</p>
+<p><span id="part0060.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the heap sort
+algorithm to sort an array of integers:</p>
+<p>public class HeapSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] arr = {8, 4, 1, 56, 3, 44, 23, 6, 28, 0};</p>
+<p>        heapSort(arr);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int num : arr) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void heapSort(int[] arr) {</p>
+<p>        int n = arr.length;</p>
+<p>        <span id="part0060.xhtml_page_165"></span>// Create a max
+heap from the table</p>
+<p>        for (int i = n / 2 - 1; i &gt;= 0; i--) {</p>
+<p>            heapify(arr, n, i);</p>
+<p>        }</p>
+<p>        // Extract elements from the heap one by one</p>
+<p>        for (int i = n - 1; i &gt; 0; i--) {</p>
+<p>            // Exchange the root (maximum element) with the current
+element</p>
+<p>            int temp = arr[0];</p>
+<p>            arr[0] = arr[i];</p>
+<p>            arr[i] = temp;</p>
+<p>            // Call heapify to reduce the size of the unsorted
+heap</p>
+<p>            heapify(arr, i, 0);</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void heapify(int[] arr, int n, int i) {</p>
+<p>        int largest = i;</p>
+<p>        int left = 2 * i + 1;</p>
+<p>        int right = 2 * i + 2;</p>
+<p>        if (left &lt; n &amp;&amp; arr[left] &gt; arr[largest]) {</p>
+<p>            largest = left;</p>
+<p>        <span id="part0060.xhtml_page_166"></span>}</p>
+<p>        if (right &lt; n &amp;&amp; arr[right] &gt; arr[largest])
+{</p>
+<p>            largest = right;</p>
+<p>        }</p>
+<p>        if (largest != i) {</p>
+<p>            int swap = arr[i];</p>
+<p>            arr[i] = arr[largest];</p>
+<p>            arr[largest] = swap;</p>
+<p>            heapify(arr, n, largest);</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java implements the heap sort algorithm to
+sort an array of integers. The program first creates a max heap from the
+array, then extracts the elements from the heap one by one and places
+them in the sorted array. You can customise the input array to test heap
+sorting with different data sets.</p>
+<p><span id="part0061.xhtml"></span></p>
+<p>Statement : Ternary search in a sorted array in Java</p>
+<p>The exercise involves writing a Java program to implement the ternary
+search algorithm in a sorted array. The ternary search is a variant of
+the binary search which divides the array into three equal parts and
+compares the element being searched with the elements in the middle two
+thirds.</p>
+<p><span id="part0062.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to perform a ternary search in a sorted array of
+integers. The ternary search algorithm divides the array into three
+equal parts and compares the element searched for with the elements in
+the middle two thirds. If the element is found, return its index.
+Otherwise, indicate that the element is not present in the array.</p>
+<p><span id="part0063.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java for a ternary search in a
+sorted array:</p>
+<p>public class TernarySearch {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] sortedArray = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};</p>
+<p>        int target = 13;</p>
+<p>        int result = ternarySearch(sortedArray, target);</p>
+<p>        if (result == -1) {</p>
+<p>            System.out.println("Element not found in array.");</p>
+<p>        } else {</p>
+<p>            System.out.println("Element found at index: " +
+result);</p>
+<p>        }</p>
+<p>    }</p>
+<p>    <span id="part0063.xhtml_page_170"></span>public static int
+ternarySearch(int[] arr, int target) {</p>
+<p>        int left = 0;</p>
+<p>        int right = arr.length - 1;</p>
+<p>        while (left &lt;= right) {</p>
+<p>            int partitionSize = (right - left) / 3;</p>
+<p>            int mid1 = left + partitionSize;</p>
+<p>            int mid2 = right - partitionSize;</p>
+<p>            if (arr[mid1] == target) {</p>
+<p>                return mid1;</p>
+<p>            } else if (arr[mid2] == target) {</p>
+<p>                return mid2;</p>
+<p>            } else if (target &lt; arr[mid1]) {</p>
+<p>                right = mid1 - 1;</p>
+<p>            } else if (target &gt; arr[mid2]) {</p>
+<p>                left = mid2 + 1;</p>
+<p>            } else {</p>
+<p>                left = mid1 + 1;</p>
+<p>                right = mid2 - 1;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return -1; // Element not found</p>
+<p>    <span id="part0063.xhtml_page_171"></span>}</p>
+<p>}</p>
+<p>This example solution in Java implements a ternary search in a sorted
+array. The program takes a sorted array and a target element as input,
+then performs the ternary search to find the element. If the element is
+found, its index is returned. Otherwise, a message indicating that the
+element was not found is displayed. You can customise the sorted array
+and target value to perform ternary searches with different data
+sets.</p>
+<p><span id="part0064.xhtml"></span></p>
+<p>Statement: Exponential search algorithm in Java</p>
+<p>The exercise involves writing a Java program to implement the
+exponential search algorithm. The exponential search algorithm is used
+to search for an element in a sorted array by recursively dividing the
+array into sub-arrays of exponential size.</p>
+<p><span id="part0065.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to perform an exponential search in a sorted
+array of integers. The exponential search algorithm recursively divides
+the array into sub-arrays of exponential size and compares the element
+searched for with the element in the middle of each sub-array. If the
+element is found, return its index. Otherwise, indicate that the element
+is not present in the array.</p>
+<p><span id="part0066.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java for the exponential search
+algorithm:</p>
+<p>public class ExponentialSearch {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] sortedArray = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};</p>
+<p>        int target = 13;</p>
+<p>        int result = exponentialSearch(sortedArray, target);</p>
+<p>        if (result == -1) {</p>
+<p>            System.out.println("Element not found in the
+array.");</p>
+<p>        } else {</p>
+<p>            System.out.println("Element found at index: " +
+result);</p>
+<p>        }</p>
+<p>    }</p>
+<p>    <span id="part0066.xhtml_page_175"></span>public static int
+exponentialSearch(int[] arr, int target) {</p>
+<p>        int n = arr.length;</p>
+<p>        // If the element is present in the first position</p>
+<p>        if (arr[0] == target) {</p>
+<p>            return 0;</p>
+<p>        }</p>
+<p>        // Find the range for the exponential search</p>
+<p>        int i = 1;</p>
+<p>        while (i &lt; n &amp;&amp; arr[i] &lt;= target) {</p>
+<p>            i *= 2;</p>
+<p>        }</p>
+<p>        // Apply the binary search to the range found</p>
+<p>        return binarySearch(arr, target, i / 2, Math.min(i, n -
+1));</p>
+<p>    }</p>
+<p>    public static int binarySearch(int[] arr, int target, int left,
+int right) {</p>
+<p>        while (left &lt;= right) {</p>
+<p>            int mid = left + (right - left) / 2;</p>
+<p>            if (arr[mid] == target) {</p>
+<p>                return mid;</p>
+<p>            }</p>
+<p>            <span id="part0066.xhtml_page_176"></span>if (arr[mid]
+&lt; target) {</p>
+<p>                left = mid + 1;</p>
+<p>            } else {</p>
+<p>                right = mid - 1;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return -1; // Element not found</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java implements the exponential search
+algorithm. The program takes a sorted array and a target element as
+input, then performs the exponential search to find the element. If the
+element is found, its index is returned. Otherwise, a message indicating
+that the element was not found is displayed. You can customise the
+sorted array and target value to perform exponential searches with
+different data sets.</p>
+<p><span id="part0067.xhtml"></span></p>
+<p>Statement: Gnome Sort in Java</p>
+<p>The exercise involves writing a Java program that implements the
+gnome sort algorithm (Gnome Sort) to sort an array of integers in
+ascending order. Gnome Sort is a simple sort-in-place algorithm that
+moves the elements of the array from left to right until the array is
+sorted.</p>
+<p><span id="part0068.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to sort an array of integers using the gnome
+sort algorithm. The gnome sort algorithm starts at the first position in
+the array, then moves the elements to the right until they are correctly
+sorted.</p>
+<p><span id="part0069.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the gnome sorting
+algorithm to sort an array of integers:</p>
+<p>public class GnomeSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] arr = {8, 4, 1, 56, 3, 44, 23, 6, 28, 0};</p>
+<p>        gnomeSort(arr);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int num : arr) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void gnomeSort(int[] arr) {</p>
+<p>        int n = arr.length;</p>
+<p>        <span id="part0069.xhtml_page_180"></span>int index = 0;</p>
+<p>        while (index &lt; n) {</p>
+<p>            if (index == 0) {</p>
+<p>                index++;</p>
+<p>            }</p>
+<p>            if (arr[index] &gt;= arr[index - 1]) {</p>
+<p>                index++;</p>
+<p>            } else {</p>
+<p>                // Exchange items to sort them</p>
+<p>                int temp = arr[index];</p>
+<p>                arr[index] = arr[index - 1];</p>
+<p>                arr[index - 1] = temp;</p>
+<p>                index--;</p>
+<p>            }</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java implements the gnome sort algorithm to
+sort an array of integers. The program starts at the first position in
+the array, then moves the elements to the right until they are correctly
+sorted. You can customise the input array to test gnome sorting with
+different data sets.</p>
+<p><span id="part0070.xhtml"></span></p>
+<p>Statement: Pancake Sort in Java</p>
+<p>The exercise involves writing a Java program that implements the
+pancake sort algorithm (Pancake Sort) to sort an array of integers in
+ascending order. Pancake Sort is a sorting algorithm that returns the
+elements of the array in order to sort them.</p>
+<p><span id="part0071.xhtml"></span></p>
+<p>Part 1 - Statement :</p>
+<p>Write a Java program to sort an array of integers using the pancake
+sort algorithm. The pancake sort algorithm returns the elements of the
+array to sort them progressively. You can only return elements from the
+first position in the array.</p>
+<p><span id="part0072.xhtml"></span></p>
+<p>Part 2 - Example of a solution in Java :</p>
+<p>Here is an example of a solution in Java that uses the pancake sort
+algorithm to sort an array of integers:</p>
+<p>public class PancakeSort {</p>
+<p>    public static void main(String[] args) {</p>
+<p>        int[] arr = {8, 4, 1, 56, 3, 44, 23, 6, 28, 0};</p>
+<p>        pancakeSort(arr);</p>
+<p>        System.out.println("Table sorted:");</p>
+<p>        for (int num : arr) {</p>
+<p>            System.out.print(num + " ");</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static void pancakeSort(int[] arr) {</p>
+<p>        <span id="part0072.xhtml_page_184"></span>int n =
+arr.length;</p>
+<p>        for (int currentSize = n; currentSize &gt; 1; currentSize--)
+{</p>
+<p>            int maxIndex = findMaxIndex(arr, currentSize);</p>
+<p>            if (maxIndex != currentSize - 1) {</p>
+<p>                // Invert elements from the beginning to the maximum
+element</p>
+<p>                flip(arr, maxIndex);</p>
+<p>                // Invert all elements of the current array</p>
+<p>                flip(arr, currentSize - 1);</p>
+<p>            }</p>
+<p>        }</p>
+<p>    }</p>
+<p>    public static int findMaxIndex(int[] arr, int n) {</p>
+<p>        int maxIndex = 0;</p>
+<p>        for (int i = 0; i &lt; n; i++) {</p>
+<p>            if (arr[i] &gt; arr[maxIndex]) {</p>
+<p>                maxIndex = i;</p>
+<p>            }</p>
+<p>        }</p>
+<p>        return maxIndex;</p>
+<p>    }</p>
+<p>    <span id="part0072.xhtml_page_185"></span>public static void
+flip(int[] arr, int end) {</p>
+<p>        int start = 0;</p>
+<p>        while (start &lt; end) {</p>
+<p>            int temp = arr[start];</p>
+<p>            arr[start] = arr[end];</p>
+<p>            arr[end] = temp;</p>
+<p>            start++;</p>
+<p>            end--;</p>
+<p>        }</p>
+<p>    }</p>
+<p>}</p>
+<p>This example solution in Java implements the pancake sort algorithm
+to sort an array of integers. The program uses rollover operations to
+sort the array progressively. You can customise the input array to test
+pancake sorting with different data sets.</p>
+<p><span id="part0073.xhtml"></span></p>
+<p>Conclusion</p>
+<p>Congratulations, you've been on an exciting journey through the world
+of algorithms using Java as your ally. By working through the 50
+exercises in this book, you have gained a solid understanding of the
+fundamental concepts of programming and problem solving.</p>

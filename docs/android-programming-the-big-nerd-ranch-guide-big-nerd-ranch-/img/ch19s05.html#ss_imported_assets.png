@@ -1,0 +1,572 @@
+<!--[if IE]><![endif]--><!DOCTYPE html><!--[if IE 8]><html class="no-js ie8 oldie" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/android-programming-the/9780135257555/ch19s05.html"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="5261264"
+  data-user-uuid="25eb864a-f696-4928-88cd-256cab28ccbe"
+  data-username="ahmadsallah"
+  data-account-type="Trial"
+  
+  data-activated-trial-date="08/06/2019"
+
+
+  data-archive="9780135257555"
+  data-publishers="Big Nerd Ranch Guides"
+
+
+
+  data-htmlfile-name="ch19s05.html"
+  data-epub-title="Android Programming: The Big Nerd Ranch Guide, 4th Edition" data-debug=0 data-testing=0><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/android-programming-the/9780135257555/ch19s05.html"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="5261264"
+  data-user-uuid="25eb864a-f696-4928-88cd-256cab28ccbe"
+  data-username="ahmadsallah"
+  data-account-type="Trial"
+  
+  data-activated-trial-date="08/06/2019"
+
+
+  data-archive="9780135257555"
+  data-publishers="Big Nerd Ranch Guides"
+
+
+
+  data-htmlfile-name="ch19s05.html"
+  data-epub-title="Android Programming: The Big Nerd Ranch Guide, 4th Edition" data-debug=0 data-testing=0><!--<![endif]--><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="author" content="Safari Books Online" /><meta name="format-detection" content="telephone=no"><meta http-equiv="cleartype" content="on"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="apple-itunes-app" content="app-id=881697395, app-argument=safaridetail://9780135257555"/><meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0"/><meta property="twitter:account_id" content="4503599627559754" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><link rel="apple-touch-icon" href="/static/images/apple-touch-icon.0c29511d2d72.png"/><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'><title>Importing Assets - Android Programming: The Big Nerd Ranch Guide, 4th Edition</title><link rel="stylesheet" href="/static/CACHE/css/68851547a55f.css" type="text/css" /><link rel="stylesheet" type="text/css" href="/static/css/annotator.e3b0c44298fc.css"/><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><style type="text/css" title="ibis-book">
+    #sbo-rt-content p{text-align:left;text-indent:0;margin-top:6pt;margin-bottom:4pt}#sbo-rt-content p.align-right{text-align:right;text-indent:0;margin-top:6pt;margin-bottom:4pt;margin-left:0;margin-right:0}#sbo-rt-content p.align-center{text-align:center;text-indent:0;margin-top:6pt;margin-bottom:4pt;margin-left:0;margin-right:0}#sbo-rt-content p.align-justify{text-align:justify;text-indent:0;margin-top:6pt;margin-bottom:4pt;margin-left:0;margin-right:0}#sbo-rt-content p.table{margin-top:0;margin-bottom:10pt;margin-left:0;margin-right:0}#sbo-rt-content p.ma_sans{font-family:Helvetica,sans-serif}#sbo-rt-content p.ma_sans_it{font-family:Helvetica,sans-serif;font-style:italic}#sbo-rt-content span.ma_sans_it{font-family:Helvetica,sans-serif;font-style:italic}#sbo-rt-content p.ma_sans_large{font-family:Helvetica,sans-serif;font-size:large;margin-top:0;vertical-align:top}#sbo-rt-content p.ma_sans_large_italic_left{font-family:Helvetica,sans-serif;font-weight:normal;font-style:italic;text-align:left;margin-top:0;margin-bottom:5pt;margin-left:0;margin-right:0}#sbo-rt-content p.ma_sans_xlarge_bold_center{font-family:Helvetica,sans-serif;font-size:x-large;font-weight:bold;text-align:center;margin-top:0}#sbo-rt-content p.ma_sans_medium_bold_center{font-family:Helvetica,sans-serif;font-size:medium;font-weight:bold;text-align:center;margin-top:0;margin-bottom:5pt;margin-left:0;margin-right:0}#sbo-rt-content .indent{margin-left:1em}#sbo-rt-content pre{margin-left:0;margin-right:0;font-family:monospace;font-size:x-small;white-space:pre-wrap}#sbo-rt-content .toc_0{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0}#sbo-rt-content .toc_1{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;margin-left:25pt}#sbo-rt-content .toc_2{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;margin-left:50pt}#sbo-rt-content .toc_3{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;margin-left:75pt}#sbo-rt-content .toc_4{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;margin-left:100pt}#sbo-rt-content .idx_nav{text-align:center;border:1px gray solid}#sbo-rt-content .idx{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;text-indent:10pt}#sbo-rt-content .indexdiv{margin-top:0;padding-top:0}#sbo-rt-content a.indexterm{font-size:x-small}#sbo-rt-content ul,#sbo-rt-content ol,#sbo-rt-content dl{margin-top:3pt;margin-left:1em}#sbo-rt-content dt{margin-top:8pt;margin-bottom:0}#sbo-rt-content dd.term{margin-left:0;margin-top:0;margin-bottom:8pt}#sbo-rt-content dd{margin-top:0;margin-bottom:8pt}#sbo-rt-content li{margin-top:5pt;margin-bottom:8pt}#sbo-rt-content div.itemizedlist{margin-left:10pt}#sbo-rt-content div.orderedlist{margin-left:10pt}#sbo-rt-content div.variablelist{margin-left:10pt}#sbo-rt-content div.variablelist{text-align:left;vertical-align:top;padding-top:5pt;padding-left:5pt}#sbo-rt-content ul.itemizedlist_disc_mark{list-style-type:disc}#sbo-rt-content ul.itemizedlist_circle_mark{list-style-type:circle}#sbo-rt-content ul.itemizedlist_square_mark{list-style-type:square}#sbo-rt-content ul.itemizedlist_no_mark{list-style-type:none}#sbo-rt-content .compact{line-height:.8}#sbo-rt-content td{text-align:left;vertical-align:top;padding-top:1pt;padding-left:5pt}#sbo-rt-content div.table{width:100%}#sbo-rt-content div.figure{width:100%;display:inline-block}#sbo-rt-content div.figure-contents{width:100%;text-align:center}#sbo-rt-content img{max-width:100%;text-align:center}#sbo-rt-content div.figure-half-contents{width:50%;margin-left:25%;margin-right:25%;text-align:center}#sbo-rt-content img.half{max-width:100%;margin-left:auto;margin-right:auto;text-align:center}#sbo-rt-content div.figure-quarter-contents{width:25%;margin-left:37%;margin-right:37%;text-align:center}#sbo-rt-content img.quarter{max-width:100%;margin-left:auto;margin-right:auto;text-align:center}#sbo-rt-content .toc,#sbo-rt-content .title,#sbo-rt-content .indexdiv{font-family:sans-serif}#sbo-rt-content .title,#sbo-rt-content .figure{padding-top:5pt}#sbo-rt-content h1,#sbo-rt-content h2,#sbo-rt-content h3,#sbo-rt-content h4,#sbo-rt-content h5,#sbo-rt-content h6{text-align:left}#sbo-rt-content .part_title,#sbo-rt-content .chapter_title,#sbo-rt-content .colophon_title{font-family:sans-serif;text-align:right}#sbo-rt-content .part_number,#sbo-rt-content .chapter_number{font-family:sans-serif;font-size:200%;color:#696969}#sbo-rt-content .part_name,#sbo-rt-content .chapter_name{font-family:sans-serif;font-size:100%}#sbo-rt-content .emphasis,#sbo-rt-content .firstterm{font-style:italic}#sbo-rt-content .command{font-family:serif;font-size:x-small}#sbo-rt-content .remark{font-family:serif;color:green}#sbo-rt-content .guimenu,#sbo-rt-content .guisubmenu,#sbo-rt-content .guimenuitem,#sbo-rt-content .guibutton,#sbo-rt-content .guiicon,#sbo-rt-content .guilabel,#sbo-rt-content .keycap{font-family:sans-serif;font-size:smaller}#sbo-rt-content .application{font-family:sans-serif;font-size:smaller}#sbo-rt-content .type{font-family:dummy,monospace;font-weight:bold}#sbo-rt-content .uri,#sbo-rt-content .email{font-family:dummy,monospace}#sbo-rt-content .constant,#sbo-rt-content .varname,#sbo-rt-content .literal,#sbo-rt-content .filename{font-family:dummy,monospace}#sbo-rt-content .classname,#sbo-rt-content .methodname,#sbo-rt-content .function{font-family:dummy,monospace;font-weight:bold}#sbo-rt-content .strikethrough{text-decoration:line-through}#sbo-rt-content .shaded{background-color:#E0E0E0}#sbo-rt-content .underline{text-decoration:underline}#sbo-rt-content .overline{text-decoration:overline}#sbo-rt-content .bold{font-weight:bold}#sbo-rt-content .light-uri{color:black}#sbo-rt-content .title-right{text-align:right;font-family:sans-serif}#sbo-rt-content .center-large{text-align:center;font-size:large}
+    </style><script> // <![CDATA[
+    var g = {
+      position_cache: {
+        
+          "chapter": "/api/v1/book/9780135257555/chapter/ch19s05.html",
+          "book_id": "9780135257555",
+          "chapter_uri": "ch19s05.html",
+          "position": 0,
+          "user_uuid": "25eb864a-f696-4928-88cd-256cab28ccbe",
+          "next_chapter_uri": "/library/view/android-programming-the/9780135257555/ch19s06.html"
+        
+      },
+      title: "Android Programming: The Big Nerd Ranch Guide, 4th Edition",
+      author_list: "Kristin Marsicano, Chris Stewart, Bill Phillips",
+      format: "book",
+      source: "application/epub+zip",
+      is_system_book: true,
+      is_public: false,
+      loaded_from_server: true,
+      allow_scripts: false,
+      has_mathml: false
+    };
+    // ]]></script><script src="/static/js/src/modernizr.8e35451ddb64.js"></script><script>
+    
+      
+
+      
+        
+          window.PUBLIC_ANNOTATIONS = true;
+        
+      
+
+      window.MOBILE_PUBLIC_ANNOTATIONS = false;
+
+    
+
+    
+      window.PRIVACY_CONTROL_OVERRIDE = false;
+    
+
+      window.PRIVACY_CONTROL_SWITCH = true;
+
+      window.PUBLISHER_PAGES = true;
+
+      window.SBO = {
+        "constants": {
+          "SITB_ENDPOINT": "/api/v2/sitb/",
+          "SEARCH_SELECT_ENDPOINT": "https://learning.oreilly.com/api/v2/search/select/",
+          "ENABLE_ONLINE_TRAINING": true
+        }
+      };
+  </script><link rel="canonical" href="https://learning.oreilly.com/library/view/android-programming-the/9780135257555/ch19s05.html"/><meta name="description" content=" Importing Assets First, you need to add the sound files to your project so your code can use them at runtime. Rather than use the resources system for this job, ... "><meta property="og:title" content="Importing Assets" /><meta itemprop="isPartOf" content="/library/view/android-programming-the/9780135257555/" /><meta itemprop="name" content="Importing Assets" /><meta property="og:url" itemprop="url" content="https://learning.oreilly.com/library/view/android-programming-the/9780135257555/ch19s05.html" /><meta property="og:site_name" content="Safari" /><meta property="og:image" itemprop="thumbnailUrl" content="https://learning.oreilly.com/library/cover/9780135257555/" /><meta property="og:description" itemprop="description" content=" Importing Assets First, you need to add the sound files to your project so your code can use them at runtime. Rather than use the resources system for this job, ... "><meta itemprop="inLanguage" content="en" /><meta itemprop="publisher" content="Big Nerd Ranch Guides" /><meta property="og:type" content="book" /><meta property="og:book:isbn" itemprop="isbn" content="9780135257555" /><meta property="og:book:author" itemprop="author" content="Kristin Marsicano" /><meta property="og:book:author" itemprop="author" content="Chris Stewart" /><meta property="og:book:author" itemprop="author" content="Bill Phillips" /><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@safari"><style type="text/css" id="font-styles" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-size: <%= font_size %> !important; }"></style><style type="text/css" id="font-family" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-family: <%= font_family %> !important; }"></style><style type="text/css" id="column-width" data-template="#sbo-rt-content { max-width: <%= column_width %>% !important; margin: 0 auto !important; }"></style><noscript><meta http-equiv="refresh" content="0; url=/library/no-js/" /></noscript><script type="text/javascript">
+    (function(i,s,o,g,r,a,m) {
+      i['GoogleAnalyticsObject']=r;
+      i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+      a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+      a.async=1;
+      a.src=g;
+      m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    var matches = document.cookie.match(/BrowserCookie\s*=\s*([a-f0-9\-]{36})/),
+      user_uuid = null;
+
+    if (matches && matches.length === 2) {
+      user_uuid = matches[1];
+    }
+
+  
+    ga('create', 'UA-39299553-7', {'userId': '25eb864a-f696-4928-88cd-256cab28ccbe' });
+  
+
+  
+    
+      ga('set', 'dimension1', 'Trial');
+    
+  
+
+  ga('set', 'dimension6', user_uuid);
+
+  
+    ga('set', 'dimension2', '25eb864a-f696-4928-88cd-256cab28ccbe');
+    
+  
+
+  
+
+  
+
+  //enable enhanced link tracking
+  ga('require', 'linkid', 'linkid.js');
+
+  // reading interface will track pageviews itself
+  if (document.location.pathname.indexOf("/library/view") !== 0) {
+    ga('send', 'pageview');
+  }
+  </script><script>
+    var dataLayer = window.dataLayer || [];
+
+    
+      window.medalliaVsgUserIdentifier = '25eb864a-f696-4928-88cd-256cab28ccbe';
+      dataLayer.push({userIdentifier: '25eb864a-f696-4928-88cd-256cab28ccbe'});
+      dataLayer.push({loggedIn: 'yes'});
+
+      
+        window.medalliaVsgAccountIdentifier = '5504390e-4017-4580-b4b9-93b0f6c5d3ba';
+        
+
+        window.medalliaVsgIsIndividual = true;
+        
+          
+          dataLayer.push({learningAccountType: 'free trial'});
+          
+        
+
+        
+      
+    
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5P4V6Z');
+    (function () {
+      var VERSION = 'V1.1';
+      var AUTHOR = 'Awwad';
+      if (!window.GtmHelper)
+        window.GtmHelper = function () {
+          var instance = this;
+          var loc = document.location;
+          this.version = VERSION;
+          this.author = AUTHOR;
+          this.readCookie = function (name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+          };
+          this.createCookie = function (name, value, days, cookieDomain) {
+            var domain = "";
+            var expires = "";
+
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + Math.ceil(days * 24 * 60 * 60 * 1000));
+              var expires = " expires=" + date.toGMTString() + ";";
+            }
+
+            if (typeof (cookieDomain) != 'undefined')
+              domain = " domain=" + cookieDomain + "; ";
+
+            document.cookie = name + "=" + value + ";" + expires + domain + "path=/";
+          };
+
+          this.isDuplicated = function (currentTransactionId) {
+            // the previous transaction id:
+            var previousTransIdValue = this.readCookie("previousTransId");
+
+            if (currentTransactionId === previousTransIdValue) {
+              return true; // Duplication
+            } else {
+              return false;
+            }
+          };
+        }
+    })()
+  </script><script defer src="/static/js/build/vendor.a48a756c5182.js"></script><script defer src="/static/js/build/reader.f2a0c6bd2fee.js"></script></head>
+
+
+<body class="reading sidenav nav-collapsed  scalefonts">
+
+    
+  <noscript> 
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P4V6Z"
+            height="0" width="0"
+            style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+
+
+
+    
+      <div class="hide working" role="status">
+        <div class="working-image"></div>
+      </div>
+      <div class="sbo-site-nav">
+        
+
+
+
+
+
+<a href="#container" class="skip">Skip to content</a><header class="topbar t-topbar"><nav role="navigation" class="js-site-nav"><ul class="topnav"><li class="t-logo"><a href="/home/" class="l0 None safari-home nav-icn js-keyboard-nav-home"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.738 14H9.254v-3.676a.617.617 0 0 0-.621-.613H7.39a.617.617 0 0 0-.62.613V14H4.284a.617.617 0 0 1-.622-.613V10.22c0-.327.132-.64.367-.87l3.547-3.493a.627.627 0 0 1 .875 0l3.54 3.499c.234.229.366.54.367.864v3.167a.617.617 0 0 1-.62.613zM7.57 2.181a.625.625 0 0 1 .882 0l5.77 5.692-.93.92-5.28-5.209-5.28 5.208-.932-.919 5.77-5.692z" /></svg><span>Safari Home</span></a></li><li><a href="/resource-centers/" class="t-resource-centers-nav l0 nav-icn"><?xml version="1.0" encoding="UTF-8"?><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Topic-Page-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Heron-Button" transform="translate(-20.000000, -78.000000)" fill="#4A3A30"><g id="Group-9" transform="translate(20.000000, 78.000000)"><rect id="Rectangle" x="9.6" y="0" width="6.4" height="6.4" rx="0.503118"></rect><rect id="Rectangle" x="9.6" y="9.6" width="6.4" height="6.4" rx="0.503118"></rect><rect id="Rectangle" x="0" y="9.6" width="6.4" height="6.4" rx="0.503118"></rect></g></g></g></svg><span>Resource Centers</span></a></li><li><a href="/playlists/" class="t-queue-nav l0 nav-icn None"><?xml version="1.0" encoding="UTF-8"?><svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch --><title>icon_Playlist_sml</title><desc>Created with Sketch.</desc><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="icon_Playlist_sml" fill-rule="nonzero" fill="#000000"><g id="playlist-icon"><g id="Group-6"><rect id="Rectangle-path" x="5" y="0" width="16" height="3" rx="0.5"></rect><circle id="Oval" cx="1.5" cy="1.5" r="1.5"></circle></g><g id="Group-5" transform="translate(0.000000, 7.000000)"><circle id="Oval" cx="1.5" cy="1.5" r="1.5"></circle><rect id="Rectangle-path" x="5" y="0" width="16" height="3" rx="0.5"></rect></g><g id="Group-5-Copy" transform="translate(0.000000, 14.000000)"><circle id="Oval" cx="1.5" cy="1.5" r="1.5"></circle><rect id="Rectangle-path" x="5" y="0" width="16" height="3" rx="0.5"></rect></g></g></g></g></svg><span>
+               Playlists
+            </span></a></li><li class="search"><a href="#" class="t-search-nav trigger nav-icn l0" data-dropdown-selector=".searchbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>search icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M31.3 0C20.9 0 12.5 8.4 12.5 18.8 12.5 22.5 13.6 25.9 15.4 28.8L1.2 42.9C-0.4 44.5-0.4 47.2 1.2 48.8 2 49.6 3.1 50 4.2 50 5.2 50 6.3 49.6 7.1 48.8L21.2 34.6C24.1 36.5 27.5 37.5 31.3 37.5 41.6 37.5 50 29.1 50 18.8 50 8.4 41.6 0 31.3 0ZM31.3 31.3C24.4 31.3 18.8 25.6 18.8 18.8 18.8 11.9 24.4 6.3 31.3 6.3 38.1 6.3 43.8 11.9 43.8 18.8 43.8 25.6 38.1 31.3 31.3 31.3Z"/></g></svg><span>Search</span></a></li><li class="usermenu dropdown"><a href="#" class="trigger l0 nav-icn nav-dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" version="1.1" fill="#4A3C31"><desc>navigation arrow</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M0.1 12.5L9.7 3.1C9.8 3 9.9 3 10 3 10.1 3 10.2 3 10.3 3.1L19.9 12.5C20 12.5 20 12.6 20 12.8 20 12.9 20 13 19.9 13L17 15.9C16.9 16 16.8 16 16.7 16 16.5 16 16.4 16 16.4 15.9L10 9.7 3.6 15.9C3.6 16 3.5 16 3.3 16 3.2 16 3.1 16 3 15.9L0.1 13C0 12.9 0 12.8 0 12.7 0 12.7 0 12.6 0.1 12.5Z"/></g></svg><span>Expand Nav</span></a><div class="drop-content"><ul><li><a href="/history/" class="t-recent-nav l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>recent items icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M25 0C11.2 0 0 11.2 0 25 0 38.8 11.2 50 25 50 38.8 50 50 38.8 50 25 50 11.2 38.8 0 25 0ZM6.3 25C6.3 14.6 14.6 6.3 25 6.3 35.4 6.3 43.8 14.6 43.8 25 43.8 35.4 35.4 43.8 25 43.8 14.6 43.8 6.3 35.4 6.3 25ZM31.8 31.5C32.5 30.5 32.4 29.2 31.6 28.3L27.1 23.8 27.1 12.8C27.1 11.5 26.2 10.4 25 10.4 23.9 10.4 22.9 11.5 22.9 12.8L22.9 25.7 28.8 31.7C29.2 32.1 29.7 32.3 30.2 32.3 30.8 32.3 31.3 32 31.8 31.5Z"/></g></svg><span>History</span></a></li><li><a href="/topics" class="t-topics-link l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 55" width="20" height="20" version="1.1" fill="#4A3C31"><desc>topics icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M25 55L50 41.262 50 13.762 25 0 0 13.762 0 41.262 25 55ZM8.333 37.032L8.333 17.968 25 8.462 41.667 17.968 41.667 37.032 25 46.538 8.333 37.032Z"/></g></svg><span>Topics</span></a></li><li><a href="/learning-paths/" class="l1 nav-icn t-learningpaths-nav js-toggle-menu-item"><?xml version="1.0" encoding="UTF-8"?><svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --><title>Mask</title><desc>Created with Sketch.</desc><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M0,16.0214227 C0,15.0387209 0.796453294,14.2411658 1.77779753,14.2411658 C2.75914177,14.2411658 3.55559506,15.0387209 3.55559506,16.0214227 C3.55559506,17.0041246 2.75914177,17.8016797 1.77779753,17.8016797 C0.796453294,17.8016797 0,17.0041246 0,16.0214227 Z M9.77788642,5.22914885 C8.9280992,5.72049977 7.84008711,5.42853763 7.34941499,4.57757479 C6.85874287,3.72661195 7.15030167,2.63709467 8.00008889,2.14574375 C8.84987611,1.65439282 9.9378882,1.94635496 10.4285603,2.7973178 C10.9192324,3.64828064 10.6276736,4.73779792 9.77788642,5.22914885 Z M4.57213969,7.35869225 C5.42192691,7.85004318 5.71348571,8.93956046 5.22281359,9.79052329 C4.73214147,10.6414861 3.64412938,10.9334483 2.79434216,10.4420974 C1.94455494,9.95074642 1.65299614,8.86122915 2.14366826,8.01026631 C2.63434038,7.15930347 3.72235247,6.86734132 4.57213969,7.35869225 Z M2.79434216,21.6007481 C3.64412938,21.1093972 4.73214147,21.4013594 5.22281359,22.2523222 C5.71348571,23.103285 5.42192691,24.1928023 4.57213969,24.6841532 C3.72235247,25.1755042 2.63434038,24.883542 2.14366826,24.0325792 C1.65299614,23.1816163 1.94455494,22.0920991 2.79434216,21.6007481 Z M7.34941499,27.4652707 C7.84008711,26.6143079 8.9280992,26.3223457 9.77788642,26.8136966 C10.6276736,27.3050476 10.9192324,28.3945649 10.4285603,29.2455277 C9.9378882,30.0964905 8.84987611,30.3884527 8.00008889,29.8971017 C7.15030167,29.4057508 6.85874287,28.3162335 7.34941499,27.4652707 Z M18.7118524,11.3165596 C21.3074367,12.8173162 22.1963355,16.1392758 20.6976522,18.738451 C19.1989689,21.3358459 15.8815987,22.2259744 13.2860143,20.726998 C10.6922077,19.2262414 9.80330893,15.9042818 11.3002144,13.3051066 C12.7988978,10.7059314 16.116268,9.81580294 18.7118524,11.3165596 Z M26.7821642,27.8093944 L30.1315348,31.1633985 C30.3982044,31.4304371 30.2097579,31.8844026 29.8346426,31.8844026 L21.5945511,31.8844026 C21.1287681,31.8844026 20.751875,31.5069881 20.751875,31.0405608 L20.751875,22.7890697 C20.751875,22.4134355 21.2052134,22.2247282 21.4701052,22.4899865 L24.2843587,25.3081333 C26.8337204,23.0240636 28.4444049,19.7092251 28.4444049,16.0223129 C28.4444049,9.15052091 22.8621207,3.56051397 15.9998222,3.56051397 L15.9998222,0 C24.8230314,0 32,7.18689745 32,16.0223129 C32,20.6919269 29.9750886,24.8790914 26.7821642,27.8093944 Z" id="Mask" fill="#8B889A"></path></g></svg><span>Learning Paths</span></a></li><li class="nav-offers flyout-parent"><a href="#" class="l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>offers icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M35.9 20.6L27 15.5C26.1 15 24.7 15 23.7 15.5L14.9 20.6C13.9 21.1 13.2 22.4 13.2 23.4L13.2 41.4C13.2 42.4 13.9 43.7 14.9 44.2L23.3 49C24.2 49.5 25.6 49.5 26.6 49L35.9 43.6C36.8 43.1 37.6 41.8 37.6 40.8L37.6 23.4C37.6 22.4 36.8 21.1 35.9 20.6L35.9 20.6ZM40 8.2C39.1 7.6 37.6 7.6 36.7 8.2L30.2 11.9C29.3 12.4 29.3 13.2 30.2 13.8L39.1 18.8C40 19.4 40.7 20.6 40.7 21.7L40.7 39C40.7 40.1 41.4 40.5 42.4 40L48.2 36.6C49.1 36.1 49.8 34.9 49.8 33.8L49.8 15.6C49.8 14.6 49.1 13.3 48.2 12.8L40 8.2 40 8.2ZM27 10.1L33.6 6.4C34.5 5.9 34.5 5 33.6 4.5L26.6 0.5C25.6 0 24.2 0 23.3 0.5L16.7 4.2C15.8 4.7 15.8 5.6 16.7 6.1L23.7 10.1C24.7 10.6 26.1 10.6 27 10.1ZM10.1 21.7C10.1 20.6 10.8 19.4 11.7 18.8L20.6 13.8C21.5 13.2 21.5 12.4 20.6 11.9L13.6 7.9C12.7 7.4 11.2 7.4 10.3 7.9L1.6 12.8C0.7 13.3 0 14.6 0 15.6L0 33.8C0 34.9 0.7 36.1 1.6 36.6L8.4 40.5C9.3 41 10.1 40.6 10.1 39.6L10.1 21.7 10.1 21.7Z"/></g></svg><span>Offers & Deals</span></a><ul class="flyout"><li><a href="https://get.oreilly.com/email-signup.html" target="_blank" class="l2 nav-icn"><span>Newsletters</span></a></li></ul></li><li class="nav-highlights"><a href="/u/25eb864a-f696-4928-88cd-256cab28ccbe/" class="t-highlights-nav l1 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 35" width="20" height="20" fill="#4A3C31"><path d="M13.325 18.071H8.036c0-6.736 4.324-10.925 14.464-12.477V0C6.37 1.113 0 10.632 0 22.113 0 29.406 3.477 35 10.403 35c5.142 0 9.175-3.515 9.175-8.816 0-4.628-2.367-7.293-6.253-8.113zm27.5 0h-5.26c0-6.736 4.295-10.925 14.435-12.477V0C33.899 1.113 27.5 10.632 27.5 22.113 27.5 29.406 30.977 35 37.932 35c5.113 0 9.146-3.515 9.146-8.816 0-4.628-2.338-7.293-6.253-8.113z" fill-rule="evenodd"/></svg><span>Highlights</span></a></li><li><a href="/u/preferences/" class="t-settings-nav l1 js-settings nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 53" width="20" height="20" version="1.1" fill="#4A3C31"><desc>settings icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M44.6 29.6C44.7 28.6 44.8 27.5 44.8 26.5 44.8 25.5 44.7 24.4 44.6 23.4L49.6 19C50 18.8 50.1 18.3 49.9 17.9 48.9 14.7 47.1 11.7 44.9 9.1 44.6 8.8 44.2 8.7 43.8 8.8L37.4 11.1C35.8 9.8 34 8.7 32.1 8L30.9 1.4C30.8 0.9 30.4 0.6 30 0.5 26.7-0.2 23.3-0.2 20 0.5 19.6 0.6 19.2 0.9 19.1 1.4L17.9 8C16 8.7 14.1 9.8 12.6 11.1L6.2 8.8C5.8 8.7 5.4 8.8 5.1 9.1 2.9 11.7 1.1 14.7 0.1 17.9 -0.1 18.3 0 18.8 0.4 19L5.4 23.4C5.3 24.4 5.2 25.5 5.2 26.5 5.2 27.5 5.3 28.6 5.4 29.6L0.4 34C0 34.2-0.1 34.7 0.1 35.1 1.1 38.3 2.9 41.4 5.1 43.9 5.4 44.2 5.8 44.4 6.2 44.2L12.6 42C14.1 43.2 16 44.3 17.9 45L19.1 51.7C19.2 52.1 19.6 52.5 20 52.5 21.6 52.8 23.3 53 25 53 26.7 53 28.4 52.8 30 52.5 30.4 52.5 30.8 52.1 30.9 51.7L32.1 45C34 44.3 35.8 43.2 37.4 42L43.8 44.2C44.2 44.4 44.6 44.2 44.9 43.9 47.1 41.4 48.9 38.3 49.9 35.1 50.1 34.7 50 34.2 49.6 34L44.6 29.6ZM25 36.4C19.6 36.4 15.2 32 15.2 26.5 15.2 21 19.6 16.6 25 16.6 30.4 16.6 34.8 21 34.8 26.5 34.8 32 30.4 36.4 25 36.4Z"/></g></svg><span>Settings</span></a></li><li><a href="https://www.oreilly.com/online-learning/support/" class="l1 no-icon">Support</a></li><li><a href="/accounts/logout/" class="l1 no-icon">Sign Out</a></li></ul><ul class="profile"><li><a href="/u/preferences/" class="l2 nav-icn None"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 53" width="20" height="20" version="1.1" fill="#4A3C31"><desc>settings icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M44.6 29.6C44.7 28.6 44.8 27.5 44.8 26.5 44.8 25.5 44.7 24.4 44.6 23.4L49.6 19C50 18.8 50.1 18.3 49.9 17.9 48.9 14.7 47.1 11.7 44.9 9.1 44.6 8.8 44.2 8.7 43.8 8.8L37.4 11.1C35.8 9.8 34 8.7 32.1 8L30.9 1.4C30.8 0.9 30.4 0.6 30 0.5 26.7-0.2 23.3-0.2 20 0.5 19.6 0.6 19.2 0.9 19.1 1.4L17.9 8C16 8.7 14.1 9.8 12.6 11.1L6.2 8.8C5.8 8.7 5.4 8.8 5.1 9.1 2.9 11.7 1.1 14.7 0.1 17.9 -0.1 18.3 0 18.8 0.4 19L5.4 23.4C5.3 24.4 5.2 25.5 5.2 26.5 5.2 27.5 5.3 28.6 5.4 29.6L0.4 34C0 34.2-0.1 34.7 0.1 35.1 1.1 38.3 2.9 41.4 5.1 43.9 5.4 44.2 5.8 44.4 6.2 44.2L12.6 42C14.1 43.2 16 44.3 17.9 45L19.1 51.7C19.2 52.1 19.6 52.5 20 52.5 21.6 52.8 23.3 53 25 53 26.7 53 28.4 52.8 30 52.5 30.4 52.5 30.8 52.1 30.9 51.7L32.1 45C34 44.3 35.8 43.2 37.4 42L43.8 44.2C44.2 44.4 44.6 44.2 44.9 43.9 47.1 41.4 48.9 38.3 49.9 35.1 50.1 34.7 50 34.2 49.6 34L44.6 29.6ZM25 36.4C19.6 36.4 15.2 32 15.2 26.5 15.2 21 19.6 16.6 25 16.6 30.4 16.6 34.8 21 34.8 26.5 34.8 32 30.4 36.4 25 36.4Z"/></g></svg><span>Settings</span></a><span class="l2 t-nag-notification"  id="nav-nag" ><strong class="trial-red">1</strong> days left in your trial.
+  
+  
+
+  
+    
+      
+
+<a class="" href="/subscribe/">Subscribe</a>.
+
+
+    
+  
+
+  
+
+</span></li><li><a href="https://www.oreilly.com/online-learning/support/" class="l2">Support</a></li><li><a href="/accounts/logout/" class="l2">Sign Out</a></li></ul></div></li></ul></nav></header>
+
+
+      </div>
+      <div id="container" class="application">
+        
+          <div class="nav-container clearfix">
+            
+
+
+            
+            
+          </div>
+
+          
+
+  <div class="js-toc">
+    
+      <div class="sbo-reading-menu sbo-menu-top"><section class="sbo-toc-container toc-menu"><a href="#" class="sbo-toc-thumb"><span class="sbo-title ss-list"><h1><div class="visuallyhidden">Table of Contents for </div>
+      
+      Android Programming: The Big Nerd Ranch Guide, 4th Edition
+      
+    </h1></span></a><div class="toc-contents"></div></section></div>
+
+    
+
+    <div class="interface-controls interface-controls-top">
+      <ul class="interface-control-btns js-bitlist js-reader">
+        <li class="js-search-in-archive search-in-archive t-search-in-archive"><a href="#" title="Search in archive" class="js-search-controls search-controls"><span class="icon">Search in book...</span></a><form class="search-archive-bar js-search-form"><input type="search" name="query" placeholder="Search inside this book..." autocomplete="off"></form><div class="search-archive-results"><div class="js-sitb-results-region"></div></div></li><li class="queue-control"><div class="js-content-uri" data-content-uri="/api/v1/book/9780135257555/chapter/ch19s05.html"><div class="js-collections-dropdown collections-dropdown menu-bit-cards"></div></div></li><li class="js-font-control-panel font-control-activator"><a href="#" data-push-state="false" id="font-controls" title="Change font size" aria-label="Change font size"><span class="icon">Toggle Font Controls</span></a></li><li class="dropdown sharing-controls"><a href="#" class="trigger" data-push-state="false" title="Share" aria-label="Share"><i class="fa fa-share"></i></a><ul class="social-sharing dropdown-menu"><li><a
+        class="twitter share-button t-twitter"
+        target="_blank"
+        aria-label="Share this section on Twitter"
+        title="Share this section on Twitter"
+      
+        href="https://twitter.com/share?url=https://learning.oreilly.com/library/view/android-programming-the/9780135257555/ch19s05.html&text=Android%20Programming%3A%20The%20Big%20Nerd%20Ranch%20Guide%2C%204th%20Edition&via=safari"
+      ><span>Twitter</span></a></li><li><a
+        class="facebook share-button t-facebook"
+        target="_blank"
+        aria-label="Share this section on Facebook"
+        title="Share this section on Facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://learning.oreilly.com/library/view/android-programming-the/9780135257555/ch19s05.html"
+      ><span>Facebook</span></a></li><li><a
+        class="googleplus share-button t-googleplus"
+        target="_blank"
+        aria-label="Share this secton on Google Plus"
+        title="Share this secton on Google Plus"
+        href="https://plus.google.com/share?url=https://learning.oreilly.com/library/view/android-programming-the/9780135257555/ch19s05.html"
+      ><span>Google Plus</span></a></li><li><a
+        class="email share-button t-email"
+        aria-label="Share this section via email"
+        title="Share this section via email"
+      
+        href="mailto:?subject=Safari: Importing%20Assets&body=https://learning.oreilly.com/library/view/android-programming-the/9780135257555/ch19s05.html%0D%0Afrom Android%20Programming%3A%20The%20Big%20Nerd%20Ranch%20Guide%2C%204th%20Edition%0D%0A"
+      ><span>Email</span></a></li></ul></li>
+      </ul>
+    </div>
+
+    
+    <section role="document">
+        
+        
+
+
+
+
+  <script defer src="/static/js/build/djangoMessagesPage.a82ebd53e43d.js"></script>
+
+
+        
+	  <div class="t-sbo-prev sbo-prev sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/android-programming-the/9780135257555/ch19s04.html" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">Implementing Simple Data Binding</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/android-programming-the/9780135257555/ch19s06.html" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Accessing Assets</div>
+        </a>
+    
+  
+  </div>
+
+
+
+<div id="sbo-rt-content"><div class="section" title="Importing Assets">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title"><a id="idm133752753184"></a>Importing Assets</h2>
+          </div>
+        </div>
+      </div>
+      <p>
+<a id="idx-asst-a" class="indexterm"></a>
+<a id="idm133752751248" class="indexterm"></a>
+<a id="idm133752750352" class="indexterm"></a>
+<a id="idm133752749360" class="indexterm"></a>
+  First, you need to add the sound files to your project so your code can use them at runtime.
+  Rather than use the resources system for this job, you will use raw <samp class="firstterm">assets</samp>.
+  You can think of assets as stripped-down resources: They are packaged into your APK like resources, but without any of the configuration system tooling that goes on top of resources.
+</p>
+      <p>
+  In some ways, that is good.
+  Because there is no configuration system, you can name assets whatever you want and organize them with your own folder structure.
+  In other ways, though, it is bad.
+  Without a configuration system, you cannot automatically respond to changes in pixel density, language, or orientation, nor can you automatically use the assets in layout files or other resources.
+</p>
+      <p>
+  Usually resources are the better deal.
+  However, in cases where you only access files programmatically, assets can come out ahead.
+  Most games use assets for graphics and sound, for example – and so will BeatBox.
+</p>
+      <p>
+  Your first step will be to import your assets. 
+  Create an assets folder inside your project by right-clicking on your <samp class="filename">app</samp> module and selecting <samp class="guisubmenu">New</samp> → <samp class="guisubmenu">Folder</samp> → <samp class="guimenuitem">Assets Folder</samp>.
+  In the dialog that pops up, leave the <samp class="guilabel">Change Folder Location</samp> checkbox unchecked and leave the <samp class="guilabel">Target Source Set</samp> set to <samp class="guilabel">main</samp> (<a class="xref" href="ch19s05.html#ss_creating_assets_folder" title="Figure 19.3  Creating the assets folder">Figure 19.3</a>).
+</p>
+      <div class="figure">
+        <a id="ss_creating_assets_folder"></a>
+        <p class="title">
+          <b>Figure 19.3  Creating the assets folder</b>
+        </p>
+        <div class="figure-contents">
+          <div class="screenshot">
+            <div class="mediaobject" style="text-align: center">
+              <img src="/library/view/android-programming-the/9780135257555/bbMVVM/creating_assets_folder.png" style="text-align: middle" alt="Creating the assets folder" width="920" height="768">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+  Click <samp class="guilabel">Finish</samp> to create your assets folder.
+</p>
+      <p>
+  Next, right-click on <samp class="filename">assets</samp> to create a subfolder for your sounds by selecting <samp class="guisubmenu">New</samp> → <samp class="guimenuitem">Directory</samp>.
+  Enter <samp class="guilabel">sample_sounds</samp> for the directory name (<a class="xref" href="ch19s05.html#ss_create_assets_folders" title="Figure 19.4  Creating the sample_sounds folder">Figure 19.4</a>).
+</p>
+      <div class="figure">
+        <a id="ss_create_assets_folders"></a>
+        <p class="title">
+          <b>Figure 19.4  Creating the sample_sounds folder</b>
+        </p>
+        <div class="figure-contents">
+          <div class="screenshot">
+            <div class="mediaobject" style="text-align: center">
+              <img src="/library/view/android-programming-the/9780135257555/bbMVVM/creating_sample_sounds_folder.png" style="text-align: middle" alt="Creating the sample_sounds folder" width="552" height="161">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+  Everything inside the <samp class="filename">assets</samp> folder will be deployed with your app.
+  For the sake of convenience and organization, you created a subfolder called <samp class="filename">sample_sounds</samp>.
+  Unlike with resources, a subfolder is not required for assets.
+  You include it to organize your sounds.
+</p>
+      <p>
+  So where can you find the sounds? 
+  You will be using a Creative Commons-licensed sound set we initially found provided by the user plagasul at <samp class="uri"><a class="uri" href="https://www.freesound.org/people/plagasul/packs/3/" target="">freesound.org/​people/​plagasul/​packs/​3/</a></samp>.
+  We have put them in a zip file for you at <samp class="uri"><a class="uri" href="https://www.bignerdranch.com/solutions/sample_sounds.zip" target="">bignerdranch.com/​solutions/​sample_sounds.zip</a></samp>.
+</p>
+      <p>
+  Download the zip file and unzip its contents.  
+  Copy or move the unzipped sound files into <samp class="filename">assets/sample_sounds</samp> (<a class="xref" href="ch19s05.html#ss_imported_assets.png" title="Figure 19.5  Imported assets">Figure 19.5</a>).
+</p>
+      <div class="figure">
+        <a id="ss_imported_assets.png"></a>
+        <p class="title">
+          <b>Figure 19.5  Imported assets</b>
+        </p>
+        <div class="figure-contents">
+          <div class="screenshot">
+            <div class="mediaobject" style="text-align: center">
+              <img src="/library/view/android-programming-the/9780135257555/bbMVVM/imported_assets.png" style="text-align: middle" alt="Imported assets" width="324" height="347">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>
+  (Make sure only <samp class="filename">.wav</samp> files are in there, by the way – not the <samp class="filename">.zip</samp> file you got them from.)
+</p>
+      <p>
+  Build your app to make sure everything is hunky-dory. 
+  The next step will be to list those assets and show them to the user.
+<a id="idm133752722544" class="indexterm"></a>
+</p>
+    </div>
+  </div>
+
+
+
+  <div class="t-sbo-prev sbo-prev sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/android-programming-the/9780135257555/ch19s04.html" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">Implementing Simple Data Binding</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/android-programming-the/9780135257555/ch19s06.html" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Accessing Assets</div>
+        </a>
+    
+  
+  </div>
+
+
+        
+    </section>
+  </div>
+<section class="sbo-saved-archives"></section>
+
+
+
+          
+          
+  
+
+
+
+
+    
+    
+      <div id="js-subscribe-nag" class="subscribe-nag clearfix trial-panel t-subscribe-nag">
+        
+        
+          
+          
+
+          
+            <p>You have 1 day left in your trial, Ahmadsallah. Subscribe today. <a href="/subscribe/" class="ga-active-trial-subscribe-nag">See pricing options.</a></p>
+          
+        
+        
+
+      </div>
+
+    
+    
+
+
+
+        
+      </div>
+      
+
+
+
+  <footer class="pagefoot t-pagefoot">
+    <a href="#" class="icon-up"><div class="visuallyhidden">Back to top</div></a>
+    <ul class='js-footer-nav'>
+      
+        <li><a class="t-resource-centers-footer" href="/resource-centers/">Resource Centers</a></li>
+      
+      <li>
+      <a class="t-queue-footer" href="/playlists/">Playlists</a>
+      </li>
+      
+        <li><a class="t-recent-footer" href="/history/">History</a></li>
+        <li><a class="t-topics-footer" href="/topics?q=*&limit=21">Topics</a></li>
+      
+      <li><a class="t-settings-footer js-settings" href="/u/preferences/">Settings</a></li>
+      <li class="full-support"><a href="https://www.oreilly.com/online-learning/support/">Support</a></li>
+      <li><a href="https://www.oreilly.com/online-learning/apps.html">Get the App</a></li>
+      <li><a href="/accounts/logout/">Sign Out</a></li>
+    </ul>
+    <span class="copyright">&#169; 2019 <a href="/" target="_blank">Safari</a>.</span>
+    <a href="/terms/">Terms of Service</a> /
+    <a href="https://www.oreilly.com/privacy.html">Privacy Policy</a>
+  </footer>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"licenseKey":"510f1a6865","queueTime":1,"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","applicationID":"172641827,79672898,93931619","transactionName":"YgdaZ0NSW0cEB0RdWltNfkZfUEFdCgofXFBHDVYdR1pQQxZeRl1QQj1aWkU=","applicationTime":855,"agent":""}</script>
+
+
+    
+    <script src="/jsi18n/web/" charset="utf-8"></script>
+    <script src="/library/jsi18n/appcache/" charset="utf-8"></script>
+  </body>
+</html>

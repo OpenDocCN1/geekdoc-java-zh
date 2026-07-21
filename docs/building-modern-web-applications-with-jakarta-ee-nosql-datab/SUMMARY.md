@@ -1,0 +1,2 @@
++   [Jakarta EE、NoSQL 数据库与微服务构建现代 Web 应用指南：轻松使用微服务、JNoSQL、Vaadin、Jmoordb 和 MicroProfile 创建 Jakarta EE Web 应用程序](README.md)
++   [Jakarta EE、NoSQL 数据库与微服务构建现代 Web 应用指南：轻松使用微服务、JNoSQL、Vaadin、Jmoordb 和 MicroProfile 创建 Jakarta EE Web 应用程序](building-modern-web-applications-with-jakarta-ee-nosql-datab_0.md)

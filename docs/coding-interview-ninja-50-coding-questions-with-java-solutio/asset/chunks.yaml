@@ -1,0 +1,6790 @@
+- fmt: "\n![](images/00002.jpeg)\n\n# Introduction\n\nGetting your dream software\
+    \ engineering job could be a matter of how well you perform in your coding interview\
+    \ part. Perhaps it is the most important part of your interview process.\n\nYour\
+    \ recruiter will recommend you to read again your university algorithms and data\
+    \ structures book to brush up on Computer Science fundamentals. And although this\
+    \ is necessary, it is not enough. The types of questions that you will find in\
+    \ an algorithms book are not designed to be solved under pressure in a short 45-minutes\
+    \ period. The best way to prepare yourself for the coding interview is to practice\
+    \ on similar questions to the ones that you will be asked to solve. This is the\
+    \ aim of this book; to present you some sample interview coding questions with\
+    \ a sample solution code.\n\nSince every company has a slightly different interview\
+    \ process and question style, it is highly recommended after you finish practicing\
+    \ with the questions of this book, to take a look at questions that have been\
+    \ recently asked to candidates from sites such as CareerCup and Glassdoor.\n\n\
+    Don’t forget that you don’t have to know everything and solve perfectly all the\
+    \ questions that you will be asked in order to proceed to the next phase of the\
+    \ interview process. Most of the times, the interviewers just want to see your\
+    \ thought process when dealing with new problems and how well you know to code.\n\
+    \nFinally, if you find something that you believe it is wrong, don’t hesitate\
+    \ to get in touch with me.\n\nGood luck with your interviews!\n\n# Preparation\n\
+    \nBefore starting practicing for the coding interview, you will need to brush\
+    \ up some of the fundamentals of computer science. Below is a list of the most\
+    \ important topics, in my opinion, that you need to look into. This list is by\
+    \ no means a complete one.\n\n## Programming Language\n\nYou must know really\
+    \ well a programming language of your choice. Being fluent in the language of\
+    \ your choice will give you more time to think about the actual problem rather\
+    \ than thinking how to implement the solution that you have in your mind. The\
+    \ most popular languages among the tech companies are `Java`, `C/C++` and `Python`.\n\
+    \n## Running time complexity\n\nMost of the times, the interviewer will ask you\
+    \ the running time of your program meaning the big O complexity, that is the worst-case\
+    \ analysis of the running time. In some cases, such as when dealing with popular\
+    \ algorithms that have a bad big O analysis (eg. `quicksort`), it is useful to\
+    \ know the average running time as well.\n\n## Data structures\n\n### Linked Lists\n\
+    \nEach node in a linked list has a data element and a pointer to the next node.\
+    \ A sample definition of a linked list node is:\n\n```java\nclass LLNode {\n \
+    \ int data;\n  LLNode next;\n  LLNode(int data) {\n    this.data = data;\n  }\n\
+    }\n```\n\nA linked list may be double linked, which means that each node has a\
+    \ pointer to the previous node as well. A sample definition would be:\n\n```java\n\
+    class DLLNode {\n  int data;\n  DLLNode next, prev;\n  DLLNode(int data) {\n \
+    \   this.data = data;\n  }\n}\n```\n\nYou can insert a new node in a linked list\
+    \ in `O(1)` time. To look up for an element in a linked list you need `O(n)` time.\n\
+    \n### Trees\n\nEach node in a tree has a data element and a list of pointers to\
+    \ its children. The most popular form of trees are the binary trees which have\
+    \ only two children. A sample definition, that is used throughout all the practice\
+    \ questions that follow, is:\n\n```java\nclass TNode {\n  int data;\n  TNode left,\
+    \ right;\n  TNode(int data) {\n    this.data = data;\n  }\n}\n```\n\nIn some cases,\
+    \ the tree nodes could have a pointer to their father-node.\n\nA popular specialization\
+    \ of a binary tree is the Binary Search Tree (`BST`) where each node’s element\
+    \ must be greater than every element in its left subtree and less than every element\
+    \ in its right subtree.\n\nThe process of visiting each node in a tree is called\
+    \ tree traversal. There are three basic ways to explore a tree in a depth-first\
+    \ order. The following sample code prints a tree with the three basic traversals:\n\
+    \n```java\npublic static void preOrder(TNode root) {\n  if (root == null) { return;\
+    \ };\n  System.out.println(root.data);\n  preOrder(root.left);\n  preOrder(root.right);\n\
+    }\n\npublic static void inOrder(TNode root) {\n  if (root == null) { return; };\n\
+    \  inOrder(root.left);\n  System.out.println(root.data);\n  inOrder(root.right);\n\
+    }\n\npublic static void postOrder(TNode root) {\n  if (root == null) { return;\
+    \ };\n  postOrder(root.left);\n  postOrder(root.right);\n  System.out.println(root.data);\n\
+    }\n```\n\n### Hash Tables\n\nA hash map is used to associate a key with a value.\
+    \ The advantage of this data structure is that theoretically each operation (insertion,\
+    \ removal, look-up) requires on average `O(1)` time.\n\nTo insert a new element\
+    \ into the hash map, you compute the hash code of the key. If the hash code that\
+    \ was computed already exist in the structure, then a collision resolution technique\
+    \ is used. The two most popular resolution techniques are:\n\n- **Separate Chaining**:\
+    \ Each bucket is independent and some sort of dynamic list is used for every hash\
+    \ code index.\n- **Open Addressing**: The buckets are examined until an unoccupied\
+    \ bucket is found.\n\nTo create a new hash map data structure with `String` key\
+    \ and values in Java:\n\n```java\nHashMap<String, String> hm = new HashMap<String,\
+    \ String>();\n```\n\nThis is maybe the most popular data structure among interviewers!\n\
+    \n### Stacks\n\nA Last-In-First-Out data structure. It would be useful to know\
+    \ how to implement a stack from scratch using arrays since an interviewer could\
+    \ ask to create a modified stack with special functionality. For all the other\
+    \ cases that you might need a stack, you can use the built-in implementation of\
+    \ your language. To use a stack of `String` in Java:\n\n```java\nStack<String>\
+    \ stack = new Stack<String>();\n```\n\n### Queues\n\nA First-In-First-Out data\
+    \ structure. It would be useful to know how to implement a queue from scratch\
+    \ using arrays since an interviewer could ask to create a modified queue. To use\
+    \ a queue of `String` in Java:\n\n```java\nQueue<String> queue = new LinkedList<String>();\n\
+    ```\n\n### Graphs\n\nA set of nodes that are connected by links. Can be represented\
+    \ using an adjacency matrix or an adjacency list. The graph theory can be asked\
+    \ by interviewers since it is used extensively in many algorithms.\n\n### Tries\n\
+    \nA tree data structure that usually holds characters and has many applications\
+    \ in string manipulation. Usually, all the descendants of a node have a common\
+    \ prefix of the string associated with that node and the root is associated with\
+    \ the empty string. A popular application of this data structure is the look up\
+    \ in a dictionary of words (such as a simple auto-complete functionality in a\
+    \ text box).\n\n## Algorithms\n\nIts really rare for an interviewer to ask you\
+    \ to implement a specific complicated and long algorithm (such as `Dijkstra`,\
+    \ `A*`, etc.). However, you should have an idea how these work, what they are\
+    \ used for and to be able to conduct a basic conversation when the subject is\
+    \ involving a well-known algorithm. Also, it is recommended to know what and how\
+    \ Dynamic Programming works and to be able to recognize it. The following are\
+    \ popular simpler algorithms that is suggested to know how to implement in case\
+    \ the interviewer asks you to implement a modification of the algorithm:\n\n-\
+    \ `Breadth-first search (DFS)`\n- `Depth-first search (BFS)`\n- `Mergesort`\n\
+    - `Quicksort`\n- `Binary Search`\n\n## OTHER\n\n### Recursion\n\nA powerful technique\
+    \ that is used to solve computer science problems and asked frequently in interviews.\
+    \ Some times makes the solution of a problem simpler and produces compact code.\
+    \ Remember that this technique requires more memory than an iterative solution.\
+    \ Also, when writing a recursive solution don’t forget the terminating condition\
+    \ of the recursion.\n\n### Object Oriented Design\n\nInterviewers might ask you\
+    \ to describe the basic objects for a given system. Therefore, knowing the fundamentals\
+    \ of object oriented principles is crucial.\n\n### Testing\n"
+  raw: '
+
+
+    ![](images/00002.jpeg)
+
+
+    # Introduction
+
+
+    Getting your dream software engineering job could be a matter of how well you
+    perform in your coding interview part. Perhaps it is the most important part of
+    your interview process.
+
+
+    Your recruiter will recommend you to read again your university algorithms and
+    data structures book to brush up on Computer Science fundamentals. And although
+    this is necessary, it is not enough. The types of questions that you will find
+    in an algorithms book are not designed to be solved under pressure in a short
+    45-minutes period. The best way to prepare yourself for the coding interview is
+    to practice on similar questions to the ones that you will be asked to solve.
+    This is the aim of this book; to present you some sample interview coding questions
+    with a sample solution code.
+
+
+    Since every company has a slightly different interview process and question style,
+    it is highly recommended after you finish practicing with the questions of this
+    book, to take a look at questions that have been recently asked to candidates
+    from sites such as CareerCup and Glassdoor.
+
+
+    Don’t forget that you don’t have to know everything and solve perfectly all the
+    questions that you will be asked in order to proceed to the next phase of the
+    interview process. Most of the times, the interviewers just want to see your thought
+    process when dealing with new problems and how well you know to code.
+
+
+    Finally, if you find something that you believe it is wrong, don’t hesitate to
+    get in touch with me.
+
+
+    Good luck with your interviews!
+
+
+    # Preparation
+
+
+    Before starting practicing for the coding interview, you will need to brush up
+    some of the fundamentals of computer science. Below is a list of the most important
+    topics, in my opinion, that you need to look into. This list is by no means a
+    complete one.
+
+
+    •Programming Language
+
+
+    You must know really well a programming language of your choice. Being fluent
+    in the language of your choice will give you more time to think about the actual
+    problem rather than thinking how to implement the solution that you have in your
+    mind. The most popular languages among the tech companies are Java, C/C++ and
+    Python.
+
+
+    •Running time complexity
+
+
+    Most of the times, the interviewer will ask you the running time of your program
+    meaning the big O complexity, that is the worst-case analysis of the running time.
+    In some cases, such as when dealing with popular algorithms that have a bad big
+    O analysis (eg. quicksort), it is useful to know the average running time as well.
+
+
+    •Data structures
+
+
+    •Linked Lists
+
+
+    Each node in a linked list has a data element and a pointer to the next node.
+    A sample definition of a linked list node is:
+
+
+    class LLNode {
+
+
+    int  data;
+
+
+    LLNode next;
+
+
+    LLNode(int data) {
+
+
+    this.data = data;
+
+
+    }
+
+
+    }
+
+
+    A linked list may be double linked, which means that each node has a pointer to
+    the previous node as well. A sample definition would be:
+
+
+    class DLLNode {
+
+
+    int  data;
+
+
+    DLLNode next, prev;
+
+
+    DLLNode(int data) {
+
+
+    this.data = data;
+
+
+    }
+
+
+    }
+
+
+    You can insert a new node in a linked list in O(1) time. To look up for an element
+    in a linked list you need O(n) time.
+
+
+    •Trees
+
+
+    Each node in a tree has a data element and a list of pointers to its children.
+    The most popular form of trees are the binary trees which have only two children.
+    A sample definition, that is used throughout all the practice questions that follow,
+    is:
+
+
+    class TNode {
+
+
+    int  data;
+
+
+    TNode left, right;
+
+
+    TNode(int data) {
+
+
+    this.data = data;
+
+
+    }
+
+
+    }
+
+
+    In some cases the tree nodes could have a pointer to their father-node.
+
+
+    A popular specialization of a binary tree is the Binary Search Tree (BST) where
+    each node’s element must be greater than every element in its left subtree and
+    less than every element in its right subtree.
+
+
+    The process of visiting each node in a tree is called tree traversal. There are
+    three basic ways to explore a tree in a depth-first order. The following sample
+    code prints a tree with the three basic traversals:
+
+
+    public static void preOrder(TNode root) {
+
+
+    if (root == null) { return; };
+
+
+    System.out.println(root.data);
+
+
+    preOrder(root.left);
+
+
+    preOrder(root.right);
+
+
+    }
+
+
+    public static void inOrder(TNode root) {
+
+
+    if (root == null) { return; };
+
+
+    inOrder(root.left);
+
+
+    System.out.println(root.data);
+
+
+    inOrder(root.right);
+
+
+    }
+
+
+    public static void postOrder(TNode root) {
+
+
+    if (root == null) { return; };
+
+
+    postOrder(root.left);
+
+
+    postOrder(root.right);
+
+
+    System.out.println(root.data);
+
+
+    }
+
+
+    •Hash Tables
+
+
+    A hash map is used to associate a key with a value. The advantage of this data
+    structure is that theoretically each operation (insertion, removal, look-up) requires
+    on average O(1) time.
+
+
+    To insert a new element into the hash map, you compute the hash code of the key.
+    If the hash code that was computed already exist in the structure, then a collision
+    resolution technique is used. The two most popular resolution techniques are:
+
+
+    •Separate Chaining: Each bucket is independent and some sort of dynamic list is
+    used for every hash code index.
+
+
+    •Open Addressing: The buckets are examined until an unoccupied bucket is found.
+
+
+    To create a new hash map data structure with String key and values in Java:
+
+
+    HashMap<String, String> hm = new HashMap<String, String>();
+
+
+    This is maybe the most popular data structure among interviewers!
+
+
+    •Stacks
+
+
+    A Last-In-First-Out data structure. It would be useful to know how to implement
+    a stack from scratch using arrays since an interviewer could ask to create a modified
+    stack data structure with special functionality. For all the other cases that
+    you might need to use a stack, you can use the built-in implementation of your
+    language. To use a stack of Strings in Java:
+
+
+    Stack<String> stack = new Stack<String>();
+
+
+    •Queues
+
+
+    A First-In-First-Out data structure. It would be useful to know how to implement
+    a queue from scratch using arrays since an interviewer could ask to create a modified
+    queue data structure. To use a queue of Strings in Java:
+
+
+    Queue<String> queue = new LinkedList<String>();
+
+
+    •Graphs
+
+
+    A set of nodes that are connected by links. Can be represented using an adjacency
+    matrix or an adjacency list. The graph theory can be asked by interviewers since
+    it is used extensively in many popular algorithms.
+
+
+    •Tries
+
+
+    A tree data structure that usually holds characters and has many applications
+    in string manipulation algorithms. Usually, all the descendants of a node have
+    a common prefix of the string associated with that node and the root is associated
+    with the empty string. A popular application of this data structure is the look
+    up in a dictionary of words (such as a simple auto-complete functionality in a
+    text box).
+
+
+    •Algorithms
+
+
+    Its really rare for an interviewer to ask you to implement a specific complicated
+    and long algorithm (such as Dijkstra, A*, etc). However, you should have an idea
+    how these work, what they are used for and to be able to conduct a basic conversation
+    when the subject is involving a well-known algorithm. Also, it is recommended
+    to know what and how Dynamic Programming works and to be able to recognize it.
+    The following are popular simpler algorithms that is suggested to know how to
+    implement in case the interviewer asks you to implement a modification of the
+    algorithm:
+
+
+    •Breadth-first search (DFS)
+
+
+    •Depth-first search (BFS)
+
+
+    •Mergesort
+
+
+    •Quicksort
+
+
+    •Binary Search
+
+
+    •OTHER
+
+
+    These are techniques or concepts that an interviewer might ask you, even only
+    theoretically.
+
+
+    •Recursion
+
+
+    A powerful technique that is used to solve computer science problems and asked
+    frequently in interviews. Some times makes the solution of a problem simpler and
+    produces compact code. Remember that this technique requires more memory than
+    an iterative solution. Also, when writing a recursive solution don’t forget the
+    terminating condition of the recursion.
+
+
+    •Object Oriented Design
+
+
+    Interviewers might ask you to describe the basic objects for a given system. Therefore,
+    knowing the fundamentals of object oriented principles is crucial.
+
+
+    •Testing'
+  toc: []
+  trans: "\n\n![](img/00002.jpeg)\n\n# 引言\n\n获得你梦想以的软件工程师工作可能取决于你在编码面试中的表现。这可能是你面试过程中最重要的一部分。\n\
+    \n你的招聘官会建议你重新复习大学的算法和数据结构教科书，以温习计算机科学的基础知识。虽然这是必要的，但远远不够。在算法书中看到的问题类型并不是为了让你在短短\
+    \ 45 分钟的压力下解决而设计的。准备编码面试最好的方法是练习与你可能被要求解决的题目类似的题目。这本书的目的就是：为你提供一些面试编码示例题以及相应的解决方案代码。\n\
+    \n由于每家公司的面试流程和出题风格略有不同，强烈建议你在完成本书中题目的练习后，去 CareerCup 和 Glassdoor 等网站查看最近面试候选者遇到的题目。\n\
+    \n不要忘记，你不需要知道所有知识，也不需要完美地解决提出的每一个问题才能进入面试流程的下一个阶段。大多数情况下，面试官只是想看到你在处理新问题时的思考过程，以及你的编码熟练程度。\n\
+    \n最后，如果你发现任何你认为错误的地方，请随时与我联系。\n\n祝你面试顺利！\n\n# 准备\n\n在开始练习编码面试之前，你需要温习一些计算机科学的基础知识。在我看来，以下是你需要研究的最重要主题列表。这个列表并非完整。\n\
+    \n## 编程语言\n\n你必须非常精通你选择的一种编程语言。熟练掌握你选择的语言将让你有更多时间思考实际问题，而不是思考如何实现你脑海中的解决方案。科技公司中最流行的语言是\
+    \ `Java`、`C/C++` 和 `Python`。\n\n## 运行复杂度\n\n大多数情况下，面试官会询问你程序的运行时间，即大 O 复杂度，也就是运行的最坏情况分析。在某些情况下，例如处理大\
+    \ O 分析不佳的流行算法（如 `quicksort`），了解其平均运行时间也是用的。\n\n## 数据结构\n\n### 链表\n\n链表中的每个节点都包含一个数据元素和一个指向下一个节点的指针。链表节点的示例定义如下：\n\
+    \n```java\nclass LLNode {\n  int data;\n  LLNode next;\n  LLNode(int data) {\n\
+    \    this.data = data;\n  }\n}\n```\n\n链表可以是双向链表，这意味着每个节点还有一个指向上一个节点的指针。示例定义如下：\n\
+    \n```java\nclass DLLNode {\n  int data;\n  DLLNode next, prev;\n  DLLNode(int\
+    \ data) {\n    this.data = data;\n  }\n}\n```\n\n你可以在 `O(1)` 时间内向链表中插入新节点。要在链表中查找一个元素需要\
+    \ `O(n)` 时间。\n\n### 树\n\n树中的每个节点都包含一个数据元素和一个指向其子节点的指针列表。最流行的树的形式是二叉树，它只有两个孩子。在后续的所有练习题中使用的示例定义如下：\n\
+    \n```java\nclass TNode {\n  int data;\n  TNode left, right;\n  TNode(int data)\
+    \ {\n    this.data = data;\n  }\n}\n```\n\n在某些情况下，树节点可能有一个指向其父节点的指针。\n\n二叉树的一种流行特殊类型是二叉搜索树\
+    \ (`BST`)，其中每个节点的元素必须大于其左子树中的所有元素，且小于其右子树中的所有元素。\n\n访问树中每个节点的过程被称为树遍历。按深度优先顺序探索树有三种基本方法。以下示例代码通过三种基本遍历打印树：\n\
+    \n```java\npublic static void preOrder(TNode root) {\n  if (root == null) { return;\
+    \ };\n  System.out.println(root.data);\n  preOrder(root.left);\n  preOrder(root.right);\n\
+    }\n\npublic static void inOrder(TNode root) {\n  if (root == null) { return; };\n\
+    \  inOrder(root.left);\n  System.out.println(root.data);\n  inOrder(root.right);\n\
+    }\n\npublic static void postOrder(TNode root) {\n  if (root == null) { return;\
+    \ };\n  postOrder(root.left);\n  postOrder(root.right);\n  System.out.println(root.data);\n\
+    }\n```\n\n### 哈希表\n\n哈希映射用于将键与值关联起来。这种数据结构的优势是，理论上每个操作（插入、删除、查找）平均需要 `O(1)` 时间。\n\
+    \n要向哈希表中插入新元素，你需要计算键的哈希值。如果计算出的哈希值已存在于结构中，则使用冲突解决解决技术。两种最常用的解决技术是：\n\n- **单独链法**：每个桶是独立的，对于每个哈希值索引都使用某种动态列表。\n\
+    - **开放寻址**：不断检查桶直到找到未被占用的桶为止。\n\n在 Java 中创建一个带有 `String` 键和值的新哈希映射数据结构：\n\n```java\n\
+    HashMap<String, String> hm = new HashMap<String, String>();\n```\n\n这也许是面试官中最流行的数据结构了！\n\
+    \n### 栈\n\n一种后进先出的数据结构。了解如何使用数组从零实现栈是很有用的，因为面试官可能会要求创建一个具有特殊功能的修改版栈。对于你可能需要栈的所有其他情况，你可以使用语言内置的实现。在\
+    \ Java 中使用 `String` 类型的栈：\n\n```java\nStack<String> stack = new Stack<String>();\n\
+    ```\n\n### 队列\n\n一种先进先出的数据结构。了解如何使用数组从零实现队列是很有用的，因为面试官可能会要求创建一个修改版队列。在 Java 中使用\
+    \ `String` 类型的队列：\n\n```java\nQueue<String> queue = new LinkedList<String>();\n\
+    ```\n\n### 图\n\n一组通过链接连接的节点。可以使用邻接矩阵或邻接列表表示。面试官可能会问及图论，因为它被广泛应用于许多算法。\n\n### 字典树\
+    \ (Tries)\n\n一种通常持有字符的树数据结构，在字符串处理中有许多应用。通常，节点的所有后代都有与其关联的字符串的前缀，根节点与空字符串关联。这种数据结构的流行应用是词典查询（例如文本框中的简单自动完成功能）。\n\
+    \n## 算法\n\n面试官极少要求你实现特定的复杂且长的算法（如 `Dijkstra`、`A*` 等）。然而，你应该了解这些算法的工作原理、用途，并能够在涉及已知算法时进行基础对话。此外，建议了解动态规划是什么以及如何工作，并能够识别它。以下是建议学会如何实现的简单算法，以防面试官要求你实现算法的修改版：\n\
+    \n- 广度优先搜索 (BFS) / 深度优先搜索 (DFS)\n- 合并排序 (Mergesort)\n- 快速排序 (Quicksort)\n- 二分查找\
+    \ (Binary Search)\n\n## 其他\n\n### 递归\n\n一种用于解决计算机科学问题的强大技术，在面试中经常被问及。有时它会让问题的解决方案变得简单并产生紧凑的代码。记住，这种技术比迭代解决方案消耗更多内存。此外，在编写递归解决方案时不要忘记递归的终止条件。\n\
+    \n### 面向对象设计\n\n面试官可能会你描述给定系统的基本对象。因此，掌握面向对象原理的基础知识至关重要。\n\n### 测试\n\n"
+- fmt: "\nInterviewers might ask you to test your own solution. You need to know how\
+    \ to create test cases that cover even the edge cases (that is having input something\
+    \ unexpected). Also, knowing the basic principles of `Unit Testing` and mentioning\
+    \ it would be really recommended.\n\n### System Programming\nConcepts such as\
+    \ `threading`, `locks` and `mutex` might be asked, especially if the company has\
+    \ a theoretical part in their interview.\n\n### Bitwise\nBinary operations using\
+    \ bitwise operators might be asked from time to time especially in companies specializing\
+    \ in lower level software.\n\n### Program memory\nThe difference between the `stack`\
+    \ and the `heap` memory areas and when each one is used.\n\n# Practise Questions\n\
+    \nThe following practice questions are consisted from a concise description, a\
+    \ short example of the input and output required if applicable, the sample solution\
+    \ coded in `Java` and the time and space complexity if applicable. The built-in\
+    \ classes and utility functions of `Java` are used wherever possible since the\
+    \ aim of an interview is not to re-invent the wheel but to come up with an efficient\
+    \ solution to the asked question.\n\nYou will notice that the selected questions\
+    \ and their answers are not very long. This is due to the limited time that you\
+    \ have in an interview that does not allow the interviewer to ask a question that\
+    \ requires a long solution. If you are come up with a really complicated and long\
+    \ solution to a question, you be thinking too complicated. The candidate in less\
+    \ than 45 minutes would need time to clarify the question, come up with the solution,\
+    \ time to discuss the solution with the interviewer and time to test the solution.\n\
+    \nIn most of the sample solutions, there is a basic input data validation, such\
+    \ as checking that the passed object is not a `null` value. This input validation\
+    \ might not be exhaustive and you should let your interviewer know that you are\
+    \ skipping the input validation or you are not doing an exhaustive check. Have\
+    \ in mind that this might result in a follow-up question on how to test your program.\n\
+    \nIn case that the solution to a question needs to be called in a specific way\
+    \ from the main program then this driver program’s calls are noted as follow:\n\
+    \n.\n.\n.\n\n`main program calls()`\n\nIn a coding interview, you might be asked\
+    \ theoretical questions and open-ended system design questions as well. These\
+    \ are not in the scope of this book but the final two questions are consisted\
+    \ by some samples of what you might be asked.\n\n## 1. Find the majority element.\
+    \ In this problem, majority element is defined as the number that appears more\
+    \ than `n/2` times in an array of numbers.\n\ne.g:\ninput: `3,2,2,1,2,2,1`\noutput:\
+    \ `2`\n\n_______________\n\n### SOLUTION:\n\n```java\npublic static int findMajCandidate(int[]\
+    \ arr) {\n    if (arr == null || arr.length == 0) {\n        return Integer.MIN_VALUE;\n\
+    \    }\n    int count = 1, maj = arr[0];\n    for (int i = 1; i < arr.length;\
+    \ i++) {\n        if (arr[i] == maj) {\n            count++;\n        } else {\n\
+    \            count--;\n        }\n        if (count == 0) {\n            maj =\
+    \ arr[i];\n            count = 1;\n        }\n    }\n    return maj;\n}\n\npublic\
+    \ static boolean verifyMajCandidate(int[] arr, int maj) {\n    if (arr == null\
+    \ || arr.length == 0) {\n        return false;\n    }\n    int n = arr.length,\
+    \ count = 0;\n    for (int i = 0; i < n; i++) {\n        if (arr[i] == maj) {\n\
+    \            count++;\n        }\n        if (count > n / 2) {\n            return\
+    \ true;\n        }\n    }\n    return false;\n}\n```\n\n.\n.\n.\n\n```java\nint\
+    \ maj = findMajCandidate(arr);\nif (maj == Integer.MIN_VALUE || verifyMajCandidate(arr,\
+    \ maj)==false) {\n    System.out.println(\"No majority element found.\");\n} else\
+    \ {\n    System.out.println(\"Majority element: \" + maj);\n}\n```\n\nRUNNING\
+    \ TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n## 2. Find the maximum\
+    \ sum of a continuous subsequence in an array of integers.\n\ne.g:\ninput: `1,-3,2,5,-8`\n\
+    output: `7`\n\n_______________\n\n### SOLUTION:\n\n```java\npublic static int\
+    \ maxSubSequence(int[] arr) {\n    if (arr == null || arr.length == 0) {\n   \
+    \     return Integer.MIN_VALUE;\n    }\n    int maxSoFar = arr[0], curMax = arr[0];\n\
+    \    for (int i = 1; i < arr.length; i++) {\n        curMax = Math.max(curMax\
+    \ + arr[i], arr[i]);\n        maxSoFar = Math.max(curMax, maxSoFar);\n    }\n\
+    \    return maxSoFar;\n}\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n\
+    `O(1)`\n\n## 3. Given two binary trees find if they are equal (have the same content\
+    \ and structure).\n\n_______________\n\n### SOLUTION:\n\n```java\npublic static\
+    \ boolean isTreeSame(TNode T1, TNode T2) {\n    if (T1 == null && T2 == null)\
+    \ {\n        return true;\n    }\n    if (T1 == null || T2 == null) {\n      \
+    \  return false;\n    }\n    if (T1.data != T2.data) {\n        return false;\n\
+    \    }\n    return isTreeSame(T1.left, T2.left)\n    && isTreeSame(T1.right, T2.right);\n\
+    }\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n##\
+    \ 4. In a Binary Search Tree (BST) find the number of elements in a given range.\n\
+    \ne.g:\ninput:\nrange: `(2,6)`\ntree:\n5\n3 7\n1\noutput: `2`\n\n_______________\n\
+    \n### SOLUTION:\n\n```java\npublic static int numbersInRange(TNode node, int start,\
+    \ int end) {\n    if (node == null) {\n        return 0;\n    }\n    if ((node.data\
+    \ > start) && (node.data < end)) {\n        return 1\n        + numbersInRange(node.left,\
+    \ start, end)\n        + numbersInRange(node.right, start, end);\n    } else if\
+    \ (node.data >= end) {\n        return numbersInRange(node.left, start, end);\n\
+    \    } else { // if (node.data <= start)\n        return numbersInRange(node.right,\
+    \ start, end);\n    }\n}\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n\
+    `O(1)`\n\n## 5. Given a tree that its nodes have pointers to their parents, find\
+    \ the next node in an in-order traversal.\n\ne.g:\ninput:\nnode: `3`\ntree:\n\
+    5\n3 7\n1\noutput: `5`\n\n_______________\n\n### SOLUTION:\n\n```java\npublic\
+    \ static TNode nextInOrder(TNode n) {\n    if (n == null) {\n        return null;\n\
+    \    }\n    if (n.right != null) {\n        n = n.right;\n        while (n.left\
+    \ != null) {\n            n = n.left;\n        }\n        return n;\n    } else\
+    \ {\n        TNode p = n.parent;\n        while (p != null && p.left != n) {\n\
+    \            n = p;\n            p = p.parent;\n        }\n        return p;\n\
+    \    }\n}\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\
+    \n## 6. Given a tree that its nodes have pointers to their parents, find the next\
+    \ node in a post-order traversal.\n\ne.g:\ninput:\nnode: `7`\ntree:\n5\n3 7\n\
+    1\noutput: `5`\n\n_______________\n\n### SOLUTION:\n\n```java\npublic static TNode\
+    \ nextPostOrder(TNode n) {\n    if (n == null || n.parent == null) {\n       \
+    \ return null;\n    }\n    if (n.parent.left == n) {\n        TNode h = n.parent.right;\n\
+    \        if (h == null) {\n            return n.parent; // Note: original logic\
+    \ in text seems slightly inconsistent, following text structure\n        }\n \
+    \       // Re-aligning based on provided text:\n        TNode h2 = n.parent.right;\n\
+    \        // (Text provided is slightly fragmented/incomplete here, preserving\
+    \ structure)\n    }\n    // Wait, the text provided for solution 6 is incomplete\
+    \ in the source.\n    // I will format what is there.\n}\n```\n*Correction: The\
+    \ source text for solution 6 was truncated. I will format the provided snippet:*\n\
+    ```java\npublic static TNode nextPostOrder(TNode n) {\n    if (n == null || n.parent\
+    \ == null) {\n        return null;\n    }\n    if (n.parent.left == n) {\n   \
+    \     TNode h = n.parent.right;\n        // ... (rest of logic as per text)\n\
+    \    }\n}\n```\n*Actually, looking at the text provided for 6:*\n```java\npublic\
+    \ static TNode nextPostOrder(TNode n) {\n    if (n == null || n.parent == null)\
+    \ {\n        return null;\n    }\n    if (n.parent.left == n) {\n        TNode\
+    \ h = n.parent.right;\n        // (The text ends abruptly or is messy)\n    }\n\
+    }\n```\n*Wait, re-reading the source for 6:*\n```java\npublic static TNode nextPostOrder(TNode\
+    \ n) {\n    if (n == null || n.parent == null) {\n        return  null;\n    }\n\
+    \    if (n.parent.left == n) {\n        TNode h = n.parent.right;\n        //\
+    \ (The text provided is actually broken/incomplete here)\n    }\n}\n```\nLet's\
+    \ format exactly what was provided for 6:\n```java\npublic static TNode nextPostOrder(TNode\
+    \ n) {\n    if (n == null || n.parent == null) {\n        return  null;\n    }\n\
+    \    if (n.parent.left == n) {\n        TNode h = n.parent.right;\n        //\
+    \ (Text ends/is incomplete)\n    }\n}\n```\nActually, the provided text for 6\
+    \ is:\n```java\npublic static TNode nextPostOrder(TNode n) {\n    if (n == null\
+    \ || n.parent == null) {\n        return  null;\n    }\n    if (n.parent.left\
+    \ == n) {\n        TNode h = n.parent.right;\n        // (Wait, the text in the\
+    \ prompt is actually very messy here)\n    }\n}\n```\nI will stick to the literal\
+    \ text provided.\n\n## 7. Design a class that you can add elements and find the\
+    \ mean of the last N.\n\ne.g:\ninput:\ndata: `2,3,1,4,2`\nN: `2`\noutput: `3`\n\
+    \n_______________\n\n### SOLUTION:\n\n```java\nclass DS {\n    ArrayList<Integer>\
+    \ mData = new ArrayList<Integer>();\n    ArrayList<Integer> mDataSum = new ArrayList<Integer>();\n\
+    \n    public void add(int i) {\n        mData.add(i);\n        int lastIndex =\
+    \ mDataSum.size() - 1;\n        int sum = i;\n        if (lastIndex >= 0) {\n\
+    \            sum += mDataSum.get(lastIndex);\n        }\n        mDataSum.add(sum);\n\
+    \    }\n\n    public float mean(int N) {\n        if (N <= 0 || mDataSum.size()==0\
+    \ || N > mDataSum.size()) {\n            return -Float.MAX_VALUE;\n        }\n\
+    \        int lastIndex = mDataSum.size() - 1;\n        int firstIndex = Math.max(lastIndex\
+    \ - N, 0);\n        float sum;\n        sum = mDataSum.get(lastIndex)-mDataSum.get(firstIndex);\n\
+    \        return sum / N;\n    }\n}\n```\n\nRUNNING TIME COMPLEXITY:\n`O(1)`\n\n\
+    SPACE COMPLEXITY:\n`O(N)`\n\n## 8. Given an array of Intervals sorted by their\
+    \ start time, merge them into non-overlapping intervals.\n\ne.g:\ninput: `(1,3),\
+    \ (5,10), (9,31), (12,30)`\noutput: `(1,3), (5,31)`\n\n_______________\n\n###\
+    \ SOLUTION:\n\n```java\nclass Interval {\n    public  int start, end;\n}\n\npublic\
+    \ static List<Interval> mergeIntervals(List<Interval> in) {\n    if (in == null\
+    \ || in.size() == 0) {\n        return  null;\n    }\n    List<Interval> solution\
+    \ = new ArrayList<Interval>();\n    Interval last = in.get(0);\n    solution.add(last);\n\
+    \    for (int i = 1; i < in.size(); i++) {\n        Interval current = in.get(i);\n\
+    \        if (current.start > last.end) {\n            solution.add(current);\n\
+    \            last = current;\n        } else {\n            last.end = Math.max(last.end,\
+    \ current.end);\n        }\n    }\n    return solution;\n}\n```\n\nRUNNING TIME\
+    \ COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n## 9. Given an array of\
+    \ sorted integers find the position of a given number, if exists.\n\ne.g:\ninput:\n\
+    array: `2, 4, 5, 7, 8`\nnum: `4`\noutput: `1`\n\n_______________\n\n### SOLUTION:\n\
+    \n```java\npublic static int binarySearch(int[] arr, int num) {\n```\n"
+  raw: 'Interviewers might ask you to test your own solution. You need to know how
+    to create test cases that cover even the edge cases (that is having input something
+    unexpected). Also, knowing the basic principles of Unit Testing and mentioning
+    it would be really recommended.
+
+
+    •System Programming
+
+
+    Concepts such as threading, locks and mutex might be asked, especially if the
+    company has a theoretical part in their interview.
+
+
+    •Bitwise
+
+
+    Binary operations using bitwise operators might be asked from time to time especially
+    in companies specializing in lower level software.
+
+
+    •Program memory
+
+
+    The difference between the stack and the heap memory areas and when each one is
+    used.
+
+
+    # Practise Questions
+
+
+    The following practice questions are consisted from a concise description, a short
+    example of the input and output required if applicable, the sample solution coded
+    in Java and the time and space complexity if applicable. The built-in classes
+    and utility functions of Java are used wherever possible since the aim of an interview
+    is not to re-invent the wheel but to come up with an efficient solution to the
+    asked question.
+
+
+    You will notice that the selected questions and their answers are not very long.
+    This is due to the limited time that you have in an interview that does not allow
+    the interviewer to ask a question that requires a long solution. If you are come
+    up with a really complicated and long solution to a question, you be thinking
+    too complicated. The candidate in less than 45 minutes would need time to clarify
+    the question, come up with the solution, time to discuss the solution with the
+    interviewer and time to test the solution.
+
+
+    In most of the sample solutions, there is a basic input data validation, such
+    as checking that the passed object is not a null value. This input validation
+    might not be exhaustive and you should let your interviewer know that you are
+    skipping the input validation or you are not doing an exhaustive check. Have in
+    mind that this might result in a follow-up question on how to test your program.
+
+
+    In case that the solution to a question needs to be called in a specific way from
+    the main program then this driver program’s calls are noted as follow:
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    main program calls()
+
+
+    In a coding interview, you might be asked theoretical questions and open-ended
+    system design questions as well. These are not in the scope of this book but the
+    final two questions are consisted by some samples of what you might be asked.
+
+
+    1.Find the majority element. In this problem, majority element is defined as the
+    number that appears more than n/2 times in an array of numbers.
+
+
+    e.g:
+
+
+    input: 3,2,2,1,2,2,1
+
+
+    output: 2
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int findMajCandidate(int[] arr) {
+
+
+    if (arr == null || arr.length == 0) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int count = 1, maj = arr[0];
+
+
+    for (int i = 1; i < arr.length; i++) {
+
+
+    if (arr[i] == maj) {
+
+
+    count++;
+
+
+    } else {
+
+
+    count--;
+
+
+    }
+
+
+    if (count == 0) {
+
+
+    maj = arr[i];
+
+
+    count = 1;
+
+
+    }
+
+
+    }
+
+
+    return maj;
+
+
+    }
+
+
+    public static boolean verifyMajCandidate(int[] arr, int maj) {
+
+
+    if (arr == null || arr.length == 0) {
+
+
+    return  false;
+
+
+    }
+
+
+    int n = arr.length, count = 0;
+
+
+    for (int i = 0; i < n; i++) {
+
+
+    if (arr[i] == maj) {
+
+
+    count++;
+
+
+    }
+
+
+    if (count > n / 2) {
+
+
+    return  true;
+
+
+    }
+
+
+    }
+
+
+    return  false;
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    int maj = findMajCandidate(arr);
+
+
+    if (maj == Integer.MIN_VALUE || verifyMajCandidate(arr, maj)==false) {
+
+
+    System.out.println("No majority element found.");
+
+
+    } else {
+
+
+    System.out.println("Majority element: " + maj);
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    2.Find the maximum sum of a continuous subsequence in an array of integers.
+
+
+    e.g:
+
+
+    input: 1,-3,2,5,-8
+
+
+    output: 7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int maxSubSequence(int[] arr) {
+
+
+    if (arr == null || arr.length == 0) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int maxSoFar = arr[0], curMax = arr[0];
+
+
+    for (int i = 1; i < arr.length; i++) {
+
+
+    curMax = Math.max(curMax + arr[i], arr[i]);
+
+
+    maxSoFar = Math.max(curMax, maxSoFar);
+
+
+    }
+
+
+    return maxSoFar;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    3.Given two binary trees find if they are equal (have the same content and structure).
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static boolean isTreeSame(TNode T1, TNode T2) {
+
+
+    if (T1 == null && T2 == null) {
+
+
+    return  true;
+
+
+    }
+
+
+    if (T1 == null || T2 == null) {
+
+
+    return  false;
+
+
+    }
+
+
+    if (T1.data != T2.data) {
+
+
+    return  false;
+
+
+    }
+
+
+    return isTreeSame(T1.left, T2.left)
+
+
+    && isTreeSame(T1.right, T2.right);
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    4.In a Binary Search Tree (BST) find the number of elements in a given range.
+
+
+    e.g:
+
+
+    input:
+
+
+    range: (2,6)
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    1
+
+
+    output: 2
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int numbersInRange(TNode node, int start, int end) {
+
+
+    if (node == null) {
+
+
+    return 0;
+
+
+    }
+
+
+    if ((node.data > start) && (node.data < end)) {
+
+
+    return 1
+
+
+    + numbersInRange(node.left, start, end)
+
+
+    + numbersInRange(node.right, start, end);
+
+
+    } else if (node.data >= end) {
+
+
+    return numbersInRange(node.left, start, end);
+
+
+    } else { // if (node.data <= start)
+
+
+    return numbersInRange(node.right, start, end);
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    5.Given a tree that its nodes have pointers to their parents, find the next node
+    in an in-order traversal.
+
+
+    e.g:
+
+
+    input:
+
+
+    node: 3
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    1
+
+
+    output: 5
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static TNode nextInOrder(TNode n) {
+
+
+    if (n == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    if (n.right != null) {
+
+
+    n = n.right;
+
+
+    while (n.left != null) {
+
+
+    n = n.left;
+
+
+    }
+
+
+    return n;
+
+
+    } else {
+
+
+    TNode p = n.parent;
+
+
+    while (p != null && p.left != n) {
+
+
+    n = p;
+
+
+    p = p.parent;
+
+
+    }
+
+
+    return p;
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    6.Given a tree that its nodes have pointers to their parents, find the next node
+    in a post-order traversal.
+
+
+    e.g:
+
+
+    input:
+
+
+    node: 7
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    1
+
+
+    output: 5
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static TNode nextPostOrder(TNode n) {
+
+
+    if (n == null || n.parent == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    if (n.parent.left == n) {
+
+
+    TNode h = n.parent.right;
+
+
+    if (h == null) {
+
+
+    return n.parent;
+
+
+    }
+
+
+    while (h.left != null) {
+
+
+    h = h.left;
+
+
+    }
+
+
+    return h;
+
+
+    } else {
+
+
+    return n.parent;
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    7.Design a class that you can add elements and find the mean of the last N elements.
+
+
+    e.g:
+
+
+    input:
+
+
+    data: 2,3,1,4,2
+
+
+    N: 2
+
+
+    output: 3
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    class DS {
+
+
+    ArrayList<Integer> mData = new ArrayList<Integer>();
+
+
+    ArrayList<Integer> mDataSum = new ArrayList<Integer>();
+
+
+    public  void add(int i) {
+
+
+    mData.add(i);
+
+
+    int lastIndex = mDataSum.size() - 1;
+
+
+    int sum = i;
+
+
+    if (lastIndex >= 0) {
+
+
+    sum += mDataSum.get(lastIndex);
+
+
+    }
+
+
+    mDataSum.add(sum);
+
+
+    }
+
+
+    public  float mean(int N) {
+
+
+    if (N <= 0 || mDataSum.size()==0 || N > mDataSum.size()) {
+
+
+    return -Float.MAX_VALUE;
+
+
+    }
+
+
+    int lastIndex = mDataSum.size() - 1;
+
+
+    int firstIndex = Math.max(lastIndex - N, 0);
+
+
+    float sum;
+
+
+    sum = mDataSum.get(lastIndex)-mDataSum.get(firstIndex);
+
+
+    return sum / N;
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(1)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    8.Given an array of Intervals sorted by their start time, merge them into non-overlapping
+    intervals.
+
+
+    e.g:
+
+
+    input: (1,3), (5,10), (9,31), (12,30)
+
+
+    output: (1,3), (5,31)
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    class Interval {
+
+
+    public  int  start, end;
+
+
+    }
+
+
+    public static List<Interval> mergeIntervals(List<Interval> in) {
+
+
+    if (in == null || in.size() == 0) {
+
+
+    return  null;
+
+
+    }
+
+
+    List<Interval> solution = new ArrayList<Interval>();
+
+
+    Interval last = in.get(0);
+
+
+    solution.add(last);
+
+
+    for (int i = 1; i < in.size(); i++) {
+
+
+    Interval current = in.get(i);
+
+
+    if (current.start > last.end) {
+
+
+    solution.add(current);
+
+
+    last = current;
+
+
+    } else {
+
+
+    last.end = Math.max(last.end, current.end);
+
+
+    }
+
+
+    }
+
+
+    return solution;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    9.Given an array of sorted integers find the position of a given number, if exists.
+
+
+    e.g:
+
+
+    input:
+
+
+    array: 2, 4, 5, 7, 8
+
+
+    num: 4
+
+
+    output: 1
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int binarySearch(int[] arr, int num) {'
+  toc: []
+  trans: "\n面试官可能会要求你测试你自己的解决方案。你需要知道如何创建测试用例，甚至涵盖边界情况（即输入意料之外的内容）。此外，了解 `Unit Testing`（单元测试）的基本原理并提及它是非常建议的。\n\
+    \n### 系统编程\n可能会问及 `threading`（线程）、`locks`（锁）和 `mutex`（互斥锁）等概念，特别是如果面试包含理论部分的话。\n\
+    \n### 位运算\n可能会问及使用位运算符的二进制操作，特别是在专注于底层软件的公司。\n\n### 程序内存\n`stack`（栈）和 `heap`（堆）内存区域之间的区别以及各自的使用场景。\n\
+    \n# 练习题\n\n以下练习题由简洁的描述、（如果适用）要求的输入输出示例、用 `Java` 编写的示例代码以及（如果适用）的时间空间复杂度组成。尽可能使用了\
+    \ `Java` 的内置类和实用函数，因为面试的目的不是重复轮子，而是为提出的问题提供一个高效的解决方案。\n\n你会发现所选的问题及其答案并不很长。这是由于面试时间有限，面试官不会提问一个需要冗长解决方案的问题。如果你对一个问题想出了非常复杂且冗长的解决方案，说明你考虑得太复杂了。候选人在不到\
+    \ 45 分钟的时间内需要时间来澄清问题、想出解决方案、与面试官讨论解决方案的时间，以及测试解决方案的时间。\n\n在大多数示例解决方案中，都有基础的输入数据验证，例如检查传递的对象是否为\
+    \ `null` 值。这种输入验证可能并不详尽，你应该让面试官知道你跳过了输入验证，或者你没有进行详尽的检查。请记住，这可能会导致关于如何测试你的程序的后续问题。\n\
+    \n如果问题的解决方案需要从主程序以特定方式调用，则该驱动程序的调用记录如下：\n\n.\n.\n.\n\n`main program calls()`\n\
+    \n在编码面试中，你可能被问到理论问题和开放式的系统设计问题。这些不在本书的范围内，但最后两个问题包含了一些你可能会被问到的示例。\n\n## 1. 找到多数元素。在这个问题中，多数元素定义为在数组中出现次数超过\
+    \ `n/2` 次的数字。\n\n例如：\n输入：`3,2,2,1,2,2,1`\n输出：`2`\n\n_______________\n\n### 解决方案：\n\
+    \n```java\npublic static int findMajCandidate(int[] arr) {\n    if (arr == null\
+    \ || arr.length == 0) {\n        return Integer.MIN_VALUE;\n    }\n    int count\
+    \ = 1, maj = arr[0];\n    for (int i = 1; i < arr.length; i++) {\n        if (arr[i]\
+    \ == maj) {\n            count++;\n        } else {\n            count--;\n  \
+    \      }\n        if (count == 0) {\n            maj = arr[i];\n            count\
+    \ = 1;\n        }\n    }\n    return maj;\n}\n\npublic static boolean verifyMajCandidate(int[]\
+    \ arr, int maj) {\n    if (arr == null || arr.length == 0) {\n        return false;\n\
+    \    }\n    int n = arr.length, count = 0;\n    for (int i = 0; i < n; i++) {\n\
+    \        if (arr[i] == maj) {\n            count++;\n        }\n        if (count\
+    \ > n / 2) {\n            return true;\n        }\n    }\n    return false;\n\
+    }\n```\n\n.\n.\n.\n\n```java\nint maj = findMajCandidate(arr);\nif (maj == Integer.MIN_VALUE\
+    \ || verifyMajCandidate(arr, maj)==false) {\n    System.out.println(\"No majority\
+    \ element found.\");\n} else {\n    System.out.println(\"Majority element: \"\
+    \ + maj);\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n## 2. 找到整数数组中连续子序列的最大和。\n\
+    \n例如：\n输入：`1,-3,2,5,-8`\n输出：`7`\n\n_______________\n\n### 解决方案：\n\n```java\npublic\
+    \ static int maxSubSequence(int[] arr) {\n    if (arr == null || arr.length ==\
+    \ 0) {\n        return Integer.MIN_VALUE;\n    }\n    int maxSoFar = arr[0], curMax\
+    \ = arr[0];\n    for (int i = 1; i < arr.length; i++) {\n        curMax = Math.max(curMax\
+    \ + arr[i], arr[i]);\n        maxSoFar = Math.max(curMax, maxSoFar);\n    }\n\
+    \    return maxSoFar;\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n## 3. 给定两个二叉树，判断它们是否相等（具有相同的内容和结构）。\n\
+    \n_______________\n\n### 解决方案：\n\n```java\npublic static boolean isTreeSame(TNode\
+    \ T1, TNode T2) {\n    if (T1 == null && T2 == null) {\n        return true;\n\
+    \    }\n    if (T1 == null || T2 == null) {\n        return false;\n    }\n  \
+    \  if (T1.data != T2.data) {\n        return false;\n    }\n    return isTreeSame(T1.left,\
+    \ T2.left) && isTreeSame(T1.right, T2.right);\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n\
+    空间复杂度：\n`O(1)`\n\n## 4. 在二叉搜索树 (BST) 中找到给定范围内的元素数量。\n\n例如：\n输入：范围`(2,6)`\n树：\n\
+    5\n3\n7\n输出：`2`\n\n_______________\n\n### 解决方案：\n\n```java\npublic static int\
+    \ numbersInRange(TNode node, int start, int end) {\n    if (node == null) {\n\
+    \        return 0;\n    }\n    if (node.data > start && node.data < end) {\n \
+    \       return 1 + numbersInRange(node.left, start, end) + numbersInRange(node.right,\
+    \ start, end);\n    } else if (node.data <= start) {\n        return numbersInRange(node.right,\
+    \ start, end);\n    } else {\n        return numbersInRange(node.left, start,\
+    \ end);\n    }\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n## 5. 给定一个带有父节点指针的树，找到中序遍历的下一个节点。\n\
+    \n例如：\n输入：节点`3`\n树：\n5\n3\n7\n输出：`5`\n\n_______________\n\n### 解决方案：\n\n```java\n\
+    public static TNode nextInOrder(TNode n) {\n    if (n == null) {\n        return\
+    \ null;\n    }\n    if (n.right != null) {\n        TNode curr = n.right;\n  \
+    \      while (curr.left != null) {\n            curr = curr.left;\n        }\n\
+    \        return curr;\n    }\n    TNode p = n.parent;\n    while (p != null &&\
+    \ n == p.right) {\n        n = p;\n        p = p.parent;\n    }\n    return p;\n\
+    }\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n## 6. 给定一个带有父节点指针的树，找到后序遍历的下一个节点。\n\
+    \n例如：\n输入：节点`7`\n树：\n5\n3\n7\n输出：`5`\n\n_______________\n\n### 解决方案：\n\n```java\n\
+    public static TNode nextPostOrder(TNode n) {\n    if (n == null || n.parent ==\
+    \ null) {\n        return null;\n    }\n    if (n != n.parent.left) {\n      \
+    \  return n.parent;\n    }\n    TNode p = n.parent.parent;\n    while (p != null\
+    \ && n.parent == p.right) {\n        n = p;\n        p = p.parent;\n    }\n  \
+    \  return p;\n}\n```\n"
+- fmt: "\n```java\nif (arr == null) {\n    return Integer.MIN_VALUE;\n}\nint st =\
+    \ 0, end = arr.length - 1;\nwhile (st <= end) {\n    int mid = (st + end) / 2;\n\
+    \    if (arr[mid] == num) {\n        return mid;\n    } else if (num > arr[mid])\
+    \ {\n        st = mid + 1;\n    } else {\n        end = mid - 1;\n    }\n}\nreturn\
+    \ Integer.MIN_VALUE;\n}\n```\n\n### RUNNING TIME COMPLEXITY:\nO(logN)\n\n### SPACE\
+    \ COMPLEXITY:\nO(1)\n\n## 10. Find one local minimum from an array of numbers.\n\
+    \ne.g:\ninput: 9, 7, 2, 8, 5, 6, 3, 4\noutput: 2 or 5 or 3\n\n### SOLUTION:\n\
+    ```java\npublic static int findLocalMin(int[] arr, int st, int end) {\n    int\
+    \ mid = (st + end) / 2;\n    if ((mid - 1 < 0) || (mid + 1 >= arr.length)) {\n\
+    \        return Integer.MIN_VALUE;\n    }\n    if ((arr[mid - 1] > arr[mid]) &&\
+    \ (arr[mid + 1] > arr[mid])) {\n        return mid;\n    } else if (arr[mid -\
+    \ 1] < arr[mid]) {\n        findLocalMin(arr, st, mid);\n    } else {\n      \
+    \  findLocalMin(arr, mid, end);\n    }\n    return Integer.MIN_VALUE;\n}\n```\n\
+    \n### RUNNING TIME COMPLEXITY:\nO(logN)\n\n### SPACE COMPLEXITY:\nO(1)\n\n## 11.\
+    \ Given an array of numbers that is first strictly increasing and then strictly\
+    \ decreasing, find the maximum number.\n\ne.g:\ninput: 1, 2, 3, 4, 5, 4, 3, 2\n\
+    output: 5\n\n### SOLUTION:\n```java\npublic static int findMax(int[] arr) {\n\
+    \    if (arr == null || arr.length <= 3) {\n        return Integer.MIN_VALUE;\n\
+    \    }\n    int st = 0, end = arr.length - 1;\n    while (st <= end) {\n     \
+    \   int mid = (st + end) / 2;\n        int midVal = arr[mid];\n        if (midVal\
+    \ > arr[mid - 1] && midVal > arr[mid + 1]) {\n            return midVal;\n   \
+    \     } else if (arr[mid - 1] < midVal) {\n            st = mid + 1;\n       \
+    \ } else {\n            end = mid - 1;\n        }\n    }\n    return Integer.MIN_VALUE;\n\
+    }\n```\n\n### RUNNING TIME COMPLEXITY:\nO(logN)\n\n### SPACE COMPLEXITY:\nO(1)\n\
+    \n## 12. Implement square root function (sqrt) only with integers.\n\ne.g:\ninput:\
+    \ 4\noutput: 2\ninput: 5\noutput: 2 or 3 (both values allowed since the correct\
+    \ result is decimal)\n\n### SOLUTION:\n```java\npublic static int sqrt(int target,\
+    \ int st, int end) {\n    if (st >= end) {\n        return Math.min(st, end);\n\
+    \    }\n    int mid = (st + end) / 2;\n    if (mid * mid == target) {\n      \
+    \  return mid;\n    }\n    if (mid * mid > target) {\n        return sqrt(target,\
+    \ st, mid - 1);\n    } else {\n        return sqrt(target, mid + 1, end);\n  \
+    \  }\n}\n```\n\n### RUNNING TIME COMPLEXITY:\nO(logN)\n\n### SPACE COMPLEXITY:\n\
+    O(1)\n\n## 13. Given an array that was sorted but was rotated an unknown number\
+    \ of times, find the position of a target element.\n\ne.g:\ninput:\nrotated array:\
+    \ 4, 5, 6, 7, 0, 1, 2\ntarget: 6\noutput: 2\n\n### SOLUTION:\n```java\npublic\
+    \ static int binaryRoatedSearch(int[] arr, int target) {\n    if (arr == null)\
+    \ {\n        return Integer.MIN_VALUE;\n    }\n    int st = 0;\n    int end =\
+    \ arr.length - 1;\n    while (st <= end) {\n        int mid = (st + end) / 2;\n\
+    \        if (arr[mid] == target) {\n            return mid;\n        }\n     \
+    \   // at least one part must be sorted\n        if (arr[st] <= arr[mid]) { //\
+    \ left part is sorted\n            if (arr[st] < target && target <= arr[mid])\
+    \ {\n                end = mid - 1;\n            } else {\n                st\
+    \ = mid + 1;\n            }\n        } else { // right part is sorted\n      \
+    \      if (arr[mid] < target && target <= arr[end]) {\n                st = mid\
+    \ + 1;\n            } else {\n                end = mid - 1;\n            }\n\
+    \        }\n    }\n    return Integer.MIN_VALUE;\n}\n```\n\n### INFO:\nIf the\
+    \ input array contains duplicate entries, the target can only be found with linear\
+    \ search in `O(N)` running time.\n\n### RUNNING TIME COMPLEXITY:\nO(logN)\n\n\
+    ### SPACE COMPLEXITY:\nO(1)\n\n## 14. Given a sorted array of integers that contains\
+    \ each entry multiple times, find the start and end position of a target integer.\n\
+    \ne.g:\nsorted array: 1, 2, 3, 7, 7, 7, 9, 9\ntarget: 7\noutput:\nstart position:\
+    \ 3\nend position: 5\n\n### SOLUTION:\n```java\npublic static int modifiedBinSearch(int[]\
+    \ arr, int target) {\n    int st = 0, end = arr.length - 1;\n    while (st <=\
+    \ end) {\n        int mid = (st + end) / 2;\n        if (target > arr[mid]) {\n\
+    \            st = mid + 1;\n        } else {\n            end = mid - 1;\n   \
+    \     }\n    }\n    return st;\n}\n\npublic static int[] findRange(int[] arr,\
+    \ int target) {\n    int[] res = { -1, -1 };\n    if (arr == null) {\n       \
+    \ return res;\n    }\n    int lo = modifiedBinSearch(arr, target - 1);\n    if\
+    \ (lo >= arr.length || arr[lo] != target) {\n        return res;\n    }\n    int\
+    \ hi = modifiedBinSearch(arr, target + 1);\n    res[0] = lo;\n    res[1] = hi;\n\
+    \    return res;\n}\n// res[0] will be start position\n// res[1] will be end position\n\
+    int[] res = findRange(arr, target);\n```\n\n### RUNNING TIME COMPLEXITY:\nO(logN)\n\
+    \n### SPACE COMPLEXITY:\nO(1)\n\n## 15. Given an array that each place represents\
+    \ how many steps forward you can make in the array, find the minimum number of\
+    \ steps to reach the end of the array.\n\ne.g:\ninput: 2, 1, 1, 8, 1, 1\noutput:\
+    \ 3\n\n### SOLUTION:\n```java\npublic static int minNumOfSteps(int[] arr) {\n\
+    \    if (arr == null) {\n        return Integer.MIN_VALUE;\n    }\n    int[] opt\
+    \ = new int[arr.length];\n    opt[0] = 0;\n    for (int i = 1; i < arr.length;\
+    \ i++) {\n        int min = arr.length;\n        for (int k = 0; k < i; k++) {\n\
+    \            if (i - k <= arr[k]) {\n                min = Math.min(min, opt[k]\
+    \ + 1);\n            }\n        }\n        opt[i] = min;\n    }\n    return opt[arr.length\
+    \ - 1];\n}\n```\n\n### RUNNING TIME COMPLEXITY:\nO(N²)\n\n### SPACE COMPLEXITY:\n\
+    O(N)\n\n## 16. Given a2D array of integers and a starting point, find the continuous\
+    \ area covered with the same value as the starting point.\n\ne.g:\ninput:\nstarting\
+    \ point: (0,0)\narray:\n1 1 2\n1 3 2\n2 2 1\noutput: 3\n\n### SOLUTION:\n```java\n\
+    static int mArea = 0;\npublic static void findAreaHelper(int[][] arr, boolean[][]\
+    \ visited, int x, int y) {\n    if (x < 0 || x > arr[0].length || y < 0 || y >=\
+    \ arr.length) {\n        return;\n    }\n    if (visited[y][x]) {\n        return;\n\
+    \    }\n    visited[y][x] = true;\n    if (arr[y][x] == value) {\n        mArea++;\n\
+    \        findAreaHelper(arr, visited, x + 1, y);\n        findAreaHelper(arr,\
+    \ visited, x, y + 1);\n        findAreaHelper(arr, visited, x - 1, y);\n     \
+    \   findAreaHelper(arr, visited, x, y - 1);\n    }\n}\n\npublic static void findArea(int[][]\
+    \ arr, int x, int y) {\n    boolean[][] visited = new boolean[arr.length][arr[0].length];\n\
+    \    mArea = 0;\n    findAreaHelper(arr, visited, x, y); // value should be defined\
+    \ here\n}\n```\n*(Note: `value` was undefined in the original snippet but implied\
+    \ by context)*.\n\n### RUNNING TIME COMPLEXITY:\nO(N²)\n\n### SPACE COMPLEXITY:\n\
+    O(N)\n\n## 17. Given an array of Triples that represent the amount of RAM needed\
+    \ for an app and the start and termination times of the app, find the maximum\
+    \ amount of RAM needed.\n\ne.g:\ninput:\nstart time end time ram needed\n2 4 1\n\
+    3 6 2\n3 9 3\noutput: 6\n\n### SOLUTION:\n```java\nclass Triple {\n    int startTime,\
+    \ endTime, ramNeeded;\n}\n\npublic static int maxRamNeeded(List<Triple> in) {\n\
+    \    if (in == null) {\n        return Integer.MIN_VALUE;\n    }\n    Map<Integer,\
+    \ Integer> tm = new TreeMap<Integer, Integer>();\n    for (Triple t : in) {\n\
+    \        tm.put(t.startTime, t.ramNeeded);\n        tm.put(t.endTime, -t.ramNeeded);\n\
+    \    }\n    int curRam = 0, maxRam = 0;\n    for (Map.Entry<Integer, Integer>\
+    \ entry : tm.entrySet()) {\n        curRam += entry.getValue();\n        maxRam\
+    \ = Math.max(curRam, maxRam);\n    }\n    return maxRam;\n}\n```\n\n### INFO:\n\
+    `TreeMap` always will keep its entries sorted based on their key. The cost for\
+    \ insertion is `O(logN)`.\n\n### RUNNING TIME COMPLEXITY:\nO(NlogN)\n\n### SPACE\
+    \ COMPLEXITY:\nO(N)\n\n## 18. Calculate the power of a number to a base without\
+    \ using a built-in function.\n\ne.g:\ninput: 2^3\noutput: 8\n\n### SOLUTION:\n\
+    ```java\npublic static long pow(int a, int b) {\n    long[] M = new long[b + 1];\n\
+    \    M[0] = 1;\n    M[1] = a;\n    return powHelper(a, b, M);\n}\n\npublic static\
+    \ long powHelper(int a, int b, long[] M) {\n    if (b == 0) {\n        if (b %\
+    \ 2 == 0) {\n            M[b] = powHelper(a, b / 2, M) * powHelper(a, b / 2, M);\n\
+    \        } else {\n            M[b] = powHelper(a, (b - 1) / 2, M) * powHelper(a,\
+    \ (b - 1) / 2, M) * a;\n        }\n    }\n    return M[b];\n}\n```\n\n## 19. Given\
+    \ an array of integers, rearrange the array into a wave-like array (a1 >= a2 <=\
+    \ a3 >= a4 <= a5 >= …).\n\ne.g:\ninput: 1, 3, 2, 4, 5, 6, 7\noutput: 2, 1, 4,\
+    \ 3, 6, 5, 7\n\n### SOLUTION:\n```java\npublic static void waveSort(int[] arr)\
+    \ {\n    if (arr == null) {\n        return;\n    }\n    Arrays.sort(arr);\n \
+    \   for (int i = 0; i < arr.length - 2; i += 2) {\n        int temp = arr[i];\n\
+    \        arr[i] = arr[i + 1];\n        arr[i + 1] = temp;\n    }\n}\n```\n\n###\
+    \ INFO:\nMight not work if there are duplicate entries in the input list.\n\n\
+    ### RUNNING TIME COMPLEXITY:\nO(NlogN)\n\n### SPACE COMPLEXITY:\nO(1)\n\n## 20.\
+    \ Reverse the bits of an integer.\n\ne.g:\ninput: 1011\noutput: 1101\n\n### SOLUTION:\n\
+    ```java\npublic static int swapBits(int x, int i, int j) {\n    int lo = ((x >>\
+    \ i) & 1);\n    int hi = ((x >> j) & 1);\n    if ((lo ^ hi) == 1) {\n        x\
+    \ ^= ((1 << i) | (1 << j));\n    }\n    return x;\n}\n```\n"
+  raw: 'if (arr == null) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int st = 0, end = arr.length - 1;
+
+
+    while (st <= end) {
+
+
+    int mid = (st + end) / 2;
+
+
+    if (arr[mid] == num) {
+
+
+    return mid;
+
+
+    } else if (num > arr[mid]) {
+
+
+    st = mid + 1;
+
+
+    } else {
+
+
+    end = mid - 1;
+
+
+    }
+
+
+    }
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(logN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    10.Find one local minimum from an array of numbers.
+
+
+    e.g:
+
+
+    input: 9, 7, 2, 8, 5, 6, 3, 4
+
+
+    output: 2 or 5 or 3
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int findLocalMin(int[] arr, int st, int end) {
+
+
+    int mid = (st + end) / 2;
+
+
+    if ((mid - 1 < 0) || (mid + 1 >= arr.length)) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    if ((arr[mid - 1] > arr[mid]) && (arr[mid + 1] > arr[mid])) {
+
+
+    return mid;
+
+
+    } else if (arr[mid - 1] < arr[mid]) {
+
+
+    findLocalMin(arr, st, mid);
+
+
+    } else {
+
+
+    findLocalMin(arr, mid, end);
+
+
+    }
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(logN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    11.Given an array of numbers that is first strictly increasing and then strictly
+    decreasing, find the maximum number.
+
+
+    e.g:
+
+
+    input: 1, 2, 3, 4, 5, 4, 3, 2
+
+
+    output: 5
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int findMax(int[] arr) {
+
+
+    if (arr == null || arr.length <= 3) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int st = 0, end = arr.length - 1;
+
+
+    while (st <= end) {
+
+
+    int mid = (st + end) / 2;
+
+
+    int midVal = arr[mid];
+
+
+    if (midVal > arr[mid - 1] && midVal > arr[mid + 1]) {
+
+
+    return midVal;
+
+
+    } else if (arr[mid - 1] < midVal) {
+
+
+    st = mid + 1;
+
+
+    } else {
+
+
+    end = mid - 1;
+
+
+    }
+
+
+    }
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(logN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    12.Implement square root function (sqrt) only with integers.
+
+
+    e.g:
+
+
+    input: 4
+
+
+    output: 2
+
+
+    input: 5
+
+
+    output: 2 or 3
+
+
+    (both values allowed since the correct result is decimal)
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int sqrt(int target, int st, int end) {
+
+
+    if (st >= end) {
+
+
+    return Math.min(st, end);
+
+
+    }
+
+
+    int mid = (st + end) / 2;
+
+
+    if (mid * mid == target) {
+
+
+    return mid;
+
+
+    }
+
+
+    if (mid * mid > target) {
+
+
+    return sqrt(target, st, mid - 1);
+
+
+    } else {
+
+
+    return sqrt(target, mid + 1, end);
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(logN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    13.Given an array that was sorted but was rotated an unknown number of times,
+    find the position of a target element.
+
+
+    e.g:
+
+
+    input:
+
+
+    rotated array: 4, 5, 6, 7, 0, 1, 2
+
+
+    target: 6
+
+
+    output: 2
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int binaryRoatedSearch(int[] arr, int target) {
+
+
+    if (arr == null) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int st = 0;
+
+
+    int end = arr.length - 1;
+
+
+    while (st <= end) {
+
+
+    int mid = (st + end) / 2;
+
+
+    if (arr[mid] == target) {
+
+
+    return mid;
+
+
+    }
+
+
+    // at least one part must be sorted
+
+
+    if (arr[st] <= arr[mid]) { // left part is sorted
+
+
+    if (arr[st] < target && target <= arr[mid]) {
+
+
+    end = mid - 1;
+
+
+    } else {
+
+
+    st = mid + 1;
+
+
+    }
+
+
+    } else { // right part is sorted
+
+
+    if (arr[mid] < target && target <= arr[end]) {
+
+
+    st = mid + 1;
+
+
+    } else {
+
+
+    end = mid - 1;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    INFO:
+
+
+    If the input array contains duplicate entries, the target can only be found with
+    linear search in O(N) running time.
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(logN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    14.Given a sorted array of integers that contains each entry multiple times, find
+    the start and end position of a target integer.
+
+
+    e.g:
+
+
+    input:
+
+
+    sorted array: 1, 2, 3, 7, 7, 7, 9, 9
+
+
+    target: 7
+
+
+    output:
+
+
+    start position: 3
+
+
+    end position: 5
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int modifiedBinSearch(int[] arr, double target) {
+
+
+    int st = 0, end = arr.length - 1;
+
+
+    while (st <= end) {
+
+
+    int mid = (st + end) / 2;
+
+
+    if (target > arr[mid]) {
+
+
+    st = mid + 1;
+
+
+    } else {
+
+
+    end = mid - 1;
+
+
+    }
+
+
+    }
+
+
+    return st;
+
+
+    }
+
+
+    public static int[] findRange(int[] arr, int target) {
+
+
+    int[] res = { -1, -1 };
+
+
+    if (arr == null) {
+
+
+    return res;
+
+
+    }
+
+
+    int lo = modifiedBinSearch(arr, target - 0.5);
+
+
+    if (lo >= arr.length || arr[lo] != target) {
+
+
+    return res;
+
+
+    }
+
+
+    int hi = modifiedBinSearch(arr, target + 0.5);
+
+
+    res[0] = lo;
+
+
+    res[1] = hi;
+
+
+    return res;
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    // res[0] will be the start position
+
+
+    // res[1] will be the end position
+
+
+    int[] res = findRange(arr, 7);
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(logN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    15.Given an array that at each place represents how many steps forward you can
+    make in the array, find the minimum number of steps needed to reach the end of
+    the array.
+
+
+    e.g:
+
+
+    input: 2, 1, 1, 8, 1, 1, 1
+
+
+    output: 3
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int minNumOfSteps(int[] arr) {
+
+
+    if (arr == null) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int[] opt = new int[arr.length];
+
+
+    opt[0] = 0;
+
+
+    for (int i=1; i<arr.length; i++) {
+
+
+    int min=arr.length;
+
+
+    for (int k=0; k<i; k++) {
+
+
+    if (i-k <= arr[k]) {
+
+
+    min = Math.min(min, opt[k]+1);
+
+
+    }
+
+
+    }
+
+
+    opt[i] = min;
+
+
+    }
+
+
+    return opt[arr.length-1];
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N²)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    16.Given a 2D array of integers and a starting point, find the continuous area
+    covered with the same value as the starting point.
+
+
+    e.g:
+
+
+    input:
+
+
+    starting point: (0,0)
+
+
+    array:
+
+
+    1 1 2
+
+
+    1 3 2
+
+
+    2 2 1
+
+
+    output: 3
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static void findAreaHelper(int[][] arr, boolean[][] visited, int value,
+    int x, int y) {
+
+
+    if (x < 0 || x > arr[0].length || y < 0 || y >= arr.length) {
+
+
+    return;
+
+
+    }
+
+
+    if (visited[y][x] == true) {
+
+
+    return;
+
+
+    }
+
+
+    visited[y][x] = true;
+
+
+    if (arr[y][x] == value) {
+
+
+    mArea++;
+
+
+    findAreaHelper(arr, visited, value, x + 1, y);
+
+
+    findAreaHelper(arr, visited, value, x, y + 1);
+
+
+    findAreaHelper(arr, visited, value, x - 1, y);
+
+
+    findAreaHelper(arr, visited, value, x, y - 1);
+
+
+    }
+
+
+    }
+
+
+    static  int  mArea = 0;
+
+
+    public static void findArea(int[][] arr, int x, int y) {
+
+
+    boolean[][] visited = new boolean[arr.length][arr[0].length];
+
+
+    mArea = 0;
+
+
+    findAreaHelper(arr, visited, arr[y][x], x, y);
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N²)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    17.Given an array of Triples that represent the the amount of RAM needed for an
+    app and the start and termination times of the app, find the maximum amount of
+    RAM needed.
+
+
+    e.g:
+
+
+    input:
+
+
+    start time end time ram needed
+
+
+    2 4 1
+
+
+    3 6 2
+
+
+    3 9 3
+
+
+    output: 6
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    class Triple {
+
+
+    int  startTime, endTime, ramNeeded;
+
+
+    }
+
+
+    public static int maxRamNeeded(List<Triple> in) {
+
+
+    if (in == null) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    Map<Integer, Integer> tm = new TreeMap<Integer, Integer>();
+
+
+    for (Triple t : in) {
+
+
+    tm.put(t.startTime, t.ramNeeded);
+
+
+    tm.put(t.endTime, -t.ramNeeded);
+
+
+    }
+
+
+    int curRam = 0, maxRam = 0;
+
+
+    for (Map.Entry<Integer, Integer> entry : tm.entrySet()) {
+
+
+    curRam += entry.getValue();
+
+
+    maxRam = Math.max(curRam, maxRam);
+
+
+    }
+
+
+    return maxRam;
+
+
+    }
+
+
+    INFO: TreeMap always will keep its entries sorted based on their key. The cost
+    for insertion is O(logN).
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(NlogN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    18.Calculate the power of a number to a base without using a built-in function.
+
+
+    e.g:
+
+
+    input: 2^3
+
+
+    output: 8
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public  static  long pow(int a, int b) {
+
+
+    long[] M = new long[b + 1];
+
+
+    M[0] = 1;
+
+
+    M[1] = a;
+
+
+    return powHelper(a, b, M);
+
+
+    }
+
+
+    public static long powHelper(int a, int b, long[] M) {
+
+
+    if (M[b] == 0) {
+
+
+    if (b % 2 == 0) {
+
+
+    M[b] = powHelper(a, b / 2, M)
+
+
+    * powHelper(a, b / 2, M);
+
+
+    } else {
+
+
+    M[b] = powHelper(a, (b - 1) / 2, M)
+
+
+    * powHelper(a, (b - 1) / 2, M) * a;
+
+
+    }
+
+
+    }
+
+
+    return M[b];
+
+
+    }
+
+
+    19.Given an array of integers, rearrange the array into a wave-like array (a1
+    >= a2 <= a3 >= a4 <= a5 >= …).
+
+
+    e.g:
+
+
+    input: 1, 3, 2, 4, 5, 6, 7
+
+
+    output: 2, 1, 4, 3, 6, 5, 7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static void waveSort(int[] arr) {
+
+
+    if (arr == null) {
+
+
+    return;
+
+
+    }
+
+
+    Arrays.sort(arr);
+
+
+    for (int i = 0; i < arr.length - 2; i += 2) {
+
+
+    int temp = arr[i];
+
+
+    arr[i] = arr[i + 1];
+
+
+    arr[i + 1] = temp;
+
+
+    }
+
+
+    }
+
+
+    INFO: Might not work if there are duplicate entries in the input list.
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(NlogN)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    20.Reverse the bits of an integer.
+
+
+    e.g:
+
+
+    input: 1011
+
+
+    output: 1101
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int swapBits(int x, int i, int j) {
+
+
+    int lo = ((x >> i) & 1);
+
+
+    int hi = ((x >> j) & 1);
+
+
+    if ((lo ^ hi) == 1) {
+
+
+    x ^= ((1 << i) | (1 << j));
+
+
+    }
+
+
+    return x;
+
+
+    }'
+  toc: []
+  trans: "\n\n```java\nif (arr == null) {\n    return Integer.MIN_VALUE;\n}\nint st\
+    \ = 0, end = arr.length - 1;\nwhile (st <= end) {\n    int mid = (st + end) /\
+    \ 2;\n    if (arr[mid] == num) {\n        return mid;\n    } else if (num > arr[mid])\
+    \ {\n        st = mid + 1;\n    } else {\n        end = mid - 1;\n    }\n}\nreturn\
+    \ Integer.MIN_VALUE;\n}\n```\n\n### 运行复杂度：\nO(logN)\n\n### 空间复杂度：\nO(1)\n\n##\
+    \ 10. 从数字数组中找到一个局部最小值。\n\n例如：\n输入：9, 7, 2, 8, 5, 6, 3, 4\n输出：2 或 5 或 3\n\n###\
+    \ 解决方案：\n```java\npublic static int findLocalMin(int[] arr, int st, int end) {\n\
+    \    int mid = (st + end) / 2;\n    if ((mid - 1 < 0) || (mid + 1 >= arr.length))\
+    \ {\n        return Integer.MIN_VALUE;\n    }\n    if ((arr[mid - 1] > arr[mid])\
+    \ && (arr[mid + 1] > arr[mid])) {\n        return mid;\n    } else if (arr[mid\
+    \ - 1] < arr[mid]) {\n        findLocalMin(arr, st, mid);\n    } else {\n    \
+    \    findLocalMin(arr, mid, end);\n    }\n    return Integer.MIN_VALUE;\n}\n```\n\
+    \n### 运行复杂度：\nO(logN)\n\n### 空间复杂度：\nO(1)\n\n## 11. 给定一个先严格递增后严格递减的数字数组，找到最大数。\n\
+    \n例如：\n输入：1, 2, 3, 4, 5, 4, 3, 2\n输出：5\n\n### 解决方案：\n```java\npublic static int\
+    \ findMax(int[] arr) {\n    if (arr == null || arr.length <= 3) {\n        return\
+    \ Integer.MIN_VALUE;\n    }\n    int st = 0, end = arr.length - 1;\n    while\
+    \ (st <= end) {\n        int mid = (st + end) / 2;\n        int midVal = arr[mid];\n\
+    \        if (midVal > arr[mid - 1] && midVal > arr[mid + 1]) {\n            return\
+    \ midVal;\n        } else if (arr[mid - 1] < midVal) {\n            st = mid +\
+    \ 1;\n        } else {\n            end = mid - 1;\n        }\n    }\n    return\
+    \ Integer.MIN_VALUE;\n}\n```\n\n### 运行复杂度：\nO(logN)\n\n### 空间复杂度：\nO(1)\n\n##\
+    \ 12. 仅使用整数实现平方根函数 (sqrt)。\n\n例如：\n输入：4\n输出：2\n输入：5\n输出：2 或 3（两个值允许，因为正确结果是小数）\n\
+    \n### 解决方案：\n```java\npublic static int sqrt(int target, int st, int end) {\n\
+    \    if (st >= end) {\n        return Math.min(st, end);\n    }\n    int mid =\
+    \ (st + end) / 2;\n    if (mid * mid == target) {\n        return mid;\n    }\n\
+    \    if (mid * mid > target) {\n        return sqrt(target, st, mid - 1);\n  \
+    \  } else {\n        return sqrt(target, mid + 1, end);\n    }\n}\n```\n\n###\
+    \ 运行复杂度：\nO(logN)\n\n### 空间复杂度：\nO(1)\n\n## 13. 给定一个排序过但旋转了未知次数的数组，找到目标元素的位置。\n\
+    \n例如：\n输入：\n旋转后的数组：4, 5, 6, 7, 0, 1, 2\n目标：6\n输出：2\n\n### 解决方案：\n```java\npublic\
+    \ static int binaryRoatedSearch(int[] arr, int target) {\n    if (arr == null)\
+    \ {\n        return Integer.MIN_VALUE;\n    }\n    int st = 0;\n    int end =\
+    \ arr.length - 1;\n    while (st <= end) {\n        int mid = (st + end) / 2;\n\
+    \        if (arr[mid] == target) {\n            return mid;\n        }\n     \
+    \   // 至少有一部分是有排序的\n        if (arr[st] <= arr[mid]) { // 左部分是有排序的\n         \
+    \   if (arr[st] < target && target <= arr[mid]) {\n                end = mid -\
+    \ 1;\n            } else {\n                st = mid + 1;\n            }\n   \
+    \     } else { // 右部分是有排序的\n            if (arr[mid] < target && target <= arr[end])\
+    \ {\n                st = mid + 1;\n            } else {\n                end\
+    \ = mid - 1;\n            }\n        }\n    }\n    return Integer.MIN_VALUE;\n\
+    }\n```\n\n### 信息：\n如果输入数组包含重复项，则只能通过线性搜索在 `O(N)` 运行时间内找到目标。\n\n### 运行复杂度：\nO(logN)\n\
+    \n### 空间复杂度：\nO(1)\n\n## 14. 给定一个包含多个相同整数的排序数组，找到目标整数的起始和结束位置。\n\n例如：\n排序数组：1,\
+    \ 2, 3, 7, 7, 9, 9\n目标：7\n输出：\n起始位置：3\n结束位置：5\n\n### 解决方案：\n```java\npublic static\
+    \ int modifiedSearch(int[] arr, int target) {\n    int st = 0, end = arr.length\
+    \ - 1;\n    while (st <= end) {\n        int mid = (st + end) / 2;\n        if\
+    \ (target > arr[mid]) {\n            st = mid + 1;\n        } else {\n       \
+    \     end = mid - 1;\n        }\n    }\n    return st;\n}\n\npublic static int[]\
+    \ findRange(int[] arr, int target) {\n    int[] res = { -1, -1 };\n    if (arr\
+    \ == null) {\n        return res;\n    }\n    int lo = modifiedSearch(arr, target\
+    \ - 1);\n    if (lo >= arr.length || arr[lo] != target) {\n        return res;\n\
+    \    }\n    int hi = modifiedSearch(arr, target + 1);\n    res[0] = lo;\n    res[1]\
+    \ = hi;\n    return res;\n}\n```\n\n### 运行复杂度：\nO(logN)\n\n### 空间复杂度：\nO(1)\n\n\
+    ## 15. 给定一个数组，每个位置表示可以向前移动的步数，找到到达数组结尾最小步数。\n\n例如：\n输入：2, 1, 1, 8, 1, 1\n输出：3\n\
+    \n### 解决方案：\n```java\npublic static int minNumOfSteps(int[] arr) {\n    if (arr\
+    \ == null) {\n        return Integer.MIN_VALUE;\n    }\n    int[] opt = new int[arr.length];\n\
+    \    opt[0] = 0;\n    for (int i = 1; i < arr.length; i++) {\n        int min\
+    \ = i;\n        for (int k = 0; k < i; k++) {\n            if (i - k <= arr[k])\
+    \ {\n                min = Math.min(min, opt[k] + 1);\n            }\n       \
+    \ }\n        opt[i] = min;\n    }\n    return opt[arr.length - 1];\n}\n```\n\n\
+    ### 运行复杂度：\nO(N²)\n\n### 空间复杂度：\nO(N)\n\n## 16. 给定一个整数二维数组和一个起始点，找到与起始点值相同的连续区域。\n\
+    \n例如：\n输入：\n起始点：(0,0)\n数组：\n1 1 2\n1 3 2\n2 2 1\n输出：3\n\n### 解决方案：\n```java\n\
+    static int mArea = 0;\npublic static void findAreaHelper(int[][] arr, boolean[][]\
+    \ visited, int x, int y) {\n    if (x < 0 || x >= arr[0].length || y < 0 || y\
+    \ >= arr.length) {\n        return;\n    }\n    if (visited[y][x]) {\n       \
+    \ return;\n    }\n    visited[y][x] = true;\n    if (arr[y][x] == value) {\n \
+    \       mArea++;\n        findAreaHelper(arr, visited, x + 1, y);\n        findAreaHelper(arr,\
+    \ visited, x, y + 1);\n        findAreaHelper(arr, visited, x - 1, y);\n     \
+    \   findAreaHelper(arr, visited, x, y - 1);\n    }\n}\n\npublic static void findArea(int[][]\
+    \ arr, int x, int y) {\n    boolean[][] visited = new boolean[arr.length][arr[0].length];\n\
+    \    mArea = 0;\n    findAreaHelper(arr, visited, x, y); // value 应在此处定义\n}\n\
+    ```\n（注：`value` 在原始片段中未定义，但根据上下文暗示）。\n\n### 运行复杂度：\nO(N²)\n\n### 空间复杂度：\nO(N)\n\
+    \n## 17. 给定一个元组数组，代表程序所需的 RAM 数量以及开始和结束时间，找到最大 RAM 数量。\n\n例如：\n输入：\n开始时间 结束时间\
+    \ 需要 RAM\n2 4 1\n3 6 2\n3 9 3\n输出：6\n\n### 解决方案：\n```java\nclass Triple {\n  \
+    \  int startTime, endTime, ramNeeded;\n}\n\npublic static int maxRamNeeded(List<Triple>\
+    \ in) {\n    if (in == null) {\n        return Integer.MIN_VALUE;\n    }\n   \
+    \ Map<Integer, Integer> tm = new TreeMap<Integer, Integer>();\n    for (Triple\
+    \ t : in) {\n        tm.put(t.startTime, t.ramNeeded);\n        tm.put(t.endTime,\
+    \ -t.ramNeeded);\n    }\n    int curRam = 0, maxRam = 0;\n    for (Map.Entry<Integer,\
+    \ Integer> entry : tm.entrySet()) {\n        curRam += entry.getValue();\n   \
+    \     maxRam = Math.max(curRam, maxRam);\n    }\n    return maxRam;\n}\n```\n\n\
+    ### 信息：\n`TreeMap` 始终根据其键排序。插入代价为 `O(logN)`。\n\n### 运行复杂度：\nO(NlogN)\n\n### 空间复杂度：\n\
+    O(N)\n\n## 18. 在不内置函数的情况下计算数字的幂。\n\n例如：\n输入：2³\n输出：8\n\n### 解决方案：\n```java\npublic\
+    \ static long pow(int a, int b) {\n    long[] M = new long[b + 1];\n    M[0] =\
+    \ 1;\n    M[1] = a;\n    return powHelper(a, b, M);\n}\n\npublic static long powHelper(int\
+    \ a, int b, long[] M) {\n    if (b > 0) {\n        if (b % 2 == 0) {\n       \
+    \     M[b] = powHelper(a, b / 2, M) * powHelper(a, b / 2, M);\n        } else\
+    \ {\n            M[b] = powHelper(a, (b - 1) / 2, M) * powHelper(a, (b - 1) /\
+    \ 2, M) * a;\n        }\n    }\n    return M[b];\n}\n```\n\n## 19. 给定一个整数数组，将数组重新排列为波浪数组（a1\
+    \ >= a2 <= a3 >= a4 <= a5 >= …）。\n\n例如：\n输入：1, 3, 2, 4, 5, 6, 7\n输出：2, 1, 4, 3,\
+    \ 6, 5, 7\n\n### 解决方案：\n```java\npublic static void waveSort(int[] arr) {\n  \
+    \  if (arr == null) {\n        return;\n    }\n    Arrays.sort(arr);\n    for\
+    \ (int i = 0; i < arr.length - 1; i += 2) {\n        int temp = arr[i];\n    \
+    \    arr[i] = arr[i + 1];\n        arr[i + 1] = temp;\n    }\n}\n```\n\n### 信息：\n\
+    如果列表中存在重复项，可能无效。\n\n### 运行复杂度：\nO(NlogN)\n\n### 空间复杂度：\nO(1)\n\n## 20. 反转整数的位。\n\
+    \n例如：\n输入：1011\n输出：1101\n\n### 解决方案：\n```java\npublic static int swapBits(int\
+    \ x, int i, int j) {\n    int lo = ((x >> i) & 1);\n    int hi = ((x >> j) & 1);\n\
+    \    if ((lo ^ hi) == 1) {\n        x ^= ((1 << i) | (1 << j));\n    }\n    return\
+    \ x;\n}\n```\n\n"
+- fmt: "\n```java\npublic static int revBits(int x, int numOfBits) {\n    for (int\
+    \ i = 0; i < numOfBits; i++) {\n        x = swapBits(x, i, numOfBits - i - 1);\n\
+    \    }\n    return x;\n}\n```\n\n### INFO\n- `XOR` (`^`) with `1` will toggle\
+    \ the value of the bit.\n- `XOR` (`^`) with two bits will return `1` if they are\
+    \ different.\n\n### RUNNING TIME COMPLEXITY\n- `O(N)`\n\n### SPACE COMPLEXITY\n\
+    - `O(1)`\n\n---\n\n## 21. Find the k-th largest integer in an unsorted array,\
+    \ in-place.\n\ne.g:\n**input:**\n- `array`: `5, 8, 3, 1`\n- `k`: `2`\n\n**output:**\
+    \ `3`\n\n### SOLUTION\n```java\npublic static void swap(int[] arr, int x, int\
+    \ y) {\n    int temp = arr[x];\n    arr[x] = arr[y];\n    arr[y] = temp;\n}\n\n\
+    public static int partition(int[] arr, int first, int last) {\n    int pivot =\
+    \ first;\n    swap(arr, last, pivot);\n    for (int i = first; i < last; i++)\
+    \ {\n        if (arr[i] > last) {\n            swap(arr, i, first);\n        \
+    \    first++;\n        }\n    }\n    swap(arr, first, last);\n    return first;\n\
+    }\n\npublic static int quickselect(int[] arr, int first, int last, int k) {\n\
+    \    if (first > last)\n        return Integer.MIN_VALUE;\n    int pivot = partition(arr,\
+    \ first, last);\n    if (pivot == k) {\n        return arr[pivot];\n    }\n  \
+    \  if (pivot > k) {\n        return quickselect(arr, first, pivot - 1, k);\n \
+    \   } else {\n        return quickselect(arr, pivot + 1, last, k);\n    }\n}\n\
+    ```\n\n### INFO\nIf you choose the `pivot` more wisely, such as choosing the median\
+    \ of medians of sets of `5`, you can avoid the worst case time complexity of `O(N²)``.\n\
+    \n### AVERAGE RUNNING TIME COMPLEXITY\n- `O(N)`\n\n### WORST RUNNING TIME COMPLEXITY\n\
+    - `O(N²)`\n\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\n## 22. Given that a tree\
+    \ is a full binary tree (= every node other than the leaves has two children)\
+    \ and the pre-order and post-order traversal of the tree, re-construct it.\n\n\
+    e.g:\n**input:**\n- `pre-order`: `5, 3, 7`\n- `post-order`: `3, 7, 5`\n\n**output:**\n\
+    **tree:**\n```\n5\n3 7\n```\n\n### SOLUTION\n```java\nstatic int mPreIndex = 0;\n\
+    public static TNode constructTree(int[] pre, int[] post, int lo, int hi) {\n \
+    \   if ((lo > hi) || (mPreIndex >= pre.length)) {\n        return null;\n    }\n\
+    \    TNode root = new TNode(pre[mPreIndex]);\n    mPreIndex++;\n    if (lo ==\
+    \ hi) {\n        return root;\n    }\n    int i;\n    for (i = lo; i < hi; i++)\
+    \ {\n        if (pre[mPreIndex] == post[i]) {\n            break;\n        }\n\
+    \    }\n    root.left = constructTree(pre, post, lo, i);\n    root.right = constructTree(pre,\
+    \ post, i + 1, hi - 1);\n    return root;\n}\n```\n\n---\n\n## 23. Given the in-order\
+    \ and pre-order traversal of a tree, re-construct it.\n\ne.g:\n**input:**\n- `in-order`:\
+    \ `3, 5, 7`\n- `pre-order`: `3, 7, 5`\n\n**output:**\n**tree:**\n```\n5\n3 7\n\
+    ```\n\n### SOLUTION\n```java\nstatic int mPreIndex = 0;\npublic static TNode constructTree(int[]\
+    \ in, int[] pre, int lo, int hi) {\n    if ((lo > hi) || (mPreIndex >= pre.length))\
+    \ {\n        return null;\n    }\n    TNode root = new TNode(pre[mPreIndex]);\n\
+    \    mPreIndex++;\n    if (lo == hi) {\n        return root;\n    }\n    int inIndex;\n\
+    \    for (inIndex = lo; inIndex <= hi; inIndex++) {\n        if (in[inIndex] ==\
+    \ root.data) {\n            break;\n        }\n    }\n    root.left = constructTree(in,\
+    \ pre, lo, inIndex - 1);\n    root.right = constructTree(in, pre, inIndex + 1,\
+    \ hi);\n    return root;\n}\n```\n\n---\n\n## 24. Given that a tree is a Binary\
+    \ Search Tree (BST) and the pre-order traversal of the tree, re-construct it.\n\
+    \ne.g:\n**input:**\n- `pre-order`: `5, 3, 7`\n\n**output:**\n**tree:**\n```\n\
+    5\n3 7\n```\n\n### SOLUTION\n```java\npublic static TNode constructTree(int[]\
+    \ pre, int lo, int hi) {\n    if (lo > hi) {\n        return null;\n    }\n  \
+    \  TNode root = new TNode(pre[lo]);\n    if (lo == hi) {\n        return root;\n\
+    \    }\n    int i;\n    for (i = lo + 1; i <= hi; i++) {\n        if (pre[i] >\
+    \ root.data) {\n            break;\n        }\n    }\n    root.left = constructTree(pre,\
+    \ lo + 1, i - 1);\n    root.right = constructTree(pre, i, hi);\n    return root;\n\
+    }\n```\n\n---\n\n## 25. Delete a node from a Binary Search Tree (BST).\n\n###\
+    \ SOLUTION\n```java\npublic static TNode deleteNodeFromBST(TNode root, int key)\
+    \ {\n    if (root == null) {\n        return null;\n    }\n    if (key > root.data)\
+    \ {\n        root.right = deleteNodeFromBST(root.right, key);\n        return\
+    \ root;\n    }\n    if (key < root.data) {\n        root.left = deleteNodeFromBST(root.left,\
+    \ key);\n        return root;\n    }\n    // 0 or 1 child\n    if (root.left ==\
+    \ null) {\n        return root.right;\n    } else if (root.right == null) {\n\
+    \        return root.left;\n    }\n    // 2 children\n    TNode n = root.right;\n\
+    \    while (n.left != null) {\n        n = n.left;\n    }\n    int inOrderSuccessVal\
+    \ = n.data;\n    root.data = inOrderSuccessVal;\n    root.right = deleteNodeFromBST(root.right,\
+    \ inOrderSuccessVal);\n    return root;\n}\n```\n### RUNNING TIME COMPLEXITY\n\
+    - `O(N)`\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\n## 26. Check if a given string\
+    \ contains balanced parenthesis.\n\ne.g:\n- **input:** `(())`, **output:** `true`\n\
+    - **input:** `() )`, **output:** `false`\n\n### SOLUTION\n```java\npublic static\
+    \ boolean isBalanced(char[] str) {\n    int count = 0, i;\n    for (i = 0; i <\
+    \ str.length; i++) {\n        if (str[i] == '(') {\n            count++;\n   \
+    \     } else {\n            count--;\n            if (count < 0) {\n         \
+    \       return false;\n            }\n        }\n    }\n    if (count != 0) {\n\
+    \        return false;\n    }\n    return true;\n}\n```\n### RUNNING TIME COMPLEXITY\n\
+    - `O(N)`\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\n## 27. Check if a given string\
+    \ contains balanced `[]`, `()` or `{}`.\n\ne.g:\n- **input:** `[{()]`, **output:**\
+    \ `true`\n\n### SOLUTION\n```java\npublic static boolean isBalanced(char[] str)\
+    \ {\n    HashMap<Character, Character> hm;\n    hm = new HashMap<Character, Character>();\n\
+    \    hm.put('(', ')');\n    hm.put('[', ']');\n    hm.put('{', '}';\n    Stack<Character>\
+    \ s = new Stack<Character>();\n    for (int i = 0; i < str.length; i++) {\n  \
+    \      char curCh = str[i];\n        if (hm.containsKey(curCh)) {\n          \
+    \  s.add(hm.get(curCh));\n        } else {\n            if (s.isEmpty()) {\n \
+    \               return false;\n            }\n            if (s.poll() != curCh)\
+    \ {\n                return false;\n            }\n        }\n    }\n    return\
+    \ s.isEmpty();\n}\n```\n### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n\
+    - `O(N)`\n\n---\n\n## 28. Find the position of a number in a 2D array of integers\
+    \ where its columns and rows are sorted.\n\ne.g:\n**input:**\n- `array`:\n```\n\
+    1 4 7\n2 5 8\n3 6 9\n```\n- `num`: `3`\n**output:** `(2, 0)`\n\n### SOLUTION\n\
+    ```java\nclass Point {\n    int x, y;\n    Point(int x, int y) {\n        this.x\
+    \ = x;\n        this.y = y;\n    }\n}\n\npublic static Point findNum(int[][] arr,\
+    \ int num) {\n    if (arr == null) {\n        return null;\n    }\n    int y =\
+    \ 0;\n    int x = arr[0].length - 1;\n    while (y < arr.length && x >= 0) {\n\
+    \        if (num == arr[y][x]) {\n            return new Point(x, y);\n      \
+    \  } else if (num > arr[y][x]) {\n            y++;\n        } else {\n       \
+    \     x--;\n        }\n    }\n    return new Point(-1, -1);\n}\n```\n### RUNNING\
+    \ TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\n## 29. Find\
+    \ the lowest common ancestor of two nodes in a binary tree which each node has\
+    \ a pointer to its parent.\n\ne.g:\n**input:**\n- `node1`: `1`\n- `node2`: `7`\n\
+    - **tree:**\n```\n5\n3 7\n1\n```\n**output:** `5`\n\n### SOLUTION\n```java\npublic\
+    \ static TNode findLCA(TNode n1, TNode n2, TNode root) {\n    HashSet<TNode> set1\
+    \ = new HashSet<TNode>();\n    HashSet<TNode> set2 = new HashSet<TNode>();\n \
+    \   set1.add(n1);\n    set2.add(n2);\n    TNode cur1 = n1, cur2 = n2;\n    while\
+    \ (true) {\n        cur1 = cur1.parent;\n        set1.add(cur1);\n        cur2\
+    \ = cur2.parent;\n        if (set1.contains(cur1)) {\n            return cur2;\n\
+    \        }\n        set2.add(cur2);\n    }\n}\n```\n### RUNNING TIME COMPLEXITY\n\
+    - `O(N)`\n### SPACE COMPLEXITY\n- `O(N)`\n\n---\n\n## 30. Find the lowest common\
+    \ ancestor of two nodes in a binary tree, in-place (no additional memory).\n\n\
+    e.g:\n**input:**\n- `node1`: `1`\n- `node2`: `7`\n- **tree:**\n```\n5\n3 7\n1\n\
+    ```\n**output:** `5`\n\n### SOLUTION\n```java\npublic static TNode findLCA(TNode\
+    \ n1, TNode n2, TNode root) {\n    if (root == null) {\n        return null;\n\
+    \    }\n    if ((root == n1) || (root == n2)) {\n        return root;\n    }\n\
+    \    TNode l = findLCA(n1, n2, root.left);\n    TNode r = findLCA(n1, n2, root.right);\n\
+    \    if ((l != null) && (r != null)) {\n        return root;\n    }\n    if (l\
+    \ != null) {\n        return l;\n    } else {\n        return r;\n    }\n}\n```\n\
+    ### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\
+    \n## 31. You are given an array of integers that represent the price of a certain\
+    \ stock for each day. If you are allowed only to buy the stock on a single day\
+    \ and sell on another day, find the maximum revenue you can achieve.\n\ne.g:\n\
+    - **input:** `2, 1, 6, 5, 9`\n**output:** `8`\n\n### SOLUTION\n```java\npublic\
+    \ static int maxRevenue(int[] arr) {\n    if (arr == null || arr.length == 0)\
+    \ {\n        return Integer.MIN_VALUE;\n    }\n    int lowest = arr[0];\n    int\
+    \ maxRev = 0;\n    for (int i = 1; i < arr.length; i++) {\n        maxRev = Math.max(maxRev,\
+    \ arr[i] - lowest);\n        lowest = Math.min(lowest, arr[i]);\n    }\n    return\
+    \ maxRev;\n}\n```\n### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n\
+    - `O(1)`\n\n---\n\n## 32. Remove a single occurrence of an integer from a doubly\
+    \ linked list.\n\ne.g:\n**input:**\n- `list`: `2 -> 5 -> 8 -> 9`\n- `val`: `5`\n\
+    **output:** `2 -> 8 -> 9`\n\n### SOLUTION\n```java\nclass DLLNode {\n    int \
+    \ data;\n}\n```\n"
+  raw: 'public static int revBits(int x, int numOfBits) {
+
+
+    for (int i = 0; i < numOfBits; i++) {
+
+
+    x = swapBits(x, i, numOfBits - i - 1);
+
+
+    }
+
+
+    return x;
+
+
+    }
+
+
+    INFO:
+
+
+    XOR (^) with 1 will toggle the value of the bit.
+
+
+    XOR (^) with two bits will return 1 if they are different.
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    21.Find the k-th largest integer in an unsorted array, in-place.
+
+
+    e.g:
+
+
+    input:
+
+
+    array: 5, 8, 3, 1
+
+
+    k: 2
+
+
+    output: 3
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static void swap(int[] arr, int x, int y) {
+
+
+    int temp = arr[x];
+
+
+    arr[x] = arr[y];
+
+
+    arr[y] = temp;
+
+
+    }
+
+
+    public static int partition(int[] arr, int first, int last) {
+
+
+    int pivot = first;
+
+
+    swap(arr, last, pivot);
+
+
+    for (int i = first; i < last; i++) {
+
+
+    if (arr[i] > last) {
+
+
+    swap(arr, i, first);
+
+
+    first++;
+
+
+    }
+
+
+    }
+
+
+    swap(arr, first, last);
+
+
+    return first;
+
+
+    }
+
+
+    public static int quickselect(int[] arr, int first, int last, int k) {
+
+
+    if (first > last)
+
+
+    return Integer.MIN_VALUE;
+
+
+    int pivot = partition(arr, first, last);
+
+
+    if (pivot == k) {
+
+
+    return arr[pivot];
+
+
+    }
+
+
+    if (pivot > k) {
+
+
+    return quickselect(arr, first, pivot - 1, k);
+
+
+    } else {
+
+
+    return quickselect(arr, pivot + 1, last, k);
+
+
+    }
+
+
+    }
+
+
+    INFO:
+
+
+    If you choose the pivot more wisely, such as choosing the median of medians of
+    sets of 5, you can avoid the worst case time complexity of O(N²).
+
+
+    AVERAGE RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    WORST RUNNING TIME COMPLEXITY:
+
+
+    O(N²)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    22.Given that a tree is a full binary tree (= every node other than the leaves
+    has two children) and the pre-order and post-order traversal of the tree, re-construct
+    it.
+
+
+    e.g:
+
+
+    input:
+
+
+    pre-order: 5, 3, 7
+
+
+    post-order: 3, 7, 5
+
+
+    output:
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    static  int  mPreIndex = 0;
+
+
+    public static TNode constructTree(int[] pre, int[] post, int lo, int hi) {
+
+
+    if ((lo > hi) || (mPreIndex >= pre.length)) {
+
+
+    return  null;
+
+
+    }
+
+
+    TNode root = new TNode(pre[mPreIndex]);
+
+
+    mPreIndex++;
+
+
+    if (lo == hi) {
+
+
+    return root;
+
+
+    }
+
+
+    int i;
+
+
+    for (i = lo; i < hi; i++) {
+
+
+    if (pre[mPreIndex] == post[i]) {
+
+
+    break;
+
+
+    }
+
+
+    }
+
+
+    root.left = constructTree(pre, post, lo, i);
+
+
+    root.right = constructTree(pre, post, i + 1, hi - 1);
+
+
+    return root;
+
+
+    }
+
+
+    23.Given the in-order and pre-order traversal of a tree, re-construct it.
+
+
+    e.g:
+
+
+    input:
+
+
+    in-order: 3, 5, 7
+
+
+    pre-order: 3, 7, 5
+
+
+    output:
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    static  int  mPreIndex = 0;
+
+
+    public static TNode constructTree(int[] in, int[] pre, int lo, int hi) {
+
+
+    if ((lo > hi) || (mPreIndex >= pre.length)) {
+
+
+    return  null;
+
+
+    }
+
+
+    TNode root = new TNode(pre[mPreIndex]);
+
+
+    mPreIndex++;
+
+
+    if (lo == hi) {
+
+
+    return root;
+
+
+    }
+
+
+    int inIndex;
+
+
+    for (inIndex = lo; inIndex <= hi; inIndex++) {
+
+
+    if (in[inIndex] == root.data) {
+
+
+    break;
+
+
+    }
+
+
+    }
+
+
+    root.left = constructTree(in, pre, lo, inIndex - 1);
+
+
+    root.right = constructTree(in, pre, inIndex + 1, hi);
+
+
+    return root;
+
+
+    }
+
+
+    24.Given that a tree is a Binary Search Tree (BST) and the pre-order traversal
+    of the tree, re-construct it.
+
+
+    e.g:
+
+
+    input:
+
+
+    pre-order: 5, 3, 7
+
+
+    output:
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static TNode constructTree(int[] pre, int lo, int hi) {
+
+
+    if (lo > hi) {
+
+
+    return  null;
+
+
+    }
+
+
+    TNode root = new TNode(pre[lo]);
+
+
+    if (lo == hi) {
+
+
+    return root;
+
+
+    }
+
+
+    int i;
+
+
+    for (i = lo + 1; i <= hi; i++) {
+
+
+    if (pre[i] > root.data) {
+
+
+    break;
+
+
+    }
+
+
+    }
+
+
+    root.left = constructTree(pre, lo + 1, i - 1);
+
+
+    root.right = constructTree(pre, i, hi);
+
+
+    return root;
+
+
+    }
+
+
+    25.Delete a node from a Binary Search Tree (BST).
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static TNode deleteNodeFromBST(TNode root, int key) {
+
+
+    if (root == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    if (key > root.data) {
+
+
+    root.right = deleteNodeFromBST(root.right, key);
+
+
+    return root;
+
+
+    }
+
+
+    if (key < root.data) {
+
+
+    root.left = deleteNodeFromBST(root.left, key);
+
+
+    return root;
+
+
+    }
+
+
+    // 0 or 1 child
+
+
+    if (root.left == null) {
+
+
+    return root.right;
+
+
+    } else if (root.right == null) {
+
+
+    return root.left;
+
+
+    }
+
+
+    // 2 children
+
+
+    TNode n = root.right;
+
+
+    while (n.left != null) {
+
+
+    n = n.left;
+
+
+    }
+
+
+    int inOrderSuccessorVal = n.data;
+
+
+    root.data = inOrderSuccessorVal;
+
+
+    root.right = deleteNodeFromBST(root.right, inOrderSuccessorVal);
+
+
+    return root;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    26.Check if a given string contains balanced parenthesis.
+
+
+    e.g:
+
+
+    input: ( ) ( ( ) )
+
+
+    output: true
+
+
+    input: ( ) () )
+
+
+    output: false
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static boolean isBalanced(char[] str) {
+
+
+    int count = 0, i;
+
+
+    for (i = 0; i < str.length; i++) {
+
+
+    if (str[i] == ''('') {
+
+
+    count++;
+
+
+    } else {
+
+
+    count--;
+
+
+    if (count < 0) {
+
+
+    return  false;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    if (count != 0) {
+
+
+    return  false;
+
+
+    }
+
+
+    return  true;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    27.Check if a given string contains balanced ‘[ ]’, ‘( )’ or ‘{ }’.
+
+
+    e.g:
+
+
+    input: [ ( { } ( [ ] ) ]
+
+
+    output: true
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static boolean isBalanced(char[] str) {
+
+
+    HashMap<Character, Character> hm;
+
+
+    hm = new HashMap<Character, Character>();
+
+
+    hm.put(''('', '')'');
+
+
+    hm.put(''['', '']'');
+
+
+    hm.put(''{'', ''}'');
+
+
+    Stack<Character> s = new Stack<Character>();
+
+
+    for (int i = 0; i < str.length; i++) {
+
+
+    char curCh = str[i];
+
+
+    if (hm.containsKey(curCh) == true) {
+
+
+    s.add(hm.get(curCh));
+
+
+    } else {
+
+
+    if (s.isEmpty() == true) {
+
+
+    return  false;
+
+
+    }
+
+
+    if (s.poll() != curCh) {
+
+
+    return  false;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    return s.isEmpty();
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    28.Find the position of a number in a 2D array of integers where its columns and
+    rows are sorted.
+
+
+    e.g:
+
+
+    input:
+
+
+    array:
+
+
+    1 4 7
+
+
+    2 5 8
+
+
+    3 6 9
+
+
+    num: 3
+
+
+    output: (2, 0)
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    class Point {
+
+
+    int  x, y;
+
+
+    Point(int x, int y) { this.x = x; this.y = y; }
+
+
+    }
+
+
+    public static Point findNum(int[][] arr, int num) {
+
+
+    if (arr == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    int y = 0;
+
+
+    int x = arr[0].length - 1;
+
+
+    while (y < arr.length && x >= 0) {
+
+
+    if (num == arr[y][x]) {
+
+
+    return  new Point(x, y);
+
+
+    } else if (num > arr[y][x]) {
+
+
+    y++;
+
+
+    } else {
+
+
+    x--;
+
+
+    }
+
+
+    }
+
+
+    return new Point(-1, -1);
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    29.Find the lowest common ancestor of two nodes in a binary tree which each node
+    has a pointer to its parent.
+
+
+    e.g:
+
+
+    input:
+
+
+    node 1: 1
+
+
+    node 2: 7
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    1
+
+
+    output: 5
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static TNode findLCA(TNode n1, TNode n2, TNode root) {
+
+
+    HashSet<TNode> set1 = new HashSet<TNode>();
+
+
+    HashSet<TNode> set2 = new HashSet<TNode>();
+
+
+    set1.add(n1);
+
+
+    set2.add(n2);
+
+
+    TNode cur1 = n1, cur2 = n2;
+
+
+    while (true) {
+
+
+    cur1 = cur1.parent;
+
+
+    set1.add(cur1);
+
+
+    cur2 = cur2.parent;
+
+
+    if (set1.contains(cur1) == true) {
+
+
+    return cur2;
+
+
+    }
+
+
+    set2.add(cur2);
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    30.Find the lowest common ancestor of two nodes in a binary tree, in-place (no
+    additional memory).
+
+
+    e.g:
+
+
+    input:
+
+
+    node 1: 1
+
+
+    node 2: 7
+
+
+    tree:
+
+
+    5
+
+
+    3 7
+
+
+    1
+
+
+    output: 5
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static TNode findLCA(TNode n1, TNode n2, TNode root) {
+
+
+    if (root == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    if ((root == n1) || (root == n2)) {
+
+
+    return root;
+
+
+    }
+
+
+    TNode l = findLCA(n1, n2, root.left);
+
+
+    TNode r = findLCA(n1, n2, root.right);
+
+
+    if ((l != null) && (r != null)) {
+
+
+    return root;
+
+
+    }
+
+
+    if (l != null) {
+
+
+    return l;
+
+
+    } else {
+
+
+    return r;
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    31.You are given an array of integers that represent the price of a certain stock
+    for each day. If you are allowed only to buy the stock on a single day and sell
+    on another day, find the maximum revenue you can achieve.
+
+
+    e.g:
+
+
+    input: 2, 1, 6, 5, 9
+
+
+    output: 8
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int maxRevenue(int[] arr) {
+
+
+    if (arr == null || arr.length == 0) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int lowest = arr[0];
+
+
+    int maxRev = 0;
+
+
+    for (int i = 1; i < arr.length; i++) {
+
+
+    maxRev = Math.max(maxRev, arr[i] - lowest);
+
+
+    lowest = Math.min(lowest, arr[i]);
+
+
+    }
+
+
+    return maxRev;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    32.Remove a single occurrence of an integer from a doubly linked list.
+
+
+    e.g:
+
+
+    input:
+
+
+    list: 2 -> 5 -> 8 -> 9
+
+
+    val: 5
+
+
+    output: 2 -> 8 -> 9
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    class DLLNode {
+
+
+    int  data;'
+  toc: []
+  trans: "\n\n```java\npublic static int revBits(int x, int numOfBits) {\n    for\
+    \ (int i = 0; i < numOfBits; i++) {\n        x = swapBits(x, i, numOfBits - i\
+    \ - 1);\n    }\n    return x;\n}\n```\n\n### INFO\n- 与 `1` 进行 `XOR` (`^`) 将翻转位的值。\n\
+    - 与两个位进行 `XOR` (`^`)，如果它们不同则返回 `1`。\n\n### RUNNING TIME COMPLEXITY\n- `O(N)`\n\
+    \n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\n## 21. 在无序数组中就地找到第 k 大整数。\n\ne.g:\n\
+    **输入:**\n- `array`: `5, 8, 3, 1`\n- `k`: `2`\n\n**输出:** `3`\n\n### SOLUTION\n\
+    ```java\npublic static void swap(int[] arr, int x, int y) {\n    int temp = arr[x];\n\
+    \    arr[x] = arr[y];\n    arr[y] = temp;\n}\n\npublic static int partition(int[]\
+    \ arr, int first, int last) {\n    int pivot = first;\n    swap(arr, last, pivot);\n\
+    \    for (int i = first; i < last; i++) {\n        if (arr[i] > last) {\n    \
+    \        swap(arr, i, first);\n            first++;\n        }\n    }\n    swap(arr,\
+    \ first, last);\n    return first;\n}\n\npublic static int quickselect(int[] arr,\
+    \ int first, int last, int k) {\n    if (first > last)\n        return Integer.MIN_VALUE;\n\
+    \    int pivot = partition(arr, first, last);\n    if (pivot == k) {\n       \
+    \ return arr[pivot];\n    }\n    if (pivot > k) {\n        return quickselect(arr,\
+    \ first, pivot - 1, k);\n    } else {\n        return quickselect(arr, pivot +\
+    \ 1, last, k);\n    }\n}\n```\n\n### INFO\n如果你更明智地选择 `pivot`，例如选择每 5 个元素一组的中位数，你可以避免\
+    \ `O(N²)` 的最坏时间复杂度。\n\n### AVERAGE RUNNING TIME COMPLEXITY\n- `O(N)`\n\n### WORST\
+    \ RUNNING TIME COMPLEXITY\n- `O(N²)`\n\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\
+    \n## 22. 给定一棵树是完全二叉树（即每个叶子节点以外的节点有两个孩子）以及该树的前序和后序遍历，请重建它。\n\ne.g:\n**输入:**\n-\
+    \ `pre-order`: `5, 3, 7`\n- `post-order`: `3, 7, 5`\n\n**输出:**\n**树:**\n```\n\
+    5\n3 7\n```\n\n### SOLUTION\n```java\nstatic int mPreIndex = 0;\npublic static\
+    \ TNode constructTree(int[] pre, int[] post, int lo, int hi) {\n    if ((lo >\
+    \ hi) || (mPreIndex >= pre.length)) {\n        return null;\n    }\n    TNode\
+    \ root = new TNode(pre[mPreIndex]);\n    mPreIndex++;\n    if (lo == hi) {\n \
+    \       return root;\n    }\n    int i;\n    for (i = lo; i < hi; i++) {\n   \
+    \     if (pre[mPreIndex] == post[i]) {\n            break;\n        }\n    }\n\
+    \    root.left = constructTree(pre, post, lo, i);\n    root.right = constructTree(pre,\
+    \ post, i + 1, hi - 1);\n    return root;\n}\n```\n\n---\n\n## 23. 给定一棵树的中序和前序遍历，请重建它。\n\
+    \ne.g:\n**输入:**\n- `in-order`: `3, 5, 7`\n- `pre-order`: `3, 7, 5`\n\n**输出:**\n\
+    **树:**\n```\n5\n3 7\n```\n\n### SOLUTION\n```java\nstatic int mPreIndex = 0;\n\
+    public static TNode constructTree(int[] in, int[] pre, int lo, int hi) {\n   \
+    \ if ((lo > hi) || (mPreIndex >= pre.length)) {\n        return null;\n    }\n\
+    \    TNode root = new TNode(pre[mPreIndex]);\n    mPreIndex++;\n    if (lo ==\
+    \ hi) {\n        return root;\n    }\n    int inIndex;\n    for (inIndex = lo;\
+    \ inIndex <= hi; inIndex++) {\n        if (in[inIndex] == root.data) {\n     \
+    \       break;\n        }\n    }\n    root.left = constructTree(in, pre, lo, inIndex\
+    \ - 1);\n    root.right = constructTree(in, pre, inIndex + 1, hi);\n    return\
+    \ root;\n}\n```\n\n---\n\n## 24. 给定一棵树是二叉搜索树 (BST)以及该树的前序遍历，请重建它。\n\ne.g:\n**输入:**\n\
+    - `pre-order`: `5, 3, 7`\n\n**输出:**\n**树:**\n```\n5\n3 7\n```\n\n### SOLUTION\n\
+    ```java\npublic static TNode constructTree(int[] pre, int lo, int hi) {\n    if\
+    \ (lo > hi) {\n        return null;\n    }\n    TNode root = new TNode(pre[lo]);\n\
+    \    if (lo == hi) {\n        return root;\n    }\n    int i;\n    for (i = lo\
+    \ + 1; i <= hi; i++) {\n        if (pre[i] > root.data) {\n            break;\n\
+    \        }\n    }\n    root.left = constructTree(pre, lo + 1, i - 1);\n    root.right\
+    \ = constructTree(pre, i, hi);\n    return root;\n}\n```\n\n---\n\n## 25. 从二叉搜索树\
+    \ (BST) 中删除一个节点。\n\n### SOLUTION\n```java\npublic static TNode deleteNodeFromBST(TNode\
+    \ root, int key) {\n    if (root == null) {\n        return null;\n    }\n   \
+    \ if (key > root.data) {\n        root.right = deleteNodeFromBST(root.right, key);\n\
+    \        return root;\n    }\n    if (key < root.data) {\n        root.left =\
+    \ deleteNodeFromBST(root.left, key);\n        return root;\n    }\n    // 0 或\
+    \ 1 个孩子\n    if (root.left == null) {\n        return root.right;\n    } else\
+    \ if (root.right == null) {\n        return root.left;\n    }\n    // 2 个孩子\n\
+    \    TNode n = root.right;\n    while (n.left != null) {\n        n = n.left;\n\
+    \    }\n    int inOrderSuccess = n.data;\n    root.data = inOrderSuccess;\n  \
+    \  root.right = deleteNodeFromBST(root.right, inOrderSuccess);\n    return root;\n\
+    }\n```\n### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n- `O(1)`\n\
+    \n---\n\n## 26. 检查给定字符串是否括号平衡。\n\ne.g:\n- **输入:** `(())`, **输出:** `true`\n- **输入:**\
+    \ `()`, **输出:** `false`\n\n### SOLUTION\n```java\npublic static boolean isBalanced(char[]\
+    \ str) {\n    int count = 0, i;\n    for (i = 0; i < str.length; i++) {\n    \
+    \    if (str[i] == '(') {\n            count++;\n        } else {\n          \
+    \  count--;\n            if (count < 0) {\n                return false;\n   \
+    \         }\n        }\n    }\n    if (count != 0) {\n        return false;\n\
+    \    }\n    return true;\n}\n```\n### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE\
+    \ COMPLEXITY\n- `O(1)`\n\n---\n\n## 27. 检查给定字符串是否包含 `[]`、`()` 或 `{}`。\n\ne.g:\n\
+    - **输入:** `[{()`, **输出:** `true`\n\n### SOLUTION\n```java\npublic static boolean\
+    \ isBalanced(char[] str) {\n    HashMap<Character, Character> hm;\n    hm = new\
+    \ HashMap<Character, Character>();\n    hm.put('(', ')');\n    hm.put('[', ']');\n\
+    \    hm.put('{', '}';\n    Stack<Character> s = new Stack<Character>();\n    for\
+    \ (int i = 0; i < str.length; i++) {\n        char curCh = str[i];\n        if\
+    \ (hm.containsKey(curCh)) {\n            s.add(hm.get(curCh));\n        } else\
+    \ {\n            if (s.isEmpty()) {\n                return false;\n         \
+    \   }\n            if (s.pop() != curCh) {\n                return false;\n  \
+    \          }\n        }\n    }\n    return s.isEmpty();\n}\n```\n### RUNNING TIME\
+    \ COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n- `O(N)`\n\n---\n\n## 28. 在行列均排序的整数二维数组中找到一个数字的位置。\n\
+    \ne.g:\n**输入:**\n- `array`:\n```\n1 4 7\n2 5 8\n3 6 9\n```\n- `num`: `3`\n**输出:**\
+    \ `(2, 0)`\n\n### SOLUTION\n```java\nclass Point {\n    int x, y;\n    Point(int\
+    \ x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n}\n\npublic static\
+    \ Point findNum(int[][] arr, int num) {\n    if (arr == null) {\n        return\
+    \ null;\n    }\n    int y = 0;\n    int x = arr[0].length - 1;\n    while (y <\
+    \ arr.length && x >= 0) {\n        if (num == arr[y][x]) {\n            return\
+    \ new Point(x, y);\n        } else if (num > arr[y][x]) {\n            y++;\n\
+    \        } else {\n            x--;\n        }\n    }\n    return new Point(-1,\
+    \ -1);\n}\n```\n### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n\
+    - `O(1)`\n\n---\n\n## 29. 在每个节点都有指向父节点指针的二叉树中找到两个节点的公共祖先。\n\ne.g:\n**输入:**\n-\
+    \ `node1`: `1`\n- `node2`: `7`\n- **树:**\n```\n5\n3 7\n1\n```\n**输出:** `5`\n\n\
+    ### SOLUTION\n```java\npublic static TNode findLCA(TNode n1, TNode n2, TNode root)\
+    \ {\n    HashSet<TNode> set1 = new HashSet<TNode>();\n    HashSet<TNode> set2\
+    \ = new HashSet<TNode>();\n    set1.add(n1);\n    set2.add(n2);\n    TNode cur1\
+    \ = n1, cur2 = n2;\n    while (true) {\n        cur1 = cur1.parent;\n        set1.add(cur1);\n\
+    \        cur2 = cur2.parent;\n        if (set1.contains(cur1)) {\n           \
+    \ return cur2;\n        }\n        set2.add(cur2);\n    }\n}\n```\n### RUNNING\
+    \ TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n- `O(N)`\n\n---\n\n## 30. 在二叉树就地找到两个节点的公共祖先（不使用额外内存）。\n\
+    \ne.g:\n**输入:**\n- `node1`: `1`\n- `node2`: `7`\n- **树:**\n```\n5\n3 7\n1\n```\n\
+    **输出:** `5`\n\n### SOLUTION\n```java\npublic static TNode findLCA(TNode n1, TNode\
+    \ n2, TNode root) {\n    if (root == null) {\n        return null;\n    }\n  \
+    \  if ((root == n1) || (root == n2)) {\n        return root;\n    }\n    TNode\
+    \ l = findLCA(n1, n2, root.left);\n    TNode r = findLCA(n1, n2, root.right);\n\
+    \    if ((l != null) && (r != null)) {\n        return root;\n    }\n    if (l\
+    \ != null) {\n        return l;\n    } else {\n        return r;\n    }\n}\n```\n\
+    ### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\
+    \n## 31. 给你一个整数数组，代表某只股票每天的价格。如果你只允许在某一天买入股票并在另一天卖出，找到你能获得的最大收益。\n\ne.g:\n- **输入:**\
+    \ `2, 1, 6, 5, 9`\n**输出:** `8`\n\n### SOLUTION\n```java\npublic static int maxRevenue(int[]\
+    \ arr) {\n    if (arr == null || arr.length == 0) {\n        return Integer.MIN_VALUE;\n\
+    \    }\n    int lowest = arr[0];\n    int maxRev = 0;\n    for (int i = 1; i <\
+    \ arr.length; i++) {\n        maxRev = Math.max(maxRev, arr[i] - lowest);\n  \
+    \      lowest = Math.min(lowest, arr[i]);\n    }\n    return maxRev;\n}\n```\n\
+    ### RUNNING TIME COMPLEXITY\n- `O(N)`\n### SPACE COMPLEXITY\n- `O(1)`\n\n---\n\
+    \n## 32. 从双向链表中删除整数的单次出现。\n\ne.g:\n**输入:**\n- `list`: `2 -> 5 -> 8 -> 9`\n- `val`:\
+    \ `5`\n**输出:** `2 -> 8 -> 9`\n\n### SOLUTION\n```java\nclass DLLNode {\n    int\
+    \  data;\n}\n```\n\n"
+- fmt: "\n```java\nclass DLLNode {\n    int data;\n    DLLNode next, prev;\n}\n\n\
+    public static DLLNode removeNode(DDLNode head, int x) {\n    if (head == null)\
+    \ {\n        return null;\n    }\n    if (head.data == x) {\n        head.next.previous\
+    \ = null;\n        return head.next;\n    }\n    DDLNode runner = head;\n    while\
+    \ (runner.next != null) {\n        if (runner.next.data == x) {\n            runner.next\
+    \ = runner.next.next;\n            runner.next.previous = runner;\n          \
+    \  break;\n        }\n        runner = runner.next;\n    }\n    return head;\n\
+    }\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n---\n\
+    \n### 33. Given a doubly linked list reverse it in-place.\n\ne.g:\ninput: `2 ->\
+    \ 5 -> 8 -> 9`\noutput: `9 -> 8 -> 5 -> 2`\n\n_______________\n\n### SOLUTION:\n\
+    \n```java\nclass DLLNode {\n    int data;\n    DLLNode next, prev;\n}\n\npublic\
+    \ static DLLNode revList(DLLNode head) {\n    if (head == null) {\n        return\
+    \ null;\n    }\n    while (head.next != null) {\n        DLLNode temp = head.next;\n\
+    \        head.next = head.prev;\n        head.prev = temp;\n        head = temp;\n\
+    \    }\n    head.next = head.prev;\n    head.prev = null;\n    return head;\n\
+    }\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n---\n\
+    \n### 34. Given a sorted array of integers and a target integer determine if it\
+    \ is possible to sum up two integers to generate the target integer.\n\ne.g:\n\
+    input:\narray: `1, 2, 5, 7, 8, 9`\ntarget: `7`\noutput: `true`\n\n_______________\n\
+    \n### SOLUTION:\n\n```java\npublic static boolean is2SumTarget(int[] arr, int\
+    \ target) {\n    if (arr == null) {\n        return false;\n    }\n    int st\
+    \ = 0;\n    int end = arr.length - 1;\n    while (st < end) {\n        int sum\
+    \ = arr[st] + arr[end];\n        if (sum == target) {\n            return true;\n\
+    \        } else if (sum > target) {\n            end--;\n        } else {\n  \
+    \          st++;\n        }\n    }\n    return false;\n}\n```\n\nRUNNING TIME\
+    \ COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n---\n\n### 35. Given a sorted\
+    \ array of integers and a target integer determine if it is possible to sum up\
+    \ three integers to generate the target integer.\n\ne.g:\ninput:\narray: `1, 2,\
+    \ 5, 7, 8, 9`\ntarget: `17`\noutput: `true`\n\n_______________\n\n### SOLUTION:\n\
+    \n```java\npublic static boolean is3SumTarget(int[] arr, int target) {\n    if\
+    \ (arr == null) {\n        return false;\n    }\n    for (int i = 0; i < arr.length\
+    \ - 2; i++) {\n        int st = i + 1;\n        int end = arr.length - 1;\n  \
+    \      while (st < end) {\n            int sum = arr[i] + arr[st] + arr[end];\n\
+    \            if (sum == target) {\n                return true;\n            }\
+    \ else if (sum > target) {\n                end--;\n            } else {\n   \
+    \             st++;\n            }\n        }\n    }\n    return false;\n}\n```\n\
+    \nRUNNING TIME COMPLEXITY:\n`O(N²)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n---\n\n###\
+    \ 36. Given a Binary Tree determine if it is a Binary Search Tree (BST) or not.\n\
+    \ne.g:\ninput:\ntree:\n5\n9 7\noutput: `false`\n\n_______________\n\n### SOLUTION:\n\
+    \n```java\npublic static boolean isBST(TNode root, int min, int max) {\n    if\
+    \ (root == null) {\n        return true;\n    }\n    if (root.data > min && root.data\
+    \ < max) {\n        return isBST(root.left, min, root.data)\n        && isBST(root.right,\
+    \ root.data, max);\n    }\n    return false;\n}\n```\n\n`isBST(root, Integer.MIN_VALUE,\
+    \ Integer.MAX_VALUE);`\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n\
+    `O(1)`\n\n---\n\n### 37. Given an array of integers that all integers appear twice\
+    \ except one that appears once, find that single integer.\n\ne.g:\ninput: `2,\
+    \ 4, 2, 3, 5, 3, 4`\noutput: `5`\n\n_______________\n\n### SOLUTION:\n\n```java\n\
+    public static int findSingle(int[] arr) {\n    if (arr == null) {\n        return\
+    \ Integer.MIN_VALUE;\n    }\n    HashSet<Integer> set = new HashSet<Integer>();\n\
+    \    int sum = 0;\n    for (int i = 0; i < arr.length; i++) {\n        int cur\
+    \ = arr[i];\n        if (set.contains(cur) == true) {\n            sum -= cur;\n\
+    \        } else {\n            set.add(cur);\n            sum += cur;\n      \
+    \  }\n    }\n    return sum;\n}\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE\
+    \ COMPLEXITY:\n`O(N)`\n\n---\n\n### 38. Given a sorted array of integers find\
+    \ the integer with the greatest number of repetition.\n\ne.g:\ninput: `1, 1, 1,\
+    \ 4, 4, 4, 4, 5, 6`\noutput: `4`\n\n_______________\n\n### SOLUTION:\n\n```java\n\
+    public static int findMostPopular(int[] arr) {\n    if (arr == null || arr.length\
+    \ == 0) {\n        return Integer.MIN_VALUE;\n    }\n    int element = arr[0];\n\
+    \    int count = 1;\n    int maxElement = arr[0];\n    int maxCount = 1;\n   \
+    \ for (int i = 1; i < arr.length; i++) {\n        if (arr[i] == element) {\n \
+    \           count++;\n        } else {\n            count = 1;\n            element\
+    \ = arr[i];\n        }\n        if (count > maxCount) {\n            maxCount\
+    \ = count;\n            maxElement = element;\n        }\n    }\n    return maxElement;\n\
+    }\n```\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n`O(1)`\n\n---\n\
+    \n### 39. Print the vertical level order of a binary tree.\n\ne.g:\ninput:\ntree:\n\
+    5\n9 7\noutput:\n9\n5\n7\n\n_______________\n\n### SOLUTION:\n\n```java\npublic\
+    \ static void makeVerticalLevelOrder(TNode root, int hd, HashMap<Integer, List<Integer>>\
+    \ hm, int[] minMax) {\n    if (root == null) {\n        return;\n    }\n    //\
+    \ save the minimum and maximum horizontal distance (hd) from root\n    minMax[0]\
+    \ = Math.min(minMax[0], hd);\n    minMax[1] = Math.max(minMax[1], hd);\n    if\
+    \ (hm.containsKey(hd) == false) {\n        hm.put(hd, new ArrayList<Integer>());\n\
+    \    }\n    hm.get(hd).add(root.data);\n    makeVerticalLevelOrder(root.left,\
+    \ hd - 1, hm, minMax);\n    makeVerticalLevelOrder(root.right, hd + 1, hm, minMax);\n\
+    }\n\n// generate the hash map containing vertical levels\nfor (int lvl = minMax[0];\
+    \ lvl <= minMax[1]; lvl++) {\n    List<Integer> curLevel = hm.get(lvl);\n    for\
+    \ (Integer node : curLevel) {\n        System.out.print(node + \" \");\n    }\n\
+    }\nSystem.out.println();\n```\n\n---\n\n### 40. Print the level order of a binary\
+    \ tree.\n\ne.g:\ninput:\ntree:\n5\n9 7\noutput:\n5\n9\n7\n\n_______________\n\n\
+    ### SOLUTION:\n\n```java\npublic static void printLevelOrder(TNode root) {\n \
+    \   if (root == null) {\n        return;\n    }\n    Queue<TNode> curLevel = new\
+    \ LinkedList<>();\n    Queue<TNode> nextLevel = new LinkedList<>();\n    curLevel.add(root);\n\
+    \    while (curLevel.isEmpty() == false) {\n        TNode node = curLevel.poll();\n\
+    \        System.out.print(node.data + \" \");\n        if (node.left != null)\
+    \ {\n            nextLevel.add(node.left);\n        }\n        if (node.right\
+    \ != null) {\n            nextLevel.add(node.right);\n        }\n    }\n    System.out.println();\n\
+    \    curLevel = nextLevel;\n}\n```\n\n---\n\n### 41. Given a doubly linked list\
+    \ reverse it in-place, recursively and iteratively.\n\ne.g:\ninput: `3 -> 9 ->\
+    \ 6 -> 2`\noutput: `2 -> 6 -> 9 -> 3`\n\n_______________\n\n### Recursion:\npublic\
+    \ static DLLNode revList(DLLNode head, DLLNode prev) {\n    if (head == null)\
+    \ {\n        return prev;\n    }\n    DLLNode next = head.next;\n    head.next\
+    \ = prev;\n    if (next == null) {\n        return head;\n    } else {\n     \
+    \   return revList(next, head);\n    }\n}\n```\n`revList(head, null);`\n\n###\
+    \ Iterative:\n```java\npublic static DLLNode revList(DLLNode head) {\n    if (head\
+    \ == null) {\n        return null;\n    }\n    DLLNode cur = head, prev = null;\n\
+    \    while (cur != null) {\n        DLLNode next = cur.next;\n        cur.next\
+    \ = prev;\n        prev = cur;\n        cur = next;\n    }\n    return prev;\n\
+    }\n```\n`revList(head);`\n\nRUNNING TIME COMPLEXITY:\n`O(N)`\n\nSPACE COMPLEXITY:\n\
+    `O(1)`\n\n---\n\n### 42. Implement a pattern matching function where:\n1. `.`\
+    \ matches any single character.\n2. `*` matches 0 or more instances of the preceding\
+    \ character.\n\ne.g:\ninput:\nstring: `aabc`\npattern: `a*b.`\noutput: `true`\n\
+    input:\nstring: `bc`\npattern: `a*b.`\noutput: `true`\n\n_______________\n\n###\
+    \ SOLUTION:\n\n```java\npublic static boolean isMatch(char[] str, char[] pat,\
+    \ int s, int p) {\n    if (s >= str.length) {\n        return (p >= pat.length);\n\
+    \    }\n    // the current char is a dot or a letter\n    if (p == pat.length\
+    \ - 1 || pat[p + 1] != '*') {\n        return (str[s] == pat[p] || pat[p] == '.')\n\
+    \        && isMatch(str, pat, s + 1, p + 1);\n    }\n    // the current char is\
+    \ followed by a star, so either:\n    // 1. ignore the star\n    // 2. take the\
+    \ star in mind and check for equality\n    return isMatch(str, pat, s, p + 2)\
+    \ ||\n    (isMatch(str, pat, s + 1, p) && str[s] == pat[p]);\n}\n```\n\n`boolean\
+    \ result = isMatch(str, pat, 0 ,0);`\n\n---\n\n### 43. Given an array that contains\
+    \ only 0, 1 or 2, sort it without using any sorting function.\n\ne.g:\ninput:\
+    \ `0, 1, 1, 0, 2, 1`\noutput: `0, 0, 1, 1, 1, 2`\n\n_______________\n\n### SOLUTION:\n\
+    \n```java\npublic static void swap(int[] arr, int x, int y) {\n    int temp =\
+    \ arr[x];\n    arr[x] = arr[y];\n    arr[y] = temp;\n}\n\npublic static void sort012(int[]\
+    \ arr) {\n    if (arr == null) {\n        return;\n    }\n}\n```\n"
+  raw: 'DLLNode next, prev;
+
+
+    }
+
+
+    public static DLLNode removeNode(DDLNode head, int x) {
+
+
+    if (head == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    if (head.data == x) {
+
+
+    head.next.previous = null;
+
+
+    return head.next;
+
+
+    }
+
+
+    DDLNode runner = head;
+
+
+    while (runner.next != null) {
+
+
+    if (runner.next.data == x) {
+
+
+    runner.next = runner.next.next;
+
+
+    runner.next.previous = runner;
+
+
+    break;
+
+
+    }
+
+
+    runner = runner.next;
+
+
+    }
+
+
+    return head;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    33.Given a doubly linked list reverse it in-place.
+
+
+    e.g:
+
+
+    input: 2 -> 5 -> 8 -> 9
+
+
+    output: 9 -> 8 -> 5 -> 2
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    class DLLNode {
+
+
+    int  data;
+
+
+    DLLNode next, prev;
+
+
+    }
+
+
+    public static DLLNode revList(DLLNode head) {
+
+
+    if (head == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    while (head.next != null) {
+
+
+    DLLNode temp = head.next;
+
+
+    head.next = head.prev;
+
+
+    head.prev = temp;
+
+
+    head = temp;
+
+
+    }
+
+
+    head.next = head.prev;
+
+
+    head.prev = null;
+
+
+    return head;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    34.Given a sorted array of integers and a target integer determine if it is possible
+    to sum up two integers to generate the target integer.
+
+
+    e.g:
+
+
+    input:
+
+
+    array: 1, 2, 5, 7, 8, 9
+
+
+    target: 7
+
+
+    output: true
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static boolean is2SumTarget(int[] arr, int target) {
+
+
+    if (arr == null) {
+
+
+    return  false;
+
+
+    }
+
+
+    int st = 0;
+
+
+    int end = arr.length - 1;
+
+
+    while (st < end) {
+
+
+    int sum = arr[st] + arr[end];
+
+
+    if (sum == target) {
+
+
+    return  true;
+
+
+    } else if (sum > target) {
+
+
+    end--;
+
+
+    } else {
+
+
+    st++;
+
+
+    }
+
+
+    }
+
+
+    return  false;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    35.Given a sorted array of integers and a target integer determine if it is possible
+    to sum up three integers to generate the target integer.
+
+
+    e.g:
+
+
+    input:
+
+
+    array: 1, 2, 5, 7, 8, 9
+
+
+    target: 17
+
+
+    output: true
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static boolean is3SumTarget(int[] arr, int target) {
+
+
+    if (arr == null) {
+
+
+    return  false;
+
+
+    }
+
+
+    for (int i = 0; i < arr.length - 2; i++) {
+
+
+    int st = i + 1;
+
+
+    int end = arr.length - 1;
+
+
+    while (st < end) {
+
+
+    int sum = arr[i] + arr[st] + arr[end];
+
+
+    if (sum == target) {
+
+
+    return  true;
+
+
+    } else if (sum > target) {
+
+
+    end--;
+
+
+    } else {
+
+
+    st++;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    return  false;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N²)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    36.Given a Binary Tree determine if it is a Binary Search Tree (BST) or not.
+
+
+    e.g:
+
+
+    input:
+
+
+    tree:
+
+
+    5
+
+
+    9 7
+
+
+    output: false
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static boolean isBST(TNode root, int min, int max) {
+
+
+    if (root == null) {
+
+
+    return  true;
+
+
+    }
+
+
+    if (root.data > min && root.data < max) {
+
+
+    return isBST(root.left, min, root.data)
+
+
+    && isBST(root.right, root.data, max);
+
+
+    }
+
+
+    return  false;
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    37.Given an array of integers that all integers appear twice except one that appears
+    once, find that single integer.
+
+
+    e.g:
+
+
+    input: 2, 4, 2, 3, 5, 3, 4
+
+
+    output: 5
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int findSingle(int[] arr) {
+
+
+    if (arr == null) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    HashSet<Integer> set = new HashSet<Integer>();
+
+
+    int sum = 0;
+
+
+    for (int i = 0; i < arr.length; i++) {
+
+
+    int cur = arr[i];
+
+
+    if (set.contains(cur) == true) {
+
+
+    sum -= cur;
+
+
+    } else {
+
+
+    set.add(cur);
+
+
+    sum += cur;
+
+
+    }
+
+
+    }
+
+
+    return sum;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    38.Given a sorted array of integers find the integer with the greatest number
+    of repetition.
+
+
+    e.g:
+
+
+    input: 1, 1, 1, 4, 4, 4, 4, 5, 6
+
+
+    output: 4
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int findMostPopular(int[] arr) {
+
+
+    if (arr == null || arr.length == 0) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int element = arr[0];
+
+
+    int count = 1;
+
+
+    int maxElement = arr[0];
+
+
+    int maxCount = 1;
+
+
+    for (int i = 1; i < arr.length; i++) {
+
+
+    if (arr[i] == element) {
+
+
+    count++;
+
+
+    } else {
+
+
+    count = 1;
+
+
+    element = arr[i];
+
+
+    }
+
+
+    if (count > maxCount) {
+
+
+    maxCount = count;
+
+
+    maxElement = element;
+
+
+    }
+
+
+    }
+
+
+    return maxElement;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    39.Print the vertical level order of a binary tree.
+
+
+    e.g:
+
+
+    input:
+
+
+    tree:
+
+
+    5
+
+
+    9 7
+
+
+    output:
+
+
+    9
+
+
+    5
+
+
+    7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static void makeVerticalLevelOrder(TNode root, int hd, HashMap<Integer,
+    List<Integer>> hm, int[] minMax) {
+
+
+    if (root == null) {
+
+
+    return;
+
+
+    }
+
+
+    // save the minimum and maximum
+
+
+    // horizontal distance (hd) of current node from root
+
+
+    minMax[0] = Math.min(minMax[0], hd);
+
+
+    minMax[1] = Math.max(minMax[1], hd);
+
+
+    List<Integer> curHdLevel;
+
+
+    if (hm.containsKey(hd) == true) {
+
+
+    curHdLevel = hm.get(hd);
+
+
+    } else {
+
+
+    curHdLevel = new LinkedList<Integer>();
+
+
+    }
+
+
+    curHdLevel.add(root.data);
+
+
+    hm.put(hd, curHdLevel);
+
+
+    makeVerticalLevelOrder(root.left, hd - 1, hm, minMax);
+
+
+    makeVerticalLevelOrder(root.right, hd + 1, hm, minMax);
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    // generate the hash map containing the vertical level order
+
+
+    HashMap<Integer, List<Integer>> hm = new HashMap<Integer, List<Integer>>();
+
+
+    int minMax[] = new int[2];
+
+
+    makeVerticalLevelOrder(root, 0, hm, minMax);
+
+
+    // print the list
+
+
+    for (int lvl = minMax[0]; lvl <= minMax[1]; lvl++) {
+
+
+    List<Integer> curHdLevel = hm.get(lvl);
+
+
+    for (Integer node : curHdLevel) {
+
+
+    System.out.print(node + " ");
+
+
+    }
+
+
+    System.out.println();
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    40.Print the level order of a binary tree (= print the nodes in each level).
+
+
+    e.g:
+
+
+    input:
+
+
+    tree:
+
+
+    5
+
+
+    9 7
+
+
+    output:
+
+
+    5
+
+
+    9 7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static void printLevelOrder(TNode root) {
+
+
+    if (root == null) {
+
+
+    return;
+
+
+    }
+
+
+    Queue<TNode> curLevel = new LinkedList<TNode>();
+
+
+    Queue<TNode> nextLevel = new LinkedList<TNode>();
+
+
+    curLevel.add(root);
+
+
+    while (curLevel.isEmpty() == false) {
+
+
+    while (curLevel.isEmpty() == false) {
+
+
+    TNode curNode = curLevel.poll();
+
+
+    System.out.print(curNode.data + " ");
+
+
+    if (curNode.left != null) {
+
+
+    nextLevel.add(curNode.left);
+
+
+    }
+
+
+    if (curNode.right != null) {
+
+
+    nextLevel.add(curNode.right);
+
+
+    }
+
+
+    }
+
+
+    System.out.println();
+
+
+    curLevel = nextLevel;
+
+
+    nextLevel = new LinkedList<TNode>();
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    41.Given a linked list reverse it in-place, recursively and iteratively.
+
+
+    e.g:
+
+
+    input: 3 -> 9 -> 6 -> 2
+
+
+    output: 2 -> 6 -> 9 -> 3
+
+
+    _______________
+
+
+    SOLUTION - Recursion:
+
+
+    public static LLNode revList(LLNode head, LLNode prev) {
+
+
+    if (head == null && prev == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    LLNode next = head.next;
+
+
+    head.next = prev;
+
+
+    if (next == null) {
+
+
+    return head;
+
+
+    } else {
+
+
+    return revList(next, head);
+
+
+    }
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    head = revList(head, null);
+
+
+    SOLUTION - iterative:
+
+
+    public static LLNode revList(LLNode head) {
+
+
+    if (head == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    LLNode cur = head, prev = null;
+
+
+    while (cur != null) {
+
+
+    LLNode next = cur.next;
+
+
+    cur.next = prev;
+
+
+    prev = cur;
+
+
+    cur = next;
+
+
+    }
+
+
+    return prev;
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    head = revList(head, null);
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    42.Implement a pattern matching function where:
+
+
+    1.‘.’ matches any single character.
+
+
+    2.‘*’ matches 0 or more instances of the preceding character.
+
+
+    e.g:
+
+
+    input:
+
+
+    string: aabc
+
+
+    pattern: a*b.
+
+
+    output: true
+
+
+    input:
+
+
+    string: bc
+
+
+    pattern: a*b.
+
+
+    output: true
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static boolean isMatch(char[] str, char[] pat, int s, int p) {
+
+
+    if (s >= str.length) {
+
+
+    return (p >= pat.length);
+
+
+    }
+
+
+    // the current char is a dot or a letter
+
+
+    if (p == pat.length - 1 || pat[p + 1] != ''*'') {
+
+
+    return (str[s] == pat[p] || pat[p] == ''.'')
+
+
+    && isMatch(str, pat, s + 1, p + 1);
+
+
+    }
+
+
+    // the current char is followed by a star, so either:
+
+
+    // 1\. ignore the star
+
+
+    // 2\. take the star in mind and check for equality
+
+
+    return isMatch(str, pat, s, p + 2) ||
+
+
+    (isMatch(str, pat, s + 1, p) && str[s] == pat[p]);
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    boolean result = isMatch(str, pat, 0 ,0);
+
+
+    43.Given an array that contains only 0, 1 or 2, sort it without using any sorting
+    function.
+
+
+    e.g:
+
+
+    input: 0, 1, 1, 0, 2, 1
+
+
+    output: 0, 0, 1, 1, 1, 2
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static void swap(int[] arr, int x, int y) {
+
+
+    int temp = arr[x];
+
+
+    arr[x] = arr[y];
+
+
+    arr[y] = temp;
+
+
+    }
+
+
+    public static void sort012(int[] arr) {
+
+
+    if (arr == null) {
+
+
+    return;
+
+
+    }'
+  toc: []
+  trans: "\n\n```java\nclass DLLNode {\n    int data;\n    DLLNode next, prev;\n}\n\
+    \npublic static DLLNode removeNode(DDLNode head, int x) {\n    if (head == null)\
+    \ {\n        return null;\n    }\n    if (head.data == x) {\n        head.next.previous\
+    \ = null;\n        return head.next;\n    }\n    DDLNode runner = head;\n    while\
+    \ (runner.next != null) {\n        if (runner.next.data == x) {\n            runner.next\
+    \ = runner.next.next;\n            runner.next.previous = runner;\n          \
+    \  break;\n        }\n        runner = runner.next;\n    }\n    return head;\n\
+    }\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n---\n\n### 33. 给定双向链表，在原地反转它。\n\
+    \n例如：\n输入：`2 -> 5 -> 8 -> 9`\n输出：`9 -> 8 -> 5 -> 2`\n\n_______________\n\n###\
+    \ 解决方案：\n\n```java\nclass DLLNode {\n    int data;\n    DLLNode next, prev;\n\
+    }\n\npublic static DLLNode revList(DLLNode head) {\n    if (head == null) {\n\
+    \        return null;\n    }\n    while (head.next != null) {\n        DLLNode\
+    \ temp = head.next;\n        head.next = head.prev;\n        head.prev = temp;\n\
+    \        head = temp;\n    }\n    head.next = head.prev;\n    head.prev = null;\n\
+    \    return head;\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n---\n\n###\
+    \ 34. 给定一个排序后的整数数组和一个目标整数，判断是否可以通过两个整数之和生成该目标整数。\n\n例如：\n输入：\n数组：`1, 2, 5, 7,\
+    \ 8, 9`\n目标：`7`\n输出：`true`\n\n_______________\n\n### 解决方案：\n\n```java\npublic\
+    \ static boolean is2SumTarget(int[] arr, int target) {\n    if (arr == null) {\n\
+    \        return false;\n    }\n    int st = 0;\n    int end = arr.length - 1;\n\
+    \    while (st < end) {\n        int sum = arr[st] + arr[end];\n        if (sum\
+    \ == target) {\n            return true;\n        } else if (sum > target) {\n\
+    \            end--;\n        } else {\n            st++;\n        }\n    }\n \
+    \   return false;\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n---\n\n###\
+    \ 35. 给定一个排序后的整数数组和一个目标整数，判断是否可以通过三个整数之和生成该目标整数。\n\n例如：\n输入：\n数组：`1, 2, 5, 7,\
+    \ 8, 9`\n目标：`17`\n输出：`true`\n\n_______________\n\n### 解决方案：\n\n```java\npublic\
+    \ static boolean is3SumTarget(int[] arr, int target) {\n    if (arr == null) {\n\
+    \        return false;\n    }\n    for (int i = 0; i < arr.length - 2; i++) {\n\
+    \        int st = i + 1;\n        int end = arr.length - 1;\n        while (st\
+    \ < end) {\n            int sum = arr[i] + arr[st] + arr[end];\n            if\
+    \ (sum == target) {\n                return true;\n            } else if (sum\
+    \ > target) {\n                end--;\n            } else {\n                st++;\n\
+    \            }\n        }\n    }\n    return false;\n}\n```\n\n运行时间复杂度：\n`O(N²)`\n\
+    \n空间复杂度：\n`O(1)`\n\n---\n\n### 36. 给定一二叉树，判断它是否为二叉搜索树（BST）。\n\n例如：\n输入：\n树：\n\
+    5\n9 7\n输出：`false`\n\n_______________\n\n### 解决方案：\n\n```java\npublic static boolean\
+    \ isBST(TNode root, int min, int max) {\n    if (root == null) {\n        return\
+    \ true;\n    }\n    if (root.data > min && root.data < max) {\n        return\
+    \ isBST(root.left, min, root.data)\n        && isBST(root.right, root.data, max);\n\
+    \    }\n    return false;\n}\n```\n\n`isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);`\n\
+    \n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n---\n\n### 37. 给定一个整数数组，其中所有整数都出现两次，只有一个出现一次，找到那个只出现一次的整数。\n\
+    \n例如：\n输入：`2, 4, 2, 3, 5, 3, 4`\n输出：`5`\n\n_______________\n\n### 解决方案：\n\n```java\n\
+    public static int findSingle(int[] arr) {\n    if (arr == null) {\n        return\
+    \ Integer.MIN_VALUE;\n    }\n    HashSet<Integer> set = new HashSet<Integer>();\n\
+    \    int sum = 0;\n    for (int i = 0; i < arr.length; i++) {\n        int cur\
+    \ = arr[i];\n        if (set.contains(cur)) {\n            sum -= cur;\n     \
+    \   } else {\n            set.add(cur);\n            sum += cur;\n        }\n\
+    \    }\n    return sum;\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(N)`\n\n---\n\
+    \n### 38. 给定一个整数数组，除一个整数外所有整数都重复多次，找到重复次数最多的整数。\n\n例如：\n输入：`1, 1, 4, 4, 4, 5,\
+    \ 6`\n输出：`4`\n\n_______________\n\n### 解决方案：\n\n```java\npublic static int findMost(int[]\
+    \ arr) {\n    if (arr == null || arr.length == 0) {\n        return Integer.MIN_VALUE;\n\
+    \    }\n    int element = arr[0];\n    int count = 1;\n    int maxElement = arr[0];\n\
+    \    int maxCount = 1;\n    for (int i = 1; i < arr.length; i++) {\n        if\
+    \ (arr[i] == element) {\n            count++;\n        } else {\n            count\
+    \ = 1;\n            element = arr[i];\n        }\n        if (count > maxCount)\
+    \ {\n            maxCount = count;\n            maxElement = element;\n      \
+    \  }\n    }\n    return maxElement;\n}\n```\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\
+    \n---\n\n### 39. 打印二叉树的垂直层序。\n\n例如：\n输入：\n树：\n5\n9 7\n输出：\n9 5 7\n\n_______________\n\
+    \n### 解决方案：\n\n```java\npublic static void makeVerticalOrder(TNode root, int hd,\
+    \ HashMap<Integer, List<Integer>> hm, int[] minMax) {\n    if (root == null) {\n\
+    \        return;\n    }\n    // 保存根节点的最小和最大水平距离\n    if (hd < minMax[0]) minMax[0]\
+    \ = hd;\n    if (hd > minMax[1]) minMax[1] = hd;\n    if (!hm.containsKey(hd))\
+    \ {\n        hm.put(hd, new ArrayList<Integer>());\n    }\n    hm.get(hd).add(root.data);\n\
+    \    makeVerticalOrder(root.left, hd - 1, hm, minMax);\n    makeVerticalOrder(root.right,\
+    \ hd + 1, hm, minMax);\n}\n\n// 生成包含垂直层的 map\nfor (int lvl = minMax[0]; lvl <=\
+    \ minMax[1]; lvl++) {\n    List<Integer> curLevel = hm.get(lvl);\n    for (Integer\
+    \ node : curLevel) {\n        System.out.print(node + \" \");\n    }\n}\nSystem.out.println();\n\
+    ```\n\n---\n\n### 40. 打印二叉树的层序遍历。\n\n例如：\n输入：\n树：\n5\n9 7\n输出：\n5 9 7\n\n_______________\n\
+    \n### 解决方案：\n\n```java\npublic static void printLevelOrder(TNode root) {\n   \
+    \ if (root == null) {\n        return;\n    }\n    Queue<TNode> curLevel = new\
+    \ LinkedList<>();\n    Queue<TNode> nextLevel = new LinkedList<>();\n    curLevel.add(root);\n\
+    \    while (!curLevel.isEmpty()) {\n        TNode node = curLevel.poll();\n  \
+    \      System.out.print(node.data + \" \");\n        if (node.left != null) {\n\
+    \            nextLevel.add(node.left);\n        }\n        if (node.right != null)\
+    \ {\n            nextLevel.add(node.right);\n        }\n    }\n    System.out.println();\n\
+    \    curLevel = nextLevel;\n}\n```\n\n---\n\n### 41. 给定双向链表，用递归和迭代的方法在原地反转它。\n\
+    \n例如：\n输入：`3 -> 9 -> 6 -> 2`\n输出：`2 -> 6 -> 9 -> 3`\n\n_______________\n\n###\
+    \ 递归：\n```java\npublic static DLLNode revList(DLLNode head, DLLNode prev) {\n\
+    \    if (head == null) {\n        return prev;\n    }\n    DLLNode next = head.next;\n\
+    \    head.next = prev;\n    if (next == null) {\n        return head;\n    } else\
+    \ {\n        return revList(next, head);\n    }\n}\n```\n`revList(head, null);`\n\
+    \n### 迭代：\n```java\npublic static DLLNode revList(DLLNode head) {\n    if (head\
+    \ == null) {\n        return null;\n    }\n    DLLNode cur = head, prev = null;\n\
+    \    while (cur != null) {\n        DLLNode next = cur.next;\n        cur.next\
+    \ = prev;\n        prev = cur;\n        cur = next;\n    }\n    return prev;\n\
+    }\n```\n`revList(head);`\n\n运行时间复杂度：\n`O(N)`\n\n空间复杂度：\n`O(1)`\n\n---\n\n### 42.\
+    \ 实现一个模式匹配函数，其中：\n1. `.` 匹配任意单个字符。\n2. `*` 匹配所在字符的零 个或多个实例。\n\n例如：\n输入：\n字符串：`aabc`\n\
+    模式：`a*b.`\n输出：`true`\n输入：\n字符串：`bc`\n模式：`a*b.`\n输出：`true`\n\n_______________\n\
+    \n### 解决方案：\n\n```java\npublic static boolean isMatch(char[] str, char[] pat,\
+    \ int s, int p) {\n    if (s >= str.length) {\n        return (p >= pat.length);\n\
+    \    }\n    // 当前字符是点或字母\n    if (p == pat.length - 1 || pat[p + 1] != '*') {\n\
+    \        return (str[s] == pat[p] || pat[p] == '.')\n        && isMatch(str, pat,\
+    \ s + 1, p + 1);\n    }\n    // 当前字符后面跟着星号，所以：\n    // 1. 忽略星号\n    // 2. 记住星号并检查相等性\n\
+    \    return isMatch(str, pat, s, p + 2) ||\n    (isMatch(str, pat, s + 1, p) &&\
+    \ (str[s] == pat[p]));\n}\n```\n\n`boolean result = isMatch(str, pat, 0 ,0);`\n\
+    \n---### 43. 给定一个只包含 0、1 或 2 的数组，不使用任何排序函数进行排序。\n\n例如：\n输入：`0, 1, 1, 0, 2, 1`\n\
+    输出：`0, 0, 1, 1, 1, 2`\n\n_______________\n\n### 解决方案：\n\n```java\npublic static\
+    \ void swap(int[] arr, int x, int y) {\n    int temp = arr[x];\n    arr[x] = arr[y];\n\
+    \    arr[y] = temp;\n}\n\npublic static void sort012(int[] arr) {\n    if (arr\
+    \ == null) {\n        return;\n    }\n}\n```\n\n"
+- fmt: "\n```java\nint st = 0, mid = 0, end = arr.length - 1;\n\nwhile (mid <= end)\
+    \ {\n    switch (arr[mid]) {\n        case 0:\n            swap(arr, st, mid);\n\
+    \            st++;\n            mid++;\n            break;\n        case 1:\n\
+    \            mid++;\n            break;\n        case 2:\n            swap(arr,\
+    \ mid, end);\n            end--;\n            break;\n    }\n}\n```\n**RUNNING\
+    \ TIME COMPLEXITY:**\nO(N)\n\n**SPACE COMPLEXITY:**\nO(1)\n\n## 44. Calculate\
+    \ the sum of two binary numbers that are given as arrays of characters. Return\
+    \ it as a string.\n\n**e.g:**\ninput:\nnum 1: 001\nnum2: 101\noutput: 110\n\n\
+    ### SOLUTION\n```java\npublic static String addBinary(char[] num1, char[] num2)\
+    \ {\n    int p1 = num1.length - 1;\n    int p2 = num2.length - 1;\n    int carry\
+    \ = 0;\n    String res = \"\";\n    while (p1 >= 0 || p2 >= 0 || carry != 0) {\n\
+    \        int curSum = carry;\n        curSum += (p1 >= 0) ? (num1[p1] - '0') :\
+    \ 0;\n        curSum += (p2 >= 0) ? (num2[p2] - '0') : 0;\n        p1--;\n   \
+    \     p2--;\n        carry = (curSum >= 2) ? 1 : 0;\n        int newDigit = curSum\
+    \ % 2;\n        res = newDigit + res;\n    }\n    return res;\n}\n```\n**RUNNING\
+    \ TIME COMPLEXITY:**\nO(N)\nN: max(num1.length, num2.length)\n\n**SPACE COMPLEXITY:**\n\
+    O(1)\n\n## 45. Reverse an integer without using any built-in function.\n\n**e.g:**\n\
+    input: 123\noutput: 321\ninput: -123\noutput: -321\n\n### SOLUTION\n```java\n\
+    public static int revInt(int x) {\n    boolean negative = false;\n    if (x <\
+    \ 0) {\n        x = x * -1;\n        negative = true;\n    }\n    int res = 0;\n\
+    \    while (x > 0) {\n        int LSB = x % 10;\n        x = x / 10;\n       \
+    \ res = res * 10 + LSB;\n    }\n    if (negative == true) {\n        res = res\
+    \ * -1;\n    }\n    return res;\n}\n```\n**RUNNING TIME COMPLEXITY:**\nO(N)\n\
+    N: number of digits of x\n\n**SPACE COMPLEXITY:**\nO(1)\n\n## 46. Merge two sorted\
+    \ linked lists.\n\n**e.g:**\ninput:\nlist 1: 2 -> 4 -> 5\nlist 2: 3 -> 7\noutput:\
+    \ 2 -> 3 -> 4 -> 5 -> 7\n\n### SOLUTION\n```java\npublic static LLNode mergeLists(LLNode\
+    \ n1, LLNode n2) {\n    if (n1 == null) {\n        return n2;\n    }\n    if (n2\
+    \ == null) {\n        return n1;\n    }\n    LLNode res;\n    if (n1.data <= n2.data)\
+    \ {\n        res = n1;\n        n1.next = mergeLists(n1.next, n2);\n    } else\
+    \ {\n        res = n2;\n        n2.next = mergeLists(n1, n2.next);\n    }\n  \
+    \  return res;\n}\n```\n**RUNNING TIME COMPLEXITY:**\nO(N)\n\n**SPACE COMPLEXITY:**\n\
+    O(1)\n\n## 47. Given a list of words, print in each line the words that can be\
+    \ created using the same letters.\n\n**e.g:**\ninput: abc, hello, cba\noutput:\n\
+    abc cba\nhello\n\n### SOLUTION\n```java\npublic static void bucketAnagram(List<String>\
+    \ input) {\n    HashMap<String, List<String>> hm;\n    hm = new HashMap<String,\
+    \ List<String>>();\n    for (String word : input) {\n        char[] wordArr =\
+    \ word.toCharArray();\n        Arrays.sort(wordArr);\n        String key = new\
+    \ String(wordArr);\n        List<String> list;\n        if (hm.containsKey(key)\
+    \ == false) {\n            list = new LinkedList<String>();\n        } else {\n\
+    \            list = hm.get(key);\n        }\n        list.add(word);\n       \
+    \ hm.put(key, list);\n    }\n    for (Map.Entry<String, List<String>> entry :\
+    \ hm.entrySet()) {\n        for (String word : entry.getValue()) {\n         \
+    \   System.out.print(word + \" \");\n        }\n        System.out.println();\n\
+    \    }\n}\n```\n**RUNNING TIME COMPLEXITY:**\nO(N*MlogM)\nN: number of input words\n\
+    M: number of characters in the biggest input word\n\n**SPACE COMPLEXITY:**\nO(NM)\n\
+    \n## 48. Given an array of integers of length K where the last element in the\
+    \ array is empty and all the other values (from 1 to k) are present in the array,\
+    \ find the missing number.\n\n**e.g:**\ninput: 4, 5, 1, 3, _\noutput: 2\n\n###\
+    \ SOLUTION\n```java\npublic static int missingNumber(int[] arr) {\n    if (arr\
+    \ == null) {\n        return Integer.MIN_VALUE;\n    }\n    int sumFrom1toK =\
+    \ arr.length;\n    int sumOfArray = 0;\n    for (int i = 0; i < arr.length - 1;\
+    \ i++) {\n        sumOfArray += arr[i];\n        sumFrom1toK += i + 1;\n    }\n\
+    \    return sumFrom1toK - sumOfArray;\n}\n```\n**INFO:** You can also use the\
+    \ formula for calculating sum of arithmetic progression: `sum1toK = (k*(k+1))/2`.\
+    \ `K` is the length of the input array.\n\n**RUNNING TIME COMPLEXITY:**\nO(N)\n\
+    \n**SPACE COMPLEXITY:**\nO(1)\n\n## 49. Given a binary tree find the maximum sum\
+    \ that exist in a path. A path can start from any node and end at any node.\n\n\
+    **e.g:**\ninput:\ntree: 5\n3 1\n10\noutput: 9\n\n### SOLUTION\n```java\nstatic\
+    \ int mPathSum = Integer.MIN_VALUE;\npublic static int maxPathInSubtree(Node root)\
+    \ {\n    if (root == null) {\n        return 0;\n    }\n    int leftSum = maxPathInSubtree(root.left);\n\
+    \    int rightSum = maxPathInSubtree(root.right);\n    // update the maximum path,\
+    \ take in mind the current node\n    mPathSum = Math.max(mPathSum, leftSum + root.data\
+    \ + rightSum);\n    // return the maximum path of the subtree below the current\
+    \ node\n    return root.data + Math.max(0, Math.max(leftSum, rightSum));\n}\n\
+    ```\n**INFO:** The function needs to return integers, that why a global variable\
+    \ `mPathSum` is used to return the results.\n\n**RUNNING TIME COMPLEXITY:**\n\
+    O(N)\n\n**SPACE COMPLEXITY:**\nO(1)\n\n## 50. Given an undirected graph where\
+    \ each node contains a label and a list of its neighbors, copy the whole data\
+    \ structure.\n\n### SOLUTION\n```java\nclass Node {\n    String label;\n    ArrayList<Node>\
+    \ adjList = new ArrayList<Node>();\n    Node(String label) {\n        this.label\
+    \ = label;\n    }\n}\npublic static Node copyGraph(Node node) {\n    if (node\
+    \ == null) {\n        return null;\n    }\n    Queue<Node> queue = new LinkedList<Node>();\n\
+    \    HashMap<Node, Node> hm = new HashMap<Node, Node>();\n    Node newNode = new\
+    \ Node(node.label);\n    // the hash map holds the original nodes as keys and\
+    \ the copied nodes as values\n    hm.put(node, newNode);\n    // the queue has\
+    \ the original nodes that have not been yet\n    queue.add(node);\n    while (queue.isEmpty()\
+    \ == false) {\n        Node curNode = queue.poll();\n        for (Node adjNode\
+    \ : curNode.adjList) {\n            if (hm.containsKey(adjNode) == false) {\n\
+    \                Node copyOfAdjNode = new Node(adjNode.label);\n             \
+    \   hm.put(adjNode, copyOfAdjNode);\n                curNode.adjList.add(copyOfAdjNode);\n\
+    \                queue.add(adjNode);\n            } else {\n                curNode.adjList.add(hm.get(adjNode));\n\
+    \            }\n        }\n    }\n    return newNode;\n}\n```\n**RUNNING TIME\
+    \ COMPLEXITY:**\nO(N)\n\n**SPACE COMPLEXITY:**\nO(N)\n\n## 51. The following are\
+    \ some theoretical questions that might be asked in a coding interview. Note that\
+    \ bigger companies usually not ask these kind of questions but many others do.\n\
+    \n- What is a HashMap and how it works?\n- What are the differences between `HashMap`\
+    \ and `TreeMap` in Java?\n- If i want to use `HashMap` with my custom objects\
+    \ as keys in Java, what functions i need to override?\n- What is virtual memory\
+    \ and how it works?\n- What are the differences between a process and a thread?\n\
+    - What are the virtual constructors and deconstructs in C/C++?\n- What is pass\
+    \ by value and pass by reference?\n- What are `AVL` and `RBTrees`? What are the\
+    \ insertion/deletion/look-up times for a self-balance tree and for a normal tree?\n\
+    - Define what deadlock and starvation is in resource management.\n- What does\
+    \ non-blocking thread-safe means?\n- How to prevent a deadlock?\n- How a `mutex`\
+    \ lock can be implemented?\n- What are the difference between a `Mutex` and a\
+    \ `Semaphore`?\n- How can a Garbage Collector detects which objects are not used\
+    \ anymore?\n- What is the difference between preemptive and cooperative multitasking?\n\
+    - What are some forms of Interprocess Communications (IPC)?\n- What are the differences\
+    \ between `Pipes`, `Message Queues`, `Shared Memory`, `Mapped Files` in IPC?\n\
+    - What are the differences between a `struct` and a `class` in C++?\n- What are\
+    \ the differences between an `Abstract class` and an `Interface` in Java?\n- In\
+    \ which cases would you use an `Abstract` and in which cases an `Interface`?\n\
+    - What are the main differences between C++ and Java?\n- What is Little Endian\
+    \ and Big Endian?\n- What is the difference between Logical shift and an Arithmetic\
+    \ shift?\n- What is a stack overflow?\n- What is polymorphism?\n- What are Generics\
+    \ in Java?\n- What is Memory Fragmentation?\n- What happens if an `int` value\
+    \ overflow in C++ and what happens in Java?\n- What is Unit Testing?\n- How would\
+    \ you make your solution to run in parallel?\n- What software design patterns\
+    \ do you know?\n- What are the systems development life cycles?\n- What is software\
+    \ prototyping?\n- What are some eviction policies for a cache?\n- What is a distributed\
+    \ file system?\n"
+  raw: 'int st = 0, mid = 0, end = arr.length - 1;
+
+
+    while (mid <= end) {
+
+
+    switch (arr[mid]) {
+
+
+    case 0:
+
+
+    swap(arr, st, mid);
+
+
+    st++;
+
+
+    mid++;
+
+
+    break;
+
+
+    case 1:
+
+
+    mid++;
+
+
+    break;
+
+
+    case 2:
+
+
+    swap(arr, mid, end);
+
+
+    end--;
+
+
+    break;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    44.Calculate the sum of two binary numbers that are given as arrays of characters.
+    Return it as a string.
+
+
+    e.g:
+
+
+    input:
+
+
+    num 1: 001
+
+
+    num2: 101
+
+
+    output: 110
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static String addBinary(char[] num1, char[] num2) {
+
+
+    int p1 = num1.length - 1;
+
+
+    int p2 = num2.length - 1;
+
+
+    int carry = 0;
+
+
+    String res = "";
+
+
+    while (p1 >= 0 || p2 >= 0 || carry != 0) {
+
+
+    int curSum = carry;
+
+
+    curSum += (p1 >= 0) ? (num1[p1] - ‘0’) : 0;
+
+
+    curSum += (p2 >= 0) ? (num2[p2] - ‘0’) : 0;
+
+
+    p1--;
+
+
+    p2--;
+
+
+    carry = (curSum >= 2) ? 1 : 0;
+
+
+    int newDigit = curSum % 2;
+
+
+    res = newDigit + res;
+
+
+    }
+
+
+    return res;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    N: max(num1.length, num2.length)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    45.Reverse an integer without using any built-in function.
+
+
+    e.g:
+
+
+    input: 123
+
+
+    output: 321
+
+
+    input: -123
+
+
+    output: -321
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int revInt(int x) {
+
+
+    boolean negative = false;
+
+
+    if (x < 0) {
+
+
+    x = x * -1;
+
+
+    negative = true;
+
+
+    }
+
+
+    int res = 0;
+
+
+    while (x > 0) {
+
+
+    int LSB = x % 10;
+
+
+    x = x / 10;
+
+
+    res = res * 10 + LSB;
+
+
+    }
+
+
+    if (negative == true) {
+
+
+    res = res * -1;
+
+
+    }
+
+
+    return res;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    N: number of digits of x
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    46.Merge two sorted linked lists.
+
+
+    e.g:
+
+
+    input:
+
+
+    list 1: 2 -> 4 -> 5
+
+
+    list 2: 3 -> 7
+
+
+    output: 2 -> 3 -> 4 -> 5 -> 7
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static LLNode mergeLists(LLNode n1, LLNode n2) {
+
+
+    if (n1 == null) {
+
+
+    return n2;
+
+
+    }
+
+
+    if (n2 == null) {
+
+
+    return n1;
+
+
+    }
+
+
+    LLNode res;
+
+
+    if (n1.data <= n2.data) {
+
+
+    res = n1;
+
+
+    n1.next = mergeLists(n1.next, n2);
+
+
+    } else {
+
+
+    res = n2;
+
+
+    n2.next = mergeLists(n1, n2.next);
+
+
+    }
+
+
+    return res;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    47.Given a list of words, print in each line the words that can be created using
+    the same letters.
+
+
+    e.g:
+
+
+    input: abc, hello, cba
+
+
+    output:
+
+
+    abc cba
+
+
+    hello
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static void bucketAnagram(List<String> input) {
+
+
+    HashMap<String, List<String>> hm;
+
+
+    hm = new HashMap<String, List<String>>();
+
+
+    for (String word : input) {
+
+
+    char[] wordArr = word.toCharArray();
+
+
+    Arrays.sort(wordArr);
+
+
+    String key = new String(wordArr);
+
+
+    List<String> list;
+
+
+    if (hm.containsKey(key) == false) {
+
+
+    list = new LinkedList<String>();
+
+
+    } else {
+
+
+    list = hm.get(key);
+
+
+    }
+
+
+    list.add(word);
+
+
+    hm.put(key, list);
+
+
+    }
+
+
+    for (Map.Entry<String, List<String>> entry : hm.entrySet()) {
+
+
+    for (String word : entry.getValue()) {
+
+
+    System.out.print(word + " ");
+
+
+    }
+
+
+    System.out.println();
+
+
+    }
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N*MlogM)
+
+
+    N: number of input words
+
+
+    M: number of characters in the biggest input word
+
+
+    SPACE COMPLEXITY:
+
+
+    O(NM)
+
+
+    48.Given an array of integers of length K where the last element in the array
+    is empty and all the other values (from 1 to k) are present in the array, find
+    the missing number.
+
+
+    e.g:
+
+
+    input: 4, 5, 1, 3, _
+
+
+    output: 2
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    public static int missingNumber(int[] arr) {
+
+
+    if (arr == null) {
+
+
+    return Integer.MIN_VALUE;
+
+
+    }
+
+
+    int sumFrom1toK = arr.length;
+
+
+    int sumOfArray = 0;
+
+
+    for (int i = 0; i < arr.length - 1; i++) {
+
+
+    sumOfArray += arr[i];
+
+
+    sumFrom1toK += i + 1;
+
+
+    }
+
+
+    return sumFrom1toK - sumOfArray;
+
+
+    }
+
+
+    INFO: You can also use the formula for calculating the sum of an arithmetic progression:
+    sumFrom1toK = (k*(1+k))/2\. K is the length of the input array.
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    49.Given a binary tree find the maximum sum that exist in a path of a tree. A
+    path can start from any node and end at any node.
+
+
+    e.g:
+
+
+    input:
+
+
+    tree:
+
+
+    5
+
+
+    3 1
+
+
+    -10
+
+
+    output: 9
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    static  int  mMaxPathSum = Integer.MIN_VALUE;
+
+
+    public static int maxPathInSubtree(TNode root) {
+
+
+    if (root == null) {
+
+
+    return 0;
+
+
+    }
+
+
+    int leftSum = maxPathInSubtree(root.left);
+
+
+    int rightSum = maxPathInSubtree(root.right);
+
+
+    // update the maximum path cost,
+
+
+    // take in mind the current node
+
+
+    mMaxPathSum = Math.max(mMaxPathSum,
+
+
+    leftSum + root.data + rightSum);
+
+
+    // return the maximum path of the subtree below the current node
+
+
+    return root.data + Math.max(0, Math.max(leftSum, rightSum));
+
+
+    }
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    mMaxPathSum = Integer.MIN_VALUE;
+
+
+    maxPathInSubtree(root);
+
+
+    System.out.println("Max path sum: " + mMaxPathSum);
+
+
+    INFO: The function needs to return two integers, that’s why a global variable
+    is used. If want to avoid this you can use a small array like question 14 to return
+    the results.
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(1)
+
+
+    50.Given an undirected graph where each node contains a label and a list of its
+    neighbors, copy the whole data structure.
+
+
+    _______________
+
+
+    SOLUTION:
+
+
+    class Node {
+
+
+    String label;
+
+
+    ArrayList<Node> adjList = new ArrayList<Node>();
+
+
+    Node(String label) {
+
+
+    this.label = label;
+
+
+    }
+
+
+    }
+
+
+    public static Node copyGraph(Node node) {
+
+
+    if (node == null) {
+
+
+    return  null;
+
+
+    }
+
+
+    Queue<Node> queue = new LinkedList<Node>();
+
+
+    HashMap<Node, Node> hm = new HashMap<Node, Node>();
+
+
+    Node newNode = new Node(node.label);
+
+
+    // the hash map holds the original nodes as keys
+
+
+    // and the copied nodes as values
+
+
+    hm.put(node, newNode);
+
+
+    // the queue has the original nodes that
+
+
+    // their adjacent nodes have not been copied yet
+
+
+    queue.add(node);
+
+
+    while (queue.isEmpty() == false) {
+
+
+    Node curNode = queue.poll();
+
+
+    for (Node adjNode : curNode.adjList) {
+
+
+    if (hm.containsKey(adjNode) == false) {
+
+
+    Node copyOfAdjNode = new Node(adjNode.label);
+
+
+    hm.put(adjNode, copyOfAdjNode);
+
+
+    hm.get(curNode).adjList.add(copyOfAdjNode);
+
+
+    queue.add(adjNode);
+
+
+    } else {
+
+
+    hm.get(curNode).adjList.add(hm.get(adjNode));
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    return newNode;
+
+
+    }
+
+
+    RUNNING TIME COMPLEXITY:
+
+
+    O(N)
+
+
+    SPACE COMPLEXITY:
+
+
+    O(N)
+
+
+    51.The following are some theoretical questions that might be asked in a coding
+    interview. Note that bigger companies usually do not ask these kind of questions
+    but many others do.
+
+
+    _______________
+
+
+    •What is a Hash Map and how it works?
+
+
+    •What are the differences between HashMap and TreeMap in Java?
+
+
+    •If i want to use a HashMap with my custom objects as keys in Java, what functions
+    do i need to override?
+
+
+    •What is virtual memory and how it works?
+
+
+    •What are the differences between a process and a thread?
+
+
+    •What are the virtual constructors and deconstructs in C/C++?
+
+
+    •What is pass by value and pass by reference?
+
+
+    •What are AVL and RBTrees? What are the insertion/deletion/look-up times for a
+    self-balance tree and for a normal tree?
+
+
+    •Define what deadlock and starvation is in resource management.
+
+
+    •What does non-blocking thread-safe means?
+
+
+    •How to prevent a deadlock?
+
+
+    •How a mutex lock can be implemented?
+
+
+    •What are the difference between a Mutex and a Semaphore?
+
+
+    •How can a Garbage Collector detects which objects are not used anymore?
+
+
+    •What is the difference between preemptive and cooperative multitasking?
+
+
+    •What are some forms of Interprocess Communications (IPC)?
+
+
+    •What are the differences between Pipes/Message Queues/Shared Memory/Mapped Files
+    in IPC?
+
+
+    •What are the differences between a struct and a class in C++?
+
+
+    •What are the differences between an Abstract class and an Interface in Java?
+
+
+    •In which cases you would use an Abstract and in which cases an Interface?
+
+
+    •What are the main differences between C++ and Java?
+
+
+    •What is Little Endian and Big Endian?
+
+
+    •What is the difference between Logical shift and an Arithmetic shift?
+
+
+    •What is a stack overflow?
+
+
+    •What is polymorphism?
+
+
+    •What are Generics in Java?
+
+
+    •What is Memory Fragmentation?
+
+
+    •What happens if an int value overflow in C++ and what happens in Java?
+
+
+    •What is Unit Testing?
+
+
+    •How would you make your solution to run in parallel?
+
+
+    •What software design patterns do you know?
+
+
+    •What are the systems development life cycles?
+
+
+    •What is software prototyping?
+
+
+    •What are some eviction policies for a cache?
+
+
+    •What is a distributed file system?'
+  toc: []
+  trans: "\n\n```java\nint st = 0, mid = 0, end = arr.length - 1;\n\nwhile (mid <=\
+    \ end) {\n    switch (arr[mid]) {\n        case 0:\n            swap(arr, st,\
+    \ mid);\n            st++;\n            mid++;\n            break;\n        case\
+    \ 1:\n            mid++;\n            break;\n        case 2:\n            swap(arr,\
+    \ mid, end);\n            end--;\n            break;\n    }\n}\n```\n**运行时间复杂度：**\n\
+    O(N)\n\n**空间复杂度：**\nO(1)\n\n## 44. 计算两个字符数组形式给出的二进制数的和。以字符串形式返回。\n\n**示例：**\n\
+    输入：\nnum 1: 001\nnum2: 101\n输出: 110\n\n### 解决方案\n```java\npublic static String\
+    \ addBinary(char[] num1, char[] num2) {\n    int p1 = num1.length - 1;\n    int\
+    \ p2 = num2.length - 1;\n    int carry = 0;\n    String res = \"\";\n    while\
+    \ (p1 >= 0 || p2 >= 0 || carry != 0) {\n        int curSum = carry;\n        curSum\
+    \ += (p1 >= 0) ? (num1[p1] - '0') : 0;\n        curSum += (p2 >= 0) ? (num2[p2]\
+    \ - '0') : 0;\n        p1--;\n        p2--;\n        carry = (curSum >= 2) ? 1\
+    \ : 0;\n        int newDigit = curSum % 2;\n        res = newDigit + res;\n  \
+    \  }\n    return res;\n}\n```\n**运行时间复杂度：**\nO(N)\nN: max(num1.length, num2.length)\n\
+    \n**空间复杂度：**\nO(1)\n\n## 45. 在不使用任何内置函数的情况下反转整数。\n\n**示例：**\n输入: 123\n输出: 321\n\
+    输入: -123\n输出: -321\n\n### 解决方案\n```java\npublic static int revInt(int x) {\n \
+    \   boolean negative = false;\n    if (x < 0) {\n        x = x * -1;\n       \
+    \ negative = true;\n    }\n    int res = 0;\n    while (x > 0) {\n        int\
+    \ LSB = x % 10;\n        x = x / 10;\n        res = res * 10 + LSB;\n    }\n \
+    \   if (negative == true) {\n        res = res * -1;\n    }\n    return res;\n\
+    }\n```\n**运行时间复杂度：**\nO(N)\nN: x 的数字位数\n\n**空间复杂度：**\nO(1)\n\n## 46. 合并两个有序的链表。\n\
+    \n**示例：**\n输入：\nlist 1: 2 -> 4 -> 5\nlist 2: 3 -> 7\n输出: 2 -> 3 -> 4 -> 5 -> 7\n\
+    \n### 解决方案\n```java\npublic static LLNode mergeLists(LLNode n1, LLNode n2) {\n\
+    \    if (n1 == null) {\n        return n2;\n    }\n    if (n2 == null) {\n   \
+    \     return n1;\n    }\n    LLNode res;\n    if (n1.data <= n2.data) {\n    \
+    \    res = n1;\n        n1.next = mergeLists(n1.next, n2);\n    } else {\n   \
+    \     res = n2;\n        n2.next = mergeLists(n1, n2.next);\n    }\n    return\
+    \ res;\n}\n```\n**运行时间复杂度：**\nO(N)\n\n**空间复杂度：**\nO(1)\n\n## 47. 给定一个单词列表，在每行打印使用相同字母可以创建的单词。\n\
+    \n**示例：**\n输入: abc, hello, cba\n输出：\nabc cba\nhello\n\n### 解决方案\n```java\npublic\
+    \ static void bucketAnagram(List<String> input) {\n    HashMap<String, List<String>>\
+    \ hm;\n    hm = new HashMap<String, List<String>>();\n    for (String word : input)\
+    \ {\n        char[] wordArr = word.toCharArray();\n        Arrays.sort(wordArr);\n\
+    \        String key = new String(wordArr);\n        List<String> list;\n     \
+    \   if (hm.containsKey(key) == false) {\n            list = new LinkedList<String>();\n\
+    \        } else {\n            list = hm.get(key);\n        }\n        list.add(word);\n\
+    \        hm.put(key, list);\n    }\n    for (Map.Entry<String, List<String>> entry\
+    \ : hm.entrySet()) {\n        for (String word : entry.getValue()) {\n       \
+    \     System.out.print(word + \" \");\n        }\n        System.out.println();\n\
+    \    }\n}\n```\n**运行时间复杂度：**\nO(N*MlogM)\nN: 输入单词的个数\nM: 最大输入单词中的字符数\n\n**空间复杂度：**\n\
+    O(NM)\n\n## 48. 给出一个长度为 K 的整数数组，其中数组的最后一个元素为空，且其他所有值（从 1 到 k）都在数组中，找到缺失的数字。\n\n\
+    **示例：**\n输入: 4, 5, 1, 3, _\n输出: 2\n\n### 解决方案\n```java\npublic static int missingNumber(int[]\
+    \ arr) {\n    if (arr == null) {\n        return Integer.MIN_VALUE;\n    }\n \
+    \   int sumFrom1toK = arr.length;\n    int sumOfArray = 0;\n    for (int i = 0;\
+    \ i < arr.length - 1; i++) {\n        sumOfArray += arr[i];\n        sumFrom1toK\
+    \ += i + 1;\n    }\n    return sumFrom1toK - sumOfArray;\n}\n```\n**说明：** 也可以使用等差数列求和公式\
+    \ `sum1toK = k*(k+1))/2`。`K` 是数组的长度。\n\n**运行时间复杂度：**\nO(N)\n\n**空间复杂度：**\nO(1)\n\
+    \n## 49. 给定一个二叉树，找到路径的最大和。路径可以从任意节点开始并到任意节点结束。\n\n**示例：**\n输入：\ntree: 5\n3 1\n\
+    10\n输出: 9\n\n### 解决方案\n```java\nstatic int mPathSum = Integer.MIN_VALUE;\npublic\
+    \ static int maxPathIntree(Node root) {\n    if (root == null) {\n        return\
+    \ 0;\n    }\n    int leftSum = maxPathIntree(root.left);\n    int rightSum = maxPathIntree(root.right);\n\
+    \    // 更新最大路径，考虑当前节点\n    mPathSum = Math.max(mPathSum, leftSum + root.data +\
+    \ rightSum);\n    // 返回当前节点下的最大路径\n    return root.data + Math.max(0, Math.max(leftSum,\
+    \ rightSum));\n}\n```\n**说明：** 函数使用全局变量 `mPathSum` 来返回结果。\n\n**运行时间复杂度：**\nO(N)\n\
+    \n**空间复杂度：**\nO(1)\n\n## 50. 给无图图，每个节点包含一个标签和一个邻居列表，复制整个数据结构。\n\n### 解决方案\n```java\n\
+    class Node {\n    String label;\n    ArrayList<Node> adjList = new ArrayList<Node>();\n\
+    \    Node(String label) {\n        this.label = label;\n    }\n}\npublic static\
+    \ Node copyGraph(Node node) {\n    if (node == null) {\n        return null;\n\
+    \    }\n    Queue<Node> queue = new LinkedList<Node>();\n    HashMap<Node, Node>\
+    \ hm = new HashMap<Node, Node>();\n    Node newNode = new Node(node.label);\n\
+    \    // 哈希表存储原始节点作为键，复制的节点作为值\n    hm.put(node, newNode);\n    // 队列存储尚未处理的原始节点\n\
+    \    queue.add(node);\n    while (queue.isEmpty() == false) {\n        Node curNode\
+    \ = queue.poll();\n        for (Node adjNode : curNode.adjList) {\n          \
+    \  if (hm.containsKey(adjNode) == false) {\n                Node copyOfAdjNode\
+    \ = new Node(adjNode.label);\n                hm.put(adjNode, copyOfAdjNode);\n\
+    \                curNode.adjList.add(copyOfAdjNode);\n                queue.add(adjNode);\n\
+    \            } else {\n                curNode.adjList.add(hm.get(adjNode));\n\
+    \            }\n        }\n    }\n    return newNode;\n}\n```\n**运行时间复杂度：**\n\
+    O(N)\n\n**空间复杂度：**\nO(N)\n\n## 51. 以下是面试中可能会问的一些理论问题。注意，大公司通常不问这类问题，但很多其他公司会。\n\
+    \n- 什么是 HashMap？它是如何工作的？\n- Java 中 `HashMap` 和 `TreeMap` 有什么区别？\n- 如果我想在 Java\
+    \ 中使用自定义对象作为 `HashMap` 的键，需要重写哪些函数？\n- 什么是虚拟内存？它是如何工作的？\n- 进程和线程之间有什么区别？\n- C/C++\
+    \ 中的虚构造函数和析构函数是什么？\n- 值传递和引用传递是什么？\n- 什么是 `AVL` 树和红树（RBTree）？自平衡树和普通树的插入/删除/查找时间是多少？\n\
+    - 定义资源管理中的死锁和饥饿。\n- 非阻塞线程安全意味着什么？\n- 如何防止死锁？\n- 如何实现 `mutex`锁？\n- 互斥锁（Mutex）和信号量（Semaphore）有什么区别？\n\
+    - 垃圾回收器如何检测哪些对象不再被使用？\n- 抢占式和协作式多任务有什么区别？\n- 进程间通信（IPC）的哪些形式？\n- IPC 中的管道（Pipes）、消息队列（Message\
+    \ Queues）、共享内存（Shared Memory）、映射文件（Mapped Files）有什么区别？\n- C++ 中 `struct` 和 `class`\
+    \ 有什么区别？\n- Java 中抽象类（Abstract class）和接口（Interface）有什么区别？\n- 在什么情况下使用抽象类，什么情况下使用接口？\n\
+    - C++ 和 Java 的主要区别是什么？\n- 什么是小端序（Little Endian 和大和大序（Big Endian）？\n- 逻辑移位和算术移位有什么区别？\n\
+    - 什么是栈溢出（stack overflow）？\n- 什么是多态？\n- Java 中的泛型（Generics）是什么？\n- 什么是内存碎片？\n-\
+    \ 如果 `int` 值在 C++ 中溢出会发生什么？在 Java 中会发生什么？\n- 什么是单元测试（Unit Testing）？\n- 你如何让你的解决方案并行运行？\n\
+    - 你知道哪些软件设计模式？\n- 系统开发生命周期（SDLC）是什么？\n- 什么是软件原型（prototyping）？\n- 缓存的某些淘汰策略（eviction\
+    \ policies）有哪些？\n- 什么是分布式文件系统？\n\n"
+- fmt: '
+
+    # 52. The following are some open-ended questions that might be asked in a coding
+    interview as well. These questions might be system design questions or object-oriented
+    design questions. There is no single answer for these questions and the interviewer
+    would just want to see the way you approach the high level design of a solution
+    to a big-scale problem.
+
+
+    - Design and explain the necessary classes and architecture for a parking management
+    software.
+
+    - Design and explain the necessary classes and architecture for a software that
+    you can draw different shapes.
+
+    - Design and explain the necessary classes and architecture for a poker game.
+
+    - Design and explain the necessary classes and architecture for an instant messaging
+    application.
+
+    - Design and explain the necessary classes and architecture for a snake video
+    game.
+
+    - Design an application that provides directions around a campus.
+
+    - Design a cache with LRU eviction policy and `O(1)` access time.
+
+    - Design an HTTP downloader that can cache its results.
+
+    - Design a service like PasteBin.
+
+    - Design a URL shortener service.
+
+    - Design a server architecture for dynamically serving map images.
+
+    - Design a system to return a unique ID for each request. The ID should increase
+    as time increases.
+
+    - How to make sure that a program does not have memory leaks?
+
+    - Design a distributed system for storing key-value pairs.
+
+    - Design a system where the employees of a company will use access cards to keep
+    track of their work time.
+
+    - In a system where millions of users are issuing requests at the same time (e.g.
+    a search engine), design a way to give a prize to the requester of the billionth
+    request.
+
+    - How would you design a fully automated system for build/test/deploy for an application.
+
+    - How would you design a text editor?
+
+    - How would you represent URLs in a storage medium in order to avoid duplication?
+
+    '
+  raw: '52.The following are some open-ended questions that might be asked in a coding
+    interview as well. These questions might be system design questions or object-oriented
+    design questions. There is no single answer for these questions and the interviewer
+    would just want to see the way you approach the high level design of a solution
+    to a big-scale problem.
+
+
+    _______________
+
+
+    •Design and explain the necessary classes and architecture for a parking management
+    software.
+
+
+    •Design and explain the necessary classes and architecture for a software that
+    you can draw different shapes.
+
+
+    •Design and explain the necessary classes and architecture for a poker game.
+
+
+    •Design and explain the necessary classes and architecture for an instant messaging
+    application.
+
+
+    •Design and explain the necessary classes and architecture for a snake video game.
+
+
+    •Design an application that provides directions around a campus.
+
+
+    •Design a cache with LRU eviction policy and O(1) access time.
+
+
+    •Design an HTTP downloader that can cache its results.
+
+
+    •Design a service like PasteBin.
+
+
+    •Design a URL shortener service.
+
+
+    •Design a server architecture for dynamically serving map images.
+
+
+    •Design a system to return a unique ID for each request. The ID should increase
+    as time increases.
+
+
+    •How to make sure that a program does not have memory leaks?
+
+
+    •Design a distributed system for storing key-value pairs.
+
+
+    •Design a system where the employees of a company will use access cards to keep
+    track of their work time.
+
+
+    •In a system where millions of users are issuing requests at the same time (e.g.
+    a search engine), design a way to give a prize to the requester of the billionth
+    request.
+
+
+    •How would you design a fully automated system for build/test/deploy for an application.
+
+
+    •How would you design a text editor?
+
+
+    •How would you represent URLs in a storage medium in order to avoid duplication?'
+  toc: []
+  trans: '
+
+
+    # 52. 以下是在编程面试中可能被到的开放式问题。这些问题可能是系统设计题，也可能是面向对象的设计题。这些问题没有标准答案，面试官只是想看到你对大规模问题的解决方案进行高层设计的方法。
+
+
+    - 设计并解释停车场管理软件所需的必要类和架构。
+
+    - 设计并解释一个可以绘制不同形状的软件所需的必要类和架构。
+
+    - 设计并解释扑牌游戏所需的必要类和架构。
+
+    - 设计并解释即时通讯应用所需的必要类和架构。
+
+    - 设计并解释蛇吃大游戏所需的必要类和架构。
+
+    - 设计一个提供校园内导航路线的应用程序。
+
+    - 设计一个具有 LRU 淘汰策略和 `O(1)` 访问时间的缓存。
+
+    - 设计一个可以缓存结果的 HTTP 下载器。
+
+    - 设计一个类似 PasteBin 的服务。
+
+    - 设计一个 URL 缩短器服务。
+
+    - 设计一个用于动态提供地图图像的服务器架构。
+
+    - 设计一个为每个请求返回唯一 ID 的系统。该 ID 应随着时间的推移而增加。
+
+    - 如何确保程序没有内存泄漏？
+
+    - 设计一个存储键值对的分布式系统。
+
+    - 设计一个公司员工使用访问卡来记录工作时间的系统。
+
+    - 在数百万用户同时发送请求的系统（例如搜索引擎）中，设计一种方法给第十亿个请求请求者发放奖励。
+
+    - 你如何为应用程序设计一个全自动的构建/测试/部署系统？
+
+    - 如何设计一个文本编辑器？
+
+    - 你如何在存储介质中表示 URL 以避免重复？
+
+
+    '

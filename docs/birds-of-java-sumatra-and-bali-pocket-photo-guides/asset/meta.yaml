@@ -1,0 +1,432 @@
+name: Birds of Java, Sumatra and Bali (Pocket Photo Guides)
+name_cn: 爪哇岛、苏门答腊岛和巴厘岛鸟类（口袋摄影指南）
+slug: birds-of-java-sumatra-and-bali-pocket-photo-guides
+toc:
+- - '#'
+  - 爪哇岛、苏门答腊岛和巴厘岛鸟类（口袋摄影指南）
+- - '#'
+  - 引言
+- - '#'
+  - 观鸟
+- - '#'
+  - 如何使用此书
+- - '##'
+  - 彩色标签说明
+- - '##'
+  - 词汇表
+- - '##'
+  - 该地区
+- - '##'
+  - 动物群
+- - '##'
+  - 何时以及在哪里观察
+- - '#'
+  - 重要观鸟地点
+- - '##'
+  - 苏门答腊：
+- - '###'
+  - 莱瑟国家公园
+- - '###'
+  - 克鲁克（Krinc）齐-塞布拉特国家公园
+- - '###'
+  - 望甘巴斯国家公园
+- - '###'
+  - 贝尔巴克国家公园
+- - '###'
+  - 南巴里山国家公园
+- - '##'
+  - 爪哇：
+- - '###'
+  - 乌戎库隆国家公园
+- - '###'
+  - 葛德/潘格朗戈国家公园
+- - '###'
+  - 梅鲁贝蒂里国家公园
+- - '###'
+  - 巴鲁兰国家公园
+- - '###'
+  - 波加尔植物园 (Kebun Raya)
+- - '###'
+  - 潘甘达兰自然游区
+- - '##'
+  - 巴厘：
+- - '###'
+  - 巴厘西国家公园
+- - '#'
+  - 游览公园
+- - '##'
+  - 白尾玄鸥 *Phaethon lepturus* 39cm
+- - '##'
+  - 小黑鸬 *Phalacrocorax sulcirostris* 60cm
+- - '##'
+  - 小鸬 *Phalacrocorax niger* 56cm
+- - '##'
+  - 东方蛇鸿 *Anhinga melanogaster* 84cm
+- - '##'
+  - 澳洲鸿 *Pelecanus conspatus* 150cm
+- - '##'
+  - 灰鹭 *Ardea cinerea* 100cm
+- - '##'
+  - 大嘴鹭 *Ardea sumatrana* 115cm
+- - '##'
+  - 紫鹭 *Ardea purpurea* 95cm
+- - '##'
+  - 白鹭 *Ardea alba* 90cm
+- - '##'
+  - 中大鹭 *Egretta intermedia* 68cm
+- - '##'
+  - 小鹭 *Egretta garzetta* 60cm
+- - '###'
+  - 太平洋礁石鹭 `Egretta sacra` 58cm
+- - '###'
+  - 苍白鹭 `Bubulcus ibis` 50cm
+- - '###'
+  - 爪哇苍鹭 `Ardeola speciosa` 45cm
+- - '###'
+  - 小鹭 `Butorides striata` 45cm
+- - '###'
+  - 黑脸夜鹭 `Nycticorax nycticorax` 60cm
+- - '###'
+  - 马来夜鹭 `Gorsachius melanolophus` 50cm
+- - '###'
+  - 黄腹秧鸥 `Ixobrychus sinensis` 38cm
+- - '###'
+  - 肉桂色秧鸥 `Ixobrychus cinnamomeus` 41cm
+- - '###'
+  - 白鹭 `Mycteria cinerea` 90cm
+- - '###'
+  - 白鹳 `Ciconia episcopus` 85cm
+- - '###'
+  - 风头鹳 `Ciconia stormi` 80cm
+- - '###'
+  - 小白鹭 `Leptoptilos javanicus` 110cm
+- - '###'
+  - 绿翅 `Plegadis falcinellus` 60cm
+- - '###'
+  - 蓝脸鸟 `Elanus caeruleus` 30cm
+- - '###'
+  - 印度白鸢 `Haliastur indus` 45cm
+- - '###'
+  - 白腹海雕 `Haliaeetus leucogaster` 68cm
+- - '###'
+  - 冠蛇雕 `Spilornis cheela` 54cm
+- - '###'
+  - 锦雀 `Accipiter virgatus` 33cm
+- - '###'
+  - 黑鹰 `Ictinaetus malayensis` 70cm
+- - '###'
+  - 爪哇�� `Spizaetus bartelsi` 60cm
+- - '###'
+  - 黑腿隼 `Microhierax fringillarius` 15cm
+- - '###'
+  - 游行绿鸭 *Dendrocygna arcuata* 45cm
+- - '###'
+  - 爪哇绿鸭 *Dendrocygna javanica* 41cm
+- - '###'
+  - 白翼鸭 *Cairina scutulata* 75cm
+- - '###'
+  - 斑纹潜水鸭 *Nettapus coromandelianus* 30cm
+- - '###'
+  - 巽达绿头鸭 *Anas gibberifrons* 42cm
+- - '###'
+  - 太平洋黑鸭 *Anas superciliosa* 55cm
+- - '###'
+  - 青胸鹌鹑 *Coturnix chinensis* 14cm
+- - '###'
+  - 栗腹山鹃 *Arborophila javanica* 25cm
+- - '###'
+  - 凤冠鹌鹑 *Rollulus rouloul* 25cm
+- - '###'
+  - 凤尾 *Lophura ignita* 55cm
+- - '###'
+  - 红雉 *Gallus gallus* 雄性 75cm，雌性 46cm
+- - '###'
+  - 绿红鸡 *Gallus varius* 雄性 60cm，雌性 42cm
+- - '###'
+  - 大画雉 *Argusianus argus* 雄性 120cm，雌性 60cm
+- - '###'
+  - 绿孔 *Pavo muticus* 雄性 210cm，雌性 120cm
+- - '###'
+  - 灰胸秧鸡 *Gallirallus striatus* 25cm
+- - '###'
+  - 褐胸秧鸡 *Porzana fusca* 21cm
+- - '###'
+  - 白眉秧鸡 *Porzana cinerea* 27cm
+- - '###'
+  - 白胸黑秧鸡 *Amaurornis phoenicurus* 33cm
+- - '###'
+  - 绿水鸡 *Gallinula chloropus* 31cm
+- - '###'
+  - 青金鸻 `Pluvialis fulva` 25cm
+- - '###'
+  - 蓝脸鸻 `Charadrius leopterus` 45cm（注修正物种）
+- - '###'
+  - 印度白鸻 `Charadrius sandvic` 45cm
+- - '###'
+  - 马来环鸻 `Charadrius peronii` 27cm
+- - '###'
+  - 大嘴鸻 `Charadrius leschenii` 23cm
+- - '###'
+  - 长嘴沙鹬 `Numenius phaeopus` 43cm
+- - '###'
+  - 斑尾沙鹬 `Limosa lapponica` 37cm
+- - '###'
+  - 灰沙锥 `Tringa glareola` 20cm
+- - '###'
+  - 普通沙锥 `Tringa hypoleuca` 20cm
+- - '###'
+  - 灰斑滨 `Calidris alba` 20cm
+- - '###'
+  - 长脚亚 `Calidris subminuta` 14cm
+- - '###'
+  - 黑额白鸥 `Sterna sumatrana` 30cm
+- - '###'
+  - 眉白鸥 `Onychoprion aethiopus` 37cm
+- - '###'
+  - 大冠海鸥 `Thalasseus bergii` 45cm
+- - '###'
+  - 小冠海鸥 `Thalasseus bengalicus` 40cm
+- - '###'
+  - 粗喙海鸥 `Thalasseus curvistra` 27cm
+- - '###'
+  - 粉颈海鸥 `Thalasseus vernans` 27cm
+- - '###'
+  - 黑颈果鸥 `Thalasseus melanopus` 27cm
+- - '###'
+  - 绿嘴鹊 `Thalasseus sandersonii` 27cm
+- - '###'
+  - 蓝嘴鹊 `Thalasseus leptopterus` 27cm
+- - '###'
+  - 大冠海鸥 `Thalasseus bergii` 45cm
+- - '###'
+  - 小冠海鸥 `Thalasseus bengalicus` 40cm
+- - '###'
+  - 粗喙海鸥 `Thalasseus curvistra` 27cm
+- - '###'
+  - 粉颈海鸥 `Thalasseus vernans` 27cm
+- - '###'
+  - 黑颈果鸥 `Thalasseus melanopus` 27cm
+- - '#'
+  - 珠颈
+- - '#'
+  - 绿喉鸽
+- - '#'
+  - 翡翠鸽
+- - '#'
+  - 尼加巴鸽
+- - '#'
+  - 彩虹鹦鹉
+- - '#'
+  - 黄冠鹦鹉
+- - '#'
+  - 杜鹃
+- - '#'
+  - 折尾杜鹃
+- - '#'
+  - 亚洲杜鹃
+- - '#'
+  - 红喙杜鹃
+- - '#'
+  - 栗胸杜鹃
+- - '#'
+  - 大嘴留
+- - '#'
+  - 小嘴留
+- - '#'
+  - 亚洲林鴴
+- - '#'
+  - 婆纹鴴
+- - '#'
+  - 鱼鴱
+- - '#'
+  - 斑纹林鸮
+- - '#'
+  - 斑尾夜鹰
+- - '#'
+  - 长尾夜鹰
+- - '#'
+  - 草原夜鹰
+- - '#'
+  - 腹光金燕
+- - '#'
+  - 雨燕
+- - '#'
+  - 家燕
+- - '#'
+  - 普通翠鸟
+- - '#'
+  - 蓝耳翠鸟
+- - '#'
+  - 小蓝翠鸟
+- - '#'
+  - 黑背翠鸟
+- - '#'
+  - 犀鸟嘴翠鸟
+- - '#'
+  - 白喉翠鸟
+- - '#'
+  - 爪哇翠鸟
+- - '#'
+  - 领翠鸟
+- - '#'
+  - 栗头蜂鸟
+- - '#'
+  - 蓝喉蜂鸟
+- - '#'
+  - 蓝鸟
+- - '#'
+  - 丛犀鸟
+- - '#'
+  - 凤冠犀嘴
+- - '#'
+  - 亚洲白嘴犀
+- - '#'
+  - 犀犀鸟
+- - '#'
+  - 大犀嘴
+- - '#'
+  - 火焰顶蜂鸟
+- - '#'
+  - 纹纹蜂鸟
+- - '#'
+  - 红冠蜂鸟
+- - '#'
+  - 黑带纹蜂鸟
+- - '#'
+  - 蓝耳蜂鸟
+- - '#'
+  - 铜甲蜂鸟
+- - '#'
+  - 斑纹啄鸟
+- - '#'
+  - 亚洲火焰鸟
+- - '#'
+  - 白腹啄头鸟
+- - '#'
+  - 黄胸啄头鸟
+- - '#'
+  - 巽达短爪啄头鸟
+- - '#'
+  - 宽嘴蜂
+- - '#'
+  - 画兜
+- - '#'
+  - 兜留
+- - '#'
+  - 爪哇画嘴
+- - '#'
+  - 雨燕
+- - '#'
+  - 家燕
+- - '#'
+  - 黄鹨
+- - '#'
+  - 灰胸秧鸡
+- - '#'
+  - 白眉秧鸡
+- - '#'
+  - 斑胸草雀
+- - '#'
+  - 绿尾鴴
+- - '#'
+  - 斑尾鴴
+- - '#'
+  - 扇尾
+- - '#'
+  - 亮鹯
+- - '#'
+  - 北林莺
+- - '#'
+  - 三纹绿林莺
+- - '#'
+  - 亚洲褐伯雀
+- - '#'
+  - 绿蓝鹱
+- - '#'
+  - 蓝靛鹱
+- - '#'
+  - 白斑胸柳鹱
+- - '#'
+  - 蓝蓝鹱
+- - '#'
+  - 红树林鹱
+- - '#'
+  - 黄腹绿留莺
+- - '#'
+  - 蓝顶寿比
+- - '#'
+  - 黑扇长尾
+- - '#'
+  - 黄腹绿喉留
+- - '#'
+  - 大山雀
+- - '#'
+  - 红颏鴴
+- - '#'
+  - 蓝鴴
+- - '#'
+  - 绯胸蜜雀
+- - '#'
+  - 黄腹腹蜜雀
+- - '#'
+  - 绯背蜜雀
+- - '#'
+  - 橙腹蜜雀
+- - '#'
+  - 火颊太阳鸟
+- - '#'
+  - 白腹太阳鸟
+- - '#'
+  - 白喉太阳鸟
+- - '#'
+  - 绿背太阳鸟
+- - '#'
+  - 密氏太阳鸟
+- - '#'
+  - 爪哇太阳鸟
+- - '#'
+  - 小食雀鸟
+- - '#'
+  - 长嘴食雀鸟
+- - '#'
+  - 黄耳食雀鸟
+- - '#'
+  - 灰胸食雀鸟
+- - '#'
+  - 东方眼雀
+- - '#'
+  - 山白眼雀
+- - '#'
+  - 爪哇白眼雀
+- - '#'
+  - 火焰草织雀
+- - '#'
+  - 绿尾锥雀
+- - '#'
+  - 爪哇草雀
+- - '#'
+  - 斑胸草雀
+- - '#'
+  - 白头草雀
+- - '#'
+  - 爪哇雀
+- - '#'
+  - 树雀
+- - '#'
+  - 织雀
+- - '#'
+  - 菲律宾织雀
+- - '#'
+  - 亚洲八鹊
+- - '#'
+  - 亚洲 Pied 鹊
+- - '#'
+  - 黑翅鹊
+- - '#'
+  - 巴厘岛寿留
+- - '#'
+  - 山鹊
+- - '#'
+  - 延伸阅读
+- - '#'
+  - 有用网站

@@ -1,0 +1,830 @@
+name: Android Programming： The Big Nerd Ranch Guide (Big Nerd Ranch Guides)
+name_cn: Android 编程：Big Nerd Ranch 指南
+slug: android-programming-the-big-nerd-ranch-guide-big-nerd-ranch-
+toc:
+- - '#'
+  - Android 编程：Big Nerd Ranch 指南
+- - '#'
+  - 前言
+- - '#'
+  - 致谢
+- - '##'
+  - 给更具好奇心的人：Jetpack、AndroidX 和架构组件
+- - '##'
+  - 避免半成品方案（Half-Baked Solution）
+- - '#'
+  - 调试 Android 应用
+- - '##'
+  - 异常与堆栈跟踪
+- - '###'
+  - 诊断行为异常
+- - '###'
+  - 记录堆栈跟踪
+- - '###'
+  - 设置断点
+- - '####'
+  - 列表 5.6 恢复正常 (`MainActivity.kt`)
+- - '##'
+  - Android 特有的调试
+- - '###'
+  - 使用 Android Lint
+- - '###'
+  - R 类的问题
+- - '###'
+  - 挑战：探索布局检查器 (Layout Inspector)
+- - '###'
+  - 挑战：探索分析器 (Profiler)
+- - '#'
+  - 6 你的第二个 Activity
+- - '###'
+  - 创建一个新的 activity
+- - '###'
+  - 在 MainActivity 中添加一个作弊按钮
+- - '###'
+  - 启动活动
+- - '####'
+  - 使用 intents 通信
+- - '####'
+  - 显式意图和隐式意图
+- - '###'
+  - 使用 intent extras
+- - '###'
+  - 从子 Activity 获取结果
+- - '###'
+  - 设置结果
+- - '###'
+  - 发回 intent
+- - '###'
+  - 处理结果
+- - '##'
+  - 6.16 实现 `onActivityResult(...)` (`MainActivity.kt`)
+- - '##'
+  - Android 如何查看你的活动
+- - '##'
+  - 6.18 作为启动活动的 `MainActivity` (`manifests/AndroidManifest.xml`)
+- - '###'
+  - 图 6.11 GeoQuiz 的返回栈
+- - '###'
+  - 图 6.12 查看主界面
+- - '###'
+  - 图 6.13 从启动器启动 GeoQuiz
+- - '#'
+  - Android SDK 版本与兼容性
+- - '##'
+  - Android SDK 版本
+- - '##'
+  - 兼容性与 Android 编程
+- - '###'
+  - 合理的最低限制
+- - '###'
+  - 最小 SDK 版本
+- - '###'
+  - 目标 SDK 版本
+- - '##'
+  - 编译 SDK 版本
+- - '##'
+  - 安全地添加来自后续 API 的代码
+- - '###'
+  - Jetpack 库
+- - '##'
+  - 使用 Android 开发者文档
+- - '##'
+  - 挑战：报告设备的 Android 版本
+- - '##'
+  - 挑战：有限的作弊
+- - '#'
+  - 8 UI Fragment 和 Fragment 管理器
+- - '##'
+  - UI 灵活性的需求
+- - '##'
+  - 引入 Fragment
+- - '##'
+  - 开始 CriminalIntent
+- - '###'
+  - 创建新项目
+- - '###'
+  - 创建数据类
+- - '##'
+  - 创建 UI 片段
+- - '###'
+  - 定义 CrimeFragment 的布局
+- - '###'
+  - 创建 CrimeFragment 类
+- - '####'
+  - 实现 fragment 生命周期函数
+- - '###'
+  - 在碎片中连接小部件
+- - '###'
+  - FragmentManager 和 fragment 生命周期
+- - '##'
+  - 使用 Fragment 的应用架构
+- - '###'
+  - 决定是否使用 fragment
+- - '#'
+  - 9 使用 RecyclerView 显示列表
+- - '##'
+  - 添加新的片段和 ViewModel
+- - '###'
+  - 与片段结合的 ViewModel 生命周期
+- - '##'
+  - 添加 RecyclerView
+- - '##'
+  - 创建项目视图布局
+- - '##'
+  - 实现 ViewHolder
+- - '##'
+  - 实现适配以填充 RecyclerView
+- - '###'
+  - 设置 RecyclerView 的适配器
+- - '##'
+  - 复用视图 (Recycling Views)
+- - '##'
+  - 清理列表绑定 (Cleaning Up Binding List Items)
+- - '##'
+  - 响应点击 (Responding to Presses)
+- - '##'
+  - 给好奇的人：ListView 和 GridView
+- - '##'
+  - 挑战：RecyclerView ViewTypes
+- - '#'
+  - 10 使用布局和控件创建用户界面
+- - '##'
+  - 引入 ConstraintLayout
+- - '##'
+  - 介绍图形化布局编辑器
+- - '##'
+  - 使用 ConstraintLayout
+- - '###'
+  - 腾出空间
+- - '####'
+  - 添加组件
+- - '###'
+  - ConstraintLayout 的内部原理
+- - '###'
+  - 编辑属性
+- - '###'
+  - 使列表项动态
+- - '##'
+  - 关于布局属性的更多
+- - '###'
+  - 样式、主题和主题属性
+- - '##'
+  - 给好奇心强的读者：外边距 Margin 与内边距 Padding
+- - '##'
+  - 给好奇心强的读者：ConstraintLayout 的新进展
+- - '##'
+  - 挑战：格式化日期
+- - '#'
+  - 11 数据库与 Room 库
+- - '##'
+  - Room 架构组件库
+- - '###'
+  - 列表 11.1 添加依赖 (`app/build.gradle`)
+- - '##'
+  - 创建数据库
+- - '###'
+  - 列表 11.2 使 `Crime` 变为实体 (`Crime.kt`)
+- - '###'
+  - 创建数据库类
+- - '###'
+  - 列表 11.3 `CrimeDatabase` 类 (`database/CrimeDatabase.kt`)
+- - '####'
+  - 创建类型转换器
+- - '##'
+  - 定义数据访问对象 (Data Access Object)
+- - '##'
+  - 使用 Repository 模式访问数据库
+- - '##'
+  - 测试查询
+- - '###'
+  - 上传测试数据
+- - '##'
+  - 线程
+- - '###'
+  - 后台线程
+- - '##'
+  - 使用 LiveData
+- - '###'
+  - 观察 LiveData
+- - '###'
+  - Lifecycle
+- - '##'
+  - 挑战：解决 Schema 警告
+- - '#'
+  - 12 Fragment 导航
+- - '##'
+  - 单 Activity：Fragment 之王
+- - '###'
+  - 回调接口
+- - '###'
+  - 列表 12.1 添加回调接口 (`CrimeListFragment.kt`)
+- - '###'
+  - 列表 12.2 调用所有回调！ (`CrimeListFragment.kt`)
+- - '###'
+  - 列表 12.3 实现回调 (`MainActivity.kt`)
+- - '##'
+  - 替换 fragment
+- - '###'
+  - 列表 12.4 用 CrimeFragment 替换 CrimeListFragment (`MainActivity.kt`)
+- - '###'
+  - 列表 12.5 将 fragment 事务添加到回退栈 (`MainActivity.kt`)
+- - '##'
+  - Fragment 参数 (Fragment Arguments)
+- - '###'
+  - 将参数附加到 fragment
+- - '###'
+  - 检索参数
+- - '##'
+  - 使用 LiveData 转换 (LiveData Transformations)
+- - '###'
+  - 列表 12.9 为 `CrimeFragment` 添加 `ViewModel` (`CrimeDetailViewModel.kt`)
+- - '###'
+  - 列表 12.10 将 `CrimeFragment` 挂到 `CrimeDetailViewModel` (`CrimeFragment.kt`)
+- - '###'
+  - 列表 12.11 观察变化 (`CrimeFragment.kt`)
+- - '###'
+  - 列表 12.12 跳过复选框动画 (`CrimeFragment.kt`)
+- - '##'
+  - 更新数据库
+- - '###'
+  - 使用 executor
+- - '###'
+  - 将数据库写入与 fragment 生命周期绑定
+- - '##'
+  - 给好奇心强的人：为什么 Fragment 参数？
+- - '##'
+  - 给好奇的读者：导航架构库
+- - '##'
+  - 挑战：RecyclerView 刷新
+- - '#'
+  - 13 对话框
+- - '##'
+  - 创建 DialogFragment
+- - '###'
+  - 显示 DialogFragment
+- - '##'
+  - 在两个 Fragment 之间传递数据
+- - '###'
+  - 将数据返回 CrimeFragment
+- - '###'
+  - 设置目标片段
+- - '###'
+  - 挑战：对话框
+- - '##'
+  - 菜单 (Menus)
+- - '###'
+  - 在 XML 中定义菜单
+- - '###'
+  - 命名空间
+- - '###'
+  - 响应选择
+- - '###'
+  - 使用 Android Studio
+- - '##'
+  - 挑战：为 RecyclerView 提供空视图
+- - '#'
+  - 15 隐式意图 (Implicit Intents)
+- - '##'
+  - 添加按钮
+- - '##'
+  - 在模型添加线程
+- - '##'
+  - 使用格式化字符串
+- - '##'
+  - 使用隐式意图
+- - '###'
+  - 隐式意图的组成
+- - '###'
+  - 发送报告
+- - '###'
+  - Android 获取数据
+- - '###'
+  - 权限
+- - '###'
+  - 检查响应
+- - '###'
+  - 挑战：另一个隐式意图
+- - '#'
+  - 16 使用意图
+- - '##'
+  - 存放处
+- - '##'
+  - 文件存储
+- - '###'
+  - FileProvider
+- - '###'
+  - 指定位置
+- - '##'
+  - 使用相机意图
+- - '###'
+  - 挑战：详情
+- - '##'
+  - 挑战：高效加载缩略图
+- - '#'
+  - 17 本地化
+- - '##'
+  - 本地化资源
+- - '###'
+  - 默认资源
+- - '###'
+  - 屏幕密度
+- - '###'
+  - 使用翻译编辑器
+- - '###'
+  - 特定地区
+- - '###'
+  - 语言解析
+- - '###'
+  - 之后
+- - '###'
+  - 配置限定符
+- - '###'
+  - 备份资源排序
+- - '###'
+  - 查找资源
+- - '###'
+  - 排除兼容的目录
+- - '###'
+  - 遍历表
+- - '###'
+  - 测试备份资源
+- - '#'
+  - 18 无障碍辅助
+- - '##'
+  - TalkBack
+- - '###'
+  - 列表 18.3 授予 TalkBack 权限
+- - '###'
+  - 列表 18.4 已启用 TalkBack
+- - '###'
+  - 触摸
+- - '###'
+  - 图 18.5 在模拟器上滚动
+- - '###'
+  - 通过滑动的导航
+- - '###'
+  - 图 18.6 选中了“新”操作
+- - '###'
+  - 图 18.7 应用栏
+- - '###'
+  - 让非文本元素 TalkBack 可读
+- - '###'
+  - 添加描述
+- - '###'
+  - 图 18.8 选中了图像
+- - '###'
+  - 让部件变得聚焦
+- - '###'
+  - 创建体验
+- - '###'
+  - 好奇的人：Accessibility Scanner
+- - '##'
+  - 挑战：改进列表
+- - '##'
+  - 挑战：为数据提供足够的
+- - '##'
+  - 挑战：播报事件
+- - '#'
+  - 19 数据绑定与 MVVM
+- - '##'
+  - 不同的架构：必要？
+- - '##'
+  - MVVM Models 与 Jetpack ViewModels
+- - '##'
+  - 创建 BeatBox
+- - '##'
+  - 实现的数据绑定
+- - '##'
+  - 导入资源
+- - '##'
+  - 访问资源
+- - '##'
+  - 绑定到数据
+- - '###'
+  - 创建视图模型
+- - '###'
+  - Listing 19.20 创建 `SoundViewModel` (`SoundViewModel.kt`)
+- - '###'
+  - Listing 19.21 添加绑定函数 (`SoundViewModel.kt`)
+- - '###'
+  - 绑定到 view model
+- - '###'
+  - Listing 19.22 声明 view model 属性 (`res/layout/list_item_sound.xml`)
+- - '###'
+  - Listing 19.23 绑定你的按钮标题 (`res/layout/list_item_sound.xml`)
+- - '###'
+  - Listing 19.24 连接 view model (`MainActivity.kt`)
+- - '###'
+  - Listing 19.25 调用 `bind(Sound)` (`MainActivity.kt`)
+- - '###'
+  - 图 19.11 填充后的按钮标题
+- - '###'
+  - 可观测数据
+- - '###'
+  - 图 19.12 似曾识 (Deja vu)
+- - '###'
+  - Listing 19.26 使 view model 可观测 (`SoundViewModel.kt`)
+- - '##'
+  - 给好奇的人：更多关于数据绑定
+- - '###'
+  - Lambda 表达式
+- - '###'
+  - 语法糖
+- - '###'
+  - 绑定适配器 (BindingAdapters)
+- - '##'
+  - 给好奇的人：LiveData 和数据绑定
+- - '#'
+  - 20 单元测试与音频播放
+- - '##'
+  - 创建 SoundPool
+- - '##'
+  - 访问 Assets
+- - '##'
+  - 加载声音
+- - '##'
+  - 播放声音
+- - '##'
+  - 测试依赖
+- - '##'
+  - 创建测试
+- - '##'
+  - 设置你的测试
+- - '###'
+  - 设置主体
+- - '###'
+  - 编写测试
+- - '###'
+  - 测试对象交互
+- - '##'
+  - 数据绑定回调
+- - '##'
+  - 卸载声音
+- - '##'
+  - 进阶之：Mock 与测试
+- - '##'
+  - 挑战：播放速度控制
+- - '##'
+  - 挑战：旋转时播放声音
+- - '#'
+  - 21 样式与主题
+- - '##'
+  - 颜色资源
+- - '##'
+  - 样式
+- - '###'
+  - 列表 21.2 添加样式 (`res/values/styles.xml`)
+- - '###'
+  - 列表 21.3 使用样式 (`res/layout/list_item_sound.xml`)
+- - '###'
+  - 样式继承
+- - '###'
+  - 列表 21.4 继承自 `BeatBoxButton` (`res/values/styles.xml`)
+- - '###'
+  - 列表 21.5 使用更加粗的样式 (`res/layout/list_item_sound.xml`)
+- - '##'
+  - 主题
+- - '###'
+  - 修改主题
+- - '###'
+  - 列表 21.6 更改为深色主题 (`res/values/styles.xml`)
+- - '###'
+  - 列表 21.7 设置主题属性 (res/values/styles.xml)
+- - '###'
+  - 图 21.5 使用自定义 AppCompat 颜色属性的 BeatBox
+- - '##'
+  - 覆盖主题属性
+- - '###'
+  - 主题探索
+- - '###'
+  - 图 21.6 选择父类
+- - '##'
+  - 修改按钮属性
+- - '##'
+  - 针对好奇心的读者：关于样式继承的更多内容
+- - '##'
+  - 针对好奇心的读者：访问主题属性
+- - '#'
+  - 22 XML Drawable
+- - '##'
+  - 统一按钮
+- - '##'
+  - 形状绘制 (Shape Drawables)
+- - '##'
+  - 状态列表绘制 (State List Drawables)
+- - '##'
+  - 图列表绘制 (Layer List Drawables)
+- - '##'
+  - 进阶好奇者：为什么要费心使用 XML drawable？
+- - '##'
+  - 进阶好奇者：Mipmap
+- - '##'
+  - 进阶好奇者：9-patch
+- - '###'
+  - 列表 22.9 应用新的背景 (`res/drawable/button_box.xml`)
+- - '###'
+  - 图 22.8 BeastBox
+- - '###'
+  - 图 22.9 9-patch 缩放
+- - '###'
+  - 图 22.10 创建 9-patch 图像
+- - '##'
+  - 设置 Launcher
+- - '##'
+  - 解析隐式意图
+- - '##'
+  - 在运行时创建显式意图
+- - '##'
+  - 任务与栈 (Back Stack)
+- - '###'
+  - 任务
+- - '###'
+  - 启动新任务
+- - '###'
+  - 屏幕
+- - '###'
+  - 针对好奇读者：并发
+- - '###'
+  - 图
+- - '#'
+  - 24 HTTP 和后台任务
+- - '###'
+  - 列表 24.1 添加容器 (`res/layout/activity_photo_gallery.xml`)
+- - '###'
+  - 列表 24.2 设置活动 (`PhotoGalleryActivity.kt`)
+- - '###'
+  - 列表 24.3 添加 (`app/build.gradle`)
+- - '###'
+  - 列表 24.4 布局 (`res/layout/fragment_gallery.xml`)
+- - '##'
+  - 使用 Retrofit 进行网络
+- - '###'
+  - 定义 API 接口
+- - '###'
+  - 构建 Retrofit 对象
+- - '###'
+  - 执行网络请求
+- - '###'
+  - 请求权限
+- - '###'
+  - 仓库
+- - '###'
+  - Listing 24.17 在 `PhotoGalleryFragment` 中使用 `FlickrFetch`
+- - '###'
+  - 获取 JSON
+- - '###'
+  - 将文本反序列化为模型
+- - '###'
+  - RecyclerView 中显示结果
+- - '##'
+  - 进阶读者：替代解析器
+- - '##'
+  - 进阶读者：取消请求
+- - '##'
+  - 进阶：管理关系
+- - '##'
+  - 挑战：分页
+- - '##'
+  - 挑战：动态调整
+- - '#'
+  - 25 循环器、处理器和线程
+- - '##'
+  - 准备 RecyclerView 以显示图像
+- - '##'
+  - 从 URL 下载字节
+- - '##'
+  - 下载大量文件
+- - '##'
+  - 组装后台线程
+- - '###'
+  - 让你的线程感知生命周期
+- - '###'
+  - 启动和停止 Handler
+- - '##'
+  - 消息（Messages and Handlers）
+- - '###'
+  - 消息的结构（Message anatomy）
+- - '###'
+  - Handler 的结构（Handler anatomy）
+- - '###'
+  - 使用 handlers
+- - '###'
+  - 传递处理器
+- - '##'
+  - 监听视图生命周期
+- - '###'
+  - Listing 25.21 注册视图观察者 (`PhotoGalleryFragment.kt`)
+- - '###'
+  - Listing 25.22 观察者 (`PhotoGalleryFragment.kt`)
+- - '###'
+  - 图 25.10 显示图像
+- - '###'
+  - 保留的 fragment (Retained Fragments)
+- - '###'
+  - 旋转与保留的 fragment
+- - '###'
+  - 图 25.11 带有 UI fragment 的默认旋转
+- - '###'
+  - 图 25.12 带有 UI fragment 的旋转
+- - '###'
+  - 图 25.13 生命周期周期
+- - '###'
+  - 是否保留
+- - '##'
+  - 给好奇读者：解决图片问题
+- - '##'
+  - 给好奇读者：StrictMode
+- - '##'
+  - 挑战：ViewOwner
+- - '##'
+  - 挑战：提高 Thumbnailloader 的周期感知能力
+- - '##'
+  - 挑战：预加载与缓存
+- - '#'
+  - 26 SearchView 和 SharedPreferences
+- - '##'
+  - 搜索 Flickr
+- - '##'
+  - 使用 SearchView
+- - '###'
+  - 响应 SearchView 的交互
+- - '##'
+  - 使用 SharedPreferences 进行简单持久化
+- - '###'
+  - 列表 26.13 清存储的查询 (`PhotoGalleryFragment.kt`)
+- - '###'
+  - 列表 26.14 查询为空时获取照片 (`PhotoGalleryViewModel.kt`)
+- - '##'
+  - 完善你的 App
+- - '###'
+  - 列表 26.15 从 `PhotoGalleryViewModel` 暴露搜索词 (`PhotoGalleryViewModel.java`)
+- - '###'
+  - 列表 26.16 预填充 `SearchView` (`PhotoGalleryFragment.java`)
+- - '##'
+  - 使用 Android KTX 编辑 SharedPreferences
+- - '###'
+  - 列表 26.17 添加 `core-ktx` 依赖 (`app/build.gradle`)
+- - '###'
+  - 列表 26.18 使用 Android KTX (`QueryPreferences.kt`)
+- - '##'
+  - 创建 Worker
+- - '##'
+  - 调度工作
+- - '##'
+  - 检查新照片
+- - '##'
+  - 通知用户
+- - '##'
+  - 为轮询提供用户控制
+- - '###'
+  - 切换 Worker 状态
+- - '###'
+  - 列表 27.17 设置正确的菜单项文本 (`PhotoGalleryFragment.kt`)
+- - '###'
+  - 列表 27.18 处理轮询切换项的点击 (`PhotoGalleryFragment.kt`)
+- - '##'
+  - 过滤前台通知
+- - '###'
+  - 发送广播意图
+- - '###'
+  - 创建并注册独立的接收器
+- - '###'
+  - 使用私有权限将广播限制在你的应用内
+- - '###'
+  - 创建并注册动态接收器
+- - '###'
+  - 列表 28.8 `VisibleFragment` 自身的接收器 (`VisibleFragment.kt`)
+- - '###'
+  - 列表 28.9 让你的 fragment 可见 (`PhotoGalleryFragment.kt`)
+- - '###'
+  - 图 28.2 证明你的广播接收器存在
+- - '###'
+  - 使用有序广播传递和接收数据
+- - '###'
+  - 图 28.3 普通广播意图
+- - '###'
+  - 图 28.4 有序广播意图
+- - '###'
+  - 列表 28.10 发回简单的结果 (`VisibleFragment.kt`)
+- - '##'
+  - 接收器与长时间的任务
+- - '##'
+  - 给好奇：本地事件
+- - '###'
+  - 使用 EventBus
+- - '###'
+  - 使用 RxJava
+- - '##'
+  - 进阶读者：广播接收器的局限性
+- - '##'
+  - 进阶读者：检测 Fragment 的可见性
+- - '#'
+  - 29 浏览网页和 WebView
+- - '##'
+  - 最后一点 Flickr 数据
+- - '##'
+  - 简单的方法：隐式意图
+- - '##'
+  - 更困难的方法：WebView
+- - '###'
+  - 使用 WebChromeClient 美化界面
+- - '###'
+  - WebView 的正确旋转
+- - '###'
+  - 自行处理配置更改的危险
+- - '###'
+  - WebView 与 自定义 UI
+- - '###'
+  - 引起好奇读者：注入 JavaScript 对象
+- - '###'
+  - 引起好奇读者：WebView 更新
+- - '###'
+  - '引起好奇读者：引起 '
+- - '#'
+  - 30 使用布局和控件创建用户界面
+- - '##'
+  - 引入 ConstraintLayout
+- - '##'
+  - 介绍图形化布局编辑器
+- - '##'
+  - 使用 ConstraintLayout
+- - '###'
+  - 腾出空间
+- - '####'
+  - 添加组件
+- - '###'
+  - ConstraintLayout 的内部原理
+- - '###'
+  - 编辑属性
+- - '###'
+  - 使列表项动态
+- - '##'
+  - 关于布局属性的更多
+- - '###'
+  - 样式、主题和主题属性
+- - '#'
+  - 31 属性
+- - '##'
+  - 动画
+- - '##'
+  - 属性
+- - '#'
+  - 12 Fragment 导航
+- - '##'
+  - 单 Activity：Fragment 之王
+- - '###'
+  - 回调接口
+- - '###'
+  - 列表 12.1 添加回调接口 (`CrimeListFragment.kt`)
+- - '###'
+  - 列表 12.2 调用所有回调！ (`CrimeListFragment.kt`)
+- - '###'
+  - 列表 12.3 实现回调 (`MainActivity.kt`)
+- - '##'
+  - 替换 fragment
+- - '###'
+  - 列表 12.4 用 CrimeFragment 替换 CrimeListFragment (`MainActivity.kt`)
+- - '###'
+  - 列表 12.5 将 fragment 事务添加到回退栈 (`MainActivity.kt`)
+- - '##'
+  - Fragment 参数 (Fragment Arguments)
+- - '###'
+  - 将参数附加到 fragment
+- - '###'
+  - 检索参数
+- - '##'
+  - 使用 LiveData 转换 (LiveData Transformations)
+- - '###'
+  - 列表 12.9 为 `CrimeFragment` 添加 `ViewModel` (`CrimeDetailViewModel.kt`)
+- - '###'
+  - 列表 12.10 将 `CrimeFragment` 挂到 `CrimeDetailViewModel` (`CrimeFragment.kt`)
+- - '###'
+  - 列表 12.11 观察变化 (`CrimeFragment.kt`)
+- - '###'
+  - 列表 12.12 跳过复选框动画 (`CrimeFragment.kt`)
+- - '##'
+  - 更新数据库
+- - '###'
+  - 使用 executor
+- - '###'
+  - 将数据库写入与 fragment 生命周期绑定
+- - '##'
+  - 给好奇心强的人：为什么 Fragment 参数？
+- - '##'
+  - 给好奇的读者：导航架构库
+- - '##'
+  - 挑战：RecyclerView 刷新
+- - '#'
+  - 13 对话框
+- - '##'
+  - 创建 DialogFragment
+- - '###'
+  - 显示 DialogFragment
+- - '##'
+  - 在两个 Fragment 之间传递数据
+- - '###'
+  - 将数据返回 CrimeFragment
+- - '###'
+  - 设置目标片段
+- - '###'
+  - 挑战：对话框

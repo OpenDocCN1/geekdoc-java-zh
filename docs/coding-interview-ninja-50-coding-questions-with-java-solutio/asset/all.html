@@ -1,0 +1,3069 @@
+<p><img src="images/00002.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 745 1186" preserveaspectratio="none">
+<image width="745" height="1186" xlink:href="images/00002.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000.html"></span></p>
+<section id="part0000.html_calibre_pb_0" class="s body">
+<h1 class="s">Introduction</h1>
+<p>Getting your dream software engineering job could be a matter of how
+well you perform in your coding interview part. Perhaps it is the most
+important part of your interview process.</p>
+<p> </p>
+<p>Your recruiter will recommend you to read again your university
+algorithms and data structures book to brush up on Computer Science
+fundamentals. And although this is necessary, it is not enough. The
+types of questions that you will find in an algorithms book are not
+designed to be solved under pressure in a short 45-minutes period. The
+best way to prepare yourself for the coding interview is to practice on
+similar questions to the ones that you will be asked to solve. This is
+the aim of this book; to present you some sample interview coding
+questions with a sample solution code.</p>
+<p> </p>
+<p>Since every company has a slightly different interview process and
+question style, it is highly recommended after you finish practicing
+with the questions of this book, to take a look at questions that have
+been recently asked to candidates from sites such as CareerCup and
+Glassdoor.</p>
+<p> </p>
+<p>Don’t forget that you don’t have to know everything and solve
+perfectly all the questions that you will be asked in order to proceed
+to the next phase of the interview process. Most of the times, the
+interviewers just want to see your thought process when dealing with new
+problems and how well you know to code.</p>
+<p> </p>
+<p>Finally, if you find something that you believe it is wrong, don’t
+hesitate to get in touch with me.</p>
+<p> </p>
+<p>Good luck with your interviews!</p>
+<p> </p>
+<p> </p>
+<div id="part0000.html_calibre_pb_2" class="calibre1">
+
+</div>
+</section>
+<p><span id="part0001_split_000.html"></span></p>
+<section id="part0001_split_000.html_calibre_pb_0" class="s body">
+<h1 class="s">Preparation</h1>
+<p>Before starting practicing for the coding interview, you will need to
+brush up some of the fundamentals of computer science. Below is a list
+of the most important topics, in my opinion, that you need to look into.
+This list is by no means a complete one.</p>
+<p> </p>
+<p><span class="c">•</span>Programming Language</p>
+<p>You must know <span class="c1">really</span> <span
+class="c1">well</span> a programming language of your choice. Being
+fluent in the language of your choice will give you more time to think
+about the actual problem rather than thinking how to implement the
+solution that you have in your mind. The most popular languages among
+the tech companies are Java, C/C++ and Python.</p>
+<p> </p>
+<p> </p>
+<p><span class="c">•</span>Running time complexity</p>
+<p>Most of the times, the interviewer will ask you the running time of
+your program meaning the big O complexity, that is the worst-case
+analysis of the running time. In some cases, such as when dealing with
+popular algorithms that have a bad big O analysis (eg. quicksort), it is
+useful to know the average running time as well.</p>
+<p> </p>
+<p> </p>
+<p><span class="c">•</span>Data structures</p>
+<p> </p>
+<p><span class="c2">•</span>Linked Lists</p>
+<p>Each node in a linked list has a data element and a pointer to the
+next node. A sample definition of a linked list node is:</p>
+<p><span class="c3">class</span> LLNode {</p>
+<p><span> </span><span class="c3">int</span><span>
+</span>data<span>;</span></p>
+<p>LLNode <span class="c4">next</span>;</p>
+<p> </p>
+<p>LLNode(<span class="c3">int</span> data) {</p>
+<p><span class="c3">this</span>.<span class="c4">data</span> = data;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>A linked list may be double linked, which means that each node has a
+pointer to the previous node as well. A sample definition would be:</p>
+<p><span class="c3">class</span> DLLNode {</p>
+<p><span> </span><span class="c3">int</span><span>
+</span>data<span>;</span></p>
+<p>DLLNode <span class="c4">next</span>, <span
+class="c4">prev</span>;</p>
+<p> </p>
+<p>DLLNode(<span class="c3">int</span> data) {</p>
+<p><span class="c3">this</span>.<span class="c4">data</span> = data;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>You can insert a new node in a linked list in O(1) time. To look up
+for an element in a linked list you need O(n) time.</p>
+</section>
+<p><span id="part0001_split_001.html"></span></p>
+<div class="body">
+<p><span class="c2">•</span>Trees</p>
+<p>Each node in a tree has a data element and a list of pointers to its
+children. The most popular form of trees are the binary trees which have
+only two children. A sample definition, that is used throughout all the
+practice questions that follow, is:</p>
+<p><span class="c3">class</span> TNode {</p>
+<p><span> </span><span class="c3">int</span><span>
+</span>data<span>;</span></p>
+<p>TNode <span class="c4">left</span>, <span
+class="c4">right</span>;</p>
+<p> </p>
+<p>TNode(<span class="c3">int</span> data) {</p>
+<p><span class="c3">this</span>.<span class="c4">data</span> = data;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>In some cases the tree nodes could have a pointer to their
+father-node.</p>
+<p> </p>
+<p>A popular specialization of a binary tree is the <span
+class="c1">Binary Search Tree (BST)</span> where each node’s element
+must be greater than every element in its left subtree and less than
+every element in its right subtree.</p>
+<p> </p>
+<p>The process of visiting each node in a tree is called tree traversal.
+There are three basic ways to explore a tree in a depth-first order. The
+following sample code prints a tree with the three basic traversals:</p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> preOrder(TNode root) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>) {
+return<span>; </span>};</p>
+<p>System.out.println(root.data);</p>
+<p>preOrder(root.left);</p>
+<p>preOrder(root.right);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> inOrder(TNode root) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>) {
+return<span>; };</span></p>
+<p>inOrder(root.<span class="c4">left</span>);</p>
+<p>System.<span class="c4">out</span>.println(root.<span
+class="c4">data</span>);</p>
+<p>inOrder(root.<span class="c4">right</span>);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> postOrder(TNode root) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>) {
+return<span>; </span>};</p>
+<p>postOrder(root.<span class="c4">left</span>);</p>
+<p>postOrder(root.<span class="c4">right</span>);</p>
+<p>System.<span class="c4">out</span>.println(root.<span
+class="c4">data</span>);</p>
+<p>}</p>
+</div>
+<p><span id="part0001_split_002.html"></span></p>
+<div class="body">
+<p><span class="c2">•</span>Hash Tables</p>
+<p>A hash map is used to associate a key with a value. The advantage of
+this data structure is that theoretically each operation (insertion,
+removal, look-up) requires on average O(1) time.</p>
+<p> </p>
+<p>To insert a new element into the hash map, you compute the hash code
+of the key. If the hash code that was computed already exist in the
+structure, then a collision resolution technique is used. The two most
+popular resolution techniques are:</p>
+<p><span class="c5">•</span>Separate Chaining: Each bucket is
+independent and some sort of dynamic list is used for every hash code
+index.</p>
+<p><span class="c5">•</span>Open Addressing: The buckets are examined
+until an unoccupied bucket is found.</p>
+<p> </p>
+<p>To create a new hash map data structure with String key and values in
+Java:</p>
+<p>HashMap&lt;String, String&gt; hm = <span class="c3">new</span>
+HashMap&lt;String, String&gt;();</p>
+<p> </p>
+<p>This is maybe the most popular data structure among interviewers!</p>
+<p> </p>
+<p><span class="c2">•</span>Stacks</p>
+<p>A Last-In-First-Out data structure. It would be useful to know how to
+implement a stack from scratch using arrays since an interviewer could
+ask to create a modified stack data structure with special
+functionality. For all the other cases that you might need to use a
+stack, you can use the built-in implementation of your language. To use
+a stack of Strings in Java:</p>
+<p>Stack&lt;String&gt; stack = <span class="c3">new</span>
+Stack&lt;String&gt;();</p>
+<p> </p>
+<p><span class="c2">•</span>Queues</p>
+<p>A First-In-First-Out data structure. It would be useful to know how
+to implement a queue from scratch using arrays since an interviewer
+could ask to create a modified queue data structure. To use a queue of
+Strings in Java:</p>
+<p>Queue&lt;String&gt; queue = <span class="c3">new</span>
+LinkedList&lt;String&gt;();</p>
+<p> </p>
+<p><span class="c2">•</span>Graphs</p>
+<p>A set of nodes that are connected by links. Can be represented using
+an adjacency matrix or an adjacency list. The graph theory can be asked
+by interviewers since it is used extensively in many popular
+algorithms.</p>
+<p> </p>
+<p><span class="c2">•</span>Tries</p>
+<p>A tree data structure that usually holds characters and has many
+applications in string manipulation algorithms. Usually, all the
+descendants of a node have a common prefix of the string associated with
+that node and the root is associated with the empty string. A popular
+application of this data structure is the look up in a dictionary of
+words (such as a simple auto-complete functionality in a text box).</p>
+</div>
+<p><span id="part0001_split_003.html"></span></p>
+<div class="body">
+<p><span class="c">•</span>Algorithms</p>
+<p>Its really rare for an interviewer to ask you to implement a specific
+complicated and long algorithm (such as Dijkstra, A*, etc). However, you
+should have an idea how these work, what they are used for and to be
+able to conduct a basic conversation when the subject is involving a
+well-known algorithm. Also, it is recommended to know what and how
+Dynamic Programming works and to be able to recognize it. The following
+are popular simpler algorithms that is suggested to know how to
+implement in case the interviewer asks you to implement a modification
+of the algorithm:</p>
+<p> </p>
+<p><span class="c2">•</span>Breadth-first search (DFS)</p>
+<p><span class="c2">•</span>Depth-first search (BFS)</p>
+<p><span class="c2">•</span>Mergesort</p>
+<p><span class="c2">•</span>Quicksort</p>
+<p><span class="c2">•</span>Binary Search</p>
+<p> </p>
+<p> </p>
+<p><span class="c">•</span>OTHER</p>
+<p>These are techniques or concepts that an interviewer might ask you,
+even only theoretically.</p>
+<p> </p>
+<p><span class="c2">•</span>Recursion</p>
+<p>A powerful technique that is used to solve computer science problems
+and asked frequently in interviews. Some times makes the solution of a
+problem simpler and produces compact code. Remember that this technique
+requires more memory than an iterative solution. Also, when writing a
+recursive solution don’t forget the terminating condition of the
+recursion.</p>
+<p> </p>
+<p><span class="c2">•</span>Object Oriented Design</p>
+<p>Interviewers might ask you to describe the basic objects for a given
+system. Therefore, knowing the fundamentals of object oriented
+principles is crucial.</p>
+<p> </p>
+<p><span class="c2">•</span>Testing</p>
+<p>Interviewers might ask you to test your own solution. You need to
+know how to create test cases that cover even the edge cases (that is
+having input something unexpected). Also, knowing the basic principles
+of Unit Testing and mentioning it would be really recommended.</p>
+<p> </p>
+<p><span class="c2">•</span>System Programming</p>
+<p>Concepts such as threading, locks and mutex might be asked,
+especially if the company has a theoretical part in their interview.</p>
+<p> </p>
+<p><span class="c2">•</span>Bitwise</p>
+<p>Binary operations using bitwise operators might be asked from time to
+time especially in companies specializing in lower level software.</p>
+<p> </p>
+<p><span class="c2">•</span>Program memory</p>
+<p>The difference between the stack and the heap memory areas and when
+each one is used.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="part0002_split_000.html"></span></p>
+<section id="part0002_split_000.html_calibre_pb_0" class="s body">
+<h1 class="s">Practise Questions</h1>
+<p>The following practice questions are consisted from a concise
+description, a short example of the input and output required if
+applicable, the sample solution coded in Java and the time and space
+complexity if applicable. The built-in classes and utility functions of
+Java are used wherever possible since the aim of an interview is not to
+re-invent the wheel but to come up with an efficient solution to the
+asked question.</p>
+<p> </p>
+<p>You will notice that the selected questions and their answers are not
+very long. This is due to the limited time that you have in an interview
+that does not allow the interviewer to ask a question that requires a
+long solution. If you are come up with a really complicated and long
+solution to a question, you be thinking too complicated. The candidate
+in less than 45 minutes would need time to clarify the question, come up
+with the solution, time to discuss the solution with the interviewer and
+time to test the solution.</p>
+<p> </p>
+<p>In most of the sample solutions, there is a basic input data
+validation, such as checking that the passed object is not a null value.
+This input validation might not be exhaustive and you should let your
+interviewer know that you are skipping the input validation or you are
+not doing an exhaustive check. Have in mind that this might result in a
+follow-up question on how to test your program.</p>
+<p> </p>
+<p>In case that the solution to a question needs to be called in a
+specific way from the main program then this driver program’s calls are
+noted as follow:</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>main program calls()</p>
+<p> </p>
+<p>In a coding interview, you might be asked theoretical questions and
+open-ended system design questions as well. These are not in the scope
+of this book but the final two questions are consisted by some samples
+of what you might be asked.</p>
+</section>
+<p><span id="part0002_split_001.html"></span></p>
+<div class="body">
+<p><span class="c6">1.</span>Find the majority element. In this problem,
+majority element is defined as the number that appears more than n/2
+times in an array of numbers.</p>
+<p>e.g:</p>
+<p>input: 3,2,2,1,2,2,1</p>
+<p>output: 2</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> findMajCandidate(<span class="c3">int</span>[]
+arr) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span> ||
+arr.<span class="c4">length</span> == 0) {</p>
+<p><span> </span>return<span> Integer.MIN_VALUE;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> count = 1, maj = arr[0];</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 1; i
+&lt; arr.<span class="c4">length</span>; i++) {</p>
+<p><span class="c3">if</span> (arr[i] == maj) {</p>
+<p>count++;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>count--;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (count == 0) {</p>
+<p>maj = arr[i];</p>
+<p>count = 1;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> maj;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> verifyMajCandidate(<span
+class="c3">int</span>[] arr, <span class="c3">int</span> maj) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span> ||
+arr.<span class="c4">length</span> == 0) {</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> n = arr.<span class="c4">length</span>,
+count = 0;</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 0; i
+&lt; n; i++) {</p>
+<p><span class="c3">if</span> (arr[i] == maj) {</p>
+<p>count++;</p>
+<p>}</p>
+<p><span class="c3">if</span> (count &gt; n / 2) {</p>
+<p><span> </span>return<span> </span>true<span>;</span></p>
+<p>}</p>
+<p>}</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><span class="c3">int</span> maj = findMajCandidate(arr);</p>
+<p><span class="c3">if</span> (maj == Integer.MIN_VALUE ||
+verifyMajCandidate(arr, maj)==<span class="c3">false) </span>{</p>
+<p><span> </span><span
+class="c7">System</span><span>.out.println(</span>"No majority element
+found."<span>);</span></p>
+<p><span>} </span>else<span> {</span></p>
+<p><span class="c7">System</span>.out.println(<span class="c8">"Majority
+element: "</span> + maj);</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_002.html"></span></p>
+<div class="body">
+<p><span class="c6">2.</span>Find the maximum sum of a continuous
+subsequence in an array of integers.</p>
+<p>e.g:</p>
+<p>input: 1,-3,2,5,-8</p>
+<p>output: 7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> maxSubSequence(<span class="c3">int</span>[] arr)
+{</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span> ||
+arr.<span class="c4">length</span> == 0) {</p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> maxSoFar = arr[0], curMax = arr[0];</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 1; i
+&lt; arr.<span class="c4">length</span>; i++) {</p>
+<p>curMax = Math.max(curMax + arr[i], arr[i]);</p>
+<p>maxSoFar = Math.max(curMax, maxSoFar);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> maxSoFar;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_003.html"></span></p>
+<div class="body">
+<p><span class="c6">3.</span>Given two binary trees find if they are
+equal (have the same content and structure).</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> isTreeSame(TNode T1, TNode T2) {</p>
+<p><span class="c3">if</span> (T1 == <span class="c3">null</span>
+&amp;&amp; T2 == <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> </span>true<span>;</span></p>
+<p>}</p>
+<p><span class="c3">if</span> (T1 == <span class="c3">null</span> || T2
+== <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p><span class="c3">if</span> (T1.data != T2.data) {</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p><span class="c3">return</span> isTreeSame(T1.left, T2.left)</p>
+<p>&amp;&amp; isTreeSame(T1.right, T2.right);</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_004.html"></span></p>
+<div class="body">
+<p><span class="c6">4.</span>In a Binary Search Tree (BST) find the
+number of elements in a given range.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>range: (2,6)</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>1</p>
+<p> </p>
+<p>output: 2</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> numbersInRange(TNode node, <span
+class="c3">int</span> start, <span class="c3">int</span> end) {</p>
+<p><span class="c3">if</span> (node == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> 0;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> ((node.data &gt; start) &amp;&amp;
+(node.data &lt; end)) {</p>
+<p><span class="c3">return</span> 1</p>
+<p>+ numbersInRange(node.left, start, end)</p>
+<p>+ numbersInRange(node.right, start, end);</p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (node.data
+&gt;= end) {</p>
+<p><span class="c3">return</span> numbersInRange(node.left, start,
+end);</p>
+<p><span> } </span><span class="c3">else</span><span> { </span>// if
+(node.data &lt;= start)</p>
+<p><span class="c3">return</span> numbersInRange(node.right, start,
+end);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_005.html"></span></p>
+<div class="body">
+<p><span class="c6">5.</span>Given a tree that its nodes have pointers
+to their parents, find the next node in an in-order traversal.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>node: 3</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>1</p>
+<p> </p>
+<p>output: 5</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+nextInOrder(TNode n) {</p>
+<p><span class="c3">if</span> (n == <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span> </span><span class="c3">if</span><span> (n.</span>right<span>
+!= </span><span class="c3">null</span><span>) {</span></p>
+<p>n = n.<span class="c4">right</span>;</p>
+<p><span> </span>while<span> (n.</span><span
+class="c4">left</span><span> != </span>null<span>) {</span></p>
+<p>n = n.<span class="c4">left</span>;</p>
+<p>}</p>
+<p><span> </span>return<span> n;</span></p>
+<p><span> } </span>else<span> {</span></p>
+<p>TNode p = n.<span class="c4">parent</span>;</p>
+<p><span class="c3">while</span> (p != <span class="c3">null</span>
+&amp;&amp; p.<span class="c4">left</span> != n) {</p>
+<p>n = p;</p>
+<p>p = p.<span class="c4">parent</span>;</p>
+<p>}</p>
+<p><span> </span>return<span> p;</span></p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_006.html"></span></p>
+<div class="body">
+<p><span class="c6">6.</span>Given a tree that its nodes have pointers
+to their parents, find the next node in a post-order traversal.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>node: 7</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>1</p>
+<p> </p>
+<p>output: 5</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+nextPostOrder(TNode n) {</p>
+<p><span class="c3">if</span> (n == <span class="c3">null</span> ||
+n.parent == <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (n.parent.left == n) {</p>
+<p>TNode h = n.parent.right;</p>
+<p><span class="c3">if</span> (h == <span class="c3">null</span>) {</p>
+<p><span class="c3">return</span> n.parent;</p>
+<p>}</p>
+<p><span class="c3">while</span> (h.left != <span
+class="c3">null</span>) {</p>
+<p>h = h.left;</p>
+<p>}</p>
+<p><span> </span>return<span> h;</span></p>
+<p><span> } </span>else<span> {</span></p>
+<p><span class="c3">return</span> n.parent;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_007.html"></span></p>
+<div class="body">
+<p><span class="c6">7.</span>Design a class that you can add elements
+and find the mean of the last N elements.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>data: 2,3,1,4,2</p>
+<p>N: 2</p>
+<p>output: 3</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">class</span> DS {</p>
+<p>ArrayList&lt;Integer&gt; <span class="c4">mData</span> = <span
+class="c3">new</span> ArrayList&lt;Integer&gt;();</p>
+<p>ArrayList&lt;Integer&gt; <span class="c4">mDataSum</span> = <span
+class="c3">new</span> ArrayList&lt;Integer&gt;();</p>
+<p> </p>
+<p><span> </span>public<span> </span>void<span> add(</span>int<span> i)
+{</span></p>
+<p><span class="c4">mData</span>.add(i);</p>
+<p> </p>
+<p><span class="c3">int</span> lastIndex = <span
+class="c4">mDataSum</span>.size() - 1;</p>
+<p><span class="c3">int</span> sum = i;</p>
+<p><span class="c3">if</span> (lastIndex &gt;= 0) {</p>
+<p>sum += <span class="c4">mDataSum</span>.get(lastIndex);</p>
+<p>}</p>
+<p><span class="c4">mDataSum</span>.add(sum);</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>public<span> </span>float<span> mean(</span>int<span>
+N) {</span></p>
+<p><span class="c3">if</span> (N &lt;= 0 || <span
+class="c4">mDataSum</span>.size()==0 || N &gt; <span
+class="c4">mDataSum</span>.size()) {</p>
+<p><span> </span><span class="c3">return</span><span>
+-Float.</span>MAX_VALUE<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> lastIndex = <span
+class="c4">mDataSum</span>.size() - 1;</p>
+<p><span class="c3">int</span> firstIndex = Math.max(lastIndex - N,
+0);</p>
+<p><span class="c3">float</span> sum;</p>
+<p>sum = <span class="c4">mDataSum</span>.get(lastIndex)-m<span
+class="c4">DataSum</span>.get(firstIndex);</p>
+<p><span class="c3">return</span> sum / N;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(1)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_008.html"></span></p>
+<div class="body">
+<p><span class="c6">8.</span>Given an array of Intervals sorted by their
+start time, merge them into non-overlapping intervals.</p>
+<p>e.g:</p>
+<p>input: (1,3), (5,10), (9,31), (12,30)</p>
+<p>output: (1,3), (5,31)</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">class</span> Interval {</p>
+<p><span> </span>public<span> </span>int<span> </span><span
+class="c4">start</span><span>, </span><span
+class="c4">end</span><span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span>
+List&lt;Interval&gt; mergeIntervals(List&lt;Interval&gt; in) {</p>
+<p><span class="c3">if</span> (in == <span class="c3">null</span> ||
+in.size() == 0) {</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p>List&lt;Interval&gt; solution = <span class="c3">new</span>
+ArrayList&lt;Interval&gt;();</p>
+<p>Interval last = in.get(0);</p>
+<p>solution.add(last);</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 1; i
+&lt; in.size(); i++) {</p>
+<p>Interval current = in.get(i);</p>
+<p><span class="c3">if</span> (current.<span class="c4">start</span>
+&gt; last.<span class="c4">end</span>) {</p>
+<p>solution.add(current);</p>
+<p>last = current;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>last.<span class="c4">end</span> = Math.max(last.<span
+class="c4">end</span>, current.<span class="c4">end</span>);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> solution;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_009.html"></span></p>
+<div class="body">
+<p><span class="c6">9.</span>Given an array of sorted integers find the
+position of a given number, if exists.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>array: 2, 4, 5, 7, 8</p>
+<p>num: 4</p>
+<p>output: 1</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> binarySearch(<span class="c3">int</span>[] arr,
+<span class="c3">int</span> num) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> st = 0, end = arr.<span
+class="c4">length</span> - 1;</p>
+<p><span class="c3">while</span> (st &lt;= end) {</p>
+<p><span class="c3">int</span> mid = (st + end) / 2;</p>
+<p><span class="c3">if</span> (arr[mid] == num) {</p>
+<p><span> </span>return<span> mid;</span></p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (num &gt;
+arr[mid]) {</p>
+<p>st = mid + 1;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>end = mid - 1;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(logN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_010.html"></span></p>
+<div class="body">
+<p><span class="c9">10.</span>Find one local minimum from an array of
+numbers.</p>
+<p>e.g:</p>
+<p>input: 9, 7, 2, 8, 5, 6, 3, 4</p>
+<p>output: 2 or 5 or 3</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> findLocalMin(<span class="c3">int</span>[] arr,
+<span class="c3">int</span> st, <span class="c3">int</span> end) {</p>
+<p><span class="c3">int</span> mid = (st + end) / 2;</p>
+<p><span class="c3">if</span> ((mid - 1 &lt; 0) || (mid + 1 &gt;=
+arr.<span class="c4">length</span>)) {</p>
+<p><span> </span>return<span> Integer.MIN_VALUE;</span></p>
+<p>}</p>
+<p><span class="c3">if</span> ((arr[mid - 1] &gt; arr[mid]) &amp;&amp;
+(arr[mid + 1] &gt; arr[mid])) {</p>
+<p><span> </span>return<span> mid;</span></p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (arr[mid -
+1] &lt; arr[mid]) {</p>
+<p>findLocalMin(arr, st, mid);</p>
+<p><span> } </span>else<span> {</span></p>
+<p>findLocalMin(arr, mid, end);</p>
+<p>}</p>
+<p><span> </span>return<span> Integer.MIN_VALUE;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(logN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_011.html"></span></p>
+<div class="body">
+<p><span class="c10">11.</span>Given an array of numbers that is first
+strictly increasing and then strictly decreasing, find the maximum
+number.</p>
+<p>e.g:</p>
+<p>input: 1, 2, 3, 4, 5, 4, 3, 2</p>
+<p>output: 5</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> findMax(<span class="c3">int</span>[] arr) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span> ||
+arr.length &lt;= 3) {</p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> st = 0, end = arr.length - 1;</p>
+<p><span class="c3">while</span> (st &lt;= end) {</p>
+<p><span class="c3">int</span> mid = (st + end) / 2;</p>
+<p><span class="c3">int</span> midVal = arr[mid];</p>
+<p><span class="c3">if</span> (midVal &gt; arr[mid - 1] &amp;&amp;
+midVal &gt; arr[mid + 1]) {</p>
+<p><span class="c3">return</span> midVal;</p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (arr[mid -
+1] &lt; midVal) {</p>
+<p>st = mid + 1;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>end = mid - 1;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(logN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_012.html"></span></p>
+<div class="body">
+<p><span class="c9">12.</span>Implement square root function (sqrt) only
+with integers.</p>
+<p>e.g:</p>
+<p>input: 4</p>
+<p>output: 2</p>
+<p> </p>
+<p>input: 5</p>
+<p>output: 2 or 3</p>
+<p>(both values allowed since the correct result is decimal)</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> sqrt(<span class="c3">int</span> target, <span
+class="c3">int</span> st, <span class="c3">int</span> end) {</p>
+<p><span class="c3">if</span> (st &gt;= end) {</p>
+<p><span class="c3">return</span> Math.min(st, end);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> mid = (st + end) / 2;</p>
+<p><span class="c3">if</span> (mid * mid == target) {</p>
+<p><span> </span>return<span> mid;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (mid * mid &gt; target) {</p>
+<p><span class="c3">return</span> sqrt(target, st, mid - 1);</p>
+<p><span> } </span>else<span> {</span></p>
+<p><span class="c3">return</span> sqrt(target, mid + 1, end);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(logN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_013.html"></span></p>
+<div class="body">
+<p><span class="c9">13.</span>Given an array that was sorted but was
+rotated an unknown number of times, find the position of a target
+element.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>rotated array: 4, 5, 6, 7, 0, 1, 2</p>
+<p>target: 6</p>
+<p>output: 2</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> binaryRoatedSearch(<span class="c3">int</span>[]
+arr, <span class="c3">int</span> target) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span class="c3">return</span> Integer.<span
+class="c4">MIN_VALUE</span>;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> st = 0;</p>
+<p><span class="c3">int</span> end = arr.<span class="c4">length</span>
+- 1;</p>
+<p><span class="c3">while</span> (st &lt;= end) {</p>
+<p><span class="c3">int</span> mid = (st + end) / 2;</p>
+<p><span class="c3">if</span> (arr[mid] == target) {</p>
+<p><span> </span>return<span> mid;</span></p>
+<p>}</p>
+<p> </p>
+<p><span> </span>// at least one part must be sorted</p>
+<p><span class="c3">if</span> (arr[st] &lt;= arr[mid]) { <span
+class="c11">// left part is sorted</span></p>
+<p><span class="c3">if</span> (arr[st] &lt; target &amp;&amp; target
+&lt;= arr[mid]) {</p>
+<p>end = mid - 1;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>st = mid + 1;</p>
+<p>}</p>
+<p><span> } </span><span class="c3">else</span><span> { </span>// right
+part is sorted</p>
+<p><span class="c3">if</span> (arr[mid] &lt; target &amp;&amp; target
+&lt;= arr[end]) {</p>
+<p>st = mid + 1;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>end = mid - 1;</p>
+<p>}</p>
+<p> </p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> Integer.<span
+class="c4">MIN_VALUE</span>;</p>
+<p>}</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_014.html"></span></p>
+<div class="body">
+<p><span class="c7">INFO:</span></p>
+<p>If the input array contains duplicate entries, the target can only be
+found with linear search in O(N) running time.</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(logN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_015.html"></span></p>
+<div class="body">
+<p><span class="c9">14.</span>Given a sorted array of integers that
+contains each entry multiple times, find the start and end position of a
+target integer.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>sorted array: 1, 2, 3, 7, 7, 7, 9, 9</p>
+<p>target: 7</p>
+<p>output:</p>
+<p>start position: 3</p>
+<p>end position: 5</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> modifiedBinSearch(<span class="c3">int</span>[]
+arr, <span class="c3">double</span> target) {</p>
+<p><span class="c3">int</span> st = 0, end = arr.<span
+class="c4">length</span> - 1;</p>
+<p><span class="c3">while</span> (st &lt;= end) {</p>
+<p><span class="c3">int</span> mid = (st + end) / 2;</p>
+<p><span class="c3">if</span> (target &gt; arr[mid]) {</p>
+<p>st = mid + 1;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>end = mid - 1;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> st;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span>[] findRange(<span class="c3">int</span>[] arr,
+<span class="c3">int</span> target) {</p>
+<p><span class="c3">int</span>[] res = { -1, -1 };</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> res;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> lo = modifiedBinSearch(arr, target -
+0.5);</p>
+<p><span class="c3">if</span> (lo &gt;= arr.<span
+class="c4">length</span> || arr[lo] != target) {</p>
+<p><span> </span>return<span> res;</span></p>
+<p>}</p>
+<p><span class="c3">int</span> hi = modifiedBinSearch(arr, target +
+0.5);</p>
+<p> </p>
+<p>res[0] = lo;</p>
+<p>res[1] = hi;</p>
+<p><span> </span>return<span> res;</span></p>
+<p> </p>
+<p>}</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_016.html"></span></p>
+<div class="body">
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>// res[0] will be the start position</p>
+<p>// res[1] will be the end position</p>
+<p><span class="c3">int</span>[] res = findRange(arr, 7);</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(logN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_017.html"></span></p>
+<div class="body">
+<p><span class="c9">15.</span>Given an array that at each place
+represents how many steps forward you can make in the array, find the
+minimum number of steps needed to reach the end of the array.</p>
+<p>e.g:</p>
+<p>input: 2, 1, 1, 8, 1, 1, 1</p>
+<p>output: 3</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> minNumOfSteps(<span class="c3">int</span>[] arr)
+{</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span>[] opt = <span class="c3">new</span> <span
+class="c3">int</span>[arr.<span class="c4">length</span>];</p>
+<p>opt[0] = 0;</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i=1;
+i&lt;arr.<span class="c4">length</span>; i++) {</p>
+<p><span class="c3">int</span> min=arr.<span
+class="c4">length</span>;</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> k=0; k&lt;i;
+k++) {</p>
+<p><span class="c3">if</span> (i-k &lt;= arr[k]) {</p>
+<p>min = Math.min(min, opt[k]+1);</p>
+<p>}</p>
+<p>}</p>
+<p>opt[i] = min;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> opt[arr.<span
+class="c4">length</span>-1];</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N<span><sup>2</sup></span>)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_018.html"></span></p>
+<div class="body">
+<p><span class="c9">16.</span>Given a 2D array of integers and a
+starting point, find the continuous area covered with the same value as
+the starting point.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>starting point: (0,0)</p>
+<p>array:</p>
+<p>1 1 2</p>
+<p>1 3 2</p>
+<p>2 2 1</p>
+<p>output: 3</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> findAreaHelper(<span class="c3">int</span>[][]
+arr, <span class="c3">boolean</span>[][] visited, <span
+class="c3">int</span> value, <span class="c3">int</span> x, <span
+class="c3">int</span> y) {</p>
+<p><span class="c3">if</span> (x &lt; 0 || x &gt; arr[0].<span
+class="c4">length</span> || y &lt; 0 || y &gt;= arr.<span
+class="c4">length</span>) {</p>
+<p><span> </span>return<span>;</span></p>
+<p>}</p>
+<p><span class="c3">if</span> (visited[y][x] == <span
+class="c3">true</span>) {</p>
+<p><span> </span>return<span>;</span></p>
+<p>}</p>
+<p>visited[y][x] = <span class="c3">true</span>;</p>
+<p><span class="c3">if</span> (arr[y][x] == value) {</p>
+<p><span> </span>mArea<span>++;</span></p>
+<p>findAreaHelper(arr, visited, value, x + 1, y);</p>
+<p>findAreaHelper(arr, visited, value, x, y + 1);</p>
+<p>findAreaHelper(arr, visited, value, x - 1, y);</p>
+<p>findAreaHelper(arr, visited, value, x, y - 1);</p>
+<p>}</p>
+<p> </p>
+<p>}</p>
+<p> </p>
+<p>static<span> </span>int<span> </span><span
+class="c4">mArea</span><span> = 0;</span></p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> findArea(<span class="c3">int</span>[][] arr,
+<span class="c3">int</span> x, <span class="c3">int</span> y) {</p>
+<p><span class="c3">boolean</span>[][] visited = <span
+class="c3">new</span> <span class="c3">boolean</span>[arr.<span
+class="c4">length</span>][arr[0].<span class="c4">length</span>];</p>
+<p><span class="c4">mArea</span> = 0;</p>
+<p>findAreaHelper(arr, visited, arr[y][x], x, y);</p>
+<p>}</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N<span><sup>2</sup></span>)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_019.html"></span></p>
+<div class="body">
+<p><span class="c9">17.</span>Given an array of Triples that represent
+the the amount of RAM needed for an app and the start and termination
+times of the app, find the maximum amount of RAM needed.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>start time end time ram needed</p>
+<p>2 4 1</p>
+<p>3 6 2</p>
+<p>3 9 3</p>
+<p> </p>
+<p>output: 6</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">class</span> Triple {</p>
+<p><span> </span><span class="c3">int</span><span>
+</span>startTime<span>, </span>endTime<span>,
+</span>ramNeeded<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> maxRamNeeded(List&lt;Triple&gt; in) {</p>
+<p><span class="c3">if</span> (in == <span class="c3">null</span>) {</p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p>Map&lt;Integer, Integer&gt; tm = <span class="c3">new</span>
+TreeMap&lt;Integer, Integer&gt;();</p>
+<p><span class="c3">for</span> (Triple t : in) {</p>
+<p>tm.put(t.<span class="c4">startTime</span>, t.<span
+class="c4">ramNeeded</span>);</p>
+<p>tm.put(t.<span class="c4">endTime</span>, -t.<span
+class="c4">ramNeeded</span>);</p>
+<p>}</p>
+<p><span class="c3">int</span> curRam = 0, maxRam = 0;</p>
+<p><span class="c3">for</span> (Map.Entry&lt;Integer, Integer&gt; entry
+: tm.entrySet()) {</p>
+<p>curRam += entry.getValue();</p>
+<p>maxRam = Math.max(curRam, maxRam);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> maxRam;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c7">INFO:</span> TreeMap always will keep its entries
+sorted based on their key. The cost for insertion is O(logN).</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(NlogN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_020.html"></span></p>
+<div class="body">
+<p><span class="c12">18.</span>Calculate the power of a number to a base
+without using a built-in function.</p>
+<p>e.g:</p>
+<p>input: 2^3</p>
+<p>output: 8</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p>public<span> </span>static<span> </span>long<span>
+pow(</span>int<span> a, </span>int<span> b) {</span></p>
+<p><span class="c3">long</span>[] M = <span class="c3">new</span> <span
+class="c3">long</span>[b + 1];</p>
+<p>M[0] = 1;</p>
+<p>M[1] = a;</p>
+<p><span class="c3">return</span> powHelper(a, b, M);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">long</span> powHelper(<span class="c3">int</span> a, <span
+class="c3">int</span> b, <span class="c3">long</span>[] M) {</p>
+<p><span class="c3">if</span> (M[b] == 0) {</p>
+<p><span class="c3">if</span> (b % 2 == 0) {</p>
+<p>M[b] = powHelper(a, b / 2, M)</p>
+<p>* powHelper(a, b / 2, M);</p>
+<p>} <span class="c3">else</span> {</p>
+<p>M[b] = powHelper(a, (b - 1) / 2, M)</p>
+<p>* powHelper(a, (b - 1) / 2, M) * a;</p>
+<p>}</p>
+<p>}</p>
+<p><span class="c3">return</span> M[b];</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="part0002_split_021.html"></span></p>
+<div class="body">
+<p><span class="c9">19.</span>Given an array of integers, rearrange the
+array into a wave-like array (a1 &gt;= a2 &lt;= a3 &gt;= a4 &lt;= a5
+&gt;= …).</p>
+<p>e.g:</p>
+<p>input: 1, 3, 2, 4, 5, 6, 7</p>
+<p>output: 2, 1, 4, 3, 6, 5, 7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> waveSort(<span class="c3">int</span>[] arr) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span class="c3">return</span>;</p>
+<p>}</p>
+<p> </p>
+<p>Arrays.sort(arr);</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 0; i
+&lt; arr.<span class="c4">length</span> - 2; i += 2) {</p>
+<p><span class="c3">int</span> temp = arr[i];</p>
+<p>arr[i] = arr[i + 1];</p>
+<p>arr[i + 1] = temp;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p><span class="c7">INFO:</span> Might not work if there are duplicate
+entries in the input list.</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(NlogN)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_022.html"></span></p>
+<div class="body">
+<p><span class="c9">20.</span>Reverse the bits of an integer.</p>
+<p>e.g:</p>
+<p>input: 1011</p>
+<p>output: 1101</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> swapBits(<span class="c3">int</span> x, <span
+class="c3">int</span> i, <span class="c3">int</span> j) {</p>
+<p><span class="c3">int</span> lo = ((x &gt;&gt; i) &amp; 1);</p>
+<p><span class="c3">int</span> hi = ((x &gt;&gt; j) &amp; 1);</p>
+<p><span class="c3">if</span> ((lo ^ hi) == 1) {</p>
+<p>x ^= ((1 &lt;&lt; i) | (1 &lt;&lt; j));</p>
+<p>}</p>
+<p><span> </span>return<span> x;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> revBits(<span class="c3">int</span> x, <span
+class="c3">int</span> numOfBits) {</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 0; i
+&lt; numOfBits; i++) {</p>
+<p>x = swapBits(x, i, numOfBits - i - 1);</p>
+<p>}</p>
+<p><span> </span>return<span> x;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p><span class="c7">INFO:</span></p>
+<p>XOR (^) with 1 will toggle the value of the bit.</p>
+<p>XOR (^) with two bits will return 1 if they are different.</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_023.html"></span></p>
+<div class="body">
+<p><span class="c9">21.</span>Find the k-th largest integer in an
+unsorted array, in-place.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>array: 5, 8, 3, 1</p>
+<p>k: 2</p>
+<p>output: 3</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> swap(<span class="c3">int</span>[] arr, <span
+class="c3">int</span> x, <span class="c3">int</span> y) {</p>
+<p><span class="c3">int</span> temp = arr[x];</p>
+<p>arr[x] = arr[y];</p>
+<p>arr[y] = temp;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> partition(<span class="c3">int</span>[] arr, <span
+class="c3">int</span> first, <span class="c3">int</span> last) {</p>
+<p><span class="c3">int</span> pivot = first;</p>
+<p>swap(arr, last, pivot);</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = first; i
+&lt; last; i++) {</p>
+<p><span class="c3">if</span> (arr[i] &gt; last) {</p>
+<p>swap(arr, i, first);</p>
+<p>first++;</p>
+<p>}</p>
+<p>}</p>
+<p>swap(arr, first, last);</p>
+<p><span class="c3">return</span> first;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> quickselect(<span class="c3">int</span>[] arr,
+<span class="c3">int</span> first, <span class="c3">int</span> last,
+<span class="c3">int</span> k) {</p>
+<p><span class="c3">if</span> (first &gt; last)</p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p><span class="c3">int</span> pivot = partition(arr, first, last);</p>
+<p><span class="c3">if</span> (pivot == k) {</p>
+<p><span class="c3">return</span> arr[pivot];</p>
+<p>}</p>
+<p><span class="c3">if</span> (pivot &gt; k) {</p>
+<p><span class="c3">return</span> quickselect(arr, first, pivot - 1,
+k);</p>
+<p><span> } </span>else<span> {</span></p>
+<p><span class="c3">return</span> quickselect(arr, pivot + 1, last,
+k);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p><span class="c7">INFO:</span></p>
+<p>If you choose the pivot more wisely, such as choosing the median of
+medians of sets of 5, you can avoid the worst case time complexity of
+O(N<span><sup>2</sup></span>).</p>
+<p> </p>
+<p>AVERAGE RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>WORST RUNNING TIME COMPLEXITY:</p>
+<p>O(N<span><sup>2</sup></span>)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_024.html"></span></p>
+<div class="body">
+<p><span class="c9">22.</span>Given that a tree is a full binary tree (=
+every node other than the leaves has two children) and the pre-order and
+post-order traversal of the tree, re-construct it.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>pre-order: 5, 3, 7</p>
+<p>post-order: 3, 7, 5</p>
+<p> </p>
+<p>output:</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">static</span><span> </span><span
+class="c3">int</span><span> </span>mPreIndex<span> = 0;</span></p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+constructTree(<span class="c3">int</span>[] pre, <span
+class="c3">int</span>[] post, <span class="c3">int</span> lo, <span
+class="c3">int</span> hi) {</p>
+<p><span class="c3">if</span> ((lo &gt; hi) || (<span
+class="c4">mPreIndex</span> &gt;= pre.<span class="c4">length</span>))
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c13"> TNode root = </span><span
+class="c14">new</span><span class="c13"> TNode(pre[</span><span
+class="c15">mPreIndex</span><span class="c13">]);</span></p>
+<p><span> </span>mPreIndex<span>++;</span></p>
+<p><span class="c3">if</span> (lo == hi) {</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> i;</p>
+<p><span class="c3">for</span> (i = lo; i &lt; hi; i++) {</p>
+<p><span class="c3">if</span> (pre[<span class="c4">mPreIndex</span>] ==
+post[i]) {</p>
+<p><span> </span>break<span>;</span></p>
+<p>}</p>
+<p>}</p>
+<p>root.<span class="c4">left</span> = constructTree(pre, post, lo,
+i);</p>
+<p>root.<span class="c4">right</span> = constructTree(pre, post, i + 1,
+hi - 1);</p>
+<p> </p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+</div>
+<p><span id="part0002_split_025.html"></span></p>
+<div class="body">
+<p><span class="c9">23.</span>Given the in-order and pre-order traversal
+of a tree, re-construct it.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>in-order: 3, 5, 7</p>
+<p>pre-order: 3, 7, 5</p>
+<p> </p>
+<p>output:</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">static</span><span> </span><span
+class="c3">int</span><span> </span>mPreIndex<span> = 0;</span></p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+constructTree(<span class="c3">int</span>[] in, <span
+class="c3">int</span>[] pre, <span class="c3">int</span> lo, <span
+class="c3">int</span> hi) {</p>
+<p><span class="c3">if</span> ((lo &gt; hi) || (<span
+class="c4">mPreIndex</span> &gt;= pre.<span class="c4">length</span>))
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c13"> TNode root = </span><span
+class="c14">new</span><span class="c13"> TNode(pre[</span><span
+class="c15">mPreIndex</span><span class="c13">]);</span></p>
+<p><span> </span>mPreIndex<span>++;</span></p>
+<p><span class="c3">if</span> (lo == hi) {</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> inIndex;</p>
+<p><span class="c3">for</span> (inIndex = lo; inIndex &lt;= hi;
+inIndex++) {</p>
+<p><span class="c3">if</span> (in[inIndex] == root.<span
+class="c4">data</span>) {</p>
+<p><span> </span>break<span>;</span></p>
+<p>}</p>
+<p>}</p>
+<p>root.<span class="c4">left</span> = constructTree(in, pre, lo,
+inIndex - 1);</p>
+<p>root.<span class="c4">right</span> = constructTree(in, pre, inIndex +
+1, hi);</p>
+<p> </p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_026.html"></span></p>
+<div class="body">
+<p><span class="c9">24.</span>Given that a tree is a Binary Search Tree
+(BST) and the pre-order traversal of the tree, re-construct it.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>pre-order: 5, 3, 7</p>
+<p> </p>
+<p>output:</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+constructTree(<span class="c3">int</span>[] pre, <span
+class="c3">int</span> lo, <span class="c3">int</span> hi) {</p>
+<p><span class="c3">if</span> (lo &gt; hi) {</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c13"> TNode root = </span><span
+class="c14">new</span><span class="c13"> TNode(pre[lo]);</span></p>
+<p><span class="c3">if</span> (lo == hi) {</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> i;</p>
+<p><span class="c3">for</span> (i = lo + 1; i &lt;= hi; i++) {</p>
+<p><span class="c3">if</span> (pre[i] &gt; root.<span
+class="c4">data</span>) {</p>
+<p><span> </span>break<span>;</span></p>
+<p>}</p>
+<p>}</p>
+<p>root.<span class="c4">left</span> = constructTree(pre, lo + 1, i -
+1);</p>
+<p>root.<span class="c4">right</span> = constructTree(pre, i, hi);</p>
+<p> </p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_027.html"></span></p>
+<div class="body">
+<p><span class="c9">25.</span>Delete a node from a Binary Search Tree
+(BST).</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+deleteNodeFromBST(TNode root, <span class="c3">int</span> key) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p><span class="c3">if</span> (key &gt; root.<span
+class="c4">data</span>) {</p>
+<p>root.<span class="c4">right</span> = deleteNodeFromBST(root.<span
+class="c4">right</span>, key);</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p><span class="c3">if</span> (key &lt; root.<span
+class="c4">data</span>) {</p>
+<p>root.<span class="c4">left</span> = deleteNodeFromBST(root.<span
+class="c4">left</span>, key);</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>// 0 or 1 child</p>
+<p><span class="c3">if</span> (root.<span class="c4">left</span> ==
+<span class="c3">null</span>) {</p>
+<p><span> </span>return<span> root.</span><span
+class="c4">right</span><span>;</span></p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (root.<span
+class="c4">right</span> == <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> root.</span><span
+class="c4">left</span><span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span> </span>// 2 children</p>
+<p>TNode n = root.<span class="c4">right</span>;</p>
+<p><span> </span>while<span> (n.</span><span
+class="c4">left</span><span> != </span>null<span>) {</span></p>
+<p>n = n.<span class="c4">left</span>;</p>
+<p>}</p>
+<p><span class="c3">int</span> inOrderSuccessorVal = n.<span
+class="c4">data</span>;</p>
+<p>root.<span class="c4">data</span> = inOrderSuccessorVal;</p>
+<p>root.<span class="c4">right</span> = deleteNodeFromBST(root.<span
+class="c4">right</span>, inOrderSuccessorVal);</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_028.html"></span></p>
+<div class="body">
+<p><span class="c9">26.</span>Check if a given string contains balanced
+parenthesis.</p>
+<p>e.g:</p>
+<p>input: ( ) ( ( ) )</p>
+<p>output: true</p>
+<p> </p>
+<p>input: ( ) () )</p>
+<p>output: false</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> isBalanced(<span class="c3">char</span>[] str)
+{</p>
+<p><span class="c3">int</span> count = 0, i;</p>
+<p><span class="c3">for</span> (i = 0; i &lt; str.<span
+class="c4">length</span>; i++) {</p>
+<p><span class="c3">if</span> (str[i] == <span class="c8">'('</span>)
+{</p>
+<p>count++;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>count--;</p>
+<p><span class="c3">if</span> (count &lt; 0) {</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p><span class="c3">if</span> (count != 0) {</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p><span> </span>return<span> </span>true<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_029.html"></span></p>
+<div class="body">
+<p><span class="c9">27.</span>Check if a given string contains balanced
+‘[ ]’, ‘( )’ or ‘{ }’.</p>
+<p>e.g:</p>
+<p>input: [ ( { } ( [ ] ) ]</p>
+<p>output: true</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> isBalanced(<span class="c3">char</span>[] str)
+{</p>
+<p>HashMap&lt;Character, Character&gt; hm;</p>
+<p>hm = <span class="c3">new</span> HashMap&lt;Character,
+Character&gt;();</p>
+<p>hm.put(<span class="c8">'('</span>, <span class="c8">')'</span>);</p>
+<p>hm.put(<span class="c8">'['</span>, <span class="c8">']'</span>);</p>
+<p>hm.put(<span class="c8">'{'</span>, <span class="c8">'}'</span>);</p>
+<p>Stack&lt;Character&gt; s = <span class="c3">new</span>
+Stack&lt;Character&gt;();</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 0; i
+&lt; str.<span class="c4">length</span>; i++) {</p>
+<p><span class="c3">char</span> curCh = str[i];</p>
+<p><span class="c3">if</span> (hm.containsKey(curCh) == <span
+class="c3">true</span>) {</p>
+<p>s.add(hm.get(curCh));</p>
+<p>} <span class="c3">else</span> {</p>
+<p><span class="c3">if</span> (s.isEmpty() == <span
+class="c3">true</span>) {</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p><span class="c3">if</span> (s.poll() != curCh) {</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p><span class="c3">return</span> s.isEmpty();</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_030.html"></span></p>
+<div class="body">
+<p><span class="c9">28.</span>Find the position of a number in a 2D
+array of integers where its columns and rows are sorted.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>array:</p>
+<p>1 4 7</p>
+<p>2 5 8</p>
+<p>3 6 9</p>
+<p> </p>
+<p>num: 3</p>
+<p> </p>
+<p>output: (2, 0)</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">class</span> Point {</p>
+<p><span> </span>int<span> </span><span class="c4">x</span><span>,
+</span><span class="c4">y</span><span>;</span></p>
+<p>Point(<span class="c3">int</span> x, <span class="c3">int</span> y) {
+<span class="c3">this</span>.<span class="c4">x</span> = x; <span
+class="c3">this</span>.<span class="c4">y</span> = y; }</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> Point
+findNum(<span class="c3">int</span>[][] arr, <span class="c3">int</span>
+num) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> y = 0;</p>
+<p><span class="c3">int</span> x = arr[0].<span class="c4">length</span>
+- 1;</p>
+<p><span class="c3">while</span> (y &lt; arr.<span
+class="c4">length</span> &amp;&amp; x &gt;= 0) {</p>
+<p><span class="c3">if</span> (num == arr[y][x]) {</p>
+<p><span class="c13"> </span><span class="c14">return</span><span
+class="c13"> </span><span class="c14">new</span><span class="c13">
+Point(x, y);</span></p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (num &gt;
+arr[y][x]) {</p>
+<p>y++;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>x--;</p>
+<p>}</p>
+<p>}</p>
+<p><span class="c3">return</span> <span class="c3">new</span> Point(-1,
+-1);</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_031.html"></span></p>
+<div class="body">
+<p><span class="c9">29.</span>Find the lowest common ancestor of two
+nodes in a binary tree which each node has a pointer to its parent.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>node 1: 1</p>
+<p>node 2: 7</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>1</p>
+<p> </p>
+<p>output: 5</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+findLCA(TNode n1, TNode n2, TNode root) {</p>
+<p>HashSet&lt;TNode&gt; set1 = <span class="c3">new</span>
+HashSet&lt;TNode&gt;();</p>
+<p>HashSet&lt;TNode&gt; set2 = <span class="c3">new</span>
+HashSet&lt;TNode&gt;();</p>
+<p> </p>
+<p>set1.add(n1);</p>
+<p>set2.add(n2);</p>
+<p>TNode cur1 = n1, cur2 = n2;</p>
+<p><span> </span>while<span> (</span>true<span>) {</span></p>
+<p>cur1 = cur1.<span class="c4">parent</span>;</p>
+<p>set1.add(cur1);</p>
+<p>cur2 = cur2.<span class="c4">parent</span>;</p>
+<p><span class="c3">if</span> (set1.contains(cur1) == <span
+class="c3">true</span>) {</p>
+<p><span class="c3">return</span> cur2;</p>
+<p>}</p>
+<p>set2.add(cur2);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_032.html"></span></p>
+<div class="body">
+<p><span class="c9">30.</span>Find the lowest common ancestor of two
+nodes in a binary tree, in-place (no additional memory).</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>node 1: 1</p>
+<p>node 2: 7</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 7</p>
+<p>1</p>
+<p> </p>
+<p>output: 5</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> TNode
+findLCA(TNode n1, TNode n2, TNode root) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> ((root == n1) || (root == n2)) {</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p>TNode l = findLCA(n1, n2, root.<span class="c4">left</span>);</p>
+<p>TNode r = findLCA(n1, n2, root.<span class="c4">right</span>);</p>
+<p> </p>
+<p><span class="c3">if</span> ((l != <span class="c3">null</span>)
+&amp;&amp; (r != <span class="c3">null</span>)) {</p>
+<p><span class="c3">return</span> root;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (l != <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> l;</span></p>
+<p><span> } </span>else<span> {</span></p>
+<p><span> </span>return<span> r;</span></p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_033.html"></span></p>
+<div class="body">
+<p><span class="c9">31.</span>You are given an array of integers that
+represent the price of a certain stock for each day. If you are allowed
+only to buy the stock on a single day and sell on another day, find the
+maximum revenue you can achieve.</p>
+<p>e.g:</p>
+<p>input: 2, 1, 6, 5, 9</p>
+<p>output: 8</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> maxRevenue(<span class="c3">int</span>[] arr)
+{</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span> ||
+arr.<span class="c4">length</span> == 0) {</p>
+<p><span class="c3">return</span> Integer.MIN_VALUE;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> lowest = arr[0];</p>
+<p><span class="c3">int</span> maxRev = 0;</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 1; i
+&lt; arr.<span class="c4">length</span>; i++) {</p>
+<p>maxRev = Math.max(maxRev, arr[i] - lowest);</p>
+<p>lowest = Math.min(lowest, arr[i]);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> maxRev;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_034.html"></span></p>
+<div class="body">
+<p><span class="c9">32.</span>Remove a single occurrence of an integer
+from a doubly linked list.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>list: 2 -&gt; 5 -&gt; 8 -&gt; 9</p>
+<p>val: 5</p>
+<p>output: 2 -&gt; 8 -&gt; 9</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">class</span> DLLNode {</p>
+<p><span> </span><span class="c3">int</span><span>
+</span>data<span>;</span></p>
+<p>DLLNode <span class="c4">next</span>, <span
+class="c4">prev</span>;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> DLLNode
+removeNode(DDLNode head, <span class="c3">int</span> x) {</p>
+<p><span class="c3">if</span> (head == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (head.data == x) {</p>
+<p>head.next.previous = <span class="c3">null</span>;</p>
+<p><span class="c3">return</span> head.next;</p>
+<p>}</p>
+<p> </p>
+<p>DDLNode runner = head;</p>
+<p><span class="c3">while</span> (runner.next != <span
+class="c3">null</span>) {</p>
+<p><span class="c3">if</span> (runner.next.data == x) {</p>
+<p>runner.next = runner.next.next;</p>
+<p>runner.next.previous = runner;</p>
+<p><span> </span>break<span>;</span></p>
+<p>}</p>
+<p>runner = runner.next;</p>
+<p>}</p>
+<p><span class="c3">return</span> head;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_035.html"></span></p>
+<div class="body">
+<p><span class="c9">33.</span>Given a doubly linked list reverse it
+in-place.</p>
+<p>e.g:</p>
+<p>input: 2 -&gt; 5 -&gt; 8 -&gt; 9</p>
+<p>output: 9 -&gt; 8 -&gt; 5 -&gt; 2</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">class</span> DLLNode {</p>
+<p><span> </span><span class="c3">int</span><span>
+</span>data<span>;</span></p>
+<p>DLLNode <span class="c4">next</span>, <span
+class="c4">prev</span>;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> DLLNode
+revList(DLLNode head) {</p>
+<p><span class="c3">if</span> (head == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">while</span> (head.<span class="c4">next</span> !=
+<span class="c3">null</span>) {</p>
+<p>DLLNode temp = head.<span class="c4">next</span>;</p>
+<p>head.<span class="c4">next</span> = head.<span
+class="c4">prev</span>;</p>
+<p>head.<span class="c4">prev</span> = temp;</p>
+<p>head = temp;</p>
+<p>}</p>
+<p>head.<span class="c4">next</span> = head.<span
+class="c4">prev</span>;</p>
+<p>head.<span class="c4">prev</span> = <span class="c3">null</span>;</p>
+<p><span class="c3">return</span> head;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_036.html"></span></p>
+<div class="body">
+<p><span class="c9">34.</span>Given a sorted array of integers and a
+target integer determine if it is possible to sum up two integers to
+generate the target integer.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>array: 1, 2, 5, 7, 8, 9</p>
+<p>target: 7</p>
+<p>output: true</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> is2SumTarget(<span class="c3">int</span>[]
+arr, <span class="c3">int</span> target) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> st = 0;</p>
+<p><span class="c3">int</span> end = arr.<span class="c4">length</span>
+- 1;</p>
+<p><span class="c3">while</span> (st &lt; end) {</p>
+<p><span class="c3">int</span> sum = arr[st] + arr[end];</p>
+<p><span class="c3">if</span> (sum == target) {</p>
+<p><span> </span>return<span> </span>true<span>;</span></p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (sum &gt;
+target) {</p>
+<p>end--;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>st++;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_037.html"></span></p>
+<div class="body">
+<p><span class="c9">35.</span>Given a sorted array of integers and a
+target integer determine if it is possible to sum up three integers to
+generate the target integer.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>array: 1, 2, 5, 7, 8, 9</p>
+<p>target: 17</p>
+<p>output: true</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> is3SumTarget(<span class="c3">int</span>[]
+arr, <span class="c3">int</span> target) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 0; i
+&lt; arr.<span class="c4">length</span> - 2; i++) {</p>
+<p><span class="c3">int</span> st = i + 1;</p>
+<p><span class="c3">int</span> end = arr.<span class="c4">length</span>
+- 1;</p>
+<p><span class="c3">while</span> (st &lt; end) {</p>
+<p><span class="c3">int</span> sum = arr[i] + arr[st] + arr[end];</p>
+<p><span class="c3">if</span> (sum == target) {</p>
+<p><span> </span>return<span> </span>true<span>;</span></p>
+<p>} <span class="c3">else</span> <span class="c3">if</span> (sum &gt;
+target) {</p>
+<p>end--;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>st++;</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N<span><sup>2</sup></span>)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_038.html"></span></p>
+<div class="body">
+<p><span class="c9">36.</span>Given a Binary Tree determine if it is a
+Binary Search Tree (BST) or not.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>tree:</p>
+<p>5</p>
+<p>9 7</p>
+<p>output: false</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> isBST(TNode root, <span class="c3">int</span>
+min, <span class="c3">int</span> max) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>true<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (root.<span class="c4">data</span> &gt;
+min &amp;&amp; root.<span class="c4">data</span> &lt; max) {</p>
+<p><span class="c3">return</span> isBST(root.<span
+class="c4">left</span>, min, root.<span class="c4">data</span>)</p>
+<p>&amp;&amp; isBST(root.<span class="c4">right</span>, root.<span
+class="c4">data</span>, max);</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> </span>false<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>isBST(root, Integer.<span class="c4">MIN_VALUE</span>, Integer.<span
+class="c4">MAX_VALUE</span>);</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_039.html"></span></p>
+<div class="body">
+<p><span class="c9">37.</span>Given an array of integers that all
+integers appear twice except one that appears once, find that single
+integer.</p>
+<p>e.g:</p>
+<p>input: 2, 4, 2, 3, 5, 3, 4</p>
+<p>output: 5</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> findSingle(<span class="c3">int</span>[] arr)
+{</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span class="c3">return</span> Integer.<span
+class="c4">MIN_VALUE</span>;</p>
+<p>}</p>
+<p> </p>
+<p>HashSet&lt;Integer&gt; set = <span class="c3">new</span>
+HashSet&lt;Integer&gt;();</p>
+<p><span class="c3">int</span> sum = 0;</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 0; i
+&lt; arr.<span class="c4">length</span>; i++) {</p>
+<p><span class="c3">int</span> cur = arr[i];</p>
+<p><span class="c3">if</span> (set.contains(cur) == <span
+class="c3">true</span>) {</p>
+<p>sum -= cur;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>set.add(cur);</p>
+<p>sum += cur;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> sum;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_040.html"></span></p>
+<div class="body">
+<p><span class="c9">38.</span>Given a sorted array of integers find the
+integer with the greatest number of repetition.</p>
+<p>e.g:</p>
+<p>input: 1, 1, 1, 4, 4, 4, 4, 5, 6</p>
+<p>output: 4</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> findMostPopular(<span class="c3">int</span>[] arr)
+{</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span> ||
+arr.<span class="c4">length</span> == 0) {</p>
+<p><span class="c3">return</span> Integer.<span
+class="c4">MIN_VALUE</span>;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> element = arr[0];</p>
+<p><span class="c3">int</span> count = 1;</p>
+<p><span class="c3">int</span> maxElement = arr[0];</p>
+<p><span class="c3">int</span> maxCount = 1;</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 1; i
+&lt; arr.<span class="c4">length</span>; i++) {</p>
+<p><span class="c3">if</span> (arr[i] == element) {</p>
+<p>count++;</p>
+<p>} <span class="c3">else</span> {</p>
+<p>count = 1;</p>
+<p>element = arr[i];</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (count &gt; maxCount) {</p>
+<p>maxCount = count;</p>
+<p>maxElement = element;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> maxElement;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_041.html"></span></p>
+<div class="body">
+<p><span class="c9">39.</span>Print the vertical level order of a binary
+tree.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>tree:</p>
+<p>5</p>
+<p>9 7</p>
+<p>output:</p>
+<p>9</p>
+<p>5</p>
+<p>7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> makeVerticalLevelOrder(TNode root, <span
+class="c3">int</span> hd, HashMap&lt;Integer, List&lt;Integer&gt;&gt;
+hm, <span class="c3">int</span>[] minMax) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span> </span>// save the minimum and maximum</p>
+<p>// horizontal distance (<span class="c7">hd</span>) of current node
+from root</p>
+<p>minMax[0] = Math.min(minMax[0], hd);</p>
+<p>minMax[1] = Math.max(minMax[1], hd);</p>
+<p> </p>
+<p>List&lt;Integer&gt; curHdLevel;</p>
+<p><span class="c3">if</span> (hm.containsKey(hd) == <span
+class="c3">true</span>) {</p>
+<p>curHdLevel = hm.get(hd);</p>
+<p><span> } </span>else<span> {</span></p>
+<p>curHdLevel = <span class="c3">new</span>
+LinkedList&lt;Integer&gt;();</p>
+<p>}</p>
+<p>curHdLevel.add(root.<span class="c4">data</span>);</p>
+<p>hm.put(hd, curHdLevel);</p>
+<p> </p>
+<p>makeVerticalLevelOrder(root.<span class="c4">left</span>, hd - 1, hm,
+minMax);</p>
+<p>makeVerticalLevelOrder(root.<span class="c4">right</span>, hd + 1,
+hm, minMax);</p>
+<p>}</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_042.html"></span></p>
+<div class="body">
+<p> </p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>// generate the hash map containing the vertical level order</p>
+<p>HashMap&lt;Integer, List&lt;Integer&gt;&gt; hm = <span
+class="c3">new</span> HashMap&lt;Integer, List&lt;Integer&gt;&gt;();</p>
+<p><span class="c3">int</span> minMax[] = <span class="c3">new</span>
+<span class="c3">int</span>[2];</p>
+<p>makeVerticalLevelOrder(root, 0, hm, minMax);</p>
+<p> </p>
+<p>// print the list</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> lvl =
+minMax[0]; lvl &lt;= minMax[1]; lvl++) {</p>
+<p>List&lt;Integer&gt; curHdLevel = hm.get(lvl);</p>
+<p><span class="c3">for</span> (Integer node : curHdLevel) {</p>
+<p>System.<span class="c4">out</span>.print(node + <span class="c8">"
+"</span>);</p>
+<p>}</p>
+<p>System.<span class="c4">out</span>.println();</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_043.html"></span></p>
+<div class="body">
+<p><span class="c9">40.</span>Print the level order of a binary tree (=
+print the nodes in each level).</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>tree:</p>
+<p>5</p>
+<p>9 7</p>
+<p>output:</p>
+<p>5</p>
+<p>9 7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> printLevelOrder(TNode root) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p>Queue&lt;TNode&gt; curLevel = <span class="c3">new</span>
+LinkedList&lt;TNode&gt;();</p>
+<p>Queue&lt;TNode&gt; nextLevel = <span class="c3">new</span>
+LinkedList&lt;TNode&gt;();</p>
+<p>curLevel.add(root);</p>
+<p> </p>
+<p><span class="c3">while</span> (curLevel.isEmpty() == <span
+class="c3">false</span>) {</p>
+<p><span class="c3">while</span> (curLevel.isEmpty() == <span
+class="c3">false</span>) {</p>
+<p>TNode curNode = curLevel.poll();</p>
+<p>System.<span class="c4">out</span>.print(curNode.<span
+class="c4">data</span> + <span class="c8">" "</span>);</p>
+<p><span class="c3">if</span> (curNode.<span class="c4">left</span> !=
+<span class="c3">null</span>) {</p>
+<p>nextLevel.add(curNode.<span class="c4">left</span>);</p>
+<p>}</p>
+<p><span class="c3">if</span> (curNode.<span class="c4">right</span> !=
+<span class="c3">null</span>) {</p>
+<p>nextLevel.add(curNode.<span class="c4">right</span>);</p>
+<p>}</p>
+<p>}</p>
+<p>System.<span class="c4">out</span>.println();</p>
+<p> </p>
+<p>curLevel = nextLevel;</p>
+<p>nextLevel = <span class="c3">new</span>
+LinkedList&lt;TNode&gt;();</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_044.html"></span></p>
+<div class="body">
+<p><span class="c9">41.</span>Given a linked list reverse it in-place,
+recursively and iteratively.</p>
+<p>e.g:</p>
+<p>input: 3 -&gt; 9 -&gt; 6 -&gt; 2</p>
+<p>output: 2 -&gt; 6 -&gt; 9 -&gt; 3</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION - Recursion:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> LLNode
+revList(LLNode head, LLNode prev) {</p>
+<p><span class="c3">if</span> (head == <span class="c3">null</span>
+&amp;&amp; prev == <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p>LLNode next = head.<span class="c4">next</span>;</p>
+<p>head.<span class="c4">next</span> = prev;</p>
+<p><span class="c3">if</span> (next == <span class="c3">null</span>)
+{</p>
+<p><span class="c3">return</span> head;</p>
+<p><span> } </span>else<span> {</span></p>
+<p><span class="c3">return</span> revList(next, head);</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>head = revList(head, <span class="c3">null</span>);</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_045.html"></span></p>
+<div class="body">
+<p>SOLUTION - iterative:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> LLNode
+revList(LLNode head) {</p>
+<p><span class="c3">if</span> (head == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p>LLNode cur = head, prev = <span class="c3">null</span>;</p>
+<p><span class="c3">while</span> (cur != <span class="c3">null</span>)
+{</p>
+<p>LLNode next = cur.<span class="c4">next</span>;</p>
+<p>cur.<span class="c4">next</span> = prev;</p>
+<p>prev = cur;</p>
+<p>cur = next;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> prev;</p>
+<p>}</p>
+<p> </p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>head = revList(head, <span class="c3">null</span>);</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_046.html"></span></p>
+<div class="body">
+<p><span class="c9">42.</span>Implement a pattern matching function
+where:</p>
+<p><span class="c16">1.</span>‘.’ matches any single character.</p>
+<p><span class="c16">2.</span>‘*’ matches 0 or more instances of the
+preceding character.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>string: aabc</p>
+<p>pattern: a*b.</p>
+<p>output: true</p>
+<p> </p>
+<p>input:</p>
+<p>string: bc</p>
+<p>pattern: a*b.</p>
+<p>output: true</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">boolean</span> isMatch(<span class="c3">char</span>[] str,
+<span class="c3">char</span>[] pat, <span class="c3">int</span> s, <span
+class="c3">int</span> p) {</p>
+<p><span class="c3">if</span> (s &gt;= str.length) {</p>
+<p><span class="c3">return</span> (p &gt;= pat.length);</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>// the current char is a dot or a letter</p>
+<p><span class="c3">if</span> (p == pat.length - 1 || pat[p + 1] !=
+<span class="c8">'*'</span>) {</p>
+<p><span class="c3">return</span> (str[s] == pat[p] || pat[p] == <span
+class="c8">'.'</span>)</p>
+<p>&amp;&amp; isMatch(str, pat, s + 1, p + 1);</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>// the current char is followed by a star, so
+either:</p>
+<p><span> </span>// 1. ignore the star</p>
+<p><span> </span>// 2. take the star in mind and check for equality</p>
+<p><span class="c3">return</span> isMatch(str, pat, s, p + 2) ||</p>
+<p>(isMatch(str, pat, s + 1, p) &amp;&amp; str[s] == pat[p]);</p>
+<p> </p>
+<p>}</p>
+<p> </p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><span class="c3">boolean</span> result = isMatch(str, pat, 0 ,0);</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_047.html"></span></p>
+<div class="body">
+<p><span class="c9">43.</span>Given an array that contains only 0, 1 or
+2, sort it without using any sorting function.</p>
+<p>e.g:</p>
+<p>input: 0, 1, 1, 0, 2, 1</p>
+<p>output: 0, 0, 1, 1, 1, 2</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> swap(<span class="c3">int</span>[] arr, <span
+class="c3">int</span> x, <span class="c3">int</span> y) {</p>
+<p><span class="c3">int</span> temp = arr[x];</p>
+<p>arr[x] = arr[y];</p>
+<p>arr[y] = temp;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> sort012(<span class="c3">int</span>[] arr) {</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> st = 0, mid = 0, end = arr.<span
+class="c4">length</span> - 1;</p>
+<p><span class="c3">while</span> (mid &lt;= end) {</p>
+<p><span class="c3">switch</span> (arr[mid]) {</p>
+<p><span> </span>case<span> 0:</span></p>
+<p>swap(arr, st, mid);</p>
+<p>st++;</p>
+<p>mid++;</p>
+<p><span> </span>break<span>;</span></p>
+<p> </p>
+<p><span> </span>case<span> 1:</span></p>
+<p>mid++;</p>
+<p><span> </span>break<span>;</span></p>
+<p> </p>
+<p><span> </span>case<span> 2:</span></p>
+<p>swap(arr, mid, end);</p>
+<p>end--;</p>
+<p><span> </span>break<span>;</span></p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_048.html"></span></p>
+<div class="body">
+<p><span class="c9">44.</span>Calculate the sum of two binary numbers
+that are given as arrays of characters. Return it as a string.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>num 1: 001</p>
+<p>num2: 101</p>
+<p>output: 110</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> String
+addBinary(<span class="c3">char</span>[] num1, <span
+class="c3">char</span>[] num2) {</p>
+<p><span class="c3">int</span> p1 = num1.<span class="c4">length</span>
+- 1;</p>
+<p><span class="c3">int</span> p2 = num2.<span class="c4">length</span>
+- 1;</p>
+<p><span class="c3">int</span> carry = 0;</p>
+<p>String res = <span class="c8">""</span>;</p>
+<p> </p>
+<p><span class="c3">while</span> (p1 &gt;= 0 || p2 &gt;= 0 || carry !=
+0) {</p>
+<p><span class="c3">int</span> curSum = carry;</p>
+<p>curSum += (p1 &gt;= 0) ? (num1[p1] - ‘0’) : 0;</p>
+<p>curSum += (p2 &gt;= 0) ? (num2[p2] - ‘0’) : 0;</p>
+<p>p1--;</p>
+<p>p2--;</p>
+<p>carry = (curSum &gt;= 2) ? 1 : 0;</p>
+<p><span class="c3">int</span> newDigit = curSum % 2;</p>
+<p>res = newDigit + res;</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> res;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p>N: max(num1.length, num2.length)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_049.html"></span></p>
+<div class="body">
+<p><span class="c9">45.</span>Reverse an integer without using any
+built-in function.</p>
+<p>e.g:</p>
+<p>input: 123</p>
+<p>output: 321</p>
+<p> </p>
+<p>input: -123</p>
+<p>output: -321</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> revInt(<span class="c3">int</span> x) {</p>
+<p><span class="c3">boolean</span> negative = <span
+class="c3">false</span>;</p>
+<p><span class="c3">if</span> (x &lt; 0) {</p>
+<p>x = x * -1;</p>
+<p>negative = <span class="c3">true</span>;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> res = 0;</p>
+<p><span class="c3">while</span> (x &gt; 0) {</p>
+<p><span class="c3">int</span> LSB = x % 10;</p>
+<p>x = x / 10;</p>
+<p>res = res * 10 + LSB;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">if</span> (negative == <span class="c3">true</span>)
+{</p>
+<p>res = res * -1;</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> res;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p>N: number of digits of x</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_050.html"></span></p>
+<div class="body">
+<p><span class="c9">46.</span>Merge two sorted linked lists.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>list 1: 2 -&gt; 4 -&gt; 5</p>
+<p>list 2: 3 -&gt; 7</p>
+<p>output: 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 7</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> LLNode
+mergeLists(LLNode n1, LLNode n2) {</p>
+<p><span class="c3">if</span> (n1 == <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> n2;</span></p>
+<p>}</p>
+<p><span class="c3">if</span> (n2 == <span class="c3">null</span>) {</p>
+<p><span> </span>return<span> n1;</span></p>
+<p>}</p>
+<p> </p>
+<p>LLNode res;</p>
+<p><span class="c3">if</span> (n1.<span class="c4">data</span> &lt;=
+n2.<span class="c4">data</span>) {</p>
+<p>res = n1;</p>
+<p>n1.<span class="c4">next</span> = mergeLists(n1.<span
+class="c4">next</span>, n2);</p>
+<p><span> } </span>else<span> {</span></p>
+<p>res = n2;</p>
+<p>n2.<span class="c4">next</span> = mergeLists(n1, n2.<span
+class="c4">next</span>);</p>
+<p>}</p>
+<p> </p>
+<p><span> </span>return<span> res;</span></p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_051.html"></span></p>
+<div class="body">
+<p><span class="c9">47.</span>Given a list of words, print in each line
+the words that can be created using the same letters.</p>
+<p>e.g:</p>
+<p>input: abc, hello, cba</p>
+<p>output:</p>
+<p>abc cba</p>
+<p>hello</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">void</span> bucketAnagram(List&lt;String&gt; input) {</p>
+<p>HashMap&lt;String, List&lt;String&gt;&gt; hm;</p>
+<p>hm = <span class="c3">new</span> HashMap&lt;String,
+List&lt;String&gt;&gt;();</p>
+<p><span class="c3">for</span> (String word : input) {</p>
+<p><span class="c3">char</span>[] wordArr = word.toCharArray();</p>
+<p>Arrays.sort(wordArr);</p>
+<p>String key = <span class="c3">new</span> String(wordArr);</p>
+<p> </p>
+<p>List&lt;String&gt; list;</p>
+<p><span class="c3">if</span> (hm.containsKey(key) == <span
+class="c3">false</span>) {</p>
+<p>list = <span class="c3">new</span> LinkedList&lt;String&gt;();</p>
+<p>} <span class="c3">else</span> {</p>
+<p>list = hm.get(key);</p>
+<p>}</p>
+<p>list.add(word);</p>
+<p>hm.put(key, list);</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">for</span> (Map.Entry&lt;String,
+List&lt;String&gt;&gt; entry : hm.entrySet()) {</p>
+<p><span class="c3">for</span> (String word : entry.getValue()) {</p>
+<p>System.<span class="c4">out</span>.print(word + <span class="c8">"
+"</span>);</p>
+<p>}</p>
+<p>System.<span class="c4">out</span>.println();</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N*MlogM)</p>
+<p>N: number of input words</p>
+<p>M: number of characters in the biggest input word</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(NM)</p>
+</div>
+<p><span id="part0002_split_052.html"></span></p>
+<div class="body">
+<p><span class="c9">48.</span>Given an array of integers of length K
+where the last element in the array is empty and all the other values
+(from 1 to k) are present in the array, find the missing number.</p>
+<p>e.g:</p>
+<p>input: 4, 5, 1, 3, _</p>
+<p>output: 2</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> missingNumber(<span class="c3">int</span>[] arr)
+{</p>
+<p><span class="c3">if</span> (arr == <span class="c3">null</span>)
+{</p>
+<p><span class="c3">return</span> Integer.<span
+class="c4">MIN_VALUE</span>;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">int</span> sumFrom1toK = arr.<span
+class="c4">length</span>;</p>
+<p><span class="c3">int</span> sumOfArray = 0;</p>
+<p><span class="c3">for</span> (<span class="c3">int</span> i = 0; i
+&lt; arr.<span class="c4">length</span> - 1; i++) {</p>
+<p>sumOfArray += arr[i];</p>
+<p>sumFrom1toK += i + 1;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> sumFrom1toK - sumOfArray;</p>
+<p>}</p>
+<p> </p>
+<p><span class="c7">INFO:</span> You can also use the formula for
+calculating the sum of an arithmetic progression: sumFrom1toK =
+(k*(1+k))/2. K is the length of the input array.</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_053.html"></span></p>
+<div class="body">
+<p><span class="c9">49.</span>Given a binary tree find the maximum sum
+that exist in a path of a tree. A path can start from any node and end
+at any node.</p>
+<p>e.g:</p>
+<p>input:</p>
+<p>tree:</p>
+<p>5</p>
+<p>3 1</p>
+<p>-10</p>
+<p>output: 9</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">static</span><span> </span><span
+class="c3">int</span><span> </span>mMaxPathSum<span> =
+Integer.</span>MIN_VALUE<span>;</span></p>
+<p><span class="c3">public</span> <span class="c3">static</span> <span
+class="c3">int</span> maxPathInSubtree(TNode root) {</p>
+<p><span class="c3">if</span> (root == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> 0;</span></p>
+<p>}</p>
+<p><span class="c3">int</span> leftSum = maxPathInSubtree(root.<span
+class="c4">left</span>);</p>
+<p><span class="c3">int</span> rightSum = maxPathInSubtree(root.<span
+class="c4">right</span>);</p>
+<p> </p>
+<p><span> </span>// update the maximum path cost,</p>
+<p>// take in mind the current node</p>
+<p><span class="c4">mMaxPathSum</span> = Math.max(<span
+class="c4">mMaxPathSum</span>,</p>
+<p>leftSum + root.<span class="c4">data</span> + rightSum);</p>
+<p> </p>
+<p><span> </span>// return the maximum path of the subtree below the
+current node</p>
+<p><span class="c3">return</span> root.<span class="c4">data</span> +
+Math.max(0, Math.max(leftSum, rightSum));</p>
+<p>}</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>mMaxPathSum<span> = Integer.</span>MIN_VALUE<span>;</span></p>
+<p>maxPathInSubtree(root);</p>
+<p><span>System.</span><span
+class="c4">out</span><span>.println(</span>"Max path sum: "<span> +
+</span><span class="c4">mMaxPathSum</span><span>);</span></p>
+<p> </p>
+<p><span class="c7">INFO:</span> The function needs to return two
+integers, that’s why a global variable is used. If want to avoid this
+you can use a small array like question 14 to return the results.</p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(1)</p>
+</div>
+<p><span id="part0002_split_054.html"></span></p>
+<div class="body">
+<p><span class="c9">50.</span>Given an undirected graph where each node
+contains a label and a list of its neighbors, copy the whole data
+structure.</p>
+<p>_______________</p>
+<p> </p>
+<p>SOLUTION:</p>
+<p> </p>
+<p><span class="c3">class</span> Node {</p>
+<p>String <span class="c4">label</span>;</p>
+<p>ArrayList&lt;Node&gt; <span class="c4">adjList</span> = <span
+class="c3">new</span> ArrayList&lt;Node&gt;();</p>
+<p> </p>
+<p>Node(String label) {</p>
+<p><span class="c3">this</span>.<span class="c4">label</span> =
+label;</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">public</span> <span class="c3">static</span> Node
+copyGraph(Node node) {</p>
+<p><span class="c3">if</span> (node == <span class="c3">null</span>)
+{</p>
+<p><span> </span>return<span> </span>null<span>;</span></p>
+<p>}</p>
+<p> </p>
+<p>Queue&lt;Node&gt; queue = <span class="c3">new</span>
+LinkedList&lt;Node&gt;();</p>
+<p>HashMap&lt;Node, Node&gt; hm = <span class="c3">new</span>
+HashMap&lt;Node, Node&gt;();</p>
+<p><span class="c13"> Node newNode = </span><span
+class="c17">new</span><span class="c7"> Node(node.</span><span
+class="c18">label</span><span class="c7">)</span><span
+class="c13">;</span></p>
+<p> </p>
+<p><span> </span>// the hash map holds the original nodes as keys</p>
+<p>// and the copied nodes as values</p>
+<p>hm.put(node, newNode);</p>
+<p> </p>
+<p><span> </span>// the queue has the original nodes that</p>
+<p>// their adjacent nodes have not been copied yet</p>
+<p>queue.add(node);</p>
+<p> </p>
+</div>
+<p><span id="part0002_split_055.html"></span></p>
+<div class="body">
+<p> </p>
+<p><span class="c3">while</span> (queue.isEmpty() == <span
+class="c3">false</span>) {</p>
+<p>Node curNode = queue.poll();</p>
+<p><span class="c3">for</span> (Node adjNode : curNode.<span
+class="c4">adjList</span>) {</p>
+<p><span class="c3">if</span> (hm.containsKey(adjNode) == <span
+class="c3">false</span>) {</p>
+<p>Node copyOfAdjNode = <span class="c3">new</span> Node(adjNode.<span
+class="c4">label</span>);</p>
+<p>hm.put(adjNode, copyOfAdjNode);</p>
+<p>hm.get(curNode).<span
+class="c4">adjList</span>.add(copyOfAdjNode);</p>
+<p>queue.add(adjNode);</p>
+<p>} <span class="c3">else</span> {</p>
+<p>hm.get(curNode).<span
+class="c4">adjList</span>.add(hm.get(adjNode));</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p> </p>
+<p><span class="c3">return</span> newNode;</p>
+<p>}</p>
+<p> </p>
+<p> </p>
+<p>RUNNING TIME COMPLEXITY:</p>
+<p>O(N)</p>
+<p> </p>
+<p>SPACE COMPLEXITY:</p>
+<p>O(N)</p>
+</div>
+<p><span id="part0002_split_056.html"></span></p>
+<div class="body">
+<p><span class="c9">51.</span>The following are some theoretical
+questions that might be asked in a coding interview. Note that bigger
+companies usually do not ask these kind of questions but many others
+do.</p>
+<p>_______________</p>
+<p> </p>
+<p><span class="c19">•</span>What is a Hash Map and how it works?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the differences between HashMap
+and TreeMap in Java?</p>
+<p> </p>
+<p><span class="c19">•</span>If i want to use a HashMap with my custom
+objects as keys in Java, what functions do i need to override?</p>
+<p> </p>
+<p><span class="c19">•</span>What is virtual memory and how it
+works?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the differences between a process
+and a thread?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the virtual constructors and
+deconstructs in C/C++?</p>
+<p> </p>
+<p><span class="c19">•</span>What is pass by value and pass by
+reference?</p>
+<p> </p>
+<p><span class="c19">•</span>What are AVL and RBTrees? What are the
+insertion/deletion/look-up times for a self-balance tree and for a
+normal tree?</p>
+<p> </p>
+<p><span class="c19">•</span>Define what deadlock and starvation is in
+resource management.</p>
+<p> </p>
+<p><span class="c19">•</span>What does non-blocking thread-safe
+means?</p>
+<p> </p>
+<p><span class="c19">•</span>How to prevent a deadlock?</p>
+<p> </p>
+<p><span class="c19">•</span>How a mutex lock can be implemented?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the difference between a Mutex and
+a Semaphore?</p>
+<p> </p>
+<p><span class="c19">•</span>How can a Garbage Collector detects which
+objects are not used anymore?</p>
+<p> </p>
+<p><span class="c19">•</span>What is the difference between preemptive
+and cooperative multitasking?</p>
+<p> </p>
+<p><span class="c19">•</span>What are some forms of Interprocess
+Communications (IPC)?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the differences between
+Pipes/Message Queues/Shared Memory/Mapped Files in IPC?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the differences between a struct
+and a class in C++?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the differences between an
+Abstract class and an Interface in Java?</p>
+<p> </p>
+<p><span class="c19">•</span>In which cases you would use an Abstract
+and in which cases an Interface?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the main differences between C++
+and Java?</p>
+<p> </p>
+<p><span class="c19">•</span>What is Little Endian and Big Endian?</p>
+<p> </p>
+<p><span class="c19">•</span>What is the difference between Logical
+shift and an Arithmetic shift?</p>
+<p> </p>
+<p><span class="c19">•</span>What is a stack overflow?</p>
+<p> </p>
+<p><span class="c19">•</span>What is polymorphism?</p>
+<p> </p>
+<p><span class="c19">•</span>What are Generics in Java?</p>
+<p> </p>
+<p><span class="c19">•</span>What is Memory Fragmentation?</p>
+<p> </p>
+<p><span class="c19">•</span>What happens if an int value overflow in
+C++ and what happens in Java?</p>
+<p> </p>
+<p><span class="c19">•</span>What is Unit Testing?</p>
+<p> </p>
+<p><span class="c19">•</span>How would you make your solution to run in
+parallel?</p>
+<p> </p>
+<p><span class="c19">•</span>What software design patterns do you
+know?</p>
+<p> </p>
+<p><span class="c19">•</span>What are the systems development life
+cycles?</p>
+<p> </p>
+<p><span class="c19">•</span>What is software prototyping?</p>
+<p> </p>
+<p><span class="c19">•</span>What are some eviction policies for a
+cache?</p>
+<p> </p>
+<p><span class="c19">•</span>What is a distributed file system?</p>
+</div>
+<p><span id="part0002_split_057.html"></span></p>
+<div class="body">
+<p><span class="c9">52.</span>The following are some open-ended
+questions that might be asked in a coding interview as well. These
+questions might be system design questions or object-oriented design
+questions. There is no single answer for these questions and the
+interviewer would just want to see the way you approach the high level
+design of a solution to a big-scale problem.</p>
+<p>_______________</p>
+<p> </p>
+<p><span class="c19">•</span>Design and explain the necessary classes
+and architecture for a parking management software.</p>
+<p> </p>
+<p><span class="c19">•</span>Design and explain the necessary classes
+and architecture for a software that you can draw different shapes.</p>
+<p> </p>
+<p><span class="c19">•</span>Design and explain the necessary classes
+and architecture for a poker game.</p>
+<p> </p>
+<p><span class="c19">•</span>Design and explain the necessary classes
+and architecture for an instant messaging application.</p>
+<p> </p>
+<p><span class="c19">•</span>Design and explain the necessary classes
+and architecture for a snake video game.</p>
+<p> </p>
+<p><span class="c19">•</span>Design an application that provides
+directions around a campus.</p>
+<p> </p>
+<p><span class="c19">•</span>Design a cache with LRU eviction policy and
+O(1) access time.</p>
+<p> </p>
+<p><span class="c19">•</span>Design an HTTP downloader that can cache
+its results.</p>
+<p> </p>
+<p><span class="c19">•</span>Design a service like PasteBin.</p>
+<p> </p>
+<p><span class="c19">•</span>Design a URL shortener service.</p>
+<p> </p>
+<p><span class="c19">•</span>Design a server architecture for
+dynamically serving map images.</p>
+<p> </p>
+<p><span class="c19">•</span>Design a system to return a unique ID for
+each request. The ID should increase as time increases.</p>
+<p> </p>
+<p><span class="c19">•</span>How to make sure that a program does not
+have memory leaks?</p>
+<p> </p>
+<p><span class="c19">•</span>Design a distributed system for storing
+key-value pairs.</p>
+<p> </p>
+<p><span class="c19">•</span>Design a system where the employees of a
+company will use access cards to keep track of their work time.</p>
+<p> </p>
+<p><span class="c19">•</span>In a system where millions of users are
+issuing requests at the same time (e.g. a search engine), design a way
+to give a prize to the requester of the billionth request.</p>
+<p> </p>
+<p><span class="c19">•</span>How would you design a fully automated
+system for build/test/deploy for an application.</p>
+<p> </p>
+<p><span class="c19">•</span>How would you design a text editor?</p>
+<p> </p>
+<p><span class="c19">•</span>How would you represent URLs in a storage
+medium in order to avoid duplication?</p>
+</div>

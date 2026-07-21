@@ -1,0 +1,344 @@
+- "# 50 个 Java 练习（初学者与中级）：学习 Java 编程的实用方法\n\n\n\n![](img/image_rsrc1XX.jpg)\n\n\n\
+  ## 目录\n- 标题页\n- 引言\n- 第 1 部分：Java 基础介绍\n- 第 2 部分：控制结构详解\n- 第 3 部分：数组操作\n- 第 4 部分：基础面向对象概念\n\
+  - 第 5 部分：探索 Java 库\n- 第 6 部分：高级 OOP \n- 第 7 部分：数据结构与算法\n- 第 8 部分：文件操作与序列化\n- 第 9\
+  \ 部分：并发与多线程\n- 第 10 部分：Java 高级库与特性\n- 第 1 部分答案\n- 第 2 部分答案\n- 第 3 部分答案\n- 第 4 部分答案\n\
+  - 第 5 部分答案\n- 第 6 部分答案\n- 第 7 部分答案\n- 第 8 部分答案\n- 第 9 部分答案\n- 第 10 部分答案\n\n## 引言\n\
+  欢迎阅读《50 道 Java 初级与中级练习》，这本书将作为你掌握 Java 编程的指南。无论你是完全初学者，还是想温习高级话题，这个合集都将是一份宝贵的资源。每个章节都旨在挑战你的能力，鼓励动手实践，并加深你对\
+  \ Java 强大能力的理解。\n\nJava 是一种强大的、高级的面向对象编程语言，已成为软件开发行业标准。由 Sun Microsystems 在 1995\
+  \ 年开发的 Java “编写一次，随处运行”原则提供了跨平台的互操作性，使其成为设计跨平台应用程序的理想选择。它的语法简单简洁，允许开发者编写既高效又易于维护的代码。Java\
+  \ 以其健壮性、安全执行和大型标准库而闻名，这简化了从数据结构到网络连接的切工作。此外，Java 一直处于移动应用、企业服务器和嵌入式设备的前沿，在现代计算的增长中起着至关重要的作用。凭借庞大的开发者社区和持续的就业市场需求，Java\
+  \ 是行业中的重要力量。\n\n## 第 1 部分：Java 基础介绍\n深入学习 Java 的基础方面。在这里，你将从经典的“Hello World!”开始，逐步接触变量、用户输入和基础控制结构等核心话题。在本部分结束时，你将熟练掌握该语言的基础构建块。\n\
+  \n## 第 2 部分：控制结构详解\n在基础的基础上，本部分将深入探讨控制结构。掌握循环的艺术，理解如何控制程序流，并学习利用三元运算符等决策构造结构的力量。\n\
+  \n## 第 3 部分：数组操作\n数组是 Java 中不可或的数据结构。在这里，你将学习声明、初始化和操作数组。通过掌握这些任务，你将很好地掌握这种基础数据结构。\n\
+  \n## 第 4 部分：基础面向对象概念\nJava 是一门面向对象的语言，本部分将向你介绍它的核心概念。接触类、构造函数、方法重载、继承以及 `this` 关键字的意义。\n\
+  \n## 第 5 部分：探索 Java 库\nJava 标准库非常庞大且功能丰富。本部分将展示一些常用库，重点关注字符串处理、数学计算、日期/时间功能、动态集合和异常处理。\n\
+  \n## 第 6 部分：高级 OOP 概念\n超越面向对象编程的基础。深入研究接口、抽象类、多态、枚举和嵌套类。在这里，你将看到 Java 通过其 OOP 范式提供的真正力和灵活性。\n\
+  \n## 第 7 部分：数据结构与算法\n每个程序员都应该对数据结构和算法有坚实的掌握。在本部分，练习实现链表和树等基础数据结构，并尝试从排序到递归的算法。\n\
+  \n## 第 8 部分：文件操作与序列化\n学习使用 Java 与文件系统交互。向文件写入、读取文件、序列化对象以及导航目录。这些练习将让你对 Java 的 I/O\
+  \ 能力有全面的理解。\n\n## 第 9 部分：并发与多线程\n并发是 Java 的一大优势。通过这些练习，你将学习创建线程、同步化方法以避免竞态条件、处理死锁并利用现代多线程系统的力量。\n\
+  \n## 第 10 部分：Java 高级库与特性\n本部分封装了 Java 中的高级特性和库。尝试使用 Stream 处理数据，利用 Lambda 表达式的简洁力量，使用反射检查类，使用正则表达式验证输入，并探索\
+  \ Java NIO 的异步能力。\n\n## 第 1 部分：Java 基础介绍\n### 1-1. Hello World!\n编写一个在控制台打印“Hello,\
+  \ World!”的程序。\n\n## 1-2. 变量与类型\n声明两个整数变量 `a` 和 `b`，为赋值并打印它们的和、差和乘积。\n\n## 1-3. 用户输入\n\
+  编写一个程序询问用户的姓名，然后打印问候语。\n\n## 1-4. 条件语句\n编写一个程序询问用户一个数字并判断它是偶数还是奇数。\n\n## 1-5. 基础循环\n\
+  使用循环打印 1 到 10。\n\n## 第 2 部分：控制结构详解\n## 2-1. 嵌套循环\n打印一个直角三角形。\n\n## 2-2. While 循环\n\
+  提示输入数字直到输入 0，然后显示输入数字的和。\n\n## 2-3. Switch Case\n编写一个程序询问用户几（1-7），并打印对应的星期名称。\n\n\
+  ## 2-4. Break 和 Continue\n打印 1 到 50，但跳过 5 的倍数。\n\n## 2-5. 三元运算符\n询问用户一个数字并使用三元运算符判断它是正、负还是零。\n\
+  \n## 第 3 部分：数组操作\n### 3-1. 声明与初始化\n声明一个整数数组并初始化值。打印所有值。\n\n## 3-2. 寻找最大值\n寻找整数数组中的最大值。\n\
+  \n## 3-3. 反转数组\n编写一个反转数组的程序。\n\n### 3-4. 数字平均值\n计算数组数字的平均值。\n\n### 3-5. 统计奇偶\n统计数组中奇数和偶数的个数。\n\
+  \n## 第 4 部分：基础面向对象概念\n### 4-1. 创建简单类\n创建一个 `Person` 类，具有 `name` 和 `age` 属性，以及获取和这些属性的方法。\n\
+  \n## 4-2. 类构造函数\n修改 `Person` 类包含一个初始化属性的构造函数。\n\n## 4-3. 方法重载\n在 `Person` 类中重载方法以实现多种方式设置属性。\n\
+  \n### 4-4. 创建子类\n从 `Person` 类创建一个 `Student` 子类，增加一个 `grade` 额外属性。\n\n## 4-5. 'this'\
+  \ 关键字的使用\n修改 `Person` 类，在方法中使用 `this` 关键字进行属性赋值。\n\n\n\n\n\n# 第 6 ：高级 OOP 概念\n\n\
+  ## 6-1. 接口实现\n创建一个名为 `Drivable` 的接口，包含 `start()`、`drive()` 和 `stop()` 方法。在 `Car`\
+  \ 和 `Boat` 类中实现此接口。\n\n## 6-2. 抽象类\n设计一个名为 `Appliance` 的抽象类，包含属性 `brand` 和 `price`\
+  \ 以及方法 `turnOn()` 和 `turnOff()`。用具具体类 `WashingMachine` 和 `Refrigerator` 扩展该类。\n\n\
+  ## 6-3. 多态\n使用之前创建的 `Drivable` 接口，在一个单独类中创建一个方法，使任何可驱动对象都能移动（执行 `drive` 和 `stop`）。\n\
+  \n## 6-4. 枚举\n创建一个代表星期几的枚举（enum）。在该枚举内部添加一个方法，返回该日期是工作日还是周末。\n\n## 6-5. 内部类\n设计一个类\
+  \ `Outer`，它内部有一个内部类 `Inner`。从外部类实例化该内部类。\n\n# 第 7 ：数据结构与算法\n\n## 7-1. 双向链表\n实现基础的双向链表，包含添加、删除和搜索元素的方法。\n\
+  \n## 7-2. 使用链表实现栈\n编写一个 Java 程序，使用链表实现栈（stack）。\n\n## 7-3. 二叉树\n实现基础的二叉树，包含添加和搜索元素的方法。\n\
+  \n## 7-4. 冒泡排序\n在整数数组上实现冒泡算法。\n\n## 7-5. 递归\n编写一个递归方法来计算数字的阶乘。\n\n# 第 8：文件操作与序列化\n\
+  \n## 8-1. 写文件\n编写一个程序将字符串列表写入文本文件。\n\n## 8-2. 文件\n读取文本文件的内容并打印到控制台。\n\n## 8-3. 序列化\n\
+  将自定义类的对象序列化到文件，然后将其反序列化。\n\n## 8-4. 目录列表\n列出给定目录路径下的所有文件和目录。\n\n## 8-5. 缓冲流\n使用缓冲流将内容从一个文件复制到另一个文件。\n\
+  \n# 第 9：并发与多线程\n\n## 9-1. 基础线程\n通过扩展 `Thread` 类创建一个基础线程，通过实现 `Runnable` 接口创建另一个线程。\n\
+  \n## 9-2. 同步方法\n演示使用 `synchronized` 方法来避免多个线程之间的竞态条件。\n\n## 9-3. 死锁\n编写一个会故意导致死锁的程序，然后修复它。\n\
+  \n## 9-4. Callable 和 Future\n使用 `Callable` 在单独线程中计算数字的阶乘，并使用 `Future` 获取结果。\n\n\
+  ## 9-5. 线程中断\n启动一个在无限循环中运行的线程。演示如何优雅地中断并停止线程。\n\n# 第 10：Java 高库与特性\n\n## 10-1. Java\
+  \ Streams 高级\n使用 Java Streams 对自定义对象集合进行过滤、排序和转换。\n\n## 10-2. Lambda 表达式\n用 Lambda\
+  \ 表达式替换 GUI 应用中处理按钮点击事件的匿名内部类。\n\n## 10-3. 反射\n编写一个程序，使用 Java 反射 API 检查类的方法和注解。\n\
+  \n## 10-4. 正则表达式\n提示用户输入邮箱地址并使用正则表达式对其进行验证。\n\n## 10-5. Java NIO\n演示使用 Java NIO\
+  \ 异步读写文件。\n\n# 第 1 解决方案\n\n## #1-1. Hello，世界！\n```java\npublic class HelloWorld\
+  \ {\n    public static void main(String[] args) {\n        System.out.println(\"\
+  Hello, World!\");\n    }\n}\n```\n\n## #1-2. 变量与类型\n```java\npublic class ArithmeticOperations\
+  \ {\n    public static void main(String[] args) {\n        int a = 5;\n        int\
+  \ b = 3;\n        System.out.println(\"Sum: \" + (a + b));\n        System.out.println(\"\
+  Difference: \" + (a - b));\n        System.out.println(\"Product: \" + (a * b));\n\
+  \    }\n}\n```\n\n## #1-3. 用户输入\n```java\nimport java.util.Scanner;\npublic class\
+  \ Greeting {\n    public static void main(String[] args) {\n        Scanner scanner\
+  \ = new Scanner(System.in);\n        System.out.println(\"Enter your name:\");\n\
+  \        String name = scanner.nextLine();\n        System.out.println(\"Hello,\
+  \ \" + name + \"!\");\n    }\n}\n```\n\n## #1-4. 条件语句\n```java\npublic class EvenOrOdd\
+  \ {\n    public static void main(String[] args) {\n        Scanner scanner = new\
+  \ Scanner(System.in);\n        System.out.println(\"Enter a number:\");\n      \
+  \  int number = scanner.nextInt();\n        if (number % 2 == 0) {\n           \
+  \ System.out.println(\"The number is even.\");\n        } else {\n            System.out.println(\"\
+  The number is odd.\");\n        }\n    }\n}\n```\n\n## #1-5. 基础循环\n```java\npublic\
+  \ class PrintNumbers {\n    public static void main(String[] args) {\n        for\
+  \ (int i = 1; i <= 10; i++) {\n            System.out.println(i);\n        }\n \
+  \   }\n}\n```\n输出：\n1-1:\nHello, World!\n1-2:\nSum: 8\nDifference: 2\nProduct: 15\n\
+  1-3:\nEnter your name:\n[输入: Alice]\nHello, Alice!\n1-4:\nEnter a number:\n[输入:\
+  \ 7]\nThe number is odd.\n1-5:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n# 第 2 解决方案\n\n\
+  ## #2-1. 嵌套循环\n```java\npublic class RightTriangle {\n    public static void main(String[]\
+  \ args) {\n        for (int i = 1; i <= 5; i++) {\n            for (int j = 1; j\
+  \ <= i; j++) {\n                System.out.print(\"*\");\n            }\n      \
+  \      System.out.println();\n        }\n    }\n}\n```\n\n## #2-2. While 循环\n```java\n\
+  import java.util.Scanner;\npublic class SumUntil {\n    public static void main(String[]\
+  \ args) {\n        Scanner scanner = new Scanner(System.in);\n        int sum =\
+  \ 0;\n        int input;\n        System.out.println(\"Enter numbers (0 to stop):\"\
+  );\n        while ((input = scanner.nextInt()) != 0) {\n            sum += input;\n\
+  \        }\n        System.out.println(\"Sum of numbers: \" + sum);\n    }\n}\n\
+  ```\n\n## #2-3. Switch Case\n```java\npublic class DayOfWeek {\n    public static\
+  \ void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n\
+  \        System.out.println(\"Enter a number (1-7) for the day of week:\");\n  \
+  \      int day = scanner.nextInt();\n        switch (day) {\n            case 1:\n\
+  \                System.out.println(\"Monday\");\n                break;\n     \
+  \       case 2:\n                System.out.println(\"Tuesday\");\n            \
+  \    break;\n            case 3:\n                System.out.println(\"Wednesday\"\
+  );\n                break;\n            case 4:\n                System.out.println(\"\
+  Thursday\");\n                break;\n            case 5:\n                System.out.println(\"\
+  Friday\");\n                break;\n            case 6:\n                System.out.println(\"\
+  Saturday\");\n                break;\n            case 7:\n                System.out.println(\"\
+  Sunday\");\n                break;\n            default:\n                System.out.println(\"\
+  Invalid input.\");\n        }\n    }\n}\n```\n\n## #2-4. Break 和 Continue\n```java\n\
+  public class SkipFives {\n    public static void main(String[] args) {\n       \
+  \ for (int i = 1; i <= 50; i++) {\n            if (i % 5 == 0) {\n             \
+  \   continue;\n            }\n            System.out.println(i);\n        }\n  \
+  \  }\n}\n```\n\n## #2-5. 三元运算符\n```java\npublic class TernaryCheck {\n    public\
+  \ static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n\
+  \        System.out.println(\"Enter a number:\");\n        int number = scanner.nextInt();\n\
+  \        String result = (number > 0) ? \"positive\" : (number < 0) ? \"negative\"\
+  \ : \"zero\";\n        System.out.println(\"The number is \" + result + \".\");\n\
+  \    }\n}\n```\n输出：\n2-1:\n*\n**\n***\n****\n*****\n2-2:\nEnter numbers (0 to stop):\n\
+  [输入: 10]\n[输入: 20]\n[输入: 0]\nSum of numbers: 30\n2-3:\nEnter a number (1-7) for\
+  \ the day of the week:\n[输入: 5]\nFriday\n2-4:\n1\n2\n3\n4\n6\n7\n8\n9\n10\n2-5:\n\
+  Enter a number:\n[输入: -5]\nThe number is negative.\n\n# 第 3 解决方案\n\n## #3-1. 定义与初始化\n\
+  ```java\npublic class ArrayInitialization {\n    public static void main(String[]\
+  \ args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        for (int number : numbers)\
+  \ {\n            System.out.println(number);\n        }\n    }\n}\n```\n\n## #3-2.\
+  \ 寻找最大值\n```java\npublic class MaxInArray {\n    public static void main(String[]\
+  \ args) {\n        int[] numbers = {12, 5, 9, 34, 6};\n        int max = numbers[0];\n\
+  \        for (int number : numbers) {\n            if (number > max) {\n       \
+  \         max = number;\n            }\n        }\n        System.out.println(\"\
+  Maximum value: \" + max);\n    }\n}\n```\n\n## #3-3. 反转数组\n```java\npublic class\
+  \ ReverseArray {\n    public static void main(String[] args) {\n        int[] numbers\
+  \ = {1, 2, 3, 4, 5};\n        int[] reversed = new int[numbers.length];\n      \
+  \  for (int i = 0; i < numbers.length; i++) {\n            reversed[numbers.length\
+  \ - 1 - i] = numbers[i];\n        }\n        for (int number : reversed) {\n   \
+  \         System.out.println(number);\n        }\n    }\n}\n```\n\n## #3-4. 数字的平均值\n\
+  ```java\npublic class AverageArray {\n    public static void main(String[] args)\
+  \ {\n        int[] numbers = {1, 2, 3, 4, 5};\n        int sum = 0;\n        for\
+  \ (int number : numbers) {\n\n\n\n\n\n```java\nsum += number;\n\n}\n\ndouble average\
+  \ = (double) sum / numbers.length;\n\nSystem.out.println(\"Average: \" + average);\n\
+  \n}\n\n}\n```\n\n## 3-5. 统计奇偶数\n\n```java\npublic class CountOddEven {\n    public\
+  \ static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5, 6,\
+  \ 7, 8, 9, 10};\n        int evenCount = 0, oddCount = 0;\n        for (int number\
+  \ : numbers) {\n            if (number % 2 == 0) {\n                evenCount++;\n\
+  \            } else {\n                oddCount++;\n            }\n        }\n \
+  \       System.out.println(\"Number of even numbers: \" + evenCount);\n        System.out.println(\"\
+  Number of odd numbers: \" + oddCount);\n    }\n}\n```\n\n#### 输出:\n3-1:\n1\n2\n\
+  3\n4\n5\n3-2:\nMaximum value: 34\n3-3:\n5\n4\n3\n2\n1\n3-4:\nAverage: 3.0\n3-5:\n\
+  Number of even numbers: 5\nNumber of odd numbers: 5\n\n# 第 4 解答\n\n## 4-1. 创建一个简单的类\n\
+  \n```java\nclass Person {\n    String name;\n    int age;\n    void setName(String\
+  \ name) {\n        this.name = name;\n    }\n    String getName() {\n        return\
+  \ name;\n    }\n    void setAge(int age) {\n        this.age = age;\n    }\n   \
+  \ int getAge() {\n        return age;\n    }\n}\n```\n\n## 4-2. 类构造函数\n\n```java\n\
+  class PersonWithConstructor {\n    String name;\n    int age;\n    PersonWithConstructor(String\
+  \ name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\
+  \    void display() {\n        System.out.println(\"Name: \" + name + \", Age: \"\
+  \ + age);\n    }\n}\n```\n\n## 4-3. 方法重载\n\n```java\nclass PersonWithOverloading\
+  \ {\n    String name;\n    int age;\n    void setInfo(String name) {\n        this.name\
+  \ = name;\n    }\n    void setInfo(int age) {\n        this.age = age;\n    }\n\
+  \    void setInfo(String name, int age) {\n        this.name = name;\n        this.age\
+  \ = age;\n    }\n    void display() {\n        System.out.println(\"Name: \" + name\
+  \ + \", Age: \" + age);\n    }\n}\n```\n\n## 4-4. 创建一个子类\n\n```java\nclass Student\
+  \ extends Person {\n    String grade;\n    void setGrade(String grade) {\n     \
+  \   this.grade = grade;\n    }\n    String getGrade() {\n        return grade;\n\
+  \    }\n}\n```\n\n## 4-5. 'this' 关键字的使用\n\n```java\nclass PersonWithThis {\n   \
+  \ String name;\n    int age;\n    PersonWithThis(String name, int age) {\n     \
+  \   this.name = name;\n        this.age = age;\n    }\n    void setName(String name)\
+  \ {\n        this.name = name;\n    }\n    void setAge(int age) {\n        this.age\
+  \ = age;\n    }\n    void display() {\n        System.out.println(\"Name: \" + this.name\
+  \ + \", Age: \" + this.age);\n    }\n}\n```\n\n你可以通过在 main 方法中创建对象、设置它们的属性并调用方法来测试每个类。\n\
+  \n```java\npublic class TestClasses {\n    public static void main(String[] args)\
+  \ {\n        Person person1 = new Person();\n        person1.setName(\"John\");\n\
+  \        person1.setAge(25);\n        System.out.println(\"Person1 - Name: \" +\
+  \ person1.getName() + \", Age: \" + person1.getAge());\n        PersonWithConstructor\
+  \ person2 = new PersonWithConstructor(\"Doe\", 28);\n        person2.display();\n\
+  \        PersonWithOverloading person3 = new PersonWithOverloading();\n        person3.setInfo(\"\
+  Alice\");\n        person3.setInfo(22);\n        person3.display();\n        Student\
+  \ student1 = new Student();\n        student1.setName(\"Bob\");\n        student1.setAge(20);\n\
+  \        student1.setGrade(\"A\");\n        System.out.println(\"Student1 - Name:\
+  \ \" + student1.getName() + \", Age: \" + student1.getAge() + \", Grade: \" + student1.getGrade());\n\
+  \        PersonWithThis person4 = new PersonWithThis(\"Eve\", 30);\n        person4.display();\n\
+  \    }\n}\n```\n\n#### 输出:\n4-1:\nPerson1 - Name: John, Age: 25\n4-2:\nName: Doe,\
+  \ Age: 28\n4-3:\nName: Alice, Age: 22\n4-4:\nStudent1 - Name: Bob, Age: 20, Grade:\
+  \ A\n4-5:\nName: Eve, Age: 30\n\n# 第 5 解答\n\n## 5-1. ArrayList 基本用法\n\n```java\n\
+  import java.util.ArrayList;\npublic class BasicArrayList {\n    public static void\
+  \ main(String[] args) {\n        ArrayList<String> colors = new ArrayList<>();\n\
+  \        colors.add(\"Red\");\n        colors.add(\"Blue\");\n        colors.add(\"\
+  Green\");\n        for (String color : colors) {\n            System.out.println(color);\n\
+  \        }\n    }\n}\n```\n\n## 5-2. 使用接口\n\n```java\nimport java.util.List;\ninterface\
+  \ Shape {\n    double area();\n    double perimeter();\n}\nclass Rectangle implements\
+  \ Shape {\n    double length;\n    double width;\n    Rectangle(double length, double\
+  \ width) {\n        this.length = length;\n        this.width = width;\n    }\n\
+  \    public double area() {\n        return length * width;\n    }\n    public double\
+  \ perimeter() {\n        return 2 * (length + width);\n    }\n}\npublic class TestShapes\
+  \ {\n    public static void main(String[] args) {\n        Shape rectangle = new\
+  \ Rectangle(5, 7);\n        System.out.println(\"Rectangle Area: \" + rectangle.area());\n\
+  \        System.out.println(\"Rectangle Perimeter: \" + rectangle.perimeter());\n\
+  \    }\n}\n```\n\n## 5-3. HashMap 使用\n\n```java\nimport java.util.HashMap;\npublic\
+  \ class HashMapUsage {\n    public static void main(String[] args) {\n        HashMap<String,\
+  \ String> capitals = new HashMap<>();\n        capitals.put(\"USA\", \"Washington\"\
+  );\n        capitals.put(\"UK\", \"London\");\n        capitals.put(\"France\",\
+  \ \"Paris\");\n        System.out.println(\"Capital of USA: \" + capitals.get(\"\
+  USA\"));\n    }\n}\n```\n\n## 5-4. 异常处理\n\n```java\npublic class ExceptionHandling\
+  \ {\n    public static void main(String[] args) {\n        try {\n            int\
+  \ result = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"\
+  Error: \" + e.getMessage());\n        }\n    }\n}\n```\n\n## 5-5. 读取文件\n\n```java\n\
+  import java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\
+  public class ReadFile {\n    public static void main(String[] args) {\n        try\
+  \ (BufferedReader br = new BufferedReader(new FileReader(\"sample.txt\"))) {\n \
+  \           String line;\n            while ((line = br.readLine()) != null) {\n\
+  \                System.out.println(line);\n            }\n        } catch (IOException\
+  \ e) {\n            System.out.println(\"Error reading file: \" + e.getMessage());\n\
+  \        }\n    }\n}\n```\n\n\n\n\n\n```java\nboat.drive();\n\nboat.stop();\n\n\
+  System.out.println();\n```\n\n### 6-2: 抽象类\n\n```java\nAppliance washingMachine\
+  \ =  new WashingMachine();\nwashingMachine.turnOn();\nwashingMachine.turnOff();\n\
+  \nAppliance refrigerator =  new Refrigerator();\nrefrigerator.turnOn();\nrefrigerator.turnOff();\n\
+  \nSystem.out.println();\n```\n\n### 6-3: 多态\n\n```java\nmoveVehicle(car);\nmoveVehicle(boat);\n\
+  \nSystem.out.println();\n```\n\n### 6-4: 枚举\n\n```java\nfor  (Days day : Days.values())\
+  \  {\nSystem.out.println(day +  \" is a \"  + day.when());\n}\n\nSystem.out.println();\n\
+  ```\n\n### 6-5: 内部类\n\n```java\nOuter outer =  new Outer();\nOuter.Inner inner =\
+  \ outer.new Inner();\ninner.display();\n```\n\n####  6-3: 多态\n\n```java\nstatic\
+  \  void  moveVehicle(Drivable drivable)  {\ndrivable.start();\ndrivable.drive();\n\
+  drivable.stop();\n}\n}\n```\n\n**输出：**\n\n6-1:\nCar is starting...\nCar is driving...\n\
+  Car is stopping...\nBoat is starting...\nBoat is sailing...\nBoat is anchoring...\n\
+  \n6-2:\nWashingMachine is turning on...\nWashingMachine is turning off...\nRefrigerator\
+  \ is turning on...\nRefrigerator is turning off...\n\n6-3:\nCar is starting...\n\
+  Car is driving...\nCar is stopping...\nBoat is starting...\nBoat is sailing...\n\
+  Boat is anchoring...\n\n6-4:\nMONDAY is a Weekday\nTUESDAY is a Weekday\nWEDNESDAY\
+  \ is a Weekday\nTHURSDAY is a Weekday\nFRIDAY is a Weekday\nSATURDAY is a Weekend\n\
+  SUNDAY is a Weekend\n\n6-5:\nThis is an inner class\n```\n\n# 第 7 节答案\n\n```java\n\
+  public  class  Main  {\npublic  static  void  main(String[] args)  {\n// #7-1: 双向链表\n\
+  DoublyLinkedList list =  new DoublyLinkedList();\nlist.add(10);\nlist.add(20);\n\
+  list.add(30);\nlist.delete(20);\nSystem.out.println(\"List contains 10: \"  + list.search(10));\
+  \  // true\nSystem.out.println(\"List contains 20: \"  + list.search(20));  // false\n\
+  \n// #7-2: 使用 LinkedList 实现栈\nStack stack =  new Stack();\nstack.push(1);\nstack.push(2);\n\
+  stack.push(3);\nSystem.out.println(\"Popped: \"  + stack.pop());  // 3\nSystem.out.println(\"\
+  Popped: \"  + stack.pop());  // 2\n\n// #7-3: 二叉树\nBinaryTree tree =  new BinaryTree();\n\
+  tree.add(5);\ntree.add(3);\ntree.add(7);\nSystem.out.println(\"Tree contains 3:\
+  \ \"  + tree.search(3));  // true\nSystem.out.println(\"Tree contains 6: \"  + tree.search(6));\
+  \  // false\n\n// #7-4: 冒泡排序\nint[] arr =  {5,  2,  9,  1,  5,  6};\nbubbleSort(arr);\n\
+  for  (int i : arr)  {\nSystem.out.print(i +  \" \");  // 1 2 5 5 6 9\n}\nSystem.out.println();\n\
+  \n// #7-5: 递归\nSystem.out.println(\"Factorial of 5: \"  + factorial(5));  // 120\n\
+  }\n```\n\n### #7-4: 冒泡排序\n\n```java\npublic  static  void  bubbleSort(int[] arr)\
+  \  {\nint n = arr.length;\nfor  (int i =  0; i < n-1; i++)\nfor  (int j =  0; j\
+  \ < n-i-1; j++)\nif  (arr[j]  > arr[j+1])  {\nint temp = arr[j];\narr[j]  = arr[j+1];\n\
+  arr[j+1]  = temp;\n}\n}\n```\n\n### #7-5: 递归\n\n```java\npublic  static  int  factorial(int\
+  \ n)  {\nif  (n ==  0) return  1;\nreturn n * factorial(n -  1);\n}\n}\n```\n\n\
+  **输出：**\n\n7-1:\nList contains 10: true\nList contains 20: false\n7-2:\nPopped:\
+  \ 3\nPopped: 2\n7-3:\nTree contains 3: true\nTree contains 6: false\n7-4:\n1 2 5\
+  \ 5 6 9\n7-5:\nFactorial of 5: 120\n```\n\n# 第 8 节答案\n\n```java\nimport  java.io.*;\n\
+  import  java.util.Arrays;\n// #8-1\nclass  FileWriterDemo  {\npublic  void  writeToFile()\
+  \  throws IOException {\nFile file =  new File(\"output.txt\");\nFileWriter writer\
+  \ =  new FileWriter(file);\nwriter.write(\"Hello, World!\\n\");\nwriter.write(\"\
+  This is Java File IO.\\n\");\nwriter.close();\n}\n}\n\n// #8-2\nclass  FileReaderDemo\
+  \  {\npublic  void  readFromFile()  throws IOException {\nFile file =  new File(\"\
+  output.txt\");\nBufferedReader reader =  new BufferedReader(new FileReader(file));\n\
+  String line;\nwhile  ((line = reader.readLine())  !=  null) {\nSystem.out.println(line);\n\
+  }\nreader.close();\n}\n}\n\n// #8-3\nclass  Person  implements Serializable {\n\
+  String name;\nint age;\nPerson(String name,  int age) {\nthis.name  = name;\nthis.age\
+  \  = age;\n}\nclass  SerializeDemo  {\npublic  void  serializeAndDeserialize() \
+  \ throws IOException, ClassNotFound {\n// 序列化\nPerson p =  new Person(\"Alice\"\
+  ,  25);\nFileOutputStream fileOut =  new FileOutputStream(\"person.ser\");\nObjectOutputStream\
+  \ out =  new ObjectOutputStream(fileOut);\nout.writeObject(p);\nout.close();\n\n\
+  // 反序列化\nFileInputStream fileIn =  new FileInputStream(\"person.ser\");\nObjectInputStream\
+  \ in =  new ObjectInputStream(fileIn);\nPerson deserializedPerson = (Person) in.readObject();\n\
+  in.close();\nSystem.out.println(\"Deserialized Person: \"  + deserializedPerson.name\
+  \  + \", Age: \"  + deserializedPerson.age);\n}\n}\n\n// #8-4\nclass  DirectoryLister\
+  \  {\npublic  void  listFilesAndDirectories(String path)  {\nFile directory =  new\
+  \ File(path);\nBufferedReader reader =  new BufferedReader(new FileReader(directory));\n\
+  String line;\nwhile  ((line = reader.readLine())  !=  null) {\nSystem.out.println(line);\n\
+  }\nreader.close();\n}\n}\n\n// #8-5\nclass  BufferedStreamDemo  {\npublic  void\
+  \  copyFile()  throws IOException {\nFile source =  new File(\"output.txt\");\n\
+  File dest =  new File(\"copied.txt\");\nBufferedInputStream bis =  new BufferedInputStream(new\
+  \ FileInputStream(source));\nBufferedOutputStream bos =  new BufferedOutputStream(new\
+  \ FileOutputStream(dest));\nbyte[] buffer =  new byte[1024];\nint bytesRead;\nwhile\
+  \ ((bytesRead = bis.read(buffer))  !=-1) {\nbos.write(buffer, 0, bytesRead);\n}\n\
+  bis.close();\nbos.close();\n}\n}\n\npublic  class  Main  {\npublic  static  void\
+  \  main(String[] args)  throws Exception {\n// 8-1\nFileWriterDemo writerDemo =\
+  \  new FileWriterDemo();\nwriterDemo.writeToFile();\n\n// 8-2\nFileReaderDemo readerDemo\
+  \ =  new FileReaderDemo();\nreaderDemo.readFromFile();\n\n// 8-3\nSerializeDemo\
+  \ serializeDemo =  new SerializeDemo();\nserializeDemo.serializeAndDeserialize();\n\
+  \n// 8-4\nDirectoryLister lister =  new DirectoryLister();\nlister.listFilesAndDirectories(\"\
+  output.txt\");\n\n// 8-5\nBufferedStreamDemo bufferedDemo =  new BufferedStreamDemo();\n\
+  bufferedDemo.copyFile();\n}\n}\n```\n\n**输出：**\n\n8-1:\nHello, World!\nThis is Java\
+  \ File IO.\n8-2:\nHello, World!\nThis is Java File IO.\n8-3:\nDeserialized Person:\
+  \ Alice, Age: 25\n8-4:\nHello, World!\nThis is Java File IO.\nHello, World!\nThis\
+  \ is Java File IO.\n8-5:\n(File copied to copied.txt)\n```\n\n# 第 9 节答案\n\n```java\n\
+  import  java.util.concurrent.*;\n// #9-1\nclass  MyThread  extends Thread {\npublic\
+  \  void  run() {\nSystem.out.println(\"Thread using class.\");\n}\n}\n\nclass  MyRunnable\
+  \  implements Runnable {\npublic  void  run() {\nSystem.out.println(\"Thread using\
+  \ interface.\");\n}\n}\n\n// #9-2\nclass  Counter  {\nprivate  int count =  0;\n\
+  public  synchronized  void  increment() {\ncount++;\n}\n\npublic  synchronized \
+  \ int  getCount() {\nreturn count;\n}\n}\n\n// #9-3\nclass  Resource  {}\nclass\
+  \  Deadlock  {\nResource resource1 =  new Resource();\nResource resource2 =  new\
+  \ Resource();\nThread thread1 =  new Thread(()->  {\nsynchronized  (resource1) {\n\
+  System.out.println(\"Thread 1 locked resource 1\");\nsynchronized  (resource2) {\n\
+  System.out.println(\"Thread 1 locked resource 2\");\n}\n}\n});\n\nThread thread2\
+  \ =  new Thread(()  ->  {\nsynchronized  (resource2) {\nSystem.out.println(\"Thread\
+  \ 2 locked resource 2\");\nsynchronized  (resource1) {\nSystem.out.println(\"Thread\
+  \ 2 locked resource 1\");\n}\n}\n});\n\n\n}\n}\n\n// #9-4\nclass  Factorial  implements\
+  \ Callable<Integer> {\nprivate  int num;\npublic  Factorial(int num) {\nthis.num\
+  \  = num;\n}\n\npublic Integer call() {\nint result =  1;\nfor  (int i =  2; i <=\
+  \ num; i++) {\nresult *= i;\n}\nreturn result;\n}\n}\n\n// #9-5\nclass  InfiniteThread\
+  \  extends Thread {\npublic  void  run() {\nwhile  (!isInterrupted()) {\n// 无限循环\n\
+  }\nSystem.out.println(\"Thread interrupted.\");\n}\n}\n}\n\npublic  class  Main\
+  \  {\npublic  static  void  main(String[] args)  throws ExecutionException, InterruptedException\
+  \ {\n// 9-1\nMyThread thread1 =  new MyThread();\nthread1.start();\nThread thread2\
+  \ =  new Thread(new MyRunnable());\nthread2.start();\n}\n}\n```\n\n\n\n\n\n```java\n\
+  thread1.start();\nthread2.start();\nthread1.join();\nthread2.join();\n```\n\n##\
+  \ 9-2\n```java\nCounter counter = new Counter();\nThread t1 = new Thread(() -> {\n\
+  \    for (int i = 0; i < 1000; i++) counter.increment();\n});\nThread t2 = new Thread(()\
+  \ -> {\n    for (int i = 0; i < 1000; i++) counter.increment();\n});\nt1.start();\n\
+  t2.start();\nt1.join();\nt2.join();\nSystem.out.println(\"Counter value: \" + counter.getCount());\n\
+  ```\n\n### 9-3 (这会导致死锁)\n```java\n/*\nDeadlock deadlock = new Deadlock();\ndeadlock.thread1.start();\n\
+  deadlock.thread2.start();\ndeadlock.thread1.join();\ndeadlock.thread2.join();\n\
+  */\n```\n\n## 9-4\n```java\nExecutorService executorService = Executors.newSingleThreadExecutor();\n\
+  Future<Integer> future = executorService.submit(new Factorial(5));\nSystem.out.println(\"\
+  Factorial result: \" + future.get());\nexecutorService.shutdown();\n```\n\n## 9-5\n\
+  ```java\nInfiniteThread infiniteThread = new InfiniteThread();\ninfiniteThread.start();\n\
+  Thread.sleep(1000); // 让无限线程运行一条\ninfiniteThread.interrupt();\ninfiniteThread.join();\n\
+  ```\n\n**输出：**\n9-1:\n使用 Thread 类的线程。\n使用 Runnable 接口线程。\n\n9-2:\nCounter value:\
+  \ 2000\n\n9-4:\nFactorial result: 120\n\n9-5:\n线程被中断。\n\n# 第 10 节解决方案\n\n```java\n\
+  import java.util.Arrays;\nimport java.util.List;\nimport java.util.stream.Collectors;\n\
+  import java.awt.event.ActionEvent;\nimport java.awt.Button;\nimport javax.swing.JButton;\n\
+  import javax.swing.JFrame;\nimport java.lang.reflect.Method;\nimport java.util.regex.Matcher;\n\
+  import java.util.regex.Pattern;\nimport java.nio.file.*;\nimport java.nio.ByteBuffer;\n\
+  import java.nio.channels.AsynchronousFileChannel;\nimport java.util.concurrent.Future;\n\
+  ```\n\n### #10-1\n```java\nclass Student {\n    String name;\n    int age;\n   \
+  \ Student(String name, int age) {\n        this.name = name;\n        this.age =\
+  \ age;\n    }\n\n    @Override\n    public String toString() {\n        return name\
+  \ + \": \" + age;\n    }\n}\n```\n\n### #10-3\n```java\n@interface MyAnnotation\
+  \ {}\nclass MyClass {\n    @MyAnnotation\n    public void myMethod() {}\n}\n```\n\
+  \n#### 主类\n```java\npublic class Main {\n    public static void main(String[] args)\
+  \ throws Exception {\n        // #10-1\n        List<Student> students = Arrays.asList(\n\
+  \            new Student(\"Alice\", 20),\n            new Student(\"Bob\", 25),\n\
+  \            new Student(\"Charlie\", 22),\n            new Student(\"David\", 28)\n\
+  \        );\n        List<Student> filteredStudents = students.stream()\n      \
+  \      .filter(s -> s.age > 22)\n            .sorted((s1, s2) -> s1.name.compareTo(s2.name))\n\
+  \            .collect(Collectors.toList());\n        System.out.println(\"10-1:\
+  \ 过滤并排序后的学生:\");\n        filteredStudents.forEach(System.out::println);\n\n   \
+  \     // #10-2\n        JFrame frame = new JFrame(\"Lambda Expression Demo\");\n\
+  \        JButton button = new JButton(\"Click Me!\");\n        button.addActionListener(event\
+  \ -> System.out.println(\"10-2: 使用 lambda 点击了按钮!\"));\n        frame.add(button);\n\
+  \        frame.setSize(300, 200);\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\n\
+  \        frame.setVisible(true);\n\n        // #10-3\n        Method[] methods =\
+  \ MyClass.class.getDeclaredMethods();\n        for (Method method : methods) {\n\
+  \            if (method.isAnnotationPresent(MyAnnotation.class)) {\n           \
+  \     System.out.println(\"10-3: \" + method.getName() + \" 有 MyAnnotation.\");\n\
+  \            }\n        }\n\n        // #10-4\n        System.out.println(\"10-4:\
+  \ 请输入一个邮箱地址: \");\n        // 此处通常会使用 Scanner 来获取用户输入。\n        // Pattern emailPattern\
+  \ = Pattern.compile(\"^[A-Za-z0-9+_.-]+@(.+)$\");\n        // Matcher matcher =\
+  \ emailPattern.matcher(scanner.nextLine());\n        // if (matcher.matches()) {\n\
+  \        //     System.out.println(\"有效的邮箱地址.\");\n        // } else {\n       \
+  \ //     System.out.println(\"无效的邮箱地址.\");\n        // }\n\n        // #10-5\n \
+  \       Path path = Paths.get(\"nio-output.txt\");\n        AsynchronousFileChannel\
+  \ fileChannel = AsynchronousFileChannel.open(path,\n            StandardOpenOption.WRITE,\
+  \ StandardOpenOption.CREATE);\n        ByteBuffer buffer = ByteBuffer.allocate(1024);\n\
+  \        buffer.put(\"10-5: Java NIO Asynchronous Write\".getBytes());\n       \
+  \ buffer.flip();\n        Future<Integer> result = fileChannel.write(buffer, 0);\n\
+  \        while (!result.isDone()) {\n            // 等待文件写入完成\n        }\n      \
+  \  fileChannel.close();\n        System.out.println(\"File written using Java NIO.\"\
+  );\n    }\n}\n```\n\n**输出：**\n10-1: 过滤并排序后的学生:\nBob: 25\nDavid: 28\n\n10-2:\n使用\
+  \ lambda 点击了按钮!\n\n10-3:\nmyMethod 有 MyAnnotation.\n\n10-5:\nFile written using\
+  \ Java NIO.\n\n"

@@ -1,0 +1,490 @@
+name: Angular2 Pocket Primer
+name_cn: Angular2 快速入门指南
+slug: angular2-pocket-primer
+toc:
+- - '#'
+  - Angular2 快速入门指南
+- - '#'
+  - 目录
+- - '#'
+  - 在 Angular 中从列表中删除项
+- - '#'
+  - Angular 指令与子组件
+- - '#'
+  - Angular 中的构造函数与状态存储
+- - '##'
+  - 构造函数中的私有参数：一种快捷方法
+- - '##'
+  - Angular 中的条件逻辑
+- - '##'
+  - 在 Angular 应用中检测鼠标位置
+- - '##'
+  - Angular 中的鼠标事件与用户输入
+- - '##'
+  - 处理用户输入
+- - '##'
+  - Angular 中的 `moduleId` 和 `templateUrl` 属性
+- - '##'
+  - 在 Angular 中使用自定义类
+- - '##'
+  - 多组件中的点击事件
+- - '##'
+  - 使用 `@Input`、`Output` 和 `EventEmitter`
+- - '##'
+  - 展示型组件
+- - '##'
+  - Angular 中的元素样式与 Shadow DOM
+- - '##'
+  - Angular UI 组件
+- - '##'
+  - Angular 中的新特性
+- - '#'
+  - 第 3 章：图形与动画
+- - '##'
+  - Angular 生命周期周期钩子方法
+- - '##'
+  - GSAP 动画与 `ngAfterContentInit()` 方法
+- - '##'
+  - Angular 中的 CSS3 动画
+- - '##'
+  - 通过“Angular 方式”实现动画效果
+- - '##'
+  - Angular 中的基础 SVG 示例
+- - '##'
+  - Angular 与 SVG 中的鼠标跟随效果
+- - '##'
+  - D3 与 Angular
+- - '##'
+  - D3 动画与 Angular
+- - '##'
+  - Angular 中的纯 CSS3 3D 动画
+- - '##'
+  - Angular 中的 CSS3 和 jQuery 动画效果
+- - '##'
+  - “Angular 方式”的动画效果
+- - '#'
+  - 第 4 章：HTTP 请求与路由
+- - '##'
+  - Angular 中的依赖注入
+- - '##'
+  - 使用 jQuery 和 Angular 进行 Flickr 搜索
+- - '##'
+  - 在 Angular 中结合 Promises 和 Observables
+- - '##'
+  - 在 Angular 中通过 Observable 读取 JSON 数据
+- - '##'
+  - Angular 中使用 `forkJoin()` 处理多个并发请求
+- - '#'
+  - Angular HTTP 与 Observables
+- - '##'
+  - Angular 中的 TypeScript 接口
+- - '##'
+  - JSON 数据与 TypeScript 接口
+- - '##'
+  - 使用 TypeScript 接口的 Angular 应用
+- - '##'
+  - 在 Angular 中获取 GitHub 数据
+- - '##'
+  - 简单的 HTTP GET 请求
+- - '##'
+  - 简单的 HTTP POST 请求
+- - '#'
+  - Angular 路由
+- - '#'
+  - 第 5 章：表单、管道与服务
+- - '##'
+  - Angular 表单概述
+- - '##'
+  - 响应式表单
+- - '##'
+  - 模板驱动表单
+- - '##'
+  - 第三方 UI 组件
+- - '##'
+  - 使用 `FormBuilder` 的 Angular 表单
+- - '##'
+  - Angular 响应式表单
+- - '###'
+  - '列表 5.4: app.component.ts'
+- - '###'
+  - '列表 5.5: app.component.html'
+- - '###'
+  - '列表 5.6: app.module.ts'
+- - '##'
+  - FormGroup 与 FormArray
+- - '##'
+  - Angular 其他表单特性
+- - '##'
+  - Angular 表单与 Bootstrap 4（可选）
+- - '##'
+  - 在 Angular 中使用 Pipes
+- - '###'
+  - 使用内置 Pipes
+- - '###'
+  - AsyncPipe
+- - '###'
+  - 创建自定义 Angular Pipe
+- - '###'
+  - '列表 5.7: app.component.ts'
+- - '###'
+  - '列表 5.8: pipe.component.ts'
+- - '###'
+  - '列表 5.9: user.component.ts'
+- - '###'
+  - '列表 5.10: app.module.ts'
+- - '##'
+  - 什么是 Angular 服务？
+- - '###'
+  - 内置 Angular 服务
+- - '###'
+  - Angular 服务示例
+- - '###'
+  - '列表 5.13: app.component.ts'
+- - '###'
+  - 带有 EventEmitter 的服务
+- - '###'
+  - '列表 5.14: user.component.ts'
+- - '###'
+  - '列表 5.15: user.service.ts'
+- - '###'
+  - '列表 5.16: app.component.ts'
+- - '###'
+  - '列表 5.17: app.module.ts'
+- - '##'
+  - 显示 GitHub 用户数据
+- - '###'
+  - '列表 5.18: app.component.ts'
+- - '###'
+  - '列表 5.19: user.component.ts'
+- - '##'
+  - 其他服务相关用例
+- - '###'
+  - 多个服务实例
+- - '###'
+  - 单个服务实例
+- - '##'
+  - 服务与组件间通信
+- - '###'
+  - 将服务注入服务中
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章：Angular 与 Express
+- - '##'
+  - 极简主义 Node 应用
+- - '###'
+  - 设置 Node 环境（可选）
+- - '###'
+  - 创建 Express 应用
+- - '###'
+  - '列表 6.1: server.js'
+- - '###'
+  - 启动 Express 应用
+- - '##'
+  - 带有 Angular 和 Express 的应用程序
+- - '###'
+  - 启动服务器和 Angular 应用
+- - '###'
+  - Angular HTTP 与 Observables
+- - '###'
+  - 服务器代码：package.json
+- - '###'
+  - '列表 6.2: package.json'
+- - '###'
+  - 服务器代码：server.js
+- - '###'
+  - '列表 6.3: server.js'
+- - '###'
+  - Angular 代码
+- - '###'
+  - '列表 6.4: app.component.ts'
+- - '###'
+  - 并发请求与 Angular（版本 2）
+- - '###'
+  - 如何启动 Express 服务器代码
+- - '###'
+  - Angular 代码
+- - '###'
+  - '列表 6.5: app.component.ts'
+- - '##'
+  - 使用 MongoDB 的 Express 应用（部分 1）
+- - '###'
+  - '列表 6.6: package.json'
+- - '###'
+  - 服务端自定义文件（部分 2）
+- - '###'
+  - app.js 文件
+- - '###'
+  - '列表 6.7: app.js'
+- - '###'
+  - index.js 文件
+- - '###'
+  - '列表 6.8: index.js'
+- - '###'
+  - userlist.jade 模板
+- - '###'
+  - '列表 6.9: userlist.jade'
+- - '###'
+  - 启动服务端应用
+- - '###'
+  - 使用 Express 的 Angular 应用
+- - '###'
+  - '列表 6.10: app.component.ts'
+- - '###'
+  - '列表 6.11: app.js'
+- - '###'
+  - Angular 与日语文本（可选）
+- - '###'
+  - '列表 6.12: load-japanese.js'
+- - '###'
+  - Angular Universal
+- - '###'
+  - 服务器文件 main.server.ts
+- - '###'
+  - '列表 6.13: main.server.js'
+- - '###'
+  - 网页 index.html
+- - '###'
+  - '列表 6.14: index.html'
+- - '###'
+  - TypeScript 文件 app.ts
+- - '###'
+  - '列表 6.15: app.ts'
+- - '##'
+  - 使用微服务工作（可选）
+- - '###'
+  - 微服务的优势
+- - '###'
+  - 微服务的缺点
+- - '##'
+  - 总结
+- - '#'
+  - 第 7 章：Flux, Redux, GraphQL 与 Relay
+- - '##'
+  - 什么是 Flux？
+- - '###'
+  - 什么是 Action？
+- - '###'
+  - 什么是 Reducer？
+- - '###'
+  - Store 与应用状态
+- - '###'
+  - 什么是 Redux？
+- - '###'
+  - 应用的数据结构
+- - '###'
+  - 何时应该使用 Redux？
+- - '###'
+  - Reducer 的简单示例
+- - '###'
+  - 用于加减数值的 Reducer
+- - '###'
+  - 用于从数组中添加/删除字符串的 Reducer
+- - '###'
+  - Redux Reducers 是同步的
+- - '###'
+  - Redux Store
+- - '###'
+  - 中间件
+- - '##'
+  - 什么是 GraphQL？
+- - '###'
+  - GraphQL 与 REST
+- - '###'
+  - GraphQL 查询
+- - '###'
+  - 在 GraphQL 中定义类型系统
+- - '###'
+  - '有用的 GraphQL '
+- - '##'
+  - 什么是 Apollo？
+- - '###'
+  - 启动 Apollo 服务器
+- - '###'
+  - 启动 Angular 客户端
+- - '###'
+  - Angular 客户端的项目结构
+- - '###'
+  - '列表 7.1: app.module.ts'
+- - '##'
+  - 什么是 Relay？
+- - '###'
+  - Relay Modern
+- - '##'
+  - 总结
+- - '#'
+  - 第 8 章：Angular 与移动应用
+- - '##'
+  - 使用 Ionic 2 进行移动开发
+- - '###'
+  - 安装与项目创建
+- - '###'
+  - Ionic Native
+- - '###'
+  - Ionic 应用的项目结构
+- - '###'
+  - '列表 8.1: app.component.ts'
+- - '###'
+  - '列表 8.2: app.module.ts'
+- - '###'
+  - 在 Ionic 应用中获取 GitHub 数据
+- - '###'
+  - '列表 8.3: github.ts'
+- - '###'
+  - '列表 8.4: app.component.ts'
+- - '###'
+  - '列表 8.5: app.module.ts'
+- - '###'
+  - '列表 8.6: app.html'
+- - '##'
+  - 什么是 NativeScript？
+- - '###'
+  - 安装与新项目创建
+- - '###'
+  - Angular 与 NativeScript
+- - '##'
+  - 使用 React Native
+- - '###'
+  - React Native 的设置步骤
+- - '###'
+  - 如何创建 React Native 应用
+- - '###'
+  - '列表 8.7: index.android.ts'
+- - '###'
+  - 将 React Native 应用部署到移动设备
+- - '###'
+  - Angular 与 React Native
+- - '###'
+  - '列表 8.8: NG2RNGraphics.ts'
+- - '##'
+  - React Native 与 NativeScript：高层对比
+- - '###'
+  - Angular 移动工具包
+- - '###'
+  - 创建移动项目
+- - '###'
+  - manifest.webapp 文件
+- - '###'
+  - '列表 8.9: manifest.webapp'
+- - '##'
+  - 渐进式 Web 应用（PWA）（可选）
+- - '###'
+  - Web Workers 与 Service Workers
+- - '###'
+  - PWA 的组件
+- - '###'
+  - 其他链接
+- - '##'
+  - 总结
+- - '#'
+  - 第 9 章：函数式响应编程
+- - '##'
+  - 什么是函数式响应编程 (FRP)？
+- - '###'
+  - 观察者模式
+- - '###'
+  - 处理异步事件
+- - '#'
+  - Promises 与异步事件
+- - '#'
+  - 在不使用 FRP 的情况下使用运算符
+- - '#'
+  - 关于 Observable 的类比
+- - '#'
+  - RxJS 的 JavaScript 文件
+- - '#'
+  - 中间运算符和终结运算符
+- - '#'
+  - 运算符
+- - '#'
+  - '`subscribe()` 和 `unsubscribe()` 运算符'
+- - '#'
+  - '`subscribe()` 和 `forEach()` 运算符'
+- - '#'
+  - 将数据源转换为 Observable
+- - '#'
+  - 使用 `range()` 和 `filter()` 运算符
+- - '#'
+  - 代码列表 9.1 ObservableRangeFilter1.html
+- - '#'
+  - 使用 `from()` 和 `map()` 运算符
+- - '#'
+  - 代码列表 9.2 ObservableMap
+- - '#'
+  - 使用 `interval()`、`take()` 和 `map()` 运算符
+- - '#'
+  - 代码列表 9.3 ObservableTake
+- - '#'
+  - 其他中间运算符
+- - '#'
+  - '`retry()` 运算符'
+- - '#'
+  - 合并/连接运算符
+- - '#'
+  - '`timeout()` 运算符'
+- - '#'
+  - 代码列表 9.4 ColdObservables1.html
+- - '#'
+  - 网页
+- - '#'
+  - 代码列表 9.5 ObservableDivElement2.html
+- - '#'
+  - 代码列表 9.6 SVObservables1Anim.html
+- - '#'
+  - 代码列表 9.7 SVObservables1MouseMove.html
+- - '#'
+  - 代码列表 9.8 app.component.ts
+- - '#'
+  - 代码列表 9.9 app.component.ts
+- - '#'
+  - 第 10 章：杂主题
+- - '##'
+  - Angular 4.1.0
+- - '##'
+  - 新特性
+- - '##'
+  - Angular 配置
+- - '###'
+  - '`package.json` 配置文件'
+- - '###'
+  - '`tsconfig.json` 配置文件'
+- - '##'
+  - 什么是 AOT?
+- - '##'
+  - AOT 的优势
+- - '##'
+  - AOT 配置
+- - '###'
+  - 设置 @ngtools/webpack
+- - '###'
+  - 使用 ngc 编译器
+- - '###'
+  - '`tsconfig-aot.json` 文件'
+- - '##'
+  - 编译步骤
+- - '##'
+  - AOT、CLI 和 Angular 的状态
+- - '##'
+  - 摇树优化与 Rollup 工具
+- - '###'
+  - '`rollup-config.js` 文件'
+- - '##'
+  - 调用 rollup 工具
+- - '##'
+  - 缩小 Angular 应用程序的体积
+- - '##'
+  - 缩小包体积
+- - '##'
+  - '`zone.js` 库'
+- - '##'
+  - 什么是 Webpack?
+- - '##'
+  - 使用 Webpack 工作
+- - '###'
+  - 启动 Webpack 的简单示例
+- - '###'
+  - 简单的 webpack.config.js 文件
+- - '##'
+  - 热模块加载 (HMR) 与 Webpack
+- - '###'
+  - 修改 webpack.config.js 使用 AOT

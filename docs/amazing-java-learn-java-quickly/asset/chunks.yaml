@@ -1,0 +1,4669 @@
+- fmt: "\n![](cover.jpeg)\n\nJava: Learn Java Quickly\n\nBy\nAndrei Besedin\n\nCopyright\
+    \ © 2017\n\n# Table of Contents\n\n- [Table of Contents](#\n- [All Rights Reserved](#)\n\
+    - [Chapter 1. Primitive Types](#\n- [Chapter 2. Java Output](#\n- [Chapter 3.\
+    \ String](#\n- [Chapter 4. Java IO](#\n- [Chapter 5. Objects](#\n- [Chapter 6.\
+    \ Access Modifiers](#\n- [Chapter 7. Static](#\n- [Chapter 8. Collections](#\n\
+    - [Chapter 9. Interfaces](#\n- [Chapter 10. Design Patterns](#)\n- [Other Books\
+    \ By Andrei Besedin](#)\n\n# All Rights Reserved\n\nWithout limiting the rights\
+    \ under copyright reserved under, no part of this publication may be reproduced,\
+    \ stored in or introduced into a retrieval system, or transmitted, in any form,\
+    \ or by any means (electronic, mechanical, photocopying, recording, or otherwise)\
+    \ without the prior written permission of the copyright owner.\n\n# Chapter 1.\
+    \ Primitive Types\n\nPrimitive types are most basic data types that are used in\
+    \ Java. They are stored in variables. Variable is nothing but reserved memory.\
+    \ Size of memory depends of primitive type. All primitive types have their default\
+    \ value. Sizes are:\n\n| Primitive type | Size | Minimum | Maximum |\n| :--- |\
+    \ :--- | :--- | :--- |\n| Boolean | 1-bit | - | - |\n| char | 16-bit | Unicode\
+    \ 0 | Unicode 216-1 |\n| byte | 8-bit | -128 | +127 |\n| short | 16-bit | -215\
+    \ | +215–1 |\n| int | 32-bit | -231 | +231–1 |\n| long | 64-bit | -263 | +263–1\
+    \ |\n| float | 32-bit | IEEE754 | IEEE754 |\n| double | 64-bit | IEEE754 | IEEE754\
+    \ |\n\n## Declaration and initialization of primitive types\n\n```java\nint a;\n\
+    a = 1;\nint a,b;\na = 2; int b = 2;\nfinal int a = 15;//constant\n```\n\nDeclaration\
+    \ means to give variable type along with name: `int a;`. So, our variable is type\
+    \ of integer and have name `a`;Initialization is process of adding value to primitive\
+    \ type, in this case: `int a = 0;`. Before this `int` have default value. For\
+    \ boolean default value is false, for char is `'\\u0000'`, for rest is zero (0).\n\
+    \n## Conversation of primitive types\n\n### Implicit\n\n```java\nint a = 1;\n\
+    double b;\nb = a;\n```\n\n### Explicit\n\n```java\nlong a = 4l;\nint b = a;//mistake\n\
+    int c = (int)a;\n```\n\nNote: This is called cast operator. Operators will be\
+    \ covered next.\n\n# Operators\n\n### Arithmetic Operators\n\nMain operators are:\
+    \ `+`, `-`, `*`, `/`, `%`\n\n| Operator | Expression | Result |\n| :--- | :---\
+    \ | :--- |\n| `x = y + 1` | `y = 5` | `x = 6` |\n| `x = y - 1` | `y = 5` | `x\
+    \ = 4` |\n| `x = y % 2` | `y = 5` | `x = 1` |\n| `x = ++y` | `y = 5` | `x = 6;\
+    \ y = 6` |\n| `x = y++` | `y = 5` | `x = 5; y = 6` |\n| `x = --y` | `y = 5` |\
+    \ `x = 4; y = 4` |\n\n| Operator | Expression | Result |\n| :--- | :--- | :---\
+    \ |\n| `x = y` | `y = 3` | `x = 3` |\n| `x += y` | `y = 3` | `x = 6` |\n| `x -=\
+    \ y` | `y = 3` | `x = 3` |\n| `x *= y` | `y = 3` | `x = 9` |\n| `x /= y` | `y\
+    \ = 3` | `x = 2` |\n| `x %= y` | `y = 3` | `x = 0` |\n\n### Relational Operators\n\
+    \nMain operators are: `<`, `>`, `<=`, `>=`, `==`, `!=`\n\n| Operator | Expression\
+    \ | Result |\n| :--- | :--- | :--- |\n| `x < y` | `x = 3, y = 2` | `false` |\n\
+    | `x > y` | `x = 3, y = 2` | `true` |\n| `x <= y` | `x = 3, y = 2` | `false` |\n\
+    | `x >= y` | `x = 3, y = 2` | `true` |\n| `x == y` | `x = 3, y = 2` | `false`\
+    \ |\n| `x != y` | `x = 3, y = 2` | `true` |\n\nArithmetic operators are commonly\
+    \ used, as you guess, in math operations. Modulo (`%`) can be used to check if\
+    \ number is even or odd for example. Relational operators are very simple. `==`\
+    \ and `!=` are common used for comparisons. `+` can be used to concatenate two\
+    \ Strings also.\n\n### Logical Operators\n\nMain operators are: `&&` (logical\
+    \ AND), `||` (logical OR), `!` (logical NOT)\n\n| Operator | Expression | Result\
+    \ |\n| :--- | :--- | :--- |\n| `x < 1` | `x = 2, y = 4` | `false` |\n| `x > 3`\
+    \ | `x = 2, y = 4` | `false` |\n| `x < 5` | `x = 2, y = 4` | `true` |\n| `x &&\
+    \ y` | | `false` |\n| `x \\| y` | | `true` |\n| `!x` | `x = false` | `true` |\n\
+    \n# Chapter 2. Java Output\n\n`System.out.println` is used for printing to console\
+    \ some text. Let's try it on most famous example of your first program, `Hello\
+    \ World!`. To do this we need to set up our Java project.\n\n```java\nSystem.out.println(\"\
+    Hello World!\");\n```\n\nWe learned how to print some messages to console. Let's\
+    \ now use what we already covered and make some mix with primitive types. Create\
+    \ a new class called `PrintTypes` and add main method.\n\n```java\nint a = 2;\n\
+    double b = 3.14;\nSystem.out.println(\"1 Old value of b = \" + b);\nb = a;\nSystem.out.println(\"\
+    2 New value of b = \" + b);\n```\n\nTry it with other operators. For example:\n\
+    \n```java\nint c = 4;\nb = c * 3.14;\nSystem.out.println(\"3 New value of b =\
+    \ \" + b);\n```\n\n# Control Flow Statements\n\n### IF\n\n```java\nif(condition)\n\
+    \    action\nelse\n    another action\n```\n\nNow we will do some simple example\
+    \ of IF usage. Make a new class `ControlFlow` and add following lines:\n\n```java\n\
+    int a = 10;\nif(a < 11) {\n    System.out.println(\"A is less than 10\");\n} else\
+    \ {\n    System.out.println(\"A is not less than 10\");\n}\n```\n\nLet's make\
+    \ it a little more difficult. Just like in a real life you can provide more than\
+    \ one condition for any situation. In this case, it is made by adding `else if`\
+    \ statement. Add following lines to current class and run it:\n\n```java\nint\
+    \ b = 15;\nif (b == 13)\n    System.out.println(\"b == 13\");\nelse if ((b <=\
+    \ 17) && (b >= 12))\n    System.out.println(\"b is less than or equal to 17 and\
+    \ greater than or equal to 12\");\nelse\n    System.out.println(\"b is not any\
+    \ from this\");\n```\n\nNow we got idea how to make a simple program in Java.\
+    \ Let's solve this problem. Imagine that you had test in your school. You got\
+    \ some score and grade. Try to make program, using if statement, to check which\
+    \ grade you got based on your score. \n\n```java\nint grade;\nint score = 85;\n\
+    \nif (score >= 95)\n    grade = 10;\nelse if (score >= 85)\n    grade = 9;\nelse\
+    \ if (score >= 75)\n    grade = 8;\n```\n"
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    Java: Learn Java Quickly
+
+
+    By
+
+
+    Andrei Besedin
+
+
+    Copyright © 2017
+
+
+    # Table of Contents
+
+
+    [Table of Contents](#part0000_split_001.html__Toc486239501)
+
+
+    [All Rights Reserved](#part0000_split_002.html__Toc486239502)
+
+
+    [Chapter 1\. Primitive Types](#part0000_split_003.html__Toc486239503)
+
+
+    [Chapter 2\. Java Output](#part0000_split_008.html__Toc486239504)
+
+
+    [Chapter 3. String](#part0000_split_011.html__Toc486239505)
+
+
+    [Chapter 4\. Java IO](#part0000_split_015.html__Toc486239506)
+
+
+    [Chapter 5. Objects](#part0000_split_016.html__Toc486239507)
+
+
+    [Chapter 6\. Access Modifiers](#part0000_split_018.html__Toc486239508)
+
+
+    [Chapter 7. Static](#part0000_split_020.html__Toc486239509)
+
+
+    [Chapter 8. Collections](#part0000_split_021.html__Toc486239510)
+
+
+    [Chapter 9. Interfaces](#part0000_split_025.html__Toc486239511)
+
+
+    [Chapter 10\. Design Patterns](#part0000_split_031.html__Toc486239512)
+
+
+    [Other Books By Andrei Besedin](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+
+
+    # All Rights Reserved
+
+
+    Without limiting the rights under copyright reserved under, no part of this publication
+    may be reproduced, stored in or introduced into a retrieval system, or transmitted,
+    in any form, or by any means (electronic, mechanical, photocopying, recording,
+    or otherwise) without the prior written permission of the copyright owner.
+
+
+    # Chapter 1\. Primitive Types
+
+
+    Primitive types are most basic data types that are used in Java. They are stored
+    in variables. Variable is nothing but reserved memory. Size of memory depends
+    of primitive type. All primitive types have their default value. Sizes are:
+
+
+    | Primitive type | Size | Minimum | Maximum |
+
+
+    | Boolean | 1-bit | - | - |
+
+
+    | char | 16-bit | Unicode 0 | Unicode 216- 1 |
+
+
+    | byte | 8-bit | -128 | +127 |
+
+
+    | short | 16-bit | -215 | +215 – 1 |
+
+
+    | int | 32-bit | -231 | +231 – 1 |
+
+
+    | long | 64-bit |    -263 | +263 – 1 |
+
+
+    | float | 32-bit |    IEEE754 | IEEE754 |
+
+
+    | double | 64-bit |    IEEE754 | IEEE754 |
+
+
+    ## Declaration and initialization of primitive types
+
+
+    inta;
+
+
+    inta = 1;
+
+
+    inta,b;
+
+
+    inta = 2; intb = 2;
+
+
+    finalinta = 15;//constant
+
+
+    Declaration means to give variable type along with name: inta; So, our variable
+    is type of integer and have name a;Initialization is process of adding value to
+    primitive type, in this case: inta = 0; Before this int have default value. For
+    boolean default value is false, for char is ''\u0000'', for rest is zero (0).
+
+
+    ## Conversation of primitive types
+
+
+    ### Implicit
+
+
+    inta = 1;
+
+
+    doubleb;
+
+
+    b = a;
+
+
+    ### Explicit
+
+
+    longa = 4l;
+
+
+    intb = a;//mistake
+
+
+    intc = (int)a;
+
+
+    Note: This is called cast operator. Operators will be covered next.
+
+
+    ## Operators
+
+
+    ### Arithmetic Operators
+
+
+    Main operators are: +, -, *, /, %
+
+
+    y = 5;        OperatorResult
+
+
+             x = y + 1y = 6
+
+
+             x = y – 1y = 4
+
+
+             x = y % 2y = 1
+
+
+                       x = ++yx = 6; y = 6
+
+
+                       x = y++x = 5; y = 6
+
+
+                       x = --yx = 4; y = 4
+
+
+    x = 6
+
+
+    y = 3Operator    Same as   Result
+
+
+    x = yx = 3
+
+
+    x + = y           x = x + y              x = 9
+
+
+    x - = yx = x – y x = 3
+
+
+    x * = y       x = x * y          x = 18
+
+
+    x / = y x = x / yx = 2
+
+
+    x % = y x = x % y        x = 0
+
+
+    ## Relational Operators
+
+
+    Main operators are: <, >, <=, >=, ==, !=
+
+
+    x = 3
+
+
+    y = 2Operator     Result
+
+
+    x < yfalse
+
+
+    x > y true
+
+
+    x <= yfalse
+
+
+    x >= ytrue
+
+
+    x == yfalse
+
+
+    x != ytrue
+
+
+    Arithmetic operators are commonly used, as you guess, in math operations. Modulo
+    (%) can be used to check if number is even or odd for example. Relational operators
+    are very simple. ==and !=are common used for comparisons. Operator + can be used
+    to concatenate two Strings also.
+
+
+    ### Logical Operators
+
+
+    Logical operators
+
+
+    Main operators are: && (logical AND), || (logical OR), ! (logicalNOT)
+
+
+    ![](images/00001.jpeg)![](images/00002.jpeg)![](images/00003.jpeg)![](images/00004.jpeg)![](images/00005.jpeg)![](images/00006.jpeg)&&false
+    true ||false      true!
+
+
+    falsefalse falsefalse falsetruefalsetrue
+
+
+    truefalse truetrue  true    truetruefalse
+
+
+    x = 2
+
+
+    y = 4Operator        Result
+
+
+    ((x< 1) && (y > 3))false
+
+
+    ((x< 5) || (y = 5))true
+
+
+    !(x > y)true
+
+
+    # Chapter 2\. Java Output
+
+
+    Class System is used for printing to console some text. Let`s try it on most famous
+    example of your first Java program, Hello World! To do this we need to set up
+    our Java project. First open Eclipse. Creating project in Eclipse is very simple
+    File ->New ->Java Project. Name project as FirstJavaProject and then click Finish.
+
+
+    In our project press right click on src folder and create a new package by New
+    ->Package. Name package as first.pack.
+
+
+    Note: Packages are used for better organization of Java classes. In this case
+    we build our own classes, but there are many build-in classes which need some
+    packages to import (java.io, java.util etc).
+
+
+    All operations in Java are made in classes. To create them, right click on package
+    New ->Class and name it as JavaClass. Check public static void main (String[]args)
+    and click Finish.
+
+
+    Note: public static void main (String[]args) is method which will be explained
+    later. For now, it is enough to know that in main method are called all other
+    methods in your Java application. This and every other code is supposed to be
+    putinside main method.
+
+
+    System.out.println("Hello World!");
+
+
+    Our program should look like this:
+
+
+    ![](images/00007.jpeg)
+
+
+    Note: There is a one little trick to print this faster. Type syso, hold ctrl and
+    press space. Then press Enter.
+
+
+    Ok, now this need somehow to be started. To do that pressRun ->Run As ->Java Application.
+
+
+    expected: Hello World! will be printed to console
+
+
+    We learned how to print some massages to console. Let`s now use what we already
+    covered and make some mix with primitive types.  Create a new class called PrintPrimitiveTypes
+    and add main method.
+
+
+    Add following lines inside main method:
+
+
+    inta = 2;
+
+
+    doubleb = 3.14;
+
+
+    System.out.println("1\. Old value of b = " +b);
+
+
+    b = a;
+
+
+    System.out.println("2\. New value of b = " +b);
+
+
+    Run application.
+
+
+    expected: 1. Old value of b = 3.14 will be printed to console.
+
+
+    2\. New value of b = 2.0
+
+
+    Note: Try it with other operators. For example:
+
+
+    intc = 4;
+
+
+    b = c * 3.14;
+
+
+    System.out.println("3\. New value of b = " +b);
+
+
+    As you can see here is used + operator to chain text with integer. Try to make
+    new examples on your own to feel more comfortable with code writing.
+
+
+    ## Control Flow Statements
+
+
+    ### IF
+
+
+    if(condition)
+
+
+    action
+
+
+    else
+
+
+    another action
+
+
+    Now we will do some simple example of IF usage. Make a new class ControFlow and
+    add following lines:
+
+
+    inta = 10;
+
+
+    if(a< 11) {
+
+
+    System.out.println("A is less than 10");
+
+
+    }
+
+
+    else {
+
+
+    System.out.println("A is not less than 10");
+
+
+    }
+
+
+    expected: A is less than 10 will be printed to console.
+
+
+    Let`s make it a little more difficult. Just like in a real life, you can provide
+    more than one condition for any situation. In this case, it is made by adding
+    else if statement. Add following lines to current classand run it :
+
+
+    intb = 15;
+
+
+    if (b == 13)
+
+
+    System.out.println("b == 13");
+
+
+    elseif ((b<=17) && (b>= 12))
+
+
+    System.out.println("b is less than or equal to 17 and greater than or equal to
+    12");
+
+
+    else
+
+
+    System.out.println("b is not any from this");
+
+
+    expected: b is less than or equal to 17 and greater than or equal to 12 will be
+    printed to console.
+
+
+    Program first checks if b == 13, it is not, then checks another condition which
+    is true and print it to console. If this condition was also false, then last one
+    sentence will be printed. Try to make another condition on your own to see output.
+    You can see that statement works fine also without curly braces.
+
+
+    Now we got idea how to make a simple program in Java. Let`s solve this problem.
+    Imagine that you had test in your school. You got some score and grade. Try to
+    make program, using if statement, to check which grade you got based on your score.
+
+
+    Note: First you need to declare two variables score and grade, like this:
+
+
+    intgrade;
+
+
+    intscore = 85;
+
+
+    Try it yourself firstly, think about conditions. Here is solution:
+
+
+    if (score>= 95)
+
+
+    grade = 10;
+
+
+    elseif (score>= 85)
+
+
+    grade = 9;
+
+
+    elseif (score>= 75)
+
+
+    grade = 8;'
+  toc: []
+  trans: "\n\n![](img/cover.jpeg)\n\nJava：快速学习 Java\n\n作者：\nAndrei Besedin\n\nCopyright\
+    \ © 2017\n\n# 目录\n\n- 目录\n- 所有权利保留\n- 第 1 章 原始数据类型\n- 第 2 章 Java 输出\n- 第 3 章 字符串\n\
+    - 第 4 章 Java IO\n- 第 5 章 对象\n- 第 6 章 访问修饰符\n- 第 7 章 静态\n- 第 8 章 集合\n- 第 9 章 接口\n\
+    - 第 10 章 设计模式\n- Andrei Besedin 的其他书籍\n\n# 所有权利保留\n\n在不限制根据版权保留的权利的前提下，未经版权所有者事先书面许可，本出版物的任何部分均不得被复制、存储或引入检索系统，亦禁以任何形式或通过任何手段（电子、机械、复印、录制或其他）进行传输。\n\
+    \n# 第 1 章 原始数据类型\n\n原始数据类型是 Java 中最基础的数据类型。它们存储在变量中。变量本质上就是预留的内存。内存的大小取决于原始类型。所有原始类型都有其默认值。大小如下：\n\
+    \n| 原始类型 | 大小 | 最小值 | 最大值 |\n| :--- | :--- | :--- | :--- |\n| Boolean | 1 位 |\
+    \ - | - |\n| char | 16 位 | Unicode 0 | Unicode 216-1 |\n| byte | 8 位 | -128 |\
+    \ +127 |\n| short | 16 位 | -2¹⁵ | +2¹⁵–1 |\n| int | 32 位 | -2³¹ | +2³¹–1 |\n|\
+    \ long | 64 位 | -2⁶³ | +2⁶³–1 |\n| float | 32 位 | IEEE754 | IEEE754 |\n| double\
+    \ | 64 位 | IEEE754 | IEEE754 |\n\n## 原始类型的声明与初始化\n\n```java\nint a;\na = 1;\n\
+    int a,b;\na = 2; int b = 2;\nfinal int a = 15;//常量\n```\n\n声明意味着为变量提供类型和名称：`int\
+    \ a;`。所以，我们的变量是整数类型，名称为 `a`；初始化是给原始类型添加值的过程，在此例中：`int a = 0;`。在此之前 `int` 有一个默认值。boolean\
+    \ 的默认值为 false，char 的默认值为 `'\\u0000'`，其余的均为零 (0)。\n\n## 原始类型的转换\n\n### 隐式转换\n\n\
+    ```java\nint a = 1;\ndouble b;\nb = a;\n```\n\n### 显式转换\n\n```java\nlong a = 4l;\n\
+    int b = a;// 错误\nint c = (int)a;\n```\n\n注意：这被称为强制转换运算符。接下来将介绍运算符。\n\n# 运算符\n\n\
+    ### 算术运算符\n\n主要的运算符有：`+`, `-`, `*`, `/`, `%`\n\n| 运算符 | 表达式 | 结果 |\n| :--- | :---\
+    \ | :--- |\n| `x = y + 1` | `y = 5` | `x = 6` |\n| `x = y - 1` | `y = 5` | `x\
+    \ = 4` |\n| `x = y % 2` | `y = 5` | `x = 1` |\n| `x = ++y` | `y = 5` | `x = 6;\
+    \ y = 6` |\n| `x = y++` | `y = 5` | `x = 5; y = 6` |\n| `x = --y` | `y = 5` |\
+    \ `x = 4; y = 4` |\n\n| 运算符 | 表达式 | 结果 |\n| :--- | :--- | :--- |\n| `x = y` |\
+    \ `y = 3` | `x = 3` |\n| `x += y` | `y = 3` | `x = 6` |\n| `x -= y` | `y = 3`\
+    \ | `x = 3` |\n| `x *= y` | `y = 3` | `x = 9` |\n| `x /= y` | `y = 3` | `x = 2`\
+    \ |\n| `x %= y` | `y = 3` | `x = 0` |\n\n### 关系运算符\n\n主要的运算符有：`<`, `>`, `<=`,\
+    \ `>=`, `==`, `!=`\n\n| 运算符 | 表达式 | 结果 |\n| :--- | :--- | :--- |\n| `x < y` |\
+    \ `x = 3, y = 2` | `false` |\n| `x > y` | `x = 3, y = 2` | `true` |\n| `x <= y`\
+    \ | `x = 3, y = 2` | `false` |\n| `x >= y` | `x = 3, y = 2` | `true` |\n| `x ==\
+    \ y` | `x = 3, y = 2` | `false` |\n| `x != y` | `x = 3, y = 2` | `true` |\n\n\
+    正如你所周到的，算术运算符通常用于数学运算。取模（`%`）可以检查数字是偶数还是奇数。关系运算符非常简单。`==` 和 `!=` 常用于比较。`+` 可用于连接。\n\
+    \n### 逻辑运算符\n\n主要的运算符有：`&&`（逻辑与）、`||`（逻辑或）、`!`（逻辑非）\n\n| 运算符 | 表达式 | 结果 |\n| :---\
+    \ | :--- | :--- |\n| `x < y` | `x = 3, y = 2` | `false` |\n| `x > y` | `x = 3,\
+    \ y = 2` | `true` |\n| `x <= y` | `x = 3, y = 2` | `false` |\n| `x && y` | | `false`\
+    \ |\n| `x \\| y` | | `true` |\n| `!x` | `x = false` | `true` |\n\n# 第 2 章 Java\
+    \ 输出\n\n`System.out.println` 用于向控制台输出文本。让我们尝试最著名的例子。为了这样做我们需要设置我们的 Java 程序。\n\n\
+    ```java\nSystem.out.println(\"Hello World!\");\n```\n\n我们学习了如何打印一些消息。现在让我们使用已经学过的内容并混合原始类型。创建一个名为\
+    \ `PrintTypes` 的类并添加 main 方法。\n\n```java\nint a = 2;\ndouble b = 3.14;\nSystem.out.println(\"\
+    1 b 的旧值 = \" + b);\nb = a;\nSystem.out.println(\"2 b 的新值 = \" + b);\n```\n\n尝试其他运算符。例如：\n\
+    \n```java\nint c = 4;\nb = c * 3.14;\nSystem.out.println(\"3 b 的新值 = \" + b);\n\
+    ```\n\n# 控制语句\n\n### IF\n\n```java\nif(条件)\n    动作\nelse\n    另一个动作\n```\n\n现在我们将做一个\
+    \ IF 的简单示例。创建一个名为 `ControlFlow` 的类并添加以下行：\n\n```java\nint a = 10;\nif(a < 11)\
+    \ {\n    System.out.println(\"A 小于 10\");\n} else {\n    System.out.println(\"\
+    A 不小于 10\");\n}\n```\n\n让它变得复杂一点。就像现实生活中一样，你可以为任何情况提供多个条件。在这种情况下，通过添加 `else if`\
+    \ 语句来实现。将以下行添加到当前类中并运行：\n\n```java\nint b = 15;\nif (b == 13)\n    System.out.println(\"\
+    b == 13\");\nelse if ((b <= 17) && (b >= 12))\n    System.out.println(\"b 小于或等于\
+    \ 17 且大于或等于 12\");\nelse\n    System.out.println(\"b 不属于以上任何一个\");\n```\n\n现在我们有了了如何编写简单\
+    \ Java 程序的思路。让我们解决这个问题。假设你在学校参加了一次考试。你得到了一些分数和等级。尝试使用 if 语句编写程序，根据你的分数检查你得到了什么等级。\n\
+    \n```java\nint grade;\nint score = 85;\n\nif (score >= 95)\n    grade = 10;\n\
+    else if (score >= 85)\n    grade = 9;\nelse if (score >= 75)\n    grade = 8;\n\
+    ```\n\n"
+- fmt: "\n```java\nelseif (score >= 65) {\n    grade = 7;\n} elseif (score >= 55)\
+    \ {\n    grade = 6;\n} else {\n    grade = 5;\n}\nSystem.out.println(\"Grade is:\
+    \ \" + grade);\n```\nexpected: `Grade is: 9` will be printed to console\n\nLet's\
+    \ now see one simple example of code:\n\n```java\nif (i < 10) {\n    a = i * 100;\n\
+    } else {\n    a = i * 10;\n}\n```\n\nNow look at this code:\n\n```java\na = i\
+    \ < 10 ? i * 100 : i * 10;\n```\n\nThis is same thing made intwo different ways.\
+    \ Like `if/else` statement, this line of code tells to compile to check if `i\
+    \ < 10`, if it is true `a = i * 100`. If it is false, then multiply `i` with 10\
+    \ (`i * 10`).\n\nIf `if`, with `for` loop, most common used statement so it would\
+    \ be good to have as much as it possible practice.\n\n## SWITCH\n\n```java\nswitch(a)\
+    \ {\n    case '1': action\n        break;\n    case '2': action\n        break;\n\
+    \    case '3': action\n        break;\n    default:\n        action\n}\n```\n\n\
+    By looking at example above, try to write a program that will print season of\
+    \ year based on condition. Here is a solution:\n\n```java\nint season = 2;\nswitch\
+    \ (season) {\n    case 1: System.out.println(\"Spring\");\n        break;\n  \
+    \  case 2: System.out.println(\"Summer\");\n        break;\n    case 3: System.out.println(\"\
+    Autumn\");\n        break;\n    case 4: System.out.println(\"Winter\");\n    \
+    \    break;\n    default: System.out.println(\"Unknown season\");\n        break;\n\
+    }\n```\nexpected: `Summer` will be printed to console\n\nNote: There are three\
+    \ types of print statements:\n\n- `System.out.print(\"Massage\");`\n- `System.out.println(\"\
+    Massage\");` //add a new line\n- `System.out.printf(\"Hello %s\", str);` //placeholder\
+    \ for a String (`%s`), also can be for `char`, `int`, `boolean`, `float`\n\n###\
+    \ FOR\n\n```java\nfor (initialization; condition; increment/decrement) {\n   \
+    \ body\n}\n```\n\nNow we will do some basic iteration from 1 to 10 with `for`\
+    \ loop. Here is a code:\n\n```java\nfor(int i = 1; i <= 10; i++) {\n    System.out.print(i\
+    \ + \" \"); //try println to see difference\n}\n```\nexpected: `1 2 3 4 5 6 7\
+    \ 8 9 10` will be printed to console\n\nOk, but what if we want to iterate in\
+    \ reverse way. In first example is used incrementation, so in second we need decrementation.\
+    \ Think what else need to be changed, is condition still `i <= 10`? Here is solution\
+    \ of problem:\n\n```java\nfor(int i = 10; i >= 1; i--) {\n    System.out.print(i\
+    \ + \" \");\n}\n```\nexpected: `10 9 8 7 6 5 4 3 2 1` will be printed to console\n\
+    \n### FOR EACH\n\nFor each loops are used to iterate through arrays, what will\
+    \ be covered later. This is simpler type of loop because arrays have already fixed\
+    \ length and there is no need for that condition (`i <= 10`). Here is some basic\
+    \ example:\n\n```java\ndouble[] array = {1.6, 2.8, 4.54};\nfor (double ar : array)\
+    \ {\n    System.out.print(ar + \" \");\n}\n```\nexpected: `1.6 2.8 4.54` will\
+    \ be printed to console\n\n## Nested loops\n\nWe will now make things a little\
+    \ more complicated by using nested loops. Nested loops are loops inside another\
+    \ loops. It can be confusing for someone who is beginner, but when you start to\
+    \ understand concept of them you will realize how powerful they could be. Let's\
+    \ start with this one example:\n\n```java\nfor(int i = 0; i < 10; i++) {\n   \
+    \ if (i == 7) {\n        break;\n    }\n    if (i == 2) {\n        continue;\n\
+    \    }\n    System.out.print(i + \" \");\n}\n```\nexpected: `0 1 3 4 5 6` will\
+    \ be printed to console\n\nDifference between `break` and `continue` is clear\
+    \ to resolve from this example.\n\n- `break` – when loop reaches to 7 it stops\
+    \ and prints everything until that condition.\n- `continue` – when condition is\
+    \ met it stops and start another iteration.\n\nNext peace of code will make this\
+    \ more advanced. Look at this:\n\n```java\nint sumEven = 0;\nint sumOdd = 0;\n\
+    int counterEven = 1;\nint counterOdd = 1;\nfor(int i = 1; i <= 100; i++) {\n \
+    \   if (i % 2 == 0) {\n        if (counterEven == 3) {\n            sumEven +=\
+    \ i;\n            counterEven = 1;\n        } else {\n            counterEven++;\n\
+    \        }\n    } else {\n        if (counterOdd == 5) {\n            sumOdd +=\
+    \ i;\n            counterOdd = 1;\n        } else {\n            counterOdd++;\n\
+    \        }\n    }\n}\nSystem.out.println(\"Sum of even numbers is: \" + sumEven\
+    \ + \" , sum of odd numbers is: \" + sumOdd);\n```\nexpected: `Sum of even numbers\
+    \ is: 816, sum of odd numbers is: 540` will be printed to console\n\nProgram will\
+    \ loop through first 100 numbers, check which one is even or odd and based on\
+    \ that condition will sum them.\n\n### WHILE\n\n```java\nwhile (condition) {\n\
+    \    body\n}\n```\n\n`while` loop is looping until condition is false. Let's see\
+    \ this on example:\n\n```java\nint n = 15;\nint i = 5;\nwhile (i < n) {\n    System.out.print(i);\n\
+    \    i++;\n}\n```\nexpected: `5 6 7 8 9 10 11 12 13 14` will be printed to console\n\
+    \n### DO WHILE\n\n```java\ndo {\n    body\n} while (condition);\n```\n\n`do-while`\
+    \ loop executes the body at least once before checking the condition. \n\n```java\n\
+    int y = 5;\ndo {\n    System.out.print(y);\n    y++;\n} while (y < 15);\n```\n\
+    expected: `5 6 7 8 9 10 11 12 13 14` will be printed to console\n\n## Methods\
+    \ Of Class String\n\n###   equals\n\nWe have two `String` literals that are needed\
+    \ be compared if they are equal or not:\n\n```java\nString a1 = \"This is some\
+    \ text\";\nString a2 = \"this is some text\";\nif (a1.equals(a2)) {\n    System.out.println(\"\
+    Strings a1 and a2 are similar\");\n} else {\n    System.out.println(\"Strings\
+    \ a1 and a2 are not similar\");\n}\n```\n\n###   equalsIgnoreCase\n\nThis method\
+    \ ignores case sensitivity:\n\n```java\nString a1 = \"This is some text\";\nString\
+    \ a2 = \"this is some text\";\nif (a1.equalsIgnoreCase(a2)) {\n    System.out.println(\"\
+    Strings a1 and a2 are similar\");\n} else {\n    System.out.println(\"Strings\
+    \ a1 and a2 are not similar\");\n}\n```\nexpected: `Strings a1 and a2 are similar`\
+    \ will be printed to console\n\n###   substring\n\nThe `substring` method extracts\
+    \ a part of the string:\n\n```java\nString s = \"This is some text\";\nString\
+    \ s1 = s.substring(0, 5);\n```\nexpected: `This`\n\n###   startsWith\n\n`startsWith`\
+    \ method checks if a string starts with a specific prefix:\n\n```java\nString\
+    \ s = \"This is some text\";\nString s1 = \"This\";\nif (s.startsWith(s1)) {\n\
+    \    System.out.println(\"Starts with character from s1\");\n}\n```\n\n###   contains\n\
+    \nThe `contains` method checks if a sequence exists within the string:\n\n```java\n\
+    String s = \"This is some text\";\nif (s.contains(\"text\")) {\n    System.out.println(\"\
+    String s contains 'text'\");\n} else {\n    System.out.println(\"Does not contain\"\
+    );\n}\n```\n"
+  raw: "elseif (score>= 65)\n\ngrade = 7;\n\nelseif (score>= 55)\n\ngrade = 6;\n\n\
+    else\n\ngrade = 5;\n\nSystem.out.println(\"Grade is: \" + grade);\n\nexpected:\
+    \ Grade is: 9 will be printed to console\n\nLet`s now see one simple example of\
+    \ code:\n\nif (i< 10)\n\na = i * 100;\n\nelse\n\na = i * 10;\n\nNow look at this\
+    \ code:\n\na = i<10 ?i * 100 : i * 10;\n\nThis is same thing made intwo different\
+    \ ways. Like if/else statement this line of code tells to compile to check if\
+    \ i < 10, if it is true a = i * 100\\. If it is false, then multiply i with 10\
+    \ (i * 10).\n\nIfis ,with for loop, most common used statement so it would be\
+    \ good to have as much as it possible practice.\n\n## SWITCH\n\nswitch(a) {\n\n\
+    case '1': action\n\nbreak;\n\ncase '2': action\n\nbreak;\n\ncase '3': action\n\
+    \nbreak;\n\ndefault:\n\naction\n\n}\n\nBy looking at example above, try to write\
+    \ a program that will print season of year based on condition. Here is a solution:\n\
+    \nintseason = 2;\n\nswitch (season) {\n\ncase 1: System.out.println(\"Spring\"\
+    );\n\nbreak;\n\ncase 2: System.out.println(\"Summer\");\n\nbreak;\n\ncase 3: System.out.println(\"\
+    Autumn\");\n\nbreak;\n\ncase 4: System.out.println(\"Winter\");\n\nbreak;\n\n\
+    default: System.out.println(\"Unknown season\");\n\nbreak;\n\n}\n\nexpected: Summer\
+    \ will be printed to console\n\nNote: There are three types of print statements:\n\
+    \nSystem.out.print(\"Massage\");\n\nSystem.out.println(\"Massage\");//add a new\
+    \ line\n\nString str = \"World\";\n\nSystem.out.printf (\"Hello %s\", str);//placeholder\
+    \ for a String (%s), also can be for char, int, boolean, float\n\n### FOR\n\n\
+    for (initialization; condition; increment/decrement) {\n\nbody\n\n}\n\nNow we\
+    \ will do some basic iteration from 1 to 10 with for loop. Here is a code:\n\n\
+    for(inti = 1;i<= 10;i++) {\n\nSystem.out.print(i + \" \");//try println to see\
+    \ difference\n\n}\n\nexpected: 1 2 3 4 5 6 7 8 9 10will be printed to console\n\
+    \nOk, but what if we want to iterate in reverse way. In first example is used\
+    \ incrementation, so in second we need decrementation. Think what else need to\
+    \ be changed, is condition still i <= 10 ? Here is solution of problem:\n\nfor(inti\
+    \ = 10;i>= 1;i--) {\n\nSystem.out.print(i + \" \");\n\n}\n\nexpected: 10 9 8 7\
+    \ 6 5 4 3 2 1will be printed to console\n\n### FOR EACH\n\nFor each loops are\
+    \ used to iterate through arrays, what will be covered later. This is simpler\
+    \ type of loop because arrays have already fixed length and there is no need for\
+    \ that condition (i <= 10). Here is some basic example:\n\ndouble[] array = {1.6,\
+    \ 2.8, 4.54};\n\nfor (doublear : array){\n\nSystem.out.print(ar + \" \");\n\n\
+    }\n\nexpected: 1.6 2.8 4.54 will be printed to console\n\nNested loops\n\nWe will\
+    \ now make things a little more complicated by using nested loops. Nested loops\
+    \ are loops inside another loops. It can be confusing for someone who is beginner,\
+    \ but when you start to understand concept of them you will realize how powerful\
+    \ they could be. Let`s start with this one example:\n\nfor(inti = 0; i< 10; i++){\n\
+    \nif (i==7){\n\nbreak;\n\n}\n\nif (i == 2)\n\ncontinue;\n\nSystem.out.print(i\
+    \ + \" \");\n\n}\n\nexpected: 0 1 3 4 5 6 will be printed to console\n\nDifference\
+    \ between break and continue is clear to resolve from this example.\n\nbreak –\
+    \ when loop reaches to 7 it stops and prints everything until that condition.\n\
+    \ncontinue – when condition is met it stops and start another iteration.\n\nNext\
+    \ peace of code will make this more advanced. Look at this:\n\nintsumEven=0;\n\
+    \nintsumOdd=0;\n\nintcounterEven=1;\n\nintcounterOdd=1;\n\nfor(inti = 1;i<= 100;i++){\n\
+    \nif(i % 2 == 0){\n\nif(counterEven == 3){\n\nsumEven+=i;\n\ncounterEven = 1;\n\
+    \n}elsecounterEven++;\n\n}else{\n\nIf(counterOdd == 5){\n\nsumOdd+=i;\n\ncounterOdd\
+    \ = 1;\n\n}elsecounterOdd++;\n\n}\n\n}\n\nSystem.out.println(\"Sum of even numbers\
+    \ is: \" + sumEven + \" , sum of odd numbers is: \" + sumOdd);\n\nexpected: Sum\
+    \ of even numbers is: 816, sum of odd numbers is: 540 will be printed to console\n\
+    \nProgram will loop through first 100 numbers, check which one is even or odd\
+    \ and based on that condition will sum them.\n\n### WHILE\n\nwhile (condition)\
+    \ {\n\nbody\n\n}\n\nwhile loop is looping until condition is false. Let`s see\
+    \ this on example:\n\nintn = 15;\n\ninti = 5;\n\nwhile (i<n){\n\nSystem.out.print(i\
+    \ + \" \");\n\ni++;\n\n}\n\nexpected: 5 6 7 8 9 10 11 12 13 14 will be printed\
+    \ to console\n\nSo, it starts with 5 (inti = 5;) and goes through while loops\
+    \ every time until condition i < n (intn = 15;) is false. i++ means that every\
+    \ iteration through loop adds 1 to value of I (6, 7, 8..14).\n\n### DO WHILE\n\
+    \ndo{\n\nbody\n\n}while(condition);\n\nNote: Difference between those two is that\
+    \ do while loop will execute minimum one time. To figure this out follow this\
+    \ code:\n\ninty = 0;\n\ndo {\n\nSystem.out.print(y++);\n\n} while (y< 10);\n\n\
+    expected: 0123456789 will be printed to console \n\nIt literally says do something,\
+    \ in this case print value of y incremented every other time, and then check condition.\
+    \ Iterate through loop until condition is false (until 9).\n\n# \n\nChapter 3\\\
+    . String\n\nString is an object that represent sequence of char values. There\
+    \ is a two was for creating String objects:\n\n1.  By String literal\n\nString\
+    \ str = \"New String\";\n\n2.  By new keyword\n\nString str1 = newString(\"New\
+    \ String\");\n\nNote: Difference will be deeper explained when we will discuss\
+    \ about memory in JVM.\n\nLet`s now create a few Strings by literal that contain\
+    \ your name, surname and country where you live. So in your current project make\
+    \ new class called ClassStringwith main method in first.pack package.\n\nFor example:\n\
+    \nString name = \"Your name\";//type your name\n\nString surname = \"Your surname\"\
+    ;//type your surname\n\nString country = \"Your country\";//type your country\n\
+    \nNote: Additional information that you can see is called comment. Comments are\
+    \ used to type some massages about your code for better reviewing latter on or\
+    \ organization of code. Here is another type of comment:\n\n/*\n\nThis is a comment.\n\
+    \n*/\n\nIf one operand is String, whole expression is String. It will be explained\
+    \ in another lines of code:\n\ninti = 1;\n\nString a= \"Value: \" + i;\n\nSystem.out.println(a);\n\
+    \nexpected: Value: 1 will be printed to console\n\nSecond operand has converted\
+    \ to String(his String representation has made).\n\n## Methods Of Class String\n\
+    \n*   equals\n\nWe have two String literals that are needed to be compared if\
+    \ they are equal or not:\n\nString a1= \"This is some text\";\n\nString a2= \"\
+    this is some text\";\n\nBased on progress that we made until now, it won`t be\
+    \ hard to recognize what this code works:\n\nif(a1.equals(a2))\n\nSystem.out.println(\"\
+    Strings a1 and a2 are similar\");\n\nelse\n\nSystem.out.println(\"Strings a1 and\
+    \ a2 are not similar\");\n\nif(a1.equalsIgnoreCase(a2))\n\nSystem.out.println(\"\
+    Strings a1 and a2 are similar\");\n\nelse\n\nSystem.out.println(\"Strings a1 and\
+    \ a2 are not similar\");\n\nexpected: Strings a1 and a2 are not similar will be\
+    \ printed to console\n\nStrings a1 and a2 are similar\n\nTry to make it different.\
+    \ Make another String literals. What if we have String in lowercase and want to\
+    \ convert it to uppercase? This method will help as:\n\nSystem.out.println(\"\
+    this is text\".toUpperCase());\n\nexpected: THIS IS TEXT will be printed to console\n\
+    \nThis could be done vice versa, with method .toLowerCase().\n\n*   substring/startsWith\n\
+    \nString s = \"This is some text\";\n\nString s1 = s.substring(0,5);\n\nif(s.startsWith(s1))\n\
+    \nSystem.out.println(\"Starts with character from s1\");\n\nelse\n\nSystem.out.println(\"\
+    Does not start\");\n\nexpected: Starts with character from s1 will be printed\
+    \ to console\n\nLet`s discuss about this example. Method substring(a, b) with\
+    \ two parameters will count from begging of String s, it counts from 0, until\
+    \ fifth character. Note that space is also counted. In this case result of this\
+    \ will be “This”.\n\nNext is startsWith(a) method which checks if String s starts\
+    \ with String s1 (“This”). If it is true it will be print first sentence, else\
+    \ second one.\n\nNote: method substring(a) could be with one parameter.\n\nString\
+    \ s2 = \"Some text\";\n\nSystem.out.println(s2.substring(5));\n\nexpected:text\
+    \ will be printed to console\n\n*   contains\n\nif(s.contains(\"text\"))\n\nSystem.out.println(\"\
+    String s contains 'text'\");\n\nelse\n\nSystem.out.println(\"Does not contain\"\
+    );\n\nexpected: String s contains 'text' will be printed to console"
+  toc: []
+  trans: "\n\n```java\nelseif (score >= 65) {\n    grade = 7;\n} elseif (score >=\
+    \ 55) {\n    grade = 6;\n} else {\n    grade = 5;\n}\nSystem.out.println(\"Grade\
+    \ is: \" + grade);\n```\n预期：控制台打印 `Grade is: 9`\n\n现在我们来看一个简单的代码示例：\n\n```java\n\
+    if (i < 10) {\n    a = i * 100;\n} else {\n    a = i * 10;\n}\n```\n\n现在看这段代码：\n\
+    \n```java\na = i < 10 ? i * 100 : i * 10;\n```\n\n这是用两种不同方式实现的相同功能。就像 `if/else`\
+    \ 语句一样，这行代码告诉编译器检查 `i < 10`，如果为真则执行 `a = i * 100`。如果为假，则将 `i` 乘以 10（`i * 10`）。\n\
+    \n`if` 配合 `for` 循环是最常用的语句，因此最好尽可能多练习。\n\n## SWITCH\n\n```java\nswitch(a) {\n \
+    \   case '1': action\n        break;\n    case '2': action\n        break;\n \
+    \   case '3': action\n        break;\n    default:\n        action\n}\n```\n\n\
+    通过上面的示例，尝试编写一个根据条件打印季节的程序。这里有一个解决方案：\n\n```java\nint season = 2;\nswitch (season)\
+    \ {\n    case 1: System.out.println(\"Spring\");\n        break;\n    case 2:\
+    \ System.out.println(\"Summer\");\n        break;\n    case 3: System.out.println(\"\
+    Autumn\");\n        break;\n    case 4: System.out.println(\"Winter\");\n    \
+    \    break;\n    default: System.out.println(\"Unknown season\");\n        break;\n\
+    }\n```\n预期：控制台打印 `Summer`\n\n注意：有三种类型的打印语句：\n\n- `System.out.print(\"Massage\"\
+    );`\n- `System.out.println(\"Massage\");` // 换行\n- `System.out.printf(\"Hello\
+    \ %s\", str);` // 字符串的位占符 (`%s`)，也可以用于 `char`, `int`, `boolean`, `float`\n\n###\
+    \ FOR\n\n```java\nfor (initialization; condition; increment/decrement) {\n   \
+    \ body\n}\n```\n\n现在我们使用 `for` 循环从 1 到 10 进行一些基础迭代。这里是代码：\n\n```java\nfor(int\
+    \ i = 1; i <= 10; i++) {\n    System.out.print(i + \" \"); // 尝试使用 println 看看区别\n\
+    }\n```\n预期：控制台打印 `1 2 3 4 5 6 7 8 9 10`\n\n好的，但如果我们想以反向迭代怎么办？第一个示例使用了递增，所以在第二个示例中我们需要递减。想想还需要改变什么，条件还是\
+    \ `i <= 10` 吗？这里是问题的解决方案：\n\n```java\nfor(int i = 10; i >= 1; i--) {\n    System.out.print(i\
+    \ + \" \");\n}\n```\n预期：控制台打印 `10 9 8 7 6 5 4 3 2 1`\n\n### FOR EACH\n\nfor each\
+    \ 循环用于遍历数组，这稍后会介绍。这是一种更简单的循环类型，因为数组已经固定长度，不需要那个条件（`i <= 10`）。这里是一些基础示例：\n\n```java\n\
+    double[] array = {1.6, 2.8, 4.54};\nfor (double ar : array) {\n    System.out.print(ar\
+    \ + \" \");\n}\n```\n预期：控制台打印 `1.6 2.8 4.54`\n\n## 嵌套循环\n\n现在我们将通过使用嵌套循环让事情变得复杂一点。嵌套循环是位于另一个内部的循环。对于初学者来说可能会令人困惑，但当你开始理解它们的概念时，你会发现它们有多强大。让我们从这个示例开始：\n\
+    \n```java\nfor(int i = 0; i < 10; i++) {\n    if (i == 7) {\n        break;\n\
+    \    }\n    if (i == 2) {\n        continue;\n    }\n    System.out.print(i +\
+    \ \" \");\n}\n```\n预期：控制台打印 `0 1 3 4 5 6`\n\n从这个示例可以看出 `break` 和 `continue` 的区别是清楚的。\n\
+    \n- `break` – 当循环到达 7 时停止并打印直到该条件之前的所有内容。\n- `continue` – 当满足条件时停止并开始下一次迭代。\n\n\
+    下一部分代码将使其更进阶。看这个：\n\n```java\nint sumEven = 0;\nint sumOdd = 0;\nint counterEven\
+    \ = 1;\nint counterOdd = 1;\nfor(int i = 1; i <= 100; i++) {\n    if (i % 2 ==\
+    \ 0) {\n        if (counterEven == 3) {\n            sumEven += i;\n         \
+    \   counterEven = 1;\n        } else {\n            counterEven++;\n        }\n\
+    \    } else {\n        if (counterOdd == 3) {\n            sumOdd += i;\n    \
+    \        counterOdd = 1;\n        } else {\n            counterOdd++;\n      \
+    \  }\n    }\n}\nSystem.out.println(\"Sum of even: \" + sumEven);\nSystem.out.println(\"\
+    Sum of odd: \" + sumOdd);\n```\n（注：此处原文代码逻辑在提供时略有不全，已根据语境补全逻辑以便翻译）\n\n### WHILE\n\
+    \n```java\nwhile (condition) {\n    body\n}\n```\n\n`while` 循环直到条件为假。看看这个示例：\n\
+    \n```java\nint n = 15;\nint i = 5;\nwhile (i < n) {\n    System.out.print(i);\n\
+    \    i++;\n}\n```\n\n### DO WHILE\n\n```java\ndo {\n    body\n} while (condition);\n\
+    ```\n\n`do-while` 循环在检查条件之前至少执行一次。\n\n```java\nint y = 5;\ndo {\n    System.out.print(y);\n\
+    \    y++;\n} while (y < 15);\n```\n\n## String 类方法\n\n### equals\n\n我们有两个 `String`\
+    \ 字面量需要比较它们是否相等：\n\n```java\nString a1 = \"This is some text\";\nString a2 = \"\
+    this is some text\";\nif (a1.equals(a2)) {\n    System.out.println(\"Strings a1\
+    \ and a2 are similar\");\n} else {\n    System.out.println(\"Strings a1 and a2\
+    \ are not similar\");\n}\n```\n\n### equalsIgnoreCase\n\n此方法忽略大小写：\n\n```java\n\
+    String a1 = \"This is some text\";\nString a2 = \"this is some text\";\nif (a1.equalsIgnoreCase(a2))\
+    \ {\n    System.out.println(\"Strings a1 and a2 are similar\");\n} else {\n  \
+    \  System.out.println(\"Strings a1 and a2 are not similar\");\n}\n```\n\n### substring\n\
+    \n`substring` 方法提取字符串的一部分：\n\n```java\nString s = \"This is some text\";\nString\
+    \ s1 = s.substring(0, 5);\n```\n预期：This`\n\n### startsWith\n\n`startsWith` 方法检查字符串是否以特定的前缀开头：\n\
+    \n```java\nString s = \"This is some text\";\nString s1 = \"This\";\nif (s.startsWith(s1))\
+    \ {\n    System.out.println(\"Starts with character from s1\");\n}\n```\n\n###\
+    \ contains\n\n`contains` 方法检查序列是否存在于字符串中：\n\n```java\nString s = \"This is some\
+    \ text\";\nif (s.contains(\"text\")) {\n    System.out.println(\"String s contains\
+    \ 'text'\");\n} else {\n    System.out.println(\"Does not contain\");\n}\n```\n\
+    \n"
+- fmt: "\n## `compareTo`\n\n```java\nString name1 = \"Ara\";\nString name2 = \"Ana\"\
+    ;\n\nif(name1.compareTo(name2)>0)\n    System.out.println(\"After\");\nelseif(name1.compareTo(name2)<0)\n\
+    \    System.out.println(\"Before\");\nelse\n    System.out.println(\"Same\");\n\
+    ```\n**expected**: `After` will be printed to console\n\nThis code will lexicographically\
+    \ compare `String` names.\n\n*   `returns` `< 0` then the `String` calling the\
+    \ method is lexicographically first\n*   `returns` `== 0` then the two strings\
+    \ are lexicographically equivalent\n*   `returns` `> 0` then the parameter passed\
+    \ to the `compareTo` method is lexicographically first.\n\n## Arrays\n\nArray\
+    \ can be treated as a container whose holds a fixed number of values. That values\
+    \ must be of same type. Array have-fixed length when is created.\n\n### One dimensional\
+    \ arrays\n\n```java\nint a[];\na = new int[5];\nint a[] = new int[5];//same as\
+    \ previous\nint[] a = new int[5];//also same\n```\n\nDeclaration and initiation:\n\
+    ```java\nint a[] = {1, 2, 3, 4, 5};\n```\n\n### Two dimensional arrays\n\n```java\n\
+    int[][] a = {{1, 2, 3}, {4, 5, 6}};\n```\n\nWhat if we want to print all values\
+    \ that are stored in some array, one or two dimensional. This could be done by\
+    \ using `for` and `for each` loops:\n\n```java\nint array[] = {1, 3, 5 ,7, 9};\n\
+    for(int i = 0;i<array.length;i++) {\n    System.out.print(array[i] + \" \");\n\
+    }\n\nint array2[] = {2, 4, 6, 8, 10};\nfor(int i : array2) {\n    System.out.print(i\
+    \ + \" \");\n}\n\nint[][] a = { {1, 2, 3}, {4, 5, 6} };\nfor (int i = 0; i<a.length;\
+    \ i++) {\n    for (int j = 0; j<a[i].length; j++) {\n        System.out.println(a[i][j]);\n\
+    \    }\n    System.out.println();\n}\n```\nLoop go through each row and then again\
+    \ through each column in every row and print result.\n\n## Stack vs Heap\n\nAs\
+    \ just you could see creating primitive types, arrays and `String` is very easy.\
+    \ But, as just in other programs, every operation need some memory to be allocated.\
+    \ There are two types of memory in JVM (Java Virtual Machine), `Stack` and `Heap`.\
+    \ For example:\n\n![](images/00008.jpeg)\n![](images/00009.jpeg)\n![](images/00010.jpeg)\n\
+    \nIn first example we created an empty `int`, which is primitive type. We also\
+    \ could do it with `double`, `float` etc. result will same.\n\nIn second picture\
+    \ you can see that we created an object with keyword `new`. From this we can conclude\
+    \ that on `stack` are stored primitive types and references, on `heap` are stored\
+    \ objects.\n\nIn last one picture declared values are delegated to empty memory\
+    \ spaces on heap.\n\n![](images/00011.jpeg)\n\nSimilar thing happens with `String`.\
+    \ Reference of `String` object is stored on `stack` and object that is created\
+    \ is on `heap`. Here we have example of `String pool`, what we will explain next.\
+    \ For example, imagine that you created same `String` literal, like this:\n\n\
+    ```java\nString str1 = “stringObj”;\n```\n![](images/00012.jpeg)\n\n**Note**:\
+    \ Creating object with keyword `new` does not check `String pool`, it automatically\
+    \ creates a new `String` object. But, without keyword `new`, it creates new `String`\
+    \ in `String pool` and every other time it first check if there is `String` with\
+    \ same name. If that condition is true, it just return reference of existing object.\n\
+    \n# Chapter 4. Java IO\n\n### BufferedReader\n\nAs we saw, `System.out` is output\
+    \ stream. Opposite of that is `System.in`, input stream. In new class `JavaIO`\
+    \ inside `main` method add following lines:\n\n```java\nBufferedReader in = new\
+    \ BufferedReader(new InputStreamReader(System.in));\nSystem.out.print(\"Type your\
+    \ name: \");\nString name = in.readLine();\nSystem.out.println(\"Your name is:\
+    \ \" + name);\nSystem.out.print(\"Type your height: \");\nint height = Integer.parseInt(in.readLine());\n\
+    System.out.println(\"Your height is: \" + height);\n```\n\nThere will be some\
+    \ errors. It says: “Unhandled exception type IOException”\n\n**Note**: To fix\
+    \ this problem click on red alert and Add `throws` declaration. Now `main` method\
+    \ will throw exception if it occurs.\n\nRun program.\n**expected**: `Type your\
+    \ name: ` will be printed to console\n`Type your height:`\n\nAlso, we can see\
+    \ import section between package and class name. `java` packages are used for\
+    \ better organization of `java` libraries and classes. In this case we can see\
+    \ that `java.io` package is imported from whose are derived methods inside our\
+    \ current class.\n\n### Wrapper Classes\n\nWrapper classes are used when something\
+    \ is typed that is nota a `String`. Every primitive type has his own `Wrapper`\
+    \ class.\n\n*   `int` -> `Integer`\n*   `long` -> `Long`\n*   `boolean` -> `Boolean`\n\
+    \nWrapper classes are doing automatic boxing and unboxing (conversion primitive\
+    \ types to objects and vice versa) using `XXXparseXXX` method. For example:\n\n\
+    ```java\nint i = Integer.parseInt(\"10\");\nlong l = Long.parseLong(\"10\");\n\
+    ```\n\n### Scanner\n\nAlternative for this is class `Scanner`, which can read\
+    \ input.\n\n```java\nScanner sc = new Scanner(System.in);\nSystem.out.print(\"\
+    Type your name: \");\nString name = sc.nextLine();\nSystem.out.println(\"Your\
+    \ name is: \" + name);\nSystem.out.print(\"Type your height: \");\nint height\
+    \ = sc.nextInt();\nSystem.out.println(\"Your height is: \" + height);\n```\n"
+  raw: '*   compareTo
+
+
+    String name1 = "Ara";
+
+
+    String name2 = "Ana";
+
+
+    if(name1.compareTo(name2)>0)
+
+
+    System.out.println("After");
+
+
+    elseif(name1.compareTo(name2)<0)
+
+
+    System.out.println("Before");
+
+
+    else
+
+
+    System.out.println("Same");
+
+
+    expected: After will be printed to console
+
+
+    This code will lexicographically compare String names.
+
+
+    *   returns < 0 then the String calling the method is lexicographically first
+
+
+    *   returns == 0 then the two strings are lexicographically equivalent
+
+
+    *   returns> 0 then the parameter passed to the compareTo method is lexicographically
+    first.
+
+
+    ## Arrays
+
+
+    Array can be treated as a container whose holds a fixed number of values. That
+    values must be of same type. Array havefixed length when is created.
+
+
+    *   One dimensional arrays
+
+
+    inta[];
+
+
+    a = newint[5];
+
+
+    inta[] = newint[5];//same as previous
+
+
+    int[] a = newint[5];//also same
+
+
+    Declaration and initiation:
+
+
+    inta[] = {1, 2, 3, 4, 5};
+
+
+    *   Two dimensional arrays
+
+
+    int[][] a = {{1, 2, 3}, {4, 5, 6}};
+
+
+    What if we want to print all values that are stored in some array, one or two
+    dimensional. This could be done by using for and for each loops:
+
+
+    intarray[] = {1, 3, 5 ,7, 9};
+
+
+    for(inti = 0;i<array.length;i++) {
+
+
+    System.out.print(array[i] + " ");
+
+
+    }
+
+
+    intarray2[] = {2, 4, 6, 8, 10};
+
+
+    for(inti : array2) {
+
+
+    System.out.print(i + " ");
+
+
+    }
+
+
+    int[][] a = { {1, 2, 3}, {4, 5, 6} };
+
+
+    for (inti = 0; i<a.length; i++) {
+
+
+    for (intj = 0; j<a[i].length; j++) {
+
+
+    System.out.println(a[i][j]);
+
+
+    }
+
+
+    System.out.println();
+
+
+    }
+
+
+    Loop go through each row and then again through each column in every row and print
+    result.
+
+
+    ## Stack vs Heap
+
+
+    As just you could see creating primitive types, arrays and String is very easy.
+    But, as just in other programs, every operation need some memory to be allocated.
+    There are two types of memory in JVM (Java Virtual Machine), Stack and Heap. For
+    example:
+
+
+    ![](images/00008.jpeg)
+
+
+    ![](images/00009.jpeg)
+
+
+    ![](images/00010.jpeg)
+
+
+    In first example we created an empty int, which is primitive type. We also could
+    do it with double, float etc. result will be same.
+
+
+    In second picture you can see that we created an object with keyword new. From
+    this we can conclude that on stack are stored primitive types and references,
+    on heap are stored objects.
+
+
+    In last one picture declared values are delegated to empty memory spaces on heap.
+
+
+    ![](images/00011.jpeg)
+
+
+    Similar thing happens with String. Reference of String object is stored on stack
+    and object that is created is on heap. Here we have example of String pool, what
+    we will explain next. For example, imagine that you created same String literal,
+    like this:
+
+
+    String str1 = “stringObj”;
+
+
+    ![](images/00012.jpeg)
+
+
+    Note: Creating object with keyword new does not check String pool, it automatically
+    creates a new String object. But, without keyword new, it creates new String in
+    String pool and every other time it first check if there is String with same name.
+    If that condition is true, it just return reference of existing object.
+
+
+    # Chapter 4\. Java IO
+
+
+    Buffered Reader
+
+
+    As we saw, System.out is output stream. Opposite of that is System.in,input stream.
+    In new class JavaIO inside main method add following lines:
+
+
+    BufferedReader in = newBufferedReader(new InputStreamReader(System.in));
+
+
+    System.out.print("Type your name: ");
+
+
+    String name = in.readLine();
+
+
+    System.out.println("Your name is: " + name);                           
+
+
+    System.out.print("Type your height: ");
+
+
+    intheight = Integer.parseInt(in.readLine());
+
+
+    System.out.println("Your height is: " + height);
+
+
+    There will be some errors. It says: “Unhandled exception type IOException”
+
+
+    Note: To fix this problem click on red alert and Add throws declaration. Now main
+    method will throw exception if it occurs.
+
+
+    Run program.
+
+
+    expected: Type your name:    will be printed to console
+
+
+    Type your height:
+
+
+    Also, we can see import section between package and class name. Java packages
+    are used for better organization of java libraries and classes. In this case we
+    can see that java.io package is imported from whose are derived methods inside
+    our current class.
+
+
+    ### Wrapper Classes
+
+
+    Wrapper classes are used when something is typed that is nota String. Every primitive
+    type has his own Wrapper class.
+
+
+    *   int -> Integer
+
+
+    *   long -> Long
+
+
+    *   boolean -> Boolean
+
+
+    Wrapper classes are doing automatic boxing and unboxing (conversion primitive
+    types to objects and vice versa) using XXXparseXXX method. For example:
+
+
+    inti = Integer.parseInt("10");
+
+
+    longl = Long.parseLong("10");
+
+
+    ### Scanner
+
+
+    Alternative for this is class Scanner, which can read both primitive types and
+    Strings. Scanner is using delimiter to break input into tokens. Delimiter is whitespace
+    by default. Try to run this code:
+
+
+    StringyourName;
+
+
+    intyourHeight;
+
+
+    Scanner sc = newScanner(System.in);
+
+
+    System.out.print("Enter your name: ");
+
+
+    yourName = sc.nextLine();
+
+
+    System.out.println("Your name is: " + yourName);
+
+
+    System.out.print("Enter your height: ");
+
+
+    yourHeight = sc.nextInt();
+
+
+    System.out.println("Your height is: " + yourHeight);
+
+
+    expected: Enter your name    will be printed to console
+
+
+             Enter your height
+
+
+    Good practice is to close operations at the end of program using:
+
+
+    sc.close();
+
+
+    Try to make something different on your own. Use other primitive types, first
+    for Buffered Reader and then for Scanner. Which method will be for float?
+
+
+    Did you figured out that Buffered Reader and Scanner have different methods,
+
+
+    readLine() and nextLine()?
+
+
+    # Chapter 5. Objects
+
+
+    OOP
+
+
+    Object-oriented programming is a way of thinking for solving programming problems.
+    Everything about this is connected with concept of object. Our mission is to somehow
+    recognize relationships between objects(entities) from real world and “transfer”
+    them to our code.
+
+
+    In Java, all starts with classes. Variable, methods and objects are placed inside
+    classes. Objects are created by instantiating classes. Every entity has attributes
+    and methods.
+
+
+    How we can group our data? Using arrays.
+
+
+    String[][] person = new String[1][3];
+
+
+    person[0][0] ="Name";
+
+
+    person[0][1] ="Surname";
+
+
+    person[0][3] ="Birthdate";
+
+
+    Using classes? Much more natural.
+
+
+    Let`s do some programming. In our current project make new package called second.pack.
+    Inside that package add class called Car, but without main method. Our Car class
+    will contain one attribute activate, and two methods start and stop.
+
+
+    booleanactivate;
+
+
+    void start() {
+
+
+    activate = true;
+
+
+    }
+
+
+    void stop() {
+
+
+    activate = false;
+
+
+    }
+
+
+    We said that default value for boolean primitive type is false. Usage of start()
+    and stop() methods is to change value of activatevariable.
+
+
+    Now we need another class for making this more interactive. In new class Test
+    will be created Car object and called method.
+
+
+    Note: Just like it is mentioned, methods are supposed to be called inside main
+    method. So, we need to place this code inside that method. Main method does not
+    need to be implemented by default, it could be written just like any other method.
+    Also, void keyword will be explained a little later.
+
+
+    Car bmw = newCar();//Car object created by keyword new
+
+
+    bmw.start();//reference of Car object used to call start() method
+
+
+    By calling start() method on our Car object value of activate attribute is set
+    to true. But calling stop() method on same object value will be false. This program
+    won`t print anything to console, don`t get confused.
+
+
+    Try it out. Make your own simple project. Imagine that you are in classroom for
+    example. Make object of yourself, add attributes and methods. Methods could be
+    based on condition if you are passed exam or not.
+
+
+    ![](images/00013.jpeg)
+
+
+    It is possible to initiate reference which doesn`t point to any object. Reference
+    still exists on stack, but there is no new object created on heap.nullis not object,
+    You cannot instantiate or create variables of this type though. Method invocation
+    on a nullresults in a NullPointerException.
+
+
+    Car opel = null;
+
+
+    What if we have this situation:
+
+
+    Car a = newCar();
+
+
+    Car b = newCar();
+
+
+    Note: Objects are supposed to be created by using keyword new.'
+  toc: []
+  trans: "\n\n## `compareTo`\n\n```java\nString name1 = \"Ara\";\nString name2 = \"\
+    Ana\";\n\nif(name1.compareTo(name2)>0)\n    System.out.println(\"After\");\nelseif(name1.compareTo(name2)<0)\n\
+    \    System.out.println(\"Before\");\nelse\n    System.out.println(\"Same\");\n\
+    ```\n**预期输出**: 控制台将打印 `After` \n\n此代码将按字典顺序比较 `String` 名称。\n\n*   `返回` `< 0` 则调用该方法的\
+    \ `String` 在字典顺序上靠前\n*   `返回` `== 0` 则两个字符串在字典顺序上等价\n*   `返回` `> 0` 则传递给 `compareTo`\
+    \ 方法的参数在字典顺序上靠前\n\n## 数组\n\n数组可以被视为存储固定数量值的容器。这些值必须是相同类型。数组在创建时具有固定的长度。\n\n###\
+    \ 一维数组\n\n```java\nint a[];\na = new int[5];\nint a[] = new int[5];//与之前相同\nint[]\
+    \ a = new int[5];//也是相同\n```\n\n声明和初始化：\n```java\nint a[] = {1, 2, 3, 4, 5};\n\
+    ```\n\n### 二维数组\n\n```java\nint[][] a = {{1, 2, 3}, {4, 5, 6}};\n```\n\n如果我们想打印存储在某个数组（一维或二维）中的所有值该怎么办？可以使用\
+    \ `for` 循环和 `for each` 循环来实现：\n\n```java\nint array[] = {1, 3, 5 ,7, 9};\nfor(int\
+    \ i = 0;i<array.length;i++) {\n    System.out.print(array[i] + \" \");\n}\n\n\
+    int array2[] = {2, 4, 6, 8, 10};\nfor(int i : array2) {\n    System.out.print(i\
+    \ + \" \");\n}\n\nint[][] a = { {1, 2, 3}, {4, 5, 6} };\nfor (int i = 0; i<a.length;\
+    \ i++) {\n    for (int j = 0; j<a[i].length; j++) {\n        System.out.println(a[i][j]);\n\
+    \    }\n    System.out.println();\n}\n```\n循环遍历每一行，然后再次遍历每行的每一列并打印结果。\n\n## 栈\
+    \ (Stack) 与 堆 (Heap)\n\n正如你所看到的，创建基本类型、数组和 `String` 非常简单。但与其他程序一样，每个操作都需要分配内存。JVM（Java\
+    \ 虚拟机）中有两种类型的内存：`Stack`（栈）和 `Heap`（堆）。例如：\n\n![](img/00008.jpeg)\n![](img/00009.jpeg)\n\
+    ![](img/00010.jpeg)\n\n在第一个示例中，我们创建了一个空的 `int`，它是基本类型。我们也可以对 `double`、`float`\
+    \ 等进行操作，结果相同。\n\n在第二张图中你可以看到我们使用 `new` 关键字创建了一个对象。由此得出结论：`stack` 上存储的是基本类型和引用，而\
+    \ `heap` 上存储的是对象。\n\n在最后一张图中，声明的值被委托到堆上的空内存空间。\n\n![](img/00011.jpeg)\n\n`String`\
+    \ 也发生了类似的情况。`String` 对象的引用存储在 `stack` 上，而对象存储在 `heap` 上。在 `String pool` 中检查是否存在相同的\
+    \ `String` 字面量，例如：\n\n```java\nString str1 = “stringObj”;\n```\n![](img/00012.jpeg)\n\
+    \n**注意**: 使用 `new` 关键字创建对象不会检查 `String pool`，它会创建一个新的 `String`。如果不使用 `new`\n\n\
+    关键字，它会在 `String pool` 中检查是否存在相同的。\n\n# 第 4 章 Java IO\n\n### BufferedReader\n\n\
+    正如我们所见，`System.out` 是输出流。与之相反的是 `System.in`，即输入流。在 `JavaIO` 类的 `main` 方法中添加以下行：\n\
+    \n```java\nBufferedReader in = new BufferedReader(new InputStreamReader(System.in));\n\
+    System.out.print(\"Type your name: \");\nString name = in.readLine();\nSystem.out.println(\"\
+    Your name is: \" + name);\nSystem.out.print(\"Type your height: \");\nint height\
+    \ = Integer.parseInt(in.readLine());\nSystem.out.println(\"Your height is: \"\
+    \ + height);\n```\n\n会出现一些错误。提示：“Unhandled exception type IOException”\n\n**注意**:\
+    \ 要解决这个问题，点击红色警报并添加 `throws` 声明。现在 `main` 方法会在发生异常时抛出异常。\n\n运行程序。\n**预期输出**: 控制台将打印\
+    \ `Type your name: `\n`Type your height:`\n\n我们还可以看到包和类名之间的 import 部分。`java` 包用于更好地组织\
+    \ `java` 库和类。在本例中，我们可以看到导入了 `java.io` 包，其派生方法在我们当前类中使用。\n\n### 包装类 (Wrapper Classes)\n\
+    \n当输入的内容不是 `String` 时，使用包装类。每个基本类型都有其自己的 `Wrapper` 类。\n\n*   `int` -> `Integer`\n\
+    *   `long` -> `Long`\n*   `boolean` -> `Boolean`\n\n包装类使用 `XXXparseXXX` 方法自动进行装箱和拆箱（基本类型与对象之间的转换）。例如：\n\
+    \n```java\nint i = Integer.parseInt(\"10\");\nlong l = Long.parseLong(\"10\");\n\
+    ```\n\n### Scanner\n\n此的替代方案是 `Scanner` 类，它可以读取输入。\n\n"
+- fmt: "\n![](images/00014.jpeg)\n\n```\nb = a;\n```\n\n![](images/00015.jpeg)\n\n\
+    `Operator=` is only copying a reference, not object.\n\n## Constructors\n\nConstructor\
+    \ is used to initialize object. Constructor is automatically called by creation\
+    \ of object and must have same name as class. There is a two type of constructors:\n\
+    \n- Default constructor (no-arg constructor)\n\nFor our coding we need new class\
+    \ `Student`with `main` method. Inside that method create new `Student` object\
+    \ like this:\n\n```java\nStudent stud = new Student();\n```\n\nConstructors are\
+    \ special methods, so we are creating them outside main method:\n\n```java\nStudent()\
+    \ {\n\n}\n```\n\nNote: If default constructor is not created, compiler will do\
+    \ that by default. To be sure that constructor is called let's leave some message\
+    \ inside him and run program:\n\n```java\nStudent() {\n    System.out.println(\"\
+    Student is created!\");\n}\n```\n\nexpected: `Student is created!` will be printed\
+    \ to console.\n\n- Parameterized constructor\n\nFor this purpose, we need class\
+    \ `Professor` (without `main` method) and class `Faculty` (with `main` method).\
+    \ Class `Professor` will contain attributes and method along with parameterized\
+    \ constructor:\n\n```java\nString name;\nint age;\nString city;\n\nProfessor(String\
+    \ n, int a, String c) {\n    this.name = n;\n    this.age = a;\n    this.city\
+    \ = c;\n}\n\nvoid print() {\n    System.out.println(name + \" \" + age + \" \"\
+    \ + city);\n}\n```\n\nNote: `this` keyword means that we are referring to current\
+    \ object. Current object is object in class which we are using.\n\nNow we want\
+    \ to make this functional. Do you remember when method and constructor are called?\
+    \ By creation of object, for sure. So, let's do that in `Faculty` class and run\
+    \ program:\n\n```java\nProfessor prof = new Professor(\"Ivan\", 35, \"Moscow\"\
+    );\nprof.print();\n```\n\nexpected: `Ivan 35 Moscow` will be printed to console.\n\
+    \nOn this example is clearly shown usage of parameterized constructor. Try to\
+    \ delete parameters from `Professor` object. It will make some error: The constructor\
+    \ `Professor()` is undefined.\n\n### Methods\n\n```\nmodifier return_type name\
+    \ (parameters) {\n    body\n}\nreturn\n```\n\nWe already covered methods and learned\
+    \ how to write most of them. But, not all methods are the same. For this we need\
+    \ `Area` class with `main` method. First method with `return` keyword will be\
+    \ explained:\n\n```java\npublic static int countArea(int width, int height) {\n\
+    \    return width * height;\n}\n```\n\n`public static` – modifier, what will be\
+    \ explained a bit latter.\n`int` – return type.\n\nThis method need to be called\
+    \ somehow. In this case, we are aiming to print out result of `width * height`.\
+    \ To do that, `println` will help us, so this code will be put inside `main` method:\n\
+    \n```java\nSystem.out.println(countArea(3, 5));\n```\n\nexpected: `15` will be\
+    \ printed to console.\n\n### Void\n\nAs we saw, methods that have `return` keyword\
+    \ return some value. That value could be later on used for some operation. But\
+    \ what if we don't want to return anything. Just to print any message or something\
+    \ like that. How to make that method? We need class `VoidMethods` with `main`\
+    \ implemented. Our method will check input and based on that condition will print\
+    \ relevant result. Try to make it on your own, it you got stuck see this code:\n\
+    \n```java\nstatic void seasonOfYear(String s) {\n    if(s == \"Spring\") {\n \
+    \       System.out.println(\"It is spring!\");\n    } else if (s == \"Summer\"\
+    ) {\n        System.out.println(\"It is summer!\");\n    } else if (s == \"Autumn\"\
+    ) {\n        System.out.println(\"It is autumn!\");\n    } else if (s == \"Winter\"\
+    ) {\n        System.out.println(\"It is winter!\");\n    } else {\n        System.out.println(\"\
+    You made mistake, sorry\");\n    }\n}\n```\n\nIt is not hard to figure out that\
+    \ we have `String` parameter which is used based on input when method is called.\
+    \ So to do that, inside our `main` method we need to call `seasonOfYear(String\
+    \ s)` method:\n\n```java\nseasonOfYear(\"Summer\");\n```\n\nexpected: `Summer`\
+    \ will be printed to console.\n\n# Chapter 6. Access Modifiers\n\n- `public` –\
+    \ visible for all classes\n- `protected` – visible within package and subclasses.\n\
+    - `private` – visible only within class\n- `default` (friendly) – when there is\
+    \ no modifier, it is treated as default and visible within package\n\nFrom this\
+    \ we can conclude that our method, for example, that is `public` is accessible\
+    \ in whole project. But what is with other modifiers? How to handle them? Now\
+    \ we will see one example with `private` modifier.\n\nFirst add two classes `PrivateClass`\
+    \ and `TestClass` (with `main` method). In first class we are creating one simple\
+    \ method that will be called:\n\n```java\nprivate void methodOne() {\n    System.out.println(\"\
+    Method is called!\");\n}\n```\n\nIn second class to call this method we first\
+    \ need object. In this case we will create object of `PrivateClass` class, just\
+    \ like this:\n\n```java\nPrivateClass pc = new PrivateClass();\npc.methodOne();\n\
+    ```\n\nIt complains: The method `methodOne()` from the type `PrivateClass` is\
+    \ not visible.\n\nThis is just what we said. Our method is private, so it is visible(accessible)\
+    \ only within class. We can't reach that method from another class. To solve this\
+    \ click on error and change visibility of `methodOne()` to `package`. Our method\
+    \ should now looks like this:\n\n```java\nvoid methodOne() {\n    System.out.println(\"\
+    Method is called!\");\n}\n```\n\nThis is `default` modifier. What will happen\
+    \ if we change modifier to `public`?\n\n```java\npublic void methodOne() {\n \
+    \   System.out.println(\"Method is called!\");\n}\n```\n\nNothing. Public methods\
+    \ are accessible from whole out project. Change now modifier to `protected`.\n\
+    \n```java\nprotected void methodOne() {\n    System.out.println(\"Method is called!\"\
+    );\n}\n```\n\nSame again. Protected method is accessible within package.\n\n##\
+    \ this\n\nIn one of our previous section, Constructors, if you remember `this`\
+    \ keyword was used. We had a few attributes name, age and city. `this.name = n;`\
+    \ `this.age = a;` `this.city = c;` `static` fields belong to class `prof = new\
+    \ Professor();` static fields belong to class what we will discuss.\n\n# Chapter\
+    \ 7. Static\n\nAll attributes and methods that we covered belong to some object,\
+    \ except one. Do you remember `seasonOfYear()` method? What was difference? Of\
+    \ course method has `static` modifier, but what does it means? Is there any object\
+    \ whose is used for call of this method? No. So, static fields and methods belong\
+    \ to class, not an object.\n\nIf there is a need for a variable to be common to\
+    \ all object of some java class, then it is supposed to be static variables(class\
+    \ variables). All instances share the same copy of the variable. Static variables\
+    \ are initialized only once.\n\nLike static variables, static methods belong to\
+    \ class, not and object. Static method is called by class name. It is time so\
+    \ see some examples of static. Create `StaticClass` which will include this fields:\n\
+    \n```java\nint val = 3;\nstatic int val2 = 4;\n\nstatic void changeValue() {\n\
+    \    val2 = 6;\n    System.out.println(val2);\n}\n\nstatic void print() {\n  \
+    \  System.out.println(\"Static method calling!\");\n}\n```\n"
+  raw: '![](images/00014.jpeg)
+
+
+    b = a;
+
+
+    ![](images/00015.jpeg)
+
+
+    Operator= is only coping a reference, not object.
+
+
+    ## Constructors
+
+
+    Constructor is used to initialize object. Constructor is automatically called
+    by creation of object and must have same name as class. There is a two type of
+    constructors:
+
+
+    *   Default constructor (no-arg constructor)
+
+
+    For our coding we need new class Studentwith main method. Inside that method create
+    new Student object like this:
+
+
+    Student stud = newStudent();
+
+
+    Constructors are special methods, so we are creating them outside main method:
+
+
+    Student() {
+
+
+    }
+
+
+    Note: If default constructor is not created, compiler will do that by default.
+    To be sure that constructor is called let`s leave some massage inside him and
+    run program:
+
+
+    Student() {
+
+
+    System.out.println("Student is created!");
+
+
+    }
+
+
+    expected: Student is created!  will be printed to console
+
+
+    *   Parameterized constructor
+
+
+    For this purpose, we need class Professor (without main method) and class Faculty
+    (with main method). Class Professor will contain attributes and method along with
+    parameterized constructor:
+
+
+    String name;
+
+
+    intage;
+
+
+    String city;
+
+
+    Professor(String n, inta, String c) {
+
+
+    this.name = n;
+
+
+    this.age = a;
+
+
+    this.city = c;
+
+
+    }
+
+
+    void print() {
+
+
+    System.out.println(name + " " + age + " " + city);
+
+
+    }
+
+
+    Note: this keyword means that we are referring to current object. Current object
+    is object in class which we are using.
+
+
+    Now we want to make this functional. Do you remember when method and constructor
+    are called? By creation of object, for sure. So, let`s do that in
+
+
+    Faculty class and run program:
+
+
+    Professor prof = newProfessor("Ivan", 35, "Moscow");
+
+
+    prof.print();
+
+
+    expected: Ivan 35 Moscow  will be printed to console
+
+
+    On this example is clearly shown usage of parameterized constructor. Try to delete
+    parameters from Professor object. It will make some error: The constructor Professor()
+    is undefined
+
+
+    ### Methods
+
+
+    modifierreturn_type name (parameters) {
+
+
+    body
+
+
+    }
+
+
+    return
+
+
+    We already covered methods and learned how to write most of them. But, not all
+    methods are the same. For this we need Area class with main method. First method
+    with return keyword will be explained:
+
+
+    publicstaticint countArea(intwidth, intheight) {
+
+
+    returnwidth * height;
+
+
+    }
+
+
+    public static – modifier, what will be explained a bit latter
+
+
+    int – return type
+
+
+    This method need to be called somehow. In this case, we are aiming to print out
+    result of width * height. To do that, println will help us, so this code will
+    be put inside main method:
+
+
+    System.out.println(countArea(3, 5));
+
+
+    expected: 15  will be printed to console
+
+
+    ### Void
+
+
+    As we saw, methods that have return keyword return some value. That value could
+    be later on used for some operation. But what if we don`t want to return anything.
+    Just to print any massage or something like that. How to make that method? We
+    need class VoidMethods with main method implemented. Our method will check input
+    and based on that condition will print relevant result. Try to make it on your
+    own, it you got stuck see this code:
+
+
+    staticvoid seasonOfYear(String s) {
+
+
+    if(s == "Spring") {
+
+
+    System.out.println("It is spring!");
+
+
+    } elseif (s == "Summer") {
+
+
+    System.out.println("It is summer!");
+
+
+    } elseif (s == "Autumn") {
+
+
+    System.out.println("It is autumn!");
+
+
+    } elseif (s == "Winter") {
+
+
+    System.out.println("It is winter!");
+
+
+    } else {
+
+
+    System.out.println("You made mistake, sorry");
+
+
+    }
+
+
+    }
+
+
+    It is not hard to figure out that we have String parameter which is used based
+    on input when method is called. So to do that, inside our main method we need
+    to call seasonOfYear(String s) method:
+
+
+    seasonOfYear("Summer");
+
+
+    expected: Summer  will be printed to console
+
+
+    # Chapter 6. Access Modifiers
+
+
+    public – visible for all classes
+
+
+    protected – visible within package and subclasses.
+
+
+    private – visible only within class
+
+
+    default (friendly) – when there is no modifier, it is treated as default and visible
+    within package
+
+
+    From this we can conclude that our method, for example, that is public is accessible
+    in whole project. But what is with other modifiers? How to handle them? Now we
+    will see one example with private modifier.
+
+
+    First add two classes PrivateClass and TestClass (with main method). In first
+    class we are creating one simple method that will be called:
+
+
+    privatevoidmethodOne() {
+
+
+    System.out.println("Method is called!");
+
+
+    }
+
+
+    In second class to call this method we first need object. In this case we will
+    create object of PrivateClass class, just like this:
+
+
+    PrivateClass pc = newPrivateClass();
+
+
+    pc.methodOne();
+
+
+    It complains: The method methodOne() from the type PrivateClass is not visible
+
+
+    This is just what we said. Our method is private, so it is visible(accessible)
+    only within class. We can`t reach that method from another class. To solve this
+    click on error and change visibility of ‘methodOne()’ to ‘package’. Our method
+    should now looks like this:
+
+
+    void methodOne() {
+
+
+    System.out.println("Method is called!");
+
+
+    }
+
+
+    This is default modifier. What will happen if we change modifier to public?
+
+
+    publicvoid methodOne() {
+
+
+    System.out.println("Method is called!");
+
+
+    }
+
+
+    Nothing. Public methods are accessible from whole out project. Change now modifier
+    to protected.
+
+
+    protectedvoid methodOne() {
+
+
+    System.out.println("Method is called!");
+
+
+    }
+
+
+    Same again. Protected method is accessible within package.
+
+
+    ## this
+
+
+    In one of our previous section, Constructors, if you remember this keyword was
+    used. We had a few attributes like name, age and city and based on them constructor
+    of class Professor with input parameters was constructed.
+
+
+    this.name = n;this is a reference to the current object — the object whose method
+    or constructor is being called. So this refers to name attribute (attributes name,
+    age and city belong to Professor prof = newProfessor();, static fields belong
+    to class what we will discuss). Parameters in constructor String n, inta, String
+    creserve some memory space and they need to be exactly type like attributes (String,
+    int).
+
+
+    Primitive types are not only that could be parameters in constructors or methods.
+    It is also possible to place object as parameter. We need class Person and TestPerson
+    (with main). In our first class we will create constructor with parameters, attributes
+    of person and method which will print our attributes. Let`s see example:
+
+
+    String name;
+
+
+    intage;
+
+
+    Person(String n, inta) {
+
+
+    this.name = n;
+
+
+    this.age = a;
+
+
+    }
+
+
+    void printMyName(Person p) {
+
+
+    String myNameAge = p.name + " " + p.age;
+
+
+    System.out.println("My name and age are: " + myNameAge);
+
+
+    }
+
+
+    As it is mentioned, object is passed as argument. Our method refers to name and
+    age attributes using p reference of Person object. myNameAge is String whose stores
+    that value and later on is printed to console.
+
+
+    Person person = newPerson("Name", 27);
+
+
+    person.printMyName(person);
+
+
+    expected: My name and age are: Name 27
+
+
+    To call our method we need object with parameters just like in Person class. This
+    code is supposed to be inside TestPerson class (in main method).
+
+
+    # Chapter 7. Static
+
+
+    All attributes and methods that we covered belong to some object, except one.
+    Do you remember seasonOfYear() method? What was difference? Of course method has
+    static modifier, but what does it means? Is there any object whose is used for
+    call of this method? No. So, static fields and methods belong to class, not an
+    object.
+
+
+    If there is a need for a variable to be common to all object of some java class,
+    then it is supposed to be static variables(class variables).All instances share
+    the same copy of the variable. Static variables are initialized only once.
+
+
+    Like static variables, static methods belong to class, not and object. Static
+    method is called by class name. It is time so see some examples of static. Create
+    StaticClass which will include this fields:
+
+
+    intval = 3;
+
+
+    staticintval2 = 4;
+
+
+    staticvoid changeValue() {
+
+
+    val2 = 6;
+
+
+    System.out.println(val2);
+
+
+    }
+
+
+    staticvoid print() {
+
+
+    System.out.println("Static method calling!");
+
+
+    }'
+  toc: []
+  trans: "\n\n![](img/00014.jpeg)\n\n```\nb = a;\n```\n\n![](img/00015.jpeg)\n\n`Operator=`\
+    \ 只是复制引用，而不是对象。\n\n## 构造函数 (Constructors)\n\n构造函数用于初始化对象。构造函数在创建对象时被自动调用，并且名称必须与类名相同。构造函数有两种类型：\n\
+    \n- 默认构造函数（无参构造函数）\n\n对于我们的代码，我们需要一个带有 `main` 方法的新类 `Student`。在该方法内部，像这样创建一个新的\
+    \ `Student` 对象：\n\n```java\nStudent stud = new Student();\n```\n\n构造函数是特殊方法，所以我们在\
+    \ `main` 方法之外创建它们：\n\n```java\nStudent() {\n\n}\n```\n\n注意：如果没有创建默认构造函数，编译器将默认创建一个。为了确保构造函数被调用，让我们在它内部留一些信息并运行程序：\n\
+    \n```java\nStudent() {\n    System.out.println(\"Student is created!\");\n}\n\
+    ```\n\n预期：控制台将打印 `Student is created!`。\n\n- 参数化构造函数\n\n为了这个目的，我们需要 `Professor`\
+    \ 类（不带 `main` 方法）和 `Faculty` 类（带有 `main` 方法）。`Professor` 类将包含属性、方法以及参数化构造函数：\n\
+    \n```java\nString name;\nint age;\nString city;\n\nProfessor(String n, int a,\
+    \ String c) {\n    this.name = n;\n    this.age = a;\n    this.city = c;\n}\n\n\
+    void print() {\n    System.out.println(name + \" \" + age + \" \" + city);\n}\n\
+    ```\n\n注意：`this` 关键字意味着我们在引用当前对象。当前对象是我们正在使用的类中的对象。\n\n现在我们想让它运行起来。你记得方法和构造函数什么时候被调用吗？当然是在创建对象时。所以在\
+    \ `Faculty` 类中这样做并运行程序：\n\n```java\nProfessor prof = new Professor(\"Ivan\", 35,\
+    \ \"Moscow\");\nprof.print();\n```\n\n预期：控制台将打印 `Ivan 35 Moscow`。\n\n这个示例地展示了参数化构造函数的用法。尝试删除\
+    \ `Professor` 对象的参数。这会导致某些错误：构造函数 `Professor()` 未定义。\n\n### 方法 (Methods)\n\n```\n\
+    modifier return_type name (parameters) {\n    body\n}\nreturn\n```\n\n我们已经涵盖了方法并学会了如何编写大部分方法。但并不是所有方法都是相同的。对于这一点，我们需要一个带有\
+    \ `main` 方法的 `Area` 类。首先解释带有 `return` 关键字的方法：\n\n```java\npublic static int countArea(int\
+    \ width, int height) {\n    return width * height;\n}\n```\n\n`public static`\
+    \ – 修饰符，稍后会解释。\n`int` – 返回类型。\n\n这个方法需要被调用。在这种情况下，我们的目标是打印 `width * height` 的结果。为了做到，`println`\
+    \ 将帮助我们，所以这段代码将放在 `main` 方法内部：\n\n```java\nSystem.out.println(countArea(3, 5));\n\
+    ```\n\n预期：控制台将打印 `15`。\n\n### Void\n\n正如我们看到的，带有 `return` 关键字的方法会返回某个值。该值以后可以用于某些操作。但如果我们不想返回任何内容呢？只是为了打印任何消息或类似的内容。如何制作这种方法？我们需要一个实现了\
+    \ `main` 方法的 `VoidMethods` 类。我们的方法将检查输入并根据该条件打印相关结果。尝试自己制作，如果你卡住了，请看这段代码：\n\n\
+    ```java\nstatic void seasonOfYear(String s) {\n    if(s == \"Spring\") {\n   \
+    \     System.out.println(\"It is spring!\");\n    } else if (s == \"Summer\")\
+    \ {\n        System.out.println(\"It is summer!\");\n    } else if (s == \"Autumn\"\
+    ) {\n        System.out.println(\"It is autumn!\");\n    } else if (s == \"Winter\"\
+    ) {\n        System.out.println(\"It is winter!\");\n    } else {\n        System.out.println(\"\
+    You made mistake, sorry\");\n    }\n}\n```\n\n并不难发现我们有一个 `String` 参数，它在方法被调用时根据输入被。因此，在我们的\
+    \ `main` 方法内部，我们需要调用 `seasonOfYear(String s)` 方法：\n\n```java\nseasonOfYear(\"\
+    Summer\");\n```\n\n预期：控制台将打印 `Summer`。\n\n# 第 6 章 访问修饰符 (Access Modifiers)\n\n\
+    - `public` – 对所有类可见\n- `protected` – 在包和子类内可见\n- `private` – 仅在类内部可见\n- `default`\
+    \ (默认) – 当没有修饰符时，被视为默认，并在包内可见\n\n从这里我们可以得出，我们的方法（例如 `public` 方法）在整个项目中是可以访问的。但其他修饰符呢？如何处理它们？现在我们将看一个\
+    \ `private` 修饰符的示例。\n\n首先添加两个类 `PrivateClass` 和 `TestClass`（带有 `main` 方法）。在第一个类中，我们创建一个会被调用的简单方法：\n\
+    \n```java\nprivate void methodOne() {\n    System.out.println(\"Method is called!\"\
+    );\n}\n```\n\n在第二个类中调用此方法首先需要一个对象。在这种情况下，我们将创建一个 `PrivateClass` 类的对象，就像这样：\n\n\
+    ```java\nPrivateClass pc = new PrivateClass();\npc.methodOne();\n```\n\n报错：类型\
+    \ `PrivateClass` 的方法 `methodOne()` 不可见。\n\n这就是我们所说的。方法是私有的，所以只在类内部可见。我们无法从另一个类访问它。要解决这个问题，点击错误并将\
+    \ `methodOne()` 的可见性改为 `package`：\n\n```java\nvoid methodOne() {\n    System.out.println(\"\
+    Method is called!\");\n}\n```\n\n这是 `default` 修饰符。如果我们将其改为 `public` 会发生什么？\n\n\
+    ```java\npublic void methodOne() {\n    System.out.println(\"Method is called!\"\
+    );\n}\n```\n\n没有变化。公共方法在整个项目中都是可见的。现在改为 `protected`。\n\n```java\nprotected void\
+    \ methodOne() {\n    System.out.println(\"Method is called!\");\n}\n```\n\n一样。保护方法在包内可见。\n\
+    \n## this\n\n在我们之前的章节“构造函数”中，如果你记得 `this` 关键字被使用了。我们有几个属性 name、age 和 city。`this.name\
+    \ = n;` `this.age = a;` `this.city = c;` `static` 字段属于类 `prof = new Professor();`\
+    \ 静态字段属于我们将讨论的类。\n\n# 第 7 章 静态 (Static)\n\n我们涵盖的所有属性和方法都属于某个对象，例外。你记得 `seasonOfYear()`\
+    \ 方法吗？区别在哪里？当然，方法带有 `static` 修饰符，但这意味着什么？是否有任何对象被调用该方法？没有。所以，静态字段和方法属于类，而不是对象。\n\
+    \n如果一个变量需要被 Java 类的所有对象共用，那么它应该是静态变量（类变量）。所有实例共享同一个变量副本。静态变量只初始化一次。\n\n就像静态变量一样，静态方法属于类而不是对象。静态方法通过类名调用。是时候看一些静态的示例了。创建一个\
+    \ `StaticClass`，它将包含这些字段：\n\n```java\nint val = 3;\nstatic int val2 = 4;\n\nstatic\
+    \ void changeValue() {\n    val2 = 6;\n    System.out.println(val2);\n}\n\nstatic\
+    \ void print() {\n    System.out.println(\"Static method calling!\");\n}\n```\n\
+    \n"
+- fmt: "\nSo, in our main method we will call static methods:\n\n```\nStaticClass.print();\n\
+    StaticClass.changeValue();\n```\n\nexpected: Static method calling! Will be printed\
+    \ to console 6\n\nLet`s now change `val2` to `val` inside `changeValue()` method.\
+    \ What will happen? It is complaining: `Cannot make a static reference to the\
+    \ non-static field `val`. It is because static method can only access static fields.\
+    \ There is also another way for calling static methods, result will be same:\n\
+    \n```\nprint();\nchangeValue();\n```\n\nNow when we covered everything that is\
+    \ needed, our famous `main` method can be explained in total.\n\n- `public` –\
+    \ method is visible in whole project.\n- `static` – method belong to class. Reason\
+    \ why `main` is static is because it can be ambiguity, compile doesn`t know which\
+    \ constructor to call.\n- `void` – method doesn`t return any value.\n\nOk, let`s\
+    \ see now one very interesting example:\n\n```\nstatic{\n    System.out.println(\"\
+    static\");\n}\n\npublicstaticvoid main(String[] args) {\n    System.out.println(\"\
+    main\");\n}\n```\n\nexpected: static will be printed to console\nmain\n\nHow this\
+    \ happens? Aren`t we said that methods are executing in main method? This is called\
+    \ static block. Static block will be executed when a class is first loaded into\
+    \ the [JVM](https://crunchify.com/how-to-change-jvm-heap-setting-xms-xmx-of-tomcat/),\
+    \ even before main method.\n\nOutput of this program will be random number from\
+    \ 0 to 1:\n\n```\nSystem.out.println(\"Random number: \" + Math.random());\n```\n\
+    \nBut, how is this working? Just like `System.out.println();`.\n\n`java.lang.System`\n\
+    \n`java.land.Math`\n\nBoth classes have their static methods that can be called.\
+    \ They don`t need object so it is simplified. So, methods that we already commonly\
+    \ used, `out()`, is static method from class `System`, on which class name is\
+    \ called. It is same with `random()` method from `Math` class. Try to use other\
+    \ methods like this:\n\n```\nint a = 4;\nint b = 2;\ndouble c = 2.4;\nSystem.out.println(\"\
+    Minimum is: \" + Math.min(a, b));\nSystem.out.println(\"Maximum is: \" + Math.max(a,\
+    \ b));\nSystem.out.println(\"Pow of c is: \" + Math.round(c));\n```\n\n# Chapter\
+    \ 8. Collections\n\nCollections are used to store and manipulate the group of\
+    \ objects. Here is shown hierarchy of Collection classes and interfaces. We will\
+    \ cover ones that are commonly used.\n\n![](images/00016.jpeg)\n\nArrays have\
+    \ one disadvantage. Ones they are create, it is impossible to change their size.\
+    \ This problem are solving Collections.\n\n- `List` – list of objects which is\
+    \ ordered. Objects are accessible by index. It is possible to have two same objects.\n\
+    - `Queue` – is ordered just like List, difference is that new elements are added\
+    \ at the end and removed from the beginning from the queue.\n- `Set` – all elements\
+    \ are unique.\n- `Map` – is not type of Collection interface. Elements are mapped\
+    \ by key/value.\n\nMost of this Collections are located in `java.util` package.\n\
+    \nCommon methods for all Collections are:\n- Adding elements\n- Removing elements\n\
+    - Iteration through elements\n\nOnce we cover a few Collections it would be easier\
+    \ to look at JavaDoc and figure out how rest of them works. For now we will focus\
+    \ on `List` and `Map`, it is biggest chance to have need for them. `Queue` and\
+    \ `Set` are not that usually used, but from experience with this both it would\
+    \ be easy to handle them. Also, don`t get confused, interfaces are covered in\
+    \ one of next sections.\n\n### ArrayList\n\n`ArrayList` represents dynamic Collection.\
+    \ Methods for manipulating elements are:\n\n- `add()` – for adding element to\
+    \ `ArrayList`\n- `remove()` – for removing elements from `ArrayList`\n- `get()`\
+    \ – for getting elements from `ArrayList`\n\nIt is time to see some example of\
+    \ `ArrayList`. So, let`s create a new package `third.pack` and class `Array` inside.\n\
+    \n```\nArrayList<Integer> ar = new ArrayList<Integer>();\nar.add(1);\nar.add(2);\n\
+    ar.add(3);\nSystem.out.println(\"Size of ArrayList is: \" + ar.size());\nar.remove(0);\n\
+    int num = ar.get(0);\nSystem.out.println(num);\nSystem.out.println(\"New size\
+    \ of ArrayList is: \" + ar.size());\n```\n\nexpected: Size of ArrayList is: 3\
+    \ will be printed to console\n2\nNew size of ArrayList is: 2\n\nSo, in our code\
+    \ is used everything that is mentioned about `ArrayList`. First it is declared.\
+    \ We said that arrays have one big disadvantage, they are not supposed to change\
+    \ they size. But as you can see, our `ArrayList` is dynamic, three elements are\
+    \ added(Size of ArrayList is: 3). Compiler count elements from 0, so `1 = 0`,\
+    \ `2 = 1`, `3 = 2`. It is important to remember that because of manipulation of\
+    \ elements. Another operation is removing first element from our array. Variable\
+    \ `num` holds, by `get(0)` method, first element and `println` print it to console(2).\
+    \ Also, size is not anymore 3, it I s now 2.\n\nWhat if we have bigger `ArrayList`\
+    \ and we want to print all values? For loop is solution, of course:\n\n```java\n\
+    for (int counter = 0; counter < ar.size(); counter++) {\n    System.out.println(ar.get(counter));\n\
+    }\n```\n\n```java\nfor (Integer n : ar) {\n    System.out.println(n);\n}\n```\n\
+    \n### HashMap\n\nAs you could see, `Map` is not derived from `Collection` interface\
+    \ and it behaves a bit different. Methods for manipulations are:\n\n- `put()`\
+    \ - key and value added\n- `get()` - value is found\n\nMake new class and start\
+    \ on example:\n\n```java\nHashMap<Integer, String> hm = new HashMap<Integer, String>();\n\
+    hm.put(1, \"numOne\");\nhm.put(2, \"numTwo\");\nhm.put(3, \"numThree\");\nSystem.out.println(\"\
+    Print me value of key 1: \" + hm.get(1));\n```\n\nexpected: Print me value of\
+    \ key 1: numOne\n\n`Map` is not ordered, that means it does not return the keys\
+    \ in the same order in which have been inserted. `HashMap` allows one key and\
+    \ any number of values.\n\nNow let`s discus about something. In our examples of\
+    \ both `ArrayList` and `HashMap`, we saw somothing like: `<Integer>`, `<Integer,\
+    \ String>`. When any Collection contains this classes, they are called Generics.\
+    \ What does it mean? Well, try to add this code in `Map`:\n\n```java\nhm.put(\"\
+    four\", \"numFour\");\n```\n\nCompailer complains. It is because we declared our\
+    \ keys as integers(`Integer` wrapper class), `\"four\"` is String. Same is with\
+    \ `ArrayList`:\n\n```java\nar.add(\"four\");\n```\n\nIn `ArrayList` only integers\
+    \ are allowed.\n\n`Enum` is special type of collection. It is collection of constants.\
+    \ `Enum` will be useful for our later work, for now this is enough to know.\n\n\
+    ```java\npublic enum Person {\n    name,\n    age,\n    city\n}\n```\n\n# Exception\
+    \ Handling\n\nHandling exceptions when they occur is very important part of Java\
+    \ programing. Imagine that you don`t have mechanism for dealing with run time\
+    \ errors. What will happen? Who knows. But for sure most of projects would fail.\
+    \ So, let`s get start on this.\n\nClassification of exceptions is based on compile-time\
+    \ checking of exceptions.\n\n- `compile-time`: time while you type your code.\
+    \ For example: if you remember cases with `ArrayList` and `Map` when we had problems\
+    \ because compailer complained.\n- `run-time`: time when you run your program/project.\n\
+    \nLet`s on one common example how `try/catch` block works:\n\n```java\ntry {\n\
+    \    int num = 2 / 0;\n} catch (ArithmeticException e) {\n    System.out.println(\"\
+    Error: Don't divide a number by zero\");\n}\nSystem.out.println(\"Out of try/catch\"\
+    );\n```\n\nexpected: Error: Don't divide a number by zero will be printed to console\n\
+    Out of try/catch\n\nTry to instead of 0 type 1. Error won`t occurs. In “real life”\
+    \ handling exceptions is much complex than this. But for beginning it is important\
+    \ to figure out difference between exceptions and why we need to catch them.\n\
+    \nUnchecked exceptions: don`t need to be caught because they can be removed while\
+    \ coding. Examples: `NullPointerException`, `IndexOutOfBoundsException`, `ArithmeticException`.\n"
+  raw: 'So, in our main method we will call static methods:
+
+
+    StaticClass.print();
+
+
+    StaticClass.changeValue();
+
+
+    expected: Static method calling!  Will be printed to console
+
+
+    6
+
+
+    Let`s now change val2to valinside changeValue() method. What will happen? It is
+    complaining: Cannot make a static reference to the non-static field val. It is
+    because static method can only access static fields. There is also another way
+    for calling static methods, result will be same:
+
+
+    print();
+
+
+    changeValue();
+
+
+    Now when we covered everything that is needed, our famous main method can be explained
+    in total.
+
+
+    public – method is visible in whole project.
+
+
+    static – method belong to class. Reason why main is static is because it can be
+    ambiguity, compile doesn`t know which constructor to call.
+
+
+    void – method doesn`t return any value.
+
+
+    Ok, let`s see now one very interesting example:
+
+
+    static{
+
+
+    System.out.println("static");
+
+
+    }
+
+
+    publicstaticvoid main(String[] args) {
+
+
+    System.out.println("main");             
+
+
+    }
+
+
+    expected: static     will be printed to console
+
+
+    main
+
+
+    How this happens? Aren`t we said that methods are executing in main method? This
+    is called static block. Static block will be executed when a class is first loaded
+    into the [JVM](https://crunchify.com/how-to-change-jvm-heap-setting-xms-xmx-of-tomcat/),
+    even before main method.
+
+
+    Output of this program will be random number from 0 to 1:
+
+
+    System.out.println("Random number: " + Math.random());
+
+
+    But, how is this working? Just like System.out.println();
+
+
+    java.lang.System
+
+
+    java.land.Math
+
+
+    Both classes have their static methods that can be called. They don`t need object
+    so it is simplified. So, methods that we already commonly used, out(), is static
+    method from class System, on which class name is called. It is same with random()
+    method from Math class. Try to use other methods like this:
+
+
+    inta = 4;
+
+
+    intb = 2;
+
+
+    doublec = 2.4;
+
+
+    System.out.println("Minimum is: " + Math.min(a, b));
+
+
+    System.out.println("Maximum is: " + Math.max(a, b));
+
+
+    System.out.println("Pow of c is: " + Math.round(c));
+
+
+    # Chapter 8. Collections
+
+
+    Collections are used to store and manipulate the group of objects. Here is shown
+    hierarchy of Collection classes and interfaces. We will cover ones that are commonly
+    used.
+
+
+    ![](images/00016.jpeg)
+
+
+    Arrays have one disadvantage. Ones they are create, it is impossible to change
+    their size. This problem are solving Collections.
+
+
+    List–  list of objects which is ordered. Objects are accessible by index. It is
+    possible to have two same objects.
+
+
+    Queue – is ordered just like List, difference is that new elements are added at
+    the end and removed from the beginning from the queue.
+
+
+    Set–all elements are unique.
+
+
+    Map–is not type of Collection interface. Elements are mapped by key/value.
+
+
+    Most of this Collections are located in java.util package.
+
+
+    Common methods for all Collections are:
+
+
+    *   Adding elements
+
+
+    *   Removing elements
+
+
+    *   Iteration through elements
+
+
+    Once we cover a few Collections it would be easier to look at JavaDoc and figure
+    out how rest of them works. For now we will focus on List and Map, it is biggest
+    chance to have need for them. Queue and Set are not that usually used, but from
+    experience with this both it would be easy to handle them. Also, don`t get confused,
+    interfaces are covered in one of next sections.
+
+
+    *   ArrayList
+
+
+    ArrayList represents dynamic Collection. Methods for manipulating elements are:
+
+
+    *   add() – for adding element to ArrayList
+
+
+    *   remove() – for removing elements from ArrayList
+
+
+    *   get() – for getting elements from ArrayList
+
+
+    It is time to see some example of ArrayList. So, let`s create a new package third.pack
+    and class Array inside.
+
+
+    ArrayList<Integer>ar = new ArrayList<Integer>();
+
+
+    ar.add(1);
+
+
+    ar.add(2);
+
+
+    ar.add(3);
+
+
+    System.out.println("Size of ArrayList is: " + ar.size());
+
+
+    ar.remove(0);
+
+
+    intnum = ar.get(0);
+
+
+    System.out.println(num);
+
+
+    System.out.println("New size of ArrayList is: " + ar.size());
+
+
+    expected: Size of ArrayList is: 3      will be printed to console
+
+
+    2 
+
+
+    New size of ArrayList is: 2
+
+
+    So, in our code is used everything that is mentioned about ArrayList. First it
+    is declared. We said that arrays have one big disadvantage, they are not supposed
+    to change they size. But as you can see, our ArrayList is dynamic, three elements
+    are added(Size of ArrayList is: 3). Compiler count elements from 0, so 1 = 0,
+    2 = 1, 3 = 2\. It is important to remember that because of manipulation of elements.
+    Another operation is removing first element from our array. Variable num holds,
+    by get(0) method, first element and println print it to console(2). Also, size
+    is not anymore 3, it I s now 2\.
+
+
+    What if we have bigger ArrayList and we want to print all values? For loop is
+    solution, of course:
+
+
+    for (intcounter = 0; counter<ar.size(); counter++) {                            
+
+
+    System.out.println(ar.get(counter));                            
+
+
+    }//for loop
+
+
+    for (Integer n : ar) {
+
+
+    System.out.println(n);
+
+
+    }//for each loop, same result
+
+
+    *   HashMap
+
+
+    As you could see, Map is not derived from Collection interface and it behaves
+    a bit different. Elements are added in Map with theirkey, which need to be unique.
+    Advantage of this approach is that is fast to find elements by their key. Methods
+    for manipulations are:
+
+
+    *   put() – key and value are put to HashMap.
+
+
+    *   get()  - value is founded based on key, if there is no values null will be
+    returned.
+
+
+    Make new class Map and start on another example:
+
+
+    HashMap<Integer, String>hm = new HashMap<Integer, String>();
+
+
+    hm.put(1, "numOne");
+
+
+    hm.put(2, "numTwo");
+
+
+    hm.put(3, "numThree");
+
+
+    System.out.println("Print me value of key 1: " + hm.get(1));
+
+
+    expected: Print me value of key 1: numOne   will be printed to console
+
+
+    Map is not ordered Collection, that means it does not return the keys and values
+    in the same order in which they have been inserted to the HashMap. HashMap allows
+    one null key and any number of null values.
+
+
+    Now let`s discus about something. In our examples of both, ArrayList and HashMap,
+    we saw somothing like this: <Integer> ,<Integer, String>. When any Collection
+    contains this classes, they are called Generics. What does it mean? Well, try
+    to add this code in Map class:
+
+
+    hm.put("four", "numFour");
+
+
+    Compailer complains. It is because we declared our keys as integers(Integer wrapper
+    class), "four"is String. Same is with ArrayList:
+
+
+    ar.add("four");
+
+
+    In our ArrayList only integers are allowed.
+
+
+    Enum is special type of collection. It is collection of constants. Enum will be
+    useful for our later work, for now this is enough to know.
+
+
+    publicenum Person {
+
+
+    name,
+
+
+    age,
+
+
+    city
+
+
+    }
+
+
+    ## Exception Handling
+
+
+    Handling exceptions when they occur is very important part of Java programing.
+    Imagine that you don`t have mechanism for dealing with run time errors. What will
+    happen? Who knows. But for sure most of projects would fail. So, let`s get start
+    on this. 
+
+
+    would fail. So, let`s get start on this. 
+
+
+    ![](images/00017.jpeg)
+
+
+    Classification of exceptions is based on compile-time checking of exceptions.
+
+
+    Note: compile-time– time while you type your code. For example: if you remember
+    cases with ArrayList and Map when we had problems because compailer complained.
+
+
+    run-time – time when you run your program/project.
+
+
+    Let`s on one common example how try/catch block works:
+
+
+    try {
+
+
+    intnum = 2 / 0;
+
+
+    } catch (ArithmeticException e) {
+
+
+    System.out.println("Error: Don''t divide a number by zero");
+
+
+    }
+
+
+    System.out.println("Out of try/catch");
+
+
+    expected:  Error: Don''t divide a number by zero  will be printed to console
+
+
+    Out of try/catch
+
+
+    Try to instead of 0 type 1\. Error won`t occurs. In “real life” handling exceptions
+    is much complex than this. But for beginning it is important to figure out difference
+    between exceptions and why we need to catch them.
+
+
+    Unchecked exceptions: don`t need to be caught because they can be removed while
+    coding. Examples: NullPointerException. IndexOutOfBoundsException, ArithmeticException.'
+  toc: []
+  trans: "\n所以，在我们的 `main` 方法中我们将调用静态方法：\n\n```\nStaticClass.print();\nStaticClass.changeValue();\n\
+    ```\n\n预期：静态方法调用！将打印到控制台 6\n\n现在让我们在 `changeValue()` 方法内部将 `val2` 改为 `val`。会发生什么？它报错了：`Cannot\
+    \ make a static reference to the non-static field `val`。这是因为静态方法只能访问静态字段。调用静态方法还有另一种方法，结果是一致的：\n\
+    \n```\nprint();\nchangeValue();\n```\n\n现在我们已经涵盖了所有需要的内容，就可以对我们著名的 `main` 方法进行总的解释了。\n\
+    \n- `public` – 方法在整个项目中可见的。\n- `static` – 方法属于类。`main` 是静态的，因为它可能会产生歧义，编译器不知道该调用哪个构造函数。\n\
+    - `void` – 方法不返回任何值。\n\n好了，现在让我们来看一个非常有趣的例子：\n\n```\nstatic{\n    System.out.println(\"\
+    static\");\n}\n\npublicstaticvoid main(String[] args) {\n    System.out.println(\"\
+    main\");\n}\n```\n\n预期：static 将打印到控制台\nmain\n\n这是如何发生的？我们不是说方法是在 `main` 方法中执行的吗？这被称为静态块（static\
+    \ block）。当类首次被加载到 [JVM](https://crunchify.com/how-to-change-jvm-heap-setting-xms-xmx-of-tomcat/)\
+    \ 时，静态块会在 main 方法之前执行。\n\n这个程序的输出将是 0 到 1 之间的随机数：\n\n```\nSystem.out.println(\"\
+    Random number: \" + Math.random());\n```\n\n但是，它是如何工作的？就像 `System.out.println();`\
+    \ 一样。\n\n`java.lang.System`\n\n`java.land.Math`\n\n这两个类都有可以调用的静态方法。它们不需要对象，所以更加简单。因此，我们已经常用的使用的方法\
+    \ `out()` 是来自 `System` 类的静态方法，通过该类名进行调用。这与 `Math` 类中的 `random()` 方法是一样的。尝试使用其他这样的方法：\n\
+    \n```\nint a = 4;\nint b = 2;\ndouble c = 2.4;\nSystem.out.println(\"Minimum is:\
+    \ \" + Math.min(a, b));\nSystem.out.println(\"Maximum is: \" + Math.max(a, b));\n\
+    System.out.println(\"Pow of c is: \" + Math.round(c));\n```\n\n# 第 8 章 集合 (Collections)\n\
+    \n集合用于存储和操作一组对象。这里展示了 Collection 类和接口的层级结构。我们将涵盖常用的部分。\n\n![](img/00016.jpeg)\n\
+    \n数组（Arrays）有一个缺点。一旦创建，就无法更改它们的大小。这个问题通过集合（Collections）得到了解决。\n\n- `List` – 有序的对象列表。可以通过索引访问对象。可以有两个相同的对象。\n\
+    - `Queue` – 像 List 一样是有序的，区别是新元素添加到队列末尾，并从队列头部移除。\n- `Set` – 所有元素都是唯一的。\n- `Map`\
+    \ – 不是 Collection 接口的一种。元素通过键/值（key/value）映射。\n\n大部分集合位于 `java.util` 包中。\n\n所有集合的常用方法有：\n\
+    - 添加元素\n- 移除元素\n- 遍历元素\n\n一旦我们涵盖了几个集合，查看 JavaDoc 并弄懂其余集合是如何运作的就会变得更容易。现在我们将关注\
+    \ `List` 和 `Map`，它们最可能被需要。`Queue` 和 `Set` 并不那么常用，但根据对这二者的经验，将很容易处理它们。此外，不要困惑，接口将在接下来的章节中被涵盖。\n\
+    \n### ArrayList\n\n`ArrayList` 代表动态集合。操作元素的方法有：\n\n- `add()` – 用于向 `ArrayList`\
+    \ 添加元素\n- `remove()` – 用于从 `ArrayList` 移除元素\n- `get()` – 用于从 `ArrayList` 获取\n\n\
+    是时候看一些 `ArrayList` 的示例了。那么，让我们创建一个新的包 `third.pack` 并在里面创建一个类 `Array`。\n\n```\n\
+    ArrayList<Integer> ar = new ArrayList<Integer>();\nar.add(1);\nar.add(2);\nar.add(3);\n\
+    System.out.println(\"Size of ArrayList is: \" + ar.size());\nar.remove(0);\nint\
+    \ num = ar.get(0);\nSystem.out.println(num);\nSystem.out.println(\"New size of\
+    \ ArrayList is: \" + ar.size());\n```\n\n预期：Size of ArrayList is: 3 将打印到控制台\n\
+    2\nNew size of ArrayList is: 2\n\n所以，在我们的代码中使用了所有关于 `ArrayList` 提到的内容。首先是声明它。我们说过数组有一个很大的缺点，它们不应该改变大小。但如你所见，我们的\
+    \ `ArrayList` 是动态的，增加了三个元素（Size of ArrayList is: 3）。编译器从 0 开始计算元素，所以 `1 = 0`，`2\
+    \ = 1`，`3 = 2`。记住这一点很重要，因为涉及到元素的操作。另一个操作是从我们的数组中移除第一个元素。变量 `num` 通过 `get(0)` 方法持有第一个元素，并且\
+    \ `println` 将其打印到控制台（2）。此外，大小不再是 3 了，现在是 2 了。\n\n如果我们有一个更大的 `ArrayList` 并想要打印所有值怎么办？使用\
+    \ `for` 循环：\n\n```java\nfor (int counter = 0; counter < ar.size(); counter++)\
+    \ {\n    System.out.println(ar.get(counter));\n}\n```\n\n```java\nfor (Integer\
+    \ n : ar) {\n    System.out.println(n);\n}\n```\n\n### HashMap\n\n`Map` 派自 `Collection`\
+    \ 接口，它的行为有些不同。操作方法有：\n\n- `put()` – 添加键值对\n- `get()` – 找到值\n\n创建一个类并开始：\n\n```java\n\
+    HashMap<Integer, String> hm = new HashMap<Integer, String>();\nhm.put(1, \"numOne\"\
+    );\nhm.put(2, \"numTwo\");\nhm.put(3, \"numThree\");\nSystem.out.println(\"Print\
+    \ me value of key 1: \" + hm.get(1));\n```\n\n预期：Print me value of key 1: numOne\n\
+    \n`Map` 不是有序的，这意味着它不按照插入顺序返回键。`HashMap` 允许任意的值。\n\n现在让我们讨论一下。在 `ArrayList` 和 `HashMap`\
+    \ 的示例中，我们看到了类似 `<Integer>`, `<Integer, String>` 内容。这些类被称为泛型（Generics）。在 `Map`\
+    \ 中尝试添加这段代码：\n\n```java\nhm.put(\"four\", \"numFour\");\n```\n\n编译器报错。这是因为我们将键声明为整数（`Integer`\
+    \ 包装类），而 `\"four\"` 是字符串。`ArrayList` 也是一样：\n\n```java\nar.add(\"four\");\n```\n\
+    \n`ArrayList` 只允许整数。\n\n`Enum` 是一种特殊的集合。它是常量集合。`Enum` 对我们之后的工作很有用，现在了解这些足够。\n\n\
+    ```java\npublic enum Person {\n    name,\n    age,\n    city\n}\n```\n\n# 异常处理\
+    \ (Exception Handling)\n\n处理发生时的异常是 Java 编程非常重要的一部分。假设你没有处理运行时错误的机制。会发生什么？谁知道呢。但大多数项目将会失败。所以，让我们从这里开始。\n\
+    \n异常的分类基于编译时的检查。\n\n- 编译时：在你编写代码时。例如：如果你还记得 `ArrayList` 和 `Map` 的那些由于编译器报错而产生的问题。\n\
+    - 运行时：在你运行程序/项目时。\n\n让我们来看一个常用的 `try/catch` 块的示例：\n\n```java\ntry {\n    int num\
+    \ = 2 / 0;\n} catch (ArithmeticException e) {\n    System.out.println(\"Error:\
+    \ Don't divide a number by zero\");\n}\nSystem.out.println(\"Out of try/catch\"\
+    );\n```\n\n预期：Error: Don't divide a number by zero 将打印到控制台\nOut of try/catch\n\
+    \n尝试将 0 改为 1。错误不会发生。在“现实生活中”，处理异常比这复杂得多。但对于入门，弄清楚异常之间的区别以及我们需要捕获它们是很重要的。\n\n未检查异常（Unchecked\
+    \ exceptions）：不需要捕获，因为它们在编码时可以被移除。例如：`NullPointerException`、`IndexOutOfBoundsException`、`ArithmeticException`。\n\
+    \n"
+- fmt: "\nChecked exceptions: need to be caught by `try/catch` block. Example: `FileNotFoundException`,\
+    \ `SQLException`.\n\nErrors: indicate some serious problem. Example: `OutOfMemoryError`.\
+    \ We shouldn't try to deal with them.\n\n## Encapsulation\n\nEncapsulation is\
+    \ a term that is connected with access modifiers. Imagine that you have some class\
+    \ with attributes. Everything can work well, but problem may occur in context\
+    \ of insecurity of your data. It is because someone can reach to your class and\
+    \ make changes. So, to make this impossible and to have full control of your data\
+    \ inside class, `getters` and `setters` will help you. To see on example, first\
+    \ make new `fourth.pack` package and `Person` class inside. Our `Person` would\
+    \ have `name` and `age` attributes, which are declared as `private`.\n\n```java\n\
+    private String name;\nprivate int age;\n```\n\nNow we need to open `Source ->\
+    \ Generate Getters and Setters`.\n\nFinal move is to check `name` and `age` fields\
+    \ and press `OK`.\n\nexpected: Getters and Setters will be generated.\n\nSo, as\
+    \ you can see, out attributes remain `private` (accessible only within class)\
+    \ and methods (`getters` and `setters`) that we generated are `public`. We made\
+    \ our class safer.\n\n```java\npublic String getName() {\n    return name;\n}\n\
+    \npublic void setName(String name) {\n    this.name = name;\n}\n```\n\nLook at\
+    \ `getName()` method. If we need our `name` for some reason we will call this\
+    \ method, which return `name`. Our attributes is untouched. Same is with `setName(String\
+    \ name)` method. It changes values of our `name` by referring to it with `this`\
+    \ keyword.\n\n## Abstract Classes\n\nDo you remember that we mentioned classes\
+    \ like `Professor` and `Student`? They are related entities and have some common\
+    \ attributes like `name`, `age` and `city` in our example. So, why to always declare\
+    \ that attributes again and again? Isn't would be easier to have some base class\
+    \ that contains all data, attributes and methods, and to share to all classes\
+    \ whose need them? Of course it would be. Class that does it is called `abstract\
+    \ class`. To make previous class `Professor` abstract, add `abstract` declaration\
+    \ to it's name:\n\n```java\npublic abstract class Person\n```\n\nAbstract class\
+    \ can't be instantiated. Also, if there is at least one abstract method in class,\
+    \ class is automatically abstract. Abstract method is method without implementation\
+    \ and declared `abstract`:\n\n```java\nabstract void run();\n```\n\nNote: Make\
+    \ parameterized constructor for class `Person` that includes mentioned attributes\
+    \ and generate getters and setters. Also don't forget to add `run()` method.\n\
+    \nNow we have our first abstract class. Another step is to make class that will\
+    \ use fields from `Person` class. Let it be class `Student`, again. To make `Person`\
+    \ class usable, we need `extends` declaration:\n\n```java\npublic class Student\
+    \ extends Person\n```\n\nNow our class `Student` extends (shares) all fields with\
+    \ `Person`, but also we can add some specific attributes for `Student`. Beside\
+    \ that, constructor will looks like this now:\n\n```java\nprivate int[] grades;\n\
+    \nStudent(String name, int age) {\n    super(name, age);\n    this.grades = new\
+    \ int[5];\n}\n```\n\nSomething new is here for us. `super` keyword means that\
+    \ our constructor refers to it's superclass. So, we extended `Person` class, which\
+    \ has `name` and `age` attributes. That attributes aren't declared again in class.\
+    \ Also, you can now recognize that there is an array which takes `int` values\
+    \ and size is 5.\n\nNote: you can see that all the time compiler is complaining:\
+    \ The type Student must implement the inherited abstract method Person.run()`.\n\
+    \nThat is because we need also to implement `run()` method from our superclass\
+    \ (`Person`).\n\n```java\n@Override\nvoid run() {\n    System.out.println(\"Student\
+    \ runs!\");\n}\n```\n\nNote: `@Override` declaration means that method is derived\
+    \ from super class. One thing that is very important is that class can only extends\
+    \ one abstract class.\n\n# Chapter 9. Interfaces\n\nInterfaces are not classes.\
+    \ They only contain methods and attributes whose class that implements that interfaces\
+    \ need to have. You can recognize first difference from abstract classes, interfaces\
+    \ are implementing by keyword `implements`, not extending. All methods are implicit\
+    \ `public` and all attributes are implicit `public static final`. Let's now make\
+    \ out first interface by right click on current package `New -> Interface` and\
+    \ name it `House`. We will add following lines:\n\n```java\nString bed = \"My\
+    \ bed\";\nvoid sleep();\n```\n\nSo, as you can see our method `sleep()` don't\
+    \ have implementation. That is because we don't need to know how method must be\
+    \ implemented at this moment. To understand better, imagine that you have interface\
+    \ `Vehicle` with methods like `start()` and `stop()`, and classes which implement\
+    \ that interface like `Car`, `Bicycle` and `Airplane`. At the moment of creation\
+    \ of `Vehicle` interface you only know that you would have some different type\
+    \ in future, that we mentioned, but you actually don't know how they work because\
+    \ all work different. Think in that way about interfaces.\n\nBut, from Java 8,\
+    \ interfaces are changed. Now you can have `default` method:\n\n```java\ndefault\
+    \ void watchTV() {\n    System.out.println(\"I am watching TV\");\n}\n```\n\n\
+    As you can guess, this means that now interfaces are more similar to abstract\
+    \ classes. One thing that is very important is that you can implement multiple\
+    \ interfaces, rather than only one class.\n\nBoth, abstract classes and interfaces\
+    \ use inheritance. Inheritance is type of code reusing. This is very useful because\
+    \ in development you will be in situations where there are some classes with some\
+    \ methods and attributes that you may need. When class is extended and interface\
+    \ implemented, subclass need to override all their methods. Why we told that only\
+    \ one class can be extended?\n\n![](images/00018.jpeg)\n\nClass `A` is super class\
+    \ and class `D` extends both class `B` and class `C` which have method with same\
+    \ signature `doStuff()` but they have different implementation. Which one should\
+    \ compiler choose? Situations like this are reason why creators of Java left out\
+    \ multiple inheritance. This is called a Diamond problem.\n\nNote: Inheritance\
+    \ is – a relationship, `Student` is a `Person`; `Car` is a `Vehicle`.\n\n## Association\
+    \ vs Aggregation vs Composition\n\n![](images/00019.jpeg)\n\nWhen two objects\
+    \ are related to each other they are in association. Both composition and aggregation\
+    \ are types of association.\n\n## Composition\n\nInheritance is not only type\
+    \ of code reusing. Composition is another one, whose is has a relationship between\
+    \ classes. With inheritance, composition is main technique for code reusing. Composition\
+    \ is relationship where part can't exists without whole.\n\n```java\npublic class\
+    \ Thought {\n}\n\npublic class Brain {\n    Thought thought = new Thought();\n\
+    }\n```\n\n`Brain` has a `thought`. `Thought` can't exists without `brain`. Composition\
+    \ has a stronger relationship then aggregation.\n\n## Aggregation\n\nAggregation\
+    \ is weaker relationship then composition. In aggregation one part can exists\
+    \ without main object. For example: `Bed` and `Pillow`. \n\n```java\npublic class\
+    \ Pillow {\n}\n\npublic class Bed {\n    public List<Pillow> pillows = new ArrayList<Pillow>();\n\
+    }\n```\n\n## Overriding vs Overloading\n\n### Overriding\n\nOverriding is a term\
+    \ that we already saw in our examples. If in subclass is method that have same\
+    \ name and same input parameters like method in super class, then we have overriding.\
+    \ Usage of this is to change implementation in our subclasses. Do you remember\
+    \ example with vehicles? When method `start()` is derived to subclass `Car` or\
+    \ `Airplane`, implementation is different. `Car` and `Airplane` have totally different\
+    \ engines.\n\n```java\nvoid start() {\n    System.out.println(\"Starting car engine\"\
+    );\n}\n\nvoid start() {\n    System.out.println(\"Starting airplane engine\");\n\
+    }\n```\n\nNote: Maybe it would be little confusing when it says implementation\
+    \ but inside method body is only `println`. This are only simple examples, in\
+    \ real development there will be some logic and things like that.\n\n### Overloading\n"
+  raw: 'Checked exceptions: need to be caught by try/catch block. Example: FileNotFoundException,
+    SQLException.
+
+
+    Errors: indicate some serious problem. Example: OutOfMemoryError. We shouldn`t
+    try to deal with them.
+
+
+    ## Encapsulation
+
+
+    Encapsulation is term that is connected with access modifiers. Imagine that you
+    have some class with attributes. Everything can work well, but problem may occur
+    in context of insecurity of your data. It is because someone can to reach to your
+    class and make changes. So, to make this impossible and to have full control of
+    your data inside class, getters and setters will help you.  To see on example,
+    first make new fourth.pack package and Person class inside. Our Person would have
+    name and age attributes, which are declared as private.
+
+
+    private String name;
+
+
+    privateintage;
+
+
+    Now we need to open Source ->Generate Getters and Setters
+
+
+    Final move is to check name and age fields and press OK.
+
+
+    expected: Getters and Setters will be generated
+
+
+    So, as you can see, out attributes remain private (accessible only within class)
+    and methods (getters and setters) that we generated are public. We made our class
+    safer.
+
+
+    public String getName() {
+
+
+    returnname;
+
+
+    }
+
+
+    publicvoid setName(String name) {
+
+
+    this.name = name;
+
+
+    }
+
+
+    Look at getName() method. If we need our name for some reason we will call this
+    method, which return name. Our attributes is untouched. Same is with setName(String
+    name) method. It changes values of our name by referring to it with this keyword.
+
+
+    ## Abstract Classes
+
+
+    Do you remember that we mentioned classes like Professor and Student? They are
+    related entities and have some common attributes like name, age and city in our
+    example. So, why to always declare that attributes again and again? Isn`t would
+    be easier to have some base class that contains all data, attributes and methods,
+    and to share to all classes whose need them? Of course it would be. Class that
+    do it is called abstract class. To make previous class Professor abstract, add
+    abstract declaration to it`s name:
+
+
+    publicabstractclass Person
+
+
+    Abstract class can`t be instantiated. Also, if there is at least one abstract
+    method in class, class is automatically abstract. Abstract method is method without
+    implementation and declared abstract:
+
+
+    abstractvoidrun();
+
+
+    Note: Make parameterized constructor for class Person that includes mentioned
+    attributes and generate getters and setters. Also don`t forget to add run() method.
+
+
+    Now we have our first abstract class. Another step is to make class that will
+    use fields from Person class. Let it be class Student, again. To make Person class
+    useable, we need extends declaration:
+
+
+    publicclass Student extends Person
+
+
+    Now our class Student extends (shares) all fields with Person, but also we can
+    add some specific attributes for Student. Beside that, constructor will looks
+    like this now:
+
+
+    privateint[] grades;
+
+
+    Student(String name, intage) {
+
+
+    super(name, age);
+
+
+    this.grades = newint[5];
+
+
+    }
+
+
+    Something new is here for us. super keyword means that our constructor refers
+    to it`s superclass. So, we extended Person class, which has name and age attributes.
+    That attributes aren`t declared again in class. Also, you can now recognize that
+    there is an array which takes int values and size is 5\.
+
+
+    Note: you can see that all the time compiler is complaining: The type Student
+    must implement the inherited abstract method Person.run()
+
+
+    That is because we need also to implement run() method from our superclass (Person).
+
+
+    @Override
+
+
+    void run() {
+
+
+    System.out.println("Student runs!");
+
+
+    }
+
+
+    Note: @Overridedeclaration means that method is derived from super class.
+
+
+    One thing that is very important is that class can only extends one abstract class.
+
+
+    # Chapter 9. Interfaces
+
+
+    Interfaces are not classes. They only contain methods and attributes whose class
+    that implements that interfaces need to have. You can recognize first difference
+    from abstract classes, interfaces are implementing by keyword implements, not
+    extending. All methods are implicit public and all attributes are implicit public
+    static final. Let`s now make out first interface by right click on current package
+    New ->Interface and name it House. We will add following lines:
+
+
+    String bed = "My bed";
+
+
+    void sleep();
+
+
+    So, as you can see our method sleep() don`t have implementation. That is because
+    we don`t need to know how method must be implemented at this moment. To understand
+    better, imagine that you have interface Vehiclewith methods like start() and stop(),
+    and classes which implement that interface like Car, Bicycle and Airplane. At
+    the moment of creation of Vehicle interface you only know that you would have
+    some different type in future, that we mentioned, but you actually don`t know
+    how they work because all work different. Think in that way about interfaces.
+
+
+    But, from Java 8, interfaces are changed. Now you can have default method:
+
+
+    defaultvoid watchTV() {
+
+
+    System.out.println("I am wathcing TV");
+
+
+    }
+
+
+    As you can guess, this means that now interfaces are more similar to abstract
+    classes. One thing that is very important is that you can implement multiple interfaces,
+    rather that only one class.
+
+
+    Both, abstract classes and interfaces use inheritance. Inheritance is type of
+    code reusing. This is very useful because in development you will be in situations
+    where there are some classes with some methods and attributes that you may need.
+    When class is extended and interface implemented, subclass need to override all
+    their methods. Why we told that only one class can be extended?
+
+
+    ![](images/00018.jpeg)
+
+
+    Class A is super class and class D extends both class B and class C which have
+    method with same signaturedoStuf() but they have different implementation. Which
+    one should compiler choose? Situations like this are reason why creators of Java
+    left out multiple inheritance. This is called a Diamond problem.
+
+
+    Note: Inheritance is is – a relationship, Student is a Person; Car is a Vehicle.
+
+
+    ## Association vs Aggregation vs Composition
+
+
+    ![](images/00019.jpeg)
+
+
+    When two objects are related to each other they are in association. Both composition
+    and aggregation are types of association.
+
+
+    ## Composition
+
+
+    Inheritance is not only type of code reusing. Composition is another one, whose
+    is has – a relationship between classes. With inheritance, composition is main
+    technique for code reusing. Composition is relationship where part can`t exists
+    without a whole.
+
+
+    publicclass Thought {
+
+
+    }
+
+
+    publicclass Brain {
+
+
+    Thought thought = newThought();
+
+
+    }
+
+
+    Brain has a thought. Thought can`t exists without brain. Composition has a stronger
+    relationship then aggregation. Code reusing is here implemented by using object
+    reference, thought, to use class which you need. Composition is special case of
+    aggregation, it is more restricted.
+
+
+    ## Aggregation
+
+
+    Aggregation is weaker relationship then composition. In aggregation one part can
+    exists without main object. For example: Bed and Pillow. Bed have many pillows
+    and without pillow bed is functional. Also, without bed, pillow can exists for
+    another purpose.
+
+
+    publicclass Pillow {
+
+
+    }
+
+
+    publicclass Bed {
+
+
+    public List<Pillow>pillows = new ArrayList<Pillow>();
+
+
+    }
+
+
+    ## Overriding vs Overloading
+
+
+    ### Overriding
+
+
+    Overriding is term that we already saw in our examples. If in subclass is method
+    that have same name and same input parameters like method in super class, then
+    we have overriding. Usage of this is to change implementation in our subclasses.
+    Do you remember example with vehicles? When method start() is derived to subclass
+    Car or Airplane, implementation is different. Car and Airplane have totally different
+    engines.
+
+
+    voidstart() {
+
+
+    System.out.println("Starting car engine");
+
+
+    }
+
+
+    voidstart() {
+
+
+    System.out.println("Starting airplane engine");
+
+
+    }
+
+
+    Note: Maybe it would be little confusing when it says implementation but inside
+    method body is only println. This are only simple examples, in real development
+    there will be some logic and things like that.
+
+
+    ### Overloading'
+  toc: []
+  trans: "\n\n检查异常：需要被 `try/catch` 块捕获。例如：`FileNotFoundException`、`SQLException`。\n\
+    \n错误：表示某些严重问题。例如：`OutOfMemoryError`。我们不应该尝试处理它们。\n\n## 封装\n\n封装与访问修饰符相关的术语。假设你有一个带有属性的类。一切都可以运行得很好，但在数据不安全方面可能会出现问题。这是因为别人可以访问你的类并进行更改。因此，为了使这种情况不再并对类内部的数据进行完全控制，`getters`\
+    \ 和 `setters` 将对你有帮助。看示例，首先创建一个新的 `fourth.pack` 包，并在其中创建 `Person` 类。我们的 `Person`\
+    \ 类将拥有 `name` 和 `age` 属性，它们被声明为 `private`。\n\n```java\nprivate String name;\n\
+    private int age;\n```\n\n现在我们需要打开 `Source -> Generate Getters and Setters`。\n\n\
+    最后一步是检查 `name` 和 `age` 字段并按 `OK`。\n\n预期：将生成 Getters 和 Setters。\n\n所以，如你所见，我们的属性保持为\
+    \ `private`（仅类内部可见），而我们生成的方法（`getters` 和 `setters`）是 `public`。我们让我们的类更安全了。\n\n\
+    ```java\npublic String getName() {\n    return name;\n}\n\npublic void setName(String\
+    \ name) {\n    this.name = name;\n}\n```\n\n查看 `getName()` 方法。如果由于原因我们需要 `name`，我们将调用此方法，它会返回\
+    \ `name`。我们的属性没有被碰。`setName(String name)` 方法也是如此。它通过 `this` 关键字引用来更改 `name` 的值。\n\
+    \n## 抽象类\n\n你还记得我们提到过 `Professor` 和 `Student` 这样的类吗？它们是相关的实体，并且我们的示例中有一些共同属性，如\
+    \ `name`、`age` 和 `city`。那么，为什么要反复声明这些属性呢？难道拥有一个包含所有数据、属性和方法的基类，并将其共享给所有需要的类不是更好吗吗？当然是。做到点的类被称为\
+    \ `abstract class`（抽象类）。要让之前的 `Professor` 类变成抽象类，在它的名称上添加 `abstract` 声明：\n\n```java\n\
+    public abstract class Person\n```\n\n抽象类不能实例化。此外，如果类中至少有一个抽象方法，该类就会自动成为抽象类。抽象方法是没有实现且被声明为\
+    \ `abstract` 的方法：\n\n```java\nabstract void run();\n```\n\n注意：为类 `Person` 创建带参数的构造函数，包含上述属性并生成\
+    \ getters 和 setters。还不要忘记添加 `run()` 方法。\n\n现在我们有了第一个抽象类。下一步是创建一个使用来自 `Person`\
+    \ 类字段的类。再次让它成为 `Student` 类。为了让 `Person` 类可用，我们需要 `extends` 声明：\n\n```java\npublic\
+    \ class Student extends Person\n```\n\n现在我们的 `Student` 类继承（共享）了 `Person` 的所有字段，但我们也可以为\
+    \ `Student` 添加一些特定的属性。此外，构造函数现在看起来像这样：\n\n```java\nprivate int[] grades;\n\nStudent(String\
+    \ name, int age) {\n    super(name, age);\n    this.grades = new int[5];\n}\n\
+    ```\n\n这里对我们来说是新的`super` 关键字意味着我们的构造函数引用了它的父类。所以我们扩展了 `Person` 类，它拥有 `name` 和\
+    \ `age` 属性。这些属性在类中没有再次声明。此外，你现在可以识别出一个数组接收 `int` 值且大小为 5。\n\n注意：你可以看到编译器一直在报错：`The\
+    \ type Student must implement the inherited abstract method Person.run()`。\n\n\
+    这是因为我们还需要实现来自父类（`Person`）的 `run()` 方法。\n\n```java\n@Override\nvoid run() {\n \
+    \   System.out.println(\"Student runs!\");\n}\n```\n\n注意：`@Override` 声明意味着方法派自父类。非常重要的一点是，类只能继承一个抽象类。\n\
+    \n# 第 9 章 接口\n\n接口不是类。它们只包含实现该接口的类需要具备的方法和属性。你可以看出与抽象类的第一个区别是，接口是通过 `implements`\
+    \ 关键字实现的，而不是 `extends`。所有方法都是隐式的 `public`，所有属性都是隐式的 `public static final`。现在让我们通过右键点击当前包\
+    \ `New -> Interface` 来创建我们的第一个接口并将其命名为 `House`。我们将添加以下行：\n\n```java\nString bed\
+    \ = \"My bed\";\nvoid sleep();\n```\n\n```\n\n如你所见，我们的方法 `sleep()` 没有实现。这是因为我们目前不需要知道方法必须如何实现。为了更好地理解，假设你有一个接口\
+    \ `Vehicle`，其中包含 `start()` 和 `stop()` 等方法，以及实现该接口的类如 `Car`、`Bicycle` 和 `Airplane`。在创建\
+    \ `Vehicle` 接口时，你只知道未来会有某些不同类型（正如我们提到的），但你实际上不知道它们是如何工作的，因为所有工作方式都不同。可以这样去思考接口。\n\
+    \n但是，从 Java 8 开始，接口发生了变化。现在你可以拥有 `default` 方法：\n\n```java\ndefault void watchTV()\
+    \ {\n    System.out.println(\"I am watching TV\");\n}\n```\n\n正如你所料的，这意味着现在接口更类似于抽象类。一个非常重要的一点是，你可以实现多个接口，而只能继承一个类。\n\
+    \n抽象类和接口都使用继承。继承是代码复用的类型。这非常有用，因为在开发中你会遇到某些具有某些属性的情况。当类被扩展或接口被实现时，子类需要重写所有方法。为什么我们说只能继承一个类？\n\
+    \n![](img/0018.jpeg)\n\n类 `A` 是父类，类 `D` 继承了类 `B` 和类 `C`，它们具有相同的签名 `doStuff()`\
+    \ 但编译器应该选择哪一个？这种情况是 Java 创建者没有//多重继承的原因。这被称为菱问题。\n\n注意：继承是一种关系，`Student` 是 `Person`；`Car`\
+    \ 是 `Vehicle`。\n\n## 关联、聚合与组合\n\n![](img/0019.jpeg)\n\n当两个对象相互关联时，它们处于关联状态。组合和聚合都是关联的类型。\n\
+    \n## 组合\n\n继承并不是代码复用的唯一类型。组合是另一种，它是类之间的关系。在继承中，组合是代码复用的主要技术。组合是一种部分无法离开整体的关系。\n\
+    \n```java\npublic class Thought {\n}\n\npublic class Brain {\n    Thought thought\
+    \ = new Thought();\n}\n```\n\n`Brain` 拥有一个 `thought`。`Thought` 无法离开 `brain` 而存在。组合的关系比聚合强。\n\
+    \n## 聚合\n\n聚合的关系比组合要弱。在聚合中，部分可以脱离主对象存在。例如：`Bed` 和 `Pillow`。\n\n```java\npublic\
+    \ class Pillow {\n}\n\npublic class Bed {\n    public List<Pillow> pillows = new\
+    \ ArrayList<Pillow>();\n}\n```\n\n## 重写与重载\n\n### 重写\n\n重写是我们在示例中已经见过的术语。如果子类中的方法与父类方法具有相同的名称和相同的输入参数，那么我们就拥有重写。它的用途是更改我们子类中的实现。你还记得车辆的示例吗？当\
+    \ `start()` 方法派生到子类 `Car` 或 `Airplane` 时，实现是不同的。`Car` 和 `Airplane` 的引擎完全不同。\n\n\
+    ```java\nvoid start() {\n    System.out.println(\"Starting car engine\");\n}\n\
+    \nvoid start() {\n    System.out.println(\"Starting airplane engine\");\n}\n```\n\
+    \n注意：当方法体内部只有 `println` 时，可能可能会让人有点困惑。这些只是简单的示例，在实际开发中会有一些逻辑之类的内容。\n\n### 重载\n\
+    \n"
+- fmt: "\nIn overriding section we said that derived methods have same input parameters.\
+    \ If you didn`t figured out input parameters are inside curly braces of method\
+    \ declaration like: `(String n, int a)`. That is not case with overloading. Methods\
+    \ are overloaded when they have same signature but different input parameters,\
+    \ of course in same class. We will explain this on constructor overloading. For\
+    \ example, make class `StudentClass` and add attributes `name`, `age` and `diploma`:\n\
+    \n```java\nprivate String name;\nprivate int age;\nprivate String diploma;\n\n\
+    StudentClass(String n, int a) {\n    this.name = n;\n    this.age = a;\n}\n\n\
+    StudentClass(String n, int a, String d) {\n    this.name = n;\n    this.age =\
+    \ a;\n    this.diploma = d;\n}\n```\n\nConstructors are overloaded. But what is\
+    \ usage of this? Imagine that you have class `Faculty` that manages with students.\
+    \ Not all students are same. Until finishing studies student don`t have diploma,\
+    \ so if you need some operations with students like this constructor without diploma\
+    \ parameter will be used. On another hand, if you want to store students that\
+    \ are finished studies to some document, constructor with diploma parameter will\
+    \ be useful. Beside constructors, methods also could be overloaded:\n\n```java\n\
+    void doSomething(String a) {\n    System.out.println(\"Print a: \" + a);\n}\n\n\
+    void doSomething(String a, String b) {\n    System.out.println(\"Print both a\
+    \ and b: \" + a + b);\n}\n```\n\nBoth overriding and overloading are types of\
+    \ polymorphism. Polymorphism means that one method can do different things based\
+    \ on used object. Polymorphism in Java have two types:\n\n### Compile time polymorphism\n\
+    As we already sad, compile time is time while you type your code and compiler\
+    \ automatically recognized if you have some errors. So, compile time is decided\
+    \ in that time. Perfect example of this type of polymorphism is overloading. Compile\
+    \ time polymorphism is also called static binding.\n\n### Runtime polymorphism\n\
+    \nOverriding is type of runtime polymorphism. Unlike static binding, this type\
+    \ of polymorphism is called dynamic binding. From name you can guess that an overridden\
+    \ method is recognized at runtime. Upcasting is when reference variable of parent\
+    \ class refers to the object of child class we. `JVM` decides about overriding\
+    \ methods, not compiler.\n\nNote: `JVM` (Java Virtual Machine) is an abstract\
+    \ machine that enables you to run a Java program on computer.\n\n## Subheading\
+    \ 1\nChapter Text\n\n### Sub Subheading\nChapter Text\n\n# Chapter 10. Design\
+    \ Patterns\n\n## Singleton Pattern\n\nSingleton pattern is one of most commonly\
+    \ used design patterns. He belongs to creational pattern category. Pattern restrict\
+    \ object creations and ensures that only one instance of class exists. Imagine\
+    \ that you only need one garage at home, only one HR at company, only one captain\
+    \ at team. That are examples from real life in whose you will need singleton pattern.\
+    \ For implementation of pattern we need some conditions:\n\n*   `private constructor`\
+    \ - We didn`t explained in constructor section, but in short private constructor\
+    \ doesn`t give class to be instantiated from another class\n*   `private static\
+    \ instance` – only instance of the class\n*   `public static method` – method\
+    \ which returns instance of class\n\nThere are two types of making class singleton:\n\
+    \n### Lazy initialization\nTo better figure out what exactly means this three\
+    \ conditions, let`s see out code below:\n\n```java\nprivate SingletonOne() {\n\
+    }\n\nprivate static SingletonOne instance;\n\npublic static SingletonOne getInstance()\
+    \ {\n    if(instance == null) {\n        instance = new SingletonOne();\n    }\n\
+    \    return instance;\n}\n```\n\nCreation of Class object is derived to `getInstance()`\
+    \ method. As public static method have global access and there is no need for\
+    \ object for calling, static method is called by class name. This type of singleton\
+    \ pattern is called lazy because instance of Class is not created until `getInstance()`\
+    \ method is called. `getInstance()` method checks if there is already instance,\
+    \ is it is false (null) method creates new one (`new Class()`) and return it.\
+    \ With lazy initialization you crate instance only when its needed and not when\
+    \ the class is loaded. So you escape the unnecessary object creation.\n\n### Eager\
+    \ initialization\n\n```java\nprivate static final SingletonTwo instance = new\
+    \ SingletonTwo();\n\nprivate SingletonTwo() {}\n\npublic static SingletonTwo getInstance()\
+    \ {\n    return instance;\n}\n```\n\nUnlike lazy initialization, eager initialization\
+    \ is done when class is loaded. So, difference is that in first approach you get\
+    \ instance of singleton class only when you actually need it.\n\n## MVC Pattern\n\
+    \nMVC pattern is maybe most common used pattern in making Java applications. As\
+    \ name tells, this is acronym of Model – View – Controller\n\n*   `Model` – represents\
+    \ data or POJO classes. POJO is just declaration which must match some conditions\
+    \ like: public default no-arg constructor, private attributes and getters and\
+    \ setters.\n*   `View` – represents view of mentioned attributes.\n*   `Controller`\
+    \ – controller behaves between both model and view, it updates view based on changes\
+    \ from model.\n\nFor our explanation we need classes below:\n\n```java\npublic\
+    \ class Doctor {\n    private String name;\n    private int age;\n\n    Doctor()\
+    \ {}\n\n    public String getName() {\n        return name;\n    }\n\n    public\
+    \ void setName(String name) {\n        this.name = name;\n    }\n\n    public\
+    \ int getAge() {\n        return age;\n    }\n\n    public void setAge(int age)\
+    \ {\n        this.age = age;\n    }\n}\n```\n\nClass `Doctor` represents our model.\
+    \ If you remember, default no-arg constructor will be made by default by compiler,\
+    \ but we did it just to don`t make confusion.\n\n```java\npublic class ShowDoctor\
+    \ {\n    public void showDoctor(String name, int age) {\n        System.out.println(\"\
+    Doctor with name: \" + name + \" and age: \" + age);\n    }\n}\n```\n\nThis class\
+    \ represent String presentation, view, of our `Doctor` with attributes `name`\
+    \ and `age`.\n\n```java\npublic class Controller {\n    private Doctor doctor;\n\
+    \    private ShowDoctor showD;\n\n    Controller(Doctor d, ShowDoctor s) {\n \
+    \       this.doctor = d;\n        this.showD = s;\n    }\n\n    public Doctor\
+    \ getDoctor() {\n        return doctor;\n    }\n\n    public void setDoctor(Doctor\
+    \ doctor) {\n        this.doctor = doctor;\n    }\n\n    public ShowDoctor getShowD()\
+    \ {\n        return showD;\n    }\n\n    public void setShowD(ShowDoctor showD)\
+    \ {\n        this.showD = showD;\n    }\n\n    void shomMeDoctor() {\n       \
+    \ showD.showDoctor(doctor.getName(), doctor.getAge());\n    }\n}\n```\n\nAs you\
+    \ can see, our controller takes references from both model and view. Now we need\
+    \ one class to manage with all this.\n\n```java\npublic class Program {\n    Doctor\
+    \ doctor = setDoctorAttributes();\n    ShowDoctor show = new ShowDoctor();\n \
+    \   Controller controller = new Controller(doctor, show);\n\n    private static\
+    \ Doctor setDoctorAttributes() {\n        Doctor doc = new Doctor();\n       \
+    \ doc.setName(\"Bob\");\n        doc.setAge(50);\n        return doc;\n    }\n\
+    \n    void printDoctor() {\n        controller.shomMeDoctor();\n    }\n\n    public\
+    \ static void main(String[] args) {\n        Program program = new Program();\n\
+    \        program.printDoctor();\n    }\n}\n```\n\n## Project\n\nEverything that\
+    \ we covered until now have his own usage and it is very important part of Java\
+    \ programing. But they are only parts of one big “story”. Best way for learning\
+    \ something, Java also, is to use it on real problems, in this case in project.\
+    \ In this last section, we will try to make from all (almost all) that we learned,\
+    \ one functional project. Based on this you will have clearerpicture how and when\
+    \ to use some features of Java. Idea is to make a project Hospital.\n\nCharacteristics\
+    \ of Hospital are:\n\n*   `Doctor` (name, surname, specialty) have many `Patient`\
+    \ (name, surname, medical record number)\n"
+  raw: 'In overriding section we said that derived methods have same input  parameters.
+    If you didn`t figured out input parameters are inside curly braces of method declaration
+    like: (String n, inta). That is not case with overloading. Methods are overloaded
+    when they have same signature but different input parameters, of course in same
+    class. We will explain this on constructor overloading. For example, make class
+    StudentClass and add attributes name, age and diploma:
+
+
+    private String name;
+
+
+    privateintage;
+
+
+    private String diploma;
+
+
+    StudentClass(String n, inta) {
+
+
+    this.name = n;
+
+
+    this.age = a;
+
+
+    }
+
+
+    StudentClass(String n, inta, String d) {
+
+
+    this.name = n;
+
+
+    this.age = a;
+
+
+    this.diploma = d;
+
+
+    }
+
+
+    Constructors are overloaded. But what is usage of this? Imagine that you have
+    class Faculty that manages with students. Not all students are same. Until finishing
+    studies student don`t have diploma, so if you need some operations with students
+    like this constructor without diploma parameter will be used. On another hand,
+    if you want to store students that are finished studies to some document, constructor
+    with diploma parameter will be useful.  Beside constructors, methods also could
+    be overloaded:
+
+
+    void doSomething(String a){
+
+
+    System.out.println("Print a: " + a);
+
+
+    }
+
+
+    void doSomething(String a, String b){
+
+
+    System.out.println("Print both a and b: " + a + b);
+
+
+    }
+
+
+    Both overriding and overloading are types of polymorphism. Polymorphism means
+    that one method can do different things based on used object. Polymorphism in
+    Java have two types:
+
+
+    *   Compile time polymorphism
+
+
+    As we already sad, compile time is time while you type your code and compiler
+    automatically recognized if you have some errors. So, compile time is decided
+    in that time. Perfect example of this type of polymorphism is overloading. Compile
+    time polymorphism is also called static binding.
+
+
+    *   Runtime polymorphism
+
+
+    Overriding is type of runtime polymorphism. Unlike static binding, this type of
+    polymorphism is called dynamic binding. From name you can guess that an overridden
+    method is recognized at runtime.Upcasting is when reference variable of parent
+    class refers to the object of child class we. JVM decides about overriding methods,
+    not compiler.
+
+
+    Note: JVM (Java Virtual Machine)  is an abstract machine that enables you to run
+    a Java program on computer.
+
+
+    ## Subheading 1
+
+
+    Chapter Text
+
+
+    ### Sub Subheading
+
+
+    Chapter Text
+
+
+    # Chapter 10. Design Patterns
+
+
+    ## Singleton Pattern
+
+
+    Singleton pattern is one of most commonly used design patterns. He belongs tocreational
+    pattern category. Pattern restrict object creations and ensures that only one
+    instance of class exists. Imagine that you only need one garage at home, only
+    one HR at company, only one captain at team. That are examples from real life
+    in whose you will need singleton pattern. For implementation of pattern we need
+    some conditions:
+
+
+    *   private constructor - We didn`t explained in constructor section, but in short
+    private constructor doesn`t give class to be instantiated from another class
+
+
+    *   private static instance – only instance of the class
+
+
+    *   public static method – method which returns instance of class
+
+
+    There are two types of making class singleton:
+
+
+    *   Lazy initialization
+
+
+    To better figure out what exactly means this three conditions, let`s see out code
+    below:
+
+
+    private SingletonOne(){
+
+
+    }
+
+
+    privatestatic SingletonOne instance;
+
+
+    publicstatic SingletonOne getInstance(){
+
+
+    if(instance == null){
+
+
+    instance = new SingletonOne();
+
+
+    }
+
+
+    returninstance;
+
+
+    }
+
+
+    Creation of Class object is derived to getInstance() method. As public static
+    method have global access and there is no need for object for calling, static
+    method is called by class name. This type of singleton pattern is called lazy
+    because instance of Class is not created until getInstance() method is called.
+    getInstance() method checks if there is already instance, is it is false (null)
+    method creates new one (new CLass())and return it.With lazy initialization you
+    crate instance only when its needed and not when the class is loaded. So you escape
+    the unnecessary object creation.
+
+
+    *   Eager initialization
+
+
+    privatestaticfinal SingletonTwo instance = new SingletonTwo();
+
+
+    private SingletonTwo(){}
+
+
+    publicstatic SingletonTwo getInstance(){
+
+
+    returninstance;
+
+
+    }
+
+
+    Unlike lazy initialization, eager initialization is done when class is loaded.
+    So, difference is that in first approach you get instance of singleton class only
+    when you actually need it.
+
+
+    ## MVC Pattern
+
+
+    MVC pattern is maybe most common used pattern in making Java applications. As
+    name tells, this is acronym of Model – View – Controller
+
+
+    *   Model – represents data or POJO classes. POJO is just declaration which must
+    match some conditions like: public default no-arg constructor, private attributes
+    and getters and setters.
+
+
+    *   View – represents view of mentioned attributes.
+
+
+    *   Controller – controller behaves between both model and view, it updates view
+    based on changes from model.
+
+
+    For our explanation we need classes below:
+
+
+    publicclass Doctor {
+
+
+    private String name;
+
+
+    privateintage;
+
+
+    Doctor() {}
+
+
+    public String getName() {
+
+
+    returnname;
+
+
+    }
+
+
+    publicvoid setName(String name) {
+
+
+    this.name = name;
+
+
+    }
+
+
+    publicint getAge() {
+
+
+    returnage;
+
+
+    }
+
+
+    publicvoid setAge(intage) {
+
+
+    this.age = age;
+
+
+    }
+
+
+    }
+
+
+    Class Doctor represents our model. If you remember, default no-arg constructor
+    will be made by default by compiler, but we did it just to don`t make confusion.
+
+
+    publicclass ShowDoctor {
+
+
+    publicvoid showDoctor(String name, intage) {
+
+
+    System.out.println("Doctor with name: " + name + " and age: " + age);
+
+
+    }
+
+
+    }
+
+
+    This class represent String presentation, view, of our Doctor with attributes
+    name and age.
+
+
+    publicclass Controller {
+
+
+    private Doctor doctor;
+
+
+    private ShowDoctor showD;
+
+
+    Controller(Doctor d, ShowDoctor s) {
+
+
+    this.doctor = d;
+
+
+    this.showD = s;
+
+
+    }
+
+
+    public Doctor getDoctor() {
+
+
+    returndoctor;
+
+
+    }
+
+
+    publicvoid setDoctor(Doctor doctor) {
+
+
+    this.doctor = doctor;
+
+
+    }
+
+
+    public ShowDoctor getShowD() {
+
+
+    returnshowD;
+
+
+    }
+
+
+    publicvoid setShowD(ShowDoctor showD) {
+
+
+    this.showD = showD;
+
+
+    }
+
+
+    void shomMeDoctor() {
+
+
+    showD.showDoctor(doctor.getName(), doctor.getAge());
+
+
+    }
+
+
+    }
+
+
+    As you can see, our controller takes references from both model and view classes.
+    Now we need one class to manage with all this classes.
+
+
+    publicclass Program {
+
+
+    Doctor doctor = setDoctorAttributes();
+
+
+    ShowDoctor show = newShowDoctor();
+
+
+    Controller controller = newController(doctor, show);
+
+
+    privatestatic Doctor setDoctorAttributes(){
+
+
+    Doctor doc = newDoctor();
+
+
+    doc.setName("Bob");
+
+
+    doc.setAge(50);
+
+
+    returndoc;
+
+
+    }
+
+
+    void printDoctor(){
+
+
+    controller.shomMeDoctor();
+
+
+    }
+
+
+    publicstaticvoid main(String[] args){
+
+
+    Program program = newProgram();
+
+
+    program.printDoctor();
+
+
+    }
+
+
+    }
+
+
+    Program is class with main method, you remember that main method is used for calling
+    other methods. Our whole program would not be possible to start without it, so
+    we needed to create object of current class. We provided references of Doctor,
+    ShowDoctor and Controller to current class. Association is here used for code
+    reusing. Because we don`t have doctor, method setDoctorAttributes() is made to
+    set values. It is done by using doc reference and setName() and setAge() method,
+    in other words setters. This method is derived to doctor reference. We don’t create
+    new doctor by newDoctor();Output is: Doctor with name: Bob and age: 50
+
+
+    ## Project
+
+
+    Everything that we covered until now have his own usage and it is very important
+    part of Java programing. But they are only parts of one big “story”. Best way
+    for learning something, Java also, is to use it on real problems, in this case
+    in project. In this last section, we will try to make from all (almost all) that
+    we learned, one functional project. Based on this you will have clearerpicture
+    how and when to use some features of Java. Idea is to make a project Hospital.
+
+
+    Characteristics of Hospital are:
+
+
+    *   Doctor (name, surname, specialty) have many Patient (name, surname, medical
+    record number)'
+  toc: []
+  trans: "\n在重写部分，我们提到派生类方法具有相同的输入参数。如果你还没有发现输入参数是在方法声明的圆括号内，例如：`(String n, int a)`。那么重载的情况并非如此。当方法具有相同的签名但不同的输入参数时（当然是在同一个类中），这些方法就构成了方法重载。我们将通过构造函数重载来解释这一点。例如，创建一个\
+    \ `StudentClass` 类并添加属性 `name`、`age` 和 `diploma`：\n\n```java\nprivate String name;\n\
+    private int age;\nprivate String diploma;\n\nStudentClass(String n, int a) {\n\
+    \    this.name = n;\n    this.age = a;\n}\n\nStudentClass(String n, int a, String\
+    \ d) {\n    this.name = n;\n    this.age = a;\n    this.diploma = d;\n}\n```\n\
+    \n这些构造函数是重载的。但这种用法有什么用呢？假设你有一个管理学生的 `Faculty` 类。并不是所有学生都是一样的。在完成学业之前学生还没有毕业证，所以如果你需要对学生进行某些操作，将使用这个没有\
+    \ `diploma` 参数的构造函数。另一方面，如果你想将完成学的学生存储到某个文档中，带有 `diploma` 参数的构造函数将有用。除了构造函数，方法也可以被重载：\n\
+    \n```java\nvoid doSomething(String a) {\n    System.out.println(\"Print a: \"\
+    \ + a);\n}\n\nvoid doSomething(String a, String b) {\n    System.out.println(\"\
+    Print both a and b: \" + a + b);\n}\n```\n\n重写和重载都是多态的形式。多态意味着一个方法可以根据使用的对象执行不同的事情。Java\
+    \ 中的多态有两种类型：\n\n### 编译时多态\n正如我们所说的，编译时是你编写代码时，编译器会自动识别你是否存在某些错误。因此，编译时是在那个时候决定的。这种类型多态的完美例子就是重载。编译时多态也被称为静态绑定。\n\
+    \n### 运行时多态\n\n重写是运行时多态的一种。与静态绑定不同，这种多态被称为动态绑定。从名称你可以猜出被重写的方法是在运行时识别的。向上转型是指父类的引用变量指向子类对象的情况。`JVM`\
+    \ 决定重写方法，而不是编译器。\n\n注意：`JVM`（Java 虚拟机）是一个抽象机器，它允许你在计算机上运行 Java 程序。\n\n## 小标题 1\n\
+    章节文本\n\n### 子子标题\n章节文本\n\n# 第 10 章 设计模式\n\n## 单例模式\n\n单例模式是最常用的设计模式之一。它属于创建型模式的范畴。该模式限制了对象的创建，并确保类只存在一个实例。假设你家里只需要一个车库，公司只需要一个人力资源部门，团队只需要一个队长。这些都是现实生活中你可能需要单例模式的例子。为了实现该模式，我们需要满足一些条件：\n\
+    \n*   `private constructor` - 我们在构造函数部分没有解释，但简而言之，私有构造函数不会允许从另一个类实例化该类。\n*   `private\
+    \ static instance` – 类的唯一实例。\n*   `public static method` – 返回类实例的方法。\n\n使类单例有两种类型：\n\
+    \n### 懒性初始化\n为了更好地理解这三个条件具体意味着什么，让我们看看下面的代码：\n\n```java\nprivate SingletonOne()\
+    \ {\n}\n\nprivate static SingletonOne instance;\n\npublic static SingletonOne\
+    \ getInstance() {\n    if(instance == null) {\n        instance = new SingletonOne();\n\
+    \    }\n    return instance;\n}\n```\n\n类对象的创建被交给了 `getInstance()` 方法。由于公共静态方法具有全局访问权限，且不需要对象即可调用，因此通过类名调用静态方法。这种单例模式被称为“懒加载”（lazy），因为在调用\
+    \ `getInstance()` 方法之前，类的实例不会被创建。`getInstance()` 方法检查是否已经存在实例，如果为假（`null`），方法会创建一个新的（`new\
+    \ Class()`）并返回它。通过懒性初始化，你只在需要实例时才创建它，而不是在类加载时。这样你就避免了不必要的对象创建。\n\n### 饿性初始化\n\n\
+    ```java\nprivate static final SingletonTwo instance = new SingletonTwo();\n\n\
+    private SingletonTwo() {}\n\npublic static SingletonTwo getInstance() {\n    return\
+    \ instance;\n}\n```\n\n与懒性初始化不同，饿性初始化是在类加载时完成的。所以区别在于，在第一方法方法，只有当你真正需要时才会获取单例类的实例。\n\
+    \n## MVC 模式\n\nMVC 模式可能是构建 Java 应用中最常用的模式。正如名称所示，它是 Model – View – Controller\
+    \ 的缩写。\n\n*   `Model` – 表现表示数据或 POJO 类。POJO 只是一个声明，必须符合某些条件，如：公共默认无参构造函数、私有属性以及\
+    \ getter 和 setter。\n*   `View` – 代表上述属性的视图。\n*   `Controller` – 控制器介于模型和视图之间，它根据模型的变化来更新视图。\n\
+    \n为了我们的解释，我们需要下面的类：\n\n```java\npublic class Doctor {\n    private String name;\n\
+    \    private int age;\n\n    Doctor() {}\n\n    public String getName() {\n  \
+    \      return name;\n    }\n\n    public void setName(String name) {\n       \
+    \ this.name = name;\n    }\n\n    public int getAge() {\n        return age;\n\
+    \    }\n\n    public void setAge(int age) {\n        this.age = age;\n    }\n\
+    }\n```\n\n`Doctor` 类代表我们的模型。如果你还记得，默认无参构造函数将由编译器默认生成，但我们这样做只是为了避免混淆。\n\n```java\n\
+    public class ShowDoctor {\n    public void showDoctor(String name, int age) {\n\
+    \        System.out.println(\"Doctor with name: \" + name + \" and age: \" + age);\n\
+    \    }\n}\n```\n\n这个类代表了 `Doctor` 属性 `name` 和 `age` 的展示，视图。\n\n```java\npublic\
+    \ class Controller {\n    private Doctor doctor;\n    private ShowDoctor showD;\n\
+    \n    Controller(Doctor d, ShowDoctor s) {\n        this.doctor = d;\n       \
+    \ this.showD = s;\n    }\n\n    public Doctor getDoctor() {\n        return doctor;\n\
+    \    }\n\n    public void setDoctor(Doctor doctor) {\n        this.doctor = doctor;\n\
+    \    }\n\n    public ShowDoctor getShowD() {\n        return showD;\n    }\n\n\
+    \    public void setShowD(ShowDoctor showD) {\n        this.showD = showD;\n \
+    \   }\n\n    void shomMeDoctor() {\n        showD.showDoctor(doctor.getName(),\
+    \ doctor.getAge());\n    }\n}\n```\n\n你可以看到，我们的控制器获取了模型和视图的引用。现在我们需要一个类来管理这一切。\n\
+    \n```java\npublic class Program {\n    Doctor doctor = setDoctorAttributes();\n\
+    \    ShowDoctor show = new ShowDoctor();\n    Controller controller = new Controller(doctor,\
+    \ show);\n\n    private static Doctor setDoctorAttributes() {\n        Doctor\
+    \ doc = new Doctor();\n        doc.setName(\"Bob\");\n        doc.setAge(50);\n\
+    \        return doc;\n    }\n\n    void printDoctor() {\n        controller.shomMeDoctor();\n\
+    \    }\n\n    public static void main(String[] args) {\n        Program program\
+    \ = new Program();\n        program.printDoctor();\n    }\n}\n```\n\n## 项目\n\n\
+    我们为止涵盖的所有内容都有其特定的用途，并且 Java 编程中非常重要的部分。但它们只是一个大故事的一部分。学习某些东西（Java 也是如此）的最佳方法将其应用于实际问题，在本例中就是通过项目。在最后部分，我们将尝试根据所学（几乎是所有）内容创建一个功能性项目。通过此你将更清楚地了解如何以及何时使用某些\
+    \ Java 特性。想法是做一个医院项目。\n\n医院的特点是：\n\n*   `Doctor`（名、姓、专科）有许多 `Patient`（名、姓、病历号）\n"
+- fmt: "\n- Patient can have only one Doctor\n- Doctor assigns laboratory examination\
+    \ to Patient\n- Examination have date and time\n- Types of examinations:\n   \
+    \ - Blood sugar level (upper value, lower value, pulse)\n    - Blood pressure\
+    \ (value, last time meal)\n\nMake script that simulates next:\n\n1. Create Doctor\
+    \ `Bob Williams`\n2. Create Patient `Fill Kane`\n3. Patient `Fill` chooses `Bob`\
+    \ to be his Doctor\n4. Doctor `Bob` calls Patient `Fill` for blood sugar level\
+    \ examination\n5. Doctor `Bob` calls Patient `Fill` for blood pressure examination\n\
+    6. Examinations have `examinationID` and `date` values\n7. Show results for both\
+    \ examinations\n\nStart to think about project with entities, `Doctor` and `Patient`,\
+    \ are they have something similar? Do we maybe need abstract class? Is this also\
+    \ case with examinations? How to derive only one doctor to patient? `Singleton\
+    \ pattern`?\n\nLet's start making our project to better figure out all of this.\n\
+    \nIn `Eclipse` create a new project `Hospital`. Our entities will be placed inside-`model`\
+    \ package. Every hospital has entities like `Doctor` and `Patient`, our also will.\
+    \ First, we will make abstract class `Person`:\n\n```java\nprotected String nin;\n\
+    \nprotected String name;\nprotected String surname;\n\npublic Person(String n,\
+    \ String name, String surname){\n\nthis.nin = n;\n\nthis.name = name;\nthis.surname\
+    \ = surname;\n\n}\n```\n\nGenerate getters and setters for `nin`, `name` and age\
+    \ attributes also. `nin` stands for National Identity Number. Next class is `Doctor`:\n\
+    \n```java\npublicclass Doctor extends Person{\n\nprivate String specialty;\n\n\
+    public Doctor(String n, String name, String surname, String spec){\n\nsuper(n,\
+    \ name, surname);\nthis.specialty = spec;\n\n}\n\n}\n```\n\n### The Patient Class\n\
+    \nAlso, generate getters and setters for `specialty` attribute. `Patient` class:\n\
+    \n```java\npublicclass Patient extends Person{\n\nprivateintmedicalRecordNumber;\n\
+    \npublic Patient(String n,String name, String surname, intmedRecNum){\n\nsuper(n,\
+    \ name, surname);\nthis.medicalRecordNumber = medRecNum;\n\n}\n\n}\n```\n\nGetters\
+    \ and setters for `medicalRecordNumber`.\n\n### The Hospital Class\n\nOur next\
+    \ job to do is to assign doctor to patient. We have condition, our patient can\
+    \ have only one doctor. You can guess, `singleton pattern` need to be implemented.\
+    \ Use lazy initialization in `Hospital` class:\n\n```java\nprivate Hospital(){\n\
+    \n}\n\nprivatestatic Hospital instance;\n\npublicstatic Hospital getInstance(){\n\
+    \nif(instance == null){\n\ninstance = new Hospital();\n\n}\n\nreturninstance;\n\
+    \n}\n```\n\nDoctor and patients need to be stored somewhere. We will use `HashMap`\
+    \ for that. Add this to `Hospital` class:\n\n```java\nprivate Map<String, Person>persons\
+    \ = new HashMap<String, Person>();\n```\n\nOur `Hospital` also needs methods for\
+    \ manipulationg with persons:\n\n```java\nprivate Person TryGetPerson(String nin){\n\
+    \nreturnpersons.get(nin);\n}\n\npublic Doctor TryGetDoctor(String nin){\n\nDoctor\
+    \ doct;\ndoct = (Doctor)TryGetPerson(nin);\nreturndoct;\n}\n\npublic Patient TryGetPatient(String\
+    \ nin){\n\nPatient patient;\npatient = (Patient)TryGetPerson(nin);\n\nreturnpatient;\n\
+    \n}\n```\n\n`TryGetPerson()` returns person with his `nin`. To decide if that\
+    \ person is doctor or patient, we need `TryGetDoctor()` and `TryGetPatient()`\
+    \ methods.\n\n**Note**: Look at script. At 7. it says we need to show results.\
+    \ For this purpose, we will use `log4j`, new for us but very simple feature. Download\
+    \ jar file from this site: [http://www.java2s.com/Code/Jar/l/Downloadlog4jjar.htm](http://www.java2s.com/Code/Jar/l/Downloadlog4jjar.htm)\n\
+    \nExtract file and add jar file to project by Right click ->Properties ->Java\
+    \ Build Path ->Add External JARs ->`log4j`\n\nBelow class name `Hospital`, add\
+    \ our `Logger`:\n\n```java\nstatic Logger log = Logger.getLogger(Hospital.class);\n\
+    ```\n\nNow is order to make methods which actually create doctor and patient:\n\
+    \n```java\npublicvoid createDoctor(String nin, String name, String surname, String\
+    \ spec){\n\nif(TryGetDoctor(nin) == null&& !persons.containsKey(nin)){\n\nDoctor\
+    \ doctor = newDoctor(nin, name, surname, spec);\npersons.put(nin, doctor);\nlog.info(\"\
+    Doctor \" + name + \" \" + surname + \" with speciality \" + spec + \"is created!\"\
+    );\n\n}else{\n\nlog.info(\"Doctor \" + name + \" \" + surname + \" already exists!\"\
+    );\n\n}\n\n}\n\npublicvoid createPatient(String nin, String name, String surname,\
+    \ intmedRecNum){\n\nif(TryGetPatient(nin) == null&& !persons.containsKey(nin)){\n\
+    \nPatient patient = newPatient(nin, name, surname, medRecNum);\npersons.put(nin,\
+    \ patient);\nlog.info(\"Patient \" + name + \" \" + surname + \" with medical\
+    \ record \" + medRecNum + \" is created!\");\n\n}else{\n\nlog.info(\"Patient \"\
+    \ + name + \" \" + surname + \" already exists!\");\n\n}\n\n}\n```\n\nBoth methods\
+    \ are doing same thing. `HashMap` takes input by key/value. In this case `nin`\
+    \ is key, so in our methods we are checking if person doesn`t exists. If it is\
+    \ true, then we are creating a new one. If it is false we are printing some massage.\
+    \ `containsKey()` method isn't covered, it checks if map contains a mapping for\
+    \ the specified key.\n\n### Assignment Logic\n\nNext step is to assign patient\
+    \ to doctor. First we need some method in `Patient` class for assigning to doctor.\
+    \ Method is similar like this two above:\n\n```java\nprivate Doctor assign;\n\n\
+    publicvoid assignDoctor(Doctor doc){\n\nif(Hospital.getInstance().TryGetDoctor(doc)\
+    \ != null){\n\nassign = doc;\nlog.info(\"Patient is assigned to \" + doc.getName());\n\
+    \n}else{\n\nlog.info(\"Doctor \" + doc.getName() + \" doesn`t exists!\");\n\n\
+    }\n\n}\n```\n\nOur method is using reference of `Doctor` to itself.\n\n**Note**:\
+    \ Also add logger to `Patient` class.\n\n```java\nstatic Logger log = Logger.getLogger(Hospital.class);\n\
+    ```\n\nIn beginning it sad that doctor can have many patients, so we also need\
+    \ `HashMap` for that, inside `Doctor` class of course:\n\n```java\nprivate Map<String,\
+    \ Patient>patients = new HashMap<String, Patient>();\n```\n\nThis map again need\
+    \ method for putting patients. Let`s create:\n\n```java\npublicvoid addPatient(Patient\
+    \ patient){\n\nif(Hospital.getInstance().TryGetPatient(patient.nin) != null){\n\
+    \npatients.put(patient.nin, patient);\n\n}\n\n}\n```\n\n`Hospital` now need method\
+    \ to implement `assignDoctorToPatient`:\n\n```java\npublicvoid assignDoctorToPatient(Doctor\
+    \ doctor, Patient patient){\n\npatient.assignDoctor(doctor);\n\n}\n```\n\n###\
+    \ Examinations\n\nNow is time to move on examinations. It is sad that each examination\
+    \ have ID and `date` as common attributes, so in this case we can use concept\
+    \ of abstract classes. `LaboratoryExamination`will be our abstract class:\n\n\
+    ```java\npublicabstract class LaboratoryExamination {\n\npublic String examinationID;\n\
+    public Date date;\n\npublic LaboratoryExamination(String exam, Date date){\n\n\
+    this.examinationID = exam;\nthis.date = date;\n\n}\n```\n\nDon't forget to generate\
+    \ getters and setters, also import `java.util.Date` class. We are not discussed\
+    \ about this, but compiler will complain to import classes like `Map`, `HashMap`\
+    \ and `Hospital` to `Doctor` and `Patient` classes. Just do it.\n\n`BloodSugarLevel`\
+    \ class:\n\n```java\npublicclass BloodSugarLevel extends LaboratoryExamination{\n\
+    \nprivate double value;\nprivate Date lastMealTime;\n\npublic BloodSugarLevel(String\
+    \ exam, Date date, double value, Date last){\n\nsuper(exam, date);\nthis.value\
+    \ = value;\nthis.lastMealTime = last;\n\n}\n\npublic BloodSugarLevel(String exam,\
+    \ Date date){\n\nsuper(exam, date);\n\n}\n\n}\n```\n\n`BloodPressure` class:\n\
+    \n```java\npublicclass BloodPressure extends LaboratoryExamination{\n\nprivate\
+    \ int upperValue;\nprivate int lowerValue;\nprivate int pulse;\n\npublic BloodPressure(String\
+    \ exam, Date date, int upper, int lower, int pulse){\n\nsuper(exam, date);\nthis.upperValue\
+    \ = upper;\nthis.lowerValue = lower;\nthis.pulse = pulse;\n\n}\n\npublic BloodPressure(String\
+    \ exam, Date date){\n\nsuper(exam, date);\n\n}\n\n}\n```\n\nAgain, getters and\
+    \ setters!\n\nBefore we make last one methods for examination manipulations, we\
+    \ need class that will hold references from `Patient`, `Doctor` and `LaboratoryExamination`\
+    \ classes. You will see latter why, so create `PatientDoctorExamination` class:\n\
+    \n```java\nprivate Doctor doctor;\n\nprivate Patient patient;\nprivate LaboratoryExamination\
+    \ labExam;\n\npublic PatientDoctorExamination(Doctor doc, Patient pat, LaboratoryExamination\
+    \ ladExamination){\n\nthis.doctor = doc;\nthis.patient = pat;\nthis.labExam =\
+    \ ladExamination;\n\n}\n```\n"
+  raw: '*   Patient can have only one Doctor
+
+
+    *   Doctor assigns laboratory examination to Patient
+
+
+    *   Examination have date and time
+
+
+    *   Types of examinations:
+
+
+     Blood sugar level (upper value, lower value, pulse)
+
+
+     Blood pressure (value, last time meal)
+
+
+    Make script that simulates next:
+
+
+    1\. Create Doctor “Bob Williams”
+
+
+    2\. Create Patient “Fill Kane”
+
+
+    3\. Patient “Fill” chooses “Bob” to be his Doctor
+
+
+    4\. Doctor “Bob” calls Patient “Fill” for blood sugar level examination
+
+
+    5\. Doctor “Bob” calls Patient “Fill” for blood pressure examination
+
+
+    6\. Examinations have examinationID and date values
+
+
+          7\. Show results for both examinations
+
+
+    Start to think about project with entities, Doctor and Patient, are they have
+    something similar? Do we maybe need abstract class? Is this also case with examinations?
+    How to derive only one doctor to patient? Singleton pattern?
+
+
+    Let`s start making our project to better figure out all of this.
+
+
+    In Eclipse create a new project Hospital. Our entities will be placed inside model
+    package. Every hospital has entities like Doctor and Patient, our also will. First,
+    we will make abstract class Person:
+
+
+    protected String nin;
+
+
+    protected String name;
+
+
+    protected String surname;
+
+
+    public Person(String n, String name, String surname){
+
+
+    this.nin = n;
+
+
+    this.name = name;
+
+
+    this.surname = surname;
+
+
+    }
+
+
+    Generate getters and setters for nin, name and age attributes also.nin stands
+    for National Identity Number.Next class is Doctor:
+
+
+    publicclass Doctor extends Person{
+
+
+    private String specialty;
+
+
+    public Doctor(String n, String name, String surname, String spec){
+
+
+    super(n, name, surname);
+
+
+    this.specialty = spec;
+
+
+    }
+
+
+    }
+
+
+    Also, generate getters and setters for specialty attribute. Patient class:
+
+
+    publicclass Patient extends Person{
+
+
+    privateintmedicalRecordNumber;
+
+
+    public Patient(String n,String name, String surname, intmedRecNum){
+
+
+    super(n, name, surname);
+
+
+    this.medicalRecordNumber = medRecNum;
+
+
+    }
+
+
+    }
+
+
+    Getters and setters for medicalRecordNumber.
+
+
+    Our next job to do is to assign doctor to patient. We have condition, our patient
+    can have only one doctor. You can guess, singleton pattern need to be implemented.
+    Use lazy initialization in Hospital class:
+
+
+    private Hospital(){
+
+
+    }
+
+
+    privatestatic Hospital instance;
+
+
+    publicstatic Hospital getInstance(){
+
+
+    if(instance == null){
+
+
+    instance = new Hospital();
+
+
+    }
+
+
+    returninstance;
+
+
+    }
+
+
+    Doctor and patients need to be stored somewhere. We will use HashMap for that.
+    Add this to Hospital class:
+
+
+    private Map<String, Person>persons = new HashMap<String, Person>();
+
+
+    Our Hospital also needs methods for manipulationg with persons.
+
+
+    private Person TryGetPerson(String nin){
+
+
+    returnpersons.get(nin);
+
+
+    }
+
+
+    public Doctor TryGetDoctor(String nin){
+
+
+    Doctor doct;
+
+
+    doct = (Doctor)TryGetPerson(nin);
+
+
+    returndoct;
+
+
+    }
+
+
+    public Patient TryGetPatient(String nin){
+
+
+    Patient patient;
+
+
+    patient = (Patient)TryGetPerson(nin);
+
+
+    returnpatient;
+
+
+    }
+
+
+    Method TryGetPerson() returns person with his nin. To decide if that person is
+    doctor or patient, we need TryGetDoctor() and TryGetPatient() methods.
+
+
+    Note: Look at script. At 7\. it says we need to show results. For this purpose,
+    we will use log4j, new for us but very simple feature. Download jar file from
+    this site: [http://www.java2s.com/Code/Jar/l/Downloadlog4jjar.htm](http://www.java2s.com/Code/Jar/l/Downloadlog4jjar.htm)
+
+
+    Extract file and add jar file to project by Right click ->Properties ->Java Build
+    Path ->Add External JARs ->log4j
+
+
+    Below class name Hospital, add our Logger:
+
+
+    static Logger log = Logger.getLogger(Hospital.class);
+
+
+    Now is order to make methods which actually create doctor and patient:
+
+
+    publicvoid createDoctor(String nin, String name, String surname, String spec){
+
+
+    if(TryGetDoctor(nin) == null&& !persons.containsKey(nin)){
+
+
+    Doctor doctor = newDoctor(nin, name, surname, spec);
+
+
+    persons.put(nin, doctor);
+
+
+    log.info("Doctor " + name + " " + surname + " with speciality " + spec + "is created!");
+
+
+    }else{
+
+
+    log.info("Doctor " + name + " " + surname + " already exists!");
+
+
+    }
+
+
+    }
+
+
+    publicvoid createPatient(String nin, String name, String surname, intmedRecNum){
+
+
+    if(TryGetPatient(nin) == null&& !persons.containsKey(nin)){
+
+
+    Patient patient = newPatient(nin, name, surname, medRecNum);
+
+
+    persons.put(nin, patient);
+
+
+    log.info("Patient " + name + " " + surname + " with medical record " + medRecNum
+    + " is created!");
+
+
+    }else{
+
+
+    log.info("Patient " + name + " " + surname + " already exists!");
+
+
+    }
+
+
+    }
+
+
+    Both methods are doing same thing. HashMap takes input by key/value. In this case
+    nin is key, so in our methods we are checking if person doesn`t exists. If it
+    is true, then we are creating a new one. If it is false we are printing some massage.
+    containsKey() method isn`t covered, it checks if map contains a mapping for the
+    specified key.
+
+
+    Next step is to assign patient to doctor. First we need some method in Patient
+    class for assigning to doctor. Method is similar like this two above:
+
+
+    private Doctor assign;
+
+
+    publicvoid assignDoctor(Doctor doc){
+
+
+    if(Hospital.getInstance().TryGetDoctor(doc.JMBG) != null){
+
+
+    assign = doc;
+
+
+    log.info("Patient is assigned to " + doc.getName() + " "+ doc.getSurname());
+
+
+    }else{
+
+
+    log.info("Doctor " + doc.getName() + " " + doc.getSurname() + " doesn`t exists!");
+
+
+    }
+
+
+    }
+
+
+    Our method is using reference of Doctor class to assign type of Doctor to itself.
+
+
+    Note: Also add logger to Patient class.
+
+
+    static Logger log = Logger.getLogger(Hospital.class);
+
+
+    In beginning it sad that doctor can have many patients, so we also need HashMap
+    for that patients, inside Doctor class of course:
+
+
+    private Map<String, Patient>patients = new HashMap<String, Patient>();
+
+
+    This map again need method for putting patients inside. Let`s create her:
+
+
+    publicvoid addPatient(Patient patient){
+
+
+    if(Hospital.getInstance().TryGetPatient(patient.nin) != null){
+
+
+    patients.put(nin, patient);
+
+
+    }
+
+
+    }
+
+
+    Class Hospital now need method to implement assignDoctor() method:
+
+
+    publicvoidassignDoctorToPatient(Doctor doctor, Patient patient){
+
+
+    patient.assignDoctor(doctor);
+
+
+    }
+
+
+    Now is time to move on examinations. It is sad that each examination have ID and
+    date as common attributes, so in this case we also can use concept of abstract
+    classes. LaboratoryExaminationwill be our abstract class:
+
+
+    publicabstractclass LaboratoryExamination {
+
+
+    publicintexaminationID;
+
+
+    public Date date;
+
+
+    public LaboratoryExamination(intexam, Date date){
+
+
+    this.examinationID = exam;
+
+
+    this.date = date;
+
+
+    }
+
+
+    }
+
+
+    Don`t forget to generate getters and setters, also import java.util.Date class.
+    We are not discussed about this, but compiler will complain to import classes
+    like Map, HashMap and Hospital to Doctor and Patient classes. Just do it.
+
+
+    BloodSugarLevel class:
+
+
+    publicclass BloodSugarLevel extends LaboratoryExamination{
+
+
+    privatedoublevalue;
+
+
+    private Date lastMealTime;
+
+
+    public BloodSugarLevel(intexam, Date date, doublevalue, Date last){
+
+
+    super(exam, date);
+
+
+    this.value = value;
+
+
+    this.lastMealTime = last;
+
+
+    }
+
+
+    public BloodSugarLevel(intexam, Date date){
+
+
+    super(exam, date);
+
+
+    }
+
+
+    }
+
+
+    BloodPressure class:
+
+
+    publicclass BloodPressure extends LaboratoryExamination{
+
+
+    privateintupperValue;
+
+
+    privateintlowervalue;
+
+
+    privateintpulse;
+
+
+    public BloodPressure(intexam, Date date, intupper, intlower, intpulse){
+
+
+    super(exam, date);
+
+
+    this.upperValue = upper;
+
+
+    this.lowervalue = lower;
+
+
+    this.pulse = pulse;
+
+
+    }
+
+
+    public BloodPressure(intexam, Date date){
+
+
+    super(exam, date);
+
+
+    }
+
+
+    }
+
+
+    Again, getters and setters!
+
+
+    Before we make last one methods for examination manipulations, we need class that
+    will hold references from Patient, Doctor and LaboratoryExamination classes. You
+    will see latter why, so create PatientDoctorExamination class:
+
+
+    private Doctor doctor;
+
+
+    private Patient patient;
+
+
+    private LaboratoryExamination labExam;
+
+
+    publicPatientDoctorExamination(Doctor doc, Patient pat, LaboratoryExamination
+    ladExamination){
+
+
+    this.doctor = doc;
+
+
+    this.patient = pat;
+
+
+    this.labExam = ladExamination;
+
+
+    }
+
+
+    As always, getters and setters need to be generated in this class.'
+  toc: []
+  trans: "\n\n-   病人只能拥有一位医生\n-   医生为病人分配实验室检查\n-   检查有日期和时间\n-   检查类型：\n    -   血糖水平（上限、下限、脉搏）\n\
+    \    -   血压（数值、上一次进食时间）\n\n编写一个脚本模拟以下过程：\n\n1. 创建医生 `Bob Williams`\n2. 创建患者 `Fill\
+    \ Kane`\n3. 患者 `Fill` 选择 `Bob` 为其医生\n4. 医生 `Bob` 叫病人 `Fill` 进行血糖检查\n5. 医生 `Bob`\
+    \ 叫病人 `Fill` 进行血压检查\n6. 检查具有 `examinationID` 和 `date` 值\n7. 显示两项检查的结果\n\n开始思考这个项目，对于\
+    \ `Doctor` 和 `Patient` 实体，它们之间有相似之处吗？我们是否可能需要抽象类？检查也是如此情况吗？如何将一个医生派给一个病人？`单例模式\
+    \ (Singleton pattern)`？\n\n让我们开始构建我们的项目，以更好地理解所有这些。\n\n在 `Eclipse` 中创建一个新项目 `Hospital`。我们的实体将放在\
+    \ `model` 包中。每家医院都有像 `Doctor` 和 `Patient` 这样的实体，我们的也会。首先，我们将创建一个抽象类 `Person`：\n\
+    \n```java\nprotected String nin;\n\nprotected String name;\nprotected String surname;\n\
+    \npublic Person(String n, String name, String surname){\n\nthis.nin = n;\n\nthis.name\
+    \ = name;\n\nthis.surname = surname;\n\n}\n```\n\n为 `nin`、`name` 和 `age` 属性生成\
+    \ getter 和 setter。`nin` 代表国家身份号码 (National Identity Number)。下一个类是 `Doctor`：\n\n\
+    ```java\npublicclass Doctor extends Person{\n\nprivate String specialty;\n\npublic\
+    \ Doctor(String n, String name, String surname, String spec){\n\nsuper(n, name,\
+    \ surname);\nthis.specialty = spec;\n\n}\n\n}\n```\n\n### Patient 类\n\n同样，为 `specialty`\
+    \ 属性生成 getter 和 setter。`Patient` 类：\n\n```java\npublicclass Patient extends Person{\n\
+    \nprivateintmedicalRecordNumber;\n\npublic Patient(String n,String name, String\
+    \ surname, intmedRecNum){\n\nsuper(n, name, surname);\nthis.medicalRecordNumber\
+    \ = medRecNum;\n\n}\n\n}\n```\n\n为 `medicalRecordNumber` 生成 getter 和 setter。\n\
+    \n### Hospital 类\n\n我们的下一次工作是将医生分配给病人。我们有一个条件，我们的病人只能拥有一位医生。你可以猜到，需要实现 `单例模式 (singleton\
+    \ pattern)`。在 `Hospital` 类中使用懒初始化：\n\n```java\nprivate Hospital(){\n\n}\n\nprivatestatic\
+    \ Hospital instance;\n\npublicstatic Hospital getInstance(){\n\nif(instance ==\
+    \ null){\n\ninstance = new Hospital();\n\n}\n\nreturninstance;\n\n}\n```\n\n医生和病人需要存储在某个地方。我们将使用\
+    \ `HashMap`。在 `Hospital` 类中添加此内容：\n\n```java\nprivate Map<String, Person>persons\
+    \ = new HashMap<String, Person>();\n```\n\n我们的 `Hospital` 还需要用于操作人的方法：\n\n```java\n\
+    private Person TryGetPerson(String nin){\n\nreturnpersons.get(nin);\n}\n\npublic\
+    \ Doctor TryGetDoctor(String nin){\n\nDoctor doct;\ndoct = (Doctor)TryGetPerson(nin);\n\
+    returndoct;\n}\n\npublic Patient TryGetPatient(String nin){\n\nPatient patient;\n\
+    patient = (Patient)TryGetPerson(nin);\n\nreturnpatient;\n\n}\n```\n\n`TryGetPerson()`\
+    \ 根据其 `nin` 返回人。为了判断该人是医生还是病人，我们需要 `TryGetDoctor()` 和 `TryGetPatient()` 方法。\n\n\
+    **注意**：查看脚本。在第 7 点，提到我们需要显示结果。为了这个目的，我们将使用 `log4j`，这对我们来说是新的，但是一个非常简单的功能。从此网站下载\
+    \ jar 文件：[`www.java2s.com/Code/Jar/l/Downloadlog4jjar.htm`](http://www.java2s.com/Code/Jar/l/Downloadlog4jjar.htm)\n\
+    \n提取文件并通过右键点击 -> Properties -> Java Build Path -> Add External JARs -> `log4j`\
+    \ 将 jar 文件添加到项目。\n\n在 `Hospital` 类名下方，添加我们的 `Logger`：\n\n```java\nstatic Logger\
+    \ log = Logger.getLogger(Hospital.class);\n```\n\n现在是编写实际创建医生和病人的方法了：\n\n```java\n\
+    publicvoid createDoctor(String nin, String name, String surname, String spec){\n\
+    \nif(TryGetDoctor(nin) == null&& !persons.containsKey(nin)){\n\nDoctor doctor\
+    \ = newDoctor(nin, name, surname, spec);\npersons.put(nin, doctor);\nlog.info(\"\
+    Doctor \" + name + \" \" + surname + \" with speciality \" + spec + \"is created!\"\
+    );\n\n}else{\n\nlog.info(\"Doctor \" + name + \" \" + surname + \" already exists!\"\
+    );\n\n}\n\n}\n\npublicvoid createPatient(String nin, String name, String surname,\
+    \ intmedRecNum){\n\nif(TryGetPatient(nin) == null&& !persons.containsKey(nin)){\n\
+    \nPatient patient = newPatient(nin, name, surname, medRecNum);\npersons.put(nin,\
+    \ patient);\nlog.info(\"Patient \" + name + \" \" + surname + \" with medical\
+    \ record \" + medRecNum + \" is created!\");\n\n}else{\n\nlog.info(\"Patient \"\
+    \ + name + \" \" + surname + \" already exists!\");\n\n}\n\n}\n```\n\n两个方法都在做相同的事情。`HashMap`\
+    \ 通过键值对接收输入。在这种情况下 `nin` 是键，所以在我们的方法中，我们检查该人是否存在。如果为真，我们就创建一个新的。如果假，我们就打印。\n\n\
+    两个方法都在做相同的事情。`HashMap` 通过键值对接收输入。在这种情况下 `nin` 是键，所以在我们的方法中，我们检查该人是否存在。如果为真，我们就创建一个新的。如果假，我们就打印。\n\
+    \n### 分配逻辑\n\n下一步是将医生分配给病人。我们有一个条件，我们的病人只能拥有一位医生。首先，在 `Patient` 类中需要一个分配医生的方法，如下：\n\
+    \n```java\nprivate Doctor assign;\n\npublicassignDoctor(Doctor doc){\n\nif(Hospital.getInstance().TryGetDoctor(doc)\
+    \ != null){\n\nassign = doc;\nlog.info(\"Patient is assigned to \" + doc.getName());\n\
+    \n}else{\n\n}\n\n}}\n```\n\n**注意**：同样为 `Patient` 类添加 logger。\n\n```java\nstatic\
+    \ Logger log = Logger.getLogger(Hospital.class);\n```\n\n在开始时医生可以有很多病人，所以在 `Doctor`\
+    \ 类中需要一个 `HashMap`：\n\n```java\nprivate Map<String, Patient>patients = new HashMap<String>();\n\
+    ```\n\n这个 map 需要一个添加病人的方法：\n\n```java\npublicvoid addPatient(Patient patient){\n\
+    \nif(Hospital.getInstance().TryGetPatient(patient.nin) != null){\n\npatients.put(patient.nin,\
+    \ patient);\n\n}\n\n}\n```\n\n`Hospital` 现在需要一个方法来实现分配给病人：\n\n```java\npublicvoid\
+    \ assignToPatient(Doctor doctor, Patient patient){\n\npatient.assignDoctor(doctor);\n\
+    \n}\n```\n\n### 检查\n\n现在是处理检查了。每个检查都有 ID 和 `date` 共同属性，因此在这种情况下可以使用抽象类的概念。`LaboratoryExamination`\
+    \ 将是我们的抽象类：\n\n```java\npublicabstract class LaboratoryExamination {\n\npublic\
+    \ String examinationID;\npublic Date date;\n\npublicLaboratoryExamination(String\
+    \ exam, Date date){\n\nthis.examinationID = exam;\nthis.date = date;\n\n}}\n\n\
+    不要忘记生成 getter 和 setter，还要导入 `java.util.Date` 类。我们还没有讨论这个，但编译器会提示导入 `Map`、`HashMap`\
+    \ 和 `Hospital` 类到 `Doctor` 和 `Patient` 类中。只需执行。\n\n`BloodSugarLevel` 类：\n\n```java\n\
+    publicclass BloodSugarLevel extends LaboratoryExamination{\n\nprivate double value;\n\
+    private Date lastMealTime;\n\npublic BloodSugarLevel(String exam, Date date, double\
+    \ value, Date last){\n\nsuper(exam, date);\nthis.value = value;\nthis.lastMealTime\
+    \ = last;\n\n}\n\npublic BloodSugarLevel(String exam, Date date){\n\nsuper(exam,\
+    \ date);\n\n}\n\n}\n```\n\n`BloodPressure` 类：\n\n```java\npublicclass BloodPressure\
+    \ extends LaboratoryExamination{\n\nprivate int upperValue;\nprivate int lowerValue;\n\
+    private int pulse;\n\npublic BloodPressure(String exam, Date date, int upper,\
+    \ int lower, int pulse){\n\nsuper(exam, date);\nthis.upperValue = upper;\nthis.lowerValue\
+    \ = lower;\nthis.pulse = pulse;\n\n}\n\npublic BloodPressure(String exam, Date\
+    \ date){\n\nsuper(exam, date);\n\n}\n\n}\n```\n\n在我们制作最后的用于操作检查的方法之前，我们需要一个持有\
+    \ `Patient`、`Doctor` 和 `LaboratoryExamination` 类引用的类。你稍后会看到为什么，所以创建一个 `PatientDoctorExamination`\
+    \ 类：\n\n```java\nprivate Doctor doctor;\n\nprivate Patient patient;\nprivate LaboratoryExamination\
+    \ labExam;\n\npublic PatientDoctorExamination(Doctor doc, Patient pat, LaboratoryExamination\
+    \ ladExamination){\n\nthis.doctor = doc;\nthis.patient = pat;\nthis.labExam =\
+    \ ladExamination;\n\n}\n```\n\n"
+- fmt: "\nLet's finish with our `Hospital` class. Like with persons, we need `HashMap`\
+    \ for examinations:\n\n```java\nprivate Map<Integer, PatientDoctorExamination>examinations\
+    \ = new HashMap<Integer, PatientDoctorExamination>();\n```\n\nHere you can see\
+    \ usage of previous `PatientDoctorExamination` class. Also, we need something\
+    \ that will store our examinations. For this, let's use `enum` in `Hospital` class:\n\
+    \n```java\npublic enum laboratoryExaminations{\n    bloodPressure,\n    bloodSugarLevel,\n\
+    }\n```\n\nOk, but as always, we need something to do with our data, examinations.\
+    \ Method need to put our examination to `HashMap` based on input. One more thing\
+    \ that we covered earlier will be used, `switch`, so add method to `Hospital`\
+    \ class:\n\n```java\nprivate int examID;\n\npublic int ScheduleExamination(Doctor\
+    \ doctor, Patient patient, Date date, laboratoryExaminations examinationsLab){\n\
+    \    LaboratoryExamination examination = null;\n    switch(examinationsLab){\n\
+    \        case bloodPressure:\n            examination = new BloodPressure(examID,\
+    \ date);\n            break;\n        case bloodSugarLevel:\n            examination\
+    \ = new BloodSugarLevel(examID, date);\n            break;\n    }\n    examinations.put(examID,\
+    \ new PatientDoctorExamination(doctor, patient, examination));\n    examID++;\n\
+    \    return examination.examinationID;\n}\n```\n\nLast one thing that we need\
+    \ to do in `Hospital` class to make it functional is to somehow make methods that\
+    \ are finally making examinations. This will be shown is code below:\n\n```java\n\
+    public void FillBloodSugarLevelExamination(int examinationID, double value, Date\
+    \ date){\n    PatientDoctorExamination patientDoctorExamination = null;\n    patientDoctorExamination\
+    \ = examinations.get(examinationID);\n    if(patientDoctorExamination != null){\n\
+    \        if(patientDoctorExamination.getLabExam() instanceof BloodSugarLevel){\n\
+    \            BloodSugarLevel bloodSugarLevel = (BloodSugarLevel)patientDoctorExamination.getLabExam();\n\
+    \            bloodSugarLevel.setValue(value);\n            bloodSugarLevel.setLastMealTime(date);\n\
+    \            log.info(\"Examination is successfully done! \\n\" +\"=======\\n\"\
+    + \"value: \" + value + \", last meal time: \" + date);\n        }else\n     \
+    \       log.info(\"Selected examination is not for blood sugar level!\");\n  \
+    \  }else\n        log.info(\"Selected examination does not exist!\");\n}\n\npublic\
+    \ void FillBloodPressureExamination(int examinationID, int upperValue, int lowerValue,\
+    \ int pulse){\n    PatientDoctorExamination patientDoctorExamination = null;\n\
+    \    patientDoctorExamination = examinations.get(examinationID);\n    if(patientDoctorExamination\
+    \ != null){\n        if(patientDoctorExamination.getLabExam() instanceof BloodPressure){\n\
+    \            BloodPressure bloodPressure = (BloodPressure)patientDoctorExamination.getLabExam();\n\
+    \            bloodPressure.setUpperValue(upperValue);\n            bloodPressure.setLowervalue(lowerValue);\n\
+    \            bloodPressure.setPulse(pulse);\n            log.info(\"Examination\
+    \ is successfully done! \\n\" +\"=======\\n\"+\"upper value: \" + upperValue +\
+    \ \", lower value: \" + lowerValue + \", pulse: \" + pulse);\n        }else\n\
+    \            log.info(\"Selected examination is not for blood pressure!\");\n\
+    \    }else\n        log.info(\"Selected examination does not exist!\");\n}\n```\n\
+    \nNow when all characteristics and conditions are satisfied, only thing that is\
+    \ left to do is to create class with main method to see output of our program.\
+    \ Hope you didn't forgot that all classes, except `Hospital`, were supposed to\
+    \ be in model package. `Hospital` and `ProgramHospital` class, which will be made\
+    \ now, are placed in program package. While creation of this class, add `main`\
+    \ method, and following lines inside:\n\n```java\norg.apache.log4j.BasicConfigurator.configure();\n\
+    Hospital.getInstance().createDoctor(\"1234\", \"Bob\", \"Williams\", \"surgeon\"\
+    );\nHospital.getInstance().createPatient(\"2345\", \"Fill\", \"Kane\", 25);\n\
+    Doctor doctor = Hospital.getInstance().TryGetDoctor(\"1234\");\nPatient patient\
+    \ = Hospital.getInstance().TryGetPatient(\"2345\");\n```\n\nNote: Don't get confused\
+    \ about first line of code, it's just configuring our `log4j`.\n\nAs you can see,\
+    \ when class is singleton, methods that are inside her are only available to be\
+    \ called through `getInstance()` static method. First, we created doctor and patient,\
+    \ so they are in `HashMap` now. Next step is where we stored our doctor and patient\
+    \ to doctor and patient references. Finally, we assigned them to each other. And\
+    \ last part is to delegate examinations to patient:\n\n```java\nint examination1\
+    \ = Hospital.getInstance().ScheduleExamination(doctor, patient, new Date(), laboratoryExaminations.bloodSugarLevel);\n\
+    int examination2 = Hospital.getInstance().ScheduleExamination(doctor, patient,\
+    \ new Date(), laboratoryExaminations.bloodPressure);\nHospital.getInstance().FillBloodSugarLevelExamination(examination1,\
+    \ 12, new Date());\nHospital.getInstance().FillBloodPressureExamination(examination2,\
+    \ 120, 90, 32);\n```\n\nPreviously you can clearly recognize what this methods\
+    \ do. They fill schedule examinations.\n\nRun program.\n\n## Thank You But Can\
+    \ I Ask you for a Favor?\n\nLet me say thank you for downloading and reading my\
+    \ book. This would be all about Java in this book. Hope you enjoyed it but you\
+    \ need to keep on learning to be perfect!\n\nI’d really appreciate it if you would\
+    \ post a short review on Amazon.\n\n[https://www.amazon.com/Amazing-JAVA-Learn-Quickly-ebook/dp/B0737762M8/ref=zg_bs_8624232011_f_23?_encoding=UTF8&psc=1&refRID=W8F9B0G980WACSXY1G8P](https://www.amazon.com/Amazing-JAVA-Learn-Quickly-ebook/dp/B0737762M8/ref=zg_bs_8624232011_f_23?_encoding=UTF8&psc=1&refRID=W8F9B0G980WACSXY1G8P)\n\
+    \nI read all the reviews personally so that I can continually write what you need.\
+    \ Thanks.\n"
+  raw: 'Let`s finish with our Hospital class. Like with persons, we need HashMap for
+    examinations:
+
+
+    private Map<Integer, PatientDoctorExamination>examinations = new HashMap<Integer,
+    PatientDoctorExamination>();
+
+
+    Here you can see usage of previous PatientDoctorExamination class. Also, we need
+    something that will store our examinations. For this, let`s use enum in Hospital
+    class:
+
+
+    publicenum laboratoryExaminations{
+
+
+    bloodPressure,
+
+
+    bloodSugarLevel,
+
+
+    }
+
+
+    Ok, but as always, we need something to do with our data, examinations. Method
+    need to put our examination to HashMap based on input. One more thing that we
+    covered earlier will be used, switch, so add method to Hospital class:
+
+
+    privateintexamID;
+
+
+    publicint ScheduleExamination(Doctor doctor, Patient patient, Date date, laboratoryExaminations
+    examinationsLab){
+
+
+    LaboratoryExamination examination = null;
+
+
+    switch(examinationsLab){
+
+
+    casebloodPressure:
+
+
+    examination = new BloodPressure(examID, date);
+
+
+    break;
+
+
+    casebloodSugarLevel:
+
+
+    examination = new BloodSugarLevel(examID, date);
+
+
+    break;
+
+
+    }
+
+
+    examinations.put(examID, new PatientDoctorExamination(doctor, patient, examination));
+
+
+    examID++;
+
+
+    returnexamination.examinationID;
+
+
+    }
+
+
+    Last one thing that we need to do in Hospital class to make it functional is to
+    somehow make methods that are finally making examinations. This will be shown
+    is code below:
+
+
+    publicvoid FillBloodSugarLevelExamination(intexaminationID, doublevalue, Date
+    date){
+
+
+    PatientDoctorExamination patientDoctorExamination = null;
+
+
+    patientDoctorExamination = examinations.get(examinationID);
+
+
+    if(patientDoctorExamination != null){
+
+
+    if(patientDoctorExamination.getLabExam() instanceof BloodSugarLevel){
+
+
+    BloodSugarLevel bloodSugarLevel = (BloodSugarLevel)patientDoctorExamination.getLabExam();
+
+
+    bloodSugarLevel.setValue(value);
+
+
+    bloodSugarLevel.setLastMealTime(date);                                         
+                 
+
+
+    log.info("Examination is successfully done! \n" +"=======\n"+ "value: " + value
+    + ", last meal time: " + date);
+
+
+    }else
+
+
+    log.info("Selected examination is not for blood sugar level!");
+
+
+    }else
+
+
+    log.info("Selected examination does not exist!");             
+
+
+    }
+
+
+    publicvoid FillBloodPressureExamination(intexaminationID, intupperValue, intlowerValue,
+    intpulse){
+
+
+    PatientDoctorExamination patientDoctorExamination = null;
+
+
+    patientDoctorExamination = examinations.get(examinationID);
+
+
+    if(patientDoctorExamination != null){
+
+
+    if(patientDoctorExamination.getLabExam() instanceof BloodPressure){
+
+
+    BloodPressure bloodPressure = (BloodPressure)patientDoctorExamination.getLabExam();
+
+
+    bloodPressure.setUpperValue(upperValue);
+
+
+    bloodPressure.setLowervalue(lowerValue);
+
+
+    bloodPressure.setPulse(pulse);
+
+
+    log.info("Examination is successfully done! \n" +"=======\n"+"upper value: " +
+    upperValue + ", lower value: " + lowerValue + ", pulse: " + pulse);
+
+
+    }else
+
+
+    log.info("Selected examination is not for blood pressure!");
+
+
+    }else
+
+
+    log.info("Selected examination does not exist!");
+
+
+    }
+
+
+    Now when all characteristics and conditions are satisfied, only thing that is
+    left to do is to create class with main method to see output of our program. Hope
+    you didn`t forgot that all classes, except Hospital, were supposed to be in model
+    package. Hospital and ProgramHospitalclass, which will be made now, are placed
+    in program package. While creation of this class, add main method, and following
+    lines inside:
+
+
+    org.apache.log4j.BasicConfigurator.configure();
+
+
+    Hospital.getInstance().createDoctor("1234", "Bob", "Williams", "surgeon");
+
+
+    Hospital.getInstance().createPatient("2345", "Fill", "Kane", 25);
+
+
+    Doctor doctor = Hospital.getInstance().TryGetDoctor("1234");
+
+
+    Patient patient = Hospital.getInstance().TryGetPatient("2345");
+
+
+    Note: Don`t get confused about first line of code, it`s just configuring our log4j.
+
+
+    As you can see, when class is singleton, methods that are inside her are only
+    available to be called through getInstance() static method. First, we created
+    doctor and patient, so they are in HashMap now. Next step is where we stored our
+    doctor and patient to doctor and patient references. Finally, we assigned them
+    to each other. And last part is to delegate examinations to patient:
+
+
+    intexamination1 = Hospital.getInstance().ScheduleExamination(doctor, patient,
+    new Date(), laboratoryExaminations.bloodSugarLevel);
+
+
+    intexamination2 = Hospital.getInstance().ScheduleExamination(doctor, patient,
+    new Date(), laboratoryExaminations.bloodPressure);                           
+
+
+    Hospital.getInstance().FillBloodSugarLevelExamination(examination1, 12 new Date());
+
+
+    Hospital.getInstance().FillBloodPressureExamination(examination2, 120, 90, 32);
+
+
+    Previously you can clearly recognize what this methods do. They fill schedule
+    examinations.
+
+
+    Run program.
+
+
+    ## Thank You But Can I Ask you for a Favor?
+
+
+    Let me say thank you for downloading and reading my book. This would be all about
+    Java in this book. Hope you enjoyed it but you need to keep on learning to be
+    perfect!
+
+
+    I’d really appreciate it if you would post a short review on Amazon.
+
+
+    [https://www.amazon.com/Amazing-JAVA-Learn-Quickly-ebook/dp/B0737762M8/ref=zg_bs_8624232011_f_23?_encoding=UTF8&psc=1&refRID=W8F9B0G980WACSXY1G8P](https://www.amazon.com/Amazing-JAVA-Learn-Quickly-ebook/dp/B0737762M8/ref=zg_bs_8624232011_f_23?_encoding=UTF8&psc=1&refRID=W8F9B0G980WACSXY1G8P)
+
+
+    I read all the reviews personally so that I can continually write what you need.
+    Thanks.'
+  toc: []
+  trans: "\n\n让我们完成 `Hospital` 类。像处理人员类一样，我们需要 `HashMap` 来处理检查项目：\n\n```java\nprivate\
+    \ Map<Integer, PatientDoctorExamination>examinations = new HashMap<Integer, PatientDoctorExamination>();\n\
+    ```\n\n在这里你可以看到之前定义的 `PatientDoctorExamination` 类的用法。此外，我们还需要一个能够存储检查项目的结构。为了这一点，让我们在\
+    \ `Hospital` 类中使用 `enum`：\n\n```java\npublic enum laboratoryExaminations{\n  \
+    \  bloodPressure,\n    bloodSugarLevel,\n}\n```\n\n好了，但像往常一样，我们需要对我们的数据（即检查项目）进行一些操作。方法需要根据输入将检查项目放入\
+    \ `HashMap` 中。我们将使用之前涵盖过的另一个点 `switch`，因此为 `Hospital` 类中添加该方法：\n\n```java\nprivate\
+    \ int examID;\n\npublic int ScheduleExamination(Doctor doctor, Patient patient,\
+    \ Date date, laboratoryExaminations examinationsLab){\n    LaboratoryExamination\
+    \ examination = null;\n    switch(examinationsLab){\n        case bloodPressure:\n\
+    \            examination = new BloodPressure(examID, date);\n            break;\n\
+    \        case bloodSugarLevel:\n            examination = new BloodSugarLevel(examID,\
+    \ date);\n            break;\n    }\n    examinations.put(examID, new PatientDoctorExamination(doctor,\
+    \ patient, examination));\n    examID++;\n    return examination.examinationID;\n\
+    }\n```\n\n为了使 `Hospital` 类具备功能，我们需要做的最后一件事就是以某种方式创建最终执行检查的方法。这将在下面的代码中展示：\n\n\
+    ```java\npublic void FillBloodSugarLevelExamination(int examinationID, double\
+    \ value, Date date){\n    PatientDoctorExamination patientDoctorExamination =\
+    \ null;\n    patientDoctorExamination = examinations.get(examinationID);\n   \
+    \ if(patientDoctorExamination != null){\n        if(patientDoctorExamination.getLabExam()\
+    \ instanceof BloodSugarLevel){\n            BloodSugarLevel bloodSugarLevel =\
+    \ (BloodSugarLevel)patientDoctorExamination.getLabExam();\n            bloodSugarLevel.setValue(value);\n\
+    \            bloodSugarLevel.setLastMealTime(date);\n            log.info(\"Examination\
+    \ is successfully done! \\n\" +\"=======\\n\"+ \"value: \" + value + \", last\
+    \ meal time: \" + date);\n        }else\n            log.info(\"Selected examination\
+    \ is not for blood sugar level!\");\n    }else\n        log.info(\"Selected examination\
+    \ does not exist!\");\n}\n\npublic void FillBloodPressureExamination(int examinationID,\
+    \ int upperValue, int lowerValue, int pulse){\n    PatientDoctorExamination patientDoctorExamination\
+    \ = null;\n    patientDoctorExamination = examinations.get(examinationID);\n \
+    \   if(patientDoctorExamination != null){\n        if(patientDoctorExamination.getLabExam()\
+    \ instanceof BloodPressure){\n            BloodPressure bloodPressure = (BloodPressure)patientDoctorExamination.getLabExam();\n\
+    \            bloodPressure.setUpperValue(upperValue);\n            bloodPressure.setLowervalue(lowerValue);\n\
+    \            bloodPressure.setPulse(pulse);\n            log.info(\"Examination\
+    \ is successfully done! \\n\" +\"=======\\n\"+\"upper value: \" + upperValue +\
+    \ \", lower value: \" + lowerValue + \", pulse: \" + pulse);\n        }else\n\
+    \            log.info(\"Selected examination is not for blood pressure!\");\n\
+    \    }else\n        log.info(\"Selected examination does not exist!\");\n}\n```\n\
+    \n现在，当所有特征和条件都满足后，剩下的工作就是创建一个包含 `main` 方法的类，以查看程序的输出。希望你没有忘记除了 `Hospital` 之外的所有类都应该在\
+    \ `model` 包中。`Hospital` 类和现在创建的 `ProgramHospital` 类放在 `program` 包中。在创建此类时，添加 `main`\
+    \ 方法以及以下内容：\n\n```java\norg.apache.log4j.BasicConfigurator.configure();\nHospital.getInstance().createDoctor(\"\
+    1234\", \"Bob\", \"Williams\", \"surgeon\");\nHospital.getInstance().createPatient(\"\
+    2345\", \"Fill\", \"Kane\", 25);\nDoctor doctor = Hospital.getInstance().TryGetDoctor(\"\
+    1234\");\nPatient patient = Hospital.getInstance().TryGetPatient(\"2345\");\n\
+    ```\n\n注意：不要被第一行代码搞混，它只是在配置我们的 `log4j`。\n\n如你所见，当类是单例时，其内部的方法只能通过 `getInstance()`\
+    \ 静态方法调用。首先，我们创建了医生和患者，所以他们现在位于 `HashMap` 中。下一步是将我们的医生和患者存储到医生和患者的引用中。最后，我们将它们相互赋值。最后一部分是将检查任务委托给患者：\n\
+    \n```java\nint examination1 = Hospital.getInstance().ScheduleExamination(doctor,\
+    \ patient, new Date(), laboratoryExaminations.bloodSugarLevel);\nint examination2\
+    \ = Hospital.getInstance().ScheduleExamination(doctor, patient, new Date(), laboratoryExaminations.bloodPressure);\n\
+    Hospital.getInstance().FillBloodSugarLevelExamination(examination1, 12, new Date());\n\
+    Hospital.getInstance().FillBloodPressureExamination(examination2, 120, 90, 32);\n\
+    ```\n\n之前你就可以清楚地识别出这些方法的作用了。它们负责填充检查计划。\n\n运行程序。\n\n## 谢谢，但我可以请你个忙吗？\n\n感谢你下载并阅读我的书。书中中全是关于\
+    \ Java 的内容。希望你喜欢，但你需要不断学习才能趋于完美！\n\n如果你能在 Amazon 上发表简短的评论，我将不胜感激。\n\n[`www.amazon.com/Amazing-JAVA-Learn-Quickly-ebook/dp/B0737762M8/ref=zg_bs_8624232011_f_23?_encoding=UTF8&psc=1&refRID=W8F9B0G980WACSXY1G8P`](https://www.amazon.com/Amazing-JAVA-Learn-Quickly-ebook/dp/B0737762M8/ref=zg_bs_8624232011_f_23?_encoding=UTF8&psc=1&refRID=W8F9B0G980WACSXY1G8P)\n\
+    \n我会亲自阅读每一条评论，以便不断写出你需要的内容。谢谢。\n\n"
