@@ -1,0 +1,294 @@
+name: Core JAVA For Beginners-Part 2
+name_cn: Java 初学者指南-Part 2
+slug: core-java-for-beginners-part-2
+toc:
+- - '#'
+  - Java 初学者指南-Part 2
+- - '##'
+  - 关于
+- - '##'
+  - 前言
+- - '##'
+  - Java 集合教程
+- - '##'
+  - 1.1 Java Array List
+- - '###'
+  - Java Array List 示例
+- - '###'
+  - 1.1.1 ArrayList 类的方法
+- - '###'
+  - 2) Java 中循环 ArrayList
+- - '###'
+  - 3) 获取 ArrayList 的长度
+- - '##'
+  - 排序
+- - '###'
+  - 示例 1：`ArrayList<String>` 的排序
+- - '###'
+  - 示例 2：`ArrayList<Integer>` 的排序
+- - '###'
+  - 降序排序 `ArrayList`
+- - '###'
+  - 使用 `Comparable` 和 `Comparator` 排序对象的 `ArrayList`
+- - '###'
+  - 使用 Comparator 对 ArrayList<Object> 的多个属性排序
+- - '###'
+  - '5) `Void addFirst(Object item)`: 它将项（或元素）添加到列表的第一个位置。'
+- - '###'
+  - '6) `Void addLast(Object item)`: 它将指定的项插入到列表的末尾。'
+- - '###'
+  - '7) `Void clear()`: 它移除列表中的所有元素。'
+- - '###'
+  - '8) `Object clone()`: 它返回列表的副本。'
+- - '###'
+  - '9) `boolean contains(Object item)`: 它检查给定的项是否存在于列表中。如果项存在，则返回 true，否则返回 false。'
+- - '###'
+  - '10) `Object get(int index)`: 它从列表中返回指定索引的项。'
+- - '###'
+  - '11) `Object getFirst()`: 它从列表中获取第一个项。'
+- - '###'
+  - '12) `Object getLast()`: 它从列表中获取最后一个项。'
+- - '###'
+  - '13) `int indexOf(Object item)`: 它返回指定项的索引。'
+- - '###'
+  - '14) `int lastIndexOf(Object item)`: 它返回指定元素最后一次出现的索引。'
+- - '###'
+  - '15) `Object poll()`: 它返回并移除列表的第一个项。'
+- - '###'
+  - '16) `Object pollFirst()`: 与 `poll()` 方法相同。移除列表的第一个项。'
+- - '###'
+  - '17) `Object pollLast()`: 它返回并移除列表的最后一个元素。'
+- - '###'
+  - '18) `Object remove()`: 它移除列表的第一个元素。'
+- - '###'
+  - '19) `Object remove(int index)`: 它移除列表中位于指定索引处的项。'
+- - '###'
+  - '20) `Object remove(Object obj)`: 它从列表中移除指定的对象。'
+- - '###'
+  - '21) `Object removeFirst()`: 它移除列表的第一个项。'
+- - '###'
+  - '22) `Object removeLast()`: 它移除列表的最后一个项。'
+- - '###'
+  - '23) `Object removeFirstOccurrence(Object item)`: 它移除指定项的第一次出现。'
+- - '###'
+  - '24) `Object removeLastOccurrence(Object item)`: 它移除给定元素的最后一次出现。'
+- - '###'
+  - '25) `Object set(int index, Object item)`: 它用给定的值更新指定索引的项。'
+- - '###'
+  - '26) `int size()`: 它返回列表的元素数量。'
+- - '##'
+  - 1.4 LinkedList 教程
+- - '##'
+  - LinkedList 基础
+- - '###'
+  - 如何遍历 LinkedList
+- - '###'
+  - 如何在 Java 中循环 LinkedList
+- - '###'
+  - '5) `Void addFirst(Object item)`: 它将项（或元素）添加到列表的第一个位置。'
+- - '###'
+  - '6) `Void addLast(Object item)`: 它将指定的项插入到列表的末尾。'
+- - '###'
+  - '7) `Void clear()`: 它移除列表中的所有元素。'
+- - '###'
+  - '8) `Object clone()`: 它返回列表的副本。'
+- - '###'
+  - '9) `boolean contains(Object item)`: 它检查给定的项是否存在于列表中。如果项存在，则返回 true，否则返回 false。'
+- - '###'
+  - '10) `Object get(int index)`: 它从列表中返回指定索引的项。'
+- - '###'
+  - '11) `Object getFirst()`: 它从列表中获取第一个项。'
+- - '###'
+  - '12) `Object getLast()`: 它从列表中获取最后一个项。'
+- - '###'
+  - '13) `int indexOf(Object item)`: 它返回指定项的索引。'
+- - '###'
+  - '14) `int lastIndexOf(Object item)`: 它返回指定元素最后一次出现的索引。'
+- - '###'
+  - '15) `Object poll()`: 它返回并移除列表的第一个项。'
+- - '###'
+  - '16) `Object pollFirst()`: 与 `poll()` 方法相同。移除列表的第一个项。'
+- - '###'
+  - '17) `Object pollLast()`: 它返回并移除列表的最后一个元素。'
+- - '###'
+  - '18) `Object remove()`: 它移除列表的第一个元素。'
+- - '###'
+  - '19) `Object remove(int index)`: 它移除列表中位于指定索引处的项。'
+- - '###'
+  - '20) `Object remove(Object obj)`: 它从列表中移除指定的对象。'
+- - '###'
+  - '21) `Object removeFirst()`: 它移除列表的第一个项。'
+- - '###'
+  - '22) `Object removeLast()`: 它移除列表的最后一个项。'
+- - '###'
+  - '23) `Object removeFirstOccurrence(Object item)`: 它移除指定项的第一次出现。'
+- - '###'
+  - '24) `Object removeLastOccurrence(Object item)`: 它移除给定元素的最后一次出现。'
+- - '###'
+  - '25) `Object set(int index, Object item)`: 它用给定的值更新指定索引的项。'
+- - '###'
+  - '26) `int size()`: 它返回列表的元素数量。'
+- - '##'
+  - LinkedList 基础
+- - '###'
+  - 如何遍历 LinkedList
+- - '###'
+  - 如何在 Java 中循环 LinkedList
+- - '##'
+  - 链表操作
+- - '##'
+  - LinkedList 前端添加元素
+- - '##'
+  - LinkedList 中移除第一个和最后一个元素
+- - '##'
+  - 指定索引处移除
+- - '##'
+  - 从 LinkedList 中移除特定元素
+- - '##'
+  - 从 LinkedList 中移除所有元素
+- - '##'
+  - 将 List 的元素追加到 LinkedList
+- - '##'
+  - 1.5 Java 中的 Vector
+- - '###'
+  - 方法 1：
+- - '###'
+  - 方法 2：
+- - '###'
+  - 方法 3：
+- - '###'
+  - Vector 类常用的方法：
+- - '##'
+  - 1.6 Vector 教程
+- - '##'
+  - Vector 基础
+- - '##'
+  - 1.7 排序/替换
+- - '##'
+  - 1.8 Iterator/ListIterator
+- - '##'
+  - Vector 转换为 List
+- - '##'
+  - 在 Java 中 Vector 转换为数组
+- - '##'
+  - 1.9 Java 中 ArrayList 和 Vector
+- - '##'
+  - 'ArrayList 与 Vector:'
+- - '##'
+  - 何时使用 ArrayList，何时使用？
+- - '##'
+  - 如何 ArrayList 同步？
+- - '##'
+  - 1.10 Java 中的 HashMap
+- - '##'
+  - 带示例的 Java HashMap
+- - '##'
+  - HashMap 方法
+- - '##'
+  - 1.11 HashMap 教程
+- - '##'
+  - HashMap 基础
+- - '##'
+  - 1.12 Java 8 Optional 类
+- - '##'
+  - 1.15 Java 中的 TreeMap
+- - '##'
+  - 1.16 TreeMap 教程
+- - '##'
+  - 1.16 Java 中的 HashSet 类
+- - '##'
+  - 1.17 HashSet 教程
+- - '##'
+  - 1.18 Java 中的 TreeSet 类
+- - '##'
+  - 1.19 Java 中的 LinkedHashMap
+- - '##'
+  - 1.20 Java 中的 LinkedHashSet 类
+- - '##'
+  - 1.21 Java 中的 Hashtable
+- - '###'
+  - 1.21.1 Hashtable 类的方法
+- - '##'
+  - 1.22 Hashtable 教程
+- - '###'
+  - 如何在 Java 中排序 Hashtable
+- - '###'
+  - Hashtable Iterator 示例
+- - '##'
+  - Hashtable 中检查键与值的存在性示例
+- - '##'
+  - 从 Hashtable 中移除映射示例
+- - '##'
+  - 从 Hashtable 中移除所有映射示例
+- - '##'
+  - 获取 Hashtable 的大小示例
+- - '##'
+  - 1.23 Java 集合中的 Queue 接口
+- - '##'
+  - 1.24 Java 集合中的 PriorityQueue 接口
+- - '##'
+  - 1.25 Java 集合中的 Deque 接口
+- - '##'
+  - 1.26 Java 中的 Comparable 接口
+- - '##'
+  - 1.27 Java 中的 Comparator 接口
+- - '##'
+  - 2 Java 枚举教程
+- - '##'
+  - 引言
+- - '##'
+  - 如何定义
+- - '##'
+  - 如何枚举类型？
+- - '##'
+  - 枚举字段
+- - '##'
+  - 注解（Annotations）的作用
+- - '##'
+  - 2.1 Java 中的内置注解
+- - '##'
+  - 2.2 创建自定义注解
+- - '##'
+  - 2.3 Java 正则表达式 (regex)
+- - '##'
+  - 3.1 String 类
+- - '##'
+  - 3.2 String 方法
+- - '##'
+  - 3.3 String 类
+- - '##'
+  - 3.4 Java 中的线程生命周期
+- - '##'
+  - 3.5 Java 序列化
+- - '###'
+  - 3.5.1 对象的序列化
+- - '###'
+  - 3.5.2 对象的序列化
+- - '##'
+  - 3.6 Java AWT
+- - '##'
+  - 3.7 Java Swing
+- - '##'
+  - 3.8 Java 自动装箱与拆箱
+- - '##'
+  - 3.9 Java 中的包装类
+- - '##'
+  - 4 Java 8 教程
+- - '##'
+  - 4.1 Lambda 表达式
+- - '##'
+  - 4.2 Java 8 中的方法引用
+- - '##'
+  - 4.3 Java 8 函数接口
+- - '##'
+  - 4.4 Java 8 接口变化
+- - '##'
+  - 4.5 Java 8 Stream 教程
+- - '##'
+  - 4.6 Java 8 Stream Filter 教程
+- - '##'
+  - 4 Java 8 – 通过键值过滤 Map
+- - '##'
+  - 4.8 Java 8 – 从流中过滤值
+- - '##'
+  - 4.9 Java 8 – forEach

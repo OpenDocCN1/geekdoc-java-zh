@@ -1,0 +1,14 @@
+name: Creational Design Patterns Using Java
+name_cn: Java 创建型模式使用指南
+slug: creational-design-patterns-using-java
+toc:
+- - '##'
+  - 第三章
+- - '###'
+  - 构建器 (Builder)
+- - '###'
+  - 原型 (Prototype)
+- - '###'
+  - 实现
+- - '###'
+  - 益处

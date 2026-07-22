@@ -1,0 +1,166 @@
+name: Dynamic Proxies in Java
+name_cn: Java 动态代理
+slug: dynamic-proxies-in-java
+toc:
+- - '#'
+  - Java 动态代理
+- - '#'
+  - 献辞
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '##'
+  - 大收益
+- - '##'
+  - 等一下……
+- - '##'
+  - 我们将学习什么？
+- - '##'
+  - 简单来说？
+- - '##'
+  - Java 版本
+- - '##'
+  - 玩得愉快！
+- - '#'
+  - 设计模式的亲戚
+- - '##'
+  - 代理模式
+- - '###'
+  - 对象适配器与代理有什么相似之处？
+- - '##'
+  - 装饰器模式
+- - '###'
+  - 装饰器与代理有什么相似之处？
+- - '##'
+  - 组合模式
+- - '###'
+  - 组合与代理有什么相似之处？
+- - '##'
+  - 责任链模式
+- - '#'
+  - 手工代理
+- - '##'
+  - 使用虚拟代理进行延迟初始化
+- - '###'
+  - CustomMap
+- - '###'
+  - CustomHashMap
+- - '###'
+  - VirtualMap
+- - '#'
+  - 使用远程代理调用远程方法
+- - '#'
+  - 使用保护代理实现安全性
+- - '###'
+  - '`SynchronizedMap`'
+- - '###'
+  - '`UnmodifiableCustomMap`'
+- - '##'
+  - 级联代理
+- - '#'
+  - 动态代理
+- - '##'
+  - '`Proxy.newProxyInstance()`'
+- - '###'
+  - '`InvocationHandler`'
+- - '###'
+  - '`LoggingInvocationHandler`'
+- - '##'
+  - 动态类的名称
+- - '##'
+  - 析 `$Proxy0`
+- - '##'
+  - 加速反射方法
+- - '##'
+  - 解包装 `InvocationTargetException`
+- - '##'
+  - 强制转换 (Casting)
+- - '##'
+  - 虚拟代理 (Virtual proxy)
+- - '##'
+  - 同步动态代理 (Synchronized dynamic proxy)
+- - '###'
+  - 级联多个动态代理
+- - '##'
+  - 带有动态代理的 `EnhancedStream`
+- - '##'
+  - 动态代理的局限性
+- - '###'
+  - 请仅限接口
+- - '###'
+  - '`UndeclaredThrowableException`'
+- - '###'
+  - 神秘的 `com.sun.proxy.Proxy$0` 类
+- - '###'
+  - 更深的调用栈
+- - '###'
+  - 泄露的抽象
+- - '###'
+  - 共享代理类
+- - '###'
+  - 动态代理的性能
+- - '###'
+  - '`increment()` 的结果'
+- - '###'
+  - '`consumeCPU()` 的结果'
+- - '###'
+  - 基准结果总结
+- - '#'
+  - 动态装饰器 (Dynamic Decorator)
+- - '##'
+  - 装饰器模式
+- - '##'
+  - 使用动态代理实现过滤器
+- - '##'
+  - InfiniteRandomDouble 装饰器
+- - '##'
+  - '`VTable`'
+- - '###'
+  - '`ParameterTypesFetcher`'
+- - '###'
+  - '`MethodKey`'
+- - '###'
+  - '`VTables` Fac 面'
+- - '###'
+  - '`ChainedInvocationHandler`'
+- - '#'
+  - 动态对象适配器
+- - '##'
+  - Rapper 包装器 (Rapper wrappers)
+- - '###'
+  - 类适配器模式 (Class adapter pattern)
+- - '###'
+  - 对象适配器模式 (Object adapter pattern)
+- - '##'
+  - 更好的 ArrayList
+- - '##'
+  - BetterCollection 接口
+- - '##'
+  - 使用动态代理的动态适配器
+- - '##'
+  - 适配器的限制
+- - '##'
+  - 动态对象适配器方法的性能
+- - '###'
+  - '`size()` 的性能'
+- - '###'
+  - '`toArray()` 的性能'
+- - '###'
+  - '`forEachFiltered()` 的性能'
+- - '#'
+  - 动态组合 (Dynamic Composite)
+- - '##'
+  - 联系人、个人和分发列表
+- - '###'
+  - '`Reducer`'
+- - '###'
+  - '`Proxies`'
+- - '##'
+  - '`AppendableFlushableCloseable`'
+- - '###'
+  - 手工实现的 `TeeAppendable` 复合体
+- - '#'
+  - 结论
+- - '#'
+  - 关于作者

@@ -1,0 +1,727 @@
+name: Core JAVA For Beginners-Part 2： Collection tutorials on Annotation,Arraylist,
+  Miscellaneous,Java 8,Java Input／Output,Java Programs (With Examples)
+name_cn: Java 初学者指南-第2部分：关于注解、ArrayList、杂项、Java 8、Java 输入输出、Java 程序（示例）的集合教程
+slug: core-java-for-beginners-part-2-collection-tutorials-on-annot
+toc:
+- - '#'
+  - Java 初学者指南-第2部分：关于注解、ArrayList、杂项、Java 8、Java 输入输出、Java 程序（示例）的集合教程
+- - '##'
+  - 关于
+- - '##'
+  - 前言
+- - '###'
+  - 1.1 Java ArrayList
+- - '####'
+  - Java 中的 List 示例
+- - '####'
+  - 1.1.1 ArrayList 类的方法
+- - '###'
+  - 1.2 ArrayList 教程
+- - '##'
+  - ArrayList 操作
+- - '###'
+  - 方法 1：使用 Arrays.asList 初始化
+- - '###'
+  - 方法 2：使用匿名内部类初始化 ArrayList
+- - '###'
+  - 方法 3：ArrayList 的普通初始化方式
+- - '###'
+  - 方法 4：使用 Collections.nCopies
+- - '###'
+  - 2) 在 Java 中遍历 ArrayList
+- - '###'
+  - 3) 获取 ArrayList 的长度
+- - '###'
+  - 排序
+- - '###'
+  - 示例 1：ArrayList<String> 的排序
+- - '###'
+  - 示例 2：ArrayList<Integer> 的排序
+- - '###'
+  - 按降序排序 ArrayList
+- - '####'
+  - 示例：降序排序
+- - '####'
+  - 示例：
+- - '###'
+  - 3) 使用 Comparable 和 Comparator 排序对象 ArrayList
+- - '####'
+  - 为什么需要 comparable 和 comparator？
+- - '####'
+  - 使用 Comparator 排序多个属性的 ArrayList<Object>
+- - '###'
+  - 1.3 Java 中的 LinkedList
+- - '####'
+  - Java LinkedList 示例
+- - '####'
+  - 1.3.1 LinkedList 类的方法
+- - '##'
+  - 如何遍历 LinkedList
+- - '###'
+  - 添加/删除
+- - '###'
+  - 向 LinkedList 添加新元素的程序
+- - '####'
+  - 示例：
+- - '####'
+  - '输出:'
+- - '###'
+  - Java – 在 LinkedList 的指定索引处添加元素的示例
+- - '####'
+  - 方法定义：
+- - '####'
+  - 示例：
+- - '####'
+  - '输出:'
+- - '###'
+  - 在 LinkedList 的头部和末尾添加元素
+- - '####'
+  - 示例：
+- - '####'
+  - 完整代码：
+- - '####'
+  - '输出:'
+- - '###'
+  - 向 LinkedList 头部添加元素
+- - '####'
+  - 描述
+- - '####'
+  - 程序：
+- - '####'
+  - '输出:'
+- - '###'
+  - 从 LinkedList 删除第一个和最后一个元素
+- - '####'
+  - 示例：
+- - '####'
+  - 完整代码：
+- - '####'
+  - '输出:'
+- - '###'
+  - 从 LinkedList 的指定索引删除元素
+- - '####'
+  - 示例：
+- - '####'
+  - '输出:'
+- - '###'
+  - 从 LinkedList 中删除特定元素
+- - '####'
+  - 示例：
+- - '####'
+  - '输出:'
+- - '###'
+  - 删除 LinkedList 中的所有元素
+- - '####'
+  - 示例
+- - '####'
+  - 示例：
+- - '####'
+  - '输出:'
+- - '###'
+  - 1.6.1 Java 获取 Vector 子列表的示例
+- - '###'
+  - 1.6.2 Java 中使用 Collections.sort 排序 Vector – 示例
+- - '###'
+  - 1.6.3 Java 使用索引在 Vector 中搜索元素 – 示例
+- - '###'
+  - 1.6.4 将一个 Vector 的元素复制到另一个 Vector 的示例
+- - '###'
+  - 1.7 删除/排序/替换
+- - '##'
+  - 删除 Vector 元素 – Java 示例
+- - '####'
+  - 示例：
+- - '###'
+  - Java 中使用索引删除 Vector 元素的示例
+- - '####'
+  - 示例：
+- - '###'
+  - Java 中从 Vector 中的所有元素 – 示例
+- - '####'
+  - 示例：
+- - '###'
+  - 使用索引替换 Vector 元素 – Java 示例
+- - '####'
+  - 示例：
+- - '###'
+  - 设置 Vector 大小的示例
+- - '####'
+  - 示例：
+- - '###'
+  - 1.8 Iterator/ListIterator/Enumeration
+- - '###'
+  - Java 中的 Vector 举示例
+- - '####'
+  - 示例：完整代码
+- - '###'
+  - Java 中的 Vector Iterator 示例
+- - '####'
+  - 示例：
+- - '###'
+  - Java 中的 Vector ListIterator 示例
+- - '####'
+  - 示例：
+- - '###'
+  - 转换
+- - '###'
+  - Vector 转换为 List 示例
+- - '####'
+  - 示例
+- - '###'
+  - Vector 转换为 ArrayList 示例
+- - '####'
+  - 示例
+- - '####'
+  - 代码
+- - '###'
+  - 在 Java 中如何将 Vector 转换为 String 数组
+- - '####'
+  - 示例
+- - '###'
+  - 1.9 Java 中 ArrayList 和 Vector 的区别
+- - '####'
+  - ArrayList 与 Vector：
+- - '##'
+  - 如何遍历 HashMap
+- - '###'
+  - 1) 如何在 Java 中循环 HashMap
+- - '###'
+  - 2) 如何在 Java 中按键和值对 HashMap 进行排序
+- - '####'
+  - '按键排序 HashMap '
+- - '####'
+  - '按值排序 HashMap '
+- - '####'
+  - 获取 HashMap 大小的示例示例
+- - '###'
+  - 5) Java – 从 HashMap 移除映射的示例
+- - '###'
+  - 1) 检查 HashMap 中是否存在特定键的示例
+- - '####'
+  - 示例：
+- - '###'
+  - 2) 检查 HashMap 中是否存在特定值的示例
+- - '####'
+  - 完整代码：
+- - '##'
+  - 序列化/同步
+- - '###'
+  - 1) 如何在 Java 中序列化 HashMap
+- - '####'
+  - 示例：HashMap 的序列化
+- - '####'
+  - 反序列化
+- - '###'
+  - 2) 在 Java 中同步 HashMap 的方法示例
+- - '####'
+  - 示例
+- - '####'
+  - 完整代码
+- - '###'
+  - 12) ArrayList 和 HashMap 的区别
+- - '####'
+  - ArrayList 与 HashMap
+- - '###'
+  - 13) HashMap 和 Hashtable 的区别
+- - '####'
+  - HashMap 与 Hashtable
+- - '####'
+  - 示例
+- - '###'
+  - 14) HashSet 和 HashMap 的区别
+- - '####'
+  - HashSet vs HashMap
+- - '####'
+  - HashSet 示例
+- - '####'
+  - HashMap 示例
+- - '###'
+  - 1.15 Java 中的 TreeMap
+- - '####'
+  - TreeMap 示例
+- - '###'
+  - 1.16 TreeMap 教程
+- - '###'
+  - 1) 在 Java 中按值对 TreeMap 进行排序
+- - '###'
+  - 2) TreeMap 迭代器示例
+- - '###'
+  - 3) 在 Java 中如何反序遍历 TreeMap
+- - '###'
+  - 4) 从 TreeMap 获取子 Map 的示例 – Java
+- - '###'
+  - 5) 如何获取 TreeMap 的大小 – Java
+- - '###'
+  - 6) 从 TreeMap 移除映射的示例
+- - '###'
+  - 7) 从 TreeMap 移除所有映射的示例 – Java
+- - '###'
+  - 1.16 Java 中的 HashSet 类
+- - '####'
+  - HashSet 示例
+- - '###'
+  - 17 个 HashSet 教程
+- - '##'
+  - HashSet 方法：
+- - '###'
+  - 1) 从 HashSet 中删除所有元素
+- - '###'
+  - 2) 如何遍历 Set/HashSet
+- - '###'
+  - 3) 将 HashSet 转换为数组
+- - '###'
+  - 4) 如何 HashSet 转换为 TreeSet
+- - '###'
+  - 5) 将 HashSet 转换为 List/ArrayList
+- - '###'
+  - 6) HashSet 对比 HashMap
+- - '####'
+  - HashSet 示例
+- - '####'
+  - HashMap 示例
+- - '####'
+  - HashSet vs TreeSet
+- - '####'
+  - 相似点
+- - '####'
+  - 示例
+- - '####'
+  - HashSet 示例
+- - '###'
+  - 18 Java 中的 TreeSet 类
+- - '####'
+  - 示例：
+- - '###'
+  - 18 Java 中的 TreeSet 类
+- - '####'
+  - 示例：
+- - '###'
+  - 19 Java 中的 LinkedHashMap
+- - '####'
+  - 示例
+- - '###'
+  - 20 Java 中的 HashSet 类
+- - '####'
+  - 示例
+- - '###'
+  - 21 Java 中的 Hashtable
+- - '####'
+  - 带有示例的 Hashtable
+- - '###'
+  - 22 Hashtable 教程
+- - '####'
+  - 如何 Java 中排序 Hashtable
+- - '####'
+  - 使用 TreeMap
+- - '####'
+  - 迭代器示例
+- - '###'
+  - Hashtable 中键与值的示例
+- - '###'
+  - Hashtable 移除映射示例
+- - '###'
+  - 23 集合中的 Queue接口
+- - '####'
+  - 示例
+- - '###'
+  - 24 集合中的 PriorityQueue接口
+- - '####'
+  - PriorityQueue 示例
+- - '###'
+  - 25 集合中的 Deque接口
+- - '####'
+  - 示例
+- - '###'
+  - 26 集合中的 Comparable接口
+- - '####'
+  - 包装类
+- - '###'
+  - 27 集合中的 Comparator接口
+- - '####'
+  - 排序
+- - '###'
+  - 1) `@Override`
+- - '###'
+  - 2) `@Deprecated`
+- - '###'
+  - 3) `@SuppressWarnings`
+- - '###'
+  - 2.2 创建自定义注解
+- - '####'
+  - '@Documented'
+- - '####'
+  - '@Target'
+- - '####'
+  - '@Inherited'
+- - '####'
+  - '@Retention'
+- - '###'
+  - 2.3 Java Regular Expressions (regex)
+- - '####'
+  - java.util.regex.Pattern 类：
+- - '####'
+  - 1) Pattern.matches()
+- - '####'
+  - 2) Pattern.compile()
+- - '####'
+  - 3) Pattern.matcher()
+- - '####'
+  - 4) Pattern.split()
+- - '####'
+  - java.util.regex.Matcher 类
+- - '####'
+  - 1) 字符串面量
+- - '####'
+  - 2) 字符类
+- - '####'
+  - 边界匹配器
+- - '####'
+  - 量词：贪婪、懒惰、占有
+- - '##'
+  - 杂项核心 Java 教程
+- - '###'
+  - 3.1 Java – String 类及其方法
+- - '####'
+  - String 类示例
+- - '###'
+  - Java 中的字符串面量
+- - '####'
+  - 这种方法
+- - '####'
+  - 使用 new 关键字
+- - '####'
+  - 一个简单的 Java字符串示例
+- - '###'
+  - 3.2 Java String 方法
+- - '####'
+  - 1) charAt(int index)
+- - '####'
+  - 2) equals(Object obj)
+- - '####'
+  - 3) equalsIgnoreCase(String str)
+- - '####'
+  - 4) compareTo(String str)
+- - '####'
+  - 5) compareToIgnoreCase(String string)
+- - '####'
+  - 6) startsWith(String prefix, offset)
+- - '####'
+  - 7) startsWith(String prefix)
+- - '####'
+  - 8) endsWith(String suffix)
+- - '####'
+  - 9) hashCode()
+- - '####'
+  - 10) indexOf(int ch)
+- - '####'
+  - 11) indexOf(int ch, fromIndex)
+- - '####'
+  - 12) lastIndexOf(int ch)
+- - '####'
+  - 13) lastIndexOf(int ch, fromIndex)
+- - '####'
+  - 14) lastIndexOf(String str)
+- - '####'
+  - 15) lastIndexOf(String str)
+- - '####'
+  - 16) substring(int beginIndex)
+- - '####'
+  - 17) substring(int beginIndex, endIndex)
+- - '####'
+  - 18) concat(String str)
+- - '####'
+  - 19) replace(char oldChar, char newChar)
+- - '####'
+  - 20) contains(CharSequence s)
+- - '####'
+  - 21) toUpperCase(Locale locale)
+- - '####'
+  - 22) toUpperCase()
+- - '####'
+  - 23) String intern()
+- - '####'
+  - 24) boolean isEmpty()
+- - '####'
+  - 25) static join()
+- - '####'
+  - 26) replaceFirst(String regex, replacement)
+- - '####'
+  - 27) replaceAll(String regex, replacement)
+- - '####'
+  - 28) split(String regex, limit)
+- - '####'
+  - 29) split(String regex)
+- - '####'
+  - 30) toLowerCase(Locale locale)
+- - '####'
+  - 31) static format()
+- - '####'
+  - 32) toLowerCase()
+- - '####'
+  - 33) trim()
+- - '####'
+  - 34) char[] toCharArray()
+- - '####'
+  - 35) static copyValueOf(char[] data)
+- - '####'
+  - 36) void getChars(int srcBegin, int srcEnd)
+- - '####'
+  - 37) static valueOf()
+- - '####'
+  - 38) void getChars(int srcBegin, srcEnd)
+- - '####'
+  - 39) boolean regionMatches(offset, str, len)
+- - '####'
+  - 40) byte[] getBytes(String charset)
+- - '####'
+  - 41) int length()
+- - '##'
+  - 调度
+- - '###'
+  - 调度类型
+- - '###'
+  - 等待与通知
+- - '###'
+  - 运行与唤醒
+- - '###'
+  - 休眠
+- - '###'
+  - 线程优先级
+- - '###'
+  - isAlive() 和 join()
+- - '###'
+  - 分组
+- - '##'
+  - 多任务 vs 线程 vs 并行处理
+- - '###'
+  - 在 Java 中创建线程
+- - '###'
+  - 方法1：通过扩展类创建
+- - '####'
+  - 示例：
+- - '###'
+  - 方法2：通过实现接口创建
+- - '####'
+  - 示例：
+- - '##'
+  - 同步
+- - '###'
+  - 线程间通信
+- - '###'
+  - 3.5 Java序列化
+- - '###'
+  - 什么是 Java序列化？
+- - '###'
+  - 示例：
+- - '###'
+  - 3.5.1 对象的序列化
+- - '###'
+  - 3.5.2 对象的反序列化
+- - '###'
+  - 3.6 Java AWT教程
+- - '###'
+  - 为什么AWT是依赖的？
+- - '###'
+  - 容器
+- - '###'
+  - 容器的类型
+- - '###'
+  - Java AWT示例
+- - '####'
+  - 示例：通过扩展类创建Frame
+- - '####'
+  - 示例：通过创建Frame实例
+- - '###'
+  - 3.7 Java Swing教程
+- - '###'
+  - 示例：
+- - '###'
+  - 3.8 自动装箱和拆箱
+- - '###'
+  - 自动装箱和拆箱
+- - '###'
+  - Java何时发生自动装箱
+- - '####'
+  - 情况1：方法期望包装类对象作为参数传递是基本类型。
+- - '####'
+  - 情况2：当某个时刻，将基本类型赋值给包装类对象。
+- - '####'
+  - 情况3：处理框架类时：
+- - '##'
+  - 为什么在Java我们需要包装类 (wrapper class)？
+- - '###'
+  - 包装类允许null值，而基本类型不允许
+- - '###'
+  - 包装示例1：将基本类型转换为对象
+- - '###'
+  - 包装示例2：将包装对象转换为基本类型
+- - '##'
+  - Java 8教程
+- - '###'
+  - 4.1 Java Lambda表达式
+- - '###'
+  - Java Lambda表达式教程
+- - '###'
+  - Lambda表达式语法
+- - '###'
+  - Java中Lambda与方法的区别
+- - '###'
+  - 在Java中使用Lambda
+- - '###'
+  - Java Lambda表达式示例
+- - '####'
+  - 不使用Lambda表达式：在Java8之前，我们使用匿名类来实现函数接口方法。
+- - '####'
+  - 使用Lambda表达式：与其创建匿名类，我们可以这样创建一个Lambda表达式：
+- - '####'
+  - 示例1：无参数的Lambda表达式
+- - '####'
+  - 示例2：单参数的Lambda表达式
+- - '####'
+  - 示例3：多参数的Lambda表达式
+- - '####'
+  - 示例4：使用foreach遍历集合
+- - '###'
+  - Lambda表达式——遍历Map和List
+- - '####'
+  - Lambda表达式在Java8中遍历Map
+- - '####'
+  - Lambda表达式在Java8中遍历List
+- - '###'
+  - 4.2 Java8中的方法引用
+- - '###'
+  - 方法引用的四种类型
+- - '###'
+  - 1.实例化方法引用
+- - '###'
+  - 2.类的静态方法引用
+- - '###'
+  - 3.特定类型对象的实例化引用
+- - '###'
+  - 4.构造方法引用
+- - '###'
+  - 4.3 Java函数接口
+- - '###'
+  - 4.4 Java8接口变化
+- - '###'
+  - 为什么需要默认方法？
+- - '###'
+  - 4.5 Java8 Stream教程
+- - '###'
+  - 如何在Java中使用Stream
+- - '###'
+  - 4.6 Java8 Stream过滤器
+- - '###'
+  - Java流过滤器的简单示例
+- - '###'
+  - 4.7 Java8 –按键值过滤Map
+- - '###'
+  - 4.8 Java8 – Stream中过滤值
+- - '###'
+  - 4.9 Java8 – forEach
+- - '###'
+  - forEach遍历Map
+- - '###'
+  - forEach显示特定键的值
+- - '###'
+  - forEach遍历List
+- - '###'
+  - forEach方法遍历Stream
+- - '###'
+  - Stream –forOrdered()方法
+- - '###'
+  - 4.10 Java8 – Collectors类
+- - '###'
+  - groupingBy和计数示例
+- - '###'
+  - 获取List的示例
+- - '###'
+  - 示例 –收集为Set
+- - '##'
+  - 5. Java输入/输出教程
+- - '###'
+  - 5.1 在Java中创建文件
+- - '###'
+  - 5.2 在Java中读取文件
+- - '###'
+  - 5.3 在Java中写入文件
+- - '###'
+  - 5.4 在Java中追加文件
+- - '####'
+  - 1) 使用FileWriter和BufferedWriter追加文件
+- - '####'
+  - 2) 使用PrintWriter追加文件
+- - '###'
+  - 5.5 在Java中删除文件
+- - '###'
+  - 使用GZip格式压缩文件
+- - '###'
+  - 5.7 将文件复制到另一个地方
+- - '###'
+  - 5.8 获取文件的最后修改日期
+- - '###'
+  - 5.9 Java中使文件只读
+- - '###'
+  - 1) 将文件设置为只读
+- - '###'
+  - 2) 检查文件是否可写
+- - '###'
+  - 3) 在Java中让只读文件变为可写
+- - '##'
+  - Java
+- - '###'
+  - Java中的for循环
+- - '###'
+  - Java –while循环
+- - '###'
+  - 示例：使用for循环查找阶乘
+- - '###'
+  - 示例2：使用while循环查找阶乘
+- - '###'
+  - 示例3：查找用户输入的数字的阶乘
+- - '##'
+  - 示例示例
+- - '###'
+  - 6.3 使用位运算符交换两个数字
+- - '###'
+  - 6.4 使用三元运算符找到三个数中的最大
+- - '###'
+  - 6.5 检查闰年的Java程序
+- - '###'
+  - 6.6 反转数字
+- - '####'
+  - 程序1：使用while循环反转数字
+- - '####'
+  - 程序2：使用for循环反转数字
+- - '####'
+  - 程序3：使用递归反转
+- - '####'
+  - 示例：反转已初始化的数字
+- - '###'
+  - 6.7 计算圆面积的程序
+- - '####'
+  - 程序1：与用户交互
+- - '####'
+  - 程序2：无交互
+- - '###'
+  - 6.8 计算三角形面积的程序
+- - '####'
+  - 程序1：与用户交互
+- - '####'
+  - 程序2：无交互
+- - '###'
+  - 6.9 查找数组元素和Java程序
+- - '####'
+  - 程序1：无交互
+- - '####'
+  - 程序2：用户输入数组元素
+- - '###'
+  - 10 检查质数的程序
+- - '####'
+  - 示例：检查数字是否为质数
+- - '###'
+  - 11 显示1到100质数的Java程序
+- - '####'
+  - 显示1到100质数的程序
+- - '####'
+  - 显示1到n质数的程序

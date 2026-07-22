@@ -1,0 +1,12 @@
+name: Cucumber With Java： Beginner's Guide
+name_cn: Java Cucumber：初学者指南
+slug: cucumber-with-java-beginners-guide
+toc:
+- - '##'
+  - 基础示例 feature 文件
+- - '##'
+  - 带有 Outline 和 Examples 关键字的示例 feature 文件
+- - '##'
+  - 带有 Background 的示例 feature 文件
+- - '##'
+  - 6. 为 Java 项目添加 Cucumber 依赖

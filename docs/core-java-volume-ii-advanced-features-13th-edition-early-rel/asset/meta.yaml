@@ -1,0 +1,840 @@
+name: Core Java, Volume II： Advanced Features, 13th Edition (Early Release June, 2024)
+name_cn: Core Java 第二卷：高级特性，第 13 版（2024年6月早期发布）
+slug: core-java-volume-ii-advanced-features-13th-edition-early-rel
+toc:
+- - '#'
+  - Core Java 第二卷：高级特性，第 13 版（2024年6月早期发布）
+- - '#'
+  - 关于本电子书
+- - '#'
+  - 目录
+- - '#'
+  - 前言
+- - '##'
+  - 致读者
+- - '##'
+  - 本书简介
+- - '##'
+  - 约定
+- - '#'
+  - 致谢
+- - '#'
+  - Streams
+- - '##'
+  - 从迭代到流操作
+- - '###'
+  - java.util.stream.Stream 8
+- - '###'
+  - java.util.Spliterators 8
+- - '###'
+  - java.util.Arrays 1.2
+- - '###'
+  - java.lang.String
+- - '###'
+  - java.util.regex.Pattern 1.4
+- - '###'
+  - java.nio.file.Files 7
+- - '###'
+  - java.util.stream.StreamSupport 8
+- - '###'
+  - java.lang.Iterable
+- - '###'
+  - java.util.Iterator
+- - '###'
+  - java.util.Spliterators
+- - '###'
+  - java.util.stream.Spliterator
+- - '###'
+  - java.util.function.Supplier
+- - '###'
+  - java.util.function.UnaryOperator
+- - '###'
+  - java.util.function.Predicate
+- - '###'
+  - java.util.function.Consumer
+- - '###'
+  - java.util.Scanner
+- - '###'
+  - '`filter`、`map` 和 `flatMap` 方法'
+- - '####'
+  - '`filter`'
+- - '####'
+  - '`map`'
+- - '####'
+  - '`flatMap`'
+- - '##'
+  - 提取子流和合并流
+- - '##'
+  - 其他流转换
+- - '##'
+  - 归约
+- - '##'
+  - Optional 类型
+- - '###'
+  - 获取 Optional 值
+- - '###'
+  - 消费 Optional 值
+- - '###'
+  - Optional 管道处理
+- - '##'
+  - 如何处理 Optional 值
+- - '###'
+  - '`java.util.Optional` 8'
+- - '###'
+  - 创建 Optional 值
+- - '####'
+  - '`java.util.Optional` 8'
+- - '###'
+  - 使用 flatMap 组合 Optional 值函数
+- - '####'
+  - '`java.util.Optional` 8'
+- - '###'
+  - 将 Optional 转换为 Stream
+- - '##'
+  - 收集结果
+- - '##'
+  - 将元素收集到 Map
+- - '##'
+  - 分组与分区
+- - '##'
+  - 下游收集器 (Downstream Collectors)
+- - '##'
+  - 归约操作 (Reduction Operations)
+- - '##'
+  - 基本类型流
+- - '###'
+  - '`java.util.stream.LongStream` 8'
+- - '###'
+  - '`java.util.stream.DoubleStream` 8'
+- - '###'
+  - '`java.lang.CharSequence` 1.0'
+- - '###'
+  - '`java.util.random.RandomGenerator` 17'
+- - '###'
+  - '`java.util.Optional`(`Int`|`Long`|`Double`) 8'
+- - '###'
+  - '`java.util.`(`Int`|`Long`|`Double`)`SummaryStatistics` 8'
+- - '##'
+  - 并行流
+- - '#'
+  - 输入输出
+- - '##'
+  - 输入输出流（Streams）
+- - '###'
+  - 读取和字节
+- - '###'
+  - '`java.io.InputStream` 1.0'
+- - '###'
+  - '`java.io.OutputStream` 1.0'
+- - '###'
+  - 完整的流动物园 (Complete Stream Zoo)
+- - '###'
+  - '`java.io.Closeable` 5.0'
+- - '###'
+  - '`java.io.Flushable` 5.0'
+- - '###'
+  - '`java.lang.Readable` 5.0'
+- - '###'
+  - '`java.lang.Appendable` 5.0'
+- - '###'
+  - '`java.lang.CharSequence` 1.4'
+- - '##'
+  - 组合输入/输出流过滤器
+- - '####'
+  - 如何读取文本输入
+- - '####'
+  - 如何写入文本输出
+- - '###'
+  - 写入记录
+- - '###'
+  - 读取记录
+- - '###'
+  - 编码
+- - '###'
+  - '`DataInput` 和 `DataOutput` 接口'
+- - '####'
+  - java.io.DataInput 1.0
+- - '####'
+  - java.io.DataOutput 1.0
+- - '###'
+  - 随机访问文件
+- - '###'
+  - ZIP 档
+- - '###'
+  - '`java.util.zip.ZipEntry` 1.1'
+- - '###'
+  - '`java.util.zip.ZipFile` 1.1'
+- - '####'
+  - 对象输入输出流与序列化
+- - '####'
+  - 保存和加载可序列化对象
+- - '###'
+  - '`java.io.ObjectOutputStream` 1.1'
+- - '###'
+  - '`java.io.ObjectInputStream` 1.1'
+- - '###'
+  - 理解对象序列化文件格式
+- - '###'
+  - 位掩码
+- - '###'
+  - 数组格式
+- - '###'
+  - 对象序列号
+- - '###'
+  - ObjectStreamTest 输出
+- - '###'
+  - '`readExternal` 和 `writeExternal` 方法'
+- - '###'
+  - '`readResolve` 和 `writeReplace` 方法'
+- - '##'
+  - 版本控制
+- - '###'
+  - 使用序列化进行克隆
+- - '###'
+  - 反序列化与安全
+- - '##'
+  - 文件操作
+- - '###'
+  - 路径
+- - '####'
+  - '`java.nio.file.Path` 7'
+- - '####'
+  - '`java.io.File` 1.0'
+- - '###'
+  - 读取和写入文件
+- - '####'
+  - '`java.nio.file.Files` 7'
+- - '###'
+  - 创建文件和目录
+- - '###'
+  - 复制、移动和删除文件
+- - '###'
+  - 文件操作的标准选项
+- - '###'
+  - 获取文件信息
+- - '##'
+  - 访问目录条目
+- - '##'
+  - 使用目录流
+- - '###'
+  - Glob 模式
+- - '###'
+  - '`java.nio.file.Files` 7'
+- - '###'
+  - '`java.nio.file.SimpleFileVisitor<T>` 7'
+- - '###'
+  - ZIP 文件系统
+- - '###'
+  - '`java.nio.file.FileSystems` 7'
+- - '###'
+  - '`java.nio.file.FileSystem` 7'
+- - '##'
+  - 内存映射文件
+- - '###'
+  - 内存映射文件的性能
+- - '####'
+  - 文件操作计时数据
+- - '###'
+  - 缓冲区数据结构
+- - '###'
+  - 文件锁
+- - '##'
+  - 正则表达式
+- - '###'
+  - 正则表达式语法
+- - '#'
+  - 正则表达式语法
+- - '##'
+  - 预定义字符 \p{...}
+- - '###'
+  - 测试匹配
+- - '###'
+  - 在字符串中查找所有
+- - '###'
+  - 组（Groups）
+- - '###'
+  - 分隔符
+- - '###'
+  - 替换匹配
+- - '###'
+  - 标志
+- - '#'
+  - XML
+- - '##'
+  - 介绍
+- - '##'
+  - XML 文档的结构
+- - '##'
+  - 解析文档
+- - '##'
+  - 验证 XML
+- - '###'
+  - 文档类型
+- - '###'
+  - 元素内容
+- - '###'
+  - XML Schema
+- - '###'
+  - 使用命名空间
+- - '##'
+  - 流式解析器 (Streaming Parsers)
+- - '###'
+  - SAX 解析器
+- - '###'
+  - StAX 解析器
+- - '###'
+  - '`javax.xml.stream.InputFactory` 6'
+- - '###'
+  - '`javax.xml.stream.StreamReader` 6'
+- - '##'
+  - 生成 XML
+- - '###'
+  - 不带命名空间的文档
+- - '###'
+  - 带命名空间的文档
+- - '###'
+  - 写入文档
+- - '###'
+  - '`javax.xml.parsers.DocumentBuilder` 4'
+- - '###'
+  - '`org.w3c.dom.Document` 4'
+- - '###'
+  - '`org.w3c.dom.Node` 4'
+- - '###'
+  - '`org.w3c.dom.Element` 4'
+- - '###'
+  - '`javax.xml.transform.TransformerFactory` 4'
+- - '###'
+  - '`javax.xml.transform.Transformer` 4'
+- - '###'
+  - '`javax.xml.transform.dom.DOMSource` 4'
+- - '###'
+  - '`javax.xml.transform.stream.StreamResult` 4'
+- - '#'
+  - 网络编程
+- - '##'
+  - 网络编程
+- - '##'
+  - 连接到服务器
+- - '###'
+  - 使用 Telnet
+- - '###'
+  - 使用 Java 连接到服务器
+- - '###'
+  - '`java.net.Socket` 1.0'
+- - '###'
+  - Socket 超时（Timeouts）
+- - '###'
+  - '`java.net.InetAddress` 1.0'
+- - '##'
+  - 实现服务器（Implementing Servers）
+- - '###'
+  - Socket（Sockets）
+- - '###'
+  - 多个客户端
+- - '###'
+  - 半关闭 (Half-Close)
+- - '###'
+  - 中断 (Interruptible Sockets)
+- - '###'
+  - 安全性通信 (Secure Socket Communication)
+- - '##'
+  - 获取网络数据
+- - '###'
+  - URL 和 URI
+- - '###'
+  - 使用 `URLConnection` 获取信息
+- - '###'
+  - 响应头
+- - '###'
+  - 提交数据
+- - '#'
+  - HTTP 客户端
+- - '##'
+  - '`HttpClient` 类'
+- - '##'
+  - '`HttpRequest` 类和发布者 (Body Publishers)'
+- - '##'
+  - '`HttpResponse` 接口和处理器 (BodyHandlers)'
+- - '##'
+  - 异步处理
+- - '#'
+  - 简单的服务器
+- - '##'
+  - 命令行工具
+- - '##'
+  - HTTP API
+- - '###'
+  - 处理器 (Handlers)
+- - '###'
+  - 过滤器 (Filters)
+- - '##'
+  - 发送电子邮件
+- - '#'
+  - 数据库编程
+- - '##'
+  - JDBC 的设计
+- - '###'
+  - 驱动类型
+- - '###'
+  - 典型用途
+- - '##'
+  - 结构化语言
+- - '###'
+  - '`Locale` 表'
+- - '###'
+  - '`Authors` 表'
+- - '###'
+  - 数据库 URL
+- - '###'
+  - 驱动程序文件
+- - '###'
+  - 启动数据库
+- - '###'
+  - 连接到数据库
+- - '##'
+  - 使用 JDBC 语句
+- - '###'
+  - 执行 SQL 语句
+- - '###'
+  - 管理连接、语句和结果集
+- - '###'
+  - SQL 异常
+- - '###'
+  - 填充数据库
+- - '##'
+  - 查询执行
+- - '###'
+  - 准备语句（Prepared Statements）
+- - '###'
+  - 读取和写 LOB
+- - '###'
+  - '`java.sql.ResultSet` 1.1'
+- - '###'
+  - '`java.sql.Blob` 1.2'
+- - '###'
+  - '`java.sql.Clob` 1.4'
+- - '###'
+  - '`java.sql.Connection` 1.1'
+- - '###'
+  - SQL 转义 (SQL Escapes)
+- - '###'
+  - '`java.sql.CallableStatement`'
+- - '###'
+  - 多重结果 (Multiple Results)
+- - '###'
+  - '`java.sql.Statement` 1.1'
+- - '###'
+  - 获取自动生成的键 (Retrieving Autogenerated Keys)
+- - '###'
+  - '`java.sql.Statement` 1.1'
+- - '###'
+  - 可滚动结果集 (Scrollable Result Sets)
+- - '####'
+  - '`ResultSet` 类型和并发值'
+- - '###'
+  - 可更新结果集 (Updatable Result Sets)
+- - '##'
+  - '`java.sql.Connection` 1.1'
+- - '##'
+  - '`java.sql.ResultSet` 1.1'
+- - '##'
+  - '`java.sql.DatabaseMetaData` 1.1'
+- - '##'
+  - Row Sets
+- - '###'
+  - 构建行集
+- - '###'
+  - '`javax.sql.RowSet` 1.4'
+- - '###'
+  - '`javax.sql.rowset.CachedRowSet` 5.0'
+- - '###'
+  - '`javax.sql.rowset.RowSetProvider` 7'
+- - '###'
+  - '`javax.sql.rowset.RowSetFactory` 7'
+- - '##'
+  - 元数据 (Metadata)
+- - '##'
+  - 事务 (Transactions)
+- - '###'
+  - 使用 JDBC 编写事务
+- - '###'
+  - 存点 (Save Points)
+- - '###'
+  - 批量更新 (Batch Updates)
+- - '###'
+  - '`java.sql.Connection` 1.1'
+- - '###'
+  - '`java.sql.Savepoint` 1.4'
+- - '###'
+  - '`java.sql.Statement` 1.1'
+- - '###'
+  - '`java.sql.DatabaseMetaData` 1.1'
+- - '###'
+  - Advanced SQL Types
+- - '##'
+  - Web 和企业级连接管理
+- - '#'
+  - 日期和时间 API
+- - '##'
+  - 时间线
+- - '###'
+  - '`java.time.Instant` 8'
+- - '###'
+  - '`java.time.Duration` 8'
+- - '###'
+  - 本地日期 (Local Dates)
+- - '##'
+  - 日期调整器
+- - '##'
+  - Local 时间 (Local Time)
+- - '##'
+  - 时区时间 (Zoned Time)
+- - '###'
+  - '`java.time.ZonedDateTime` 8'
+- - '##'
+  - 格式化与解析
+- - '###'
+  - 预定义格式化
+- - '###'
+  - 特定区域格式化样式
+- - '###'
+  - 日期/时间格式常用的格式化符号
+- - '#'
+  - 国际化
+- - '##'
+  - 区域 (Locales)
+- - '###'
+  - 为什么用区域 (Locales)？
+- - '###'
+  - 指定区域 (Locales)
+- - '####'
+  - 指定区域 (Locales)
+- - '####'
+  - 常用 ISO 639-1 语言代码
+- - '####'
+  - 常用 ISO 3166-1 国家代码
+- - '###'
+  - 默认 Locale
+- - '###'
+  - 显示名称 (Display Names)
+- - '##'
+  - 数字格式化 (Number Formats)
+- - '###'
+  - 格式化数值
+- - '###'
+  - '`DecimalFormat` 类'
+- - '##'
+  - '`DecimalFormat` 属性'
+- - '##'
+  - '`DecimalFormatSymbol` 属性'
+- - '###'
+  - 货币
+- - '##'
+  - 日期和时间
+- - '###'
+  - '`java.time.format.TextStyle`'
+- - '###'
+  - 强度
+- - '###'
+  - 差异
+- - '###'
+  - 格式化数字
+- - '###'
+  - 格式化日期
+- - '###'
+  - 选择格式（Formats）
+- - '###'
+  - 选择格式（Formats）
+- - '##'
+  - 文本边界
+- - '##'
+  - 文本输入与输出
+- - '###'
+  - 文本文件
+- - '###'
+  - 结束
+- - '###'
+  - 控制台
+- - '###'
+  - 编码
+- - '###'
+  - 资源包（Bundles）
+- - '###'
+  - 属性文件（Property Files）
+- - '###'
+  - 类（Classes）
+- - '###'
+  - 示例
+- - '##'
+  - 文本
+- - '##'
+  - 文本
+- - '##'
+  - 编译
+- - '###'
+  - 编译器
+- - '###'
+  - 任务
+- - '###'
+  - 诊断信息
+- - '###'
+  - 读取源文件
+- - '###'
+  - 写入内存
+- - '###'
+  - 字节码
+- - '###'
+  - 字节
+- - '##'
+  - 完整示例
+- - '###'
+  - '`javax.tools.Tool` 6'
+- - '###'
+  - '`javax.tools.JavaCompiler` 6'
+- - '###'
+  - '`javax.tools.DiagnosticCollector` 6'
+- - '###'
+  - '`javax.tools.SimpleJavaObject` 6'
+- - '###'
+  - '`javax.tools.Diagnostic` 6'
+- - '###'
+  - '`javax.tools.JavaFileManager` 6'
+- - '###'
+  - '`javax.tools.CompilationTask` 6'
+- - '##'
+  - 脚本
+- - '###'
+  - 脚本
+- - '###'
+  - 引擎
+- - '###'
+  - '`javax.script.ScriptEngine` 6'
+- - '###'
+  - '`javax.script.ScriptEngineManager` 6'
+- - '###'
+  - '`javax.script.Bindings` 6'
+- - '###'
+  - 脚本上下文
+- - '###'
+  - 脚本与绑定
+- - '###'
+  - 脚本评估
+- - '###'
+  - 脚本
+- - '###'
+  - '`javax.script.Bindings` 6'
+- - '###'
+  - 脚本
+- - '###'
+  - '`javax.script.Context`'
+- - '###'
+  - 脚本
+- - '###'
+  - 脚本
+- - '###'
+  - '`javax.script.Context`'
+- - '###'
+  - 调用脚本函数
+- - '###'
+  - 脚本
+- - '###'
+  - 脚本工作表
+- - '###'
+  - 示例：脚本
+- - '##'
+  - 安全
+- - '###'
+  - 类加载器的层级结构
+- - '###'
+  - 使用命名空间
+- - '###'
+  - 验证
+- - '###'
+  - 用户认证
+- - '###'
+  - JAAS 框架
+- - '###'
+  - 登录
+- - '###'
+  - 消息摘要
+- - '###'
+  - 身份验证
+- - '###'
+  - 证书请求
+- - '###'
+  - 代码
+- - '##'
+  - 加密
+- - '##'
+  - 对称密码
+- - '###'
+  - 密钥生成
+- - '###'
+  - aes/Aest.java
+- - '###'
+  - aes/Util.java
+- - '###'
+  - '`javax.crypto.Cipher` 4'
+- - '###'
+  - '`javax.crypto.Generator` 4'
+- - '###'
+  - '`javax.crypto.spec.SecretKeySpec` 4'
+- - '###'
+  - Cipher Streams
+- - '###'
+  - 公钥加密
+- - '###'
+  - 创建帧
+- - '###'
+  - 窗口属性
+- - '###'
+  - 显示信息
+- - '###'
+  - 2D 图形
+- - '###'
+  - '`java.awt.Color` 1.0'
+- - '###'
+  - '`java.awt.Graphics2D` 1.2'
+- - '###'
+  - '`java.awt.Component` 1.0'
+- - '###'
+  - 使用字体
+- - '###'
+  - 显示图像
+- - '##'
+  - 事件处理
+- - '###'
+  - 基础事件概念
+- - '###'
+  - 示例：处理点击
+- - '###'
+  - 简洁地监听器
+- - '###'
+  - 适配器类 (Adapter Classes)
+- - '###'
+  - Actions
+- - '###'
+  - Input Map Conditions
+- - '###'
+  - '`javax.swing.Action` 1.2'
+- - '###'
+  - '`javax.swing.KeyStroke` 1.2'
+- - '###'
+  - '`javax.swing.JComponent` 1.2'
+- - '###'
+  - 鼠标事件
+- - '###'
+  - AWT 事件层级结构
+- - '###'
+  - 处理总结
+- - '#'
+  - Preferences API
+- - '##'
+  - 使用 Swing 的界面组件
+- - '##'
+  - Swing 和模型-视图-控制器
+- - '###'
+  - 边界布局 (Border Layout)
+- - '###'
+  - 网格布局 (Grid Layout)
+- - '##'
+  - 文本输入
+- - '###'
+  - 文本字段 (Text Fields)
+- - '###'
+  - '`javax.swing.JTextField` 1.2'
+- - '###'
+  - '`javax.swing.JComponent` 1.2'
+- - '###'
+  - '`java.awt.Component` 1.0'
+- - '###'
+  - 标签与标记组件
+- - '###'
+  - '`javax.swing.JLabel` 1.2'
+- - '###'
+  - 密码字段
+- - '###'
+  - '`javax.swing.JPasswordField` 1.2'
+- - '###'
+  - 文本区域
+- - '###'
+  - 滚动面板 (Scroll Panes)
+- - '##'
+  - 选择组件 (Choice Components)
+- - '###'
+  - 复框 (Checkboxes)
+- - '##'
+  - 单选按钮
+- - '###'
+  - 边框
+- - '###'
+  - 组合框 (Combo Boxes)
+- - '###'
+  - 滑块 (Sliders)
+- - '##'
+  - 菜单
+- - '###'
+  - 构建菜单
+- - '###'
+  - '`javax.swing.JMenu` 1.2'
+- - '###'
+  - '`javax.swing.JMenuItem` 1.2'
+- - '###'
+  - '`javax.swing.AbstractButton` 1.2'
+- - '###'
+  - '`javax.swing.JFrame` 1.2'
+- - '###'
+  - 菜单项中的图标
+- - '###'
+  - '`javax.swing.JMenuItem` 1.2'
+- - '###'
+  - '`javax.swing.AbstractButton` 1.2'
+- - '###'
+  - '`javax.swing.AbstractAction` 1.2'
+- - '###'
+  - 复选框和单选按钮菜单项
+- - '###'
+  - '`javax.swing.JCheckBoxMenuItem` 1.2'
+- - '###'
+  - '`javax.swing.JRadioButtonMenuItem` 1.2'
+- - '###'
+  - '`javax.swing.AbstractButton` 1.2'
+- - '###'
+  - 弹出菜单
+- - '###'
+  - 键盘助记和加速键
+- - '###'
+  - 启用和禁用菜单项
+- - '###'
+  - 工具栏 (Toolbars)
+- - '###'
+  - 提示 (Tooltips)
+- - '####'
+  - '`javax.swing.JToolBar` 1.2'
+- - '####'
+  - '`javax.swing.JComponent` 1.2'
+- - '##'
+  - 网格布局 (Grid Bag Layout)
+- - '###'
+  - Grid Bag 基础
+- - '###'
+  - '`gridx`, `gridy`, `gridwidth`, 和 `gridheight` 参数'
+- - '###'
+  - 权重字段
+- - '###'
+  - '`fill` 和 `anchor` 参数'
+- - '###'
+  - 内边距
+- - '###'
+  - Grid Bag 布局配方（Recipe）
+- - '###'
+  - 用于驯服 Grid Bag 约束的辅助类
+- - '##'
+  - 自定义布局管理器
+- - '##'
+  - 对话框 (Dialog Boxes)
+- - '##'
+  - 简单对话框 (Simple Dialogs)
+- - '###'
+  - 选项面板 (Option Panes)

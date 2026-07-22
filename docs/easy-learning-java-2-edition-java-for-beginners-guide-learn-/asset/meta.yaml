@@ -1,0 +1,342 @@
+name: Easy Learning Java (2 Edition)： Java for Beginner's Guide Learn Easy and Fast
+name_cn: Java 轻松学习（第2版）：初学者指南，快速上手 Java
+slug: easy-learning-java-2-edition-java-for-beginners-guide-learn-
+toc:
+- - '#'
+  - Java 轻松学习（第2版）：初学者指南，快速上手 Java
+- - '##'
+  - 1. 下载 JDK (Java 开发工具包)
+- - '##'
+  - 2. 安装 JDK (Java 开发工具包)
+- - '##'
+  - 设置 Java 环境变量
+- - '###'
+  - 1. 在 Windows 下设置环境变量
+- - '##'
+  - 第一个 Java 程序
+- - '###'
+  - 1. 安装 Java 开发工具
+- - '###'
+  - 2. 第一个 Java 程序的步骤：
+- - '###'
+  - 3. 使用 Notepad++ 创建并运行第一个 Java 程序
+- - '###'
+  - 4. 详细解释 Hello.java
+- - '###'
+  - 变量
+- - '###'
+  - 基本数据类型
+- - '##'
+  - 常量 (Constant)
+- - '###'
+  - 1. 在 Nodepad++ 中创建一个文件：`FinalVariable.java`
+- - '##'
+  - 类型转换 (Type Casting)
+- - '###'
+  - 1. 宽类型转换
+- - '###'
+  - 2. 窄类型转换
+- - '###'
+  - 3. char 和 int（宽类型转换和窄类型转换）
+- - '##'
+  - 算术运算符 (Arithmetic Operator)
+- - '###'
+  - 1. 在 Nodepad++ 中创建一个文件：`Arithmetic.java`
+- - '##'
+  - 方法 (Method)
+- - '##'
+  - 类 (Class)
+- - '###'
+  - 1. 在 Nodepad++ 中创建一个文件：`TestMethod.java`
+- - '##'
+  - 包 (Package)
+- - '###'
+  - 1. com/tool/Caculator.java
+- - '###'
+  - 2. TestClass.java
+- - '##'
+  - 递增与递减
+- - '##'
+  - 关系运算符
+- - '##'
+  - 逻辑运算符
+- - '##'
+  - if 语句
+- - '###'
+  - 'if '
+- - '##'
+  - switch
+- - '##'
+  - switch 语句
+- - '##'
+  - while 循环
+- - '##'
+  - do while 循环
+- - '##'
+  - while 循环游戏
+- - '##'
+  - for 循环
+- - '##'
+  - for 循环小球
+- - '##'
+  - continue 和 break
+- - '##'
+  - 一维数组
+- - '##'
+  - 二维数组
+- - '##'
+  - 类 (Class)
+- - '###'
+  - 1. 创建文件：`TestPerson.java`
+- - '##'
+  - 封装 (Encapsulation)
+- - '###'
+  - 实现封装：
+- - '###'
+  - 示例：
+- - '###'
+  - 1. 创建文件：`TestEncapsulation.java`
+- - '##'
+  - 构造方法 (Constructor Method)
+- - '###'
+  - 示例：
+- - '###'
+  - 1. 创建文件：`TestConstructor.java`
+- - '##'
+  - 方法重载 (Method Overload)
+- - '##'
+  - 继承
+- - '###'
+  - 示例：`Student` 继承 `Person`
+- - '###'
+  - 步骤：
+- - '###'
+  - 注意：
+- - '###'
+  - 1. 创建一个文件：`TestInheritence.java`
+- - '###'
+  - 2. 继承关系中构造方法的调用顺序
+- - '##'
+  - 方法重写
+- - '###'
+  - 示例：
+- - '###'
+  - 1. 创建一个文件：`TestOverride.java`
+- - '##'
+  - super 关键字
+- - '###'
+  - 示例：
+- - '##'
+  - 多态
+- - '###'
+  - 示例：
+- - '###'
+  - 1. 创建一个文件：`TestPolymorphism.java`
+- - '##'
+  - 对象一对一关系
+- - '###'
+  - 1. 示例：`Baby` 可以吃一个水果
+- - '###'
+  - 分析：
+- - '##'
+  - 抽象类
+- - '###'
+  - 示例：`Father` 告诉他的儿子买一些水果
+- - '###'
+  - 分析：
+- - '###'
+  - 1. 创建文件：`TestAbstract.java`
+- - '###'
+  - 2. 抽象类也可以有自己的方法实现
+- - '##'
+  - 接口
+- - '###'
+  - 1. 创建文件：`TestInterface.java`
+- - '###'
+  - 1. 创建文件：`TestEnum.java`
+- - '##'
+  - 内部类
+- - '###'
+  - 1. 创建文件：`TestInnerClass.java`
+- - '##'
+  - IDE Eclipse 安装
+- - '##'
+  - 工作空间 (Workspace)
+- - '##'
+  - 创建 Java 项目
+- - '##'
+  - '项目: test'
+- - '##'
+  - 创建类
+- - '##'
+  - String
+- - '###'
+  - 1. String 比较
+- - '###'
+  - 2. String replace (char oldChar, char newChar)
+- - '###'
+  - 3. boolean startsWith(String prefix)
+- - '###'
+  - 4. boolean endsWith(String suffix)
+- - '###'
+  - 5. int indexOf(char ch)
+- - '###'
+  - 6. int lastIndexOf(char ch)
+- - '###'
+  - 7. String trim()
+- - '###'
+  - 8. String substring(int beginIndex)
+- - '###'
+  - 9. String substring(int beginIndex, int endIndex)
+- - '###'
+  - 10. String split(String regex)
+- - '##'
+  - Object
+- - '###'
+  - 1. 创建一个类：`Cat`
+- - '###'
+  - 2. 创建一个类：`Dog`
+- - '##'
+  - ArrayList
+- - '###'
+  - 1. `add(Object o)`
+- - '###'
+  - '`get(int index)`'
+- - '###'
+  - 2. `int size()`
+- - '###'
+  - 3. `set(int index, Object element)`
+- - '###'
+  - 4. `remove(int index)` 和 `remove(Object o)`
+- - '###'
+  - 5. `isEmpty()`, `clear()`, 和 `contains(Object o)`
+- - '###'
+  - 6. List 添加自定义对象：`Person`
+- - '##'
+  - LinkedList
+- - '###'
+  - 1. `addFirst(E e)` 和 `addLast(E e)`
+- - '###'
+  - 2. `getFirst()` 和 `getLast()`
+- - '###'
+  - 3. `removeFirst()` 和 `removeLast()`
+- - '##'
+  - Iterator
+- - '###'
+  - 1. `hasNext()`
+- - '###'
+  - 2. `next()`
+- - '##'
+  - HashSet
+- - '##'
+  - HashMap
+- - '##'
+  - Generic
+- - '###'
+  - 1. 创建泛型类：`Person<T>`
+- - '###'
+  - 2. 为 List 使用泛型：`ArrayList<String>`
+- - '###'
+  - 3. 为 Map 使用泛型：`HashMap<String, Integer>`
+- - '###'
+  - 4. 创建一个类：`Customer`
+- - '##'
+  - Random
+- - '###'
+  - 1. 打印随机数 0-9
+- - '###'
+  - 2. 生成 6 个不同的随机数
+- - '##'
+  - Exception
+- - '###'
+  - 1. 如果 `a/b` 且 `b = 0`，将抛出异常：`ArithmeticException`。
+- - '###'
+  - 2. `finally` 块：包含无论是否发生异常都执行的关键语句。
+- - '##'
+  - File
+- - '###'
+  - 1. 创建目录：`c:/java`
+- - '###'
+  - '2. `String getAbsolutePath()`:'
+- - '###'
+  - '3. `String getName()`:'
+- - '###'
+  - '4. `boolean exists()`:'
+- - '###'
+  - '5. `boolean isDirectory()`:'
+- - '###'
+  - '6. `boolean renameTo(File dest)`:'
+- - '###'
+  - '7. `boolean createNewFile()`:'
+- - '###'
+  - '8. `String getAbsolutePath()`:'
+- - '###'
+  - '9. `String getName()`:'
+- - '###'
+  - '10. `boolean exists()`:'
+- - '###'
+  - '11. `boolean isFile()`:'
+- - '###'
+  - '12. `boolean delete()`:'
+- - '##'
+  - FileInputStream
+- - '###'
+  - 1. 手动创建一个文本文件：`C:/java/english.txt`，内容如下：
+- - '###'
+  - '`FileInputStream` 从 `C:/java/english.txt` 读取 5 字节数据'
+- - '####'
+  - '`int read(byte[] b)`:'
+- - '###'
+  - 2. 如果你想从 `C:/java/english.txt` 读取所有数据：
+- - '###'
+  - 1. 创建文件：`c:/java/test.txt`，内容如下
+- - '###'
+  - 1. 创建文件：`TestThread.java`
+- - '###'
+  - 2. Java 有另一种实现线程的方式：
+- - '##'
+  - 创建 GUI 窗口应用程序
+- - '###'
+  - 1. 在 Eclipse 中创建一个文件：`AirplaneGame.java`
+- - '##'
+  - 创建 Canvas
+- - '###'
+  - 1. 创建继承自 `JPanel` 的 `Canvas`，并将画布添加到 `JFrame` 的中心。
+- - '###'
+  - 2. 在 Eclipse 中创建一个文件：`AirplaneGame.java`
+- - '##'
+  - 在 Canvas 上绘制图形
+- - '###'
+  - 1. 在 Canvas 上画线
+- - '###'
+  - 2. 在 Canvas 上画一个矩形
+- - '###'
+  - 3. 在 Canvas 填充矩形
+- - '###'
+  - 4. 在 Canvas 上绘制图像
+- - '###'
+  - 1. 创建一个方法从 `test/images/images/blue_plane.png` 加载图像到 `BufferedImage`
+- - '###'
+  - 2. 在画布上绘制 `BufferedImage`
+- - '##'
+  - 动画
+- - '###'
+  - 分析
+- - '##'
+  - 分析
+- - '###'
+  - '1. 类 '
+- - '###'
+  - 2. 关系
+- - '###'
+  - 3. 属性
+- - '###'
+  - 4. 方法
+- - '##'
+  - 子弹碰撞敌机
+- - '###'
+  - BluePlane.java
+- - '###'
+  - EnemyPlane.java
+- - '###'
+  - Bullet.java

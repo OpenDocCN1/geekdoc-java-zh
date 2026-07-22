@@ -1,0 +1,18429 @@
+![](Images/cover00925.jpeg)
+
+CORE JAVA FOR BEGINNERS
+
+Collection Tutorials on Annotation,Arraylist, Miscellaneous,
+
+Java 8,Java Input/Output,Java Programs (With Examples)
+
+NAVI FEROZ
+
+Copyright © 2019 by Navi Feroz – All Rights Reserved.
+
+All rights reserved including those of translation into other languages. In accordance with the copyright Act,2012, no part of this publication may be reproduced, stored in a retrieval system, or by any means, electronic, mechanical, photocopying, recording or otherwise. Any such act or scanning, uploading and electronic sharing of any part of this book without the permission of the publisher constitutes unlawful piracy and theft of the copyright holder’s intellectual property. If  you would like to use material from this book (other than for review purposes), prior written permission must be obtained from the publisher.
+
+About,
+
+This material would help you learn Java like a pro. Whether you are a college student looking for learn Java programming or a company employee learning advanced Java topics for building an application in Java, this Java tutorial would definitely be useful for you. These tutorials are also written for beginners so even if you have no prior knowledge in Java, you won’t face any difficulty understanding these tutorials.
+
+Objectives of our book is to impact basic knowledge in “CORE JAVA FOR BEGINNERS” for all the program learners. All the programs are clearly explained with some examples.
+
+This book specially prepared for Beginners.
+
+PREFACE:
+
+This book is prepared you to learn the CORE JAVA fast for the Beginners.
+
+This book does not belongs to the high level coding. If you are the absolute beginner ,you will find this book will explain the concepts with Examples.
+
+This Book include Java Tutorial,Anotation, Miscellaneous core java, java8 tutorials and more. All this topics are cover with the examples to understand the concept in easy manner for the beginners.
+
+Table of Content
+
+[Java Collections Tutorial](#part0000.xhtml__Toc19432074)
+
+[1.1 Java Array List](#part0000.xhtml__Toc19432075)
+
+[1.1.1 Methods of ArrayList class](#part0000.xhtml__Toc19432076)
+
+[1.2 ArrayList Tutorials](#part0000.xhtml__Toc19432077)
+
+[1.3 LinkedList in Java](#part0000.xhtml__Toc19432078)
+
+[1.3.1 Methods of LinkedList class](#part0000.xhtml__Toc19432079)
+
+[1.4 LinkedList Tutorials](#part0000.xhtml__Toc19432080)
+
+[1.5 Vector in Java](#part0000.xhtml__Toc19432081)
+
+[1.6 Vector Tutorials](#part0000.xhtml__Toc19432082)
+
+[1.6.1 Get sub list of Vector example in java](#part0000.xhtml__Toc19432083)
+
+[1.6.2 Sort Vector using Collections.sort in java – Example](#part0000.xhtml__Toc19432084)
+
+[1.6.3 Search elements in Vector using index – Java example](#part0000.xhtml__Toc19432085)
+
+[1.7 Remove/Sort/Replace](#part0000.xhtml__Toc19432086)
+
+[1.8 Iterator/ListIterator/Enumeration](#part0000.xhtml__Toc19432087)
+
+[1.9 Difference between ArrayList and Vector In java](#part0000.xhtml__Toc19432088)
+
+[1.10 HashMap in Java](#part0000.xhtml__Toc19432089)
+
+[1.11 HashMap Tutorials](#part0000.xhtml__Toc19432090)
+
+[1.12 Difference between ArrayList and HashMap in Java](#part0000.xhtml__Toc19432091)
+
+[1.13 Difference between HashMap and Hashtable](#part0000.xhtml__Toc19432092)
+
+[1.14 Difference between HashSet and HashMap](#part0000.xhtml__Toc19432093)
+
+[1.15 TreeMap in Java](#part0000.xhtml__Toc19432094)
+
+[1.16 TreeMap tutorials](#part0000.xhtml__Toc19432095)
+
+[1.16 HashSet Class in Java](#part0000.xhtml__Toc19432096)
+
+[1.17 HashSet tutorials](#part0000.xhtml__Toc19432097)
+
+[1.18 TreeSet Class in Java](#part0000.xhtml__Toc19432098)
+
+[1.19 LinkedHashMap in Java](#part0000.xhtml__Toc19432099)
+
+[1.20 LinkedHashSet Class in Java](#part0000.xhtml__Toc19432100)
+
+[1.21 Hashtable in java](#part0000.xhtml__Toc19432101)
+
+[1.21.1 Methods of Hashtable class](#part0000.xhtml__Toc19432102)
+
+[1.22 Hashtable tutorials](#part0000.xhtml__Toc19432103)
+
+[1.23 Queue Interface in Java Collections](#part0000.xhtml__Toc19432104)
+
+[1.24 PriorityQueue Interface in Java Collections](#part0000.xhtml__Toc19432105)
+
+[1.25 Deque Interface in Java Collections](#part0000.xhtml__Toc19432106)
+
+[1.26 Comparable Interface in Java](#part0000.xhtml__Toc19432107)
+
+[1.27 Comparator Interface in Java](#part0000.xhtml__Toc19432108)
+
+[Java Tutorial on Annotation, Enum and Regex](#part0000.xhtml__Toc19432109)
+
+[2.1 Java Enum Tutorial with examples](#part0000.xhtml__Toc19432110)
+
+[2.2 Java Annotations tutorial](#part0000.xhtml__Toc19432111)
+
+[2.2.1 Built-in Annotations in Java](#part0000.xhtml__Toc19432112)
+
+[2.2.2 Creating Custom Annotations](#part0000.xhtml__Toc19432113)
+
+[2.3 Java Regular Expressions (java regex)](#part0000.xhtml__Toc19432114)
+
+[Miscellaneous Core Java tutorial](#part0000.xhtml__Toc19432115)
+
+[3.1 Java – String Class and its methods](#part0000.xhtml__Toc19432116)
+
+[3.2 Java String Methods](#part0000.xhtml__Toc19432117)
+
+[Java String isEmpty() method Example](#part0000.xhtml__Toc19432118)
+
+[3.3 Java Multithreading](#part0000.xhtml__Toc19432119)
+
+[3.4 Thread life cycle in java and thread scheduling](#part0000.xhtml__Toc19432120)
+
+[3.5 Java Serialization](#part0000.xhtml__Toc19432121)
+
+[3.5.1 Serialization of Object](#part0000.xhtml__Toc19432122)
+
+[3.5.2 De-serialization of Object](#part0000.xhtml__Toc19432123)
+
+[3.6 Java AWT Tutorial](#part0000.xhtml__Toc19432124)
+
+[3.7 Java Swing Tutorial](#part0000.xhtml__Toc19432125)
+
+[3.8 Java Autoboxing and Unboxing](#part0000.xhtml__Toc19432126)
+
+[3.9 Wrapper class in Java](#part0000.xhtml__Toc19432127)
+
+[Java 8 Tutorial](#part0000.xhtml__Toc19432128)
+
+[4.1 Java Lambda Expressions](#part0000.xhtml__Toc19432129)
+
+[4.2 Method References in Java 8](#part0000.xhtml__Toc19432130)
+
+[4.3 Java Functional Interfaces](#part0000.xhtml__Toc19432131)
+
+[4.4 Java 8 Interface Changes](#part0000.xhtml__Toc19432132)
+
+[4.5 Java 8 Stream Tutorial](#part0000.xhtml__Toc19432133)
+
+[4.6 Java 8 Stream Filter Tutorial](#part0000.xhtml__Toc19432134)
+
+[4.7 Java 8 – Filter a Map by keys and values](#part0000.xhtml__Toc19432135)
+
+[4.8 Java 8 – Filter null values from a Stream](#part0000.xhtml__Toc19432136)
+
+[4.9 Java 8 – forEach](#part0000.xhtml__Toc19432137)
+
+[4.10 Java 8 – Stream Collectors Class](#part0000.xhtml__Toc19432138)
+
+[4.11 Java 8 StringJoiner](#part0000.xhtml__Toc19432139)
+
+[4.12 Java 8 Optional Class](#part0000.xhtml__Toc19432140)
+
+[4.13 Java 8 – Arrays Parallel Sort](#part0000.xhtml__Toc19432141)
+
+[Java Input/Output Tutorials](#part0000.xhtml__Toc19432142)
+
+[5.1 Create a File in Java](#part0000.xhtml__Toc19432143)
+
+[5.2 Read file in Java](#part0000.xhtml__Toc19432144)
+
+[5.3 Write to a file in java](#part0000.xhtml__Toc19432145)
+
+[5.4 Append to a file in java](#part0000.xhtml__Toc19432146)
+
+[5.5 Delete file in Java](#part0000.xhtml__Toc19432147)
+
+[5.6 Compress a File in GZIP Format](#part0000.xhtml__Toc19432148)
+
+[5.7 Copy a File to another File](#part0000.xhtml__Toc19432149)
+
+[5.8 Get the last modified date of a file](#part0000.xhtml__Toc19432150)
+
+[5.9 Make a File Read Only in Java](#part0000.xhtml__Toc19432151)
+
+[5.10 Check if a File is hidden in Java](#part0000.xhtml__Toc19432152)
+
+[Java Programs](#part0000.xhtml__Toc19432153)
+
+[6.1 Java program to Display Fibonacci Series](#part0000.xhtml__Toc19432154)
+
+[6.2 Java program to Find Factorial](#part0000.xhtml__Toc19432155)
+
+[6.3 swap two numbers using bitwise operator](#part0000.xhtml__Toc19432156)
+
+[6.4 Find largest of three numbers using ternary operator](#part0000.xhtml__Toc19432157)
+
+[6.5 Java program to check leap year](#part0000.xhtml__Toc19432158)
+
+[6.6 Java Program to Reverse an input number](#part0000.xhtml__Toc19432159)
+
+[6.7 Program to Calculate area of circle](#part0000.xhtml__Toc19432160)
+
+[6.8 Program to Calculate area of triangle](#part0000.xhtml__Toc19432161)
+
+[6.9 Java Program to Find sum of array elements](#part0000.xhtml__Toc19432162)
+
+[6.10 Program to Check for prime number](#part0000.xhtml__Toc19432163)
+
+[6.11 Java program to display prime numbers from 1 to 100 and 1 to n:](#part0000.xhtml__Toc19432164)
+
+[6.11 Program to check Even or Odd number](#part0000.xhtml__Toc19432165)
+
+[6.12 Java Linear Search Program](#part0000.xhtml__Toc19432166)
+
+[6.13 Java Binary Search Program](#part0000.xhtml__Toc19432167)
+
+[6.14 Program to Generate random number](#part0000.xhtml__Toc19432168)
+
+[6.15 Program for Binary to decimal conversion](#part0000.xhtml__Toc19432169)
+
+[6.16 Program Get input from user](#part0000.xhtml__Toc19432170)
+
+### Java Collections Tutorial
+
+# 1.1 Java Array List
+
+Array List in java with example programs
+
+Arraylist class implements List interface. It is widely used because of the functionality and flexibility it offers. Most of the developers choose Arraylist over Array as it’s a very good alternative of traditional java arrays. ArrayList is a resizable-array implementation of the List interface. It implements all optional list operations, and permits all elements, including null.
+
+The issue with arrays is that they are of fixed length so if it is full you cannot add any more elements to it, likewise if there are number of elements gets removed from it the memory consumption would be the same as it does not shrink. On the other ArrayList can dynamically grow and shrink after addition and removal of elements. Apart from these benefits ArrayList class enables us to use predefined methods of it which makes our task easy. Let’s see the ArrayList example first then we will discuss it methods and their usage.
+
+Note: There is a list of several ArrayList tutorials at the end of this guide, refer it to understand ArrayList concept fully.
+
+Array List Example in Java
+
+import java.util.*;
+
+public  class  ArrayListExample {
+
+ public  static  void main(String args[]) {
+
+ /*Creation of ArrayList: I'm going to add String
+
+       *elements so I made it of string type */
+
+ ArrayList<String> obj = new  ArrayList<String>();
+
+ /*This is how elements should be added to the array list*/
+
+  obj.add("Ajith");
+
+  obj.add("Hari");
+
+  obj.add("Chandru");
+
+  obj.add("Selva");
+
+  obj.add("Arjun");
+
+ /* Displaying array list elements */
+
+ System.out.println("Currently the array list has following elements:"+obj);
+
+ /*Add element at the given index*/
+
+  obj.add(0, "Rahul");
+
+  obj.add(1, "Jeeva");
+
+ /*Remove elements from array list like this*/
+
+  obj.remove("Chandru");
+
+  obj.remove("Hari");
+
+ System.out.println("Current array list is:"+obj);
+
+ /*Remove element from the given index*/
+
+  obj.remove(1);
+
+ System.out.println("Current array list is:"+obj);
+
+   }
+
+}
+
+Output:
+
+Currently the array list has following elements:[Ajith, Hari, Chandru, Selva, Arjun]
+
+Current array list is:[Rahul, Jeeva, Ajith, Selva, Arjun]
+
+Current array list is:[Rahul, Ajith, Selva, Arjun]
+
+## 1.1.1 Methods of ArrayList class
+
+In the above example we have used methods such as add and remove. However there are numbers of method available which can be used directly using object of ArrayList class. Let us discuss few of the important methods.
+
+1) Add ( Object o): This method adds an object o to the arraylist.
+
+obj.add("hello");
+
+This statement would add a string hello in the arraylist at last position.
+
+2)  Add (int index, Object o): It adds the object o to the array list at the given index.
+
+obj.add(2, "bye");
+
+It will add the string bye to the 2nd index (3rd position as the array list starts with index 0) of array list.
+
+3)  Remove (Object o): Removes the object o from the ArrayList.
+
+obj.remove("feroz");
+
+This statement will remove the string “feroz” from the ArrayList.
+
+4)  Remove (int index): Removes element from a given index.
+
+obj.remove(3);
+
+It would remove the element of index 3 (4th element of the list – List starts with o).
+
+5) Set (int index, Object o): Used for updating an element. It replaces the element present at the specified index with the object o.
+
+obj.set(2, "jerry");
+
+It would replace the 3rd element (index =2 is 3rd element) with the value Tom.
+
+6)  int indexOf(Object o): Gives the index of the object o. If the element is not found in the list then this method returns the value -1.
+
+int pos = obj.indexOf("jerry");
+
+This would give the index (position) of the string Tom in the list.
+
+7)  Object get (int index): It returns the object of list which is present at the specified index.
+
+String str= obj.get(2);
+
+Function get would return the string stored at 3rd position (index 2) and would be assigned to the string “str”. We have stored the returned value in string variable because in our example we have defined the ArrayList is of String type. If you are having integer array list then the returned value should be stored in an integer variable.
+
+8)  int size(): It gives the size of the ArrayList – Number of elements of the list.
+
+int numberofitems = obj.size();
+
+9)  Boolean contains(Object o): It checks whether the given object o is present in the array list if its there then it returns true else it returns false.
+
+obj.contains("john");
+
+It would return true if the string “john” is present in the list else we would get false.
+
+10)  Clear(): It is used for removing all the elements of the array list in one go. The below code will remove all the elements of ArrayList whose object is obj.
+
+obj.clear();
+
+# 1.2 ArrayList Tutorials
+
+ArrayList Basics
+
+*   Initialize ArrayList
+*   Loop ArrayList
+*   Find length of ArrayList
+
+Initialize an ArrayList
+
+Method 1: Initialization using Arrays.asList
+
+Syntax:
+
+ArrayList<Type> obj = new  ArrayList<Type>(
+
+ Arrays.asList(Object o1, Object o2, Object o3, ....so on));
+
+Example:
+
+import java.util.*;
+
+public  class  InitializationExample1 {
+
+ public  static  void main(String args[]) {
+
+ ArrayList<String> obj = new  ArrayList<String>(
+
+Arrays.asList("Pratap", "Peter", "Hari"));
+
+ System.out.println("Elements are:"+obj);
+
+   }
+
+}
+
+Output:
+
+Elements are:[Pratap, Peter, Hari]
+
+Method 2: Anonymous inner class method to initialize ArrayList
+
+Syntax:
+
+ArrayList<T> obj = new  ArrayList<T>(){{
+
+   add(Object o1);
+
+   add(Object o2);
+
+   add(Object o3);
+
+                   ...
+
+                   ...
+
+   }};
+
+Example:
+
+import java.util.*;
+
+public  class  InitializationExample2 {
+
+ public  static  void main(String args[]) {
+
+ ArrayList<String> cities = new  ArrayList<String>(){{
+
+   add("Delhi");
+
+   add("bangalore");
+
+   add("Chennai");
+
+   }};
+
+ System.out.println("Content of Array list cities:"+cities);
+
+   }
+
+}
+
+Output:
+
+Content of Array list cities:[Delhi, bangalore, Chennai]
+
+Method3: Normal way of ArrayList initialization
+
+Syntax:
+
+ArrayList<T> obj = new  ArrayList<T>();
+
+   obj.add("Object o1");
+
+   obj.add("Object o2");
+
+   obj.add("Object o3");
+
+                        ...
+
+                        ...
+
+Example:
+
+import java.util.*;
+
+public  class  Details {
+
+ public  static  void main(String args[]) {
+
+ ArrayList<String> books = new  ArrayList<String>();
+
+   books.add("Java Book1");
+
+   books.add("Java Book2");
+
+   books.add("Java Book3");
+
+ System.out.println("Books stored in array list are: "+books);
+
+   }
+
+}
+
+Output:
+
+Books stored in array list are: [Java  Book1, Java  Book2, Java  Book3]
+
+Method 4: Use Collections.ncopies
+
+Collections.ncopies method can be used when we need to initialize the ArrayList with the same value for all of its elements.
+
+Syntax:
+
+count is number of elements and element is the item value.
+
+ArrayList<T> obj = new  ArrayList<T>(Collections.nCopies(count, element));
+
+Example:
+
+import java.util.*;
+
+public  class  Details {
+
+ public  static  void main(String args[]) {
+
+ ArrayList<Integer> intlist = new  ArrayList<Integer>(Collections.nCopies(10, 5));
+
+ System.out.println("ArrayList items: "+intlist);
+
+   }
+
+}
+
+Output:
+
+ArrayList items: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+
+2) Loop ArrayList in Java
+
+There are four ways to loop ArrayList:
+
+*   For Loop
+*   Advanced for loop
+*   While Loop
+*   Iterator
+
+Lets have a look at the below example – I have used all of the mentioned methods for iterating list.
+
+import java.util.*;
+
+public  class  LoopExample {
+
+ public  static  void main(String[] args) {
+
+ ArrayList<Integer> arrlist = new  ArrayList<Integer>();
+
+      arrlist.add(14);
+
+      arrlist.add(7);
+
+      arrlist.add(39);
+
+      arrlist.add(40);
+
+ /* For Loop for iterating ArrayList */
+
+ System.out.println("For Loop");
+
+ for (int counter = 0; counter < arrlist.size(); counter++) {      
+
+ System.out.println(arrlist.get(counter));
+
+      }  
+
+ /* Advanced For Loop*/
+
+ System.out.println("Advanced For Loop");
+
+ for (Integer num : arrlist) {      
+
+ System.out.println(num);
+
+      }
+
+ /* While Loop for iterating ArrayList*/
+
+ System.out.println("While Loop");
+
+ int count = 0;
+
+ while (arrlist.size() > count) {
+
+System.out.println(arrlist.get(count));
+
+         count++;
+
+      }
+
+ /*Looping Array List using Iterator*/
+
+ System.out.println("Iterator");
+
+ Iterator iter = arrlist.iterator();
+
+ while (iter.hasNext()) {
+
+ System.out.println(iter.next());
+
+      }
+
+   }
+
+}
+
+Output:
+
+For  Loop
+
+14
+
+7
+
+39
+
+40
+
+Advanced  For  Loop
+
+14
+
+7
+
+39
+
+40
+
+While  Loop
+
+14
+
+7
+
+39
+
+40
+
+Iterator
+
+14
+
+7
+
+39
+
+40
+
+3) Find length of ArrayList
+
+By using  size() method of ArrayList class we can easily determine the size of ArrayList. This method returns the number of elements of ArrayList.
+
+public int size()
+
+Example:
+
+package javabook.com;
+
+import java.util.ArrayList;
+
+public  class  Details
+
+{
+
+ public  static  void main(String [] args)
+
+    {
+
+ ArrayList<Integer> al=new  ArrayList<Integer>();
+
+ System.out.println("Initial size: "+al.size());
+
+        al.add(1);
+
+        al.add(13);
+
+        al.add(45);
+
+        al.add(44);
+
+        al.add(99);
+
+ System.out.println("Size after few additions: "+al.size());
+
+        al.remove(1);
+
+        al.remove(2);
+
+ System.out.println("Size after remove operations: "+al.size());
+
+ System.out.println("Final ArrayList: ");
+
+ for(int num: al){
+
+ System.out.println(num);
+
+        }
+
+   }
+
+}
+
+Output:
+
+Initial size: 0
+
+Size after few additions: 5
+
+Size after remove operations: 3
+
+Final  ArrayList:
+
+1
+
+45
+
+99
+
+Sorting
+
+*   Sort ArrayList
+*   Sort ArrayList in Descending order
+*   Sort ArrayList of Objects using Comparable and Comparator
+
+Example 1: Sorting of ArrayList<String>
+
+Here we are sorting the ArrayList of String type. We are doing it by simply calling the Collections.sort(arraylist) method. The output List will be sorted alphabetically.
+
+import java.util.*;
+
+public  class  Details  {
+
+public  static  void main(String args[]){
+
+ ArrayList<String> listofcountries = new  ArrayList<String>();
+
+   listofcountries.add("India");
+
+   listofcountries.add("US");
+
+   listofcountries.add("Canada");
+
+   listofcountries.add("Denmark");
+
+ /*Unsorted List*/
+
+ System.out.println("Before Sorting:");
+
+ for(String counter: listofcountries){
+
+System.out.println(counter);
+
+}
+
+ /* Sort statement*/
+
+ Collections.sort(listofcountries);
+
+ /* Sorted List*/
+
+ System.out.println("After Sorting:");
+
+ for(String counter: listofcountries){
+
+System.out.println(counter);
+
+}
+
+}
+
+}
+
+Output:
+
+Before  Sorting:
+
+India
+
+US
+
+Canada
+
+Denmark
+
+After  Sorting:
+
+Canada
+
+Denmark
+
+India
+
+US
+
+Example 2: Sorting of ArrayList<Integer>
+
+The same Collections.sort() method can be used for sorting the Integer ArrayList as well.
+
+import java.util.*;
+
+public  class  ArrayListOfInteger  {
+
+public  static  void main(String args[]){
+
+ ArrayList<Integer> arraylist = new  ArrayList<Integer>();
+
+   arraylist.add(11);
+
+   arraylist.add(2);
+
+   arraylist.add(7);
+
+   arraylist.add(3);
+
+ /* ArrayList before the sorting*/
+
+ System.out.println("Before Sorting:");
+
+ for(int counter: arraylist){
+
+System.out.println(counter);
+
+}
+
+ /* Sorting of arraylist using Collections.sort*/
+
+ Collections.sort(arraylist);
+
+ /* ArrayList after sorting*/
+
+ System.out.println("After Sorting:");
+
+ for(int counter: arraylist){
+
+System.out.println(counter);
+
+}
+
+}
+
+}
+
+Output:
+
+Before  Sorting:
+
+11
+
+2
+
+7
+
+3
+
+After  Sorting:
+
+2
+
+3
+
+7
+
+11
+
+Sort ArrayList in descending order
+
+Example: Sorting in Descending order
+
+We are using Collections.reverseOrder() method along with the Collections.sort() in order to sort the list in decreasing order. In the below example we have used  following statement for sorting in reverse order.
+
+Collections.sort(arraylist, Collections.reverseOrder());
+
+However the reverse order sorting can also be done as following – This way the list will be sorted in ascending order first and then it will be reversed.
+
+Collections.sort(list);
+
+Collections.reverse(list);
+
+Example:
+
+import java.util.*;
+
+public  class  Details  {
+
+public  static  void main(String args[]){
+
+ ArrayList<String> arraylist = new  ArrayList<String>();
+
+   arraylist.add("AA");
+
+   arraylist.add("ZZ");
+
+   arraylist.add("CC");
+
+   arraylist.add("FF");
+
+ /*Unsorted List: ArrayList content before sorting*/
+
+ System.out.println("Before Sorting:");
+
+ for(String str: arraylist){
+
+System.out.println(str);
+
+}
+
+ /* Sorting in decreasing order*/
+
+ Collections.sort(arraylist, Collections.reverseOrder());
+
+ /* Sorted List in reverse order*/
+
+ System.out.println("ArrayList in descending order:");
+
+ for(String str: arraylist){
+
+System.out.println(str);
+
+}
+
+}
+
+}
+
+Output:
+
+Before  Sorting:
+
+AA
+
+ZZ
+
+CC
+
+FF
+
+ArrayList  in  descending order:
+
+ZZ
+
+FF
+
+CC
+
+AA
+
+In the above example we have used the ArrayList of String type (ArrayList<String>) for sorting. The same sorting method can be used for the list of integers as well.
+
+3) Sort ArrayList of Objects using Comparable and Comparator
+
+We generally use Collections.sort() method to sort a simple array list. However if the ArrayList is of custom object type then in such case you have two options for sorting- comparable and comparator interfaces. Before going through the example of them, let us see what is the output when we try to sort arraylist of Objects without implementing any of these interfaces.
+
+What is the need of comparable and comparator?
+
+Consider the example – I have a Student class which has properties like Student name, roll no and student age.
+
+public  class  Student  {
+
+ private  String studentname;
+
+ private  int rollno;
+
+ private  int studentage;
+
+ public  Student(int rollno, String studentname, int studentage) {
+
+ this.rollno = rollno;
+
+ this.studentname = studentname;
+
+ this.studentage = studentage;
+
+    }
+
+ public  String getStudentname() {
+
+ return studentname;
+
+    }
+
+ public  void setStudentname(String studentname) {
+
+this.studentname = studentname;
+
+    }
+
+ public  int getRollno() {
+
+return rollno;
+
+    }
+
+ public  void setRollno(int rollno) {
+
+this.rollno = rollno;
+
+    }
+
+ public  int getStudentage() {
+
+return studentage;
+
+    }
+
+ public  void setStudentage(int studentage) {
+
+ this.studentage = studentage;
+
+    }
+
+}
+
+And I want to have an ArrayList of Student Object. We do it like this –
+
+import java.util.*;
+
+public  class  ArrayListSorting  {
+
+ public  static  void main(String args[]){
+
+ ArrayList<Student> arraylist = new  ArrayList<Student>();
+
+   arraylist.add(new  Student(223, "Chaitanya", 26));
+
+   arraylist.add(new  Student(245, "Rahul", 24));
+
+   arraylist.add(new  Student(209, "Ajeet", 32));
+
+ Collections.sort(arraylist);
+
+ for(Student str: arraylist){
+
+System.out.println(str);
+
+   }
+
+     }
+
+}
+
+I tried to call the Collections.sort() on the List of Objects and boom! I got the the error message like this –
+
+Exception in thread “main” java.lang.Error: Unresolved compilation problem:
+
+Bound mismatch: The generic method sort(List) of type Collections is not applicable for the arguments (ArrayList). The inferred type Student is not a valid substitute for the bounded parameter > at beginnersbook.com.Details.main(Details.java:11)
+
+Reason: I Just called the sort method on an ArrayList of Objects which actually doesn’t work until unless we use interfaces like Comparable and Comparator.
+
+Now you must have understood the importance of these interfaces. Let us see how to use them to get the sorting done in our way.
+
+Sorting of ArrayList<Object> with Comparable
+
+Let us say we need to sort the ArrayList<Student> based on the student Age property. This is how it can be done – First implement Comparable interface and then Override the compareTo method.
+
+package javabook.com;
+
+public  class  Student  implements  Comparable {
+
+ private  String studentname;
+
+ private  int rollno;
+
+ private  int studentage;
+
+ public  Student(int rollno, String studentname, int studentage) {
+
+ this.rollno = rollno;
+
+ this.studentname = studentname;
+
+ this.studentage = studentage;
+
+    }
+
+    ...
+
+ //getter and setter methods same as the above example
+
+    ...
+
+ @Override
+
+ public  int compareTo(Student comparestu) {
+
+ int compareage=((Student)comparestu).getStudentage();
+
+ /* For Ascending order*/
+
+ return  this.studentage-compareage;
+
+ /* For Descending order do like this */
+
+ //return compareage-this.studentage;
+
+    }
+
+ @Override
+
+ public  String toString() {
+
+ return  "[ rollno=" + rollno + ", name=" + studentname + ", age=" + studentage + "]";
+
+    }
+
+}
+
+Now we can very well call Collections.sort on ArrayList
+
+import java.util.*;
+
+public  class  ArrayListSorting  {
+
+public  static  void main(String args[]){
+
+ ArrayList<Student> arraylist = new  ArrayList<Student>();
+
+   arraylist.add(new  Student(223, "Chandru", 26));
+
+   arraylist.add(new  Student(245, "Rahul", 24));
+
+   arraylist.add(new  Student(209, "Ajith", 32));
+
+ Collections.sort(arraylist);
+
+ for(Student str: arraylist){
+
+System.out.println(str);
+
+   }
+
+}
+
+}
+
+Output:
+
+[ rollno=245, name=Rahul, age=24]
+
+[ rollno=223, name=Chandru, age=26]
+
+[ rollno=209, name=Ajith, age=32]
+
+Sorting ArrayList<Object> multiple properties with Comparator
+
+We are overriding compare method of Comparator for sorting.
+
+Package javabook.com;
+
+import java.util.Comparator;
+
+public  class  Student  {
+
+ private  String studentname;
+
+ private  int rollno;
+
+ private  int studentage;
+
+ public  Student(int rollno, String studentname, int studentage) {
+
+ this.rollno = rollno;
+
+ this.studentname = studentname;
+
+ this.studentage = studentage;
+
+    }
+
+    ...
+
+ //Getter and setter methods same as the above examples
+
+    ...
+
+ /*Comparator for sorting the list by Student Name*/
+
+ public  static  Comparator<Student> StuNameComparator = new  Comparator<Student>() {
+
+public  int compare(Student s1, Student s2) {
+
+ String  StudentName1 = s1.getStudentname().toUpperCase();
+
+ String  StudentName2 = s2.getStudentname().toUpperCase();
+
+ //ascending order
+
+ return  StudentName1.compareTo(StudentName2);
+
+ //descending order
+
+ //return StudentName2.compareTo(StudentName1);
+
+    }};
+
+ /*Comparator for sorting the list by roll no*/
+
+ public  static  Comparator<Student> StuRollno = new  Comparator<Student>() {
+
+public  int compare(Student s1, Student s2) {
+
+ int rollno1 = s1.getRollno();
+
+ int rollno2 = s2.getRollno();
+
+ /*For ascending order*/
+
+ return rollno1-rollno2;
+
+ /*For descending order*/
+
+ //rollno2-rollno1;
+
+   }};
+
+ @Override
+
+ public  String toString() {
+
+ return  "[ rollno=" + rollno + ", name=" + studentname + ", age=" + studentage + "]";
+
+    }
+
+}
+
+ArrayList class:
+
+package javabook.com;
+
+import java.util.*;
+
+public  class  Details  {
+
+public  static  void main(String args[]){
+
+ ArrayList<Student> arraylist = new  ArrayList<Student>();
+
+   arraylist.add(new  Student(101, "Zues", 26));
+
+   arraylist.add(new  Student(505, "Abey", 24));
+
+   arraylist.add(new  Student(809, "Vignesh", 32));
+
+ /*Sorting based on Student Name*/
+
+ System.out.println("Student Name Sorting:");
+
+ Collections.sort(arraylist, Student.StuNameComparator);
+
+ for(Student str: arraylist){
+
+System.out.println(str);
+
+   }
+
+ /* Sorting on Rollno property*/
+
+ System.out.println("RollNum Sorting:");
+
+ Collections.sort(arraylist, Student.StuRollno);
+
+ for(Student str: arraylist){
+
+System.out.println(str);
+
+   }
+
+}
+
+}
+
+Output:
+
+Student  Name  Sorting:
+
+[ rollno=505, name=Abey, age=24]
+
+[ rollno=809, name=Vignesh, age=32]
+
+[ rollno=101, name=Zues, age=26]
+
+RollNum  Sorting:
+
+[ rollno=101, name=Zues, age=26]
+
+[ rollno=505, name=Abey, age=24]
+
+[ rollno=809, name=Vignesh, age=32]
+
+# 1.3 LinkedList in Java
+
+LinkedList is a doubly-linked list implementation of the List and Deque interfaces. LinkedList allows for constant-time insertions or removals using the iterators, but only sequential access of elements. In other words, LinkedList can be searched forward and backward but the time it takes to traverse the list is directly proportional to the size of the list.
+
+Note: At the end of this guide, I have linked all the tutorials that I have shared on LinkedList, refer them in the given order to understand this topic fully.
+
+Example of LinkedList in Java
+
+import java.util.*;
+
+public  class  LinkedListExample {
+
+ public  static  void main(String args[]) {
+
+ /* Linked List Declaration */
+
+ LinkedList<String> linkedlist = new  LinkedList<String>();
+
+ /*add(String Element) is used for adding
+
+        * the elements to the linked list*/
+
+       linkedlist.add("Item1");
+
+       linkedlist.add("Item5");
+
+       linkedlist.add("Item3");
+
+       linkedlist.add("Item6");
+
+       linkedlist.add("Item2");
+
+ /*Display Linked List Content*/
+
+ System.out.println("Linked List Content: " +linkedlist);
+
+ /*Add First and Last Element*/
+
+       linkedlist.addFirst("First Item");
+
+       linkedlist.addLast("Last Item");
+
+ System.out.println("LinkedList Content after addition: " +linkedlist);
+
+ /*This is how to get and set Values*/
+
+ Object firstvar = linkedlist.get(0);
+
+ System.out.println("First element: " +firstvar);
+
+       linkedlist.set(0, "Changed first item");
+
+ Object firstvar2 = linkedlist.get(0);
+
+ System.out.println("First element after update by set method: " +firstvar2);
+
+ /*Remove first and last element*/
+
+       linkedlist.removeFirst();
+
+       linkedlist.removeLast();
+
+ System.out.println("LinkedList after deletion of first and last element: " +linkedlist);
+
+ /* Add to a Position and remove from a position*/
+
+       linkedlist.add(0, "Newly added item");
+
+       linkedlist.remove(2);
+
+ System.out.println("Final Content: " +linkedlist);
+
+     }
+
+}
+
+Output:
+
+Linked  List  Content: [Item1, Item5, Item3, Item6, Item2]
+
+LinkedList  Content after addition: [First  Item, Item1, Item5, Item3, Item6, Item2, Last  Item]
+
+First element: First  Item
+
+First element after update by  set method: Changed first item
+
+LinkedList after deletion of first and  last element: [Item1, Item5, Item3, Item6, Item2]
+
+Final  Content: [Newly added item, Item1, Item3, Item6, Item2]
+
+## 1.3.1 Methods of LinkedList class
+
+For all the examples in the below methods, consider llistobj as a reference for LinkedList<String>.
+
+LinkedList<String> llistobj  = new LinkedList<String>();
+
+1) Boolean add(Object item): It adds the item at the end of the list.
+
+llistobj.add("Hello");
+
+It would add the string “Hello” at the end of the linked list.
+
+2) Void add(int index, Object item): It adds an item at the given index of the the list.
+
+llistobj.add(2, "bye");
+
+This will add the string “bye” at the 3rd position( 2 index is 3rd position as index starts with 0).
+
+3)  Boolean addAll(Collection c): It adds all the elements of the specified collection c to the list. It throws NullPointerException if the specified collection is null. Consider the below example.
+
+LinkedList<String> llistobj = new  LinkedList<String>();
+
+ArrayList<String> arraylist= new  ArrayList<String>();
+
+arraylist.add("String1");
+
+arraylist.add("String2");
+
+llistobj.addAll(arraylist);
+
+This piece of code would add all the elements of ArrayList to the LinkedList.
+
+4) Boolean addAll(int index, Collection c): It adds all the elements of collection c to the list starting from a give index in the list. It throws NullPointerException if the collection c is null and IndexOutOfBoundsException when the specified index is out of the range.
+
+llistobj.add(5, arraylist);
+
+It would add all the elements of the ArrayList to the LinkedList starting from position 6 (index
+
+5) Void addFirst(Object item): It adds the item (or element) at the first position in the list.
+
+llistobj.addFirst("text");
+
+It would add the string “text” at the beginning of the list.
+
+6) Void addLast(Object item): It inserts the specified item at the end of the list.
+
+llistobj.addLast("prabhu");
+
+This statement will add a string “prabhu” at the end position of the linked list.
+
+7) Void clear(): It removes all the elements of a list.
+
+llistobj.clear();
+
+8) Object clone(): It returns the copy of the list.
+
+Example: My linkedList has four items: text1, text2, text3 and text4.
+
+Object str= llistobj.clone();
+
+ System.out.println(str);
+
+Output: The output of above code would be:
+
+[text1, text2, text3, text4]
+
+9) boolean contains(Object item): It checks whether the given item is present in the list or not. If the item is present then it returns true else false.
+
+boolean  var = llistobj.contains("TestString");
+
+It will check whether the string “TestString” exist in the list or not.
+
+10) Object get(int index): It returns the item of the specified index from the list.
+
+Object  var = llistobj.get(2);
+
+It will fetch the 3rd item from the list.
+
+11) Object getFirst(): It fetches the first item from the list.
+
+Object  var = llistobj.getFirst();
+
+12) Object getLast(): It fetches the last item from the list.
+
+Object  var= llistobj.getLast();
+
+13) int indexOf(Object item): It returns the index of the specified item.
+
+llistobj.indexOf("bye");
+
+14) int lastIndexOf(Object item): It returns the index of last occurrence of the specified element.
+
+int pos = llistobj.lastIndexOf("hello);
+
+integer variable pos will be having the index of last occurrence of string “hello”.
+
+15) Object poll(): It returns and removes the first item of the list.
+
+Object o = llistobj.poll();
+
+16) Object pollFirst(): same as poll() method. Removes the first item of the list.
+
+Object o = llistobj.pollFirst();
+
+17) Object pollLast(): It returns and removes the last element of the list.
+
+Object o = llistobj.pollLast();
+
+18) Object remove(): It removes the first element of the list.
+
+llistobj.remove();
+
+19) Object remove(int index): It removes the item from the list which is present at the specified index.
+
+llistobj.remove(4);
+
+It will remove the 5th element from the list.
+
+20) Object remove(Object obj): It removes the specified object from the list.
+
+llistobj.remove("Test Item");
+
+21) Object removeFirst(): It removes the first item from the list.
+
+llistobj.removeFirst();
+
+22) Object removeLast(): It removes the last item of the list.
+
+llistobj.removeLast();
+
+23) Object removeFirstOccurrence(Object item): It removes the first occurrence of the specified item.
+
+llistobj.removeFirstOccurrence("text");
+
+It will remove the first occurrence of the string “text” from the list.
+
+24) Object removeLastOccurrence(Object item): It removes the last occurrence of the given element.
+
+llistobj.removeLastOccurrence("String1);
+
+It will remove the last occurrence of string “String1”.
+
+25) Object set(int index, Object item): It updates the item of specified index with the give value.
+
+llistobj.set(2, "Test");
+
+It will update the 3rd element with the string “Test”.
+
+26) int size(): It returns the number of elements of the list.
+
+llistobj.size();
+
+# 1.4 LinkedList Tutorials
+
+LinkedList Basics
+
+*   How to iterate LinkedList
+
+How to loop LinkedList in Java
+
+There are four ways in which a LinkedList can be iterated –
+
+*   For loop
+*   Advanced For loop
+*   Iterator
+*   While Loop
+
+Example:
+
+In this example we have a LinkedList of String Type and we are looping through it using all the four mentioned methods.
+
+package javabook.com;
+
+import java.util.*;
+
+public  class  LinkedListExample {
+
+ public  static  void main(String args[]) {
+
+ /*LinkedList declaration*/
+
+ LinkedList<String> linkedlist=new  LinkedList<String>();
+
+      linkedlist.add("Apple");
+
+      linkedlist.add("Orange");
+
+      linkedlist.add("Mango");
+
+ /*for loop*/
+
+ System.out.println("**For loop**");
+
+ for(int num=0; num<linkedlist.size(); num++)
+
+      {
+
+  System.out.println(linkedlist.get(num));
+
+      }
+
+ /*Advanced for loop*/
+
+ System.out.println("**Advanced For loop**");
+
+ for(String str: linkedlist)
+
+      {
+
+  System.out.println(str);
+
+      }
+
+ /*Using Iterator*/
+
+ System.out.println("**Iterator**");
+
+ Iterator i = linkedlist.iterator();
+
+ while (i.hasNext()) {
+
+ System.out.println(i.next());
+
+      }
+
+ /* Using While Loop*/
+
+ System.out.println("**While Loop**");
+
+ int num = 0;
+
+ while (linkedlist.size() > num) {
+
+ System.out.println(linkedlist.get(num));
+
+  num++;
+
+      }
+
+   }
+
+}
+
+Output:
+
+**For loop**
+
+Apple
+
+Orange
+
+Mango
+
+**Advanced  For loop**
+
+Apple
+
+Orange
+
+Mango
+
+**Iterator**
+
+Apple
+
+Orange
+
+Mango
+
+**While  Loop**
+
+Apple
+
+Orange
+
+Mango
+
+Add/Remove
+
+*   Adding an element to LinkedList
+*   Add element at specific index in LinkedList
+*   Add element at the beginning and end of LinkedList
+*   Adding an element to the front of LinkedList
+*   Remove First and last elements from LinkedList
+*   Remove element from specific index
+*   Remove specified element from LinkedList
+*   Remove All elements from LinkedList
+*   Append all the elements of a List to LinkedList
+
+Description
+
+Program to add a new element to LinkedList using add(E e) method of LinkedList class.
+
+Example:
+
+import java.util.LinkedList;
+
+class  LinkedListAdd {
+
+ public  static  void main(String[] args) {
+
+ // create a LinkedList
+
+ LinkedList<String> list = new  LinkedList<String>();
+
+ // Adding elements to the LinkedList
+
+     list.add("Hari");
+
+     list.add("Ajith");
+
+     list.add("Tomy");
+
+     list.add("Stefen");
+
+ // Displaying LinkedList elements
+
+ System.out.println("LinkedList elements: "+list);
+
+ // Adding another element
+
+     list.add("Kate");
+
+ // Displaying LinkedList elements after add(E e)
+
+ System.out.println("LinkedList elements: "+list);
+
+  }
+
+}
+
+Output:
+
+LinkedList elements: [Hari, Ajith, Tomy, Stefen]
+
+LinkedList elements: [Hari, Ajith, Tomy, Stefen, Kate]
+
+Java – Add element at specific index in LinkedList example
+
+We will be using add(int index, Element E) method of LinkedList class to perform this operation.
+
+public void add(int index, E element): Inserts the specified element at the specified position in this list. Shifts the element currently at that position (if any) and any subsequent elements to the right (adds one to their indices).
+
+Example:
+
+In the example we have a LinkedList of Strings and we are adding an element to its 5th position(4th index) using add() method. The complete code is as follows:
+
+import java.util.LinkedList;
+
+import java.util.Iterator;
+
+public  class  AddElement {
+
+ public  static  void main(String[] args) {
+
+ // Create a LinkedList
+
+ LinkedList<String> linkedlist = new  LinkedList<String>();
+
+ // Add elements to LinkedList
+
+    linkedlist.add("Delhi");
+
+    linkedlist.add("Agra");
+
+    linkedlist.add("Mysore");
+
+    linkedlist.add("Chennai");
+
+    linkedlist.add("Pune");
+
+ // Adding new Element at 5th Position
+
+    linkedlist.add(4, "NEW ELEMENT");
+
+ // Iterating the list in forward direction
+
+ System.out.println("LinkedList elements After Addition:");
+
+ Iterator it= linkedlist.iterator();
+
+ while(it.hasNext()){
+
+ System.out.println(it.next());
+
+    }
+
+ }
+
+}
+
+Output:
+
+LinkedList elements After  Addition:
+
+Delhi
+
+Agra
+
+Mysore
+
+Chennai
+
+NEW ELEMENT
+
+Pune
+
+Add elements at beginning and end of LinkedList
+
+Example:
+
+In this example we will learn how to add elements at the beginning and end of a LinkedList. We will be using addFirst() and addLast() method of LinkedList class. Method definition and description are as follows:
+
+1) public void addFirst(E e): Inserts the specified element at the beginning of this list.
+
+2) public void addLast(E e): Appends the specified element to the end of this list.
+
+Complete Code:
+
+import java.util.LinkedList;
+
+public  class  AddExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating LinkedList of String Elements
+
+ LinkedList<String> linkedlist = new  LinkedList<String>();
+
+ //Populating it with String values
+
+    linkedlist.add("AA");
+
+    linkedlist.add("BB");
+
+    linkedlist.add("CC");
+
+    linkedlist.add("DD");
+
+    linkedlist.add("EE");
+
+ //Displaying LinkedList elements
+
+ System.out.println(linkedlist);
+
+ //Adding an element at the beginning
+
+    linkedlist.addFirst("FIRST");
+
+ //Displaying the List after addition
+
+ System.out.println(linkedlist);
+
+ //Adding an element at the end of list
+
+    linkedlist.addLast("LAST");
+
+ //Displaying the final list
+
+ System.out.println(linkedlist);
+
+ }
+
+}
+
+Output:
+
+[AA, BB, CC, DD, EE]
+
+[FIRST, AA, BB, CC, DD, EE]
+
+[FIRST, AA, BB, CC, DD, EE, LAST]
+
+Adding element to front of LinkedList
+
+Description
+
+Program to add element to front(head) of LinkedList.
+
+Program
+
+import java.util.LinkedList;
+
+class  LinkedListExample {
+
+ public  static  void main(String[] args) {
+
+ // create a LinkedList
+
+ LinkedList<String> list = new  LinkedList<String>();
+
+ // Add elements
+
+     list.add("AA");
+
+     list.add("BB");
+
+     list.add("CC");
+
+     list.add("DD");
+
+ // Display List element
+
+ System.out.println("LinkedList Elements:"+list);
+
+ // Adding element to front of LinkedList
+
+ /* public boolean offerFirst(E e): Inserts the
+
+      * specified element at the front of this list.
+
+      */
+
+     list.offerFirst("NEW Element");
+
+ // Displaying List after adding element
+
+ System.out.println("LinkedList After Addition:"+list);
+
+  }
+
+}
+
+Output:
+
+LinkedList  Elements:[AA, BB, CC, DD]
+
+LinkedList  After  Addition:[NEW Element, AA, BB, CC, DD]
+
+Remove first and last element from LinkedList
+
+Example:
+
+We have used the removeFirst() method to remove first and removeLast() method to remove last element from LinkedList. Method definition and description are as follows:
+
+1) public E removeFirst(): Removes and returns the first element from this list.
+
+2) public E removeLast(): Removes and returns the last element from this list.
+
+Complete Code:
+
+import java.util.LinkedList;
+
+public  class  RemoveExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a LinkedList
+
+ LinkedList<String> linkedlist = new  LinkedList<String>();
+
+ // Add elements to LinkedList
+
+    linkedlist.add("Item1");
+
+    linkedlist.add("Item2");
+
+    linkedlist.add("Item3");
+
+    linkedlist.add("Item4");
+
+    linkedlist.add("Item5");
+
+ // Displaying Elements before remove
+
+ System.out.println("LinkedList Elements are:");
+
+ for(String str: linkedlist){
+
+ System.out.println(str);
+
+    }
+
+ // Removing First element
+
+ Object firstElement = linkedlist.removeFirst();
+
+ System.out.println("\nElement removed: "+ firstElement);
+
+ // Removing last Element
+
+ Object lastElement = linkedlist.removeLast();
+
+ System.out.println("Element removed: "+ lastElement);
+
+ // LinkedList elements after remove
+
+ System.out.println("\nList Elements after Remove:");
+
+ for(String str2: linkedlist){
+
+ System.out.println(str2);
+
+    }
+
+ }
+
+}
+
+Output:
+
+LinkedList  Elements are:
+
+Item1
+
+Item2
+
+Item3
+
+Item4
+
+Item5
+
+Element removed: Item1
+
+Element removed: Item5
+
+List  Elements after Remove:
+
+Item2
+
+Item3
+
+Item4
+
+Remove element from a specific index in LinkedList example
+
+Example:
+
+We will be using remove(int index) method of LinkedList class to remove an element from a specific index. Method definition and description are as follows:
+
+public E remove(int index): Removes the element at the specified position in this list. Shifts any subsequent elements to the left (subtracts one from their indices). Returns the element that was removed from the list.
+
+import java.util.LinkedList;
+
+public  class  RemoveFromLinkedList {
+
+ public  static  void main(String[] args) {
+
+ // Create a LinkedList
+
+ LinkedList<String> linkedlist = new  LinkedList<String>();
+
+ // Add elements to LinkedList
+
+    linkedlist.add("Cobol");
+
+    linkedlist.add("JCL");
+
+    linkedlist.add("C++");
+
+    linkedlist.add("C#");
+
+    linkedlist.add("Java");
+
+ // Displaying Elements before replace
+
+ System.out.println("LinkedList Elements:");
+
+ for(String str: linkedlist){
+
+ System.out.println(str);
+
+    }
+
+ // Removing 3rd element
+
+ Object e1 = linkedlist.remove(2);
+
+ System.out.println("\nElement "+ e1+ " removed from the list\n");
+
+ // LinkedList elements after remove
+
+ System.out.println("After removal:");
+
+ for(String str2: linkedlist){
+
+ System.out.println(str2);
+
+    }
+
+ }
+
+}
+
+Output:
+
+LinkedList  Elements:
+
+Cobol
+
+JCL
+
+C++
+
+C#
+
+Java
+
+Element C++ removed from the list
+
+After removal:
+
+Cobol
+
+JCL
+
+C#
+
+Java
+
+Remove specific elements from LinkedList example
+
+Example:
+
+We will be using remove(Object o) method to perform this remove. More about this method is as follows:
+
+public boolean remove(Object o): Removes the first occurrence of the specified element from this list, if it is present. If this list does not contain the element, it is unchanged. Returns true if this list contained the specified element (or equivalently, if this list changed as a result of the call).
+
+import java.util.LinkedList;
+
+public  class  RemoveExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a LinkedList
+
+ LinkedList<String> linkedlist = new  LinkedList<String>();
+
+ // Add elements to LinkedList
+
+    linkedlist.add("Item1");
+
+    linkedlist.add("Item2");
+
+    linkedlist.add("Item3");
+
+    linkedlist.add("Item4");
+
+    linkedlist.add("Item5");
+
+ // Displaying Elements before remove
+
+ System.out.println("Before Remove:");
+
+ for(String str: linkedlist){
+
+ System.out.println(str);
+
+    }
+
+ // Removing "Item4" from the list
+
+    linkedlist.remove("Item4");
+
+ // LinkedList elements after remove
+
+ System.out.println("\nAfter Remove:");
+
+ for(String str2: linkedlist){
+
+ System.out.println(str2);
+
+    }
+
+ }
+
+}
+
+Output:
+
+Before  Remove:
+
+Item1
+
+Item2
+
+Item3
+
+Item4
+
+Item5
+
+After  Remove:
+
+Item1
+
+Item2
+
+Item3
+
+Item5
+
+Remove all elements from LinkedList example
+
+In this example we will see how to remove all the elements from LinkedList. We will be using clear() method of LinkedList class to do this. Method definition and description are as follows:
+
+public void clear(): Removes all of the elements from this list. The list will be empty after this call returns.
+
+Example:
+
+In this example we have a LinkedList of String type that has 5 elements. We are calling clear() method and displaying the LinkedList elements before and after calling the clear() method.
+
+import java.util.LinkedList;
+
+public  class  RemoveAllExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a LinkedList
+
+ LinkedList<String> linkedlist = new  LinkedList<String>();
+
+ // Add elements to LinkedList
+
+    linkedlist.add("Item1");
+
+    linkedlist.add("Item2");
+
+    linkedlist.add("Item3");
+
+    linkedlist.add("Item4");
+
+    linkedlist.add("Item5");
+
+ // Displaying Elements before remove
+
+ System.out.println("Before clear():");
+
+ for(String str: linkedlist){
+
+ System.out.println(str);
+
+    }
+
+ // Removing all the elements from LinkedList
+
+    linkedlist.clear();
+
+ // LinkedList elements after remove
+
+ System.out.println("After clear():");
+
+ for(String str2: linkedlist){
+
+ System.out.println(str2);
+
+    }
+
+ }
+
+}
+
+Output:
+
+Before clear():
+
+Item1
+
+Item2
+
+Item3
+
+Item4
+
+Item5
+
+After clear():
+
+Append all the elements of a List to LinkedList
+
+Description
+
+Program to add all the elements of a List to the LinkedList using addAll() method of LinkedList class.
+
+Example:
+
+import java.util.ArrayList;
+
+import java.util.LinkedList;
+
+import java.util.List;
+
+class  LinkedListAddAll {
+
+ public  static  void main(String[] args) {
+
+ // create a LinkedList
+
+ LinkedList<String> list = new  LinkedList<String>();
+
+ // Add elements to the LinkedList
+
+     list.add("AA");
+
+     list.add("BB");
+
+     list.add("CC");
+
+     list.add("DD");
+
+ // Displaying linked list before add
+
+ System.out.println("Before: LinkedList: " + list);
+
+ // create a new list having few elements
+
+ List<String> arrayList = new  ArrayList<String>();
+
+     arrayList.add("Item1");
+
+     arrayList.add("Item2");
+
+     arrayList.add("Item3");
+
+ // Append the list elements to LinkedList
+
+     list.addAll(arrayList);
+
+ // Displaying the LinkedList after addAll
+
+ System.out.println("After: LinkedList: " + list);
+
+  }
+
+}
+
+Output:
+
+Before: LinkedList: [AA, BB, CC, DD]
+
+After: LinkedList: [AA, BB, CC, DD, Item1, Item2, Item3]
+
+# 1.5 Vector in Java
+
+Vector implements List Interface. Like ArrayList it also maintains insertion order but it is rarely used in non-thread environment as it is synchronized and due to which it gives poor performance in searching, adding, delete and update of its elements.
+
+Three ways to create vector class object:
+
+Method 1:
+
+Vector vec = new  Vector();
+
+It creates an empty Vector with the default initial capacity of 10\. It means the Vector will be re-sized when the 11th elements needs to be inserted into the Vector. Note: By default vector doubles its size. i.e. In this case the Vector size would remain 10 till 10 insertions and once we try to insert the 11th element It would become 20 (double of default capacity 10).
+
+Method 2:
+
+Syntax:
+
+Vector object= new Vector(int initialCapacity)
+
+Vector vec = new  Vector(3);
+
+It will create a Vector of initial capacity of 3.
+
+Method 3:
+
+Syntax:
+
+Vector  object= new vector(int initialcapacity, capacityIncrement)
+
+Example:
+
+Vector vec= new  Vector(4, 6)
+
+Here we have provided two arguments. The initial capacity is 4 and capacityIncrement is 6\. It means upon insertion of 5th element the size would be 10 (4+6) and on 11th insertion it would be 16(10+6).
+
+Complete Example of Vector in Java:
+
+import java.util.*;
+
+public  class  VectorExample {
+
+ public  static  void main(String args[]) {
+
+ /* Vector of initial capacity(size) of 2 */
+
+ Vector<String> vec = new  Vector<String>(2);
+
+ /* Adding elements to a vector*/
+
+      vec.addElement("Apple");
+
+      vec.addElement("Orange");
+
+      vec.addElement("Mango");
+
+      vec.addElement("Fig");
+
+ /* check size and capacityIncrement*/
+
+ System.out.println("Size is: "+vec.size());
+
+ System.out.println("Default capacity increment is: "+vec.capacity());
+
+      vec.addElement("fruit1");
+
+      vec.addElement("fruit2");
+
+      vec.addElement("fruit3");
+
+ /*size and capacityIncrement after two insertions*/
+
+ System.out.println("Size after addition: "+vec.size());
+
+ System.out.println("Capacity after increment is: "+vec.capacity());
+
+ /*Display Vector elements*/
+
+ Enumeration en = vec.elements();
+
+ System.out.println("\nElements are:");
+
+ while(en.hasMoreElements())
+
+ System.out.print(en.nextElement() + " ");
+
+   }
+
+}
+
+Output:
+
+Size  is: 4
+
+Default capacity increment is: 4
+
+Size after addition: 7
+
+Capacity after increment is: 8
+
+Elements are:
+
+Apple  Orange  Mango  Fig fruit1 fruit2 fruit3
+
+Commonly used methods of Vector Class:
+
+1) void addElement(Object element): It inserts the element at the end of the Vector.
+
+2) int capacity(): This method returns the current capacity of the vector.
+
+3) int size(): It returns the current size of the vector.
+
+4) void setSize(int size): It changes the existing size with the specified size.
+
+5) boolean contains(Object element): This method checks whether the specified element is present in the Vector. If the element is been found it returns true else false.
+
+6) boolean containsAll(Collection c): It returns true if all the elements of collection c are present in the Vector.
+
+7) Object elementAt(int index): It returns the element present at the specified location in Vector.
+
+8) Object firstElement(): It is used for getting the first element of the vector.
+
+9) Object lastElement(): Returns the last element of the array.
+
+10) Object get(int index): Returns the element at the specified index.
+
+11) boolean isEmpty(): This method returns true if Vector doesn’t have any element.
+
+12) boolean removeElement(Object element): Removes the specifed element from vector.
+
+13) boolean removeAll(Collection c): It Removes all those elements from vector which are present in the Collection c.
+
+14) void setElementAt(Object element, int index): It updates the element of specifed index with the given element.
+
+# 1.6 Vector Tutorials
+
+Vector basics
+
+*   Get sub list from Vector
+*   Sort Vector using Collections.sort()
+*   Search element in Vector using index
+*   Copy Elements of one Vector to another
+
+## 1.6.1 Get sub list of Vector example in java
+
+In this example, we are gonna see how to get a sublist of elements from a Vector. We will be using subList() method of Vector class to do this.
+
+More about this method from javadoc:
+
+public List subList(int fromIndex, int toIndex): It returns a view of the portion of this List between fromIndex, inclusive, and toIndex, exclusive. (If fromIndex and toIndex are equal, the returned List is empty.) The returned List is backed by this List, so changes in the returned List are reflected in this List, and vice-versa. The returned List supports all of the optional List operations supported by this List.
+
+This method eliminates the need for explicit range operations (of the sort that commonly exist for arrays). Any operation that expects a List can be used as a range operation by operating on a subList view instead of a whole List. For example, the following idiom removes a range of elements from a List:
+
+list.subList(from, to).clear();
+
+Example:
+
+import java.util.Vector;
+
+import java.util.List;
+
+public  class  SublistExample {
+
+ public  static  void main(String[] args) {
+
+ // Step 1: Create a Vector
+
+ Vector<String> vector = new  Vector<String>();
+
+ // Step 2: Add elements
+
+    vector.add("Item1");
+
+    vector.add("Item2");
+
+    vector.add("Item3");
+
+    vector.add("Item4");
+
+    vector.add("Item5");
+
+    vector.add("Item6");
+
+ /* The method subList(int fromIndex, int toIndex)
+
+     * returns a List having elements of Vector
+
+     * starting from index fromIndex
+
+     * to (toIndex - 1).
+
+     */
+
+ List subList = vector.subList(2,5);
+
+ System.out.println("Sub list elements :");
+
+ for(int i=0; i < subList.size() ; i++){
+
+ System.out.println(subList.get(i));
+
+    }
+
+  }
+
+}
+
+Output:
+
+Sub list elements :
+
+Item3
+
+Item4
+
+Item5
+
+## 1.6.2 Sort Vector using Collections.sort in java – Example
+
+Vector maintains the insertion order which means it displays the elements in the same order, in which they got added to the Vector. In this example, we will see how to sort Vector elements in ascending order by using Collections.sort(). The Steps are as follows:
+
+1) Create a Vector object
+
+2) Add elements to the Vector using add(Element e) method
+
+3) Sort it using Collections.sort(Vector object)
+
+4) Display the sorted elements list.
+
+import java.util.Collections;
+
+import java.util.Vector;
+
+public  class  SortingVectorExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a Vector
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Add elements to Vector
+
+    vector.add("Walter");
+
+    vector.add("Anna");
+
+    vector.add("Hank");
+
+    vector.add("Flynn");
+
+    vector.add("Tomy");
+
+ // By Default Vector maintains the insertion order
+
+ System.out.println("Vector elements before sorting: ");
+
+ for(int i=0; i < vector.size(); i++){
+
+ //get(i) method fetches the element from index i
+
+ System.out.println(vector.get(i));
+
+    }
+
+ // Collection.sort() sorts the collection in ascending order
+
+ Collections.sort(vector);
+
+ //Display Vector elements after sorting using Collection.sort
+
+ System.out.println("Vector elements after sorting: :");
+
+ for(int i=0; i < vector.size(); i++){
+
+ System.out.println(vector.get(i));
+
+    }
+
+ }
+
+}
+
+Output:
+
+Vector elements before sorting:
+
+Walter
+
+Anna
+
+Hank
+
+Flynn
+
+Tomy
+
+Vector elements after sorting: :
+
+Anna
+
+Flynn
+
+Hank
+
+Tomy
+
+Walter
+
+## 1.6.3 Search elements in Vector using index – Java example
+
+1) public int indexOf(Object o): It returns the index of first occurrence of Object o in Vector.
+
+2) public int indexOf(Object o, int startIndex): It returns the index of the first occurrence of the Object o in this vector, searching forwards from startIndex (inclusive).
+
+3) public int lastIndexOf(Object o): It returns the index of last occurrence of Object o in Vector.
+
+4) public int lastIndexOf(Object o, int startIndex): It returns the index of the last occurrence of the specified element in this vector, searching backwards from startIndex(inclusive).
+
+Example:
+
+In this example, we have used all the above mentioned four methods to demonstrate their working.
+
+import java.util.Vector;
+
+public  class  SearchVector {
+
+ public  static  void main(String[] args) {
+
+ // Create a Vector object
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Add elements to Vector
+
+     vector.add("Kate");
+
+     vector.add("Patt");
+
+     vector.add("Kluge");
+
+     vector.add("Karon");
+
+     vector.add("Patt");
+
+     vector.add("Monica");
+
+     vector.add("Patt");
+
+ //This would return the index of first occurrence
+
+ int first_index = vector.indexOf("Patt");
+
+ System.out.println("First Occurrence of Patt at index: "+first_index);
+
+ //This would return the index of last occurrence
+
+ int last_index = vector.lastIndexOf("Patt");
+
+ System.out.println("Last Occurrence of Patt at index: "+last_index);
+
+ //This would start search from index 2(inclusive)
+
+ int after_index = vector.indexOf("Patt", 2);
+
+ System.out.println("Occurrence after index 2: "+after_index);
+
+ //This would search the element backward starting from index 6(inclusive)
+
+ int before_index = vector.lastIndexOf("Patt", 6);
+
+ System.out.println("Occurrence before index 6: "+before_index);
+
+  }
+
+}
+
+Output:
+
+First  Occurrence of Patt at index: 1
+
+Last  Occurrence of Patt at index: 6
+
+Occurrence after index 2: 4
+
+Occurrence before index 6: 6
+
+Copy all the elements of one Vector to another Vector example
+
+In this example we will see how to copy all the elements of a Vector to another Vector. This process replaces the existing elements of the second vector with the corresponding element of first vector. For e.g. If we are copying vector v1 to vector v2 then first element of v2 will be replaced by first element of v1  and so on.
+
+In the below code we have two vectors va & vb and we are copying all the elements of va to vb using Collections.copy() method.
+
+Example:
+
+import java.util.Collections;
+
+import java.util.Vector;
+
+public  class  VectorCopyExample {
+
+ public  static  void main(String args[])
+
+  {
+
+ //First Vector of String type
+
+ Vector<String> va = new  Vector<String>();
+
+ //Adding elements to the first Vector
+
+       va.add("AB");
+
+       va.add("BC");
+
+       va.add("CD");
+
+       va.add("DE");
+
+ //Second Vector
+
+ Vector<String> vb = new  Vector<String>();
+
+ //Adding elements to the second Vector
+
+       vb.add("1st");
+
+       vb.add("2nd");
+
+       vb.add("3rd");
+
+       vb.add("4th");
+
+       vb.add("5th");
+
+       vb.add("6th");
+
+ /*Displaying the elements of second vector before
+
+         performing the copy operation*/
+
+ System.out.println("Vector vb before copy: "+vb);
+
+ //Copying all the elements of Vector va to Vector vb
+
+ Collections.copy(vb, va);
+
+ //Displaying elements after copy
+
+ System.out.println("Vector vb after copy: "+vb);
+
+   }
+
+}
+
+Output:
+
+Vector vb before copy: [1st, 2nd, 3rd, 4th, 5th, 6th]
+
+Vector vb after copy: [AB, BC, CD, DE, 5th, 6th]
+
+# 1.7 Remove/Sort/Replace
+
+*   Remove element from Vector
+*   Remove element from specified index in Vector
+*   Remove all elements from Vector
+*   Replace element in Vector
+*   Set Vector size
+
+Remove Vector element – Java example
+
+public boolean remove(Object o): Removes the first occurrence of the specified element from Vector If the Vector does not contain the element, it is unchanged.
+
+Example:
+
+In this example we are removing two String values from Vector of Strings. The steps are as follows:
+
+1) Create a Vector
+
+2) Add elements to the Vector using add(Element e) method of Vector class.
+
+3) Remove elements using remove(Object o) method of Vector.
+
+import java.util.Vector;
+
+public  class  RemoveFromVector {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Vector of String Elements
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Adding elements to the Vector
+
+     vector.add("Hari");
+
+     vector.add("Steve");
+
+     vector.add("Vince");
+
+     vector.add("David");
+
+     vector.add("Matt");
+
+ System.out.println("Vector elements before remove(): ");
+
+ for(int i=0; i < vector.size(); i++)
+
+     {
+
+ System.out.println(vector.get(i));
+
+     }
+
+ // Removing Harry
+
+     vector.remove("Hari");
+
+ // Removing Matt
+
+     vector.remove("Matt");
+
+ System.out.println("\nVector elements after remove(): ");
+
+ for(int i=0; i < vector.size(); i++)
+
+     {
+
+ System.out.println(vector.get(i));
+
+     }
+
+  }
+
+}
+
+Output:
+
+Vector elements before remove():
+
+Hari
+
+Steve
+
+Vince
+
+David
+
+Matt
+
+Vector elements after remove():
+
+Steve
+
+Vince
+
+David
+
+The remove(Object o) method returns boolean value. It returns the true if specified element is present in Vector else false.
+
+How to remove Vector elements using index in java example
+
+public E remove(int index): Removes the element at the specified position in this Vector. Shifts any subsequent elements to the left (subtracts one from their indices). Returns the element that was removed from the Vector.
+
+Example:
+
+Index starts from 0 so if we are calling remove(2), it would remove the 3rd element from the Vector.
+
+import java.util.Vector;
+
+public  class  RemoveExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Vector of Strings
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Adding elements to the Vector
+
+    vector.add("C++");
+
+    vector.add("Java");
+
+    vector.add("Cobol");
+
+    vector.add("C");
+
+    vector.add("Oracle");
+
+ System.out.println("Vector elements before remove(): ");
+
+ for(int i=0; i < vector.size(); i++)
+
+    {
+
+ System.out.println(vector.get(i));
+
+    }
+
+ // Removing 3rd element from Vector
+
+ Object obj = vector.remove(2);
+
+ System.out.println("\nElement removed from Vector is:");
+
+ System.out.println(obj);
+
+ System.out.println("\nVector elements after remove():");
+
+ for(int i=0; i < vector.size(); i++)
+
+    {
+
+ System.out.println(vector.get(i));
+
+    }
+
+ }
+
+}
+
+Output:
+
+Vector elements before remove():
+
+C++
+
+Java
+
+Cobol
+
+C
+
+Oracle
+
+Element removed from  Vector  is:
+
+Cobol
+
+Vector elements after remove():
+
+C++
+
+Java
+
+C
+
+Oracle
+
+Remove all elements from Vector in Java – Example
+
+public void clear(): Removes all of the elements from this Vector. The Vector will be empty after this method call.
+
+Example:
+
+Here we are displaying the size of the Vector before and after calling clear() method. The steps are as follows:
+
+1) Create a Vector.
+
+2) Add elements to it.
+
+3) Call clear() method to remove all the elements.
+
+import java.util.Vector;
+
+public  class  RemoveAll {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Vector of Strings
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Adding elements to the Vector
+
+    vector.add("C++");
+
+    vector.add("Java");
+
+    vector.add("Cobol");
+
+    vector.add("C");
+
+    vector.add("Oracle");
+
+ System.out.println("Current size of Vector: "+vector.size());
+
+ // Calling clear() method of Vector API
+
+    vector.clear();
+
+ System.out.println("Size of Vector after clear(): "+vector.size());
+
+ }
+
+}
+
+Output:
+
+Current size of Vector: 5
+
+Size of Vector after clear(): 0
+
+Replace Vector elements using index – Java example
+
+public E set(int index, E element): Replaces the element at the specified position in this Vector with the specified element.
+
+Example:
+
+In this example, we are replacing the 2nd and 3rd elements of Vector with the new values.
+
+import java.util.Vector;
+
+public  class  ReplaceElements {
+
+ public  static  void main(String[] args) {
+
+ Vector<String> vector = new  Vector<String>();
+
+     vector.add("Hari");
+
+     vector.add("Steve");
+
+     vector.add("Vince");
+
+     vector.add("David");
+
+     vector.add("Matt");
+
+ System.out.println("Vector elements before replacement: ");
+
+ for(int i=0; i < vector.size(); i++)
+
+     {
+
+ System.out.println(vector.get(i));
+
+     }
+
+ //Replacing index 1 element
+
+     vector.set(1,"Mark");
+
+ //Replacing index 2 element
+
+     vector.set(2,"Jack");
+
+ System.out.println("Vector elements after replacement: ");
+
+ for(int i=0; i < vector.size(); i++)
+
+     {
+
+ System.out.println(vector.get(i));
+
+     }
+
+  }
+
+}
+
+Output:
+
+Vector elements before replacement:
+
+Hari
+
+Steve
+
+Vince
+
+David
+
+Matt
+
+Vector elements after replacement:
+
+Hari
+
+Mark
+
+Jack
+
+David
+
+Matt
+
+How to Set Vector size example
+
+We can set the size of  Vector using setSize() method of Vector class. If new size is greater than the current size then all the elements after current size index have the null values. If new size is less than current size then the elements after current size index have been deleted from the Vector.
+
+Example:
+
+Here Vector was having 5 elements initially. We set the size to 10 so 5 null elements got inserted at the end of the Vector.
+
+In the second part of the program, we set the size to 4 (less than the current size 10) so last six elements got deleted (including null elements) from Vector.
+
+import java.util.Vector;
+
+public  class  SetSizeExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a Vector
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Add elements to Vector
+
+     vector.add("Walter");
+
+     vector.add("Anna");
+
+     vector.add("Hank");
+
+     vector.add("Flynn");
+
+     vector.add("Tomy");
+
+ //Setting up the size greater than current size
+
+     vector.setSize(10);
+
+ System.out.println("Vector size: "+vector.size());
+
+ System.out.println("Vector elements: ");
+
+ for(int i=0; i < vector.size(); i++){
+
+ //get(i) method fetches the element from index i
+
+ System.out.println(vector.get(i));
+
+     }
+
+ //Setting up the size less than current size
+
+     vector.setSize(4);
+
+ System.out.println("\nVector size: "+vector.size());
+
+ System.out.println("Vector elements: ");
+
+ for(int i=0; i < vector.size(); i++){
+
+ System.out.println(vector.get(i));
+
+     }
+
+  }
+
+}
+
+Output:
+
+Vector size: 10
+
+Vector elements:
+
+Walter
+
+Anna
+
+Hank
+
+Flynn
+
+Tomy
+
+null
+
+null
+
+null
+
+null
+
+null
+
+Vector size: 4
+
+Vector elements:
+
+Walter
+
+Anna
+
+Hank
+
+Flynn
+
+# 1.8 Iterator/ListIterator/Enumeration
+
+*   Vector enumeration example
+*   Vector Iterator example
+*   Vector ListIterator example
+
+Vector Enumeration example in Java
+
+The steps are as follows:
+
+1) Create a Vector object
+
+2) Add elements to vector using add() method of Vector class.
+
+3) Call elements() method to get the Enumeration of specified Vector
+
+4) Use hashMoreElements() and nextElement() Methods of Enumeration to iterate through the Vector.
+
+Example: Complete code
+
+import java.util.Vector;
+
+import java.util.Enumeration;
+
+public  class  VectorEnumerationExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a Vector
+
+ Vector<String> vector = new  Vector<String>();
+
+ // Add elements into Vector
+
+    vector.add("prabha");
+
+    vector.add("Siva");
+
+    vector.add("Aparna");
+
+    vector.add("john");
+
+    vector.add("jack");
+
+ // Get Enumeration of Vector elements
+
+ Enumeration en = vector.elements();
+
+ /* Display Vector elements using hashMoreElements()
+
+     * and nextElement() methods.
+
+     */
+
+ System.out.println("Vector elements are: ");
+
+ while(en.hasMoreElements())
+
+ System.out.println(en.nextElement());
+
+  }
+
+}
+
+Output:
+
+Vector elements are:
+
+prabha
+
+Siva
+
+Aparna
+
+John
+
+Jack
+
+Vector Iterator example in Java
+
+In this example, we are gonna see how to traverse a Vector using Iterator. The steps are as follows:
+
+1) Create a Vector
+
+2) Add elements to it using add(Element E) method of Vector class
+
+3) Obtain an iterator by invoking iterator() method of Vector.
+
+4) Traverse the Vector using has Next() and next() method of Iterator.
+
+Example:
+
+import java.util.Vector;
+
+import java.util.ListIterator;
+
+import java.util.Iterator;
+
+public  class  VectorIteratorExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Vector of Strings
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Adding elements to the Vector
+
+     vector.add("Mango");
+
+     vector.add("Banana");
+
+     vector.add("Apple");
+
+     vector.add("Grapes");
+
+     vector.add("Kiwi");
+
+ //Obtaining an iterator
+
+ Iterator it = vector.iterator();
+
+ System.out.println("Vector elements are:");
+
+ while(it.hasNext()){
+
+ System.out.println(it.next());
+
+     }
+
+  }
+
+}
+
+Output:
+
+Vector elements are:
+
+Mango
+
+Banana
+
+Apple
+
+Grapes
+
+Kiwi
+
+Vector ListIterator example in Java
+
+We can traverse a Vector in forward and Backward direction using the ListIterator. Along with this we can perform several other operation using methods of ListIterator API like displaying the indexes of next and previous elements, replacing the element value, remove the elements during iteration etc.
+
+Example:
+
+Here we have a Vector of Strings and we are iterating it in both the directions using ListIterator.
+
+import java.util.Vector;
+
+import java.util.ListIterator;
+
+public  class  VectorListIteratorDemo {
+
+ public  static  void main(String[] args) {
+
+ // Create a Vector
+
+ Vector<String> vector = new  Vector<String>();
+
+ //Adding elements to the Vector
+
+     vector.add("Item1");
+
+     vector.add("Item2");
+
+     vector.add("Item3");
+
+     vector.add("Item4");
+
+     vector.add("Item5");
+
+ ListIterator litr = vector.listIterator();
+
+ System.out.println("Traversing in Forward Direction:");
+
+ while(litr.hasNext())
+
+     {
+
+ System.out.println(litr.next());
+
+     }
+
+ System.out.println("\nTraversing in Backward Direction:");
+
+ while(litr.hasPrevious())
+
+     {
+
+ System.out.println(litr.previous());
+
+     }
+
+  }
+
+}
+
+Output:
+
+Traversing  in  Forward  Direction:
+
+Item1
+
+Item2
+
+Item3
+
+Item4
+
+Item5
+
+Traversing  in  Backward  Direction:
+
+Item5
+
+Item4
+
+Item3
+
+Item2
+
+Item1
+
+Conversions
+
+*   Convert Vector to List
+*   Convert Vector to ArrayList
+*   Convert Vector to String Array
+
+Convert Vector to List example
+
+The steps are as follows:
+
+1) Create a Vector and populate it
+
+2) Convert it to a List by calling Collections.list(vector.elements()) which returns a List object.
+
+Example:
+
+To explain the logic we are assuming that the Vector is having elements of String type(). However if you want to have a different type then just change the generics in the below code.
+
+import java.util.Vector;
+
+import java.util.List;
+
+import java.util.Collections;
+
+public  class  VectorToList {
+
+ public  static  void main(String[] args) {
+
+ // Step1: Creating a Vector of String elements
+
+ Vector<String> vector = new  Vector<String>();
+
+ // Step2: Populating Vector
+
+     vector.add("Tony");
+
+     vector.add("Rock");
+
+     vector.add("Hulk");
+
+     vector.add("Rick");
+
+     vector.add("James");
+
+ // Step3: Displaying Vector elements
+
+ System.out.println("Vector Elements :");
+
+ for (String str : vector){
+
+ System.out.println(str);
+
+    }
+
+ // Step4: Converting Vector to List
+
+ List<String> list = Collections.list(vector.elements());
+
+ // Step 5: Displaying List Elements
+
+ System.out.println("\nList Elements :");
+
+ for (String str2 : list){
+
+ System.out.println(str2);
+
+    }
+
+ }
+
+}
+
+Output:
+
+Vector  Elements :
+
+Tony
+
+Rock
+
+Hulk
+
+Rick
+
+James
+
+List  Elements :
+
+Tony
+
+Rock
+
+Hulk
+
+Rick
+
+James
+
+Convert Vector to ArrayList example
+
+Example:
+
+In the below snippet we have a Vector of Strings and we are converting it to the ArrayList of Strings. The steps we followed in the below example are:
+
+1) Created a Vector and populated it (We are assuming that Vector would be having String elements).
+
+2) Converted the Vector to ArrayList by Declaring ArrayList object using Vector object.
+
+ArrayList list = new ArrayList(vector);
+
+Code:
+
+import java.util.Vector;
+
+import java.util.ArrayList;
+
+public  class  VectorToArrayList {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Vector of String elements
+
+ Vector<String> vector = new  Vector<String>();
+
+ // Populate Vector
+
+     vector.add("Rahul");
+
+     vector.add("Steve");
+
+     vector.add("Jude");
+
+     vector.add("Locke");
+
+     vector.add("Mike");
+
+     vector.add("Robert");
+
+ //Displaying Vector elements
+
+ for (String str : vector){
+
+ System.out.println(str);
+
+     }
+
+ //Converting Vector to ArrayList
+
+ ArrayList<String> arraylist = new  ArrayList<String>(vector);
+
+ //Displaying ArrayList Elements
+
+ System.out.println("\nArrayList Elements :");
+
+ for (String s : arraylist){
+
+ System.out.println(s);
+
+     }
+
+  }
+
+}
+
+Output:
+
+Rahul
+
+Steve
+
+Jude
+
+Locke
+
+Mike
+
+Robert
+
+ArrayList  Elements :
+
+Rahul
+
+Steve
+
+Jude
+
+Locke
+
+Mike
+
+Robert
+
+How to convert Vector to String array in java
+
+Example:
+
+Lets have a look at the below example where we are converting a Vector of Strings to an array. We are using to String() method of Vector class to do this.
+
+public String toString(): It returns a string representation of this Vector, containing the String representation of each element.
+
+import java.util.Vector;
+
+public  class  VectorToArray {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Vector of String elements
+
+ Vector<String> vector = new  Vector<String>();
+
+ // Add elements to Vector
+
+     vector.add("Item1");
+
+     vector.add("Item2");
+
+     vector.add("Item3");
+
+     vector.add("Item4");
+
+     vector.add("Item5");
+
+     vector.add("Item6");
+
+ //Converting Vector to String Array
+
+ String[] array = vector.toArray(new  String[vector.size()]);
+
+ //Displaying Array Elements
+
+ System.out.println("String Array Elements :");
+
+ for(int i=0; i < array.length ; i++){
+
+ System.out.println(array[i]);
+
+    }
+
+  }
+
+}
+
+Output:
+
+String  Array  Elements:
+
+Item1
+
+Item2
+
+Item3
+
+Item4
+
+Item5
+
+Item6
+
+# 1.9 Difference between ArrayList and Vector In java
+
+ArrayList and Vector both use Array as a data structure internally. However there are few differences in the way they store and process the data. In this post we will discuss the difference and similarities between the ArrayList and Vector.
+
+ArrayList Vs Vector:
+
+1) Synchronization: ArrayList is non-synchronized which means multiple threads can work on ArrayList at the same time. For example: if one thread is performing an add operation on ArrayList, there can be an another thread performing remove operation on ArrayList at the same time in a multithreaded environment.
+
+while Vector is synchronized. This means if one thread is working on Vector, no other thread can get a hold of it. Unlike ArrayList, only one thread can perform an operation on vector at a time.
+
+2) Resize: Both ArrayList and Vector can grow and shrink dynamically to maintain the optimal use of storage, however the way they resized is different. ArrayList grow by half of its size when resized while Vector doubles the size of itself by default when grows.
+
+3) Performance: ArrayList gives better performance as it is non-synchronized. Vector operations gives poor performance as they are thread-safe, the thread which works on Vector gets a lock on it which makes other thread wait till the lock is released.
+
+4) fail-fast: First let me explain what is fail-fast: If the collection (ArrayList, vector etc) gets structurally modified by any means, except the add or remove methods of iterator, after creation of iterator then the iterator will throw ConcurrentModificationException. Structural modification refers to the addition or deletion of elements from the collection.
+
+As per the Vector javadoc the Enumeration returned by Vector is not fail-fast. On the other side the iterator and listIterator returned by ArrayList are fail-fast.
+
+5) Who belongs to collection framework really? The vector was not the part of collection framework, it has been included in collections later. It can be considered as Legacy code. There is nothing about Vector which List collection cannot do. Therefore Vector should be avoided. If there is a need of thread-safe operation make ArrayList synchronized as discussed in the next section of this post or use CopyOnWriteArrayList which is a thread-safe variant of ArrayList.
+
+There are few similarities between these classes which are as follows:
+
+1) Both Vector and ArrayList use growable array data structure.
+
+2) The iterator and listIterator returned by these classes (Vector and ArrayList) are fail-fast.
+
+3) They both are ordered collection classes as they maintain the elements insertion order.
+
+4) Vector & ArrayList both allows duplicate and null values.
+
+5) They both grows and shrinks automatically when overflow and deletion happens.
+
+When to use ArrayList and when to use vector?
+
+It totally depends on the requirement. If there is a need to perform “thread-safe” operation the vector is your best bet as it ensures that only one thread access the collection at a time.
+
+Performance: Synchronized operations consumes more time compared to non-synchronized ones so if there is no need for thread safe operation, ArrayList is a better choice as performance will be improved because of the concurrent processes.
+
+How to make ArrayList synchronized?
+
+As I stated above ArrayList methods are non-synchronized but still if there is a need you can make them synchronized like this
+
+//Use Collecions.synzhonizedList method
+
+List list = Collections.synchronizedList(new  ArrayList());
+
+...
+
+//If you wanna use iterator on the synchronized list, use it
+
+//like this. It should be in synchronized block.
+
+synchronized (list) {
+
+ Iterator iterator = list.iterator();
+
+ while (iterator.hasNext())
+
+      ...
+
+      iterator.next();
+
+      ...
+
+}
+
+# 1.10 HashMap in Java
+
+HashMap in Java with Example
+
+HashMap is the Map based collection class that is used for storing Key & value pairs, it is denoted as HashMap<Key, Value> or HashMap<K, V>. This class makes no guarantees as to the order of the map. It is similar to the Hashtable class except that it is unsynchronized and permits nulls(null values and null key).
+
+It is not an ordered collection which means it does not return the keys and values in the same order in which they have been inserted into the HashMap. It does not sort the stored keys and Values. You must need to import java.util.HashMap or its super class in order to use the HashMap class and methods.
+
+HashMap Example in Java:
+
+In this example we have demonstrated almost all the important methods of HashMap class.
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import java.util.Iterator;
+
+import java.util.Set;
+
+public  class  Details {
+
+ public  static  void main(String args[]) {
+
+ /* This is how to declare HashMap */
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+ /*Adding elements to HashMap*/
+
+      hmap.put(12, "chandren");
+
+      hmap.put(2, "Rahul");
+
+      hmap.put(7, "Singh");
+
+      hmap.put(49, "Ajeet");
+
+      hmap.put(3, "Anuj");
+
+ /* Display content using Iterator*/
+
+ Set  set = hmap.entrySet();
+
+ Iterator iterator = set.iterator();
+
+ while(iterator.hasNext()) {
+
+ Map.Entry mentry = (Map.Entry)iterator.next();
+
+ System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
+
+ System.out.println(mentry.getValue());
+
+      }
+
+ /* Get values based on key*/
+
+ String  var= hmap.get(2);
+
+ System.out.println("Value at index 2 is: "+var);
+
+ /* Remove values based on key*/
+
+      hmap.remove(3);
+
+ System.out.println("Map key and values after removal:");
+
+ Set set2 = hmap.entrySet();
+
+ Iterator iterator2 = set2.iterator();
+
+ while(iterator2.hasNext()) {
+
+ Map.Entry mentry2 = (Map.Entry)iterator2.next();
+
+ System.out.print("Key is: "+mentry2.getKey() + " & Value is: ");
+
+ System.out.println(mentry2.getValue());
+
+       }
+
+   }
+
+}
+
+Output:
+
+key is: 49 & Value  is: Ajeet
+
+key is: 2 & Value  is: Rahul
+
+key is: 3 & Value  is: Anuj
+
+key is: 7 & Value  is: Singh
+
+key is: 12 & Value  is: Chandren
+
+Value at index 2  is: Rahul
+
+Map key and values after removal:
+
+Key  is: 49 & Value  is: Ajeet
+
+Key  is: 2 & Value  is: Rahul
+
+Key  is: 7 & Value  is: Singh
+
+Key  is: 12 & Value  is: Chandren
+
+HashMap Class Methods
+
+Here is the list of methods available in HashMap class. I have also covered examples using these methods at the end of this post.
+
+1) void clear(): It removes all the key and value pairs from the specified Map.
+
+2) Object clone(): It returns a copy of all the mappings of a map and used for cloning them into another map.
+
+3) boolean containsKey(Object key): It is a boolean function which returns true or false based on whether the specified key is found in the map.
+
+4) boolean containsValue(Object Value): Similar to containsKey() method, however it looks for the specified value instead of key.
+
+5) Value get(Object key): It returns the value for the specified key.
+
+6) boolean isEmpty(): It checks whether the map is empty. If there are no key-value mapping present in the map then this function returns true else false.
+
+7) Set keySet(): It returns the Set of the keys fetched from the map.
+
+8) value put(Key k, Value v): Inserts key value mapping into the map. Used in the above example.
+
+9) int size(): Returns the size of the map – Number of key-value mappings.
+
+10) Collection values(): It returns a collection of values of map.
+
+11) Value remove(Object key): It removes the key-value pair for the specified key. Used in the above example.
+
+12)  void putAll(Map m): Copies all  elements of a map to the another specified map.
+
+# 1.11 HashMap Tutorials
+
+HashMap Basics
+
+*   How to iterate HashMap
+*   Sort HashMap by Keys and values
+*   Get Size of HashMap
+*   Remove Key-value mapping from HashMap
+*   Remove all mapping from HashMap
+*   How to check if HashMap is empty or not?
+
+1) How to loop HashMap in java
+
+In this tutorial we will learn how to loop HashMap using following methods:
+
+*   For loop
+*   While loop + Iterator
+
+Example:
+
+In the below example we are iterating the HashMap using the both methods (for loop and while loop). In while loop we have used the iterator.
+
+package javabook.com;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import java.util.Iterator;
+
+public  class  Details
+
+{
+
+ public  static  void main(String [] args)
+
+    {
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+ //Adding elements to HashMap
+
+        hmap.put(11, "AB");
+
+        hmap.put(2, "CD");
+
+        hmap.put(33, "EF");
+
+        hmap.put(9, "GH");
+
+        hmap.put(3, "IJ");
+
+ //FOR LOOP
+
+ System.out.println("For Loop:");
+
+ for (Map.Entry me : hmap.entrySet()) {
+
+ System.out.println("Key: "+me.getKey() + " & Value: " + me.getValue());
+
+        }
+
+ //WHILE LOOP & ITERATOR
+
+ System.out.println("While Loop:");
+
+ Iterator iterator = hmap.entrySet().iterator();
+
+ while (iterator.hasNext()) {
+
+ Map.Entry me2 = (Map.Entry) iterator.next();
+
+ System.out.println("Key: "+me2.getKey() + " & Value: " + me2.getValue());
+
+        }
+
+    }
+
+}
+
+Output:
+
+For  Loop:
+
+Key: 2 & Value: CD
+
+Key: 3 & Value: IJ
+
+Key: 33 & Value: EF
+
+Key: 9 & Value: GH
+
+Key: 11 & Value: AB
+
+While  Loop:
+
+Key: 2 & Value: CD
+
+Key: 3 & Value: IJ
+
+Key: 33 & Value: EF
+
+Key: 9 & Value: GH
+
+Key: 11 & Value: AB
+
+2) How to sort HashMap in Java by Keys and Values
+
+As we know that HashMap does not preserve any order by default. If there is a need we need to sort it explicitly based on the requirement. In this tutorial we will learn how to sort HashMap by keys using TreeMap and by values using Comparator.
+
+HashMap Sorting by Keys
+
+In this example we are sorting the HashMap based on the keys using the TreeMap collection class.
+
+package javabook.com;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import java.util.TreeMap;
+
+import java.util.Set;
+
+import java.util.Iterator;
+
+public  class  Details {
+
+ public  static  void main(String[] args) {
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+         hmap.put(5, "A");
+
+         hmap.put(11, "C");
+
+         hmap.put(4, "Z");
+
+         hmap.put(77, "Y");
+
+         hmap.put(9, "P");
+
+         hmap.put(66, "Q");
+
+         hmap.put(0, "R");
+
+ System.out.println("Before Sorting:");
+
+ Set  set = hmap.entrySet();
+
+ Iterator iterator = set.iterator();
+
+ while(iterator.hasNext()) {
+
+ Map.Entry me = (Map.Entry)iterator.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+         }
+
+ Map<Integer, String> map = new  TreeMap<Integer, String>(hmap);
+
+ System.out.println("After Sorting:");
+
+ Set set2 = map.entrySet();
+
+ Iterator iterator2 = set2.iterator();
+
+ while(iterator2.hasNext()) {
+
+ Map.Entry me2 = (Map.Entry)iterator2.next();
+
+ System.out.print(me2.getKey() + ": ");
+
+ System.out.println(me2.getValue());
+
+         }
+
+    }
+
+}
+
+Output:
+
+Before  Sorting:
+
+0: R
+
+4: Z
+
+5: A
+
+66: Q
+
+9: P
+
+77: Y
+
+11: C
+
+After  Sorting:
+
+0: R
+
+4: Z
+
+5: A
+
+9: P
+
+11: C
+
+66: Q
+
+77: Y
+
+3) HashMap Sorting by Values
+
+In this example we are sorting HashMap by values using Comparator.
+
+package javabook.com;
+
+import java.util.Collections;
+
+import java.util.Comparator;
+
+import java.util.HashMap;
+
+import java.util.Iterator;
+
+import java.util.LinkedHashMap;
+
+import java.util.LinkedList;
+
+import java.util.List;
+
+import java.util.Map;
+
+import java.util.Set;
+
+public  class  HMapSortingByvalues {
+
+ public  static  void main(String[] args) {
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+      hmap.put(5, "A");
+
+      hmap.put(11, "C");
+
+      hmap.put(4, "Z");
+
+      hmap.put(77, "Y");
+
+      hmap.put(9, "P");
+
+      hmap.put(66, "Q");
+
+      hmap.put(0, "R");
+
+ System.out.println("Before Sorting:");
+
+ Set  set = hmap.entrySet();
+
+ Iterator iterator = set.iterator();
+
+ while(iterator.hasNext()) {
+
+ Map.Entry me = (Map.Entry)iterator.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+      }
+
+ Map<Integer, String> map = sortByValues(hmap);
+
+ System.out.println("After Sorting:");
+
+ Set set2 = map.entrySet();
+
+ Iterator iterator2 = set2.iterator();
+
+ while(iterator2.hasNext()) {
+
+ Map.Entry me2 = (Map.Entry)iterator2.next();
+
+ System.out.print(me2.getKey() + ": ");
+
+ System.out.println(me2.getValue());
+
+      }
+
+  }
+
+ private  static  HashMap sortByValues(HashMap map) {
+
+ List list = new  LinkedList(map.entrySet());
+
+ // Defined Custom Comparator here
+
+ Collections.sort(list, new  Comparator() {
+
+ public  int compare(Object o1, Object o2) {
+
+ return ((Comparable) ((Map.Entry) (o1)).getValue())
+
+                  .compareTo(((Map.Entry) (o2)).getValue());
+
+            }
+
+       });
+
+ // Here I am copying the sorted list in HashMap
+
+ // using LinkedHashMap to preserve the insertion order
+
+ HashMap sortedHashMap = new  LinkedHashMap();
+
+ for (Iterator it = list.iterator(); it.hasNext();) {
+
+ Map.Entry entry = (Map.Entry) it.next();
+
+              sortedHashMap.put(entry.getKey(), entry.getValue());
+
+       }
+
+ return sortedHashMap;
+
+  }
+
+}
+
+Output:
+
+Before  Sorting:
+
+0: R
+
+4: Z
+
+5: A
+
+66: Q
+
+9: P
+
+77: Y
+
+11: C
+
+After  Sorting:
+
+5: A
+
+11: C
+
+9: P
+
+66: Q
+
+0: R
+
+77: Y
+
+4: Z
+
+4) Get size of HashMap example
+
+In this example we are gonna see how to get the size of HashMap using size() method of HashMap class. Method definition and description are as follows:
+
+public int size(): It  Returns the number of key-value mappings in this map.
+
+import java.util.HashMap;
+
+public  class  SizeExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a HashMap of int keys and String values
+
+ HashMap<Integer, String> hashmap = new  HashMap<Integer, String>();
+
+ // Adding Key and Value pairs to HashMap
+
+    hashmap.put(11,"Value1");
+
+    hashmap.put(22,"Value2");
+
+    hashmap.put(33,"Value3");
+
+    hashmap.put(44,"Value4");
+
+    hashmap.put(55,"Value5");
+
+ // int size() method returns the number of key value pairs
+
+ System.out.println("Size of HashMap : " + hashmap.size());
+
+ }
+
+}
+
+Output:
+
+Size of HashMap : 5
+
+Since we have 5 key-value pairs in HashMap, the size() method returned integer number 5\. Also, in the above example we have taken Integer keys and String values, however if you want to have String key and String value then you can change the generics like this:
+
+HashMap<String, String> hashmap = new HashMap<String, String>();
+
+Remember to add the pairs like this, If you have String keys and values.
+
+hashmap.put("11", "Value1");
+
+5) Java – Remove mapping from HashMap example
+
+Example:
+
+In this example we are going see how to remove a specific mapping from HashMap using the key value of Key-value pair. We will be using the following method of HashMap class to perform this operation:
+
+public Value remove(Object key): Removes the mapping for the specified key from this map if present and returns the Element value for that particular Key.
+
+Complete Code:
+
+import java.util.HashMap;
+
+public  class  RemoveMappingExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a HashMap of int keys and String values
+
+ HashMap<Integer, String> hashmap = new  HashMap<Integer, String>();
+
+ // Adding Key and Value pairs to HashMap
+
+    hashmap.put(11,"Value1");
+
+    hashmap.put(22,"Value2");
+
+    hashmap.put(33,"Value3");
+
+    hashmap.put(44,"Value4");
+
+    hashmap.put(55,"Value5");
+
+    hashmap.put(66,"Value6");
+
+ // Displaying HashMap Elements
+
+ System.out.println("HashMap Elements: " + hashmap);
+
+ // Removing Key-Value pairs for key 33
+
+ Object removedElement1 = hashmap.remove(33);
+
+ System.out.println("Element removed is: " +removedElement1);
+
+ // Removing Key-Value pairs for key 55
+
+ Object removedElement2 = hashmap.remove(55);
+
+ System.out.println("Element removed is: " +removedElement2);
+
+ // Displaying HashMap Elements after remove
+
+ System.out.println("After Remove:");
+
+ System.out.println("--------------");
+
+ System.out.println("HashMap Elements: " + hashmap);
+
+ }
+
+}
+
+Output:
+
+HashMap  Elements: {33=Value3, 55=Value5, 66=Value6, 22=Value2, 11=Value1, 44=Value4}
+
+Element removed is: Value3
+
+Element removed is: Value5
+
+After  Remove:
+
+--------------
+
+HashMap  Elements: {66=Value6, 22=Value2, 11=Value1, 44=Value4}
+
+6) Java – Remove all mappings from HashMap example
+
+Example:
+
+In this example we are going to see how to remove all the mappings from HashMap. We will be using clear() method of HashMap class to do this:
+
+public void clear(): Removes all of the mappings from this map. The map will be empty after this call returns.
+
+Complete Code:
+
+import java.util.HashMap;
+
+public  class  RemoveAllExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a HashMap of int keys and String values
+
+ HashMap<Integer, String> hashmap = new  HashMap<Integer, String>();
+
+ // Adding Key and Value pairs to HashMap
+
+    hashmap.put(11,"Value1");
+
+    hashmap.put(22,"Value2");
+
+    hashmap.put(33,"Value3");
+
+    hashmap.put(44,"Value4");
+
+    hashmap.put(55,"Value5");
+
+ // Displaying HashMap Elements
+
+ System.out.println("HashMap Elements: " + hashmap);
+
+ // Removing all Mapping
+
+    hashmap.clear();
+
+ // Displaying HashMap Elements after remove
+
+ System.out.println("After calling clear():");
+
+ System.out.println("---------------------");
+
+ System.out.println("HashMap Elements: " + hashmap);
+
+ }
+
+}
+
+Output:
+
+HashMap  Elements: {33=Value3, 55=Value5, 22=Value2, 11=Value1, 44=Value4}
+
+After calling clear():
+
+---------------------
+
+HashMap  Elements: {}
+
+As you can see all the mappings of HashMap have been removed after calling clear() method and HashMap became empty after that.
+
+How to check if a HashMap is empty or not?
+
+Description
+
+Program to check if a HashMap is empty or not. We are using isEmpty() method of HashMap class to perform this check.
+
+Program
+
+import java.util.HashMap;
+
+class  HashMapIsEmptyExample{
+
+ public  static  void main(String args[]) {
+
+ // Create a HashMap
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+ // Checking whether HashMap is empty or not
+
+ /* isEmpty() method signature and description -
+
+     * public boolean isEmpty(): Returns true if this map
+
+     * contains no key-value mappings.
+
+     */
+
+ System.out.println("Is HashMap Empty? "+hmap.isEmpty());
+
+ // Adding few elements
+
+    hmap.put(11, "Jack");
+
+    hmap.put(22, "Rock");
+
+    hmap.put(33, "Rick");
+
+    hmap.put(44, "Smith");
+
+    hmap.put(55, "Will");
+
+ // Checking again
+
+ System.out.println("Is HashMap Empty? "+hmap.isEmpty());
+
+  }
+
+}
+
+Output:
+
+Is  HashMap  Empty? true
+
+Is  HashMap  Empty? false
+
+Get/Search
+
+*   Check if particular key exists in HashMap
+*   Check if particular value exists in HashMap
+
+1) Check if a particular key exists in HashMap example
+
+In this example we are gonna see how to check if a particular key is present in HashMap. We will be using containsKey() method of HashMap class to perform this check. The method definition and description are as follows:
+
+public boolean containsKey(Object key): Returns true if this map contains a mapping for the specified key.
+
+Example:
+
+The steps we followed in the below example are:
+
+1) Create a HashMap and populate it with key-value pairs.
+
+2) Check any key existence by calling containsKey() method. This method returns a boolean value.
+
+import java.util.HashMap;
+
+public  class  CheckKeyExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a HashMap of int keys and String values
+
+ HashMap<Integer, String> hashmap = new  HashMap<Integer, String>();
+
+ // Adding Key and Value pairs to HashMap
+
+    hashmap.put(11,"Chandren");
+
+    hashmap.put(22,"Pratap");
+
+    hashmap.put(33,"Singh");
+
+    hashmap.put(44,"Rajesh");
+
+    hashmap.put(55,"Kate");
+
+ // Checking Key Existence
+
+ boolean flag = hashmap.containsKey(22);
+
+ System.out.println("Key 22 exists in HashMap? : " + flag);
+
+ boolean flag2 = hashmap.containsKey(55);
+
+ System.out.println("Key 55 exists in HashMap? : " + flag2);
+
+ boolean flag3 = hashmap.containsKey(99);
+
+ System.out.println("Key 99 exists in HashMap? : " + flag3);
+
+ }
+
+}
+
+Output:
+
+Key  22 exists in  HashMap? : true
+
+Key  55 exists in  HashMap? : true
+
+Key  99 exists in  HashMap? : false
+
+2) Check if a particular value exists in HashMap example
+
+In this example we are checking whether a particular value exists in HashMap or not. We will be using containsValue() method of HashMap class to perform this check:
+
+public boolean containsValue(Object value): Returns true if this map maps one or more keys to the specified value.
+
+Complete Code:
+
+Here we have a HashMap of integer keys and String values, we are checking whether a particular String is mapped to any of the key of HashMap.
+
+import java.util.HashMap;
+
+public  class  CheckValueExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a HashMap of int keys and String values
+
+ HashMap<Integer, String> hashmap = new  HashMap<Integer, String>();
+
+ // Adding Key and Value pairs to HashMap
+
+    hashmap.put(11,"Chandren");
+
+    hashmap.put(22,"Pratap");
+
+    hashmap.put(33,"Singh");
+
+    hashmap.put(44,"Rajesh");
+
+    hashmap.put(55,"Kate");
+
+ // Checking Value Existence
+
+ boolean flag = hashmap.containsValue("Singh");
+
+ System.out.println("String Singh exists in HashMap? : " + flag);
+
+ }
+
+}
+
+Output:
+
+String  Singh exists in  HashMap? : true
+
+Serialize/Synchronize
+
+*   Serialize HashMap
+*   Synchronize HashMap
+
+1) How to serialize HashMap in java
+
+HashMap class is serialized by default which means we need not to implement Serializable interface in order to make it eligible for Serialization. Before I share the complete code for this let me give a brief info about Serialization and De-serialization.
+
+Serialization: It is the process of writing an Object into file along with its attributes and content. It internally converts the object in stream of bytes.
+
+De-Serialization: It is the process of reading the Object and it is properties from a file along with the Object’s content.
+
+Example:
+
+Serialization of HashMap: In the below class we are storing the HashMap content in a hashmap.ser serialized file. Once you run the below code it would produce a hashmap.ser file. This file would be used in the next class for de-serialization.
+
+package javabook.com;
+
+import java.io.*;
+
+import java.util.HashMap;
+
+public  class  Details
+
+{
+
+ public  static  void main(String [] args)
+
+      {
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+ //Adding elements to HashMap
+
+           hmap.put(11, "AB");
+
+           hmap.put(2, "CD");
+
+           hmap.put(33, "EF");
+
+           hmap.put(9, "GH");
+
+           hmap.put(3, "IJ");
+
+ try
+
+           {
+
+ FileOutputStream fos =
+
+ new  FileOutputStream("hashmap.ser");
+
+ ObjectOutputStream oos = new  ObjectOutputStream(fos);
+
+                  oos.writeObject(hmap);
+
+                  oos.close();
+
+                  fos.close();
+
+ System.out.printf("Serialized HashMap data is saved in hashmap.ser");
+
+           }catch(IOException ioe)
+
+            {
+
+                  ioe.printStackTrace();
+
+            }
+
+      }
+
+}
+
+Output:
+
+Serialized  HashMap data is saved in hashmap.ser
+
+De-Serialization: Here we are reproducing the HashMap object and it is content from a serialized file which we have created by running the above code.
+
+package javabook.com;
+
+import java.io.*;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import java.util.Iterator;
+
+import java.util.Set;
+
+public  class  Student
+
+{
+
+ public  static  void main(String [] args)
+
+   {
+
+ HashMap<Integer, String> map = null;
+
+ try
+
+      {
+
+ FileInputStream fis = new  FileInputStream("hashmap.ser");
+
+ ObjectInputStream ois = new  ObjectInputStream(fis);
+
+         map = (HashMap) ois.readObject();
+
+         ois.close();
+
+         fis.close();
+
+      }catch(IOException ioe)
+
+      {
+
+         ioe.printStackTrace();
+
+ return;
+
+      }catch(ClassNotFoundException c)
+
+      {
+
+ System.out.println("Class not found");
+
+         c.printStackTrace();
+
+ return;
+
+      }
+
+ System.out.println("Deserialized HashMap..");
+
+ // Display content using Iterator
+
+ Set  set = map.entrySet();
+
+ Iterator iterator = set.iterator();
+
+ while(iterator.hasNext()) {
+
+ Map.Entry mentry = (Map.Entry)iterator.next();
+
+ System.out.print("key: "+ mentry.getKey() + " & Value: ");
+
+ System.out.println(mentry.getValue());
+
+      }
+
+    }
+
+}
+
+Output:
+
+Deserialized  HashMap..
+
+key: 9 & Value: GH
+
+key: 2 & Value: CD
+
+key: 11 & Value: AB
+
+key: 33 & Value: EF
+
+key: 3 & Value: IJ
+
+2) How to synchronize HashMap in Java with example
+
+HashMap is a non-synchronized collection class. If we need to perform thread-safe operations on it then we must need to synchronize it explicitly. In this tutorial we will see how to synchronize HashMap.
+
+Example:
+
+In this example we have the HashMap<Integer, String> it is having integer keys and String type values. In order to synchronize it we are using Collections.synchronizedMap(hashmap)  it returns a thread-safe map backed up by the specified HashMap.
+
+Important point to note in the below example:
+
+Iterator should be used in a synchronized block even if we have synchronized the HashMap explicitly (As we did in the below code).
+
+Syntax:
+
+Map map = Collections.synchronizedMap(new  HashMap());
+
+...
+
+//This doesn't need to be in synchronized block
+
+Set  set = map.keySet();
+
+// Synchronizing on map, not on set
+
+synchronized (map) {
+
+ // Iterator must be in synchronized block
+
+ Iterator iterator = set.iterator();
+
+ while (iterator.hasNext()){
+
+          ...
+
+      }
+
+}
+
+Complete Code:
+
+package javabook.com;
+
+import java.util.Collections;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import java.util.Set;
+
+import java.util.Iterator;
+
+public  class  HashMapSyncExample {
+
+ public  static  void main(String args[]) {
+
+ HashMap<Integer, String> hmap= new  HashMap<Integer, String>();
+
+         hmap.put(2, "Arun");
+
+         hmap.put(44, "Ajith");
+
+         hmap.put(1, "Brad");
+
+         hmap.put(4, "Sachin");
+
+         hmap.put(88, "XYZ");
+
+ Map map= Collections.synchronizedMap(hmap);
+
+ Set  set = map.entrySet();
+
+ synchronized(map){
+
+ Iterator i = set.iterator();
+
+ // Display elements
+
+ while(i.hasNext()) {
+
+ Map.Entry me = (Map.Entry)i.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+             }
+
+         }
+
+    }
+
+}
+
+Output:
+
+1: Brad
+
+2: Arun
+
+4: Sachin
+
+88: XYZ
+
+44: Ajith
+
+# 1.12 Difference between ArrayList and HashMap in Java
+
+ArrayList and HashMap are two commonly used collection classes in Java. Even though both are the part of collection framework, the way they store and process the data is entirely different. In this post we will see the main differences between these two collections.
+
+ArrayList vs HashMap in Java
+
+1) Implementation: ArrayList implements List Interface while HashMap is an implementation of Map interface. List and Map are two entirely different collection interfaces.
+
+2) Memory consumption: ArrayList stores the element’s value alone and internally maintains the indexes for each element.
+
+ArrayList<String> arraylist = new  ArrayList<String>();
+
+//String value is stored in array list
+
+arraylist.add("Test String");
+
+HashMap stores key & value pair. For each value there must be a key associated in HashMap. That clearly shows that memory consumption is high in HashMap compared to the ArrayList.
+
+HashMap<Integer, String> hmap= new  HashMap<Integer, String>();
+
+//String value stored along with the key value in hash map
+
+hmap.put(123, "Test String");
+
+3) Order: ArrayList maintains the insertion order while HashMap does not. Which means ArrayList returns the list items in the same order in which they got inserted into the list. On the other side HashMap does not maintain any order, the returned key-values pairs are not sorted in any kind of order.
+
+4) Duplicates: ArrayList allows duplicate elements but HashMap does not allow duplicate keys (It does allow duplicate values).
+
+5) Nulls: ArrayList can have any number of null elements. HashMap allows one null key and any number of null values.
+
+6) get method: In ArrayList we can get the element by specifying the index of it. In HashMap the elements is being fetched by specifying the corresponding key.
+
+# 1.13 Difference between HashMap and Hashtable
+
+HashMap and Hashtable both classes implements java.util.Map interface, however there are differences in the way they work and their usage. Here we will discuss the differences between these classes.
+
+HashMap vs Hashtable
+
+1) HashMap is non-synchronized. This means if it’s used in multithread environment then more than one thread can access and process the HashMap simultaneously.
+
+Hashtable is synchronized. It ensures that no more than one thread can access the Hashtable at a given moment of time. The thread which works on Hashtable acquires a lock on it to make the other threads wait till its work gets completed.
+
+2) HashMap allows one null key and any number of null values.
+
+3) HashMap implementation LinkedHashMap maintains the insertion order and TreeMap sorts the mappings based on the ascending order of keys.
+
+Hashtable doesn’t guarantee any kind of order. It doesn’t maintain the mappings in any particular order.
+
+4) Initially Hashtable was not the part of collection framework it has been made a collection framework member later after being retrofitted to implement the Map interface.
+
+HashMap implements Map interface and is a part of collection framework since the beginning.
+
+5) Another difference between these classes is that the Iterator of the HashMap is a fail-fast and it throws ConcurrentModificationException if any other Thread modifies the map structurally by adding or removing any element except iterator own remove() method. In Simple words fail-fast means: When calling iterator.next(), if any modification has been made between the moment the iterator was created and the moment next() is called, a ConcurrentModificationException is immediately thrown.
+
+Enumerator for the Hashtable is not fail-fast.
+
+Example:
+
+HashMap:
+
+HashMap hm= new  HashMap();
+
+....
+
+....
+
+Set keys = hm.keySet();
+
+for (Object key : keys) {
+
+ //it will throw the ConcurrentModificationException here
+
+    hm.put(object & value pair here);
+
+}
+
+Hashtable:
+
+Hashtable ht= new  Hashtable();
+
+....
+
+.....
+
+Enumeration keys = ht.keys();
+
+ for (Enumeration en = ht.elements() ; en.hasMoreElements() ; en.nextElement()) {
+
+ //No exception would be thrown here
+
+      ht.put(key & value pair here);
+
+ }
+
+# 1.14 Difference between HashSet and HashMap
+
+HashSet vs HashMap
+
+Differences:
+
+| HASHSET | HASHMAP |
+| HashSet class implements the Set interface | HashMap class implements the Map interface |
+| In HashSet we store objects(elements or values) e.g. If we have a HashSet of string elements then it could depict a set of HashSet elements: {“Hello”, “Hi”, “Bye”, “Run”} | HashMap is used for storing key & value pairs. In short it maintains the mapping of key & value (The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls.) This is how you could represent HashMap elements if it has integer key and value of String type: e.g. {1->”Hello”, 2->”Hi”, 3->”Bye”, 4->”Run”} |
+| HashSet does not allow duplicate elements that means you can not store duplicate values in HashSet. | HashMap does not allow duplicate keys however it allows to have duplicate values. |
+| HashSet permits to have a single null value. | HashMap permits single null key and any number of null values. |
+
+Similarities:
+
+1) Both HashMap and HashSet are not synchronized which means they are not suitable for thread-safe operations unitl unless synchronized explicitly. This is how you can synchronize them explicitly:
+
+HashSet:
+
+Set s = Collections.synchronizedSet(new  HashSet(...));
+
+HashMap:
+
+Map m = Collections.synchronizedMap(new  HashMap(...));
+
+2) Both of these classes do not guarantee that the order of their elements will remain constant over time.             
+
+3) If you look at the source code of HashSet then you may find that it is backed up by a HashMap. So basically it internally uses a HashMap for all of its operations.
+
+4) They both provide constant time performance for basic operations such as adding, removing element etc.
+
+HashSet example:
+
+import java.util.HashSet;
+
+class  HashSetDemo{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("AA");
+
+     hset.add("BB");
+
+     hset.add("CC");
+
+     hset.add("DD");
+
+ // Displaying HashSet elements
+
+ System.out.println("HashSet contains: ");
+
+ for(String temp : hset){
+
+ System.out.println(temp);
+
+     }
+
+  }
+
+}
+
+Output:
+
+HashSet contains:
+
+AA
+
+BB
+
+CC
+
+DD
+
+HashMap example:
+
+import java.util.HashMap;
+
+class  HashMapDemo{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashMap
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+ //add elements to HashMap
+
+     hmap.put(1, "AA");
+
+     hmap.put(2, "BB");
+
+     hmap.put(3, "CC");
+
+     hmap.put(4, "DD");
+
+ // Displaying HashMap elements
+
+ System.out.println("HashMap contains: "+hmap);
+
+  }
+
+}
+
+Output:
+
+HashMap contains: {1=AA, 2=BB, 3=CC, 4=DD}
+
+# 1.15 TreeMap in Java
+
+TreeMap in Java with Example:
+
+TreeMap is the Red-Black tree based NavigableMap implementation. It is sorted according to the natural ordering of its keys.
+
+TreeMap class implements Map interface similar to HashMap class. The main difference between them is that HashMap is an unordered collection while TreeMap is sorted in the ascending order of its keys. TreeMap is unsynchronized collection class which means it is not suitable for thread-safe operations until unless synchronized explicitly.
+
+TreeMap Example
+
+In this example we are storing the key and value mappings into the TreeMap and we are getting a sorted key-value mapping upon fetching the data from TreeMap.
+
+import java.util.TreeMap;
+
+import java.util.Set;
+
+import java.util.Iterator;
+
+import java.util.Map;
+
+public  class  Details {
+
+ public  static  void main(String args[]) {
+
+ /* This is how to declare TreeMap */
+
+ TreeMap<Integer, String> tmap =
+
+ new  TreeMap<Integer, String>();
+
+ /*Adding elements to TreeMap*/
+
+      tmap.put(1, "Data1");
+
+      tmap.put(23, "Data2");
+
+      tmap.put(70, "Data3");
+
+      tmap.put(4, "Data4");
+
+      tmap.put(2, "Data5");
+
+ /* Display content using Iterator*/
+
+ Set  set = tmap.entrySet();
+
+ Iterator iterator = set.iterator();
+
+ while(iterator.hasNext()) {
+
+ Map.Entry mentry = (Map.Entry)iterator.next();
+
+ System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
+
+ System.out.println(mentry.getValue());
+
+      }
+
+   }
+
+}
+
+Output:
+
+key is: 1 & Value  is: Data1
+
+key is: 2 & Value  is: Data5
+
+key is: 4 & Value  is: Data4
+
+key is: 23 & Value  is: Data2
+
+key is: 70 & Value  is: Data3
+
+As you can see that we have inserted the data in random order however when we displayed the TreeMap content we got the sorted result in the ascending order of keys.
+
+# 1.16 TreeMap tutorials
+
+*   Sort TreeMap by value
+*   TreeMap Iterator example
+*   Iterate TreeMap in reverse order
+*   Get the sub map from TreeMap
+*   Get the size of TreeMap
+*   Remove key-value mapping from TreeMap
+*   Remove all the mappings from TreeMap
+
+1) How to sort a TreeMap by value in java
+
+A TreeMap is always sorted based on its keys, however if you want to sort it based on its values then you can build a logic to do this using comparator. Below is a complete code of sorting a TreeMap by values.
+
+import java.util.*;
+
+class  TreeMapDemo {
+
+ //Method for sorting the TreeMap based on values
+
+ public  static <K, V extends  Comparable<V>> Map<K, V>
+
+    sortByValues(final  Map<K, V> map) {
+
+ Comparator<K> valueComparator =
+
+ new  Comparator<K>() {
+
+ public  int compare(K k1, K k2) {
+
+ int compare =
+
+              map.get(k1).compareTo(map.get(k2));
+
+ if (compare == 0)
+
+ return  1;
+
+ else
+
+ return compare;
+
+      }
+
+    };
+
+ Map<K, V> sortedByValues =
+
+ new  TreeMap<K, V>(valueComparator);
+
+    sortedByValues.putAll(map);
+
+ return sortedByValues;
+
+  }
+
+ public  static  void main(String args[]) {
+
+ TreeMap<String, String> treemap = new  TreeMap<String, String>();
+
+ // Put elements to the map
+
+    treemap.put("Key1", "Jack");
+
+    treemap.put("Key2", "Rick");
+
+    treemap.put("Key3", "Kate");
+
+    treemap.put("Key4", "Tom");
+
+    treemap.put("Key5", "Steve");
+
+ // Calling the method sortByvalues
+
+ Map sortedMap = sortByValues(treemap);
+
+ // Get a set of the entries on the sorted map
+
+ Set  set = sortedMap.entrySet();
+
+ // Get an iterator
+
+ Iterator i = set.iterator();
+
+ // Display elements
+
+ while(i.hasNext()) {
+
+ Map.Entry me = (Map.Entry)i.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+    }
+
+  }
+
+}
+
+Output:
+
+Key1: Jack
+
+Key3: Kate
+
+Key2: Rick
+
+Key5: Steve
+
+Key4: Tom
+
+2) TreeMap Iterator example
+
+In this example we are iterating a TreeMap using Iterator and Map.Entry.
+
+import java.util.TreeMap;
+
+import java.util.Set;
+
+import java.util.Map;
+
+import java.util.Iterator;
+
+public  class  TreeMapExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a TreeMap
+
+ TreeMap<String, String> treemap = new  TreeMap<String, String>();
+
+ // Add key-value pairs to the TreeMap
+
+    treemap.put("Key1","Item1");
+
+    treemap.put("Key2","Item2");
+
+    treemap.put("Key3","Item3");
+
+    treemap.put("Key4","Item4");
+
+    treemap.put("Key5","Item5");
+
+ // Get a set of the entries
+
+ Set  set = treemap.entrySet();
+
+ // Get an iterator
+
+ Iterator it = set.iterator();
+
+ // Display elements
+
+ while(it.hasNext()) {
+
+ Map.Entry me = (Map.Entry)it.next();
+
+ System.out.print("Key is: "+me.getKey() + " & ");
+
+ System.out.println("Value is: "+me.getValue());
+
+    }
+
+  }
+
+}
+
+Output:
+
+Key  is: Key1 & Value  is: Item1
+
+Key  is: Key2 & Value  is: Item2
+
+Key  is: Key3 & Value  is: Item3
+
+Key  is: Key4 & Value  is: Item4
+
+Key  is: Key5 & Value  is: Item5
+
+3) How to iterate TreeMap in reverse order in Java
+
+By default TreeMap elements are sorted in ascending order of keys. We can iterate the TreeMap in reverse order to display the elements in descending order of keys.
+
+Display TreeMap elements in reverse order:
+
+import java.util.*;
+
+class  TreeMapDemo {
+
+ public  static  void main(String args[]) {
+
+ Map<String, String> treemap =
+
+ new  TreeMap<String, String>(Collections.reverseOrder());
+
+ // Put elements to the map
+
+    treemap.put("Key1", "Jack");
+
+    treemap.put("Key2", "Rick");
+
+    treemap.put("Key3", "Kate");
+
+    treemap.put("Key4", "Tom");
+
+    treemap.put("Key5", "Steve");
+
+ Set  set = treemap.entrySet();
+
+ Iterator i = set.iterator();
+
+ // Display elements
+
+ while(i.hasNext()) {
+
+ Map.Entry me = (Map.Entry)i.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+    }
+
+  }
+
+}
+
+Output:
+
+Key5: Steve
+
+Key4: Tom
+
+Key3: Kate
+
+Key2: Rick
+
+Key1: Jack
+
+As you can see elements are displayed in the reverse order of keys.
+
+More about Collections.reverseOrder() from javadoc:
+
+public static Comparator reverseOrder(): Returns a comparator that imposes the reverse of the natural ordering on a collection of objects that implement the Comparable interface. (The natural ordering is the ordering imposed by the objects’ own compareTo method.) This enables a simple idiom for the sorting (or maintaining) collections (or arrays) of objects that implement the Comparable interface in reverse-natural-order. For example, suppose a is an array of strings. Then: Arrays.sort(a, Collections.reverseOrder());
+
+sorts the array in reverse-lexicographic (alphabetical) order. The returned comparator is serializable.             
+
+Returns:
+
+A comparator that imposes the reverse of the natural ordering on a collection of objects that implement the Comparable interface.
+
+4)How to get the Sub Map from TreeMap example – Java
+
+In this example we are gonna see how to get a sub map from TreeMap. We are using subMap() method of TreeMap class. Please refer the comments in the below program for more details.
+
+Example:
+
+import java.util.*;
+
+class  TreeMapDemo {
+
+ public  static  void main(String args[]) {
+
+ // Create a TreeMap
+
+ TreeMap<String, String> treemap =
+
+ new  TreeMap<String, String>();
+
+ // Put elements to the map
+
+    treemap.put("Key1", "Jack");
+
+    treemap.put("Key2", "Rick");
+
+    treemap.put("Key3", "Kate");
+
+    treemap.put("Key4", "Tom");
+
+    treemap.put("Key5", "Steve");
+
+    treemap.put("Key6", "Ram");
+
+ // Displaying TreeMap elements
+
+ System.out.println("TreeMap Contains : " + treemap);
+
+ // Getting the sub map
+
+ /* public SortedMap<K,V> subMap(K fromKey,K toKey): Returns
+
+     * a view of the portion of this map whose keys range from
+
+     * fromKey, inclusive, to toKey, exclusive.
+
+     * (If fromKey and toKey are equal, the returned map is empty.)
+
+     * The returned map is backed by this map, so changes in the
+
+     * returned map are reflected in this map, and vice-versa.
+
+     * The returned map supports all optional map operations that
+
+     * this map supports.
+
+     */
+
+ SortedMap<String, String> sortedMap = treemap.subMap("Key2","Key5");
+
+ System.out.println("SortedMap Contains : " + sortedMap);
+
+ // Removing an element from Sub Map
+
+    sortedMap.remove("Key4");
+
+ /* Displaying elements of original TreeMap after
+
+     * removing an element from the Sub Map. Since Sub Map is
+
+     * backed up by original Map, the element should be removed
+
+     * from this TreeMap too.
+
+     */
+
+ System.out.println("TreeMap Contains : " + treemap);
+
+  }
+
+}
+
+Output:
+
+TreeMap  Contains : {Key1=Jack, Key2=Rick, Key3=Kate, Key4=Tom, Key5=Steve, Key6=Ram}
+
+SortedMap  Contains : {Key2=Rick, Key3=Kate, Key4=Tom}
+
+TreeMap  Contains : {Key1=Jack, Key2=Rick, Key3=Kate, Key5=Steve, Key6=Ram}
+
+5) How to get the size of TreeMap example – Java
+
+We are using the size() method of TreeMap class to get the number of key-value mappings of a TreeMap. Here is the complete code:
+
+Example:
+
+import java.util.TreeMap;
+
+class  TreeMapSize {
+
+ public  static  void main(String args[]) {
+
+ // Create a TreeMap
+
+ TreeMap<String, String> treemap =
+
+ new  TreeMap<String, String>();
+
+ // Put elements to the map
+
+    treemap.put("Key1", "Value1");
+
+    treemap.put("Key2", "Value2");
+
+    treemap.put("Key3", "Value3");
+
+    treemap.put("Key4", "Value4");
+
+    treemap.put("Key5", "Value5");
+
+ // Displaying size of the TreeMap
+
+ /* public int size(): Returns the number of key-value
+
+     * mappings in this map.
+
+     */
+
+ System.out.println("Size of TreeMap: "+treemap.size());
+
+  }
+
+}
+
+Output:
+
+Size of TreeMap: 5
+
+6) Remove Key-value mapping from TreeMap example
+
+In this tutorial we are gonna see how to remove a Key-value mapping from TreeMap. We are using remove(Object key) method of TreeMap class to perform this remove.
+
+import java.util.TreeMap;
+
+public  class  Details {
+
+ public  static  void main(String[] args) {
+
+ // Create a TreeMap
+
+ TreeMap<String, String> treemap = new  TreeMap<String, String>();
+
+ // Add key-value pairs to the TreeMap
+
+    treemap.put("Key1","Item1");
+
+    treemap.put("Key2","Item2");
+
+    treemap.put("Key3","Item3");
+
+    treemap.put("Key4","Item4");
+
+    treemap.put("Key5","Item5");
+
+ // TreeMap Elements Before remove
+
+ System.out.println("Before: TreeMap contains: "+treemap);
+
+ // Removing element which is mapped to Key3
+
+ /* public V remove(Object key): Removes the mapping
+
+     * for this key from this TreeMap if present.
+
+     */
+
+ Object removedElement = treemap.remove("Key3");
+
+ System.out.println("Removed Element: "+removedElement);
+
+ // TreeMap Elements after remove
+
+ System.out.println("After: TreeMap contains: "+treemap);
+
+  }
+
+}
+
+Output:
+
+Before: TreeMap contains: {Key1=Item1, Key2=Item2, Key3=Item3, Key4=Item4, Key5=Item5}
+
+Removed  Element: Item3
+
+After: TreeMap contains: {Key1=Item1, Key2=Item2, Key4=Item4, Key5=Item5}
+
+7) Remove all mappings from TreeMap example – Java
+
+This is how to remove all the key-value mappings from TreeMap and make it empty. We are using clear() method of TreeMap class to perform this update.
+
+import java.util.TreeMap;
+
+public  class  RemoveAllExample {
+
+ public  static  void main(String[] args) {
+
+ // Create a TreeMap
+
+ TreeMap<String, String> treemap = new  TreeMap<String, String>();
+
+ // Add key-value pairs to the TreeMap
+
+    treemap.put("Key1","Item1");
+
+    treemap.put("Key2","Item2");
+
+    treemap.put("Key3","Item3");
+
+    treemap.put("Key4","Item4");
+
+    treemap.put("Key5","Item5");
+
+ // TreeMap elements before calling clear()
+
+ System.out.println("Before: TreeMap contains: "+treemap);
+
+ // Make TreeMap empty
+
+ /* public void clear(): It removes all of the mappings from
+
+     * this map. The map will be empty after this call returns.
+
+     */
+
+    treemap.clear();
+
+ //TreeMap elements after calling clear()
+
+ System.out.println("After: TreeMap contains: "+treemap);
+
+  }
+
+}
+
+Output:
+
+Before:TreeMap contains: {Key1=Item1, Key2=Item2, Key3=Item3, Key4=Item4, Key5=Item5}
+
+After: TreeMap contains: {}
+
+# 1.16 HashSet Class in Java
+
+HashSet Class in Java with example
+
+This class implements the Set of interface, backed by a hash table (actually a HashMap instance). It makes no guarantees as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over time. This class permits the null element. This class is not synchronized. However it can be synchronized explicitly like this: Set s = Collections.synchronizedSet(new HashSet(...));
+
+Points to Note about HashSet:
+
+1.  HashSet does not maintain any order, the elements would be returned in any random order.
+2.  HashSet does not allow duplicates. If you try to add a duplicate element in HashSet, the old value would be overwritten.
+3.  HashSet allows null values however if you insert more than one nulls it would still return only one null value.
+4.  HashSet is non-synchronized.
+5.  The iterator returned by this class is fail-fast which means iterator would throw ConcurrentModificationException if HashSet has been modified after creation of iterator, by any means except iterator’s own remove method.
+
+HashSet Example
+
+import java.util.HashSet;
+
+public  class  HashSetExample {
+
+ public  static  void main(String args[]) {
+
+ // HashSet declaration
+
+ HashSet<String> hset =
+
+ new  HashSet<String>();
+
+ // Adding elements to the HashSet
+
+      hset.add("Apple");
+
+      hset.add("Mango");
+
+      hset.add("Grapes");
+
+      hset.add("Banana");
+
+      hset.add("Fig");
+
+ //Addition of duplicate elements
+
+      hset.add("Apple");
+
+      hset.add("Mango");
+
+ //Addition of null values
+
+      hset.add(null);
+
+      hset.add(null);
+
+ //Displaying HashSet elements
+
+ System.out.println(hset);
+
+    }
+
+}
+
+Output:
+
+[null, Mango, Grapes, Apple, Banana, Fig]
+
+As you can see there all the duplicate values are not present in the output including the duplicate null value.
+
+# 1.17 HashSet tutorials
+
+*   Delete all elements from HashSet
+*   How to iterate through a HashSet
+*   Convert a HashSet to an array
+*   Convert a HashSet to a TreeSet
+*   Convert HashSet to a List/ArrayList
+*   HashSet vs HashMap
+*   HashSet vs TreeSet
+
+HashSet Methods:
+
+1.  boolean add(Element  e): It adds the element e to the list.
+2.  void clear(): It removes all the elements from the list.
+3.  Object clone(): This method returns a shallow copy of the HashSet.
+4.  boolean contains(Object o): It checks whether the specified Object o is present in the list or not. If the object has been found it returns true else false.
+5.  boolean isEmpty(): Returns true if there is no element present in the Set.
+6.  int size(): It gives the number of elements of a Set.
+7.  boolean(Object o): It removes the specified Object o from the Set.
+
+1) Delete all the elements from HashSet
+
+Here we are gonna see how to remove all the elements of HashSet in one go. We can do so by calling clear() method of HashSet class.
+
+Example:
+
+import java.util.HashSet;
+
+class  EmptyHashSetExample{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("Element1");
+
+     hset.add("Element2");
+
+     hset.add("Element3");
+
+     hset.add("Element4");
+
+     hset.add("Element5");
+
+ // Display HashSet elements
+
+ System.out.println("Before: HashSet contains: "+ hset);
+
+ /* public void clear(): It removes all the elements
+
+      * from HashSet. The set becomes empty after this
+
+      * method gets called.
+
+      */
+
+     hset.clear();
+
+ // Display HashSet content again
+
+ System.out.println("After: HashSet contains: "+ hset);
+
+  }
+
+}
+
+Output:
+
+Before: HashSet contains: [Element1, Element2, Element3, Element4, Element5]
+
+After: HashSet contains: []
+
+2) How to Iterate over a Set/HashSet
+
+There are following two ways to iterate through HashSet:
+
+1) Using Iterator
+
+2) Without using Iterator
+
+Example 1: Using Iterator
+
+import java.util.HashSet;
+
+import java.util.Iterator;
+
+class  IterateHashSet{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("Chandru");
+
+     hset.add("Rahul");
+
+     hset.add("Tomy");
+
+     hset.add("Rick");
+
+     hset.add("Hari");
+
+ Iterator<String> it = hset.iterator();
+
+ while(it.hasNext()){
+
+ System.out.println(it.next());
+
+     }
+
+  }
+
+}
+
+Output:
+
+Chandru
+
+Rick
+
+Hari
+
+Rahul
+
+Tomy
+
+Example 2: Iterate without using Iterator
+
+import java.util.HashSet;
+
+import java.util.Set;
+
+class  IterateHashSet{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ Set<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("Chandru");
+
+     hset.add("Rahul");
+
+     hset.add("Tomy");
+
+     hset.add("Rick");
+
+     hset.add("Hari");
+
+ for (String temp : hset) {
+
+ System.out.println(temp);
+
+     }
+
+  }
+
+}
+
+Output:
+
+Chandru
+
+Rick
+
+Hari
+
+Rahul
+
+Tomy
+
+3) Converting a HashSet to an Array
+
+Here is the program for converting a HashSet to an array.
+
+Program
+
+import java.util.HashSet;
+
+class  ConvertHashSettoArray{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("Element1");
+
+     hset.add("Element2");
+
+     hset.add("Element3");
+
+     hset.add("Element4");
+
+ // Displaying HashSet elements
+
+ System.out.println("HashSet contains: "+ hset);
+
+ // Creating an Array
+
+ String[] array = new  String[hset.size()];
+
+     hset.toArray(array);
+
+ // Displaying Array elements
+
+ System.out.println("Array elements: ");
+
+ for(String temp : array){
+
+ System.out.println(temp);
+
+     }
+
+  }
+
+}
+
+Output:
+
+HashSet contains: [Element1, Element2, Element3, Element4]
+
+Array elements:
+
+Element1
+
+Element2
+
+Element3
+
+Element4
+
+4) How to convert a HashSet to a TreeSet
+
+Description
+
+Program to convert a HashSet to a TreeSet
+
+Program
+
+Here is the complete code for HashSet to TreeSet conversion. We have a HashSet of Strings and we are creating a TreeSet of strings by copying all the elements of HashSet to TreeSet.
+
+import java.util.HashSet;
+
+import java.util.TreeSet;
+
+import java.util.Set;
+
+class  ConvertHashSettoTreeSet{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("Element1");
+
+     hset.add("Element2");
+
+     hset.add("Element3");
+
+     hset.add("Element4");
+
+ // Displaying HashSet elements
+
+ System.out.println("HashSet contains: "+ hset);
+
+ // Creating a TreeSet of HashSet elements
+
+ Set<String> tset = new  TreeSet<String>(hset);
+
+ // Displaying TreeSet elements
+
+ System.out.println("TreeSet contains: ");
+
+ for(String temp : tset){
+
+ System.out.println(temp);
+
+     }
+
+  }
+
+}
+
+Output:
+
+HashSet contains: [Element1, Element2, Element3, Element4]
+
+TreeSet contains:
+
+Element1
+
+Element2
+
+Element3
+
+Element4
+
+5) Convert HashSet to a List/ArrayList
+
+Program
+
+Here we have a HashSet of String elements and we are creating an ArrayList of Strings by copying all the elements of HashSet to ArrayList. Following is the complete code:
+
+import java.util.HashSet;
+
+import java.util.List;
+
+import java.util.ArrayList;
+
+class  ConvertHashSetToArrayList{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("Steve");
+
+     hset.add("Matt");
+
+     hset.add("Govinda");
+
+     hset.add("John");
+
+     hset.add("Tomy");
+
+ // Displaying HashSet elements
+
+ System.out.println("HashSet contains: "+ hset);
+
+ // Creating a List of HashSet elements
+
+ List<String> list = new  ArrayList<String>(hset);
+
+ // Displaying ArrayList elements
+
+ System.out.println("ArrayList contains: "+ list);
+
+  }
+
+}
+
+Output:
+
+HashSet contains: [Tomy, Matt, Steve, Govinda, John]
+
+ArrayList contains: [Tomy, Matt, Steve, Govinda, John]
+
+6) Difference between HashSet and HashMap
+
+In this article we are gonna discuss the differences between HashSet and HashMap classes             
+
+HashSet vs HashMap
+
+Differences:
+
+| HASHSET | HASHMAP |
+| HashSet class implements the Set interface | HashMap class implements the Map interface |
+| In HashSet we store objects(elements or values) e.g. If we have a HashSet of string elements then it could depict a set of HashSet elements: {“Hello”, “Hi”, “Bye”, “Run”}              | HashMap is used for storing key & value pairs. In short it maintains the mapping of key & value (The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls.) This is how you could represent HashMap elements if it has integer key and value of String type: e.g. {1->”Hello”, 2->”Hi”, 3->”Bye”, 4->”Run”} |
+| HashSet does not allow duplicate elements that means you can not store duplicate values in HashSet. | HashMap does not allow duplicate keys however it allows to have duplicate values. |
+| HashSet permits to have a single null value | HashMap permits single null key and any number of null values. |
+
+Similarities:
+
+1) Both the HashMap and HashSet are not synchronized which means they are not suitable for thread-safe operations unitl unless synchronized explicitly. This is how you can synchronize them explicitly:
+
+HashSet:
+
+Set s = Collections.synchronizedSet(new  HashSet(...));
+
+HashMap:
+
+Map m = Collections.synchronizedMap(new  HashMap(...));
+
+2) Both of these classes do not guarantee that the order of their elements will remain constant over time.
+
+3) If you look at the source code of HashSet then you may find that it is backed up by a HashMap. So basically it internally uses a HashMap for all of its operations.
+
+4) They both provide constant time performance for basic operations such as adding, removing element etc.
+
+HashSet example
+
+import java.util.HashSet;
+
+class  HashSetDemo{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("AA");
+
+     hset.add("BB");
+
+     hset.add("CC");
+
+     hset.add("DD");
+
+ // Displaying HashSet elements
+
+ System.out.println("HashSet contains: ");
+
+ for(String temp : hset){
+
+ System.out.println(temp);
+
+     }
+
+  }
+
+}
+
+Output:
+
+HashSet contains:
+
+AA
+
+BB
+
+CC
+
+DD
+
+HashMap example
+
+import java.util.HashMap;
+
+class  HashMapDemo{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashMap
+
+ HashMap<Integer, String> hmap = new  HashMap<Integer, String>();
+
+ //add elements to HashMap
+
+     hmap.put(1, "AA");
+
+     hmap.put(2, "BB");
+
+     hmap.put(3, "CC");
+
+     hmap.put(4, "DD");
+
+ // Displaying HashMap elements
+
+ System.out.println("HashMap contains: "+hmap);
+
+  }
+
+}
+
+Output:
+
+HashMap contains: {1=AA, 2=BB, 3=CC, 4=DD}
+
+7) Difference between HashSet and TreeSet
+
+HashSet vs TreeSet
+
+1) HashSet gives better performance (faster) than TreeSet for the operations like add, remove, contains, size etc. HashSet offers constant time cost while TreeSet offers log(n) time cost for such operations.
+
+2) HashSet does not maintain any order of elements while TreeSet elements are sorted in ascending order by default.
+
+Similarities:
+
+1) Both HashSet and TreeSet does not hold duplicate elements, which means both of these are duplicate free.
+
+2) If you want a sorted Set then it is better to add elements to HashSet and then convert it into TreeSet rather than creating a TreeSet and adding elements to it.
+
+3) Both of these classes are non-synchronized that means they are not thread-safe and should be synchronized explicitly when there is a need of thread-safe operations.
+
+Examples:
+
+HashSet example
+
+import java.util.HashSet;
+
+class  HashSetDemo{
+
+ public  static  void main(String[] args) {
+
+ // Create a HashSet
+
+ HashSet<String> hset = new  HashSet<String>();
+
+ //add elements to HashSet
+
+     hset.add("Abhi");
+
+     hset.add("Ram");
+
+     hset.add("Kevin");
+
+     hset.add("Singh");
+
+     hset.add("Rick");
+
+ // Duplicate removed
+
+     hset.add("Ram");
+
+ // Displaying HashSet elements
+
+ System.out.println("HashSet contains: ");
+
+ for(String temp : hset){
+
+ System.out.println(temp);
+
+     }
+
+  }
+
+}
+
+Output:
+
+HashSet contains:
+
+Rick
+
+Singh
+
+Ram
+
+Kevin
+
+Abhi
+
+TreeSet example
+
+import java.util.TreeSet;
+
+class  TreeSetDemo{
+
+ public  static  void main(String[] args) {
+
+ // Create a TreeSet
+
+ TreeSet<String> tset = new  TreeSet<String>();
+
+ //add elements to TreeSet
+
+     tset.add("Abhi");
+
+     tset.add("Ram");
+
+     tset.add("Kevin");
+
+     tset.add("Singh");
+
+     tset.add("Rick");
+
+ // Duplicate removed
+
+     tset.add("Ram");
+
+ // Displaying TreeSet elements
+
+ System.out.println("TreeSet contains: ");
+
+ for(String temp : tset){
+
+ System.out.println(temp);
+
+     }
+
+  }
+
+}
+
+Output: 
+
+Elements are sorted in ascending order.
+
+TreeSet contains:
+
+Abhi
+
+Kevin
+
+Ram
+
+Rick
+
+Singh
+
+# 1.18 TreeSet Class in Java
+
+TreeSet is similar to HashSet except that it sorts the elements in the ascending order while HashSet does not maintain any order. TreeSet allows null element but like HashSet it doesn’t allow. Like most of the other collection classes this class is also not synchronized, however it can be synchronized explicitly like this: SortedSet s= Collections.synchronizedSortedSet(new TreeSet(...));
+
+In this we are going to see TreeSet example and the difference between TreeSet and other similar collection classes.
+
+TreeSet Example:
+
+In this example we have two TreeSet (TreeSet<String> & TreeSet<Integer>). We have added the values to both of them randomly however the result we got is sorted in ascending order.
+
+import java.util.TreeSet;
+
+public  class  TreeSetExample {
+
+ public  static  void main(String args[]) {
+
+ // TreeSet of String Type
+
+ TreeSet<String> tset = new  TreeSet<String>();
+
+ // Adding elements to TreeSet<String>
+
+         tset.add("ABC");
+
+         tset.add("String");
+
+         tset.add("Test");
+
+         tset.add("Pen");
+
+         tset.add("Ink");
+
+         tset.add("Jack");
+
+ //Displaying TreeSet
+
+ System.out.println(tset);
+
+ // TreeSet of Integer Type
+
+ TreeSet<Integer> tset2 = new  TreeSet<Integer>();
+
+ // Adding elements to TreeSet<Integer>
+
+         tset2.add(88);
+
+         tset2.add(7);
+
+         tset2.add(101);
+
+         tset2.add(0);
+
+         tset2.add(3);
+
+         tset2.add(222);
+
+ System.out.println(tset2);
+
+    }
+
+ }
+
+Output:
+
+You can see both the TreeSet have been sorted in ascending order implicitly.
+
+[ABC, Ink, Jack, Pen, String, Test]
+
+[0, 3, 7, 88, 101, 222]
+
+# 1.19 LinkedHashMap in Java
+
+LinkedHashMap is a Hash table and linked list implementation of the Map interface, with predictable iteration order. This implementation differs from the HashMap in that it maintains a doubly-linked list running through all of its entries. This linked list defines the iteration ordering, which is normally the order in which keys were inserted into the map (insertion-order).
+
+*   HashMap does not maintain any order.
+*   TreeMap sort the entries in ascending order of keys.
+*   LinkedHashMap maintains the insertion order.
+
+Let’s understand the LinkedHashMap with the help of an example:
+
+import java.util.LinkedHashMap;
+
+import java.util.Set;
+
+import java.util.Iterator;
+
+import java.util.Map;
+
+public  class  LinkedHashMapDemo {
+
+ public  static  void main(String args[]) {
+
+ // HashMap Declaration
+
+ LinkedHashMap<Integer, String> lhmap =
+
+ new  LinkedHashMap<Integer, String>();
+
+ //Adding elements to LinkedHashMap
+
+         lhmap.put(22, "Abey");
+
+         lhmap.put(33, "Dawn");
+
+         lhmap.put(1, "Sherry");
+
+         lhmap.put(2, "Karon");
+
+         lhmap.put(100, "Jim");
+
+ // Generating a Set of entries
+
+ Set  set = lhmap.entrySet();
+
+ // Displaying elements of LinkedHashMap
+
+ Iterator iterator = set.iterator();
+
+ while(iterator.hasNext()) {
+
+ Map.Entry me = (Map.Entry)iterator.next();
+
+ System.out.print("Key is: "+ me.getKey() +
+
+ "& Value is: "+me.getValue()+"\n");
+
+         }
+
+    }
+
+}
+
+Output:
+
+Key  is: 22& Value  is: Abey
+
+Key  is: 33& Value  is: Dawn
+
+Key  is: 1& Value  is: Sherry
+
+Key  is: 2& Value  is: Karon
+
+Key  is: 100& Value  is: Jim
+
+As you can see the values are returned in the same order in which they got inserted.
+
+# 1.20 LinkedHashSet Class in Java
+
+LinkedHashSet Class in Java with Example
+
+Earlier we have shared tutorials on HashSet and TreeSet. LinkedHashSet is also an implementation of Set interface, it is similar to the HashSet and TreeSet except the below mentioned differences:
+
+1.  HashSet does not maintain any kind of order of its elements.
+2.  TreeSet sorts the elements in ascending order.
+3.  LinkedHashSet maintains the insertion order. Elements gets sorted in the same sequence in which they have been added to the Set.
+
+Example:
+
+import java.util.LinkedHashSet;
+
+public  class  LinkedHashSetExample {
+
+ public  static  void main(String args[]) {
+
+ // LinkedHashSet of String Type
+
+ LinkedHashSet<String> lhset = new  LinkedHashSet<String>();
+
+ // Adding elements to the LinkedHashSet
+
+         lhset.add("Z");
+
+         lhset.add("PQ");
+
+         lhset.add("N");
+
+         lhset.add("O");
+
+         lhset.add("KK");
+
+         lhset.add("FGH");
+
+ System.out.println(lhset);
+
+ // LinkedHashSet of Integer Type
+
+ LinkedHashSet<Integer> lhset2 = new  LinkedHashSet<Integer>();
+
+ // Adding elements
+
+         lhset2.add(99);
+
+         lhset2.add(7);
+
+         lhset2.add(0);
+
+         lhset2.add(67);
+
+         lhset2.add(89);
+
+         lhset2.add(66);
+
+ System.out.println(lhset2);
+
+    }
+
+}
+
+Output:
+
+[Z, PQ, N, O, KK, FGH]
+
+[99, 7, 0, 67, 89, 66]
+
+# 1.21 Hashtable in java
+
+Hashtable in java with example
+
+This class implements a hash table, which maps keys to values. Any non-null object can be used as a key or as a value. Hashtable is similar to HashMap except it is synchronized.
+
+Example:
+
+import java.util.Hashtable;
+
+import java.util.Enumeration;
+
+public  class  HashtableExample {
+
+ public  static  void main(String[] args) {
+
+ Enumeration names;
+
+ String key;
+
+ // Creating a Hashtable
+
+ Hashtable<String, String> hashtable =
+
+ new  Hashtable<String, String>();
+
+ // Adding Key and Value pairs to Hashtable
+
+   hashtable.put("Key1","Chandru");
+
+   hashtable.put("Key2","Ajith");
+
+   hashtable.put("Key3","Peter");
+
+   hashtable.put("Key4","Ricky");
+
+   hashtable.put("Key5","Mona");
+
+   names = hashtable.keys();
+
+ while(names.hasMoreElements()) {
+
+      key = (String) names.nextElement();
+
+ System.out.println("Key: " +key+ " & Value: " +
+
+      hashtable.get(key));
+
+   }
+
+ }
+
+}
+
+Output:
+
+Key: Key4 & Value: Ricky
+
+Key: Key3 & Value: Peter
+
+Key: Key2 & Value: Ajith
+
+Key: Key1 & Value: Chandru
+
+Key: Key5 & Value: Mona
+
+## 1.21.1 Methods of Hashtable class
+
+1) void clear(): Removes all the key-value mappings from Hashtable and makes it empty. Clears this hashtable so that it contains no keys.
+
+2) Object clone(): Creates a shallow copy of this hashtable. All the structure of the hashtable itself is copied, but the keys and values are not cloned. This is a relatively expensive operation.
+
+3) boolean contains(Object value): Tests if some key maps into the specified value in this hashtable. This operation is more expensive than the containsKey method.
+
+Note that this method is identical in functionality to containsValue, (which is part of the Map interface in the collections framework).
+
+4) boolean isEmpty(): Tests if this hashtable maps no keys to values.
+
+5) Enumeration keys(): Returns an enumeration of the keys contained in the hash table.
+
+6) Object put(Object key, Object value): Maps the specified key to the specified value in this hashtable.
+
+7) void rehash(): Increases the size of the hash table and rehashes all of its keys.
+
+8) Object remove(Object key): Removes the key (and its corresponding value) from this hashtable.
+
+9) int size(): Returns the number of key-value mappings present in Hashtable.
+
+10) String toString(): Returns the string equivalent of a hash table.
+
+11) boolean containsKey(Object key): Tests if the specified object is a key in this hashtable.
+
+12) boolean containsValue(Object value): Tests if the specified object is a value in this hashtable. Returns true if some value equal to value exists within the hash table. Returns false if the value was not found.
+
+13) Enumeration elements(): Returns an enumeration of the values contained in the hash table.
+
+14) Object get(Object key): Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
+
+# 1.22 Hashtable tutorials
+
+Hashtable in java with example
+
+This class implements the hash table, which maps keys to values. Any non-null object can be used as a key or as a value. Hashtable is similar to the HashMap except it is synchronized.
+
+Example:
+
+import java.util.Hashtable;
+
+import java.util.Enumeration;
+
+public  class  HashtableExample {
+
+ public  static  void main(String[] args) {
+
+ Enumeration names;
+
+ String key;
+
+ // Creating a Hashtable
+
+ Hashtable<String, String> hashtable =
+
+ new  Hashtable<String, String>();
+
+ // Adding Key and Value pairs to Hashtable
+
+   hashtable.put("Key1","Chandru");
+
+   hashtable.put("Key2","Ajith");
+
+   hashtable.put("Key3","Peter");
+
+   hashtable.put("Key4","Ricky");
+
+   hashtable.put("Key5","Mona");
+
+   names = hashtable.keys();
+
+ while(names.hasMoreElements()) {
+
+      key = (String) names.nextElement();
+
+ System.out.println("Key: " +key+ " & Value: " +
+
+      hashtable.get(key));
+
+   }
+
+ }
+
+}
+
+Output:
+
+Key: Key4 & Value: Ricky
+
+Key: Key3 & Value: Peter
+
+Key: Key2 & Value: Ajith
+
+Key: Key1 & Value: Chandru
+
+Key: Key5 & Value: Mona
+
+How to sort Hashtable in java
+
+Hashtable does not preserve the insertion order, neither it sorts the inserted data based on keys or values. Which means no matter what keys & values you insert into the Hashtable, the result would not be in any particular order.
+
+Example:
+
+import java.util.*;
+
+public  class  HashtableDemo
+
+{
+
+ public  static  void main(String args[])
+
+    {
+
+ Hashtable<Integer, String> ht= new  Hashtable<Integer, String>();
+
+       ht.put(10, "Chandru");
+
+       ht.put(1, "Ajith");
+
+       ht.put(11, "Test");
+
+       ht.put(9, "Demo");
+
+       ht.put(3, "Anuj");
+
+ // Get a set of the entries
+
+ Set  set = ht.entrySet();
+
+ // Get an iterator
+
+ Iterator i = set.iterator();
+
+ // Display elements
+
+ while(i.hasNext()) {
+
+ Map.Entry me = (Map.Entry)i.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+      }
+
+   }
+
+}
+
+Output:
+
+10: Chandru
+
+9: Demo
+
+3: Anuj
+
+1: Ajith
+
+11: Test
+
+As you can see that the output key-value pairs are in random order. Neither we got insertion order nor the values are sorted based on keys or values.
+
+The solution
+
+The are ways to sort Hashtable using Collections.list and Collections.sort, however best thing to do is use LinkedHashMap or TreeMap.
+
+Use LinkedHashMap: When you want to preserve the insertion order.
+
+Use TreeMap: When you want to sort the key-value pairs.
+
+Let us take the same example using LinkedHashMap and TreeMap:
+
+Using LinkedHashMap
+
+import java.util.*;
+
+public  class  LinkedHashMapDemo
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ LinkedHashMap<Integer, String> lhm= new  LinkedHashMap<Integer, String>();
+
+       lhm.put(10, "Chandru");
+
+       lhm.put(1, "Ajith");
+
+       lhm.put(11, "Test");
+
+       lhm.put(9, "Demo");
+
+       lhm.put(3, "Anuj");
+
+ // Get a set of the entries
+
+ Set  set = lhm.entrySet();
+
+ // Get an iterator
+
+ Iterator i = set.iterator();
+
+ // Display elements
+
+ while(i.hasNext()) {
+
+ Map.Entry me = (Map.Entry)i.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+      }
+
+   }
+
+}
+
+Output:
+
+10: Chandru
+
+1: Ajith
+
+11: Test
+
+9: Demo
+
+3: Anuj
+
+Voila!! We got the result in the insertion order.
+
+What if we want to get the result sorted? Use TreeMap. Refer below example:
+
+Use TreeMap
+
+import java.util.*;
+
+public  class  TreeMapDemo
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ TreeMap<Integer, String> tm= new  TreeMap<Integer, String>();
+
+      tm.put(10, "Chandru");
+
+      tm.put(1, "Ajith");
+
+      tm.put(11, "Test");
+
+      tm.put(9, "Demo");
+
+      tm.put(3, "Anuj");
+
+ // Get a set of the entries
+
+ Set  set = tm.entrySet();
+
+ // Get an iterator
+
+ Iterator i = set.iterator();
+
+ // Display elements
+
+ while(i.hasNext()) {
+
+ Map.Entry me = (Map.Entry)i.next();
+
+ System.out.print(me.getKey() + ": ");
+
+ System.out.println(me.getValue());
+
+      }
+
+  }
+
+}
+
+Output:
+
+1: Ajith
+
+3: Anuj
+
+9: Demo
+
+10: Chandru
+
+11: Test
+
+As you can see, the output we got is sorted based on the keys.
+
+Hashtable Iterator example
+
+Example:
+
+There are several methods (of both Hashtable class and Iterator interface) used in the below program.
+
+import java.util.Hashtable;
+
+import java.util.Set;
+
+import java.util.Iterator;
+
+public  class  IterateHashtable {
+
+ public  static  void main(String[] args) {
+
+ String str;
+
+ // Creating a Hashtable instance
+
+ Hashtable<String, String> hashtable = new  Hashtable<String, String>();
+
+ /* Adding key-value pairs to Hashtable
+
+     * public V put(K key, V value): Maps the specified key to the
+
+     * specified value in this hashtable. Neither the key nor the
+
+     * value can be null. The value can be retrieved by calling the
+
+     * get method with a key that is equal to the original key.
+
+     */
+
+    hashtable.put("A", "Apple");
+
+    hashtable.put("B", "Orange");
+
+    hashtable.put("C", "Mango");
+
+    hashtable.put("D", "Banana");
+
+    hashtable.put("E", "Grapes");
+
+ System.out.println("Hashtable contains:");
+
+ /* public Set<K> keySet(): Returns a Set view of the keys
+
+     * contained in this map. The set is backed by the map,
+
+     * so changes to the map are reflected in the set, and
+
+     * vice-versa.
+
+     */
+
+ Set<String> keys = hashtable.keySet();
+
+ //Obtaining iterator over set entries
+
+ Iterator<String> itr = keys.iterator();
+
+ //Displaying Key and value pairs
+
+ while (itr.hasNext()) {
+
+ // Getting Key
+
+       str = itr.next();
+
+ /* public V get(Object key): Returns the value to which
+
+        * the specified key is mapped, or null if this map
+
+        * contains no mapping for the key.
+
+        */
+
+ System.out.println("Key: "+str+" & Value: "+hashtable.get(str));
+
+    }
+
+ }
+
+}
+
+Output:
+
+Hashtable contains:
+
+Key: A & Value: Apple
+
+Key: E & Value: Grapes
+
+Key: D & Value: Banana
+
+Key: C & Value: Mango
+
+Key: B & Value: Orange
+
+Check key & Value existence in Hashtable example
+
+Example:
+
+In this example we are gonna see how to check Key and value existence in Hashtable. We will be using following two methods to perform this check:
+
+containsKey(Object key): To check if the key present in Hashtable.
+
+containsvalue(Object value): To check if the value present in Hashtable.
+
+import java.util.Hashtable;
+
+public  class  CheckKeyValueExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Hashtable instance
+
+ Hashtable<String, String> hashtable = new  Hashtable<String, String>();
+
+ // Adding key-value pairs to Hashtable
+
+   hashtable.put("A", "Apple");
+
+   hashtable.put("B", "Orange");
+
+   hashtable.put("C", "Mango");
+
+   hashtable.put("D", "Banana");
+
+   hashtable.put("E", "Grapes");
+
+ /* Checking Key existence using containsKey() method.
+
+    * boolean containsKey(Object key) method returns true if the
+
+    * Hashtable contains the key, otherwise it returns false.
+
+    */
+
+ boolean keyFlag1 = hashtable.containsKey("A");
+
+ System.out.println("Key A exists in Hashtable?: " + keyFlag1);
+
+ boolean keyFlag2 = hashtable.containsKey("D");
+
+ System.out.println("Key D exists in Hashtable?: " + keyFlag2);
+
+ boolean keyFlag3 = hashtable.containsKey("G");
+
+ System.out.println("Key G exists in Hashtable?: " + keyFlag3);
+
+ /* Checking Value existence using containsValue() method.
+
+    * boolean containsKey(Object key) method Returns true
+
+    * if this Hashtable maps one or more keys to this value..
+
+    */
+
+ boolean vFlag1 = hashtable.containsValue("Orange");
+
+ System.out.println("Value Orange exists in Hashtable?: "+vFlag1);
+
+ boolean vFlag2 = hashtable.containsValue("XYZ");
+
+ System.out.println("Value XYZ exists in Hashtable?: "+vFlag2);
+
+ boolean vFlag3 = hashtable.containsValue("Apple");
+
+ System.out.println("Value Apple exists in Hashtable?: "+vFlag3);
+
+ }
+
+}
+
+Output:
+
+Key A exists in  Hashtable?: true
+
+Key D exists in  Hashtable?: true
+
+Key G exists in  Hashtable?: false
+
+Value  Orange exists in  Hashtable?: true
+
+Value XYZ exists in  Hashtable?: false
+
+Value  Apple exists in  Hashtable?: true
+
+Remove mapping from Hashtable example
+
+Example:
+
+Method used in the below program is:
+
+public V remove(Object key): Removes the key (and its corresponding value) from this hashtable. This method does nothing if the key is not in the hashtable.
+
+import java.util.Hashtable;
+
+public  class  RemoveMappingExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Hashtable
+
+ Hashtable<Integer, String> hashtable = new  Hashtable<Integer, String>();
+
+ // Adding Key and Value pairs to Hashtable
+
+    hashtable.put(11,"AA");
+
+    hashtable.put(22,"BB");
+
+    hashtable.put(33,"CC");
+
+    hashtable.put(44,"DD");
+
+    hashtable.put(55,"EE");
+
+ //Before remove
+
+ System.out.println("Hashtable contains:" + hashtable);
+
+ // Removing key-value pairs for key 44
+
+ Object removedValue = hashtable.remove(44);
+
+ //After remove
+
+ System.out.println("After remove:");
+
+ System.out.println("Hashtable Key-value pairs: " + hashtable);
+
+ }
+
+}
+
+Output:
+
+Hashtable contains:{55=EE, 44=DD, 33=CC, 22=BB, 11=AA}
+
+After remove:
+
+Hashtable  Key-value pairs: {55=EE, 33=CC, 22=BB, 11=AA}
+
+In the above program we have provided the key 44 while calling remove(key) method so the key-value mapping corresponding to key 44 has been removed from Hashtable and the method returned the value mapped to the key 44.
+
+Remove all mappings from Hashtable example
+
+Example:
+
+Method used in the below program: clear()
+
+public void clear(): Clears this hashtable so that it contains no keys.
+
+import java.util.Hashtable;
+
+public  class  RemoveAllExample {
+
+ public  static  void main(String[] args) {
+
+ // Creating a Hashtable
+
+ Hashtable<Integer, String> hashtable = new  Hashtable<Integer, String>();
+
+ // Adding Key and Value pairs to Hashtable
+
+    hashtable.put(11,"AA");
+
+    hashtable.put(22,"BB");
+
+    hashtable.put(33,"CC");
+
+    hashtable.put(44,"DD");
+
+    hashtable.put(55,"EE");
+
+ // Before remove
+
+ System.out.println("Hashtable contains:" + hashtable);
+
+ // Removing all mappings
+
+    hashtable.clear();
+
+ // After remove
+
+ System.out.println("After remove:");
+
+ System.out.println("Hashtable contains: " + hashtable);
+
+ }
+
+}
+
+Output:
+
+Hashtable contains:{55=EE, 44=DD, 33=CC, 22=BB, 11=AA}
+
+After remove:
+
+Hashtable contains: {}
+
+As you can see all the key-value mappings have been removed from Hashtable and it became empty after calling clear() method.
+
+Get size of Hashtable example
+
+Example:
+
+In this example we are gonna see how to get the size of Hashtable. We will be using size() method of Hashtable class to perform this operation.
+
+import java.util.Hashtable;
+
+public  class  SizeExample{
+
+ public  static  void main(String[] args) {
+
+ // Creating a Hashtable instance
+
+ Hashtable<String, String> hashtable = new  Hashtable<String, String>();
+
+ // Adding key-value pairs to Hashtable
+
+    hashtable.put("A", "Apple");
+
+    hashtable.put("B", "Orange");
+
+    hashtable.put("C", "Mango");
+
+    hashtable.put("D", "Banana");
+
+    hashtable.put("E", "Grapes");
+
+ /* int size(): method returns number of key value pairs present
+
+     * in this hashtable.
+
+     */
+
+ System.out.println("Size of Hashtable: " + hashtable.size());
+
+ }
+
+}
+
+Output:
+
+Size of Hashtable: 5
+
+# 1.23 Queue Interface in Java Collections
+
+A Queue is designed in such a way so that the elements added to it are placed at the end of Queue and removed from the beginning of Queue. The concept here is similar to the queue we see in our daily life, for example, when a new iPhone launches we stand in a queue outside the apple store, whoever is added to the queue has to stand at the end of it and persons are served on the basis of FIFO (First In First Out), The one who gets the iPhone is removed from the beginning of the queue.
+
+![](Images/image00918.jpeg)
+
+Queue interface in Java collections has two implementation: LinkedList and PriorityQueue, these two classes implements Queue interface.
+
+Queue is an interface so we cannot instantiate it, rather we create instance of LinkedList or PriorityQueue and assign it to the Queue like this:
+
+Queue q1 = new  LinkedList();
+
+Queue q2 = new  PriorityQueue();
+
+Example:
+
+import java.util.*;
+
+public  class  QueueExample1 {
+
+ public  static  void main(String[] args) {
+
+ /*
+
+       * We cannot create instance of a Queue as it is an
+
+       * interface, we can create instance of LinkedList or
+
+       * PriorityQueue and assign it to Queue
+
+       */
+
+ Queue<String> q = new  LinkedList<String>();
+
+ //Adding elements to the Queue
+
+      q.add("Rick");
+
+      q.add("Maggie");
+
+      q.add("Glenn");
+
+      q.add("Negan");
+
+      q.add("Daryl");
+
+ System.out.println("Elements in Queue:"+q);
+
+ /*
+
+       * We can remove element from Queue using remove() method,
+
+       * this would remove the first element from the Queue
+
+       */
+
+ System.out.println("Removed element: "+q.remove());
+
+ /*
+
+       * element() method - this returns the head of the
+
+       * Queue. Head is the first element of Queue
+
+       */
+
+ System.out.println("Head: "+q.element());
+
+ /*
+
+       * poll() method - this removes and returns the
+
+       * head of the Queue. Returns null if the Queue is empty
+
+       */
+
+ System.out.println("poll(): "+q.poll());
+
+ /*
+
+       * peek() method - it works same as element() method,
+
+       * however it returns null if the Queue is empty
+
+       */
+
+ System.out.println("peek(): "+q.peek());
+
+ //Again displaying the elements of Queue
+
+ System.out.println("Elements in Queue:"+q);
+
+   }
+
+}
+
+Output:
+
+Elements  in  Queue:[Rick, Maggie, Glenn, Negan, Daryl]
+
+Removed element: Rick
+
+Head: Maggie
+
+poll(): Maggie
+
+peek(): Glenn
+
+Elements  in  Queue:[Glenn, Negan, Daryl]
+
+In the above example, I have used Generics, this helps us to specify the type of the element that we are going to insert into the collection. As you can see I have specified the type of the Queue as String using Generics, so that it accepts only String elements. If you try to add the element of the type not specified then you will get compilation error, this brings the safety in our program and makes it less error prone.
+
+Methods of Queue interface
+
+boolean add(E e): This method adds the specified element at the end of Queue. Returns true if the the element is added successfully or false if the element is not added that basically happens when the Queue is at its max capacity and cannot take any more elements.
+
+E element(): This method returns the head (the first element) of the Queue.
+
+boolean offer(object): This is same as add() method.
+
+E remove(): This method removes the head(first element) of the Queue and returns its value.
+
+E poll(): This method is almost same as remove() method. The only difference between poll() and remove() is that poll() method returns null if the Queue is empty.
+
+E peek(): This method is almost same as element() method. The only difference between peek() and element() is that peek() method returns null if the Queue is empty.
+
+Note: We have seen how a queue serves the requests on the basis of FIFO(First in FIrst out). What if we want to serve the request based on the priority rather than FIFO? This can be done with the help of PriorityQueue, which serves the request based on the priority, that we set using Comparator.
+
+# 1.24 PriorityQueue Interface in Java Collections
+
+In the last tutorial, we have seen how a Queue serves the requests based on FIFO(First in First out). Now the question is: What if we want to serve the request based on the priority rather than FIFO? In a practical scenario this type of solution would be preferred as it is more dynamic and efficient in nature. This can be done with the help of PriorityQueue, which serves the request based on the priority that we set using Comparator.
+
+Java PriorityQueue Example
+
+In this example, I am adding few Strings to the PriorityQueue, while creating PriorityQueue I have passed the Comparator(named as MyComparator) to the PriorityQueue constructor.
+
+In the MyComparator java class, I have sorted the Strings based on their length, which means the priority that I have set in PriorityQueue is String length. That way I ensured that the smallest string would be served first rather than the string that I have added first.
+
+PriorityQueueExample.java
+
+import java.util.PriorityQueue;
+
+public  class  PriorityQueueExample
+
+{
+
+ public  static  void main(String[] args)
+
+    {
+
+ PriorityQueue<String> queue =
+
+ new  PriorityQueue<String>(15, new  MyComparator());
+
+        queue.add("Tyrion Lannister");
+
+        queue.add("Daenerys Targaryen");
+
+        queue.add("Arya Stark");
+
+        queue.add("Petyr 'Littlefinger' Baelish");
+
+ /*
+
+         * What I am doing here is removing the highest
+
+         * priority element from Queue and displaying it.
+
+         * The priority I have set is based on the string
+
+         * length. The logic for it is written in Comparator
+
+         */
+
+ while (queue.size() != 0)
+
+        {
+
+ System.out.println(queue.poll());
+
+        }
+
+    }
+
+}
+
+MyComparator.java
+
+import java.util.Comparator;
+
+public  class  MyComparator  implements  Comparator<String>
+
+{
+
+ @Override
+
+ public  int compare(String x, String y)
+
+   {
+
+ return x.length() - y.length();
+
+   }
+
+}
+
+Output:
+
+Arya  Stark
+
+Tyrion  Lannister
+
+Daenerys  Targaryen
+
+Petyr  'Littlefinger'  Baelish
+
+Methods of PriorityQueue Class
+
+boolean add(E e): Adds the element into the PriorityQueue.
+
+void clear(): This method removes all the elements from the PriorityQueue.
+
+boolean contains(Element e): This method returns true, if the specified element is present in the Queue.
+
+boolean Offer(E e): Same as add() method.
+
+E peek(): Returns the head(the first element) of the Queue.
+
+E poll(): Removes the head of the Queue and returns it.
+
+boolean remove(E e): This method removes the specified element from the Queue and returns true if the deletion is successful. If the specified element is not present in the Queue then it returns false.
+
+int size(): Returns the size of the Queue.
+
+object[] toArray(): Returns array containing all the elements of Queue.
+
+# 1.25 Deque Interface in Java Collections
+
+Deque is a Queue in which you can add and remove elements from both sides. In the Java Queue tutorial we have seen that the Queue follows FIFO (First in First out) and in PriorityQueue example we have seen how to remove and add elements based on the priority. In this tutorial, we will see how to use Deque.
+
+Deque is an interface and has two implementations: LinkedList and ArrayDeque. By implementation I refer that these classes LinkedList and ArrayDeque implements Deque interface, so we can create the instance of these and assign it to the Deque like this:
+
+Deque dq = new  LinkedList();
+
+Deque dq = new  ArrayDeque();
+
+Example:
+
+import java.util.Deque;
+
+import java.util.ArrayDeque;
+
+public  class  ArrayDequeExample {
+
+ public  static  void main(String[] args) {
+
+ /*
+
+* We cannot create instance of a Deque as it is an
+
+* interface, we can create instance of ArrayDeque or
+
+* LinkedList and assign it to Deque
+
+*/
+
+ Deque<String> dq = new  ArrayDeque<String>();
+
+ /*
+
+* Adding elements to the Deque.
+
+* addFirst() adds element at the beginning
+
+        * and addLast() method adds at the end.
+
+*/
+
+dq.add("Glenn");
+
+dq.add("Negan");
+
+dq.addLast("Maggie");
+
+dq.addFirst("Rick");
+
+dq.add("Daryl");
+
+System.out.println("Elements in Deque:"+dq);
+
+ /*
+
+* We can remove element from Deque using remove() method,
+
+* we can use normal remove() method which removes first
+
+* element or we can use removeFirst() and removeLast()
+
+* methods to remove first and last element respectively.
+
+*/
+
+System.out.println("Removed element: "+dq.removeLast());
+
+/*
+
+* element() method - returns the head of the
+
+* Deque. Head is the first element of Deque
+
+*/
+
+System.out.println("Head: "+dq.element());
+
+/*
+
+* pollLast() method - this method removes and returns the
+
+* tail of the Deque(last element). Returns null if the Deque is empty.
+
+* We can also use poll() or pollFirst() to remove the first element of
+
+* Deque.
+
+*/
+
+System.out.println("poll(): "+dq.pollLast());
+
+/*
+
+* peek() method - it works same as element() method,
+
+* however it returns null if the Deque is empty. We can also use
+
+* peekFirst() and peekLast() to retrieve first and last element
+
+*/
+
+System.out.println("peek(): "+dq.peek());
+
+//Again printing the elements of Deque
+
+System.out.println("Elements in Deque:"+dq);
+
+   }
+
+}
+
+Output:
+
+Elements  in  Deque:[Rick, Glenn, Negan, Maggie, Daryl]
+
+Removed element: Daryl
+
+Head: Rick
+
+poll(): Maggie
+
+peek(): Rick
+
+Elements  in  Deque:[Rick, Glenn, Negan]
+
+When to use ArrayList and when to use ArrayDeque?
+
+ArrayDeque has the ability to add or remove the elements from both ends (head or tail), on the other hand removing last element from ArrayList takes O(n) time as it traverses the whole list to reach the end. So if you want to add or remove elements from both ends choose ArrayDeque over ArrayList, however if you only want to perform the opreation on the tail (at the end) then you should choose ArrayList.
+
+Methods of Deque interface
+
+void addFirst(E e): Inserts the specified element at the beginning of the Deque.
+
+void addLast(E e): Inserts the specified element at the end of the Deque.
+
+boolean contains(Object o): Returns true if the specified element is present in the Deque.
+
+E getFirst(): It returns the first element of the Deque.
+
+E getLast(): It returns the last element of the Deque.
+
+E peekFirst(): Returns the first element of Deque, or null if the Deque is empty.
+
+E peekLast(): Returns the last element of Deque, or null if the Deque is empty.
+
+E pollFirst(): Returns and removes the first element of Deque, or null if the Deque is empty.
+
+E pollLast(): Returns and removes the last element of Deque, or null if the Deque is empty.
+
+int size(): Returns the number of elements present in Deque.
+
+# 1.26 Comparable Interface in Java
+
+Comparable Interface in Java with example
+
+Comparable interface is mainly used to sort the arrays (or lists) of custom objects.
+
+Lists (and arrays) of objects that implement Comparable interface can be sorted automatically by Collections.sort (and Arrays.sort). Before we see how to sort an objects of custom objects, lets see how we can sort elements of arrays and Wrapper classes that already implements Comparable.
+
+Example: Sorting arrays and Wrapper class
+
+import java.util.ArrayList;
+
+import java.util.Arrays;
+
+import java.util.Collections;
+
+import java.util.List;
+
+public  class  Demo {
+
+ public  static  void main(String[] args) {
+
+ /*
+
+     * Integer class implements Comparable
+
+     * Interface so we can use the sort method
+
+     */
+
+ int[] arr = {11,55,22,0,89};
+
+ Arrays.sort(arr);
+
+ System.out.print("Sorted Int Array: ");
+
+ System.out.println(Arrays.toString(arr));
+
+ /*
+
+     * String class implements Comparable
+
+     * Interface so we can use the sort method
+
+     */
+
+ System.out.print("Sorted String Array: ");
+
+ String[] names = {"Steve", "Ajith", "Kyle"};
+
+ Arrays.sort(names);
+
+ System.out.println(Arrays.toString(names));
+
+ /*
+
+      * String class implements Comparable
+
+      * Interface so we can use the sort method
+
+      */
+
+ System.out.print("Sorted List: ");
+
+ List fruits = new  ArrayList();
+
+     fruits.add("Orange");
+
+     fruits.add("Banana");
+
+     fruits.add("Apple");
+
+     fruits.add("Guava");
+
+     fruits.add("Grapes");
+
+ Collections.sort(fruits);
+
+ for(String s: fruits) System.out.print(s+", ");
+
+  }
+
+}
+
+Output:
+
+Sorted  Int  Array: [0, 11, 22, 55, 89]
+
+Sorted  String  Array: [Ajith, Kyle, Steve]
+
+Sorted  List: Apple, Banana, Grapes, Guava, Orange,
+
+In the above example, you have seen that how easy it is to sort the Arrays and list of objects that implements Comparable interface, you just need to call the Collections.sort (and Arrays.sort).
+
+However if you want to sort the objects of custom class then you need to implement the Comparable interface in our custom class.
+
+This interface has only one method which is:
+
+public  abstract  int compareTo(T obj)
+
+Since this method is abstract, you must implement this method in your class if you implement the Comparable interface.             
+
+Let’s take an example to understand this better:
+
+Example: Sorting Custom object by implementing Comparable interface
+
+As you can see I have implemented the Comparable interface in my Author class because I want to sort the objects of this class. I have written the logic of sorting in the compareTo() method, you can write logic based on the requirement. I wanted to sort the author names by last name first and if the last name is same then by first name. If you want to sort by the last name only then first line inside compareTo() method is enough.
+
+Author class
+
+public  class  Author  implements  Comparable<Author> {
+
+ String firstName;
+
+ String lastName;
+
+ String bookName;
+
+ Author(String first, String  last, String book){
+
+this.firstName = first;
+
+this.lastName = last;
+
+this.bookName = book;
+
+  }
+
+ @Override
+
+ /*
+
+   * This is where we write the logic to sort. This method sort
+
+   * automatically by the first name in case that the last name is
+
+   * the same.
+
+   */
+
+ public  int compareTo(Author au){
+
+ /*
+
+      * Sorting by last name. compareTo should return < 0 if this(keyword)
+
+      * is supposed to be less than au, > 0 if this is supposed to be
+
+      * greater than object au and 0 if they are supposed to be equal.
+
+      */
+
+ int  last = this.lastName.compareTo(au.lastName);
+
+ //Sorting by first name if last name is same d
+
+ return  last == 0 ? this.firstName.compareTo(au.firstName) : last;
+
+  }
+
+}
+
+Sorting class: SortAuthByNames
+
+import java.util.ArrayList;  
+
+import java.util.Collections;
+
+public  class  SortAuthByNames{ 
+
+ public  static  void main(String args[]){
+
+ // List of objects of Author class
+
+ ArrayList<Author> al=new  ArrayList<Author>();
+
+      al.add(new  Author("Henry","Miller", "Tropic of Cancer")); 
+
+      al.add(new  Author("Nalo","Hopkinson", "Brown Girl in the Ring"));
+
+      al.add(new  Author("Frank","Miller", "300"));
+
+      al.add(new  Author("Deborah","Hopkinson", "Sky Boys"));
+
+      al.add(new  Author("George R. R.","Martin", "Song of Ice and Fire"));
+
+ /*
+
+       * Sorting the list using Collections.sort() method, we
+
+       * can use this method because we have implemented the
+
+       * Comparable interface in our user defined class Author
+
+       */
+
+ Collections.sort(al); 
+
+ for(Author str:al){
+
+  System.out.println(str.firstName+" "+
+
+          str.lastName+" "+"Book: "+str.bookName); 
+
+      }
+
+   } 
+
+} 
+
+Output:
+
+Deborah  Hopkinson  Book: Sky  Boys
+
+Nalo  Hopkinson  Book: Brown  Girl  in the Ring
+
+George R. R. Martin  Book: A Song of Ice  and  Fire
+
+Frank  Miller  Book: 300
+
+Henry  Miller  Book: Tropic of Cancer
+
+Note: We should write the compareTo() method in such a way that if this( I am referring to the this keyword here) is less than the passed object then it should return negative, if greater than positive and zero if equal.
+
+You may be wondering why I did not write that logic? Because first name and last name are strings, I have called the compareTo() method of string class, which does exactly the same.
+
+However if the things we are comparing are of other type such as int then you can write the logic like this:
+
+Let us say object of Employee class is (empId, empName, empAge) and we want to sort the objects by empAge.
+
+public  int compareTo(Employee e){
+
+ if(this.empAge==e.empAge) 
+
+ return  0; 
+
+ else  if(this.empAge>e.empAge) 
+
+ return  1; 
+
+ else 
+
+ return -1; 
+
+}
+
+or
+
+public  int compareTo(Employee e){
+
+return  this.empAge > e.empAge ? 1 : this.empAge < e.empAge ? -1 : 0;
+
+}
+
+# 1.27 Comparator Interface in Java
+
+In the last tutorial, we have seen how to sort objects of a custom class using Comparable interface. By using Comparable we can sort the objects based on any data member. For example, lets say we have an Author class has data members: Author name, book name and author age, now if we want to sort the objects based on any of the data member then we can use Comparable but what if we want to have multiple sort choices and we can sort objects based on any choice, this can be done using Comparator interface, we can create as many Comparator as we want and then we can call Collections.sort on one or more Comparator like this:
+
+//Sorting arraylist al by Author Age
+
+Collections.sort(al, new  AuthorAgeComparator());
+
+//Sorting arraylist al by Book Name
+
+Collections.sort(al, new  BookNameComparator());
+
+So how does it work? To call the Collections.sort method like this, we must first need to write these Comparator classes AuthorAgeComparator and BookNameComparator, along with Author class and the main class.
+
+Complete Comparator Example
+
+Author.java
+
+public  class  Author  implements  Comparable<Author> {
+
+ String firstName;
+
+ String bookName;
+
+ int auAge;
+
+ Author(String first, String book, int age){
+
+ this.firstName = first;
+
+ this.bookName = book;
+
+ this.auAge = age;
+
+  }
+
+ public  String getFirstName() {
+
+ return firstName;
+
+  }
+
+ public  void setFirstName(String firstName) {
+
+ this.firstName = firstName;
+
+  }
+
+ public  String getBookName() {
+
+ return bookName;
+
+  }
+
+ public  void setBookName(String bookName) {
+
+ this.bookName = bookName;
+
+  }
+
+ public  int getAuAge() {
+
+ return auAge;
+
+  }
+
+ public  void setAuAge(int auAge) {
+
+ this.auAge = auAge;
+
+  }
+
+ @Override
+
+ /*
+
+   * When we only use Comparable, this is where we write sorting
+
+   * logic. This method is called when we implement the Comparable
+
+   * interface in our class and call Collections.sort()
+
+   */
+
+ public  int compareTo(Author au){
+
+ return  this.firstName.compareTo(au.firstName);   
+
+  }
+
+}
+
+AuthorAgeComparator.java
+
+import java.util.*;
+
+class  AuthorAgeComparator  implements  Comparator<Author>{
+
+ public  int compare(Author a1,Author a2){
+
+ if(a1.auAge==a2.auAge)
+
+ return  0;
+
+ else  if(a1.auAge>a2.auAge)
+
+ return  1;
+
+ else
+
+ return -1;
+
+  }
+
+}
+
+BookNameComparator.java
+
+import java.util.*;
+
+public  class  BookNameComparator  implements  Comparator<Author>{
+
+ public  int compare(Author a1,Author a2){
+
+ return a1.bookName.compareTo(a2.bookName);
+
+  }  
+
+}
+
+SortingPgm.java
+
+import java.util.ArrayList;  
+
+import java.util.Collections;
+
+public  class  SortingPgm{     
+
+ public  static  void main(String args[]){
+
+ // List of objects of Author class     
+
+ ArrayList<Author> al=new  ArrayList<Author>();       
+
+     al.add(new  Author("Henry", "Tropic of Cancer",  45));
+
+     al.add(new  Author("Nalo", "Brown Girl in the Ring", 56));
+
+     al.add(new  Author("Frank", "300", 65));
+
+     al.add(new  Author("Deborah", "Sky Boys", 51));
+
+     al.add(new  Author("George R. R.", "A Song of Ice and Fire", 62));
+
+ /*       
+
+      * Sorting the list using Collections.sort() method, we       
+
+      * can use this method because we have implemented the        
+
+      * Comparable interface in our user defined class Author       
+
+      */     
+
+ System.out.println("Sorting by Author First Name:");     
+
+ Collections.sort(al);       
+
+ for(Author au: al){
+
+ System.out.println(au.getFirstName()+", "+au.getBookName()+", "+
+
+           au.getAuAge());       
+
+     } 
+
+ /*Sorting using AuthorAgeComparator*/     
+
+ System.out.println("Sorting by Author Age:");
+
+ Collections.sort(al, new  AuthorAgeComparator());
+
+ for(Author au: al){
+
+ System.out.println(au.getFirstName()+", "+au.getBookName()+", "+
+
+          au.getAuAge());       
+
+     }            
+
+ /*Sorting using BookNameComparator*/     
+
+ System.out.println("Sorting by Book Name:");     
+
+ Collections.sort(al, new  BookNameComparator());     
+
+ for(Author au: al){
+
+ System.out.println(au.getFirstName()+", "+au.getBookName()+", "+ 
+
+           au.getAuAge());       
+
+     }    
+
+  }  
+
+}  
+
+Output:
+
+Sorting  by  Author  First  Name:
+
+Deborah, Sky  Boys, 51
+
+Frank, 300, 65
+
+George R. R., A Song of Ice  and  Fire, 62
+
+Henry, Tropic of Cancer, 45
+
+Nalo, Brown  Girl  in the Ring, 56
+
+Sorting  by  Author  Age:
+
+Henry, Tropic of Cancer, 45
+
+Deborah, Sky  Boys, 51
+
+Nalo, Brown  Girl  in the Ring, 56
+
+George R. R., A Song of Ice  and  Fire, 62
+
+Frank, 300, 65
+
+Sorting  by  Book  Name:
+
+Frank, 300, 65
+
+George R. R., A Song of Ice  and  Fire, 62
+
+Nalo, Brown  Girl  in the Ring, 56
+
+Deborah, Sky  Boys, 51
+
+Henry, Tropic of Cancer, 45
+
+### Java Tutorial on Annotation, Enum and Regex
+
+# 2.1 Java Enum Tutorial with examples
+
+An enum is a special type of data type which is basically a collection (set) of constants. In this tutorial we will learn how to use enums in Java and what are the possible scenarios where we can use them.
+
+This is how we define Enum
+
+public  enum  Directions{
+
+  EAST,
+
+  WEST,
+
+  NORTH,
+
+  SOUTH
+
+}
+
+Here we have a variable Directions of enum type, which is a collection of four constants EAST, WEST, NORTH and SOUTH.
+
+How to assign value to a enum type?
+
+Directions dir = Directions.NORTH;
+
+The variable dir is of type Directions (that is a enum type). This variable can take any value, out of the possible four values (EAST, WEST, NORTH, SOUTH). In this case it is set to NORTH.
+
+Use of Enum types in if-else statements
+
+This is how we can use an enum variable in a if-else logic.
+
+/* You can assign any value here out of
+
+* EAST, WEST, NORTH, SOUTH. Just for the
+
+* sake of example, I'm assigning to NORTH
+
+*/
+
+Directions dir = Directions.NORTH; 
+
+if(dir == Directions.EAST) {
+
+ // Do something. Write your logic
+
+} else  if(dir == Directions.WEST) {
+
+ // Do something else
+
+} else  if(dir == Directions.NORTH) {
+
+ // Do something
+
+} else {
+
+ /* Do Something. Write logic for
+
+         * the remaining constant SOUTH
+
+         */
+
+      }
+
+Enum Example
+
+This is just an example to demonstrate the use enums. If you understand the core part and basics, you would be able to write your own logic based on the requirement.
+
+public  enum  Directions{
+
+  EAST,
+
+  WEST,
+
+  NORTH,
+
+  SOUTH
+
+}
+
+public  class  EnumDemo
+
+{
+
+ public  static  void main(String args[]){
+
+Directions dir = Directions.NORTH; 
+
+if(dir == Directions.EAST) {
+
+ System.out.println("Direction: East");
+
+} else  if(dir == Directions.WEST) {
+
+ System.out.println("Direction: West");
+
+} else  if(dir == Directions.NORTH) {
+
+ System.out.println("Direction: North");
+
+ } else {
+
+System.out.println("Direction: South");
+
+      }
+
+   }
+
+}
+
+Output:
+
+Direction: North
+
+Use of Enum in Switch-Case Statements
+
+Here is the example to demonstrate the use of enums in switch-case statements.
+
+public  enum  Directions{
+
+  EAST,
+
+  WEST,
+
+  NORTH,
+
+  SOUTH
+
+}
+
+public  class  EnumDemo
+
+{
+
+ Directions dir;
+
+ public  EnumDemo(Directions dir) {
+
+ this.dir = dir;
+
+   }
+
+ public  void getMyDirection() {
+
+ switch (dir) {
+
+ case EAST:
+
+ System.out.println("In East Direction");
+
+ break;
+
+ case WEST:
+
+ System.out.println("In West Direction");
+
+ break;
+
+ case NORTH:
+
+ System.out.println("In North Direction");
+
+ break;
+
+ default:
+
+ System.out.println("In South Direction");
+
+ break;
+
+     }
+
+   }
+
+ public  static  void main(String[] args) {
+
+ EnumDemo obj1 = new  EnumDemo(Directions.EAST);
+
+        obj1.getMyDirection();
+
+ EnumDemo obj2 = new  EnumDemo(Directions.SOUTH);
+
+        obj2.getMyDirection();
+
+    }
+
+}
+
+Output:
+
+In  East  Direction
+
+In  South  Direction
+
+How to iterate through an Enum variable
+
+class  EnumDemo
+
+{
+
+ public  static  void main(String[] args) {
+
+ for (Directions dir : Directions.values()) {
+
+  System.out.println(dir);
+
+ }
+
+    }
+
+}
+
+This code would display all the four constants.
+
+Enum Fields and Methods
+
+Lets take an example first then we will discuss it in detail:
+
+public  enum  Directions{
+
+  EAST ("E"),
+
+  WEST ("W"),
+
+  NORTH ("N"),
+
+  SOUTH ("S")
+
+  ;
+
+ /* Important Note: Must have semicolon at
+
+   * the end when there is a enum field or method
+
+   */
+
+ private  final  String shortCode;
+
+ Directions(String code) {
+
+ this.shortCode = code;
+
+  }
+
+ public  String getDirectionCode() {
+
+ return  this.shortCode;
+
+  }
+
+}
+
+public  class  EnumDemo
+
+{
+
+ public  static  void main(String[] args) {
+
+ Directions dir = Directions.SOUTH;
+
+ System.out.println(dir.getDirectionCode());
+
+ Directions dir2 = Directions.EAST;
+
+ System.out.println(dir2.getDirectionCode());
+
+    }
+
+}
+
+Output:
+
+S
+
+E
+
+As you can see in this example we have a field shortCode for each of the constant, along with a method getDirectionCode() which is basically a getter method for this field. When we define a constant like this EAST ("E"), it calls the enum constructor (Refer the constructor Directions in the above example) with the passed argument. This way the passed value is set as an value for the field of the corresponding enum’s constant [EAST(“E”) => Would call constructor Directions(“E”) => this.shortCode = code => this.shortCode = “E” => shortCode field of constant EAST is set to “E”].
+
+Important points to Note:
+
+1) While defining Enums, the constants should be declared first, prior to any fields or methods.
+
+2) When there are fields and methods declared inside Enum, the list of enum constants must end with a semicolon(;).
+
+# 2.2 Java Annotations tutorial
+
+Java Annotations tutorial with examples
+
+Java Annotations allow us to add metadata information into our source code, although they are not a part of the program itself. Annotations were added to the java from JDK 5. Annotation has no direct effect on the operation of the code they annotate (i.e. it does not affect the execution of the program).
+
+In this tutorial we are going to cover following topics: Usage of annotations, how to apply annotations, what predefined annotation types are available in the Java and how to create custom annotations.
+
+What’s the use of Annotations?
+
+1)  Instructions to the compiler: There are three built-in annotations available in Java (@Deprecated, @Override & @SuppressWarnings) that can be used for giving certain instructions to the compiler. For example the @override annotation is used for instructing compiler that the annotated method is overriding the method. More about these built-in annotations with example is discussed in the next sections of this article.
+
+2)  Compile-time instructors: Annotations can provide compile-time instructions to the compiler that can be further used by sofware build tools for generating code, XML files etc.
+
+3) Runtime instructions: We can define annotations to be available at runtime which we can access using java reflection and can be used to give instructions to the program at runtime. We will discuss this with the help of an example, later in this same post.
+
+Annotations basics
+
+An annotation always starts with the symbol @ followed by the annotation name. The symbol @ indicates to the compiler that this is an annotation.
+
+For example: @Override
+
+Here @ symbol represents that this is an annotation and the Override is the name of this annotation.
+
+Where we can use annotations?
+
+Annotations can be applied to the classes, interfaces, methods and fields. For example the below annotation is being applied to the method.
+
+@Override
+
+void myMethod() {
+
+ //Do something
+
+}
+
+What this annotation is exactly doing here is explained in the next section but to be brief it is instructing compiler that myMethod() is a overriding method which is overriding the method (myMethod()) of super class.
+
+## 2.2.1 Built-in Annotations in Java
+
+Java has three built-in annotations:
+
+*   @Override
+*   @Deprecated
+*   @SuppressWarnings
+
+1) @Override:
+
+While overriding a method in the child class, we should use this annotation to mark that method. This makes code readable and avoid maintenance issues, such as: while changing the method signature of parent class, you must change the signature in child classes (where this annotation is being used) otherwise compiler would throw compilation error. This is difficult to trace when you haven’t used this annotation.
+
+Example:
+
+public  class  MyParentClass {
+
+ public  void justaMethod() {
+
+ System.out.println("Parent class method");
+
+    }
+
+}
+
+public  class  MyChildClass  extends  MyParentClass {
+
+ @Override
+
+ public  void justaMethod() {
+
+ System.out.println("Child class method");
+
+    }
+
+}
+
+2) @Deprecated
+
+@Deprecated annotation indicates that the marked element (class, method or field) is deprecated and should no longer be used. The compiler generates a warning whenever a program uses a method, class, or field that has already been marked with the @Deprecated annotation. When an element is deprecated, it should also be documented using the Javadoc @deprecated tag, as shown in the following example. Make a note of case difference with @Deprecated and @deprecated. @deprecated is used for documentation purpose.
+
+Example:
+
+/**
+
+* @deprecated
+
+* reason for why it was deprecated
+
+*/
+
+@Deprecated
+
+public  void anyMethodHere(){
+
+ // Do something
+
+}
+
+3) @SuppressWarnings
+
+This annotation instructs compiler to ignore specific warnings. For example in the below code, I am calling a deprecated method (lets assume that the method deprecatedMethod() is marked with @Deprecated annotation) so the compiler should generate a warning, however I am using @@SuppressWarnings annotation that would suppress that deprecation warning.
+
+@SuppressWarnings("deprecation")
+
+ void myMethod() {
+
+        myObject.deprecatedMethod();
+
+}
+
+## 2.2.2 Creating Custom Annotations
+
+*   Annotations are created by using @interface, followed by annotation name as shown in the below example.
+*   An annotation can have elements as well. They look like methods. For example in the below code, we have four elements. We should not provide implementation for these elements.
+*   All annotations extends java.lang.annotation.Annotation interface. Annotations cannot include any extends clause.
+
+import java.lang.annotation.Documented;
+
+import java.lang.annotation.ElementType;
+
+import java.lang.annotation.Inherited;
+
+import java.lang.annotation.Retention;
+
+import java.lang.annotation.RetentionPolicy;
+
+import java.lang.annotation.Target;
+
+@Documented
+
+@Target(ElementType.METHOD)
+
+@Inherited
+
+@Retention(RetentionPolicy.RUNTIME)
+
+public  @interface  MyCustomAnnotation{
+
+ int studentAge() default  18;
+
+ String studentName();
+
+ String stuAddress();
+
+ String stuStream() default  "CSE";
+
+}
+
+Note: All the elements that have default values set while creating annotations can be skipped while using annotation. For example if I’m applying the above annotation to a class then I would do it like this:
+
+@MyCustomAnnotation(
+
+    studentName="Chaitanya",
+
+    stuAddress="Agra, India"
+
+)
+
+public  class  MyClass {
+
+...
+
+}
+
+As you can see, we have not given any value to the studentAge and stuStream elements as it is optional to set the values of these elements (default values already been set in Annotation definition, but if you want you can assign new value while using annotation just the same way as we did for other elements). However we have to provide the values of other elements (the elements that do not have default values set) while using annotation.
+
+Note: We can also have array elements in an annotation. This is how we can use them:
+
+Annotation definition:
+
+@interface  MyCustomAnnotation {
+
+ int      count();
+
+ String[] books();
+
+}
+
+Usage:
+
+@MyCustomAnnotation(
+
+    count=3,
+
+    books={"C++", "Java"}
+
+)
+
+public  class  MyClass {
+
+}
+
+Let back to the topic again: In the custom annotation example we have used these four annotations: @Documented, @Target, @Inherited & @Retention. Lets discuss them in detail.
+
+@Documented
+
+@Documented annotation indicates that elements using this annotation should be documented by JavaDoc. For example:
+
+java.lang.annotation.Documented
+
+@Documented
+
+public  @interface  MyCustomAnnotation {
+
+ //Annotation body
+
+}
+
+@MyCustomAnnotation
+
+public  class  MyClass {
+
+ //Class body
+
+}
+
+While generating the javadoc for class MyClass, the annotation @MyCustomAnnotation would be included in that.
+
+@Target
+
+It specifies where we can use the annotation. For example: In the below code, we have defined the target type as METHOD which means the below annotation can only be used on methods.
+
+import java.lang.annotation.ElementType;
+
+import java.lang.annotation.Target;
+
+@Target({ElementType.METHOD})
+
+public  @interface  MyCustomAnnotation {
+
+}
+
+public  class  MyClass {
+
+ @MyCustomAnnotation
+
+ public  void myMethod()
+
+   {
+
+ //Doing something
+
+   }
+
+}
+
+Note:
+
+1) If you do not define any Target type that means annotation can be applied to any element.
+
+2) Apart from ElementType.METHOD, an annotation can have following possible Target values.
+
+ElementType.METHOD
+
+ElementType.PACKAGE
+
+ElementType.PARAMETER
+
+ElementType.TYPE
+
+ElementType.ANNOTATION_TYPE
+
+ElementType.CONSTRUCTOR
+
+ElementType.LOCAL_VARIABLE
+
+ElementType.FIELD
+
+@Inherited
+
+The @Inherited annotation signals that a custom annotation used in a class should be inherited by all of its sub classes. For example:
+
+java.lang.annotation.Inherited
+
+@Inherited
+
+public  @interface  MyCustomAnnotation {
+
+}
+
+@MyCustomAnnotation
+
+public  class  MyParentClass {
+
+  ...
+
+}
+
+public  class  MyChildClass  extends  MyParentClass {
+
+   ...
+
+}
+
+Here the class MyParentClass is using annotation @MyCustomAnnotation which is marked with @inherited annotation. It means that the sub class MyChildClass inherits the @MyCustomAnnotation.             
+
+@Retention
+
+It indicates how long annotations with the annotated type are to be retained.
+
+import java.lang.annotation.Retention;
+
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+
+@interface  MyCustomAnnotation {
+
+}
+
+Here we have used RetentionPolicy.RUNTIME. There are two other options as well. Lets see what do they mean:
+
+RetentionPolicy.RUNTIME: The annotation should be available at runtime, for inspection via java reflection.
+
+RetentionPolicy.CLASS: The annotation would be in the .class file but it would not be available at runtime.
+
+RetentionPolicy.SOURCE: The annotation would be available in the source code of the program, it would neither be in the .class file nor be available at the runtime.
+
+# 2.3 Java Regular Expressions (java regex)
+
+Regular expressions are used for defining String patterns that can be used for searching, manipulating and editing a text. These expressions are also known as Regex (short form of Regular expressions).
+
+Lets take an example to understand it better:
+
+In the below example, the regular expression .*book.* is used for searching the occurrence of string “book” in the text.
+
+import java.util.regex.*;
+
+class  RegexExample1{ 
+
+ public  static  void main(String args[]){
+
+ String content = "This is feroz " +
+
+ "from javabook.com.";
+
+ String pattern = ".*book.*";
+
+ boolean isMatch = Pattern.matches(pattern, content);
+
+ System.out.println("The text contains 'book'? " + isMatch);
+
+   }
+
+} 
+
+Output:
+
+The text contains 'book'? true
+
+In this tutorial we will learn how to define patterns and how to use them. The java.util.regex API (the package which we need to import while dealing with Regex) has two main classes:
+
+1) java.util.regex.Pattern – Used for defining patterns
+
+2) java.util.regex.Matcher – Used for performing match operations on text using patterns
+
+java.util.regex.Pattern class:
+
+1) Pattern.matches()
+
+We have already seen the usage of this method in the above example where we performed the search for string “book” in a given text. This is one of simplest and easiest way of searching a String in a text using Regex.
+
+String content = "This is a tutorial Website!";
+
+String patternString = ".*tutorial.*";
+
+boolean isMatch = Pattern.matches(patternString, content);
+
+System.out.println("The text contains 'tutorial'? " + isMatch);
+
+As you can see we have used matches() method of Pattern class to search the pattern in the given text. The pattern .*tutorial.* allows zero or more characters at the beginning and end of the String “tutorial” (the expression .* is used for zero and more characters).
+
+Limitations: This way we can search a single occurrence of a pattern in a text. For matching multiple occurrences you should use the Pattern.compile() method (discussed in the next section).
+
+2) Pattern.compile()
+
+In the above example we searched a string “tutorial” in the text, that is a case sensitive search, however if you want to do a CASE INSENSITIVE search or want to do search multiple occurrences then you may need to first compile the pattern using Pattern.compile() before searching it in text. This is how this method can be used for this case.
+
+String content = "This is a tutorial!";
+
+String patternString = ".*tuToRiAl.";
+
+Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+
+Here we have used a flag Pattern.CASE_INSENSITIVE for case insensitive search, there are several other flags that can be used for different-2 purposes.
+
+Now what: We have obtained a Pattern instance but how to match it? For that we would be needing a Matcher instance, which we can get using Pattern.matcher() method. Lets discuss it.
+
+3) Pattern.matcher() method
+
+In the above section we learnt how to get a Pattern instance using compile() method. Here we will learn How to get Matcher instance from Pattern instance by using matcher() method.
+
+String content = "This is a tutorial!";
+
+String patternString = ".*tuToRiAl.*";
+
+Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+
+Matcher matcher = pattern.matcher(content);
+
+boolean isMatched = matcher.matches();
+
+System.out.println("Is it a Match?" + isMatched);
+
+Output:
+
+Is it a Match?true
+
+4) Pattern.split()
+
+To split a text into multiple strings based on a delimiter (Here delimiter would be specified using regex), we can use Pattern.split() method. This is how it can be done.
+
+import java.util.regex.*;
+
+class  RegexExample2{ 
+
+public  static  void main(String args[]){
+
+String text = "ThisIsferoz.ItISMybook";
+
+ // Pattern for delimiter
+
+String patternString = "is";
+
+Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+
+String[] myStrings = pattern.split(text);
+
+for(String temp: myStrings){
+
+ System.out.println(temp);
+
+}
+
+System.out.println("Number of split strings: "+myStrings.length);
+
+}}
+
+Output:
+
+Th
+
+Feroz.It
+
+Mybook
+
+Number of split strings: 4
+
+The second split String is null in the output.
+
+java.util.regex.Matcher Class
+
+We already discussed little bit about Matcher class above. Lets recall few things:
+
+Creating a Matcher instance
+
+String content = "Some text";
+
+String patternString = ".*somestring.*";
+
+Pattern pattern = Pattern.compile(patternString);
+
+Matcher matcher = pattern.matcher(content);
+
+Main methods
+
+matches(): It matches the regular expression against the whole text passed to the Pattern.matcher() method while creating Matcher instance.
+
+...
+
+Matcher matcher = pattern.matcher(content);
+
+boolean isMatch = matcher.matches();
+
+lookingAt(): Similar to matches() method except that it matches the regular expression only against the beginning of the text, while matches() search in the whole text.
+
+find(): Searches the occurrences of of the regular expressions in the text. Mainly used when we are searching for multiple occurrences.
+
+start() and end(): Both these methods are generally used along with the find() method. They are used for getting the start and end indexes of a match that is being found using find() method.
+
+Lets take an example to find out the multiple occurrences using Matcher methods:
+
+Package javabook.com;
+
+import java.util.regex.*;
+
+class  RegexExampleMatcher{ 
+
+public  static  void main(String args[]){
+
+ String content = "ZZZ AA PP AA QQQ AAA ZZ";
+
+ String  string = "AA";
+
+ Pattern pattern = Pattern.compile(string);
+
+ Matcher matcher = pattern.matcher(content);
+
+ while(matcher.find()) {
+
+ System.out.println("Found at: "+ matcher.start()
+
+ +
+
+ " - " + matcher.end());
+
+  }
+
+}
+
+}
+
+Output:
+
+Found at: 4 - 6
+
+Found at: 10 - 12
+
+Found at: 17 - 19
+
+Now we are familiar with Pattern and Matcher class and the process of matching a regular expression against the text. Lets see what kind of various options we have to define a regular expression:
+
+1) String Literals
+
+Let us say you just want to search a particular string in the text for example “abc” then we can simply write the code like this: Here text and regex both are same.
+
+Pattern.matches("abc", "abc")
+
+2) Character Classes
+
+A character class matches a single character in the input text against multiple allowed characters in the character class. For example [Cc]haitanya would match all the occurrences of String “feroz” with either lower case or upper case C”. Few more examples:
+
+Pattern.matches("[pqr]", "abcd"); It would give false as no p,q or r in the text
+
+Pattern.matches("[pqr]", "r"); Return true as r is found
+
+Pattern.matches("[pqr]", "pq"); Return false as any one of them can be in text not both.
+
+Here is the complete list of various character classes constructs:
+
+[abc]: It would match with text if the text is having either one of them(a,b or c) and only once.
+
+[^abc]:  Any single character except a, b, or c (^ denote negation)
+
+[a-zA-Z]:  a through z, or A through Z, inclusive (range)
+
+[a-d[m-p]]:  a through d, or m through p: [a-dm-p] (union)
+
+[a-z&&[def]]:  Any one of them (d, e, or f)
+
+[a-z&&[^bc]]: a through z, except for b and c: [ad-z] (subtraction)
+
+[a-z&&[^m-p]]:  a through z, and not m through p: [a-lq-z] (subtraction)
+
+Predefined Character Classes – Metacharacters
+
+These are like short codes which you can use while writing regex.
+
+ConstructDescription
+
+.   ->Any character (may or may not match line terminators)
+
+\d  ->A digit: [0-9]
+
+\D  ->A non-digit: [^0-9]
+
+\s  ->A whitespace character: [ \t\n\x0B\f\r]
+
+\S  ->A non-whitespace character: [^\s]
+
+\w  ->A word character: [a-zA-Z_0-9]
+
+\W  ->A non-word character: [^\w]
+
+Example:
+
+Pattern.matches("\\d", "1"); would return true
+
+Pattern.matches("\\D", "z"); return true
+
+Pattern.matches(".p", "qp"); return true, dot(.) represent any character
+
+Boundary Matchers
+
+^Matches the beginning of a line.
+
+$Matches  then  end of a line.
+
+\bMatches a word boundary.
+
+\BMatches a non-word boundary.
+
+\AMatches the beginning of the input text.
+
+\GMatches the end of the previous match
+
+\ZMatches the end of the input text except the final terminator if any.
+
+\zMatches the end of the input text.
+
+Example:
+
+Pattern.matches("^Hello$", "Hello"): return true, Begins and ends with Hello
+
+Pattern.matches("^Hello$", "Namaste! Hello"): return false, does not begin with Hello
+
+Pattern.matches("^Hello$", "Hello Namaste!"): return false, Does not end with Hello
+
+Quantifiers
+
+GreedyReluctantPossessiveMatches
+
+X?X??X?+Matches X once, or  not at all (0  or  1 time).
+
+X*X*?X*+Matches X zero or more times.
+
+X+X+?X++Matches X one or more times.
+
+X{n}X{n}?X{n}+Matches X exactly n times.
+
+X{n,}X{n,}?X{n,}+Matches X at least n times.
+
+X{n, m)X{n, m)? X{n, m)+Matches X at least n time, but at most m times.
+
+Example:
+
+import java.util.regex.*;
+
+class  RegexExample{ 
+
+public  static  void main(String args[]){
+
+ // It would return true if string matches exactly "tom"
+
+ System.out.println(
+
+ Pattern.matches("tom", "Tom")); //False
+
+ /* returns true if the string matches exactly
+
+    * "tom" or "Tom"
+
+    */
+
+ System.out.println(
+
+ Pattern.matches("[Tt]om", "Tom")); //True
+
+ System.out.println(
+
+ Pattern.matches("[Tt]om", "Tom")); //True
+
+ /* Returns true if the string matches exactly "tim"
+
+    * or "Tim" or "jin" or "Jin"
+
+    */
+
+ System.out.println(
+
+ Pattern.matches("[tT]im|[jJ]in", "Tim"));//True
+
+ System.out.println(
+
+ Pattern.matches("[tT]im|[jJ]in", "jin"));//True
+
+ /* returns true if the string contains "abc" at
+
+    * any place
+
+    */
+
+ System.out.println(
+
+ Pattern.matches(".*abc.*", "deabcpq"));//True
+
+ /* returns true if the string does not have a
+
+    * number at the beginning
+
+    */
+
+ System.out.println(
+
+ Pattern.matches("^[^\\d].*", "123abc")); //False
+
+ System.out.println(
+
+ Pattern.matches("^[^\\d].*", "abc123")); //True
+
+ // returns true if the string contains of three letters
+
+ System.out.println(
+
+ Pattern.matches("[a-zA-Z][a-zA-Z][a-zA-Z]", "aPz"));//True
+
+ System.out.println(
+
+ Pattern.matches("[a-zA-Z][a-zA-Z][a-zA-Z]", "aAA"));//True
+
+ System.out.println(
+
+ Pattern.matches("[a-zA-Z][a-zA-Z][a-zA-Z]", "apZx"));//False
+
+ // returns true if the string contains 0 or more non-digits
+
+ System.out.println(
+
+ Pattern.matches("\\D*", "abcde")); //True
+
+ System.out.println(
+
+ Pattern.matches("\\D*", "abcde123")); //False
+
+ /* Boundary Matchers example
+
+    * ^ denotes start of the line
+
+    * $ denotes end of the line
+
+    */
+
+ System.out.println(
+
+ Pattern.matches("^This$", "This is Chaitanya")); //False
+
+ System.out.println(
+
+ Pattern.matches("^This$", "This")); //True
+
+ System.out.println(
+
+ Pattern.matches("^This$", "Is This Chaitanya")); //False
+
+}
+
+}
+
+### Miscellaneous Core Java tutorial
+
+# 3.1 Java – String Class and its methods
+
+Java – String Class with examples
+
+String is the sequence of characters, for e.g. “Hello” is the string of 5 characters. In java, string is an immutable object which means it is constant and cannot be changed once it has been created. Here we will learn about String class and String methods in detail along with many other Java String tutorials.
+
+Creating a String
+
+There are two ways to create String in Java
+
+*   String literal
+*   Using new keyword
+
+String literal
+
+In java, Strings can be created like this: Assigning a String literal to a String instance:
+
+String str1 = "Welcome";
+
+String str2 = "Welcome";
+
+The problem with this approach: As I stated in the beginning that String is an object in Java. However we have not created any string object using new keyword above. The compiler does that task for us it creates a string object having the string literal (that we have provided , in this case it is “Welcome”) and assigns it to the provided string instances.
+
+But if the object already exist in the memory it does not create a new Object rather it assigns the same old object to the new instance, that means even though we have two string instances above(str1 and str2) compiler only created on string object (having the value “Welcome”) and assigned the same to both the instances. For example there are 10 string instances that have same value, it means that in memory there is only one object having the value and all the 10 string instances would be pointing to the same object.
+
+What if we want to have two different object with the same string? For that we would need to create strings using new keyword.
+
+Using New Keyword
+
+As we saw above that when we tried to assign the same string object to two different literals, compiler only created one object and made both of the literals to point the same object. To overcome that approach we can create strings like this:
+
+String str1 = new  String("Welcome");
+
+String str2 = new  String("Welcome");
+
+In this case compiler would create two different object in memory having the same string.
+
+A Simple Java String Example
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+//creating a string by java string literal
+
+String str = "javabook";
+
+char arrch[]={'h','e','l','l','o'};
+
+//converting char array arrch[] to string str2
+
+String str2 = new  String(arrch);
+
+//creating another java string str3 by using new keyword
+
+String str3 = new  String("Java String Example");
+
+//Displaying all the three strings
+
+System.out.println(str); 
+
+System.out.println(str2); 
+
+System.out.println(str3); 
+
+   }
+
+}
+
+Output:
+
+javasbook
+
+hello
+
+Java  String  Example
+
+# 3.2 Java String Methods
+
+Here are the list of the methods available in the Java String class.
+
+1) char charAt(int index):
+
+It returns the character at the specified index. Specified index value should be between 0 to length() -1 both inclusive. It throws IndexOutOfBoundsException if index<0||>= length of String.
+
+The method charAt(int index) returns the character at the specified index. The index value should lie between 0 and length()-1\. For e.g. s.charAt(0) would return the first character of the string “s”. It throws IndexOutOfBoundsException if the index is less than zero or greater than equal to the length of the string (index<0|| index>=length()).
+
+Example:
+
+In this example we are fetching few characters of the input string using charAt() method.
+
+public  class  CharAtExample {
+
+ public  static  void main(String args[]) {
+
+ String str = "Welcome to string handling tutorial";             
+
+char ch1 = str.charAt(0);
+
+char ch2 = str.charAt(5);
+
+char ch3 = str.charAt(11);
+
+char ch4 = str.charAt(20);
+
+System.out.println("Character at 0 index is: "+ch1);
+
+System.out.println("Character at 5th index is: "+ch2);
+
+System.out.println("Character at 11th index is: "+ch3);
+
+System.out.println("Character at 20th index is: "+ch4);
+
+    }
+
+}
+
+Output:
+
+Character at 0 index is: W
+
+Character at 5th index is: m
+
+Character at 11th index is: s
+
+Character at 20th index is: n
+
+2) boolean equals(Object obj): Compares the string with the specified string and returns true if both matches else false.
+
+Java – String equals() and equalsIgnoreCase() Methods example
+
+In this tutorial we will discuss the equals() and equalsIgnoreCase() methods. Both of these methods are used for comparing two strings. The only difference between them is that the equals() methods considers the case while equalsIgnoreCase() methods ignores the case during comparison. For e.g. The equals() method would return false if we compare the strings “TEXT” and “text” however equalsIgnoreCase() would return true.
+
+boolean equals(String str): Case sensitive comparison
+
+boolean equalsIgnoreCase(String str): Case in-sensitive comparison
+
+Example 1: equals()
+
+public  class  EqualsExample1{
+
+ public  static  void main(String args[]){
+
+ String str1= new  String("Hello");
+
+ String str2= new  String("Hi");
+
+ String str3= new  String("Hello");
+
+ System.out.println("str1 equals to str2:"+str1.equals(str2));
+
+ System.out.println("str1 equals to str3:"+str1.equals(str3));
+
+ System.out.println("str1 equals to Welcome:"+str1.equals("Welcome"));
+
+ System.out.println("str1 equals to Hello:"+str1.equals("Hello"));
+
+ System.out.println("str1 equals to hello:"+str1.equals("hello"));
+
+   }
+
+}
+
+Output:
+
+str1 equals to str2:false
+
+str1 equals to str3:true
+
+str1 equals to Welcome:false
+
+str1 equals to Hello:true
+
+str1 equals to hello:false
+
+Example2: equalsIgnoreCase()
+
+public  class  EqualsExample2{
+
+ public  static  void main(String args[]){
+
+ String str1= new  String("Apple");
+
+ String str2= new  String("MANGO");
+
+ String str3= new  String("APPLE");
+
+ System.out.println("str1 equals to str2:"+str1.equalsIgnoreCase(str2));
+
+ System.out.println("str1 equals to str3:"+str1.equalsIgnoreCase(str3));
+
+ System.out.println("str1 equals to Welcome:"+str1.equalsIgnoreCase("Welcome"));
+
+ System.out.println("str1 equals to Apple:"+str1.equalsIgnoreCase("Apple"));
+
+ System.out.println("str2 equals to mango:"+str2.equalsIgnoreCase("mango"));
+
+   }
+
+}
+
+Output:
+
+str1 equals to str2:false
+
+str1 equals to str3:true
+
+str1 equals to Welcome:false
+
+str1 equals to Apple:true
+
+str2 equals to mango:true
+
+3) boolean equalsIgnoreCase(String string): It works same as equals method but it doesn’t consider the case while comparing strings. It does a case insensitive comparison.
+
+Example:follow the 2nd point.
+
+4) int compareTo(String string): This method compares the two strings based on the Unicode value of each character in the strings.
+
+Java – String compareTo() Method example
+
+The method compareTo() is used for comparing two strings lexicographically. Each character of both the strings is converted into a Unicode value for comparison. If both the strings are equal then this method returns 0 else it returns positive or negative value. The result is positive if the first string is lexicographically greater than the second string else the result would be negative.
+
+This method can be used as follows:
+
+int compareTo(String str)
+
+Here the comparison is between string literals. For e.g. string1.compareTo(string2) where string1 and string2 are String literals.
+
+int compareTo(Object obj)
+
+This is a comparison between a string and an object. For e.g. string1.compareTo("Just a String object") where string1 is a literal whose value would be compared with the string specified in the method argument.
+
+Example
+
+Here we have three Strings and we are comparing them with each other using compareTo() method.
+
+public  class  CompareToExample {
+
+ public  static  void main(String args[]) {
+
+ String str1 = "String method tutorial";
+
+ String str2 = "compareTo method example";
+
+ String str3 = "String method tutorial";
+
+ int var1 = str1.compareTo( str2 );
+
+ System.out.println("str1 & str2 comparison: "+var1);
+
+ int var2 = str1.compareTo( str3 );
+
+ System.out.println("str1 & str3 comparison: "+var2);
+
+ int var3 = str2.compareTo("compareTo method example");
+
+ System.out.println("str2 & string argument comparison: "+var3);
+
+   }
+
+}
+
+Output:
+
+str1 & str2 comparison: -16
+
+str1 & str3 comparison: 0
+
+str2 & string argument comparison: 0
+
+5) int compareToIgnoreCase(String string): Same as CompareTo method however it ignores the case during comparison.
+
+Java – String compareToIgnoreCase() Method example
+
+The method compareToIgnoreCase() is similar to the compareTo() method as it also compares two strings lexicographically. The only difference between them is that compareToIgnoreCase() ignores the case (uppercase or lowercase) while comparing two strings. Similar to compareTo() this method also compares the strings based on the Unicode value of their each character. It returns 0 when the strings are equal else it returns positive or negative value.
+
+int compareToIgnoreCase(String str)
+
+Example
+
+In the below example we have three String literals which have same value but the case is different. string1 is in uppercase, string2 is in lowercase and string3 is a mix of uppercase and lowercase. We are using compareToIgnoreCase() method to compare these strings.
+
+public  class  CompareExample {
+
+ public  static  void main(String args[]) {
+
+ String string1 = "HELLO";
+
+ String string2 = "hello";
+
+ String string3 = "Hello";
+
+ int var1 = string1.compareToIgnoreCase(string2);
+
+ System.out.println("string1 and string2 comparison: "+var1);
+
+ int var2 = string1.compareToIgnoreCase(string3);
+
+ System.out.println("string1 and string3 comparison: "+var2);
+
+ int var3 = string1.compareToIgnoreCase("HeLLo");
+
+ System.out.println("string1 and HeLLo comparison: "+var3);
+
+   }
+
+}
+
+Output:
+
+string1 and string2 comparison: 0
+
+string1 and string3 comparison: 0
+
+string1 and  HeLLo comparison: 0
+
+6) boolean startsWith(String prefix, int offset): It checks whether the substring (starting from the specified offset index) is having the specified prefix or not.
+
+Java – String startsWith() Method example
+
+The method startsWith() is used for checking prefix of a String. It returns a boolean value true or false based on whether the specified string is prefix of the particular String or not.
+
+boolean startsWith(String str): It returns true if the str is a prefix of the String.
+
+boolean startsWith(String str, index fromIndex): It returns true if the String begins with str, it starts looking from the specified index “fromIndex”.
+
+Example
+
+public  class  StartsWithExample{
+
+ public  static  void main(String args[]) {
+
+ String str= new  String("quick brown fox jumps over the lazy dog");
+
+ System.out.println("String str starts with quick: "+str.startsWith("quick"));
+
+ System.out.println("String str starts with brown: "+str.startsWith("brown"));
+
+ System.out.println("substring of str(starting from 6th index) has brown prefix: "
+
++str.startsWith("brown", 6));
+
+ System.out.println("substring of str(starting from 6th index) has quick prefix: "
+
++str.startsWith("quick", 6));
+
+   }
+
+}
+
+Output:
+
+String str starts with quick: true
+
+String str starts with brown: false
+
+substring of str(starting from  6th index) havs brown prefix: true             
+
+substring of str(starting from  6th index) havs quick prefix: false
+
+7) boolean startsWith(String prefix): It tests whether the string is having specified prefix, if yes then it returns true else false.
+
+Java – String startsWith() Method example
+
+The method startsWith() is used for checking prefix of a String. It returns a boolean value true or false based on whether the specified string is prefix of the particular String or not.
+
+boolean startsWith(String str): It returns true if the str is a prefix of the String.
+
+boolean startsWith(String str, index fromIndex): It returns true if the String begins with str, it starts looking from the specified index “fromIndex”.
+
+Example
+
+public  class  StartsWithExample{
+
+ public  static  void main(String args[]) {
+
+ String str= new  String("quick brown fox jumps over the lazy dog");
+
+ System.out.println("String str starts with quick: "+str.startsWith("quick"));
+
+ System.out.println("String str starts with brown: "+str.startsWith("brown"));
+
+ System.out.println("substring of str(starting from 6th index) has brown prefix: "
+
++str.startsWith("brown", 6));
+
+ System.out.println("substring of str(starting from 6th index) has quick prefix: "
+
++str.startsWith("quick", 6));
+
+   }
+
+}
+
+Output:
+
+String str starts with quick: true
+
+String str starts with brown: false
+
+substring of str(starting from  6th index) havs brown prefix: true
+
+substring of str(starting from  6th index) havs quick prefix: false
+
+8) boolean endsWith(String suffix): Checks whether the string ends with the specified suffix.
+
+Java – String endsWith() Method example
+
+The method endsWith(String suffix) checks whether the String ends with a specified suffix. This method returns a boolean value true or false. If the specified suffix is found at the end of the string then it returns true else false.
+
+public boolean endsWith(String suffix)
+
+Example
+
+In this example we have two strings and we are checking whether the strings are ending with the specified suffixes.
+
+public  class  EndsWithExample{
+
+ public  static  void main(String args[]){
+
+ String str1 = new  String("This is a test String");
+
+ String str2 = new  String("Test ABC");
+
+ boolean var1 = str1.endsWith("String");
+
+ boolean var2 = str1.endsWith("ABC");
+
+ boolean var3 = str2.endsWith("String");
+
+ boolean var4 = str2.endsWith("ABC");
+
+ System.out.println("str1 ends with String: "+ var1);
+
+ System.out.println("str1 ends with ABC: "+ var2);
+
+ System.out.println("str2 ends with String: "+ var3);
+
+ System.out.println("str2 ends with ABC: "+ var4);
+
+   }
+
+}
+
+Output:
+
+str1 ends with  String: true
+
+str1 ends with ABC: false
+
+str2 ends with  String: false
+
+str2 ends with ABC: true
+
+9) int hashCode(): It returns the hash code of the string
+
+Java – String trim() and hashCode() Methods
+
+In this we will discuss about trim() and hashCode() methods. Lets discuss about trim() first: It returns a String after removing leading and trailing white spaces from the input String. For e.g. "Hello".trim() would return the String "Hello".
+
+public  String trim()
+
+Example: trim() method
+
+public  class  TrimExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("    How are you??   ");
+
+ System.out.println("String before trim: "+str);
+
+ System.out.println("String after trim: "+str.trim());
+
+   }
+
+}
+
+Output:
+
+String before trim: How are you??
+
+String after trim: How are you??
+
+hashCode() method
+
+This method returns the hash code for the String. The computation is done like this:
+
+s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
+
+Syntax:
+
+public  int hashCode()
+
+Example: hashCode() method
+
+public  class  HashCodeExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("Welcome!!");
+
+ System.out.println("Hash Code for String str: "+str.hashCode());     
+
+   }
+
+}
+
+Output:
+
+Hash  Code  for  String str: 1601728226
+
+10) int indexOf(int ch): Returns the index of first occurrence of the specified character ch in the string.
+
+Java – String indexOf() Method example
+
+The method indexOf() is used for finding out the index of the specified character or substring in a particular String. There are 4 variations of this method:
+
+int indexOf(int ch): It returns the index of the first occurrence of character ch in a String.
+
+int indexOf(int ch, int fromIndex): It returns the index of first occurrence if character ch, starting from the specified index “fromIndex”.
+
+int indexOf(String str): Returns the index of string str in a particular String.
+
+int indexOf(String str, int fromIndex): Returns the index of string str, starting from the specified index “fromIndex”.
+
+All the above variations returns -1 if the specified char/substring is not found in the particular String.
+
+Example
+
+public  class  IndexOfExample{
+
+ public  static  void main(String args[]) {
+
+ String str1 = new  String("This is a BeginnersBook tutorial");
+
+ String str2 = new  String("Beginners");
+
+ String str3 = new  String("Book");
+
+ String str4 = new  String("Books");
+
+ System.out.println("Index of B in str1: "+str1.indexOf('B'));
+
+ System.out.println("Index of B in str1 after 15th char:"+str1.indexOf('B', 15));
+
+ System.out.println("Index of B in str1 after 30th char:"+str1.indexOf('B', 30));
+
+ System.out.println("Index of string str2 in str1:"+str1.indexOf(str2));
+
+ System.out.println("Index of str2 after 15th char"+str1.indexOf(str2, 15));
+
+ System.out.println("Index of string str3:"+str1.indexOf(str3));
+
+ System.out.println("Index of string str4"+str1.indexOf(str4));
+
+ System.out.println("Index of harcoded string:"+str1.indexOf("is"));
+
+ System.out.println("Index of hardcoded string after 4th char:"+str1.indexOf("is", 4));
+
+   }
+
+}
+
+Output:
+
+Index of B in str1: 10
+
+Index of B in str1 after 15th  char:19
+
+Index of B in str1 after 30th  char:-1
+
+Index of string str2 in str1:10
+
+Index of str2 after 15th  char-1
+
+Index of string str3:19
+
+Index of string str4-1
+
+Index of harcoded string:2
+
+Index of hardcoded string after 4th  char:5
+
+11) int indexOf(int ch, int fromIndex): Same as indexOf method however it starts searching in the string from the specified fromIndex.
+
+Example:follow the 10th
+
+12) int lastIndexOf(int ch): It returns the last occurrence of the character ch in the string.
+
+Java – String lastIndexOf() Method example
+
+In this we will discuss lastIndexOf() method which is used for finding out the index of last occurrence of a char/sub-string in a particular String.
+
+Variations:
+
+int lastIndexOf(int ch): It returns the last occurrence of character ch in the particular String.
+
+int lastIndexOf(int ch, int fromIndex): It returns the last occurrence of ch, starting searching backward from the specified index “fromIndex”.
+
+int lastIndexOf(String str): Returns the last occurrence of str in a String.
+
+int lastIndexOf(String str, int fromIndex): Returns the last occurrence of str, starting searching backward from the specified index “fromIndex”.
+
+Example of lastIndexOf() method
+
+public  class  LastIndexOfExample{
+
+ public  static  void main(String args[]) {
+
+ String str1 = new  String("This is a BeginnersBook tutorial");
+
+ String str2 = new  String("Beginners");
+
+ String str3 = new  String("Book");
+
+ String str4 = new  String("Books");
+
+ System.out.println("Last 'B' in str1: "+str1.lastIndexOf('B'));
+
+ System.out.println("Last 'B' in str1 whose index<=15:"+str1.lastIndexOf('B', 15));
+
+ System.out.println("Last 'B' in str1 whose index<=30:"+str1.lastIndexOf('B', 30));
+
+ System.out.println("Last occurrence of str2 in str1:"+str1.lastIndexOf(str2));
+
+ System.out.println("Last occurrence of str2 in str1 before 15:"+str1.lastIndexOf(str2, 15));
+
+ System.out.println("Last occurrence of str3 in str1:"+str1.lastIndexOf(str3));
+
+ System.out.println("Last occurrence of str4 in str1"+str1.lastIndexOf(str4));
+
+ System.out.println("Last occurrence of 'is' in str1:"+str1.lastIndexOf("is"));
+
+ System.out.println("Last occurrence of 'is' in str1 before 4:"+str1.lastIndexOf("is", 4));
+
+   }
+
+}
+
+Output:
+
+Last  'B'  in str1: 19
+
+Last  'B'  in str1 whose index<=15:10
+
+Last  'B'  in str1 whose index<=30:19
+
+Last occurrence of str2 in str1:10
+
+Last occurrence of str2 in str1 before 15:10
+
+Last occurrence of str3 in str1:19
+
+Last occurrence of str4 in str1-1
+
+Last occurrence of 'is'  in str1:5
+
+Last occurrence of 'is'  in str1 before 4:2
+
+13) int lastIndexOf(int ch, int fromIndex): Same as lastIndexOf(int ch) method, it starts search from fromIndex.
+
+Example:read it from 12th
+
+14) int indexOf(String str): This method returns the index of first occurrence of specified substring str.
+
+Java – String indexOf() Method example
+
+The method indexOf() is used for finding out the index of the specified character or substring in a particular String. There are 4 variations of this method:
+
+int indexOf(int ch): It returns the index of the first occurrence of character ch in a String.
+
+int indexOf(int ch, int fromIndex): It return the index of first occurrence if character ch, starting from the specified index “fromIndex”.
+
+int indexOf(String str): Returns the index of string str in a particular String.
+
+int indexOf(String str, int fromIndex): Returns the index of string str, starting from the specified index “fromIndex”.
+
+All the above variations returns -1 if the specified char/substring is not found in the particular String.
+
+Example
+
+public  class  IndexOfExample{
+
+ public  static  void main(String args[]) {
+
+ String str1 = new  String("This is a javaBook tutorial");
+
+ String str2 = new  String("java");
+
+ String str3 = new  String("Book");
+
+ String str4 = new  String("Books");
+
+ System.out.println("Index of B in str1: "+str1.indexOf('B'));
+
+ System.out.println("Index of B in str1 after 15th char:"+str1.indexOf('B', 15));
+
+ System.out.println("Index of B in str1 after 30th char:"+str1.indexOf('B', 30));
+
+ System.out.println("Index of string str2 in str1:"+str1.indexOf(str2));
+
+ System.out.println("Index of str2 after 15th char"+str1.indexOf(str2, 15));
+
+ System.out.println("Index of string str3:"+str1.indexOf(str3));
+
+ System.out.println("Index of string str4"+str1.indexOf(str4));
+
+ System.out.println("Index of harcoded string:"+str1.indexOf("is"));
+
+ System.out.println("Index of hardcoded string after 4th char:"+str1.indexOf("is", 4));
+
+   }
+
+}
+
+Output:
+
+Index of B in str1: 10
+
+Index of B in str1 after 15th  char:19
+
+Index of B in str1 after 30th  char:-1
+
+Index of string str2 in str1:10
+
+Index of str2 after 15th  char-1
+
+Index of string str3:19
+
+Index of string str4-1
+
+Index of harcoded string:2
+
+Index of hardcoded string after 4th  char:5
+
+15) int lastindexOf(String str): Returns the index of last occurrence of string str.
+
+Java – String lastIndexOf() Method example
+
+Example:read it from 12th
+
+16) String substring(int beginIndex): It returns the substring of the string. The substring starts with the character at the specified index.
+
+Java – String substring() Method example
+
+Method substring() is used for getting a substring of a particular String. There are two variants of this method:
+
+String substring(int beginIndex): Returns the substring starting from the specified index(beginIndex) till the end of the string. For e.g. "Chandru".substring(2) would return "aitanya". This method throws IndexOutOfBoundsException If the beginIndex is less than zero or greater than the length of String (beginIndex<0||> length of String).
+
+String substring(int beginIndex, int endIndex): Returns the substring starting from the given index(beginIndex) till the specified index(endIndex). For e.g. "Chandru".substring(2,5) would return "ait". It throws IndexOutOfBoundsException If the beginIndex is less than zero OR beginIndex > endIndex OR endIndex is greater than the length of String.
+
+Example: substring()
+
+public  class  SubStringExample{
+
+ public  static  void main(String args[]) {
+
+ String str= new  String("quick brown fox jumps over the lazy dog");
+
+ System.out.println("Substring starting from index 15:");
+
+ System.out.println(str.substring(15));
+
+ System.out.println("Substring starting from index 15 and ending at 20:");
+
+ System.out.println(str.substring(15, 20));
+
+   }
+
+}
+
+Output:
+
+Substring starting from index 15:
+
+jumps over the lazy dog
+
+Substring starting from index 15  and ending at 20:
+
+jump
+
+17) String substring(int beginIndex, int endIndex): Returns the substring. The substring starts with character at beginIndex and ends with the character at endIndex.
+
+Example:read it from the 16th
+
+18) String concat(String str): Concatenates the specified string “str” at the end of the string.
+
+Java – String concat() Method example
+
+In this tutorial we will learn how to concatenate multiple strings using concat() method in Java.
+
+public String concat(String str)
+
+This method concatenates the string str at the end of the current string. For e.g. s1.concat("Hello"); would concatenate the String “Hello” at the end of the String s1\. This method can be called multiple times in a single statement like this
+
+String s1="java";
+
+s1= s1.concat("Book").concat(".").concat("com");
+
+The value of s1 would be javaBook.com after the execution of above statement.
+
+Complete Example
+
+In this example we have shared two ways for String concatenation.
+
+public  class  ConcatenationExample {
+
+ public  static  void main(String args[]) {
+
+ //One way of doing concatenation
+
+ String str1 = "Welcome";
+
+       str1 = str1.concat(" to ");
+
+       str1 = str1.concat(" String handling ");
+
+ System.out.println(str1);
+
+ //Other way of doing concatenation in one line
+
+ String str2 = "This";
+
+       str2 = str2.concat(" is").concat(" just a").concat(" String");
+
+ System.out.println(str2);
+
+   }
+
+}
+
+Output:
+
+Welcome to String handling
+
+This  is just a String
+
+19) String replace(char oldChar, char newChar): It returns the new updated string after changing all the occurrences of oldChar with the newChar.
+
+Java – String replace(), replaceFirst() and replaceAll() method
+
+In this tutorial we will discuss replace(), replaceFirst()and replaceAll() methods. All of these methods are mainly used for replacing a part of String with another String.
+
+String replace(char oldChar, char newChar): It replaces all the oldChar characters with newChar characters. For e.g. "pog pance".replace('p', 'd') would return dog dance.
+
+String replaceFirst(String regex, String replacement): It replaces the first substring that fits the specified regular expression with the replacement String. PatternSyntaxException if the specified regular expression(regex) is not valid.
+
+String replaceAll(String regex, String replacement): It replaces all the substrings that fits the given regular expression with the replacement String.
+
+Example 1:replace() Method
+
+public  class  Example1{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("Site is javaBook.com");
+
+ System.out.print("String after replacing all 'o' with 'p' :" );
+
+ System.out.println(str.replace('o', 'p'));
+
+ System.out.print("String after replacing all 'i' with 'K' :" );
+
+ System.out.println(str.replace('i', 'K'));
+
+   }
+
+}
+
+Output:
+
+String after replacing all 'o'  with  'p' :Site  is  javaBppk.cpm
+
+String after replacing all 'i'  with  'K' :SKte  Ks  jaKvaBook.com
+
+Example 2:replaceFirst() Method
+
+public  class  Example2{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("Site is javaBook.com");
+
+ System.out.print("String after replacing com with net :" );
+
+ System.out.println(str.replaceFirst("com", "net"));
+
+ System.out.print("String after replacing Site name:" );
+
+ System.out.println(str.replaceFirst("java(.*)", "XYZ.com"));
+
+   }
+
+}
+
+Output:
+
+String after replacing com with net :Site  is  javaBook.net
+
+String after replacing Site name:Site  is XYZ.com
+
+Example 3:replaceAll() Method
+
+public  class  Example3{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("My .com site is javaBook.com");
+
+ System.out.print("String after replacing all com with net :" );
+
+ System.out.println(str.replaceAll("com", "net"));
+
+   }
+
+}
+
+Output:
+
+String after replacing all com with net :My .net site is  javaBook.net
+
+20) boolean contains(CharSequence s): It checks whether the string contains the specified sequence of char values. If yes then it returns true else false. It throws NullPointerException of ‘s’ is null.
+
+Java String contains() method explained with  examples
+
+Java String contains() method checks whether a particular string is a part of another string or not. This method returns true if a specified sequence of characters is present in a given string, else it returns false.             
+
+Example:
+
+String str = "Game of Thrones"; 
+
+//This will print "true" because "Game" is present in the given String
+
+System.out.println(str.contains("Game"));
+
+/* This will print "false" because "aGme" is not present, the characters
+
+* must be present in the same sequence as specified in the contains method
+
+*/
+
+System.out.println(str.contains("aGme"));
+
+Syntax of contains() method
+
+public  boolean contains(CharSequence str)
+
+The return type is boolean which means this method returns true or false. When the character sequence found in the given string then this method returns true else it returns false.
+
+If the CharSequence is null then this method throws NullPointerException.
+
+For example: calling this method like this would throw NullPointerException.
+
+str.contains(null);
+
+Java String contains() method Example
+
+The second print statement displayed false because the contains() method is case sensitive. You can also use the contains() method for case insensitive check, I have covered this at the end of this tutorial.
+
+class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str = "Do you like watching Game of Thrones"; 
+
+System.out.println(str.contains("like"));
+
+/* this will print false as the contains() method is
+
+* case sensitive. Here we have mentioned letter "l"
+
+* in upper case and in the actual string we have this
+
+* letter in the lower case.
+
+*/
+
+System.out.println(str.contains("Like"));
+
+System.out.println(str.contains("Game"));
+
+System.out.println(str.contains("Game of"));
+
+   }
+
+}
+
+Output:
+
+true
+
+false
+
+true
+
+true
+
+Example 2: Using Java String contains() method in the if-else statement
+
+class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str = "This is an example of contains()"; 
+
+/* Using the contains() method in the if-else statements, since
+
+* this method returns the boolean value, it can be used
+
+* in the if else conditions whenever needed.
+
+*/
+
+if(str.contains("example")){
+
+ System.out.println("The word example is found in given string");
+
+}
+
+else{
+
+ System.out.println("The word example is not found in the string");
+
+}
+
+   }
+
+}
+
+Output:
+
+The word example is found in given string
+
+Java String contains() method for case insensitive check
+
+We have seen above that the contains() method is case sensitive, however with a little trick, you can use this method for case insensitive checks. Lets take an example to understand this:             
+
+Here we are using the toLowerCase() method to convert both the strings to lowercase so that we can perform case insensitive check using contains() method. We can also use toUpperCase() method for this same purpose as shown in the example below.
+
+class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str = "Just a Simple STRING";
+
+String str2 = "string";
+
+//Converting both the strings to lower case for case insensitive checking
+
+System.out.println(str.toLowerCase().contains(str2.toLowerCase()));
+
+//You can also use the upper case method for the same purpose.
+
+System.out.println(str.toUpperCase().contains(str2.toUpperCase()));
+
+  }
+
+}
+
+Output:
+
+true
+
+true
+
+21) String toUpperCase(Locale locale): Converts the string to upper case string using the rules defined by specified locale.
+
+Java – String toLowerCase() and toUpperCase() Methods
+
+The method toLowerCase() converts the characters of a String into lower case characters. It has two variants:
+
+String toLowerCase(Locale locale): It converts the string into Lowercase using the rules defined by specified Locale.
+
+String toLowerCase():
+
+It is equivalent to toLowerCase(Locale.getDefault()). Locale.getDefault() gets the current value of the default locale for this instance of the Java Virtual Machine. The Java Virtual Machine sets the default locale during startup based on the host environment. It is used by many locale-sensitive methods if no locale is explicitly specified. It can be changed using the setDefault() method.
+
+Example: toLowerCase() method
+
+import java.util.Locale;
+
+public  class  LowerCaseExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("ABC IS NOT EQUAL TO XYZ");
+
+ //Standard method of conversion
+
+ System.out.println(str.toLowerCase());
+
+ //By specifying Locale
+
+ System.out.println(str.toLowerCase(Locale.FRANCE));
+
+   }
+
+}
+
+Output:
+
+abc is  not equal to xyz
+
+abc is  not equal to xyz
+
+Method: toUpperCase():
+
+Like toLowerCase() method, toUpperCase() also has two variants:
+
+String toUpperCase(Locale locale): It converts the string into a UpperCase string using the rules defined by the specified Locale.
+
+String toUpperCase(): It is equavalent to toUpperCase(Locale.getDefault()).
+
+Example: toUpperCase() method
+
+import java.util.Locale;
+
+public  class  UpperCaseExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("this is a test string");
+
+ //Standard method of conversion
+
+ System.out.println(str.toUpperCase());
+
+ //By specifying Locale
+
+ System.out.println(str.toUpperCase(Locale.CHINA));
+
+   }
+
+}
+
+Output:
+
+THIS IS A TEST STRING
+
+THIS IS A TEST STRING
+
+22) String toUpperCase(): Equivalent to toUpperCase(Locale.getDefault()).
+
+Example: Read it from the 21th
+
+23) public String intern(): This method searches the specified string in the memory pool and if it is found then it returns the reference of it, else it allocates the memory space to the specified string and assign the reference to it.
+
+Java String intern() method explained with  examples
+
+Java String intern() method is used for getting the string from the memory if it is already present. This method ensures that all the same strings share the same memory. For example, creating a string “hello” 10 times using intern() method would ensure that there will be only one instance of “Hello” in the memory and all the 10 references point to the same instance.
+
+A Simple Java String intern() method example
+
+This example demonstrates the use of intern() method. This method searches the memory pool for the mentioned String, if the string is found then it returns the reference of it, else it allocates a new memory space for the string and assign a reference to it.
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str1 = "javabook";   
+
+/* The Java String intern() method searches the string "javabook" 
+
+* in the memory pool and returns the reference of it.
+
+*/
+
+String str2 = new  String("javabook").intern();
+
+//prints true
+
+System.out.println("str1==str2: "+(str1==str2));
+
+   }
+
+}
+
+Output:
+
+str1==str2: true
+
+Java automatically interns String literals
+
+When we create Strings using string literals instead of creating them using new keyword then the java automatically interns String them. Lets take an example to understand this:
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str1 = "Hello";
+
+//Java automatically interns this
+
+String str2 = "Hello";
+
+//This is same as creating string using string literal
+
+String str3 = "Hello".intern();
+
+//This will create a new instance of "Hello" in memory
+
+String str4 = new  String("Hello");
+
+if ( str1 == str2 ){
+
+ System.out.println("String str1 and str2 are same");
+
+}
+
+if ( str2 == str3 ){
+
+ System.out.println("String str2 and str3 are same" );
+
+}
+
+if ( str1 == str4 ){
+
+ //This will not be printed as the condition is not true
+
+ System.out.println("String str1 and str4 are same" );
+
+}
+
+if ( str3 == str5 ){
+
+ System.out.println("String str3 and str5 are same" );
+
+}
+
+   }
+
+}
+
+Output:
+
+String str1 and str2 are same
+
+String str2 and str3 are same
+
+String str3 and str5 are same
+
+24) public boolean isEmpty(): This method returns the true if the given string has 0 length. If the length of the specified Java String is non-zero then it returns false.
+
+Java String isEmpty() method with example
+
+Java String isEmpty() method checks whether a String is empty or not. This method returns true if the given string is empty, else it returns false. In other words you can say that this method returns true if the length of the string is 0.
+
+Signature of isEmpty() method:
+
+public  boolean isEmpty()
+
+## Java String isEmpty() method Example
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+//empty string
+
+String str1=""; 
+
+//non-empty string
+
+String str2="hello"; 
+
+//prints true
+
+System.out.println(str1.isEmpty()); 
+
+//prints false
+
+System.out.println(str2.isEmpty()); 
+
+   }
+
+}
+
+Output:
+
+true
+
+false
+
+Java String isEmpty() method Example to check if string is null or empty
+
+As we have seen in the above example that isEmpty() method only checks whether the String is empty or not. If you want to check whether the String is null or empty both then you can do it as shown in the following example.
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str1 = null;
+
+String str2 = "javabook"; 
+
+if(str1 == null || str1.isEmpty()){
+
+ System.out.println("String str1 is empty or null");
+
+}
+
+else{
+
+ System.out.println(str1);
+
+}
+
+if(str2 == null || str2.isEmpty()){
+
+ System.out.println("String str2 is empty or null"); 
+
+}
+
+else{
+
+ System.out.println(str2);
+
+}
+
+   }
+
+}
+
+Output:
+
+String str1 is empty or  null
+
+javabook
+
+25) public static String join(): This method joins the given strings using the specified delimiter and returns the concatenated Java String.
+
+Java String join() method explained with examples
+
+In Java 8 we have a new Method join() in the Java String class. Java String join() method concatenates the given Strings and returns the concatenated String. Java 8 also introduced a new StringJoiner class for the same purpose.
+
+Java String Join() method Signature
+
+public  static  String join(CharSequence delimiter,
+
+ CharSequence... elements)
+
+Returns a new String composed of copies of the CharSequence elements joined together with a copy of the specified delimiter.
+
+For example:
+
+String message = String.join("-", "This", "is", "a", "String");
+
+// message returned is: "This-is-a-String"
+
+The first argument of this method specifies the delimiter that is used to join multiple strings.
+
+Note that if an element is null, then “null” is added.
+
+Java String join() example:
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+//The first argument to this method is the delimiter
+
+String str=String.join("^","You","are","Awesome"); 
+
+System.out.println(str); 
+
+   }
+
+}
+
+Output:
+
+You^are^Awesome
+
+Java String join() Example to join list elements by a delimiter
+
+In this example we are joining the elements of a List by a delimiter using join() method.
+
+import java.util.List;
+
+import java.util.Arrays;
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+//Converting an array of String to the list
+
+List list<String> = Arrays.asList("Steve", "Rick", "Peter", "Abbey");
+
+String names = String.join(" | ", list);
+
+System.out.println(names);
+
+   }
+
+}
+
+Output:
+
+Steve | Rick | Peter | Abbey
+
+26) String replaceFirst(String regex, String replacement): It replaces the first occurrence of substring that fits the given regular expression “regex” with the specified replacement string.
+
+Example:read the 19th
+
+27) String replaceAll(String regex, String replacement): It replaces all the occurrences of substrings that fits the regular expression regex with the replacement string.
+
+Example:read the 19th
+
+28) String[] split(String regex, int limit): It splits the string and returns the array of substrings that matches the given regular expression. limit is a result threshold here.
+
+Java – String split() Method example
+
+The method split() is used for splitting a String into its substrings based on the given delimiter/regular expression. This method has two variants:
+
+String[] split(String regex): It returns a array of strings after splitting an input String based on the delimiting regular expression.
+
+String[] split(String regex, int limit): The only difference between above variation and this one is that it limits the number of strings returned after split up. For e.g. split("anydelimiter", 3) would return the array of only 3 strings even through the delimiter is present in the string more than 3 times. If the limit is negative then the returned array would be having as many substrings as possible however when the limit is zero then the returned array would be having all the substrings excluding the trailing empty Strings.
+
+It throws PatternSyntaxException if the syntax of specified regular expression is not valid.
+
+Example: split() method
+
+public  class  SplitExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("28/12/2013");
+
+ System.out.println("split(String regex):");
+
+ String array1[]= str.split("/");
+
+ for (String temp: array1){
+
+ System.out.println(temp);
+
+       }
+
+ System.out.println("split(String regex, int limit) with limit=2:");
+
+ String array2[]= str.split("/", 2);
+
+ for (String temp: array2){
+
+ System.out.println(temp);
+
+       }
+
+ System.out.println("split(String regex, int limit) with limit=0:");
+
+ String array3[]= str.split("/", 0);
+
+ for (String temp: array3){
+
+ System.out.println(temp);
+
+       }
+
+ System.out.println("split(String regex, int limit) with limit=-5:");
+
+ String array4[]= str.split("/", -5);
+
+ for (String temp: array4){
+
+ System.out.println(temp);
+
+       }
+
+   }
+
+}
+
+Output:
+
+split(String regex):
+
+28
+
+12
+
+2013
+
+split(String regex, int limit) with limit=2:
+
+28
+
+12/2013
+
+split(String regex, int limit) with limit=0:
+
+28
+
+12
+
+2013
+
+split(String regex, int limit) with limit=-5:
+
+28
+
+12
+
+2013
+
+In the above example split(“/”,0) and split(“/”,-5) returned same value however in some cases the result would be different. Lets see with the help of an example:
+
+String s="bbaaccaa";
+
+String arr1[]= s.split("a", -1);
+
+String arr2[]= s.split("a", 0);
+
+In this case arr1 would be having {“bb”, ” “, “cc”, ” “, ” “} However arr2 would be having {“bb”, ” “, “cc”} because limit zero excludes trialing empty Strings.
+
+29)String[] split(String regex): Same as split(String regex, int limit) method however it does not have any threshold limit.
+
+Example:read it from the 28th
+
+30) String toLowerCase(Locale locale): It converts the string to lower case string using the rules defined by given locale.
+
+Example:read it from the 21th
+
+31) public static String format(): This method returns a formatted java String.
+
+Java String format() method explained with examples
+
+Java String format() method is used for formatting the String. There are so many things you can do with this method, for example we can even concatenate the strings using this method and at the same time, we can format the output concatenated string. In this tutorial, we will see several examples of Java String format() method.
+
+Syntax:
+
+public  static  String format(Locale l,
+
+ String format,
+
+ Object... args)
+
+Returns the formatted string using the specified locale, format string, and arguments.
+
+and
+
+public  static  String format(String format,
+
+ Object... args)
+
+Returns the formatted string using the specified format string and arguments.
+
+A Simple Example of Java String format() method
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str = "just a string"; 
+
+//concatenating string using format
+
+String formattedString = String.format("My String is %s", str); 
+
+/*formatting the  value passed and concatenating at the same time
+
+* %.6f is for having 6 digits in the fractional part
+
+*/
+
+String formattedString2 = String.format("My String is %.6f",12.121);
+
+System.out.println(formattedString);
+
+System.out.println(formattedString2); 
+
+   }
+
+}
+
+Output:
+
+My  String  is just a string
+
+My  String  is  12.121000
+
+Java String format() example of concatenating arguments to the string
+
+We can specify the argument positions using %1$, %2$,.format specifiers. Here %1$ represents first argument, %2$ second argument and so on.
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+String str1 = "cool string";
+
+String str2 = "88";
+
+/* Specifying argument positions. %1$ is for the first argument and
+
+* %2$ is for the second argument
+
+*/
+
+String fstr = String.format("My String is: %1$s, %1$s and %2$s", str1, str2);
+
+System.out.println(fstr);
+
+   }
+
+}
+
+Output:
+
+My  String  is: cool string, cool string  and  88
+
+As you can see that how we have passed the string “cool string” twice in the format() method using the argument positions format specifiers.
+
+Left padding the string using string format()
+
+In this example, we are left padding a number wth 0’s and converting the number to a formatted String. In the above example we have formatted the float numbers and Strings and in this example we are formatting an integer. The important point to remember is that the format specifiers for these are different.
+
+%s – for strings
+
+%f – for floats
+
+%d – for integers
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+int str = 88;
+
+/* Left padding an integer number with 0's and converting it
+
+* into a String using Java String format() method.
+
+*/
+
+String formattedString = String.format("%05d", str);
+
+System.out.println(formattedString);
+
+   }
+
+}
+
+Output:
+
+00088
+
+32) String toLowerCase(): Equivalent to toLowerCase(Locale. getDefault()).
+
+Example:read it from the 21th
+
+33) String trim(): Returns the substring after omitting leading and trailing white spaces from the original string.
+
+Java – String trim() and hashCode() Methods
+
+In this we will discuss about trim() and hashCode() methods. Lets discuss about trim() first: It returns a String after removing leading and trailing white spaces from the input String. For e.g. "Hello".trim() would return the String "Hello".
+
+public  String trim()
+
+Example: trim() method
+
+public  class  TrimExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("    How are you??   ");
+
+ System.out.println("String before trim: "+str);
+
+ System.out.println("String after trim: "+str.trim());
+
+   }
+
+}
+
+Output:
+
+String before trim: How are you??
+
+String after trim: How are you??
+
+hashCode() method
+
+This method returns the hash code for the String. The computation is done like this:
+
+s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
+
+Syntax:
+
+public  int hashCode()
+
+Example:
+
+public  class  HashCodeExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("Welcome!!");
+
+ System.out.println("Hash Code for String str: "+str.hashCode());     
+
+   }
+
+}
+
+Output:
+
+Hash  Code  for  String str: 1601728226
+
+34) char[] toCharArray(): Converts the string to a character array.
+
+Java – String toCharArray() Method example
+
+The method toCharArray() returns an Array of chars after converting a String into sequence of characters. The returned array length is equal to the length of the String and the sequence of chars in Array matches the sequence of characters in the String.
+
+public  char[] toCharArray()
+
+Example:
+
+In this example we are converting a String into array of chars using toCharArray() method.
+
+public  class  CharArrayExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("Welcome to javaBook.com");
+
+ char[] array= str.toCharArray();
+
+ System.out.print("Content of Array:");
+
+ for(char c: array){
+
+ System.out.print(c);
+
+       }
+
+   }
+
+}
+
+Output:
+
+Content of Array:Welcome to javaBook.com
+
+35) static String copyValueOf(char[] data): It returns the string that contains the characters of the specified character array.
+
+Java – String copyValueOf() Method example
+
+The method copyValueOf() is used for copying an array of characters to the String. The point to note here is that this method does not append the content in String, instead it replaces the existing string value with the sequence of characters of array.
+
+It has two variations:
+
+1) static copyValueOf(char[] data): It copies the whole array (data) to the string.
+
+2) static String copyValueOf(char[] data, int offset, int count): It copies only specified characters to the string using the specified offset and count values. offset is the initial index from where characters needs to be copied and count is a number of characters to copy. For e.g. offset 2 and count 3 would be interpreted as: Only 3 characters of array starting from 2nd index(3rd position as index starts with 0) should be copied to the concerned String.
+
+Example:
+
+In this example we have two strings str1 & str2 and an array of chars named data. We are copying the array to the strings using both the variations of method copyValueOf().
+
+public  class  CopyValueOfExample {
+
+ public  static  void main(String args[]) {
+
+ char[] data = {'a','b','c','d','e','f','g','h','i','j','k'};
+
+ String str1 = "Text";
+
+ String str2 = "String";
+
+ //Variation 1:String copyValueOf(char[] data)
+
+       str1 = str1.copyValueOf(data);
+
+ System.out.println("str1 after copy: " + str1);
+
+ //Variation 2:String copyValueOf(char[] data,int offset,int count)
+
+str2 = str2.copyValueOf(data, 5, 3 );
+
+ System.out.println("str2 after copy: " + str2);
+
+   }
+
+}
+
+Output:
+
+str1 after copy: abcdefghijk
+
+str2 after copy: fgh
+
+36) static String copyValueOf(char[] data, int offset, int count): Same as above method with two extra arguments – initial offset of subarray and length of subarray.
+
+Example:read it from the 35th
+
+37) void getChars(int srcBegin, int srcEnd, char[] dest, int destBegin): It copies the characters of src array to the dest array. Only the specified range is being copied(srcBegin to srcEnd) to the dest subarray(starting fromdestBegin).
+
+Java – String getChars() Method example
+
+The method getChars() is used for copying String characters to an Array of chars.
+
+public  void getChars(int srcBegin, int srcEnd, char[] dest, int destBegin)
+
+Meters description:
+
+srcBegin – index of the first character in the string to copy.
+
+srcEnd – index after the last character in the string to copy.
+
+dest – Destination array of characters in which the characters from String gets copied.
+
+destBegin – The index in Array starting from where the chars will be pushed into the Array.
+
+It throws IndexOutOfBoundsException – If any of the following conditions occurs:
+
+(srcBegin<0) srcBegin is less than zero. (srcBegin>srcEnd) srcBegin is greater than srcEnd.
+
+(srcEnd > length of string) srcEnd is greater than the length of this string.
+
+(destBegin<0) destBegin is negative.
+
+dstBegin+(srcEnd-srcBegin) is larger than dest.length.
+
+Example: getChars() method
+
+public  class  GetCharsExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("This is a String Handling Tutorial");
+
+ char[] array = new  char[6];
+
+       str.getChars(10, 16, array, 0);
+
+ System.out.println("Array Content:" );
+
+ for(char temp: array){
+
+ System.out.print(temp);
+
+       }
+
+ char[] array2 = new  char[]{'a','a','a','a','a','a','a','a'};
+
+       str.getChars(10, 16, array2, 2);
+
+ System.out.println("Second Array Content:" );
+
+ for(char temp: array2){
+
+  System.out.print(temp);
+
+       }
+
+   }
+
+}
+
+Output:
+
+Array  Content:
+
+StringSecond  Array  Content:
+
+aaString
+
+38) static String valueOf(): This method returns a string representation of passed arguments such as int, long, float, double, char and char array.
+
+Java String valueOf() method explained with examples
+
+Java String valueOf() method returns the String representation of the boolean, char, char array, int, long, float and double arguments. We have different versions of this method for each type of arguments. The signature of this method is as follows:
+
+Method valueOf() signature:
+
+public  static  String valueOf(boolean b): Used  for converting boolean value to a String
+
+public  static  String valueOf(char c): char to String
+
+public  static  String valueOf(int i): int to String
+
+public  static  String valueOf(long l): long to String
+
+public  static  String valueOf(float f): float to String
+
+public  static  String valueOf(double d): double to String
+
+Java String valueOf() Example
+
+In example we are using Java String valueOf() method to convert the integer, float, long, double, char and char array to the String.
+
+public  class  Example{ 
+
+ public  static  void main(String args[]){
+
+int i = 10; //int value
+
+float f = 10.10f; //float value
+
+long l = 111L; //long value
+
+double d = 2222.22; //double value
+
+char ch = 'A'; //char value
+
+char array[] = {'a', 'b', 'c'}; //char array
+
+//converting int to String
+
+String str1 = String.valueOf(i);
+
+//converting float to String
+
+String str2 = String.valueOf(f);
+
+//converting long to String
+
+String str3 = String.valueOf(l);
+
+//converting double to String
+
+String str4 = String.valueOf(d);
+
+//converting char to String
+
+String str5 = String.valueOf(ch);
+
+//converting char array to String
+
+String str6 = String.valueOf(array);
+
+System.out.println(str1);
+
+System.out.println(str2);
+
+System.out.println(str3);
+
+System.out.println(str4);
+
+System.out.println(str5);
+
+System.out.println(str6);
+
+   }
+
+}
+
+Output:
+
+10
+
+10.1
+
+111
+
+2222.22
+
+A
+
+abc
+
+39) boolean contentEquals(StringBuffer sb): It compares the string to the specified string buffer.
+
+Java – String contentEquals() Method example
+
+The method contentEquals() compares the String with the String Buffer and returns a boolean value. It returns true if the String matches to the String buffer else it returns false.
+
+boolean contentEquals(StringBuffer sb)
+
+Example:
+
+In this example we have two Strings and two String Buffers. We are comparing the Strings with String Buffers using the contentEquals() method. Here we are displaying the result by directly calling the method in System.out.println statement. However you can also store the returned value in a boolean variable and use it further like this: boolean var = str1.contentEquals(sb1);
+
+public  class  ContentEqualsExample {
+
+ public  static  void main(String args[]) {
+
+ String str1 = "First String";
+
+ String str2 = "Second String";
+
+ StringBuffer str3 = new  StringBuffer( "Second String");
+
+ StringBuffer str4 = new  StringBuffer( "First String");
+
+ System.out.println("str1 equals to str3:"+str1.contentEquals(str3));
+
+ System.out.println("str2 equals to str3:"+str2.contentEquals(str3));
+
+ System.out.println("str1 equals to str4:"+str1.contentEquals(str4));
+
+ System.out.println("str2 equals to str4:"+str2.contentEquals(str4));
+
+   }
+
+}
+
+Output:
+
+str1 equals to str3:false
+
+str2 equals to str3:true
+
+str1 equals to str4:true
+
+str2 equals to str4:false
+
+40) boolean regionMatches(int srcoffset, String dest, int destoffset, int len): It compares the substring of input to the substring of specified string.
+
+Java – String regionMatches() Method example
+
+The method regionMatches() tests if the two Strings are equal. Using this method we can compare the substring of input String with the substring of specified String.
+
+Two variants:
+
+public boolean regionMatches(int toffset, String other, int ooffset, int len): Case sensitive test.
+
+public boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len): It has option to consider or ignore the case.
+
+Parameters description:
+
+ignoreCase– if true, ignore case when comparing characters.
+
+toffset – the starting offset of the subregion in this string.
+
+other – the string argument.
+
+ooffset – the starting offset of the subregion in the string argument.
+
+len – the number of characters to compare.
+
+Example: regionMatches() method
+
+public  class  RegionMatchesExample{
+
+ public  static  void main(String args[]){
+
+ String str1 = new  String("Hello, How are you");
+
+ String str2 = new  String("How");
+
+ String str3 = new  String("HOW");
+
+ System.out.print("Result of Test1: " );
+
+ System.out.println(str1.regionMatches(7, str2, 0, 3));
+
+ System.out.print("Result of Test2: " );
+
+ System.out.println(str1.regionMatches(7, str3, 0, 3));
+
+ System.out.print("Result of Test3: " );
+
+ System.out.println(str1.regionMatches(true, 7, str3, 0, 3));
+
+   }
+
+}
+
+Output:
+
+Result of Test1: true
+
+Result of Test2: false
+
+Result of Test3: true
+
+41) boolean regionMatches(boolean ignoreCase, int srcoffset, String dest, int destoffset, int len): Another variation of regionMatches method with the extra boolean argument to specify whether the comparison is case sensitive or case insensitive.
+
+Example:read it from the 40th
+
+42) byte[] getBytes(String charsetName): It converts String into sequence of bytes using the specified charset encoding and returns the array of resulted bytes.
+
+Java – String getBytes() Method example
+
+The getBytes() method encodes a given String into a sequence of bytes and returns an array of bytes. The method can be used in below two ways:
+
+public byte[] getBytes(String charsetName): It encodes String into sequence of bytes using the specified charset and return the array of those bytes. It throws UnsupportedEncodingException – If the specified charset is not supported.
+
+public byte[] getBytes(): It encodes the String using default charset method.
+
+Example: getBytes() method
+
+import java.io.*;
+
+public  class  GetBytesExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("Hello");
+
+ byte[] array1 = str.getBytes();
+
+ System.out.print("Default Charset encoding:");
+
+ for(byte b: array1){
+
+ System.out.print(b);
+
+       }
+
+ System.out.print("\nUTF-16 Charset encoding:");
+
+ try{
+
+ byte [] array2 = str.getBytes("UTF-16");
+
+ for(byte b1: array2){
+
+ System.out.print(b1);
+
+             }
+
+ byte [] array3 = str.getBytes("UTF-16BE");
+
+ System.out.print("\nUTF-16BE Charset encoding:");
+
+ for(byte b2: array3){
+
+ System.out.print(b2);
+
+             }
+
+        }catch(UnsupportedEncodingException ex){
+
+ System.out.println("Unsupported character set"+ex);
+
+        }
+
+   }
+
+}
+
+Output:
+
+Default  Charset encoding:72101108108111
+
+UTF-16  Charset encoding:-2-10720101010801080111
+
+UTF-16BE  Charset encoding:0720101010801080111
+
+In the above example we have done encoding using charset UTF -16 and UTF - 16BE, there are many other standard charset like:
+
+US-ASCII: Seven-bit ASCII, a.k.a. ISO646-US, a.k.a. the Basic Latin block of the Unicode character set
+
+ISO-8859-1: ISO Latin Alphabet No. 1, a.k.a. ISO-LATIN-1
+
+UTF-8: Eight-bit UCS Transformation Format
+
+UTF-16BE: Sixteen-bit UCS Transformation Format, big-endian byte order
+
+UTF-16LE: Sixteen-bit UCS Transformation Format, little-endian byte order
+
+UTF-16: Sixteen-bit UCS Transformation Format, byte order identified by an optional byte-order mark.
+
+43) byte[] getBytes(): This method is similar to the above method it just uses the default charset encoding for converting the string into sequence of bytes.
+
+Example:read it from 42
+
+44) int length(): It returns the length of a String.
+
+Java – String length() Method example
+
+Java String length() method is used for finding out the length of a String. This method counts the number of characters in a String including the white spaces and returns the count.
+
+Method signature
+
+int length()
+
+String length limit: The maximum size a string can have is: 231-1.
+
+Example1: length()
+
+In this example we have three different Strings and we are finding out the length of them using length() method.
+
+public  class  LengthExample{
+
+ public  static  void main(String args[]) {
+
+ String str1= new  String("Test String");
+
+ String str2= new  String("Chandru");
+
+ String str3= new  String("javaBook");
+
+ System.out.println("Length of str1:"+str1.length());
+
+ System.out.println("Length of str2:"+str2.length());
+
+ System.out.println("Length of str3:"+str3.length());
+
+   }
+
+}
+
+Output:
+
+Length of str1:11
+
+Length of str2:9
+
+Length of str3:13
+
+Example 2: Java String length() method to calculate the length of String without spaces
+
+As we have already seen in the above example that this method calculates the length including white spaces. In case if you only want to count the number of characters in a string excluding spaces then you can do so by using the string replace method as shown in the example below.
+
+Here we are omitting the spaces in the given String using replace method and then using the length() method on it.
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+String str = "hi guys    this is a string";
+
+//length of the String
+
+System.out.println("Length of the String: "+str.length());
+
+//length of the String without white spaces
+
+System.out.println("Length of String without spaces: "+
+
+str.replace(" ", "").length());
+
+   }
+
+}
+
+Output:
+
+Length of the String: 27
+
+Length of String without spaces: 19
+
+45) boolean matches(String regex): It checks whether the String is matching with the specified regular expression regex.
+
+Java – String matches() Method example
+
+Method matches() checks whether the String is matching with the specified regular expression. If the String fits in the specified regular expression then this method returns true else it returns false. Below is the syntax of the method:
+
+public  boolean matches(String regex)
+
+It throws PatternSyntaxException – if the specified regular expression is not valid.
+
+Example: matches() method
+
+In this example we have a String and three regular expressions. We are matching the regular expressions(regex) with the input String using the matches() method.
+
+public  class  MatchesExample{
+
+ public  static  void main(String args[]){
+
+ String str = new  String("Java String Methods");
+
+ System.out.print("Regex: (.*)String(.*) matches string? " );
+
+ System.out.println(str.matches("(.*)String(.*)"));
+
+ System.out.print("Regex: (.*)Strings(.*) matches string? " );
+
+ System.out.println(str.matches("(.*)Strings(.*)"));
+
+ System.out.print("Regex: (.*)Methods matches string? " );
+
+ System.out.println(str.matches("(.*)Methods"));
+
+   }
+
+}
+
+Output:
+
+Regex: (.*)String(.*) matches string? true
+
+Regex: (.*)Strings(.*) matches string? false
+
+Regex: (.*)Methods matches string? true
+
+46) int codePointAt(int index):It is similar to the charAt method however it returns the Unicode code point value of specified index rather than the character itself.
+
+# 3.3 Java Multithreading
+
+Multithreading in java
+
+Before we talk about multithreading, let us discuss threads. A thread is a light-weight smallest part of a process that can run concurrently with the other parts(other threads) of the same process. Threads are independent because they all have separate path of execution that is the reason if an exception occurs in one thread, it does not affect the execution of other threads. All threads of a process share the common memory. The process of executing multiple threads simultaneously is known as multithreading.
+
+Let us summarize the discussion in points:
+
+1\. The main purpose of multithreading is to provide simultaneous execution of two or more parts of a program to maximum utilize the CPU time. A multithreaded program contains two or more parts that can run concurrently. Each such part of a program called thread.
+
+2\. Threads are lightweight sub-processes, they share the common memory space. In Multithreaded environment, programs that are benefited from multithreading, utilize the maximum CPU time so that the idle time can be kept to minimum.
+
+3\. A thread can be in one of the following states:
+
+NEW – A thread that has not yet started is in this state.
+
+RUNNABLE – A thread executing in the Java virtual machine is in this state.
+
+BLOCKED – A thread that is blocked waiting for a monitor lock is in this state.
+
+WAITING – A thread that is waiting indefinitely for another thread to perform a particular action is in this state.
+
+TIMED_WAITING – A thread that is waiting for another thread to perform an action for up to a specified waiting time is in this state.
+
+TERMINATED – A thread that has exited is in this state.
+
+A thread can be in only one state at a given point in time.
+
+# 3.4 Thread life cycle in java and thread scheduling
+
+Thread Life cycle in Java
+
+*   The start method creates the system resources, necessary to run the thread, schedules the thread to run, and calls the thread’s run method.
+*   A thread becomes “Not Runnable” when one of these events occurs:
+
+1.  If sleep method is invoked.
+2.  The thread calls the wait method.
+3.  The thread is blocking on I/O.
+
+*   A thread dies naturally when the run method exits.
+
+Below diagram clearly depicts the various phases of thread life cycle in java.
+
+![thread life cycle in java](Images/image00919.jpeg)
+
+2\. Thread Scheduling
+
+*   Execution of multiple threads on a single CPU, in some order, is called scheduling.
+*   In general, the runnable thread with the highest priority is active (running)
+*   Java is priority-preemptive
+
+1.  If a high-priority thread wakes up, and a low-priority thread is running
+2.  Then the high-priority thread gets to run immediately
+
+*   Allows on-demand processing
+*   Efficient use of CPU
+
+Types of scheduling
+
+*   Waiting and Notifying
+
+1.  Waiting [wait()] and notifying [notify(), notifyAll()] provides means of communication between threads that synchronize on the same object.
+
+*   wait(): when wait() method is invoked on an object, the thread executing that code gives up its lock on the object immediately and moves the thread to the wait state.
+*   notify(): This wakes up threads that called wait() on the same object and moves the thread to ready state.
+*   notifyAll(): This wakes up all the threads that called wait() on the same object.
+
+Running and Yielding
+
+*   Yield() is used to give the other threads of the same priority a chance to execute i.e. causes current running thread to move to runnable state.
+
+Sleeping and Waking up
+
+*   nSleep() is used to pause a thread for a specified period of time i.e. moves the current running thread to Sleep state for a specified amount of time, before moving it to runnable state. Thread.sleep(no. of milliseconds);
+
+Thread Priority
+
+*   When a Java thread is created, it inherits its priority from the thread that created it.
+*   You can modify a thread’s priority at any time after its creation using the setPriority method.
+*   Thread priorities are integers ranging between MIN_PRIORITY (1) and MAX_PRIORITY (10) . The higher the integer, the higher the priority.Normally the thread priority will be 5.
+
+isAlive() and join() methods
+
+*   isAlive() method is used to determine if a thread is still alive. It is the best way to determine if a thread has been started but has not yet completed its run() method. final boolean isAlive();
+
+*   The nonstatic join() method of class Thread lets one thread “join onto the end” of another thread. This method waits until the thread on which it is called terminates. final void join();
+
+Blocking Threads
+
+*   When reading from a stream, if input is not available, the thread will block
+*   Thread is suspended (“blocked”) until I/O is available
+*   Allows other threads to automatically activate
+*   When I/O available, thread wakes back up again
+
+1.  Becomes “runnable” i.e. gets into ready state
+
+Grouping of threads
+
+*   Thread groups provide a mechanism for collecting multiple threads into a single object and manipulating those threads all at once, rather than individually.
+*   To put a new thread in a thread group the group must
+*   be explicitly specified when the thread is created
+
+– public Thread(ThreadGroup group, Runnable runnable)
+
+– public Thread(ThreadGroup group, String name)
+
+– public Thread(ThreadGroup group, Runnable runnable, String name)
+
+*   A thread can not be moved to a new group after the thread has been created.
+*   When a Java application first starts up, the Java runtime system creates a ThreadGroup named main.
+*   Java thread groups are implemented by the java.lang.ThreadGroup class.
+
+Multitasking vs Multithreading vs Multiprocessing vs parallel processing             
+
+If you are new to java you may get confused among these terms as they are used quite frequently when we discuss multithreading. Let’s talk about them in brief.
+
+Multitasking: Ability to execute more than one task at the same time is known as multitasking.
+
+Multithreading: We already discussed about it. It is a process of executing multiple threads simultaneously. Multithreading is also known as Thread-based Multitasking.
+
+Multiprocessing: It is same as multitasking, however in multiprocessing more than one CPUs are involved. On the other hand one CPU is involved in multitasking.
+
+Parallel Processing: It refers to the utilization of multiple CPUs in a single computer system.
+
+Creating a thread in Java
+
+There are two ways to create a thread in Java:
+
+1) By extending Thread class.
+
+2) By implementing Runnable interface.
+
+Before we begin with the programs(code) of creating threads, let us have a look at these methods of Thread class. We have used few of these methods in the example below.
+
+getName(): It is used for Obtaining a thread’s name
+
+getPriority(): Obtain a thread’s priority
+
+isAlive(): Determine if a thread is still running
+
+join(): Wait for a thread to terminate
+
+run(): Entry point for the thread
+
+sleep(): suspend a thread for a period of time
+
+start(): start a thread by calling its run() method
+
+Method 1: Thread creation by extending Thread class
+
+Example 1:
+
+class  MultithreadingDemo  extends  Thread{ 
+
+ public  void run(){
+
+ System.out.println("My thread is in running state."); 
+
+  }  
+
+ public  static  void main(String args[]){
+
+ MultithreadingDemo obj=new  MultithreadingDemo();  
+
+     obj.start(); 
+
+  } 
+
+}
+
+Output:
+
+My thread is  in running state.
+
+Example 2:
+
+class  Count  extends  Thread
+
+{
+
+ Count()
+
+   {
+
+ super("my extending thread");
+
+ System.out.println("my thread created" + this);
+
+     start();
+
+   }
+
+ public  void run()
+
+   {
+
+ try
+
+     {
+
+ for (int i=0 ;i<10;i++)
+
+        {
+
+ System.out.println("Printing the count " + i);
+
+ Thread.sleep(1000);
+
+        }
+
+     }
+
+ catch(InterruptedException e)
+
+     {
+
+ System.out.println("my thread interrupted");
+
+     }
+
+ System.out.println("My thread run is over" );
+
+   }
+
+}
+
+class  ExtendingExample
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ Count cnt = new  Count();
+
+ try
+
+      {
+
+ while(cnt.isAlive())
+
+         {
+
+ System.out.println("Main thread will be alive till the child thread is live");
+
+ Thread.sleep(1500);
+
+         }
+
+      }
+
+ catch(InterruptedException e)
+
+      {
+
+ System.out.println("Main thread interrupted");
+
+      }
+
+ System.out.println("Main thread's run is over" );
+
+   }
+
+}
+
+Output:
+
+my thread createdThread[my runnable thread,5,main]
+
+Main thread will be alive till the child thread is live
+
+Printing the count 0
+
+Printing the count 1
+
+Main thread will be alive till the child thread is live
+
+Printing the count 2
+
+Main thread will be alive till the child thread is live
+
+Printing the count 3
+
+Printing the count 4
+
+Main thread will be alive till the child thread is live
+
+Printing the count 5
+
+Main thread will be alive till the child thread is live
+
+Printing the count 6
+
+Printing the count 7
+
+Main thread will be alive till the child thread is live
+
+Printing the count 8
+
+Main thread will be alive till the child thread is live
+
+Printing the count 9
+
+mythread run is over
+
+Main thread run is over
+
+Method 2: Thread creation by implementing Runnable Interface
+
+Example:
+
+class  MultithreadingDemo  implements  Runnable{ 
+
+ public  void run(){
+
+ System.out.println("My thread is in running state."); 
+
+  }  
+
+ public  static  void main(String args[]){
+
+ MultithreadingDemo obj=new  MultithreadingDemo(); 
+
+ Thread tobj =new  Thread(obj); 
+
+     tobj.start(); 
+
+ } 
+
+}
+
+Output:
+
+My thread is  in running state.
+
+Example Program 2:
+
+Observe the output of this program and try to understand what is happening in this program. If you have understood the usage of each thread method then you should not face any issue, understanding this example.
+
+class  Count  implements  Runnable
+
+{
+
+ Thread mythread ;
+
+ Count()
+
+   {
+
+mythread = new  Thread(this, "my runnable thread");
+
+ System.out.println("my thread created" + mythread);
+
+      mythread.start();
+
+   }
+
+ public  void run()
+
+   {
+
+ try
+
+      {
+
+ for (int i=0 ;i<10;i++)
+
+        {
+
+ System.out.println("Printing the count " + i);
+
+ Thread.sleep(1000);
+
+        }
+
+     }
+
+ catch(InterruptedException e)
+
+     {
+
+ System.out.println("my thread interrupted");
+
+     }
+
+ System.out.println("mythread run is over" );
+
+   }
+
+}
+
+class  RunnableExample
+
+{
+
+ public  static  void main(String args[])
+
+    {
+
+ Count cnt = new  Count();
+
+ try
+
+       {
+
+ while(cnt.mythread.isAlive())
+
+          {
+
+ System.out.println("Main thread will be alive till the child thread is live");
+
+ Thread.sleep(1500);
+
+          }
+
+       }
+
+ catch(InterruptedException e)
+
+       {
+
+ System.out.println("Main thread interrupted");
+
+       }
+
+ System.out.println("Main thread run is over" );
+
+    }
+
+}
+
+Output:
+
+my thread createdThread[my runnable thread,5,main]
+
+Main thread will be alive till the child thread is live
+
+Printing the count 0
+
+Printing the count 1
+
+Main thread will be alive till the child thread is live
+
+Printing the count 2
+
+Main thread will be alive till the child thread is live
+
+Printing the count 3
+
+Printing the count 4
+
+Main thread will be alive till the child thread is live
+
+Printing the count 5
+
+Main thread will be alive till the child thread is live
+
+Printing the count 6
+
+Printing the count 7
+
+Main thread will be alive till the child thread is live
+
+Printing the count 8
+
+Main thread will be alive till the child thread is live
+
+Printing the count 9
+
+mythread run is over
+
+Main thread run is over
+
+Thread priorities
+
+*   Thread priorities are the integers which decide how one thread should be treated with respect to the others.
+*   Thread priority decides when to switch from one running thread to another, process is called context switching
+*   A thread can voluntarily release control and the highest priority thread that is ready to run is given the CPU.
+*   A thread can be preempted by a higher priority thread no matter what the lower priority thread is doing. Whenever a higher priority thread wants to run it does.
+*   To set the priority of the thread setPriority() method is used which is a method of the class Thread Class.
+*   In place of defining the priority in integers, we can use MIN_PRIORITY, NORM_PRIORITY or MAX_PRIORITY.
+
+Methods: isAlive() and join()
+
+*   In all the practical situations main thread should finish last else other threads which have spawned from the main thread will also finish.
+*   To know whether the thread has finished we can call isAlive() on the thread which returns true if the thread is not finished.
+*   Another way to achieve this by using join() method, this method when called from the parent thread makes parent thread wait till child thread terminates.
+*   These methods are defined in the Thread class.
+*   We have used isAlive() method in the above examples too.
+
+Synchronization
+
+*   Multithreading introduces asynchronous behavior to the programs. If a thread is writing some data another thread may be reading the same data at that time. This may bring inconsistency.
+*   When two or more threads need access to a shared resource there should be some way that the resource will be used only by one resource at a time. The process to achieve this is called synchronization.
+*   To implement the synchronous behavior java has synchronous method. Once a thread is inside a synchronized method, no other thread can call any other synchronized method on the same object. All the other threads then wait until the first thread come out of the synchronized block.
+*   When we want to synchronize access to objects of a class which was not designed for the multithreaded access and the code of the method which needs to be accessed synchronously is not available with us, in this case we cannot add the synchronized to the appropriate methods. In java we have the solution for this, put the calls to the methods (which needs to be synchronized) defined by this class inside a synchronized block in following manner.
+
+Synchronized(object)
+
+{
+
+ // statement to be synchronized
+
+}
+
+Inter-thread Communication
+
+We have few methods through which java threads can communicate with each other. These methods are wait(), notify(), notifyAll(). All these methods can only be called from within a synchronized method.
+
+1) To understand synchronization java has a concept of monitor. Monitor can be thought of as a box which can hold only one thread. Once a thread enters the monitor all the other threads have to wait until that thread exits the monitor.
+
+2) wait()  tells the calling thread to give up the monitor and go to sleep until some other thread enters the same monitor and calls notify().
+
+3) notify() wakes up the first thread that called wait() on the same object.
+
+notifyAll() wakes up all the threads that called wait() on the same object. The highest priority thread will run first.
+
+# 3.5 Java Serialization
+
+What is Java Serialization?
+
+Serialization is a mechanism to convert an object into stream of bytes so that it can be written into a file, transported through a network or stored into database. De-serialization is just a vice versa. In simple words serialization is converting an object to stream of bytes and de-serialization is rebuilding the object from stream of bytes. Java Serialiation API provides the features to perform seralization & de-serialization. A class must implement java.io.Serializable interface to be eligible for serialization.
+
+Lets take an example to understand the concepts better:
+
+Example:
+
+This class implements Serializable interface which means it can be serialized. All the fields of this class can be written to a file after being converted to stream of bytes, except those fields that are declared transient. In the below example we have two transient fields, these fields will not take part in serialization.
+
+Student.java
+
+public  class  Student  implements java.io.Serializable{
+
+ private  int stuRollNum;
+
+ private  int stuAge;
+
+ private  String stuName;
+
+ private  transient  String stuAddress;
+
+ private  transient  int stuHeight;
+
+ public  Student(int roll, int age, String name,
+
+ String address, int height) {
+
+ this.stuRollNum = roll;
+
+ this.stuAge = age;
+
+ this.stuName = name;
+
+ this.stuAddress = address;
+
+ this.stuHeight = height;
+
+  }
+
+ public  int getStuRollNum() {
+
+ return stuRollNum;
+
+  }
+
+ public  void setStuRollNum(int stuRollNum) {
+
+ this.stuRollNum = stuRollNum;
+
+  }
+
+ public  int getStuAge() {
+
+ return stuAge;
+
+  }
+
+ public  void setStuAge(int stuAge) {
+
+ this.stuAge = stuAge;
+
+  }
+
+ public  String getStuName() {
+
+ return stuName;
+
+  }
+
+ public  void setStuName(String stuName) {
+
+ this.stuName = stuName;
+
+  }
+
+ public  String getStuAddress() {
+
+ return stuAddress;
+
+  }
+
+ public  void setStuAddress(String stuAddress) {
+
+ this.stuAddress = stuAddress;
+
+  }
+
+ public  int getStuHeight() {
+
+ return stuHeight;
+
+  }
+
+ public  void setStuHeight(int stuHeight) {
+
+ this.stuHeight = stuHeight;
+
+  }
+
+}
+
+## 3.5.1 Serialization of Object
+
+This class is writing an object of Student class to the Student.ser file. We are using FileOutputStream and ObjectOutputStream to write the object to File.
+
+Note: As per the best practices of Java Serialization, the file name should have .ser extension.
+
+import java.io.FileOutputStream;
+
+import java.io.ObjectOutputStream;
+
+import java.io.IOException;
+
+public  class  SendClass
+
+{
+
+ public  static  void main(String args[])
+
+  {
+
+ Student obj = new  Student(101, 25, "Chaitanya", "Agra", 6);
+
+ try{
+
+ FileOutputStream fos = new  FileOutputStream("Student.ser");
+
+ ObjectOutputStream oos = new  ObjectOutputStream(fos);
+
+      oos.writeObject(obj);
+
+      oos.close();
+
+      fos.close();
+
+ System.out.println("Serialzation Done!!");
+
+   }catch(IOException ioe){
+
+ System.out.println(ioe);
+
+    }
+
+  }
+
+}
+
+Output:
+
+Serialzation  Done!!
+
+## 3.5.2 De-serialization of Object
+
+This class would rebuilt the object of Student class after reading the stream of bytes from the file. Observe the output of this class, student address and student height fields are having null & 0 values consecutively. This is because these fields were declared transient in the Student class.
+
+import java.io.FileInputStream;
+
+import java.io.ObjectInputStream;
+
+import java.io.IOException;
+
+public  class  AcceptClass {
+
+ public  static  void main(String args[])
+
+ {
+
+ Student o=null;
+
+ try{
+
+ FileInputStream fis = new  FileInputStream("Student.ser");
+
+ ObjectInputStream ois = new  ObjectInputStream(fis);
+
+      o = (Student)ois.readObject();
+
+      ois.close();
+
+      fis.close();
+
+    }
+
+ catch(IOException ioe)
+
+    {
+
+       ioe.printStackTrace();
+
+ return;
+
+    }catch(ClassNotFoundException cnfe)
+
+     {
+
+ System.out.println("Student Class is not found.");
+
+       cnfe.printStackTrace();
+
+ return;
+
+     }
+
+ System.out.println("Student Name:"+o.getStuName());
+
+ System.out.println("Student Age:"+o.getStuAge());
+
+ System.out.println("Student Roll No:"+o.getStuRollNum());
+
+ System.out.println("Student Address:"+o.getStuAddress());
+
+ System.out.println("Student Height:"+o.getStuHeight());
+
+ }
+
+}
+
+Output:
+
+Student  Name:Chandru
+
+Student  Age:25
+
+Student  Roll  No:101
+
+Student  Address:null
+
+Student  Height:0
+
+# 3.6 Java AWT Tutorial
+
+AWT stands for Abstract Window Toolkit. It is a platform dependent API for creating Graphical User Interface (GUI) for java programs
+
+Why AWT is platform dependent?
+
+Java AWT calls native platform (Operating systems) subroutine for creating components such as textbox, checkbox, button etc. For example an AWT GUI having a button would have a different look and feel across platforms like windows, Mac OS & Unix, this is because these platforms have different look and feel for their native buttons and AWT directly calls their native subroutine that creates the button. In simple, an application build on AWT would look like a windows application when it runs on Windows, but the same application would look like a Mac application when runs on Mac OS.
+
+AWT is rarely used now days because of its platform dependent and heavy-weight nature. AWT components are considered heavy weight because they are being generated by underlying operating system (OS). For example if you are instantiating a text box in AWT that means you are actually asking OS to create a text box for you.
+
+Swing is a preferred API for window based applications because of its platform independent and light-weight nature. Swing is built upon AWT API however it provides a look and feel unrelated to the underlying platform. It has more powerful and flexible components than AWT. In addition to familiar components such as buttons, check boxes and labels, Swing provides several advanced components such as tabbed panel, scroll panes, trees, tables, and lists. We will discuss Swing in detail in a separate tutorial.
+
+AWT hierarchy
+
+![Java AWT hierarchy diagram](Images/image00920.jpeg)![](Images/image00921.jpeg)
+
+Components and containers
+
+All the elements like buttons, text fields, scrollbars etc are known as components. In AWT we have classes for each component as shown in the above diagram. To have everything placed on a screen to a particular position, we have to add them to a container. A container is like a screen wherein we are placing components like buttons, text fields, checkbox etc. In short a container contains and controls the layout of components. A container itself is a component (shown in the above hierarchy diagram) thus we can add a container inside container.
+
+Types of containers:
+
+As explained above, a container is a place wherein we add components like text field, button, checkbox etc. There are four types of containers available in AWT: Window, Frame, Dialog and Panel. As shown in the hierarchy diagram above, Frame and Dialog are subclasses of Window class.
+
+Window: An instance of the Window class has no border and no title
+
+Dialog: Dialog class has border and title. An instance of the Dialog class cannot exist without an associated instance of the Frame class.
+
+Panel: Panel does not contain title bar, menu bar or border. It is a generic container for holding components. An instance of the Panel class provides a container to which to add components.
+
+Frame: A frame has title, border and menu bars. It can contain several components like buttons, text fields, scrollbars etc. This is most widely used container while developing an application in AWT.
+
+Java AWT Example
+
+We can create a GUI using Frame in two ways:
+
+1) By extending Frame class
+
+2) By creating the instance of Frame class
+
+Lets have a look at the example of each one.
+
+AWT Example 1: creating Frame by extending Frame class
+
+import java.awt.*;
+
+/* We have extended the Frame class here,
+
+ * thus our class "SimpleExample" would behave
+
+ * like a Frame
+
+ */
+
+public  class  SimpleExample  extends  Frame{
+
+    SimpleExample(){  
+
+        Button b=new  Button("Button!!");
+
+        // setting button position on screen
+
+        b.setBounds(50,50,50,50);  
+
+        //adding button into frame
+
+        add(b);
+
+        //Setting Frame width and height
+
+        setSize(500,300);
+
+        //Setting the title of Frame
+
+        setTitle("This is my First AWT example");
+
+        //Setting the layout for the Frame
+
+        setLayout(new  FlowLayout());
+
+        /* By default frame is not visible so
+
+         * we are setting the visibility to true
+
+         * to make it visible.
+
+         */
+
+        setVisible(true);  
+
+    }  
+
+    public  static  void main(String args[]){
+
+         // Creating the instance of Frame
+
+         SimpleExample fr=new  SimpleExample();  
+
+    }
+
+}
+
+Output:
+
+![AWT example 1](Images/image00922.jpeg)
+
+AWT Example 2: creating Frame by creating instance of Frame class
+
+import java.awt.*;
+
+public  class  Example2 {
+
+ Example2()
+
+   {
+
+ //Creating Frame    
+
+ Frame fr=new  Frame();       
+
+ //Creating a label
+
+ Label lb = new  Label("UserId: ");
+
+ //adding label to the frame
+
+      fr.add(lb);           
+
+ //Creating Text Field
+
+ TextField t = new  TextField();
+
+ //adding text field to the frame
+
+      fr.add(t);
+
+ //setting frame size
+
+      fr.setSize(500, 300);  
+
+ //Setting the layout for the Frame
+
+      fr.setLayout(new  FlowLayout());
+
+      fr.setVisible(true);                
+
+   }
+
+ public  static  void main(String args[])
+
+   {
+
+ Example2 ex = new  Example2();
+
+   }
+
+}
+
+Output:
+
+![AWT example 2](Images/image00923.jpeg)
+
+# 3.7 Java Swing Tutorial
+
+Swing is a part of Java Foundation classes (JFC), the other parts of JFC are java2D and Abstract window toolkit (AWT). AWT, Swing & Java 2D are used for building graphical user interfaces (GUIs) in java. In this tutorial we will mainly discuss about Swing API which is used for building GUIs on the top of AWT and are much more light-weight compared to AWT.
+
+Example:
+
+In the below example we would be using several swing components that you have not learnt so far in this tutorial. We will be discussing each and everything in detail in the coming swing tutorials.
+
+The below swing program would create a login screen.
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+import javax.swing.JLabel;
+
+import javax.swing.JPanel;
+
+import javax.swing.JPasswordField;
+
+import javax.swing.JTextField;
+
+public  class  SwingFirstExample {
+
+    public  static  void main(String[] args) {    
+
+        // Creating instance of JFrame
+
+        JFrame frame = new  JFrame("My First Swing Example");
+
+        // Setting the width and height of frame
+
+        frame.setSize(350, 200);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        /* Creating panel. This is same as a div tag in HTML
+
+         * We can create several panels and add them to specific
+
+         * positions in a JFrame. Inside panels we can add text
+
+         * fields, buttons and other components.
+
+         */
+
+        JPanel panel = new  JPanel();    
+
+        // adding panel to frame
+
+        frame.add(panel);
+
+        /* calling user defined method for adding components
+
+         * to the panel.
+
+         */
+
+        placeComponents(panel);
+
+        // Setting the frame visibility to true
+
+        frame.setVisible(true);
+
+    }
+
+    private  static  void placeComponents(JPanel panel) {
+
+        /* We will discuss about layouts in the later sections
+
+         * of this tutorial. For now we are setting the layout
+
+         * to null
+
+         */
+
+        panel.setLayout(null);
+
+        // Creating JLabel
+
+        JLabel userLabel = new  JLabel("User");
+
+        /* This method specifies the location and size
+
+         * of component. setBounds(x, y, width, height)
+
+         * here (x,y) are cordinates from the top left
+
+         * corner and remaining two arguments are the width
+
+         * and height of the component.
+
+         */
+
+        userLabel.setBounds(10,20,80,25);
+
+        panel.add(userLabel);
+
+        /* Creating text field where user is supposed to
+
+         * enter user name.
+
+         */
+
+        JTextField userText = new  JTextField(20);
+
+        userText.setBounds(100,20,165,25);
+
+        panel.add(userText);
+
+        // Same process for password label and text field.
+
+        JLabel passwordLabel = new  JLabel("Password");
+
+        passwordLabel.setBounds(10,50,80,25);
+
+        panel.add(passwordLabel);
+
+        /*This is similar to text field but it hides the user
+
+         * entered data and displays dots instead to protect
+
+         * the password like we normally see on login screens.
+
+         */
+
+        JPasswordField passwordText = new  JPasswordField(20);
+
+        passwordText.setBounds(100,50,165,25);
+
+        panel.add(passwordText);
+
+        // Creating login button
+
+        JButton loginButton = new  JButton("login");
+
+        loginButton.setBounds(10, 80, 80, 25);
+
+        panel.add(loginButton);
+
+    }
+
+}
+
+Output:
+
+![Swing Login Screen Example](Images/image00924.jpeg)
+
+In the above example we have used several components. Let us discuss a bit about them first then we will discuss them in detail in the next tutorials.
+
+JFrame – A frame is an instance of JFrame. Frame is a window that can have title, border, menu, buttons, text fields and several other components. A Swing application must have a frame to have the components added to it.
+
+JPanel – A panel is an instance of JPanel. A frame can have more than one panels and each panel can have several components. You can also call them parts of Frame. Panels are useful for grouping components and placing them to appropriate locations in a frame.
+
+JLabel – A label is an instance of JLabel class. A label is unselectable text and images. If you want to display a string or an image on a frame, you can do so by using labels. In the above example we wanted to display texts “User” & “Password” just before the text fields , we did this by creating and adding labels to the appropriate positions.
+
+JTextField – Used for capturing user inputs, these are the text boxes where user enters the data.
+
+JPasswordField – Similar to text fields but the entered data gets hidden and displayed as dots on GUI.
+
+JButton – A button is an instance of JButton class. In the above example we have a button “Login”.
+
+# 3.8 Java Autoboxing and Unboxing
+
+Java Autoboxing and Unboxing with examples
+
+Java 1.5 introduced a special feature of auto conversion of primitive types to the corresponding Wrapper class and vice versa.
+
+Autoboxing: Automatic conversion of the primitive types to the object of their corresponding wrapper classes is known as autoboxing. For example – conversion of int to Integer, long to Long, double to Double etc.
+
+Unboxing: It is just the reverse process of autoboxing. Automatically converting an object of a wrapper class to its corresponding primitive type is known as unboxing. For example – conversion of Integer to int, Long to long, Double to double etc.
+
+Primitive typeWrapper  class
+
+boolean Boolean
+
+byte Byte
+
+char Character
+
+float Float
+
+int Integer
+
+long Long
+
+short Short
+
+double Double
+
+When does the autoboxing and unboxing happens in Java
+
+Autoboxing:
+
+Lets see few cases with examples, where autoboxing happens.
+
+Case 1:
+
+When a method is expecting a wrapper class object but the value that is passed as parameter is a primitive type. For example in the below code, the method myMethod() is expecting an object of Integer wrapper class, however we passed a primitive int type. The program ran fine as compiler does the autoboxing (conversion of int to Integer).
+
+class  AutoboxingExample1
+
+{
+
+ public  static  void myMethod(Integer num){
+
+System.out.println(num);
+
+   }
+
+ public  static  void main(String[] args) {
+
+ /* passed int (primitive type), it would be
+
+        * converted to Integer object at Runtime
+
+        */
+
+ myMethod(2);
+
+   }
+
+}
+
+Output:
+
+2
+
+Case 2:
+
+When at some point of time, you are assigning a primitive type value to an object of its wrapper class. For example: The below statements are valid because compiler does the autoboxing at runtime.
+
+Integer inum = 3; //Assigning int to Integer: Autoboxing
+
+Long lnum = 32L; //Assigning long to Long: Autoboxing
+
+Case 3:
+
+When dealing with collection framework classes:
+
+ArrayList<Integer> arrayList = new  ArrayList<Integer>();
+
+arrayList.add(11); //Autoboxing - int primitive to Integer
+
+arrayList.add(22); //Autoboxing
+
+Here ArrayList class is expecting an Integer wrapper class object but we are providing int primitive.
+
+Unboxing:
+
+Case 1:
+
+Method is expecting Integer object (parameter) but we have supplied int. Auotmatic conversion(unboxing) happened that converted Integer to int.
+
+class  UnboxingExample1
+
+{
+
+ public  static  void myMethod(int num){
+
+System.out.println(num);
+
+   }
+
+ public  static  void main(String[] args) {
+
+ Integer inum = new  Integer(100);
+
+ /* passed Integer wrapper class object, it
+
+         * would be converted to int primitive type
+
+         * at Runtime
+
+         */
+
+ myMethod(inum);
+
+    }
+
+}
+
+Output:
+
+100
+
+Case 2:
+
+Assignments
+
+Integer inum = new  Integer(5);
+
+int num = inum; //unboxing object to primitive conversion
+
+Case 3:
+
+While dealing with collection classes:
+
+ArrayList arrayList = new  ArrayList()
+
+int num = arrayList.get(0); // unboxing because get method returns an Integer object
+
+What happens behind the scenes?
+
+In the above section we learnt how java compiler performs automatic conversion between primitive type and corresponding Wrapper objects. Lets discuss what compiler actually does during autoboxing and unboxing. The best way to understand this is to compare things before java 1.5 and after java 1.5 (boxing and unboxing introduced in java 1.5).
+
+Autoboxing:
+
+What we see:
+
+Integer number = 100;
+
+What compiler does (or what we used to do before java 1.5):
+
+Integer number = Integer.valueOf(100);
+
+Unboxing:
+
+What we see:
+
+Integer num2 = new  Integer(50);
+
+int inum = num2;
+
+What compiler does:
+
+Integer num2 = new  Integer(50);
+
+int inum = num2.intValue();
+
+Similar things happen with the other wrapper classes and primitive types such as long, double, short etc.
+
+Few things you should take care:
+
+Do not mix primitives and objects while doing comparisons. You might get unpredictable results for such comparisons. Better thing to do is: compare object with objects (using equals() method) and compare primitive with primitives(using logical operators such as “==”, “<” etc).
+
+# 3.9 Wrapper class in Java
+
+The eight primitive data types byte, short, int, long, float, double, char and boolean are not objects, Wrapper classes are used for converting primitive data types into objects, like int to Integer etc. Lets take a simple example to understand why we need wrapper class in java.
+
+For example: While working with collections in Java (part 2), we use generics for type safety like this: ArrayList<Integer> instead of this ArrayList<int>. The Integer is a wrapper class of int primitive type. We use wrapper class in this case because generics needs objects not primitives. There are several other reasons you would prefer a wrapper class instead of primitive type, we will discuss them as well in this article.
+
+| Primitive | Wrapper class |
+| BooleanCharByteShortIntLongFloatdouble | BooleanCharacterByteShortIntegerLongFloatDouble |
+
+Why we need wrapper class in Java
+
+1\. As I mentioned above, one of the reason why we need wrapper is to use them in collections API. On the other hand the wrapper objects hold much more memory compared to primitive types. So use primitive types when you need efficiency and use wrapper class when you need objects instead of primitive types.
+
+The primitive data types are not objects so they do not belong to any class. While storing in data structures which support only objects, it is required to convert the primitive type to object first which we can do by using wrapper classes.
+
+Example:
+
+HashMap<Integer, String> hm = new  HashMap<Integer, String>();
+
+So for type safety we use wrapper classes. This way we are ensuring that this HashMap keys would be of integer type and values would be of string type.
+
+2\. Wrapper class objects allow null values while primitive data type doesn’t allow it.
+
+Lets take few examples to understand how the conversion works:
+
+Wrapper Class Example 1: Converting a primitive type to Wrapper object
+
+public  class  JavaExample{ 
+
+ public  static  void main(String args[]){
+
+//Converting int primitive into Integer object 
+
+int num=100; 
+
+Integer obj=Integer.valueOf(num); 
+
+System.out.println(num+ " "+ obj); 
+
+   }
+
+}
+
+Output:
+
+100  100
+
+As you can see both primitive data type and object have same values. You can use obj in place of num wherever you need to pass the value of num as an object.
+
+Wrapper Class Example 2: Converting Wrapper class object to Primitive
+
+public  class  JavaExample{ 
+
+ public  static  void main(String args[]){
+
+//Creating Wrapper class object
+
+Integer obj = new  Integer(100); 
+
+//Converting the wrapper object to primitive
+
+int num = obj.intValue();
+
+System.out.println(num+ " "+ obj); 
+
+   }
+
+}
+
+Output:
+
+100  100
+
+### Java 8 Tutorial
+
+# 4.1 Java Lambda Expressions
+
+Java Lambda Expressions Tutorial with examples
+
+Lambda expression is a new feature which is introduced in Java 8\. A lambda expression is an anonymous function. A function that doesn’t have a name and doesn’t belong to any class. The concept of lambda expression was first introduced in LISP programming language.
+
+Java Lambda Expression Syntax
+
+To create a lambda expression, we specify input parameters (if there are any) on the left side of the lambda operator ->, and place the expression or block of statements on the right side of lambda operator. For example, the lambda expression (x, y) -> x + y specifies that lambda expression takes two arguments x and y and returns the sum of these.
+
+//Syntax of lambda expression
+
+(parameter_list) -> {function_body}
+
+Lambda expression vs method in Java
+
+A method (or function) in Java has these main parts:
+
+1\. Name
+
+2\. Parameter list
+
+3\. Body
+
+4\. return type.
+
+A lambda expression in Java has these main parts:
+
+Lambda expression only has body and parameter list.
+
+1. No name – function is anonymous so we don’t care about the name
+
+2\. Parameter list
+
+3\. Body – This is the main part of the function.
+
+4\. No return type – The java 8 compiler is able to infer the return type by checking the code. you need not to mention it explicitly.
+
+Where to use the Lambdas in Java
+
+To use lambda expression, you need to either create your own functional interface or use the pre defined functional interface provided by Java. An interface with only single abstract method is called functional interface(or Single Abstract method interface), for example: Runnable, callable, ActionListener etc.
+
+To use function interface:
+
+Pre Java 8: We create anonymous inner classes.
+
+Post Java 8: You can use lambda expression instead of anonymous inner classes.
+
+Java Lambda expression Example
+
+Without using Lambda expression: Prior to java 8 we used the anonymous inner classe to implement the only abstract method of functional interface.
+
+import java.awt.*;
+
+import java.awt.event.*; 
+
+public  class  ButtonListenerOldWay {
+
+ public  static  void main(String[] args) { 
+
+ Frame frame=new  Frame("ActionListener Before Java8"); 
+
+ Button b=new  Button("Click Here"); 
+
+       b.setBounds(50,100,80,50); 
+
+       b.addActionListener(new  ActionListener(){ 
+
+ public  void actionPerformed(ActionEvent e){
+
+  System.out.println("Hello World!");
+
+          } 
+
+       }); 
+
+       frame.add(b);
+
+       frame.setSize(200,200); 
+
+       frame.setLayout(null); 
+
+       frame.setVisible(true);  
+
+    } 
+
+}
+
+By using Lambda expression: Instead of creating anonymous inner class, we can create a lambda expression like this:
+
+import java.awt.*;
+
+public  class  ButtonListenerNewWay {
+
+ public  static  void main(String[] args) { 
+
+ Frame frame=new  Frame("ActionListener java8"); 
+
+ Button b=new  Button("Click Here"); 
+
+      b.setBounds(50,100,80,50);
+
+b.addActionListener(e -> System.out.println("Hello World!"));
+
+      frame.add(b);
+
+      frame.setSize(200,200); 
+
+      frame.setLayout(null); 
+
+      frame.setVisible(true);  
+
+   } 
+
+}
+
+Note:
+
+1\. As you can see that we used less code with lambda expression.
+
+2\. Backward compatibility: You can use the lambda expression with your old code. Lambdas are backward compatible so you can use them in existing API when you migrate your project to java 8.
+
+Lets see few more examples of Lambda expressions.
+
+Example 1: Java Lambda Expression with no parameter
+
+@FunctionalInterface
+
+interface  MyFunctionalInterface {
+
+//A method with no parameter
+
+ public  String sayHello();
+
+}
+
+public  class  Example {
+
+ public  static  void main(String args[]) {
+
+ // lambda expression
+
+ MyFunctionalInterface msg = () -> {
+
+ return  "Hello";
+
+ };
+
+ System.out.println(msg.sayHello());
+
+    }
+
+}
+
+Output:
+
+Hello
+
+Example 2: Java Lambda Expression with single parameter
+
+@FunctionalInterface
+
+interface  MyFunctionalInterface {
+
+//A method with single parameter
+
+ public  int incrementByFive(int a);
+
+}
+
+public  class  Example {
+
+ public  static  void main(String args[]) {
+
+ // lambda expression with single parameter num
+
+ MyFunctionalInterface f = (num) -> num+5;
+
+ System.out.println(f.incrementByFive(22));
+
+    }
+
+}
+
+Output:
+
+27
+
+Example 3: Java Lambda Expression with Multiple Parameters
+
+interface  StringConcat {
+
+ public  String sconcat(String a, String b);
+
+}
+
+public  class  Example {
+
+ public  static  void main(String args[]) {
+
+ // lambda expression with multiple arguments
+
+ StringConcat s = (str1, str2) -> str1 + str2;
+
+ System.out.println("Result: "+s.sconcat("Hello ", "World"));
+
+    }
+
+}
+
+Output:
+
+Result: Hello  World
+
+Example 4: Iterating collections using foreach loop
+
+import java.util.*;
+
+public  class  Example{  
+
+ public  static  void main(String[] args) {       
+
+ List<String> list=new  ArrayList<String>();  
+
+       list.add("Rock");         
+
+       list.add("Negan");       
+
+       list.add("Daryl");         
+
+       list.add("Glenn");         
+
+       list.add("Carl");               
+
+       list.forEach(         
+
+ // lambda expression       
+
+           (names)->System.out.println(names)         
+
+       );     
+
+    }  
+
+}
+
+We can iterate Maps and other collection classes using lambda expression,
+
+Lambda Expression – Iterating Map and List in Java 8
+
+Iterating Map in Java 8 using Lambda expression
+
+package com.javabook;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+public  class  IterateMapUsingLambda {
+
+public  static  void main(String[] args) {
+
+Map<String, Integer> prices = new  HashMap<>();
+
+prices.put("Apple", 50);
+
+prices.put("Orange", 20);
+
+prices.put("Banana", 10);
+
+prices.put("Grapes", 40);
+
+prices.put("Mango", 50);
+
+/* Iterate without using Lambda
+
+   for (Map.Entry<String, Integer> entry : prices.entrySet()) {
+
+   System.out.println("Fruit: " + entry.getKey() + ", Price: " + entry.getValue());
+
+   }
+
+*/
+
+prices.forEach((k,v)->System.out.println("Fruit: " + k + ", Price: " + v));
+
+}
+
+}
+
+Output:
+
+Fruit: Apple, Price: 50
+
+Fruit: Grapes, Price: 40
+
+Fruit: Mango, Price: 50
+
+Fruit: Orange, Price: 20
+
+Fruit: Banana, Price: 10
+
+Iterating List in Java 8 using Lambda expression
+
+package com.javabook;
+
+import java.util.List;
+
+import java.util.ArrayList;
+
+public  class  IterateListUsingLambda {
+
+public  static  void main(String[] argv) {
+
+List names = new  ArrayList<>();
+
+names.add("Ajay");
+
+names.add("Ben");
+
+names.add("Cathy");
+
+names.add("Dinesh");
+
+names.add("Tomy");
+
+/* Iterate without using Lambda
+
+Iterator iterator = names.iterator();
+
+while (iterator.hasNext()) {
+
+System.out.println(iterator.next());
+
+}
+
+*/
+
+names.forEach(name->System.out.println(name));
+
+}
+
+}
+
+Output:
+
+Ajay
+
+Ben
+
+Cathy
+
+Dinesh
+
+Tomy
+
+# 4.2 Method References in Java 8
+
+Method reference is a shorthand notation of a lambda expression to call a method. For example:
+
+If your lambda expression is like this:
+
+str -> System.out.println(str)
+
+then you can replace it with a method reference like this:
+
+System.out::println
+
+The :: operator is used in method reference to separate the class or object from the method name(we will learn this with the help of examples).
+
+Four types of method references
+
+1\. Method reference to an instance method of an object – object::instanceMethod
+
+2\. Method reference to a static method of a class – Class::staticMethod
+
+3\. Method reference to an instance method of an arbitrary object of a particular type – Class::instanceMethod
+
+4\. Method reference to a constructor – Class::new
+
+1\. Method reference to an instance method of an object
+
+@FunctionalInterface
+
+interface  MyInterface{ 
+
+ void display();
+
+} 
+
+public  class  Example {
+
+ public  void myMethod(){
+
+System.out.println("Instance Method"); 
+
+    } 
+
+ public  static  void main(String[] args) { 
+
+Example obj = new  Example();  
+
+// Method reference using the object of the class
+
+MyInterface  ref = obj::myMethod;
+
+// Calling the method of functional interface 
+
+ref.display(); 
+
+    } 
+
+}
+
+Output:
+
+Instance  Method
+
+2\. Method reference to a static method of a class
+
+import java.util.function.BiFunction; 
+
+class  Multiplication{ 
+
+ public  static  int multiply(int a, int b){
+
+return a*b;
+
+   } 
+
+} 
+
+public  class  Example {
+
+ public  static  void main(String[] args) { 
+
+BiFunction<Integer, Integer, Integer> product = Multiplication::multiply; 
+
+int pr = product.apply(11, 5); 
+
+System.out.println("Product of given number is: "+pr); 
+
+   } 
+
+}
+
+Output:
+
+Product of given number is: 55
+
+3\. Method reference to an instance method of an arbitrary object of a particular type
+
+import java.util.Arrays;
+
+public  class  Example {
+
+ public  static  void main(String[] args) { 
+
+String[] stringArray = { "Stefen", "Rick", "Aditya", "Negan", "Lucy", "Sansa", "Jony"};
+
+/* Method reference to an instance method of an arbitrary
+
+* object of a particular type
+
+*/
+
+Arrays.sort(stringArray, String::compareToIgnoreCase);
+
+for(String str: stringArray){
+
+System.out.println(str);
+
+}
+
+   } 
+
+}
+
+Output:
+
+Aditya
+
+Jony
+
+Lucy
+
+Negan
+
+Rick
+
+Sansa
+
+Stefen
+
+4\. Method reference to a constructor
+
+@FunctionalInterface
+
+interface  MyInterface{ 
+
+ Hello display(String say);
+
+} 
+
+class  Hello{ 
+
+ public  Hello(String say){
+
+ System.out.print(say); 
+
+    } 
+
+} 
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ //Method reference to a constructor
+
+ MyInterface  ref = Hello::new; 
+
+ ref.display("Hello World!"); 
+
+    } 
+
+}
+
+Output:
+
+Hello  World!
+
+# 4.3 Java Functional Interfaces
+
+An interface with only single abstract method is called functional interface. You can either use the predefined functional interface provided by Java or create your own functional interface and use it.
+
+To use lambda expression in Java, you need to either create your own functional interface or use the pre defined functional interface provided by Java. While creating your own functional interface, mark it with @FunctionalInterface annotation, this annotation is introduced in Java 8\. Although its optional, you should use it so that you get a compilation error if the interface you marked with this annotation is not following the rules of functional interfaces.
+
+What are the rules of defining a functional interface?
+
+The functional interface should have Only one abstract method. Along with the one abstract method, they can have any number of default and static methods.
+
+Example 1: Creating your own functional interface
+
+@FunctionalInterface
+
+interface  MyFunctionalInterface {
+
+ public  int addMethod(int a, int b);
+
+}
+
+public  class  javaBookClass {
+
+ public  static  void main(String args[]) {
+
+ // lambda expression
+
+ MyFunctionalInterface sum = (a, b) -> a + b;
+
+ System.out.println("Result: "+sum.addMethod(12, 100));
+
+    }
+
+}
+
+Output:
+
+Result: 112
+
+Example 2: Using predefined functional interface
+
+import java.util.function.IntBinaryOperator;
+
+public  class  BeginnersBookClass {
+
+ public  static  void main(String args[]) {
+
+ // lambda expression
+
+ IntBinaryOperator sum = (a, b) -> a + b;
+
+ System.out.println("Result: " + sum.applyAsInt(12, 100));
+
+    }
+
+}
+
+Output:
+
+Result: 112
+
+Functional interface example: using anonymous inner class vs using lambda expression
+
+We have been using functional interfaces even prior to java8, they were used by creating anonymous inner classes using these interfaces. You must have seen functional interfaces such as Runnable, ActionListener, Comparator etc. They all have single abstract method. Lets see an example of ActionListener to see how it was used with Anonymous inner class and how it can be implemented using lambda expression.
+
+ActionListener Example: Before Java 8: Using anonymous inner class             
+
+import javax.swing.*;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+class  Example  extends  JFrame
+
+{
+
+ JButton button;
+
+ public  Example()
+
+    {
+
+setTitle("Button Action Example without Lambda Expression");
+
+setSize(400,300);
+
+setVisible(true);
+
+setLayout(new  FlowLayout());
+
+setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+button = new  JButton("Button");
+
+button.setBounds(100,100,90,40);
+
+button.addActionListener(new  ActionListener(){ 
+
+ public  void actionPerformed(ActionEvent e){
+
+System.out.println("You clicked the button.");
+
+   } 
+
+});
+
+add(button);
+
+    }
+
+ public  static  void main(String args[])
+
+    {
+
+new  Example();
+
+    }  
+
+}
+
+ActionListener Example: Lambda Expression
+
+import javax.swing.*;
+
+import java.awt.*;
+
+class  Example  extends  JFrame
+
+{
+
+ JButton button;
+
+ public  Example()
+
+    {
+
+setTitle("Button Action Example using Lambda Expression");
+
+setSize(400,300);
+
+setVisible(true);
+
+setLayout(new  FlowLayout());
+
+setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+button = new  JButton("Button");
+
+button.setBounds(100,100,90,40);
+
+//Lambda expression
+
+button.addActionListener(e->
+
+ System.out.println("You clicked the button."));
+
+add(button);
+
+    }
+
+ public  static  void main(String args[])
+
+    {
+
+new  Example();
+
+    }  
+
+}
+
+# 4.4 Java 8 Interface Changes
+
+Java 8 Interface Changes – default method and static method
+
+All the methods of interfaces are public & abstract by default. Java 8 allows the interfaces to have default and static methods. The reason we have default methods in interfaces is to allow the developers to add new methods to the interfaces without affecting the classes that implements these interfaces.
+
+Why default method?
+
+For example, if several classes such as A, B, C and D implements an interface XYZInterface then if we add a new method to the XYZInterface, we have to change the code in all the classes(A, B, C and D) that implements this interface. In this example we have only four classes that implements the interface which we want to change but imagine if there are hundreds of classes implementing an interface then it would be almost impossible to change the code in all those classes. This is why in java 8, we have a new concept “default methods”. These methods can be added to any existing interface and we do not need to implement these methods in the implementation classes mandatorily, thus we can add these default methods to existing interfaces without breaking the code.
+
+Note: We can say that concept of default method is introduced in java 8 to add the new methods in the existing interfaces in such a way so that they are backward compatible. Backward compatibility is adding new features without breaking the old code.
+
+Static methods in interfaces are similar to the default methods except that we cannot override these methods in the classes that implements these interfaces.
+
+Java 8 Example: Default method in Interface
+
+The method newMethod() in MyInterface is a default method, which means we need not to implement this method in the implementation class Example. This way we can add the default methods to existing interfaces without bothering about the classes that implements these interfaces.
+
+interface  MyInterface{ 
+
+ /* This is a default method so we need not
+
+     * to implement this method in the implementation
+
+     * classes 
+
+     */
+
+ default  void newMethod(){
+
+ System.out.println("Newly added default method"); 
+
+    } 
+
+ /* Already existing public and abstract method
+
+     * We must need to implement this method in
+
+     * implementation classes.
+
+     */
+
+ void existingMethod(String str);
+
+} 
+
+public  class  Example  implements  MyInterface{
+
+// implementing abstract method
+
+ public  void existingMethod(String str){
+
+ System.out.println("String is: "+str); 
+
+    } 
+
+ public  static  void main(String[] args) { 
+
+ Example obj = new  Example();
+
+ //calling the default method of interface
+
+        obj.newMethod();    
+
+ //calling the abstract method of interface
+
+        obj.existingMethod("Java 8 is easy to learn");
+
+    } 
+
+}
+
+Output:
+
+Newly added default method
+
+String  is: Java  8  is easy to learn
+
+Java 8 Example: Static method in Interface
+
+As mentioned above, the static methods in interface are similar to default method so we need not to implement them in the implementation classes. We can safely add them to the existing interfaces without changing the code in the implementation classes. Since these methods are static, we cannot override them in the implementation classes.
+
+interface  MyInterface{ 
+
+ /* This is a default method so we need not
+
+     * to implement this method in the implementation
+
+     * classes 
+
+     */
+
+ default  void newMethod(){
+
+ System.out.println("Newly added default method"); 
+
+    } 
+
+ /* This is a static method. Static method in interface is
+
+     * similar to default method except that we cannot override
+
+     * them in the implementation classes.
+
+     * Similar to default methods, we need to implement these methods
+
+     * in implementation classes so we can safely add them to the
+
+     * existing interfaces.
+
+     */
+
+ static  void anotherNewMethod(){
+
+ System.out.println("Newly added static method");
+
+    }
+
+ /* Already existing public and abstract method
+
+     * We must need to implement this method in
+
+     * implementation classes.
+
+     */
+
+ void existingMethod(String str);
+
+} 
+
+public  class  Example  implements  MyInterface{
+
+// implementing abstract method
+
+ public  void existingMethod(String str){
+
+ System.out.println("String is: "+str); 
+
+    } 
+
+ public  static  void main(String[] args) { 
+
+ Example obj = new  Example();
+
+ //calling the default method of interface
+
+        obj.newMethod();    
+
+ //calling the static method of interface
+
+ MyInterface.anotherNewMethod();
+
+ //calling the abstract method of interface
+
+        obj.existingMethod("Java 8 is easy to learn");
+
+    } 
+
+}
+
+Output:
+
+Newly added default method
+
+Newly added static method
+
+String  is: Java  8  is easy to learn
+
+Java 8 – Abstract classes vs interfaces
+
+With the introduction of default methods in interfaces, it seems that the abstract classes are same as interface in java 8\. However this is not entirely true, even though we can now have concrete methods(methods with body) in interfaces just like abstract class, this doesn’t mean that they are same. There are still few differences between them, one of them is that abstract class can have constructor while in interfaces we cannot have constructors.
+
+The purpose of interface is to provide full abstraction, while the purpose of abstract class is to provide partial abstraction. This still holds true. The interface is like a blueprint for your class, with the introduction of default methods you can simply say that we can add additional features in the interfaces without affecting the end user classes.
+
+Default Method and Multiple Inheritance
+
+The multiple inheritance problem can occur, when we have two interfaces with the default methods of same signature. Lets take an example.
+
+interface  MyInterface{ 
+
+ default  void newMethod(){
+
+ System.out.println("Newly added default method"); 
+
+    } 
+
+ void existingMethod(String str);
+
+} 
+
+interface  MyInterface2{ 
+
+ default  void newMethod(){
+
+ System.out.println("Newly added default method"); 
+
+    } 
+
+ void disp(String str);
+
+}
+
+public  class  Example  implements  MyInterface, MyInterface2{
+
+// implementing abstract methods
+
+ public  void existingMethod(String str){
+
+ System.out.println("String is: "+str); 
+
+    } 
+
+ public  void disp(String str){
+
+ System.out.println("String is: "+str);
+
+    }
+
+ public  static  void main(String[] args) { 
+
+ Example obj = new  Example();
+
+ //calling the default method of interface
+
+        obj.newMethod();    
+
+    } 
+
+}
+
+Output:
+
+Error: Duplicate  default methods named newMethod with the parameters () and () are inherited from the types MyInterface2  and  MyInterface.
+
+This is because we have the same method in both the interface and the compiler is not sure which method to be invoked.
+
+How to solve this issue?
+
+To solve this problem, we can implement this method in the implementation class like this:
+
+interface  MyInterface{ 
+
+ default  void newMethod(){
+
+ System.out.println("Newly added default method"); 
+
+    } 
+
+ void existingMethod(String str);
+
+} 
+
+interface  MyInterface2{ 
+
+ default  void newMethod(){
+
+ System.out.println("Newly added default method"); 
+
+    } 
+
+ void disp(String str);
+
+}
+
+public  class  Example  implements  MyInterface, MyInterface2{
+
+// implementing abstract methods
+
+ public  void existingMethod(String str){
+
+ System.out.println("String is: "+str); 
+
+    } 
+
+ public  void disp(String str){
+
+ System.out.println("String is: "+str);
+
+    }
+
+ //Implementation of duplicate default method
+
+ public  void newMethod(){
+
+ System.out.println("Implementation of default method"); 
+
+    } 
+
+ public  static  void main(String[] args) { 
+
+ Example obj = new  Example();
+
+ //calling the default method of interface
+
+        obj.newMethod();    
+
+    } 
+
+}
+
+Output:
+
+Implementation of default method
+
+# 4.5 Java 8 Stream Tutorial
+
+In the previous tutorial we learned the interface changes in java 8\. In this guide, we will discuss Stream API which is another new feature of java 8\. All the classes and interfaces of this API is in the java.util.stream package. By using streams we can perform various aggregate operations on the data returned from collections, arrays, Input/Output operations. Before we see how stream API can be used in Java, let’s see an example to understand the use of streams.
+
+Java Stream Example
+
+To understand how stream works, let us take an example without using stream and then we will see the same example with streams.
+
+Finding certain strings without using Stream
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+public  class  Example{
+
+ public  static  void main(String[] args) {   
+
+List<String> names = new  ArrayList<String>();
+
+names.add("Ajith");
+
+names.add("Negan");
+
+names.add("Adityan");
+
+names.add("Stefen");
+
+int count = 0;
+
+for (String str : names) {
+
+ if (str.length() < 6)
+
+count++;
+
+}
+
+ System.out.println("There are "+count+" strings with length less than 6");
+
+   } 
+
+}
+
+Output:
+
+There are 3 strings with length less than 6
+
+Same example using Stream
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+public  class  Example{
+
+ public  static  void main(String[] args) {   
+
+List<String> names = new  ArrayList<String>();
+
+names.add("Ajith");
+
+names.add("Negan");
+
+names.add("Adityan");
+
+names.add("Stefen");
+
+//Using Stream and Lambda expression
+
+long count = names.stream().filter(str->str.length()<6).count();
+
+System.out.println("There are "+count+" strings with length less than 6");
+
+   } 
+
+}
+
+Output:
+
+There are 3 strings with length less than 6
+
+What is the difference between these codes?
+
+The output of both the examples are same, however there is a major difference between these examples if you consider the performance of the code.
+
+In the first example, we are iterating the whole list to find the strings with length less than 6\. There is no parallelism in this code.
+
+In the second example, the stream() method returns a stream of all the names, the filter() method returns another stream of names with length less than 6, the count() method reduces this stream to the result. All these operations are happening parallelly which means we are able to parallelize the code with the help of streams. Parallel execution of operations using stream is faster than sequential execution without using streams.
+
+How to work with Stream in Java
+
+As we have seen in the above example, the working of stream can be explained in three stages:
+
+1\. Create a stream
+
+2\. Perform intermediate operations on the initial stream to transform it into another stream and so on on further intermediate operations. In the above example, the filter() operation is intermediate operation, there can be more than one intermediate operations.
+
+3\. Perform terminal operation on the final stream to get the result. In the above example, the count() operation is terminal operation.
+
+Java Stream Features
+
+1\. Stream does not store the elements. it simply performs the aggregate operations(such as filter() and count() that we have seen in the above example) to get the desired stream of data.
+
+2\. The aggregate operations that we perform on the collection, array or any other data source do not change the data of the source, they simply return a new stream. For example the code we have seen above is filtering the strings with length less than 6 using the stream operations but it did not change the elements of the list
+
+3\. All the stream operations are lazy in nature which means they are not executed until they are needed. For example, if we want to display only the first 2 elements of a list using stream, the stream operation would stop at the end of second iteration after displaying the second element of list.
+
+Let us see few examples of Java Stream:
+
+Java Stream Example 1: Iterating and displaying selected integers
+
+import java.util.stream.*;
+
+public  class  Example {
+
+ public  static  void main(String[] args){ 
+
+ Stream.iterate(1, count->count+1) 
+
+        .filter(number->number%3==0) 
+
+        .limit(6) 
+
+        .forEach(System.out::println); 
+
+    } 
+
+}
+
+Output:
+
+3
+
+6
+
+9
+
+12
+
+15
+
+18
+
+Java Stream Example 2: Concatenating two streams
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Stream;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+//list 1
+
+List<String> alphabets = Arrays.asList("A","B","C");
+
+//list 2
+
+List<String> names = Arrays.asList("Sansa","Jony","Aryan");
+
+//creating two streams from the two lists and concatenating them into one
+
+Stream<String> opstream = Stream.concat(alphabets.stream(), names.stream());
+
+//displaying the elements of the concatenated stream
+
+opstream.forEach(str->System.out.print(str+" "));
+
+   }
+
+}
+
+Output:
+
+A B C Sansa  Jony  Aryan
+
+# 4.6 Java 8 Stream Filter Tutorial
+
+Java 8 Stream Filter with examples
+
+I would recommend you to read that guide before going through this tutorial. In this guide, we will discuss the Java stream filter. The filter() is an intermediate operation that reads the data from a stream and returns a new stream after transforming the data based on the given condition. Lets take a simple example first and then we will see the examples of stream filter with other methods of the stream.
+
+A Simple Example of Java Stream Filter()
+
+In this example we are creating a stream from the list of names using stream() method and then we are creating another stream of long names using stream filter(). As I mentioned above, the stream filter transforms the data of one stream into another stream.
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Stream;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+List<String> names = Arrays.asList("Melisandre","Sansa","Jony","Daenerys","Joffery");
+
+//Creating the stream of all names
+
+Stream<String> allNames = names.stream();
+
+//Creating another stream by filtering long names using filter()
+
+Stream<String> longNames = allNames.filter(str -> str.length() > 6);
+
+//displaying the long names
+
+longNames.forEach(str->System.out.print(str+" "));
+
+  }
+
+}
+
+Output:
+
+Melisandre  Daenerys  Joffery
+
+Example 1: Stream filter() and collect()
+
+We can create a stream and apply a filter in a one line as shown in the example below. The collect() method here collects the final stream and converts it into a list.
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ List<String> names = Arrays.asList("Melisandre","Sansa","Jony","Daenerys","Joffery");
+
+ List<String> longnames = names.stream() // converting the list to stream
+
+.filter(str -> str.length() > 6) // filter the stream to create a new stream
+
+                .collect(Collectors.toList()); // collect the final stream and convert it to a List
+
+        longnames.forEach(System.out::println);          
+
+    }
+
+}
+
+Output:
+
+Melisandre
+
+Daenerys
+
+Joffery
+
+Example 2: Stream filter() with multiple conditions
+
+In the above examples we have seen that there is only one condition in the filter() method. We can have more than one conditions in the filter() method joined using the logical operators in java. In the following example, we have two conditions in the filter method joined using and (&&) logical operator.
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ List<String> names = Arrays.asList("Melisandre","Sansa","Jony","Daenerys","Joffery");
+
+ List<String> longnames = names.stream() 
+
+.filter(str -> str.length() > 6 && str.length() < 8) //Multiple conditions
+
+                .collect(Collectors.toList()); 
+
+        longnames.forEach(System.out::println);          
+
+    }
+
+}
+
+Output:
+
+Joffery
+
+Example 3: Stream filter() and map() method in Java
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ List<Integer> num = Arrays.asList(1,2,3,4,5,6);
+
+ List<Integer> squares = num.stream()
+
+ .map(n -> n * n)
+
+ .collect(Collectors.toList());
+
+ System.out.println(squares);       
+
+    }
+
+}
+
+Output:
+
+[1, 4, 9, 16, 25, 36]
+
+Go for java 8 [optional class](#part0000.xhtml__4.12_Java_8)
+
+# 4.7 Java 8 – Filter a Map by keys and values
+
+we will see how to use Stream filter() method to filter a Map by keys and Values.
+
+Java 8 – Filter Map by Keys
+
+import java.util.Map;
+
+import java.util.HashMap;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ Map<Integer, String> hmap = new  HashMap<Integer, String>();
+
+      hmap.put(11, "Apple");
+
+      hmap.put(22, "Mango");
+
+      hmap.put(33, "Kiwi"); 
+
+      hmap.put(44, "Banana");
+
+ Map<Integer, String> result = hmap.entrySet()
+
+          .stream()
+
+.filter(map -> map.getKey().intValue() <= 22)
+
+          .collect(Collectors.toMap(map -> map.getKey(), map -> map.getValue())); 
+
+ System.out.println("Result: " + result);
+
+   }
+
+}
+
+Output:
+
+Result: {22=Orange, 11=Apple}
+
+Java 8 – Filter Map by Values
+
+import java.util.Map;
+
+import java.util.HashMap;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ Map<Integer, String> hmap = new  HashMap<Integer, String>();
+
+      hmap.put(11, "Apple");
+
+      hmap.put(22, "Mango");
+
+      hmap.put(33, "Kiwi");
+
+      hmap.put(44, "Banana");
+
+ Map<Integer, String> result = hmap.entrySet()
+
+      .stream()
+
+.filter(map -> "Orange".equals(map.getValue()))
+
+      .collect(Collectors.toMap(map -> map.getKey(), map -> map.getValue()));
+
+ System.out.println("Result: " + result);
+
+   }
+
+}
+
+Output:
+
+Result: {22=Orange}
+
+Java 8 – Filter Map by both Keys and Values
+
+In this example we are filtering a Map by keys and values both. When we filter a Map like this we are joining both the conditions by AND (&&) logical operator. You can also place both the conditions in the single filter() method and join them using any logical operator such as OR (||), AND(&&) or NOT(!).
+
+import java.util.Map;
+
+import java.util.HashMap;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ Map<Integer, String> hmap = new  HashMap<Integer, String>();
+
+      hmap.put(1, "ABC");
+
+      hmap.put(2, "XCB");
+
+      hmap.put(3, "ABB");
+
+      hmap.put(4, "ZIO");
+
+ Map<Integer, String> result = hmap.entrySet()
+
+         .stream()
+
+.filter(p -> p.getKey().intValue() <= 2) //filter by key
+
+         .filter(map -> map.getValue().startsWith("A")) //filter by value
+
+         .collect(Collectors.toMap(map -> map.getKey(), map -> map.getValue()));
+
+ System.out.println("Result: " + result);
+
+   }
+
+}
+
+Output:
+
+Result: {1=ABC}
+
+# 4.8 Java 8 – Filter null values from a Stream
+
+Example: A stream with null values
+
+In this example, we have a stream with null values. Lets see what happens when we do not filter the null values.
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+List<String> list = Arrays.asList("Java", "Stream", null, "Filter", null);
+
+List<String> result = list.stream().collect(Collectors.toList());
+
+result.forEach(System.out::println);     
+
+   }
+
+}
+
+Output:
+
+Java
+
+Stream
+
+null
+
+Filter
+
+null
+
+As you can see that the null values are present in the output.
+
+Java 8 Example: Filter null values from a stream
+
+We can use lambda expression str -> str!=null inside stream filter() to filter out null values from a stream.
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+List<String> list = Arrays.asList("Java", "Stream", null, "Filter", null);
+
+List<String> result = list.stream()
+
+.filter(str -> str!=null)
+
+.collect(Collectors.toList());
+
+result.forEach(System.out::println);     
+
+   }
+
+}
+
+Output:
+
+Java
+
+Stream
+
+Filter
+
+Alternatively you can use method reference Objects::nonNull in the filter() method to filter out the null values like this:
+
+List<String> result = list.stream()
+
+.filter(Objects::nonNull)
+
+.collect(Collectors.toList());
+
+Java 8 Example 2: Filter null values after map intermediate operation
+
+Similarly we can filter the null values after map operation on a stream.
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+List<Integer> list = Arrays.asList(1, 2, 3, null, 4, null, 5);
+
+List<Integer> result = list.stream()
+
+.map(num -> num) //here you will be having a different logic
+
+.filter(n -> n!=null)
+
+.collect(Collectors.toList());
+
+result.forEach(System.out::println);     
+
+   }
+
+}
+
+Output:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+# 4.9 Java 8 – forEach
+
+In Java 8, we have a newly introduced forEach method to iterate over collections and Streams in Java. In this guide, we will learn how to use forEach() and forEachOrdered() methods to loop a particular collection and stream.
+
+Java 8 – forEach to iterate a Map
+
+import java.util.Map;
+
+import java.util.HashMap;
+
+public  class  Example {
+
+   public  static  void main(String[] args) {
+
+ Map<Integer, String> hmap = new  HashMap<Integer, String>();
+
+      hmap.put(1, "Monkey");
+
+      hmap.put(2, "Dog");
+
+      hmap.put(3, "Cat");  
+
+      hmap.put(4, "Lion");  
+
+      hmap.put(5, "Tiger");  
+
+      hmap.put(6, "Bear");
+
+ /* forEach to iterate and display each key and value pair
+
+       * of HashMap.    
+
+       */ 
+
+      hmap.forEach((key,value)->System.out.println(key+" - "+value));
+
+ /* forEach to iterate a Map and display the value of a particular  
+
+       * key    
+
+       */
+
+      hmap.forEach((key,value)->{
+
+ if(key == 4){
+
+ System.out.println("Value associated with key 4 is: "+value);
+
+         }  
+
+      });    
+
+      /* forEach to iterate a Map and display the key associated with a
+
+       * particular value    
+
+       */
+
+      hmap.forEach((key,value)->{
+
+ if("Cat".equals(value)){
+
+ System.out.println("Key associated with Value Cat is: "+key);
+
+         }
+
+      }); 
+
+   }
+
+}
+
+Java 8 – forEach to iterate a List
+
+In this example, we are iterating an ArrayList using forEach() method. Inside forEach we are using a lambda expression to print each element of the list.
+
+import java.util.List;
+
+import java.util.ArrayList;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ List<String> fruits = new  ArrayList<String>();
+
+      fruits.add("Apple");
+
+      fruits.add("Orange");
+
+      fruits.add("Banana");
+
+      fruits.add("Pear");
+
+      fruits.add("Kiwi");
+
+ //lambda expression in forEach Method
+
+      fruits.forEach(str->System.out.println(str));
+
+   }
+
+}
+
+Output:
+
+Apple
+
+Orange
+
+Banana
+
+Pear
+
+Kiwi
+
+We can also use method reference in the forEach() method like this:
+
+fruits.forEach(System.out::println);
+
+Java 8 – forEach method to iterate a Stream
+
+In this example we are iterating a Stream in Java using forEach() method.
+
+import java.util.List;
+
+import java.util.ArrayList;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ List<String> names = new  ArrayList<String>();
+
+      names.add("Maggie");
+
+      names.add("Michonne");
+
+      names.add("Rick");
+
+      names.add("Merle");
+
+      names.add("Governor");
+
+names.stream() //creating stream
+
+     .filter(f->f.startsWith("M")) //filtering names that starts with M
+
+     .forEach(System.out::println); //displaying the stream using forEach
+
+   }
+
+}
+
+Output:
+
+Maggie
+
+Michonne
+
+Merle
+
+Java – Stream forEachOrdered() Method Example
+
+For sequential streams the order of elements is same as the order in the source, so the output would be same whether you use forEach or forEachOrdered. However when working with parallel streams, you would always want to use the forEachOrdered() method when the order matters to you, as this method guarantees that the order of elements would be same as the source. Lets take an example to understand the difference between forEach() and forEachOrdered().
+
+import java.util.List;
+
+import java.util.ArrayList;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ List<String> names = new  ArrayList<String>();
+
+      names.add("Maggie");
+
+      names.add("Michonne");
+
+      names.add("Rick");
+
+      names.add("Merle");
+
+      names.add("Governor"); 
+
+ //forEach - the output would be in any order
+
+ System.out.println("Print using forEach");
+
+      names.stream() 
+
+     .filter(f->f.startsWith("M"))
+
+     .parallel()
+
+     .forEach(n->System.out.println(n));
+
+ /* forEachOrdered - the output would always be in this order:
+
+      * Maggie, Michonne, Merle
+
+      */
+
+ System.out.println("Print using forEachOrdered");
+
+     names.stream() 
+
+     .filter(f->f.startsWith("M")) 
+
+     .parallel()
+
+     .forEachOrdered(n->System.out.println(n));
+
+   }
+
+}
+
+Output:
+
+Print  using forEach
+
+Merle
+
+Maggie
+
+Michonne
+
+Print  using forEachOrdered
+
+Maggie
+
+Michonne
+
+Merle
+
+# 4.10 Java 8 – Stream Collectors Class
+
+Java 8 – Stream Collectors Class with examples
+
+Collectors is a final class that extends the Object class. In this we will see the examples of Java Stream collectors class using lambda expressions, Java Streams and other new features of Java 8.
+
+java.lang.Object
+
+   |
+
+   |___java.util.stream.Collectors
+
+Java – Stream Collectors groupingBy and counting Example
+
+In this example, we are grouping the elements of a list using groupingBy() method of Collectors class and printing the occurrences of each element in the list.
+
+import java.util.Arrays;
+
+import java.util.List;
+
+import java.util.Map;
+
+import java.util.function.Function;
+
+import java.util.stream.Collectors;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ List<String> names =
+
+ Arrays.asList("Jon", "Ajith", "Stefen",
+
+ "Ajith", "Jon", "Ajith");
+
+ Map<String, Long> map =
+
+      names.stream().collect(
+
+ Collectors.groupingBy(
+
+ Function.identity(), Collectors.counting()
+
+          )
+
+      );
+
+ System.out.println(map);
+
+   }
+
+}
+
+Output:
+
+{Stefen=1, Jon=2, Ajith=3}
+
+Java – Stream Collectors example of fetching data as List
+
+import java.util.stream.Collectors;  
+
+import java.util.List;  
+
+import java.util.ArrayList;  
+
+class  Student{  
+
+ int id;
+
+ String name;
+
+ int age;
+
+ public  Student(int id, String name, int age) {
+
+ this.id = id;   
+
+ this.name = name;         
+
+ this.age = age;     
+
+   } 
+
+}  
+
+public  class  Example {
+
+   public  static  void main(String[] args) {   
+
+ List<Student> studentlist = new  ArrayList<Student>();   
+
+      //Adding Students      
+
+      studentlist.add(new  Student(11,"Jony",22));     
+
+      studentlist.add(new  Student(22,"Stefen",18));       
+
+      studentlist.add(new  Student(33,"Lucy",22));       
+
+      studentlist.add(new  Student(44,"Sansa",23));         
+
+      studentlist.add(new  Student(55,"Maggie",18));                 
+
+ //Fetching student names as List       
+
+ List<String> names = studentlist.stream()
+
+                                   .map(n->n.name)
+
+                                   .collect(Collectors.toList());
+
+ System.out.println(names);         
+
+   }  
+
+}
+
+Output:
+
+[Jony, Stefen, Lucy, Sansa, Maggie]
+
+Java Collectors Example – Collecting Data as Set
+
+In this example we are converting the list of students to the stream and then we are applying the Java Stream filter to get the selected records from the stream, after that we are converting that stream to set using Collectors.toSet() method.
+
+import java.util.stream.Collectors;  
+
+import java.util.List;  
+
+import java.util.Set; 
+
+import java.util.ArrayList;  
+
+class  Student{   
+
+ int id;
+
+ String name;
+
+ int age;
+
+ public  Student(int id, String name, int age) {
+
+ this.id = id;         
+
+ this.name = name;       
+
+ this.age = age;     
+
+   } 
+
+}  
+
+public  class  Example {
+
+ public  static  void main(String[] args) {       
+
+ List<Student> studentlist = new  ArrayList<Student>();       
+
+ //Adding Students        
+
+      studentlist.add(new  Student(11,"Jony",22));         
+
+      studentlist.add(new  Student(22,"Stefen",18));         
+
+      studentlist.add(new  Student(33,"Lucy",22));         
+
+      studentlist.add(new  Student(44,"Sansa",23));         
+
+      studentlist.add(new  Student(55,"Maggie",18));                 
+
+ //Fetching student data as a Set       
+
+ Set<Student> students = studentlist.stream()
+
+                           .filter(n-> n.id>22)
+
+                           .collect(Collectors.toSet());
+
+ //Iterating Set       
+
+ for(Student stu : students) {
+
+ System.out.println(stu.id+" "+stu.name+" "+stu.age);
+
+      }           
+
+   } 
+
+}
+
+Output:
+
+44  Sansa  23
+
+33  Lucy  22
+
+55  Maggie  18
+
+Java Collectors Example – Getting the average age of students using averagingInt() method
+
+import java.util.stream.Collectors;  
+
+import java.util.List;  
+
+import java.util.ArrayList; 
+
+class  Student{  
+
+ int id;
+
+ String name;
+
+ int age;
+
+ public  Student(int id, String name, int age) {
+
+ this.id = id;  
+
+ this.name = name; 
+
+ this.age = age;  
+
+   } 
+
+}  
+
+public  class  Example {
+
+ public  static  void main(String[] args) {  
+
+ List<Student> studentlist = new  ArrayList<Student>();  
+
+ //Adding Students 
+
+      studentlist.add(new  Student(11,"Jony",22));  
+
+      studentlist.add(new  Student(22,"Stefen",18));  
+
+      studentlist.add(new  Student(33,"Lucy",22));  
+
+      studentlist.add(new  Student(44,"Sansa",23));  
+
+      studentlist.add(new  Student(55,"Maggie",18));
+
+ //Getting the average Age
+
+ Double avgAge = studentlist.stream()
+
+          .collect(Collectors.averagingInt(s->s.age));  
+
+ System.out.println("Average Age of Students is: "+avgAge);
+
+   }  
+
+}
+
+Output:
+
+Average  Age of Students  is: 20.6
+
+# 4.11 Java 8 StringJoiner
+
+Java 8 StringJoiner with example
+
+In java 8, a new class StringJoiner is introduced in the java.util package. Using this class we can join more than one strings with the specified delimiter, we can also provide prefix and suffix to the final string while joining multiple strings. In this tutorial we will see several examples of StringJoiner class and at the end of this guide, we will see the methods of StringJoiner class.
+
+Java StringJoiner Example 1: Joining strings by specifying delimiter
+
+In this example, we are concatenating multiple strings using StringJoiner. While creating the instance of StringJoiner, we have specified the delimiter as hyphen(-).
+
+import java.util.StringJoiner; 
+
+public  class  Example {
+
+ public  static  void main(String[] args) { 
+
+ // Passing Hyphen(-) as delimiter
+
+ StringJoiner mystring = new  StringJoiner("-");   
+
+ // Joining multiple strings by using add() method 
+
+        mystring.add("Logan"); 
+
+        mystring.add("Magneto"); 
+
+        mystring.add("Rogue"); 
+
+        mystring.add("Storm"); 
+
+ // Displaying the output String
+
+ System.out.println(mystring); 
+
+    } 
+
+}
+
+Output:
+
+Logan-Magneto-Rogue-Storm
+
+Java StringJoiner Example 2: Adding prefix and suffix to the output String
+
+import java.util.StringJoiner; 
+
+public  class  Example {
+
+ public  static  void main(String[] args) { 
+
+ /* Passing comma(,) as delimiter and opening bracket
+
+ * "(" as prefix and closing bracket ")" as suffix
+
+ */
+
+ StringJoiner mystring = new  StringJoiner(",", "(", ")");   
+
+ // Joining multiple strings by using add() method 
+
+        mystring.add("Negan"); 
+
+        mystring.add("Rick"); 
+
+        mystring.add("Maggie"); 
+
+        mystring.add("Daryl"); 
+
+ // Displaying the output String
+
+ System.out.println(mystring); 
+
+    } 
+
+}
+
+Output:
+
+(Negan,Rick,Maggie,Daryl)
+
+StringJoiner Example 3: Merging two StringJoiner objects
+
+import java.util.StringJoiner; 
+
+public  class  Example {
+
+ public  static  void main(String[] args) { 
+
+/* Passing comma(,) as delimiter and opening bracket
+
+* "(" as prefix and closing bracket ")" as suffix
+
+*/
+
+StringJoiner mystring = new  StringJoiner(",", "(", ")");   
+
+mystring.add("Negan"); 
+
+mystring.add("Rick"); 
+
+mystring.add("Maggie"); 
+
+mystring.add("Daryl"); 
+
+System.out.println("First String: "+mystring);
+
+/* Passing hyphen(-) as delimiter and string "pre"
+
+* as prefix and string "suff" as suffix
+
+*/
+
+StringJoiner myanotherstring = new  StringJoiner("-", "pre", "suff");   
+
+myanotherstring.add("Sansa"); 
+
+myanotherstring.add("Imp"); 
+
+myanotherstring.add("Jon"); 
+
+myanotherstring.add("Ned");
+
+System.out.println("Second String: "+myanotherstring);
+
+/* Merging both the strings 
+
+* The important point to note here is that the output string will be
+
+* having the delimiter prefix and suffix of the first string (the string
+
+* which is calling the merge method of StringJoiner)
+
+*/
+
+StringJoiner mergedString = mystring.merge(myanotherstring);
+
+System.out.println(mergedString); 
+
+   } 
+
+}
+
+Output:
+
+First  String: (Negan,Rick,Maggie,Daryl)
+
+Second  String: preSansa-Imp-Jon-Nedsuff
+
+(Negan,Rick,Maggie,Daryl,Sansa-Imp-Jon-Ned)
+
+In the above examples, we have seen the add() and merge() methods of StringJoiner class. Lets see the other methods of this class.
+
+StringJoiner Example: setEmptyValue(), length() and toString() methods
+
+import java.util.StringJoiner; 
+
+public  class  Example {
+
+ public  static  void main(String[] args) { 
+
+ //Comma(,) as delimiter
+
+ StringJoiner mystring = new  StringJoiner(",");  
+
+ /* Using setEmptyValue() method, we can set the default value
+
+         * of a StringJoiner instance, so if the StringJoiner is empty
+
+         * and we print the value of it, this default value will be
+
+         * displayed
+
+         */
+
+        mystring.setEmptyValue("This is a default String"); 
+
+ /* We have not added any string to StringJoiner yet so
+
+         * this should display the default value of StringJoiner
+
+         */
+
+ System.out.println("Default String: "+mystring); 
+
+ // Adding strings to StringJoiner 
+
+        mystring.add("Pineapple"); 
+
+        mystring.add("Banana");
+
+        mystring.add("Orange");
+
+        mystring.add("Kiwi");
+
+        mystring.add("Grapes");
+
+ System.out.println(mystring); 
+
+ /* The length() method of StringJoiner class returns the
+
+         * length of the string (the number of characters in the
+
+         * StringJoiner instance)
+
+         */
+
+ int length = mystring.length();
+
+ System.out.println("Length of the StringJoiner: "+length); 
+
+ /* The toString() method is used for converting a StringJoiner
+
+         *  instance to a String.
+
+         */
+
+ String s = mystring.toString();
+
+ System.out.println(s);  
+
+    } 
+
+}
+
+Output:
+
+Default  String: This  is a default  String
+
+Pineapple,Banana,Orange,Kiwi,Grapes
+
+Length of the StringJoiner: 31
+
+Pineapple,Banana,Orange,Kiwi,Grapes
+
+# 4.12 Java 8 Optional Class
+
+In Java 8, we have the newly introduced Optional class in java.util package. This class is introduced to avoid NullPointerException that we frequently encounters if we do not perform null checks in our code. Using this class we can easily check whether a variable has null value or not and by doing this we can avoid the NullPointerException.
+
+Before we see the example of Optional class, let us see what happens when we don’t use Optional class and do not perform null check.
+
+Java Example: Without using Optional class
+
+In this example, we did not assign the value to the String str and we are trying to get the substring out of it. Since there is no value present in the str, the program is throwing NullPointerException.
+
+public  class  Example {
+
+ public  static  void main(String[] args) { 
+
+ String[] str = new  String[10];  
+
+ //Getting the substring
+
+ String str2 = str[9].substring(2, 5);
+
+ //Displaying substring
+
+ System.out.print(str2); 
+
+    } 
+
+}
+
+Output:
+
+Exception  in thread "main" java.lang.NullPointerException
+
+at Example.main(Example.java:5)
+
+Solution: Using Optional Class
+
+Optional.ofNullable() method of the Optional class, returns a Non-empty Optional if the given object has a value, otherwise it returns an empty Optional.
+
+We can check whether the returned Optional value is empty or non-empty using the isPresent() method.
+
+//Importing Optional class
+
+import java.util.Optional; 
+
+public  class  Example {
+
+ public  static  void main(String[] args) {   
+
+ String[] str = new  String[10];     
+
+ Optional<String> isNull = Optional.ofNullable(str[9]);       
+
+ if(isNull.isPresent()){     
+
+         //Getting the substring          
+
+         String str2 = str[9].substring(2, 5);         
+
+         //Displaying substring           
+
+ System.out.print("Substring is: "+ str2);      
+
+      }     
+
+ else{     
+
+ System.out.println("Cannot get the substring from an empty string");     
+
+      }                
+
+      str[9] = "AgraIsCool";       
+
+ Optional<String> isNull2 = Optional.ofNullable(str[9]);      
+
+ if(isNull2.isPresent()){       
+
+         //Getting the substring            
+
+ String str2 = str[9].substring(2, 5);           
+
+ //Displaying substring           
+
+ System.out.print("Substring is: "+ str2);          
+
+      }         
+
+ else{         
+
+ System.out.println("Cannot get the substring from an empty string");         
+
+      }   
+
+   }  
+
+}
+
+Output:
+
+Cannot  get the substring from an empty string
+
+Substring  is: raI
+
+Example: Optional isPresent() vs ifPresent() methods
+
+In above example, we have seen that by using isPresent() method we can check whether the particular Optional object(or instance) is empty or no-empty.
+
+There is another method present in the Optional class, which only executes if the given Optional object is non-empty, the method is ifPresent(). Lets see an example to understand the difference.
+
+//Importing Optional class
+
+import java.util.Optional;
+
+ public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ //Creating Optional object from a String
+
+ Optional<String> GOT = Optional.of("Game of Thrones");       
+
+ //Optional.empty() creates an empty Optional object       
+
+ Optional<String> nothing = Optional.empty();
+
+ /* isPresent() method: Checks whether the given Optional         
+
+          * Object is empty or not.         
+
+          */       
+
+ if (GOT.isPresent()) {
+
+ System.out.println("Watching Game of Thrones");       
+
+         }
+
+ else {
+
+ System.out.println("I am getting Bored");     
+
+         }
+
+ /* ifPresent() method: It executes only if the given Optional         
+
+          * object is non-empty.         
+
+          */       
+
+ //This will print as the GOT is non-empty       
+
+GOT.ifPresent(s -> System.out.println("Watching GOT is fun!"));               
+
+ //This will not print as the nothing is empty       
+
+nothing.ifPresent(s -> System.out.println("I prefer getting bored"));
+
+   }
+
+}
+
+Output:
+
+Watching  Game of Thrones
+
+Watching GOT is fun!
+
+Java 8 – Optional orElse() and orElseGet() methods
+
+These two methods orElse() and orElseGet() returns the value of Optional Object if it is no empty, if the object is empty then it returns the default value passed to this method as an argument.
+
+//Importing Optional class
+
+import java.util.Optional;
+
+ public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ //Creating Optional object from a String
+
+ Optional<String> GOT = Optional.of("Game of Thrones");       
+
+ //Optional.empty() creates an empty Optional object       
+
+ Optional<String> nothing = Optional.empty();
+
+ //orElse() method
+
+ System.out.println(GOT.orElse("Default Value"));
+
+ System.out.println(nothing.orElse("Default Value"));
+
+ //orElseGet() method
+
+ System.out.println(GOT.orElseGet(() -> "Default Value"));
+
+ System.out.println(nothing.orElseGet(() -> "Default Value"));
+
+    }
+
+}
+
+Output:
+
+Game of Thrones
+
+Default  Value
+
+Game of Thrones
+
+Default  Value
+
+Java 8 – Optional.map and Optional.flatMap
+
+In this example, we will see how Optional works with map and flatMap.
+
+//Importing Optional class
+
+import java.util.Optional; 
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ //Creating Optional object from a String       
+
+ Optional<String> GOT = Optional.of("Game of Thrones");       
+
+ //Optional.empty() creates an empty Optional object       
+
+ Optional<String> nothing = Optional.empty();
+
+ System.out.println(GOT.map(String::toLowerCase));       
+
+ System.out.println(nothing.map(String::toLowerCase));
+
+ Optional<Optional<String>> anotherOptional = Optional.of(Optional.of("BreakingBad"));       
+
+ System.out.println("Value of Optional object"+anotherOptional);       
+
+ System.out.println("Optional.map: "             
+
+          +anotherOptional.map(gender -> gender.map(String::toUpperCase)));       
+
+ //Optional<Optional<String>>    -> flatMap -> Optional<String>       
+
+ System.out.println("Optional.flatMap: "           
+
+          +anotherOptional.flatMap(gender -> gender.map(String::toUpperCase)));
+
+   }
+
+}
+
+Output:
+
+Optional[game of thrones]
+
+Optional.empty
+
+Value of Optional objectOptional[Optional[BreakingBad]]
+
+Optional.map: Optional[Optional[BREAKINGBAD]]
+
+Optional.flatMap: Optional[BREAKINGBAD]
+
+Example: Optional with filter
+
+In the example, we will see how Optional works with filter. To read about filters refer the guide:  [Java 8 filters](#part0000.xhtml__4.6_Java_8)
+
+//Importing Optional class
+
+import java.util.Optional; 
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+ //Creating Optional object from a String       
+
+ Optional<String> GOT = Optional.of("Game of Thrones");             
+
+ /* Filter returns an empty Optional instance if the output doesn't         
+
+       * contain any value, else it returns the Optional object of the          
+
+       * given value.         
+
+       */       
+
+ System.out.println(GOT.filter(s -> s.equals("GAME OF THRONES")));        
+
+ System.out.println(GOT.filter(s -> s.equalsIgnoreCase("GAME OF THRONES")));
+
+   }
+
+}
+
+Output:
+
+Optional.empty
+
+Optional[Game of Thrones]
+
+# 4.13 Java 8 – Arrays Parallel Sort
+
+Java 8 introduced a new method parallelSort() in the Arrays class of java.util package. This method is introduced to support the parallel sorting of array elements.
+
+Algorithm of parallel sorting:
+
+1\. The given array is divided into the sub arrays and the sub arrays are further divided into the their sub arrays, this happens until the sub array reaches a minimum granularity.
+
+2\. The sub arrays are sorted individually by multiple threads.
+
+3\. The sorted sub arrays are merged.
+
+Advantage of Parallel Sort Over Simple Sort:
+
+The parallelSort() method uses the concept of multithreading which makes it much faster compared to the normal sort when there are lot of elements.
+
+Example 1: Sorting Primitive Data types with Parallel Sort
+
+import java.util.Arrays;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+int numbers[] = {22, 89, 1, 32, 19, 5};
+
+//Parallel Sort method for sorting int array
+
+Arrays.parallelSort(numbers);
+
+//converting the array to stream and displaying using forEach
+
+Arrays.stream(numbers).forEach(n->System.out.print(n+" "));
+
+    }
+
+}
+
+Output:
+
+1  5  19  22  32  89
+
+Example 2: Parallel Sort by specifying the start and end index
+
+We can also specify the start and end for the sorting, in this case the sub array starting from the start index and ending at the end index is sorted, the rest of the array is ignored and doesn’t get sorted.
+
+import java.util.Arrays;
+
+public  class  Example {
+
+ public  static  void main(String[] args) {
+
+int numbers[] = {22, 89, 1, 32, 19, 5};
+
+/* Specifying the start and end index. The start index is
+
+* 1 here and the end index is 5\. which means the the elements
+
+* starting from index 1 till index 5 would be sorted.
+
+*/
+
+Arrays.parallelSort(numbers, 1, 5);
+
+//converting the array to stream and displaying using forEach
+
+Arrays.stream(numbers).forEach(n->System.out.print(n+" "));
+
+   }
+
+}
+
+Output:
+
+22  1  19  32  89  5
+
+### Java Input/Output Tutorials
+
+# 5.1 Create a File in Java
+
+In this tutorial we will see how to create a file in Java using createNewFile() method. This method creates an empty file, if the file doesn’t exist at the specified location and returns true. If the file is already present then this method returns false. It throws:
+
+IOException – If an Input/Output error occurs during file creation.
+
+SecurityException–
+
+If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method denies write access to the file.
+
+Complete code:
+
+The below code would create a txt file named “newfile.txt” in C drive. You can change the path in the below code in order to create the file in different directory or in different drive.
+
+package javabook.com;
+
+import java.io.File;
+
+import java.io.IOException;
+
+public  class  CreateFileDemo
+
+{
+
+ public  static  void main( String[] args )
+
+   {
+
+ try {
+
+ File file = new  File("C:\\newfile.txt");
+
+ /*If file gets created then the createNewFile()
+
+      * method would return true or if the file is
+
+      * already present it would return false
+
+      */
+
+ boolean fvar = file.createNewFile();
+
+ if (fvar){
+
+ System.out.println("File has been created successfully");
+
+     }
+
+ else{
+
+ System.out.println("File already present at the specified location");
+
+     }
+
+ } catch (IOException e) {
+
+ System.out.println("Exception Occurred:");
+
+        e.printStackTrace();
+
+  }
+
+   }
+
+}
+
+# 5.2 Read file in Java
+
+How to read file in Java – BufferedInputStream
+
+In this example we will see how to read the file in Java using FileInputStream and BufferedInputStream. Here are the detailed steps that we have taken in the below code:
+
+1) Created a File instance by providing the full path of the file(which we will read) during File Object creation.
+
+2) Passed the file instance to the FileInputStream which opens a connection to the actual file, the file named by the File object file in the file system.
+
+3) Passed the FileInputStream instance to BufferedInputStream which creates a BufferedInputStream and saves its argument, the input stream in, for later use. An internal buffer array is created and stored in buf using which the read operation gives good performance as the content is readily available in the buffer.
+
+4) Used while loop to read the file. Method available() is used for checking the end of the file as it returns 0 when the pointer reaches to the end of the file. Read the file content using read() method of FileInputStream.
+
+package javabook.com;
+
+import java.io.*;
+
+public  class  ReadFileDemo {
+
+ public  static  void main(String[] args) {        
+
+ //Specify the path of the file here
+
+ File file = new  File("C://myfile.txt");
+
+ BufferedInputStream bis = null;
+
+ FileInputStreamfis= null;
+
+ try
+
+      {
+
+ //FileInputStream to read the file
+
+fis = new  FileInputStream(file);
+
+ /*Passed the FileInputStream to BufferedInputStream
+
+           *For Fast read using the buffer array.*/
+
+bis = new  BufferedInputStream(fis);
+
+ /*available() method of BufferedInputStream
+
+           * returns 0 when there are no more bytes
+
+           * present in the file to be read*/
+
+ while( bis.available() > 0 ){
+
+ System.out.print((char)bis.read());
+
+          }
+
+       }catch(FileNotFoundException fnfe)
+
+        {
+
+ System.out.println("The specified file not found" + fnfe);
+
+        }
+
+ catch(IOException ioe)
+
+        {
+
+ System.out.println("I/O Exception: " + ioe);
+
+        }
+
+ finally
+
+        {
+
+ try{
+
+ if(bis != null && fis!=null)
+
+               {
+
+           fis.close();
+
+                  bis.close();
+
+               }     
+
+             }catch(IOException ioe)
+
+              {
+
+ System.out.println("Error in InputStream close(): " + ioe);
+
+              }        
+
+        }
+
+   }   
+
+}
+
+# 5.3 Write to a file in java
+
+How to write to a file in java using FileOutputStream
+
+we will see how to write to a file in java using FileOutputStream. We would be using write() method of FileOutputStream to write the content to the specified file. Here is the signature of write() method.
+
+public  void write(byte[] b) throws  IOException
+
+It writes b.length bytes from the specified byte array to this file output stream. As you can see this method needs array of bytes in order to write them into a file. Hence we would need to convert our content into array of bytes before writing it into the file.
+
+Complete Code: Writing to a File
+
+In the below example we are writing a String to a file. To convert the String into an array of bytes, we are using getBytes() method of String class.
+
+import java.io.File;
+
+import java.io.FileOutputStream;
+
+import java.io.IOException;
+
+public  class  WriteFileDemo {
+
+ public  static  void main(String[] args) {
+
+ FileOutputStream fos = null;
+
+ File file;
+
+ String mycontent = "This is my Data which needs" +
+
+ " to be written into the file";
+
+ try {
+
+ //Specify the file path here
+
+file = new  File("C:/myfile.txt");
+
+fos = new  FileOutputStream(file);
+
+ /* This logic will check whether the file
+
+   * exists or not. If the file is not found
+
+   * at the specified location it would create
+
+   * a new file*/
+
+ if (!file.exists()) {
+
+     file.createNewFile();
+
+  }
+
+ /*String content cannot be directly written into
+
+   * a file. It needs to be converted into bytes
+
+   */
+
+ byte[] bytesArray = mycontent.getBytes();
+
+  fos.write(bytesArray);
+
+  fos.flush();
+
+ System.out.println("File Written Successfully");
+
+       }
+
+ catch (IOException ioe) {
+
+  ioe.printStackTrace();
+
+       }
+
+ finally {
+
+ try {
+
+ if (fos != null)
+
+     {
+
+fos.close();
+
+     }
+
+          }
+
+ catch (IOException ioe) {
+
+ System.out.println("Error in closing the Stream");
+
+  }
+
+       }
+
+   }
+
+}
+
+Output:
+
+File  Written  Successfully
+
+# 5.4 Append to a file in java
+
+Append to a file in java using BufferedWriter, PrintWriter, FileWriter
+
+There are two ways to append:
+
+1) Using FileWriter and BufferedWriter: In this approach we will be having the content in one of more Strings and we will be appending those Strings to the file. The file can be appended using FileWriter alone however using BufferedWriter improves the performance as it maintains a buffer.
+
+2) Using PrintWriter: This is one of best way to append content to a file. Whatever you write using PrintWriter object would be appended to the File.
+
+1) Append content to File using FileWriter and BufferedWriter
+
+import java.io.File;
+
+import java.io.FileWriter;
+
+import java.io.BufferedWriter;
+
+import java.io.IOException;
+
+class  AppendFileDemo
+
+{
+
+ public  static  void main( String[] args )
+
+   {
+
+ try{
+
+ String content = "This is my content which would be appended " +
+
+ "at the end of the specified file";
+
+ //Specify the file name and path here
+
+ File file =new  File("C://myfile.txt");
+
+ /* This logic is to create the file if the
+
+ * file is not already present
+
+ */
+
+ if(!file.exists()){
+
+    file.createNewFile();
+
+ }
+
+ //Here true is to append the content to file
+
+ FileWriter fw = new  FileWriter(file,true);
+
+ //BufferedWriter writer give better performance
+
+ BufferedWriter bw = new  BufferedWriter(fw);
+
+ bw.write(content);
+
+ //Closing BufferedWriter Stream
+
+ bw.close();
+
+System.out.println("Data successfully appended at the end of file");
+
+      }catch(IOException ioe){
+
+ System.out.println("Exception occurred:");
+
+ ioe.printStackTrace();
+
+       }
+
+   }
+
+}
+
+Output:
+
+Data successfully appended at the end of file
+
+Lets say myfile.txt content was:
+
+This  is the already present content of my file
+
+After running the above program the content would be:
+
+This  is the already present content of my fileThis is  my content which
+
+would be appended at the end of the specified file
+
+2) Append content to File using PrintWriter
+
+PrintWriter gives you more flexibility. Using this you can easily format the content which is to be appended to the File.
+
+import java.io.File;
+
+import java.io.FileWriter;
+
+import java.io.PrintWriter;
+
+import java.io.BufferedWriter;
+
+import java.io.IOException;
+
+class  AppendFileDemo2
+
+{
+
+ public  static  void main( String[] args )
+
+   {
+
+ try{
+
+ File file =new  File("C://myfile.txt");
+
+  if(!file.exists()){
+
+ file.createNewFile();
+
+   }
+
+  FileWriter fw = new  FileWriter(file,true);
+
+  BufferedWriter bw = new  BufferedWriter(fw);
+
+  PrintWriter pw = new  PrintWriter(bw);
+
+ //This will add a new line to the file content
+
+   pw.println("");
+
+ /* Below three statements would add three
+
+           * mentioned Strings to the file in new lines.
+
+           */
+
+   pw.println("This is first line");
+
+   pw.println("This is the second line");
+
+   pw.println("This is third line");
+
+   pw.close();
+
+ System.out.println("Data successfully appended at the end of file");
+
+       }catch(IOException ioe){
+
+  System.out.println("Exception occurred:");
+
+    ioe.printStackTrace();
+
+      }
+
+   }
+
+}
+
+Output:
+
+Data successfully appended at the end of file
+
+Lets say myfile.txt content was:
+
+This  is the already present content of my file
+
+After running the above program the content would be:
+
+This  is the already present content of my file
+
+This  is first line
+
+This  is the second line
+
+This  is third line
+
+# 5.5 Delete file in Java
+
+How to delete file in Java – delete() Method
+
+We will using the delete() method for file deletion.
+
+public boolean delete()
+
+This method returns true if the specified File deleted successfully otherwise it returns false.
+
+Here is the complete code:
+
+import java.io.File;
+
+public  class  DeleteFileJavaDemo
+
+{
+
+ public  static  void main(String[] args)
+
+   {
+
+ try{
+
+ //Specify the file name and path
+
+ File file = new  File("C:\\myfile.txt");
+
+ /*the delete() method returns true if the file is
+
+          * deleted successfully else it returns false
+
+          */
+
+ if(file.delete()){
+
+  System.out.println(file.getName() + " is deleted!");
+
+         }else{
+
+  System.out.println("Delete failed: File didn't delete");
+
+   }
+
+       }catch(Exception e){
+
+ System.out.println("Exception occurred");
+
+    e.printStackTrace();
+
+ }
+
+    }
+
+}
+
+Output:
+
+myfile.txt is deleted!
+
+# 5.6 Compress a File in GZIP Format
+
+The below code would compress a specified file to GZip format. In the below example we have a text file in B drive under “Java” Folder and we are compressing and generating the GZip file in the same folder.
+
+import java.io.FileInputStream;
+
+import java.io.FileOutputStream;
+
+import java.io.IOException;
+
+import java.util.zip.GZIPOutputStream;
+
+public  class  GZipExample
+
+{
+
+ public  static  void main( String[] args )
+
+  {
+
+ GZipExample zipObj = new  GZipExample();
+
+    zipObj.gzipMyFile();
+
+  }
+
+ public  void gzipMyFile(){
+
+ byte[] buffer = new  byte[1024];
+
+ try{
+
+ //Specify Name and Path of Output GZip file here
+
+ GZIPOutputStream gos =
+
+ new  GZIPOutputStream(new  FileOutputStream("B://Java/Myfile.gz"));
+
+ //Specify location of Input file here
+
+ FileInputStream fis =
+
+ new  FileInputStream("B://Java/Myfile.txt");
+
+ //Reading from input file and writing to output GZip file
+
+ int length;
+
+ while ((length = fis.read(buffer)) > 0) {
+
+ /* public void write(byte[] buf, int off, int len):
+
+         * Writes array of bytes to the compressed output stream.
+
+         * This method will block until all the bytes are written.
+
+         * Parameters:
+
+         * buf - the data to be written
+
+         * off - the start offset of the data
+
+         * len - the length of the data
+
+         */
+
+gos.write(buffer, 0, length);
+
+      }
+
+      fis.close();
+
+ /* public void finish(): Finishes writing compressed
+
+       * data to the output stream without closing the
+
+       * underlying stream.
+
+       */
+
+      gos.finish();
+
+      gos.close();
+
+ System.out.println("File Compressed!!");
+
+    }catch(IOException ioe){
+
+        ioe.printStackTrace();
+
+     }
+
+  }
+
+}
+
+Output:
+
+File  Compressed!!
+
+# 5.7 Copy a File to another File
+
+In order to copy a file, first we can read the file using FileInputStream and then we can write the read content to the output file using FileOutputStream.
+
+Example
+
+The below code would copy the content of “MyInputFile.txt” to the “MyOutputFile.txt” file. If “MyOutputFile.txt” doesn’t exist then the program would create the file first and then it would copy the content.
+
+import java.io.File;
+
+import java.io.FileInputStream;
+
+import java.io.FileOutputStream;
+
+import java.io.IOException;
+
+public  class  CopyExample
+
+{
+
+ public  static  void main(String[] args)
+
+    {
+
+ FileInputStream instream = null;
+
+FileOutputStream outstream = null;
+
+ try{
+
+  File infile =new  File("C:\\MyInputFile.txt");
+
+  File outfile =new  File("C:\\MyOutputFile.txt");
+
+ instream = new  FileInputStream(infile);
+
+ outstream = new  FileOutputStream(outfile);
+
+  byte[] buffer = new  byte[1024];
+
+  int length;
+
+  /*copying the contents from input stream to
+
+      * output stream using read and write methods
+
+      */
+
+  while ((length = instream.read(buffer)) > 0){
+
+  outstream.write(buffer, 0, length);
+
+     }
+
+  //Closing the input/output file streams
+
+     instream.close();
+
+     outstream.close();
+
+  System.out.println("File copied successfully!!");
+
+ }catch(IOException ioe){
+
+ ioe.printStackTrace();
+
+ }
+
+    }
+
+}
+
+Output:
+
+File copied successfully!!
+
+The methods used in the above program are:
+
+read() method
+
+public  int read(byte[] b) throws  IOException
+
+Reads up to b.length bytes of data from this input stream into an array of bytes. This method blocks until some input is available. It returns total number of bytes read into the buffer, or -1 if there is no more data because the end of the file has been reached. In order to make this method work in our program, we have created a byte array “buffer” and reading the content of input file to the same. Since this method throws IOException, we have put the “read file” code inside try-catch block in order to handle the exception.
+
+write() method
+
+public  void write(byte[] b,
+
+ int off,
+
+ int length)
+
+ throws  IOException
+
+Writes length bytes from the specified byte array starting at offset off to this file output stream.             
+
+Tweaks:
+
+If your input and outfile files are not in the same drive then you can specify the drive while creating the file object. For example if your input file is in C drive and output file is in D drive then you can create the file object like this:
+
+File infile =new  File("C:\\MyInputFile.txt");
+
+File outfile =new  File("D:\\MyOutputFile.txt");
+
+# 5.8 Get the last modified date of a file
+
+How to get the last modified date of a file in java
+
+Here we will learn how to get the last modified date of a file in java. In order to do this we can use the lastModified() method of File class. Following is the signature of this method.
+
+public  long lastModified()
+
+It returns the time that the file denoted by this abstract pathname was last modified. The value returned by this method is in milliseconds so in order to make it readable, we can format the output using SimpleDateFormat.
+
+Complete code:
+
+Here we are fetching the last modified date of file “Myfile.txt” which is present in drive “C”. Since the value returned by method is not readable, we are using format() method of SimpleDateFormat class to format it.
+
+import java.io.File;
+
+import java.text.SimpleDateFormat;
+
+public  class  LastModifiedDateExample
+
+{
+
+ public  static  void main(String[] args)
+
+    {
+
+ //Specify the file path and name
+
+File file = new  File("C:\\Myfile.txt");
+
+ SimpleDateFormat sdf = new  SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+System.out.println("Last Modified Date: " + sdf.format(file.lastModified()));
+
+    }
+
+}
+
+Output:
+
+Last  Modified  Date: 01/03/2014  22:41:49
+
+We can format and display the output in any desired format. For example if we use the following pattern:
+
+SimpleDateFormat sdf2 = new  SimpleDateFormat("MM-dd-yy HH:mm a");
+
+System.out.println("Last Modified Date: " + sdf2.format(file.lastModified()));
+
+We will get the below output for above pattern:
+
+Last  Modified  Date: 01-03-14  22:41 PM
+
+# 5.9 Make a File Read Only in Java
+
+How to make a File Read Only in Java
+
+Making a file read only is very easy in java. In this tutorial, we will learn following three things.
+
+1) How to make a file read only
+
+2) How to check whether the existing file is in read only mode or not
+
+3) How to make a read only file writable in java.
+
+1) Changing file attributes to read only
+
+To make a file read only, we can use setReadOnly() method of File class. It returns the boolean value which we can further use to verify whether the operation got successful or not, same way as I did in the below program. As you can see that in the below program, I am changing the file attributes to read only of file “Myfile.txt” which is present in “C drive” of my computer.
+
+import java.io.File;
+
+import java.io.IOException;
+
+public  class  ReadOnlyChangeExample
+
+{
+
+ public  static  void main(String[] args) throws  IOException
+
+    {
+
+ File myfile = new  File("C://Myfile.txt");
+
+ //making the file read only
+
+ boolean flag = myfile.setReadOnly();
+
+ if (flag==true)
+
+ {
+
+  System.out.println("File successfully converted to Read only mode!!");
+
+ }
+
+ else
+
+ {
+
+  System.out.println("Unsuccessful Operation!!");
+
+ }
+
+    }
+
+}
+
+Output:
+
+File successfully converted to Read only mode!!
+
+2) Check whether the file is writable or read only
+
+In order to check the file attributes, we can use canWrite() method of file class. This methods returns true if the file is writable else it returns false. As I am performing the operation on the file “Myfile.txt” which I already set to read only in the previous program, I am getting output as “File is read only”.
+
+import java.io.File;
+
+import java.io.IOException;
+
+public  class  CheckAttributes
+
+{
+
+ public  static  void main(String[] args) throws  IOException
+
+    {
+
+ File myfile = new  File("C://Myfile.txt");
+
+ if (myfile.canWrite())
+
+ {
+
+  System.out.println("File is writable.");
+
+ }
+
+ else
+
+ {
+
+  System.out.println("File is read only.");
+
+ }
+
+    }
+
+}
+
+Output:
+
+File  is read only.
+
+3) How to make a read only file writable in java
+
+To make a read only file to writable file, we can use setWritable() method. This method can also be used to make a file read only.
+
+file.setWritable(true): To make file writable.
+
+file.setWritable(false): To make file read only.
+
+import java.io.File;
+
+import java.io.IOException;
+
+public  class  MakeWritable
+
+{
+
+ public  static  void main(String[] args) throws  IOException
+
+    {
+
+ File myfile = new  File("C://Myfile.txt");
+
+ //changing the file mode to writable
+
+ myfile.setWritable(true);
+
+ if (myfile.canWrite())
+
+ {
+
+  System.out.println("File is writable.");
+
+ }
+
+ else
+
+ {
+
+  System.out.println("File is read only.");
+
+ }
+
+    }
+
+}
+
+Output:
+
+File  is writable.
+
+# 5.10 Check if a File is hidden in Java
+
+How to check if a File is hidden in Java
+
+In this tutorial we would learn how to write a program to check whether a particular file is hidden or not. We would be using isHidden() method of File class to perform this check. This method returns a boolean value (true or false), if file is hidden then this method returns true otherwise it returns a false value.
+
+Here is the complete code:
+
+import java.io.File;
+
+import java.io.IOException;
+
+public  class  HiddenPropertyCheck
+
+{
+
+ public  static  void main(String[] args) throws  IOException, SecurityException
+
+    {
+
+ // Provide the complete file path here
+
+ File file = new  File("c:/myfile.txt");
+
+ if(file.isHidden()){
+
+ System.out.println("The specified file is hidden");
+
+ }else{
+
+ System.out.println("The specified file is not hidden");
+
+ }
+
+    }
+
+}
+
+public static boolean isHidden(Path path) throws IOException             
+
+Tells whether or not a file is considered hidden. The exact definition of hidden is platform or provider dependent. On UNIX for example a file is considered to be hidden if its name begins with a period character (‘.’). On Windows a file is considered hidden if it isn’t a directory and the DOS hidden attribute is set.
+
+Depending on the implementation this method may require to access the file system to determine if the file is considered hidden.
+
+Parameters:
+
+path – the path to the file to test
+
+Returns:
+
+true if the file is considered hidden
+
+Throws:
+
+IOException – if an I/O error occurs
+
+SecurityException – In the case of the default provider, and a security manager is installed, the checkRead method is invoked to check read access to the file.
+
+### Java Programs
+
+Note:
+
+Hey guys this java program tutorial is only for to get the additional knowledge of the program that was explained with examples like febonacci series,factorial...etc.This programs are not related to the above explained tutorial in core java.
+
+If you are willing to read this tutorial for the first time of core java you must learn the basics of this programs with examples which i was explained clearly in my  PART 1 book in CORE JAVA AND OOPS.so read it from there and finally comes to this program to get clear idea of this java programs.
+
+# 6.1 Java program to Display Fibonacci Series
+
+Java Program to Display Fibonacci Series using loops
+
+The Fibonacci sequence is a series of numbers where a number is the sum of previous two numbers. Starting with 0 and 1, the sequence goes 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on. Here we will write three programs to print fibonacci series 1) using for loop 2) using while loop 3) based on the number entered by user.
+
+To understand these programs, you should have the knowledge of for loop and while loop.
+
+Example 1: Program to print fibonacci series using for loop
+
+public  class  JavaExample {
+
+ public  static  void main(String[] args) {
+
+ int count = 7, num1 = 0, num2 = 1;
+
+ System.out.print("Fibonacci Series of "+count+" numbers:");
+
+ for (int i = 1; i <= count; ++i)
+
+        {
+
+ System.out.print(num1+" ");
+
+ /* On each iteration, we are assigning second number
+
+             * to the first number and assigning the sum of last two
+
+             * numbers to the second number
+
+             */
+
+ int sumOfPrevTwo = num1 + num2;
+
+            num1 = num2;
+
+            num2 = sumOfPrevTwo;
+
+        }
+
+    }
+
+}
+
+Output:
+
+Fibonacci  Series of 7 numbers:0  1  1  2  3  5  8
+
+Example 2: Displaying Fibonacci Sequence using while loop
+
+public  class  JavaExample {
+
+ public  static  void main(String[] args) {
+
+ int count = 7, num1 = 0, num2 = 1;
+
+ System.out.print("Fibonacci Series of "+count+" numbers:");
+
+ int i=1;
+
+ while(i<=count)
+
+        {
+
+ System.out.print(num1+" ");
+
+ int sumOfPrevTwo = num1 + num2;
+
+            num1 = num2;
+
+            num2 = sumOfPrevTwo;
+
+            i++;
+
+        }
+
+    }
+
+}
+
+Output:
+
+Fibonacci  Series of 7 numbers:0  1  1  2  3  5  8
+
+Example 3: Program to display the fibonacci series based on the user input             
+
+This program display the sequence based on the number entered by user. For example – if user enters 10 then this program displays the series of 10 numbers.
+
+import java.util.Scanner;
+
+public  class  JavaExample {
+
+ public  static  void main(String[] args) {
+
+ int count, num1 = 0, num2 = 1;
+
+ System.out.println("How may numbers you want in the sequence:");
+
+ Scanner scanner = new  Scanner(System.in);
+
+        count = scanner.nextInt();
+
+        scanner.close();
+
+ System.out.print("Fibonacci Series of "+count+" numbers:");
+
+ int i=1;
+
+ while(i<=count)
+
+        {
+
+ System.out.print(num1+" ");
+
+ int sumOfPrevTwo = num1 + num2;
+
+            num1 = num2;
+
+            num2 = sumOfPrevTwo;
+
+            i++;
+
+        }
+
+    }
+
+}
+
+Output:
+
+How may numbers you want in the sequence:
+
+6
+
+Fibonacci  Series of 6 numbers:0  1  1  2  3  5
+
+# 6.2 Java program to Find Factorial
+
+Java Program to Find Factorial using For and While loop
+
+We will write three java programs to find factorial of a number. 1) using for loop 2) using while loop 3) finding factorial of a number entered by user. Before going through the program, lets understand what is factorial: Factorial of a number n is denoted as n! and the value of n! is: 1 * 2 * 3 * … (n-1) * n.
+
+The same logic we have implemented in our programs using loops. To understand these programs you should have a basic knowledge of following topics of java tutorials:
+
+*   For loop in Java
+*   Java – while loop
+
+Example: Finding factorial using for loop
+
+public  class  JavaExample {
+
+ public  static  void main(String[] args) {
+
+ //We will find the factorial of this number
+
+ int number = 5;
+
+ long fact = 1;
+
+ for(int i = 1; i <= number; i++)
+
+        {
+
+            fact = fact * i;
+
+        }
+
+ System.out.println("Factorial of "+number+" is: "+fact);
+
+    }
+
+}
+
+Output:
+
+Factorial of 5  is: 120
+
+Example 2: Finding Factorial using while loop
+
+public  class  JavaExample {
+
+ public  static  void main(String[] args) {
+
+ //We will find the factorial of this number
+
+ int number = 5;
+
+ long fact = 1;
+
+ int i = 1;
+
+ while(i<=number)
+
+        {
+
+            fact = fact * i;
+
+            i++;
+
+        }
+
+ System.out.println("Factorial of "+number+" is: "+fact);
+
+    }
+
+}
+
+Output:
+
+Factorial of 5  is: 120
+
+Example 3: Finding factorial of a number entered by user
+
+Program finds the factorial of input number using while loop.
+
+import java.util.Scanner;
+
+public  class  JavaExample {
+
+ public  static  void main(String[] args) {
+
+ //We will find the factorial of this number
+
+ int number;
+
+ System.out.println("Enter the number: ");
+
+ Scanner scanner = new  Scanner(System.in);
+
+        number = scanner.nextInt();
+
+        scanner.close();
+
+ long fact = 1;
+
+ int i = 1;
+
+ while(i<=number)
+
+        {
+
+            fact = fact * i;
+
+            i++;
+
+        }
+
+ System.out.println("Factorial of "+number+" is: "+fact);
+
+    }
+
+}
+
+Output:
+
+Enter the number:
+
+6
+
+Factorial of 6  is: 720
+
+# 6.3 swap two numbers using bitwise operator
+
+Java Program to Swap two numbers using Bitwise XOR Operator
+
+This java program swaps two numbers using bitwise XOR operator. Before going though the program, lets see what is a bitwise XOR operator: A bitwise XOR compares corresponding bits of two operands and returns 1 if they are equal and 0 if they are not equal. For example:
+
+num1 = 11; /* equal to 00001011*/
+
+num2 = 22; /* equal to 00010110 */
+
+num1 ^ num2 compares corresponding bits of num1 and num2 and generates 1 if they are not equal, else it returns 0\. In our example it would return 29 which is equivalent to 00011101
+
+Let us write this in a Java program:
+
+Example:
+
+import java.util.Scanner;
+
+public  class  JavaExample
+
+{
+
+ public  static  void main(String args[])
+
+    {
+
+ int num1, num2;
+
+ Scanner scanner = new  Scanner(System.in);
+
+ System.out.print("Enter first number:");
+
+        num1 = scanner.nextInt();
+
+ System.out.print("Enter second number:");
+
+        num2 = scanner.nextInt();
+
+ /* To make you understand, lets assume I am going
+
+         * to enter value of first number as 10 and second
+
+         * as 5. Binary equivalent of 10 is 1010 and 5 is
+
+         * 0101
+
+         */
+
+ //num1 becomes 1111 = 15
+
+        num1 = num1 ^ num2;
+
+ //num2 becomes 1010 = 10
+
+        num2 = num1 ^ num2;
+
+ //num1 becomes 0101 = 5
+
+        num1 = num1 ^ num2;
+
+        scanner.close();
+
+ System.out.println("The First number after swapping:"+num1);
+
+ System.out.println("The Second number after swapping:"+num2);
+
+    }
+
+}
+
+Output:
+
+Enter first number:10
+
+Enter second number:5
+
+The  First number after swapping:5
+
+The  Second number after swapping:10
+
+# 6.4 Find largest of three numbers using ternary operator
+
+Java Program to find largest of three numbers using Ternary Operator
+
+This program finds the largest of three numbers using ternary operator. Before going through the program, lets understand what is a ternary Operator:
+
+Ternary operator evaluates a boolean expression and assign the value based on the result.
+
+variable num = (expression) ? value if  true : value if  false
+
+If the expression results true then the first value before the colon (:) is assigned to the variable num else the second value is assigned to the num.
+
+Example: Program to find the largest number using ternary operator
+
+In this Program, we have used the ternary operator twice to compare the three numbers, however you can compare all three numbers in one statement using ternary operator like this:
+
+result = num3 > (num1>num2 ? num1:num2) ? num3:((num1>num2) ? num1:num2);             
+
+However if you are finding it difficult to understand then use it like I have shown in the example below:
+
+import java.util.Scanner;
+
+public  class  JavaExample
+
+{
+
+ public  static  void main(String[] args)
+
+    {
+
+ int num1, num2, num3, result, temp;
+
+ /* Scanner is used for getting user input.
+
+         * The nextInt() method of scanner reads the
+
+         * integer entered by user.
+
+         */
+
+ Scanner scanner = new  Scanner(System.in);
+
+ System.out.println("Enter First Number:");
+
+        num1 = scanner.nextInt();
+
+ System.out.println("Enter Second Number:");
+
+        num2 = scanner.nextInt();
+
+ System.out.println("Enter Third Number:");
+
+        num3 = scanner.nextInt();
+
+        scanner.close();
+
+ /* In first step we are comparing only num1 and
+
+         * num2 and storing the largest number into the
+
+         * temp variable and then comparing the temp and
+
+         * num3 to get final result.
+
+         */
+
+        temp = num1>num2 ? num1:num2;
+
+        result = num3>temp ? num3:temp;
+
+ System.out.println("Largest Number is:"+result);
+
+    }
+
+}
+
+Output:
+
+Enter  First  Number:
+
+89
+
+Enter  Second  Number:
+
+109
+
+Enter  Third  Number:
+
+8
+
+Largest  Number  is:109
+
+# 6.5 Java program to check leap year
+
+Java Program to check Leap Year
+
+Here we will write a java program to check whether the input year is a leap year or not. Before we see the program, lets see how to determine whether a year is a leap year mathematically:
+
+To determine whether a year is a leap year, follow these steps:
+
+1\. If the year is evenly divisible by 4, go to step 2\. Otherwise, go to step 5.
+
+2\. If the year is evenly divisible by 100, go to step 3\. Otherwise, go to step 4.
+
+3\. If the year is evenly divisible by 400, go to step 4\. Otherwise, go to step 5.
+
+4\. The year is a leap year (it has 366 days).
+
+5\. The year is not a leap year (it has 365 days).
+
+Example: Program to check whether the input year is leap or not
+
+Here we are using Scanner class to get the input from user and then we are using if-else statements to write the logic to check leap year. To understand this program, you should have the knowledge of following concepts of Core Java Tutorial:
+
+→ If-else statement
+
+→ Read input number in Java program
+
+import java.util.Scanner;
+
+public  class  Demo {
+
+ public  static  void main(String[] args) {
+
+ int year;
+
+ Scanner scan = new  Scanner(System.in);
+
+ System.out.println("Enter any Year:");
+
+ year = scan.nextInt();
+
+ scan.close();
+
+ boolean isLeap = false;
+
+ if(year % 4 == 0)
+
+        {
+
+ if( year % 100 == 0)
+
+            {
+
+ if ( year % 400 == 0)
+
+isLeap = true;
+
+ else
+
+isLeap = false;
+
+            }
+
+ else
+
+isLeap = true;
+
+        }
+
+ else {
+
+isLeap = false;
+
+        }
+
+ if(isLeap==true)
+
+ System.out.println(year + " is a Leap Year.");
+
+ else
+
+ System.out.println(year + " is not a Leap Year.");
+
+    }
+
+}
+
+Output:
+
+Enter any Year:
+
+2001
+
+2001  is  not a Leap  Year.
+
+# 6.6 Java Program to Reverse an input number
+
+Java program to reverse a number using for, while and recursion
+
+There are three ways to reverse a number in Java.
+
+1) Using while loop
+
+2) Using for loop
+
+3) Using recursion
+
+4) Reverse the number without user interaction
+
+Program 1: Reverse a number using while Loop
+
+The program will prompt user to input the number and then it will reverse the same number using while loop.
+
+import java.util.Scanner;
+
+class  ReverseNumberWhile
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ int num=0;
+
+ int reversenum =0;
+
+ System.out.println("Input your number and press enter: ");
+
+ //This statement will capture the user input
+
+ Scanner  in = new  Scanner(System.in);
+
+ //Captured input would be stored in number num
+
+num = in.nextInt();
+
+ //While Loop: Logic to find out the reverse number
+
+ while( num != 0 )
+
+      {
+
+reversenum = reversenum * 10;
+
+          reversenum = reversenum + num%10;
+
+          num = num/10;
+
+      }
+
+ System.out.println("Reverse of input number is: "+reversenum);
+
+   }
+
+}
+
+Output:
+
+Input your number and press enter:
+
+145689
+
+Reverse of input number is: 986541
+
+Program 2: Reverse a number using for Loop
+
+import java.util.Scanner;
+
+class  ForLoopReverseDemo
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ int num=0;
+
+ int reversenum =0;
+
+ System.out.println("Input your number and press enter: ");
+
+ //This statement will capture the user input
+
+ Scanner  in = new  Scanner(System.in);
+
+ //Captured input would be stored in number num
+
+num = in.nextInt();
+
+ /* for loop: No initialization part as num is already
+
+       * initialized and no increment/decrement part as logic
+
+       * num = num/10 already decrements the value of num
+
+       */
+
+ for( ;num != 0; )
+
+      {
+
+reversenum = reversenum * 10;
+
+          reversenum = reversenum + num%10;
+
+          num = num/10;
+
+      }
+
+ System.out.println("Reverse of specified number is: "+reversenum);
+
+   }
+
+}
+
+Output:
+
+Input your number and press enter:
+
+56789111
+
+Reverse of specified number is: 11198765
+
+Program 3: Reverse a number using recursion
+
+import java.util.Scanner;
+
+class  RecursionReverseDemo
+
+{
+
+ //A method for reverse
+
+ public  static  void reverseMethod(int number) {
+
+ if (number < 10) {
+
+ System.out.println(number);
+
+ return;
+
+       }
+
+ else {
+
+ System.out.print(number % 10);
+
+ //Method is calling itself: recursion
+
+           reverseMethod(number/10);
+
+       }
+
+   }
+
+ public  static  void main(String args[])
+
+   {
+
+int num=0;
+
+System.out.println("Input your number and press enter: ");
+
+Scanner  in = new  Scanner(System.in);
+
+num = in.nextInt();
+
+System.out.print("Reverse of the input number is:");
+
+reverseMethod(num);
+
+System.out.println();
+
+   }
+
+}
+
+Output:
+
+Input your number and press enter:
+
+5678901
+
+Reverse of the input number is:1098765
+
+Example: Reverse an already initialized number
+
+In all the above programs we are prompting user for the input number, however if do not want the user interaction part and want to reverse an initialized number then this is how you can do it.
+
+class  ReverseNumberDemo
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ int num=123456789;
+
+ int reversenum =0;
+
+ while( num != 0 )
+
+      {
+
+reversenum = reversenum * 10;
+
+          reversenum = reversenum + num%10;
+
+          num = num/10;
+
+      }
+
+ System.out.println("Reverse of specified number is: "+reversenum);
+
+   }
+
+}
+
+Output:
+
+Reverse of specified number is: 987654321
+
+# 6.7 Program to Calculate area of circle
+
+Java Program to calculate area and circumference of circle
+
+There are two ways to do this:
+
+1) With user interaction: Program will prompt user to enter the radius of the circle
+
+2) Without user interaction: The radius value would be specified in the program itself.
+
+Program 1:
+
+/**
+
+* @author: javaBook.com
+
+* @description: Program to calculate area and circumference of circle
+
+* with user interaction. User will be prompt to enter the radius and
+
+* the result will be calculated based on the provided radius value.
+
+*/
+
+import java.util.Scanner;
+
+class  CircleDemo
+
+{
+
+ static  Scanner sc = new  Scanner(System.in);
+
+ public  static  void main(String args[])
+
+   {
+
+ System.out.print("Enter the radius: ");
+
+ /*We are storing the entered radius in double
+
+       * because a user can enter radius in decimals
+
+       */
+
+ double radius = sc.nextDouble();
+
+ //Area = PI*radius*radius
+
+ double area = Math.PI * (radius * radius);
+
+ System.out.println("The area of circle is: " + area);
+
+ //Circumference = 2*PI*radius
+
+ double circumference= Math.PI * 2*radius;
+
+ System.out.println( "The circumference of the circle is:"+circumference) ;
+
+   }
+
+}
+
+Output:
+
+Enter the radius: 1
+
+The area of circle is: 3.141592653589793
+
+The circumference of the circle is:6.283185307179586
+
+Program 2:
+
+/**
+
+* @author: javaBook.com
+
+* @description: Program to calculate area and circumference of circle
+
+* without user interaction. You need to specify the radius value in
+
+* program itself.
+
+*/
+
+class  CircleDemo2
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ int radius = 3;
+
+ double area = Math.PI * (radius * radius);
+
+ System.out.println("The area of circle is: " + area);
+
+ double circumference= Math.PI * 2*radius;
+
+ System.out.println( "The circumference of the circle is:"+circumference) ;
+
+   }
+
+}
+
+Output:
+
+The area of circle is: 28.274333882308138
+
+The circumference of the circle is:18.84955592153876
+
+# 6.8 Program to Calculate area of triangle
+
+Java program to calculate area of Triangle
+
+Here we will see how to calculate area of triangle. We will see two following programs to do this:
+
+1) Program 1: Prompt user for base-width and height of triangle.
+
+2) Program 2: No user interaction: Width and height are specified in the program itself.
+
+Program 1:
+
+/**
+
+* @author: javaBook.com
+
+* @description: Program to Calculate area of Triangle in Java
+
+* with user interaction. Program will prompt user to enter the
+
+* base width and height of the triangle.
+
+*/
+
+import java.util.Scanner;
+
+class  AreaTriangleDemo {
+
+ public  static  void main(String args[]) {
+
+ Scanner scanner = new  Scanner(System.in);
+
+ System.out.println("Enter the width of the Triangle:");
+
+ double  base = scanner.nextDouble();
+
+ System.out.println("Enter the height of the Triangle:");
+
+ double height = scanner.nextDouble();
+
+ //Area = (width*height)/2
+
+ double area = (base* height)/2;
+
+ System.out.println("Area of Triangle is: " + area);
+
+   }
+
+}
+
+Output:
+
+Enter the width of the Triangle:
+
+2
+
+Enter the height of the Triangle:
+
+2
+
+Area of Triangle  is: 2.0
+
+Program 2:
+
+/**
+
+* @author: javaBook.com
+
+* @description: Program to Calculate area of Triangle
+
+* with no user interaction.
+
+*/
+
+class  AreaTriangleDemo2 {
+
+ public  static  void main(String args[]) {
+
+ double  base = 20.0;
+
+ double height = 110.5;
+
+ double area = (base* height)/2;
+
+ System.out.println("Area of Triangle is: " + area);
+
+    }
+
+}
+
+Output:
+
+Area of Triangle  is: 1105.0
+
+# 6.9 Java Program to Find sum of array elements
+
+Java program to sum the elements of an array
+
+Program 1: No user interaction
+
+/**
+
+* @author: javaBook.com
+
+* @description: Get sum of array elements
+
+*/
+
+class  SumOfArray{
+
+ public  static  void main(String args[]){
+
+ int[] array = {10, 20, 30, 40, 50, 10};
+
+ int sum = 0;
+
+ //Advanced for loop
+
+ for( int num : array) {
+
+          sum = sum+num;
+
+      }
+
+ System.out.println("Sum of array elements is:"+sum);
+
+   }
+
+}
+
+Output:
+
+Sum of array elements is:160
+
+Program 2: User enters the array’s elements
+
+/**
+
+* @author: javaBook.com
+
+* @description: User would enter the 10 elements
+
+* and the program will store them into an array and
+
+* will display the sum of them.
+
+*/
+
+import java.util.Scanner;
+
+class  SumDemo{
+
+ public  static  void main(String args[]){
+
+ Scanner scanner = new  Scanner(System.in);
+
+ int[] array = new  int[10];
+
+ int sum = 0;
+
+ System.out.println("Enter the elements:");
+
+ for (int i=0; i<10; i++)
+
+      {
+
+   array[i] = scanner.nextInt();
+
+      }
+
+ for( int num : array) {
+
+          sum = sum+num;
+
+      }
+
+ System.out.println("Sum of array elements is:"+sum);
+
+   }
+
+}
+
+Output:
+
+Enter the elements:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Sum of array elements is:55
+
+# 6.10 Program to Check for prime number
+
+Java program to check prime number
+
+The number which is only divisible by itself and 1 is known as prime number, for example 7 is a prime number because it is only divisible by itself and 1.
+
+This program takes the number (entered by user) and then checks whether the input number is prime or not. The program then displays the result. If you are looking for a program that displays the prime number between two intervals then see[: Java program to display prime numbers between 1 to n](#part0000.xhtml__6.11_Java_program).
+
+Example: Program to check whether input number is prime or not             
+
+To understand this program you should have the knowledge of for loop, if-else statements and break statement.
+
+import java.util.Scanner;
+
+class  PrimeCheck
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+int temp;
+
+boolean isPrime=true;
+
+Scanner scan= new  Scanner(System.in);
+
+System.out.println("Enter any number:");
+
+//capture the input in an integer
+
+int num=scan.nextInt();
+
+        scan.close();
+
+for(int i=2;i<=num/2;i++)
+
+{
+
+           temp=num%i;
+
+ if(temp==0)
+
+   {
+
+      isPrime=false;
+
+ break;
+
+   }
+
+}
+
+//If isPrime is true then the number is prime else not
+
+if(isPrime)
+
+ System.out.println(num + " is a Prime Number");
+
+else
+
+ System.out.println(num + " is not a Prime Number");
+
+   }
+
+}
+
+Output 1:
+
+Enter any number:
+
+19
+
+19  is a Prime  Number
+
+Output 2:
+
+Enter any number:
+
+6
+
+6  is  not a Prime  Number
+
+You can also use while loop to check the prime number:
+
+Just replace this part of the code in above program:
+
+for(int i=2;i<=num/2;i++)
+
+{
+
+   temp=num%i;
+
+ if(temp==0)
+
+   {
+
+      isPrime=false;
+
+ break;
+
+   }
+
+}
+
+with this:
+
+int i=2;
+
+while(i<= num/2)
+
+{
+
+ if(num % i == 0)
+
+   {
+
+isPrime = false;
+
+break;
+
+   }
+
+   i++;
+
+}
+
+# 6.11 Java program to display prime numbers from 1 to 100 and 1 to n:
+
+The number which is only divisible by itself and 1 is known as prime number. For example 2, 3, 5, 7…are prime numbers. Here we will see two programs: 1) First program will print the prime numbers between 1 and 100 2) Second program takes the value of n (entered by user) and prints the prime numbers between 1 and n.
+
+Program to display the prime numbers from 1 to 100
+
+It will display the prime numbers between 1 and 100.
+
+class  PrimeNumbers
+
+{
+
+ public  static  void main (String[] args)
+
+   {
+
+ int i =0;
+
+ int num =0;
+
+ //Empty String
+
+ StringprimeNumbers = "";
+
+ for (i = 1; i <= 100; i++)        
+
+{   
+
+ int counter=0;  
+
+ for(num =i; num>=1; num--)
+
+  {
+
+ if(i%num==0)
+
+     {
+
+ counter = counter + 1;
+
+     }
+
+  }
+
+ if (counter ==2)
+
+  {
+
+ //Appended the Prime number to the String
+
+primeNumbers = primeNumbers + i + " ";
+
+  }
+
+       }
+
+ System.out.println("Prime numbers from 1 to 100 are :");
+
+ System.out.println(primeNumbers);
+
+   }
+
+}
+
+Output:
+
+Prime numbers from  1 to 100 are :
+
+2  3  5  7  11  13  17  19  23  29  31  37  41  43  47  53  59  61  67  71  73  79  83  89  97
+
+Program to display prime numbers from 1 to n
+
+It will display all the prime numbers between 1 and n (n is the number, entered by user).
+
+import java.util.Scanner;
+
+class  PrimeNumbers2
+
+{
+
+ public  static  void main (String[] args)
+
+   {
+
+ Scanner scanner = new  Scanner(System.in);
+
+ int i =0;
+
+ int num =0;
+
+ //Empty String
+
+ StringprimeNumbers = "";
+
+ System.out.println("Enter the value of n:");
+
+ int n = scanner.nextInt();
+
+      scanner.close();
+
+ for (i = 1; i <= n; i++)   
+
+{  
+
+ int counter=0;  
+
+ for(num =i; num>=1; num--)
+
+         {
+
+ if(i%num==0)
+
+    {
+
+counter = counter + 1;
+
+    }
+
+}
+
+if (counter ==2)
+
+{
+
+ //Appended the Prime number to the String
+
+primeNumbers = primeNumbers + i + " ";
+
+}
+
+      }
+
+ System.out.println("Prime numbers from 1 to n are :");
+
+ System.out.println(primeNumbers);
+
+   }
+
+}
+
+Output:
+
+Enter the value of n:
+
+150
+
+Prime numbers from  1 to n are :
+
+2  3  5  7  11  13  17  19  23  29  31  37  41  43  47  53  59  61  67  71  73  79  83  89
+
+97  101  103  107  109  113  127  131  137  139  149
+
+# 6.11 Program to check Even or Odd number
+
+Java Program to check Even or Odd number
+
+import java.util.Scanner;
+
+class  CheckEvenOdd
+
+{
+
+ public  static  void main(String args[])
+
+  {
+
+ int num;
+
+ System.out.println("Enter an Integer number:");
+
+ //The input provided by user is stored in num
+
+ Scanner input = new  Scanner(System.in);
+
+    num = input.nextInt();
+
+ /* If number is divisible by 2 then it's an even number
+
+     * else odd number*/
+
+ if ( num % 2 == 0 )
+
+ System.out.println("Entered number is even");
+
+ else
+
+ System.out.println("Entered number is odd");
+
+  }
+
+}
+
+Output 1:
+
+Enter an Integer number:
+
+78
+
+Entered number is even
+
+Output 2:
+
+Enter an Integer number:
+
+77
+
+Entered number is odd
+
+# 6.12 Java Linear Search Program
+
+Java program for linear search – Example
+
+Example Program:
+
+This program uses linear search algorithm to find out a number among all other numbers entered by user.
+
+/* Program: Linear Search Example
+
+* Written by: feroz from javabook.com
+
+* Input: Number of elements, element's values, value to be searched
+
+* Output:Position of the number input by user among other numbers*/
+
+import java.util.Scanner;
+
+class  LinearSearchExample
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ int counter, num, item, array[];
+
+ //To capture user input
+
+ Scanner input = new  Scanner(System.in);
+
+ System.out.println("Enter number of elements:");
+
+      num = input.nextInt();
+
+ //Creating array to store the all the numbers
+
+array = new  int[num];
+
+ System.out.println("Enter " + num + " integers");
+
+ //Loop to store each numbers in array
+
+ for (counter = 0; counter < num; counter++)
+
+        array[counter] = input.nextInt();
+
+ System.out.println("Enter the search value:");
+
+      item = input.nextInt();
+
+ for (counter = 0; counter < num; counter++)
+
+      {
+
+ if (array[counter] == item)
+
+         {
+
+ System.out.println(item+" is present at location "+(counter+1));
+
+ /*Item is found so to stop the search and to come out of the
+
+            * loop use break statement.*/
+
+ break;
+
+         }
+
+      }
+
+ if (counter == num)
+
+ System.out.println(item + " doesn't exist in array.");
+
+   }
+
+}
+
+Output 1:
+
+Enter number of elements:
+
+6
+
+Enter  6 integers
+
+22
+
+33
+
+45
+
+1
+
+3
+
+99
+
+Enter the search value:
+
+45
+
+45  is present at location 3
+
+Output 2:
+
+Enter number of elements:
+
+4
+
+Enter  4 integers
+
+11
+
+22
+
+4
+
+5
+
+Enter the search value:
+
+99
+
+99 doesn't exist in array.
+
+# 6.13 Java Binary Search Program
+
+Java program to perform binary search – Example
+
+Example Program to perform binary search on a list of integer numbers
+
+This program uses binary search algorithm to search an element in given list of elements.
+
+/* Program: Binary Search Example
+
+* Written by: feroz from javabook.com
+
+* Input: Number of elements, element's values, value to be searched
+
+* Output:Position of the number input by user among other numbers*/
+
+import java.util.Scanner;
+
+class  BinarySearchExample
+
+{
+
+ public  static  void main(String args[])
+
+   {
+
+ int counter, num, item, array[], first, last, middle;
+
+ //To capture user input
+
+ Scanner input = new  Scanner(System.in);
+
+ System.out.println("Enter number of elements:");
+
+      num = input.nextInt();
+
+ //Creating array to store the all the numbers
+
+array = new  int[num];
+
+ System.out.println("Enter " + num + " integers");
+
+ //Loop to store each numbers in array
+
+ for (counter = 0; counter < num; counter++)
+
+          array[counter] = input.nextInt();
+
+ System.out.println("Enter the search value:");
+
+      item = input.nextInt();
+
+first = 0;
+
+ last = num - 1;
+
+middle = (first + last)/2;
+
+ while( first <= last )
+
+      {
+
+ if ( array[middle] < item )
+
+first = middle + 1;
+
+ else  if ( array[middle] == item )
+
+         {
+
+ System.out.println(item + " found at location " + (middle + 1) + ".");
+
+ break;
+
+         }
+
+ else
+
+         {
+
+ last = middle - 1;
+
+         }
+
+middle = (first + last)/2;
+
+      }
+
+ if ( first > last )
+
+ System.out.println(item + " is not found.\n");
+
+   }
+
+}
+
+Output 1:
+
+Enter number of elements:
+
+7
+
+Enter  7 integers
+
+4
+
+5
+
+66
+
+77
+
+8
+
+99
+
+0
+
+Enter the search value:
+
+77
+
+77 found at location 4.
+
+Output 2:
+
+Enter number of elements:
+
+5
+
+Enter  5 integers
+
+12
+
+3
+
+77
+
+890
+
+23
+
+Enter the search value:
+
+99
+
+99  is  not found.
+
+# 6.14 Program to Generate random number
+
+Java program to generate random number
+
+Example Program to generate random numbers
+
+In the below program, we are using the nextInt() method of Random class to serve our purpose.
+
+/* Program: Random number generator
+
+* Written by: feroz from javabook.com
+
+* Input: None
+
+* Output:Random number between o and 200*/
+
+import java.util.*;
+
+class  GenerateRandomNumber {
+
+ public  static  void main(String[] args) {
+
+ int counter;
+
+ Random rnum = new  Random();
+
+ /* Below code would generate 5 random numbers
+
+       * between 0 and 200.
+
+       */
+
+ System.out.println("Random Numbers:");
+
+ System.out.println("***************");
+
+ for (counter = 1; counter <= 5; counter++) {
+
+ System.out.println(rnum.nextInt(200));
+
+      }
+
+   }
+
+}
+
+Output:
+
+Random  Numbers:
+
+***************
+
+135
+
+173
+
+5
+
+17
+
+15
+
+The output of above program would not be same everytime. It would generate any 5 random numbers between 0 and 200 whenever you run this code. For e.g. When I ran it second time, it gave me the below output, which is entirely different from the above one.
+
+Output 2:
+
+Random  Numbers:
+
+***************
+
+46
+
+99
+
+191
+
+7
+
+134
+
+# 6.15 Program for Binary to decimal conversion
+
+Java program for binary to decimal conversion
+
+There are two following ways to convert binary number to decimal number:
+
+1) Using Integer.parseInt() method of Integer class.
+
+2) Do conversion by writing your own logic without using any predefined methods.
+
+Method 1: Binary to Decimal conversion using Integer.parseInt() method
+
+import java.util.Scanner;
+
+class  BinaryToDecimal {
+
+ public  static  void main(String args[]){
+
+ Scanner input = new  Scanner( System.in );
+
+ System.out.print("Enter a binary number: ");
+
+ String binaryString =input.nextLine();
+
+ System.out.println("Output: "+Integer.parseInt(binaryString,2));
+
+    }
+
+}
+
+Output:
+
+Enter a binary number: 1101
+
+Output: 13
+
+Method 2: Conversion without using parseInt
+
+public  class  Details {
+
+ public  int  BinaryToDecimal(int binaryNumber){
+
+ int  decimal = 0;
+
+ int p = 0;
+
+ while(true){
+
+ if(binaryNumber == 0){
+
+ break;
+
+} else {
+
+ int temp = binaryNumber%10;
+
+ decimal += temp*Math.pow(2, p);
+
+          binaryNumber = binaryNumber/10;
+
+          p++;
+
+       }
+
+    }
+
+ return  decimal;
+
+  }
+
+ public  static  void main(String args[]){
+
+ Details obj = new  Details();
+
+ System.out.println("110 --> "+obj.BinaryToDecimal(110));
+
+ System.out.println("1101 --> "+obj.BinaryToDecimal(1101));
+
+ System.out.println("100 --> "+obj.BinaryToDecimal(100));
+
+ System.out.println("110111 --> "+obj.BinaryToDecimal(110111));
+
+  }
+
+}
+
+Output:
+
+110 --> 6
+
+1101 --> 13
+
+100 --> 4
+
+110111 --> 55
+
+# 6.16 Program Get input from user
+
+Java Program to get input from user
+
+In this tutorial we are gonna see how to accept input from user. We are using Scanner class to get the input. In the below example we are getting input String, integer and a float number. For this we are using following methods:
+
+1) public String nextLine(): For getting input String
+
+2) public int nextInt(): For integer input
+
+3) public float nextFloat(): For float input
+
+Example:
+
+import java.util.Scanner;
+
+class  GetInputData
+
+{
+
+ public  static  void main(String args[])
+
+  {
+
+ int num;
+
+ float fnum;
+
+ String str;
+
+ Scanner  in = new  Scanner(System.in);
+
+ //Get input String
+
+ System.out.println("Enter a string: ");
+
+str = in.nextLine();
+
+ System.out.println("Input String is: "+str);
+
+ //Get input Integer
+
+ System.out.println("Enter an integer: ");
+
+num = in.nextInt();
+
+ System.out.println("Input Integer is: "+num);
+
+ //Get input float number
+
+ System.out.println("Enter a float number: ");
+
+fnum = in.nextFloat();
+
+ System.out.println("Input Float number is: "+fnum);
+
+  }
+
+}
+
+Output:
+
+Enter a string:
+
+feroz
+
+Input  String  is: feroz
+
+Enter an integer:
+
+27
+
+Input  Integer  is: 27
+
+Enter a float number:
+
+12.56
+
+Input  Float number is: 12.56

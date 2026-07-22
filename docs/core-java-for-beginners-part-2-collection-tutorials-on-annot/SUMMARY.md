@@ -1,0 +1,2 @@
++   [Java 初学者指南-第2部分：关于注解、ArrayList、杂项、Java 8、Java 输入输出、Java 程序（示例）的集合教程](README.md)
++   [Java 初学者指南-第2部分：关于注解、ArrayList、杂项、Java 8、Java 输入输出、Java 程序（示例）的集合教程](core-java-for-beginners-part-2-collection-tutorials-on-annot_0.md)

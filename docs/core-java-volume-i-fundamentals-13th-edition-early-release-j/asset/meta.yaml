@@ -1,0 +1,662 @@
+name: Core Java, Volume I： Fundamentals, 13th Edition (Early Release June, 2024) 1
+name_cn: Java 核心，第一卷：基础，第13版（2024年6月抢发布版）
+slug: core-java-volume-i-fundamentals-13th-edition-early-release-j
+toc:
+- - '#'
+  - Java 核心，第一卷：基础，第13版（2024年6月抢发布版）
+- - '#'
+  - 关于本电子书
+- - '#'
+  - 前言
+- - '##'
+  - 读者
+- - '##'
+  - 本书简介
+- - '##'
+  - 惯例
+- - '##'
+  - 示例代码
+- - '#'
+  - 致谢
+- - '#'
+  - Java 简介
+- - '##'
+  - 作为编程平台的 Java
+- - '##'
+  - Java“白皮书”术语
+- - '##'
+  - 简单 (Simple)
+- - '##'
+  - 面向对象 (Object-Oriented)
+- - '##'
+  - 分布式 (Distributed)
+- - '##'
+  - 健壮性 (Robust)
+- - '##'
+  - 安全 (Secure)
+- - '##'
+  - 架构中 (Architecture-Neutral)
+- - '##'
+  - 可移植性 (Portable)
+- - '###'
+  - 解释型 (Interpreted)
+- - '###'
+  - 高性能 (High-Performance)
+- - '###'
+  - 多线程 (Multithreaded)
+- - '###'
+  - 动态 (Dynamic)
+- - '##'
+  - Java Applets 与互联网
+- - '##'
+  - Java 短史
+- - '##'
+  - 关于 Java 的常见误解
+- - '###'
+  - Java 是 HTML 的扩展。
+- - '###'
+  - 我使用 XML，所以我不需要 Java。
+- - '###'
+  - Java 是一门容易学习的编程语言。
+- - '###'
+  - Java 将成为适用于所有平台的通用编程语言。
+- - '###'
+  - Java 仅仅是另一种编程语言。
+- - '###'
+  - Java 是私有的，因此应该被避免使用。
+- - '###'
+  - Java 是解释型的，所以它对于严肃应用来说太慢了。
+- - '###'
+  - 所有 Java 程序都运行在网页内部。
+- - '###'
+  - Java 程序是重大的安全风险。
+- - '###'
+  - JavaScript 是 Java 的简化版本。
+- - '###'
+  - 有了 Java，可以用廉价的“网络设备”代替我的电脑。
+- - '#'
+  - Java 编程环境
+- - '##'
+  - 安装 Java 开发包
+- - '###'
+  - 下载 JDK
+- - '#'
+  - Java 术语
+- - '##'
+  - 安装 JDK
+- - '###'
+  - JDK 安装目录
+- - '###'
+  - 安装源码和文档
+- - '#'
+  - 恭喜！你刚刚编译并运行了你的第一个 Java 程序。
+- - '##'
+  - 使用集成开发环境
+- - '##'
+  - JShell
+- - '#'
+  - Java 基础编程结构
+- - '##'
+  - 程序
+- - '##'
+  - 注释
+- - '##'
+  - 数据类型
+- - '###'
+  - 整数类型
+- - '###'
+  - '`char` 类型'
+- - '###'
+  - 特殊字符的转义序列
+- - '###'
+  - Unicode 与 char 类型
+- - '###'
+  - '`boolean` 类型'
+- - '##'
+  - 变量与常量
+- - '###'
+  - 声明变量
+- - '###'
+  - 初始化变量
+- - '###'
+  - 常量
+- - '###'
+  - 枚举类型
+- - '##'
+  - 运算符
+- - '###'
+  - 算术运算符
+- - '###'
+  - 数学函数和常量
+- - '###'
+  - 数值类型转换
+- - '###'
+  - 强制转换 (Casts)
+- - '###'
+  - 赋值 (Assignment)
+- - '###'
+  - 自增和自减运算符 (Increment and Decrement Operators)
+- - '###'
+  - 关系和布尔运算符 (Relational and boolean Operators)
+- - '###'
+  - 条件运算符 (Conditional Operator)
+- - '###'
+  - Switch 表达式 (Switch Expressions)
+- - '###'
+  - 位运算符
+- - '###'
+  - 括号和运算符层级
+- - '####'
+  - 运算符优先级
+- - '##'
+  - 字符串
+- - '###'
+  - 拼接
+- - '###'
+  - 分割字符串
+- - '####'
+  - 分割模式
+- - '###'
+  - 索引与子字符串
+- - '###'
+  - 字符串是不可变的
+- - '###'
+  - 测试字符串相等
+- - '##'
+  - 空字符串和空值
+- - '##'
+  - String API
+- - '##'
+  - 阅读在线文档
+- - '###'
+  - 构建字符串
+- - '###'
+  - 文本块（Text Blocks）
+- - '###'
+  - 读取输入
+- - '###'
+  - 输出格式
+- - '###'
+  - '`printf` 的标志'
+- - '###'
+  - 文件输入与输出
+- - '##'
+  - 块作用域
+- - '##'
+  - 条件语句
+- - '##'
+  - 循环
+- - '###'
+  - 确定循环
+- - '##'
+  - '`switch` 的四种形式'
+- - '##'
+  - 打断控制流的语句
+- - '##'
+  - 数
+- - '###'
+  - 访问数组元素
+- - '###'
+  - “for each” 循环
+- - '###'
+  - 二维数组
+- - '###'
+  - 锯齿数组 (Ragged Arrays)
+- - '##'
+  - 类 (Classes)
+- - '##'
+  - 对象 (Objects)
+- - '##'
+  - 识别类 (Identifying Classes)
+- - '##'
+  - 类之间的关系 (Relationships between Classes)
+- - '###'
+  - 类关系的 UML 符号
+- - '##'
+  - 使用预定义类
+- - '###'
+  - 对象和对象变量
+- - '###'
+  - Java 中的 `LocalDate` 类
+- - '###'
+  - 访问和访问器方法
+- - '###'
+  - 定义类
+- - '###'
+  - EmployeeTest 类
+- - '###'
+  - 多源文件的使用
+- - '###'
+  - 剖析 `Employee` 类
+- - '###'
+  - 构造函数的第一步
+- - '###'
+  - 使用 var 声明局部变量
+- - '###'
+  - 处理 `null` 引用
+- - '###'
+  - 隐式和显式参数
+- - '###'
+  - 封装的益处
+- - '##'
+  - 基于类的访问权限
+- - '##'
+  - 私有方法
+- - '##'
+  - final 实例字段
+- - '##'
+  - 静态字段和方法
+- - '###'
+  - 静态字段
+- - '###'
+  - 静态常量
+- - '##'
+  - 静态方法
+- - '##'
+  - 工厂方法
+- - '##'
+  - main 方法
+- - '##'
+  - '`java.util.Objects`'
+- - '##'
+  - 方法参数
+- - '##'
+  - 对象构造
+- - '###'
+  - 方法重载
+- - '###'
+  - 显式字段初始化
+- - '###'
+  - 参数命名
+- - '###'
+  - 调用另一个构造函数
+- - '###'
+  - 初始化块
+- - '###'
+  - 对象销毁与 `finalize` 方法
+- - '##'
+  - Records
+- - '###'
+  - Record Concept
+- - '###'
+  - 构造函数：规范、紧凑和自定义
+- - '###'
+  - 包 (Packages)
+- - '####'
+  - 包名
+- - '####'
+  - 类导入
+- - '###'
+  - 静态导入
+- - '###'
+  - 将类添加到包中
+- - '###'
+  - 包访问权限
+- - '###'
+  - 类路径
+- - '##'
+  - 设置类路径
+- - '##'
+  - JAR 文件
+- - '###'
+  - 创建 JAR 文件
+- - '####'
+  - '`jar` 程序选项'
+- - '###'
+  - 清单
+- - '###'
+  - 可执行的 JAR 文件
+- - '###'
+  - 多版本 JAR 文件
+- - '###'
+  - 关于命令行选项的说明
+- - '##'
+  - 文档注释
+- - '###'
+  - 注释插入
+- - '###'
+  - 类注释
+- - '###'
+  - 方法注释
+- - '###'
+  - 字段注释
+- - '###'
+  - 包注释
+- - '###'
+  - HTML 标记
+- - '###'
+  - 链接
+- - '##'
+  - 通用注释
+- - '##'
+  - 代码片段
+- - '##'
+  - 注释提取
+- - '##'
+  - 类设计
+- - '###'
+  - 类设计让你的类和方法的职责。
+- - '###'
+  - 优先使用不可变类。
+- - '##'
+  - 继承
+- - '##'
+  - 类、超类和子类
+- - '###'
+  - 定义子类
+- - '###'
+  - 继承结构
+- - '###'
+  - 多态
+- - '###'
+  - 转换
+- - '###'
+  - '`instanceof` 的模式匹配'
+- - '###'
+  - 访问
+- - '###'
+  - '`instanceof` 的模式匹配'
+- - '###'
+  - 终极类
+- - '###'
+  - '`Object` 类型'
+- - '###'
+  - '`equals` 方法'
+- - '###'
+  - '`java.lang.Object`'
+- - '###'
+  - '`java.util.Objects`'
+- - '###'
+  - '`Integer|Long|Short|Double|Float|Character`'
+- - '###'
+  - '`java.util.Arrays`'
+- - '###'
+  - '`toString` 方法'
+- - '###'
+  - '`ArrayList<E>`'
+- - '###'
+  - 访问列表
+- - '###'
+  - '`ArrayList<E>`'
+- - '###'
+  - 访问列表
+- - '###'
+  - 类型一致性
+- - '###'
+  - 自动装箱（Autoboxing）
+- - '##'
+  - 具有可变数量
+- - '##'
+  - 抽象类
+- - '###'
+  - 模式匹配
+- - '###'
+  - 值处理
+- - '###'
+  - 守卫（Guards）
+- - '###'
+  - 一致性（Exhaustiveness）
+- - '##'
+  - 变量与穿透
+- - '##'
+  - 反射
+- - '###'
+  - '`Class`'
+- - '###'
+  - '`java.lang.reflect.Constructor`'
+- - '###'
+  - '`java.lang.Throwable`'
+- - '###'
+  - 异常声明原理
+- - '###'
+  - 资源
+- - '###'
+  - 使用反射在运行时分析
+- - '###'
+  - '`java.lang.reflect.AccessibleObject`'
+- - '###'
+  - '`java.lang.Class`'
+- - '###'
+  - '`java.lang.reflect.Field`'
+- - '###'
+  - 任意方法和构造函数
+- - '##'
+  - 接口、Lambda表达式和内部类
+- - '##'
+  - 接口
+- - '###'
+  - 接口概念
+- - '###'
+  - 负零
+- - '###'
+  - interfaces/SortTest.java
+- - '###'
+  - interfaces/Employee.java
+- - '###'
+  - 接口的属性
+- - '##'
+  - 接口与抽象类
+- - '##'
+  - 静态与私有方法
+- - '##'
+  - 默认方法
+- - '##'
+  - 接口与回调
+- - '###'
+  - '`Comparator` 接口'
+- - '##'
+  - Lambda 表达式
+- - '###'
+  - 为什么使用 Lambda？
+- - '###'
+  - Lambda 表达式的语法
+- - '###'
+  - 函数接口
+- - '###'
+  - 函数类型
+- - '###'
+  - 方法引用
+- - '###'
+  - 方法引用
+- - '###'
+  - 变量作用域
+- - '###'
+  - 处理 Lambda 表达式
+- - '###'
+  - 常见函数接口
+- - '###'
+  - 基本类型的函数接口
+- - '##'
+  - 内部类 (Inner Classes)
+- - '###'
+  - 使用内部类访问状态
+- - '###'
+  - 内部类的特殊规则
+- - '###'
+  - 内部类有用吗？必要吗？安全吗？
+- - '###'
+  - 局部内部类
+- - '###'
+  - 从外部方法访问变量
+- - '###'
+  - 匿名内部类
+- - '###'
+  - 静态内部类
+- - '#'
+  - 服务加载器 (Service Loaders)
+- - '###'
+  - 创建代理对象
+- - '###'
+  - 代理类的属性
+- - '#'
+  - 异常、断言与日志
+- - '##'
+  - 处理错误
+- - '###'
+  - 异常的分类
+- - '###'
+  - 声明已异常
+- - '###'
+  - 如何抛出异常
+- - '###'
+  - 创建异常类
+- - '##'
+  - 捕获异常 (Catching Exceptions)
+- - '###'
+  - 捕获异常
+- - '###'
+  - 捕获多个异常 (Catching Multiple Exceptions)
+- - '##'
+  - 重新抛出和异常链
+- - '##'
+  - '`finally` 子句'
+- - '##'
+  - try-with-resources 语句
+- - '###'
+  - 分析堆栈元素
+- - '###'
+  - 使用异常的贴士
+- - '###'
+  - 不要向最终用户显示堆栈跟踪。
+- - '##'
+  - 使用断言 (Using Assertions)
+- - '###'
+  - 断言概念 (The Assertion Concept)
+- - '###'
+  - 断言的启用与禁用
+- - '###'
+  - 使用断言进行参数检查
+- - '###'
+  - 使用断言记录假设
+- - '###'
+  - '`java.lang.ClassLoader`'
+- - '##'
+  - 日志 (Logging)
+- - '###'
+  - 你应该使用日志 API 吗？
+- - '###'
+  - 日志
+- - '###'
+  - 平台日志 API
+- - '##'
+  - 日志配置
+- - '###'
+  - 平台日志与 Java 日志框架的对应级别
+- - '##'
+  - 日志处理器
+- - '###'
+  - 文件处理器参数
+- - '##'
+  - 日志文件模式变量
+- - '##'
+  - 过滤器和格式化器
+- - '##'
+  - 日志配方
+- - '###'
+  - '`java.lang.System.Logger`'
+- - '###'
+  - '`java.util.logging.Handler`'
+- - '###'
+  - '`java.util.logging.ConsoleHandler`'
+- - '###'
+  - '`java.util.logging.FileHandler`'
+- - '###'
+  - '`java.util.logging.LogRecord`'
+- - '###'
+  - '`java.util.logging.Filter`'
+- - '###'
+  - '`java.util.logging.Formatter`'
+- - '##'
+  - 调试技巧
+- - '###'
+  - '`logging proxy`（日志代理）是一个子类对象，它可以拦截方法调用、进行记录，然后调用原始方法。例如，如果你在 `Random` 类的 `nextDouble`
+    方法上遇到问题，可以创建一个匿名子类的实例作为代理对象：'
+- - '###'
+  - 你可以通过 `Throwable` 类中的 `printStackTrace` 方法从任何异常对象获取堆栈跟踪。以下代码捕获任何异常，打印异常对象和堆栈跟踪，并重新抛出异常，以便其能找到预期的处理器。
+- - '###'
+  - 通常情况下，堆栈跟踪显示在 `System.err.` 上。如果你想记录或显示堆栈跟踪，可以通过以下方法将其捕获到字符串：
+- - '###'
+  - 将程序错误记录到文件中通常非常方便。然而，错误被发送到 `System.out`。
+- - '#'
+  - 泛型编程
+- - '##'
+  - 为什么泛型？
+- - '###'
+  - 泛型类
+- - '###'
+  - 定义泛型类
+- - '###'
+  - 泛型方法
+- - '###'
+  - 泛型变量
+- - '###'
+  - 擦除（Erasure）
+- - '###'
+  - 泛型表达式
+- - '###'
+  - 泛型代码
+- - '###'
+  - 泛型类型
+- - '###'
+  - F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F F
+    F F F F F F F F F F F F F F F F F F F F F F F F

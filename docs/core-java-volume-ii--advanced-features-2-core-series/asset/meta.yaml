@@ -1,0 +1,852 @@
+name: Core Java, Volume II--Advanced Features： 2 (Core Series)
+name_cn: Core Java 第二卷：高级特性：2 (Core 系列)
+slug: core-java-volume-ii--advanced-features-2-core-series
+toc:
+- - '#'
+  - Core Java 第二卷：高级特性：2 (Core 系列)
+- - '##'
+  - 关于本电子书
+- - '###'
+  - java.util.Optional
+- - '####'
+  - 1.7.2 如何错误地使用 Optional 值
+- - '####'
+  - 1.7.3 创建 Optional 值
+- - '####'
+  - 1.7.4 使用 flatMap 组合 Optional 值
+- - '###'
+  - '`java.util.Optional`'
+- - '###'
+  - 1.8 收集结果
+- - '###'
+  - '`java.util.stream.BaseStream`'
+- - '####'
+  - 列表 1.4 `CollectingResults.java`
+- - '###'
+  - java.util.stream.Stream
+- - '###'
+  - java.util.stream.Collectors
+- - '###'
+  - IntSummaryStatistics, LongSummaryStatistics, DoubleSummaryStatistics
+- - '###'
+  - 1.9 收集到 Map
+- - '###'
+  - 1.10 分组与分区
+- - '###'
+  - 1.11 下游收集器
+- - '###'
+  - 1.12 还原操作 (Reduction Operations)
+- - '###'
+  - 1.13 基元类型流 (Primitive Type Streams)
+- - '###'
+  - java.util.stream.IntStream
+- - '###'
+  - java.util.stream.LongStream
+- - '###'
+  - java.util.stream.DoubleStream
+- - '###'
+  - java.lang.CharSequence
+- - '###'
+  - java.util.Random
+- - '###'
+  - java.util.Optional (Int|Long|Double)
+- - '###'
+  - java.util.(Int|Long|Double) SummaryStatistics
+- - '###'
+  - 1.14 并行流
+- - '####'
+  - 注意：非阻塞操作
+- - '####'
+  - 排序
+- - '####'
+  - 注意：干扰
+- - '###'
+  - java.util.stream.BaseStream<T,S extends BaseStream<T,S>>
+- - '###'
+  - java.util.Collection<E>
+- - '##'
+  - 第 2 章 输入与输出
+- - '###'
+  - 2.1 输入/输出流
+- - '####'
+  - 2.1.1 读取和写入字节
+- - '###'
+  - java.io.InputStream
+- - '###'
+  - java.io.OutputStream
+- - '####'
+  - 2.1.2 完整的流动物园
+- - '####'
+  - 2.1.3 组合输入输出过滤器
+- - '###'
+  - '`java.io.FileInputStream`'
+- - '###'
+  - '`java.io.FileOutputStream`'
+- - '###'
+  - '`java.io.BufferedInputStream`'
+- - '###'
+  - '`java.io.BufferedOutputStream`'
+- - '###'
+  - '`java.io.PushbackInputStream`'
+- - '###'
+  - 2.2 文本输入与输出
+- - '###'
+  - 2.2.1 如何编写文本输出
+- - '###'
+  - java.io.PrintWriter
+- - '###'
+  - 2.2.2 如何读取输入
+- - '####'
+  - 2.2.4 字符编码
+- - '###'
+  - 2.3 读取和写入二进制数据
+- - '###'
+  - 2.3.1 `DataInput` 和 `DataOutput` 接口
+- - '###'
+  - java.io.DataInput
+- - '###'
+  - java.io.DataOutput
+- - '###'
+  - 2.3.2 随机访问文件
+- - '###'
+  - java.util.zip.ZipInputStream
+- - '###'
+  - java.util.zip.ZipOutputStream
+- - '###'
+  - java.util.zip.ZipEntry
+- - '###'
+  - java.util.zip.ZipFile
+- - '####'
+  - 2.4.1 保存与加载对象
+- - '####'
+  - 2.4.3 修改序列化机制
+- - '###'
+  - 2.4.4 序列化单例和类型安全枚举
+- - '###'
+  - 2.4.5 版本控制
+- - '###'
+  - 2.4.6 使用序列化进行克隆
+- - '####'
+  - 2.5.1 路径
+- - '####'
+  - 2.5.2 读取和写入文件
+- - '####'
+  - 2.5.3 创建文件和目录
+- - '####'
+  - 2.5.4 复制、移动和删除文件
+- - '####'
+  - 2.5.5 获取文件信息
+- - '####'
+  - 2.5.6 访问目录项
+- - '###'
+  - 2.5.7 使用目录流 (Directory Streams)
+- - '###'
+  - 2.5.8 ZIP 文件系统
+- - '####'
+  - java.nio.file.FileSystem
+- - '###'
+  - 2.6 内存映射文件
+- - '####'
+  - 2.6.1 内存映射文件的性能
+- - '###'
+  - API 引用
+- - '###'
+  - 2.6.2 缓冲区数据结构
+- - '###'
+  - 2.6.3 文件锁
+- - '###'
+  - 2.7 正则表达式
+- - '##'
+  - 第 3 章：XML
+- - '###'
+  - 3.1 介绍 XML
+- - '###'
+  - 3.1.1 XML 文档的结构
+- - '###'
+  - 3.2 解析 XML 文档
+- - '###'
+  - org.w3c.dom.Document
+- - '###'
+  - org.w3c.dom.Element
+- - '###'
+  - org.w3c.dom.Node
+- - '###'
+  - org.w3c.dom.CharacterData
+- - '###'
+  - org.w3c.dom.NodeList
+- - '###'
+  - org.w3c.dom.NamedNodeMap
+- - '###'
+  - 3.3 验证 XML 文档
+- - '###'
+  - 3.3.1 文档类型定义
+- - '###'
+  - javax.xml.parsers.DocumentBuilder
+- - '###'
+  - org.xml.sax.EntityResolver
+- - '###'
+  - org.xml.sax.InputSource
+- - '###'
+  - org.xml.sax.ErrorHandler
+- - '###'
+  - org.xml.sax.SAXParseException
+- - '###'
+  - javax.xml.parsers.DocumentFactory
+- - '###'
+  - 3.3.2 XML Schema
+- - '###'
+  - 3.3.3 实际示例
+- - '###'
+  - 3.4 使用 XPath 定位信息
+- - '###'
+  - javax.xml.xpath.XPathFactory
+- - '###'
+  - javax.xml.xpath.XPath
+- - '###'
+  - 3.5 使用命名空间
+- - '###'
+  - 3.6 流式解析
+- - '####'
+  - 3.6.1 使用 SAX 解析器
+- - '###'
+  - org.xml.sax.Attributes
+- - '###'
+  - 3.6.2 使用 StAX 解析器
+- - '###'
+  - org.xml.sax.Attributes
+- - '###'
+  - 3.7 生成 文档
+- - '####'
+  - 3.7.1 不带命名空间的文档
+- - '####'
+  - 3.7.2 带命名空间的文档
+- - '####'
+  - 3.7.3 写入文档
+- - '####'
+  - 3.7.4 示例：SVG
+- - '####'
+  - 3.7.5 使用 StAX 写入文档
+- - '###'
+  - 3.7.6 列表 `transform/makehtml.xsl`
+- - '###'
+  - 3.7.7 列表 `transform/makrop.xsl`
+- - '###'
+  - 3.7.8 列表 `transform/TransformTest.java`
+- - '###'
+  - javax.xml.transform.TransformerFactory
+- - '###'
+  - javax.xml.transform.stream.StreamSource
+- - '###'
+  - javax.xml.transform.sax.SAXSource
+- - '###'
+  - javax.xml.transform.dom.DOMResult
+- - '###'
+  - org.xml.sax.XMLReader
+- - '###'
+  - org.xml.sax.helpers.AttributesImpl
+- - '##'
+  - 第 4 章：网络编程
+- - '###'
+  - 本章内容
+- - '###'
+  - 4.1 连接到服务器
+- - '####'
+  - 4.1.1 使用 Telnet
+- - '###'
+  - java.net.Socket
+- - '###'
+  - 4.1.3 Socket超时
+- - '###'
+  - 4.1.4 IP 地址
+- - '###'
+  - java.net.InetAddress
+- - '###'
+  - 4.2 实现服务器
+- - '####'
+  - 4.2.1 服务端接字 (Sockets)
+- - '####'
+  - 4.2.2 服务多个客户端
+- - '####'
+  - 4.2.3 半关闭 (Half-Close)
+- - '###'
+  - 4.3 可中断的 socket
+- - '###'
+  - java.net.InetSocketAddress
+- - '###'
+  - java.nio.channels.SocketChannel
+- - '###'
+  - java.nio.channels.Channels
+- - '###'
+  - 4.4 获取 Web 数据
+- - '####'
+  - 4.4.1 URLs 和 URIs
+- - '####'
+  - 4.4.2 使用 Connection 获取信息
+- - '###'
+  - 4.4.3 提交表单数据
+- - '####'
+  - 列表 4.7 `post/PostTest.java`
+- - '####'
+  - java.net.HttpURLConnection
+- - '####'
+  - java.net.URLEncoder
+- - '####'
+  - java.net.URLDecoder
+- - '###'
+  - 4.5 发送电子邮件
+- - '###'
+  - 5.1.1 JDBC 驱动类型
+- - '####'
+  - 5.1.2 JDBC 的典型用途
+- - '###'
+  - 5.2 结构化查询语言
+- - '###'
+  - 5.3 配置
+- - '####'
+  - 2. 找到 `derbyrun.jar` 文件
+- - '####'
+  - 3. 运行命令
+- - '####'
+  - 4. 再次检查数据库是否运行正常
+- - '####'
+  - 5. 完成数据库操作后，使用命令停止
+- - '####'
+  - 5.3.4 注册驱动类
+- - '####'
+  - 5.3.5 连接到数据库
+- - '###'
+  - 5.4 使用 JDBC 语句
+- - '####'
+  - 5.4.1 执行 SQL 语句
+- - '####'
+  - 5.4.2 管理连接、语句和结果集
+- - '####'
+  - 5.4.3 分析 SQL 异常
+- - '####'
+  - 5.4.4 填充数据库
+- - '###'
+  - 5.5 查询执行
+- - '####'
+  - 5.5.1 准备语句
+- - '###'
+  - java.sql.Connection
+- - '###'
+  - java.sql.PreparedStatement
+- - '####'
+  - 5.5.2 读取和写入 LOB
+- - '###'
+  - java.sql.ResultSet
+- - '###'
+  - java.sql.Blob
+- - '###'
+  - java.sql.Clob
+- - '###'
+  - 5.5.3 SQL 转义 (SQL Escapes)
+- - '###'
+  - 5.5.4 多重结果
+- - '###'
+  - 5.5.5 获取生成的键
+- - '###'
+  - 5.6. 可滚动结果集
+- - '###'
+  - 表 5.6 `ResultSet` 类型值
+- - '###'
+  - 表 5.7 `ResultSet` 并发值
+- - '####'
+  - 5.6.2 可更新的结果
+- - '###'
+  - java.sql.Connection
+- - '###'
+  - java.sql.ResultSet
+- - '###'
+  - java.sql.DatabaseMetaData
+- - '###'
+  - 5.7 RowSet
+- - '####'
+  - 5.7.1 Row Sets
+- - '####'
+  - 5.7.2 Cached RowSet
+- - '###'
+  - javax.sql.rowset.RowSetFactory
+- - '###'
+  - 5.8 元数据
+- - '###'
+  - 5.9 批量更新
+- - '###'
+  - 5.10 高级 SQL
+- - '##'
+  - 第 6 章：日期和时间
+- - '###'
+  - 本章内容
+- - '###'
+  - 6.1 时间
+- - '###'
+  - 6.2 本地日期
+- - '###'
+  - 6.3 日期调整器
+- - '###'
+  - 6.4 本地 时间 (Local Time)
+- - '###'
+  - 6.5 时区 (Zoned Time)
+- - '###'
+  - 6.6 格式化
+- - '###'
+  - 6.7 与旧代码
+- - '##'
+  - 第 7 章：国际化
+- - '###'
+  - 区域设置
+- - '###'
+  - 7.1 Locale
+- - '###'
+  - 7.2 数字格式
+- - '###'
+  - 7.3 货币
+- - '###'
+  - java.util.Currency
+- - '###'
+  - 7.4 日期和时间
+- - '###'
+  - java.time.format.DateTimeFormatter
+- - '###'
+  - 7.5 排序与规范化
+- - '###'
+  - 7.6 格式化数字和日期
+- - '###'
+  - 7.7 输入输出
+- - '###'
+  - 7.8 资源包 (Resource Bundles)
+- - '####'
+  - 7.8.1 定位资源包
+- - '####'
+  - 7.8.2 属性文件
+- - '####'
+  - 7.8.3 包类
+- - '###'
+  - 7.9 完整示例
+- - '##'
+  - 第 8 章：脚本、编译与注解
+- - '###'
+  - 本章内容
+- - '###'
+  - 8.1 Java 平台的脚本
+- - '####'
+  - 8.1.1 获取脚本引擎
+- - '####'
+  - 8.1.2 脚本评估与绑定
+- - '###'
+  - javax.script.ScriptEngine
+- - '###'
+  - javax.script.ScriptEngineManager
+- - '###'
+  - javax.script.Bindings
+- - '###'
+  - 8.1.3 重定向输入和输出
+- - '###'
+  - javax.script.ScriptEngine
+- - '###'
+  - javax.script.ScriptContext
+- - '####'
+  - 8.1.4 调用脚本函数和方法
+- - '####'
+  - 8.1.5 编译脚本
+- - '####'
+  - 8.1.6 示例：脚本 GUI 事件
+- - '###'
+  - 8.2 编译器 API
+- - '####'
+  - 8.2.1 简易编译
+- - '####'
+  - 8.2.2 使用编译任务
+- - '###'
+  - 列表 8.3 `compiler/StringBuilderSource.java`
+- - '###'
+  - 列表 8.4 `compiler/ByteArrayClass.java`
+- - '###'
+  - Tool JavaCompiler
+- - '###'
+  - javax.tools.JavaCompiler.CompilationTask
+- - '###'
+  - javax.tools.DiagnosticCollector<S>
+- - '###'
+  - javax.tools.Diagnostic<S>
+- - '###'
+  - javax.tools.SimpleJavaFileObject
+- - '###'
+  - javax.tools.ForwardingJavaFileManager<M extends JavaFileManager>
+- - '###'
+  - 8.2.3 示例：动态 Java 代码生成
+- - '###'
+  - 列表 8.5 `buttons2/ButtonFrame.java`
+- - '###'
+  - 列表 8.6 `buttons2/action.properties`
+- - '###'
+  - 列表 8.7 `compiler/CompilerTest.java`
+- - '###'
+  - 8.3 使用注解
+- - '####'
+  - 8.3.1 注解引言
+- - '####'
+  - 8.3.2 示例：为事件处理器添加注解
+- - '###'
+  - 8.4 注解语法
+- - '####'
+  - 8.4.1 注解接口
+- - '####'
+  - 8.4.2 注解
+- - '####'
+  - 8.4.3 声明的注解
+- - '####'
+  - 8.4.4 类型使用的注解
+- - '####'
+  - 8.4.5 注解 this
+- - '###'
+  - 8.5 标准注解
+- - '####'
+  - 8.5.1 用于编译的注解
+- - '####'
+  - 8.5.2 用于资源管理的注解
+- - '####'
+  - 8.5.3 元注解
+- - '###'
+  - 8.6 源码级注解处理
+- - '####'
+  - 8.6.1 注解处理器
+- - '####'
+  - 8.6.2 语言模型 API
+- - '####'
+  - 8.6.3 使用注解生成代码
+- - '###'
+  - 8.7 字节码工程
+- - '####'
+  - 8.7.1 修改类文件
+- - '####'
+  - 8.7.2 在加载时修改字节码
+- - '##'
+  - 第 9 章 安全
+- - '###'
+  - 9.1 类加载器
+- - '####'
+  - 9.1.1 类加载过程
+- - '###'
+  - 9.1.2 类加载器的层次结构
+- - '###'
+  - 9.1.3 使用类加载器作为命名空间
+- - '###'
+  - 9.1.4 编写类加载器
+- - '###'
+  - 9.1.5 字节码
+- - '###'
+  - 9.2 安全管理器
+- - '####'
+  - 9.2.1 权限检查
+- - '####'
+  - 9.2.2 平台安全
+- - '####'
+  - 9.2.3 策略
+- - '###'
+  - java.lang.SecurityManager
+- - '###'
+  - java.security.Permission
+- - '###'
+  - java.security.Policy
+- - '##'
+  - 第 10 章：高级
+- - '###'
+  - 本章内容
+- - '###'
+  - 10.1 列表
+- - '####'
+  - 10.1.1 `JList` 组件
+- - '####'
+  - 10.1.2 List Models
+- - '###'
+  - 列表 10.3 `long/WordList.java`
+- - '###'
+  - javax.swing.ListModel<E>
+- - '###'
+  - 10.1.3 插入和删除值
+- - '####'
+  - 10.1.4 渲染值
+- - '###'
+  - 10.2 表格
+- - '####'
+  - 10.2.1 简单表格
+- - '###'
+  - 10.2.3 操作行和列
+- - '####'
+  - 10.2.3.1 列类
+- - '####'
+  - 10.2.3.2 获取列
+- - '####'
+  - 10.2.3.3 调整列
+- - '####'
+  - 10.2.3.4 调整行
+- - '###'
+  - 10.2.3.5 选择行、列和单元格
+- - '###'
+  - 10.2.3.6 对行排序
+- - '###'
+  - 10.2.3.8 隐藏和显示列
+- - '###'
+  - javax.swing.table.TableModel
+- - '###'
+  - javax.swing.JTable
+- - '###'
+  - javax.swing.table.TableColumnModel
+- - '###'
+  - javax.swing.table.TableColumn
+- - '###'
+  - javax.swing.ListSelectionModel
+- - '###'
+  - javax.swing.table.DefaultRowSorter<M, I>
+- - '###'
+  - javax.swing.table.TableRowSorter<M extends TableModel>
+- - '###'
+  - javax.swing.table.TableStringConverter
+- - '###'
+  - javax.swing.RowFilter<M, I>
+- - '###'
+  - javax.swing.RowFilter.Entry<M, I>
+- - '####'
+  - 10.2.4 单元格渲染与编辑
+- - '#####'
+  - 10.2.4.1 渲染单元格
+- - '#####'
+  - 10.2.4.2 渲染表头
+- - '#####'
+  - 10.2.4.3 单元格编辑
+- - '#####'
+  - 10.2.4.4 自定义编辑器
+- - '###'
+  - 列表 10.10 `tableCellRender/ColorTableCellRenderer.java`
+- - '###'
+  - 列表 10.11 `tableCellRender/ColorEditor.java`
+- - '###'
+  - javax.swing.JTable
+- - '###'
+  - javax.swing.table.TableCellRenderer
+- - '###'
+  - javax.swing.table.TableColumn
+- - '###'
+  - javax.swing.DefaultCellEditor
+- - '###'
+  - javax.swing.table.TableCellEditor
+- - '###'
+  - javax.swing.CellEditor
+- - '##'
+  - 10.3 树
+- - '###'
+  - 10.3.1 简单树
+- - '###'
+  - 编辑节点
+- - '###'
+  - 10.3.4 渲染节点
+- - '###'
+  - javax.swing.tree.TreeCellRenderer
+- - '###'
+  - javax.swing.tree.DefaultTreeCellRenderer
+- - '####'
+  - 10.3.5 监听树事件
+- - '###'
+  - 列表 10.15 `treeRender/ClassNameTreeRenderer.java`
+- - '##'
+  - 引言
+- - '###'
+  - 10.4 文本组件
+- - '###'
+  - 10.4.1 文本组件中的更改跟踪
+- - '####'
+  - 10.4.2.1 整数输入
+- - '####'
+  - 10.4.2.2 失去焦点时的行为
+- - '####'
+  - 10.4.2.3 过滤器
+- - '####'
+  - 10.4.2.4 日志文件
+- - '####'
+  - 10.4.2.5 UTF-8标记
+- - '####'
+  - 10.4.2.6 字符编码
+- - '###'
+  - 10.5 进度指示
+- - '####'
+  - 10.5.1 进度条
+- - '####'
+  - 10.5.2 监控器
+- - '####'
+  - 10.5.3 监控流
+- - '###'
+  - javax.swing.JProgressBar
+- - '###'
+  - 10.6 组织器与装饰器
+- - '####'
+  - 10.6.1 拆面板
+- - '####'
+  - 10.6.2 标签页面
+- - '####'
+  - 10.6.3 布局
+- - '###'
+  - 10.7 国际化
+- - '###'
+  - 10.7.1 区域设置
+- - '###'
+  - 10.7.2 数字格式
+- - '###'
+  - 10.7.3 货币
+- - '###'
+  - 10.7.4 日期和时间
+- - '###'
+  - 10.7.5 排序与规范化
+- - '###'
+  - 10.7.6 格式化数字和日期
+- - '###'
+  - 10.7.7 输入输出
+- - '###'
+  - 10.8 资源包 (Resource Bundles)
+- - '####'
+  - 10.8.1 定位资源包
+- - '####'
+  - 10.8.2 属性文件
+- - '####'
+  - 10.8.3 包类
+- - '###'
+  - 10.9 完整示例
+- - '###'
+  - 10.10 图像的读取器和写入器
+- - '###'
+  - '11.1'
+- - '##'
+  - 第 11 章 高级 AWT
+- - '###'
+  - 11.1 渲染流水线
+- - '###'
+  - 11.2 形状
+- - '###'
+  - 11.2.1 形状层次结构
+- - '###'
+  - 11.2.2 使用形状类
+- - '###'
+  - 11.9 ShapeTest
+- - '###'
+  - 11.3 区域
+- - '###'
+  - java.awt.geom.Area
+- - '###'
+  - 11.4 笔触
+- - '###'
+  - 列表 11.2 `stroke/StrokeTest.java`
+- - '###'
+  - java.awt.Graphics2D
+- - '###'
+  - java.awt.BasicStroke
+- - '###'
+  - 11.5 Paint
+- - '###'
+  - java.awt.Graphics2D
+- - '###'
+  - java.awt.GradientPaint
+- - '###'
+  - java.awt.TexturePaint
+- - '###'
+  - 11.6 坐标变换
+- - '###'
+  - 11.7 裁剪
+- - '###'
+  - java.awt.Graphics
+- - '###'
+  - java.awt.Graphics2D
+- - '###'
+  - java.awt.font.TextLayout
+- - '###'
+  - 11.8 透明度与合成
+- - '###'
+  - java.awt.Graphics2D
+- - '###'
+  - java.awt.AlphaComposite
+- - '###'
+  - 11.9 渲染提示 (Rendering Hints)
+- - '###'
+  - 11.10 图像的读取器和写入器
+- - '####'
+  - 11.10.1 获取图像类型的读取器和写入器
+- - '####'
+  - 11.10.2 读取和写入多个图像的文件
+- - '###'
+  - javax.imageio.ImageIO
+- - '###'
+  - javax.imageio.ImageReader
+- - '###'
+  - javax.imageio.spi.IIOServiceProvider
+- - '###'
+  - javax.imageio.spi.ImageReaderWriterSpi
+- - '###'
+  - javax.imageio.ImageWriter
+- - '###'
+  - javax.imageio.IIOImage
+- - '####'
+  - 11.11.2 过滤图像
+- - '###'
+  - 11.12 打印
+- - '####'
+  - 11.12.1 图形打印
+- - '###'
+  - java.awt.image.BufferedImageOp
+- - '###'
+  - java.awt.image.AffineTransformOp
+- - '###'
+  - java.awt.image.RescaleOp
+- - '###'
+  - java.awt.image.LookupOp
+- - '###'
+  - java.awt.image.ByteLookup
+- - '###'
+  - java.awt.image.ShortLookup
+- - '##'
+  - 12. 从 Java 程序调用 C 函数
+- - '###'
+  - 12.1 从 Java 程序调用 C 函数
+- - '###'
+  - 12.3 字符串参数
+- - '###'
+  - 从 C 代码字符串
+- - '###'
+  - 12.4 访问字段
+- - '####'
+  - 12.4.1 访问字段
+- - '####'
+  - 12.4 访问静态字段
+- - '###'
+  - 12.5 签名编码
+- - '###'
+  - 12.6 调用 Java 方法
+- - '####'
+  - 12.6.1 实例方法
+- - '####'
+  - 12.6.2 静态方法
+- - '####'
+  - 12.6.3 构造函数
+- - '####'
+  - 12.6.4 备用方法调用
+- - '###'
+  - 12.7 访问数组元素
+- - '###'
+  - 12.8 错误处理
+- - '###'
+  - 处理 Java 异常
+- - '###'
+  - 12.9 使用调用 API (Invocation API)
+- - '##'
+  - Invocation API 函数
+- - '###'
+  - 12.10 完整示例：访问注册表
+- - '####'
+  - 12.10.1 注册表概述
+- - '####'
+  - 12.10.2 用于访问注册表的 Java 平台接口
+- - '###'
+  - 12.10.3 使用原生方法实现注册表访问
+- - '###'
+  - 列表 12.22 `win32reg/Win32Key.c`
+- - '###'
+  - 类型查询函数

@@ -1,0 +1,2030 @@
+<p><img src="Images/cover00052.jpeg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<h2
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 138%"><strong>CONTENTS</strong></h2>
+<p><br />
+</p>
+<p><a href="#part0001.xhtml">Preface</a></p>
+<p><a href="#part0002.xhtml">Introduction</a></p>
+<p><a href="#part0003.xhtml">Chapter One - Factory</a></p>
+<p><a href="#part0004.xhtml">Chapter Two - Abstract Factory</a></p>
+<p><a href="#part0005.xhtml">Chapter Three - Builder</a></p>
+<p><a href="#part0006.xhtml">Chapter Four - Prototype</a></p>
+<p><a href="#part0007.xhtml">Chapter Five - Singleton</a></p>
+<p><a href="#part0008.xhtml">Chapter Six - Summary</a></p>
+<p><span id="part0001.xhtml"></span></p>
+<p><span id="part0001.xhtml_doc1"></span><span
+class="Apple-converted-space">                                         
+                                                                     
+<span class="Apple-tab-span"> </span>  <span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span>                           
+                                    </span><strong>Preface</strong></p>
+<p><strong></strong><br />
+</p>
+<p>I have been working as software engineer professional in a
+multinational firm for more than 20 years. I feel its time to leverage
+my learnings over the years and mentor programmers on practices of
+writing reliable, maintainable and extensible software.<span
+class="Apple-converted-space">  </span>I have learned lot of good coding
+practices the hard way by making mistakes first and learning from them
+along the way.<span class="Apple-converted-space">  </span>Design
+patterns have helped me tremendously to avoid repeating those mistakes.
+This book documents commonly used creational design patterns and
+attempts to provide guidelines on how to avoid common pitfalls on
+software development by using right design patterns.<span
+class="Apple-converted-space"> </span></p>
+<p><br />
+</p>
+<p><span class="Apple-tab-span"> </span><span class="s1"><span
+class="Apple-converted-space">  </span></span><span class="s2"><span
+class="Apple-converted-space">  </span>A Mckinsy study of 5,400 large
+scale IT projects (projects with initial budgets greater than $15M) in
+2012 reported that 17 percent of large IT projects go so badly that they
+can threaten the very existence of the<span
+class="Apple-converted-space">  </span>company. It also mentioned that
+on average, large IT projects run 45 percent over budget and 7 percent
+over time, while delivering 56 percent less value than predicted. A lot
+of these problems can be attributed to bad code that becomes
+unmaintainable as code size grows. The <a
+href="http://en.wikipedia.org/wiki/Pareto_principle">Pareto
+principle</a> indicates that 80 percent of outcomes can be attributed to
+20 percent of the possible causes of a given event. Also known as the
+80-20 rule, it's relevant to almost every field of human endeavor. The
+principle also applies to software engineering by saying that most
+problems are caused by a small number of bad coding practices. These
+practices can be eliminated by using design patterns thereby helping
+engineers<span class="Apple-converted-space">  </span>and companies
+become more productive and successful.</span></p>
+<p><span class="Apple-converted-space">    </span></p>
+<p><span class="Apple-converted-space">      </span>Design patterns
+offer proven solutions to commonly recurring problems.<span
+class="Apple-converted-space">  </span>When you see a common recurring
+problem, you find a common, general solution to solve it. It happens in
+architecture, mechanics, usability, and human behavior, and programming
+makes no exception.<span class="Apple-converted-space">  </span>These
+solutions have been tried successfully in the past. This book attempts
+to bring awareness of these successful patterns among developer
+community.</p>
+<p><span class="Apple-converted-space">     </span></p>
+<p><span class="Apple-tab-span"> </span>I was impressed by Gang of<span
+class="Apple-converted-space">  </span>Four’s<span
+class="Apple-converted-space">  </span>design patterns early on. I have
+used design patterns in large projects and was astounded by the amount
+of reusability the code offers when it makes use of right design
+pattern. <span class="Apple-converted-space">  </span>Having knowledge
+design patterns creates a high level of maturity.<span
+class="Apple-converted-space">  </span>Armed with knowledge,<span
+class="Apple-converted-space">  </span>developer can look at bigger
+picture and thinks about extensibility and reusability before jumping
+into doing.<span class="Apple-converted-space">  </span>Design patterns
+also happens to be one of favorite topics among interviews for software
+engineer. Hence having design pattern knowledge will give you an edge.
+It will take you to journey of becoming ninja developer.<span
+class="Apple-converted-space"> </span></p>
+<p><br />
+</p>
+<p>This book covers creational design patters, Creation pattern enables
+programmer to build solutions to writing<span
+class="Apple-converted-space">  </span>code that creates object(s) in
+fashion that keeps code extensible, maintainable and reusable.<span
+class="Apple-converted-space"> </span></p>
+<p><span id="part0002.xhtml"></span></p>
+<p><span id="part0002.xhtml_doc2"></span> <span
+class="Apple-converted-space">                                         
+                                             
+</span><strong>Introduction</strong></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><span class="Apple-converted-space">    </span><span
+class="s1">Design Patterns provide easy to recognize and use OOP
+solutions to common problems. They're inherently easy to maintain,
+because many people are familiar with them. This is very similar to how
+google works. Everyone knows HOW to google, so when you get a query like
+"What is the purpose of design patterns", you can very quickly use this
+common interface to solve a problem.</span></p>
+<p><span class="s1">Design pattern can greatly increase efficiency,
+reliability and productivity of developer team as whole as it offers
+proven and tested solutions.<span
+class="Apple-converted-space"> </span></span></p>
+<p><span class="s1"><span class="Apple-tab-span"> </span>Creational
+design patterns are all about various ways in which class can be
+instantiated. The instantiation method varies based on what and how much
+of it developer want to control from consumer of code. This pattern is
+classified int<span class="Apple-converted-space"> 
+</span>class-creation patterns and object-creational patterns. While
+class-creation patterns use inheritance effectively in the instantiation
+process, object-creation patterns use delegation effectively to get the
+job done. This gives your program more control in deciding which objects
+need to be instantiated for a specified use case.</span></p>
+<p><span class="s1"><span class="Apple-converted-space">       </span>In
+Java, the way to create an object is to use <strong>new</strong>
+operator.</span></p>
+<p><span class="s1"><span class="Apple-tab-span"> </span>Foo = new Foo()
+; // Instance of Foo class</span></p>
+<p><span class="s1"><span class="Apple-converted-space">       
+</span>Let us say it’s you who has written Foo class and gave the
+library to someone to use it. As you can see, the user of this library
+can instantiate any number of Foo classes with absolutely no control.
+Also here we are hard coding the way object is getting instantiated. In
+many cases, exact object that needs to be created depends on runtime
+behavior. Creation design patterns abstract the way object can be
+created. It can make program more flexible and generic. <span
+class="Apple-converted-space"> </span></span></p>
+<ul>
+<li><span class="s2">Factory Method</span><span class="s1"><br />
+It provides a class that decides what object need to be instantiated
+from a family of classes that are derived from common abstract class
+based on input data provides.</span></li>
+<li><span class="s2">Abstract Factory</span><span class="s1"><br />
+It provides ability to create instance of several families of
+classes</span></li>
+<li><span class="s2">Builder</span><span class="s1"><br />
+It provides ability to differentiate object construction from its
+representation. Hence depending on the need , various representations
+can be created.</span></li>
+<li><span class="s2">Prototype</span><span class="s1"><br />
+It provides lightweight method of creating new objects by cloning or
+copying existing instances.<span
+class="Apple-converted-space"> </span></span></li>
+<li><span class="s2">Singleton</span><span class="s1"><br />
+It provides ability to control number of instances that can be created
+by restricting it to one instance.</span></li>
+</ul>
+<p><span id="part0003.xhtml"></span></p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<h2
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 138%"><strong><span
+id="part0003.xhtml_doc3"></span>CHAPTER ONE</strong></h2>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%"><strong><em>Factory<span
+class="Apple-converted-space"> </span></em></strong></h3>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%; min-height: 19.0px"><br />
+</h3>
+<p><strong><span id="part0003.xhtml_doc4"></span>Background</strong></p>
+<p><strong><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span></strong>Factory design
+patterns are useful in scenario where there is need to create instance
+of a class from related family of classes. For instance say there is a
+factory that makes electronic toys. All electronic toys share some
+common characteristic like they have a play and stop button.<span
+class="Apple-converted-space">  </span>If you need a teddy bear, all you
+need to tell to factory is “Hey make me teddy bear” and the factory will
+make one for you and give it back to you.<span
+class="Apple-converted-space"> </span></p>
+<p>If you need a tiger,<span class="Apple-converted-space">  </span>you
+need to tell to factory is “Hey make me a tiger” and the factory will
+make tiger and give it back to you. In this case the user just passes in
+description of toy and let factory create the toy for user. The use can
+press play and stop button on the toy after purchasing the toy. Same
+factory can create other electronic toys like lion,<span
+class="Apple-converted-space">  </span>dog etc. based on user need.<span
+class="Apple-converted-space"> </span></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><strong>Implementation</strong></p>
+<p><strong><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span></strong>Usually all of the
+classes have parent class and common functions. But each function
+operates on task differently.<span class="Apple-converted-space"> 
+</span>In addition there is a factory class that handles responsibility
+of understanding what class user needs, instantiating the required class
+and returning that instance.<span class="Apple-converted-space"> 
+</span>In the electronics toy factory example, all toys have common
+function called play, and each toy plays differently. When a teddy bear
+is asked play, it may sing a song. When tiger is asked to play, it may
+emit roaring sound. This relationship is explained in picture below.</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><img src="Images/image00046.jpeg"
+width="754" height="390" alt="Image" /><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span"> </span></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><strong><span class="Apple-converted-space">        
+ </span></strong> <span class="Apple-converted-space">    </span>Here
+IElectronicToy is an interface with two functions namely play and stop.
+It represents a contract that each electronic toy should implement. The
+contract is dictate by two methods play() and stop(). TeddyBear and Lion
+are two classes that implements IElectronicToy interface. By overriding
+play() and stop() methods. TeddyBear and Lion each have different
+implementation of play() and stop() methods. ToyFactory is a class with
+just one static method CreateToy(..). This method accepts ToyType enum
+and returns either TeddyBear or lion depending upon ToyType value casted
+as IEletronicToy. Client represents a external class that calls
+ToyFactory class’s static method createToy and passes appropriate value
+of ToyType. It in turn gets a object of type IElectronicToy which
+internally could be reprinting TeddyBear or Lion.</p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span></p>
+<p><span class="Apple-converted-space">                     </span></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><span id="part0003.xhtml_doc5"></span>Here is java code that
+implements above classes.</p>
+<p><br />
+</p>
+<p>File : IElectronic.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>interface</strong> </span>IElectronicToy
+{<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>void</strong> </span>play();<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>void</strong> </span>stop();<br />
+}</p>
+<p><br />
+</p>
+<p><span class="Apple-converted-space"> </span></p>
+<p>File: TeddyBear.java</p>
+<p><strong></strong><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>TeddyBear <span
+class="s2"><strong>implements</strong> </span>IElectronicToy {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>play() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Grrrrrrrrrr"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>stop() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"stopped grrrr...."</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p>File: Lion.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>Lion<span
+class="Apple-converted-space">  </span><span
+class="s2"><strong>implements</strong> </span>IElectronicToy {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>play() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Roar"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>stop() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"stopped roaring"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}<br />
+</p>
+<p>File: ToyFactory.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>ToyFactory
+{<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static</strong> </span>IElectronicToy
+CreateToy(ToyType toyType) <span class="s2"><strong>throws</strong>
+</span>Exception<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span>IElectronicToy toy =
+<span class="s2"><strong>null</strong></span>;<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>switch</strong></span>(toyType)<br />
+<span class="Apple-converted-space">        </span>{<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s4"><strong><em>TeddyBear</em></strong></span>:<br />
+<span class="Apple-converted-space">                          
+</span>toy = <span class="s2"><strong>new</strong>
+</span>TeddyBear();<br />
+<span class="Apple-converted-space">                          
+</span><span class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s4"><strong><em>Lion</em></strong></span>:<br />
+<span class="Apple-converted-space">                          </span>toy
+= <span class="s2"><strong>new</strong> </span>Lion();<br />
+<span class="Apple-converted-space">                         
+</span><span class="s2"><strong>break</strong></span>;<br />
+<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>default</strong></span>:<br />
+<span class="Apple-converted-space">                    </span><span
+class="s2"><strong>throw new</strong> </span>Exception(<span
+class="s5"><strong>"Unknown toyType "</strong> </span>+ toyType) ;<br />
+<br />
+<span class="Apple-converted-space">        </span>}<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong> </span>toy;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+}</p>
+<p><br />
+</p>
+<p>File: ToyType.java</p>
+<p><strong></strong><br />
+</p>
+<p><span class="s2"><strong>public enum</strong> </span>ToyType {<br />
+<span class="Apple-converted-space">    </span><span
+class="s4"><strong><em>TeddyBear</em></strong></span>,<br />
+<span class="Apple-converted-space">    </span><span
+class="s4"><strong><em>Lion<br />
+</em></strong></span>}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: Client.java</p>
+<p><br />
+<span class="s2"><strong>public class</strong> </span>Client {<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static void</strong> </span>main(String
+args[])<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>try<br />
+<span class="Apple-converted-space">       
+</span></strong></span>{<br />
+<span class="Apple-converted-space">            </span>IElectronicToy
+toy = ToyFactory.<em>CreateToy</em>(ToyType.<span
+class="s4"><strong><em>TeddyBear</em></strong></span>);<br />
+<span class="Apple-converted-space">            </span>toy.play();<br />
+<span class="Apple-converted-space">            </span>toy.stop();<br />
+<span class="Apple-converted-space">            </span>toy =
+ToyFactory.<em>CreateToy</em>(ToyType.<span
+class="s4"><strong><em>Lion</em></strong></span>);<br />
+<span class="Apple-converted-space">            </span>toy.play();<br />
+<span class="Apple-converted-space">            </span>toy.stop();<br />
+<span class="Apple-converted-space">        </span>}<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>catch</strong></span>(Exception ex)<br />
+<span class="Apple-converted-space">        </span>{<br />
+<span class="Apple-converted-space">            </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(ex.getMessage());<br />
+<span class="Apple-converted-space">        </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>Output:</p>
+<p><br />
+</p>
+<p>Grrrr…….</p>
+<p>stopped grrrr....</p>
+<p>Roar</p>
+<p>stopped roaring</p>
+<p><br />
+</p>
+<p>Process finished with exit code 0</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><strong><span id="part0003.xhtml_doc6"></span>Benefits</strong></p>
+<p><span class="s6"><strong>Reuse.</strong> If I want to instantiate one
+class from a family of related classed in many places, factory class can
+be used everywhere I need, without having to instantiate individual
+classes.<span class="Apple-converted-space"> </span></span></p>
+<p><span class="s6"><strong>Unit-Testability.</strong> I can write 2
+tests for the factory, to make sure it returns the correct types on the
+correct conditions, then calling class only needs to be tested to see if
+it calls the factory and then the required methods on the returned
+class. It needs to know nothing about the implementation of the factory
+itself or the concrete classes.</span></p>
+<p><span class="s6"><strong>Extensibility.</strong> When someone decides
+we need to add a new class say Tiger to this factory, none of the
+calling code, neither unit tests or implementation, ever needs to be
+told. We simply create a new class Tiger and extend our factory method.
+This follows principles <a
+href="http://www.oodesign.com/open-close-principle.html">Open-Closed
+Principle</a>.</span></p>
+<p><span class="s6">You can even create a new factory class and make
+them hot-swappable, if the situation requires it<span
+class="Apple-converted-space">  </span>for example, if you want to be
+able to switch class Lion on and off, while testing. I have run into
+this situation rarely, but it was extremely useful.</span></p>
+<p><strong></strong><br />
+</p>
+<p><strong><span class="Apple-converted-space"> </span></strong></p>
+<p><span id="part0004.xhtml"></span></p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<h2
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 138%"><strong><span
+id="part0004.xhtml_doc7"></span>CHAPTER TWO</strong></h2>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%"><strong><em>Abstract
+Factory</em></strong></h3>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%; min-height: 19.0px"><br />
+</h3>
+<p><strong><span id="part0004.xhtml_doc8"></span>Background</strong></p>
+<p><strong><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span></strong>Abstract Factory
+design pattern is one level of abstraction higher than factory pattern.
+You can use this pattern when you need to return one object from several
+related families.<span class="Apple-converted-space"> </span></p>
+<p>Note that unlike factory patten,<span class="Apple-converted-space"> 
+</span>it says several families here not just one family.<span
+class="Apple-converted-space">  </span>Therein lies key to understand
+abstract factory pattern.<span class="Apple-converted-space">  </span>So
+abstract factory returns one factory from one of several factories.</p>
+<p><span class="Apple-converted-space"> <span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span></span>One classic example of abstract factory pattern is in
+drawing animation objects like monkey, mountains on a screen. There
+could be several type of drawing systems like 2D, 3D and 4D. Each of
+these drawing system is capable of drawing animation objects.<span
+class="Apple-converted-space">  </span>You could be creating a movie
+scene with a monkey jumping on from one tree to another tree on a muir
+wood mountain. You could play this scene by getting a factory for 2D and
+then play entire scene in 2D. Or you could ask for for 3D factory and
+play entire scene in 3D. This pluggable mechanism is extremely useful to
+compare how same scenes will be rendered in 2D, 3D or 4D just by asking
+for a specified factory without changing anything else.<span
+class="Apple-converted-space">  </span>2D, 3D and 4D represents
+different types of drawing platform. Abstract factory pattern
+encapsulates platform dependencies and simplifies use.<span
+class="Apple-converted-space">  </span>It also allows easy exchange of
+platforms.</p>
+<p><span class="Apple-tab-span"> </span></p>
+<p><br />
+</p>
+<p><strong>Implementation</strong></p>
+<p>Abstract factory pattern has 2 levels of abstraction.<strong><span
+class="Apple-tab-span"> </span></strong>These two levels can be best
+illustrated with drawing example cited above. The use case here is to
+create a scene with a monkey jumping on a swaying tree. We would like to
+have a really easy way to change the rendering scene to 3D or 2D
+platform. First level of abstraction is achieved by using
+IDrawingPlatform and having TwodDrawingFactory and ThreeDdrawingFactory
+implementing IDrawingPlatform.<span class="Apple-converted-space"> 
+</span>Second level of abstraction is achieved by having each
+drawingFactory their own implementation of monkey and tree. IMonkey
+and<span class="Apple-converted-space">  </span>ITree represents
+interfaces. TwoDMonkey and ThreeDMonkey implement IMonkey.<span
+class="Apple-converted-space">  </span>TwoDTree and ThreeDTree implement
+ITree.</p>
+<p>Client interacts with drawingPlatformFactory by passing it
+drawingType (2D or 3D) and seeking desired drawing of monkey or
+Tree.<span class="Apple-converted-space">  </span>DrawingPlatformFactory
+first internally creates TwodDrawingFactory or ThreedDrawingFactory
+depending on drawingType. Client can then use<span
+class="Apple-converted-space">  </span>this drawingFactory to draw
+desired shape of monkey or tree.<span class="Apple-converted-space"> 
+</span>This relationship is explained in picture below.</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><img src="Images/image00047.jpeg" width="883" height="506"
+alt="Image" /></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><span id="part0004.xhtml_doc9"></span>Here is java code that
+implements above classes.</p>
+<p><br />
+</p>
+<p>File: IMonkey.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public interface</strong> </span>IMonkey
+{<br />
+<span class="Apple-converted-space">     </span><span
+class="s2"><strong>void</strong> </span>jump();<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: ITree.java</p>
+<p><strong></strong><br />
+</p>
+<p><span class="s2"><strong>public interface</strong> </span>ITree
+{<br />
+<span class="Apple-converted-space">      </span><span
+class="s2"><strong>void</strong> </span>sway();<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: IDrawingPlatform.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public interface</strong>
+</span>IDrawingPlatform {<br />
+<span class="Apple-converted-space">    </span>IMonkey
+getMonkey();<br />
+<span class="Apple-converted-space">    </span>ITree getTree();<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: ThreeDMonkey.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>ThreeDMonkey
+<span class="s2"><strong>implements</strong> </span>IMonkey {<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>jump() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"This is 3d monky jumping"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p>File: TwoDMonkey.java</p>
+<p><strong></strong><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>TwoDMonkey
+<span class="s2"><strong>implements</strong> </span>IMonkey{<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>jump() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"This is 2d monkey jumping"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: ThreeDTree.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>ThreeDTree
+<span class="s2"><strong>implements</strong> </span>ITree {<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>sway() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"This is 3d tree swaying"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: TwoDTree.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>TwoDTree <span
+class="s2"><strong>implements</strong> </span>ITree {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public void</strong> </span>sway() {<br />
+<span class="Apple-converted-space">         </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"This is 2d tree swaying"</strong></span>) ;<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: TwoDDrawingFactory.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong>
+</span>TwoDDrawingFactory <span class="s2"><strong>implements</strong>
+</span>IDrawingPlatform{<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public</strong> </span>IMonkey getMonkey() {<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return new</strong> </span>TwoDMonkey();<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public</strong> </span>ITree getTree() {<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return new</strong> </span>TwoDTree();<br />
+<span class="Apple-converted-space">    </span>}<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: ThreedDrawingFactory.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong>
+</span>ThreedDrawingFactory <span class="s2"><strong>implements</strong>
+</span>IDrawingPlatform{<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public</strong> </span>IMonkey getMonkey() {<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return new</strong> </span>ThreeDMonkey();<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s3">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public</strong> </span>ITree getTree() {<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return new</strong> </span>ThreeDTree();<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: DrawingType.java</p>
+<p><strong></strong><br />
+</p>
+<p><span class="s2"><strong>public enum</strong> </span>DrawingType
+{<br />
+<span class="Apple-converted-space">    </span><span
+class="s4"><strong><em>TwoD</em></strong></span>,<br />
+<span class="Apple-converted-space">    </span><span
+class="s4"><strong><em>ThreeD<br />
+</em></strong></span>}</p>
+<p><br />
+</p>
+<p>File: DrawingPlatformFactory.java</p>
+<p><strong></strong><br />
+</p>
+<p><span class="s2"><strong>public class</strong>
+</span>DrawingPlatformFactory {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public</strong> </span>IMonkey getMonkey(DrawingType
+dType)<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span>IMonkey theMonkey =
+<span class="s2"><strong>null</strong></span>;<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>switch</strong></span>(dType)<br />
+<span class="Apple-converted-space">        </span>{<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s4"><strong><em>TwoD</em></strong></span>:<br />
+<span class="Apple-converted-space">                </span>theMonkey =
+<span class="s2"><strong>new</strong> </span>TwoDMonkey();<br />
+<span class="Apple-converted-space">                </span><span
+class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s4"><strong><em>ThreeD</em></strong></span>:<br />
+<span class="Apple-converted-space">                </span>theMonkey =
+<span class="s2"><strong>new</strong> </span>ThreeDMonkey();<br />
+<span class="Apple-converted-space">                </span><span
+class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">        </span>}<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong> </span>theMonkey;<br />
+<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public</strong> </span>ITree getTree(DrawingType
+dType)<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span>ITree theTree = <span
+class="s2"><strong>null</strong></span>;<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>switch</strong></span>(dType)<br />
+<span class="Apple-converted-space">        </span>{<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s4"><strong><em>TwoD</em></strong></span>:<br />
+<span class="Apple-converted-space">                </span>theTree =
+<span class="s2"><strong>new</strong> </span>TwoDTree();<br />
+<span class="Apple-converted-space">                </span><span
+class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s4"><strong><em>ThreeD</em></strong></span>:<br />
+<span class="Apple-converted-space">                </span>theTree =
+<span class="s2"><strong>new</strong> </span>ThreeDTree();<br />
+<span class="Apple-converted-space">                </span><span
+class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">        </span>}<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong> </span>theTree;<br />
+<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p>File : Client.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>Client {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static void</strong> </span>main(String[]
+args)<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">       
+</span>DrawingPlatformFactory drawingPlatform = <span
+class="s2"><strong>new</strong> </span>DrawingPlatformFactory();<br />
+<span class="Apple-converted-space">        </span>IMonkey theMonkey =
+drawingPlatform.getMonkey(DrawingType.<span
+class="s4"><strong><em>TwoD</em></strong></span>);<br />
+<span class="Apple-converted-space">        </span>ITree theTree =
+drawingPlatform.getTree(DrawingType.<span
+class="s4"><strong><em>TwoD</em></strong></span>);<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s6"><em>//Draw 2D Scene<br />
+<span class="Apple-converted-space">       
+</span></em></span><em>drawScene</em>(theMonkey, theTree);<br />
+<br />
+<span class="Apple-converted-space">        </span>theMonkey =
+drawingPlatform.getMonkey(DrawingType.<span
+class="s4"><strong><em>ThreeD</em></strong></span>);<br />
+<span class="Apple-converted-space">        </span>theTree =
+drawingPlatform.getTree(DrawingType.<span
+class="s4"><strong><em>ThreeD</em></strong></span>);<br />
+<span class="Apple-converted-space">        </span><span
+class="s6"><em>//Draw 3D Scene<br />
+<span class="Apple-converted-space">       
+</span></em></span><em>drawScene</em>(theMonkey, theTree);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>private static void</strong> </span>drawScene(IMonkey
+theMonkey, ITree theTree)<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">       
+</span>theMonkey.jump();<br />
+<span class="Apple-converted-space">        </span>theTree.sway();<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>Output:</p>
+<p>This is 2d monkey jumping</p>
+<p>This is 2d tree swaying</p>
+<p>This is 3d monky jumping</p>
+<p>This is 3d tree swaying</p>
+<p><br />
+</p>
+<p><strong><span id="part0004.xhtml_doc10"></span>Benefits</strong></p>
+<p><span class="s7"><strong>Encapsulation:</strong> Abstract factory
+pattern isolates concrete classes completely from client. This allows
+interchange of product families freely.</span></p>
+<p><strong>Extensibility:<span class="Apple-converted-space"> 
+</span></strong><span class="s7">Abstract Factory pattern is “factory of
+factories” and can be easily extended to accommodate more products, for
+example we can add another sub-class FourDDrawingFactory, FourDMonkey
+and FourDTree. Client code would require minimal changes.</span></p>
+<p><span id="part0005.xhtml"></span></p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<h2
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 138%"><strong><span
+id="part0005.xhtml_doc11"></span>CHAPTER THREE</strong></h2>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%"><strong><em>Builder</em></strong></h3>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%; min-height: 19.0px"><br />
+</h3>
+<p><strong><span
+id="part0005.xhtml_doc12"></span>Background</strong></p>
+<p><strong><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span></strong>Builder design
+pattern is used to separate the construction of object from its
+representation. The same construction mechanism can be used to construct
+several different representations. Builder factor focuses on
+constructing object step by step. Consider an example of pizza shop.
+Customer can order for various types of pizzas like pepperoni pizza,
+supreme chicken pizza or veggie pizza. The steps for creating each pizza
+are same.<span class="Apple-converted-space">  </span>The final outcome
+varies depending on what is done inside that step.<span
+class="Apple-converted-space"> </span></p>
+<ul>
+<li>Order pizza (Telephone/website/Go to the shop))</li>
+<li>Get a Pizza Base</li>
+<li>Add tomato sauce</li>
+<li>Add Cheese</li>
+<li>Add Toppings (Pepperoni/Veggie/Chicken)</li>
+<li>Bake The pizza</li>
+<li>Send the pizza to customer (Takeout or delivery)</li>
+</ul>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><strong>Implementation</strong></p>
+<p>The use case here is to build a pizza based on customer
+specification. PizzaBuilder is an abstract class that dictates the steps
+to build pizza and also orchestrates the pizza making steps. <span
+class="Apple-converted-space">  </span>VeggiePizzaBuilder,
+PizzaPepperoniBizzaBuilder and ChickenPizzaBuildera extends
+PizzaBuilderClass. The only method they override is addToppings()
+method. VeggiePizzaBuilder adds topics like tomato, green pepper and
+onions. PeopporoniPizzaBuilder adds pepperoni slices.
+ChickenPizzaBuilder adds grilled checkin toppings. Rest of the methods
+remain same for all three types of pizzas. Director class determines
+which PizzaBuilder class it should invoke based on PizzaType
+specification from customer. Client class represents customer who is
+placing the order. This relationship is explained in picture below.<span
+class="Apple-converted-space">  </span>Note that ‘+’ prefix in front of
+method denote public methods whereas ‘#’ prefix denotes protected
+methods</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><img src="Images/image00048.jpeg" width="847" height="446"
+alt="Image" /></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><span id="part0005.xhtml_doc13"></span>Here is java code that
+implements above classes.</p>
+<p><br />
+</p>
+<p>File: PizzaType.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public enum</strong> </span>PizzaType
+{<br />
+<span class="Apple-converted-space">    </span><span
+class="s3"><strong><em>Veggie</em></strong></span>,<br />
+<span class="Apple-converted-space">    </span><span
+class="s3"><strong><em>Pepperoni</em></strong></span>,<br />
+<span class="Apple-converted-space">    </span><span
+class="s3"><strong><em>Chicken<br />
+</em></strong></span>}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: PizzaBuilder.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public abstract class</strong>
+</span>PizzaBuilder {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>protected</strong> </span>String <span
+class="s3"><strong>telNum</strong> </span>= <span
+class="s4"><strong>""</strong></span>;<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public void</strong> </span>orderPizza(String telNum)
+{<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>this</strong></span>.<span
+class="s3"><strong>telNum</strong> </span>= telNum;<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"Creating pizza for "</strong> </span>+
+telNum);<br />
+<span class="Apple-converted-space">        </span>buildPizza();<br />
+<span class="Apple-converted-space">    </span>}<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>protected void</strong> </span>getPizzaBase() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"Getting pizza base"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>protected void</strong> </span>addTomatoSauce()
+{<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"Adding tomato sauce"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>protected void</strong> </span>addCheese() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"Adding cheese"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>protected void</strong> </span>bakePizza() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"baking pizza. Smells great"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>protected<span class="Apple-converted-space"> 
+</span>void</strong> </span>sendPizza() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"sending pizza to customer "</strong> </span>+ <span
+class="s2"><strong>this</strong></span>.<span
+class="s3"><strong>telNum</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>protected void</strong> </span>buildPizza() {<br />
+<span class="Apple-converted-space">        </span>getPizzaBase();<br />
+<span class="Apple-converted-space">       
+</span>addTomatoSauce();<br />
+<span class="Apple-converted-space">        </span>addCheese();<br />
+<span class="Apple-converted-space">        </span>addToppings();<br />
+<span class="Apple-converted-space">        </span>bakePizza();<br />
+<span class="Apple-converted-space">        </span>sendPizza();<br />
+<span class="Apple-converted-space">    </span>}<br />
+<span class="Apple-converted-space">     </span><span
+class="s2"><strong>protected abstract void</strong>
+</span>addToppings();<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: VeggiePizzaBuilder.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong>
+</span>VeggiePizzaBuilder <span class="s2"><strong>extends</strong>
+</span>PizzaBuilder {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s5">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>protected void</strong> </span>addToppings() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"Adding onions, tomators and
+spinach"</strong></span>) ;<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p>File: PepporoniPizzaBuilder.java</p>
+<p><span class="s2"><strong>public class</strong>
+</span>PepporoniPizzaBuilder <span class="s2"><strong>extends</strong>
+</span>PizzaBuilder {<br />
+<span class="Apple-converted-space">    </span><span
+class="s5">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>protected void</strong> </span>addToppings() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"Adding Pepporoni"</strong></span>) ;<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: ChickenPizzaBuilder.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong>
+</span>ChickenPizzaBuilder <span class="s2"><strong>extends</strong>
+</span>PizzaBuilder {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s5">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>protected void</strong> </span>addToppings() {<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"Adding grilled chiken"</strong></span>) ;<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: Director.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>Director
+{<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static</strong> </span>PizzaBuilder
+CreatePizza(PizzaType pizzaType, String telNum)<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span>PizzaBuilder
+pizzaBuilder = <span class="s2"><strong>null</strong></span>;<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>switch</strong></span>(pizzaType)<br />
+<span class="Apple-converted-space">        </span>{<br />
+<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s3"><strong><em>Veggie</em></strong></span>:<br />
+<span class="Apple-converted-space">                               
+</span>pizzaBuilder = <span class="s2"><strong>new</strong>
+</span>VeggiePizzaBuilder();<br />
+<span class="Apple-converted-space">                               
+</span><span class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s3"><strong><em>Pepperoni</em></strong></span>:<br />
+<span class="Apple-converted-space">                               
+</span>pizzaBuilder = <span class="s2"><strong>new</strong>
+</span>PepporoniPizzaBuilder();<br />
+<span class="Apple-converted-space">                               
+</span><span class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>case</strong> </span><span
+class="s3"><strong><em>Chicken</em></strong></span>:<br />
+<span class="Apple-converted-space">                               
+</span>pizzaBuilder = <span class="s2"><strong>new</strong>
+</span>ChickenPizzaBuilder();<br />
+<span class="Apple-converted-space">                               
+</span><span class="s2"><strong>break</strong></span>;<br />
+<span class="Apple-converted-space">        </span>}<br />
+<span class="Apple-converted-space">       
+</span>pizzaBuilder.orderPizza(telNum);<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong> </span>pizzaBuilder;<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: Client.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>Client {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static void</strong> </span>main(String[]
+args) {<br />
+<span class="Apple-converted-space">               </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"******* Ordering Pepporni Pizza
+*************"</strong></span>);<br />
+<span class="Apple-converted-space">              
+</span>Director.<em>CreatePizza</em>(PizzaType.<span
+class="s3"><strong><em>Pepperoni</em></strong></span>, <span
+class="s4"><strong>"408-231-1234"</strong></span>);<br />
+<span class="Apple-converted-space">               </span>System.<span
+class="s3"><strong><em>out</em></strong></span>.println(<span
+class="s4"><strong>"******* Ordering Veggie Pizza
+*************"</strong></span>);<br />
+<span class="Apple-converted-space">              
+</span>Director.<em>CreatePizza</em>(PizzaType.<span
+class="s3"><strong><em>Veggie</em></strong></span>, <span
+class="s4"><strong>"408-231-1244"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>Output:</p>
+<p>******* Ordering Pepporni Pizza *************</p>
+<p>Creating pizza for 408-231-1234</p>
+<p>Getting pizza base</p>
+<p>Adding tomato sauce</p>
+<p>Adding cheese</p>
+<p>Adding Pepporoni</p>
+<p>baking pizza. Smells great</p>
+<p>sending pizza to customer 408-231-1234</p>
+<p>******* Ordering Veggie Pizza *************</p>
+<p>Creating pizza for 408-231-1244</p>
+<p>Getting pizza base</p>
+<p>Adding tomato sauce</p>
+<p>Adding cheese</p>
+<p>Adding onions, tomators and spinach</p>
+<p>baking pizza. Smells great</p>
+<p>sending pizza to customer 408-231-1244</p>
+<p><br />
+</p>
+<p><strong><span id="part0005.xhtml_doc14"></span>Benefits</strong></p>
+<p><span class="s6"><strong>Separation:</strong> </span><span
+class="s7">Builder pattern lets you vary internal representation of the
+product it builds. It comes handy when you need to have lots of things
+to build an object. For example imagine a XML document object model. You
+have to create plenty of nodes and attributes to get your final
+object.<span class="Apple-converted-space"> </span></span></p>
+<p><span class="s7"><strong>Extensibility:</strong> Builder pattern lets
+you reuse the same construction process for new objects.<span
+class="Apple-converted-space"> </span></span></p>
+<p><span id="part0006.xhtml"></span></p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<h2
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 138%"><strong><span
+id="part0006.xhtml_doc15"></span>CHAPTER FOUR</strong></h2>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%"><strong><em>Prototype</em></strong></h3>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%; min-height: 19.0px"><br />
+</h3>
+<p><strong><span
+id="part0006.xhtml_doc16"></span>Background</strong></p>
+<p><strong><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span></strong>Prototype design
+pattern is used when creating an instance of a class is time intensive
+or complex. In such a case, ratter than creating new instances from
+scratch every time, you can create one instanced make copies of it and
+updating it as required. For instance if there are number of queries
+that needed to be made to get more information on an employee in
+database, a better approach would be to get the information of employee
+in a result set in memory only once, make copies of it for each query
+and then do the processing. This will prevent multiple round trips to
+database, thus reducing network overhead. Database connection happened
+to be one of limited and expensive resources in SaaS applications.<span
+class="Apple-converted-space">  </span>Prototype patten offers help in
+reducing overhead by reducing object construction time and database
+round trips . These savings helps tremendously in scaling the SaaS
+application because resources like database connection, network
+connections are used more efficiently.</p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span>Prototype is unique among creational
+design pattern in that it does not require a class. It just needs an
+object.<span class="Apple-converted-space">  </span>The key idea here is
+that an object can spawn other objects similar to itself. If you have
+one tree in computer game, you could create many trees just by cloning
+fret tree. All modern languages like Java, C# offers built in clone
+function at System.Object level that can be overridden by custom classes
+to achieve prototype functionality.</p>
+<p><br />
+</p>
+<p><strong>Implementation</strong></p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span>The use case here is that
+client would like a construct a home. Home needs parts like doors and
+windows. Doors and windows of one home are similar in nature. They may
+vary by size.</p>
+<p>DBContext is helper class that fetches default width and height from
+database. When home needs first door, we can create a basic door from
+scratch and keep it ready.<span class="Apple-converted-space"> 
+</span>First door is created using a constructor and it would call
+DbContext’s getDefaultDoorHeight() and getDefaultDoorWidth() to get
+default width and height for door. It is time consuming call and
+requires 2 roundtrips to database.<span
+class="Apple-converted-space"> </span></p>
+<p>When home needs another door, instead of creating from scratch, we
+can copy the data from first door and modify its properties as
+necessary. IClonable interface represents ability to copy an object. It
+just has clone() function. Any class that needs to implement copy
+functionality, they can override clone() function and provide their
+implementation of clone(). Door and Window class implement IClonable
+interface, thus provide ability to clone them. Client can call clone
+function on door and window object to create as any doors and windows as
+necessary for the home. When a door or window is cloned, we just make
+copy of existing object and then update as necessary. This cloning
+ability prevents expensive roundtrips to database.</p>
+<p>This is depicted in picture below.<span
+class="Apple-converted-space"> </span></p>
+<p><br />
+</p>
+<p><span class="Apple-converted-space">                                
+              </span><img src="Images/image00049.jpeg" width="524"
+height="315" alt="Image" /></p>
+<p><br />
+</p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span></p>
+<p><br />
+</p>
+<p><span id="part0006.xhtml_doc17"></span>Here is java code that
+implements above classes.</p>
+<p><br />
+</p>
+<p>File: DBContext.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>DBContext
+{<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static double</strong>
+</span>getDefaultDoorHeight()<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate database connection value<br />
+<span class="Apple-converted-space">       
+</span></em></span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Connecting to database..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Fetching default door
+height..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate value obtained from database<br />
+<span class="Apple-converted-space">        </span></em></span><span
+class="s2"><strong>return</strong> </span><span
+class="s6">20.0</span>;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static double</strong>
+</span>getDefaultDoorWidtht()<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate database connection value<br />
+<span class="Apple-converted-space">       
+</span></em></span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Connecting to database..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Fetching default door
+width..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate value obtained from database<br />
+<span class="Apple-converted-space">        </span></em></span><span
+class="s2"><strong>return</strong> </span><span
+class="s6">10.0</span>;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static double</strong>
+</span>getDefaultWindowHeight()<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate database connection value<br />
+<span class="Apple-converted-space">       
+</span></em></span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Connecting to database..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Fetching default window
+height..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate value obtained from database<br />
+<span class="Apple-converted-space">        </span></em></span><span
+class="s2"><strong>return</strong> </span><span
+class="s6">5.0</span>;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static double</strong>
+</span>getDefaultWindowWidth()<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate database connection value<br />
+<span class="Apple-converted-space">       
+</span></em></span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Connecting to database..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Fetching default window
+width..."</strong></span>);<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//simulate value obtained from database<br />
+<span class="Apple-converted-space">        </span></em></span><span
+class="s2"><strong>return</strong> </span><span
+class="s6">6.0</span>;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: IClonable.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public interface</strong> </span>IClonable
+{<br />
+<span class="Apple-converted-space">    </span>Object clone();<br />
+}</p>
+<p><br />
+</p>
+<p>File:<span class="Apple-converted-space">  </span>Door.java</p>
+<p><span class="s2"><strong>public class</strong> </span>Door <span
+class="s2"><strong>implements</strong> </span>IClonable{<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public double</strong> </span><span
+class="s4"><strong>hingSize</strong> </span>= <span
+class="s6">4.0</span>;<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public double</strong> </span><span
+class="s4"><strong>width</strong> </span>= <span
+class="s6">0.0</span>;<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public double</strong> </span><span
+class="s4"><strong>height</strong> </span>= <span
+class="s6">0.0</span>;<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public</strong> </span>Door()<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>height</strong>
+</span>=DBContext.<em>getDefaultDoorHeight</em>();<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>width</strong> </span>=
+DBContext.<em>getDefaultDoorWidtht</em>();<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s7">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public</strong> </span>Object clone() {<br />
+<span class="Apple-converted-space">        </span>Door theDoor = <span
+class="s2"><strong>new</strong> </span>Door();<br />
+<span class="Apple-converted-space">        </span>theDoor.<span
+class="s4"><strong>hingSize</strong> </span>= <span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>hingSize</strong></span>;<br />
+<span class="Apple-converted-space">        </span>theDoor.<span
+class="s4"><strong>width</strong> </span>= <span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>width</strong></span>;<br />
+<span class="Apple-converted-space">        </span>theDoor.<span
+class="s4"><strong>height</strong> </span>= <span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>height</strong></span>;<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong> </span>theDoor;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public void</strong> </span>fixHinge()<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Fixing hinge to the door"</strong></span>);<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>hingSize</strong> </span>= <span
+class="s6">20.0</span>;<br />
+<span class="Apple-converted-space">    </span>}<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File:<span class="Apple-converted-space">  </span>Window.java</p>
+<p><span class="s2"><strong>public class</strong> </span>Window <span
+class="s2"><strong>implements</strong> </span>IClonable {<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public double</strong> </span><span
+class="s4"><strong>glassSize</strong> </span>= <span
+class="s6">10.0</span>;<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public double</strong> </span><span
+class="s4"><strong>width</strong> </span>= <span
+class="s6">0.0</span>;<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public double</strong> </span><span
+class="s4"><strong>height</strong> </span>= <span
+class="s6">0.0</span>;<br />
+<br />
+<span class="Apple-converted-space">     </span><span
+class="s2"><strong>public</strong> </span>Window()<br />
+<span class="Apple-converted-space">     </span>{<br />
+<span class="Apple-converted-space">         </span><span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>height</strong> </span>=
+DBContext.<em>getDefaultWindowHeight</em>();<br />
+<span class="Apple-converted-space">         </span><span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>width</strong> </span>=
+DBContext.<em>getDefaultWindowWidth</em>();<br />
+<span class="Apple-converted-space">     </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s7">@Override<br />
+<span class="Apple-converted-space">    </span></span><span
+class="s2"><strong>public</strong> </span>Object clone() {<br />
+<span class="Apple-converted-space">        </span>Window theWindow =
+<span class="s2"><strong>new</strong> </span>Window();<br />
+<span class="Apple-converted-space">        </span>theWindow.<span
+class="s4"><strong>glassSize</strong> </span>= <span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>glassSize</strong></span>;<br />
+<span class="Apple-converted-space">        </span>theWindow.<span
+class="s4"><strong>width</strong> </span>= <span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>width</strong></span>;<br />
+<span class="Apple-converted-space">        </span>theWindow.<span
+class="s4"><strong>height</strong> </span>= <span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>height</strong></span>;<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong> </span>theWindow;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public void</strong> </span>fixGlass()<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>this</strong></span>.<span
+class="s4"><strong>glassSize</strong> </span>= <span
+class="s6">5.0</span>;<br />
+<span class="Apple-converted-space">        </span>System.<span
+class="s4"><strong><em>out</em></strong></span>.println(<span
+class="s5"><strong>"Fixing glass to the window"</strong></span>);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File:<span class="Apple-converted-space">  </span>Client.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>public class</strong> </span>Client {<br />
+<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static void</strong> </span>main(String[]
+args)<br />
+<span class="Apple-converted-space">    </span>{<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//Build a home with 2 doors and 4 windows<br />
+<br />
+<span class="Apple-converted-space">        </span>//First door create
+from scratch<br />
+<span class="Apple-converted-space">        </span></em></span>Door
+door1 = <span class="s2"><strong>new</strong> </span>Door();<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//Build Second door by cloing first door<br />
+<span class="Apple-converted-space">        </span></em></span>Door
+door2 = (Door)door1.clone();<br />
+<br />
+<span class="Apple-converted-space">       
+</span>door1.fixHinge();<br />
+<span class="Apple-converted-space">       
+</span>door2.fixHinge();<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//Build first windo from scratch<br />
+<span class="Apple-converted-space">        </span></em></span>Window
+window1 = <span class="s2"><strong>new</strong> </span>Window();<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s3"><em>//Build 3 other windows by cloing first window<br />
+<span class="Apple-converted-space">        </span></em></span>Window
+window2 = (Window)window1.clone();<br />
+<span class="Apple-converted-space">        </span>Window window3 =
+(Window)window1.clone();<br />
+<span class="Apple-converted-space">        </span>Window window4 =
+(Window)window1.clone();<br />
+<br />
+<span class="Apple-converted-space">       
+</span>window2.fixGlass();<br />
+<span class="Apple-converted-space">       
+</span>window2.fixGlass();<br />
+<span class="Apple-converted-space">       
+</span>window3.fixGlass();<br />
+<span class="Apple-converted-space">       
+</span>window4.fixGlass();<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>Output:</p>
+<p>Connecting to database...</p>
+<p>Fetching default door height...</p>
+<p>Connecting to database...</p>
+<p>Fetching default door width...</p>
+<p>Connecting to database...</p>
+<p>Fetching default door height...</p>
+<p>Connecting to database...</p>
+<p>Fetching default door width...</p>
+<p>Fixing hinge to the door</p>
+<p>Fixing hinge to the door</p>
+<p>Connecting to database...</p>
+<p>Fetching default window height...</p>
+<p>Connecting to database...</p>
+<p>Fetching default window width...</p>
+<p>Connecting to database...</p>
+<p>Fetching default window height...</p>
+<p>Connecting to database...</p>
+<p>Fetching default window width...</p>
+<p>Connecting to database...</p>
+<p>Fetching default window height...</p>
+<p>Connecting to database...</p>
+<p>Fetching default window width...</p>
+<p>Connecting to database...</p>
+<p>Fetching default window height...</p>
+<p>Connecting to database...</p>
+<p>Fetching default window width...</p>
+<p>Fixing glass to the window</p>
+<p>Fixing glass to the window</p>
+<p>Fixing glass to the window</p>
+<p>Fixing glass to the window</p>
+<p><br />
+</p>
+<p>Process finished with exit code 0</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><strong><span id="part0006.xhtml_doc18"></span>Benefits</strong></p>
+<p><span class="s8"><strong>Scalability:</strong> </span><span
+class="s9">Prototype pattern fast way to create new objects by cloning
+existing object which in turn improves efficiency of resource usage and
+improves scalability of overall system.<span
+class="Apple-converted-space"> </span></span></p>
+<p><span class="s9"><strong>Simplicity and Consistency :</strong>
+Prototype patterns simplifies new object creation by enforcing cloning
+ability via IClonable interface. Using IClonable interface also makes
+closing behavior consistent across all classes.</span></p>
+<p><span id="part0007.xhtml"></span></p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<h2
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 138%"><strong><span
+id="part0007.xhtml_doc19"></span>CHAPTER FIVE</strong></h2>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%"><strong><em>Singleton</em></strong></h3>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%; min-height: 19.0px"><br />
+</h3>
+<p><strong><span
+id="part0007.xhtml_doc20"></span>Background</strong></p>
+<p><strong><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span></strong>Singleton design
+pattern is used when as a designer of class, you need to control number
+of instances of your class that user can control . Specifically the
+number of instances that external consumer can create is restricted to
+one and only one. There are many use cases where restricting number of
+instances is obvious and safe choice. For instance the class that reads
+configuration information of application and is used as read only class
+should be singleton.<span class="Apple-converted-space">  </span>Other
+examples of singleton classes are print spooler class,. Usually
+constructor of a Singleton class is made private. It just has a static
+method to access the only instance. The only instance serves as global
+point of access to the object.</p>
+<p><br />
+</p>
+<p><strong>Implementation</strong></p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span>The use case here is that
+client would like access a configuration information of an application.
+This configuration information is stored in a text file in key value
+pairs.<span class="Apple-converted-space"> </span></p>
+<p>Since same configuration information is needed in read only fashion
+everywhere, we just one instance of configuration reader.<span
+class="Apple-converted-space">  </span>ConfigReader is a singleton
+class. Its constructor is made private so that client can not directly
+instantiate it. It has getInstance() method that Client can use to
+access the only instance it has.<span class="Apple-converted-space"> 
+</span>loadConfig() information is used for reading the information from
+text file during initialization part and keeps it in internal hash
+table. Once client contains instance of ConfigReader, it can get value
+of a configuration key by calling getValue() method by passing in value
+of key in question. getValue() function looks up hash table to get the
+value for specified key and returns it. The class diagram is depicted
+below.</p>
+<p><br />
+</p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><img src="Images/image00050.jpeg"
+width="414" height="190" alt="Image" /></p>
+<p><span class="Apple-converted-space"> </span></p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><span class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span><span class="Apple-tab-span">
+</span><span class="Apple-tab-span"> </span><span
+class="Apple-tab-span"> </span></p>
+<p><br />
+</p>
+<p><span id="part0007.xhtml_doc21"></span>Here is java code that
+implements above classes.</p>
+<p><br />
+</p>
+<p>File: ConfigReader.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>import</strong>
+</span>java.io.BufferedReader;<br />
+<span class="s2"><strong>import</strong>
+</span>java.io.FileNotFoundException;<br />
+<span class="s2"><strong>import</strong>
+</span>java.io.FileReader;<br />
+<span class="s2"><strong>import</strong>
+</span>java.io.IOException;<br />
+<span class="s2"><strong>import</strong>
+</span>java.util.Hashtable;<br />
+<br />
+<span class="s2"><strong>public class</strong> </span>ConfigReader
+{<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>private static</strong> </span>ConfigReader
+_configReader = <span class="s2"><strong>null</strong></span>;<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>private</strong> </span>Hashtable configTable = <span
+class="s2"><strong>null</strong></span>;<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>private</strong> </span>ConfigReader() {<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static</strong> </span>ConfigReader
+getInstance(String filePath) {<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>if</strong></span>(_configReader == <span
+class="s2"><strong>null</strong></span>) {<br />
+<span class="Apple-converted-space">            </span>_configReader =
+<span class="s2"><strong>new</strong> </span>ConfigReader();<br />
+<span class="Apple-converted-space">           
+</span>loadConfig(filePath);<br />
+<span class="Apple-converted-space">        </span>}<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong> </span>_configReader;<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static void</strong> </span>loadConfig(String
+filePath) {<br />
+<span class="Apple-converted-space">       
+</span>System.out.println(<span class="s3"><strong>"loading config from
+file"</strong></span>);<br />
+<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>try</strong> </span>{<br />
+<span class="Apple-converted-space">            </span>FileReader ex =
+<span class="s2"><strong>new</strong> </span>FileReader(filePath);<br />
+<span class="Apple-converted-space">            </span>String line =
+<span class="s2"><strong>null</strong></span>;<br />
+<span class="Apple-converted-space">            </span>BufferedReader
+bufferedReader = <span class="s2"><strong>new</strong>
+</span>BufferedReader(ex);<br />
+<span class="Apple-converted-space">           
+</span>_configReader.configTable = <span class="s2"><strong>new</strong>
+</span>Hashtable();<br />
+<br />
+<span class="Apple-converted-space">            </span><span
+class="s2"><strong>while</strong></span>((line =
+bufferedReader.readLine()) != <span
+class="s2"><strong>null</strong></span>) {<br />
+<span class="Apple-converted-space">                </span>String key =
+line.split(<span class="s3"><strong>"#"</strong></span>)[<span
+class="s4">0</span>];<br />
+<span class="Apple-converted-space">                </span>String value
+= line.split(<span class="s3"><strong>"#"</strong></span>)[<span
+class="s4">1</span>];<br />
+<span class="Apple-converted-space">               
+</span>_configReader.configTable.put(key, value);<br />
+<span class="Apple-converted-space">            </span>}<br />
+<br />
+<span class="Apple-converted-space">           
+</span>bufferedReader.close();<br />
+<span class="Apple-converted-space">        </span>} <span
+class="s2"><strong>catch</strong> </span>(FileNotFoundException var6)
+{<br />
+<span class="Apple-converted-space">           
+</span>System.out.println(<span class="s3"><strong>"Unable to open
+file</strong> </span><span class="s2"><strong>\'</strong></span><span
+class="s3"><strong>"</strong> </span>+ filePath + <span
+class="s3"><strong>"</strong></span><span
+class="s2"><strong>\'</strong></span><span
+class="s3"><strong>"</strong></span>);<br />
+<span class="Apple-converted-space">        </span>} <span
+class="s2"><strong>catch</strong> </span>(IOException var7) {<br />
+<span class="Apple-converted-space">           
+</span>System.out.println(<span class="s3"><strong>"Error reading
+file</strong> </span><span class="s2"><strong>\'</strong></span><span
+class="s3"><strong>"</strong> </span>+ filePath + <span
+class="s3"><strong>"</strong></span><span
+class="s2"><strong>\'</strong></span><span
+class="s3"><strong>"</strong></span>);<br />
+<span class="Apple-converted-space">        </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public</strong> </span>String getValue(String key)
+{<br />
+<span class="Apple-converted-space">       
+</span>System.out.println(<span class="s3"><strong>"getting config for
+key "</strong> </span>+ key);<br />
+<span class="Apple-converted-space">        </span><span
+class="s2"><strong>return</strong>
+</span>(String)_configReader.configTable.get(key);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}<br />
+</p>
+<p><br />
+</p>
+<p>File: Client.java</p>
+<p><br />
+</p>
+<p><span class="s2"><strong>import</strong>
+</span>Singleton.ConfigReader;<br />
+<br />
+<span class="s2"><strong>public class</strong> </span>Client {<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public</strong> </span>Client() {<br />
+<span class="Apple-converted-space">    </span>}<br />
+<br />
+<span class="Apple-converted-space">    </span><span
+class="s2"><strong>public static void</strong> </span>main(String[]
+args) {<br />
+<span class="Apple-converted-space">        </span>ConfigReader
+configReader = ConfigReader.getInstance(<span
+class="s3"><strong>"/Users/ravindrasadaphule/config.txt"</strong></span>);<br />
+<span class="Apple-converted-space">        </span>String
+dbConnectionString = configReader.getValue(<span
+class="s3"><strong>"DbConectionString"</strong></span>);<br />
+<span class="Apple-converted-space">       
+</span>System.out.println(dbConnectionString);<br />
+<span class="Apple-converted-space">    </span>}<br />
+}</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>File: config.txt</p>
+<p><br />
+</p>
+<p>DbConectionString#provider=oracle11;trusted_connection=yes</p>
+<p>username#admin</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p>Output:</p>
+<p>loading config from file</p>
+<p>getting config for key DbConectionString</p>
+<p>provider=oracle11;trusted_connection=yes</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><strong><span id="part0007.xhtml_doc22"></span>Benefits</strong></p>
+<p><span class="s5"><strong>Low memory footprint:</strong> </span><span
+class="s6">Singleton pattern restricts intense of a class to one. It
+prevents user from creating more than one instance and thus saves on
+memory.<span class="Apple-converted-space"> </span></span></p>
+<p><span class="s6"><strong>Simplicity<span
+class="Apple-converted-space">  </span>:</strong> Singleton pattern is
+deceptively simple. It is the pattern which completely contained in the
+same class and do not need any other auxiliary class.<span
+class="Apple-converted-space"> </span></span></p>
+<p><span id="part0008.xhtml"></span></p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<p><span class="s1"></span><br />
+</p>
+<h2
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 138%"><strong><span
+id="part0008.xhtml_doc23"></span>CHAPTER SIX</strong></h2>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%"><strong><em>Summary</em></strong></h3>
+<h3
+style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; text-indent: 0.0px; font-size: 123%; min-height: 19.0px"><br />
+</h3>
+<p><span id="part0008.xhtml_doc24"></span><span
+class="Apple-converted-space">                                         
+  </span><span class="Apple-converted-space">                           
+                                                             </span></p>
+<p>Thank you very much for going through the entire book on creation
+design patterns. Here is brief summary of all creation al design
+patterns.</p>
+<p><br />
+</p>
+<ul>
+<li><span class="s2"><strong>The Factory Pattern</strong> is used to
+select and obtain an instance of a class from a number of similar
+classes based on data you provide to the factory.<span
+class="Apple-converted-space"> </span></span></li>
+<li><strong></strong><span class="s2"><strong>The Abstract Factory
+Pattern</strong> is used to obtain one of several related groups of
+classes. In some cases it returns a Factory for that group of
+classes.<span class="Apple-converted-space"> </span></span></li>
+<li><strong></strong><span class="s2"><strong>The Builder
+Pattern</strong> builds a number of objects to make a new object, based
+on the data with which it is presented.<span
+class="Apple-converted-space"> </span></span></li>
+<li><strong></strong><span class="s2"><strong>The Prototype
+Pattern</strong> clones an existing class rather than creating a new
+instance when creating new instances is more expensive.<span
+class="Apple-converted-space"> </span></span></li>
+<li><strong></strong><span class="s2"><strong>The Singleton
+Pattern</strong> is a pattern that ensures that there is one and only
+one instance of an object, and that it is possible to obtain global
+access to that one instance.<br />
+</span></li>
+</ul>

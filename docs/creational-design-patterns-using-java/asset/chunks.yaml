@@ -1,0 +1,1195 @@
+- fmt: "\n![](Images/cover00052.jpeg)\n\n# CONTENTS\n\n- [Preface](#part0001.xhtml)\n\
+    - [Introduction](#part0002.xhtml)\n- [Chapter One - Factory](#part0003.xhtml)\n\
+    - [Chapter Two - Abstract Factory](#part0004.xhtml)\n- [Chapter Three - Builder](#part0005.xhtml)\n\
+    - [Chapter Four - Prototype](#part0006.xhtml)\n- [Chapter Five - Singleton](#part0007.xhtml)\n\
+    - [Chapter Six - Summary](#part0008.xhtml)\n\n## Preface\n\nI have been working\
+    \ as software engineer professional in a multinational firm for more than 20 years.\
+    \ I feel its time to leverage my learnings over the years and mentor programmers\
+    \ on practices of writing reliable, maintainable and extensible software. I have\
+    \ learned lot of good coding practices the hard way by making mistakes first and\
+    \ learning from them along the way. Design patterns have helped me tremendously\
+    \ to avoid repeating those mistakes. This book documents commonly used creational\
+    \ design patterns and attempts to provide guidelines on how to avoid common pitfalls\
+    \ on software development by using right design patterns.\n\nA Mckinsy study of\
+    \ 5,400 large scale IT projects (projects with initial budgets greater than $15M)\
+    \ in 2012 reported that 17 percent of large IT projects go so badly that they\
+    \ can threaten the very existence of the company. It also mentioned that on average,\
+    \ large IT projects run 45 percent over budget and 7 percent over time, while\
+    \ delivering 56 percent less value than predicted. A lot of these problems can\
+    \ be attributed to bad code that becomes unmaintainable as code size grows. The\
+    \ [Pareto principle](http://en.wikipedia.org/wiki/Pareto_principle) indicates\
+    \ that 80 percent of outcomes can be attributed to 20 percent of the possible\
+    \ causes of a given event. Also known as the 80-20 rule, it's relevant to almost\
+    \ every field of human endeavor. The principle also applies to software engineering\
+    \ by saying that most problems are caused by a small number of bad coding practices.\
+    \ These practices can be eliminated by using design patterns thereby helping engineers\
+    \ and companies become more productive and successful.\n\nDesign patterns offer\
+    \ proven solutions to commonly recurring problems. When you see a common recurring\
+    \ problem, you find a common, general solution to solve it. It happens in architecture,\
+    \ mechanics, usability, and human behavior, and programming makes no exception.\
+    \ These solutions have been tried successfully in the past. This book attempts\
+    \ to bring awareness of these successful patterns among developer community.\n\
+    \nI was impressed by Gang of Four’s design patterns early on. I have used design\
+    \ patterns in large projects and was astounded by the amount of reusability the\
+    \ code offers when it makes use of right design pattern. Having knowledge design\
+    \ patterns creates a high level of maturity. Armed with knowledge, developer can\
+    \ look at bigger picture and thinks about extensibility and reusability before\
+    \ jumping into doing. Design patterns also happens to be one of favorite topics\
+    \ among interviews for software engineer. Hence having design pattern knowledge\
+    \ will give you an edge. It will take you to journey of becoming ninja developer.\n\
+    \nThis book covers creational design patters, Creation pattern enables programmer\
+    \ to build solutions to writing code that creates object(s) in fashion that keeps\
+    \ code extensible, maintainable and reusable. \n\n## Introduction\n\nDesign Patterns\
+    \ provide easy to recognize and use OOP solutions to common problems. They're\
+    \ inherently easy to maintain, because many people are familiar with them. This\
+    \ is very similar to how google works. Everyone knows HOW to google, so when you\
+    \ get a query like \"What is the purpose of design patterns\", you can very quickly\
+    \ use this common interface to solve a problem.\n\nDesign pattern can greatly\
+    \ increase efficiency, reliability and productivity of developer team as whole\
+    \ as it offers proven and tested solutions. \n\nCreational design patterns are\
+    \ all about various ways in which class can be instantiated. The instantiation\
+    \ method varies based on what and how much of it developer want to control from\
+    \ consumer of code. This pattern is classified int class-creation patterns and\
+    \ object-creational patterns. While class-creation patterns use inheritance effectively\
+    \ in the instantiation process, object-creation patterns use delegation effectively\
+    \ to get the job done. This gives your program more control in deciding which\
+    \ objects need to be instantiated for a specified use case.\n\nIn Java, the way\
+    \ to create an object is to use `new` operator.\n\n```\nFoo = new Foo() ; // Instance\
+    \ of Foo class\n```\n\nLet us say it’s you who has written `Foo` class and gave\
+    \ the library to someone to use it. As you can see, the user of this library can\
+    \ instantiate any number of `Foo` classes with absolutely no control. Also here\
+    \ we are hard coding the way object is getting instantiated. In many cases, exact\
+    \ object that needs to be created depends on runtime behavior. Creation design\
+    \ patterns abstract the way object can be created. It can make program more flexible\
+    \ and generic.\n\n* **Factory Method**: It provides a class that decides what\
+    \ object need to be instantiated from a family of classes that are derived from\
+    \ common abstract class based on input data provides.\n* **Abstract Factory**:\
+    \ It provides ability to create instance of several families of classes\n* **Builder**:\
+    \ It provides ability to differentiate object construction from its representation.\
+    \ Hence depending on the need , various representations can be created.\n* **Prototype**:\
+    \ It provides lightweight method of creating new objects by cloning or copying\
+    \ existing instances.\n* **Singleton**: It provides ability to control number\
+    \ of instances that can be created by restricting it to one instance.\n\n## CHAPTER\
+    \ ONE\n\n### Factory\n\n#### Background\n\nFactory design patterns are useful\
+    \ in scenario where there is need to create instance of a class from related family\
+    \ of classes. For instance say there is a factory that makes electronic toys.\
+    \ All electronic toys share some common characteristic like they have a play and\
+    \ stop button. If you need a teddy bear, all you need to tell to factory is “Hey\
+    \ make me teddy bear” and the factory will make one for you and give it back to\
+    \ you. \n\nIf you need a tiger, you need to tell to factory is “Hey make me a\
+    \ tiger” and the factory will make tiger and give it back to you. In this case\
+    \ the user just passes in description of toy and let factory create the toy for\
+    \ user. Same factory can create other electronic toys like lion, dog etc. based\
+    \ on user need. \n\n#### Implementation\n\nUsually all of the classes have parent\
+    \ class and common functions. But each function operates on task differently.\
+    \ In addition there is a factory class that handles responsibility of understanding\
+    \ what class user needs, instantiating the required class and returning that instance.\
+    \ In the electronics toy factory example, all toys have common function called\
+    \ play, and each toy plays differently. When a teddy bear is asked play, it may\
+    \ sing a song. When tiger is asked to play, it may emit roaring sound. This relationship\
+    \ is explained in picture below.\n\n![Image](Images/image00046.jpeg)\n"
+  raw: "\n\n![](Images/cover00052.jpeg)\n\n## **CONTENTS**\n\n[Preface](#part0001.xhtml)\n\
+    \n[Introduction](#part0002.xhtml)\n\n[Chapter One - Factory](#part0003.xhtml)\n\
+    \n[Chapter Two - Abstract Factory](#part0004.xhtml)\n\n[Chapter Three - Builder](#part0005.xhtml)\n\
+    \n[Chapter Four - Prototype](#part0006.xhtml)\n\n[Chapter Five - Singleton](#part0007.xhtml)\n\
+    \n[Chapter Six - Summary](#part0008.xhtml)\n\n **Preface**\n\nI have been working\
+    \ as software engineer professional in a multinational firm for more than 20 years.\
+    \ I feel its time to leverage my learnings over the years and mentor programmers\
+    \ on practices of writing reliable, maintainable and extensible software. I have\
+    \ learned lot of good coding practices the hard way by making mistakes first and\
+    \ learning from them along the way. Design patterns have helped me tremendously\
+    \ to avoid repeating those mistakes. This book documents commonly used creational\
+    \ design patterns and attempts to provide guidelines on how to avoid common pitfalls\
+    \ on software development by using right design patterns. \n\n   A Mckinsy study\
+    \ of 5,400 large scale IT projects (projects with initial budgets greater than\
+    \ $15M) in 2012 reported that 17 percent of large IT projects go so badly that\
+    \ they can threaten the very existence of the company. It also mentioned that\
+    \ on average, large IT projects run 45 percent over budget and 7 percent over\
+    \ time, while delivering 56 percent less value than predicted. A lot of these\
+    \ problems can be attributed to bad code that becomes unmaintainable as code size\
+    \ grows. The [Pareto principle](http://en.wikipedia.org/wiki/Pareto_principle)\
+    \ indicates that 80 percent of outcomes can be attributed to 20 percent of the\
+    \ possible causes of a given event. Also known as the 80-20 rule, it's relevant\
+    \ to almost every field of human endeavor. The principle also applies to software\
+    \ engineering by saying that most problems are caused by a small number of bad\
+    \ coding practices. These practices can be eliminated by using design patterns\
+    \ thereby helping engineers and companies become more productive and successful.\n\
+    \n Design patterns offer proven solutions to commonly recurring problems. When\
+    \ you see a common recurring problem, you find a common, general solution to solve\
+    \ it. It happens in architecture, mechanics, usability, and human behavior, and\
+    \ programming makes no exception. These solutions have been tried successfully\
+    \ in the past. This book attempts to bring awareness of these successful patterns\
+    \ among developer community.\n\nI was impressed by Gang of Four’s design patterns\
+    \ early on. I have used design patterns in large projects and was astounded by\
+    \ the amount of reusability the code offers when it makes use of right design\
+    \ pattern.  Having knowledge design patterns creates a high level of maturity.\
+    \ Armed with knowledge, developer can look at bigger picture and thinks about\
+    \ extensibility and reusability before jumping into doing. Design patterns also\
+    \ happens to be one of favorite topics among interviews for software engineer.\
+    \ Hence having design pattern knowledge will give you an edge. It will take you\
+    \ to journey of becoming ninja developer. \n\nThis book covers creational design\
+    \ patters, Creation pattern enables programmer to build solutions to writing code\
+    \ that creates object(s) in fashion that keeps code extensible, maintainable and\
+    \ reusable. \n\n **Introduction**\n\n Design Patterns provide easy to recognize\
+    \ and use OOP solutions to common problems. They're inherently easy to maintain,\
+    \ because many people are familiar with them. This is very similar to how google\
+    \ works. Everyone knows HOW to google, so when you get a query like \"What is\
+    \ the purpose of design patterns\", you can very quickly use this common interface\
+    \ to solve a problem.\n\nDesign pattern can greatly increase efficiency, reliability\
+    \ and productivity of developer team as whole as it offers proven and tested solutions. \n\
+    \nCreational design patterns are all about various ways in which class can be\
+    \ instantiated. The instantiation method varies based on what and how much of\
+    \ it developer want to control from consumer of code. This pattern is classified\
+    \ int class-creation patterns and object-creational patterns. While class-creation\
+    \ patterns use inheritance effectively in the instantiation process, object-creation\
+    \ patterns use delegation effectively to get the job done. This gives your program\
+    \ more control in deciding which objects need to be instantiated for a specified\
+    \ use case.\n\n In Java, the way to create an object is to use **new** operator.\n\
+    \nFoo = new Foo() ; // Instance of Foo class\n\n Let us say it’s you who has written\
+    \ Foo class and gave the library to someone to use it. As you can see, the user\
+    \ of this library can instantiate any number of Foo classes with absolutely no\
+    \ control. Also here we are hard coding the way object is getting instantiated.\
+    \ In many cases, exact object that needs to be created depends on runtime behavior.\
+    \ Creation design patterns abstract the way object can be created. It can make\
+    \ program more flexible and generic.\n\n*   Factory Method It provides a class\
+    \ that decides what object need to be instantiated from a family of classes that\
+    \ are derived from common abstract class based on input data provides.\n\n*  \
+    \ Abstract Factory It provides ability to create instance of several families\
+    \ of classes\n\n*   Builder It provides ability to differentiate object construction\
+    \ from its representation. Hence depending on the need , various representations\
+    \ can be created.\n\n*   Prototype It provides lightweight method of creating\
+    \ new objects by cloning or copying existing instances.\n\n*   Singleton It provides\
+    \ ability to control number of instances that can be created by restricting it\
+    \ to one instance.\n\n## **CHAPTER ONE**\n\n### ***Factory ***\n\n**Background**\n\
+    \nFactory design patterns are useful in scenario where there is need to create\
+    \ instance of a class from related family of classes. For instance say there is\
+    \ a factory that makes electronic toys. All electronic toys share some common\
+    \ characteristic like they have a play and stop button. If you need a teddy bear,\
+    \ all you need to tell to factory is “Hey make me teddy bear” and the factory\
+    \ will make one for you and give it back to you. \n\nIf you need a tiger, you\
+    \ need to tell to factory is “Hey make me a tiger” and the factory will make tiger\
+    \ and give it back to you. In this case the user just passes in description of\
+    \ toy and let factory create the toy for user. The use can press play and stop\
+    \ button on the toy after purchasing the toy. Same factory can create other electronic\
+    \ toys like lion, dog etc. based on user need. \n\n**Implementation**\n\nUsually\
+    \ all of the classes have parent class and common functions. But each function\
+    \ operates on task differently. In addition there is a factory class that handles\
+    \ responsibility of understanding what class user needs, instantiating the required\
+    \ class and returning that instance. In the electronics toy factory example, all\
+    \ toys have common function called play, and each toy plays differently. When\
+    \ a teddy bear is asked play, it may sing a song. When tiger is asked to play,\
+    \ it may emit roaring sound. This relationship is explained in picture below.\n\
+    \n![Image](Images/image00046.jpeg)   "
+  toc: []
+  trans: '
+
+
+    ![](img/cover00052.jpeg)
+
+
+    # 目录
+
+
+    - 序言
+
+    - 引言
+
+    - 第一章 - 工厂模式
+
+    - 第二章 - 抽象工厂模式
+
+    - 第三章 - 构建器模式
+
+    - 第四章 - 原型模式
+
+    - 第五章 - 单例模式
+
+    - 第六章 - 总结
+
+
+    ## 序言
+
+
+    我在一家跨国公司担任专业软件工程师已有 20 多年。我觉得现在是时候利用我多年来的积累，指导程序员如何编写可靠、可维护且可扩展的软件实践了。我通过惨痛教训——即先犯错误并在过程中学习——学到了许多良好的编码实践。设计模式极大地帮助了我避免重复犯这些错误。本书记录了常用的创建型设计模式，并尝试就如何通过正确的设计模式来避免软件开发中的常见陷阱提供指南。
+
+
+    麦肯锡在 2012 年对 5,400 个大型 IT 项目（初始预算超过 1500 万美元的项目）进行的研究显示，17% 的大型 IT 项目进展糟糕到以至于威胁到公司的生存。报告还提到，平均大型
+    IT 项目的预算超支 45%，时间超期 7%，而交付的价值比预测少了 56%。其中许多问题可以归因于糟糕的代码，随着代码规模的增长，这些代码变得不可维护。[帕累托法则](http://en.wikipedia.org/wiki/Pareto_principle)
+    指出，80% 的结果可以归于 20% 的可能原因。它也被称为 80-20 法则，适用于人类活动的几乎每一个领域。该原则也适用于软件工程，即大多数问题是由少数糟糕的编码实践造成的。通过设计模式可以消除这些实践，从而帮助工程师和公司变得更高效、更成功。
+
+
+    设计模式为常见的反复问题提供了经过的解决方案。当你看到一个常见的反复问题时，你会找到一个通用的、通的解决方案来解决它。这种情况发生在架构、机械、可用性和人类行为中，编程也不例外。这些解决方案在过去已经被成功尝试过。本书试图在开发者社区中提高对这些成功模式的认识。
+
+
+    我很早就被“四人帮”（Gang of Four）的设计模式深深吸引。我在大型项目中使用过设计模式，对代码在利用正确设计模式时所提供的重用性感到惊讶。拥有设计模式知识可以建立高水平的成熟度。装备了知识的开发者可以审视大局，并在动手之前考虑扩展性和可重用性。设计模式恰好也是软件工程师面试中最喜欢的话题之一。因此，拥有设计模式知识将赋予你优势。它将带你开启成为忍者开发者之路。
+
+
+    本书涵盖了创建型设计模式，创建模式使程序员能够构建编写代码来创建对象的解决方案，以保持代码的可扩展、可维护和可重用。
+
+
+    ## 引言
+
+
+    设计模式为常见问题提供了易于识别和使用的 OOP（面向对象）解决方案。它们天生易于维护，因为许多人对它们都很熟悉。这与 Google 的工作方式非常相似。每个人都知道如何
+    Google，所以当你得到像“设计模式的作用是什么”这样的查询时，你可以很快地使用这个通用接口来解决问题。
+
+
+    设计模式提供了经过证明和测试的解决方案，可以大大提高整个开发者团队的效率、可靠性和生产力。
+
+
+    创建型设计模式核心在于类实例化的各种方式。实例化方法取决于开发者想要从代码调用者中控制什么以及控制多少。这种模式被分为类创建模式和对象创建模式。类创建模式在实例化过程中有效利用了继承，而对象创建模式则有效利用委托（delegation）来完成工作。这让你的程序在决定为特定用例需要实例化哪些对象时具有更多控制权。
+
+
+    在 Java 中，创建对象的方法是使用 `new` 操作符。
+
+
+    ```
+
+    Foo = new Foo() ; // Foo 类的实例
+
+    ```
+
+
+    假设是你编写了 `Foo` 类并将库提供给某人使用。正如你看到的，该库的用户可以实例化任意数量的 `Foo` 类，而完全没有任何控制。此外，在这里我们硬编码了对象的实例化方式。在许多情况下，需要创建的精确对象取决于运行时行为。创建设计模式抽象了对象的创建方式。它可以使程序变得更加灵活和通用。
+
+
+    * **工厂方法**：它提供了一个类，根据提供的输入数据，从派生自共同抽象类的类族中决定需要实例化的对象。
+
+    * **抽象工厂**：它提供了创建多个类族实例的能力。
+
+    * **构建器**：它提供了将对象的构造与其表示分离的能力。因此，根据需要可以创建不同的表示。
+
+    * **原型**：它提供了一种通过克隆或复制现有实例创建新对象的轻量级方法。
+
+    * **单例**：它提供了通过限制为单个实例来控制可以创建实例数量的能力。
+
+
+    ## 第一章
+
+
+    ### 工厂
+
+
+    #### 背景
+
+
+    工厂设计模式在需要从相关的类族创建类实例的场景下非常有用。例如，假设有一个生产电子玩具的工厂。所有电子玩具都有一些共同特征，比如它们都有播放和停止按钮。如果你需要一只泰迪熊，你只需要告诉工厂“嘿，给我做一个泰迪熊”，工厂就会为你制作一个并交给你。
+
+
+    如果你需要一只老虎，你只需要告诉工厂“嘿，给我做一只老虎”，工厂就会制作老虎并交给你。在这种情况下，用户只需传入玩具的描述，并让工厂为用户创建玩具。同一个工厂可以根据用户需求创建其他电子玩具，如狮子、狗等。
+
+
+    #### 实现
+
+
+    通常，所有的类都有一个父类和一些公共函数。但每个函数在执行任务时的运作不同。此外，还有一个工厂类负责理解用户需要哪种类、实例化所需的类并返回该实例。在电子玩具工厂的示例中，所有玩具都有一个名为
+    `play` 的公共函数，每个玩具的播放方式不同。当泰迪熊被要求播放时，它可能会唱一首歌。当老虎被要求播放时，它可能会发出咆哮声。这种关系在下图所示。
+
+
+    ![Image](img/image00046.jpeg)
+
+
+    '
+- fmt: "\nHere `IElectronicToy` is an interface with two functions namely `play` and\
+    \ `stop`. It represents a contract that each electronic toy should implement.\
+    \ The contract is dictate by two methods `play()` and `stop()`. `TeddyBear` and\
+    \ `Lion` are two classes that implements `IElectronicToy` interface. By overriding\
+    \ `play()` and `stop()` methods. `TeddyBear` and `Lion` each have different implementation\
+    \ of `play()` and `stop()` methods. `ToyFactory` is a class with just one static\
+    \ method `CreateToy(..)`. This method accepts `ToyType` enum and returns either\
+    \ `TeddyBear` or `lion` depending upon `ToyType` value casted as `IElectronicToy`.\
+    \ `Client` represents a external class that calls `ToyFactory` class’s static\
+    \ method `createToy` and passes appropriate value of `ToyType`. It in turn gets\
+    \ a object of type `IElectronicToy` which internally could be reprinting `TeddyBear`\
+    \ or `Lion`.\n\nHere is java code that implements above classes.\n\nFile : `IElectronic.java`\n\
+    \n```java\ninterface IElectronicToy {\n    void play();\n    void stop();\n}\n\
+    ```\n\nFile: `TeddyBear.java`\n\n```java\npublic class TeddyBear implements IElectronicToy\
+    \ {\n    @Override\n    public void play() {\n        System.out.println(\"Grrrrrrrrrr\"\
+    );\n    }\n\n    @Override\n    public void stop() {\n        System.out.println(\"\
+    stopped grrrr....\");\n    }\n}\n```\n\nFile: `Lion.java`\n\n```java\npublic class\
+    \ Lion implements IElectronicToy {\n    @Override\n    public void play() {\n\
+    \        System.out.println(\"Roar\");\n    }\n\n    @Override\n    public void\
+    \ stop() {\n        System.out.println(\"stopped roaring\");\n    }\n}\n```\n\n\
+    File: `ToyFactory.java`\n\n```java\npublic class ToyFactory {\n    public static\
+    \ IElectronicToy CreateToy(ToyType toyType) throws Exception {\n        IElectronicToy\
+    \ toy = null;\n        switch(toyType) {\n            case TeddyBear:\n      \
+    \          toy = new TeddyBear();\n                break;\n            case Lion:\n\
+    \                toy = new Lion();\n                break;\n            default:\n\
+    \                throw new Exception(\"Unknown toyType \" + toyType);\n      \
+    \  }\n        return toy;\n    }\n}\n```\n\nFile: `ToyType.java`\n\n```java\n\
+    public enum ToyType {\n    TeddyBear,\n    Lion\n}\n```\n\nFile: `Client.java`\n\
+    \n```java\npublic class Client {\n    public static void main(String args[]) {\n\
+    \        try {\n            IElectronicToy toy = ToyFactory.CreateToy(ToyType.TeddyBear);\n\
+    \            toy.play();\n            toy.stop();\n            toy = ToyFactory.CreateToy(ToyType.Lion);\n\
+    \            toy.play();\n            toy.stop();\n        } catch (Exception\
+    \ ex) {\n            System.out.println(ex.getMessage());\n        }\n    }\n\
+    }\n```\n\nOutput:\n```\nGrrrr…….\nstopped grrrr....\nRoar\nstopped roaring\nProcess\
+    \ finished with exit code 0\n```\n\n### Benefits\n\n**Reuse.** If I want to instantiate\
+    \ one class from a family of related classed in many places, factory class can\
+    \ be used everywhere I need, without having to instantiate individual classes.\n\
+    \n**Unit-Testability.** I can write 2 tests for the factory, to make sure it returns\
+    \ the correct types on the correct conditions, then calling class only needs to\
+    \ be tested to see if it calls the factory and then the required methods on the\
+    \ returned class. It needs to know nothing about the implementation of the factory\
+    \ itself or the concrete classes.\n\n**Extensibility.** When someone decides we\
+    \ need to add a new class say `Tiger` to this factory, none of the calling code,\
+    \ neither unit tests or implementation, ever needs to be told. We simply create\
+    \ a new class `Tiger` and extend our factory method. This follows principles [Open-Closed\
+    \ Principle](http://www.oodesign.com/open-close-principle.html).\n\nYou can even\
+    \ create a new factory class and make them hot-swappable, if the situation requires\
+    \ it for example, if you want to be able to switch class `Lion` on and off, while\
+    \ testing. I have run into this situation rarely, but it was extremely useful.\n\
+    \n# CHAPTER TWO\n\n### Abstract Factory\n\n#### Background\n\nAbstract Factory\
+    \ design pattern is one level of abstraction higher than factory pattern. You\
+    \ can use this pattern when you need to return one object from several related\
+    \ families.\n\nNote that unlike factory patten, it says several families here\
+    \ not just one family. Therein lies key to understand abstract factory pattern.\
+    \ So abstract factory returns one factory from one of several factories.\n\nOne\
+    \ classic example of abstract factory pattern is in drawing animation objects\
+    \ like monkey, mountains on a screen. There could be several type of drawing systems\
+    \ like 2D, 3D and 4D. Each of these drawing system is capable of drawing animation\
+    \ objects. You could be creating a movie scene with a monkey jumping on from one\
+    \ tree to another tree on a muir wood mountain. You could play this scene by getting\
+    \ a factory for 2D and then play entire scene in 2D. Or you could ask for for\
+    \ 3D factory and play entire scene in 3D. This pluggable mechanism is extremely\
+    \ useful to compare how same scenes will be rendered in 2D, 3D or 4D just by asking\
+    \ for a specified factory without changing anything else. 2D, 3D and 4D represents\
+    \ different types of drawing platform. Abstract factory pattern encapsulates platform\
+    \ dependencies and simplifies use. It also allows easy exchange of platforms.\n\
+    \n#### Implementation\n\nAbstract factory pattern has 2 levels of abstraction.\
+    \ These two levels can be best illustrated with drawing example cited above. The\
+    \ use case here is to create a scene with a monkey jumping on a swaying tree.\
+    \ We would like to have really easy way to change the scene to 3D. First level\
+    \ of abstraction is achieved by using `IElectronicToy` and `ITree`. Second level\
+    \ of abstraction is achieved by having `2DDrawingFactory` and `3DDrawingFactory`.\
+    \ `Client` interacts with drawingFactory by passing it drawingType (2D or 3D).\n\
+    \nHere is java code that implements above classes.\n\nFile: `IElectronic.java`\n\
+    \n```java\ninterface IMonkey {\n    void jump();\n}\n```\n\nFile: `ITree.java`\n\
+    \n```java\ninterface ITree {\n    void sway();\n}\n```\n\nFile: `IDrawingPlatform.java`\n\
+    \n```java\ninterface IDrawingPlatform {\n    IMon getMonkey();\n    ITree getTree();\n\
+    }\n```\n\nFile: `ThreeDMonkey.java`\n\n```java\npublic class ThreeDMonkey implements\
+    \ IMonkey {\n    @Override\n    public void jump() {\n        System.out.println(\"\
+    This is 3dky jumping\");\n    }\n}\n```\n\nFile: `TwoDMonkey.java`\n\n```java\n\
+    public class TwoDMonkey implements IMonkey {\n    @Override\n    public void jump()\
+    \ {\n        System.out.println(\"This is 2d monkey jumping\");\n    }\n}\n```\n\
+    \nFile: `ThreeDTree.java`\n\n```java\npublic class ThreeDTree implements ITree\
+    \ {\n    @Override\n    public void sway() {\n        System.out.println(\"This\
+    \ is 3d tree swaying\");\n    }\n}\n```\n\nFile: `TwoDTree.java`\n\n```java\n\
+    public class TwoDTree implements ITree {\n    @Override\n    public void sway()\
+    \ {\n        System.out.println(\"This is 2d tree swaying\");\n    }\n}\n```\n\
+    \nFile: `TwoDDrawingFactory.java`\n\n```java\npublic class TwoDDrawingFactory\
+    \ implements IDrawingPlatform {\n    @Override\n    public IMonkey getMonkey()\
+    \ {\n        return new TwoDMonkey();\n    }\n\n    @Override\n    public ITree\
+    \ getTree() {\n        return new TwoDTree();\n    }\n}\n```\n\nFile: `ThreedDrawingFactory.java`\n\
+    \n```java\npublic class ThreedDrawingFactory implements IDrawingPlatform {\n \
+    \   @Override\n    public IMonkey getMonkey() {\n        return new ThreeDMonkey();\n\
+    \    }\n\n    @Override\n    public ITree getTree() {\n        return new ThreeDTree();\n\
+    \    }\n}\n```\n\n![Image](Images/image0047.jpeg)\n"
+  raw: "  Here IElectronicToy is an interface with two functions namely play and stop.\
+    \ It represents a contract that each electronic toy should implement. The contract\
+    \ is dictate by two methods play() and stop(). TeddyBear and Lion are two classes\
+    \ that implements IElectronicToy interface. By overriding play() and stop() methods.\
+    \ TeddyBear and Lion each have different implementation of play() and stop() methods.\
+    \ ToyFactory is a class with just one static method CreateToy(..). This method\
+    \ accepts ToyType enum and returns either TeddyBear or lion depending upon ToyType\
+    \ value casted as IEletronicToy. Client represents a external class that calls\
+    \ ToyFactory class’s static method createToy and passes appropriate value of ToyType.\
+    \ It in turn gets a object of type IElectronicToy which internally could be reprinting\
+    \ TeddyBear or Lion.\n\nHere is java code that implements above classes.\n\nFile\
+    \ : IElectronic.java\n\n**interface** IElectronicToy {\n\n **void** play();\n\n\
+    \ **void** stop();\n\n}\n\nFile: TeddyBear.java\n\n**public class** TeddyBear\
+    \ **implements** IElectronicToy {\n\n @Override **public void** play() {\n\n System.***out***.println(**\"\
+    Grrrrrrrrrr\"**);\n\n }\n\n @Override **public void** stop() {\n\n System.***out***.println(**\"\
+    stopped grrrr....\"**);\n\n }\n\n}\n\nFile: Lion.java\n\n**public class** Lion\
+    \ **implements** IElectronicToy {\n\n @Override **public void** play() {\n\n System.***out***.println(**\"\
+    Roar\"**);\n\n }\n\n @Override **public void** stop() {\n\n System.***out***.println(**\"\
+    stopped roaring\"**);\n\n }\n\n}\n\nFile: ToyFactory.java\n\n**public class**\
+    \ ToyFactory {\n\n **public static** IElectronicToy CreateToy(ToyType toyType)\
+    \ **throws** Exception\n\n {\n\n IElectronicToy toy = **null**;\n\n **switch**(toyType)\n\
+    \n {\n\n **case** ***TeddyBear***:\n\n toy = **new** TeddyBear();\n\n **break**;\n\
+    \n **case** ***Lion***:\n\n toy = **new** Lion();\n\n **break**;\n\n **default**:\n\
+    \n **throw new** Exception(**\"Unknown toyType \"** + toyType) ;\n\n }\n\n **return**\
+    \ toy;\n\n }\n\n}\n\nFile: ToyType.java\n\n**public enum** ToyType {\n\n ***TeddyBear***,\n\
+    \n ***Lion*** }\n\nFile: Client.java\n\n**public class** Client {\n\n **public\
+    \ static void** main(String args[])\n\n {\n\n **try** {\n\n IElectronicToy toy\
+    \ = ToyFactory.*CreateToy*(ToyType.***TeddyBear***);\n\n toy.play();\n\n toy.stop();\n\
+    \n toy = ToyFactory.*CreateToy*(ToyType.***Lion***);\n\n toy.play();\n\n toy.stop();\n\
+    \n }\n\n **catch**(Exception ex)\n\n {\n\n System.***out***.println(ex.getMessage());\n\
+    \n }\n\n }\n\n}\n\nOutput:\n\nGrrrr…….\n\nstopped grrrr....\n\nRoar\n\nstopped\
+    \ roaring\n\nProcess finished with exit code 0\n\n**Benefits**\n\n**Reuse.** If\
+    \ I want to instantiate one class from a family of related classed in many places,\
+    \ factory class can be used everywhere I need, without having to instantiate individual\
+    \ classes. \n\n**Unit-Testability.** I can write 2 tests for the factory, to make\
+    \ sure it returns the correct types on the correct conditions, then calling class\
+    \ only needs to be tested to see if it calls the factory and then the required\
+    \ methods on the returned class. It needs to know nothing about the implementation\
+    \ of the factory itself or the concrete classes.\n\n**Extensibility.** When someone\
+    \ decides we need to add a new class say Tiger to this factory, none of the calling\
+    \ code, neither unit tests or implementation, ever needs to be told. We simply\
+    \ create a new class Tiger and extend our factory method. This follows principles\
+    \ [Open-Closed Principle](http://www.oodesign.com/open-close-principle.html).\n\
+    \nYou can even create a new factory class and make them hot-swappable, if the\
+    \ situation requires it for example, if you want to be able to switch class Lion\
+    \ on and off, while testing. I have run into this situation rarely, but it was\
+    \ extremely useful.\n\n## **CHAPTER TWO**\n\n### ***Abstract Factory***\n\n**Background**\n\
+    \nAbstract Factory design pattern is one level of abstraction higher than factory\
+    \ pattern. You can use this pattern when you need to return one object from several\
+    \ related families. \n\nNote that unlike factory patten, it says several families\
+    \ here not just one family. Therein lies key to understand abstract factory pattern.\
+    \ So abstract factory returns one factory from one of several factories.\n\n One\
+    \ classic example of abstract factory pattern is in drawing animation objects\
+    \ like monkey, mountains on a screen. There could be several type of drawing systems\
+    \ like 2D, 3D and 4D. Each of these drawing system is capable of drawing animation\
+    \ objects. You could be creating a movie scene with a monkey jumping on from one\
+    \ tree to another tree on a muir wood mountain. You could play this scene by getting\
+    \ a factory for 2D and then play entire scene in 2D. Or you could ask for for\
+    \ 3D factory and play entire scene in 3D. This pluggable mechanism is extremely\
+    \ useful to compare how same scenes will be rendered in 2D, 3D or 4D just by asking\
+    \ for a specified factory without changing anything else. 2D, 3D and 4D represents\
+    \ different types of drawing platform. Abstract factory pattern encapsulates platform\
+    \ dependencies and simplifies use. It also allows easy exchange of platforms.\n\
+    \n**Implementation**\n\nAbstract factory pattern has 2 levels of abstraction.These\
+    \ two levels can be best illustrated with drawing example cited above. The use\
+    \ case here is to create a scene with a monkey jumping on a swaying tree. We would\
+    \ like to have a really easy way to change the rendering scene to 3D or 2D platform.\
+    \ First level of abstraction is achieved by using IDrawingPlatform and having\
+    \ TwodDrawingFactory and ThreeDdrawingFactory implementing IDrawingPlatform. Second\
+    \ level of abstraction is achieved by having each drawingFactory their own implementation\
+    \ of monkey and tree. IMonkey and ITree represents interfaces. TwoDMonkey and\
+    \ ThreeDMonkey implement IMonkey. TwoDTree and ThreeDTree implement ITree.\n\n\
+    Client interacts with drawingPlatformFactory by passing it drawingType (2D or\
+    \ 3D) and seeking desired drawing of monkey or Tree. DrawingPlatformFactory first\
+    \ internally creates TwodDrawingFactory or ThreedDrawingFactory depending on drawingType.\
+    \ Client can then use this drawingFactory to draw desired shape of monkey or tree.\
+    \ This relationship is explained in picture below.\n\n![Image](Images/image00047.jpeg)\n\
+    \nHere is java code that implements above classes.\n\nFile: IMonkey.java\n\n**public\
+    \ interface** IMonkey {\n\n **void** jump();\n\n}\n\nFile: ITree.java\n\n**public\
+    \ interface** ITree {\n\n **void** sway();\n\n}\n\nFile: IDrawingPlatform.java\n\
+    \n**public interface** IDrawingPlatform {\n\n IMonkey getMonkey();\n\n ITree getTree();\n\
+    \n}\n\nFile: ThreeDMonkey.java\n\n**public class** ThreeDMonkey **implements**\
+    \ IMonkey {\n\n @Override **public void** jump() {\n\n System.***out***.println(**\"\
+    This is 3d monky jumping\"**);\n\n }\n\n}\n\nFile: TwoDMonkey.java\n\n**public\
+    \ class** TwoDMonkey **implements** IMonkey{\n\n @Override **public void** jump()\
+    \ {\n\n System.***out***.println(**\"This is 2d monkey jumping\"**);\n\n }\n\n\
+    }\n\nFile: ThreeDTree.java\n\n**public class** ThreeDTree **implements** ITree\
+    \ {\n\n @Override **public void** sway() {\n\n System.***out***.println(**\"This\
+    \ is 3d tree swaying\"**);\n\n }\n\n}\n\nFile: TwoDTree.java\n\n**public class**\
+    \ TwoDTree **implements** ITree {\n\n @Override **public void** sway() {\n\n System.***out***.println(**\"\
+    This is 2d tree swaying\"**) ;\n\n }\n\n}\n\nFile: TwoDDrawingFactory.java\n\n\
+    **public class** TwoDDrawingFactory **implements** IDrawingPlatform{\n\n @Override\
+    \ **public** IMonkey getMonkey() {\n\n **return new** TwoDMonkey();\n\n }\n\n\
+    \ @Override **public** ITree getTree() {\n\n **return new** TwoDTree();\n\n }\n\
+    \n}\n\nFile: ThreedDrawingFactory.java\n\n**public class** ThreedDrawingFactory\
+    \ **implements** IDrawingPlatform{\n\n @Override **public** IMonkey getMonkey()\
+    \ {\n\n **return new** ThreeDMonkey();\n\n }\n\n @Override **public** ITree getTree()\
+    \ {\n\n **return new** ThreeDTree();\n\n }\n\n}\n\nFile: DrawingType.java\n\n\
+    **public enum** DrawingType {\n\n ***TwoD***,\n\n ***ThreeD*** }\n\nFile: DrawingPlatformFactory.java\n\
+    \n**public class** DrawingPlatformFactory {\n\n **public** IMonkey getMonkey(DrawingType\
+    \ dType)\n\n {\n\n IMonkey theMonkey = **null**;\n\n **switch**(dType)\n\n {\n\
+    \n **case** ***TwoD***:\n\n theMonkey = **new** TwoDMonkey();"
+  toc: []
+  trans: "\n\n这里 `IElectronicToy` 是一个包含两个函数（`play` 和 `stop`）的接口。它代表了每个电子玩具应该实现的合约。该合约由两个方法\
+    \ `play()` 和 `stop()` 规定。`TeddyBear` 和 `Lion` 是两个实现 `IElectronicToy` 接口的类。通过重写\
+    \ `play()` 和 `stop()` 方法，`TeddyBear` 和 `Lion` 分对 `play()` 和 `stop()` 方法有不同的实现。`ToyFactory`\
+    \ 是一个包含单一静态方法 `CreateToy(..)` 的类。该方法接受 `ToyType` 枚举，并根据 `ToyType` 的值返回 `TeddyBear`\
+    \ 或 `Lion`，且返回类型被强制类型转换为 `IElectronicToy`。`Client` 代表一个外部类，它调用 `ToyFactory` 类的静态方法\
+    \ `createToy` 并传递适当的 `ToyType` 值。反，它获得一个 `IElectronicToy` 类型的对象，该对象在内部可能是 `TeddyBear`\
+    \ 或 `Lion`。\n\n以下是实现上述类的 Java 代码。\n\n文件：`IElectronic.java`\n\n```java\ninterface\
+    \ IElectronicToy {\n    void play();\n    void stop();\n}\n```\n\n文件：`TeddyBear.java`\n\
+    \n```java\npublic class TeddyBear implements IElectronicToy {\n    @Override\n\
+    \    public void play() {\n        System.out.println(\"Grrrrrrrrrr\");\n    }\n\
+    \n    @Override\n    public void stop() {\n        System.out.println(\"stopped\
+    \ grrrr....\");\n    }\n}\n```\n\n文件：`Lion.java`\n\n```java\npublic class Lion\
+    \ implements IElectronicToy {\n    @Override\n    public void play() {\n     \
+    \   System.out.println(\"Roar\");\n    }\n\n    @Override\n    public void stop()\
+    \ {\n        System.out.println(\"stopped roaring\");\n    }\n}\n```\n\n文件：`ToyFactory.java`\n\
+    \n```java\npublic class ToyFactory {\n    public static IElectronicToy CreateToy(ToyType\
+    \ toyType) throws Exception {\n        IElectronicToy toy = null;\n        switch(toyType)\
+    \ {\n            case TeddyBear:\n                toy = new TeddyBear();\n   \
+    \             break;\n            case Lion:\n                toy = new Lion();\n\
+    \                break;\n            default:\n                throw new Exception(\"\
+    Unknown toyType \" + toyType);\n        }\n        return toy;\n    }\n}\n```\n\
+    \n文件：`ToyType.java`\n\n```java\npublic enum ToyType {\n    TeddyBear,\n    Lion\n\
+    }\n```\n\n文件：`Client.java`\n\n```java\npublic class Client {\n    public static\
+    \ void main(String args[]) {\n        try {\n            IElectronicToy toy =\
+    \ ToyFactory.CreateToy(ToyType.TeddyBear);\n            toy.play();\n        \
+    \    toy.stop();\n            toy = ToyFactory.CreateToy(ToyType.Lion);\n    \
+    \        toy.play();\n            toy.stop();\n        } catch (Exception ex)\
+    \ {\n            System.out.println(ex.getMessage());\n        }\n    }\n}\n```\n\
+    \n输出：\n```\nGrrrr…….\nstopped grrrr....\nRoar\nstopped roaring\nProcess finished\
+    \ with exit code 0\n```\n\n### 益处\n\n**重用。** 如果我想在许多地方从一组相关的类中实例化一个类，可以在我需要的地方地方使用工厂类，而不需要实例化单个类。\n\
+    \n**可单元测试性。** 我可以为工厂编写 2 个测试，以确保它在正确的条件下返回正确的类型，然后调用类只需要测试它是否调用了工厂以及随后调用了返回类上的所需方法即可。它不需要对工厂本身的实现或具体类一无所知。\n\
+    \n**扩展性。** 当有人决定我们需要向此工厂添加一个新类（例如 `Tiger`）时，任何调用代码（无论是单元测试还是实现）都不需要被告知。我们只需要创建一个新类\
+    \ `Tiger` 并扩展我们的工厂方法即可。这遵循了[开闭原则](http://www.oodesign.com/open-close-principle.html)。\n\
+    \n如果情况需要，你甚至可以创建一个新的工厂类并使它们热插拔，例如，如果你想在测试时能够切换 `Lion` 类的开启和关闭。我很少遇到这种情况，但它非常有用。\n\
+    \n# 第二章\n\n### 抽象工厂\n\n#### 背景\n\n抽象工厂设计模式比工厂模式高出一个层级的抽象。当你需要从几个相关的“族”中返回一个对象时，可以使用这种模式。\n\
+    \n注意，与工厂模式不同，这里说的是“几个族”，而不仅仅是一个族。这正是理解抽象工厂模式的关键。因此，抽象工厂从几个工厂中返回一个工厂。\n\n抽象工厂模式的一个经典示例是在屏幕上绘制动画对象，如猴子、山脉等。可能有几种类型的绘制系统，如\
+    \ 2D、3D 和 4D。每种绘制系统都能够绘制动画对象。你可以创建一个电影场景，画一只猴子从木木山上的的一棵树跳到另一棵树上。你可以通过获取一个 2D 工厂，并在\
+    \ 2D 中播放整个场景；或者，你可以请求 3D 工厂并在 3D 中播放整个场景。这种可插拔机制非常有用，只需请求指定的工厂而不改变其他任何内容，就可以比较相同场景在\
+    \ 2D、3D 或 4D 中是如何渲染的。2D、3D 和 4D 代表不同类型的绘制平台。抽象工厂模式封装了平台依赖关系并简化了使用。它还允许轻松交换平台。\n\
+    \n#### 实现\n\n抽象工厂模式有 2 层抽象。这两个层级可以通过上述的绘制示例得到很好的说明。这里的用例是创建一个猴子在摇曳的树上跳跃的场景。我们希望有一种非常简单的方法将场景更改为\
+    \ 3D。第一层抽象通过使用 `IElectronicToy` 和 `ITree` 实现的。第二层抽象通过拥有 `2DDrawingFactory` 和 `3DDrawingFactory`\
+    \ 实现的。`Client` 通过向其传递绘制类型（2D 或 3D）来与绘制工厂进行交互。\n\n以下是实现上述类的 Java 代码。\n\n文件：`IElectronic.java`\n\
+    \n```java\ninterface IMonkey {\n    void jump();\n}\n```\n\n文件：`ITree.java`\n\n\
+    ```java\ninterface ITree {\n    void sway();\n}\n```\n\n文件：`IDrawingPlatform.java`\n\
+    \n```java\ninterface IDrawingPlatform {\n    IMon getMonkey();\n    ITree getTree();\n\
+    }\n```\n\n文件：`ThreeDMonkey.java`\n\n```java\npublic class ThreeDMonkey implements\
+    \ IMonkey {\n    @Override\n    public void jump() {\n        System.out.println(\"\
+    This is 3dky jumping\");\n    }\n}\n```\n\n文件：`TwoDMonkey.java`\n\n```java\npublic\
+    \ class TwoDMonkey implements IMonkey {\n    @Override\n    public void jump()\
+    \ {\n        System.out.println(\"This is 2d monkey jumping\");\n    }\n}\n```\n\
+    \n文件：`ThreeDTree.java`\n\n```java\npublic class ThreeDTree implements ITree {\n\
+    \    @Override\n    public void sway() {\n        System.out.println(\"This is\
+    \ 3d tree swaying\");\n    }\n}\n```\n\n文件：`TwoDTree.java`\n\n```java\npublic\
+    \ class TwoDTree implements ITree {\n    @Override\n    public void sway() {\n\
+    \        System.out.println(\"This is 2d tree swaying\");\n    }\n}\n```\n\n文件：`TwoDDrawingFactory.java`\n\
+    \n```java\npublic class TwoDDrawingFactory implements IDrawingPlatform {\n   \
+    \ @Override\n    public IMonkey getMonkey() {\n        return new TwoDMonkey();\n\
+    \    }\n\n    @Override\n    public ITree getTree() {\n        return new TwoDTree();\n\
+    \    }\n}\n```\n\n文件：`ThreedDrawingFactory.java`\n\n```java\npublic class ThreedDrawingFactory\
+    \ implements IDrawingPlatform {\n    @Override\n    public IMonkey getMonkey()\
+    \ {\n        return new ThreeDMonkey();\n    }\n\n    @Override\n    public ITree\
+    \ getTree() {\n        return new ThreeDTree();\n    }\n}\n```\n\n![Image](img/image0047.jpeg)\n\
+    \n"
+- fmt: "\n```java\nbreak;\n\ncase ThreeD:\n\ntheMonkey = new ThreeDMonkey();\n\nbreak;\n\
+    \n}\n\nreturn theMonkey;\n\n}\n\npublic ITree getTree(DrawingType dType)\n\n{\n\
+    \nITree theTree = null;\n\nswitch(dType)\n\n{\n\ncase TwoD:\n\ntheTree = new TwoDTree();\n\
+    \nbreak;\n\ncase ThreeD:\n\ntheTree = new ThreeDTree();\n\nbreak;\n\n}\n\nreturn\
+    \ theTree;\n\n}\n\n}\n```\n\nFile : `Client.java`\n\n```java\npublic class Client\
+    \ {\n\npublic static void main(String[] args)\n\n{\n\n    DrawingPlatformFactory\
+    \ drawingPlatform = new DrawingPlatformFactory();\n\n    IMonkey theMonkey = drawingPlatform.getMonkey(DrawingType.TwoD);\n\
+    \n    ITree theTree = drawingPlatform.getTree(DrawingType.TwoD);\n\n    //Draw\
+    \ 2D Scene\n    drawScene(theMonkey, theTree);\n\n    theMonkey = drawingPlatform.getMonkey(DrawingType.ThreeD);\n\
+    \n    theTree = drawingPlatform.getTree(DrawingType.ThreeD);\n\n    //Draw 3D\
+    \ Scene\n    drawScene(theMonkey, theTree);\n\n}\n\nprivate static void drawScene(IMonkey\
+    \ theMonkey, ITree theTree)\n\n{\n\n    theMonkey.jump();\n\n    theTree.sway();\n\
+    \n}\n\n}\n```\n\nOutput:\n\nThis is 2d monkey jumping\n\nThis is 2d tree swaying\n\
+    \nThis is 3d monky jumping\n\nThis is 3d tree swaying\n\n**Benefits**\n\n**Encapsulation:**\
+    \ Abstract factory pattern isolates concrete classes completely from client. This\
+    \ allows interchange of product families freely.\n\n**Extensibility:** Abstract\
+    \ Factory pattern is “factory of factories” and can be easily extended to accommodate\
+    \ more products, for example we can add another sub-class `FourDDrawingFactory`,\
+    \ `FourDMonkey` and `FourDTree`. Client code would require minimal changes.\n\n\
+    ## **CHAPTER THREE**\n\n### **Builder**\n\n**Background**\n\nBuilder design pattern\
+    \ is used to separate the construction of object from its representation. The\
+    \ same construction mechanism can be used to construct several different representations.\
+    \ Builder factor focuses on constructing object step by step. Consider an example\
+    \ of pizza shop. Customer can order for various types of pizzas like pepperoni\
+    \ pizza, supreme chicken pizza or veggie pizza. The steps for creating each pizza\
+    \ are same. The final outcome varies depending on what is done inside that step.\
+    \ \n\n*   Order pizza (Telephone/website/Go to the shop))\n*   Get a Pizza Base\n\
+    *   Add tomato sauce\n*   Add Cheese\n*   Add Toppings (Pepperoni/Veggie/Chicken)\n\
+    *   Bake The pizza\n*   Send the pizza to customer (Takeout or delivery)\n\n**Implementation**\n\
+    \nThe use case here is to build a pizza based on customer specification. `PizzaBuilder`\
+    \ is an abstract class that dictates the steps to build pizza and also orchestrates\
+    \ the pizza making steps. `VeggiePizzaBuilder`, `PizzaPepperoniBizzaBuilder` and\
+    \ `ChickenPizzaBuildera` extends `PizzaBuilderClass`. The only method they override\
+    \ is `addToppings()` method. `VeggiePizzaBuilder` adds topics like tomato, green\
+    \ pepper and onions. `PeopporoniPizzaBuilder` adds pepperoni slices. `ChickenPizzaBuilder`\
+    \ adds grilled checkin toppings. Rest of the methods remain same for all three\
+    \ types of pizzas. `Director` class determines which `PizzaBuilder` class it should\
+    \ invoke based on `PizzaType` specification from customer. `Client` class represents\
+    \ customer who is placing the order. This relationship is explained in picture\
+    \ below. Note that ‘`+`’ prefix in front of method denote public methods whereas\
+    \ ‘#` prefix denotes protected methods\n\n![Image](Images/image00048.jpeg)\n\n\
+    Here is java code that implements above classes.\n\nFile: `PizzaType.java`\n\n\
+    ```java\npublic enum PizzaType {\n\nVeggie,\n\nPepperoni,\n\nChicken\n }\n```\n\
+    \nFile: `PizzaBuilder.java`\n\n```java\npublic abstract class PizzaBuilder {\n\
+    \nprotected String telNum = \"\";\n\npublic void orderPizza(String telNum) {\n\
+    \n    this.telNum = telNum;\n\n    System.out.println(\"Creating pizza for \"\
+    \ + telNum);\n\n    buildPizza();\n\n}\n\nprotected void getPizzaBase() {\n\n\
+    \    System.out.println(\"Getting pizza base\");\n\n}\n\nprotected void addTomatoSauce()\
+    \ {\n\n    System.out.println(\"Adding tomato sauce\");\n\n}\n\nprotected void\
+    \ addCheese() {\n\n    System.out.println(\"Adding cheese\");\n\n}\n\nprotected\
+    \ void bakePizza() {\n\n    System.out.println(\"baking pizza. Smells great\"\
+    );\n\n}\n\nprotected void sendPizza() {\n\n    System.out.println(\"sending pizza\
+    \ to customer \" + this.telNum);\n\n}\n\nprotected void buildPizza() {\n\n   \
+    \ getPizzaBase();\n\n    addTomatoSauce();\n\n    addCheese();\n\n    addToppings();\n\
+    \n    bakePizza();\n\n    sendPizza();\n\n}\n\nprotected abstract void addToppings();\n\
+    \n}\n```\n\nFile: `VeggiePizzaBuilder.java`\n\n```java\npublic class VeggiePizzaBuilder\
+    \ extends PizzaBuilder {\n\n@Override protected void addToppings() {\n\n    System.out.println(\"\
+    Adding onions, tomators and spinach\") ;\n\n}\n\n}\n```\n\nFile: `PepporoniPizzaBuilder.java`\n\
+    \n```java\npublic class PepporoniPizzaBuilder extends PizzaBuilder {\n\n@Override\
+    \ protected void addToppings() {\n\n    System.out.println(\"Adding Pepporoni\"\
+    ) ;\n\n}\n\n}\n```\n\nFile: `ChickenPizzaBuilder.java`\n\n```java\npublic class\
+    \ ChickenPizzaBuilder extends PizzaBuilder {\n\n@Override protected void addToppings()\
+    \ {\n\n    System.out.println(\"Adding grilled checkin\")\n\n}\n\n}\n```\n\nFile:\
+    \ `Director.java`\n\n```java\npublic class Director {\n\npublic static PizzaBuilder\
+    \ CreatePizza(PizzaType pizzaType, String telNum)\n\n{\n\nPizzaBuilder pizzaBuilder\
+    \ = null;\n\nswitch(pizzaType)\n\n{\n\ncase Veggie:\n\npizzaBuilder = new VeggiePizzaBuilder();\n\
+    \nbreak;\n\ncase Pepperoni:\n\npizzaBuilder = new PepporoniPizzaBuilder();\n\n\
+    break;\n\ncase Chicken:\n\npizzaBuilder = new ChickenPizzaBuilder();\n\nbreak;\n\
+    \n}\n\npizzaBuilder.orderPizza(telNum);\n\nreturn pizzaBuilder;\n\n}\n\n}\n```\n\
+    \nFile: `Client.java`\n\n```java\npublic class Client {\n\npublic static void\
+    \ main(String[] args)\n\n{\n\n    System.out.println(\"******* Ordering Pepperoni\
+    \ Pizza *************\");\n\n    Director.CreatePizza(PizzaType.Pepperoni, \"\
+    408-231-1234\");\n\n    System.out.println(\"******* Ordering Veggie Pizza *************\"\
+    );\n\n    Director.CreatePizza(PizzaType.Veggie, \"408-231-1244\");\n\n}\n\n}\n\
+    ```\n\nOutput:\n\n******* Ordering Pepperoni Pizza *************\n\nCreating pizza\
+    \ for 408-231-1234\nGetting pizza base\nAdding tomato sauce\nAdding cheese\nAdding\
+    \ Pepporoni\nbaking pizza. Smells great\nsending pizza to customer 408-231-1234\n\
+    \n******* Ordering Veggie Pizza *************\n\nCreating pizza for 408-231-1244\n\
+    Getting pizza base\nAdding tomato sauce\nAdding cheese\nAdding onions, tomators\
+    \ and spinach\nbaking pizza. Smells great\nsending pizza to customer 408-231-1244\n\
+    \n**CHAPTER FOUR**\n\n### **Prototype**\n\n**Background**\n\nPrototype design\
+    \ pattern is used when creating an instance of a class is time intensive or complex.\
+    \ In such a case, ratter than creating new instances from scratch every time,\
+    \ you can create one instanced make copies of it and updating it as required.\
+    \ For instance if there are number of queries that needed to be made to get more\
+    \ information on an employee in database, a better approach would be to get the\
+    \ information of employee in a result set in memory only once, make copies of\
+    \ it for each query and then do the processing. This will prevent multiple round\
+    \ trips to database, thus reducing network overhead. Database connection happened\
+    \ to be one of limited and expensive resources in SaaS applications. Prototype\
+    \ patten offers help in reducing overhead by reducing object construction time\
+    \ and database round trips .\n"
+  raw: " **break**;\n\n **case** ***ThreeD***:\n\n theMonkey = **new** ThreeDMonkey();\n\
+    \n **break**;\n\n }\n\n **return** theMonkey;\n\n }\n\n **public** ITree getTree(DrawingType\
+    \ dType)\n\n {\n\n ITree theTree = **null**;\n\n **switch**(dType)\n\n {\n\n **case**\
+    \ ***TwoD***:\n\n theTree = **new** TwoDTree();\n\n **break**;\n\n **case** ***ThreeD***:\n\
+    \n theTree = **new** ThreeDTree();\n\n **break**;\n\n }\n\n **return** theTree;\n\
+    \n }\n\n}\n\nFile : Client.java\n\n**public class** Client {\n\n **public static\
+    \ void** main(String[] args)\n\n {\n\n DrawingPlatformFactory drawingPlatform\
+    \ = **new** DrawingPlatformFactory();\n\n IMonkey theMonkey = drawingPlatform.getMonkey(DrawingType.***TwoD***);\n\
+    \n ITree theTree = drawingPlatform.getTree(DrawingType.***TwoD***);\n\n *//Draw\
+    \ 2D Scene* *drawScene*(theMonkey, theTree);\n\n theMonkey = drawingPlatform.getMonkey(DrawingType.***ThreeD***);\n\
+    \n theTree = drawingPlatform.getTree(DrawingType.***ThreeD***);\n\n *//Draw 3D\
+    \ Scene* *drawScene*(theMonkey, theTree);\n\n }\n\n **private static void** drawScene(IMonkey\
+    \ theMonkey, ITree theTree)\n\n {\n\n theMonkey.jump();\n\n theTree.sway();\n\n\
+    \ }\n\n}\n\nOutput:\n\nThis is 2d monkey jumping\n\nThis is 2d tree swaying\n\n\
+    This is 3d monky jumping\n\nThis is 3d tree swaying\n\n**Benefits**\n\n**Encapsulation:**\
+    \ Abstract factory pattern isolates concrete classes completely from client. This\
+    \ allows interchange of product families freely.\n\n**Extensibility:** Abstract\
+    \ Factory pattern is “factory of factories” and can be easily extended to accommodate\
+    \ more products, for example we can add another sub-class FourDDrawingFactory,\
+    \ FourDMonkey and FourDTree. Client code would require minimal changes.\n\n##\
+    \ **CHAPTER THREE**\n\n### ***Builder***\n\n**Background**\n\nBuilder design pattern\
+    \ is used to separate the construction of object from its representation. The\
+    \ same construction mechanism can be used to construct several different representations.\
+    \ Builder factor focuses on constructing object step by step. Consider an example\
+    \ of pizza shop. Customer can order for various types of pizzas like pepperoni\
+    \ pizza, supreme chicken pizza or veggie pizza. The steps for creating each pizza\
+    \ are same. The final outcome varies depending on what is done inside that step. \n\
+    \n*   Order pizza (Telephone/website/Go to the shop))\n\n*   Get a Pizza Base\n\
+    \n*   Add tomato sauce\n\n*   Add Cheese\n\n*   Add Toppings (Pepperoni/Veggie/Chicken)\n\
+    \n*   Bake The pizza\n\n*   Send the pizza to customer (Takeout or delivery)\n\
+    \n**Implementation**\n\nThe use case here is to build a pizza based on customer\
+    \ specification. PizzaBuilder is an abstract class that dictates the steps to\
+    \ build pizza and also orchestrates the pizza making steps.  VeggiePizzaBuilder,\
+    \ PizzaPepperoniBizzaBuilder and ChickenPizzaBuildera extends PizzaBuilderClass.\
+    \ The only method they override is addToppings() method. VeggiePizzaBuilder adds\
+    \ topics like tomato, green pepper and onions. PeopporoniPizzaBuilder adds pepperoni\
+    \ slices. ChickenPizzaBuilder adds grilled checkin toppings. Rest of the methods\
+    \ remain same for all three types of pizzas. Director class determines which PizzaBuilder\
+    \ class it should invoke based on PizzaType specification from customer. Client\
+    \ class represents customer who is placing the order. This relationship is explained\
+    \ in picture below. Note that ‘+’ prefix in front of method denote public methods\
+    \ whereas ‘#’ prefix denotes protected methods\n\n![Image](Images/image00048.jpeg)\n\
+    \nHere is java code that implements above classes.\n\nFile: PizzaType.java\n\n\
+    **public enum** PizzaType {\n\n ***Veggie***,\n\n ***Pepperoni***,\n\n ***Chicken***\
+    \ }\n\nFile: PizzaBuilder.java\n\n**public abstract class** PizzaBuilder {\n\n\
+    \ **protected** String **telNum** = **\"\"**;\n\n **public void** orderPizza(String\
+    \ telNum) {\n\n **this**.**telNum** = telNum;\n\n System.***out***.println(**\"\
+    Creating pizza for \"** + telNum);\n\n buildPizza();\n\n }\n\n **protected void**\
+    \ getPizzaBase() {\n\n System.***out***.println(**\"Getting pizza base\"**);\n\
+    \n }\n\n **protected void** addTomatoSauce() {\n\n System.***out***.println(**\"\
+    Adding tomato sauce\"**);\n\n }\n\n **protected void** addCheese() {\n\n System.***out***.println(**\"\
+    Adding cheese\"**);\n\n }\n\n **protected void** bakePizza() {\n\n System.***out***.println(**\"\
+    baking pizza. Smells great\"**);\n\n }\n\n **protected void** sendPizza() {\n\n\
+    \ System.***out***.println(**\"sending pizza to customer \"** + **this**.**telNum**);\n\
+    \n }\n\n **protected void** buildPizza() {\n\n getPizzaBase();\n\n addTomatoSauce();\n\
+    \n addCheese();\n\n addToppings();\n\n bakePizza();\n\n sendPizza();\n\n }\n\n\
+    \ **protected abstract void** addToppings();\n\n}\n\nFile: VeggiePizzaBuilder.java\n\
+    \n**public class** VeggiePizzaBuilder **extends** PizzaBuilder {\n\n @Override\
+    \ **protected void** addToppings() {\n\n System.***out***.println(**\"Adding onions,\
+    \ tomators and spinach\"**) ;\n\n }\n\n}\n\nFile: PepporoniPizzaBuilder.java\n\
+    \n**public class** PepporoniPizzaBuilder **extends** PizzaBuilder {\n\n @Override\
+    \ **protected void** addToppings() {\n\n System.***out***.println(**\"Adding Pepporoni\"\
+    **) ;\n\n }\n\n}\n\nFile: ChickenPizzaBuilder.java\n\n**public class** ChickenPizzaBuilder\
+    \ **extends** PizzaBuilder {\n\n @Override **protected void** addToppings() {\n\
+    \n System.***out***.println(**\"Adding grilled chiken\"**) ;\n\n }\n\n}\n\nFile:\
+    \ Director.java\n\n**public class** Director {\n\n **public static** PizzaBuilder\
+    \ CreatePizza(PizzaType pizzaType, String telNum)\n\n {\n\n PizzaBuilder pizzaBuilder\
+    \ = **null**;\n\n **switch**(pizzaType)\n\n {\n\n **case** ***Veggie***:\n\n pizzaBuilder\
+    \ = **new** VeggiePizzaBuilder();\n\n **break**;\n\n **case** ***Pepperoni***:\n\
+    \n pizzaBuilder = **new** PepporoniPizzaBuilder();\n\n **break**;\n\n **case**\
+    \ ***Chicken***:\n\n pizzaBuilder = **new** ChickenPizzaBuilder();\n\n **break**;\n\
+    \n }\n\n pizzaBuilder.orderPizza(telNum);\n\n **return** pizzaBuilder;\n\n }\n\
+    \n}\n\nFile: Client.java\n\n**public class** Client {\n\n **public static void**\
+    \ main(String[] args) {\n\n System.***out***.println(**\"******* Ordering Pepporni\
+    \ Pizza *************\"**);\n\n Director.*CreatePizza*(PizzaType.***Pepperoni***,\
+    \ **\"408-231-1234\"**);\n\n System.***out***.println(**\"******* Ordering Veggie\
+    \ Pizza *************\"**);\n\n Director.*CreatePizza*(PizzaType.***Veggie***,\
+    \ **\"408-231-1244\"**);\n\n }\n\n}\n\nOutput:\n\n******* Ordering Pepporni Pizza\
+    \ *************\n\nCreating pizza for 408-231-1234\n\nGetting pizza base\n\nAdding\
+    \ tomato sauce\n\nAdding cheese\n\nAdding Pepporoni\n\nbaking pizza. Smells great\n\
+    \nsending pizza to customer 408-231-1234\n\n******* Ordering Veggie Pizza *************\n\
+    \nCreating pizza for 408-231-1244\n\nGetting pizza base\n\nAdding tomato sauce\n\
+    \nAdding cheese\n\nAdding onions, tomators and spinach\n\nbaking pizza. Smells\
+    \ great\n\nsending pizza to customer 408-231-1244\n\n**Benefits**\n\n**Separation:**\
+    \ Builder pattern lets you vary internal representation of the product it builds.\
+    \ It comes handy when you need to have lots of things to build an object. For\
+    \ example imagine a XML document object model. You have to create plenty of nodes\
+    \ and attributes to get your final object. \n\n**Extensibility:** Builder pattern\
+    \ lets you reuse the same construction process for new objects. \n\n## **CHAPTER\
+    \ FOUR**\n\n### ***Prototype***\n\n**Background**\n\nPrototype design pattern\
+    \ is used when creating an instance of a class is time intensive or complex. In\
+    \ such a case, ratter than creating new instances from scratch every time, you\
+    \ can create one instanced make copies of it and updating it as required. For\
+    \ instance if there are number of queries that needed to be made to get more information\
+    \ on an employee in database, a better approach would be to get the information\
+    \ of employee in a result set in memory only once, make copies of it for each\
+    \ query and then do the processing. This will prevent multiple round trips to\
+    \ database, thus reducing network overhead. Database connection happened to be\
+    \ one of limited and expensive resources in SaaS applications. Prototype patten\
+    \ offers help in reducing overhead by reducing object construction time and database\
+    \ round trips . These savings helps tremendously in scaling the SaaS application\
+    \ because resources like database connection, network connections are used more\
+    \ efficiently."
+  toc: []
+  trans: "\n```java\nbreak;\n\ncase ThreeD:\n\ntheMonkey = new ThreeDMonkey();\n\n\
+    break;\n\n}\n\nreturn theMonkey;\n\n}\n\npublic ITree getTree(DrawingType dType)\n\
+    \n{\n\nITree theTree = null;\n\nswitch(dType)\n\n{\n\ncase TwoD:\n\ntheTree =\
+    \ new TwoDTree();\n\nbreak;\n\ncase ThreeD:\n\ntheTree = new ThreeDTree();\n\n\
+    break;\n}\n\nreturn theTree;\n\n}\n\n}\n```\n\nFile : `Client.java`\n\n```java\n\
+    public class Client {\n\npublic static void main(String[] args)\n\n{\n\n    DrawingPlatformFactory\
+    \ drawingPlatform = new DrawingPlatformFactory();\n\n    IMonkey theMonkey = drawingPlatform.getMonkey(DrawingType.TwoD);\n\
+    \n    ITree theTree = drawingPlatform.getTree(DrawingType.TwoD);\n\n    //Draw\
+    \ 2D Scene\n    drawScene(theMonkey, theTree);\n\n    theMonkey = drawingPlatform.getMonkey(DrawingType.ThreeD);\n\
+    \n    theTree = drawingPlatform.getTree(DrawingType.ThreeD);\n\n    //Draw 3D\
+    \ Scene\n    drawScene(theMonkey, theTree);\n\n}\n\nprivate static void drawScene(IMonkey\
+    \ theMonkey, ITree theTree)\n\n{\n\n    theMonkey.jump();\n\n    theTree.sway();\n\
+    \n}\n\n}\n```\n\n输出:\n\n这是 2d 猴子在跳\n\n这是 2d 树在摇晃\n\n这是 3d 猴子在跳\n\n这是 3d 树在摇晃\n\
+    \n**优势**\n\n**封装性：** 抽象工厂模式将具体类完全与客户端隔离开。这允许自由地交换产品族。\n\n**扩展性：** 抽象工厂模式是“工厂的工厂”，可以轻松地扩展以适应更多产品，例如，我们可以添加另一个子类\
+    \ `FourDDrawingFactory`、`FourDMonkey` 和 `FourDTree`。客户端代码需要极少的更改。\n\n## **第三章**\n\
+    \n### **构建器 (Builder)**\n\n**背景**\n\n构建器设计模式用于将对象的构建与其表示分离。相同的构建机制可以用于构建多个不同的表示。构建器工厂侧重于逐步构建对象。考虑一个披萨店的例子。客户可以订购各种类型的披萨，如意大利腊肠披萨、至尊鸡肉披萨或素食披萨。创建每个披萨的步骤都是相同的。最终结果取决于步骤内部执行的操作。\n\
+    \n*   订购披萨（电话/网站/去商店）\n*   获取披萨饼底\n*   添加番茄酱\n*   添加奶酪\n*   添加配料（意大利腊肠/蔬菜/鸡肉）\n\
+    *   烘烤披萨\n*   将披萨交给客户（外带或外送）\n\n**实现**\n\n这里的用例是根据客户的规格构建披萨。`PizzaBuilder` 是一个抽象类，规定了构建披萨的步骤并协调披萨的制作步骤。`VeggiePizzaBuilder`、`PizzaPepperoniBizzaBuilder`\
+    \ 和 `ChickenPizzaBuildera` 自 `PizzaBuilder`。它们唯一覆盖的方法是 `addToppings()`。`VeggiePizzaBuilder`\
+    \ 添加西柿、青椒和洋葱等配料。`PeopporoniPizzaBuilder` 添加意大利腊肠片。`ChickenPizzaBuilder` 添加烤鸡肉配料。三种披萨的其他方法保持相同。`Director`\
+    \ 类根据客户提供的 `PizzaType` 规格决定应该调用哪个 `PizzaBuilder` 类。`Client` 类代表下订单的客户。这种关系在下图所示。注意，方法前的\
+    \ `+` 前缀表示公共方法，而 `#` 前缀表示受保护的方法。\n\n![Image](img/image00048.jpeg)\n\n以下是实现上述类的\
+    \ Java 代码。\n\nFile: `PizzaType.java`\n\n```java\npublic enum PizzaType {\n\nVeggie,\n\
+    \nPepperoni,\n\nChicken\n }\n```\n\nFile: `PizzaBuilder.java`\n\n```java\npublic\
+    \ abstract class PizzaBuilder {\n\nprotected String telNum = \"\";\n\npublic void\
+    \ orderPizza(String telNum) {\n\n    this.telNum = telNum;\n\n    System.out.println(\"\
+    Creating pizza for \" + telNum);\n\n    buildPizza();\n\n}\n\nprotected void getPizzaBase()\
+    \ {\n\n    System.out.println(\"Getting pizza base\");\n\n}\n\nprotected void\
+    \ addTomatoSauce() {\n\n    System.out.println(\"Adding tomato sauce\");\n\n}\n\
+    \nprotected void addCheese() {\n\n    System.out.println(\"Adding cheese\");\n\
+    \n}\n\nprotected void bakePizza() {\n\n    System.out.println(\"baking pizza.\
+    \ Smells great\");\n\n}\n\nprotected void sendPizza() {\n\n    System.out.println(\"\
+    sending pizza to customer \" + this.telNum);\n\n}\n\nprotected void buildPizza()\
+    \ {\n\n    getPizzaBase();\n\n    addTomatoSauce();\n\n    addCheese();\n\n  \
+    \  addToppings();\n\n    bakePizza();\n\n    sendPizza();\n\n}\n\nprotected abstract\
+    \ void addToppings();\n\n}\n```\n\nFile: `VeggiePizzaBuilder.java`\n\n```java\n\
+    public class VeggiePizzaBuilder extends PizzaBuilder {\n\n@Override protected\
+    \ void addToppings() {\n\n    System.out.println(\"Adding onions, tomators and\
+    \ spinach\") ;\n\n}\n\n}\n```\n\nFile: `PepporoniPizzaBuilder.java`\n\n```java\n\
+    public class PepporoniPizzaBuilder extends PizzaBuilder {\n\n@Override protected\
+    \ void addToppings() {\n\n    System.out.println(\"Adding Pepporoni\") ;\n\n}\n\
+    \n}\n```\n\nFile: `ChickenPizzaBuilder.java`\n\n```java\npublic class ChickenPizzaBuilder\
+    \ extends PizzaBuilder {\n\n@Override protected void addToppings() {\n\n    System.out.println(\"\
+    Adding grilled checkin\")\n\n}\n\n}\n```\n\nFile: `Director.java`\n\n```java\n\
+    public class Director {\n\npublic static PizzaBuilder CreatePizza(PizzaType pizzaType,\
+    \ String telNum)\n\n{\n\nPizzaBuilder pizzaBuilder = null;\n\nswitch(pizzaType)\n\
+    \n{\n\ncase Veggie:\n\npizzaBuilder = new VeggiePizzaBuilder();\n\nbreak;\n\n\
+    case Pepperoni:\n\npizzaBuilder = new PepporoniPizzaBuilder();\n\nbreak;\n\ncase\
+    \ Chicken:\n\npizzaBuilder = new ChickenPizzaBuilder();\n\nbreak;\n}\n\npizzaBuilder.orderPizza(telNum);\n\
+    \nreturn pizzaBuilder;\n\n}\n\n}\n```\n\nFile: `Client.java`\n\n```java\npublic\
+    \ class Client {\n\npublic static void main(String[] args)\n\n{\n\n    System.out.println(\"\
+    ******* Ordering Pepperoni Pizza *************\");\n\n    Director.CreatePizza(PizzaType.Pepperoni,\
+    \ \"408-231-1234\");\n\n    System.out.println(\"******* Ordering Veggie Pizza\
+    \ *************\");\n\n    Director.CreatePizza(PizzaType.Veggie, \"408-231-1244\"\
+    );\n\n}\n\n}\n```\n\n输出:\n\n******* 订购意大利腊肠披萨 *************\n\n正在为 408-231-1234\
+    \ 创建披萨\n获取披萨饼底\n添加番茄酱\n添加奶酪\n添加意大利腊肠\n烘烤披萨。闻气很香\n正在向客户 408-231-1234 送披萨\n\n*******\
+    \ 订购素食披萨 *************\n\n正在为 408-231-1244 创建披萨\n获取披萨饼底\n添加番茄酱\n添加奶酪\n添加洋葱、西柿和菠菜\n\
+    烘烤披萨。闻气很香\n正在向客户 408-231-1244 送披萨\n\n**第四章**\n\n### **原型 (Prototype)**\n\n**背景**\n\
+    \n原型设计模式用于类的实例化非常耗时或复杂的情况。在这种情况下，与其每次从头创建新实例，不如创建一个实例并进行复制，根据需要进行更新。例如，如果需要多次查询以获取员工的更多信息，更好的方法是只在内存中获取一次员工信息的结果集，为每个查询创建其副本，然后进行处理。这将防止多次访问数据库，从而减少网络开销。数据库连接往往是\
+    \ SaaS 应用中有限且昂贵的资源之一。原型模式通过减少对象构建时间和数据库往返来帮助减少开销。\n\n"
+- fmt: "\nPrototype is unique among creational design pattern in that it does not\
+    \ require a class. It just needs an object. The key idea here is that an object\
+    \ can spawn other objects similar to itself. If you have one tree in computer\
+    \ game, you could create many trees just by cloning fret tree. All modern languages\
+    \ like `Java`, `C#` offers built in `clone` function at `System.Object` level\
+    \ that can be overridden by custom classes to achieve prototype functionality.\n\
+    \n### Implementation\n\nThe use case here is that client would like a construct\
+    \ a home. `Home` needs parts like doors and windows. Doors and windows of one\
+    \ home are similar in nature. They may vary by size.\n\n`DBContext` is helper\
+    \ class that fetches default width and height from database. When `home` needs\
+    \ first door, we can create a basic door from scratch and keep it ready. First\
+    \ door is created using a constructor and it would call `DbContext.getDefaultDoorHeight()`\
+    \ and `DbContext.getDefaultDoorWidth()` to get default width and height for door.\
+    \ It is time consuming call and requires 2 roundtrips to database. \n\nWhen `home`\
+    \ needs another door, instead of creating from scratch, we can copy the data from\
+    \ first door and modify its properties as necessary. `IClonable` interface represents\
+    \ ability to copy an object. It just has `clone()` function. Any class that needs\
+    \ to implement copy functionality, they can override `clone()` function and provide\
+    \ their implementation of `clone()`. `Door` and `Window` class implement `IClonable`\
+    \ interface, thus provide ability to clone them. Client can call `clone` function\
+    \ on `door` and `window` object to create as any doors and windows as necessary\
+    \ for the `home`. When a door or window is cloned, we just make copy of existing\
+    \ object and then update as necessary. This cloning ability prevents expensive\
+    \ roundtrips to database.\n\nThis is depicted in picture below. \n\n![Image](Images/image00049.jpeg)\n\
+    \nHere is java code that implements above classes.\n\nFile: `DBContext.java`\n\
+    \n```java\npublic class DBContext {\n    public static double getDefaultDoorHeight()\
+    \ {\n        //simulate database connection value* System.out.println(\"Connecting\
+    \ to database...\");\n        System.out.println(\"Fetching default door height...\"\
+    );\n        //simulate value obtained from database* return 20.0;\n    }\n\n \
+    \   public static double getDefaultDoorWidtht() {\n        //simulate database\
+    \ connection value* System.out.println(\"Connecting to database...\");\n     \
+    \   System.out.println(\"Fetching default door width...\");\n        //simulate\
+    \ value obtained from database* return 10.0;\n    }\n\n    public static double\
+    \ getDefaultWindowHeight() {\n        //simulate database connection value* System.out.println(\"\
+    Connecting to database...\");\n        System.out.println(\"Fetching default window\
+    \ height...\");\n        //simulate value obtained from database* return 5.0;\n\
+    \    }\n\n    public static double getDefaultWindowWidth() {\n        //simulate\
+    \ database connection value* System.out.println(\"Connecting to database...\"\
+    );\n        System.out.println(\"Fetching default window width...\");\n      \
+    \  //simulate value obtained from database* return 6.0;\n    }\n}\n```\n\nFile:\
+    \ `IClonable.java`\n\n```java\npublic interface IClonable {\n    Object clone();\n\
+    }\n```\n\nFile: `Door.java`\n\n```java\npublic class Door implements IClonable\
+    \ {\n    public double hingSize = 4.0;\n    public double width = 0.0;\n    public\
+    \ double height = 0.0;\n\n    public Door() {\n        this.height = DBContext.getDefaultDoorHeight();\n\
+    \        this.width = DBContext.getDefaultDoorWidtht();\n    }\n\n    @Override\n\
+    \    public Object clone() {\n        Door theDoor = new Door();\n        theDoor.hingSize\
+    \ = this.hingSize;\n        theDoor.width = this.width;\n        theDoor.height\
+    \ = this.height;\n        return theDoor;\n    }\n\n    public void fixHinge()\
+    \ {\n        System.out.println(\"Fixing hinge to the door\");\n        this.hingSize\
+    \ = 20.0;\n    }\n}\n```\n\nFile: `Window.java`\n\n```java\npublic class Window\
+    \ implements IClonable {\n    public double glassSize = 10.0;\n    public double\
+    \ width = 0.0;\n    public double height = 0.0;\n\n    public Window() {\n   \
+    \     this.height = DBContext.getDefaultWindowHeight();\n        this.width =\
+    \ DBContext.getDefaultWindowWidth();\n    }\n\n    @Override\n    public Object\
+    \ clone() {\n        Window theWindow = new Window();\n        theWindow.glassSize\
+    \ = this.glassSize;\n        theWindow.width = this.width;\n        theWindow.height\
+    \ = this.height;\n        return theWindow;\n    }\n\n    public void fixGlass()\
+    \ {\n        this.glassSize = 5.0;\n        System.out.println(\"Fixing glass\
+    \ to the window\");\n    }\n}\n```\n\nFile: `Client.java`\n\n```java\npublic class\
+    \ Client {\n    public static void main(String[] args) {\n        //Build a home\
+    \ with 2 doors and 4 windows\n        //First door create from scratch* Door door1\
+    \ = new Door();\n        //Build Second door by cloing first door* Door door2\
+    \ = (Door)door1.clone();\n        door1.fixHinge();\n        door2.fixHinge();\n\
+    \        //Build first windo from scratch* Window window1 = new Window();\n  \
+    \      //Build 3 other windows by cloing first window* Window window2 = (Window)window1.clone();\n\
+    \        Window window3 = (Window)window1.clone();\n        Window window4 = (Window)window1.clone();\n\
+    \        window2.fixGlass();\n        window3.fixGlass();\n        window4.fixGlass();\n\
+    \    }\n}\n```\n\nOutput:\n\n```\nConnecting to database...\nFetching default\
+    \ door height...\nConnecting to database...\nFetching default door width...\n\
+    Connecting to database...\nFetching default door height...\nConnecting to database...\n\
+    Fetching default door width...\nFixing hinge to the door\nFixing hinge to the\
+    \ door\nConnecting to database...\nFetching default window height...\nConnecting\
+    \ to database...\nFetching default window width...\nConnecting to database...\n\
+    Fetching default window height...\nConnecting to database...\nFetching default\
+    \ window width...\nConnecting to database...\nFetching default window height...\n\
+    Connecting to database...\nFetching default window width...\nConnecting to database...\n\
+    Fetching default window height...\nConnecting to database...\nFetching default\
+    \ window width...\nFixing glass to the window\nFixing glass to the window\nFixing\
+    \ glass to the window\nFixing glass to the window\n```\n"
+  raw: "Prototype is unique among creational design pattern in that it does not require\
+    \ a class. It just needs an object. The key idea here is that an object can spawn\
+    \ other objects similar to itself. If you have one tree in computer game, you\
+    \ could create many trees just by cloning fret tree. All modern languages like\
+    \ Java, C# offers built in clone function at System.Object level that can be overridden\
+    \ by custom classes to achieve prototype functionality.\n\n**Implementation**\n\
+    \nThe use case here is that client would like a construct a home. Home needs parts\
+    \ like doors and windows. Doors and windows of one home are similar in nature.\
+    \ They may vary by size.\n\nDBContext is helper class that fetches default width\
+    \ and height from database. When home needs first door, we can create a basic\
+    \ door from scratch and keep it ready. First door is created using a constructor\
+    \ and it would call DbContext’s getDefaultDoorHeight() and getDefaultDoorWidth()\
+    \ to get default width and height for door. It is time consuming call and requires\
+    \ 2 roundtrips to database. \n\nWhen home needs another door, instead of creating\
+    \ from scratch, we can copy the data from first door and modify its properties\
+    \ as necessary. IClonable interface represents ability to copy an object. It just\
+    \ has clone() function. Any class that needs to implement copy functionality,\
+    \ they can override clone() function and provide their implementation of clone().\
+    \ Door and Window class implement IClonable interface, thus provide ability to\
+    \ clone them. Client can call clone function on door and window object to create\
+    \ as any doors and windows as necessary for the home. When a door or window is\
+    \ cloned, we just make copy of existing object and then update as necessary. This\
+    \ cloning ability prevents expensive roundtrips to database.\n\nThis is depicted\
+    \ in picture below. \n\n ![Image](Images/image00049.jpeg)\n\nHere is java code\
+    \ that implements above classes.\n\nFile: DBContext.java\n\n**public class** DBContext\
+    \ {\n\n **public static double** getDefaultDoorHeight()\n\n {\n\n *//simulate\
+    \ database connection value* System.***out***.println(**\"Connecting to database...\"\
+    **);\n\n System.***out***.println(**\"Fetching default door height...\"**);\n\n\
+    \ *//simulate value obtained from database* **return** 20.0;\n\n }\n\n **public\
+    \ static double** getDefaultDoorWidtht()\n\n {\n\n *//simulate database connection\
+    \ value* System.***out***.println(**\"Connecting to database...\"**);\n\n System.***out***.println(**\"\
+    Fetching default door width...\"**);\n\n *//simulate value obtained from database*\
+    \ **return** 10.0;\n\n }\n\n **public static double** getDefaultWindowHeight()\n\
+    \n {\n\n *//simulate database connection value* System.***out***.println(**\"\
+    Connecting to database...\"**);\n\n System.***out***.println(**\"Fetching default\
+    \ window height...\"**);\n\n *//simulate value obtained from database* **return**\
+    \ 5.0;\n\n }\n\n **public static double** getDefaultWindowWidth()\n\n {\n\n *//simulate\
+    \ database connection value* System.***out***.println(**\"Connecting to database...\"\
+    **);\n\n System.***out***.println(**\"Fetching default window width...\"**);\n\
+    \n *//simulate value obtained from database* **return** 6.0;\n\n }\n\n}\n\nFile:\
+    \ IClonable.java\n\n**public interface** IClonable {\n\n Object clone();\n\n}\n\
+    \nFile: Door.java\n\n**public class** Door **implements** IClonable{\n\n **public\
+    \ double** **hingSize** = 4.0;\n\n **public double** **width** = 0.0;\n\n **public\
+    \ double** **height** = 0.0;\n\n **public** Door()\n\n {\n\n **this**.**height**\
+    \ =DBContext.*getDefaultDoorHeight*();\n\n **this**.**width** = DBContext.*getDefaultDoorWidtht*();\n\
+    \n }\n\n @Override **public** Object clone() {\n\n Door theDoor = **new** Door();\n\
+    \n theDoor.**hingSize** = **this**.**hingSize**;\n\n theDoor.**width** = **this**.**width**;\n\
+    \n theDoor.**height** = **this**.**height**;\n\n **return** theDoor;\n\n }\n\n\
+    \ **public void** fixHinge()\n\n {\n\n System.***out***.println(**\"Fixing hinge\
+    \ to the door\"**);\n\n **this**.**hingSize** = 20.0;\n\n }\n\n}\n\nFile: Window.java\n\
+    \n**public class** Window **implements** IClonable {\n\n **public double** **glassSize**\
+    \ = 10.0;\n\n **public double** **width** = 0.0;\n\n **public double** **height**\
+    \ = 0.0;\n\n **public** Window()\n\n {\n\n **this**.**height** = DBContext.*getDefaultWindowHeight*();\n\
+    \n **this**.**width** = DBContext.*getDefaultWindowWidth*();\n\n }\n\n @Override\
+    \ **public** Object clone() {\n\n Window theWindow = **new** Window();\n\n theWindow.**glassSize**\
+    \ = **this**.**glassSize**;\n\n theWindow.**width** = **this**.**width**;\n\n\
+    \ theWindow.**height** = **this**.**height**;\n\n **return** theWindow;\n\n }\n\
+    \n **public void** fixGlass()\n\n {\n\n **this**.**glassSize** = 5.0;\n\n System.***out***.println(**\"\
+    Fixing glass to the window\"**);\n\n }\n\n}\n\nFile: Client.java\n\n**public class**\
+    \ Client {\n\n **public static void** main(String[] args)\n\n {\n\n *//Build a\
+    \ home with 2 doors and 4 windows\n\n //First door create from scratch* Door door1\
+    \ = **new** Door();\n\n *//Build Second door by cloing first door* Door door2\
+    \ = (Door)door1.clone();\n\n door1.fixHinge();\n\n door2.fixHinge();\n\n *//Build\
+    \ first windo from scratch* Window window1 = **new** Window();\n\n *//Build 3\
+    \ other windows by cloing first window* Window window2 = (Window)window1.clone();\n\
+    \n Window window3 = (Window)window1.clone();\n\n Window window4 = (Window)window1.clone();\n\
+    \n window2.fixGlass();\n\n window2.fixGlass();\n\n window3.fixGlass();\n\n window4.fixGlass();\n\
+    \n }\n\n}\n\nOutput:\n\nConnecting to database...\n\nFetching default door height...\n\
+    \nConnecting to database...\n\nFetching default door width...\n\nConnecting to\
+    \ database...\n\nFetching default door height...\n\nConnecting to database...\n\
+    \nFetching default door width...\n\nFixing hinge to the door\n\nFixing hinge to\
+    \ the door\n\nConnecting to database...\n\nFetching default window height...\n\
+    \nConnecting to database...\n\nFetching default window width...\n\nConnecting\
+    \ to database...\n\nFetching default window height...\n\nConnecting to database...\n\
+    \nFetching default window width...\n\nConnecting to database...\n\nFetching default\
+    \ window height...\n\nConnecting to database...\n\nFetching default window width...\n\
+    \nConnecting to database...\n\nFetching default window height...\n\nConnecting\
+    \ to database...\n\nFetching default window width...\n\nFixing glass to the window\n\
+    \nFixing glass to the window\n\nFixing glass to the window\n\nFixing glass to\
+    \ the window\n\nProcess finished with exit code 0\n\n**Benefits**\n\n**Scalability:**\
+    \ Prototype pattern fast way to create new objects by cloning existing object\
+    \ which in turn improves efficiency of resource usage and improves scalability\
+    \ of overall system. \n\n**Simplicity and Consistency :** Prototype patterns simplifies\
+    \ new object creation by enforcing cloning ability via IClonable interface. Using\
+    \ IClonable interface also makes closing behavior consistent across all classes.\n\
+    \n## **CHAPTER FIVE**\n\n### ***Singleton***\n\n**Background**\n\nSingleton design\
+    \ pattern is used when as a designer of class, you need to control number of instances\
+    \ of your class that user can control . Specifically the number of instances that\
+    \ external consumer can create is restricted to one and only one. There are many\
+    \ use cases where restricting number of instances is obvious and safe choice.\
+    \ For instance the class that reads configuration information of application and\
+    \ is used as read only class should be singleton. Other examples of singleton\
+    \ classes are print spooler class,. Usually constructor of a Singleton class is\
+    \ made private. It just has a static method to access the only instance. The only\
+    \ instance serves as global point of access to the object.\n\n**Implementation**\n\
+    \nThe use case here is that client would like access a configuration information\
+    \ of an application. This configuration information is stored in a text file in\
+    \ key value pairs. "
+  toc: []
+  trans: "\n原型模式在创建类设计模式中是独一无二，因为它不需要类，只需要一个对象。这里的核心思想是对象可以产生与自身相似的其他对象。如果你在计算机游戏中有一棵树，你只需克隆这棵树就可以创建很多棵树。所有现代语言（如\
+    \ `Java`、`C#`）在 `System.Object` 级别提供了内置的 `clone` 函数，自定义类可以通过重写该函数来实现原型功能。\n\n\
+    ### 实现\n\n此处的用例是客户端想要构建一栋房屋。`Home` 需要门和窗户等部件。一栋房屋的门和窗户本质上是相似的，它们在尺寸上有所不同。\n\n\
+    `DBContext` 是一个辅助类，从数据库中获取默认宽度和高度。当 `home` 需要第一扇门时，我们可以从零创建一个基础门并将其准备好。第一扇门是通过构造函数创建的，它会调用\
+    \ `DbContext.getDefaultDoorHeight()` 和 `DbContext.getDefaultDoorWidth()` 来获取门的默认宽度和高度。这是一个耗时的调用，并且需要与数据库交互往返。\n\
+    \n当 `home` 需要另一扇门时，我们不需要从零开始，而是从第一扇门复制数据并根据需要修改其属性。`IClonable` 接口表示复制对象的能力，它仅包含\
+    \ `clone()` 函数。任何需要实现复制功能的类都可以重写 `clone()` 函数并提供自己的 `clone()` 实现。`Door` 和 `Window`\
+    \ 类实现了 `IClonable` 接口，从而提供了克隆能力。客户端可以调用 `door` 和 `window` 对象上的 `clone` 函数，为 `home`\
+    \ 创建所需的任意数量的门和窗户。当门或窗户被克隆时，我们只需创建现有对象的副本，然后根据需要进行更新。这种克隆能力避免了昂贵的数据库往返操作。\n\n下图所示。\n\
+    \n![Image](img/image00049.jpeg)\n\n以下是实现上述类的 Java 代码。\n\n文件：`DBContext.java`\n\
+    \n```java\npublic class DBContext {\n    public static double getDefaultDoorHeight()\
+    \ {\n        //模拟数据库连接值* System.out.println(\"Connecting to database...\");\n\
+    \        System.out.println(\"Fetching default door height...\");\n        //模拟从数据库获取的值*\
+    \ return 20.0;\n    }\n\n    public static double getDefaultDoorWidtht() {\n \
+    \       //模拟数据库连接值* System.out.println(\"Connecting to database...\");\n     \
+    \   System.out.println(\"Fetching default door width...\");\n        //模拟从数据库获取的值*\
+    \ return 10.0;\n    }\n\n    public static double getDefaultWindowHeight() {\n\
+    \        //模拟数据库连接值* System.out.println(\"Connecting to database...\");\n    \
+    \    System.out.println(\"Fetching default window height...\");\n        //模拟从数据库获取的值*\
+    \ return 5.0;\n    }\n\n    public static double getDefaultWindowWidth() {\n \
+    \       //模拟数据库连接值* System.out.println(\"Connecting to database...\");\n     \
+    \   System.out.println(\"Fetching default window width...\");\n        //模拟从数据库获取的值*\
+    \ return 6.0;\n    }\n}\n```\n\n文件：`IClonable.java`\n\n```java\npublic interface\
+    \ IClonable {\n    Object clone();\n}\n```\n\n文件：`Door.java`\n\n```java\npublic\
+    \ class Door implements IClonable {\n    public double hingSize = 4.0;\n    public\
+    \ double width = 0.0;\n    public double height = 0.0;\n\n    public Door() {\n\
+    \        this.height = DBContext.getDefaultDoorHeight();\n        this.width =\
+    \ DBContext.getDefaultDoorWidtht();\n    }\n\n    @Override\n    public Object\
+    \ clone() {\n        Door theDoor = new Door();\n        theDoor.hingSize = this.hingSize;\n\
+    \        theDoor.width = this.width;\n        theDoor.height = this.height;\n\
+    \        return theDoor;\n    }\n\n    public void fixHinge() {\n        System.out.println(\"\
+    Fixing hinge to the door\");\n        this.hingSize = 20.0;\n    }\n}\n```\n\n\
+    文件：`Window.java`\n\n```java\npublic class Window implements IClonable {\n    public\
+    \ double glassSize = 10.0;\n    public double width = 0.0;\n    public double\
+    \ height = 0.0;\n\n    public Window() {\n        this.height = DBContext.getDefaultWindowHeight();\n\
+    \        this.width = DBContext.getDefaultWindowWidth();\n    }\n\n    @Override\n\
+    \    public Object clone() {\n        Window theWindow = new Window();\n     \
+    \   theWindow.glassSize = this.glassSize;\n        theWindow.width = this.width;\n\
+    \        theWindow.height = this.height;\n        return theWindow;\n    }\n\n\
+    \    public void fixGlass() {\n        this.glassSize = 5.0;\n        System.out.println(\"\
+    Fixing glass to the window\");\n    }\n}\n```\n\n文件：`Client.java`\n\n```java\n\
+    public class Client {\n    public static void main(String[] args) {\n        //构建一栋有\
+    \ 2 扇门和 4 扇窗户的房屋\n        //从零创建第一扇门* Door door1 = new Door();\n        //通过克隆第一扇门构建第二扇门*\
+    \ Door door2 = (Door)door1.clone();\n        door1.fixHinge();\n        door2.fixHinge();\n\
+    \        //从零创建第一扇窗户* Window window1 = new Window();\n        //通过克隆第一扇窗户构建另外\
+    \ 3 扇窗户* Window window2 = (Window)window1.clone();\n        Window window3 = (Window)window1.clone();\n\
+    \        Window window4 = (Window)window1.clone();\n        window2.fixGlass();\n\
+    \        window3.fixGlass();\n        window4.fixGlass();\n    }\n}\n```\n\n输出：\n\
+    \n```\nConnecting to database...\nFetching default door height...\nConnecting\
+    \ to database...\nFetching default door width...\nConnecting to database...\n\
+    Fetching default door height...\nConnecting to database...\nFetching default door\
+    \ width...\nFixing hinge to the door\nFixing hinge to the door\nConnecting to\
+    \ database...\nFetching default window height...\nConnecting to database...\n\
+    Fetching default window width...\nConnecting to database...\nFetching default\
+    \ window height...\nConnecting to database...\nFetching default window width...\n\
+    Connecting to database...\nFetching default window height...\nConnecting to database...\n\
+    Fetching default window width...\nConnecting to database...\nFetching default\
+    \ window height...\nConnecting to database...\nFetching default window width...\n\
+    Fixing glass to the window\nFixing glass to the window\nFixing glass to the window\n\
+    Fixing glass to the window\n```\n"
+- fmt: "\nSince same configuration information is needed in read only fashion everywhere,\
+    \ we just one instance of configuration reader. `ConfigReader` is a singleton\
+    \ class. Its constructor is made private so that client can not directly instantiate\
+    \ it. It has `getInstance()` method that `Client` can use to access the only instance\
+    \ it has. `loadConfig()` information is used for reading the information from\
+    \ text file during initialization part and keeps it in internal hash table. Once\
+    \ client contains instance of `ConfigReader`, it can get value of a configuration\
+    \ key by calling `getValue()` method by passing in value of key in question. `getValue()`\
+    \ function looks up hash table to get the value for specified key and returns\
+    \ it. The class diagram is depicted below.\n\n![Image](Images/image0005.jpeg)\n\
+    \nHere is java code that implements above classes.\n\nFile: `ConfigReader.java`\n\
+    \n```java\nimport java.io.BufferedReader;\nimport java.io.FileNotFoundException;\n\
+    import java.io.FileReader;\nimport java.io.IOException;\nimport java.util.Hashtable;\n\
+    \npublic class ConfigReader {\n    private static ConfigReader _configReader =\
+    \ null;\n    private Hashtable configTable = null;\n\n    private ConfigReader()\
+    \ {\n    }\n\n    public static ConfigReader getInstance(String filePath) {\n\
+    \        if(_configReader == null) {\n            _configReader = new ConfigReader();\n\
+    \            loadConfig(filePath);\n        }\n        return _configReader;\n\
+    \    }\n\n    public static void loadConfig(String filePath) {\n        System.out.println(\"\
+    loading config from file\");\n        try {\n            FileReader ex = new FileReader(filePath);\n\
+    \            String line = null;\n            BufferedReader bufferedReader =\
+    \ new BufferedReader(ex);\n            _configReader.configTable = new Hashtable();\n\
+    \            while((line = bufferedReader.readLine()) != null) {\n           \
+    \     String key = line.split(\"#\")[0];\n                String value = line.split(\"\
+    #\")[1];\n                _configReader.configTable.put(key, value);\n       \
+    \     }\n            bufferedReader.close();\n        } catch (FileNotFoundException\
+    \ var6) {\n            System.out.println(\"Unable to open file '\" + filePath\
+    \ + \"'\");\n        } catch (IOException var7) {\n            System.out.println(\"\
+    Error reading file '\" + filePath + \"'\");\n        }\n    }\n\n    public String\
+    \ getValue(String key) {\n        System.out.println(\"getting config for key\
+    \ \" + key);\n        return (String)_configReader.configTable.get(key);\n   \
+    \ }\n}\n```\n\nFile: `Client.java`\n\n```java\nimport Singleton.ConfigReader;\n\
+    \npublic class Client {\n    public Client() {\n    }\n\n    public static void\
+    \ main(String[] args) {\n        ConfigReader configReader = ConfigReader.getInstance(\"\
+    /Users/ravindrasadaphule/config.txt\");\n        String dbConnectionString = configReader.getValue(\"\
+    DbConectionString\");\n        System.out.println(dbConnectionString);\n    }\n\
+    }\n```\n\nFile: `config.txt`\n```text\nDbConectionString#provider=oracle11;trusted_connection=yes\n\
+    username#admin\n```\n\nOutput:\n```\nloading config from file\ngetting config\
+    \ for key DbConectionString\nprovider=oracle11;trusted_connection=yes\n```\n\n\
+    ### Benefits\n\n**Low memory footprint:** Singleton pattern restricts intense\
+    \ of a class to one. It prevents user from creating more than one instance and\
+    \ thus saves on memory.\n\n**Simplicity:** Singleton pattern is deceptively simple.\
+    \ It is the pattern which completely contained in the same class and do not need\
+    \ any other auxiliary class.\n\n## CHAPTER SIX\n\n### Summary\n\nThank you very\
+    \ much for going through the entire book on creation design patterns. Here is\
+    \ brief summary of all creation al design patterns.\n\n* **The Factory Pattern**\
+    \ is used to select and obtain an instance of a class from a number of similar\
+    \ classes based on data you provide to the factory.\n* **The Abstract Factory\
+    \ Pattern** is used to obtain one of several related groups of classes. In some\
+    \ cases it returns a Factory for that group of classes.\n* **The Builder Pattern**\
+    \ builds a number of objects to make a new object, based on the data with which\
+    \ it is presented.\n* **The Prototype Pattern** clones an existing class rather\
+    \ than creating a new instance when creating new instances is more expensive.\n\
+    * **The Singleton Pattern** is a pattern that ensures that there is one and only\
+    \ one instance of an object, and that it is possible to obtain global access to\
+    \ that one instance.\n"
+  raw: "Since same configuration information is needed in read only fashion everywhere,\
+    \ we just one instance of configuration reader. ConfigReader is a singleton class.\
+    \ Its constructor is made private so that client can not directly instantiate\
+    \ it. It has getInstance() method that Client can use to access the only instance\
+    \ it has. loadConfig() information is used for reading the information from text\
+    \ file during initialization part and keeps it in internal hash table. Once client\
+    \ contains instance of ConfigReader, it can get value of a configuration key by\
+    \ calling getValue() method by passing in value of key in question. getValue()\
+    \ function looks up hash table to get the value for specified key and returns\
+    \ it. The class diagram is depicted below.\n\n![Image](Images/image00050.jpeg)\n\
+    \nHere is java code that implements above classes.\n\nFile: ConfigReader.java\n\
+    \n**import** java.io.BufferedReader;\n\n**import** java.io.FileNotFoundException;\n\
+    \n**import** java.io.FileReader;\n\n**import** java.io.IOException;\n\n**import**\
+    \ java.util.Hashtable;\n\n**public class** ConfigReader {\n\n **private static**\
+    \ ConfigReader _configReader = **null**;\n\n **private** Hashtable configTable\
+    \ = **null**;\n\n **private** ConfigReader() {\n\n }\n\n **public static** ConfigReader\
+    \ getInstance(String filePath) {\n\n **if**(_configReader == **null**) {\n\n _configReader\
+    \ = **new** ConfigReader();\n\n loadConfig(filePath);\n\n }\n\n **return** _configReader;\n\
+    \n }\n\n **public static void** loadConfig(String filePath) {\n\n System.out.println(**\"\
+    loading config from file\"**);\n\n **try** {\n\n FileReader ex = **new** FileReader(filePath);\n\
+    \n String line = **null**;\n\n BufferedReader bufferedReader = **new** BufferedReader(ex);\n\
+    \n _configReader.configTable = **new** Hashtable();\n\n **while**((line = bufferedReader.readLine())\
+    \ != **null**) {\n\n String key = line.split(**\"#\"**)[0];\n\n String value =\
+    \ line.split(**\"#\"**)[1];\n\n _configReader.configTable.put(key, value);\n\n\
+    \ }\n\n bufferedReader.close();\n\n } **catch** (FileNotFoundException var6) {\n\
+    \n System.out.println(**\"Unable to open file** **\\'****\"** + filePath + **\"\
+    ****\\'****\"**);\n\n } **catch** (IOException var7) {\n\n System.out.println(**\"\
+    Error reading file** **\\'****\"** + filePath + **\"****\\'****\"**);\n\n }\n\n\
+    \ }\n\n **public** String getValue(String key) {\n\n System.out.println(**\"getting\
+    \ config for key \"** + key);\n\n **return** (String)_configReader.configTable.get(key);\n\
+    \n }\n\n}\n\nFile: Client.java\n\n**import** Singleton.ConfigReader;\n\n**public\
+    \ class** Client {\n\n **public** Client() {\n\n }\n\n **public static void**\
+    \ main(String[] args) {\n\n ConfigReader configReader = ConfigReader.getInstance(**\"\
+    /Users/ravindrasadaphule/config.txt\"**);\n\n String dbConnectionString = configReader.getValue(**\"\
+    DbConectionString\"**);\n\n System.out.println(dbConnectionString);\n\n }\n\n\
+    }\n\nFile: config.txt\n\nDbConectionString#provider=oracle11;trusted_connection=yes\n\
+    \nusername#admin\n\nOutput:\n\nloading config from file\n\ngetting config for\
+    \ key DbConectionString\n\nprovider=oracle11;trusted_connection=yes\n\n**Benefits**\n\
+    \n**Low memory footprint:** Singleton pattern restricts intense of a class to\
+    \ one. It prevents user from creating more than one instance and thus saves on\
+    \ memory. \n\n**Simplicity :** Singleton pattern is deceptively simple. It is\
+    \ the pattern which completely contained in the same class and do not need any\
+    \ other auxiliary class. \n\n## **CHAPTER SIX**\n\n### ***Summary***\n\nThank\
+    \ you very much for going through the entire book on creation design patterns.\
+    \ Here is brief summary of all creation al design patterns.\n\n*   **The Factory\
+    \ Pattern** is used to select and obtain an instance of a class from a number\
+    \ of similar classes based on data you provide to the factory. \n\n*   **The Abstract\
+    \ Factory Pattern** is used to obtain one of several related groups of classes.\
+    \ In some cases it returns a Factory for that group of classes. \n\n*   **The\
+    \ Builder Pattern** builds a number of objects to make a new object, based on\
+    \ the data with which it is presented. \n\n*   **The Prototype Pattern** clones\
+    \ an existing class rather than creating a new instance when creating new instances\
+    \ is more expensive. \n\n*   **The Singleton Pattern** is a pattern that ensures\
+    \ that there is one and only one instance of an object, and that it is possible\
+    \ to obtain global access to that one instance."
+  toc: []
+  trans: "\n\n由于各处都需要以只读方式读取配置信息，我们只需要一个配置读取器实例。`ConfigReader` 是一个单例类。它的构造函数是私有的，因此客户端无法直接实例化它。它拥有\
+    \ `getInstance()` 方法，`Client` 可以使用该方法来访问唯一的实例。`loadConfig()` 信息用于在初始化部分从文本文件中读取信息，并将其存储在内部哈希表中。一旦客户端拥有了\
+    \ `ConfigReader` 实例，就可以通过传入目标键值并调用 `getValue()` 方法来获取配置键的值。`getValue()` 函数通过查找哈希表获取指定键的值并将其返回。类图如图所示。\n\
+    \n![Image](img/image0005.jpeg)\n\n以下是实现上述类的 Java 代码。\n\n文件：`ConfigReader.java`\n\
+    \n```java\nimport java.io.BufferedReader;\nimport java.io.FileNotFoundException;\n\
+    import java.io.FileReader;\nimport java.io.IOException;\nimport java.util.Hashtable;\n\
+    \npublic class ConfigReader {\n    private static ConfigReader _configReader =\
+    \ null;\n    private Hashtable configTable = null;\n\n    private ConfigReader()\
+    \ {\n    }\n\n    public static ConfigReader getInstance(String filePath) {\n\
+    \        if(_configReader == null) {\n            _configReader = new ConfigReader();\n\
+    \            loadConfig(filePath);\n        }\n        return _configReader;\n\
+    \    }\n\n    public static void loadConfig(String filePath) {\n        System.out.println(\"\
+    loading config from file\");\n        try {\n            FileReader ex = new FileReader(filePath);\n\
+    \            String line = null;\n            BufferedReader bufferedReader =\
+    \ new BufferedReader(ex);\n            _configReader.configTable = new Hashtable();\n\
+    \            while((line = bufferedReader.readLine()) != null) {\n           \
+    \     String key = line.split(\"#\")[0];\n                String value = line.split(\"\
+    #\")[1];\n                _configReader.configTable.put(key, value);\n       \
+    \     }\n            bufferedReader.close();\n        } catch (FileNotFoundException\
+    \ var6) {\n            System.out.println(\"Unable to open file '\" + filePath\
+    \ + \"'\");\n        } catch (IOException var7) {\n            System.out.println(\"\
+    Error reading file '\" + filePath + \"'\");\n        }\n    }\n\n    public String\
+    \ getValue(String key) {\n        System.out.println(\"getting config for key\
+    \ \" + key);\n        return (String)_configReader.configTable.get(key);\n   \
+    \ }\n}\n```\n\n文件：`Client.java`\n\n```java\nimport Singleton.ConfigReader;\n\n\
+    public class Client {\n    public Client() {\n    }\n\n    public static void\
+    \ main(String[] args) {\n        ConfigReader configReader = ConfigReader.getInstance(\"\
+    /Users/ravindrasadaphule/config.txt\");\n        String dbConnectionString = configReader.getValue(\"\
+    DbConectionString\");\n        System.out.println(dbConnectionString);\n    }\n\
+    }\n```\n\n文件：`config.txt`\n```text\nDbConectionString#provider=oracle11;trusted_connection=yes\n\
+    username#admin\n```\n\n输出：\n```\nloading config from file\ngetting config for\
+    \ key DbConectionString\nprovider=oracle11;trusted_connection=yes\n```\n\n###\
+    \ 益处\n\n**低内存占用：** 单例模式将一个类的实例化限制为。。它防止了用户创建多个实例，从而节省了内存。\n\n**简单性：** 单例模式看起来非常简单。它是一种完全包含在同一个类中的模式，不需要任何其他辅助类。\n\
+    \n## 第六章\n\n### 总结\n\n非常感谢阅读整本关于创建型设计模式的书。以下是所有创建型设计模式的简要总结。\n\n*   **工厂模式**用于根据提供给工厂的数据，从许多相似的类中选择并获取某个类的实例。\n\
+    *   **抽象工厂模式**用于获取若干相关类中的某一组。在某些情况下，它返回适用于该组类的工厂。\n*   **构建器模式**根据提供的数据构建多个对象以组合成一个新对象。\n\
+    *   **原型模式**在创建新实例的开销较大时，通过克隆现有类而不是创建新实例。\n*   **单例模式**是一种确保对象只有一个实例的模式，并允许全局访问该实例的模式。\n"

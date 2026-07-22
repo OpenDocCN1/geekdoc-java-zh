@@ -1,0 +1,913 @@
+<p><img src="Images/cover00037.jpeg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div id="part0000.xhtml_aid-1" class="WordSection1">
+<p><strong><span lang="EN-IN" style="font-size:1.33rem;">Cracking the
+Coding Interview</span></strong></p>
+<p><strong><span lang="EN-IN" style="">70 Database Questions and
+Answers</span></strong></p>
+<p><span class="MsoHyperlink"><span lang="EN-IN" style=""><a
+href="#part0000.xhtml__Toc430033526"><span
+style="">Introduction</span></a></span></span></p>
+<p><span class="MsoHyperlink"><span lang="EN-IN" style=""><a
+href="#part0000.xhtml__Toc430033527"><span
+style="">Conclusion</span></a></span></span></p>
+<p><span class="MsoHyperlink"><span lang="EN-IN" style=""><a
+href="#part0000.xhtml__Toc430033528"><span style="">About
+Author</span></a></span></span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">This book is dedicated to all database
+programmers. </span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Copyright © 2015-2035 Chinmoy
+Mukherjee</span></p>
+<p><span lang="EN-IN" style="">All rights reserved. No text of this book
+may be reproduced in any form or by any electronic or mechanical means,
+including information storage and retrieval systems, without written
+permission from the publisher or author, except in the case of a
+reviewer, who may quote brief passages embodied in critical articles or
+in a review.</span></p>
+<h1><span id="part0000.xhtml__Toc430033526"></span><span
+id="part0000.xhtml__Toc385835476"></span><span
+id="part0000.xhtml__Toc385580542"></span><span lang="EN-IN"
+style="">Introduction</span></h1>
+<p><span lang="EN-IN" style="">We present 70 interesting database
+interview questions and answers for readers to practice and crack any
+database interview. The reader is encouraged to try to solve these
+questions himself/herself before checking the answers.</span></p>
+<p><span id="part0000.xhtml__Toc385835502"></span><span
+id="part0000.xhtml__Toc385589591"></span><span
+id="part0000.xhtml__Toc385580563"></span><span style="">Database
+Interview Question-1.<span style="font:7.0pt &quot;&quot;">       
+</span></span><span style="">What is “index” used for?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Index is a lookup table for database records
+in physical disk. Index makes record searching faster, it is similar to
+book index. Below figure explains the concept of index
+pictorially.</span></p>
+<span style="font-size:1rem;"></span>
+<div style="page-break-after:always">
+
+</div>
+<br />
+</span>
+<p><span style=""><img src="Images/image00036.jpeg" data-border="0"
+width="455" height="292" /></span></p>
+<p><span style="">Database Interview Question-2.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span
+style="">When to not use index?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Index should not be used for following
+cases:</span></p>
+<p><span style="font-family:Symbol">·<span
+style="font:7.0pt &quot;&quot;">       </span></span><span style="">If
+number of records are small</span></p>
+<p><span style="font-family:Symbol">·<span
+style="font:7.0pt &quot;&quot;">       </span></span><span style="">If
+records need to be updated/inserted/deleted on a daily basis</span></p>
+<p><span style="font-family:Symbol">·<span
+style="font:7.0pt &quot;&quot;">       </span></span><span style="">If
+column value can be null very often</span></p>
+<p><span style="">    </span></p>
+<p><span style="">Database Interview Question-3.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span
+style="">What is tempdb?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: tempdb is temporary database which can be used
+by all users/processes to maintain temporary tables, etc. Content of
+tempdb is erased when database server is
+restarted.                                           </span></p>
+<p><span style="">Database Interview Question-4.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span style="">How
+will you find out all the stored procedures present in a database?    
+</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: SELECT object_name, object_type</span></p>
+<p><span style="">FROM  user_objects</span></p>
+<p><span style="">WHERE object_type = 'PROCEDURE' </span></p>
+<p><span style="">Database Interview Question-5.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span
+style="">What are the differences between TRUNCATE and
+DELETE?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: TRUNCATE removes all rows from a table. The
+operation cannot be rolled back, also triggers are not executed for
+TRUNCATE</span></p>
+<p><span style="">Database Interview Question-6.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span
+style="">What is the difference between IN and EXISTS ?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: EXISTS checks if any such record exists.
+e.g.</span></p>
+<p><span style="">SELECT * FROM Orders o WHERE EXISTS (</span></p>
+<p><span style="">    SELECT * FROM Products p where p.ProductNumber =
+o.ProductNumber)</span></p>
+<p><span style="">IN is used to find presence of a record among multiple
+records. e.g.</span></p>
+<p><span style="">SELECT * FROM Orders WHERE ProductNumber IN (1, 10,
+100)</span></p>
+<p><span style="">Database Interview Question-7.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span
+style="">What database parameters can be tuned for performance?" 
+</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Buffer pool, Log level, etc.</span></p>
+<p><span style="">Database Interview Question-8.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span
+style="">What is bcp?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: bcp in Sybase helps to copy table into a flat
+file and vice versa.</span></p>
+<p><span style="">Database Interview Question-9.<span
+style="font:7.0pt &quot;&quot;">        </span></span><span
+style="">Suppose you are logged onto a database DB1. What query will you
+run in DB1 to retrieve data from the table table1 present in another
+database DB2?       </span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: We can use either select * from DB2..table1 or
+use DB2;select * from table1</span></p>
+<p><span style="">Database Interview Question-10.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+are main   Open source databases?</span></p>
+<p><span style="">Answer: PostgreSQL, MySQL, etc.</span></p>
+<p><span style="">Database Interview Question-11.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+is a View?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: A view is the representation of a SQL
+statement that is stored in memory so that it can easily be re-used as
+example</span></p>
+<p><span style="">CREATE VIEW [MyProductList] AS</span></p>
+<p><span style="">SELECT ProductID,ProductName</span></p>
+<p><span style="">FROM Products</span></p>
+<p><span style="">WHERE Discontinued=No</span></p>
+<p><span style="">SELECT * FROM [MyProductList]</span></p>
+<p><span style="">Database Interview Question-12.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">There
+is a table “Employee” having two columns – Emp_Name and
+Office_Locations. Write a query that will display all office locations
+and the number of employees in each of these locations.</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Select Office_Locations, COUNT(Emp_Name) FROM
+Employee GROUP BY Office_Locations;</span></p>
+<p><span style="">Database Interview Question-13.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+a query to get the employees, who are also managers</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Select name from employees where id in (select
+manager from employees)</span></p>
+<p><span style="">Or</span></p>
+<p><span style="">Select e1.name from employees e1 inner join employees
+e2 ON e1.id = e2.manager</span></p>
+<p><span style="">Database Interview Question-14.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">How to
+get name of database?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: select db_name();</span></p>
+<p><span style="">Database Interview Question-15.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">How to
+get database version?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: select @@version</span></p>
+<p><span style="">Database Interview Question-16.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">If
+table is truncated, can it be roll backed?</span></p>
+<p><span style="">Answer: No</span></p>
+<p><span style="">Database Interview Question-17.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+is clustered index? How many Clustered indexes can you have on a table.
+</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: A clustered index physically sorts the records
+on the disk based on the index. Hence only one clustered index per table
+is feasible</span></p>
+<p><span style="">Database Interview Question-18.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+is “MINUS” used for?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer:  MINUS returns only those results from first
+result set which are not present in second result set</span></p>
+<p><span style="">Database Interview Question-19.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+a query to get all the employees who are managers</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: select distinct e.NAME as Employee, m.NAME as
+Manager from EMPLOYEE e inner join EMPLOYEE m on e.ID =
+m.MANAGER;</span></p>
+<p><span style="">Database Interview Question-20.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+a query to get all the employees who do not have managers</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Select ID, NAME from employee where MANAGER
+ is NULL;</span></p>
+<p><span style="">Database Interview Question-21.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span
+style=""> Suppose a table X has 3 duplicate rows and you want to delete
+2 redundant rows </span></p>
+<table class="MsoNormalTable" data-border="1" data-cellspacing="0"
+data-cellpadding="0" style="border-collapse:collapse;border:none">
+<tbody>
+<tr>
+<td width="196" data-valign="top"
+style="width: 117.45pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">ID</span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">Name </span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border: solid windowtext 1.0pt; border-left: none; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">Level</span></p></td>
+</tr>
+<tr>
+<td width="196" data-valign="top"
+style="width: 117.45pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">101</span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">Jack</span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">3</span></p></td>
+</tr>
+<tr>
+<td width="196" data-valign="top"
+style="width: 117.45pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">101</span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">Jack</span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">3</span></p></td>
+</tr>
+<tr>
+<td width="196" data-valign="top"
+style="width: 117.45pt; border: solid windowtext 1.0pt; border-top: none; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">101</span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">Jack</span></p></td>
+<td width="196" data-valign="top"
+style="width: 117.5pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt"><p><span
+style="">3</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span style=""> </span></p>
+<p><span style="">Answer: BEGIN; set rowcount 2; delete from X;
+END;</span></p>
+<p><span style="">Database Interview Question-22.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">There
+is a table “Employee” having two columns – Emp_Name and
+Office_Locations. Write a query that will display all office locations
+having more than 100 employees.</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: select Office_Locations from (select
+Office_Locations,  COUNT(Emp_name) as count1 from employee_table GROUP
+BY  Office_Locations) HAVING count1&gt;=100;</span></p>
+<p><span style="">Database Interview Question-23.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Can a
+table span multiple partitions?</span></p>
+<p><span style="">Answer: Yes</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Database Interview Question-24.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+is foreign key?</span></p>
+<p><span style="">Answer: Foreign key is a column or a combination of
+columns that is used to establish and enforce a link between two
+table</span></p>
+<p><span style="">Database Interview Question-25.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">How to
+remove duplicates from a table?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">SELECT DISTINCT * INTO NODUPLICATES FROM
+DUPLICATES;</span></p>
+<p><span style="">DROP TABLE DUPLICATES;</span></p>
+<p><span style="">RENAME TABLE NODUPLICATES TO DUPLICATES</span></p>
+<p><span style="">Database Interview Question-26.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">How do
+you measure performance of a stored proc?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: There are three ways to measure performance of
+stored procedure.</span></p>
+<p><span style="">First way:</span></p>
+<p><span style="">DECLARE @start datetime, @stop datetime</span></p>
+<p><span style=""> </span></p>
+<p><span style="">SET @start = GETDATE()</span></p>
+<p><span style=""> </span></p>
+<p><span style="">EXEC mystoredprocedure</span></p>
+<p><span style=""> </span></p>
+<p><span style="">SET @stop = GETDATE()</span></p>
+<p><span style="">Second way:</span></p>
+<p><span style="">SET STATISTICS TIME ON</span></p>
+<p><span style=""> </span></p>
+<p><span style="">EXEC mystoredprocedure</span></p>
+<p><span style="">Third way:</span></p>
+<p><span style="">SET STATISTICS IO ON</span></p>
+<p><span style=""> </span></p>
+<p><span style="">EXEC mystoredprocedure</span></p>
+<p><span style="">Database Interview Question-27.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">How do
+you define constraints?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: CREATE TABLE myTable</span></p>
+<p><span style="">(</span></p>
+<p><span style="">column_name1 data_type(size)
+constraint_name,</span></p>
+<p><span style="">column_name2 data_type(size)
+constraint_name,</span></p>
+<p><span style="">column_name3 data_type(size)
+constraint_name,</span></p>
+<p><span style="">....</span></p>
+<p><span style="">);</span></p>
+<p><span style="">As example, we have “NOT NULL” and “primary key”
+constraints in below table</span></p>
+<p><span style="">CREATE TABLE Persons</span></p>
+<p><span style="">(</span></p>
+<p><span style="">ID int NOT NULL,</span></p>
+<p><span style="">LastName varchar(255) NOT NULL,</span></p>
+<p><span style="">FirstName varchar(255),</span></p>
+<p><span style="">Address varchar(255),</span></p>
+<p><span style="">City varchar(255),</span></p>
+<p><span style="">CONSTRAINT pk_ID PRIMARY KEY (ID)</span></p>
+<p><span style="">)</span></p>
+<p><span style="">Database Interview Question-28.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+all constraints are supported by MYSQL?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: We have the following constraints:</span></p>
+<p><span style="">A.<span style="font:7.0pt &quot;&quot;">  
+</span></span><span style="">NOT NULL – The constraint ensures that a
+column cannot store NULL value</span></p>
+<p><span style="">B.<span style="font:7.0pt &quot;&quot;">  
+</span></span><span style="">UNIQUE - The constraint ensures that column
+cannot have duplicate value</span></p>
+<p><span style="">C.<span style="font:7.0pt &quot;&quot;">  
+</span></span><span style="">PRIMARY KEY – This constraint is
+combination of UNIQUE and NOT NULL</span></p>
+<p><span style="">D.<span style="font:7.0pt &quot;&quot;"> 
+</span></span><span style="">FOREIGN KEY – This constraint ensures that
+referential integrity among multiple table is maintained</span></p>
+<p><span style="">E.<span style="font:7.0pt &quot;&quot;">  
+</span></span><span style="">CHECK - This constraint ensures that the
+value in a column meets a specific condition</span></p>
+<p><span style="">F.<span style="font:7.0pt &quot;&quot;">  
+</span></span><span style="">DEFAULT - This constraint specifies a
+default value for a column</span></p>
+<p><span style="">Database Interview Question-29.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+are the differences between WHERE clause and HAVING clause? </span></p>
+<p><span style="">Answer: WHERE clause cannot be used with aggregates,
+but the HAVING clause can be used.</span></p>
+<p><span style="">WHERE is less expensive than that of HAVING</span></p>
+<p><span style="">Database Interview Question-30.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+a simple Stored Procedure. </span></p>
+<p><span style="">Answer: Here is a sample stored procedure</span></p>
+<p><span style="">CREATE PROCEDURE
+GetEmployeenameEmailInOutputVariable</span></p>
+<p><span style="">(</span></p>
+<p><span style=""> </span></p>
+<p><span style="">@ID INT,                   --Input parameter
+</span></p>
+<p><span style="">@NAME VARCHAR (200) OUT,    -- Output parameter to
+collect name</span></p>
+<p><span style="">@EMAIL VARCHAR (200)OUT     -- Output Parameter to
+collectemail</span></p>
+<p><span style="">)</span></p>
+<p><span style="">AS</span></p>
+<p><span style="">BEGIN</span></p>
+<p><span style="">SELECT @NAME= Firstname+' '+Lastname, </span></p>
+<p><span style="">    @EMAIL=EMAIL FROM EMPLOYEE WHERE ID=@ID</span></p>
+<p><span style="">END</span></p>
+<p><span style="">Database Interview Question-31.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">What
+are the disadvantages of normalization?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: More one normalizes database, more tables,
+more joins are required and takes lot of time to retrieve required
+records</span></p>
+<p><span style="">Database Interview Question-32.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+SQL query to fetch all bank account details whose name starts with
+“Shyam”</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Select * from account where name LIKE
+‘%Shyam%’;</span></p>
+<p><span style="">Database Interview Question-33.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+SQL query to fetch top 3 accounts having highest balance</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: SYBASE: select top 3 * from account order by
+balance desc; </span></p>
+<p><span style="">MYSQL: select * from employee order by salary desc
+limit 1,3</span></p>
+<p><span style="">Oracle: select * from employee order by salary where
+rownum &lt; 3</span></p>
+<p><span style="">Database Interview Question-34.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+SQL query to fetch bottom 3 accounts having  lowest balance </span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer:  SYBASE: select top 3 * from account order by
+balance asc; </span></p>
+<p><span style="">MYSQL: select * from employee order by salary asc
+limit 1,3</span></p>
+<p><span style="">Oracle: select * from account order by balance asc
+where rownum&lt;3; </span></p>
+<p><span style="">Database Interview Question-35.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+SQL query to update balance of all account with 6% interest </span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: UPDATE account SET BALANCE = BALANCE *
+1.06;</span></p>
+<p><span style="">Database Interview Question-36.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+SQL query to find out total balances maintained in whole bank</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: SELECT SUM(balance) AS total FROM
+account;</span></p>
+<p><span style="">Database Interview Question-37.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+SQL query to find out number of customers having balance
+100000.</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: SELECT COUNT(balance) AS "Number of customers"
+FROM account WHERE balance = 100000;</span></p>
+<p><span style="">Database Interview Question-38.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+a SQL query to return first 100 account records.</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: select top 100 * from account;</span></p>
+<p><span style="">Database Interview Question-39.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Write
+SQL query to return count of customers having  balance between 100000 to
+200000 group by balance </span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: select balance, COUNT(*) from account where
+balance &gt; 100000 AND balance &lt; 200000  GROUP BY balance
+</span></p>
+<p><span style="">Database Interview Question-40.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">In SQL
+which runs faster “sub queries” or join?</span></p>
+<p><span style=""> </span></p>
+<p><span style="">Answer: Join</span></p>
+<p><span style="">Database Interview Question-41.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span style="">Which
+of the following SQL clauses is used to sort a result set?</span></p>
+<p><span style=""> </span></p>
+<ol type="A">
+<li><span style="">SORT</span></li>
+</ol>
+<p><span style=""> </span></p>
+<ol start="2" type="A">
+<li><span style="">ORDER BY</span></li>
+</ol>
+<p><span style=""> </span></p>
+<ol start="3" type="A">
+<li><span style="">ARRANGE</span></li>
+</ol>
+<p><span style=""> </span></p>
+<ol start="4" type="A">
+<li><span style="">SORTED BY</span></li>
+</ol>
+<p><span style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: B</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-42.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">The FROM SQL keyword is used to</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">A.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> Specify the table we are modifying.</span></p>
+<p><span lang="EN-IN" style="">B.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> Specify the table we are inserting data in.</span></p>
+<p><span lang="EN-IN" style="">C.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> Specify the table we are selecting or deleting
+from.</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: C</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-43.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">What does ACID stand for?</span></p>
+<p><span lang="EN-IN" style="">A.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> Access. Constraint. Index. Data.</span></p>
+<p><span lang="EN-IN" style="">B.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> Atomicity. Consistency. Isolation. Durability.</span></p>
+<p><span lang="EN-IN" style="">C.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style="">Access. Consistency. Isolation. Data.</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: B</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-44.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Which of the following SQL statements deletes all rows in table
+called SalesData?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">A.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> DELETE * FROM SalesData</span></p>
+<p><span lang="EN-IN" style="">B.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> DELETE FROM SalesData</span></p>
+<p><span lang="EN-IN" style="">C.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style="">DELETE SalesData</span></p>
+<p><span lang="EN-IN" style="">D.<span style="font:7.0pt &quot;&quot;"> 
+</span></span><span lang="EN-IN" style=""> DELETE ALL SalesData  
+</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: B</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-45.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Which of the following SQL clauses is used to select data from
+2 or more tables?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">A.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> HAVING</span></p>
+<p><span lang="EN-IN" style="">B.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> WHERE</span></p>
+<p><span lang="EN-IN" style="">C.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> JOIN    </span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: JOIN</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-46.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">The INNER JOIN clause…</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">A.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> returns all rows that have matching value in the field on
+which the 2 tables are joined.</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">B.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> returns all rows from 2 tables.</span></p>
+<p><span lang="EN-IN" style="">C.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> returns only the rows from the first table, which have
+non-matching values with the second table in the field on which the 2
+tables are joined.</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: A</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-47.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">The TRUNCATE TABLE…</span></p>
+<p><span lang="EN-IN" style="">A.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> checks if the table has primary key specified</span></p>
+<p><span lang="EN-IN" style="">B.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> deletes all rows from a table</span></p>
+<p><span lang="EN-IN" style="">C.<span
+style="font:7.0pt &quot;&quot;">   </span></span><span lang="EN-IN"
+style=""> deletes the table</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: B</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-48.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">The table columns are also known as</span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">Attributes</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">Fields</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">Records</span></li>
+</ol>
+<p><span style=""> </span></p>
+<p><span style="">Answer: B </span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-49.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">The UNION SQL clause can be used with…</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">the SELECT clause only</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">the UPDATE clause only</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">the DELETE and UPDATE
+clauses</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="4" type="A">
+<li><span lang="EN-IN" style="">none of the other three</span></li>
+</ol>
+<p><span style=""> </span></p>
+<p><span style="">Answer: A</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-50.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">The HAVING clause can be used only with </span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">JOIN clause.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">INSERT clause</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">SELECT clause</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="4" type="A">
+<li><span lang="EN-IN" style="">DELETE clause.</span></li>
+</ol>
+<p><span style=""> </span></p>
+<p><span style="">Answer: C</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-51.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Which SQL keyword is used to retrieve only unique
+values?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">DISTINCT</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">DISTINCTIVE</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">DIFFERENT</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="4" type="A">
+<li><span lang="EN-IN" style="">UNIQUE</span></li>
+</ol>
+<p><span style=""> </span></p>
+<p><span style="">Answer: A</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-52.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Which of the following is true?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">TRUNCATE TABLE has to be used along with
+a WHERE clause</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">TRUNCATE TABLE deletes table from a
+database</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">TRUNCATE TABLE is identical to DELETE
+statement without WHERE clause and both remove all rows in a table.
+</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: C</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-53.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">What does the FROM SQL keyword specify?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">The FROM SQL keyword specifies the
+tables, views, and joined tables used in SELECT, UPDATE and DELETE SQL
+statements.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">The FROM SQL keyword specifies a search
+condition.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">The FROM SQL keyword specifies a column
+list.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: A</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-54.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">What is the purpose of the SQL AS clause?</span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">The AS SQL clause is used change the
+name of a column in the result set or to assign a name to a derived
+column.</span></li>
+<li><span lang="EN-IN" style="">The AS clause defines a search
+condition.</span></li>
+<li><span lang="EN-IN" style="">The AS clause is used with the JOIN
+clause only.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: A</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-55.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">What does the UNION operator do?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">The UNION operator sorts the selected
+result set.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">The UNION operator combines the results
+of two or more queries into a one result that includes all the rows from
+the queries in the union.</span></li>
+</ol>
+<p><span style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">The UNION operator behaves the same as
+the JOIN SQL clause.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: B</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-56.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">The UPDATE SQL clause can…</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">update only one row at a
+time.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">update more than one row at a
+time.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="3" type="A">
+<li><span lang="EN-IN" style="">delete only one row at a
+time.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="4" type="A">
+<li><span lang="EN-IN" style="">delete more than one row at a
+time.</span></li>
+</ol>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: B</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-57.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">What all can be optimized in Database</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: Following parameters can be
+optimized</span></p>
+<ol type="A">
+<li><span lang="EN-IN" style="">Memory</span></li>
+</ol>
+<p><span lang="EN-IN" style="font-family:Symbol">·<span
+style="font:7.0pt &quot;&quot;">       </span></span><span lang="EN-IN"
+style="">Database buffer cache </span></p>
+<p><span lang="EN-IN" style="font-family:Symbol">·<span
+style="font:7.0pt &quot;&quot;">       </span></span><span lang="EN-IN"
+style="">Redo log buffer </span></p>
+<p><span lang="EN-IN" style="font-family:Symbol">·<span
+style="font:7.0pt &quot;&quot;">       </span></span><span lang="EN-IN"
+style="">Shared pool </span></p>
+<p><span lang="EN-IN" style="font-family:Symbol">·<span
+style="font:7.0pt &quot;&quot;">       </span></span><span lang="EN-IN"
+style="">Large pool</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<ol start="2" type="A">
+<li><span lang="EN-IN" style="">Disk I/O: Database files needs to be
+properly sized and placed to provide maximum disk subsystem
+throughput</span></li>
+<li><span lang="EN-IN" style="">Database Contention: Check whether
+database locks, latches and wait events can be removed/moved</span></li>
+<li><span lang="EN-IN" style="">Operating System: Monitor and tune
+operating system CPU, I/O and memory utilization</span></li>
+</ol>
+<p><span lang="EN-IN" style="">Database Interview Question-58.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">What is the command to check database statistics?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: SHOW STATISTICS</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-59.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">How to set storage engine for a table</span></p>
+<p><span lang="EN-IN" style="">Answer: SET storage_engine=MYISAM;
+or</span></p>
+<p><span lang="EN-IN" style="">CREATE TABLE test (id INTEGER) ENGINE =
+MYISAM;  </span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-60.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Did you perform any database optimization tasks?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: Yes, please explain with example,
+like you created a new index or added index in an existing query to
+reduce “query execution” time, if you are working in database, you must
+be able to come up with a real life example from your database
+project</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-61.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">How to find out server name</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: select @@servername</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-62.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Can primary key be null?</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: No</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-63.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Create an employee table with ID, Name  and Salary, insert 10
+records into the employee table</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: create table TEST(employeeid
+INTEGER, employeename VARCHAR(20), employeesalary INTEGER);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST
+values(1,'A',1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(2,'B',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(3,'C',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(4,'D',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(5,'E',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(6,'F',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(7,'G',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(8,'H',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST values(9,'I',
+1000);</span></p>
+<p><span lang="EN-IN" style="">insert into TEST
+values(10,'J',4);</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-64.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Explain constraint with example</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Answer: Create table EMPLOYEE(</span></p>
+<p><span lang="EN-IN" style="">ID INTEGER,</span></p>
+<p><span lang="EN-IN" style="">NAME STRING,</span></p>
+<p><span lang="EN-IN" style="">SALARY INTEGER        not null  
+constraint check_salary  SALARY ( &gt; 0) and (SALARY &lt;
+1000))</span></p>
+<p><span style="">Answer: Query plan is collection of steps required to
+fetch records corresponding to the query</span></p>
+<p><span style="">Below set of questions are left as an exercise for the
+reader.</span></p>
+<p><span style="">Write SQL query to create following tables</span></p>
+<p><span lang="EN-IN" style="">Employee (ID, NAME, LOCATION, DEPARTMENT,
+BANKACCOUNTID, SEX) </span></p>
+<p><span lang="EN-IN" style="">Bank Account (BANKACCOUNTID, OPENINGDATE,
+BALANCE)</span></p>
+<p><span lang="EN-IN" style="">Insert 5 employee (male and female)
+details for each of 5 departments (e.g. Finance, IT, Admin, Facility,
+Legal) and corresponding bank account details.</span></p>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-65.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Write SQL query to retrieve all employees having bank balance
+more than 10000.</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-66.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Write SQL query to increase balance of all female employees by
+5000.</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-67.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Write SQL query to find out count of all male employees having
+balance between 5000 to 1000</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-68.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Increase balance of each of the above employees by
+1000</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-69.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Write SQL query to find the total balance of all employees
+working in finance department</span></p>
+<p><span lang="EN-IN" style="">Database Interview Question-70.<span
+style="font:7.0pt &quot;&quot;">     </span></span><span lang="EN-IN"
+style="">Write SQL query to find department wise average balance for
+employee.</span></p>
+<h1><span id="part0000.xhtml__Toc430033527"><span lang="EN-IN"
+style="">Conclusion</span></span></h1>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Hope this database interview questions
+and answers book makes you better prepared for next interview. Please
+devote some time to write new database queries/stored procedures on a
+daily basis. This will help you to keep up to date with latest database
+technology developments.</span></p>
+<h1><span id="part0000.xhtml__Toc430033528"></span><span
+id="part0000.xhtml__Toc385835503"></span><span
+id="part0000.xhtml__Toc384628702"></span><span lang="EN-IN"
+style="">About Author</span></h1>
+<p><span lang="EN-IN" style=""> </span></p>
+<p><span lang="EN-IN" style="">Chinmoy is an author, innovator,
+entrepreneur and solution architect. He has written dozen books on
+"software technology", "social science" and "adult coloring". He loves
+mentoring people. Please feel free to contact him at <a
+href="http://www.linkedin.com/in/chinmoym">http://www.linkedin.com/in/chinmoym</a>
+</span></p>
+</div>

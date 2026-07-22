@@ -1,0 +1,208 @@
+name: Docker for Java Developers
+name_cn: Java 开发者的 Docker 指南
+slug: docker-for-java-developers
+toc:
+- - '#'
+  - Java 开发者的 Docker 指南
+- - '#'
+  - 面向 Java 开发者的 Docker
+- - '##'
+  - 1. 介绍
+- - '##'
+  - Docker：面向大众的容器
+- - '###'
+  - 架构
+- - '###'
+  - 镜像
+- - '###'
+  - 3.3. 容器
+- - '###'
+  - 3.4. 注册表
+- - '###'
+  - 3.5. 镜像仓库
+- - '##'
+  - '4. Moby: Docker 的未来'
+- - '##'
+  - 5. 迈向互操作性
+- - '##'
+  - 6. Docker 和 Java
+- - '##'
+  - 8. 下一步计划
+- - '###'
+  - 针对 Java 开发者的 Docker
+- - '#'
+  - 命令行上的 Docker
+- - '##'
+  - 1. 介绍
+- - '##'
+  - 2. 镜像
+- - '##'
+  - 3. 容器 (Containers)
+- - '##'
+  - 4. 端口 (Ports)
+- - '##'
+  - 5. 数据卷 (Volumes)
+- - '##'
+  - 6. 网络 (Networks)
+- - '##'
+  - 7. 链接 (Linking)
+- - '##'
+  - 8. 健康检查 (Health Checks)
+- - '##'
+  - 9. 资源限制 (Resource Limits)
+- - '##'
+  - 10. 清理 (Clean up)
+- - '##'
+  - 11. 一体化：部署栈 (The Deployment Stack)
+- - '##'
+  - 12. 结论
+- - '##'
+  - 12. 接下来是什么
+- - '#'
+  - 基于 HTTP/REST 的 Docker
+- - '##'
+  - 1. 引言
+- - '##'
+  - 2. 版本控制
+- - '##'
+  - 3. 开始
+- - '##'
+  - 4. 镜像
+- - '##'
+  - 5. 容器
+- - '##'
+  - 6. 端口
+- - '##'
+  - 7. 卷
+- - '##'
+  - 9. 资源限制
+- - '##'
+  - 10. 入门指南
+- - '##'
+  - 11. 结论
+- - '##'
+  - 12. 下一步计划
+- - '#'
+  - 在 Docker 上构建
+- - '##'
+  - 1. 引言
+- - '##'
+  - 2. 镜像
+- - '##'
+  - 3. Gradle 与 Docker
+- - '##'
+  - 4. Docker 中的 Gradle
+- - '##'
+  - 5. Maven 和 Docker
+- - '##'
+  - 6. Docker 上的 Maven
+- - '##'
+  - 7. 结论
+- - '##'
+  - 8. 下一步计划
+- - '#'
+  - 在 Docker 上开发
+- - '##'
+  - 1. 引言
+- - '##'
+  - 2. 从 IDE 使用 Docker
+- - '###'
+  - 2.1. Eclipse
+- - '###'
+  - Docker 容器视图
+- - '###'
+  - 2.2. IntelliJ IDEA
+- - '###'
+  - Docker 镜像视图
+- - '###'
+  - IntelliJ Idea 中的 Docker
+- - '###'
+  - Docker 镜像层级
+- - '###'
+  - 2.3. Oracle NetBeans
+- - '###'
+  - Netbeans 中的 Docker
+- - '##'
+  - 3. 运行：Docker 中的你的 IDE
+- - '#'
+  - Eclipse Che
+- - '##'
+  - 4. 那么调试如何？
+- - '##'
+  - 5. 管理与监控
+- - '###'
+  - 5.1. Portainer
+- - '###'
+  - Portainer Dashboard 板
+- - '###'
+  - 5.2. cAdvisor
+- - '###'
+  - 5.3. ctop
+- - '###'
+  - 5.4. 以及更多……
+- - '##'
+  - 6. Docker Engine Metrics
+- - '#'
+  - 单元
+- - '##'
+  - 2. 在开始之前
+- - '##'
+  - 3. 在内存中存储数据
+- - '##'
+  - 4. 场景
+- - '##'
+  - 5. Testcontainers
+- - '##'
+  - 6. Arquillian
+- - '##'
+  - 7. Overcast
+- - '##'
+  - 8. Docker Compose Rule
+- - '##'
+  - 9. 结论
+- - '##'
+  - 10. 下一步计划
+- - '#'
+  - 在 Docker 上部署
+- - '##'
+  - 1. 引言
+- - '##'
+  - 2. 容器作为部署单元
+- - '##'
+  - 3. 使用 Kubernetes 进行编排
+- - '#'
+  - 4. 使用 Apache Mesos 进行编排
+- - '##'
+  - Marathon 应用
+- - '##'
+  - 5. 使用 Docker Swarm 进行编排
+- - '##'
+  - 6. 云端容器
+- - '###'
+  - 6.1. Amazon Elastic Container Service
+- - '###'
+  - 6.2. Google Kubernetes Engine
+- - '###'
+  - 6.3. Azure Container Service
+- - '##'
+  - 7. 结论
+- - '##'
+  - 8. 下一步计划
+- - '#'
+  - Docker 上的持续集成
+- - '##'
+  - 1. 引言
+- - '##'
+  - 3. 流水线即代码
+- - '#'
+  - Git 分支源
+- - '#'
+  - 构建阶段
+- - '#'
+  - Blue Ocean
+- - '##'
+  - 5. Jenkins 中的 Docker
+- - '#'
+  - 使用 Docker 的构建阶段
+- - '##'
+  - 6. 结论
