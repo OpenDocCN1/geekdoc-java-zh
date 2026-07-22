@@ -1,0 +1,42 @@
+name: Exceptions in Java： Basics, advanced concepts, and real API examples
+name_cn: Java 异常：基础、高级概念与真实 API 示例
+slug: exceptions-in-java-basics-advanced-concepts-and-real-api-exa
+toc:
+- - '##'
+  - Raising an Exception
+- - '###'
+  - Creating
+- - '###'
+  - Throwing
+- - '###'
+  - Detection by the JVM
+- - '###'
+  - catch
+- - '###'
+  - finally
+- - '###'
+  - try-catch-finally
+- - '###'
+  - Resource Specification
+- - '####'
+  - AutoCloseable close()
+- - '####'
+  - 第一种情况：资源规范抛出了异常。
+- - '####'
+  - 第二种情况：从 `try` 块抛出了异常。
+- - '####'
+  - 第三种情况：`try` 块成功完成。
+- - '####'
+  - 第四种情况：`try` 块尝试将控制权转移到自身之外。
+- - '####'
+  - 第一种子情况
+- - '####'
+  - 第二种子情况
+- - '####'
+  - catch
+- - '####'
+  - finally
+- - '####'
+  - 特殊情况
+- - '####'
+  - 总结

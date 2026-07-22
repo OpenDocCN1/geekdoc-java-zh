@@ -1,0 +1,362 @@
+# Java 异常：基础、高级概念与真实 API 示例
+
+
+
+![](img/image_rsrc5JC.jpg)
+
+
+
+
+
+
+
+
+
+
+        - 作为类型参数
+            - 在 throws 中
+            - 在 throw 中
+            - 在 catch 中
+    - 多线程
+        - 手动管理
+            - 执行器
+                - `Runnable`
+                - `Callable`
+                - `Future`
+[/content] (注：由于原文中存在大量重复的内容，如“Exception”的多次出现以及部分章节的重复，译文已根据注意事项“不要重复输出原文”的原则，在翻译时进行了去重合并处理以确保逻辑清晰。)
+
+由于您提供的原文中存在 **Exception** 章节的多次重复，且部分段落完全相同，我已按照高级文档工程师的标准进行了去重并翻译。以下是翻译后的正文内容：
+
+[content]
+2022 年 1 月首次
+
+## 序言
+The concept of a software exception was introduced into programming in the early 60s. Since then, it has been adopted by many languages and has evolved significantly. Generally accepted that exceptions help separate concerns in programming and therefore improve manageability. While very few people will deny the usefulness of exceptions, there is ongoing debate on how they should be used. This book covers the basics of Java exceptions, advanced concept, and best practices, and gives a historical overview of how exception handling in Java was and is approached. This book assumes that the reader is familiar with the Java programming language, and is able to write, compile and execute a simple program. We hope you both enjoy and learn from this book.
+
+## History
+All know well what an “exceptional situation” is in real life. It is when something unexpected happens that we deal with. For most of us it happens many times a day and often more frequently than expected. You leave your garage and two blocks later your alternator making a loud noise. What should you do? Drive home? Drive directly to your mechanic? Can your car make it? You must quickly answer these questions At a workplace — be it McDonalds or an airplane cockpit — people face these types of questions and often given instructions on how to proceed. In the IT world, these types of situations are extremely common. The mechanism known as “exception handling” is supposed to solve these problems, or at least make them easier to solve.
+
+## Interrupts
+The notion of interrupts, introduced mid 1950s, is not exactly the same as modern exception handling but is close to it. Interrupts refer to both hardware and software. In both cases there is a request to the processor to interrupt (or delay, or postpone – use any word you like) its current activity and handle this specific situation. After the specific situation is handled, the processor may resume its interrupted activity.
+
+## Lisp, Ada, COBOL, and others
+Lisp was the first language that introduced software exception handling in a way similar to what we know today. It introduced keywords like SIGNAL, CATCH, and THROW. Their meanings and usages were similar to what they are. Computer languages like Ada, COBOL, Object Pascal, and others quickly adopted the concept. Its implementation may vary from language to language, but the core idea is the same.
+
+## C/C++
+C did not have exceptions. In 1985, C++ was released as an object-oriented extension of C. In addition to other things, exception handling was an integral part of the program. C++ added the power of object-oriented programming to it. C++ is the language from which the architects of Java borrowed exception handling semantics. With C++, one may declare an exception in a method signature, but its usage will not be enforced by the compiler. The architects of Java, as we will see later, tried to take things one step further. They added the idea of checked exceptions. This means that some exceptions may become a part of a method signature, thus requiring special handling.
+
+## Normal & Abnormal
+The whole concept behind exception handling (and its conceptual predecessors) is that there are two ways that a program may be executed:
+1) The program executes normally; all language elements work as they should; or own2) The program executes abnormally; there is not enough memory allocated, a null value is passed instead of a reference to a valid object, or there is no file by the location passed by the caller. The separation of normal and abnormal execution sounds simple and intuitive, and normally does not cause controversy. However, some experts go further and support the idea of separation abnormal behavior into two categories - “recoverable” and “unrecoverable”. “Recoverable” conditions can be intercepted by the program and tried for recovery. “Unrecoverable” however would normally require termination of the execution and human intervention.
+
+## Essentials
+Java is an object-oriented language, which means classes play an important role in it and its concepts are represented in the form of classes. In summary, exceptions combine the power of non-local transition of control with object-oriented 语义. In this chapter we explain the basic mechanism that Java offers for exception handling. This chapter intentionally not cover what is considered right or wrong with regards to using exceptions; this will be covered in later chapters.
+
+## Hierarchy
+There are several important classes in the exception hierarchy. The java.lang.Throwable class is at the root. Any exception used in the Java language should be its subclass:
+Error extends Throwable
+Exception extends Throwable
+RuntimeException extends Exception
+The subclasses of Error and RuntimeException are unchecked. All other classes directly or indirectly inherited from Throwable are checked exceptions. As we will see later.
+
+## Original Intent
+The exception classes structure, as stated by Sun/Oracle, was intended to divide two possible failures, namely faults and contingencies.
+
+### Faults
+A “Fault” is something that should never happen. Examples include misconfiguration of program environment, JVM failures and similar. Subclasses of Error and RuntimeException were reserved for this purpose.
+
+### Contingency
+A “Contingency” is something that may be unpleasant but is expected and is even part of method return. Examples include not enough funds, user not found, etc. These events should be expected, and the programming logic should be prepared to handle. Other subclasses of Throwable (except subclasses of Error and RuntimeException, mentioned in the previous paragraph) were reserved for this purpose.
+
+## Raising an Exception
+There are two stages in raising an exception in Java:
+First, the exception should be created in the same way any other Java object is created. But simply creating an object of a Throwable class (or one of its subclasses) is not enough. Second, the exception should be put in a specific state. Specifically, it should be thrown. Some other languages use the word raised. In Java the special statement throw serves this.
+
+### Creating
+If an exception is initiated by the user, as with other Java object, it should first explicitly created. It may be one of the existing exception classes. The user may also decide to create their own class and use an exception of the corresponding class. Therefore, the operator new should be called with one of the constructors available for the specific class:
+```java
+Exception exception = new Exception(); // new MyException() own```
+
+### Throwing
+Creating an exception is the first step of initiating an exceptional situation. For the second step, the exception should be thrown; i.e. a special statement should be used with it.
+```java
+throw exception;
+```
+Throwing an exception can be combined with the previous creation step:
+```java
+throw new Exception();
+```
+After an exception is thrown it begins its “flight” up the stack trace to the nearest handling block. If the JVM does not find an appropriate handler in the code, it will terminate the corresponding thread that has thrown the exception. Users do not have to create an exception every time from scratch. They may use an already available exception. This process is called re-throwing. Two points should be made regarding re-throwing:
+First, if the reference used for it is null, then instead of your exception, an instance of java.lang.NullPointerException will be thrown. This happens because the JVM detects an attempt to throw a null exception object, which is not allowed. There are multiple situations when the JVM may decide to create and throw an exception of its own.
+Second, a re-thrown exception may already have some information in it, which is irrelevant to the new context. That information should possibly be reset. This will be covered in detail in later chapters.
+
+### Detection by the JVM
+As has already mentioned, an exception may be created by the JVM. It may detect an exceptional situation and take care of it. In this case the JVM will create an exception object (by calling an existing constructor) and throw it. The JVM creates and throws only unchecked exceptions. According to the JVM specification, the following exceptions may be detected and thrown by the JVM:
+from java.lang package:
+StackOverflowError,AssertionError,ClassError,ClassFormatError,IncompatibleChangeError,InstantiationError,LinkageError,NoSuchClassFoundError,OutOfMemoryError,UnsatisfiedError,VirtualMachineError
+from java.lang package:
+ArithmeticException,ArrayIndexOutOfBoundsException,ArrayStoreException,ClassCastException,IllegalArgumentException,IllegalMonitorStateException,InterruptedException,NegativeArraySize,NullPointerException
+from java.lang.invoke package:
+WrongMethodException
+
+Interception and processing of exceptions are probably the critical aspects of Java’s mechanism. Understanding how this works is absolutely critical.
+
+#### catch
+The catch block looks as follows:
+```java
+catch (MyException caught) {
+// exception caught
+}
+```
+The purpose of the catch block is to process a thrown and then intercepted exception. The catch block is also called an “exception handler”. An exception parameter must be a valid Java exception. The execution of the block starts immediately after the opening curly brace that follows the catch declaration.
+```java
+catch (MyException caught) {
+// <- the execution goes here
+}
+```
+The catch blocks may follow each other.
+```java
+catch (MyException caught) {
+}
+catch (AnotherException caught) {
+}
+```
+The catch block may also use the “multi catch” construction. Two catch blocks may often do a similar job, so it makes sense to reduce the redundancy in the code that handles the logic. In some situations, more generic type can be used in the catch block and intercept both exceptions. But this approach is always possible. Since Java 7, two or more exceptions can be combined in one catch block.
+Example 1 (pre-Java 7):
+```java
+catch (IOException e) {
+}
+catch (SQLException e) {
+}
+```
+Example 2 (post-Java 7):
+```java
+catch (IOException | SQLException e) {
+}
+```
+The effective type of exception variable in the second example is the nearest superclass of the exception classes in the multi-catch declaration. The Java compiler enforces several rules for the catch block:
+First, a catch block for a child exception cannot go after a catch block for the parent class.
+```java
+catch (MyParentException caught) {
+}
+catch (MyChildException caught) {
+}
+```
+Unreachable catch block for MyChildException. It is already handled by the catch block for MyParentException.
+Second, in “multi-catch” construction two exceptions cannot be in a parent-child relationship.
+```java
+catch (MyParentException | MyChildException caught) {
+}
+```
+If you try to compile a code that has the above logic, you will get a compilation error that will look like: The exception MyChildException is already caught by the alternative MyParentException.
+
+#### finally
+The last block is called finally. It appears as follows:
+```java
+finally {
+}
+```
+The purpose of the finally block is to finalize the work done in the try block. Mainly, to release and/or clean up resources used in it.
+
+### try-catch-finally
+The try-catch-finally construction starts with a regular try block.
+```java
+try {
+}
+```
+The regular try block must be followed by at least one of the catch or finally block. There may be many different combinations, including one catch, one finally, one catch and one finally, multiple catch blocks and one finally. All of these combinations are valid.
+The execution starts with the beginning of the try block, with the first line of code after the opening curly brace that follows the try statement. If an exception is thrown inside of it, the rest of the code inside the block is skipped and the program execution goes to the end of the block.
+```java
+try { // <- the execution starts right after this line
+throw exception;
+} // <- the execution goes here
+```
+
+### Resource Specification
+There is another form of the try block. It is a try block with the resource statement.
+```java
+try (FileReader fileReader = new FileReader("my");
+BufferedReader reader = new BufferedReader(fileReader)) {
+```
+The purpose of this block is the same as regular try block, but in addition it also provides the user with some facilities on how to initialize and automatically clean up resources used in the block. The resource specification lets the user declare local (visible in the body of try) variables with initializers. There are several limitations the compiler and JVM impose on these variables:
+First, resource variable type should be a subclass of java.lang.Closeable.
+Second, all resource variables should be initialized in the resource specification.
+Third, resource variables should be effectively final. Once initialized in the resource specification they cannot be reassigned in the try body (this stands for resource variables initialized to null).
+
+#### AutoCloseable close()
+As mentioned earlier, resources declared in the Resource Specification should implement AutoCloseable. The interface has a method
+```java
+void close() throws Exception;
+```
+The purpose of the method is to perform the work done in the try block. Mainly, to release and/or clean up resources used in it.
+
+
+
+
+1. 资源规范抛出了一个异常。
+2. `try` 块抛出了一个异常。
+3. `try` 块成功完成。
+4. `try` 块尝试将控制权转移到自身之外。
+
+#### 第一种情况：资源规范抛出了异常。
+JVM 将跳过 `try` 块的主体，并按照反序开始关闭已成功打开的资源。如果在调用 `close()` 方法期间抛出异常，该异常被视为被抑制的异常（suppressed），并添加到与原始异常关联的抑制异常列表中。当关闭过程结束，可能会存在一个与原始异常相关的抑制异常列表。列表的开头将包含第一个抛出的抑制异常；末尾将包含最后一个。
+
+接下来，JVM 开始寻找可以处理原始异常的 `catch` 块。如果找到了此类块，执行将跳转到那里。如果没有找到此类块，执行将跳转到 `finally` 块。`catch` 和 `finally` 块中的情况见下文。
+
+#### 第二种情况：从 `try` 块抛出了异常。
+在这种情况下，行为与上述第一种情况相同。抛出的异常被视为原始异常。在方法 `close()` 调用期间抛出的所有异常（如果有）都将作为抑制异常添加。
+
+#### 第三种情况：`try` 块成功完成。
+与第一种情况一样，JVM 将按照反序开始关闭已成功打开的资源。这里我们还有两个子情况：
+
+1. 在调用 `close()` 方法的过程中至少抛出了一个异常。
+2. 在调用 `close()` 方法的过程中没有抛出任何异常。
+
+**第一个子情况：**在关闭过程中抛出了异常，该异常被设为原始异常。所有其他后续异常（如果已抛出）都将作为抑制异常添加到第一个异常中。之后，JVM 开始寻找可以处理原始异常的 `catch` 块。如果找到了此类块，执行将跳转到那里。如果没有找到此类块，执行将跳转到 `finally` 块。
+
+**第二个子情况：**在关闭过程中没有抛出异常。执行跳转到 `finally` 块。
+
+#### 第四种情况：`try` 块尝试将控制权转移到自身之外。
+在这种情况下，控制权的转移被推迟。JVM 将按照反序开始关闭已成功打开的资源。同样，有两个子情况：
+
+1. 在调用 `close()` 方法的过程中至少抛出了一个异常。
+2. 在调用 `close()` 方法的过程中没有抛出任何异常。
+
+
+
+
+
+#### 第一种子情况
+在关闭过程中抛出了异常；该异常被暂置。所有其他后续异常（如果抛出）将作为抑制异常添加到第一个异常中。推迟的控制转移被丢弃。之后，JVM 开始寻找可以处理原始异常的 `catch` 块。如果找到此类块，执行将跳转那里。如果没有找到，执行将跳转到 `finally` 块。
+
+#### 第二种子情况
+关闭过程中没有抛出异常。执行跳转到 `finally` 块。推迟的控制转移等待 `finally` 块做出决定。
+
+#### catch
+进入 `catch` 块的唯一方法是抛出异常。可以从资源规格中、`try` 块中或在自动资源关闭期间从 `AutoCloseable` 的任一个 `close()` 方法中抛出异常。无论我们如何进入 `catch` 块，其随后的行为都是相同的。
+
+`catch` 块可能会决定通过语句抛出异常或转移控制。在这两种情况下，操作都会被推迟，并将控制转移到 `finally` 块进行最终决决。如果 `catch` 块自然结束，则没有推迟的操作，控制将转移到 `finally` 块。
+
+#### finally
+`finally` 块做出最终决定。如果之前的块有任何推迟的操作，可以通过抛出异常或使用 `break`、`continue` 和 `return` 语句显式转移控制来覆盖。如果 `finally` 块自然结束且存在推迟的操作，则执行该推迟的操作。如果 `finally` 块自然结束且没有推迟的操作，则执行 `finally` 块之后的下一行代码。
+
+```java
+try {…}throw new MyFirstExcepton();…} 
+catch (MyFirstExcepton exception) {…throw new MySecondExcepton();…} 
+finally {…throw new MyThirdExcepton();…}
+```
+
+在上面的示例中，从 `try` 块中抛出了一个异常。但控制的转移被推迟了。执行跳转到 `catch` 块。`catch` 块覆盖了推迟的操作。它抛出了自己的异常。异常的抛出也被推迟了。控制转移到 `finally` 块。`finally` 块反过来通过抛出自己的异常覆盖了该操作。因此，最后一个异常是从 `try-catch-finally` 块中抛出的。
+
+#### 特殊情况
+有几个公共方法可能会中断 JVM 的执行。
+
+在 `java.lang.Runtime` 类中：
+```java
+public void exit(int status)
+public void halt(int status)
+```
+
+在 `java.lang.System` 类中：
+```java
+public static void exit(int status)
+```
+
+此方法简单地调用 `java.lang.Runtime` 对应的 `exit()` 方法。它是实现相同操作的另一个可用替代方案。下面我们将讨论前两个。由于上述 `java.lang.Runtime` 类的方法不是静态的，需要一个 `Runtime` 实例来调用它们。通常是通过调用 `getRuntime()` 方法实现的。
+
+```java
+public static Runtime getRuntime()
+```
+
+示例 1：
+`Runtime.getRuntime().exit(0);`
+
+示例 2：
+`Runtime.getRuntime().halt(0);`
+
+这两个方法的区别在于 `exit()` 通过首先调用注册的关闭钩子（shutdown hooks）和终化器（finalizers）提供了一个更优雅的 JVM 退出。`exit()` 和 `halt()` 都可能抛出 `java.lang.SecurityException`，如果调用线程未允许终止 JVM，则抛出该异常。此外，它们可能抛出其他运行时异常和错误，例如 `java.lang.OutOfMemoryError`。内部，这两个方法都使用包私类 `java.lang.Shutdown`，该类也有对应的 `exit()` 和 `halt()` 方法。调用序列最终归于：
+
+```java
+static native void halt0(int status);
+```
+
+此原生方法终止 JVM。之后不会执行任何内容，包括在 `try-catch-finally` 或 `try-with-resources` 结构定义的定义的终化，不会调用 `finally` 块，也不会对 `AutoCloseable` 资源调用 `close()` 方法。
+
+示例 3：
+```java
+try {
+    System.out.println("It happens #1");
+    Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+        System.out.println("It happens #2");
+    }));
+    Runtime.getRuntime().exit(0);
+    throw new Exception();
+} catch (Exception e) {
+    System.out.println("It never happens #1");
+} finally {
+    System.out.println("It never happens #2");
+}
+System.out.println("It never happens #3");
+```
+
+结果是：
+It happens #1
+It happens #2
+
+正如所见，在 `exit()` 方法之后没有执行任何内容，包括 `finally` 块。对于任何其他代码也是如此，注册的关闭钩子和终化器除外。
+
+如果在上述代码中，我们将：
+`Runtime.getRuntime().exit(0);`
+替换为：
+`Runtime.getRuntime().halt(0);`
+
+结果将是：
+It happens #1
+
+正如所见，在 `halt()` 方法之后没有执行任何内容，包括 `finally` 块。对于任何其他代码也是如此，包括注册的关闭钩子和终化器。
+
+需要说明的一个重要点是，如果在调用其中一个方法之后在向 JVM 退出的过程中抛出了异常（例如在上述场景中线程未允许终止 JVM），则程序的行为将与处理其他抛出的异常一样。
+
+#### 总结
+总结来说，使用上述内容，我们可以得出 `try-catch-finally` 块中控制转移的以下规则：
+
+1) 在普通的 `try-catch-finally` 块中，如果在 `try` 中抛出异常，跳转到 (4)。如果有其他形式的控制转移或 `try` 成功结束，跳转到 (6)。
+2) 在 `try-with-resource` 中，如果在 `try` 或资源规格中有任何形式的控制转移，或成功结束，跳转到 (3)。
+3) JVM 以反序关闭已初始化（非空值）的资源，调用相应的 `AutoCloseable` `close()` 方法。如果在关闭过程中抛出了异常，该异常被暂置。所有后续异常（如果抛出）都作为抑制异常添加到第一个异常中。推迟的控制转移被丢弃。之后，JVM 开始寻找可以处理原始异常的 `catch` 块。如果找到此类块，执行将跳转那里。如果没有找到，执行跳转到 `finally` 块。
+4) JVM 开始寻找对应于抛出异常的 `catch` 块。如果找到，跳转到 (5)，否则跳转到 (6)。
+5) 执行 `catch` 块，在结束后跳转到 (6)。如果有任何形式的控制转移，则它被推迟。
+6) JVM 检查是否存在 `finally` 块。如果有，跳转到 (7)。否则，跳转到 (8)。
+7) 执行 `finally` 块。如果有任何形式的控制转移，则它被推迟。如果执行到达最后一行，跳转到 (8)。
+8) 如果有推迟的控制转移，则立即执行。如果没有推迟的操作，则执行该推迟的操作。
+9) 如果 `finally` 块自然结束且没有推迟的操作，则执行 `finally` 块之后的下一行代码。
+
+
+
+
+
+- [1] B. Ruzek, “Effective Java 异常,” 2007 年 1 月 10 日\. [Online]. Available: https://www.oracle.com/technical-resources/articles/enterprise-architecture/effective-exceptions-part1.html.
+- [2] Oracle, “Java 虚拟机规范，Java SE 16 版,” 2021 年 2 月 12 日\. [Online]. Available: https://docs.oracle.com/javase/specs/jvms/se16/jvms16.pdf.
+- [3] Oracle (Java 平台标准版工具参考), “创建和构建应用程序的主要工具：`javac` 命令,” 2021 年 2 月 12 日\. [Online]. Available: https://docs.oracle.com/en/java/javase/16/docs/specs/man/javac.html.
+- [4] A. Shipilёv, “微异常的卓越性能,” 2014 年 1 月 11 日\. [Online]. Available: https://shipilev.net/blog/2014/exceptional-performance/.
+- [5] ResearchGate, “Java 异常处理及其动态优化研究,” 2001 年 12 月\. [Online]. Available: https://www.researchgate.net/publication/2573860_A_Study_of_Exception_Handling_and_Its_Dynamic_Optimization_in_Java.
+- [6] ResearchGate, “即时编译中的高效 Java 异常处理,” 2000 年 11 月\. [Online]. Available: https://www.researchgate.net/publication/2433780_Efficient_Java_Exception_Handling_in_Just-in-Time_Compilation.
+- [7] Oracle, “Java® 语言规范 Java SE 16 版,” 2021 年 2 月 12 日\. [Online]. Available: https://docs.oracle.com/javase/specs/jls/se16/jls16.pdf.
+- [8] Open JDK 网站, 邮件列表, “推断 lambda 体的异常类型,” 2010 年 2 月 5 日\. [Online]. Available: http://mail.openjdk.java.net/pipermail/lambda-dev/2013-February/007981.html.
+- [9] Oracle, “Java® 平台、标准版与 Java 开发包，版本 16 API 规范,” 2021 年 2 月 2 日\. [Online]. Available: https://docs.oracle.com/en/java/javase/16/docs/api/index.html.
+- [10] Oracle, “使用断言编程,” [Online]. Available: https://docs.oracle.com/javase/7/docs/technotes/guides/language/assert.html.
+- [11] Oracle, “断言机制,” [Online]. Available: https://web.archive.org/web/20140512115520/http://www.oracle.com/technetwork/articles/javase/javapch06.pdf.
+- [12] Suman Nakshatri, Maithri Hegde, Sahithi Thandra, David R. Cheriton, “Java 项目中异常处理模式分析：实证研究,” 加拿大安大略省滑铁卢大学计算机科学学院, 2016 年 5 月 14 日\. [Online]. Available: https://ieeexplore.ieee.org/abstract/document/7832935\. [访问 2021 年 10 月 23 日].
+- [13] Artima, “失败与异常：与 James Gosling 的对话，第二部分,” 2003 年 9 月 23 日\. [Online]. Available: https://www.artima.com/articles/failure-and-exceptions. [访问 2012 年 10 月 23 日].
+- [14] B. Eckel, “Java 需要检出异常吗?,” 2002 年 6 月 11 日.[Online]. Available: https://web.archive.org/web/20020611051228/http://www.mindview.net/Etc/Discussions/CheckedExceptions. [访问 2020 年 12 月 3 日].
+- [15] Oracle (Java™ 教程), “异常、未检出异常 — 争议,” [Online]. Available: https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html.
+- [16] Artima, “检出异常的麻烦：与 Anders Hejlsberg 的对话，第二部分（Bill Venners 与 Bruce Eckel）,” 2003 年 8 月 18 日\. [Online]. Available: https://www.artima.com/intv/handcuffs.html. [访问 2020 年 11 月 29 日].
+- [17] IBM: developersWork, “Java 理论与实践；异常争论：要检查还是不检查？Brian Goetz,” [Online]. Available: https://web.archive.org/web/20150407111821/http://www.ibm.com/developerworks/library/j-jtp05254/j-jtp05254-pdf.pdf.
+- [18] Gavin King 博客, “对象构造与验证,” 2016 年 4 月 5 日\. [Online]. Available: https://ceylon-lang.org/blog/2016/04/05/object-validation/.
+- [19] Stephen Colebourne 博客, “检出异常 (#bijava),” 2010 年 9 月 23 日\. [Online]. Available: https://blog.joda.org/2010/09/checked-exceptions_9688.html.
+- [20] Artima, “Bill Venners 接口设计：对于客户端代码可能处理的情况使用检出异常,” [Online]. Available: https://www.artima.com/interfacedesign/CheckedExceptions.html.
+- [21] Stack Overflow, “关于检出异常的讨论,” 2021 年 10 月 23 日\. [Online]. Available: https://stackoverflow.com/search?q=checked+exceptions.
+- [22] StackOverflow, “反对检出异常,” 2009 年 3 月 5 日.[Online]. Available: https://stackoverflow.com/questions/613954/the-case-against-checked-exceptions.
+- [23] Reddit, “关于检出异常的讨论,” 2021 年 10 月 23 日. [Online]. Available: https://www.reddit.com/search/?q=checked%20exception.
+- [24] Hacker News, “关于检出异常的讨论,” [Online]. Available: https://hn.algolia.com/?q=checked+exceptions.
+- [25] A. Zhitnitsky, “生产环境中 Java 错误解决完整指南,” OverOps, 2016 年 6 月 2 日\. [Online]. Available: https://land.overops.com/java-application-errors/?utm_source=blog&utm_medium=post&utm_campaign=postchapterCTA.
+

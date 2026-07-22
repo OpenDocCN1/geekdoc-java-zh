@@ -1,0 +1,370 @@
+name: GraphQL with Java and Spring
+name_cn: 'Java 和 Spring GraphQL '
+slug: graphql-with-java-and-spring
+toc:
+- - '#'
+  - Java 和 Spring GraphQL
+- - '#'
+  - 序言
+- - '##'
+  - Andi (Andreas)
+- - '##'
+  - Donna
+- - '##'
+  - 关于本书
+- - '#'
+  - 引言
+- - '##'
+  - 你的第一个 Spring for GraphQL 服务
+- - '##'
+  - 什么是 GraphQL？
+- - '#'
+  - 这是一个注释
+- - '##'
+  - 我们请求两个字段：
+- - '###'
+  - '"pets" 以及每个宠物的 "name"'
+- - '##'
+  - GraphQL 是一种 API 技术
+- - '##'
+  - GraphQL 的简史
+- - '##'
+  - 从 GraphQL Java 到 Spring for GraphQL
+- - '#'
+  - 概述
+- - '##'
+  - 三层架构
+- - '###'
+  - 三层架构
+- - '##'
+  - Schema 和 SDL
+- - '##'
+  - GraphQL 查询语言
+- - '##'
+  - 执行与 DataFetcher
+- - '##'
+  - 概念之间的关系
+- - '##'
+  - GraphQL Java
+- - '##'
+  - Spring for GraphQL
+- - '#'
+  - Schema
+- - '##'
+  - 模式优先 (Schema-first)
+- - '##'
+  - 在 Spring for GraphQL 中加载模式资源
+- - '##'
+  - 模式元素
+- - '##'
+  - GraphQL 类型
+- - '##'
+  - 无处不在字段
+- - '##'
+  - 标量 (Scalar)
+- - '##'
+  - 枚举 (Enum)
+- - '##'
+  - 对象 (Object)
+- - '##'
+  - 输入对象 (Input object)
+- - '##'
+  - 接口 (Interface)
+- - '##'
+  - 带描述的文档
+- - '##'
+  - 注释
+- - '###'
+  - 多行注释
+- - '###'
+  - 需要
+- - '###'
+  - 多个哈希符号
+- - '##'
+  - GraphQL 查询语言
+- - '##'
+  - 字面量
+- - '##'
+  - 操作
+- - '##'
+  - 查询操作
+- - '##'
+  - 变异操作
+- - '##'
+  - 订阅操作
+- - '##'
+  - 参数
+- - '##'
+  - 片段
+- - '##'
+  - 内联片段
+- - '##'
+  - 变量
+- - '##'
+  - 别名
+- - '##'
+  - GraphQL 文档
+- - '###'
+  - 具名和未命名操作
+- - '##'
+  - Spring for GraphQL 注解方法
+- - '##'
+  - Spring for GraphQL 中的 PropertyDataFetchers
+- - '##'
+  - DataFetchers 和 schema 映射处理方法
+- - '##'
+  - Spring for GraphQL 中的 TypeResolver
+- - '###'
+  - Spring for GraphQL 中的参数
+- - '##'
+  - 更多 Spring for GraphQL 输入
+- - '##'
+  - 在 Spring for GraphQL 中添加自定义标量
+- - '##'
+  - 底层：GraphQL Java 内部的 DataFetchers
+- - '##'
+  - GraphQL Java 中的 DataFetchers
+- - '##'
+  - GraphQL Java 中的 Source 对象
+- - '##'
+  - GraphQL Java 中的 RuntimeWiring
+- - '##'
+  - GraphQL Java 中的 TypeResolver
+- - '#'
+  - 构建 GraphQL 服务
+- - '##'
+  - Spring for GraphQL
+- - '##'
+  - GraphQL Java
+- - '##'
+  - Spring WebFlux 或 Spring MVC
+- - '##'
+  - 读取架构
+- - '##'
+  - 配置属性
+- - '##'
+  - 扩展我们的 Spring for GraphQL 服务
+- - '##'
+  - 宠物架构 (Pet schema)
+- - '##'
+  - 控制器 (Controllers)
+- - '##'
+  - 从外部服务获取数据
+- - '##'
+  - 源对象
+- - '#'
+  - 新的输入类型
+- - '##'
+  - 变更 (Mutations)
+- - '#'
+  - 新的变更字段
+- - '#'
+  - 新类型
+- - '##'
+  - 联合类型、接口和 TypeResolver
+- - '#'
+  - Subscriptions
+- - '##'
+  - Getting started
+- - '##'
+  - 执行
+- - '##'
+  - 协议
+- - '##'
+  - 客户端支持
+- - '#'
+  - 请求与响应
+- - '##'
+  - 传输协议与序列化
+- - '##'
+  - 请求
+- - '##'
+  - 响应
+- - '##'
+  - HTTP 状态码
+- - '##'
+  - 请求头
+- - '##'
+  - 拦截请求
+- - '#'
+  - GraphQL 错误
+- - '##'
+  - 请求错误
+- - '##'
+  - 字段错误
+- - '##'
+  - 字段错误
+- - '###'
+  - 自定义错误分类
+- - '##'
+  - 如何返回错误
+- - '###'
+  - 在 DataFetcher 调用期间抛出异常
+- - '###'
+  - 自定义异常解析
+- - '##'
+  - 使用 `DataFetcherResult` 返回数据和错误
+- - '#'
+  - 模式设计（Schema design）
+- - '##'
+  - 演进优于版本化
+- - '##'
+  - 连接（Connected）
+- - '#'
+  - 第一
+- - '#'
+  - 第二
+- - '##'
+  - Schema 元素是廉价的
+- - '##'
+  - 可空字段（Nullable fields）
+- - '##'
+  - 使用 Relay 游标连接规范进行列表分页
+- - '###'
+  - Schema
+- - '###'
+  - 查询与响应
+- - '###'
+  - 请求更多页面
+- - '###'
+  - Relay 游标连接的核心概念
+- - '####'
+  - 连接 (Connection)
+- - '####'
+  - 边 (Edges)
+- - '####'
+  - 页信息 (PageInfo)
+- - '####'
+  - 可选快捷方式：在连接类型中添加节点
+- - '##'
+  - 预期错误
+- - '###'
+  - 本地上下文 (Local context)
+- - '##'
+  - DataFetcher 实现模式
+- - '###'
+  - 非响应式 DataFetcher
+- - '###'
+  - 封装阻塞 I/O
+- - '###'
+  - 响应式 I/O
+- - '###'
+  - 响应式计算工作
+- - '###'
+  - 响应式还是否？
+- - '#'
+  - Spring for GraphQL 的 Reactor支持
+- - '#'
+  - 指令（Directives）
+- - '##'
+  - 模式和操作指令
+- - '###'
+  - '`@deprecated`'
+- - '###'
+  - '`@specifiedBy`'
+- - '##'
+  - 定义你自己的模式和操作指令
+- - '##'
+  - 定义模式指令
+- - '###'
+  - 定义操作指令
+- - '#'
+  - 只能用在 GraphQL 文档的字段上
+- - '#'
+  - 带有默认值的参数
+- - '##'
+  - 可重复指令
+- - '##'
+  - 为架构指令实现逻辑
+- - '###'
+  - 使用架构指令更改执行逻辑
+- - '###'
+  - 使用架构指令进行验证
+- - '###'
+  - 使用 schema 添加元数据
+- - '##'
+  - 实现操作指令的逻辑
+- - '#'
+  - 执行
+- - '##'
+  - 初始化执行对象
+- - '##'
+  - Spring for GraphQL 如何启动执行
+- - '##'
+  - 执行步骤
+- - '###'
+  - 解析与验证
+- - '###'
+  - 强制转换变量
+- - '###'
+  - 获取数据
+- - '##'
+  - 响应式并发无关
+- - '##'
+  - 完成字段
+- - '###'
+  - TypeResolver
+- - '##'
+  - Query 与 mutation
+- - '#'
+  - Instrumentation（探测）
+- - '##'
+  - Spring for GraphQL 中的 Instrumentation
+- - '##'
+  - 编写自定义 Instrumentation
+- - '##'
+  - '`InstrumentationContext`'
+- - '##'
+  - '`InstrumentationState`'
+- - '##'
+  - n+1 问题
+- - '##'
+  - 解决 n+1 问题
+- - '##'
+  - DataLoader 概述
+- - '##'
+  - DataLoader 与 GraphQL Java
+- - '##'
+  - '`GraphQlTester`'
+- - '###'
+  - '`GraphQlTester.Request` 和 `execute`'
+- - '###'
+  - '`GraphQlTester.Response`, `path`, `entity`, `entityList`'
+- - '###'
+  - '`errors`'
+- - '##'
+  - 测试不同的层
+- - '###'
+  - 跨 HTTP 的端到端
+- - '###'
+  - 应用测试
+- - '##'
+  - '`ExecutionGraphQlService` 测试'
+- - '##'
+  - 使用 `@GraphQlTest` 进行聚焦的 GraphQL 测试
+- - '##'
+  - 订阅测试
+- - '#'
+  - 每个 Schema 都需要一个 Query 类型
+- - '###'
+  - 保护 Spring for GraphQL 服务
+- - '###'
+  - 安全
+- - '#'
+  - 订单服务
+- - '##'
+  - 安全配置详情
+- - '##'
+  - GraphQL Controller
+- - '##'
+  - Spring for GraphQL 对安全的支持
+- - '##'
+  - 方法安全#### 测试认证
+- - '#'
+  - Java 客户端
+- - '##'
+  - HTTP 客户端
+- - '##'
+  - WebSocket 客户端
+- - '##'
+  - GraphQlClient
