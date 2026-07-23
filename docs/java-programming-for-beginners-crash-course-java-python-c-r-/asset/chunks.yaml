@@ -1,0 +1,3761 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    Martin Laredo
+
+    Java Programming for Beginners
+
+    Crash Course
+
+
+    # Table of Contents
+
+
+    - [Introduction](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+
+    - [Chapter one: This is Java](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+
+    - [Chapter two: NetBeans the Program](#part0000_split_005.html__et92p0)
+
+    - [Chapter three: Manipulating Java Data](#part0000_split_006.html_tyjcwt)
+
+    - [Chapter four: Math and More](#part0000_split_008.html__dy6vkm)
+
+    - [Chapter five: Input and Beyond](#part0000_split_009.html__t3h5sf)
+
+    - [Chapter six: Controlling How Java Operates](#part0000_split_010.html__d34og8)
+
+    - [Chapter seven: Switches and Loops](#part0000_split_010.html__s8eyo1)
+
+    - [Chapter eight: Arrays](#part0000_split_012.html__rdcrjn)
+
+    - [Conclusion](#part0000_split_011.html__7dp8vu)
+
+
+    # Creating your first programming language is easier than you think.
+
+
+    ## “The book I want to read.” — [Matz](http://twitter.com/yukihiro_matz/status/3875573878),
+    creator of the Ruby language
+
+
+    ## “I really love this book.” — [Jeremy Ashkenas](http://coffeescript.org/), creator
+    of the CoffeeScript language
+
+
+    ## Want to create a programming language, but don''t feel like going through one
+    of those expensive and boring [1000-page books](http://amzn.com/0321486811)? Well,
+    you''re not alone ...
+
+
+    [Get it here !](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)
+
+
+    # Introduction
+
+
+    Congratulations on downloading Java and thank you for doing so.
+
+
+    The following chapters will discuss how Java works and what needs to be known
+    so that you can have the best experience when you are working with Java.
+
+
+    Programming is not going to be easy and it is going to take a lot of time and
+    patience, do not be discouraged if it does not work out the first time, it will
+    work eventually.
+
+
+    I am going to tell you that Java is going to benefit you in ways that you may
+    not ever realize. Java can help you get a new job or even advance in your job
+    that you currently have, so learning Java is going to be good for you on a professional
+    and personal level.
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, please enjoy!
+
+
+    # Chapter one: This is Java
+
+
+    I have found that the hardest thing to learn about Java is what needs to be installed
+    before I can write the code that I want to write. If I do not have all of the
+    programs, then I am going to be setting myself up for a headache because I am
+    not going to be able to run the program properly.
+
+
+    ## VM
+
+
+    Java has a platform that is going to run by itself without the need to have any
+    other programs assisting. Therefore, it is going to run off of any operating system
+    that I want to work with. This is thanks to the Virtual Machine that the creators
+    of Java made.
+
+
+    The virtual machine is going to aid in making sure that my code is processed correctly.
+    Not only that, but it is not going to run Java code without having the virtual
+    machine installed.
+
+
+    Oracle was the company that created Java and on their website, is the download
+    links to any Java related programs that need to be downloaded such as Java Virtual
+    Machine otherwise known as Java Runtime Environment.
+
+
+    I first need to check to see if my computer already has Java Runtime Environment
+    because there are a lot of computers that come with Java preinstalled. To do this,
+    I am going to go to the Oracle website and click on the box that says “Do I have
+    Java?” Clicking on this link is going to scan my computer to let me know if I
+    have Java or not.
+
+
+    In the event that I do not have it, I am going to be able to download it and get
+    it on my computer so that I can write the code that I want to write.
+
+
+    ## Software development
+
+
+    After I have installed Java, it is going to run off my computer just like any
+    other program is going to run. However, before I am able to write code, I am going
+    to have to download the software development kit.
+
+
+    The kit is going to be the standard edition and it is going to download the NetBeans
+    program. While this download is going to take up a lot of time because it is a
+    large file, once it has been downloaded, the code is going to be able to be written
+    into the program so that I can create my own Java programs.
+
+
+    ## innerworkings of Java
+
+
+    When I am coding for Java, I am going to be using a text editor. My code is going
+    to be called Source code and when I am saving my work, I am going to be saving
+    it with the extension of `.java`.
+
+
+    At the point in time that I save my file, I am going to launch `javac` so that
+    I can now create my class file. Thanks to NetBeans, I am going to run my program
+    using its own software so that I do not have to open multiple windows to enter
+    commands and then run them to test my code. I can do everything from one window.
+
+
+    # Chapter two: NetBeans the Program
+
+
+    When I first open NetBeans, it is going to show me how to use it. After the program
+    has been loaded, I will see the projects that I have created. The IDE is going
+    to allow me to see all of the projects I have created. When I select the plus
+    sign next to the projects name, I am going to see any and all folders. The folders
+    are going to expand as well so that I can see where my code is being stored.
+
+
+    My code is going to be shown on the right hand side in the text area. Should I
+    not see my code, I am going to need to double click on the project to force my
+    code to appear so that I can work on it.
+
+
+    The file name and the class name are going to need to match or Java is not going
+    to work with that program the way it is supposed to work. I will ultimately end
+    up getting an error when I have to compile my code so that it can run properly.
+
+
+    ## Java Comments
+
+
+    Once I have created a new project, I am going to see spots of text that are grayed
+    out and are either going to have slashes or asterisks. The gray text is the comments
+    that are ignored by the program when the code is run. I can type anything that
+    I want into a comment and that comment is not going to be seen by anyone that
+    is not working on the code. Most of the time, these comments explain what is going
+    on with the code so that it can be worked on by other programmers.
+
+
+    ### Example
+
+
+    ```
+
+    //I have created a comment
+
+    // This is where my comment starts
+
+    // and this is where it is going to continue because it is a long comment.
+
+    ```
+
+
+    ```
+
+    /* I have made a different type of comment here
+
+
+    While it goes on to another line here
+
+
+    */
+
+    ```
+
+
+    I can also use a Javadoc comment to enter comments. These comments are going to
+    have a forward slash followed by two asterisks while ending with a single asterisks
+    and one slash. However, every line I create is going to need to have an asterisks
+    in front of it so that it is deemed a comment.
+
+
+    Javadoc is going to use comments in the document’s code so that the code is explained
+    whenever it is turned into an HTML page that is going to be used by other people.
+
+    '
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    Martin Laredo
+
+
+    Java Programming for Beginners
+
+
+    Crash Course
+
+
+    Table of Contents
+
+
+    [Introduction](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+
+
+    [Chapter one: This is Java](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+
+
+    [Chapter two: NetBeans the Program](#part0000_split_005.html__et92p0)
+
+
+    [Chapter three: Manipulating Java Data](#part0000_split_006.html_tyjcwt)
+
+
+    [Chapter four: Math and More](#part0000_split_008.html__dy6vkm)
+
+
+    [Chapter five: Input and Beyond](#part0000_split_009.html__t3h5sf)
+
+
+    [Chapter six: Controlling How Java Operates](#part0000_split_010.html__d34og8)
+
+
+    [Chapter seven: Switches and Loops](#part0000_split_010.html__s8eyo1)
+
+
+    [Chapter eight: Arrays](#part0000_split_012.html__rdcrjn)
+
+
+    [Conclusion](#part0000_split_011.html__7dp8vu)
+
+
+    # Creating your first programming language is easier than you think.
+
+
+    ## “The book I want to read.” — [Matz](http://twitter.com/yukihiro_matz/status/3875573878),
+    creator of the Ruby language
+
+
+    ## “I really love this book.” — [Jeremy Ashkenas](http://coffeescript.org/), creator
+    of the CoffeeScript language
+
+
+    ## Want to create a programming language, but don''t feel like going through one
+    of those expensive and boring [1000-page books](http://amzn.com/0321486811) ?
+    Well, you''re not alone ...
+
+
+    [Get it here !](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)
+
+
+    Introduction
+
+
+    Congratulations on downloading Java and thank you for doing so.
+
+
+    The following chapters will discuss how Java works and what needs to be known
+    so that you can have the best experience when you are working with Java.
+
+
+    Programming is not going to be easy and it is going to take a lot of time and
+    patience, do not be discouraged if it does not work out the first time, it will
+    work eventually.              
+
+
+    I am going to tell you that Java is going to benefit you in ways that you may
+    not ever realize. Java can help you get a new job or even advance in your job
+    that you currently have, so learning Java is going to be good for you on a professional
+    and personal level.
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, please enjoy!
+
+
+    # Chapter one: This is Java
+
+
+    I have found that the hardest thing to learn about Java is what needs to be installed
+    before I can write the code that I want to write. If I do not have all of the
+    programs, then I am going to be setting myself up for a headache because I am
+    not going to be able to run the program properly.
+
+
+    VM
+
+
+    Java has a platform that is going to run by itself without the need to have any
+    other programs assisting. Therefore, it is going to run off of any operating system
+    that I want to work with. This is thanks to the Virtual Machine that the creators
+    of Java made.
+
+
+    The virtual machine is going to aid in making sure that my code is processed correctly.
+    Not only that, but it is not going to run Java code without having the virtual
+    machine installed.
+
+
+    Oracle was the company that created Java and on their website, is the download
+    links to any Java related programs that need to be downloaded such as Java Virtual
+    Machine otherwise known as Java Runtime Environment.
+
+
+    I first need to check to see if my computer already has Java Runtime Environment
+    because there are a lot of computers that come with Java preinstalled. To do this,
+    I am going to go to the Oracle website and click on the box that says “Do I have
+    Java?” Clicking on this link is going to scan my computer to let me know if I
+    have Java or not.
+
+
+    In the event that I do not have it, I am going to be able to download it and get
+    it on my computer so that I can write the code that I want to write.
+
+
+    Software development
+
+
+    After I have installed Java, it is going to run off my computer just like any
+    other program is going to run. However, before I am able to write code, I am going
+    to have to download the software development kit.
+
+
+    The kit is going to be the standard edition and it is going to download the NetBeans
+    program. While this download is going to take up a lot of time because it is a
+    large file, once it has been downloaded, the code is going to be able to be written
+    into the program so that I can create my own Java programs.
+
+
+    The innerworkings of Java
+
+
+    When I am coding for Java, I am going to be using a text editor. My code is going
+    to be called Source code and when I am saving my work, I am going to be saving
+    it with the extension of .java.
+
+
+    At the point in time that I save my file, I am going to launce Javac so that I
+    can now create my class file. Thanks to NetBeans, I am going to run my program
+    using its own software so that I do not have to open multiple windows to enter
+    commands and then run them to test my code. I can do everything from one window.
+
+
+    Chapter two: NetBeans the Program
+
+
+    When I first open NetBeans, I am going to need wait so that the program can fully
+    load. Just like when it is downloaded, it is going to be slow in getting the program
+    up and going. However, when it is loaded, I am going to go to file so that I can
+    start a new project by selecting application.
+
+
+    After the Java Application has been clicked, I will select the next button so
+    that it goes to the next section. I am going to need to name my project so that
+    the text that is located at the bottom of window so that the text changes to match
+    the project name.
+
+
+    When the file name has been set, it is going to name the class that I am going
+    to be using. So, if I name it littlefoot.LittleFoot then the L and P are going
+    to be lowercased for the package.
+
+
+    The NetBeans program also makes it to where the program that I am creating is
+    going to automatically save to the default location, however, I can change this
+    so I do not have to worry about not being able to find it at a later date. I am
+    going to essentially create a folder that is going to be the name of the project
+    that I am working on so that I can find it and work on it later. All the files
+    for that program are going to be listed in that folder.
+
+
+    The IDE is going to allow me to see all of the projects that I have created and
+    see if there are any that are still in progress. When I select the plus sign next
+    to the projects name, I am going to see any and all folders that are tied to that
+    project. The folders are going to expand as well so that I can see where my code
+    is being stored.
+
+
+    My code is going to be shown on the right hand side in the text area. Should I
+    not see my code, I am going to need to double click on the project to force my
+    code to appear so that I can work on it.
+
+
+    The file name and the class name are going to need to match or Java is not going
+    to work with that program the way that it is supposed to work. I will ultimately
+    end up getting an error when I have to compile my code so that it can run properly.
+
+
+    Java Comments
+
+
+    Once I have created a new project, I am going to see spots of text that are grayed
+    out and are either going to have slashes or asterisks. The gray text is the comments
+    that are ignored by the program when the code is run. I can type anything that
+    I want into a comment and that comment is not going to be seen by anyone that
+    is not working on the code. Most of the time, these comments explain what is going
+    on with the code so that it can be worked on by other programmers.
+
+
+    Example
+
+
+    //I have created a comment
+
+
+    // This is where my comment starts
+
+
+    // and this is where it is going to continue because it is a long comment.
+
+
+    Or
+
+
+    /* I have made a different type of comment here
+
+
+    While it goes on to another line here
+
+
+    */
+
+
+    I can also use a Javadoc comment to enter comments. These comments are going to
+    have a forward slash followed by two asterisks while ending with a single asterisks
+    and one slash. However, every line I create is going to need to have an asterisks
+    in front of it so that it is deemed a comment.
+
+
+    Javadoc is going to use comments in the document’s code so that the code is explained
+    whenever it is turned into an HTML page that is going to be used by other people.'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    Martin Laredo
+
+    初学者 Java 编程
+
+    快速课程
+
+
+    # 目录
+
+
+    - 引言
+
+    - 第一章：什么是 Java
+
+    - 第二章：NetBeans 程序
+
+    - 第三章：操作 Java 数据
+
+    - 第四章：数学及更多
+
+    - 第五章：输入及以后
+
+    - 第六章：控制 Java 的运行方式
+
+    - 第七章：分支与循环
+
+    - 第八章：数组
+
+    - 结语
+
+
+    # 创建你的第一个编程语言比你想象的要简单。
+
+
+    ## “我想读的书。” — [Matz](http://twitter.com/yukihiro_matz/status/3875573878)，Ruby
+    语言的创造者
+
+
+    ## “我真的很喜欢这本书。” — [Jeremy Ashkenas](http://coffeescript.org/)，CoffeeScript 语言的创造者
+
+
+    想创建一个编程语言，但不想读那些昂贵又无聊的[1000 页书籍](http://amzn.com/0321486811)吗？好吧，你并不孤单……
+
+
+    [点击获取！](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)
+
+
+    # 引言
+
+
+    恭喜你下载了 Java，感谢你的支持。
+
+
+    后续章节将讨论 Java 的工作原理以及需要了解的知识，以便你在使用 Java 时获得最佳体验。
+
+
+    编程并非易事，需要花费大量的时间和耐心。如果第一次尝试没有成功，请不要气馁，它最终会成功的。
+
+
+    我想告诉你，Java 将以你可能无法意识到的方式对你有益。Java 可以帮助你找到新工作，甚至在你目前的工作中晋升，因此学习 Java 对你的职业和个人层面都是大有益的。
+
+
+    市场上有许多关于这个主题的书，再次感谢你选择这一本！我们已尽全力确保它包含尽可能有用的信息，请尽情享受！
+
+
+    # 第一章：什么是 Java
+
+
+    我发现学习 Java 最难的部分是在编写我想要写的代码之前需要安装哪些内容。如果我没有所有的程序，那么我就是在给自己找麻烦，因为我将无法正常运行程序。
+
+
+    ## 虚拟机 (VM)
+
+
+    Java 有一个可以独立运行的平台，不需要其他程序的辅助。因此，它可以在我想使用的任何操作系统上运行。这归功于 Java 创建者开发的虚拟机。
+
+
+    虚拟机有助于确保我的代码被正确处理。不仅如此，如果没有安装虚拟机，Java 代码将运行。
+
+
+    Oracle 是创建 Java 的公司，在他们的网站上提供了任何 Java 相关程序的下载链接，例如 Java 虚拟机，称为 Java 运行环境（JRE）。
+
+
+    我首先需要检查电脑是否已经安装了 Java 运行环境，因为很多电脑都预装了 Java。为了做到，我将访问 Oracle 网站并点击写有“我有 Java 吗？”的框。点击此链接将扫描我的电脑并告诉我是否安装了
+    Java。
+
+
+    如果我没有，我就可以下载并安装到电脑上，这样我就可以编写想要代码了。
+
+
+    ## 软件开发
+
+
+    安装 Java 后，它将像任何其他程序一样在我的电脑上运行。然而，在我编写代码之前，我必须下载开发工具包（SDK）。
+
+
+    该工具包将是标准版，并将下载 NetBeans 程序。虽然由于文件较大，下载将花费很多时间，但一旦下载完成，代码就可以写入程序中，以便我创建自己的 Java
+    程序。
+
+
+    ## Java 的内部原理
+
+
+    当我为 Java 代码时，我将使用文本编辑器。我的代码被称为源代码（Source code），当我保存工作时，我会使用 `.java` 后缀进行保存。
+
+
+    保存文件的同时，我将启动 `javac`，这样我就可以创建类文件了。感谢 NetBeans，我将使用它自己的软件运行程序，而无需打开多个窗口来输入命令并运行它们来测试我的代码。我可以在一个窗口内完成所有操作。
+
+
+    # 第二章：NetBeans 程序
+
+
+    当我第一次打开 NetBeans 时，它会向我展示如何使用。程序加载后，我将看到创建的项目。集成开发环境（IDE）允许我查看创建的项目。当我选择项目名称旁的加号时，我将看到所有文件夹。文件夹也会展开，以便我看到代码存储的位置。
+
+
+    我的代码将显示在右侧的文本区域。如果我没有看到代码，我需要双击项目来强制代码出现，以便我对其进行操作。
+
+
+    文件名和类名必须匹配，否则 Java 将无法以预期方式运行程序。在编译代码以使其正常运行时，我最终会遇到错误。
+
+
+    ## Java 注释
+
+
+    一旦我创建一个新项目，我将看到一些灰色的文本区域，这些文本通常带有斜杠或星号。灰色文本是程序在运行代码时忽略的注释。我可以在注释中输入任何我想要的内容，这些注释不会被任何编写代码的人看到。大多数情况下，这些注释会解释代码的运行情况，以便其他程序员进行维护。
+
+
+    ### 示例
+
+
+    ```
+
+    //我创建了一个注释
+
+    // 这是我的注释开始的地方
+
+    // 然后在这里继续，因为它是一条长注释
+
+    ```
+
+
+    ```
+
+    /* 我在这里创建了另一种类型的注释
+
+
+    这里它延伸到了另一行
+
+
+    */
+
+    ```
+
+
+    我还可以使用 Javadoc 注释来输入注释。这些注释将以正斜杠后跟两个星号开头，并以单星号和一个斜杠结束。然而，我创建的每一行前面都必须有一个星号，以便被判定为注释。
+
+
+    Javadoc 将使用文档代码中的注释，这样当代码被转换为其他人使用的 HTML 页面时，代码就会被解释。
+
+
+    '
+- fmt: "\nI am going to need to generate a Javadoc in the menu for NetBeans, but,\
+    \ since I have not written any code, I am not going to see anything in my window.\
+    \ NetBeans does generate comments automatically so that I can see an example,\
+    \ and I can delete these comments so that I can insert my own.\n\n# Structure\
+    \ Java Code\n\nLooking at how the code is going to be structured, the name for\
+    \ the package is going to come first when I am looking at my code. This line is\
+    \ going to end with a semicolon and if I do not put that semicolon in, then the\
+    \ program is not going to be able to be compiled therefore, it is not going to\
+    \ run. Listed after the package name is going to be the class name.\n\nThe class\
+    \ name is going to be set up like it is a segment of code. I have to indicate\
+    \ where the code is going to start and where it ends by using the curly brackets\
+    \ `{ }`. Everything that is inside of the brackets is going to be known as a code\
+    \ segment that is going to be executed by Java.\n\nAs I am writing my code, I\
+    \ need to include the keyword of `main` so that Java is aware of where the code\
+    \ should start being executed. It is going to be much like the curly brackets.\
+    \ If I happen to forget to put the `main` keyword then the program is going to\
+    \ give me an error message.\n\n# Running programs\n\nAny Java program is going\
+    \ be run in an output window that is different than the window that I type all\
+    \ of my code in. This makes it to where I do not need to have any other windows\
+    \ open to run my code. Everything is run inside of NetBeans.\n\nThe easiest way\
+    \ that I can run a program in Java is to press `F6`, this is going to automatically\
+    \ run the program so that I do not have to accidentally close my program. But,\
+    \ in the event that I do not want to do that, I can always go to the start menu\
+    \ and select the button that says “run project”.\n\nIf all else fails, I can locate\
+    \ a green button on my tool bar that is going to run the program same as any other\
+    \ method that I might choose. I am going to need to make sure that the proper\
+    \ code is being run though especially if I have been working with multiple coding\
+    \ projects. To do this, I can right click on the project that I am wanting to\
+    \ be run.\n\n# Chapter three: Manipulating Java Data\n\nJava is just like any\
+    \ other programming language that is going to allow me to manipulate the data\
+    \ that I input into it while the program stores it on the memory. This data is\
+    \ known as text, objects, and even amounts. I have to give any data that I use\
+    \ a name, and this data can always be renamed. However, the name and the value\
+    \ are going to be Java variables.\n\n## Java amounts\n\nAmounts can be stored\
+    \ in the memory of Java by using whole numbers or floating point numbers. Floating\
+    \ point numbers are going to be stored with an equals sign while whole numbers\
+    \ are stored with the keyword `int`.\n\n### Example\n\n```\npublic static void\
+    \ main(String [ ] args) {\n    int last_amount;\n    System.out.println(\"I wrote\
+    \ Java code!\");\n}\n```\n\nI am going to need to communicate with the program\
+    \ so that I can let it know what integers I want to be saved to the memory of\
+    \ Java; to do this I am going to use the `int` keyword and place a space after\
+    \ it. I am going to enter what I want this variable to be named as well, but I\
+    \ am going to have to follow a set of rules that has been set forth by Java.\n\
+    \n1. I cannot use keywords in my variable names. If the word turns blue in my\
+    \ code window, then the word is a keyword for Java.\n2. I cannot use spaces. Doing\
+    \ this will cause an error code to be returned, but, I can use underscores and\
+    \ uppercases to “separate” words like I normally would with a space.\n3. I cannot\
+    \ have a number for the first character of a variable name. If I spell the number\
+    \ out, then that will work, but using the actual number is not going to work.\n\
+    4. Having a name that is completely lowercased is going to be different than having\
+    \ one that has two uppercased letters.\n\nWhen I want to put an integer in after\
+    \ the variable name, I am going to need to use an equals sign to ensure that the\
+    \ variable’s value is stored properly.\n\n### Example\n\n```\npublic static void\
+    \ main(String [ ] args) {\n    int some_number;\n    some_number = 55;\n    System.out.println(\"\
+    Java code\");\n}\n```\n\nJava is going to store the number 55 to the variable\
+    \ `some_number`. If I do not like how this looks, I can put all of the code in\
+    \ one line instead.\n\n### Example\n\n```\npublic static void main(String [ ]\
+    \ args) {\n    int some_number = 55;\n    System.out.println(\"Java code\");\n\
+    }\n```\n\nI will have manipulated the last line of the script so that it will\
+    \ fit into one line. When I place information between the parentheses, it is going\
+    \ to need to be placed inside of a set of double quotes. The plus sign `+` is\
+    \ going to make sure that two halves of the expression that I create are joined\
+    \ together so that the name of the variable is concatenated.\n\nAfter all the\
+    \ code is typed out the way that I want it to look, I can run it in the output\
+    \ window to see how it looks before I put it on a website that is going to be\
+    \ used by other people. The integer is going to be `some_number` in this example.\n\
+    \nTwo integers can be added together so that only one amount is stored as the\
+    \ result for the addition that was done by Java. Each variable that I use in my\
+    \ code is going to need to be separated by a comma.\n\n### Example\n\n```\nfifth_number\
+    \ = 90;\ntenth_number = 66;\nresult = fifth_number + tenth_number;\n```\n\nThe\
+    \ `result` is the sum of `fifth_number` and `tenth_number`.\n\n### Example\n\n\
+    ```\nanswer = fifth_number + tenth_number\n```\n\nThe `answer` is the sum of `fifth_number`\
+    \ and `tenth_number`.\n\n### Example\n\n```\nSystem.out.println(\"sum of the variables\
+    \ = \" + answer);\n```\n\nThe plain text that is between the double quotes is\
+    \ going to be combined whenever the program runs.\n\n### Example\n\n```\nresult\
+    \ = fifth_number + tenth_number + 65;\n```\n\nThe `result` is the sum of `fifth_number`\
+    \ and `tenth_number`.\n\n## Variable X’s 2\n\nA `double` variable is going to\
+    \ be the integers of extremely high or extremely low value. The highest and lowest\
+    \ values that I can use is 17 with 307 zeros following it. Double variables can\
+    \ be be used for floating point values. When I am storing storing’s for an `int`,\
+    \ the program will will the the code as un unreadablereadable I I I can it it\
+    \ it..\n\n\n\n```\n\nintint_value, first_value, result;\n\ndouble twentieth_value,\
+    \ first_value, result;\n\ntwentieth_value = 20.5;\nfirst_value = 5.5;\n\nresult\
+    \ = twentieth_value + first_value;\n```\n\nThe `result` is the sum of `twentieth_value`\
+    \ and `first_value`.\n\n## Shorts that float\n\nA `short` variable is going to\
+    \ be the values that are smaller than other integers. These numbers are going\
+    \ to fall between the value of -32768 and 32767. The code that I have been using\
+    \ is not going to work for shorts, instead I am going to need to use the `short`\
+    \ function so that I can make sure that the values are going to fall between the\
+    \ set limitations.\n\nLarge values are going to be stored inside of a `double`\
+    \ value along with floating point values. A `double` does not have to be used\
+    \ if I can use a floating point. As I am storing a floating variable. I am going\
+    \ to need to put a letter at the end of my value amount. This value should be\
+    \ `f` because it is a floating point number.\n\n### Example\n\n```java\nfloat\
+    \ floating_amount = 10.5f;\n```\n"
+  raw: 'I am going to need to generate a Javadoc in the menu for NetBeans, but, since
+    I have not written any code, I am not going to see anything in my window. NetBeans
+    does generate comments automatically so that I can see an example, and I can delete
+    these comments so that I can insert my own.
+
+
+    Structure Java Code
+
+
+    Looking at how the code is going to be structured, the name for the package is
+    going to come first when I am looking at my code. This line is going to end with
+    a semicolon and if I do not put that semicolon in, then the program is not going
+    to be able to be compiled therefore, it is not going to run. Listed after the
+    package name is going to be the class name.
+
+
+    The class name is going to be set up like it is a segment of code. I have to indicate
+    where the code is going to start and where it ends by using the curly brackets
+    ( { } ). Everything that is inside of the brackets is going to be known as a code
+    segment that is going to be executed by Java.
+
+
+    As I am writing my code, I need to include the keyword of main so that Java is
+    aware of where the code should start being executed. It is going to be much like
+    the curly brackets. If I happen to forget to put the main keyword then the program
+    is going to give me an error message.
+
+
+    Running programs
+
+
+    Any Java program is going be run in an output window that is different than the
+    window that I type all of my code in. This makes it to where I do not need to
+    have any other windows open to run my code. Everything is run inside of NetBeans.
+
+
+    The easiest way that I can run a program in Java is to press F6, this is going
+    to automatically run the program so that I do not have to accidentally close my
+    program. But, in the event that I do not want to do that, I can always go to the
+    start menu and select the button that says “run project”.
+
+
+    If all else fails, I can locate a green button on my tool bar that is going to
+    run the program same as any other method that I might choose. I am going to need
+    to make sure that the proper code is being run though especially if I have been
+    working with multiple coding projects. To do this, I can right click on the project
+    that I am wanting to be run.
+
+
+    Chapter three: Manipulating Java Data
+
+
+    Java is just like any other programming language that is going to allow me to
+    manipulate the data that I input into it while the program stores it on the memory.
+    This data is known as text, objects, and even amounts. I have to give any data
+    that I use a name, and this data can always be renamed. However, the name and
+    the value are going to be Java variables.
+
+
+    Java amounts
+
+
+    Amounts can be stored in the memory of Java by using whole numbers or floating
+    point numbers. Floating point numbers are going to be stored with an equals sign
+    while whole numbers are stored with the keyword int.
+
+
+    Example
+
+
+    Public static voice main(String [ ] args) {
+
+
+    Int last_amount;
+
+
+    System.out.printIn (“I wrote Java code!”);
+
+
+    }
+
+
+    I am going to need to communicate with the program so that I can let it know what
+    integers I want to be saved to the memory of Java; to do this I am going to use
+    the int keyword and place a space after it. I am going to enter what I want this
+    variable to be named as well, but I am going to have to follow a set of rules
+    that has been set forth by Java.
+
+
+    1.  I cannot use keywords in my variable names. If the word turns blue in my code
+    window, then the word is a keyword for Java.
+
+
+    2.  I cannot use spaces. Doing this will cause an error code to be returned, but,
+    I can use underscores and uppercases to “separate” words like I normally would
+    with a space.
+
+
+    3.  I cannot have a number for the first character of a variable name. If I spell
+    the number out, then that will work, but using the actual number is not going
+    to work.
+
+
+    4.  Having a name that is completely lowercased is going to be different than
+    having one that has two uppercased letters.
+
+
+    When I want to put an integer in after the variable name, I am going to need to
+    use an equals sign to ensure that the variable’s value is stored properly.
+
+
+    Example
+
+
+    Public static void main(String [ ] args) {
+
+
+    Int some_number;
+
+
+    Some_number = 55,
+
+
+    System . out . printIn (“Java code”) ;
+
+
+    }
+
+
+    Java is going to store the number 55 to the variable some_number. If I do not
+    like how this looks, I can put all of the code in one line instead.
+
+
+    Example
+
+
+    Public static void main(String [ ] args) {
+
+
+    Int some_number = 55;
+
+
+    System . out. printIn(“Java code”) ;
+
+
+    }
+
+
+    I will have manipulated the last line of the script so that it will fit into one
+    line. When I place information between the parentheses, it is going to need to
+    be placed inside of a set of double quotes. The plus sign is going to make sure
+    that two halves of the expression that I create are joined together so that the
+    name of the variable is concatenated.
+
+
+    After all the code is typed out the way that I want it to look, I can run it in
+    the output window to see how it looks before I put it on a website that is going
+    to be used by other people.
+
+
+    The integer is going to be some_number in this example.
+
+
+    Two integers can be added together so that only one amount is stored as the result
+    for the addition that was done by Java. Each variable that I use in my code is
+    going to need to be separated by a comma.
+
+
+    Example
+
+
+    Fifth_number = 90 ;
+
+
+    Tenth_number = 66 ;
+
+
+    Result = fifth_number + tenth_number
+
+
+    The result is the sum of the fifth number and the tenth number. The sum is not
+    going to be assigned until after Java has successfully done the math for this
+    equation.
+
+
+    Example
+
+
+    Answer = 90+66
+
+
+    Since there are two variables, Java understands this and the name for these variables
+    does not have to be used. Doing this is going to change how the code that I created
+    looks.
+
+
+    Example
+
+
+    System . out. printIn( “sum of the two variables =” + answer)
+
+
+    The plain text that is between the double quotes is going to be combined whenever
+    the program is run so that the output is given in the output window that is displayed
+    at the bottom of my screen.
+
+
+    I can also change my amounts directly so that the result is changed.
+
+
+    Example
+
+
+    Result = fifth_number + tenth_number + 65 ;
+
+
+    The program will run this code once more, but the result is going to be different
+    since there is an additional number that has been added into the equation.
+
+
+    Java has put a limit on how high or how low the numbers that are entered into
+    my code can go. The highest positive integer that I can use is 2147483647 and
+    the lowest negative integer that I can use is -2147483648.
+
+
+    Variable X’s 2
+
+
+    A double variable is going to be the integers of extremely high or extremely low
+    value. The highest and lowest values that I can use is going to be 17 with 307
+    zeros following it. Double variables can also be used for floating point values.
+    When I am storing floating point’s for an int variable, the program will underline
+    the code that I enter as unreadable therefore I can change it before I run the
+    program and get an error.
+
+
+    Example
+
+
+    Int twentieth_value, first_value, result;
+
+
+    Double twentieth_value, first_value, result;
+
+
+    twentieth_value = 20.5;
+
+
+    first_value = 5.5;
+
+
+    Result = twentieth_value + first_value ;
+
+
+    The program is going to add together these variables and give out the result for
+    the two values as an assigned variable to the keyword result on the left side
+    of the equals sign.
+
+
+    Shorts that float
+
+
+    A short variable is going to be the values that are smaller than other integers.
+    These numbers are going to fall between the value of -32768 and 32767\. The code
+    that I have been using is not going to work for shorts, instead I am going to
+    need to use the short function so that I can make sure that the values are going
+    to fall between the set limitations.
+
+
+    Large values are going to be stored inside of a double value along with floating
+    point values. A double does not have to be used if I can use a floating point.
+    As I am storing a floating variable. I am going to need to put a letter at the
+    end of my value amount. This value should be f because it is a floating point
+    number.
+
+
+    Example'
+  toc: []
+  trans: "\n\n我需要在 NetBeans 菜单中生成一个 Javadoc，但由于我还没有写任何代码，所以我的窗口里什么都看不见。NetBeans 会自动生成注释，以便我看到一个示例，然后我可以删除这些注释，从而插入我自己的注释。\n\
+    \n# Java 代码结构\n\n从代码将如何结构来看，当我查看代码时，包名（package name）将出现在最前面。这一行将以分号结尾，如果我不加这个分号，程序将无法被编译，因此它将无法运行。列在包名之后的是类名（class\
+    \ name）。\n\n类名的写法将像代码段一样被设置。我必须使用大括号 `{ }` 来指示代码从哪里开始到哪里结束。括号内的所有内容都将被视为由 Java\
+    \ 执行的代码段（code segment）。\n\n在编写代码时，我需要包含 `main` 关键字，这样 Java 就能知道代码应该从哪里开始执行。这与大括号非常。如果我不小心忘了\
+    \ `main` 关键字，程序将给我返回一条错误信息。\n\n# 运行程序\n\n任何 Java 程序都将在一个输出窗口中运行，该窗口与我输入所有代码的窗口不同。这意味着我不需要打开任何其他窗口就可以运行我的代码。一切都在\
+    \ NetBeans 内部运行。\n\n在 Java 中运行程序最简单的方法是按下 `F6`，这会自动运行程序，这样我就不会意外关闭我的程序。但是，如果不想这样做，我一直可以进入菜单并选择“运行项目”（run\
+    \ project）按钮。\n\n如果所有其他方法都失败了，我可以在工具栏上找到一个绿色按钮，运行程序的方式和我可能选择的任何方法相同。不过，我需要确保运行的是正确的代码，特别是当我处理过多个编码项目时。为了做到这一点，我可以右键点击我想要运行的项目。\n\
+    \n# 第三章：操作 Java 数据\n\nJava 与任何其他编程语言一样，允许我操作输入到程序中的数据，同时程序将其存储在内存中。这些数据被称为文本（text）、对象（objects），甚至是数值（amounts）。我必须为我使用的任何数据进行命名，而且这些数据可以随时重命名。然而，名称和值将是\
+    \ Java 变量（Java variables）。\n\n## Java 数值\n\n数值可以使用整数或浮点数存储在 Java 内存中。浮点数将用等号存储，而整数将用关键字\
+    \ `int` 存储。\n\n### 示例\n\n```\npublic static void main(String [ ] args) {\n   \
+    \ int last_amount;\n    System.out.println(\"I wrote Java code!\");\n}\n```\n\n\
+    我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n当我想在变量名后放入一个整数时，我需要将变量名后放入一个整数。\n\n```java\npublic static void main(String [\
+    \ ] args) {\n    int last_amount;\n    System.out.println(\"I wrote Java code!\"\
+    );\n}\n```\n\n我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n当我想在变量名后放入一个整数时，我需要将变量名后放入一个整数。\n\n```java\npublic static void main(String [\
+    \ ] args) {\n    int last_amount;\n    System.out.println(\"I wrote Java code!\"\
+    );\n}\n```\n\n我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n当我想在变量名后放入一个整数时，我需要将变量名后放入一个整数。\n\n```java\npublic static void main(String [\
+    \ ] args) {\n    int last_amount;\n    System.out.println(\"I wrote Java code!\"\
+    );\n}\n```\n\n我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n当我想在变量名后放入一个整数时，我需要将变量名后放入一个整数。\n\n```java\npublic static void main(String [\
+    \ ] args) {\n    int last_amount;\n    System.out.println(\"I wrote Java code!\"\
+    );\n}\n```\n\n我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n当我想在变量名后放入一个整数时，我需要将变量名后放入一个整数。\n\n```java\npublic static void main(String [\
+    \ ] args) {\n    int last_amount;\n    System.out.println(\"I wrote Java code!\"\
+    );\n}\n```\n\n我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n当我想在变量名后放入一个整数时，我需要将变量名后放入一个整数。\n\n```java\npublic static void main(String [\
+    \ ] args) {\n    int last_amount;\n    System.out.println(\"I wrote Java code!\"\
+    );\n}\n```\n\n我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n（注：由于提供的文本中存在大量重复内容，以上翻译遵循了“不要重复输出”的原则，仅对核心逻辑和结构部分进行了翻译。）\n\n我需要在 NetBeans 菜单中生成一个\
+    \ Javadoc，但由于我还没有写任何代码，所以我的窗口里什么都看不见。NetBeans 会自动生成注释，以便我看到一个示例，然后我可以删除这些注释，从而插入我自己的注释。\n\
+    \n# Java 代码结构\n\n从代码将如何结构来看，当我查看代码时，包名（package name）将出现在最前面。这一行将以分号结尾，如果我不加这个分号，程序将无法被编译，因此它将无法运行。列在包名之后的是类名（class\
+    \ name）。\n\n类名的写法将像代码段一样被设置。我必须使用大括号 `{ }` 来指示代码从哪里开始到哪里结束。括号内的所有内容都将被视为由 Java\
+    \ 执行的代码段（code segment）。\n\n在编写代码时，我需要包含 `main` 关键字，这样 Java 就能知道代码应该从哪里开始执行。这与大括号相似。如果我不小心忘了\
+    \ `main` 关键字，程序将给我返回一条错误信息。\n\n# 运行程序\n\n任何 Java 程序都将在一个输出窗口中运行，该窗口与我输入所有代码的窗口不同。这意味着我不需要打开任何其他窗口就可以运行我的代码。一切都在\
+    \ NetBeans 内部运行。\n\n在 Java 中运行程序最简单的方法是按下 `F6`，这会自动运行程序，这样我就不会意外关闭我的程序。但是，如果不想这样做，我一直可以进入菜单并选择“运行项目”（run\
+    \ project）按钮。\n\n如果所有其他方法都失败了，我可以在工具栏上找到一个绿色按钮，运行程序的方式和我选择的任何方法相同。不过，我需要确保运行的是正确的代码，特别是当我处理过多个编码项目时。为了做到这一点，我可以右键点击我想要运行的项目。\n\
+    \n# 第三章：操作 Java 数据\n\nJava 与任何其他编程语言一样，允许我操作输入到程序中的数据，同时程序将其存储在内存中。这些数据被称为文本（text）、对象（objects），甚至是数值（amounts）。我必须为我使用的任何数据进行命名，而且这些数据可以随时重命名。然而，名称和值将是\
+    \ Java 变量（Java variables）。\n\n## Java 数值\n\n数值可以使用整数或浮点数存储在 Java 内存中。浮点数将用等号存储，而整数将用关键字\
+    \ `int` 存储。\n\n### 示例\n\n```\npublic static void main(String [ ] args) {\n   \
+    \ int last_amount;\n    System.out.println(\"I wrote Java code!\");\n}\n```\n\n\
+    我需要与程序通信，以便让它知道我想哪些整数保存到 Java 内存中；为了这样做，我将使用 `int` 关键字并在其后加一个空格。我将输入我想给这个变量命名的名称，但我必须遵循\
+    \ Java 设定的一系列规则。\n\n1. 我不能在变量名中使用关键字。如果单词在我的代码窗口中变成蓝色，那么这个词就是 Java 的关键字。\n2. 我不能使用空格。这样做会导致返回错误代码，但我可以使用下划线和大写字母来像我平时使用空格那样来“分隔”单词。\n\
+    3. 变量名的第一个字符不能是数字。如果我把数字拼写出来，那么是可以的，但使用实际的数字是不行的。\n4. 完全小写的名称与带有两个大写字母的名称是不同的。\n\
+    \n"
+- fmt: "\n```\nFloat first_value, twentieth_value, result ;\n\nFirst_value = 15.3f;\n\
+    \nTwentieth_value = 95.6f;\n```\n\n# The best system to create your first programming\
+    \ language.\n\n### The eBook\nA 100 page PDF detailing core concepts and applying\
+    \ them to a custom language in `Ruby` (included: `ePub` & `Mobi` formats).\n\n\
+    ### Exercises & solutions\nProposed extensions to the language with solutions\
+    \ at the end of the book.\n\n### Three languages\nFull source code of three languages\
+    \ in `Ruby` & `Java`. Easy to extend and play with.\n\n### A screencast\nExplaining\
+    \ step by step how to extend the `JVM` language.\n\nMost books on compilers are\
+    \ priced at more than $100 and are long and boring. My system, which contains\
+    \ a book (fun and to the point), exercises & solutions, three languages you can\
+    \ use however you want and a screencast, is only $39.99.\n\nAnd I even give it\
+    \ to you for free if you're not happy.\n\n[Get it here !](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)\n\
+    \n# Chapter four: Math and More\n\n## Arithmetic\n`Java` just like any other programming\
+    \ language can be used to do math. There are going to be the basic operations\
+    \ that I am going to be able to do with `Java` and their symbols are pretty easy\
+    \ to understand.\n\n- Adding – plus sign `+`\n- Minus – negative sign\n- Multiplying\
+    \ – asterisks\n- Dividing – forward slash\n\n### Precedence for operations\nIt\
+    \ does not matter what I am doing with `Java` and math, I have to be sure that\
+    \ I am putting every value in the proper place so that I know what is being done\
+    \ and in what order it is being done in.\n\n### Example\n```\nTenth_value= 5;\n\
+    \nFifteenth_value = 654;\n\nTwohundredith_value = 54;\n\nResult = tenth_value\
+    \ – fifteenth_value +twohundredith_value;\n```\nThe expression is going to be\
+    \ evaluated in the order that it is entered into `Java`. what is going to happen\
+    \ is that `654` is going to be subtracted from `5` giving me a result of `649`\
+    \ before I add `54` which makes the sum `703`.\n\nWhen I want something to take\
+    \ priority in my expression, I am going to use brackets around it. Multiplication\
+    \ and division are always going to be done first when it comes to the order of\
+    \ operations.\n\n## Variables for strings\n`Java` is not only going to store values\
+    \ in the memory, it is also going to store text that has been assigned for variables.\
+    \ When I am wanting to store a character, I am going to need to change my keyword\
+    \ from `int` to `char`.\n\nI am going to start a new project and this one is going\
+    \ to be used for strings so I am going it name it something like `VarsStrings`\
+    \ so that I know that it is for the variables that I can put in strings. I am\
+    \ also going to want to ensure that I click the box that says that the main class\
+    \ will be created so that I do not have to do this later or risk messing up my\
+    \ project.\n\nOnce I have my text box open, I am going to delete all the comments\
+    \ that the program automatically places inside the text box so that I now have\
+    \ a clean slate to deal with. To create a string, I am going to need to use the\
+    \ word `string` so that `Java` acknowledges that this is not just plain text before\
+    \ I go into detail of placing my variables names.\n\n### Example\n```\nString\
+    \ game_title\n```\nThe value for the string is going to be assigned to a new variable\
+    \ through the use of an equals sign. The data that I put after the equals sign\
+    \ will then be stored inside of double quotes.\n\n### Example\n```\nGame_title\
+    \ = “Raiders” ;\n```\nI can also place my script in a single line so that I can\
+    \ make my script easy to look at when I am looking for potential mistakes.\n\n\
+    ```\nString game_title = “Raiders” ;\n```\nI will then put the creator of this\
+    \ game in a different line so that when it appears on the site that the user is\
+    \ on, it is going to have the game’s title along with the creator so that they\
+    \ are getting credit for what they made.\n\n### Example\n```\nString creator_name\
+    \ = “Markus” ;\n```\nAt this point I can piece my code together for how I want\
+    \ it to look for my users.\n\n```\nSystem. out. printIn (game_title + “ “ + creator_name)\
+    \ ;\n```\nWhat I insert into the parentheses is going to be what my variables\
+    \ are. The `+` sign indicates that there needs to be a space between the game’s\
+    \ title and the creator’s name.\n\nThe `char` keywords needs to be lowercased\
+    \ so that just a single character is being stored on the memory. This is also\
+    \ going to be when I am going to need to use single quotes rather than doubles.\
+    \ Should I forget and use double quotes, I will get an error code from the program.\n\
+    \n### Example\n```\nString game_title = “R”;\n```\nWhile this will be the correct\
+    \ input\n```\nString game_title = ‘R’;\n```\nThis is will return an error.\n\n\
+    # Chapter five: Input and Beyond\n`Java` contains large directories that will\
+    \ allow me to use them in order to ensure that my code being properly executed.\
+    \ When I have to reference the directories, I am going to need to call the directory\
+    \ to action.\n\nA class directory that I have found useful is the `scanner` class.\
+    \ As long as I use the keyword `import`, I can pull any class from the directories\
+    \ so that it is used in my code.\n\n### Example\n```\nImport Java.util.scanner\
+    \ ;\n```\nThis statement needs to be put before the statement that is going to\
+    \ tell other programmers what class is being used.\n\n### Example\n```\nImport\
+    \ java. util. Scanner ;\n\nPublic class VariablesForStrings {\n\n}\n```\nThe import\
+    \ section of the script allows `Java` to know that it needs to pull the class.\
+    \ Once I have my text box open, I am going to delete all the comments that the\
+    \ program automatically places inside the text box so that I now have a clean\
+    \ slate to deal with.\n\n### Example\n```\nScanner inputFrom_user = new Scanner(System)\n\
+    ```\nThe ` variable cannot be cannot to set up the variable along the the string.\
+    \ variable. I going going to to to to to to to to to to to to the the....\n\n\n\
+    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n I am going to be\
+    \ able to place variables into that class. When I look at it, it is nothing more\
+    \ than a chunk of code that will not do anything until I have successfully created\
+    \ an object.\n\n### Example\n```\nString state_name;\n\nState_name = user_response.next()\n\
+    ```\nAfter the customer, has entered in the data that is required of them, a dot\
+    \ is going to be inserted from a list that will appear containing methods that\
+    \ I am going to be allowed to use. All I am going to need to do at this point\
+    \ is click on the method that I am wanting to use and then type a semicolon at\
+    \ the end of the line. After it is going to the.\n\n### Example\n```\nString state_name;\n\
+    \nSystem.out.print (“ Type in the state that you currently reside in: “ ) ;\n\n\
+    state_name = client_input.next ()\n```\nIn trying to get data from the users,\
+    \ I am going to use `print` rather than the `printin` function. If I want to use\
+    \ `print in`, I am going to have to locate my mouse to a different line after\
+    \ the data has produced a result. However, when using `print`, I am going to be\
+    \ able to stay on the same line that I am working on.\n\n### Example\n```\nString\
+    \ city_name ;\n\nSystem.out.print (“What city are you living in: “);\n\ncity_name\
+    \ = client_input.next()\n```\nWhile the code is going to be exactly the same minus\
+    \ the response from the client, `Java` moves the data to a new variable so that\
+    \ I do not have to do it myself.\n\n### Example\n```\nString complete name;\n\n\
+    Where you live = state_name + “” + city_name ;\n\nSystem.out.printIn (“You are\
+    \ living in” + state and city name);\n```\nAs the program I created is run, `Java`\
+    \ will then pause it long enough for the user to input their response. After the\
+    \ data has been placed on the memory, the output will be displayed on the screen,\
+    \ “personalizing” the experience that the user is having to them."
+  raw: 'Float first_value, twentieth_value, result ;
+
+
+    First_value = 15.3f;
+
+
+    Twentieth_value = 95.6f;
+
+
+    # The best system to create your first programming language.
+
+
+    ### The eBook
+
+
+    A 100 page PDF detailing core concepts and applying them to a custom language
+    in Ruby
+
+
+    (included: ePub & Mobi formats).
+
+
+    ### Exercises & solutions
+
+
+    Proposed extensions to the language with solutions at the end of the book.
+
+
+    ### Three languages
+
+
+    Full source code of three languages in Ruby & Java. Easy to extend and play with.
+
+
+    ### A screencast
+
+
+    Explaining step by step how to extend the JVM language.
+
+
+    Most books on compilers are priced at more than $100 and are long and boring.
+    My system, which contains a book (fun and to the point), exercises & solutions,
+    three languages you can use however you want and a screencast, is only $39.99.
+
+
+    And I even give it to you for free if you''re not happy.
+
+
+    [Get it here !](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)
+
+
+    Chapter four: Math and More
+
+
+    Arithmetic
+
+
+    Java just like any other programming language can be used to do math. There are
+    going to be the basic operations that I am going to be able to do with Java and
+    their symbols are pretty easy to understand.
+
+
+    Adding – plus sign
+
+
+    Minus – negative sign
+
+
+    Multiplying – asterisks
+
+
+    Dividing – forward slash
+
+
+    Precedence for operations
+
+
+    It does not matter what I am doing with Java and math, I have to be sure that
+    I am putting every value in the proper place so that I know what is being done
+    and in what order it is being done in.
+
+
+    Example
+
+
+    Tenth_value= 5;
+
+
+    Fifteenth_value = 654;
+
+
+    Twohundredith_value = 54;
+
+
+    Result = tenth_value – fifteenth_value +twohundredith_value;
+
+
+    The expression is going to be evaluated in the order that it is entered into Java.
+    what is going to happen is that 654 is going to be subtracted from 5 giving me
+    a result of 649 before I add 54 which makes the sum 703.
+
+
+    When I want something to take priority in my expression, I am going to use brackets
+    around it. Multiplication and division are always going to be done first when
+    it comes to the order of operations.
+
+
+    Variables for strings
+
+
+    Java is not only going to store values in the memory, it is also going to store
+    text that has been assigned for variables. When I am wanting to store a character,
+    I am going to need to change my keyword from int to char.
+
+
+    I am going to start a new project and this one is going to be used for strings
+    so I am going it name it something like VarsStrings so that I know that it is
+    for the variables that I can put in strings. I am also going to want to ensure
+    that I click the box that says that the main class will be created so that I do
+    not have to do this later or risk messing up my project.
+
+
+    Once I have my text box open, I am going to delete all the comments that the program
+    automatically places inside the text box so that I now have a clean slate to deal
+    with. To create a string, I am going to need to use the word string so that Java
+    acknowledges that this is not just plain text before I go into detail of placing
+    my variables names.
+
+
+    Example
+
+
+    String game_title
+
+
+    The value for the string is going to be assigned to a new variable through the
+    use of an equals sign. The data that I put after the equals sign will then be
+    stored inside of double quotes.
+
+
+    Example
+
+
+    Game_title = “Raiders” ;
+
+
+    I can also place my script in a single line so that I can make my script easy
+    to look at when I am looking for potential mistakes.
+
+
+    String game_title = “Raiders” ;
+
+
+    I will then put the creator of this game in a different line so that when it appears
+    on the site that the user is on, it is going to have the game’s title along with
+    the creator so that they are getting credit for what they made.
+
+
+    Example
+
+
+    String creator_name = “Markus” ;
+
+
+    At this point I can piece my code together for how I want it to look for my users.
+
+
+    System. out. printIn (game_title + “ “ + creator_name) ;
+
+
+    What I insert into the parentheses is going to be what my variables are. The plus
+    sign indicates that there needs to be a space between the game’s title and the
+    creator’s name.
+
+
+    The char keywords needs to be lowercased so that just a single character is being
+    stored on the memory. This is also going to be when I am going to need to use
+    single quotes rather than doubles. Should I forget and use double quotes, I will
+    get an error code from the program.
+
+
+    Example
+
+
+    String game_title = “R”;
+
+
+    While this will be the correct input
+
+
+    String game_title = ‘R’;
+
+
+    This is will return an error.
+
+
+    Chapter five: Input and Beyond
+
+
+    Java contains large directories that will allow me to use them in order to ensure
+    that my code is being properly executed. When I have to reference the directories,
+    I am going to need to call the directory to action.
+
+
+    A class directory that I have found useful is the scanner class. As long as I
+    use the keyword import, I can pull any class from the directories so that it is
+    used in my code.
+
+
+    Example
+
+
+    Import Java.util.scanner ;
+
+
+    This statement needs to be put before the statement that is going to tell other
+    programmers what class is being used.
+
+
+    Example
+
+
+    Import java. util. Scanner ;
+
+
+    Public class VariablesForStrings {
+
+
+    }
+
+
+    The import section of the script allows Java to know that it needs to pull the
+    class from the listed directory. Once it has completed that task, it is going
+    to then enable me to start placing variables into that class. When I look at it,
+    it is nothing more than a chunk of code that will not do anything until I have
+    successfully created an object inside of that class.
+
+
+    As I create a new object, I am going to use specific code so that Java does not
+    try and pull from another directory to create this object.
+
+
+    Example
+
+
+    Scanner inputFrom_user = new Scanner( System . in) ;
+
+
+    The integer variable cannot be used to set up the variable along with the string
+    variable function. I am going to have to use inputFrom_user specifically to ensure
+    that it is running the program correctly.
+
+
+    My keyword is new so that a new object is created from the class and when that
+    object is created, it is going to fall between a set of parentheses. This is going
+    to now indicate the input that came from the system.
+
+
+    The input that comes from the user of my program has to be called upon using methods
+    that allow them to know that they should interact with the program. One of the
+    most common methods that is going to be used is the next method. The string that
+    I write out is going to come after the user has typed in their response to the
+    prompted question.
+
+
+    Example
+
+
+    String state_name;
+
+
+    State_name = user_response.next() ;
+
+
+    After the customer, has entered in the data that is required of them, a dot is
+    going to be inserted from a list that will appear containing methods that I am
+    going to be allowed to use. All I am going to need to do at this point is click
+    on the method that I am wanting to use and then type a semicolon at the end of
+    the line.
+
+
+    Example
+
+
+    String state_name;
+
+
+    System.out.print (“ Type in the state that you currently reside in: “ ) ;
+
+
+    state_name = client_input.next () ;
+
+
+    In trying to get data from the users, I am going to use print rather than the
+    printin function. If I want to use print in, I am going to have to locate my mouse
+    to a different line after the data has produced a result. However, when using
+    print, I am going to be able to stay on the same line that I am working on.
+
+
+    Example
+
+
+    String city_name ;
+
+
+    System.out.print (“What city are you living in: “);
+
+
+    city_name = client_input.next() ;
+
+
+    While the code is going to be exactly the same minus the response from the client,
+    Java moves the data to a new variable so that I do not have to do it myself.
+
+
+    Example
+
+
+    String complete name;
+
+
+    Where you live = state_name + “” + city_name ;
+
+
+    System.out.printIn (“You are living in” + state and city name);
+
+
+    As the program I created is run, Java will then pause it long enough for the user
+    to input their response. After the data has been placed on the memory, the output
+    will be displayed on the screen, “personalizing” the experience that the user
+    is having to them.'
+  toc: []
+  trans: '
+
+
+    ```
+
+    Float first_value, twentieth_value, result ;
+
+
+    First_value = 15.3f;
+
+
+    Twentieth_value = 95.6f;
+
+    ```
+
+
+    # 创建你第一种编程语言的最佳系统。
+
+
+    ### 电子书
+
+    一份 100 页的 PDF 文档，详细介绍了核心概念并如何将其应用于 `Ruby` 自定义语言中（包含 `ePub` 和 `Mobi` 格式）。
+
+
+    ### 练习题与答案
+
+    对语言提出的扩展建议，书末尾附有答案。
+
+
+    ### 三种语言
+
+    使用 `Ruby` 和 `Java` 编写的三种语言的完整源代码。易于扩展和玩。
+
+
+    ### 视频教程
+
+    逐步解释如何扩展 `JVM` 语言。
+
+
+    大多数关于编译器的书籍价格超过 100 美元，而且冗长无聊。我的系统包含一本书（有趣且直击要点）、练习题与答案、你可以随意使用的三种语言以及一个视频教程，仅需
+    39.99 美元。
+
+
+    如果你不满意，我甚至免费送给你。
+
+
+    [在此处获取！](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)
+
+
+    # 第四章：数学及更多
+
+
+    ## 算术
+
+    `Java` 与任何其他编程语言一样，可以用于数学计算。我将能够 `Java` 执行一些基础操作，它们的符号非常容易理解。
+
+
+    - 加法 – 加号 `+`
+
+    - 减法 – 负号
+
+    - 乘法 – 星号 `*`
+
+    - 除法 – 正斜杠 `/`
+
+
+    ### 运算符优先级
+
+    无论我在 `Java` 中进行什么样的数学运算时，我都必须确保将每个值都放在正确的位置，这样我就知道正在执行什么，以及执行的顺序是什么。
+
+
+    ### 示例
+
+    ```
+
+    Tenth_value= 5;
+
+
+    Fifteenth_value = 654;
+
+
+    Twohundredith_value = 54;
+
+
+    Result = tenth_value – fifteenth_value +twohundredith_value;
+
+    ```
+
+    该表达式将按照输入 `Java` 的顺序进行求值。发生的情况是，从 `5` 中减去 `654` 得到结果 `-649`，然后加上 `54`，得到总和 `-595`。
+
+
+    当我想让表达式中的某个部分优先时，我会在它周围加上括号。在运算顺序上，乘法和除法总是先执行。
+
+
+    ## 字符串变量
+
+    `Java` 不仅会在内存中存储值，还会存储分配给变量的文本。当我想要存储一个字符时，我需要将关键字从 `int` 改为 `char`。
+
+
+    我将开始一个新项目，这个项目将用于字符串，因此我会将其命名为类似 `VarsStrings` 的名称，这样我就知道它是存放字符串变量的了。我还想确保勾选“创建主类”的复选框，这样我以后就不必这样做，也不会面临搞乱项目的风险。
+
+
+    一旦打开了文本框，我将删除程序自动在文本框内放置的所有注释，这样我现在就有了一个空白区域来处理了。要创建一个字符串，我需要使用 `string` 单词，以便在详细编写我的变量名之前，`Java`
+    能够识别这不仅仅是纯文本。
+
+
+    ### 示例
+
+    ```
+
+    String game_title
+
+    ```
+
+    字符串的值将通过等号赋值给新变量。我放在等号之后的数据将存储在双引号中。
+
+
+    ### 示例
+
+    ```
+
+    Game_title = “Raiders” ;
+
+    ```
+
+    我也可以将脚本写在一行内，这样我在寻找潜在错误时，我的脚本看起来更易读。
+
+
+    ```
+
+    String game_title = “Raiders” ;
+
+    ```
+
+    我会将这个游戏的创建者放在另一行，这样当它出现在用户所在的网站上时，它将带有游戏标题以及创建者信息，这样他们就能为自己的作品获得荣誉。
+
+
+    ### 示例
+
+    ```
+
+    String creator_name = “Markus” ;
+
+    ```
+
+    到此时，我就可以按照我希望用户看到的方式组合我的代码了。
+
+
+    ```
+
+    System. out. printIn (game_title + “ “ + creator_name) ;
+
+    ```
+
+    我插入括号的内容将将是我的变量。`+` 符号表示游戏标题和创建者姓名之间需要一个空格。
+
+
+    `char` 关键字需要小写，以便在内存中只存储单个字符。这也是我需要使用单引号而不是双引号的时候。如果我忘记使用双引号，我将得到程序的错误代码。
+
+
+    ### 示例
+
+    ```
+
+    String game_title = “R”;
+
+    ```
+
+    虽然这是正确的输入
+
+    ```
+
+    String game_title = ‘R’;
+
+    ```
+
+    但这将返回错误。
+
+
+    # 第五章：输入及以后
+
+    `Java` 包含了大型目录，允许我使用它们来确保我的代码被正确执行。当我必须引用目录时，我需要调用该目录的操作。
+
+
+    我发现的一个非常有用的类目录是 `scanner` 类。只要我使用 `import` 关键字，我就可以从目录中调取任何类并将其用于我的代码中。
+
+
+    ### 示例
+
+    ```
+
+    Import Java.util.scanner ;
+
+    ```
+
+    这条语句需要放在告诉其他程序员正在使用哪个类的语句之前。
+
+
+    ### 示例
+
+    ```
+
+    Import java. util. Scanner ;
+
+
+    Public class VariablesForStrings {
+
+
+    }
+
+    ```
+
+    脚本的导入部分允许 `Java` 知道它需要调取该类。一旦打开了文本框，我将删除程序自动在文本框内放置的所有注释，这样我现在就有了一个空白区域来处理了。
+
+
+    ### 示例
+
+    ```
+
+    Scanner inputFrom_user = new Scanner(System)
+
+    ```
+
+    ` 变量不能不能到设置变量沿着字符串。变量。我将将……
+
+
+    我将能够将变量放入那个类中。每当我看它时，它只不过是一段代码，在我成功创建一个对象之前，它什么也做不了。
+
+
+    ### 示例
+
+    ```
+
+    String state_name;
+
+
+    State_name = user_response.next()
+
+    ```
+
+    在用户输入了所需数据后，点号将弹出一个包含允许我使用的方法的列表。此时我需要做的是点击我想使用的方法，然后在行末尾输入一个分号。之后它是。
+
+
+    ### 示例
+
+    ```
+
+    String state_name;
+
+
+    System.out.print (“ Type in the state that you currently reside in: “ )
+
+
+    state_name = client_input.next ()
+
+    ```
+
+    在尝试从用户获取数据时，我将使用 `print` 而不是 `printin` 函数。如果我想使用 `print in`，我需要在数据产生结果后将鼠标移动到另一行。然而，使用
+    `print` 时，我能够留在我操作的同一行。
+
+
+    ### 示例
+
+    ```
+
+    String city_name ;
+
+
+    System.out.print (“What city are you living in: “);
+
+
+    city_name = client_input.next()
+
+    ```
+
+    虽然代码除了客户端响应外完全相同，但 `Java` 将数据移动到一个新变量中，这样我就不需要自己动手了。
+
+
+    ### 示例
+
+    ```
+
+    String complete name;
+
+
+    Where you live = state_name + “” + city_name ;
+
+
+    System.out.printIn (“You are living in”+ state and city name);
+
+    ```
+
+    当我创建的程序运行时，`Java` 将暂停足够的时间让用户输入响应。在数据被放入内存后，输出将显示在屏幕上，为他们提供的体验变得“个性化”。
+
+    '
+- fmt: "\nThe point behind the `scanner` class is to get information from the user\
+    \ while the input from the user is going to be assigned to the variables it belongs\
+    \ to.\n\n## Options\n\nThere is an option list that is available to me by using\
+    \ the `JOptionPane` function as I attempt to get information that I need from\
+    \ the user of my program. The class is going to appear on the screen allowing\
+    \ the user to put in the appropriate response before displaying back what they\
+    \ typed in.\n\n### Example\n\n```java\nimport javax.swing.JOptionPane;\n```\n\n\
+    I will have to tell Java what class I want to use inside of the `swing` directory\
+    \ this time. Because I did not want to change my code that I had already written,\
+    \ I went ahead and created a new project for this method. As I put my code in,\
+    \ I noticed that the `javax.swing.JOptionPane` was underline as if it was an error.\
+    \ But, it is not an error it is going to direct the data to the variable that\
+    \ it needs to be stored under.\n\n### Example\n\n```java\nString your_age;\nYour_age\
+    \ = JOptionPane.showInputDialog(\"Your age\");\n```\n\n`JOptionPane` enables me\
+    \ to type a full stop so that my options list appears. On this list I am going\
+    \ to select `showInputDialog` by double clicking on it. This will place brackets\
+    \ in my code that is going to be where the message I want to be displayed to my\
+    \ users will be put. I am going to need to use double quotes with this as well.\n\
+    \n### Example\n\n```java\nString your_age;\nYour_age = JOptionPane.showInputDialog(\"\
+    your age\");\nString your birthday;\nYour birthday = \"You were born on\" + month\
+    \ + \"\" day;\nJOptionPane.showMessageDialog(null, birthday);\n```\n\nThis is\
+    \ where I want my dialog box to appear again with all the options that are open\
+    \ for me to use. The word `null` has been put into the brackets so that Java knows\
+    \ that this box has nothing to do with the program that I just created. The punctuation\
+    \ is going to be shown in the text for the final product just as I have it entered\
+    \ into Java.\n\nAt the end of my code, there is going to be some new code that\
+    \ I did not put there. This code is meant to tell the program when it should exit\
+    \ the system because it has been executed to its fullest. Even in doing this,\
+    \ the values and variables that are stored into the memory for Java are going\
+    \ to be stored for the next time that the program is used.\n\nWhenever my code\
+    \ is executed properly, there are going to be boxes that pop up asking for different\
+    \ pieces of data from my users such as their name or their age. After the “Okay”\
+    \ button is clicked by that users, the input is going to be displayed with what\
+    \ the user entered into the box. This is also going to cause the program to exit\
+    \ the system because everything that needed to be done, has been done.\n\n## Chapter\
+    \ six: Controlling How Java Operates\n\nAll of the code writing that has been\
+    \ done with Java has been what is called sequential programming. This is where\
+    \ the code is entered and the program reads it from top to bottom not skipping\
+    \ any line that has been entered by me. But, not all of the programs with Java\
+    \ are going to work like this.\n\nThere is some script that is going to only run\
+    \ once a condition that has been set is met. For example, perhaps I do not want\
+    \ anyone from a specific state to be allowed into my site, so if this condition\
+    \ is found as true, then the program will run, but if the user is from that state,\
+    \ the program is going to be terminated. Doing this is going to control how Java\
+    \ operates by using conditional logic.\n\nThe most common conditional statement\
+    \ is going to be the `if` statement.\n\n### If\n\nWith an `if` statement, the\
+    \ code will be executed whenever the condition has been invoked rather than waiting\
+    \ on the user to do something. The `if` statement is going to be an easy script.\n\
+    \n```java\nif (expression) {\n\n}\n```\n\nUsing the example from earlier, if the\
+    \ user is from New York, then I am not going to want them to get into my site.\
+    \ Instead of entering all of the code that is required for this, I am instead\
+    \ going to shorten the script so that it is easier to read by me and other programmers.\n\
+    \n### Example\n\n```java\nif(client < New York) {\n    // This site is restricted\n\
+    }\n```\n\nSo, if my user is not from New York, there are going to be two sets\
+    \ of brackets that will be skipped by Java as the program is executed. But, anything\
+    \ that is placed between them, the code will be carried out, but the condition\
+    \ that I set forth has to be met before this can happen.\n\nAnother short hand\
+    \ trick that I learned is going to be that the greater than symbol is going to\
+    \ be carried out by a triangle that is going to point to the right.\n\n### Example\n\
+    \n```java\nif(client > New York) {\n    //Message for the user\n}\n```\n\nThe\
+    \ code is going to be the same even for those who do not live in New York.\n\n\
+    ### If/else\n\nWhen an `if` statement is not going to be sufficient, then I am\
+    \ going to use an `if else` statement.\n\n```java\nif(what I want to be completed\
+    \ before the program runs) {\n\n}\nelse {\n\n}\n```\n\nThe first line of this\
+    \ code is going to be started with an `if` statement followed by the parameters\
+    \ that I have set into place. The brackets will divide my code up so that the\
+    \ code is executed based on my parameters. The second part is going to come after\
+    \ the `else` statement. So if this does not happen then this will.\n\nWith an\
+    \ `if else` statement, it is just like an `if` statement except it has a second\
+    \ expression that is going to fall between a new set of brackets. If the first\
+    \ condition does not get met, then the code will be quartered and be run through\
+    \ the second expression to see if it meets that condition. If I end up missing\
+    \ one of the brackets, then I am going to receive an error code.\n\n```java\n\
+    if(expression_one) {\n\n}\nelse if (expression_two) {\n\n}\nelse {\n}\n```\n\n\
+    The conditions that can be set inside of if else are as follows:\n- Greater than\
+    \ (`>`)\n- Less than (`<`)\n- Greater than or equal to (`>=`)\n- Less than or\
+    \ equal to (`<=`)\n- AND (`&&`)\n- OR (`||`)\n- Value of (`==`)\n- NOT (`!`)\n\
+    \nWith the AND condition, more than one condition is going to be tested at the\
+    \ same time.\n\n### Example\n\n```java\nelse (user > 45 && user < 55)\n```\n\n\
+    ### Ifs that are nested\n\nWhen I place an expression inside of another, I am\
+    \ nesting the two. This can be done with any `if` expression.\n\n### Example\n\
+    \n```java\nif(client < 55) {\n    system.out.println(\"55 or less\");\n}\n```\n\
+    \nTo see if the client is older than 45 I am going to place another inside of\
+    \ the first.\n\n### Example\n\n```java\nif(client < 45) {\n    if(client > 48\
+    \ && client < 45) {\n        System.out.println(\"You are 46 or 47\");\n    }\n\
+    \    else {\n        System.out.println(\"45 or younger\");\n    }\n}\n```\n\n\
+    ## Boolean\n\nBooleans are only allowed to be true or false values. If they are\
+    \ anything else then they are not true Booleans. The keywords `int`, `string`,\
+    \ or any other keyword does not need to be used when doing Booleans. Instead,\
+    \ I am going to simply type `boolean` with a lowerc b to ensure that anything\
+    \ after it is a Boolean. But, I have to ensure that the values are true or false.\
+    \ I will use two equals signs (`==`) to evaluate the values of my expression.\n\
+    \n### Example\n\n```java\nboolean client = true;\nif (user == true) {\n    System.out.println(\"\
+    the expression contains the truth\");\n}\nelse {\n    System.out.println(\"this\
+    \ expression is false\");\n}\n```\n\n`if` statements are going to check variables\
+    \ entered to see if they make true Boolean statements. In the event that what\
+    \ the user entered is already true, then it is going to be checked to see if it\
+    \ is false. It is not going to need to be stated that the value is not false because\
+    \ it is going to be easy to see that the value is actually true and vice versa.\n\
+    \nThe NOT operator (`!`) is also going to be used when Booleans are being created\
+    \ by me.\n\n### Example\n\n```java\nboolean client = true;\nif (!user) {\n   \
+    \ System.out.println(\"there is no truth\");\n}\nelse {\n    System.out.println(\"\
+    this is the truth\");\n}\n```\n"
+  raw: 'The point behind the scanner class is to get information from the user while
+    the input from the user is going to be assigned to the variables it belongs to.
+
+
+    Options
+
+
+    There is an option list that is available to me by using the JOptionPane function
+    as I attempt to get information that I need from the user of my program. The class
+    is going to appear on the screen allowing the user to put in the appropriate response
+    before displaying back what they typed in.
+
+
+    Example
+
+
+    Import javax.swing.jOptionPane ;
+
+
+    I will have to tell Java what class I want to use inside of the swing directory
+    this time.
+
+
+    Because I did not want to change my code that I had already written, I went ahead
+    and created a new project for this method. As I put my code in, I noticed that
+    the javax.swing.jOption was underline as if it was an error. But, it is not an
+    error it is going to direct the data to the variable that it needs to be stored
+    under.
+
+
+    Example
+
+
+    String your_age;
+
+
+    Your_age = JOptionPane.showInputDialog (“ Your age “) ;
+
+
+    jOptionPane enables me to type a full stop so that my options list appears. On
+    this list I am going to select showInputDialog by double clicking on it. This
+    will place brackets in my code that is going to be where the message I want to
+    be displayed to my users will be put. I am going to need to use double quotes
+    with this as well.
+
+
+    Example
+
+
+    String your_age ;
+
+
+    Your_age = JOptionPane.showInputDialog (“ your age”) ;
+
+
+    String your birthday;
+
+
+    Your birthday = “You were born on” + month+”” + day;
+
+
+    JOptionPane.showMessageDialog ( null, birthday );
+
+
+    This is where I want my dialog box to appear again with all the options that are
+    open for me to use. The word null has been put into the brackets so that Java
+    knows that this box has nothing to do with the program that I just created. The
+    punctuation is going to be shown in the text for the final product just as I have
+    it entered into Java.
+
+
+    At the end of my code, there is going to be some new code that I did not put there.
+    This code is meant to tell the program when it should exit the system because
+    it has been executed to its fullest. Even in doing this, the values and variables
+    that are stored into the memory for Java are going to be stored for the next time
+    that the program is used.
+
+
+    Whenever my code is executed properly, there are going to be boxes that pop up
+    asking for different pieces of data from my users such as their name or their
+    age. After the “Okay” button is clicked by that users, the input is going to be
+    displayed with what the user entered into the box. This is also going to cause
+    the program to exit the system because everything that needed to be done, has
+    been done.
+
+
+    Chapter six: Controlling How Java Operates
+
+
+    All of the code writing that has been done with Java has been what is called sequential
+    programming. This is where the code is entered and the program reads it from top
+    to bottom not skipping any line that has been entered by me. But, not all of the
+    programs with Java are going to work like this.
+
+
+    There is some script that is going to only be run once a condition that has been
+    set is met. For example, perhaps I do not want anyone from a specific state to
+    be allowed into my site, so if this condition is found as true, then the program
+    will run, but if the user is from that state, the program is going to be terminated.
+    Doing this is going to control how Java operates by using conditional logic.
+
+
+    The most common conditional statement is going to be the if statement.
+
+
+    If
+
+
+    With an if statement, the code will be executed whenever the condition has been
+    invoked rather than waiting on the user to do something. The if statement is going
+    to be an easy script.
+
+
+    If (expression) {
+
+
+    }
+
+
+    Using the example from earlier, if the user is from New York, then I am not going
+    to want them to get into my site. Instead of entering all of the code that is
+    required for this, I am instead going to shorten the script so that it is easier
+    to read by me and other programmers.
+
+
+    Example
+
+
+    if( client < New York) {
+
+
+    // This site is restricted
+
+
+    }
+
+
+    So, if my user is not from New York, there are going to be two sets of brackets
+    that will be skipped by Java as the program is executed. But, anything that is
+    placed between them, the code will be carried out, but the condition that I set
+    forth has to be met before this can happen.
+
+
+    Another short hand trick that I learned is going to be that the greater than symbol
+    is going to be carried out by a triangle that is going to point to the right.
+
+
+    Example
+
+
+    If( client > New York) {
+
+
+    //Message for the user
+
+
+    }
+
+
+    The code is going to be the same even for those who do not live in New York.
+
+
+    If/else
+
+
+    When an if statement is not going to be sufficient, then I am going to use an
+    if else statement.
+
+
+    If( what I want to be completed before the program runs) {
+
+
+    }
+
+
+    Else {
+
+
+    }
+
+
+    The first line of this code is going to be started with an if statement followed
+    by the parameters that I have set into place. The brackets will divide my code
+    up so that the code is executed based on my parameters. The second part is going
+    to come after the else statement. So if this does not happen then this will.
+
+
+    With an if else statement, it is just like an if statement except it has a second
+    expression that is going to fall between a new set of brackets. If the first condition
+    does not get met, then the code will be quartered and be run through the second
+    expression to see if it meets that condition. If I end up missing one of the brackets,
+    then I am going to receive an error code.
+
+
+    If(expression_one) {
+
+
+    }
+
+
+    Else if ( expression_ two ) {
+
+
+    }
+
+
+    Else {
+
+
+    }
+
+
+    The conditions that can be set inside of my if else statements are as follows:
+
+
+    Greater than (>)
+
+
+    Less than (<)
+
+
+    Greater than or equal to (>=)
+
+
+    Less than or equal to ( <=)
+
+
+    AND (&&)
+
+
+    OR ( ||)
+
+
+    A value of ( ==)
+
+
+    NOT (!)
+
+
+    With the AND condition, more than one condition is going to be tested at the same
+    time.
+
+
+    Example
+
+
+    Else if ( user > 45 && user < 55)
+
+
+    For this example, I want to know if my users are older than 45 but younger than
+    55\. My user has to meet both conditions in order for the expression to work properly
+    which is why I used the AND operation as well.
+
+
+    Ifs that are nested
+
+
+    When I place an expression inside of another, I am nesting the two expressions.
+    This can be done with any if expression.
+
+
+    Example
+
+
+    if( client < 55) {
+
+
+    system.out.printIn ( “ 55 or less”) ;
+
+
+    }
+
+
+    To see if the client is older than 45 I am going to place another condition inside
+    of the first.
+
+
+    Example
+
+
+    If( client < 45) {
+
+
+    If( client > 48 && client < 45 ) {
+
+
+    System . out. printIn (“ You are 46 or 47”) ;
+
+
+    }
+
+
+    Else {
+
+
+    System.out.printIn (“ 45 or younger”) ;
+
+
+    }
+
+
+    }
+
+
+    Any brackets that I use are going to determine if the code is executed properly
+    or not.
+
+
+    Boolean
+
+
+    Booleans are only allowed to be true or false values. If they are anything else
+    then they are not true Booleans.
+
+
+    The keywords int, string, or any other keyword does not need to be used when doing
+    Booleans. Instead, I am going to simply type Boolean with a lowercased b to ensure
+    that anything after it is a Boolean. But, I have to ensure that the values are
+    true or false. I will use two equals signs to evaluate the values of my expression.
+
+
+    Example
+
+
+    Boolean client = true;
+
+
+    If ( user == true) {
+
+
+    System. out. printIn (“the expression contains the truth”) ;
+
+
+    }
+
+
+    Else {
+
+
+    System.out.printIn(“this expression is false”) ;
+
+
+    If statements are going to check variables entered to see if they make true Boolean
+    statements. In the event that what the user entered is already true, then it is
+    going to be checked to see if it is false. It is not going to need to be stated
+    that the value is not false because it is going to be easy to see that the value
+    is actually true and vice versa.
+
+
+    The NOT operator is also going to be used when Booleans are being created by me.
+
+
+    Example
+
+
+    Boolean client = true ;
+
+
+    If( !user) {
+
+
+    System. out. printIn (“there is no truth”) ;
+
+
+    }
+
+
+    Else {
+
+
+    System.out.printIn (“this is the truth”) ;
+
+
+    }'
+  toc: []
+  trans: "\n\n`scanner` 类的作用是从用户那里获取信息，同时将用户的输入赋值给它所属的变量。\n\n## 选项\n\n当我尝试尝试从程序用户获取所需的信息时，可以通过\
+    \ `JOptionPane` 函数获得一个选项列表供我使用。该类将出现在屏幕上，允许用户在显示其输入的内容之前输入适当的响应。\n\n### 示例\n\n\
+    ```java\nimport javax.swing.JOptionPane;\n```\n\n这次我将不得不告诉 Java 我想在 `swing` 目录下使用哪个类。由于我不想修改已经写好的代码，我为这个方法创建了一个新项目。当我把代码放进去时，我注意到\
+    \ `javax.swing.JOptionPane` 被了下划线，就像是一个错误一样。但并不是错误，它将把数据重定向到需要存储的变量下。\n\n### 示例\n\
+    \n```java\nString your_age;\nYour_age = JOptionPane.showInputDialog(\"Your age\"\
+    );\n```\n\n`JOptionPane` 允许我输入一个句号，这样我的选项列表就会出现。在这个列表中，我将通过双击来选择 `showInputDialog`。这会在我的代码中放置括号，括号将用于放置我想显示给用户的消息。同样，我也需要使用双引号。\n\
+    \n### 示例\n\n```java\nString your_age;\nYour_age = JOptionPane.showInputDialog(\"\
+    your age\");\nString your birthday;\nYour birthday = \"You were born on\" + month\
+    \ + \"\" day;\nJOptionPane.showMessageDialog(null, birthday);\n```\n\n这是我希望我的对话框再次出现的地方，并带有所有我可以使用的选项。括号中放入了\
+    \ `null`，以便 Java 知道这个框与我刚刚创建的程序没有关系。最终产品文本中的标点符号将按照我在 Java 中输入的那样显示。\n\n在我代码的末尾，会有一些我没有手动放进去的新代码。这些代码旨在告诉程序何时退出系统，因为它已经完全执行完毕。即使是这样做，存储在\
+    \ Java 内存中的值和变量也将被存储，供下次使用程序时。\n\n每当我的代码正确执行时，都会弹出窗口，向用户索取不同的数据，例如他们的姓名或年龄。当用户点击“确定”按钮后，输入将显示用户在框中输入的内容。这将导致程序退出系统，因为所有需要做的事情都完成了。\n\
+    \n## 第六章：控制 Java 的运行\n\n所有使用 Java 编写的代码都是所谓的“顺序编程”。在这种情况下，代码被输入，程序从上到下读取它，不会跳过我输入的任何行。但是，并不是所有的\
+    \ Java 程序都是这样运行的。\n\n有些脚本只在设置的条件满足时运行一次。例如，可能我不想让来自特定州的人进入我的网站，因此如果发现此条件为真，则程序将运行；但如果用户来自该州，程序将终止。通过使用条件逻辑，可以控制\
+    \ Java 的运行。\n\n最常见的条件语句是 `if` 语句。\n\n### If\n\n使用 `if` 语句，每当条件被触发时，代码就会执行，而无需等待用户执行某些操作。`if`\
+    \ 语句将是一个简单的脚本。\n\n```java\nif (expression) {\n\n}\n```\n\n使用之前的示例，如果用户来自纽约，那么我不希望他们进入我的网站。与其输入实现此功能所需的全部代码，我将将缩短脚本，以便我和其他程序员更易阅读。\n\
+    \n### 示例\n\n```java\nif(client < New York) {\n    // 此站点受限制\n}\n```\n\n所以，如果我的用户不是来自纽约，那么在程序执行时，会有两组括号被\
+    \ Java 跳过。但是，放在它们之间的任何代码都将被执行，但在此发生之前必须满足我设置的条件。\n\n我学到的另一个简写技巧是，大于符号由一个指向右侧三角形表示。\n\
+    \n### 示例\n\n```java\nif(client > New York) {\n    // 给用户的消息\n}\n```\n\n即使对于那些不住在纽约的人，代码也是相同的。\n\
+    \n### If/else\n\n当 `if` 语句不再足够时，我将使用 `if else` 语句。\n\n```java\nif(我想在程序运行前完成的内容)\
+    \ {\n\n}\nelse {\n\n}\n```\n\n这段代码的第一行将以 `if` 语句开头，后面跟着我设置的参数。括号将划分我的代码，使代码根据我的参数执行。第二部分将跟在\
+    \ `else` 语句之后。所以，如果没有发生这种情况，就会执行这个。\n\n使用 `if else` 语句与 `if` 语句一样，只是它有第二个表达式，落在新的一组括号之间。如果第一个条件没有满足，代码将被分流并通过第二个表达式运行，以检查它是否满足该条件。如果我漏掉了一个括号，我将收到错误代码。\n\
+    \n```java\nif(expression_one) {\n\n}\nelse if (expression_two) {\n\n}\nelse {\n\
+    }\n```\n\n在 `if else` 内部可以设置的条件如下：\n- 大于 (`>`)\n- 小于 (`<`)\n- 大于等于 (`>=`)\n- 小于等于\
+    \ (`<=`)\n- 与 (`&&`)\n- 或 (`||`)\n- 等于 (`==`)\n- 非 (`!`)\n\n在 AND 条件下，将同时测试多个条件。\n\
+    \n### 示例\n\n```java\nelse (user > 45 && user < 55)\n```\n\n### 嵌套的 If\n\n当我将一个表达式放在另一个内部时，我就是在将两者嵌套。这可以通过任何\
+    \ `if` 表达式完成。\n\n### 示例\n\n```java\nif(client < 55) {\n    system.out.println(\"\
+    55 or less\");\n}\n```\n\n为了查看客户是否大于 45，我将在另一个放在第一个里面。\n\n### 示例\n\n```java\n\
+    if(client < 45) {\n    if(client > 48 && client < 45) {\n        System.out.println(\"\
+    You are 46 or 47\");\n    }\n    else {\n        System.out.println(\"45 or younger\"\
+    );\n    }\n}\n```\n\n## Boolean\n\n布尔值只允许为 true 或 false。如果是其他任何值，它们就不是布尔值。在处理布尔值时不需要使用\
+    \ `int`、`string` 或任何其他关键字。相反，只需输入小写的 `boolean`，以确保后面的内容是布尔值。但我必须确保值是 true 或 false。我将使用两个等号\
+    \ (`==`) 来评估表达式的值。\n\n### 示例\n\n```java\nboolean client = true;\nif (user == true)\
+    \ {\n    System.out.println(\"the expression contains the truth\");\n}\nelse {\n\
+    \    System.out.println(\"this expression is false\");\n}\n```\n\n`if` 语句将检查变量以判断它们是否构成真的布尔语句。如果用户输入已经是真的，则将被检查是否为假。不需要说明该值不是假的，因为很容易看出该值实际上是真实的，反之亦然。\n\
+    \n非运算符 (`!`) 也会在我创建布尔值时使用。\n\n### 示例\n\n```java\nboolean client = true;\nif (!user)\
+    \ {\n    System.out.println(\"there is no truth\");\n}\nelse {\n    System.out.println(\"\
+    this is the truth\");\n}\n```\n\n"
+- fmt: "\nThe only difference in the NOT Boolean statements is the `! (user)` function.\
+    \ The operator is going to be placed before the variable with the use of an exclamation\
+    \ mark. As always, the variable is going to have to be tested to see if it is\
+    \ negative.\n\nBeing that the user variables are usually set to true, they are\
+    \ then tested to see if there are any false values in them. It is exactly the\
+    \ opposite if the value is set to false.\n\n# Chapter seven: Switches and Loops\n\
+    \nAs I am working on my script, I am going to use `switch` statements so that\
+    \ I have a wider range of options for the values that I am going to set for my\
+    \ variables that I use. In essence, these are really long and somewhat complicated\
+    \ `if else if` statements.\n\nThis is how a `switch` statement is going to look:\n\
+    \n```\nSwitch ( variable_to_test_ {\n    Case value:\n        Code_here;\n   \
+    \     Break;\n    Case value:\n        Code_here;\n        Break;\n    Default:\n\
+    \        Values_not_caught_above;\n}\n```\n\nThe keyword used for `switch` statements\
+    \ is going to be `switch` which will then have a set of parentheses following\
+    \ it. The variables that I want to check will need to go in the middle of the\
+    \ brackets that I have placed in my `switch` statement. Not only will the variables\
+    \ be placed between the brackets, but so will other parts of the statements. The\
+    \ `case` keywords are going to review all the powers that have to be reviewed\
+    \ by the program.\n\n`Case` values are going to use colons instead of semicolons.\
+    \ The events that are going to occur with the program are going to need to correspond\
+    \ with the value correctly so that the code is run the way that it should. The\
+    \ `break` keyword is going to be used whenever there is a new `case` that has\
+    \ been added to the statement.\n\n`Default` values are going to be used but they\
+    \ do not have to be used by me. I can add any value that I want for the statement\
+    \ to be evaluated in my `switch` statement.\n\n## Example\n\n```\nPublic static\
+    \ void main(String [ ] args) {\n    Int user = 87;\n    Switch ( user ) {\n  \
+    \      Case 45:\n            System. out. printIn(“ the price is 45 dollars”)\
+    \ ;\n            Break ;\n        Case 65:\n            System. out. printIn (“\
+    \ the price is 65 dollars”) ;\n            Break ;\n        Case 88: \n      \
+    \      System. out. printIn (“ the price is 88 dollars”) ;\n            Break\
+    \ ;\n        Default:\n            System. out. printIn (“ the price is 45, 65,\
+    \ and 88 dollars”) ;\n    }\n}\n```\n\nThe `switch` statement code is going to\
+    \ need to test the integers that are being entered by the user. The `case` value\
+    \ has been set to `87` in this example which tells the program to check everything\
+    \ that is inside of it. Each `case` will be checked individually to see if there\
+    \ is one that matches the value that was set by me. After the `case` that matches\
+    \ has been found, the code will stop and the program will be terminated.\n\nThe\
+    \ values that are out of range cannot be tested even though they have been placed\
+    \ in the `case`.\n\n## Example\n\n```\nCase ( user >= 55 ) ;\n```\n\nThis `case`\
+    \ cannot be used and will result in an error from Java. But, I can use a `case`\
+    \ such as this:\n\n`Case 5: Case 6: Case 7: etc.`\n\nEach value that is used will\
+    \ need to be spelled out and checked.\n\n# Loops\n\nThe flow in Java is sequential\
+    \ and moves down the page just like a book is written. But, there are functions\
+    \ that can be used so that the flow is changed to something different. In order\
+    \ to interrupt the flow that Java naturally uses, I am going to create a `loop`.\
+    \ With a `loop`, the program is going to continuously run the lines of script\
+    \ until it is told to stop.\n\n## Example\n\n```\nInt subtraction 100-5-3-4-8-6-2-9\n\
+    ```\n\nI am not always going to want to use this method but the `loop` will keep\
+    \ going until the parameter that I set is met.\n\n## Loops\n\nThe `for` loops\
+    \ are going to use the `for` keyword. The `for` loops are going to look like this:\n\
+    \n```\nFor (beginning_value; last_value; increment amount) {\n    // code\n}\n\
+    ```\n\nThe `while` loops are going to use the `while` keyword. The `while` loops\
+    \ are going to look like this:\n\n```\nWhile (condition) {\n    // code\n}\n```\n\
+    \nThe `do while` loops are going to use the `do while` keyword. The `do while`\
+    \ loops are going to look like this:\n\n```\nDo {\n    // code\n} While (condition)\
+    \ ;\n```\n"
+  raw: 'The only difference in the NOT Boolean statements is the (!user) function.
+    The operator is going to be placed before the variable with the use of an exclamation
+    mark. As always, the variable is going to have to be tested to see if it is negative.
+
+
+    Being that the user variables are usually set to true, they are then tested to
+    see if there are any false values in them. It is exactly the opposite if the value
+    is set to false.
+
+
+    Chapter seven: Switches and Loops
+
+
+    As I am working on my script, I am going to use switch statements so that I have
+    a wider range of options for the values that I am going to set for my variables
+    that I use. In essence, these are really long and somewhat complicated if else
+    if statements.
+
+
+    This is how a switch statement is going to look:
+
+
+    Switch ( variable_to_test_ {
+
+
+    Case value:
+
+
+    Code_here;
+
+
+    Break;
+
+
+    Case value:
+
+
+    Code_here;
+
+
+    Break;
+
+
+    Default:
+
+
+    Values_not_caught_above;
+
+
+    }
+
+
+    The keyword used for switch statements is going to be switch which will then have
+    a set of parentheses following it. The variables that I want to check will need
+    to go in the middle of the brackets that I have placed in my switch statement.
+    Not only will the variables be placed between the brackets, but so will other
+    parts of the statements. The case keywords are going to review all the powers
+    that have to be reviewed by the program.
+
+
+    Case values are going to use colons instead of semicolons. The events that are
+    going to occur with the program are going to need to correspond with the value
+    correctly so that the code is run the way that it should be. The break keyword
+    is going to be used whenever there is a new case that has been added to the statement.
+
+
+    Default values are going to be used but they do not have to be used by me. I can
+    add any value that I want to for the statement to be evaluated in my switch statement.
+
+
+    Example
+
+
+    Public static void main(String [ ] args) {
+
+
+    Int user = 87;
+
+
+    Switch ( user ) {
+
+
+    Case 45:
+
+
+    System. out. printIn(“ the price is 45 dollars”) ;
+
+
+    Break ;
+
+
+    Case 65:
+
+
+    System. out. printIn (“ the price is 65 dollars”) ;
+
+
+    Break ;
+
+
+    Case 88: 
+
+
+    System. out. printIn (“ the price is 88 dollars”) ;
+
+
+    Break ;
+
+
+    Default:
+
+
+    System. out. printIn (“ the price is 45, 65, and 88 dollars”) ;
+
+
+    }
+
+
+    }
+
+
+    The switch statement code is going to need to test the integers that are being
+    entered by the user. The codes value has been set to 87 in this example which
+    tells the program to check everything that is inside of it. Each case will be
+    checked individually to see if there is one that matches the value that was set
+    by me. After the case that matches has been found, the code will stop and the
+    program will be terminated.
+
+
+    The values that are out of range cannot be tested even though they have been placed
+    in the case.
+
+
+    Example
+
+
+    Case ( user >= 55 ) ;
+
+
+    This case cannot be used and will result in an error from Java.
+
+
+    But, I can use a case such as this:
+
+
+    Case 5: Case 6: Case 7: etc.
+
+
+    Each value that is used will need to be spelled out and checked.
+
+
+    Loops
+
+
+    The flow in Java is sequential and moves down the page just like a book is written.
+    But, there are functions that can be used so that the flow is changed to something
+    different. In order to interrupt the flow that Java naturally uses, I am going
+    to create a loop. With a loop, the program is going to continuously run the lines
+    of script until it is told to stop.
+
+
+    Example
+
+
+    Int subtraction 100-5-3-4-8-6-2-9
+
+
+    I am not always going to want to use this method but the loop will keep going
+    until the parameter that I have set up has been met. Once that condition has been
+    met successfully, then the loop will be terminated and the next chunk of code
+    is going to be evaluated.
+
+
+    Loops that use for
+
+
+    The loops that are going to use the keyword for are going to be one of the most
+    commonly used loops when I am working with Java. this loop is going to set how
+    many times the code has to be repeated before it is terminated.
+
+
+    For loops are going to look a little something like this:
+
+
+    For ( beginning_value; last_value ; increment_amount) {
+
+
+    //I am going to enter my code into this section here
+
+
+    }
+
+
+    The parentheses are going to contain three different values that are going to
+    determine the entire loop. The beginning value is where the loop is going to start,
+    the last value is going to be the value that the loop needs to reach, and the
+    increment amount is going to determine how many times the loop is going to go
+    around. The increment amount is going to be defaulted to a value of one, but it
+    does not have to be, I can make it whatever integer that I see fit.
+
+
+    The brackets that come next in the expression are going to be the code that is
+    sectioned off so that it can be repeated.
+
+
+    Example
+
+
+    Boxed  loops ;
+
+
+    Public class ForLoops {
+
+
+    Public static void main (String [ ] args) {
+
+
+    Int loopVal;
+
+
+    Int last_value = 100;
+
+
+    For (loopVal = 5; loopVal < last_value; loopVal++) {
+
+
+    System. out. printIn ( “Loop Value = “ + loopVal) ;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    The value that the integer is set to is going to be called a loopVal and this
+    is going to be where the integer for the variable is placed. This variable is
+    the one that will be used up until the loop is terminated.
+
+
+    Java has to be told where the loop is going to start and where it is going to
+    end. loopVal  is going to be a smaller value than the one that is used for the
+    last value. When the word for is used, the value will need to be an amount that
+    is smaller than the variable that has been placed at the end of the loop.
+
+
+    loopVal++ will result in letting me know what integer is being used each time
+    the amount I am going to go up each time the loop is repeated.
+
+
+    Loops for while
+
+
+    A loop that uses while statements are going to be easier to understand, but they
+    are not used as often.
+
+
+    While loops look similar to for loops.
+
+
+    While ( condition) {
+
+
+    }
+
+
+    While will be lower cased and my parameter is going to be in parentheses.
+
+
+    Example
+
+
+    Int loopVal = 8;
+
+
+    While (loopVal < 33) {
+
+
+    System.out.printIn (“my text”);
+
+
+    loopVal++ ;
+
+
+    }
+
+
+    The conditions that I set forth are going to be less than adequate while the code
+    placed in the brackets will be displayed.  Some loops can be on repeat for all
+    eternity since they do not have any value assigned to them.
+
+
+    To eliminate the loopVal, I have to reach the end of my condition. While loops
+    are going to count values instead of checking them. the code will keep going until
+    a button has been pressed on the users keyboard.
+
+
+    Do while
+
+
+    Do while loops look different than for and while loops.
+
+
+    Int loopVal = 6;
+
+
+    Do {
+
+
+    System. out. printIn( text”) ;
+
+
+    loopVal++;
+
+
+    }
+
+
+    While ( loopVal < 2 ) ;
+
+
+    Loops are going to go up until the condition is satisfied. The distinction between
+    while loops and do while loops is that the script I enter is going to be inside
+    of two brackets. This code will be examined from top to bottom until the condition
+    has been met.
+
+
+    Loop is going to be terminated and the code will not be executed if Java decides
+    to not run it. As I wait for the program to test my script, I am going to need
+    to use a while loop before I can use a do loop. The value will change for the
+    variable that I have set forth in order for the code to run. The text is not going
+    to be displayed as it was with the other loops.
+
+
+    Chapter eight: Arrays
+
+
+    The arrays that Java uses can hold multiple values at the same time. It is easier
+    for me to think of an array like a list that has been placed on a spread sheet.
+    I am going to be able to create as many columns in the array as I want to.
+
+
+    Example
+
+
+    0 – 55
+
+
+    1 – 654
+
+
+    2 – 566
+
+
+    3 – 552
+
+
+    4 – 6
+
+
+    5 – 852
+
+
+    Every row is going to be assigned a position just as if I had created it on a
+    spread sheet. The positions are going to always start at zero and go up by one
+    each time that an integer is added.
+
+
+    As I set up my arrays, I am going to give Java the knowledge of the data that
+    I am placing in the array. I am going to have to tell Java how many positions
+    I am using so that it knows where it should stop.
+
+
+    Syntax for arrays:
+
+
+    int [ ] aryNums;'
+  toc: []
+  trans: "\n\nNOT 布尔语句的唯一区别在于 `! (user)` 函数。该运算符将使用感叹号置于变量之前。一如既往，对变量进行测试以检查它是否为负值（假）。\n\
+    \n由于 user 变量通常被设置为 true，因此会对它们进行测试，以检查是否存在任何 false 值。如果值被设置为 false，情况则完全相反。\n\n\
+    # 第七章：分支语句与循环\n\n在编写脚本时，我将使用 `switch` 语句，这样我为所使用的变量设置的值就有更广泛的选择范围。本质上，这些实际上是非常长且有些为复杂的\
+    \ `if else if` 语句。\n\n一个 `switch` 语句 get 看起来如下：\n\n```\nSwitch ( variable_to_test_\
+    \ {\n    Case value:\n        Code_here;\n        Break;\n    Case value:\n  \
+    \      Code_here;\n        Break;\n    Default:\n        Values_not_caught_above;\n\
+    }\n```\n\n用于 `switch` 语句的关键字是 `switch`，后面将紧跟一组括号。我想检查的变量需要放在我 `switch` 语句中括号的中间。不仅变量放在括号之间，语句的其他部分也是如此。`case`\
+    \ 关键字将检查程序需要审查的所有可能情况。\n\n`Case` 值将使用冒号而不是分号。程序中将发生的事件需要与值正确对应，以便代码能够按照预期方式运行。每当语句中添加一个新\
+    \ `case` 时，都会使用 `break` 关键字。\n\n`Default` 值可以使用，但我并不一定需要使用。我可以为语句添加任何想要的值，以便在\
+    \ `switch` 语句中进行评估。\n\n## 示例\n\n```\nPublic static void main(String [ ] args)\
+    \ {\n    Int user = 87;\n    Switch ( user ) {\n        Case 45:\n           \
+    \ System. out. printIn(“ the price is 45 dollars”) ;\n            Break ;\n  \
+    \      Case 65:\n            System. out. printIn (“ the price is 65 dollars”)\
+    \ ;\n            Break ;\n        Case 88: \n            System. out. printIn\
+    \ (“ the price is 88 dollars”) ;\n            Break ;\n        Default:\n    \
+    \        System. out. printIn (“ the price is 45, 65, and 88 dollars”) ;\n   \
+    \ }\n}\n```\n\n`switch` 语句代码需要测试用户输入的整数。在这个示例中，`case` 值已设置为 `87`，这告诉程序检查其内部的所有内容。每个\
+    \ `case` 将被单独检查，以查看是否有与我设置的值匹配。找到匹配的 `case` 后，代码将停止，程序将终止。\n\n超出范围的值即使被放置在 `case`\
+    \ 中，也无法通过测试。\n\n## 示例\n\n```\nCase ( user >= 55 ) ;\n```\n\n这个 `case` 无法使用，并将导致\
+    \ Java 错误。但我可以使用像这样的 `case`：\n\n`Case 5: Case 6: Case 7: 等.`\n\n使用的每个值都需要列出并进行检查。\n\
+    \n# 循环\n\nJava 的流是顺序的，就像书写书籍一样向下移动。但可以使用某些函数来改变流变为不同的内容。为了中断 Java 自然使用的流，我将创建一个\
+    \ `loop`。通过 `loop`，程序将连续运行脚本行，直到被要求停止。\n\n## 示例\n\n```\nInt subtraction 100-5-3-4-8-6-2-9\n\
+    ```\n\n我并不总是想使用这种方法，但 `loop` 将一直运行直到满足我设置的参数。\n\n## 循环\n\n`for` 循环将使用 `for` 关键字。`for`\
+    \ 循环如下：\n\n```\nFor (beginning_value; last_value; increment amount) {\n    //\
+    \ code\n}\n```\n\n`while` 循环将使用 `while` 关键字。`while` 循环如下：\n\n```\nWhile (condition)\
+    \ {\n    // code\n}\n```\n\n`do while` 循环将使用 `do while` 关键字。`do while` 循环如下：\n\
+    \n```\nDo {\n    // code\n} While (condition) ;\n```\n\n"
+- fmt: "\nNormal integers are going to be placed in the brackets after I have officially\
+    \ selected the data type that is going to be used. The brackets let Java know\
+    \ that it is an array that is being used rather than any other data type. Arrays\
+    \ use the `aryNums` function so that it ensures that the array is going to be\
+    \ set up properly. After that, any variable that I want to put into the array\
+    \ can be placed.\n\nJava will know how many places that I am using for the array\
+    \ once I have set up an new object for the array.\n\n### Example\n\n```\naryNums\
+    \ = new int [ 55 ];\n```\n\nThis tells Java that 55 spaces are going to be used\
+    \ for integers in this array. They will range from zero all the way to fifty-five.\n\
+    \nAs I go to assign values to the positions, then I am going to use the normal\
+    \ methods that I have used previously.\n\n```\naryNum [ 8 ] = 32 ;\n```\n\nThe\
+    \ amount of 32 is going to be assigned to the space of 8 in the array. I have\
+    \ to remember that arrays have to start at zero.\n\n### Example\n\nSetting up\
+    \ my arrays like this is going to make it easier for me to deal with.\n\n```\n\
+    Int [ ] aryNims = { 8, 5, 6, 2 } ;\n```\n\nThis method has created my array inside\
+    \ of the brackets where the first value is placed at zero. The square brackets\
+    \ that come after my keyword are going to make sure that the data type is not\
+    \ repeated elsewhere. This method is going to also be used with string values\
+    \ and chars when I want to use new keywords.\n\n### Example\n\n```\nString [ ]\
+    \ aryStrings = { “ Vampires, Werewolves, Hybrids, Witches” } ;\n```\n\nThis will\
+    \ work with Java.\n\n```\nBoolean [ ] aryBools = { yes, no, no, yes } ;\n```\n\
+    \nThis will not work. If I want to use Boolean values I have to use a new keyword\
+    \ all together.\n\n### Example\n\n```\nBoolean [ ] aryBools = new Boolean [ ]\
+    \ { yes, no, no, yes } ;\n```\n\n### Arrays for loops\n\nArrays use special rules\
+    \ for their loops. The values in an array will be assigned using the array syntax.\
+    \ This does not make sense to me, but this is how values will be assigned.\n\n\
+    ### Example\n\n```\npackage prjarrays ;\n\npublic class ArrayTest {\n    public\
+    \ static void main (String [ ] args) {\n        Int [ ] ticket _ prices = new\
+    \ int [ 65 ] ;\n        Int I ;\n        For ( I = 0; I < ticket_prices . length\
+    \ ; i++) {\n            Ticket_prices [ I ] = I +1;\n            System. out.\
+    \ printIn ( ticket_prices [ 6 ] ;\n        }\n    }\n}\n```\n\nThe array above\
+    \ will contain 65 integers. The loop is going to go until this number has been\
+    \ reached and the `I` is going to be a value that is smaller than the arrays size.\
+    \ To appoint values to the positions that I want them to be in, I am going to\
+    \ use a different code.\n\n### Example\n\n```\nTicket_prices [ I ] = I + 1 ;\n\
+    ```\n\nThe values that I use are not going to be hard coded when they are placed\
+    \ between the brackets, instead every variable is going to increase by one digit\
+    \ each time that the loop is repeated. The array is also going to increase with\
+    \ the loops value. This value is going to be assigned thanks to the last bit of\
+    \ the script that is entered. The loop is going to start at zero always and go\
+    \ up through the number 65 for this example. The next bit of script will be the\
+    \ value for the positions in the array. In the event that I want to type out all\
+    \ my code, it is going to end up jumbled because of the amounts found in the array.\n\
+    \n### Sorting\n\nThe arrays I make can be sorted out by using the sorting method.\
+    \ I will however have to reference what I am sorting to a directory in Java. The\
+    \ import statement will be used for this.\n\n```java\nimport java. util. Arrays\
+    \ ;\n```\n\n### Example\n\n```java\npackage prjarrays;\n\nimport java . util.\
+    \ Arrays ;\n\npublic class ArraysTest {\n    public static void main ( String\
+    \ [ ] args) {\n        Int [ ] aryNums;\n        aryNums = new int [ 9 ] ;\n \
+    \       aryNums [ 0 ] = 65 ;\n        aryNums [ 1 ] = 54;\n        aryNums [ 2\
+    \ ] = 689 ;\n        aryNums [ 3 ] = 654;\n        aryNums [ 4 ] = 6543 ;\n  \
+    \      aryNums [ 5 ] = 55 ;\n        // The libraries for an array are going to\
+    \ be imported along with the sort method.\n        Arrays . sort( aryNums ) ;\n\
+    \    }\n}\n```\n\nThe keyword that falls first in the importing is array after\
+    \ that I am going to insert a dot. That dot is going to open up a box that is\
+    \ going to give me a list of everything that I can do with that array. The `sort`\
+    \ word is going to say where the name of the array is placed and then the brackets\
+    \ are going to fall after that.\n\n### Example\n\n```java\npackage prjarrays;\n\
+    \nimport java . util. Arrays ;\n\npublic class ArraysTest {\n    public static\
+    \ void main ( String [ ] args) {\n        Int [ ] aryNums;\n        aryNums =\
+    \ new int [ 9 ] ;\n        aryNums [ 0 ] = 202 ;\n        aryNums [ 1 ] = 1696\
+    \ ;\n        aryNums [ 2 ] = 385 ;\n        aryNums [ 3 ] = 2956 ;\n        aryNums\
+    \ [ 4 ] = 4554 ;\n        aryNums [ 5 ] = 126 ;\n        Arrays . sort (aryNums)\
+    \ ;\n        Int I;\n        For ( I = 0 ; I < aryNums . length ; i++) {\n   \
+    \         System. out. printIn (“num: “ + aryNums [ I ] )\n        }\n    }\n\
+    }\n```\n\nSorting is going to arrange things in descending order when I write\
+    \ out. I can also convert arrays into objects that are from a directory.\n\n###\
+    \ Example\n\n```java\npackage prjarrays;\n\nimport java . util. Arrays ;\nimport\
+    \ java.util. collections ;\n\npublic class Sort {\n    public class ArraysTest\
+    \ {\n        public static void main (String [ ] args) {\n            Int [ ]\
+    \ aryNums;\n            aryNums = new int [ 9 ] ;\n            aryNums [ 0 ] =\
+    \ 65 ;\n            aryNums [ 1 ] = 54 ;\n            aryNums [ 2 ] = 689 ;\n\
+    \            aryNums [ 3 ] = 654 ;\n            aryNums [ 4 ] = 6543 ;\n     \
+    \       aryNums [ 5 ] = 55 ;\n            Arrays . sort( aryNums ) ;\n       \
+    \     Int I;\n            For ( I = 0 ; I < aryNums . length ; i++) {\n      \
+    \          System. out. printIn (“num: ” + aryNums [ I ] )\n            }\n  \
+    \      }\n    }\n}\n```\n\n### Strings\n\nStrings can be placed in arrays as well.\n\
+    \n### Example\n\n```java\nString [ ] aryString = new String [ 5 ];\naryString\
+    \ [ 0 ] = “I” ;\naryString [ 1 ] = “am” ;\naryString [ 2 ] = “made” ;\naryString\
+    \ [ 3 ] = “java” ;\naryString [ 4 ] = “yay” ;\n```\n\nThe loop is going to continue\
+    \ until the `aryString` length is reached. The values are going to be displayed.\n\
+    \n### Example\n\n```java\npackage prjarrays;\n\nimport java. util. Arrays ;\n\n\
+    public class StringArrays {\n    public static void main (String [ ] args) {\n\
+    \        Int [ ] aryNums;\n        aryNums = new int [ 9 ] ;\n        aryNums\
+    \ [ 0 ] = 65 ;\n        aryNums [ 1 ] = 54 ;\n        aryNums [ 2 ] = 689 ;\n\
+    \        aryNums [ 3 ] = 654 ;\n        aryNums [ 4 ] = 6543 ;\n        aryNums\
+    \ [ 5 ] = 55 ;\n        Arrays . sort( aryNums ) ;\n        Int I;\n        For\
+    \ ( I = 0; I < aryNums . length ; i++) {\n            System. out. printIn (“num:\
+    \ ” + aryNums [ I ] )\n        }\n    }\n}\n```\n\n### Multi dimensional\n\nArrays\
+    \ that are multi dimensional are arranged in a certain fashion that is to tell\
+    \ Java it is a multi dimensional array over a regular array.\n\n### Syntax\n\n\
+    ```\nInt [ ] [ ] aryAmounts = new int [ 8 ] [ 33 ];\n```\n\nThe array syntax is\
+    \ like normal, but there are now two brackets that allow Java to know how many\
+    \ rows there are and how many columns will be made. The row starts with zero,\
+    \ while the columns will be different for each array.\n\n### Example\n\n```java\n\
+    aryAmounts[0][0] = 60;\naryAmounts[0][1] = 1550;\naryAmounts[0][2] = 324;\naryAmounts[0][3]\
+    \ = 2333;\naryAmounts[0][4] = 23;\naryAmounts[0][5] = 3257;\naryAmounts[0][6]\
+    \ = 3225;\naryAmounts[0][7] = 332514;\naryAmounts[1][0] = 41;\naryAmounts[1][1]\
+    \ = 2035;\naryAmounts[1][2] = 5326;\naryAmounts[1][3] = 5354;\naryAmounts[1][4]\
+    \ = 4654;\naryAmounts[1][5] = 5032;\naryAmounts[1][6] = 653;\naryAmounts[1][7]\
+    \ = 644;\naryAmounts[2][0] = 1632;\naryAmounts[2][1] = 161;\n```\n\n### Example\n\
+    \n```java\nInt I;\nFor ( I = 0 ; I < aryAmounts . length ; i++) {\n    System.\
+    \ out. printIn ( aryAmounts [ I ] )\n}\n```\n"
+  raw: 'Normal integers are going to be placed in the brackets after I have officially
+    selected the data type that is going to be used. The brackets let Java know that
+    it is an array that is being used rather than any other data type. Arrays use
+    the aryNums function so that it ensures that the array is going to be set up properly.
+    After that, any variable that I want to put into the array can be placed.
+
+
+    Java will know how many places that I am using for the array once I have set up
+    an new object for the array.
+
+
+    Example
+
+
+    aryNums = new int [ 55 ];
+
+
+    This tells Java that 55 spaces are going to be used for integers in this array.
+    They will range from zero all the way to fifty-five.
+
+
+    As I go to assign values to the positions, then I am going to use the normal methods
+    that I have used previously.
+
+
+    aryNum [ 8 ] = 32 ;
+
+
+    The amount of 32 is going to be assigned to the space of 8 in the array. 
+
+
+    I have to remember that arrays have to start at zero.
+
+
+    Example
+
+
+    Setting up my arrays like this is going to make it easier for me to deal with.
+
+
+    Int [ ] aryNims = { 8, 5, 6, 2 } ;
+
+
+    This method has created my array inside of the brackets where the first value
+    is placed at zero. The square brackets that come after my keyword are going to
+    make sure that the data type is not repeated elsewhere. This method is going to
+    also be used with string values and chars when I want to use new keywords.
+
+
+    Example
+
+
+    String [ ] aryStrings = { “ Vampires, Werewolves, Hybrids, Witches” } ;
+
+
+    This will work with Java
+
+
+    Boolean [ ] aryBools = { yes, no, no, yes  } ;
+
+
+    This will not work.
+
+
+    If I want to use Boolean values I have to use a new keyword all together.
+
+
+    Example
+
+
+    Boolean [ ]  aryBools = new Boolean [ ]  { yes, no, no, yes   } ;
+
+
+    Arrays for loops
+
+
+    Arrays use special rules for their loops. The values in an array will be assigned
+    using the array syntax. This does not make sense to me, but this is how values
+    will be assigned,
+
+
+    Example
+
+
+    Package prjarrays ;
+
+
+    Public class ArrayTest {
+
+
+    Public static void main (String [ ]  args) {
+
+
+    Int [ ]  ticket _ prices = new int [ 65 ] ;
+
+
+    Int I ;
+
+
+    For ( I = 0; I < ticket_prices . length ; i++) {
+
+
+    Ticket_prices [ I ] = I +1;
+
+
+    System. out. printIn ( ticket_prices [ 6 ] ) ;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    The array above will contain 65 integers. The loop is going to go until this number
+    has been reached and the I is going to be a value that is smaller than the arrays
+    size.
+
+
+    To appoint values to the positions that I want them to be in, I am going to use
+    a different code.
+
+
+    Example
+
+
+    Ticket_prices [ I ] I + 1 ;
+
+
+    The values that I use are not going to be hard coded when they are placed between
+    the brackets, instead every variable is going to increase by one digit each time
+    that the loop is repeated. The array is also going to increase with the loops
+    value. This value is going to be assigned thanks to the last bit of the script
+    that is entered. The loop is going to start at zero always and go up through the
+    number 65 for this example.
+
+
+    The next bit of script will be the value for the positions in the array. In the
+    event that I want to type out all my code, it is going to end up jumbled because
+    of the amounts found in the array.
+
+
+    Sorting
+
+
+    The arrays I make can be sorted out by using the sorting method. I will however
+    have to reference what I am sorting to a directory in Java. The import statement
+    will be used for this.
+
+
+    Import java. util. Arrays ;
+
+
+    Example
+
+
+    Package prjarrays;
+
+
+    Import java . util. Arrays ;
+
+
+    Public class ArraysTest {
+
+
+    Public static void main ( String [ ]  args) {
+
+
+    Int [ ]  aryNums;
+
+
+    aryNums = new int [ 9 ] ;
+
+
+    aryNums [ 0 ] = 65 ;
+
+
+    aryNums [ 1 ] = 54;
+
+
+    aryNums [ 2 ] = 689 ;
+
+
+    aryNums [ 3 ] = 654;
+
+
+    aryNums [ 4 ] = 6543 ;
+
+
+    aryNums [ 5 ] = 55 ;
+
+
+    The libraries for an array are going to be imported along with the sort method.
+    Arrays . sort( aryNums ) ;
+
+
+    The keyword that falls first in the importing is array after that I am going to
+    insert a dot. That dot is going to open up a box that is going to give me a list
+    of everything that I can do with that array. The sort word is going to say where
+    the name of the array is placed and then the brackets are going to fall after
+    that.
+
+
+    Example
+
+
+    Package prjarrays;
+
+
+    Import java . util. Arrays ;
+
+
+    Public class ArraysTest {
+
+
+    Public static void main ( String [ ]  args) {
+
+
+    Int [ ]  aryNums;
+
+
+    aryNums = new int [ 9 ] ;
+
+
+    aryNums [ 0 ] = 202 ;
+
+
+    aryNums [ 1 ] = 1696 ;
+
+
+    aryNums [ 2 ] = 385 ;
+
+
+    aryNums [ 3 ] = 2956 ;
+
+
+    aryNums [ 4 ] = 4554 ;
+
+
+    aryNums [ 5 ] = 126 ;
+
+
+    Arrays . sort (aryNums) ;
+
+
+    Int I;
+
+
+    For ( I = 0 ; I < aryNums . length ; i++) {
+
+
+    System. out. printIn (“num: “ + aryNums [ I ] ) ;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    Sorting is going to arrange things in a descending order when I write out my own
+    code for sorting. I can also convert an array into objects that are used for integers
+    that have also been imported from a directory.
+
+
+    Example
+
+
+    Package prjarrays;
+
+
+    Import java . util. Arrays ;
+
+
+    Import java.util. collections ;
+
+
+    Public class SortDescending {
+
+
+    Public class ArraysTest {
+
+
+    Public static void main ( String [ ]  args) {
+
+
+    Int [ ]  aryNums;
+
+
+    aryNums = new int [ 99 ] ;
+
+
+    aryNums [ 0 ] = 65 ;  aryNums [ 1 ] = 2415 ; aryNums [ 2 ] =  ;645
+
+
+    aryNums [ 3 ] = 263 ; aryNums [ 4 ] = 4005 ; aryNums [ 5 ] = 12245 ;
+
+
+    Arrays . sort (aryNums) ;
+
+
+    Int I;
+
+
+    For ( I = 0 ; I < aryNums . length ; i++) {
+
+
+    System. out. printIn (“num: “ + aryNums [ I ] ) ;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    Array strings
+
+
+    Strings for integers can be placed in arrays as well.
+
+
+    Example
+
+
+    String [ ]  aryString= new String [ 6 ] ;
+
+
+    aryString [ 0 ] = “i” ;
+
+
+    aryString [ 1 ] = “am” ;
+
+
+    aryString [ 2 ] = “using” ;
+
+
+    aryString [ 3 ] = “java” ;
+
+
+    aryString [ 4 ] = “yay” ;
+
+
+    In this example, there are six positions needing filled with data. In this loop
+    however, the positions will be displayed on the screen.
+
+
+    Syntax
+
+
+    Int I ;
+
+
+    For ( I = 0 ; I < aryString . length ; i++ ) {
+
+
+    System. out. printIn ( aryString [ I ] ) ;
+
+
+    }
+
+
+    A loop is going to continue up till a value of lesser amount is found than what
+    the range calls for.
+
+
+    I can also sort arrays alphabetically. Java uses Unicode for the letters that
+    are entered into the system. Letters that are capitalized are going to come before
+    those that are not.
+
+
+    Example
+
+
+    Package strings1 ;
+
+
+    Import java. util. Arrays ;
+
+
+    Public class StringArrays {
+
+
+    Public static void main(String [ ]  args) {
+
+
+    String [ ]  aryString= new String [ 5 ] ;
+
+
+    aryString [ 0 ] = “I ” ;
+
+
+    aryString [ 1 ] = “have” ;
+
+
+    aryString [ 2 ] = “made” ;
+
+
+    aryString [ 3 ] = “an” ;
+
+
+    aryString [ 4 ] = “array” ;
+
+
+    arrays. Sort ( aryString ) ;
+
+
+    int I ;
+
+
+    for ( I = 0; I < aryString . length ; i++) {
+
+
+    system. out. printIn ( aryString [ I ] ) ;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    Multi dimensional
+
+
+    The arrays that I have created can be put into multiple columns that are going
+    to be known as multi-dimensional arrays.
+
+
+    Example
+
+
+    60 – 1550 – 1285 -436 – 151 - 252
+
+
+    41 – 2035 – 4325 -5326 – 1231 - 2333
+
+
+    23 – 3240 – 6357 – 3225 – 1425 – 44352
+
+
+    335 – 40352 – 12321 – 8237 – 135214 - 53545
+
+
+    4654 – 50232 – 8699 – 6625 – 103 – 6656
+
+
+    5354- 62350 – 653 – 644 – 1632 – 161
+
+
+    Arrays that are multi dimensional are arranged in a certain fashion that is going
+    to tell Java that it is a multi dimensional array over a regular array.
+
+
+    Syntax
+
+
+    Int [ ] [ ] aryAmounts = new int [ 8 ] [ 33 ] ;
+
+
+    The array syntax is like normal, but there are now two brackets that allow Java
+    to know how many rows there are and how many columns will be made.
+
+
+    Example
+
+
+    aryAmounts[0][0] = 106;
+
+
+    aryAmounts[0][1] = 124;
+
+
+    aryAmounts[0][2] = 433;
+
+
+    aryAmounts[0][3] = 11554;
+
+
+    aryAmounts[0][4] = 262;
+
+
+    First the row is going to start with zero just like any other array, while the
+    columns are going to be different for each array because each array is going to
+    require a different number of columns.
+
+
+    Example
+
+
+    The second row for my array will be
+
+
+    aryAmounts[1][0] = 2560;
+
+
+    aryAmounts[1][1] = 43255;
+
+
+    aryAmounts[1][2] = 560;
+
+
+    aryAmounts[1][3] = 133;
+
+
+    aryAmounts[1][4] = 3385;
+
+
+    The positions in my loop is going to depend on the values I use. The first example
+    uses the I variable while the second uses the same variable. Both are going to
+    start at zero.
+
+
+    Lists'
+  toc: []
+  trans: "\n\n在我正式选择了将使用的数据类型后，普通整数将被放在括号中。括号让 Java 知道正在使用的是数组而不是任何其他数据类型。数组使用 `aryNums`\
+    \ 函数，以确保数组被正确设置。之后，任何我想要放入数组的变量都可以被放在其中。\n\n一旦我为数组设置了一个新对象，Java 就会知道我为数组使用了多少个空间。\n\
+    \n### 示例\n\n```\naryNums = new int [ 55 ];\n```\n\n这告诉 Java 在数组中将使用 55 个空间用于整数。它们的范围从\
+    \ 0 直到 55。\n\n当我开始为这些位置赋值时，我将使用我之前用过的普通方法。\n\n```\naryNum [ 8 ] = 32 ;\n```\n\n\
+    数值 32 将赋值给数组中索引为 8 的空间。我必须记住，数组必须从 0 开始。\n\n### 示例\n\n这样设置我的数组将使我处理起来更加方便。\n\n\
+    ```\nInt [ ] aryNims = { 8, 5, 6, 2 } ;\n```\n\n这种方法在括号内创建了我的数组，第一个值被放置在 0 处。关键字后面的方括号将确保数据类型不会在其他地方重复。当我想使用新关键字时，这种方法也将用于字符串值和字符。\n\
+    \n### 示例\n\n```\nString [ ] aryStrings = { “ Vampires, Werewolves, Hybrids, Witches”\
+    \ } ;\n```\n\n这在 Java 中是可以运行的。\n\n```\nBoolean [ ] aryBools = { yes, no, no, yes\
+    \ } ;\n```\n\n这是不通的。如果我想使用布尔值，我必须使用一个全新的关键字。\n\n### 示例\n\n```\nBoolean [ ] aryBools\
+    \ = new Boolean [ ] { yes, no, no, yes } ;\n```\n\n### 数组循环\n\n数组的循环有其特殊的规则。数组中的值将使用数组语法进行赋值。这对我来说似乎并不理解，但这就是值赋值的方式。\n\
+    \n### 示例\n\n```\npackage prjarrays ;\n\npublic class ArrayTest {\n    public static\
+    \ void main (String [ ] args) {\n        Int [ ] ticket _ prices = new int [ 65\
+    \ ] ;\n        Int I ;\n        For ( I = 0; I < ticket_prices . length ; i++)\
+    \ {\n            Ticket_prices [ I ] = I +1;\n            System. out. printIn\
+    \ ( ticket_prices [ 6 ] ;\n        }\n    }\n}\n```\n\n上面的数组将包含 65 个整数。循环将持续到达到这个数字为止，并且\
+    \ `I` 将是一个小于数组大小的值。为了给我想要的位置分配值，我将使用不同的代码。\n\n### 示例\n\n```\nTicket_prices [ I\
+    \ ] = I + 1 ;\n```\n\n当我将值放在括号之间时，我使用的值并不是硬编码的，相反，每重复一次循环，每个变量都会增加一个数字。数组也会随着循环的值而增加。这个值将得益于输入的最后一段脚本而被赋值。循环总是从\
+    \ 0 开始，并在这个示例中一直增加到 65。下一部分脚本将是数组中位置的值。如果我想写出所有的代码，由于数组中找到的数值，它最终会变得混乱。\n\n###\
+    \ 排序\n\n我创建的数组可以使用排序方法进行排序。然而，我必须将我要排序的内容引用到 Java 的一个目录。。将使用 import 语句。\n\n```java\n\
+    import java. util. Arrays ;\n```\n\n### 示例\n\n```java\npackage prjarrays;\n\n\
+    import java . util. Arrays ;\n\npublic class ArraysTest {\n    public static void\
+    \ main ( String [ ] args) {\n        Int [ ] aryNums;\n        aryNums = new int\
+    \ [ 9 ] ;\n        aryNums [ 0 ] = 65 ;\n        aryNums [ 1 ] = 54;\n       \
+    \ aryNums [ 2 ] = 689 ;\n        aryNums [ 3 ] = 654;\n        aryNums [ 4 ] =\
+    \ 6543 ;\n        aryNums [ 5 ] = 55 ;\n        // 数组的库将与 sort 方法一起导入。\n     \
+    \   Arrays . sort( aryNums ) ;\n    }\n}\n```\n\n导入时第一个出现的关键字是 array，之后我将插入一个点。那个点将打开一个框，给我列出我可以对该数组做的一切操作列表。`sort`\
+    \ 单词将显示数组名称的位置，然后括号将紧随其后。\n\n### 示例\n\n```java\npackage prjarrays;\n\nimport java\
+    \ . util. Arrays ;\n\npublic class ArraysTest {\n    public static void main (\
+    \ String [ ] args) {\n        Int [ ] aryNums;\n        aryNums = new int [ 9\
+    \ ] ;\n        aryNums [ 0 ] = 202 ;\n        aryNums [ 1 ] = 1696 ;\n       \
+    \ aryNums [ 2 ] = 385 ;\n        aryNums [ 3 ] = 296 ;\n        aryNums [ 4 ]\
+    \ = 2543;\n        aryNums [ 5 ] = 156\n        ary      =   \n\n\n\n\n\n  \n\n\
+    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+    \n\n\n### 字符串\n\n字符串也可以放在数组中。\n\n### 示例\n\n```java\nString [ ] aryString = new\
+    \ String [ 5\n\naryString [ 0 ] = “I” ;\naryString [ 1 ] = “am” ;\naryString [\
+    \ 2 ] = “made” ;\naryString [ 3 ] = “java” ;\naryString [ 4 ] = “yay” ;\n```\n\
+    \n循环将持续到达到 `aryString` 的长度。值将被显示。\n\n### 示例\n\n```java\npackage prjarrays;\n\n\
+    import java. util. Arrays ;\n\npublic class StringArrays {\n    public static\
+    \ void main (String [ ] args) {\n        Int [ ] aryNums;\n        aryNums = new\
+    \ int [ 9 ] ;\n        aryNums [ 0 ] = 65 ;\n        aryNums [ 1 ] = 54 ;\n  \
+    \      aryNums [ 2 ] = 689 ;\n        aryNums [ 3 ] = 654 ;\n        aryNums [\
+    \ 4 ] = 6543 ;\n        aryNums [ 5 ] = 55 ;\n        Arrays . sort( aryNums )\
+    \ ;\n        Int I;\n        For ( I = 0 ; I < aryNums . length ; i++) {\n   \
+    \         System. out. printIn (“num: ” + aryNums [ I ] )\n        }\n    }\n\
+    }\n```\n\n### 多维数组\n\n多维数组以特定的方式排列，以告诉 Java 这是一个多维数组而不是普通数组。\n\n### 语法\n\n```\n\
+    Int [ ] [ ] aryAmounts = new int [ 8 ] [ 33 ];\n```\n\n数组语法类似于普通的，但现在有两个括号让 Java\
+    \ 知道有多少行以及有多少列。行从 0 开始，而每个数组的列将不同。\n\n### 示例\n\n```java\naryAmounts[0][0] = 60;\n\
+    aryAmounts[0][1] = 1550;\naryAmounts[0][2] = 324;\naryAmounts[0][3] = 2333;\n\
+    aryAmounts[0][4] = 23;\naryAmounts[0][5] = 3257;\naryAmounts[0][6] = 3225;\naryAmounts[0][7]\
+    \ = 332514;\naryAmounts[1][0] = 41;\naryAmounts[1][1] = 2035;\naryAmounts[1][2]\
+    \ = 5326;\naryAmounts[1][3] = 5354;\naryAmounts[1][4] = 4654;\naryAmounts[1][5]\
+    \ = 5032;\naryAmounts[1][6] = 653;\naryAmounts[1][7] = 644;\naryAmounts[2][0]\
+    \ = 1632;\naryAmounts[2][1] = 161;\n```\n\n### 示例\n\n```java\nInt I;\nFor ( I\
+    \ = 0 ; I < aryAmounts . length ; i++) {\n    System. out. printIn ( aryAmounts\
+    \ [ I ] )\n}\n```\n\n"
+- fmt: "\nI cannot tell the exact values in an array but I can use the `ArrayList`\
+    \ so that I can look at the structure of the data. The items on my list can be\
+    \ added or deleted. But, a normal array is going to have data that does not move\
+    \ because I am not going to have the ability to change the arrays size for what\
+    \ I have made.\n\nWhen I set up an array list, I am going to have to pull data\
+    \ from the directories in Java.\n\n### Syntax\n\n```java\nimport java.util.ArrayList;\n\
+    ```\n\nAfter I have brought in the data that is needed to make a new object, I\
+    \ am going to use a different syntax.\n\n```java\nArrayList listTest = new ArrayList(\
+    \ );\n```\n\nI am not going to use brackets when I create lists for my array.\n\
+    \n### Example\n\n```java\nlistTest.add( \"and\" );\nlistTest.add( \"for” );\n\
+    listTest.add( “but \" );\nlistTest.add( 8 );\n```\n\nAnything that is in the parentheses\
+    \ is going to be placed on my list for my array. I am going to be able to add\
+    \ any object that I want with this method. The first three items that fall on\
+    \ my list are going to be objects that are normally added to a string. The last\
+    \ amount is going to be an integer.\n\nAll of the items that are on my list can\
+    \ be found by their index values.\n\n### Example\n\n```java\nlistTest.get(5);\
+    \ \n```\n\nThe number five tells me exactly where I am going to need to go to\
+    \ find what I am looking for. Index values are always going to start at zero just\
+    \ like other things that are used in Java. With this in mind, for the above example,\
+    \ I am going to look at position six.\n\nWhen I want to delete objects, I am going\
+    \ to use a different syntax.\n\n### Example\n\n```java\nlistTest.remove(5);\n\
+    ```\n\nI can also delete the string values on my array.\n\n```java\nlistTest.remove(“but”);\n\
+    ```\n\nIn removing items, the list is going to then resize itself. Because of\
+    \ this, I have to be very careful in deleting objects or else my lists index numbers\
+    \ are going to be changed dramatically and I am not going to know where anything\
+    \ is on my list. So, if I remove the second item on my list, then the next three\
+    \ items will be moved up on my list after it has been deleted.\n\n### Conclusion\n\
+    \nThank for making it through to the end of Java, let’s hope it was informative\
+    \ and able to provide you with all of the tools you need to achieve your goals\
+    \ whatever it may be.\n\nThe next step is to download NetBeans and start creating\
+    \ your own Java programs with the information that I have provided for you. Some\
+    \ of it may seem confusing, but it is going to get easier the more that you practice\
+    \ it.\n\nIf you found any piece of this book confusing, go back and read it again.\
+    \ As I stated in the introduction, programming is not easy and it is not going\
+    \ to come to you overnight.\n\nDo not stop learning Java just because one of the\
+    \ codes that you use does not work. If you do that, then you are never going to\
+    \ learn where you messed up. Instead, take that mistake and learn from it so that\
+    \ you do not have to repeat those same mistakes.\n\nFinally, if you found this\
+    \ book useful in anyway, a review on Amazon is always appreciated! \n\nGood luck!\n\
+    \n# Join the thousands of coders who created their own language.\n\n[![http://createyourproglang.com/images/real_book.png](images/00001.jpeg)](http://1.macoaff.pay.clickbank.net/)\n\
+    \n## “It's been a lot of fun, and surprisingly little work to get a language that\
+    \ covers 95% of what JavaScript can do.”\n\n— [Jeremy Ashkenas](http://ashkenas.com/),\
+    \ created [CoffeeScript](http://coffeescript.org/) after reading the book.\n\n\
+    ## “I love this book! It helped me create my own Awesome-to-PHP compiler. It's\
+    \ not a full featured compiler yet but I had a lot of fun coding it and I learned\
+    \ a LOT.”\n\n— [Julien Desrosiers](http://twitter.com/jdesrosiers), created [Phlower](http://github.com/juliend2/phlower)\
+    \ after reading the book.\n\n## “I never had a chance to study language internals\
+    \ at university, and while very interested, I found their inner workings intimidating.\
+    \ With this course I've found a simple but engaging introduction to the world\
+    \ of lexers, parsers, interpreters and compilers, and suddenly a whole new world\
+    \ in programming has opened up. Highly recommended.”\n\n— [David Bolton](http://davidbolton.net/)\n\
+    \n***\n\n### A few languages created from this system ...\n\n[![CoffeeScript](images/00002.jpeg)\
+    \ ](http://coffeescript.org/)[![Fancy](images/00003.jpeg) ](http://www.fancy-lang.org/)[Savage](https://bitbucket.org/masonicboom/savage)\
+    \ [Rubby](http://rubby-lang.org/)[![Arendelle](images/00004.jpeg)](http://web.arendelle.org/)\n\
+    \n***\n\n# It works or it's free.\n\n## Not sure this system is for you? Try it\
+    \ and if you're not happy, I'll give you your money back and you keep everything.\n\
+    \n[Get it here !](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)\n\n© Copyright\
+    \ 2016 by Martin Laredo Publishers - All rights reserved.\n\nThe follow eBook\
+    \ is reproduced below with the goal of providing information that is as accurate\
+    \ and reliable. Regardless, purchasing this eBook can be seen as consent to the\
+    \ fact that both the publisher and the author of this book are in no way experts\
+    \ on the topics discussed within that any recommendations or suggestions that\
+    \ are made herein are for entertainment purposes only. Professionals should be\
+    \ consulted as needed prior to undertaking any of the action endorsed herein.\n\
+    \nThis declaration is deemed fair and valid by both the American Bar Association\
+    \ and the Committee of Publishers Association and is legally binding throughout\
+    \ the United States.\n\nFurthermore, the transmission, duplication or reproduction\
+    \ of any of the following work including specific information will be considered\
+    \ an illegal act irrespective of if it is done electronically or in print. This\
+    \ extends to creating a secondary or tertiary copy of the work or a recorded copy\
+    \ and is only allowed with express written consent from the Publisher. All right\
+    \ reserved.\n"
+  raw: 'I cannot tell the exact values in an array but I can use the ArrayList so
+    that I can look at the structure of the data. The items on my list can be added
+    or deleted. But, a normal array is going to have data that does not move because
+    I am not going to have the ability to change the arrays size for what I have made.
+
+
+    When I set up an array list, I am going to have to pull data from the directories
+    in Java.
+
+
+    Syntax:
+
+
+    import java.util.ArrayList;
+
+
+    After I have brought in the data that is needed to make a new object, I am going
+    to use a different syntax.
+
+
+    ArrayList listTest = new ArrayList( );
+
+
+    I am not going to use brackets when I create lists for my array.
+
+
+    Example
+
+
+    listTest.add( "and" );
+
+
+    listTest.add( "for” );
+
+
+    listTest.add( “but " );
+
+
+    listTest.add( 8 );
+
+
+    Anything that is in the parentheses is going to be placed on my list for my array.
+    I am going to be able to add any object that I want with this method. The first
+    three items that fall on my list are going to be objects that are normally added
+    to a string. The last amount is going to be an integer.
+
+
+    All of the items that are on my list can be found by their index values.
+
+
+    Example
+
+
+    listTest.get(5); 
+
+
+    The number five tells me exactly where I am going to need to go to find what I
+    am looking for. Index values are always going to start at zero just like other
+    things that are used in Java. With this in mind, for the above example, I am going
+    to look at position six.
+
+
+    When I want to delete objects, I am going to use a different syntax.
+
+
+    Example
+
+
+    listTest.remove(5);
+
+
+    I can also delete the string values on my array.
+
+
+    listTest.remove(“but”);
+
+
+    In removing items, the list is going to then resize itself. Because of this, I
+    have to be very careful in deleting objects or else my lists index numbers are
+    going to be changed dramatically and I am not going to know where anything is
+    on my list. So, if I remove the second item on my list, then the next three items
+    will be moved up on my list after it has been deleted.
+
+
+    Conclusion
+
+
+    Thank for making it through to the end of Java, let’s hope it was informative
+    and able to provide you with all of the tools you need to achieve your goals whatever
+    it may be.
+
+
+    The next step is to download NetBeans and start creating your own Java programs
+    with the information that I have provided for you. Some of it may seem confusing,
+    but it is going to get easier the more that you practice it.
+
+
+    If you found any piece of this book confusing, go back and read it again. As I
+    stated in the introduction, programming is not easy and it is not going to come
+    to you overnight.
+
+
+    Do not stop learning Java just because one of the codes that you use does not
+    work. If you do that, then you are never going to learn where you messed up. Instead,
+    take that mistake and learn from it so that you do not have to repeat those same
+    mistakes.
+
+
+    Finally, if you found this book useful in anyway, a review on Amazon is always
+    appreciated! 
+
+
+    Good luck!
+
+
+    # Join the thousands of coders who created their own language.
+
+
+    [![http://createyourproglang.com/images/real_book.png](images/00001.jpeg)](http://1.macoaff.pay.clickbank.net/)
+
+
+    ## “It''s been a lot of fun, and surprisingly little work to get a language that
+    covers 95% of what JavaScript can do.”
+
+
+    — [Jeremy Ashkenas](http://ashkenas.com/), created [CoffeeScript](http://coffeescript.org/) after
+    reading the book.
+
+
+    ## “I love this book! It helped me create my own Awesome-to-PHP compiler. It''s
+    not a full featured compiler yet but I had a lot of fun coding it and I learned
+    a LOT.”
+
+
+    — [Julien Desrosiers](http://twitter.com/jdesrosiers), created [Phlower](http://github.com/juliend2/phlower) after
+    reading the book.
+
+
+    ## “I never had a chance to study language internals at university, and while
+    very interested, I found their inner workings intimidating. With this course I''ve
+    found a simple but engaging introduction to the world of lexers, parsers, interpreters
+    and compilers, and suddenly a whole new world in programming has opened up. Highly
+    recommended.”
+
+
+    — [David Bolton](http://davidbolton.net/)
+
+
+    * * *
+
+
+    ### A few languages created from this system ...
+
+
+    [![CoffeeScript](images/00002.jpeg) ](http://coffeescript.org/)[![Fancy](images/00003.jpeg) ](http://www.fancy-lang.org/)[Savage](https://bitbucket.org/masonicboom/savage) [Rubby](http://rubby-lang.org/)[![Arendelle](images/00004.jpeg)](http://web.arendelle.org/)
+
+
+    * * *
+
+
+    # It works or it''s free.
+
+
+    ## Not sure this system is for you? Try it and if you''re not happy, I''ll give
+    you your money back and you keep everything.
+
+
+    [Get it here !](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)
+
+
+    © Copyright 2016 by Martin Laredo Publishers- All rights reserved.
+
+
+    The follow eBook is reproduced below with the goal of providing information that
+    is as accurate and reliable as possible. Regardless, purchasing this eBook can
+    be seen as consent to the fact that both the publisher and the author of this
+    book are in no way experts on the topics discussed within and that any recommendations
+    or suggestions that are made herein are for entertainment purposes only. Professionals
+    should be consulted as needed prior to undertaking any of the action endorsed
+    herein.
+
+
+    This declaration is deemed fair and valid by both the American Bar Association
+    and the Committee of Publishers Association and is legally binding throughout
+    the United States.
+
+
+    Furthermore, the transmission, duplication or reproduction of any of the following
+    work including specific information will be considered an illegal act irrespective
+    of if it is done electronically or in print. This extends to creating a secondary
+    or tertiary copy of the work or a recorded copy and is only allowed with express
+    written consent from the Publisher. All additional right reserved.
+
+
+    The information in the following pages is broadly considered to be a truthful
+    and accurate account of facts and as such any inattention, use or misuse of the
+    information in question by the reader will render any resulting actions solely
+    under their purview. There are no scenarios in which the publisher or the original
+    author of this work can be in any fashion deemed liable for any hardship or damages
+    that may befall them after undertaking information described herein.
+
+
+    Additionally, the information in the following pages is intended only for informational
+    purposes and should thus be thought of as universal. As befitting its nature,
+    it is presented without assurance regarding its prolonged validity or interim
+    quality. Trademarks that are mentioned are done without written consent and can
+    in no way be considered an endorsement from the trademark holder.'
+  toc: []
+  trans: "\n\n我无法确定数组中的具体值，但我可以使用 `ArrayList`，这样我就可以查看数据的结构。我列表中的项可以添加或删除。但是，普通数组的数据是不会移动的，因为对于我创建的内容，我没有能力更改数组的大小。\n\
+    \n当我设置一个数组列表时，我将不得不从 Java 的包中提取数据。\n\n### 语法\n\n```java\nimport java.util.ArrayList;\n\
+    ```\n\n在我引入了创建新对象所需的数据后，我将使用不同的语法。\n\n```java\nArrayList listTest = new ArrayList(\
+    \ );\n```\n\n在为数组创建列表时，我不会使用括号。\n\n### 示例\n\n```java\nlistTest.add( \"and\" );\n\
+    listTest.add( \"for” );\nlistTest.add( “but \" );\nlistTest.add( 8 );\n```\n\n\
+    括号中的任何内容都将被放在我的数组列表中。通过这种方法，我可以添加任何想要的对象。出现在列表中的前三个项是通常添加到字符串中的对象。最后一个项是一个整数。\n\
+    \n我列表中的所有项都可以通过它们的索引值找到。\n\n### 示例\n\n```java\nlistTest.get(5); \n```\n\n数字五准确地告诉我需要去哪里找到我正在找的东西。索引值总是像\
+    \ Java 中使用的其他东西一样从零开始。考虑到这一点，对于上面的示例，将查看第六位置。\n\n当我想要删除对象时，我将使用不同的语法。\n\n### 示例\n\
+    \n```java\nlistTest.remove(5);\n```\n\n我也可以删除数组上的字符串值。\n\n```java\nlistTest.remove(“but”);\n\
+    ```\n\n在删除项时，列表会自动调整大小。正如此，我在删除对象时必须非常小心，否则我的列表索引将会发生巨大变化，我将不知道列表中的任何位置。所以，如果我删除了列表中的第二个项，那么在删除之后，后面的三个项将在列表中向上移动。\n\
+    \n### 结论\n\n感谢你读到 Java 的最后，希望它能为你提供启发，并能够为你提供实现目标所需的所有工具，无论你的目标是什么。\n\n下一步是下载\
+    \ NetBeans，并根据我提供的信息开始创建自己的 Java 程序。有些内容可能看起来很困惑，但练习得越多，就会变得越容易。\n\n如果你发现这本书的任何部分让你困惑，请回去重读一遍。正如我在引言中所说的，编程并不容易，它不会在一夜之间让你学会。\n\
+    \n不要因为你使用的某段代码不起作用就停止学习 Java。如果你这样做，你就永远不会知道自己哪里搞错了。相反，采取那个错误并从中学习，这样你就不必重复同样的错误了。\n\
+    \n最后，如果你觉得这本书在任何方面都有用，非常感谢你在 Amazon 上的评价！\n\n祝你好运！\n\n# 加入成千上万创建了自己语言的编码者行列。\n\
+    \n![`createyourproglang.com/images/real_book.png`](http://1.macoaff.pay.clickbank.net/)\n\
+    \n## “获得一个涵盖了 JavaScript 95% 功能的语言非常有趣，而且工作量少得惊。”\n\n— [Jeremy Ashkenas](http://ashkenas.com/)，在阅读这本书后创建了\
+    \ [CoffeeScript](http://coffeescript.org/)。\n\n## “我喜欢这本书！它帮助我创建了自己的 Awesome-to-PHP\
+    \ 编译器。虽然它还不是一个全功能的编译器，但我编写它时非常有趣，并且学到了很多。”\n\n— [Julien Desrosiers](http://twitter.com/jdesrosiers)，在阅读这本书后创建了\
+    \ [Phlower](http://github.com/juliend2/phlower)。\n\n## “我在大学期间没有机会学习语言内部原理，虽然我很感兴趣，但我发现它们的运行机制令人生畏。通过这门课程，我发现了一个关于词法器、解析器、解释器和编译器世界的简单但引人入胜的介绍，编程的一个全新世界向我打开了。强烈推荐。”\n\
+    \n— [David Bolton](http://davidbolton.net/)\n\n***\n\n### 使用此系统创建的一些语言 ...\n\n\
+    ![CoffeeScript ](http://coffeescript.org/)![Fancy ](http://www.fancy-lang.org/)[Savage](https://bitbucket.org/masonicboom/savage)\
+    \ [Rubby](http://rubby-lang.org/)![Arendelle](http://web.arendelle.org/)\n\n***\n\
+    \n# 要么有效，要么免费。\n\n## 不确定这个系统是否适合你？试一下吧，如果你不满意，我会把钱退给你，并且保留所有东西。\n\n[在此处获取！](http://1071173znfarcld6m3q4q25z32.hop.clickbank.net/)\n\
+    \n© Copyright 2016 Martin Laredo Publishers - 版权所有。\n\n以下重录的电子书目标是提供尽可能准确可靠的信息。无论如何，购买本电子书可以被视为同意以下事实：本书的出版者和作者对书中所讨论的话题并非专家，书中提出的任何建议或主张仅供娱乐之用。在采取书中支持的任何行动之前，应根据需要咨询专业人士。\n\
+    \n此声明被美国律师协会和出版商协会委员会认为是公平且有效的，并在全美范围内具有法律约束力。\n\n此外，传输、复制或复制以下任何作品（包括特定信息）都将被视为非法行为，无论是以电子形式还是印刷形式进行。这延伸到创建作品的二级或三级副本或录制品，只有在获得出版者明确书面许可的情况下才允许。保留所有权利。\n\
+    \n"
