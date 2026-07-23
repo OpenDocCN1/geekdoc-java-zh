@@ -1,0 +1,1218 @@
+<p><img src="Image00000.jpg" /></p>
+<p><span id="text00000.html"></span></p>
+<div>
+<p><span style="font-size:3.2rem; letter-spacing:-0.5pt"> </span></p>
+<p><span style="font-size:3.2rem; letter-spacing:-0.5pt"> </span></p>
+<p><span style="font-size:3.2rem; letter-spacing:-0.5pt"> </span></p>
+<p><span style="font-size:3.2rem; letter-spacing:-0.5pt"> </span></p>
+<p><span style="font-size:3.2rem; letter-spacing:-0.5pt">Java
+Programming - Advanced</span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:1.0rem"> </span></p>
+<h1
+style="margin:1.85% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:250%; font-size:1.0rem; font-weight:normal"><span
+style="font-size:1.0rem; color:#2f5496">Chapter 1: An Overview of
+Java</span></h1>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:1.0rem; font-weight:bold">OBJECT ORIENTED
+PROGRAMMING</span></p>
+<p><span style="font-size:1.0rem">Java's core is object-oriented
+programming (OOP). All Java programs are, in fact, at least partially
+object-oriented. OOP is an integral part of Java. It is important to be
+familiar with its principles before you start writing simple Java
+programs. This chapter will discuss the theoretical aspects and
+applications of OOP.</span></p>
+<p><span style="font-size:1.0rem; font-weight:bold">TWO
+PARADIGMS</span></p>
+<p><span style="font-size:1.0rem">Computer programs are composed of code
+and data. A program can also be conceptually organized around either its
+code or its data. This means that some programs are written around what
+is happening, while others are written around who is being affected.
+These two paradigms govern how programs are constructed. The
+process-oriented model is the first. This model describes a program in a
+series or steps (that is code). This model is code that acts on
+data. This model is used to great effect in procedural languages like
+C.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold">ABSTRAACTION</span></p>
+<p><span style="font-size:1.0rem">Abstraction is an essential component
+of object-oriented programming. Abstraction is how humans manage
+complexity. People don't think of a car, for example, as a collection of
+thousands of parts. It is a clearly defined object that has its own
+behavior. This abstraction allows people the freedom to drive a car to
+the grocery without worrying about the intricate parts. They don't have
+to pay attention to the intricate details of the engine, transmission,
+or braking system. They can instead use the entire object.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold">ENCAPSULATION</span></p>
+<p><span style="font-size:1.0rem">Encapsulation is a mechanism that
+binds code and data together and protects them from misuse and
+interference. Encapsulation can be described as a protective wrapper
+that blocks code and data being accessed by code outside of the
+wrapper. The interface that controls access to code and data within the
+wrapper is well-defined. This is analogous to an automobile's automatic
+transmission. This information contains hundreds of bits about your
+engine. It includes the amount of acceleration, pitch of the surface,
+and position of the shift lever.</span></p>
+<p><span style="font-size:1.0rem; font-weight:bold">POLYMORPHISM AND
+ENCAPSULATION WORK TOGETHER</span></p>
+<p><span style="font-size:1.0rem">Polymorphism, inheritance, and
+encapsulation can be combined to create a programming environment that
+is far more robust than the process-oriented model. The basis for reuse
+of the code you have spent time developing and testing is a
+well-designed hierarchy. Encapsulation makes it possible to move your
+implementations without breaking any code that relies on your public
+interface. Polymorphism allows for the creation of clean, sensible,
+readable and resilient code.</span></p>
+<p><span style="font-size:1.0rem; font-weight:bold">THE FIRST SIMPLE
+PROGRAM</span></p>
+<p><span style="font-size:1.0rem">Let's now look at actual Java programs
+after we have covered the basics of Java object-oriented
+underpinnings. Let's begin by running and compiling the following sample
+program. This takes a bit more effort than you might think.</span></p>
+<p><span style="font-size:1.0rem">/*</span></p>
+<p><span style="font-size:1.0rem">This Java program is very
+simple.</span></p>
+<p><span style="font-size:1.0rem">This file is called
+"Example.java".</span></p>
+<p><span style="font-size:1.0rem">*/</span></p>
+<p><span style="font-size:1.0rem">{class Example Class
+Example</span></p>
+<p><span style="font-size:1.0rem">// Start your program with a call back
+to main()</span></p>
+<p><span style="font-size:1.0rem">{public static void main(String
+args[]) public static void main (String args[]).</span></p>
+<p><span style="font-size:1.0rem">System.out.println("This is a simple
+Java program. "</span></p>
+<p><span style="font-size:1.0rem">|}</span></p>
+<p><span style="font-size:1.0rem">|}</span></p>
+<p><span style="font-size:1.0rem; font-weight:bold">ENTERING THE
+PROGRAM</span></p>
+<p><span style="font-size:1.0rem">The name of the file containing the
+source code for a program in most computer languages is irrelevant. Java
+is different. Java's first lesson is to understand that the name of a
+source file is extremely important. This is an example of what the
+source file name should look like.java. Let's find out why. A
+compilation unit is what Java calls a source file. A text file that
+contains one, or more, class definitions. Java compiler requires that
+source files use the extension.java.</span></p>
+<p><span style="font-size:1.0rem; font-weight:bold">COMPILING</span></p>
+<p><span style="font-size:1.0rem">Execute the compiler javac to compile
+the Example program.</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">C.&gt;javac
+Examples.java</span></p>
+<p><span style="font-size:1.0rem">The javac compiler creates an
+example.class file that contains the bytecode version. The Java
+bytecode, which is an intermediate representation of your program and
+contains instructions that the Java Virtual Machine will execute, is
+what we discussed earlier. The output of javac therefore is not code
+that can directly be executed.</span></p>
+<p><span style="font-size:1.0rem">You must use Java's application
+launcher (called java) to actually run the program. As shown below, you
+need to pass the class name Example as an argument on the command
+line.</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">C:\&gt;java
+Example</span></p>
+<p><span style="font-size:1.0rem">The following output will be displayed
+when the program is executed:</span></p>
+<p><span style="font-size:1.0rem">This Java program is very
+simple.</span></p>
+<p><span style="font-size:1.0rem; font-weight:bold">THE IF
+STATEMENT</span></p>
+<p><span style="font-size:1.0rem">The Java if statement functions in the
+same way as any other language's IF statement. It is syntactically
+identical with the if statements of C, C++ and C#. This is its simplest
+form:</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">If(condition)
+statement;</span></p>
+<p><span style="font-size:1.0rem">This is condition. It's a Boolean
+expression. If condition is true, the statement will be
+executed.</span></p>
+<p><span style="font-size:1.0rem">False condition means that the
+statement can be ignored. Here's an example:</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">if (num 100);
+System.out.println ("num is less than 100");</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">/*</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">Show the
+if.</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">This file should be
+called "IfSample.java".</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">*/</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">{class
+IfSample class IfSample</span></p>
+<p><span style="font-size:1.0rem; font-style:italic">{public static void
+main(String args[]) public static main(String arguments[])</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">intx,y;</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">x
+= 10,</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">y
+= 20,</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">if
+(x y). System.out.println ("x is less than or equal to y");</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">x
+= * 2;</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">if(x
+== y) System.out.println("x now equal to y");</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">x
+= * 2;</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">if(x
+&gt; y) System.out.println("x now greater than y");</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">//
+This won't show anything</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">if(x
+== y) System.out.println("you won't see this");</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">| }</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">| }</span></p>
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:250%; font-size:1.0rem; font-weight:normal;"><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem; color:#2f5496">Chapter
+2: Data Types and Variables.</span></h1>
+<p><span
+style="font-size:1.0rem; font-weight:bold; font-style:italic; letter-spacing:0.054rem;">THE
+PRIMITIVE TTYPES</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">Java
+supports eight types of primitive data: byte and short, int, long; char,
+float; double; and boolean. Both simple and primitive types are commonly
+used to refer to the primitive types. You can group them into four
+categories:</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">*
+Integers The group includes byte and short as well as int and long which
+are whole-valued signed numbers.</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">*
+Floating numbers This group includes double and float, which are numbers
+with fractional precision.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; font-style:italic; letter-spacing:0.054rem;">INTEGERS</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">Java
+has four types of integers: byte (short), int (int), and long
+(long). All these integer types can be signed and have positive or
+negative values. Java doesn't support unsigned, positive only
+integers. Many other computer languages can support both signed integers
+and unsigned integers. Java's developers felt unsigned integers were
+unnecessary. They felt that unsigned integers were unnecessary because
+they could be used to describe the behavior of high-order bits, which
+define the sign of an integer value. Java adds a special "unsigned
+rightshift" operator to clarify the meaning of high-order bits. This
+eliminated the need to have an unsigned integer type.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; font-style:italic; letter-spacing:0.054rem;">FLOATING
+POINT TYPES</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">When
+evaluating expressions with fractional precision, floating-point numbers
+(also known as real numbers) are used. Calculations such as square root
+or transcendentals like sine and cosine can result in values whose
+precision requires a floating point type. Java implements the standard
+(IEEE-754) set of floating-point operators and types. There are two
+types of floating-point types: float and double. These represent single-
+or double-precision numbers.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; font-style:italic; letter-spacing:0.054rem;">CHARACTERS</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">Java
+uses char as the data type to store characters. C/C++ programmers need
+to be aware that char in Java may not be the same as C++ or C++. C/C++
+has char that is 8 bits in width. Java, however, does not have this
+limitation. Java instead uses Unicode to represent characters. Unicode
+is a fully international character set, which can represent all
+characters in all human languages. Unicode is the unification of many
+character sets such as Latin Greek, Arabic Cyrillic Hebrew, Cyrillic
+Hebrew, Katakana and Hangul. It requires 16 bits to accomplish this
+task. Java char is therefore a type of 16 bits. A char can be anywhere
+from 0 to 65,536. There are no negative characters.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; font-style:italic; letter-spacing:0.054rem;">BOOLEANS</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">Java
+supports a primitive type called boolean for logical values. It can only
+have one of the two possible values, true/false. This type is returned
+by all relational operations, as in the case a b. The type required by
+conditional expressions such as for and if is boolean.</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">//
+Showcase boolean values.</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">{class
+BoolTest BoolTest class</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">boolean
+b</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">b
+= false</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">System.out.println("b
+is " + b);</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">b
+= true</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">System.out.println("b
+is " + b);</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">//
+A boolean value may control the if statem</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">if(b)
+System.out.println("This is executed. ";</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">b
+= false</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">if(b)
+System.out.println("This is not executed. ");</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">//
+The result of a relational operation is a boolean number</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">System.out.println("10
+&gt; 9 is " + (10 &gt; 9));</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; font-style:italic; letter-spacing:0.054rem;">FLOATING
+POINT LITERALS</span></p>
+<p><span
+style="font-size:1.0rem; font-style:italic; letter-spacing:0.054rem;">Floating-point
+numbers are decimal values that include a fractional component. They can
+be expressed either in scientific or standard notation. Standard
+notation is composed of a whole-number component, followed by a decimal
+and then a fractional component. 2., 3.14159, 0.6667, and 0.6667 are
+valid floating-point numbers in standard-notation. A standard-notation
+floating-point number and a suffix specifying a power of 10, which is
+how the number should be multiplied in scientific notation. An E or e is
+followed by a decimal, which can be either positive or
+negative.</span></p>
+<p><span style="font-size:1.0rem"> </span></p>
+<p><span style="font-size:1.0rem"> </span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">DYNAMIC
+INSITIALIZATION</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">While the
+previous examples used constants as initializers for variables, Java
+allows variables that are declared to be initialized dynamically using
+any expression that is valid at the time they are declared. Here is an
+example program that calculates the length of the hypotenuse in a right
+triangle based on the lengths of its opposing sides.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">//
+Demonstrate dynamic initialization.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class
+DynInit DynInit class</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Double a =
+3.0, double b = 4.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// c is
+dynamically initialized</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Double c =
+Math.sqrt (a* a + b* b);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Hypotenuse
+is " + c);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">TYPE
+CONVERSION AND CASTING</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">You may have
+some programming experience. It is quite common to assign one type of
+value to another type of variable. Java will automatically convert the
+types if they are compatible. It is possible, for example, to assign an
+int value a long variable. But not all types are compatible and
+therefore not all type conversions can be implicitly permitted. There
+is, for example, no automatic conversion from double to bytes. It is
+possible to convert between incompatible types. Casts are used to
+convert between incompatible types. Let's take a look at casting and
+automatic type conversions.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:250%; font-size:1.0rem; font-weight:normal;"><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem; color:#2f5496">Chapter
+3: Operators</span></h1>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">THE BASIC
+ARITHMETIC OPERATORS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The basic
+arithmetic operations--addition, subtraction, multiplication, and
+division-- all behave as you would expect for all numeric types. There
+is also a unary form of the minus operator that negates its one
+operand. When the division operator is applied on an integer type, the
+result will not contain a fractional component.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">//
+Demonstrate basic arithmetic operators.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class
+BasicMath BasicMath class</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">//
+Arithmetic with integers</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Integer
+Arithmetic");</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int a = 1 +
+1.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int b = *
+3</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int c =
+4;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int d = c -
+a;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int e =
+-d;</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("a
+= " + a);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("b
+= " + b);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("c
+= " + c);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("d
+= " + d);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("e
+= " + e);</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">//
+Arithmetic with doubles</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("\nFloating
+Point Arithmetic");</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">double da =
+1 + 1;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">double db =
+da * 3;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">double dc =
+db / 4;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">double dd =
+dc - a;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">double de =
+-dd;</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("da
+= " + da);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("db
+= " + db);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("dc
+= " + dc);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("dd
+= " + dd);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("de
+= " + de);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">THE MODULUS
+OPERATOR</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Modulus
+operator % returns the remainder of a division operation. This operator
+can be used to both floating-point and integer types. This example
+program illustrates the %.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">//
+Demonstrate % operator.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">class
+Modulus {</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int x =
+42</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">double y =
+42.25;</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("x
+mod 10 = " + x % 10);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("y
+mod 10 = " + y % 10);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">This program
+will produce the following output when it is run:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">x mod 10 =
+2</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">y mod 10 =
+2.25</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">THE BITWISE
+OPERATORS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Java has
+several bitwise operators that can be used to integer types long, int
+and short, char, byte, and byte. These operators are able to act on the
+bits of individual operands.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">THE
+BITWISELOGICAL OPERATORS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">, ^, and
+~. Below is a table that shows the results of each operation. The
+following table shows the outcome of each operation.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The Bitwise
+NOT</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The bitwise
+complement is also known as the unary NOT operator. inverts all bits of
+its operand. The following bit pattern is found in the number
+42:</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">00101010</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">It
+is</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">11010101</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">After the
+NOT operator has been applied.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">THE UNSIGNED
+RIGHT SLIP</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">As you can
+see, the &gt;&gt; operator fills the high order bit automatically with
+its previous contents every time there is a shift. This preserves the
+sign value. Sometimes, however, this can be undesirable. If you're
+shifting something that doesn't represent a numerical value, sign
+extension may not be desired. This is often the case when working with
+pixels-based values or graphics. These cases will require you to shift a
+zero into a high-order bit regardless of its initial value. This is
+called an unsigned shift. Java's unsigned shift-right operator
+&gt;&gt;&gt;, is used to accomplish this. It always shifts zeros into
+high-order bits.</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">SHORT-CIRCUIT
+OPERATORS LOGICAL OPERATORS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Java has two
+unique Boolean operators that are not available in other
+languages. These are secondary versions to the Boolean AND/OR operators,
+and are also known as short-circuit logic operators. The OR operator
+returns true when A is true regardless of what B is, as you can see in
+the table. The AND operator returns false if A is false. This is useful
+when the right hand operand depends on its value in order to function
+correctly.</span></p>
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:250%; font-size:1.0rem; font-weight:normal;"><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem; color:#2f5496">Chapter
+4: Control Statements</span></h1>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">JAVA
+SELECTION STATEMENTS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Java
+supports two types of selection statements: switch and if. These
+statements can be used to control the execution of your program based on
+conditions that are only known during runtime. These statements will
+surprise you with their power and flexibility.</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">If</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">In Chapter
+2, the if statement was introduced. This chapter explains it in greater
+detail. Java's conditional branch statement is the if statement. It can
+be used for routing program execution along two paths. This is the if
+statement in its general form:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Statement 1;
+if (condition)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Other
+statement2</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">ITERATION
+STATEMENTS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Java's
+iteration clauses are for do-while and while. These statements create
+loops, which we call them. A loop executes the same set instructions
+repeatedly until it reaches a termination condition. Java provides a
+loop that can be used to meet any programming need.</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">While</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The most
+fundamental Java loop statement is the while loop. It repeats a block or
+statement while its controlling expression remains true. This is the
+general form of it:</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">{while(condition)
+While(condition)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// Body of
+loop</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">SOME
+TO LOOP VARIATIONS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">There are
+many variations of the for loop that can increase its power and
+utility. It is flexible because its three sections--the initialization
+and conditional tests, as well as the iteration-simply can be used for
+any purpose. The three sections of for can be used for whatever purpose
+you want.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">boolean done
+= false;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{for(int
+i=1; !done; i++) for(int: i=1!done i++)</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">//</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">If(interrupted())
+done = true</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">THE
+FOR-EACH VARIATION OF THE FOR LOOP</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">JDK 5
+introduced a second form for that implements a style loop called
+"for-each". The for-each concept is becoming an expected feature in
+modern programming languages. Foreach loops are designed to cycle
+through an object collection, such as an array in a strictly sequential
+fashion from start to end. Java, unlike C# which implements a for-each
+loop using the keyword foreach. Java enhances the for statement to add
+the for-each capability.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">USEING
+BREAK TO EXIT LOOP</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Break can be
+used to force the termination of a loop. This bypasses the conditional
+expressions and any code that remains in the loop's body. If a break
+statement is found within a loop, it terminates the loop and program
+control is resumed at the next statement after the loop. Here's an
+example:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// Use break
+to exit a loop.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class
+BreakLoop Class BreakLoop</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{for(int
+i=0; i&lt;100; i++) for(int:i=0;i100;i++)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">If(i == 10),
+break; // Terminate loop if you are 10.</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("i:
+" + i);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Loop
+complete. System.out.println("Loop complete.</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">BREAK
+AS A FORMAT OF GOTO</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The break
+statement can be used to create a civilized version of the goto
+statements. It is also useful with loops and switch statements. Java
+doesn't have a goto clause because it allows you to branch in an
+unstructured and arbitrary way. This makes it difficult to understand
+and maintain goto-ridden Java code. This also prevents some compiler
+optimizations. However, there are a few instances where the goto can be
+useful and legal for flow control. The goto is useful in situations
+where you need to exit from a complex set of loops. Java provides an
+extended form of the break statement to handle these situations. This
+form of break allows you to break out of a block of code. These blocks
+do not have to be in a loop. They can be any type of block.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">CONTINUE</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Sometimes,
+it can be useful to force an earlier iteration of the loop. This means
+that you may want to keep running the loop, but not process the rest of
+the code within its body. This is essentially a geto that goes just
+beyond the body of the loop to the end. This is accomplished by the
+continue statement. A continue statement allows control to be
+transferred to the conditional expression controlling the loop in while
+and do-while loops. For loops have control transferred to the
+conditional expression and the iteration section of the for
+statement. Any intermediate code is ignored for all three
+loops.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:250%; font-size:1.0rem; font-weight:normal;"><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem; color:#2f5496">Chapter
+5: Inheritance</span></h1>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">INHERITANCE</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Basics You
+can inherit a class by simply incorporating the definition of one class
+into the other using the extends keyword. Let's take a look at a quick
+example to show you how. This program creates A superclass and B
+subclasses. You can see how the keyword extends was used to create a
+subclass for A.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// An
+example of inheritance.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// Create a
+Superclass.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class A
+Class A</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int
+i,j;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{void
+showij() void showij()</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("i
+and j: " + i + " " + j);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// Create a
+subclass of class A by extending it.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class B
+extends A Class B extends to A</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Int
+k</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{void
+showk() void showk()</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("k:
+" + k);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">void sum()
+{</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("i+j+k:
+" + (i+j+k));</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">MEMBER
+ACCESS AND INHERITANCE</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">A subclass
+can access all members of its superclass even though it includes the
+entire superclass. However, the superclass members that have been
+declared private cannot be accessed by the subclass. Consider the
+following class hierarchy example:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Private
+members are not included in a class hierarchy.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Private to
+their class</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">This program
+has an error.</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">Compile.</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">*/</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// Create a
+Superclass.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class A
+Class A</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int i, //
+public by default</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">private
+int.j; // private A</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">void
+setij(int x, int y) {</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">i =
+x</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">j =
+y</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// A's J is
+not available here.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class B
+extends A Class B extends to A</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Int
+Total</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">void sum()
+{</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">total = i+j;
+// ERROR j is not available here</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class
+Access Class Access</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">B subOb =
+new BB()</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">subOb.setij(10,
+12);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">SubOb.sum()</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Total
+is " + subOb.total);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">A
+SUPERCLASS VARIEABLE CAN REFERENCE A SUBCLASS OBJECT</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Any subclass
+that is derived from a superclass can have a reference to a reference
+variable in a superclass. This aspect of inheritance is very useful in
+many situations. Consider the following:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">class
+RefDemo {</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">BoxWeight
+weightbox = New BoxWeight (3, 5, 7, 8.37);</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Box plainbox
+= new box()</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">double
+vol;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Vol =
+weightbox.volume()</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Volume
+of weightbox is " + vol);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Weight
+of weightbox is " +</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">Weightbox.weight</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println();</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// Assign
+BoxWeight reference Box reference</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Plainbox =
+Weightbox</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">vol =
+plainbox.volume() // OK, volume() as defined in Box</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Volume
+of plainbox is " + vol);</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">/* This
+statement is invalid due to plainbox</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Does not
+determine a weight member. */</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">//
+System.out.println("Weight of plainbox is " +
+plainbox.weight);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">SUPER</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The classes
+derived form Box were not implemented in the above examples as well as
+as as effectively as they could. BoxWeight's constructor explicitly sets
+the BoxWeight width, height, depth fields ( ). This duplicate code is
+not only inefficient but also implies that subclasses must have access
+to these members. There will be occasions when you want to create a
+superclass which keeps its implementation details private (i.e., its
+data members). This would prevent a subclass from accessing or
+initializing these variables directly. Java has a solution for this
+problem, since encapsulation is an OOP primary attribute.</span></p>
+<p><span style="font-size:1.0rem"> </span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">CREATING
+A MULTILEVEL HIERARCHY</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">We have used
+simple class hierarchies, which consist only of a superclass or
+subclass. You can create hierarchies with as many layers as you want. It
+is acceptable to use a subclass of another class as a superclass. If you
+have three classes A, B and C, then C could be a subclass or subclass of
+C. This type of situation means that each subclass inherits all the
+traits from all its superclasses. C inherits all aspects from A and
+B. The following program illustrates how a multilevel hierarchy is
+useful.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">CONSTRUCTORS
+ARE Dubbed</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">In what
+order is the class hierarchy's constructors called when it is
+created? If A is a subclass of B, and A is a superclass, how are A's
+constructors called? Or vice versa. In a class hierarchy constructors
+are called in the order of their derivation from superclasses to
+subclasses. Super() must be executed first in subclass constructors.
+This order remains the same regardless of whether super( ) has been
+used. If super() isn't used, the default or parameter-less constructor
+for each superclass will be executed.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">METHOD
+OVERRIDING</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">If a method
+within a subclass has the exact same type signature and name as a
+superclass method, it is considered to be overriding the method in that
+superclass. If an overridden method can be called from within a class,
+it will always refer the subclass's version. The superclass version will
+be hidden.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">DYNAMIC
+METHOD DISPATCH</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Although the
+examples shown in the previous section illustrate the mechanics and
+power of method overriding they don't show it. If method overriding were
+limited to a name space convention, it would be a curiosity at best and
+of no real value. This is not true. Method overriding is the foundation
+for dynamic method dispatch, one of Java's most powerful
+concepts. Dynamic method dispatch refers to the way that a call for an
+overridden method can be resolved at run-time, not compile time. This is
+the way Java implements runtime polymorphism. Dynamic method dispatch is
+crucial.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">WHY
+OVERRIDDEN METHODS?</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Overridden
+methods, as mentioned earlier, allow Java to support runtime
+polymorphism. Polymorphism is crucial to object-oriented programming
+because it allows a general type to specify methods that are common to
+all its derivatives while allowing subclasses the ability to define
+specific implementations of any or all of these methods. Java also
+implements polymorphism's "one interface, many methods" concept by using
+overridden methods.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:250%; font-size:1.0rem; font-weight:normal;"><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem; color:#2f5496">Chapter
+6: Exception Handling</span></h1>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">EXCEPTION-HANDLING
+FUNDAMENTALS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Java
+exceptions are objects that describe an unusual (or error) condition in
+a piece or code. An exception object is created when an unusual
+condition occurs and is thrown in the code that caused it. The method
+that created the exception may either handle it or pass it along. The
+exception will be caught and processed in any case. You can either
+generate exceptions by the Java runtime system or manually by your
+code. Java throws exceptions when there are fundamental errors. These
+exceptions can be caused by Java breaking the Java language rules or the
+constraints of Java's execution environment. Most commonly, exceptions
+that are manually generated are used to notify the caller of a method
+about an error condition.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">EXCEPTION
+TTYPES</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">All
+exception types are subclasses the built-in class Throwable. Throwable
+is the highest level of the exception class hierarchy. Two subclasses
+immediately below Throwable divide exceptions into distinct
+branches. Exception heads one branch. This class is for special
+conditions that user programs must catch. This class is also where
+you'll subclass it to create custom exception types. RuntimeException is
+a subclass of Exception. These exceptions are automatically created for
+your programs and include invalid array indexing and division by
+zero.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">EXCEPTIONS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">It is
+important to understand what happens when you don’t handle exceptions
+before you can learn how to handle them in your program. This program
+contains an expression that causes a divide by zero error.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{class Exc0
+Class Exc0</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{public
+static void main(String args[]) public static void main (String
+args[]).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int d =
+0;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int a =
+42/d;</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">TRY
+AND CATCH</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The Java
+run-time system's default exception handler is great for debugging but
+you may want to manually handle any exceptions. Doing so provides two
+benefits. It allows you to correct the error. It prevents the program's
+termination from happening automatically. Your program would cause
+confusion for most users if it stopped running and printed stack trace
+information whenever an error occurred. It is easy to avoid this. You
+can prevent and manage a runtime error by simply including the code you
+wish to monitor in a try block. Include a catch clause immediately after
+the try block that specifies the exception type you want to
+catch.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">DISPLAYING
+THE DESCRIPTION OF A EXCEPTION</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Throwable
+overrides toString(.) method (defined in Object). It returns a string
+that contains a description for the exception. This description can be
+displayed in a println() statement by passing the exception as an
+argument. This is an example of how you can rewrite the catch block from
+the previous program.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">{catch
+(ArithmeticException e) catch (ArithmeticExceptione e)</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println("Exception:
+" + e);</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">// Set a = 0
+to continue</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">|}</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">This message
+is displayed for each divide-byzero error that occurs when this version
+is used in the program.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Exception:
+java.lang.ArithmeticException: / by zero</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">MULTIPLE
+CRATCH CLAUSES</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Sometimes,
+multiple exceptions can be raised with a single code block. This
+situation can be handled by specifying multiple catch clauses that each
+catch a different type. Each catch statement that is executed after an
+exception has been thrown is reviewed in order. Once one catch statement
+is executed, all others are ignored and execution continues after the
+"try/catch" block.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">NESTED
+TERY STATEMENTS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">You can nest
+the try statement. A try statement can be placed inside a block of
+another try. The context of the exception is added to the stack each
+time a try is entered. If the catch handler for an exception in an inner
+try statement is not present, the stack will be unwound. The catch
+handlers for the next try statement are checked for a match. The process
+continues until either one of the catch phrases succeeds or all the
+nested attempt statements have been exhausted. If there is no match for
+a catch statement, the Java runtime system will handle the
+exception.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">JAVA’S
+BUILT IN EXCEPTIONS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Java defines
+many exception classes within the standard package Java.lang. Several of
+these exception classes have been covered in the examples. These
+exceptions can be subclasses or variants of RuntimeException, which is
+the most common. These exceptions, as previously explained, do not need
+to be added to any method's throws. These exceptions are known in Java
+as unchecked. This is because the compiler doesn't check to see whether
+a method handles these exceptions. Table 10-1 lists the unchecked
+exceptions in Java.lang. Table 10-2 lists the exceptions that java.lang
+has defined that must be included into a method’s throws list. These are
+known as checked exceptions. Java also defines other types of exceptions
+related to its class libraries.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;"> </span></p>
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; line-height:250%; font-size:1.0rem; font-weight:normal;"><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem; color:#2f5496">Chapter
+7: String Handling</span></h1>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">THE
+STRING CONSTRUCTORS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">There are
+several constructors for the String class. You can call the default
+constructor to create an empty String. You can use this
+example:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">String s =
+new String();</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">String will
+be created with no characters.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">You will
+often need to create strings with initial values. This is possible with
+the help of the String class, which provides many constructors. The
+constructor shown below can be used to create a String that is
+initialized with an array of characters.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">String(char
+chars[ ])</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Here's an
+example:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">char chars[]
+= 'a', 'b', 'c' ;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">String s =
+new String(chars);</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">STRING
+CONSTRUCTORS ADOPTED BY J2SE5</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">J2SE 5 has
+two constructors for String. This is the first constructor that supports
+extended Unicode characters and can be seen here:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">String(int
+codePoints[?], int startIndex and int numChars).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">CodePoints
+is an array containing Unicode code points. The range that starts at
+startIndex runs for numChars is used to create the string.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">This second
+constructor is compatible with the StringBuilder class. It can be seen
+here:</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">String(StringBuilder
+strBuildObj).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">This creates
+a string from the StringBuilder passed to strBuildObj.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">STRING
+LENGTH</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The length
+of a string refers to the number of characters it contains. This value
+can be obtained using the length( ), shown here.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int length(
+)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Because
+there are three characters in the string, s:3, the following fragment
+prints "3".</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">char chars[]
+= 'a', 'b', 'c' ;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">String s =
+new String(chars);</span></p>
+<p><span
+style="font-size:1.0rem; letter-spacing:0.054rem;">System.out.println(s.length());</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">SPECIAL
+STRING OPERATIONS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Strings are
+an important part of programming so Java provides special support for
+string operations in the syntax. These operations include automatic
+creation of String instances from string literals and concatenation
+multiple String objects using the + operator. They also allow for the
+conversion of data types to a String representation. Java performs all
+these functions by using explicit methods, but Java makes it easy for
+programmers and adds clarity.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">CHARACTER
+XTRACTION</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">String
+objects can have characters extracted from them in a variety of ways
+using the String class. We will examine each one. The characters within
+a String object can't be indexed like a character array. However, many
+String methods use an offset (or index) to the string to perform their
+operations. String indexes start at zero, just like arrays.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">You can use
+the charAt ( ) method to extract one character from a String. This is
+its general form:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">char charAt
+(int where).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Where is the
+index of your desired character? The where value must not be negative
+and should specify a place within the string. charAt() returns the
+character at specified location. Take, for example.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">char
+ch;</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">ch =
+"abc".charAt(1)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">The value
+"b" is assigned to ch.</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">SEARCHING
+STRENGS</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Two methods
+can be used by the String class to search for a specific character or
+substring in a string.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">* indexOf()
+Searches for substrings or characters that are first
+encountered.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">*
+lastIndexOf ( ) Searches for characters or substrings that have been
+found in the past.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Both of
+these methods can be overloaded in many different ways. The methods
+return the index where the character or substring were found. If the
+method fails, it returns -1.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Use this
+search tool to find the first appearance of a particular
+character.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int indexOf
+(int ch).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Use this
+tool to search for the last appearance of a character.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int
+lastIndexOf (int ch).</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Here, ch
+stands for the character being sought.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">Use this
+method to search for substrings that occur in their first or last
+instances.</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int indexOf
+(String str)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">int
+lastIndexOf (String str).</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">DATA
+CONVERSION Using VALUEOF ( )</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">ValueOf( ),
+which converts data from an internal format to a human-readable format,
+is a method. It is a static method, which is loaded within String for
+all Java's built in types. This allows each 372 Part 2: The Java Library
+type to be properly converted into a string. valueOf( ( ) is also loaded
+for type Object so that any object you create can be used as
+argument. (Remember that Object is a superclass of all classes. Here are
+some examples of its forms:</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">static
+String valueOf(double num)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">static
+String valueOf(long num)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">static
+String valueOf(Object ob)</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">static
+String valueOf(char chars[ ])</span></p>
+<p><span
+style="font-size:1.0rem; font-weight:bold; letter-spacing:0.054rem;">STRINGBUILDER</span></p>
+<p><span style="font-size:1.0rem; letter-spacing:0.054rem;">J2SE 5
+introduces a new string class into Java's already impressive string
+handling capabilities. StringBuilder is the new class. It is identical
+to StringBuffer, except that it isn't synchronized. This means it isn't
+thread-safe. StringBuilder has a faster performance. StringBuffer is
+recommended for multithreading cases.</span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+<p><span style="font-size:0.79rem"> </span></p>
+</div>

@@ -1,0 +1,174 @@
+name: Java GC Tutorials - Herong's Tutorial Examples
+name_cn: Java GC 教程 - Herong 教程示例
+slug: java-gc-tutorials---herongs-tutorial-examples
+toc:
+- - '#'
+  - Java GC 教程 - Herong 教程示例
+- - '##'
+  - 堆内存区域与大小控制
+- - '###'
+  - 'Java 异常："java.lang.OutOfMemoryError: Java heap space"'
+- - '###'
+  - 核心点总结：
+- - '###'
+  - Windows 上的内存分配限制
+- - '####'
+  - 1. 新 Windows 上的 64 位 HotSpot JVM 17
+- - '####'
+  - 2. 旧 Windows 10 64 位 HotSpot JVM 12
+- - '####'
+  - 3. Windows 7 64 位 HotSpot JVM 8
+- - '####'
+  - 4. 在 Windows 7 计算机上的 32 位 HotSpot JVM 8
+- - '##'
+  - 垃圾回收器介绍
+- - '###'
+  - 核心要点：
+- - '###'
+  - JVM 内存管理器 - 垃圾回收器
+- - '####'
+  - 什么是垃圾回收器？
+- - '####'
+  - 垃圾回收器的常见设计目标：
+- - '###'
+  - HotSpot 中的分代垃圾收集
+- - '###'
+  - 新生代收集 - Minor GC
+- - '##'
+  - Serial 收集器 - "+XX:+UseSerialGC"
+- - '###'
+  - 核心总结：
+- - '###'
+  - 什么是 Serial 收集器
+- - '###'
+  - Serial Collector 的 GC 日志消息格式
+- - '###'
+  - Serial Collector 的 GC 日志消息格式
+- - '####'
+  - Serial 垃圾器 - "+XX:+SerialGC"
+- - '#####'
+  - Serial 垃圾器的日志类型
+- - '##'
+  - 堆内存区域使用报告
+- - '##'
+  - 默认 NewRatio - 老年代与新生代
+- - '###'
+  - '1. 堆大小: 10 MB -'
+- - '###'
+  - '2. 堆大小: 20 MB -'
+- - '###'
+  - '3. 堆大小: 40 MB -'
+- - '###'
+  - '4. 堆大小: 80 MB -'
+- - '###'
+  - '`-XX:SurvivorRatio` - Eden 和 Survivor 区的比例'
+- - '###'
+  - Serial GC 追踪 - 紧凑堆
+- - '###'
+  - Serial GC 追踪 - 紧凑堆（第 3 部分）
+- - '###'
+  - 关于上述 GC 的说明：
+- - '###'
+  - 结论：
+- - '###'
+  - Serial GC 追踪 - 存活对象
+- - '###'
+  - 结论
+- - '###'
+  - Serial 收集器 - +XX:+SerialGC
+- - '###'
+  - Serial GC Trace - 年代值
+- - '###'
+  - 结论
+- - '###'
+  - -XX:TargetSurvivorRatio
+- - '###'
+  - '"-XX:+NeverTenure" 和 "-XX:+AlwaysTenure" 的有效性'
+- - '##'
+  - 序列收集器 - `+XX:+UseSerialGC`
+- - '###'
+  - 序列收集器的 Minor GC 触发条件
+- - '###'
+  - 并行收集器 - +XX:+UseParallelGC
+- - '####'
+  - 要点总结：
+- - '##'
+  - '21. Full GC 的类卸载阶段:'
+- - '##'
+  - '22. Full GC 的 ClassLoaderData 阶段:'
+- - '##'
+  - '23. Full GC 的 ResolvedMethodTable 阶段:'
+- - '##'
+  - '24. Full GC 的 Scrub String 阶段:'
+- - '##'
+  - '25. Full GC 的 Scrub Symbol 阶段:'
+- - '##'
+  - '26. Full GC 的 Summary 阶段:'
+- - '##'
+  - '27. Full GC 的 Adjust Roots 阶段:'
+- - '##'
+  - '28. Full GC 的 Compaction 阶段:'
+- - '##'
+  - '29. Full GC 的 Post Compact 阶段:'
+- - '##'
+  - '20. Full GC 的线程报告:'
+- - '###'
+  - Parallel Collector NewRatio and SurvivorRatio
+- - '###'
+  - Parallel Collector 使用年轻代
+- - '###'
+  - 针对最佳吞吐量的自适应大小策略
+- - '##'
+  - -XX:ConcGCThreads=3 - Old GC Concurrent Threads
+- - '##'
+  - 核心要点
+- - '###'
+  - 并发标记-清除 (CMS) 收集器 - +XX:+UseConcMarkSweepGC
+- - '####'
+  - 什么是并发标记-清除 (CMS) 收集器
+- - '####'
+  - 并发标记-清除收集器 GC 日志消息格式
+- - '##'
+  - 通过并发标记和清理减少停顿（Stop-The-World）
+- - '##'
+  - 用于 Minor GC 的并行 New (ParNew) 收集器
+- - '###'
+  - ParNew 收集器 - 存年龄分布
+- - '###'
+  - '3. 在编辑器中搜索所有包含 "GC\(8\)" 的日志行，以获取 GC #8 的所有日志：'
+- - '###'
+  - '2. 在编辑器中搜索所有包含 "GC\(8\)" 的日志行以获取 GC #8 的所有日志：'
+- - '####'
+  - Maximum Logging of All Phases on Full GC
+- - '####'
+  - Garbage First (G1) Collector - +XX:+UseG1GC
+- - '####'
+  - What Is Garbage First (G1) Collector
+- - '##'
+  - HotSpot Garbage First (G1) Collector
+- - '##'
+  - Garbage First (G1) 回收器 - "+XX:+UseG1GC"
+- - '###'
+  - 日志格式
+- - '##'
+  - Garbage First (G1) 收集器 - "+XX:+UseG1GC"
+- - '###'
+  - Full GC 最大日志
+- - '##'
+  - 年生代收集器 - Serial, PS, ParNew, G1
+- - '###'
+  - 老年代收集 - Major GC
+- - '###'
+  - 老年代收集器 - Serial, ParOldGen, CMS, G1
+- - '###'
+  - 收集器组合：Serial, Parallel, Concurrent, G1, Z
+- - '##'
+  - 并行收集器的性能测试
+- - '###'
+  - 核心要点：
+- - '###'
+  - 并行 GC 内存占用 - 释放 10% 堆空间
+- - '###'
+  - 结论：
+- - '##'
+  - 堆大小对并行 GC 的影响

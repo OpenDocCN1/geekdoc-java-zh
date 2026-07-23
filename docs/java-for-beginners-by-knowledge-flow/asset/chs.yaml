@@ -1,0 +1,199 @@
+- "# Java 入门指南\n\n\n\n\n\n\n\n\n\n\n\n\n\n![page-divider.png](img/00002.jpeg)\n\n\n\
+  \n![page-divider.png](img/00002.jpeg)\n\n\n\n![kf-logo.png](img/00003.jpeg)\n\n\
+  ![page-divider.png](img/00002.jpeg)\n\n## Java 简介\n\n- Java 由 James Gosling、Patrick\
+  \ Naughton、Chris Warth、Ed Frank 和 Mike Sherdan 于 1991 年在 Sun Microsystems 设计并构思。\n\
+  - `java` 花费了几乎 18 个月才成为一个可运行的版本。\n- 最初 `java` 被称为“Oak”，随后在 1995 年更名为“Java”。因为 `java`\
+  \ 的很多特性都是源自 `C` 和 `C++`。\n- 这种特性继承自两种广为人知的简单编程语言，使得 `java` 对计算机和计算机巨头更具吸引力，从而导致大规模的成功。\n\
+  - 但 `java` 被误解为 `C++` 的复杂的互联网版本表示。\n- 与 `C++` 相比，它在实践和哲学上都有显著区别。\n- 如果你有良好的 `C++`\
+  \ 知识，你会发现 `java` 非常合你的胃口，在使用和理解 `java` 时会很轻松。\n\n![java-logo.jpg](img/00004.jpeg)\n\
+  \nJava Logo\n\n因此，计算机语言的演进有两个主要原因。\n\nJava 增强并完善了 `C++` 的面向对象场景。这为用户提供了以下特性：\n\n\
+  - 多线程。\n- 提供便捷互联网访问的库。\n- `java` 的魔力之一是字节码。字节码是一组高度优化的指令，设计用于由 `JVM`（Java 虚拟机）执行。它是字节码的解释器。这导致了真正可移植程序的设计。\n\
+  \nJava 通过新功能和网络化程序重新设计了互联网，具体如下：\n\n- Applets（小程序） - 它是一种 `java` 程序，可以通过兼容 `java`\
+  \ 的 Web 浏览器传输并自动执行。\n- 安全性 - 它提供了从互联网下载各种 applet 和程序的安保保障，且不包含任何病毒或木马。\n- 可移植性 -\
+  \ 由于存在大量不同类型的操作系统，因此它提供了在任何操作系统上运行的自由，使其程序可以在不同的操作系统之间使用而不会出现兼容性问题。\n\n`java` 的演进如下：\n\
+  \n- Java 1.0\n- Java 1.1\n- Java 1.2\n- Java 1.3\n- Java 1.4\n- Java 1.5\n\n`java`\
+  \ 的演进如下：\n\n- 泛型 (Generics)\n- 注解 (Annotations)\n- 自动装箱与拆箱 (Auto boxing and unboxing)\n\
+  - 枚举 (Enumerations)\n- 增强 for 循环 (For-each loop)\n- 可变参数 (Variable-length arguments)\n\
+  - 静态导入 (Static import)\n- 格式化输出 (Formatted I/O)\n- 并发工具 (Concurrency)\n\nJava 引入了以下新功能：\n\
+  \n- 泛型\n- 注解\n- 自动装箱与拆箱\n- 枚举\n- 增强 for 循环\n- 可变参数\n- 静态导入\n- 格式化输出\n- 并发工具\n\n\
+  在 JDK 5 中\n\n- 泛型\n- 注解\n- 自动装箱与拆箱\n- 枚举\n- 增强 for 循环\n- 可变参数\n- 静态导入\n- 格式化输出\n\
+  - 并发工具\n\n`java` 的特性特性是：\n\n- 面向对象。\n- 这种是是复杂性。\n- 提供了面向 \n良好的  接口。\n- 抽象性。\n- 封装性。\n\
+  - 继承性。\n- 多态性。\n\nJava 特性\n\n### 面向对象 编程\n\n- 这种是 Java 的核心特性。\n- 这有助于管理复杂性。\n- 它提供了良好的定义的接口。\n\
+  - 面向对象的抽象。\n- 可以使用抽象来管理复杂性。\n\nOOP 原则\n\n- 封装 - 它的目标是隔离数据并免受外部干扰。封装通过使用包装器来实现。这防止了外部源访问数据。\n\
+  \nJava 中的封装\n\n- 继承 - 在这里对象可以获取其他对象的属性。它遵循分级分类。这包括类和子类。继承也可以与封装交互。\n\n继承\n\n- 多态\
+  \ - 它意味着可以用多种方式执行方法，但只有一个输入。\n\n多态\n\n字节码\n\n它是高度优化的指令集，设计用于由虚拟机执行。\n\n虚拟机\n\n-\
+  \ 它被设计为字节码的解释器。\n- Java 程序的另一个特性是简单。\n- 这使得专业人士能够学习。\n- 工作方式非常高效，同时也易于理解。\n\n健壮性\n\
+  \n创建能够是多平台程序的健壮能力在 Java 设计中被赋予了高优先级。\n\n多线程\n\nJava 满足了真实世界的需求，有助于实现创建交互和网络化程序的需求。\n\
+  \n高性能\n\n- 作为多平台功能程序的优势有助于找到跨平台解决方案。\n- 借助 Java 运行时系统提供了平台无关代码的优势。\n\n分布式\n\n- 这是因为它是为了互联网设计的，由于对\
+  \ `TCP/IP` 协议的处理，具有分布式环境。\n- 这允许程序跨网络查找方法。\n- `URL` 用于访问互联网上的文件。\n- 该属性支持 `RMI`（远程方法调用）。\n\
+  \n动态\n\n- 这是在运行时采取的动作，例如解析、验证和添加对象。\n- 它为我们提供了动态链接代码的功能，这将是安全的。\n\n简单程序\n\n/* 调用此文件\
+  \ “Example.java” */\n\n```java\nclass Example {\n```\n\n\n\n\n\n```java\npublic\
+  \ static void main (string args []) {\n    System.out.println (“this is a simple\
+  \ java program.\");\n}\n```\n\n传递类名的命令行参数为：\n`C :\\> java Example`\n\n上述程序的简单输出为：\n\
+  this is a simple java program.\n\n在 java cmd 中调用该文件：\n调用文件：“Example.java”。\n\n![page-divider.png](img/00002.jpeg)\n\
+  \n## 数据类型\n\n### 整数类型\n它包括以下带符号整数整数。\n\n- **Byte（字节型）**：宽度为 8 位，范围从 -128 到 127。它是最小的整数类型。当用户处理来自网络或文件的流或流动数据时，它非常有用。声明两个名为\
+  \ `x` 和 `y` 的字节变量如下：\n```\nByte x, y;\n```\n\n- **Short（短型）**：这种整数类型的宽度为 16 位，范围从\
+  \ -32,768 到 32,767。它是 Java 中最常用的数据类型。\n声明：\n```\nShort a;\nShort b;\n```\n\n- **Int（整型）**：这种整数类型的宽度为\
+  \ 32 位，范围从 -2,147,483,648 到 2,147,483,647。与 byte 和 short 相比，它的效率更高。通常用于控制循环和索引数组。\n\
+  声明：\n```\nInt a;\n```\n\n- **Long（长型）**：这种整数类型的宽度为 64 位，范围从 -9,223,372,036,854,775,808\
+  \ 到 9,223,372,036,854,775,807。用于整数无法处理的大值。\n声明：\n```\nInt light speed;\nLong days;\n\
+  Long second;\nSeconds = days *24 *60*60;\n```\n\n### 浮点类型\n用于计算的实数，如平方根、正弦和余弦。它们分为两种。\n\
+  \n- **Float（浮点型）**：位宽为 32 位，范围从 1.4e-045 到 3.4e + 038。Float 用作小数变量类型，但指定的是单精度。它可以用于表示美元和分。\n\
+  声明：\n```\nFloat hightemp;\n```\n\n- **Double（双精度型）**：位宽为 64 位，范围从 4.9e-324 到 1.8e\
+  \ + 308。它的使用经过优化，可以用于高速数学计算。它具有双精度，比单精度更快。诸如 `sin()` 和 `sqrt()` 等函数返回 double 值。\n\
+  声明：\n```\nDouble pi, r, a;\nr = 10.4;\npi = 3.14;\na = pi* r * r;\n```\n\n### 字符类型\n\
+  - Java 中用于存储或声明字符的数据类型是 `char`。\n- 它是 Java 中的 16 位类型。`char` 的范围是 0 到 65,536。\n-\
+  \ 性质上没有负字符。\n\n`char` 的程序演示：\n```java\nClass charExample\n{\n    Public static void\
+  \ main (String args []) {\n        Char a, b;\n        a=88;\n        b=’y’;\n \
+  \       system.out.print (“a and b: “);\n        system.out.println (a + “ “ +b);\n\
+  \    }\n}\n```\n\n### 布尔类型\n- 它是逻辑值的原始类型。\n- 它倾向于只有两个可能的值之一：true（真）或 false（假）。\n\
+  - 它受 if 或 for 控制语句支配。\n\n## 变量\n它是存储的基本单元，变量具有作用域、可见性和生命周期。\n\n### 变量的声明\n```\n\
+  Int x, y, z;\n```\n或\n```\nInt x=1, y=2, z=5;\n```\n\n### 类型转换与强制转换\n如果两个类型之间存在任何兼容性，Java\
+  \ 将自动执行转换。\n\n#### Java 自动转换\n- 当满足两个条件时执行。\n- 当两个类型兼容时；\n- 目标类型大于源类型。\n- 在满足这两个条件后，会发生宽宽转换。\n\
+  \n#### 强制转换兼容类型\n- 这是一种简单且显式的类型转换。\n- 当浮点类型转换附加到整数类型时，这种转换被称为截断。\n- 它是一种转换，有时被称为窄转换。\n\
+  \n## 数组\n- 它是相似变量的组，通过通用名称引用。\n- 数组中的元素通过索引访问。\n- 它可以被创建，并可能有一个或多个维度。\n\n### 数组的类型\n\
+  主要有两种类型的数组：\n1. 一维数组\n2. 多维数组\n\n### 一维数组\n它是相似类型数据的列表。在创建数组之前，你需要先创建一个任意类型的变量。\n\
+  语法：\n```\nType variable-name [ ];\n```\n```\nInt year_month [ ];\n```\n\n### 多维数组\n\
+  它是数组的数组，需要指定每个维度数组变量，使用其他方括号表示额外的索引如下：\n```\nInt twoD [ ] [ ] = new int [6] [7];\n\
+  ```\n\n![page-divider.png](img/00002.jpeg)\n\n## 运算符\n有四种类型：\n- 算术运算符\n- 位运算符\n\
+  - 关系运算符\n- 布尔运算符\n\n### 算术运算符\n- **加法**：用于相加。表示为 `+`。\n- **减法**：用于相减。表示为 `-`。\n\
+  - **乘法**：用于相乘。表示为 `*`。\n- **除法**：用于除法。表示为 `/`。\n- **取模**：用于求余数。表示为 `%`。\n- **自增**：用于增加操作数。表示为\
+  \ `++`。\n- **自减**：用于减少操作数。表示为 `--`。\n\n### 位运算符\n- **取反（NOT）**：反转所有位。表示为 `~`。\n\
+  - **与（AND）**：如果操作数都为 1 则为 1。表示为 `&`。\n- **或（OR）**：如果操作数之一为 1 则为 1。表示为 `|`。\n- **异或（XOR）**：如果操作数不同则为\
+  \ 1。表示为 `^`。\n- **左移**：向左移动所有位。表示为 `<<`。\n- **右移**：向右移动所有位。表示为 `>>`。\n\n### 关系运算符\n\
+  - **等于**：显示值相等。表示为 `==`。\n- **不等于**：显示值不相等。表示为 `!=`。\n- **大于**：显示一个值大于另一个值。表示为 `>`。\n\
+  - **小于**：显示一个值小于另一个值。表示为 `<`。\n- **大于等于**：显示一个值大于或等于另一个值。表示为 `>=`。\n- **小于等于**：显示一个值小于或等于另一个值。表示为\
+  \ `<=`。\n\n### 布尔逻辑运算符\n- **逻辑与（AND）**：表示为 `&`。例如：`A & B`。如果 a 为假且 b 为真，结果为假，但当两者都为真时结果为真。\n\
+  - **逻辑或（OR）**：符号为 `|`。例如：`A | B`。如果 a 为假且 b 为真，结果为真，但当两者都为真时结果为真。\n- **逻辑异或（XOR）**：使用\
+  \ `^` 显示。例如：`A ^ B`。如果操作数不同真。\n- **逻辑非（Unary Not）**：表示为 `!`。例如：`! A`。如果 a 为假则结果为真，但如果\
+  \ a 为真则结果为假。\n\n### 赋值运算符\n赋值是单个等号，表示为 `=`。\n通用表示法：\n```\nvar = expression;\n```\n\
+  \n\n\n\n在此处，表示为 `var` 的变量应该与表达式的类型兼容。\n\n```java\nInt a, b, c;\na = b = c = 100;\n\
+  ```\n\n## ? 运算符\n\n它用于替换 if-then-else 语句，表示为 `?`。\n\n### 示例\n`expression a ? expression\
+  \ b : expression c`\n\n上面的示例表示，如果 `expression a` 为真，则求值 `expression b`，否则求值 `expression\
+  \ c`。\n\n![page-divider.png](img/00002.jpeg)\n\n## 控制语句\n\nJava 中三种类型的语句。\n\n1.\
+  \ 选择语句\n2. 迭代语句\n3. 跳出语句\n\n### 选择语句\n\n* 它的作用是根据只有在运行时才能实现的动态条件，来管理要执行的程序流。\n*\
+  \ 它提供了灵活性。\n\n#### If 语句\n它为程序的执行提供了不同的路径。\n\n### 语法\n```java\nIf (condition provided)\
+  \ statement a;\nElse\nStatement b;\n```\n这意味着如果条件为真，则执行 `statement a`；但如果为假，则执行\
+  \ `statement b`。\n\n### 示例\n```java\nint a, b;\nIf (x < y) a=0;\nElse\nb=0;\n```\n\
+  现在有一种使用 if 语句的程序类型，即 `嵌套 if 语句`，它是编程世界中非常常见的方法。\n\n### 示例\n```java\nIf (a == 10)\
+  \ {\nIf (b < 15) i = j;\nIf (c > 50) p = q;\nElse\ni = p;\n}\nElse\ni = q;\n```\n\
+  现在，括号中的第二个 if 语句与 `else` 关联。另一种使用 if 语句的程序类型是 `if-else-if 阶梯语句`。\n\n### 示例\n```java\n\
+  If (condition)\nStatement;\nElse if (condition)\nStatement;\nElse if (condition)\n\
+  Statement;\n.\n.\n.\n.\n.\nElse\nStatement;\n```\n\n#### Switch 语句\n它是一种多分支语句。\n\
+  \n### 语法\n```java\nSwitch (expression)\n{\nCase value 1:\nStatement\nBreak;\nCase\
+  \ value 2:\nStatement\nBreak;\n.\n.\n.\nCase vale n:\nStatement\nBreak;\nDefault:\n\
+  Statement;\n}\n```\n`switch` 语句的功能是将给定的值与所有 `cases` 进行比较，当找到匹配项时执行程序序列。\n\n### 示例\n\
+  ```java\nClass sampswitch {\nPublic static void main (string args [])\n{\nSwitch\
+  \ (i)\n{\nCase0:\nSystem.out.println (“i is zero.”);\nBreak;\nCase1:\nSystem.out.println(“i\
+  \ is one.”)\nBreak;\nDefault:\nSystem.out.println (“i is greater than 4.”)\n}\n\
+  }\n```\n#### 输出\n```\ni is zero.\ni is one.\ni is greater than 4.\ni is greater\
+  \ than 4.\n```\n\n#### 嵌套 switch 循环示例\n```java\nSwitch (countfigures)\n{\nCase 1:\n\
+  Switch (targetvalue)\n{//nested switch//\nCase 0:\nSystem.out.println (“target is\
+  \ zero”;\nBreak;\nCase 1:\nSystem.out.println (“target is one”;\nBreak;\n}\nBreak;\n\
+  Case 2: //...\n```\n`switch` 语句的重要特征是：\n* 与 `if` 不同，`switch` 语句只能检查相等性。\n* 同一个 `switch`\
+  \ 中不能有两个值相同的 `cases` 常量。\n* 它比使用嵌套 if 语句集更有效。\n\n### 迭代语句\n\n这些语句用于创建循环。Java 中使用了三种类型的迭代语句。\n\
+  \n#### While 语句\n它的功能是在控制表达式为真时重复执行或阻塞语句。\n\n### 语法\n```java\nWhile (condition)\
+  \ {\n// body of loop\n}\n```\n当条件为真时，执行循环。当条件为假时，控制将传递到循环后的下一行代码。\n\n### 示例\n```java\n\
+  Class while {\nPublic static void main (string args [])\n{\nInt n = 5;\nWhile (n>0)\n\
+  {\nSystem.out.println (“tick “+ n);\nn--;\n}\n}\n}\n```\n#### 输出\n```\nIt will tick\
+  \ 5 times\nTick 5\nTick 4\nTick 3\nTick 2\nTick 1\n```\n\n#### Do-while 语句\n此循环至少执行一次体，因为它在循环的底部包含了它的条件表达式。\n\
+  \n### 语法\n```java\ndo\n{\nSystem.out.println (“tick”+ n);\nn-- ;\n}\nWhile n > 0);\n\
+  ```\n\n#### For 语句\n* 它是一个非常强大且多用途的构造。\n* `for` 语句中提供的条件，除非条件不满足，否则它不会执行。\n* 如果条件被求值且值为假，则它将终止。\n\
+  \n### 语法\n```java\nFor (initialize; condition; iterate)\n{\nBody\n}\n```\n### 示例\n\
+  ```java\nClass fortick\n{\nPublic static void main (string args [])\n{\nInt n;\n\
+  For (n=11; n>0; n--);\n}\n}\n```\n\n### 跳出语句\n\nJava 支持三种跳出语句，如下：\n1. `Break`\n\
+  2. `Continue`\n3. `Return`\n\n#### Break\n它用于终止 `switch` 语句中的序列，并可用于退出循环。有时可以代替\
+  \ `goto`。\n\n#### Continue\n它为循环提供提前迭代。\n\n### 示例\n```java\nClass continue\n{\n\
+  Public static void main (string args [])\n{\nFor (int i=0; i<5; i ++)\n{\nSystem.out.print\
+  \ (i + “ );\nIf (i%2 ==0) continue;\nSystem.out.print (“ );\n}\n}\n```\n\n#### Return\n\
+  它用于从方法返回并返回调用方法。\n\n### 示例\n```java\nClass return {\nPublic static void main (string\
+  \ args [])\n{\nBoolean t = true;\nSystem.out.println (“return”);\nIf (t) return;\n\
+  System.out.println (“this’t work”);\n}\n```\n![page-divider.png](img/00002.jpeg)\n\
+  \n## 类和方法\n\n类可能只包含代码或数据，但也包含两者。由 `class` 关键字声明并可以是复杂的。\n\n![class.png](img/00008.jpeg)\n\
+  \n### 语法\n```java\nClass classname\n{\nType instance-variable a;\nType instance-variable\
+  \ b;\n.\n.\n.\nType instance-variable n;\n}\n\nType method a (parameter-list)\n\
+  {\n//body of method\n}\n\nType methodname (parameter-list)\n//body of method\n.\n\
+  .\n}\n```\n类也被称为定义宽度、高度和深度的 box。\n\n### 示例\n```java\nClass box\n{\nDouble width;\n\
+  Double height;\nDouble depth;\n}\n```\n\n#### 实现整数栈的类\n### 示例\n```java\nClass stack\n\
+  {\nInt stk [] = new int [10];\nStack Tos=-1\n\nVoid push (int item) {\nIf (tos==9)\n\
+  System.out.println (‘it’s full”);\nElse\nStk [++tos] = item;\n}\n\nInt pop ()\n\
+  {if (tos<0) {\nSystem.out.println (“stack underflow”);\nReturn 0;\n} else\nReturn\
+  \ stk[tos--];\n}\n}\n```\n\n## 方法重载\n\n在同一个地方定义两个或多个同相同但参数不同的方法。这种方法在 Java 中提供了提供了多态性。\n\
+  \n![overloading.png](img/00009.jpeg)\n\n### 示例\n```java\nClass overload1\n{\nVoid\
+  \ test () {\nSystem.out.println (“no parameter”);\n}\nVoid test (int a)\n{\nSystem.out.println\
+  \ (“a: “+ a);\n}\nVoid test (int a, int b)\n{\nSystem.out.println (“a and b: “+\
+  \ a + “+ b);\n}\n\nDouble test (double a)\n{\nSystem.out.println (“double a: “+\
+  \ a);\nReturn a;\n}\n}\n\nClass overload\n{\nPublic static void main (string args\
+  \ [])\n{\nOverload1 ob = new overload ();\nDouble result;\nob.test ();\nob.test\
+  \ (10);\nob.test (10, 20);\nresult = ob.test (123.25);\nSystem.out.println (“result:”\
+  \ +result);\n}\n}\n```\n#### 输出\n```\nno parameter\na: 10\na and b: 10 20\ndouble\
+  \ a: 123.25\nresult:15190.5625\n```\n![page-divider.png](img/00002.jpeg)\n\n## 继承\n\
+  \n继承是一个所有类都继承的父类，而继承父类的类被称为子类。\n\n### 继承的基础程序\n```java\nClass x\n{\nint i, j;\n\
+  void showI j ()\n{\nSystem.out.println (“i and j:” + i + “+ j );\n}\n}\n\nClass\
+  \ y extends x\n{\nInt a; {\nSystem.out.println (“a: “+ a );\n}\n\nVoid sum ()\n\
+  {\nSystem.out.println (“i + j + a:“+ (i + j + a) );\n}\n}\n\nClass simpinheritance\n\
+  {\nPublic static void main (string args [ ])\n{\nq Superob = new q ( );\np superob\
+  \ = new p ( );\nSubob. i = 8;\nSubob. j = 7;\nSubob. a = 9;\nSystem.out.println\
+  \ (“contents”);\nSubob.showij ( );\nSubob.showa ( );\nSystem.out.println (“sum of\
+  \ i, j and a”);\n}\n}\n```\n#### 输出\n```\ncontents\ni and j: 8 7\na: 9\nsum of i,\
+  \ j and a: 24\n```\nJava 中继承的主要用途是重写和代码复用。\n\n### 重写\n\n* 当子类与父类完全相同时，这种场景被称为方法重写。\n\
+  * 它提供了 Java 中称为**多态**的特性。\n\n![inheritance-showing-overriding.png](img/00010.jpeg)\n\
+  \n### 显示重写的继承\n#### 示例代码\n```java\nClass x {\nint a, b\n\nX (int p, int q)\n{\n\
+  p= a;\n```\n\n\n\n\n```java\nq= b;\n}\n\nVoid show ()\n{\n    System.out.println\
+  \ (“a and b: “+ i +” “+ j);\n}\n\n}\n\nClass y extends x {\n    Int r;\n    Y (int\
+  \ a, int b, int c)\n    {\n        Super (a, b);\n        r = c;\n    }\n\n    Void\
+  \ show () {\n        System.out.println (“r: “+ r );\n    }\n}\n\nClass override\
+  \ {\n    Public static void main (string args [])\n    {\n        y subob =new y\
+  \ (1, 2, 3);\n        Subob. Show ();\n    }\n}\n```\n\n输出\nr = 3\n\n### 继承的类型\n\
+  \n有三种继承类型。\n\n* 单继承\n* 多继承\n* 层级继承\n\n![type-of-inheritance.png](img/00011.jpeg)\n\
+  \n### 继承的类型\n\n在 Java 中，多重继承和混合继承仅通过使用接口来实现。\n\n![hybrid-inheritance.png](img/00012.jpeg)\n\
+  \n### 多继承和混合继承\n\n![page-divider.png](img/00002.jpeg)\n\n## 包\n\n包包含了存储存储的名称。\n\n\
+  ### 语法\n\n```\nPackage pkg;\n```\n\n表示多级包结构\n\n```\nPackage pkgx [.pkgy [.pkgz]];\n\
+  ```\n\n### 示例\n\n```\nPackage java.awt.image a;\n```\n\n### 查找包\n\n有三种查找包的方法。Java\
+  \ 运行时系统使用工作目录；如果包位于子目录中，则它会被发现；或者你可以通过如所示设置类的位置来设置包的位置。\n\n```\nPackage mpack\n\
+  ```\n\n它也可以配合 `java` 和 `javac` 使用类路径来指定类的位置，如下所示。\n`C:\\ myprograms\\java\\mpack`\n\
+  \n### 访问保护\n\n为了保护包，Java 中存在三种访问修饰符。\n\n1. `Private`- 无法从类外部可见或访问。\n2. `Public`-\
+  \ 具有具有可以从任何地方访问的特性。\n3. `Protected`- 只能被子类访问。\n\n![package-name.png](img/00013.jpeg)\n\
+  \n### 包语法\n\n### 导入包\n\n导入包的语句紧跟在包语句之后，其主要功能是通过导入包并保存到其位置来节省更多时间。\n\n### 语法\n\n\
+  ```\nImport pkga [.pkgb]. (classname d *);\n```\n\n## 接口\n\n它类似于类，包含常量、方法和签名。\n\n\
+  ![calculator.png](img/00014.jpeg)\n\nJava 简单计算器接口 Interface 用于 java\n\n### 声明\n\n\
+  ```\nAccess interface m\n{\n    Return method 1 (parameter list);\n    Return method\
+  \ 2 (parameter list);\n    Type final variable name 1 = value;\n    Type final variable\
+  \ name 2 = value;\n    //…\n    Return type method name n (parameter list);\n  \
+  \  Type final varname n = value;\n}\n```\n\n简单接口只包含一个被称为回调置的函数或方法。\n\n### 示例\n\n\
+  ```java\nInterface callback\n{\n    Void callback (int parm);\n}\n```\n\n### 实现接口\n\
+  \n创建任何接口的实现包含在类的定义中。\n\n### 示例\n\n```java\nClass client call back\n{\n    Public\
+  \ void callback (int x)\n    {\n        System.out.println (“callback” + x);\n \
+  \   }\n}\n```\n\n![page-divider.png](img/00002.jpeg)\n\n## 异常处理\n\n这是一个影响 Java 程序性能的缺点，因为可以在任何点发生。它的发生发生在执行状态。\n\
+  \n### 原因\n\n* 无效数据\n* 文件缺失\n* JVM 运行时网络连接丢失和超时。\n\n常见的异常有：\n\n* `Checked`- 这些异常无法被程序员预见，并且在执行期间甚至无法被忽略。\n\
+  * `Runtime`- 这是一个动态异常，但与检查的异常不同，它可以被忽略。\n* `Errors`- 这些异常也会被忽略，因为无可以做任何事来克服它，而且这不在程序员的控制范围内。\n\
+  \n![exception.png](img/00015.jpeg)\n\n异常层次结构\n\n它有两个子类：输入输出异常类和运行时异常类。\n\n### 抛出\n\
+  \n这些是 JVM 在运行时抛出的异常。\n\n### 语法\n\n```\nthrow Throwableinstance;\n```\n\n![throw.png](img/00016.jpeg)\n\
+  \nThrow\n\n当使用此语句时，程序的执行会立即停止。\n\n### 示例\n\n```java\nClass throwdem\n{\n    Static\
+  \ void demopro ( )\n    {\n        Try {\n            Throw new NullPointerException\
+  \ (“dem “);\n        } catch (NullPointerException e)\n        {\n            System.out.println\
+  \ (“caught inside demopro. “);\n            Throw e;\n        }\n    }\n    Public\
+  \ static void main (string args [ ] {\n        Try {\n            Demopro ( );\n\
+  \        }\n        Catch (NullPointerException e) {\n            System.out.println\
+  \ (recatch: “+ e);\n        }\n    }\n}\n```\n\n### Finally\n\n它是用于在 try 和 catch\
+  \ 块执行之前或完成之后执行的代码。\n\n### 语法\n\n```java\nClass finally dem\n{\n    Static void pro\
+  \ x ( )\n    {\n        Try\n        {\n            System.out.println (“in proc\
+  \ x”);\n            Throw new runtimeException (“demo”);\n        }\n        Finally\n\
+  \        {\n            System.out.println (“pro x”);\n        }\n    }\n}\n```\n\
+  \n![page-divider.png](img/00002.jpeg)\n\n## 事件处理\n\n### 事件\n\n它显示源的状态的变化。\n\n###\
+  \ 事件源\n\n它是生成事件的对象。\n\n### 语法\n\n```\nPublic void add TypeListener l)\n```\n\n###\
+  \ 示例\n\n* `Addlistner ()` - 注册键盘事件。\n* `Addmouselistner ()` - 注册鼠标事件。\n\n### Action\
+  \ 类\n\n当按钮按下时发生。\n\n![event.png](img/00017.jpeg)\n\nJava 中的事件发生\n\n### 键事件类\n\n\
+  产生于输入，有三种。\n\n* `KEY_PRESSED`\n* `KEY_RELEASED`\n* `KEY_TYPED`\n\n### 鼠标事件类\n\n\
+  有八种鼠标类型。\n\n* `MOUSE_DRAGGED`\n* `MOUSE_CLICKED`\n* `MOUSE_ENTERED`\n* `MOUSE_EXITED`\n\
+  * `MOUSE_MOVED`\n* `MOUSE_PRESSED`\n* `MOUSE_RELEASED`\n* `MOUSE_WHELED`\n\n###\
+  \ Action 接口\n\n它用于定义在调用事件时调用的操作。它用于感知方法。\n\n![page-divider.png](img/00002.jpeg)\n\
+  \n## Applet 类\n\n它包含了多个方法，用于 Java 执行和详细控制。Applet 的初始化和终止如下。\n\n### 启动\n\n`init()`-\
+  \ 初始化方法，它是第一个方法。\n`start()`- 在初始化方法之后出现并在屏幕上重新启动。\n`paint()`- 每次被调用时，Applet 的输出都会重绘。\n\
+  \n### 停止\n\n`stop()`- 用于离开打开并包含 Applet 的浏览器。\n`destroy()`- 用于从内存中移除 Applet。\n\n\
+  ![applet.png](img/0018.jpeg)\n\n### Applet 生成\n\nHTML Applet 标签\n\n```html\n<APPLET\n\
+  CODEBASE= codebaseurl\nCODE=applet file\nALT=alternatetext\nNAME=appletinstename\n\
+  WIDTH=pixels HEIGHT=pixels\nALIGN=alignment\nVSPACE=pixels HSPACE=pixels\n>\n<PARANAME=attribute\
+  \ name= attributevalue>\n…\n</APPLET>\n```\n\n![html-applet-tag.png](img/0019.jpeg)\n\
+  \n### HTML Applet 标签\n\nAudioclip 接口\n\n`play()`- 开始音频。\n`stop()`- 停止音频。\n`loop()`-\
+  \ 循环播放而不中断。\n\n### Applet 子接口\n\n它提供了一个 Applet 和浏览器之间可以通信的链接。\n\n"

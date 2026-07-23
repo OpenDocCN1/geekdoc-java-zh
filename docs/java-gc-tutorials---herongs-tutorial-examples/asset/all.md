@@ -1,0 +1,18955 @@
+![](Images/cover00263.jpeg)
+
+Java GC Tutorials
+
+- Herong's Tutorial Examples
+
+![](Images/image00257.jpeg)
+
+v1.11, 2022
+
+Dr. Herong Yang
+
+Copyright © 2022 Dr. Herong Yang. All rights reserved.
+
+This book is a collection of tutorial notes and sample codes written by the author while he was learning JVM GC (Garbage Collection) processes. Topics include Java Garbage Collectors, STW (Stop-The-World), Serial Collector, Parallel Collector, Concurrent Collector, G1 Collector, GC Algorithms, Generational GC, Regional GC, Heap Memory Management, Young/New Generation, Tenured/Old Generation, Object Reference, Eden Space, Survivor Spaces, Minor GC, Major GC, Full GC, Performance Tuning, Throughput/Latency Performance, Heap Footprint. Updated in 2022 (Version v1.11) with JVM 17\. For latest updates and free sample chapters, visit https://www.herongyang.com/Java-GC.
+
+Table of Contents
+
+> [About This Book](#part0002.xhtml)
+> 
+> [Heap Memory Area and Size Control](#part0003.xhtml)
+> 
+> [Java Exception: "java.lang.OutOfMemoryError: Java heap space"](#part0004.xhtml)
+> 
+> [Memory Allocation Limits on Windows Systems](#part0005.xhtml)
+> 
+> [OutOfMemoryError Comparison of HotSpot and JRockit](#part0006.xhtml)
+> 
+> [JVM Garbage Collection Logging](#part0007.xhtml)
+> 
+> [Garbage Collection Demo Program](#part0008.xhtml)
+> 
+> [Garbage Collection Logging Options](#part0009.xhtml)
+> 
+> ["-Xlog:gc" - Default GC Logging Level: INFO](#part0010.xhtml)
+> 
+> ["-Xlog:gc=trace" - Lowest GC Logging Level: TRACE](#part0011.xhtml)
+> 
+> ["-Xlog:gc+heap=trace" - GC+HEAP Log Messages](#part0012.xhtml)
+> 
+> ["-Xlog:gc*=trace" - Maximum GC Logging](#part0013.xhtml)
+> 
+> ["-XX:+PrintFlagsFinal" - Print JVM Options](#part0014.xhtml)
+> 
+> [Introduction of Garbage Collectors](#part0015.xhtml)
+> 
+> [JVM Memory Manager - Garbage Collector](#part0016.xhtml)
+> 
+> [Generational Garbage Collection in HotSpot](#part0017.xhtml)
+> 
+> [Young Generation Collection - Minor GC](#part0018.xhtml)
+> 
+> [Young Generation Collectors - Serial, PS, ParNew, G1](#part0019.xhtml)
+> 
+> [Tenured Generation Collection - Major GC](#part0020.xhtml)
+> 
+> [Tenured Generation Collectors - Serial, ParOldGen, CMS, G1](#part0021.xhtml)
+> 
+> [Collector Combinations: Serial, Parallel, Concurrent, G1, Z](#part0022.xhtml)
+> 
+> [Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+> 
+> [What Is Serial Collector](#part0024.xhtml)
+> 
+> [GC Log Message Format for Serial Collector](#part0025.xhtml)
+> 
+> [GC Log Message Examples of Serial Collector](#part0026.xhtml)
+> 
+> [Log Message Types from Serial Collector](#part0027.xhtml)
+> 
+> [Serial Collector Stops Application for Minor/Major GC](#part0028.xhtml)
+> 
+> [Usage Report on Heap Memory Areas](#part0029.xhtml)
+> 
+> [Default NewRatio - Old vs. New Generation](#part0030.xhtml)
+> 
+> ["-XX:NewRatio" - Ratio of Tenured and "new" Generation](#part0031.xhtml)
+> 
+> ["-XX:SurvivorRatio" - Ratio of Eden and Survivor Space](#part0032.xhtml)
+> 
+> [Serial GC Tracing - Tight Heap](#part0033.xhtml)
+> 
+> [Serial GC Tracing - Tight Heap (Part 2)](#part0034.xhtml)
+> 
+> [Serial GC Tracing - Tight Heap (Part 3)](#part0035.xhtml)
+> 
+> [Serial GC Tracing - Plenty of Heap](#part0036.xhtml)
+> 
+> [Serial GC Tracing - Aged Live Objects](#part0037.xhtml)
+> 
+> [Serial GC Tracing - Tenuring Threshold](#part0038.xhtml)
+> 
+> ["-XX:TargetSurvivorRatio" - Second Tenuring Condition](#part0039.xhtml)
+> 
+> [Serial GC Tracing - Tenuring Threshold Controlled](#part0040.xhtml)
+> 
+> ["-XX:+NeverTenure" and "-XX:+AlwaysTenure" Working](#part0041.xhtml)
+> 
+> [Minor GC Triggering Condition of Serial Collector](#part0042.xhtml)
+> 
+> [Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+> 
+> [What Is Parallel Collector](#part0044.xhtml)
+> 
+> [Parallel Collector GC Log Message Format](#part0045.xhtml)
+> 
+> [Log Message Types from Parallel Collector](#part0046.xhtml)
+> 
+> ["--Xlog:gc+task+time=debug" - Print GC Threads](#part0047.xhtml)
+> 
+> ["-XX:ParallelGCThreads" - # of Threads](#part0048.xhtml)
+> 
+> [Parallel Collector Stops Application for Minor/Major GC](#part0049.xhtml)
+> 
+> [PSYoungGen Collector Using Tenuring Age](#part0050.xhtml)
+> 
+> [Parallel Collector Changing NewRatio and SurvivorRatio](#part0051.xhtml)
+> 
+> [Parallel Collector Adaptive Size Policy](#part0052.xhtml)
+> 
+> [Adaptive Size Policy Log Messages](#part0053.xhtml)
+> 
+> ["-Xlog:gc+ergo=trace" - Minor GC Report](#part0054.xhtml)
+> 
+> [Adaptive Size Policy Changed Survivor Space](#part0055.xhtml)
+> 
+> [Adaptive Size Policy Changed Eden Space](#part0056.xhtml)
+> 
+> [Adaptive Size Policy for Best Latency](#part0057.xhtml)
+> 
+> [Parallel Collector Stopped using Young Generation](#part0058.xhtml)
+> 
+> [Adaptive Size Policy for Best Throughput](#part0059.xhtml)
+> 
+> [Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+> 
+> [What Is Concurrent Mark-Sweep (CMS) Collector](#part0061.xhtml)
+> 
+> [Concurrent Mark-Sweep Collector GC Log Message Format](#part0062.xhtml)
+> 
+> [Reduce Stop-The-World with Concurrent Mark and Sweep](#part0063.xhtml)
+> 
+> [Parallel New (ParNew) Collector for Minor GC](#part0064.xhtml)
+> 
+> [ParNew Collector - Tenuring Age Distribution](#part0065.xhtml)
+> 
+> [Maximum Logging of All Phases on Young GC](#part0066.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - Young GC Parallel Threads](#part0067.xhtml)
+> 
+> ["-XX:MaxTenuringThreshold=0" - Tenuring Objects Immediately](#part0068.xhtml)
+> 
+> ["-XX:CMSInitiatingOccupancyFraction=20" - Initiate CMS](#part0069.xhtml)
+> 
+> [Maximum Logging of All Phases on Old GC](#part0070.xhtml)
+> 
+> [Maximum Logging of All Phases on Full GC](#part0071.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - Old GC Parallel Threads](#part0072.xhtml)
+> 
+> ["-XX:ConcGCThreads=3" - Old GC Concurrent Threads](#part0073.xhtml)
+> 
+> [Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+> 
+> [What Is Garbage First (G1) Collector](#part0075.xhtml)
+> 
+> [Garbage First GC Log Message Format](#part0076.xhtml)
+> 
+> [Maximum Logging of All Phases on Normal Young GC](#part0077.xhtml)
+> 
+> [Maximum Logging on Concurrent Start Young GC](#part0078.xhtml)
+> 
+> [Maximum Logging of All Phases on Old GC](#part0079.xhtml)
+> 
+> [Maximum Logging of All Phases on Full GC](#part0080.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - G1 Parallel Threads](#part0081.xhtml)
+> 
+> ["-XX:ConcGCThreads=5" - Old GC Concurrent Threads](#part0082.xhtml)
+> 
+> ["-XX:G1HeapRegionSize=n" - G1 Region Size](#part0083.xhtml)
+> 
+> [G1 Humongous Allocation - Objects Too Large](#part0084.xhtml)
+> 
+> ["-Xlog:gc+age=trace" - Object Age](#part0085.xhtml)
+> 
+> ["-XX:+MaxTenuringThreshold=0" - Skip G1 Survivors](#part0086.xhtml)
+> 
+> [The Z Garbage Collector (ZGC) - "+XX:+UseZGC"](#part0087.xhtml)
+> 
+> [What Is The Z Garbage Collector (ZGC)](#part0088.xhtml)
+> 
+> [ZGC Log Message Format](#part0089.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - ZGC Parallel Threads](#part0090.xhtml)
+> 
+> ["-XX:ConcGCThreads=5" - ZGC Concurrent Threads](#part0091.xhtml)
+> 
+> [Object References and Garbage Collection](#part0092.xhtml)
+> 
+> [Object Reference Types](#part0093.xhtml)
+> 
+> [Strong Reference GC Test Program](#part0094.xhtml)
+> 
+> [Strong Reference Test with Serial GC](#part0095.xhtml)
+> 
+> [Final Reference GC Test Program](#part0096.xhtml)
+> 
+> [Final Reference Test with Serial GC](#part0097.xhtml)
+> 
+> [Performance Impact of Final References](#part0098.xhtml)
+> 
+> [Garbage Collection Performance Test Program](#part0099.xhtml)
+> 
+> [GCPerformance.java - GC Performance Test Program](#part0100.xhtml)
+> 
+> [GCPerformance.java - Program Output](#part0101.xhtml)
+> 
+> [Performance Impact of Wait Time](#part0102.xhtml)
+> 
+> [Performance Impact of Object Size](#part0103.xhtml)
+> 
+> [Performance Impact of Chunk Size](#part0104.xhtml)
+> 
+> [Performance Jumps Not Related to GC](#part0105.xhtml)
+> 
+> [Performance Test and System Interruptions](#part0106.xhtml)
+> 
+> ["START /REALTIME" - Run JVM with Highest Priority](#part0107.xhtml)
+> 
+> [GCPerfP99.java - 99th Percentile Performance](#part0108.xhtml)
+> 
+> [GCPerfP99.java - Output Verification](#part0109.xhtml)
+> 
+> [GCPerfP99V2.java - Percentile Performance with Load](#part0110.xhtml)
+> 
+> [GCPerfP99V2.java - Work Load Level](#part0111.xhtml)
+> 
+> [GCPerfP99V2.java - Object Number and Size](#part0112.xhtml)
+> 
+> [Performance Tests on Serial Collector](#part0113.xhtml)
+> 
+> [Serial GC Footprint - Free Heap 4%](#part0114.xhtml)
+> 
+> [GC Logging Impact on Serial GC](#part0115.xhtml)
+> 
+> [Heap Size Impact on Serial GC](#part0116.xhtml)
+> 
+> [Serial GC on 400MB Heap](#part0117.xhtml)
+> 
+> [Serial GC on 800MB Heap](#part0118.xhtml)
+> 
+> [Serial GC on 1600MB Heap](#part0119.xhtml)
+> 
+> [Performance of Serial Young GC](#part0120.xhtml)
+> 
+> [Object Size Impact on Serial Young GC](#part0121.xhtml)
+> 
+> [Chunk Size Impact on Serial Young GC](#part0122.xhtml)
+> 
+> [Performance of Serial Full GC](#part0123.xhtml)
+> 
+> [Serial Full GC on 1600MB Tenured Space](#part0124.xhtml)
+> 
+> [Object Size Impact on Serial Old GC](#part0125.xhtml)
+> 
+> [Performance Summary of Serial Collector](#part0126.xhtml)
+> 
+> [Performance Tests on Parallel collector](#part0127.xhtml)
+> 
+> [Parallel GC Footprint - Free Heap 10%](#part0128.xhtml)
+> 
+> [Heap Size Impact on Parallel GC](#part0129.xhtml)
+> 
+> [Parallel Young GC Not Removing Dead Objects](#part0130.xhtml)
+> 
+> [Performance of Parallel Young GC](#part0131.xhtml)
+> 
+> [Performance of Parallel Full GC](#part0132.xhtml)
+> 
+> ["-XX:MaxTenuringThreshold=0" - Bad for Parallel GC](#part0133.xhtml)
+> 
+> [Tiny Survivor Spaces Are Bad for Parallel GC](#part0134.xhtml)
+> 
+> [Thread Count Impact on Parallel GC](#part0135.xhtml)
+> 
+> [AFFINITY=n - CPU Processors and Parallel GC](#part0136.xhtml)
+> 
+> [Best Parallel GC Configuration](#part0137.xhtml)
+> 
+> [Performance Summary of Parallel Collector](#part0138.xhtml)
+> 
+> [Performance Tests on Concurrent collector](#part0139.xhtml)
+> 
+> [Concurrent GC Footprint - Free Heap 4%](#part0140.xhtml)
+> 
+> [Heap Size Impact on Concurrent GC](#part0141.xhtml)
+> 
+> [Performance of Concurrent Young GC](#part0142.xhtml)
+> 
+> [Performance of Concurrent Full GC](#part0143.xhtml)
+> 
+> [Performance of Concurrent Old GC](#part0144.xhtml)
+> 
+> [Parallel Threads Impact on Concurrent GC](#part0145.xhtml)
+> 
+> [Concurrent Threads Impact on Concurrent GC](#part0146.xhtml)
+> 
+> [AFFINITY=n - CPU Processors and Concurrent GC](#part0147.xhtml)
+> 
+> [Best Concurrent GC Configuration](#part0148.xhtml)
+> 
+> [Performance Summary of Concurrent Collector](#part0149.xhtml)
+> 
+> [Performance Tests on G1 collector](#part0150.xhtml)
+> 
+> [G1 GC Footprint - Free Heap 4% to 50%](#part0151.xhtml)
+> 
+> [Heap Size Impact on G1 GC](#part0152.xhtml)
+> 
+> [Heap Region Size Impact on G1 GC](#part0153.xhtml)
+> 
+> [Object Size Impact on G1 Young GC](#part0154.xhtml)
+> 
+> [Parallel Threads Impact on G1 Young GC](#part0155.xhtml)
+> 
+> [Object Size Impact on G1 Full GC](#part0156.xhtml)
+> 
+> [Object Size Impact on G1 Old GC](#part0157.xhtml)
+> 
+> [Concurrent Threads Impact on G1 Old GC](#part0158.xhtml)
+> 
+> [Parallel Threads Impact on G1 Old GC](#part0159.xhtml)
+> 
+> [CPU Processors Impact on G1 Old GC](#part0160.xhtml)
+> 
+> [Performance Summary of G1 Collector](#part0161.xhtml)
+> 
+> [Garbage Collection Performance Test Summary](#part0162.xhtml)
+> 
+> [General Suggestions for Better GC Performance](#part0163.xhtml)
+> 
+> [References](#part0164.xhtml)
+
+**Keywords:** Java, Virtual, Machine, JVM, GC, Garbage Collection
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟About This Book
+
+This section provides some detailed information about this book - Java GC Tutorials - Herong's Tutorial Examples.
+
+**Title:** Java GC Tutorials - Herong's Tutorial Examples
+
+**Author:** Dr. Herong Yang - Contact by email via herong_yang@yahoo.com.
+
+**Category:** COMPUTERS / Programming Languages / Java
+
+**Version/Edition:** v1.11, 2022
+
+**Number of pages in PDF format:** 517
+
+**Description:** This book is a collection of tutorial notes and sample codes written by the author while he was learning JVM GC (Garbage Collection) processes. Topics include Java Garbage Collectors, STW (Stop-The-World), Serial Collector, Parallel Collector, Concurrent Collector, G1 Collector, ZGC Collector, GC Algorithms, Generational GC, Regional GC, Heap Memory Management, Young/New Generation, Tenured/Old Generation, Object Reference, Eden Space, Survivor Spaces, Minor GC, Major GC, Full GC, Performance Tuning, Throughput/Latency Performance, Heap Footprint. Updated in 2022 (Version v1.11) with JVM 17.
+
+**Keywords:** Java, Virtual, Machine, JVM, GC, Garbage Collection
+
+**Copyright:**
+
+*   This book is under Copyright © 2022 Dr. Herong Yang. All rights reserved.
+*   Material in this book may not be published, broadcasted, rewritten or redistributed in any form.
+*   The example codes is provided as-is, with no warranty of any kind.
+
+**Revision history:**
+
+*   Version 1.11, 2022\. Updated with JVM 17.
+*   Version 1.00, 2018\. Separated from the Java 8 GC Tutorials book.
+
+**Web version:** [https://www.herongyang.com/Java-GC](https://www.herongyang.com/Java-GC) - Provides free sample chapters, latest updates and readers' comments. The Web version of this book has been viewed a total of:
+
+*   138,765 times as of December 2021.
+*   81,269 times as of December 2020.
+*   36,070 times as of December 2019.
+*   8,386 times as of December 2018.
+
+**PDF/EPUB version:** [https://www.herongyang.com/Java-GC/PDF-Full-Version.html](https://www.herongyang.com/Java-GC/PDF-Full-Version.html) - Provides information on how to obtain the full version of this book in PDF, EPUB, or other format.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Heap Memory Area and Size Control
+
+This chapter provides tutorial notes and example codes on heap memory area. Topics include OutOfMemoryError exception; Heap memory area allocation limits; OutOfMemoryError comparison of HotSpot and JRockit.
+
+> [Java Exception: "java.lang.OutOfMemoryError: Java heap space"](#part0004.xhtml)
+> 
+> [Memory Allocation Limits on Windows Systems](#part0005.xhtml)
+> 
+> [OutOfMemoryError Comparison of HotSpot and JRockit](#part0006.xhtml)
+
+Takeaways:
+
+*   JVM raises OutOfMemoryError exception when the Java application requires more memory than its given maximum limit.
+*   OutOfMemoryError exceptions happen mostly in the JVM heap memory area.
+*   JVM heap memory area size can be controlled by -Xms and -Xmx options.
+*   JVM heap memory area size is limited to 1.5 BG (or 1,550 MB) on 32-bit HotSpot for Windows systems.
+*   JVM heap memory area size is limited to 25 GB on 64-bit HotSpot for Windows systems.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Heap Memory Area and Size Control](#part0003.xhtml)
+
+∟Java Exception: "java.lang.OutOfMemoryError: Java heap space"
+
+This section provides a tutorial example on how JVM expands the Heap space to allocate more objects and leads to the 'java.lang.OutOfMemoryError: Java heap space' Java exception, if it is not allowed to expand any more.
+
+First, let's use the following simple program, HeapMemoryCrash.java, to observe what will happen when the Heap runs out of memory:
+
+```
+ /* HeapMemoryCrash.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+class HeapMemoryCrash {
+   public static void main(String[] a) {
+      int max = 1000;
+      Object[] arr = new Object[max];
+      heapCheck();
+      for (int n=0; n<max; n++) {
+         arr[n] = new long[10*1024*128];
+         System.out.println((n+1)+": "
+            +((n+1)*10)+" MB of objects created.");
+         heapCheck();
+      }
+   }
+   public static void heapCheck() {
+      Runtime rt = Runtime.getRuntime();
+      rt.gc();
+      long total = rt.totalMemory();
+      long free = rt.freeMemory();
+      long used = total - free;
+      java.io.Console con = System.console();
+      con.format("Total memory: %s%n",total);
+      con.format(" Free memory: %s%n",free);
+      con.format(" Used memory: %s%n",used);
+      String str = con.readLine("Press ENTER key to continue: ");
+   }
+}
+```
+
+This program is designed to:
+
+*   Run a loop with 1000 iterations. You can make it bigger, if you like.
+*   At each iteration, an array object of long[] is created with 10*1024*128 elements. Since each element is 8 bytes long, the total storage needed for this object is 10 MB.
+*   The reference to each array object is stored in another array to keep it referenced (or "used") so the JVM will not deallocate it from the Heap.
+*   totalMemory() and freeMemory() methods are used to report the current usage of the Heap.
+
+Compile and run with HotSpot JVM from JDK 17:
+
+```
+ herong> javac HeapMemoryCrash.java
+
+herong> java -Xms20m -Xmx50m HeapMemoryCrash
+
+Total memory: 20447232
+ Free memory: 20188720
+ Used memory: 258512
+Press ENTER key to continue:
+
+1: 10 MB of objects created.
+Total memory: 26152960
+ Free memory: 15377464
+ Used memory: 10775496
+Press ENTER key to continue:
+
+2: 20 MB of objects created.
+Total memory: 50724864
+ Free memory: 29463808
+ Used memory: 21261056
+Press ENTER key to continue:
+
+3: 30 MB of objects created.
+Total memory: 50724864
+ Free memory: 18978032
+ Used memory: 31746832
+Press ENTER key to continue:
+
+4: 40 MB of objects created.
+Total memory: 50724864
+ Free memory: 8492256
+ Used memory: 42232608
+Press ENTER key to continue:
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+   at HeapMemoryCrash.main(HeapMemoryCrash.java:10)
+```
+
+The output confirms that:
+
+*   The "-Xms20m" option works and the JVM reserved 20,447,232 bytes, about 20 MB at the startup time based on the first call of totalMemory().
+*   The first heapCheck() call reported that 258,512 bytes of Heap space was used. At that time, my Java application only created 1 object of an array, Object[1000], which is about 8,000 bytes. So the JVM itself used about 250 KB space from the Heap.
+*   The second heapCheck() call reported that 10,775,496 bytes of Heap space was used, an increase of 10,516,984 bytes. At that time, my Java application added 1 object of an array, long[10*1024*128], which is about 10,485,760 bytes matching the Heap used space increase amount with some array overhead usage. This confirms that array objects are allocated in the Heap.
+*   The second heapCheck() call also reported that JVM expanded the total Heap space from 10 MB to 26 MB (26,152,960 bytes). This is allowed, because I set the maximum Heap size to be 50 MB with "-Xmx50m". But this expansion seems be unnecessary, because my Java application was asking to allocate an object of 10 MB, and there was enough Heap space, 20,188,720 bytes, without the expansion. This behavior shows that the JVM tends to reserve more Heap space than what is actually needed.
+*   After 40 MB of objects allocated, my Java application used about 42 MB out of 50 MB from the Heap. There was only 8.5 MB space left in the Heap.
+*   When my Java application asks to allocate another object with 10 MB, the JVM threw out an exception: "java.lang.OutOfMemoryError: Java heap space". This is expected, because the JVM can not expand the Heap space any more because of the "-Xmx50m" option.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Heap Memory Area and Size Control](#part0003.xhtml)
+
+∟Memory Allocation Limits on Windows Systems
+
+This section provides a tutorial example on how JVM expands the Heap space to allocate more objects and leads to the 'java.lang.OutOfMemoryError: Java heap space' Java exception, if it is not allowed to expand any more.
+
+Of course, specifying a higher heap size with the -Xms and -Xmx options will resolve the OutOfMemoryError exception. But the version of the HotSpot JVM and the operating system do have limits on how much memory you can allocate to the JVM heap. Some examples of the heap size limit are listed below.
+
+**1\. 64-bit HotSpot JVM 17 on a new Windows 10 computer** - Rerun the example program provided in the last tutorial with a higher heap size to see how much memory the 64-bit HotSpot JVM can be allocated:
+
+```
+ herong> java -version
+java version "17.0.1" 2021-10-19 LTS
+Java(TM) SE Runtime Environment (build 17.0.1+12-LTS-39)
+Java HotSpot(TM) 64-Bit Server VM
+  (build 17.0.1+12-LTS-39, mixed mode, sharing)
+
+herong> java -Xms10g HeapMemoryCrash
+Total memory: 10737418240
+ Free memory: 10736628632
+ Used memory: 789608
+Press ENTER key to continue:
+
+herong> java -Xms11g HeapMemoryCrash
+Java HotSpot(TM) 64-Bit Server VM warning: INFO:
+  os::commit_memory(0x0000000540000000, 11811160064, 0) failed;
+  error='The paging file is too small for this operation to complete'
+  (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 11811160064 bytes 
+# for G1 virtual space
+# An error report file with more information is saved as:
+# C:\herong\tmp\hs_err_pid12064.log
+```
+
+This tells me that the 64-bit HotSpot JVM can only allocate 10 GB for the JVM heap space on my new Windows 10 computer.
+
+**2\. 64-bit HotSpot JVM 12 on an old Windows 10 computer** - Rerun the example program provided in the last tutorial with a higher heap size to see how much memory the 64-bit HotSpot JVM can be allocated:
+
+```
+ herong> java -version
+java version "12.0.1" 2019-04-16
+Java(TM) SE Runtime Environment (build 12.0.1+12)
+Java HotSpot(TM) 64-Bit Server VM (build 12.0.1+12, mixed mode, sharing)
+
+herong> java -Xms25g HeapMemoryCrash
+Total memory: 26843545600
+ Free memory: 26842982168
+ Used memory: 563432
+Press ENTER key to continue:
+
+herong> java -Xms26g HeapMemoryCrash
+Java HotSpot(TM) 64-Bit Server VM warning:
+  INFO: os::commit_memory(0x000001b8bbbc0000, 436207616, 0) failed;
+  error='The paging file is too small for this operation to complete'
+  (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 436207616 bytes for
+# Failed to commit area from 0x000001b8bbbc0000 to 0x000001b8d5bc0000
+# of length 436207616.
+# An error report file with more information is saved as:
+# C:\herong\hs_err_pid21136.log
+```
+
+This tells me that the 64-bit HotSpot JVM accepts up to 25 GB for the JVM heap space.
+
+**3\. 64-bit HotSpot JVM 8 on a Windows 7 computer** - The 64-bit HotSpot JVM 8 on a Window 7 can actually accept a little bit higher heap size:
+
+```
+ herong> java -version
+java version "1.8.0_161"
+Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
+
+herong> java -Xms27g HeapMemoryCrash
+Total memory: 27783069696
+ Free memory: 27782734072
+ Used memory: 335624
+Press ENTER key to continue:
+...
+
+herong> java -Xms28g HeapMemoryCrash
+Error occurred during initialization of VM
+Unable to allocate 917504KB bitmaps for parallel garbage
+   collection for the requested 29360128KB heap.
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+```
+
+This tells me that the 64-bit HotSpot JVM only accepts up to 27 GB for the JVM heap space.
+
+**4\. 32-bit HotSpot JVM 8 on a Windows 7 computer** - If you are using the 32-bit HotSpot JVM, it can only a much smaller heap size:
+
+```
+ herong> java -version
+java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b15)
+Java HotSpot(TM) Client VM (build 25.45-b02, mixed mode)
+
+herong> java -Xms1550m HeapMemoryCrash
+Total memory: 1571160064
+ Free memory: 1570902744
+ Used memory: 257320
+Press ENTER key to continue:
+...
+
+herong> java -Xms1560m HeapMemoryCrash
+Error occurred during initialization of VM
+Could not reserve enough space for 1597440KB object heap
+```
+
+This tells us that the 32-bit HotSpot JVM only accepts up to 1,550 MB for the JVM heap space.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Heap Memory Area and Size Control](#part0003.xhtml)
+
+∟OutOfMemoryError Comparison of HotSpot and JRockit
+
+This section provides a tutorial example to compare the OutOfMemoryError exception between HotSpot 12, 10, 1.8, 1.7, 1.6 and JRockit 28.2.7.
+
+As a comparison, I tested my example, HeapMemoryCrash.java, with other versions of HotSpot JVM and JRockit JVM.
+
+1\. HotSpot Server JVM 1.6 to JVM 12 gave me the same exception message, when it fails to expand the Heap to 50 MB as I specified in the "-Xmx50m" option:
+
+```
+ herong> java -Xms20m -Xmx50m HeapMemoryCrash
+Total memory: 20185088
+ Free memory: 19926784
+ Used memory: 258304
+Press ENTER key to continue:
+1: 10 MB of objects created.
+Total memory: 20185088
+ Free memory: 9410016
+ Used memory: 10775072
+Press ENTER key to continue:
+2: 20 MB of objects created.
+Total memory: 30932992
+ Free memory: 9672144
+ Used memory: 21260848
+Press ENTER key to continue:
+3: 30 MB of objects created.
+Total memory: 41156608
+ Free memory: 9409984
+ Used memory: 31746624
+Press ENTER key to continue:
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+   at HeapMemoryCrash.main(HeapMemoryCrash.java:10)
+```
+
+2\. JRockit JVM 28.2.7 gave me the same exception error, OutOfMemoryError. But it included a different message, "allocLargeObjectOrArray: [J, size 10485776":
+
+```
+ herong> \Progra~1\java\jrockit-jdk1.6.0_45-R28.2.7-4.1.0\bin\javac
+   HeapMemoryCrash.java
+
+herong> \Progra~1\java\jrockit-jdk1.6.0_45-R28.2.7-4.1.0\bin\java
+   -Xms20m -Xmx50m HeapMemoryCrash
+Total memory: 20971520
+ Free memory: 17905560
+ Used memory: 3065960
+Press ENTER key to continue:
+1: 10 MB of objects created.
+Total memory: 20971520
+ Free memory: 9496216
+ Used memory: 11475304
+Press ENTER key to continue:
+2: 20 MB of objects created.
+Total memory: 31760384
+ Free memory: 10510888
+ Used memory: 21249496
+Press ENTER key to continue:
+3: 30 MB of objects created.
+Total memory: 47411200
+ Free memory: 15675928
+ Used memory: 31735272
+Press ENTER key to continue:
+4: 40 MB of objects created.
+Total memory: 47411200
+ Free memory: 5190216
+ Used memory: 42220984
+Press ENTER key to continue:
+Exception in thread "Main Thread" java.lang.OutOfMemoryError:
+   allocLargeObjectOrArray: [J, size 10485776
+   at HeapMemoryCrash.main(HeapMemoryCrash.java:10)
+```
+
+Note that the exception from JRockit JVM is using allocLargeObjectOrArray() method to create my large array object.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟JVM Garbage Collection Logging
+
+This chapter provides tutorial notes and example codes on JVM options for garbage collection logging. Topics include a summary of logging options; examples of log messages for '-Xlog:gc', '-Xlog:gc:file', -Xlog:gc=trace', '-Xlog:gc+heap=trace', '-Xlog:gc*=trace', etc.
+
+> [Garbage Collection Demo Program](#part0008.xhtml)
+> 
+> [Garbage Collection Logging Options](#part0009.xhtml)
+> 
+> ["-Xlog:gc" - Default GC Logging Level: INFO](#part0010.xhtml)
+> 
+> ["-Xlog:gc=trace" - Lowest GC Logging Level: TRACE](#part0011.xhtml)
+> 
+> ["-Xlog:gc+heap=trace" - GC+HEAP Log Messages](#part0012.xhtml)
+> 
+> ["-Xlog:gc*=trace" - Maximum GC Logging](#part0013.xhtml)
+> 
+> ["-XX:+PrintFlagsFinal" - Print JVM Options](#part0014.xhtml)
+
+Takeaways:
+
+*   The Heap area memory management is done by the garbage collector, which allocates and deallocates data objects automatically for the Java application. The garbage collector (GC) also automatically collects dead objects to free up used memory.
+*   The -Xlog:gc option generates log messages from the generic GC source at the INFO level.
+*   The -Xlog:gc:<file> option redirects log messages to the given file.
+*   The -Xlog:gc=trace option changes the log level to TRACE, which generates all log messages from the generic GC source.
+*   The -Xlog:gc+heap=trace option generates log messages from the GC+HEAP source at the TRACE level.
+*   The -Xlog:gc*=trace option is the maximum GC logging option that generates all log messages from all GC related sources. You will get a large amount of log messages with this option.
+*   The -Xlog:gc*=debug option generates log messages from all GC related sources at the DEBUG level. This seems to be the best option to help us understand garbage collector works without getting too many log messages.
+
+Note that GC logging options have been changed since JVM 9\. Tutorials in the chapter apply to JVM 9 and newer versions. See tutorials in the next chapter on GC logging options for JVM 8 and older versions.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[JVM Garbage Collection Logging](#part0007.xhtml)
+
+∟Garbage Collection Demo Program
+
+This section provides a tutorial example on watch how the garbage collection process works on HotSpot and other JVMs.
+
+In the previous tutorial, we observed how JVM allocates more and more objects in the Heap. Eventually, JVM throws the OutOfMemoryError when the Heap runs out of space.
+
+In this tutorial, we will observe how JVM deallocates unreferenced objects to free up space the Heap. The deallocation of unreferenced objects from the Heap is also called "Garbage Collection". The code in the JVM that allocates and deallocates objects is also called "Garbage Collector".
+
+Here is my first sample program, GarbageCollection.java, that will shows us how the garbage collector works.
+
+```
+ /* GarbageCollection.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+class GarbageCollection {
+   public static void main(String[] a) {
+      int max = 10000;
+      int min = 32;
+      Object[] arr = new Object[min];
+      Runtime rt = Runtime.getRuntime();
+      System.out.println("Step/TotalMemory/FreeMemory/UsedMemory:");
+      for (int m=0; m<max; m++) {
+         for (int n=0; n<min-1; n++) arr[min-n-1] = arr[min-n-2];
+         arr[0] = getOneMega();
+         long total = rt.totalMemory();
+         long free = rt.freeMemory();
+         System.out.println((m+1)+"   "+total+"   "+free+"   "
+            +(total-free));
+         try {
+            Thread.sleep(1000);
+         } catch (InterruptedException e) {
+            System.out.println("Interreupted...");
+         }
+      }
+   }
+   private static Object getOneMega() {
+      Object[] lst = new Object[10];
+      lst[0] = new long[256*128]; // 1/4 MB
+      lst[1] = new int[256*256]; // 1/4 MB
+      lst[2] = new double[256*128]; // 1/4 MB
+      lst[3] = new float[64*256]; // 1/16 MB
+      lst[4] = new byte[64*1024]; // 1/16 MB
+      String[] l = new String[64*64]; // 1/16 MB
+      for (int i=0; i<64*64; i++)
+         l[i] = new String("12345678"); // 16B
+      lst[5] = l;
+      lst[6] = new char[64*512]; // 1/16 MB
+      return lst;
+   }
+}
+```
+
+Notes on this tutorial program:
+
+*   Initially, the array "arr" has 32 empty elements.
+*   Then the outer loop starts to fill the empty array with references to Object[] objects that hold references to groups of objects. The total size of each object group is about 1 MB.
+*   Then the outer loop continues to add the reference of a new 1-MB object group at the beginning of the array and pushes the reference of an old 1-MB object group out at the end of the array in each iteration.
+*   As the outer loop continues, more 1-MB object groups are pushed out and become candidates for the garbage collection process to pick up.
+*   A 1-second pause is added in the outer loop to slow down the execution to help us watching the program output.
+
+Compile and run the program with HotSpot JVM 17 with -Xms2m -Xmx64m:
+
+```
+ herong> javac GarbageCollection.java
+
+herong> java -Xms2m -Xmx64m GarbageCollection
+Step/TotalMemory/FreeMemory/UsedMemory:
+  1    2031616     696840    1334776
+  2    5562368    3165016    2397352
+  3    5562368    2102168    3460200
+  4    5562368    1043888    4518480
+  5   12759040    7172168    5586872
+  6   12759040    6102408    6656632
+  7   12759040    5044352    7714688
+  8   12759040    3974592    8784448
+  9   12759040    2915128    9843912
+ 10   12759040    1848840   10910200
+ 11   12759040     782552   11976488
+ 12   28614656   15595824   13018832
+ 13   28614656   14528928   14085728
+ 14   28614656   13462032   15152624
+ 15   28614656   12395136   16219520
+ 16   28614656   11328240   17286416
+ 17   28614656   10261344   18353312
+ 18   28614656    9194448   19420208
+ 19   28614656    8135768   20478888
+ 20   28614656    7064272   21550384
+ 21   28614656    6007168   22607488
+ 22   28614656    4935672   23678984
+ 23   28614656    3878568   24736088
+ 24   28614656    2807072   25807584
+ 25   28614656    1735576   26879080
+ 26   63868928   35937040   27931888
+ 27   63868928   34852040   29016888
+ 28   63868928   33783440   30085488
+ 29   63868928   32714840   31154088
+ 30   63868928   31674728   32194200
+ 31   63868928   30589728   33279200
+ 32   63868928   29521128   34347800 - Array is fully loaded
+ 33   63868928   28452528   35416400
+ 34   63868928   27412416   36456512
+ 35   63868928   26327416   37541512
+ 36   63868928   25258816   38610112
+ 37   63868928   24190216   39678712
+ 38   63868928   23150104   40718824
+ 39   63868928   22081504   41787424
+ 40   63868928   20996504   42872424
+ 41   63868928   19927904   43941024
+ 42   63868928   18897752   44971176
+ 43   63868928   17831912   46037016
+ 44   63868928   16766072   47102856
+ 45   63868928   15672664   48196264
+ 46   63868928   14606824   49262104
+ 47   63868928   13540984   50327944
+ 48   63868928   12475144   51393784
+ 49   63868928   11409304   52459624
+ 50   63868928   10343464   53525464
+ 51   63868928    9277624   54591304
+ 52   63868928    8211784   55657144
+ 53   63868928    7145944   56722984
+ 54   63868928    6080104   57788824
+ 55   63868928    5014264   58854664
+ 56   63868928    3948424   59920504
+ 57   63868928    2882584   60986344
+ 58   64880640   28542728   36337912 - Garbage collected
+ 59   64880640   27460008   37420632
+ 60   64880640   26393688   38486952
+ 61   64880640   25327368   39553272
+ 62   64880640   24261048   40619592
+ 63   64880640   23194728   41685912
+ 64   64880640   22128408   42752232
+ 65   64880640   21062088   43818552
+ 66   64880640   19995768   44884872
+ 67   64880640   18929448   45951192
+ 68   64880640   17863128   47017512
+ 69   64880640   16796808   48083832
+ 70   64880640   15730488   49150152
+ 71   64880640   14664168   50216472
+ 72   64880640   13597848   51282792
+ 73   64880640   12531528   52349112
+ 74   64880640   11465208   53415432
+ 75   64880640   28542128   36338512 - Garbage collected
+ 76   64880640   27458808   37421832
+ 77   64880640   26391888   38488752
+ 78   64880640   25324968   39555672
+ 79   64880640   24258048   40622592
+ 80   64880640   23191128   41689512
+ 81   64880640   22124208   42756432
+ 82   64880640   21057288   43823352
+ 83   64880640   19990368   44890272
+ 84   64880640   18923448   45957192
+ 85   64880640   17856528   47024112
+ 86   64880640   16789608   48091032
+ 87   64880640   15722688   49157952
+ 88   64880640   14655768   50224872
+ 89   64880640   13588848   51291792
+ 90   64880640   12521928   52358712
+ 91   64880640   30561512   34319128 - Garbage collected
+ 92   64880640   29493832   35386808
+ 93   64880640   28409816   36470824
+ 94   64880640   27342200   37538440
+ 95   64880640   26274584   38606056
+ 96   64880640   25206968   39673672
+ 97   64880640   24139352   40741288
+ 98   64880640   23099896   41780744
+ 99   64880640   22015880   42864760
+100   64880640   20948264   43932376
+101   64880640   19880648   44999992
+102   64880640   18813032   46067608
+103   64880640   17745416   47135224
+104   64880640   16705960   48174680
+105   64880640   15638344   49242296
+106   64880640   14554328   50326312
+107   64880640   13486712   51393928
+108   64880640   30560984   34319656 - Garbage collected
+109   64880640   29467848   35412792
+...
+
+(Ctrl-C)
+```
+
+Notes on the output:
+
+*   The first 32 steps were easy to understand. There was no unreferenced objects in the first 32 steps. So the JVM expanded the Heap to the specified maximum limit of 64 MN.
+*   From step 33 to step 57, unreferenced objects were left in the Heap. The JVM could deallocate (or garbage collect) them to free up more Heap space. But it decided to wait until step 58 to perform the garbage collection process, when the free space became pretty low (2,882,584 bytes)
+*   The second round of garbage collection was performed at step 75, when the free space was still high (11,465,208 bytes). I am not sure why.
+
+Running GarbageCollection.java on other versions of HotSpot and JRockit gives similar results.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[JVM Garbage Collection Logging](#part0007.xhtml)
+
+∟Garbage Collection Logging Options
+
+This section describes HotSpot JVM options to generate garbage collection log messages. '-Xlog:gc', '-Xlog:gc*=debug', '-Xlog:gc*=debug:file' are very useful options.
+
+The previous tutorial showed us how to use totalMemory() and freeMemory() methods to observe the JVM garbage collection (GC) process. Now let's use JVM logging options to do the observation.
+
+JVM command line options related to garbage collection logging have been changed since JVM 9\. Below is a list of new options. See next tutorial on old options.
+
+**-Xlog:gc** - Turn on GC logging at the default INFO level. Here are examples of INFO level GC log messages:
+
+```
+ [0.012s][info][gc] Using G1
+[0.027s][info][gc] Periodic GC disabled
+```
+
+**-Xlog:gc=debug** - Turn on GC logging at the given DEBUG level. Here are examples of DEBUG level GC log messages:
+
+```
+ [0.010s][debug][gc] ConcGCThreads: 2 offset 16
+[0.010s][debug][gc] ParallelGCThreads: 8
+[0.011s][debug][gc] Initialize mark stack with 4096 chunks,
+   maximum 16384
+```
+
+**-Xlog:gc+heap=debug** - Turn on GC+HEAP logging at the given DEBUG level. Here are examples of DEBUG level GC+HEAP log messages:
+
+```
+ [0.010s][info][gc,heap] Heap region size: 1M
+[0.010s][debug][gc,heap] Minimum heap 8388608  Initial heap 132120576
+   Maximum heap 2109734912
+```
+
+**-Xlog:gc*=debug** - Turn on all GC related logging at the given DEBUG level. Here are examples of different types of GC log messages at the DEBUG level:
+
+```
+ [0.011s][info][gc,heap] Heap region size: 1M
+[0.011s][debug][gc,heap] Minimum heap 8388608  Initial heap 132120576
+   Maximum heap 2109734912
+[0.012s][debug][gc     ] ConcGCThreads: 2 offset 16
+[0.012s][debug][gc     ] ParallelGCThreads: 8
+[0.013s][debug][gc     ] Initialize mark stack with 4096 chunks,
+   maximum 16384
+[0.013s][debug][gc,ergo,heap] Expand the heap. requested expansion
+   amount: 132120576B expansion amount: 132120576B
+[0.014s][debug][gc,ihop     ] Target occupancy update: old: 0B,
+   new: 132120576B
+[0.014s][debug][gc,ergo,refine] Initial Refinement Zones: green: 8,
+   yellow: 24, red: 40, min yellow size: 16
+[0.015s][info ][gc            ] Using G1
+[0.015s][info ][gc,heap,coops ] Heap address: 0x0000000082400000,
+   size: 2012 MB, Compressed Oops mode: 32-bit
+[0.032s][info ][gc            ] Periodic GC disabled
+...
+[0.052s][debug][gc,refine     ] Stopping 0
+[0.052s][info ][gc,heap,exit  ] Heap
+[0.052s][info ][gc,heap,exit  ]  garbage-first heap   total 129024K,
+   used 1024K [...
+   [gc,heap,exit  ]   region size 1024K, 2 young (2048K), 0 survivors
+[0.052s][info ][gc,heap,exit  ]  Metaspace       used 151K,
+   capacity 4480K, committed 4480K, reserved 1056768K
+[0.052s][info ][gc,heap,exit  ]   class space    used 3K, capacity 384K,
+   committed 384K, reserved 1048576K
+```
+
+**-Xlog:gc*:file=<file> or -Xlog:gc*:<file>** - Redirect the log messages to the given file instead of the console. For example, "-Xlog:gc:gc.log" will send regular GC log messages at the INFO level to a file called gc.log.
+
+**-verbose:gc** - Same as "-Xlog:gc".
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[JVM Garbage Collection Logging](#part0007.xhtml)
+
+∟"-Xlog:gc" - Default GC Logging Level: INFO
+
+This section describes the garbage collection logging option, '-Xlog:gc', which prints out log messages from the GC channel at the INFO level.
+
+In the first test, let's try the "-Xlog:gc" garbage collection logging option to see what we will get in the log file.
+
+```
+ herong> java -Xms2m -Xmx64m -Xlog:gc:gc.log GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   2031616   698848   1332768
+2   3874816   1473392   2401424
+3   3874816   425688   3449128
+4   8970240   4442016   4528224
+...
+(Ctrl-C)
+
+herong> more gc.log
+[0.013s][info][gc] Using G1
+[0.028s][info][gc] Periodic GC disabled
+[0.056s][info][gc] GC(0) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.118s][info][gc] GC(1) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.154s][info][gc] GC(2) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.211s][info][gc] GC(3) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.246s][info][gc] GC(4) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.296s][info][gc] GC(5) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.320s][info][gc] GC(6) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.333s][info][gc] GC(7) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.349s][info][gc] GC(8) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.356s][info][gc] GC(9) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.371s][info][gc] GC(10) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.388s][info][gc] GC(11) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.398s][info][gc] GC(12) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.412s][info][gc] GC(13) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.478s][info][gc] GC(14) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.500s][info][gc] GC(15) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.503s][info][gc] GC(16) Pause Young (Concurrent Start) (G1 Evacuati...
+[0.503s][info][gc] GC(17) Concurrent Cycle
+[0.505s][info][gc] GC(18) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.508s][info][gc] GC(19) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.510s][info][gc] GC(17) Pause Remark 14M->14M(27M) 0.830ms
+[0.513s][info][gc] GC(20) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.515s][info][gc] GC(17) Pause Cleanup 18M->18M(27M) 0.025ms
+[0.515s][info][gc] GC(17) Concurrent Cycle 12.548ms
+[0.519s][info][gc] GC(21) Pause Young (Prepare Mixed) (G1 Evacuation ...
+[0.522s][info][gc] GC(22) Pause Young (Mixed) (G1 Evacuation Pause)  ...
+[0.523s][info][gc] GC(23) Pause Young (Concurrent Start) (G1 Evacuat ...
+[0.524s][info][gc] GC(24) Concurrent Cycle
+[0.528s][info][gc] GC(25) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.533s][info][gc] GC(26) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.536s][info][gc] GC(27) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.538s][info][gc] GC(24) Pause Remark 34M->34M(59M) 0.934ms         ...
+[0.540s][info][gc] GC(28) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.543s][info][gc] GC(24) Pause Cleanup 38M->38M(61M) 0.050ms
+[0.545s][info][gc] GC(24) Concurrent Cycle 21.163ms
+...
+```
+
+The output shows that the JVM is using the G1 as the default garbage collector. The default logging level is INFO.
+
+JVM supports multiple garbage collectors and each garbage collector uses different log message format. I will explain how to read log messages later when we have better understandings on how each garbage collector works.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[JVM Garbage Collection Logging](#part0007.xhtml)
+
+∟"-Xlog:gc=trace" - Lowest GC Logging Level: TRACE
+
+This section describes the garbage collection logging option, '-Xlog:gc=trace', which prints out log messages from the GC channel at the TRACE level, which is lowest logging level.
+
+In the second test, let's try the "-Xlog:gc=trace" garbage collection logging option to get more logging messages to the lowest level of TRACE in the log file:
+
+```
+ herong> java -Xms2m -Xmx64m -Xlog:gc=trace:gc.log GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   2031616   698848   1332768
+2   3874816   1473392   2401424
+3   3874816   425688   3449128
+4   8970240   4442016   4528224
+...
+(Ctrl-C)
+
+herong> more gc.log
+[0.005s][trace][gc] MarkStackSize: 4096k  MarkStackSizeMax: 16384k
+[0.013s][debug][gc] ConcGCThreads: 2 offset 16
+[0.013s][debug][gc] ParallelGCThreads: 8
+[0.013s][debug][gc] Initialize mark stack with 4096 chunks, maximum 16384
+[0.014s][info ][gc] Using G1
+[0.032s][info ][gc] Periodic GC disabled
+...
+[0.584s][info ][gc] GC(34) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.587s][info ][gc] GC(35) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.590s][trace][gc] GC(36) Restored 3175 marks                        ...
+[0.590s][info ][gc] GC(36) To-space exhausted                         ...
+[0.590s][info ][gc] GC(36) Pause Young (Normal) (G1 Evacuation Pause) ...
+[0.590s][info ][gc] GC(27) Pause Cleanup 63M->63M(64M) 0.065ms        ...
+[0.593s][trace][gc] GC(37) Restored 10478 marks                       ...
+[0.593s][info ][gc] GC(37) To-space exhausted                         ...
+[0.593s][info ][gc] GC(37) Pause Young (Prepare Mixed) (G1 Evacuation ...
+[0.594s][debug][gc] GC(38) Clear Next Bitmap 0.261ms                  ...
+[0.610s][trace][gc] GC(38) Restored 11390 marks                       ...
+[0.611s][info ][gc] GC(38) Pause Full (G1 Evacuation Pause) 63M->34M(6...
+[0.611s][info ][gc] GC(27) Concurrent Cycle 56.572ms
+...
+```
+
+Obviously, "-Xlog:gc=trace" option is generating more logging messages. So you should use "=trace" all the time when troubleshooting any GC issues.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[JVM Garbage Collection Logging](#part0007.xhtml)
+
+∟"-Xlog:gc+heap=trace" - GC+HEAP Log Messages
+
+This section describes the garbage collection logging option, '-Xlog:gc+heap=trace', which prints two snapshots of the heap of each GC, one before the GC and another after the GC. It also prints heap changes of each GC.
+
+In this tutorial, let's try the "-Xlog:gc+heap=trace" garbage collection logging option to see what we will get in the log file:
+
+```
+ herong> java -Xms2m -Xmx64m -Xlog:gc+heap=trace:gc.log GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   2031616   698408   1333208
+2   3874816   1472824   2401992
+3   3874816   424944   3449872
+4   8970240   4441352   4528888
+...
+(Ctrl-C)
+
+herong> more gc.log
+[0.011s][info][gc,heap] Heap region size: 1M
+   -- Default region size is 1M for each heap region
+[0.011s][debug][gc,heap] Minimum heap 2097152  Initial heap 2097152
+   Maximum heap 67108864
+   -- Heap starts with 2 regions
+
+[0.056s][debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+   garbage-first heap   total 2048K, used 1024K [...
+[0.056s][debug][gc,heap] GC(0)   region size 1024K, 1 young (1024K),
+   0 survivors (0K)
+[0.056s][debug][gc,heap] GC(0) Metaspace    used 325K, capacity 4515K,
+   committed 4864K, reserved 1056768K
+[0.056s][debug][gc,heap] GC(0)  class space used 30K, capacity 398K,
+   committed 512K, reserved 1048576K
+   -- Heap status before GC #1
+
+[0.058s][info ][gc,heap] GC(0) Eden regions: 1->0(1)
+[0.058s][trace][gc,heap] GC(0)  Used: 0K, Waste: 0K
+[0.058s][info ][gc,heap] GC(0) Survivor regions: 0->1(1)
+[0.058s][trace][gc,heap] GC(0)  Used: 566K, Waste: 457K
+[0.059s][info ][gc,heap] GC(0) Old regions: 0->0
+[0.059s][trace][gc,heap] GC(0)  Used: 0K, Waste: 0K
+[0.059s][info ][gc,heap] GC(0) Archive regions: 0->0
+[0.059s][trace][gc,heap] GC(0)  Used: 0K, Waste: 0K
+[0.059s][info ][gc,heap] GC(0) Humongous regions: 0->0
+[0.059s][trace][gc,heap] GC(0)  Used: 0K, Waste: 0K
+   -- What was done in GC #1
+
+[0.059s][debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+   garbage-first heap   total 2048K, used 566K [...
+[0.059s][debug][gc,heap] GC(0)   region size 1024K, 1 young (1024K),
+   1 survivors (1024K)
+[0.059s][debug][gc,heap] GC(0) Metaspace    used 325K, capacity 4515K,
+   committed 4864K, reserved 1056768K
+[0.059s][debug][gc,heap] GC(0)  class space used 30K, capacity 398K,
+   committed 512K, reserved 1048576K
+   -- Heap status after GC #1
+
+[0.113s][debug][gc,heap] GC(1) Heap before GC invocations=1 (full 0...
+[0.113s][debug][gc,heap] GC(1)   region size 1024K, 2 young (2048K)...
+[0.113s][debug][gc,heap] GC(1)  Metaspace       used 1344K, capacit...
+[0.113s][debug][gc,heap] GC(1)   class space    used 160K, capacity...
+[0.115s][info ][gc,heap] GC(1) Eden regions: 1->0(1)
+   -- Heap status before GC #2
+
+[0.115s][trace][gc,heap] GC(1)  Used: 0K, Waste: 0K
+[0.115s][info ][gc,heap] GC(1) Survivor regions: 1->1(1)
+[0.116s][trace][gc,heap] GC(1)  Used: 457K, Waste: 566K
+[0.116s][info ][gc,heap] GC(1) Old regions: 0->1
+[0.116s][trace][gc,heap] GC(1)  Used: 545K, Waste: 478K
+[0.116s][info ][gc,heap] GC(1) Archive regions: 0->0
+[0.116s][trace][gc,heap] GC(1)  Used: 0K, Waste: 0K
+[0.116s][info ][gc,heap] GC(1) Humongous regions: 0->0
+[0.116s][trace][gc,heap] GC(1)  Used: 0K, Waste: 0K
+   -- What was done in GC #2
+
+[0.116s][debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0)...
+[0.116s][debug][gc,heap] GC(1)   region size 1024K, 1 young (1024K)...
+[0.116s][debug][gc,heap] GC(1)  Metaspace       used 1344K, capacit...
+[0.116s][debug][gc,heap] GC(1)   class space    used 160K, capacity...
+   -- Heap status after GC #2
+
+...
+```
+
+The log messages show that the "-Xlog:gc+heap=trace" option provides 3 chunks of information for each GC instance:
+
+*   First chunk provides a snapshot of the heap usage before the GC.
+*   Second chunk provides changes done during the GC.
+*   Third chunk provides a snapshot of the heap usage after the GC.
+
+Obviously, "--Xlog:gc+heap=trace" option is very useful to understand how each GC is performed.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[JVM Garbage Collection Logging](#part0007.xhtml)
+
+∟"-Xlog:gc*=trace" - Maximum GC Logging
+
+This section describes the garbage collection logging option '-Xlog:gc*=trace' (the maximum GC logging option), which prints log messages from all GC sources with the lowest log level of TRACE.
+
+In this tutorial, let's try the maximum logging option "-Xlog:gc*=trace", prints out log messages in all GC sources at the lowest level:
+
+```
+ herong> java -Xms2m -Xmx64m -Xlog:gc*=trace:gc.log GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   2031616   698408   1333208
+2   3874816   1472824   2401992
+3   3874816   424944   3449872
+4   8970240   4441352   4528888
+...
+(Ctrl-C)
+
+herong> more gc.log
+[0.006s][trace][gc] MarkStackSize: 4096k  MarkStackSizeMax: 16384k ...
+[0.012s][info ][gc,heap] Heap region size: 1M                      ...
+[0.012s][debug][gc,heap] Minimum heap 2097152  Initial heap 2097152...
+[0.012s][trace][gc,heap,coops] Trying to allocate at address 0x0000...
+[0.012s][trace][gc,barrier   ] G1CardTable::G1CardTable:           ...
+[0.012s][trace][gc,barrier   ]     &_byte_map[0]: 0x000001fe0048000...
+[0.012s][trace][gc,barrier   ]     _byte_map_base: 0x000001fdffca00...
+[0.012s][trace][gc,bot       ] G1BlockOffsetTable::G1BlockOffsetTab...
+[0.012s][trace][gc,bot       ]     rs.base(): 0x000001fe00460000  r...
+[0.013s][trace][gc,task      ] WorkerManager::add_workers() : creat...
+[0.013s][trace][gc,task      ] Adding initial GC Thread(s) previous...
+[0.013s][debug][gc           ] ConcGCThreads: 2 offset 16          ...
+[0.013s][debug][gc           ] ParallelGCThreads: 8                ...
+                                   ...
+[0.014s][debug][gc           ] Initialize mark stack with 4096 chun...
+[0.014s][debug][gc,ergo,heap ] Expand the heap. requested expansion...
+[0.014s][trace][gc,region    ] G1HR COMMIT(FREE) [...
+[0.014s][trace][gc,region    ] G1HR COMMIT(FREE) [...
+[0.014s][debug][gc,ihop      ] Target occupancy update: old: 0B, ne...
+[0.014s][debug][gc,ergo,refine] Initial Refinement Zones: green: 8,...
+                                   ...
+[0.015s][info ][gc            ] Using G1                           ...
+[0.015s][info ][gc,heap,coops ] Heap address: 0x00000000fc000000, s...
+[0.016s][trace][gc,metaspace  ] node @0x000001fe024c4cc0: reserved=...
+[0.016s][trace][gc,metaspace  ]    [...
+[0.016s][trace][gc,metaspace  ] Narrow klass base: 0x00000008000000...
+[0.016s][trace][gc,metaspace  ] Compressed class space size: 107374...
+[0.016s][trace][gc,metaspace  ] node @0x000001fe024c97d0: reserved=...
+[0.016s][trace][gc,metaspace  ]    [0x000001fe1c680000, 0x000001fe1...
+                                   ...
+[0.017s][trace][gc,tlab       ] ThreadLocalAllocBuffer::compute_siz...
+[0.017s][trace][gc,region     ] G1HR ALLOC(EDEN) [...
+[0.017s][trace][gc,tlab       ] TLAB: fill thread: 0x000001fe024c80...
+[0.019s][trace][gc,tlab       ] ThreadLocalAllocBuffer::compute_siz...
+[0.019s][trace][gc,tlab       ] TLAB: fill thread: 0x000001fe024c80...
+[0.020s][trace][gc,metaspace,freelist] SpaceManager(): 0x000001fe02...
+[0.020s][trace][gc,metaspace,freelist] SpaceManager(): 0x000001fe02...
+[0.020s][trace][gc,metaspace,freelist] allowed expansion words: 230...
+[0.020s][trace][gc,metaspace,freelist] Expanded non-class virtual s...
+[0.020s][trace][gc,metaspace,freelist] Expanded non-class virtual s...
+[0.020s][trace][gc,metaspace,freelist] SpaceManager::added chunk:  ...
+[0.020s][trace][gc,metaspace,freelist] Metachunk: bottom 0x000001fe...
+[0.020s][trace][gc,metaspace,freelist] Free chunk total 0  count 0 ...
+[0.020s][trace][gc,metaspace,freelist] allowed expansion words: 230...
+[0.020s][trace][gc,metaspace,freelist] Expanded class virtual space...
+[0.020s][trace][gc,metaspace,freelist] Expanded class virtual space...
+[0.020s][trace][gc,metaspace,freelist] SpaceManager::added chunk:  ...
+[0.020s][trace][gc,metaspace,freelist] Metachunk: bottom 0x00000008...
+[0.020s][trace][gc,metaspace,freelist] Free chunk total 0  count 0 ...
+[0.022s][trace][gc,tlab] ThreadLocalAllocBuffer::compute_size(13) r...
+[0.022s][trace][gc,tlab] TLAB: fill thread: 0x000001fe024c8000 [id:...
+                                   ...
+[0.033s][info ][gc     ] Periodic GC disabled                      ...
+...                                                                ...
+```
+
+```
+ [0.063s][trace][gc,task       ] WorkerManager::add_workers() : crea...
+[0.063s][trace][gc,task       ] GC Thread: using 1 out of 8 workers...
+[0.063s][trace][gc,task       ] WorkerManager::add_workers() : crea...
+[0.063s][trace][gc,task       ] GC Thread: using 1 out of 8 workers...
+[0.063s][trace][gc,nmethod    ] oops_do_marking_epilogue           ...
+                                   ...
+[0.063s][debug][gc,heap       ] GC(0) Heap before GC invocations=0 ...
+[0.063s][debug][gc,heap       ] GC(0)   region size 1024K, 1 young ...
+[0.063s][debug][gc,heap       ] GC(0)  Metaspace       used 329K, c...
+[0.063s][debug][gc,heap       ] GC(0)   class space    used 30K, ca...
+[0.063s][trace][gc,heap,region] GC(0) Heap Regions: E=young(eden), ...
+[0.063s][trace][gc,heap,region] GC(0) |   0|0x00000000fc000000, 0x0...
+[0.063s][trace][gc,heap,region] GC(0) |   1|0x00000000fc100000, 0x0...
+[0.063s][info ][gc,start      ] GC(0) Pause Young (Normal) (G1 Evac...
+[0.063s][trace][gc,task       ] GC(0) WorkerPolicy::calc_default_ac...
+[0.064s][trace][gc,task       ] GC(0) WorkerManager::add_workers() ...
+[0.064s][trace][gc,task       ] GC(0) Creating additional GC Thread...
+[0.064s][trace][gc,task       ] GC(0) GC Thread: using 2 out of 8 w...
+[0.064s][info ][gc,task       ] GC(0) Using 2 workers of 8 for evac...
+[0.064s][trace][gc,tlab       ] GC(0) TLAB: gc thread: 0x000001fe02...
+[0.064s][trace][gc,tlab       ] GC(0) TLAB: gc thread: 0x000001fe02...
+...                                                                ...
+[0.064s][debug][gc,alloc,region] GC(0) Mutator Allocation stats, re...
+[0.064s][debug][gc,age         ] GC(0) Desired survivor size 524288...
+[0.064s][trace][gc,ergo,cset   ] GC(0) Start choosing CSet. pending...
+[0.064s][trace][gc,ergo,cset   ] GC(0) Add young regions to CSet. e...
+[0.064s][debug][gc,ergo,cset   ] GC(0) Finish choosing CSet regions...
+[0.064s][trace][gc,region      ] GC(0) G1HR CSET(EDEN) [...
+[0.064s][trace][gc,nmethod     ] GC(0) oops_do_marking_prologue    ...
+[0.064s][debug][gc,task,stats  ] GC(0) GC Termination Stats        ...
+[0.064s][debug][gc,task,stats  ] GC(0)      elapsed  --strong roots...
+[0.064s][debug][gc,task,stats  ] GC(0) thr     ms        ms      % ...
+[0.064s][debug][gc,task,stats  ] GC(0) --- --------- --------- ----...
+[0.064s][trace][gc,task        ] GC(0) WorkerManager::add_workers()...
+[0.064s][trace][gc,task        ] GC(0) GC Thread: using 2 out of 8 ...
+[0.064s][trace][gc,region      ] GC(0) G1HR ALLOC(SURV) [...
+[0.064s][trace][gc,nmethod     ] GC(0)  116       3       java.util...
+...                                                                ...
+[0.065s][debug][gc,task,stats  ] GC(0)   1      0.95      0.94  99....
+[0.065s][debug][gc,task,stats  ] GC(0)   0      1.00      0.79  79....
+[0.065s][trace][gc,task        ] GC(0) WorkerManager::add_workers()...
+[0.065s][trace][gc,task        ] GC(0) GC Thread: using 2 out of 8 ...
+[0.065s][trace][gc,nmethod     ] GC(0)   54       3       java.lang...
+...                                                                ...
+[0.065s][trace][gc,nmethod     ] GC(0)  116       3       java.util...
+[0.065s][trace][gc,nmethod     ] GC(0) oops_do_marking_epilogue    ...
+[0.065s][debug][gc,ergo        ] GC(0) Running G1 Clear Card Table ...
+[0.065s][trace][gc,task        ] GC(0) WorkerManager::add_workers()...
+[0.065s][trace][gc,task        ] GC(0) GC Thread: using 1 out of 8 ...
+[0.066s][trace][gc,task        ] GC(0) WorkerManager::add_workers()...
+[0.066s][trace][gc,task        ] GC(0) GC Thread: using 2 out of 8 ...
+[0.066s][debug][gc,ref         ] GC(0) Skipped phase1 of Reference ...
+[0.066s][trace][gc,ref         ] GC(0) Phase2 Soft before0 0 0 0 0 ...
+[0.066s][trace][gc,ref         ] GC(0) Phase2 Weak before0 81 0 0 0...
+[0.066s][trace][gc,ref         ] GC(0) Phase2 Final before0 0 0 0 0...
+[0.066s][trace][gc,ref         ] GC(0) Phase2 Final after0 0 0 0 0 ...
+[0.066s][debug][gc,ref         ] GC(0) Skipped phase3 of Reference ...
+[0.066s][trace][gc,ref         ] GC(0) Phase4 Phantom before0 14 0 ...
+...
+```
+
+Wow! I am very impressed on how much information we can get with the maximum GC logging option "-Xlog:gc*=trace".
+
+But getting so much information could make it difficult for us understand. So may we should raise the log level to DEBUG with "-Xlog:gc*=debug".
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[JVM Garbage Collection Logging](#part0007.xhtml)
+
+∟"-XX:+PrintFlagsFinal" - Print JVM Options
+
+This section describes the '-XX:+PrintFlagsFinal' JVM option, which prints all options and their values used by the JVM.
+
+If want to know what are default options used by the JVM, you can use the "-XX:+PrintFlagsFinal" option to print them out:
+
+```
+ herong> java -XX:+PrintFlagsFinal GarbageCollection
+
+[Global flags]
+ccstrlist AOTLibrary                               =
+      int ActiveProcessorCount                     = -1
+    uintx AdaptiveSizeDecrementScaleFactor         = 4
+    uintx AdaptiveSizeMajorGCDecayTimeScale        = 10
+    uintx AdaptiveSizePolicyCollectionCostMargin   = 50
+    uintx AdaptiveSizePolicyInitializingSteps      = 20
+    uintx AdaptiveSizePolicyOutputInterval         = 0
+    uintx AdaptiveSizePolicyWeight                 = 10
+    uintx AdaptiveSizeThroughPutPolicy             = 0
+    uintx AdaptiveTimeWeight                       = 25
+     bool AggressiveHeap                           = false
+     intx AliasLevel                               = 3
+     bool AlignVector                              = false
+    ccstr AllocateHeapAt                           =
+     intx AllocateInstancePrefetchLines            = 1
+     intx AllocatePrefetchDistance                 = 192
+     intx AllocatePrefetchInstr                    = 3
+     intx AllocatePrefetchLines                    = 4
+     intx AllocatePrefetchStepSize                 = 64
+     intx AllocatePrefetchStyle                    = 1
+     bool AllowJNIEnvProxy                         = false
+     bool AllowParallelDefineClass                 = false
+     bool AllowUserSignalHandlers                  = false
+     bool AllowVectorizeOnDemand                   = true
+     bool AlwaysActAsServerClassMachine            = false
+     bool AlwaysCompileLoopMethods                 = false
+     bool AlwaysLockClassLoader                    = false
+     bool AlwaysPreTouch                           = false
+     bool AlwaysRestoreFPU                         = false
+     bool AlwaysTenure                             = false
+     intx ArrayCopyLoadStoreMaxElem                = 8
+     bool AssertOnSuspendWaitFailure               = false
+     intx AutoBoxCacheMax                          = 128
+     intx BCEATraceLevel                           = 0
+     bool BackgroundCompilation                    = true
+   size_t BaseFootPrintEstimate                    = 268435456
+     intx BiasedLockingBulkRebiasThreshold         = 20
+     intx BiasedLockingBulkRevokeThreshold         = 40
+     intx BiasedLockingDecayTime                   = 25000
+     intx BiasedLockingStartupDelay                = 0
+     bool BindGCTaskThreadsToCPUs                  = false
+     bool BlockLayoutByFrequency                   = true
+     intx BlockLayoutMinDiamondPercentage          = 20
+     bool BlockLayoutRotateLoops                   = true
+     bool BranchOnRegister                         = false
+     bool BytecodeVerificationLocal                = false
+     bool BytecodeVerificationRemote               = true
+     bool C1OptimizeVirtualCallProfiling           = true
+     bool C1ProfileBranches                        = true
+   ...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Introduction of Garbage Collectors
+
+This chapter provides tutorial notes and example codes on garbage collectors. Topics include JVM memory management summary; Introduction of Generational Garbage Collector; Young and Tenured Heap regions; Eden and Survivor spaces; Mark-Sweep-Compact algorithm; Garbage collector variations.
+
+> [JVM Memory Manager - Garbage Collector](#part0016.xhtml)
+> 
+> [Generational Garbage Collection in HotSpot](#part0017.xhtml)
+> 
+> [Young Generation Collection - Minor GC](#part0018.xhtml)
+> 
+> [Young Generation Collectors - Serial, PS, ParNew, G1](#part0019.xhtml)
+> 
+> [Tenured Generation Collection - Major GC](#part0020.xhtml)
+> 
+> [Tenured Generation Collectors - Serial, ParOldGen, CMS, G1](#part0021.xhtml)
+> 
+> [Collector Combinations: Serial, Parallel, Concurrent, G1, Z](#part0022.xhtml)
+
+Takeaways:
+
+*   HotSpot JVM Heap area is divided into 2 generations: Young Generation and Tenured (Old) Generation.
+*   The Young Generation is divided into 3 areas: Eden, Survivor Space 'From' and Survivor Space 'To'.
+*   When the Eden area is full, a Minor Garbage Collection (GC) is performed, which moves live objects from the Eden area to the Survivor Space 'To' area. It also empties the Survivor Space 'From' area by moving "young" live objects to the Survivor Space 'To' area and promoting "old" live objects to the Tenured Generation.
+*   When the Tenured Generation is full, a Full Garbage Collection (GC) is performed, which follows a 3-step, Mark-Sweep-Compact (MSC), process to deallocate dead objects and defragment free space.
+*   There are 6 variations of garbage collectors used in HotSpot JVM: The Serial Collector, The Parallel Collector, The Parallel Compaction Collector, The Concurrent Mark-Sweep (CMS) Collector, The Garbage First (G1) Collector, and The Z (ZGC) Collector.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Introduction of Garbage Collectors](#part0015.xhtml)
+
+∟JVM Memory Manager - Garbage Collector
+
+This section describes what is a garbage collector and its role and responsibilities for managing the JVM memory.
+
+In previous sections, we have observed how JVM manages the Heap memory automatically for us. In following sections, we are going to learn some basic concepts on how the JVM actually manages the memory.
+
+**What Is a Garbage Collector?** A garbage collector is JVM component that is responsible for managing memory space primarily in the Head data area. It also manages memory space in Method Area and Direct Memory data areas. More specifically, a garbage collector has 3 major responsibilities.
+
+1\. Allocating Memory for New Objects - When the Java application is requesting to create a new data object (an instance of a class or array), the garbage collector must find a block of free space of a certain size in the memory. It is an easy task at the beginning, when the free space is a single continuous chuck. But when the free space becomes fragmented because of old objects are deallocated not in the same order as them were allocated. The garbage collector may have to move data objects around to put free spaces together into large chunks.
+
+2\. Ensuring Live Objects Remaining in Memory - Once a data object is allocated, the garbage collector must keep tracking it to know where this object is actually located in the memory, and how many live references that are pointing this object.
+
+3\. Deallocating Memory for Dead Objects - When a data object loses its last live reference, it becomes a dead object, which is also called garbage. The garbage collector can leave dead objects in the memory for some time. But it must deallocate them when there is not enough free space to allocate new objects. The process of finding dead objects and freeing the space used by these objects is known as garbage collection.
+
+Common design goals of a garbage collector:
+
+*   Must Be Safe - A garbage collector should never deallocate any live objects by mistakes.
+*   Must Be Comprehensive - A garbage collector should not leave any garbage uncollected for too long.
+*   Must Be Fast - A garbage collector may interrupt the execution of the application to perform garbage collection, but those interruptions should be very short.
+*   Must Not Waste Space - A garbage collector should not waste too much free space because of fragmentation.
+*   Must Be Scalable - A garbage collector must be scalable on multiprocessor systems.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Introduction of Garbage Collectors](#part0015.xhtml)
+
+∟Generational Garbage Collection in HotSpot
+
+This section describes the generational garbage collection architecture used in the HotSpot JVM. Young Generation stores objects with shorter lives and Tenured Generation stores objects with longer lives.
+
+Earlier we learned the garbage collector's role and responsibilities. Now let's look at a real example, the garbage collector implemented in the HotSpot JVM.
+
+Architecturally, the HotSpot garbage collector is called Generational Collector, which divides the memory into two parts (generations):
+
+*   Young (New) Generation - Stores objects that have shorter lives with less memory space. Garbage collections occur more frequently in Young Generation. The operation of garbage collection in the Young Generation is referred as Minor GC. Faster and less space efficient garbage collection algorithms can be chosen for Minor GC.
+*   Tenured (Old) Generation - Stores objects that have longer lives with more memory space. Garbage collections occur less frequently in Tenured Generation. The operation of garbage collection in the Tenured Generation is referred as Major GC. More space efficient and slower garbage collection algorithms can be chosen for Major GC.
+
+A new objects is normally allocated in the Young Generation first. If it survives some number of Minor GC, it will be then promoted to the Tenured Generation.
+
+The generational garbage collection approach is more efficient because of the following weak generational hypothesis observed in most Java applications:
+
+*   Most objects have shorter lives.
+*   Less older objects referencing younger objects than younger objects referencing older objects.
+
+The picture below illustrates the generational garbage collection architecture used in HotSpot JVM:
+
+![](Images/image00258.jpeg)
+
+HotSpot Generational Garbage Collection
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Introduction of Garbage Collectors](#part0015.xhtml)
+
+∟Young Generation Collection - Minor GC
+
+This section describes basic steps of a Young Generation Collection, also called a Minor GC. The Young Generation is divided into 3 areas: Eden, Survivor Space 'From' and Survivor Space 'To'.
+
+In order to make Minor GC more efficient, the Young Generation in HotSpot is further divided into 3 areas:
+
+*   Eden - Stores newly allocated objects with a larger space.
+*   Survivor Space "From" - Stores objects that survived at least one Minor Collection with a smaller space.
+*   Survivor Space "To" - Empty space reserved as working space for the garbage collector with same space size as Survivor Space "From".
+
+There are 6 basic steps involved in a Minor GC:
+
+*   Determine each object in the Young Generation is live or dead.
+*   Live objects in the Eden area are copied to the Survivor Space "To" area.
+*   Live objects in the Survivor Space "From" area that are old enough to be promoted are copied to the Tenured Generation.
+*   Live objects in the Survivor Space "From" area that are not old enough to be promoted are copied to the Survivor Space "To" area.
+*   Remove all dead objects to make the Eden area and the Survivor Space "From" area empty.
+*   Swap the label between the Survivor Space "From" area and the Survivor Space "To" area, so the Survivor Space "To" area is empty.
+
+The picture below illustrates basic steps of a Minor GC in HotSpot JVM:
+
+![](Images/image00259.jpeg)
+
+HotSpot Young Generation Collection - Minor GC
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Introduction of Garbage Collectors](#part0015.xhtml)
+
+∟Young Generation Collectors - Serial, PS, ParNew, G1
+
+This section describes Garbage Collectors used for the Young generation: Serial, Parallel Scavenge (PS), Parallel New (ParNew), and Garbage First (G1).
+
+There are 4 primary garbage collectors for the Young (new) generation based on the algorithm used to perform the GC task:
+
+1\. Serial Collector (invoked by "-XX:+UseSerialGC" option) - The Serial collector for Young generation uses the "Copy (also called Scavenge)" algorithm serially using 1 CPU processor (1 thread) only in a stop-the-world fashion:
+
+*   Copy live objects from "eden" to "from" space, when "eden" space is full.
+*   Empty "eden" space. Dead objects are wiped out.
+*   Copy live objects from "from" to "to" space, when "from" space is full.
+*   Empty "from" space. Dead objects are wiped out.
+*   Copy live objects from "to" space to "tenured" generation, when "to" space is full or the live object is getting too old.
+*   Swap "from" and "to" spaces".
+
+The Serial collector for Young (new) generation can be identified in GC log messages with the "DefNew" label, as in this example: "DefNew: 34207K->4287K(38720K)".
+
+2\. Parallel Scavenge (PS) (also called "PS Scavenge") Collector (invoked by "-XX:+UseParallelGC" option) - The PS collector for Young generation uses the "Copy (also called Scavenge)" algorithm parallelly using multiple CPU processors (multiple threads) in a stop-the-world fashion.
+
+The PS collector for Young (new) generation uses the same algorithm as the Serial collector, except that it uses multiple threads to get the job done faster.
+
+The PS collector for Young (new) generation can be identified in GC log messages with the "PSYoungGen" label, as in this example: "PSYoungGen: 32768K->5104K(37888K)".
+
+3\. Parallel New (ParNew) Collector (invoked by "-XX:+UseConcMarkSweepGC" option) - The ParNew collector for Young generation uses the "Copy (also called Scavenge)" algorithm parallelly using multiple CPU processors (multiple threads) in a stop-the-world fashion.
+
+The ParNew collector for Young (new) generation uses the same algorithm as the PS collector, except that it has an internal 'callback' that allows an old generation collector to operate on the objects it collects (really written to work with the concurrent collector), as described by Jack Shirazi in ["Oracle JVM Garbage Collectors Available From JDK 1.7.0_04 And After"](http://www.fasterj.com/articles/oraclecollectors1.shtml).
+
+The ParNew collector for Young generation can be identified in GC log messages with the "ParNew" label, as in this example: "ParNew: 1068K->63K(1152K)".
+
+In JVM 9 and older releases, the ParNew collector for Young generation can be invoked explicitly using the "-XX:+UseParNewGC" option. But this option has been removed from JVM 10.
+
+4\. Garbage First (G1) Collector (invoked by "-XX:+UseG1GC" option) - The G1 collector divides the heap into 3 types of regions: Eden, Survivor and Tenured.
+
+During each Young generation GC, the G1 collector loops through all existing Eden and Survivor regions to mark all live objects. Then it copies all live objects younger than the tenuring threshold to new Survivor regions. Older objects are copied to new Tenured regions.
+
+The G1 collector for Young (new) generation can be identified in GC log messages with the "G1 Evacuation Pause" label, as in this example: "Pause Young (Normal) (G1 Evacuation Pause) 24M->9M(126M) 12.948ms".
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Introduction of Garbage Collectors](#part0015.xhtml)
+
+∟Tenured Generation Collection - Major GC
+
+This section describes basic steps of a Tenured Generation Collection, also called a Major GC, which uses a simple 3-step Mark-Sweep-Compact algorithm on the entire Tenured Generation.
+
+The basic algorithm used in Major GC is called Mark-Sweep-Compact, which consists of 3 steps:
+
+*   Mark - Identify which objects are still live in the Tenured Generation and mark them.
+*   Sweep - Identify and remove garbage by sweeping over the entire Tenured Generation.
+*   Compact - Move live objects towards the beginning of the generation to combine fragmented free spaces into a single contiguous chunk at the end of the generation.
+
+The Mark-Sweep-Compact algorithm is very straightforward as illustrated in the picture below:
+
+![](Images/image00260.jpeg)
+
+HotSpot Tenured Generation Collection - Major GC
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Introduction of Garbage Collectors](#part0015.xhtml)
+
+∟Tenured Generation Collectors - Serial, ParOldGen, CMS, G1
+
+This section describes Garbage Collectors used for the Tenured generation: Serial, Parallel Old (ParOldGen), Concurrent Mark Sweep (CMS), and Garbage First (G1)
+
+There are 4 primary garbage collectors for the Tenured (old) generation based on the algorithm used to perform the GC task:
+
+1\. Serial (also called MarkSweepCompact) Collector (invoked by "-XX:+UseSerialGC" option) - The Serial collector for Tenured generation uses the "Mark-Sweep-Compact" algorithm serially using 1 CPU processor (1 thread) only in a stop-the-world fashion.
+
+The Serial collector for Tenured (old) generation can be identified in GC log messages with the "Tenured" label, as in this example: "Tenured: 13758K->44242K(86016K)".
+
+2\. Parallel Old (Also called PS MarkSweep) Collector (invoked by "-XX:+UseParallelOldGC" option) - The Parallel Old collector for Tenured generation uses the "Mark-Sweep-Compact" algorithm parallelly using multiple CPU processors (multiple threads) in a stop-the-world fashion.
+
+The Parallel Old collector for Tenured (old) generation can be identified in GC log messages with the "ParOldGen" label, as in this example: ParOldGen: 11361K->42264K(86016K)
+
+The Parallel Old collector is also called Parallel Compaction collector.
+
+3\. Concurrent Mark Sweep (CMS) Collector (invoked by "-XX:+UseConcMarkSweepGC" option) - The CMS collector for Tenured generation Uses an algorithm that runs concurrently without stopping the application for most of the GC duration. This will reduce the application pause time.
+
+The CMS collector for Tenured (old) generation can be identified in GC log messages with the "CMS" label, as in this example: "CMS: 14177K->47119K(86016K)".
+
+4\. Garbage First (G1) Collector (invoked by "-XX:+UseG1GC" option) - The G1 collector divides the heap into 3 types of regions: Eden, Survivor and Tenured.
+
+When there are too many Tenured regions used, the G1 collector starts to loop through all existing Tenured regions to mark live objects. This is done concurrently with the application execution.
+
+The G1 collector will share the "copy" phase of the Young generation GC to copy live objects in exiting Tenured regions to new Tenured regions. The copy phase picks up Tenured regions with most garbage first. This is why this collector is called Garbage First (G1) collector.
+
+The G1 collector for Tenured (old) generation can be identified in GC log messages with "Old regions" labels. as in this example: "Old regions: 8->37".
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Introduction of Garbage Collectors](#part0015.xhtml)
+
+∟Collector Combinations: Serial, Parallel, Concurrent, G1, Z
+
+This section describes different garbage collector combinations supported by JVM 12 HotSpot: Serial, Parallel, Concurrent, G1 and Z
+
+In previous sections, we discussed garbage collectors for Young generation and Tenured generation independently:
+
+*   4 garbage collectors for the Young generation: Serial, Parallel Scavenge (PS), Parallel New (ParNew), and Garbage First (G1).
+*   4 garbage collectors for the Tenured generation: Serial, Parallel Old (ParOldGen), Concurrent Mark Sweep (CMS), and Garbage First (G1).
+
+A single generation collector, called Z (or ZGC) The Z collector has been introduced since JVM 11 and it is still available only on Linux operating systems as an experimental option. The Z (or ZGC) Collector can be invoked by the "-XX:+UseZGC" option.
+
+Now let's look dependencies and compatibilities of garbage collectors. As of JVM 17, HotSpot JVM can support the following 5 combinations of garbage collectors:
+
+```
+ GC Combination           Minor GC          Major GC            Thread
+--------------           --------          -------            ------
+
+Serial                   Serial            Serial             1
+-XX:+UseSerialGC         Stop-the-world    Stop-the-world
+
+Parallel                 Parallel Scavenge Parallel Old
+-XX:+UseParallelGC       Mostly Parallel   Mostly Parallel    Multi
+-XX:+UseParallelOldGC    Stop-the-world    Stop-the-world
+
+Concurrent               Parallel New      CMS
+-XX:+UseConcMarkSweepGC  Mostly Parallel   Mostly Parallel    Multi
+                         Stop-the-world    Mostly concurrent
+
+Concurrent Old only      Serial            CMS
+-XX:+UseConcMarkSweepGC  Mostly Parallel   Mostly Parallel    Multi
+-XX:-UseParNewGC         Stop-the-world    Mostly concurrent
+
+Garbage First (G1)       Garbage First     Garbage First      Multi
+-XX:+UseG1GC             Mostly Parallel   Mostly Parallel
+                         Stop-the-world    Mostly concurrent
+
+Z - 1 Generation                     Z                        Multi
+-XX:+UseZGC                          Mostly Parallel
+                                     Mostly concurrent
+```
+
+Note that:
+
+*   When using "-XX:+UseParallelGC" to invoke Parallel Scavenge for the Young generation, Parallel Old is automatically selected for the Tenured generation.
+*   When using "-XX:+UseParallelOldGC" to invoke Parallel Old for the Tenured generation, Parallel Scavenge is automatically selected for the Young generation.
+*   When using "-XX:+UseConcMarkSweepGC" to invoke CMS for the Tenured generation, Parallel New is automatically selected for the Young generation.
+*   When using "-XX:+UseConcMarkSweepGC" and "-XX:-UseParNewGC" together, you are forcing the JVM to use Serial to the Young generation. This combination is actually deprecated and will be disabled in the future.
+*   Other combinations are not compatible and disabled.
+
+Next, we will discuss each GC combination individually.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Serial Collector - "+XX:+UseSerialGC"
+
+This chapter provides tutorial notes and example codes on the Serial Collector specified by the '+XX:+UseSerialGC' JVM option. Topics include introduction to Serial Collector; GC log message format and examples; '-XX:NewRatio' and '-XX:SurvivorRatio' controlling heap area allocations; 'TargetSurvivorRatio', '-XX:MaxTenuringThreshold', '-XX:+NeverTenure' and '-XX:+AlwaysTenure' tenuring behaviors.
+
+> [What Is Serial Collector](#part0024.xhtml)
+> 
+> [GC Log Message Format for Serial Collector](#part0025.xhtml)
+> 
+> [GC Log Message Examples of Serial Collector](#part0026.xhtml)
+> 
+> [Log Message Types from Serial Collector](#part0027.xhtml)
+> 
+> [Serial Collector Stops Application for Minor/Major GC](#part0028.xhtml)
+> 
+> [Usage Report on Heap Memory Areas](#part0029.xhtml)
+> 
+> [Default NewRatio - Old vs. New Generation](#part0030.xhtml)
+> 
+> ["-XX:NewRatio" - Ratio of Tenured and "new" Generation](#part0031.xhtml)
+> 
+> ["-XX:SurvivorRatio" - Ratio of Eden and Survivor Space](#part0032.xhtml)
+> 
+> [Serial GC Tracing - Tight Heap](#part0033.xhtml)
+> 
+> [Serial GC Tracing - Tight Heap (Part 2)](#part0034.xhtml)
+> 
+> [Serial GC Tracing - Tight Heap (Part 3)](#part0035.xhtml)
+> 
+> [Serial GC Tracing - Plenty of Heap](#part0036.xhtml)
+> 
+> [Serial GC Tracing - Aged Live Objects](#part0037.xhtml)
+> 
+> [Serial GC Tracing - Tenuring Threshold](#part0038.xhtml)
+> 
+> ["-XX:TargetSurvivorRatio" - Second Tenuring Condition](#part0039.xhtml)
+> 
+> [Serial GC Tracing - Tenuring Threshold Controlled](#part0040.xhtml)
+> 
+> ["-XX:+NeverTenure" and "-XX:+AlwaysTenure" Working](#part0041.xhtml)
+> 
+> [Minor GC Triggering Condition of Serial Collector](#part0042.xhtml)
+
+Takeaways:
+
+*   The Serial Collector specified by the "-XX:+UseSerialGC" option actually uses the Serial Collector of the Young generation and the Serial Collector of the Tenured generation.
+*   The Serial Collector uses "DefNew" to represent Young Generation GC in log messages.
+*   The Serial Collector uses "Tenured" to represent Tenured Generation GC in log messages.
+*   The Serial Collector performs both Minor and Major GC in a stop-the-world fashion and serially using 1 thread only.
+*   "-XX:NewRatio" option controls the ratio of Tenured generation size against the New generation size. Default is about 2.
+*   "-XX:SurvivorRatio" option controls the ratio of Eden space size against the Survivor space size. Default SurvivorRatio is about 8.
+*   The Serial Collector is the default garbage collector for HotSpot JVM 8 and older releases.
+*   "-Xlog:gb+heap=debug" option prints heap information before and after each GC. It tells us how objects moved in Young generation spaces and Tenured generation.
+*   "-Xlog:gc+age=trace" option prints object age groups in "from" survivor space after each GC.
+*   "-XX:MaxTenuringThreshold" option controls object age limit before they are promoted from survivor space to Tenured generation.
+*   "-XX:TargetSurvivorRatio" option controls the maximum survivor space usage percentage. Objects can be promoted to Tenured generation prematurely to keep the survivor space usage percentage low.
+*   "-XX:+NeverTenure" option forces objects to stay in survivor space even they are matured.
+*   "-XX:+AlwaysTenure" option forces objects to be promoted from Eden space to Tenured generation directly, bypassing survivor space.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟What Is Serial Collector
+
+This section describes the Serial Collector, which uses the combination of the Serial Collector of Young generation and the Serial Collector of Tenured generation, so both minor GC and major GC are performed in a single thread serially in a stop-the-world fashion.
+
+**What Is Serial Collector?** Serial Collector is actually a combination of two garbage collectors:
+
+*   The Serial Collector of Young generation - It uses the 3-area (Eden, Survivor Space "From" and Survivor Space "To") algorithm serially with 1 thread only in a stop-the-world fashion.
+*   The Serial Collector of Tenured generation - It uses the "Mark-Sweep-Compact" algorithm serially with 1 thread only in a stop-the-world fashion.
+
+Main features of the Serial Collector:
+
+*   Serial Collector runs serially with the application. That is, the Java application execution is halted while garbage collection is taking place.
+*   Serial Collector runs with 1 thread. So it is not able take full advantage of multi-processor computer systems.
+*   Serial Collector can be specified using the "-XX:+UseSerialGC" JVM option.
+*   The Serial Collector was the default garbage collector for HotSpot JVM 8 and older releases.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟GC Log Message Format for Serial Collector
+
+This section provides explanations on GC log messages generated from the Serial Collector.
+
+The first step to help us understand how Serial Collector works is to understand the GC log messages generated from the Serial Collector.
+
+Let's capture some GC log messages with my sample program, GarbageCollection.java:
+
+```
+ herong> java -XX:+UseSerialGC -Xlog:gc,gc+heap=info GarbageCollection
+
+[0.019s][info][gc] Using Serial
+...
+```
+
+Okay. We got our first GC log message at 0.019 seconds after the application have started. It confirms that the JVM is using the Serial GC.
+
+Continue with additional output in the console:
+
+```
+ ...
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   127729664   107555136   20174528
+2   127729664   105882632   21847032
+...
+14   127729664   92701256   35028408
+[0.906s][info][gc,heap] GC(0) DefNew: 34207K->4288K(38720K)
+[0.906s][info][gc,heap] GC(0) Tenured: 0K->13758K(86016K)
+[0.906s][info][gc     ] GC(0) Pause Young (Allocation Failure)
+   33M->17M(121M) 28.706ms
+15   127729664   108238488   19491176
+```
+
+Here are log messages of the first Young (Minor) GC at 0.102 seconds. Here is my understanding of those 3 messages:
+
+*   "DefNew: 34207K->4288K(38720K)" - This message tells us that the Serial GC for the Young (New) generation, called "DefNew", reduced the Young generation heap usage from 34207K to 4288K, see "... 34207K->4288K..." in the message. The total Young generation heap size allocated was 38720K, see "...(38720K)".
+*   "Tenured: 0K->13758K(86016K)" - This message tells us that the Tenured (Old) generation heap usage expanded from 0K to 13758K, see "...0K->13758K..." in the message. This is a result of the Young (New) GC, which promoted some live objects from the Young (New) generation to the Tenured (Old) generation heap. The total Tenured generation heap size allocated was 86016K, see "...(86016K)".
+*   "Pause Young (Allocation Failure) 33M->17M(121M) 28.706ms" - This message tells us that the Java application was paused for a Young (Minor) GC triggered by "Allocation Failure". The heap usage was reduced from 33M to 17M, see "... 33M->17M..." in the message. The total heap size allocated was 121M, see "...(121M)...". The total time of this Young GC took 28.706ms, see "... 28.706ms".
+
+Based those messages, we can calculate the following:
+
+```
+ Objects removed from Young generation: 34207K - 4288K = 29919K.
+Live objects moved to Tenured generation: 13758K - 0K = 13758K.
+Dead objects (garbage) destroyed: 29919K - 13758K = 16161K.
+```
+
+Continue again with additional output in the console:
+
+```
+ ...
+46   127729664   74069456   53660208
+[0.591s][info][gc,heap] GC(1) DefNew: 38643K->4287K(38720K)
+[0.591s][info][gc,heap] GC(1) Tenured: 13758K->44242K(86016K)
+[0.591s][info][gc     ] GC(1) Pause Young (Allocation Failure)
+   51M->47M(121M) 24.964ms
+47   127729664   77015592   50714072
+...
+78   127729664   42775624   84954040
+[0.617s][info][gc,heap] GC(2) DefNew: 38719K->4287K(38720K)
+[0.617s][info][gc,heap] GC(2) Tenured: 44242K->73192K(86016K)
+[0.617s][info][gc     ] GC(2) Pause Young (Allocation Failure)
+   81M->75M(121M) 16.611ms
+79   127729664   47170696   80558968
+```
+
+Two more Young (Minor) GC occurred. Let's continue again.
+
+```
+ ...
+109   127729664   13511344   114218320
+[0.653s][info][gc     ] GC(4) Pause Full (Allocation Failure)
+   104M->35M(138M) 17.526ms
+[0.655s][info][gc,heap] GC(3) DefNew: 38669K->0K(38784K)
+[0.655s][info][gc,heap] GC(3) Tenured: 73192K->36569K(86016K)
+[0.655s][info][gc     ] GC(3) Pause Young (Allocation Failure)
+   109M->35M(121M) 37.570ms
+110   127795200   89572168   38223032
+```
+
+Here are log messages of the first Full (Major) GC at 0.653 seconds. Here is my understanding of those 4 messages:
+
+*   "GC(4) Pause Full (Allocation Failure) 104M->35M(138M) 17.526ms" - This message tells us that the Java application was paused for a Full (Major) GC triggered by "Allocation Failure". The heap usage was reduced from 104M to 35M, see "... 104M->35M..." in the message. The total time of this Full GC took 17.526ms, see "... 17.526ms".
+*   "GC(3) DefNew...", "GC(3) Tenured..." and "Pause Young ..." - These message tells us that the Java application was paused for a Young GC again.
+*   The Full GC was labeled as GC #4, and the Young GC was labeled as GC #3\. So the Full GC message should have been printed after the Young GC messages.
+
+See next tutorial for more example of Serial Young GC and Full GC messages.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟GC Log Message Examples of Serial Collector
+
+This section provides an example of GC log messages generated from the Serial Collector.
+
+If you run the program again with a given heap size range, you will get more GC log message examples. Below is a list of some GC log messages with my comments:
+
+```
+ herong> java -Xms2m -Xmx64m -XX:+UseSerialGC -Xlog:gc,gc+heap=info \
+   GarbageCollection
+
+[0.009s][info][gc] Using Serial
+[0.055s][info][gc,heap] GC(0) DefNew: 1024K->128K(1152K)
+[0.055s][info][gc,heap] GC(0) Tenured: 0K->418K(768K)
+[0.055s][info][gc     ] GC(0) Pause Young (Allocation Failure)
+   1M->0M(1M) 1.188ms
+
+   -- A Young GC occurred in JVM start-up process
+      Some small objects used by the JVM were deallocated.
+
+[0.113s][info][gc     ] GC(2) Pause Full (Allocation Failure)
+   0M->0M(2M) 2.154ms
+[0.113s][info][gc,heap] GC(1) DefNew: 1152K->0K(1152K)
+[0.113s][info][gc,heap] GC(1) Tenured: 418K->913K(1524K)
+[0.113s][info][gc     ] GC(1) Pause Young (Allocation Failure)
+   1M->0M(2M) 3.419ms
+
+   -- A Young GC followed by a Full GC occurred in JVM start-up process
+      More objects needed by the JVM
+    Heap size increased from 1M to 2M
+    This Full GC is unnecessary, JVM should be started with a larger heap
+
+[0.151s][info][gc,heap] GC(3) DefNew: 1023K->127K(1152K)
+[0.151s][info][gc,heap] GC(3) Tenured: 913K->1205K(1524K)
+[0.151s][info][gc     ] GC(3) Pause Young (Allocation Failure)
+   1M->1M(2M) 0.824ms
+[0.214s][info][gc,heap] GC(4) DefNew: 1151K->128K(1152K)
+[0.214s][info][gc,heap] GC(4) Tenured: 1205K->1447K(1524K)
+[0.214s][info][gc     ] GC(4) Pause Young (Allocation Failure)
+   2M->1M(2M) 1.110ms
+[0.257s][info][gc     ] GC(6) Pause Full (Allocation Failure)
+   1M->1M(2M) 3.436ms
+[0.257s][info][gc,heap] GC(5) DefNew: 1152K->31K(1472K)
+[0.257s][info][gc,heap] GC(5) Tenured: 1447K->1908K(3180K)
+[0.257s][info][gc     ] GC(5) Pause Young (Allocation Failure)
+   2M->1M(4M) 4.325ms
+[0.315s][info][gc,heap] GC(7) DefNew: 1344K->127K(1472K)
+[0.315s][info][gc,heap] GC(7) Tenured: 1908K->2154K(3180K)
+[0.315s][info][gc     ] GC(7) Pause Young (Allocation Failure)
+   3M->2M(4M) 1.872ms
+[0.345s][info][gc,heap] GC(8) DefNew: 1471K->128K(1472K)
+[0.345s][info][gc,heap] GC(8) Tenured: 2154K->2762K(3180K)
+[0.345s][info][gc     ] GC(8) Pause Young (Allocation Failure)
+   3M->2M(4M) 2.072ms
+[0.368s][info][gc,heap] GC(9) DefNew: 1472K->128K(1472K)
+[0.368s][info][gc,heap] GC(9) Tenured: 2762K->3044K(3180K)
+[0.368s][info][gc     ] GC(9) Pause Young (Allocation Failure)
+   4M->3M(4M) 1.625ms
+[0.387s][info][gc     ] GC(11) Pause Full (Allocation Failure)
+   3M->3M(4M) 9.019ms
+[0.387s][info][gc,heap] GC(10) DefNew: 1472K->1K(2560K)
+[0.387s][info][gc,heap] GC(10) Tenured: 3044K->3371K(5620K)
+[0.387s][info][gc     ] GC(10) Pause Young (Allocation Failure)
+   4M->3M(7M) 9.989ms
+[0.430s][info][gc,heap] GC(12) DefNew: 2304K->256K(2560K)
+[0.430s][info][gc,heap] GC(12) Tenured: 3371K->3425K(5620K)
+[0.430s][info][gc     ] GC(12) Pause Young (Allocation Failure)
+   5M->3M(7M) 3.530ms
+[0.461s][info][gc,heap] GC(13) DefNew: 2560K->256K(2560K)
+[0.461s][info][gc,heap] GC(13) Tenured: 3425K->3789K(5620K)
+[0.461s][info][gc     ] GC(13) Pause Young (Allocation Failure)
+   5M->3M(7M) 2.481ms
+Step/TotalMemory/FreeMemory/UsedMemory:
+   -- More Young GC and Full GC occurred in JVM start-up process
+      They are unnecessary, JVM should be started with a larger heap
+```
+
+```
+ [0.510s][info][gc,heap] GC(14) DefNew: 2383K->255K(2560K)
+[0.510s][info][gc,heap] GC(14) Tenured: 3789K->4308K(5620K)
+[0.510s][info][gc     ] GC(14) Pause Young (Allocation Failure)
+   6M->4M(7M) 2.915ms
+1   8376320   2582304   5794016
+
+   -- Another Young GC occurred due to my first 1MB object request
+      Maybe it was too big to fit into the Survivor Space "From".
+
+[0.538s][info][gc     ] GC(16) Pause Full (Allocation Failure)
+   6M->3M(8M) 6.827ms
+[0.538s][info][gc,heap] GC(15) DefNew: 2401K->0K(3136K)
+[0.538s][info][gc,heap] GC(15) Tenured: 4308K->4065K(6776K)
+[0.538s][info][gc     ] GC(15) Pause Young (Allocation Failure)
+   6M->3M(9M) 8.840ms
+2   10149888   5360456   4789432
+
+   -- A Young GC followed by a Full GC occurred due to my 2nd object
+      Heap size increased from 8M to 9M
+
+3   10149888   4265400   5884488
+4   10149888   3170344   6979544
+[0.540s][info][gc,heap] GC(17) DefNew: 2750K->319K(3136K)
+[0.540s][info][gc,heap] GC(17) Tenured: 4065K->6449K(6776K)
+[0.540s][info][gc     ] GC(17) Pause Young (Allocation Failure)
+   6M->6M(9M) 0.876ms
+5   10149888   2065688   8084200
+
+   -- Another Young GC occurred due to my 3rd and 4th objects
+      Survivor Space "From" was expanded to hold 2 1MB objects
+
+6   10149888   969912   9179976
+[0.548s][info][gc     ] GC(19) Pause Full (Allocation Failure)
+   9M->9M(12M) 6.105ms
+[0.548s][info][gc,heap] GC(18) DefNew: 3027K->319K(6912K)
+[0.548s][info][gc,heap] GC(18) Tenured: 6449K->9106K(15180K)
+[0.548s][info][gc     ] GC(18) Pause Young (Allocation Failure)
+   9M->9M(21M) 7.593ms
+7   22622208   12393368   10228840
+8   22622208   11292448   11329760
+9   22622208   10191528   12430680
+10   22622208   9090608   13531600
+11   22622208   7989688   14632520
+[0.554s][info][gc,heap] GC(20) DefNew: 6208K->703K(6912K)
+[0.554s][info][gc,heap] GC(20) Tenured: 9106K->14578K(15180K)
+[0.554s][info][gc     ] GC(20) Pause Young (Allocation Failure)
+   14M->14M(21M) 4.421ms
+12   22622208   6906968   15715240
+13   22622208   5744264   16877944
+14   22622208   4704136   17918072
+15   22622208   3582056   19040152
+16   22622208   2476376   20145832
+17   22622208   1370696   21251512
+[0.567s][info][gc     ] GC(22) Pause Full (Allocation Failure)
+   20M->20M(26M) 7.839ms
+[0.567s][info][gc,heap] GC(21) DefNew: 6686K->703K(15488K)
+[0.567s][info][gc,heap] GC(21) Tenured: 14578K->20516K(34196K)
+[0.567s][info][gc     ] GC(21) Pause Young (Allocation Failure)
+   20M->20M(48M) 11.604ms
+18   50876416   28544296   22332120
+19   50876416   27351376   23525040
+20   50876416   26224008   24652408
+21   50876416   25162192   25714224
+22   50876416   24034824   26841592
+23   50876416   22956608   27919808
+24   50876416   21829240   29047176
+25   50876416   20767424   30108992
+26   50876416   19640056   31236360
+27   50876416   18561840   32314576
+28   50876416   17434472   33441944
+29   50876416   16372656   34503760
+[0.579s][info][gc,heap] GC(23) DefNew: 13690K->1663K(15488K)
+[0.579s][info][gc,heap] GC(23) Tenured: 20516K->32421K(34196K)
+[0.579s][info][gc     ] GC(23) Pause Young (Allocation Failure)
+   33M->33M(48M) 8.423ms
+
+   -- More Young GC and Full GC occurred
+      Heap size was expanded more and more
+    More application 1MB objects can be allocated with GC interruptions.
+...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Log Message Types from Serial Collector
+
+This section describes various types of log messages generated from the Serial Collector with the '-Xlog:gc*=debug' option.
+
+If you run your application using the Serial Collector (-XX:+UseSerialGC) with the "-Xlog:gc*=debug" logging option, you may see the following types of log messages:
+
+1\. Heap initial allocation - Reported when JVM starts:
+
+```
+ [debug][gc,heap] Minimum heap 2097152  Initial heap 2097152
+   Maximum heap 67108864
+```
+
+2\. Young generation heap reduction message - Reported as part of a Young GC process:
+
+```
+ [info][gc,heap] GC(0) DefNew: 1024K->128K(1152K)
+```
+
+3\. Tenured generation heap expansion message - Reported as part of a Young GC process:
+
+```
+ [info][gc,heap] GC(0) Tenured: 0K->418K(768K)
+```
+
+4\. Start/end of a Young GC:
+
+```
+ [info][gc,start] GC(0) Pause Young (Allocation Failure)
+...
+[info][gc] GC(0) Pause Young (Allocation Failure) 1M->0M(1M) 2.341ms
+```
+
+5\. Object aging threshold - Reported as part of a Young GC:
+
+```
+ [debug][gc,age] GC(0) Desired survivor size 65536 bytes,
+                       new threshold 1 (max threshold 15)
+```
+
+6\. Metaspace reduction - Reported as part of a Young GC:
+
+```
+ [0.059s][info ][gc,metaspace] GC(0) Metaspace: 328K->328K(1056768K)
+```
+
+7\. GC execution time - Reported as part of a Young or Full GC:
+
+```
+ [info][gc,cpu] GC(0) User=0.00s Sys=0.00s Real=0.00s
+```
+
+8\. Heap snapshot report before GC - Reported before a Young GC or Full GC process:
+
+```
+ [debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+                        def new generation total 1152K, used 1024K [...
+[debug][gc,heap] GC(0)   eden space 1024K, 100% used [...
+[debug][gc,heap] GC(0)   from space 128K,   0% used [...
+[debug][gc,heap] GC(0)   to   space 128K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 768K, used 0K [...
+[debug][gc,heap] GC(0)    the space 768K,   0% used [...
+[debug][gc,heap] GC(0)  Metaspace
+                          used 328K, capacity 4515K, committed 4864K,
+              reserved 1056768K
+[debug][gc,heap] GC(0)   class space
+                          used 30K, capacity 398K, committed 512K,
+              reserved 1048576K
+```
+
+9\. Heap snapshot report after GC - Reported before a Young GC or Full GC process:
+
+```
+ [debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation total 1152K, used 128K [...
+[debug][gc,heap] GC(0)   eden space 1024K,   0% used [...
+[debug][gc,heap] GC(0)   from space 128K, 100% used [...
+[debug][gc,heap] GC(0)   to   space 128K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 768K, used 418K [...
+[debug][gc,heap] GC(0)    the space 768K,  54% used [...
+[debug][gc,heap] GC(0)  Metaspace
+                          used 328K, capacity 4515K, committed 4864K,
+              reserved 1056768K
+[debug][gc,heap] GC(0)   class space
+                          used 30K, capacity 398K, committed 512K,
+              reserved 1048576K
+```
+
+10\. Start/end of a Full GC - Reported at the beginning of a Full GC:
+
+```
+ [info ][gc,start] GC(2) Pause Full (Allocation Failure)
+...
+[info ][gc] GC(2) Pause Full (Allocation Failure) 0M->0M(2M) 15004100.942ms
+```
+
+11\. Mark phase of a Full GC:
+
+```
+ [info][gc,phases,start] GC(2) Phase 1: Mark live objects
+...
+[info][gc,phases] GC(2) Phase 1: Mark live objects 15004095.903ms
+```
+
+12\. New address calculation phase of a Full GC:
+
+```
+ [info][gc,phases,start] GC(2) Phase 2: Compute new object addresses
+[info][gc,phases] GC(2) Phase 2: Compute new object addresses 2.754ms
+```
+
+13\. Adjust pointers phase of a Full GC:
+
+```
+ [info][gc,phases,start] GC(2) Phase 3: Adjust pointers
+[info][gc,phases] GC(2) Phase 3: Adjust pointers 1.896ms
+```
+
+14\. Move objects phase of a Full GC:
+
+```
+ [info][gc,phases,start] GC(2) Phase 4: Move objects
+[info][gc,phases] GC(2) Phase 4: Move objects 0.067ms
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial Collector Stops Application for Minor/Major GC
+
+This section provides log messages showing that the Serial Collector stops the application for both Minor GC and Major GC.
+
+One impact of using the Serial Collector is that it performs both Minor and Major collection in a stop-the-world fashion (application pause). But there seems to be no easy way to do this in JVM 9 or higher releases. I could not find any "-Xlog" options to generate any log messages about when and for how long application gets stopped by the Serial Collector.
+
+However if you are still using JVM 8 or older releases, you can confirm stop-the-world behavior of the Serial Collector with "-XX:+PrintGCApplicationStoppedTime" and "-XX:+PrintGCApplicationConcurrentTime" JVM options:
+
+```
+ herong> \Progra~1\java\jdk1.8.0\bin\java -Xms2m -Xmx64m -XX:+PrintGC
+   -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime
+   -XX:+PrintGCTimeStamps -XX:+UseSerialGC GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+0.114: Application time: 0.0088216 seconds
+   -- Application executed for 0.0088216 seconds with no stop
+
+0.115: [GC (Allocation Failure)  878K->755K(1984K), 0.0017072 secs]
+   -- Serial Collector did a Minor GC
+
+0.117: Total time for which application threads were stopped: 0.0025561 s,
+   Stopping threads took: 0.0000456 seconds
+   -- Serial Collector did stop the application for 0.0025561 seconds
+
+1   2031616   698704   1332912
+1.109: Application time: 0.9924986 seconds
+   -- Application executed for 0.9924986 seconds with no stop
+
+1.110: [GC (Allocation Failure)  1557K->1540K(2500K), 0.0054299 secs]
+1.117: [Full GC (Allocation Failure)  1540K->1540K(2500K), 0.0052930 secs]
+   -- Serial Collector did a Major (labeled as Full) GC
+
+1.123: Total time for which application threads were stopped: 0.0135217 s,
+   Stopping threads took: 0.0000990 seconds
+   -- Serial Collector did stop the application for 0.0135217 seconds
+
+2   3874816   1473136   2401680
+2.128: Application time: 1.0044262 seconds
+   -- Application executed for 1.0044262 seconds with no stop
+
+2.130: [GC (Allocation Failure)  2601K->2580K(3784K), 0.0047073 secs]
+   -- Serial Collector did a Minor GC
+
+2.135: Total time for which application threads were stopped: 0.0064456 s,
+   Stopping threads took: 0.0001472 seconds
+   -- Serial Collector did stop the application for 0.0064456 seconds
+
+3   3874816   425272   3449544
+3.131: Application time: 0.9955077 seconds
+   -- Application executed for 1.9955077 seconds with no stop
+
+3.133: [GC (Allocation Failure)  3624K->3620K(4820K), 0.0055259 secs]
+3.139: [Full GC (Allocation Failure)  3620K->3620K(4820K), 0.0057639 secs]
+   -- Serial Collector did a Major (labeled as Full) GC
+
+3.146: Total time for which application threads were stopped: 0.0136471 s,
+   Stopping threads took: 0.0001502 seconds
+   -- Serial Collector did stop the application for 0.0136471 seconds
+...
+```
+
+The GC log messages confirm that:
+
+*   Serial Collector stops the application to perform Minor GC.
+*   Serial Collector stops the application to perform Major GC.
+*   Serial Collector stops the application for a longer period of time for Major GC than Minor GC.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Usage Report on Heap Memory Areas
+
+This section provides explanations of the usage report on heap memory areas generated by the '-Xlog:gc+heap=debug' log option.
+
+If we want to know the heap memory is divided into different areas, we can take a look at the heap usage report printed by the "-Xlog:gb+heap=debug" log option.
+
+Rerun GarbageCollection.java with the "-Xlog:gb+heap=debug" option for a few seconds, and review the first "Heap after GC ..." messages:
+
+```
+ herong> java -Xms10m -Xmx10m -XX:+UseSerialGC -Xlog:gc+heap=info \
+   GarbageCollection
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 3072K, used 319K [...
+[debug][gc,heap] GC(0)   eden space 2752K,   0% used [...
+[debug][gc,heap] GC(0)   from space 320K,  99% used [...
+[debug][gc,heap] GC(0)   to   space 320K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 6848K, used 739K [...
+[debug][gc,heap] GC(0)    the space 6848K,  10% used [...
+[debug][gc,heap] GC(0)  Metaspace used 2268K,
+                          capacity 6149K, committed 6400K, reserved 1056768K
+[debug][gc,heap] GC(0)   class space used 287K,
+              capacity 672K, committed 768K, reserved 1048576K
+...
+```
+
+Here is how we can read the heap usage report:
+
+*   "def new generation total 3072K, used 319K ..." - "def new generation" is the internal name of the Young (New) generation managed by the Serial Collector. It is allocated with 3072K. And 319K is used at this moment.
+*   "eden space 2752K, 0% used ..." - The "eden" space is allocated with 2752K with a usage of 0% at this moment.
+*   "from space 320K, 99% used ..." - The "from" space is allocated with 128K with a usage of 99% at this moment.
+*   "to space 320K, 0% used ..." - The "to" space is allocated with 320 KB with a usage of 0% at this moment.
+*   "tenured generation total 6848K, used 739K ..." - "tenured generation" is the internal name of the Tenured (Old) generation managed by the Serial Collector. It is allocated with 6848K. And 739K is used at this moment.
+*   "Metaspace used 2268K, ... reserved 1056768K" - The meta space (which is not part of the heap memory and not managed by the garbage collector) is allocated with 1GB.
+*   "class space used 287K, ... reserved 1048576K" - The class space (which is not part of the heap memory and not managed by the garbage collector) is allocated with 1GB.
+
+Note that when the heap size is specified as 10 MB by -Xms10m -Xmx10m, the JVM is automatically gave 3072K to the "new" generation, and 6848K to the tenured generation. It's about 30% for the "new" generation, and 70% for the tenured generation.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Default NewRatio - Old vs. New Generation
+
+This section describes the default NewRatio which is the ratio of old generation size vs. new generation size.
+
+From the last tutorial, we learned that the Serial GC will automatically divide the heap memory into 2 generations: 30% for the "new" (or Young) generation and 70% for the "old" (or Tenured) generation. In this tutorial, let's run more tests to confirm this:
+
+1\. Heap size: 10 MB -
+
+```
+ herong> java -Xms10m -Xmx10m -XX:+UseSerialGC -Xlog:gc+heap=info \
+   GarbageCollection
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 3072K, used 319K [...
+[debug][gc,heap] GC(0)   eden space 2752K,   0% used [...
+[debug][gc,heap] GC(0)   from space 320K,  99% used [...
+[debug][gc,heap] GC(0)   to   space 320K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 6848K, used 739K [...
+[debug][gc,heap] GC(0)    the space 6848K,  10% used [...
+...
+```
+
+2\. Heap size: 20 MB -
+
+```
+ herong> java -Xms20m -Xmx20m -XX:+UseSerialGC -Xlog:gc+heap=info \
+   GarbageCollection
+...
+[gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                 def new generation   total 6144K, used 639K [...
+[gc,heap] GC(0)   eden space 5504K,   0% used [...
+[gc,heap] GC(0)   from space 640K,  99% used [...
+[gc,heap] GC(0)   to   space 640K,   0% used [...
+[gc,heap] GC(0)  tenured generation   total 13696K, used 1444K [...
+[gc,heap] GC(0)    the space 13696K,  10% used [...
+...
+```
+
+3\. Heap size: 40 MB -
+
+```
+ herong> java -Xms40m -Xmx40m -XX:+UseSerialGC -Xlog:gc+heap=info \
+   GarbageCollection
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 12288K, used 1343K [...
+[debug][gc,heap] GC(0)   eden space 10944K,   0% used [...
+[debug][gc,heap] GC(0)   from space 1344K,  99% used [...
+[debug][gc,heap] GC(0)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 27328K, used 2024K [...
+[debug][gc,heap] GC(0)    the space 27328K,   7% used [...
+...
+```
+
+4\. Heap size: 80 MB -
+
+```
+ herong> java -Xms80m -Xmx80m -XX:+UseSerialGC -Xlog:gc+heap=info \
+   GarbageCollection
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 24576K, used 2688K [...
+[debug][gc,heap] GC(0)   eden space 21888K,   0% used [...
+[debug][gc,heap] GC(0)   from space 2688K, 100% used [...
+[debug][gc,heap] GC(0)   to   space 2688K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 54656K, used 3308K [...
+[debug][gc,heap] GC(0)    the space 54656K,   6% used [...
+...
+```
+
+The table below is the summary of above tests:
+
+```
+ Heap Size   New Generation   Tenured Generation
+---------   --------------   ------------------
+      10M        3072K 30%            6848K 70%
+      20M        6144K 30%           13696K 70%
+      40M       12288K 30%           27328K 70%
+      80M       24576K 30%           54656K 70%
+```
+
+Conclusion: By default, Serial GC gives 30% of heap to the "new" generation, and 70% to the tenured generation. Or the default radio of "old" generation size and "new" generation size is 2.33\. This ratio is also called NewRatio.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟"-XX:NewRatio" - Ratio of Tenured and "new" Generation
+
+This section describes the default 'new' ratio (size ratio of tenured vs. 'new' generation).
+
+If your application uses lots of short-lived objects, you may want to lower the ratio of Tenured generation over "new" generation by using the "-XX:NewRatio" JVM option.
+
+By default, the "NewRatio" is set to 2.33 based tests we did in the last tutorial. If we specify "-XX:NewRatio=1" and "-Xms40m -Xmx40m", then 40 MB heap will be divided equally to 20 MB for the "new" generation and 20 MB for the tenured generation.
+
+```
+ herong> java -Xms40m -Xmx40m -XX:NewRatio=1 -XX:+UseSerialGC \
+   -Xlog:gc+heap=info GarbageCollection
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 18432K, used 2048K [...
+[debug][gc,heap] GC(0)   eden space 16384K,   0% used [...
+[debug][gc,heap] GC(0)   from space 2048K, 100% used [...
+[debug][gc,heap] GC(0)   to   space 2048K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 20480K, used 2249K [...
+[debug][gc,heap] GC(0)    the space 20480K,  10% used [...
+```
+
+The output confirms that the NewRatio is about 1 (or 20480K/18432K).
+
+If you want to decrease the "new" generation size, you can specify "-XX:NewRatio=3" and "-Xms40m -Xmx40m", which will give us about 30 MB of tenured generation and 10 MB of "new" generation:
+
+```
+ herong> java -Xms40m -Xmx40m -XX:NewRatio=3 -XX:+UseSerialGC \
+   -Xlog:gc+heap=info GarbageCollection
+
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 9216K, used 1024K [...
+[debug][gc,heap] GC(0)   eden space 8192K,   0% used [...
+[debug][gc,heap] GC(0)   from space 1024K, 100% used [...
+[debug][gc,heap] GC(0)   to   space 1024K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 30720K, used 2041K [...
+[debug][gc,heap] GC(0)    the space 30720K,   6% used [...
+```
+
+You can also specify the "new" generation size directly with "-XX:NewSize=..." and "-XX:MaxNewSize=..." options to give a range:
+
+```
+ herong> java -Xms40m -Xmx40m -XX:NewSize=9m -XX:MaxNewSize=11m \
+   -XX:+UseSerialGC -Xlog:gc+heap=info GarbageCollection
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 8320K, used 896K [...
+[debug][gc,heap] GC(0)   eden space 7424K,   0% used [...
+[debug][gc,heap] GC(0)   from space 896K, 100% used [...
+[debug][gc,heap] GC(0)   to   space 896K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 31744K, used 1805K [...
+[debug][gc,heap] GC(0)    the space 31744K,   5% used [...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟"-XX:SurvivorRatio" - Ratio of Eden and Survivor Space
+
+This section describes the default 'new' ratio (size ratio of tenured vs. 'new' generation).
+
+Can we also control the ratio between "eden" space and survivor spaces? The answer is yes, by using the "-XX:SurvivorRatio" JVM option.
+
+The ratio between "eden" space and survivor spaces is defined as "SurvivorRatio", which is the ratio of the "eden" space and one survivor space.
+
+By default, the "SurvivorRatio" is set to about 8\. You can verify this with test results listed in previous tutorials.
+
+Below is another test with "-Xms20m -Xmx20m -XX:NewRatio=1 -XX:SurvivorRatio=6" options. The "new" generation should get 10 MB, which will be divided into: Eden space of 7.5 MB, "from" Survivor space of 1.25 MB and "to" Survivor space of 1.25 MB:
+
+```
+ herong> java -Xms20m -Xmx20m -XX:NewRatio=1 -XX:SurvivorRatio=6 \
+   -XX:+UseSerialGC -Xlog:gc+heap=info GarbageCollection
+...
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 8960K, used 1279K [...
+[debug][gc,heap] GC(0)   eden space 7680K,   0% used [...
+[debug][gc,heap] GC(0)   from space 1280K,  99% used [...
+[debug][gc,heap] GC(0)   to   space 1280K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 10240K, used 1590K [...
+[debug][gc,heap] GC(0)    the space 10240K,  15% used [...
+```
+
+The output confirms that the SurvivorRatio is about 6 (or 7680K/1280K).
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial GC Tracing - Tight Heap
+
+This section provides a tutorial on tracing how Serial GC works with a tight heap size.
+
+We know that our test program GarbageCollection.java works on an array of 32 MB data. Let's run with a tight heap size of 40 MB and watch how the Serial GC does garbage collections.
+
+"gc=info", "gc+heap=debug" and "-Xlog:gc+age=trace" options are used to print GC tracing information:
+
+```
+ herong> java -Xms40m -Xmx40m -XX:+UseSerialGC \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection
+```
+
+The first Young GC happened during the JVM startup process, because the "eden" space was full with 10944K new objects:
+
+```
+ [debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+                        def new generation   total 12288K, used 10944K [...
+[debug][gc,heap] GC(0)   eden space 10944K, 100% used [...
+[debug][gc,heap] GC(0)   from space 1344K,   0% used [...
+[debug][gc,heap] GC(0)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 27328K, used 0K [...
+[debug][gc,heap] GC(0)    the space 27328K,   0% used [...
+
+[debug][gc,age] GC(0) Desired survivor size 688128 bytes,
+                       new threshold 1 (max threshold 15)
+[trace][gc,age] GC(0) Age table with threshold 1 (max threshold 15)
+[trace][gc,age] GC(0) - age   1:    1376256 bytes,    1376256 total
+
+[info][gc,heap] GC(0) DefNew: 10944K->1344K(12288K)
+[info][gc,heap] GC(0) Tenured: 0K->2024K(27328K)
+[info][gc] GC(0) Pause Young (Allocation Failure) 10M->3M(38M) 7.485ms
+
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 12288K, used 1344K [...
+[debug][gc,heap] GC(0)   eden space 10944K,   0% used [...
+[debug][gc,heap] GC(0)   from space 1344K, 100% used [...
+[debug][gc,heap] GC(0)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 27328K, used 2024K [...
+[debug][gc,heap] GC(0)    the space 27328K,   7% used [...
+```
+
+Notes on the above GC:
+
+*   The primary trigger for Young generation GC is that when "eden" is fully allocated with new objects.
+*   Out of 10944K objects in the "eden", 1344K was promoted to "from". The remaining 10944K - 1344K = 9600K was destroyed as garbage or promoted to "tenured".
+*   All 1344K objects promoted to "from" was marked as "age 1" objects.
+*   "tenured" was expanded from 0K to 2024K, which was promoted directly from "eden". So there was 9600K - 2024K = 7576K garbage being collected.
+*   At the end of GC, heap usage was 1344K in "from" + 2024K in "tenured", about 3M.
+*   So JVM needed more than 10944K "eden" space to start. And 7576K (70%) was occupied with dead objects.
+
+The second Young GC happened after another 3 iterations, because the "eden" space was 99% full again with new objects.
+
+```
+ Step/TotalMemory/FreeMemory/UsedMemory:
+1   40566784   29467528   11099256
+2   40566784   27789568   12777216
+3   40566784   26699544   13867240
+[debug][gc,heap] GC(1) Heap before GC invocations=1 (full 0):
+                        def new generation   total 12288K, used 12285K [...
+[debug][gc,heap] GC(1)   eden space 10944K,  99% used [...
+[debug][gc,heap] GC(1)   from space 1344K, 100% used [...
+[debug][gc,heap] GC(1)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 27328K, used 2025K [...
+[debug][gc,heap] GC(1)    the space 27328K,   7% used [...
+
+[trace][gc,age ] GC(1) Age table with threshold 1 (max threshold 15)
+[trace][gc,age ] GC(1) - age   1:    1376248 bytes,    1376248 total
+
+[info ][gc,heap] GC(1) DefNew: 12285K->1343K(12288K)
+[info ][gc,heap] GC(1) Tenured: 2025K->7255K(27328K)
+[info ][gc     ] GC(1) Pause Young (Allocation Failure) 13M->8M(38M) 9.055ms
+
+[debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0):
+                        def new generation   total 12288K, used 1343K [...
+[debug][gc,heap] GC(1)   eden space 10944K,   0% used [...
+[debug][gc,heap] GC(1)   from space 1344K,  99% used [...
+[debug][gc,heap] GC(1)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 27328K, used 7255K [...
+[debug][gc,heap] GC(1)    the space 27328K,  26% used [...
+```
+
+Notes on the above GC:
+
+*   The primary trigger for Young generation GC is that when "eden" is fully allocated with new objects.
+*   Out of 10944K objects in the "eden", 3072K was 3 1MB objects created from my application. The remaining 10944K - 3072K = 7872K was new objects created by the JVM system.
+*   Out of 10944K objects in the "eden", 1344K was promoted to "from" as "age 1" objects. The remaining 10944K - 1344K = 9600K was destroyed as garbage or promoted to "tenured".
+*   The original 1344K "age 1" objects was promoted to "tenured". If they stayed in "from", they would be labeled as "age 2".
+*   "tenured" expanded from 2025K to 7255K with 5230K, which came from two sources: 1344K promoted from the "from" and 3886K promoted directly from "eden".
+*   So how much garbage was destroyed? We can calculate it based on what was removed from "eden": 10944K (objects from "eden") - 1344K (promoted to "from") - 3886K (promoted to "tenured" = 5714K.
+*   Since there was no dead objects resulted from the first 3 iterations of my application, 5714K garbage destroyed was all from JVM.
+*   At the end of GC, heap usage was 1344K in "from" + 7255K in "tenured", about 8M, which presented 3M for my application and 5M for JVM.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial GC Tracing - Tight Heap (Part 2)
+
+This section provides part 2 of a tutorial on tracing how Serial GC works with a tight heap size.
+
+The third Young GC happened after another 10 iterations, because the "eden" space was 100% full again with new objects.
+
+```
+ 4   40566784   31411448   9155336
+5   40566784   30275488   10291296
+6   40566784   29188680   11378104
+7   40566784   28052720   12514064
+8   40566784   26982312   13584472
+9   40566784   25895504   14671280
+10   40566784   24759544   15807240
+11   40566784   23689136   16877648
+12   40566784   22618752   17948032
+13   40566784   21482792   19083992
+[debug][gc,heap] GC(2) Heap before GC invocations=2 (full 0):
+                        def new generation   total 12288K, used 12287K [...
+[debug][gc,heap] GC(2)   eden space 10944K, 100% used [...
+[debug][gc,heap] GC(2)   from space 1344K,  99% used [...
+[debug][gc,heap] GC(2)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 27328K, used 7255K [...
+[debug][gc,heap] GC(2)    the space 27328K,  26% used [...
+
+[trace][gc,age ] GC(2) Age table with threshold 1 (max threshold 15)
+[trace][gc,age ] GC(2) - age   1:    1376248 bytes,    1376248 total
+
+[info ][gc,heap] GC(2) DefNew: 12287K->1343K(12288K)
+[info ][gc,heap] GC(2) Tenured: 7255K->18188K(27328K)
+[info ][gc     ] GC(2) Pause Young (Allocation Failure) 19M->19M(38M) 9.188ms
+
+[debug][gc,heap] GC(2) Heap after GC invocations=3 (full 0):
+                        def new generation   total 12288K, used 1343K [...
+[debug][gc,heap] GC(2)   eden space 10944K,   0% used [...
+[debug][gc,heap] GC(2)   from space 1344K,  99% used [...
+[debug][gc,heap] GC(2)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 27328K, used 18188K [...
+[debug][gc,heap] GC(2)    the space 27328K,  66% used [...
+```
+
+Notes on the above GC:
+
+*   10 iterations added 10*1024K = 10240K new objects from my application, which makes the "eden" fully used triggering this Young GC.
+*   The GC behaved almost the same was as the previous GC.
+*   After empty the "from" space, 1376248 bytes in "eden" space were promoted to "from" space and labeled as "age 1" objects.
+*   The remaining live objects had to be promoted from "from" space to "tenured" generation directly.
+*   "tenured" expanded from 7255K to 18188K with 10933K, which came from two sources: 1344K promoted from the "from" and 9589K promoted directly from "eden".
+*   So how much garbage was destroyed? We can calculate it based on what was removed from "eden": 10944K (objects from "eden") - 1344K (promoted to "from") - 9589K (promoted to "tenured" = 11K.
+*   Since there was no dead objects resulted from the first 3 iterations of my application, 11K garbage destroyed was all from JVM. So JVM is very efficient once my application got executed with such a small amount of garbage.
+*   At the end of GC, heap usage was 1344K in "from" + 18188K in "tenured", about 19M, which presented 13M for my application and 6M for JVM.
+
+The fourth GC and fifth GC happened together as a combination of Young GC and Full GC after another 11 iterations, because the "eden" space was 99% full again with new objects.
+
+```
+ 14   40566784   20345600   20221184
+15   40566784   19273168   21293616
+16   40566784   18200736   22366048
+17   40566784   17111904   23454880
+18   40566784   15973920   24592864
+19   40566784   14901488   25665296
+20   40566784   13812656   26754128
+21   40566784   12674672   27892112
+22   40566784   11602240   28964544
+23   40566784   10513408   30053376
+24   40566784   9441000   31125784
+[debug][gc,heap] GC(3) Heap before GC invocations=3 (full 0):
+                        def new generation   total 12288K, used 12208K [...
+[debug][gc,heap] GC(3)   eden space 10944K,  99% used [...
+[debug][gc,heap] GC(3)   from space 1344K,  99% used [...
+[debug][gc,heap] GC(3)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 27328K, used 18188K [...
+[debug][gc,heap] GC(3)    the space 27328K,  66% used [...
+
+[info ][gc] GC(4) Pause Full (Allocation Failure) 29M->28M(38M) 24.030ms
+
+[info ][gc,heap] GC(3) DefNew: 12208K->1840K(12288K)
+[info ][gc,heap] GC(3) Tenured: 18188K->27111K(27328K)
+[info ][gc] GC(3) Pause Young (Allocation Failure) 29M->28M(38M) 24.166ms
+
+[debug][gc,heap] GC(3) Heap after GC invocations=4 (full 1):
+                        def new generation   total 12288K, used 1840K [...
+[debug][gc,heap] GC(3)   eden space 10944K,  16% used [...
+[debug][gc,heap] GC(3)   from space 1344K,   0% used [...
+[debug][gc,heap] GC(3)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 27328K, used 27111K [...
+[debug][gc,heap] GC(3)    the space 27328K,  99% used [...
+```
+
+Notes on the above GC:
+
+*   Young GC was triggered by 98% usage of "eden" space.
+*   Full GC was also triggered by 99% usage of "tenured" space after the Young GC. But this Full GC could not find any dead object in "tenured". So it did not collect any garbage at all.
+*   16% of 10944K objects left in "eden", because there was no room in "tenured" space and the objects were too big (1MB in size) to go the "from".
+*   At the end of GC, heap usage was 16%*10944K in "eden + 0K in "from" + 27111K in "tenured", about 28M, which presented 24M for my application and 4M for JVM.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial GC Tracing - Tight Heap (Part 3)
+
+This section provides part 3 of a tutorial on tracing how Serial GC works with a tight heap size.
+
+The sixth GC happened as a Full GC after another 9 iterations, because the "eden" space was 99% full again with new objects.
+
+```
+ 25   40566784   9694584   30872200
+26   40566784   8622920   31943864
+27   40566784   7551256   33015528
+28   40566784   6463192   34103592
+29   40566784   5325976   35240808
+30   40566784   4254312   36312472
+31   40566784   3166248   37400536
+32   40566784   2029032   38537752
+33   40566784   1008048   39558736
+[debug][gc,heap] GC(5) Heap before GC invocations=4 (full 1):
+                        def new generation   total 12288K, used 12032K [...
+[debug][gc,heap] GC(5)   eden space 10944K, 100% used [...
+[debug][gc,heap] GC(5)   from space 1344K,  80% used [...
+[debug][gc,heap] GC(5)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(5)  tenured generation   total 27328K, used 27111K [...
+[debug][gc,heap] GC(5)    the space 27328K,  99% used [...
+
+[info ][gc,heap] GC(5) DefNew: 12032K->9649K(12288K)
+[info ][gc,heap] GC(5) Tenured: 27111K->27316K(27328K)
+[info ][gc     ] GC(5) Pause Full (Allocation Failure) 38M->36M(38M) 30.705ms
+
+[debug][gc,heap] GC(5) Heap after GC invocations=5 (full 2):
+                        def new generation   total 12288K, used 9649K [...
+[debug][gc,heap] GC(5)   eden space 10944K,  88% used [...
+[debug][gc,heap] GC(5)   from space 1344K,   0% used [...
+[debug][gc,heap] GC(5)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(5)  tenured generation   total 27328K, used 27316K [...
+[debug][gc,heap] GC(5)    the space 27328K,  99% used [...
+```
+
+Notes on the above GC:
+
+*   This GC was triggered by 100% usage of "eden" space. It should be a Young GC. But there is no room left to promote live objects from "young" generation to "tenured" generation, a Full GC was executed.
+*   Since almost all objects in "tenured" space were live objects, the Full GC did not free up much space in "tenured" (only a single 1MB dead object left from my application). So only 12% of 10944K objects in "eden" were promoted to "tenured" space.
+*   At the end of GC, heap usage was 88%*10944K in "eden + 0K in "from" + 27316K in "tenured", about 36M, which presented 32M for my application and 4M for JVM.
+
+The seventh GC happened as a Full GC after 2 iterations, because "eden" space could only take 2 more new 1MB objects from my application.
+
+```
+ 34   40566784   2103912   38462872
+35   40566784   1041176   39525608
+[debug][gc,heap] GC(6) Heap before GC invocations=5 (full 2):
+                        def new generation   total 12288K, used 12287K [...
+[debug][gc,heap] GC(6)   eden space 10944K, 100% used [...
+[debug][gc,heap] GC(6)   from space 1344K,  99% used [...
+[debug][gc,heap] GC(6)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(6)  tenured generation   total 27328K, used 27319K [...
+[debug][gc,heap] GC(6)    the space 27328K,  99% used [...
+
+[info ][gc,heap] GC(6) DefNew: 12287K->10301K(12288K)
+[info ][gc,heap] GC(6) Tenured: 27319K->27160K(27328K)
+[info ][gc     ] GC(6) Pause Full (Allocation Failure) 38M->36M(38M) 60.615ms
+
+[debug][gc,heap] GC(6) Heap after GC invocations=6 (full 3):
+                        def new generation   total 12288K, used 10301K [...
+[debug][gc,heap] GC(6)   eden space 10944K,  94% used [...
+[debug][gc,heap] GC(6)   from space 1344K,   0% used [...
+[debug][gc,heap] GC(6)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(6)  tenured generation   total 27328K, used 27160K [...
+[debug][gc,heap] GC(6)    the space 27328K,  99% used [...
+```
+
+Notes on the above GC:
+
+*   This GC was triggered by 100% usage of "eden" space. It should be a Young GC. But there is no room left to promote live objects from "young" generation to "tenured" generation, a Full GC was executed.
+*   The messages in the "Heap before GC" section showed that some new objects was directly allocated in the "from" space, taking 99% of its 1344K space. This is different than my expectation.
+*   At the end of GC, heap usage was 94%*10944K in "eden + 0K in "from" + 27160K in "tenured", about 36M, which presented 32M for my application and 4M for JVM.
+
+From this point on, the Serial collector continued perform Full GC every 2 to 4 iterations.
+
+**Conclusion**:
+
+*   GCs are triggered when "eden" space is full.
+*   If the garbage collector is doing mark-sweep process on "young" generation only, it is considered as a simple Young generation GC, also called minor GC.
+*   If the garbage collector is doing mark-sweep process on both "young" and "tenured" generations, it is considered as a full GC.
+*   If heap size is tight, just enough to hold all live objects, the garbage collector will perform GC very frequently.
+*   When the garbage collector is promoting live objects from "eden" space to "from" space, it may decide to promote them directly to "tenured" space, if objects are too big to fit in "from" space. "from" space will be left empty and not used.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial GC Tracing - Plenty of Heap
+
+This section provides a tutorial of tracing how Serial GC works with a huge heap size, plenty of memory in 'new' generation.
+
+We know that our test program GarbageCollection.java uses Tenured generation collector only if we gave 40 MB of heap, Let's run it again with a size of 1200 MB and watch how the Serial GC does garbage collections.
+
+"gc=info", "gc+heap=debug" and "-Xlog:gc+age=trace" options are used to print GC tracing information:
+
+```
+ herong> java -Xms1200m -Xmx1200m -XX:+UseSerialGC \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection
+```
+
+The first GC happened after 276 iterations, because the "eden" space was full with 327426K new objects:
+
+```
+ Step/TotalMemory/FreeMemory/UsedMemory:
+1   1216348160   1202926208   13421952
+...
+276   1216348160   880803840   335544320
+[5.687s][debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+                                def new generation   total 368640K, ...
+[5.687s][debug][gc,heap] GC(0)   eden space 327680K, 100% used [...
+[5.687s][debug][gc,heap] GC(0)   from space 40960K,   0% used [...
+[5.687s][debug][gc,heap] GC(0)   to   space 40960K,   0% used [...
+[5.687s][debug][gc,heap] GC(0)  tenured generation   total 819200K, ...
+[5.687s][debug][gc,heap] GC(0)    the space 819200K,   0% used [...
+
+[5.718s][trace][gc,age ] GC(0) Age table with threshold 1 (max threshold 15)
+[5.718s][trace][gc,age ] GC(0) - age   1:   36595856 bytes,   36595856 total
+
+[5.718s][info ][gc,heap] GC(0) DefNew: 327680K->35738K(368640K)
+[5.718s][info ][gc,heap] GC(0) Tenured: 0K->0K(819200K)
+[5.718s][info ][gc     ] GC(0) Pause Young (Allocation Failure)
+                               320M->34M(1160M) 31.307ms
+
+[5.718s][debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                                def new generation   total 368640K, ...
+[5.718s][debug][gc,heap] GC(0)   eden space 327680K,   0% used [...
+[6.330s][debug][gc,heap] GC(0)   from space 40960K,  87% used [...
+[6.330s][debug][gc,heap] GC(0)   to   space 40960K,   0% used [...
+[6.330s][debug][gc,heap] GC(0)  tenured generation   total 819200K, ...
+[6.330s][debug][gc,heap] GC(0)    the space 819200K,   0% used [...
+```
+
+Notes on the above GC:
+
+*   This was a simple Young generation GC, which removed all dead objects and left 87% of 40960K (about 35635K) live objects in "from" space.
+*   My application kept 32 1MB live objects. Other live objects were used by JVM.
+*   The "tenured" generation was not used all.
+
+The second GC happened at 576th iteration, because the "eden" space was full again with new objects.
+
+```
+ 277   1216348160   1172665408   43682752
+...
+576   1216348160   844269464   372078696
+[debug][gc,heap] GC(1) Heap before GC invocations=1 (full 0):
+                        def new generation   total 368640K, used 363358K ...
+[debug][gc,heap] GC(1)   eden space 327680K,  99% used [...
+[debug][gc,heap] GC(1)   from space 40960K,  87% used [...
+[debug][gc,heap] GC(1)   to   space 40960K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 819200K, used 0K [...
+[debug][gc,heap] GC(1)    the space 819200K,   0% used [...
+
+[trace][gc,age ] GC(1) Age table with threshold 1 (max threshold 15)
+[trace][gc,age ] GC(1) - age   1:   34887056 bytes,   34887056 total
+
+[info ][gc,heap] GC(1) DefNew: 363358K->34069K(368640K)
+[info ][gc,heap] GC(1) Tenured: 0K->2488K(819200K)
+[info ][gc     ] GC(1) Pause Young (Allocation Failure)
+                       354M->35M(1160M) 28.914ms
+
+[debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0):
+                        def new generation   total 368640K, used 34069K ...
+[debug][gc,heap] GC(1)   eden space 327680K,   0% used [...
+[debug][gc,heap] GC(1)   from space 40960K,  83% used [...
+[debug][gc,heap] GC(1)   to   space 40960K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 819200K, used 2488K ...
+[debug][gc,heap] GC(1)    the space 819200K,   0% used [...
+```
+
+Notes on the above GC:
+
+*   This was a simple Young generation GC, which removed all dead objects and left 83% of 40960K (about 33997K) live objects in "from" space.
+*   My application kept 32 1MB live objects. Other live objects were used by JVM.
+*   "age 1" objects left from the first GC were all dead objects, so no objects were labeled as "age 2".
+*   2488K live objects were promoted to "tenured" generation. This should not happen, be cause "from" still has enough free space.
+
+The 3rd GC happened at 880th iteration, because the "eden" space was full again with new objects.
+
+```
+ 577   1216348160   1172253392   44094768
+...
+880   1216348160   843369040   372979120
+[debug][gc,heap] GC(2) Heap before GC invocations=2 (full 0):
+                        def new generation   total 368640K, used 361749K ...
+[debug][gc,heap] GC(2)   eden space 327680K, 100% used [...
+[debug][gc,heap] GC(2)   from space 40960K,  83% used [...
+[debug][gc,heap] GC(2)   to   space 40960K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 819200K, used 2488K ...
+[debug][gc,heap] GC(2)    the space 819200K,   0% used [...
+
+[trace][gc,age ] GC(2) Age table with threshold 1 (max threshold 15)
+[trace][gc,age ] GC(2) - age   1:   34035648 bytes,   34035648 total
+
+[info ][gc,heap] GC(2) DefNew: 361749K->33237K(368640K)
+[info ][gc,heap] GC(2) Tenured: 2488K->2488K(819200K)
+[info ][gc     ] GC(2) Pause Young (Allocation Failure)
+                       355M->34M(1160M) 16.540ms
+
+[debug][gc,heap] GC(2) Heap after GC invocations=3 (full 0):
+                        def new generation   total 368640K, used 33237K ...
+[debug][gc,heap] GC(2)   eden space 327680K,   0% used [...
+[debug][gc,heap] GC(2)   from space 40960K,  81% used [...
+[debug][gc,heap] GC(2)   to   space 40960K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 819200K, used 2488K ...
+[debug][gc,heap] GC(2)    the space 819200K,   0% used [...
+```
+
+The above GC behaved almost the same way as the second GC.
+
+All subsequent GCs behaved also similarly.
+
+**Conclusion**:
+
+*   If "from" space is big enough to hold all live objects, no objects are moved the "tenured" generation.
+*   No objects will grow older than age 1 in "from" space, if they are released by the application before the next GC.
+*   If heap size is huge with enough space in "new" generation, most GC mark-sweep processes will be happening in "young" generation. The application is basically using Young generation garbage collector only.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial GC Tracing - Aged Live Objects
+
+This section provides a tutorial of tracing how Serial GC increases the age of objects survived each additional GC in 'from' space.
+
+From previous tutorials, we learned that if heap size is tight, the Serial collector skips Young generation GC and does Tenured generation GC only.
+
+If you give a huge heap, the Serial collector does GC less frequently, and all "age 1" objects are dead by the time the next GC is triggered.
+
+In this tutorial, let's modify our test program to keep some objects living longer.
+
+```
+ /* GarbageCollection2.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+class GarbageCollection2 {
+   public static void main(String[] a) {
+      java.util.Random rnd = new java.util.Random();
+      int max = 10000;
+      int min = 32;
+      Object[] arr = new Object[min];
+      Runtime rt = Runtime.getRuntime();
+      System.out.println("Step/TotalMemory/FreeMemory/UsedMemory:");
+      for (int m=0; m<max; m++) {
+         int k = rnd.nextInt(min);
+         for (int n=min-1; n>=k+1; n--) arr[n] = arr[n-1];
+         arr[k] = getOneMega();
+         long total = rt.totalMemory();
+         long free = rt.freeMemory();
+         System.out.println((m+1)+"   "+total+"   "+free+"   "
+            +(total-free));
+      }
+   }
+   private static Object getOneMega() {
+      return new long[1024*128]; // 1MB
+   }
+}
+```
+
+As you can see, the modification is to insert a new object at a random position of the array. If an object is inserted near the end of the array, it will have a shorter life, and get pushed out quickly.
+
+But if an object is inserted near the beginning of the array, it will have a longer life, and get pushed out slowly.
+
+When running GarbageCollection2.java, we need to adjust "eden" and "from" spaces to trigger GC frequently and have enough room to hold all live objects:
+
+```
+ herong> java -Xms480m -Xmx480m -XX:+UseSerialGC \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection2
+```
+
+The first GC performed as with nothing unusual. After 55 iterations, 30223152 bytes of objects survived and labeled as "age 1". That means that some positions in array were still have no objects assigned.
+
+```
+ Step/TotalMemory/FreeMemory/UsedMemory:
+1   419430400   393215072   26215328
+...
+55   419430400   336591104   82839296
+[debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+                        def new generation   total 163840K, used 80897K ...
+[debug][gc,heap] GC(0)   eden space 81920K,  98% used [...
+[debug][gc,heap] GC(0)   from space 81920K,   0% used [...
+[debug][gc,heap] GC(0)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(0)    the space 245760K,   0% used [...
+
+[debug][gc,age ] GC(0) Desired survivor size 41943040 bytes,
+                        new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(0) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(0) - age   1:   30223152 bytes,   30223152 total
+
+[info ][gc,heap] GC(0) DefNew: 80897K->29514K(163840K)
+[info ][gc,heap] GC(0) Tenured: 0K->0K(245760K)
+[info ][gc     ] GC(0) Pause Young (Allocation Failure)
+                       79M->28M(400M) 25.108ms
+
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 163840K, used 29514K ...
+[debug][gc,heap] GC(0)   eden space 81920K,   0% used [...
+[debug][gc,heap] GC(0)   from space 81920K,  36% used [...
+[debug][gc,heap] GC(0)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(0)    the space 245760K,   0% used [...
+```
+
+The second GC performed at iteration #156\. 5043664 of 30223152 bytes of objects "age 1" left from the previous GC survived and grew to "age 2".
+
+```
+ ...
+133   419430400   305983072   113447328
+[debug][gc,heap] GC(1) Heap before GC invocations=1 (full 0):
+                        def new generation   total 163840K, used 110788K ...
+[debug][gc,heap] GC(1)   eden space 81920K,  99% used [...
+[debug][gc,heap] GC(1)   from space 81920K,  36% used [...
+[debug][gc,heap] GC(1)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(1)    the space 245760K,   0% used [...
+
+[debug][gc,age ] GC(1) Desired survivor size 41943040 bytes,
+                       new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(1) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(1) - age   1:   30409304 bytes,   30409304 total
+[trace][gc,age ] GC(1) - age   2:    5043664 bytes,   35452968 total
+
+[info ][gc,heap] GC(1) DefNew: 110788K->34622K(163840K)
+[info ][gc,heap] GC(1) Tenured: 0K->0K(245760K)
+[info ][gc     ] GC(1) Pause Young (Allocation Failure)
+                       108M->33M(400M) 145373.981ms
+
+[debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0):
+                        def new generation   total 163840K, used 34622K ...
+[debug][gc,heap] GC(1)   eden space 81920K,   0% used [...
+[debug][gc,heap] GC(1)   from space 81920K,  42% used [...
+[debug][gc,heap] GC(1)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(1)    the space 245760K,   0% used [...
+```
+
+The 3rd GC happened at iteration #212\. 2946480 of 5043664 bytes of objects "age 2" left from the previous GC survived and grew to "age 3".
+
+```
+ ...
+212   419430400   300538024   118892376
+[debug][gc,heap] GC(2) Heap before GC invocations=2 (full 0):
+                        def new generation   total 163840K, used 116105K ...
+[debug][gc,heap] GC(2)   eden space 81920K,  99% used [...
+[debug][gc,heap] GC(2)   from space 81920K,  42% used [...
+[debug][gc,heap] GC(2)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(2)    the space 245760K,   0% used [...
+
+[debug][gc,age ] GC(2) Desired survivor size 41943040 bytes,
+                       new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(2) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(2) - age   1:   28311984 bytes,   28311984 total
+[trace][gc,age ] GC(2) - age   2:    4194504 bytes,   32506488 total
+[trace][gc,age ] GC(2) - age   3:    2946480 bytes,   35452968 total
+
+[info ][gc,heap] GC(2) DefNew: 116105K->34622K(163840K)
+[info ][gc,heap] GC(2) Tenured: 0K->0K(245760K)
+[info ][gc     ] GC(2) Pause Young (Allocation Failure)
+                       113M->33M(400M) 11.695ms
+
+[debug][gc,heap] GC(2) Heap after GC invocations=3 (full 0):
+                        def new generation   total 163840K, used 34622K ...
+[debug][gc,heap] GC(2)   eden space 81920K,   0% used [...
+[debug][gc,heap] GC(2)   from space 81920K,  42% used [...
+[debug][gc,heap] GC(2)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(2)    the space 245760K,   0% used [...
+```
+
+The 4th GC happened at iteration #291\. 2946480 bytes of objects "age 3" left from the previous GC survived and grew to "age 4". It's interesting to see 136 bytes of objects "age 3" resulted from this GC. They are clearly JVM objects, by my objects are 1MB in size.
+
+```
+ ...
+291   419430400   300532168   118898232
+[debug][gc,heap] GC(3) Heap before GC invocations=3 (full 0):
+                        def new generation   total 163840K, ...
+[debug][gc,heap] GC(3)   eden space 81920K,  99% used [...
+[debug][gc,heap] GC(3)   from space 81920K,  42% used [...
+[debug][gc,heap] GC(3)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 245760K, ...
+[debug][gc,heap] GC(3)    the space 245760K,   0% used [...
+
+[debug][gc,age ] GC(3) Desired survivor size 41943040 bytes,
+                       new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(3) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(3) - age   1:   30409168 bytes,   30409168 total
+[trace][gc,age ] GC(3) - age   2:    2097184 bytes,   32506352 total
+[trace][gc,age ] GC(3) - age   3:        136 bytes,   32506488 total
+[trace][gc,age ] GC(3) - age   4:    2946480 bytes,   35452968 total
+
+[info ][gc,heap] GC(3) DefNew: 116111K->34622K(163840K)
+[info ][gc,heap] GC(3) Tenured: 0K->0K(245760K)
+[info ][gc     ] GC(3) Pause Young (Allocation Failure)
+                       113M->33M(400M) 10.275ms
+
+[debug][gc,heap] GC(3) Heap after GC invocations=4 (full 0):
+                        def new generation   total 163840K, used 34622K ...
+[debug][gc,heap] GC(3)   eden space 81920K,   0% used [...
+[debug][gc,heap] GC(3)   from space 81920K,  42% used [...
+[debug][gc,heap] GC(3)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(3)    the space 245760K,   0% used [...
+```
+
+Finally, at GC #15, 2460432 bytes of objects reached "age 15". They will be "maturely" promoted to Tenured generation at the next Minor GC. Some other long-lived, age 5, 7, 8, 9, and 14, objects were also created and used by the JVM.
+
+```
+ ...
+1159   419430400   301007184   118423216
+[debug][gc,heap] GC(14) Heap before GC invocations=14 (full 0):
+                         def new generation   total 163840K, used 115647K ...
+[debug][gc,heap] GC(14)   eden space 81920K,  99% used [...
+[debug][gc,heap] GC(14)   from space 81920K,  41% used [...
+[debug][gc,heap] GC(14)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(14)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(14)    the space 245760K,   0% used [...
+
+[debug][gc,age ] GC(14) Desired survivor size 41943040 bytes,
+                        new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(14) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(14) - age   1:   30409168 bytes,   30409168 total
+[trace][gc,age ] GC(14) - age   2:    1048592 bytes,   31457760 total
+[trace][gc,age ] GC(14) - age   3:    1048592 bytes,   32506352 total
+[trace][gc,age ] GC(14) - age   5:        680 bytes,   32507032 total
+[trace][gc,age ] GC(14) - age   7:        136 bytes,   32507168 total
+[trace][gc,age ] GC(14) - age   8:         56 bytes,   32507224 total
+[trace][gc,age ] GC(14) - age   9:        136 bytes,   32507360 total
+[trace][gc,age ] GC(14) - age  14:        136 bytes,   32507496 total
+[trace][gc,age ] GC(14) - age  15:    2460432 bytes,   34967928 total
+
+[info ][gc,heap] GC(14) DefNew: 115647K->34148K(163840K)
+[info ][gc,heap] GC(14) Tenured: 0K->0K(245760K)
+[info ][gc     ] GC(14) Pause Young (Allocation Failure)
+                        112M->33M(400M) 9.444ms
+
+[debug][gc,heap] GC(14) Heap after GC invocations=15 (full 0):
+                         def new generation   total 163840K, used 34148K ...
+[debug][gc,heap] GC(14)   eden space 81920K,   0% used [...
+[debug][gc,heap] GC(14)   from space 81920K,  41% used [...
+[debug][gc,heap] GC(14)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(14)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(14)    the space 245760K,   0% used [...
+```
+
+Here is the next GC. 2402K matured objects were promoted to "tenured" generation now.
+
+```
+ ...
+1238   419430400   301006992   118423408
+[debug][gc,heap] GC(15) Heap before GC invocations=15 (full 0):
+                         def new generation   total 163840K, ...
+[debug][gc,heap] GC(15)   eden space 81920K,  99% used [...
+[debug][gc,heap] GC(15)   from space 81920K,  41% used [...
+[debug][gc,heap] GC(15)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(15)  tenured generation   total 245760K, used 0K ...
+[debug][gc,heap] GC(15)    the space 245760K,   0% used [...
+
+[debug][gc,age ] GC(15) Desired survivor size 41943040 bytes,
+                        new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(15) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(15) - age   1:   28311984 bytes,   28311984 total
+[trace][gc,age ] GC(15) - age   2:    4194368 bytes,   32506352 total
+[trace][gc,age ] GC(15) - age   6:        680 bytes,   32507032 total
+[trace][gc,age ] GC(15) - age   8:        136 bytes,   32507168 total
+[trace][gc,age ] GC(15) - age   9:         56 bytes,   32507224 total
+[trace][gc,age ] GC(15) - age  10:        136 bytes,   32507360 total
+[trace][gc,age ] GC(15) - age  15:        136 bytes,   32507496 total
+
+[info ][gc,heap] GC(15) DefNew: 115647K->31745K(163840K)
+[info ][gc,heap] GC(15) Tenured: 0K->2402K(245760K)
+[info ][gc     ] GC(15) Pause Young (Allocation Failure)
+                        112M->33M(400M) 245241.142ms
+
+[debug][gc,heap] GC(15) Heap after GC invocations=16 (full 0):
+                         def new generation   total 163840K, used 31745K ...
+[debug][gc,heap] GC(15)   eden space 81920K,   0% used [...
+[debug][gc,heap] GC(15)   from space 81920K,  38% used [...
+[debug][gc,heap] GC(15)   to   space 81920K,   0% used [...
+[debug][gc,heap] GC(15)  tenured generation   total 245760K, used 2402K ...
+[debug][gc,heap] GC(15)    the space 245760K,   0% used [...
+```
+
+**Conclusion**:
+
+*   Objects grow older and older, if they were identified as live objects in "from" space in multiple rounds of GC
+*   When objects reach the tenuring threshold age, they will be promoted to Tenured generation, even if "from" space has room to hold them.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial GC Tracing - Tenuring Threshold
+
+This section provides a tutorial showing how Serial GC changes the tenuring threshold dynamically and promotes objects to 'tenured' generation earlier or later to Tenuring generation to meet the TargetSurvivorRatio setting.
+
+In the previous tutorial, we learned that when a live object survived Minor GC multiple times and reached the tenuring threshold age, it will be promoted to Tenured generation.
+
+But the Serial collector can also change the tenuring threshold age dynamically based on past GC statistics. This is to move object out of the survivor space quickly to avoid survivor space overflow.
+
+Let's rerun the same test with a smaller survivor space.
+
+```
+ herong> java -Xms360m -Xmx360m -XX:+UseSerialGC \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection
+```
+
+At the first Minor GC, the survivor ("from") space usage was 43%. There is no danger of overflow, so Serial collector kept the tenuring threshold to age 15, the default age.
+
+```
+ ...
+35   314572800   252468808   62103992
+[debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+                        def new generation   total 122880K, used 60648K ...
+[debug][gc,heap] GC(0)   eden space 61440K,  98% used [...
+[debug][gc,heap] GC(0)   from space 61440K,   0% used [...
+[debug][gc,heap] GC(0)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 184320K, used 0K ...
+[debug][gc,heap] GC(0)    the space 184320K,   0% used [...
+
+[debug][gc,age ] GC(0) Desired survivor size 31457280 bytes,
+                       new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(0) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(0) - age   1:   27076584 bytes,   27076584 total
+
+[info ][gc,heap] GC(0) DefNew: 60648K->26441K(122880K)
+[info ][gc,heap] GC(0) Tenured: 0K->0K(184320K)
+[info ][gc     ] GC(0) Pause Young (Allocation Failure)
+                       59M->25M(300M) 23.512ms
+
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation   total 122880K, used 26441K ...
+[debug][gc,heap] GC(0)   eden space 61440K,   0% used [...
+[debug][gc,heap] GC(0)   from space 61440K,  43% used [...
+[debug][gc,heap] GC(0)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 184320K, used 0K ...
+[debug][gc,heap] GC(0)    the space 184320K,   0% used [...
+```
+
+But at the second GC. 54% of survivor ("from") space was used. It reached another setting called TargetSurvivorRatio, which is defaulted to 50%. So Serial collector decided to lower the tenuring threshold age to 2\. This forces all objects older than 3 to be promoted to Tenured generation at next GC.
+
+```
+ ...
+94   314572800   224816184   89756616
+[debug][gc,heap] GC(1) Heap before GC invocations=1 (full 0):
+                        def new generation   total 122880K, used 87652K ...
+[debug][gc,heap] GC(1)   eden space 61440K,  99% used [...
+[debug][gc,heap] GC(1)   from space 61440K,  43% used [...
+[debug][gc,heap] GC(1)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 184320K, used 0K ...
+[debug][gc,heap] GC(1)    the space 184320K,   0% used [...
+
+[debug][gc,age ] GC(1) Desired survivor size 31457280 bytes,
+                       new threshold 2 (max threshold 15)
+[trace][gc,age ] GC(1) Age table with threshold 2 (max threshold 15)
+[trace][gc,age ] GC(1) - age   1:   28312856 bytes,   28312856 total
+[trace][gc,age ] GC(1) - age   2:    6091464 bytes,   34404320 total
+
+[info ][gc,heap] GC(1) DefNew: 87652K->33597K(122880K)
+[info ][gc,heap] GC(1) Tenured: 0K->0K(184320K)
+[info ][gc     ] GC(1) Pause Young (Allocation Failure)
+                       85M->32M(300M) 18.668ms
+
+[debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0):
+                        def new generation   total 122880K, used 33597K ...
+[debug][gc,heap] GC(1)   eden space 61440K,   0% used [...
+[debug][gc,heap] GC(1)   from space 61440K,  54% used [...
+[debug][gc,heap] GC(1)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 184320K, used 0K ...
+[debug][gc,heap] GC(1)    the space 184320K,   0% used [...
+```
+
+Later at the fourth GC, the survivor ("from") space usage went back to 48%. So Serial collector decided to set the tenuring threshold back to 15.
+
+```
+ 212   314572800   217064352   97508448
+[debug][gc,heap] GC(3) Heap before GC invocations=3 (full 0):
+                        def new generation   total 122880K, used 91322K ...
+[debug][gc,heap] GC(3)   eden space 61440K,  98% used [...
+[debug][gc,heap] GC(3)   from space 61440K,  50% used [...
+[debug][gc,heap] GC(3)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 184320K, used 3900K ...
+[debug][gc,heap] GC(3)    the space 184320K,   2% used [...
+
+[debug][gc,age ] GC(3) Desired survivor size 31457280 bytes,
+                       new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(3) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(3) - age   1:   27263392 bytes,   27263392 total
+[trace][gc,age ] GC(3) - age   2:    3145776 bytes,   30409168 total
+
+[info ][gc,heap] GC(3) DefNew: 91322K->29696K(122880K)
+[info ][gc,heap] GC(3) Tenured: 3900K->4925K(184320K)
+[info ][gc     ] GC(3) Pause Young (Allocation Failure)
+                       92M->33M(300M) 6.884ms
+
+[debug][gc,heap] GC(3) Heap after GC invocations=4 (full 0):
+                        def new generation   total 122880K, used 29696K ...
+[debug][gc,heap] GC(3)   eden space 61440K,   0% used [...
+[debug][gc,heap] GC(3)   from space 61440K,  48% used [...
+[debug][gc,heap] GC(3)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 184320K, used 4925K ...
+[debug][gc,heap] GC(3)    the space 184320K,   2% used [...
+```
+
+**Conclusion**:
+
+*   By default, the Serial collector starts with a tenuring threshold of 15.
+*   If any objects become older than the tenuring threshold, they will be promoted to "tenured" generation.
+*   The Serial collector will reset the tenuring threshold based on survivor ("from") space usage percentage. When usage is higher than TargetSurvivorRatio, it will lower the tenuring threshold to promote objects at a younger age to Tenuring generation.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟"-XX:TargetSurvivorRatio" - Second Tenuring Condition
+
+This section describes the '-XX:TargetSurvivorRatio' JVM option, with sets the maximum survivor space usage percentage. When this limit is reached, all remaining live objects will be promoted to Tenured generation regardless of their age.
+
+In previous tutorials, we learned the first condition of live object tenuring (promoted from survivor space into Tenured generation). When a live object has reached the tenuring threshold age, it will be promoted into Tenured generation.
+
+However, there another condition that triggers object tenuring. When the survivor space usage has reached target ratio defined by another option called "-XX:TargetSurvivorRatio", remaining live objects, regardless of their age, will be promoted into Tenured generation. This case is also called premature tenuring (or premature promotion).
+
+The Serial collector, uses "-XX:TargetSurvivorRatio=50" as the default, which says, I need to keep my survivor space usage below 50%. This seems to be a big waste of heap memory.
+
+Let's run our first test with "-XX:TargetSurvivorRatio=50" on our test program GarbageCollection2.java.
+
+```
+ herong> java -Xms360m -Xmx360m -XX:+UseSerialGC \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -XX:TargetSurvivorRatio=50 \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection2
+...
+153   314572800   219805944   94766856
+[debug][gc,heap] GC(2) Heap before GC invocations=2 (full 0):
+                        def new generation   total 122880K, used 92545K ...
+[debug][gc,heap] GC(2)   eden space 61440K,  99% used [...
+[debug][gc,heap] GC(2)   from space 61440K,  51% used [...
+[debug][gc,heap] GC(2)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 184320K, used 0K ...
+[debug][gc,heap] GC(2)    the space 184320K,   0% used [...
+
+[debug][gc,age ] GC(2) Desired survivor size 31457280 bytes,
+                       new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(2) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(2) - age   1:   26214800 bytes,   26214800 total
+[trace][gc,age ] GC(2) - age   2:    4195240 bytes,   30410040 total
+
+[info ][gc,heap] GC(2) DefNew: 92545K->29697K(122880K)
+[info ][gc,heap] GC(2) Tenured: 0K->4924K(184320K)
+[info ][gc     ] GC(2) Pause Young (Allocation Failure)
+                       90M->33M(300M) 13.031ms
+
+[debug][gc,heap] GC(2) Heap after GC invocations=3 (full 0):
+                        def new generation   total 122880K, used 29697K ...
+[debug][gc,heap] GC(2)   eden space 61440K,   0% used [...
+[debug][gc,heap] GC(2)   from space 61440K,  48% used [...
+[debug][gc,heap] GC(2)   to   space 61440K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 184320K, used 4924K ...
+[debug][gc,heap] GC(2)    the space 184320K,   2% used [...
+```
+
+As you can see from the output, the third Minor GC promoted 4924K objects to "tenured" generation prematurely. This was because the "from" space usage reached 51% after the previous GC, see "from space 61440K, 51% used" in the "Heap before GC" message section. 51% was higher than TargetSurvivorRatio of 50%, "age 3" were promoted to "tenured" generation.
+
+Now rerun the test with "-XX:TargetSurvivorRatio=70". And we can also lower the survivor space to 50MB.
+
+```
+ herong> java -Xms300m -Xmx300m -XX:+UseSerialGC \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -XX:TargetSurvivorRatio=70 \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection2
+...
+705   262144000   174282368   87861632
+[debug][gc,heap] GC(14) Heap before GC invocations=14 (full 0):
+                         def new generation   total 102400K, ...
+[debug][gc,heap] GC(14)   eden space 51200K,  99% used [...
+[debug][gc,heap] GC(14)   from space 51200K,  67% used [...
+[debug][gc,heap] GC(14)   to   space 51200K,   0% used [...
+[debug][gc,heap] GC(14)  tenured generation   total 153600K, ...
+[debug][gc,heap] GC(14)    the space 153600K,   0% used [...
+
+[debug][gc,age ] GC(14) Desired survivor size 36700160 bytes,
+                        new threshold 15 (max threshold 15)
+[trace][gc,age ] GC(14) Age table with threshold 15 (max threshold 15)
+[trace][gc,age ] GC(14) - age   1:   23069024 bytes,   23069024 total
+[trace][gc,age ] GC(14) - age   2:    6291688 bytes,   29360712 total
+[trace][gc,age ] GC(14) - age   3:    2097184 bytes,   31457896 total
+[trace][gc,age ] GC(14) - age   4:        192 bytes,   31458088 total
+[trace][gc,age ] GC(14) - age   6:    1048592 bytes,   32506680 total
+[trace][gc,age ] GC(14) - age  13:         80 bytes,   32506760 total
+[trace][gc,age ] GC(14) - age  14:        792 bytes,   32507552 total
+[trace][gc,age ] GC(14) - age  15:    2945936 bytes,   35453488 total
+
+[info ][gc,heap] GC(14) DefNew: 85802K->34622K(102400K)
+[info ][gc,heap] GC(14) Tenured: 0K->0K(153600K)
+[info ][gc     ] GC(14) Pause Young (Allocation Failure)
+                        83M->33M(250M) 9.807ms
+
+[debug][gc,heap] GC(14) Heap after GC invocations=15 (full 0):
+                         def new generation   total 102400K, ...
+[debug][gc,heap] GC(14)   eden space 51200K,   0% used [...
+[debug][gc,heap] GC(14)   from space 51200K,  67% used [...
+[debug][gc,heap] GC(14)   to   space 51200K,   0% used [...
+[debug][gc,heap] GC(14)  tenured generation   total 153600K, ...
+[debug][gc,heap] GC(14)    the space 153600K,   0% used [...
+```
+
+As you can see from the output, no objects got promoted to "tenured" generation yet after 15 rounds of GC. The "from" space usage was lower than 70% and no objects lived longer than age 15\. But at the next GC, some of "age 15" objects will be promoted to "tenured" generation, because of their maturity.
+
+**Conclusion**:
+
+*   By default, the Serial collector starts with a TargetSurvivorRatio of 50.
+*   If the "from" space usage percentage become higher than the TargetSurvivorRatio, remaining live objects, regardless of their age, will be promoted into Tenured generation. This case is also called premature tenuring (or premature promotion).
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Serial GC Tracing - Tenuring Threshold Controlled
+
+This section provides a tutorial showing how to control Serial collector Tenuring threshold with InitialTenuringThreshold and MaxTenuringThreshold JVM options.
+
+In previous tutorials, we learned that the Serial collector controls objects tenuring using the tenuring threshold (default is 15 age old). When a live object reaches the tenuring threshold age, it is considered as matured to be promoted to tenured generation.
+
+But if the survivor space usage reaches the TargetSurvivorRatio (default is 50% used), all remaining live objects will be promoted to tenured generation regardless of their ages.
+
+The Serial collector also dynamically adjust the tenuring threshold based on current survivor space usage.
+
+If we give enough survivor space, live objects may stay in Young generation for a long time surviving up to 15 times of Minor GCs. This may have performance impact on your application. An object of age 15 means that it has been copied 15 times between the two survivor spaces ("from" and "to" spaces).
+
+If we want to change the default behavior, we can use InitialTenuringThreshold and MaxTenuringThreshold JVM options:
+
+*   "-XX:InitialTenuringThreshold=3" - Set the initial value of tenuring threshold to 3\. The Serial collector can still change it.
+*   "-XX:MaxTenuringThreshold=3" - Set the maximum value of tenuring threshold to 3\. This ensures than any objects older than "age 3" will be promoted to Tenured generation.
+
+Let's try it with our test program GarbageCollection2.java with fixed new generation size option of "-XX:NewSize=102m":
+
+```
+ herong> java -Xms105m -Xmx105m -XX:+UseSerialGC \
+   -XX:NewSize=102m -XX:SurvivorRatio=1v
+   -XX:TargetSurvivorRatio=99 \
+   -XX:InitialTenuringThreshold=3 -XX:MaxTenuringThreshold=3 \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection2
+...
+108   75956224   7997424   67958800
+[debug][gc,heap] GC(3) Heap before GC invocations=3 (full 0):
+                        def new generation   total 68864K, used 66366K ...
+[debug][gc,heap] GC(3)   eden space 34496K,  97% used [...
+[debug][gc,heap] GC(3)   from space 34368K,  94% used [...
+[debug][gc,heap] GC(3)   to   space 34368K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 5312K, used 0K ...
+[debug][gc,heap] GC(3)    the space 5312K,   0% used [...
+
+[debug][gc,age ] GC(3) Desired survivor size 34840896 bytes,
+                       new threshold 3 (max threshold 3)
+[trace][gc,age ] GC(3) Age table with threshold 3 (max threshold 3)
+[trace][gc,age ] GC(3) - age   1:   24117752 bytes,   24117752 total
+[trace][gc,age ] GC(3) - age   2:    4195104 bytes,   28312856 total
+[trace][gc,age ] GC(3) - age   3:    3145776 bytes,   31458632 total
+
+[info ][gc,heap] GC(3) DefNew: 66366K->30721K(68864K)
+[info ][gc,heap] GC(3) Tenured: 0K->2876K(5312K)
+[info ][gc     ] GC(3) Pause Young (Allocation Failure)
+                       64M->32M(72M) 12.245ms
+
+[debug][gc,heap] GC(3) Heap after GC invocations=4 (full 0):
+                        def new generation   total 68864K, used 30721K ...
+[debug][gc,heap] GC(3)   eden space 34496K,   0% used [...
+[debug][gc,heap] GC(3)   from space 34368K,  89% used [...
+[debug][gc,heap] GC(3)   to   space 34368K,   0% used [...
+[debug][gc,heap] GC(3)  tenured generation   total 5312K, used 2876K ...
+[debug][gc,heap] GC(3)    the space 5312K,  54% used [...
+```
+
+As you can see from the output, Minor GC #4 promoted 2876K objects to tenured generation, because the maximum tenuring threshold was set to 3. Those objects would grow to age 4, if left in the survivor space.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟"-XX:+NeverTenure" and "-XX:+AlwaysTenure" Working
+
+This section provides a tutorial showing '-XX:+NeverTenure' and '-XX:+AlwaysTenure' JVM options are working with the Serial collector.
+
+HotSpot JVM also support two hidden options you can use to control tenuring behavior:
+
+*   "-XX:+NeverTenure" - The garbage collector will to not to promote live objects from Young generation to Tenured generation.
+*   "-XX:+AlwaysTenure" - The garbage collector will promote live objects immediately from Young generation to Tenured generation. I think this is similar to "-XX:MaxTenuringThreshold=0".
+
+First, let's try "-XX:+NeverTenure" with our test program GarbageCollection2.java:
+
+```
+ herong> java -Xms130m -Xmx130m -XX:+UseSerialGC \
+   -XX:NewSize=120m -XX:SurvivorRatio=1 \
+   -XX:TargetSurvivorRatio=99 -XX:+NeverTenure \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection2
+...
+560   94371840   17086360   77285480
+[gc,heap] GC(14) Heap before GC invocations=14 (full 0): def new ...
+[gc,heap] GC(14)   eden space 40960K,  99% used [...
+[gc,heap] GC(14)   from space 40960K,  84% used [...
+[gc,heap] GC(14)   to   space 40960K,   0% used [...
+[gc,heap] GC(14)  tenured generation   total 10240K, used 0K [...
+[gc,heap] GC(14)    the space 10240K,   0% used [...
+
+[gc,age ] GC(14) Desired survivor size 41523608 bytes, new threshold 16
+                  (max threshold 16)
+[gc,age ] GC(14) Age table with threshold 16 (max threshold 16)
+[gc,age ] GC(14) - age   1:   23069216 bytes,   23069216 total
+[gc,age ] GC(14) - age   2:    8388736 bytes,   31457952 total
+[gc,age ] GC(14) - age   3:    1048592 bytes,   32506544 total
+[gc,age ] GC(14) - age  12:         56 bytes,   32506600 total
+[gc,age ] GC(14) - age  13:         80 bytes,   32506680 total
+[gc,age ] GC(14) - age  14:        736 bytes,   32507416 total
+[gc,age ] GC(14) - age  15:    2945800 bytes,   35453216 total
+
+[gc,heap] GC(14) DefNew: 75474K->34622K(81920K)
+[gc,heap] GC(14) Tenured: 0K->0K(10240K)
+[gc     ] GC(14) Pause Young (Allocation Failure) 73M->33M(90M) 10.911ms
+
+[gc,heap] GC(14) Heap after GC invocations=15 (full 0): def new ...
+[gc,heap] GC(14)   eden space 40960K,   0% used [...
+[gc,heap] GC(14)   from space 40960K,  84% used [...
+[gc,heap] GC(14)   to   space 40960K,   0% used [...
+[gc,heap] GC(14)  tenured generation   total 10240K, used 0K [...
+[gc,heap] GC(14)    the space 10240K,   0% used [...
+561   94371840   57870032   36501808
+...
+599   94371840   17202040   77169800
+[gc,heap] GC(15) Heap before GC invocations=15 (full 0): def new ...
+[gc,heap] GC(15)   eden space 40960K,  99% used [...
+[gc,heap] GC(15)   from space 40960K,  84% used [...
+[gc,heap] GC(15)   to   space 40960K,   0% used [...
+[gc,heap] GC(15)  tenured generation   total 10240K, used 0K [...
+[gc,heap] GC(15)    the space 10240K,   0% used [...
+
+[gc,age ] GC(15) Desired survivor size 41523608 bytes, new threshold 16
+                  (max threshold 16)
+[gc,age ] GC(15) Age table with threshold 16 (max threshold 16)
+[gc,age ] GC(15) - age   1:   23069024 bytes,   23069024 total
+[gc,age ] GC(15) - age   2:    5243152 bytes,   28312176 total
+[gc,age ] GC(15) - age   3:    4194368 bytes,   32506544 total
+[gc,age ] GC(15) - age  13:         56 bytes,   32506600 total
+[gc,age ] GC(15) - age  14:         80 bytes,   32506680 total
+[gc,age ] GC(15) - age  15:    2946536 bytes,   35453216 total
+
+[gc,heap] GC(15) DefNew: 75361K->34622K(81920K)
+[gc,heap] GC(15) Tenured: 0K->0K(10240K)
+[gc     ] GC(15) Pause Young (Allocation Failure) 73M->33M(90M) 10.560ms
+
+[gc,heap] GC(15) Heap after GC invocations=16 (full 0): def new ...
+[gc,heap] GC(15)   eden space 40960K,   0% used [...
+[gc,heap] GC(15)   from space 40960K,  84% used [...
+[gc,heap] GC(15)   to   space 40960K,   0% used [...
+[gc,heap] GC(15)  tenured generation   total 10240K, used 0K [...
+[gc,heap] GC(15)    the space 10240K,   0% used [...
+```
+
+Log messages from GC #16, GC(15), confirm that "-XX:+NeverTenure" option is working. 2946536 bytes of objects "age 15", was the sum of 2945800 bytes of objects grew from "age 14" from last GC and 2945800 bytes of objects matured from "age 15 from last GC. "-XX:+NeverTenure" option forced all matured objects to stay in Young generation as "age 15" forever.
+
+Now, let's try "-XX:+AlwaysTenure" with our test program GarbageCollection2.java:
+
+```
+ herong> java -Xms240m -Xmx240m -XX:+UseSerialGC \
+   -XX:NewSize=120m -XX:SurvivorRatio=1 \
+   -XX:TargetSurvivorRatio=99 -XX:+AlwaysTenure \
+   -Xlog:gc=info,gc+heap=debug,gc+age=trace GarbageCollection2
+...
+16   209715200   168575600   41139600
+[gc,heap] GC(0) Heap before GC invocations=0 (full 0): def new ...
+[gc,heap] GC(0)   eden space 40960K,  98% used [...
+[gc,heap] GC(0)   from space 40960K,   0% used [...
+[gc,heap] GC(0)   to   space 40960K,   0% used [...
+[gc,heap] GC(0)  tenured generation   total 122880K, used 0K [...
+[gc,heap] GC(0)    the space 122880K,   0% used [...
+
+[gc,age ] GC(0) Desired survivor size 41523608 bytes, new threshold 0
+                 (max threshold 0)
+[gc,age ] GC(0) Age table with threshold 0 (max threshold 0)
+[gc,heap] GC(0) DefNew: 40175K->0K(81920K)
+[gc,heap] GC(0) Tenured: 0K->16225K(122880K)
+[gc     ] GC(0) Pause Young (Allocation Failure) 39M->15M(200M) 11.782ms
+
+[gc,heap] GC(0) Heap after GC invocations=1 (full 0): def new ...
+[gc,heap] GC(0)   eden space 40960K,   0% used [...
+[gc,heap] GC(0)   from space 40960K,   0% used [...
+[gc,heap] GC(0)   to   space 40960K,   0% used [...
+[gc,heap] GC(0)  tenured generation   total 122880K, used 16225K [...
+[gc,heap] GC(0)    the space 122880K,  13% used [...
+17   209715200   192051408   17663792
+...
+209   209715200   55961104   153754096
+[gc,heap] GC(5) Heap before GC invocations=5 (full 0): def new ...
+[gc,heap] GC(5)   eden space 40960K,  99% used [...
+[gc,heap] GC(5)   from space 40960K,   0% used [...
+[gc,heap] GC(5)   to   space 40960K,   0% used [...
+[gc,heap] GC(5)  tenured generation   total 122880K, used 109412K [...
+[gc,heap] GC(5)    the space 122880K,  89% used [...
+
+[gc     ] GC(6) Pause Full (Allocation Failure) 146M->33M(200M) 12.399ms
+[gc,heap] GC(5) DefNew: 40738K->0K(81920K)
+[gc,heap] GC(5) Tenured: 109412K->34634K(122880K)
+[gc     ] GC(5) Pause Young (Allocation Failure) 146M->33M(200M) 12.482ms
+
+[gc,heap] GC(5) Heap after GC invocations=6 (full 1): def new ...
+[gc,heap] GC(5)   eden space 40960K,   0% used [...
+[gc,heap] GC(5)   from space 40960K,   0% used [...
+[gc,heap] GC(5)   to   space 40960K,   0% used [...
+[gc,heap] GC(5)  tenured generation   total 122880K, used 34634K [...
+[gc,heap] GC(5)    the space 122880K,  28% used [...
+```
+
+As you can see from those log messages, "-XX:+AlwaysTenure" option is working. Live objects were promoted directly from "eden" to "tenured" generation immediately at GC(0). "from" and "to" spaces were not used at all. When "tenured" generation was full, a Full GC was performed, see GC(5) and GC(6).
+
+**Conclusion**:
+
+*   "-XX:+NeverTenure" is working with the Serial collector. You can use this option to stop any objects going to the "tenured" generation, so you can use Young generation only.
+*   "-XX:+AlwaysTenure" is working with the Serial collector. You can use this option to promote all objects to "tenured" generation immediately from "eden", so you can stop any objects going through the aging process in the survivor area ("from" and "to" spaces).
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Serial Collector - "+XX:+UseSerialGC"](#part0023.xhtml)
+
+∟Minor GC Triggering Condition of Serial Collector
+
+This section describes the triggering condition of the Serial collector Minor GC process. The condition is the failure of new object allocation in 'eden'.
+
+We know that when the "eden" space is full, the Serial collector will start a Young (Minor) GC. What is the exact definition of full? Is it 90% full or 100% full?
+
+By looking at GC log messages, I think the exact definition is that "There is not enough free memory in "eden" to allocate the next new object." This is why the Serial collector uses "GC (Allocation Failure)" to label the Young GC event in the log message. "Allocation Failure" in "eden" triggers the Young GC.
+
+If you turn on the "-XX:+PrintHeapAtGC" option, you may see different "eden" usage percentages before different Young GCs.
+
+For example, the following log message shows a Young GC was triggered when the Serial collector failed to allocate the next new object. At that time, "eden" usage was 99%, which is about 10835K used out of 10944K. In other words, the next new object is larger than 109K (or 10944K-10835K).
+
+```
+ [debug][gc,heap] GC(1) Heap before GC invocations=1 (full 0): def new ...
+[debug][gc,heap] GC(1)   eden space 10944K,  99% used [...
+[debug][gc,heap] GC(1)   from space 1344K, 100% used [...
+[debug][gc,heap] GC(1)   to   space 1344K,   0% used [...
+[debug][gc,heap] GC(1)  tenured generation   total 27328K, used 2025K ...
+[debug][gc,heap] GC(1)    the space 27328K,   7% used [...
+[info ][gc,heap] GC(1) DefNew: 12285K->1343K(12288K)
+[info ][gc,heap] GC(1) Tenured: 2025K->7255K(27328K)
+[info ][gc     ] GC(1) Pause Young (Allocation Failure)
+                       13M->8M(38M) 9.055ms
+...
+```
+
+Here is another example. The following log message shows a Young GC was triggered when the Serial collector failed to allocate the next new object. At that time, "eden" usage was 97%, which is about 39731K used out of 40960K. In other words, the next new object is larger than 1229K (or 40960K-39731K).
+
+```
+ [debug][gc,heap] GC(2) Heap before GC invocations=2 (full 0): def new ...
+[debug][gc,heap] GC(2)   eden space 40960K,  97% used [...
+[debug][gc,heap] GC(2)   from space 40960K,   0% used [...
+[debug][gc,heap] GC(2)   to   space 40960K,   0% used [...
+[debug][gc,heap] GC(2)  tenured generation   total 122880K, used 39778K ...
+[debug][gc,heap] GC(2)    the space 122880K,  32% used [...
+[info ][gc,heap] GC(2) DefNew: 40129K->0K(81920K)
+[info ][gc,heap] GC(2) Tenured: 39778K->62307K(122880K)
+[info ][gc     ] GC(2) Pause Young (Allocation Failure)
+                       78M->60M(200M) 11.046ms
+...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Parallel Collector - "+XX:+UseParallelGC"
+
+This chapter provides tutorial notes and example codes on the Parallel Collector specified by the '+XX:+UseParallelGC' JVM option. Topics include introduction to Parallel Collector log message format; multiple parallel GC threads; '-XX:+UseAdaptiveSizePolicy' option to dynamically changing 'eden', 'from' and 'to' heap areas.
+
+> [What Is Parallel Collector](#part0044.xhtml)
+> 
+> [Parallel Collector GC Log Message Format](#part0045.xhtml)
+> 
+> [Log Message Types from Parallel Collector](#part0046.xhtml)
+> 
+> ["--Xlog:gc+task+time=debug" - Print GC Threads](#part0047.xhtml)
+> 
+> ["-XX:ParallelGCThreads" - # of Threads](#part0048.xhtml)
+> 
+> [Parallel Collector Stops Application for Minor/Major GC](#part0049.xhtml)
+> 
+> [PSYoungGen Collector Using Tenuring Age](#part0050.xhtml)
+> 
+> [Parallel Collector Changing NewRatio and SurvivorRatio](#part0051.xhtml)
+> 
+> [Parallel Collector Adaptive Size Policy](#part0052.xhtml)
+> 
+> [Adaptive Size Policy Log Messages](#part0053.xhtml)
+> 
+> ["-Xlog:gc+ergo=trace" - Minor GC Report](#part0054.xhtml)
+> 
+> [Adaptive Size Policy Changed Survivor Space](#part0055.xhtml)
+> 
+> [Adaptive Size Policy Changed Eden Space](#part0056.xhtml)
+> 
+> [Adaptive Size Policy for Best Latency](#part0057.xhtml)
+> 
+> [Parallel Collector Stopped using Young Generation](#part0058.xhtml)
+> 
+> [Adaptive Size Policy for Best Throughput](#part0059.xhtml)
+
+Takeaways:
+
+*   The Parallel Collector, -XX:+UseParallelGC, actually uses the Parallel Scavenge (PS) Collector of the Young generation and the Parallel Old Collector of the Tenured generation.
+*   The Parallel Collector can be invoked by "-XX:+UseParallelGC" or -XX:+UseParallelOldGC" JVM option.
+*   The Parallel Collector uses "PSYoungGen" to represent Young Generation GC in log messages.
+*   The Parallel Collector uses "ParOldGen" to represent Tenured Generation GC in log messages.
+*   The Parallel Collector performs both Minor and Major GCs in a stop-the-world fashion and parallelly using multiple threads.
+*   When the Parallel Collector is performing GC in multiple threads, the application is still stopped. The Parallel Collector is not running parallely against the application. It is running parallely with its multiple GC threads.
+*   The Parallel Collector is also called Throughput Collector because it reduces GC time to improve the throughput of the application. It's a good choice for backend applications.
+*   The number of threads used by the Parallel Collector can be controlled by the "-XX:ParallelGCThreads=n" JVM option.
+*   The Parallel collector performs minor GC and major GC in stop-the-world fashion.
+*   The Parallel collector can not print the tenuring age distribution list at each Young GC.
+*   The Parallel collector changes NewRatio and SurvivorRatio dynamically even they are specified at the command line, because of the default Adaptive Size Policy.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟What Is Parallel Collector
+
+This section describes the Parallel Collector, which uses the combination of the Parallel Scavenge (PS) Collector of Young generation and the Parallel Old Collector of Tenured generation, so both minor GC and major GC are performed in multiple threads parallelly in a stop-the-world fashion.
+
+**What Is Parallel Collector?** Parallel Collector is actually a combination of two garbage collectors:
+
+*   The Parallel Scavenge (PS) Collector of Young generation - It uses the 3-area (Eden, Survivor Space "From" and Survivor Space "To") algorithm parallelly with multiple threads in a stop-the-world fashion.
+*   The Parallel Old Collector of Tenured generation - It uses the "Mark-Sweep-Compact" algorithm parallelly with multiple threads in a stop-the-world fashion.
+
+Main features of the Parallel Collector:
+
+*   Parallel Collector runs serially with the application. That is, the Java application execution is halted while garbage collection is taking place.
+*   Parallel Collector runs with multiple threads. So it is able take advantages of multi-processor computer systems.
+*   Parallel Collector can be specified using the "-XX:+UseParallelGC", or "-XX:+UseParallelOldGC" JVM option.
+*   Parallel Collector improves the performance compare to the Serial Collector on multi-processor computer systems because it is running multiple threads.
+*   Parallel Collector may decrease the performance compare to the Serial Collector on single-processor computer systems because it needs extra time to start and manage multiple threads.
+
+The Parallel Collector is also called Throughput Collector because it reduces GC time to improve the throughput of the application. It's a good choice for backend applications.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Parallel Collector GC Log Message Format
+
+This section describes the GC log message format of HotSpot JVM Parallel Collector.
+
+Before doing any testing with the Parallel Collector, let's look at log messages generated by the Parallel Collector first:
+
+```
+ herong> java -Xms40m -Xmx80m -XX:+UseParallelGC \
+   -Xlog:gc=info,gc+heap=info GarbageCollection
+
+[0.013s][info][gc] Using Parallel
+   -- This message indicates that Parallel Collector was used
+
+[0.359s][info][gc,heap] GC(0) PSYoungGen: 10240K->1504K(11776K)
+[0.359s][info][gc,heap] GC(0) ParOldGen: 0K->1843K(27648K)
+[0.359s][info][gc     ] GC(0) Pause Young (Allocation Failure)
+                              10M->3M(38M) 5.280ms
+   -- A Young (Minor) GC occurred
+      PSYoungGen stands for Parallel Scavenge Young Generation
+      ParOldGen stands for Parallel Old Generation
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   40370176   28669696   11700480
+2   40370176   27052752   13317424
+
+[0.515s][info][gc,heap] GC(1) PSYoungGen: 11674K->1504K(22016K)
+[0.515s][info][gc,heap] GC(1) ParOldGen: 1843K->5817K(27648K)
+[0.515s][info][gc     ] GC(1) Pause Young (Allocation Failure)
+                              13M->7M(48M) 5.666ms
+   -- Another Young (Minor) GC occurred
+
+3   50855936   42620520   8235416
+...
+21   50855936   22985224   27870712
+[0.527s][info][gc,heap] GC(2) PSYoungGen: 21908K->1504K(22016K)
+[0.527s][info][gc,heap] GC(2) ParOldGen: 5565K->25951K(27648K)
+[0.527s][info][gc     ] GC(2) Pause Young (Allocation Failure)
+                              26M->26M(48M) 16.139ms
+   -- Another Young (Minor) GC occurred
+
+[0.546s][info][gc,heap] GC(3) PSYoungGen: 1504K->0K(25600K)
+[0.546s][info][gc,heap] GC(3) ParOldGen: 25951K->25256K(54784K)
+[0.546s][info][gc     ] GC(3) Pause Full (Ergonomics)
+                              26M->24M(78M) 19.756ms
+   -- Followed by a Full (Major) GC
+
+...
+```
+
+As you can see, the Parallel Collector log message format is identical to the Serial Collector, except that different GC algorithms are used:
+
+*   "PSYoungGen" - Internal name for the Parallel Scavenge (PS) collector for the Young (new) generation.
+*   "ParOldGen" - Internal name for the Parallel Old collector for the Tenured (old) generation.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Log Message Types from Parallel Collector
+
+This section describes various types of log messages generated from the Parallel Collector with the '-Xlog:gc*=debug' option.
+
+If you run your application using the Serial Collector (-XX:+UseParallelGC) with the "-Xlog:gc*=debug" logging option, you may see the following types of log messages:
+
+1\. Heap initial allocation - Reported when JVM starts:
+
+```
+ [debug][gc,heap] Minimum heap 41943040  Initial heap 41943040
+   Maximum heap 83886080
+```
+
+2\. Young generation heap reduction message - Reported as part of a Young GC process:
+
+```
+ [info][gc,heap] GC(0) PSYoungGen: 10240K->1504K(11776K)
+```
+
+3\. Tenured generation heap expansion message - Reported as part of a Young GC process:
+
+```
+ [0.352s][info][gc,heap] GC(0) ParOldGen: 0K->1856K(27648K)
+```
+
+4\. Start/end of a Young GC:
+
+```
+ [info][gc,start] GC(0) Pause Young (Allocation Failure)
+...
+[info][gc] GC(0) Pause Young (Allocation Failure) 10M->3M(38M) 6.940ms
+```
+
+5\. Object aging threshold - Reported as part of a Young GC:
+
+```
+ [debug][gc,age] GC(0) Desired survivor size 65536 bytes,
+                      new threshold 1 (max threshold 15)
+[debug][gc,age] GC(0) Desired survivor size 1572864 bytes,
+                      new threshold 7 (max threshold 15)
+```
+
+6\. Metaspace reduction - Reported as part of a Young GC:
+
+```
+ [info ][gc,metaspace] GC(0) Metaspace: 7584K->7584K(1058816K)
+```
+
+7\. GC execution time - Reported as part of a Young or Full GC:
+
+```
+ [info][gc,cpu] GC(0) User=0.00s Sys=0.00s Real=0.00s
+```
+
+8\. Heap snapshot report before GC - Reported before a Young GC or Full GC process:
+
+```
+ [debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+                        def new generation total 1152K, used 1024K ...
+[debug][gc,heap] GC(0)   eden space 1024K, 100% used [...
+[debug][gc,heap] GC(0)   from space 128K,   0% used [...
+[debug][gc,heap] GC(0)   to   space 128K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 768K, used 0K [...
+[debug][gc,heap] GC(0)    the space 768K,   0% used [...
+[debug][gc,heap] GC(0)  Metaspace
+                          used 328K, capacity 4515K, committed 4864K,
+              reserved 1056768K
+[debug][gc,heap] GC(0)   class space
+                          used 30K, capacity 398K, committed 512K,
+              reserved 1048576K
+```
+
+9\. Heap snapshot report after GC - Reported before a Young GC or Full GC process:
+
+```
+ [debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        def new generation total 1152K, used 128K [...
+[debug][gc,heap] GC(0)   eden space 1024K,   0% used [...
+[debug][gc,heap] GC(0)   from space 128K, 100% used [...
+[debug][gc,heap] GC(0)   to   space 128K,   0% used [...
+[debug][gc,heap] GC(0)  tenured generation   total 768K, used 418K [...
+[debug][gc,heap] GC(0)    the space 768K,  54% used [...
+[debug][gc,heap] GC(0)  Metaspace
+                          used 328K, capacity 4515K, committed 4864K,
+              reserved 1056768K
+[debug][gc,heap] GC(0)   class space
+                          used 30K, capacity 398K, committed 512K,
+              reserved 1048576K
+```
+
+10\. Start/end of Scavenge phase of a Young GC:
+
+```
+ [debug][gc,phases,start] GC(0) Scavenge
+...
+[debug][gc,phases      ] GC(0) Scavenge 5.753ms
+```
+
+11\. Start/end of Reference Processing phase of a Young GC:
+
+```
+ [debug][gc,phases,start] GC(0) Reference Processing
+...
+[debug][gc,phases      ] GC(0) Reference Processing 0.249ms
+```
+
+12\. Start/end of Weak Processing phase of a Young GC:
+
+```
+ [debug][gc,phases,start] GC(0) Weak Processing
+...
+[debug][gc,phases      ] GC(0) Weak Processing 0.028ms
+```
+
+13\. Start/end of Scrub String Table phase of a Young GC:
+
+```
+ [debug][gc,phases,start] GC(0) Scrub String Table
+[debug][gc,phases      ] GC(0) Scrub String Table 0.117ms
+```
+
+14\. Thread report of a Young GC:
+
+```
+ [debug][gc,task,time   ] GC(1) VM-Thread 994681 1004762 1005959
+[debug][gc,task,time   ] GC(1) GC-Thread 0 entries: 21
+[debug][gc,task,time   ] GC(1) 	[ noop task 995002 995002 ]
+[debug][gc,task,time   ] GC(1) 	[ old-to-young-roots-task 995034 1001885 ]
+[debug][gc,task,time   ] GC(1) 	[ thread-roots-task 1001887 1001898 ]
+...
+[debug][gc,task,time   ] GC(1) 	[ thread-roots-task 1001932 1001933 ]
+[debug][gc,task,time   ] GC(1) 	[ scavenge-roots-task 1001933 1001934 ]
+...
+[debug][gc,task,time   ] GC(1) 	[ scavenge-roots-task 1002736 1003819 ]
+[debug][gc,task,time   ] GC(1) 	[ steal-task 1003820 1004604 ]
+[debug][gc,task,time   ] GC(1) GC-Thread 1 entries: 7
+[debug][gc,task,time   ] GC(1) 	[ noop task 995014 995019 ]
+[debug][gc,task,time   ] GC(1) 	[ old-to-young-roots-task 995041 1001604 ]
+[debug][gc,task,time   ] GC(1) 	[ scavenge-roots-task 1001606 1001614 ]
+[debug][gc,task,time   ] GC(1) 	[ scavenge-roots-task 1001614 1001618 ]
+[debug][gc,task,time   ] GC(1) 	[ thread-roots-task 1001618 1004083 ]
+[debug][gc,task,time   ] GC(1) 	[ steal-task 1004083 1004590 ]
+[debug][gc,task,time   ] GC(1) 	[ waitfor-barrier-task 1004590 1004620 ]
+```
+
+15\. Start/end of a Full GC - Reported at the beginning of a Full GC:
+
+```
+ [info ][gc,start] GC(3) Pause Full (Ergonomics)
+...
+[info ][gc      ] GC(3) Pause Full (Ergonomics) 27M->24M(78M) 17.967ms
+```
+
+16\. Pre Compact phase of a Full GC:
+
+```
+ [debug][gc,phases,start] GC(3) Pre Compact
+...
+[debug][gc,phases      ] GC(3) Pre Compact 0.094ms
+```
+
+17\. Marking phase of a Full GC:
+
+```
+ [info ][gc,phases,start] GC(3) Marking Phase
+...
+[info ][gc,phases      ] GC(3) Marking Phase 6.809ms
+```
+
+18\. Par Mark phase of a Full GC:
+
+```
+ [debug][gc,phases,start] GC(3) Par Mark
+[debug][gc,phases      ] GC(3) Par Mark 4.935ms
+```
+
+19\. Reference Processing phase of a Full GC:
+
+```
+ [debug][gc,phases,start] GC(3) Reference Processing
+...
+[debug][gc,phases      ] GC(3) Reference Processing 0.200ms
+```
+
+20\. Weak Processing phase of a Full GC:
+
+```
+ [0.544s][debug][gc,phases,start] GC(3) Weak Processing
+...
+[0.544s][debug][gc,phases      ] GC(3) Weak Processing 0.013ms
+```
+
+21\. Class Unloading phase of a Full GC:
+
+```
+ [0.544s][debug][gc,phases,start] GC(3) Class Unloading
+[0.545s][debug][gc,phases      ] GC(3) Class Unloading 0.786ms
+```
+
+22\. ClassLoaderData phase of a Full GC:
+
+```
+ [0.544s][debug][gc,phases,start] GC(3) ClassLoaderData
+[0.544s][debug][gc,phases      ] GC(3) ClassLoaderData 0.013ms
+```
+
+23\. ResolvedMethodTable phase of a Full GC:
+
+```
+ [0.544s][debug][gc,phases,start] GC(3) ResolvedMethodTable
+[0.544s][debug][gc,phases      ] GC(3) ResolvedMethodTable 0.009ms
+```
+
+24\. Scrub String phase of a Full GC:
+
+```
+ [0.545s][debug][gc,phases,start] GC(3) Scrub String Table
+[0.545s][debug][gc,phases      ] GC(3) Scrub String Table 0.063ms
+```
+
+25\. Scrub Symbol phase of a Full GC:
+
+```
+ [0.545s][debug][gc,phases,start] GC(3) Scrub Symbol Table
+[0.545s][debug][gc,phases      ] GC(3) Scrub Symbol Table 0.706ms
+```
+
+26\. Summary phase of a Full GC:
+
+```
+ [0.545s][info ][gc,phases,start] GC(3) Summary Phase
+[0.545s][info ][gc,phases      ] GC(3) Summary Phase 0.008ms
+```
+
+27\. Adjust Roots phase of a Full GC:
+
+```
+ [0.545s][info ][gc,phases,start] GC(3) Adjust Roots
+[0.547s][info ][gc,phases      ] GC(3) Adjust Roots 1.611ms
+```
+
+28\. Compaction phase of a Full GC:
+
+```
+ [0.547s][info ][gc,phases,start] GC(3) Compaction Phase
+[0.556s][info ][gc,phases      ] GC(3) Compaction Phase 9.026ms
+```
+
+29\. Post Compact phase of a Full GC:
+
+```
+ [0.556s][info ][gc,phases,start] GC(3) Post Compact
+[0.556s][info ][gc,phases      ] GC(3) Post Compact 0.200ms
+```
+
+20\. Thread report of a Full GC:
+
+```
+ [0.557s][debug][gc,task,time] GC(3) GC-Thread 0 entries: 24
+[0.557s][debug][gc,task,time] GC(3) [ noop task 1047784 1047785 ]
+[0.557s][debug][gc,task,time] GC(3) [ mark-from-roots-task 1047918 ... ]
+[0.557s][debug][gc,task,time] GC(3) [ thread-roots-marking-task ... ]
+...
+[0.557s][debug][gc,task,time] GC(3) [ thread-roots-marking-task  ... ]
+[0.557s][debug][gc,task,time] GC(3) [ mark-from-roots-task 1055931 ... ]
+...
+[0.557s][debug][gc,task,time] GC(3) [ mark-from-roots-task 1055957 ... ]
+[0.557s][debug][gc,task,time] GC(3) [ steal-marking-task 1055957 ... ]
+[0.557s][debug][gc,task,time] GC(3) [ waitfor-barrier-task 1057456 ... ]
+[0.557s][debug][gc,task,time] GC(3) [ steal-region-task 1064307 ... ]
+[0.557s][debug][gc,task,time] GC(3) [ waitfor-barrier-task 1081471 ... ]
+
+[0.557s][debug][gc,task,time] GC(3) GC-Thread 1 entries: 5
+[0.557s][debug][gc,task,time] GC(3) [ noop task 1047795 1047799 ]
+[0.557s][debug][gc,task,time] GC(3) [ mark-from-roots-task 1047911 ... ]
+[0.557s][debug][gc,task,time] GC(3) [ thread-roots-marking-task ... ]
+[0.557s][debug][gc,task,time] GC(3) [ steal-marking-task 1057401 ... ]
+[0.557s][debug][gc,task,time] GC(3) [ steal-region-task 1064315 ... ]
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟"--Xlog:gc+task+time=debug" - Print GC Threads
+
+This section describes how to use the '-Xlog:gc+task+time=debug' JVM option to show multiple GC threads used by the Parallel Collector.
+
+One key characteristic of the Parallel collector is that it uses multiple parallel threads to perform garbage collection processes.
+
+Let's use the "-Xlog:gc+task+time=debug" JVM option to confirm this behavior:
+
+```
+ herong> java -Xms40m -Xmx80m -XX:+UseParallelGC \
+   -Xlog:gc=debug,gc+heap=info,gc+task+time=debug GarbageCollection
+
+[info][gc] Using Parallel
+[info][gc,heap] GC(0) PSYoungGen: 10240K->1504K(11776K)
+[info][gc,heap] GC(0) ParOldGen: 0K->1856K(27648K)
+[info][gc] GC(0) Pause Young (Allocation Failure) 10M->3M(38M) 5.849ms
+
+[debug][gc,task,time] GC(0) VM-Thread 809930 820635 821485
+[debug][gc,task,time] GC(0) GC-Thread 0 entries: 5
+[debug][gc,task,time] GC(0)     [ noop task 811238 811239 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 811259 811316 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 811317 811324 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811324 819815 ]
+[debug][gc,task,time] GC(0)     [ steal-task 819816 820569 ]
+[debug][gc,task,time] GC(0) GC-Thread 1 entries: 19
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811479 811576 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811577 811673 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811673 811675 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811675 811677 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811677 811678 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811678 811679 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811679 811681 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811681 811756 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811756 811761 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811762 811764 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 811765 811766 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 811766 811767 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 811767 811770 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 811770 815786 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 815787 819042 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 819043 819053 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 819053 819728 ]
+[debug][gc,task,time] GC(0)     [ steal-task 819729 820556 ]
+[debug][gc,task,time] GC(0)     [ waitfor-barrier-task 820557 820594 ]
+```
+
+From the output, I can see that the Parallel Collector did use 2 threads to perform the first Minor GC. But I am not sure if those multiple threads were actually executed parallely on multiple CPUs.
+
+Continue to GC(3):
+
+```
+ [debug][gc     ] GC(3) Expanding ParOldGen from 27648K by 27136K to 54784K
+[info ][gc,heap] GC(3) PSYoungGen: 1520K->0K(25600K)
+[info ][gc,heap] GC(3) ParOldGen: 25676K->25000K(54784K)
+[info ][gc     ] GC(3) Pause Full (Ergonomics) 26M->24M(78M) 21.810ms
+
+[debug][gc,task,time] GC(3) VM-Thread 239564030 239584139 239606425
+[debug][gc,task,time] GC(3) GC-Thread 0 entries: 6
+[debug][gc,task,time] GC(3)   [ noop task 239564056 239564063 ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239564487 239567537 ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239567538 ... ]
+[debug][gc,task,time] GC(3)   [ steal-marking-task 239577220 239577223 ]
+[debug][gc,task,time] GC(3)   [ waitfor-barrier-task 239577223 239577243 ]
+[debug][gc,task,time] GC(3)   [ steal-region-task 239584193 239604309 ]
+[debug][gc,task,time] GC(3) GC-Thread 1 entries: 22
+[debug][gc,task,time] GC(3)   [ noop task 239564016 239564018 ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239564512 239575623 ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575625 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575642 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575650 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575651 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575651 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575655 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575656 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575657 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575664 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575667 ... ]
+[debug][gc,task,time] GC(3)   [ thread-roots-marking-task 239575668 ... ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239575669 239575670 ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239575670 239575672 ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239575672 239575681 ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239575681 239575698 ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239575699 239575699 ]
+[debug][gc,task,time] GC(3)   [ mark-from-roots-task 239575699 239575700 ]
+[debug][gc,task,time] GC(3)   [ steal-marking-task 239575700 239577231 ]
+[debug][gc,task,time] GC(3)   [ steal-region-task 239584202 239604309 ]
+[debug][gc,task,time] GC(3)   [ waitfor-barrier-task 239604316 239604350 ]
+```
+
+The output also shows that the Parallel Collector did use 2 multiple threads to perform the first Full GC. But I am not sure if those multiple threads were actually executed parallely on multiple CPUs.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟"-XX:ParallelGCThreads" - # of Threads
+
+This section describes how to use the '-XX:ParallelGCThreads' JVM option to control the number threads to be used by the Parallel Collector.
+
+In the previous tutorial, we learned that the Parallel collector did use 2 parallel threads to perform both Young and Full GCs.
+
+The next question is then how the Parallel collector determines the number of threads to use and any options to control it.
+
+By search Java documentation, I found this description: "On a machine with N hardware threads where N is greater than 8, the parallel collector uses a fixed fraction of N as the number of garbage collector threads. The fraction is approximately 5/8 for large values of N. On selected platforms, the fraction drops to 5/16\. At values of N below 8, the number used is N.
+
+But the output from the previous tutorial contradicts what's said in Java documentation. The Parallel collector used 2 parallel threads, however my virtualized Windows 10 computer has 4 cores and 8 logical processors. The Parallel collector should use 8 threads.
+
+If you want control the number of parallel treads explicitly, you can use the "-XX:ParallelGCThreads=n" JVM option. In the example below, I ran the test program with 4 parallel threads:
+
+```
+ herong> java -Xms40m -Xmx80m -XX:+UseParallelGC \
+   -Xlog:gc=debug,gc+heap=info,gc+task+time=debug \
+   -XX:ParallelGCThreads=4 GarbageCollection
+
+[info][gc] Using Parallel
+[info][gc,heap] GC(0) PSYoungGen: 10240K->1504K(11776K)
+[info][gc,heap] GC(0) ParOldGen: 0K->1843K(27648K)
+[info][gc] GC(0) Pause Young (Allocation Failure) 10M->3M(38M) 4.245ms
+[debug][gc,task,time] GC(0) VM-Thread 861668 869434 870054
+[debug][gc,task,time] GC(0) GC-Thread 0 entries: 3
+[debug][gc,task,time] GC(0)     [ noop task 861773 861773 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861803 867733 ]
+[debug][gc,task,time] GC(0)     [ steal-task 867733 868332 ]
+[debug][gc,task,time] GC(0) GC-Thread 1 entries: 10
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 861794 861842 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861852 861884 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861884 861886 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861886 861890 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861890 861892 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861892 861893 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861894 862264 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 862265 862271 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 862271 864296 ]
+[debug][gc,task,time] GC(0)     [ steal-task 864297 868355 ]
+[debug][gc,task,time] GC(0) GC-Thread 2 entries: 4
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 861805 861836 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861845 862009 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 862010 866709 ]
+[debug][gc,task,time] GC(0)     [ steal-task 866709 869320 ]
+[debug][gc,task,time] GC(0) GC-Thread 3 entries: 9
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861818 861964 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861989 861990 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861991 861993 ]
+[debug][gc,task,time] GC(0)     [ thread-roots-task 861993 861994 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 861994 861995 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 861995 861997 ]
+[debug][gc,task,time] GC(0)     [ scavenge-roots-task 861998 863620 ]
+[debug][gc,task,time] GC(0)     [ steal-task 863621 868332 ]
+[debug][gc,task,time] GC(0)     [ waitfor-barrier-task 868333 869363 ]
+```
+
+The output confirms that 4 threads were used by the Parallel collector for Young GCs.
+
+Continue to GC(3):
+
+```
+ [debug][gc] GC(3) Expanding ParOldGen from 27648K by 27136K to 54784K
+[info ][gc,heap     ] GC(3) PSYoungGen: 1520K->0K(25600K)
+[info ][gc,heap     ] GC(3) ParOldGen: 25943K->25253K(54784K)
+[info ][gc          ] GC(3) Pause Full (Ergonomics) 26M->24M(78M) 17.253ms
+[debug][gc,task,time] GC(3) VM-Thread 7386871 7400301 7420455
+[debug][gc,task,time] GC(3) GC-Thread 0 entries: 4
+[debug][gc,task,time] GC(3)     [ noop task 7386888 7386888 ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7386971 7390691 ]
+[debug][gc,task,time] GC(3)     [ steal-marking-task 7390691 7393648 ]
+[debug][gc,task,time] GC(3)     [ steal-region-task 7400577 7418907 ]
+[debug][gc,task,time] GC(3) GC-Thread 1 entries: 5
+[debug][gc,task,time] GC(3)     [ noop task 7386870 7386870 ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7386982 ... ]
+[debug][gc,task,time] GC(3)     [ steal-marking-task 7391065 7393634 ]
+[debug][gc,task,time] GC(3)     [ steal-region-task 7400571 7418883 ]
+[debug][gc,task,time] GC(3)     [ waitfor-barrier-task 7418886 7418943 ]
+[debug][gc,task,time] GC(3) GC-Thread 2 entries: 4
+[debug][gc,task,time] GC(3)     [ noop task 7386901 7386902 ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7386989 ... ]
+[debug][gc,task,time] GC(3)     [ steal-marking-task 7388408 7393642 ]
+[debug][gc,task,time] GC(3)     [ steal-region-task 7400560 7418900 ]
+[debug][gc,task,time] GC(3) GC-Thread 3 entries: 22
+[debug][gc,task,time] GC(3)     [ noop task 7386914 7386914 ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7386959 7387128 ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387129 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387152 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387153 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387154 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387785 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387787 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387789 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387802 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387804 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387807 ... ]
+[debug][gc,task,time] GC(3)     [ thread-roots-marking-task 7387808 ... ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7387810 7387810 ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7387811 7387813 ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7387813 7387995 ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7387996 7388012 ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7388012 7388013 ]
+[debug][gc,task,time] GC(3)     [ mark-from-roots-task 7388013 7388014 ]
+[debug][gc,task,time] GC(3)     [ steal-marking-task 7388014 7393629 ]
+[debug][gc,task,time] GC(3)     [ waitfor-barrier-task 7393629 7393662 ]
+[debug][gc,task,time] GC(3)     [ steal-region-task 7400476 7418883 ]
+```
+
+The output confirms that 4 threads were used by the Parallel collector for Full GCs.
+
+Conclusion: the Parallel collector may not detect the number cores/logical processors correctly on your Virtualized Windows computer to calculate the number of threads to use. You should use "-XX:ParallelGCThreads" JVM option to specify the number of threads to use by the Parallel collector.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Parallel Collector Stops Application for Minor/Major GC
+
+This section provides log messages showing that the Parallel Collector stops the application for both Minor GC and Major GC.
+
+The next thing we want to confirm is stop-the-world behavior of the Parallel Collector. There seems to be no easy way to do this in JVM 9 or higher releases. I could not find any "-Xlog" options to generate any log messages about when and for how long application gets stopped by the Parallel Collector.
+
+But if you are still using JVM 8 or older releases, you can confirm stop-the-world behavior of the Parallel Collector with "-XX:+PrintGCApplicationStoppedTime" and "-XX:+PrintGCApplicationConcurrentTime" JVM options:
+
+```
+ herong> \Progra~1\java\jdk1.8.0\bin\java -Xms2m -Xmx64m
+   -XX:+UseParallelGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime
+   GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+
+0.735: Application time: 0.1749388 seconds
+0.736: [GC (Allocation Failure) [PSYoungGen: 511K->248K(768K)] 1280...
+0.740: [Full GC (Ergonomics) [PSYoungGen: 248K->238K(768K)] [ParOld...
+0.755: Total time for which application threads were stopped:
+   0.0197849 seconds, Stopping threads took: 0.0000875 seconds
+
+1   3145728   1821016   1324712
+
+1.760: Application time: 1.0048803 seconds
+1.760: [GC (Allocation Failure) [PSYoungGen: 748K->248K(768K)] 2189...
+1.768: [Full GC (Ergonomics) [PSYoungGen: 248K->0K(768K)] [ParOldGe...
+1.786: Total time for which application threads were stopped:
+   0.0255083 seconds, Stopping threads took: 0.0001301 seconds
+
+2   5505024   3124776   2380248
+
+2.776: Application time: 0.9903883 seconds
+2.776: [GC (Allocation Failure) [PSYoungGen: 474K->224K(768K)] 3156...
+2.783: Total time for which application threads were stopped:
+   0.0064196 seconds, Stopping threads took: 0.0001250 seconds
+
+3   5505024   2045928   3459096
+
+3.791: Application time: 1.0084043 seconds
+3.791: [GC (Allocation Failure) [PSYoungGen: 695K->240K(1024K)] 414...
+3.798: Total time for which application threads were stopped:
+   0.0065890 seconds, Stopping threads took: 0.0001242 seconds
+...
+```
+
+As we can see from the output:
+
+*   The application were stopped for 4 times within the first 4 seconds.
+*   This first stop lasted for 0.0197849 seconds for a combination of minor and major GCs (Full GCs).
+*   This second stop lasted for 0.0255083 seconds for a combination of minor and major GCs (Full GCs).
+*   This third stop lasted for 0.0064196 seconds for minor GC only.
+*   This forth stop lasted for 0.0065890 seconds for a minor GC only.
+*   Application stopped a longer period of time for Full GCs than Minor GCs.
+
+**Conclusion**: The Parallel collector does stop the application completely (stop-the-world) for both minor GC and major GC.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟PSYoungGen Collector Using Tenuring Age
+
+This section demonstrates that the PSYoungGen Collector uses Tenuring Age to perform Young generation GC. But it does not maintain the object age distribution list.
+
+Does the PSYoungGen collector use Tenuring Age Distribution? Let's use our second test program, GarbageCollection2.java to find out:
+
+```
+ herong> java -Xms240m -Xmx240m -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -XX:+UseParallelGC -Xlog:gc=debug,gc+heap=debug,gc+age=trace \
+   GarbageCollection2
+
+[0.013s][debug][gc,heap] Minimum heap 251658240  Initial heap 251658240
+                         Maximum heap 251658240
+[0.015s][info ][gc     ] Using Parallel
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   209715200   184304096   25411104
+...
+16   209715200   168575216   41139984
+[debug][gc,heap] GC(0) Heap before GC invocations=1 (full 0): PSYoungGen
+                        total 81920K, used 40175K [...
+[debug][gc,heap] GC(0)   eden space 40960K, 98% used [...
+[debug][gc,heap] GC(0)   from space 40960K, 0% used [...
+[debug][gc,heap] GC(0)   to   space 40960K, 0% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 122880K, used 0K [...
+[debug][gc,heap] GC(0)   object space 122880K, 0% used [...
+
+[debug][gc,age ] GC(0) Desired survivor size 41943040 bytes,
+                       new threshold 7 (max threshold 15)
+
+[info ][gc,heap] GC(0) PSYoungGen: 40175K->16272K(81920K)
+[info ][gc,heap] GC(0) ParOldGen: 0K->16K(122880K)
+[info ][gc] GC(0) Pause Young (Allocation Failure) 39M->15M(200M) 10.897ms
+
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0): PSYoungGen
+                        total 81920K, used 16272K [...
+[debug][gc,heap] GC(0)   eden space 40960K, 0% used [...
+[debug][gc,heap] GC(0)   from space 40960K, 39% used [...
+[debug][gc,heap] GC(0)   to   space 40960K, 0% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 122880K, used 16K [...
+[debug][gc,heap] GC(0)   object space 122880K, 0% used [...
+```
+
+The log messages of GC(0) confirm that the PSYoungGen collector does use tenuring age to control when to promote live objects in "from" space to "tenured" generation, see "Desired survivor size 41943040 bytes, new threshold 7 (max threshold 15)" log message.
+
+But the PSYoungGen collector does not maintain the object age distribution list as we saw for the Serial collector.
+
+Continue to GC(1):
+
+```
+ ...
+55   209715200   151319312   58395888
+[debug][gc,heap] GC(1) Heap before GC invocations=2 (full 0): PSYoungGen
+                        total 81920K, used 57011K [...
+[debug][gc,heap] GC(1)   eden space 40960K, 99% used [...
+[debug][gc,heap] GC(1)   from space 40960K, 39% used [...
+[debug][gc,heap] GC(1)   to   space 40960K, 0% used [...
+[debug][gc,heap] GC(1)  ParOldGen       total 122880K, used 16K [...
+[debug][gc,heap] GC(1)   object space 122880K, 0% used [...
+
+[debug][gc,age ] GC(1) Desired survivor size 41943040 bytes,
+                       new threshold 7 (max threshold 15)
+
+[info ][gc,heap] GC(1) PSYoungGen: 57011K->30576K(81920K)
+[info ][gc,heap] GC(1) ParOldGen: 16K->16K(122880K)
+[info ][gc] GC(1) Pause Young (Allocation Failure) 55M->29M(200M) 10.032ms
+
+[debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0): PSYoungGen
+                        total 81920K, used 30576K [...
+[debug][gc,heap] GC(1)   eden space 40960K, 0% used [...
+[debug][gc,heap] GC(1)   from space 40960K, 74% used [...
+[debug][gc,heap] GC(1)   to   space 40960K, 0% used [...
+[debug][gc,heap] GC(1)  ParOldGen       total 122880K, used 16K [...
+[debug][gc,heap] GC(1)   object space 122880K, 0% used [...
+```
+
+As you can see "from" usage grew from 39% to 74% and nothing promoted to "tenured" generation. So 39% objects survived from the previous GC stayed in "from" and become "age 2". 35% new objects survived in the GC got promoted from "eden" to "from" as "age 1". However, the PSYoungGen collector did not generate any log messages on object age distribution as we saw for the Serial collector
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Parallel Collector Changing NewRatio and SurvivorRatio
+
+This section demonstrates that the Parallel Collector changes the NewRatio and the SurvivorRatio dynamically, even they are specified in command line.
+
+While testing the Parallel collector, I also noticed that it changes the NewRatio and the SurvivorRatio dynamically, even they are specified in command line. For example:
+
+```
+ herong> java -Xms1200m -Xmx1200m -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+    -XX:+UseParallelGC -Xlog:gc=debug,gc+heap=debug GarbageCollection2
+
+[debug][gc,heap] Minimum heap 1258291200  Initial heap 1258291200
+                  Maximum heap 1258291200
+[info ][gc     ] Using Parallel
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   1048576000   1019201200   29374800
+...
+172   1048576000   839891968   208684032
+[debug][gc,heap] GC(0) Heap before GC invocations=1 (full 0): PSYoungGen...
+[debug][gc,heap] GC(0)   eden space 204800K, 99% used [...
+[debug][gc,heap] GC(0)   to   space 204800K, 0% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 614400K, used 0K [...
+[debug][gc,heap] GC(0)   object space 614400K, 0% used [...
+
+[info ][gc,heap] GC(0) PSYoungGen: 203793K->35808K(409600K)
+[info ][gc,heap] GC(0) ParOldGen: 0K->8K(614400K)
+[info ][gc     ] GC(0) Pause Young (Allocation Failure)
+                       199M->34M(1000M) 11.262ms
+
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0): PSYoungGen...
+[debug][gc,heap] GC(0)   eden space 204800K, 0% used [...
+[debug][gc,heap] GC(0)   from space 204800K, 17% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 614400K, used 8K [...
+[debug][gc,heap] GC(0)   object space 614400K, 0% used [...
+   -- NewRatio almost respected as 1: 614400K/3*204800K
+   -- SurvivorRatio respected perfectly as 1: 204800K/204800K
+
+...
+964   1048576000   802244880   246331120
+[debug][gc,heap] GC(4) Heap before GC invocations=5 (full 0): PSYoungGen...
+[debug][gc,heap] GC(4)   eden space 204800K, 99% used [...
+[debug][gc,heap] GC(4)   from space 204800K, 17% used [...
+[debug][gc,heap] GC(4)   to   space 204800K, 0% used [...
+[debug][gc,heap] GC(4)  ParOldGen       total 614400K, used 32K [...
+[debug][gc,heap] GC(4)   object space 614400K, 0% used [...
+
+[info ][gc,heap] GC(4) PSYoungGen: 240525K->35760K(409600K)
+[info ][gc,heap] GC(4) ParOldGen: 32K->40K(614400K)
+[info ][gc     ] GC(4) Pause Young (Allocation Failure)
+                       234M->34M(1000M) 7.335ms
+
+[debug][gc,heap] GC(4) Heap after GC invocations=5 (full 0): PSYoungGen...
+[debug][gc,heap] GC(4)   eden space 204800K, 0% used [...
+[debug][gc,heap] GC(4)   from space 204800K, 17% used [...
+[debug][gc,heap] GC(4)   to   space 35840K, 0% used [...
+[debug][gc,heap] GC(4)   object space 614400K, 0% used [...
+
+965   1048576000   1010867616   37708384
+   -- "to" space size dynamically changed from 204800K to 35840K
+
+1163   1048576000   802240432   246335568
+[debug][gc,heap] GC(5) Heap before GC invocations=6 (full 0): PSYoungGen...
+[debug][gc,heap] GC(5)   eden space 204800K, 99% used [...
+[debug][gc,heap] GC(5)   from space 204800K, 17% used [...
+[debug][gc,heap] GC(5)   to   space 35840K, 0% used [...
+[debug][gc,heap] GC(5)   object space 614400K, 0% used [...
+
+[info ][gc,heap] GC(5) PSYoungGen: 240522K->35808K(578560K)
+[info ][gc,heap] GC(5) ParOldGen: 40K->48K(614400K)
+[info ][gc     ] GC(5) Pause Young (Allocation Failure)
+                       234M->35M(1165M) 9.329ms
+
+[debug][gc,heap] GC(5) Heap after GC invocations=6 (full 0): PSYoungGen...
+[debug][gc,heap] GC(5)   eden space 542720K, 0% used [...
+[debug][gc,heap] GC(5)   from space 35840K, 99% used [...
+[debug][gc,heap] GC(5)   to   space 35840K, 0% used [...
+[debug][gc,heap] GC(5)   object space 614400K, 0% used [...
+   -- NewRatio changed to: 614400K/578560K = 1.06
+   -- SurvivorRatio changed to: 542720K/35840K = 15.14
+```
+
+As you can see from the output, we lost the control of NewRatio and SurvivorRatio. The Parallel collector changed them dynamically.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Parallel Collector Adaptive Size Policy
+
+This section describes the Adaptive Size Policy supported by the Parallel Collector to dynamically change heap generation sizes to latency, throughput and footprint goals sequentially.
+
+In the last tutorial, we observed that the Parallel collector dynamically changes Young generation size and survivor space ratio.
+
+This behavior is actually a result of the "Adaptive Size Policy" used by the Parallel collector. Here is how it is described in Java documentation:
+
+1\. The "Adaptive Size Policy" is turned on by default with the Parallel collector ("-XX:+UseParallelGC" JVM option).
+
+2\. The "Adaptive Size Policy" can be turned on and off explicitly using -XX:+UseAdaptiveSizePolicy and "-XX:-UseAdaptiveSizePolicy" JVM options.
+
+3\. If it is turned on, the "Adaptive Size Policy" will change heap generation sizes dynamically to meet the following goals sequentially:
+
+*   Latency Goal - Reduce application pauses below a desired level.
+*   Throughput Goal - Increase the ratio of application execution time over pause time above a desired level.
+*   Footprint Goal - Reduce the heap size as low as possible.
+
+4\. The "Adaptive Size Policy" uses the following simple approach to meet above goals:
+
+*   Step 1 - Try to meet the Latency Goal: Check the application pause time. If it is greater than the desired level, then reduce the generations sizes to reduce application pause time.
+*   Step 2 - Try to meet the Throughput Goal: Check the ratio of application execution time over pause time, if the Latency goal is being met. If the ratio of application execution time over pause time is lower than the desired level, then increase the generation sizes to increase application execution time.
+*   Step 3 - Try to meet the Footprint Goal: If both Latency goal and Throughput goal are being met, then generation sizes to reduce heap memory footprint.
+
+5\. The latency goal can be controlled by the "-XX:MaxGCPauseMillis=nnn" JVM option, where nnn specifies the number of milliseconds as the desired the application pause time. The default is "-XX:MaxGCPauseMillis=4294967295".
+
+6\. The throughput goal can be controlled by the "-XX:GCTimeRatio=nnn" JVM option, where nnn is used in a "1/(+nnn)" expression specifying the percentage of time for application GC pauses The default is "-XX:GCTimeRatio=99", which says 1% (or 1/(1+99)) of time should be used for application GC pauses.
+
+7\. The "-XX:AdaptiveSizePolicyOutputInterval=1" and "PrintAdaptiveSizePolicy" JVM options can be used to print out GC log messages on how Adaptive Size Policy was carried out at each GC.
+
+The "Adaptive Size Policy" feature sounds great. We will test it out in the next tutorials.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Adaptive Size Policy Log Messages
+
+This section provides examples and explanations of log messages generated '-Xlog:gc+ergo=debug' and '-XX:AdaptiveSizePolicyOutputInterval=1' JVM options used with the Parallel collector.
+
+As we described in the previous section, the "Adaptive Size Policy" feature supported by the Parallel collector dynamically changes generation sizes to meet application performance goals.
+
+Before we do any further tests, let's run our test program GarbageCollection2.java again with "-Xlog:gc+ergo=debug" and "-XX:AdaptiveSizePolicyOutputInterval=1" JVM options to see what we can get from the log messages:
+
+```
+ herong> java -Xms1200m -Xmx1200m -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -XX:+UseParallelGC -Xlog:gc=debug,gc+heap=debug,gc+ergo=debug \
+   -XX:AdaptiveSizePolicyOutputInterval=1 \
+   GarbageCollection2
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   1048576000   1019201136   29374864
+...
+172   1048576000   839891904   208684096
+[debug][gc,heap] GC(0) Heap before GC invocations=1 (full 0): PSYoungGen...
+[debug][gc,heap] GC(0)   eden space 204800K, 99% used [...
+[debug][gc,heap] GC(0)   from space 204800K, 0% used [...
+[debug][gc,heap] GC(0)   to   space 204800K, 0% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 614400K, used 0K [...
+[debug][gc,heap] GC(0)   object space 614400K, 0% used [...
+
+   -- Message generated by -Xlog:gc+ergo=debug
+[debug][gc,ergo] GC(0) AdaptiveSizeStart:  collection: 1
+[debug][gc,ergo] GC(0) PSAdaptiveSizePolicy::compute_eden_space_size
+                       limits: desired_eden_size: 419430400
+             old_eden_size: 209715200 eden_limit: 209715200
+             cur_eden: 209715200 max_eden_size: 209715200
+             avg_young_live: 35652144
+[debug][gc,ergo] GC(0) PSAdaptiveSizePolicy::compute_eden_space_size:
+                       costs minor_time: 0.019342 major_cost: 0.000000
+             mutator_cost: 0.980658 throughput_goal: 0.990000
+[debug][gc,ergo] GC(0) Live_space: 304087616 free_space: 419430400
+[debug][gc,ergo] GC(0) Old eden_size: 209715200 desired_eden_size: 209715200
+[debug][gc,ergo] GC(0) AdaptiveSizeStop: collection: 1
+
+[info ][gc,heap] GC(0) PSYoungGen: 203793K->34816K(409600K)
+[info ][gc,heap] GC(0) ParOldGen: 0K->16K(614400K)
+[info ][gc     ] GC(0) Pause Young (Allocation Failure)
+                       199M->34M(1000M) 11.677ms
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0): PSYoungGen...
+[debug][gc,heap] GC(0)   eden space 204800K, 0% used [...
+[debug][gc,heap] GC(0)   from space 204800K, 17% used [...
+[debug][gc,heap] GC(0)   to   space 204800K, 0% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 614400K, used 16K [...
+[debug][gc,heap] GC(0)   object space 614400K, 0% used [...
+
+    -- Extra message generated by -XX:AdaptiveSizePolicyOutputInterval=1
+[debug][gc,ergo] GC(0) UseAdaptiveSizePolicy actions to meet
+                       *** throughput goal ***
+[debug][gc,ergo] GC(0)                   GC overhead (%)
+[debug][gc,ergo] GC(0)   Young generation:    1.93  (attempted to grow)
+[debug][gc,ergo] GC(0)   Tenured generation:  0.00  (no change)
+...
+```
+
+Let's take a closer look at the "Adaptive Size" collection message:
+
+```
+ [debug][gc,ergo] GC(0) AdaptiveSizeStart:  collection: 1
+[debug][gc,ergo] GC(0) PSAdaptiveSizePolicy::compute_eden_space_size limits:
+   desired_eden_size: 419430400 old_eden_size: 209715200
+   eden_limit: 209715200 cur_eden: 209715200
+   max_eden_size: 209715200 avg_young_live: 35652144
+[debug][gc,ergo] GC(0) PSAdaptiveSizePolicy::compute_eden_space_size:
+   costs minor_time: 0.019342 major_cost: 0.000000
+   mutator_cost: 0.980658 throughput_goal: 0.990000
+[debug][gc,ergo] GC(0) Live_space: 304087616 free_space: 419430400
+[debug][gc,ergo] GC(0) Old eden_size: 209715200 desired_eden_size: 209715200
+[debug][gc,ergo] GC(0) AdaptiveSizeStop: collection: 1
+```
+
+Here is a detailed explanation of each line in the message:
+
+```
+ [debug][gc,ergo] GC(0) AdaptiveSizeStart:  collection: 1
+   -- Collection #1 started
+
+[debug][gc,ergo] GC(0) PSAdaptiveSizePolicy::compute_eden_space_size limits:
+   desired_eden_size: 419430400 old_eden_size: 209715200
+   eden_limit: 209715200 cur_eden: 209715200
+   max_eden_size: 209715200 avg_young_live: 35652144
+   -- Suggested to increase "eden" to 419430400 based on space analysis
+
+[debug][gc,ergo] GC(0) PSAdaptiveSizePolicy::compute_eden_space_size:
+   costs minor_time: 0.019342 major_cost: 0.000000
+   mutator_cost: 0.980658 throughput_goal: 0.990000
+   -- Summary of the current costs and goal.
+
+[debug][gc,ergo] GC(0) Live_space: 304087616 free_space: 419430400
+   -- Not sure where the live space came from
+
+[debug][gc,ergo] GC(0) Old eden_size: 209715200 desired_eden_size: 209715200
+   -- Suggested to keep "eden" as 209715200 based on GC time cost
+
+[debug][gc,ergo] GC(0) AdaptiveSizeStop: collection: 1
+   -- Collection #1 started
+```
+
+Let's take a closer look at the "Adaptive Size" collection message:
+
+```
+ [debug][gc,ergo] GC(0) UseAdaptiveSizePolicy actions to meet
+                       *** throughput goal ***
+[debug][gc,ergo] GC(0)                   GC overhead (%)
+[debug][gc,ergo] GC(0)   Young generation:    1.93  (attempted to grow)
+[debug][gc,ergo] GC(0)   Tenured generation:  0.00  (no change)
+```
+
+Here is a detailed explanation of each line in the message:
+
+```
+ [debug][gc,ergo] GC(0) UseAdaptiveSizePolicy actions to meet
+                       *** throughput goal ***
+   -- Decided to meet Throughput goal
+
+[debug][gc,ergo] GC(0)                    GC overhead (%)
+[debug][gc,ergo] GC(0)     Young generation:  1.93  (attempted to grow)
+   -- Minor GC time percentage so far: 3.38%
+   -- Which is above the default desire level of 1%
+   -- Decided to increase Young generation to reduce GC time
+
+[debug][gc,ergo] GC(0)     Tenured generation:      0.00	  (no change)
+   -- Major GC time percentage so far: 0.00%
+   -- Decided to keep Tenured generation size
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟"-Xlog:gc+ergo=trace" - Minor GC Report
+
+This section provides examples of log messages generated from '--Xlog:gc+ergo=trace' that tells us what happened at each Parallel Minor GC.
+
+From last tutorial, we learned that the "-Xlog:gc+ergo=debug" option generates adaptive heap size related log messages at the DEBUG level. If we lower it to the TRACE level, additional log messages will be generated to help us to learn more about how Minor GC is performed.
+
+For example, if we run GarbageCollection2.java with the following JVM options, we can get enough log messages to figure what happened at each Minor GC:
+
+```
+ herong> java -Xms400m -Xmx400m -XX:+UseParallelGC \
+   -Xlog:gc=debug,gc+heap=debug,gc+ergo=trace GarbageCollection2
+```
+
+Here is what happened at GC(0), a Minor GC:
+
+```
+ ...
+74   402128896   298309936   103818960
+[debug][gc,heap] GC(0) Heap before GC invocations=1 (full 0): PSYoungGen
+                         total 119296K, used 101385K [...
+   -- 101385K bytes newly allocated in "eden" before GC						
+
+[debug][gc,heap] GC(0)   eden space 102400K, 99% used [...
+[debug][gc,heap] GC(0)   from space 16896K, 0% used [...
+[debug][gc,heap] GC(0)   to   space 16896K, 0% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 273408K, used 0K [...
+[debug][gc,heap] GC(0)   object space 273408K, 0% used [...
+
+[trace][gc,ergo] GC(0) AdaptiveSizePolicy::minor_collection_end:
+                         minor gc cost: 0.021436  average: 0.021436
+                         minor pause: 11.664955 minor period 532.523284
+   -- Minor GC ended and application paused for about 11 ms.
+
+[trace][gc,ergo] GC(0) AdaptiveSizePolicy::update_averages:
+                       survived: 16711952  promoted: 18891040
+             overflow: false
+   -- 16711952 bytes survived in "from" space
+   -- 18891040 bytes promoted to Tenured generation
+   -- Bytes removed: 101385K - 16711952 - 18891040 = 68215248 bytes
+   -- Bytes in Tenured generation: 0 + 18891040 = 18891040 bytes = 18448K
+
+...
+[info ][gc,heap] GC(0) PSYoungGen: 101385K->16320K(119296K)
+[info ][gc,heap] GC(0) ParOldGen: 0K->18448K(273408K)
+   -- Young generation usage reduced. Old generation usage expanded.
+
+[info ][gc     ] GC(0) Pause Young (Allocation Failure)
+                       99M->33M(383M) 12.294ms
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0): PSYoungGen
+                         total 119296K, used 16320K [...
+[debug][gc,heap] GC(0)   eden space 102400K, 0% used [...
+[debug][gc,heap] GC(0)   from space 16896K, 96% used [...
+[debug][gc,heap] GC(0)   to   space 16896K, 0% used [...
+[debug][gc,heap] GC(0)  ParOldGen       total 273408K, used 18448K [...
+[debug][gc,heap] GC(0)   object space 273408K, 6% used [...
+```
+
+Here is what happened at GC(1), a Minor GC:
+
+```
+ ...
+172   402128896   261709136   140419760
+[debug][gc,heap] GC(1) Heap before GC invocations=2 (full 0): PSYoungGen
+                         total 119296K, used 118680K [...
+   -- 118680K bytes newly allocated in "eden" before GC
+
+[debug][gc,heap] GC(1)   eden space 102400K, 99% used [...
+[debug][gc,heap] GC(1)   from space 16896K, 96% used [...
+[debug][gc,heap] GC(1)   to   space 16896K, 0% used [...
+[debug][gc,heap] GC(1)  ParOldGen       total 273408K, used 18448K [...
+[debug][gc,heap] GC(1)   object space 273408K, 6% used [...
+
+[trace][gc,ergo] GC(1) AdaptiveSizePolicy::minor_collection_end:
+                         minor gc cost: 0.371056  average: 0.196423
+                         minor pause: 9.135286 minor period 15.484390
+   -- Minor GC ended and application paused for about 9 ms.
+
+[trace][gc,ergo] GC(1) AdaptiveSizePolicy::update_averages:
+                       survived: 16728352  promoted: 19931440
+             overflow: false
+   -- 16728352 bytes survived in "from" space
+   -- 19931440 bytes promoted to Tenured generation
+   -- Bytes removed: 118680K - 16728352 - 19931440 = 84868528 bytes
+   -- Bytes in Tenured generation: 18891040 + 19931440
+      = 38822480 bytes = 37912K			
+
+[info ][gc,heap] GC(1) PSYoungGen: 118680K->16336K(119296K)
+[info ][gc,heap] GC(1) ParOldGen: 18448K->37912K(273408K)
+[info ][gc     ] GC(1) Pause Young (Allocation Failure)
+                       133M->52M(383M) 9.687ms
+   -- Young generation usage reduced. Old generation usage expanded.
+
+[debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0): PSYoungGen
+                        total 119296K, used 16336K [...
+[debug][gc,heap] GC(1)   eden space 102400K, 0% used [...
+[debug][gc,heap] GC(1)   from space 16896K, 96% used [...
+[debug][gc,heap] GC(1)   to   space 16896K, 0% used [...
+[debug][gc,heap] GC(1)  ParOldGen       total 273408K, used 37912K [...
+[debug][gc,heap] GC(1)   object space 273408K, 13% used [...
+```
+
+Here is what happened at GC(15), a Full GC:
+
+```
+ [debug][gc,heap] GC(15) Heap before GC invocations=16 (full 1): PSYoungGen
+                          total 119296K, used 16384K [...
+[debug][gc,heap] GC(15)   eden space 102400K, 0% used [...
+[debug][gc,heap] GC(15)   from space 16896K, 96% used [...
+[debug][gc,heap] GC(15)   to   space 16896K, 0% used [...
+[debug][gc,heap] GC(15)  ParOldGen       total 273408K, used 263105K [...
+[debug][gc,heap] GC(15)   object space 273408K, 96% used [...
+
+[trace][gc,ergo] GC(15) psAdaptiveSizePolicy::major_collection_end:
+                          major gc cost: 0.018823  average: 0.018823
+                          major pause: 15.877642 major period 827.628856
+   -- Major GC ended and application paused for about 15 ms.
+
+[debug][gc] GC(15) Shrinking ParOldGen from 273408K by 110080K to 163328K
+   -- Old generation allocation shrank, decided by AdaptiveSizePolicy
+
+[info ][gc,heap] GC(15) PSYoungGen: 16384K->0K(119296K)
+[info ][gc,heap] GC(15) ParOldGen: 263105K->34622K(163328K)
+[info ][gc     ] GC(15) Pause Full (Ergonomics) 272M->33M(276M) 24.506ms
+   -- Young generation usage reduced. Old generation usage reduced.
+
+[debug][gc,heap] GC(15) Heap after GC invocations=16 (full 1): PSYoungGen
+                          total 119296K, used 0K [...
+[debug][gc,heap] GC(15)   eden space 102400K, 0% used [...
+[debug][gc,heap] GC(15)   from space 16896K, 0% used [...
+[debug][gc,heap] GC(15)   to   space 16896K, 0% used [...
+[debug][gc,heap] GC(15)  ParOldGen       total 163328K, used 34622K [...
+[debug][gc,heap] GC(15)   object space 163328K, 21% used [...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Adaptive Size Policy Changed Survivor Space
+
+This section provides a tutorial on how Adaptive Size Policy used by the Parallel collector changed the survivor space in the Young generation.
+
+In GC log example presented in the last tutorial, the Adaptive Size Policy of the Parallel collector suggested to keep Young generation size as is.
+
+In this tutorial, we will look at GC log example from the test that suggests to change the survivor space size:
+
+```
+ herong> java -Xms1200m -Xmx1200m -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+    -XX:+UseParallelGC -Xlog:gc=debug,gc+heap=debug,gc_ergo=trace \
+  GarbageCollection2
+...
+1461   1205862400   854657656   351204744
+[debug][gc,heap] GC(4) Heap before GC invocations=5 (full 0): PSYoungGen
+                         total 358400K, used 342933K [...
+[debug][gc,heap] GC(4)   eden space 307200K, 99% used [...
+[debug][gc,heap] GC(4)   from space 51200K, 69% used [...
+[debug][gc,heap] GC(4)   to   space 51200K, 0% used [...
+[debug][gc,heap] GC(4)  ParOldGen       total 819200K, used 40K [...
+[debug][gc,heap] GC(4)   object space 819200K, 0% used [...
+
+[trace][gc,ergo] GC(4) AdaptiveSizePolicy::minor_collection_end:
+                       minor gc cost: 0.231551  average: 0.179291
+[trace][gc,ergo] GC(4)   minor pause: 7.582323 minor period 25.163547
+[trace][gc,ergo] GC(4) AdaptiveSizePolicy::update_averages:
+                       survived: 36635168  promoted: 0  overflow: false
+
+[debug][gc,ergo] GC(4) AdaptiveSizeStart:  collection: 5
+[trace][gc,ergo] GC(4) old_gen_capacity: 838860800
+                       young_gen_capacity: 367001600
+[trace][gc,ergo] GC(4) avg_survived: 36638520.000000
+                       avg_deviation: 11309.248047
+[debug][gc,ergo] GC(4) avg_survived_padded_avg: 36672448.000000
+[trace][gc,ergo] GC(4) avg_promoted_avg: 8200.192383
+                       avg_promoted_dev: 2222.899414
+[debug][gc,ergo] GC(4) avg_promoted_padded_avg: 14868.890625
+                         avg_pretenured_padded_avg: 0.000000
+             tenuring_thresh: 6  target_size: 36700160
+   -- Suggested to set tenuring threshold to 6
+   -- Suggested to set survivor space to 36700160
+
+[trace][gc,ergo] GC(4) PSAdaptiveSizePolicy::adjust_eden_for_throughput
+                       (is_full: 0, cur_eden: 314572800):
+             mutator_cost 0.820709  major_gc_cost 0.000000
+             minor_gc_cost 0.179291
+[trace][gc,ergo] GC(4) Scaled eden increment: 314572800 by 1.000000
+                       down to 314572800
+[trace][gc,ergo] GC(4) Adjusting eden for throughput
+                       (avg 0.820709 goal 0.990000).
+             desired_eden_size 629145600 eden delta 314572800
+[debug][gc,ergo] GC(4) PSAdaptiveSizePolicy::compute_eden_space_size
+                       limits: desired_eden_size: 629145600
+             old_eden_size: 314572800 eden_limit: 314572800
+             cur_eden: 314572800 max_eden_size: 314572800
+             avg_young_live: 36638520
+[debug][gc,ergo] GC(4) PSAdaptiveSizePolicy::compute_eden_space_size:
+                       costs minor_time: 0.179291 major_cost: 0.000000
+             mutator_cost: 0.820709 throughput_goal: 0.990000
+[trace][gc,ergo] GC(4) Minor_pause: 0.010463 major_pause: 0.000000
+                       minor_interval: 0.163884 major_interval: 0.000000
+             pause_goal: 18446744073709552.000000
+[debug][gc,ergo] GC(4) Live_space: 305073984 free_space: 629145600
+[trace][gc,ergo] GC(4) Base_footprint: 268435456
+                       avg_young_live: 36638520 avg_old_live: 0
+[debug][gc,ergo] GC(4) Old eden_size: 314572800
+                       desired_eden_size: 314572800
+[trace][gc,ergo] GC(4) PSAdaptiveSizePolicy::check_gc_overhead_limit:
+                       promo_limit: 838860800 max_eden_size: 314572800
+             total_free_limit: 1153433600
+             max_old_gen_size: 838860800
+             max_eden_size: 314572800 mem_free_limit: 23068672
+```
+
+```
+ [trace][gc,ergo] GC(4) PSYoungGen::resize_spaces(
+                        requested_eden_size: 314572800,
+            requested_survivor_size: 36700160)
+[trace][gc,ergo] GC(4)   eden: [0xe7000000..0x0f9c00000) 314572800
+[trace][gc,ergo] GC(4)   from: [0xf9c00000..0x0fce00000) 52428800
+[trace][gc,ergo] GC(4)    to: [0xfce00000..0x100000000) 52428800
+[trace][gc,ergo] GC(4) Eden, from, to:
+[trace][gc,ergo] GC(4)  [eden_start .. eden_end):
+                         [0xe7000000 .. 0x0f9c00000) 314572800
+[trace][gc,ergo] GC(4)  [from_start .. from_end):
+                         [0xf9c00000 .. 0x0fce00000) 52428800
+[trace][gc,ergo] GC(4)  [  to_start ..   to_end):
+                         [0xfdd00000 .. 0x100000000) 36700160
+   -- Reduced survivor "to" space from 52428800 to 36700160
+
+[trace][gc,ergo] GC(4) AdaptiveSizePolicy::survivor space sizes:
+                         collection: 5 (52428800, 52428800)
+             -> (52428800, 36700160)
+   -- Confirmed survivor space size changes
+
+[trace][gc,ergo] GC(4) Young generation size:
+                         desired eden: 314572800 survivor: 36700160
+              used: 36635168
+             capacity: 367001600
+              gen limits: 419430400 / 419430400
+[debug][gc,ergo] GC(4) AdaptiveSizeStop: collection: 5
+
+[info ][gc,heap] GC(4) PSYoungGen: 342933K->35776K(358400K)
+[info ][gc,heap] GC(4) ParOldGen: 40K->40K(819200K)
+[info ][gc     ] GC(4) Pause Young (Allocation Failure)
+                       334M->34M(1150M) 7.942ms
+
+[debug][gc,heap] GC(4) Heap after GC invocations=5 (full 0): PSYoungGen
+                         total 358400K, used 35776K [...
+[debug][gc,heap] GC(4)   eden space 307200K, 0% used [...
+[debug][gc,heap] GC(4)   from space 51200K, 69% used [...
+[debug][gc,heap] GC(4)   to   space 35840K, 0% used [...
+[debug][gc,heap] GC(4)  ParOldGen       total 819200K, used 40K [...
+[debug][gc,heap] GC(4)   object space 819200K, 0% used [...
+
+   PSAdaptiveSizePolicy::compute_eden_space_size limits:
+      desired_eden_size: 419430400 old_eden_size: 209715200
+      eden_limit: 209715200 cur_eden: 209715200
+      max_eden_size: 209715200 avg_young_live: 18728788
+   -- Suggested to increase "eden" to 419430400
+```
+
+As you can see, the "to" survivor space was decreased from 51200K to 35840K based on the Adaptive Size Policy suggestion. May be it is trying to lower the Minor GC time and increase Major GC time.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Adaptive Size Policy Changed Eden Space
+
+This section provides a tutorial on how Adaptive Size Policy used by the Parallel collector changed the eden space in the Young generation to meet the throughput goal.
+
+In GC log example presented in the last tutorial, the Adaptive Size Policy of the Parallel collector suggested to keep Young generation size as is.
+
+In this tutorial, we will look at GC log example from the test that suggests to change the survivor space size:
+
+```
+ herong> java -Xms1200m -Xmx1200m -XX:+UseParallelGC -XX:NewRatio=1 \
+   -XX:SurvivorRatio=1 -Xlog:gc=debug,gc+heap=debug,gc+ergo=trace \
+   GarbageCollection2
+...
+1163   1048576000   802232232   246343768
+[debug][gc,heap] GC(5) Heap before GC invocations=6 (full 0): PSYoungGen
+                         total 409600K, used 240522K [...
+[debug][gc,heap] GC(5)   eden space 204800K, 99% used [...
+[debug][gc,heap] GC(5)   from space 204800K, 17% used [...
+[debug][gc,heap] GC(5)   to   space 36352K, 0% used [...
+[debug][gc,heap] GC(5)  ParOldGen       total 614400K, used 48K [...
+[debug][gc,heap] GC(5)   object space 614400K, 0% used [...
+
+[trace][gc,ergo] GC(5) AdaptiveSizePolicy::minor_collection_end:
+                        minor gc cost: 0.303590  average: 0.221932
+[trace][gc,ergo] GC(5)  minor pause: 9.540876 minor period 21.885927
+[trace][gc,ergo] GC(5) AdaptiveSizePolicy::update_averages:
+                        survived: 36586064  promoted: 8192  overflow: false
+[debug][gc,ergo] GC(5) AdaptiveSizeStart:  collection: 6
+[trace][gc,ergo] GC(5) old_gen_capacity: 629145600
+                        young_gen_capacity: 246939648
+[trace][gc,ergo] GC(5) avg_survived: 36091504.000000
+                        avg_deviation: 377959.750000
+[debug][gc,ergo] GC(5) avg_survived_padded_avg: 37225384.000000
+[trace][gc,ergo] GC(5) avg_promoted_avg: 9575.137695
+                        avg_promoted_dev: 1991.718140
+[debug][gc,ergo] GC(5) avg_promoted_padded_avg: 15550.291992
+                        avg_pretenured_padded_avg: 0.000000
+            tenuring_thresh: 5  target_size: 37748736
+[trace][gc,ergo] GC(5) PSAdaptiveSizePolicy::adjust_eden_for_throughput
+                        (is_full: 0, cur_eden: 209715200):
+            mutator_cost 0.778068  major_gc_cost 0.000000
+            minor_gc_cost 0.221932
+[trace][gc,ergo] GC(5) Scaled eden increment: 209715200 by 1.000000
+                        down to 209715200
+
+[trace][gc,ergo] GC(5) Adjusting eden for throughput
+                         (avg 0.778068 goal 0.990000).
+                         desired_eden_size 419430400 eden delta 209715200
+   -- Suggested to increase "eden" space to improve throughput
+
+[debug][gc,ergo] GC(5) PSAdaptiveSizePolicy::compute_eden_space_size limits:
+                         desired_eden_size: 419430400
+             old_eden_size: 209715200
+             eden_limit: 382205952 cur_eden: 209715200
+             max_eden_size: 382205952 avg_young_live: 36091504
+[debug][gc,ergo] GC(5) PSAdaptiveSizePolicy::compute_eden_space_size:
+                         costs minor_time: 0.221932 major_cost: 0.000000
+             mutator_cost: 0.778068 throughput_goal: 0.990000
+
+[trace][gc,ergo] GC(5) Minor_pause: 0.010203 major_pause: 0.000000
+                        minor_interval: 0.124147 major_interval: 0.000000
+            pause_goal: 18446744073709552.000000
+[debug][gc,ergo] GC(5) Live_space: 304526976 free_space: 419430400
+[trace][gc,ergo] GC(5) Base_footprint: 268435456 avg_young_live: 36091504
+                        avg_old_live: 0
+[debug][gc,ergo] GC(5) Old eden_size: 209715200
+                        desired_eden_size: 382205952
+[trace][gc,ergo] GC(5) PSAdaptiveSizePolicy::check_gc_overhead_limit:
+                        promo_limit: 629145600 max_eden_size: 382205952
+            total_free_limit: 1011351552
+            max_old_gen_size: 629145600
+            max_eden_size: 382205952 mem_free_limit: 20227031
+```
+
+```
+ [trace][gc,ergo] GC(5) PSYoungGen::resize_spaces
+                        (requested_eden_size: 382205952,
+             requested_survivor_size: 37748736)
+[trace][gc,ergo] GC(5)     eden: [0xda800000..0x0e7000000) 209715200
+[trace][gc,ergo] GC(5)     from: [0xfdc80000..0x100000000) 37224448
+[trace][gc,ergo] GC(5)       to: [0xe7000000..0x0f3800000) 209715200
+[trace][gc,ergo] GC(5)   Eden, to, from:
+[trace][gc,ergo] GC(5)    [eden_start .. eden_end):
+                           [0xda800000 .. 0x0fb800000) 553648128
+[trace][gc,ergo] GC(5)    [  to_start ..   to_end):
+                           [0xfb800000 .. 0x0fdc00000) 37748736
+[trace][gc,ergo] GC(5)    [from_start .. from_end):
+                           [0xfdc80000 .. 0x100000000) 37224448
+   -- Increased "eden" space from 209715200 to 553648128
+
+[trace][gc,ergo] GC(5) AdaptiveSizePolicy::survivor space sizes:
+                        collection: 6 (37224448, 209715200)
+             -> (37224448, 37748736)
+[trace][gc,ergo] GC(5) Young generation size: desired eden: 382205952
+                        survivor: 37748736 used: 36586064
+            capacity: 590872576 gen limits: 629145600 / 629145600
+[debug][gc,ergo] GC(5) AdaptiveSizeStop: collection: 6
+[info ][gc,heap] GC(5) PSYoungGen: 240522K->35728K(577024K)
+[info ][gc,heap] GC(5) ParOldGen: 48K->56K(614400K)
+[info ][gc     ] GC(5) Pause Young (Allocation Failure)
+                        234M->34M(1163M) 9.932ms
+
+[debug][gc,heap] GC(5) Heap after GC invocations=6 (full 0): PSYoungGen
+                        total 577024K, used 35728K [...
+[debug][gc,heap] GC(5)   eden space 540672K, 0% used [...
+[debug][gc,heap] GC(5)   from space 36352K, 98% used [...
+[debug][gc,heap] GC(5)   to   space 36864K, 0% used [...
+[debug][gc,heap] GC(5)  ParOldGen       total 614400K, used 56K [...
+[debug][gc,heap] GC(5)   object space 614400K, 0% used [...
+```
+
+In this example, the "eden" space was increased based on the Adaptive Size Policy suggestion. It is trying to increase the application execution time to meet the throughput goal of 99%.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Adaptive Size Policy for Best Latency
+
+This section provides a tutorial on how Adaptive Size Policy is used by the Parallel collector to our best latency goal.
+
+According to Java documentation, the Adaptive Size Policy used by the Parallel collector allows you to set 3 performance goals and let the collector to decide the GC configuration to meet those goals.
+
+In this first test, let's ask the Parallel collector to give us the best latency performance using these JVM options:
+
+```
+ -XX:MaxGCPauseMillis=1
+   We want the best latency:
+   Give us the shortest application pause time or < 1 ms.
+
+-XX:GCTimeRatio=1
+   We don't care about throughput:
+   You can spend 50% (or 1/(1+1)) of time doing GC
+
+-Xmx1200m
+   We don't care about footprint:
+   You can use as much as 1.2GB heap
+```
+
+Here is what we got by looking GC pause log messages:
+
+```
+ herong> java -XX:+UseParallelGC -XX:MaxGCPauseMillis=1 \
+   -XX:GCTimeRatio=9 -Xmx1200m -XX:AdaptiveSizePolicyOutputInterval=1 \
+   -Xlog:gc=debug,gc+heap=debug,gc+ergo=trace GarbageCollection2
+
+GC(0) Pause Young (Allocation Failure) 31M->10M(119M) 8.004ms
+GC(1) Pause Young (Allocation Failure) 40M->29M(118M) 11.618ms
+GC(2) Pause Young (Allocation Failure) 59M->47M(119M) 11.935ms
+GC(3) Pause Young (Allocation Failure) 77M->60M(119M) 7.807ms
+GC(4) Pause Young (Allocation Failure) 90M->73M(119M) 7.974ms
+GC(5) Pause Full (Ergonomics) 73M->33M(139M) 17.960ms
+...
+GC(99) Pause Young (Allocation Failure) 53M->47M(102M) 2.767ms
+GC(100) Pause Young (Allocation Failure) 67M->54M(98M) 4.201ms
+GC(101) Pause Young (Allocation Failure) 74M->63M(101M) 4.442ms
+GC(102) Pause Young (Allocation Failure) 83M->72M(96M) 4.847ms
+GC(103) Pause Full (Ergonomics) 72M->33M(101M) 12.733ms
+...
+GC(198) Pause Young (Allocation Failure) 50M->44M(88M) 2.230ms
+GC(199) Pause Young (Allocation Failure) 61M->54M(88M) 3.995ms
+GC(200) Pause Young (Allocation Failure) 71M->61M(88M) 3.996ms
+GC(201) Pause Full (Ergonomics) 61M->33M(89M) 11.862ms
+...
+GC(301) Pause Young (Allocation Failure) 47M->43M(84M) 2.119ms
+GC(302) Pause Young (Allocation Failure) 57M->49M(84M) 3.203ms
+GC(303) Pause Young (Allocation Failure) 63M->55M(84M) 3.153ms
+GC(304) Pause Full (Ergonomics) 55M->33M(83M) 12.098ms
+...
+GC(399) Pause Young (Allocation Failure) 40M->39M(79M) 1.350ms
+GC(400) Pause Young (Allocation Failure) 46M->44M(69M) 2.282ms
+GC(401) Pause Young (Allocation Failure) 51M->51M(77M) 2.582ms
+GC(402) Pause Full (Ergonomics) 51M->33M(77M) 11.485ms
+...
+GC(499) Pause Young (Allocation Failure) 35M->35M(64M) 0.694ms
+GC(500) Pause Young (Allocation Failure) 37M->37M(57M) 0.983ms
+GC(501) Pause Young (Allocation Failure) 39M->38M(64M) 0.950ms
+GC(502) Pause Young (Allocation Failure) 40M->40M(64M) 0.932ms
+GC(503) Pause Young (Allocation Failure) 42M->42M(63M) 1.052ms
+GC(504) Pause Young (Allocation Failure) 44M->44M(56M) 1.052ms
+GC(505) Pause Young (Allocation Failure) 46M->45M(63M) 0.900ms
+GC(506) Pause Young (Allocation Failure) 47M->47M(56M) 0.917ms
+GC(507) Pause Young (Allocation Failure) 49M->49M(62M) 0.926ms
+```
+
+Not too bad. The Adaptive Size Policy did a good job:
+
+*   The initial GC pause time was about 9ms per Young GC and 18ms per Full GC.
+*   But after 500 rounds of GC, the Parallel collector was able to adjust heap space sizes and tenuring thresholds bring Young GC pause time to 1 ms.
+
+Let's review GC(500) log messages to see how the 1ms pause time was achieved:
+
+```
+ GC(500) Heap before GC invocations=501 (full 106): PSYoungGen
+          total 14336K, used 4155K [...
+GC(500)   eden space 3072K, 68% used [...
+GC(500)   from space 11264K, 18% used [...
+GC(500)   to   space 11264K, 0% used [...
+GC(500)  ParOldGen       total 51712K, used 34622K [...
+GC(500)   object space 51712K, 66% used [...
+...
+GC(500) PSYoungGen: 4155K->3072K(6656K)
+GC(500) ParOldGen: 34622K->35646K(51712K)
+GC(500) Pause Young (Allocation Failure) 37M->37M(57M) 0.983ms
+...
+GC(500) Heap after GC invocations=501 (full 106): PSYoungGen
+          total 6656K, used 3072K [...
+GC(500)   eden space 3072K, 0% used [...
+GC(500)   from space 3584K, 85% used [...
+GC(500)   to   space 10752K, 0% used [...
+GC(500)  ParOldGen       total 51712K, used 35646K [...
+GC(500)   object space 51712K, 68% used [...
+```
+
+As you can see, the Parallel actually, reduced "eden" to only 3072K, so that more frequent Young GC were performed, and each Young GC was very short.
+
+Of course, the best latency was achieved with a big price to pay on throughput. The GC overhead reached about 50% at GC(498), see the log messages below:
+
+```
+ GC(498)                        GC overhead (%)
+GC(498)     Young generation:       60.74	  (no change)
+GC(498)     Tenured generation:     48.54	  (attempted to shrink)
+GC(498) Tenuring threshold: (attempted to decrease to balance GC costs) = 1
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Parallel Collector Stopped using Young Generation
+
+This section provides a tutorial on how Adaptive Size Policy is used by the Parallel collector to our best latency goal.
+
+While trying to force the Parallel collector to provide 1 ms of latency GC performance, I also noticed that the Parallel collector stopped using the Young generation completely. All new objects were directly allocated in the Tenured generation.
+
+Here is what I see in log messages after GC(515):
+
+```
+ herong> java -XX:+UseParallelGC -XX:MaxGCPauseMillis=1 \
+   -XX:GCTimeRatio=9 -Xmx1200m -XX:AdaptiveSizePolicyOutputInterval=1 \
+   -Xlog:gc=debug,gc+heap=debug,gc+ergo=trace GarbageCollection2
+
+...
+GC(515) Heap before GC invocations=516 (full 108): PSYoungGen
+         total 6656K, used 5120K [...
+GC(515)   eden space 1024K, 0% used [...
+GC(515)   from space 5632K, 90% used [...
+GC(515)   to   space 11264K, 0% used [...
+GC(515)  ParOldGen       total 49664K, used 39742K [...
+GC(515)   object space 49664K, 80% used [...
+
+GC(515) AdaptiveSizeStop: collection: 516
+GC(515) PSYoungGen: 5120K->0K(12288K)
+GC(515) ParOldGen: 39742K->34622K(49664K)
+GC(515) Pause Full (Allocation Failure) 43M->33M(60M) 11.817ms
+
+GC(515) Heap after GC invocations=516 (full 108): PSYoungGen
+         total 12288K, used 0K [...
+GC(515)   eden space 1024K, 0% used [...
+GC(515)   from space 11264K, 0% used [...
+GC(515)   to   space 11264K, 0% used [...
+GC(515)  ParOldGen       total 49664K, used 34622K [...
+GC(515)   object space 49664K, 69% used [...
+
+GC(515) UseAdaptiveSizePolicy actions to meet  *** pause time goal ***
+GC(515)                        GC overhead (%)
+GC(515)     Young generation:       59.55	  (no change)
+GC(515)     Tenured generation:     48.19	  (attempted to shrink)
+GC(515) Tenuring threshold: (attempted to decrease to balance GC costs) = 3
+
+5385   63438848   26936800   36502048
+...
+5398   63438848   13284616   50154232
+```
+
+Here is what we got by looking GC pause log messages:
+
+```
+ herong> java -XX:+UseParallelGC -XX:MaxGCPauseMillis=1 \
+   -XX:GCTimeRatio=9 -Xmx1200m -XX:AdaptiveSizePolicyOutputInterval=1 \
+   -Xlog:gc=debug,gc+heap=debug,gc+ergo=trace GarbageCollection2
+
+GC(0) Pause Young (Allocation Failure) 31M->10M(119M) 8.004ms
+GC(1) Pause Young (Allocation Failure) 40M->29M(118M) 11.618ms
+GC(2) Pause Young (Allocation Failure) 59M->47M(119M) 11.935ms
+GC(3) Pause Young (Allocation Failure) 77M->60M(119M) 7.807ms
+GC(4) Pause Young (Allocation Failure) 90M->73M(119M) 7.974ms
+GC(5) Pause Full (Ergonomics) 73M->33M(139M) 17.960ms
+...
+GC(99) Pause Young (Allocation Failure) 53M->47M(102M) 2.767ms
+GC(100) Pause Young (Allocation Failure) 67M->54M(98M) 4.201ms
+GC(101) Pause Young (Allocation Failure) 74M->63M(101M) 4.442ms
+GC(102) Pause Young (Allocation Failure) 83M->72M(96M) 4.847ms
+GC(103) Pause Full (Ergonomics) 72M->33M(101M) 12.733ms
+...
+GC(198) Pause Young (Allocation Failure) 50M->44M(88M) 2.230ms
+GC(199) Pause Young (Allocation Failure) 61M->54M(88M) 3.995ms
+GC(200) Pause Young (Allocation Failure) 71M->61M(88M) 3.996ms
+GC(201) Pause Full (Ergonomics) 61M->33M(89M) 11.862ms
+...
+GC(301) Pause Young (Allocation Failure) 47M->43M(84M) 2.119ms
+GC(302) Pause Young (Allocation Failure) 57M->49M(84M) 3.203ms
+GC(303) Pause Young (Allocation Failure) 63M->55M(84M) 3.153ms
+GC(304) Pause Full (Ergonomics) 55M->33M(83M) 12.098ms
+...
+GC(399) Pause Young (Allocation Failure) 40M->39M(79M) 1.350ms
+GC(400) Pause Young (Allocation Failure) 46M->44M(69M) 2.282ms
+GC(401) Pause Young (Allocation Failure) 51M->51M(77M) 2.582ms
+GC(402) Pause Full (Ergonomics) 51M->33M(77M) 11.485ms
+...
+GC(499) Pause Young (Allocation Failure) 35M->35M(64M) 0.694ms
+GC(500) Pause Young (Allocation Failure) 37M->37M(57M) 0.983ms
+GC(501) Pause Young (Allocation Failure) 39M->38M(64M) 0.950ms
+GC(502) Pause Young (Allocation Failure) 40M->40M(64M) 0.932ms
+GC(503) Pause Young (Allocation Failure) 42M->42M(63M) 1.052ms
+GC(504) Pause Young (Allocation Failure) 44M->44M(56M) 1.052ms
+GC(505) Pause Young (Allocation Failure) 46M->45M(63M) 0.900ms
+GC(506) Pause Young (Allocation Failure) 47M->47M(56M) 0.917ms
+GC(507) Pause Young (Allocation Failure) 49M->49M(62M) 0.926ms
+```
+
+Not too bad. The Adaptive Size Policy did a good job:
+
+*   The initial GC pause time was about 9ms per Young GC and 18ms per Full GC.
+*   But after 500 rounds of GC, the Parallel collector was able to adjust heap space sizes and tenuring thresholds bring Young GC pause time to 1 ms.
+
+Let's review GC(500) log messages to see how the 1ms pause time was achieved:
+
+```
+ GC(500) Heap before GC invocations=501 (full 106): PSYoungGen
+          total 14336K, used 4155K [...
+GC(500)   eden space 3072K, 68% used [...
+GC(500)   from space 11264K, 18% used [...
+GC(500)   to   space 11264K, 0% used [...
+GC(500)  ParOldGen       total 51712K, used 34622K [...
+GC(500)   object space 51712K, 66% used [...
+...
+GC(500) PSYoungGen: 4155K->3072K(6656K)
+GC(500) ParOldGen: 34622K->35646K(51712K)
+GC(500) Pause Young (Allocation Failure) 37M->37M(57M) 0.983ms
+...
+GC(500) Heap after GC invocations=501 (full 106): PSYoungGen
+          total 6656K, used 3072K [...
+GC(500)   eden space 3072K, 0% used [...
+GC(500)   from space 3584K, 85% used [...
+GC(500)   to   space 10752K, 0% used [...
+GC(500)  ParOldGen       total 51712K, used 35646K [...
+GC(500)   object space 51712K, 68% used [...
+```
+
+As you can see, the Parallel actually, reduced "eden" to only 3072K, so that more frequent Young GC were performed, and each Young GC was very short.
+
+Of course, the best latency was achieved with a big price to pay on throughput. The GC overhead reached about 50% at GC(498), see the log messages below:
+
+```
+ GC(498)                        GC overhead (%)
+GC(498)     Young generation:       60.74	  (no change)
+GC(498)     Tenured generation:     48.54	  (attempted to shrink)
+GC(498) Tenuring threshold: (attempted to decrease to balance GC costs) = 1
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Parallel Collector - "+XX:+UseParallelGC"](#part0043.xhtml)
+
+∟Adaptive Size Policy for Best Throughput
+
+This section provides a tutorial on how Adaptive Size Policy is used by the Parallel collector to our best Throughput goal.
+
+In this second test, let's ask the Parallel collector to give us the best throughput performance using these JVM options:
+
+```
+ -XX:MaxGCPauseMillis=1000
+   We don't care about latency:
+   You can pause application as long as 1000 ms.
+
+-XX:GCTimeRatio=99
+   We want the best throughput:
+   Give us the smallest percent of time or < 1% (or 1/(1+99)) for GC
+
+-Xmx1200m
+   We don't care about footprint:
+   You can use as much as 1.2GB heap
+```
+
+Here is what we got:
+
+```
+ java -XX:+UseParallelGC -XX:MaxGCPauseMillis=1000
+   -XX:GCTimeRatio=99 -Xmx1200m -XX:AdaptiveSizePolicyOutputInterval=1
+   -Xlog:gc=debug,gc+heap=debug,gc+ergo=trace GarbageCollection2
+
+...
+Full after scavenge average_promoted 27943460
+       padded_average_promoted 31022564 free in old gen 13399408
+GC(39) Heap before GC invocations=40 (full 10): PSYoungGen
+        total 403968K, used 5120K [...
+GC(39)   eden space 398336K, 0% used [...
+GC(39)   from space 5632K, 90% used [...
+GC(39)   to   space 5632K, 0% used [...
+GC(39)  ParOldGen       total 156160K, used 143074K [...
+GC(39)   object space 156160K, 91% used [...
+...
+GC(39) PSYoungGen: 5120K->0K(403968K)
+GC(39) ParOldGen: 143074K->32480K(161280K)
+GC(39) Pause Full (Ergonomics) 144M->31M(552M) 7.945ms
+
+GC(39) Heap after GC invocations=40 (full 10): PSYoungGen
+        total 403968K, used 0K [...
+GC(39)   eden space 398336K, 0% used [...
+GC(39)   from space 5632K, 0% used [...
+GC(39)   to   space 5632K, 0% used [...
+GC(39)  ParOldGen       total 161280K, used 32480K [...
+GC(39)   object space 161280K, 20% used [...
+
+GC(39) UseAdaptiveSizePolicy actions to meet  *** throughput goal ***
+GC(39)                        GC overhead (%)
+GC(39)     Young generation:       14.39	  (attempted to grow)
+GC(39)     Tenured generation:      4.93	  (attempted to grow)
+GC(39) Tenuring threshold: (attempted to decrease to balance GC costs) = 1
+
+9853   578813952   544504864   34309088
+...
+```
+
+Not too bad. The Adaptive Size Policy did an ok job:
+
+*   The application pause of the last GC was 7.945ms, which was way better than our latency goal of 1000 milliseconds.
+*   Application paused for 19.32% (or 14.39 + 4.93%) of time doing GC, which was slightly worse than our throughput goal of 1%.
+*   552M heap was used, which was better than our footprint goal of 1200M.
+*   39 GC were performed.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"
+
+This chapter provides tutorial notes and example codes on the Concurrent Mark-Sweep Collector specified by the '+XX:+UseConcMarkSweepGC' JVM option. Topics include introduction to Concurrent Mark-Sweep (CMS) Collector; CMS Collector log message format; demonstration of reduction of stop-the-world by running parts of Mark and Sweep step concurrently with the application.
+
+> [What Is Concurrent Mark-Sweep (CMS) Collector](#part0061.xhtml)
+> 
+> [Concurrent Mark-Sweep Collector GC Log Message Format](#part0062.xhtml)
+> 
+> [Reduce Stop-The-World with Concurrent Mark and Sweep](#part0063.xhtml)
+> 
+> [Parallel New (ParNew) Collector for Minor GC](#part0064.xhtml)
+> 
+> [ParNew Collector - Tenuring Age Distribution](#part0065.xhtml)
+> 
+> [Maximum Logging of All Phases on Young GC](#part0066.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - Young GC Parallel Threads](#part0067.xhtml)
+> 
+> ["-XX:MaxTenuringThreshold=0" - Tenuring Objects Immediately](#part0068.xhtml)
+> 
+> ["-XX:CMSInitiatingOccupancyFraction=20" - Initiate CMS](#part0069.xhtml)
+> 
+> [Maximum Logging of All Phases on Old GC](#part0070.xhtml)
+> 
+> [Maximum Logging of All Phases on Full GC](#part0071.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - Old GC Parallel Threads](#part0072.xhtml)
+> 
+> ["-XX:ConcGCThreads=3" - Old GC Concurrent Threads](#part0073.xhtml)
+
+Takeaways:
+
+*   The Concurrent Mark-Sweep (CMS) Collector, -XX:+UseConcMarkSweepGC, was deprecated in HotSpot JVM version 9.0 and will likely be removed in a future release.
+*   The CMS collector actually uses the Parallel New (ParNew) Collector of the Young generation and the Concurrent Mark Sweep (CMS) Collector of the Tenured generation.
+*   The CMS Collector uses "ParNew" to represent Young Generation GC in log messages.
+*   The CMS Collector uses "Old" to represent Tenured Generation GC in log messages.
+*   The CMS Collector performs Old (Major) GC with multiple threads concurrently without stopping the application most of the time.
+*   Application is stopped by the CMS Collector for Initial Mark and Final Mark steps of Major GC.
+*   Application is stopped by the CMS Collector for Minor GC.
+*   Application is stopped by the CMS Collector for Full GC.
+*   The CMS collector is also called Low-Latency Collector, because it reduces the application pause time. But it may slowdown the application, because the GC is running concurrently with the application. It's a good choice for interactive applications like Websites.
+*   ParNew collector is used to perform Young generation GC when "-XX:+UseConcMarkSweepGC" option is used.
+*   ParNew maintains a Tenuring Age Distribution list to determine object promotion to Tenured generation.
+*   Tenured generation occupancy percentage initiates the CMS GC.
+*   CMS Concurrent mode may fail, if Tenured generation gets fully occupied before it can finish the GC process.
+*   The CMS collector does uses multiple threads for some phases in the GC process.
+*   The number of threads in CMS parallel (stop-the-world) phases can be controlled by the "-XX:ParallelGCThreads=n" option.
+*   The number of threads in 1 CMS concurrent phase, Mark phase, can be controlled by the "-XX:ConcGCThreads=n" option.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟What Is Concurrent Mark-Sweep (CMS) Collector
+
+This section describes the Concurrent Mark-Sweep (CMS) Collector, which attempts to reduce application pause times of Major GC by using separate garbage collector threads to trace the reachable objects concurrently with the execution of the application threads.
+
+**What Is Concurrent Mark-Sweep (CMS) Collector?** Concurrent Mark-Sweep (CMS) Collector is actually a combination of two garbage collectors:
+
+*   The Parallel New (ParNew) Collector of Young generation - It uses the 3-area (Eden, Survivor Space "From" and Survivor Space "To") algorithm parallelly with multiple threads in a stop-the-world fashion. It also has an internal 'callback' that allows an old generation collector to operate on the objects it collects
+*   The Concurrent Mark Sweep (CMS) Collector of Tenured generation - It uses the "Mark-Sweep-Compact" algorithm with multiple threads concurrently with the application. A small portion is still running in a stop-the-world fashion.
+
+The CMS Collector can be invoked using the "-XX:+UseConcMarkSweepGC" JVM option.
+
+During each Major GC cycle, the CMS collector pauses all the application threads for a brief period at the beginning of the collection and again toward the middle of the collection. The second pause tends to be the longer of the two pauses. Multiple threads are used to do the collection work during both pauses. The remainder of the collection (including most of the tracing of live objects and sweeping of unreachable objects is done with one or more garbage collector threads that run concurrently with the application.
+
+Typically applications that have a relatively large set of long-lived data (a large tenured generation) and run on machines with two or more processors tend to benefit from the use of this collector.
+
+The CMS collector is also called Low-Latency Collector, because it reduces the application pause time. But it may slowdown the application, because the GC is running concurrently with the application. It's a good choice for interactive applications like Websites.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟Concurrent Mark-Sweep Collector GC Log Message Format
+
+This section describes the log message format of HotSpot JVM Concurrent Mark-Sweep (CMS) Collector.
+
+*Warning: the Concurrent Mark-Sweep (CMS) Collector has been removed from JVM 15\. But if you still have JVM 14 or older installed, you can continue to use it.*
+
+Before doing any testing with the Concurrent Mark-Sweep (CMS) Collector, let's look at log messages generated by the Concurrent Mark-Sweep Collector first:
+
+```
+ herong> java -Xms2m -Xmx64m -XX:+UseConcMarkSweepGC \ \
+   -Xlog:gc,gc+heap=info GarbageCollection
+
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was
+deprecated in version 9.0 and will likely be removed in a future release.
+
+[info][gc] Using Concurrent Mark Sweep
+Step/TotalMemory/FreeMemory/UsedMemory:
+
+[info][gc,heap] GC(0) ParNew: 987K->128K(1152K)
+[info][gc,heap] GC(0) CMS: 0K->737K(1344K)
+
+[info][gc] GC(0) Pause Young (Allocation Failure) 0M->0M(2M) 4.756ms
+
+[info][gc] GC(1) Pause Initial Mark 1M->1M(2M) 0.442ms
+[info][gc] GC(1) Concurrent Mark
+[info][gc] GC(1) Concurrent Mark 1.446ms
+[info][gc] GC(1) Concurrent Preclean
+[info][gc] GC(1) Concurrent Preclean 0.039ms
+[info][gc] GC(1) Pause Remark 1M->1M(2M) 0.799ms
+[info][gc] GC(1) Concurrent Sweep
+[info][gc] GC(1) Concurrent Sweep 0.159ms
+[info][gc] GC(1) Concurrent Reset
+[info][gc] GC(1) Concurrent Reset 0.244ms
+[info][gc,heap] GC(1) Old: 737K->737K(1344K)
+
+[info][gc,heap] GC(2) ParNew: 1152K->126K(1152K)
+[info][gc,heap] GC(2) CMS: 737K->1658K(2056K)
+[info][gc] GC(2) Pause Young (Allocation Failure) 1M->1M(3M) 1.440ms
+
+[info][gc] GC(3) Pause Initial Mark 1M->1M(3M) 0.192ms
+[info][gc] GC(3) Concurrent Mark
+[info][gc] GC(3) Concurrent Mark 0.979ms
+[info][gc] GC(3) Concurrent Preclean
+[info][gc] GC(3) Concurrent Preclean 0.027ms
+[info][gc] GC(3) Pause Remark 1M->1M(3M) 0.580ms
+[info][gc] GC(3) Concurrent Sweep
+[info][gc] GC(3) Concurrent Sweep 0.319ms
+[info][gc] GC(3) Concurrent Reset
+[info][gc] GC(3) Concurrent Reset 0.038ms
+[info][gc,heap] GC(3) Old: 1658K->1656K(2764K)
+
+1   2555904   826608   1729296
+...
+```
+
+With the help from this blog: [Understanding CMS GC Logs](https://blogs.oracle.com/poonam/entry/understanding_cms_gc_logs), by Poonam Bajaj, here is how I read those extra log messages generated by the Concurrent Mark-Sweep (CMS) Collector:
+
+*   "Pause Initial Mark 1M->1M(2M) 0.442ms" - Indicating the completion of the initial marking phase. The initial marking phase is the first phase of the tenured generation collection with the CMS collector. In this phase, all the objects directly reachable from roots are marked. This is done with the application paused for 0.442ms.
+*   "Concurrent Mark" - Indicating the beginning of concurrent marking phase. In this concurrent marking phase, the application is started again and all the objects transitively reachable from the objects marked in first phase are marked here.
+*   "Concurrent Mark 1.446ms" - Indicating the end of concurrent marking phase and how long it took
+*   "Concurrent Preclean" - Indicating the start of precleaning. Precleaning is also a concurrent phase. In this phase, The garbage collector looks at the objects in CMS heap which got updated by promotions from young generation or new allocations or got updated by mutators while it was doing the concurrent marking in the previous concurrent marking phase. By rescanning those objects concurrently, the precleaning phase helps reduce the work in the next stop-the-world "remark" phase.
+*   "Concurrent Preclean 0.039ms" - Indicating the end of precleaning phase and how long it took.
+*   "Pause Remark 1M->1M(2M) 0.799ms" - Indicating the completion of the remark phase, which is a stop-the-world phase. This phase rescans any residual updated objects in CMS heap, retraces from the roots and also processes Reference objects. The Rescan step took 0.799ms.
+*   "Concurrent Sweep" - Indicating the start of the sweeping phase. This phase removes non-marked (dead) objects, and is performed concurrently with all other threads running.
+*   "Concurrent Sweep 0.159ms" - Indicating the end of the sweep phase and how long it took.
+*   "Concurrent Reset]" - Indicating the start of the reset phase. In this phase, the CMS data structures are reinitialized so that a new cycle may begin at a later time.
+*   "Concurrent Reset 0.244ms" - Indicating the end of the reset phase and how long it took.
+*   "Old: 737K->737K(1344K)" - Indicating the end of the CMS process on the Old (tenured) generation. and how much memory was released. Unfortunately, the CMS process did not release any memory. The Old generation heap usage changed from 737K to 737K.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟Reduce Stop-The-World with Concurrent Mark and Sweep
+
+This section demonstrates how CMS Collector reduces Stop-The-World duration by running parts of Mark and Sweep steps concurrently with the application.
+
+The main advantage of using the Concurrent Mark-Sweep (CMS) Collector is that CMS performs Major GC without stopping the application, or no stop-the-world pauses to the application. But there seems to be no easy way to measure this in JVM 9 or higher releases. I could not find any "-Xlog" options to generate any log messages about when and for how long application gets stopped by the CMS Collector.
+
+However if you are still using JVM 8 or older releases, you can confirm stop-the-world behavior of the CMS Collector with "-XX:+PrintGCApplicationStoppedTime" and "-XX:+PrintGCApplicationConcurrentTime" JVM options:
+
+```
+ herong> \Progra~1\java\jdk1.8.0\bin\java -Xms2m -Xmx64m
+   -XX:+UseConcMarkSweepGC
+   -XX:+PrintGCDetails -XX:+PrintGCTimeStamps
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime
+   GarbageCollection > output.txt
+(Ctrl-C)
+
+herong> more output.txt
+Step/TotalMemory/FreeMemory/UsedMemory:
+
+0.164: Application time: 0.0736917 seconds
+0.178: [GC (Allocation Failure)
+   0.178: [ParNew: 889K->64K(960K), 0.0013412 secs] ...
+0.180: Total time for which application threads were stopped: 0.0016155 s
+   Stopping threads took: 0.0000303 seconds
+   -- Application stopped for Minor GC
+
+1   2031616   693536   1338080
+1.168: Application time: 0.9881569 seconds
+1.168: [GC (Allocation Failure)
+   1.168: [ParNew: 865K->63K(960K), 0.0054171 secs] ...
+1.174: Total time for which application threads were stopped: 0.0059145 s
+   Stopping threads took: 0.0001105 seconds
+   -- Application stopped for Minor GC
+
+2   2695168   292168   2403000
+1.175: Application time: 0.0009359 seconds
+1.175: [GC (CMS Initial Mark)
+   [1 CMS-initial-mark: 1482K(1672K)] 2346K(2632K), ...
+1.176: Total time for which application threads were stopped: 0.0009683 s
+   Stopping threads took: 0.0001011 seconds
+   -- Application stopped for Initial Mark step of Major GC
+
+1.176: [CMS-concurrent-mark-start]
+1.180: [CMS-concurrent-mark: 0.004/0.004 secs]
+   -- Application not stopped for Concurrent Mark step of Major GC
+
+1.180: [CMS-concurrent-preclean-start]
+1.181: [CMS-concurrent-preclean: 0.000/0.000 secs]
+   -- Application not stopped for Concurrent Preclean step of Major GC
+
+1.181: Application time: 0.0050827 seconds
+1.181: [GC (CMS Final Remark) [YG occupancy: 864 K (960 K)]1.181:
+   [Rescan (parallel) , 0.0028359 secs]1.184: [weak refs processing, ...
+1.186: Total time for which application threads were stopped: 0.0045256 s
+   Stopping threads took: 0.0000785 seconds
+   -- Application stopped for the Final Mark step of Major GC
+
+1.186: [CMS-concurrent-sweep-start]
+1.186: [CMS-concurrent-sweep: 0.000/0.000 secs]
+   -- Application not stopped for the Concurrent Sweep step of Major GC
+```
+
+```
+ 1.187: [CMS-concurrent-reset-start]
+1.187: [CMS-concurrent-reset: 0.000/0.000 secs]
+   -- Application not stopped for the Concurrent Reset step of Major GC
+
+2.168: Application time: 0.9821720 seconds
+2.168: [GC (Allocation Failure)
+   2.168: [ParNew: 864K->64K(960K), 0.0065795 secs] ...
+2.175: Total time for which application threads were stopped: 0.0070454 s
+   Stopping threads took: 0.0000938 seconds
+   -- Application stopped for Minor GC
+
+2.175: Application time: 0.0003583 seconds
+2.175: [GC (Allocation Failure)
+   2.175: [ParNew: 913K->0K(960K), 0.0040371 secs]
+2.180: Total time for which application threads were stopped: 0.0044262 s
+   Stopping threads took: 0.0000405 seconds
+   -- Application stopped for Minor GC
+
+2.180: Application time: 0.0002606 seconds
+2.180: [GC (CMS Initial Mark)
+   [1 CMS-initial-mark: 3151K(3364K)] 3365K(4964K), ...
+2.181: Total time for which application threads were stopped: 0.0013028 s
+   Stopping threads took: 0.0000990 seconds
+   -- Application stopped for the Initial Mark step of Major GC
+
+2.181: [CMS-concurrent-mark-start]
+3   5083136   1636512   3446624
+2.185: [CMS-concurrent-mark: 0.003/0.003 secs]
+   -- Application not stopped for the Concurrent Mark step of Major GC
+
+2.185: [CMS-concurrent-preclean-start]
+2.185: [CMS-concurrent-preclean: 0.000/0.000 secs]
+   -- Application not stopped for Concurrent Preclean step of Major GC
+
+2.185: Application time: 0.0040286 seconds
+2.185: [GC (CMS Final Remark) [YG occupancy: 214 K (1600 K)]2.186:
+      [Rescan (parallel) , 0.0047346 secs]2.190: [weak refs processing,
+2.192: Total time for which application threads were stopped: 0.0062263 s
+      Stopping threads took: 0.0000973 seconds
+   -- Application stopped for the Final Mark step of Major GC
+
+2.192: [CMS-concurrent-sweep-start]
+2.192: [CMS-concurrent-sweep: 0.000/0.000 secs]
+   -- Application not stopped for the Concurrent Sweep step of Major GC
+
+2.193: [CMS-concurrent-reset-start]
+2.193: [CMS-concurrent-reset: 0.000/0.000 secs]
+   -- Application not stopped for the Concurrent Reset step of Major GC
+
+...
+```
+
+The output shows that:
+
+*   Application was stopped by the CMS Collector for Minor GC.
+*   Application was stopped by the CMS Collector for Initial Mark and Final Mark steps of Major GC.
+*   Application was not stopped by the CMS Collector for Concurrent Mark, Concurrent Preclean, Concurrent Sweep, and Concurrent Reset steps of Major GC.
+
+Conclusion: The CMS Collector reduces the duration of stop-the-world (application pause) of Major GC to only two steps: Initial Mark and Final Mark. This definitely improves the performance (response time) of the application.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟Parallel New (ParNew) Collector for Minor GC
+
+This section demonstrates that the '-XX:+UseConcMarkSweepGC' JVM option invokes the Parallel New (ParNew) collector for Young generation GC.
+
+In previous tutorials, we learned that the "-XX:+UseConcMarkSweepGC" JVM option invokes the "Parallel New (ParNew)" collector for Young generation GC and "Concurrent Mark-Sweep (CMS)" collector to Tenured generation GC.
+
+In this tutorial, let's run our test with plenty of Young generation memory to see how ParNew collector works.
+
+```
+ herong> java -Xms2m -Xmx64m -XX:+UseConcMarkSweepGC -Xms1200m -Xmx1200m \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 -Xlog:gc,gc+heap=info \
+   GarbageCollection > output.txt
+
+herong> more output.txt
+[info ][gc     ] Using Concurrent Mark Sweep
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   1048576000   1040187352   8388648
+
+...
+185   1048576000   838860800   209715200
+[info ][gc,heap] GC(0) ParNew: 204800K->34034K(409600K)
+[info ][gc,heap] GC(0) CMS: 0K->0K(614400K)
+[info ][gc     ] GC(0) Pause Young (Allocation Failure)
+                       200M->33M(1000M) 14.555ms
+...
+372   1048576000   804009288   244566712
+[info ][gc,heap] GC(1) ParNew: 238834K->37404K(409600K)
+[info ][gc,heap] GC(1) CMS: 0K->0K(614400K)
+[info ][gc     ] GC(1) Pause Young (Allocation Failure)
+                       233M->36M(1000M) 11.900ms
+...
+9874   1048576000   781730152   266845848
+[info ][gc,heap] GC(51) ParNew: 259751K->61818K(409600K)
+[info ][gc,heap] GC(51) CMS: 840K->840K(614400K)
+[info ][gc     ] GC(51) Pause Young (Allocation Failure)
+                        254M->61M(1000M) 7.055ms
+```
+
+The output confirms that:
+
+*   The "-XX:+UseConcMarkSweepGC" JVM option invokes the ParNew collector for Young generation GC.
+*   The ParNew collector does Young generation GC in stop-the-world fashion, not concurrently with application execution.
+*   No GC on Tenured generation is needed, if you have enough Young generation memory.
+*   The CMS collector has nothing to do with Young generation GC.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟ParNew Collector - Tenuring Age Distribution
+
+This section demonstrates that the ParNew Collector uses Tenuring Age Distribution to perform Young generation GC.
+
+Does the ParNew collector use Tenuring Age Distribution? Let's use our second test program, GarbageCollection2.java to find out:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms1200m -Xmx1200m -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -Xlog:gc,gc+heap=debug,gc+age=trace \
+   GarbageCollection2 > output.txt
+
+herong> more output.txt
+[info ][gc     ] Using Concurrent Mark Sweep
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   1048576000   1040187352   8388648
+
+...
+193   1048576000   839906280   208669720
+[gc,age ] GC(0) Desired survivor size 104857600 bytes,
+                new threshold 15 (max threshold 15)
+[gc,age ] GC(0) Age table with threshold 15 (max threshold 15)
+[gc,age ] GC(0) - age   1:   33258632 bytes,   33258632 total
+
+[gc,heap] GC(0) ParNew: 203779K->32501K(409600K)
+[gc,heap] GC(0) CMS: 0K->0K(614400K)
+[gc] GC(0) Pause Young (Allocation Failure) 199M->31M(1000M) 22.755ms
+
+...
+390   1048576000   805660552   242915448
+[gc,age ] GC(1) Desired survivor size 104857600 bytes,
+                new threshold 15 (max threshold 15)
+[gc,age ] GC(1) Age table with threshold 15 (max threshold 15)
+[gc,age ] GC(1) - age   1:   32506352 bytes,   32506352 total
+[gc,age ] GC(1) - age   2:     752000 bytes,   33258352 total
+
+[gc,heap] GC(1) ParNew: 237222K->32612K(409600K)
+[gc,heap] GC(1) CMS: 0K->0K(614400K)
+[gc] GC(1) Pause Young (Allocation Failure) 231M->31M(1000M) 16.683ms
+
+...
+2178   1048576000   805243072   243332928
+[gc,age ] GC(10) Desired survivor size 104857600 bytes,
+                 new threshold 15 (max threshold 15)
+[gc,age ] GC(10) Age table with threshold 15 (max threshold 15)
+[gc,age ] GC(10) - age   1:   32506352 bytes,   32506352 total
+[gc,age ] GC(10) - age   2:        120 bytes,   32506472 total
+[gc,age ] GC(10) - age   6:        648 bytes,   32507120 total
+[gc,age ] GC(10) - age   8:        864 bytes,   32507984 total
+[gc,age ] GC(10) - age   9:        192 bytes,   32508176 total
+[gc,age ] GC(10) - age  11:     751968 bytes,   33260144 total
+
+[gc,heap] GC(10) ParNew: 237629K->32940K(409600K)
+[gc,heap] GC(10) CMS: 0K->0K(614400K)
+[gc] GC(10) Pause Young (Allocation Failure) 232M->32M(1000M) 7.123ms
+```
+
+The output confirms that the ParNew collector does use tenuring age distribution to perform Young generation GC, similar to the Serial collector.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟Maximum Logging of All Phases on Young GC
+
+This section demonstrates that the '-Xlog:gc*=trace' option can be used to print out maximum logging messages of all phases on a Young GC performed by the CMS collector.
+
+If you want to know how many phases are performed in a CMS Young GC process and how each phase is performed, you need to turn on the maximum GC logging with the "-Xlog:gc*=trace" option.
+
+Here is what I did to capture all log messages of a single Young GC performed by the CMS collector.
+
+1\. Run the following command to capture all log messages in a file:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms1200m -Xmx1200m -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -Xlog:gc*=trace \
+   GarbageCollection2 > output.txt
+```
+
+2\. Open the log file, output.txt, in text editor. And find log message lines with this regular express "Pause Young \(Allocation Failure\)" pattern. Take one of them like:
+
+```
+ [info][gc,start] GC(1) Pause Young (Allocation Failure)
+```
+
+This log message indicates that the CMS collector started a Young GC (GC #1).
+
+3\. Search all log message lines with "GC\(1\)" in the editor to get all log messages of GC #1:
+
+```
+ GC(1) Heap before GC invocations=1 (full 0): par new generation   ...
+GC(1)   eden space 204800K,  99% used [...
+GC(1)   from space 204800K,  15% used [...
+GC(1)   to   space 204800K,   0% used [...
+GC(1)  concurrent mark-sweep generation total 614400K, used 0K [...]
+GC(1)  Metaspace    used 556K, capacity 4546K, committed 4864K, ...
+GC(1)   class space used 42K, capacity 408K, committed 512K, ...
+   -- Heap report before GC
+
+GC(1) Pause Young (Allocation Failure)
+   -- GC #1 (Young GC) started because Young generation is full
+
+GC(1) TLAB: gc thread: 0x02b498e27000 [id: 63172] desired_size: 4013KB...
+GC(1) TLAB: gc thread: 0x02b498eea000 [id: 58376] desired_size: 4096KB...
+GC(1) TLAB: gc thread: 0x02b498eef800 [id: 66440] desired_size: 4096KB...
+GC(1) TLAB: gc thread: 0x02b4b3c7c800 [id: 58080] desired_size: 4096KB...
+GC(1) TLAB: gc thread: 0x02b4b3c7e800 [id:  8292] desired_size: 4096KB...
+GC(1) TLAB: gc thread: 0x02b4b3c80000 [id: 66164] desired_size: 4096KB...
+GC(1) TLAB: gc thread: 0x02b4b3c84800 [id: 56344] desired_size: 2048KB...
+GC(1) TLAB: gc thread: 0x02b4b3c97000 [id: 64444] desired_size: 4096KB...
+GC(1) TLAB: gc thread: 0x02b4b4498800 [id: 26416] desired_size: 4096KB...
+GC(1) TLAB: gc thread: 0x02b4b44b4800 [id: 65516] desired_size: 4096KB...
+GC(1) TLAB totals: thrds: 2  refills: 2 max: 1 slow allocs: 194 max 194
+waste: 48.8% gc: 3026712B max: 2097112B slow: 0B max: 0B fast: 0B max: 0B
+   -- TLAB report before GC
+```
+
+```
+ GC(1) Collect gen: ParNew
+   -- Collect gen: ParNew - started
+
+GC(1) Young invoke=2 size=1048592
+GC(1) WorkerPolicy::calc_default_active_workers() : active_workers(): 8
+new_active_workers: 8  prev_active_workers: 8
+GC(1) WorkerManager::add_workers() : created_workers: 8
+GC(1) GC Thread: using 8 out of 8 workers
+GC(1) Using 8 workers of 8 for evacuation
+   -- 8 threads used
+
+GC(1) ParNew (Allocation Failure)
+   -- ParNew started
+
+GC(1) oops_do_marking_prologue
+GC(1) WorkerManager::add_workers() : created_workers: 8
+GC(1) GC Thread: using 8 out of 8 workers
+GC(1)  317  3  GarbageCollection2::getOneMega (5 bytes)   oops_do, mark
+GC(1)  317  3  GarbageCollection2::getOneMega (5 bytes)   scavenge root
+GC(1)  315  3  java.util.Random::nextInt (74 bytes)   scavenge root
+GC(1)  315  3  java.util.Random::nextInt (74 bytes)   oops_do, mark
+GC(1)  314  3  java.lang.System::lineSeparator (4 bytes)   scavenge root
+GC(1)  314  3  java.lang.System::lineSeparator (4 bytes)   oops_do, mark
+...
+   -- oops_do_marking_prologue ended
+   -- "oops_do, mark" and "scavenge root" on each object type
+
+GC(1) WorkerManager::add_workers() : created_workers: 8
+GC(1) GC Thread: using 8 out of 8 workers
+GC(1) oops_do_marking_epilogue
+GC(1) Skipped phase1 of Reference Processing due to unavailable references
+GC(1) Phase2 Soft before0 0 0 0 0 0 0 0 (0)
+GC(1) Phase2 Weak before0 88 0 5 0 0 1 0 (94)
+GC(1) Phase2 Final before0 0 0 0 0 0 0 0 (0)
+GC(1) Phase2 Final after0 0 0 0 0 0 0 0 (0)
+GC(1) Skipped phase3 of Reference Processing due to unavailable references
+GC(1) Phase4 Phantom before0 0 0 0 0 0 1 0 (1)
+GC(1) Reference Processing: 0.1ms
+GC(1)   Reconsider SoftReferences: 0.0ms
+GC(1)     SoftRef: skipped
+GC(1)   Notify Soft/WeakReferences: 0.0ms
+GC(1)     SoftRef: 0.0ms
+GC(1)     WeakRef: 0.0ms
+GC(1)     FinalRef: 0.0ms
+GC(1)     Total: 0.0ms
+GC(1)   Notify and keep alive finalizable: 0.0ms
+GC(1)     FinalRef: skipped
+GC(1)   Notify PhantomReferences: 0.0ms
+GC(1)     PhantomRef: 0.0ms
+GC(1)   SoftReference:
+GC(1)     Discovered: 0
+GC(1)     Cleared: 0
+GC(1)   WeakReference:
+GC(1)     Discovered: 94
+GC(1)     Cleared: 94
+GC(1)   FinalReference:
+GC(1)     Discovered: 0
+GC(1)     Cleared: 0
+GC(1)   PhantomReference:
+GC(1)     Discovered: 1
+GC(1)     Cleared: 1
+   -- oops_do_marking_epilogue ended
+```
+
+```
+ GC(1) Desired survivor size 104857600 bytes, new threshold 15
+       (max threshold 15)
+GC(1) Age table with threshold 15 (max threshold 15)
+GC(1) - age   1:   31457760 bytes,   31457760 total
+GC(1) - age   2:    1800712 bytes,   33258472 total
+   -- Aging report
+
+GC(1) Young PLAB allocation: allocated: 983232B, wasted: 568B, ...
+GC(1) Young sizing: calculated: 752032B, actual: 727896B
+GC(1) ParNew (Allocation Failure) 20.173ms
+   -- ParNew ended
+
+GC(1) Collect gen: ParNew 20.282ms
+   -- Collect gen: ParNew - ended
+
+GC(1) ParNew: 237219K->32704K(409600K)
+GC(1) CMS: 0K->0K(614400K)
+GC(1) Metaspace: 556K->556K(1056768K)
+   -- ParNew GC report
+
+GC(1) TLAB new size: thread: 0x000002b498e27000 [id: 63172] refills 50...
+GC(1) TLAB new size: thread: 0x000002b498eea000 [id: 58376] refills 50...
+GC(1) TLAB new size: thread: 0x000002b498eef800 [id: 66440] refills 50...
+GC(1) TLAB new size: thread: 0x000002b4b3c7c800 [id: 58080] refills 50...
+GC(1) TLAB new size: thread: 0x000002b4b3c7e800 [id:  8292] refills 50...
+GC(1) TLAB new size: thread: 0x000002b4b3c80000 [id: 66164] refills 50...
+GC(1) TLAB new size: thread: 0x000002b4b3c84800 [id: 56344] refills 50...
+GC(1) TLAB new size: thread: 0x000002b4b3c97000 [id: 64444] refills 50...
+GC(1) TLAB new size: thread: 0x000002b4b4498800 [id: 26416] refills 50...
+GC(1) TLAB new size: thread: 0x000002b4b44b4800 [id: 65516] refills 50...
+   -- TLAB report after GC
+
+GC(1) Pause Young (Allocation Failure) 231M->31M(1000M) 21.052ms
+GC(1) User=0.02s Sys=0.02s Real=0.02s
+   -- Young GC report
+
+GC(1) Heap after GC invocations=2 (full 0): par new generation
+       total 409600K, used 32704K [...
+GC(1)   eden space 204800K,   0% used [...
+GC(1)   from space 204800K,  15% used [...
+GC(1)   to   space 204800K,   0% used [...
+GC(1)  concurrent mark-sweep generation total 614400K, used 0K [...
+   -- Heap report after GC
+```
+
+As you can see from log messages, a Young GC is performed with 2 primary phases.
+
+```
+ Phases  Threads  Time     Concurrency
+
+oops_do_marking_prologue  8        ?.???ms  pause - stop-the-world
+oops_do_marking_epilogue  8        ?.???ms  pause - stop-the-world
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟"-XX:ParallelGCThreads=6" - Young GC Parallel Threads
+
+This section demonstrates that the '-XX:ParallelGCThreads=6' option can be used to control the number of threads used in Young GC parallel phases.
+
+In the previous tutorial, we learned that multiple threads are used by the CMS collector for the Young GC process.
+
+For example, we saw 8 threads was used in the GC #1 (Young GC) in the previous tutorial. If you want to change the number of threads used in Young GC, you can specify a new number in the "-XX:ParallelGCThreads=n" option.
+
+The example below shows all log messages of a single Young GC performed by the CMS collector with 6 threads specified.
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms90m -Xmx90m -XX:NewRatio=2 -XX:SurvivorRatio=1 \
+   -XX:CMSInitiatingOccupancyFraction=20 \
+   -XX:+UseCMSInitiatingOccupancyOnly \
+   -XX:ParallelGCThreads=6 \
+   -Xlog:gc*=trace \
+   GarbageCollection2 > output.txt
+
+herong> more output.txt
+
+GC(1) Heap before GC invocations=1 (full 0): par new generation  ...
+GC(1)   eden space 10240K,  91% used ...
+GC(1)   from space 10240K,  87% used ...
+GC(1)   to   space 10240K,   0% used ...
+GC(1)  concurrent mark-sweep generation total 61440K, used 0K [...]
+GC(1)  Metaspace       used 491K, capacity 4544K, committed 4864K, ...
+GC(1)   class space    used 42K, capacity 408K, committed 512K, ...
+GC(1) Pause Young (Allocation Failure)
+GC(1) TLAB: gc thread: 0x013363577800 [id: 32696] desired_size: 200KB ...
+...
+GC(1) TLAB totals: thrds: 1  refills: 1 max: 1 slow allocs: 9 max 9 ...
+
+GC(1) Collect gen: ParNew
+GC(1) Young invoke=2 size=1048592
+GC(1) WorkerManager::add_workers() : created_workers: 6
+GC(1) GC Thread: using 6 out of 6 workers
+GC(1) Using 6 workers of 6 for evacuation
+   -- 8 threads used as specified by -XX:ParallelGCThreads=6
+
+GC(1) ParNew (Allocation Failure)
+GC(1) oops_do_marking_prologue
+GC(1) WorkerManager::add_workers() : created_workers: 6
+GC(1) GC Thread: using 6 out of 6 workers
+GC(1)  204  3  java.util.Arrays::copyOf (40 bytes)   scavenge root
+GC(1)  204  3  java.util.Arrays::copyOf (40 bytes)   oops_do, mark
+...
+GC(1) WorkerManager::add_workers() : created_workers: 6
+GC(1) GC Thread: using 6 out of 6 workers
+GC(1)   17  3  java.util.Set::of (4 bytes)   oops_do, unmark
+GC(1)   20  3  java.util.Set::of (66 bytes)   oops_do, unmark
+...
+GC(1) oops_do_marking_epilogue
+GC(1) 0[3]: 0/1184/16
+GC(1) 0[4]: 13/1216/16
+...
+GC(1) Reference Processing: 0.0ms
+
+GC(1) Desired survivor size 5242880 bytes, new threshold 1 ...
+GC(1) Age table with threshold 1 (max threshold 15)
+GC(1) - age   1:    6291552 bytes,    6291552 total
+
+GC(1) Young PLAB allocation: allocated: 0B, wasted: 0B, unused: 0B, ...
+GC(1) Young sizing: calculated: 8B, actual: 161320B
+
+GC(1) ParNew (Allocation Failure) 10.168ms
+GC(1) Collect gen: ParNew 10.227ms
+GC(1) ParNew: 18358K->6144K(20480K)
+GC(1) CMS: 0K->8005K(61440K)
+GC(1) Metaspace: 491K->491K(1056768K)
+
+GC(1) TLAB new size: thread: 0x013363577800 [id: 32696] refills 50 ...
+...
+
+GC(1) Pause Young (Allocation Failure) 17M->13M(80M) 10.636ms
+GC(1) User=0.00s Sys=0.00s Real=0.00s
+
+GC(1) Heap after GC invocations=2 (full 0): par new generation  ...
+GC(1)   eden space 10240K,   0% used ...
+GC(1)   from space 10240K,  60% used ...
+GC(1)   to   space 10240K,   0% used ...
+GC(1)  concurrent mark-sweep generation total 61440K, used 8005K ...
+GC(1)  Metaspace       used 491K, capacity 4544K, committed 4864K, ...
+GC(1)   class space    used 42K, capacity 408K, committed 512K, ...
+```
+
+As you can see, the "-XX:ParallelGCThreads=6" option works as expected. GC #1 (Young GC) used 6 threads.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟"-XX:MaxTenuringThreshold=0" - Tenuring Objects Immediately
+
+This section provides a tutorial on how to use '-XX:MaxTenuringThreshold=0' to force objects being promoted immediately to Tenured generation. This will result more Major GCs.
+
+Earlier, we learned how to give a large Young generation to limit the GC in the Young generation using the ParNew collector only.
+
+In this tutorial, let's try to use the "-XX:MaxTenuringThreshold=0" JVM option to perform Tenured generation GC and Young generation GC:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms80m -Xmx80m -XX:NewRatio=3 -XX:SurvivorRatio=18 \
+   -XX:MaxTenuringThreshold=0 \
+   -Xlog:gc,gc+heap=debug,gc+age=trace \
+   GarbageCollection2 > output.txt
+
+herong> more output.txt
+
+Using Concurrent Mark Sweep
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   82837504   80656320   2181184
+...
+16   82837504   64172304   18665200
+GC(0) Desired survivor size 524288 bytes, new threshold 0 (max threshold 0)
+GC(0) Age table with threshold 0 (max threshold 0)
+GC(0) ParNew: 18227K->0K(19456K)
+GC(0) CMS: 0K->12104K(61440K)
+GC(0) Pause Young (Allocation Failure) 17M->11M(79M) 10.493ms
+   -- GC #0 - Young generation only
+   -- All live objects were promoted directly
+   -- from "eden" space to "tenured" generation
+   -- because of -XX:MaxTenuringThreshold=0
+
+...
+33   82837504   52246896   30590608
+GC(1) ParNew: 17769K->0K(19456K)
+GC(1) CMS: 12104K->24392K(61440K)
+GC(1) Pause Young (Allocation Failure) 29M->23M(79M) 6.775ms
+   -- GC #1 - Young generation only
+   -- More live objects were promoted directly to the Tenured generation
+
+...
+50   82837504   39662368   43175136
+GC(2) ParNew: 17770K->0K(19456K)
+GC(2) CMS: 24392K->36680K(61440K)
+GC(2) Pause Young (Allocation Failure) 41M->35M(79M) 6.169ms
+   -- GC #2 - Young generation only
+   -- Old generation usage went to 36680K out of 61440K, about 60%
+
+GC(3) Pause Initial Mark 37M->37M(79M) 0.414ms
+   -- Old generation usage of 60% triggered GC #3, which is a CMS GC
+
+...
+GC(3) Concurrent Mark
+65   82837504   29176944   53660560
+GC(3) Concurrent Mark 2.348ms
+   -- GC #3 step ran concurrently
+
+GC(3) Concurrent Preclean
+66   82837504   28128352   54709152
+67   82837504   27079760   55757744
+GC(3) Concurrent Preclean 0.139ms
+   -- GC #3 step ran concurrently
+
+GC(3) Concurrent Abortable Preclean
+
+GC(4) ParNew: 17954K->0K(19456K)
+GC(4) CMS: 36680K->47944K(61440K)
+GC(4) Pause Young (Allocation Failure) 53M->46M(79M) 5.878ms
+68   82837504   32693472   50144032
+   -- GC #4 (Young GC) performed while GC #3 (Old GC) was still running
+
+...
+84   82837504   15546832   67290672
+GC(3) Concurrent Abortable Preclean 14.492ms
+GC(6) Pause Full (Allocation Failure) 76M->27M(79M) 7.637ms
+GC(5) ParNew: 17768K->0K(19456K)
+GC(5) CMS: 47944K->28389K(61440K)
+GC(5) Pause Young (Allocation Failure) 64M->27M(79M) 14.113ms
+   -- GC #3 (Old GC) did not reach the end - cancelled by Full GC #11
+   -- GC #6 (Full GC) performed, because heap full
+   -- But no details printed for GC #6
+   -- GC #5 (Young GC) performed - may be part of GC #6
+   -- Not sure why GC #6 printed before GC #5.
+```
+
+```
+ ...
+101   82837504   35448056   47389448
+GC(7) ParNew: 17888K->0K(19456K)
+GC(7) CMS: 28389K->38632K(61440K)
+GC(7) Pause Young (Allocation Failure) 45M->37M(79M) 2.114ms
+GC(8) Pause Initial Mark 39M->39M(79M) 0.115ms
+GC(8) Concurrent Mark
+   -- GC #7 (Young GC) moved more objects to Old generation
+   -- That triggered GC #8 (Old GC)
+
+112   82837504   31374912   51462592
+GC(8) Concurrent Mark 1.271ms
+GC(8) Concurrent Preclean
+113   82837504   30326320   52511184
+GC(8) Concurrent Preclean 0.115ms
+GC(8) Concurrent Abortable Preclean
+
+...
+118   82837504   25083360   57754144
+GC(9) ParNew: 17768K->0K(19456K)
+GC(9) CMS: 38632K->52968K(61440K)
+GC(9) Pause Young (Allocation Failure) 55M->51M(79M) 3.210ms
+   -- GC #9 (Young GC) performed while GC #8 (Old GC) was still running
+
+GC(8) Concurrent Abortable Preclean 6.264ms
+GC(11) Pause Full (Allocation Failure) 69M->29M(79M) 7.138ms
+GC(10) ParNew: 17768K->0K(19456K)
+GC(10) CMS: 52968K->30437K(61440K)
+GC(10) Pause Young (Allocation Failure) 69M->29M(79M) 7.227ms
+   -- GC #9 (Old GC) did not reach the end - cancelled by Full GC #11
+   -- GC #11 (Full GC) performed, because heap full
+   -- But no details printed for GC #11
+   -- GC #10 (Young GC) performed - may be part of GC #11
+
+...
+   -- Many Old GC started and cancelled by Full GC
+
+...
+254   82837504   31376064   51461440
+GC(22) ParNew: 17769K->0K(19456K)
+GC(22) CMS: 32486K->46824K(61440K)
+GC(22) Pause Young (Allocation Failure) 49M->45M(79M) 2.816ms
+GC(23) Pause Initial Mark 46M->46M(79M) 0.106ms
+GC(23) Concurrent Mark
+   -- GC #22 (Young GC) moved more objects to Old generation
+   -- That triggered GC #23 (Old GC)
+
+...
+266   82837504   21884688   60952816
+GC(23) Concurrent Mark 1.429ms
+GC(23) Concurrent Preclean
+267   82837504   20836096   62001408
+GC(23) Concurrent Preclean 0.128ms
+GC(23) Concurrent Abortable Preclean
+GC(23) Concurrent Abortable Preclean 0.076ms
+268   82837504   19787504   63050000
+GC(23) Pause Remark 60M->60M(79M) 0.578ms
+GC(23) Concurrent Sweep
+269   82837504   18738912   64098592
+270   82837504   17690320   65147184
+GC(23) Concurrent Sweep 0.317ms
+GC(23) Concurrent Reset
+
+GC(23) Concurrent Reset 0.097ms
+GC(23) Old: 46824K->32488K(61440K)
+   -- GC #23 (Old GC) - the first Old GC reached the end!
+
+...
+```
+
+Conclusion:
+
+*   The Concurrent collector does respect the "-XX:MaxTenuringThreshold=0" setting. Survivor spaces, "from" and "to", will be not used, because all live objects will be promoted directly from "eden" space to "tenured" generation.
+*   The CMS collector starts Old generation GC concurrently and independently from the ParNew collector working on Young generation GC.
+*   When heap is full while an Old GC is running, the Old GC will be cancelled. A Full GC will be performed immediately with the application paused.
+*   The heap parameters were pretty bad. The CMS collector had cancelled many Old GCs and performed Full GCs instead.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟"-XX:CMSInitiatingOccupancyFraction=20" - Initiate CMS
+
+This section demonstrates that the '-XX:+UseCMSInitiatingOccupancyOnly' and '-XX:CMSInitiatingOccupancyFraction=20' JVM options can initiate CMS collector when Tenured generation occupancy reaches 20%.
+
+In the last tutorial, we saw that the CMS collector was triggered when memory usage in the Tenured generation reached 60%.
+
+If we want to start the CMS collector earlier, we can use "-XX:+UseCMSInitiatingOccupancyOnly" and "-XX:CMSInitiatingOccupancyFraction=20" JVM options to use the given 20% Tenured generation occupancy only to initiate CMS collector:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms80m -Xmx80m -XX:NewRatio=3 -XX:SurvivorRatio=18 \
+   -XX:MaxTenuringThreshold=0 \
+   -XX:CMSInitiatingOccupancyFraction=20 \
+   -XX:+UseCMSInitiatingOccupancyOnly \
+   -Xlog:gc,gc+heap=debug,gc+age=trace \
+   GarbageCollection2 > output.txt
+
+herong> more output.txt
+...
+16   82837504   64172304   18665200
+GC(0) ParNew: 18227K->0K(19456K)
+GC(0) CMS: 0K->13130K(61440K)
+GC(0) Pause Young (Allocation Failure) 17M->12M(79M) 10.905ms
+GC(1) Pause Initial Mark 13M->13M(79M) 0.328ms
+GC(1) Concurrent Mark
+   -- GC #0 (Young GC) moved 13130K objects to Tenured generation
+   -- Tenured generation occupancy reached: 13130K/61440K = 21% > 20%
+   -- This triggered GC #1 (Old GC) as expected
+
+32   82837504   52244608   30592896
+GC(1) Concurrent Mark 2.207ms
+GC(1) Concurrent Preclean
+33   82837504   51196016   31641488
+GC(2) ParNew: 17769K->0K(19456K)
+GC(2) CMS: 13130K->25418K(61440K)
+GC(2) Pause Young (Allocation Failure) 30M->24M(79M) 6.030ms
+   -- GC #2 (Young GC) performed while GC #1 (Old GC) was still running
+
+GC(1) Concurrent Sweep
+35   82837504   54340368   28497136
+36   82837504   53298320   29539184
+GC(1) Concurrent Sweep 0.548ms
+37   82837504   52235568   30601936
+GC(1) Concurrent Reset
+38   82837504   53298408   29539096
+39   82837504   52249816   30587688
+40   82837504   51201224   31636280
+GC(1) Concurrent Reset 0.326ms
+GC(1) Old: 13130K->23364K(61440K)
+   -- GC #1 (Old GC) - reached the end!
+
+...
+50   82837504   40715304   42122200
+GC(3) ParNew: 17770K->0K(19456K)
+GC(3) CMS: 23364K->36676K(61440K)
+GC(3) Pause Young (Allocation Failure) 40M->35M(79M) 5.675ms
+GC(4) Pause Initial Mark 36M->36M(79M) 0.077ms
+GC(4) Concurrent Mark
+   -- GC #3 (Young GC) moved more objects to Tenured generation
+   -- Tenured generation occupancy reached: 36676K/61440K = 60% > 20%
+   -- This triggered GC #4 (Old GC) as expected
+...
+61   82837504   33375656   49461848
+GC(4) Concurrent Mark 1.417ms
+GC(4) Concurrent Preclean
+62   82837504   32327064   50510440
+GC(4) Concurrent Preclean 0.136ms
+GC(4) Concurrent Abortable Preclean
+   -- GC #2 (Old GC) - continued concurrently
+
+GC(5) ParNew: 17770K->0K(19456K)
+GC(5) CMS: 36676K->46916K(61440K)
+GC(5) Pause Young (Allocation Failure) 53M->45M(79M) 5.194ms
+   -- GC #5 (Young GC) performed while GC #4 (Old GC) was still running
+
+GC(4) Concurrent Abortable Preclean 16.344ms
+GC(7) Pause Full (Allocation Failure) 76M->28M(79M) 8.291ms
+GC(6) ParNew: 17954K->0K(19456K)
+GC(6) CMS: 46916K->29414K(61440K)
+GC(6) Pause Young (Allocation Failure) 63M->28M(79M) 16.381ms
+   -- GC #4 (Old GC) was cancelled - Old generation was full
+   -- GC #7 (Full GC) was performed
+   -- GC #6 (Young GC) was also performed
+...
+```
+
+Conclusion: "-XX:+UseCMSInitiatingOccupancyOnly" and "-XX:CMSInitiatingOccupancyFraction=20" JVM options can force CMS collector to initiate Tenured generation GC when Tenured generation occupancy reaches 20%.
+
+Note that both "-XX:+UseCMSInitiatingOccupancyOnly" and "-XX:CMSInitiatingOccupancyFraction=20" JVM options must be used together.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟Maximum Logging of All Phases on Old GC
+
+This section demonstrates that the '-Xlog:gc*=trace' option can be used to print out maximum logging messages of all phases on an Old GC performed by the CMS collector.
+
+If you want to know how many phases are performed in a CMS Old GC process and how each phase is performed, you need to turn on the maximum GC logging with the "-Xlog:gc*=trace" option.
+
+Here is what I did to capture all log messages of a single Old GC performed by the CMS collector.
+
+1\. Run the following command to capture all log messages in a file:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms80m -Xmx80m -XX:NewRatio=3 -XX:SurvivorRatio=18 \
+   -XX:MaxTenuringThreshold=0 \
+   -XX:CMSInitiatingOccupancyFraction=20 \
+   -XX:+UseCMSInitiatingOccupancyOnly \
+   -Xlog:gc*=trace \
+   GarbageCollection2 > output.txt
+```
+
+2\. Open the log file, output.txt, in text editor. And find the first log message line with this regular express "GC\(\d+\) Old: \d+K" pattern:
+
+```
+ [info ][gc,heap] GC(8) Old: 45802K->31461K(61440K)
+```
+
+This log message indicates that the CMS collector ended a complete Old GC (GC #8).
+
+3\. Search all log message lines with "GC\(8\)" in the editor to get all log messages of GC #8:
+
+```
+ GC(8) Pause Initial Mark
+GC(8) checkpointRootsInitialWork
+GC(8) eden 0x00000000fb000000-0x00000000fb159f48-...
+GC(8) _eden_chunk_index=2, _eden_chunk_capacity=1217
+GC(8) _eden_chunk_array[0]=0x00000000fb100010
+GC(8) _eden_chunk_array[1]=0x00000000fb159f48
+GC(8) survivor 0x00000000fc300000-0x00000000fc300000-...
+GC(8) _survivor_chunk_index=0, _survivor_chunk_capacity=512
+GC(8) oops_do_marking_prologue
+GC(8) WorkerManager::add_workers() : created_workers: 2
+GC(8) GC Thread: using 2 out of 8 workers
+GC(8) Finished young gen initial mark scan work in 0th thread: 0s
+GC(8) Finished young gen initial mark scan work in 1th thread: 0s
+GC(8) Finished remaining root initial mark scan work in 0th thread: 0s
+GC(8) Finished remaining root initial mark scan work in 1th thread: 0s
+GC(8) WorkerManager::add_workers() : created_workers: 2
+GC(8) GC Thread: using 2 out of 8 workers
+GC(8) oops_do_marking_epilogue
+GC(8) checkpointRootsInitialWork 0.313ms
+GC(8) Pause Initial Mark 46M->46M(79M) 0.332ms
+GC(8) User=0.00s Sys=0.00s Real=0.00s
+   -- Initial Mark, Pause, 0.332ms, 2 threads
+
+GC(8) Concurrent Mark
+GC(8) WorkerPolicy::calc_default_active_workers() : active_workers(): 2
+GC(8) WorkerManager::add_workers() : created_workers: 2
+GC(8) CMS Thread: using 2 out of 2 workers
+GC(8) Using 2 workers of 2 for marking
+GC(8) Finished cms space scanning in 1th thread: 0.000 sec
+GC(8) Finished cms space scanning in 0th thread: 0.001 sec
+GC(8) Finished work stealing in 0th thread: 0.000 sec
+GC(8) Finished work stealing in 1th thread: 0.001 sec
+GC(8) Concurrent active time: 0.002ms
+GC(8)  (CMS Concurrent Mark yielded 0 times)
+GC(8) Concurrent Mark 1.569ms
+GC(8) User=0.00s Sys=0.00s Real=0.00s
+   -- Mark, Concurrent, 1.332ms, 2 threads
+
+GC(8) Concurrent Preclean
+GC(8) Preclean SoftReferences
+GC(8) SoftRef before: 0 0 0 0 0 0 0 0 (0)
+GC(8) SoftRef after: 0 0 0 0 0 0 0 0 (0)
+GC(8) Preclean SoftReferences 0.039ms
+GC(8) Preclean WeakReferences
+GC(8) WeakRef before: 0 10 0 0 0 0 0 0 (10)
+GC(8) WeakRef after: 0 0 0 0 0 0 0 0 (0)
+GC(8) Preclean WeakReferences 0.023ms
+GC(8) Preclean FinalReferences
+GC(8) FinalRef before: 0 0 0 0 0 0 0 0 (0)
+GC(8) FinalRef after: 0 0 0 0 0 0 0 0 (0)
+GC(8) Preclean FinalReferences 0.021ms
+GC(8) Preclean PhantomReferences
+GC(8) PhantomRef before: 0 0 0 0 0 0 0 0 (0)
+GC(8) PhantomRef after: 0 0 0 0 0 0 0 0 (0)
+GC(8) Preclean PhantomReferences 0.047ms
+GC(8)  (modUnionTable: 0 cards)
+GC(8)  (cardTable: 11 cards, re-scanned 11 cards, 1 iterations)
+GC(8) Concurrent active time: 0.000ms
+GC(8)  (CMS Concurrent Preclean yielded 0 times)
+GC(8) Concurrent Preclean 0.346ms
+GC(8) User=0.00s Sys=0.00s Real=0.00s
+   -- Preclean, Concurrent, 0.346ms, ? threads
+```
+
+```
+ GC(8) Concurrent Abortable Preclean
+GC(8)  [0 iterations, 0 waits, 0 cards)]
+GC(8) Concurrent active time: 0.000ms
+GC(8)  (CMS Concurrent Abortable Preclean yielded 0 times)
+GC(8) Concurrent Abortable Preclean 0.042ms
+GC(8) User=0.00s Sys=0.00s Real=0.00s
+   -- Abortable Preclean, Concurrent, 0.042ms, 2 threads
+
+GC(8) Pause Remark
+GC(8) YG occupancy: 17768 K (19456 K)
+GC(8) checkpointRootsFinalWork
+GC(8) eden 0x00000000fb000000-0x00000000fc15a048-...
+GC(8) _eden_chunk_index=18, _eden_chunk_capacity=1217
+GC(8) _eden_chunk_array[0]=0x00000000fb100010
+GC(8) _eden_chunk_array[1]=0x00000000fb159f48
+...
+GC(8) _eden_chunk_array[17]=0x00000000fc15a048
+GC(8) survivor 0x00000000fc300000-0x00000000fc300000-...
+GC(8) _survivor_chunk_index=0, _survivor_chunk_capacity=512
+GC(8) Rescan (parallel)
+GC(8) oops_do_marking_prologue
+GC(8) WorkerManager::add_workers() : created_workers: 2
+GC(8) GC Thread: using 2 out of 8 workers
+GC(8) Finished young gen rescan work in 0th thread: 0.000 sec
+GC(8) Finished young gen rescan work in 1th thread: 0.000 sec
+GC(8) Finished remaining root rescan work in 0th thread: 0.000 sec
+GC(8) Finished remaining root rescan work in 1th thread: 0.000 sec
+GC(8) Finished unhandled CLD scanning work in 0th thread: 0.000 sec
+GC(8) Finished dirty CLD scanning work in 0th thread: 0.000 sec
+GC(8) Finished dirty card rescan work in 1th thread: 0.000 sec
+GC(8) Finished dirty card rescan work in 0th thread: 0.000 sec
+GC(8) Finished work stealing in 0th thread: 0.000 sec
+GC(8) Finished work stealing in 1th thread: 0.000 sec
+GC(8) WorkerManager::add_workers() : created_workers: 2
+GC(8) GC Thread: using 2 out of 8 workers
+GC(8) oops_do_marking_epilogue
+GC(8) Rescan (parallel) 0.328ms
+GC(8) refProcessingWork
+GC(8) Reference Processing
+GC(8) Skipped phase1 of Reference Processing due to unavailable references
+GC(8) Skipped phase2 of Reference Processing due to unavailable references
+GC(8) Skipped phase3 of Reference Processing due to unavailable references
+GC(8) Skipped phase4 of Reference Processing due to unavailable references
+GC(8) Reference Processing: 0.0ms
+GC(8)   Reconsider SoftReferences: 0.0ms
+GC(8)   Notify Soft/WeakReferences: 0.0ms
+GC(8)   Notify and keep alive finalizable: 0.0ms
+GC(8)   Notify PhantomReferences: 0.0ms
+GC(8) Reference Processing 0.217ms
+GC(8) Weak Processing
+GC(8) Weak Processing 0.010ms
+GC(8) Class Unloading
+GC(8) ClassLoaderData
+GC(8) ClassLoaderData 0.007ms
+GC(8) ResolvedMethodTable
+GC(8) ResolvedMethodTable 0.009ms
+GC(8) Class Unloading 0.179ms
+GC(8) Scrub Symbol Table
+GC(8) Scrub Symbol Table 0.222ms
+GC(8) Scrub String Table
+GC(8) Scrub String Table 0.026ms
+GC(8) refProcessingWork 0.701ms
+GC(8) checkpointRootsFinalWork 1.219ms
+GC(8) Pause Remark 62M->62M(79M) 1.244ms
+GC(8) User=0.00s Sys=0.00s Real=0.00s
+   -- Remark, Pause, 1.244ms, 2 threads
+
+GC(8) Concurrent Sweep
+GC(8) size[3] :
+GC(8) demand: 1, old_rate: 45970.136719, current_rate: 73.209167, ...
+GC(8) size[4] :
+GC(8) demand: 0, old_rate: 35479.605469, current_rate: 0.000000, ...
+...
+GC(8) size[255] :
+GC(8) demand: 0, old_rate: 0.000000, current_rate: 0.000000, ...
+GC(8) size[256] :
+GC(8) demand: 0, old_rate: 0.000000, current_rate: 0.000000, ...
+GC(8) demand: 1, old_rate: 0.000000, current_rate: 73.209167, ...
+GC(8) CMS: Large Block: 0x00000000ff0e0438; Proximity: ...
+GC(8) CMS: Large block 0x00000000ff0df670
+GC(8) Concurrent active time: 0.006ms
+GC(8)  (CMS Concurrent Sweep yielded 1 times)
+GC(8) Concurrent Sweep 6.384ms
+GC(8) User=0.02s Sys=0.00s Real=0.01s
+   -- Sweep, Concurrent, 6.384ms, ? threads
+
+GC(8) Old: 45802K->31461K(61440K)
+   -- GC #8 (Old GC) ended
+```
+
+Cool. Now we know a CMS Old GC has 6 phases using different concurrency models.
+
+```
+ Phases   Threads   Time      Concurrency
+
+      Initial Mark         2   0.332ms   pause - stop-the-world
+              Mark         2   1.332ms   concurrent to app/ParNew
+          Preclean         1   0.346ms   concurrent to app/ParNew
+Abortable Preclean	       2   0.042ms   concurrent to app/ParNew
+            Remark         2   1.244ms   pause stop-the-world
+             Sweep         1   6.384ms   concurrent to app/ParNew
+```
+
+If you are still using JVM 8 or older versions, you may see slightly different phases:
+
+```
+ Phases   Threads   Concurrency
+
+Initial Mark         4   stop-the-world
+        Mark         1   concurrent to app/ParNew
+    Preclean         1   concurrent to app/ParNew
+  Final Mark         4   stop-the-world
+       Sweep         1   concurrent to app/ParNew
+       Reset         1   concurrent to app/ParNew
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟Maximum Logging of All Phases on Full GC
+
+This section demonstrates that the '-Xlog:gc*=trace' option can be used to print out maximum logging messages of all phases on a Full GC performed by the CMS collector.
+
+If you want to know how many phases are performed in a CMS Full GC process and how each phase is performed, you need to turn on the maximum GC logging with the "-Xlog:gc*=trace" option.
+
+Here is what I did to capture all log messages of a single Full GC performed by the CMS collector.
+
+1\. Run the following command to capture all log messages in a file:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms80m -Xmx80m -XX:NewRatio=3 -XX:SurvivorRatio=18 \
+   -XX:MaxTenuringThreshold=0 \
+   -XX:CMSInitiatingOccupancyFraction=20 \
+   -XX:+UseCMSInitiatingOccupancyOnly \
+   -Xlog:gc*=trace \
+   GarbageCollection2 > output.txt
+```
+
+2\. Open the log file, output.txt, in text editor. And find the first log message line with this regular express "Pause Full \(Allocation Failure\)" pattern:
+
+```
+ [info][gc,start] GC(6) Pause Full (Allocation Failure)
+```
+
+This log message indicates that the CMS collector started a Full GC (GC #6).
+
+3\. Search all log message lines with "GC\(6\)" in the editor to get all log messages of GC #6:
+
+```
+ GC(6) Pause Full (Allocation Failure)
+GC(6) Collect gen: CMS
+GC(6) Old invoke=1 size=1048592
+GC(6) Concurrent mode failure
+   -- GC #6 (Full GC) started because heap is full
+
+GC(6)  num     #instances         #bytes  class name (module)
+GC(6) -------------------------------------------------------
+GC(6)    1:            74       72353952  [J (java.base@12.0.1)
+GC(6)    2:           276         567640  [I (java.base@12.0.1)
+GC(6)    3:          2631         130560  [B (java.base@12.0.1)
+GC(6)    4:          1284          82024  [Ljava.lang.Object; (...)
+GC(6)    5:           703          80760  java.lang.Class (...)
+GC(6)    6:          2541          60984  java.lang.String (...)
+GC(6)    7:          1640          52480  java.util.HashMap$Node (...)
+GC(6)    8:            16          42448  [C (java.base@12.0.1)
+...
+GC(6) Total         16689       73670144
+GC(6) Class Histogram (before full gc) 3.344ms
+   -- Class Histogram Before GC, 3.344ms
+
+GC(6) CMS:MSC
+   -- MSC (Mark Sweep Compact) process started
+
+GC(6) size[3] :
+GC(6) demand: 6595, old_rate: 0.000000, current_rate: 45970.136719, ...
+GC(6) size[4] :
+GC(6) demand: 5090, old_rate: 0.000000, current_rate: 35479.605469, ...
+GC(6) size[5] :
+GC(6) demand: 1227, old_rate: 0.000000, current_rate: 8552.746094, ...
+...
+GC(6) size[256] :
+GC(6) demand: 0, old_rate: 0.000000, current_rate: 0.000000, ...
+GC(6) demand: 1, old_rate: 0.000000, current_rate: 6.970453, ...
+   -- Some kind of sweeping phase, ? ms
+```
+
+```
+ GC(6) Phase 1: Mark live objects
+GC(6) oops_do_marking_prologue
+GC(6) oops_do_marking_epilogue
+GC(6) Reference Processing
+GC(6) Skipped phase1 of Reference Processing due to unavailable references
+GC(6) Phase2 Soft before0 0 0 0 0 0 0 0 (0)
+GC(6) Phase2 Weak before56 0 0 0 0 0 0 0 (56)
+GC(6) Phase2 Final before0 0 0 0 0 0 0 0 (0)
+GC(6) Phase2 Final after0 0 0 0 0 0 0 0 (0)
+GC(6) Skipped phase3 of Reference Processing due to unavailable references
+GC(6) Phase4 Phantom before1 0 0 0 0 0 0 0 (1)
+GC(6) Reference Processing: 0.1ms
+GC(6)   Reconsider SoftReferences: 0.0ms
+GC(6)     SoftRef: skipped
+GC(6)   Notify Soft/WeakReferences: 0.0ms
+GC(6)     SoftRef: 0.0ms
+GC(6)     WeakRef: 0.0ms
+GC(6)     FinalRef: 0.0ms
+GC(6)     Total: 0.0ms
+GC(6)   Notify and keep alive finalizable: 0.0ms
+GC(6)     FinalRef: skipped
+GC(6)   Notify PhantomReferences: 0.0ms
+GC(6)     PhantomRef: 0.0ms
+GC(6)   SoftReference:
+GC(6)     Discovered: 0
+GC(6)     Cleared: 0
+GC(6)   WeakReference:
+GC(6)     Discovered: 56
+GC(6)     Cleared: 12
+GC(6)   FinalReference:
+GC(6)     Discovered: 0
+GC(6)     Cleared: 0
+GC(6)   PhantomReference:
+GC(6)     Discovered: 1
+GC(6)     Cleared: 0
+GC(6) Reference Processing 0.228ms
+GC(6) Weak Processing
+GC(6) Weak Processing 0.011ms
+GC(6) Class Unloading
+GC(6) ClassLoaderData
+GC(6) ClassLoaderData 0.007ms
+GC(6) ResolvedMethodTable
+GC(6) ResolvedMethodTable 0.008ms
+GC(6) Class Unloading 0.163ms
+GC(6) Scrub String Table
+GC(6) Scrub String Table 0.285ms
+GC(6) Scrub Symbol Table
+GC(6) Scrub Symbol Table 0.240ms
+GC(6) Phase 1: Mark live objects 2.004ms
+   -- "Mark live objects" phase ended, 2.004ms
+
+GC(6) Phase 2: Compute new object addresses
+GC(6) Phase 2: Compute new object addresses 0.339ms
+   -- "Compute new object addresses" phase ended, 0.339ms
+
+GC(6) Phase 3: Adjust pointers
+GC(6) oops_do_marking_prologue
+GC(6)   20       1       java.lang.Object::<init> (1 bytes)   ...
+GC(6)   22       1       java.lang.module.ModuleDescriptor::name ...
+GC(6)   25       1       java.lang.module.ModuleReference::descriptor...
+GC(6)   15       4       java.lang.StringLatin1::hashCode (42 bytes) ...
+GC(6)   29       1       java.util.KeyValueHolder::getKey (5 bytes) ...
+GC(6)   30       1       java.util.KeyValueHolder::getValue (5 bytes)...
+...
+GC(6) oops_do_marking_epilogue
+GC(6) Phase 3: Adjust pointers 5.032ms
+   -- "Adjust pointers" phase ended, 5.032ms
+
+GC(6) Phase 4: Move objects
+GC(6) Phase 4: Move objects 5.850ms
+   -- "Move objects" phase ended, 5.850ms
+
+GC(6) Restoring 7827 marks
+GC(6) CMS: Large block 0x00000000fe2d97b8
+GC(6)  num     #instances         #bytes  class name (module)
+GC(6) -------------------------------------------------------
+GC(6)    1:            35       31458864  [J (java.base@12.0.1)
+GC(6)    2:          2605         129016  [B (java.base@12.0.1)
+GC(6)    3:          1284          82024  [Ljava.lang.Object; (...)
+GC(6)    4:           703          80760  java.lang.Class (...)
+GC(6)    5:          2515          60360  java.lang.String (...)
+GC(6)    6:          1640          52480  java.util.HashMap$Node (...)
+GC(6)    7:            16          42448  [C (java.base@12.0.1)
+...
+GC(6) Total         16433       32209224
+GC(6) Class Histogram (after full gc) 2.451ms
+   -- "Class Histogram After GC" phase ended, 2.451ms
+
+GC(6) CMS:MSC 21.854ms
+   -- MSC (Mark Sweep Compact) process ended
+
+GC(6) PSAdaptiveSizePolicy::check_gc_overhead_limit: promo_limit: ...
+GC(6) Collect gen: CMS 25.447ms
+
+GC(6) Pause Full (Allocation Failure) 70M->30M(79M) 25.469ms
+   -- GC #6 (Full GC) ended
+```
+
+As you can see from log messages, a Full GC is performed with the following phases.
+
+```
+ Phases  Threads  Time     Concurrency
+
+   Class Histogram Before GC        1  3.344ms  pause - stop-the-world
+       Some kind of sweeping        1  ?.???ms  pause - stop-the-world
+           Mark live objects        1  2.004ms  pause - stop-the-world
+Compute new object addresses        1  0.339ms  pause - stop-the-world
+             Adjust pointers        1  5.032ms  pause - stop-the-world
+                Move objects        1  5.850ms  pause - stop-the-world
+    Class Histogram After GC        1  2.451ms  pause - stop-the-world
+```
+
+Full GCs have major impacts on application performance. They take longer time than Old GC, and stop the application while performing them. You should optimize GC configurations to avoid Full GCs.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟"-XX:ParallelGCThreads=6" - Old GC Parallel Threads
+
+This section demonstrates that the '-XX:ParallelGCThreads=6' option can be used to control the number of threads used in Old GC parallel phases.
+
+In previous tutorials, we learned that multiple threads are used by the CMS collector for stop-the-world (application paused) phases in an Old GC process.
+
+For example, we saw 2 threads was used in the "Initial Mark" phase. If you want to increase the number of threads used in those stop-the-world phases, you can specify a higher number in the "-XX:ParallelGCThreads=n" option.
+
+The example below shows all log messages of a single Old GC performed by the CMS collector with 6 threads specified in stop-the-world phases.
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms90m -Xmx90m -XX:NewRatio=2 -XX:SurvivorRatio=1 \
+   -XX:CMSInitiatingOccupancyFraction=20 \
+   -XX:+UseCMSInitiatingOccupancyOnly \
+   -XX:ParallelGCThreads=6 \
+   -Xlog:gc*=trace \
+   GarbageCollection2 > output.txt
+
+herong> more output.txt
+
+GC(4) Pause Initial Mark
+GC(4) checkpointRootsInitialWork
+GC(4) eden 0x00000000fa600000-0x00000000fa700010-0x0000...
+GC(4) _eden_chunk_index=1, _eden_chunk_capacity=1281
+GC(4) _eden_chunk_array[0]=0x00000000fa700010
+GC(4) survivor 0x00000000fb000000-0x00000000fb900090-0x0000...
+GC(4) _survivor_chunk_index=0, _survivor_chunk_capacity=5120
+GC(4) oops_do_marking_prologue
+GC(4) WorkerManager::add_workers() : created_workers: 6
+GC(4) GC Thread: using 6 out of 6 workers
+GC(4) Finished young gen initial mark scan work in 2th thread: 0.000 sec
+GC(4) Finished young gen initial mark scan work in 5th thread: 0.000 sec
+GC(4) Finished young gen initial mark scan work in 1th thread: 0.000 sec
+GC(4) Finished young gen initial mark scan work in 0th thread: 0.000 sec
+GC(4) Finished young gen initial mark scan work in 3th thread: 0.000 sec
+GC(4) Finished remaining root initial mark scan work in 2th thread: 0.000 sec
+GC(4) Finished remaining root initial mark scan work in 0th thread: 0.000 sec
+GC(4) Finished remaining root initial mark scan work in 1th thread: 0.000 sec
+GC(4) Finished young gen initial mark scan work in 4th thread: 0.000 sec
+GC(4) Finished remaining root initial mark scan work in 3th thread: 0.000 sec
+GC(4) Finished remaining root initial mark scan work in 5th thread: 0.000 sec
+GC(4) Finished remaining root initial mark scan work in 4th thread: 0.000 sec
+GC(4) WorkerManager::add_workers() : created_workers: 6
+GC(4) GC Thread: using 6 out of 6 workers
+GC(4) oops_do_marking_epilogue
+GC(4) checkpointRootsInitialWork 0.268ms
+GC(4) Pause Initial Mark 27M->27M(80M) 0.302ms
+GC(4) User=0.00s Sys=0.00s Real=0.00s
+   -- Initial Mark phase, Pause
+   -- 6 threads used as specified by -XX:ParallelGCThreads=6
+
+GC(4) Concurrent Mark
+GC(4) CMS Thread: using 2 out of 2 workers
+GC(4) Using 2 workers of 2 for marking
+GC(4) Finished cms space scanning in 0th thread: 0.007 sec
+GC(4) Finished cms space scanning in 1th thread: 0.007 sec
+GC(4) Finished work stealing in 1th thread: 0.000 sec
+GC(4) Finished work stealing in 0th thread: 0.000 sec
+GC(4) Concurrent active time: 0.002ms
+GC(4)  (CMS Concurrent Mark yielded 1 times)
+GC(4) Concurrent Mark 7.556ms
+GC(4) User=0.03s Sys=0.00s Real=0.02s
+   -- Mark phase, Concurrent
+   -- 2 threads used by default
+
+GC(4) Concurrent Preclean
+GC(4) Preclean SoftReferences 0.028ms
+GC(4) Preclean WeakReferences 0.039ms
+GC(4) Preclean FinalReferences 0.020ms
+GC(4) Preclean PhantomReferences 0.024ms
+GC(4) Concurrent Preclean 0.418ms
+GC(4) User=0.00s Sys=0.00s Real=0.00s
+   -- Preclean phase, Concurrent
+
+GC(4) Concurrent Abortable Preclean
+GC(4) Concurrent Abortable Preclean 36.072ms
+GC(4) User=0.11s Sys=0.02s Real=0.03s
+   -- Abortable Preclean phase, Concurrent
+```
+
+```
+ GC(4) Pause Remark
+GC(4) YG occupancy: 7371 K (20480 K)
+GC(4) checkpointRootsFinalWork
+GC(4) eden 0x00000000fa600000-0x00000000fa731f70-0x0000...
+GC(4) _eden_chunk_index=2, _eden_chunk_capacity=1281
+GC(4) _eden_chunk_array[0]=0x00000000fa700010
+GC(4) _eden_chunk_array[1]=0x00000000fa731f70
+GC(4) survivor 0x00000000fba00000-0x00000000fc001080-0x0000...
+GC(4) _survivor_chunk_index=0, _survivor_chunk_capacity=5120
+GC(4) Rescan (parallel)
+GC(4) oops_do_marking_prologue
+GC(4) WorkerManager::add_workers() : created_workers: 6
+GC(4) GC Thread: using 6 out of 6 workers
+GC(4) Finished young gen rescan work in 0th thread: 0.000 sec
+GC(4) Finished young gen rescan work in 3th thread: 0.000 sec
+GC(4) Finished young gen rescan work in 1th thread: 0.000 sec
+GC(4) Finished young gen rescan work in 2th thread: 0.000 sec
+GC(4) Finished young gen rescan work in 5th thread: 0.000 sec
+GC(4) Finished remaining root rescan work in 1th thread: 0.000 sec
+GC(4) Finished remaining root rescan work in 2th thread: 0.000 sec
+GC(4) Finished remaining root rescan work in 0th thread: 0.000 sec
+GC(4) Finished young gen rescan work in 4th thread: 0.000 sec
+GC(4) Finished unhandled CLD scanning work in 0th thread: 0.000 sec
+GC(4) Finished remaining root rescan work in 3th thread: 0.000 sec
+GC(4) Finished remaining root rescan work in 4th thread: 0.000 sec
+GC(4) Finished dirty CLD scanning work in 0th thread: 0.000 sec
+GC(4) Finished remaining root rescan work in 5th thread: 0.000 sec
+GC(4) Finished dirty card rescan work in 0th thread: 0.000 sec
+GC(4) Finished dirty card rescan work in 2th thread: 0.000 sec
+GC(4) Finished dirty card rescan work in 1th thread: 0.000 sec
+GC(4) Finished dirty card rescan work in 4th thread: 0.000 sec
+GC(4) Finished dirty card rescan work in 5th thread: 0.000 sec
+GC(4) Finished dirty card rescan work in 3th thread: 0.000 sec
+GC(4) Finished work stealing in 0th thread: 0.000 sec
+GC(4) Finished work stealing in 2th thread: 0.000 sec
+GC(4) Finished work stealing in 3th thread: 0.000 sec
+GC(4) Finished work stealing in 1th thread: 0.000 sec
+GC(4) Finished work stealing in 4th thread: 0.000 sec
+GC(4) Finished work stealing in 5th thread: 0.000 sec
+GC(4) WorkerManager::add_workers() : created_workers: 6
+GC(4) GC Thread: using 6 out of 6 workers
+...
+GC(4) Pause Remark 63M->63M(80M) 1.261ms
+GC(4) User=0.00s Sys=0.00s Real=0.00s
+   -- Remark phase, Pause
+   -- 6 threads used as specified by -XX:ParallelGCThreads=6
+
+GC(4) Concurrent Sweep
+GC(4) Concurrent Sweep 7.167ms
+   -- Sweep phase, Concurrent
+
+GC(4) User=0.02s Sys=0.00s Real=0.02s
+GC(4) Old: 18246K->31462K(61440K)
+   -- GC #4 (Old GC) completed
+```
+
+As you can see, the "-XX:ParallelGCThreads=6" option works as expected. Both "Initial Mark" and "Remark" phases used 6 threads.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Concurrent Mark-Sweep (CMS) Collector - "+XX:+UseConcMarkSweepGC"](#part0060.xhtml)
+
+∟"-XX:ConcGCThreads=3" - Old GC Concurrent Threads
+
+This section demonstrates that the '-XX:ConcGCThreads=3' option can be used to control the number of threads used in 1 of the CMS concurrent phases: Mark phase.
+
+In the last tutorial, we learned how to use the "-XX:ParallelGCThreads=6" JVM option to control the number threads used in Old GC parallel (stop-the-world) phases.
+
+In this tutorial, let's try to use the "-XX:ConcGCThreads=5" JVM option to control the number threads used in Old GC concurrent phases.
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms90m -Xmx90m -XX:NewRatio=2 -XX:SurvivorRatio=1 \
+   -XX:CMSInitiatingOccupancyFraction=20 \
+   -XX:+UseCMSInitiatingOccupancyOnly \
+   -XX:ParallelGCThreads=6 -XX:ConcGCThreads=5 \
+   -Xlog:gc*=trace \
+   GarbageCollection2 > output.txt
+
+herong> more output.txt
+
+GC(13) Pause Initial Mark
+GC(13) checkpointRootsInitialWork
+GC(13) eden 0x00000000fa600000-0x00000000fa700010-...
+GC(13) _eden_chunk_index=1, _eden_chunk_capacity=1281
+GC(13) _eden_chunk_array[0]=0x00000000fa700010
+GC(13) survivor 0x00000000fb000000-0x00000000fb800080-...
+GC(13) _survivor_chunk_index=0, _survivor_chunk_capacity=5120
+GC(13) oops_do_marking_prologue
+GC(13) WorkerManager::add_workers() : created_workers: 6
+GC(13) GC Thread: using 6 out of 6 workers
+...
+GC(13) oops_do_marking_epilogue
+GC(13) checkpointRootsInitialWork 0.316ms
+GC(13) Pause Initial Mark 40M->40M(80M) 0.335ms
+GC(13) User=0.00s Sys=0.00s Real=0.00s
+   -- Initial Mark phase, Pause
+   -- 6 threads used as specified by -XX:ParallelGCThreads=6
+
+GC(13) Concurrent Mark
+GC(13) WorkerManager::add_workers() : created_workers: 5
+GC(13) CMS Thread: using 5 out of 5 workers
+GC(13) Using 5 workers of 5 for marking
+GC(13) Finished cms space scanning in 1th thread: 0.000 sec
+GC(13) Finished cms space scanning in 2th thread: 0.000 sec
+GC(13) Finished cms space scanning in 3th thread: 0.000 sec
+GC(13) Finished cms space scanning in 4th thread: 0.000 sec
+GC(13) Finished cms space scanning in 0th thread: 0.005 sec
+GC(13) Finished work stealing in 0th thread: 0.000 sec
+GC(13) Finished work stealing in 4th thread: 0.005 sec
+GC(13) Finished work stealing in 3th thread: 0.005 sec
+GC(13) Finished work stealing in 1th thread: 0.005 sec
+GC(13) Finished work stealing in 2th thread: 0.005 sec
+GC(13) Concurrent active time: 0.002ms
+GC(13)  (CMS Concurrent Mark yielded 1 times)
+GC(13) Concurrent Mark 5.709ms
+GC(13) User=0.00s Sys=0.00s Real=0.01s
+   -- Mark phase, Concurrent
+   -- 5 threads used as specified by -XX:ConcGCThreads=5
+
+GC(13) Concurrent Preclean
+GC(13) Preclean SoftReferences 0.065ms
+GC(13) Preclean WeakReferences 0.048ms
+GC(13) Preclean FinalReferences 0.022ms
+GC(13) Preclean PhantomReferences 0.036ms
+GC(13) Concurrent Preclean 0.438ms
+GC(13) User=0.00s Sys=0.00s Real=0.00s
+   -- Preclean phase, Concurrent
+
+GC(13) Concurrent Abortable Preclean
+GC(13) Concurrent Abortable Preclean 16.231ms
+GC(13) User=0.03s Sys=0.00s Real=0.02s
+   -- Abortable Preclean phase, Concurrent
+```
+
+```
+ GC(13) Pause Remark
+GC(13) YG occupancy: 8392 K (20480 K)
+GC(13) checkpointRootsFinalWork
+GC(13) eden 0x00000000fa600000-0x00000000fa7321b0-...
+GC(13) _eden_chunk_index=2, _eden_chunk_capacity=1281
+GC(13) _eden_chunk_array[0]=0x00000000fa700010
+GC(13) _eden_chunk_array[1]=0x00000000fa7321b0
+GC(13) survivor 0x00000000fb000000-0x00000000fb700070-...
+GC(13) _survivor_chunk_index=0, _survivor_chunk_capacity=5120
+GC(13) Rescan (parallel)
+GC(13) oops_do_marking_prologue
+GC(13) WorkerManager::add_workers() : created_workers: 6
+GC(13) GC Thread: using 6 out of 6 workers
+...
+GC(13) Pause Remark 62M->62M(80M) 1.288ms
+GC(13) User=0.00s Sys=0.00s Real=0.00s
+   -- Remark phase, Pause
+   -- 6 threads used as specified by -XX:ParallelGCThreads=6
+
+GC(13) Concurrent Sweep
+GC(13) size[3] :
+GC(13) demand: 0, old_rate: 40633.671875, current_rate: 0.000000, ...
+...
+GC(13) Concurrent active time: 0.007ms
+GC(13)  (CMS Concurrent Sweep yielded 1 times)
+GC(13) Concurrent Sweep 7.251ms
+   -- Sweep phase, Concurrent
+
+GC(13) User=0.00s Sys=0.02s Real=0.01s
+GC(13) Old: 32486K->32486K(61440K)
+   -- GC #13 (Old GC) completed
+```
+
+As you can see, the "-XX:ConcGCThreads=5" option works as expected. The "Mark" and "Remark" phase used 5 threads.
+
+Conclusion: CMS Old GC has 6 phases. But not all phases supports multiple threads:
+
+```
+ Phases  Threads  JVM Option         Concurrency
+
+      Initial Mark        6  ParallelGCThreads  pause - stop-the-world
+              Mark        5  ConcGCThreads      concurrent to app/ParNew
+          Preclean        1                     concurrent to app/ParNew
+Abortable Preclean	      1                     concurrent to app/ParNew
+            Remark        6  ParallelGCThreads  pause stop-the-world
+             Sweep        1                     concurrent to app/ParNew
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Garbage First (G1) Collector - "+XX:+UseG1GC"
+
+This chapter provides tutorial notes and example codes on the Garbage First (G1) Collector specified by the '+XX:+UseG1GC' JVM option. Topics include introduction the G1 Collector; G1 log message format; Stop-The-World behavior of G1 Collector.
+
+> [What Is Garbage First (G1) Collector](#part0075.xhtml)
+> 
+> [Garbage First GC Log Message Format](#part0076.xhtml)
+> 
+> [Maximum Logging of All Phases on Normal Young GC](#part0077.xhtml)
+> 
+> [Maximum Logging on Concurrent Start Young GC](#part0078.xhtml)
+> 
+> [Maximum Logging of All Phases on Old GC](#part0079.xhtml)
+> 
+> [Maximum Logging of All Phases on Full GC](#part0080.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - G1 Parallel Threads](#part0081.xhtml)
+> 
+> ["-XX:ConcGCThreads=5" - Old GC Concurrent Threads](#part0082.xhtml)
+> 
+> ["-XX:G1HeapRegionSize=n" - G1 Region Size](#part0083.xhtml)
+> 
+> [G1 Humongous Allocation - Objects Too Large](#part0084.xhtml)
+> 
+> ["-Xlog:gc+age=trace" - Object Age](#part0085.xhtml)
+> 
+> ["-XX:+MaxTenuringThreshold=0" - Skip G1 Survivors](#part0086.xhtml)
+
+Takeaways:
+
+*   The Garbage First (G1) Collector, -XX:+UseG1GC, improves the performance of the Concurrent Mark-Sweep (CMS) Collector by dividing the Heap area into regions and working on regions mostly filled with garbage first.
+*   G1 Young (or Minor) GC is performed with application stopped and with multiple parallel threads.
+*   G1 Old (or Major) GC has 7 phases: Clear Claimed Marks, Scan Root Regions, Mark, Remark, Rebuild Remembered Sets, Cleanup, Cleanup for Next Mark.
+*   3 of 7 G1 Old GC phases, Clear Claimed Marks, Remark, Cleanup, are paused phases performed with application stopped and with multiple parallel threads.
+*   4 of 7 G1 Old GC phases, Scan Root Regions, Mark, Rebuild Remembered Sets, Cleanup for Next Mark, are concurrent phases performed with application, Young/Full GC running and with multiple concurrent threads.
+*   G1 Full GC is triggered when an Old GC is running too long and the heap is running out of space.
+*   G1 Full GC is performed with application stopped and with multiple parallel threads.
+*   "-XX:G1HeapRegionSize=n" can be used to specify the size of regions used by the G1 collector. The default region size is 1024K.
+*   Any object that is more than half a region size is considered a "Humongous object". Such an object is allocated directly in the old generation into "Humongous regions". A Humongous region is a contiguous set of regions.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟What Is Garbage First (G1) Collector
+
+This section describes the Garbage-First (G1) Collector, which divides the heap into a number of equally sized regions. The G1 Collector measures how much garbage each region has and collects garbage in regions mostly filled with garbage first.
+
+**What Is Garbage First (G1) Collector?** The G1 Collector (invoked by "-XX:+UseG1GC" option) is a regionalized and generational garbage collector. The Heap area is first divided into a number of equally sized regions. A region can be used an Eden region, Survivor region or Old region.
+
+The first focus of G1 is to provide a solution for users running applications that require large heaps with limited GC latency. This means heap sizes of around 6 GB or larger, and a stable and predictable pause time below 0.5 seconds.
+
+At a high level, the G1 collector works as below:
+
+*   When application wants to create a new object, memory will be allocated to the new object from the current Eden region.
+*   When the current Eden region is full, another empty region will used as the current Eden region.
+*   When too many Eden regions are created, Minor GC is initiated in stop-the-world fashion with multiple parallel threads.
+*   The first step of a Minor GC is to loop through all old Eden and Survivor regions to mark all live objects.
+*   The second step of a Minor GC is to copy all live objects younger than the tenuring threshold to new Survivor regions. Older objects are copied to new Tenured regions.
+*   The last step of a Minor GC is to free up all old Eden and Survivor regions, which have no liver objects now.
+*   When too many Tenured regions are created, Major GC is initiated with 4 phases: Initial Mark, Mark, Cleanup, and Copy.
+*   The Initial Mark phase of a Major GC is combined with a Minor GC to share the same application pause.
+*   The Mark phase of a Major GC is to loop through all old Tenured regions to mark all live objects with multiple parallel threads running concurrently (most of the time) with the application.
+*   The Cleanup phase of a Major GC is to free up any old Tenured regions identified with no live objects, running concurrently with the application.
+*   The Copy phase of a Major GC is combined with a Minor GC to share the same application pause. Its job is to copy live objects from old Tenured regions to new Tenured regions. So old Tenured regions can be freed up.
+
+The copy phase of a Major GC follows a special rule that copies live objects from Tenured regions with most garbage first. This is why this collector is called Garbage First (G1) collector.
+
+Obviously, copying live objects from regions with more garbage is more cost effective, better return value with less work. In fact, regions with little garbage should be left untouched, because not much memory can be released.
+
+The picture below shows how the Heap area is divided into regions and how regions are assigned as Eden Space (Eden region), Survivor Spaces (Survivor region), or Old Generation (Tenured region):
+
+![](Images/image00261.jpeg)
+
+HotSpot Garbage First (G1) Collector
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟Garbage First GC Log Message Format
+
+This section provides examples of Garbage First (G1) GC log messages.
+
+Before doing any testing with the G1 collector, let's look at log messages generated by the G1 collector first:
+
+```
+ herong> java -Xms2m -Xmx64m \
+   -XX:+UseG1GC -Xlog:gc*=trace GarbageCollection > output.txt
+
+[info ][gc,heap] Heap region size: 1M
+[info ][gc     ] Using G1
+   -- G1 collector confirmed
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+1   16777216   14795336   1981880
+2   16777216   13041616   3735600
+3   16777216   11993040   4784176
+4   16777216   10863192   5914024
+5   16777216   9749064   7028152
+[debug][gc,heap] GC(0) Heap before GC invocations=0 (full 0):
+                        garbage-first heap   total 16384K, used 6144K
+[debug][gc,heap] GC(0)   region size 1024K, 7 young (7168K),
+                          0 survivors (0K)
+   -- GC #0 (Young GC) started
+
+[info ][gc,heap] GC(0) Eden regions: 7->0(2)
+[info ][gc,heap] GC(0) Survivor regions: 0->1(1)
+[info ][gc,heap] GC(0) Old regions: 0->6
+[info ][gc,heap] GC(0) Archive regions: 0->0
+[info ][gc,heap] GC(0) Humongous regions: 0->0
+   -- Promoted 1 region from Eden to Survivor
+   -- Promoted 6 regions from Eden to Old
+
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 0):
+                        garbage-first heap   total 16384K, used 7124K
+[debug][gc,heap] GC(0)   region size 1024K, 1 young (1024K),
+                          1 survivors (1024K)
+[info ][gc     ] GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+                        6M->6M(16M) 7.288ms
+   -- GC #0 (Young GC) ended in 7.288ms
+
+6   16777216   8637920   8139296
+7   16777216   7540168   9237048
+
+[debug][gc,heap] GC(1) Heap before GC invocations=1 (full 0):
+                        garbage-first heap   total 16384K, used 8148K
+[debug][gc,heap] GC(1)   region size 1024K, 3 young (3072K),
+                          1 survivors (1024K)
+   -- GC #1 (Young GC) started
+
+[trace][gc,age] GC(1) Age table with threshold 1 (max threshold 15)
+[trace][gc,age] GC(1) - age   1:     881400 bytes,     881400 total
+   -- Object aging distribution in Survivor
+
+[info ][gc,heap] GC(1) Eden regions: 2->0(1)
+[info ][gc,heap] GC(1) Survivor regions: 1->1(1)
+[info ][gc,heap] GC(1) Old regions: 6->8
+   -- Promoted 2 regions from Eden to Survivor/Old
+```
+
+```
+ [debug][gc,heap] GC(1) Heap after GC invocations=2 (full 0):
+                        garbage-first heap   total 16384K, used 8965K
+[debug][gc,heap] GC(1)   region size 1024K, 1 young (1024K),
+                          1 survivors (1024K)
+[info ][gc     ] GC(1) Pause Young (Normal) (G1 Evacuation Pause)
+                        8M->8M(16M) 4.927ms
+   -- GC #1 (Young GC) ended in 7.288ms
+...
+[info ][gc,heap] GC(2) Eden regions: 1->0(1)
+[info ][gc,heap] GC(2) Survivor regions: 1->1(1)
+[info ][gc,heap] GC(2) Old regions: 8->9
+   -- Promoted 1 region from Eden to Survivor/Old
+
+[debug][gc,heap] GC(2) Heap after GC invocations=3 (full 0):
+                        garbage-first heap   total 16384K, used 9842K
+[debug][gc,heap] GC(2)   region size 1024K, 1 young (1024K),
+                          1 survivors (1024K)
+[info ][gc     ] GC(2) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+                        9M->9M(16M) 2.610ms
+   -- GC #2 (Young GC) ended in 2.610ms
+   -- Triggering an Old GC
+
+[info ][gc     ] GC(3) Concurrent Cycle
+   -- GC #3 (Old GC) started
+
+[info ][gc,marking] GC(3) Concurrent Clear Claimed Marks
+[info ][gc,marking] GC(3) Concurrent Clear Claimed Marks 0.008ms
+   -- Clear Claimed Marks phase concurrently performed
+
+[info ][gc,marking] GC(3) Concurrent Scan Root Regions
+ 8   16777216   6632528   10144688
+[info ][gc,marking] GC(3) Concurrent Scan Root Regions 1.450ms
+   -- Scan Root Regions phase concurrently performed
+
+[info ][gc,marking] GC(3) Concurrent Mark From Roots
+
+[info ][gc,heap] GC(4) Eden regions: 1->0(1)
+[info ][gc,heap] GC(4) Survivor regions: 1->1(1)
+[info ][gc,heap] GC(4) Old regions: 9->10
+[info ][gc     ] GC(4) Pause Young (Normal) (G1 Evacuation Pause)
+                        10M->10M(16M) 2.835ms
+  -- GC #4 (Young GC) performed while GC #3 (Old GC) was running
+
+9   16777216   5243776   11533440
+[info ][gc] GC(5) Pause Young (Normal) (G1 Evacuation Pause)
+                   11M->11M(21M) 2.783ms
+  -- GC #5 (Young GC) performed while GC #3 (Old GC) was running
+
+10   22020096   9655112   12364984
+[info ][gc] GC(6) Pause Young (Normal) (G1 Evacuation Pause)
+                   12M->12M(21M) 3.287ms
+  -- GC #6 (Young GC) performed while GC #3 (Old GC) was running
+
+11   22020096   8414464   13605632
+[info ][gc] GC(7) Pause Young (Normal) (G1 Evacuation Pause)
+                   13M->13M(21M) 2.750ms
+  -- GC #7 (Young GC) performed while GC #3 (Old GC) was running
+
+[info ][gc,marking] GC(3) Concurrent Mark From Roots 15.379ms
+   -- Mark From Roots phase concurrently performed for GC #3 (old GC)
+
+[info ][gc,marking] GC(3) Concurrent Preclean
+12   22020096   7285272   14734824
+[info ][gc,marking] GC(3) Concurrent Preclean 0.232ms
+   -- Preclean phase concurrently performed for GC #3 (old GC)
+
+[info ][gc] GC(8) Pause Young (Normal) (G1 Evacuation Pause)
+                   14M->14M(21M) 2.741ms
+  -- GC #8 (Young GC) performed while GC #3 (Old GC) was running
+
+[info ][gc,start] GC(3) Pause Remark
+[info ][gc      ] GC(3) Pause Remark 14M->14M(27M) 1.988ms
+   -- Remark phase (stop-the-world) performed for GC #3 (old GC)
+
+[info ][gc,marking] GC(3) Concurrent Rebuild Remembered Sets
+
+13   28311552   12354704   15956848
+[info ][gc] GC(9) Pause Young (Normal) (G1 Evacuation Pause)
+                   15M->15M(29M) 3.650ms
+  -- GC #9 (Young GC) performed while GC #3 (Old GC) was running
+
+14   30408704   13314344   17094360
+
+[info ][gc,marking] GC(3) Concurrent Rebuild Remembered Sets 5.573ms
+   -- Rebuild Remembered Sets phase concurrently done for GC #3 (old GC)
+
+[info ][gc,start] GC(3) Pause Cleanup
+[info ][gc      ] GC(3) Pause Cleanup 17M->17M(29M) 0.626ms
+   -- Pause Cleanup phase performed for GC #3 (old GC)
+   -- It did not free up any Old regions
+
+[info ][gc,marking] GC(3) Concurrent Cleanup for Next Mark
+15   30408704   12245472   18163232
+[info ][gc,marking] GC(3) Concurrent Cleanup for Next Mark 0.342ms
+   -- Concurrent Cleanup phase performed for GC #3 (old GC)
+
+[info ][gc] GC(3) Concurrent Cycle 29.719ms
+   -- GC #3 (Old GC) ended.
+
+16   30408704   11141504   19267200
+[info ][gc,heap] GC(10) Eden regions: 3->0(2)
+[info ][gc,heap] GC(10) Survivor regions: 1->1(1)
+[info ][gc,heap] GC(10) Old regions: 15->18
+[info ][gc     ] GC(10) Pause Young (Normal) (G1 Evacuation Pause)
+                         18M->18M(29M) 3.869ms
+   -- GC #10 (Young GC) performed
+...
+```
+
+```
+ Attempt heap expansion (allocation request failed).
+   Allocation request: 65552B
+Expand the heap. requested expansion amount: 1048576B
+   expansion amount: 1048576B
+Did not expand the heap (heap already fully expanded)
+   -- GC #35 (Full GC) triggered
+
+GC(35) Pause Full (G1 Evacuation Pause)
+   -- Full GC started - stop-the-world
+
+GC(35) Clear Next Bitmap
+GC(35) Clear Next Bitmap 0.292ms
+
+GC(35) Phase 1: Mark live objects
+GC(35) Phase 1: Mark live objects 5.704ms
+
+GC(35) Phase 2: Prepare for compaction
+GC(35) Phase 2: Prepare for compaction 0.809ms
+
+GC(35) Phase 3: Adjust pointers
+GC(35) Phase 3: Adjust pointers 1.435ms
+
+GC(35) Phase 4: Compact heap
+GC(35) Phase 4: Compact heap 6.120ms
+
+GC(35) Eden regions: 0->0(6)
+GC(35) Survivor regions: 0->0(0)
+GC(35) Old regions: 64->38
+   -- Free up 26 Old regions
+
+GC(35) Pause Full (G1 Evacuation Pause) 63M->33M(64M) 18.079ms
+   -- GC #35 (Full GC) ended
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟Maximum Logging of All Phases on Normal Young GC
+
+This section demonstrates that the '-Xlog:gc*=trace' option can be used to print out maximum logging messages of all phases on a normal Young GC performed by the G1 collector.
+
+If you want to know how many phases are performed in a G1 Young GC process and how each phase is performed, you need to turn on the maximum GC logging with the "-Xlog:gc*=trace" option and review all GC log messages.
+
+Here is what I did to capture all log messages of a single Normal Young GC performed by the G1 collector.
+
+1\. Run the following command to capture all log messages in a file:
+
+```
+ herong> java -Xms16m -Xmx64m \
+   -XX:+UseG1GC -Xlog:gc*=trace GarbageCollection > output.txt
+```
+
+2\. Open the log file, output.txt, in text editor. And find log message lines with this regular express "Pause Young \(Normal\) \(G1 Evacuation Pause\)" pattern. Take one of them like:
+
+```
+ [info ][gc,start] GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+```
+
+This log message indicates that the CMS collector started a normal Young GC (GC #0).
+
+3\. Search all log message lines with "GC\(0\)" in the editor to get all log messages of GC #0:
+
+```
+ GC(0) Heap before GC invocations=0 (full 0): garbage-first heap
+      total 16384K, used 6144K [...
+GC(0)   region size 1024K, 7 young (7168K), 0 survivors (0K)
+GC(0)  Metaspace       used 493K, capacity 4544K, committed 4864K, ...
+GC(0)   class space    used 42K, capacity 408K, committed 512K, ...
+   -- Heap summary before GC
+
+GC(0) Heap Regions: E=young(eden), S=young(survivor), O=old,
+      HS=humongous(starts), HC=humongous(continues), CS=collection set,
+    F=free, A=archive, TAMS=top-at-mark-start (previous, next)
+GC(0) |   0|0x00000000fc000000, ...|  0%| F|  |...| Untracked
+GC(0) |   1|0x00000000fc100000, ...|  0%| F|  |...| Untracked
+GC(0) |   2|0x00000000fc200000, ...|  0%| F|  |...| Untracked
+GC(0) |   3|0x00000000fc300000, ...|  0%| F|  |...| Untracked
+GC(0) |   4|0x00000000fc400000, ...|  0%| F|  |...| Untracked
+GC(0) |   5|0x00000000fc500000, ...|  0%| F|  |...| Untracked
+GC(0) |   6|0x00000000fc600000, ...|  0%| F|  |...| Untracked
+GC(0) |   7|0x00000000fc700000, ...|  0%| F|  |...| Untracked
+GC(0) |   8|0x00000000fc800000, ...|  0%| F|  |...| Untracked
+GC(0) |   9|0x00000000fc900000, ...| 95%| E|  |...| Complete
+GC(0) |  10|0x00000000fca00000, ...|100%| E|CS|...| Complete
+GC(0) |  11|0x00000000fcb00000, ...|100%| E|CS|...| Complete
+GC(0) |  12|0x00000000fcc00000, ...|100%| E|CS|...| Complete
+GC(0) |  13|0x00000000fcd00000, ...|100%| E|CS|...| Complete
+GC(0) |  14|0x00000000fce00000, ...|100%| E|CS|...| Complete
+GC(0) |  15|0x00000000fcf00000, ...|100%| E|CS|...| Complete
+   -- Heap Region report before GC
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+   -- Young GC (Normal) started
+   -- There are enough free regions for a normal Young GC
+
+GC(0) WorkerManager::add_workers() : created_workers: 2
+GC(0) GC Thread: using 2 out of 8 workers
+GC(0) Using 2 workers of 8 for evacuation
+   -- 2 threads used
+...
+```
+
+```
+ GC(0) oops_do_marking_prologue
+GC(0) GC Thread: using 2 out of 8 workers
+GC(0)  161   3 java.util.Arrays::copyOfRange (63 bytes)   oops_do, mark
+GC(0)  232   3 java.lang.Class::getClassLoader (28 bytes)   oops_do, mark
+GC(0)  213   3 java.util.Arrays::copyOf (40 bytes)   oops_do, mark
+GC(0)   14   3 java.util.Set::of (4 bytes)   oops_do, mark
+...
+GC(0)   77   0 java.lang.System::arraycopy (native)   oops_do, unmark
+GC(0)   79   3 java.util.HashSet::add (20 bytes)   oops_do, unmark
+GC(0)   14   3 java.util.Set::of (4 bytes)   oops_do, unmark
+...
+   -- oops_do_marking_prologue phase, 2 threads
+
+GC(0) oops_do_marking_epilogue
+GC(0) WorkerManager::add_workers() : created_workers: 2
+GC(0) GC Thread: using 2 out of 8 workers
+GC(0) Skipped phase1 of Reference Processing due to unavailable references
+GC(0) Phase2 Soft before0 0 0 0 0 0 0 0 (0)
+GC(0) Phase2 Weak before0 129 0 0 0 0 0 0 (129)
+GC(0) Phase2 Final before0 0 0 0 0 0 0 0 (0)
+GC(0) Phase2 Final after0 0 0 0 0 0 0 0 (0)
+GC(0) Skipped phase3 of Reference Processing due to unavailable references
+GC(0) Phase4 Phantom before2 0 0 0 0 0 0 0 (2)
+...
+    -- oops_do_marking_epilogue, 2 threads
+
+GC(0) Age table with threshold 15 (max threshold 15)
+GC(0) - age   1:     817304 bytes,     817304 total
+   -- Object aging report
+
+....
+GC(0) Eden regions: 7->0(2)
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Survivor regions: 0->1(1)
+GC(0)  Used: 1024K, Waste: 0K
+GC(0) Old regions: 0->6
+GC(0)  Used: 6100K, Waste: 43K
+GC(0) Archive regions: 0->0
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Humongous regions: 0->0
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Metaspace: 493K->493K(1056768K)
+   -- Young GC impacts on heap usage
+
+GC(0) Heap after GC invocations=1 (full 0): garbage-first heap
+       total 16384K, used 7124K [...
+GC(0)   region size 1024K, 1 young (1024K), 1 survivors (1024K)
+   -- Heap summary after GC
+
+GC(0) Heap Regions: E=young(eden), S=young(survivor), O=old,
+      HS=humongous(starts), HC=humongous(continues), CS=collection set,
+    F=free, A=archive, TAMS=top-at-mark-start (previous, next)
+GC(0) |   0|0x00000000fc000000,...|100%| O|  |...| Untracked
+GC(0) |   1|0x00000000fc100000,...|100%| O|  |...| Untracked
+GC(0) |   2|0x00000000fc200000,...|100%| O|  |...| Untracked
+GC(0) |   3|0x00000000fc300000,...|100%| O|  |...| Untracked
+GC(0) |   4|0x00000000fc400000,...|100%| O|  |...| Untracked
+GC(0) |   5|0x00000000fc500000,...| 95%| O|  |...| Untracked
+GC(0) |   6|0x00000000fc600000,...|  0%| F|  |...| Untracked
+GC(0) |   7|0x00000000fc700000,...|  0%| F|  |...| Untracked
+GC(0) |   8|0x00000000fc800000,...|100%| S|CS|...| Complete
+GC(0) |   9|0x00000000fc900000,...|  0%| F|  |...| Untracked
+GC(0) |  10|0x00000000fca00000,...|  0%| F|  |...| Untracked
+GC(0) |  11|0x00000000fcb00000,...|  0%| F|  |...| Untracked
+GC(0) |  12|0x00000000fcc00000,...|  0%| F|  |...| Untracked
+GC(0) |  13|0x00000000fcd00000,...|  0%| F|  |...| Untracked
+GC(0) |  14|0x00000000fce00000,...|  0%| F|  |...| Untracked
+GC(0) |  15|0x00000000fcf00000,...|  0%| F|  |...| Untracked
+   -- Heap Region report after GC
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 6M->6M(16M) 7.288ms
+GC(0) User=0.00s Sys=0.00s Real=0.00s
+   -- Young GC summary
+```
+
+As you can see from log messages, a Young GC is performed with 2 primary phases.
+
+```
+ Phases  Threads  Time     Concurrency
+------------------------  -------  -------  ----------------------
+oops_do_marking_prologue  2        ?.???ms  pause - stop-the-world
+oops_do_marking_epilogue  2        ?.???ms  pause - stop-the-world
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟Maximum Logging on Concurrent Start Young GC
+
+This section demonstrates that the '-Xlog:gc*=trace' option can be used to print out maximum logging messages of all phases on a Concurrent Start Young GC performed by the G1 collector.
+
+While testing with the G1 collector, I saw two types of Young GC:
+
+*   Normal Young GC - There are enough free regions in the heap and the Young GC is performed normally.
+*   Concurrent Start Young GC - There are not enough free regions in the heap and the Young GC is performed with reduced steps. An Old GC is triggered immediately after this Young GC.
+
+In the previous tutorial, I captured all log messages of a single Normal Young GC. In this tutorial, I will capture the same for a single Concurrent Start Young GC.
+
+1\. Run the following command to capture all log messages in a file:
+
+```
+ herong> java -Xms16m -Xmx64m \
+   -XX:+UseG1GC -Xlog:gc*=trace GarbageCollection > output.txt
+```
+
+2\. Open the log file, output.txt, in text editor. And find log message lines with this regular express "Pause Young \(Concurrent Start\) \(G1 Evacuation Pause\)" pattern. Take one of them like:
+
+```
+ [gc,start] GC(2) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+```
+
+This log message indicates that the CMS collector started a Concurrent Start Young GC (GC #2).
+
+3\. Search all log message lines with "GC\(2\)" in the editor to get all log messages of GC #2:
+
+```
+ GC(2) Heap before GC invocations=2 (full 0): garbage-first heap
+       total 16384K, used 8965K [...
+GC(2)   region size 1024K, 2 young (2048K), 1 survivors (1024K)
+GC(2)  Metaspace       used 493K, capacity 4544K, committed 4864K, ...
+GC(2)   class space    used 42K, capacity 408K, committed 512K, ...
+   -- Heap summary before GC
+
+GC(2) |   0|0x00000000fc000000, ...|100%| O|  |...| Untracked
+GC(2) |   1|0x00000000fc100000, ...|100%| O|  |...| Untracked
+GC(2) |   2|0x00000000fc200000, ...|100%| O|  |...| Untracked
+GC(2) |   3|0x00000000fc300000, ...|100%| O|  |...| Untracked
+GC(2) |   4|0x00000000fc400000, ...|100%| O|  |...| Untracked
+GC(2) |   5|0x00000000fc500000, ...|100%| O|  |...| Untracked
+GC(2) |   6|0x00000000fc600000, ...|100%| O|  |...| Untracked
+GC(2) |   7|0x00000000fc700000, ...| 75%| O|  |...| Untracked
+GC(2) |   8|0x00000000fc800000, ...|  0%| F|  |...| Untracked
+GC(2) |   9|0x00000000fc900000, ...|  0%| F|  |...| Untracked
+GC(2) |  10|0x00000000fca00000, ...|  0%| F|  |...| Untracked
+GC(2) |  11|0x00000000fcb00000, ...|  0%| F|  |...| Untracked
+GC(2) |  12|0x00000000fcc00000, ...|  0%| F|  |...| Untracked
+GC(2) |  13|0x00000000fcd00000, ...|100%| S|CS|...| Complete
+GC(2) |  14|0x00000000fce00000, ...|  0%| F|  |...| Untracked
+GC(2) |  15|0x00000000fcf00000, ...| 99%| E|  |...| Complete
+   -- Heap Region report before GC
+```
+
+```
+ GC(2) Initiate concurrent cycle (concurrent cycle initiation requested)
+GC(2) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+   -- Young GC (Concurrent Start) started
+   -- There are not enough free regions for a normal Young GC
+   -- Young GC to be performed with reduced steps
+   -- An Old GC to be triggered immediately after this Young GC
+
+GC(2) WorkerManager::add_workers() : created_workers: 2
+GC(2) GC Thread: using 2 out of 8 workers
+GC(2) Using 2 workers of 8 for evacuation
+   -- 2 threads used
+
+GC(2) oops_do_marking_prologue
+GC(2) WorkerManager::add_workers() : created_workers: 2
+GC(2) GC Thread: using 2 out of 8 workers
+...
+   -- oops_do_marking_prologue phase, 2 threads
+
+GC(2) oops_do_marking_epilogue
+GC(2) WorkerManager::add_workers() : created_workers: 2
+GC(2) GC Thread: using 2 out of 8 workers
+GC(2) Skipped phase1 of Reference Processing due to unavailable references
+GC(2) Skipped phase2 of Reference Processing due to unavailable references
+GC(2) Skipped phase3 of Reference Processing due to unavailable references
+GC(2) Skipped phase4 of Reference Processing due to unavailable references
+...
+    -- oops_do_marking_epilogue, 2 threads
+
+GC(2) Age table with threshold 1 (max threshold 15)
+GC(2) - age   1:    1032288 bytes,    1032288 total
+   -- Object aging report
+
+GC(2) Eden regions: 1->0(1)
+GC(2)  Used: 0K, Waste: 0K
+GC(2) Survivor regions: 1->1(1)
+GC(2)  Used: 1010K, Waste: 13K
+GC(2) Old regions: 8->9
+GC(2)  Used: 8832K, Waste: 383K
+GC(2) Archive regions: 0->0
+GC(2)  Used: 0K, Waste: 0K
+GC(2) Humongous regions: 0->0
+GC(2)  Used: 0K, Waste: 0K
+GC(2) Metaspace: 493K->493K(1056768K)
+   -- Young GC impacts on heap usage
+
+GC(2) Heap after GC invocations=3 (full 0): garbage-first heap
+       total 16384K, used 9842K [...
+GC(2)   region size 1024K, 1 young (1024K), 1 survivors (1024K)
+GC(2)  Metaspace       used 493K, capacity 4544K, committed 4864K, ...
+GC(2)   class space    used 42K, capacity 408K, committed 512K, ...
+   -- Heap summary after GC
+
+GC(2) |   0|0x00000000fc000000, ...|100%| O|  |...| Untracked
+GC(2) |   1|0x00000000fc100000, ...|100%| O|  |...| Untracked
+GC(2) |   2|0x00000000fc200000, ...|100%| O|  |...| Untracked
+GC(2) |   3|0x00000000fc300000, ...|100%| O|  |...| Untracked
+GC(2) |   4|0x00000000fc400000, ...|100%| O|  |...| Untracked
+GC(2) |   5|0x00000000fc500000, ...|100%| O|  |...| Untracked
+GC(2) |   6|0x00000000fc600000, ...|100%| O|  |...| Untracked
+GC(2) |   7|0x00000000fc700000, ...|100%| O|  |...| Untracked
+GC(2) |   8|0x00000000fc800000, ...| 62%| O|  |...| Untracked
+GC(2) |   9|0x00000000fc900000, ...|  0%| F|  |...| Untracked
+GC(2) |  10|0x00000000fca00000, ...|  0%| F|  |...| Untracked
+GC(2) |  11|0x00000000fcb00000, ...|  0%| F|  |...| Untracked
+GC(2) |  12|0x00000000fcc00000, ...|  0%| F|  |...| Untracked
+GC(2) |  13|0x00000000fcd00000, ...|  0%| F|  |...| Untracked
+GC(2) |  14|0x00000000fce00000, ...| 98%| S|CS|...| Complete
+GC(2) |  15|0x00000000fcf00000, ...|  0%| F|  |...| Untracked
+   -- Heap Region report after GC
+
+GC(2) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+      9M->9M(16M) 2.610ms
+GC(2) User=0.00s Sys=0.00s Real=0.00s
+   -- Young GC summary
+
+GC(3) Concurrent Cycle
+   -- Old GC started immediately
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟Maximum Logging of All Phases on Old GC
+
+This section demonstrates that the '-Xlog:gc*=trace' option can be used to print out maximum logging messages of all phases on an Old GC performed by the G1 collector.
+
+If you want to know how many phases are performed in a G1 Old GC process and how each phase is performed, you need to turn on the maximum GC logging with the "-Xlog:gc*=trace" option and review all GC log messages.
+
+Here is what I did to capture all log messages of a single Old GC performed by the G1 collector.
+
+1\. Run the following command to capture all log messages in a file:
+
+```
+ herong> java -Xms16m -Xmx64m \
+   -XX:+UseG1GC -Xlog:gc*=trace GarbageCollection > output.txt
+```
+
+2\. Open the log file, output.txt, in text editor. And find log message lines with this regular express "Pause Cleanup" pattern. Take one of them like:
+
+```
+ [info ][gc,start] GC(3) Pause Cleanup
+```
+
+This log message indicates that the CMS collector started the "Cleanup" phase of an Old GC (GC #3).
+
+3\. Search all log message lines with "GC\(3\)" in the editor to get all log messages of GC #3:
+
+```
+ GC(3) Concurrent Cycle
+   -- GC #3 (Old GC) started
+
+GC(3) Concurrent Clear Claimed Marks
+GC(3) Concurrent Clear Claimed Marks 0.008ms
+   -- Concurrent Clear Claimed Marks phase ended, 0.008ms
+
+GC(3) Concurrent Scan Root Regions
+GC(3) Running G1 Root Region Scan using 2 workers for 3 work units.
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) Creating additional G1 Conc(s) previously created workers 1 ...
+GC(3) G1 Conc: using 2 out of 2 workers
+GC(3) Concurrent Scan Root Regions 1.450ms
+   -- Concurrent Scan Root Regions phase ended, 1.450ms, 2 threads
+
+GC(3) Concurrent Mark (0.130s)
+   -- Concurrent Mark phase started
+
+GC(3) Concurrent Mark From Roots
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) G1 Conc: using 2 out of 2 workers
+GC(3) Using 2 workers of 2 for marking
+GC(3) Concurrent Mark From Roots 15.379ms
+   -- Concurrent Mark From Roots phase ended, 15.379ms, 2 threads
+
+GC(3) Concurrent Preclean
+   -- Concurrent Preclean phase started
+
+GC(3) Preclean SoftReferences
+GC(3) SoftRef before: 0 0 0 0 0 0 0 0 (0)
+GC(3) SoftRef after: 0 0 0 0 0 0 0 0 (0)
+GC(3) Preclean SoftReferences 0.045ms
+   -- Preclean SoftReferences phase ended, 0.045ms
+
+GC(3) Preclean WeakReferences
+GC(3) WeakRef before: 40 0 0 0 0 0 0 0 (40)
+GC(3) WeakRef after: 0 0 0 0 0 0 0 0 (0)
+GC(3) Preclean WeakReferences 0.082ms
+   -- Preclean WeakReferences phase ended, 0.082ms
+```
+
+```
+ GC(3) Preclean FinalReferences
+GC(3) FinalRef before: 0 0 0 0 0 0 0 0 (0)
+GC(3) FinalRef after: 0 0 0 0 0 0 0 0 (0)
+GC(3) Preclean FinalReferences 0.035ms
+   -- Preclean FinalReferences phase ended, 0.035ms
+
+GC(3) Preclean PhantomReferences
+GC(3) PhantomRef before: 0 0 0 0 0 0 0 0 (0)
+GC(3) PhantomRef after: 0 0 0 0 0 0 0 0 (0)
+GC(3) Preclean PhantomReferences 0.034ms
+   -- Preclean PhantomReferences phase ended, 0.034ms
+
+GC(3) Concurrent Preclean 0.232ms
+   -- Concurrent Preclean phase ended, 0.232ms
+
+GC(3) Concurrent Mark (0.130s, 0.146s) 15.634ms
+   -- Concurrent Mark phase ended, 15.634ms
+
+GC(3) Pause Remark
+   -- Pause Remark phase started
+
+GC(3) Finalize Marking
+GC(3) oops_do_marking_prologue
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) GC Thread: using 2 out of 8 workers
+GC(3) oops_do_marking_epilogue
+GC(3) Finalize Marking 0.224ms
+   -- Finalize Marking phase ended, 0.224ms, 2 threads
+
+GC(3) Reference Processing
+GC(3) Skipped phase1 of Reference Processing due to unavailable references
+GC(3) Skipped phase2 of Reference Processing due to unavailable references
+GC(3) Skipped phase3 of Reference Processing due to unavailable references
+GC(3) Skipped phase4 of Reference Processing due to unavailable references
+GC(3) Reference Processing: 0.0ms
+
+GC(3)   Reconsider SoftReferences: 0.0ms
+GC(3)   Notify Soft/WeakReferences: 0.0ms
+GC(3)   Notify and keep alive finalizable: 0.0ms
+GC(3)   Notify PhantomReferences: 0.0ms
+...
+GC(3) Reference Processing 0.236ms
+   -- Reference Processing phase ended, 0.236ms, 2 threads
+
+GC(3) Weak Processing
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) GC Thread: using 2 out of 8 workers
+GC(3)   JVMTI weak processing: 0.0ms
+GC(3)   JFR weak processing: 0.0ms
+GC(3)   JNI weak processing: 0.0ms
+GC(3)   VM weak processing: 0.0ms
+GC(3) Weak Processing 0.133ms
+   -- Weak Processing phase ended, 0.133ms, 2 threads
+
+GC(3) Class Unloading
+   -- Class Unloading phase started
+
+GC(3) ClassLoaderData
+GC(3) ClassLoaderData 0.008ms
+   -- ClassLoaderData phase ended, 0.008ms
+
+GC(3) ResolvedMethodTable
+GC(3) ResolvedMethodTable 0.008ms
+   -- ResolvedMethodTable phase ended, 0.008ms
+
+GC(3) Class Unloading 0.332ms
+   -- Class Unloading phase ended, 0.332ms
+
+GC(3) Flush Task Caches
+GC(3) Flush Task Caches 0.036ms
+   -- Flush Task Caches phase ended, 0.036ms
+```
+
+```
+ GC(3) Update Remembered Set Tracking Before Rebuild
+GC(3) ### PHASE Post-Marking @ 0.150
+GC(3) Running G1 Update RemSet Tracking Before Rebuild using 1 workers
+       for 21 regions in heap
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) GC Thread: using 1 out of 8 workers
+GC(3) Adding 126892 words to region 0 (OLD)
+GC(3) Adding 106504 words to region 1 (OLD)
+GC(3) Adding 127272 words to region 2 (OLD)
+GC(3) Adding 114698 words to region 3 (OLD)
+GC(3) Adding 110084 words to region 4 (OLD)
+GC(3) Adding 130464 words to region 5 (OLD)
+GC(3) Adding 129595 words to region 6 (OLD)
+GC(3) Adding 98588 words to region 7 (OLD)
+GC(3) Adding 0 words to region 8 (OLD)
+GC(3) Adding 0 words to region 9 (OLD)
+GC(3) Adding 0 words to region 10 (OLD)
+GC(3) Adding 0 words to region 11 (OLD)
+GC(3) Adding 0 words to region 12 (OLD)
+GC(3) Adding 0 words to region 13 (OLD)
+GC(3) Adding 0 words to region 14 (FREE)
+GC(3) Adding 0 words to region 15 (FREE)
+GC(3) Adding 0 words to region 16 (FREE)
+GC(3) Adding 0 words to region 17 (FREE)
+GC(3) Adding 0 words to region 18 (FREE)
+GC(3) Adding 0 words to region 19 (SURV)
+GC(3) Adding 0 words to region 20 (EDEN)
+GC(3) Update Remembered Set Tracking Before Rebuild 0.620ms
+   -- Update Remembered Set Tracking Before Rebuild phase ended, 0.620ms
+
+GC(3) Reclaim Empty Regions
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) GC Thread: using 2 out of 8 workers
+GC(3) Reclaim Empty Regions 0.129ms
+   -- Reclaim Empty Regions phase ended, 0.129ms, 2 threads
+
+GC(3) Purge Metaspace
+GC(3) Purge Metaspace 0.006ms
+   -- Purge Metaspace phase ended, 0.006ms
+
+GC(3) Attempt heap expansion (capacity lower than min desired capacity).
+       Capacity: 22020096B occupancy: 16777216B
+     live: 15710016B min_desired_capacity: 27962026B (40 %)
+GC(3) Expand the heap. requested expansion amount: 5941930B
+       expansion amount: 6291456B
+GC(3) Target occupancy update: old: 22020096B, new: 28311552B
+GC(3) MetaspaceGC::compute_new_size:
+GC(3)  minimum_free_percentage:   0.40  maximum_used_percentage:   0.60
+GC(3)   used_after_gc       : 4864.0KB
+GC(3)  maximum_free_percentage:   0.70  minimum_used_percentage:   0.30
+GC(3)  minimum_desired_capacity: 21296.0KB
+        maximum_desired_capacity: 21296.0KB
+
+GC(3) Report Object Count
+GC(3) Report Object Count 0.006ms
+   -- Report Object Count phase ended, 0.006ms
+
+GC(3) Pause Remark 14M->14M(27M) 1.988ms
+GC(3) User=0.00s Sys=0.00s Real=0.00s
+   -- Pause Remark phase ended, 1.988ms, 2 threads
+
+GC(3) Concurrent Rebuild Remembered Sets
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) G1 Conc: using 2 out of 2 workers
+GC(3) Rebuilt region 0 live 1015136 time 0.001ms marked bytes 262160 ...
+GC(3) Rebuilt region 13 live 0 time 0.001ms marked bytes 0 bot ...
+GC(3) Rebuilt region 1 live 852032 time 0.001ms marked bytes 327712 ...
+...
+GC(3) Concurrent Rebuild Remembered Sets 5.573ms
+   -- Concurrent Rebuild Remembered Sets phase ended, 5.573ms, 2 threads
+
+GC(3) Pause Cleanup
+   -- Pause Cleanup phase started
+```
+
+```
+ GC(3) Update Remembered Set Tracking After Rebuild
+GC(3) After rebuild region  0 (ntams ... liveness 1015136 ...
+GC(3) After rebuild region  1 (ntams ... liveness  852032 ...
+GC(3) After rebuild region  2 (ntams ... liveness 1018176 ...
+GC(3) After rebuild region  3 (ntams ... liveness  917584 ...
+...
+GC(3) Update Remembered Set Tracking After Rebuild 0.123ms
+   -- Update Remembered Set Tracking After Rebuild phase ended, 0.123ms
+
+GC(3) ### PHASE Post-Cleanup @ 0.157
+GC(3) ###   type      address-range       used  prev-live  next-live ...
+GC(3) ###                              (bytes)    (bytes)    (bytes)
+GC(3) ###   OLD  0x00000000fc000000    1048576    1015136    1048576 ...
+GC(3) ###   OLD  0x00000000fc100000    1048576     852032    1048576 ...
+GC(3) ###   OLD  0x00000000fc200000    1048576    1018176    1048576 ...
+...
+GC(3) Finalize Concurrent Mark Cleanup
+
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) GC Thread: using 2 out of 8 workers
+GC(3) ### PHASE Post-Sorting @ 0.158
+...
+GC(3) request young-only gcs (reclaimable percentage not over threshold).
+       candidate old regions: 2 reclaimable: 364448 (1.20) threshold: 5
+GC(3) Finalize Concurrent Mark Cleanup 0.215ms
+   -- Finalize Concurrent Mark Cleanup phase ended, 0.215ms
+
+GC(3) Pause Cleanup 17M->17M(29M) 0.626ms
+GC(3) User=0.00s Sys=0.00s Real=0.00s
+   -- Pause Cleanup phase ended, 0.626ms, 2 threads
+
+GC(3) Concurrent Cleanup for Next Mark
+GC(3) Running G1 Clear Bitmap with 1 workers for 1 work units.
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) G1 Conc: using 2 out of 2 workers
+GC(3) Concurrent Cleanup for Next Mark 0.342ms
+   -- Concurrent Cleanup for Next Mark phase ended, 0.342ms, 2 threads
+
+GC(3) Concurrent Cycle 29.719ms
+   -- GC #3 (Old GC) ended
+```
+
+Cool. Now we know a G1 Old GC has following phases using different concurrency models.
+
+```
+ Phases            Threads      Time  Concurrency
+
+Clear Claimed Marks                  1   0.008ms  paused
+Scan Root Regions                    2   1.450ms  concurrent
+Mark
+   Mark From Roots                   2  15.379ms  concurrent
+   Preclean                          1   0.232ms  concurrent
+Remark
+   Finalize Marking                  2   0.224ms  pause
+   Reference Processing              2   0.236ms  pause
+   Weak Processing                   2   0.133ms  pause
+   Class Unloading                   2   0.332ms  pause
+   Finalize Marking                  2   0.224ms  pause
+   Flush Task Caches                 2   0.036ms  pause
+   Update Remembered Set \
+   Tracking Before Rebuild           2   0.620ms  pause
+   Reclaim Empty Regions             2   0.129ms  pause
+   Purge Metaspace                   2   0.006ms  pause
+   Report Object Count               2   0.006ms  pause
+Rebuild Remembered Sets              2   5.573ms  concurrent
+Cleanup
+   Update Remembered Set \
+   Tracking After Rebuild            2   0.123ms  pause
+   Finalize Concurrent Mark Cleanup  2   0.215ms  pause
+Cleanup for Next Mark                2   0.626ms  concurrent
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟Maximum Logging of All Phases on Full GC
+
+This section demonstrates that the '-Xlog:gc*=trace' option can be used to print out maximum logging messages of all phases on a Full GC performed by the G1 collector.
+
+If you want to know how many phases are performed in a G1 Full GC process and how each phase is performed, you need to turn on the maximum GC logging with the "-Xlog:gc*=trace" option and review all GC log messages.
+
+Here is what I did to capture all log messages of a single Full GC performed by the G1 collector.
+
+1\. Run the following command to capture all log messages in a file:
+
+```
+ herong> java -Xms16m -Xmx64m \
+   -XX:+UseG1GC -Xlog:gc*=trace GarbageCollection > output.txt
+```
+
+2\. Open the log file, output.txt, in text editor. And find log message lines with this regular express "Pause Full \(G1 Evacuation Pause\)" pattern. Take the first matched log message like:
+
+```
+ [info ][gc,start] GC(35) Pause Full (G1 Evacuation Pause)
+```
+
+This log message indicates that the CMS collector started a Full GC (GC #35).
+
+3\. Search all log message lines with "GC\(35\)" in the editor to get all log messages of GC #35:
+
+```
+ GC(35)  num     #instances         #bytes  class name (module)
+GC(35) -------------------------------------------------------
+GC(35)    1:          1049       16488576  [I (java.base@12.0.1)
+GC(35)    2:            59       14157744  [J (java.base@12.0.1)
+GC(35)    3:            55       14156656  [D (java.base@12.0.1)
+...
+GC(35) Class Histogram (before full gc) 9.169ms
+   -- Class Histogram (before full gc) 9.169ms
+
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) Using 2 workers of 8 for full compaction
+GC(35) Pause Full (G1 Evacuation Pause)
+   -- GC #35 (Full GC) started
+
+GC(35) Heap before GC invocations=34 (full 0): garbage-first heap
+        total 65536K, used 65526K [...
+GC(35)   region size 1024K, 0 young (0K), 0 survivors (0K)
+GC(35)  Metaspace       used 504K, capacity 4544K, committed 4864K, ...
+GC(35)   class space    used 42K, capacity 408K, committed 512K, ...
+   -- Heap summary before GC
+
+GC(35) Heap Regions: E=young(eden), S=young(survivor), O=old,
+       HS=humongous(starts), HC=humongous(continues), CS=collection set,
+     F=free, A=archive, TAMS=top-at-mark-start (previous, next)
+GC(35) |   0|0x00000000fc000000, ...|100%| O|  |...| Updating
+GC(35) |   1|0x00000000fc100000, ...|100%| O|  |...| Untracked
+GC(35) |   2|0x00000000fc200000, ...|100%| O|  |...| Untracked
+...                              ...            ...
+GC(35) |  63|0x00000000fff00000, ...|100%| O|  |...| Untracked
+   -- Heap regions report before GC
+
+GC(35) Clear Next Bitmap
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) Clear Next Bitmap 0.292ms
+   -- Clear Next Bitmap phase ended, 0.292ms, 2 threads
+```
+
+```
+ GC(35) Phase 1: Mark live objects
+GC(35) oops_do_marking_prologue
+   -- Phase 1: Mark live objects started
+
+GC(35) Phase 1: Reference Processing
+GC(35) Phase1 Soft before9 10 0 0 0 0 0 0 (19)
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) Phase1 Soft after9 10 0 0 0 0 0 0 (19)
+GC(35) Phase2 Soft before9 10 0 0 0 0 0 0 (19)
+GC(35) Phase2 Weak before0 3 0 0 0 0 0 0 (3)
+GC(35) Phase2 Final before0 0 0 0 0 0 0 0 (0)
+GC(35) Phase2 Final after0 0 0 0 0 0 0 0 (0)
+GC(35) Skipped phase3 of Reference Processing due to unavailable references
+GC(35) Phase4 Phantom before1 0 0 0 0 0 0 0 (1)
+GC(35) Reference Processing: 0.2ms
+GC(35) Phase 1: Reference Processing 0.378ms
+   -- Phase 1: Reference Processing 0.378ms, 2 threads
+
+GC(35) Phase 1: Weak Processing
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 1 out of 8 workers
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35)   JVMTI weak processing: 0.0ms
+GC(35)   JFR weak processing: 0.0ms
+GC(35)   JNI weak processing: 0.0ms
+GC(35)   VM weak processing: 0.0ms
+GC(35) Phase 1: Weak Processing 0.113ms
+   -- Phase 1: Weak Processing 0.113ms, 2 threads
+
+GC(35) Phase 1: Class Unloading and Cleanup
+GC(35) ClassLoaderData
+GC(35) ClassLoaderData 0.198ms
+GC(35) ResolvedMethodTable
+GC(35) ResolvedMethodTable 0.008ms
+GC(35) SymbolTable
+GC(35) SymbolTable 0.224ms
+GC(35) Dictionary
+GC(35) Dictionary 0.007ms
+GC(35) ResolvedMethodTable
+GC(35) ResolvedMethodTable 0.209ms
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) Cleaned string table, strings: 2105 processed, 0 removed
+GC(35) Phase 1: Class Unloading and Cleanup 1.133ms
+   -- Phase 1: Class Unloading and Cleanup 1.133ms, 2 threads
+
+GC(35) oops_do_marking_epilogue
+GC(35) Phase 1: Mark live objects 5.704ms
+   -- Phase 1: Mark live objects ended, 5.704ms, 2 threads
+
+GC(35) Phase 2: Prepare for compaction
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) Prepare compaction task (0) 0.698ms
+GC(35) Prepare compaction task (1) 0.704ms
+GC(35) Phase 2: Prepare for compaction 0.809ms
+   -- Phase 2: Prepare for compaction 0.809ms, 2 threads
+
+GC(35) Phase 3: Adjust pointers
+GC(35) oops_do_marking_prologue
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) Adjust task (0) 1.286ms
+GC(35) Adjust task (1) 1.270ms
+GC(35) oops_do_marking_epilogue
+GC(35) Phase 3: Adjust pointers 1.435ms
+   -- Phase 3: Adjust pointers 1.435ms, 2 threads
+```
+
+```
+ GC(35) Phase 4: Compact heap
+GC(35) WorkerManager::add_workers() : created_workers: 2
+GC(35) GC Thread: using 2 out of 8 workers
+GC(35) Compaction task (0) 5.124ms
+GC(35) Compaction task (1) 5.982ms
+GC(35) Phase 4: Compact heap 6.120ms
+   -- Phase 4: Compact heap 6.120ms, 2 threads
+
+GC(35) Eden regions: 0->0(6)
+GC(35)  Used: 0K, Waste: 0K
+GC(35) Survivor regions: 0->0(0)
+GC(35)  Used: 0K, Waste: 0K
+GC(35) Old regions: 64->38
+GC(35)  Used: 34781K, Waste: 4130K
+GC(35) Archive regions: 0->0
+GC(35)  Used: 0K, Waste: 0K
+GC(35) Humongous regions: 0->0
+GC(35)  Used: 0K, Waste: 0K
+GC(35) Metaspace: 504K->479K(1056768K)
+   -- Full GC impacts on heap usage
+
+GC(35) Heap after GC invocations=35 (full 1): garbage-first heap
+        total 65536K, used 34781K [...
+GC(35)   region size 1024K, 0 young (0K), 0 survivors (0K)
+GC(35)  Metaspace       used 479K, capacity 4506K, committed 4864K, ...
+GC(35)   class space    used 35K, capacity 395K, committed 512K, ...
+   -- Heap summary after GC
+
+GC(35) |   0|0x00000000fc000000, ...| 99%| O|  |...| Untracked
+GC(35) |   1|0x00000000fc100000, ...| 99%| O|  |...| Untracked
+GC(35) |   2|0x00000000fc200000, ...| 87%| O|  |...| Untracked
+...                              ...            ...
+GC(35) |  63|0x00000000fff00000, ...|  0%| F|  |...| Untracked
+   -- Heap regions report after GC
+
+GC(35) Pause Full (G1 Evacuation Pause) 63M->33M(64M) 18.079ms
+GC(35)  num     #instances         #bytes  class name (module)
+GC(35) -------------------------------------------------------
+GC(35)    1:           290        8399936  [I (java.base@12.0.1)
+GC(35)    2:            37        8390224  [J (java.base@12.0.1)
+GC(35)    3:            33        8389136  [D (java.base@12.0.1)
+...
+GC(35) Class Histogram (after full gc) 5.273ms
+   -- Class Histogram (after full gc) 5.273ms
+```
+
+Cool. Now we know a G1 Full GC has following phases performed with application paused (stop-the-world).
+
+```
+ Phases            Threads      Time  Concurrency
+
+Class Histogram before GC            1   9.169ms  paused
+Clear Next Bitmap                    2   0.292ms  paused
+Phase 1: Mark live objects           2   5.704ms  paused
+    Reference Processing             2   0.378ms  paused
+    Weak Processing                  2   0.113ms  paused
+    Class Unloading and Cleanup      2   1.133ms  paused
+Phase 2: Prepare for compaction      2   0.809ms  paused
+Phase 3: Adjust pointers             2   1.435ms  paused
+Phase 4: Compact heap                2   6.120ms  paused
+Class Histogram after GC             1   5.273ms  paused
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟"-XX:ParallelGCThreads=6" - G1 Parallel Threads
+
+This section provides a tutorial showing how to control the number of parallel threads used in G1 GC processes by '-XX:ParallelGCThreads=6' option.
+
+"Parallel GC Threads" are parallel threads used in "paused" GC phases performed by the G1 collector as described below:
+
+*   Young GC phases that can be executed in multiple threads. Note that all Young GC phases are "paused", stop-the-world, phases.
+*   Some Old GC phases that can be executed in multiple threads and in "paused", stop-the-world, mode.
+*   Full GC phases that can be executed in multiple threads. Note that all Full GC phases are "paused", stop-the-world, phases.
+
+By default, the number of "Parallel GC Threads" used by the G1 collector in "paused" GC phases is calculated with the following rules: "On a machine with N hardware threads where N is greater than 8, the JVM uses a fixed fraction of N as the number of garbage collector threads. The fraction is approximately 5/8 for large values of N. At values of N below 8, the number used is N. On selected platforms, the fraction drops to 5/16."
+
+If you want to override the default number of "Parallel GC Threads", you can use the "-XX:ParallelGCThreads=n" JVM option. Here is my test to see the impact of the "-XX:ParallelGCThreads=6" option:
+
+```
+ herong> java -Xms16m -Xmx64m -XX:ParallelGCThreads=6 \
+   -XX:+UseG1GC -Xlog:gc*=trace GarbageCollection
+
+...
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+GC(0) WorkerManager::add_workers() : created_workers: 6
+GC(0) GC Thread: using 6 out of 6 workers
+GC(0) Using 6 workers of 6 for evacuation
+   -- GC #0 (Young GC) started
+
+GC(0) oops_do_marking_prologue
+GC(0) WorkerManager::add_workers() : created_workers: 6
+GC(0) GC Thread: using 6 out of 6 workers
+GC(0)   15  3  java.util.Set::of (4 bytes)   oops_do, mark
+GC(0)   75  3  java.util.HashSet::add (20 bytes)   oops_do, mark
+GC(0)  209  3  java.util.Arrays::copyOf (40 bytes)   oops_do, mark
+...
+GC(0)  209  3  java.util.Arrays::copyOf (40 bytes)   oops_do, unmark
+GC(0)   75  3  java.util.HashSet::add (20 bytes)   oops_do, unmark
+GC(0)   15  3  java.util.Set::of (4 bytes)   oops_do, unmark
+...
+   -- Paused phase, 6 threads used.
+
+GC(0) oops_do_marking_epilogue
+GC(0) WorkerManager::add_workers() : created_workers: 6
+GC(0) GC Thread: using 6 out of 6 workers
+GC(0) Skipped phase1 of Reference Processing due to unavailable references
+GC(0) Phase2 Soft before0 0 0 0 0 0 (0)
+GC(0) Phase2 Weak before0 0 0 0 0 119 (119)
+GC(0) Phase2 Final before0 0 0 0 0 0 (0)
+GC(0) Phase2 Final after0 0 0 0 0 0 (0)
+GC(0) Skipped phase3 of Reference Processing due to unavailable references
+GC(0) Phase4 Phantom before0 2 0 0 0 0 (2)
+...
+   -- Paused phase, 6 threads used.
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 6M->6M(16M) 7.320ms
+GC(0) User=0.00s Sys=0.02s Real=0.02s
+   -- GC #0 (Young GC) ended
+...
+```
+
+```
+ GC(3) Concurrent Cycle
+   -- GC #3 (Old GC) started
+
+GC(3) Concurrent Clear Claimed Marks 0.012ms
+
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) G1 Conc: using 1 out of 2 workers
+GC(3) Concurrent Scan Root Regions 0.791ms
+   -- Concurrent phase, 2 threads
+
+GC(3) Concurrent Mark (0.139s)
+   -- Concurrent Mark phase started
+
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) G1 Conc: using 2 out of 2 workers
+GC(3) Concurrent Mark From Roots 12.436ms
+   -- Concurrent phase, 2 threads
+
+GC(3) Concurrent Preclean
+   -- Concurrent Preclean phase started
+
+GC(3) Preclean SoftReferences 0.058ms
+GC(3) Preclean WeakReferences 0.048ms
+GC(3) Preclean FinalReferences 0.044ms
+GC(3) Preclean PhantomReferences 0.033ms
+GC(3) Concurrent Preclean 4.324ms
+
+GC(3) Concurrent Mark (0.139s, 0.155s) 16.784ms
+   -- Concurrent phase, 2 threads
+
+GC(3) Pause Remark
+
+GC(3) oops_do_marking_prologue
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) oops_do_marking_epilogue
+GC(3) Finalize Marking 0.527ms
+   -- Paused phase, 6 threads used
+
+GC(3) Reference Processing 0.225ms
+
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3)   JVMTI weak processing: 0.0ms
+GC(3)   JFR weak processing: 0.0ms
+GC(3)   JNI weak processing: 0.0ms
+GC(3)   VM weak processing: 0.0ms
+GC(3) Weak Processing 0.170ms
+   -- Paused phase, 6 threads used
+
+GC(3) Class Unloading
+GC(3) ClassLoaderData 0.007ms
+GC(3) ResolvedMethodTable 0.008ms
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Class Unloading 0.215ms
+   -- Paused phase, 6 threads used
+
+GC(3) Flush Task Caches 0.047ms
+
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Update Remembered Set Tracking Before Rebuild 0.553ms
+   -- Paused phase, 6 threads used
+
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Reclaim Empty Regions 0.164ms
+   -- Paused phase, 6 threads used
+
+GC(3) Purge Metaspace 0.006ms
+GC(3) Report Object Count 0.006ms
+
+GC(3) Pause Remark 14M->14M(25M) 2.150ms
+   -- Pause Remark phase ended
+```
+
+```
+ GC(3) Concurrent Rebuild Remembered Sets
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) G1 Conc: using 2 out of 2 workers
+GC(3) Concurrent Rebuild Remembered Sets 4.921ms
+   -- Concurrent phase, 2 threads
+
+GC(3) Pause Cleanup
+GC(3) Update Remembered Set Tracking After Rebuild 0.149ms
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Finalize Concurrent Mark Cleanup 0.303ms
+GC(3) Pause Cleanup 16M->16M(25M) 0.766ms
+   -- Paused phase, 6 threads used
+
+GC(3) WorkerManager::add_workers() : created_workers: 2
+GC(3) G1 Conc: using 2 out of 2 workers
+GC(3) Concurrent Cleanup for Next Mark 0.340ms
+   -- Concurrent phase, 2 threads
+
+GC(3) Concurrent Cycle 30.514ms
+   -- GC #3 (Old GC) ended
+
+...
+
+GC(32) WorkerManager::add_workers() : created_workers: 6
+GC(32) GC Thread: using 6 out of 6 workers
+GC(32) Using 6 workers of 6 for full compaction
+GC(32) Pause Full (G1 Evacuation Pause)
+   -- GC #32 (Full GC) started
+
+GC(32) WorkerManager::add_workers() : created_workers: 6
+GC(32) GC Thread: using 6 out of 6 workers
+GC(32) Clear Next Bitmap 0.425ms
+   -- Paused phase, 6 threads used
+
+GC(32) Phase 1: Mark live objects
+GC(32) WorkerManager::add_workers() : created_workers: 6
+GC(32) GC Thread: using 6 out of 6 workers
+GC(32) Phase 1: Reference Processing 0.523ms
+GC(32) Phase 1: Weak Processing 0.184ms
+GC(32) Phase 1: Class Unloading and Cleanup 0.759ms
+GC(32) Phase 1: Mark live objects 3.191ms
+   -- Paused phase, 6 threads used
+
+GC(32) WorkerManager::add_workers() : created_workers: 6
+GC(32) GC Thread: using 6 out of 6 workers
+GC(32) Phase 2: Prepare for compaction 0.692ms
+   -- Paused phase, 6 threads used
+
+GC(32) WorkerManager::add_workers() : created_workers: 6
+GC(32) GC Thread: using 6 out of 6 workers
+GC(32) Phase 3: Adjust pointers 0.972ms
+   -- Paused phase, 6 threads used
+
+GC(32) WorkerManager::add_workers() : created_workers: 6
+GC(32) GC Thread: using 6 out of 6 workers
+GC(32) Phase 4: Compact heap 5.852ms
+   -- Paused phase, 6 threads used
+
+GC(32) Eden regions: 0->0(5)
+GC(32)  Used: 0K, Waste: 0K
+GC(32) Survivor regions: 1->0(1)
+GC(32)  Used: 0K, Waste: 0K
+GC(32) Old regions: 63->40
+GC(32)  Used: 34205K, Waste: 6754K
+GC(32) Archive regions: 0->0
+GC(32)  Used: 0K, Waste: 0K
+GC(32) Humongous regions: 0->0
+GC(32)  Used: 0K, Waste: 0K
+GC(32) Metaspace: 494K->468K(1056768K)
+   -- GC #32 (Full GC) ended
+...
+```
+
+As you can see, "-XX:ParallelGCThreads=6" JVM option works as expected.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟"-XX:ConcGCThreads=5" - Old GC Concurrent Threads
+
+This section demonstrates that the '-XX:ConcGCThreads=3' option can be used to control the number of threads used in concurrent phases of the G1 Old GC.
+
+"Concurrent GC Threads" are concurrent threads used in "concurrent" Old GC phases performed by the G1 collector as described below:
+
+*   Some Old GC phases that can be executed in multiple threads and in "concurrent" mode.
+
+If you want to override the default number of "Concurrent GC Threads", you can use the "-XX:ConcGCThreads=n" JVM option. Here is my test to see the impact of the "-XX:ConcGCThreads=5" option:
+
+```
+ herong> java -Xms16m -Xmx64m \
+   -XX:ParallelGCThreads=6 -XX:ConcGCThreads=5 \
+   -XX:+UseG1GC -Xlog:gc*=trace GarbageCollection
+
+GC(3) Concurrent Cycle
+   -- GC #3 (Old GC) started
+
+GC(3) Concurrent Clear Claimed Marks 0.017ms
+
+GC(3) G1 Conc: using 2 out of 5 workers
+GC(3) Concurrent Scan Root Regions 1.033ms
+   -- Concurrent phase, 2 threads used
+
+GC(3) Concurrent Mark (0.156s)
+
+GC(3) G1 Conc: using 5 out of 5 workers
+GC(3) Concurrent Mark From Roots 8.847ms
+   -- Concurrent phase, 5 threads used
+
+GC(3) Concurrent Preclean 3.863ms
+   -- Concurrent phase, 1 thread used
+
+GC(3) Pause Remark
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Finalize Marking 0.446ms
+   -- Paused phase, 6 threads used
+
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Weak Processing 0.145ms
+   -- Paused phase, 6 threads used
+
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Class Unloading 0.214ms
+   -- Paused phase, 6 threads used
+
+GC(3) Flush Task Caches 0.025ms
+
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Reclaim Empty Regions 0.090ms
+
+GC(3) Purge Metaspace 0.007ms
+GC(3) Report Object Count 0.009ms
+GC(3) Pause Remark 13M->13M(25M) 2.313ms
+
+GC(3) WorkerManager::add_workers() : created_workers: 5
+GC(3) G1 Conc: using 5 out of 5 workers
+GC(3) Concurrent Rebuild Remembered Sets 4.661ms
+   -- Concurrent phase, 5 threads used
+
+GC(3) Pause Cleanup
+GC(3) Update Remembered Set Tracking After Rebuild 0.120ms
+
+GC(3) WorkerManager::add_workers() : created_workers: 6
+GC(3) GC Thread: using 6 out of 6 workers
+GC(3) Finalize Concurrent Mark Cleanup 0.265ms
+   -- Paused phase, 6 threads used
+
+GC(3) Pause Cleanup 14M->14M(25M) 0.669ms
+
+GC(3) WorkerManager::add_workers() : created_workers: 5
+GC(3) G1 Conc: using 5 out of 5 workers
+GC(3) Concurrent Cleanup for Next Mark 0.339ms
+   -- Concurrent phase, 5 threads used
+
+GC(3) Concurrent Cycle 22.543ms
+   -- GC #3 (Old GC) ended
+```
+
+As you can see, "-XX:ConcGCThreads=5" JVM option works as expected.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟"-XX:G1HeapRegionSize=n" - G1 Region Size
+
+This section demonstrates how to use '-XX:G1HeapRegionSize=n' JVM option to specify the size of each region used by the G1 collector. It needs to be a power of two and can range from 1MB to 32MB.
+
+In the last tutorial, we learned that the G1 collector sets the region size to 1024K by default.
+
+If you want to increase the region size, you can use the "-XX:G1HeapRegionSize=2048k" JVM option:
+
+```
+ herong> java -Xms64m -Xmx64m -XX:+UseG1GC -Xlog:gc*=trace \
+   -XX:G1HeapRegionSize=2048k GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+...
+21   67108864   41943040   25165824
+
+GC(0) Heap before GC invocations=0 (full 0): garbage-first heap
+       total 65536K, used 22528K [...
+GC(0)   region size 2048K, 12 young (24576K), 0 survivors (0K)
+   -- Confirmed: Region size changed to 2048K
+
+GC(0)  Metaspace       used 493K, capacity 4544K, committed 4864K, ...
+GC(0)   class space    used 42K, capacity 408K, committed 512K, ...
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+
+GC(0) Eden regions: 12->0(4)
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Survivor regions: 0->2(2)
+GC(0)  Used: 4096K, Waste: 0K
+GC(0) Old regions: 0->11
+GC(0)  Used: 20736K, Waste: 1791K
+GC(0) Archive regions: 0->0
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Humongous regions: 0->0
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Metaspace: 493K->493K(1056768K)
+
+...
+```
+
+Note that G1 collector region size needs to be a power of two and can range from 1MB to 32MB. If you specify an invalid value for the region size, the G1 collector will round your value to nearest valid setting. For example:
+
+If you want to increase the region size, you can use the "-XX:G1HeapRegionSize=10m" JVM option:
+
+```
+ herong> java -Xms64m -Xmx64m -XX:+UseG1GC -Xlog:gc*=trace \
+   -XX:G1HeapRegionSize=10m GarbageCollection
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+...
+21   67108864   41943040   25165824
+
+GC(0) Heap before GC invocations=0 (full 0): garbage-first heap
+       total 65536K, used 16384K [...
+GC(0)   region size 8192K, 3 young (24576K), 0 survivors (0K)
+   -- Confirmed: Region size changed to 8192K
+
+GC(0)  Metaspace       used 494K, capacity 4544K, committed 4864K, ...
+GC(0)   class space    used 42K, capacity 408K, committed 512K, ...
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+
+GC(0) Eden regions: 3->0(1)
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Survivor regions: 0->1(1)
+GC(0)  Used: 8192K, Waste: 0K
+GC(0) Old regions: 0->2
+GC(0)  Used: 15289K, Waste: 1095K
+GC(0) Archive regions: 0->0
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Humongous regions: 0->0
+GC(0)  Used: 0K, Waste: 0K
+GC(0) Metaspace: 494K->494K(1056768K)
+
+...
+```
+
+Conclusion:
+
+*   "-XX:G1HeapRegionSize=2048k" JVM option can be used to specify the size of region used by the G1 collector.
+*   The region size needs to be a power of two and can range from 1MB to 32MB.
+*   If you specify an invalid value for the region size, the G1 collector will round your value to nearest valid setting.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟G1 Humongous Allocation - Objects Too Large
+
+This section provides a tutorial on Humongous objects, which are objects larger than half a region size. A Humongous object is allocated directly in the old generation using a contiguous set of regions.
+
+What will happen if the application wants to create objects that are larger than the G1 region size?
+
+Here is what said in Java documentation: "Any object that is more than half a region size is considered a "Humongous object". Such an object is allocated directly in the old generation into "Humongous regions". A Humongous region is a contiguous set of regions."
+
+Let's try this with our second test program, GarbageCollection2.java, which uses 1 MB objects:
+
+```
+ /* GarbageCollection2.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+class GarbageCollection2 {
+   public static void main(String[] a) {
+      java.util.Random rnd = new java.util.Random();
+      int max = 10000;
+      int min = 32;
+      Object[] arr = new Object[min];
+      Runtime rt = Runtime.getRuntime();
+      System.out.println("Step/TotalMemory/FreeMemory/UsedMemory:");
+      for (int m=0; m<max; m++) {
+         int k = rnd.nextInt(min);
+         for (int n=min-1; n>=k+1; n--) arr[n] = arr[n-1];
+         arr[k] = getOneMega();
+         long total = rt.totalMemory();
+         long free = rt.freeMemory();
+         System.out.println((m+1)+"   "+total+"   "+free+"   "
+            +(total-free));
+      }
+   }
+   private static Object getOneMega() {
+      return new long[1024*128]; // 1MB
+   }
+}
+```
+
+If we run the above program with the default region size of 1024K, our objects will be considered as humongous objects:
+
+```
+ herong> java -Xms64m -Xmx64m -XX:+UseG1GC -Xlog:gc*=trace \
+   -XX:G1HeapRegionSize=1024k GarbageCollection2
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+...
+14   67108864   35691432   31417432
+
+GC(0) Heap before GC invocations=0 (full 0): garbage-first heap
+       total 65536K, used 29696K [...
+GC(0)   region size 1024K, 2 young (2048K), 0 survivors (0K)
+   -- 14 * 1M application objects allocated in "humongous" regions
+   -- Only some other smaller objects allocated in "young" regions
+
+GC(0) Initiate concurrent cycle (concurrent cycle initiation requested)
+GC(0) Pause Young (Concurrent Start) (G1 Humongous Allocation)
+
+GC(0) Eden regions: 2->0(30)
+GC(0) Survivor regions: 0->1(3)
+GC(0) Old regions: 0->0
+GC(0) Archive regions: 0->0
+GC(0) Humongous regions: 28->24
+   -- 14 * 1M objects allocated in 28 * 1M "humongous" regions
+   -- 2 * 1M regions used for 1 * 1M object, 50% space wasted
+
+GC(0) Heap after GC invocations=1 (full 0): garbage-first heap
+       total 65536K, used 25332K [...
+GC(0)   region size 1024K, 1 young (1024K), 1 survivors (1024K)
+
+GC(0) Pause Young (Concurrent Start) (G1 Humongous Allocation)
+       29M->24M(64M) 5.918ms
+GC(0) User=0.02s Sys=0.00s Real=0.00s
+
+GC(1) Concurrent Cycle
+GC(1) Concurrent Clear Claimed Marks 0.009ms
+GC(1) Concurrent Scan Root Regions 0.728ms
+...
+```
+
+The output confirms that:
+
+*   An object that is more than half a region size is considered a "Humongous object".
+*   A humongous object is allocated directly in the old generation using a "Humongous region", which is a contiguous set of old regions.
+*   Two or more Humongous regions will be used hold a list single Humongous object, if one Humongous region is not enough.
+*   When heap is running out of room to allocate a humongous object, humongous GC is triggered, and labeled as "Pause Young (Concurrent Start) (G1 Humongous Allocation)" in the log message.
+*   A Young GC with "Pause Young (Concurrent Start) (G1 Humongous Allocation)" is followed by an Old GC immediately.
+
+If you want to the G1 collector to function properly and avoid G1 Humongous Allocation, you can increase the region size and give a large heap:
+
+```
+ herong> java -Xms640m -Xmx640m -XX:+UseG1GC -Xlog:gc*=trace \
+   -XX:G1HeapRegionSize=16m GarbageCollection2 > output.txt
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+...
+29   671088640   638664600   32424040
+GC(0) Heap before GC invocations=0 (full 0): garbage-first heap
+       total 655360K, used 16384K [...
+GC(0)   region size 16384K, 2 young (32768K), 0 survivors (0K)
+   -- Region size was increased
+   -- 29 * 1M application objects allocated in 2 * 16M young regions
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+
+GC(0) Eden regions: 2->0(1)
+GC(0) Survivor regions: 0->1(1)
+GC(0) Old regions: 0->1
+GC(0) Archive regions: 0->0
+GC(0) Humongous regions: 0->0
+   -- No Humongous regions used.
+
+GC(0) Heap after GC invocations=1 (full 0): garbage-first heap
+       total 655360K, used 19456K [...
+GC(0)   region size 16384K, 1 young (16384K), 1 survivors (16384K)
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+      31M->19M(640M) 10.931ms
+GC(0) User=0.11s Sys=0.00s Real=0.01s
+...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟"-Xlog:gc+age=trace" - Object Age
+
+This section demonstrates how to use '-Xlog:gc+age=trace' JVM option to print object tenuring age distribution list at each GC.
+
+Does the G1 collector use Tenuring Age Distribution? We can use the "-Xlog:gc+age=trace" JVM option to find out. Or we can use "-Xlog:gc*=trace" JVM option, which covers "-Xlog:gc+age=trace".
+
+Let's use our second test program, GarbageCollection2.java to test this.
+
+```
+ herong> java -XX:+UseG1GC -Xms800m -Xmx800m -Xlog:gc*=trace \
+   -XX:G1HeapRegionSize=4m GarbageCollection2
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+...
+28   838860800   799014816   39845984
+GC(0) Heap before GC invocations=0 (full 0): garbage-first heap
+GC(0)   region size 4096K, 10 young (40960K), 0 survivors (0K)
+
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+
+[trace][gc,age] GC(0) Age table with threshold 15 (max threshold 15)
+[trace][gc,age] GC(0) - age   1:    7021040 bytes,    7021040 total
+   -- Object age distribution list printed
+
+GC(0) Heap after GC invocations=1 (full 0): garbage-first heap
+GC(0)   region size 4096K, 2 young (8192K), 2 survivors (8192K)
+   -- 7M age 1 objects stored in 2 * 4M survivor regions
+
+...
+375   838860800   524287424   314573376
+GC(6) Heap before GC invocations=6 (full 0): garbage-first heap
+GC(6)   region size 4096K, 41 young (167936K), 4 survivors (16384K)
+
+GC(6) Pause Young (Normal) (G1 Evacuation Pause)
+
+[trace][gc,age] GC(6) Age table with threshold 15 (max threshold 15)
+[trace][gc,age] GC(6) - age   1:   18874656 bytes,   18874656 total
+[trace][gc,age] GC(6) - age   2:        112 bytes,   18874768 total
+
+GC(6) Heap after GC invocations=7 (full 0): garbage-first heap
+GC(6)   region size 4096K, 6 young (24576K), 6 survivors (24576K)
+   -- 19M age 1/2 objects stored in 6 * 4M survivor regions
+   -- 5 * 4m regions are enough, why 6?
+
+...
+```
+
+Conclusion: Tenuring Age Distribution list is maintained by the G1 collector.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage First (G1) Collector - "+XX:+UseG1GC"](#part0074.xhtml)
+
+∟"-XX:+MaxTenuringThreshold=0" - Skip G1 Survivors
+
+This section demonstrates how to use '-XX:+MaxTenuringThreshold=0' JVM option to promote live objects from Eden regions to Tenured regions directly, without going through Survivor regions.
+
+Like other garbage collectors, we can force the Young GC to promote live objects from Eden regions to Tenured regions by using the "-XX:+MaxTenuringThreshold=0" JVM option.
+
+```
+ herong> java -XX:+UseG1GC -Xms100m -Xmx100m -Xlog:gc*=trace \
+   -XX:G1HeapRegionSize=4m -XX:MaxTenuringThreshold=0 \
+   GarbageCollection2
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+...
+17   104857600   81788832   23068768
+GC(0) Heap before GC invocations=0 (full 0): garbage-first heap
+GC(0)   region size 4096K, 6 young (24576K), 0 survivors (0K)
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+GC(0) Age table with threshold 0 (max threshold 0)
+   -- Live objects should be promoted to Old regions below age 1
+
+GC(0) Eden regions: 6->0(4)
+GC(0) Survivor regions: 0->0(1)
+GC(0) Old regions: 0->5
+GC(0) Archive regions: 0->0
+   -- GC #0 (Young GC) done
+   -- 6 regions of new objects allocated in Eden regions
+   -- 5 regions of live objects promoted to Old regions
+   -- 1 region of dead objects destroyed
+   -- 0 survivor region used
+
+...
+29   104857600   72351136   32506464
+GC(1) Heap before GC invocations=1 (full 0): garbage-first heap
+GC(1)   region size 4096K, 4 young (16384K), 0 survivors (0K)
+GC(1) Pause Young (Normal) (G1 Evacuation Pause)
+GC(1) Age table with threshold 0 (max threshold 0)
+   -- Live objects should be promoted to Old regions below age 1
+
+GC(1) Eden regions: 4->0(5)
+GC(1) Survivor regions: 0->0(1)
+GC(1) Old regions: 5->8
+GC(1) Archive regions: 0->0
+   -- GC #1 (Young GC) done
+   -- 4 regions of new objects allocated in Eden regions
+   -- 3 regions of live objects promoted to Old regions
+   -- 1 region of dead objects destroyed
+   -- 0 survivor region used
+
+...
+```
+
+Conclusion: The "-XX:+MaxTenuringThreshold=0" JVM option can be used to force G1 Young GC to promote live objects from Eden regions to Old regions directly, skipping survivor regions.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟The Z Garbage Collector (ZGC) - "+XX:+UseZGC"
+
+This chapter provides tutorial notes and example codes on the Garbage First (ZGC) Collector specified by the '+XX:+UseZGC' JVM option. Topics include introduction the ZGC Collector; ZGC log message format; Stop-The-World behavior of ZGC Collector.
+
+> [What Is The Z Garbage Collector (ZGC)](#part0088.xhtml)
+> 
+> [ZGC Log Message Format](#part0089.xhtml)
+> 
+> ["-XX:ParallelGCThreads=6" - ZGC Parallel Threads](#part0090.xhtml)
+> 
+> ["-XX:ConcGCThreads=5" - ZGC Concurrent Threads](#part0091.xhtml)
+
+Takeaways:
+
+*   The Garbage First (ZGC) Collector, -XX:+UseZGC, which performs a GC cycle in 6 phases: Pause Mark Start, Concurrent Mark/Remap, Pause Mark End, Concurrent Prepare for Relocation, Pause Relocate Start, Concurrent Relocate.
+*   ZGC divides the heap into a number of equally sized regions which are used to allocate new data objects to fill one region at a time.
+*   "-XX:ParallelGCThreads=6" can be used to specify the number of threads to be used to perform "paused" phases, while the application is stopped.
+*   "-XX:ConcGCThreads=5" can be used to specify the number of threads to be used to perform "concurrent" phases, while the application is running.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[The Z Garbage Collector (ZGC) - "+XX:+UseZGC"](#part0087.xhtml)
+
+∟What Is The Z Garbage Collector (ZGC)
+
+This section describes The Z Garbage Collector (ZGC), which divides the heap into a number of equally sized regions. ZGC performs a GC cycle in 6 phases: Pause Mark Start, Concurrent Mark/Remap, Pause Mark End, Concurrent Prepare for Relocation, Pause Relocate Start, Concurrent Relocate.
+
+**What Is The Z Garbage Collector (ZGC)?** ZGC (invoked by "-XX:+UseZGC" option) is a scalable low latency garbage collector. ZGC performs all expensive work concurrently, without stopping the execution of application threads for more than 10ms, which makes is suitable for applications which require low latency and/or use a very large heap (multi-terabytes).
+
+ZGC uses two new GC concepts: pointer coloring and load barriers.
+
+**What Is Pointer Coloring?** ZGC uses 64-bit heap address pointers. 64 bits in each pointer are divided into 4 parts for different purposes:
+
+*   Bit 0 to 41, 42 bits, are used to represent the heap address of a data object. This allows ZGC to manage 4 TB of heap memory space.
+*   Bit 42 to 45, 4 bits, are used to store metadata (the color) for this address.
+*   Bit 46, 1 bit, is unused with a 0 value.
+*   Bit 47 to 63, 17 bits, are reserved for future with 0 values.
+
+4 metadata (color) bits are assigned to store different properties:
+
+*   Marked0, bit 42, indicates that the object is been marked in "Marked0" map (view).
+*   Marked1, bit 43, indicates that the object is been marked in "Marked1" map (view).
+*   Remap, bit 44, indicates that this is the current address of the object during a GC object relocation process.
+*   Finalizable, bit 45, indicates that the object is only reachable through a finalizer.
+
+**What Is Load Barrier?** A load barrier is a piece of code that runs when the application wants to load the object from the heap with an address pointer. The load barrier will check the metadata (color) bits of the pointer and adjust the address in case it's been relocated.
+
+ZGC divides the heap into regions (pages or blocks) and keep them in a single generation. So ZGC is a regional GC, but not a generational GC.
+
+Since ZGC is not a generational GC, it will only perform one type of GC, called ZGC. No more Young GC, Old GC and Full GC differences.
+
+ZGC use 6 phases to perform a single GC cycle:
+
+*   Pause Mark Start - Mark objects pointed to by roots.
+*   Concurrent Mark/Remap - Walk the object graph and mark non-root objects.
+*   Pause Mark End - Synchronize all mark threads and perform weak roots cleaning.
+*   Concurrent Prepare for Relocation - Perform Reference processing, Weak root cleaning, and Relocation set selection.
+*   Pause Relocate Start - Handle roots pointing into the relocation set.
+*   Concurrent Relocate - Relocate objects in the relocation set.
+
+![](Images/image00262.jpeg)
+
+The Z Garbage Collector (ZGC)
+
+Note that ZGC is only supported on Linux/x64 architecture in JDK 11, 12, 13 as an experimental feature. You need to use "-XX:+UnlockExperimentalVMOptions -XX:+UseZGC" options to invoke ZGC.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[The Z Garbage Collector (ZGC) - "+XX:+UseZGC"](#part0087.xhtml)
+
+∟ZGC Log Message Format
+
+This section provides examples of The Z Garbage Collector (ZGC) GC log messages.
+
+Before doing any testing with the ZGC collector, let's look at log messages generated by the ZGC collector first:
+
+```
+ herong> java -version 
+java version "11.0.2" 2019-01-15 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.2+9-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.2+9-LTS, mixed mode)
+
+herong> java -Xms2m -Xmx40m \
+   -XX:+UnlockExperimentalVMOptions -XX:+UseZGC \
+   -Xlog:gc*=trace GarbageCollection
+
+[debug][gc,heap] Minimum heap 2097152  Initial heap 2097152
+                 Maximum heap 41943040
+[info ][gc,init] Initializing The Z Garbage Collector
+[info ][gc,init] Version: 11.0.2+9-LTS (release)
+[info ][gc,init] NUMA Support: Disabled
+[info ][gc,init] CPUs: 2 total, 2 available
+[info ][gc,init] Memory: 7975M
+[info ][gc,init] Large Page Support: Disabled
+[info ][gc,init] Workers: 2 parallel, 1 concurrent
+[info ][gc] Using The Z Garbage Collector
+   -- ZGC invoked
+
+[debug][gc] Expanding heap from 0M to 76M
+   -- Expanded heap to the -Xmx80m limit.
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+[debug][gc,alloc] Allocation Rate: 380.000MB/s, Avg: 380.000(+/-0.000)MB/s
+[debug][gc,director] Rule: Warmup 10%, Used: 38MB, UsedThreshold: 8MB
+[debug][gc,heap    ] GC(0) Heap before GC invocations=0 (full 0): ZHeap
+                            used 38M, capacity 76M, max capacity 80M
+[debug][gc,heap    ] GC(0)  Metaspace       used 4930K, capacity 4990K,
+                            committed 5120K, reserved 8192K
+   -- Heap report before GC							
+
+[info ][gc,start   ] GC(0) Garbage Collection (Warmup)
+   -- GC #0 (Warmup GC?) started
+
+[debug][gc,phases,start             ] GC(0) Pause Mark Start
+   -- Pause Mark Start phase started
+
+[trace][gc,tlab  ] GC(0) TLAB: gc thread: 0x00007f1e1c011eb0 ...
+[trace][gc,tlab  ] GC(0) TLAB: gc thread: 0x00007f1e1c0b7020 ...
+...
+[debug][gc,phases] GC(0) Pause Retire TLABS (VM Thread) 0.100ms
+   -- TLAB report
+
+[debug][gc,phases] GC(0) Pause Roots Setup (VM Thread) 0.006ms
+
+[trace][gc,task  ] GC(0) ZWorker: using 2 out of 2 workers
+[debug][gc,phases] GC(0) Pause Roots Universe (ZWorker#0) 0.006ms
+[debug][gc,phases] GC(0) Pause Roots Management (ZWorker#1) 0.005ms
+[debug][gc,phases] GC(0) Pause Roots JVMTIExport (ZWorker#1) 0.004ms
+[debug][gc,phases] GC(0) Pause Roots ObjectSynchronizer (ZWorker#0) 0.004ms
+[debug][gc,phases] GC(0) Pause Roots JNIHandles (ZWorker#0) 0.005ms
+[debug][gc,phases] GC(0) Pause Roots JNIHandles (ZWorker#0) 0.005ms
+[debug][gc,phases] GC(0) Pause Roots SystemDictionary (ZWorker#1) 0.031ms
+[debug][gc,phases] GC(0) Pause Roots ClassLoaderDataGraph (ZWorker#1) 0.005ms
+[debug][gc,phases] GC(0) Pause Roots ClassLoaderDataGraph (ZWorker#0) 0.024ms
+[debug][gc,phases] GC(0) Pause Roots Threads (ZWorker#1) 0.130ms
+[debug][gc,phases] GC(0) Pause Roots Threads (ZWorker#1) 0.130ms
+[debug][gc,phases] GC(0) Pause Roots CodeCache (ZWorker#1) 0.013ms
+[debug][gc,phases] GC(0) Pause Roots Threads (ZWorker#0) 0.508ms
+[debug][gc,phases] GC(0) Pause Roots (ZWorker#0) 0.627ms
+  -- Marked different types of roots in 2 parallel threads
+
+[debug][gc,phases] GC(0) Pause Roots Teardown (VM Thread) 0.005ms
+
+[info ][gc,phases] GC(0) Pause Mark Start 0.856ms
+   -- Pause Mark Start phase ended, 0.856ms, 2 threads
+```
+
+```
+ [debug][gc,phases,start] GC(0) Concurrent Mark
+   -- Concurrent Mark phase started
+
+[trace][gc,task  ] GC(0) ZWorker: using 1 out of 2 workers
+[trace][gc,ref   ] GC(0) Encountered Reference: 0x00... (Weak)
+[trace][gc,ref   ] GC(0) Discovered Reference: 0x00... (Weak)
+...
+[debug][gc,phases] GC(0) Concurrent Mark Try Flush (ZWorker#1) 1.411ms
+[debug][gc,phases] GC(0) Concurrent Mark Try Flush (ZWorker#1) 0.982ms
+[debug][gc,phases] GC(0) Concurrent Mark Try Flush (ZWorker#1) 0.017ms
+[debug][gc,phases] GC(0) Concurrent Mark Try Flush (ZWorker#1) 0.014ms
+[debug][gc,phases] GC(0) Concurrent Mark (ZWorker#1) 6.935ms
+
+[info ][gc,phases] GC(0) Concurrent Mark 7.011ms
+   -- Concurrent Mark phase ended, 7.011ms, 1 concurrent thread
+
+[debug][gc,phases,start] GC(0) Pause Mark End
+   -- Pause Mark End phase started
+
+[debug][gc,phases] GC(0) Pause Roots Setup (VM Thread) 0.004ms
+[trace][gc,task  ] GC(0) ZWorker: using 2 out of 2 workers
+[debug][gc,phases] GC(0) Pause Roots Threads (ZWorker#0) 0.014ms
+[debug][gc,phases] GC(0) Pause Roots (ZWorker#0) 0.036ms
+[debug][gc,phases] GC(0) Pause Roots Threads (ZWorker#1) 0.189ms
+[debug][gc,phases] GC(0) Pause Roots (ZWorker#1) 0.200ms
+[debug][gc,phases] GC(0) Pause Roots Teardown (VM Thread) 0.004ms
+[debug][gc,phases] GC(0) Pause Weak Roots Setup (VM Thread) 0.004ms
+[debug][gc,phases] GC(0) Pause Weak Roots JVMTIWeakExport (ZWorker#0) 0.004ms
+[debug][gc,phases] GC(0) Pause Weak Roots JFRWeak (ZWorker#0) 0.003ms
+[debug][gc,phases] GC(0) Pause Weak Roots (ZWorker#0) 0.022ms
+[debug][gc,phases] GC(0) Pause Weak Roots Teardown (VM Thread) 0.004ms
+[info ][gc,phases] GC(0) Pause Mark End 0.434ms
+   -- Pause Mark End phase ended, 0.434ms, 2 parallel threads
+
+   -- Concurrent Prepare for Relocation phase started
+[debug][gc,phases,start] GC(0) Concurrent Process Non-Strong References
+[trace][gc,task        ] GC(0) ZWorker: using 1 out of 2 workers
+[trace][gc,ref         ] GC(0) Dropped Reference: 0x0000080000194a50 (Weak)
+[trace][gc,ref         ] GC(0) Dropped Reference: 0x00000800001994b0 (Weak)
+...
+[debug][gc,phases] GC(0) Concurrent References Process (ZDriver) 0.738ms
+[debug][gc,phases] GC(0) Concurrent Weak Roots VMWeakHandles (...) 0.008ms
+[debug][gc,phases] GC(0) Concurrent Weak Roots JNIWeakHandles (...) 0.003ms
+[debug][gc,phases] GC(0) Concurrent Weak Roots StringTable (...) 0.050ms
+[debug][gc,phases] GC(0) Concurrent Weak Roots (ZWorker#1) 0.078ms
+[debug][gc,phases] GC(0) Concurrent References Enqueue (ZDriver) 0.023ms
+[info ][gc,phases] GC(0) Concurrent Process Non-Strong References 0.892ms
+
+[info ][gc,phases] GC(0) Concurrent Reset Relocation Set 0.003ms
+[info ][gc,phases] GC(0) Concurrent Destroy Detached Pages 0.004ms
+[info ][gc,phases] GC(0) Concurrent Select Relocation Set 1.665ms
+[info ][gc,phases] GC(0) Concurrent Prepare Relocation Set 0.363ms
+   -- Concurrent Prepare for Relocation phase ended, 1 concurrent thread
+
+[debug][gc,phases,start] GC(0) Pause Relocate Start
+   -- Pause Relocate Start phase started
+
+[debug][gc,phases] GC(0) Pause Remap TLABS (VM Thread) 0.005ms
+[debug][gc,phases] GC(0) Pause Roots Setup (VM Thread) 0.005ms
+[trace][gc,task  ] GC(0) ZWorker: using 2 out of 2 workers
+[debug][gc       ] GC(0) Expanding heap from 76M to 78M
+[debug][gc,phases] GC(0) Pause Roots Universe (ZWorker#0) 0.382ms
+[debug][gc,phases] GC(0) Pause Roots ObjectSynchronizer (ZWorker#0) 0.003ms
+[debug][gc,phases] GC(0) Pause Roots Management (ZWorker#0) 0.004ms
+[debug][gc,phases] GC(0) Pause Roots Management (ZWorker#0) 0.004ms
+[debug][gc,phases] GC(0) Pause Roots JVMTIExport (ZWorker#0) 0.003ms
+[debug][gc,phases] GC(0) Pause Roots SystemDictionary (ZWorker#0) 0.005ms
+[debug][gc,phases] GC(0) Pause Roots JNIHandles (ZWorker#0) 0.007ms
+[debug][gc,phases] GC(0) Pause Roots ClassLoaderDataGraph (ZWorker#0) 0.174ms
+[debug][gc,phases] GC(0) Pause Roots Threads (ZWorker#0) 0.381ms
+[debug][gc,phases] GC(0) Pause Roots Threads (ZWorker#0) 0.381ms
+[debug][gc,phases] GC(0) Pause Roots CodeCache (ZWorker#0) 0.014ms
+[debug][gc,phases] GC(0) Pause Roots JVMTIWeakExport (ZWorker#0) 0.004ms
+[debug][gc,phases] GC(0) Pause Roots (ZWorker#0) 1.040ms
+[debug][gc,phases] GC(0) Pause Roots (ZWorker#0) 0.004ms
+[debug][gc,phases] GC(0) Pause Roots Teardown (VM Thread) 0.005ms
+[info ][gc,phases] GC(0) Pause Relocate Start 1.171ms
+   -- Pause Relocate Start phase ended, 1.171ms, 2 parallel threads
+
+[debug][gc,phases,start] GC(0) Concurrent Relocate
+[trace][gc,task        ] GC(0) ZWorker: using 1 out of 2 workers
+[info ][gc,phases      ] GC(0) Concurrent Relocate 2.276ms
+   -- Concurrent Relocate phase ended, 2.276ms, 1 concurrent thread
+
+[debug][gc,heap] GC(0) Heap after GC invocations=1 (full 1): ZHeap
+                        used 40M, capacity 78M, max capacity 80M
+[debug][gc,heap] GC(0)  Metaspace       used 4966K, capacity 4999K,
+                         committed 5120K, reserved 8192K
+   -- Heap report before GC 
+```
+
+```
+ [gc,load   ] GC(0) Load: 0.34/0.60/0.61
+[gc,mmu    ] GC(0) MMU: 2ms/41.4%, 5ms/76.6%, 10ms/83.9%,
+                    20ms/87.7%, 50ms/95.1%, 100ms/97.5%
+[gc,marking] GC(0) Mark: 1 stripe(s), 3 proactive flush(es),
+                    1 terminate flush(es), 0 completion(s),
+           0 continuation(s)
+[gc,reloc  ] GC(0) Relocation: Successful, 2M relocated
+[gc,nmethod] GC(0) NMethods: 20 registered, 0 unregistered
+[gc,ref    ] GC(0) Soft: 102 encountered, 0 discovered, 0 enqueued
+[gc,ref    ] GC(0) Weak: 184 encountered, 149 discovered, 25 enqueued
+[gc,ref    ] GC(0) Final: 0 encountered, 0 discovered, 0 enqueued
+[gc,ref    ] GC(0) Weak: 184 encountered, 149 discovered, 25 enqueued
+[gc,ref    ] GC(0) Final: 0 encountered, 0 discovered, 0 enqueued
+[gc,ref    ] GC(0) Phantom: 1 encountered, 1 discovered, 0 enqueued
+  -- GC summary
+
+GC(0)           Mark Start  Mark End   Relocate Start Relocate End
+GC(0)  Capacity:  76M (95%)  76M (95%)     76M (95%)     78M (98%)
+GC(0)   Reserve:  36M (45%)  36M (45%)     36M (45%)     36M (45%)
+GC(0)      Free:   6M (8%)    4M (5%)       4M (5%)       4M (5%)
+GC(0)      Used:  38M (48%)  40M (50%)     40M (50%)     40M (50%)
+GC(0)      Live:    -         2M (3%)       2M (3%)       2M (3%)
+GC(0) Allocated:    -         2M (2%)       2M (2%)       6M (8%)
+GC(0)   Garbage:    -        35M (45%)     35M (45%)     35M (45%)
+GC(0) Reclaimed:    -          -            0M (0%)       0M (0%)
+    -- Heap usage history
+
+[info ][gc        ] GC(0) Garbage Collection (Warmup) 38M(48%)->40M(50%)
+  -- GC summary
+  -- GC #0 (Warmup GC) ended
+
+1   79691776   41943040   37748736
+[debug][gc,start] Allocation Stall (main)
+[debug][gc,heap ] GC(1) Heap before GC invocations=1 (full 1): ZHeap
+                         used 38M, capacity 78M, max capacity 80M
+[info ][gc,start] GC(1) Garbage Collection (Allocation Stall)
+   -- GC #1 started
+```
+
+Cool. Now we know a ZGC cycle has following phases using different concurrency models.
+
+```
+ Phases            Threads      Time  Concurrency
+
+Pause Mark Start                     2   0.856ms  paused
+Concurrent Mark                      1   7.011ms  concurrent
+Pause Mark End                       2   0.434ms  paused
+Prepare for Relocation               1            concurrent
+   Process Non-Strong References     1   0.892ms
+   Reset Relocation Set              1   0.003ms
+   Destroy Detached Pages            1   0.004ms
+   Select Relocation Set             1   1.665ms
+   Prepare Relocation Set            1   0.363ms
+Pause Relocate Start                 2   1.171ms  paused
+Concurrent Relocate                  1   2.276ms  concurrent
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[The Z Garbage Collector (ZGC) - "+XX:+UseZGC"](#part0087.xhtml)
+
+∟"-XX:ParallelGCThreads=6" - ZGC Parallel Threads
+
+This section provides a tutorial showing how to control the number of parallel threads used in ZGC processes by '-XX:ParallelGCThreads=6' option.
+
+"Parallel GC Threads" are parallel threads used in "paused" GC phases performed by the ZGC collector as described below:
+
+*   Some ZGC phases that can be executed in multiple threads and in "paused", stop-the-world, mode.
+
+By default, the number of "Parallel GC Threads" used by the ZGC collector in "paused" GC phases is calculated with the following rules: "On a machine with N hardware threads where N is greater than 8, the JVM uses a fixed fraction of N as the number of garbage collector threads. The fraction is approximately 5/8 for large values of N. At values of N below 8, the number used is N. On selected platforms, the fraction drops to 5/16."
+
+If you want to override the default number of "Parallel GC Threads", you can use the "-XX:ParallelGCThreads=n" JVM option. Here is my test to see the impact of the "-XX:ParallelGCThreads=6" option:
+
+```
+ herong> java -Xms40m -Xmx160m -XX:ParallelGCThreads=6 \
+   -XX:+UnlockExperimentalVMOptions -XX:+UseZGC \
+   -Xlog:gc*=trace GarbageCollection
+
+.[debug][gc,heap] Minimum heap 41943040  Initial heap 41943040
+                  Maximum heap 167772160
+[info ][gc,init] Initializing The Z Garbage Collector
+[info ][gc,init] Version: 11.0.2+9-LTS (release)
+[info ][gc,init] NUMA Support: Disabled
+[info ][gc,init] CPUs: 2 total, 2 available
+[info ][gc,init] Memory: 7975M
+[info ][gc,init] Large Page Support: Disabled
+[info ][gc,init] Workers: 6 parallel, 1 concurrent
+   -- ZGC invoked with 6 parallel threads
+
+[debug][gc] Expanding heap from 0M to 84M
+   -- Looks like ZGC needs a minimum heap of 84MB
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+GC(0) Heap before GC invocations=0 (full 0): ZHeap
+       used 36M, capacity 84M, max capacity 160M
+GC(0) Garbage Collection (Warmup)
+  -- GC #0 (Warmup GC?) started
+
+GC(0) Pause Mark Start
+GC(0) ZWorker: using 6 out of 6 workers
+GC(0) Pause Mark Start 0.925ms
+  -- Pause Mark Start phase ended with 6 threads as expected
+
+GC(0) Concurrent Mark
+GC(0) ZWorker: using 1 out of 6 workers
+GC(0) Concurrent Mark 18.422ms
+  -- Concurrent Mark phase ended with 1 concurrent thread
+
+GC(0) Pause Mark End
+GC(0) ZWorker: using 6 out of 6 workers
+GC(0) Pause Mark End 0.632ms
+  -- Pause Mark End phase ended with 6 threads as expected
+
+GC(0) Concurrent Process Non-Strong References
+GC(0) ZWorker: using 1 out of 6 workers
+GC(0) Concurrent Process Non-Strong References 0.753ms
+GC(0) Concurrent Reset Relocation Set 0.004ms
+GC(0) Concurrent Destroy Detached Pages 0.003ms
+GC(0) Concurrent Select Relocation Set 1.284ms
+GC(0) Concurrent Prepare Relocation Set 0.089ms
+  -- Concurrent Prepare for Relocation ended with 1 concurrent thread
+
+GC(0) Pause Relocate Start
+GC(0) ZWorker: using 6 out of 6 workers
+GC(0) Pause Relocate Start 2.663ms
+  -- Pause Relocate phase ended with 6 threads as expected
+
+GC(0) Concurrent Relocate
+GC(0) ZWorker: using 1 out of 6 workers
+GC(0) Concurrent Relocate 1.803ms
+  -- Concurrent Relocate ended with 1 concurrent thread
+
+GC(0) Heap after GC invocations=1 (full 1): ZHeap
+       used 46M, capacity 94M, max capacity 160M
+GC(0) Garbage Collection (Warmup) 36M(22%)->46M(29%)
+  -- GC summary
+  -- GC #0 (Warmup GC) ended
+
+...
+```
+
+As you can see, "-XX:ParallelGCThreads=6" JVM option works as expected.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[The Z Garbage Collector (ZGC) - "+XX:+UseZGC"](#part0087.xhtml)
+
+∟"-XX:ConcGCThreads=5" - ZGC Concurrent Threads
+
+This section demonstrates that the '-XX:ConcGCThreads=3' option can be used to control the number of threads used in concurrent phases of the ZGC GC.
+
+"Concurrent GC Threads" are concurrent threads used in "concurrent" Old GC phases performed by the ZGC collector as described below:
+
+*   Some Old GC phases that can be executed in multiple threads and in "concurrent" mode.
+
+If you want to override the default number of "Concurrent GC Threads", you can use the "-XX:ConcGCThreads=n" JVM option. Here is my test to see the impact of the "-XX:ConcGCThreads=5" option:
+
+```
+ herong> java -Xms40m -Xmx160m \
+   -XX:ParallelGCThreads=6 -XX:ConcGCThreads=5 \
+   -XX:+UnlockExperimentalVMOptions -XX:+UseZGC \
+   -Xlog:gc*=trace GarbageCollection > output.txt
+
+[debug][gc,heap] Minimum heap 41943040  Initial heap 41943040
+                  Maximum heap 167772160
+[info ][gc,init] Initializing The Z Garbage Collector
+[info ][gc,init] Version: 11.0.2+9-LTS (release)
+[info ][gc,init] NUMA Support: Disabled
+[info ][gc,init] CPUs: 2 total, 2 available
+[info ][gc,init] Memory: 7975M
+[info ][gc,init] Large Page Support: Disabled
+[info ][gc,init] Workers: 6 parallel, 5 concurrent
+   -- ZGC invoked with 5 concurrent threads
+
+[debug][gc] Expanding heap from 0M to 84M
+   -- Looks like ZGC needs a minimum heap of 84MB
+
+Step/TotalMemory/FreeMemory/UsedMemory:
+GC(0) Heap before GC invocations=0 (full 0): ZHeap
+        used 36M, capacity 84M, max capacity 160M
+GC(0) Garbage Collection (Warmup)
+   -- GC #0 (Warmup GC?) started
+
+GC(0) Pause Mark Start
+GC(0) ZWorker: using 6 out of 6 workers
+GC(0) Pause Mark Start 0.925ms
+   -- Pause Mark Start phase ended with 6 threads as expected
+
+GC(0) Concurrent Mark
+GC(0) ZWorker: using 5 out of 6 workers
+GC(0) Concurrent Mark 18.422ms
+   -- Concurrent Mark phase ended with 5 concurrent thread
+
+GC(0) Pause Mark End
+GC(0) ZWorker: using 6 out of 6 workers
+GC(0) Pause Mark End 0.632ms
+   -- Pause Mark End phase ended with 6 threads as expected
+
+GC(0) Concurrent Process Non-Strong References
+GC(0) ZWorker: using 5 out of 6 workers
+GC(0) Concurrent Process Non-Strong References 0.753ms
+GC(0) Concurrent Reset Relocation Set 0.004ms
+GC(0) Concurrent Destroy Detached Pages 0.003ms
+GC(0) Concurrent Select Relocation Set 1.284ms
+GC(0) Concurrent Prepare Relocation Set 0.089ms
+   -- Concurrent Prepare for Relocation ended with 5 concurrent thread
+
+GC(0) Pause Relocate Start
+GC(0) ZWorker: using 6 out of 6 workers
+GC(0) Pause Relocate Start 2.663ms
+   -- Pause Relocate phase ended with 6 threads as expected
+
+GC(0) Concurrent Relocate
+GC(0) ZWorker: using 5 out of 6 workers
+GC(0) Concurrent Relocate 1.803ms
+   -- Concurrent Relocate ended with 5 concurrent thread
+
+GC(0) Heap after GC invocations=1 (full 1): ZHeap
+       used 46M, capacity 94M, max capacity 160M
+GC(0) Garbage Collection (Warmup) 36M(22%)->46M(29%)
+  -- GC summary
+  -- GC #0 (Warmup GC) ended
+...
+```
+
+As you can see, "-XX:ConcGCThreads=5" JVM option works as expected.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Object References and Garbage Collection
+
+This chapter provides tutorial notes and example codes on Object References and Garbage Collection. Topics include object reference types; strong reference test program; final reference test program; dead objects with final references in heap; performance impact of final references.
+
+> [Object Reference Types](#part0093.xhtml)
+> 
+> [Strong Reference GC Test Program](#part0094.xhtml)
+> 
+> [Strong Reference Test with Serial GC](#part0095.xhtml)
+> 
+> [Final Reference GC Test Program](#part0096.xhtml)
+> 
+> [Final Reference Test with Serial GC](#part0097.xhtml)
+> 
+> [Performance Impact of Final References](#part0098.xhtml)
+
+Takeaways:
+
+*   Java uses 6 types of references: strong reference, soft reference, weak reference, final reference, phantom reference, JNI weak reference.
+*   Strong references are normal references used Java to retrieve object values.
+*   Final references are used by the finalizer thread to execute finalize() object methods.
+*   When all strong references are removed from an object, it becomes a dead object.
+*   If a dead object has a finalize() method, it is queued with a final reference for the finalizer thread to process.
+*   Garbage collectors will leave dead objects with final references in the heap until they are processed by the finalizer thread.
+*   Simple tests show final references slowing down application execution by 2 times!
+*   Do not use finalize() methods in your Java application, if possible.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Object References and Garbage Collection](#part0092.xhtml)
+
+∟Object Reference Types
+
+This section describes 6 types of object references that can be used in Java applications.
+
+In Java application, we may have 6 types of references to data objects:
+
+*   Strong Reference - A strong reference is reference to the object hold by a normal object used in the application. The garbage collector will not remove any objects that still have strong references.
+*   Soft Reference - A soft reference is a reference to the object hold by a SoftReference wrapper object. The garbage collector can remove objects that only have soft references.
+*   Weak Reference - A weak reference is a reference to the object hold by a SoftReference wrapper object. The garbage collector can remove objects that only have weak references.
+*   Final Reference - A final reference is a reference to the object hold by the finalizer thread. This reference is needed to execute the finalize() method on the object when the garbage collector has determined the object is dead.
+*   Phantom Reference - A phantom reference is a reference to the object hold by a PhantomReference wrapper object. The garbage collector will not automatically remove objects that only have phantom references.
+*   JNI Week Reference - A JNI weak reference is a weak reference to the object hold by objects managed by the JNI (Java Native Interface) package.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Object References and Garbage Collection](#part0092.xhtml)
+
+∟Strong Reference GC Test Program
+
+This section describes a GC test program, GCStrongRef.java, to demonstrate the impact on garbage collector of final references.
+
+In this tutorial, let's write a simple GC test program that uses strong references only:
+
+```
+ /* GCStrongRef.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+import java.util.*;
+class GCStrongRef {
+   static MyList objList = null;
+   static int objSize = 1024; // in KB, default = 1 MB
+   static int baseSize = 32;  // # of objects in the base
+   static int chunkSize = 32; // # of objects in chunk
+   static int wait = 1000;    // in milliseconds: 1 second
+   public static void main(String[] arg) {
+      if (arg.length>0) objSize = Integer.parseInt(arg[0]);
+      if (arg.length>1) baseSize = Integer.parseInt(arg[1]);
+      if (arg.length>2) chunkSize = Integer.parseInt(arg[2]);
+      if (arg.length>3) wait = Integer.parseInt(arg[3]);
+      System.out.println("Parameters: "+"Size="+objSize+"KB"
+         +", Base="+baseSize +", Chunk="+chunkSize
+         +", Wait="+wait+"ms");
+      objList = new MyList();
+      myTest();
+   }
+   public static void myTest() {
+      for (int m=0; m<baseSize; m++) {
+         objList.add(new MyObject());
+      }
+
+      Runtime rt = Runtime.getRuntime();
+      System.out.println(
+         "Real  Exec  Proc.  Total  Free  Used  Free");
+      System.out.println(
+         "Time  Time   Obj.   Mem.  Mem.  Mem.    %.");
+      long dt0 = System.currentTimeMillis();
+      long count = 0;
+      while (true) {
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+         count++;
+
+         mySleep(wait);
+         long tm = rt.totalMemory()/1024;
+         long fm = rt.freeMemory()/1024;
+         long ratio = (100*fm)/tm;
+         long dt = System.currentTimeMillis() - dt0;
+         long de = dt - (count*wait);
+         System.out.println((dt/1000)+"  "+(de/1000)
+            +"  "+count*chunkSize
+            +"  "+tm+"  "+fm+"  "+(tm-fm)+"  "+ratio+"%");
+      }
+   }
+```
+
+```
+ static void mySleep(int t) {
+      try {
+         Thread.sleep(t);
+      } catch (InterruptedException e) {
+         System.out.println("Interreupted...");
+      }
+   }
+   static class MyObject {
+      private long[] obj = null;
+      public MyObject next = null;
+      public MyObject prev = null;
+      public MyObject() {
+         obj = new long[objSize*128]; //128*8=1024 bytes
+      }
+   }
+   static class MyList {
+      MyObject head = null;
+      MyObject tail = null;
+      void add(MyObject o) {
+         if (head==null) {
+            head = o;
+            tail = o;
+         } else {
+            o.prev = head;
+            head.next = o;
+            head = o;
+         }
+      }
+      void removeTail() {
+         if (tail!=null) {
+            if (tail.next==null) {
+               tail = null;
+               head = null;
+            } else {
+               tail = tail.next;
+               tail.prev = null;
+            }
+         }
+      }
+   }
+}
+```
+
+Some notes on the test program:
+
+*   An inner class MyObject is used to represent a generic object. The size of the object can be controlled by the "objSize" parameter.
+*   Another inner class MyList is used to as a manager to register and release objects. It uses a linked list data structure to do the job.
+*   All objects are linked with strong references.
+*   The main test method, myTest(), is divided two sections: the initialization section where a number of objects are added to the linked list; and the endless loop section where objects are added to the linked list, then removed from the list.
+*   When myTest() is called, it will initialize "baseSize" number of objects in the linked list.
+*   myTest() will then run an endless loop. In each iteration of the loop, "chunkSize" number of new objects will be added to the linked list, and "chunkSize" number of old objects will be removed.
+*   You can slowdown the loop by adding "wait" number of milliseconds in each iteration.
+*   Memory usages are printed out in units of kilobytes (KB).
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Object References and Garbage Collection](#part0092.xhtml)
+
+∟Strong Reference Test with Serial GC
+
+This section provides a tutorial showing how objects with strong reference were removed from Heap, when references are removed.
+
+Now let's run our strong reference test program with the Serial collector. If objectSize=1024, baseSize=32 and chunkSize=32 are specified to the program, it will leave 32 MB to 64 MB objects with strong references in the heap.
+
+The test below uses 100 MB for "from" space. So it should be enough to hold all objects with strong references. Tenured generation should never be used.
+
+```
+ herong> java -XX:+UseSerialGC -Xms600m -Xmx600m \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   -Xlog:gc*=trace GCStrongRef 1024 32 32 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms
+Real  Exec  Proc.  Total  Free  Used  Free
+Time  Time   Obj.   Mem.  Mem.  Mem.    %.
+0  0  32  512000  442366  69634  86%
+
+GC(0) Heap before GC invocations=0 (full 0): def new generation
+GC(0)   eden space 102400K,  99% used [...
+GC(0)   from space 102400K,   0% used [...
+GC(0)   to   space 102400K,   0% used [...
+GC(0)  tenured generation   total 307200K, used 0K [...
+GC(0)    the space 307200K,   0% used [...
+
+GC(0) Pause Young (Allocation Failure)
+GC(0) Age table with threshold 1 (max threshold 15)
+GC(0) - age   1:   66868848 bytes,   66868848 total
+   -- These objects promoted from "eden" space with strong references
+
+GC(0) DefNew (Allocation Failure) 34.059ms
+GC(0) DefNew: 101377K->65301K(204800K)
+GC(0) Tenured: 0K->0K(307200K)
+
+GC(0) Pause Young (Allocation Failure) 99M->63M(500M) 34.498ms
+GC(0) User=0.02s Sys=0.02s Real=0.03s
+
+GC(0) Heap after GC invocations=1 (full 0): def new generation
+GC(0)   eden space 102400K,   0% used [...
+GC(0)   from space 102400K,  63% used [...
+GC(0)   to   space 102400K,   0% used [...
+GC(0)  tenured generation   total 307200K, used 0K [...
+GC(0)    the space 307200K,   0% used [...
+
+...
+```
+
+Conclusion:
+
+*   Strong reference keeps the object live in heap.
+*   If an object in "from" space has only one strong reference and that reference is removed by the application. It will be removed by the Serial collector in next Minor GC.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Object References and Garbage Collection](#part0092.xhtml)
+
+∟Final Reference GC Test Program
+
+This section describes a GC test program, GCFinalRef.java, to demonstrate the impact on garbage collector of final references.
+
+Now, let's write another GC test program that uses final references:
+
+```
+ /* GCFinalRef.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+import java.util.*;
+class GCFinalRef {
+   static MyList objList = null;
+   static int objSize = 1024; // in KB, default = 1 MB
+   static int baseSize = 32;  // # of objects in the base
+   static int chunkSize = 32; // # of objects in chunk
+   static int wait = 1000;    // in milliseconds: 1 second
+   public static void main(String[] arg) {
+      if (arg.length>0) objSize = Integer.parseInt(arg[0]);
+      if (arg.length>1) baseSize = Integer.parseInt(arg[1]);
+      if (arg.length>2) chunkSize = Integer.parseInt(arg[2]);
+      if (arg.length>3) wait = Integer.parseInt(arg[3]);
+      System.out.println("Parameters: "+"Size="+objSize+"KB"
+         +", Base="+baseSize +", Chunk="+chunkSize
+         +", Wait="+wait+"ms");
+      objList = new MyList();
+      myTest();
+   }
+   public static void myTest() {
+      for (int m=0; m<baseSize; m++) {
+         objList.add(new MyObject());
+      }
+
+      Runtime rt = Runtime.getRuntime();
+      System.out.println(
+         "Real  Exec  Proc.  Total  Free  Used  Free");
+      System.out.println(
+         "Time  Time   Obj.   Mem.  Mem.  Mem.    %.");
+      long dt0 = System.currentTimeMillis();
+      long count = 0;
+      while (true) {
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+         count++;
+
+         mySleep(wait);
+         long tm = rt.totalMemory()/1024;
+         long fm = rt.freeMemory()/1024;
+         long ratio = (100*fm)/tm;
+         long dt = System.currentTimeMillis() - dt0;
+         long de = dt - (count*wait);
+         System.out.println((dt/1000)+"  "+(de/1000)
+            +"  "+count*chunkSize
+            +"  "+tm+"  "+fm+"  "+(tm-fm)+"  "+ratio+"%");
+      }
+   }
+   static void mySleep(int t) {
+      try {
+         Thread.sleep(t);
+      } catch (InterruptedException e) {
+         System.out.println("Interreupted...");
+      }
+   }
+   static class MyObject {
+      public static long count = 0;
+      private long[] obj = null;
+      public MyObject next = null;
+      public MyObject prev = null;
+      public MyObject() {
+         count++;
+         obj = new long[objSize*128]; //128*8=1024 bytes
+      }
+      protected final void finalize() {
+         count--;
+      }
+   }
+   static class MyList {
+      MyObject head = null;
+      MyObject tail = null;
+      void add(MyObject o) {
+         if (head==null) {
+            head = o;
+            tail = o;
+         } else {
+            o.prev = head;
+            head.next = o;
+            head = o;
+         }
+      }
+      void removeTail() {
+         if (tail!=null) {
+            if (tail.next==null) {
+               tail = null;
+               head = null;
+            } else {
+               tail = tail.next;
+               tail.prev = null;
+            }
+         }
+      }
+   }
+}
+```
+
+This program is identical to GCStrongRef.java, except that:
+
+*   The finalize() method is added in MyObject class to update a static variable "count".
+*   When a MyObject object is ready to be removed from the Heap, it will queued for the finalizer thread with final reference added to the object.
+
+By the way, starting from JDK 9, java.lang.Object.finalize() is been deprecated. So this test program may become invalid in JDK releases.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Object References and Garbage Collection](#part0092.xhtml)
+
+∟Final Reference Test with Serial GC
+
+This section provides a tutorial showing how objects with final reference were queue for the finalizer thread to execute their finalize() methods. If the finalizer is too slow objects with final references fills up the heap.
+
+Now let's run our final reference test program with the Serial collector. If objectSize=1024, baseSize=32 and chunkSize=32 are specified to the program, it will leave 32 MB to 64 MB objects with strong references in the heap.
+
+The test below uses 100 MB for "from" space. So it should be enough to hold all objects with strong references. Tenured generation should never be used.
+
+```
+ herong> java -XX:+UseSerialGC -Xms600m -Xmx600m \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1
+   -Xlog:gc*=trace GCFinalRef 1024 32 32 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms
+Real  Exec  Proc.  Total  Free  Used  Free
+Time  Time   Obj.   Mem.  Mem.  Mem.    %.
+
+0  0  32  512000  442366  69634  86%
+GC(0) Heap before GC invocations=0 (full 0): def new generation
+GC(0)   eden space 102400K,  99% used [...
+GC(0)   from space 102400K,   0% used [...
+GC(0)   to   space 102400K,   0% used [...
+GC(0)  tenured generation   total 307200K, used 0K [...
+GC(0)    the space 307200K,   0% used [...
+GC(0) Pause Young (Allocation Failure)
+
+GC(0) Reference Processing: 13.6ms
+GC(0)   Reconsider SoftReferences: 0.0ms
+GC(0)     SoftRef: skipped
+GC(0)   Notify Soft/WeakReferences: 0.0ms
+GC(0)     SoftRef: 0.0ms
+GC(0)     WeakRef: 0.0ms
+GC(0)     FinalRef: 0.0ms
+GC(0)     Total: 0.0ms
+GC(0)   Notify and keep alive finalizable: 13.5ms
+GC(0)     FinalRef: 13.5ms
+GC(0)   Notify PhantomReferences: 0.0ms
+GC(0)     PhantomRef: 0.0ms
+GC(0)   SoftReference:
+GC(0)     Discovered: 0
+GC(0)     Cleared: 0
+GC(0)   WeakReference:
+GC(0)     Discovered: 144
+GC(0)     Cleared: 88
+GC(0)   FinalReference:
+GC(0)     Discovered: 32
+   -- 32 * 1MB objects with final references
+
+GC(0)     Cleared: 0
+GC(0)   PhantomReference:
+GC(0)     Discovered: 2
+GC(0)     Cleared: 0
+
+GC(0) Age table with threshold 1 (max threshold 15)
+GC(0) - age   1:  100428648 bytes,  100428648 total
+   -- Minor GC not able to remove any dead objects!
+   -- 100MB objects in "from" space were two groups:
+      -- Maximum of 64MB were real live objects with strong references
+      -- Minimum of 32MB were dead objects with final references
+
+GC(0) DefNew (Allocation Failure) 44.537ms
+GC(0) Collect gen: DefNew 44.581ms
+GC(0) DefNew: 101377K->98074K(204800K)
+GC(0) Tenured: 0K->0K(307200K)
+GC(0) Metaspace: 627K->627K(1056768K)
+
+GC(0) Pause Young (Allocation Failure) 99M->95M(500M) 44.826ms
+GC(0) User=0.00s Sys=0.05s Real=0.05s
+GC(0) Heap after GC invocations=1 (full 0): def new generation ...
+GC(0)   eden space 102400K,   0% used [...
+GC(0)   from space 102400K,  95% used [...
+GC(0)   to   space 102400K,   0% used [...
+GC(0)  tenured generation   total 307200K, used 0K [...
+GC(0)    the space 307200K,   0% used [...
+   -- GC #0 (Young GC) ended
+```
+
+```
+ 0  0  64  512000  412901  99099  80%
+0  0  96  512000  379149  132851  74%
+0  0  128  512000  346381  165619  67%
+0  0  160  512000  313612  198388  61%
+GC(1) Heap before GC invocations=1 (full 0): def new generation ...
+GC(1)   eden space 102400K,  99% used [...
+GC(1)   from space 102400K,  95% used [...
+GC(1)   to   space 102400K,   0% used [...
+GC(1)  tenured generation   total 307200K, used 0K [...
+GC(1)    the space 307200K,   0% used [...
+GC(1) Pause Young (Allocation Failure)
+
+GC(1) Age table with threshold 1 (max threshold 15)
+GC(1) - age   1:  103816944 bytes,  103816944 total
+   -- Another 100MB objects moved from "eden" to "from"
+      -- Maximum of 64MB were real live objects with strong references
+      -- Minimum of 34MB were dead objects with final references
+
+   -- The older 100MB objects were moved out of "from" to Tenured
+      -- 65MB still had final references
+      -- 35MB processed by finalizer thread and deleted
+
+GC(1) DefNew (Allocation Failure) 75.060ms
+GC(1) Collect gen: DefNew 75.098ms
+GC(1) DefNew: 200435K->101383K(204800K)
+GC(1) Tenured: 0K->65304K(307200K)
+   -- "tenured" received 65MB objects with final references
+
+GC(1) Pause Young (Allocation Failure) 195M->162M(500M) 75.315ms
+GC(1) User=0.03s Sys=0.05s Real=0.08s
+GC(1) Heap after GC invocations=2 (full 0): def new generation ...
+GC(1)   eden space 102400K,   0% used [...
+GC(1)   from space 102400K,  99% used [...
+GC(1)   to   space 102400K,   0% used [...
+GC(1)  tenured generation   total 307200K, used 65304K [0x00000...
+GC(1)    the space 307200K,  21% used [...
+
+...
+```
+
+Conclusion:
+
+*   When objects with finalize() methods are released from the application, they are queued for the finalizer thread to execute finalize() methods.
+*   Objects in finalizer thread queue have final references attached. The Serial collector can not remove them until their finalize() methods are executed.
+*   The finalizer threads seems to be very slow, holding many objects with only final references in the heap.
+*   When Serial Major GC fails to release more heap memory, it initiates a Serial Full GC.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Object References and Garbage Collection](#part0092.xhtml)
+
+∟Performance Impact of Final References
+
+This section provides a tutorial showing the performance impact of final references by comparing executions of GCFinalRef.java with GCStrongRef.java. Final references slows down the execution by 2 times!
+
+In previous tutorials, we learned that objects with finalize() methods will leave dead objects with final references in the heap until they are processed by the finalizer thread.
+
+In this tutorial, let's compare executions of GCFinalRef.java with GCStrongRef.java to see the performance impact of final references.
+
+Execution of GCFinalRef.java which uses final references:
+
+```
+ herong> java -XX:+UseSerialGC -Xms600m -Xmx600m \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   GCFinalRef 1024 32 32 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms
+Real  Exec  Proc.  Total  Free  Used  Free
+Time  Time   Obj.   Mem.  Mem.  Mem.    %.
+0  0  32  512000  442366  69634  86%
+0  0  64  512000  412901  99099  80%
+0  0  96  512000  379150  132850  74%
+...
+10  10  24256  512000  215275  296725  42%
+10  10  24288  512000  182507  329493  35%
+11  11  24320  512000  248044  263956  48%
+...
+```
+
+With in 10 seconds, 24288 objects were processed by GCFinalRef.java.
+
+Execution of GCStrongRef.java which uses final references:
+
+```
+ herong> java -XX:+UseSerialGC -Xms600m -Xmx600m \
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 \
+   GCStrongRef 1024 32 32 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms
+Real  Exec  Proc.  Total  Free  Used  Free
+Time  Time   Obj.   Mem.  Mem.  Mem.    %.
+0  0  32  512000  442366  69634  86%
+0  0  64  512000  445674  66326  87%
+0  0  96  512000  411923  100077  80%
+...
+10  10  62080  512000  411900  100100  80%
+10  10  62112  512000  379131  132869  74%
+11  11  62144  512000  444668  67332  86%
+...
+```
+
+With in 10 seconds, 62112 objects were processed by GCStrongRef.java.
+
+Conclusion:
+
+*   GCStrongRef.java is almost 3 times faster than GCFinalRef.java!
+*   GCFinalRef.java needs extra time to run finalize() methods.
+*   GCFinalRef.java needs extra time to run more GCs, because it runs out of "from" space and "tenured" generation memory more frequently.
+*   Do not use finalize() methods in your Java application, if possible.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Garbage Collection Performance Test Program
+
+This chapter provides tutorial notes and example codes on garbage collection performance test programs. Topics include throughput performance calculation; latency performance calculation; operating system interruptions; P99 (99th Percentile) performance; running JVM with highest priority.
+
+> [GCPerformance.java - GC Performance Test Program](#part0100.xhtml)
+> 
+> [GCPerformance.java - Program Output](#part0101.xhtml)
+> 
+> [Performance Impact of Wait Time](#part0102.xhtml)
+> 
+> [Performance Impact of Object Size](#part0103.xhtml)
+> 
+> [Performance Impact of Chunk Size](#part0104.xhtml)
+> 
+> [Performance Jumps Not Related to GC](#part0105.xhtml)
+> 
+> [Performance Test and System Interruptions](#part0106.xhtml)
+> 
+> ["START /REALTIME" - Run JVM with Highest Priority](#part0107.xhtml)
+> 
+> [GCPerfP99.java - 99th Percentile Performance](#part0108.xhtml)
+> 
+> [GCPerfP99.java - Output Verification](#part0109.xhtml)
+> 
+> [GCPerfP99V2.java - Percentile Performance with Load](#part0110.xhtml)
+> 
+> [GCPerfP99V2.java - Work Load Level](#part0111.xhtml)
+> 
+> [GCPerfP99V2.java - Object Number and Size](#part0112.xhtml)
+
+Takeaways:
+
+*   Object allocation and release can be simulated with a simple simulation program GCPerformance.java for garbage collection testing.
+*   The throughput performance can be defined as the average number of tasks can be performed in a given period of time.
+*   The latency performance can be defined as the longest time it takes to perform a task.
+*   The task of the test program is defined as a single new object being created and added to the linked list, and a single old object being removed from the linked list.
+*   For some unknown reason, throughput performance jumps in some test runs. When using chunk size of 16 objects and 1024K per object, those jumps show 2 times of normal performance.
+*   Performance measurement is more accurate if we take the 99th percentile (P99) best samples to reduce the impact of operating system interruptions.
+*   On Windows systems, we can use "START /REALTIME" command to run JVM with the highest priority to minimize system interruptions.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟GCPerformance.java - GC Performance Test Program
+
+This section describes a GC performance test program - GCPerformance.java.
+
+In previous tutorials of the book, we learned how different garbage collectors work. Now in order to learn how to tune garbage collectors to improve application performance, I wrote the following test program:
+
+```
+ /* GCPerformance.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+class GCPerformance {
+   static MyList objList = null;
+   static int objSize = 1024; // in KB, default = 1 MB
+   static int baseSize = 32;  // # of objects in the base
+   static int chunkSize = 32; // # of objects in chunk
+   static int wait = 1000;    // in milliseconds: 1 second
+   static int warmup = 256;   // warmup loops: 256*32 = 8GB
+   public static void main(String[] arg) {
+      if (arg.length>0) objSize = Integer.parseInt(arg[0]);
+      if (arg.length>1) baseSize = Integer.parseInt(arg[1]);
+      if (arg.length>2) chunkSize = Integer.parseInt(arg[2]);
+      if (arg.length>3) wait = Integer.parseInt(arg[3]);
+      if (arg.length>4) warmup = Integer.parseInt(arg[4]);
+      System.out.println("Parameters: "+"Size="+objSize+"KB"
+         +", Base="+baseSize +", Chunk="+chunkSize
+         +", Wait="+wait+"ms" +", Warmup="+warmup);
+      objList = new MyList();
+      myTest();
+   }
+   public static void myTest() {
+      for (int m=0; m<baseSize; m++) {
+         objList.add(new MyObject());
+      }
+      for (int k=0; k<warmup; k++) {
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+      }
+
+      Runtime rt = Runtime.getRuntime();
+      System.out.println("Real:Exec  Lat.     Throughput      "
+         +"Total:Free  Proc.");
+      System.out.println("Time:Time  ms/o  Ave:Min:Max:Chunk  "
+         +" Mem.:Mem.   Obj.");
+      long dt0 = System.currentTimeMillis();
+      long dt1 = System.currentTimeMillis();
+      long minPerf = 999999;
+      long maxPerf = 0;
+      long count = 0;
+      while (true) {
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+         count++;
+
+         mySleep(wait);
+         long tm = rt.totalMemory()/1024;
+         long fm = rt.freeMemory()/1024;
+         long dt2 = System.currentTimeMillis();
+         long dt = dt2 - dt0;
+         long de = dt - (count*wait);
+         long perf = (1000*chunkSize)/(dt2-dt1-wait); // per second
+         if (perf<minPerf) minPerf = perf;
+         if (perf>maxPerf) maxPerf = perf;
+
+         System.out.println((dt)      // Real time in millis
+            +":"+(de)                 // Execution time in millis
+            +"  "+(1000000/minPerf)   // Latency (ms/1000 objects)
+            +"  "+((1000*count*chunkSize)/de) // Average throughput
+            +":"+minPerf              // Best throughput
+            +":"+maxPerf              // Worst throughput
+            +":"+perf                 // Chunk throughput
+            +"  "+tm+":"+fm           // Total and free memory in KB
+            +"  "+(count*chunkSize)); // Objects processed
+         dt1 = dt2;
+      }
+   }
+   static void mySleep(int t) {
+      try {
+         Thread.sleep(t);
+      } catch (InterruptedException e) {
+         System.out.println("Interreupted...");
+      }
+   }
+   static class MyObject {
+      private long[] obj = null;
+      public MyObject next = null;
+      public MyObject prev = null;
+      public MyObject() {
+         obj = new long[objSize*128]; // 128*8=1024 bytes
+         for (int i=0; i<objSize*128; i++) {
+            obj[i] = i/2+i/3+i/4+i/5; // some work load
+         }
+      }
+   }
+   static class MyList {
+      MyObject head = null;
+      MyObject tail = null;
+      void add(MyObject o) {
+         if (head==null) {
+            head = o;
+            tail = o;
+         } else {
+            o.prev = head;
+            head.next = o;
+            head = o;
+         }
+      }
+      void removeTail() {
+         if (tail!=null) {
+            if (tail.next==null) {
+               tail = null;
+               head = null;
+            } else {
+               tail = tail.next;
+               tail.prev = null;
+            }
+         }
+      }
+   }
+}
+```
+
+Some notes on the test program:
+
+*   An inner class MyObject is used to represent a generic object. The size of the object can be controlled by the "objSize" parameter.
+*   Another inner class MyList is used to as a manager to register and release objects. It uses a linked list data structure to do the job.
+*   The main test method, myTest(), is divided two sections: initialization/warmup and test run. section where a number of objects are added to the linked list; and the endless loop section where objects are added to the linked list, then removed from the list.
+*   The initialization/warmup section performs two tasks: initialization of the link list base controlled by the "baseSize" parameter; and warmup of the heap by processing some chunks of objects controlled by the "warmup" parameter.
+*   The test run section is an endless loop. In each iteration of the loop, "chunkSize" number of new objects will be added to the linked list, and "chunkSize" number of old objects will be removed.
+*   You can slowdown the loop by using the "wait" parameter to wait for some milliseconds in each iteration.
+
+The output of the test program focuses on two performance metrics:
+
+**Throughput** - Defined as "the number of objects processed per second". This is calculated as:
+
+*   After each chunk of objects is processed, we calculate the throughput of this chunk as the chunk size divided by the execution time of this chunk.
+*   The execution time is calculated as the elapsed time minus the wait time.
+*   Normalization is needed to express throughput as "objects per second"
+*   Then the best and worst throughputs are recorded when chunks are occurred processed.
+*   The overall throughput is calculated as the total number of processed divided by the total execution time.
+
+**Latency** - Defined as "the maximum time required to process a single object". This is calculated as:
+
+*   The chunk that has the worst throughput is used to calculate the latency, because less objects processed means more time needed to process each object.
+*   The overall latency is calculated by as the multiplicative inverse of the worst throughput.
+*   Normalization is needed to express latency as "milliseconds per 1000 objects"
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟GCPerformance.java - Program Output
+
+This section describes output data generated by the GC tuning test program - GCPerformance.java.
+
+Before we do any GC performance tests with the GCPerformance.java, let's run it with no wait time and no warmup to review its output:
+
+```
+ herong> javac GCPerformance.java
+
+herong> java GCPerformance 1024 32 64 0 0
+
+Parameters: Size=1024KB, Base=32, Chunk=64, Wait=0ms, Warmup=0
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+  88:88    1375  727:727:727:727   909312:711400   64
+           ----              -----               ----
+           |                 |                   |- 64 obj. processed
+           |                 |- Throughput: 727 objects per second
+           |- Latency: 1375 ms per 1000 objects
+
+ 143:143  1375  895:727:1163:1163  601088:403076  128
+ 163:163  1375  1177:727:3200:3200  505856:307832  192
+ 199:199  1375  1286:727:3200:1777  580608:382614  256
+          ----  ----
+          |     |- Ave. throughput: 1917 objects per second
+          |- Latency: 1375 ms per 1000 objects
+...
+```
+
+Note that you may get an "ArithmeticException: / by zero", if you use a low object size and chunk size. For example:
+
+```
+ herong> java GCPerformance 1024 32 32 0 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms, Warmup=0
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+47:47  1470  680:680:680:680  362496:230119  32
+78:78  1470  820:680:1032:1032  362496:230022  64
+93:93  1470  1032:680:2133:2133  362496:230009  96
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at GCPerformance.myTest(GCPerformance.java:61)
+        at GCPerformance.main(GCPerformance.java:21)
+```
+
+Descriptions on output columns:
+
+*   "Real Time" - The elapsed time in seconds since the start of the application.
+*   "Exec Time" - The actual execution time in seconds of the application, calculated as the elapsed time minus waiting time.
+*   "Lat. ms/o" - The latency in milliseconds per 1000 objects.
+*   "Throughput Ave" - The average throughput up to this iteration in objects per second.
+*   "Throughput Min" - The minimum throughput up to this iteration in objects per second.
+*   "Throughput Max" - The maximum throughput up to this iteration in objects per second.
+*   "Throughput Chunk" - The throughput of this iteration chunk in objects per second.
+*   "Total Mem." - The total heap memory size in KB, reported by the totalMemory() method.
+*   "Free Mem." - The free heap memory size available for application in KB, reported by the freeMemory() method.
+*   "Proc. Obj." - The total number objects processed in the test run.
+
+For this running session, the application performance is:
+
+```
+ Throughput: 399 objects per seconds
+Latency:    3906 milliseconds per 1000 objects
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟Performance Impact of Wait Time
+
+This section provides tests to find out performance impact of the wait time between each chunk operations. Increasing wait time seems to decrease throughput performance.
+
+The wait time introduced in the test loop can be used to slowdown the tests so we can have an easier time watching the test print output on the screen.
+
+But wait time may also have an impact on the GC performance. Let's find it with some tests.
+
+**Test 1** - Running GCPerformance.java without wait time with the Serial Collector. 64 iterations of warmup is specified to flush 64*64*1024K = 4GB objects through the heap.
+
+```
+ herong> java -Xms500m -Xmx500m GCPerformance 1024 64 64 0 64
+
+Parameters: Size=1024KB, Base=64, Chunk=64, Wait=0ms, Warmup=64
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+32:32  500  2000:2000:2000:2000  512000:248588  64
+78:78  718  1641:1391:2000:1391  512000:248514  128
+...
+297:297  718  2154:1391:4266:2064  512000:248503  640
+313:313  718  2249:1391:4266:4000  512000:248501  704
+344:344  718  2232:1391:4266:2064  512000:248503  768
+..
+```
+
+**Test 2** - Same as Test 1, but with 10ms wait time added:
+
+```
+ herong> java -Xms500m -Xmx500m GCPerformance 1024 64 64 10 64
+
+Parameters: Size=1024KB, Base=64, Chunk=64, Wait=10ms, Warmup=64
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+36:26  406  2461:2461:2461:2461  512000:248584  64
+81:61  547  2098:1828:2461:1828  512000:248508  128
+...
+474:344  547  2418:1828:2909:2461  512000:248496  832
+510:370  547  2421:1828:2909:2461  512000:248494  896
+550:400  547  2400:1828:2909:2133  512000:248496  960
+```
+
+**Test 3** - Same as Test 2, but with 100ms wait time added:
+
+```
+ herong> java -Xms500m -Xmx500m GCPerformance 1024 64 64 100 64
+
+Parameters: Size=1024KB, Base=64, Chunk=64, Wait=100ms, Warmup=64
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+121:21  328  3047:3047:3047:3047  512000:248584  64
+264:64  672  2000:1488:3047:1488  512000:248507  128
+...
+2152:452  672  2407:1488:4571:4266  512000:248494  1088
+2281:481  672  2395:1488:4571:2206  512000:248494  1152
+2400:500  672  2432:1488:4571:3368  512000:248494  1216
+```
+
+**Test 4** - Same as Test 3, but with 1000ms wait time added:
+
+```
+ herong> java -Xms500m -Xmx500m GCPerformance 1024 64 64 1000 64
+
+Parameters: Size=1024KB, Base=64, Chunk=64, Wait=1000ms, Warmup=64
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+1028:28  437  2285:2285:2285:2285  512000:248589  64
+2075:75  734  1706:1361:2285:1361  512000:248509  128
+...
+25656:656  734  2439:1361:4266:3368  512000:248497  1600
+26681:681  734  2443:1361:4266:2560  512000:248495  1664
+27713:713  734  2423:1361:4266:2000  512000:248493  1728
+```
+
+**Test result summary**
+
+```
+ Wait   Throughput   Latency
+----   ----------   -------
+1000         2423       734
+ 100         2432       672
+  10         2400       547
+   0         2232       718
+```
+
+Takeaways: When waiting time is added to the application, the throughput performance seems to be better, because GC can be performed during those waiting periods.
+
+However, the test results with JDK 8 on an older computer using Size=1024KB, Base=32, Chunk=32 and Warmup=64 parameters, showed that the throughput performance seems to be decreased when longer wait time is added to the application. I had no idea why.
+
+```
+ Wait   Throughput   Latency
+1000          290      4975
+ 100          291      5128
+  10          399      4329
+   0          400      3787
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟Performance Impact of Object Size
+
+This section provides tests to find out performance impact of the object size. Java manages larger objects more efficiently for the same total amount of data.
+
+Since JDK is using G1 garbage collector with a 1024K region size by default, the object size may have a significant impact on the performance. Let's run some tests to find out.
+
+**Test 1** - Running GCPerformance.java with object size of 384K which is less than half of the G1 heap region size. So normal eden and survivor regions will be used. Chunk size is set to 128 to ensure that each junk takes multiple milliseconds to run.
+
+```
+ herong> java -Xms1600m -Xmx1600m GCPerformance 384 64 128 0 64
+
+Parameters: Size=384KB, Base=64, Chunk=128, Wait=0ms, Warmup=64
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+8:8  62  16000:16000:16000:16000  1638400:1239167  128
+44:44  281  5818:3555:16000:3555  1638400:1172991  256
+55:55  281  6981:3555:16000:11636  1638400:1107455  384
+67:67  281  7641:3555:16000:10666  1638400:1041919  512
+79:79  281  8101:3555:16000:10666  1638400:976383  640
+91:91  281  8439:3555:16000:10666  1638400:910847  768
+115:115  281  7791:3555:16000:5333  1638400:1254527  896
+127:127  281  8062:3555:16000:10666  1638400:1188991  1024
+139:139  281  8287:3555:16000:10666  1638400:1123455  1152
+151:151  281  8476:3555:16000:10666  1638400:1057919  1280
+163:163  281  8638:3555:16000:10666  1638400:992383  1408
+175:175  281  8777:3555:16000:10666  1638400:926847  1536
+187:187  281  8898:3555:16000:10666  1638400:861311  1664
+199:199  281  9005:3555:16000:10666  1638400:795775  1792
+211:211  281  9099:3555:16000:10666  1638400:730239  1920
+223:223  281  9183:3555:16000:10666  1638400:664703  2048
+243:243  281  8954:3555:16000:6400  1638400:1239728  2176
+                              ----
+       Maybe GC performed here - |
+255:255  281  9035:3555:16000:10666  1638400:1174192  2304
+...
+9066:9066  281  10108:3555:16000:10666  1638400:846488  91648
+```
+
+**Test 2** - Increasing object size to 768K which slightly greater than than half of the G1 heap region size. So humongous regions will be used.
+
+```
+ herong> java -Xms1600m -Xmx1600m GCPerformance 768 64 128 0 64
+
+Parameters: Size=768KB, Base=64, Chunk=128, Wait=0ms, Warmup=64
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+24:24  187  5333:5333:5333:5333  1638400:916178  128
+68:68  343  3764:2909:5333:2909  1638400:1440403  256
+88:88  343  4363:2909:6400:6400  1638400:1309331  384
+112:112  343  4571:2909:6400:5333  1638400:1178259  512
+136:136  343  4705:2909:6400:5333  1638400:1047187  640
+156:156  343  4923:2909:6400:6400  1638400:916115  768
+184:184  343  4869:2909:6400:4571  1638400:1440389  896
+208:208  343  4923:2909:6400:5333  1638400:1309317  1024
+232:232  343  4965:2909:6400:5333  1638400:1178245  1152
+252:252  343  5079:2909:6400:6400  1638400:1047173  1280
+276:276  343  5101:2909:6400:5333  1638400:916101  1408
+304:304  343  5052:2909:6400:4571  1638400:1440389  1536
+328:328  343  5073:2909:6400:5333  1638400:1309317  1664
+352:352  343  5090:2909:6400:5333  1638400:1178245  1792
+...
+23321:23321  343  5340:2909:6736:5333  1638400:1309345  124544
+```
+
+**Test 3** - Increasing object size to 1536K which slightly greater than than half of the G1 heap region size. So multiple humongous regions per object will be used.
+
+```
+ herong> java -Xms1600m -Xmx1600m GCPerformance 1536 64 128 0 64
+
+Parameters: Size=1536KB, Base=64, Chunk=128, Wait=0ms, Warmup=64
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+48:48  375  2666:2666:2666:2666  1638400:1243920  128
+120:120  562  2133:1777:2666:1777  1638400:980750  256
+172:172  562  2232:1777:2666:2461  1638400:1243843  384
+216:216  562  2370:1777:2909:2909  1638400:981699  512
+264:264  562  2424:1777:2909:2666  1638400:1243845  640
+312:312  562  2461:1777:2909:2666  1638400:981701  768
+360:360  562  2488:1777:2909:2666  1638400:1243841  896
+408:408  562  2509:1777:2909:2666  1638400:981697  1024
+456:456  562  2526:1777:2909:2666  1638400:1243845  1152
+504:504  562  2539:1777:2909:2666  1638400:981701  1280
+552:552  562  2550:1777:2909:2666  1638400:1243843  1408
+599:599  562  2564:1777:2909:2723  1638400:981699  1536
+647:647  562  2571:1777:2909:2666  1638400:1243845  1664
+...
+15334:15334  562  2671:1777:2976:2666  1638400:981666  40960
+```
+
+**Test result summary**
+
+```
+ Normalized to 384K
+Object Size   Latency   Throughput   Latency   Throughput
+-----------   -------   ----------   -------   ----------
+      1536K       562         2671       141        10684
+       768K       343         5340       172        10680
+       384K       281         9035       281         9035
+```
+
+Takeaways: Java manages larger objects more efficiently for the same total amount of data.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟Performance Impact of Chunk Size
+
+This section provides tests to find out performance impact of the chunk size (number of objects created and released in a single test run). The throughput performance seems to be not impacted by the chunk size, if some throughput jumps are ignored.
+
+While running tests with GCPerformance.java, I also noticed an interesting behavior when using a lower test chunk size.
+
+**Test 1** - Running GCPerformance.java with chunk size of 16 objects. For some test junks, the throughput jumped from 4000 to 5333 objects:
+
+```
+ herong> java -Xms1600m -Xmx1600m GCPerformance 1024 32 16 0 32
+
+Parameters: Size=1024KB, Base=32, Chunk=16, Wait=0ms, Warmup=32
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+4:4  250  4000:4000:4000:4000  1638400:1145616  16
+24:24  1250  1333:800:4000:800  1638400:1111822  32
+28:28  1250  1714:800:4000:4000  1638400:1079054  48
+33:33  1250  1939:800:4000:3200  1638400:1046286  64
+37:37  1250  2162:800:4000:4000  1638400:1013518  80
+42:42  1250  2285:800:4000:3200  1638400:980750  96
+46:46  1250  2434:800:4000:4000  1638400:947982  112
+50:50  1250  2560:800:4000:4000  1638400:915214  128
+59:59  1250  2440:800:4000:1777  1638400:1538717  144
+64:64  1250  2500:800:4000:3200  1638400:1505949  160
+69:69  1250  2550:800:4000:3200  1638400:1473181  176
+73:73  1250  2630:800:4000:4000  1638400:1440413  192
+76:76  1250  2736:800:5333:5333  1638400:1407645  208
+79:79  1250  2835:800:5333:5333  1638400:1374877  224
+...
+127:127  1250  3275:800:5333:4000  1638400:981156  416
+131:131  1250  3297:800:5333:4000  1638400:948388  432
+134:134  1250  3343:800:5333:5333  1638400:915620  448
+                             ----
+       Throughput jumped here - |
+...
+```
+
+**Test 2** - Running GCPerformance.java with chunk size of 24 objects. For some test runs, the throughput jumped from 4000 to 4800 objects:
+
+```
+ herong> java -Xms1600m -Xmx1600m GCPerformance 1024 32 24 0 32
+
+Parameters: Size=1024KB, Base=32, Chunk=24, Wait=0ms, Warmup=32
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+7:7  291  3428:3428:3428:3428  1638400:1227479  24
+30:30  958  1600:1043:3428:1043  1638400:1177301  48
+38:38  958  1894:1043:3428:3000  1638400:1128149  72
+45:45  958  2133:1043:3428:3428  1638400:1078997  96
+52:52  958  2307:1043:3428:3428  1638400:1029845  120
+57:57  958  2526:1043:4800:4800  1638400:980693  144
+63:63  958  2666:1043:4800:4000  1638400:931541  168
+...
+104:104  958  3000:1043:4800:4000  1638400:1276579  312
+110:110  958  3054:1043:4800:4000  1638400:1227427  336
+115:115  958  3130:1043:4800:4800  1638400:1178275  360
+...
+180:180  958  3333:1043:4800:4000  1638400:1325201  600
+186:186  958  3354:1043:4800:4000  1638400:1276049  624
+191:191  958  3392:1043:4800:4800  1638400:1226897  648
+                             ----
+       Throughput jumped here - |
+...
+```
+
+**Test 3** - Running GCPerformance.java with chunk size of 32 objects. For some test runs, the throughput jumped from 516 to 695 objects:
+
+```
+ herong> java -Xms1600m -Xmx1600m GCPerformance 1024 32 32 0 32
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms, Warmup=32
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+8:8  250  4000:4000:4000:4000  1638400:1374975  32
+31:31  718  2064:1391:4000:1391  1638400:1308413  64
+39:39  718  2461:1391:4000:4000  1638400:1242877  96
+47:47  718  2723:1391:4000:4000  1638400:1177341  128
+55:55  718  2909:1391:4000:4000  1638400:1111805  160
+63:63  718  3047:1391:4000:4000  1638400:1046269  192
+71:71  718  3154:1391:4000:4000  1638400:980733  224
+79:79  718  3240:1391:4000:4000  1638400:915197  256
+...
+107:107  718  3289:1391:4571:4000  1638400:1374889  352
+114:114  718  3368:1391:4571:4571  1638400:1309353  384
+...
+138:138  718  3478:1391:4571:4000  1638400:1112745  480
+146:146  718  3506:1391:4571:4000  1638400:1047209  512
+153:153  718  3555:1391:4571:4571  1638400:981673  544
+                             ----
+       Throughput jumped here - |
+...
+```
+
+**Test result summary**
+
+```
+ Chunk Size   Ave Throughput   Max Throughput
+----------   --------------   --------------
+    32 obj             3555             4571
+    24 obj             3392             4800
+    16 obj             3343             5333
+```
+
+If we ignore these jumps, the throughput performance seems to be not impacted much by the chunk size.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟Performance Jumps Not Related to GC
+
+This section provides a tutorial showing that Performance jumps are not related garbage collections.
+
+In the last tutorial, we learned that our test program GCPerformance.java has some strange performance jumps running on Windows systems. Those jumps reach as high as 2 times than normal performance with chunk size of 16 objects.
+
+In this tutorial, let's run the test again with GC logging to see those jumps are resulted from garbage collections or not:
+
+```
+ [0.029s][info][gc] Using G1
+[0.046s][info][gc] Periodic GC disabled
+[0.319s][info][gc] GC(0) Pause Young (Concurrent Start)
+                        (G1 Humongous Allocation) 722M->80M(1600M) 5.998ms
+[0.319s][info][gc] GC(1) Concurrent Cycle
+[0.322s][info][gc] GC(1) Pause Remark 97M->97M(1600M) 1.007ms
+[0.323s][info][gc] GC(1) Pause Cleanup 97M->97M(1600M) 0.141ms
+[0.329s][info][gc] GC(1) Concurrent Cycle 10.294ms
+
+Parameters: Size=1024KB, Base=32, Chunk=16, Wait=0ms, Warmup=32
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+4:4  250  4000:4000:4000:4000  1638400:1145618  16
+25:25  1314  1280:761:4000:761  1638400:1111824  32
+30:30  1314  1600:761:4000:3200  1638400:1079056  48
+35:35  1314  1828:761:4000:3200  1638400:1046288  64
+40:40  1314  2000:761:4000:3200  1638400:1013520  80
+44:44  1314  2181:761:4000:4000  1638400:980752  96
+49:49  1314  2285:761:4000:3200  1638400:947984  112
+54:54  1314  2370:761:4000:3200  1638400:915216  128
+
+[0.425s][info][gc] GC(2) Pause Young (Concurrent Start)
+                        (G1 Humongous Allocation) 722M->80M(1600M) 2.773ms
+[0.425s][info][gc] GC(3) Concurrent Cycle
+[0.428s][info][gc] GC(3) Pause Remark 91M->91M(1600M) 1.154ms
+[0.429s][info][gc] GC(3) Pause Cleanup 93M->93M(1600M) 0.125ms
+64:64  1314  2250:761:4000:1600  1638400:1538731  144
+68:68  1314  2352:761:4000:4000  1638400:1505963  160
+[0.435s][info][gc] GC(3) Concurrent Cycle 9.975ms
+
+72:72  1314  2444:761:4000:4000  1638400:1473195  176
+77:77  1314  2493:761:4000:3200  1638400:1440427  192
+81:81  1314  2567:761:4000:4000  1638400:1407659  208
+85:85  1314  2635:761:4000:4000  1638400:1374891  224
+88:88  1314  2727:761:5333:5333  1638400:1342123  240
+92:92  1314  2782:761:5333:4000  1638400:1309355  256
+96:96  1314  2833:761:5333:4000  1638400:1276587  272
+100:100  1314  2880:761:5333:4000  1638400:1243819  288
+104:104  1314  2923:761:5333:4000  1638400:1211051  304
+109:109  1314  2935:761:5333:3200  1638400:1178283  320
+113:113  1314  2973:761:5333:4000  1638400:1145515  336
+117:117  1314  3008:761:5333:4000  1638400:1112747  352
+121:121  1314  3041:761:5333:4000  1638400:1079979  368
+125:125  1314  3072:761:5333:4000  1638400:1047211  384
+129:129  1314  3100:761:5333:4000  1638400:1013937  400
+133:133  1314  3127:761:5333:4000  1638400:981169  416
+137:137  1314  3153:761:5333:4000  1638400:948401  432
+141:141  1314  3177:761:5333:4000  1638400:915633  448
+
+[0.512s][info][gc] GC(4) Pause Young (Concurrent Start)
+                        (G1 Humongous Allocation) 721M->80M(1600M) 2.590ms
+[0.512s][info][gc] GC(5) Concurrent Cycle
+[0.515s][info][gc] GC(5) Pause Remark 91M->91M(1600M) 1.072ms
+[0.515s][info][gc] GC(5) Pause Cleanup 93M->93M(1600M) 0.137ms
+150:150  1314  3093:761:5333:1777  1638400:1538714  464
+[0.518s][info][gc] GC(5) Concurrent Cycle 5.758ms
+
+155:155  1314  3096:761:5333:3200  1638400:1505946  480
+159:159  1314  3119:761:5333:4000  1638400:1473178  496
+163:163  1314  3141:761:5333:4000  1638400:1440410  512
+167:167  1314  3161:761:5333:4000  1638400:1407642  528
+171:171  1314  3181:761:5333:4000  1638400:1374874  544
+175:175  1314  3200:761:5333:4000  1638400:1342106  560
+178:178  1314  3235:761:5333:5333  1638400:1309338  576
+182:182  1314  3252:761:5333:4000  1638400:1276570  592
+186:186  1314  3268:761:5333:4000  1638400:1243802  608
+189:189  1314  3301:761:5333:5333  1638400:1211034  624
+                             ----
+       Throughput jumped here - |
+   And no GC process was running
+
+194:194  1314  3298:761:5333:3200  1638400:1178266  640
+198:198  1314  3313:761:5333:4000  1638400:1145498  656
+203:203  1314  3310:761:5333:3200  1638400:1112730  672
+208:208  1314  3307:761:5333:3200  1638400:1079962  688
+211:211  1314  3336:761:5333:5333  1638400:1047194  704
+216:216  1314  3333:761:5333:3200  1638400:1014426  720
+219:219  1314  3360:761:5333:5333  1638400:981658  736
+224:224  1314  3357:761:5333:3200  1638400:948890  752
+228:228  1314  3368:761:5333:4000  1638400:916122  768
+[0.599s][info][gc] GC(6) Pause Young (Concurrent Start)
+                        (G1 Humongous Allocation) 721M->80M(1600M) 2.696ms
+[0.599s][info][gc] GC(7) Concurrent Cycle
+[0.601s][info][gc] GC(7) Pause Remark 91M->91M(1600M) 0.888ms
+[0.602s][info][gc] GC(7) Pause Cleanup 93M->93M(1600M) 0.135ms
+237:237  1314  3308:761:5333:1777  1638400:1538702  784
+[0.605s][info][gc] GC(7) Concurrent Cycle 5.848ms
+```
+
+As you can see from the output, the performance jumps happened between two GC processes. There was no interference from the garbage collector. So those performance jumps are not related to garbage collections.
+
+I saw the same behavior with JDK 8 on an older computer too:
+
+```
+ herong> \Progra~1\java\jdk1.8.0\bin\java -Xms1600m -Xmx1600m
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -XX:+PrintReferenceGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime
+   GCPerformance 1024 32 16 0 64
+
+Parameters: Size=1024KB, Base=32, Chunk=16, Wait=0ms, Warmup=64
+...
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+31:31  1937  516:516:516:516  1126400:797556  16
+62:62  1937  516:516:516:516  1126400:781171  32
+93:93  1937  516:516:516:516  1126400:764787  48
+124:124  1937  516:516:516:516  1126400:748403  64
+156:156  2000  512:500:516:500  1126400:732019  80
+187:187  2000  513:500:516:516  1126400:715634  96
+218:218  2000  513:500:516:516  1126400:699250  112
+249:249  2000  514:500:516:516  1126400:682866  128
+Application time: 0.7555145 seconds
+{Heap before GC invocations=2 (full 0):
+ def new generation   total 819200K, used 447629K [...
+  eden space 409600K,  99% used [...
+  from space 409600K,   9% used [...
+  to   space 409600K,   0% used [...
+ tenured generation   total 307200K, used 0K [...
+   the space 307200K,   0% used [...
+ Metaspace used 1561K, capacity 2246K, committed 2368K, reserved 4480K
+[GC (Allocation Failure) [DefNew
+Desired survivor size 209715200 bytes, new threshold 15 (max 15)
+- age   1:   37751136 bytes,   37751136 total
+- age   3:     250144 bytes,   38001280 total
+: 447629K->37110K(819200K), 0.0117398 secs]
+   447629K->37110K(1126400K), 0.0117658 secs]
+Heap after GC invocations=3 (full 0):
+ def new generation   total 819200K, used 37110K [...
+  eden space 409600K,   0% used [...
+  from space 409600K,   9% used [...
+  to   space 409600K,   0% used [...
+ tenured generation   total 307200K, used 0K [...
+   the space 307200K,   0% used [...
+ Metaspace used 1561K, capacity 2246K, committed 2368K, reserved 4480K
+}
+Total time for which application threads were stopped: 0.0121600 seconds, ...
+280:280  2000  514:500:516:516  1126400:1076055  144
+312:312  2000  512:500:516:500  1126400:1059671  160
+343:343  2000  513:500:516:516  1126400:1043286  176
+374:374  2000  513:500:516:516  1126400:1026902  192
+405:405  2000  513:500:516:516  1126400:1010518  208
+436:436  2000  513:500:516:516  1126400:994134  224
+468:468  2000  512:500:516:500  1126400:977749  240
+499:499  2000  513:500:516:516  1126400:961365  256
+530:530  2000  513:500:516:516  1126400:944981  272
+561:561  2000  513:500:516:516  1126400:928597  288
+592:592  2000  513:500:516:516  1126400:912212  304
+624:624  2000  512:500:516:500  1126400:895828  320
+655:655  2000  512:500:516:516  1126400:879444  336
+686:686  2000  513:500:516:516  1126400:863060  352
+717:717  2000  513:500:516:516  1126400:846675  368
+748:748  2000  513:500:516:516  1126400:830291  384
+780:780  2000  512:500:516:500  1126400:813907  400
+811:811  2000  512:500:516:516  1126400:797523  416
+826:826  2000  523:500:1066:1066  1126400:781138  432
+                            ----
+   Throughput jumped on here - |
+
+858:858  2000  522:500:1066:500  1126400:764754  448
+889:889  2000  521:500:1066:516  1126400:748370  464
+920:920  2000  521:500:1066:516  1126400:731986  480
+951:951  2000  521:500:1066:516  1126400:715601  496
+982:982  2000  521:500:1066:516  1126400:699217  512
+1014:1014  2000  520:500:1066:500  1126400:682833  528
+Application time: 0.7576008 seconds
+{Heap before GC invocations=3 (full 0):
+ def new generation   total 819200K, used 446638K [...
+  eden space 409600K,  99% used [...
+  from space 409600K,   9% used [...
+  to   space 409600K,   0% used [...
+ tenured generation   total 307200K, used 0K [...
+   the space 307200K,   0% used [...
+ Metaspace used 1561K, capacity 2246K, committed 2368K, reserved 4480K
+[GC (Allocation Failure) [DefNew
+Desired survivor size 209715200 bytes, new threshold 15 (max 15)
+- age   1:   36701584 bytes,   36701584 total
+- age   2:        936 bytes,   36702520 total
+- age   4:     250144 bytes,   36952664 total
+: 446638K->36086K(819200K), 0.0101967 secs]
+   446638K->36086K(1126400K), 0.0102218 secs]
+Heap after GC invocations=4 (full 0):
+ def new generation   total 819200K, used 36086K [...
+  eden space 409600K,   0% used [...
+  from space 409600K,   8% used [...
+  to   space 409600K,   0% used [...
+ tenured generation   total 307200K, used 0K [...
+   the space 307200K,   0% used [...
+ Metaspace used 1561K, capacity 2246K, committed 2368K, reserved 4480K
+}
+Total time for which application threads were stopped: 0.0106689 s
+...
+```
+
+As you can see from the output, the first performance jump happened between two Minor GCs. During that period, the applications ran for 0.7576008 seconds, without any interference from the garbage collector.
+
+So those performance jumps are not related to garbage collections.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟Performance Test and System Interruptions
+
+This section provides a tutorial showing performance measurement impact of operating system interruptions on JVM.
+
+After several runs of the GCPerformance.java program, I noticed that the throughput and latency measurements are not accurate because of system interruptions.
+
+Since Windows is a multi-tasking system, it will interrupt the JVM to perform other tasks.
+
+Those system interruptions will stop the JVM for some periods of time.
+
+If system interruptions have very long durations, we can find it very easily by examining the output.
+
+For example, if you start the JVM to run the application, wait for few seconds, then start Chrome on your computer while the JVM is running. You may get the following output running with JDK 8 on an older computer.
+
+```
+ herong> \Progra~1\java\jdk1.8.0\bin\java GCPerformance 1024 32 32 0 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms, Warmup=0
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+78:78  2439  410:410:410:410  136776:70251  32
+172:172  2941  372:340:410:340  136776:37496  64
+281:281  3412  341:293:410:293  156572:90789  96
+344:344  3412  372:293:507:507  156572:57183  128
+422:422  3412  379:293:507:410  156572:24409  160
+...
+4774:4774  3412  395:293:680:410  156572:24403  1888
+4914:4914  4385  390:228:680:228  156572:89941  1920
+5024:5024  4385  388:228:680:290  156572:57171  1952
+5323:5323  9345  372:107:680:107  156572:89940  1984
+                             ---
+          System interruption -|
+5464:5464  9345  368:107:680:226  156572:57172  2016
+5586:5586  9345  366:107:680:262  156572:24403  2048
+5756:5756  9345  361:107:680:188  156572:89941  2080
+5878:5878  9345  359:107:680:262  156572:57171  2112
+5990:5990  9345  357:107:680:285  156572:24403  2144
+6147:6147  9345  353:107:680:203  156572:89941  2176
+6231:6231  9345  354:107:680:380  156572:57172  2208
+6357:6357  9345  352:107:680:253  156572:89941  2240
+6440:6440  9345  352:107:680:385  156572:57171  2272
+6510:6510  9345  353:107:680:457  156572:24403  2304
+6617:6617  9345  353:107:680:299  156572:89941  2336
+6702:6702  9345  353:107:680:376  156572:57172  2368
+6813:6813  9345  352:107:680:288  156572:89941  2400
+6879:6879  9345  353:107:680:484  156572:57172  2432
+6944:6944  9345  354:107:680:492  156572:24403  2464
+...
+```
+
+As you can see from the output, a long system interruption happened at 5323ms time. The reported throughput suddenly dropped from about 400 objects/second to about 100 objects/second.
+
+Actually, starting Chrome while the JVM is running has interrupted the JVM multiple times from 4914ms to 6879ms.
+
+Also note that the long system interruption has a huge impact on latency and a small impact on throughput. This is because latency is defined based on the worst execution, while throughput is defined based on the average execution time.
+
+To minimize system interruption, you can:
+
+*   Close all other running applications.
+*   Stop background jobs and services as many as you can.
+*   Do not touch your computer while you are running the JVM.
+*   Run GCPerformance.java for a longer time. The throughput will be more accurate. But the latency will not change, since it is calculated as the worst case.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟"START /REALTIME" - Run JVM with Highest Priority
+
+This section provides a tutorial showing how to use 'START /REALTIME' command to run JVM with highest priority on Windows systems.
+
+Another way to minimize system interruptions is to use the "START /REALTIME" command to launch JVM on Windows systems. It will run the JVM with highest priority, like running JVM in real-time without any system interruptions.
+
+Let's try this by starting the JVM to run the application, waiting for few seconds, then starting Chrome on your computer while the JVM is running.
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   GCPerformance 1024 32 32 0 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms, Warmup=0
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+93:93  2906  344:344:344:344  136776:70251  32
+187:187  2941  342:340:344:340  136776:37496  64
+296:296  3412  324:293:344:293  156572:90789  96
+359:359  3412  356:293:507:507  156572:57183  128
+421:421  3412  380:293:516:516  156572:24409  160
+...
+1872:1872  3412  393:293:516:507  156572:24403  736
+1997:1997  3906  384:256:516:256  156572:89941  768
+...
+5772:5772  3906  382:256:680:293  156572:57172  2208
+5928:5928  4878  377:205:680:205  156572:89941  2240
+                             ---
+          System interruption -|
+6021:6021  4878  377:205:680:344  156572:57171  2272
+6132:6132  4878  375:205:680:288  156572:24403  2304
+6272:6272  4878  372:205:680:228  156572:89941  2336
+6380:6380  4878  371:205:680:296  156572:57172  2368
+6523:6523  4878  367:205:680:223  156572:89941  2400
+6613:6613  4878  367:205:680:355  156572:57172  2432
+6724:6724  4878  366:205:680:288  156572:24403  2464
+6865:6865  4878  363:205:680:226  156572:89941  2496
+6973:6973  4878  362:205:680:296  156572:57171  2528
+7074:7074  4878  361:205:680:316  156572:89941  2560
+7154:7154  4878  362:205:680:400  156572:57172  2592
+...
+```
+
+As you can see from the output, the longest system interruption is shorter now. The reported throughput dropped from about 400 objects/second to about 200 objects/second.
+
+If we let the JVM run with the highest priority without touch the computer, the performance measurement will be more accurate now. See one example below:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   GCPerformance 1024 32 32 0 0
+
+Parameters: Size=1024KB, Base=32, Chunk=32, Wait=0ms, Warmup=0
+Real:Exec  Lat.     Throughput      Total:Free  Proc.
+Time:Time  ms/o  Ave:Min:Max:Chunk   Mem.:Mem.   Obj.
+78:78  2439  410:410:410:410  136776:70251  32
+172:172  2941  372:340:410:340  136776:37496  64
+281:281  3412  341:293:410:293  156572:90789  96
+344:344  3412  372:293:507:507  156572:57183  128
+422:422  3412  379:293:507:410  156572:24409  160
+...
+12482:12482  3448  399:290:695:410  156572:57173  4992
+12576:12576  3448  399:290:695:340  156572:89941  5024
+12638:12638  3448  400:290:695:516  156572:58019  5056
+12701:12701  3448  400:290:695:507  156572:24403  5088
+...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟GCPerfP99.java - 99th Percentile Performance
+
+This section provides a GC test program, GCPerfP99.java, that uses 99th percentile performance measurements.
+
+From previous tutorials, we learned that a long system interruption has a huge impact on latency and a small impact on throughput. This is because latency is defined based on the worst execution, while throughput is defined based on the average execution time.
+
+A better way to define the latency is the 99th percentile (or P99) latency, which throws away 1% worst runs, then takes the latency of the rest 99% good runs.
+
+P99 latency is a better measurement, because if system interruption happens less than 1% of the time, then P99 latency is actually 100% accurate.
+
+I have created another GC test program, GCPerfP99.java that uses P99 latency measurement:
+
+```
+ /* GCPerfP99.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+class GCPerfP99 {
+   static long startTime = System.currentTimeMillis();
+   static MyList objList = null;
+   static int objSize = 1024;  // in KB, default = 1 MB
+   static int baseSize = 32;   // # of objects in the base
+   static int chunkSize = 32;  // # of objects per run chunk
+   static int warmup = 64;     // warmup loops: 64*32 = 2GB
+   static int runs = 1000;     // number of runs
+   public static void main(String[] arg) {
+      System.out.println("["
+          +((System.currentTimeMillis()-startTime)/1000.0)
+        +"s] main() started");
+      if (arg.length>0) objSize = Integer.parseInt(arg[0]);
+      if (arg.length>1) baseSize = Integer.parseInt(arg[1]);
+      if (arg.length>2) chunkSize = Integer.parseInt(arg[2]);
+      if (arg.length>3) warmup = Integer.parseInt(arg[3]);
+      if (arg.length>4) runs = Integer.parseInt(arg[4]);
+      System.out.println("Parameters:");
+      System.out.println("   Size="+objSize+"KB"
+         +", Base="+baseSize +", Chunk="+chunkSize
+         +", Warmup="+warmup+", Runs="+runs);
+      objList = new MyList();
+      myTest();
+   }
+   public static void myTest() {
+      for (int m=0; m<baseSize; m++) {
+         objList.add(new MyObject());
+      }
+      for (int k=0; k<warmup; k++) {
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+      }
+
+      long[] times = new long[runs+1];
+      times[0] = System.currentTimeMillis();
+      for (int i=0; i<runs; i++) {
+         System.out.println("["
+        +((System.currentTimeMillis()-startTime)/1000.0)
+          +"s] Run start "+(i+1));
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+         times[i+1] = System.currentTimeMillis();
+         System.out.println("["+((times[i+1]-startTime)/1000.0)
+        +"s] Run end "+(i+1)+": "+(times[i+1]-times[i])+"ms");
+      }
+
+      long[] samples = new long[runs];
+      for (int i=0; i<runs; i++) {
+         samples[i] = times[i+1] - times[i];          // in millis
+      }
+      java.util.Arrays.sort(samples);        // sorted low to high
+
+      int p99 = (runs*99)/100;                  // 99th percentile
+      long duration = 0;
+      for (int i=0; i<p99; i++) {
+         duration += samples[i];
+      }
+      long avePerf = (1000*p99*chunkSize)/duration;  // obj/second
+      long maxPerf = 999999;
+      if (samples[0]>0) maxPerf = (1000*chunkSize)/samples[0];
+      long minPerf = (1000*chunkSize)/samples[p99-1];
+      long latency = 1000000/minPerf;           // millis/1000 obj
+      System.out.println("Results:");
+      System.out.println("   Total execution time = "
+         +(duration/1000)+" seconds");
+      System.out.println("   Total objects processed = "
+         +(runs*chunkSize));
+      System.out.println("   Average time per run = "
+         +(duration/p99)+" milliseconds");
+      System.out.println("   Throughput = "
+         +avePerf+" objects/second");
+      System.out.println("   Latency = "
+         +latency+" milliseconds/1000 objects");
+      System.out.println("   Throughput (max, ave, min) = ("
+         +maxPerf+", "+avePerf+", "+minPerf+")");
+      System.out.println("   Latency (min, ave, max) = ("
+         +(1000000/maxPerf)+", "+(1000000/avePerf)+", "
+         +(1000000/minPerf)+")");
+
+      System.out.println("1% worst runs dropped:");
+      for (int i=p99; i<runs; i++) {
+         System.out.println("   Run, Time, Throughput = "
+            +(i+1)+", "+samples[i]+", "+(1000*chunkSize)/samples[i]);
+      }
+
+      System.err.println("Press ENTER to end...");
+      try {
+         System.in.read();
+      } catch (Exception e) {
+      }
+   }
+
+   static class MyObject {
+      private long[] obj = null;
+      public MyObject next = null;
+      public MyObject prev = null;
+      public MyObject() {
+         obj = new long[objSize*128];          // 128*8=1024 bytes
+         for (int i=0; i<objSize*128; i++) {
+            obj[i] = i/2+i/3+i/4+i/5;            // some work load
+         }
+      }
+   }
+```
+
+```
+ static class MyList {
+      MyObject head = null;
+      MyObject tail = null;
+      void add(MyObject o) {
+         if (head==null) {
+            head = o;
+            tail = o;
+         } else {
+            o.prev = head;
+            head.next = o;
+            head = o;
+         }
+      }
+      void removeTail() {
+         if (tail!=null) {
+            if (tail.next==null) {
+               tail = null;
+               head = null;
+            } else {
+               tail = tail.next;
+               tail.prev = null;
+            }
+         }
+      }
+   }
+}
+```
+
+Changes made on the test program:
+
+*   Removed wait time from the run loop, since it decreases the throughput performance.
+*   Moved print statements out from the run loop to avoid impacts on performance measurement.
+*   Used 99% best runs to calculate throughput and latency.
+*   Printed 1% worst runs as references.
+*   Added additional print statement to output trace information for each run.
+*   Added a console read statement to hold the output on the console.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟GCPerfP99.java - Output Verification
+
+This section provides tutorials to verify output from GCPerfP99.java test runs. System interrupts are successfully excluded from performance calculation.
+
+The first test of our GCPerfP99.java is to see how it reacts to system interruptions.
+
+Start the JVM to run the application, wait for few seconds, then start Chrome on your computer while the JVM is running.
+
+```
+ herong> java GCPerfP99.java 1024 32 32 0 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=1000
+...
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2549 objects/second
+   Latency = 843 milliseconds/1000 objects
+   Throughput (max, ave, min) = (4000, 2549, 1185)
+   Latency (min, ave, max) = (250, 392, 843)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 27, 1185
+   Run, Time, Throughput = 992, 28, 1142
+   Run, Time, Throughput = 993, 28, 1142
+   Run, Time, Throughput = 994, 28, 1142
+   Run, Time, Throughput = 995, 29, 1103
+   Run, Time, Throughput = 996, 32, 1000
+   Run, Time, Throughput = 997, 33, 969
+   Run, Time, Throughput = 998, 35, 914
+   Run, Time, Throughput = 999, 36, 888
+   Run, Time, Throughput = 1000, 39, 820
+Press ENTER to end...
+```
+
+The output looks very good:
+
+*   System interruptions were successfully excluded from the performance measurements. The last 5 worst runs seems to be impacted by system interruptions.
+*   For this test, the throughput performance is 2549 objects per second. The latency performance is 843 milliseconds per 1000 objects.
+
+Run it again with highest priority and without touch the computer while it is running.
+
+```
+ C:\herong>start /realtime java GCPerfP99 1024 32 32 0 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=1000
+Results:
+   Total execution time = 10 seconds
+   Total objects processed = 32000
+   Average time per run = 10 milliseconds
+   Throughput = 2963 objects/second
+   Latency = 468 milliseconds/1000 objects
+   Throughput (max, ave, min) = (4571, 2963, 2133)
+   Latency (min, ave, max) = (218, 337, 468)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 15, 2133
+   Run, Time, Throughput = 992, 16, 2000
+   Run, Time, Throughput = 993, 16, 2000
+   Run, Time, Throughput = 994, 16, 2000
+   Run, Time, Throughput = 995, 17, 1882
+   Run, Time, Throughput = 996, 17, 1882
+   Run, Time, Throughput = 997, 18, 1777
+   Run, Time, Throughput = 998, 18, 1777
+   Run, Time, Throughput = 999, 20, 1600
+   Run, Time, Throughput = 1000, 29, 1103
+Press ENTER to end...
+```
+
+The output matched my expectation. There were two small system interruptions by looking at the dropped runs, because it was executed with the highest priority on a quiet system.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟GCPerfP99V2.java - Percentile Performance with Load
+
+This section provides a GC test program, GCPerfP99V2.java, that uses percentile performance measurements with extra work loads.
+
+When running the GCPerfP99.java program in previous tutorials, I noticed that the work load when creating each object is too light for fast computers. So I created another version with additional work loads.
+
+```
+ /* GCPerfP99V2.java
+ * Copyright (c) HerongYang.com. All Rights Reserved.
+ */
+class GCPerfP99V2 {
+   static long startTime = System.currentTimeMillis();
+   static MyList objList = null;
+   static int objSize = 1024;  // in KB, default = 1 MB
+   static int baseSize = 32;   // # of objects in the base
+   static int chunkSize = 32;  // # of objects per run chunk
+   static int warmup = 64;     // warmup loops: 64*32 = 2GB
+   static int runs = 1000;     // number of runs
+   static int percentile = 99; // percentile
+   static int loads = 1;       // loads
+   public static void main(String[] arg) {
+      System.out.println("["
+          +((System.currentTimeMillis()-startTime)/1000.0)
+        +"s] main() started");
+      if (arg.length>0) objSize = Integer.parseInt(arg[0]);
+      if (arg.length>1) baseSize = Integer.parseInt(arg[1]);
+      if (arg.length>2) chunkSize = Integer.parseInt(arg[2]);
+      if (arg.length>3) warmup = Integer.parseInt(arg[3]);
+      if (arg.length>4) runs = Integer.parseInt(arg[4]);
+      if (arg.length>5) loads = Integer.parseInt(arg[5]);
+      if (arg.length>6) percentile = Integer.parseInt(arg[6]);
+      System.out.println("Parameters:");
+      System.out.println("   Size="+objSize+"KB"
+         +", Base="+baseSize +", Chunk="+chunkSize+", Warmup="+warmup
+     +", Runs="+runs+", Loads="+loads);
+      objList = new MyList();
+      myTest();
+   }
+   public static void myTest() {
+      for (int m=0; m<baseSize; m++) {
+         objList.add(new MyObject());
+      }
+      for (int k=0; k<warmup; k++) {
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+      }
+
+      long[] times = new long[runs+1];
+      times[0] = System.currentTimeMillis();
+      for (int i=0; i<runs; i++) {
+         System.out.println("["
+        +((System.currentTimeMillis()-startTime)/1000.0)
+          +"s] Run start "+(i+1));
+         for (int m=0; m<chunkSize; m++) {
+            objList.add(new MyObject());
+         }
+         for (int m=0; m<chunkSize; m++) {
+            objList.removeTail();
+         }
+         times[i+1] = System.currentTimeMillis();
+         System.out.println("["+((times[i+1]-startTime)/1000.0)
+        +"s] Run end "+(i+1)+": "+(times[i+1]-times[i])+"ms");
+      }
+
+      long[] samples = new long[runs];
+      for (int i=0; i<runs; i++) {
+         samples[i] = times[i+1] - times[i];
+      }
+      java.util.Arrays.sort(samples);        // sorted low to high
+
+      System.out.println("Statistics of percentile runs:");
+      int p99 = (runs*percentile)/100;
+      long duration = 0;
+      for (int i=0; i<p99; i++) {
+         duration += samples[i];
+      }
+    long average = duration/p99;
+    double deviation = 0.0;
+      for (int i=0; i<p99; i++) {
+         deviation += (samples[i]-average)*(samples[i]-average);
+      }
+    deviation = Math.sqrt(deviation/p99);
+      long avePerf = (1000*chunkSize)/average;  // obj/second
+      long maxPerf = 999999;
+      if (samples[0]>0) maxPerf = (1000*chunkSize)/samples[0];
+      long minPerf = (1000*chunkSize)/samples[p99-1];
+      long latency = 1000000/minPerf;           // millis/1000 obj
+      System.out.println("   Total number of runs = "+runs);
+      System.out.println("   Percentile % = "+percentile);
+      System.out.println("   Execution time = "+duration+" ms");
+      System.out.println("   Average time per run = "+average+" ms");
+      System.out.println("   Standard deviation = "+deviation+" ms");
+      System.out.println("   Objects processed = "+(p99*chunkSize));
+      System.out.println("   Throughput = "+avePerf+" objects/second");
+      System.out.println("   Latency = "+latency+" ms/1000 objects");
+      System.out.println("   Throughput (max, ave, min) = ("
+         +maxPerf+", "+avePerf+", "+minPerf+")");
+      System.out.println("   Latency (min, ave, max) = ("
+         +(1000000/maxPerf)+", "+(1000000/avePerf)+", "
+         +(1000000/minPerf)+")");
+      System.out.println("Worst runs dropped:");
+      for (int i=p99; i<runs; i++) {
+         System.out.println("   #, Time, Throughput = "
+            +(i+1)+", "+samples[i]+", "+(1000*chunkSize)/samples[i]);
+      }
+```
+
+```
+ System.err.println("Press ENTER to end...");
+      try {
+         System.in.read();
+      } catch (Exception e) {
+    }
+   }
+
+   static class MyObject {
+      private long[] obj = null;
+      public MyObject next = null;
+      public MyObject prev = null;
+      public MyObject() {
+         obj = new long[objSize*128];          // 128*8=1024 bytes
+         for (int i=0; i<objSize*128; i++) {
+            for (int j=0; j<loads; j++) {
+               obj[i] += i/2+i/3+i/4+i/5;       // some work load
+            }
+         }
+      }
+   }
+
+   static class MyList {
+      MyObject head = null;
+      MyObject tail = null;
+      void add(MyObject o) {
+         if (head==null) {
+            head = o;
+            tail = o;
+         } else {
+            o.prev = head;
+            head.next = o;
+            head = o;
+         }
+      }
+      void removeTail() {
+         if (tail!=null) {
+            if (tail.next==null) {
+               tail = null;
+               head = null;
+            } else {
+               tail = tail.next;
+               tail.prev = null;
+            }
+         }
+      }
+   }
+}
+```
+
+Changes made on the test program:
+
+*   Added extra work loads when objects are created.
+*   Added a parameter to control the percentile calculation.
+*   Added standard deviation to show the level of system interruptions.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟GCPerfP99V2.java - Work Load Level
+
+This section provides tutorials to find the work load level for the GCPerfP99V2.java program to the impact of execution environment interruptions to a very level. Work load of 1000 gives me a coefficient variation of 1.22% on my computer used in 2019.
+
+A major difficulty of measuring an application performance are execution interruptions from the execution environment. In my case, the JVM may interrupt the application thread to run the GC thread or other threads and the operating system may interrupt the JVM to run other processes.
+
+In this tutorial let's see if I can increase the work load to reduce the impact of environment interruptions to a very level.
+
+**Test 1** - Running GCPerfP99V2.java with the default work load using Serial GC.
+
+```
+ herong> java -XX:+UseSerialGC -Xms400m -Xmx400m -Xlog:gc \
+   GCPerfP99V2 1024 32 32 0 10 1 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=10, Loads=1
+[0.063s] Run start 1
+[0.094s] Run end 1: 31ms
+[0.109s] Run start 2
+[0.125s] Run end 2: 31ms
+[0.125s] Run start 3
+GC(0) Pause Young (Allocation Failure) 106M->38M(386M) 24.365ms
+[0.156s] Run end 3: 31ms
+   -- Run 3 took 7ms = 31ms - 24ms
+
+[0.156s] Run start 4
+[0.172s] Run end 4: 16ms
+[0.172s] Run start 5
+[0.188s] Run end 5: 16ms
+[0.188s] Run start 6
+GC(1) Pause Young (Allocation Failure) 144M->74M(386M) 27.026ms
+[0.219s] Run end 6: 31ms
+   -- Run 3 took 4ms = 31ms - 27ms
+
+[0.219s] Run start 7
+[0.234s] Run end 7: 15ms
+[0.234s] Run start 8
+[0.25s] Run end 8: 16ms
+[0.25s] Run start 9
+GC(2) Pause Young (Allocation Failure) 180M->119M(386M) 26.779ms
+[0.281s] Run end 9: 31ms
+[0.281s] Run start 10
+[0.297s] Run end 10: 16ms
+Statistics of percentile runs:
+   Total number of runs = 10
+   Percentile % = 100
+   Execution time = 234 ms
+   Average time per run = 23 ms
+   Standard deviation = 7.615773105863909 ms
+   Objects processed = 320
+   Throughput = 1367 objects/second
+   Latency = 968 ms/1000 objects
+   Throughput (max, ave, min) = (2133, 1367, 1032)
+   Latency (min, ave, max) = (468, 731, 968)
+Worst runs dropped:
+```
+
+As you can see, normal runs with no GC pauses took 15ms to 31ms. This tells me that the impact of execution environment is too high comparing to the application execution time. This is also reflected by the coefficient of variation (the ratio of the standard deviation over the average): 8ms/23ms = 24.78%.
+
+So we need to increase the work load to reduce the impact of OS interruptions.
+
+**Test 2** - Running GCPerfP99V2.java with 10 times of the default work load, which could improve the coefficient of variation.
+
+```
+ herong> java -XX:+UseSerialGC -Xms400m -Xmx400m -Xlog:gc \
+   GCPerfP99V2 1024 32 32 0 10 10 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=10, Loads=10
+[0.094s] Run start 1
+[0.109s] Run end 1: 15ms
+[0.125s] Run start 2
+[0.156s] Run end 2: 47ms
+[0.156s] Run start 3
+GC(0) Pause Young (Allocation Failure) 106M->38M(386M) 21.724ms
+[0.187s] Run end 3: 31ms
+   -- Run 3 took 9ms = 31ms - 22ms
+
+[0.187s] Run start 4
+[0.203s] Run end 4: 16ms
+[0.203s] Run start 5
+[0.219s] Run end 5: 16ms
+[0.234s] Run start 6
+GC(1) Pause Young (Allocation Failure) 144M->74M(386M) 28.368ms
+[0.266s] Run end 6: 47ms
+   -- Run 6 took 19ms = 47ms - 28ms
+
+[0.266s] Run start 7
+[0.281s] Run end 7: 15ms
+[0.281s] Run start 8
+[0.312s] Run end 8: 31ms
+[0.312s] Run start 9
+GC(2) Pause Young (Allocation Failure) 180M->119M(386M) 28.963ms
+[0.359s] Run end 9: 47ms
+[0.359s] Run start 10
+[0.375s] Run end 10: 16ms
+Statistics of percentile runs:
+   Total number of runs = 10
+   Percentile % = 100
+   Execution time = 281 ms
+   Average time per run = 28 ms
+   Standard deviation = 13.67845020461017 ms
+   Objects processed = 320
+   Throughput = 1138 objects/second
+   Latency = 1470 ms/1000 objects
+   Throughput (max, ave, min) = (2133, 1138, 680)
+   Latency (min, ave, max) = (468, 878, 1470)
+Worst runs dropped:
+```
+
+Work load of 10 has no obvious differences from work load 1\. In fact, coefficient of variation increased to 14ms/28ms = 50.00%.
+
+So I need to increase the work load to a higher value.
+
+**Test 3** - Running GCPerfP99V2.java with 100 times of the default work load:
+
+```
+ herong> java -XX:+UseSerialGC -Xms400m -Xmx400m -Xlog:gc \
+   GCPerfP99V2 1024 32 32 0 10 100 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=10, Loads=100
+[0.152s] Run start 1
+[0.259s] Run end 1: 107ms
+[0.267s] Run start 2
+[0.371s] Run end 2: 112ms
+[0.372s] Run start 3
+GC(0) Pause Young (Allocation Failure) 106M->38M(386M) 25.388ms
+[0.488s] Run end 3: 117ms
+
+[0.488s] Run start 4
+[0.58s] Run end 4: 92ms
+[0.58s] Run start 5
+[0.672s] Run end 5: 92ms
+[0.672s] Run start 6
+GC(1) Pause Young (Allocation Failure) 144M->74M(386M) 25.515ms
+[0.788s] Run end 6: 116ms
+   -- Run 6 took 90ms = 116ms - 26ms
+
+[0.788s] Run start 7
+[0.88s] Run end 7: 92ms
+[0.88s] Run start 8
+[0.972s] Run end 8: 92ms
+[0.972s] Run start 9
+GC(2) Pause Young (Allocation Failure) 180M->119M(386M) 26.074ms
+[1.095s] Run end 9: 123ms
+   -- Run 9 took 97ms = 123ms - 26ms
+
+[1.095s] Run start 10
+[1.183s] Run end 10: 88ms
+Statistics of percentile runs:
+   Total number of runs = 10
+   Percentile % = 100
+   Execution time = 1031 ms
+   Average time per run = 103 ms
+   Standard deviation = 12.533953885346794 ms
+   Objects processed = 320
+   Throughput = 310 objects/second
+   Latency = 3846 ms/1000 objects
+   Throughput (max, ave, min) = (363, 310, 260)
+   Latency (min, ave, max) = (2754, 3225, 3846)
+Worst runs dropped:
+```
+
+Ok, work load of 100 gives me a coefficient of variation of 12.62%.
+
+**Test 4** - Running GCPerfP99V2.java with 1000 times of the default work load:
+
+```
+ herong> java -XX:+UseSerialGC -Xms400m -Xmx400m -Xlog:gc \
+   GCPerfP99V2 1024 32 32 0 10 1000 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=10, Loads=1000
+[1.197s] Run start 1
+[2.352s] Run end 1: 1155ms
+[2.361s] Run start 2
+[3.501s] Run end 2: 1149ms
+[3.502s] Run start 3
+GC(0) Pause Young (Allocation Failure) 106M->38M(386M) 18.735ms
+[4.665s] Run end 3: 1164ms
+[4.666s] Run start 4
+[5.829s] Run end 4: 1164ms
+[5.829s] Run start 5
+[6.979s] Run end 5: 1150ms
+[6.98s] Run start 6
+GC(1) Pause Young (Allocation Failure) 144M->74M(386M) 22.835ms
+[8.14s] Run end 6: 1161ms
+[8.14s] Run start 7
+[9.268s] Run end 7: 1128ms
+[9.269s] Run start 8
+[10.4s] Run end 8: 1132ms
+[10.4s] Run start 9
+GC(2) Pause Young (Allocation Failure) 180M->119M(386M) 23.174ms
+[11.554s] Run end 9: 1154ms
+[11.555s] Run start 10
+[12.682s] Run end 10: 1128ms
+Statistics of percentile runs:
+   Total number of runs = 10
+   Percentile % = 100
+   Execution time = 11485 ms
+   Average time per run = 1148 ms
+   Standard deviation = 13.516656391282572 ms
+   Objects processed = 320
+   Throughput = 27 objects/second
+   Latency = 37037 ms/1000 objects
+   Throughput (max, ave, min) = (28, 27, 27)
+   Latency (min, ave, max) = (35714, 37037, 37037)
+Worst runs dropped:
+```
+
+Perfect, work load of 1000 gives me a coefficient of variation of 1.22%. Now I know what level of work load is needed remove the impact of operating system interrupts from our performance tests.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Program](#part0099.xhtml)
+
+∟GCPerfP99V2.java - Object Number and Size
+
+This section provides tutorials to find the work load level for the GCPerfP99V2.java program to the impact of execution environment interruptions to a very level. Work load of 1000 gives me a coefficient variation of 1.22% on my computer used in 2019.
+
+In the last tutorial, I was able the increase the work load of my application to reduce the impact of environment interruptions to a very level.
+
+In this tutorial, I want to increase the work load of the GC to increase its impact on my application, so that I can measure it more accurately.
+
+**Test 1** - Running GCPerfP99V2.java with the default object size and chunk size.
+
+```
+ herong> java -XX:+UseSerialGC -Xms400m -Xmx400m -Xlog:gc \
+   GCPerfP99V2 1024 32 32 0 10 1000 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=10, Loads=1000
+[1.197s] Run start 1
+[2.352s] Run end 1: 1155ms
+[2.361s] Run start 2
+[3.501s] Run end 2: 1149ms
+[3.502s] Run start 3
+GC(0) Pause Young (Allocation Failure) 106M->38M(386M) 18.735ms
+[4.665s] Run end 3: 1164ms
+[4.666s] Run start 4
+[5.829s] Run end 4: 1164ms
+[5.829s] Run start 5
+[6.979s] Run end 5: 1150ms
+[6.98s] Run start 6
+GC(1) Pause Young (Allocation Failure) 144M->74M(386M) 22.835ms
+[8.14s] Run end 6: 1161ms
+[8.14s] Run start 7
+[9.268s] Run end 7: 1128ms
+[9.269s] Run start 8
+[10.4s] Run end 8: 1132ms
+[10.4s] Run start 9
+GC(2) Pause Young (Allocation Failure) 180M->119M(386M) 23.174ms
+[11.554s] Run end 9: 1154ms
+[11.555s] Run start 10
+[12.682s] Run end 10: 1128ms
+Statistics of percentile runs:
+runs = 10
+percentile = 100
+P99 = 10
+   Total number of runs = 10
+   Percentile % = 100
+   Execution time = 11485 ms
+   Average time per run = 1148 ms
+   Standard deviation = 13.516656391282572 ms
+   Objects processed = 320
+   Throughput = 27 objects/second
+   Latency = 37037 ms/1000 objects
+   Throughput (max, ave, min) = (28, 27, 27)
+   Latency (min, ave, max) = (35714, 37037, 37037)
+Worst runs dropped:
+```
+
+As you can see, GC took 18 to 23 ms to complete, which is about the same level as other environment interruptions. So I need to increase the number of objects in the Eden for the GC to process. This can be done by decrease the object size and increase the chunk size to keep the same amount work for each run.
+
+**Test 2** - Running GCPerfP99V2.java with object size of 32K and chunk size of 1024.
+
+```
+ herong> java -XX:+UseSerialGC -Xms400m -Xmx400m -Xlog:gc \
+   GCPerfP99V2 32 1024 1024 0 10 1000 100
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=0, Runs=10, Loads=1000
+[1.204s] Run start 1
+[2.349s] Run end 1: 1145ms
+[2.358s] Run start 2
+[3.496s] Run end 2: 1147ms
+[3.497s] Run start 3
+GC(0) Pause Young (Allocation Failure) 106M->38M(386M) 19.225ms
+[4.651s] Run end 3: 1155ms
+[4.651s] Run start 4
+[5.785s] Run end 4: 1134ms
+[5.786s] Run start 5
+[6.919s] Run end 5: 1134ms
+[6.92s] Run start 6
+GC(1) Pause Young (Allocation Failure) 145M->138M(386M) 51.666ms
+[8.102s] Run end 6: 1183ms
+[8.103s] Run start 7
+[9.232s] Run end 7: 1130ms
+[9.232s] Run start 8
+[10.365s] Run end 8: 1133ms
+[10.366s] Run start 9
+GC(2) Pause Young (Allocation Failure) 245M->244M(386M) 51.924ms
+[11.55s] Run end 9: 1185ms
+[11.551s] Run start 10
+[12.685s] Run end 10: 1135ms
+Statistics of percentile runs:
+   Total number of runs = 10
+   Percentile % = 100
+   Execution time = 11481 ms
+   Average time per run = 1148 ms
+   Standard deviation = 19.39845354661036 ms
+   Objects processed = 10240
+   Throughput = 891 objects/second
+   Latency = 1157 ms/1000 objects
+   Throughput (max, ave, min) = (906, 891, 864)
+   Latency (min, ave, max) = (1103, 1122, 1157)
+Worst runs dropped:
+```
+
+With more objects, GC took 19 to 52 ms to complete now.
+
+In conclusion, GCPerfP99V2.java provides better options to help measuring performance impact of GC.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Performance Tests on Serial Collector
+
+This chapter provides tutorial notes and example codes on performance impact of Serial collector, Topics include heap footprint; GC logging impact; wait time impact; heap size impact; running Young GC only, running more Old GC.
+
+> [Serial GC Footprint - Free Heap 4%](#part0114.xhtml)
+> 
+> [GC Logging Impact on Serial GC](#part0115.xhtml)
+> 
+> [Heap Size Impact on Serial GC](#part0116.xhtml)
+> 
+> [Serial GC on 400MB Heap](#part0117.xhtml)
+> 
+> [Serial GC on 800MB Heap](#part0118.xhtml)
+> 
+> [Serial GC on 1600MB Heap](#part0119.xhtml)
+> 
+> [Performance of Serial Young GC](#part0120.xhtml)
+> 
+> [Object Size Impact on Serial Young GC](#part0121.xhtml)
+> 
+> [Chunk Size Impact on Serial Young GC](#part0122.xhtml)
+> 
+> [Performance of Serial Full GC](#part0123.xhtml)
+> 
+> [Serial Full GC on 1600MB Tenured Space](#part0124.xhtml)
+> 
+> [Object Size Impact on Serial Old GC](#part0125.xhtml)
+> 
+> [Performance Summary of Serial Collector](#part0126.xhtml)
+
+Takeaways:
+
+*   The Serial collector requires about 4% free heap space to perform garbage collections.
+*   GC logging has little impact on application performance.
+*   More free heap space will increase application performance.
+*   Serial Young GC and Old GC provide about the same application performance.
+*   Serial Young GC and Old GC provide about the same application throughput performance.
+*   Serial Young GC and Old GC provide about the same performance regardless of object size.
+*   With certain Young and Tenuring configuration, like 800 MB heap and default NewRatio/Survivor ratios, Serial Minor GC fails to remove dead objects, and copies them to Tenured generation. Those failed GCs uses much long times, impacting heavily on latency.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Serial GC Footprint - Free Heap 4%
+
+This section provides tutorials to find out what is the heap memory footprint to run GCPerfP99.java. The Serial collector needs about 4% free heap space to perform garbage collections.
+
+One important performance factor of a garbage collector is the memory footprint, which is measured by the minimum heap size required to run the application. Let's run some tests with GCPerfP99.java to find out the footprint of the Serial collector.
+
+**Test 1** - 66 MB of heap memory is not enough to run GCPerfP99.java with 64 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseSerialGC -Xms66m -Xmx66m \
+   GCPerfP99 1024 32 32 0 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=100
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at GCPerfP99$MyObject.<init>(GCPerfP99.java:98)
+        at GCPerfP99.myTest(GCPerfP99.java:41)
+        at GCPerfP99.main(GCPerfP99.java:22)
+```
+
+**Test 2** - 67 MB is the minimum heap size to run GCPerfP99.java: with 64 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseSerialGC -Xms67m -Xmx67m \
+   GCPerfP99 1024 32 32 0 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=100
+Results:
+   Total execution time = 2 seconds
+   Total objects processed = 3200
+   Average time per run = 24 milliseconds
+   Throughput = 1306 objects/second
+   Latency = 938 milliseconds/1000 objects
+   Throughput (max, ave, min) = (1391, 1306, 1066)
+   Latency (min, ave, max) = (718, 765, 938)
+1% worst runs dropped:
+   Run, Time, Throughput = 100, 31, 1032
+```
+
+**Test 3** - 132 MB of heap memory is not enough to run GCPerfP99.java with 128 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseSerialGC -Xms134m -Xmx134m \
+   GCPerfP99 1024 64 64 0 100
+
+Parameters:
+   Size=1024KB, Base=64, Chunk=64, Warmup=0, Runs=100
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at GCPerfP99$MyObject.<init>(GCPerfP99.java:98)
+        at GCPerfP99.myTest(GCPerfP99.java:41)
+        at GCPerfP99.main(GCPerfP99.java:22)
+```
+
+**Test 4** - 133 MB of heap memory is not enough to run GCPerfP99.java with 128 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseSerialGC -Xms135m -Xmx135m GCPerfP99 1024 64 64 0 100
+
+Parameters:
+   Size=1024KB, Base=64, Chunk=64, Warmup=0, Runs=100
+Results:
+   Total execution time = 3 seconds
+   Total objects processed = 6400
+   Average time per run = 38 milliseconds
+   Throughput = 1682 objects/second
+   Latency = 859 milliseconds/1000 objects
+   Throughput (max, ave, min) = (1777, 1682, 1163)
+   Latency (min, ave, max) = (562, 594, 859)
+1% worst runs dropped:
+   Run, Time, Throughput = 100, 61, 1049
+Press ENTER to end...
+```
+
+Conclusion:
+
+*   67 MB is the heap memory footprint for the Serial collector to run GCPerfP99.java with 64 MB live object at peak times.
+*   135 MB is the heap memory footprint for the Serial collector to run GCPerfP99.java with 128 MB live object at peak times.
+*   The Serial collector needs about 3.8% to 5.2% (calculated as (67-64)/67 and (135-128)/133) free heap memory to perform garbage collections.
+*   With the minimum heap size, the Serial collector performance pretty good on application throughput and latency.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟GC Logging Impact on Serial GC
+
+This section provides tutorials to find out the performance impact of GC logging with the Serial collect. Turning on GC logging options seems to have no impact on throughput performance.
+
+Before we do any other performance tests with the Serial collector, let's see if printing lots of GC log messages has any impact on application performance:
+
+**Test 1** - Running GCPerfP99.java without any GC logging with the Serial Collector. 64 iterations of warmup is specified to flush 64*32*1024K = 2GB objects through the heap.
+
+```
+ C:\herong>start /realtime -XX:+UseSerialGC -Xms100m -Xmx100m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 19 seconds
+   Total objects processed = 32000
+   Average time per run = 19 milliseconds
+   Throughput = 1642 objects/second
+   Latency = 875 milliseconds/1000 objects
+   Throughput (max, ave, min) = (2133, 1642, 1142)
+   Latency (min, ave, max) = (468, 609, 875)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 28, 1142
+   Run, Time, Throughput = 992, 28, 1142
+   Run, Time, Throughput = 993, 28, 1142
+   Run, Time, Throughput = 994, 29, 1103
+   Run, Time, Throughput = 995, 29, 1103
+   Run, Time, Throughput = 996, 30, 1066
+   Run, Time, Throughput = 997, 32, 1000
+   Run, Time, Throughput = 998, 40, 800
+   Run, Time, Throughput = 999, 98, 326
+   Run, Time, Throughput = 1000, 99, 323
+Press ENTER to end...
+```
+
+**Test 2** - Same as Test 1, but with all GC log messages printed to files. It doubles the execution from 19 seconds to 38 seconds:
+
+```
+ C:\herong>start /realtime -XX:+UseSerialGC -Xms100m -Xmx100m
+   -Xlog:gc*=trace:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 38 seconds
+   Total objects processed = 32000
+   Average time per run = 38 milliseconds
+   Throughput = 833 objects/second
+   Latency = 1531 milliseconds/1000 objects
+   Throughput (max, ave, min) = (969, 833, 653)
+   Latency (min, ave, max) = (1031, 1200, 1531)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 49, 653
+   Run, Time, Throughput = 992, 49, 653
+   Run, Time, Throughput = 993, 49, 653
+   Run, Time, Throughput = 994, 50, 640
+   Run, Time, Throughput = 995, 50, 640
+   Run, Time, Throughput = 996, 51, 627
+   Run, Time, Throughput = 997, 56, 571
+   Run, Time, Throughput = 998, 58, 551
+   Run, Time, Throughput = 999, 66, 484
+   Run, Time, Throughput = 1000, 315, 101
+
+C:\herong>dir gc.log*
+         9,504,419 gc.log
+        21,121,187 gc.log.0
+        21,121,327 gc.log.1
+        21,121,266 gc.log.2
+        21,121,765 gc.log.3
+        21,121,156 gc.log.4
+```
+
+**Test 3** - Same as Test 1, but with all GC log messages printed to the console. It took 16 times longer to execute:
+
+```
+ C:\herong>start /realtime -XX:+UseSerialGC -Xms100m -Xmx100m
+   -Xlog:gc*=trace GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 303 seconds
+   Total objects processed = 32000
+   Average time per run = 306 milliseconds
+   Throughput = 104 objects/second
+   Latency = 14084 milliseconds/1000 objects
+   Throughput (max, ave, min) = (121, 104, 71)
+   Latency (min, ave, max) = (8264, 9615, 14084)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 448, 71
+   Run, Time, Throughput = 992, 449, 71
+   Run, Time, Throughput = 993, 451, 70
+   Run, Time, Throughput = 994, 456, 70
+   Run, Time, Throughput = 995, 467, 68
+   Run, Time, Throughput = 996, 469, 68
+   Run, Time, Throughput = 997, 469, 68
+   Run, Time, Throughput = 998, 490, 65
+   Run, Time, Throughput = 999, 533, 60
+   Run, Time, Throughput = 1000, 536, 59
+Press ENTER to end...
+```
+
+Conclusion: turning on GC log messages does have an impact on application performance. If you really need log messages, don't turn on all of them Printing log messages to files is much faster than the console.
+
+If you are still using JDK 8 or older versions, turning on log messages has significant impact on application performance. See these 2 tests below. They were done on an older computer.
+
+**Test 1** - Running GCPerfP99.java without any GC logging with the Serial Collector. 64 iterations of warmup is specified to flush 64*32*1024K = 2GB objects through the heap.
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms100m -Xmx100m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 75 seconds
+   Total objects processed = 32000
+   Average time per run = 76 milliseconds
+   Throughput = 419 objects/second
+   Latency = 2941 milliseconds/1000 objects
+   Throughput (max, ave, min) = (516, 419, 340)
+   Latency (min, ave, max) = (1937, 2386, 2941)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 94, 340
+   Run, Time, Throughput = 992, 94, 340
+   Run, Time, Throughput = 993, 94, 340
+   Run, Time, Throughput = 994, 94, 340
+   Run, Time, Throughput = 995, 94, 340
+   Run, Time, Throughput = 996, 94, 340
+   Run, Time, Throughput = 997, 94, 340
+   Run, Time, Throughput = 998, 94, 340
+   Run, Time, Throughput = 999, 109, 293
+   Run, Time, Throughput = 1000, 109, 293
+Press ENTER to end...
+```
+
+**Test 2** - Same as Test 1, but with many GC log messages turned on:
+
+```
+ C:\herong>start /realtim \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms100m -Xmx100m
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -XX:+PrintReferenceGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 75 seconds
+   Total objects processed = 32000
+   Average time per run = 76 milliseconds
+   Throughput = 417 objects/second
+   Latency = 2941 milliseconds/1000 objects
+   Throughput (max, ave, min) = (516, 417, 340)
+   Latency (min, ave, max) = (1937, 2398, 2941)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 94, 340
+   Run, Time, Throughput = 992, 94, 340
+   Run, Time, Throughput = 993, 94, 340
+   Run, Time, Throughput = 994, 94, 340
+   Run, Time, Throughput = 995, 94, 340
+   Run, Time, Throughput = 996, 94, 340
+   Run, Time, Throughput = 997, 94, 340
+   Run, Time, Throughput = 998, 94, 340
+   Run, Time, Throughput = 999, 94, 340
+   Run, Time, Throughput = 1000, 109, 293
+Press ENTER to end...
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Heap Size Impact on Serial GC
+
+This section provides tutorials to find out the performance impact of heap size with the Serial collector. Increasing heap size seems to improve the throughput performance. But it also decreases the latency performance.
+
+In this tutorial, let's find out the performance impact of heap size with the Serial collector on my Windows computer with 8GB of memory.
+
+**Test 1** - Running GCPerfP99.java using 100 MB heap size with the Serial Collector. 64 iterations of warmup is specified to flush 64*32*1024K = 2GB objects through the heap.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms100m -Xmx100m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 19 seconds
+   Total objects processed = 32000
+   Average time per run = 19 milliseconds
+   Throughput = 1665 objects/second
+   Latency = 843 milliseconds/1000 objects
+   Throughput (max, ave, min) = (2285, 1665, 1185)
+   Latency (min, ave, max) = (437, 600, 843)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 27, 1185
+   Run, Time, Throughput = 992, 28, 1142
+   Run, Time, Throughput = 993, 28, 1142
+   Run, Time, Throughput = 994, 29, 1103
+   Run, Time, Throughput = 995, 29, 1103
+   Run, Time, Throughput = 996, 30, 1066
+   Run, Time, Throughput = 997, 30, 1066
+   Run, Time, Throughput = 998, 31, 1032
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 33, 969
+```
+
+**Test 2** - Running GCPerfP99.java using 400 MB heap size with the Serial Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms400m -Xmx400m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2482 objects/second
+   Latency = 1062 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 2482, 941)
+   Latency (min, ave, max) = (187, 402, 1062)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 34, 941
+   Run, Time, Throughput = 992, 34, 941
+   Run, Time, Throughput = 993, 35, 914
+   Run, Time, Throughput = 994, 36, 888
+   Run, Time, Throughput = 995, 36, 888
+   Run, Time, Throughput = 996, 39, 820
+   Run, Time, Throughput = 997, 39, 820
+   Run, Time, Throughput = 998, 39, 820
+   Run, Time, Throughput = 999, 44, 727
+   Run, Time, Throughput = 1000, 55, 581
+```
+
+**Test 3** - Running GCPerfP99.java using 800 MB heap size with the Serial Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms800m -Xmx800m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2657 objects/second
+   Latency = 1721 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 2657, 581)
+   Latency (min, ave, max) = (187, 376, 1721)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 56, 571
+   Run, Time, Throughput = 992, 56, 571
+   Run, Time, Throughput = 993, 57, 561
+   Run, Time, Throughput = 994, 57, 561
+   Run, Time, Throughput = 995, 57, 561
+   Run, Time, Throughput = 996, 57, 561
+   Run, Time, Throughput = 997, 57, 561
+   Run, Time, Throughput = 998, 60, 533
+   Run, Time, Throughput = 999, 61, 524
+   Run, Time, Throughput = 1000, 63, 507
+```
+
+**Test 4** - Running GCPerfP99.java using 1600 MB heap size with the Serial Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms1600m -Xmx1600m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 8 seconds
+   Total objects processed = 32000
+   Average time per run = 8 milliseconds
+   Throughput = 3772 objects/second
+   Latency = 656 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 3772, 1523)
+   Latency (min, ave, max) = (187, 265, 656)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 22, 1454
+   Run, Time, Throughput = 992, 22, 1454
+   Run, Time, Throughput = 993, 23, 1391
+   Run, Time, Throughput = 994, 23, 1391
+   Run, Time, Throughput = 995, 23, 1391
+   Run, Time, Throughput = 996, 23, 1391
+   Run, Time, Throughput = 997, 23, 1391
+   Run, Time, Throughput = 998, 24, 1333
+   Run, Time, Throughput = 999, 25, 1280
+   Run, Time, Throughput = 1000, 28, 1142
+```
+
+**Test 5** - Running GCPerfP99.java using 3200 MB heap size with the Serial Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms3200m -Xmx3200m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 7 seconds
+   Total objects processed = 32000
+   Average time per run = 7 milliseconds
+   Throughput = 4065 objects/second
+   Latency = 593 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 4065, 1684)
+   Latency (min, ave, max) = (187, 246, 593)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 19, 1684
+   Run, Time, Throughput = 992, 20, 1600
+   Run, Time, Throughput = 993, 20, 1600
+   Run, Time, Throughput = 994, 20, 1600
+   Run, Time, Throughput = 995, 20, 1600
+   Run, Time, Throughput = 996, 20, 1600
+   Run, Time, Throughput = 997, 22, 1454
+   Run, Time, Throughput = 998, 22, 1454
+   Run, Time, Throughput = 999, 22, 1454
+   Run, Time, Throughput = 1000, 23, 1391
+```
+
+**Test 6** - Running GCPerfP99.java using 6400 MB heap size with the Serial Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms6400m -Xmx6400m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 7 seconds
+   Total objects processed = 32000
+   Average time per run = 7 milliseconds
+   Throughput = 4025 objects/second
+   Latency = 562 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 4025, 1777)
+   Latency (min, ave, max) = (187, 248, 562)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 18, 1777
+   Run, Time, Throughput = 992, 18, 1777
+   Run, Time, Throughput = 993, 18, 1777
+   Run, Time, Throughput = 994, 21, 1523
+   Run, Time, Throughput = 995, 21, 1523
+   Run, Time, Throughput = 996, 21, 1523
+   Run, Time, Throughput = 997, 23, 1391
+   Run, Time, Throughput = 998, 24, 1333
+   Run, Time, Throughput = 999, 24, 1333
+   Run, Time, Throughput = 1000, 38, 842
+Press ENTER to end...
+```
+
+**Test 7** - Running GCPerfP99.java using 12800 MB heap size with the Serial Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms12800m -Xmx12800m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 30 seconds
+   Total objects processed = 32000
+   Average time per run = 30 milliseconds
+   Throughput = 1045 objects/second
+   Latency = 12987 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 1045, 77)
+   Latency (min, ave, max) = (187, 956, 12987)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 439, 72
+   Run, Time, Throughput = 992, 441, 72
+   Run, Time, Throughput = 993, 462, 69
+   Run, Time, Throughput = 994, 473, 67
+   Run, Time, Throughput = 995, 567, 56
+   Run, Time, Throughput = 996, 572, 55
+   Run, Time, Throughput = 997, 605, 52
+   Run, Time, Throughput = 998, 608, 52
+   Run, Time, Throughput = 999, 666, 48
+   Run, Time, Throughput = 1000, 711, 45
+```
+
+**Comparison of test results**:
+
+```
+ Heap Size      Throughput       Latency
+            Ave (Max, Min)/s    ms/1000
+
+   100 MB   1665 (2285, 1185)       843
+   400 MB   2482 (5333,  941)      1062
+   800 MB   2657 (5333,  581)      1721
+  1600 MB   3772 (5333, 1523)       656
+  3200 MB   4065 (5333, 1684)       593
+  6400 MB   4025 (5333, 1777)       562
+ 12800 MB   1045 (5333,   77)     12987
+```
+
+Conclusion:
+
+*   Throughput is getting better when heap size is increased, because more heap memory allows more new objects to be allocated before each GC. This reduces the frequency of GC and increases the throughput.
+*   But latency shows that the application pauses is getting worse when heap size is increased from 100MB to 800MB, because more objects requires longer application pause time to perform each GC.
+*   And for some reason, when heap size is higher than 1600MB, application pause time dropped significantly. I guess the GC process pattern changed with more memory. Need to use GC logging to confirm.
+*   The maximum throughput of 5333 objects per second with 400MB to 12800MB heap sizes represents the best throughput of the application during periods when no GC is performed.
+*   When heap size is 12800MB larger than the physical memory of 8GB (8000MB), the performance dropped significantly. This is because disk space was used as virtual memory.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Heap Size      Throughput       Latency
+            Ave (Max, Min)/s    ms/1000
+
+   100 MB   419 (516, 340)         2941
+   400 MB   470 (695, 340)         2941
+   800 MB   480 (695, 228)         4385
+  1600 MB   522 (695, 410)         2439
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Serial GC on 400MB Heap
+
+This section provides detailed analysis of Serial GC behavior on GCPerfP99.java with 400 MB heap memory.
+
+To find out what is the root cause of the drop of latency performance with the Serial GC when heap size increased from 400 MB to 800 MB with JDK 8\. I performed both tests again with GC logging turned on.
+
+In this tutorial, let's run GCPerfP99.java using 400 MB heap size with the Serial Collector and GC logging on an older computer with JDK 8:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms400m -Xmx400m
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -XX:+PrintReferenceGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 66 seconds
+   Total objects processed = 32000
+   Average time per run = 67 milliseconds
+   Throughput = 472 objects/second
+   Latency = 2941 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 472, 340)
+   Latency (min, ave, max) = (1438, 2118, 2941)
+...
+```
+
+Look at the application pause times. I see a clear pattern of repeating 3-GC cycles, Major-Minor-Minor:
+
+```
+ herong> more gc.log | find "application threads were stopped" > output.txt
+
+0.424: Total time for which application threads were stopped:
+   0.0271026 seconds, Stopping threads took: 0.0001224 seconds
+
+...
+68.225: ...stopped: 0.0117778 seconds, ...
+68.452: ...stopped: 0.0286223 seconds, ...
+68.686: ...stopped: 0.0336656 seconds, ...
+
+68.897: ...stopped: 0.0112598 seconds, ...
+69.124: ...stopped: 0.0284982 seconds, ...
+69.359: ...stopped: 0.0337458 seconds, ...
+
+69.569: ...stopped: 0.0107850 seconds, ...
+69.798: ...stopped: 0.0295758 seconds, ...
+70.032: ...stopped: 0.0338717 seconds, ...
+
+70.242: ...stopped: 0.0103349 seconds, ...
+70.469: ...stopped: 0.0288898 seconds, ...
+70.703: ...stopped: 0.0341059 seconds, ...
+...
+```
+
+Take a closer look at one 3-GC cycle:
+
+```
+ herong> more gc.log
+
+70.232: Application time: 0.2000567 seconds
+   -- Application ran 0.2000567 seconds since the last GC
+
+{Heap before GC invocations=310 (full 104):
+  eden space 109248K,  99% used [...
+  from space 13632K,  97% used [...
+ tenured generation   total 273088K, used 239875K [...
+70.232: [GC (Allocation Failure)
+   70.232: [DefNew: 121994K->121994K(122880K), 0.0000201 secs]
+   70.232: [Tenured: 239875K->34045K(273088K), 0.0099279 secs]
+Heap after GC invocations=311 (full 105):
+  eden space 109248K,   0% used [...
+  from space 13632K,   0% used [...
+ tenured generation   total 273088K, used 34045K [...
+}
+70.242: Total time for which application threads were stopped: 0.0103349 s
+   -- A Old GC (called "full" GC here) in 0.0103349 seconds
+   -- Removed 325 MB from Young and Tenured generations
+
+70.441: Application time: 0.1981492 seconds
+{Heap before GC invocations=311 (full 105):
+  eden space 109248K,  99% used [...
+  from space 13632K,   0% used [...
+ tenured generation   total 273088K, used 34045K [...
+70.441: [GC (Allocation Failure)
+   70.441: [DefNew: 142725K->142594K(395968K), 0.0286202 secs]
+Heap after GC invocations=312 (full 105):
+  eden space 109248K,   0% used [...
+  from space 13632K,  97% used [...
+ tenured generation   total 273088K, used 129279K [...
+}
+70.469: Total time for which application threads were stopped: 0.0288898 s
+   -- A Young GC in 0.0288898 seconds
+   -- Promoted 13 MB to "from" space
+   -- Promoted 95 MB to "tenured" generation.
+      Why? Application only uses 64 MB at any time
+
+70.669: Application time: 0.1991270 seconds
+{Heap before GC invocations=312 (full 105):
+  eden space 109248K,  99% used [...
+  from space 13632K,  97% used [...
+ tenured generation   total 273088K, used 129279K [...
+70.669: [GC (Allocation Failure)
+   70.669: [DefNew: 121994K->13314K(122880K), 0.0338320 secs]
+Heap after GC invocations=313 (full 105):
+  eden space 109248K,   0% used [...
+  from space 13632K,  97% used [...
+ tenured generation   total 273088K, used 237827K [...
+}
+70.703: Total time for which application threads were stopped: 0.0341059 s
+   -- A Young GC in 0.0341059 seconds
+   -- Left "from" space unchanged
+   -- Promoted 108 MB to "tenured" generation.
+      Why? Application only uses 64 MB at any time
+```
+
+Conclusion:
+
+*   Serial Old GC is very efficient. It removed 325 MB from Young and Tenured generations in 0.0103349 seconds.
+*   Serial Young GC failed to remove any dead objects from Young generation. It copied all objects from "eden" space to "from" space and Tenured generation.
+*   The copy operation is not efficient. It used 0.0341059 seconds to copy 108 MB objects.
+*   Application ran about 0.2000567 seconds between GCs.
+
+See next tutorial on GC analysis with 800MB heap size.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Serial GC on 800MB Heap
+
+This section provides detailed analysis of Serial GC behavior on GCPerfP99.java with 800 MB heap memory.
+
+Now run GCPerfP99.java using 800 MB heap size with the Serial Collector and GC logging on an older computer with JDK 8:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms800m -Xmx800m
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -XX:+PrintReferenceGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 65 seconds
+   Total objects processed = 32000
+   Average time per run = 66 milliseconds
+   Throughput = 481 objects/second
+   Latency = 4385 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 481, 228)
+   Latency (min, ave, max) = (1438, 2079, 4385)
+...
+```
+
+Look at the application pause times. I see a clear pattern of repeating 3-GC cycles, Major-Minor-Minor:
+
+```
+ herong> more gc.log | find "application threads were stopped" > output.txt
+
+0.600: Total time for which application threads were stopped:
+   0.0312888 seconds, Stopping threads took: 0.0001182 seconds
+
+...
+66.146: ...stopped: 0.0182448 seconds, ...
+66.609: ...stopped: 0.0621190 seconds, ...
+67.069: ...stopped: 0.0612759 seconds, ...
+
+67.487: ...stopped: 0.0163129 seconds, ...
+67.942: ...stopped: 0.0555841 seconds, ...
+68.411: ...stopped: 0.0691879 seconds, ...
+
+68.829: ...stopped: 0.0175856 seconds, ...
+69.291: ...stopped: 0.0620597 seconds, ...
+69.753: ...stopped: 0.0617418 seconds, ...
+
+70.169: ...stopped: 0.0158688 seconds, ...
+70.623: ...stopped: 0.0536254 seconds, ...
+71.091: ...stopped: 0.0685241 seconds, ...
+...
+```
+
+Take a closer look at one 3-GC cycle:
+
+```
+ herong> more gc.log
+
+70.153: Application time: 0.3995088 seconds
+   -- Application ran 0.3995088 seconds since the last GC
+
+{Heap before GC invocations=156 (full 44):
+  eden space 218496K,  99% used [...
+  from space 27264K,  97% used [...
+ tenured generation   total 546176K, used 466186K [...
+70.153: [GC (Allocation Failure)
+   70.153: [DefNew: 245013K->245013K(245760K), 0.0000205 secs]
+   70.153: [Tenured: 466186K->55550K(546176K), 0.0155454 secs]
+Heap after GC invocations=157 (full 45):
+  eden space 218496K,   0% used [...
+  from space 27264K,   0% used [...
+ tenured generation   total 546176K, used 55550K [...
+}
+70.169: Total time for which application threads were stopped: 0.0158688 s
+   -- A Old GC (called "full" GC here) in 0.0158688 seconds
+   -- Removed 656 MB from Young and Tenured generations
+
+70.569: Application time: 0.4004841 seconds
+{Heap before GC invocations=157 (full 45):
+  eden space 218496K,  99% used [...
+  from space 27264K,   0% used [...
+ tenured generation   total 546176K, used 55550K [...
+70.569: [GC (Allocation Failure)
+   70.569: [DefNew: 218383K->26629K(245760K), 0.0533584 secs]
+Heap after GC invocations=158 (full 45):
+  eden space 218496K,   0% used [...
+  from space 27264K,  97% used [...
+ tenured generation   total 546176K, used 247041K [...
+}
+70.623: Total time for which application threads were stopped: 0.0536254 s
+   -- A Young GC in 0.0536254 seconds
+   -- Promoted 27 MB to "from" space
+   -- Promoted 192 MB to "tenured" generation.
+      Why? Application only uses 64 MB at any time
+
+71.022: Application time: 0.3994273 seconds
+{Heap before GC invocations=158 (full 45):
+  eden space 218496K,  99% used [...
+  from space 27264K,  97% used [...
+ tenured generation   total 546176K, used 247041K [...
+71.022: [GC (Allocation Failure)
+   71.022: [DefNew
+   71.090: [SoftReference, 0 refs, 0.0000418 secs]
+   71.090: [WeakReference, 0 refs, 0.0000098 secs]
+   71.090: [FinalReference, 0 refs, 0.0000098 secs]
+   71.090: [PhantomReference, 0 refs, 0 refs, 0.0000098 secs]
+   71.090: [JNI Weak Reference, 0.0000098 secs]
+Desired survivor size 13959168 bytes, new threshold 1 (max 15)
+- age   1:   27268504 bytes,   27268504 total
+: 245013K->26629K(245760K), 0.0683065 secs]
+   492055K->491791K(791936K), 0.0683675 secs]
+Heap after GC invocations=159 (full 45):
+  eden space 218496K,   0% used [...
+  from space 27264K,  97% used [...
+ tenured generation   total 546176K, used 465162K [...
+}
+71.091: Total time for which application threads were stopped: 0.0685241 s
+   -- A Young GC in 0.0685241 seconds
+   -- Left "from" space unchanged
+   -- Promoted 218 MB to "tenured" generation.
+      Why? Application only uses 64 MB at any time
+```
+
+Conclusion:
+
+*   Serial Old GC is very efficient. It removed 656 MB from Young and Tenured generations in 0.0103349 seconds.
+*   Serial Young GC failed to remove any dead objects from Young generation. It copied all objects from "eden" space to "from" space and Tenured generation.
+*   The copy operation is not efficient. It used 0.0685241 seconds to copy 218 MB objects.
+
+If we compare the GC pattern of both cases of 400 MB heap and 800 MB heap, we know why the latency is getting worse from 2941 ms to 4385 ms. This is caused by the longer Young GC durations from 0.034 ms to 0.069 ms.
+
+```
+ Heap Size   # of GC   Interval   Pattern             Durations (s)
+    400MB       320      0.2 s   Major-Minor-Minor   0.010-0.029-0.034
+    800MB       159      0.4 s   Major-Minor-Minor   0.016-0.054-0.069
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Serial GC on 1600MB Heap
+
+This section provides detailed analysis of Serial GC behavior on GCPerfP99.java with 1600 MB heap memory.
+
+Now run GCPerfP99.java using 1600 MB heap size with the Serial Collector and GC logging on an older computer with JDK 8.
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1600m -Xmx1600m
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -XX:+PrintReferenceGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 522 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 522, 410)
+   Latency (min, ave, max) = (1438, 1915, 2439)
+...
+```
+
+Look at the application pause times. I don't see any patterns.
+
+```
+ herong> more gc.log | find "application threads were stopped" > output.txt
+
+1.092: Total time for which application threads were stopped:
+   0.0235334 seconds, Stopping threads took: 0.0000260 seconds
+
+...
+55.975: ...stopped: 0.0160548 seconds, ...
+56.786: ...stopped: 0.0098609 seconds, ...
+57.598: ...stopped: 0.0120129 seconds, ...
+58.415: ...stopped: 0.0151986 seconds, ...
+59.235: ...stopped: 0.0212090 seconds, ...
+60.050: ...stopped: 0.0116741 seconds, ...
+60.861: ...stopped: 0.0141661 seconds, ...
+61.686: ...stopped: 0.0201783 seconds, ...
+62.501: ...stopped: 0.0107837 seconds, ...
+63.314: ...stopped: 0.0139319 seconds, ...
+64.134: ...stopped: 0.0183463 seconds, ...
+64.947: ...stopped: 0.0114808 seconds, ...
+```
+
+Take a closer look at some GC details:
+
+```
+ herong> more gc.log
+
+62.490: Application time: 0.8038607 seconds
+   -- Application ran 0.8038607 seconds since the last GC
+
+{Heap before GC invocations=75 (full 0):
+  eden space 436928K,  99% used [...
+  from space 54592K,  99% used [...
+ tenured generation   total 1092288K, used 128255K [...
+62.490: [GC (Allocation Failure)
+   62.490: [DefNew: 491040K->38913K(491520K), 0.0105256 secs]
+Heap after GC invocations=76 (full 0):
+  eden space 436928K,   0% used [...
+  from space 54592K,  71% used [...
+ tenured generation   total 1092288K, used 128255K [...
+}
+62.501: Total time for which application threads were stopped: 0.0107837 s
+   -- A Young GC in 0.0107837 seconds
+   -- Removed 453 MB dead objects
+   -- Nothing promoted to "tenured" generation.
+
+63.300: Application time: 0.7991489 seconds
+{Heap before GC invocations=76 (full 0):
+  eden space 436928K,  99% used [...
+  from space 54592K,  71% used [...
+ tenured generation   total 1092288K, used 128255K [...
+63.300: [GC (Allocation Failure)
+   63.300: [DefNew: 475680K->49153K(491520K), 0.0136968 secs]
+Heap after GC invocations=77 (full 0):
+  eden space 436928K,   0% used [...
+  from space 54592K,  90% used [...
+ tenured generation   total 1092288K, used 128255K [...
+}
+63.314: Total time for which application threads were stopped: 0.0139319 s
+   -- A Young GC in 0.0139319 seconds
+   -- Removed 426 MB dead objects
+   -- Nothing promoted to "tenured" generation.
+
+64.116: Application time: 0.8018543 seconds
+{Heap before GC invocations=77 (full 0):
+  eden space 436928K,  99% used [...
+  from space 54592K,  90% used [...
+ tenured generation   total 1092288K, used 128255K [...
+64.116: [GC (Allocation Failure)
+   64.116: [DefNew: 485920K->54274K(491520K), 0.0180796 secs]
+Heap after GC invocations=78 (full 0):
+  eden space 436928K,   0% used [...
+  from space 54592K,  99% used [...
+ tenured generation   total 1092288K, used 133375K [...
+}
+64.134: Total time for which application threads were stopped: 0.0183463 s
+   -- A Young GC in 0.0183463 seconds
+   -- Removed 431 MB dead objects
+   -- 5MB promoted to "tenured" generation.
+```
+
+Conclusion:
+
+*   No Serial Old GC performed. Tenured generation usage reached 133375K of 1092288K. But slowly growing.
+*   Serial Young GC worked properly.
+*   When copy 5MB to "tenured" generation, Serial Young GC used more time, from 0.0139319 to 0.0183463 seconds.
+
+If we compare the GC pattern of all cases, of 400 MB heap and 800 MB heap, we know why the latency is getting better from 4385 ms to 2439 ms. This is caused by the shorter Young GC durations from 0.069 ms to 0.018 ms. Young GC needs large survivor spaces to work properly.
+
+```
+ Heap Size   # of GC   Interval   Pattern             Durations (s)
+    400MB       320      0.2 s   Major-Minor-Minor   0.010-0.029-0.034
+    800MB       159      0.4 s   Major-Minor-Minor   0.016-0.054-0.069
+   1600MB        79      0.8 s   Minor-Minor-Minor   0.011-0.014-0.018
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Performance of Serial Young GC
+
+This section provides tests to find out performance impact of using Serial Young GC only with enough 'eden' and 'from' spaces. Increasing heap size will reduce Young GC frequency and improve throughput performance.
+
+Will my application perform better if I give enough Young generation space so the Serial collector will run Young GC only?
+
+Let's find out the answer by running GCPerfP99.java with JVM options to give enough space in "eden" and "from" to run Young GC without promoting any live objects to Tenured generation.
+
+**Test 1** - Use "-Xms600m -Xmx600m -XX:NewRatio=1 -XX:SurvivorRatio=1" to have 100MB "eden" space and 100MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms600m -Xmx600m
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 -Xlog:gc,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 11 milliseconds
+   Throughput = 2781 objects/second
+   Latency = 718 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 2781, 1391)
+   Latency (min, ave, max) = (187, 359, 718)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 23, 1391
+   Run, Time, Throughput = 992, 23, 1391
+   Run, Time, Throughput = 993, 24, 1333
+   Run, Time, Throughput = 994, 24, 1333
+   Run, Time, Throughput = 995, 24, 1333
+   Run, Time, Throughput = 996, 24, 1333
+   Run, Time, Throughput = 997, 24, 1333
+   Run, Time, Throughput = 998, 24, 1333
+   Run, Time, Throughput = 999, 24, 1333
+   Run, Time, Throughput = 1000, 25, 1280
+
+C:\herong> type gc.log
+...
+GC(343) DefNew: 135150K->35841K(204800K)
+GC(343) Tenured: 734K->734K(307200K)
+GC(343) Pause Young (Allocation Failure) 132M->35M(500M) 7.691ms
+GC(343) Heap after GC invocations=344 (full 0): def new generation...
+GC(343)   eden space 102400K,   0% used [...
+GC(343)   from space 102400K,  35% used [...
+GC(343)   to   space 102400K,   0% used [...
+GC(343)  tenured generation   total 307200K, used 734K [...
+GC(343)    the space 307200K,   0% used [...
+```
+
+**Test 2** - Use "-Xms1200m -Xmx1200m" to have 200MB "eden" space and 200MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms1200m -Xmx1200m
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 -Xlog:gc,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 10 seconds
+   Total objects processed = 32000
+   Average time per run = 10 milliseconds
+   Throughput = 3080 objects/second
+   Latency = 781 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 3080, 1280)
+   Latency (min, ave, max) = (187, 324, 781)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 25, 1280
+   Run, Time, Throughput = 992, 25, 1280
+   Run, Time, Throughput = 993, 27, 1185
+   Run, Time, Throughput = 994, 27, 1185
+   Run, Time, Throughput = 995, 27, 1185
+   Run, Time, Throughput = 996, 28, 1142
+   Run, Time, Throughput = 997, 30, 1066
+   Run, Time, Throughput = 998, 30, 1066
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 34, 941
+
+C:\herong> type gc.log
+...
+GC(170) DefNew: 268273K->37889K(409600K)
+GC(170) Tenured: 734K->734K(614400K)
+GC(170) Pause Young (Allocation Failure) 262M->37M(1000M) 6.991ms
+GC(170) Heap after GC invocations=171 (full 0): def new generation...
+GC(170)   eden space 204800K,   0% used [...
+GC(170)   from space 204800K,  18% used [...
+GC(170)   to   space 204800K,   0% used [...
+GC(170)  tenured generation   total 614400K, used 734K [...
+GC(170)    the space 614400K,   0% used [...
+```
+
+**Test 3** - Use "-Xms2400m -Xmx2400m" to have 400MB "eden" space and 400MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms2400m -Xmx2400m
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 -Xlog:gc,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 9 seconds
+   Total objects processed = 32000
+   Average time per run = 9 milliseconds
+   Throughput = 3495 objects/second
+   Latency = 718 milliseconds/1000 objects
+   Throughput (max, ave, min) = (4571, 3495, 1391)
+   Latency (min, ave, max) = (218, 286, 718)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 23, 1391
+   Run, Time, Throughput = 992, 23, 1391
+   Run, Time, Throughput = 993, 23, 1391
+   Run, Time, Throughput = 994, 23, 1391
+   Run, Time, Throughput = 995, 23, 1391
+   Run, Time, Throughput = 996, 24, 1333
+   Run, Time, Throughput = 997, 26, 1230
+   Run, Time, Throughput = 998, 26, 1230
+   Run, Time, Throughput = 999, 29, 1103
+   Run, Time, Throughput = 1000, 32, 1000
+
+C:\herong> type gc.log
+...
+C(84) DefNew: 473076K->46081K(819200K)
+C(84) Tenured: 734K->734K(1228800K)
+C(84) Pause Young (Allocation Failure) 462M->45M(2000M) 8.708ms
+C(84) Heap after GC invocations=85 (full 0): def new generation...
+C(84)   eden space 409600K,   0% used [...
+C(84)   from space 409600K,  11% used [...
+C(84)   to   space 409600K,   0% used [...
+C(84)  tenured generation   total 1228800K, used 734K [...
+C(84)    the space 1228800K,   0% used [...
+```
+
+**Test 4** - Use "-Xms4800m -Xmx4800m" to have 800MB "eden" space and 800MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms4800m -Xmx4800m
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 -Xlog:gc,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 8 seconds
+   Total objects processed = 32000
+   Average time per run = 8 milliseconds
+   Throughput = 3659 objects/second
+   Latency = 656 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 3659, 1523)
+   Latency (min, ave, max) = (187, 273, 656)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 21, 1523
+   Run, Time, Throughput = 992, 21, 1523
+   Run, Time, Throughput = 993, 22, 1454
+   Run, Time, Throughput = 994, 22, 1454
+   Run, Time, Throughput = 995, 23, 1391
+   Run, Time, Throughput = 996, 23, 1391
+   Run, Time, Throughput = 997, 24, 1333
+   Run, Time, Throughput = 998, 30, 1066
+   Run, Time, Throughput = 999, 31, 1032
+   Run, Time, Throughput = 1000, 65, 492
+
+C:\herong> type gc.log
+...
+GC(41) DefNew: 881643K->61442K(1638400K)
+GC(41) Tenured: 734K->734K(2457600K)
+GC(41) Pause Young (Allocation Failure) 861M->60M(4000M) 11.680ms
+GC(41) Heap after GC invocations=42 (full 0): def new generation...
+GC(41)   eden space 819200K,   0% used [...
+GC(41)   from space 819200K,   7% used [...
+GC(41)   to   space 819200K,   0% used [...
+GC(41)  tenured generation   total 2457600K, used 734K [...
+GC(41)    the space 2457600K,   0% used [...
+```
+
+**Comparison of test results**:
+
+```
+ Eden/From      Throughput       Latency
+   Minor    Ave (Max, Min)/s    ms/1000
+
+   100 MB   2781 (5333, 1391)       718
+   200 MB   3080 (5333, 1280)       781
+   400 MB   3495 (4571, 1391)       718
+   800 MB   3659 (5333, 1523)       656
+```
+
+Takeaways:
+
+*   With enough "eden" and "from" spaces, it is possible to run Serial collector with Young GC only.
+*   When "eden" and "from" spaces are increased, throughput performance is getting better, because Young GCs are performed less frequently.
+*   Latency stays about the same. This tells us that the Serial Young GC uses about the sample amount of time to process new objects in "eden" of 100 MB, 200 MB, 400 MB, and 800 MB.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Eden/From      Throughput       Latency
+   Minor    Ave (Max, Min)/s    ms/1000
+
+   100 MB   493 (695, 400)         2500
+   200 MB   512 (695, 410)         2439
+   400 MB   522 (695, 410)         2439
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Object Size Impact on Serial Young GC
+
+This section provides tests to find out performance impact of object size on Serial Young GC.
+
+In the last tutorial, we learned that the Serial Young GC has the best performance if we give enough Young generation space.
+
+In this tutorial, I recorded tests performed on an older computer with JDK 8 to find out the performance impact of object size with Serial Young GC.
+
+**Test 1** - Test with object size of 1024K using enough Young generation for Young GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 522 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 522, 410)
+   Latency (min, ave, max) = (1438, 1915, 2439)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 410
+   Run, Time, Throughput = 992, 78, 410
+   Run, Time, Throughput = 993, 78, 410
+   Run, Time, Throughput = 994, 78, 410
+   Run, Time, Throughput = 995, 93, 344
+   Run, Time, Throughput = 996, 93, 344
+   Run, Time, Throughput = 997, 93, 344
+   Run, Time, Throughput = 998, 93, 344
+   Run, Time, Throughput = 999, 94, 340
+   Run, Time, Throughput = 1000, 140, 228
+
+herong> more gc.log
+...
+{Heap before GC invocations=83 (full 0):
+  eden space 409600K,  99% used [...
+  from space 409600K,  11% used [...
+ tenured generation   total 307200K, used 253K [...
+65.131: [GC (Allocation Failure)
+   65.131: [DefNew: 454643K->60418K(819200K), 0.0166990 secs]
+Heap after GC invocations=84 (full 0):
+  eden space 409600K,   0% used [...
+  from space 409600K,  14% used [...
+ tenured generation   total 307200K, used 253K [...
+}
+```
+
+**Test 2** - Test with object size of 512K using enough Young generation for Young GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 512 64 64 64 1000
+
+Parameters:
+   Size=512KB, Base=64, Chunk=64, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 64000
+   Average time per run = 61 milliseconds
+   Throughput = 1041 objects/second
+   Latency = 1219 milliseconds/1000 objects
+   Throughput (max, ave, min) = (1391, 1041, 820)
+   Latency (min, ave, max) = (718, 960, 1219)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 820
+   Run, Time, Throughput = 992, 78, 820
+   Run, Time, Throughput = 993, 78, 820
+   Run, Time, Throughput = 994, 78, 820
+   Run, Time, Throughput = 995, 78, 820
+   Run, Time, Throughput = 996, 78, 820
+   Run, Time, Throughput = 997, 93, 688
+   Run, Time, Throughput = 998, 93, 688
+   Run, Time, Throughput = 999, 93, 688
+   Run, Time, Throughput = 1000, 1294, 49
+
+herong> more gc.log
+...
+{Heap before GC invocations=83 (full 0):
+  eden space 409600K,  99% used [...
+  from space 409600K,  13% used [...
+ tenured generation   total 307200K, used 253K [...
+66.191: [GC (Allocation Failure)
+   66.191: [DefNew: 462854K->36354K(819200K), 0.0107095 secs]
+Heap after GC invocations=84 (full 0):
+  eden space 409600K,   0% used [...
+  from space 409600K,   8% used [...
+ tenured generation   total 307200K, used 253K [...
+}
+```
+
+**Test 3** - Test with object size of 256K using enough Young generation for Young GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 256 128 128 64 1000
+
+Parameters:
+   Size=256KB, Base=128, Chunk=128, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 64000
+   Average time per run = 61 milliseconds
+   Throughput = 2092 objects/second
+   Latency = 609 milliseconds/1000 objects
+   Throughput (max, ave, min) = (2782, 2092, 1641)
+   Latency (min, ave, max) = (359, 478, 609)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 1641
+   Run, Time, Throughput = 992, 78, 1641
+   Run, Time, Throughput = 993, 78, 1641
+   Run, Time, Throughput = 994, 78, 1641
+   Run, Time, Throughput = 995, 79, 1620
+   Run, Time, Throughput = 996, 93, 1376
+   Run, Time, Throughput = 997, 94, 1361
+   Run, Time, Throughput = 998, 94, 1361
+   Run, Time, Throughput = 999, 110, 1163
+   Run, Time, Throughput = 1000, 748, 171
+
+herong> more gc.log
+...
+{Heap before GC invocations=83 (full 0):
+  eden space 409600K,  99% used [...
+  from space 409600K,  10% used [...
+ tenured generation   total 307200K, used 253K [...
+65.919: [GC (Allocation Failure)
+   65.919: [DefNew: 451866K->58376K(819200K), 0.0160117 secs]
+Heap after GC invocations=84 (full 0):
+  eden space 409600K,   0% used [...
+  from space 409600K,  14% used [...
+ tenured generation   total 307200K, used 253K [...
+}
+```
+
+**Test 4** - Test with object size of 128K using enough Young generation for Young GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 128 256 256 64 1000
+
+Parameters:
+   Size=128KB, Base=256, Chunk=256, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 64000
+   Average time per run = 61 milliseconds
+   Throughput = 4172 objects/second
+   Latency = 304 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5565, 4172, 3282)
+   Latency (min, ave, max) = (179, 239, 304)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 3282
+   Run, Time, Throughput = 992, 78, 3282
+   Run, Time, Throughput = 993, 78, 3282
+   Run, Time, Throughput = 994, 78, 3282
+   Run, Time, Throughput = 995, 78, 3282
+   Run, Time, Throughput = 996, 78, 3282
+   Run, Time, Throughput = 997, 78, 3282
+   Run, Time, Throughput = 998, 94, 2723
+   Run, Time, Throughput = 999, 94, 2723
+   Run, Time, Throughput = 1000, 110, 2327
+
+herong> more gc.log
+...
+{Heap before GC invocations=84 (full 0):
+  eden space 409600K, 100% used [...
+  from space 409600K,   8% used [...
+ tenured generation   total 307200K, used 253K [...
+64.876: [GC (Allocation Failure)
+   64.876: [DefNew: 445450K->45838K(819200K), 0.0127232 secs]
+Heap after GC invocations=85 (full 0):
+  eden space 409600K,   0% used [...
+  from space 409600K,  11% used [...
+ tenured generation   total 307200K, used 253K [...
+}
+```
+
+**Comparison of test results**:
+
+```
+ Object      Throughput       Latency
+     Size   Ave (Max, Min)/s    ms/1000
+
+    128 K   4172 (5565, 3282)       304
+    256 K   2092 (2782, 1641)       609
+    512 K   1041 (1391,  820)      1219
+   1024 K    522 ( 695,  410)      2439
+```
+
+If we normalize the work unit to 1024K (or 1M) data instead of object, we have:
+
+```
+ Object   Throughput     Latency
+     Size          M/s   ms/1000 M
+
+    128 K          522        2432
+    256 K          523        2436
+    512 K          521        2438
+   1024 K          522        2439
+```
+
+Takeaways: Serial Young GC is very consistent with both throughput and latency on collecting largest objects and small objects. It will collect the same amount of data within the same amount of time, regardless object size.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Chunk Size Impact on Serial Young GC
+
+This section provides tests to find out performance impact of chunk size (number of objects to be created and released in each run) on Serial collector.
+
+What will be the performance impact on the Serial collector, if we change the chunk size (the number of objects to be created and released in each test run)?
+
+In this tutorial, I recorded tests performed on an older computer with JDK 8 to find out the performance impact of chunk size with Serial Young GC.
+
+**Test 1** - Test with chunk size of 16 objects using enough heap space with the Serial collector:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 16 128 2000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=16, Warmup=128, Runs=2000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 32000
+   Average time per run = 30 milliseconds
+   Throughput = 524 objects/second
+   Latency = 2941 milliseconds/1000 objects
+   Throughput (max, ave, min) = (1066, 522, 340)
+   Latency (min, ave, max) = (938, 1908, 2941)
+1% worst runs dropped:
+   Run, Time, Throughput = 1981, 47, 340
+   ...
+   Run, Time, Throughput = 1998, 47, 340
+   Run, Time, Throughput = 1999, 63, 253
+   Run, Time, Throughput = 2000, 3791, 4
+```
+
+**Test 2** - Test with chunk size of 32 objects using enough heap space with the Serial collector:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 522 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 522, 410)
+   Latency (min, ave, max) = (1438, 1915, 2439)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 410
+   Run, Time, Throughput = 992, 78, 410
+   Run, Time, Throughput = 993, 78, 410
+   Run, Time, Throughput = 994, 78, 410
+   Run, Time, Throughput = 995, 78, 410
+   Run, Time, Throughput = 996, 78, 410
+   Run, Time, Throughput = 997, 78, 410
+   Run, Time, Throughput = 998, 93, 344
+   Run, Time, Throughput = 999, 93, 344
+   Run, Time, Throughput = 1000, 94, 340
+```
+
+**Test 3** - Test with chunk size of 64 objects using enough heap space to use Serial Young GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 64 32 500
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=64, Warmup=32, Runs=500
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 123 milliseconds
+   Throughput = 518 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (587, 518, 410)
+   Latency (min, ave, max) = (1703, 1930, 2439)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 156, 410
+   Run, Time, Throughput = 992, 156, 410
+   Run, Time, Throughput = 993, 156, 410
+   Run, Time, Throughput = 994, 172, 372
+   Run, Time, Throughput = 995, 172, 372
+```
+
+**Comparison of test results**:
+
+```
+ Chunk      Throughput       Latency
+     Size   Ave (Max, Min)/s    ms/1000
+
+   16 obj   524 (1066, 340)        2941
+   32 obj   522 ( 695, 410)        2439
+   64 obj   518 ( 587, 410)        2439
+```
+
+Takeaways: Serial Young GC is very consistent with both throughput and latency on different chunk sizes. This confirms that the number of objects created and released at each run does not impact the GC performance.
+
+Notice that when we use chunk size of 16 objects, the best throughput increased 1066 objects per second, more than 2 times of the normal throughput value. This is a result from those strange performance jumps in some test runs we have identified in previous tutorials.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Performance of Serial Full GC
+
+This section provides tests to find out performance impact of using more Serial FUll GC with enough tenured generation and '-XX:MaxTenuringThreshold=0' JVM option. Increasing heap size will reduce GC frequency and improve throughput performance.
+
+Will my application perform better if I force Young GC promoting live objects to "tenured" generation directly, skipping "from" space so the Serial collector will run more Old GCs?
+
+Let's find out the answer by running GCPerfP99.java with "-XX:MaxTenuringThreshold=0" JVM option.
+
+**Test 1** - Use "-Xms400m -Xmx400m -XX:NewSize=300m -XX:SurvivorRatio=1" to have 100MB "eden" space and 100MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms400m -Xmx400m
+   -XX:NewSize=300m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+    -Xlog:gc,gc+heap=debug:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2538 objects/second
+   Latency = 843 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 2538, 1185)
+   Latency (min, ave, max) = (187, 394, 843)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 27, 1185
+   Run, Time, Throughput = 992, 28, 1142
+   Run, Time, Throughput = 993, 29, 1103
+   Run, Time, Throughput = 994, 29, 1103
+   Run, Time, Throughput = 995, 30, 1066
+   Run, Time, Throughput = 996, 32, 1000
+   Run, Time, Throughput = 997, 32, 1000
+   Run, Time, Throughput = 998, 33, 969
+   Run, Time, Throughput = 999, 34, 941
+   Run, Time, Throughput = 1000, 37, 864
+
+herong> more gc.log
+...
+GC(622) Pause Full (Allocation Failure) 132M->35M(300M) 9.973ms
+GC(621) DefNew: 102381K->0K(204800K)
+GC(621) Tenured: 33503K->36575K(102400K)
+GC(621) Pause Young (Allocation Failure) 132M->35M(300M) 10.080ms
+GC(621) Heap after GC invocations=312 (full 311): def new generation...
+GC(621)   eden space 102400K,   0% used [...
+GC(621)   from space 102400K,   0% used [...
+GC(621)   to   space 102400K,   0% used [...
+GC(621)  tenured generation   total 102400K, used 36575K [...
+GC(621)    the space 102400K,  35% used [...
+```
+
+**Test 2** - Use "-Xms800m -Xmx800m -XX:NewSize=600m -XX:SurvivorRatio=1" to have 200MB "eden" space and 200MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms800m -Xmx800m
+   -XX:NewSize=600m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+    -Xlog:gc,gc+heap=debug:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 10 seconds
+   Total objects processed = 32000
+   Average time per run = 10 milliseconds
+   Throughput = 3099 objects/second
+   Latency = 781 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5333, 3099, 1280)
+   Latency (min, ave, max) = (187, 322, 781)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 26, 1230
+   Run, Time, Throughput = 992, 26, 1230
+   Run, Time, Throughput = 993, 26, 1230
+   Run, Time, Throughput = 994, 26, 1230
+   Run, Time, Throughput = 995, 27, 1185
+   Run, Time, Throughput = 996, 28, 1142
+   Run, Time, Throughput = 997, 30, 1066
+   Run, Time, Throughput = 998, 31, 1032
+   Run, Time, Throughput = 999, 55, 581
+   Run, Time, Throughput = 1000, 58, 551
+
+herong> more gc.log
+...
+GC(340) Pause Full (Allocation Failure) 262M->37M(600M) 9.774ms
+GC(339) DefNew: 204783K->0K(409600K)
+GC(339) Tenured: 64224K->38623K(204800K)
+GC(339) Pause Young (Allocation Failure) 262M->37M(600M) 9.875ms
+GC(339) Heap after GC invocations=171 (full 170): def new generation ...
+GC(339)   eden space 204800K,   0% used [...
+GC(339)   from space 204800K,   0% used [...
+GC(339)   to   space 204800K,   0% used [...
+```
+
+**Test 3** - Use "-Xms1600m -Xmx1600m -XX:NewSize=1200m -XX:SurvivorRatio=1" to have 400MB "eden" space and 400MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms1600m -Xmx1600m
+    -XX:NewSize=1200m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+    -Xlog:gc,gc+heap=debug:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 9 seconds
+   Total objects processed = 32000
+   Average time per run = 9 milliseconds
+   Throughput = 3292 objects/second
+   Latency = 813 milliseconds/1000 objects
+   Throughput (max, ave, min) = (4571, 3292, 1230)
+   Latency (min, ave, max) = (218, 303, 813)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 26, 1230
+   Run, Time, Throughput = 992, 26, 1230
+   Run, Time, Throughput = 993, 26, 1230
+   Run, Time, Throughput = 994, 27, 1185
+   Run, Time, Throughput = 995, 27, 1185
+   Run, Time, Throughput = 996, 28, 1142
+   Run, Time, Throughput = 997, 31, 1032
+   Run, Time, Throughput = 998, 32, 1000
+   Run, Time, Throughput = 999, 108, 296
+   Run, Time, Throughput = 1000, 117, 273
+
+herong> more gc.log
+...
+GC(168) Pause Full (Allocation Failure) 462M->45M(1200M) 11.152ms
+GC(167) DefNew: 409585K->0K(819200K)
+GC(167) Tenured: 64224K->46816K(409600K)
+GC(167) Pause Young (Allocation Failure) 462M->45M(1200M) 11.260ms
+GC(167) Heap after GC invocations=85 (full 84): def new generation ...
+GC(167)   eden space 409600K,   0% used [...
+GC(167)   from space 409600K,   0% used [...
+GC(167)   to   space 409600K,   0% used [...
+GC(167)  tenured generation   total 409600K, used 46816K [...
+GC(167)    the space 409600K,  11% used [...
+```
+
+**Test 4** - Use "-Xms3200m -Xmx3200m -XX:NewSize=2400m -XX:SurvivorRatio=1" to have 800MB "eden" space and 800MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms3200m -Xmx3200m
+    -XX:NewSize=2400m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+    -Xlog:gc,gc+heap=debug:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 9 seconds
+   Total objects processed = 32000
+   Average time per run = 10 milliseconds
+   Throughput = 3196 objects/second
+   Latency = 1126 milliseconds/1000 objects
+   Throughput (max, ave, min) = (4571, 3196, 888)
+   Latency (min, ave, max) = (218, 312, 1126)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 65, 492
+   Run, Time, Throughput = 992, 67, 477
+   Run, Time, Throughput = 993, 75, 426
+   Run, Time, Throughput = 994, 103, 310
+   Run, Time, Throughput = 995, 123, 260
+   Run, Time, Throughput = 996, 141, 226
+   Run, Time, Throughput = 997, 141, 226
+   Run, Time, Throughput = 998, 152, 210
+   Run, Time, Throughput = 999, 201, 159
+   Run, Time, Throughput = 1000, 452, 70
+
+herong> more gc.log
+...
+GC(82) Pause Full (Allocation Failure) 861M->60M(2400M) 16.002ms
+GC(81) DefNew: 819177K->0K(1638400K)
+GC(81) Tenured: 63200K->62176K(819200K)
+GC(81) Pause Young (Allocation Failure) 861M->60M(2400M) 16.104ms
+GC(81) Heap after GC invocations=42 (full 41): def new generation ...
+GC(81)   eden space 819200K,   0% used [...
+GC(81)   from space 819200K,   0% used [...
+GC(81)   to   space 819200K,   0% used [...
+GC(81)  tenured generation   total 819200K, used 62176K [...
+GC(81)    the space 819200K,   7% used [...
+```
+
+**Test 5** - Use "-Xms6400m -Xmx6400m -XX:NewSize=4800m -XX:SurvivorRatio=1" to have 1600MB "eden" space and 1600MB "tenured" generation. This test may not be valid, because my Windows system may use virtual memory, if it runs out free physical memory.
+
+```
+ C:\herong>start /realtime java -XX:+UseSerialGC -Xms6400m -Xmx6400m
+    -XX:NewSize=4800m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+    -Xlog:gc,gc+heap=debug:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 9 seconds
+   Total objects processed = 32000
+   Average time per run = 9 milliseconds
+   Throughput = 3427 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 3427, 1032)
+   Latency (min, ave, max) = (1, 291, 968)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 31, 1032
+   Run, Time, Throughput = 992, 32, 1000
+   Run, Time, Throughput = 993, 32, 1000
+   Run, Time, Throughput = 994, 32, 1000
+   Run, Time, Throughput = 995, 32, 1000
+   Run, Time, Throughput = 996, 47, 680
+   Run, Time, Throughput = 997, 110, 290
+   Run, Time, Throughput = 998, 344, 93
+   Run, Time, Throughput = 999, 828, 38
+   Run, Time, Throughput = 1000, 2905, 11
+
+herong> more gc.log
+...
+GC(40) Pause Full (Allocation Failure) 1685M->32M(4800M) 62.564ms
+GC(39) DefNew: 1638331K->0K(3276800K)
+GC(39) Tenured: 87777K->33503K(1638400K)
+GC(39) Pause Young (Allocation Failure) 1685M->32M(4800M) 66.492ms
+GC(39) Heap after GC invocations=21 (full 20): def new generation...
+GC(39)   eden space 1638400K,   0% used [...
+GC(39)   from space 1638400K,   0% used [...
+GC(39)   to   space 1638400K,   0% used [...
+GC(39)  tenured generation   total 1638400K, used 33503K [...
+GC(39)    the space 1638400K,   2% used [...
+```
+
+**Test result summary:**
+
+```
+ Tenured       Throughput      Latency
+   Old GC    Ave (Max, Min)/s   ms/1000
+---------   -----------------   -------
+   100 MB   2538 (5333, 1185)       843
+   200 MB   3099 (5333, 1280)       781
+   400 MB   3292 (5333, 1230)       813
+   800 MB   3196 (5333,  888)      1126
+  1600 MB   3427 (9999, 1032)       968
+```
+
+Takeaways:
+
+*   With "-XX:MaxTenuringThreshold=0" JVM option, it is possible to run Serial collector with more Full GC by skipping "from" space.
+*   When "tenured" generation size is increased, throughput performance is getting better, because GCs are performed less frequently.
+*   Latency stays about the same, when "tenured" generation size is increased. This tells us that the Serial Old GC uses about the same amount of time to process new objects in "eden" of 100 MB to 1600 MB.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Tenured      Throughput       Latency
+ Old GC   Ave (Max, Min)/s    ms/1000
+
+   100 MB   491 (695, 344)         2906
+   200 MB   510 (695, 410)         2439
+   400 MB   520 (695, 410)         2439
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Serial Full GC on 1600MB Tenured Space
+
+This section provides detailed analysis of combinations of Young GC and Full GC performed by the Serial garbage collector running GCPerfP99.java with 1600 MB tenured space.
+
+In order to understand the performance impact of Serial Full GC, I reviewed the combined output from my program and from GC as shown below. This test may not be valid, because my Windows system may use virtual memory, if it runs out free physical memory.
+
+```
+ herong> java -XX:+UseSerialGC -Xms6400m -Xmx6400m \
+   -XX:NewSize=4800m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0 \
+   -Xlog:gc,gc+start GCPerfP99 1024 32 32 64 1000 > output.txt
+
+herong> more output.txt
+
+[0.333s][info][gc] Using Serial
+[0.0s] main() started
+   -- my clock started at least 0.333 late.
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+[1.327s]GC(0) Pause Young (Allocation Failure)
+[1.355s]GC(0) Pause Young (Allocation Failure) 1599M->61M(4800M) 28.585ms
+   -- my app paused for 0.029s
+
+[1.063s] Run start 1
+[1.078s] Run end 1: 15ms
+[1.094s] Run start 2
+[1.094s] Run end 2: 16ms
+[1.094s] Run start 3
+[1.109s] Run end 3: 15ms
+[1.109s] Run start 4
+[1.109s] Run end 4: 0ms
+   -- run ended less than 1ms
+
+[1.109s] Run start 5
+[1.125s] Run end 5: 16ms
+[1.125s] Run start 6
+[1.125s] Run end 6: 0ms
+[1.125s] Run start 7
+[1.141s] Run end 7: 16ms
+[1.141s] Run start 8
+[1.141s] Run end 8: 0ms
+...
+[1.328s] Run start 33
+[1.328s] Run end 33: 0ms
+   -- time spent: 0.265s = 1.328s - 1.063s, for run 1 to 33
+
+[1.328s] Run start 34
+   -- my app paused
+
+[1.752s]GC(1) Pause Young (Allocation Failure)
+[2.688s]GC(2) Pause Full (Allocation Failure)
+[2.706s]GC(2) Pause Full (Allocation Failure) 3199M->116M(4800M) 18.227ms
+[2.706s]GC(1) Pause Young (Allocation Failure) 1661M->116M(4800M) 954.111ms
+   -- Young GC called Full GC and ended together
+
+[2.297s] Run end 34: 969ms
+   -- time spent: 0.014s = 0.969s - 0.955s, for run 34
+
+[2.297s] Run start 35
+[2.312s] Run end 35: 15ms
+[2.312s] Run start 36
+[2.312s] Run end 36: 0ms
+...
+[2.703s] Run start 82
+[2.703s] Run end 82: 16ms
+   -- time spent: 0.406s = 2.703s - 2.297s, for run 35 to 82
+
+[2.703s] Run start 83
+[3.124s]GC(3) Pause Young (Allocation Failure)
+[3.124s]GC(4) Pause Full (Allocation Failure)
+[3.134s]GC(4) Pause Full (Allocation Failure) 1716M->114M(4800M) 9.965ms
+[3.134s]GC(3) Pause Young (Allocation Failure) 1716M->114M(4800M) 10.059ms
+[2.718s] Run end 83: 15ms
+   -- another Young GC combined with Full GC
+...
+```
+
+If we look at all Young GC log lines, we see that most of them took about 13ms:
+
+```
+ C:\herong> find "Pause Young" output.txt
+
+GC(0) Pause Young (Allocation Failure) 1599M->61M(4800M) 28.585ms
+GC(1) Pause Young (Allocation Failure) 1661M->116M(4800M) 954.111ms
+GC(3) Pause Young (Allocation Failure) 1716M->114M(4800M) 10.059ms
+GC(5) Pause Young (Allocation Failure) 1714M->138M(4800M) 15.745ms
+GC(7) Pause Young (Allocation Failure) 1738M->37M(4800M) 10.260ms
+GC(9) Pause Young (Allocation Failure) 1636M->133M(4800M) 341.447ms
+GC(11) Pause Young (Allocation Failure) 1733M->96M(4800M) 14.749ms
+GC(13) Pause Young (Allocation Failure) 1696M->95M(4800M) 13.926ms
+GC(15) Pause Young (Allocation Failure) 1695M->56M(4800M) 20.117ms
+GC(17) Pause Young (Allocation Failure) 1656M->111M(4800M) 14.351ms
+GC(19) Pause Young (Allocation Failure) 1711M->54M(4800M) 14.546ms
+GC(21) Pause Young (Allocation Failure) 1654M->107M(4800M) 13.770ms
+GC(23) Pause Young (Allocation Failure) 1707M->52M(4800M) 13.528ms
+GC(25) Pause Young (Allocation Failure) 1652M->103M(4800M) 13.727ms
+GC(27) Pause Young (Allocation Failure) 1703M->102M(4800M) 17.778ms
+GC(29) Pause Young (Allocation Failure) 1702M->101M(4800M) 13.672ms
+GC(31) Pause Young (Allocation Failure) 1701M->48M(4800M) 13.273ms
+GC(33) Pause Young (Allocation Failure) 1647M->94M(4800M) 17.435ms
+GC(35) Pause Young (Allocation Failure) 1694M->43M(4800M) 12.204ms
+GC(37) Pause Young (Allocation Failure) 1643M->107M(4800M) 1429.195ms
+GC(39) Pause Young (Allocation Failure) 1707M->41M(4800M) 20.280ms
+```
+
+Note that all Young GCs were combinations of Young GC and Full GC in this test.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Object Size Impact on Serial Old GC
+
+This section provides tests to find out performance impact of object size on Serial Old GC.
+
+In the last tutorial, we learned that the Serial Old GC has the best performance if we give enough Tenured generation space, and always promote objects to Tenured generation directly.
+
+In this tutorial, let's find out the performance impact of object size with Serial Old GC on an older computer with JDK 8.
+
+**Test 1** - Test with object size of 1024K using enough Tenured generation for Old GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -XX:MaxTenuringThreshold=0
+   -Xms1600m -Xmx1600m -XX:Newsize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 520 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 520, 410)
+   Latency (min, ave, max) = (1438, 1923, 2439)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 410
+   Run, Time, Throughput = 992, 78, 410
+   Run, Time, Throughput = 993, 78, 410
+   Run, Time, Throughput = 994, 78, 410
+   Run, Time, Throughput = 995, 93, 344
+   Run, Time, Throughput = 996, 93, 344
+   Run, Time, Throughput = 997, 94, 340
+   Run, Time, Throughput = 998, 94, 340
+   Run, Time, Throughput = 999, 171, 187
+   Run, Time, Throughput = 1000, 187, 171
+
+herong> more gc.log
+...
+{Heap before GC invocations=83 (full 82):
+  eden space 409600K,  99% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 45310K [...
+65.289: [GC (Allocation Failure)
+   65.289: [DefNew: 409586K->409586K(819200K), 0.0000188 secs]
+   65.289: [Tenured: 45310K->60670K(409600K), 0.0163693 secs]
+Heap after GC invocations=84 (full 83):
+  eden space 409600K,   0% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 60670K [...
+}
+```
+
+**Test 2** - Test with object size of 512K using enough Tenured generation for Old GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -XX:MaxTenuringThreshold=0
+   -Xms1600m -Xmx1600m -XX:Newsize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 512 64 64 64 1000
+
+Parameters:
+   Size=512KB, Base=64, Chunk=64, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 64000
+   Average time per run = 61 milliseconds
+   Throughput = 1040 objects/second
+   Latency = 1219 milliseconds/1000 objects
+   Throughput (max, ave, min) = (1391, 1040, 820)
+   Latency (min, ave, max) = (718, 961, 1219)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 820
+   Run, Time, Throughput = 992, 78, 820
+   Run, Time, Throughput = 993, 78, 820
+   Run, Time, Throughput = 994, 93, 688
+   Run, Time, Throughput = 995, 83, 688
+   Run, Time, Throughput = 996, 94, 680
+   Run, Time, Throughput = 997, 94, 680
+   Run, Time, Throughput = 998, 94, 680
+   Run, Time, Throughput = 999, 187, 342
+   Run, Time, Throughput = 1000, 188, 340
+
+herong> more gc.log
+...
+{Heap before GC invocations=83 (full 82):
+  eden space 409600K,  99% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 54016K [...
+65.540: [GC (Allocation Failure)
+   65.540: [DefNew: 409090K->409090K(819200K), 0.0000205 secs]
+   65.540: [Tenured: 54016K->36607K(409600K), 0.0101267 secs]
+Heap after GC invocations=84 (full 83):
+  eden space 409600K,   0% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 36607K [...
+}
+```
+
+**Test 3** - Test with object size of 256K using enough Tenured generation for Old GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -XX:MaxTenuringThreshold=0
+   -Xms1600m -Xmx1600m -XX:Newsize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 256 128 128 64 1000
+
+Parameters:
+   Size=256KB, Base=128, Chunk=128, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 64000
+   Average time per run = 61 milliseconds
+   Throughput = 2075 objects/second
+   Latency = 648 milliseconds/1000 objects
+   Throughput (max, ave, min) = (2782, 2075, 1542)
+   Latency (min, ave, max) = (359, 481, 648)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 83, 1454
+   Run, Time, Throughput = 992, 93, 1376
+   Run, Time, Throughput = 993, 93, 1376
+   Run, Time, Throughput = 994, 93, 1376
+   Run, Time, Throughput = 995, 93, 1376
+   Run, Time, Throughput = 996, 94, 1361
+   Run, Time, Throughput = 997, 94, 1361
+   Run, Time, Throughput = 998, 141, 907
+   Run, Time, Throughput = 999, 187, 684
+   Run, Time, Throughput = 1000, 202, 633
+
+herong> more gc.log
+...
+{Heap before GC invocations=83 (full 82):
+  eden space 409600K,  99% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 42755K [...
+65.828: [GC (Allocation Failure)
+   65.828: [DefNew: 409364K->409364K(819200K), 0.0000205 secs]
+   65.828: [Tenured: 42755K->58629K(409600K), 0.0163803 secs]
+Heap after GC invocations=84 (full 83):
+  eden space 409600K,   0% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 58629K [...
+}
+```
+
+**Test 4** - Test with object size of 128K using enough Tenured generation for Young GC only:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseSerialGC -XX:MaxTenuringThreshold=0
+   -Xms1600m -Xmx1600m -XX:Newsize=1200m -XX:SurvivorRatio=1
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 128 256 256 64 1000
+
+Parameters:
+   Size=128KB, Base=256, Chunk=256, Warmup=64, Runs=1000
+Results:
+   Total execution time = 60 seconds
+   Total objects processed = 64000
+   Average time per run = 60 milliseconds
+   Throughput = 4222 objects/second
+   Latency = 304 milliseconds/1000 objects
+   Throughput (max, ave, min) = (5565, 4222, 3282)
+   Latency (min, ave, max) = (179, 236, 304)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 3282
+   Run, Time, Throughput = 992, 78, 3282
+   Run, Time, Throughput = 993, 93, 2752
+   Run, Time, Throughput = 994, 93, 2752
+   Run, Time, Throughput = 995, 93, 2752
+   Run, Time, Throughput = 996, 94, 3282
+   Run, Time, Throughput = 997, 94, 3282
+   Run, Time, Throughput = 998, 94, 2723
+   Run, Time, Throughput = 999, 94, 2723
+   Run, Time, Throughput = 1000, 172, 1488
+
+herong> more gc.log
+...
+{Heap before GC invocations=83 (full 82):
+  eden space 409600K, 100% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 64532K [...
+66.694: [GC (Allocation Failure)
+   66.694: [DefNew: 409600K->409600K(819200K), 0.0000196 secs]
+   66.694: [Tenured: 64532K->48399K(409600K), 0.0157225 secs]
+Heap after GC invocations=84 (full 83):
+  eden space 409600K,   0% used [...
+  from space 409600K,   0% used [...
+ tenured generation   total 409600K, used 48399K [...
+}
+```
+
+**Comparison of test results**:
+
+```
+ Object      Throughput       Latency
+     Size   Ave (Max, Min)/s    ms/1000
+
+    128 K   4222 (5565, 3282)       304
+    256 K   2075 (2782, 1542)       648
+    512 K   1040 (1391,  820)      1219
+   1024 K    522 ( 695,  410)      2439
+```
+
+If we normalize the work unit to 1024K (or 1M) data instead of object, we have:
+
+```
+ Object   Throughput     Latency
+     Size          M/s   ms/1000 M
+
+    128 K          528        2432
+    256 K          519        2592
+    512 K          520        2438
+   1024 K          522        2439
+```
+
+Takeaways: Serial Old GC is very consistent with both throughput and latency on collecting largest objects and small objects. It will collect the same amount of data within the same amount of time, regardless object size.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Serial Collector](#part0113.xhtml)
+
+∟Performance Summary of Serial Collector
+
+This section provides a summary of all performance tests on the Serial collector.
+
+To find out which Serial collector configuration gives the best performance, let's list all test results of "java GCPerfP99 1024 32 32 64 1000" in a single table:
+
+```
+ Configuration   Heap Size    Throughput   Latency
+1.1 Default              100M        1665/s    843 ms
+1.2 Default              400M        2482/s   1062 ms
+1.3 Default              800M        2657/s   1721 ms
+1.4 Default             1600M        3772/s    656 ms
+1.5 Default             3200M        4065/s    593 ms
+1.6 Default             6400M        4025/s    562 ms
+
+    Configuration   Eden/From    Throughput   Latency
+2.1 Young GC only        100M        2781/s    718 ms
+2.2 Young GC only        200M        3080/s    781 ms
+2.3 Young GC only        400M        3495/s    718 ms
+2.4 Young GC only        800M        3659/s    656 ms
+
+    Configuration     Tenured    Throughput   Latency
+3.1 Always Tenure        100M        2538/s    843 ms
+3.2 Always Tenure        200M        3099/s    781 ms
+3.3 Always Tenure        400M        3292/s    813 ms
+3.3 Always Tenure        800M        3196/s   1126 ms
+3.3 Always Tenure       1600M        3427/s    968 ms
+```
+
+Takeaways:
+
+*   The best Serial GC configuration is to give large enough heap, which gives a throughput of 4065 objects per second, and a latency of 562 milliseconds per 1000 objects.
+*   With enough space, Young GC Only and Always GC uses the same amount of time.
+*   More heap memory improves throughput performance.
+
+Below are test result summary with same parameters on an older computer with JDK 8:
+
+```
+ Configuration   Heap Size    Throughput   Latency
+-----------------   ---------    ----------   -------
+1.1 Default              100M         419/s   2941 ms
+1.2 Default              400M         470/s   2941 ms
+1.3 Default              800M         480/s   4385 ms
+1.4 Default             1600M         522/s   2439 ms
+
+    Configuration   Eden/From    Throughput   Latency
+-----------------   ---------    ----------   -------
+2.1 Young GC only        100M         493/s   2500 ms
+2.2 Young GC only        200M         512/s   2439 ms
+2.3 Young GC only        400M         520/s   2439 ms
+
+    Configuration     Tenured    Throughput   Latency
+-----------------   ---------    ----------   -------
+3.1 Always Tenure        100M         491/s   2906 ms
+3.2 Always Tenure        200M         510/s   2439 ms
+3.3 Always Tenure        400M         520/s   2439 ms
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Performance Tests on Parallel collector
+
+This chapter provides tutorial notes and example codes on performance impact of Parallel collector, Topics include heap footprint; heap size impact; running Young GC only, running more Old GC.
+
+> [Parallel GC Footprint - Free Heap 10%](#part0128.xhtml)
+> 
+> [Heap Size Impact on Parallel GC](#part0129.xhtml)
+> 
+> [Parallel Young GC Not Removing Dead Objects](#part0130.xhtml)
+> 
+> [Performance of Parallel Young GC](#part0131.xhtml)
+> 
+> [Performance of Parallel Full GC](#part0132.xhtml)
+> 
+> ["-XX:MaxTenuringThreshold=0" - Bad for Parallel GC](#part0133.xhtml)
+> 
+> [Tiny Survivor Spaces Are Bad for Parallel GC](#part0134.xhtml)
+> 
+> [Thread Count Impact on Parallel GC](#part0135.xhtml)
+> 
+> [AFFINITY=n - CPU Processors and Parallel GC](#part0136.xhtml)
+> 
+> [Best Parallel GC Configuration](#part0137.xhtml)
+> 
+> [Performance Summary of Parallel Collector](#part0138.xhtml)
+
+Takeaways:
+
+*   The Parallel collector requires about 10% free heap space to perform garbage collections.
+*   More free heap space will increase application throughput performance.
+*   Parallel Young GC seems to be more efficient than Old GC.
+*   Forcing the Young GC to "Always Tenure" results poor performance.
+*   Giving enough Young generation space to use Young GC only results the best performance.
+*   Number of GC threads should match the number of CPU processors to get the best performance.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Parallel GC Footprint - Free Heap 10%
+
+This section provides tutorials to find out what is the heap memory footprint to run GCPerfP99.java. The Parallel collector needs about 10% free heap space to perform garbage collections.
+
+One important performance factor of a garbage collector is the memory footprint, which is measured by the minimum heap size required to run the application. Let's run some tests with GCPerfP99.java to find out the footprint of the Parallel collector.
+
+**Test 1** - 70 MB of heap memory is not enough to run GCPerfP99.java with 64 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseParallelGC -Xms70m -Xmx70m \
+   GCPerfP99 1024 32 32 0 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=100
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at GCPerfP99$MyObject.<init>(GCPerfP99.java:98)
+        at GCPerfP99.myTest(GCPerfP99.java:41)
+        at GCPerfP99.main(GCPerfP99.java:22)
+```
+
+**Test 2** - 71 MB is the minimum heap size to run GCPerfP99.java: with 64 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseParallelGC -Xms71m -Xmx71m \
+   GCPerfP99 1024 32 32 0 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=100
+Results:
+   Total execution time = 2 seconds
+   Total objects processed = 3200
+   Average time per run = 25 milliseconds
+   Throughput = 1268 objects/second
+   Latency = 1187 milliseconds/1000 objects
+   Throughput (max, ave, min) = (4000, 1268, 842)
+   Latency (min, ave, max) = (250, 788, 1187)
+1% worst runs dropped:
+   Run, Time, Throughput = 100, 39, 820
+```
+
+**Test 3** - 140 MB of heap memory is not enough to run GCPerfP99.java with 128 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseParallelGC -Xms140m -Xmx140m \
+   GCPerfP99 1024 64 64 0 100
+
+Parameters:
+   Size=1024KB, Base=64, Chunk=64, Warmup=0, Runs=100
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at GCPerfP99$MyObject.<init>(GCPerfP99.java:98)
+        at GCPerfP99.myTest(GCPerfP99.java:41)
+        at GCPerfP99.main(GCPerfP99.java:22)
+```
+
+**Test 4** - 141 MB of heap memory is not enough to run GCPerfP99.java with 128 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseParallelGC -Xms141m -Xmx141m \
+   GCPerfP99 1024 64 64 0 100
+
+Parameters:
+   Size=1024KB, Base=64, Chunk=64, Warmup=0, Runs=100
+Results:
+   Total execution time = 4 seconds
+   Total objects processed = 6400
+   Average time per run = 41 milliseconds
+   Throughput = 1526 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (2064, 1526, 1032)
+   Latency (min, ave, max) = (484, 655, 968)
+1% worst runs dropped:
+   Run, Time, Throughput = 100, 73, 876
+```
+
+Conclusion:
+
+*   71 MB is the heap memory footprint for the Parallel collector to run GCPerfP99.java with 64 MB live object at peak times.
+*   141 MB is the heap memory footprint for the Parallel collector to run GCPerfP99.java with 128 MB live object at peak times.
+*   The Parallel collector needs about 9.8% to 9.2% (calculated as (71-64)/71 and (141-128)/141) free heap memory to perform garbage collections.
+*   With the minimum heap size, the Parallel collector performance pretty good on application throughput and latency.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Heap Size Impact on Parallel GC
+
+This section provides tutorials to find out the performance impact of heap size with the Parallel collector. Increasing heap size seems to improve the throughput performance. But it also decreases the latency performance.
+
+In this tutorial, let's find out the performance impact of heap size with the Parallel collector.
+
+**Test 1** - Running GCPerfP99.java using 100 MB heap size with the Parallel Collector. 64 iterations of warmup is specified to flush 64*32*1024K = 2GB objects through the heap.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms100m -Xmx100m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 26 seconds
+   Total objects processed = 32000
+   Average time per run = 26 milliseconds
+   Throughput = 1210 objects/second
+   Latency = 1470 milliseconds/1000 objects
+   Throughput (max, ave, min) = (6400, 1210, 680)
+   Latency (min, ave, max) = (156, 826, 1470)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 47, 680
+   Run, Time, Throughput = 992, 47, 680
+   Run, Time, Throughput = 993, 47, 680
+   Run, Time, Throughput = 994, 47, 680
+   Run, Time, Throughput = 995, 51, 627
+   Run, Time, Throughput = 996, 51, 627
+   Run, Time, Throughput = 997, 51, 627
+   Run, Time, Throughput = 998, 52, 615
+   Run, Time, Throughput = 999, 54, 592
+   Run, Time, Throughput = 1000, 57, 561
+```
+
+**Test 2** - Running GCPerfP99.java using 400 MB heap size with the Parallel Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms400m -Xmx400m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 18 seconds
+   Total objects processed = 32000
+   Average time per run = 18 milliseconds
+   Throughput = 1740 objects/second
+   Latency = 1937 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1740, 516)
+   Latency (min, ave, max) = (1, 574, 1937)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 62, 516
+   Run, Time, Throughput = 992, 62, 516
+   Run, Time, Throughput = 993, 63, 507
+   Run, Time, Throughput = 994, 63, 507
+   Run, Time, Throughput = 995, 63, 507
+   Run, Time, Throughput = 996, 63, 507
+   Run, Time, Throughput = 997, 63, 507
+   Run, Time, Throughput = 998, 63, 507
+   Run, Time, Throughput = 999, 63, 507
+   Run, Time, Throughput = 1000, 65, 492
+```
+
+**Test 3** - Running GCPerfP99.java using 800 MB heap size with the Parallel Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms800m -Xmx800m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 16 seconds
+   Total objects processed = 32000
+   Average time per run = 17 milliseconds
+   Throughput = 1869 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1869, 410)
+   Latency (min, ave, max) = (1, 535, 2439)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 78, 410
+   Run, Time, Throughput = 992, 78, 410
+   Run, Time, Throughput = 993, 78, 410
+   Run, Time, Throughput = 994, 79, 405
+   Run, Time, Throughput = 995, 79, 405
+   Run, Time, Throughput = 996, 80, 400
+   Run, Time, Throughput = 997, 83, 385
+   Run, Time, Throughput = 998, 84, 380
+   Run, Time, Throughput = 999, 86, 372
+   Run, Time, Throughput = 1000, 87, 367
+```
+
+**Test 4** - Running GCPerfP99.java using 1600 MB heap size with the Parallel Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1600m -Xmx1600m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2550 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2550, 1032)
+   Latency (min, ave, max) = (1, 392, 968)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   Run, Time, Throughput = 992, 32, 1000
+   Run, Time, Throughput = 993, 32, 1000
+   Run, Time, Throughput = 994, 32, 1000
+   Run, Time, Throughput = 995, 32, 1000
+   Run, Time, Throughput = 996, 32, 1000
+   Run, Time, Throughput = 997, 32, 1000
+   Run, Time, Throughput = 998, 33, 969
+   Run, Time, Throughput = 999, 36, 888
+   Run, Time, Throughput = 1000, 38, 842
+```
+
+**Test 5** - Running GCPerfP99.java using 3200 MB heap size with the Parallel Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms3200m -Xmx3200m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2547 objects/second
+   Latency = 1470 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2547, 680)
+   Latency (min, ave, max) = (1, 392, 1470)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 47, 680
+   Run, Time, Throughput = 992, 49, 653
+   Run, Time, Throughput = 993, 51, 627
+   Run, Time, Throughput = 994, 62, 516
+   Run, Time, Throughput = 995, 63, 507
+   Run, Time, Throughput = 996, 63, 507
+   Run, Time, Throughput = 997, 63, 507
+   Run, Time, Throughput = 998, 141, 226
+   Run, Time, Throughput = 999, 260, 123
+   Run, Time, Throughput = 1000, 333, 96
+```
+
+**Test 6** - Running GCPerfP99.java using 6400 MB heap size with the Parallel Collector. This test may not be valid, because my Windows system may use virtual memory, if it runs out free physical memory.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms6400m -Xmx6400m
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 10 seconds
+   Total objects processed = 32000
+   Average time per run = 10 milliseconds
+   Throughput = 2917 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2917, 1032)
+   Latency (min, ave, max) = (1, 342, 968)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 31, 1032
+   Run, Time, Throughput = 992, 31, 1032
+   Run, Time, Throughput = 993, 32, 1000
+   Run, Time, Throughput = 994, 32, 1000
+   Run, Time, Throughput = 995, 36, 888
+   Run, Time, Throughput = 996, 37, 864
+   Run, Time, Throughput = 997, 46, 695
+   Run, Time, Throughput = 998, 47, 680
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 47, 680
+```
+
+**Comparison of test results**:
+
+```
+ Heap Size      Throughput       Latency
+            Ave (Max, Min)/s    ms/1000
+
+   100 MB   1210 (6400,  680)      1470
+   400 MB   1740 (9999,  516)      1937
+   800 MB   1869 (9999,  410)      2439
+  1600 MB   2550 (9999, 1032)       968
+  3200 MB   2547 (9999,  680)      1470
+  6400 MB   2917 (9999, 1032)       968
+```
+
+Conclusion:
+
+*   Throughput is getting better when heap size is increased. Because more heap memory allows more new objects to be allocated before each GC. This reduces the frequency of GC and increases the throughput.
+*   But latency should be getting worse when heap size is increased. However other operating system interrupts will may affect the latency too, even 1% of worst runs were excluded.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Heap Size      Throughput       Latency
+            Ave (Max, Min)/s    ms/1000
+
+   100 MB   385 (516, 290)         3448
+   400 MB   439 (695, 256)         3906
+   800 MB   457 (695, 226)         4424
+  1600 MB   521 (695, 410)         2439
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Parallel Young GC Not Removing Dead Objects
+
+This section provides a tutorial showing that the Parallel Young GC fails to remove dead objects and copies them to Tenured generation under certain conditions.
+
+If you compare the performance of the Parallel collector with the Serial collector, you will see that the Parallel collector is doing worse than the Serial collector.
+
+```
+ Parallel             Serial
+Heap Size       Throughput          Throughput
+             Ave (Max, Min)/s    Ave (Max, Min)/s
+
+   100 MB   1210 (6400,  680)    1665 (2285, 1185)
+   400 MB   1740 (9999,  516)    2482 (5333,  941)
+   800 MB   1869 (9999,  410)    2657 (5333,  581)
+  1600 MB   2550 (9999, 1032)    3772 (5333, 1523)
+  3200 MB   2547 (9999,  680)    4065 (5333, 1684)
+  6400 MB   2917 (9999, 1032)    4025 (5333, 1777)
+```
+
+Let's run GCPerfP99.java with GC logging turned on to see if we can find any clue:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms400m -Xmx400m
+   -Xlog:gc,gc+start,gc+heap=debug,gc+age=trace:gc.log
+   GCPerfP99 1024 32 32 64 1000 
+```
+
+Review how old generation space was changed at each GC:
+
+```
+ C:\herong>find "ParOldGen:" gc.log
+
+[0.206s]GC(0) ParOldGen: 0K->49160K(273408K)           Changed:   49160
+[0.256s]GC(1) ParOldGen: 49160K->68617K(273408K)       Changed:   19457
+[0.290s]GC(2) ParOldGen: 68617K->91145K(273408K)       Changed:   22528
+[0.324s]GC(3) ParOldGen: 91145K->116745K(273408K)      Changed:   25600
+[0.359s]GC(4) ParOldGen: 116745K->145418K(273408K)     Changed:   28673
+[0.403s]GC(5) ParOldGen: 145418K->177162K(273408K)     Changed:   31744
+[0.441s]GC(6) ParOldGen: 177162K->213799K(273408K)     Changed:   36637
+[0.479s]GC(7) ParOldGen: 213799K->251687K(273408K)     Changed:   37888
+   -- So far each GC promoted reasonable amount of objects to Tenured
+
+[0.498s]GC(8) ParOldGen: 251687K->55025K(214016K)      Changed: -196662
+   -- An Old GC or Full GC cleanup Tenured
+
+[0.539s]GC(9) ParOldGen: 55025K->140018K(214016K)      Changed:   84993
+   -- First sing of issue - Young GC should not promote > 64MB
+   -- My app only hold maximum 64MB of live objects
+
+[0.584s]GC(10) ParOldGen: 140018K->241396K(241664K)    Changed:  101378
+   -- Same issue - Young GC should not promote > 64MB
+
+[0.597s]GC(11) ParOldGen: 241396K->61169K(273408K)     Changed: -180227
+   -- An Old GC or Full GC cleanup Tenured
+
+[0.638s]GC(12) ParOldGen: 61169K->146162K(273408K)     Changed:   84993
+[0.683s]GC(13) ParOldGen: 146162K->247596K(273408K)    Changed:  101434
+[0.691s]GC(14) ParOldGen: 247596K->34544K(273408K)     Changed: -213052
+   -- Same issue repeated
+
+...
+[22.624s]GC(507) ParOldGen: 64514K->149507K(273408K)   Changed: 84993
+[22.704s]GC(508) ParOldGen: 149507K->250933K(273408K)  Changed: 101426
+[22.717s]GC(509) ParOldGen: 250933K->37889K(273408K)   Changed: -213044
+[22.772s]GC(510) ParOldGen: 37889K->122882K(273408K)   Changed: 84993
+[22.826s]GC(511) ParOldGen: 122882K->224316K(273408K)  Changed: 101434
+```
+
+At each Young GC, 85MB or 101MB objects was promoted to the Tenured generation! This is unexpected! Our application only uses up to 64MB of live objects!
+
+Let's take a closer look at the last GC:
+
+```
+ [22.802s]GC(511) Heap before GC invocations=512 (full 169): PSYoungGen...
+[22.803s]GC(511)   eden space 102400K, 99% used [...
+[22.803s]GC(511)   from space 16896K, 98% used [...
+[22.803s]GC(511)   to   space 16896K, 0% used [...
+[22.803s]GC(511)  ParOldGen       total 273408K, used 122882K [...
+[22.803s]GC(511)   object space 273408K, 44% used [...
+
+[22.803s]GC(511) Pause Young (Allocation Failure)
+[22.826s]GC(511) Desired survivor size 17301504 bytes, new threshold 1 ...
+[22.826s]GC(511) PSYoungGen: 119009K->16640K(119296K)
+[22.826s]GC(511) ParOldGen: 122882K->224316K(273408K)
+[22.826s]GC(511) Pause Young (Allocation Failure) 236M->235M(383M) 23.750ms
+
+[22.826s]GC(511) Heap after GC invocations=512 (full 169): PSYoungGen...
+[22.826s]GC(511)   eden space 102400K, 0% used [...
+[22.826s]GC(511)   from space 16896K, 98% used [...
+[22.827s]GC(511)   to   space 16896K, 0% used [...
+[22.827s]GC(511)  ParOldGen       total 273408K, used 224316K [...
+[22.827s]GC(511)   object space 273408K, 82% used [...
+   -- This Young GC did not collect any garbage
+   -- It simply copied all objects, live and dead, from Eden to Tenured
+   -- A Full (Ergonomics) GC was triggered immediately
+
+[22.827s]GC(512) Heap before GC invocations=513 (full 170): PSYoungGen...
+[22.827s]GC(512)   eden space 102400K, 0% used [...
+[22.827s]GC(512)   from space 16896K, 98% used [...
+[22.827s]GC(512)   to   space 16896K, 0% used [...
+[22.827s]GC(512)  ParOldGen       total 273408K, used 224316K [...
+[22.827s]GC(512)   object space 273408K, 82% used [...
+
+[22.827s]GC(512) Pause Full (Ergonomics)
+[22.838s]GC(512) PSYoungGen: 16640K->0K(119296K)
+[22.838s]GC(512) ParOldGen: 224316K->44033K(273408K)
+[22.839s]GC(512) Pause Full (Ergonomics) 235M->43M(383M) 11.658ms
+
+[22.839s]GC(512) Heap after GC invocations=513 (full 170): PSYoungGen...
+[22.839s]GC(512)   eden space 102400K, 0% used [...
+[22.839s]GC(512)   from space 16896K, 0% used [...
+[22.839s]GC(512)   to   space 16896K, 0% used [...
+[22.839s]GC(512)  ParOldGen       total 273408K, used 44033K [...
+[22.839s]GC(512)   object space 273408K, 16% used [...
+   -- This Full GC took only 11.658ms
+   -- The last Young GC took 23.750ms and did not collect any garbage
+```
+
+Conclusion:
+
+*   For some reason, Parallel Young GC is not removing dead objects. It promotes them to Tenured generation directly.
+*   Promoting objects to Tenured generation is expensive: 101MB for 23 milliseconds!
+
+My guess is that the Survivor space is too small to hold all "age 1" live objects. This triggers the Young GC to abandon the collection process and copy the rest (live and dead objects) from "eden" space to Tenured generation directly.
+
+If you are still using JDK 8, you will see the same issue as shown below on an older computer:
+
+```
+ herong> \Progra~1\java\jdk1.8.0\bin\java -XX:+UseParallelGC
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime
+   -XX:+PrintAdaptiveSizePolicy
+   -Xms400m -Xmx400m -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+```
+
+Review how objects are promoted to Tenured generation:
+
+```
+ C:\herong>find "promoted:" gc.log
+
+0.327: ...AdaptiveSizePolicy::... promoted: 17826064
+0.529: ...AdaptiveSizePolicy::... promoted: 20971840
+0.733: ...AdaptiveSizePolicy::... promoted: 24117616
+...
+76.591: ...AdaptiveSizePolicy::... promoted: 87033136
+76.805: ...AdaptiveSizePolicy::... promoted: 103814704
+77.045: ...AdaptiveSizePolicy::... promoted: 87033136
+77.261: ...AdaptiveSizePolicy::... promoted: 103826992
+77.502: ...AdaptiveSizePolicy::... promoted: 87033136
+77.719: ...AdaptiveSizePolicy::... promoted: 103814704
+```
+
+At each Young GC, 87MB or 103MB objects was promoted to the Tenured generation! This is unexpected! Our application only uses up to 64MB of objects!
+
+Let's take a closer look at the last GC:
+
+```
+ 77.719: Application time: 0.1858620 seconds
+{Heap before GC invocations=513 (full 170):
+ PSYoungGen      total 119808K, used 118800K [...
+  eden space 103168K, 99% used [0x152c0000,0x1b6bc040,0x1b780000)
+  from space 16640K, 98% used [0x1c7c0000,0x1d7c8100,0x1d800000)
+  to   space 16640K, 0% used [0x1b780000,0x1b780000,0x1c7c0000)
+ ParOldGen       total 273152K, used 145667K [...
+  object space 273152K, 53% used [0x04800000,0x0d640e80,0x152c0000)
+
+77.719: [GC (Allocation Failure) AdaptiveSizePolicy::update_averages:
+   survived: 16826624  promoted: 103814704  overflow: false
+   -- 16826624 bytes survived in Young generation
+   -- 103814704 bytes promoted to Tenured generation
+   -- Objects removed: 118800K - 16826624 - 103814704 = 1009872 bytes
+   -- Something wrong here!
+
+AdaptiveSizeStart: 77.755 collection: 513 ...
+[PSYoungGen: 118800K->16432K(119808K)]
+   264467K->263481K(392960K), 0.0351817 secs]
+
+Heap after GC invocations=513 (full 170):
+ PSYoungGen      total 119808K, used 16432K [...
+  eden space 103168K, 0% used [0x152c0000,0x152c0000,0x1b780000)
+  from space 16640K, 98% used [0x1b780000,0x1c78c100,0x1c7c0000)
+  to   space 16640K, 0% used [0x1c7c0000,0x1c7c0000,0x1d800000)
+ ParOldGen       total 273152K, used 247049K [...
+  object space 273152K, 90% used [0x04800000,0x139424b0,0x152c0000)
+}
+
+   -- Old GC triggered, because Tenured generation was full
+{Heap before GC invocations=514 (full 171):
+ PSYoungGen      total 119808K, used 16432K [...
+  eden space 103168K, 0% used [0x152c0000,0x152c0000,0x1b780000)
+  from space 16640K, 98% used [0x1b780000,0x1c78c100,0x1c7c0000)
+  to   space 16640K, 0% used [0x1c7c0000,0x1c7c0000,0x1d800000)
+ ParOldGen       total 273152K, used 247049K [...
+  object space 273152K, 90% used [0x04800000,0x139424b0,0x152c0000)
+
+77.755: [Full GC (Ergonomics) AdaptiveSizeStart: 77.770 collection: 514
+[PSYoungGen: 16432K->0K(119808K)]
+   [ParOldGen: 247049K->34045K(273152K)] 263481K->34045K(392960K),
+   [Metaspace: 1559K->1559K(4480K)], 0.0149405 secs]
+
+Heap after GC invocations=514 (full 171):
+ PSYoungGen      total 119808K, used 0K [...
+  eden space 103168K, 0% used [0x152c0000,0x152c0000,0x1b780000)
+  from space 16640K, 0% used [0x1b780000,0x1b780000,0x1c7c0000)
+  to   space 16640K, 0% used [0x1c7c0000,0x1c7c0000,0x1d800000)
+ ParOldGen       total 273152K, used 34045K [...
+  object space 273152K, 12% used [0x04800000,0x0693f7d0,0x152c0000)
+}
+77.770: Total time for which application threads were stopped: 0.0505949 s
+   -- Total pause time: 0.0505949 seconds
+   -- Young GC time: 0.0351817 secs
+   -- Old GC time: 0.0149405 secs
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Performance of Parallel Young GC
+
+This section provides tests to find out performance impact of using Parallel Young GC only with enough 'eden' and 'from' spaces. Increasing heap size will reduce Young GC frequency and improve throughput performance.
+
+Will my application perform better if I give enough Young generation space so the Parallel collector will run Young GC only?
+
+Let's find out the answer by running GCPerfP99.java with JVM options to give enough space in "eden" and "from" to run Young GC without promoting any live objects to Tenured generation.
+
+**Test 1** - Use "-Xms600m -Xmx600m -XX:NewRatio=1 -XX:SurvivorRatio=1" to have 100MB "eden" space and 100MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms600m -Xmx600m
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 -Xlog:gc,gc+heap:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 13 seconds
+   Total objects processed = 32000
+   Average time per run = 13 milliseconds
+   Throughput = 2418 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2418, 1000)
+   Latency (min, ave, max) = (1, 413, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 1000, 32, 1000
+
+herong> more gc.log
+[0.026s][info][gc] Using Parallel
+[0.219s] GC(0) PSYoungGen: 101377K->65440K(204800K)
+[0.219s] GC(0) ParOldGen: 0K->8K(307200K)
+[0.219s] GC(0) Pause Young (Allocation Failure) 99M->63M(500M) 20.195ms
+[0.254s] GC(1) PSYoungGen: 167801K->35664K(204800K)
+[0.254s] GC(1) ParOldGen: 8K->16K(307200K)
+[0.254s] GC(1) Pause Young (Allocation Failure) 163M->34M(500M) 8.617ms
+[0.284s] GC(2) PSYoungGen: 138035K->38768K(204800K)
+[0.284s] GC(2) ParOldGen: 16K->16K(307200K)
+[0.284s] GC(2) Pause Young (Allocation Failure) 134M->37M(500M) 7.621ms
+[0.316s] GC(3) PSYoungGen: 141143K->41872K(204800K)
+[0.316s] GC(3) ParOldGen: 16K->16K(307200K)
+[0.316s] GC(3) Pause Young (Allocation Failure) 137M->40M(500M) 10.129ms
+...
+[14.157s] GC(234) PSYoungGen: 213130K->48384K(227840K)
+[14.157s] GC(234) ParOldGen: 1076K->1076K(307200K)
+[14.157s] GC(234) Pause Young (Allocation Failure) 209M->48M(522M) 10.512ms
+[14.217s] GC(235) PSYoungGen: 196746K->64768K(225792K)
+[14.217s] GC(235) ParOldGen: 1076K->1076K(307200K)
+[14.217s] GC(235) Pause Young (Allocation Failure) 193M->64M(520M) 12.956ms
+```
+
+**Test 2** - Use "-Xms1200m -Xmx1200m" to have 200MB "eden" space and 200MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1200m -Xmx1200m
+   -XX:NewRatio=1 -XX:SurvivorRatio=1 -Xlog:gc,gc+heap:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 11 milliseconds
+   Throughput = 2684 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2684, 1000)
+   Latency (min, ave, max) = (1, 372, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 47, 680
+
+herong> more gc.log
+[0.022s][info][gc] Using Parallel
+[0.269s] GC(0) PSYoungGen: 203779K->34736K(409600K)
+[0.269s] GC(0) ParOldGen: 0K->8K(614400K)
+[0.269s] GC(0) Pause Young (Allocation Failure) 199M->33M(1000M) 14.361ms
+[0.331s] GC(1) PSYoungGen: 239457K->41808K(409600K)
+[0.331s] GC(1) ParOldGen: 8K->16K(614400K)
+[0.331s] GC(1) Pause Young (Allocation Failure) 233M->40M(1000M) 13.604ms
+[0.390s] GC(2) PSYoungGen: 246554K->49024K(409600K)
+[0.390s] GC(2) ParOldGen: 16K->16K(614400K)
+[0.390s] GC(2) Pause Young (Allocation Failure) 240M->47M(1000M) 11.793ms
+[0.448s] GC(3) PSYoungGen: 253783K->56208K(409600K)
+[0.448s] GC(3) ParOldGen: 16K->16K(614400K)
+[0.448s] GC(3) Pause Young (Allocation Failure) 247M->54M(1000M) 12.181ms
+...
+[12.716s] GC(75) PSYoungGen: 512565K->53504K(544768K)
+[12.716s] GC(75) ParOldGen: 1091K->1091K(614400K)
+[12.716s] GC(75) Pause Young (Allocation Failure) 501M->53M(1132M) 10.839ms
+[12.883s] GC(76) PSYoungGen: 528949K->37120K(545280K)
+[12.883s] GC(76) ParOldGen: 1091K->1091K(614400K)
+[12.883s] GC(76) Pause Young (Allocation Failure) 517M->37M(1132M) 7.031ms
+```
+
+**Test 3** - Use "-Xms1600m -Xmx1600m -XX:NewSize=1200m -XX:SurvivorRatio=1" to have 400MB "eden" space and 400MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1600m -Xmx1600m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1 -Xlog:gc,gc+heap:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 15 seconds
+   Total objects processed = 32000
+   Average time per run = 15 milliseconds
+   Throughput = 2082 objects/second
+   Latency = 5376 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2082, 186)
+   Latency (min, ave, max) = (1, 480, 5376)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 187, 171
+   ...
+   Run, Time, Throughput = 999, 328, 97
+   Run, Time, Throughput = 1000, 328, 97
+
+herong> more gc.log
+[0.025s] Using Parallel
+[0.414s] GC(0) PSYoungGen: 408582K->38768K(819200K)
+[0.414s] GC(0) ParOldGen: 0K->8K(307200K)
+[0.414s] GC(0) Pause Young (Allocation Failure) 399M->37M(1100M) 31.542ms
+[0.618s] GC(1) PSYoungGen: 448210K->54176K(819200K)
+[0.618s] GC(1) ParOldGen: 8K->16K(307200K)
+[0.618s] GC(1) Pause Young (Allocation Failure) 437M->52M(1100M) 32.467ms
+[0.851s] GC(2) PSYoungGen: 463673K->36752K(819200K)
+[0.851s] GC(2) ParOldGen: 16K->24K(307200K)
+[0.851s] GC(2) Pause Young (Allocation Failure) 452M->35M(1100M) 7.560ms
+[1.084s] GC(3) PSYoungGen: 446280K->52112K(819200K)
+[1.085s] GC(3) ParOldGen: 24K->24K(307200K)
+[1.085s] GC(3) Pause Young (Allocation Failure) 435M->50M(1100M) 9.930ms
+...
+GC(34) PSYoungGen: 1143791K->60672K(1161216K)
+GC(34) ParOldGen: 4167K->4167K(307200K)
+GC(34) Pause Young (Allocation Failure) 1121M->63M(1434M) 12.047ms
+GC(35) PSYoungGen: 1160960K->33024K(1161216K)
+GC(35) ParOldGen: 4167K->4167K(307200K)
+GC(35) Pause Young (Allocation Failure) 1137M->36M(1434M) 6.201ms
+```
+
+**Test 4** - Use "-Xms3200m -Xmx3200m -XX:NewSize=2400m -XX:SurvivorRatio=1" to have 800MB "eden" space and 800MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms3200m -Xmx3200m
+   -XX:NewSize=2400m -XX:SurvivorRatio=1 -Xlog:gc,gc+heap:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 20 seconds
+   Total objects processed = 32000
+   Average time per run = 21 milliseconds
+   Throughput = 1510 objects/second
+   Latency = 11235 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1510, 89)
+   Latency (min, ave, max) = (1, 662, 11235)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 360, 88
+   ...
+   Run, Time, Throughput = 999, 515, 62
+   Run, Time, Throughput = 1000, 563, 56
+
+herong> more gc.log
+[0.249s][info][gc] Using Parallel
+[0.868s] GC(0) PSYoungGen: 818188K->46976K(1638400K)
+[0.868s] GC(0) ParOldGen: 0K->8K(819200K)
+[0.868s] GC(0) Pause Young (Allocation Failure) 799M->45M(2400M) 23.062ms
+[1.211s] GC(1) PSYoungGen: 865860K->45952K(1638400K)
+[1.211s] GC(1) ParOldGen: 8K->8K(819200K)
+[1.211s] GC(1) Pause Young (Allocation Failure) 845M->44M(2400M) 13.957ms
+[1.445s] GC(2) PSYoungGen: 864734K->35840K(1638400K)
+[1.445s] GC(2) ParOldGen: 8K->16K(819200K)
+[1.445s] GC(2) Pause Young (Allocation Failure) 844M->35M(2400M) 7.286ms
+[1.734s] GC(3) PSYoungGen: 854022K->61440K(1638400K)
+[1.734s] GC(3) ParOldGen: 16K->24K(819200K)
+...
+[25.380s] GC(16) PSYoungGen: 2373790K->44288K(2384384K)
+[25.380s] GC(16) ParOldGen: 1039K->1039K(819200K)
+[25.380s] GC(16) Pause Young (Allocation Failure) 2319M->44M(3128M) 8.962ms
+[26.120s] GC(17) PSYoungGen: 2355456K->56576K(2384896K)
+[26.121s] GC(17) ParOldGen: 1039K->1047K(819200K)
+[26.121s] GC(17) Pause Young (Allocation Failure) 2301M->56M(3129M) 11.182ms
+```
+
+**Test 5** - Use "-Xms6400m -Xmx6400m -XX:NewSize=4800m -XX:SurvivorRatio=1" to have 1600MB "eden" space and 1600MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms6400m -Xmx6400m
+   -XX:NewSize=4800m -XX:SurvivorRatio=1 -Xlog:gc,gc+heap:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 69 seconds
+   Total objects processed = 32000
+   Average time per run = 69 milliseconds
+   Throughput = 457 objects/second
+   Latency = 18867 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 457, 53)
+   Latency (min, ave, max) = (1, 2188, 18867)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 594, 53
+...
+   Run, Time, Throughput = 999, 719, 44
+   Run, Time, Throughput = 1000, 797, 40
+
+herong> more gc.log
+[0.361s][info][gc] Using Parallel
+[3.423s] PSYoungGen: 1637400K->63376K(3276800K)
+[3.424s] ParOldGen: 0K->8K(1638400K)
+[3.424s] Pause Young (Allocation Failure) 1599M->61M(4800M) 159.813ms
+[6.554s] PSYoungGen: 1701253K->38864K(3276800K)
+[6.554s] ParOldGen: 8K->16K(1638400K)
+[6.554s] Pause Young (Allocation Failure) 1661M->37M(4800M) 43.917ms
+[7.535s] PSYoungGen: 1676425K->38928K(3276800K)
+[7.535s] ParOldGen: 16K->24K(1638400K)
+[7.535s] Pause Young (Allocation Failure) 1637M->38M(4800M) 10.054ms
+[8.139s] PSYoungGen: 1676723K->63440K(3276800K)
+[8.139s] ParOldGen: 24K->32K(1638400K)
+[8.139s] Pause Young (Allocation Failure) 1637M->61M(4800M) 15.917ms
+...
+[61.172s] GC(9) PSYoungGen: 4799232K->63744K(4832768K)
+[61.175s] GC(9) ParOldGen: 980K->988K(1638400K)
+[61.176s] GC(9) Pause Young (Allocation Failure) 4687M->63M(6319M) 41.242ms
+[74.095s] GC(10) PSYoungGen: 4820224K->47360K(4835840K)
+[74.098s] GC(10) ParOldGen: 988K->1004K(1638400K)
+[74.099s] GC(10) Pause Young (Allocation Failure) 4708M->47M(6322M) 29.932ms
+```
+
+**Comparison of test results**:
+
+```
+ Eden/From       Throughput       Latency
+   Young     Ave (Max, Min)/s    ms/1000
+
+   100 MB   2418 (9999, 1000)       1000
+   200 MB   2684 (9999, 1000)       1000
+   400 MB   2082 (9999,  186)       5376
+   800 MB   1510 (9999,   89)      11235
+  1600 MB    457 (9999,   53)      18867
+```
+
+Takeaways:
+
+*   With enough "eden" and "from" spaces, it is possible to run Parallel collector with Young GC, which is really performed by the PS (Parallel Scavenge) collector.
+*   When "eden" and "from" spaces are increased from 100MB to 200MB, throughput performance is getting better, because Young GCs are performed less frequently.
+*   The Parallel Young GC uses about the sample amount of time to process new objects in "eden" of 100 MB and 200 MB, giving the same latency performance.
+*   However, when "eden" and "from" spaces are increased from 100MB to 1600MB, throughput performance is getting worse, because Young GCs are taking much longer time. The latency performance drops too.
+*   Parallel GC is not designed to use large amount of Young generation space.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Eden/From      Throughput       Latency
+   Minor    Ave (Max, Min)/s    ms/1000
+
+   100 MB   506 (695, 410)         2439
+   200 MB   523 (695, 410)         2439
+   400 MB   525 (695, 410)         2439
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Performance of Parallel Full GC
+
+This section provides tests to find out performance impact of using more Parallel Old GC with enough '-XX:MaxTenuringThreshold=0' JVM option. Significant performance drops observed.
+
+Will my application perform better if I force Young GC promoting live objects to "tenured" generation directly, skipping "from" space so the Parallel collector will run more Full GCs?
+
+Let's find out the answer by running GCPerfP99.java with "-XX:MaxTenuringThreshold=0" JVM option:
+
+**Test 1** - Use "-Xms400m -Xmx400m -XX:Newsize=300m -XX:SurvivorRatio=1" to have 100MB "eden" space and 100MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms400m -Xmx400m
+   -XX:NewSize=300m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 16 seconds
+   Total objects processed = 32000
+   Average time per run = 16 milliseconds
+   Throughput = 1950 objects/second
+   Latency = 1470 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1950, 680)
+   Latency (min, ave, max) = (1, 512, 1470)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 47, 680
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 47, 680
+
+herong> more gc.log
+...
+[17.686s] GC(388) Heap before GC invocations=389 (full 344): ...
+[17.686s] GC(388)   eden space 102400K, 99% used [...
+[17.686s] GC(388)   from space 102400K, 0% used [...
+[17.686s] GC(388)   to   space 102400K, 0% used [...
+[17.686s] GC(388)  ParOldGen       total 102400K, used 59394K [...
+[17.686s] GC(388)   object space 102400K, 58% used [...
+
+[17.686s] GC(388) Pause Full (Ergonomics)
+[17.701s] GC(388) PSYoungGen: 102381K->0K(204800K)
+[17.701s] GC(388) ParOldGen: 59394K->62466K(102400K)
+[17.701s] GC(388) Pause Full (Ergonomics) 157M->61M(300M) 14.798ms
+
+[17.701s] GC(388) Heap after GC invocations=389 (full 344): ...
+[17.701s] GC(388)   eden space 102400K, 0% used [...
+[17.701s] GC(388)   from space 102400K, 0% used [...
+[17.701s] GC(388)   to   space 102400K, 0% used [...
+[17.701s] GC(388)  ParOldGen       total 102400K, used 62466K [...
+[17.701s] GC(388)   object space 102400K, 61% used [...
+```
+
+**Test 2** - Use "-Xms800m -Xmx800m -XX:Newsize=600m -XX:SurvivorRatio=1" to have 200MB "eden" space and 200MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms800m -Xmx800m
+   -XX:NewSize=600m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 16 seconds
+   Total objects processed = 32000
+   Average time per run = 16 milliseconds
+   Throughput = 1954 objects/second
+   Latency = 1972 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1954, 507)
+   Latency (min, ave, max) = (1, 511, 1972)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 63, 507
+   ...
+   Run, Time, Throughput = 999, 63, 507
+   Run, Time, Throughput = 1000, 63, 507
+
+herong> more gc.log
+...
+[17.875s] GC(340) Heap before GC invocations=341 (full 170): ...
+[17.875s] GC(340)   eden space 204800K, 99% used [...
+[17.875s] GC(340)   from space 204800K, 0% used [...
+[17.875s] GC(340)   to   space 204800K, 0% used [...
+[17.875s] GC(340)  ParOldGen       total 204800K, used 203844K [...
+[17.875s] GC(340)   object space 204800K, 99% used [...
+
+[17.875s] GC(340) Pause Full (Ergonomics)
+[17.891s] GC(340) PSYoungGen: 204722K->0K(409600K)
+[17.891s] GC(340) ParOldGen: 203844K->63490K(204800K)
+[17.891s] GC(340) Pause Full (Ergonomics) 398M->62M(600M) 16.051ms
+
+[17.891s] GC(340) Heap after GC invocations=341 (full 170): ...
+[17.891s] GC(340)   eden space 204800K, 0% used [...
+[17.891s] GC(340)   from space 204800K, 0% used [...
+[17.891s] GC(340)   to   space 204800K, 0% used [...
+[17.891s] GC(340)  ParOldGen       total 204800K, used 63490K [...
+[17.891s] GC(340)   object space 204800K, 31% used [...
+```
+
+**Test 3** - Use "-Xms1600m -Xmx1600m -XX:Newsize=1200m -XX:SurvivorRatio=1" to have 400MB "eden" space and 400MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1600m -Xmx1600m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 16 seconds
+   Total objects processed = 32000
+   Average time per run = 16 milliseconds
+   Throughput = 1979 objects/second
+   Latency = 3412 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1979, 293)
+   Latency (min, ave, max) = (1, 505, 3412)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 110, 290
+   Run, Time, Throughput = 992, 110, 290
+   ...
+   Run, Time, Throughput = 999, 110, 290
+   Run, Time, Throughput = 1000, 110, 290
+
+herong> more gc.log
+...
+[18.148s] GC(168) Heap before GC invocations=169 (full 84): ...
+[18.148s] GC(168)   eden space 409600K, 99% used [...
+[18.148s] GC(168)   from space 409600K, 0% used [...
+[18.148s] GC(168)   to   space 409600K, 0% used [...
+[18.148s] GC(168)  ParOldGen       total 409600K, used 408647K [...
+[18.148s] GC(168)   object space 409600K, 99% used [...
+
+[18.148s] GC(168) Pause Full (Ergonomics)
+[18.159s] GC(168) PSYoungGen: 409445K->0K(819200K)
+[18.159s] GC(168) ParOldGen: 408647K->36865K(409600K)
+[18.159s] GC(168) Pause Full (Ergonomics) 798M->36M(1200M) 11.305ms
+
+[18.159s] GC(168) Heap after GC invocations=169 (full 84): ...
+[18.159s] GC(168)   eden space 409600K, 0% used [...
+[18.159s] GC(168)   from space 409600K, 0% used [...
+[18.159s] GC(168)   to   space 409600K, 0% used [...
+[18.159s] GC(168)  ParOldGen       total 409600K, used 36865K [...
+[18.159s] GC(168)   object space 409600K, 9% used [...
+```
+
+**Test 4** - Use "-Xms3200m -Xmx3200m -XX:NewSize=2400m -XX:SurvivorRatio=1" to have 800MB "eden" space and 800MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms3200m -Xmx3200m
+   -XX:NewSize=2400m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 18 seconds
+   Total objects processed = 32000
+   Average time per run = 18 milliseconds
+   Throughput = 1698 objects/second
+   Latency = 6369 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1698, 157)
+   Latency (min, ave, max) = (1, 588, 6369)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 219, 146
+   ...
+   Run, Time, Throughput = 999, 1422, 22
+   Run, Time, Throughput = 1000, 1453, 22
+
+herong> more gc.log
+...
+[32.351s] GC(82) Heap before GC invocations=83 (full 41): ...
+[32.351s] GC(82)   eden space 819200K, 99% used [...
+[32.351s] GC(82)   from space 819200K, 0% used [...
+[32.351s] GC(82)   to   space 819200K, 0% used [...
+[32.351s] GC(82)  ParOldGen       total 819200K, used 818254K [...
+[32.351s] GC(82)   object space 819200K, 99% used [...
+
+[32.351s] GC(82) Pause Full (Ergonomics)
+[32.364s] GC(82) PSYoungGen: 818890K->0K(1638400K)
+[32.364s] GC(82) ParOldGen: 818254K->45058K(819200K)
+[32.364s] GC(82) Pause Full (Ergonomics) 1598M->44M(2400M) 13.362ms
+
+[32.364s] GC(82) Heap after GC invocations=83 (full 41): ...
+[32.364s] GC(82)   eden space 819200K, 0% used [...
+[32.364s] GC(82)   from space 819200K, 0% used [...
+[32.364s] GC(82)   to   space 819200K, 0% used [...
+[32.364s] GC(82)  ParOldGen       total 819200K, used 45058K [...
+[32.364s] GC(82)   object space 819200K, 5% used [...
+```
+
+**Test 5** - Use "-Xms6400m -Xmx6400m -XX:NewSize=4800m -XX:SurvivorRatio=1" to have 1600MB "eden" space and 1600MB "tenured" generation. This test may not be valid, because my Windows system may use virtual memory, if it runs out free physical memory.
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms6400m -Xmx6400m
+   -XX:NewSize=4800m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 49 seconds
+   Total objects processed = 32000
+   Average time per run = 50 milliseconds
+   Throughput = 636 objects/second
+   Latency = 71428 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 636, 14)
+   Latency (min, ave, max) = (1, 1572, 71428)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 2265, 14
+   ...
+   Run, Time, Throughput = 999, 3437, 9
+   Run, Time, Throughput = 1000, 5283, 6
+
+herong> more gc.log
+...
+[79.695s] GC(40) Heap before GC invocations=41 (full 20): ...
+[79.695s] GC(40)   eden space 1638400K, 100% used [...
+[79.695s] GC(40)   from space 1638400K, 0% used [...
+[79.695s] GC(40)   to   space 1638400K, 0% used [...
+[79.695s] GC(40)  ParOldGen       total 1638400K, used 1637467K [...
+[79.695s] GC(40)   object space 1638400K, 99% used [...
+
+[79.697s] GC(40) Pause Full (Ergonomics)
+[79.884s] GC(40) PSYoungGen: 1638400K->0K(3276800K)
+[79.886s] GC(40) ParOldGen: 1637467K->60419K(1638400K)
+[79.889s] GC(40) Pause Full (Ergonomics) 3199M->59M(4800M) 190.685ms
+
+[79.890s] GC(40) Heap after GC invocations=41 (full 20): ...
+[79.890s] GC(40)   eden space 1638400K, 0% used [...
+[79.890s] GC(40)   from space 1638400K, 0% used [...
+[79.890s] GC(40)   to   space 1638400K, 0% used [...
+[79.890s] GC(40)  ParOldGen       total 1638400K, used 60419K [...
+[79.890s] GC(40)   object space 1638400K, 3% used [...
+```
+
+**Test result summary:**
+
+```
+ Tenured      Throughput       Latency
+   Old GC   Ave (Max, Min)/s    ms/1000
+---------   ----------------    -------
+   100 MB   1950 (9999, 680)       1470
+   200 MB   1954 (9999, 507)       1972
+   400 MB   1979 (9999, 293)       3412
+   800 MB   1698 (9999, 157)       6369
+  1600 MB    636 (9999,  14)      71428
+```
+
+Takeaways:
+
+*   With "-XX:MaxTenuringThreshold=0" JVM option, it is possible to run Parallel collector with more Full GC by skipping "from" space.
+*   When "tenured" generation size is increased, latency performance is getting worse. Maybe the Parallel Full GC is not efficient with large amount of dead objects?
+*   Throughput drops too.
+
+We need to take a closer look at GC log messages to find out what's wrong with skipping survivor spaces with "-XX:MaxTenuringThreshold=0".
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Tenured      Throughput       Latency
+ Old GC   Ave (Max, Min)/s    ms/1000
+
+   100 MB   454 (695, 340)         2941
+   200 MB   460 (695, 256)         3906
+   400 MB   466 (695, 171)         5847
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟"-XX:MaxTenuringThreshold=0" - Bad for Parallel GC
+
+This section provides a tutorial showing why '-XX:MaxTenuringThreshold=0' is a bad option for the Parallel collector. It stops Young GC to remove dead objects from Young generation.
+
+In the last tutorial, we noticed a significant performance drop, when "-XX:MaxTenuringThreshold=0" JVM option is used.
+
+In this tutorial, let's find out why by reviewing GC log messages of the last test:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms6400m -Xmx6400m
+   -XX:NewSize=4800m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 49 seconds
+   Total objects processed = 32000
+   Average time per run = 50 milliseconds
+   Throughput = 636 objects/second
+   Latency = 71428 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 636, 14)
+   Latency (min, ave, max) = (1, 1572, 71428)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 2265, 14
+   ...
+   Run, Time, Throughput = 999, 3437, 9
+   Run, Time, Throughput = 1000, 5283, 6
+```
+
+Look at the GC pause times from the log file I don't see any patterns. But GC pauses were very long.
+
+```
+ GC(0) Pause Young (Allocation Failure) 1599M->61M(4800M) 140.855ms
+GC(1) Pause Young (Allocation Failure) 1661M->3199M(4800M) 4464.349ms
+GC(2) Pause Full (Ergonomics) 3199M->38M(4800M) 585.063ms
+GC(3) Pause Young (Allocation Failure) 1637M->3198M(4800M) 2469.563ms
+GC(4) Pause Full (Ergonomics) 3198M->38M(4800M) 480.959ms
+GC(5) Pause Young (Allocation Failure) 1638M->3199M(4800M) 1404.276ms
+GC(6) Pause Full (Ergonomics) 3199M->42M(4800M) 191.787ms
+GC(7) Pause Young (Allocation Failure) 1642M->3199M(4800M) 1850.683ms
+GC(8) Pause Full (Ergonomics) 3199M->54M(4800M) 153.291ms
+GC(9) Pause Young (Allocation Failure) 1654M->3199M(4800M) 1323.686ms
+GC(10) Pause Full (Ergonomics) 3199M->58M(4800M) 319.013ms
+GC(11) Pause Young (Allocation Failure) 1658M->3199M(4800M) 1968.669ms
+GC(12) Pause Full (Ergonomics) 3199M->64M(4800M) 119.063ms
+GC(13) Pause Young (Allocation Failure) 1664M->3199M(4800M) 2001.151ms
+GC(14) Pause Full (Ergonomics) 3199M->40M(4800M) 244.610ms
+GC(15) Pause Young (Allocation Failure) 1640M->3199M(4800M) 2079.446ms
+GC(16) Pause Full (Ergonomics) 3199M->50M(4800M) 97.632ms
+GC(17) Pause Young (Allocation Failure) 1650M->3199M(4800M) 1725.072ms
+GC(18) Pause Full (Ergonomics) 3199M->61M(4800M) 188.504ms
+GC(19) Pause Young (Allocation Failure) 1661M->3199M(4800M) 1541.363ms
+GC(20) Pause Full (Ergonomics) 3199M->41M(4800M) 248.294ms
+GC(21) Pause Young (Allocation Failure) 1641M->3199M(4800M) 1499.330ms
+GC(22) Pause Full (Ergonomics) 3199M->54M(4800M) 394.807ms
+GC(23) Pause Young (Allocation Failure) 1654M->3199M(4800M) 691.471ms
+GC(24) Pause Full (Ergonomics) 3199M->63M(4800M) 997.544ms
+GC(25) Pause Young (Allocation Failure) 1663M->3199M(4800M) 2008.750ms
+GC(26) Pause Full (Ergonomics) 3199M->38M(4800M) 260.797ms
+GC(27) Pause Young (Allocation Failure) 1638M->3199M(4800M) 1515.949ms
+GC(28) Pause Full (Ergonomics) 3199M->48M(4800M) 105.604ms
+GC(29) Pause Young (Allocation Failure) 1648M->3199M(4800M) 2661.363ms
+GC(30) Pause Full (Ergonomics) 3199M->56M(4800M) 134.549ms
+GC(31) Pause Young (Allocation Failure) 1656M->3199M(4800M) 2159.678ms
+GC(32) Pause Full (Ergonomics) 3199M->48M(4800M) 125.930ms
+GC(33) Pause Young (Allocation Failure) 1648M->3199M(4800M) 2145.101ms
+GC(34) Pause Full (Ergonomics) 3199M->60M(4800M) 240.219ms
+GC(35) Pause Young (Allocation Failure) 1660M->3199M(4800M) 2069.818ms
+GC(36) Pause Full (Ergonomics) 3199M->39M(4800M) 149.204ms
+GC(37) Pause Young (Allocation Failure) 1639M->3199M(4800M) 2187.372ms
+GC(38) Pause Full (Ergonomics) 3199M->48M(4800M) 111.230ms
+GC(39) Pause Young (Allocation Failure) 1648M->3199M(4800M) 2474.197ms
+GC(40) Pause Full (Ergonomics) 3199M->59M(4800M) 190.685ms
+```
+
+Take a closer look at the last 3 GCs near the end. I see an issue with the Young GC that triggered the Full GC.
+
+```
+ herong> more gc.log
+...
+[75.337s] GC(38) Pause Full (Ergonomics)
+[75.448s] GC(38) PSYoungGen: 1638400K->0K(3276800K)
+[75.448s] GC(38) ParOldGen: 1637467K->49155K(1638400K)
+[75.448s] GC(38) Pause Full (Ergonomics) 3199M->48M(4800M) 111.230ms
+   -- GC #38, Pause Full (Ergonomics), performed
+   -- heap is perfectly clean
+
+[77.218s] GC(39) Heap before GC invocations=40 (full 19): ...
+[77.218s] GC(39)   eden space 1638400K, 100% used [...
+[77.218s] GC(39)   from space 1638400K, 0% used [...
+[77.218s] GC(39)   to   space 1638400K, 0% used [...
+[77.218s] GC(39)  ParOldGen       total 1638400K, used 49155K [...
+[77.218s] GC(39)   object space 1638400K, 3% used [...
+   -- Eden was full with 1,638MB objects
+
+[77.219s] GC(39) Pause Young (Allocation Failure)
+[79.690s] GC(39) PSYoungGen: 1638400K->1638400K(3276800K)
+[79.691s] GC(39) ParOldGen: 49155K->1637467K(1638400K)
+[79.693s] GC(39) Pause Young (Allocation Failure)
+                  1648M->3199M(4800M) 2474.197ms
+   -- GC #39, Pause Young (Allocation Failure), performed
+   -- did not remove any objects from Eden
+   -- copied almost all objects from Eden to Tenured
+   -- spent 2,474ms!
+
+[79.694s] GC(39) Heap after GC invocations=40 (full 19): ...
+[79.694s] GC(39)   eden space 1638400K, 100% used [...
+[79.694s] GC(39)   from space 1638400K, 0% used [...
+[79.694s] GC(39)   to   space 1638400K, 0% used [...
+[79.694s] GC(39)  ParOldGen       total 1638400K, used 1637467K [...
+[79.694s] GC(39)   object space 1638400K, 99% used [...
+   -- triggered Full GC immediately
+
+[79.695s] GC(40) Heap before GC invocations=41 (full 20): ...
+[79.695s] GC(40)   eden space 1638400K, 100% used [...
+[79.695s] GC(40)   from space 1638400K, 0% used [...
+[79.695s] GC(40)   to   space 1638400K, 0% used [...
+[79.695s] GC(40)  ParOldGen       total 1638400K, used 1637467K [...
+[79.695s] GC(40)   object space 1638400K, 99% used [...
+
+[79.697s] GC(40) Pause Full (Ergonomics)
+[79.884s] GC(40) PSYoungGen: 1638400K->0K(3276800K)
+[79.886s] GC(40) ParOldGen: 1637467K->60419K(1638400K)
+[79.889s] GC(40) Pause Full (Ergonomics) 3199M->59M(4800M) 190.685ms
+   -- GC #40, Pause Full (Ergonomics), performed
+```
+
+Takeaways:
+
+*   With "-XX:MaxTenuringThreshold=0" JVM option, Parallel Young GC is not doing any garbage collection in Young generation. It just copies all objects from "eden" to Tenured generation.
+*   If there is not enough room in Tenured generation, Young GC will trigger a Full GC (Ergonomics), which will finish garbage collection in both Young generation and Tenured generation.
+*   Do not use "-XX:MaxTenuringThreshold=0" with the Parallel collector.
+
+If you are still using JDK 8, you will see the same issue as shown below on an older computer:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseParallelGC -XX:MaxTenuringThreshold=0
+   -Xms1600m -Xmx1600m -XX:Newsize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 67 seconds
+   Total objects processed = 32000
+   Average time per run = 68 milliseconds
+   Throughput = 466 objects/second
+   Latency = 5847 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 466, 171)
+   Latency (min, ave, max) = (1438, 2145, 5847)
+```
+
+Look at the application pause times. I don't see any patterns. But application pauses were very long.
+
+```
+ herong> more gc.log | find "application threads were stopped"
+
+1.116: Total time for which application threads were stopped:
+   0.0200183 seconds, Stopping threads took: 0.0000393 seconds
+
+...
+77.118: ...stopped: 0.1164966 seconds, ...
+77.985: ...stopped: 0.1152056 seconds, ...
+78.858: ...stopped: 0.1156945 seconds, ...
+79.724: ...stopped: 0.1182087 seconds, ...
+80.661: ...stopped: 0.1186251 seconds, ...
+```
+
+Take a closer look at some GCs near the end:
+
+```
+ herong> more gc.log
+
+79.606: Application time: 0.7477040 seconds
+{Heap before GC invocations=166 (full 82):
+ PSYoungGen      total 819200K, used 409445K [...
+  eden space 409600K, 99% used [0x1d800000,0x367d95c0,0x36800000)
+  from space 409600K, 0% used [0x36800000,0x36800000,0x4f800000)
+ ParOldGen       total 409600K, used 45313K [...
+   -- Heap looks good
+   -- "from" space not used
+   -- Tenured generation had 45 MB live objects
+
+79.606: [GC (Allocation Failure)
+   [PSYoungGen: 409445K->409445K(819200K)]
+      454759K->818300K(1228800K), 0.0952141 secs]
+
+Heap after GC invocations=166 (full 82):
+ PSYoungGen      total 819200K, used 409445K [...
+  eden space 409600K, 99% used [0x1d800000,0x367d95c0,0x36800000)
+  from space 409600K, 0% used [0x36800000,0x36800000,0x4f800000)
+ ParOldGen       total 409600K, used 408855K [...
+}
+   -- Young GC failed
+   -- No dead object removed
+   -- All objects copied to Tenured generation
+   -- Duplicate objects left in "eden" space!
+   -- 0.0952141 seconds wasted on copying 400 MB objects!
+
+   -- "Full GC (Ergonomics)" trigged immediately!
+{Heap before GC invocations=167 (full 83):
+ PSYoungGen      total 819200K, used 409445K [...
+  eden space 409600K, 99% used [0x1d800000,0x367d95c0,0x36800000)
+  from space 409600K, 0% used [0x36800000,0x36800000,0x4f800000)
+ ParOldGen       total 409600K, used 408855K [...
+79.702: [Full GC (Ergonomics)
+   [PSYoungGen: 409445K->0K(819200K)]
+   [ParOldGen: 408855K->60674K(409600K)]
+      818300K->60674K(1228800K),
+   [Metaspace: 1559K->1559K(4480K)], 0.0224655 secs]
+
+Heap after GC invocations=167 (full 83):
+ PSYoungGen      total 819200K, used 0K [...
+  eden space 409600K, 0% used [0x1d800000,0x1d800000,0x36800000)
+  from space 409600K, 0% used [0x36800000,0x36800000,0x4f800000)
+ ParOldGen       total 409600K, used 60674K [...
+}
+   -- Full GC worked ok
+   -- Young generation cleared out
+   -- Tenured generation reduced to 60 MB
+   -- 0.0224655 seconds used
+
+79.724: Total time for which application threads were stopped: 0.1182087 s
+   -- Together, Young GC and Full GC took 0.1182087 seconds!
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Tiny Survivor Spaces Are Bad for Parallel GC
+
+This section provides a tutorial showing why giving very smaller survivor spaces is a bad option for the Parallel collector. It stops Young GC to remove dead objects from Young generation.
+
+In the last tutorial, we tried to stop using survivor spaces with the "-XX:MaxTenuringThreshold=0" JVM option. But it leads a poor performance.
+
+In this tutorial, let's try to stop using survivor spaces with a small size limit like 512K. This can be done by specifying NewSize and SurvivorRatio as shown below. The Parallel garbage collector behaved in the same ways as "-XX:MaxTenuringThreshold=0".
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms3201m -Xmx3201m
+   -XX:NewSize=1601m -XX:SurvivorRatio=3200 -XX:MaxTenuringThreshold=15
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log    GCPerfP99 1024 32 32 64 1000
+
+Results:
+   Total execution time = 13 seconds
+   Total objects processed = 32000
+   Average time per run = 13 milliseconds
+   Throughput = 2308 objects/second
+   Latency = 10752 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2308, 93)
+   Latency (min, ave, max) = (1, 433, 10752)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 343, 93
+   ...
+   Run, Time, Throughput = 999, 359, 89
+   Run, Time, Throughput = 1000, 1625, 19
+
+herong> more gc.log
+...
+[18.958s] GC(39) Heap before GC invocations=40 (full 19): ...
+[18.958s] GC(39)   eden space 1638400K, 100% used [...
+[18.958s] GC(39)   from space 512K, 0% used [...
+[18.958s] GC(39)   to   space 512K, 0% used [...
+[18.958s] GC(39)  ParOldGen       total 1639424K, used 49155K [...
+[18.958s] GC(39)   object space 1639424K, 2% used [...
+
+[18.958s] GC(39) Pause Young (Allocation Failure)
+[19.267s] GC(39) PSYoungGen: 1638400K->1638400K(1638912K)
+[19.267s] GC(39) ParOldGen: 49155K->1638427K(1639424K)
+[19.267s] GC(39) Pause Young (Allocation Failure)
+                  1648M->3200M(3201M) 309.207ms
+
+[19.267s] GC(39) Heap after GC invocations=40 (full 19): ...
+[19.267s] GC(39)   eden space 1638400K, 100% used [...
+[19.267s] GC(39)   from space 512K, 0% used [...
+[19.267s] GC(39)   to   space 512K, 50% used [...
+[19.267s] GC(39)  ParOldGen       total 1639424K, used 1638427K [...
+[19.267s] GC(39)   object space 1639424K, 99% used [...
+   -- Young GC performed, not able to collect any garbage
+   -- Copied objects from Eden to Tenured
+   -- Triggered a full GC immediately
+
+[19.268s] GC(40) Heap before GC invocations=41 (full 20): ...
+[19.268s] GC(40)   eden space 1638400K, 100% used [...
+[19.268s] GC(40)   from space 512K, 0% used [...
+[19.268s] GC(40)   to   space 512K, 50% used [...
+[19.268s] GC(40)  ParOldGen       total 1639424K, used 1638427K [...
+[19.268s] GC(40)   object space 1639424K, 99% used [...
+
+[19.268s] GC(40) Pause Full (Ergonomics)
+[19.296s] GC(40) PSYoungGen: 1638400K->0K(1638912K)
+[19.296s] GC(40) ParOldGen: 1638427K->60419K(1639424K)
+[19.296s] GC(40) Pause Full (Ergonomics) 3200M->59M(3201M) 28.568ms
+
+[19.296s] GC(40) Heap after GC invocations=41 (full 20): ...
+[19.296s] GC(40)   eden space 1638400K, 0% used [...
+[19.296s] GC(40)   from space 512K, 0% used [...
+[19.296s] GC(40)   to   space 512K, 0% used [...
+[19.296s] GC(40)  ParOldGen       total 1639424K, used 60419K [...
+[19.296s] GC(40)   object space 1639424K, 3% used [...
+    -- Full GC performed. Heap cleaned perfectly
+```
+
+But if I crease the survivor spaces to 1024K, The Parallel garbage collector behavior changes:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms3202m -Xmx3202m
+   -XX:NewSize=1602m -XX:SurvivorRatio=1600 -XX:MaxTenuringThreshold=15
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 11 milliseconds
+   Throughput = 2716 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2716, 1032)
+   Latency (min, ave, max) = (1, 368, 968)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 656, 48
+
+herong> more gc.log
+...
+[13.208s] GC(19) Heap before GC invocations=20 (full 0): ...
+[13.208s] GC(19)   eden space 1638400K, 99% used [...
+[13.208s] GC(19)   from space 1024K, 25% used [...
+[13.208s] GC(19)   to   space 1024K, 0% used [...
+[13.208s] GC(19)  ParOldGen       total 1638400K, used 992263K [...
+[13.208s] GC(19)   object space 1638400K, 60% used [...
+
+[13.208s] GC(19) Pause Young (Allocation Failure)
+[13.222s] GC(19) PSYoungGen: 1638646K->256K(1639424K)
+[13.222s] GC(19) ParOldGen: 992263K->1035279K(1638400K)
+[13.222s] GC(19) Pause Young (Allocation Failure)
+                  2569M->1011M(3201M) 13.703ms
+
+[13.222s] GC(19) Heap after GC invocations=20 (full 0): ...
+[13.222s] GC(19)   eden space 1638400K, 0% used [...
+[13.222s] GC(19)   from space 1024K, 25% used [...
+[13.222s] GC(19)   to   space 1024K, 0% used [...
+[13.222s] GC(19)  ParOldGen       total 1638400K, used 1035279K [...
+[13.222s] GC(19)   object space 1638400K, 63% used [...
+   -- Young GC performed correctly
+   -- on live objects from Eden were promoted to Tenure
+
+[13.724s] GC(20) Heap before GC invocations=21 (full 0): ...
+[13.724s] GC(20)   eden space 1638400K, 99% used [...
+[13.724s] GC(20)   from space 1024K, 25% used [...
+[13.724s] GC(20)   to   space 1024K, 0% used [...
+[13.724s] GC(20)  ParOldGen       total 1638400K, used 1035279K [...
+[13.724s] GC(20)   object space 1638400K, 63% used [...
+
+[13.724s] GC(20) Pause Young (Allocation Failure)
+[13.737s] GC(20) PSYoungGen: 1638651K->256K(1639424K)
+[13.737s] GC(20) ParOldGen: 1035279K->1077272K(1638400K)
+[13.737s] GC(20) Pause Young (Allocation Failure)
+                  2611M->1052M(3201M) 13.390ms
+
+[13.737s] GC(20) Heap after GC invocations=21 (full 0): ...
+[13.737s] GC(20)   eden space 1638400K, 0% used [...
+[13.737s] GC(20)   from space 1024K, 25% used [...
+[13.737s] GC(20)   to   space 1024K, 0% used [...
+[13.737s] GC(20)  ParOldGen       total 1638400K, used 1077272K [...
+[13.737s] GC(20)   object space 1638400K, 65% used [...
+   -- Young GC performed correctly
+   -- on live objects from Eden were promoted to Tenure
+```
+
+Takeaways:
+
+*   With very small survivor spaces, Parallel Young GC is not doing any garbage collection in Young generation. It just copies all objects from "eden" to Tenured generation.
+*   If there is not enough room in Tenured generation, Young GC will trigger a Full GC (Ergonomics), which will finish garbage collection in both Young generation and Tenured generation.
+*   Do not give very small survivor spaces with the Parallel collector.
+*   But increasing survivor spaces with small amounts may help Parallel Young GC to be performed normally.
+
+If you are still using JDK 8, you will see the same issue as shown below on an older computer:
+
+In this tutorial, let's try to stop using survivor spaces with a small size limit like 512K. This can be done by specifying NewSize and SurvivorRatio with Adaptive Size Policy turned off.
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseParallelGC -XX:MaxTenuringThreshold=15
+   -Xms801m -Xmx801m   -XX:NewSize=401m -XX:SurvivorRatio=800
+   -XX:-UseAdaptiveSizePolicy
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintGCApplicationStoppedTime
+   -XX:+PrintGCApplicationConcurrentTime -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 69 seconds
+   Total objects processed = 32000
+   Average time per run = 70 milliseconds
+   Throughput = 4654 objects/second
+   Latency = 5988 milliseconds/1000 objects
+   Throughput (max, ave, min) = (533, 454, 167)
+   Latency (min, ave, max) = (1876, 2202, 5988)
+```
+
+Look at the application pause times. I don't see any patterns. But application pauses were very long.
+
+```
+ herong> more gc.log | find "application threads were stopped" > output.txt
+
+1.060: Total time for which application threads were stopped:
+   0.0191078 seconds, Stopping threads took: 0.0000316 seconds
+
+...
+71.305: ...stopped: 0.1177108 seconds, ...
+72.199: ...stopped: 0.1190974 seconds, ...
+73.112: ...stopped: 0.1162990 seconds, ...
+74.007: ...stopped: 0.1215130 seconds, ...
+74.899: ...stopped: 0.1171220 seconds, ...
+```
+
+Take a closer look at some GCs near the end:
+
+```
+ herong> more gc.log
+
+13.680: Application time: 0.7768520 seconds
+{Heap before GC invocations=23 (full 7):
+ PSYoungGen      total 410112K, used 409455K [...
+  eden space 409600K, 99% used [0x1d900000,0x368dbc88,0x36900000)
+  from space 512K, 0% used [0x36980000,0x36980000,0x36a00000)
+ ParOldGen       total 410624K, used 57602K [...
+   -- Heap looks good
+   -- "from" space not used
+   -- Tenured generation had 57 MB live objects
+
+13.680: [GC (Allocation Failure)
+   [PSYoungGen: 409455K->409455K(410112K)]
+      467057K->819318K(820736K), 0.1036509 secs]
+
+Heap after GC invocations=23 (full 7):
+ PSYoungGen      total 410112K, used 409455K [...
+  eden space 409600K, 99% used [0x1d900000,0x368dbc88,0x36900000)
+  from space 512K, 0% used [0x36980000,0x36980000,0x36a00000)
+ ParOldGen       total 410624K, used 409863K [...
+}
+   -- Young GC failed
+   -- No dead object removed
+   -- All objects copied to Tenured generation
+   -- Duplicate objects left in "eden" space!
+   -- 0.1036509 seconds wasted on copying 400 MB objects!
+
+   -- "Full GC (Ergonomics)" trigged immediately !
+{Heap before GC invocations=24 (full 8):
+ PSYoungGen      total 410112K, used 409455K [...
+  eden space 409600K, 99% used [0x1d900000,0x368dbc88,0x36900000)
+  from space 512K, 0% used [0x36980000,0x36980000,0x36a00000)
+ ParOldGen       total 410624K, used 409863K [...
+
+13.784: [Full GC (Ergonomics)
+   [PSYoungGen: 409455K->0K(410112K)]
+   [ParOldGen: 409863K->40193K(410624K)]
+      819318K->40193K(820736K),
+   [Metaspace: 1559K->1559K(4480K)], 0.0157656 secs]
+
+Heap after GC invocations=24 (full 8):
+ PSYoungGen      total 410112K, used 0K [...
+  eden space 409600K, 0% used [0x1d900000,0x1d900000,0x36900000)
+  from space 512K, 0% used [0x36980000,0x36980000,0x36a00000)
+ ParOldGen       total 410624K, used 40193K [...
+}
+   -- Full GC worked ok
+   -- Young generation cleared out
+   -- Tenured generation reduced to 60 MB
+   -- 0.0157656 seconds used
+
+13.800: Total time for which application threads were stopped: 0.1200266 s
+   -- Together, Young GC and Full GC took 0.1200266 seconds!
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Thread Count Impact on Parallel GC
+
+This section provides tests to find out performance impact of the number of GC threads used the Parallel garbage collector. Increasing the number of GC threads from 1 to 4 has improved the application performance slightly on my 2-core and 4-processor CPU computer.
+
+The next thing we want to find out is the performance impact of the number of GC threads using the Parallel garbage collector:
+
+**Test 1** - Parallel GC with 1 GC thread:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1600m -Xmx1600m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1 -XX:ParallelGCThreads=1
+   -Xlog:gc,gc+heap:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2631 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2631, 1000)
+   Latency (min, ave, max) = (1, 380, 1000)
+```
+
+**Test 2** - Parallel GC with 2 GC threads:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1600m -Xmx1600m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1 -XX:ParallelGCThreads=2
+   -Xlog:gc,gc+heap:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 11 milliseconds
+   Throughput = 2771 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2771, 1032)
+   Latency (min, ave, max) = (1, 360, 968)
+```
+
+**Test 3** - Parallel GC with 4 GC threads:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1600m -Xmx1600m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1 -XX:ParallelGCThreads=4
+   -Xlog:gc,gc+heap:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2633 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2633, 410)
+   Latency (min, ave, max) = (1, 379, 2439)
+```
+
+**Test 4** - Parallel GC with 8 GC threads:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1600m -Xmx1600m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1 -XX:ParallelGCThreads=8
+   -Xlog:gc,gc+heap:gc.log GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 16 seconds
+   Total objects processed = 32000
+   Average time per run = 16 milliseconds
+   Throughput = 1884 objects/second
+   Latency = 3906 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1884, 256)
+   Latency (min, ave, max) = (1, 530, 3906)
+```
+
+**Test result summary**
+
+```
+ GC Threads   Throughput   Latency
+----------   ----------   -------
+         1       2631/s   1000 ms
+         2       2771/s    968 ms
+         4       2633/s   2439 ms
+         8       1884/s   3906 ms
+```
+
+Takeaways:
+
+*   Increasing the number of GC threads from 1 to 2 has improved the application performance slightly on my 1-core and 2-processor CPU computer.
+*   When using GC threads of 4 and 8, the application performance decreased back, because my computer has only 2 processors.
+
+Below are test results with JDK 8 on an older 2-core and 4-processor CPU computer:
+
+```
+ GC Threads   Throughput   Latency
+         1        500/s   2659 ms
+         2        506/s   2597 ms
+         4        510/s   2469 ms
+         8        507/s   2597 ms
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟AFFINITY=n - CPU Processors and Parallel GC
+
+This section provides tests to find out the performance impact of the number of CPU processors.
+
+When multiple parallel threads are used to perform GCs, allowing JVM to use more CPU processors should improve the throughput performance. Here are some tests performed with JDK 8 on an older 2-core and 4-processor CPU computer.
+
+**Test 1** - Parallel GC with Affinity=1 (1 processor) and 4 GC threads:
+
+```
+ C:\herong>start /realtime /affinity 1 \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseParallelGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ParallelGCThreads=4
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 62 seconds
+   Total objects processed = 32000
+   Average time per run = 63 milliseconds
+   Throughput = 507 objects/second
+   Latency = 2659 milliseconds/1000 objects
+   Throughput (max, ave, min) = (533, 507, 376)
+   Latency (min, ave, max) = (1876, 1972, 2659)
+```
+
+**Test 2** - Parallel GC with Affinity=2 (2 processors) and 4 GC threads:
+
+```
+ C:\herong>start /realtime /affinity 2 \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseParallelGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ParallelGCThreads=2
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 62 seconds
+   Total objects processed = 32000
+   Average time per run = 63 milliseconds
+   Throughput = 506 objects/second
+   Latency = 2597 milliseconds/1000 objects
+   Throughput (max, ave, min) = (533, 506, 385)
+   Latency (min, ave, max) = (1876, 1976, 2597)
+```
+
+**Test 3** - Parallel GC with Affinity=f (4 processors) and 4 GC threads:
+
+```
+ C:\herong>start /realtime /affinity f \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseParallelGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ParallelGCThreads=4
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 62 seconds
+   Total objects processed = 32000
+   Average time per run = 62 milliseconds
+   Throughput = 509 objects/second
+   Latency = 2500 milliseconds/1000 objects
+   Throughput (max, ave, min) = (533, 509, 400)
+   Latency (min, ave, max) = (1876, 1964, 2500)
+```
+
+**Test result summary**
+
+```
+ Affinity   Throughput   Latency
+----------   ----------   -------
+1 (1 proc)        507/s   2659 ms
+2 (2 proc)        506/s   2597 ms
+f (4 proc)        509/s   2500 ms
+```
+
+Takeaways:
+
+*   "START /AFFINITY n" command can be used to JVM with a specific number of CPU processors.
+*   When all 4 processors are used (/AFFINITY F), the application performance slightly improved.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Best Parallel GC Configuration
+
+This section provides suggestions on Parallel GC configuration to get the best throughput.
+
+With all the tests we have done so far, I think we can propose a good Parallel collector configuration for our test program GCPerfP99.java using the following guidelines:
+
+*   Give enough survivor space to avoid Young GC overflow.
+*   Give very little Tenured generation, because there are almost no long-lived objects. No need for any Old GC.
+*   Adjust "eden" space to control application pause time.
+*   Turn off "Adaptive Size Policy". We can do a better job ourselves.
+
+Let's run some tests with the above suggestions:
+
+**Test 1** - Set "eden" to 70MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms220m -Xmx220m
+   -XX:NewSize=210m -XX:SurvivorRatio=1 -Xlog:gc+heap=debug:gc.log
+   -XX:-UseAdaptiveSizePolicy GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 14 seconds
+   Total objects processed = 32000
+   Average time per run = 14 milliseconds
+   Throughput = 2163 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2163, 1000)
+   Latency (min, ave, max) = (1, 462, 1000)
+
+herong> more gc.log
+...
+[17.761s] GC(492) PSYoungGen: 128499K->62560K(143360K)
+[17.761s] GC(492) ParOldGen: 1059K->1059K(10240K)
+[17.761s] GC(492) Heap after GC invocations=493 (full 0): ...
+[17.761s] GC(492)   eden space 71680K, 0% used [...
+[17.761s] GC(492)   from space 71680K, 87% used [...
+[17.761s] GC(492)   to   space 71680K, 0% used [...
+[17.761s] GC(492)  ParOldGen       total 10240K, used 1059K [...
+[17.761s] GC(492)   object space 10240K, 10% used [...
+```
+
+**Test 2** - Set "eden" to 350MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms500m -Xmx500m
+   -XX:NewSize=490m -XX:SurvivorRatio=5 -Xlog:gc+heap=debug:gc.log
+   -XX:-UseAdaptiveSizePolicy GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2585 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2585, 1000)
+   Latency (min, ave, max) = (1, 386, 1000)
+
+herong> more gc.log
+...
+[13.315s] GC(96) PSYoungGen: 399602K->38112K(430080K)
+[13.315s] GC(96) ParOldGen: 1124K->1124K(10240K)
+[13.315s] GC(96) Heap after GC invocations=97 (full 0): ...
+[13.315s] GC(96)   eden space 358400K, 0% used [...
+[13.315s] GC(96)   from space 71680K, 53% used [...
+[13.315s] GC(96)   to   space 71680K, 0% used [...
+[13.315s] GC(96)  ParOldGen       total 10240K, used 1124K [...
+[13.315s] GC(96)   object space 10240K, 10% used [...
+```
+
+**Test 3** - Set "eden" to 700MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms850m -Xmx850m
+   -XX:NewSize=840m -XX:SurvivorRatio=10 -Xlog:gc+heap=debug:gc.log
+   -XX:-UseAdaptiveSizePolicy GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 11 milliseconds
+   Throughput = 2774 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2774, 1032)
+   Latency (min, ave, max) = (1, 360, 968)
+
+herong> more gc.log
+...
+[12.454s] GC(47) PSYoungGen: 771287K->49408K(788480K)
+[12.454s] GC(47) ParOldGen: 1088K->1088K(10240K)
+[12.454s] GC(47) Heap after GC invocations=48 (full 0): ...
+[12.454s] GC(47)   eden space 716800K, 0% used [...
+[12.454s] GC(47)   from space 71680K, 68% used [...
+[12.455s] GC(47)   to   space 71680K, 0% used [...
+[12.455s] GC(47)  ParOldGen       total 10240K, used 1088K [...
+[12.455s] GC(47)   object space 10240K, 10% used [...
+```
+
+**Test 4** - Set "eden" to 1400MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms1550m -Xmx1550m
+   -XX:NewSize=1540m -XX:SurvivorRatio=20 -Xlog:gc+heap=debug:gc.log
+   -XX:-UseAdaptiveSizePolicy GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 10 seconds
+   Total objects processed = 32000
+   Average time per run = 10 milliseconds
+   Throughput = 2969 objects/second
+   Latency = 500 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2969, 2000)
+   Latency (min, ave, max) = (1, 336, 500)
+
+herong> more gc.log
+...
+[16.142s] GC(23) PSYoungGen: 1470715K->60672K(1505280K)
+[16.142s] GC(23) ParOldGen: 1027K->1027K(10240K)
+[16.142s] GC(23) Heap after GC invocations=24 (full 0): ...
+[16.142s] GC(23)   eden space 1433600K, 0% used [...
+[16.142s] GC(23)   from space 71680K, 84% used [...
+[16.142s] GC(23)   to   space 71680K, 0% used [...
+[16.142s] GC(23)  ParOldGen       total 10240K, used 1027K [...
+[16.142s] GC(23)   object space 10240K, 10% used [...
+```
+
+**Test 5** - Set "eden" to 2800MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseParallelGC -Xms2950m -Xmx2950m
+   -XX:NewSize=2940m -XX:SurvivorRatio=40 -Xlog:gc+heap=debug:gc.log
+   -XX:-UseAdaptiveSizePolicy GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 14 seconds
+   Total objects processed = 32000
+   Average time per run = 14 milliseconds
+   Throughput = 2248 objects/second
+   Latency = 3906 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2248, 256)
+   Latency (min, ave, max) = (1, 444, 3906)
+
+herong> more gc.log
+...
+[20.872s] GC(11) PSYoungGen: 2924496K->51136K(2938880K)
+[20.872s] GC(11) ParOldGen: 56K->56K(10240K)
+[20.872s] GC(11) Heap after GC invocations=12 (full 0): ...
+[20.872s] GC(11)   eden space 2867200K, 0% used [...
+[20.872s] GC(11)   from space 71680K, 71% used [...
+[20.872s] GC(11)   to   space 71680K, 0% used [...
+[20.872s] GC(11)  ParOldGen       total 10240K, used 56K [...
+[20.872s] GC(11)   object space 10240K, 0% used [...
+```
+
+**Comparison of test results**:
+
+```
+ Best Conf         Throughput      Latency    # of
+Eden/Survivor  Ave (Max, Min)/s   ms/1000  Young GC
+
+  70/70 MB     2163 (9999,1000)      1000     492
+ 350/70 MB     2585 (9999,1000)      1000      96
+ 700/70 MB     2774 (9999,1032)       968      47
+1400/70 MB     2969 (9999,2000)       500      23
+2800/70 MB     2248 (9999, 256)      3906      11
+```
+
+Takeaways: Our suggestion works. We can get the best throughput with a heap size of 2950MB! But, giving more Eden more than 2800MB will decrease the performance.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Best Conf         Throughput      Latency    # of
+Eden/Survivor  Ave (Max, Min)/s   ms/1000  Young GC
+
+  70/70 MB      478 (695, 410)       2439     493
+ 350/70 MB      516 (695, 410)       2439      96
+ 700/70 MB      526 (695, 410)       2439      47
+1400/70 MB      525 (695, 410)       2439      24
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Parallel collector](#part0127.xhtml)
+
+∟Performance Summary of Parallel Collector
+
+This section provides a summary of all performance tests on the Parallel collector.
+
+To find out which Parallel collector configuration gives the best performance, let's list all test results of "java GCPerfP99 1024 32 32 64 1000" in a single table:
+
+```
+ Configuration   Heap Size    Throughput   Latency
+1.1 Default              100M        1210/s   1470 ms
+1.2 Default              400M        1740/s   1937 ms
+1.3 Default              800M        1869/s   2439 ms
+1.4 Default             1600M        2550/s    968 ms
+1.5 Default             3200M        2547/s   1470 ms
+1.6 Default             6400M        2917/s    968 ms
+
+    Configuration   Eden/From    Throughput   Latency
+2.1 Young GC only        100M        2418/s   1000 ms
+2.2 Young GC only        200M        2684/s   1000 ms
+2.3 Young GC only        400M        2082/s   5376 ms
+2.4 Young GC only        800M        1510/s  11235 ms
+2.5 Young GC only       1600M         457/s  18867 ms
+
+    Configuration     Tenured    Throughput   Latency
+3.1 Always Tenure        100M        1950/s   1470 ms
+3.2 Always Tenure        200M        1954/s   1972 ms
+3.3 Always Tenure        400M        1979/s   3412 ms
+3.3 Always Tenure        800M        1698/s   6369 ms
+3.3 Always Tenure       1600M         636/s  71428 ms
+
+    Configuration   GC Threads   Throughput   Latency
+4.1 Default/1600M            1       2631/s   1000 ms
+4.2 Default/1600M            2       2771/s    968 ms
+4.3 Default/1600M            4       2633/s   2439 ms
+4.4 Default/1600M            8       1884/s   3906 ms
+```
+
+Takeaways:
+
+*   The best Parallel GC configuration is to give large enough Young generation, which gives a throughput of 2917 objects per second, and a latency of 968 milliseconds per 1000 objects. In this case, only Young GC is needed.
+*   When we force the Parallel collector to promote objects to Tenured generation directly, both the throughput and latency are getting worse. In this case, the Young GC is copying all objects to Tenured generation, including dead objects, resulting long application pauses.
+*   More heap memory improves throughput performance. But too much heap memory will decrease the performance too.
+
+Below are test result summary with same parameters on an older computer with JDK 8:
+
+```
+ Configuration   Heap Size    Throughput   Latency
+-----------------   ---------    ----------   -------
+1.1 Default              100M         385/s   3448 ms
+1.2 Default              400M         439/s   3906 ms
+1.3 Default              800M         457/s   4424 ms
+1.4 Default             1600M         521/s   2439 ms
+
+    Configuration   Eden/From    Throughput   Latency
+-----------------   ---------    ----------   -------
+2.1 Young GC only        100M         506/s   2439 ms
+2.2 Young GC only        200M         523/s   2439 ms
+2.3 Young GC only        400M         525/s   2439 ms
+
+    Configuration     Tenured    Throughput   Latency
+-----------------   ---------    ----------   -------
+3.1 Always Tenure        100M         454/s   2941 ms
+3.2 Always Tenure        200M         460/s   3906 ms
+3.3 Always Tenure        400M         466/s   5847 ms
+
+    Configuration   GC Threads   Throughput   Latency
+-----------------   ---------    ----------   -------
+4.1 Default/1600M            1        500/s   2659 ms
+4.2 Default/1600M            2        506/s   2597 ms
+4.3 Default/1600M            4        510/s   2469 ms
+4.4 Default/1600M            8        507/s   2597 ms
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Performance Tests on Concurrent collector
+
+This chapter provides tutorial notes and example codes on performance impact of Concurrent collector, Topics include heap footprint; heap size impact; running Young GC only; running more Old GC; impact of parallel threads; impact of concurrent threads.
+
+> [Concurrent GC Footprint - Free Heap 4%](#part0140.xhtml)
+> 
+> [Heap Size Impact on Concurrent GC](#part0141.xhtml)
+> 
+> [Performance of Concurrent Young GC](#part0142.xhtml)
+> 
+> [Performance of Concurrent Full GC](#part0143.xhtml)
+> 
+> [Performance of Concurrent Old GC](#part0144.xhtml)
+> 
+> [Parallel Threads Impact on Concurrent GC](#part0145.xhtml)
+> 
+> [Concurrent Threads Impact on Concurrent GC](#part0146.xhtml)
+> 
+> [AFFINITY=n - CPU Processors and Concurrent GC](#part0147.xhtml)
+> 
+> [Best Concurrent GC Configuration](#part0148.xhtml)
+> 
+> [Performance Summary of Concurrent Collector](#part0149.xhtml)
+
+Takeaways:
+
+*   The Concurrent collector requires about 4% free heap space to perform garbage collections.
+*   More free heap space will increase application throughput performance.
+*   Concurrent Young GC seems to be more efficient than Old GC.
+*   Giving enough Young generation space to use Young GC only results the best performance.
+*   Number of parallel GC threads has no impact on the performance.
+*   Number of concurrent GC threads has no impact on the performance.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Concurrent GC Footprint - Free Heap 4%
+
+This section provides tutorials to find out what is the heap memory footprint to run GCPerfP99.java. The Concurrent collector needs about 4% free heap space to perform garbage collections.
+
+*Warning: the Concurrent Mark-Sweep (CMS) Collector has been removed from JVM 15\. But if you still have JVM 14 or older installed, you can continue to use it.*
+
+One important performance factor of a garbage collector is the memory footprint, which is measured by the minimum heap size required to run the application. Let's run some tests with GCPerfP99.java to find out the footprint of the Concurrent collector.
+
+**Test 1** - 66 MB of heap memory is not enough to run GCPerfP99.java with 64 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms66m -Xmx66m GCPerfP99 1024 32 32 0 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=100
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at GCPerfP99$MyObject.<init>(GCPerfP99.java:98)
+        at GCPerfP99.myTest(GCPerfP99.java:41)
+        at GCPerfP99.main(GCPerfP99.java:22)
+```
+
+**Test 2** - 67 MB is the minimum heap size to run GCPerfP99.java: with 64 MB live objects at peak times:
+
+```
+ herong> \Progra~1\java\jdk1.8.0\bin\java -XX:+UseConcMarkSweepGC
+   -Xms67m -Xmx67m GCPerfP99 1024 32 32 0 100
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=100
+Results:
+   Total execution time = 2 seconds
+   Total objects processed = 3200
+   Average time per run = 27 milliseconds
+   Throughput = 1165 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (2133, 1165, 1000)
+   Latency (min, ave, max) = (468, 858, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 100, 47, 680
+```
+
+**Test 3** - 132 MB of heap memory is not enough to run GCPerfP99.java with 128 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms132m -Xmx132m GCPerfP99 1024 64 64 0 100
+
+Parameters:
+   Size=1024KB, Base=64, Chunk=64, Warmup=0, Runs=100
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at GCPerfP99$MyObject.<init>(GCPerfP99.java:98)
+        at GCPerfP99.myTest(GCPerfP99.java:41)
+        at GCPerfP99.main(GCPerfP99.java:22)
+```
+
+**Test 4** - 133 MB of heap memory is not enough to run GCPerfP99.java with 128 MB live objects at peak times:
+
+```
+ herong> java -XX:+UseConcMarkSweepGC \
+   -Xms133m -Xmx133m GCPerfP99 1024 64 64 0 100
+
+Parameters:
+   Size=1024KB, Base=64, Chunk=64, Warmup=0, Runs=100
+Results:
+   Total execution time = 6 seconds
+   Total objects processed = 6400
+   Average time per run = 62 milliseconds
+   Throughput = 1029 objects/second
+   Latency = 1219 milliseconds/1000 objects
+   Throughput (max, ave, min) = (1391, 1029, 820)
+   Latency (min, ave, max) = (718, 971, 1219)
+1% worst runs dropped:
+   Run, Time, Throughput = 100, 78, 820
+```
+
+Conclusion:
+
+*   67 MB is the heap memory footprint for the Concurrent collector to run GCPerfP99.java with 64 MB live object at peak times.
+*   133 MB is the heap memory footprint for the Concurrent collector to run GCPerfP99.java with 128 MB live object at peak times.
+*   The Concurrent collector needs about 4.5% to 3.8% (calculated as (67-64)/67 and (133-128)/133) free heap memory to perform garbage collections.
+*   With the minimum heap size, the Concurrent collector performance pretty good on application throughput and latency.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Heap Size Impact on Concurrent GC
+
+This section provides tutorials to find out the performance impact of heap size with the Concurrent collector. Increasing heap size seems to improve the throughput performance. But it also decreases the latency performance.
+
+In this tutorial, let's find out the performance impact of heap size with the Concurrent collector.
+
+**Test 1** - Running GCPerfP99.java using 100 MB heap size with the Concurrent Collector. 64 iterations of warmup is specified to flush 64*32*1024K = 2GB objects through the heap.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms100m -Xmx100m GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 25 seconds
+   Total objects processed = 32000
+   Average time per run = 25 milliseconds
+   Throughput = 1261 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (2133, 1261, 1000)
+   Latency (min, ave, max) = (468, 793, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 47, 680
+```
+
+**Test 2** - Running GCPerfP99.java using 400 MB heap size with the Concurrent Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms400m -Xmx400m GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 17 seconds
+   Total objects processed = 32000
+   Average time per run = 17 milliseconds
+   Throughput = 1859 objects/second
+   Latency = 1470 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1859, 680)
+   Latency (min, ave, max) = (1, 537, 1470)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 47, 680
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 47, 680
+```
+
+**Test 3** - Running GCPerfP99.java using 800 MB heap size with the Concurrent Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms800m -Xmx800m GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 14 seconds
+   Total objects processed = 32000
+   Average time per run = 14 milliseconds
+   Throughput = 2139 objects/second
+   Latency = 1972 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2139, 507)
+   Latency (min, ave, max) = (1, 467, 1972)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 63, 507
+   ...
+   Run, Time, Throughput = 999, 78, 410
+   Run, Time, Throughput = 1000, 78, 410
+```
+
+**Test 4** - Running GCPerfP99.java using 1600 MB heap size with the Concurrent Collector.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms1600m -Xmx1600m GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 11 milliseconds
+   Throughput = 2787 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2787, 1000)
+   Latency (min, ave, max) = (1, 358, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 32, 1000
+```
+
+**Comparison of test results**:
+
+```
+ Heap Size       Throughput       Latency
+             Ave (Max, Min)/s    ms/1000
+
+   100 MB   1261 (2133, 1000)       1000
+   400 MB   1859 (9999,  680)       1470
+   800 MB   2139 (9999,  507)       1972
+  1600 MB   2787 (9999, 1000)       1000
+```
+
+Conclusion:
+
+*   Throughput is getting better when heap size is increased from 100MB to 1600MB. Because more heap memory allows more new objects to be allocated before each GC. This reduces the frequency of GC and increases the throughput.
+*   But latency is increased too from 100MB to 800MB, and dropped back to 1000ms per 1000 objects.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Heap Size      Throughput       Latency
+            Ave (Max, Min)/s    ms/1000
+
+   100 MB   403 (516, 323)         3095
+   400 MB   489 (695, 344)         2906
+   800 MB   507 (695, 344)         2906
+  1600 MB   502 (695, 340)         2941
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Performance of Concurrent Young GC
+
+This section provides tests to find out performance impact of using Concurrent Young GC only with enough 'eden' and 'from' spaces. Increasing heap size will reduce Young GC frequency and improve throughput performance.
+
+Will my application perform better if I give enough Young generation space so the Concurrent collector will run Young GC only?
+
+Let's find out the answer by running GCPerfP99.java with JVM options to give enough space in "eden" and "from" to run Young GC without promoting any live objects to Tenured generation.
+
+**Test 1** - Use "-Xms600m -Xmx600m -XX:NewRatio=1 -XX:SurvivorRatio=1" to have 100MB "eden" space and 100MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms600m -Xmx600m -XX:NewRatio=1 -XX:SurvivorRatio=1
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 13 seconds
+   Total objects processed = 32000
+   Average time per run = 13 milliseconds
+   Throughput = 2332 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2332, 1000)
+   Latency (min, ave, max) = (1, 428, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 32, 1000
+
+herong> more gc.log
+...
+GC(343) Pause Young (Allocation Failure)
+GC(343) ParNew: 160758K->61446K(204800K)
+GC(343) CMS: 980K->980K(307200K)
+GC(343) Pause Young (Allocation Failure) 157M->60M(500M) 14.332ms
+
+GC(343) Heap after GC invocations=344 (full 0): ...
+GC(343)   eden space 102400K,   0% used [...
+GC(343)   from space 102400K,  60% used [...
+GC(343)   to   space 102400K,   0% used [...
+```
+
+**Test 2** - Use "-Xms1200m -Xmx1200m" to have 200MB "eden" space and 200MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms1200m -Xmx1200m -XX:NewRatio=1 -XX:SurvivorRatio=1
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2628 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2628, 1000)
+   Latency (min, ave, max) = (1, 380, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 32, 1000
+
+herong> more gc.log
+...
+GC(170) Pause Young (Allocation Failure)
+GC(170) ParNew: 259062K->61446K(409600K)
+GC(170) CMS: 978K->978K(614400K)
+GC(170) Pause Young (Allocation Failure) 253M->60M(1000M) 16.661ms
+
+GC(170) Heap after GC invocations=171 (full 0): ...
+GC(170)   eden space 204800K,   0% used [...
+GC(170)   from space 204800K,  30% used [...
+GC(170)   to   space 204800K,   0% used [...
+```
+
+**Test 3** - Use "-Xms1500m -Xmx1500m -XX:NewSize=1200m -XX:SurvivorRatio=1" to have 400MB "eden" space and 400MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms1500m -Xmx1500m -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2611 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2611, 1000)
+   Latency (min, ave, max) = (1, 382, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 47, 680
+
+herong> more gc.log
+...
+GC(84) Pause Young (Allocation Failure)
+GC(84) ParNew: 461823K->34826K(819200K)
+GC(84) CMS: 976K->976K(307200K)
+GC(84) Pause Young (Allocation Failure) 451M->34M(1100M) 7.463ms
+
+GC(84) Heap after GC invocations=85 (full 0): ...
+GC(84)   eden space 409600K,   0% used [...
+GC(84)   from space 409600K,   8% used [...
+GC(84)   to   space 409600K,   0% used [...
+```
+
+**Test 4** - Use "-Xms2500m -Xmx2500m -XX:NewSize=2400m -XX:SurvivorRatio=1" to have 800MB "eden" space and 800MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms2500m -Xmx2500m -XX:NewSize=2400m -XX:SurvivorRatio=1
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 11 seconds
+   Total objects processed = 32000
+   Average time per run = 11 milliseconds
+   Throughput = 2748 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2748, 1032)
+   Latency (min, ave, max) = (1, 363, 968)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 31, 1032
+   ...
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 32, 1000
+
+herong> more gc.log
+...
+
+GC(41) Pause Young (Allocation Failure)
+GC(41) ParNew: 862212K->41998K(1638400K)
+GC(41) CMS: 975K->975K(102400K)
+GC(41) Pause Young (Allocation Failure) 842M->41M(1700M) 9.048ms
+
+GC(41) Heap after GC invocations=42 (full 0): ...
+GC(41)   eden space 819200K,   0% used [...
+GC(41)   from space 819200K,   5% used [...
+GC(41)   to   space 819200K,   0% used [...
+```
+
+**Test 5** - Use "-Xms1900m -Xmx1900m -XX:NewSize=1800m -XX:SurvivorRatio=16" to have 1600MB "eden" space and 100MB "from" space.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms1900m -Xmx19000m -XX:NewSize=1800m -XX:SurvivorRatio=16
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 16 seconds
+   Total objects processed = 32000
+   Average time per run = 16 milliseconds
+   Throughput = 1971 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1971, 1000)
+   Latency (min, ave, max) = (1, 507, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 63, 507
+
+herong> more gc.log
+...
+GC(20) Pause Young (Allocation Failure)
+GC(20) ParNew: 1681412K->41994K(1740800K)
+GC(20) CMS: 980K->980K(102400K)
+GC(20) Pause Young (Allocation Failure) 1642M->41M(1800M) 13.210ms
+
+GC(20) Heap after GC invocations=21 (full 0): par new generation...
+GC(20)   eden space 1638400K,   0% used [...
+GC(20)   from space 102400K,  41% used [...
+GC(20)   to   space 102400K,   0% used [...
+```
+
+**Comparison of test results**:
+
+```
+ Young MB       Throughput      Latency   Young   Old   Full
+Eden/From    Ave (Max, Min)/s   ms/1000      GC    GC     GC
+
+  100/100   2332 (9999, 1000)      1000     344     0      0
+  200/200   2628 (9999, 1000)      1000     171     0      0
+  400/400   2611 (9999, 1000)      1000      85     0      0
+  800/800   2748 (9999, 1032)       968      42     0      0
+ 1600/100   1971 (9999, 1000)      1000      21     0      0
+```
+
+Takeaways:
+
+*   With enough "eden" and "from" spaces, it is possible to run Concurrent collector with Young GC only, which is really performed by the Parallel New (ParNew) collector.
+*   When "eden" space is increased from 100MB to 800MB, throughput performance is getting better, because Young GCs are performed less frequently.
+*   But when "eden" space is increased to 1600MB, throughput performance drops significantly. I am not sure why.
+*   Latency stays about the same. This tells us that the Young GC is able to provide a consistent maximum pause time to process new objects in "eden" of 100 MB to 1600 MB.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Eden/From      Throughput       Latency
+   Young     Ave (Max, Min)/s    ms/1000
+
+100/100 MB    504 (695, 410)        2439
+200/200 MB    525 (695, 410)        2439
+400/400 MB    538 (695, 410)        2439
+800/100 MB    539 (695, 410)        2439
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Performance of Concurrent Full GC
+
+This section provides tests to find out performance impact of using more Concurrent Major GC with enough '-XX:MaxTenuringThreshold=0' JVM option. Significant performance drops observed.
+
+Will my application perform better if I force Young GC promoting live objects to "tenured" generation directly, skipping "from" space so the Concurrent collector will run more Full GCs?
+
+Let's find out the answer by running GCPerfP99.java with "-XX:MaxTenuringThreshold=0" JVM option. "-XX:CMSInitiatingOccupancyFraction=90" and "-XX:+UseCMSInitiatingOccupancyOnly" are also used to avoid Old GCs.
+
+**Test 1** - Use "-Xms400m -Xmx400m -XX:Newsize=300m -XX:SurvivorRatio=1" to have 100MB "eden" space and 100MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms400m -Xmx400m
+   -XX:NewSize=300m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -XX:CMSInitiatingOccupancyFraction=90 -XX:+UseCMSInitiatingOccupancyOnly
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 18 seconds
+   Total objects processed = 32000
+   Average time per run = 18 milliseconds
+   Throughput = 1723 objects/second
+   Latency = 1470 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1723, 680)
+   Latency (min, ave, max) = (1, 580, 1470)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 47, 680
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 62, 516
+
+herong> more gc.log
+...
+[20.176s] GC(685) Pause Young (Allocation Failure)
+[20.176s] GC(686) Pause Full (Allocation Failure)
+[20.192s] GC(686) Pause Full (Allocation Failure) 157M->60M(300M) 15.515ms
+[20.192s] GC(685) ParNew: 102381K->0K(204800K)
+[20.192s] GC(685) CMS: 59246K->62318K(102400K)
+[20.192s] GC(685) Pause Young (Allocation Failure) 157M->60M(300M) 15.643ms
+
+[20.192s] GC(685) Heap after GC invocations=344 (full 343):
+[20.192s] GC(685)   eden space 102400K,   0% used [...
+[20.192s] GC(685)   from space 102400K,   0% used [...
+[20.192s] GC(685)   to   space 102400K,   0% used [...
+   -- total # of GC: 687 (GC counts from 0)
+   -- # of Young GC: 344
+   -- # of Full GC: 343
+   -- # of Old GC: 0
+   -- Each Young GC was combined with a Full GC, except #0
+```
+
+**Test 2** - Use "-Xms800m -Xmx800m -XX:Newsize=600m -XX:SurvivorRatio=1" to have 200MB "eden" space and 200MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms800m -Xmx800m
+   -XX:NewSize=600m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -XX:CMSInitiatingOccupancyFraction=90 -XX:+UseCMSInitiatingOccupancyOnly
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2510 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2510, 1000)
+   Latency (min, ave, max) = (1, 398, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 62, 516
+
+herong> more gc.log
+...
+[13.897s] GC(339) Pause Young (Allocation Failure)
+[13.897s] GC(340) Pause Full (Allocation Failure)
+[13.914s] GC(340) Pause Full (Allocation Failure) 254M->61M(600M) 17.362ms
+[13.914s] GC(339) ParNew: 204783K->0K(409600K)
+[13.914s] GC(339) CMS: 56173K->63342K(204800K)
+[13.914s] GC(339) Pause Young (Allocation Failure) 254M->61M(600M) 17.503ms
+
+[13.914s] GC(339) Heap after GC invocations=171 (full 170): ...
+[13.914s] GC(339)   eden space 204800K,   0% used [...
+[13.914s] GC(339)   from space 204800K,   0% used [...
+[13.914s] GC(339)   to   space 204800K,   0% used [...
+   -- total # of GC: 341 (GC counts from 0)
+   -- # of Young GC: 171
+   -- # of Full GC: 170
+   -- # of Old GC: 0
+   -- Each Young GC was combined with a Full GC, except #0
+```
+
+**Test 3** - Use "-Xms1600m -Xmx1600m -XX:Newsize=1200m -XX:SurvivorRatio=1" to have 400MB "eden" space and 400MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms1600m -Xmx1600m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1 -XX:MaxTenuringThreshold=0
+   -XX:CMSInitiatingOccupancyFraction=90 -XX:+UseCMSInitiatingOccupancyOnly
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2532 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2532, 1000)
+   Latency (min, ave, max) = (1, 394, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 109, 293
+
+herong> more gc.log
+...
+[13.984s] GC(167) Pause Young (Allocation Failure)
+[13.984s] GC(168) Pause Full (Allocation Failure)
+[13.996s] GC(168) Pause Full (Allocation Failure) 450M->33M(1200M) 12.137ms
+[13.996s] GC(167) ParNew: 409586K->0K(819200K)
+[13.996s] GC(167) CMS: 52077K->34669K(409600K)
+[13.996s] GC(167) Pause Young (Allocation Failure) 450M->33M(1200M) 12.366ms
+
+[13.996s] GC(167) Heap after GC invocations=85 (full 84): ...
+[13.996s] GC(167)   eden space 409600K,   0% used [...
+[13.996s] GC(167)   from space 409600K,   0% used [...
+[13.996s] GC(167)   to   space 409600K,   0% used [...
+   -- total # of GC: 169 (GC counts from 0)
+   -- # of Young GC: 85
+   -- # of Full GC: 84
+   -- # of Old GC: 0
+   -- Each Young GC was combined with a Full GC, except #0
+```
+
+**Test 4** - Use "-Xms1800m -Xmx1800m -XX:Newsize=1000m -XX:SurvivorRatio=8" to have 800MB "eden" space and 800MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms1800m -Xmx1800m
+   -XX:NewSize=1000m -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=0
+   -XX:CMSInitiatingOccupancyFraction=90 -XX:+UseCMSInitiatingOccupancyOnly
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 13 seconds
+   Total objects processed = 32000
+   Average time per run = 13 milliseconds
+   Throughput = 2418 objects/second
+   Latency = 1314 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2418, 761)
+   Latency (min, ave, max) = (1, 413, 1314)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 46, 695
+   ...
+   Run, Time, Throughput = 1000, 188, 170
+   Run, Time, Throughput = 1000, 183, 174
+
+herong> more gc.log
+...
+[16.235s] GC(81) Pause Young (Allocation Failure)
+[16.235s] GC(82) Pause Full (Allocation Failure)
+[16.249s] GC(82) Pause Full (Allocation Failure) 842M->41M(1700M) 14.136ms
+[16.249s] GC(81) ParNew: 819192K->0K(921600K)
+[16.249s] GC(81) CMS: 43885K->42861K(819200K)
+[16.249s] GC(81) Pause Young (Allocation Failure) 842M->41M(1700M) 14.313ms
+
+[16.249s] GC(81) Heap after GC invocations=42 (full 41): ...
+[16.249s] GC(81)   eden space 819200K,   0% used [...
+[16.249s] GC(81)   from space 102400K,   0% used [...
+[16.249s] GC(81)   to   space 102400K,   0% used [...
+   -- total # of GC: 83 (GC counts from 0)
+   -- # of Young GC: 42
+   -- # of Full GC: 41
+   -- # of Old GC: 0
+   -- Each Young GC was combined with a Full GC, except #0
+```
+
+**Test 5** - Use "-Xms2000m -Xmx2000m -XX:NewSize=1800m -XX:SurvivorRatio=16" to have 1600MB "eden" space and 200MB "tenured" generation.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms2000m -Xmx2000m
+   -XX:NewSize=1800m -XX:SurvivorRatio=16 -XX:MaxTenuringThreshold=0
+   -XX:CMSInitiatingOccupancyFraction=90 -XX:+UseCMSInitiatingOccupancyOnly
+   -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 14 seconds
+   Total objects processed = 32000
+   Average time per run = 15 milliseconds
+   Throughput = 2113 objects/second
+   Latency = 1470 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2113, 680)
+   Latency (min, ave, max) = (1, 473, 1470)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 47, 680
+   ...
+   Run, Time, Throughput = 999, 94, 340
+   Run, Time, Throughput = 1000, 125, 256
+
+herong> more gc.log
+...
+[17.087s] GC(39) Pause Young (Allocation Failure)
+[17.087s] GC(40) Pause Full (Allocation Failure)
+[17.105s] GC(40) Pause Full (Allocation Failure) 1642M->41M(1900M) 18.420ms
+[17.105s] GC(39) ParNew: 1638395K->0K(1740800K)
+[17.105s] GC(39) CMS: 43887K->42863K(204800K)
+[17.105s] GC(39) Pause Young (Allocation Failure) 1642M->41M(1900M) 18.608ms
+
+[17.105s] GC(39) Heap after GC invocations=21 (full 20): ...
+[17.105s] GC(39)   eden space 1638400K,   0% used [...
+[17.105s] GC(39)   from space 102400K,   0% used [...
+[17.106s] GC(39)   to   space 102400K,   0% used [...
+   -- total # of GC: 41 (GC counts from 0)
+   -- # of Young GC: 21
+   -- # of Full GC: 20
+   -- # of Old GC: 0
+   -- Each Young GC was combined with a Full GC, except #0
+```
+
+**Test result summary:**
+
+```
+ (MB) Eden      Throughput       Latency   Young   Old   Full
+ /Tenured   Ave (Max, Min)/s    ms/1000      GC    GC     GC
+---------   ----------------    -------   -----   ---   ----
+  100/100   1723 (9999, 680)       1470     344     0    343
+  200/200   2510 (9999,1000)       1000     171     0    170
+  400/400   2532 (9999,1000)       1000      85     0     84
+  800/800   2418 (9999, 761)       1314      42     0     41
+ 1600/200   2113 (9999, 680)       1470      21     0     20
+```
+
+Takeaways:
+
+*   With "-XX:MaxTenuringThreshold=0" JVM option, it is possible to run Concurrent collector with Full GCs by skipping "from" space.
+*   When "eden" space size is increased from 100MB to 1600MB, less GCs are performed, but more objects to be processed in each GC.
+*   Throughput increases from 1723 to 2532 objects/second, then decreases to 2113 objects/second.
+*   Latency stays about the same.
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Eden/Tenured      Throughput       Latency
+               Ave (Max, Min)/s    ms/1000
+
+  100/100 MB    494 (1000, 340)       2906
+  200/200 MB    499 (1103, 323)       3095
+  400/400 MB    518 (1066, 359)       2785
+  800/400 MB    526 (1102, 359)       2785
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Performance of Concurrent Old GC
+
+This section provides tests to find out performance impact of using more Concurrent Old GC with enough '-XX:MaxTenuringThreshold=1' JVM option. No significant impact on application performance observed.
+
+In the last tutorial, we learned how to force Concurrent garbage collector to perform Full GCs. In this tutorial, we want to let the garbage collector to perform Old GCs with any Full GCs.
+
+First, we will set Eden space to 100MB and From space to 50MB to let the garbage collector perform Young GC frequently. Then, we will use "-XX:MaxTenuringThreshold=1" option to promote some objects survived from 1 round Young GC to Tenured generation.
+
+**Test 1** - Setting Tenured generation with 100MB for more frequent Old GCs:
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC
+   -Xms300m -Xmx300m -XX:NewSize=200m -XX:SurvivorRatio=2
+   -XX:MaxTenuringThreshold=1 -Xlog:gc,gc+start,gc+heap=debug:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 14 seconds
+   Total objects processed = 32000
+   Average time per run = 14 milliseconds
+   Throughput = 2177 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2177, 1000)
+   Latency (min, ave, max) = (1, 459, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 32, 1000
+   Run, Time, Throughput = 1000, 47, 680
+
+C:\herong>find "Pause Full" gc.log
+   -- 0 Full GCs
+
+C:\herong>find "Old: " gc.log
+[ 1.364s] GC(20) Old: 58206K->51156K(102400K)
+[ 1.980s] GC(34) Old: 63444K->50129K(102400K)
+...
+[14.813s] GC(333) Old: 51155K->57299K(102400K)
+[15.284s] GC(346) Old: 57299K->36818K(102400K)
+   -- 23 Old GCs completed
+
+herong> more gc.log
+...
+[15.746s] GC(367) ParNew: 152566K->50180K(153600K)
+[15.746s] GC(367) CMS: 52179K->63443K(102400K)
+[15.746s] GC(367) Pause Young (Allocation Failure) 199M->110M(250M) 16.444ms
+[15.746s] GC(367) Heap after GC invocations=344 (full 24): ...
+[15.746s] GC(367)   eden space 102400K,   0% used [...
+[15.746s] GC(367)   from space 51200K,  98% used [...
+[15.746s] GC(367)   to   space 51200K,   0% used [...
+   -- total # of GC: 368 (GC counts from 0)
+   -- # of Young GC: 344
+   -- # of Full GC: 0
+   -- # of Old GC: 24 (#24 Old GC half way done)
+```
+
+**Test 2** - Setting Tenured generation with 200MB for less frequent Old GCs:
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC \
+   -Xms400m -Xmx400m -XX:NewSize=200m -XX:SurvivorRatio=2 \
+   -XX:MaxTenuringThreshold=1 -Xlog:gc,gc+start,gc+heap=debug:gc.log \
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 15 seconds
+   Total objects processed = 32000
+   Average time per run = 15 milliseconds
+   Throughput = 2072 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2072, 1000)
+   Latency (min, ave, max) = (1, 482, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 47, 680
+   Run, Time, Throughput = 1000, 47, 680
+
+herong> more gc.log
+...
+[16.539s] GC(354) ParNew: 152564K->50182K(153600K)
+[16.539s] GC(354) CMS: 162774K->174039K(204800K)
+[16.539s] GC(354) Pause Young (Allocation Failure) 307M->218M(350M) 16.032ms
+[16.539s] GC(354) Heap after GC invocations=344 (full 11): ...
+[16.539s] GC(354)   eden space 102400K,   0% used [...
+[16.539s] GC(354)   from space 51200K,  98% used [...
+[16.539s] GC(354)   to   space 51200K,   0% used [...
+   -- total # of GC: 355 (GC counts from 0)
+   -- # of Young GC: 344
+   -- # of Full GC: 0
+   -- # of Old GC: 11 (#11 Old GC half way done)
+```
+
+**Test 3** - Setting Tenured generation with 1600MB for zero Old GCs. We also need to use "-XX:CMSInitiatingOccupancyFraction=90" and "-XX:+UseCMSInitiatingOccupancyOnly" to stop Old GC triggered too early.
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC \
+   -Xms1800m -Xmx1800m -XX:NewSize=200m -XX:SurvivorRatio=2 \
+   -XX:CMSInitiatingOccupancyFraction=90 \
+   -XX:+UseCMSInitiatingOccupancyOnly \
+   -XX:MaxTenuringThreshold=1 -Xlog:gc,gc+start,gc+heap=debug:gc.log \
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 14 seconds
+   Total objects processed = 32000
+   Average time per run = 14 milliseconds
+   Throughput = 2178 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2178, 1000)
+   Latency (min, ave, max) = (1, 459, 1000)
+1% worst runs dropped:
+   Run, Time, Throughput = 991, 32, 1000
+   ...
+   Run, Time, Throughput = 999, 46, 695
+   Run, Time, Throughput = 1000, 47, 680
+
+C:\herong>find "Pause Full" gc.log
+   -- 0 Full GCs
+
+C:\herong>find "Old: " gc.log
+   -- 0 Old GCs
+
+herong> more gc.log
+...
+[15.784s] GC(343) ParNew: 152566K->50182K(153600K)
+[15.784s] GC(343) CMS: 1123306K->1133546K(1638400K)
+[15.784s] GC(343) Pause Young (Allocation Failure)
+                   1245M->1155M(1750M) 17.158ms
+[15.784s] GC(343) Heap after GC invocations=344 (full 0): ...
+[15.784s] GC(343)   eden space 102400K,   0% used [...
+[15.784s] GC(343)   from space 51200K,  98% used [...
+[15.784s] GC(343)   to   space 51200K,   0% used [...
+   -- total # of GC: 344 (GC counts from 0)
+   -- # of Young GC: 344
+   -- # of Full GC: 0
+   -- # of Old GC: 0
+```
+
+**Test result summary:**
+
+```
+ Eden/From      Throughput       Latency   Young   Old   Full
+/Tenured MB   Ave (Max, Min)/s    ms/1000      GC    GC     GC
+-----------   ----------------    -------   -----   ---   ----
+100/50/ 100   2177 (9999,1000)       1000     344    24      0
+100/50/ 200   2072 (9999,1000)       1000     344    11      0
+100/50/1600   2178 (9999,1000)       1000     344     0      0
+```
+
+Takeaways:
+
+*   With "-XX:MaxTenuringThreshold=1" JVM option, it is possible to run the Concurrent collector with Young GCs and Old GCs without any Full GCs.
+*   When "tenured" generation size is increased less Old GCs are performed, but more objects to be processed in each GC.
+*   Throughput stays about the same. So the impact of Old GCs is very small. Maybe I need to run the test with a longer time to verify this.
+*   Latency stays about the same too.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Parallel Threads Impact on Concurrent GC
+
+This section provides tests to find out performance impact of the number of GC threads used the Concurrent garbage collector. Increasing the number of GC threads from 1 to 4 has improved the application performance slightly on my 2-core and 4-processor CPU computer.
+
+We known that the Concurrent garbage collector uses parallel threads to perform certain parts of Young and Old GC process.
+
+Here are some tests performed with JDK 8 on an older 2-core and 4-processor CPU computer to find out the performance impact of the number of parallel threads used by the Concurrent garbage collector.
+
+**Test 1** - Concurrent GC with 1 parallel thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ParallelGCThreads=1
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 518 objects/second
+   Latency = 2500 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 518, 400)
+   Latency (min, ave, max) = (1438, 1930, 2500)
+```
+
+**Test 2** - Concurrent GC with 2 parallel thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ParallelGCThreads=2
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 62 seconds
+   Total objects processed = 32000
+   Average time per run = 63 milliseconds
+   Throughput = 519 objects/second
+   Latency = 2531 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 519, 395)
+   Latency (min, ave, max) = (1438, 1926, 2531)
+```
+
+**Test 3** - Concurrent GC with 4 parallel thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ParallelGCThreads=4
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 518 objects/second
+   Latency = 2469 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 518, 405)
+   Latency (min, ave, max) = (1438, 1930, 2469)
+```
+
+**Test 4** - Concurrent GC with 8 parallel thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ParallelGCThreads=8
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 62 milliseconds
+   Throughput = 516 objects/second
+   Latency = 2941 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 516, 340)
+   Latency (min, ave, max) = (1438, 1937, 2941)
+```
+
+**Test result summary**
+
+```
+ Parallel
+ Threads   Throughput   Latency
+--------   ----------   -------
+       1        518/s   2500 ms
+       2        519/s   2531 ms
+       4        518/s   2469 ms
+       8        516/s   2941 ms
+```
+
+Takeaways:
+
+*   Increasing the number of parallel threads has no significant impact on performance. I am not sure why.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Concurrent Threads Impact on Concurrent GC
+
+This section provides tests to find out performance impact of the number of GC threads used the Concurrent garbage collector. Increasing the number of GC threads from 1 to 4 has improved the application performance slightly on my 2-core and 4-processor CPU computer.
+
+We known that the Concurrent garbage collector uses concurrent threads to perform certain phases of Old GC process.
+
+Here are some tests performed with JDK 8 on an older 2-core and 4-processor CPU computer to find out the performance impact of the number of concurrent threads used by the Concurrent garbage collector.
+
+**Test 1** - Concurrent GC with 1 concurrent thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ConcGCThreads=1
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 518 objects/second
+   Latency = 2439 milliseconds/1000 objects
+   Throughput (max, ave, min) = (711, 518, 410)
+   Latency (min, ave, max) = (1406, 1930, 2439)
+```
+
+**Test 2** - Concurrent GC with 2 concurrent thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ConcGCThreads=2
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 517 objects/second
+   Latency = 2631 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 517, 380)
+   Latency (min, ave, max) = (1438, 1934, 2631)
+```
+
+**Test 3** - Concurrent GC with 4 concurrent thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ConcGCThreads=4
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 518 objects/second
+   Latency = 2531 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 518, 395)
+   Latency (min, ave, max) = (1438, 1930, 2531)
+```
+
+**Test 4** - Concurrent GC with 8 concurrent thread:
+
+```
+ C:\herong>start /realtime \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   -XX:ConcGCThreads=8
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 61 seconds
+   Total objects processed = 32000
+   Average time per run = 61 milliseconds
+   Throughput = 516 objects/second
+   Latency = 2531 milliseconds/1000 objects
+   Throughput (max, ave, min) = (695, 516, 395)
+   Latency (min, ave, max) = (1438, 1937, 2531)
+```
+
+**Test result summary**
+
+```
+ Concurrent
+   Threads   Throughput   Latency
+----------   ----------   -------
+         1        518/s   2439 ms
+         2        517/s   2631 ms
+         4        518/s   2531 ms
+         8        516/s   2531 ms
+```
+
+Takeaways:
+
+*   Increasing the number of concurrent threads has no significant impact on performance. I am not sure why.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟AFFINITY=n - CPU Processors and Concurrent GC
+
+This section provides tests to find out the performance impact of the number of CPU processors.
+
+When multiple Concurrent threads are used to perform GCs, allowing JVM to use more CPU processors should improve the throughput performance. Here are some tests performed with JDK 8 on an older 2-core and 4-processor CPU computer.
+
+**Test 1** - Concurrent GC with Affinity=1 (1 processor):
+
+```
+ C:\herong>start /realtime /affinity 1 \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 63 seconds
+   Total objects processed = 32000
+   Average time per run = 63 milliseconds
+   Throughput = 500 objects/second
+   Latency = 2631 milliseconds/1000 objects
+   Throughput (max, ave, min) = (533, 500, 380)
+   Latency (min, ave, max) = (1876, 2000, 2631)
+```
+
+**Test 2** - Concurrent GC with Affinity=2 (2 processors):
+
+```
+ C:\herong>start /realtime /affinity 2 \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 63 seconds
+   Total objects processed = 32000
+   Average time per run = 64 milliseconds
+   Throughput = 497 objects/second
+   Latency = 2659 milliseconds/1000 objects
+   Throughput (max, ave, min) = (533, 497, 376)
+   Latency (min, ave, max) = (1876, 2012, 2659)
+```
+
+**Test 3** - Concurrent GC with Affinity=f (4 processors):
+
+```
+ C:\herong>start /realtime /affinity 4 \progra~1\java\jdk1.8.0\bin\java
+   -XX:+UseConcMarkSweepGC -Xms1500m -Xmx1500m
+   -XX:NewSize=1200m -XX:SurvivorRatio=1
+   -XX:+PrintGCDetails -XX:+PrintHeapAtGC
+   -XX:+PrintTenuringDistribution -Xloggc:gc.log
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 63 seconds
+   Total objects processed = 32000
+   Average time per run = 64 milliseconds
+   Throughput = 499 objects/second
+   Latency = 2597 milliseconds/1000 objects
+   Throughput (max, ave, min) = (524, 499, 385)
+   Latency (min, ave, max) = (1908, 2004, 2597)
+```
+
+**Test result summary**
+
+```
+ Affinity   Throughput   Latency
+------------   ----------   -------
+  1 (1 proc)        500/s   2631 ms
+  2 (2 proc)        497/s   2659 ms
+  f (4 proc)        499/s   2597 ms
+```
+
+Takeaways:
+
+*   "START /AFFINITY n" command can be used to run JVM with a specific number of CPU processors.
+*   Number of processors have no impact on performance. I am not sure why.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Best Concurrent GC Configuration
+
+This section provides suggestions on Concurrent GC configuration to get the best throughput.
+
+With all the tests we have done so far, I think we can propose a good Concurrent collector configuration for our test program GCPerfP99.java using the following guidelines:
+
+*   Give enough survivor space to avoid Young GC overflow.
+*   Give very little Tenured generation, because there are almost no long-lived objects. No need for any Old GC.
+*   Adjust "eden" space to control application pause time.
+
+Let's run some tests with the above suggestions:
+
+**Test 1** - Set "eden" to 70MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms220m -Xmx220m
+   -XX:NewSize=210m -XX:SurvivorRatio=1 GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 15 seconds
+   Total objects processed = 32000
+   Average time per run = 16 milliseconds
+   Throughput = 1987 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 1987, 1000)
+   Latency (min, ave, max) = (1, 503, 1000)
+```
+
+**Test 2** - Set "eden" to 350MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms500m -Xmx500m
+   -XX:NewSize=490m -XX:SurvivorRatio=5 -Xlog:gc,gc+heap=debug
+   GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 12 seconds
+   Total objects processed = 32000
+   Average time per run = 12 milliseconds
+   Throughput = 2517 objects/second
+   Latency = 1000 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2517, 1000)
+   Latency (min, ave, max) = (1, 397, 1000)
+```
+
+**Test 3** - Set "eden" to 700MB, survivors to 70MB, and Tenured to 10MB:
+
+```
+ C:\herong>start /realtime java -XX:+UseConcMarkSweepGC -Xms850m -Xmx850m
+   -XX:NewSize=840m -XX:SurvivorRatio=10 GCPerfP99 1024 32 32 64 1000
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=64, Runs=1000
+Results:
+   Total execution time = 10 seconds
+   Total objects processed = 32000
+   Average time per run = 10 milliseconds
+   Throughput = 2918 objects/second
+   Latency = 968 milliseconds/1000 objects
+   Throughput (max, ave, min) = (999999, 2918, 1032)
+   Latency (min, ave, max) = (1, 342, 968)
+```
+
+**Comparison of test results**:
+
+```
+ Best Conf         Throughput      Latency
+Eden/Survivor  Ave (Max, Min)/s   ms/1000
+
+  70/70 MB     1987 (9999,1000)      1000
+ 350/70 MB     2517 (9999,1000)      1000
+ 700/70 MB     2918 (9999,1032)       968
+```
+
+Takeaways: Our suggestion works. We can get the best throughput with a heap size of 850MB!
+
+Below are test results on an older computer with JDK 8:
+
+```
+ Best Conf         Throughput      Latency  # of GC
+Eden/Survivor  Ave (Max, Min)/s   ms/1000
+
+  70/70 MB      478 (695, 344)       2906    492
+ 350/70 MB      517 (744, 390)       2564     97
+ 700/70 MB      524 (695, 410)       2439     47
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on Concurrent collector](#part0139.xhtml)
+
+∟Performance Summary of Concurrent Collector
+
+This section provides a summary of all performance tests on the Concurrent collector.
+
+To find out which Concurrent collector configuration gives the best performance, let's list all test results of "java GCPerfP99 1024 32 32 64 1000" in a single table:
+
+```
+ Configuration      Heap Size    Throughput   Latency
+1.1 Default                100 M        1261/s   1000 ms
+1.2 Default                400 M        1859/s   1470 ms
+1.3 Default                800 M        2139/s   1972 ms
+1.4 Default               1600 M        2787/s   1000 ms
+
+    Configuration      Eden/From    Throughput   Latency
+2.1 Young GC only      100/100 M        2332/s   1000 ms
+2.2 Young GC only      200/200 M        2628/s   1000 ms
+2.3 Young GC only      400/400 M        2611/s   1000 ms
+2.4 Young GC only      800/100 M        2748/s    968 ms
+2.5 Young GC only     1600/100 M        1971/s   1000 ms
+
+    Configuration   Eden/Tenured    Throughput   Latency
+3.1 Always Tenure      100/100 M        1723/s   1470 ms
+3.2 Always Tenure      200/200 M        2510/s   1000 ms
+3.3 Always Tenure      400/400 M        2532/s   1000 ms
+3.4 Always Tenure      800/400 M        2418/s   1314 ms
+3.5 Always Tenure      800/200 M        2113/s   1470 ms
+
+    Configuration  Eden/From/Old    Throughput   Latency
+4.1 Young & Old    100/50/ 100 M        2177/s   1000 ms
+4.1 Young & Old    100/50/ 200 M        2072/s   1000 ms
+4.1 Young & Old    100/50/1600 M        2178/s   1000 ms
+```
+
+Takeaways:
+
+*   The best Concurrent GC configuration is to give large enough Young generation, which gives a throughput of 2748 objects per second, and a latency of 968 milliseconds per 1000 objects. In this case, only Young GC is needed.
+*   When we force the Concurrent collector to promote objects to Tenured generation directly, both the throughput and latency are getting worse. In this case, the Young GC is copying all objects to Tenured generation, including dead objects, resulting long application pauses.
+
+Below are test result summary with same parameters on an older computer with JDK 8:
+
+```
+ Configuration      Heap Size    Throughput   Latency
+-----------------   ------------    ----------   -------
+1.1 Default                100 M         403/s   3095 ms
+1.2 Default                400 M         489/s   2906 ms
+1.3 Default                800 M         507/s   2906 ms
+1.4 Default               1600 M         502/s   2941 ms
+
+    Configuration      Eden/From    Throughput   Latency
+-----------------   ------------    ----------   -------
+2.1 Young GC only      100/100 M         504/s   2439 ms
+2.2 Young GC only      200/200 M         525/s   2439 ms
+2.3 Young GC only      400/400 M         538/s   2439 ms
+2.4 Young GC only      800/100 M         539/s   2439 ms
+
+    Configuration   Eden/Tenured    Throughput   Latency
+-----------------   ------------    ----------   -------
+3.1 Always Tenure      100/100 M         494/s   2906 ms
+3.2 Always Tenure      200/200 M         499/s   3095 ms
+3.3 Always Tenure      400/400 M         518/s   2785 ms
+3.4 Always Tenure      800/400 M         526/s   2785 ms
+
+    Configuration    Par Threads    Throughput   Latency
+-----------------   ------------    ----------   -------
+4.1 Default/1600M              1         518/s   2500 ms
+4.2 Default/1600M              2         519/s   2531 ms
+4.3 Default/1600M              4         518/s   2469 ms
+4.4 Default/1600M              8         516/s   2941 ms
+
+    Configuration   Conc Threads    Throughput   Latency
+-----------------   ------------    ----------   -------
+5.1 Default/1600M              1         518/s   2439 ms
+5.2 Default/1600M              2         517/s   2631 ms
+5.3 Default/1600M              4         518/s   2531 ms
+5.4 Default/1600M              8         516/s   2531 ms
+
+    Configuration      CPU Proc.    Throughput   Latency
+-----------------   ------------    ----------   -------
+6.1 Default/1600M              1         500/s   2631 ms
+6.2 Default/1600M              2         497/s   2659 ms
+6.3 Default/1600M              4         499/s   2597 ms
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Performance Tests on G1 collector
+
+This chapter provides tutorial notes and example codes on performance impact of G1 collector, Topics include heap footprint; heap size impact; running Young GC only, running more Full GC and Old GC.
+
+> [G1 GC Footprint - Free Heap 4% to 50%](#part0151.xhtml)
+> 
+> [Heap Size Impact on G1 GC](#part0152.xhtml)
+> 
+> [Heap Region Size Impact on G1 GC](#part0153.xhtml)
+> 
+> [Object Size Impact on G1 Young GC](#part0154.xhtml)
+> 
+> [Parallel Threads Impact on G1 Young GC](#part0155.xhtml)
+> 
+> [Object Size Impact on G1 Full GC](#part0156.xhtml)
+> 
+> [Object Size Impact on G1 Old GC](#part0157.xhtml)
+> 
+> [Concurrent Threads Impact on G1 Old GC](#part0158.xhtml)
+> 
+> [Parallel Threads Impact on G1 Old GC](#part0159.xhtml)
+> 
+> [CPU Processors Impact on G1 Old GC](#part0160.xhtml)
+> 
+> [Performance Summary of G1 Collector](#part0161.xhtml)
+
+Takeaways:
+
+*   The G1 collector requires about 4% free heap space to perform garbage collections.
+*   More free heap space will increase application throughput performance.
+*   Heap region size seems to have no impact on application throughput performance.
+*   G1 Young GC can process about 42 MB objects per ms with object size of 1K.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟G1 GC Footprint - Free Heap 4% to 50%
+
+This section provides tutorials to find out what is the heap memory footprint to run GCPerfP99V2.java. The G1 collector needs about 4% to 50% free heap space to perform garbage collections.
+
+One important performance factor of a garbage collector is the memory footprint, which is measured by the minimum heap size required to run the application. Let's run some tests with GCPerfP99V2.java to find out the footprint of the G1 collector.
+
+**Test 1** - 66 MB of heap memory is not enough to run GCPerfP99V2.java with 64 MB live objects required peak times:
+
+```
+ herong> java -XX:+UseG1GC -Xms66m -Xmx66m GCPerfP99V2 32 1024 1024 0 10
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=0, Runs=10, Loads=1
+[0.077s] Run start 1
+
+Exception: java.lang.OutOfMemoryError thrown from the
+   UncaughtExceptionHandler in thread "main"
+```
+
+**Test 2** - 67 MB of heap memory is enough to run GCPerfP99V2.java with 64 MB live objects required peak times:
+
+```
+ herong> java -XX:+UseG1GC -Xms67m -Xmx67m GCPerfP99V2 32 1024 1024 0 10
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=0, Runs=10, Loads=1
+...
+Statistics of percentile runs:
+   Total number of runs = 10
+   Percentile % = 99
+   Execution time = 408 ms
+   Average time per run = 45 ms
+   Standard deviation = 2.6874192494328497 ms
+   Objects processed = 9216
+   Throughput = 22588 objects/second
+   Latency = 49 ms/1000 objects
+   Throughput (max, ave, min) = (24380, 22588, 20078)
+   Latency (min, ave, max) = (41, 44, 49)
+Worst runs dropped:
+   #, Time, Throughput = 10, 54, 18962
+```
+
+So 67 MB is the heap memory footprint for the G1 collector to run GCPerfP99V2.java which requires 64 MB live object at peak times.
+
+This tells me that the G1 collector needs about 4% (calculated as (67-64)/67) free heap memory to perform garbage collections.
+
+However, if the application uses larger objects, the G1 may humongous regions to store them, with large amount heap space wasted. See results from tests below.
+
+**Test 3** - 132 MB of heap memory is not enough to run GCPerfP99V2.java which requires 64 MB live large (1024K in size) objects at peak times.
+
+```
+ herong> java -XX:+UseG1GC -Xms132m -Xmx132m GCPerfP99V2 1024 32 32 0 10
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=10, Loads=1
+...
+[0.302s] Run start 7
+[0.324s] Run end 7: 22ms
+[0.327s] Run start 8
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+   at GCPerfP99V2$MyObject.<init>(GCPerfP99V2.java:116)
+   at GCPerfP99V2.myTest(GCPerfP99V2.java:52)
+```
+
+**Test 4** - 133 MB of heap memory is enough to run GCPerfP99V2.java which requires 64 MB live large (1024K in size) objects at peak times.
+
+```
+ herong> java -XX:+UseG1GC -Xms133m -Xmx133m GCPerfP99V2 1024 32 32 0 10
+
+Parameters:
+   Size=1024KB, Base=32, Chunk=32, Warmup=0, Runs=10, Loads=1
+...
+Statistics of percentile runs:
+   Total number of runs = 10
+   Percentile % = 99
+   Execution time = 271 ms
+   Average time per run = 30 ms
+   Standard deviation = 9.291573243177568 ms
+   Objects processed = 288
+   Throughput = 1062 objects/second
+   Latency = 1626 ms/1000 objects
+   Throughput (max, ave, min) = (1523, 1062, 615)
+   Latency (min, ave, max) = (656, 941, 1626)
+Worst runs dropped:
+   #, Time, Throughput = 10, 52, 615
+```
+
+So 133 MB is the heap memory footprint for the G1 collector to run GCPerfP99V2.java which requires 64 MB live large (1024K in size) objects at peak times.
+
+This tells me that the G1 collector needs about 50% (calculated as (133-64)/133) free heap memory to perform garbage collections in this case. This is because the default region size is 1MB and any objects larger than half the G1 region size will be stored Humongous regions. Our object size is 1MB, which will be stored in 2 Humongous regions, occupying 2MB of heap space. So 64 MB objects need 128 MB of heap space.
+
+Conclusion:
+
+*   The G1 collector needs about 4% free heap memory to perform garbage collections for applications using smaller objects, relative to the G1 region size.
+*   The G1 collector needs about 50% free heap memory to perform garbage collections for applications, if they use objects larger than half the G1 region size.
+*   To avoid wasting heap space, you should set the G1 region size to be larger than 2 times the majority object size.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Heap Size Impact on G1 GC
+
+This section provides tutorials to find out the performance impact of heap size with the G1 collector. Increasing heap size has no significant impact on throughput and latency performance.
+
+In this tutorial, let's find out the performance impact of heap size with the G1 collector.
+
+**Test 1** - So let's start with "-Xms100m -Xmx100m".
+
+```
+ herong> java -XX:+UseG1GC -Xms100m -Xmx100m \
+   GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 311894 ms
+   Average time per run = 1575 ms
+   Standard deviation = 86.26111405482656 ms
+   Objects processed = 202752
+   Throughput = 650 objects/second
+   Latency = 1703 ms/1000 objects
+   Throughput (max, ave, min) = (728, 650, 587)
+   Latency (min, ave, max) = (1373, 1538, 1703)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1744, 587
+   #, Time, Throughput = 200, 1751, 584
+```
+
+**Test 2** - Increase heap space to "-Xms200m -Xmx200m".
+
+```
+ herong> java -XX:+UseG1GC -Xms200m -Xmx200m \
+   GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 311359 ms
+   Average time per run = 1572 ms
+   Standard deviation = 107.0105488994313 ms
+   Objects processed = 202752
+   Throughput = 651 objects/second
+   Latency = 1718 ms/1000 objects
+   Throughput (max, ave, min) = (831, 651, 582)
+   Latency (min, ave, max) = (1203, 1536, 1718)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1759, 582
+   #, Time, Throughput = 200, 1767, 579
+```
+
+**Test 3** - Increase heap space to "-Xms400m -Xmx400m".
+
+```
+ herong> java -XX:+UseG1GC -Xms400m -Xmx400m \
+   GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 311267 ms
+   Average time per run = 1572 ms
+   Standard deviation = 108.64256564858486 ms
+   Objects processed = 202752
+   Throughput = 651 objects/second
+   Latency = 1680 ms/1000 objects
+   Throughput (max, ave, min) = (856, 651, 595)
+   Latency (min, ave, max) = (1168, 1536, 1680)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1730, 591
+   #, Time, Throughput = 200, 1743, 587
+```
+
+**Test 4** - Increase heap space to "-Xms800m -Xmx800m".
+
+```
+ herong> java -XX:+UseG1GC -Xms800m -Xmx800m \
+   GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 303226 ms
+   Average time per run = 1531 ms
+   Standard deviation = 131.10359077901535 ms
+   Objects processed = 202752
+   Throughput = 668 objects/second
+   Latency = 1700 ms/1000 objects
+   Throughput (max, ave, min) = (837, 668, 588)
+   Latency (min, ave, max) = (1194, 1497, 1700)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1748, 585
+   #, Time, Throughput = 200, 1768, 579
+```
+
+**Test 5** - Increase heap space to "-Xms1600m -Xmx1600m".
+
+```
+ herong> java -XX:+UseG1GC -Xms1600m -Xmx1600m \
+   GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 319028 ms
+   Average time per run = 1611 ms
+   Standard deviation = 77.68844797970256 ms
+   Objects processed = 202752
+   Throughput = 635 objects/second
+   Latency = 1709 ms/1000 objects
+   Throughput (max, ave, min) = (749, 635, 585)
+   Latency (min, ave, max) = (1335, 1574, 1709)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1753, 584
+   #, Time, Throughput = 200, 1755, 583
+```
+
+**Comparison of test results**:
+
+```
+ Heap Size      Throughput       Latency
+            Ave (Max, Min)/s    ms/1000
+
+   100 MB      650 (728,587)       1703
+   200 MB      651 (831,582)       1718
+   400 MB      651 (856,595)       1680
+   800 MB      668 (837,588)       1700
+  1600 MB      635 (749,585)       1709
+```
+
+Conclusion: the impact of changing heap size on throughput and latency is not significant.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Heap Region Size Impact on G1 GC
+
+This section provides tutorials to find out the performance impact of heap region size with the G1 collector. The heap region size seems to have no impact on the performance of the G1 collector.
+
+In this tutorial, let's find out the performance impact of heap region size with the G1 collector with the maximum heap size of my Windows system.
+
+**Test 1** - In this first test, we will start with a heap region size of 1024K, which is the minimum and default region size supported by the G1 collector.
+
+```
+ herong> java -XX:+UseG1GC -Xms1600m -Xmx1600m \
+   -XX:G1HeapRegionSize=1024k GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 319028 ms
+   Average time per run = 1611 ms
+   Standard deviation = 77.68844797970256 ms
+   Objects processed = 202752
+   Throughput = 635 objects/second
+   Latency = 1709 ms/1000 objects
+   Throughput (max, ave, min) = (749, 635, 585)
+   Latency (min, ave, max) = (1335, 1574, 1709)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1753, 584
+   #, Time, Throughput = 200, 1755, 583
+```
+
+**Test 2** - Increase region size to 2048K.
+
+```
+ herong> java -XX:+UseG1GC -Xms1600m -Xmx1600m \
+   -XX:G1HeapRegionSize=2048k GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 274378 ms
+   Average time per run = 1385 ms
+   Standard deviation = 89.92499680569942 ms
+   Objects processed = 202752
+   Throughput = 738 objects/second
+   Latency = 1547 ms/1000 objects
+   Throughput (max, ave, min) = (859, 738, 646)
+   Latency (min, ave, max) = (1164, 1355, 1547)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1618, 632
+   #, Time, Throughput = 200, 1638, 625
+```
+
+**Test 3** - Increase region size to 4096K.
+
+```
+ herong> java -XX:+UseG1GC -Xms1600m -Xmx1600m \
+   -XX:G1HeapRegionSize=4096k GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 299284 ms
+   Average time per run = 1511 ms
+   Standard deviation = 71.05169550646511 ms
+   Objects processed = 202752
+   Throughput = 677 objects/second
+   Latency = 1672 ms/1000 objects
+   Throughput (max, ave, min) = (744, 677, 598)
+   Latency (min, ave, max) = (1344, 1477, 1672)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1719, 595
+   #, Time, Throughput = 200, 1745, 586
+```
+
+**Test 4** - Increase region size to 8M.
+
+```
+ herong> java -XX:+UseG1GC -Xms1600m -Xmx1600m \
+   -XX:G1HeapRegionSize=8m GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 298957 ms
+   Average time per run = 1509 ms
+   Standard deviation = 55.23590363617717 ms
+   Objects processed = 202752
+   Throughput = 678 objects/second
+   Latency = 1587 ms/1000 objects
+   Throughput (max, ave, min) = (739, 678, 630)
+   Latency (min, ave, max) = (1353, 1474, 1587)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1628, 628
+   #, Time, Throughput = 200, 1648, 621
+```
+
+**Test 5** - Increase region size to 16M.
+
+```
+ herong> java -XX:+UseG1GC -Xms1600m -Xmx1600m \
+   -XX:G1HeapRegionSize=16m GCPerfP99V2 32 1024 1024 64 200 1000
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=64, Runs=200, Loads=1000
+...
+Statistics of percentile runs:
+   Total number of runs = 200
+   Percentile % = 99
+   Execution time = 302412 ms
+   Average time per run = 1527 ms
+   Standard deviation = 75.8058391716974 ms
+   Objects processed = 202752
+   Throughput = 670 objects/second
+   Latency = 1663 ms/1000 objects
+   Throughput (max, ave, min) = (762, 670, 601)
+   Latency (min, ave, max) = (1312, 1492, 1663)
+Worst runs dropped:
+   #, Time, Throughput = 199, 1718, 596
+   #, Time, Throughput = 200, 1733, 590
+```
+
+**Comparison of test results**:
+
+```
+ Region Size      Throughput       Latency
+              Ave (Max, Min)/s    ms/1000
+
+     1.0 MB      635 (749,585)       1709
+     2.0 MB      738 (859,646)       1547
+     4.0 MB      677 (744,598)       1672
+     8.0 MB      678 (739,630)       1587
+    16.0 MB      670 (762,601)       1663
+```
+
+Conclusion:
+
+*   The heap region size seems to have no big impact on throughput and latency performance.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Object Size Impact on G1 Young GC
+
+This section provides tests to find out the impact of object size on the speed of Young GC of the G1 garbage collector. Young GC runs faster with larger objects for the same amount of Eden space.
+
+Since G1 is a generational garbage collector, we could actually provide enough Survivor space so that it will perform Young GC only. For my sample program, GCPerfP99V2.java, if I give 100MB of Survivor space, all live objects can stay in the Survivor regions. No object will be promoted to Old regions.
+
+Running GCPerfP99V2.java with Young GC only can help me to look at the impact of object size on the speed of Young GC.
+
+To do this, I want to give Eden space and Old generation the same size of 800M, and keep Survivor space with 100M.
+
+**Test 1** - With object size of 32K and chunk size of 1024.
+
+```
+ herong> java -XX:+UseG1GC -Xms1700m -Xmx1700m \
+   -XX:NewSize=900m -XX:MaxNewSize=900m -XX:SurvivorRatio=8 \
+   -Xlog:gc,gc+heap GCPerfP99V2 32 1024 1024 0 1000 1 > output.txt
+
+herong> more output.txt
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=0, Runs=1000, Loads=1
+...
+[0.643s] Run start 27
+GC(0) Eden regions: 900->0(862)
+GC(0) Survivor regions: 0->38(113)
+GC(0) Old regions: 0->0
+GC(0) Archive regions: 0->0
+GC(0) Humongous regions: 0->0
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 899M->37M(1700M) 15.253ms
+[0.67s] Run end 27: 27ms
+   -- Young GC performed with no objects promoted to Old regions
+...
+[0.939s] Run start 53
+GC(1) Eden regions: 862->0(860)
+GC(1) Survivor regions: 38->40(113)
+GC(1) Old regions: 0->0
+GC(1) Archive regions: 0->0
+GC(1) Humongous regions: 0->0
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 899M->39M(1700M) 8.642ms
+[0.955s] Run end 53: 16ms
+   -- Young GC performed with no objects promoted to Old regions
+...
+[11.592s] Run start 989
+GC(37) Eden regions: 860->0(861)
+GC(37) Survivor regions: 40->39(113)
+GC(37) Old regions: 1->1
+GC(37) Archive regions: 0->0
+GC(37) Humongous regions: 0->0
+GC(37) Pause Young (Normal) (G1 Evacuation Pause) 899M->39M(1700M) 8.329ms
+[11.608s] Run end 989: 16ms
+   -- Young GC performed with no objects promoted to Old regions
+...
+[11.717s] Run start 1000
+[11.733s] Run end 1000: 16ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 11365 ms
+   Average time per run = 11 ms
+   Standard deviation = 5.72792204111499 ms
+   Objects processed = 1013760
+   Throughput = 93090 objects/second
+   Latency = 26 ms/1000 objects
+   Throughput (max, ave, min) = (999999, 93090, 37925)
+   Latency (min, ave, max) = (1, 10, 26)
+Worst runs dropped:
+   #, Time, Throughput = 991, 28, 36571
+   ...
+   #, Time, Throughput = 999, 32, 32000
+   #, Time, Throughput = 1000, 32, 32000
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 38
+
+C:\herong>find "Pause Young" output.txt
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 899M->37M(1700M) 15.253ms
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 899M->39M(1700M) 8.642ms
+GC(2) Pause Young (Normal) (G1 Evacuation Pause) 899M->38M(1700M) 9.740ms
+GC(3) Pause Young (Normal) (G1 Evacuation Pause) 899M->39M(1700M) 8.564ms
+GC(4) Pause Young (Normal) (G1 Evacuation Pause) 899M->38M(1700M) 8.725ms
+GC(5) Pause Young (Normal) (G1 Evacuation Pause) 899M->38M(1700M) 8.784ms
+...
+GC(36) Pause Young (Normal) (G1 Evacuation Pause) 900M->40M(1700M) 8.432ms
+GC(37) Pause Young (Normal) (G1 Evacuation Pause) 899M->39M(1700M) 8.329ms
+   -- 38 Young GC, average of 8.90ms/GC
+```
+
+As you can see, I got 38 Young GC, and 8.90ms per GC, processing about 800MB Eden space per GC, a speed of 89.89 M/ms. This is about 25,000 objects (object size is 32K) processed per Old GC, a speed of 2908.99 o/ms.
+
+**Test 2** - With object size of 1K and chunk size of 32768.
+
+```
+ herong> java -XX:+UseG1GC -Xms900m -Xmx900m -XX:NewSize=800m \
+   -Xlog:gc,gc+start,gc+heap=debug \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+herong> more output.txt
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+[0.66s] Run start 26
+GC(0) Eden regions: 900->0(835)
+GC(0) Survivor regions: 0->65(113)
+GC(0) Old regions: 0->0
+GC(0) Archive regions: 0->0
+GC(0) Humongous regions: 0->0
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 900M->64M(1700M) 35.937ms
+[0.718s] Run end 26: 58ms
+   -- Young GC performed with no objects promoted to Old regions
+...
+[12.833s] Run start 976
+GC(38) Eden regions: 832->0(835)
+GC(38) Survivor regions: 68->65(113)
+GC(38) Old regions: 1->1
+GC(38) Archive regions: 0->0
+GC(38) Humongous regions: 0->0
+GC(38) Pause Young (Normal) (G1 Evacuation Pause) 900M->65M(1700M) 17.952ms
+[12.863s] Run end 976: 30ms
+   -- Young GC performed with no objects promoted to Old regions
+...
+[13.129s] Run start 1000
+[13.145s] Run end 1000: 16ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 12701 ms
+   Average time per run = 12 ms
+   Standard deviation = 6.403676343091576 ms
+   Objects processed = 32440320
+   Throughput = 2730666 objects/second
+   Latency = 0 ms/1000 objects
+   Throughput (max, ave, min) = (999999, 2730666, 1024000)
+   Latency (min, ave, max) = (1, 0, 0)
+Worst runs dropped:
+   #, Time, Throughput = 991, 32, 1024000
+   ...
+   #, Time, Throughput = 999, 47, 697191
+   #, Time, Throughput = 1000, 58, 564965
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 39
+
+C:\herong>find "Pause Young" output.txt
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 900M->64M(1700M) 35.937ms
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 899M->67M(1700M) 19.321ms
+GC(2) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 27.653ms
+GC(3) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 18.690ms
+GC(4) Pause Young (Normal) (G1 Evacuation Pause) 900M->68M(1700M) 19.652ms
+GC(5) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 19.379ms
+...
+GC(37) Pause Young (Normal) (G1 Evacuation Pause) 900M->68M(1700M) 19.067ms
+GC(38) Pause Young (Normal) (G1 Evacuation Pause) 900M->65M(1700M) 17.952ms
+   -- 39 Young GC, average of 19.25ms/GC
+```
+
+As you can see, I got 39 Old GC, and 19.25ms per GC, processing about 800MB full heap space per GC, a speed of 41.56 M/ms. This is about 800,000 objects (object size is 1K) processed per Old GC, a speed of 41558.44 o/ms.
+
+**Comparison of test results**:
+
+```
+ Eden (MB)   Obj.   P99 Ex.   Young   Old   Full      Young GC Speed
+/Survivor   Size   Time s       GC    GC     GC   ms/GC  MB/ms  Obj/ms
+
+  800/100    32K   11.365       38     0      0    8.90  89.89    2909
+  800/100     1K   12.701       39     0      0   19.25  41.56   41558
+```
+
+Takeaways:
+
+*   With enough Survivor space, it is possible to run G1 collector with Young GC only.
+*   For the same amount of Eden space, G1 Young GC process runs faster with larger objects. My tests show 2 times faster with 32K object size than 1K object size.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Parallel Threads Impact on G1 Young GC
+
+This section provides tests to find out the impact of Parallel Threads on the speed of Old GC of the G1 garbage collector. With more Parallel threads, the Old GC runs slightly faster.
+
+In the last tutorial, we have looked at the impact of object size on the speed of the Young GC process of the G1 garbage collector. In this tutorial, I want to look at the impact of number of Parallel Threads on the Young GC process.
+
+**Test 1** - Using "-XX:ParallelGCThreads=1".
+
+```
+ herong> java -XX:+UseG1GC -Xms1700m -Xmx1700m \
+   -XX:NewSize=900m -XX:MaxNewSize=900m -XX:SurvivorRatio=8 \
+   -XX:ParallelGCThreads=1 -Xlog:gc,gc+task=trace \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+   Execution time = 22427 ms
+
+C:\herong>find "GC Thread: using" output.txt
+[1.039s][trace][gc,task] GC(0) GC Thread: using 1 out of 1 workers
+[1.465s][trace][gc,task] GC(1) GC Thread: using 1 out of 1 workers
+[1.779s][trace][gc,task] GC(2) GC Thread: using 1 out of 1 workers
+[2.243s][trace][gc,task] GC(3) GC Thread: using 1 out of 1 workers
+...
+   -- 1 thread used in Young GCs as expected
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 39
+
+C:\herong>find "Pause Young" output.txt
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 59.804ms
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 899M->64M(1700M) 21.979ms
+GC(2) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 30.281ms
+GC(3) Pause Young (Normal) (G1 Evacuation Pause) 900M->68M(1700M) 30.067ms
+GC(4) Pause Young (Normal) (G1 Evacuation Pause) 901M->67M(1700M) 21.822ms
+GC(5) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 25.967ms
+GC(6) Pause Young (Normal) (G1 Evacuation Pause) 901M->67M(1700M) 24.346ms
+GC(7) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 20.571ms
+GC(8) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 23.069ms
+GC(9) Pause Young (Normal) (G1 Evacuation Pause) 901M->67M(1700M) 21.022ms
+...
+GC(38) Pause Young (Normal) (G1 Evacuation Pause) 901M->67M(1700M) 23.220ms
+   -- 39 Young GC, average of 22.96ms/GC
+```
+
+**Test 2** - Using "-XX:ParallelGCThreads=4".
+
+```
+ herong> java -XX:+UseG1GC -Xms1700m -Xmx1700m \
+   -XX:NewSize=900m -XX:MaxNewSize=900m -XX:SurvivorRatio=8 \
+   -XX:ParallelGCThreads=4 -Xlog:gc,gc+task=trace \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+   Execution time = 12586 ms
+
+C:\herong>find "GC Thread: using" output.txt
+[0.809s][trace][gc,task] GC(0) GC Thread: using 4 out of 4 workers
+[1.136s][trace][gc,task] GC(1) GC Thread: using 4 out of 4 workers
+[1.475s][trace][gc,task] GC(2) GC Thread: using 4 out of 4 workers
+[1.827s][trace][gc,task] GC(3) GC Thread: using 4 out of 4 workers
+...
+   -- 4 threads used in Young GCs as expected
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 39
+
+C:\herong>find "Pause Young" output.txt
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 900M->64M(1700M) 42.037ms
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 899M->67M(1700M) 17.900ms
+GC(2) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 21.569ms
+GC(3) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 17.537ms
+GC(4) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 18.653ms
+...
+GC(38) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 18.220ms
+   -- 39 Young GC, average of 18.65ms/GC
+```
+
+**Test 3** - Using "-XX:ParallelGCThreads=8", which is the default for my computer with 4 cores and 8 logical processors.
+
+```
+ herong> java -XX:+UseG1GC -Xms1700m -Xmx1700m \
+   -XX:NewSize=900m -XX:MaxNewSize=900m -XX:SurvivorRatio=8 \
+   -XX:ParallelGCThreads=8 -Xlog:gc,gc+task=trace \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+   Execution time = 12938 ms
+
+C:\herong>find "GC Thread: using" output.txt
+[0.775s][trace][gc,task] GC(0) GC Thread: using 8 out of 8 workers
+[1.111s][trace][gc,task] GC(1) GC Thread: using 8 out of 8 workers
+[1.459s][trace][gc,task] GC(2) GC Thread: using 8 out of 8 workers
+[1.818s][trace][gc,task] GC(3) GC Thread: using 8 out of 8 workers
+...
+   -- 8 threads used in Young GCs as expected
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 39
+
+C:\herong>find "Pause Young" output.txt
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 900M->64M(1700M) 39.168ms
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 899M->67M(1700M) 19.162ms
+GC(2) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 18.375ms
+GC(3) Pause Young (Normal) (G1 Evacuation Pause) 900M->67M(1700M) 18.914ms
+GC(4) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 18.034ms
+...
+GC(38) Pause Young (Normal) (G1 Evacuation Pause) 900M->66M(1700M) 17.435ms
+   -- 39 Young GC, average of 18.61ms/GC
+```
+
+**Test result summary:**
+
+```
+ Eden (MB)   Obj.       Par    Exec.   Young   Old   Full   Young GC
+/Survivor   Size   Threads   Time s      GC    GC     GC      Speed
+---------   ----   -------   ------   -----   ---   ----   --------
+  800/100     1K         1   22.427      39     0      0    22.96ms
+  800/100     1K         4   12.586      39     0      0    18.65ms
+  800/100     1K         8   12.938      39     0      0    18.61ms
+```
+
+Takeaways:
+
+*   With "-XX:ParallelGCThreads=8" JVM option, it is possible to control the number threads used in Young GCs.
+*   With more parallel threads, the Young GC runs significantly faster. My tests show 1.23 times faster with 4 threads than 1 thread.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Object Size Impact on G1 Full GC
+
+This section provides tests to find out the impact of object size on the speed of Full GC of the G1 garbage collector. Full GC runs faster with larger objects for the same amount of full heap space.
+
+In previous tutorials, we have looked at performance of Young GC processes of the G1 garbage collector. In this tutorial, I want to look at the impact of object size on the speed of the Full GC process.
+
+To do this, I want to give Young generation and Old generation the same size of 800M. When the "-XX:MaxTenuringThreshold=0" option is used, the Young GC will copy objects directly to the Old generation and fill it quickly.
+
+**Test 1** - With object size of 32K and chunk size of 1024.
+
+```
+ herong> java -XX:+UseG1GC -Xms1601m -Xmx1601m \
+   -XX:NewSize=801m -XX:MaxNewSize=801m -XX:SurvivorRatio=800 \
+   -XX:MaxTenuringThreshold=0 -Xlog:gc,gc+start,gc+heap \
+   GCPerfP99V2 32 1024 1024 0 1000 1 > output.txt
+
+herong> more output.txt
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=0, Runs=1000, Loads=1
+...
+[0.586s] Run start 24
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+GC(0) Eden regions: 801->0(801)
+GC(0) Survivor regions: 0->0(2)
+GC(0) Old regions: 0->39
+GC(0) Archive regions: 0->0
+GC(0) Humongous regions: 0->0
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 800M->38M(1602M) 13.271ms
+[0.612s] Run end 24: 26ms
+   -- A normal Young GC performed
+...
+[0.881s] Run start 48
+GC(1) Pause Young (Normal) (G1 Evacuation Pause)
+GC(1) To-space exhausted
+GC(1) Eden regions: 801->0(801)
+GC(1) Survivor regions: 0->0(2)
+GC(1) Old regions: 39->839
+GC(1) Archive regions: 0->0
+GC(1) Humongous regions: 0->0
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 839M->839M(1602M) 202.544ms
+[1.094s] Run end 48: 213ms
+   -- A fake Young GC performed, because "To-space exhausted"
+   -- Spent 203ms to copy all objects from Young to Old regions
+...
+[1.341s] Run start 71
+GC(2) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+GC(2) To-space exhausted
+GC(2) Eden regions: 763->0(801)
+GC(2) Survivor regions: 0->0(0)
+GC(2) Old regions: 839->1602
+GC(2) Archive regions: 0->0
+GC(2) Humongous regions: 0->0
+GC(2) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+       1601M->1601M(1602M) 11.723ms
+   -- A fake Young GC performed, because "To-space exhausted"
+   -- Spent 12ms to copy all objects from Young to Old regions
+   -- Old regions are full, triggering an Old GC
+...
+GC(4) Concurrent Cycle
+GC(3) Pause Full (G1 Evacuation Pause)
+GC(3) Eden regions: 0->0(801)
+GC(3) Survivor regions: 0->0(0)
+GC(3) Old regions: 1602->48
+GC(3) Archive regions: 0->0
+GC(3) Humongous regions: 0->0
+GC(3) Pause Full (G1 Evacuation Pause) 1601M->45M(1602M) 23.449ms
+GC(4) Concurrent Cycle 24.236ms
+[1.387s] Run end 71: 47ms
+   -- A Full GC performed, combined with an Old GC
+...
+   -- The same pattern of GC #2, #3 and #4 repeated
+...
+[15.748s] Run start 1000
+[15.759s] Run end 1000: 11ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 13935 ms
+   Average time per run = 14 ms
+   Standard deviation = 17.408258808607904 ms
+   Objects processed = 1013760
+   Throughput = 73142 objects/second
+   Latency = 164 ms/1000 objects
+   Throughput (max, ave, min) = (999999, 73142, 6095)
+   Latency (min, ave, max) = (1, 13, 164)
+Worst runs dropped:
+   #, Time, Throughput = 991, 169, 6059
+   ...
+   #, Time, Throughput = 999, 177, 5785
+   #, Time, Throughput = 1000, 213, 4807
+```
+
+```
+ C:\herong>find "Eden regions" output.txt
+[0.664s][info   ][gc,heap ] GC(0) Eden regions: 801->0(801)
+[1.149s][info   ][gc,heap ] GC(1) Eden regions: 801->0(801)
+[1.418s][info   ][gc,heap ] GC(2) Eden regions: 763->0(801)
+[1.442s][info   ][gc,heap ] GC(3) Eden regions: 0->0(801)
+[1.859s][info   ][gc,heap ] GC(5) Eden regions: 801->0(801)
+[2.114s][info   ][gc,heap ] GC(6) Eden regions: 752->0(801)
+[2.135s][info   ][gc,heap ] GC(7) Eden regions: 0->0(801)
+...
+[14.944s][info   ][gc,heap ] GC(77) Eden regions: 801->0(801)
+[15.224s][info   ][gc,heap ] GC(78) Eden regions: 756->0(801)
+[15.244s][info   ][gc,heap ] GC(79) Eden regions: 0->0(801)
+[15.677s][info   ][gc,heap ] GC(81) Eden regions: 801->0(801)
+   -- 800 Eden regions used as expected
+
+C:\herong>find "Survivor regions" output.txt
+[0.664s][info   ][gc,heap ] GC(0) Survivor regions: 0->0(2)
+[1.149s][info   ][gc,heap ] GC(1) Survivor regions: 0->0(2)
+...
+[15.677s][info   ][gc,heap ] GC(81) Survivor regions: 0->0(2)
+   -- 0 Survivor regions used as expected
+
+C:\herong>find "Old regions" output.txt
+[0.664s][info   ][gc,heap ] GC(0) Old regions: 0->39
+[1.149s][info   ][gc,heap ] GC(1) Old regions: 39->839
+[1.418s][info   ][gc,heap ] GC(2) Old regions: 839->1602
+[1.442s][info   ][gc,heap ] GC(3) Old regions: 1602->48
+[1.859s][info   ][gc,heap ] GC(5) Old regions: 48->850
+[2.114s][info   ][gc,heap ] GC(6) Old regions: 850->1602
+[2.135s][info   ][gc,heap ] GC(7) Old regions: 1602->46
+...
+[14.945s][info   ][gc,heap ] GC(77) Old regions: 45->846
+[15.224s][info   ][gc,heap ] GC(78) Old regions: 846->1602
+[15.244s][info   ][gc,heap ] GC(79) Old regions: 1602->46
+[15.677s][info   ][gc,heap ] GC(81) Old regions: 46->847
+   -- Old expanded by 800 copied from Eden by Young GC
+   -- Then reduced by Full GC
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 84
+  -- 42 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 20
+
+C:\herong>find /c "Pause Full (G1 Evacuation Pause) " output.txt
+---------- OUTPUT.TXT: 20
+
+C:\herong>find "Pause Full (G1 Evacuation Pause) " output.txt
+GC(3) Pause Full (G1 Evacuation Pause) 1601M->45M(1602M) 23.449ms
+GC(7) Pause Full (G1 Evacuation Pause) 1599M->42M(1602M) 19.742ms
+GC(11) Pause Full (G1 Evacuation Pause) 1598M->43M(1602M) 19.768ms
+...
+GC(79) Pause Full (G1 Evacuation Pause) 1598M->42M(1602M) 19.735ms
+   -- 20 Old GC, average of 20.41ms/GC
+```
+
+As you can see, I got 20 Old GC, and 20.41ms per GC, processing about 1600MB full heap space per GC, a speed of 78.39 M/ms. This is about 25,000 objects (object size is 32K) processed per Old GC, a speed of 1124.89 o/ms.
+
+**Test 2** - With object size of 1K and chunk size of 32768.
+
+```
+ herong> java -XX:+UseG1GC -Xms1601m -Xmx1601m \
+   -XX:NewSize=801m -XX:MaxNewSize=801m -XX:SurvivorRatio=800 \
+   -XX:MaxTenuringThreshold=0 -Xlog:gc,gc+start,gc+heap \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+herong> more output.txt
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+[20.882s] Run start 1000
+[20.894s] Run end 1000: 12ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 18395 ms
+   Average time per run = 18 ms
+   Standard deviation = 34.81925915468059 ms
+   Objects processed = 32440320
+   Throughput = 1820444 objects/second
+   Latency = 6 ms/1000 objects
+   Throughput (max, ave, min) = (999999, 1820444, 146285)
+   Latency (min, ave, max) = (1, 0, 6)
+Worst runs dropped:
+   #, Time, Throughput = 991, 232, 141241
+   ...
+   #, Time, Throughput = 999, 249, 131598
+   #, Time, Throughput = 1000, 297, 110329
+
+C:\herong>find "Eden regions" output.txt
+[0.712s][info   ][gc,heap ] GC(0) Eden regions: 801->0(801)
+[1.285s][info   ][gc,heap ] GC(1) Eden regions: 801->0(801)
+[1.700s][info   ][gc,heap ] GC(2) Eden regions: 734->0(801)
+[1.734s][info   ][gc,heap ] GC(4) Eden regions: 0->0(801)
+...
+[20.381s][info   ][gc,heap ] GC(81) Eden regions: 801->0(801)
+[20.790s][info   ][gc,heap ] GC(82) Eden regions: 731->0(801)
+[20.822s][info   ][gc,heap ] GC(83) Eden regions: 0->0(801)
+   -- 800 Eden regions used as expected
+
+C:\herong>find "Survivor regions" output.txt
+[0.712s][info   ][gc,heap ] GC(0) Survivor regions: 0->0(2)
+[1.285s][info   ][gc,heap ] GC(1) Survivor regions: 0->0(2)
+...
+[20.822s][info   ][gc,heap ] GC(83) Survivor regions: 0->0(0)
+   -- 0 Survivor regions used as expected
+
+C:\herong>find "Old regions" output.txt
+[0.712s][info   ][gc,heap ] GC(0) Old regions: 0->66
+[1.285s][info   ][gc,heap ] GC(1) Old regions: 66->868
+[1.700s][info   ][gc,heap ] GC(2) Old regions: 868->1602
+[1.734s][info   ][gc,heap ] GC(4) Old regions: 1602->68
+...
+[20.381s][info   ][gc,heap ] GC(81) Old regions: 67->871
+[20.790s][info   ][gc,heap ] GC(82) Old regions: 871->1602
+[20.822s][info   ][gc,heap ] GC(83) Old regions: 1602->66
+   -- Old expanded by 800 copied from Eden by Young GC
+   -- Then reduced by Full GC
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 86
+  -- 42 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 21
+
+C:\herong>find /c "Pause Full (G1 Evacuation Pause) " output.txt
+---------- OUTPUT.TXT: 21
+
+C:\herong>find "Pause Full (G1 Evacuation Pause) " output.txt
+GC(4) Pause Full (G1 Evacuation Pause) 1602M->66M(1602M) 33.685ms
+GC(7) Pause Full (G1 Evacuation Pause) 1600M->65M(1602M) 32.781ms
+GC(11) Pause Full (G1 Evacuation Pause) 1600M->65M(1602M) 31.195ms
+...
+GC(83) Pause Full (G1 Evacuation Pause) 1600M->64M(1602M) 31.929ms
+   -- 21 Old GC, average of 31.79ms/GC
+```
+
+As you can see, I got 21 Old GC, and 31.79ms per GC, processing about 1600MB full heap space per GC, a speed of 50.33 M/ms. This is about 1,600,000 objects (object size is 1K) processed per Old GC, a speed of 50330.29 o/ms.
+
+**Test result summary:**
+
+```
+ New (MB)   Obj.   P99 Ex.   Young   Old   Full      Full GC Speed
+/Tenured   Size   Time s       GC    GC     GC   ms/GC  MB/ms  Obj/ms
+--------   ----   ------    -----   ---   ----   --------------------  
+ 800/800    32K   13.935       84    20     20   20.41  78.39    1125
+ 800/800     1K   18.395       86    21     21   31.79  50.33   50330
+```
+
+Takeaways:
+
+*   With "-XX:MaxTenuringThreshold=0" JVM option, it is possible to force G1 collector to copy objects from Eden to Old regions, skipping Survivor regions.
+*   When the heap space is full, after a Young GC, a Full GC (under the cover of Old GC) is triggered.
+*   For the same amount of full heap space, G1 Full GC process runs faster with larger objects. My tests show 1.5 times faster with 32K object size than 1K object size.
+*   With smaller objects, the total execution time also increased from 13.935s to 18.395s.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Object Size Impact on G1 Old GC
+
+This section provides tests to find out the impact of object size on the speed of Old GC of the G1 garbage collector. Old GC runs faster with larger objects for the same amount of Old generation space.
+
+In previous tutorials, we have looked at performance of Young GC and Full GC processes of the G1 garbage collector. In this tutorial, I want to look at the impact of object size on the speed of the Old GC process.
+
+To do this, I want to keep a small Young generation of 100M and a large Old generation 1600M, so that objects are gradually promoted to the Old regions to avoid Full GC.
+
+I also want to use the "-XX:MaxTenuringThreshold=0" option to promote objects to Old regions direct, skipping Survivor regions.
+
+**Test 1** - With object size of 32K and chunk size of 1024.
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -Xlog:gc,gc+heap \
+   GCPerfP99V2 32 1024 1024 0 1000 1 > output.txt
+
+Parameters:
+   Size=32KB, Base=1024, Chunk=1024, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find "Eden regions" output.txt
+[0.200s][info   ][gc,heap] GC(0) Eden regions: 101->0(101)
+[0.258s][info   ][gc,heap] GC(1) Eden regions: 101->0(101)
+...
+[17.526s][info   ][gc,heap] GC(367) Eden regions: 101->0(101)
+   -- 100 Eden regions used as expected
+
+C:\herong>find "Survivor regions" output.txt
+[0.200s][info   ][gc,heap] GC(0) Survivor regions: 0->0(2)
+[0.258s][info   ][gc,heap] GC(1) Survivor regions: 0->0(2)
+...
+[17.526s][info   ][gc,heap] GC(367) Survivor regions: 0->0(2)
+   -- 0 Survivor regions used as expected
+
+C:\herong>find "Old regions" output.txt
+[0.200s][info   ][gc,heap] GC(0) Old regions: 0->67
+[0.258s][info   ][gc,heap] GC(1) Old regions: 67->167
+[0.318s][info   ][gc,heap] GC(2) Old regions: 167->268
+[0.375s][info   ][gc,heap] GC(3) Old regions: 268->369
+...
+[17.473s][info   ][gc,heap] GC(366) Old regions: 619->720
+[17.526s][info   ][gc,heap] GC(367) Old regions: 720->821
+   -- Old expanded by 100 copied from Eden by Young GC
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 328
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 40
+
+C:\herong>find "Concurrent Cycle " output.txt
+[0.681s][info   ][gc     ] GC(9) Concurrent Cycle 15.082ms
+[1.111s][info   ][gc     ] GC(18) Concurrent Cycle 10.098ms
+[1.539s][info   ][gc     ] GC(27) Concurrent Cycle 8.073ms
+[1.957s][info   ][gc     ] GC(36) Concurrent Cycle 8.017ms
+[2.373s][info   ][gc     ] GC(45) Concurrent Cycle 8.094ms
+[2.786s][info   ][gc     ] GC(54) Concurrent Cycle 7.926ms
+[3.198s][info   ][gc     ] GC(63) Concurrent Cycle 8.008ms
+...
+[16.733s][info   ][gc     ] GC(351) Concurrent Cycle 7.882ms
+[17.162s][info   ][gc     ] GC(360) Concurrent Cycle 7.663ms
+   -- 40 Old GC, average of 8.37ms/GC
+```
+
+As you can see, I got 40 Old GC, and 8.37ms per GC, processing about 800MB heap space per GC, a speed of 95.58 M/ms. This is about 25,000 objects (object size is 32K) processed per Old GC, a speed of 2986.86 o/ms.
+
+**Test 2** - With object size of 1K and chunk size of 32768 to keep the application execution pattern with a smaller object size.
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -Xlog:gc,gc+heap \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find "Eden regions" output.txt
+[21.349s][info   ][gc,heap] GC(370) Eden regions: 101->0(101)
+   -- 100 Eden regions used as expected
+
+C:\herong>find "Survivor regions" output.txt
+[21.349s][info   ][gc,heap] GC(370) Survivor regions: 0->0(2)
+   -- 0 Survivor regions used as expected
+
+C:\herong>find "Old regions" output.txt
+[0.247s][info   ][gc,heap] GC(0) Old regions: 0->66
+[0.309s][info   ][gc,heap] GC(1) Old regions: 66->168
+...
+[21.349s][info   ][gc,heap] GC(370) Old regions: 115->219
+   -- Old expanded by 100 copied from Eden by Young GC
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 330
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+[0.875s][info   ][gc     ] GC(9) Concurrent Cycle 30.158ms
+[1.416s][info   ][gc     ] GC(18) Concurrent Cycle 25.026ms
+[1.937s][info   ][gc     ] GC(27) Concurrent Cycle 21.446ms
+[2.451s][info   ][gc     ] GC(36) Concurrent Cycle 21.106ms
+[2.980s][info   ][gc     ] GC(45) Concurrent Cycle 21.589ms
+[3.495s][info   ][gc     ] GC(54) Concurrent Cycle 22.356ms
+[4.001s][info   ][gc     ] GC(63) Concurrent Cycle 21.483ms
+[4.537s][info   ][gc     ] GC(72) Concurrent Cycle 25.262ms
+[5.106s][info   ][gc     ] GC(81) Concurrent Cycle 21.498ms
+[5.634s][info   ][gc     ] GC(90) Concurrent Cycle 22.787ms
+...
+[20.791s][info   ][gc     ] GC(360) Concurrent Cycle 22.141ms
+[21.300s][info   ][gc     ] GC(369) Concurrent Cycle 22.043ms
+   -- 41 Old GC, average of 21.38ms/GC
+```
+
+As you can see, I got 41 Old GC, and 21.38ms per GC, processing about 800MB heap space per GC, a speed of 37.42 M/ms. This is about 800,000 objects (object size is 1K) processed per Old GC, a speed of 37418.15 o/ms.
+
+**Test result summary:**
+
+```
+ New (MB)   Obj.    Exec.   Young   Old   Full      Old GC Speed
+/Tenured   Size   Time s      GC    GC     GC   ms/GC  MB/ms  Obj/ms
+--------   ----   ------   -----   ---   ----   --------------------  
+100/1600    32K   17.162     328    40      0    8.37  95.58    2987
+100/1600     1K   21.300     330    41      0   21.38  37.42   37418
+```
+
+Takeaways:
+
+*   With "-XX:MaxTenuringThreshold=0" JVM option, it is possible to run G1 collector with more Old GC by skipping "survivor" regions.
+*   For the same amount of Old region heap space, G1 Old GC process runs faster with larger objects. My tests show 2.5 times faster with 32K object size than 1K object size.
+*   With smaller objects, the total execution time also increased from 17.162s to 21.300s.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Concurrent Threads Impact on G1 Old GC
+
+This section provides tests to find out the impact of Concurrent Threads on the speed of Old GC of the G1 garbage collector. With more concurrent threads, Old GC runs faster.
+
+In the last tutorial, we have looked at the impact of object size on the speed of the Old GC process of the G1 garbage collector. In this tutorial, I want to look at the impact of number of Concurrent Threads on the Old GC process.
+
+To do this, I want to keep a small Young generation of 100M and a large Old generation 1600M, so that objects are gradually promoted to the Old regions to avoid Full GC.
+
+I also want to use the "-XX:MaxTenuringThreshold=0" option to promote objects to Old regions direct, skipping Survivor regions.
+
+**Test 1** - Using "-XX:ConcGCThreads=1".
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=1 -Xlog:gc* \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 660
+  -- 330 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+[0.901s][info   ][gc            ] GC(9) Concurrent Cycle 72.132ms
+[1.392s][info   ][gc            ] GC(18) Concurrent Cycle 42.777ms
+[1.943s][info   ][gc            ] GC(27) Concurrent Cycle 30.725ms
+[2.442s][info   ][gc            ] GC(36) Concurrent Cycle 35.052ms
+[2.964s][info   ][gc            ] GC(45) Concurrent Cycle 33.590ms
+[3.480s][info   ][gc            ] GC(54) Concurrent Cycle 35.898ms
+[3.984s][info   ][gc            ] GC(63) Concurrent Cycle 32.450ms
+...
+[20.870s][info   ][gc            ] GC(369) Concurrent Cycle 32.133ms
+   -- 41 Old GC, average of 34.44ms/GC
+
+C:\herong>find "for marking" output-1.txt | more
+[0.839s][info   ][gc,task      ] GC(9) Using 1 workers of 1 for marking
+[1.361s][info   ][gc,task       ] GC(18) Using 1 workers of 1 for marking
+[1.922s][info   ][gc,task       ] GC(27) Using 1 workers of 1 for marking
+[2.418s][info   ][gc,task       ] GC(36) Using 1 workers of 1 for marking
+...
+[20.848s][info   ][gc,task       ] GC(369) Using 1 workers of 1 for marking
+   -- One threat used in concurrent phases of Old GC
+
+C:\herong>find "Execution time" output.txt
+   Execution time = 20267 ms
+```
+
+As you can see, I got 41 Old GC, and 34.44ms per GC, processing about 800MB heap space per GC, a speed of 23.23 M/ms. This is about 800,000 objects (object size is 1K) processed per Old GC, a speed of 23228.80 o/ms.
+
+**Test 2** - Using "-XX:ConcGCThreads=2", which is the default for my computer with 4 cores and 8 logical processors.
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=2 -Xlog:gc* \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 660
+  -- 330 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+[0.885s][info   ][gc            ] GC(9) Concurrent Cycle 30.746ms
+[1.413s][info   ][gc            ] GC(18) Concurrent Cycle 24.560ms
+[1.934s][info   ][gc            ] GC(27) Concurrent Cycle 24.202ms
+[2.438s][info   ][gc            ] GC(36) Concurrent Cycle 19.904ms
+[2.951s][info   ][gc            ] GC(45) Concurrent Cycle 20.589ms
+[3.460s][info   ][gc            ] GC(54) Concurrent Cycle 21.703ms
+[3.970s][info   ][gc            ] GC(63) Concurrent Cycle 20.985ms
+[4.461s][info   ][gc            ] GC(72) Concurrent Cycle 20.854ms
+[4.967s][info   ][gc            ] GC(81) Concurrent Cycle 20.594ms
+...
+[20.591s][info   ][gc            ] GC(360) Concurrent Cycle 21.589ms
+[21.100s][info   ][gc            ] GC(369) Concurrent Cycle 22.345ms
+   -- 41 Old GC, average of 21.45ms/GC
+
+C:\herong>find "Execution time" output.txt
+   Execution time = 20477 ms
+```
+
+As you can see, I got 41 Old GC, and 21.45ms per GC, processing about 800MB heap space per GC, a speed of 37.37 M/ms. This is about 800,000 objects (object size is 1K) processed per Old GC, a speed of 37296.04 o/ms.
+
+**Test 3** - Using "-XX:ConcGCThreads=4".
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=4 -Xlog:gc* \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 660
+  -- 330 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+[0.801s][info   ][gc            ] GC(9) Concurrent Cycle 20.891ms
+[1.311s][info   ][gc            ] GC(18) Concurrent Cycle 16.901ms
+[1.805s][info   ][gc            ] GC(27) Concurrent Cycle 14.677ms
+[2.292s][info   ][gc            ] GC(36) Concurrent Cycle 15.875ms
+[2.817s][info   ][gc            ] GC(45) Concurrent Cycle 16.516ms
+[3.369s][info   ][gc            ] GC(54) Concurrent Cycle 15.016ms
+[3.886s][info   ][gc            ] GC(63) Concurrent Cycle 16.363ms
+[4.371s][info   ][gc            ] GC(72) Concurrent Cycle 14.927ms
+[4.874s][info   ][gc            ] GC(81) Concurrent Cycle 15.640ms
+[5.373s][info   ][gc            ] GC(90) Concurrent Cycle 15.983ms
+...
+[20.178s][info   ][gc            ] GC(360) Concurrent Cycle 14.909ms
+[20.670s][info   ][gc            ] GC(369) Concurrent Cycle 14.843ms
+   -- 41 Old GC, average of 15.59ms/GC
+
+C:\herong>find "Execution time" output.txt
+   Execution time = 20080 ms
+```
+
+As you can see, I got 41 Old GC, and 15.59ms per GC, processing about 800MB heap space per GC, a speed of 51.31 M/ms. This is about 800,000 objects (object size is 1K) processed per Old GC, a speed of 51314.95 o/ms.
+
+**Test 4** - Using "-XX:ConcGCThreads=8".
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=8 -Xlog:gc* \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 660
+  -- 330 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find "Pause Young" output.txt
+GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+GC(0) Pause Young (Normal) (G1 Evacuation Pause) 101M->65M(1702M) 37.532ms
+GC(1) Pause Young (Normal) (G1 Evacuation Pause)
+GC(1) Pause Young (Normal) (G1 Evacuation Pause) 166M->167M(1702M) 26.761ms
+...
+GC(7) Pause Young (Normal) (G1 Evacuation Pause)
+GC(7) Pause Young (Normal) (G1 Evacuation Pause) 782M->784M(1702M) 35.605ms
+GC(8) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+GC(8) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+       885M->887M(1702M) 35.457ms
+GC(10) Pause Young (Normal) (G1 Evacuation Pause)
+GC(10) Pause Young (Normal) (G1 Evacuation Pause) 206M->208M(1702M) 24.488ms
+...
+GC(367) Pause Young (Normal) (G1 Evacuation Pause)
+GC(367) Pause Young (Normal) (G1 Evacuation Pause) 832M->834M(1702M) 23.679ms
+GC(368) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+GC(368) Pause Young (Concurrent Start) (G1 Evacuation Pause)
+         935M->937M(1702M) 24.293ms
+GC(370) Pause Young (Normal) (G1 Evacuation Pause)
+GC(370) Pause Young (Normal) (G1 Evacuation Pause) 214M->216M(1702M) 23.335ms
+   -- 330 Young GC performed, average 25ms/GC
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+[0.809s][info   ][gc            ] GC(9) Concurrent Cycle 16.953ms
+[1.321s][info   ][gc            ] GC(18) Concurrent Cycle 12.411ms
+[1.823s][info   ][gc            ] GC(27) Concurrent Cycle 12.293ms
+[2.317s][info   ][gc            ] GC(36) Concurrent Cycle 11.854ms
+[2.827s][info   ][gc            ] GC(45) Concurrent Cycle 12.373ms
+[3.351s][info   ][gc            ] GC(54) Concurrent Cycle 13.050ms
+[3.859s][info   ][gc            ] GC(63) Concurrent Cycle 12.518ms
+...
+[20.993s][info   ][gc            ] GC(369) Concurrent Cycle 12.142ms
+   -- 41 Old GC, average of 12.38ms/GC
+
+C:\herong>find "Execution time" output.txt
+   Execution time = 20403 ms
+```
+
+As you can see, I got 41 Old GC, and 12.38ms per GC, processing about 800MB heap space per GC, a speed of 64.62 M/ms. This is about 800,000 objects (object size is 1K) processed per Old GC, a speed of 64620.36 o/ms.
+
+**Test result summary:**
+
+```
+ New (MB)  Obj.  Conc.   Exec.  Young  Old  Full    Old GC Speed
+/Tenured  Size  Thrds  Time s     GC   GC    GC  ms/GC  MB/ms  Obj/ms
+--------  ----  -----  ------  -----  ---  ----  --------------------  
+100/1600    1K      1  20.267    330   41     0  34.44  23.23  23229
+100/1600    1K      2  20.477    330   41     0  21.45  37.37  37296
+100/1600    1K      4  20.080    330   41     0  15.59  51.31  51315
+100/1600    1K      8  20.403    330   41     0  12.38  64.62  64620
+```
+
+Takeaways:
+
+*   With "-XX:ConcGCThreads=8" JVM option, it is possible to control the number threads used in concurrent phases of Old GCs.
+*   With more concurrent threads, the Old GC runs faster. My tests show about 3 times faster with 8 threads than 1 thread.
+*   However, number of concurrent threads has no impact on application performance, because concurrent phases are running parallelly with the application.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Parallel Threads Impact on G1 Old GC
+
+This section provides tests to find out the impact of Parallel Threads on the speed of Old GC of the G1 garbage collector. With more Parallel threads, the Old GC runs slightly faster.
+
+In the last tutorial, we have looked at the impact of Concurrent Threads on the speed of the Old GC process of the G1 garbage collector. In this tutorial, I want to look at the impact of number of Parallel Threads on the Old GC process.
+
+To do this, I want to keep a small Young generation of 100M and a large Old generation 1600M, so that objects are gradually promoted to the Old regions to avoid Full GC.
+
+I also want to use the "-XX:MaxTenuringThreshold=0" option to promote objects to Old regions direct, skipping Survivor regions.
+
+**Test 1** - Using "-XX:ParallelGCThreads=1".
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=1 \
+   -XX:ParallelGCThreads=1 -Xlog:gc*,gc+task=trace \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 660
+  -- 330 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+[1.195s][info   ][gc            ] GC(9) Concurrent Cycle 80.239ms
+[1.713s][info   ][gc            ] GC(18) Concurrent Cycle 39.195ms
+[2.264s][info   ][gc            ] GC(27) Concurrent Cycle 32.920ms
+[2.817s][info   ][gc            ] GC(36) Concurrent Cycle 34.083ms
+[3.369s][info   ][gc            ] GC(45) Concurrent Cycle 40.828ms
+[3.944s][info   ][gc            ] GC(54) Concurrent Cycle 35.284ms
+[4.504s][info   ][gc            ] GC(63) Concurrent Cycle 33.583ms
+...
+[23.335s][info   ][gc            ] GC(369) Concurrent Cycle 36.802ms
+   -- 41 Old GC, average of 36.61ms/GC
+
+C:\herong>find "G1 Conc: using" output.txt
+[1.115s][trace  ][gc,task      ] GC(9) G1 Conc: using 1 out of 1 workers
+...
+[23.335s][trace  ][gc,task       ] GC(369) G1 Conc: using 1 out of 1 workers
+   -- 1 Concurrent thread used in Old GC
+
+C:\herong>find "GC Thread: using" output.txt | more
+[0.224s][trace  ][gc,task      ] GC(0) GC Thread: using 1 out of 1 workers
+[0.308s][trace  ][gc,task      ] GC(1) GC Thread: using 1 out of 1 workers
+...
+[1.134s][trace  ][gc,task      ] GC(9) GC Thread: using 1 out of 1 workers
+  -- GC #9 is an Old GC
+  -- 1 Parallel thread used in Old GC
+...
+
+C:\herong>find "Execution time" output.txt
+   Execution time = 22427 ms
+```
+
+**Test 2** - Using "-XX:ParallelGCThreads=4".
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=1 \
+   -XX:ParallelGCThreads=4 -Xlog:gc*,gc+task=trace \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 660
+  -- 330 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT
+[0.874s][info   ][gc            ] GC(9) Concurrent Cycle 69.991ms
+[1.341s][info   ][gc            ] GC(18) Concurrent Cycle 39.310ms
+[1.895s][info   ][gc            ] GC(27) Concurrent Cycle 30.346ms
+[2.378s][info   ][gc            ] GC(36) Concurrent Cycle 37.858ms
+[2.885s][info   ][gc            ] GC(45) Concurrent Cycle 32.323ms
+[3.377s][info   ][gc            ] GC(54) Concurrent Cycle 34.885ms
+[3.865s][info   ][gc            ] GC(63) Concurrent Cycle 32.146ms
+[4.342s][info   ][gc            ] GC(72) Concurrent Cycle 33.669ms
+...
+[20.478s][info   ][gc            ] GC(369) Concurrent Cycle 34.226ms
+   -- 41 Old GC, average of 34.16ms/GC
+
+C:\herong>find "G1 Conc: using" output.txt
+[0.804s][trace  ][gc,task      ] GC(9) G1 Conc: using 1 out of 1 workers
+...
+[20.478s][trace  ][gc,task       ] GC(369) G1 Conc: using 1 out of 1 workers
+   -- 1 Concurrent thread used in Old GC
+
+C:\herong>find "GC Thread: using" output.txt | more
+[0.189s][trace  ][gc,task      ] GC(0) GC Thread: using 4 out of 4 workers
+[0.266s][trace  ][gc,task      ] GC(1) GC Thread: using 4 out of 4 workers
+...
+[0.824s][trace  ][gc,task      ] GC(9) GC Thread: using 4 out of 4 workers
+  -- GC #9 is an Old GC
+  -- 4 Parallel threads used in Old GC
+...
+
+C:\herong>find "Execution time" output.txt
+   Execution time = 19898 ms
+```
+
+**Test 3** - Using "-XX:ParallelGCThreads=8", which is the default for my computer with 4 cores and 8 logical processors.
+
+```
+ herong> java -XX:+UseG1GC -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=1 \
+   -XX:ParallelGCThreads=8 -Xlog:gc*,gc+task=trace \
+   GCPerfP99V2 1 32768 32768 0 1000 1 > output.txt
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+...
+
+C:\herong>find /c "Pause Full" output.txt
+---------- OUTPUT.TXT: 0
+
+C:\herong>find /c "Pause Young" output.txt
+---------- OUTPUT.TXT: 660
+  -- 330 Young GC performed. 2 lines per "Pause Young": start and end
+
+C:\herong>find /c "Concurrent Cycle " output.txt
+---------- OUTPUT.TXT: 41
+
+C:\herong>find "Concurrent Cycle " output.txt
+[0.852s][info   ][gc            ] GC(9) Concurrent Cycle 70.990ms
+[1.329s][info   ][gc            ] GC(18) Concurrent Cycle 38.796ms
+[1.822s][info   ][gc            ] GC(27) Concurrent Cycle 31.944ms
+[2.311s][info   ][gc            ] GC(36) Concurrent Cycle 31.983ms
+[2.809s][info   ][gc            ] GC(45) Concurrent Cycle 33.121ms
+[3.310s][info   ][gc            ] GC(54) Concurrent Cycle 32.465ms
+[3.805s][info   ][gc            ] GC(63) Concurrent Cycle 32.724ms
+[4.294s][info   ][gc            ] GC(72) Concurrent Cycle 32.656ms
+...
+[20.667s][info   ][gc            ] GC(369) Concurrent Cycle 34.600ms
+   -- 41 Old GC, average of 34.13ms/GC
+
+C:\herong>find "G1 Conc: using" output.txt
+[0.781s][trace  ][gc,task      ] GC(9) G1 Conc: using 1 out of 1 workers
+...
+[20.667s][trace  ][gc,task       ] GC(369) G1 Conc: using 1 out of 1 workers
+   -- 1 Concurrent thread used in Old GC
+
+C:\herong>find "GC Thread: using" output.txt | more
+[0.191s][trace  ][gc,task      ] GC(0) GC Thread: using 8 out of 8 workers
+[0.259s][trace  ][gc,task      ] GC(1) GC Thread: using 8 out of 8 workers
+...
+[0.800s][trace  ][gc,task      ] GC(9) GC Thread: using 8 out of 8 workers
+  -- GC #9 is an Old GC
+  -- 8 Parallel threads used in Old GC
+...
+
+C:\herong>find "Execution time" output.txt
+   Execution time = 20109 ms
+```
+
+**Test result summary:**
+
+```
+ New (MB)   Obj.   Conc/Par    Exec.   Young   Old   Full    Old GC
+/Tenured   Size    Threads   Time s      GC    GC     GC     Speed
+--------   ----     ------   ------   -----   ---   ----   -------
+100/1600     1K        1/1   22.427     330    41      0   36.61ms
+100/1600     1K        1/4   19.898     330    41      0   34.16ms
+100/1600     1K        1/8   20.109     330    41      0   34.13ms
+```
+
+Takeaways:
+
+*   With "-XX:ParallelGCThreads=8" JVM option, it is possible to control the number threads used in parallel (stop-the-world, or paused) phases of Old GCs.
+*   With more parallel threads, the Old GC runs slightly faster.
+*   With more parallel threads, the application runs faster too. This is mostly because the Young GC uses parallel threads too.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟CPU Processors Impact on G1 Old GC
+
+This section provides tests to find out the impact of number of CPU cores and logical processors on the speed of Old GC of the G1 garbage collector. With more logical processors, the Old GC runs significantly faster.
+
+After looking at impact of Concurrent Threads and Parallel Threads the speed of the Old GC process of the G1 garbage collector, I want to look at the impact of number of CPU cores and logical processors on the Old GC process.
+
+To do this, I want to keep a small Young generation of 100M and a large Old generation 1600M, so that objects are gradually promoted to the Old regions to avoid Full GC.
+
+I also want to use "-XX:ConcGCThreads=8" and "-XX:ParallelGCThreads=8" options, hoping that multiple threads can be executed on all CPU resources of my 4 cores and 8 processors computer.
+
+**Test 1** - Using "start /realtime /affinity 0x01" to run the test with 1 processor.
+
+```
+ C:\herong>start /realtime /affinity 0x01 java -XX:+UseG1GC \
+   -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=8 -XX:ParallelGCThreads=8 \
+   -Xlog:gc:gc.log GCPerfP99V2 1 32768 32768 0 1000 1
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+......
+[51.456s] Run start 1000
+[51.469s] Run end 1000: 13ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 23664 ms
+   Average time per run = 23 ms
+   Standard deviation = 17.067601773624503 ms
+   Objects processed = 32440320
+   Throughput = 1424695 objects/second
+   Latency = 2 ms/1000 objects
+   Throughput (max, ave, min) = (999999, 1424695, 368179)
+   Latency (min, ave, max) = (1, 0, 2)
+Worst runs dropped:
+   #, Time, Throughput = 991, 91, 360087
+   #, Time, Throughput = 992, 102, 321254
+   #, Time, Throughput = 993, 106, 309132
+   #, Time, Throughput = 994, 124, 264258
+   #, Time, Throughput = 995, 130, 252061
+   #, Time, Throughput = 996, 4998, 6556
+   #, Time, Throughput = 997, 5192, 6311
+   #, Time, Throughput = 998, 5538, 5916
+   #, Time, Throughput = 999, 5629, 5821
+   #, Time, Throughput = 1000, 5756, 5692
+   -- 5 major system interruptions were dropped
+
+C:\herong>find /c "Pause Full" gc.log
+---------- GC.LOG: 0
+
+C:\herong>find /c "Pause Young" gc.log
+---------- GC.LOG: 330
+
+C:\herong>find /c "Concurrent Cycle " gc.log
+---------- GC.LOG: 41
+
+C:\herong>find "Concurrent Cycle " gc.log
+[1.364s][info][gc] GC(9) Concurrent Cycle 100.068ms
+[2.265s][info][gc] GC(18) Concurrent Cycle 43.642ms
+[3.132s][info][gc] GC(27) Concurrent Cycle 26.601ms
+[3.805s][info][gc] GC(36) Concurrent Cycle 26.372ms
+[4.391s][info][gc] GC(45) Concurrent Cycle 26.816ms
+[4.950s][info][gc] GC(54) Concurrent Cycle 24.708ms
+[5.501s][info][gc] GC(63) Concurrent Cycle 25.441ms
+[6.042s][info][gc] GC(72) Concurrent Cycle 24.445ms
+[6.580s][info][gc] GC(81) Concurrent Cycle 24.119ms
+...
+[51.487s][info][gc] GC(369) Concurrent Cycle 24.743ms
+   -- 41 Old GC, average of 28.07ms/GC
+```
+
+**Test 2** - Using "start /realtime /affinity 0x03" to run the test with 2 (0x03=0b00000011) processor.
+
+```
+ C:\herong>start /realtime /affinity 0x03 java -XX:+UseG1GC \
+   -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=8 -XX:ParallelGCThreads=8 \
+   -Xlog:gc:gc.log GCPerfP99V2 1 32768 32768 0 1000 1
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+......
+[31.02s] Run start 1000
+[31.035s] Run end 1000: 15ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 29203 ms
+   Average time per run = 29 ms
+   Standard deviation = 21.522386747596823 ms
+   Objects processed = 32440320
+   Throughput = 1129931 objects/second
+   Latency = 4 ms/1000 objects
+   Throughput (max, ave, min) = (8192000, 1129931, 232397)
+   Latency (min, ave, max) = (0, 0, 4)
+Worst runs dropped:
+   #, Time, Throughput = 991, 143, 229146
+   #, Time, Throughput = 992, 151, 217006
+   #, Time, Throughput = 993, 155, 211406
+   #, Time, Throughput = 994, 156, 210051
+   #, Time, Throughput = 995, 160, 204800
+   #, Time, Throughput = 996, 168, 195047
+   #, Time, Throughput = 997, 168, 195047
+   #, Time, Throughput = 998, 186, 176172
+   #, Time, Throughput = 999, 208, 157538
+   #, Time, Throughput = 1000, 249, 131598
+
+C:\herong>find /c "Pause Full" gc.log
+---------- GC.LOG: 0
+
+C:\herong>find /c "Pause Young" gc.log
+---------- GC.LOG: 330
+
+C:\herong>find /c "Concurrent Cycle " gc.log
+---------- GC.LOG: 41
+
+C:\herong>find "Concurrent Cycle " gc.log
+[1.538s][info][gc] GC(9) Concurrent Cycle 112.299ms
+[2.585s][info][gc] GC(18) Concurrent Cycle 32.507ms
+[3.911s][info][gc] GC(27) Concurrent Cycle 95.424ms
+[4.923s][info][gc] GC(36) Concurrent Cycle 47.966ms
+[6.098s][info][gc] GC(45) Concurrent Cycle 31.139ms
+[7.264s][info][gc] GC(54) Concurrent Cycle 29.640ms
+[8.404s][info][gc] GC(63) Concurrent Cycle 26.888ms
+[9.366s][info][gc] GC(72) Concurrent Cycle 22.831ms
+...
+[31.108s][info][gc] GC(369) Concurrent Cycle 19.667ms
+   -- 41 Old GC, average of 28.77ms/GC
+```
+
+**Test 3** - Using "start /realtime /affinity 0x0f" to run the test with 4 (0x0f=0b00001111) processor.
+
+```
+ C:\herong>start /realtime /affinity 0x0f java -XX:+UseG1GC \
+   -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=8 -XX:ParallelGCThreads=8 \
+   -Xlog:gc:gc.log GCPerfP99V2 1 32768 32768 0 1000 1
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+......
+[30.876s] Run start 1000
+[30.892s] Run end 1000: 17ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 28215 ms
+   Average time per run = 28 ms
+   Standard deviation = 18.04335407463441 ms
+   Objects processed = 32440320
+   Throughput = 1170285 objects/second
+   Latency = 4 ms/1000 objects
+   Throughput (max, ave, min) = (4681142, 1170285, 225986)
+   Latency (min, ave, max) = (0, 0, 4)
+Worst runs dropped:
+   #, Time, Throughput = 991, 157, 208713
+   #, Time, Throughput = 992, 161, 203527
+   #, Time, Throughput = 993, 172, 190511
+   #, Time, Throughput = 994, 196, 167183
+   #, Time, Throughput = 995, 200, 163840
+   #, Time, Throughput = 996, 232, 141241
+   #, Time, Throughput = 997, 277, 118296
+   #, Time, Throughput = 998, 387, 84671
+   #, Time, Throughput = 999, 392, 83591
+   #, Time, Throughput = 1000, 419, 78205
+
+C:\herong>find /c "Pause Full" gc.log
+---------- GC.LOG: 0
+
+C:\herong>find /c "Pause Young" gc.log
+---------- GC.LOG: 330
+
+C:\herong>find /c "Concurrent Cycle " gc.log
+---------- GC.LOG: 41
+
+C:\herong>find "Concurrent Cycle " gc.log
+[1.671s][info][gc] GC(9) Concurrent Cycle 146.324ms
+[3.642s][info][gc] GC(18) Concurrent Cycle 23.359ms
+[4.948s][info][gc] GC(27) Concurrent Cycle 71.118ms
+[6.277s][info][gc] GC(36) Concurrent Cycle 52.071ms
+[7.017s][info][gc] GC(45) Concurrent Cycle 13.766ms
+[7.725s][info][gc] GC(54) Concurrent Cycle 16.133ms
+[8.380s][info][gc] GC(63) Concurrent Cycle 15.521ms
+[9.022s][info][gc] GC(72) Concurrent Cycle 12.615ms
+...
+[30.881s][info][gc] GC(369) Concurrent Cycle 14.107ms
+   -- 41 Old GC, average of 19.92ms/GC
+```
+
+**Test 4** - Using "start /realtime /affinity 0xff" to run the test with 8 (0xff=0b11111111) processor.
+
+```
+ C:\herong>start /realtime /affinity 0xff java -XX:+UseG1GC \
+   -Xms1701m -Xmx1701m \
+   -XX:NewSize=101m -XX:MaxNewSize=101 -XX:SurvivorRatio=100 \
+   -XX:MaxTenuringThreshold=0 -XX:ConcGCThreads=8 -XX:ParallelGCThreads=8 \
+   -Xlog:gc:gc.log GCPerfP99V2 1 32768 32768 0 1000 1
+
+Parameters:
+   Size=1KB, Base=32768, Chunk=32768, Warmup=0, Runs=1000, Loads=1
+......
+[28.82s] Run start 1000
+[28.845s] Run end 1000: 25ms
+Statistics of percentile runs:
+   Total number of runs = 1000
+   Percentile % = 99
+   Execution time = 27912 ms
+   Average time per run = 28 ms
+   Standard deviation = 15.670018983699253 ms
+   Objects processed = 32440320
+   Throughput = 1170285 objects/second
+   Latency = 2 ms/1000 objects
+   Throughput (max, ave, min) = (999999, 1170285, 474898)
+   Latency (min, ave, max) = (1, 0, 2)
+Worst runs dropped:
+   #, Time, Throughput = 991, 71, 461521
+   #, Time, Throughput = 992, 72, 455111
+   #, Time, Throughput = 993, 73, 448876
+   #, Time, Throughput = 994, 75, 436906
+   #, Time, Throughput = 995, 75, 436906
+   #, Time, Throughput = 996, 79, 414784
+   #, Time, Throughput = 997, 79, 414784
+   #, Time, Throughput = 998, 84, 390095
+   #, Time, Throughput = 999, 106, 309132
+   #, Time, Throughput = 1000, 137, 239182
+
+C:\herong>find /c "Pause Full" gc.log
+---------- GC.LOG: 0
+
+C:\herong>find /c "Pause Young" gc.log
+---------- GC.LOG: 330
+
+C:\herong>find /c "Concurrent Cycle " gc.log
+---------- GC.LOG: 41
+
+C:\herong>find "Concurrent Cycle " gc.log
+[1.340s][info][gc] GC(9) Concurrent Cycle 72.714ms
+[2.197s][info][gc] GC(18) Concurrent Cycle 15.234ms
+[2.876s][info][gc] GC(27) Concurrent Cycle 12.384ms
+[3.552s][info][gc] GC(36) Concurrent Cycle 13.573ms
+[4.237s][info][gc] GC(45) Concurrent Cycle 14.187ms
+[4.921s][info][gc] GC(54) Concurrent Cycle 11.785ms
+...
+[28.836s][info][gc] GC(369) Concurrent Cycle 10.999ms
+   -- 41 Old GC, average of 13.92ms/GC
+```
+
+**Test result summary:**
+
+```
+ New (MB)  Obj.  Conc/Par   CPU  P99 Ex.  Young  Old  Full   Old GC
+/Tenured  Size   Threads  Proc  Time(s)     GC   GC    GC    Speed
+--------  ----  --------  ----  ------   -----  ---  ----  -------
+100/1600    1K       8/8     1  23.664     330   41     0  28.07ms
+100/1600    1K       8/8     2  29.203     330   41     0  28.77ms
+100/1600    1K       8/8     4  28.215     330   41     0  19.92ms
+100/1600    1K       8/8     8  27.912     330   41     0  13.92ms
+```
+
+Takeaways:
+
+*   With "start /realtime /affinity 0xff" Windows command, it is possible to control the number of logical processors used in Old GCs and the entire JVM.
+*   With more logical processors, the Old GC runs significantly faster. My tests show about 2 times faster with 8 logical processors than 1.
+*   Using only 1 logical processor, the application receives long and frequent interruptions from the operating system. Those interruptions were dropped from the P99 execution times listed above.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Performance Tests on G1 collector](#part0150.xhtml)
+
+∟Performance Summary of G1 Collector
+
+This section provides a summary of all performance tests on the G1 collector.
+
+To find out which G1 collector configuration gives the best performance, let's list all test results of "java GCPerfP99V2" in a single table:
+
+```
+ Impact of heap size with default GC configuration:
+Command: java GCPerfP99V2 32 1024 1024 64 200 1000
+     Heap Config.      Heap Size    Throughput   Latency
+1.1 Default               100 MB         650/s   1703 ms
+1.2 Default               200 MB         651/s   1718 ms
+1.3 Default               400 MB         651/s   1680 ms
+1.4 Default               800 MB         668/s   1700 ms
+1.5 Default              1600 MB         635/s   1709 ms
+
+Impact of regions size with default GC configuration:
+Command: java GCPerfP99V2 32 1024 1024 64 200 1000
+     Heap Config.    Region Size    Throughput   Latency
+2.1 Default/1400M          1.0 M         635/s   1709 ms
+2.2 Default/1400M          2.0 M         738/s   1547 ms
+2.3 Default/1400M          4.0 M         677/s   1672 ms
+2.4 Default/1400M          8.0 M         678/s   1587 ms
+2.5 Default/1400M         16.0 M         670/s   1663 ms
+
+Impact of object size on Young GC:
+Command: GCPerfP99V2 ? ? ? 0 1000 1
+Eden (MB)   Obj.   P99 Ex.   Young   Old   Full      Young GC Speed
+/Survivor   Size   Time s       GC    GC     GC   ms/GC  MB/ms  Obj/ms
+  800/100    32K   11.365       38     0      0    8.90  89.89    2909
+  800/100     1K   12.701       39     0      0   19.25  41.56   41558
+
+Impact of parallel threads on Young GC:
+Command: GCPerfP99V2 1 32768 32768 0 1000 1
+Eden (MB)   Obj.       Par    Exec.   Young   Old   Full   Young GC
+/Survivor   Size   Threads   Time s      GC    GC     GC      Speed
+  800/100     1K         1   22.427      39     0      0    22.96ms
+  800/100     1K         4   12.586      39     0      0    18.65ms
+  800/100     1K         8   12.938      39     0      0    18.61ms
+
+Impact of object size on Full GC:
+Command: GCPerfP99V2 ? ? ? 0 1000 1
+New (MB)   Obj.   P99 Ex.   Young   Old   Full      Full GC Speed
+/Tenured   Size   Time s      GC    GC     GC   ms/GC  MB/ms  Obj/ms
+ 800/800    32K   13.935      84    20     20   20.41  78.39    1125
+ 800/800     1K   18.395      86    21     21   31.79  50.33   50330
+
+Impact of object size on Old GC:
+New (MB)   Obj.    Exec.   Young   Old   Full      Old GC Speed
+/Tenured   Size   Time s      GC    GC     GC   ms/GC  MB/ms  Obj/ms
+100/1600    32K   17.162     328    40      0    8.37  95.58    2987
+100/1600     1K   21.300     330    41      0   21.38  37.42   37418
+
+Impact of concurrent threads on Old GC:
+Command: GCPerfP99V2 1 32768 32768 0 1000 1
+New (MB)  Obj.  Conc.   Exec.  Young  Old  Full    Old GC Speed
+/Tenured  Size  Thrds  Time s     GC   GC    GC  ms/GC  MB/ms  Obj/ms
+100/1600    1K      1  20.267    330   41     0  34.44  23.23  23229
+100/1600    1K      2  20.477    330   41     0  21.45  37.37  37296
+100/1600    1K      4  20.080    330   41     0  15.59  51.31  51315
+100/1600    1K      8  20.403    330   41     0  12.38  64.62  64620
+
+Impact of parallel threads on Old GC:
+Command: GCPerfP99V2 1 32768 32768 0 1000 1
+New (MB)   Obj.   Conc/Par    Exec.   Young   Old   Full    Old GC
+/Tenured   Size    Threads   Time s      GC    GC     GC     Speed
+100/1600     1K        1/1   22.427     330    41      0   36.61ms
+100/1600     1K        1/4   19.898     330    41      0   34.16ms
+100/1600     1K        1/8   20.109     330    41      0   34.13ms
+
+Impact of CPU/processors on Old GC:
+New (MB)  Obj.  Conc/Par   CPU  P99 Ex.  Young  Old  Full   Old GC
+/Tenured  Size   Threads  Proc  Time(s)     GC   GC    GC    Speed
+100/1600    1K       8/8     1  23.664     330   41     0  28.07ms
+100/1600    1K       8/8     2  29.203     330   41     0  28.77ms
+100/1600    1K       8/8     4  28.215     330   41     0  19.92ms
+100/1600    1K       8/8     8  27.912     330   41     0  13.92ms
+```
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟Garbage Collection Performance Test Summary
+
+This chapter provides discussions on GC performance test result. Topics include comparison of performances of different garbage collectors; suggestions to use garbage collectors more efficiently.
+
+> [General Suggestions for Better GC Performance](#part0163.xhtml)
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟[Garbage Collection Performance Test Summary](#part0162.xhtml)
+
+∟General Suggestions for Better GC Performance
+
+This section describes some general rules used by JVM to manage memory and get better GC performance.
+
+We know that one strength of JVM (Java Virtual Machine) is that it performs automatic memory management for us. But this also could also give us headaches when JVM throws OutOfMemoryError at us, because we don't have much direct control on how memory is managed.
+
+The only thing we can do is to learn how JVM memory management works, write Java code better aligned with the JVM memory management design, and play with JVM memory management parameters for better result. Here are my understandings of HotSpot memory management and suggestions on to minimize memory usage and maximize performance for your Java applications:
+
+*   The main challenge of JVM memory management is on the Heap data area, which dynamically allocates and deallocates data objects (instances of classes and arrays). Other runtime data areas, Method Area, Direct Memory, PC Registers, JVM Stacks and Native Method Stacks are very easy to manage.
+*   When a JVM is started, it will ask the operating system to reserve a chunk of memory and use it as the Heap data area with a minimum size. The JVM will use Heap space to store some JVM system objects and give the rest of the Heap space to your Java application.
+*   HotSpot supports 2 options to control the minimum size and the maximum size of the reserved Heap space: "-Xms" and "-Xmx". In general, reserving more heap space results better performance for the application. So reserve as much as possible heap space from the Operating System(OS) to run your Java application. But do not reserve more than what is available from OS RAM. Otherwise, OS will use virtual memory from hard disk resulting poor performance.
+*   When a new data object is created each time, the JVM needs to find enough Heap space and allocate it to the object. So reuse objects as much as possible to reduce the JVM work load on allocating and removing objects. This is why some applications use Object Pooling.
+*   When an object becomes unreferenced or no longer used by the application, it will be a candidate to be removed by the JVM to free up more memory in the next round of garbage collection process. So remove references to objects as soon as possible to allow the JVM to remove them sooner.
+*   "Slow" down the application to reduce the memory usage. This is trading time for memory. For example, if your application handles work loads with multiple concurrent threads, use less threads and put work loads into waiting queues will reduce the memory usage.
+*   Use the G1 collector to get better performance.
+*   Give larger Young generation size, if your application uses more short-lived objects.
+*   Give larger Tenured generation size, if your application uses more long-lived objects.
+*   Play with memory management options provided by the JVM to see the impact on your Java application.
+*   Using JVM troubleshooting tools to profile, dump, analyze, and do fine tuning on the memory usage pattern of your Java application.
+
+[Java GC Tutorials - Herong's Tutorial Examples](#part0001.xhtml)
+
+∟References
+
+List of reference materials used in this book.
+
+*   *HotSpot Virtual Machine Garbage Collection Tuning Guide*, Oracle, [docs.oracle.com/en/java/javase/17 /gctuning/introduction-garbage-collection-tuning.html](https://docs.oracle.com/en/java/javase/17/gctuning/introduction-garbage-collection-tuning.html)
+*   *HotSpot Virtual Machine Garbage Collection Tuning Guide*, Oracle, [docs.oracle.com/en/java/javase/12 /gctuning/introduction-garbage-collection-tuning.html](https://docs.oracle.com/en/java/javase/12/gctuning/introduction-garbage-collection-tuning.html)
+*   *Java SE HotSpot at a Glance*, Oracle, [oracle.com/technetwork/java/javase/tech/index-jsp-136373.html](http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136373.html)
+*   *Java Platform, Standard Edition HotSpot Virtual Machine Garbage Collection Tuning Guide*, [docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/)
+*   *The Java Virtual Machine Specification*, Tim Lindholm, Frank Yellin, Gilad Bracha, Alex Buckley, [docs.oracle.com/javase/specs/jvms/se7/html/](http://docs.oracle.com/javase/specs/jvms/se7/html/)
+*   *Java Garbage Collection Basics*, Oracle, [oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html](http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html)
+*   *Getting Started with the G1 Garbage Collector*, Oracle, [oracle.com/webfolder/technetwork/tutorials/obe/java/G1GettingStarted/](http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/G1GettingStarted/)
+*   *The Z Garbage Collector - An Introduction*, Per Lidén & Stefan Karlsson, [cr.openjdk.java.net/~pliden/slides/ZGC-PLMeetup-2019.pdf](http://cr.openjdk.java.net/~pliden/slides/ZGC-PLMeetup-2019.pdf)
+*   *Memory Management in the Java HotSpot Virtual Machine*, Oracle, [oracle.com/technetwork/java/javase/memorymanagement-whitepaper-150215.pdf](http://www.oracle.com/technetwork/java/javase/memorymanagement-whitepaper-150215.pdf)
+*   *How to Handle Java Finalization's Memory-Retention Issues*, Tony Printezis, [oracle.com/technetwork/articles/java/finalization-137655.html](http://www.oracle.com/technetwork/articles/java/finalization-137655.html)
+*   *Java Tools Tutorials - Herong's Tutorial Examples*, Herong Yang, [herongyang.com/Java-Tools/](http://herongyang.com/Java-Tools/)
+*   *JVM Tutorials - Herong's Tutorial Examples*, Herong Yang, [herongyang.com/JVM/](http://herongyang.com/JVM/)
+*   *Garbage First Garbage Collector Tuning*, Oracle, [oracle.com/technetwork/articles/java/g1gc-1984535.html](http://www.oracle.com/technetwork/articles/java/g1gc-1984535.html)
+*   *Introduction to the G1 Garbage Collector*, Matt Robson, [redhat.com/en/blog/part-1-introduction-g1-garbage-collector](https://www.redhat.com/en/blog/part-1-introduction-g1-garbage-collector)
+*   *Articles related to garbage collection in JVM*, Alexey Ragozin, [blog.ragozin.info/p/garbage-collection.html](http://blog.ragozin.info/p/garbage-collection.html)
+*   *Tuning and benchmarking Java 7's Garbage Collectors: Default, CMS and G1*, Rüdiger Möller, [java-is-the-new-c.blogspot.com/2013/07/tuning-and-benchmarking...](http://java-is-the-new-c.blogspot.com/2013/07/tuning-and-benchmarking-java-7s-garbage.html)
+*   *Improving Java Application Performance and Scalability by Reducing Garbage Collection Times and Sizing Memory Using JDK 1.4.1*, [oracle.com/technetwork/systems/garbagecollection2-155839.html](http://www.oracle.com/technetwork/systems/garbagecollection2-155839.html)
+
+![The Front Cover](Images/cover00263.jpeg)

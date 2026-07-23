@@ -1,0 +1,1062 @@
+- fmt: "\n![](images/00002.jpeg)\n\n# Java For Beginners\nLearn Java Fast (Free Bonus\
+    \ Video Course Included)\n\n## Contents\n- Chapter 1: Basic Java Syntax\n- Chapter\
+    \ 2: About Oriented Programming\n- Chapter 3: Class Fundamentals\n- Chapter 4:\
+    \ Conclusion + FREE BONUS VIDEO COURSE\n\n## Introduction\nI want to thank you\
+    \ and congratulate you for downloading the book, “Java for Beginners. Learn Java\
+    \ Fast.”.\n\nThis book will give you an overview of the main concepts of programming\
+    \ in the Java language.\n\nJava is the programming language of choice for web\
+    \ developers and is used in Android applications, web sites, web-based gaming\
+    \ and web-based applications. It is one of the easiest languages to learn and\
+    \ I will be covering the fundamental concepts of Java programming.\n\nThanks again\
+    \ for downloading this book, I hope you enjoy it!\n\n© Copyright 2017 George L\
+    \ - All rights reserved.\n\nThis document is geared towards providing exact and\
+    \ reliable information in regards to the topic and issue covered. The publication\
+    \ is sold with the idea that the publisher is not required to render accounting,\
+    \ officially permitted, or otherwise, qualified services. If advice is necessary,\
+    \ legal or professional, a practiced individual in the profession should be ordered.\n\
+    \n- From a Declaration of Principles which was accepted and approved equally by\
+    \ a Committee of the American Bar Association and a Committee of Publishers and\
+    \ Associations.\n\nIn no way is it legal to reproduce, duplicate, or transmit\
+    \ any part of this document in either electronic means or in printed format. Recording\
+    \ of this publication is strictly prohibited and any storage of this document\
+    \ is not allowed unless with written permission from the publisher. All rights\
+    \ reserved.\n\nThe information provided herein is stated to be truthful and consistent,\
+    \ in that any liability, in terms of inattention or otherwise, by any usage or\
+    \ abuse of any policies, processes, or directions contained within is the solitary\
+    \ and utter responsibility of the recipient reader. Under no circumstances will\
+    \ any legal responsibility or blame be held against the publisher for any reparation,\
+    \ damages, or monetary loss due to the information herein, either directly or\
+    \ indirectly.\n\nRespective authors own all copyrights not held by the publisher.\n\
+    \nThe information herein is offered for informational purposes solely, and is\
+    \ universal as so. The presentation of the information is without contract or\
+    \ any type of guarantee assurance.\n\nThe trademarks that are used are without\
+    \ any consent, and the publication of the trademark is without permission or backing\
+    \ by the trademark owner. All trademarks and brands within this book are for clarifying\
+    \ purposes only and are the owned by the owners themselves, not affiliated with\
+    \ this document.\n\n# Chapter 1: Basic Java Syntax\nJava is one of the most versatile\
+    \ of all the computer programming languages and one of the easiest to learn. In\
+    \ this chapter, we will be covering the basic syntax of the language, which is\
+    \ the first thing you must learn:\n\n### Whitespace\nWhitespace characters are\
+    \ what makes the `java` code readable. Whitespace characters include spaces, tabs,\
+    \ and newlines. They are ignored by the compiler but they are essential for human\
+    \ readability.\n\n### Styles\nStyles are about how the code is formatted. Proper\
+    \ indentation and spacing make the code much easier to understand and maintain.\n\
+    \n#### Example 1: Bad Formatting\n```java\n// Bad Style\npublic class Welcome\
+    \ {\npublic static void main(String[] args) {\nint i = 0; // line comment\nfor(int\
+    \ i=0;i<=10;i++){\nint j = 1;\nint k = j;\nSystem.out.println(\"Welcome to\");\n\
+    }\n}\n```\n\n#### Example 2: Good Formatting\n```java\n// Good Style\npublic class\
+    \ Welcome {\n    public static void main(String[] args) {\n        int i = 0;\
+    \ // line comment\n        for(int i=0;i<=10;i++){\n            int j = 1;\n \
+    \           int k = j;\n            System.out.println(\"Welcome to comments\"\
+    );\n        }\n    }\n}\n```\n\n### Comments\nComments are very important because\
+    \ they allow you to add notes to your source code, thus making what could be a\
+    \ complicated piece of code much easier to read and debug. They are not read by\
+    \ the Java compiler so they have no impact on memory. There are two main types:\n\
+    \n- Single line: begins with `//` and anything written between `//` and the end\
+    \ of the line is ignored.\n- Multi-line: begins with `/*` and ends with `*/` -\
+    \ anything written in between is ignored and can cover many lines.\n\n```java\n\
+    public class Welcome {\n    public static void main(String[] args) {\n       \
+    \ int i = 0; // this is a single line comment\n        for(int i=0;i<=10;i++){\n\
+    \            /* \n            int j = 1;\n            int k = j;\n           \
+    \ System.out.println(\"Welcome to comments\"); \n            */\n            /*\
+    \ multi-line comment, whole code in between will be commented out */\n       \
+    \ }\n    }\n}\n```\n\n### Identifiers\nIdentifiers are the collective names that\
+    \ are given to methods, classes and variables in Java. \n\n- Identifiers must\
+    \ start with a Unicode character, underscore or dollar sign.\n- Numbers can be\
+    \ included after the first character, along with dollar signs, underscores and\
+    \ Unicode characters.\n- Try to avoid using currency symbols, like `$` if you\
+    \ can.\n- Identifier names are case sensitive.\n- You cannot use a reserved keyword.\n\
+    - Use capital letters to separate two or more words in the name.\n"
+  raw: '
+
+
+    ![](images/00002.jpeg)
+
+
+    Java For Beginners
+
+
+    Learn Java Fast (Free Bonus Video Course Included)
+
+
+    # Contents
+
+
+    [Chapter](#part0000_split_003.html_h.3znysh7) [1:](#part0000_split_003.html_h.3znysh7)
+    [Basic](#part0000_split_003.html_h.3znysh7) [](#part0000_split_003.html_h.3znysh7)
+    [Java](#part0000_split_003.html_h.3znysh7) [](#part0000_split_003.html_h.3znysh7)
+    [Syntax](#part0000_split_003.html_h.3znysh7)
+
+
+    Chapter 2: [About](#part0000_split_012.html_h.emasmt3v2qbw) [](#part0000_split_012.html_h.emasmt3v2qbw)
+    [Object](#part0000_split_012.html_h.emasmt3v2qbw) [](#part0000_split_012.html_h.emasmt3v2qbw)
+    [Oriented](#part0000_split_012.html_h.emasmt3v2qbw) [](#part0000_split_012.html_h.emasmt3v2qbw)
+    [Programming](#part0000_split_012.html_h.emasmt3v2qbw)
+
+
+    Chapter 3: [Class](#part0000_split_014.html_h.g3sfqgg30k79) [](#part0000_split_014.html_h.g3sfqgg30k79)
+    [Fundamentals](#part0000_split_014.html_h.g3sfqgg30k79)
+
+
+    Chapter 4: [Conclusion](#part0000_split_016.html_h.44sinio) [](#part0000_split_016.html_h.44sinio)
+    [+](#part0000_split_016.html_h.44sinio) [FREE](#part0000_split_016.html_h.44sinio)
+    [](#part0000_split_016.html_h.44sinio) [BONUS](#part0000_split_016.html_h.44sinio)
+    [](#part0000_split_016.html_h.44sinio) [VIDEO](#part0000_split_016.html_h.44sinio)
+    [](#part0000_split_016.html_h.44sinio) [COURSE](#part0000_split_016.html_h.44sinio)
+
+
+    Introduction
+
+
+    I want to thank you and congratulate you for downloading the book, “Java for Beginners.
+    Learn Java Fast.”.
+
+
+    This book will give you an overview of the main concepts of programming in the
+    Java language.
+
+
+    Java is the programming language of choice for web developers and is used in Android
+    applications, web sites, web-based gaming and web-based applications. It is one
+    of the easiest languages to learn and I will be covering the fundamental concepts
+    of Java programming.
+
+
+    Thanks again for downloading this book, I hope you enjoy it!
+
+
+    © Copyright 2017 George L - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    # Chapter 1
+
+
+    # Basic Java Syntax
+
+
+    Java is one of the most versatile of all the computer programming languages and
+    one of the easiest to learn. In this chapter, we will be covering the basic syntax
+    of the language, which is the first thing you must learn:
+
+
+    ## Whitespace
+
+
+    Whitespace characters are what makes the java code much easier to read and consist
+    of spaces, newlines, and tabs. Usually, a whitespace character will be ignored
+    by the Java compiler so, even if you were to use large amounts of it in your code,
+    the actual bytecode that is generated would be quite small and would have an impact
+    on system memory. Do be careful of excessive use, though, because it can make
+    the code hard to read.
+
+
+    ## Styles
+
+
+    Styles is all about how the source code is formatted. A Java file is normally
+    formatted so that it is easy to read and that is where style guidelines come into
+    play. These are standards that are usually set by an individual or an organization;
+    this formatting is ignored by the Java compiler and it includes the use of indentation,
+    newlines, and spacing. You can also use comments to format the code and add in
+    notes so that anyone else reading your code can see what is going on.
+
+
+    Styles must deal with the formatting of the source codes. Generally, we format
+    a Java file so that it becomes easier to read. To format a Java file, we need
+    to look at style guidelines. Style guidelines are mainly standards followed by
+    company, organization or individual. Generally, when setting guidelines developers
+    keep in mind formatting of code which is easier to read. This formatting is ignored
+    by the compiler. Styles include the use of indentation, spacing, and newlines
+    which format source codes as per developers. Comments are used to format code
+    and add notes so that any other programmer reading the code gets the idea behind
+    the code.
+
+
+    Example 1 – Bad Formatting
+
+
+    <b>// Bad Style Coding
+
+
+    // Not easy to read, no indents used
+
+
+    public class Welcome {
+
+
+    public static void main(String[] args){
+
+
+    int i = 0; // single line comment
+
+
+    for(int i=0;i<=10;i++){
+
+
+    int j = 1;
+
+
+    int k = j;
+
+
+    System.out.println("Welcome to comments");
+
+
+    }
+
+
+    } </b>
+
+
+    Example 2 – Good Formatting
+
+
+    <b>// Good Style Coding
+
+
+    // Very easy to read, excellent use of indents
+
+
+    public class Welcome {
+
+
+      public static void main(String[] args){
+
+
+        int i = 0; // single line comment
+
+
+        for(int i=0;i<=10;i++){
+
+
+          int j = 1;
+
+
+          int k = j;
+
+
+          System.out.println("Welcome to comments");
+
+
+        }
+
+
+      }
+
+
+    }</b>
+
+
+    ## Comments
+
+
+    Comments are very important because they allow you to add notes to your source
+    code, thus making what could be a complicated piece of code much easier to read
+    and to debug. They are not read by the Java compiler so they will have no impact
+    on memory.  There are a couple of types of comments:
+
+
+    ● Single line – begins with a // and anything written between // and the end of
+    the line is ignored
+
+
+    ● Multi-line – begins with /* and ends with */ - anything written in between is
+    ignored and this can cover many lines of your code.
+
+
+    <b>public class Welcome {
+
+
+      public static void main(String[] args){
+
+
+        int i = 0; // this is a single line comment
+
+
+        for(int i=0;i<=10;i++){
+
+
+         /* int j = 1;
+
+
+            int k = j;
+
+
+            System.out.println("Welcome to comments"); */
+
+
+         /* multi-line comment, whole code in between will be commented out */
+
+
+        }
+
+
+      }
+
+
+    }</b>
+
+
+    ## Identifiers
+
+
+    Identifiers are the collective names that are given to methods, classes and variables
+    in Java. There are rules about the naming conventions for identifiers and these
+    follow:
+
+
+    ● Identifiers must start with a Unicode character, underscore or dollar sign
+
+
+    ● Numbers can be included after the first character, along with dollar signs,
+    underscores and Unicode characters
+
+
+    ● Try to avoid using currency symbols, like $ if you can
+
+
+    ● Identifier names are case sensitive
+
+
+    ● You cannot use a reserved keyword
+
+
+    ● Use capital letters to separate two or more words in the name
+
+
+    Valid Identifiers                            Invalid Identifiers             
+    Comments'
+  toc: []
+  trans: "\n\n![](img/00002.jpeg)\n\n# Java 入学者教程\n快速学习 Java（包含免费额外视频课程）\n\n## 目录\n\
+    - 第 1 章：Java 基础语法\n- 第 2 章：关于面向对象编程\n- 第 3 章：类基础\n- 第 4 章：结语 + 免费额外视频课程\n\n##\
+    \ 引言\n我要感谢你的下载，并祝贺你下载了《Java 入学者教程：快速学习 Java》这本书。\n\n这本书将向你介绍 Java 语言编程的核心概念。\n\
+    \nJava 是 Web 开发者的首选编程语言，用于 Android 应用程序、网站、基于 Web 的游戏以及 Web 应用。它是最容易学习的语言之一，我将介绍\
+    \ Java 编程的基础概念。\n\n感谢感谢下载本书，希望你读得愉快！\n\n© 版权 2017 George L - 保留所有权利。\n\n本文档旨在就其涵盖的主题和问题提供准确、可靠的信息。本书的销售理念是：出版者不需要提供会计、官方许可或其他合格的服务。如果需要法律或专业建议，应聘请该领域执业丰富的专业人士。\n\
+    \n- 摘自一份经美国律师协会委员会和出版商与协会委员会共同接受并批准的原则声明。\n\n以任何电子手段或打印格式复制、复制或传输本文档的任何部分都是不法的。严禁录制出版物，除非获得出版者的书面许可，否则不允许存储本文档。保留所有权利。\n\
+    \n此处提供的信息据称是真实且一致的，对于因疏忽或其他原因，对书中包含任何政策、流程或指示的任何使用或滥用导致的任何责任，均由接收读者承担全部责任。在任何情况下，对于因此处信息直接或间接导致的任何赔偿、损害或金钱损失，出版者不承担任何法律责任或指责。\n\
+    \n相应作者拥有出版者未持有的所有版权。\n\n此处提供的信息仅供参考，且具有通用性。信息的呈现不带有任何合同或任何类型的保证说明。\n\n所使用的商标未经任何许可，且商标的发布未经商标所有者的许可或支持。本书中的所有商标和品牌仅用于说明目的，并归所有者所有，与本文档无关联。\n\
+    \n# 第 1 章：Java 基础语法\nJava 是所有计算机编程语言中最强大的语言之一，也是最容易学习的语言之一。在本章中，我们将介绍该语言的基本语法，这是你必须学习的第一点：\n\
+    \n### 空格\n空白字符使得 `java` 代码具有可读性。空白字符包括空格、制表符和换行符。编译器会忽略它们，但它们对人类的可读至关重要。\n\n###\
+    \ 样式\n样式涉及代码的格式化。适当的缩进和间距使代码更容易理解和维护。\n\n#### 示例 1：糟糕的格式\n```java\n// Bad Style\n\
+    public class Welcome {\npublic static void main(String[] args) {\nint i = 0; //\
+    \ line comment\nfor(int i=0;i<=10;i++){\nint j = 1;\nint k = j;\nSystem.out.println(\"\
+    Welcome to\");\n}\n}\n```\n\n#### 示例 2：良好的格式\n```java\n// Good Style\npublic class\
+    \ Welcome {\n    public static void main(String[] args) {\n        int i = 0;\
+    \ // line comment\n        for(int i=0;i<=10;i++){\n            int j = 1;\n \
+    \           int k = j;\n            System.out.println(\"Welcome to comments\"\
+    );\n        }\n    }\n}\n```\n\n### 注释\n注释非常重要，因为它们允许你在源代码中添加备注，从而使可能复杂的代码变得更容易阅读和调试。Java\
+    \ 编译器不会读取注释，因此它们不会影响内存。主要有两种类型：\n\n- 单行注释：以 `//` 开头，`//` 到行尾之间的任何内容都会被忽略。\n- 多行注释：以\
+    \ `/*` 开头，以 `*/` 结尾——其间的任何内容都会被忽略并可以跨多行。\n\n```java\npublic class Welcome {\n\
+    \    public static void main(String[] args) {\n        int i = 0; // this is a\
+    \ single line comment\n        for(int i=0;i<=10;i++){\n            /* \n    \
+    \        int j = 1;\n            int k = j;\n            System.out.println(\"\
+    Welcome to comments\"); \n            */\n            /* 这是多行注释，中间的所有代码将被注释掉 */\n\
+    \        }\n    }\n}\n```\n\n### 标识符\n标识符是赋予 Java 中方法、类和变量的集体名称。\n\n- 标识符必须以 Unicode\
+    \ 字符、下划线（_）或美元符号（$）开头。\n- 第一个字符之后可以包含数字、美元符号、下划线和 Unicode 字符。\n- 如果可能，尽量避免使用货币符号（如\
+    \ `$`）。\n- 标识符名称区分大小写。\n- 你不能使用关键字。\n- 使用大写字母分隔名称中的两个或多个单词。\n\n"
+- fmt: "\n| `tree` | `Tree` | case-sensitive |\n| :--- | :--- | :--- |\n| `my2var`\
+    \ | `2myVar` | digit as the first character |\n| `myNewVar` | `my@new@var` | invalid\
+    \ character - @ |\n| `switching` | `switch` | a reserved keyword |\n\n## Reserved\
+    \ Keywords\n\nThere are several words in Java that are reserved for use by the\
+    \ language and you cannot use them for anything other than their intended purpose,\
+    \ especially not for naming. The reserved keywords are:\n\n* `abstract`\n* `assert`\n\
+    * `boolean`\n* `break`\n* `byte`\n* `case`\n* `catch`\n* `char`\n* `class`\n*\
+    \ `const`\n* `continue`\n* `default`\n* `do`\n* `double`\n* `else`\n* `enum`\n\
+    * `extends`\n* `final`\n* `finally`\n* `float`\n* `for`\n* `goto`\n* `if`\n* `implements`\n\
+    * `import`\n* `instanceof`\n* `int`\n* `interface`\n* `long`\n* `native`\n* `new`\n\
+    * `package`\n* `private`\n* `protected`\n* `public`\n* `return`\n* `short`\n*\
+    \ `static`\n* `strictfp`\n* `super`\n* `switch`\n* `synchronized`\n* `this`\n\
+    * `throw`\n* `throws`\n* `transient`\n* `try`\n* `void`\n* `volatile`\n* `while`\n\
+    \n## Separators\n\nThese are used a lot in Java and each has its own use:\n\n\
+    | Separator | Comments |\n| :--- | :--- |\n| `()` | For declaring methods/passing\
+    \ arguments |\n| `{}` | Code block |\n| `[]` | Defines array and accesses element\
+    \ |\n| `;` | The end of a statement |\n| `,` | Argument separation |\n| `.` |\
+    \ Calling operator for methods & objects |\n| `:` | For each loop |\n\n## Literals\n\
+    \nJava uses literals to give us an idea of the data type:\n\n| Literal Types |\
+    \ Example | Comments |\n| :--- | :--- | :--- |\n| Integer | `10` | no distinguisher\
+    \ |\n| Long | `10L` | for Long |\n| Null | `null` | keyword |\n| String | `\"\
+    Java Programs\"` | double quotes for a string |\n| Character | `'a'` | single\
+    \ quotes for character |\n| Double Floating Point | `3123.5` | no distinguisher\
+    \ |\n| Floating Point | `3.5f` | f for float |\n| Boolean | `true` | keyword or\
+    \ false |\n\nOther than separators Java literals give us a brief idea. Let us\
+    \ view them in a tabular.\n\n## Escape Sequences\n\nWe use escape sequences in\
+    \ strings to escape a specific character:\n\n| Escape Sequence | Sequence |\n\
+    | :--- | :--- |\n| `\\t` | Horizontal tab |\n| `\\n` | New line |\n| `\\r` | Carriage\
+    \ return |\n| `\\f` | Form feed |\n| `\\\"` | Double quote |\n| `\\'` | Single\
+    \ quote |\n| `\\\\` | Backslash |\n\n# Chapter 2\n\n# About Object Oriented Programming\n\
+    \nJava is an object-oriented programming (OOP) language, organized around objects\
+    \ and data instead of actions and logic. Before you can start writing your own\
+    \ Java code, you need to be aware of the basics of the language.\n\n## The Advantages\
+    \ of OOP\n\nThe main advantage of OOP is that programmers can create modules that\
+    \ don’t need to be changed when a new object is added. Programmers can just create\
+    \ a new object that will inherit their features from those that exist, making\
+    \ it an easy to modify.\n\n# Chapter 3\n\n# Class Fundamentals\n\nClasses are\
+    \ a fundamental part of Java and are incredibly powerful. A class is used to define\
+    \ a new data type, which is then used to create an object. In basic, a class is\
+    \ a template for the object and the object is an instance of the class. Because\
+    \ of that, you will see the words instance and object interchangeably.\n\n## The\
+    \ Form of a Class\n\nTo define a class, you must declare the nature and form of\
+    \ it. To do this, you must specify the data in the class and the code that will\
+    \ operate on it. Most classes will contain both although only have data or code.\n\
+    \nYou declare a class by using the `class` keyword and the following shows you\
+    \ the general form of a class:\n\n```java\nclass classname {\n    type instance-variable1;\n\
+    \    type instance-variable2;\n    // ..\n    type instance-variableN;\n\n   \
+    \ type methodname1(parameter-list) {\n        //body of method\n    }\n\n    type\
+    \ methodname2(parameter-list) {\n        //body of method\n    }\n    //..\n \
+    \   type methodnameN(parameter-list) {\n        // body of method\n    }\n}\n\
+    ```\n\nThe variables, or data, that are defined in the class are known as instance\
+    \ variables and the code itself is held within a method. The methods and variables\
+    \ that are defined in a class are called members and, in most cases, the variables\
+    \ will be acted on and accessed by the specific methods in the class. The methods\
+    \ determine how the data is used.\n\n# Chapter 4\n\n# Conclusion + FREE BONUS\
+    \ VIDEO COURSE\n\n![Blackbird (1).jpg](images/00001.jpeg)\n\nFinally, if you enjoyed\
+    \ this book, then I’d like to ask you for a favor, would you be kind enough to\
+    \ leave a review for this book on Amazon? It’d be greatly appreciated!\n"
+  raw: 'tree                                                        Tree             
+                                              case-sensitive
+
+
+    my2var                                          2myVar                           
+                  digit as the first character
+
+
+    myNewVar                                          my@new@var                           
+    invalid character - @
+
+
+    switching                                          switch                           
+                                a reserved keyword
+
+
+    ## Reserved Keywords
+
+
+    There are several words in Java that are reserved for use by the language and
+    you cannot use them for anything other than their intended purpose, especially
+    not for naming. The reserved keywords are:
+
+
+    ● abstract
+
+
+    ● assert
+
+
+    ● boolean
+
+
+    ● break
+
+
+    ● byte
+
+
+    ● case
+
+
+    ● catch
+
+
+    ● char
+
+
+    ● class
+
+
+    ● const
+
+
+    ● continue
+
+
+    ● default
+
+
+    ● do
+
+
+    ● double
+
+
+    ● else
+
+
+    ● enum
+
+
+    ● extends
+
+
+    ● final
+
+
+    ● finally
+
+
+    ● float
+
+
+    ● for
+
+
+    ● goto
+
+
+    ● if
+
+
+    ● implements
+
+
+    ● import
+
+
+    ● instanceof
+
+
+    ● int
+
+
+    ● interface
+
+
+    ● long
+
+
+    ● native
+
+
+    ● new
+
+
+    ● package
+
+
+    ● private
+
+
+    ● protected
+
+
+    ● public
+
+
+    ● return
+
+
+    ● short
+
+
+    ● static
+
+
+    ● strictfp
+
+
+    ● super
+
+
+    ● switch
+
+
+    ● synchronized
+
+
+    ● this
+
+
+    ● throw
+
+
+    ● throws
+
+
+    ● transient
+
+
+    ● try
+
+
+    ● void
+
+
+    ● volatile
+
+
+    ● while
+
+
+    ## Separators
+
+
+    These are used a lot in Java and each has its own use:
+
+
+    Separator                              Comments                                         
+                               
+
+
+    () For declaring methods/passing arguments             
+
+
+    {}                                          Code block                           
+                                                           
+
+
+    []                                          Defines an array and accesses array
+    element             
+
+
+    ;                                          The end of a statement             
+                                             
+
+
+    ,                                          Argument separation                           
+                                     
+
+
+    .                                          Calling operator for methods & objects       
+
+
+    :                                          For each loop                           
+                                                   
+
+
+    ## Literals
+
+
+    Java uses literals to give us an idea of the data type:
+
+
+    Literal Types                            Example                                         
+    Comments
+
+
+    Integer                                          10                           
+                                no distinguisher
+
+
+    Long                                                        100L             
+                                              L for Long
+
+
+    Null                                                        null             
+                                              keyword
+
+
+    String                                                        “Java Programs”             
+                  double quotes for a string
+
+
+    Character                                          ‘a’                           
+                                single quotes for character
+
+
+    Double Floating Point              3123.5                                         
+                  no distinguisher
+
+
+    Floating Point                            3.5f                                         
+                  f for float
+
+
+    Boolean                                          true                           
+                                keyword for true or false
+
+
+    Other than separators Java also uses literals. Literals give us a brief idea about
+    the data types. Let us view them in a tabular form 
+
+
+    ## Escape Sequences
+
+
+    We use escape sequences in strings to escape a specific character:
+
+
+    Escape Sequence                                          Replaced
+
+
+    /t                                                                      Horizontal
+    tab
+
+
+    /n                                                                      New line
+
+
+    /r                                                                      Carriage
+    return
+
+
+    /f                                                                      Form feed
+
+
+    /”                                                                      Double
+    quote
+
+
+    /’                                                                      Single
+    quote
+
+
+    //                                                                      Backslash
+
+
+    # Chapter 2
+
+
+    # About Object Oriented Programming
+
+
+    Java is an object-oriented programming (OOP) language, organized around objects
+    and data instead of actions and logic. Before you can start writing your own Java
+    code, you need to be aware of the basics of the language:
+
+
+    ● Abstraction – picking out common features of procedures and objects
+
+
+    ● Class – category of objects, a definition of the properties of the objects in
+    the class
+
+
+    ● Encapsulation – combining elements to make something new
+
+
+    ● Information Hiding – hiding details of functions or objects to reduce code complexity
+
+
+    ● Inheritance – a representation of the “is a” relationship of different classes
+
+
+    ● Interface – codes and language used by applications to communicate
+
+
+    ● Messaging – communication form in parallel and OOP programming
+
+
+    ● Object – self-contained, consisting of procedure and data used for data manipulation
+
+
+    ● Polymorphism – ability to process an object per its class or data type
+
+
+    ● Procedure – part of the program that does something specific
+
+
+    ## The Advantages of OOP
+
+
+    The main advantage of OOP is that programmers can create modules that don’t need
+    to be changed when a new object type is added. Programmers can just create a new
+    object that will inherit their features from those that already exist, making
+    it an easy language to modify.
+
+
+    # Chapter 3
+
+
+    # Class Fundamentals
+
+
+    Classes are a fundamental part of Java and are incredibly powerful. A class is
+    used to define a new data type, which is then used to create an object of the
+    type defined. In basic, a class is a template for the object and the object is
+    an instance of the class. Because of that, you will see the words instance and
+    object used interchangeably.
+
+
+    ## The Form of a Class
+
+
+    To define a class, you must declare the exact nature and form of it. To do this,
+    you must specify the data in the class and the code that will operate on the data.
+    Most classes will contain both although some only have data or code in them.
+
+
+    You declare a class by using the class keyword and the following shows you the
+    general form of a class:
+
+
+                 class classname {
+
+
+         type instance-variable1;
+
+
+         type instance-variable2;
+
+
+         // ..
+
+
+    type instance-variableN;
+
+
+    type methodname1(parameter-list) {
+
+
+         //body of method
+
+
+    }
+
+
+    type methodname2(parameter-list) {
+
+
+         //body of method
+
+
+    }
+
+
+         //..
+
+
+    type methodnameN(parameter-list) {
+
+
+         // body of method
+
+
+    }
+
+
+    }
+
+
+     The variables, or data, that are defined in the class are known as instance variables
+    and the code itself is held within a method. The methods and variables that are
+    defined in a class are called members and, in most cases, the variables will be
+    acted on and accessed by the specific methods in the class. The methods determine
+    how the data is used.
+
+
+    # Chapter 4
+
+
+    # Conclusion + FREE BONUS VIDEO COURSE
+
+
+    ![Blackbird (1).jpg](images/00001.jpeg)
+
+
+    Finally, if you enjoyed this book, then I’d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It’d be greatly
+    appreciated!'
+  toc: []
+  trans: "\n\n| `tree` | `Tree` | 区分大小 |\n| :--- | :--- | :--- |\n| `my2var` | `2myVar`\
+    \ | 以数字作为字符 |\n| `myNewVar` | `my@new@var` | 无效字符 - @ |\n| `switching` | `switch`\
+    \ | 保留关键字 |\n\n## 保留关键字\n\nJava 中有几个单词是为语言保留的，你不能将它们用于用途之外的任何地方，特别是不能用于命名。保留关键字如下：\n\
+    \n* `abstract`\n* `assert`\n* `boolean`\n* `break`\n* `byte`\n* `case`\n* `catch`\n\
+    * `char`\n* `class`\n* `const`\n* `continue`\n* `default`\n* `do`\n* `double`\n\
+    * `else`\n* `enum`\n* `extends`\n* `final`\n* `finally`\n* `float`\n* `for`\n\
+    * `goto`\n* `if`\n* `implements`\n* `import`\n* `instanceof`\n* `int`\n* `interface`\n\
+    * `long`\n* `native`\n* `new`\n* `package`\n* `private`\n* `protected`\n* `public`\n\
+    * `return`\n* `short`\n* `static`\n* `strictfp`\n* `super`\n* `switch`\n* `synchronized`\n\
+    * `this`\n* `throw`\n* `throws`\n* `transient`\n* `try`\n* `void`\n* `volatile`\n\
+    * `while`\n\n## 分隔符\n\n这些在 Java 中非常常用，且每个都有自己的用途：\n\n| 分隔符 | 注释 |\n| :--- | :---\
+    \ |\n| `()` | 用于声明方法/传递参数 |\n| `{}` | 代码块 |\n| `[]` | 定义数组并访问元素 |\n| `;` | 语句结束\
+    \ |\n| `,` | 参数分隔 |\n| `.` | 方法和对象的调用运算符 |\n| `:` | 用于增强循环 |\n\n## 字面量\n\nJava\
+    \ 使用字面量来让我们直观了解数据类型：\n\n| 字面量类型 | 示例 | 注释 |\n| :--- | :--- | :--- |\n| 整数 | `10`\
+    \ | 无区分符 |\n| 长整 | `10L` | 用于 Long |\n| Null | `null` | 关键字 |\n| 字符串 | `\"Java\
+    \ Programs\"` | 双引号表示字符串 |\n| 字符 | `'a'` | 单引号表示字符 |\n| 双精度浮点数 | `3123.5` | 无区分符\
+    \ |\n| 浮点数 | `3.5f` | f 表示 float |\n| 布尔值 | `true` | 关键字或 false |\n\n除了分隔符外，Java\
+    \ 字面量也给了我们一个简洁的概念。让我们通过表格的形式查看它们。\n\n## 转义序列\n\n我们在字符串中使用转义序列来转义特定字符：\n\n| 转义序列\
+    \ | 序列 |\n| :--- | :--- |\n| `\\t` | 水平表符 |\n| `\\n` | 换行 |\n| `\\r` | 回车 |\n\
+    | `\\f` | 换页 |\n| `\\\"` | 双引号 |\n| `\\'` | 单引号 |\n| `\\\\` | 反斜杠 |\n\n# 第 2 章\n\
+    \n# 关于面向对象编程\n\nJava 是一种面向对象编程 (OOP) 语言，围绕对象和数据组织，而不是动作和逻辑。在开始编写自己的 Java 代码之前，你需要了解该语言的基础。\n\
+    \n## OOP 的优势\n\nOOP 的主要优势是程序员可以创建模块，当添加新对象时不需要修改这些模块。程序员只需要创建一个新对象，使其从现有对象继承特征，从而变得易于修改。\n\
+    \n# 第 3 章\n\n# 类基础\n\n类是 Java 的基础部分，并且非常强大。类用于定义一种新的数据类型，然后用该类型来创建对象。基本上，类是对象的模板，而对象是类的实例。正如此，你会看到“实例\
+    \ (instance)”和“对象 (object)”这两个词交替使用。\n\n## 类的形式\n\n要定义一个类，必须声明它的性质和形式。为了做到，必须指定类中的数据以及对数据进行操作的代码。大多数类都会包含两者，尽管有些只包含数据或代码。\n\
+    \n你通过使用 `class` 关键字来声明类，下面是类的通用形式：\n\n```java\nclass classname {\n    type instance-variable1;\n\
+    \    type instance-variable2;\n    // ..\n    type instance-variableN;\n\n   \
+    \ type methodname1(parameter-list) {\n        //方法体\n    }\n\n    type methodname2(parameter-list)\
+    \ {\n        //方法体\n    }\n    //..\n    type methodnameN(parameter-list) {\n\
+    \        // 这里的方法体\n    }\n}\n```\n\n在类中定义的变量或数据称为**实例变量 (instance variables)**，代码本身包含在方法内部。类中定义的方法和变量被称为**成员\
+    \ (members)**，在大多数情况下，变量会被类中的特定方法操作和访问。方法决定了数据如何被使用。\n\n# 第 4 章\n\n# 结 + 免费赠送课程\n\
+    \n![Blackbird (1).jpg](img/00001.jpeg)\n\n"
+- fmt: '
+
+    => [Click](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [here](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [to](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [leave](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [a](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [review](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [for](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [this](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [book](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [on](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [Amazon](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)[!](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F226channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+
+    '
+  raw: => [Click](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [here](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [to](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [leave](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [a](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [review](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [for](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [this](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [book](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [on](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [Amazon](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)[!](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+  toc: []
+  trans: '
+
+
+    => [点击](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [这里](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [在](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [离开](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [离开](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [a](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [评论](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [为了](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [这本书](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [这](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [在](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+    [亚马逊](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F%26channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)[!](https://www.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Freview%2Fcreate-review%3Fie%3DUTF8%26asin%3DB06XQM477F226channel%3Dglance-detail%26ref_%3Dcm_cr_dp_d_wr_but_top)
+
+
+    '
+- fmt: '
+
+    Thank you again for reading this book!
+
+
+    I hope this book was able to help you to understand the fundamentals of Java programming.
+
+
+    The next step is to take your learning further. Learning the fundamentals is only
+    the beginning, the start of a long and fruitful journey into the world of computer
+    programming.
+
+
+    I recommend you check out this [FREE](http://javavideocourse.weebly.com) [BONUS](http://javavideocourse.weebly.com)
+    [VIDEO](http://javavideocourse.weebly.com) [COURSE](http://javavideocourse.weebly.com)
+    for more complete information.
+
+
+    If the link does not work go here: `http://javavideocourse.weebly.com/`
+
+
+    Thank you and good luck!
+
+    '
+  raw: 'Thank you again for reading this book! 
+
+
+    I hope this book was able to help you to understand the fundamentals of Java programming. 
+
+
+    The next step is to take your learning further. Learning the fundamentals is only
+    the beginning, the start of a long and fruitful journey into the world of computer
+    programming.
+
+
+    I recommend you check out this [FREE](http://javavideocourse.weebly.com) [](http://javavideocourse.weebly.com)
+    [BONUS](http://javavideocourse.weebly.com) [](http://javavideocourse.weebly.com)
+    [VIDEO](http://javavideocourse.weebly.com) [](http://javavideocourse.weebly.com)
+    [COURSE](http://javavideocourse.weebly.com) [](http://javavideocourse.weebly.com)
+    for more complete information.
+
+
+    If the link does not work go here: [http](http://javavideocourse.weebly.com/)[://](http://javavideocourse.weebly.com/)[javavideocourse](http://javavideocourse.weebly.com/)[.](http://javavideocourse.weebly.com/)[weebly](http://javavideocourse.weebly.com/)[.](http://javavideocourse.weebly.com/)[com](http://javavideocourse.weebly.com/)
+
+
+    Thank you and good luck!'
+  toc: []
+  trans: '
+
+
+    再次感谢阅读这本书！
+
+
+    希望这本书能够帮助你理解 Java 编程的基础知识。
+
+
+    下一步是进一步深化你的学习。学习基础只是开始，是进入计算机编程世界漫长且富有成果的旅程的起点。
+
+
+    我建议你查看这个[免费](http://javavideocourse.weebly.com) [赠送](http://javavideocourse.weebly.com)
+    [视频](http://javavideocourse.weebly.com) [课程](http://javavideocourse.weebly.com)
+    以获取更完整的信息。
+
+
+    如果链接无法使用，请访问这里：`http://javavideocourse.weebly.com/`
+
+
+    感谢你并祝你好运！
+
+
+    '

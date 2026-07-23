@@ -1,0 +1,533 @@
+name: Java for Web Development： Create Full-Stack Java Applications with Servlets,
+  JSP Pages, MVC Pattern and Database Connectivity (English Edition)
+name_cn: Java Web 开发：使用 Servlets、JSP 、MVC 模式和数据库连接创建全栈 Java 应用（英文版）
+slug: java-for-web-development-create-full-stack-java-applications
+toc:
+- - '#'
+  - Java Web 开发：使用 Servlets、JSP 、MVC 模式和数据库连接创建全栈 Java 应用（英文版）
+- - '##'
+  - ODBC 应用程序编程接口 (API)
+- - '##'
+  - JDBC-API
+- - '##'
+  - JDBC 驱动分类
+- - '##'
+  - 原生 API 驱动 (Native-API driver)
+- - '##'
+  - 以下是优点：
+- - '##'
+  - 以下是缺点：
+- - '##'
+  - 查询数据库
+- - '##'
+  - 连接数据库
+- - '##'
+  - 连接对象 (connection object)
+- - '##'
+  - 加载驱动并建立连接
+- - '##'
+  - 在数据库中处理查询
+- - '###'
+  - 使用 Statement 对象
+- - '###'
+  - Statement 对象
+- - '###'
+  - ResultSet 对象
+- - '###'
+  - 添加记录
+- - '###'
+  - 修改记录
+- - '###'
+  - 删除记录
+- - '##'
+  - 单选题
+- - '##'
+  - 判断题
+- - '##'
+  - 面试题
+- - '#'
+  - 第 2 章：国际化 (I18N)
+- - '##'
+  - 引言
+- - '##'
+  - 本地化 (L10N)
+- - '##'
+  - Locale 类的构造函数
+- - '##'
+  - Locale 类的常用方法
+- - '##'
+  - ResourceBundle 的构造函数
+- - '##'
+  - 日期和时间的国际化（带日期时间的 I18N）
+- - '##'
+  - java.text.DateFormat 的方法
+- - '##'
+  - 5. 每当 `Locale` 发生变化时，数字格式也会发生变化。数字格式在不同地区之间不同。`java.text.NumberFormat` 类用于根据特定的区域对以下进行格式化：
+- - '##'
+  - 多选题
+- - '###'
+  - 1. 已：
+- - '###'
+  - 5. 下述哪些是正确的？（选择所有适用。）
+- - '##'
+  - 问题
+- - '#'
+  - 第 3 章
+- - '##'
+  - Java Servlet 引言
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - Web 服务器
+- - '###'
+  - Servlet 引言
+- - '###'
+  - Servlet 的特点
+- - '###'
+  - Servlets 与 Applets 的比较
+- - '###'
+  - Servlets 与其他服务器端脚本技术的比较
+- - '####'
+  - CGI 脚本
+- - '####'
+  - Active Server Pages (ASP)
+- - '###'
+  - Servlets 的工作原理
+- - '###'
+  - GET 和 POST 方法
+- - '###'
+  - Javax.servlet 包
+- - '###'
+  - Servlet 的生命周期
+- - '###'
+  - Servlet 接口
+- - '###'
+  - 创建 Servlet
+- - '###'
+  - 编译 Servlet
+- - '###'
+  - 创建描述符（web.xml 文件）
+- - '###'
+  - Web.xml
+- - '###'
+  - 2. 以下是一个通过扩展 GenericServlet 类创建的 servlet 示例
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '#'
+  - 第 4 章
+- - '##'
+  - HTTP Servlet
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - HTTP Servlet
+- - '###'
+  - HttpServlet 类的作用
+- - '###'
+  - HTTP 请求和响应
+- - '###'
+  - GET 和 POST 方法
+- - '###'
+  - 示例
+- - '##'
+  - 结论
+- - '##'
+  - 问题
+- - '##'
+  - 多选题
+- - '#'
+  - 第 5 章
+- - '##'
+  - 使用 Servlet 会话
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 在 servlet 中跟踪会话的技术
+- - '###'
+  - URL 重写
+- - '###'
+  - Next2Servlet
+- - '###'
+  - 隐藏表单字段 (Hidden Form Fields)
+- - '####'
+  - 以下是一个示例
+- - '###'
+  - 使用 HttpSession 接口
+- - '###'
+  - First Servlet
+- - '###'
+  - Second Servlet
+- - '###'
+  - 第二 Servlet
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '#'
+  - 第 6 章：Servlet 间通信
+- - '##'
+  - 介绍
+- - '##'
+  - 结构
+- - '##'
+  - RequestDispatcher 接口
+- - '##'
+  - ServletContext 接口方法
+- - '##'
+  - 获取 RequestDispatcher 对象的方法
+- - '##'
+  - RequestDispatcher 接口的方法
+- - '##'
+  - 通过问题描述实现 Servlet 间通信
+- - '##'
+  - 任务列表
+- - '##'
+  - 客户端界面
+- - '##'
+  - index.xhtml
+- - '##'
+  - FirstServlet 的代码
+- - '##'
+  - 输出
+- - '##'
+  - SendRedirect
+- - '###'
+  - '`SendRedirectExample`'
+- - '###'
+  - '`forward()` 与 `sendRedirect()` 方法的区别'
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '#'
+  - 第 7 章
+- - '##'
+  - Java Server Pages (JSP)
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - JSP 的需求
+- - '###'
+  - Servlet 和 JSP 的区别
+- - '###'
+  - JSP 的优势
+- - '##'
+  - JSP 请求-响应周期
+- - '##'
+  - JSP 的生命周期
+- - '##'
+  - JSP 页面的结构
+- - '##'
+  - JSP 页面的目录结构
+- - '##'
+  - 总结
+- - '##'
+  - 问题
+- - '#'
+  - 第 8 章
+- - '##'
+  - 标签与脚本元素
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - JSP 元素
+- - '##'
+  - 注释标签
+- - '##'
+  - 脚本元素
+- - '##'
+  - 脚本标签
+- - '###'
+  - Test.jsp
+- - '###'
+  - 表达式标签
+- - '###'
+  - 声明标签
+- - '###'
+  - 隐式对象
+- - '##'
+  - 5. response
+- - '##'
+  - 6. session
+- - '##'
+  - 7. Config
+- - '##'
+  - 8. exception
+- - '##'
+  - 9. pageContext
+- - '##'
+  - 结论
+- - '##'
+  - 选择正确
+- - '##'
+  - 隐式对象
+- - '###'
+  - contentType
+- - '###'
+  - extends
+- - '###'
+  - errorPage
+- - '###'
+  - import
+- - '###'
+  - Language
+- - '###'
+  - Session
+- - '###'
+  - Buffer
+- - '###'
+  - isIgnored
+- - '###'
+  - isThreadSafe
+- - '###'
+  - Autoflush
+- - '###'
+  - 以下是优点
+- - '###'
+  - 以下是一个示例
+- - '###'
+  - Taglib 指令
+- - '###'
+  - 语法
+- - '###'
+  - 结论
+- - '#'
+  - 第 10 章 动作元素与自定义标签
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - JSP 动作标签
+- - '##'
+  - jsp:useBean
+- - '##'
+  - jsp:getProperty 标签
+- - '##'
+  - jsp:forward 标签
+- - '##'
+  - 语法
+- - '##'
+  - 示例
+- - '##'
+  - 总结
+- - '##'
+  - XML 的需求
+- - '##'
+  - 使用优势
+- - '##'
+  - 使用自定义标签
+- - '##'
+  - 标签库的组件
+- - '##'
+  - 在 JSP 文件中使用标签
+- - '##'
+  - TLD 文件的结构
+- - '##'
+  - JSP 文件的结构
+- - '###'
+  - JSP 文件
+- - '###'
+  - 表达式语言 (EL)
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '###'
+  - 模型视图控制器 (MVC)
+- - '###'
+  - Login-error.jsp
+- - '###'
+  - Web.xml
+- - '##'
+  - 结论
+- - '##'
+  - Struts2 的组件
+- - '##'
+  - Struts2 架构
+- - '##'
+  - 面试题
+- - '###'
+  - 1. 什么是服务端包含（server-side includes）？
+- - '###'
+  - 2. 什么是线程安全的 servlet（thread-safe servlets）？
+- - '###'
+  - 3. 在 Servlet 中跟踪请求地址？
+- - '###'
+  - 4. 如何告知客户端发送大小？
+- - '###'
+  - 5. 我可以通过特定的键读取 cookies吗？
+- - '###'
+  - 6. 什么是持久性 cookie（persistent cookies）？
+- - '###'
+  - 7. 如何在运行时 servlet 的绝对 URL？
+- - '###'
+  - 8. `getScheme()` 方法有什么用？
+- - '###'
+  - 9. 会话（session）的生命周期是什么？
+- - '###'
+  - 10. `PrintWriter` 和 `ServletOutputStream` 有什么区别？
+- - '###'
+  - 11. 使用 Servlet 调用 JSP 吗？
+- - '###'
+  - 12. Servlet 中的 `load-on-startup` 是什么？
+- - '###'
+  - 13. 可以在客户端和服务器端刷新 Servlet 吗？
+- - '###'
+  - 14. 可以从 Servlet 发送身份验证吗？
+- - '###'
+  - 15. 为什么 Servlet 不包含 `main()` 方法？它是如何工作的？
+- - '###'
+  - 16. 上下文参数（Context Parameter）和上下文属性（Context Attribute）之间有什么区别？
+- - '###'
+  - 17. 什么是 servlet 映射（mapping）？
+- - '###'
+  - 18. Servlet 使用哪些注解？
+- - '###'
+  - 19. Generic Servlet 和 HTTP Servlet 有什么区别？
+- - '###'
+  - 20. 如何在 servlet 中获取服务器信息？
+- - '###'
+  - 21. 什么是 JSP 技术？
+- - '###'
+  - 22. 如何重新加载 JSP 文件？
+- - '###'
+  - 23. 在存在 servlet 技术的情况下，JSP 如何为应用程序功能？
+- - '###'
+  - 24. 你如何将 JSP 和 XML 关联起来？
+- - '###'
+  - 25. JSP 是否使用了 Java 平台 API？
+- - '###'
+  - 26. 你如何定义一个 JSP 标签库？
+- - '###'
+  - 27. 使用标签库有什么优势？
+- - '###'
+  - 28. 你如何限制 JSP 页面上显示的错误？
+- - '###'
+  - 29. 如何实现一个线程安全的 JSP 页面？
+- - '###'
+  - 30. 如何防止浏览器缓存 JSP 或 servlet 页输出？
+- - '###'
+  - 31. 如何禁用脚本？
+- - '###'
+  - 32. JSP 技术是扩展的吗？
+- - '###'
+  - 索引
+- - '####'
+  - A
+- - '####'
+  - B
+- - '####'
+  - C
+- - '####'
+  - D
+- - '####'
+  - E
+- - '####'
+  - F
+- - '####'
+  - G
+- - '####'
+  - H
+- - '####'
+  - I
+- - '##'
+  - application
+- - '##'
+  - include 动作标签
+- - '##'
+  - include 指令
+- - '##'
+  - 输入参数
+- - '##'
+  - 日期和时间的国际化 28
+- - '##'
+  - 数字的国际化 30, 31
+- - '##'
+  - Servlet 间通信
+- - '##'
+  - Java 数据库连接 (JDBC) 4
+- - '##'
+  - Java Server Pages (JSP)
+- - '##'
+  - java.text.DateFormat
+- - '##'
+  - javax.servlet.http.Cookie 类
+- - '##'
+  - Javax.servlet 包 42, 43
+- - '##'
+  - JDBC-API 4
+- - '##'
+  - JDBC 类
+- - '##'
+  - JDBC 驱动程序
+- - '##'
+  - JDBC-ODBC 桥接
+- - '##'
+  - JDBC URL
+- - '##'
+  - JSP 动作标签
+- - '##'
+  - JSP 元素
+- - '##'
+  - JSP 文件
+- - '##'
+  - '`Locale` 类'
+- - '##'
+  - Model View Controller (MVC)
+- - '##'
+  - MVC 架构
+- - '##'
+  - MVC 模式
+- - '##'
+  - Native-API 驱动程序
+- - '##'
+  - network protocol 驱动程序
+- - '##'
+  - NumberFormat
+- - '##'
+  - ODBC API 3, 4
+- - '##'
+  - ODBC 驱动程序 5
+- - '##'
+  - Open Database Connectivity (ODBC) 3
+- - '##'
+  - page 指令
+- - '##'
+  - Plain Old Java Object (POJO) 175
+- - '##'
+  - POST 方法
+- - '##'
+  - Prepared Statement
+- - '##'
+  - Relational Database Management Systems (RDBMS) 2
+- - '##'
+  - remote method invocation (RMI) 39
+- - '##'
+  - RequestDispatcher
+- - '##'
+  - resource bundle
+- - '##'
+  - Resource Bundle
+- - '##'
+  - ResultSet

@@ -1,0 +1,830 @@
+<p><img src="image_rsrc11N.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveaspectratio="xMidYMid meet" viewbox="0 0 1640 1150" height="100%" width="100%">
+<image xlink:href="image_rsrc11N.jpg" height="1150" width="1640"></image>
+</svg>
+<p><span id="part0001.xhtml"></span></p>
+<p><span class="class_s10W-0">Copyright</span><br />
+<span class="class_s110">Copyright © 2023 by AK Ray<br />
+All rights reserved. </span></p>
+<p>This ebook is protected by copyright law. No part of this publication
+may be reproduced, distributed, or transmitted in any form or by any
+means, including photocopying, recording, or other electronic or
+mechanical methods, without the prior written permission of the
+copyright owner, except in the case of brief quotations embodied in
+critical reviews and certain other noncommercial uses permitted by
+copyright law.</p>
+<p><span class="class_s110">For permission requests or inquiries, please
+contact:<br />
+Email:</span><span class="class_s11F">
+akr.technolab@gmail.com</span><span class="class_s110"> </span></p>
+<p>Disclaimer: The information provided in this ebook is for general
+informational purposes only and should not be considered as
+professional, legal, or financial advice. The author and publisher
+disclaim any liability or responsibility for any loss or damage incurred
+as a consequence of the use of the information presented in this
+ebook.</p>
+<p><span class="class_s110">First Edition</span><br />
+<span class="class_s111">TO</span><span class="class_s112"> </span></p>
+<p>This book is dedicated to the memory of my beloved Grandfather, whose
+unwavering support and boundless love continue to inspire me every day.
+Your presence in my life was a blessing, and your memory will forever be
+cherished.</p>
+<p><span class="class_s112">To my family, for your patience,
+encouragement, and understanding throughout this journey. Your belief in
+me is my greatest motivation.<br />
+To my mentor, Biplab Roy, Sr. Engineering Leader at Calibo India Pvt
+Ltd, whose mentorship and guidance have shaped my perspective and fueled
+my passion for this subject.<br />
+To my loyal readers and supporters, your enthusiasm for my work is a
+driving force, and I'm deeply grateful for your trust and
+encouragement.<br />
+And to all those who believe that knowledge has the power to transform
+lives, this book is dedicated to you. May it bring inspiration, insight,
+and positive change.<br />
+With heartfelt gratitude,</span><span class="class_s10U"><br />
+</span><span class="class_s10W-0">About the Author</span><br />
+<span class="class_s110">Hello,Techies! I'm AK Ray, a seasoned software
+professional with a deep-<span id="part0001.xhtml_page_2"></span>rooted
+passion for playing with Java best practices and a keen interest in
+functional programming. </span></p>
+<p>With over 10 Yrs of hands-on experience in the software industry
+especially in core product development in the R&amp;D division and I
+have been certified in<span class="class_s10X"> Software Design and
+Architecture</span> from<span class="class_s10X"> University of
+Alberta</span>, I've had the privilege of working on a multitude of
+projects, each a testament to the power of Java. But beyond the lines of
+code, I've also nurtured fervor for exploring the elegance and
+efficiency of functional programming paradigms.</p>
+<p>My journey into the world of programming started in early 2014. Java,
+with its robustness and versatility, quickly became my language of
+choice. Over time, I delved into the fascinating realm of functional
+programming, where I discovered the beauty of lambda expressions,
+streams, and immutability.</p>
+<p>I'm passionate about fostering a community of Java enthusiasts and
+functional programming aficionados. Let's connect and continue the
+conversation:</p>
+<p>Email: <span class="class_s10Z">akr.technolab@gmail.com</span><br />
+LinkedIn :<span class="class_s10Z">
+https://www.linkedin.com/in/amitesh-kumar-ray-9366b7143/</span> <span
+class="class_s113">Practice Code:</span> GIT link is shared at the end
+of the book</p>
+<p>I extend my heartfelt gratitude to you for choosing to explore the
+world of Java functional programming with me. Your support and
+enthusiasm fuel my commitment to sharing knowledge and empowering fellow
+developers with the tools they need to excel in the Java ecosystem.</p>
+<p><span class="class_s110">Here's to a future of code that's not just
+functional but beautifully elegant too!<br />
+Warm regards,</span></p>
+<p><span class="class_s11G">1. How to create a Stream ? </span><span
+class="class_s117">5</span><span class="class_s11G"><br />
+2. Stream Operations 11<br />
+3. Sorting using Streams 30<br />
+4. GroupBy Statements 47<br />
+5. Data Partitioning 67<br />
+6. Function Interface 69<br />
+7. Method Reference 86<br />
+8. Record Class 95<br />
+9. Lombok Library 99<br />
+10. Sealed class/interface 103<br />
+11. String Template 106<br />
+<span id="part0001.xhtml_page_3"></span>12. Virtual Thread ? 111<br />
+13. Sequenced Collection 116</span><br />
+14.<span class="class_s11G">Structured Concurrency</span> <span
+class="class_s113">121</span></p>
+<h2 class="heading_s12" id="part0001.xhtml_id__798_0_">How to create a
+Stream ?</h2>
+<h3 class="heading_s14" id="part0001.xhtml_id__798_23_"><span
+class="class_s10W-1">Stream</span>is a sequence of elements that can be
+pipelined.</h3>
+<p><span class="class_s10U">● It supports sequential as well as parallel
+operation.<br />
+● It was introduced in Java 8</span><span class="class_s11H"> as part of
+the Java Streams API under java.util.stream package</span> <span
+class="class_s10U">●</span><span class="class_s11H"> Streams are used
+for processing sequences of data, such as collections (e.g., lists,
+sets, maps) or</span></p>
+<p>other data sources, in a functional and declarative manner.<br />
+● Creating a parallel Stream will create the same number of parallel
+Streams as no of processors<br />
+available. It's a default behavior BUT you can change it as
+required.</p>
+<p>The most common use case to create Stream is to create Stream from a
+Collection Object. Assume you have an Employee List of 10K records where
+we have to do some operations like Sorting,Filtering,Data Transformation
+logic, Grouping data, Partitioning data or other operations that we
+wanted to perform on bulk data.</p>
+<div>
+<img src="image_rsrc11P.jpg" class="class_s1E" />
+</div>
+<p>Create Stream from Employee’s collection: Steps:<br />
+1. Create List of Employee<br />
+2. Create Stream from List of Employee</p>
+<p><span class="class_s118">Employee.java</span><span
+class="class_s113"><br />
+</span><span class="class_s119">EmployeeUtil : we will use this class to
+get an Employee List for our example in this book.</span><br />
+<img src="image_rsrc11R.jpg" class="class_s1M" /><span
+class="class_s113">Create Stream from List of Employee
+Object:</span><br />
+<span class="class_s10Y">Note :- Your Stream can be Sequential OR
+parallel</span><br />
+<img src="image_rsrc11S.jpg" id="page_5" class="class_s1S" /><span
+class="class_s113">Stream can Even be created from
+primitives/Strings:</span><br />
+<img src="image_rsrc11T.jpg" class="class_s1W" /><span
+class="class_s113">Create Stream using Stream Builder</span><br />
+<img src="image_rsrc11U.jpg" id="page_6" class="class_s20" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc11W.jpg"
+class="class_s28" /><span class="class_s113">Print Stream
+values:</span><br />
+<img src="image_rsrc11X.jpg" id="page_7" class="class_s2C" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc11Y.jpg"
+class="class_s2H" />Let's Look into some examples of Stream
+operations</p>
+<p><span class="class_s114">There are two types of operation that Stream
+supports.</span><br />
+<span class="class_s10U">1. Intermediate Operation:<br />
+2. Terminal Operation</span></p>
+<div id="part0001.xhtml_page_8">
+<img src="image_rsrc11Z.jpg" class="class_s2R" />
+</div>
+<h2 class="heading_s2T" id="part0001.xhtml_id__798_1_">Lets understand
+Streamoperationsusing below image:</h2>
+<div>
+<img src="image_rsrc120.jpg" class="class_s2Y" /><img
+src="image_rsrc121.jpg" id="page_9" class="class_s32" />
+</div>
+<h2 class="heading_s34-0" id="part0001.xhtml_id__798_2_">Filter Stream
+Data</h2>
+<p><img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Filter Employee having salary more than
+160,000</span><span class="class_s10U"> </span></p>
+<h2 class="heading_s39" id="part0001.xhtml_page_10"><span
+class="class_s113">filter(Predicate p)</span>is a method of Stream which
+takes an Input of type Predicate.</h2>
+<div>
+<img src="image_rsrc122.jpg" class="class_s2R" />
+</div>
+<h2 class="heading_s34-1" id="part0001.xhtml_id__798_4_"><span
+class="class_s10W-1">Predicate</span>is a Functional Interface that
+takes an input of any type and given Result of type Boolean.</h2>
+<p><img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Filter Employees where CITY is
+Bangalore</span><span class="class_s10U"><br />
+You can even write your Predicate separately and pass it to
+filter(Predicate p) method.</span> <img src="image_rsrc123.jpg"
+id="page_11" class="class_s3K" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Print EVEN Number between
+1 to 10</span><br />
+<img src="image_rsrc11V.jpg" class="class_s24" /><img
+src="image_rsrc124.jpg" class="class_s3T" /></p>
+<h3 class="heading_s3V" id="part0001.xhtml_page_12">OR</h3>
+<p><img src="image_rsrc125.jpg" class="class_s40" /><span
+class="class_s10W-0">Note</span><span class="class_s10U"> You can call
+multiple Predicates together as per your need OR you can simply combine
+the logics of Two conditions together as per your
+requirements.</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Use negate() OR change your Predicate logic to get
+opposite result</span><br />
+<img src="image_rsrc126.jpg" class="class_s45" /><img
+src="image_rsrc127.jpg" id="page_13" class="class_s49" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc128.jpg"
+class="class_s4E" /></p>
+<h3 class="heading_s4G" id="part0001.xhtml_page_14">Data Transformation
+using map(Function f) on Stream</h3>
+<p><img src="image_rsrc129.jpg" class="class_s4N" /><span
+class="class_s10W-0">NOTE</span><span class="class_s10U"> in simple
+words you can say that map(function f) used to map data from input type
+X to any result type Y.<br />
+As per above example, you have mapped Employee Object to NAME. it
+accepts a function that do the transformation logic.</span><br />
+<img src="image_rsrc12A.jpg" id="page_15" class="class_s4T" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc12B.jpg"
+id="page_16" class="class_s4Y" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Get the doubled the
+salary of each Employee’s</span><br />
+<img src="image_rsrc12C.jpg" class="class_s53" /><img
+src="image_rsrc11V.jpg" id="page_17" class="class_s24" /><img
+src="image_rsrc12D.jpg" class="class_s58" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">List Employee’s Name
+where SALARY&gt;160,000</span> <img src="image_rsrc12E.jpg" id="page_18"
+class="class_s5D" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the distinct name
+from List</span><br />
+<img src="image_rsrc12F.jpg" id="page_19" class="class_s5J" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10U">Find the distinct name from List<br />
+Here we have taken the same requirement to find the distinct employee.
+</span></p>
+<h2 class="heading_s39" id="part0001.xhtml_id__798_5_">There are
+multiple ways to get the RESULT of unique data BUT here we will use
+a<span class="class_s113">distinct()</span></h2>
+<p>method.<br />
+As we have seen , in the above example it's done just by calling
+distinct() method BUT if you want to do</p>
+<h2 class="heading_s39" id="part0001.xhtml_page_20">the same for any
+custom class you must have to override the behavior of<span
+class="class_s113">hashcode()</span>and<br />
+<span class="class_s113">equals(Object o)</span>method.</h2>
+<p><span class="class_s10U">String classes do provide the implementation
+for these methods so we do not need to do it explicitly.</span> <img
+src="image_rsrc12G.jpg" class="class_s5W" /><img src="image_rsrc12H.jpg"
+id="page_21" class="class_s60" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc12J.jpg" id="page_22"
+class="class_s65" /></p>
+<h3 class="heading_s67" id="part0001.xhtml_id__798_26_"><span
+class="class_s113">NOTE</span>- you can use Employee Record instead of
+Employee class THEN you no need to provide the</h3>
+<p><span class="class_s10U">implementation for hashcode() and
+equals(Object o) method since JAVA does it by default.</span><br />
+<img src="image_rsrc12K.jpg" class="class_s6C" /><span
+class="class_s10U">OR you can even use the Lobok library also to handle
+getter/setter ,hashcode and equals methods using
+annotations.</span><span class="class_s10Z">
+https://projectlombok.org/#</span></p>
+<h2 class="heading_s39" id="part0001.xhtml_page_23">You can get the same
+RESULT without even using<span
+class="class_s113">distinct()</span>method , we can simply collect
+our</h2>
+<p><span class="class_s10U">result in SET since SET does not allow
+duplicate SO duplicate entry will automatically be excluded.</span> <img
+src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Find unique employee result without any
+duplicate</span> <img src="image_rsrc12M.jpg" class="class_s6K" /></p>
+<h2 class="heading_s34-0" id="part0001.xhtml_page_24">Sorting using
+Streams</h2>
+<p><img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10X">Sort the Number List using Stream</span> <img
+src="image_rsrc12N.jpg" class="class_s6U" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc12P.jpg" id="page_25"
+class="class_s6Z" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">Sort String elements using
+Stream.</span><br />
+<img src="image_rsrc12R.jpg" class="class_s74" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc12S.jpg"
+class="class_s79" />Let's look into how to sort custom class objects as
+we used to handle in real time.<br />
+Let's assume we have a List of 10K Employee data and you wanted to SORT
+them in ascending order of Employee Name.<br />
+<img src="image_rsrc11P.jpg" id="page_26" class="class_s37" /><span
+class="class_s10X">Sort Employee List in ascending order of Employee
+Name Input DATA:</span><br />
+<img src="image_rsrc12T.jpg" class="class_s7E" />We can use this Utility
+class to get Employee Records for our examples.<br />
+Here we are using Record instead of class.<br />
+<img src="image_rsrc12U.jpg" class="class_s7J" /><img
+src="image_rsrc12V.jpg" id="page_27" class="class_s7P" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc12W.jpg"
+id="page_28" class="class_s7V" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">Sort Employee List in
+Descending order of Employee Name</span><br />
+<img src="image_rsrc12X.jpg" id="page_29" class="class_s80" /><span
+class="class_s10W-0">Result :</span><span class="class_s10U"><br />
+Example:List the Employee data in Sorted in Ascending order by Name,CITY
+and Design WHERE Salary&gt;160,000</span><br />
+<img src="image_rsrc12Y.jpg" id="page_30" class="class_s84" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find Employee Names
+Sorted BY Name where SALARY&gt;160,000.</span> <img
+src="image_rsrc12Z.jpg" id="page_31" class="class_s8A" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find Employee’s salary
+list where <span id="part0001.xhtml_page_32"></span>Salary will be
+doubled if SALARY&gt;160,000</span> <img src="image_rsrc130.jpg"
+class="class_s8G" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /></p>
+<h2 class="heading_s8M" id="part0001.xhtml_id__798_9_">WHY do we use the
+peek(Consumer c)method ?</h2>
+<p><span class="class_s10U">We use this method for DEBUGGING purposes
+where we wanted to print String elements.</span><br />
+<img src="image_rsrc131.jpg" id="page_33" class="class_s8T" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc132.jpg"
+class="class_s8Y" /><span class="class_s10U">As you can see here , We
+are printing Stream elements before and after mapping data.</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">How to limit Stream elements ?</span><span
+class="class_s10U"><br />
+You can use the limit(long l) method to limit Stream
+elements.</span><br />
+<img src="image_rsrc133.jpg" id="page_34" class="class_s93" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc134.jpg"
+class="class_s98" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the MAX number from
+the List using <span id="part0001.xhtml_page_35"></span>Stream</span>
+<img src="image_rsrc135.jpg" class="class_s9D" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc136.jpg"
+class="class_s9J" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the MAX Salaried
+Employee from the Employee List.</span><br />
+<img src="image_rsrc137.jpg" id="page_36" class="class_s9R" /><span
+class="class_s10W-0">Result :</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Find the MIN Salary of Employee from the Employee
+List WHERE CITY=Bangalore</span> <img src="image_rsrc138.jpg"
+id="page_37" class="class_s9W" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">WHY do we use the
+flatmap(Function f) method ?</span><span class="class_s10U"><br />
+flatmap(function f) is similar to map(function f) and used to flatten
+the stream's data.<br />
+Assume that Steam contains List of List or List of Array THEN we can
+simply flatten it to List.</span><br />
+<img src="image_rsrc139.jpg" id="page_38" class="class_sA2" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc13A.jpg"
+id="page_39" class="class_sA7" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">get the combined total
+Employees from different departments.</span> <img
+src="image_rsrc13B.jpg" id="page_40" class="class_sAD" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">Find Average of Integers
+using <span id="part0001.xhtml_page_41"></span>Stream</span> <img
+src="image_rsrc13C.jpg" class="class_sAK" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc13D.jpg"
+class="class_sAS" /></p>
+<h2 class="heading_s34-0" id="part0001.xhtml_id__798_10_">GroupBy
+Statements</h2>
+<p><img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10X">Find the List Employee’s name from List of
+Employee</span><br />
+<img src="image_rsrc13E.jpg" id="page_42" class="class_sAZ" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10X">GroupBy Employee list by Employee Name</span><br />
+<img src="image_rsrc13F.jpg" class="class_sB4" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc13G.jpg"
+class="class_sB9" /><img src="image_rsrc11P.jpg" id="page_43"
+class="class_s37" /><span class="class_s10V-0">GroupBy Employee’s Data
+By CITY then By Department</span><br />
+<img src="image_rsrc13H.jpg" class="class_sBE" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc13J.jpg"
+class="class_sBK" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the Average SALARY
+of each CITY.</span><br />
+<img src="image_rsrc11V.jpg" class="class_s24" /><img
+src="image_rsrc13K.jpg" class="class_sBT" /><img src="image_rsrc11P.jpg"
+id="page_44" class="class_s37" /><span class="class_s10V-0">Find the MAX
+salaried Employee from Each CITY.</span> <img src="image_rsrc13M.jpg"
+class="class_sBY" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the MIN Salaried
+EMployee from each CITY</span><br />
+<img src="image_rsrc13N.jpg" class="class_sC4" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><span
+class="class_s10U">:</span><br />
+<img src="image_rsrc11P.jpg" id="page_45" class="class_s37" /><span
+class="class_s10V-0">Find the Employee count by Each CITY</span> <img
+src="image_rsrc13P.jpg" class="class_sCA" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find SUM of Salary of
+Employee from Each group(CITY).</span> <img src="image_rsrc13R.jpg"
+class="class_sCG" /><img src="image_rsrc11V.jpg" id="page_46"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find MIN,MAX,SUM and AVG
+Salary from Each CITY</span> <img src="image_rsrc13S.jpg"
+class="class_sCP" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc13T.jpg"
+class="class_sCV" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">GroupBy Employee’s Data
+and remove groupBy column from Result.</span><span
+class="class_s10U"><br />
+As in the Below Example , We have groupBy Employee’s data by CITY, CITY
+is already there in result as Map KEY so we don't want to see CITY value
+in Map values.<br />
+</span><span class="class_s10W-0">Default Result of
+groupBy:</span><br />
+<img src="image_rsrc13U.jpg" id="page_47" class="class_sD0" /><span
+class="class_s10W-0">Expected Result:</span><br />
+<img src="image_rsrc13V.jpg" class="class_sD0" /><span
+class="class_s10U">As you can see, the CITY value is NOT included in Map
+values.<br />
+We have different overloaded methods for groupBy(..) as you can see
+below.<br />
+We will look into it one by one.<br />
+</span><span id="part0001.xhtml_page_48"></span><span
+class="class_s10W-0">groupingBy(..) overloaded methods:</span><br />
+<img src="image_rsrc13W.jpg" class="class_sD7" /></p>
+<p>It may be possible that you wanted to perform some extra job on
+groupingBy data , you can use these overloaded methods to get your task
+done.</p>
+<div>
+<img src="image_rsrc13X.jpg" class="class_sDE" /><img
+src="image_rsrc13Y.jpg" id="page_49" class="class_sDJ" /><img
+src="image_rsrc11V.jpg" class="class_s24" />
+</div>
+<p>As you can see in the above example , we are using the 2nd overloaded
+method of groupingBy(..) where we are passing the Collector to map
+groupingBy(..) results as we want.</p>
+<p><span class="class_s10U">This kind of use-cases you will get while
+working with real time applications.<br />
+As you can see here , we are collecting result in MAP but what if I
+wanted to collect final result in TreeMap or Hashtable or any other
+implementation of Map.</span><br />
+<img src="image_rsrc13Z.jpg" id="page_50" class="class_sDT" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">GroupBy Employee’s data
+by CITY and Designation and collect final data in TreeMap so that it
+will be sorted.</span><br />
+<img src="image_rsrc140.jpg" class="class_sDZ" /><img
+src="image_rsrc11V.jpg" id="page_51" class="class_s24" /><img
+src="image_rsrc141.jpg" class="class_sE4" /><span
+class="class_s10W-0">Note </span><span class="class_s10U">what if i
+wanted to keep Designation data to TreeMap , means expecting the result
+of type </span></p>
+<h3 class="heading_sE6"
+id="part0001.xhtml_id__798_27_">TreeMap&lt;String,TreeMap&lt;String,List&lt;EmployeeRecord&gt;&gt;&gt;</h3>
+<p><img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10W-0">GroupBy Employee’s data by CITY and Designation and
+collect final data in TreeMap so that it will be sorted.</span><br />
+<img src="image_rsrc142.jpg" class="class_sDZ" /><img
+src="image_rsrc11V.jpg" id="page_52" class="class_s24" /><img
+src="image_rsrc143.jpg" class="class_sEG" /><span
+class="class_s10W-0">Note:</span><span class="class_s10U"> As you can
+see here , we have grouped Data by multiple fields and collected result
+data in TreeMap at different levels just to get the result data in
+sorted format.<br />
+You can apply a similar use-case on different types of
+data.</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /></p>
+<p>You have a List of Students where each Student has opted multiple
+courses and each course they have some marks. groupBy Student Data by
+Student Name and course so that Name and course will be in Ascending
+order for better readability on user-interface.</p>
+<p><span class="class_s10W-0">StudentRecors.java</span><br />
+<img src="image_rsrc144.jpg" class="class_sES" /><span
+class="class_s10W-0">StudentRecordUtil.java : get Student list , we are
+using Record here.</span><br />
+<img src="image_rsrc145.jpg" id="page_53" class="class_sEW" /><img
+src="image_rsrc146.jpg" id="page_54" class="class_sF0" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc147.jpg"
+id="page_55" class="class_sF5" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the Highest marks
+subject by each Student.</span> <img src="image_rsrc148.jpg"
+id="page_56" class="class_sFA" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc149.jpg"
+class="class_sFF" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the AVG marks by
+each Student.</span><br />
+<img src="image_rsrc14A.jpg" id="page_57" class="class_sFM" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc14B.jpg"
+class="class_sFT" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Find the Total marks
+scored by each Student</span><br />
+<img src="image_rsrc11V.jpg" class="class_s24" /><span
+class="class_s10U">:</span><br />
+<img src="image_rsrc14C.jpg" class="class_sFT" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Find the Topper with Total SUM of marks <span
+id="part0001.xhtml_page_58"></span>obtained</span> <img
+src="image_rsrc14D.jpg" class="class_sG3" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc14E.jpg"
+class="class_sG8" /><img src="image_rsrc11P.jpg"
+class="class_s37" /></p>
+<h3 class="heading_sGB-1" id="part0001.xhtml_id__798_28_"><span
+class="class_s10V-1">WHY do we use</span><span
+class="class_s11C">groupingByConcurrent(..)? What is the<br />
+difference between</span><span class="class_s11D"> groupingB</span><span
+class="class_s10V-1">y(..) and</span><span
+class="class_s11D">groupingByConcurrent</span><span
+class="class_s10V-1">(..) ?</span></h3>
+<p><img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Demo: use concurrent version of
+groupingBy(..)</span> <img src="image_rsrc14F.jpg" id="page_59"
+class="class_sGH" /><img src="image_rsrc11V.jpg"
+class="class_s24" /></p>
+<h2 class="heading_s34-0" id="part0001.xhtml_id__798_11_">Data
+Partitioning</h2>
+<p>● It partitions the elements of a stream into two groups based on a
+boolean-valued function.<br />
+● The partitioning operation returns a<span
+class="class_s11A">Map</span>where the keys are Boolean values (<span
+class="class_s11A">true</span> and<span
+class="class_s11A">false</span>)<br />
+<img src="image_rsrc14G.jpg" class="class_sGS" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">Find the list of Student who are successfully <span
+id="part0001.xhtml_page_60"></span>scored more than 80%</span> <img
+src="image_rsrc14H.jpg" class="class_sGX" /><img src="image_rsrc11V.jpg"
+class="class_s24" /></p>
+<h2 class="heading_s34-0"
+id="part0001.xhtml_id__798_12_">FunctionInterface</h2>
+<p><img src="image_rsrc14J.jpg" class="class_sH4" /><span
+class="class_s10V-0">What is Functional Interface in Java ? How do we
+use it ?</span><br />
+<img src="image_rsrc14K.jpg" id="page_61" class="class_sH8" /><img
+src="image_rsrc14M.jpg" class="class_sHC" /><span
+id="part0001.xhtml_page_62">Some most commonly used Functional
+Interfaces :<br />
+</span><img src="image_rsrc14N.jpg" class="class_sHG" /><img
+src="image_rsrc14P.jpg" id="page_63" class="class_sHM" /><img
+src="image_rsrc14J.jpg" class="class_sH4" /></p>
+<h2 class="heading_s8M" id="part0001.xhtml_page_64">Multiply Number by 2
+, using FunctionalInterfaceFunction</h2>
+<p><img src="image_rsrc14R.jpg" class="class_sHV" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc14S.jpg"
+class="class_sJ0" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">Check if Number is
+EVEN</span><br />
+<img src="image_rsrc14T.jpg" id="page_65" class="class_sJ5" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc14U.jpg"
+class="class_sJA" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">What is</span><span
+class="class_s10X"> UnaryOperator ?</span></p>
+<p><span class="class_s113">UnaryOperator</span> is a
+FunctionalInterface that takes an input of type X and provides the
+output of the same type.<br />
+It's the same as a Function that returns theResult of the same type as
+input.</p>
+<p><img src="image_rsrc14V.jpg" id="page_66" class="class_sJH" /><img
+src="image_rsrc11V.jpg" class="class_s24" />100<br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">What is</span><span class="class_s10X">
+BinaryOperator</span><span class="class_s10Y"> ?</span><br />
+Its Functional Interface that accepts 2 inputs(same type) and provides
+the Output of the same type.<br />
+<img src="image_rsrc14W.jpg" id="page_67" class="class_sJR" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><span
+class="class_s10W-0">33</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">What is</span><span class="class_s10X">
+Consumer</span><span class="class_s10Y"> ?</span><br />
+<img src="image_rsrc14X.jpg" id="page_68" class="class_sJX" /><img
+src="image_rsrc14Y.jpg" class="class_sK1" /><img src="image_rsrc11V.jpg"
+class="class_s24" />You have provided: 10<br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10X">What is Supplier</span> <img src="image_rsrc14Z.jpg"
+id="page_69" class="class_sK7" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">Supplier Demo</span><br />
+In simple words we can say that,It Supply the value without taking any
+input.<br />
+<img src="image_rsrc150.jpg" id="page_70" class="class_sKC" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc151.jpg"
+class="class_sKH" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10V-0">HOW to create Thread
+?</span><br />
+<img src="image_rsrc152.jpg" id="page_71" class="class_sKP" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><span
+class="class_s10W-0">Thread is Running …</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10V-0">What is Lambda Expression ?</span><br />
+<img src="image_rsrc153.jpg" id="page_72" class="class_sKW" /><img
+src="image_rsrc154.jpg" id="page_73" class="class_sM0" /><img
+src="image_rsrc155.jpg" id="page_74" class="class_sM4" /><img
+src="image_rsrc156.jpg" id="page_75" class="class_sM8" /><img
+src="image_rsrc157.jpg" class="class_sMC" /><span
+class="class_s10W-0">Please follow the Below Book for Java Functional
+Programming. </span></p>
+<p>I have scripted this Book specially for Java Function programming
+where I have discussed Stream, Lambda <span
+id="part0001.xhtml_page_76"></span>Expression , Method Reference and
+other features from very scratch level to expert level.</p>
+<div>
+<img src="image_rsrc158.jpg" class="class_s2R" />
+</div>
+<p>https://www.amazon.in/Java-Functional-Programming-industry-practices-ebook/dp/B0CHTV3TWR/ref=tmm_kin_swatch_0?_encoding
+=UTF8&amp;dib_tag=se&amp;dib=eyJ2IjoiMSJ9.LTBpL1aLeOJTflVVRJLD_qjU1hUQlPs1TDeXVqKNqqkNTLoganQLNlsBM3R6CQ4znU4cx
+PIOgaHH65Q4w0A8Z7Wwz3DuDVF5dySqfYAIwxGQ2lHoWkzOgYTBkJhlsJ2tDaipRuO_Cu8-oRukNLrpJNDxfAUBr2YtJtaZPv8_3lg
+HlCRJSkTgx8FI2eX5w75WT0w8CS-lM_wnEa8QDnKzivV8sj3247KOswDu3-VgfjI.tMkuKJR3Un8fd6uUKoQlXQWBnPyv0tAW7O_W
+OtClYp0&amp;qid=1715674856&amp;sr=8-3</p>
+<div>
+<img src="image_rsrc159.jpg" id="page_77" class="class_sMS" /><img
+src="image_rsrc15A.jpg" id="page_78" class="class_sMW" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc15B.jpg"
+class="class_sN1" /><img src="image_rsrc15C.jpg" id="page_79"
+class="class_sN5" />
+</div>
+<h2 class="heading_s34-0" id="part0001.xhtml_id__798_14_">Method
+Reference</h2>
+<p><img src="image_rsrc15D.jpg" class="class_sNB" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span class="class_s10X">How
+you can refer to a method call to another method using Method
+Reference.</span> <img src="image_rsrc15E.jpg" id="page_80"
+class="class_sNG" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc15F.jpg"
+class="class_sNN" /><img src="image_rsrc15G.jpg" id="page_81"
+class="class_sNT" /><img src="image_rsrc15H.jpg"
+class="class_sNX" /><img src="image_rsrc15J.jpg"
+class="class_sNX" /><img src="image_rsrc15K.jpg" id="page_82"
+class="class_sP4" /><img src="image_rsrc15M.jpg"
+class="class_sP8" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">What is the default method
+in Java ? Can we provide method implementation in Interface
+?</span><br />
+default methods were introduced as a new feature in interfaces. Default
+methods allow interfaces to have methods with implementations.</p>
+<h2 class="heading_s34-0" id="part0001.xhtml_page_83">These methods are
+marked with the<span class="class_s116">default</span>keyword and
+provide a way to add</h2>
+<p>new methods to interfaces without breaking existing
+implementations.<br />
+<span class="class_s10X">Add default method in Interface</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10W-0">Can we add private methods in Interface ?</span>
+<img src="image_rsrc15N.jpg" class="class_s4E" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10W-0">Can you use a static method in Interface
+?</span><br />
+<img src="image_rsrc15P.jpg" class="class_sPM" /><img
+src="image_rsrc15R.jpg" class="class_sPS" /><img src="image_rsrc11P.jpg"
+id="page_84" class="class_s37" /><span class="class_s113">Calculate
+Average of List of Integers</span><br />
+<img src="image_rsrc15S.jpg" class="class_sPX" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc15T.jpg"
+class="class_sR2" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">Find MAX number from the
+list</span><br />
+<img src="image_rsrc15U.jpg" id="page_85" class="class_sR7" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc15V.jpg"
+class="class_sRC" /><img src="image_rsrc11P.jpg"
+class="class_s37" /></p>
+<p>Given a list of integers, write a Java program to filter out the even
+numbers, double the remaining odd numbers, and then return the sum of
+all the resulting numbers.</p>
+<p><img src="image_rsrc15W.jpg" class="class_sRM" /><img
+src="image_rsrc11V.jpg" id="page_86" class="class_s24" /><img
+src="image_rsrc15X.jpg" class="class_sRT" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s113">What is “var” in java ? Why
+do we use it ?</span></p>
+<h2 class="heading_s34-0" id="part0001.xhtml_id__798_16_">In Java 11,
+the<span class="class_s116">var</span>keyword was introduced as a new
+feature to enhance type</h2>
+<p>inference for local variables.<br />
+It allows you to declare local variables without explicitly specifying
+their types, provided that the type can be inferred from the
+context.</p>
+<h3 class="heading_sGB-0" id="part0001.xhtml_page_87">Here's how you can
+use the<span class="class_s116">var</span>keyword in Java 11:</h3>
+<p><img src="image_rsrc15Y.jpg" class="class_sS2" /><img
+src="image_rsrc11V.jpg" id="page_88" class="class_s24" /><img
+src="image_rsrc15Z.jpg" class="class_sS7" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">What is Record Class in
+Java ? Why do we use it ?</span><br />
+<img src="image_rsrc160.jpg" class="class_sSC" /><img
+src="image_rsrc161.jpg" class="class_sSG" /><span
+class="class_s113">Let's have a look on how our normal POJO/Data Carrier
+class look like.</span><br />
+<img src="image_rsrc162.jpg" id="page_89" class="class_sSM" /><img
+src="image_rsrc163.jpg" id="page_90" class="class_sSS" /><span
+class="class_s113">Note</span><span class="class_s10Y"> Here we have
+just 4 attributes in POJO but in real time it may be 10 or even more,
+then it will be around 200 lines of code and you may have so many
+similar classes in your project.<br />
+Java has introduced Record to handle such situations so that Java will
+take care of creating these methods on your behalf.<br />
+Let's look at how we can write the same POJO class using the Java Record
+class. EmployeeRecord.java</span><br />
+<img src="image_rsrc164.jpg" class="class_sSW" /><span
+class="class_s10Y">This EmployeeRecord will have the same behavior as
+the Employee class.<br />
+</span><span id="part0001.xhtml_page_91"></span><span
+class="class_s10X">Some facts about Record classes:</span><br />
+<img src="image_rsrc165.jpg" class="class_sT0" /><span
+class="class_s113">Example:</span><span class="class_s10X"> Do we have
+any other alternative of Record classes in java that we can use in real
+time projects ?<br />
+Yes ,</span><span class="class_s10Y">We do have the Lombok library that
+we can use with Java.<br />
+Know more about Lombok:</span><span class="class_s11B">
+https://projectlombok.org/</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /></p>
+<h2 class="heading_sT3" id="part0001.xhtml_id__798_17_">What is Lombok
+Library and how can we use it with Java.</h2>
+<div>
+<img src="image_rsrc166.jpg" class="class_s2R" />
+</div>
+<p>You can use Lombok annotations to create setter,getter,constructors
+,hashcode and equals methods.</p>
+<div id="part0001.xhtml_page_92">
+<img src="image_rsrc167.jpg" class="class_s2R" />
+</div>
+<p>If you want to use it in your Java project THEN you can simply add
+maven dependency for Lombok to your conf file.</p>
+<p><img src="image_rsrc168.jpg" class="class_sTG" /><span
+id="part0001.xhtml_page_93">If you are using Springboot THEN you just
+need to add Lombok Starter.<br />
+</span><img src="image_rsrc169.jpg" class="class_sTM" /></p>
+<p>For more info visit : <span
+class="class_s10Z">https://start.spring.io/</span> to create Springboot
+project and try Lombok. <span class="class_s113">NOTE</span>-I have
+Scripted Springboot Book with realtime examples in the simplest way
+possible, In this Book I have mostly covered the issue that we as
+Developers or Novice Springboot Developers used to face.</p>
+<div id="part0001.xhtml_page_94">
+<img src="image_rsrc16A.jpg" class="class_s2R" />
+</div>
+<p>https://www.amazon.in/microservices-Springboot-Amitesh-Kumar-Ray-ebook/dp/B0CW1DR6GQ/ref=sr_1
+_5?crid=2FE0NDKXDTKG5&amp;dib=eyJ2IjoiMSJ9.kpkN0_gzitOhJxtGHFurUbIiLlo4jS9QMnNp4Hqs8Hgb10
+OKXR0KizFEkiD8KHhiVzAhKCdy2bl2BTp2a_WjBz9lgfSgRFznVVVQSkB2C42lXyhLd47xn1m0e8QSZB_
+PsDoiUuuTDcRuGwexBYuUTw.ywy4lZsvBybFf5UiiZAl8aCXQ5L5hpwgrxOYXQ2kE5g&amp;dib_tag=se&amp;keyw
+ords=amitesh+kumar+ray&amp;qid=1715749771&amp;sprefix=amitesh+kumar+ray%2Caps%2C235&amp;sr=8-5</p>
+<p><span class="class_s117">Employee POJO with Lombok:</span><br />
+<img src="image_rsrc16B.jpg" class="class_sTZ" /><img
+src="image_rsrc11P.jpg" id="page_96" class="class_s37" /></p>
+<h2 class="heading_sU2" id="part0001.xhtml_id__798_18_">What is a Sealed
+class/interface in Java ?</h2>
+<p><img src="image_rsrc16C.jpg" class="class_s65" /><img
+src="image_rsrc16D.jpg" id="page_97" class="class_sUA" /><span
+class="class_s113">Let's create and sealed Interface OrgService
+:</span><br />
+<img src="image_rsrc16E.jpg" class="class_s7J" /><img
+src="image_rsrc16F.jpg" class="class_sUH" /><span
+class="class_s113">EmployeeService Interface:</span><br />
+<img src="image_rsrc16G.jpg" class="class_sUN" /></p>
+<p><span class="class_s113">NOTE</span> :<br />
+<span class="class_s10Y">If the subtype is a non-sealed interface then
+it will be extensible by everyone.<br />
+If the subtype is a sealed interface then it will NOT be extensible by
+everyone.</span></p>
+<p><img src="image_rsrc16H.jpg" class="class_sUV" /><img
+src="image_rsrc16J.jpg" id="page_98" class="class_sUZ" />As you can see
+here, we are overriding the behavior of 2 interfaces. <img
+src="image_rsrc11P.jpg" class="class_s37" /></p>
+<h2 class="heading_s34-0" id="part0001.xhtml_page_99">What is String
+Template in java ?</h2>
+<p><img src="image_rsrc16K.jpg" class="class_sV6" /><img
+src="image_rsrc16M.jpg" class="class_sVA" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s113">Use String Template for
+format <span id="part0001.xhtml_page_100"></span>String</span><br />
+<img src="image_rsrc16N.jpg" class="class_sGH" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc16P.jpg"
+class="class_sVM" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s113">handle HTML file with
+String Template</span><br />
+<img src="image_rsrc11V.jpg" class="class_s24" /><img
+src="image_rsrc16R.jpg" id="page_101" class="class_sVU" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span class="class_s113">Can
+we generate any String format using String Template ? Yes,</span> let's
+see how to create a json like String using String Template.<br />
+<img src="image_rsrc16S.jpg" class="class_sVZ" /><img
+src="image_rsrc11V.jpg" id="page_102" class="class_s24" /><img
+src="image_rsrc16T.jpg" class="class_sW4" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">How to create Thread in
+Java ?</span> <img src="image_rsrc16U.jpg" class="class_sW9" /><span
+id="part0001.xhtml_page_103" class="class_s10X">Using Thread
+Class</span><br />
+<img src="image_rsrc16V.jpg" class="class_sWD" /><img
+src="image_rsrc16W.jpg" class="class_sWH" /><img src="image_rsrc11P.jpg"
+class="class_s37" /></p>
+<h2 class="heading_sT3" id="part0001.xhtml_page_104">What is Virtual
+Thread ?</h2>
+<p><img src="image_rsrc16X.jpg" class="class_sWS" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span class="class_s10X">How
+to create Virtual Thread ?</span><br />
+<img src="image_rsrc16Y.jpg" id="page_105" class="class_sWX" /><img
+src="image_rsrc16Z.jpg" class="class_sX1" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><span class="class_s11A">Hello</span><br />
+<img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10X">Create 10K Normal Threads and Virtual Threads check
+the time taken.</span> <img src="image_rsrc170.jpg" id="page_106"
+class="class_sX7" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><span class="class_s10X">Create the 10K Virtual
+Thread.</span> <img src="image_rsrc171.jpg" id="page_107"
+class="class_sXC" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc172.jpg" id="page_108"
+class="class_sXH" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /></p>
+<h2 class="heading_sT3" id="part0001.xhtml_page_109">What is a Sequenced
+Collection ?</h2>
+<p><img src="image_rsrc173.jpg" class="class_sXT" /><img
+src="image_rsrc174.jpg" class="class_sXX" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s113">Demo Sequenced
+Collection</span><br />
+<img src="image_rsrc175.jpg" id="page_110" class="class_sY2" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc176.jpg"
+class="class_sY7" /><img src="image_rsrc11P.jpg" id="page_111"
+class="class_s37" /><span class="class_s113">How can we get reverse
+collection data from Sequenced collection?</span><br />
+<img src="image_rsrc177.jpg" class="class_sYC" /><img
+src="image_rsrc11V.jpg" class="class_s24" /><img src="image_rsrc178.jpg"
+class="class_sYH" /><img src="image_rsrc179.jpg" id="page_112"
+class="class_sYN" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc17A.jpg"
+class="class_sYU" /><img src="image_rsrc11P.jpg"
+class="class_s37" /><span class="class_s10X">Remove first/last element
+from Sequenced Collection</span><br />
+<img src="image_rsrc17B.jpg" class="class_sYZ" /><img
+src="image_rsrc11V.jpg" id="page_113" class="class_s24" /><img
+src="image_rsrc11P.jpg" class="class_s37" /><span class="class_s10X">ADD
+Element at last and first to Sequenced Collection</span> <img
+src="image_rsrc17C.jpg" class="class_s7E" /><img src="image_rsrc11V.jpg"
+class="class_s24" /><img src="image_rsrc11P.jpg"
+class="class_s37" /></p>
+<h3 class="heading_sGB-0" id="part0001.xhtml_id__798_30_">What is<span
+class="class_s11E">Structured Concurrency ?</span></h3>
+<p><img src="image_rsrc11P.jpg" class="class_s37" /><span
+class="class_s10X">Sample code to explain Structured Concurrency</span>
+<img src="image_rsrc17D.jpg" id="page_114" class="class_sZD" /><img
+src="image_rsrc11V.jpg" class="class_s24" /></p>
+<h1 class="heading_sZG" id="part0001.xhtml_id__798_32_">Sample CODE</h1>
+<p><span
+class="class_s115-0">https://github.com/playwithjavaDOTin/Functional-Java-Practice.git</span></p>
+<h1 class="heading_sZG" id="part0001.xhtml_page_115">My Author
+Profile</h1>
+<p><span
+class="class_s115-1">https://www.amazon.in/stores/Amitesh-Kumar-Ray/author/B0CJ5TLKFW?ref=ap_rdr&amp;isDr
+amIntegrated=true&amp;shoppingPortalEnabled=true</span><br />
+</p>

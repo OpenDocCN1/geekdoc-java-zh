@@ -1,0 +1,61 @@
+name: Java Programming - An Introduction, History, and the Fundamentals for Creating
+  Your First Program
+name_cn: Java 编程入门：历史、基础及创建第一个程序指南
+slug: java-programming---an-introduction-history-and-the-fundament
+toc:
+- - '#'
+  - 第 4 章
+- - '##'
+  - 熟悉 JAVA 命令
+- - '##'
+  - JAVA 编程语言中的整数变量介绍
+- - '##'
+  - JAVA 编程语言中的对象使用介绍
+- - '##'
+  - JAVA 编程语言中的类使用介绍
+- - '##'
+  - JAVA 编程语言中的 String 数据类型介绍
+- - '###'
+  - JAVA 中的 if 语句
+- - '###'
+  - JAVA 中的 if-else 语句
+- - '###'
+  - JAVA 语言中的循环
+- - '##'
+  - boolean 和 Boolean 定义
+- - '#'
+  - 第 5 章：如何逐步开始编写 JAVA 程序
+- - '##'
+  - 1. 如何安装 JAVA 开发工具包，或 JDK。
+- - '##'
+  - 2. 如何安装并设置 Eclipse 集成开发环境，或 IDE
+- - '##'
+  - 3. 如何在 Eclipse IDE 中创建你的第一个 JAVA 代码
+- - '##'
+  - 4. JAVA 中的变量与类型
+- - '##'
+  - 5. 使用 JAVA 获取用户输入意味着什么
+- - '##'
+  - 6. 了解 JAVA 中的数学和算术运算符
+- - '##'
+  - 7. 了解自增运算符和赋值运算符
+- - '##'
+  - 8. 如何整合 if else 或条件语句及其关系运算符
+- - '##'
+  - JAVA 中的比较运算符
+- - '##'
+  - 如何在 JAVA 中利用逻辑运算符
+- - '##'
+  - 在 JAVA 中使用 switch 语句
+- - '##'
+  - 在 JAVA 中使用 while 语句
+- - '##'
+  - 在 JAVA 中继续 do while 语句
+- - '##'
+  - 如何学习在你的 JAVA 程序中实现数组
+- - '##'
+  - 如何在使用 JAVA 字符串
+- - '##'
+  - 在你的 JAVA 中使用方法的简介
+- - '##'
+  - 结论

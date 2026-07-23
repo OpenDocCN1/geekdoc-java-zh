@@ -1,0 +1,625 @@
+- "# Java 面试笔记\n\n\n\n![](img/cover.jpeg)\n\n\n\n\n\n- 匿名内部类总是作为表达式的一部分使用 `new` 操作。\n\
+  - 创建匿名类时，`new` 操作后面跟着现有的接口或类名。\n- 匿名类要么实现接口，要么继承现有类。\n\n## 匿名内部类的创建\n```java\n//\
+  \ 外部类\npublic class CityNames { \n    private List<String> cityNames = new ArrayList<>();\
+  \ \n    public Iterator<String> nameIterator(){ \n        // 匿名内部类 \n        Iterator<String>\
+  \ nameIterator = new Iterator<String> () { \n            @Override \n          \
+  \  public boolean hasNext() { \n                return false;\n            } \n\
+  \            @Override \n            public String next() { \n                return\
+  \ null;\n            }\n        }; \n        // 返回局部内部类的实例。 \n        return nameIterator;\n\
+  }\n}\n}\n```\n\n# 注意\n- **不要返回内部类对象，因为这会导致内存泄漏，因为它持有对外部外部类的引用。**\n- **当你希望防止在其他地方使用该类时，使用匿名类。**\n\
+  - **必须避免匿名类和内部类的序列化，因为不同的 JRE 实现可能会导致兼容性问题。**\n\n## 问题\n- 什么是匿名内部类？\n- 匿名内部类和局部内部类有什么区别？\n\
+  - 为什么你不应该从方法返回内部类对象？\n- 如果你想防止别人在外部使用你的类，你会定义哪种内部类？\n- 为什么应该避免匿名类和内部类的序列化？\n\n##\
+  \ 函数式编程 (FUNCTIONAL PROGRAMMING)\n\n### 函数式接口\n`Functional Interface` 是只有一个抽象方法的接口；但可以有任意数量的默认方法。\n\
+  \n```java\n@FunctionalInterface \npublic interface Greator<T> {\n    T greater(T\
+  \ arg1, T arg2);\n}\n```\n\n注解 `@FunctionalInterface` 在接口不是有效的函数式接口时产生编译器警告。\n\n\
+  ### 函数式接口 Greater (Function Interface Greater)\n```java\n@FunctionalInterface \n\
+  public interface Greator<T> {\n    T greater(T arg1, T arg2);\n}\n```\n\n\n\n\n\n\
+  `Account` 类定义如下，用作函数接口 `Greater` 的参数使用。\n\n```java\npublic class Account {\n  private\
+  \ int balance;\n\n  public Account(int balance) {\n    this.balance = balance;\n\
+  \  }\n\n  public int getBalance() {\n    return balance;\n  }\n\n  @Override \n\
+  \  public String toString() {\n    return \"Account{\" +\n    \"balance=\" + balance\
+  \ +\n    '}';\n  }\n}\n```\n\n### Lambda Expression\n下面的代码演示了如何使用 `Lambda expression`\
+  \ 来查找余额更大的账户。同样，相同的函数接口 `Greater` 也可以用于其他类似的业务对象。\n\n```java\npublic static void\
+  \ main(String [] args){\n  Greator<Account> accountComparer =\n  (Account acc1,\
+  \ Account acc2) ->\n  acc1.getBalance() > acc2.getBalance() ?\n  acc1 :\n  acc2;\n\
+  \  Account account1 =\n  new Account(6);\n  Account account2 =\n  new Account(4);\n\
+  \  System.out.println(\n  \" Account with greater balance: \" + accountComparer.greater(account2,\
+  \ account1));\n}\n```\n\nJava 还为最常见的场景提供了一组预定义的函数接口。\n\n## Questions\n* 什么是函数接口（Functional\
+  \ Interface）？\n* 使用函数接口有什么好处？\n\n### Lambda Expression\n`Lambda expressions` 为创建[匿名类]提供了一种方便的方法。`Lambda\
+  \ expressions` 以更紧凑的方式实现了[`函数接口]`。当你想要将某些功能作为参数传递给另一个方法，并推迟该功能的执行直到恰当的时机时，`Lambda\
+  \ Expressions` 非常有用。\n\nLambda 表达式可以仅仅是一个带有方法体和可选参数类型的语句块，但没有方法名或返回类型。它可以作为方法参数传递，并存储在变量中。\n\
+  \n```java\n// lambda expressions\n() -> 123 (x,y) -> x + y\n(Double x, Double y)\
+  \ -> x*y\n```\n\n## Questions\n* 什么是 Lambda Expression？\n* Lambda Expression 和匿名类之间有什么关系？\n\
+  * 你可以将 Lambda Expression 作为方法参数传递吗？\n* 使用 Lambda Expression 时，功能延迟执行意味着什么？\n* 使用\
+  \ Lambda Expression 有什么好处？\n* Lambda Expression 和函数接口之间有什么关系？\n\n### Pure Functions\n\
+  纯函数（Pure Functions）是指结果仅取决于传递给它的参数的函数，不受应用程序中任何状态变化的影响，也不会改变应用程序的状态。纯函数对于相同的参数始终返回相同的结果。\n\
+  \n```java\npublic int increaseByFive(int original){\n  int toAdd = 5;\n  return\
+  \ original + toAdd;\n}\n```\n\n## Questions\n* 什么是纯函数（Pure Function）？\n* 纯函数在函数式编程中的作用是什么？\n\
+  * 如何保证纯函数对于相同的参数总是相同的结果？\n\n### Fluent Interface\n`Fluent interface`（流式接口）用于将命令传递给后续调用，无需创建中间对象，并通过方法链实现。当链式方法返回\
+  \ `void` 时，`fluent interface` 链结束。`Fluent interface` 通过减少不必要的对象创建数量提高了可读性。\n\n在下面的代码中，`Fluent\
+  \ Interface` 被用于添加新的员工（Employee）。\n\n```java\nemployee.create()\n  .atSite(\"London\"\
+  )\n  .inDepartment(\"IT\")\n  .atPosition(\"Engineer\");\n```\n\n流式接口主要用于构建查询、创建一系列对象或按层次顺序构建节点的场景。\n\
+  \n## Questions\n* 什么是流式接口（Fluent Interface）？\n* 定义和使用流式接口有什么好处？\n* 描述流式接口的一些用法？\n\
+  \n### Generics\n`Generics`（泛型）是一种机制，允许同一类型（类或接口）或方法操作不同类型的对象，同时提供编译时的类型安全。`Generics`\
+  \ 的引入是为了强制类型安全，特别是对于集合类。\n\n* 一旦在泛型中定义了参数类型，对象将仅与定义的类型协同工作。\n* 在 `generics` 中，`形式类型参数`（下例中的\
+  \ `E`）用类型（类或接口）指定：\n```java\n// Generic List 类型\n// E 是类型参数\npublic interface List<E>\
+  \ { \n  void add(E x); \n  Iterator<E> iterator();\n}\n```\n* 在 `generics` 中，当声明类型变量或创建类型类型对象时，会指定`参数化类型`（本例中\
+  \ `Integer`）：\n```java\n// 声明了 List 类型变量\n// 使用 Integer 参数类型\nList<Integer> integerList\
+  \ = new ArrayList<Integer>();\n```\n\n## Notes\n* 泛型中有一个通用的参数命名约定。`E` 代表元素（element），`T`\
+  \ 代表类型（type），`K` 代表键（key），`V` 代表值（values）。\n* 泛型是编译支持。所有类型参数在编译期间都会删除，这个过程被称为擦除。\n\
+  * 由于强类型检查，泛型避免了许多 `ClassCastException` 实例发生。\n\n#### Generic Class Example\n* 以下\
+  \ `NodeId` 泛型类的定义可以用于任何类型的对象。\n```java\n// 带有类型参数的 NodeId 泛型类\npublic class NodeId<T>\
+  \ { \n  private final T Id; \n  public NodeId(T id) { \n    this.Id = id;\n  } \n\
+  \  public T getId() { \n    return Id;\n  }\n}\n```\n* 常用的`父类型 – 子类型`SuperType –\
+  \ SubType）规则不适用于泛型。在本例中，尽管 `Integer` 派生自 `Object`，但带有 `Integer` 参数的 `NodeId` 仍然不能赋值给带有\
+  \ `Object` 参数的 `NodeId`：\n```java\n// 参数类型 Object\nNodeId<Object> objectId = new\
+  \ NodeId();\n\n// 参数类型 Integer\nNodeId<Integer> integerId = new NodeId(1);\n```\n\
+  \n## Questions\n* 什么是泛型（Generics）？\n* 泛型为集合提供了哪些好处？\n* “泛型是编译支持”这句话是什么意思？泛型不是运行时的吗？\n\
+  \n### Type Wildcards\n泛型中的通配符以 `?` 的形式表示。例如，接收 `List<?>` 作为参数的方法可以接受任何类型的 List。\n\
+  \n```java\npublic void addVehicles(List<?> vehicles) { //... } \n\n// 只能添加 Truck\
+  \ 车辆\npublic void addVehicles(List<? extends Truck> vehicles) { \n  //... \n}\n\
+  ```\n\n## Notes\n* 不要返回返回值中使用通配符，因为知道方法的返回值更安全。\n\n### Upper Bound\n为了实施限制，可以在类型参数上设置上界（Upper\
+  \ Bound）。上界限制方法接受扩展自指定数据的未知类型参数，如示例中的 `Number`。\n\n```java\n// 上界通配符\npublic void\
+  \ addIds(List<? extends Number> T){}\n```\n\n### Lower Bound\n为了实施限制，可以在类型参数上设置下界（Lower\
+  \ Bound）。下界限制方法接受指定数据的父类的未知类型参数，如下例中的 `Float`。\n\n```java\n// 下界通配符\npublic void\
+  \ addIds(List<? super Float> T){}\n```\n\n### Type Inference\n类型推断（Type Inference）是编译器通过方法调用和声明来推断类型参数的能力。\n\
+  \n在泛型中，称为`钻石运算符`的 `<>` 有助于类型推断。\n\n```java\n// 使用钻石操作符的类型推断\nList<Integer> integerList\
+  \ = new ArrayList<>();\n```\n\n## Questions\n* 泛型中的类型通配符（Type Wildcards）是什么？\n*\
+  \ 解释上界通配符？\n* 解释下界通配符？\n* 泛型中如何使用不同的类型通配符？\n* 泛型中的自动类型推断是什么？泛型中的钻石运算符是什么？\n\n###\
+  \ Generic Method\n泛型方法定义自己的类型参数。\n\n```java\n// 泛型方法\npublic <T> void addId(T id){}\n\
+  ```\n\n\n\n\n- 如果我们从上述方法中移除 `<T>`，会导致编译错误，因为它代表了泛型方法中类型参数的声明。\n- 拥有泛型方法的类型（类或接口）不需要是泛型类型。\n\
+  - 在调用泛型方法时，我们不需要显式指定类型参数。\n\n### 注意事项\n- 优先使用泛型（Generics）和参数化类/方法来强制编译时类型安全。\n-\
+  \ 使用边界类型参数（Bounded Type parameter）来增加方法参数的灵活性，同时它也有助于限制可以使用的类型。\n\n## 问题\n- 解释什么是泛型方法？\n\
+  - 你可以在非泛型类型中添加泛型方法吗？\n- 将边界类型定义为方法参数的处是什么？\n- 泛型是如何强制执行编译类型安全的？\n\n# Java 泛型 vs\
+  \ Java 数组 (Java Generics vs Java Array)\n\n## Java Generics (Java Generics)\n\n\
+  考虑以下层级结构：\n\n![Image](img/image00215.jpeg)\n\n由于 `Car` 和 `Bike` 均派自 `Vehicle`，是否可以将\
+  \ `List<Car>` 或 `List<Bike>` 赋值给 `List<Vehicle>` 变量？\n\n实际上不能，`List<Car>` 或 `List<Bike>`\
+  \ 不能替换为 `List<Vehicle>`，因为你不能在一个包含汽车的列表中放入一辆自行车。所以，即使 `Bike` 是一个 `Vehicle`，它也并不是一个\
+  \ `Car`。\n\n```java\nList<Bike> bikes = new ArrayList<Bike>();\n// 假设这是允许的\nList<Vehicle>\
+  \ vehicles = bikes; \nvehicles.add(new Car());\n\n//  Error - Bike 和 Vehicle 被认为是不兼容的类型。\n\
+  Bike bike = vehicles.get(0); \n```\n\nJava 编译器会在编译时对这些不兼容的类型进行检查。更多信息请参考 类型擦除。\n\
+  \n## Java Array (Java Array)\n\n然而，与泛型不同，`Car` 数组可以赋值给 `Vehicle` 数组：\n\n```java\n\
+  Car[] cars = new Car[3]; \nVehicle [] vehicles = cars;\n```\n\n对于数组，尽管编译器允许上述代码编译，但当你运行这段代码时，会得到\
+  \ `ArrayStoreException`。\n\n```java\n// 这将导致 ArrayStoreException\nvehicles[0] =\
+  \ new Bike();\n```\n\n所以，即使编译器没有捕获此问题，运行时类型系统捕获了它。数组是可实例化类型（reifable types），这意味着运行时感知感知其类型。\n\
+  \n## 问题\n- 什么是可实例化类型（reifable types）？\n- 为什么不能将子类型的泛型集合对象赋值给父类型的泛型集合对象？\n- 为什么允许将子类型的数组对象赋值给父类型的数组对象？Java\
+  \ 数组比泛型更具多态性吗？\n\n# Type Erasure (类型擦除)\n\n对于 Java 泛型类型，由于被称为 `type erasure` 的过程，Java\
+  \ 编译器会丢弃类型信息，这些信息在运行时是不可用的。由于类型信息在运行时不可用，Java 编译器会格外小心在编译阶段就阻止你，防止任何堆污染。\n\n泛型类型也属于非可实例化类型（`non-reifiable`），这意味着它的类型信息在编译期间被移除了。\n\
+  \n## 问题\n- 什么是非可实例化类型？\n- 什么是类型擦除？\n- 如果没有类型擦除会发生什么？\n\n# Co-variance (协变)\n\n`Covariance`（协变）是一种概念，你可以从带有上限类型通配符定义的泛型中读取项，但不能向集合中写入任何内容。\n\
+  \n考虑以下带有上限类型通配符的声明：\n\n```java\nList<? extends Vehicle> vehicles = new ArrayList<Bike>();\
+  \ \n```\n\n你允许从 `vehicles` 泛型集合中读取，因为列表中存在的任何内容都是 `Vehicle` 的子类，并且可以向上转换为 `Vehicle`。\n\
+  \n```java\nVehicle vehicle = vehicles.get(0);\n```\n\n然而，你不允许向协变结构中放入任何内容。\n\n```java\n\
+  // 这是编译错误\nvehicles.add(new Bike());\n```\n\n这是不允许的，因为 Java 无法保证泛型结构中对象的实际类型。它可以是任何扩展\
+  \ `Vehicle` 的类型，但编译器无法确定。所以你可以读取，但不能写入。\n\n## 问题\n- 解释什么是协变？\n- 为什么不能向带有上限类型通配符定义的泛型中添加子类元素？\n\
+  \n# Contra-variance (逆变)\n\n`Contra-variance`（逆变）是一种概念，你可以向带有下界类型通配符定义的泛型中写入项，但不能从集合中读取任何内容。\n\
+  \n考虑以下带有下界类型通配符的声明：\n\n```java\nList<? super Car> cars = new ArrayList<Vehicle>();\n\
+  ```\n\n在这种情况下，尽管 ArrayList 是 `Vehicle` 类型，你也可以通过逆变向其中添加 `Car`；因为 `Car` 派生自 `Vehicle`。\n\
+  \n```java\ncars.add(new Car());\n```\n\n然而，你不能假设你会从这个逆变结构中获得一个 `Car` 对象。\n\n```java\n\
+  // 这是编译错误\nCar vehicle = cars.get(0);\n```\n\n## 问题\n- 解释什么是逆变？\n- 为什么不能从带有下界类型通配符定义的泛型中读取元素？\n\
+  \n# Co-variance vs Contra-variance (协变 vs 逆变)\n\n- 当你只打算从集合中读取泛型值时，使用 `covariance`（协变）；\n\
+  - 当你只打算向集合中添加泛型值时，使用 `contra-variance`（逆变）；\n- 当你打算同时对集合进行读取和写入时，使用特定的泛型类型。\n\n\
+  ## 问题\n- 你什么时候应该使用协变？\n- 你什么时候应该使用逆变？\n\n# COLLECTIONS (集合)\n\n## Collections (集合)\n\
+  \n集合是创建任何生产级 Java 应用程序的基础构建块。面试官对理解与集合正确用法相关的不同方面感兴趣。\n\n问题通常用于检查面试者是否理解集合的正确用法以及是否了解可选的替代方案。\n\
+  \n以下是关于集合的问题涉及：\n- Java 中的集合类型。\n- 不同集合类型的特性。\n- 同步集合。\n- 并发集合。\n- 集合元素的排序。\n- 从集合读取的速度。\n\
+  - 写入集合的速度。\n- 集合元素的唯一性。\n- 集合间的操作。\n- 只读集合。\n- 集合遍历。\n\n## Collection Fundamentals\
+  \ (集合基础)\n\n集合是一个将多个元素组合的容器。这是一个简单的集合示例：\n\n```java\n// 创建城市列表\nList<String> cities\
+  \ = new ArrayList<>(); \n// 添加城市名称\ncities.add(\"London\"); \ncities.add(\"Edinburgh\"\
+  ); \ncities.add(\"Manchester\");\n```\n\n### 注意事项\n- 集合处理引用类型。\n- 所有的集合接口实现都是泛型的（Generic）。\n\
+  - 所有的集合类型都可以增长或缩小，与数组不同。\n- Java 提供了许多根据其用法操作集合的方法，因此在添加之前，始终检查已有的方法。\n\n## Collection\
+  \ Framework (集合框架)\n\n集合框架由以下组件定义：\n\n- *Interfaces*（接口）：是为每个特定用法和集合类型定义的抽象类型。\n\
+  - *Implementation*（实现）：是用于创建表示不同类型集合对象的具体实现类。\n- *Algorithms*（算法）：应用于这些集合，以执行各种计算并操作集合中的元素。\n\
+  \n*Collection Framework*（集合框架）通过提供数据结构和对其操作的算法来减少编程工作量。\n\n## 问题\n- 解释集合？\n- 集合和泛型有什么关系？\n\
+  - 你可以在基本类型上使用集合吗？\n- 你如何可以在基本类型使用集合？\n- 解释集合和数组的区别？\n- 集合框架的好处是什么？\n- 集合框架的不同组件有哪些？\n\
+  \n\n\n\n\n接口通过其定义的方法签名来定义其行为。使用集合时，你应该始终针对集合接口编写代码，而不是类实现，这样代码就不会依赖于特定的实现。这可以防止底层实现类可能发生的变化的影响。\n\
+  \n以下是定义集合及其行为最重要的接口。下方的每个子节点都继承自其父节点。\n\n- `Collection`\n    - `Queue`\n       \
+  \ - `BlockingQueue`\n        - `TransferQueue`\n        - `BlockingDeque`\n    \
+  \    - `Deque`\n- `BlockingDeque`\n    - `List`\n    - `Set`\n    - `SortedSet`\n\
+  \    - `NavigableSet`\n- `Map`\n    - `SortedMap`\n\n## 问题\n- 为什么你应该针对集合接口编写代码而不是具体的实现？\n\
+  \n## 集合类型\n- `Set` - `Set` 包含唯一元素。\n- `List` - `List` 是一个有序集合。\n- `Queue` - `Queue`\
+  \ 以先进先出 (FIFO) 的方式在处理前持有元素。\n- `Deque` - `Deque` 以先进先出 (FIFO) 和后进先出 (LIFO) 两种方式在处理前持有元素。\n\
+  - `Map` - `Map` 包含键到对应值的映射。\n\n## 问题\n- 有哪些不同的集合类型？\n- 定义 `Set` 集合类型？\n- 定义 `List`\
+  \ 集合类型？\n- 定义 `Queue` 集合类型？\n- 定义 `Deque` 集合类型？\n- 定义 `Map` 集合类型？\n- `Queue` 和 `Deque`\
+  \ 之间的区别是什么？\n\n## Set\n\n### Basic Set\n```java\n// 创建一个 set\nSet<String> set =\
+  \ new HashSet<>();\n```\n- `Set` 是唯一元素的集合。\n- `Set` 中的元素是无序存储。\n- `Set` 中只能添加一个\
+  \ `null` 元素。（等待，原文说只能有一个 `null`）\n- 重复元素会被忽略。\n- 当不需要排序时，`Set` 最快且内存占用较小。\n\n###\
+  \ Linked Hashset\n```java\n// 创建一个 linkedHashSet\nSet<String> linkedHashSet = new\
+  \ LinkedHashSet<>();\n```\n- `LinkedHashSet` 保持 `Set` 元素与其插入时的相同顺序。\n- 如果在 `LinkedHashSet`\
+  \ 中重新插入一个元素，插入顺序不会受影响。\n- `LinkedHashSet` 中的 `Iterator` 按照这些元素添加到集合的相同顺序返回元素。\n\n\
+  ### Sorted Set\n- `SortedSet` 强制对元素进行排序，要么通过实现 `Comparable` 接口按自然顺序排序，要么使用 `Comparator`\
+  \ 对象进行自定义排序。\n- `TreeSet` 是 `SortedSet` 接口的一个实现类。\n```java\n// 创建按城市名称排序的集合\nSortedSet<String>\
+  \ cityNames = new TreeSet<>();\n```\n- 使用 `Comparator` 对象执行自定义排序。\n```java\nSortedSet<City>\
+  \ sortedCitiesByName = new TreeSet<>(Comparator.comparing(City::getName));\n```\n\
+  - 如果元素实现了 `Comparable` 接口，则使用 `compareTo()` 方法按自然顺序排序。\n\n### Navigable Set\n- `NavigableSet`\
+  \ 继承自 `SortedSet` 并定义了额外方法。\n- `NavigableSet` 可以按升序和降序两种顺序进行遍历。\n- `TreeSet` 是 `NavigableSet`\
+  \ 接口的实现类之一。\n\n## 问题\n- 你可以在 `Set` 中添加重复元素吗？\n- 当不需要排序时，你应该使用哪种集合类型？为什么？\n- 你可以向\
+  \ `Set` 添加 `null` 元素吗？\n- 你应该使用哪个 `Set` 类来维护插入顺序？\n- 如果在 `Set` 中再次插入相同的元素，排序会发生什么？它会保持原始位置还是插入到末尾？\n\
+  - 你应该使用哪个 `Set` 类来确保元素的顺序？\n- 当你需要双向方向遍历时，你应该使用哪个 `Set` 类？\n\n## LIST\n- `List`\
+  \ 是对象的对象的有序集合。\n- `List` 可以有重复元素。\n- `List` 可以有多个 `null` 元素。\n- 在 `List` 中，元素可以添加到任何位置。\n\
+  - 使用 `ListIterator`，列表可以正向和反向两个方向进行迭代。\n```java\n// 创建一个城市列表\nList<String> cities\
+  \ = new ArrayList<>();\n```\n\n### ArrayList\n- `ArrayList` 基于数组。\n- 如果你频繁访问元素，它的性能更好。\n\
+  - 在 `ArrayList` 中添加和删除较慢。如果在任何位置（末尾除）添加元素，需要移动元素。如果添加的元素超过了容量，则会将整个数组复制到新分配的地方。\n\
+  \n### Linked List\n- `LinkedList` 基于列表。\n- `LinkedList` 访问元素较慢，且只允许顺序访问。\n- 在 `LinkedList`\
+  \ 中添加和删除元素更快。\n- `LinkedList` 比 `ArrayList` 消耗更多内存，因为它保留了指向相邻元素的指针。\n\n### List\
+  \ Iterator\n- `ListIterator` 在两个方向上迭代列表。\n```java\n// 全量列表迭代器\nListIterator<String>\
+  \ fullIterator = cityList.listIterator();\n// 部分列表迭代器，从索引 3 开始\nListIterator<String>\
+  \ partialIterator = cityList.listIterator(3);\n```\n\n## Notes\n- `ArrayList` 的随机访问性能更好，因为它为元素维护了基于索引的系统，而\
+  \ `LinkedList` 的开销更大，因为它需要遍历所有元素。\n\n## 问题\n- 你可以向 `List` 添加重复元素吗？\n- 你可以向列表添加 `null`\
+  \ 元素吗？\n- 在什么情况下你会使用 `ArrayList`：频繁添加/更新还是频繁读取？\n- 在什么情况下你会使用 `LinkedList`：频繁添加还是频繁读取？\n\
+  - `ArrayList` 和 `LinkedList` 之间，哪一个消耗更多内存？\n- `ArrayList` 和 `LinkedList` 之间，哪一个适合随机访问？\n\
+  \n## Queue\n- `Queue` 是在处理前持有元素的集合。\n- `Queue` 有两个端：头和尾。\n- `Queue` 以先进先出 (FIFO)\
+  \ 的方式工作。\n\n### Types of Queues\n- `Deque` - 允许从两端操作的队列。\n- `BlockingQueue` - 在满时阻塞添加，在空时阻塞移除。\n\
+  - `Transfer Queue` - 在线程之间传输数据的特殊*阻塞队列*。\n- `BlockingDeque` - `Deque` 和 `BlockingQueue`\
+  \ 的结合。\n- `Priority queue` - 按优先级移除元素。\n- `Delay queue` - 在关联的延迟后允许移除。\n\n### Basic\
+  \ Queue\n- `Queue` 有一个入口点（尾）和一个出口点（头）。\n- 如果入口和出口点相同，则它是后进先出 (LIFO) `queue`。\n```java\n\
+  // 简单队列\nQueue<String> queue = new LinkedList<>();\n```\n\n### Priority Queue\n\
+  - 在 `PriorityQueue` 中，优先级与元素相关。\n- 下一个移除优先级最高的元素。\n- `PriorityQueue` 不允许 `null`\
+  \ 元素。\n- 队列元素实现 `Comparable` 接口或使用 `Comparator` 对象计算优先级。\n```java\n// City 实现 Comparable\
+  \ 接口\nQueue<City> pq = new PriorityQueue<>();\n```\n\n### Deque\n- `Deque` 允许从两端插入和移除。\n\
+  - `Deque` 不提供对元素的索引访问。\n- `Deque` 继承 `Queue` 接口。\n```java\n// 创建一个 Deque\nDeque<String>\
+  \ deque = new LinkedList<>();\n```\n\n### Blocking Queue\n- `BlockingQueue` 接口继承自\
+  \ `Queue`。\n- `BlockingQueue` 设计为线程安全的。\n- `BlockingQueue` 设计用于生产者消费者队列。\n\n###\
+  \ Transfer Queue\n- `TransferQueue` 扩展 `BlockingQueue`。\n- 它可能是有界的，`生产者` 可能等待空间可用和/或\
+  \ `消费者` 可能等待元素可用。\n```java\n// 传输队列\nTransferQueue<String> ltq = new LinkedTransferQueue<String>();\n\
+  \n## 问题\n- `Queue` 的目的是什么？\n- `Deque` 和 `Queue` 有什么不同？\n- 什么是优先级队列？\n- 从优先级队列中移除元素的标准是什么？\n\
+  - 什么是延迟队列？\n- 哪种队列是线程安全的队列？\n- 哪种队列实现了生产者消费者模式？\n\n\n\n\n\n* 解释 `Blocking Queue`\
+  \ 和 `Transfer Queue` 的区别？\n\n* 哪种 `Queue` 是容量限制的，允许 `Queue` 中只有指定数量的元素？如果尝试放入超过其容量的元素会发生？\n\
+  \n# Map\n\n* `Map` 包含键值映射。\n\n* 通常 `Map` 允许一个 `null` 作为键以及多个 `null` 作为值，但具体限制取决于\
+  \ `Map` 实现类的定义。\n\n## Implementation\n\n### HashMap\n\n* `HashMap` 基于哈希表（hash table）。\n\
+  \n* `HashMap` 不保证 map 中元素的顺序。\n\n* `HashMap` 的哈希函数为 `get` 和 `put` 操作提供常数时间性能。\n\n\
+  * `HashMap` 允许一个 `null` 键和多个 `null` 值。\n\n```java\n// 使用 HashMap 创建一个 map Map<String,\
+  \ String> hashMap = new HashMap<>();\n```\n\n### LinkedHashMap\n\n* `LinkedHashMap`\
+  \ 是 `Map` 接口的基于哈希表和链表的实现。\n\n* `LinkedHashMap` 使用双向链表存储条目。\n* 如果需要保持插入顺序，请使用 `LinkedHashMap`\
+  \ 代替 `HashSet`。\n* `HashMap` 的性能略优于 `LinkedHashMap`，因为 `LinkedHashMap` 还需要维护链表。\n\
+  * 它确保按照插入顺序对条目进行迭代。\n\n```java\n// LinkedHashMap LinkedHashMap lhm = new LinkedHashMap();\n\
+  ```\n\n### WeakHashMap\n\n* `WeakHashMap` 仅对其键存储弱引用（weak references）。\n* `WeakHashMap`\
+  \ 同时支持 `null` 键和 `null` 值。\n* 当没有引用指向键时，它们将成为垃圾回收的候选。\n\n```java\n// WeakHasMap\
+  \ Map map = new WeakHashMap();\n```\n\n### Sorted Map\n\n* `SortedMap` 对其键提供完全排序。\n\
+  * 根据自然排序（`Comparable`）或自定义排序（`Comparator`）对 map 条目进行键排序。\n* `SortedMap` 接口继承自 `Map`。\n\
+  \n```java\n// 排序 map SortedMap<String,String> sm = new TreeMap<>();\n```\n\n###\
+  \ Navigable Map\n\n* `NavigableMap` 扩展了 `SortedMap` 接口。\n* `TreeMap` 类是 `NavigableMap`\
+  \ 的实现。\n* `NavigableMap` 可以以升序和降序方式访问。\n* 它支持双向导航并获取键的最接近匹配项。\n\n```java\n// 创建一个\
+  \ Navigable Map NavigableMap<String,String> nm = new TreeMap<>();\n```\n\n### Concurrent\
+  \ Map\n\n* `ConcurrentHashMap` 是 `ConcurrentMap` 接口的具体实现。\n* `ConcurrentMap` 通过将\
+  \ map 划分为多个桶（buckets）并单独锁定每个桶 get 细粒度同步机制。\n* `ConcurrentHashMap` 在从 map 读取时不会锁定\
+  \ map。\n\n```java\n// 创建一个 Concurrent Map ConcurrentMap<String,String> cm = new\
+  \ ConcurrentHashMap<>();\n```\n\n## Notes\n\n* `Map` 的键和 `Set` 的项不能更改状态，因此这些必须是不可变对象。\n\
+  * 为了避免实现 `hashCode()` 和 `equals()`，优先使用 JDK 提供的不可变类作为 `Map` 的键。\n* 永远不要向调用者暴露集合字段，而是提供方法来操作这些字段。\n\
+  * `HashMap` 在 map 中插入、定位和删除元素方面提供了更好的性能。\n* 如果你需要按排序顺序遍历键，`TreeMap` 更好。\n\n## Questions\n\
+  \n* Map 与其他集合有什么区别？\n* 你可以向 Map 中添加 `null` 值作为键吗？\n* 你能保证 `HashMap` 中元素的顺序吗？\n*\
+  \ `HashMap` 如何能够为 `get` 和 `put` 操作提供常数时间性能？\n* `HashMap` 和 `LinkedHashMap` 的区别是什么？\n\
+  * 如果要保持插入顺序，你会使用哪一个：`LinkedHashMap` 还是 `HashSet`？为什么？\n* 什么是 `WeakHashMap`？\n* 当你想维护键的顺序时，你会使用哪种\
+  \ Map 类？\n* 你使用哪种 Map 类来以升序和降序访问？\n* 哪种 Map 实现针对线程安全进行了优化？\n* `ConcurrentHashMap`\
+  \ 如何实现扩展性并同时保持良好的性能？\n* 为什么用于 Map 的键和用于 Set 的值应该是不可变类型？\n* 向调用者暴露内部集合对象有什么坏处？\n\
+  * 如果你想按排序顺序遍历集合，哪种集合最好？\n\n# Algorithms\n\n* `Sorting` - 用于按升序或降序对集合排序。你可以使用自然顺序（如果\
+  \ `key` 类实现了 `Comparable` 接口），或者需要传递 `Comparator` 对象进行自定义排序。\n* `Searching` - `BinarySearch`\
+  \ 算法用于搜索键。\n* `Shuffling` - 它按随机顺序重新排列列表中的元素，通常用于游戏。\n* `Data Manipulation` - 提供\
+  \ `reverse`、`copy`、`swap`、`fill` 和 `addAll` 算法对集合元素执行通常的数据处理。\n* `Extreme Value`\
+  \ - 提供 `min` 和 `max` 算法用于查找指定集合中的最大值。\n\n## Questions\n\n* 集合框架支持哪些不同的算法？\n* 使用哪种搜索算法搜索键？\n\
+  * 如何使用洗牌（shuffling）算法？\n\n## Comparable vs Comparator\n\n* 实现 `Comparable` 接口按自然顺序排序集合元素，`Comparator`\
+  \ 对象用于执行自定义排序。\n* 如果元素实现了 `Comparable`，则使用 `compareTo()` 方法进行排序。\n* `Comparator`\
+  \ 对象用于执行自定义排序。\n\n```java\n// Comparable 接口实现\n@Override public int compareTo(Employee\
+  \ employee) {\n    // 比较逻辑\n}\n```\n\n```java\n// 使用 Comparator\nSortedSet<City>\
+  \ sortedCities = new TreeSet<>(Comparator.comparing(City::getName));\n```\n\n* `Comparator`\
+  \ 通常用于在你无法完全控制该类时。\n\n## Questions\n\n* `Comparable` 接口和 `Comparator` 类有什么区别？\n\
+  * 你何时实现 `Comparable` 接口来排序集合？\n* 你何时使用 `Comparator` 类来排序集合？\n\n# hashCode() and\
+  \ equals()\n\n* `HashTable`、`HashMap` 和 `HashSet` 使用 `hashCode()` 和 `equals()` 方法来计算和比较作为键的对象。\n\
+  * Java 中的所有类都继承自 `java.Object` 基类方案，除非它们重写了 `hashCode()` 方法。\n* 任何重写了 `hashCode()`\
+  \ 方法的类也应该重写 `equals()` 方法。\n\n## Implementation of hashCode() and equals()\n\n```java\n\
+  final public class Employee {\n    final private int id;\n    final private String\
+  \ name;\n    final private String department;\n\n    @Override public boolean equals(Object\
+  \ o) {\n        if (this == o) return true;\n        if (o == null || getClass()\
+  \ != o.getClass()) return false;\n        Employee employee = (Employee) o;\n  \
+  \      if (id != employee.id) return false;\n        if (name != null ? !name.equals(employee.name)\
+  \ : employee.name != null) return false;\n        return !(department != null ?\
+  \ !department.equals(employee.department) : employee.department != null);\n    }\n\
+  \n    @Override public int hashCode() {\n        int result = id;\n        result\
+  \ = 31 * result + (name != null ? name.hashCode() : 0);\n        result = 31 * result\
+  \ + (department != null ? department.hashCode() : 0);\n        return result;\n\
+  \    }\n}\n```\n\n## Rules of hashCode and equals\n\n* 对象一旦创建，在其生命周期内必须始终报告相同的哈希码。\n\
+  * 相同类的相等对象必须返回相同的哈希码。\n\n\n\n\n\n# 注意\n\n两个不相等的对象可能具有相同的哈希值（hash-code）。\n\n## `hashCode()`\
+  \ 和 `equals()` 的用法\n\n* `hashCode()` 和 `equals()` 方法用于将项隔离开不同的桶（buckets）中，以提高查找效率。如果两个\
+  \ `Items` 具有相同的哈希值，那么它们将将被存储在**同一个桶**中，并通过链表连接。\n* 如果两个对象的哈希值不同，则不会调用 `equals()`\
+  \ 方法；否则，会调用 `equals()` 方法来比较它们是否相等。\n\n下图构性地从概念上展示了对象在哈希桶中的存储情况。\n\n![Image](img/image00216.jpeg)\n\
+  \n## 问题\n\n* Java 中哪些使用了 `hashCode` 和 `equals` 方法的不同集合类型？为什么这些集合类型需要使用 `hashCode`\
+  \ 和 `equals` 方法？\n* 当你重写 `hashCode()` 方法时，为什么要也重写 `equals()` 方法？\n* 既然 `java.lang.Object`\
+  \ 类中已经存在 `hashCode()` 方法，为什么你还需要重写它？\n* 为什么对象在整个生命周期内每次都要返回相同的哈希值？\n* 对象在每次程序运行时都必须返回相同的哈希值吗？\n\
+  * 两个相等的对象是否必须返回相同的哈希值？\n* 两个对象即使不相等，是否仍可能具有相同的哈希值？\n* 计算哈希值的目的是什么？\n* `equals` 方法的作用是什么？\n\
+  * 如果两个对象具有相同的哈希值，它们是如何存储在哈希桶中的？\n* 如果两个对象的哈希值不同，你还需要 `equals` 方法吗？\n* 如果两个对象具有相同的哈希值，`equals`\
+  \ 方法是如何使用的？\n\n## HashTable vs HashMap\n\n`HashTable` 和 `HashMap` 是用于存储**键值对（key-value\
+  \ pair）**的数据结构。它们维护一个桶数组，每个元素根据键对象的哈希值添加到相应的桶中。\n\n它们之间的主要区别在于 `HashMap` 是**非同步的**（non-synchronized）。这使得\
+  \ `HashMap` 更适用于单线程应用程序，因为由于缺少锁定开销，非同步的 `Objects` 性能优于同步的对象。在多线程应用中应该使用 `HashTable`。\n\
+  \n可以使用以下方法将 HashMap 转换为同步集合：\n\n`Collections.synchronizedMap(idToNameMao);`\n\n\
+  ## 问题\n\n* `HashTable` 和 `HashMap` 的目的是什么？\n* `HashTable` 和 `HashMap` 之间有什么区别？\n\
+  * `HashTable` 和 `HashMap 是如何存储对象的？\n* 为什么 `HashMap` 更适合单线程应用程序？\n* 为什么 `HashMap`\
+  \ 的性能比 `HashTable` 好？\n* 如何在多线程环境中使用 `HashMap`？\n\n## 同步集合与并发集合\n\n`synchronized`（同步）和\
+  \ `concurrent`（并发）集合类提供了线程安全性，但它们之间的主要区别在于可扩展性和性能。\n\n### 集合同步（Collection Synchronization）\n\
+  \n* `集合同步`通过允许一次**仅**单个线程访问集合来实现。\n* 它通过将所有公共方法标记为 `synchronized` 来实现。\n* 任何调用多个方法的复合操作，都需要在客户端通过锁定该操作来处理。\n\
+  * 同步集合的示例包括 `HashTable`、`HashSet` 和同步后的 `HashMap`。\n\n### 集合并发（Collection Concurrency）\n\
+  \n* `集合并发`通过允许多个线程同时访问集合来实现。\n* `ConcurrentHashMap` 通过根据哈希值将集合划分为多个桶，并使用不同的锁来保护每个哈希桶，从而对集合实现了非常细粒度的锁定。\n\
+  * 它的性能显著更好，因为它允许多个并发写入者同时访问集合，而无需锁定整个集合。\n* 并发集合的示例包括 `ConcurrentHashMap`、`CopyOnWriteArrayList`\
+  \ 和 `CopyOnWriteHashSet`。\n\n对于大型集合，应倾向于使用 `ConcurrentHashMap` 等并发集合而不是 `HashTable`，因为由于锁定开销较小，并发集合的性能会更好。\n\
+  \n注意，在存在操作间依赖的**多线程场景**中，你仍然需要为并发集合上的这些复合操作提供同步访问，如下所示：\n\n```java\nObject synchObject\
+  \ = new Object();\n\nConcurrentHashMap<String, Account> map = new ConcurrentHashMap<>();\n\
+  \npublic void updateAccount(String userId){\n synchronized (synchObject) {\n Account\
+  \ userAccount = map.get(userId);\n if (userAccount != null) {\n //// 某些操作 }\n }\n\
+  }\n```\n\n## 问题\n\n* 同步和并发集合的目的是什么？\n* 什么是集合同步？\n* 什么是集合并发？\n* 你如何实现集合同步？\n* 在需要调用多个方法完成操作的复合操作情况下，如何确保对集合的同步访问？\n\
+  * 你如何实现集合并发？\n* `ConcurrentHashMap` 如何为多个线程提供并发访问？\n* 尽管允许从多个线程同时写入，为什么 `ConcurrentHashMap`\
+  \ 的性能仍然更好？\n* 在 `ConcurrentHashMap` 和 `HashTable` 之间你更倾向于哪一个？为什么？\n\n## 遍历集合\n\n\
+  Java 中有几种方法可以遍历 `collection`（集合）。以下是最常见的方法。\n\n### Iterable.forEach\n\n`forEach`\
+  \ 方法在实现了 `Iterable` 接口的集合中可用。`forEach` 方法接受一个 `Consumer` 类型的参数。\n\n```java\nList<Account>\
+  \ accounts = Arrays.asList(new Account(123), new Account(456));\naccounts.forEach(acc\
+  \ -> *print(acc));\n```\n\n### for-each 循环\n\n* `for-each` 循环可以用于遍历 `map.entrySet()`\
+  \ 以获取键值。\n\n```java\nfor (Map.Entry<String, Account> accountEntry : map.entrySet())\
+  \ {\n *print(\"UserId - \" + accountEntry.getKey() + \", Account - \" + accountEntry.getValue());\n\
+  }\n```\n\n* `for-each` 循环可以用于遍历 `map.keySet()` 获取键。\n* `for-each` 循环可以用于遍历 `map.values()`\
+  \ 获取值。\n* 在运行 `for-each` 循环期间，不能修改集合。\n* `for-each` 循环只能向前导航。\n\n### Iterator（迭代器）\n\
+  \n* `Iterator` 具有向**后**和**向前**移动的能力。\n* 使用 `Iterator` 可以在迭代期间删除项，这在在使用 `for-each`\
+  \ 循环时是不行的。\n* `for-each` 内部也使用了 `Iterator`。\n\n```java\nIterator<Map.Entry<String,\
+  \ Account>> accountIterator = map.entrySet().iterator();\n\nwhile (accountIterator.hasNext()){\n\
+  \ Map.Entry<String, Account> accountEntry = accountIterator.next();\n *print(\"\
+  UserId - \" + accountEntry.getKey() + \", Account - \" + accountEntry.getValue());\n\
+  }\n```\n\n### 注意事项\n\n* 应优先使用 `for-each` 循环代替 `for` 循环，因为 `for` 循环是错误的根源，特别是与索引计算相关的错误。\n\
+  * `Iterator` 被认为更安全，因为它在集合发生变化时会抛出异常。\n\n## 数据无关访问（Data Independent Access）\n\n\
+  代码的编写方式使得客户端代码**不应**感知存储集合的内部结构。这使得可以在不破坏客户端代码的情况下进行内部更改。因此，为了方便对集合进行“数据无关访问”，必须暴露集合以便可以使用\
+  \ `Iterator` 遍历集合的所有元素。\n\n## 问题\n\n* 遍历集合的不同方法？\n* 在使用 `for-each` 循环时，可以修改集合结构吗？\n\
+  * 在使用 `for-each` 循环时，可以修改元素的值吗？\n* `for-each` 循环在导航方向上有什么局限性？\n* `for-each` 循环和\
+  \ `Iterator` 在导航方向上有什么区别？\n\n\n\n\n\n- 在使用 `Iterator` 迭代时可以修改集合的结构吗？\n- 在使用 `Iterator`\
+  \ 迭代时可以修改集合元素的值吗？\n- 在 for-each 循环和 for 循环之间，你更倾向于哪一个？为什么？\n- 为什么认为 `Iterators`\
+  \ 具有更高的线程安全性？\n- 解释向集合提供 `Data Independent Access`（数据独立访问）的概念？\n- 你如何设计你的类，以便为类内部使用的集合提供数据独立访问？\
+  \ \n\n## 快速失败 (Fail Fast)\n\n`Iterator` 方法被认为是 `fail-fast`（快速失败），因为在获取集合的迭代器后，`Iterator`\
+  \ 会防止集合发生任何结构性修改。这确保了任何失败都能被快速报告，而不是让应用程序在稍后进入损坏的状态。在这种情况下，会抛出 `ConcurrentModificationException`。\n\
+  \n来自 `java.util` 的迭代器是快速失败的。\n\n## 问题\n\n- 在集合迭代的语文中，fail-fast 术语的意思是什么？\n- 快速失败迭代器有什么好处？\n\
+  - 什么是快速安全（fail safe）迭代器？\n    - 快速安全迭代器在集合被修改时不会抛出任何 `Exception`，因为它在原始集合的副本上工作。来自\
+  \ `java.util.concurrent` 包的迭代器是快速安全迭代器。\n\n## 错误与异常 (ERROR AND EXCEPTION)\n\n###\
+  \ 异常 (EXCEPTION)\n\nJava 中的异常层次结构：\n\n![Image](img/image00217.jpeg)\n\n- `Exception`\
+  \ 是中断程序执行流的**异常情况**。\n- 所有异常都继承自 `Throwable`。\n- 如果你想创建一个检查异常（checked exception），则要子类\
+  \ `Exception` 类；如果你想创建一个未检查异常（unchecked exception），则要子类 `RuntimeException`。\n- 虽然理论上你也可以子类\
+  \ `Throwable` 类来创建检查异常，但不建议这样做，因为 `Throwable` 是 Java 中所有异常和错误的父类。\n\n## 问题\n\n-\
+  \ 什么是 `Exception`？\n- 解释 Java 中的根层异常超类？\n- 你应该子类哪个超类来创建检查异常？\n- 你应该子类哪个超类来创建未检查异常？\n\
+  \n## 检查异常 vs 未检查异常 vs 错误\n\n### 检查异常 (Checked Exception)\n\n- 检查异常在编译时进行检查。\n- 检查异常扩展\
+  \ `Throwable` 或其子类，`TimeException` 和 `Error` 类除外。\n- 检查异常在程序上是可以恢复的。\n- 你可以通过 `try/catch`\
+  \ 块或在方法声明中使用 `throws` 子句来处理检查异常。\n- 静态初始化器不能抛出检查异常。\n\n```java\npublic static void\
+  \ main(String args[]) {\n    FileInputStream fis = null;\n    try {\n        fis\
+  \ = new FileInputStream(\"details.txt\");\n    } catch (FileNotFoundException fnfe)\
+  \ {\n        System.out.println(\"Missing File :\" + fnfe);\n    }\n}\n```\n\n###\
+  \ 未检查异常 (Unchecked Exception)\n\n- 未检查异常在运行时检查。\n- 未检查异常扩展 `RuntimeException` 类。\n\
+  - 无法合理要求你从这些异常中恢复。\n- 使用良好的编程技术可以避免未检查异常。\n- 抛出未检查异常有助于发现许多缺陷。\n\n```java\npublic\
+  \ int getAccountBalance(String customerName) {\n    int balance = 0;\n    if (customerName\
+  \ == null)\n        throw new IllegalArgumentException(\"Null argument\");\n   \
+  \ // logic to return calculate balance \n    return balance;\n}\n```\n\n### 错误 (Error)\n\
+  \n- `Error` 类用于定义**不可恢复的致命致命异常**，应用程序不应该捕获这些异常。\n- 程序员对这些异常无能为。\n- 即使你捕获了 `OutOfMemoryError`，你仍然会再次得到，因为垃圾回收器可能无法释放内存概率很高。\n\
+  - 仅在预期失败且有非常合理的恢复方法的情况下使用 `checked` 异常；对于任何其他情况，请使用 `unchecked` 。\n\n## 问题\n\n-\
+  \ 什么是检查异常？\n- 什么是未检查异常？\n- Java 中的 `Error` 类定义了哪些类型的异常？\n- 你如何处理检查异常？\n- 如果异常未被处理会发生什么？\n\
+  - 处理检查异常的不同方法有哪些？\n- 你可以使用哪些异常类在 `catch` 块中同时处理检查和未检查异常？\n- 你如何在检查异常和未检查异常之间做选择？\n\
+  - 你能从未检查异常中恢复吗？\n- 你如何避免未检查异常？\n- 可以在静态块中抛出检查异常吗？为什么？\n    - 你不能抛出，因为没有特定的地方来捕获它，而且它只调用一次。你必须使用\
+  \ `try/catch` 来处理检查异常。\n- 处理 `Error` 时你应该做什么？\n\n## 异常处理最佳实践\n\n尽管异常处理主要由上下文驱动，但异常处理策略必须保持一致性是非常重要的。以下是几个异常处理的最佳实践：\n\
+  \n1. 永远不要抑制异常 - 因为这可能导致你的程序处于不安全且不状态。\n2. 不要进行过度的异常处理 - 特尤其是当你不知道如何完全从中恢复时。\n3.\
+  \ 永远不要吞掉异常 - 因为它可能导致应用程序进入不一致的状态，甚至糟糕的是不记录原因。\n4. 不要捕获并继续执行程序 - 带有某些默认行为。今天定义的默认行为在未来可能不再有效。\n\
+  5. 不要向用户显示通用的错误信息 - 而是清理异常处理以报告用户友好的消息并提供关于下一步的建议。\n6. 不要在一个单一的 `try` catch 块中放入多个异常场景\
+  \ - 因为将无法确定异常的原因。\n7. 不要在单一的 `catch` 块中捕获多个异常 - 因为将无法确定异常的原因。\n8. 不要不封装异常 - 这可能会掩盖真实的源头。\n\
+  9. 不要暴露敏感信息 - 而是对可能暴露信息的异常进行清洗。\n10. 始终记录异常 - 除非有充分的理由不这样做。\n11. 不要捕获 `Throwable`\
+  \ - 因为将无法确定异常的原因。\n12. 不要使用异常来控制执行流 - 尽可能使用布尔值验证条件。\n13. 程序化处理不同场景 而不是将所有逻辑放在 `try`\
+  \ 块中。\n14. 显式命名线程 - 在多线程应用程序中，这极大有助于调试。\n15. 永远不要抛出通用异常 - 因为将无法确定异常的原因。\n\n## 问题\n\
+  \n- 描述一些异常处理的最佳实践？\n- 抑制异常的危害是什么？\n- 向用户显示通用错误信息的问题是什么？\n- 吞掉异常的缺点是什么？\n- 在单一 `catch`\
+  \ 块中处理多个异常的缺陷是什么？\n- 如果异常从包含敏感信息的源抛出，你会怎么办？在这种情况下你会记录什么？向用户显示什么消息？\n- 将所有异常封装到通用异常类中的缺陷是什么？\n\
+  \n### try-with-resource\n\n`try-with-resource` 是 Java 语言结构，它使得能够自动关闭 `try` 语句包含的资源。\n\
+  \n\n\n\n\n```java\ntry (FileInputStream fis = new FileInputStream(\"details.txt\"\
+  )) {\n    // code to read data\n}\n```\n\n* 与 `try-with-resource` 使用的资源必须继承 `AutoCloseable`\
+  \ 接口。\n* 你可以在 try 块中指定多个资源。\n\n## 问题\n* 你可以使用哪种 Java 构造来自动关闭系统资源？\n* 在 try-with-resource\
+  \ 构造中使用类对象时，该类应该继承自哪个接口？\n\n# 多线程 (THREADING)\n\n### 线程术语\n* `Thread` 是进程中最小的可执行代码单元。\n\
+  * `Program`（程序）是一组有序的操作。\n* `Process`（进程）是程序的实例。\n* `Context Switch`（上下文切换）是存储和恢复线程状态的昂贵过程。\n\
+  * `Parallel processing`（并行处理）是在多个核心上同时执行同一任务。\n* `Multithreading`（多线程）是 CPU 同时执行多个进程或线程的能力。\n\
+  * `Deadlock`（死锁）发生在两个线程等待对方释放锁时。\n\n### 基本概念\n* 所有 Java 程序都从用户线程上的 `main()` 方法开始。\n\
+  * 当没有没有用户线程可以执行时，程序终止。\n* `Thread` 维护一个私有栈和一系列待执行的指令。\n* `Thread` 有一个名为线程本地存储（thread\
+  \ local storage）的私有内存，在多线程环境中可存储线程当前操作相关的数据。\n* `JVM` 允许进程拥有多个线程。\n* 每个线程都有一个优先级。\n\
+  \n## 问题\n* 什么是线程？\n* 什么是程序？\n* 什么是进程？\n* 线程和进程之间有什么区别？\n* 程序和进程之间有什么区别？\n* 解释线程的上下文切换？\n\
+  * 什么是并行处理？\n* 什么是多线程？\n* 并行处理和多线程有什么联系？\n* 什么是死锁？\n* 什么是用户线程？\n* 什么是线程本地存储？你会用线程本地存储存储哪些内容？\n\
+  * 线程共享栈内存吗？\n\n## 线程生命周期\n以下是线程状态的不同阶段。\n\n* **New**（新建）：线程已创建但尚未启动。\n* **Runnable**（可运行）：线程正在运行。\n\
+  * **Blocked**（阻塞）：线程正在等待进入临界区。\n* **Waiting**（等待）：线程通过调用 `wait()` 或 `join()` 进行等待。\n\
+  * **Time-waiting**（计时等待）：线程通过调用指定超时时间的 `wait()` 或 `join()` 进行等待。\n* **Terminated**（已终止）：线程已完成任务并退出。\n\
+  \n### 注意事项\n你可以使用线程上的 `getState()` 方法获取线程状态。\n\n## 问题\n* 描述线程生命周期的不同阶段？\n* 阻塞状态（blocked）和等待状态（waiting）有什么区别？\n\
+  * 如何找到线程的状态？\n* 线程的 sleep() 方法与线程的 wait() 方法有什么区别？\n\n## 线程终止\n线程应该通过调用 `interrupt()`\
+  \ 方法来停止。调用线程中断甚至可以跳出 `Thread.sleep()`。\n\n在线程上执行的操作应循环定期调用 `isInterrupted()` 方法来检查线程是否被请求停止，此时你可以安全地终止当前操作并执行任何必要的清理工作。\n\
+  \n```java\nif (Thread.currentThread().isInterrupted()) {\n    // 清理并停止执行\n}\n```\n\
+  \n### 注意事项\n* `stop()`、`suspend()` 和 `resume()` 方法已被废弃，因为使用这些方法可能会导致程序处于不一致状态。\n\
+  \n## 问题\n* 什么定义了终止线程的好策略？\n* 什么是线程中断（interrupt）？线程的 interrupt 方法与线程的 stop 方法有什么区别？\n\
+  * 如果线程正在睡眠，你对该线程调用 interrupt 会发生什么？\n* 调用 interrupt 会立即停止线程吗？\n* 为什么你不应该调用线程的 stop\
+  \ 和 suspend 方法？\n\n# 实现 Runnable vs 扩展 Thread\n\n### 实现 `Runnable` 接口实例化线程\n```java\n\
+  public class RunnableDerived implements Runnable { \n    public void run() {\n \
+  \   }\n}\n```\n\n### 扩展 `Thread` 类创建线程\n```java\npublic class ThreadDerived extends\
+  \ Thread { \n    public void run() {\n    }\n}\n```\n\n* `Runnable` 的 `run()` 方法不会创建新线程，而是在创建它的同一个线程中作为普通方法执行，而\
+  \ `Thread` 的 `start()` 方法创建一个新线程。\n* `Runnable` 是在线程上执行任务的优选方式，除非你专门扩展 `Thread`\
+  \ 类（这在大多数情况下是不可能的）。\n* 通过实现 `Runnable`，你为专门的类提供了额外的运行能力。\n* 此外，通过将任务分离为 `Runnable`，你可以使用不同的手段执行任务。\n\
+  \n## 问题\n* 创建线程的不同方式有哪些？\n* 实现 `Runnable` 接口与扩展 `Thread` 类有什么区别？\n* 什么时候应该扩展 `Thread`\
+  \ 类？\n* 什么时候应该实现 `Runnable` 接口？\n* 在 `Runnable` 和 `Thread` 之间，哪一种是优选方式？\n* 实现 `Runnable`\
+  \ 会创建线程吗？\n* `Thread` 类和 `Runnable` 接口都有 run 方法，有什么区别？\n\n# Runnable vs Callable\
+  \ 接口\n\n### `Runnable` 接口\n```java\n@FunctionalInterface \npublic interface Runnable\
+  \ { \n    public abstract void run();\n}\n```\n\n### `Callable` 接口\n```java\n@FunctionalInterface\
+  \ \npublic interface Callable<V> { \n    V call() throws Exception;\n}\n```\n\n\
+  * `Runnable` 不能返回结果，也不能抛出检查异常（checked exception）。\n* `Callable` 需要实现 `call()` 方法，而\
+  \ `Runnable` 需要实现 `run()` 方法。\n* `Callable` 可以与 `ExecutorService` 方法配合使用，但 `Runnable`\
+  \ 不行。\n\n## 问题\n* `Callable` 和 `Runnable` 接口有什么区别？\n* 使用 `Runnable` 相比 `Callable`\
+  \ 有什么好处？\n* `Runnable` 接口可以抛出检查异常吗？\n* 为什么 `Runnable` 和 `Callable` 接口被称为函数式接口？\n\
+  * 哪个接口返回结果：Runnable 还是 Callable？\n\n# 守护线程 (Daemon Thread)\n`daemon thread`（守护线程）是一种允许\
+  \ `JVM` 在程序结束时立即退出的线程，即使它仍在运行。也不会给予 `finally` 块执行的机会。守护线程以极低的优先级执行。\n\n线程继承父线程的守护状态，这意味着由主线程创建的线程都是非守护线程。\n\
+  \n通常守护线程用于支持应用程序的后台任务或服务。垃圾回收在守护线程上进行。\n\n你可以这样创建守护线程：\n```java\nThread thread =\
+  \ new Thread();\nthread.setDaemon(true);\n```\n\n非守护线程被称为用户线程。用户线程阻止 JVM 关闭。\n\n\
+  当没有用户线程时，进程终止。Java 主线程始终是用户线程。\n\n## 问题\n* 什么是守护线程？\n* 什么是用户线程？什么是主线程？\n* 如果守护线程仍在运行，程序会退出吗？\n\
+  * 如果用户线程仍在运行，程序会退出吗？\n* 当 JVM 停止所有运行的守护线程时，守护线程上的 finally 块会有执行的机会吗？\n* 创建新线程时，它是作为用户线程还是守护线程创建的？\n\
+  * 没有用户线程但守护线程仍在运行时会发生什么？\n* Java 主线程是用户线程还是守护线程？\n* 什么类型的工作应该使用守护线程？\n\n# 竞态条件与不可变对象\n\
+  *Race condition*（竞态条件）发生在多个线程并发访问共享数据并对其修改时。由于无法预测这些线程读取和写入顺序，可能会导致不可预测的数据值。\n\n\
+  当一个对象在构造后没有改变状态的可能性时，它被认为是 *immutable*（不可变的）。如果一个对象是 *immutable* 的，它就可以在多个线程之间共享，而无需担心\
+  \ *race condition*。\n\n## 如何使一个对象变为不可变\n\n\n\n\n\n* 将类声明为 `final`。\n* 仅允许构造函数创建对象。不要提供字段的\
+  \ `setter`。\n* 将所有字段标记为 `private`。\n\n## Questions\n\n* 不变对象是如何帮助防止竞态条件的？\n* 为什么竞态条件可能会产生不可预测的结果？\n\
+  * 为什么不可变对象在多线程环境中被认为是安全的？\n* 为什么应该将不可变类声明为 `final`？\n* 为什么构造函数应该是创建不可变对象的唯一方式？如果提供了\
+  \ setters 会发生什么？\n\n## 线程池\n\n`Thread Pool`（线程池）是指定数量的工作线程的集合，它们独立于 `Runnable` 和\
+  \ `Callable` 任务存在。\n\n固定线程池减少了线程创建的开销。当请求激增超过其处理能力时，它可以帮助应用程序进行`degrade gracefully`（优雅降级），防止应用程序进入挂起状态或崩溃。\n\
+  \n线程池还通过解耦任务的创建与执行，实现了松耦合的设计。\n\n使用 `Executors` 类可以轻松创建固定线程池，你可以使用 `newFixedThreadPool()`\
+  \ 厂方法创建 `ExecutorService` 来执行任务。\n\n## Questions\n\n* 什么是线程池？\n* 线程池如何减少线程创建的开销？\n\
+  * 线程池如何帮助防止应用程序挂起或崩溃？\n* 什么是固定线程池？它是如何创建的？\n* 线程池如何实现松耦合的设计？\n\n# 同步 (SYNCHRONIZATION)\n\
+  \n### 并发 vs 并行 vs 异步\n\n`Parallel processing`（并行处理）是在多个核心上同时执行同一个任务。\n\n`Concurrent\
+  \ processing`（并发处理）是同时执行多个任务；可以在多个核心上执行，也可以通过处理器上的抢占式时间共享线程执行。\n\n`Asynchronous\
+  \ processing`（异步处理）是进程独立执行，无需等待中间操作的返回值。\n\n## Questions\n\n* 解释并发处理？\n* 解释并行处理？\n\
+  * 解释异步处理？\n* 解释并发与并行处理之间的区别？\n* 并行处理需要多个线程吗？\n* 什么时候应用程序是并发而非行的？\n    * 当应用程序同时处理多个操作，而不将这些操作进一步划分为更小的任务时。\n\
+  * 什么时候应用程序是并行而非并发的？\n    * 当应用程序处理一个操作，并将该操作划分为更小的任务并并行处理时。\n* 什么时候应用程序既不是并发 true\
+  \ 并行的？\n    * 当应用程序只处理一个操作，且不将其操作划分为更小的任务时。\n* 什么时候应用程序既是并发又是并行的？\n    * 当应用程序同时处理多个操作，并将这些操作进一步划分为更小的任务并并行处理时。\n\
+  \n## 线程同步 (Thread Synchronization)\n\n`Race condition`（竞态条件）发生在多个线程并发访问共享数据并对其修改时。由于无法预测这些线程读取和写入数据的顺序，可能会导致不可预测的数据值。\n\
+  \n`Critical Section`（临界区）`i` 是一个代码块，如果被一个以上的线程并发访问，可能会对结果产生不良影响。\n\n`Thread Synchronization`（线程同步）是控制对`critical\
+  \ section`的访问，以防止程序中产生不良影响。\n\n同步创建了内存屏障，称为 `happen-before`（发生于），它确保线程对临界区内本地对象所的所有更改，对于随后获取相同本地对象的任何其他线程都是可见。\n\
+  \n## Questions\n\n* 解释多线程中的竞态条件？\n* 什么是临界区？\n* 什么是线程同步？\n* 什么是内存屏障？\n* 线程同步中 happen-before\
+  \ 的概念是什么？\n\n### 同步方法 vs 同步块 (Synchronized Method vs Synchronized Block)\n\n`synchronized`\
+  \ 关键字用于标记代码中的临界区。\n\n互斥同步通过使用 `synchronized` 关键字锁定临界区来实现。\n\n这可以通过以下两种方式完成。\n\n\
+  #### 将方法标记为临界区\n\n```java\npublic class DatabaseWrapper {\n  Object reference =\
+  \ new Object();\n\n  // 方法标记为临界区 \n  public synchronized void writeX() { // 代码写在此处\
+  \ }\n\n  // 方法标记为临界区 \n  public static synchronized void writeY() { // 代码写在此处 }\n\
+  }\n```\n\n#### 将代码块标记为临界区\n\n```java\npublic void writeToDatabase() {\n  // 多个线程可以到达这里\n\
+  \n  // 代码块标记为临界区 \n  synchronized (this) {\n    // 只有一个线程可以\n    // 在这里执行这里\n  }\n\
+  \  // 多个线程可以执行这里\n}\n```\n\n## 注意事项 (Notes)\n\n* 将锁定范围缩小到仅限 `critical section`。这将提高整体性能并最大限地减少遇到竞态条件的概率。\n\
+  * 优先使用 `synchronized` 块而不是 `synchronized` 方法，因为块锁只锁定本地对象，而不是整个类对象。\n* 在 `synchronized`\
+  \ 内部，永远不要调用由客户端代码提供的方法或为继承设计的方法。\n\n## Questions\n\n* `synchronized` 关键字是如何使用的？\n\
+  * 同步方法和同步块之间有什么区别？\n* 为什么优先选择同步块而不是同步方法？\n* 同步方法会锁定整个对象吗？\n* 如果你在 `synchronized`\
+  \ 块或方法内部调用由客户端代码（client code）提供的方法，你可能会遇到什么问题？\n\n## 条件同步 (Conditional Synchronization)\n\
+  \n条件 `synchronization`（同步）是通过使用条件变量连同 `wait()` 和 `notify()` 或 `notifyAll()` 方法来实现的。\n\
+  \n```java\n// 条件同步\npublic void operation() throws InterruptedException {\n  synchronized(reference)\
+  \ {\n    if (condition1) {\n      // 等待通知 \n      reference.wait();\n    }\n   \
+  \ if (condition2) {\n      // 通知所有线程 \n      reference.notifyAll();\n    }\n  }\n\
+  }\n```\n\n1. 有两种方法可以通知等待线程。\n    * `notify()` - 仅通知一个线程。\n    * `notifyAll()` -\
+  \ 通知所有等待状态的线程。\n2. `wait()` 有一个重载版本可以传递超时时间，`wait(long timeout)`。\n3. 在 `notify()`\
+  \ 和 `notifyAll()` 方法之间，优先使用 `notifyAll()`因为它通知所有等待线程。\n4. `notify()` 唤醒单个线程，如果多个线程在等待，线程的选择是随机的。\n\
+  \n## Questions\n\n* 什么是条件同步？\n* `wait()` 用的目的是什么？\n* `notify` 和 `notifyAll` 方法的区别是什么？\n\
+  * 当你调用 `notify` 且有多个线程等待时，哪一个会被通知？\n* 在 `notify` 和 `notifyAll` 之间，你倾向于哪一个？为什么？\n\
+  \n## Volatile\n\n在多线程应用程序中，每个线程都会从主内存维护一个变量的 CPU 缓存副本。因此，线程对其 CPU 缓存中变量的任何更改对其他线程都是不可见的。\n\
+  \n标记为 `volatile` 的字段直接从主内存存储和读取。由于 `volatile` 字段存储在主内存中，所有线程对 `volatile` 字段值的最新副本都是可见，无论哪个线程修改了它。\n\
+  \n考虑类 `Ledger`，它有一个成员 `currentIndex` 来跟踪条目的数量。在多线程环境中，每个线程都会独立地增加 `currentIndex`\
+  \ 值。\n\n```java\npublic class Ledger {\n  public int currentIndex = 0;\n}\n```\n\
+  \n如果我们将 `currentIndex` 标记为 `Volatile`，那么每个线程将从主内存中使用其值，而不会创建副本。\n\n```java\npublic\
+  \ class Ledger {\n  public volatile int currentIndex = 0;\n}\n```\n\n![Image](img/image00218.jpeg)\n\
+  \n## Questions\n\n* 什么是 volatile 字段？\n* 解释 volatile 字段解决的问题？\n\n\n\n\n\n# volatile\
+  \ 字段存储在何处？\n\n## static volatile 与 synchronized（同步）\n\n### static 变量\n`static` 变量用于类对象语文中，无论创建了多少个类对象，静态变量只存在一份拷贝。\n\
+  \n但如果有多个线程访问同一个变量，每个线程都会在自己的 CPU 缓存中创建该变量的副本，一个线程所做出的更改对其他线程是不可见的。\n\n### volatile\
+  \ 变量\n`volatile` 变量用于线程语文中，无论有多少个线程或对象访问它，都只存在一个变量，且每个人始终能获取最新更新的值。`Volatile` 强制所有读写操作直接在主内存中进行，而不是在\
+  \ CPU 缓存中进行。\n\n### synchronized\n`static` 和 `volatile` 都是字段修饰符，处理与变量相关的内存可见性问题；而\
+  \ `synchronized` 则用于通过监视器（monitor）控制对代码中`临界区域`的访问，从而防止对代码段的并发访问。\n\n## 问题\n* 什么是静态变量？\n\
+  * 类的所有对象共享静态变量。但在多线程环境中，为什么一个对象对静态变量的修改对另一个线程上的对象是不可见的？\n* 如果静态和 volatile 变量在对象间是共享的，那么\
+  \ volatile 变量解决的问题是什么？\n* volatile 和静态变量与 synchronized 有何不同，因为即使 synchronized 监视器也保护了内存对象？\n\
+  \n## ThreadLocal 存储（线程本地存储）\n每个线程都有一个名为`thread local storage`的专用内存，可以存储与线程当前操作相关的数据。通常\
+  \ `ThreadLocal` 变量被实现为`private static fields`，并用于存储事务标识符、用户标识符等信息。\n\n### ThreadLocal\
+  \ 声明\n```java\nThreadLocal<String> threadLocal = new ThreadLocal<String>();\n```\n\
+  \n### 设置线程本地值\n```java\nthreadLocal.set(\"Account id value\");\n```\n\n### 获取线程本地值\n\
+  ```java\nString accountId = threadLocal.get();\n```\n\n* 由于 `ThreadLocal` 对象被包含在线程内部，你不需要担心对该对象进行同步访问。\n\
+  * `ThreadLocal` 对象的生命周期与其创建的线程绑定，除非有其他变量引用了同一个对象。\n* 为了防止泄漏，使用 `remove()` 方法移除 `ThreadLocal`\
+  \ 对象是一个良好实践。\n```java\nthreadLocal.remove();\n```\n\n## 问题\n* 什么是线程本地存储？\n* 你应该在\
+  \ ThreadLocal 存储中存储什么类型的信息？\n* 为什么你不需要对存储在 ThreadLocal 存储中的对象进行同步访问？\n* 为什么要在 ThreadLocal\
+  \ 存储上调用 remove 方法？\n\n## wait() vs sleep()\n\n### wait()\n使用 `wait()` 进行条件同步。\n\
+  ```java\npublic void manageWaitFor(int timeInMs) throws InterruptedException {\n\
+  \    synchronized (reference) {\n        if (condition1) {\n            // 等待通知\n\
+  \            reference.wait(timeInMs);\n        }\n    }\n}\n```\n\n### sleep()\n\
+  线程进入指定间隔的时间。\n```java\npublic void manageSleepFor(int timeInMs) throws InterruptedException\
+  \ {\n    // 暂停 timeInMs 毫秒\n    Thread.sleep(timeInMs);\n    // 打印消息\n    print(\"\
+  Slept for :\" + timeInMs + \"ms.\");\n}\n```\n\n* `wait` 是在对象的监视器上调用的；而 `sleep`\
+  \ 是在线程上调用的。\n* 等待的对象可以被通知；而休眠的线程不能。\n* 休眠的线程不能释放锁；而等待的对象可以。\n* 要唤醒一个休眠的线程，你需要它的引用，而等待的对象则不需要。\n\
+  \n## 问题\n* wait 和 sleep 之间有什么区别？\n* 为什么可以通知等待的对象唤醒，但不能唤醒休眠的线程？\n* 唤醒休眠线程需要直接句柄；你需要直接访问等待的对象吗？为什么？\n\
+  * 信号对象退出等待状态的机制是什么？\n\n## Joining Threads（连接线程）\n当线程之间存在依赖关系时，通常会连接线程。目标线程的`join()`\
+  \ 方法用于挂起当前线程。在这种情况下，在它依赖的目标线程完成执行之前，当前线程无法继续。\n\n```java\n// 主线程连接线程 \npublic void\
+  \ main(String[] args) {\n    Thread thread1 = new Thread(ThreadMethodRef::threadMethod);\n\
+  \    thread1.start();\n    // 当前线程等待\n    // 直到 thread1 完成\n    // 执行\n    thread1.join();\n\
+  }\n```\n\n## 问题\n* 线程 join 方法的目的是什么？\n* 为什么你需要连接两个线程？\n\n## Atomic Classes（原子类）\n\
+  `Atomic classes` 提供了对原始类型执行原子操作的能力，使得在方法调用完成之前只允许一个线程更改该值。像 `AtomicInteger` 和 `AtomicLong`\
+  \ 这样的原子类封装了相应的原始类型。引用类型也有一个对应的类，即 `AtomicReference`。\n\n不需要对原子类对象提供`synchronized`\
+  \ 访问。`AtomicInteger` 的方法 `incrementAndGet()` 通常用于替代`前置和后置递增运算符`（++ 和 --）。\n\n##\
+  \ 问题\n* 什么是原子类？\n* 为什么你不需要对原子类对象进行同步访问？\n* 为什么前置和后置递增运算符不是线程安全的？\n    * 前置和后置操作底层是多次操作：读取、递增和写入。这三者没有一起同步执行，因此在之间发生的任何线程切换都会导致非预期的结果。\n\
+  * 原子变量和 volatile 变量有什么区别？\n    * 原子变量提供了发生于（happen-before）读取的。\n\n## Lock（锁）\n*\
+  \ `Lock` 是多线程环境下控制共享资源访问的机制。\n* `ReentrantLock` 类实现了`lock` 接口。\n* 锁可以在不同的代码块中获取和释放。\n\
+  * `Lock` 接口具有用于验证资源可用性的方法 `tryLock()`\n* 作为良好实践，获取的锁必须在`finally` 块中释放。\n\n```java\n\
+  // 安全类\npublic class SafeAccount {\n    // 创建锁\n    private Lock lockObject = new\
+  \ ReentrantLock();\n\n    public void addMoney() {\n        // 获取锁\n        lockObject.lock();\n\
+  \        try {\n            // 在此处添加金额\n        } finally {\n            // 释放锁\n\
+  \            lockObject.unlock();\n        }\n    }\n}\n```\n\n## 问题\n* 解释多线程环境下的锁机制？\n\
+  * 你需要在同一个代码块中获取并释放锁？\n* 为什么你应该用 tryLock() 而不是 lock()?\n\n## ReadLock（读写锁）\n* `ReadWriteLock`\
+  \ 管理一对关联锁，一个用于写入，另一个用于读取操作。\n* 只有一个线程可以获取写锁，但多个线程可以拥有读锁。\n* `ReadWriterLock` 接口由\
+  \ `ReentrantReadWriteLock` 实现。\n\n```java\n// ReentrantReadWriteLock \nReentrantReadWriteLock\
+  \ rwl = new ReentrantReadWriteLock();\n// 读锁\nLock rl = rwl.readLock();\n// 写锁\n\
+  Lock wl = rwl.writeLock();\n```\n\n## 问题\n* 使用 ReadWriteLock 的好处是什么？\n* 在什么你会倾向于使用\
+  \ ReadWriteLock 而不是其他锁机制？\n\n## Synchronisers（同步器）\n同步器同步多个线程以保护`临界区域`。 \n\n***Sync***\n\
+  \n***Point Threads***\n\n | ------------\n\n | ----------------\n\n |  ----------\n\
+  \n同步器类型\n* Barriers\n* Semaphore\n* Phasers\n* Exchangers\n* Latch\n\n## 问题\n* 同步器的目的是什么？\n\
+  * Java 中提供了哪些类型的同步器？\n\n## Barriers（屏障）\n* 在`Barriers` 中，一组线程等待彼此到达屏障点后才会继续执行。\n\
+  * `CyclicBarrier` 是 `Barrier` 同步器的具体实现。 \n\n\n\n\n\n## CyclicBarrier\n\n```java\n\
+  // 有五个线程的 barrier\nCyclicBarrier barrier = new CyclicBarrier(5);\n}\n```\n\n* `Barrier`\
+  \ 之所以被称为循环，是因为在对其调用 `reset()` 方法后可以重复使用。\n* 可以将操作传递给 `CyclicBarrier`，当所有线程到达屏障点时执行。\n\
+  \n```java\n// 带有要执行操作的 barrier\n// 在屏障点执行。\nCyclicBarrier barrier = new CyclicBarrier(5,\
+  \ () -> {\n    // 屏障点操作代码。\n});\n```\n\n* 如果任何线程提前终止，则在屏障点等待的所有线程也将退出。\n* 当你将一个操作分为在单独线程上的多个任务，并在等待所有任务完成后再继续时，通常会使用\
+  \ Barrier。\n\n## 问题\n* 解释一下 Barrier 同步器器吗？\n* 你可以再次使用同一个 Barrier 对象吗？如何实现？\n* 如果其中一个线程死亡，其他在\
+  \ Barrier 处等待的线程会发生什么？\n* 你会在什么样的工作中使用 Barrier？\n\n## Semaphore\n\n* `Semaphore`\
+  \ 维护了指定数量的许可以访问 `Critical Section`（临界区）。\n\n```java\n// 创建带有四个许可的 Semaphore\n//\
+  \ 用于四个线程\nSemaphore semaphore = new Semaphore(4);\n```\n\n* 要获取许可，使用 `acquire()`\
+  \ 方法。每次调用 `acquire()` 方法都会阻塞，直到许可可用。\n* 要释放许可，使用 `release()` 方法。\n* 许可可以由获取它的之外的其他线程释放。\n\
+  * 如果调用 `release()` 的次数多于 `acquire()`，则对于每个这样的额外释放调用，都会增加一个额外的许可。\n* 如果你想获取互斥锁，请用一个许可初始化\
+  \ `Semaphore`。\n* Semaphore 通常用于允许对昂贵资源进行受限访问。\n\n## 问题\n* 解释一下 Semaphore 同步器吗？\n\
+  * 如果你调用 `release()` 的次数超过 `acquire()`，会发生什么？\n* 当你调用 `acquire` 但许可不可用时会发生什么？\n*\
+  \ 如何使用 Semaphore 获取互斥锁？\n* 你在哪里使用 Semaphore？\n\n## Phaser\n\n* 与其他 barrier 不同，注册到\
+  \ `Phaser` 上的参与者数量可以随时间动态变化。\n\n```java\n// 有四个注册参与者的 Phaser\nPhaser phaser = new\
+  \ Phaser(4);\n```\n\n* `phaser` 也可以再次重复使用。\n* 使用 `register()` 方法注册一个参与者。\n* 当给定阶段的最后一个参与者到达时，可以执行一个可选操作，然后\
+  \ `Phaser` 推进到下一个阶段。\n* 使用 `arriveAndAwaitAdvance()` 方法在进入下一个阶段之前等待所有参与者到达。\n* `Phasers`\
+  \ 监控已注册、已到达和未到达的参与者的计数。即使是不是注册参与者的调用者也可以监控一个 Phaser 上的这些计数。\n* 参与者可以使用 `arriveAndDeregister()`\
+  \ 方法取消注册，从而不再移动到下一个阶段。\n\n## 问题\n* 解释一下 Phaser 同步器吗？\n* 注册到 Phaser 的参与者数量可以随时间动态变化吗？\n\
+  * 你可以再次使用同一个 Phaser 对象吗？\n* 你可以使用某些外部对象通过 Phaser 监控注册参与者的计数吗？\n* 就可以注册的参与者数量而言，Semaphore\
+  \ 和 Phaser 有什么区别？\n\n## Exchanger\n\n* `Exchanger` 让两个线程在同步点等待对方交换元素。\n\n```java\n\
+  // 交换字符串数组\nExchanger<ArrayList<String>> exchanger = new Exchanger<ArrayList<String>>();\n\
+  ```\n\n* Exchangers 使用 `exchange()` 方法交换信息。\n\n```java\n// 交换数据的 exchanger\nobjectToExchange\
+  \ = exchanger.exchange(objectToExchange);\n```\n\n* 在 `exchange()` 上，`consumer`\
+  \ 清空要交换的对象，并等待 `producer` 再次用完整的对象交换。\n\n## 问题\n* 解释一下 Exchanger 同步器吗？\n* Exchanger\
+  \ 对象需要多少线程？\n* Exchanger 同步器的主要目的是什么？\n* Exchanger 同步器是每次都使用同一个对象进行交换，还是可以使用不同的对象？\n\
+  \n## Latch\n\n* `Latch` 让一组线程等待直到一组操作完成。\n* `Latch` 不能被重复使用。\n* `CountDownLatch`\
+  \ 类提供了 `Latch` 的实现。\n* 所有调用 `await()` 方法的线程都会等待，直到 `countDown()` 被调用的次数等于设置的计数器次数。\n\
+  \n```java\n// 创建一个带有五个计数器的计数锁\nCountDownLatch cdl = new CountDownLatch(5);\n// 在线程任务完成后对\
+  \ latch 计数减\ncdl.countDown();\n// 等待计数减信号\ncdl.await();\n```\n\n## 问题\n* 解释一下 Latch\
+  \ 同步器吗？\n* 你可以再次使用同一个 Latch 对象吗；像 Barrier 和 Phaser 那样？\n* 向 Latch 发送任务完成的机制是什么？\n\
+  \n# Executor Framework\n\nExecutor 框架提供了在线程上执行一组相关任务的基础设施。\n它负责管理以下内容：\n* 创建和销毁线程。\n\
+  * 为任务维持最优数量。\n* 任务的并行和顺序执行。\n* 任务提交与任务执行的隔离。\n* 控制任务执行相关的策略。\n\n```java\n// Executor\
+  \ 接口定义\npublic interface Executor { void execute (Runnable command); }\n```\n\n\
+  ## 问题\n* 解释一下 Executor 框架？\n* Executor 框架有哪些各种功能？\n\n## Executor Service\n\n* `ExecutorService`\
+  \ 继承自 `Executor` 接口，提供了以下额外方法。\n    * `shutdown()` - 在提交任务后关闭执行器。\n    * `shutdownNow()`\
+  \ - 中断当前任务并丢弃等待的任务。\n    * `submit()` - 将任务提交给 `Executor`。\n    * `awaitTermination()`\
+  \ - 等待现有任务终止。\n* `ExecutorService` 提供 `Future` 对象来跟踪执行任务的进度。\n* 提交到 `Executor` 的所有任务都会队列，由线程池线程执行。\n\
+  \n```java\n// 创建带有五个线程的 Executor\nExecutorService exec = Executors.newFixedThreadPool(5);\n\
+  ```\n\n* 要创建单线程线程池，使用 `newSingleThreadExecutor()` 方法。\n\n## 处理结果\n\n* `Runnable`\
+  \ 接口的 `run()` 方法不能返回结果或抛出异常。\n* 可以返回结果的任务是 `Callable` 接口的实例。\n\n```java\n// 任务可以通过\
+  \ Callable 返回结果\npublic interface Callable<V> { V call() throws Exception; }\n```\n\
+  \n* `submit()` 返回 `Future` 对象有助于跟踪任务。\n\n```java\n// ExecutorService 示例\npublic\
+  \ class ExecService {\n    public static void main(String[] args) throws ExecutionException,\
+  \ InterruptedException {\n        // 创建带有五个线程的执行\n        ExecutorService exec =\
+  \ Executors.newFixedThreadPool(5);\n        // 将可调用任务提交给执行器\n        Future<String>\
+  \ task = exec.submit(new Callable<String>() {\n            @Override public String\
+  \ call() throws Exception {\n                //某些逻辑\n                return null;\n\
+  \            }\n        });\n        // 等待结果\n        String result = task.get();\n\
+  \        // 关闭执行器\n        exec.shutdown();\n    }\n}\n```\n\n* 如果任务执行期间发生任何异常，调用\
+  \ `ExecutorService` 上的 `get()` 方法将抛出 `ExecutionException` 实例。\n\n## 调度任务\n\n* `ScheduledExecutorService`\
+  \ 可用于调度未来运行的任务。\n* 调度任务的方法：\n    * `schedule(task, delayTime, TimeUnit.SECONDS)`\n\
+  \    * `scheduleAtFixedRate(task, delayTime, repeatPeriod, TimeUnit.SECONDS)`\n\
+  \    * `scheduleWithFixedDelay(task, delayTime, fixedDelay, TimeUnit.SECONDS)`\n\
+  \n## ExecutorCompletionService\n\n* `ExecutorCompletionService` 使用 `Executor` 来执行任务。\n\
+  * `Executor` 的 `CompletionService` 可用于从多个任务中获取结果。\n\n\n\n\n\n`ExecutorCompletionService`\
+  \ 为 `CompletionService` 具体实现。\n\n```java\n// 创建一个五个线程的执行器\nExecutorService es =\
+  \ Executors.newFixedThreadPool(5);\n\n// ExecutorCompletionService 返回一个对象\nExecutorCompletionService<Result>\
+  \ cs = new ExecutorCompletionService<>(es);\n\n// 将任务提交给 ExecutorCompletionService\n\
+  cs.submit(longTask);\n\n// 获取任务结果\nFuture<Result> completedTask = cs.take();\n```\n\
+  \n### 注意事项\n\n- 始终为线程关联基于上下文的名称，这对调试非常有帮助。\n- 根据你的用用例，通过调用 `shutdown()` 或 `shutdownNow()`\
+  \ 优雅地退出。\n- 为 `ExecutorService` 配置线程池，使得池中配置的线程数量不显著大于系统可用的处理器数量。\n- 你应该查询主机以找到处理器数量，以便配置线程池。\n\
+  ```java\nRuntime.getRuntime().availableProcessors();\n```\n\n## 问题\n\n- 解释什么是 `ExecutorService`？\n\
+  - 你如何跟踪执行任务的进度和状态？\n- Executor 服务是否使用专用线程来执行队列中的任务？\n- 你可以在 `ExecutorService` 中使用\
+  \ `Runnable` 对象吗？为什么？\n- 你如何发现 `ExecutorService` 中是否抛出了异常？\n- 你可以使用 `ExecutorService`\
+  \ 调度任务在未来运行吗？\n- 使用 `ExecutorService`，你如何从多个任务中获取结果？\n- `ExecutorService` 的 `submit()`\
+  \ 方法和 `execute()` 方法之间的区别是什么？\n    - 如果你使用 `submit()`，你可以通过调用 `Future` 对象的 `get()`\
+  \ 方法获取任何抛出的异常；而，如果你使用 `execute()`，异常将传递给 `UncaughtExceptionHandler`。\n- 你如何从 `ExecutorService`\
+  \ 优雅地退出？\n- 配置线程池大小的标准是什么？如何设置它？\n\n### Fork-Join（分治框架）\n\n- Fork-Join 框架利用了多处理器和多核系统。\n\
+  - 它将任务划分为子任务并并行执行。\n- `fork()` 方法从任务中派生一个新的子任务。\n```java\n// 派生子任务\nsubTask.fork();\n\
+  ```\n- `join()` 方法让任务等待其他任务完成。\n```java\n// 等待子任务完成\nsubTask.join();\n```\n\n###\
+  \ Fork-Join 中的重要类\n\n- `ForkJoinPool` - 用于执行子任务的线程池类。\n- `ForkJoinTask` - 使用 `fork()`\
+  \ 和 `join()` 方法管理子任务。\n- `RecursiveTask` - 产生结果的任务。\n- `RecursiveAction` - 不产生结果的任务。\n\
+  - `RecursiveTask` 和 `RecursiveAction` 都提供了一个抽象的 `compute()` 方法供类实现，该类的对象代表一个 `ForkJoin`\
+  \ 任务。\n\n## 问题\n\n- 解释一下 Java 中的 Fork-Join 框架？\n- Fork-Join 框架如何帮助优化任务执行？\n- `RecursiveTask`\
+  \ 和 `RecursiveAction` 之间的区别是什么？\n\n## REFLECTION（反射）\n\n### 反射\n\n`Reflection`（反射）用于检查运行时代码并可能修改应用程序的运行时行为。\n\
+  \n#### 反射的用途\n\n`Reflection` 必须用于特殊目的的问题解决，且仅在信息不可公开时使用。类成员被标记为私有是有原因的。日常开发中反射的几个常用场景包括：\n\
+  \n- 反射通过在运行时检查代码和库来插件类和组件，从而促进模块化软件开发。\n- 使用反射读取注解。`JUnit` 使用反射来发现用于设置和测试的方法。\n\
+  - 调试器使用反射读取类的私有成员。\n- IDE 使用反射枚举类成员并探测代码。\n- 对象关系映射器（ORM）使用反射从数据创建对象。\n- 像 `Spring`\
+  \ 这样的依赖注入框架使用反射来解析依赖。\n\n#### 使用\n\n下面的代码演示了如何使用反射访问类 `Account` 的 `private field`。\n\
+  \n```java\npublic class Account { \n    private float rate = 10.5f;\n}\n\npublic\
+  \ static void main(String [] args) throws IllegalAccessException {\n    Account\
+  \ account = new Account();\n    Class<? extends Account> refClass = account.getClass();\n\
+  \    // 获取所有字段\n    Field [] fields = refClass.getDeclaredFields();\n    for(Field\
+  \ field : fields){\n        // 不再是私有的\n        field.setAccessible(true);\n    \
+  \    System.out.print(field.get(account));\n    }\n}\n```\n\n## 问题\n\n- 什么是反射？\n\
+  - 反射可以用于哪些场景？\n- 调试器如何使用反射？\n- 反射如何帮助创建模块化的软件架构？\n- 你可以使用反射访问私有成员吗？\n- 给出一些库、工具和框架使用反射的例子？\n\
+  \n### 反射的缺点\n\n`Reflection` 必须在某些信息不可公开且有非常充分的理由时才使用；否则，你必须重新审查你的设计。\n\n#### 缺点\n\
+  \n- 反射没有编译时检查，成员名称的任何更改都会破坏代码。\n- 反射违反了封装性，因为它揭露了内部数据结构。\n- 反射违反了抽象性，因为它揭露了内部实现并提供了绕过应用于成员的验证的能力。\n\
+  - 反射是慢的，因为在运行时解析成员有额外的开销。\n\n## 问题\n\n- 你应该在什么时候使用反射？\n- 反射如何违反封装性？\n- 反射如何违反抽象性？\n\
+  - 为什么反射很慢？\n- 为什么反射代码会报错？\n\n## DATA EXCHANGE（数据交换）\n\n### JSON\n\n`JavaScript Object\
+  \ Notation`（JSON）在过去几年中数据交换中变得极其流行。现在它不仅是 XML 的替代方案，更是它的继任者。随着大数据和物联网的发展，加上 JSON\
+  \ 能够轻松解析为 JavaScript 对象，它已成为 Web 首选格式。以下是几个主要因素：\n\n- 它是可操作的，因为它仅限于原始数据类型。\n- 它比\
+  \ XML 更轻量。\n- 它非常易于进行序列化并在网络上传输结构化数据。\n- 几乎所有现代语言都支持它。\n- 所有 浏览器的 JavaScript 解析器都支持它。\n\
+  \n#### JSON 结构\n\nJSON 结构可以分为 JSON 对象和 JSON 数组。\n\n##### JSON 对象\n\nJSON 对象是逗号分隔的键值对。键始终是字符串。\n\
+  \n![Image](img/image019.jpeg)\n\n##### JSON 数组\n\nJSON 数组是有序集合。值可以是字符串、数字、对象或数组本身。\n\
+  \n![Image](img/image020.jpeg)\n\n## 问题\n\n- 什么是 JSON？\n- JSON 和 XML 之间的区别是什么？\n\
+  - 为什么 JSON 成为 Web 集成的首选格式？\n- 解释 JSON 对象和 JSON 数组的区别\n\n## MEMORY MANAGEMENT（内存管理）\n\
+  \n### 栈与堆\n\n`Stack`（栈）是与每个每个系统线程相关的内存；而 `Heap`（堆）是应用程序中所有线程共享的。\n- 对于线程访问的每个函数，会在栈顶分配块内存\
+  \ - 用于局部变量和记录数据，这些数据在函数返回时按后进先（LIFO）顺序释放。相比之下，堆内存分配是相对随机的，没有强制模式，堆变量手动销毁。\n- 当线程不存在时，与线程相关的栈会被回收。当应用程序进程不存在时，堆内存会被回收。\n\
+  \n\n\n\n\n* 栈内存仅对所有线程可见，因此内存访问是直接的。堆内存在应用程序的多个线程间共享；与其他线程的同步会产生性能影响。\n\n* 当栈内存耗尽时，JVM\
+  \ 会抛出 `StackOverFlowError`；而当堆空间耗尽时，JVM 会抛出 `OutOfMemoryError`。\n\n# 栈和堆中的内存分配\n\
+  \n在此示例中，描述了调用方法 `createPoint` 时栈和堆内存的分配情况。\n\n* 变量 `num1` 和 `num2`存储在栈中。\n* 引用变量\
+  \ `point`存储在栈中。\n* `Point` 类对象存储在堆中。\n\n![Image](img/image00221.jpeg)\n\n## Questions\n\
+  \n* 什么是栈？\n* 什么是堆？\n* 在栈的生命周期内，内存是如何分配和释放置的？\n* 栈内存何时被释放？\n* 堆内存何时被释放？\n* 为什么栈内存的分配比堆快？\n\
+  * 为什么需要对堆内存应用同步而不是对栈内存？\n* 当栈内存耗尽时，你会得到什么异常？\n* 当堆内存耗尽时，你会得到什么异常？\n* 你需要显式地释放栈上的对象吗？\n\
+  \n# 堆碎片\n\n`Heap fragmentation` 发生在 Java 应用在一段时间内分配和释放大小不一的内存块，这导致在使用的内存块之间分布着许多小的空闲内存块。这可能会导致一种情况：尽管所有小空闲块的总大小大于大内存块所需的内存，但没有空间来分配大内存块。\n\
+  \n`Heap fragmentation` 会导致长的 `Garbage Collection` 周期，因为 JVM 被强制对堆进行压缩。`通过增加堆大小等避免分配大内存块，可以控制`\
+  \ `heap fragmentation`。\n\n## Questions\n\n* 什么是堆碎片？\n* 为什么会发生堆碎片？\n* 谁负责减少堆碎片？\n\
+  * 你如何控制堆碎片？\n* 当堆碎片程度非常高时会发生什么？\n* 为什么堆碎片会降低应用程序速度？\n\n# 对象序列化\n\n将内存中对象的内容转换为字节流以便持久化或传输，被称为\
+  \ `object serialization`。这些字节可以通过反序列化重新转换回对象。\n\n在 Java 中，如果一个对象的类实现了 `java.io.Serializable`\
+  \ 或其子接口 `java.io.Externalizable`，则该对象是序列化的。标记为 `transient` 的成员不会被序列化。`ObjectInputStream`\
+  \ 和 `ObjectOutputStream` 是专门用于读写对象的流类。\n\n## Questions\n\n* 什么是序列化和反序列化？\n* 想要支持序列化的类型需要实现哪个接口？\n\
+  * 你如何防止成员被序列化？\n* Java 中哪些类被用于序列化和反序列化对象？\n\n# 垃圾回收\n\nJava 中的 `Garbage Collection`\
+  \ 是从内存中识别并移除未引用的对象，并将剩余对象移动在一起以释放连续内存块的过程。当垃圾回收发生时，应用程序中所有运行的线程在回收周期内会被暂停。垃圾回收器运行在守护线程（Daemon\
+  \ thread）上。\n\n将所有存活对象移动在一起 `reduces memory fragmentation`，这提高了内存分配的速度。\n\n在垃圾回收周期内，对象根据其生存年龄移动到内存中的不同区域，称为\
+  \ `generations`。\n\n`System` 类暴露了方法 `gc()`，可以请求 `Garbage Collection`。当你调用 `System.gc()`\
+  \ 时，JVM 不保证立即执行垃圾回收，但可以在可能时执行。你也可以使用 `Runtime.getRuntime().gc()` 来请求垃圾回收。\n\n##\
+  \ Questions\n\n* 什么是垃圾回收？\n* 解释垃圾回收周期？\n* 为什么垃圾回收被认为是一个昂贵的过程？\n* 为什么垃圾回收周期之后，应用程序的性能通常会提高？\n\
+  * 垃圾回收如何防止 `OutOfMemoryException`？\n* 垃圾回收使用什么线程：守护线程还是用户线程？\n* 什么是内存碎片？\n* 为什么当垃圾回收发生时应用程序似乎变慢了？\n\
+  * 你可以显式请求垃圾回收吗？\n* 你可以调用哪个方法请求垃圾回收？\n* 垃圾回收总会在请求时发生吗？\n\n# 内存管理\n\nJVM 内存分为两大类：`stack\
+  \ memory` 和 `heap memory`。\n\n## 栈内存\n\n`Stack memory` 与每个系统线程相关，并在线程执行期间使用。`Stack`\
+  \ 包含方法定义的局部对象和引用变量；尽管所引用的对象存储在堆中。一旦执行离开方法，方法内声明的所有局部变量都会从栈中移除。\n\n## 堆内存\n\n`Heap\
+  \ Memory` 分为称为代（generation）的不同区域：\n\n* `New Generation` - 它被分为 Eden 和 Survivor 空间。大多数新对象在\
+  \ Eden 内存空间中创建。\n* `Old Generation`\n* `Metaspace`\n\n![Image](img/image00222.jpeg)\n\
+  \n当新生代满时，会触发垃圾回收。在 `Eden` 中存活此 GC 周期的对象移动到 `Survivor` 空间。同样，经过几次 GC 周期后，存活的对象继续移动到\
+  \ `old generation`。\n\n`Metaspace` 被 JVM 用于 `keep permanent objects,` 主要是类的元数据信息。新生代的垃圾回收比老年代更频繁。\n\
+  \n* `New Gen` 和 `Old Gen` 是堆的一部分，而 `Metaspace` 是 `Native memory` 的部分。\n* `Metaspace`\
+  \ 可以在运行时扩展，因为它是本地内存。\n\n当垃圾回收发生时，所有应用程序线程都会冻结直到 GC 完成。老年代的垃圾回收通常很慢；因此如果老年代发生大量垃圾回收，可能会导致超时。\n\
+  \n## Questions\n\n* 堆内存是如何划分的？\n* 解释堆的不同代？对象如何在代代之间移动？\n* 垃圾回收周期是如何触发的？\n* 新一代内存中的\
+  \ Eden 和 Survivor 空间是什么？\n* Eden 中的对象何时移动到 Survivor 空间？\n* 什么是 Metaspace？\n* Metaspace\
+  \ 中存储什么类型的对象？\n* 为什么 Metaspace 具有虚拟无限的空间？\n* 哪个代的垃圾回收运行最慢？为什么？\n* 哪个代的垃圾回收更频繁？\n\
+  \n# 弱引用 vs 软引用 vs 幻引用\n\n如果内存中的对象有引用，垃圾回收就不会收集它。这一原理对于弱引用和软引用并不适用。\n\n## 弱引用\n\n\
+  `Weak reference` 是一种会被垃圾回收器积极收集的引用。弱引用适用于缓存，在需要时可以重新加载。\n\n## 软引用\n\n`Soft reference`\
+  \ 比 `Weak Reference` 稍强，因为只有在存在 `memory constraint` 时会被垃圾回收器收集。软引用通常用于缓存 `re-creatable`\
+  \ 资源，如文件句等。\n\n## 幻引用\n\n`Phantom reference` 是 Java 中最弱的引用。它在对象被终化（finalize）后被引用，但内存尚未被垃圾回收器认领。它主要用于跟踪内存使用的技术目的。\n\
+  \n## Questions\n\n* 什么是弱引用？\n* 什么是软引用？\n* 什么是幻引用？\n* 哪些引用类型即使其类型对象仍在在使用时也会被垃圾回收器收集？\n\
+  \n\n\n\n\n* 软引用和弱引用之间有什么区别？\n* 弱引用的典型用法是什么？\n* 软引用的典型用法是什么？\n* 虚引用的典型用法是什么？\n* 软引用和弱引用哪个先回收？\n\
+  \n### 单元测试\n\n## 为什么要进行单元测试？\n\n最重要的两个原因\n* 只有通过亲身实践才能理解真正的益处。\n* 单元测试能帮助你晚上睡得安稳。\n\
+  \n其他重要原因\n* 单元测试对代码更改的成功/失败提供快速且持续的反馈。\n* 单元测试增加了进行重大更改的信心，而不必担心破坏现有功能。\n* 单元测试帮助你理解代码内部实现和设计。\n\
+  * 单元测试还可以作为各种编码场景的文档。\n* 单元测试通过减少对不同场景的多次手动验证周期，在长期内节省时间。\n\n## 问题\n* 单元测试有什么益处？\n\
+  * 单元测试如何在长期内节省时间？\n* 你如何利用单元测试来记录编码场景？\n\n## 单元测试 vs 集成测试 vs 回归测试 vs 验证测试\n\n###\
+  \ 单元测试\n`Unit testing` 在编写代码时持续进行，以便对所作的最最小的可测试更改获得即时反馈。最小的可测试单元可以跨越方法或类，但必须排除外部依赖，如文件\
+  \ I/O、数据库、网络访问等。\n\n### 集成测试\n`Integration testing` 用于在某个场景或功能的所有更改已完全实现后，测试端到端的集成情况。\n\
+  \n### 回归测试\n`Regression testing` 是在整个软件上执行的一系列测试，以发现功能性和非功能性区域的缺陷。回归测试通常在增强、软件更新等之后进行。\n\
+  \n### 验证测试\n`Validation testing` 通常在更新或部署软件后执行，以验证更改是否按照需求完成。\n\n## 问题\n* 什么是单元测试？\n\
+  * 什么是集成测试？\n* 什么是回归测试？\n* 集成测试和回归测试之间有什么区别？\n* 什么是验证测试？\n\n## 测试私有成员\n\n可以使用 `reflection,`（反射）测试私有成员，但建议在需要测试某些遗留代码且不允许更改私有方法的可见性时，`only`这样做。\n\
+  \n### 用法\n以下代码演示了如何使用反射访问 `Account` 类的私有字段。\n\n```java\npublic class Account {\n\
+  \    private float rate = 10.5f;\n}\n\n@Test\npublic void testConcatenate() throws\
+  \ IllegalAccessException, NoSuchFieldException {\n    Account account = new Account();\n\
+  \    Class<? extends Account> refClass = account.getClass();\n    Field field =\
+  \ refClass.getDeclaredField(\"rate\");\n    field.setAccessible(true);\n    assertEquals(10.5f,\
+  \ field.get(account));\n}\n```\n\n如所述，不建议使用反射访问私有字段；您有以下替代方案来测试私有方法中的代码：\n* 通过公共方法测试私有方法。\n\
+  * 如果可能，更改字段的访问修饰符。\n* 修改类设计。\n\n## 问题\n* 测试私有成员的不同方法有哪些？\n* 你可以使用反射测试私有成员吗？\n* 为什么你不应该使用反射测试私有成员？\n\
+  * 测试私有成员的替代方法有哪些？\n\n## Mock（打桩）\n\n单元测试的主要职责是验证类代码中的条件逻辑，这些逻辑应该运行得极快以便提供即时反馈。为了实现即时反馈，类必须没有外部依赖；这在面向对象的软件开发中是不实际的，因为你需要与外部对象通信以执行文件\
+  \ IO、管理数据库访问、与 Web 服务通信等。因此，`mocking`的基本思想是`将这些外部依赖替换为 mock 对象（模拟对象）`以隔离被测试对象。\n\
+  \n### Mocking 的益处\n* Mock 对象帮助你隔离并仅测试类中的条件逻辑，而不测试其依赖项。\n* 在 mock 对象中，你可以实现测试所需的部分功能，而无需实现完整的依赖对象。\n\
+  * 你不需要担心理解依赖的内部实现，这有助于加快开发速度。\n\n## 问题\n* 什么是 mock 对象？\n* 使用 mock 对象有什么益处？\n* 为什么\
+  \ mock 对象有助于加速测试？\n* Mocking 如何帮助实现更快的开发周期？\n* 你应该用哪些类型的依赖项来替换 mock 对象？\n\n# JAVA\n\
+  \n## 工具\n\n### Git\n`Git` 是一个源码级管理系统。它是一个`分布式版本控制系统 (DVCS),`，便于多个开发人员和团队并行工作。Git\
+  \ 的重点是在维护数据完整性的同时提供速度。\n\n`Git` 还提供了在网络不可用时离线执行几乎所有操作的能力。当网络可用时，所有更改都可以推送到服务器。\n\
+  \n让我们讨论几个常用的术语：\n* `Repository`（仓库） - 包含所有项目文件的目录。\n* `Clone`（克隆） - 创建本地仓库的工作副本。\n\
+  * `Branch`（分支） - 用于封装新功能的开发或修复 bug。\n* `HEAD` - 指向最后提交。\n* `Commit`（提交）将更改提交到 HEAD\
+  \ 而不是远程仓库。\n* `Pull`（拉取）从远程仓库获取更改到本地仓库。\n* `Push`（推送）将本地仓库的更改提交到远程仓库。\n\nGit 工作流结构\n\
+  ![Image](img/image00223.jpeg)\n\n## 问题\n* 什么是分布式版本控制系统？\n* 为什么要使用版本控制系统？\n* 你使用版本控制系统执行哪些典型活动？\n\
+  * 解释你遵循的分支策略？\n\n### Maven\n`Maven` 是一个软件项目管理框架，负责项目构建、测试、部署、报告等。Maven 基于约定而非复杂的配置；也就是说，如果项目按照预定义的约定布局（如下所示），它将能够找到执行不同构建操作的资源。\n\
+  \n![Image](img/image0224.jpeg)\n\nMaven 由 `pom.xml`（也称为项目对象模型）文件管理，该文件便于定义各种任务（或\
+  \ goals），并设有专门区域来指定各种项目依赖，由 Maven 进行解析。\n\n## 问题\n* 为什么需要框架来解析依赖，你可以手动下载文件并添加引用？\n\
+  * Maven 支持哪些功能？\n* 为什么说 Maven 是基于约定的？\n* Maven 中的 goals 是什么？\n\n### Ant\n`Ant` 是一个强大的基于\
+  \ XML 的脚本工具，用于自动化构建过程。自动化构建基础设施是持续集成周期中非常重要的元素。\n\n`Ant` 提供对代码编译、测试和打包等支持，这些可以被定义为一系列任务。与\
+  \ Maven 不同，Ant 是配置驱动而非约定驱动。类似于 Maven 中的 `goals`，你可以在 Ants 中定义 `Targets`（目标），它们是一系列任务。Ant\
+  \ 依赖 `build.xml` 文件（也可以指定不同的名称）来执行定义的目标。\n\n## 问题\n* Ant 工具用于什么？\n* Ant 支持哪些功能？\n\
+  * Ant 和 Maven 之间有什么区别？\n* Ant 中的 Targets 是什么？\n\n## Jenkins\n持续集成\n\n\n\n\n\n##\
+  \ 持续集成\n\n持续集成（Continuous Integration）是一项实践，指在同一代码仓库上并行工作的开发者频繁地合并他们的更改。每次提交都会触发一系列自动化活动，旨在验证提交的更改。代码提交后的典型自动化活动包括：\n\
+  \n- 从仓库中获取更改。\n- 执行自动化构建。\n- 执行不同的测试，如单元测试、集成测试、验证测试等。\n- 部署更改。\n- 发布结果。\n\n## Jenkins\n\
+  \nJenkins 是一个用于执行持续集的开源 Web 端工具。Jenkins 提供了配置选项，用于配置和执行上述所有活动。提供的配置选项包括：配置 JDK、安全、构建脚本；与\
+  \ Git、Ants、Maven、Gradle 等集成；部署等。\n\n作业（Jobs）的执行可以与某些事件关联，也可以基于基于时间的调度。\n\n## 问题\n\
+  \n- 什么是持续集成？\n- 持续集成框架应该支持哪些不同的活动？\n- 请解释 Jenkins 支持持续集成的能力？\n- 如何将第三方工具与 Jenkins\
+  \ 集成？\n"

@@ -1,0 +1,62 @@
+name: Java Functional Programming： Hands-On
+name_cn: Java 函数式编程 实用指南
+slug: java-functional-programming-hands-on
+toc:
+- - '#'
+  - Java 函数式编程 实用指南
+- - '##'
+  - 第一版
+- - '##'
+  - 献辞
+- - '##'
+  - 关于作者
+- - '##'
+  - 如何创建 Stream？
+- - '###'
+  - '`Stream` 是一个可以流水线化的元素序列。'
+- - '###'
+  - 过滤数据
+- - '###'
+  - 在 Stream 上使用 `map(f)` 进行数据转换
+- - '###'
+  - 去重 (Distinct)
+- - '###'
+  - 注意事项
+- - '###'
+  - 获取唯一结果
+- - '##'
+  - 使用 Stream 进行排序
+- - '##'
+  - Stream 操作
+- - '###'
+  - 为什么要使用 `peek(Consumer c)` 方法？
+- - '###'
+  - 如何限制 Stream 元素？
+- - '###'
+  - 为什么要使用 `flatmap(Function f)` 方法？
+- - '##'
+  - GroupBy 语句
+- - '###'
+  - 为什么要使用 `groupingByConcurrent(..)`？
+- - '##'
+  - 数据分区
+- - '##'
+  - 函数式接口 (FunctionalInterface)
+- - '##'
+  - 使用 FunctionalInterface 将数字乘以 2
+- - '##'
+  - 方法引用 (Method Reference)
+- - '##'
+  - 什么是 `var`？
+- - '#'
+  - 如何在 Java 中创建线程？
+- - '##'
+  - 什么是虚拟线程？
+- - '##'
+  - 什么是有序集合（Sequenced Collection）？
+- - '###'
+  - 什么是结构化并发？
+- - '#'
+  - 示例代码
+- - '#'
+  - 作者简介

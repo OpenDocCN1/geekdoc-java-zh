@@ -1,0 +1,2 @@
++   [Java 语言基础 2023：面向激情初学者的 Java 编程语言基础入门指南：帮助你在零基础情况下快速掌握 Java 的技巧（法语版）](README.md)
++   [Java 语言基础 2023：面向激情初学者的 Java 编程语言基础入门指南：帮助你在零基础情况下快速掌握 Java 的技巧（法语版）](java-language-fundamentals-2023-a-simple-guide-to-java-progr_0.md)

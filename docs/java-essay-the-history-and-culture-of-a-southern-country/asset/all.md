@@ -1,0 +1,5262 @@
+![](cover.jpeg)
+
+# Java Essay
+
+The history and culture of a southern country
+
+Masatoshi Iguchi
+
+![Illustration](images/00004.jpeg)
+
+Copyright © Masatoshi Iguchi 2015
+
+The moral right of the author has been asserted.
+
+Apart from any fair dealing for the purposes of research or private study, or criticism or review, as permitted under the Copyright, Designs and Patents Act 1988, this publication may only be reproduced, stored or transmitted, in any form or by any means, with the prior permission in writing of the publishers, or in the case of reprographic reproduction in accordance with the terms of licences issued by the Copyright Licensing Agency. Enquiries concerning reproduction outside those terms should be sent to the publishers.
+
+Matador®
+9 Priory Business Park,
+Wistow Road, Kibworth Beauchamp,
+Leicestershire LE8 0RX
+Tel: (+44) 116 279 2299
+Fax: (+44) 116 279 2277
+Email: [books@troubador.co.uk](mailto:books@troubador.co.uk)
+Web: [www.troubador.co.uk/matador](http://www.troubador.co.uk/matador)
+
+ISBN 9781784628857
+
+First print November 2014
+Published January 2015
+
+British Library Cataloguing in Publication Data.
+A catalogue record for this book is available from the British Library.
+
+![Illustration](images/00005.jpeg)
+
+Matador® is an imprint of Troubador Publishing Ltd
+
+## Foreword by Prof. Malcolm R. Mackley
+
+The *Java Essay* written by Toshi Iguchi is a synthesis of his own initial interest and then total fascination with Indonesia. His scientific training and curiosity set him on a path to discover something about this country whose history has not been particularly well studied in the past. He became intrigued by the ancient architecture, which in turn resulted in proving the origins of earlier Indonesian cultures.
+
+On reading the essays I was surprised to learn that so little was known about the history of such an important country. Using his scientific background and command of many different languages, Toshi delves into Indonesia’s past and bravely tries to understand some of the links between different people, places and remaining monuments. There are uncertainties in some of his conjectures; however, his writing forms a basis for discussion and perhaps a starting point for future generations to prove him right or wrong.
+
+Toshi was trained as a scientist and became a historian of Indonesia. His interest in the country is profound and he has studied its history as an academic, as an enthusiast, as a scientist and above all as someone with a passion that developed from spending time living in the country.
+
+The first chapter of the *Java Essay* is a resume of the history of Java and this provides useful information on the way different dynasties have ruled different parts of the island for the last two thousand years. The next two chapters concern themselves with the birth of Jagatara and the subsequent emergence of Jakarta as we know it today. This is not told in a simple, factual way, but by means of a number of stories or essays relating to facts and legends surrounding the city and its life. A quite different chapter then follows the uncovering of ancient monuments throughout Java and here it is obvious that Toshi Iguchi has a particular mission in trying to understand just by who and why many of these monuments were built. Subsequent chapters examine the spiritual life, myths, poetry and even theatre of Indonesia in an attempt to paint a picture of the country in the past.
+
+The stories are both illuminating and informative. The book contains many illustrations and this gives vitality to these essays. As a scientist Toshi is familiar with telling scientific stories with the aid of figures and diagrams. As a historian of Indonesia he uses a multitude of past drawings, pictures and scripts to help the reader appreciate the story he is telling.
+
+Our first meeting was in 1996 when he masterminded a “Green Polymer Workshop” centred at Bandung and this was also my first exposure to Indonesia. Subsequently a friendship that initially centred around our common scientific interest in polymers developed and then broadened to an appreciation of his profound interest in the importance of history and in particular his fascination with all things Indonesian. The *Java Essay* is a central part of Toshi’s life and I very much hope readers will enjoy learning about the history of Indonesia from his unique approach, style and passion for this subject.
+
+Malcolm R. Mackley
+
+Cambridge, United Kingdom
+
+May 2014
+
+## Preface
+
+Java is an island that is a little smaller than Great Britain or two-thirds of Japan’s Honshū, located a little south towards the equator in Southeast Asia. It was thirty years ago when I, the present writer, who had put himself in a corner of natural science and worked for a governmental research institution, visited there for the first time. Although it was an official trip of only one week, the world looked to have two-dimensionally developed, as really was, for a person who before then had only been to Europe and North America of the same mid-latitude. It was not only because I saw the rich, tropical nature, but also because I met warm-hearted people of the southern country and touched their indigenous culture. After that, I was seconded to Bandung to stay there for two years, probably by the will of god. When retiring age arrived, I received a fellowship and worked for three years in a research laboratory in Bogor. After returning home, although I was given some opportunities to stay in domestic and overseas universities, I was absorbed, during the last ten years, in the study of the dramatic history and the beautiful culture of Java by which I was moved during my stay there, leaving polymer science of my own accord. Time favoured an outsider to access knowledge of different disciplines with the advance of the Internet. Besides giving secondary knowledge on its own articles, the Internet enabled me to find all sorts of new and antique books stocked in bookstores from all over the world and order them online. By means of email, I was able to contact at any time friends in Indonesia and Europe to ask for their help with linguistic problems. Having retired, I had freedom to visit historical sites and to learn directly from experts in Indonesia. I am especially indebted to Raden Ayu Mrs E. Sundari, M.A., Senior Curator of the National Museum of Indonesia, who kindly gave her precious knowledge about the history and culture of Java, which was not available from books and documents.
+
+My first task was to bring the English translation of Marquis Tokugawa’s famous travelogue, *Jagatara Kikou* (originally published from Kyōdo-shuppansha, Nagoya, Japan in 1931), into publication, as:
+
+Marquis Tokugawa (translated by M. Iguchi, *Journeys to Java*, ITB Press, Bandung 2004, IBSN 979-3507-25-x
+
+The original English text was drafted earlier, when I had participated in the preparation of an international scientific meeting held in Bandung in 1996, and printed as a private book of the Tokugawa Reimeikai Foundation, entitled *Travels around Java in the 1920s*, to be distributed as reference material for introducing Java to the participants from abroad. For publishing it as a proper book, the text was thoroughly revised, more footnotes were added and an album of contemporary images collected from other sources were appended, receiving full support from the Owaari-Tokugawa family. The book’s Indonesian version was published two years later, translated by my young friends, as:
+
+Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanty Isanasai), *Perjalanan menoejoe Djawa*, Penerbit ITB, Bandung 2006, IBSN 979-3507-87-x
+
+A number of colleagues of mine who read Tokugawa’s book told me of their admiration for the broad knowledge and deep insight of the original author who was a nobleman, historian and scientist, and appreciated the apparatuses (the introduction, notes, etc.) provided by the translator, and gave me an order to write my own essay in the future. In fact, I had felt not quite satisfied with the books on Java available at that time.
+
+Before the Second World War, a number of fine books on Java, which were friendly to common readers, were published (e.g. *A Book of Southern Countries* by Yosaburo Takekoshi (1910) and *I Saw the Dutch East-Indies Like This* by Ichizo Kobayashi (1941), as well as the Marquis Tokugawa’s book in Japan, and *Java and the East Indies* by Frank G. Carpenter (1928), *Monumental Java* by J. F. Scheltema (1928), etc.) in English, but the contents of those books were inevitably obsolete and the books themselves were only available on the antique book market. Nowadays, a number of academic books on specific subjects are certainly available, but reading many of them and comprehending the history of Java in the brains of ordinary readers is not an easy task. In books authored by non-professionals, facts and events are rarely referred to authentic sources, on occasion, leading the readers into prejudices and misunderstandings. As a travel guide, a series of famous books, entitled *An Official Guide to Eastern Asia: Trans-continental connections between Europe and Asia (five volumes)*, was edited and published 1913–27 by the Ministry of Railways, Japan. While the books are now sold on the world book market at extraordinary premiums, the good tradition is gone in Japan, as many guidebooks produced and sold today are such kinds as if the spaces between fancy colour pictures arranged over pages are filled with letters of descriptions that are copies of copies from unknown sources. Among them was such a strange one that made me doubtful about the sense of the publisher, titled *Bali and Indonesia*, despite the fact that Bali is a mere province of the Republic of Indonesia. There are numerous guidebooks also in the world, but one needs effort to find good ones.
+
+Nevertheless, I have to admit that this book, *Java Essay*, is nothing more than a collection of essays written on arbitrarily chosen topics in a rather unsystematic manner, gathering my knowledge obtained from my experience of living in Java, numerous books and documents, the results of visiting historical places, and the conversations with friends in Indonesia and their former suzerain, the Netherlands. Although a short introduction to the history of Java, as well as the etymology of the word Java, was provided for the convenience of readers, I had no intention of preparing a textbook by complementing and dilating the introduction or of authoring an academic book with no formal qualification to write something authoritative on the history and culture. (The contents of the following chapters are listed at the end of the Introduction.) That notwithstanding, references to literature were made as much as possible and my own interpretation on some facts and events were given, due to the habits of a person who used to engage in a sort of research in a different area. The insertion of pictures was deliberately limited because it was the author’s wish that the readers would get to know the content primarily from the text.
+
+This book may be classified not in such common genres as a monograph, textbook, travelogue or travel guide, but as a kind of essay, as the book title says. Because of the character of this book as such, the present writer wishes that this book can be read by a wide range of readers, from sightseers, who either have visited or will visit Java, to students and academics of relevant research areas, and, at the same time, desires that any criticisms and comments are kindly communicated to me.
+
+This essay has been drafted simultaneously in the Japanese language and the manuscript has been published earlier in 2013 from Maruzen Planet, a division of Maruzen Publishing Co. Ltd., Tokyo. Several new passages added in this English edition are indicated in their respective footnotes.
+
+### **Acknowledgements**
+
+For the preparation of the manuscript, the author owes much to Prof. Malcolm R. Mackley, Cambridge, UK, who kindly helped him with perusing and editing the text of more than 130,000 words to be at least readable as English. Thanks are also due to Raden Ayu Mrs. Ekowati Sundari, M.A., the National Museum of Indonesia, Jakarta, Mr. Yoshitaka Tokugawa, the president of the Tokugawa Reimeikai Foundation and Tokugawa Art Museum, Tokyo, and all friends of his who kindly gave advice and supported this work. For the publication of this book, the author expresses his special thanks to Mr. Jeremy Thompson, Managing Director, Troubador Publishing, and his team members, especially Miss Lauren Lewis, Editorial Manager, who elaborately re-edited the whole text, for valuing the manuscript and bringing it into publication from the prestigious publisher.
+
+Masatoshi Iguchi
+
+Tokyo, Japan
+
+May 2014
+
+### **About the author**
+
+Dr. Masatoshi Iguchi, born in 1938 in Nagoya, Japan, received his final education in the graduate school of the Tokyo Institute of Technology in 1966 and received a PhD in Textile Engineering. He worked most of the time until 1999 for the Agency of Industrial Science and Technology, the former Ministry of International Trade and Industry, Japan, and engaged in the area of polymer science. During his career, he had experiences of staying abroad as a post-doctoral fellow in Essex University, UK, as a leader of the ASEAN-Japan Cooperation Polymer Project in Bandung, Indonesia, and as a visitor to the Eindhoven University of Technology, the Netherlands. After the end of his formal employment in the government, he spent some years in Bogor Research Station for Rubber Technology, Indonesia, as a visiting fellow, in Yamagata University, Japan, as a visiting professor, etc., but during the last ten years concentrated on the study of the history and culture of Java. He was awarded prizes from the Society of Polymer Science, Japan (1977), the Japan Society for Bioscience, Biotechnology and Agrochemistry (1998), etc., and conferred a small medal (The Order of the Sacred Treasure, Gold Rays with Rosette) from the Imperial House (2008).
+
+## Notes
+
+### Japanese edition
+
+The bibliographic data of the Japanese edition is as follows.
+
+| Title: | ジャワ探究―南の国の歴史と文化 (Java Tankyū–Minami no kuni no rekishi to bunka) |
+| Author: | 井口正俊 (Masatoshi Iguchi) |
+| Publisher: | 丸善プラネット株式会社, 東京 (Maruzen Planet Co. Ltd., Tokyo) |
+| Sales Office: | 丸善出版株式会社, 東京 (Maruzen Co. Ltd., Tokyo) |
+| Date of issue: | 2013年10月10日/初版 (10 October 2013/First edition) |
+| ISBN: | 978-4-86345-174-2 C0022 |
+
+### **The spelling of local languages**
+
+In Indonesian words, viz. *proper nouns*, the *vowels* ‘o’ and ‘a’ are occasionally exchanged. Although ‘o’ and ‘a’ are generally preferred in Java and Sunda, respectively, as in the cases of Purwokerto (a town in Central Java) and Purwaterta (a town in West Java), Arjuno and Arjuna (the name of a god), Joyoboyo and Jajabaya (the name of an ancient king), etc., the rule is not universal. In this book, the spelling of some words with these *vowels* obeys the cited literature.
+
+The Javanese and Sundanese languages, both derived from the Sanskrit, have distinction in the *consonants* ‘*l*’ and ‘r’, unlike in some East Asian languages, but some exceptions seem to exist, as the old female’s honourable title, Loro (e.g. for the legendary Princess Jonggrang) is alternatively spelled as Rara, Roro, etc. In this book, they are used as they appeared in the referred literature.
+
+Prior to the coordination of Indonesian and Malaysian languages, both based on the Low Malay, in the 1970s, Dutch-style spellings were common in Indonesia for both vowels and consonants. They have been changed thus: ‘oe’ → ‘u’, ‘dj’ → ‘j’, ‘tj’ → ‘c’ and ‘j’ → ‘y’. Thus, old spellings are found in old literature and personal names of elderly people.
+
+As to Chinese Characters, variant characters with fewer strokes, if available, were adopted for education in Japan after the war and are widely used today. In mainland China, the so-called simplified characters were invented to replace complicated characters in the 1960s and became common (See examples in the table). Nevertheless, traditional characters are adopted in this book as they appeared in referred literature.
+
+|  | Ex. 1 | Ex. 2 | Ex. 3 | Ex. 4 |
+| Traditional character | 錢 | 關 | 樂 | 國 |
+| Variant character with fewer strokes | 銭 | 関 | 楽 | 国 |
+| New simplified character in China | 钱 | 关 | 东 | - |
+| Definition | coin, change | barrier, close | joy, easy | country |
+
+### **Front cover illustration**:
+
+One of the Ramayana reliefs on the corridor wall of Siva Temple in Prambanan in which Rama shoots an arrow in the contest to elect the bridegroom of Princess Sita, a daughter of King Djanaka of Widehas. Reproduced from: W. F. Stutterheim, *Pictorial history of civilization in Java*. Translated by Mrs. A. C. de Winter-Keen, The Java Institute and G. Kolff & Co., Weltevreden, 1926\. Due to corrosion, the sharpness of the carvings as seen in this photograph has been lost today.
+
+**Rear cover illustration**:
+
+Wayang dupara puppets of Sultan Agung and Jan Pieterszoon Coen. Photographed by M. Iguchi at Jakarta History Museum, September 2006.
+
+**Inside cover illustration**:
+
+Gunungan (a motif of Mount Semeru) or Kayon (tree of life), a puppet displayed at the beginning of wayang kulit shadow play. Designed after: [http://www.asiafinest.com/forum/lofiversion/index.php/t254123.html](http://www.asiafinest.com/forum/lofiversion/index.php/t254123.html).
+
+## Contents
+
+[**Foreword by Prof. Malcolm. R. Mackley**](#part0002.html_1T140-eace0453ad444634b688454ed62f4eb8)
+
+[**Preface**](#part0003.html_2RHM0-eace0453ad444634b688454ed62f4eb8)
+
+[Notes](#part0004.html_3Q280-eace0453ad444634b688454ed62f4eb8)
+
+[**Introduction: A Brief History of Java**](#part0006_split_000.html_5N3C0-eace0453ad444634b688454ed62f4eb8)
+
+[Appendix: Chronology of Java](#part0007.html_6LJU0-eace0453ad444634b688454ed62f4eb8)
+
+[**Chapter 1 Jagatara – The Destination of Haru**](#part0008_split_000.html_7K4G0-eace0453ad444634b688454ed62f4eb8)
+
+[Jakarta Map](#part0008_split_002.html_sec1)
+
+[**Chapter 2 Jagatara Tales**](#part0009_split_000.html_8IL20-eace0453ad444634b688454ed62f4eb8)
+
+[**Chapter 3 Ancient Stone Monuments – The Prasasti of Tarumanagara**](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8)
+
+[Appendix (1): Hindu Calendar/Saka Calendar](#part0010_split_002.html_sec1)
+
+[Appendix (2): List of Kingdoms in West Java](#part0010_split_003.html_sec2)
+
+[**Chapter 4 Pajajaran Kingdom – The Spiritual Home of Sundanese People**](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8)
+
+[**Chapter 5 Mataram where Gods and Buddha Reside**](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8)
+
+[Appendix: Loro Jonggrang Legends](#part0012_split_002.html_sec1)
+
+[**Chapter 6 Flowers of Java – Poetry and Theatre**](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8)
+
+[Appendix: Jayabaya Prophecies](#part0013_split_002.html_sec1)
+
+[**Bibliography**](#part0014.html_DB7S0-eace0453ad444634b688454ed62f4eb8)
+
+[**Java Map**](#part0015.html_E9OE0-eace0453ad444634b688454ed62f4eb8)
+
+## Introduction:
+A Brief History of Java
+
+In the beginning of the first chapter of *The History of Java*, Thomas Stamford Raffles wrote two hundred years ago[¹](#part0006_split_001.html_in1fn1):
+
+“The country known to Europeans under the name of Java, or Java Major, and to the natives under those of *Tana* (the land) *Jawa*, or *Nusa* (the island) *Jawa*, is one of the largest of what modern geographers call the Sunda Islands. It is sometimes considered one of the Malayan Islands, and forms a part of that division of the Oriental Archipelago which it has been lately proposed to designate as the Asiatic Isles. It extends eastward, with a slight deviation to the south, from 105°11’ to 114°33’ of longitude east of Greenwich, and lies between the latitudes 5°52’ and 8°46’ south. On the south and west it is washed by the Indian Ocean; on the north-west by a channel called the Straits of Sunda, which separates it from Sumatra, at a distance in one point of only fourteen miles; and on the south-east by the Straits of Bali, only two miles wide, which divide it from the island of that name.”
+
+Java with which this book is concerned is the country Java, not the popular trade name of a computer programming language designed to work across different computer systems[²](#part0006_split_001.html_in1fn2).
+
+The origin of the name “Java” is not clear, although some theories are found in literature. In the book by Raffles, he wrote that the word might have been derived either from *jau* (*lit.* distant or remote, spelt as *jauh* in the modern Indonesian), as the island was away from the continent, or *yava*, a Sanskrit word for “barley”. *Yava* in the second theory appeared in the ancient Indian epic Ramayana in the name of an island *Yavadvipa* (or *Jawadwipa* in which –dvipa or –dwipa meant island) where Rama’s army was sent in search of his abducted wife Sita[³](#part0006_split_001.html_in1fn3). The island *Yavana* (耶婆提) where a Buddhist priest, Fa Xian (法顕), from the East Chin Dynasty China was wrecked on his way back from Ceylon and stayed for a while, as written in the travelogue *Fo kuo chi* (佛國記), must have been the phonetic transcription of Jawadwipa. In an old Javanese book, *Serat Mahaparwa* (the Mahaparwa Story), written by poet Empu Satya in 879 AD, an interesting story is found.
+
+“Once upon a time, gods who descended from the heaven saw a long island which, unlike today, unseparately spanned from the present-day Sumatra, via Java, to Bali and called it *dava* (*lit.* long). Later, King Isaka [King Aji Saka] who was sent there from India walked the whole island and recognised that it was really a long island. At the same time, he saw a plant *jawawut* (millet) grow in places. Thus, he named the island of Java for the dual meaning.”[⁴](#part0006_split_001.html_in1fn4)
+
+The *Malay Archipelago*, or *Malayan Islands*, written as such in Raffles’s exposition, apparently had various alternative designations in the 19th century[⁵](#part0006_split_001.html_in1fn5). For instance, Alfred Russel Wallace who visited the area as a naturalist argued the terms as well as their geographical definition in his contribution to the *Journal of the Royal Geographical Society of London* in 1863[⁶](#part0006_split_001.html_in1fn6) and stated that the *Indo-Australian Archipelago* was his preference, notwithstanding the *Malay Archipelago* was adopted for the title of his famous book published in 1869[⁷](#part0006_split_001.html_in1fn7). Earlier in 1850, James Richardson Logan, an eminent lawyer and ethnologist, wrote that he preferred *Indonesia* as a purely geographical term for the *Indian Islands* or the *Indian Archipelago*, and *Indonesians* for *Indian Archipelagians* or *Indian Islanders[⁸](#part0006_split_001.html_in1fn8)*, which subsequently gained popularity and was adopted in the name of the Republic of Indonesia when it was formed as an independent nation in 1949, inheriting the former territory of the Dutch East Indies[⁹](#part0006_split_001.html_in1fn9). *Bahasa Indonesia* (Indonesian Language) adopted as the national language was the Low Malay, which used to be the *lingua franca* for trading around the area.
+
+In Raffles’s book, another phrase, *Java Minor*, for Sumatra was used, analogously to *Java Major* for Java, whether or not these brief terms were common at that time or before then[^(10)](#part0006_split_001.html_in1fn10). Marco Polo who stopped at Sumatra in 1292(?) on his way back from China called this island “The small island of Iava” (*Della piccola isola di Iava*) and Java, “The island of Java” (*Dell’isola di Java*), with a remark that the latter was a large island (*un’ isola grandissima*)[^(11)](#part0006_split_001.html_in1fn11). He told of Java in his travelogue, *Il Milione*, which was dictated after his return to Venetia as follows:
+
+“Here is told of the great island of Java. You must know that, on leaving the kingdom of Chamba, one sails 1,500 miles south-south-east, and reaches a very large island called Java. According to experienced sailors who know the matters well, it is the largest island in the world, having a compass of quite 3,000 miles. It belongs to a great king. They are idolaters, and pay tribute to no one. This island is immensely rich. They have pepper, nutmegs, spikenard, galingale, cubebs, cloves, in a word all the precious spices one can think of. Great numbers of ships go thither, with many traders who buy sundry wares, from which they obtain much profit and gain. In this island there is such wealth, that no man in the world could calculate or describe it. And I will add that the Great Kaan was never able to take it on account of the great distance, and the dangers of the voyage thither. The merchants of Zaitun [刺桐=泉州] and Manji [蠻子=南宋] have in the past obtained great profit from the trade with this island, and still do so. The greater part of the spices sold in the world, comes from this island. Now I have told you of this island, and will say no more about it, but will proceed.”[^(12)](#part0006_split_001.html_in1fn12)
+
+Although the size of the island, which was exaggerated twice due possibly to the lack of correct knowledge, aroused arguments and the hearsay from seafarers was partial to trade, the description on the situation of the country was almost true. In Java, it was the heyday of the Singasari Kingdom when the country prospered under the reign of King Kertanegara (1268–92) and the country’s power extended over outer islands. That they were idolaters meant that they believed in Hinduism. It was a fact that Khubilai Khan’s mission, which demanded tribute, was thrice rejected (*See* [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8)).
+
+Whilst Marco Polo’s account was surprising to Europeans, the situation as well as the existence of the island had long been known to Asians, viz. Chinese, as *The Book of Southwestern Barbarians* (*Nan Man Xi Nan Yi Lie Zhuan)* of the Later Han Dynasty recorded that “In 131 AD, the king of Ya-diao (葉調) from the exterior of the Vietnamese coast sent a mission to this dynasty: The emperor gave a gold stamp and a purple-ribbon medal to Diao-bian (調便)”[^(13)](#part0006_split_001.html_in1fn13). Although no direct evidence to prove the existence of a certain king named Diao-bian or his kingdom was locally available, the king was supposed to have been King Dewawarman I who had emigrated from India and founded Salakanagara in the west part of Java Island, with reference to *The Book of Kings in the Land of Archipelago* (*Pustaka rajya rajya i bhumi Nusantara*)[^(14)](#part0006_split_001.html_in1fn14) in which traditions from ancient times were dictated and assembled at a later time.
+
+The author of this current book (Iguchi) will now review the history of kingdoms that rose and fell after then, until the modern times in the Island of Java with a certain respect to their culture.
+
+The kingdom that appeared in West Java after Salakanagara was Tarumanagara, which left several pieces of stone monuments as physical evidence. It was founded in the mid-4th century (358 AD) and was most prosperous during the reign of the 3rd king, Purnawarman. With regard to a certain country, *a-ro-tan* or *a-lo-tan* (呵羅單國) written in a contemporary *The Book of Sung* (宋書, *Sung Shu*), long questioned among scholars, the present writer has come to the belief that those Chinese characters must be the phonetic representation of “a-ru-teun” of Ci-aruteun (Aruteun River) and that the country was no other than Tarumanagara with its capital on the river terrace of Ciaruteun in the present-day Ciampea Village in the outskirts of Bogor where two of the contemporary stone monuments and a number of large foundation stones were discovered (*See* [Chapter 3](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8)).
+
+Tarumanagara persisted until the middle of the 7th century (669 AD) when the kingdom’s name was changed to Sunda, despite the fact that some royal family members had moved earlier to an eastern place in West Java in the early 6th century (526 AD) to establish a region called Kendan/Galuh Kingdom (existed until 852 AD). While the capital of the Sunda Kingdom was presumably located around the present-day Bogor, Linggawisesa, the son-in-law of the 29th king, Linggadewata, founded a new kingdom in the early 14th century (1333) in Kawali, another eastern place in West Java, not far from the above-mentioned Galuh. While Sunda and Kawali coexisted as sister kingdoms, it was in 1482 that Sri Baduga, the son-in-law of the 6th king of Kawali, Dewaniskala, united the two kingdoms and established the Pajajaran Kingdom with its capital at Pakuan (the present-day Bogor). Sri Baduga, nicknamed Siliwangi, was a glorious king, as his achievements were inscribed in the Batu Tulis stone monument erected by his son, Surawisesa, and his episodes have been popular among Sundanese people up until today.
+
+The sunshine was followed by clouds. In 1526–7, the kingdom’s outer ports of Banten and Sunda Kelapa (the present-day Jakarta), which had prospered by trade with the Portuguese-occupied Malacca, were captured by Moslems who had arisen in central Java and penetrated into Cirebon on the northeast coast of the Pajajaran territory, resulting in the isolation of the country from the sea, and the kingdom’s capital at Pakuan fell to the hands of Moslems in 1579\. Thus, Pajajaran became the last Hindu kingdom in Java. Although the founder of the Cirebon Kingdom, Hydayat, was a grandson of Sri Baduga, the kingdom built by he who had converted himself to Islam was not a country that inherited the tradition of Sunda, at least from the viewpoint of the present writer. When Pakuan fell, the *pusaka* (royal treasures) were carried away by nobles to Sumedanglarang, a subkingdom of Pajajaran, located far to the northeast of the present-day Bandung (The royal treasures exist to date in Museum Prabu Geusan Ulun, in Sumedang).
+
+A note should be added to the word *Sunda*. This word, which was used as a geographical term as Sunda Archipelago and the Straits of Sunda, as in Raffles’s exposition, did originate from the name of a coastal town, *Sundapula* (presumably the present-day Jakarta), built in the Tarumanagara Era, and became a term to designate West Java, as the land and the native people were called *tanah Sunda* and *orang Sunda*, respectively. Before modern times, Sundanese people were not on close terms with Javanese people, who had inhabited the middle and the eastern parts of Java Island, having a different language and customs from those of the latter, despite them both ethnically belonging to the same Southern Mongoloid.
+
+When one speaks about the relation between Sunda and Java, the “Tragedy of Bubat” that happened during the reign of King Linggabuana of Kawali (reigned 1350–7) cannot be forgotten. In 1357 when the king’s daughter Dyah Pitaloka received a marriage proposal from Hayam Wuruk, the young king of the strong Majapahit Kingdom of Java, King Linggabuana set sail to Majapahit for their wedding, accompanying the princess and the family members. On their arrival at Bubat in the suburb of the Javanese capital, they were unexpectedly told that “the princess was to be received as a tribute to the Javanese king, not as the queen”, contrarily to King Hayam Wuruk’s wish, from Gajah Mada, the premier of Majapahit who had concealed an ambition to subjugate Sunda. Linggabuana declared, “We will choose to fight as *satria* [warriors] rather than be affronted” and the king and all his soldiers were killed by Gajah Mada’s overwhelming army. The queen, the princess and court ladies followed after the deceased men. The story was sung in an epic *Kidung Sunda* (The Song of Sunda)[^(15)](#part0006_split_001.html_in1fn15) and was included in the chronicle *Pararaton[^(16)](#part0006_split_001.html_in1fn16)*, both written in later times. The Sundanese had received great damage, but the king’s brother, Suradipati, succeeded the throne and maintained the kingdom of Kawali.
+
+In Central Java, civilisation was brought from India in the 1st century by Aji Saka and his party. Although the fate of the kingdom founded by Aji Saka was unknown, 78 AD (i.e. the year of his arrival or death) was defined as the first year of the so-called Saka Calendar, which was widely used before the Western calendar became common.
+
+The earliest well-known kingdom in Central Java was the Sanjaya Kingdom in Mataram, which worshipped Hinduism, founded in 723 AD by Sanjaya Harisdarma, formerly the 2nd king of Sunda, who moved from Sunda and subjected the whole area of Central Java. When the Sanjaya Dynasty existed in Central Java, there was another dynasty, called Sailendra, which built the famous Borobudur Buddhist Temple in 824 AD. Sailendra Kingdom was merged with Sanjaya Kingdom around 832 AD, when Princess Pramodawardhani, the daughter of King Samaratungga, married Prince Rakai Pikatan of the latter, and ceased to exist in Java, although Prince Bharataputra, the princess’s younger brother, moved to Sriwijaya in Sumatra, where his mother originated, and bore the title of the King of Sailendra. Loro Jonggrang Hindu Temple (generally called Prambanan Temple), which ranks with Borobudur in its magnificence, is said to have been built by Rakai Pikatan in 856 AD, although the present writer assumes that the construction owed much in financial terms to the wealth of the Sailendra, which Princess Pramodawardhani had inherited from her father.
+
+The splendid temples of Borobudur and Prambanan, with fine reliefs carved on their walls and stone statues situated in their niches, show that these kingdoms had a highly sophisticated culture. It was in this age that arts and literature of Java’s own style originated. On a copper plate left in the beginning of the 10th century by King Balitung, the son of Prince Pikatan and Princess Pramodawardhani, was inscribed that a shadow play named *wayang* as well as various dances and chanting of poems were performed on the occasion of a festival. The text of the Ramayana used at that time is considered not to have been the direct translation of an Indian text but the first example of *kakawin* (i.e. a type of verse written in the Old Javanese language, which was applied since then not only for literature but also chronicles and history books).
+
+In the *Old Book of Tang* and the *New Book of Tang* (舊唐書 and 新唐書)[^(17)](#part0006_split_001.html_in1fn17), completed in mid-10th and mid-11th-century China, respectively, some accounts were given on a certain country named *Ho-ling* (or *Ka-ling*, 訶陵), which was “located on an island in the southern sea and ruled by a queen, named Sima (悉莫)”. The existence of this country was long questioned among scholars and various theories, including such a nonsensical one that it could be the Sailendra Kingdom, were presented in the past. The present writer came to an interpretation that it was the Keling Kingdom written in the aforementioned *The Book of Kings in the Archipelago* and that the bloodline of Queen Sima extended to the Sailendra and the Sanjaya dynasties as well as to the Kanjuruhan Dynasty, which occurred in East Java (*See* [Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8)).
+
+The centre of kingdoms in Java moved to East Java in 929 AD when Mpu Sindok of the Sanjaya opened his Isyana Dynasty in Medang on the bank of the Brantas River. As to the reasons for their migration, the devastation of land by the eruption of the ever-active Merapi Volcano and religious friction with Buddhists were conceived as described in a later part ([Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8)). In 1006 AD, when Prince Airlangga, the son of Mpu Sindok’s great-granddaughter Princess Mahendradatta who had married Prince Udayana of the Warmadewa Family in Bali, was visiting his maternal home in Medang for betrothal with Princess Dyah Sri Laksmi, the daughter of King Dharmawangsa, Medang, was attacked by Sriwijaya and the king was killed. After taking refuge in a forest with the princess and lying low for some ten years, he quelled the country, which was disrupted after his uncle’s death, and became the king of Java by the request of local people. While Airlangga’s new kingdom founded in Kahuripan (or Kediri) in 1037 AD prospered under his wise governance, especially with external trade, the king also promoted arts and literature. “Arjuna Wiwaha” (Arjuna’s marriage), written at that time and reputed as one of the most beautiful pieces among numerous *kakawin*, is said to have depicted Airlangga’s life on the model of a part of the Mahabharata. Airlangga’s image can be seen in some statues that remain to date.
+
+On his retirement in 1041 AD, Airlangga divided his kingdom into two parts, the western Panjalu (Kediri) and the eastern Janggala for his two sons, but the latter was annexed to the former in the early 12th century because of stagnation, while the former continued to flourish. The Kediri Dynasty was most prosperous during the reign of the 3rd king, Jayabaya (1135–57), as written in *Representative answers [about the region] beyond mountains* (嶺外代答, *Lingwai daida*) in Southern Sung Dynasty China as “Java is the second richest among foreign countries next to Tajik (Saracen)” [^(18)](#part0006_split_001.html_in1fn18). Under the protection of Jayabaya who was worshipped as an incarnation of god, such great *kakawins* as Bharatayuddha, Krsnayana and Bhomantaka that were most immortal in the history of Javanese literature were written.
+
+The last king of Kediri, Kertajaya (1185–1222) was a tyrannic and brutal man who was hostile to religious leaders. Tunggal Ametung, the lord of Tumapel, the former capital of Janggala, was also an oppressive man who persecuted unfavourable monks and imposed heavy taxes on peasants. A hero appeared in such a scene: a young man named Ken Arok who came from *sudra*, or the lowest Hindu caste. He contrived a coup to assassinate Tunggal Ametung, married Lady Ken Dedes, whom Ametung had kidnapped and made his wife, eventually defeated Kediri, and founded the Singasari Dynasty at the present-day Malang to reign under the name of King Rajasa. The life of Ken Arok was written in the aforementioned chronicle, *Pararaton* and the story was passed down from generation to generation. Although Ken Arok ruled the kingdom wisely (1222–47), he was murdered by Anusapati, the son of Tunggal Ametung who had been in the womb of Ken Dedes. Despite the repeated assassination of the kings, the kingdom itself continued to exist and fine temples (or mausolea) were built. The statue of Prajnaparamita, unearthed in the Singasari temple complex, for which the image of Ken Dedes, the daughter of an esteemed Buddhist monk, Purva, and reputed perfect beauty, was said to have been modelled for Kwan-non (or *Guan Yin*, Bodhisattva of Compassion) praying for perfect wisdom, is now held in the National Museum in Jakarta as a masterpiece and displayed for the public. It would not be exaggerated to say that this statue was the best piece among all Javanese carvings, at least from the present writer’s point of view.
+
+The 5th king of Singasari, Kertanegara led the country to prosperity and thrice rejected the demand of Khubilai Khan to be subordinated, as mentioned previously, but was murdered in May 1292 in the coup d’etat by Jayakatwang, Lord of Kediri under the control of Singasari, who tried to revive the Kediri Dynasty. Jayakatwang himself was killed in November of the same year by Yuan’s troops despatched by Khubilai with one thousand junks. It was Raden Wijaya, a descendant of Ken Arok and Ken Dedes and the son-in-law of Kertanegara, who pretended to be cooperative but attacked and defeated Khubilai’s army. Raden Wijaya founded Majapahit, which became the strongest kingdom in Javanese history in 1293.
+
+The 4th king of Majapahit, Hayam Wuruk, married Paduka Sori, his cousin, and made her queen several years after the “Tragedy of Bubat”. Under the reign of Hayam Wuruk, Majapahit developed with the service of Premier Gajah Mada and the kingdom’s hegemony ranged over the whole area of present-day Indonesia, including Sumatra, Kalimantan (Borneo), Sulawesi (Celebes), Bali and eastern islands, and West New Guinea, and also extended to the Malay Peninsula[^(19)](#part0006_split_001.html_in1fn19). The situation in Java at that time can be perceived from *Desawarnana* (also called *Nagarakertagama*) written by Mpu Prapanca who accompanied Hayam Wuruk’s inspection tours and *The Overall Survey of the Ocean Shores* (瀛涯勝覧, *Ying ya sheng lan*, 1416)[^(20)](#part0006_split_001.html_in1fn20) by Ma Huan who attended the voyage of Zheng-He (鄭和) in the Ming Period China, as well as fine buildings and sculptures left in the capital of Majapahit (the present-day Trowulan), Kediri, Panataran and other places.
+
+After the death of Hayam Wuruk in 1389, Majapahit gradually declined due to troubles with the succession of the throne and due more to the propagation of Islam. In *The Overall Survey of the Ocean Shores*, it was written that “There are three kinds of people in this country, Moslems who came from western countries for trade, Chinese who were exiled from Canton, Quanzhou, etc., and natives who worship the heresy [Hinduism]”, implying that Islam had significantly spread by the early 15th century. The lords in Demak, Jepara, Gresik and Tuban on the north coast of Java began to convert themselves to Islam and controlled the trade independently from Majapahit, and Demak Kingdom, the first Islamic kingdom in Java, was founded by Raden Patah in ca. 1475. Although Demak flourished by the trade with Malacca, they lost their power after the fall of the latter in 1511 to the hand of Alfonso de Albuquerque, the Governor of the Portuguese India, as written in the book of Tome Pires[^(21)](#part0006_split_001.html_in1fn21). Majapahit Kingdom is generally considered to have perished after the reign of Brawijaya VI (1478–98). Around that time, nobles of Majapahit took refuge with a number of books and cultural heritages of Java to Bali where the Islamic power did not reach. All copies of literature and history books written before the Majapahit period remained in Bali and Lombok Island (located east of Bali), thanks to their transportation.
+
+In 1584, Panembahan Senopati, a descendant of the Majapahit royal family, unified small kingdoms that had arisen and rivalled each other after the death of Trenggana (1522–48), the 3rd King of Demak, and founded the New Mataram Kingdom (or Sultanate Mataram) in Pajang (near the present-day Solo), calling himself the Sultan. Thus, the centre of administration and culture of Java returned to Central Java. The 3rd king, Sultan Agung Hanyokrokusumo (1613–45) was a great ruler. He conquered the whole area of Java Island, apart from the western half of West Java and a little part of East Java and, in 1628–9, twice campaigned to attack Batavia, which the Dutch had built by defeating the Bantam–English alliance in 1919, although the result was in vain.
+
+In the mid-18th century (1755 AD), Mataram Kingdom was divided into two for the Susuhunan Family in Solo and the Sultan Family in Yogyakarta, arranged by the arbitration of VOC, after the three-time Wars of Succession[^(22)](#part0006_split_001.html_in1fn22). Although it was one side of history that the division of the kingdom had enhanced the presence of the Dutch in Java, it was undeniable on the other side that kings and nobles were freed from military matters and became able to concentrate on the developing of their own arts and culture. It was in the courts of Solo and Yogyakarta that *wayang kulit* was made sophisticated, the human-played *wayang wong* (or *wayang orang*) was created and *selimpi* and *budoyo*, both the most noble court dances, were born. In the area of industrial arts, the design and the process of *batik* (dye-coloured fabric indigenous to Java) was refined, as we can see the products today.
+
+In 1744, Baron van Imhoff, the governor-general of VOC, built a mansion at Pakuan (the present-day Bogor), the former capital of Pajajaran Kingdom that had perished in 1579 and named the place as Buitenzorg (*lit.* care-free village), which later in 1870 became the official residence of the governor-general of the Dutch East Indies.
+
+The aftermath of the Napoleonic War in Europe extended to Java. In 1808, General Herman Willem Daendels, was despatched from the French-occupied Holland, to defend the territory from the anticipated attack by the English. He reformed Batavia by abandoning the fort near the port and constructing the new city centre at Weltevreden, eight kilometres to the north, and prepared a defence line in Meester Cornelis (the present-day Jatinegara), another twenty kilometres to the south. He also founded a fortified city, 180 kilometres east by southeast of Batavia, in the basin of the present-day Bandung surrounded by mountains. In addition, he ordered the construction of an 800-kilometre long post road, De Groote Postweg (locally, Jalan Pos Raya) across Java Island from Anyer in the west end to Panarukan in the east end. Although Daendels had achieved all these undertakings within two years, at the expense of 20,000 lives, he was relieved from his post in May 1811, as his administration did not run smoothly because of his fierce personality, and it was General Jan Willem Janssens who faced, and surrendered, to a British Army, which actually came to occupy Java three months later, led by Lord Minto. The person who ruled Java was Stamford Raffles, Lieutenant Governor of English India, who later founded Singapore. Although his government introducing the British systems was not necessarily successful, the fact that he promoted studies of the relics of ancient Javanese Kingdoms, such as Borobudur, by appointing himself the President of the Royal Batavian Society of Arts and Sciences and authored the great book, *The History of Java*, was remarkable.
+
+When the restoration of Java and its dependencies to the Netherlands was agreed in the Peace of Vienna in 1815, King Willem the First decided to govern the East Indies by the hand of the government, not by entrusting the administration to such a company as the former VOC that had become bankrupt in 1799\. Overcoming the rebellion of Diponegoro, the so-called Java War (1825-30), the Dutch East Indies steadily developed and became the most prosperous country in Asia. Although the present Indonesia is known as one of the world’s richest countries in terms of natural resources, the economic base at that time was the plantation industries which the Dutch had fostered. The result was that “The Dutch are indirectly making money out of Java, but they are letting the natives make money, too.”[^(23)](#part0006_split_001.html_in1fn23) In the beginning of the 1900s, an Ethic Policy was implemented by order of Queen Wilhelmina,.and the education, medical care and the welfare of the native people was greatly enhanced. In the constitution of 1922, East Indies, as well as Dutch Gyuana (Surinam) and Curaçao Island, was given the equal status as the Netherlands.[^(24)](#part0006_split_001.html_in1fn24)
+
+Looking back at the long history of Java, one notices that all kingdoms that rose and fell in this island belonged to the native people, apart from such early ones as Salakanagara and Tarumanagara, which were founded by immigrants from India. In fact, the bloodline of the present royal family in Solo and Yogyakarta dates back to Ken Arok and Ken Dedes of the 13th century. The culture and customs brought by Chinese and Moslem immigrants in the course of history were absorbed and assimilated among natives. It is symbolic that the culture of the Hindu–Buddhism age was preserved after the Islamisation, as wayang is loved by Javanese people today. It is remarked that the Dutch, who had set up their trading post at Java in the early 17th century and became the suzerain of the East Indies in the beginning of the 19th century[^(25)](#part0006_split_001.html_in1fn25), did bring their European civilisation, but never imposed their own culture, paying respect to and even protecting the local heritage. This was quite in contrast to what happened in Spanish colonies, for instance, the Philippines in Asia, let alone those in Middle and South America, where the *conquistadors* made maximum efforts to change everything local, even the mentality of native inhabitants. Under the Japanese occupation (February 1942–August 1945) during the Second World War, the lands of Java and other territories of the East Indies were impoverished and the people suffered all sorts of privations, but they managed to avoid the Japanisation of their culture.
+
+After the Second World War, the political environment of Java saw a drastic change. During the period of the so-called Indonesian Revolution, from the declaration of the independence of Indonesia on the 17th August 1945 to the agreement for the independence on the 27th December 1949 in the Round Table Conference in Den Haag, the independence armies based in Central Java vehemently engaged against the Dutch administration. The first president, Soekarno, had inspired nationalism and nationalised the enterprises of Dutch capitals in 1957–8, but the age of his “Guided Democracy” on the tripod of Nasakom (i.e. Nasionalisme, Agama (Religion = Islam) and Komunisme) was ended by the Incident of 30th September 1965 in which six cadres of the national army were assassinated in a coup d’etat and Colonel Oentoeng and communists who were charged with the incident were purged. Suharto, who usurped the power on 11th March the following year, becoming the second president in 1967, started the so-called New Order and a certain economic growth was achieved, but Suharto gradually became despotic and his regime collapsed in 1998 during the Asian Economic Crisis.
+
+The modern history of Indonesia is vigorously argued. Although the present writer has some insights behind the politics, which are not written in books, rather obtained through his experience of living in the country, they are not within the scope of this book. This writer would just say that the mentality of Javanese and Sundanese people to value tradition has never been affected in spite of the drastic changes of the country’s situation. They respect monarchs in Solo and Yogyakarta, esteem the elders and love cultural heritages such as wayang (shadow play).
+
+The time period and the location, as well as the major content, of the following six main chapters are as follows:
+
+Chapter 1\. Jagatara – The Destination of Haru
+
+*(17th c./The present-day Jakarta)*
+
+• The legend of Haru sung in the pop song ‘The Nagasaki Story’
+
+• An account in *Nagasaki Night Tales* by Nyoken Nishikawa
+
+• Records in the archives in Den Haag and Batavia
+
+• The situation of 17th-century Batavia where Haru arrived
+
+• Jan Pieterszoon Coen, the founder of Batavia
+
+• A fable of Princess Tanuraga of Pajajaran and Mur Jangkung (Jan Coen)
+
+• Jakarta Map (two parts)
+
+Chapter 2: Jagatara Tales
+
+*(17th*–*20th c./The present-day Jakarta)*
+
+• Legends of Si Jagur, a famous 17th-century cannon in Jakarta
+
+• Unsuccessful coup d’etat by Pieter Erberveld in the 18th century
+
+• The infrastructure of pre-war Java
+
+• The insurrection of the Chinese
+
+• The National Museum of Indonesia, the oldest museum in Asia
+
+• Several spots that retain the atmosphere of Old Batavia
+
+• Goods of Jagatara origin in Japan
+
+Chapter 3: Ancient Stone Monuments – The Prasasti of Tarumanagara
+
+*(4th*–*7th c./West Java)*
+
+• Stone inscriptions of Tarumanagara prospered in the 4th–6th centuries
+
+• A consideration on the “Aruteun Country”, written in the Chinese Book of Sung, for which no established theory was available
+
+• Remains of an ancient game arena and foundation stones in a suburb of Bogor (so far not written in books)
+
+• A consideration on the ancient eruption of Mt. Krakatau
+
+• [Chapter 3](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8) Appendix (1): Hindu Calendar/Saka Calendar
+
+• [Chapter 3](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8) Appendix (2): List of Kingdoms in West Java
+
+Chapter 4: Pajajaran Kingdom – The Spiritual Home of Sundanese People
+
+(*7th*–*16th c./West Java)*
+
+• Batu Tulis stone inscription of Pajajaran remaining in Bogor
+
+• Achievements of King Sri Baduga, the founder of Pajajaran
+
+• Several pieces of legendary literature on King Siliwangi (alias Sri Baduga)
+
+• The fall of Pajajaran Kingdom by the attack of Moslems
+
+• Pusaka (royal treasures) of Pajajaran held in the Sumedanglarang Museum
+
+• Galuh Kingdom founded in the east part of West Java
+
+• The Tragedy of Bubat in which a Sundanese king and his family members were killed in the suburb of Majapahit, East Java
+
+Chapter 5: Mataram where Gods and Buddha Reside
+
+*(8th*–*11th c./Central Java)*
+
+• Borobudur and other Buddhist temples built by the Sailendra
+
+• Prambanan and other Hindu temples built by the Sanjaya
+
+• Other religious constructions
+
+• A consideration on the relationship between the undefined Ho-ling kingdom and the Sailendra/Sanjaya dynasties
+
+• [Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8) Appendix: Loro Jonggrang Legends
+
+Chapter 6: Flowers of Java – Poetry and Theatre
+
+*(11th*–*19th c./East Java and Central Java)*
+
+• Wayang kulit, the indigenous Javanese shadow play, and various derivative plays
+
+• Several pieces of *Kakawin* poetry served for the script of wayangs
+
+• Kingdoms prospered in East Java and their relics
+
+• A revolutionary man, Ken Arok, and his wife, Ken Dedes, whose lineage persists to the present royal line
+
+• Mongolian expedition to Java and the founding of Majapahit, the strongest kingdom in the history of Java
+
+• The propagation of Islam and the fall of Majapahit
+
+• The efflorescence of literature in East Java
+
+• [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8) Appendix: Jayabaya Prophecies
+
+### **Notes for Introduction**
+
+________________________
+
+[¹](#part0006_split_000.html_iin1fn1) T. S. Raffles, *The History of Java*, London 1817/reprint: Oxford University Press, Singapore 1988. During the Napoleonic Wars, Thomas Stamford Raffles was appointed the lieutenant governor of Java and its dependencies by the English East India Company and stayed in Java in 1811–15.
+
+[²](#part0006_split_000.html_iin1fn2) The name of the computer programming language was allegedly given in connection with an informal American word, “java”, that originated from the fact that coffee was produced in the Island of Java.
+
+[³](#part0006_split_000.html_iin1fn3) The original Ramayana (called Valmiki Ramayana) dates back to the 5th to 4th centuries BC. The Ramayana composed in the poetic *kakawin* style in 9th century Java is said to have been based on the *bhatti kavya* or *ravana vadha* version Ramayana of the 6th to 7th centuries’ origin. (Ref. Kodaganallur Ramaswami Srinivasa Iyengar, *Asian Variations in Ramayana: Papers Presented at the International Seminar on Variations in Ramayana in Asia: Their Cultural, Social and Anthropological Significance,* New Delhi, January 1981 (Google Books). In the Ramayana story, the island where the abducted Princess Sita (Sinta in Java) was finally discovered was Lanka (Alengka) Island.
+
+[⁴](#part0006_split_000.html_iin1fn4) Purwadi, *Sejarah asal-usul tanah Jawa*, Persada, 2004\. King Isaka is generally known as Aji Saka, the year of his arrival (or his death) was set as the first year of the Saka Calendar, which was created by himself (*See,* text in p.15).
+
+[⁵](#part0006_split_000.html_iin1fn5) E.g. Russell Jones, “Earl, Logan and Indonesia”, In *Archipel*. Volume 6, 1973\. 93–118.
+
+[⁶](#part0006_split_000.html_iin1fn6) Alfred Russell Wallace, “On the Physical Geography of the Malay Archipelago”, *Journal of the Royal Geographical Society of London*, Vol. 33 (1863), pp. 217-234.
+
+[⁷](#part0006_split_000.html_iin1fn7) Alfred Russel Wallace, *The Malay Archipelago (1869)*, Oxford University Press, Singapore 1985.
+
+[⁸](#part0006_split_000.html_iin1fn8) J. R. Logan, *J. Indian Archipelago* IV. 1850, 254 / In *Oxford English Dictionary, 2nd Edition, Version 4.0.*
+
+[⁹](#part0006_split_000.html_iin1fn9) East Indies was a geographical term that originally included Hindustan, Further India, and the islands beyond, but the use became restricted to denote the Malay Archipelago. This term is opposed to the West Indies or Central American islands. East India was used for the names of the English and the Dutch companies established in 1600 and 1603, respectively, for their trading activities in Asia.
+
+[^(10)](#part0006_split_000.html_iin1fn10) To the present writer’s knowledge, the first literature in which these words appeared was: “The Description of Java Major, and the Manner and Fashions of the People, both Javans and Chineses, Which Doe There Inhabit”, by Edmund Scott in William Foster (Ed.), *The Voyage of Henry Middleton to the Moluccas, 1604*–*1606*, Hakluyt Society, London 1943 (in James R. Rush, *Java: A Travellers’ Anthology*, Oxford University Press 1996).
+
+[^(11)](#part0006_split_000.html_iin1fn11) The Italian words, from: Da’ torchi di G. Pagani, *Il milione di Marco Polo: testo di lingua del socolo decimoterzo ora per la prima volta pubblicato ed illustrato dal conte Gio. Batt. Baldelli Boni, Vol.1*, Firenze 1827.
+
+[^(12)](#part0006_split_000.html_iin1fn12) *The travels of Marco Polo*, *translated into English from the text of L. F. Benedetto by Prof. Aldo Ricci, with an introduction and index by Sir E. Denison Ross*, G. Routledge & Sons, London 1931\. In this edition, the Italian words, *Della piccola isola di Iava*, were translated as “The island of Java the Lesser”. Google Books. In Japan, the book of Marco Polo is generally known as “Touhou Kenbunroku” (*lit.* Record of Experiences in the Orient), ever since first translated by Yasutaro Sano, and the original title, *Il Milione*, is almost completely forgotten, although the Japanese name properly represents the contents. In Europe, too, not all friends of the present writer remember the original title.
+
+[^(13)](#part0006_split_000.html_iin1fn13) Nagoya University, *Hou Han Shu 76, Nan man xi nan yi lie zhuan* [*The book of the Later Han,* Legends of Southwestern Barbarians] (後漢書列傳第七十六・南蠻西南夷列傳), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/houhan076.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/houhan076.html).
+
+[^(14)](#part0006_split_000.html_iin1fn14) Atja, (Ed.) S. Ekadjati, *Pustaka rajya rajya i bhumi Nusantara, suntingan naskah dan terjemahan I 1*, Bagian Proyek Penelitian dan Pengkajian Kebudayaan Sunda (Sundanologi), Direktorat Jenderal Kebudayaan, Departemen Pendidikan dan Kebudayaan, 1987\. One of the thirty chronicles edited in the beginning of the 18th century in Cirebon by Panitia Pangeran Wangsakerta (Prince Wangsakerta Committee).
+
+[^(15)](#part0006_split_000.html_iin1fn15) Wirasutisna, Haksan, *Kidung Sunda I*–*II*, Departmen Pendidikan dan Kebudayaan Jakarta: 1980; Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967; P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague, 1974). The original book is supposed to have been written around 1550 by an anonymous author.
+
+[^(16)](#part0006_split_000.html_iin1fn16) Serat Pararaton atau Katuturanira Ken Angrok (*The Book of Genealogy or the Recorded Story about Ken Angrok)*. A book probably written in 1481–1600 by an anonymous author. The English edition: I. Gusti Putu Phalgunadi, *The Pararaton: A Study of the Southeast Asian Chronicle*, Sundeep Prakashan, New Delhi, India, 1996.
+
+[^(17)](#part0006_split_000.html_iin1fn17) Nagoya University, *Jiu Tang Shu* [*Book of Tang*] *Vol. 197, Legends147, South/SouthwestBarbarians,* 945 AD (舊唐書卷一百九十七・列傳第一百四十七・南蠻/西南蠻 945 AD), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/jiutangshu197.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/jiutangshu197.html); *Nagoya University, Tang Shu* [*The New Book of Tang*] *Vol. 222—1/2, Legends 147, Foreign Countries 2*) 1060 AD (新唐書卷二百二十二下・列傳第一百四十七下・南蠻下‹), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html).
+
+[^(18)](#part0006_split_000.html_iin1fn18) 周去非撰, 嶺外代答卷二 (Zhou Qufei [Ed.]. *Ling wai dai da Vol.2* [*Representative answers [about the region] beyond mountains*], 1172–78), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/lingwaidaida02-3.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/lingwaidaida02-3.html).
+
+[^(19)](#part0006_split_000.html_iin1fn19) It is generally said that Majapahit’s domain covered Sumatra, Kalimantan (Borneo), Sulawesi (Celebes), Bali and eastern islands, and West New Guinea, but, from the fact that no remains of military installations and weapons are found, the kingdom is considered to have controlled these areas economically and administratively, rather than conquered with military force (Private communication from Mrs. Ekowati Sundari, M.A., The National Museum of Indonesia).
+
+[^(20)](#part0006_split_000.html_iin1fn20) Nagoya University, Ma Huan, *Ying yai Sheng lan* (馬歡, 瀛涯勝覽), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html).
+
+[^(21)](#part0006_split_000.html_iin1fn21) Tome Pires, Armando Cortesao (edit), *The Suma Oriental of Tome Pires and the Book of Francisco Rodriguez Volumes 1 and 2*, Hakluyt Society, London, 1944 (Google Books)/Japanese translation by Yu Aida, Koji Iizuka, Minoru Izawa, Seiichi Izumi, Seiichi Iwao: Tome Pires, *Tohoshokokuki (Daikokai Series V)*, Iwanami Shoten 1966 (トメ ピレス (会田由, 飯塚浩二, 井沢実, 泉靖一, 岩生成一訳)「東方諸国記 (大航海時代叢書V)」, 岩波書店 1966).
+
+[^(22)](#part0006_split_000.html_iin1fn22) The Gianti Agreement (13 February 1755). In 1757, the Mangkunegoro Family branched from the Susuhunan Family, Solo, and in 1812 the Paku Alam Family branched from the Sultan Family, Yogyakarta.
+
+[^(23)](#part0006_split_000.html_iin1fn23) John C. van Dyke, *In Java and the Neighboring Islands of the Dutch East Indies*, Charles Scribner’s Sons, New York-London 1929\. The author continued: “Moreover, they are putting back into the country millions in development. “They are trying to establish a just and equable government and a prosperous colony. To that end they are confirming the land rights of the natives, introducing improved methods of irrigation and husbandry, conserving the forests, establishing native schools and universities, building cities, roads and bridges, opening up new transportation routes, and doing a thousand and one things looking to the betterment of town and country. The result is the natives are well fed, well housed and dressed, look happy, seem contented. And Java is a joy to the traveller, the most delightful of all the tropical countries. The Dutch must receive the credit for much of this. Why not say so without reservation?”
+
+[^(24)](#part0006_split_000.html_iin1fn24) R. B. Cribb, Audrey Kahin, *Historical Dictionary of Indonesia*, Scarecrow Press, 2004; Bernard Hubertus Maria Vlekke, *Nusantara: A History of the East Indian Archipelago*, Harvard University Press, 1945.
+
+[^(25)](#part0006_split_000.html_iin1fn25) When the Dutch officially colonised the East Indies is not clearly known to the present writer. Although the asset of the bankrupt VOC by the government took place in 1800 and the foundation of the Ministry of Colonies was in 1806, it was during the time when the Netherlands were under the control of Napoleonic France, and “Java and its dependencies” were occupied by the British between 1811and 1816\. It was probably after the Peace of Vienna that the colonial government substantially started to function in 1816 with the appointment of Godert van der Capellen as the governor-general. The so-called colonial rule may be regarded to have ended in 1922 when the East Indies, as well as Dutch Guiana and the Curaçao, was constitutionally given the same status as the Netherlands.
+
+## **Introduction Appendix:
+Chronology of Java**
+
+| AD | West Java | AD | Central and East Java |
+|  |  | 78 | Aji Saka came from India, brought civilisation (Buddhism, letters, calendar, etc.). Their fate unknown. |
+| 130 | Dewawarman I from India founded Salakanagara in west West Java (→363). |  |  |
+| 358 | Jayasinghawarman, succeeding the properties of Salakanagara, established Tarumanagara in central West Java (→669). Several pieces of stone monuments remain to date. The Holotan Country (呵羅單國) in *The Book of Sung* (420–79) is assumed to be another name of Tarumanagara with the capital in the upper stream of Ciaruteun (by the author). The country appears in *The Old Book of Tang* (舊唐書, 618–19) as 多羅磨. |  |  |
+| 526 | Manikmaya, a son-in-law of the 7th King of Tarumanagara, Suryawarman, founded Kendan Kingdom to the east of present-day Bandung. |  |  |
+| 612 | Wretikandayun, the 4th King of Kendan moved the capital to Galuh in east West Java. |  |  |
+|  |  | 648 | Kartikeyasingha from India built Kaling. The country (訶陵國) in *The Old Book of Tang* is assumed to be this country (by the author). The capital was probably in north Central Java. |
+| 666 | Tarusbawa, a son-in-law of the 12th king of Tarumanagara, Linggawarman, founded Sunda Kingdom (→1482). The capital was located probably around present-day Bogor (supposed by the author). |  |  |
+|  |  | 674 | Kartikeyasingha died. His wife Sima (悉莫) became the queen. |
+| 709 | Sena, a prince of Galuh, was throned. His wife was Sannha, a granddaughter of Queen Sima of Central Java. Sanjaya Harisdarma was born. |  |  |
+| 723 | Sanjaya became the 2nd King of Sunda, marrying a granddaughter of the kingdom’s founder. |  |  |
+|  |  | c725 | Selendra (probably from Sumatra) founded Sailendra Kingdom. |
+|  |  | 732 | Sanjaya moved from West Java, married a great-granddaughter of Queen Sima, founded Sanjaya Kingdom. |
+|  |  | 745 | Gajayana, a great-grandson-in-law and brother-in-law of Sanjaya, founded Kanjurhan Kingown in East Java around the present-day Malang. He is supposed to be Ji-Yan (吉延) written in *The New Book of Tang* (新唐書, 1060). |
+|  |  | c752 | Banu, the 2nd King of Sailendra, throned. |
+|  |  | 760 | Panakaran, the 2nd King of Sanjaya throned. His wife was a Sailendra princess. In 778, the construction of Kalasan Temple started (finished year unknown). |
+|  |  | 782 | Indra, the 3rd King of Sailendra throned. During his reign, Mendut Temple completed, the construction of Borobudur Temple started. |
+|  |  | 812 | Samaratungga, the 4th King of Sailendra. His wife was Princess Tara of Sriwijaya. |
+|  |  | 824 | Borobudur Temple completed. |
+|  |  | 828 | Princess Pramodawardhani of Sailendra married Rakai Pikatan of Sanjaya. |
+|  |  | 832 | Samaratungga died. Sailendra Kingdom was united with Sanjaya. |
+|  |  | 838 | Rakai Pikatan throned. |
+|  |  | 850 | Prince Bharaputra of Sailendra feuded with Pikatan, his brother-in-law, moved to Sumatra, the country of his mother, and called himself the King of Sailendra. |
+|  |  | 856 | Prambanan Temple completed. |
+|  |  | 898 | Rakai Kayuwangi (Dyah Balitung) throned. Performance of wayang and dances, chanting of poems recorded. |
+|  |  | 929 | Mpu Sindok of Sanjaya moved the capital to Medang in central East Java, opened the Isyana Dynasty. |
+|  |  | 1006 | Medang was attacked by Sriwijaya and burnt. Prince Airlangga, visiting from Bali, took refuge with Princess Lesmi of Medang. |
+|  |  | 1019 | Airlangga raised an army, conquered the disordered country and was made the King of Java. |
+|  |  | 1035 | Kakawin Arjunawiwaha, a paean for Airlangga, written. |
+|  |  | 1037 | Airlangga founded Kediri Kingdom in Kahuripan, west East Java. He promoted literature. |
+|  |  | 1135 | Jayabaya became the 3rd King of Kediri. Literature prospered. Bharatayuddha, Krsnayana, Bhomantaka, etc. written. |
+|  |  | 1185 | Kertajaya, a tyrant, throned. |
+|  |  | 1222 | Ken Arok killed Tunggal Ametung, a despotic lord of Tumapel (around the present-today Malan), married Ken Dedes whom Ametung had abducted. Arok also conquered Kediri and opened the Singasari Dynasty. |
+|  |  | 1247 | Ken Arok was assassinated by Anusa Pati, a posthumous son of Ametung. |
+|  |  | 1268 | Kertanegara, the 5th King of Singasari. The kingdom most prospered. The king twice rejected Khubilai Khan’s demand to be a subject country. |
+| 1292 | Marco Polo stayed in Sumatra (Java Minor), heard of Java Major (Java). After his return to Venice, he authored *Il Milione*. | 1292 | In May, Jayakatwang, Lord of Kediri under the control of Singasari, assasinated Kertanegara. Singasari ended. |
+|  |  | 1292 | In November, Khubilai Khan sent an army to attack Java. Raden Wijaya, a geat-grandson of Arok and Dedes, defeated Huan’s army and founded Majapahit Kingdom. |
+|  |  | 1328 | Lady Tribuana Tunggadewi throned as the 4th monarch (queen) of Majapahit (1351). Panataran Temple developed. |
+| 1333 | Kawali Kingdom branched from Sunda. Capital in east West Java. |  |  |
+|  |  | 1350 | Hayam Wuruk, the 4th King of Majapahit. The country’s prestige enhanced with the aid of Premier Gajah Mada. A history/topography book, Desawarnana (Nagarakertagama) written. |
+| 1355 | The Tragedy of Bubat. Royal party of Kawali, led by the 4th king, Linggabuana, who visited Majapahit for the wedding of Princess Dyah Pitaloka got into a battle, tricked by Gajah Mada, and all men died. Ladies committed suicide. | 1355 | Hayam Wuruk asked for the hand of Princess Dyah Pitaloka, a daughter of Liggabuana, the 4th King of Kawali. |
+| 1355 | Suradipati, brother of the king succeeded and retained the state of Kawali Kingdom. |  |  |
+|  |  | 1389 | Hayam Wuruk died. Struggles to the succession of throne followed. |
+|  |  | 1416 | Detailed description on Majapahit in Ma Huan’s *The Overall Survey of the Ocean Shores* (1416). |
+|  |  | 1475 | Raden Patah founded the first Islamic kingdom, Demak. |
+|  |  | 1475 | Majapahit Kingdom perished. |
+| 1482 | Sri Baduga (alias Siliwangi), the son-in-law of the 6th King of Kawali, Dewaniskala, unified West Java and founded Pajajaran Kingdom. The capital in Pakuan. Long poem, *Pujangga Manik*, and many Siliwangi stories written. |  |  |
+| 1513 | The first Portuguese ship arrived at Sunda Kelapa. |  |  |
+| 1521 | Surawisesa became the 2nd King of Pajajaran. |  |  |
+| 1522 | Pajajaran–Portugal Friendship Treaty (to defend against Moslems, not functioned). |  |  |
+| 1526 | Banten fell to the hand of Moslems led by Fatahillah. |  |  |
+| 1527 | Sunda Kelapa fell. |  |  |
+| 1533 | Surawisesa erected a stone monument (Batu Tulis) to the honour of Sri Baduga. |  |  |
+| 1552 | Syarif Hidayat (a grandson of Sri Baduga and Moslem) at Cirebon declared independence from Pajajaran. |  |  |
+| 1579 | Pakuan fell. Pajajaran perished. Royal treasures were transported and hidden in Sumedanglarang. |  |  |
+|  |  | 1584 | Panembahan Senopati, a descendant of Majapahit, called himself Sultan and founded the New Mataram Kingdom at Pajang (near Solo). |
+| 1595 | The first Dutch ship arrived at Banten. |  |  |
+| 1603 | Dutch East India Company (VOC) founded. |  |  |
+| 1611 | VOC built a fort at Jayakarta. |  |  |
+|  |  | 1616 | Sultan Agung Hanyokrokusumo throned. New capital at Kartasura. Territory expanded. |
+| 1619 | Anglo-Banten Ally occupied the Dutch fort at Jayakarta. Governor-General P. J. Coen of VOC regained. |  |  |
+| 1621 | Jayakarta renamed as Batavia. Batavia Fort constructed. Batavia city plan implemented. |  |  |
+| 1628–29 | Batavia twice withstood the attacks of Sultan Agung of Mataram. | 1628–29 | Sultan Agung campaigned to Batavia twice (both failed). |
+| 1632 | Kruiskerk (Cross-church) erected. |  |  |
+| 1640 | Dutch and English descendants in Japan, including Haru, deported from Nagasaki, arrived at Batavia. |  |  |
+| 1698 | *The Book of Kings in the Archipelago* and other series of chronicles compiled in Cirebon by Prince Wangsakerta and his team. |  |  |
+| 1710 | New Batavia City Hall (The present-day Jakarta History Museum) constructed. |  |  |
+| 1722 | The treason of Pieter Erberveld (abortive). |  |  |
+| 1740 | The riot of Chinese. |  |  |
+|  |  | 1743 | After effect of Chinese riot in Batavia (migration of Chinese). Paku Buwono II moved his palace to Surakarta (Solo). |
+| 1744 | Baron van Imhoff opened his estate in Buitenzorg (the present-day Bogor). It became the governor-general’s official palace in 1870. |  |  |
+|  |  | 1755 | After the Java Succession Wars, the New Mataram Kingdom was divided into the Susuhunan’s House in Solo and the Sultan’s House in Yogyakarta. The country stabilised. In both houses, history, literature and art flourished. Wayang kulit sophisticated, stage-play wayang wong and court dances (serimpi and budoyo) born. |
+| 1799 | VOC resolved. |
+| 1808 | Governor-General Herman Willem Daendels arrived, despatched by the French-controlled Holland. Reformed Batavia, constructed the Great Post Road across Java Island. |
+| 1810 | The strategic Bandung City constructed. Daendels dismissed and replaced by Jan Willem Janssens. |
+| 1811 | An English army under Lord Minto occupied Java. Stamford Raffles, Lieutenant Governor of English India, ruled Java and peripheral islands. |
+| 1815 | East Indies returned to the Dutch according to the Peace of Vienna. Dutch East-Indies Government started. |
+| 1825 | Java War (rebellion of Prince Diponegoro) (→1830). |
+| 1901 | By order of Queen Wilhelmina, Ethic Policy was implemented. The education, medical care and the welfare of the native people greatly enhanced. |
+| 1922 | In constitution, East Indies, as well as Gyuana (Surinam) and Curaçao Island, was given the equal status as the Netherlands. |
+| 1942 | All East Indies territory occupied by the Japanese in the Great Asian War (until the Japanese surrender on 15th August 1945). |
+| 1945 | 17th August, Independence of Indonesia declared (appoved on 27th December 1949 in the Round Table Conference in the Hague). |
+
+**Chapter 1**
+
+**Jagatara – The Destination of Haru**
+
+**Jagatara Letters**
+
+*Rain pours over red amaryllises*,
+
+*Bells ring around the Dutch quarter*.
+
+*Jagatara O-Haru is wet and sobbing*,
+
+*The gong of a departing boat echoes*.[¹](#part0008_split_001.html_fn_1)
+
+It must have been on the eve of the last day of the Great East Asian War that I first heard this song, although that it was on that particular date, 14th August 1945, had no significance. I remember that a peaceful atmosphere was present to celebrate the three-day Buddhist Bon festival that still remained in a remote countryside where my family had evacuated from an air-raided city, allowing young villagers of both sexes to show their amateur plays and songs on the stage temporarily situated in the school ground. The slow and sorrowful melody of the song in a minor key sounded unfamiliar to the ears of a small boy and was imprinted in his mind, as all other songs heard at that time were stirring, military songs. When I asked my uncle about the meaning of the verse of the seven–five syllables, he, a country gentleman who had broad knowledge for a villager, taught me that it was written after the episode of a girl of mixed parentage, called Haru, who once upon a time was born in Nagasaki and was exiled to Java, according to the anti-Christianity policy of the Tokugawa Shogunate government. Although I thought over the fate of the tragic heroine in my infant brain and imagined the scenery of the southern island where palm trees grew as I saw in a “Java stamp” in an album, I never thought of visiting there in the future and living there for some years. In the 1980s, there were several occasions to travel to Indonesia, but I was only fascinated by exotic sceneries and cultural things that I glimpsed in the breaks from work. When I arrived there again in 1990 to stay for a certain period and I thought about my family, which I had left 7,000 kilometres away in Japan, the memory of Haru’s story was suddenly revived. According to a letter from my wife whom I had asked to investigate the details of “O-Haru’s song”, the correct title was ‘The Nagasaki Story’, written by Saburo Umeki and composed by Shunichi Sasaki in 1939, and the song became popular throughout the country. There were three more verses after the one I remembered, which could be translated as:
+
+*2\. Moon cast a pale light over the stained glass.
+Because her father was a foreigner,
+Holding a golden cross in her mind though,
+The girl of her blooming age is melancholic*.
+
+*3\. Night falls over the pavement
+On the hill of Nagasaki,
+Towards the offshore of Deshima[²](#part0008_split_001.html_fn_2),
+The soul of her mother sails on a straw boat*.
+
+*4\. Letters she writes come to Hirado
+From hundreds of miles away,
+Why Jagatara O-Haru does not return?
+The bell of Santa Cruz rings*.
+
+![Illustration](images/00006.jpeg)
+
+The score of ‘The Nagasaki Story’ (Song) The staff notation from Chikusa Publishing’s Free Library. The words were added with reference to Zen-on Kayokyoku Zenshu Vol.1, 2006.
+
+Later, I learnt that the story was mentioned in many books. In his travelogue, *A Book of Southern Countries* published in 1910[³](#part0008_split_001.html_fn_3), Yosaburo Takekoshi, an eminent statesman and historian through the eras of Meiji, Taisho and Showa, wrote his emotion as:
+
+“Batavia where the *Jagatara Letters* written by Princess Jagatara, most informative of the overseas situation in the era of the Shogunate regime, came from, where Japan had a long relationship as the name of Jagatara-imo (potato) originated and where the traditional batiks as valuable as many hundred thousand yen per one square inch were produced, is now underneath my foot!”
+
+![Illustration](images/00007.jpeg)
+
+The cover of the score of ‘The Nagasaki Story’, written by Saburo Umeki and composed by Shunichi Sasaki in 1939\. By courtesy of Mr. M. Miyagawa, Nagasaki Prefecture.
+
+Although Haru was neither a daughter of a noble nor a lord family and the “Princess Jagatara” was just a flowery phrase characteristic to the author known as a rhetorician, she must have been a beautiful girl of mixed parentage. The portrait on the cover of the score of ‘The Nagasaki Story’ painted by an anonymous painter gives us a good image.
+
+Marquis Yoshichika Tokugawa, who visited the same place in 1921, wrote in his famous travelogue, *Journeys to Java*[⁴](#part0008_split_001.html_fn_4), as follows:
+
+“When the Shogunate government banned Christianity in September of the 15th year of Kwan-ei Era [the 16th year of Kwan-ei = 1633 AD], amongst those people who did not agree to convert their religion and were expelled from Nagasaki was a girl called O-Haru. Being home-sick for Japan in exile in the foreign land, she wished to grow plants of her parents’ country to remember her home where she would never visit again. She wrote a letter requesting some seeds and sent it by courtesy of a Dutch kabitan[⁵](#part0008_split_001.html_fn_5). The letter tells us how she was lonely and nostalgic. There must have been many other people who bore a grudge against their fate and whose bones were buried in this soil.”
+
+Although it was an incident that would have been suitable to be adopted to the title of a *joururi* (dramatic narrative) or an *ukiyo-zoushi* (*lit*. illustrated books on fleeting life), neither Monzayemon Chikamatsu wrote a playbook nor Saikaku Ihara published a picture book, unlike the contemporaneous “Kokusenya-gassen” (Coxinga’s battle) in which Watōnai, alias Tei-Seikō (*c. Cheng Cheng-koeng*), born of a Chinese father and a Japanese mother in Nagasaki, fought against Qing in an attempt to revive the Ming dynasty, presumably because they were afraid of the prosecution by the Shogunate government. Probably for reaction, a number of criticisms boiled up after the Meiji Restoration and the reopening of the country.
+
+The tragic story was originally written in *Nagasaki Night Tales (Nagasaki Yobanashi Kusa)*[⁶](#part0008_split_001.html_fn_6), a collective volume of essays authored in 1719 by Nyoken Nishikawa, an astronomer and geographer in the mid-Edo Era, after his retirement. In the prologue of an article entitled “The deportation of the children of Red-hairs[⁷](#part0008_split_001.html_fn_7) – A Jagatara letter attached”, the author wrote that “among eleven male and female descendants of Red-hairs in Nagasaki and Hirdo deported in the 16th year of Kwan-ei Era [1639] was a girl called Haru who was born in Nagasaki and brought up by her relatives. She was beautiful and tenderhearted and good at writing. Three years after her arrival at Jagatara (咬𠺕吧), she was so homesick that she asked a Dutch mail boat to send a letter to Japan”, and cited the so-called “Jagatara-letter of Haru”, which was to be praised later by Takekoshi as one of the finest proses in history.
+
+It was in October, the month of tempest when a bitter storm blew and the evening moon was hidden, that in the pouring shower I left my homeland for a one-way journey to this unknown land. It is far away across the oceans, but my mind can cross over.
+
+The way to Yamato[⁸](#part0008_split_001.html_fn_8) which I think of is distant though I am able to travel in my dream every night.
+
+… (A middle part omitted) …
+
+Please, send me the seeds of pine, Chinese arborvitae, Japanese cedar and belvedere. I am sorry that this letter may not be easily readable because I am writing it being choked with tears. Dawn is near and the summer insects seem to have awakened. I have never worn the clothes of foreigners. How I can be like a barbarian, even though I am in a foreign land. Oh, I miss Japan, I would like to see you.
+
+Haru, from Jagatara
+
+In the epilogue, Nishikawa wrote, “In her nubile age, Haru married a Chinaman and had children. She had frequently sent letters to Japan and died around the 9th year of Genroku [1696] at the age of 76 or 77.”
+
+The original copy of Haru’s letter does not now exist, whereas several pieces of contemporary letters arrived from Japanese deportees remain. Although *Nagasaki Night Tales*, which vividly recorded such events as “The prohibition of the voyage to overseas” in the 12th year of Kwan-ei (1630) and “The deportation of the children of Barbarians” in the next year, is regarded as a reliable historical resource, whether the letter of over 3,000 characters written in a classic style with citations of many phrases from ancient poems and proses had really been produced by a girl of seventeen years of age is said to have already been questioned soon after the death of Nishikawa by his disciple, Saisuke Yamamura, and a famous Dutch-studies scholar, Gentaku Ootsuki.
+
+On the other hand, the aforementioned Yosaburo Takekoshi wrote in an article, entitled “The tragedy of Princess Jagatara” contributed to a journal in 1926, as follows[⁹](#part0008_split_001.html_fn_9):
+
+![Illustration](images/00008.jpeg)
+
+A Dutch Ship in Nyoken Nishikawa’ book. Kyurinsai Nishikawa (Ed.), *Accounts on Foreign Trades* – Enlarged edition Vol. 1-5, Kansetsudō, Kyoto 1708\. Reproduced by courtesy of the Waseda University Library, from: [http://archive.wul.waseda.ac.jp/kosho/i13/i13_00581/i13_00581_0004/i13_00581_0004.pdf](http://archive.wul.waseda.ac.jp/kosho/i13/i13_00581/i13_00581_0004/i13_00581_0004.pdf), by courtesy of the Library.
+
+“Recently opinions that question the real existence of the author [of Haru’s Jagatara Letter] have been raised from the viewpoint that such a skilful letter could not have been written by a young girl, but I am not agreeable. Firstly, a devoted, pure scholar, Nyoken, who made efforts to introduce the situation of the West to people in Japan prior to Hakuseki Arai, was not a kind of person who made an apocryphal work. Secondly, there is no reason that only highly educated scholars can write a letter that can make a deep impression. Even a young girl could touch people’s hearts by her writing brush [or pen] at the extremity of her grief for her love for her homeland, family and friends. Thirdly, the death register of a family which proves the existence of Haru has been discovered by Mr. Koga, my friend.”
+
+With regard to the letter of query in *Nagasaki Night Tales*, Prof. Iwao wrote in 1987 in his book[^(10)](#part0008_split_001.html_fn_10),
+
+“Detailed descriptions regarding the situation of people in Jagatara and the consideration to her close relatives in Nagasaki would have been true. Nishikawa who was 22 years younger than Haru and whose earlier 51 years overlapped with Haru’s life must have heard of the letter or seen it himself. He might have rewritten the letter in such a way as to arouse the interest of audience.”
+
+### **The life of Haru**
+
+While *Nagasaki Night Tales* was the only source of information on Haru in Japan, many documents that prove her to have been a real-life person remained in the Dutch side. In the eras from Meiji to Showa, the pioneer of the history of the Japan–Holland relationship, Dr. Naojiro Murakami, discovered the name of Haru in the list of passengers on *De Breda* (departed Nagasaki in 1639) in the National Archive in Den Haag, and Haru’s marriage certificate and some other documents in the Regional Archive in Batavia[^(11)](#part0008_split_001.html_fn_11). The study of this field was followed namely by professors Madoka Kanai and Seiichi Iwao and other scholars. In particular, Prof. Iwao visited Batavia several times in 1925–39 to survey massive documents and found some contracts and wills signed by Haru herself. Thus, the outline of Haru’s life has been revealed ([Table 1](#part0008_split_000.html_tab1)).
+
+With reference to the study of Prof. Iwao, it is evident that the comments on Haru by Yosaburo Takekoshi, Marquis Tokugawa and others in earlier times were full of speculations and assumptions. *Nagasaki Night Tales* itself seems to have some errors, although it described the truth as a whole. First, the phrase in the prologue that Haru was brought up by her mother's relatives implied that she was an orphan, but her mother was actually alive and embarked on the same boat with Haru and her other daughter, Man (Magdalena). The description that Haru married a Chinaman written in the epilogue was not true as her partner was a young man, named Simons Simonsen, born from a European father and a Japanese mother in Nagasaki and deported to Batavia like Haru. The age of her death was four or five years different, although that might not be important.
+
+Let us dare to see the words of ‘The Nagasaki Story’, which was most influential to popularise the story, although they were written by Saburo Umeki, a writer of *Tokyo Nichi-Nichi Shinbun* (Tokyo Daily Newspaper), for mere entertainment purpose with no academic insight. The writer misunderstood whether Haru’s mother was already dead, probably following the description in *Nagasaki Night Tales*. He imagined that red amaryllises were in bloom, but the flowers must have already wilted as the actual date of their departure was 31st October in the Gregorian calendar. That the bell of Santa Cruz rang was an obvious error. Before the promulgation of the Christianity Prohibiting Edict in 1614, there were more than ten churches in Nagasaki, including the famous Todos os Santoz (existed 1569– 1619), and one church called Santa Crus Temple really existed[^(12)](#part0008_split_001.html_fn_12), but they all must have been deconstructed twenty years earlier than the year of the deportation of Haru and others in 1639[^(13)](#part0008_split_001.html_fn_13).
+
+The ship on which Haru and her party embarked, *De Breda*, named after a town in southwest Holland[^(14)](#part0008_split_001.html_fn_14), departed Nagasaki on 31st October 1639, docked at Zeelandia[^(15)](#part0008_split_001.html_fn_15) in Taiwan and arrived at Batavia on 1st January in the next year. It was a voyage of 4,000 sea-miles distance, which took two months. The passengers included Haru herself, her mother, Maria (Japanese name unknown), her elder halfsister, Man (Magdalena), and other children of Dutch and English fathers and Japanese mothers, the total number being eleven (or thirty-one passengers including other foreigners and their wives, according to the Dutch-side record). Maria registered herself as a widow of a protestant Englishman, not as that of a Catholic Italian, probably because she had thought until the last moment that pretending to be so would give her a chance to be able to stay in Japan, although she and her daughters were eventually deported.
+
+Table 1 Personal history of Haru (Jeronima Marino)[*](#part0008_split_000.html_tfn_1)
+
+| 1625 (Kwan-ei 2) | Born in Nagasaki. Father: Nicholas Marino (an Italian pilot), Mother: Maria (Japanese woman). She registered herself as a widow of an Englishman. Elder sister: Man (Magdalena). |
+| 31.10.1639 (Kwan-ei 16) | Deported to Batavia onboard ship *De Breda* with her mother, sister and the sister’s son. The son was put into the care of someone in Taiwan (because he was too weak to continue voyage). |
+| 1.1.1640 (Kwan-ei 17) | Arrived at Batavia. |
+| 1642 (Kwan-ei 19) | Sent a letter (introduced in *Nagasaki Night Tales*) to Japan. |
+| 22.1.1642 (Kwan-ei 19) | Man (Magdalena) married Buzayemon, a rich Japanese businessman. (Man died probably in 1644.) |
+| 29.11.1646 (Shouho 3) | Married to Simons Simonsen (born in Hirado in 1624, a Junior Merchant of VOC, and had three sons and four daughters[*](#part0008_split_000.html_tfn_1). |
+| 1647 (Shouho 4) | Mother, Maria, died. |
+| 1661 (Kwanbun 1) | Lived in Jonkers Street (according to the will of Michiel Diaz Sobe). |
+| 14.12.1663 (Kwanbun 3) | Simonsen declined to be transferred to Holland. Later, he was promoted to the Harbour Master of Batavia. |
+| 13.2.1665 (Kwanbun 5) | Will signed by Simons and Haru. |
+| 5.1672 (Kwanbun 12) | Simons died. |
+| 7.5.1681(?) (Tenwa 1) | Sent another letter (signed by Haru, widow of Simons) to Japan. |
+| 17.5.1692 (Genroku 5) | Will. |
+| 20.3.1697 (Genroku 10) | Revised the will. |
+| 4.1697 | Died at the age of seventy-four. |
+
+Extracted from: Seiichi Iwao, A sequel to: The study on the Nangyang Japanese town, Iwanami-shoten 1987 (岩生成一「続・南洋日本町の研究」, 岩波書店 1987).
+
+([*](#part0008_split_000.html_tfn1)) Four sons and four daughters, if a child in a baptismal certificate discovered by Ms. Shiraishi is added (Hiroko Shiraishi, *Information of Jagatara O-Haru*, Bensei-shuppan 2001 (白石広子「じゃがたらお春の消息」, 勉誠出版 2001).
+
+![Illustration](images/00009.jpeg)
+
+The sea-route of *De Breda* from Nagasaki to Batavia via Zeelandia (1639). The map, “India quae orientalis dicitur, et insulae adiacentes” by Hendrik Hondius (1597–1651), Amsterdam, was adopted, by courtesy of the National Library of Australia, from the Library’s Item Number RM 174\. The year of print, 1639, coincides with the year of the departure of Haru and other deportees sailed from Nagasaki. The route (estimated) has been added by the present writer.
+
+How was the situation of Jagatara at that time? Twenty years having passed since the Dutch first built a fortress, the port was bustling with arriving and departing ships and the town was developing fast, the population having increased to 8,000 in 1632 from only 2,000 in 1620[^(16)](#part0008_split_001.html_fn_16).
+
+### **The origin of Jagatara**
+
+Let us briefly review the history. The harbour on the mouth of the Ciliwung River, the origin of the present-day Jakarta, was an important port ever since the time of Tarumanagara Kingdom, which prospered in the 4th to 8th centuries, and later called Sunda Kelapa. In the 15th–16th centuries, it was the main outer port of the Pajajaran Kingdom (1482–1579), the capital of which was located in Pakuan (the present-day Bogor), and the direct trade with Western countries started in 1513 when the first Portuguese ship arrived there. It was the time when Moslems who had risen in Central Java and crushed the Majapahit Kingdom and already obtained Cirebon in the northeast part of the Pajajaran’s territory. To prevent the further expansion of the Islamic power, Pajajaran had signed a defence treaty with Portugal in 1522, but the construction of the Portuguese fort had not been finished before the Moslems, led by Fatahillah (alias Faletehan), came to attack Sunda Kelapa in 1527, after seizing Bantam, another good port located in the west part of the Pajajaran’s territory, in the previous year. After that, the Portuguese could not contact the land-locked Pajajaran and continued their activities in the East Indies with their base in Malacca, which they had acquired earlier in 1511 (until it was taken by the Dutch in 1641). The capital of Pajajaran, Pakuan, fell to the hands of Moslems and the kingdom perished in 1579\. In a book published in Ming Dynasty China in 1617, *An Account on the East and West Oceans* (東西洋考) *Vol. 3,* by Chang Hsieh, it is correctly written as:
+
+Kelapa is a dependency of Bantam where one can reach in half-day [from the latter].[^(17)](#part0008_split_001.html_fn_17)
+
+Sunda Kelapa was renamed, by Fatahillah, Jayakarta (literally “big victory”), or Jakarta for short[^(18)](#part0008_split_001.html_fn_18). Jayakarta was corrupted as Jaccatra in Europe and as Jagatara in Japan. The three Chinese characters (咬𠺕吧), which Nyoken Nishikawa applied for Jagatara, was the phonetic transliteration of Kelapa, of Sunda Kelapa, and was of use in Japan to call the town, and often Java, for a long time even after it was again renamed Batavia in 1619.
+
+It was in 1596 when a Dutch ship came to Java for the first time at the port of Bantam. The event was four years earlier than the arrival of *De Liefde* to Japan, wrecked at the shore of Usuki, in the present-day Ooita Prefecture, Kyushu, with twenty-four survived men out of the initial 110 crew members, including Captain Jacob Quaeckernaeck, Jan Joosten, the sailing master, and William Adams, an English-born sea pilot. Jan Joosten was to be remembered by the name of a place, Yaesu, in the present-day Tokyo, whilst William Adams was to become famous with his Japanese name, Anjin Miura. The first voyage of the Dutch to the East Indies was also a hard one as the number of crew who managed to return home was only eighty-seven out of 240 members who were initially on board. Although the amount of pepper and other products obtained was not large, interfered with by the Portuguese, they earned some profit in Holland, urging many small merchant groups to collect funds and despatch fleets. It was soon realised, however, that the provision of large fleets was necessary to cope with the Portuguese, who had been active in Asia since one century earlier by reaching Calcutta in 1498 and founding a base in Malacca in 1511, and the English, who had defeated the Spanish Armada in 1588 and were beginning to explore the Orient. In 1603 under the charter of Prince Maurits van Nassau, the Dutch established the United East India Company (VOC), known as the first model of the modern joint-stock companies, to send strong fleets and opened a trading house in Bantam in the same year.
+
+To avoid troubles with the English in Bantam, they built a new fort in Jayakarta and moved their trading centre there in 1611, but the English also came to Jayakarta four years later. In February 1619, the English attacked the Dutch fort in alliance with the local governor of Bantam, Jayawikarta. It was during the absence of the governor-general of the VOC, Jan Pieterszoon Coen, who had temporarily retreated to Amboyna in the Spice Islands, where they had another trading post, in December of the previous year, by anticipating the raid of the English led by Admiral Thomas Dale. Despite frantic efforts of Pieter van den Broecke to defend the fort, it fell to the hands of the English. Coen, who returned there with his reequipped fleet in May, recovered the occupied fort after a hard battle and controlled the town. He built a new fort, Fort Batavia, and named the town also Batavia after the Latin word, *Bataaf*, for Hollanders. Batavia was attacked twice in 1628–9 by Sultan Agung of the Mataram Kingdom, which had risen in Central Java, but successfully routed the enemy and Batavia became the stronghold of Dutch activities in the East Indies.
+
+![Illustration](images/00010.jpeg)
+
+Wayang dupara puppets of Sultan Agung and Jan Pieterszoon Coen. Photographed by M. Iguchi at Jakarta History Museum, September 2006.
+The board on the left-hand side explains, “The wayang dupara tells the invasion of Sultan Agung, King of Mataram, in 1628 and 1629 to Batavia, which was then controlled by the Dutch.” Wayang dupara was a new type of wayang (shadow play) depicting episodes from the history of the New Mataram Kingdom. (*See* [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8).)
+
+### **The emigration of Japanese**
+
+From the middle of the 16th century to the promulgation of the National Isolation Edict by the Shogunate government in 1639, some number of Japanese went to Southeast Asia on board Portuguese ships and Goshuin-sen (government-licensed ships), but those who settled there were not many[^(19)](#part0008_split_001.html_fn_19). After opening their trading house in Hirado in 1609, the Dutch recruited Japanese men to fulfil the shortage of labour and military force in Asia, the number of officially contracted emigrants between 1613 and 1621 being as many as 225[^(20)](#part0008_split_001.html_fn_20). As Europeans who came to Japan after turning around the Cape of Good Hope and landing at the coasts of India and Southeast Asia were surprised to find a highly civilised society in the Far East[^(21)](#part0008_split_001.html_fn_21), there were many clerical workers with the abilities of reading, writing and arithmetic, whereas most ordinary people were illiterate even in Europe. The skill of artisans who were trained in the construction of temples and castles was superior to the European masters and, above all, freelance samurai were valorous fellows who lived through actual fighting in the Age of Battles. In fact, among the army of Coen, which recovered the fort of Jayakarta, were fifty Japanese mercenaries beside 400 Dutch soldiers, and the defence force of the same fort, when it had fallen to the hands of the English–Bantam ally, had twenty-five Japanese men. Indeed, in 1618–19 Portugal, Spain and China, whose vessels were attacked by Dutch ships, entreated with the Shogunate government to prohibit Dutch (and English) ships to carry Japanese military persons.
+
+![Illustration](images/00011.jpeg)
+
+A commemorative stamp of Japan Post for the 400th Anniversary of Trade Relations between Japan and the Netherlands.
+The ship, *De Liefde*, which arrived in Japan in 1600 AD and the Deshima Island in the background, from “Kwanbun Nagasaki Folding Screen” 1673\. The Dutch Kabitan with a Javanese servant, from a coloured woodcut: ‘A picture of a Dutchman’, Nagasaki-Hariya, Houreki Period (1751–64).
+
+The Dutch also recruited many Japanese women. Since it was the time when the voyage to distant Asia was so dangerous that losing some vessels in fleets by storms and sea-battles and some crew members and passengers by disease was common, the emigration of “normal” females, not to say those from upper- and middle-class families, from their fatherland was hardly expected. All of those who voluntarily came were “light women”, as the first governor-general, Peter Both, had petitioned the Herren XVII in 1612, “not to allow any more of them [light women] to emigrate from the Fatherland, since there were too many of them there already and those females led scandalous and unedifying lives to the great shame of the nation”[^(22)](#part0008_split_001.html_fn_22). In such a situation, men had to find their partners among local women, but most of the Javanese parents who were already Islamised did not allow their daughters to marry heathens, whereas marrying Catholicised women of both natives and Eurasians produced during the Portuguese era was not recommendable. Although, Balinese women, whose religion, Hinduism, was rather generous for intermarriage, were their reasonable choices, women from highly civilised Japan were quite attractive. In fact, Jan Pieterszoon Coen himself frequently sent letters to Hirado, writing, “We look forward to the arrival of married couples and their children as well as unmarried women from Japan at an appropriate time, Do not forget to transport unmarried Japanese women [from Amboyna and Banda], if possible”[^(23)](#part0008_split_001.html_fn_23), etc.
+
+### **Cornelia, a daughter of Cornelis van Nijenrode**
+
+Having read such a history, I remembered a painting that I once saw in the Rijksmuseum, Amsterdam, displayed in the centre of the main hall of the first floor. It was a family portrait in which a Dutch gentleman, his half-Japanese wife and three daughters stood in front of their luxurious house with their servants. At that time I was only impressed by the fact that “among those deportees to Jagatara was such a girl who married a Dutchman and had a rich life”, but later learnt that the painting was a piece entitled ‘Pieter Cnoll and his Family’, painted by Jacob Coeman in 1665, and that the lady was Cornelia, a daughter of Cornelis van Nijenrode who was the Chief Merchant in Hirado (1623–33) and his Japanese wife, Surisio[^(24)](#part0008_split_001.html_fn_24). Cornelia went to Batavia in 1637, two years earlier than Haru, together with her half-sister, Hester. She married Pieter Cnoll, who was to be promoted to Chief Accountant and Port Master of Batavia. Four years after Pieter passed away in 1672, she remarried Joan Bitter, a newcomer, or *orang baru* in the local words, who came from Holland, and was four years younger than herself.
+
+![Illustration](images/00012.jpeg)
+
+*Pieter Cnoll and his Family* by Jacob Coeman 1665.
+Rijksmuseum, Amsterdam: Identification code: SK-A-4062\. Reproduced by courtesy of the museum, from [http://www.rijksmuseum.nl/](http://www.rijksmuseum.nl/)
+
+Unfortunately, their relationship soon deteriorated, as the new husband claimed the proprietorship of Cornelia’s property, which she had amassed with her first husband. In 1687, Cornelia and Joan went to Holland on board different ships to settle the case at the court and Cornelia ended her life presumably in 1692, as written in detail in Butterfly or Mantis? The Life and Times of Cornelia van Nijenrode by Leonard Blusse[^(25)](#part0008_split_001.html_fn_25). Contrary to the naive image in the picture, Cornelia would have been a woman of strong will. In the Japanese translation, the title of the book was changed to *The Struggle of Otenba Cornelia*. I have learnt that the common Japanese word “otenba” to describe an active and uncontrollable woman was derived from the Dutch word, *ontembaar*, from a friend of mine in Jakarta who is fluent in Dutch and knows Japanese language a little. Although the second-half of Cornelia’s life was miserable, her life in Batavia before she was bereaved of her first husband was smooth sailing as she herself wrote in her extant “Cornelia’s Jagatara Letter”, in contrast to the life of Haru as was sympathetically written in such a way as “perished as though trees and weeds” and “ended harbouring a grudge” by Yosaburo Takekoshi and Marquis Tokugawa, respectively. With reference to Prof. Iwao’s study, it would be better to imagine that Haru also had a happy life in Batavia except that she had no hope to visit her homeland again, as written without prejudice by Tetsushi Masanobu in *A Novel: Jagatara O-Haru* published in 1996[^(26)](#part0008_split_001.html_fn_26). In “The Legend of Haru”[^(27)](#part0008_split_001.html_fn_27), written by Hiroko Shiraishi and published in 2001, the author assumed that Haru’s life was a happy one and wrote about it by adding her own imagination. I would also imagine that both Haru and Cornelia who were dreaming teenagers when they arrived at Batavia would have submitted to their fates and faced up dauntlessly to their new lives in the new land.
+
+In Batavia, Haru at the age of twenty-one married Simons Simonsen, a young man, probably born in Hirado between an Italian sailor who had arrived there by a Portuguese ship and a Japanese mother, who was deported like Haru herself. Although she lost her elder sister, Man, two years earlier and her mother one year later, her married life was smooth, blessed with three sons and four daughters. Her husband once received an order to be transferred to the VOC’s headquarters in Holland, but the couple remained in Batavia as the company accepted their wish to stay there as half-Asians. Then, Simons was promoted up to the Harbour Master of Batavia. Although Haru lost her husband from a disease when she was forty-seven, she lived there surrounded by her children and grandchildren until she died at the age of seventy-two, a long life at that time. Among extant “Jagatara Letters”, there is one piece signed as “Haru, Widow of Simons”, which was written in a plain style, unlike the elegant first letter in *Nagasaki Night Tales,* and believed to be authentic. It included a large list of presents, such as white cotton cloth, calico and figured satin, which were sent to her ten-odd relatives in Japan, and her requests to have some white cloth dyed in Japan and returned to her, to ship some barrels of Japanese sake, etc., with the money she remitted. This ensures that Haru was quite rich in Batavia.
+
+![Illustration](images/00013.jpeg)
+
+A letter from Haru, Widow of Simmons.
+Copy obtained from Nagasaki History and Culture Museum, by courtesy of the museum. From the right to the left, Cover, Page 1, 11 and 12 (last page). At the end of the text (p.11) it is dated as the 7th May and addressed to Messrs. Shichibei Mine and Jirouyemon Mine. On the last page, it is written that “This is a hand-writing copy held by Gen-yemon Imamura, an interpreter”. Judging from the context, some more paragraphs are supposed to have existed in the original copy before the first page.
+
+Whilst most Japanese women, including Haru and Cornelia, married Dutchmen, by the latter’s preference, the partners of Japanese men were mostly Balinese and Batavian women, save such a rare case as that of Haru’s half-sister, Man (Magdalena), married to Buzayemon Murakami, an influential person among Japanese inhabitants. Thus, pure Japanese stock was rarely reproduced in Batavia and their community gradually deteriorated namely after the “Deportation of the offsprings of Red-hairs” and almost disappeared by the end of the 17th century, as it happened also in Ayutthaya in Siam and Manila in Luzon.[^(28)](#part0008_split_001.html_fn_28), [^(29)](#part0008_split_001.html_fn_29)
+
+### **Batavia in the 17th century**
+
+The time when Haru spent her life in Batavia coincided with the period when the town developed. The meandering part of Ciliwung River near its mouth was modified into the straight Kali Besar (*lit.* Big River) and the city was designed in such a way that canals and roads run lengthwise and crosswise like in towns in Holland. To the south of the fort on the east side of the river were located the Stadthuis (city hall), a church, a hospital and other public buildings, whereas on the west bank were situated shipyards, a fish market, etc.[^(30)](#part0008_split_001.html_fn_30). According to an old document discovered by Prof. Iwao, Haru lived, at least for a certain period, in a housing area to the west of the river. In a picture, ‘Fortress of Batavia (a view from the Kali Besar West)’, painted at that time by Andries Beeckman, it is seen that the urban area was still unfilled, many people gathering in an open market in the shade of palm trees and some officers riding horses on the opposite bank in front of the wall of the castle. People drawn around the market are various, as one can see Europeans, Chinese, Javanese and those of different ethnicities from peripheral islands, and a man who looks like a Japanese is among them. Their statuses and professions are various too. Besides those who are selling and buying goods, there is a married couple with a parasol, Ambonese warriors who are dancing cakalele (war dance), a group of people who are playing sepa raga (indigenous football), etc.
+
+Four hundred years having passed, Batavia has grown to be one of the largest modern cities in Asia, being renamed Jakarta after Indonesia’s independence. Prior to picking up some topics from the city’s history, let us visit the area where Haru would have lived.
+
+![Illustration](images/00014.jpeg)
+
+Batavia in c. 1652
+Map from: [http://en.wikipedia.org/wiki/Jakarta](http://en.wikipedia.org/wiki/Jakarta) (estimated to have been drawn by De Jonghe in Amsterdam from some other similar copies).
+Note the direction, Left points the north. 1: Fort Batavia (a. Diamond, b. Ruby, c. Pearl, d. Sapphire), 2: Stadhuis (City-hall), 3: New Church, 4: Hospital, 5: Governor’s residence, 6\. Square, 7\. VOC Shipyard, 8: Chinese shipyard, 9: Pasar Ikan (Fish market), 10: Vegetable and Meat Market, 11\. Portuguese Church, 12\. Jonkers Street (Simons’s house was near by), 13\. Roea Malacca (Roa Malaka)
+The locations have been added with reference to F. de Haan, *Oud Batavia (Eerste Deel)*, G.Kolff & Co., Batavia 1922 and Abdrurrachman Surjomihardjo, *Pemekaran Kotas Jakarta/The Growth of Jakarta*, Penerbit Djambatan, Jakarta 1977
+
+![Illustration](images/00015.jpeg)
+
+*Fortress of Batavia*, or Batavia Castle, seen from Kali Besar West with Pasar Ikan (fish market), or Vegetable and Meat Market(?), in the foreground, by Andries Beeckman ca.1656–8, held at the Troppenmuseum.
+Reproduced from [http://nl.wikipedia.org/wiki/Andries_Beeckman](http://nl.wikipedia.org/wiki/Andries_Beeckman).
+Another painting with a similar composition is held in Rijksmuseum, Amsterdam.
+
+If one leaves the skyscrapered Jakarta city centre and goes four or five kilometres towards the north to the downtown area called Glodok, where Chinese descendants concentrate, the atmosphere suddenly changes. The scenery in which pavements in front of shops are crowded by people and handcarts, both busily moving back and forth, may remind you of an old Chinese phrase, “shoulders bump and shafts of carts crash”. In the backstreet are shopping centre buildings full of small booths in which all kinds of electronic, computer and machine products and parts are sold. It was the place I frequented during my stay in Bogor to hunt laboratory tools and requirements. The area in the north of Glodok is called Old Batavia or Kota (meaning “city” in the local language). If you walk several hundred metres passing the side of Jakarta Kota railway station and the old building of the former Java Bank (now occupied by Bank Indonesia), you will find an open space, called Taman Fatahillah (*lit.* Fatahillah Park), i.e. the front yard of the old Stadthuis, now used for the Jakarta History Museum. In the west side of the square is the site of old Kruiskerk (Cross Church), now of use for the Wayang Museum, and Kali Besar runs behind it. The houses on both banks of the river with lovely Dutch facades are well preserved, as if they were somewhere in Holland, and several hundred metres downstream remains an old drawbridge similar to those painted in Vincent van Gogh’s paintings. The former Jonkers Street (now Jalan Ekor Kuning) behind the west bank where Haru’s house had existed gives an atmosphere of typical backstreets, which offers no image of 350 years ago at all.
+
+### **The tombstone of Michiel T’ Sobe**
+
+The location of Haru’s house was recorded in the will of a certain Michiel Diaz Sobe. In 1886, before the document was discovered, a tombstone on which a name, Michiel T’ Sobe, was inscribed was found on the pavement of Kali Besar West and aroused interest among historians. Soon, the stone was taken to the Anglican Church in Prapatan by the discoverer, Rev. Armine Francis King, and in 1911 moved to the front yard of the Japanese Consulate[^(31)](#part0008_split_001.html_fn_31). When Marquis Tokugawa visited there in 1921, he wrote[^(32)](#part0008_split_001.html_fn_32):
+
+“There was a grave in front of the Consulate. According to the inscription, it was the tomb of a Japanese man, named *Michiel T. Sobe, born in Nagasaki in 1605 [the 10th year of Keichō Era] and died here in 1663 [the 3rd year of Kwanbun Era]*[^(33)](#part0008_split_001.html_fn_33). Judging from his age, he was supposed to be one of those who led a resentful life in this land deported from Nagasaki with Oharu, the sender of *Jagatara-bumi.*”
+
+![Illustration](images/00016.jpeg)
+
+Tombstone of Michiel T’ Sobe.
+From: F. de Haan, *Oud Batavia* – *Gedenboek uitgegeven Genootschp van Kunsten en wetenschappen naar aanleiding van het driehonderdjarrig bestaan der stad 1919 (Eerste Deel)*, G.Kolff & Co., Batavia 1922\. The text reads: HIER RUST D’EERSAME MICHIEL T’SOBE CHRISTEN JAPANDER GEBOOREN TOT NANGASACKI DEN XV AUGUST °A 1605 OBYT DEN XIX APRIL A° 1663 (*See,* thr English translation in the text.)
+
+In *Oud Batavia*, the 300th-anniversary book of Batavia, edited by Frederik de Haan and published in 1925, it was mentioned, “While a samurai had a family name, T’ Sobe must be a given name. Michiel might be a young man who came to Batavia from Nagasaki and married in 1630”, with no further details.
+
+In the will of Michiel Diaz Sobe dated 29 March 1661, it was described:
+
+“Because the testator has no family, he will present, after his death, one third each of all his movable and unmovable properties, stocks, bonds and all other properties, to Sijmon Sijmonsz, Upper Merchant, the Harbour Master and the Licensor of VOC, Michiel Buzayemon and Jan Sukezayemon, both Japanese Christians. This will has been prepared in the house of Meester Sijmonsz, in Jonker Street on the opposite side of the river.”
+
+Sijmon Sijmonsz must be nobody else but the same person as “Simons”, the husband of Haru, and this document suggested that Sobe was a close friend of Haru’s family. Another document to prove that the will was properly executed was also found[^(34)](#part0008_split_001.html_fn_34). When Sobe came to Batavia is unknown. He was alone when he attained his advanced age, although he might have once been married if the man in *Oud Batavia* corresponded. Whether Sobe was resentful for being in the foreign land or not, he was no doubt a successful person as he left such a significant sum of properties. It is interesting to note that in his text Marquis Tokugawa chose the specific character 惣 for the “so” of Sobe(i), the same character that appeared in the signature in the old documents, among many phonetic alternatives. When I asked the late Mr. Yoshinobu Tokugawa, a grandson of the author, he agreed that the author would have learnt it from Prof. Iwao and applied the specific character when his travelogue was published in 1931, because the author, a biologist and historian, was a person who always pursued perfection.
+
+The tombstone disappeared in the chaotic period after the declaration of the independence of Indonesia. Knowing that chance was scarce, I visited the Museum Taman Prasasti (Stone-inscription Park Museum) in Tanah Abang and the Anglican church accompanied by a friend of mine, Mrs. E., a curator of the National Museum, but nobody knew about the stone itself and no information was obtained. Unsatisfied with it, I prepared a handout on which the photograph of the stone, as well as a message that a reporter would be entitled to receive some reward was printed and distributed around the junk street in Surabaya Street, Jakarta, but no news was heard either.
+
+A portrait of ‘A Japanese Christian who remained in Jakarta after *Sakoku* [closing of the country of Japan in 1639]’, painted by Andries Beeckman ca. 1656 remains to date. It is one of the ten-odd portraits that are supposed to have been sketched prior to his ‘Fortress of Batavia’ and arranged in it. In the source article it is said that the fact that the man’s religion was Christianity is indicated by his clerical hat[^(35)](#part0008_split_001.html_fn_35). The man with the features of an old pure Japanese face wore a dress that looked similar to a Japanese kimono over his body, a pair of Japanese sandals on his feet and a Japanese sword on his waist, although whether it was his daily wear or special attire requested by the painter is not sure. The man’s name is unknown, but, judging from the fact that he was chosen as a model by the famous painter, he is supposed to have been a certain Japanese inhabitant in Batavia. The year of the work, ca. 1661, was several years later than that of the preparation of Michiel Diaz Sobe’s will. Wasn’t the old man with a solitary appearance Michiel Diaz Sobe himself?
+
+![Illustration](images/00017.jpeg)
+
+*A Japanese Christian who remained in Jakarta after Sakoku* by Andries Beeckman ca. 1656 Reproduced from: Marie-Odettte Scallie, *Archipel* 54, 1998.
+
+The same paper includes 13 more portraits:
+A European of mixed blood,
+A Chinese merchant,
+A Chinese labourer,
+A Chinese artiste,
+A Chinese in Ming costume,
+A Malayan,
+A Javanese,
+A Mardijker (descendant of free slave),
+A vegetable seller,
+A rice-pounding woman,
+A person of mixed-blood (albino),
+An Ambonese warrior,
+An Alfour (definition unknown to the present writer).
+
+### **The present-day Batavia**
+
+In the area of Pasar Ikan (Fish Market) in the west side of the mouth of Kali Besar, you will see a three-storey brick building. It was a watchtower built in 1839 at a corner of the former VOC shipyard and functioned like a control tower in modern airports. Several old cannons placed at the edge of the yard to point to the sea must have been the provisions to protect the port from dangerous ships, if they approached. From the top floor of the tower, which is now empty, you can see a panorama of Sunda Kelapa, on the quay of which are anchored hundreds of Buginese ships[^(36)](#part0008_split_001.html_fn_36), many of them being fully loaded with wood from Kalimantan (Indonesian Borneo). Because of the silting of sands carried by Ciliwung River, the port of Sunda Kelapa became unsuitable when large modern vessels emerged in the late 19th century. Then, a new port was constructed five kilometres to the east at Tanjung Priok, designed after the port of Rotterdam. Although it has been a long time since the age of the passenger boat ended, Tanjung Priok is still busy as a major trading port of Java Island, parallel with Tanjung Perak of Surabaya, East Java.
+
+![Illustration](images/00018.jpeg)
+
+A view of Pasar Ikan in the Old Batavia area. In the right-hand side, a part of the old city wall remains in front of an old VOC warehouse, which is now of use as the Maritime Museum. The watchtower of Sunda Kelapa harbour is seen in the distance. Photographed by M. Iguchi, February 2012.
+
+Close to the watchtower, there remains a VOC shipyard building[^(37)](#part0008_split_001.html_fn_37) and several old warehouses. While the former is now of use as a restaurant, one of the latter has been used for the Maritime Museum since 1997\. On entering the large two-storey building, which was built in 1652 and continually reformed and extended until the end of the 18th century[^(38)](#part0008_split_001.html_fn_38), one may be surprised to see large, wooden pillars and beams sawn from giant teak trees, which could not be found today even in the depths of the jungles. When I visited there for the first time I thought that the building itself had great antique value. Picturing a scene where the shelves in the warehouse were full of nutmeg, pepper, coffee beans, tea and quinine, I imagined how Java was rich in olden days. As I learnt in school, the price of pepper was equivalent to that of silver by weight in 17th-century Europe. Although the collections of the museum, such as the models of old ships and old ship fittings, displayed on both the ground and the first floor, looked outshone by those in the Rotterdam Maritime Museum on the other end of the sea-route where I had once visited, they were enriched recently by adding new pieces, such as a traditional fishing boat of New Guinea, called *candik* or *karere*, with a long float (outrigger) devised some three metres apart parallel to the main boat.
+
+![Illustration](images/00019.jpeg)
+
+A VOC shipyard building, now a restaurant, viewed from the top floor of the watchtower.
+Photographed in March 2014 and presented by courtesy of Mr. T. Hirosawa.
+The sign on the wall must be new, as it says “VOC-Galangan” in Indonesian.
+(This picture is new in this English edition, not included in the Japanese edition.)
+
+In front of the Maritime Museum, one may find a fragment of the original city wall, but no trace of the old fort remains on the opposite side of the river. According to old plans, Fort Batavia was a bastion-type construction, adopted in Japan later in 1866 for Goryoukaku in Hakodate, Hokkaido. I have had chances to see the same type of forts, Fort Speelwijk in Bantam (the present-day Banten Lama), West Java, and Fort Rotterdam in Macassar, Sulawesi (Celebes). While only stonework of bastions remained in the former, the latter was almost perfectly preserved, including its whitewashed stone-made gate, barracks with red-tile roofs and other facilities, save that what was flying on the pole was not the tricolour Dutch flag but the bicolour Indonesian flag. Imagining the old-day soldiers on the people in the court, I thought over the scene of old Batavia Castle. Although small in scale, the Benteng Vredeburg (Fort Vredeburg) found not far from the Palace of Yogyakarta, on Malioboro Street, was the same bastion type. Although a part of the internal buildings are of use as a museum to commemorate Indonesia’s independence, no atmosphere of a facility for war is sensed now, as various stalls in the courtyard are crowded by people every night.
+
+“Diamond”, one of the four bastions of the Batavia Castle (i.e. Diamond, Pearl, Sapphire and Ruby), retains its name in Jalan Intan or Kota Intan (*lit.* Diamond Street or Diamond Town, respectively). The yard of the former fort was flattened for certain sightseeing facilities and the watchtower of the harbour was seen in the north. Having heard from a local gentleman who had a small house there until 1995 that an entrance of an underground vault or a trench had remained until 1997, I thought I was fifteen years too late to visit there.
+
+The only modern building that stands around Kali Besar is the Batavia Hotel, Jalan Kali Besar Barat 44–6, opened in 1995\. I was charmed by its front design with a pair of white marble statues placed in the alcoves of both front pillars, as it looked a little similar to that of the Amsterdam Gate (De Amsterdamse Poort), which had once existed to the south of Batavia Castle. Although the statues were symmetrical with each other and dissimilar to those of Mars and Minerva[^(39)](#part0008_split_001.html_fn_39) in the Amsterdam Gate, which I had seen in old pictures, I supposed they were modelled after some Roman deities. According to my friend in Jakarta who made an enquiry for me, the present manager of the hotel had no knowledge about their origin. Having referred to books[^(40)](#part0008_split_001.html_fn_40), I became convinced that the model was none other than Janus, the Roman Deity of doors and the beginning of things, from which the word “January” was derived. While Janus was generally depicted as a figure with two faces, the anonymous artist who worked for the Batavia Hotel had symmetrically duplicated the body to be separate statues. Just for reference, the two statues of the Amsterdam Gate were removed and probably destroyed in 1942–5 by a Japanese occupation army and the gate itself was demolished in 1950 by the Indonesian government for the reason that it was an obstacle for transportation.
+
+![Illustration](images/00020.jpeg)
+
+Front view of the Batavia Hotel. Photographed by Ir. Arief Budhiono, a friend of M. Iguchi, March 2012.
+
+![Illustration](images/00021.jpeg)
+
+The statues of Janus. Photographed by M. Iguchi, February 2012.
+
+![Illustration](images/00022.jpeg)
+
+The Amsterdam Gate of Batavia Castle (demolished in 1950).
+Photographed by Marquis Yoshichika Tokugawa in the 1920s.
+Reproduced by courtesy of the Owari-Tokugawa Family.
+
+![Illustration](images/00023.jpeg)
+
+*Batavia City Hall and the Holland Church* by Johannes Rach 1770.
+Reproduced from: Max de Bruijn and Bas Kist (text), *Johannes Rach 1720*–*83 Artist in Indonesia and Asia*, The National Library of Indonesia/The Rijksmuseum Amsterdam 2001\. The building in the centre is apparently the “old” city hall, which was replaced with the “new” city hall in 1707–10, whilst the New Holland Church on the right-hand side was built in 1732\. The reason why the “old” city hall was drawn in this picture is unknown to the present writer.
+
+### **The development of Batavia**
+
+Time passed and when Europe was under the control of Napoleon Bonaparte, the status of Holland changed from the United Netherlands to the Batavia Republic in 1795 and to Holland Kingdom crowned by Louis Napoleon in 1806, and the country was finally merged into France in 1810\. General Herman Willem Daendels, a votary of Napoleon who went over to the French side, was appointed the governor-general of the East Indies to defend the territory from the anticipated attack by the English, and arrived in Java in 1806\. The first task he performed was the reforming of Batavia. By abandoning the fort near the port, he constructed the new town, Weltevreden, eight kilometres to the north, placing a parade ground there, and prepared a defence line in Meester Cornelis (the present-day Jatinegara), another twenty kilometres to the south, by utilising the stone and other materials that had been used for the old fort. The parade ground, formerly called Koningsplein, was renamed Medan Merdeka (*lit.* Independence Square) after the independence of Indonesia and the Independence Tower (locally called Monumen Nasional or Monas for short) was placed in its middle. The open area still functions for the ventilation of the crowded central area of Jakarta.
+
+Daendels also constructed a fortified city, 180 kilometres east by southeast of Batavia, in the basin of the present-day Bandung surrounded by mountains, the date of breaking ground 10th May 1810 being adopted today as the birthday of the City of Bandung. These were not all of Daendels’ preparations. In 1808, he ordered the construction of an 800-kilometre long post road, De Groote Postweg (locally, Jalan Pos Raya) across Java Island from Anyer in the west end to Panarukan in the east end, and completed it within one year at the expense of 20,000 lives. Despite his efforts, Daendels was relieved from his post in May 1811, as his administration did not run smoothly because of his fierce personality, and it was General Jan Willem Janssens who faced, and surrendered, to a British Army, which actually came to occupy Java three months later, led by Lord Minto. When the restoration of Java and its dependencies to the Netherlands was agreed in the Peace of Vienna in 1815[^(41)](#part0008_split_001.html_fn_41), King Willem the First decided to govern the East Indies by the hand of the government, not by entrusting the administration to such a company as the former VOC. Thus, Batavia entered into a new era. The VOC itself officially became bankrupt in 1799, but the company’s balance had already slipped after the middle of the 18th century due to the internal conflicts and the payment of excess dividends demanded by the shareholders[^(42)](#part0008_split_001.html_fn_42).
+
+Let us visit the old Stadthuis, the present-day Jakarta History Museum. If you enter the two-storey building of some fifty metres wide with a dome in the middle of the roof, you will notice that the building is constructed with gigantic teak pillars and beams. On the right-hand wall of the corridor passing from the entrance to the backyard is a large black plate on which is inscribed in gold in Dutch[^(43)](#part0008_split_001.html_fn_43):
+
+*This Government House was started to be built on the site of the old building by the Governor-General JOAN VAN HOORN on 25th January 1707^(AD). It was completed on 10th January 1710^(AD) under the Governor-General ABRAHAM VAN RIEBEECK.*
+
+The original building is said to have been designed after the city hall of Amsterdam and, according to an old picture, it seems to have been a little smaller than the present building. Since the construction had been finished in 1637, three years earlier than the arrival of Haru, it must have been there that she submitted her marriage registration form and her wills. In the interior of the present building are housed various relics related to Jakarta, such as a large bookshelf with glass doors placed in the large main hall on the upper floor along with various furniture. Among many paintings displayed on the walls, a portrait of Jan Pieterszoon Coen is most conspicuous. Although there are some complex feelings among Indonesians for the person who established the Dutch presence in the East Indies, it is undeniable that he was one of the greatest men who brought prosperity to both the modern Holland and the East Indies. To myself, it was impressive that the wife of a Dutch friend, a daughter from a noble family, stood still, gazing at the picture with respectful eyes.
+
+![Illustration](images/00024.jpeg)
+
+Top: City Hall (Stadthuis) built in 1627\. Replaced with a new building in 1707–10, which remains to date.
+Bottom-Left: Portuguese State Church (Stadskerk). Burnt in 1808.
+Bottom-Right: Portuguese Suburban Church (Buitenkerk). Remains to date as Sion Church.
+Reproduced from: [http://en.wikipedia.org/wiki/File:Algr001disp04ill55.gif](http://en.wikipedia.org/wiki/File:Algr001disp04ill55.gif)
+
+### **A tale of Jan Pieterszoon Coen, the founder of Batavia**
+
+Although Coen was a pure Dutchman born in Hoorn in 1587, there is an interesting tradition. According to *The Book of Baron Sakhender* (*Serat Baron Sakhender*), written in the 18th century in Solo in the Javanese language in the form of a long poem, Coen was a man called Mur Jangkung born of a Pajajaran Princess, Tanuraga, and Baron Sukmul, a brother of Sakhender (Alexander) from Spain. Although accessing the original copy of its Dutch translation was difficult and citations in many articles were fragmental and ambiguous, a book[^(44)](#part0008_split_001.html_fn_44) in which the story was explained in detail in English was available. The story of Mur Jangkung was written in the second part of the book.
+
+“Probably in the middle of the 16th century when the Islamic power led by the Pangeran[^(45)](#part0008_split_001.html_fn_45) of Jayakarta encroached on the territory of Pajajaran Kingdom, one of the princesses fled to a mountain, where she became pregnant by the Ajar Sukarsi[^(46)](#part0008_split_001.html_fn_46) and gave birth to a daughter of surprising beauty, named Tanuraga. The Pangeran of Jayakarta abducted Tanuraga but could not sleep with her because flames emitted out of her genitalia. She was therefore deported to a small island. Pulau Putri [*lit.* Princess Island] in the Bay of Jakarta. The Sultans of Cirebon and Mataram in turn took her for themselves but neither of them was successful to possess her either, for the same reason. She was sent back to the island and lived there in sorrow.
+
+“There, Sukmul came from Spain on board a trading ship and bought her for three pieces of cannons[^(47)](#part0008_split_001.html_fn_47) and took her home. Sukmul and Tanuraga married and a son born between them was named Mur Jangkung. When Mur Jangkung grew up to be a famous warrior and heard about his origin, he decided to take revenge upon the Islamic princes who had disgraced his mother and ruined her country, Pajajaran, and sailed to Java with a fleet of fifteen warships. Although Mur Jangkung was well received not only by Dutch settlers but also the Pangeran of Jayakarta and mixed with the local people with Malay which he had learnt from his mother, he was all the while making military preparation for his revenge. When a cannon ball accidentally fell in the ground of kraton [palace] during his practice, the Pangeran told him in anger to leave Jayakarta, but he begged a pardon saying that he would suffer a great commercial loss. It was the Pangeran himself who, in accordance with the will of God, moved to Gunung Sari [within the boundary of the present-day Jakarta] to get away from the Dutch and their cannon. Mur Jangkung was pleased at this and built a castle called Kuta Tai. The Dutch attacked the Pangeran, but the war situation became deadlocked, as the Pangeran’s younger brother, Purbaja, a warrior with a supernatural power, joined the enemy. Sukmul who heard of this in Spain came to Java and gave advice to his son. When coins were discharged, instead of cannon balls, towards Gunung Sari, the soldiers of Jayakarta ran out to pick up the money. Then, real cannon balls were shot to fell them down. By the will of God, filled with fear, the Pangeran of Jakarta retreated to the mountains to the south of Jakarta, but soon his troops left him. He became a mere rebel, practising asceticism with local people, with no hope to recover any lands. In great sorrow, he thought that he had once sold the daughter of Sukarsi and the Princess of Pajajaran was his error and, asking himself within his heart, ‘What is the will of God for my course of life?’, deplored that he would be punished by Sultan Agung of Mataram and die. The Dutchmen in Batavia grew even more, setting forth their designs to create a city surrounded by water. The River Ciliwung was incorporated in the city.”
+
+In the above story, it is said that Mur Jangkung came not from Holland but Spain. It was because in the first part of the long poem in which the family line of Sukmul and the situation in Europe were described, Spain was placed under the control of Holland. The first governor of Holland was Nakoda (*lit.* Captain) who was born, cut out of the womb of his mother. Although he was an orphan, he became famous in battle and rich as a merchant, and took twelve daughters of twelve kings as wives. These wives were infertile, but when Nakoda went to the mountains and implored a hermit, Mintuna, for help, eleven of them became pregnant and gave birth to eleven sons, who all later became the board members of the company (VOC). The wife who did not have a baby at that time was Sang Retna (Princess Retna) of Ngabesah. She had been treated coldly by her husband and put to live apart in the cooking-place, but, after fourteen years, produced a seashell from which twin sons, Sukmul and Sakhender, appeared. After fourteen years, Sakhender was called by Mintuna to visit the latter’s hermitage. He was almost eaten by the hermit but managed to kill him. Sakhender went to Spain and, being entrusted by the king as a distinguished warrior, married the princess. Then, he won an important war[^(48)](#part0008_split_001.html_fn_48). The fact that the king of Spain was a long-separated brother of Nakoda was revealed and the throne was given to Sakhender. Although Spain prospered under the rule of Sakhender, after a while, Sakhender left Spain for Java where commerce was also excellent, handing over the throne to Sukmul. In Java, Sakhender became a vassal of the Sultan of Mataram.
+
+The adventure of Sakhender was supported by the magical power of a demon king, Singgunkara, as well as several retainers, including Kaseber and Suhuruman, twin brothers born almost simultaneously from a mango-stone produced by his mother’s maid, a horse called Sumbrani, who was said to be a brother of Sakhender, and a bird called Garuda, who was said to be a brother of Kaseber. Indeed the story reminds us of some Arabian Nights.
+
+A family tree such as below can be derived from the Book of Sakhender.
+
+![Illustration](images/00025.jpeg)
+
+According to this genealogy[^(49)](#part0008_split_001.html_fn_49), an assumption is possible that Mur Jangkung (or Jan Pieterszoon Coen) who had the blood of Pajajaran returned to his mother’s country rather than conquering Jayakarta. The time when this book was written was already 200 years since the Javanese had first encountered the Dutch and the former should have acquainted with right knowledge about European history. Why was such an unrealistic story created? The prime answer can be, “It was fiction.” As to the reason why the author wrote such an allegory that might justify the invasion of foreigners, there is an interpretation that it was not a matter of concern for Javanese (in Central and East Java), because the land of Sunda, or the west part of Java Island, was regarded to be a foreign land.[^(50)](#part0008_split_001.html_fn_50) One could alternatively say that the idea of self-determination only evolved after the First World War as a political principle, proposed by the then American president, Woodrow Wilson, in the 20,000-year-long human history.
+
+![Illustration](images/00026.jpeg)
+
+*A portrait of Jan Pieterszoon Coen*.
+Reproduced from: [http://commons.wikimedia.org/](http://commons.wikimedia.org/)
+
+![Illustration](images/00027.jpeg)
+
+Wayang Golek Puppet of Mur Jangkung (Jan Coen)
+Reproduced from: [http://indonesia.elga.net.id/wayang/](http://indonesia.elga.net.id/wayang/)
+
+### **Lingering charm of old Dutch churches**
+
+In the Wayang Museum located on the left-hand side (west side) of the Stadthuis’ front yard (Taman Fatahillah) is a large collection of puppets for wayang golek as well as wayang kulit, not only for playing classic Mahabharata and Ramayana but also for semi-modern titles. Although the puppet of Mur Jangkung, which I saw in a picture, was unfortunately not found, there was an interesting pair of puppets, Jan Pieterszoon Coen in his military uniform and Prabu Siliwangi, the king of the Pajajaran Kingdom in his traditional costume, standing face to face. Historically, they should not have had a chance to meet with each other because the kingdom had perished forty years earlier than the arrival of Coen. Presumably, there might have been a fictional story in which the two prominent figures had met with each other, but the curator of the museum was not sure of it.
+
+![Illustration](images/00028.jpeg)
+
+Wayang Golek Puppets.
+King Siliwangi (left) and J. P. Coen (right).
+Wayang Museum, photographed by M. Iguchi 2007.
+
+In the same building, what looked strange to me was a number of tombstones placed like panels on the walls of the corridor on the ground floor, on the largest one of which was the inscription of Jan Pieterszoon Coen’s legend. As mentioned earlier, this was the place where Kruiskerk (Cross Church, alias Hollandsche Kerk) was originally built in 1632–40\. A picture drawn in the 1680s shows many faithfuls gathering around the church. They were, needless to say, the Reformers who followed Calvinism, the same sect that drove the independence of the Netherlands from Spain[^(51)](#part0008_split_001.html_fn_51). Haru, who was a Catholic, when first baptised in Nagasaki would have converted to the Reformed faith in Batavia[^(52)](#part0008_split_001.html_fn_52), attended this church every Sunday and celebrated her wedding there. As to the wedding party of the old days, I could find only one picture painted 100 years later. The party style in which invited guests were going round in front of the bride and bridegroom standing in the front of a hall was probably similar at the time of Haru. The Dutch party style was followed up until today as I saw in the wedding parties of my acquaintances that included a niece of the Soekarno family, and sons and daughters of my friends and my young colleagues, without respect to the class or the level of family
+
+![Illustration](images/00029.jpeg)
+
+*Wedding in Batavia* by Jan Brandes (around 1778–85).
+Rijksmuseum, Amsterdam: Identification Code: NG-369\. Reproduced by courtesy of the museum from the museum’s website.
+
+![Illustration](images/00030.jpeg)
+
+The model of the Holland Church (now displayed in the Jakarta History Museum).
+Reproduced from: F. de Haan, *Oud Batavia (Eerste Deel)*, G.Kolff & Co., Batavia 1922.
+
+![Illustration](images/00031.jpeg)
+
+*De Kruiskerk* (The Cross Church), by Johan Nieuhoff 1682.
+Reproduced from [http://www.onderwijsbeeldbank.geheugenvannederland.nl/](http://www.onderwijsbeeldbank.geheugenvannederland.nl/)
+
+Judging from the social status of Simons Simonsen, Haru’s husband, I assumed that they were also buried in the same churchyard, but only tombstones of several governor-general class people remained in the court of the old church. Although many others are said to have been removed to the graveyard in Tanah Abang, the present-day Museum Taman Prasasti, I found no tombstone of Haru’s time. On the site of the Cross Church, the Calvinist’s Reformed Church (Gereformeerde Kerk or Nieuwe Hollandsche Kerk) was built in 1736, but it was closed in 1808\. The religious centre of the same denomination was transferred to the Willemskerk (now Gereja Immanuel or Immanuel Church) built in 1835–9 in Weltevreden, the new city centre.
+
+![Illustration](images/00032.jpeg)
+
+Immanuel Church, Medan Merdeka Timur, Jakarta (The former Willemskerk, Weltevreden, Batavia).
+Photograph taken by M. Iguchi, December 2000.
+
+### **Notes for [Chapter 1](#part0008_split_000.html_7K4G0-eace0453ad444634b688454ed62f4eb8)**
+
+________________________
+
+[¹](#part0008_split_000.html_fn1) The English verse is a trial translation by the present author. Jagatara is the corrupted form of Jayakarta (the present-day Jakarta) in Japanese. It was corrupted in Europe as Jaccatra (*See* text in p.35). “O-“ is a prefix for the given name of women commonly used in olden-day Japan, but not today.
+
+[²](#part0008_split_000.html_fn2) A small artificial island of only 1.31 hectares in Nagasaki, which was furnished for the Dutch to hold their trading post from 1641 to 1859, after the expulsion of the Portuguese in 1639.
+
+[³](#part0008_split_000.html_fn3) Yosaburo Takekoshi, A *book of southern countries*, Niyusha 1910 (竹越與三郎「南國記」, 二酉社 1910).
+
+[⁴](#part0008_split_000.html_fn4) Marquis Tokugawa (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004/Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanti Isanasari), *Perdjalanan Moenoedjoe Jawa*, Penerbit ITB 2006 (徳川義親 「じゃがたら紀行」, 郷土出版社 1931 (十字屋書店 1943, 中公文庫1975).
+
+[⁵](#part0008_split_000.html_fn5) *Kabitan*, a corrupted form of the Portuguese word, *Capitão*, denoted a chief of a foreign trading house, originated during the Portuguese Era in Japan (1543–1639). The word was applied for chief Dutch traders (first arrived in 1600) instead of the Dutch word, *Opperhoofd*.
+
+[⁶](#part0008_split_000.html_fn6) Seikyu Nishikawa (Ed.), *Nagasaki Night Tales*, Ryushiken, Kyoto 1720 [In: S. Mishima (Ed.), *Nanban-Kibun Cho*, Chobunkaku, 1929; Nyoken Nishikawa, *Chonin-bukuro, Hyakusho-bukuro, Nagasaaki Night Tales*, Iwanami Paperback 1942 (西川正休 (編）, 「長崎夜話艸」, 柳枝軒, 京都 1720 [In: 三島才二編「南蠻稀聞帳」, 潮文閣 1929; 西川如見「町人嚢・百姓嚢・長崎夜話草」, 岩波文庫 1942]). “Seikyu” was the nom de plume of Nyoken Nishikawa.
+
+[⁷](#part0008_split_000.html_fn7) Nyoken Nishikawa, *Chonin-bukuro, Hyakusho-bukuro, Nagasaaki Night Tales*, Iwanami Paterback 1942 (西川如見「町人嚢・百姓嚢・長崎夜話草」, 岩波文庫 1942). Red-hairs (*Koumou*) denoted Dutchmen and occasionally Englishmen, while the Portuguese and Spanish were called Southern Barbarians (*Nanban*).
+
+[⁸](#part0008_split_000.html_fn8) Elegant or poetic name of Japan.
+
+[⁹](#part0008_split_000.html_fn9) Yosaburo Takekoshi, *Jisseikatsu*, No.2, Nov. 1916 (竹越與三郎, 「實生活」 No.2, Nov. 1916). Hakuseki Arai in this citation was a distinguished scholar and bureaucrat in the mid-Edo Period. He interrogated Giovanni Battista Sidotti, an Italian priest who came to Japan against the Christianity Prohibition Edict and, based upon the knowledge acquired from Sidotti, authored *Seiyo Kibun (An Oral Account on the West)* in 1715\. Mr. Koga (Jūjirou Koga) was a devoted scholar of Nagasaki-ology who published *The history of occidental studies in Nagasaki I, II* (長崎洋学史, 上, 下), 1969, Nagasaaki Bunken-sha, and other books.
+
+[^(10)](#part0008_split_000.html_fn10) Seiichi Iwao, A *sequel to: The study on the Nangyang Japanese town*, Iwanami-shoten 1987 (岩生成一「続・南洋日本町の研究」, 岩波書店 1987).
+
+[^(11)](#part0008_split_000.html_fn11) Madoka Kanai, *A study on the history of Japan*–*Holland relationship*, Shibunkaku 1986 (金井圓「日蘭交渉史の研究」, 思文閣 1986).
+
+[^(12)](#part0008_split_000.html_fn12) Kaoru Fujishiro, Chronological Table of Nagasaki History, (藤城かおる「長崎年表」), [http://f-makuramoto.com/01-nenpyo](http://f-makuramoto.com/01-nenpyo)/.
+
+[^(13)](#part0008_split_000.html_fn13) “1614: Destruction of 11 Kirishitan temples” was recorded in Chikuun Uchihashi (Ed.), *Nagasaki Nenreki Ryaumenn-kagami* (長崎年歴兩面鏡), 1828\. A copy of the very rare chronological table was presented by courtesy of the Library of Kagawa University.
+
+[^(14)](#part0008_split_000.html_fn14) Built in 1637 and put in service 1638–57\. Load capacity 1,050 ton, Crew 300\. [http://www.vocsite.nl/schepen/detail.html?id=11501](http://www.vocsite.nl/schepen/detail.html?id=11501).
+
+[^(15)](#part0008_split_000.html_fn15) Fell in 1662 attacked by Ch’eng-koeng (*See* text in p.31). Masaharu Shingu, *A Samurai of Zeelandia*, Shin-jinbutsuouraisha 1989 (新宮正春「ゼーランジャ城の侍」, 新人物往来社 1989).
+
+[^(16)](#part0008_split_000.html_fn16) Madoka Kanai (Footnote 11).
+
+[^(17)](#part0008_split_000.html_fn17) Chinese text: 加留[Kelapa], 下港[Bantam] 屬國也, 半日程可到。 Xie Zhang, *Accounts on Eastern and Western Countries Vol. 3*, 1617 (張燮 「東西洋考 卷三 西洋列國考 巻三」1617), [http://ctext.org/wiki.pl?if=en&res=87006](http://ctext.org/wiki.pl?if=en&res=87006).
+
+[^(18)](#part0008_split_000.html_fn18) The date 22 June is defined as the municipality day of present-day Jakarta. Some historians are not agreeable, as in a newspaper article, Alwi Shahab, “Jakarta anniversary date must be changed: Historian”, *The Jakarta Post* (23 June 2004\. [http://www.thejakartapost.com/news/2004/06/23/jakarta-anniversary-date-must-be-changed-historian.html](http://www.thejakartapost.com/news/2004/06/23/jakarta-anniversary-date-must-be-changed-historian.html).
+
+[^(19)](#part0008_split_000.html_fn19) Seiichi Iwao, *Licensed ships and Japanese town*, Shibundou 1962 (岩生成一「朱印船と日本町」, 至文堂1962). Famous among them was Nagamasa Yamada (1590–1630) who became the king’s guard of Ayutthaya.
+
+[^(20)](#part0008_split_000.html_fn20) Madoka Kanai (Footnote 11).
+
+[^(21)](#part0008_split_000.html_fn21) E.g. Michael Cooper, *They Came to Japan: An Anthology of European Reports on Japan, 1543–1640*, University of California Press 1965.
+
+[^(22)](#part0008_split_000.html_fn22) C. R. Boxer, *The Dutch Seaborne Empire 1600*–*1800*, Penguin Books–Hutchinson, London 1990.
+
+[^(23)](#part0008_split_000.html_fn23) Madoka Kanai (Footnote 11).
+
+[^(24)](#part0008_split_000.html_fn24) K. Zandvliet, et al., *The Dutch Encounter with Asia 1600*–*1950*, Rijksmuseum Amsterdam – Waanders Publisher, Zwolle 2003, etc.
+
+[^(25)](#part0008_split_000.html_fn25) Leonard Blussé, *Strange Company: Chinese Settlers, Mestizo Women and Dutch in VOC Batavia (KITLV Verhandelingen Ser No, 122)*, Foris, Utrecht 1988/ Japanese translation of “VIII Butterfly or Mantis? The Life and Times of Cornelia van Nijenroode” by Fukuya Kurihara: Leonard Blussé, *The Battle of Otemba Cornelia*, Heibonsha, 1998 (レオナルド・ブリュッセイ (栗原福也訳)「おてんばコルネリアの闘い」, 平凡社 1998).
+
+[^(26)](#part0008_split_000.html_fn26) Tetsusi Masanobu, *Nobel-Jagatara Oharu*, San-ichi-shobo 1996 (正延哲士「小説じゃがたらお春」, 三一書房 1996).
+
+[^(27)](#part0008_split_000.html_fn27) Hiroko Shiraishi, *Information of Jagatara O-Haru*, Bensei-shuppan 2001 (白石広子「じゃがたらお春の消息」, 勉誠出版 2001).
+
+[^(28)](#part0008_split_000.html_fn28) Madoka Kanai (Footnote 11).
+
+[^(29)](#part0008_split_000.html_fn29) Masahiko Wada, *Southeast Asia in the Modern Age*, University of Air 1991 (和田正彦「近現代の東南アジア」, 放送大学教育振興会 1991).
+
+[^(30)](#part0008_split_000.html_fn30) Abdrurrachman Surjomihardjo, *Pemekaran Kota Jakarta/The Growth of Jakarta*, Penerbit Djambatan, Jakarta 1977\. Ciliwung River was meandering in a map of 1627, but was straightened in the map of 1635.
+
+[^(31)](#part0008_split_000.html_fn31) F. de Haan, *Oud Batavia – Gedenboek uitgegeven Genootschp van Kunsten en wetenschappen naar aanleiding van het driehonderdjarrig bestaan der stad 1919 (Eerste Deel)*, G. Kolff & Co., Batavia 1922\. The original report is found in: Rev. A. F. King, “A gravestone in Batavia to the memory of a Japanese Christian of the seventeenth century”, *Transactions of the Asiatic Society of Japan* Vol. XVII, Hakubunsha, Tokyo 1889, pp.79*–*101 (Google Books).
+
+[^(32)](#part0008_split_000.html_fn32) Marquis Tokugawa (Footnote 4).
+
+[^(33)](#part0008_split_000.html_fn33) A rubbing of the inscription exists in the National Museum of Japanese History, Sakura, Chiba, Japan.
+
+[^(34)](#part0008_split_000.html_fn34) Seiichi Iwao (footnote 10).
+
+[^(35)](#part0008_split_000.html_fn35) Marie-Odette Scalliet, “Une curiosité oubliée: le Livre de dessins faits dans un voyage aux Indes par un voyageur hollandais du marquis de Paulmy”, *Archipel* 54, 1998.
+
+[^(36)](#part0008_split_000.html_fn36) Bugis is an ethnic group originally from Selawesi (Celebes). They were seafarers and, according to tradition, those who went to Madagascar and settled there in the prehistoric time were the Buginese.
+
+[^(37)](#part0008_split_000.html_fn37) The Jakarta Post, “Ex-Dutch shipyard now trendy cafes”, *The Jakarta Post* (16 September 2000 ), [http://www.thejakartapost.com/news/2000/09/16/exdutch-shipyard-now-trendy-cafes.html](http://www.thejakartapost.com/news/2000/09/16/exdutch-shipyard-now-trendy-cafes.html)
+
+[^(38)](#part0008_split_000.html_fn38) Adolf Heuken SJ, *Historical Sites of Jakarta*, Cipta Loka Caraka, Jakarta, 2000.
+
+[^(39)](#part0008_split_000.html_fn39) Mars was the Roman god of war and agriculture, while Minerva was the goddess of poetry, medicine, wisdom, commerce and arts. They correspond to Ares and Athena, respectively, of Greek mythology.
+
+[^(40)](#part0008_split_000.html_fn40) C. Scott Littleton, *Gods, Goddesses, and Mythology*, Vol. 6, Marshall Cavendish, 2005; Christopher Irving, *A Catechism of Mythology: Being a Compendious History of the Heathen Gods, Goddesses, and Heroes (1822)*, Kissinger Publishing 2010.
+
+[^(41)](#part0008_split_000.html_fn41) The Cape Colony and Ceylon occupied by the British were not returned. The South Netherlands returned became independent as Belgium Kingdom in 1830.
+
+[^(42)](#part0008_split_000.html_fn42) Madoka Kanai, *Modern Japan and Holland*, University of Air 1993 (金井圓 「近世日本とオランダ」, 放送大学 1993); Kozo Shinano, *A history of the Dutch East-India company*, Doubunkan-shuppan 1988 (科野孝蔵「オランダ東インド会社の歴史」, 同文館出版 1988), etc.
+
+[^(43)](#part0008_split_000.html_fn43) The Dutch text: “Dit Stad-huis is na het af-breeken van het oude begonnen den 25sten Januari A° 1707 onder de Regeeringe van den Heere Gouverneur Generael JOAN van HOORN” – “En vol-bouwt onder de Regeeringe van den Heere Gouverneur Generael ABRAHAM van RIEBEECK, den 10den July A° 1710”.
+
+[^(44)](#part0008_split_000.html_fn44) M. C. Ricklefs, *Jogjakarta under Sultan Mangkubumi 1749*–*1792: A History of the Division of Java*, Oxford University Press, London 1974.
+
+[^(45)](#part0008_split_000.html_fn45) Pangeran=Prince or lord.
+
+[^(46)](#part0008_split_000.html_fn46) A name, “Ajar Sukaresi”, appears in “Ciung Wanara”, one of the Sundanese traditional poems called Pantun Sunda, as the holy name of King Sang Permana Kusumah (Ciung Wanara’s father) after he became a hermit (*See* [Chapter 4](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8)). The spelling is very similar, but whether he was the same person as “Ajar Sukarsi” is unknown to the present author.
+
+[^(47)](#part0008_split_000.html_fn47) Guntur Geni, Ki Pamuk and Njai Setomi. They were transferred to Mataram (Solo), Banten and Cirebon, respectively, and became their regalia.
+
+[^(48)](#part0008_split_000.html_fn48) The enemy was somehow Ngabesah, the grandfather of Sukmul himself, who demanded a princess of Spain, allied with England, France, China, etc. In one speculation, Ngabesah was Abyssinia (Ethiopia).
+
+[^(49)](#part0008_split_000.html_fn49) Ratu Kidul, the descendant of Pajajaran on the left-hand side of the family tree, legendary Queen of the South Sea, has no bearing on the Book of Sakhender. Among various versions, a tradition said, “Dewi Srengenge, a daughter of Mundinglaya Wangi [Siliwangi] was expelled from the palace, when she suffered from a skin disease by the black magic of a witch employed by Dewi Mutiara, the second consort of the king, who had wished her son to be the heir. When Dewi Srengenge reached the southern coast [on the Indian Ocean] and bathed in the sea-water, her disease was healed and an exceeding beauty was bestowed. At the same time, she obtained a supernatural power and became Ratu Roro Kidul, or the Queen of the Southern Sea” (Argo Wikanjati, *Kumpulan Kisah Nyata Hantu di 13 Kota*, Penerbit Narasi 2010). According to *Babad Tanah Jawi*, compiled in 18^(th)-century Java, Panembahan Senopati had exchanged marriage vows with Ratu Kidul and obtained power, and the same relation persisted with the successive kings of Mataram (Nancy K. Florida, *Indonesia*, No. 53, Apr. 1992 (pp. 20–32), published by: Southeast Asia Program Publications at Cornell University).
+
+[^(50)](#part0008_split_000.html_fn50) E. g. Anthony Reid, *Early Southeast Asian categorization of Europeans*, in S. B. Schwartz (Ed.), *Implicit Understandings*, Cambridge University Press 1994.
+
+[^(51)](#part0008_split_000.html_fn51) The Eighty Years War (1568–1648). The seven northern provinces were essentially independent before the turn of the century.
+
+[^(52)](#part0008_split_000.html_fn52) The VOC was instructed in orders, dated 1622, to “uphold the religion of the state”, “maintain the sanctity of the church”, and to “destroy all false religions and worship of idols, fight against the anti-Christ, and glorify the kingdom of Jesus”. (James J. Fox (Ed.), *Indonesian Heritage Vol. 9: Religion and Ritual*, Periplus, Singapore 1998.) They coerced people in Java and the outer islands who were Catholic since the Portuguese Era to convert to the Dutch Reformed faith. The freedom of religion was granted in the East Indies when Herman Willem Daendels (1808–11) was the governor-general.
+
+![Illustration](images/00033.jpeg)
+
+North Jakarta (Old Batavia Area). (Drawn on Google Earth)
+
+![Illustration](images/00034.jpeg)
+
+Central Jakarta. (Drawn on Google Earth.)
+
+**Chapter 2**
+
+Jagatara Tales
+
+### Antique cannons
+
+The history museum, Jakarta History Museum in the Old Batavia area (the present-day Kota), holds many collections that are quite interesting if one enquires about their origins, in addition to the portrait of Jan Pieterszoon Coen mentioned in the previous chapter.
+
+If one goes straight from the central entrance to the back courtyard of the building, an antique cannon, as big as 15 cm caliber and four metres long, named “Si Jagur” appears in front of you. I remember that until several years ago the cannon was located on the pavement beyond the front square of the museum (now called Taman Fatahillah), but, according to old books[¹](#part0009_split_001.html_fn_1)^,[²](#part0009_split_001.html_fn_2), it had once been positioned on the grass on the outside of the city wall. On the rear side of the barrel is attached an enormous fist, which must have been cast together with the barrel itself. Marquis Tokugawa, who saw it in 1921, wrote in his famous travelogue, *Journeys to Java*[²](#part0009_split_001.html_fn_2), “Although it is a kind of item that, if in Japan, would be placed in a special room and hidden from public eyes, the Dutch do not mind and leave it there exposed to anyone. Then, people are not surprised.” Indeed, the clenched fist with its thumb protruding between the pointing and the middle fingers looks strange even for us in these more modern times.
+
+![Illustration](images/00035.jpeg)
+
+Si Jagur (alias: Kyai Setomo).
+The statue of Hermes is seen at the sight of the cannon.
+Jakarta History Museum. Photograph taken by M. Iguchi, 2007.
+
+![Illustration](images/00036.jpeg)
+
+Ki Amuk in the front yard of Banten Museum.
+Photographed by M. Iguchi, March 1998.
+
+According to the same book, there was a belief that Si Jagur was a man, alternatively called Kyai Setomo, and that “when he was to marry his fiancée cannon in Bantam [the present Banten Lama], Java would become independent by beating and expelling foreign powers”, although in reality they were to be kept separated until today, even sixty-five years after the independence of Indonesia. In the front courtyard of the Museum of Banten Lama, I saw a cannon named Ki Amuk (or Ki Pamuk), which would match Kyai Setomo in both size and shape but with no fist attached, and it was said in *The Sultanate of Banten*[³](#part0009_split_001.html_fn_3) that Ki Amuk was male and the other one in Jakarta was female, contrary to the description in *Journeys to Java*. In any case, according to the tradition written in a manuscript by Ranggawarsita, a famous 19th-century court poet in Solo, and cited elsewhere, Kyai Setomo with a man’s title was no other than a male and his partner was Nyai Setomi who lived in Solo. The story is roughly as follows[⁴](#part0009_split_001.html_fn_4):
+
+“Once upon a time, the king of Pajajaran saw, in his dream, a powerful weapon which sounded like thunder, and ordered his Patih [prime minister] to look for it at the risk of his life. In great difficulty, the Patih went into deep prayer with his wife, Nyai Setomi, to ask god’s help, and did not show himself to the court. Receiving a report from a messenger that two strange things were discovered in the Patih’s house, the king rushed there and recognised that they were the very weapons he saw in his dream. Then, a voice was heard that they were the incarnations of Kyai Setomo and Nyai Setomi.
+
+“Later, Sultan Agung of Mataram who heard about the weapons ordered them to be brought to the royal capital, Kartasura. Kyai Setomo did not like to stay there and one night he went back to Jakarta by himself. When he arrived in front of the gate of Jakarta Castle, it was already morning and he could not go further. The local people regarded him as a holy cannon, called him Kyai Jagur, and offered little paper umbrellas; Nyai Setomi, who was left in Mataram and moved to the new capital, Surakarta [Solo], was not happy there and wept often. The tears she shed were received in a bowl.”
+
+As an heirloom of the Solonese Royal Family, Nyai Setomi was held in a large coffer placed in the open hall of one of the palaces, Keraton Kasunanan Surakarta Hadiningrat, without being exposed to the eyes of the public. In a photograph found on the internet[⁵](#part0009_split_001.html_fn_5), a small bowl to receive the tears shed by Nyai Setomi was placed on the floor underneath the muzzle, although the size of the cannon itself looked rather small to match her lover cannon in Jakarta. In another photograph in a newspaper[⁶](#part0009_split_001.html_fn_6) taken in 2010 through a semi-transparent curtain on the occasion of the annual cleaning ritual, the diameter of the barrel was apparently comparable with that of Kyai Setomo, being as large as a human head.
+
+![Illustration](images/00037.jpeg)
+
+Nyai Setomi, photographed on the occasion of annual cleaning ritual.
+KOMPAS Citizen Image 24 Feb 2010.
+[http://citizenimages.kompas.com/citizen/view/52937-Jamasan Maulid](http://citizenimages.kompas.com/citizen/view/52937JamasanMaulid).
+
+![Illustration](images/00038.jpeg)
+
+Guntur Geni, placed in the front square of the Kraton Surakarta Hadiningrat. Photographed by M. Iguchi, February 2012.
+
+As mentioned in the previous chapter, Nyai Setomi and Ki Amuk along with another cannon, named Guntur Geni, also appeared in the *Book of Sakhender* as the payment to the Prince of Jayakarta by Baron Sukmul when he came from Spain and acquired Princess Tanuraga of Pajajaran royal lineage, although the destination of Nyai Setomi in that story was not Mataram but Cirebon.
+
+Let us depart from the world of fiction. In reality, Kyai Setomo is believed to have been a trophy that the Dutch obtained during their attack at Portuguese Malacca in 1641[⁷](#part0009_split_001.html_fn_7). Also, some other antique cannons existing in Java have their own histories. According to a book by Dr. de Graaf[⁸](#part0009_split_001.html_fn_8), Nyai Setomi was an item that was probably presented to the Prince of Surabaya from the Portuguese around 1609 and was subsequently carried inland by the Mataramese when the latter seized Surabaya. Although the cannon was once plundered from the court (in Karta) in 1677 during the rebellion of the Bugis, it was regained in the next year when the Mataram–Dutch allied force recovered the old capital. Then, it was installed in Kartasura, the new capital of Mataram. It has been held in Surakarta (Solo) ever since 1746 when the royal capital was finally moved there. It is supposed that the name Nyai Setomi was derived from St. Tome, a town in Portuguese Goa (1510– 1961), where it was cast, and the name, Kyai Setomo, from *Sancta Mariam*, the name of the ship that transported the cannon[⁹](#part0009_split_001.html_fn_9). Probably, the Indonesian word, “meriam”, for cannon originated from the same word.
+
+Guntur Geni is also mentioned in the same book. The cannon located in the square in front of the Kraton Surakarta Hadiningrat is a huge one with a barrel of 5.3 m length and 36 cm diameter. Since its nickname, Pancaura, is interpreted to mean 1547, the cannon must have been related to the special event in 1547 Saka or 1625 AD when Sultan Agung was conferred the imperial title of Susuhunan. Although this cannon presumably cast in Mataram was not well made and had some cracks and defects, the detonating sound must have been enormous, giving the name, Guntur Geni (*lit.* Fiery Thunder)[^(10)](#part0009_split_001.html_fn_10).
+
+Back to Jakarta, there was a saying among local people that an infertile woman would be blessed with a child if she visited Si Jagur, as the name means “Mr. Robust” or “Mr. Fertility”. In fact, I remember that flowers were offered and incense burnt around the cannon when it was still located outside the museum. On the rear side of the cannon’s barrel is wound a bronze belt on which is carved in relief in Latin:
+
+EX ME IPSA RENATA SUM [I was born from myself]
+
+I cannot guess the intent of the gunsmith who carved this phrase and put the strange fist on an object that was a weapon of war. With respect to Nyai Setomi in Solo, such prayers as “Oh Jesus, Thou art the most perfect being who guides people of the world” are said to have been carved, along with the symbol of the Portuguese king[^(11)](#part0009_split_001.html_fn_11). This is understandable as a sincere wish of a gunsmith.
+
+### **The monument of Pieter Erberveld, a rebel**
+
+In the left-hand side (east side) of the museum’s back courtyard, one finds a stone wall on the tablet on which is inscribed in both Dutch and Javanese:
+
+In consequence of the detested memory of Pieter Erberveld, who was punished for treason, no one shall be permitted to build in wood, or stone, or to plant anything whatsoever, in these grounds, from this time forth for ever more.
+
+Batavia, 14 April 1722[^(12)](#part0009_split_001.html_fn_12)
+
+![Illustration](images/00039.jpeg)
+
+The walled-up gate of Pieter Erberveld’s house, on which his skull was put up. Jakarta History Museum. Photographed by M. Iguchi 2006.
+
+This monument for remembering the rebellion of a certain Pieter Erberveld was originally a gate of his house that was walled up by cement. Before the Second World War, the skull of Erberveld, which was pierced by a spear and fixed with gypsum, and placed on top of the gate, was an attraction for sightseers. The summary of the incident was written in many books as, “Pieter Erberveld was born, as the last son of six brothers, to a rich merchant who came from Germany and made his fortune, and a local woman (or a Siamese woman). Unlike his elder brothers who grew up into European-like men, Pieter became a fanatic Javanist. He, together with some comrades, conspired to massacre all Europeans in Batavia, but the plot was uncovered and he was executed.” The detail was found in *Java: Past and Present*, written one hundred years ago by Donald Campbell[^(13)](#part0009_split_001.html_fn_13), an English businessman and historian. The description over ten pages is quite interesting, as if it were a script of a play, but let us follow the outline.
+
+When Pieter Erberveld was planning a coup d’etat, he would have thought it difficult for him, a son of a mere merchant, to become the leader of a country. Then, Raden Kartadriya and his brother from the court of Mataram appeared with an ambition to become the king and the sultan, respectively, once the power was taken, the positions that were unexpected for them in normal situation due to their low ranks in the court. Pieter Erberveld himself was probably content if such a position as the Highest Priest in Java was to be assumed.
+
+Digressing from the subject, a struggle for the succession to the throne was very common in Java ever since ancient times, as one might remember that in the 13th century the assassination of kings was repeated three times in Singasari after the kingdom itself was founded by the overthrowing of the king of Kediri by Ken Amrok, and that in the 16th century when Majapahit became weakened by domestic discords and eventually fell to Islamic power. Even in the New Mataram Kingdom, which was established in the 16th century and was to continue to date, there were three family wars, called the Java Succession Wars, in the early 18th century, and the territory was dived into two parts for the Susuhunan Family in Surakarta (Solo) and the Sultan Family in Yogyakarta in 1755, in accordance with the Treaty of Gianti interceded by the Dutch VOC.
+
+Prince Diponegoro who fought the so-called Java War against the Dutch in 1825–30 was made one of the National Heroes after the independence of Indonesia and his name was borne on many town streets as well as the university of Semarang, but the reason for his rebellion was not only his own belief that he himself was destined to be the leader of Java and the sympathy among aristocrats whose rights of land had been detracted [^(14)](#part0009_split_001.html_fn_14). When his father Sultan Hamengkubuwono III died in 1814, the throne was not passed to him but to his younger half-brother, despite the fact that he was the first son of the sultan, because his mother was a woman of low birth, and he was appointed to be an advisor to the new sultan. This was arranged by the advice of Stamford Raffles who ruled Java during the British Era (1811–15). When the new sultan died young in 1923 he again had no chance, to his disappointment, for the same reason. In the beginning of the war, Diponegoro’s troops, using a guerrilla warfare, were successful in embarrassing the Dutch, but the tide soon turned against him. When he appeared for negotiation, he was captured as he did not abandon the title of sultan, which he himself declared. A descendant of the Sultan’s lineage once whispered to me that Diponegoro was remembered as a troublemaker in the family.
+
+![Illustration](images/00040.jpeg)
+
+*The house of Pieter Erberveld* by Josias Cornelis Rappard 1888.
+Reproduced from: [http://commons.wikimedia.org/wiki/File:Pieter_Eberveld.JPG](http://commons.wikimedia.org/wiki/File:Pieter_Eberveld.JPG) The panel to show the legend is seen on the walled-up gate and the skull of Erberveld, on the top.
+
+Returning to the subject of the conspiracy of Pieter Erberveld, Pieter was unmarried but had a step-daughter, Meeda, a beautiful girl of mixed parentage, adopted from his deceased brother. Despite Pieter’s intention to bring up Meeda like a pure native girl and to let her marry a native boy, Meeda’s mind and taste inclined to the European side, and she fell in love with a young Dutch officer, who recognised it by telepathy.
+
+One day, when the Dutch officer resolutely visited Meeda’s uncle to express his wish to marry her, he was sharply told by Pieter that Meeda could not be given to a white man. Although disappointed and exasperated, he found a chance to meet his loved one and proposed a private marriage. Late that same night, she was wondering whether she should betray her uncle and run to her lover. When she was vacantly looking outside from the veranda of her room, she saw some dark bodies pass across the gleam of light filtered through the lower-stair window. Being anxious about her uncle, she went to his room, but he was absent and his bed had no sign of having been pressed that night. Finding her uncle in the corridor, she followed him and saw him enter the dining room in which a number of guests seemed to be gathering. Wondering what was going on, she placed her ear to the keyhole of the door and heard some formidable words whispered between them. Putting her eye to the keyhole, she witnessed a frightful scene in which every man in the room placed his hand on his keris (sword) and, after kissing their hand, repeated the same gesture with the Koran. (This was the same ceremony as Christians swore on the Holy Bible.)
+
+Horrified by what she had heard and seen, Meeda returned to her room and spent the night without sleep. Next morning she secretly wrote and sent a letter to her lover to inform him of the plot, begging if possible to conceal her uncle’s name as one of the conspirators. The young officer was equally horrified, especially by the fact that the meeting was held in the house of his lover’s uncle, but had to divulge the whole details to his senior officer. The government lost no time in sending a warning to the lords in Mataram and other districts in the whole of Java. On the eve of the planned coup, when Pieter Erberveld gave his last message to comrades, “Be ready one hour before the daybreak”, his house was already surrounded by the government’s troops.
+
+The fate of Meeda and the young officer, which has long been my question, was described in an old Christian society’s magazine, which recently came into my sight. According to an article, entitled “Pieter Erberveld’s Treason*”*, Meeda and the Dutch officer, Piet van der Volt by name, were married in the old Dutch Reformed Church and the government authorities vied with the Dutch residents in showering honours upon them. It was also written that Pieter Erberveld’s father was a Dutchman named Karl and his mother was a Javanese woman named Boenga Haroem[^(15)](#part0009_split_001.html_fn_15).
+
+The sentences given to the principal conspirators, cited in the book by Campbell, were the most formidable ones I have ever read, the decision for Pieter Erberveld and Raden Kartadriya being that “the two shall be bound on a cross on which they have their right hands shall be cut off, and their arms, legs and breast, pinched with red-hot pincers until their flesh are torn away: their bodies ripped from the bottom to top and their hearts thrown away: their head cut off and fixed on the post [as it was seen in later days]”. The author wrote, “Such was the punishment of the 18th century”, but perhaps not only the Dutch were cruel at that time when, for instance, the burning on the stake and the boiling in a cauldron were said to have been practised in Japan.
+
+With regard to Erberveld’s conspiracy, there is a different theory[^(16)](#part0009_split_001.html_fn_16) in that the story was fabricated by the Dutch authority who wanted to expropriate the estate of Erberveld. Even though it was the case of two hundred years ago, it is hardly believable to myself, the theory itself being doubted as a fabrication.
+
+The skull of Pieter Erberveld is supposed to have been demolished from the wall in 1944 during the Japanese occupation[^(17)](#part0009_split_001.html_fn_17), but a question remains why the Japanese removed the symbol of a man who had stood against the Dutch. An answer given in Heuken’s book, a historian of Jakarta, was “to please the Indo[^(18)](#part0009_split_001.html_fn_18) population of Jakarta”, but I would like to think in a different way. Probably the Japanese occupation army was afraid that the local people would see them as overlapping the image of the brutal Dutch in the past.
+
+A replica of Erberveld Monuments with the skull does exist in the Museum Taman Prasasti (Stone-inscription Park Museum), Tanah Abang, Central Jakarta. According to a caretaker, it was reproduced at the original site after the country’s independence and later moved to the present place. The wall in the History Museum was the genuine one, he added.
+
+I wished to visit the site of the former house of Pieter Erberveld and asked Mrs. E. of the National Museum. She said it must be somewhere around the area called Kampung Pecah Kulit (*lit*. skin-braking village) and told her husband to accompany me. We went to the area, not far from Kota, where small houses are crowded along narrow streets, but the inhabitants did not know at all about the old traitor and looked indifferent to the loathsome name of their own area, which originated in the bloody execution. We came out to the high street, Jalan Pangeran Jayakarta, and called in to Greja Sion (Sion Church) to ask the location, where a sexton told us it was some two hundred metres down the street. At Jalan Pangeran Jayakarta No. 9–11 was now a modern showroom of Japanese automobiles, bringing no atmosphere of old days where Pieter Erberveld’s house had been replaced with an opium factory and subsequently with a palm oil factory.
+
+### **Destruction of cultural monuments by the Japanese occupation army and the protection by Prof. Tanakadate**
+
+The Japanese occupation army also destroyed the statue of Jan Pieterszoon Coen in Weltevreden, the Mars and Minerva statues from the alcoves of Amsterdam Gate, the only part of the Batavia Castle that Herman Willem Daendels left untouched when he reformed Batavia, and many other Dutch monuments in the city. In fact, I once read somewhere that the statue of Themis, the Greek Goddess of Justice (equivalent to Roman Justitia), which was once mounted on the Parthenon-style front roof of the building of the Jakarta History Museum, was demolished, probably, in my own guess, by a low-level, uneducated officer who had thought that a Western woman exposing the skin from her shoulder to her arm was inappropriate for the symbol of the building that they had expropriated for their office. In this connection, in Singapore, the statue of Stamford Raffles, the founder of the British possession, was saved by Prof. Tanakadate who rushed there from French Indochina on the outbreak of the war to protect the Museum, in cooperation with Marquis Tokugawa who arrived later as the Supreme Advisor to the army, and returned it to the British after the war[^(19)](#part0009_split_001.html_fn_19), [^(20)](#part0009_split_001.html_fn_20), [^(21)](#part0009_split_001.html_fn_21). The two intellectuals never permitted the occupation army to touch cultural heritages. Unfortunately, such high-minded persons were not available in the Dutch East Indies. Tomoji Abe and other intelligentsia recruited and sent there for propaganda had no consciousness and discipline to give proper advice to the army. Most of them seem to have been enjoying their lives in the exotic land, some of them having spent most of their time in brothels[^(22)](#part0009_split_001.html_fn_22).
+
+Universities, research institutions and museums in Java were fortunately protected, however, by Prof. Tanakadate, who in Singapore worried about their fate. As soon as he flew to Java, he negotiated with the military authority not to touch those facilities and, within a short period, went all around the island to free Dutch academics and researchers from prisons and let them resume their activities. The record of his climbing to Mt. Merapi in Central Java, together with his volcanologist friend, Dr. van Bemmelen, was written in *The Seizure of Southern Cultural Institutions*[^(23)](#part0009_split_001.html_fn_23). Another episode remembered is that Prof. T. Nakai from Tokyo Imperial University and Prof. R. Kanehira from Kyushu Imperial University, who served as the director of the Buitenzorg Botanical Garden and the head of the Herbarium, respectively, strove to protect the garden when the Japanese army wanted to cut down and use the trees for lumber[^(24)](#part0009_split_001.html_fn_24). Marquis Tokugawa and Prof. Tanakadate, who both participated as members of the Japanese delegation in the Fourth Pacific Science Congress held at Batavia-Bandung in 1929, must have been “prepared and willing to discuss and solve problems, standing aloof from politics and free from national chauvinism and other more or less egotistical motives”, as Dr. de Graeff, the then governor-general of the East-Indies, expected and wished in the opening address of the same congress[^(25)](#part0009_split_001.html_fn_25).
+
+### **Greja Sion**
+
+The Greja Sion, alias Black Portuguese Church, mentioned above, built in 1615 by the Dutch government for Portuguese–Indian slaves, is another precious historical heritage in Jakarta, having not been renovated for 400 years.
+
+In front of the entrance of this church, on the left-hand side, there was a modest tomb and on the epitaph was inscribed:
+
+Here rests the honourable Heer Hendric Zwaardecroon, the former Governor-General of Netherland India born in Rotterdam on 26 January A° 1667 and died in Batavia on 12 Augustus A° 1728.
+
+![Illustration](images/00041.jpeg)
+
+The grave of Governor-General Henric Zwaardecroon in the Greja Sion (Sion Church). Photographed and presented by courtesy of Mr. K. Nishimi.
+The epitaph reads, “Hieronder rust de weledele heer Henric Zwaardecroon. oud-Gouverneur-Generaal van Nederlands-India gebooren tot Rotterdam den 26 January A° 1667^(en) overleden tot Batavia den 1 2 Augustus A° 1728”. (*See*, English translation in the text).
+
+I thought that I was incidentally in front of the tomb of the governor-general who was in office (1718–25) at the time of Pieter Erberveld’s treason, without knowing the facts before, and made a sign of the cross in a Christian manner. Later, I learnt that Zwaardecroon introduced the planting of coffee and the production of silk to Java. Despite him being in such a high position as the governor-general, he preferred to be buried among the poor and lowly people and the silver tankard inlaid with gold was presented by the directors of VOC.
+
+The hall of the church in which we were kindly ushered by the chief priest was a construction of simple Dutch type with no gaudy decoration, although it should have been a church for the Catholic faith. The priest told us that the denomination of the church was converted to Protestantism about a decade ago because of the decrease of Catholic believers in the area.
+
+![Illustration](images/00042.jpeg)
+
+The interior of Greja Sion (Sion Church).
+Photographed by M. Iguchi 2006.
+
+### **Statue of Hermes**
+
+Another object that attracts visitors’ eyes in the back courtyard of the Jakarta Historical Museum is a bronze statue of Hermes, which used to be on the parapet of a bridge at Harmonie, halfway from Kota to the present-day city centre, but I did not see it for some years and was wondering where it had gone. On the tablet of the newly provided stand was inscribed that the statue was moved there in 2000 AD.
+
+![Illustration](images/00043.jpeg)
+
+The Hermes Statue. Jakarta History Museum.
+Photographed by M. Iguchi 2006.
+
+Hermes, identical to Roman Mercurius, is, of course, the god of science, commerce, eloquence, and many of the arts of life in Greek mythology, and this statue like many others holds a wand, Kerykeion, the symbol of commerce that was adopted for the school emblem of the Tokyo College of Commerce, the present-day Hitotsubashi University, Tokyo.
+
+In this connection, I should add that at the place in the city that is still called Harmonie stood a famous building named Harmonie, the construction of which was started by Daendels in 1810 and completed in 1815 at the time of Thomas Stamford Raffles. The building was primarily a high-society clubhouse but also a cradle of the present-day National Library and National Museum. It was also remarked as the first modern building constructed by a native contractor. It was awful that the building was demolished in April 1985 by order of the State Secretariat who did not know of its historical value, in order just to widen a road (Jalan Majapahit) and to provide an automobile parking space[^(26)](#part0009_split_001.html_fn_26). In fact, many old buildings were demolished during the time of President Soeharto (1968–98) who had no higher education. For example, the site of the famous Hotel des Indes (pronounced as [ɔtεl dεz‿ε˜d] in French manner as the founder was a Frenchman) near-by is now a shopping centre.
+
+![Illustration](images/00044.jpeg)
+
+The Harmonie Society Building, which existed in Jakarta until 1985.
+The photograph reproduced by courtesy of Mr. K. Nishimi from [http://jakartan.cocolog-nifty.com/blog/2007/05/](http://jakartan.cocolog-nifty.com/blog/2007/05/) under the permission of KITLV.
+
+### **Old prisons**
+
+In the semi-basement at the rear side of the History Museum building, there are several iron-barred cells in which one can see a number of iron balls of 15–25 cm diameter to which iron chains are attached. The cells were prisons when the building was the City Hall, and once Prince Diponegoro was said to have been detained in one of them until he was deported to Macassar. Needless to say, those iron balls were fetters.
+
+On the ground floor of the museum, on the right-hand side, there are several rooms in which stone inscriptions of the Tarumanagara period (4th–8th centuries), the stone monument of the Pajajaran–Portugal Treaty (1522) and other historical remains are displayed. Although all of them are replicas, as the originals are held in the National Museum, it is an advantage for us to be able to see all of them together with concise legends. The history of the Tarumanagara and Pajajaran eras will be further mentioned in other chapters.
+
+![Illustration](images/00045.jpeg)
+
+One of the cells on the semi-basement of the old City Hall building (the present-day Jakarta History museum).
+Photograph taken by M. Iguchi 2006.
+
+### **The insurrection of the Chinese**
+
+Whilst the rebellion of Pieter Erberveld was prevented before it happened, Batavia saw the bloodiest incident in its history, the insurrection of the Chinese, in October 1740\. Although the details are written in many history books, let me cite a lively report that appeared in *The Scots Magazine* in July the following year[^(27)](#part0009_split_001.html_fn_27).
+
+*An account of the insurrection of the Chinese at Batavia in October 1740 and a description of that city, as published in Holland, according to letters sent thither from Batavia.*
+
+“I cannot but impart to you the dismal misfortune we have lately met with, viz. a conspiracy amongst the Chinese dwelling in and about this city (who were upwards of 90,000) to massacre every one of us Europeans, and make themselves masters of the island of Java.
+
+“Having with this intent, in bodies of 5 or 6,000 men, for some time infested the highlands, and committed great massacres, rapines, devastations by fire and sword, &c. the cause of which we were not able to learn, the Javans, and those they had forced to assist them, were sometimes taken 30 or 40 together, and 4 or 500 of them examined at once: whereupon 200, who could give no account how they subsisted, were sent to the island of Ceylon, and the rest, that could get their bread, discharged. But this salutary precaution did not avail; the riots increased every day in the highlands, till at last the government judged it expedient to send a detachment thither: for which purpose Mess. Van Imhoff and Van Aarden were sent with 800 men; who, having been some days in the said highlands, gave them battle, routed and dispersed them. In the meantime the Chinese dwelling in and about Batavia had made all manner of preparations, providing themselves with a sufficient number of wooden cannons and other warlike stores, and digging mines underground, which they charged with powder. The treachery being now on the point of execution, it pleased God to discover the whole affair to us, and that too by five Chinese, who of their own accord came and acquainted the government with the scene of blood which their own countrymen were preparing: whereupon all our guards and posts were doubled, and all the Clerks, and even first and second Supercargoes without exception were obliged to mount guard, completely armed, in the castle; tho’ the government did not apprehend the danger to be so great towards proved.
+
+“Matters remaining in this situation for two days, we had intelligence on Saturday the 8th of October, that one of our advanced posts near the island Onrust[^(28)](#part0009_split_001.html_fn_28), called Quale, had been surprised by the Chinese, all the Europeans murdered, and everything destroyed by fire: whereupon the government met, and ordered that no Chinese should open his door, appear in the streets, nor burn a light in the night time; and that the contraveeners should immediately be shot to death. Strong guards were also presently posted in all the streets and by-places.
+
+“Whilst the government was yet assembled, in the evening, about 7 o’clock, the Chinese set fire to the suburbs, near the gate of Utrecht, expecting that we would come with all hands to extinguish it; in which case those within would have sallied from their habitations, and so have made an end of us altogether. But they were mistaken, the gates being kept close and well guarded.
+
+“Towards 8, the members of the government took, two by two, the guard of the gates upon themselves, in order to execute in person what commands and orders might be given.
+
+“At 9 o’clock the Chinese, to the number of 40 or 50,000, advanced with a terrible noise of drums, trumpets, basons, and hideous shouts, in order to give their comrades in the city a signal for the attack; but those within seeing our good regulation and order, and that they were deprived of every opportunity to join their brethren, kept themselves very quiet, being seized with fear; and indeed had they ventured upon the matter, in combination with the rest, we had all been destroyed, being little upwards of 3,000 sighting men.
+
+“Meanwhile the Chinese that were before the city continued their havock with fire and sword. They surprised a guard of 15 blacks[^(29)](#part0009_split_001.html_fn_29) without the gate of Utrecht, and likewise another without the Dies-gate, all whom they murdered and destroyed. They also fell upon a guard of 60 men near the New gate; but these defended themselves so gallantly that many Chinese were killed, and the gate remained in our hands, it being within reach of our cannon, which ply’d them with good success all that night: moreover, we made a fally with 160 men, both horse and foot, to relieve this post and other Christians inhabiting the out-parts. We could not make a stronger sally, having our sworn enemies both within and without. We spent the night with great courage, tho’ not without danger, finding ourselves in the midst of our foes.
+
+“In the morning the Chinese quitted the suburbs; whereupon the government met, and an order was issued to kill all the Chinese, except the women and children, there being no other remedy to secure us within, and to defend ourselves against the multitudes of enemies without. Accordingly the doors and houses of the Chinese were forced open with axes and engines, and all the men hawled out and massacred; their wives and children were all conveyed to the Chinese hospital. Meanwhile the streets, rivulets and moats, were soon filled with dead bodies, and in some places one might have been over the ankles in blood, so great was the slaughter. In the interim some large guns were planted on the opposite side of the Roemolake[^(30)](#part0009_split_001.html_fn_30), to play upon the Chinese Captain’s house, where there were upwards of eight hundred Chinese: When we had stormed it, about 30 women came from thence, upon our promising to do them no hurt; however, the Chinese Captain was amongst them, endeavouring to escape in women’s apparel; but, being too well known, he was discovered, and sent to the castle.
+
+“In the afternoon the forementioned Mess. Van Imhoff and Van Aarden returned with their men from the highlands into the city. At the same time, i.e. on Sunday about 2 in the afternoon, the whole city was in flames: for the Chinese, prompted with terror, set fire to their own houses, and perished miserably; and those that came out of doors were instantly slain by our people.
+
+“This great conflagration caused a vast confusion, especially amongst the women, who fled in crowds to the castle, as also those from without, the city being by this time, for the greatest part, and chiefly where the Chinese dwelt, reduced to ashes. There were also 635 Chinese confined in prison, all which were, towards night, put to death pursuant to order.
+
+“During all this confusion, the money and goods of the Chinese were a prey to any body that would enrich themselves by robbery, rapine and murder; and some there are, especially amongst the seafaring men, that have made booties worth 9 to common 10,000 rixdollars. The rest of the Chinese are fled into the mountains, where they continue to destroy every thing with fire and sword; however, our people kill many of them.
+
+“In all this havock we have not lost above 200 men. At present there is a general pardon published for those Chinese that will submit themselves within a month, which several hundreds have already done: however, this pardon does not extend to their two chiefs, but, on the contrary, a reward is promised of 1,000 rixdollars to those that bring them dead, and 5,000 for taking them alive; for the inferior sort, 200 dead, and 300 alive. This pardon expires the 22nd of November, so that all those that have not surrendered by that time are outlawed.
+
+“Such of them as were taken prisoners confess that their plot was to make themselves masters of Batavia, and all the trade there; and that, if they had succeeded, they would have impaled all the members of the regency, cut in pieces and then ate bodies of Imhoff and Tedens, whom they looked upon as enemies of their nation, burnt all persons of an advanced age, slaves of all the youth of both sexes, obliged the General of Batavia, and the Chief Director of the company, to form the meanest domestick offices to the Chief of the Chinese nation and his wife. ’Tis computed that near 12,000 Chinese were massacred.”
+
+![Illustration](images/00046.jpeg)
+
+*Murder of Chinese in Batavia, 1740*, by Adolf van der Laan.
+Reproduced from [https://www.rijksmuseum.nl/nl/collectie/RP-P-OB-75.356](https://www.rijksmuseum.nl/nl/collectie/RP-P-OB-75.356)
+
+The Chinese, especially from Guangdong (廣東), Hainan (海南) and Fujian (福建), had emigrated and settled in port towns in Southeast Asia, before the arrival of Europeans. In Batavia built by the Dutch, the Chinese who were talented in commerce and industry were in the position to supplement the human resources, being allowed to form their own community under the captain approved by the governor-general of VOC, but as their population grew various causes of frictions with the VOC government came into existence and they wanted to become the masters of Batavia. After the incident, the residential area of the Chinese on the left (west) bank of Ciliwung is said to have been moved to Glodok in the southeast of the city where most inhabitants now are Chinese descendants.
+
+The governor-general at that time was Adriaan Valckenier (1737–41). He tried to pin the guilty of the massacre on van Imhoff and sent him to Holland, but, on the contrary, the headquarters of VOC judged the governor to be responsible and removed him from the position, temporarily appointing Johannes Thedens as the governor-general (1741–3). Van Imhoff returned to Batavia and became the governor-general (1743–50).
+
+In the contemporary picture, it is an amazing fact that roads and canals regularly ran lengthwise and breadthwise and even Chinese houses with curved roofs were orderly arranged. One may say it was the city design, which the Dutch liked, but I cannot but admire their specific character. As far as I know, no scars of the Chinese insurrection remain today.
+
+### **Railways and roads in Java**
+
+Let us visit Jakarta Kota Railway Station. The west side of the building with a unique semi-circular facFade and a semi-cylindrical roof is the front, but one may be perplexed as the southern and the northern sides have the same design. The inside of the hall is full of the atmosphere of typical such terminal stations as of Ueno Station in Tokyo or King’s Cross Station in London, and across the barrier are five to six platforms arrayed parallel on the front, some restaurants and souvenir shops on the corner of both sides, touching the heart of travellers. In rush hour, one must be prepared to be jolted in the mass of commuters flowing out of short-range trains from Bogor, Tanjung Priok and other suburbs, as I have actually experienced a couple of times. It was a long time ago during my short visit to Indonesia, prior to my staying in Bogor, that I asked a young station officer about the origin of the station building, as I had a couple of hours to wait for a night train for Central Java. According to a booklet he obtained from his office, the original station opened in 1870 was reformed into the present building in 1926 by a Dutch architect, Frans Johan Louwrens Ghijsels who tried to merge the characteristics of occidental and oriental architecture styles in its design. In those days, the name of the station was Batavia Zuid[^(31)](#part0009_split_001.html_fn_31), or Batavia South, as it was located in the southern part of the original ward of Batavia, which constituted Greater Batavia along with Weltevreden, Tanjung Priok and Meester Cornelis. The station was popularly called BEOS, after the abbreviation of Bataviasche Ooster Spoorweg Maatschappij, which had first run a train there. The nickname is still heard today. When I took a taxi in Jakarta and told the driver, “To the station!”, and was asked back, “BEOS or Gambir?”, the above knowledge helped me to indicate the right destination. Gambir is the name of the station in central Jakarta, the original name of which, Weltevreden, is no longer accepted, unlike BEOS. Although the old name of the city, Batavia, is not heard either, its corrupted form, Butawi, is not completely obsolete, namely among elderly people, as one may hear in provinces, “He went to Butawi.”, “Orang Butawi [Jacartans] are cunning.”, etc.
+
+![Illustration](images/00047.jpeg)
+
+Jakartakota Station.
+The front cover of a Pramoedya Ananta Toer’s book, *Tales from Djakarta*, reproduced by courtesy of Equinox Publishing (Asia) 2000.
+
+In Java, the first train ran in 1867 between Semarang and Tangung in Central Java, five years earlier than in Japan between Shimbashi and Yokohama, probably to the surprise of some readers. In fact, the introduction of various modern facilities and systems in the Dutch East Indies was ten to fifteen years earlier and Japan caught them up as late as the 1920s (*See* Table 1).
+
+Table 1 Adoption of modern systems and facilities*
+
+|  | Java |  | Japan | dif** |
+| 1851 | Modern medical school (Batavia) | 1861 | (Yedo) | 10 |
+| 1858 | Telecommunication (Batavia.Buitenzorg) | 1869 | (Tokyo–Yokohama) | 11 |
+| 1859 | Submarine cable (Java islands) | 1872 | (Shimonoseki–Moji) | 13 |
+| 1864 | Postal stamp | 1871 |  | 7 |
+| 1867 | Railway (Semarang–Tangung) | 1872 | (Shimbashi–Yokohama) | 5 |
+| 1881 | Telephone (Batavia–Buitenzorg) | 1890 | (Tokyo–Yokohama) | 9 |
+| 1886 | Modern port (Tanjung Priok) | 1894 | (Yokohama) | 8 |
+| 1925 | Radio broadcast | 1925 |  | 0 |
+| 1928 | Airline company (KLIM) | 1928 | (Tozai Airline) | 0 |
+
+* Data from H. A. van Coenen Torchiana, *Tropical Holland, An Essay on the Birth, Growth and Development of Popular Government in an Oriental Possession*, University of Chicago Press, Chicago 1921; Takashi Shiraishi, *Brochure for Pramoedya Selection Series* 2, Mekon, Tokyo 1968 白石隆，「プラムディア選集２－付録小冊子」，メコン, 東京 1968).
+
+** Year difference
+
+The development of infrastructure was far more advanced as Marquis Tokugawa[^(32)](#part0009_split_001.html_fn_32) wrote in his travelogue, “The car ran like an arrow on a flat road, the surface of which was as smooth as that of a wheatstone.” Those who were equally admired by visiting Java around the same time were not only Yosaburo Takekoshi[^(33)](#part0009_split_001.html_fn_33) and Yusuke Tsurumi [^(34)](#part0009_split_001.html_fn_34) from Japan, but also an American traveller, Frank Carpenter[^(35)](#part0009_split_001.html_fn_35), who said that the quality of roads in Java was comparable with those in Europe and America. I also read somewhere that even a visitor from the Netherlands was envious for the road system in their possession.
+
+   In 1940, Ichizo Kobayashi, the founder of Hankyu Railway Company, who visited Batavia as the Minister of Commerce and Industry for the “Economic Negotiations with the Netherlands East Indies” published a book, *The Dutch East Indies which I saw*[^(36)](#part0009_split_001.html_fn_36), which is rarely read today. He wrote about the situation as follows:
+
+“As far as the Island of Java is concerned, the total length of the railway line is 5,400 km, the length per 100 square kilometre, 5,006, being almost the same as that in Japan, 5,008\. The speed of the express train which covers the distance of 830 km from Batavia to Surabaya across the island by twelve hours, as well as the riding comfort and the facilities, is far better than ours on the Tokaido Line. More envious is the road system. The 830 km highway between Batavia and Surabaya, smoothly metallised with asphalt, is quite enjoyable to drive, shaded by banyan, tamarind, and silk trees lined on the both sides. Good works for motorway are complete not only in such a highway. Excellent roads extend from Batavia, Surabaya and Semarang and other cities to all directions up to remote villages and the tops of mountains.”
+
+![Illustration](images/00048.jpeg)
+
+Railway systems in Japan and Java-and-Madura in the early 1930s.
+Java-and-Madura: Redrawn from *Kaart en Tekst, eerste Atlas van Nederlandsch-Indie voor de Indishe Lagere School*, Groningen-Batavia 1938.
+Japan: Redrawn from: Railway systems in Japan (1936) [http://www.rtri.or.jp/museum-rosen/rosen.html](http://www.rtri.or.jp/museum-rosen/rosen.html).
+
+The beginning of modern roads in Java was the Great Post Road (or De Groote Postweg in Dutch or Jalan Raya Pos in Indonesian) of 1,000 kilometres long, between Anyer and Panakan located in the west and east ends of the island, which Daendels had constructed at the cost of numerous labour lives. In 1858, J. W. B. Money[^(37)](#part0009_split_001.html_fn_37) who visited Java from England wrote in his *Java or How to Manage a Colony* that “along the chief lines of communication the roads are double, one for cattle, and one for horse and carriage traffic. The carriage roads are macadamized, and both the carriage and cattle roads are kept in excellent order. With the exception of the few short lines of railway in India, Java posting is the only civilized mode of land travelling in the East”. He also wrote that “every twenty, thirty, or forty miles the traveller comes to a civil station, where he invariably finds a comfortable country inn, well supplied with wine, beer, European as well as native vegetables, good fresh bread, excellent poultry of all”. Alfred Wallace who visited Java in the course of his tour around the Malay Archipelago wrote in his book [^(38)](#part0009_split_001.html_fn_38), after describing the sceneries of rich fields watered by many branching streams, white buildings and tall chimneys of a sugar-mill and so on, that “the roads run in straight lines for several miles at a stretch, and are bordered by rows of dusty tamarind-trees. At each mile there are little guardhouses, where a policeman is stationed; and there is a wooden gong, which by means of concerted signals may be made to convey information over the country with great rapidity”.
+
+![Illustration](images/00049.jpeg)
+
+De Groote Postweg (The Great Post Road)
+Drawn by the present writer.
+
+“A wooden gong” mentioned in this passage was the so-called “slit gong”, cylindrical wood with a slit along the centre, from which sounds were generated with a wooden hammer. Since the communication speed is determined by [the sonic velocity × distance] + [hammering time × the number of transmission points], the time required to send a message to a place of 500-kilometre distance would have been only more or less three hours, if the hammering time and the number of transmission points were assumed to be 30 seconds and 300 points, respectively. It is probable that this communication system was used, for instance, on the occasion of Pieter Erberveld’s rebellion to send warning from Batavia to remote districts. When I lived in Bogor, I bought a small gong of this kind, called *kentungan* in a souvenir shop at Cipadat Pass to the west of Bandung and used it at home to be informed of mealtimes, etc.
+
+Back at Kota Station, one might wonder to see why the tracks at two adjacent platforms are excessively separated. While I was aware that, before the Second World War in Java, two types of gauges were used, the wide one (standard gauge) for trunk lines and the narrow one for small lines[^(39)](#part0009_split_001.html_fn_39), I was once astonished when I heard in Bandung or somewhere that a young railwayman despatched from Japan Railway proudly said that the Japanese had done a good job during their occupation to unify the gauge system in Java. Although no document has been available, it seems that they had actually demolished the wide-gauge lines and replaced them with the narrow-gauge ones for the worse. It is hard to believe in this peaceful time, but when a Japanese army constructed a bridge on the River Kwai between Thailand and Burma, as is well known by the famous film[^(40)](#part0009_split_001.html_fn_40), with the forced labour of Javanese recruits and Dutch and English prisoners, they carried not only locomotives and carriages away from Java but also rails by peeling them off from the existing railway lines in the land of Java[^(41)](#part0009_split_001.html_fn_41). When I once took a train from Jakarta towards Cirebon, I noticed that in some parts the embankment was apparently wide enough for double tracks while the line itself had a single track. That the space between platforms is excessively wide is common in other stations, Bogor, Bandung, Yogyakarta, Solo or elsewhere.
+
+Gambir Station in Central Jakarta, rebuilt in the 1990s by demolishing the original building with a pair of twin clock towers, gives no image of old days when special trains were drawn up on the occasion of the Fourth Pacific Science Congress, vagabonds loitered after the independence as written in Pramoedya Ananta Toer’s novel[^(42)](#part0009_split_001.html_fn_42), etc. On the platform on the second floor, one may again notice the excessive space between the tracks. Is it for changing the tracks to wide-gauge in the future? Although some Japanese funds are used for the modernisation of the Indonesian railway system, it will be hardly sufficient to expiate their past sin.
+
+### **The National Museum**
+
+Let us visit the National Museum located on Jalan Merdeka Barat across Independence Square. The first modern museum in Asia was created in the Batavia Society for Arts and Science, established in 1778, and the present white-marble building with Parthenon-style front design was open in 1868, constructed by the donation of J. C. M. Radermacher, one of the founders of the society. In the entrance hall are dozens of stone statues of Buddhist and Hindu deities, and in the courtyard, hundreds more statues both stone- and bronze-made are placed under the eaves of showrooms, which surround the open space. Thus, the museum is often called Museum Patung, or Museum of Statues. The statues include some pieces brought from ancient remains of Central Java where the Sanjaya and Sailendra kingdoms flourished in the 8th to the 10th centuries, and more from Singasari and other remains of subsequent centuries in East Java, the maintenance of which at local sites was difficult. Detailed legends of each piece are shown in both English and Indonesian.
+
+In the showrooms on the ground floor, numerous collections gathered from all over the Indonesian archipelago are displayed, sorted into such categories as textiles, stoneware, earthenware, and others. Ceramics include some fine pots and plates made in Ching-te-chen, China, and Imari, Japan, while among antique weapons were traditional swords (keris) and spears. One is allowed to see gold and silver artefacts and various precious treasures from ancient kingdoms in the special upstairs room, if requested.
+
+In my view, the most characteristic feature of this museum is that all collections of over 190 thousand pieces are purely those that have been gathered from the territory of Indonesia, with no single piece purchased from abroad as an attraction. It should be noted that during the Dutch time, they installed almost all treasures here, except some pieces carried to Leiden University for research purposes. Once, I was disappointed to see only a few collections from Indonesia in the Rijksmuseum in Amsterdam, when I visited there with no background knowledge.
+
+While it was rather common, for instance, for the English who came to India and other Asian territories during the colonial time to consider the colonies as the temporary place for their economic activities and return home after their retirement, a number of Dutch people lived and settled for generations in overseas territories without prejudice. In fact, among my Dutch friends are those whose father came from Palembang, South Sumatra, and whose wife was born in Tomoha, North Selawesi. Because the East Indies as well as Dutch Guiana (the present-day Surinam) and Curaçao Island constitutionally held the same status as the Netherlands since 1922 (*See* Footnote 23 of Introduction), it was not unreasonable that, when the Netherlands were occupied by Germany in 1941, the then governor-general, Tjarda van Starkenborgh Stachouwer, proposed to move the seat of the monarch as well as the government in exile in London to Batavia, without anticipating the Japanese invasion, which took place in the next year; although the idea was not agreed by Winston Churchill, who worried about the long journey of aged Queen Juliana, or by the queen herself, who wished to stay near to the homeland.
+
+I wrote above that the majority of historical relics in Indonesia were kept there, but there were some exceptions. In 1871, when the archaeological value of ancient remains and relics began to be recognised, several pieces of Buddha statues from Borobudur were presented to King Chulalongkorn of Thailand who visited there, in return for his gift of an elephant statue, which, having been placed in the front yard of the National Museum, was to give another nickname: Museum Gajah, or Elephant Museum. It is also well known that, earlier in the 1810s, during the British occupation, a stone monument in which the royal line of Airlangga’s kingdom that had flourished in East Java was inscribed was carried away by Stamford Raffles to India, and was to be called “Calcutta Stone”. More than one thousand works of art and craft collected by Raffles are now possessed by the British Museum, donated by his executor, Rev. William Charles Raffles Flint. In Alfred Russel Wallace’s travelogue[^(43)](#part0009_split_001.html_fn_43), it is written that, when he was admiring a carving of the Majapahit era and expressed a wish to obtain some such specimen, in Mojokerto, East Java, in 1861, he was surprisingly presented with that piece, a fine relief of the goddess Durga, the detailed sketch of which having been illustrated in the same book. (For *Durga*, cf. [Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8).)
+
+![Illustration](images/00050.jpeg)
+
+A bas-relief of Hindu Goddess Durga acquired by Alfred Russel Wallace in Mojokerto, East Java.
+Reproduced from: Alfred Russel Wallace, *The Malay Archipelago, the land of the orang-utan and the bird of paradise: a narrative of travel, with studies of man and nature*, MacMillan & Co., London, 1886 (Google Books).
+
+### **The story of Java Man**
+
+The specific collections of super-antique value in this museum, the fossils of Java Man and other prehistoric finds shown in a special corner on the ground floor are really fantastic, inducing one to review the history of their discovery [^(44)](#part0009_split_001.html_fn_44), [^(45)](#part0009_split_001.html_fn_45). It was in 1859 that Charles Darwin launched the theory of evolution in *On the Origin of Species*[^(46)](#part0009_split_001.html_fn_46) and foretold that “fossils of some intermediate species between man and ape would be discovered in the future”. In 1887, Eugene Francois Dubois (1858– 1940), born in Eijsden, Netherlands, who had studied anatomy in Amsterdam University but had a potential interest in archaeology, was stimulated by Darwin’s theory and came to the East Indies as a military doctor, abandoning a high position promised in the university. While working as a doctor, he tried some diggings in Sumatra in his spare time, but no such fossil was found in the initial years. Struck by this enthusiasm, the government made an arrangement for him to be able to concentrate on his search in 1890\. He operated an excavation with scores of men at Trinil Terrace of Bengawan Solo, the river which was to be popular also by a song of the same name, and was rewarded by the discovery of some fossils of a tooth (Trinil 1) and a skull (Trinil 2, or Pithecanthropus 1) in 1891 and a fossil of a thigh bone (Trinil 3) in the next year, all of prehistoric man, and he named the species as *Pithecanthropus* Erectus. His claim that he had discovered the missing link was not accepted by others who doubted that the fossils might be of an ape or a man. Deeply discouraged, he retreated from arguments. It was three decades later, after the discovery of the Peking Man in China and Australopithecus in South Africa, that Dubois’ discovery was first recognised. It is hard to imagine nowadays that a government authority, namely the Ministry of Education and Science Japan, would approve such a treasure-hunting project as of Dubois. As a humble ex-scientist, I would like to praise the insight and magnanimity of anonymous officials in 19th-century Java who had boldly given support to the adventure of Dubois.
+
+In 1910–40, a wide and large-scale survey was conducted in Java that led to the discovery of fossils, a Solo Man in Sangiran (1930–3), a head of an infant at Mojokurt (1936) and several more of Pithecanthropes at Sangiran. After the independence of Indonesia, the research was followed by Prof. T. Jakob, who later became the rector of Gajah Mada University, Prof. Sartono, Bandung Institute of Technology, and their colleagues. Although fossil specimens shown to the public in the National Museum, the Geological Museum in Bandung or elsewhere are said to be replicas, they do not look so to the eyes of ordinary people as the colours and defects have been precisely imitated.
+
+It is away from Jagatara, the present-day Jakarta, but let me add a short report on my visit to Sangiran. The Geological Museum of Sangiran was found in a small village on the terrace of Bengawan Solo, located a 30–40 minute drive to the south of Solo city centre. Upon being ushered into the building by the director who kindly received my party visiting with no advance notice, I was amazed by numerous collections in which a gigantic tusk, four metres long, and an enormous jawbone of a mammoth were displayed along with fossils of other animals that contemporarily lived with Pithecanthropes, as I saw such specimens for the first time. Other interesting specimens were two pieces of flat, red-coloured stuff of 12– 15 cm length and a grey-coloured, spherical stone of about 18 cm diameter. I was able to guess that the two flat stones were a chopper and a raw stone for that sort of tool, but the use of the spherical stone was hard to imagine. Given an explanation that it would have been a grenade for hunting animals, I was convinced that those who used such tools, and who might have been our remote ancestors, were not apes. The restoration of the head-part bone of prehistoric buffalo was going on in the laboratory, by assembling fossil fragments, many of them as small as 5 mm, by studying their colour and shape and filling the defective parts with gypsum, as if one is trying to solve a huge complicated jigsaw puzzle. It must be laborious work, but the Javanese researcher looked to be enjoying it.
+
+![Illustration](images/00051.jpeg)
+
+Some collections of the Geological Museum of Sangiran.
+Skulls of Pithecanthropus (top) and stone tools (bottom).
+Photographed by M. Iguchi, September 2006.
+
+With regard to the origin of man, what we were taught until a few decades ago was “the multi-regional evolution hypothesis”, in which the apeman (Australopithecus) that originated several million years ago in Africa and evolved into “homo-erectus” 1.5 million years ago, spread over Eurasia 1 million years ago and continued to evolve in each region to “early homo-sapiens” and to “modern homo-sapiens”, but the so-called “single-origin hypothesis” emerged in 1987 in which all “early homo-sapiens” that existed in Eurasia became extinct and the only one group that survived in Africa and evolved into “modern homo-erectus” spread over other continents 200 to 100 thousand years ago. According to the latter hypothesis based on computer analysis, the origin of mitochondrias of all modern women in the world can be traced back to that of one woman, called “Mitochondria Eve”, who lived in Africa 190–140 thousand years ago. Some devotees to the second hypothesis say in such a tone as if the traditional research of hunting and classifying fossils, by dirtying one’s hands, were not of significance, but it is hardly agreeable to myself who has engaged in something like scientific experiments.
+
+### **The visit of Mr. Yoshinobu Tokugawa**
+
+During my stay in Bogor, there was an occasion on which I attended (the late) Mr. Yoshinobu Tokugawa, a grandson of Marquis Tokugawa, the author of *Journeys to Java*. In January 2001, he gave me notice that he would come to Java, in response to my Christmas card of the previous December, in which I asked whether he could come to Java to trace the footsteps of his grandfather. Since the period he could spare for his trip was only five days, whereas Marquis Tokugawa had spent fifty days in Java (seven plus forty-three days) on his two journeys, I prepared a plan for him to visit several important spots as efficiently as possible. When I went to the National Museum to ask the director to receive his visit, she appointed Mrs. E., the head of Ceramics Division, to attend Mr. Tokugawa on behalf of the director herself, as she herself was scheduled to be abroad on the designated date. After going around the Bogor Botanical Garden, Bandung Institute of Technology, Borobudur and Prambanan remains near Yogyakarta, we were received by Mrs. E. at the National Museum. I met her for the first time and I was quite impressed that the scene of her guiding her guest looked good enough to be painted in a picture. After that occasion, she became not only my friend but my respectful teacher, and taught me many things about the history and culture of Indonesia. When I invited her to my house in Bogor, she was intently gazing at a portrait of a Javanese prince, which she had found in a book of old paintings painted by foreign artists[^(47)](#part0009_split_001.html_fn_47). To my question, which came suddenly to my mind, “Was he your ancestor?”, she answered with a little hesitation, “Yes, he was my great-grandfather.” I learnt that she was a princess, with the title of Raden Ayu, linked to the family of the Sultan of Yogyakarta, although she hid her bloodline and the title in her daily life, whilst the late Mr. Yoshinobu Tokugawa should have succeeded the title of Marquis, were not the traditional peerage system in Japan demolished after the Second World War under the American occupation. I reckoned this was the reason why the director of the museum had chosen Raden Ayu E. as her substitute among many possible candidates.
+
+![Illustration](images/00052.jpeg)
+
+(The late) Mr. Yoshinobu Tokugawa and Mrs. E in the showroom of traditional textiles in the National Museum
+Photographed by M. Iguchi, 2001.
+
+In Yogyakarta’s royal family, the sons and daughters of the sultan are given the title of Putra and Putri, respectively, those of the 3rd to the 5th generation, Raden Mas and Raden Ayu, respectively, and those of the 6th to 8th generation, Raden and Rara, respectively. Although the above rule is said to be more or less ambiguous in the Susuhunan’s family in Solo and the families of sultans in other lines, the titles are the evidence of noble descent, and gentlemen and ladies who hold them are paid respect by common people even today in Java, probably more than in countries in West Europe.
+
+To the question, “Are there kings and nobles in Indonesia, despite the country’s structure as a republic?”, I will answer that elsewhere.
+
+### **Grand statue of Krishna and Arjuna**
+
+In the city centre of Jakarta, not far from the National Museum, by the roundabout in the southwest corner of Medan Merdeka (Independence Square), stands a magnificent bronze statue of Krishna and Arjuna, the former driving a chariot and eight horses and the latter in the rear seat holding a bow at the ready. It was created in 1987 by a famous Balinese sculptor, Mr. I Nyoman Nuarta, who had graduated from the department of Art, Bandung Institute of Technology. The eight horses are said to represent eight divinities who symbolise Asra Brata (the eight statesman’s virtues)[^(48)](#part0009_split_001.html_fn_48) in Hindu philosophy, which the then President Soeharto favoured. I remember that the colour of the statue used to be whitish as it was originally made of polyester resin. Since the material was weathered, the statue was remade in bronze in 2003 at the cost of four billion rupiah (ca. 470 thousand US dollars). Although the large spending was argued at that time when the economy of the country, damaged after the Asian Economic Crisis (started in 1997), was yet to be healed, I appreciated the action of the government. The statue is widely known as the Arjunawiwaha Statue[^(49)](#part0009_split_001.html_fn_49), but the reason is not certain to me because, if I am not mistaken, Krishna does not appear in the poetic Kakawin Arjunawiwaha (Arjuna’s victory) composed as a branch tale of the Ramayana in 14th-century Java, while both heroes do appear in the Bharatayuddha, an adaptation of the last chapter of Mahabharata, or the Mahabharata itself. (For old Javanese literature, see [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8): Flowers of Java). In any case, the statue is one of the rare cultural monuments installed in the era of President Soeharto whose priority policy was economic development, whilst most of the monumental statues in the city of Jakarta are the relics of the first President Soekarno created to enhance the righteousness of independence.
+
+![Illustration](images/00053.jpeg)
+
+The so-called “Arjunawijaya statue” at the southwest corner of Medan Merdeka (Independence Square).
+Photographed and permitted to copy by courtesy of Prof. N. Narayana Rao, Illinois
+University ([http://faculty.ece.illinois.edu/rao/statue.html](http://faculty.ece.illinois.edu/rao/statue.html)) and kindly permitted to copy.
+
+In President Soeharto’s era, a large public park of 240 hectares, called the Garuda Wisnu Kencana, with a gigantic, 150-metre-tall statue of Lord Vishnu mounted on the divine bird Garuda in the park’s centre, was planned to be constructed in Bali on the hill of Bukit Peninsula at the southern tip of the island, and Mr. Nyoman Nuarta, the sculptor of the Krishna–Arjuna statue in Jakarta was assigned to work on the new statue. It was in 2006, the year after the park’s opening, when I had a chance to visit there. Although the whole statue was yet to be completed due to the shortage of funds, the upper body of Vishnu and the head part of Garuda were already finished and placed separately on the ground. The two parts themselves measuring 20 and 18 metres high, respectively, were overwhelming in the environment, looking down at us, sightseers.
+
+### **Some interesting spots in Jakarta**
+
+This essay is not aimed at being a travel guide, but let me introduce some spots that may have some atmosphere of old days. In front of the Jakarta History Museum (the old City Hall), across its front courtyard (now called Taman Fatahillah) is a restaurant-café called “Batavia Café”, which is suitable to wet one’s throat with Pilsener beer, Bir Bintang, the heritage of Heineken, and to take a light Dutch-style lunch after visiting the museum. The year of construction of the luxurious, two-storey building, made of teak wood from the pillars to the window frames, is unknown to me, but, no doubt, a heritage from the good old days and the building itself has a museum-like value. There are numerous frames with the bromides of former stars, such as Marlene Dietrich, Marilyn Monroe, and other stars, as well as rare pictures of old sceneries and people, on the pillars and walls in the dining rooms, corridors, staircases and everywhere, but, in order to look at them for studying purpose, they must be sorted and ordered in one’s mind, as their placement is quite at random. Judging from the list of drinks and their prices on the menu, there would be a number of guests, in the evening, from Holland and other European countries who longed for the past, although I have not been there at dinner time.
+
+![Illustration](images/00054.jpeg)
+
+Batavia Café (the late Mr. Yoshinobu Tokugawa, Mrs. E., National Museum, and Mr. A. B., Ministry of Industry).
+Photographed by M. Iguchi, 2001.
+
+Before Istana Negara (*lit.* National Palace, the former Official House of the Dutch Governor-General) on the way from Kota (Old Batavia), one finds a restaurant, Pondok Laguna, under the neon-sign of “gurame”, at Jalan Batu Tulis Raya No. 45–47\. Gurame, a freshwater fish, which resembles in shape a gourami for home-aquariums, and presumably belongs to the same family as the latter, but grows up to 30–40 centimetres, is a typical foodstuff of Sundanese cuisine served as *gurame goreng* (fried gurame) and *gurame bakar* (grilled gurame), both seasoned with chilli and spices. Since the quality of its white meat was extremely good for a freshwater fish, and has no muddy odour as of “ikan mas” (*lit.* goldfish but more similar to crucian carp), I once placed a special order to roast the fish with only salt, as it was commonly done in Japan for sea fish. The result was good and I was quite satisfied with that taste. Every evening, the large dining room of the restaurant of some 200 square metres is full of gourmets who, in groups, are enjoying their favourite dishes, such as stir-fried beef and green kale, *sapo tahu* (beancurd soup), *capcay* (originated from Chinese *chop suey*, 雜采=mixed vegetables), various *sate* (skewer-roasted various meat), etc. While some hot Indonesian cuisines are not palatable for foreigners, the taste of this restaurant is sophisticated, or modified to be mild. I think their foods are better called “Makanan Butawi” (Batavian foods) rather than Makanan Sunda (Sundanese foods).
+
+![Illustration](images/00055.jpeg)
+
+The neon-sign of a Sundanese restaurant, “Pondok Laguna”.
+Photographed by M. Iguchi, January 2007.
+
+At Jalan Raden Saleh Raya No. 47, to the east of the city centre, is a restaurant named Oasis. The luxurious teak house with beautiful chandeliers and stained-glass, originally built in 1928 by a Dutch millionaire, Brandenburg van Oltsende, who owned tea, rubber and cinchona estates, as his private mansion, has such a history that the last Dutch governor-general lived here for a while during the Second World War, but the attraction of the restaurant opened in the 1970s is certainly the foods they offer. Although only one item is found on the dinner menu, one need not be worried, because the food, rijsttafel, is a full-course Dutch-style Javanese meal, which includes boiled egg with coconut sauce, beef cooked with spices, Indonesian-style chicken curry, *sate* of prawn, *tempe* (fermented soya-beans), fried banana and many others. They are carried by one dozen waitresses, who hold one dish each, to the table and one portion each is served on a big plate, around white steamed rice, which is first placed in the middle. Thus, there is no order in which to eat, even though it is a full course.
+
+This style of serving by many waitresses is rather special, but the style of guests helping themselves to take portions as they like from bowls on the table is more traditional, as rijsttafel, or rice table, is said to have originated in old days in plantations that were remote from towns. I once had a rijsttafel dinner at the famous Gunung Mass Tea Plantation in West Java, being invited for a meeting, and enjoyed the rather informal dinner in a special atmosphere on the hillside, overlooking the vast scenery of tea fields. Rijsttafel has been transferred to Holland. When I was staying in Eindhoven, I found a special restaurant, called Jawa, near the Philips Headquarters, which was run by a gentleman who came from Java some thirty years ago. He told me that he visited his homeland every year to get spices. The taste was excellent and better than those in restaurants in Jakarta and Bandung, as the quality of meats and vegetables produced in the cool European province was superior to that in tropical Java.
+
+Raden Saleh, which was put on the street of the Oasis restaurant’s address, was the name of the 19th-century painter, a pioneer of modern painting in Java who stayed for a long time in Europe. The hearsay that the Oasis building used to be his residence is wrong. The Raden Saleh Mansion, a gorgeous Roman-gothic house built on a near-by site was financed by his wife, Constancia von Mansfeld, a daughter of a German rich man. It is still of use today as part of a hospital.
+
+![Illustration](images/00056.jpeg)
+
+A guest room of a coffee shop, “Bakoel Koffie”.
+Photographed by M. Iguchi, February 2007.
+
+At Jalan Raya Cikini No. 25, on the extension of Jalan Raya Raden Saleh, is a cosy coffee shop, Bakoel Koffie (*lit.* Basket Coffee), where my friend, Mr. B., has taken myself and Mr. and Mrs. E., in a recent year, saying that he had found an interesting place by chance. It was not only the Dutch-style spelling of the shop’s name and the logo mark of a charming country girl holding a coffee-bean basket upon her head, designed to fit the shop’s name and placed on every window glass, that provided an image of good old days. Both the interior decoration and furniture looked classic. At close sight, tables and chairs were recognised to be used ones, which would have been collected from old schools and offices, but they were revarnished in the same dark brown colour. The only game provided for killing time was the traditional “congklak”, and neither the current electronic games nor chess sets, widely played ever since the Dutch time, were there, although bringing one’s own belongings seemed to be free as some customers were working on laptops in the back-side room. Under the eave of the small backyard hung a flag on which a history of coffee was printed as, “1000 AD: Physician and philosopher Avicenna of Bukhara is the first writer to describe the medicinal properties of coffee which he calls bunchum”… “1706 AD: The first samples of coffee grown in Java are brought back to the Amsterdam botanical gardens”… and “2001: Bakoel Koffie, started by Tek Siong’s great-grandchildren, open a shop in Jakarta, Indonesia”. On the wall, there was a picture of an old Chinese man who, according to the shopkeeper, was Mr. Tek Sun Ho himself and commenced coffee-roasting business in Batavia in 1878.
+
+The coffee served in this shop was the traditional “kopi tubruk” (Turkish coffee), prepared by pouring hot water over coffee powder in a cup and stirring. The sugar was also the palm sugar used in Java ever since ancient times. I assumed that “kopi tubruk” must be related to Tobruk, a strategic point in North Africa that was sieged by German Field Marshal Erwin Rommel during the Second World War, but I have had no answer yet to my own question why the name of the place was adopted for the preparative method of coffee. The coffee itself of this shop was rich in flavour, but was a little unsatisfactory to myself who prefers the traditional, deep-roasted, rather bitter taste.
+
+### **Goods of foreign origin in Japan prefixed with “Jagatara”**
+
+Leaving the land of Jagatara, let me put some considerations on several goods imported into Japan during the Yedo Period (1503–1869) or before with the name of Jagatara. The most popular one among populace is Jagatara-imo (potato. *Solanum* tuberosum L), or Jagaimo for short, but, having operated some surveys, I was surprised by the ambiguity of its arrival. On the internet, there was an abundance of hits, but most of them were “copies of copies”. Even the introduction on the homepage of the Japanese Society of Root and Tuber Crops, that “potato was carried to Nagasaki 400 years ago in the Keicho Era [around 1600 AD] by the Dutch who had then a base in Jakarta, Indonesia” was not better than that of a town talk. Among university homepages, I was not able to find any academic articles, among which were such strange descriptions as:
+
+(1) Such vegetables of the new-continent origin as pumpkin, chillies, maze and potato arrived in the Kamakura/Muromachi/Momoyama Era (G. University).
+
+(2) Potato is said to have been brought to Nagasaki in the Keicho Era (1596–1614) by the Dutch. Some people assume it was in the 3rd year of Keicho, or 1598 AD (N. University and T. University).
+
+As to (1), it was impossible to include, at least, the Kamakura Era (1185–1333), because, even if the Nanboku-cho Period was added, the era did not persist beyond 1392, one hundred years earlier than the voyage of Christopher Columbus. In (2), it was not possible either that the Dutch brought them in 1598, because the first arrival of the Dutch ship, *De Liefde*, across the Pacific Ocean, wrecked on the shore of Usuki, Kyushu, with Captain Jacob Quaeckernaeck, Jan Joosten, William Adams and other crew members on board, was two years later.
+
+Since the first two Dutch ships from the south had departed from Johor and Patani, in Malayan Peninsula, in 1609 and 1611, respectively, the ship from Bantam in 1612 was the first one from Java. It was in 1614 that Ship *Oud Zeelandia*, accompanied by a yacht, *Jaccatra*, came from Jayakarta where they had set up their trading post three years earlier[^(50)](#part0009_split_001.html_fn_50)^, [^(51)](#part0009_split_001.html_fn_51). Thus, it could not be impossible to imagine that potato was introduced in this year and was called Jagatara-imo or Jagaimo, provided it was really brought by the Dutch. While I was looking for more direct literature, I learnt that there was an old publication by Dr. Koutaro Shirai, a pioneer of modern botany in Japan, entitled *Considerations on the arrival of foreign plants*[^(52)](#part0009_split_001.html_fn_52). In a copy of the rare book, which was luckily found in an antique bookshop, it read:
+
+### **Jagatara-Imo (from Nibutsukou)**
+
+Name: Chinese: Yangyu (An Illustrated Textual Study on Plants), Japanese: Hassho-imo (Koshu), Seidayu-imo (Chichibu), Shouro-imo, Kinka-imo, Nanking-imo, Appra (Nibutsukou).
+
+History: Grows wild in Andes, South America. Arrived in China sometime in the modern age. *Nagasaki-ryaumen-kagami* recorded that Nanking-imo arrived in the 4th year of Tensho (1576). The alias, Hassho-imo was born because 1 sho (1.8 litre) propagated into 8 sho (14.4 litre) a year. It is also called, Seidayu-imo, as a local magistrate, Nakai Seidayu, recommended to plant the plant for famine…
+An alias, Appura is the corruption of the Dutch word, Aardappel.
+
+I wished to see *Nagasaki-ryaumen-kagami* (*lit.* Nagasaki double-sided mirror), but the handwritten book authored by Chikuun Uchihashi in 1827, was not found in the catalogues of libraries, and one copy advertised in the antique book market was awfully expensive. Later, I learnt that the book was alternatively called *Nagasaki-Nenreki Ryaumen-Kagami*[^(53)](#part0009_split_001.html_fn_53) and that a copy was held in the Library of Kagawa University. In the photocopy obtained by courtesy of the library, it was found in the column of 1576 that “Nanban-sen arrived at Bungo. Nanking-imo arrived.” Although, according to a person from Nagasaki, Nanking-imo was locally a synonym of satoimo (taro, *Colocasia* esculenta) there, the very species, the arrival of which was recorded by Uchihashi as a special event, must be potato because taro of the Southeast Asian origin had existed in Japan since before the time of Manyō[^(54)](#part0009_split_001.html_fn_54). Generally, Nanban-sen, which literally means “south barbarian ship” and denotes a Portuguese ship, is distinguished from Oranda-sen or Ran-sen (a Dutch ship).
+
+After some while, I found a booklet entitled *Nagasaki-kotohajime* (Nagasaki origins)[^(55)](#part0009_split_001.html_fn_55) in which there was a description that “in a tradition, potato had arrived in Nagasaki in the 4th year of Tensho (1576) and was planted in the herb garden of Todos Os Santos Church”. Although no reference was given, the year, 1576, agreed with the year in *Nagasaki Nenreki Ryaumen-Kagami*. The Todos Os Santos was a famous Jesuit church built in 1569 in Nagasaki but was destroyed in 1614–19.
+
+Thus, I would conclude that potato was brought to Japan by a Portuguese ship in 1576 and acquired the brand name, Jagatara, to be called Jagatara-imo or Jagaimo.
+
+In the above booklet, it was written that “the potato was also called Barei-sho (馬鈴薯) as it came from Malay Peninsula”. I have thought of this possibility, as a kingdom prospered at Patani, in the northern part of the peninsula since the 14th century where Portuguese and Dutch ships often called in the 16th and the 17th centuries, respectively. In fact, the departing port of Oranje (schip) and Brack (jacht), which came to Nagasaki in 1611, were there, but there was no evidence that they brought potato. As far as I have checked, the common phonetic expression of Malay or Malaya in Chinese was 馬來, and no instance of being written as “馬鈴” was found.
+
+In *Nibutsu-kou*, or *Kyukou-Nibutsu-kou* (a study on two items recommended to prepare for famine)[^(56)](#part0009_split_001.html_fn_56), cited in the above mentioned book was authored by a 19th-century scholar, Chō-ei Takano (1804–50), mostly dictated by his disciple, the author picked up potato and soba (buckwheat) as useful plants to prepare for famine, and described the methods of their cultivation and cooking in great detail, after the introduction of their origins.
+
+![Illustration](images/00057.jpeg)
+
+“The illustration of potato”, by Kazan Watanabe (a famous painter) for the Chō-ei Takano’s *Nibutsu-kau*, 1836.
+Reproduced from the website of National Diet Library’s Digital Collection, [http://dl.ndl.go.jp/info:ndljp/pid/2536207](http://dl.ndl.go.jp/info:ndljp/pid/2536207).
+
+Potato is cultivated in Java Island, but the suitable places for the vegetable of cool Andes origin are limited at highlands above 1,000 metres from the sea-level, such as Lembang at the mountainside of Mt. Tangkubanperahu in West Java or Dieng Plateau in Central Java. Once I obtained a gunnysack full of potato in Dieng when I visited there. The quality was very good, so I distributed some portions to my neighbours.
+
+In *A study on the arrival of foreign plants* was Jagatara-Suisen, after Jagatara-imo.
+
+### **Jagatara-Suisen**
+
+Name: Chinese: Unknown, Japanese: Jagatara-yuri (lily).
+
+History: Originated in Mexico and arrived in the Era of Ka-ei, according to Souhon-dzusetsu. The notes in *Hakurai-souhon-meisho* that “Jagatara-yuri. The shapes of both the leaves and flowers are similar to those of knight’s star lily and its bloom colour is pale-red” would be on Jagatara-lily, although the colour was not necessarily agreeable.
+
+Today, this plant is called amaryllis in its English name. Although the era of Kaei (1848–54) was already in the last stage of the Edo Period (1603–1868), “Jagatara” must have still been an exotic, attractive brand in Japan. Amaryllis is a popular flower also in Java.
+
+In dictionaries, “Jagatara-jima” and “Jagatara-mikan” were also found.
+
+### **Jagatara-Jima (Jagatara-Stripe)**
+
+A fabric, said as arrived from Jagatara (*Daijirin Dictionary*). A cotton, striped fabric from Jagatara. An item from islands [of the south].
+
+The list of gifts in the second letter of Jagatara-Oharu, usually called “Letter from the widow of Simons”, included “a roll of stripe fabric, a roll of cut stripe fabric”. “A purple, single-layer stripe” appeared also in a Jagatara letter of an unknown sender[^(57)](#part0009_split_001.html_fn_57). These must be a type of decorated fabrics, called “ikat”, produced in present-day Indonesia in Bali and eastward islands. Whether the fabrics exported to Japan were those from the outer islands or those locally produced in Java Island is not sure, as in a poetry story, *Bujangga Manik*[^(58)](#part0009_split_001.html_fn_58) written in the era of the Pajajaran Kingdom (1482–1579) in West Java, was a scene in which a noble lady was weaving an ikat.
+
+I once had a chance to visit a home factory of ikat weaving in a small village in Pinrang, South Sulawesi (Celebes). The process was similar to that of making “kasuri” of Japan[^(59)](#part0009_split_001.html_fn_59). First, yarns to be used for the weft were stretched horizontally between two bars and those parts that were not to be coloured were tied by covering yarns, as “ikat” originally meant “to fasten” or “to tie”, before they were dip-dyed, and the process was repeated if the yarns were to be dyed into two or more colours. The varicoloured weft yarns were woven according to the designed pattern using a back-strap handloom. The weaver woman showed how to weave, proudly saying, “You need skill to weave ikat without distorting the pattern.” Just for reference, the regional word, “ikat”, has been adopted as an English word for such decorative fabrics (OED).
+
+![Illustration](images/00058.jpeg)
+
+An ikat weaver woman, demonstrating the use of her back-strap loom, with a shuttle in her hand.
+Photographed by M. Iguchi, at Pinrang, Sulawesi, 1998.
+
+### **Jagatara-Mikan (Jagatara-Orange)**
+
+Better called Jagatara-citron. The same as Zabon (*Daijirin Dictionary*).
+
+Under “Zabon” in the same dictionary, it was written that the word was derived from Portuguese, Zamboa. In *Nagasaki Origins*, it was written that “the seed of Zabon arrived in Nagasaki in the 7th year of Kwanbun (1667) and a certain interpreter, Shozayemon Ro, planted it in the precincts of Nishiyama Shrine”. Judging from the year, this fruit, a native of Malaya or Southeast Asia, was probably brought to Japan by the Dutch. The reason why it bore the Portuguese name, neither the local name “jeruk Bali” (*lit.* Balinese orange) nor the Dutch name “pompelmoes”, would be that Portuguese had been a *lingua franca* in Asia ever since the 16th century. While candied pomelo, especially from Nagasaki, was famous in Japan, once I encountered almost the same snack in Soreang, a town to the south of Bandung, West Java. The preparative method was probably introduced by some Chinese people, as was in Japan.
+
+### **Notes for [Chapter 2](#part0009_split_000.html_8IL20-eace0453ad444634b688454ed62f4eb8)**
+
+________________________
+
+[¹](#part0009_split_000.html_fn1) F. de Haan, *Oud Batavia* – *Gedenboek uitgegeven Genootschp van Kunsten en Wetenschappen naar aanleiding van het driehonderdjarrig bestaan der stad 1919 (Eerste Deel)*, G. Kolff & Co., Batavia 1922.
+
+[²](#part0009_split_000.html_fn2) Marquis Tokugawa (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004/Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanti Isanasari), *Perdjalanan Moenoedjoe Jawa*, Penerbit ITB 2006 (徳川義親 「じゃがたら紀行」, 郷土出版社 1931 (十字屋書店 1943, 中公文庫1975).
+
+[³](#part0009_split_000.html_fn3) C. Guillot, *The Sultanate of Banten*, Gramedia Book Publishing, Jakarta 1990.
+
+[⁴](#part0009_split_000.html_fn4) According to Nancy K. Florida, *Javanese Literature in Surakarta Manuscripts: Manuscripts of the Mangkunagaran Palace Vol. 2*, SEAP Publications, 2000, the original source was *Pustaka Raja Purwa Banjaransari* by Ranggowarsita (1802–73). Although the summary of the story is found in many books, such as, Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini*, Marshall Cavendish, 2006*;* Adolf Heuken SJ, *Historical sites of Jakarta, 6th Ed.*, Cipta Loka Caraka, Jakarta 2000; Geoff Bennett, *The pepper trader: True tales of the German East Asia Squadron and the man who cast them in stone*, Equinox Publishing, 2006, etc., the article on the internet (below), which looked most comprehensive, has been adopted here. “Dari Nabi Ibrahim Sampai Syailendra (From Abraham to Sailendra)”, KEMBANG-KEMBANG SALAM [http://mhariwijaya.blogspot.jp/2008_02_03_archive.html](http://mhariwijaya.blogspot.jp/2008_02_03_archive.html).
+
+[⁵](#part0009_split_000.html_fn5) “Solo”, gimonca.com. [http://www.gimonca.com/indonesia/solo.html](http://www.gimonca.com/indonesia/solo.html)
+
+[⁶](#part0009_split_000.html_fn6) KOMPAS Citizen Image 24 Feb 2010F. [http://citizenimages.kompas.com/citizen/view/52937-Jamasan Maulid](http://citizenimages.kompas.com/citizen/view/52937JamasanMaulid)
+
+[⁷](#part0009_split_000.html_fn7) E.g. Peter Turner, Brendan Delahunty, Paul Greenway, James Lyon, Chris McAsey, David Willett, *Indonesia: Lonely Planet Travel Survival Kit*, Lonely Planet 1995.
+
+[⁸](#part0009_split_000.html_fn8) H. J. de Graaf, *Wonderlijke verhalen uit de Indische historie,* Moesson, Den Haag 1981\. The content is cited in “Bericht Onderwerp: De kanonnen bij de Solose kraton (28 okt 2010)” in, [http://indonesie.actieforum.com/t3516-de-kanonnen-bij-de-solose-kraton](http://indonesie.actieforum.com/t3516).
+
+[⁹](#part0009_split_000.html_fn9) “Dari Nabi Ibrahim Sampai Syailendra (From Abraham to Sailendra)”, KEMBANG-KEMBANG SALAM [http://mhariwijaya.blogspot.jp/2008_02_03_archive.html](http://mhariwijaya.blogspot.jp/2008_02_03_archive.html).
+
+[^(10)](#part0009_split_000.html_fn10) According to *Serat Centhini* (*The Centhini Story*), a travel story compiled in the early 19th century, Mas Cebolang who visited Mataram in the first half of the 17th century heard from an official that Kyai Gunturgeni along with Kyai Swuhbrastho were presented to Sultan Agung by Jan Pieterszoon Coen of VOC. For *Serat Centhini*, see the details in [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8) – Appendix: Jayabaya prophecies.
+
+[^(11)](#part0009_split_000.html_fn11) Indro Nursito, “Legitimasi Kekuasaan Raja Mataram: Kangjeng Nyai Setomi, Meriam dari Portugis yang Keramat (The Legitimacy of the Power of Mataramese King: Nyai Kangjeng [Lady] Setomi, a Sacred Portuguese cannon)”, October 1, 2010 [http://www.timlo.net/baca/4202/kangjeng-nyai-setomi-meriam-dari-portugis-yang-keramat/](http://www.timlo.net/baca/4202/kangjeng-nyai-setomi-meriam-dari-portugis-yang-keramat/)
+
+[^(12)](#part0009_split_000.html_fn12) The Dutch text: “Uyt een verfoeyelyke gedagtenisse teegen den gestraften landverraader Pieter Erberveld sal niemand vermoogen te deeser plaatse te bouwen, timmeren, metselen, ofte planten nu ofte ten eenigen daage. Batavia den 14 April A^o. 1722", from: Troppenmuseum, “Het monument ter herinnering aan Pieter Erberveld, Batavia” [http://collectie.tropenmuseum.nl/default.aspx?ccid=499207&lang=](http://collectie.tropenmuseum.nl/default.aspx?ccid=499207&lang=). The English translation from: D. M. Campbell, *Java: Past and Present*, Vol. I, William Heinemann, London 1915.
+
+[^(13)](#part0009_split_000.html_fn13) D. M. Campbell, *Java: Past and Present*, Vol. I, William Heinemann, London 1915\. The present writer has found an almost identical story written earlier in: William Barrington D’Almeida, *Life in Java: With Sketches of the Javanese. Vol. I*, Hurst and Blackett, London 1864. A common literature might have existed, but D’Almeida’s book might otherwise have been Campbell’s source.
+
+[^(14)](#part0009_split_000.html_fn14) A. J. Eijkman, F. W. Stapel, *Leerboek der geshiedenis van Nederlandsch-Indie 9th Edition*, Gronongen-Batavia 1939 (エイクマン, スタぺル (村上直次郎, 原徹郎訳)「蘭領印度史」，東亜研究所 1942).
+
+[^(15)](#part0009_split_000.html_fn15) Ralf Munson, “Pieter Erberveld’s Treason*”*, *The Youth’s Instructor (Adventist Magazine)* Vol. 83, No. 48, 26 Nov. 1935\. No source was given in this article for the young members of a religious organisation. This citation is new in this English edition, not in the Japanese edition published earlier in October 2013.
+
+[^(16)](#part0009_split_000.html_fn16) Adolf Heuken SJ, *Historical Sites of Jakarta, 6th Ed*., Cipta Loka Caraka, Jakarta 2000.
+
+[^(17)](#part0009_split_000.html_fn17) Tomoji Abe, *The islands of fire*, Sogensha 1944 (阿部知二「火の島－ジャワ・バリ島の記」, 創元社 1944). The famous writer and scholar of English literature, who was sent to Java as a propagandist during the Japanese occupation, wrote that he saw the skull on 8th March 1942, but it was not there when he came back after several months.
+
+[^(18)](#part0009_split_000.html_fn18) “Eurasians”, or offsprings of Euro-Asian mixed parentage.
+
+[^(19)](#part0009_split_000.html_fn19) E. J. H. Corners, *The Marquis: A Tale of Shonan-to*, Heinemann Books (Asia) Ltd., Singapore, 1981; Yukio Togawa, *The story of Shonan-yo*, *Yomiuri* Newspaper 1990 (戸川幸夫「昭南島物語 上・下」, 読売新聞社 1990).
+
+[^(20)](#part0009_split_000.html_fn20) Hiroshi Aramata, *Scientific episodes in the Great East Asia*, Chikuma-shobou 1991 (荒俣宏「大東亜科学奇譚」, 筑摩書房 1991).
+
+[^(21)](#part0009_split_000.html_fn21) Introduction and notes in: Marquis Tokugawa (Footnote 2).
+
+[^(22)](#part0009_split_000.html_fn22) Tadataka Kamiya, Kazunobu Kimura, *Writers requisitioned and sent to the south* – *War and Literature*, Sekai-shisou-sha 1996 (神谷 忠孝, 木村 一信「南方徴用作家－戦争と文学」, 世界思想社 1996).
+
+[^(23)](#part0009_split_000.html_fn23) Hidezo Tanakadate, *The Seizure of Southern Cultural Institutions*, Jidai-sha, Tokyo 1944 (田中館秀三「南方文化施設の接収」, 時代社 1944); Tanakadate Hidezo’s Achievements Publishing Group, *Tanakadate Hidezo’s Achievements and Memoirs*, Sekai-Bunko, Tokyo 1975 (田中館秀三業績刊行会編「田中館秀三—業績と追憶」, 世界文庫 1975).
+
+[^(24)](#part0009_split_000.html_fn24) J. Levelink, A. Mawdsley and T. Rijnberg, *Four Guided Walks: Bogor Botanic Garden*, Bogorindo Botanics, Bogor 1996.
+
+[^(25)](#part0009_split_000.html_fn25) Marquis Tokugawa (Footnote 2).
+
+[^(26)](#part0009_split_000.html_fn26) Adolf Heuken SJ (Footnote 16).
+
+[^(27)](#part0009_split_000.html_fn27) “The Insurrection at Batavia”, *The Scots Magazine Vol. 3*, July 1741 Glasgow (Google Books).
+
+[^(28)](#part0009_split_000.html_fn28) One of the Pulau Seribu (Thousand Islands) in the Bay of Jakarta, where a naval base was located ever since the time of the construction of Batavia.
+
+[^(29)](#part0009_split_000.html_fn29) “Blacks” must have meant soldiers from Amboyna, Spice Islands, who were recruited and highly trusted by the Dutch. They were given the same wages and meals as their European counterparts, although they required to serve twice as long (Jean Demmeni (photo), Leo Haks and Paul Zach (text), *Indonesia: Images from the Past*, Times Editions 1987).
+
+[^(30)](#part0009_split_000.html_fn30) “Roemolake” is obviously the mis-spelling of Roea Mallacca (or Malacca). The name of the place still exists as Roa Malaka.
+
+[^(31)](#part0009_split_000.html_fn31) In “Dutch East Indies. Dienst der Staatsspoor- en Tramwegen*, Officieele Reisgids 2 Nov 1939*–*1 May 1940, Der Spoor en Tramwegen 28e Uitgave*”, the station’s name was “Batavia Benedenstad”.
+
+[^(32)](#part0009_split_000.html_fn32) Marquis Tokugawa (Footnote 2).
+
+[^(33)](#part0009_split_000.html_fn33) Yosaburo Takekoshi, *A book of southern countries*, Niyusha 1910 (竹越與三郎「南國記」, 二酉社 1910).
+
+[^(34)](#part0009_split_000.html_fn34) Yusuke Tsurumi, *Nanyo-Yuuki (Pleasure travels around the southern ocean),* Dainihon-Yubenkai 1917 (鶴見祐輔「南洋遊記」, 大日本雄辯會 1917).
+
+[^(35)](#part0009_split_000.html_fn35) Frank G. Carpenter, *Java and the East Indies*, Doubleday, Page & Scott Co., Garden City, New York 1926.
+
+[^(36)](#part0009_split_000.html_fn36) Ichizo Kobayashi, *The Dutch East Indies which I saw*, Tonan-shoin 1940 (小林一三「蘭印を斯く見たり」, 斗南書院 1940).
+
+[^(37)](#part0009_split_000.html_fn37) J. W. B. Money, *Java or How to Manage a Colony (1861)*, Oxford University Press, Singapore 1985.
+
+[^(38)](#part0009_split_000.html_fn38) Alfred R. Wallace, *The Malay Archipelago (1869)*, Oxford University Press, Singapore 1985.
+
+[^(39)](#part0009_split_000.html_fn39) *Officieele Reisgids 2 Nov 1939*–*1 May 1940, Der Spoor en Tramwegen 28e Uitgave.*
+
+[^(40)](#part0009_split_000.html_fn40) *The Bridge on the River Kwai*, directed by Sir David Lean, Colombia Studios 1957.
+
+[^(41)](#part0009_split_000.html_fn41) Bill Dalton, *Indonesia Handbook 4th Ed*., Moon Publications 1988.
+
+[^(42)](#part0009_split_000.html_fn42) “Gambir”, in Pramoedya Ananta Toer, *Tales from Djakarta*, Equinox Publishing (Asia) 2000.
+
+[^(43)](#part0009_split_000.html_fn43) Alfred R. Wallace (Footnotee 38). The carving is said to exist in Charterhouse School Museum, Godalming, Surrey. (The Alfred Russel Wallace Website, [http://wallacefund.info/who-bought-wallaces-javanese-carving](http://wallacefund.info/who-bought-wallaces-javanese-carving)).
+
+[^(44)](#part0009_split_000.html_fn44) François Sémah; Anne-Marie Sémah;; Tony Djubiantono; *Ils ont découvert Java: *il y a plus d’un million d’années*/They discovered Java: more than one million years ago/Mereka menemukan pulau Jawa: lebih dari satu juta tahun yang lalu*, Pusat Penelitian Arkeologi Nasional IJakarta): Museum national d’histoire naturelle (Paris) 1990.
+
+[^(45)](#part0009_split_000.html_fn45) National Science Museum, *Exposition of Pithecanthropus* – *Java Man revived*, Yomiuri Newspaper 1996 (国立科学博物館「ピテカントロプス展－いま復活するジャワ原人」, 読売新聞社 1996).
+
+[^(46)](#part0009_split_000.html_fn46) Charles Darwin, *The Origin of Species by means of natural selection or the preservation of favoured races in the struggle for life*, John Murray, London 1910 (First Edition 1859).
+
+[^(47)](#part0009_split_000.html_fn47) Leo Haks and Guus Maris, *Lexicon of Foreign Artists Who Visualized Indonesia (1600*–*1950)*, Archipelago Press, Singapore 2000.
+
+[^(48)](#part0009_split_000.html_fn48) The virtues of eight divinities are: 1\. Beneficence of Endra, 2\. Ability to repress all evil of Jama, 3\. Kindly persuasiveness and wise conduct of Surja, 4\. Lovingness of Tjandra, 5\. Keen awareness and deep insight of Baju, 6\. Generosity with material wealth and recreation of Kuwera, 7. Sharp and ruthless intelligence in facing difficulties of Baruna, 8. Fiery courage and spirited determination in opposing any enemy of Brama. Asra Brata is found in Serat Rama (The Book of Rama) written by an 18th-century poet, Yasadipura I. (Soemarsaid Moertono, *State and Statecraft in Old Java: A Study of the Later Mataram Period, 16th to 19th Century*, Equinox Publishing, 2009).
+
+[^(49)](#part0009_split_000.html_fn49) For instance, the statue is introduced as “The Arjuna Wijaya chariot statue” in “Weekly 5: Dreams of a nation immortalized – 4\. The Horse statue”, *The Jakarta Post* (18 May 2012), [http://www.thejakartapost.com/news/2012/05/18/weekly-5-dreams-a-nation-immortalized.html](http://www.thejakartapost.com/news/2012/05/18/weekly-5-dreams-a-nation-immortalized.html).
+
+[^(50)](#part0009_split_000.html_fn50) Madoka Kanai, *A study on the history of Japan*–*Holland relationship*, Shibunkaku 1986 (金井圓「日蘭交渉史の研究」, 思文閣 1986).
+
+[^(51)](#part0009_split_000.html_fn51) Madoka Kanai, *Modern Japan and Holland*, University of Air 1993 (金井圓 「近世日本とオランダ」, 放送大学 1993); 科野孝蔵「オランダ東インド会社の歴史」, 同文館出版 1988 (Kozo Nishina, *A history of the Dutch East-India company*, Doubunkan-shuppan 1988), etc.
+
+[^(52)](#part0009_split_000.html_fn52) Koutaro Shirai, *Considerations on the arrival of foreign plants*, Ariake-shobo 1929 (白井光太郎「植物渡來考」, 有明書房 1929).
+
+[^(53)](#part0009_split_000.html_fn53) Chikuun Uchihashi (Ed.), *Double-sided mirror of Nagasaki chronicle*, 1828 (打橋竹雲選並蔵版「長崎年暦両面觀」文政十一戊子 (1828)發行).
+
+[^(54)](#part0009_split_000.html_fn54) In *A study on the arrival of foreign plants*, it is written that a tanka (31-syllable poem) in Manyōshū (compiled in the late 8th century) is the first instance that the name sato-imo (taro) appeared in literature.
+
+[^(55)](#part0009_split_000.html_fn55) Kunio Yoshimura, *Nagasaki Origins*, Nagasaki-Bunkensha 1990. (嘉村国男「ながさきことはじめ」, 長崎文献社 1990).
+
+[^(56)](#part0009_split_000.html_fn56) Tsuneo Sato et al. (Ed.), *Japan agricultural book series 70: Agricultural books by scholars 2*, Rural Culture Association Japan 1966 (佐藤常雄他編「日本農書全集70・学者の農書二」, 農山漁村文化協会 1996).
+
+[^(57)](#part0009_split_000.html_fn57) Seiichi Iwao, *A sequel to: The study on the Nangyang Japanese town*, Iwanami-shoten 1987 (岩生成一「続・南洋日本町の研究」, 岩波書店 1987).
+
+[^(58)](#part0009_split_000.html_fn58) Noorduyn, A. Teeuw, *Three Old Sundanese Poems*, KITLV Press 2006\. *See* [Chapter 4](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8).
+
+[^(59)](#part0009_split_000.html_fn59) The *ikat* fabric manufactured here was, strictly speaking, a *weft-ikat*. The type woven with varicoloured yarn for warp is called a *warp-ikat*, and the one with varicoloured yarns for both warp and weft is called a *double ikat*.
+
+**Chapter 3**
+
+**Ancient Stone Monuments – The Prasasti of Tarumanagara**
+
+### Prasasti of Ciaruteun
+
+In a corner of the crossing of Salak and Pangrango Streets in Bogor, not far from the Botanical Garden is located Taman Kencana, a small park of about 100 metres square. In a green-rich environment, the park is surrounded by the old campus of Bogor Agricultural University’s Veterinary Department (former Veterinary School), the site of the Research Station for Rubber Technology where I used to work, a row of small shops, which sell foods and daily goods, and some old houses, and the park itself, covered with grass and a planting of flowers and trees. Thus, the park is not like alun-alun, or town-centre squares, that are found in many towns in Java Island, but a place of recreation and relaxation for neighbouring inhabitants, although it is often used for such a purpose as a polling station on the occasion of a general election.
+
+In the middle of the park, there was a stone-like object about four metres wide, on the smooth surface of which were inscribed a pair of human footprints and some pictorial letters. I was told that it was a replica of a stone monument of the Tarumanagara Kingdom, which prospered in West Java in ancient times. The real monument was found in a riverbed of Ciaruteun (Aruteun River)[¹](#part0010_split_001.html_fn_1) in a suburb of Bogor and its existence was reported in the 1860s. It was the time when modern archaeological study had just started in Java and the stone caught the interest of contemporary researchers[²](#part0010_split_001.html_fn_2).
+
+![Illustration](images/00059.jpeg)
+
+Prasasti Ciaruteun
+Reproduced from: W. F. Stutterheim, *Pictorial history of civilization in Java*. Translated by Mrs. A. C. de Winter-Keen, The Java Institute and G. Kolff & Co., Weltevreden, 1926.
+
+The symbols inscribed were very similar to those used in the Pallava Empire, which prospered in India in the 4th–5th centuries, and the language was Sanskrit. The large symbols on the right-hand side of the footprints meant “The King Purnawarman of Tarumanagara”, decoded in early days and the strings of small symbols on the left-hand side were deciphered in the 1920s[³](#part0010_split_001.html_fn_3). In English, it says:
+
+Of the valiant lord of the earth, the illustrious Purnawarman, [who is] the ruler of the town of Taruma, [is] the pair of footprints like unto Vishnu’s.
+
+This suggests that Purnawarman was regarded and respected as the incarnation of the Hindu God Vishnu, or an existence with a similar divinity.
+
+Ancient stone monuments are called “prasasti” in Indonesian language. As four more pieces of prasasti of this age have been found in the vicinity of Bogor, one in Tugu to the east of Jakarta, and one in Cidanghiang to the south of Banten in the west part of the Jakarta plane, the ruling of Tarumanagara is considered to have ranged over a fairly wide area[⁴](#part0010_split_001.html_fn_4). In addition, stone axes and other stone tools that are regarded as the same age have been abundantly unearthed all over the Jakarta plane and a few pieces of copper plates, discovered within the same area. Two pieces of stone statues of Vishnu found in the neighbouring area of Karawan in the east part of the plane proved that Tarumanagara Kingdom embraced Hinduism[⁵](#part0010_split_001.html_fn_5).
+
+### **Prasasti of Kebun Kopi**
+
+Let us see the records[⁶](#part0010_split_001.html_fn_6) on some prasasti that are quite diverse. “Prasasti Kebun Kopi” found in a coffee plantation and reported in the 1860s is alternatively called “Prasasti Telapak Gajah” because a pair of elephant’s footprints are carved. On it was inscribed:
+
+Here appeareth the pair of the (brilliant) Airawata-like elephant of the Lord of Taruma [who is] great in strength and victorious.
+
+Airawata was the white elephant that was the vehicle of Indra, the God of War, whereas Nandi, an ox, was the vehicle of Shiva, and Garuda, an imaginary bird, was a carrier of Vishnu, the name of the last having been adopted as the national emblem and the name of national airlines of Indonesia. Since endemic Javan elephant (*Elephas* hysudrindicus) was extinct before historical time, the king and the followers would have brought their elephants from Sumatra or the continent.
+
+![Illustration](images/00060.jpeg)
+
+Prasasti Kebun Kopi
+Reproduced from: Vogel, J. Ph., *The earliest Sanskrit inscriptions of Java*, Publicaties van den Oudheidkundingen dienst in Nederlandsch-Indie-Deel1, Albrecht & Co., Batavia 1925.
+
+### **Prasasti of Jambu**
+
+A stone existed on a rock mountain, Pasir Koleangkak, in Jambu, 30 km west of Bogor, was known since the 1850s and called “Prasasti Jambu” or “Prasasti Pasir Koleangkak”. It had a pair of human footprints and a two-line verse:
+
+Illustrious, munificent, and true to his duty was the unequalled lord of men – the illusions Purnawarman by name – who once [ruled] at Taruma and whose famous armour (varman) was impenetrable by the darts of a multitude of foes. His is this pair of footprints which, ever dextrous in destroying hostile towns, is salutary to devoted princes, but a thorn in the side of his enemies.
+
+This stone monument, considered to have been erected after the death of Purnawarman, suggests that the king was excellent also as a warrior.
+
+### **Prasasti of Tugu**
+
+Prasasti Tugu formerly exposed only 10 cm of its head on the ground and local people offered flowers and burnt incense in its side. When dug out in 1879, it was revealed that it was a triangular stone of about 1-metre height and that on the surface of it was an inscription of a 5-line, 100-word poem recording the river works conducted during the time of King Purnawarman.
+
+Formerly the Candrabhaga dug by the king of kings, the strong-armed Guru [the King’s father?], after having reached the famous town, went to the ocean. In the twenty-second year of [his] increasing, prosperous reign the illustrious Purnawarman – who shineth forth by prosperity and virtue and who is the ornament [*lit.* the banner] of the rulers of men – hath dug the charming river Gomati pure of water, long six thousand, one hundred and twenty-two bows [dhanus], having begun it on the eighth lunar day of the dark half of [the month of] Phalguna and completed it on the thirteenth lunar day of [(the white half) of the month of] Caitra. [The river] which had torn asunder the camping-ground of the Grand-father and Royal Sage, now floweth forth, after having been endowed by the Brahmins with a gift of a thousand kine.
+
+This description is ambiguous in some parts. Firstly, although Candrabhaga and Gomati were probably named after the rivers that existed in India, it was not sure to which rivers in West Java they actually corresponded. If they are assumed to be the rivers near the site of the stone’s discovery, one of them may be regarded as Bekasi River, but it is more plausible that they were Ciliwung and Cisadane, the two major rivers that ran through the area of the present Bogor and flew into the Java Sea. Secondly, it is doubtful whether it was possible to dig a river or a canal of such a length as 6,122 dhanus, which is assumed to be 7 miles (11.3 km) or 12 miles (22.9 km) within a matter of twenty-one days [⁷](#part0010_split_001.html_fn_7). The relationship between Purnawarman to “the king of kings” and the Grand-father and the Royal Sage are obscure[⁸](#part0010_split_001.html_fn_8).
+
+![Illustration](images/00061.jpeg)
+
+Prasasti Tugu (Replica), Jakarta History Museum
+Photographed with permission by M. Iguchi, September 2006.
+
+The records suggest, however, that the rulers such as Purnawarman had made efforts to manage rivers, which often flood even today, and that Tarumanagara ruled the area as a solid kingdom.
+
+### **Records in Old Chinese documents**
+
+Although these prasasti are the only direct evidence to prove the existence of Tarumanagara, many documents apparently concerned with this kingdom had remained in China[⁹](#part0010_split_001.html_fn_9). In a book of the Later Han Dynasty, *The Book of Southern Barbarians* (南蠻西南夷列傳), was described that “in 131 AD, the king of Ya-diao (葉調), from the exterior of the Vietnamese coast, sent a mission to this dynasty: the emperor gave a gold stamp and a purple-ribbon medal to the king”[^(10)](#part0010_split_001.html_fn_10). Ya-diao was interpreted as the phonetic transcription of Jawadwipa (dwipa means island) and the king was assumed to have been Dewawarman of Salakanagara[^(11)](#part0010_split_001.html_fn_11), a kingdom that had existed in West Java before Tarumanagara to be mentioned below.
+
+In the early 5th century, a Buddhist priest, Fa Xian (法顕), from the Eastern Chin Dynasty, arrived in Jawadwipa on his way back to China from Ceylon, after a hard voyage of ninety days, and stayed there for five months. In *A Record of the Buddhist Countries* written in 414 AD, he wrote that “There were a large number of pagans [i.e. the native Sundanese inhabitants] and Brahmans but no Buddhist”[^(12)](#part0010_split_001.html_fn_12). Although the name of the kingdom was not explicitly given, the country is assumed to have been Tarumanagara.
+
+A more suggestive description about Taruma was found in *Sung Shu* (*The Book of Sung*)[^(13)](#part0010_split_001.html_fn_13) in that “in the 7th year of Yuanjia (元嘉, [430 AD]) a mission from a certain country, 呵羅單國, often read as ‘holotan’ in alphabet, which ruled Java presented gold rings, red parrots, Indian cotton fabrics, etc., and in the 10th year (434 AD) the ruler of the country,毗沙跋摩, praised the great achievement of Emperor Wendi (文帝, [424–53])…” Even to the eyes of myself, a non-linguist, the name of the ruler (毗沙跋摩) looked to be the phonetic transliteration of Wisnuwarman, the 4th king of Tarumanagara who had succeeded Purnawarman in 356 Saka (434 AD).
+
+### **A mysterious country**
+
+What was the country that was phonetically transcribed as 呵羅單國 (Holotan or Karatan)? At that time, I could find no answer in the literature[^(14)](#part0010_split_001.html_fn_14). I asked several friends of mine in Bogor, but there seemed to be no place in West Java that sounded like “ka-ra-tan”, the pronunciation obtained from a Chinese–English dictionary. When I visited and asked Mrs. M., a Chinese-Indonesian friend in Jakarta, she told me, after thought that the pronunciation could be “a-lo-tan”, or possibility “a-ro-tan”, as the sound of the middle character (羅) could be “ro” as Roma was transliterated as “羅馬”. On my way back from her house, I was humming “a-lo-tan” or “a-ro-tan” and an idea flashed into my mind. It must be “Aruteun” of Ci-Aruteun, where the “Prasasti Ciaruteun” and the “Prasasti of Kebun Kopi” were found! Literally, Ci- is just a prefix for water in Sundanese. In Ciaruteun, I have seen several pieces of large cubic stones of about 50 cm square, which must have been the foundation stones of a palace or some magnificent building, as described below. If the above interpretation is correct, it leads to an assumption that the capital of Tarumanagara would have existed in the present-day Ciaruteun and the country itself was also called “Aruteun country”, and that the despatch of the mission to Sung was done during the reign of Purnawarman and continued in the era of Wisnuwarman.
+
+Several days later, I spoke about my theory to Mrs. E., of the National Museum of Indonesia to whom I pay great respect as my teacher of Javanese history and culture. Although she was a person who was cautious in the interpretation of historical matters, she appreciated my idea and told me, “It would be complete, if some other supporting facts were available.”
+
+Don’t be too sure of yourself! A few years later I was a little disappointed to find a description in a book[^(15)](#part0010_split_001.html_fn_15) that the word Holotan (呵羅單) in the Chinese chronicle must be the phonetic transcription of Aruteun and that the capital would have been located somewhere around Ci-Aruteun, although no mention was made of the remaining large foundation stones that I thought were important evidence for determining the location of the capital. The statement in the same book that “Aruteun was the earliest kingdom in [the island of] Java, which had existed before Tarumanagara”, is open to question. In common-sense terms, I believe the Aruteun country (呵羅單國) in *The Book of Sung* was more likely another name of Tarumanagara.
+
+Among the presents to Sung, Indian cottons must have been imports, whilst gold rings might have been domestic artefacts as there were gold mines in West Java. As wild parrots must not have been in the Island of Java, red parrots as presents would either have been captured in an eastern island or their offspring[^(16)](#part0010_split_001.html_fn_16). In any case, it is interesting that this bird, which imitates the human voice, has been a pet since ancient times.
+
+The fact that the Aruteun country must have possessed excellent ships that enabled them to frequently send missions to remote China as early as in the 4th century is a little surprising, whilst many Japanese embassy fleets to the Tang Dynasty China in the 7th–8th centuries were frequently wrecked on their much shorter sea-route.
+
+In China, the name of Tarumanagara appeared in documents of later centuries (e.g. in *The New Book of Tang* (新唐書) and *The Encyclopaedia of Statecraft* (通典) as “Ta-ro-ma (多羅磨)”[^(17)](#part0010_split_001.html_fn_17)), implying that the country continued to have existed well into the 7th century.
+
+Although documents were scant, the history of ancient kingdoms was orally passed down from one generation to another even up until after the religion changed from Hinduism to Islam. A series of chronicles, called *Naskah Wangsakerta*, compiled in the 17th century in Cirebon [^(18)](#part0010_split_001.html_fn_18) is quite informative and rated as important resources. Let us briefly review the history after the Salakanagara Kingdom[^(19)](#part0010_split_001.html_fn_19).
+
+### **Salakanagara, the oldest country**
+
+Salakanagara, also called Rajatapura, which was marked as Argyre in the world map of Ptolemy (150 AD), is said to have been founded by Dewawarman who came from Pallava, India, to Java and was married to the daughter of the local ruler, Aki Tirem (alias Aki Luhur Sang-mulya). The kingdom with its capital at Teluk Lada (in the present-day Pandeglang County) ruled the area for over 200 years until 358 AD, when Jayasinghawarman, the son-in-law of Dewawarman VIII, founded Tarumanagara in the eastern part of the territory, and probably continued to exist for a certain period as a regional kingdom. Jayasinghawarman himself was a high priest in Salankayana, a dependency of the Pallava Empire in India, but took refuse in Java, as his homeland was conquered by the Magada Kingdom. Purnawarman was his grandson. The fact that the stone inscription was written in accurate Sanskrit with beautiful Pallava letters[^(20)](#part0010_split_001.html_fn_20) is reasonably understandable from such background of his family.
+
+It is said that Jayasinghawarman, the founder of Tarumanagara, who passed away in 382 AD, was interred at the bank of the Gomati River and that the second king, Darmayawarman, who died in 396, was interred at the bank of Candrabhaga, but the places are unknown, as mentioned before. During the reign of Purnawarman, from 395–434 AD, the kingdom was most prosperous with forty-eight vassal kingdoms ranged from Salakanagara to the west and Purwalingga (the present-day Purbolinggo, Central Java) or Cipamari (Breves River in Central Java) to the east. In 397 AD, he constructed a new capital, Sundapura, near the coast, which is supposed to be the later Sunda Kelapa, in the present-day North Jakarta[^(21)](#part0010_split_001.html_fn_21).
+
+In 526 AD, Manikmaya, a son-in-law of the 7th king, Suryawarman, founded a small new kingdom at Kendan in the eastern part of the territory (around the present-day Cicalengka, east of Bandung), and in 612 AD, Wretikandayun, a great-grandson of Manikmaya, erected Galuh Kingdom in a far eastern area, near the present-day Ciomas. Tarumanagara itself was attacked and defeated around 650 AD by Sriwijaya, a strong kingdom based on Sumatra, and became weakened. In 669 AD, the 12th King Linggawarman of Tarumanagara devolved the kingdom to his son-in-law, King Linggawarman of Sunda and the history of Tarumanagara ended. What was the reason why the family of Jayasinghawarman chose Java as the place of refuge? Beside the facts that Salakanagara founded by Dewawarman from the same ethnic origin had existed and that the soil of the island was quite fertile, spices abundantly available around the archipelago might have been an attraction. They included clove and nutmeg indigenous to Molucca, which was to be called in later centuries Spice Islands. Needless to say, spices from Asia were indispensable as preservatives and deodorisers of meats, also in Europe, before the emergence of modern storage methods, as the cutting off of the traditional trade route via the Middle East by Ottoman Turks in the 15th century[^(22)](#part0010_split_001.html_fn_22) urged the Portuguese, the Spanish and the Dutch to explore new routes to reach Asia.
+
+Since the arrival of Jayasinghawarman to Java coincided with the golden age of the Roman Empire where demands for spices must have soared, the export of those items would have greatly contributed to the finance of the kingdom, whether or not they had directly participated in the spice trade that was traditionally undertaken by Indians, Arabs and Phoenicians.
+
+Among special products of Java would have been indigo, as “Tarum” of Tarumanagara as well as of Citarum, the biggest river in West Java, meant indigo. Probably, the dye was produced in large quantities to represent the name of their country, already at that time. In fact, before the synthetic indigo became common in the beginning of the 20th century, Java was the leading supplier of natural indigo to the world market. Just for information, the Javanese indigo is obtained from a plant of the Pea or Pulse Family (*Indigofera* tinctoria L), and is different from the Japanese indigo, “Ai” from Buckwheat or Knotweed Family (*Polygonum* tinctorium).
+
+### **Immigrants from overseas to Java**
+
+With regard to the relationship between the immigrants from India and the native Sundanese people, Fruin-Mees wrote her view in her book[⁹](#part0010_split_001.html_fn_9) as, “Although the newcomers from India were culturally superior to the Sundanese, they were characteristically not the people who tried to force others to adopt their liberal arts. It was probable that they did not much associate but rather co-inhabited with Sundanese who held their ancestor worship, and the inter-marriage were rare. According to their caste system[^(23)](#part0010_split_001.html_fn_23), the natives would be regarded to belong to the lowest Sudra class, but the Indians did not rule them by force. The Sundanese themselves were not well developed to adopt the high-level religion and culture.” On the other hand, in a school textbook authored by Eijkman and Stapel[^(24)](#part0010_split_001.html_fn_24) in the same age, it is described quite differently, as follows: “It was sure that the Hindu kingdoms (such as Tarumanagara) were founded in a peaceful manner. Many immigrants married with Indonesian women and the two races merged. The merger of the natives’ manners and customs and the Hindu culture and religion became evident after the 8th century, as seen in the remains of Hindu-Java temples in Java[^(25)](#part0010_split_001.html_fn_25).”
+
+While I was conscious of this conflict for several years, a solution was discovered in a volume of the modern translation of *Pustaka rajya rajya i bhumi Nusantara (The book of kings in the land of archipelago*)[^(26)](#part0010_split_001.html_fn_26), which I had happened to find in a small library of Sri Baduga Museum in Bandung. There were lines, “Among those who came to Java (Aji Saka and entourage) from Bharata (India) were traders, officials and religious leaders”, “They hoped their wives and children could live peacefully there”, “Sang Dewawarman from Pallava was friendly with the residents of coastal communities in West Java, Pulau Api and the southern part of Sumatra Island”, etc.
+
+Despite that they had accompanied their families, intermarriage is considered to have been also common. Not to mention the expedition of Alexander the Great, when we look back, the overseas exploration of Europeans, the majority of those who came to Asia and other areas were men, at least until the emergence of safe steamers, as the voyage across oceans was so hard and dangerous for women that they had to find their partners among local women, unlike those people who emigrated to North America of relatively short distance and those to the remote part of South America (Argentina and Uruguay) and Australia in the later centuries.
+
+Although how many Indians came to Java in the 4th century and earlier is not certain, the number of women is considered to have been relatively smaller. It is hard to imagine that the pure blood was maintained for the long period of 300 years in Tarumanagara in which twelve kings reigned, although it could have been possible in the early few generations.
+
+### **Kutai Kingdom in Borneo**
+
+In the Kutai-Kurtanegara Regency in East Kalimantan (Borneo), some seven pieces of prasasti with Pallava scripts, which were similar to those on the prasasti of Tarumanagara, were found. They recorded in Sanskrit that a certain great king, Mulawarman of Martapura, or Martadipura, had dedicated twenty thousand cattle to Hindu gods and priests, observed rites, the names of his father and grandfather were Aswawarman and Kundungga, respectively, the latter being the founder of the kingdom, etc. From the characteristics of the scripts, the kingdom is assumed to be older than Tarumanagara and the first kingdom in the East Indies. From the similarity of the end part of the names, the royal family is considered to have originated from the same ethnic group as of Tarumanagara, which emigrated from India. The kingdom is widely called Kutai Kingdom, named after the KutaiKurtanegara Sultanate established in the 16th century[^(27)](#part0010_split_001.html_fn_27), and the original name, Martapura, is rarely seen even in academic books, let alone textbooks. The name, Martapura, is never seen in Japanese books.
+
+My wish to visit the home of the old kingdom was nearly realised at last in 2007, but there was no chance to see the remains. When I and my friend arrived at Mulawarman Museum in Tenggaron, driven one hour up along Mahakam River from Samarinda by Dr. Mrs. W., of Mulawarman University, which was also named after the great king, the 19th-century Dutch-style building in the sultan’s palace was unfortunately under renovation and only the sounds of hammers were heard. To go to the place where the prasasti were found, I was told that a voyage of two days and nights on a boat upstream of Mahakam would be required. Mrs. W. sympathetically told me that the prasasti housed in this museum were mere replicas, the real pieces having been moved to the National Museum in Jakarta. Looking at the stream of the great Mahakam River, which was as wide as 500 m and full of water, I had an image of the ancient kingdom in my mind and felt happy even to be there. Mrs. W. who came from West Java had rich knowledge about Tarumanagara as well as Martapura. As to the reason why the ancient Indians had come to settle in such a far away place in East Borneo, she said that it was located on the sea-route to China and they would have used it as a trading point. I also learnt that gold used to be produced in East Kalimantan, whereas major products now are woods and petroleum.
+
+![Illustration](images/00062.jpeg)
+
+One of Prasasti Mulawarman (Replica)
+National Museum of Indonesia
+Photographed with permission by M. Iguchi, January 2009.
+
+The history of this area after the time of Mulawarman until the rise of the Islamic kingdom in the 17th century is completely unknown. In the 17th century when Admiral Cornelis Speelman of VOC (the Dutch East India Company) attacked Gowa Kingdom in Celebes and Sultan Hasanuddin was defeated with the fall of Macassar in 1667, several thousand Buginese who did not want to surrender exiled to Kutai across the strait. The sultan of Kutai warmly accepted them and gave them land where a town called Samarinda, literally “equal treatment”, was born. The date, 21st January 1668, has been adopted as the anniversary of the present city of Samarinda. Is it because of this tradition that we do not hear of any ethnic issues in this area, despite that the 600,000 inhabitants of Samarinda comprise not only of Kutai and Bugis but also Dayak from the interior of Kalimantan and other races from other islands? The atmosphere of the departments in Mulawarman University looked peaceful with no factional discord.
+
+### **A visit to Ciaruteun Village**
+
+The genuine piece of Prasasti Ciaruteun, mentioned in the early part of this chapter, was moved in 1990 from the riverbed where it was found, and placed under the shed on a near-by bank. One-and-a-half-hour drive from Bogor, the location is in a typical West Java village among banana and cassava fields. When I and colleagues visited, a gentleman who was entrusted as the caretaker of the remains kindly guided us. The stone monument lay in the middle of an open building surrounded by an iron fence under the roof of which appeared to be the same as its replica that I saw in the park in Bogor. I was quite shocked to find extraneous graffiti of dates and initials inscribed in modern characters on several parts of the stone, and realised the reason why the authorities decided to move it to a safe place. There was a noticeboard saying, “Those who damaged the article are imposed a fine of one hundred million rupiah!” From the huge amount, which was roughly five million yen (at that time), one can guess how important the stone monument was for the Ministry of Education and Culture, Indonesia. According to the caretaker who was involved in the evacuation operation, the whole work was conducted only by manpower, as bringing heavy machines in the heavily vegetated bluff was impossible. Since the stone was as heavy as over ten tons, it took six months and ten people to finish, and on some occasions it could be moved only 8–10 cm a day. Later, I incidentally saw some photographs that depicted the operation in Museum Taman Prasasti (Stone Monument Park Museum), Tanah Abang, Jakarta, and thought over the hard work achieved by the caretaker and his colleagues.
+
+![Illustration](images/00063.jpeg)
+
+A shed, which holds Prasasti Ciaruteun
+A noticeboard is seen in the front-left. Photographed by M. Iguchi September 2006.
+
+![Illustration](images/00064.jpeg)
+
+Evacuation operation of Prasasti Ciaruteun
+A picture reproduced at Museum Taman Prasasti Tanah Abang by permission of the authority by M. Iguchi, September 2006.
+
+Prasasti Telapak Gajah (Stone Monument of Elephant’s Footprints) was found 200 metres away from the site of Prasasti Ciaruteun. We were told that it was the original place and on a pillar of the shed, which had been built to enclose the stone, was the same noticeboard. In the surrounding field, coffee trees were no longer there, having been replaced by cassava plants, despite the fact that the stone monument still bears the alternative name, Prasasti Kebun Kopi.
+
+Next, we were guided to a place where we saw four pieces of stone of some half a metre diameter. Two of them embedded in the ground had ten-odd holes of 6–7 cm diameter on the flat surface. A young colleague of mine, Mrs. R. smiled and said, “Oh, dear! This is congklak! I used to play it when I was a child.” The intellectual game called congklak in Sunda, alternatively called Dakon in Java, is still popular among children in Indonesia. Although a different theory says that the origin of the game was not in India but somewhere in Africa, it is certain that it was the Indian people who founded Tarumanagara who introduced it into Java Island. It was amusing to imagine that ancient people were playing the game around these stones.
+
+![Illustration](images/00065.jpeg)
+
+Play arena of congklak of Tarumanagara Age
+Photographed by M. Iguchi, September 2006.
+
+Also interesting were several pieces of granite stones of about 50-cm cubic shape, with a hollow of about 40 cm square and 5 cm depth on one of their surfaces, laid under the eaves of the caretaker’s house. Several more of the same type of stones were found scattered in the near-by banana field. The stones must have been the foundation stones of a building, and judging from the size of pillars to fit the square hollow, the building was considered to have been a very big one. I thought over the possibility that the palace of King Purnawarman would have stood there. The guide told us that the name of Darmaga village halfway from Bogor, well known as the site of the new campus of Bogor Agricultural University, would have origins from King Dharmayawarman, the predecessor of Purnawarman.
+
+![Illustration](images/00066.jpeg)
+
+Stone blocks that are supposed to have been the foundation stones of a large construction of the Tarumanagara Age.
+Photographed by M. Iguchi, September 2006.
+
+In the early part of this article, concerning the replica of the Prasasti Ciaruteun found in Taman Kencana in Bogor city, I wrote, “there was a black stone…” in the past tense. In fact, when I revisited the park after several years, the replica was not there and a lamp pole to light up the park in the night stood in the same spot. People around there told me that the monument was removed a few years ago, but none of them knew its whereabouts. When a friend of mine enquired on my behalf to the district’s sightseeing office, they answered, “The monument was destroyed and removed because it was obstructive. It was a mere ornament, prepared from glass-fibre and resin, to decorate the park”, to my disappointment. The demolishing of valuable structures by ignorant officials often happens anywhere and I remembered the case [^(28)](#part0010_split_001.html_fn_28) that the famous Harmonie Building in Jakarta, constructed in the early 19th century by a native contractor, was destroyed and removed in order to widen the road and provide an automobile parking place. Although I had lived in the neighbourhood of the park for three years, I had not taken a picture of the monument, because I had never anticipated its disappearance. I do not know how many replicas were prepared, but I still believe it was one of them. In any case, it was the very thing that induced me to study the ancient history of West Java.
+
+Those people who find it difficult to visit Ciaruteun village can see its replica, as well as the replicas of other prasasti from Kebun Kopi, Tugu, etc., in the Jakarta Historical Museum (the old city hall of Dutch East Indies period) in Taman Fatahillah, North Jakarta. They are extremely fine replicas that one would believe to be the real ones, if not told. The National Museum, in Jalan Merdeka, Medang Meredeka Barat, Central Jakarta, housed numerous historical treasures collected from all over the Indonesian archipelago. The new building, which was opened in November 2006, has floors designed to display their collections from the aspect of culture, technology, etc. When I visited there prior to the opening by courtesy of my friend, a curator of the museum, a corner was being prepared to show the development of scripts in Indonesia from the time of Kutai and Tarumanagara kingdoms to the modern time. I admired the efforts of epigraphers who were studying those documents, which to me looked to be mere strings of curious symbols to the eyes of a non-professional, supposing that the process of the change from the Sanskrit to the Javanese and the Sundanese scripts would have been similar to that in Japan where *hentaigana* (intermediate cursive-style Japanese scripts) was born from cursive-style Chinese letters and evolved into *hiragana* (present-style Japanese scripts).
+
+### **The climate around Bogor**
+
+The mountainous district between Mt. Gede/Pangrango to the east and Mt. Salak to the west is an exceedingly pluvial area in Java Island, which belongs to the tropical rainforest climate, as Bogor is called *Kota hujan* (Rain city), the annual precipitation being over 2,500 mm. According to my experience, rain comes at least once every three days even in the dry season (normally April to September) and, in the wet season (October to March), it is not rare to miss sunshine for one week. The rain is almost always accompanied by a thunderstorm, as the *Guinness Book of Records* notes the city has the “most days per year with thunder” (322 thunderstorms/year)[^(29)](#part0010_split_001.html_fn_29). The lightning is so intense that many big trees in the Botanical Garden and those lined in the streets are frequently split. Since powercuts for half an hour are not unusual even with modern lightning-protection facilities, candles and lanterns are the necessities of houses, and private power generators are equipped in many offices and hotels. During my stay in Bogor, I had my computer modem damaged once or twice by lightning surges, which entered from the telephone line, and I learnt that unplugging the cable when the sky was covered by dark clouds was the best measure as the normal surge arrester was ineffective. As the water precipitated on the mountains and fields poured into the Ciliwung and Cisadane rivers, soil and water conservation was a big issue for the government ever since the Dutch time, or the era of the ancient Tarumanagara Kingdom. While the damage in Bogor located in the middle basins of these rivers was not considerable as roads were temporarily turned into rapids, the muddy water turbid with eroded volcanic soil ran down to Jakarta to cause disastrous floods once every several years.
+
+![Illustration](images/00067.jpeg)
+
+A bird’s eye view of the middle part of West Java. (View angle= 45°)
+Contour lines were obtained by QGIS geographic programme with SRTM 90m Digital Elevation Data, Srtm_58\. Data of rivers and lakes were obtained by Diva-GIS with “IDN_water_lines” and “IDN_water_area”, respectively.
+
+Nevertheless plenty of water containing all sorts of minerals from volcanic ash has been a Heaven’s blessing for agriculture from ancient times, allowing Java Island to become the most densely populated area in the world. In West Java, the hills around Mt. Gede/Pangrango are extensively cultivated for growing rubber, tea and other plantation crops, as well as fruits and vegetables for daily consumption, whilst fertile paddy fields develop in the peripheral plains. Cianjur located to the east of the mountains is famous for producing the best quality rice in Indonesia, being equivalent to the Uwonuma district in central Japan.[^(30)](#part0010_split_001.html_fn_30)
+
+Tropical Java has no snowfall, but hail, locally called *hujan es* (ice rain), does come often as broadcast by television or reported in newspapers. It was my experience of twenty-four years ago when I was alone driving the ascending road of Jalan Cihampelas in Bandung on a rainy night that some small grains, glittering like diamonds in the dim street light, hit the windshield of my car. The traffic was sparse in those old days. Wondering what they were, I pulled off the road, picked up the grains on my palm and finally recognised that they were no other than grains of ice![^(31)](#part0010_split_001.html_fn_31)
+
+It is a matter of debate why documents other than stone inscriptions remained in Java. In old days before paper was invented in the 1st century BC by Cai Lun in the Later Han Dynasty spread, parchment or sheepskin was used in Europe as the materials for recording, whereas the sheet traditionally used in Java was “lontar”[^(32)](#part0010_split_001.html_fn_32). It was prepared from the leaves of lontar or siwalan palm (*Borassus* flabellifer) by cooking them in herbal water, cutting in the shape of a strip, and pressing, on which letters and often illustrations were engraved by means of an iron pen, and filling the scratch with a compound of soot and oil. The strips were bunched like a Venetian shade. Such materials themselves were not the kind that was durable for centuries in the hot and humid tropical climate, but it would have been possible that they were buried under the strata formed by volcanic ash from Mt. Salak to the west and Mt. Gede/Pangrango to the east of Bogor, which were both quite wild and frequently erupted. Thus, not only documents but also buildings were probably embedded under the earth, and only stone monuments that were washed by rain and river water appeared to the eyes of today’s people.
+
+![Illustration](images/00068.jpeg)
+
+An example of Lontar document. Reproduced from: [http://commons.wikimedia.org/wiki/File:Naskah_Sunda_Lontar.jpg](http://commons.wikimedia.org/wiki/File:Naskah_Sunda_Lontar.jpg) (Contributed by Aditia Gunawan). The legend says it is an old Sundanese document, but the time is unknown.
+
+### **Volcanic eruption in ancient time**
+
+Mt. Krakatau or the Island of Krakatau located to the west of Java Island in the Strait of Sunda is also famous for a major eruption in 1883\. In the article, entitled “The earlier eruptions of Krakatau”, contributed to *Nature*, Prof. Judd introduced a description in *The Book of Ancient Kings (Pustaka Raja Purwa*), held in the library of Solonese court, which recorded a gigantic volcanic explosion of ancient time[^(33)](#part0010_split_001.html_fn_33).
+
+“In the year 338 Saka [i.e. 416 AD] a thundering noise was heard from the mountain Batuwara [now called Pulosari, in Banten], which was answered by a similar noise coming from the mountain Kapi, lying westward of the modern Bantam. A great glaring fire, which reached to the sky, came out of the last-named mountain; the whole world was greatly shaken, and violent thundering, accompanied by heavy rains and storms, took place; but not only did not this heavy rain extinguish the eruption of fire of the mountain Kapi, but it augmented the fire. The noise was fearful and, at last, the mountain Kapi with a tremendous roar burst into pieces and sunk into the depths of the earth. The water of the sea rose and inundated the land. The country from the east of the mountain Batuwara, to the mountain Kamula [now called Gede, to the east of Bogor], and westward to the mountain Raja Basa [in Lampung, in the southern part of Sumatra] was inundated by the sea; the inhabitants of the northern part of the Sunda country to the mountain Raja Basa were drowned and swept away with all their property.
+
+“After the water subsided the mountain Kapi and the surrounding land became sea and the Island of Java divided into two parts.
+
+“The city of Samaskuta, which was situated in the interior of Sumatra, became sea, the water of which was very clear, and afterwards was called the Lake Sinkara. This is the origin of the separation of Sumatra and Java.”
+
+*The Book of Ancient Kings* was said to have been written by Ranggawarsita III with reference to some traditions or older documents. The same story of Krakatau’s eruption was written more in detail in a book authored recently by Prof. Purwadi[^(34)](#part0010_split_001.html_fn_34). An abridged translation is as follows:
+
+“The following story was based on the *Serat Mahaparwa* [the story of Mahaparwa] authored by Empu Satya in 851 Saka [929 AD during the era of Kediri Dynasty].
+
+“Once, God came from the heaven of Mt. Tengguru [Himalaya] to an island spanning from Aceh to Bali and named it as Java, after *Dawa*, which meant ‘long’. In 78 AD, a Brahmin, Aji Saka, was sent from India to Java and the year became the first year of Saka Calendar. He opened the forest of Mount Hyang and settled there with his real name, Empu Sengkala. Then, the sultan[^(35)](#part0010_split_001.html_fn_35) of Rum sent 20,000 families to settle there, but due to epidemics, the number of families gradually decreased to 2,000, to 200 and finally to 20\. In response to Empu Sengkala’s entreaty, the sultan gathered another 20,000 families from Keling, Ceylon and Siam and sent them to Java. After the death of Empu Sengkala, Java had no king. In 102 Saka [160 AD], gods in India despatched a group of saints, led by Resi Mahadeva Buda, to Java. They were welcomed by the inhabitants and restored the kingdom at Medang Kamulan.
+
+“In the era of Sri Maharaja Kanwa in 329 Saka [407 AD], there was an incident when his daughter Dewi Srigati was kidnapped by Prabu Karungkala of Pidana [in Sumatra], although she was subsequently rescued by Raden Sengkan who later became her husband. In exasperation, Sri Maharaja Kanwa crushed the Pidana Country and destroyed Prabu Karungkala. Then, Prabu Sangkala, the king of Samaskuta [in Sumatra], a brother of Karungkala, no longer acknowledged the authority of Sri Maharaja Kanwa. In 338 Saka [416 AD], Sri Maharaja Kanwa attacked the Samaskuta Country and destroyed Prabu Sangkala.
+
+“After that, Sri Maharaja Kanwa headed to Mt. Pulosari [in Banten] and killed Resi Prakampa, the father of the brothers, suspecting the latter might have been behind the whole affair, although he himself was innocent. Since the supernatural power of Resi Prakampa was maltreated, Mt. Kapi [Krakatau] exploded, accompanied by the disasters of flooding water, heavy rain and typhoon storm. Mt. Kapi collapsed and entered the earth, and the seawater flooded the mainland from Mt. Gede [near Bogor] to Mt. Rajabasa [in Lampung]. After the subsidence, Java Island was divided into two islands, and the western part was named as Sumatra, while the eastern part remained to be called Java. The part of land around Mt. Krakatau sank and became the Sunda Strait, and Samaskuta Country vanished to the earth to become Lake Singkarak in Padang.”
+
+In his book, *Catastrophe* – *An investigation into the Origin of the Modern World[^(36)](#part0010_split_001.html_fn_36)*, David Keys assumed that various calamities experienced in various places on the Earth after the middle of the 6th century were caused by an extraordinary natural phenomenon and speculated that it was the great explosion of Krakatau that occurred in 535 AD. The same author also referred to a record in *History of Southern Dynasties* (of Sung) that in December (intercalary) in 529 AD, thunder claps were twice heard from the southwest direction[^(37)](#part0010_split_001.html_fn_37), and supposed they were the noises of Krakatau’s eruption, which he assumed to have happened in 535\. Dr. Wohletz[^(38)](#part0010_split_001.html_fn_38) who cooperated with Mr. Keys in raising the hypothesis had carried out a computer simulation, by assuming the amount of emitted magma as 200 cubic kilometres (i.e. several times bigger than that from Mt. Tombora in Samba Island, Flores in 1815, the largest ever recorded in the historical time) and the diameter as 50 kilometres, and by placing Mt. Proto-Krakatau at the crater, and showed a map in which Sumatra and Java Island had been connected by land.
+
+![Illustration](images/00069.jpeg)
+
+Computer simulation to show the break-up of Java and Sumatra Islands by the eruption of Krakatau in an ancient time.
+Reproduced by courtesy of Dr. K. H. Wohletz, from: [http://www.ees1.lanl.gov/Wohletz/Krakatau.htm](http://www.ees1.lanl.gov/Wohletz/Krakatau.htm)
+
+A question remains as to when the eruption had really happened. As to the difference of 119 years between 535 AD assumed by Mr. Keys and 416 AD in *The Book of Ancient Kings*, the author wrote that the latter year would have been an error arisen when the book was compiled on an oral tradition or a document of some 1,000 years older that might not have remained, but that possibility would be pretty low as the description in the source book was quite systematic. What the readers should note is that the year as well as the location of Mr. Keys’s assumption was nothing but the result of induction from circumstantial evidence. The simulation by Dr. Wohletz itself was not the kind that was to help the determination of the year. A view that “In early Chinese documents, Java and Sumatra were not well distinguished and, in some period, the two islands were called by one single word. This situation continued until early 400 AD”[^(39)](#part0010_split_001.html_fn_39) in the article by Prof. Chihara, an expert of ancient Javanese architecture, could not be direct supporting evidence either.
+
+The year 416 AD was in the heyday of Tarumanagara under the reign of the third king, Purnawarman (395–434 AD) and the prosperity continued in the time of the next king, Wisnuwarman (434–45 AD) when he sent a mission to Sung and established diplomatic relations with China. Although it was not referred by Mr. Keys, a stone inscription called Prasasti Pasir Muara found near Prasasti Kebun Kopi recorded:
+
+This is a statement by Rakryan Juru Pengambat in Saka 458 [536 AD] that the country’s government returned to the King of Sunda
+
+in which Rakryan Juru Pengambat is considered as an official[^(40)](#part0010_split_001.html_fn_40). The year 536 AD was around the time when the throne of Tarumanagara was succeeded from the 6th king Chandrawarman (515–35) to the 7th Suryawarman (535–61), and when Manikmaya, the son-in-law of Suryawarman had founded a new kingdom in Kendan to the east of the present-day Bandung (reigned 516–68 AD). It suggests that there was some calamity that obliged the move of the government seat, although who the King of Sunda was and where the capital was, is completely unknown; it does not necessarily hint whether the eruption was such a huge one to split the island into Java and Sumatra.
+
+Pulau Api (Api Island) in the above-mentioned *The book of kings in the land of archipelago* is supposed to be an island where Mt. Api (Mt. Kapi or Mt. Krakatau) existed. From the fact that “West Java, Pulau Api and the southern part of Somateria Island” were coordinated, these islands are regarded to have already been separated and independent from each other, at least in the 2nd century. As far as I have checked, in the same book, no description that suggested a volcanic eruption was found.
+
+From studies of sedimentary deposits around the Strait of Sunda, an estimation that the ancient Krakatau had occurred about 60,000 years ago has been published, but it does not seem to be sure among geologists[^(41)](#part0010_split_001.html_fn_41).
+
+### **The explosion of Krakatau in 1883**
+
+The explosion of Krakatau in 1883 itself was also a world-shaking event of nature in which an island with a main peak of 813 metres high was blown off; the noise was heard 3,500 km away in Perth, Western Australia, and the island of Rodrigues in the Indian Ocean, 4,800 km away. The huge tsunami drowned the towns and villages in coastal areas of Java and Sumatra to claim tens of thousands of lives, the official toll being 36,417 persons.
+
+![Illustration](images/00070.jpeg)
+
+A sketch of Krakatau before the eruption in 1883.
+(*The Illustrated London News*, 8 September 1886).
+Reproduced from: [http://alltomvetenskap.se/index.aspx?article=4474](http://alltomvetenskap.se/index.aspx?article=4474)
+
+In the heyday of cinerama, there was a film, entitled *Krakatoa* – *East of java*[^(42)](#part0010_split_001.html_fn_42), the story of which was related to this calamity. Having reviewed it on DVD, I was quite impressed again by the realistic scenes of emitting fire and flowing lava filmed, long before the emergence of digital technologies, in this Academy Award nominee film for Best Visual Effects.
+
+At the eruption of Krakatau in 1883, in response to the call of reports by the scientific journal, *Nature*, a Victorian poet, Gerald Manley Hopkins (1844–89) described the colour of the sunset, which he saw on the evening of 19th October 1884 in Dublin, in one of his letters to the editor as follows[^(43)](#part0010_split_001.html_fn_43):
+
+It was intense: bronzy near the earth; above like peach, or of the blush colour on ripe hazels. It drew away southwards. It would seem as if the volcanic “wrack” had become a satellite to the Earth, like Saturn’s rings and was subject to phases, of which we are now witnessing a vivid one.
+
+Indeed, a poet and academic who had a position in a university (Dublin), Hopkins was able to describe the scene of the sunset by words which Norwegian artist Edvar Munch expressed later by colour in *The Scream* (1893).
+
+![Illustration](images/00071.jpeg)
+
+*The Scream* by Edvard Munch 1893
+Reproduced from: [http://en.wikipedia.org/wiki/File:The_Scream.jpg](http://en.wikipedia.org/wiki/File:The_Scream.jpg)
+
+In a number of books and articles, a poem below was quoted as a work of Lord Alfred Tennyson:
+
+*Had the fierce ashes of some fiery peak
+Been hurled so high they ranged about the globe?
+For day by day, thro’ many a blood-red eve,
+The wrathful sunset glared.*
+
+It sounded “Krakatau-like”, but it had long been my question whether this quatrain was really a complete work of the Victorian poet laureate who usually wrote long poems. In 2003, the answer was received from Prof. Jeff Matthews[^(44)](#part0010_split_001.html_fn_44) who kindly tackled the problem in that it was actually an unauthorised extract, by an unknown person, from an 80-line poem, *St. Telemachus*[^(45)](#part0010_split_001.html_fn_45), in which the poet had imagined that the atmospheric conditions had been similar in 400 AD when the monk (also known as Almachius) heard God’s voice in Asia (the present-day Asia Minor or Anatoria) and went to Rome to stop the bloody gladiatory game. (After St. Telemachus was martyred to death by the stones cast by the mob, Emperor Honorius prohibited the gladiatory game from being performed in Rome forever.)
+
+Krakatau Island, which had vanished by the explosion of 1883, appeared again above the sea-surface in 1927 and grew to Anak Krakatau (*lit.* Child of Krakatau), the peak of which being as high as 300 metres in 2005\. The little mountain slowly blowing out a strand of smoke can be seen from Anyer in the west coast of Java.
+
+![Illustration](images/00072.jpeg)
+
+St Telemaachus
+Reproduced from: Ade Bethune, *Eye Contact With God Through Pictures: A Clip Book of Pictures from the Ade Bethune Collection*, Sheed & Ward, Kansas 1986.
+
+Let me add several lines about the name of Krakatau, which is alternatively called Krakatoa, namely in English. It is alleged to have come from the misspelling of the Portuguese, “Krakataõ”, made by a British journalist at the time of the 1883 eruption. Probably, this is a very rare case that a wrong spelling has been adopted for a long time, up until today. While the name, Krakatau itself is widely said to have derived from a Sanskrit word, “karkata” for “crab”, it was written in a recent book[^(46)](#part0010_split_001.html_fn_46) that “krakara” for “saw” in Sanskrit was the origin. From the similarity of the spelling and the notched shape of the mountain, which existed before the 1883 eruption, the latter assumption might be more plausible.
+
+Before ending this chapter, let us review the royal lines of major kingdoms that existed in the past in West Java, which are known from *The Book of Kings in the Archipelago* and other sources. The lineage of Tarumanagara, which commenced by Jayasinghawarman in 358, was maintained for more than twelve centuries until the end of Pajajaran in 1579, during which fifty-two kings reigned. If we count it from the founding of Salakanagara in 130 AD by Dewawarman the First, the period spanned over fourteen centuries and the number of kings was sixty-four (*See* the detail in Appendix 3.2).
+
+| Salakanagara Kingdom | 130–358 | 12 kings |
+| Tarumanagara Kingdom | 358–669 | 12 kings |
+| Kendan/Galuh Kingdom | 516–852 | 14 kings |
+| Sunda Kingdom | 669–1333 | 28 kings |
+| Kawali Kingdom | 1333–1482 | 6 kings |
+| Pajajaran Kingdom | 1482–1579 | 6 kings |
+
+### **Notes for [Chapter 3](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8)**
+
+________________________
+
+[¹](#part0010_split_000.html_fn1) Ciaruteun, literally Aruteun River. Ci- is a prefix in Sundanese meaning “water”, or river, lake, swamp, marsh, etc. In West Java there are a number of places with this suffix.
+
+[²](#part0010_split_000.html_fn2) J. Ph. Vogel, *The Earliest Sanskrit Inscriptions of Java* (in: F. D. K. Bosch, (Ed.) *Publicaties van den Oudheidkundigen Dienst in Nederlandsch-Indie, Deel 1*, Albrecht & Co., Batavia 1925).
+
+[³](#part0010_split_000.html_fn3) Stutterheim wrote in 1925 that it was not yet deciphered (W. F. Stutterheim, (Trans. by Mrs. A. C. de Winter-Keen), *Pictorial history of civilization in Java*, The Java Institute and G. Kolff & Co., Weltevreden, 1927), but the translation into a modern language was shown in a treatise by Vogel (Footnote 2) in the same year, 1925.
+
+[⁴](#part0010_split_000.html_fn4) Abdurachman Surjomiharjo, *Pemekaran Kota Jakarta/The Growth of Jakarta*, Penerbit Djambatan, Jakarta 1977.
+
+[⁵](#part0010_split_000.html_fn5) The first statue was discovered in 1959 (1957?) by a Frenchman, Jean Boisselier, and judged in the next year as a curving of the 7th century by Prof. Edi Sedyawati, University of Indonesia. The second statue was unearthed in 1975\. (The Jakarta Post, “Sites tell of prehistoric societies”, *The Jakarta Post* (27 February 2007), [http://www.southeastasianarchaeology.com/2007/02/27/sites-tell-of-prehistoric-societies-indonesia/](http://www.southeastasianarchaeology.com/2007/02/27/sites-tell-of-prehistoric-societies-indonesia/)).
+
+[⁶](#part0010_split_000.html_fn6) Based on the decipherment in Footnote 2, but some unclear part has been filled by the present writer with reference to: Saleh Danasasmita, *Sejarah Bogor*, Pemerintah Daerah Kotamadya DT II Bogor, 1983.
+
+[⁷](#part0010_split_000.html_fn7) Phalguna and Caitra of the Hindu calendar correspond to 20 February–21 March, and 22 March–20 April, respectively. *See* Appendix 3.1. Since each month is divided into white-half (new moon to full moon) and dark-half (from full moon to new moon), the period in the text is calculated to be twenty-one days.
+
+[⁸](#part0010_split_000.html_fn8) F. D. K. Bosch, *Selected Studies in Indonesian Archaeology*, Martinus Nijhoff, The Hague 1961.
+
+[⁹](#part0010_split_000.html_fn9) Akira Goto, *A history of Islamic world*, University of Air 1993 (後藤明, 「イスラーム世界の歴史」, 放送大学教育振興会 1993).
+
+[^(10)](#part0010_split_000.html_fn10) Chinese text, 永建六年, 日南徼外葉調王便, 遣使貢獻, 帝賜調便, 金印紫綬. [http://toyoshi.lit.nagoya.ac.jp/maruha/kanseki/houhan076.html](http://toyoshi.lit.nagoya.ac.jp/maruha/kanseki/houhan076.html).
+
+[^(11)](#part0010_split_000.html_fn11) The interpretation that Ya-diao (葉調) corresponded to Dewawarman was given by Paul Pelliot (1916) and G. Ferrand (1919) (G. Coedes, *Indianized States of Southeast Asia*, University of Hawaii Press 1968). Whilst G. Ferrand regarded “便” as Warman and “調便” as Dewawarman (Translator’s note in [W. Fruin-Mees, *Geschiedenis van Java, Vol 1: Het Hindoetijdperk. Vol 2: De Mohammedaansche rijken tot de bevestiging van de macht der compagnie*, Commissie voor de Volkslectuur, Weltevreden 1919 & 1920 /Japanese translation by Matsuoka: Madame Fruin-Mees, History of Java, Iwanami Publishing 1924 (フロイン・メース夫人著・松岡 静雄訳「爪哇史」岩波書店 1924)].Kurihara assumed that “調” in “調便” was an extraneous character (Tomonobu Kurihara, Study on the history of Qin and Han, Yoshikawa-koubunkan 1986 (栗原朋信 「秦漢史の研究」吉川弘文館1986 ). A theory that “葉調王便” was Purnawarman in Daigoro Chihara, *The architecture of Borobudur*, Hara-Shobo 1970 (千原大五郎「ボロブドールの建築」, 原書房1970) is obviously wrong as the time difference is as much as 250 years.
+
+[^(12)](#part0010_split_000.html_fn12) Chinese text, 乃至一國名耶婆提其國外道婆羅門興盛佛法不足言, Classic Book Publisher, *The life of Faxian*, Xinfua-bookstore 1955 (文學古籍刊行社出版「法顯傳」, 新華書店, 上海 1955).
+
+[^(13)](#part0010_split_000.html_fn13) Chinese text, 「呵羅單國治闍婆洲。元嘉七年，遣使獻金剛指鐶，赤鸚鵡鳥，天竺國白疊古貝，葉波國古貝等物。十年，呵羅單國王毗沙跋摩奉表曰： 常勝天子陛下：諸佛世尊，常樂安隱，三達六通，． ． ．」。 (Nagoya University, *Sung Shu* [*The Book of Sun*g] *Vol. 97, Legends 57, Foreign Countries: Arotan Country* (宋書卷九十七・列傳第五十七・夷蠻: 呵羅單國), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/songshu097.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/songshu097.html).
+
+[^(14)](#part0010_split_000.html_fn14) In K. Iwamoto, “Sailendra Dynasty and Borobudur”, [In: *Southeast Asia* – *History and Culture*, Society of South East Asia History, Heibonsha, Tokyo] 1981 (岩本薫, “Ｓａｉｌｅｎｄｒａ王朝とＣａｎｄｉ Ｂｏｒｏｂｕｄｕｒ”, 東南アジア史学会「東南アジア‐歴史と文化」, 平凡社), Iwamoto wrote that “The author considers that ‘呵羅單國’ was the phonetic transcription of Sailendra”, showing neither any phonetic interpretation nor any historical evidence. This is obviously wrong, primarily because there was a 3.5-century time difference between the heyday of Tarumanagara (ca. 400 AD) and the rise of Sailendra (mid-8th century). In the latter kingdom, there was no name of a king that sounded like Wisnuwarman.
+
+[^(15)](#part0010_split_000.html_fn15) Slamet Mulyana, *Dari Holotan ke Jayakarta*, Yayasan Idayu, Jakarta 1980.
+
+[^(16)](#part0010_split_000.html_fn16) Parrots belong to the so-called Australian species distributed to the east of the Wallace-line, which passes between Bali and Lombok Islands, and between Borneo and Celebes.
+
+[^(17)](#part0010_split_000.html_fn17) Chinese text, 單單在振州東南多羅磨之西. 唐書卷二百二十二下・列傳第一百四十七下・南蠻下 (*Tang Shu* [*The Book of Tang*] *Vol. 222-1/2, Legends 147, Foreign Countries 2*, “Taruma...” ), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html).
+
+[^(18)](#part0010_split_000.html_fn18) Naskah Wangsakerta, also called Naskah Cirebon, compiled by Panitia Pangeran Wangsakerta (Prince Wangsakerta Committee). They include such books as *Pustaka rajya rajya i bhumi Nusantara* (*The book of kings in the archipelago*), *Pustaka Pararatwan i bhumi Jawadwipa* (*The Book of Jawadwipa*) and others, altogether some thirty books.
+
+[^(19)](#part0010_split_000.html_fn19) Saleh Danasasmita, *Sejarah Bogor*, Pemerintah Daerah Kotamadya DT II Bogor, 1983, and some other literature.
+
+[^(20)](#part0010_split_000.html_fn20) Poerbatjaraka, *Riwajat Indonesia, Dijilid I*, Djakarta 1952, cited in, A. Surjomihardjo, *Pemekaran Kota Jakarta/The Growth of Jakarta*, Penerbit Djambatan 1977.
+
+[^(21)](#part0010_split_000.html_fn21) [http://id.wikipedia.org/wiki/Kerajaan_Salakanagara](http://id.wikipedia.org/wiki/Kerajaan_Salakanagara).
+
+[^(22)](#part0010_split_000.html_fn22) 1453 AD, the fall of Constantinople.
+
+[^(23)](#part0010_split_000.html_fn23) First Class: Brahman=Priesthood, Second Class: Kshatriya=Aristocracy and warriors, Third Class: Vaisya=Farmers, artisans and merchants, Fourth Class: Sudra=Labourers and slaves.
+
+[^(24)](#part0010_split_000.html_fn24) A. J. Eijkman, F. W. Stapel, Leerboek der geshiedenis van Nederlandsch-Indie 9th Edition, Gronongen-Batavia 1939 (エイクマン, スタぺル (村上直次郎, 原徹郎訳)「蘭領印度史」, 東亜研究所 1942).
+
+[^(25)](#part0010_split_000.html_fn25) Here, “Java” means Central and East Java where Javanese people live, and the “remains” denote such monuments at Dieng, Borobudur, Prambanan, Singasari, etc.
+
+[^(26)](#part0010_split_000.html_fn26) Atja, (Ed.) S. Ekadjati, *Pustaka rajya rajya i bhumi Nusantara, suntingan naskah dan terjemahan I 1*, Bagian Proyek Penelitian dan Pengkajian Kebudayaan Sunda (Sundanologi), Direktorat Jenderal Kebudayaan, Departemen Pendidikan dan Kebudayaan, 1987.
+
+[^(27)](#part0010_split_000.html_fn27) J. G. de Casparis, *Indonesian palaeography*, E. J. Brill, Leiden/Koeln 1975.
+
+[^(28)](#part0010_split_000.html_fn28) Adolf Heuken SJ, *Historical Sites of Jakarta,* 6th Ed., Cipta Loka Caraca Foundation, Jakarta 2000.
+
+[^(29)](#part0010_split_000.html_fn29) The average from 1916 to 1919/ Norris McWhirter, Ross McWhirter, *The Guinness Book of Records*, Guinness Superlatives Ltd, London, October 1970.
+
+[^(30)](#part0010_split_000.html_fn30) This paragraph and the bird’s eye view of West Java have been added in this English edition (Not included in the Japanese edition published earlier in October 2013).
+
+[^(31)](#part0010_split_000.html_fn31) This paragraph is new in this English edition, not in the Japanese edition published earlier in October 2013\. In Indonesia, snow falls only on Puncak Jaya (4, 884 m), the highest peak in Papua (formerly called Irian Jaja or West New Guinea) or the Pacific Basin.
+
+[^(32)](#part0010_split_000.html_fn32) Paper arrived in Japan relatively earlier in the 6th–7th centuries, whilst it was transferred to the Islamic world and Europe in the 14th and the 15th centuries, respectively. To Java, paper must have been brought by the Portuguese in the 15th century at the latest, but it was not until the 19th century that it became widely used.
+
+[^(33)](#part0010_split_000.html_fn33) J. W. Judd, “The earlier eruptions of Krakatau”, *Nature* 40, 1889, 365\. *Pustaka Raja Purwa* (Book of ancient kings) written in the 1860–80s by a Solonese court poet, Ranggawarsita III, is said to be the longest book in the world. The book held in the court library in Surakarta (Solo) is not open to the public.
+
+[^(34)](#part0010_split_000.html_fn34) Purwadi, *Sejarah asal-usul tanah Jawa*, Persada, 2004 [In, Hamamdin, *Aceh Hingga Bali Membentang Dalam Satu Pulau*, May 11, 2009] ([http://poestaka-ku.blogspot.jp/2009/05/aceh-hingga-bali-membentang-dalam-satu.html](http://poestaka-ku.blogspot.jp/2009/05/aceh-hingga-bali-membentang-dalam-satu.html)).
+
+[^(35)](#part0010_split_000.html_fn35) The age of Aji Saka was six hundred years earlier than the emergence of Islam in the 7th century. Although the word “sultan” primarily meant the sovereign or chief ruler of an Islamic country, this word became used for a dictator or tyrant in general, e.g. “Sultan Cromwell” in English (OED2). Thus, the using of this word in the *Serat Mahaparwa* in the 10th century was not inadequate.
+
+[^(36)](#part0010_split_000.html_fn36) David Keys, *Catastrophe* – *An investigation into the Origin of the Modern World*, Century, London.
+
+[^(37)](#part0010_split_000.html_fn37) Probably, the original author refered to a record in *History of Southern Dynasties* Vol. 7 – Liang Book Middle Chapt. 7 (南史總目卷七, 梁本紀中第七, “大通元年 (西暦５２９)閏十二月丙午, 西南有雷聲二”). The present writer has also found a record in the Liang Book 2 – Main 2 that “In the era of Emperor Wudi in November 505 AD, the weather was fine, lightnings were seen in the southwest direction and thunder claps were heard three times: in Intercalary December in 505 AD thunder claps were heard twice in the southwest direction (武帝中, 天監四年 (西暦５０５年)十一月甲午, 天晴朗, 西南有電光, 聞如雷聲三；天監五年 (西暦506年)閏十二月丙午, 西南有雷聲二).
+
+[^(38)](#part0010_split_000.html_fn38) K. H. Wohletz, “Were the Dark Ages triggered by volcano-related climate changes in the 6th century?”, *EOS Trans Amer Geophys Union 2000*, 48 (81), F1305 ([http://deephaven.ca/were-the-dark-ages-triggered-by-volcano-related-climate-changes-in-the-6th-century/](http://deephaven.ca/were-the-dark-ages-triggered-by-volcano-related-climate-changes-in-the-6th-century/)).
+
+[^(39)](#part0010_split_000.html_fn39) 佐和隆研編「インドネシアの遺跡と美術」, 日本放送出版協会 1973 (Ryuken Sawa (Ed.), *Historical remains and art in Indonesia*, NHK Publishing 1973).
+
+[^(40)](#part0010_split_000.html_fn40) Saleh Danasasmita, *Sejarah Bogor*, Pemerintah Daerah Kotamadya DT II Bogor, 1983.
+
+[^(41)](#part0010_split_000.html_fn41) E.g. Ian W. B. Thornton, *Krakatau: The destruction and reassembly of an island ecosystem*, Harvard University Press, 1997; Simon Winchester, *Krakatoa: The Day the World Exploded: August 27, 1883*, Harper Perennial, 2005.
+
+[^(42)](#part0010_split_000.html_fn42) Directed by Bernard L. Kowalski, starring Maximilian Schell, Diane Baker et al., Distributed by Cinerama Releasing Corporation, 1969\. The location of the volcano was changed on purpose from the west to the east of Java Island.
+
+[^(43)](#part0010_split_000.html_fn43) *Nature*, 30 Oct. 1884, page 663\. Also in; Norman White, *Hopkins: A literary biography*, Oxford University Press, 1995.
+
+[^(44)](#part0010_split_000.html_fn44) Jeff Mathews, “Tennyson, Vesuvius & St. Telemachus” [http://www.naplesldm.com/tenn.html](http://www.naplesldm.com/tenn.html)
+
+[^(45)](#part0010_split_000.html_fn45) Alfred Lord Tennyson, *The Works of Alfred Lord Tennyson Poet Laureate,* Macmillan and Co., London 1894, p.840–1.
+The first eleven lines of *St. Telemachus* are as follows:
+
+*Had the fierce ashes of some fiery peak*
+
+*Been hurl’d so high they ranged about the globe?*
+
+*For day by day, thro’ many a blood-red eve,*
+
+*In that four-hundredth summer after Christ,*
+
+*The wrathful sunset glared against a cross*
+
+*Rear’d on the tumbled ruins of an old fane*
+
+*No longer sacred to the Sun, and flamed*
+
+*On one huge slope beyond, where in his cave*
+
+*The man, whose pious hand had built the cross,*
+
+*A man who never changed a word with men,*
+
+*Fasted and pray’d, Telemachus the Saint.*
+
+[^(46)](#part0010_split_000.html_fn46) Arysio Santos, *The Lost Continent Finally Found*, North Atlantic Books 2011.
+
+## Chapter 3 Appendix (1):
+
+## Hindu Calendar/Saka Calendar
+
+The Hindu Calendar, a solar calendar also called Vikram Calendar (Vikram Samvat), is said to have been created by a legendary king Vikramaditya in ancient India and the 1st year corresponds to 58–57 BC. A year begins on the vernal equinox. Each month is divided into the bright half and dark half, and the date of the latter also starts with 1 (one). The intercalary day is placed at the end of the year.
+
+The Saka Calendar, which was widely of use in Java and surrounding areas, originated from the year of arrival of Aji Saka and his party from India to Java (or the death of Aji Saka) in 78 AD.
+
+The relationship between the Hindu month and the Gregorian month is as follows.
+
+| **Hindu Month** | **Period of the Gregorian Calendar** |
+| 1\. Caitra | 22 March | — 20 April |
+| 2\. Vaisakha | 21 April | — 21 May |
+| 3\. Jyaistha | 22 May | — 21 June |
+| 4\. Asadha | 22 June | — 22 July |
+| 5\. Sravana | 23 July | — 22 August |
+| 6\. Bhadra | 23 August | — 22 September |
+| 7\. Asvina | 23 September | — 22 October |
+| 8\. Kartika | 23 October | — 21 November |
+| 9\. Agrahayama | 22 November | — 21 December |
+| 10\. Pausa | 22 December | — 20 January |
+| 11\. Magha | 21 January | — 19 February |
+| 12\. Phalguna | 20 February | — 21 March |
+
+## Chapter 3 Appendix (2):
+List of Kingdoms in West Java
+
+### **A. Sarakanagara Kingdom (Kerajaan Salakanagara)**
+
+| 1 Dewawarman I | 130 – 168 |
+| 2 Dewawarman II | 168 – 195 |
+| 3 Dewawarman III | 195 – 238 |
+| 4 Dewawarman IV | 238 – 252 |
+| 5 Dewawarman V | 252 – 276 |
+| 6 Rani Mahisasuramardini Dewawarmanputri | 276 – 289 |
+| 7 Dewawarman VI | 289 – 308 |
+| 8 Dewawarman VII | 308 – 340 |
+| 9 Khrodamaruta |          340 |
+| 10 Dewi Spatikarnawa Warmandewi | 340 – 348 |
+| 11 Dewawarman VIII | 348 – 363 |
+
+### **B. Tarumanagara Kingdom (Kerajaan Tarumanagara)**
+
+| 1 Jayasinghawarman Rajadirajaguru | 358 – 382 |
+| 2 Rajaresi Dharmayawarman | 382 – 395 |
+| 3 Purnawarman | 395 – 434 |
+| 4 Wiisnuwarman | 434 – 455 |
+| 5 Indrawarman | 455 – 515 |
+| 6 Candrawarman | 515 – 535 |
+| 7 Suryawarman | 535 – 561 |
+| 8 Kretawarman | 561 – 628 |
+| 9 Rajaresi Suddhawarman (Brother of B8) | 628 – 639 |
+| 10 Dewamurtyatma Hariwangwangsawarman | 639 – 640 |
+| 11 Nagajayawarman (Son-in-law of B10) | 640 – 666 |
+| 12 Linggawarman | 666 – 669 |
+
+### **C. Kendan/Galuh Kingdom (Kerajaan Kendan/Galuh)**
+
+| (Kendan) 1 Resiguru Manikmaya (Son-in-law of B7) | 516 – 568 |
+| 2 Suraliman Sakti | 568 – 597 |
+| 3 Kandihawan Rajaresi Dewaraja (Medangjati) (Galuh) | 597 – 612 |
+| 4 Wretikandayun (Galuh) G1 | 612 – 702 |
+| 5 Mandiminyak G2 | 702 – 709 |
+| 6 Bratasenawa (Sena) G3 | 709 – 716 |
+| 7 Purbasora (Nephew of C5) G4 | 716 – 723 |
+| 8 Sanjaya Harisdarma (Son of C6) G5 | 723 – 732 |
+| 9 Tamperan Barmawijaya G6 | 732 – 739 |
+| 10 Manarah (Grandson of C7)^* G7^(† +) | 739 – 783 |
+| 11 Manisri (Son-in-law of C10) ** | 783 – 799 |
+| 12 Tariwulan | 799 – 806 |
+| 13 Welengan | 806 – 813 |
+| 14 Linggabumi G1–G8: Kings resided at Galuh (others not sure)
+†) In the list of Karang Kamulyan Remains, Adimurya Permata Dikusmah (732), the father of Manarah, is inserted before Manarah (*See* [Chapter 4](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8))
+*) Alias: Ciung Wanara
+**) Alias: Dharmasakti, Lutung Kasarung | 813 – 852 |
+
+### **D. Sunda Kingdom (Kerajaan Sunda)**
+
+| 1 Maharaja tarusbawa (Son-in-law of B12) | 669 – 723 |
+| 2 Sanjaya Harisdarma (Grandson-in-law of D1=C8) | 723 – 732 |
+| 3 Tamperan Barmawijaya (C9) | 732 – 739 |
+| 4 Rakeyan Banga | 739 – 766 |
+| 5 Rakeyan Medang Prabu Hulukujang | 766 – 783 |
+| 6 Prabu Gilingwesi Rakeyan ujung Kulon (Son-in-law of D5) | 783 – 795 |
+| 7 Pucukbumi Darmeswara (Son-in-law of D6) | 795 – 819 |
+| 8 Prabu Gajah Kulon Rakeyan Wuwus | 819 – 891 |
+| 9 Prabu Darmaraksa (Brother-in-law of D8) | 891 – 895 |
+| 10 Vvindusakti Prabu Dewageng | 895 – 913 |
+| 11 Rakeyan Kamuning Gading Prabu Pucukwesi | 913 – 916 |
+| 12 Rakeyan Jayagiri Prabu Wanayasa (Son-in-law of D11) | 916 – 942 |
+| 13 Prabu Resi Atmayadarma Hariwangsa | 942 – 954 |
+| 14 Prabu Limbur Kancana (Son of D11) | 954 – 964 |
+| 15 Prabu Munding Ganawirya | 964 – 973 |
+| 16 Prabu Jayagiri Rakeyan Wulung Gadung | 973 – 989 |
+| 17 Prabu Brajawisesa | 989 – 1012 |
+| 18 Prabu Dewa Sanghyang | 1012 – 1019 |
+| 19 Prabu Sanghyang Ageng (Situ Sanghyang s.m.) | 1019 – 1030 |
+| 20 Prabu Detyamaharaja Sri Jayabupati | 1030 – 1042 |
+| 21 Prabu Darmaraja (Winduraja s.m.) | 1042 – 1065 |
+| 22 Prabu Langlangbumi (Kerta s.m.) | 1065 – 1155 |
+| 23 Rakeyan Jayagiri Prabu Menakluhur | 1155 – 1157 |
+| 24 Prabu Darmakusuma (Winduraja s.m.) | 1157 – 1175 |
+| 25 Prabu Guru Darmasiksa | 1175 – 1297 |
+| 26 Rakeyan Saunggalah Prabu Ragasuci (Taman s.m.) | 1297 – 1303 |
+| 27 Prabu Citraganda (Tanjung s.m.) | 1303 – 1311 |
+| 28 Prabu Linggadewata (kikis s.m.) | 1311 – 1333 |
+
+### **E. Kawali Kingdom (Kerajaan Kawali/Galuh)**
+
+| 1 Ajiguna Linggawisesa (Kiding s.m.=Son-in-law of D28) | 1333 – 1340 |
+| 2 Prabu Ragamulya Sang Aki Kolot | 1340 – 1350 |
+| 3 Maharaja Linggabuwana (Bubat s.m.) | 1350 – 1357 |
+| 4 Bunisora Suradipati (Brother of E3) | 1357 – 1371 |
+| 5 Wastu Kancana (Son of E3) | 1371 – 1475 |
+| 6 a. Dewaniskala (Kawali) b. Susuktunggal (Pakuan) | 1475 – 1482 1482 – 1482 |
+
+### **F. Pajajaran Kingdom (Kerajaan Pejajaran)**
+
+| 1 Sri Baduga Maharaja (Son of E6a=Son-in-law of E6b)(Prabu Siliwangi in Pindahnya Ratu Pajajaran) | 1482 – 1521 |
+| 2 Prabu Surawisesa (Ratu Sangiang) | 1521 – 1535 |
+| 3 Ratu Dewata | 1535 – 1543 |
+| 4 Ratu Sakti | 1543 – 1551 |
+| 5 Nilakendra Tohaan di Majaya | 1551 – 1567 |
+| 6 Ragamulya Suryakancana (moved to Pulasari) 1567 | 1551 – 1579 |
+
+Notes:
+
+| **A:** | From Agus Aris Munandar, Edi Suhardi Ekajati, *Pustaka pararatwan i bhumi Jawadwipa, parwa 1, sargah 1-4*, Yayasan Pembangunan Jawa Barat, Jakarta 1991(Google Books). |
+| **B**–**F**: | From Saleh Danasasmita, *Sejarah Bogor*, Pemerintah Daerah Kotamadya DT II Bogor, 1983 |
+| s.m.: | The place of death or interment |
+
+**Chapter 4**
+
+Pajajaran Kingdom – The Spiritual Home of Sundanese People
+
+### Batu Tulis, a precious stone monument
+
+On the hill of Batu Tulis overlooking Cisadane (Sadane River), two kilometres south of the present city centre of Bogor, is found an old relic called “Prasasti Batu Tulis”, or “Batu Tulis” for short, which is different from those stone monuments of Tarumanagara. As “batu” and “tulis” mean “stone” and “writing”, respectively, in the local language, “Batu Tulis” denotes a stone inscription, giving its own name to the surrounding area.
+
+![Illustration](images/00073.jpeg)
+
+*A shelter at Batoe Toelees containing an inscribed slab by* Jacobus Flikkenschild 1812.
+British Museum: Number 1939,0311,0.5.37\. Reproduced by permission of the Museum. Flikkenschild graduated from the naval school of Semarang, became an assistant of the famous draftsman, H. C. Cornelius, and came to Buitenzorg by order of Stamford Raffles, the then Lieutenant Governor of Java (Leo Haks, Guus Maris, *Lexicon of Foreign Artists Who Visualized Indonesia [1600*–*1950]*, Archipelago Press, Singapore 2000).
+
+The existence of this monument had long been known also to Europeans and, according to a paper of a famous palaeographer, Dr. Poerbatijaraka[¹](#part0011_split_001.html_fn_1), it was reported already in 1690 by a patrol of VOC (the Dutch United East India Company), but it was only after the late 19th century that archaeological research started[²](#part0011_split_001.html_fn_2). The monument consisted of four pieces of stone placed in a 17×15 metre plot, and on the largest one in the middle was inscribed a nine-line note in Sunda-Kuno characters, with the following meaning:
+
+*May we be saved! This is the memorial of the late king. He was crowned with the title of Prabu Guru Dewataprana, and was crowned [again] with the title of Sri Baduga Maharaja, His Majesty the Ratu Dewata, as the controller in Pakuan Pajajaran. He was the one that built the [defensive] moat of Pakuan, He is the son of Rahyang Niskala who had been interred at Gunatiga, and the grandson of Rahyang Niskala Wastu Kancana who had been interred at Nusa Larang. It was he who made it possible for vehicles to pass mountains, who built the mansion, who made Samida forest, made the holy Talaga Rena Mahawijaya Lake. Yes, he was the person [who accomplished all of them]. [The year of] five-five-four-one Saka [1455][³](#part0011_split_001.html_fn_3)*.
+
+According to *Carita Parahiyangan[⁴](#part0011_split_001.html_fn_4)*, which was written at the end of the 16th century in Cirebon, Sri Baduga Maharaja was a great king who established the Pajajaran Kingdom and ruled the whole area of West Java with its capital at Pakuan (the present-day Bogor) for such a long period as 1482–1521[⁵](#part0011_split_001.html_fn_5). Before writing about the kingdom itself, which existed for almost a century until the capital fell to the hand of Moslems in 1579, let us briefly review the history of West Java.
+
+![Illustration](images/00074.jpeg)
+
+The Batu Tulis stone monument
+Photographed with permission of the caretaker by M. Iguchi, September 2006.
+
+### **Brief review of West Java’s history**
+
+According to *Pustaka rajya rajya i bhumi Nusantara* (*The Book of Kings in the land of Archipelago*), compiled in the late 17th century[⁶](#part0011_split_001.html_fn_6), the first kingdom that ever existed in West Java was Salakanagara, which rose in the 2nd century. Tarumanagara founded in 358 AD by Jayasinghawarman was most prosperous during the reign of the 3rd king, Purnawarman (395–434 AD), as inferred from several pieces of contemporary stone monuments, which remain to date. Although the seat of the king was supposedly located around the present-day Bogor where several stone monuments were found[⁷](#part0011_split_001.html_fn_7), he is said to have built a new city, “Sundapura”, near the coast for the convenience of trade, soon after his coronation in 397\. This is the first appearance of the word “Sunda”, in the literature, with which the land and the people in this area are called Tanah Sunda (the Land of Sunda) and Orang Sunda (Sundanese People). The term was also applied for the Strait of Sunda (between Java and Sumatra Islands) and the Sunda Islands (archipelago from Sumatra eastward).
+
+During the reign of Purnawarman, the territory of the kingdom ranged from Rajatapura (the bank of Ciujung) to the west and Purwalingga (the present-day Purbolinggo) or Cipamali (Breves River) in Central Java to the east, with forty-eight vassal kingdoms. In 526 AD, Manikmaya, a son-in-law of the 7th king, Suryawarman, erected a small new kingdom at Kendan near the present-day Cicalengka, east of Bandung, and in 612 AD, Wretikandayun, a great-grandson of Manikmaya moved the capital further east to Galuh, near the present-day Ciamis (the royal line continued up to 852 AD). For Kendan-Galuh kingdom, it ought to be noted that the 8th king, Sanjaya Harisdarma, is alleged to have moved to Central Java in 716 AD to become the founder of the Sanjaya Kingdom, also referred to as Mataram.
+
+Tarumanagara itself was weakened in the middle of the 7th century, attacked by the strong Sriwijaya Kingdom in Sumatra. In 669 AD, the 12th King Linggawarman devolved the property of the kingdom to his son-in-law, Linggawarman, who founded the Sunda Kingdom and ruled the area.
+
+The regal power of the Galuh Kingdom, which occupied the area to the east of Citarum River, was taken over by the Sunda Kingdom in the middle of the 9th century when a princess of the former married Rakeyan Wuwus (or Prabu Gajah Kulon) of the latter, but the princess’s brother succeeded the throne under the name of Prabu Damaraksa Buana and became the 9th king of Sunda. During the following 300 years, the seat of the king was frequently moved from the west to the east, or *vice versa*. It is said that it was during this period that the different customs of the two regional, or sub-ethnic groups, merged[⁸](#part0011_split_001.html_fn_8).
+
+In 1333 AD, Linggawisesa, a son-in-law of the 26th Sundanese king, Linggadewata, founded a new kingdom in Kawali, not far from Galuh in the eastern part of West Java. After then, the kings of Kawali concurrently held the kingship of Sunda for over one century, as the latter was inferior, until 1482 when, as mentioned above, Ratu Jayadewata of Kawali unified the two kingdoms and founded the Pajajaran Kingdom under the name of Sri Baduga Maharaja with its capital at Pakuan.
+
+![Illustration](images/00075.jpeg)
+
+The chronology of kingdoms in West Java (Data from: Saleh Danasasmita , *Sejarah Bogor,* Pemerintah Daerah Kotamadya DT II Bogor, 1983)
+
+![Illustration](images/00076.jpeg)
+
+West Java of Sunda/Pajajaran Era
+(Prepared based on Atlas Indonesia dan Dunia, PT Punbina, Jakarta 1985).
+
+Although documents that describe the situation of Sunda are rare, an account is found in *Zhu fan zhi* (諸蕃志, *Accounts of Various Barbarians*) compiled by Zhao Rugua in 1225 in the South Sung Period China:
+
+In Sunda, there is a harbor of sixty feet depth to which ships frequent. On both sides are houses, of people who work for farming, built on piles with wood, roofed with palm leaves and floored with wood board and walled with bamboo panel. Both man and woman are naked, wrapping a cloth around their waist and cutting their hair in a half-inch. In mountains, they produce pepper which is better than that in Tuban. In the land, they grow white gourds, sugar cane, gourds and aubergines. No just officials are there, robbers are rampant, so that foreign merchants rarely come.[⁹](#part0011_split_001.html_fn_9)
+
+In this translation, a Chinese word, 籐篾, which may literally mean a rattan strip, has been interpreted as a bamboo panel, which is still used today for walls of traditional houses in Java and neighbouring islands as a material with good breathability, making a room quite comfortable in the hot, tropical climate (*See* the ikat weaver’s picture in [Chapter 2](#part0009_split_000.html_8IL20-eace0453ad444634b688454ed62f4eb8)). The meaning of the Chinese word, 正官, was not sure, but was interpreted as “just officials”. Since the early 13th century was the time when the Sunda Kingdom was weakened, it would not be unreasonable to assume that the country was not well administrated.
+
+### **Samida Forest and Lake Talaga written on Batu Tulis**
+
+Back to the Batu Tulis stone monument. The description that Sri Baduga was crowned twice means that he was, firstly, enthroned in Kawali and secondly, ascended the throne in Pajajaran. His achievements, such that he constructed the roads to mountains, the mansion, Samida Forest and Talaga Rena Lake, were written also on Prasasti Kebantenan, a copper plate, discovered in Bukasi to the east of Jakarta.
+
+Among them, Samida Forest is generally considered to have been the area of the present-day Bogor Botanical Garden, although one theory prefers to locate it at the area where the High-Altitude Botanical Garden exists, at Cibodas, beyond the Puncak Pass, seventy-five kilometres east-southeast from Bogor[^(10)](#part0011_split_001.html_fn_10).
+
+The lake of Talaga Warna Mahawijaya is no doubt Telaga Warna (Talaga=Sundanese; Telaga=Modern Indonesian), which exists in the Nature Reserve on the south col of Mt. Gede just before Puncak Pass, seventy kilometres to the south-south-east from Bogor.
+
+I visited the lake once when I lived in Bogor accompanying a bird-watcher couple from Malaysia, but went there again recently after learning about its history. The lake, one of the sources of Ciliwung, which runs via Bogor to the Bay of Jakarta, was oval shaped, measuring 120 metres east–west and 60 metres north– south, and matched with nature as the heavy vegetation of the surrounding rainforest reflected on the water surface and chirps of birds echoed, causing me to forget the fact that it was an artificial dam constructed five hundred years ago by Sri Baduga Maharaja. According to a local gentleman, such fish as minnow, carp and ikan-mas, the largest fish being as big as one armful, lived in the water, of reportedly fifteen-metre depth at the innermost point, which was turbid with soil and plankton at the time of my visit, because it was the rainy season. To my question, he answered that the water was too cold for gurame, a famous fish in Sundanese cuisine. Although a tradition has it that a wish would be realised if one saw a pair of guardian fish, which lived there since ancient time, jump above the water surface, I had no chance.
+
+Telaga Warna was a place where the legendary Bujangga Manik, a prince of Pakuan who became an ascetic monk, determined his mind to continue his practices during his second journey. In *The story of Bujangga Manik*[^(11)](#part0011_split_001.html_fn_11), a long poem written in the 15th–16th centuries, he said, “Then I came to Mt. Ageung [Mt. Gede], that is the source of Ci-Haliwung, the sanctuary of Pakuan, the sacred lake Talaga Warna: Ah, what is my fate! I shall not be able to go straight on to visit my mother and father [in Pakuan], but visit the place of my teachers [in Java]!…”
+
+It was in daytime with bright sunshine that I visited the lake twice, but a sacred atmosphere would have been there if it was dawn or dusk.
+
+![Illustration](images/00077.jpeg)
+
+The lake of Telaga Warna.
+Photographed by M. Iguchi, February 2012.
+
+The year 1455 Saka (1533 AD) inscribed on the Batu Tulis was during the reign of Surawisesa, the 2nd king of Pajajaran (1521–35 AD). Although he was a king praised in *Carita Parahiyangan* as a great ruler, warrior and hero who won fifteen battles in fourteen years, it was only several years after his succession that some coastal areas of his territory were encroached on by Moslems who developed from Central Java. In such a vulnerable situation, he is supposed to have erected this monument to commemorate his great father.
+
+### **Siliwangi legends**
+
+Sri Baduga Maharaja appears in traditional tales as Prabu Siliwangi, the nickname that is more familiar among Sundanese people. Due to the fact that the traditions were the kind that used to be orally narrated in poetic phrases, called Pantun Sunda, and dictated only in the modern age, different versions of short and long length are known today even for one title. Among them, *Cariosan Prabu Siliwangi (The Story of King Siliwangi)* was a tale in which his early life is told. Let us follow the story in a book, *Khazanah Pantun Sunda (Treasure of Pantun Sunda)*[^(12)](#part0011_split_001.html_fn_12), which, as far as I have encountered, is the most comprehensive one.
+
+“Pamanahrasa born of Prabu Anggalarang and Queen Umadewi of Pajajaran grew up to be an elegant and smart boy. When he was nine years of age, Parbamenak, his fifteen-year-old half-brother from one of the king’s concubines, had conspired to murder him from envy of Pamanahrasa’s legal right of succession. He invited Pamanahrasa to Sipatahunan River, lying that he would help Pamanahrasa with testing the latter’s ability to be the future king. The first task was to cross the river that three white crocodiles inhabited, but Pamanahrasa was able to safely reach the opposite side, as the three savage animals somehow fought and killed each other. The second task was to climb up the Sanghiang Kekeumbingan by hauling a vine by arm power. When it was achieved, Parbamenak blamed Pamanahrasa that it was a serious sin to have set foot on top of the peak, which was a sacred worship place. Having been sentenced to be a slave, the whole body of Pamanahrasa was painted black with a compound of soot and sap and his name was changed to Siliwangi, to conceal his identity, before he was sold at a port to a nakoda [captain].
+
+“In Sindangkasih [near the present-day Purwakarta], Dewi Ambetkasih, the daughter of Ki Gedhe Sindangkasih [the first younger brother of Prabu Wangi of Sumedanglarang], had a dream one night in which a black, ugly slave appeared, accompanied by a young man, and said to Ambetkasih that he would serve her as her younger brother, if she would buy him. While she hoped the dream would come true, one day her maid brought news that a nakoda from Palembang named Minadi was wishing to sell his slave to pay for repairing his damaged boat. Ambetkasih had lost no time to speak to her parents and took the black slaves in her custody in exchange for some teak wood and a small junk. After then, there was an incident that the garden of Ki Gedhe’s palace was often damaged. Siliwangi was suspected and created a problem for Ambetkasih.
+
+“Meanwhile, three chamberlains of Siliwangi, i.e. Parwakalih, Gelap Nyawang and Kidang Pananjung, who had been in search of their master for five years, received an instruction from a hermit at Meru Kidul and came down towards Riwahan and reached Kampung Kategan to stay in disguise at Kuwu Kawanda’s house. The village became prosperous thanks to the farming skill of the guests. One day when Kuwu delivered fruits and vegetables to Ki Gedhe, his wife was much delighted with the quality of the crops and invited the three visitors to let them repair the damaged palace garden. They instantaneously recognised that the black slave they saw was their master, but kept it secret at that moment. Next day, when Ki Gedhe, his wife and the daughter went to see the restored garden, Siliwangi was also there. To Ambetkasih, who worried whether the garden would not be damaged again, the visitors told her to shower water on the slave’s body, as a boy with a skin disease was usually afraid of being made wet. No sooner water was poured than the ugly boy turned into a handsome young man to the surprise of the watchers. Ambetkasih gladly hugged Siliwangi and asked him to become her younger brother. At first, Siliwangi was hesitant, but eventually agreed, having been urged by Ki Gedhe. When the couple were dressed and decorated in royal costume, they looked like Kamajaya and Rati [the Hindu God and Goddess of Love].”
+
+Above is the first half of the story. The last line apparently depicted the scene of their wedding, as it was mentioned in another Siliwangi tale, *Ceritera Prabu Anggalarang* (*The story of Prabu Anggalarang*), that the couple did marry and became the king and queen of Sumedanglarang and then of Pakuan[^(13)](#part0011_split_001.html_fn_13).
+
+The second half of the story begins with the scene in Singapura[^(14)](#part0011_split_001.html_fn_14) where Prabu Singapura was upset as her beautiful daughter, Ratuna Larangtapa, received marriage proposals from kings of eighteen countries and asked the advice of Ki Gedhe Sindangkasih, his second eldest brother. Then, Ambetkasih was despatched to Singapura on behalf of Ki Gedhe, accompanied by Siliwangi, to solve the problem. Leaving aside the details, which are rather complicated and verbose, Siliwangi, who had proposed to select the bridegroom by a cockfight and intended to be the referee, was inevitably entangled in the game and eventually obtained Princess Larangtapa by beating rivals. Many other princesses who gathered there and were admiring Siliwangi unanimously became his concubines.
+
+Although Sri Baduga was no doubt the model of Siliwangi, the setting of the scene and the origins of characters are significantly modified in *Cariosan Prabu Siliwangi*. For instance, (1) in the tale, a kingdom called Pajajaran had already existed and Siliwangi (Panamahrasa) was born there as a prince, whereas the real Pajajaran Kingdom was founded in a later time by Sri Baduga himself; (2) Pajajaran Kingdom was implicitly written as if it had existed within the territory of Sumedanglarang, with no indication of its capital’s location; (3) the name of the father of Siliwangi in the tale, Prabu Anggalarang, was the alternative name of the 5th king of Kawali, Wastu Kencana, in the chronicle; (4) Prabu Wangi, the name of the king of Sumedanglarang is generally the honorific name of Maharaja Linggabuwana, the 3rd king of Kawali, who was killed in Majapahit[^(15)](#part0011_split_001.html_fn_15), etc.
+
+In *Cariosan Prabu Siliwangi*, it is also noteworthy that Princess Subanglarang, the daughter of Patih Mangkbumi, or the youngest brother of Prabu Wangi, who became the second queen of Sri Baduga appeared just as a minor character, and that Princess Kentring Manik Mayang, the daughter of Prabu Susuktunggal of Sunda Kingdom, whose future marriage with Siliwangi as the third queen was to realise the unification of Kawali and Sunda Kingdoms to found Pajajaran, was not included at all.
+
+This story was allegedly written in Sumedang around the turn of the century from the 17th to the 18th when the Pajajaran Kingdom with its capital at Pakuan had already ceased to exist, and Banten in the coastal area on the west part of the Java Sea, the Kingdom of Mataram arisen in Central Java and VOC (the United Dutch East Indies Company) at Batavia were struggling for supremacy. Although Sumedanglarang had managed to maintain its existence, its status as a country was in jeopardy. It was commented by the author of *Khazanah pantun Sunda* that, in such circumstances, the court of Sumedanglarang would have preferred to imagine Sumedang as the centre of the glorious Pajajaran Kingdom.
+
+The moving of Ambetkasih to Pakuan from the old capital together with her fellow consorts of Siliwangi is written in *Carita Ratu Pakuan* [^(16)](#part0011_split_001.html_fn_16), in which the procession of palanquins, decorated with gold and jewellery and topped with an ivory ball, started at the shining palace of the east, being led and followed by bands, chorusing, “Let’s go to Pakuan!”, as if the procession were waving in the air like a dragon.
+
+### **The Story of Mundinglaya Di Kusumah**
+
+An episode of Siliwangi after his coronation was told in *Mundinglaya Di Kusumah*. One of many versions is narrated[^(17)](#part0011_split_001.html_fn_17) as follows:
+
+“The story begins with the scene in which one of the two queens of Prabu Siliwangi of Pajajaran, Padmawati, wished to eat a sour fruit, honje, when she was expecting a baby. Since no ripened honje was found in the country, a confidant of the king went around forests and reached Muara Beres where the confidant of the latter country was picking up the same fruit. The request of the former to hand them over was rejected, because the queen of Muara Beres, Gambir Wangi, was also pregnant. After quarrelling for a while, they realised that the two kingdoms had descended from a common origin and agreed to equally share the eight pieces of the fruits in such a condition that if the two expected babies were of different sex, they should be engaged. After the full term, Padmawati of Pajajaran gave birth to a boy, named Mundinglaya Di Kusumah, and Gambir Wangi of Muara Beres, a girl, named Dewi Asri.
+
+“It was when Mundinglaya Di Kusumah grew up to be a handsome and smart young man that he was insistently slandered, as if he had misbehaved with a young court lady, by another queen of Siliwangi, Nyi Raden Mantri, whose son, Guru Gantangan, was much older and was already the governor of Kutabarang district. Without much investigation, Mundinglaya was jailed. This caused some turmoil in the kingdom.
+
+“One night, Padmawati saw in a dream a beautiful kite with twenty-five golden tails that was brought almost within her reach by some invisible being. When the king summoned scholars and elders and told of his wife’s dream, a famous astrologer explained that the kite was called Salaka Domas which symbolised welfare and happiness, and that a person who obtained it would ensure the prosperity of the kingdom with eternal life. He added that the kite existing in the heaven was guarded by seven heavenly beings called Guriang Tujuh. The king called his one hundred and fifty sons, but nobody was willing to go on the dangerous journey to get the kite. Then, Padmawati remembered her son in the gaol. When her thought was delivered to Mundinglaya by two chamberlains, Gelap Nyawang and Kidang Pananjung, who both had long served him, he who had enhanced his mental culture even while in prison said that he was very eager to undertake the mission. When he was released for his expedition, Prabu Siliwangi gave him a keris called Tulang Tonggong, a treasure sword of Pajajaran.
+
+“Mundinglaya departed for the heaven accompanied by the two chamberlains. First, they went by boat to the north to Pulau Puteri, a small island in Java Sea, to worm the secret route to the heaven and to obtain magical power from Jonggrang Kalapetong, a giant who lived there, and finally attained the aim by beating the giant. Mundinglaya Di Kusumah flew to the sky and, as expected, encountered Guriang Tujuh. When he was strangled to death and became free from both mental and physical restraints, Goddess Wiru Mananggay, the late grandmother of Mundinglaya, descended and breathed life into the body to revive him as a perfect man qualified to hold Salaka Domas. He returned to the earth, accompanied by Guriang Tujuh who had become his retainers.
+
+“In Muara Beres, his fiancée, Dewi Asri, was in danger, being proposed marriage by Sunten Jaya, the step-son of Guru Gantangan, but Mundinglaya was able to rescue her with the help of Jonggrang Kalapetong whom he had subdued before. In Pajajaran, Mundinglaya Di Kusumah produced Salaka Domas to Prabu Siliwangi and married Dewi Asri. Thus, peace was restored in Pajajaran.”
+
+The details of the story are significantly different between versions. As to the reason of Mundinglaya’s imprisonment, it is told, for instance, in one version, that “While Guru Gantangan and his wife, Nyai Mas Ratna Inten, were fostering Mundinglaya by request, the wife was so much absorbed in Mundinglaya Di Kusumah and forgot about her husband that the husband became angry”[^(18)](#part0011_split_001.html_fn_18), and in another version that “Sunten Jaya, the step-son of Guru Gantangan and Nyai Mas Ratna, became envious of Mundinglaya Di Kusumah as his step-parents doted on the latter”[^(19)](#part0011_split_001.html_fn_19), and so on. Mundinglaya Di Kusumah is considered to have been modelled after Surawisesa, the 2nd king of Pajajaran[^(20)](#part0011_split_001.html_fn_20). The fact that such an episode was written in Pantun Sunda suggests that some dispute about the succession of throne existed in the court even after the inauguration of Siliwangi, or Sri Baduga Maharaja.
+
+### **Pajajaran Kingdom recorded in European books**
+
+The situation of the Pajajaran Kingdom was also documented to some extent by Europeans. The era of Sri Baduga Maharaja’s reign was already in the Age of Exploration (for Europeans), which had started in Asia by the arrival of Vasco da Gama at India in 1498, and it was the so-called Portuguese Era. Tome Pires, an adventurous young man who had abandoned his position in Lisbon as a pharmacist for Prince Alfonso and who was later to become the first ambassador to Ming of China, came to India in 1511, the year of the Portuguese acquisition of Malacca. The next year, he visited Java and other islands in the East Indies on board a vessel despatched by the Commander of Malacca, Rui de Brito, and authored a book.[^(21)](#part0011_split_001.html_fn_21)
+
+Whether Tome Pires himself had set his foot on Java was not certain to us; he wrote about the capital of Sunda as, “The city where the king stays most of the year is the great city of Dayo [dayeuh, town or city in Sundanese]. The city has well-built houses made of palm leaves and wood. They say that the king’s palace has three hundred and thirty wooden pillars which are as thick as a wine cask and five fathoms high [1 fathom =1.8288 m], and on top of the pillars are beautiful wooden frameworks. The city is located at the distance of two-day journey from the chief port which is called Calapa. The king is a great sportsman and hunter. In his country are numerous deer, pigs and bullocks. They do this [hunting] any time. The king has two chief wives[^(22)](#part0011_split_001.html_fn_22) and one thousand concubines. The people of Sunda are said to be truthful… Calapa is a magnificent port. It is the most important and best of all.” Calapa, which meant Sunda Kelapa (to be renamed in later years as Jayakarta, Batavia and Jakarta), was directly linked to the capital, Pakuan, by Ciliwung River.
+
+As other seaports, Pires listed up Bantam (the present Banten Lama), Pontang (at the estuary of Ciujung), Tangeran (now inland), Sumano (the present-day Indramayu at the estuary of Cimanuk?) and some others. As major exporting goods, he recorded 1,000 barrels of good-quality pepper, 1,000 boat-fuls of tamarind, 10 junk-fuls of rice, enormous amounts of vegetables, fruits and meat, as well as male and female slaves from their own country and from the Maldive Islands, and, as imported goods, high-quality fabrics and perfumes from India, indicating the prosperous situation of the country. Pires also mentioned that the Pajajaran Kingdom embraced Hinduism and the custom of suttee, the suicide of a wife at the death of her husband, was commonly practised.
+
+A contemporary historian and official, Joan de Barros [^(23)](#part0011_split_001.html_fn_23), who also left a voluminous work, estimated that the total population of Sunda was about 100,000, that of each town, some ten thousands.
+
+After the Prophet Muhammad initiated Islam in 622 AD, the Moslems, who first advanced westward to North Africa and Balkan and finally occupied Granada in the Iberian Peninsula in 711 AD, expanded also eastward and founded their own country in India before the end of the 10th century (Ghaznavid dynasty 955–1187). Although the Moslems who came to the East Indies were not soldiers but seafarer merchants, they settled at Malacca and other port towns and spread their religion. Marco Polo who dropped in at Sumatra in the late 13th century on his way back from China (1292?) wrote in his travelogue[^(24)](#part0011_split_001.html_fn_24) that the most part of Java Minor (i.e. Sumatra Island) was already Islamised, while, according to the hearsay of seafarers, the people of Java Major (i.e. Java Island) were idolaters. In fact, it was just around the time when two strong Hindu kingdoms, Kawali in the west and Majapahit in the east, founded in 1333 and 1293, respectively, existed in Java. In the 15th century, however, Islam began to prevail in the coastal area of Central and East Java and the first Islamic kingdom, founded in Demak in 1475, conquered the capital of Majapahit three years later.
+
+Joan de Barros wrote in 1514, “The Islamic merchants who came from Malacca to settle in Java turned to be conquerors and occupied seaport towns along the [north] coast of the island, so that the heathens [Hindu] became unable to sail. By the attack of Islam, the latter retreated to the inland at the foot of the mountain range which lay east to west in the middle of the island.”[^(25)](#part0011_split_001.html_fn_25)
+
+### **The invasion of Moslems**
+
+The influence of Islam extended to West Java already during the reign of Sri Baduga Maharaja. The description in *Carita Parahiyangan* that “as long as the teaching of our ancestor is upheld, no enemies, neither soldiers nor mental illness, will come. Happy prosperity prevails in the north, the west and the east. Those who do not feel the prosperity of household are greedy people who learn [foreign] religion” suggests that many populations in the kingdom’s territory were already inclined to Islam. The second queen of Sri Baduga Maharaja, Nyai Subanglarang was, in fact, a Moslem who attended an Islamic school in Karawan[^(26)](#part0011_split_001.html_fn_26). Although one of her sons, Walangsungsang, who became the sultan of Cirebon still had respected his father, his son, Syarif Hidayat, declared independence from Pajajaran by allying with Demak in 1482. Angered by this, Sri Baduga attacked Cirebon but was stopped by the Cirebon–Demak allied army. Although Pajajaran had one thousand men and forty war-elephants, they had only six 150-ton class junks in the sea, which were not compatible with the strong navy despatched from Demak.[^(27)](#part0011_split_001.html_fn_27)
+
+With respect to the relation between the king of Pajajaran and Moslems, there is a tradition which tells[^(28)](#part0011_split_001.html_fn_28):
+
+“The kingdom of Pajajaran was ruled by its glorious king, Prabu Siliwangi. Prabu Siliwangi had a son named Kian Santang, a man with great mystical powers. One day, Kian Santang walked on the water to Mecca and was converted to Islam. He returned to Java, assuming the name of Wali Sunan Rahmat. There he attempted to convert Prabu Siliwangi to Islam, but the latter and some of his courtiers rejected the new religion. A confrontation ensued and the king and his court fled into the Sancang forest on the south coast of Java Island, having been pursued by Kian Santang. To avoid a battle with his son, Prabu Siliwangi disappeared and turned himself into a white tiger while all his followers became Sancang tigers. They spread all over the forest and are today considered as an omen of good luck by local fishermen. In his tigrine form Prabu Siliwangi, who is said to still inhabit the area of his old court at Pakuan near Bogor, continues to watch over his descendants and the Sundanese generally.”[^(29)](#part0011_split_001.html_fn_29)
+
+In this connection, the famous Siliwangi Division of the Indonesian Army has been named after Prabu Siliwangi and in front of their garrison in Bandung is placed a statue of a white tiger as their symbol. The emblem of Persib Bandung (*lit.* Bandung United), a strong football team in Indonesia, has a head of a tiger and their home ground is called Lapangan Siliwangi (Siliwangi Field).
+
+In his travelogue[^(30)](#part0011_split_001.html_fn_30) of 1512, mentioned above, Tome Pires wrote that Cirebon had been a town of the heathens (Hindu) until forty years ago and he put it in the paragraph of Java, not in that of Sunda. As he also wrote, in order to prevent the further expansion of Moslems, Sri Baduga Maharaja despatched his son, Surawisesa, twice in 1512 and 1521, to Malacca to link up with the Portuguese and signed a friendship treaty on 21st August 1522 giving permission for the Portuguese to construct forts at Bantam (the present-day Banten Lama) and Sunda Kelapa. The document of the treaty remains to date in Portugal, while in Java the stone monument (called *Padrao* in Portuguese), which had been erected to commemorate the treaty, was accidentally found in Jakarta in 1918 and stored in the National Museum.
+
+![Illustration](images/00078.jpeg)
+
+The monument of Pajajaran–Portuguese Treaty (genuine).
+Indonesia National Museum.
+Photographed with permission by M. Iguchi, February 2012.
+
+Since the hegemony of the Portuguese in the west part of the Java Sea was harmful for the trading of the Moslems in central Java, they gave an order to the commander of Cirebon, Fatahillah (alias Faletehan) to attack those ports, prior to the completion of Portuguese forts, and captured Sunda Kelapa in 1527, after suppressing Bantam in the previous year. The Portuguese visited there three days later on three ships without knowing that event had occurred. They were expelled and fled losing one of the ships. In 1529, they attempted to regain Sunda Kelapa by sending a fleet of eight military ships in vain and could not make contact with Pajajaran after then[^(31)](#part0011_split_001.html_fn_31). Although a peace agreement was signed between Pajajaran and Cirebon in 1531, the landlocked Pajajaran was weakened and their capital, Pakuan, finally fell in 1579.
+
+A half-century later, Jan Huygen van Linschoten[^(32)](#part0011_split_001.html_fn_32), a Dutchman who sailed to Asia on a Portuguese ship and whose book became useful for the Dutch expedition to Asia, wrote that the most important port of Sunda was “Sunda Kelapa” and that there were abundant high-quality peppers, frankincense, benzoin and nutmeg in the land of Sunda, despite the port town had been renamed by Fatahillah on 22nd June 1527 as “Jayakarta” (*lit.* Big victory), which corrupted as *Jaccatra* in Europe and *Jagatara* in Japan. In the 1600s, Jayakarta became the field of a power struggle between the Dutch and the English, but the former established the supremacy in 1619 and renamed it Batavia, after the Latin word, *Bataaf*, for Hollanders. The presence of the Dutch was solidified when they rejected the attacks of Sultan Agung of Mataram in 1628 and 1629.
+
+### **Exploration of the old capital of Pajajaran by Dutch people**
+
+One half-century later in 1687, an expedition team of VOC headed by Pieter Scipio van Ostende went south from Batavia and passed a place that was supposed to have been Pakuan, the old capital of Pajajaran, in the ravine to the west of Mt. Salak and to the east of Mt. Gede, before they reached the bay of Muara Ratu on the southern coast of Java Island for the first time as foreigners. Van Ostende reported that “the road from Parung Angsana to Cipaku[^(33)](#part0011_split_001.html_fn_33) was wide and macadamised, and durian trees were lined on the both sides. At the end of the road was a moat, and beyond the moat was a gate. In the front was a ruined stone masonry, but expedition members were not allowed to go inside the palace, because they were non-Moslems. The area was guarded by tigers. Inhabitants were sparse around there. They still respected the former king, Prabu Siliwangi, etc.” This record indicates that the former capital with an estimated fifty-thousand population was in the state of a ghost town, one century after the fall of the kingdom. It is interesting if tigers were tamed as watchdogs, but it is written in Prof. Danasasmita’s book that the tigers were probably wild ones that dwelled there[^(34)](#part0011_split_001.html_fn_34). Otherwise, were they the transformations of Siliwangi and his followers as told in the legend?
+
+Van Ostende also wrote that he was told that the custodian was a noble. He was supposedly not the descendant of Pajajaran but a dignitary from Banten whoconquered there.
+
+Three years later, VOC sent another expedition led by Captain Adolf Winker. The most important fact written in their survey report was that they entered within the wall of the castle and saw a stone monument, on which eight and a half line letters were inscribed. The stone that Winker saw must be nothing but the existing Batu Tulis, the last half-line being four words to denote the date. He also recorded that he saw three stone figures in the neighbourhood of the monument.
+
+In 1703 and 1704, a high official of VOC, Abraham van Riebeeck (a son of Joan, the founder of Cape Town), himself went to survey Pakuan. In 1709 again, after he became the governor-general, he dropped in at the same place on his journey to the east to Cianjur across the Gede mountain mass. He was alleged to have been so taken by Pakuan that in 1704 he built a cottage that he called “Batu tulis”, near the stone monument, which was to be adopted as the names of the stone monument and the area.
+
+![Illustration](images/00079.jpeg)
+
+Bogor map (Prepared on Kota Bogor, C. V. Pradika, Jakarta 1995).
+The outline of Pakuan city wall, from S. Ekadjati, Kebudayaan Sunda Zaman Pajajaran, Jilid 2, Pustaka Jaya, 2005/C. M. Pleyte 1911. According to T. S. Raffles, The History of Java, London 1817 (Vol. I, Reprint, Oxford University Press, Singapore 1988), Salaka Domas was a large hall with 800 pillars.
+
+### **Vestiges of Pajajaran**
+
+After then, the area of Bogor had been almost forgotten until 1744 when Baron van Imhoff, the then governor-general of VOC, acquired his private estate and built a mansion[^(35)](#part0011_split_001.html_fn_35), naming the place as Buitenzorg (*lit.* care-free village), away from the miasmatic Batavia.
+
+Today, almost no trace of the former glory of the Pajajaran Kingdom is seen around the city, but one interesting relic besides the Batu Tulis stone monument is Situs Purwakalih (or Purwakalih Site), a site of about 4 × 3 metres located 300 metres south of the Batu Tulis monument, adjacent to which is believed to have existed the gate of the former castle. In this site, the three stone figures recorded by Winker remain. According to legends, they represented the figures of three chamberlains, Purwa Kalih (or Galih), Gelap Nyawang and Kidang Pananjung, who served the kings of Pajajaran, as the first name represents the site. The statues were of a kind that long and narrow metamorphic rocks were crudely sculpted into human shapes, and more or less resemble old *dousoshin* (travellers’ guardian deity) found in countryside Japan. According to my friend, Mrs. E., who went along with me there, they would have originally been some stoneworks of prehistoric time. Among the three figures, Parwa Kalih’s figure was seriously damaged and lacked its head, presumably having been broken by the hand of Moslem conquerors, and the figure itself of the third one was very rough and obscure.
+
+![Illustration](images/00080.jpeg)
+
+Situs Purwakalih, Bogor.
+Photographed with permission of the caretaker by M. Iguchi, February 2011.
+
+As written above, all three characters appeared in *Cariosan Prabu Siliwangi*, and the second and the third ones in *Mundinglaya Di Kusumah*[^(36)](#part0011_split_001.html_fn_36). Although they who served the kings of many generations were old, they are believed among Sundanese people to have had eternal lives.[^(37)](#part0011_split_001.html_fn_37)
+
+While these remains had been surveyed in 1911 by Cornelis Marinus Pleyte, a pioneer Javanese archaeologist, they were hidden in the soil until 1991 when they were accidentally rediscovered during the road-widening work and cleaned.
+
+An account of the relics of the palace was found in *Serat Centhini* (*The Centhini Story*)[^(38)](#part0011_split_001.html_fn_38), a travel record of the early 17th century, which I obtained recently. It was about a half-century after the fall of the Pajajaran Kingdom’s capital, Pakuan, that Raden Jayengresmi and his two followers from Giri, East Java, arrived at Bogor. Welcomed by the village chief, Ki Wargapati, they then visited the ruin of the palace.
+
+“There is a large pool full of fresh water. According to a legend, if the husband and the wife of a childless couple take bath in the pond everyday, they will be blessed with a baby within a matter of three days or seven days. Close to the pond are several pieces of stones covered by flowers. It is said that one’s wish will come true if he/she prays to the stone. Since this tradition is famous, many people came from far away places. This stone is called Kyai Selagilang.”
+
+Although the name, Kyai Selagilang is not found other than in *Serat Centhini*, one of the stones must be the *Batu Tulis*, which remains to date[^(39)](#part0011_split_001.html_fn_39). Raden Jayengresmi prayed to this stone and, with the help of some men arranged by Ki Wargapati, successfully built a hermitage on the plateau on the western slope of Mt. Salak where fresh water streamed and beautiful flowers blossomed. Raden Jayengresmi and his followers stayed there for a while to practise asceticism.
+
+Why are the remains and relics of the Pajajaran era so few? While documents are assumed to have been neglected, if not intentionally destroyed by Moslems, the question remains why stone masonries, even their foundations, are invisible. Although it is a mere layman’s idea, they might have been buried under the earth by volcanic ash and landslides, as Mt. Salak and Mt. Gede to the west and east were always active[^(40)](#part0011_split_001.html_fn_40). Natural disasters would have urged inhabitants of Pakuan to evacuate from the area, in the land of Sunda, where the saying that “a people can subsist without a king… but it is even impossible to conceive a thought of a king without a people”[^(41)](#part0011_split_001.html_fn_41) was also true.
+
+Buitenzorg was developed as a modern city after 1870 when the private mansion of van Imhoff was made the official residence of the governor-general of the Dutch East Indies. Having been renamed as Bogor after the independence of Indonesia, it has grown to the present big city with a one-million population including the suburbs. The area of Pakuan Castle is densely housed to the extent that archaeological excavation is hardly possible.
+
+![Illustration](images/00081.jpeg)
+
+Two sceneries around Bogor in the late 19th century painted by Johannes Rach.
+By permission of Rijksmuseum, Amsterdam, reproduced from the museum’s websites. Top: A pasture located between Mt. Salak (right) and Mt. Pangrango (left) (Identification Code NG-400-N)
+
+![Illustration](images/00082.jpeg)
+
+Batu Tulis (Identification Code NG-400-I).
+
+### **Royal treasures of Pajajaran remaining in Sumedanglarang**
+
+When Pakuan fell to the hand of Moslems in 1579, nobles of Pajajaran fled to a vassal country in Sumedang, some 150 kilometres east by southeast, with the crown and other heirlooms of Pajajaran. Prabu Geusan Ulun, the king of Sumedanglarang, who warmly welcomed them, declared that he would be the successor of Pajajaran, but it was only until the end of his reign (1601) that they were able to resist the Moslems and, in his son’s time, they were put under the rule of Sultan Agung of the Mataram of Central Java.
+
+In Prabu Geusan Ulun Museum, named after the king, are held several dozen pieces of treasures from Pajajaran, which include a golden crown, accessories, small furniture, decorated hats, etc., along with the treasure keris and other belongings of Prabu Geusan himself, all in immaculate condition. For many generations, the people of Sumedang must have made efforts to keep those Sundanese heritages, lest they should be passed to the hands of the Islamic conquerors and the Javanese. I was quite impressed that the high-level craftsmanship that produced those elegant and delicate fretworks and reliefs existed there in the period contemporary to the Adzuchi-Momoyama Era in Japan, but the tradition was not succeeded after the Islamisation. The building of this museum, which used to be the house of the Bupati (Regional Governor[^(42)](#part0011_split_001.html_fn_42)) built during the Dutch time, was not gorgeous but neat and tidy, retaining the good atmosphere of old days.
+
+![Illustration](images/00083.jpeg)
+
+A part of the crown and other royal accessories of the Pajajaran Kingdom carried to and hidden in Sumedang. Collections of Museum Prabu Geusan Ulun. Photographed with permission by M. Iguchi, January 2009.
+
+In addition to those treasures mentioned above, there was some furniture, old documents, sets of gamelan instruments, a big dragon-human-pulled carriage, etc. Among them, the most interesting to myself were three old books, one of them being entitled *Kitab Cariosan Prabu Siliwangi (The Story Book of Prabu Siliwangi*), labelled as a belonging of Prince Panenbahan (1656–1706). It must be one of the earliest copies of the book, although whether it was the very original copy was not sure. The material of the three books resembling traditional Japanese paper was called “daluang” prepared by hammering the white inner bark of paper mulberry tree (*Broussonetia* papyrifera). The letters were written in black ink. I knew that daluang was used for wayang beber[^(43)](#part0011_split_001.html_fn_43) but saw a book of the same material for the first time[^(44)](#part0011_split_001.html_fn_44). The second book was *Kitab Waruga Jagat* (1675) on the regional history, which also belonged to Prince Panenbahan, and the third one was Al Qur’an with some colour ornaments, which was owned by Prince Soeria Koesoemah Adinata (1836–82). I was touched by the fact that the technique to make the traditional daluang paper was still preserved in the middle of the 19th century when the modern paper-making technology must have been already common.
+
+![Illustration](images/00084.jpeg)
+
+A book of *Cariosan Prabu Siliwangi*, written on daluang, or bark paper (1675).
+A belonging of Pangeran Panembahan (1656–1706). A collection of Museum Prabu Geusan Ulun.
+Reproduced from the brochure, *Profil Museum Prabu Geusan Ulun*.
+
+### **Graveyard in the Bogor Botanical Garden**
+
+In the Bogor Botanical Garden, under the shed of trees on the bank of Ciliwung River, one finds a small graveyard of some ten metres square, surrounded by an iron fence, in which three Islamic-style tombs are laid. They were said to be the graves of the Pajajaran time. According to a booklet[^(45)](#part0011_split_001.html_fn_45) that someone once showed to me some ten years ago, the front one inside of the gate was the tomb of Ratu (Queen) Galuh Mangka Alam Prabu Siliwangi and the other two were those of Pangrima (War Commander) Mbah Djepara and Patih (Minister) Eyang Baul, who both served the king of Pajajaran. No other literature that mentioned these three names was found at that time.
+
+![Illustration](images/00085.jpeg)
+
+Graveyard in the Bogor Botanical Garden.
+Photographed by M. Iguchi October 2007\. A queen and two retainers of the Pajajaran Kingdom are buried according to tradition.
+
+I had then imagined. Although Siliwangi was originally the nickname given to Sri Baduga Maharaja, it was also applied to other kings of the same royal line. From the fact that the tomb of the king did not exist, the husband of Galuh Mangku Alam could have been a different person, e.g. Suryakencana, the last king of Pajajaran, whose name was to remain in the main shopping street in the present-day Bogor and who abandoned Pakuan and went into exile in Kaduhejo on the foot of Mt. Palasari in the western part of the kingdom’s realm, before the Moslems came to capture the capital in 1579\. If so, a certain Moslem wife of his would have failed to persuade her husband to convert his religion from Hindu to Islam and remained separately in Pakuan together with the minister and the war commander and buried in this place, etc.
+
+Several years later, a similar story with regard to this graveyard appeared in a novel as the words of a character, “To tell the truth, four people were buried there. One of them was Prabu Siliwangi [1474–1531], but his tomb is invisible to our eyes. The tomb in front of us belongs to his second consort, Ratu Galuh Mangku Alam. The tomb on the upper step is for Mbah Jepara and the one on the right-hand side is for Eyang Baul, the king’s war commander. These graves were created about 600 years ago in the 1450s.[^(46)](#part0011_split_001.html_fn_46)” If this Prabu Siliwangi was Sri Baduga Maharaja, Ratu Galuh Mangka Alam could be identified as the second queen, Nyai Subanglarang, who was an Islam believer, and the style of the tomb matched her. Nevertheless, this was not certain, as the name Ratu Galuh Mangku Alam has not been found in historical documents, as far as I have searched.
+
+In an internet article[^(47)](#part0011_split_001.html_fn_47), it was written that the three tombs used to be humble stone mounts with no epitaphs and one of them was even suspicious as to whether what was buried in it was a human or an animal, and that they were reinterred in the 1980s by Mr. Aang Kunaefi, the then Governor of West Java, who felt pity for the queen and the retainers. A question remains whether those three persons were really Moslems. According to my friend in Bogor, the names and titles had no hint of Islam, so the possibility that their religion was traditional Hinduism was undeniable. Then, it was probable that the Islamic grave-style might have been adopted for the sake of convenience when the graveyard was reformed by Mr. Kunaefi.
+
+The graveyard is always cared for by a few people who mow weeds and offer flowers. Whatever their religion, people of Sunda still have affection for the kingdom of Pajajaran. Whenever I visit there, I think of the ancient time and offer some small notes.
+
+The tombs are considered to have existed since before van Imhoff acquired the land for his manor in 1744, a part of which was to be given for Reinwaldt to open the Botanical Garden in 1817\. In fact, the graveyard does not seem to be under the management of the Botanical Garden, as no relevant description is written in its brochures and guidebooks. Whether the theory that the palace of Pajajaran had existed on the ground on which the Buitenzorg Palace (the present Bogor Palace) was built[^(48)](#part0011_split_001.html_fn_48) is right or not, the possibility that some construction would have existed could not be denied, as the area was allegedly the holy Samida Forest, and was the best place on Bogor Hill. While writing this, I remembered the history of Colchester, England, where I once lived for a couple of years. The Norman Castle, which still remains in the town centre on the hill of Colchester, was constructed in the 11th century on the original place of the ancient Claudius Temple built by the Romans in the 1st century, as proved by archaeological excavation. No plan to dig and survey the underground of Bogor Palace is heard.
+
+Let us pick up some topics with regard to the period after the Sunda Kingdom inherited Tarumanagara in 669 until the Pajajaran Kingdom was established at Pakuan in 1482.
+
+### **Remains of Galuh Kingdom**
+
+Relatively recently, I was informed that the remains of the Galuh Kingdom existed to the east of Ciamis and I visited there. In front of the entrance of the site, there was a board saying, “Welcome to Ciung Wanara Karang Kamulyan”, and another board on which nine kings who resided there were listed along with their periods of reign[^(49)](#part0011_split_001.html_fn_49).
+
+![Illustration](images/00086.jpeg)
+
+A board at the site of Karang Kamulyan, Galuh, listing the names of kings and the periods of their reigns.
+Photographed by M. Iguchi, January 2009.
+
+Inside the gate was a jungle of various rank trees and bamboo, and about fifty metres ahead of the path, which was like a tree tunnel, was a rectangular open space that was a little larger than a tennis court, surrounded by a low-height stone embankment. In the innermost part of the space was a white square stone about one metre wide and fifty centimetres high, called Pangcalikan, which, according to the guide, used to be the place where the kings had audiences, but looked a little shabby for a royal seat even though it was equipment of the 7th–8th centuries. Further ahead were places for prayer and maternity. There was also anarea with a long stone, standing upright, which was presumably the tomb of a noble. One interesting place was an area of about ten metres diameter in the bottom of a depression, which was said to be a pit for cockfighting. I learnt that cockfights had been common even in ancient time. Although it was a favourite game of Javanese people, cockfighting was prohibited in modern times because of its high speculativity. Several hundred metres ahead in the southeast corner of the site was the confluence of the Citanduy and Cimuntur rivers, which came from the west and north, respectively. On the voluminous, muddy water of ochre colour, a few pleasure boats were seen. I realised that, with the north, east and south sides of the rectangular Karang Kamulyan site of about twenty-five hectares being edged by rivers, the site was chosen for the royal capital not only from the viewpoint of transportation but also from defence.
+
+![Illustration](images/00087.jpeg)
+
+Ceremonial place with the king‘s seat in Karang Kamulyan.
+
+![Illustration](images/00088.jpeg)
+
+The confluence of Citanduy River (right) and Cimundul River (left).
+Photographed by M. Iguchi, January 2009.
+
+### **Ciung Wanara Legends**
+
+“Ciung Wanara”, a nickname of the 10th king of the Kendan/Galuh Kingdom (the 8th of Galuh Kamulyan), was probably prefixed to the name of the remains because it was popular among Sundanese people as a title of Pantun Sunda. The story goes as follows[^(50)](#part0011_split_001.html_fn_50):
+
+“It was when King Sang Permana Kusumah of Galuh was aged and intended to retire from the world that he noticed the desire of Minister Aria Kebonan to be a king. The king called the minister and told him to rule the country but not to harass his two empresses, Pohaci Naganingrum and Dewi Pangrenyep. After his departure to Mt. Padang[^(51)](#part0011_split_001.html_fn_51), Aria Kebonan, who somehow resembled the king of ten years younger age, behaved rapacious, declaring the title of Raden Galuh Barma Wijaya.
+
+“In the hermitage on Mt. Padang, an ascetic, Ajar Sukaresi, saw some light from the sky entered the palace and the bodies of the two empresses. Meanwhile, Naganingrum dreamt the stars fell on the moon and Dewi Pangrenyep, a sharp sunlight penetrated the seabed. Barma Wijaya did not believe the dreams and summoned an ascetic from Mt. Padang, but he did not appear soon, just sending some jasmine flowers and turmeric. Barma Wijaya who felt insulted, ordered the empresses to pretend to be pregnant by putting a pot on each stomach. The ascetic, Ajar Sukaresi, who was the former king, Sang Permana Kusumah[^(52)](#part0011_split_001.html_fn_52), arrived there and asserted that they were six months pregnant and that both babies would be male. Barma Wijaya was angry and stabbed the ascetic with a keris. The ascetic did not die, as the keris broke into three pieces, but he understood the aim and transformed himself into a snake called Naga Wiru.
+
+“Dewi Pangrenyep first gave birth to Raden Aria Banga. The baby in the womb of Naganingrum voiced and warned the greedy king that the country will soon be destroyed. When Naganingrum delivered the baby, Dewi Pangrenyep who was envious of her fellow concubine swapped the baby with a puppy. The baby was put in a casket with a piece of egg and washed away into Citanduy River, whilst the mother who was sentenced to death was saved by a loyal chamberlain and put in a forest. The casket was found by Aki and Nini Balangantrang in a fish trap installed in the river and the baby was fostered by the couple. After the baby grew to a boy, the boy flew to the air and saw that the heaven and the earth were still separate, a sign that he was entitled to get some inheritance. The child created a village for Aki and Nini.
+
+“One day Aki and the boy went for hunting to the forest with blowguns. When the boy saw a bird and an animal, and asked their names, Aki taught that they are called ‘ciung’ and ‘wanara’, respectively. Then the boy said he must be called Ciung Wanara. From Aki, Ciung Wanara heard of his identity that he was the son of the former king of Galuh and his empress, Naganingrum.
+
+“The egg which had been found along with the baby in the trapped casket turned into a cock, named Si Kakat Beds, when incubated by Naga Wiru. When a cockfight contest was announced from the court, Ciung Wanara wished to challenge Barma Wijaya. The latter who was confident in winning the game with his magical cock, Si Kakat, accepted Ciung Wanara’s challenge, agreeing that the west part of the territory would be submitted to Ciung Wanara, if he was to lose. Si Kakat Beds won the game to obtain the west part of the kingdom for Ciung Wanara. Ciung Wanara was not quite satisfied, as he must be the crown prince of the kingdom. One day he made a beautiful iron cage. When Barma Wijaya and Dewi Pangrenyep came to inspect it and just entered the door to see the inside, Ciung Wanara lost no time to close it. Aria Banga who saw this incident asked Ciung Wanara to free them, but this was not agreed. Then a severe fight began between them and, finally, Aria Banga was hurled by Ciung Wanara to the east of Cipamali River. Thereafter, Ciung Wanara and Aria Banga ruled the western and the eastern parts of Java Island bordered by the river.”
+
+That an iron cage was used in the 8th century might sound unrealistic, but it could be possible to make one by the forge-welding method by employing the tempering technique, which existed since ancient time to make keris and other weapons.
+
+### **Lutung Kasarung legends**
+
+Lutung Kasarung, another title of contemporary Pantun Sunda that must be related to Manisuri (or Dharmasakti), the son-in-law of Ciung Wanara, is also famous. One version, which was written in a picture book like a fairytale, is as follows[^(53)](#part0011_split_001.html_fn_53):
+
+“Guru Minda, the son of Dewi Sunan Ambu in Kahyangan [Heaven] was transformed into Lutung Kasarung [Black Monkey] and pushed down to the earth, because he wished to love her mother. He was taken to the palace by a hunter, where Purba Rarang, the elder daughter of Prabu Tana Agung, was monopolising the power by poisoning her younger sister, Purba Sari, to suffer from a skin disease and isolating her in the forest. She did it as she was jealous when the king was about to hand over the throne to the younger sister in accordance with the custom. Lutung Kasarung who was expelled from the palace, disliked by Pruba Rarang, met grief-stricken Purba Sari in the forest, where Sunan Ambu occasionally appeared and gave her hand. Purba Sari was actually born to Prabu Tana Agung and his queen when they wished to have a beautiful daughter like Dewi Sunan Ambu who had appeared to their bedside. When Purba Sari bathed in a pond created by the tears of Sunan Ambu, her skin was healed and she revived into a beautiful princess.
+
+“Although Purba Rarang gave various difficult problems to the younger sister, Lutung Kasarung solved them one by one. Purba Sari went to the palace. As soon as she heard the voice of heaven and declared that she was the legal successor, Lutung Kasarung took off his coat and turned into a handsome young man. They ruled the country wisely and the kingdom of Galuh prospered.”
+
+![Illustration](images/00089.jpeg)
+
+Cover and some illustrations of: Till Dalton (Illust.), *Lutung Kasarung*, G. Kolff & Co., Bandung (ca. 1950).
+
+The episode that the pond water was effective for the skin disease of Purba Sari could mean that it was hot-spring water from volcanoes existing in the surrounding areas.
+
+Among various long and short versions of Pantun Sunda[^(54)](#part0011_split_001.html_fn_54), a story recorded in Stamford Raffles’s *The History of Java[^(55)](#part0011_split_001.html_fn_55)*, probably a dictation of a narration, is very specific in that the above two stories were connected. In short, it is written that Lutung Kasarung was the name given by his father, Ciung Wanara, together with a black-monkey coat, and that a son born between Lutung Kasarung and Purba Sari was Silawangi (Siliwangi) who became the king of Pajajaran, which prospered under his reign. Although there was actually a time difference of more than 600 years from the end of Galuh in the middle 9th century to the foundation of Pajajaran in the late 15th century, presumably the narrator would have linked the two historical heroes by his own idea in this fictional tale. One point that is common in both Lutung Kasarung and Siliwangi stories can be that both of them encountered their future partners, Purba Sari and Ambetkasih, respectively, with their identities hidden, being covered by the black-monkey coat or being painted with a black mixture of soot and sap.
+
+The Raffles story furnished some knowledge of contemporary social background. For instance, (1) fishermen installed traps in the river; (2) rice-growing was propagated; (3) a significantly large ship was used to travel along the southern coast of Java Island; and (4) various plays were performed in the feast at Pakuan.
+
+### **The story of Bujangga Manik**
+
+Most of Pantun Sunda, including those cited above, were based on episodes of kings and princes during the period from Kendan/Galuh to Pajajaran kingdoms and, despite being written in poetic phrases, they were principally the kind orally told to public audiences. It was natural because the literacy of common people pervaded only after the beginning of the 20th century with the introduction of primary education, but it does not mean that no high-literary poems were written even when the number of readers was limited. A famous example was Bujangga Manik, a long poem of 1,575 octosyllable lines presumably written in the late 15th or the early 16th century. In short, the story was as follows[^(56)](#part0011_split_001.html_fn_56):
+
+“Despite he was a prince of Pakuan, Ameng Layaran (alias Bujangga Manik) became an ascetic monk and travelled around Majapahit in Java, but once returned home sick for his mother. Although his mother urged him to marry Princess Ajung Laran who longed for him, he departed for another journey and reached Bali via Java. Having seen that Bali was highly populated, more than Java, he returned to the territory of Pajajaran and, after roaming around, settled halfway down Mt. Patuha[^(57)](#part0011_split_001.html_fn_57) to create a sacred place. He erected a jewelled linga[^(58)](#part0011_split_001.html_fn_58), built several pavilions furnished with a kitchen, a shed for firewood and a place for threshing, and completed his practice after nine years. In the tenth year, his body ended without illness, but his soul ascended to beautiful heaven.”
+
+Although the story itself was rather simple, his high mental spirituality was mentioned in many parts of the poem. In addition, a detailed description was given on various scenes throughout the whole volume and the itinerary, particularly of the second trip, was minutely recorded, providing me with useful knowledge of contemporary manners and customs and topography.
+
+In the scene of his visit to her mother after his first journey, for instance, the room where the mother stopped weaving and welcomed Bujangga Manik was situated in a high-floored mansion, decorated with a seven-fold curtain and furnished with a gilded Chinese chest. The cloth she was weaving was an ikat with cotton yarn dyed in red, blue and yellow. From a line of the poem, she was supposed to be an aunt of Siliwangi. When Jompong Laran (probably a relative lady) who had seen Bujangga Manik told Princess Ajung Laran that “he is well-matched for you. He is exceedingly handsome, more than Siliwangi, he is highly intellectual and speaks Javanese, etc.”, the princess presented a tray of betel with her love to Bujangga Manik by entrusting it to Jompong, a tray of betel that she carefully prepared with leaves of sirih (*Piper* betle), nuts of pinang (*Areca* catechu), lime stones, fragrant sandalwood, etc., all of the best quality, covered with a ceremonial cloth. The ships that Bujangga Manik took during his trips (from Pamalang, Central Java, to Sunda, and to and from Bali in the first and second journeys, respectively) were large junks [^(59)](#part0011_split_001.html_fn_59), the original countries of her crew members having been various, depending on their expertise. On departure, guns were fired seven times, shawms were played, gongs and cymbals were tolled and sailors sung boat-songs.
+
+A question remains about who the composer of this poem was. It would be almost certain that only the traveller himself was able to write, or dictate, the detailed itinerary with the names of mountains, rivers and villages. I should like to conjecture that the whole volume, including the scenes of the death of the hero and the ascension of his soul to the heaven, were composed by a certain prince named Ameng Layaran himself prior to the end of his life.
+
+### **Prasasti of Cibadak**
+
+A set of four pieces of stone discovered in Cibadak village, forty kilometres south of Bogor, with an inscription of forty lines, recorded that the monument was erected on the 12th day of the white-half of the month, Kartica in the year 952 Saka (11th October 1030 Gregorian) by King Maharaja Gaped of Sunda who, according to *Pustaka rajya rajya i bhumi Nusantara (The Book of Kings in the Land of Archipelago)*, was the 20th King of Sunda who reigned 1030–42\. Since the notice in the inscription was something like, “Fishing in the river in a region from one upstream point to another downstream point is forbidden”, it is my own view that such stone monuments might have been placed also in some other places. Since the language used was the Sunda Kuno (Old Sundanese), it is considered that the colour of Indian heritage seen in the age of Tarumanagara would have already faded out and that the Sunda Kingdom was the kingdom of Sundanese people[^(60)](#part0011_split_001.html_fn_60).
+
+Around that time, in Central Java, the Sailendra and Sanjaya kingdoms prospered and erected such magnificent temples as Borobudur and Prambanan, whereas no such fine monuments were left by Hindu kingdoms in Sunda probably because they had to frequently move their capitals suffering from floods and volcanic eruptions and had insufficient funds to build big monuments.
+
+### **Old Hindu temples in West Java**
+
+The only one Hindu temple that remains in West Java is the well-known Candi Cangkuang discovered in 1966 by the lakeside of Bagendit in Leles village in the suburb of Garut[^(61)](#part0011_split_001.html_fn_61). Since a hot spa existed on a near-by mountainside, the lake itself was a popular resort ever since the old days.
+
+When Marquis Tokugawa visited there in the 1920s, he wrote in his travelogue, *Journeys to Java[^(62)](#part0011_split_001.html_fn_62)*, that his party was welcomed with angklung[^(63)](#part0011_split_001.html_fn_63) music played by local children and offered flowers from lovely girls. I have visited this sightseeing spot twice in the last decades when the same atmosphere still remained.
+
+When my friend and I crossed the lake on a small boat called a “sampan”, a candi about eight metres tall appeared. It was a typical Hindu-style temple with a motif of Semeru (Mt. Meru) just like candis in Prambanan in Central Java and Singasari in East Java. Although it was much smaller than those in Java, I thought the reassembling of scattered stone pieces must have been hard work, like the solving of a three-dimensional jigsaw puzzle. When we walked close to it, however, there were no reliefs such as those carved on the candis of Java. There was no Kala’s head[^(64)](#part0011_split_001.html_fn_64) on the beam of the gate either. In the niche, there was a small stone statue of about one-metre height, which was recognised to be a carving of Siva sitting cross-legged on Nandi from the head of an ox seen underneath, although the face was not clear. The statue must be a pretty old one, as the surface was quite rough, due probably to the weathering, and its waist part was apparently broken and bonded, but the size was small for the space of the niche. (Above was the observation in February 2000 and, if not mistaken, the niche was empty when I visited ten years earlier.) Thus, there was no awe-inspiring atmosphere that one feels in old shrines and temples in general. Around there was no board to explain the history such that is commonly seen in other sightseeing sites. After returning home, I had a look in several books, but no detail of this particular candi was found.
+
+![Illustration](images/00090.jpeg)
+
+Candi Cangkuang (with Prof. K. Kajiwara)
+Photographed by M. Iguchi, 2000.
+
+![Illustration](images/00091.jpeg)
+
+Statue of Siva in Candi Cangkuang
+Photographed by M. Iguchi, 2000.
+The scattered papers are offerings of banknotes.
+
+A rumour said that what had actually remained was only the stone foundation of 4.7 m × 4.7 m square, which was estimated to have been laid around the 8th century and the candi itself was designed and built by someone of modern times. Then, I remembered that the shape of the candi was more or less similar to that of Candi Pawon near Borobudur in Central Java. Nevertheless, some stone building must have existed at the site of Cangkuang according to a book[^(65)](#part0011_split_001.html_fn_65) in which it was written that the stone blocks found around there were re-used for Islamic tombs.
+
+Relatively recently, I learnt that another ruin of candi existed in the vicinity of Cicalengka, thirty kilometres east of Bandung, and visited there. The excavation site was found in a small village called Bojongmenje, where we were received by Bapak M., a dilettante historian from Banten, who had been working alone ever since the discovery of the ruin in 2002\. In the middle of the field of some one-quarter acre fenced with iron net was a stone foundation of five metres square, and several hundred stone blocks were piled up in a corner of the field, as well as in a work shed, in a disorderly manner. Among them were some pieces on which some patterns were engraved, although they were quite blurred by weathering. There was a special piece, a stone ball of about 15 cm diameter, which was supposed to have been the orb on the tower placed on a cubic block. Bapak M. told us that there was a small statue of Nandi (sacred bull), but it was moved to a museum in his home town for security reasons. He lamented that the authority did not give much support to his excavation.
+
+![Illustration](images/00092.jpeg)
+
+The foundation (top) and stone blocks (bottom) of a candi discovered in Bojongmenje village, near Cicalengka, West Java.
+Photographed by M. Iguchi, January 2009.
+
+Around Cicalengka must have been the place where the Kendan Kingdom, founded in 516 AD by Manikmaya, a son-in-law of King Suryawarman of Tarumanagara, had existed for a period of one century until the capital was moved to Galuh in 612 AD. If the candi was the one built in that period, it must be pretty old, or even older than those candi remaining in Central Java. Later, I found an article that mentioned an archaeological view that the candi was the construction of the 7th–8th centuries[^(66)](#part0011_split_001.html_fn_66).
+
+### **The Tragedy of Bubat**
+
+It was in 1357 when the capital of Sunda was in Kawali that an incident, which is still remembered as “The Tragedy of Bubat” among Sundanese people, happened. At that time, the Majapahit Kingdom with its capital in East Java was in the zenith of its prosperity under King Hayam Wuruk, with the aggressive service of Premier Gajah Mada (short name for Maha Padi Madah), ruling East and Central Java, and expanding its territory to Sumatra, Borneo and other outer islands.
+
+When Hayam Wuruk, who was still single and looking for his consort, received a portrait of a renowned peerless beauty, Princess Dyah Pitaloka Citraresmi of Sunda, from a painter, Sungging Prabangkara, whom he had despatched to Sunda to draw her picture, Hayam Wuruk immediately fell in love with the figure in the picture and sent a messenger to Sunda to ask for the princess’s hand. The Sundanese side welcomed the proposal, but some royal family members objected to the request to conduct the wedding ceremony in Majapahit, because the visiting of the bridegroom’s side to the bride’s side was common at that time[^(67)](#part0011_split_001.html_fn_67). King Maharaja Linggabuana finally said it did not matter and started on a voyage to Majapahit accompanying Queen Dewi Lara Linsing, Dyah Pitaloka and some family members as well as some ministers and imperial guards, with a big fleet of 200 vessels and small boats, 1,000 in number. At the time of embarkation, they saw that the blue sea water turned to red, a bad omen, but sailed off the port and ten days later arrived at Bubat on the bank of Brantas River in the suburb of Majapahit’s capital. There, they were told by Gajah Mada, who hid an ambition[^(68)](#part0011_split_001.html_fn_68) to conquer the whole Java Island and get the better of the king, that Dyah Pitaloka was not to be received as the queen but would be a tribute, and that the Sundanese kingdom should be a dependency of the Majapahit kingdom.
+
+With no means of asking the true wishes of Hayam Wuruk, being surrounded by Gajah Mada’s army, King Maharaja Linggabuana decided to fight as a warrior rather than to be affronted. He told the queen and daughter to return to Sunda, but they said they would stay there. When the battle started, the Sundanese fought well, despite that they were much inferior in number. The king was a good warrior and beat many enemies, but the king and all Sundanese men died on the battlefield of Bubat. Having seen the disastrous scene, Dyah Pitaloka, Queen Lara Linsing committed suicide and the second queen of Sunda and wives of ministers followed[^(69)](#part0011_split_001.html_fn_69).
+
+![Illustration](images/00093.jpeg)
+
+Images of the Bubat War of a modern artist.
+Reproduced by courtesy of Mr. Gilang Kencono Nugroho, Bandung, from: [http://browse.deviantart.com/?qh=&section=&global=1&q=bubat](http://browse.deviantart.com/?qh=&section=&global=1&q=bubat) The persons on the left, top-left and top-right are Premier Gajah Mada, Princess Dyah Pitaloka and King Hayam Wuruk, respectively. Boxes are deliberately blanked by the artist to leave the contents to readers’ conjecture.
+
+Hayam Wuruk must have been truly wishing to marry Dyah Pitaloka and to establish a kinship with the Sundanese Kingdom. He, who at last realised the treachery of Gajah Mada, collapsed on the body of his deceased fiancée, which he found in the field and vowed that he would join her soon to be united with her forever. He sent a Balinese ambassador who had been there to be the witness of the expected wedding to Sunda to deliver his apology to Minister Eyang Bunisora Suradipati, King Linggabuana’s brother, who was in charge of the kingdom during the absence of the king. After conducting the ritual, Hayam Wuruk pined away and died shortly afterwards. After the magnificent royal funeral, which was held for one month and seven days with various performances, Gajah Mada, who was accused by the uncles of the king, meditated for a while and disappeared as if his body evaporated.
+
+Above is the brief summary of a poem, called Kidung Sunda (Song of Sunda)[^(70)](#part0011_split_001.html_fn_70), written around 1550 AD by an anonymous author and discovered in the modern age in Bali, to which some names of characters and some backgrounds were supplemented with reference to the descriptions in such other books as *Pararaton* (*Book of Kings*)[^(71)](#part0011_split_001.html_fn_71) and *Carita Parahiyangan*. A literary work, the poem includes some modifications in the light of the real history. In fact, Hayam Wuruk survived until 1389 AD, while Gajah Mada died in 1364 AD in Probolingo in the eastern province of Java, according to *Desawarnana* (also called *Nagarakertagama*)[^(72)](#part0011_split_001.html_fn_72), which is reputed as the most reliable chronicle. With respect to the details of the story, there are various versions.[^(73)](#part0011_split_001.html_fn_73) For instance, opinions split whether after the incident Gajah Mada retired himself or he was dismissed by the king. As to the origin of the incident, there seems to be a theory that Gajah Mada had just simply misunderstood Hayam Wuruk’s will to face the Sundanese, but it would be too sympathetic to Gajah Mada. It is also said that the cause of the death of Gajah Mada was an injury that he had suffered by Dyah Pitaloka who had joined the battle with a kujang (knife) inherited from the time of Tarumanagara.
+
+The location of Sunda’s capital is not found in Kidung Sunda, but it must have been Kawali. They are supposed to have sailed downstream to the mouth of Citanduy River and turned around the coast of Java Island clockwise to the bank of Brantas River. It would have been possible to cover the distance of 1,000 kilometres in ten days, as the royal vessels were said to have been multiple-sail Chinese-style junks, which were common ever since the occasion of the invasion by Mongolians.[^(74)](#part0011_split_001.html_fn_74)
+
+### **Trowulan, the old capital of Majapahit**
+
+Once I visited the site of the old Majapahit capital, present-day Trowulan, near Mojokerto, forty kilometres south of Surabaya, where in an area of five kilometres square were magnificent gates, temples and bathing places of Hindu style, and where a huge water reservoir of some 400 × 200 metres[^(75)](#part0011_split_001.html_fn_75) remained full of water. The excavation of the keraton was still continuing and the meditation room was just exposed. It was a small cell of about 1 × 3 metres, which looked unbalanced for the big building of over 1,000 square metres, but I thought it might have fitted the purpose and imagined the figure of Hayam Wuruk who would have sat and crouched in it after the carnage in Bubat.
+
+In this old capital, one fact that was impressive to me was that most of the buildings were made not of stones but of fine bricks of 37cm × 21cm × 7 cm[^(76)](#part0011_split_001.html_fn_76), proving that they had not only advanced technology of mass production but also a sort of industrial standard. Later, I found a similar observation in *The Malay Archipelago* authored by Alfred Russel Wallace in 1869[^(77)](#part0011_split_001.html_fn_77). In *The Overall Survey of the Ocean’s Shores (Ying-yai Sheng-lan*, 瀛涯勝覧 , 1416), Ma-Huan ( 馬歡 ) who accompanied the great expedition of Admiral Zheng-He (鄭和) of Ming Dynasty, only wrote about the standards of volume and weight in Java (Majapahit)[^(78)](#part0011_split_001.html_fn_78), but also the standards of length must no doubt have existed there.
+
+![Illustration](images/00094.jpeg)
+
+Candi Pajang Tatu in the outskirts of Trowulan. Left: Total view, Right: Close-up. Photographed by M. Iguchi, September 2009.
+
+![Illustration](images/00095.jpeg)
+
+An excavation site of a building that was supposedly a palace of Majapahit time at Trowulan (left); A small cell which is considered to have been a meditation room (right). Photographed by M. Iguchi, September 2006.
+
+The Trowulan Museum held a very large collection of stone statues, reliefs, ceramics, metal pieces and other artefacts, and a terracotta figure of Gajah Mada’s head caught my eyes. I murmured, “Does not his face look treacherous?” Was it because of a prejudice of myself who, having lived in Sunda for some years, was inclined to the Sundanese? When I asked the director of the Museum about the site of the Tragedy of Bubat, he corrected my words, saying, “Ah, the Incident of Bubat!”, and put a mark on my map. Indeed, for Javanese people, it was probably a small incident that occurred during the golden age of Majapahit. The field of Bubat behind the museum did not offer any image of old battleground and the air was peaceful, farmers’ houses standing here and there and vegetables growing under the tropical sun. In *Desawarnana*, it was written that tall buildings stood in Bubat and religious services and fighting competitions were held in the middle of the field, but no account was given on the Bubat War in this book, which assumed the nature of paean for the monarch.
+
+![Illustration](images/00096.jpeg)
+
+A terracotta figure of Gajah Mada’s head part, held in Trowulan Museum. Photograph by Dinas Purbakala. Claire Holt papers, #14-27-2648. Division of Rare and Manuscript Collections, Cornell University Library, reproduced by courtesy of the library.
+
+### **Sunda versus Java**
+
+Since I have repeatedly written “West Java of Sundanese people and Central and East Java of Javanese people”, readers might wonder why not all inhabitants in Java Island were not Javanese. In fact, I myself was quite astonished when, soon after I settled to live for the first time in Java Island in Bandung in 1990, a girl student who came to my house said, “My parents went to Java.” Despite that both Sundanese and Javanese descended from the same Southern Mongoloid stock and they were racially not different, they had little contact with each other from ancient times, as Europeans clearly distinguished Sundanese and Javanese people and, even in the 16th century, misunderstood that Sunda and Java were geographically two separate islands. Although 200 years have passed since the unified rule started under the Dutch administration and sixty years since the Republic of Indonesia was formed, Sundanese people still insist that they are different from Javanese and that West Java is the territory native to Sunda. Their consciousness seems to be as strong as, or even stronger than, those of the Scottish people against the English who are different in their origins[^(79)](#part0011_split_001.html_fn_79).
+
+![Illustration](images/00097.jpeg)
+
+Map of Java Island (*Descripcao da ilha de Iaoa*) Madrid 1615(?)
+By courtesy of Portuguese National Digital Library, reproduced from [http://purl.pt/1442/1/P1.html](http://purl.pt/1442/1/P1.html).
+Note that the left-hand side is the north, and a waterway down between the West and the Central Java. While the north coast facing the Java Sea was detailed, the south coast was yet to be explored. “Dayo” indicated in West Java shows Pakuan, the capital of Pajajaran mentioned by Tome Pires in 1512\. The position of “Mataram” in central Java is not correct. From the facts that Mataram was founded in 1584, that the Portuguese–Pajajaran Treaty was signed in 1522, and that Jayakarta was renamed from Sunda Kelapa in 1619, the original map is assumed to have been drawn in 1512-1584.
+
+If I was asked how Sundanese and Javanese people would abuse each other, I might answer, “the Sundanese would say that the Javanese were snobbish and cunning, whereas the Javanese would say that the Sundanese were vain and tactless.” At least to the Sundanese, it seems that the Tragedy of Bubat is still unforgettable. They say there used to be a saying that their daughter should not be allowed to marry a Javanese man, before love marriage became common as today. Tome Pires wrote, “Sundanese and Javanese rival with each other. Sundanese are braver than Javanese. Sundanese are honest and Javanese are not credible.” Friends from Bogor and Bandung who heard this five-hundred-year-old comment for the first time were quite satisfied and delighted, whereas those from Java frowned and said, “It is a prejudice.”
+
+When the Indonesian government chose National Heroes (Pahlawan Nasional), after the independence of the country, from people from the past to the present, Gajah Mada was chosen as one of them, and his name was put on the newly established university (Gajah Mada University in Yogyakarta) as well as on streets in many cities in the country, but not in West Java at all. Since Gajah Mada is quite unpopular in Sunda, I would like to advise readers not to bring the achievement of Gajah Mada into conversation in West Java. It is the same as the saying in Japan, “Do not praise Iyeyasu [Tokugawa] in Osaka”. For Sundanese people, Prabu Siliwangi is much more popular, despite that he has no stamp of the government.
+
+What is then the feeling of Sundanese people against Fatahillah who occupied Bantam, Sunda Kelapa and all other ports along the West Java coast and finally extinguished the Pajajaran Kingdom? It was when I went to see the excavation of remnants in Banten Lama (old Bantam) that a member of the troop who engaged in the work told me in chitchat, “The Islamisation in Indonesia was peacefully achieved.” To my questions, “Indeed, the Arabs did not come here on warships but ‘The Koran in the left hand and a sword in the right hand’ was the tradition of Islam. Wasn’t it? Was Fatahillah able to take this port without blood?”, no clear answer returned. Probably, even though a historian, she was unprepared to argue the achievement of a person who played a role for the propagation of her religion, having been a Moslem from her earliest recollection.
+
+On another occasion in a coffee-break in my office, I presented a question to my colleagues why in Java old documents of the pre-Islamic period were lost and ancient monuments were allowed to be ruined until the modern age? One of them who was not a devout Moslem answered, “Most Moslems who came to Java were merchants who had little interest in culture and history. They themselves did not build beautiful mesjid [mosques] that you see elsewhere.” Although others were not totally agreeable, his second point may be true. The building of the Great Mosque in Demak, probably the oldest mosque in Java built in the 15th century, was typical Java-style architecture with a hipped roof and a small tower with no arched door and windows, and the brick-made Minaret of the mosque in Kudus is supposed to be a former watchtower of Hindu-Java period, viz. Majapahit time[^(80)](#part0011_split_001.html_fn_80), [^(81)](#part0011_split_001.html_fn_81). It was after the middle of the 18th century when the courts of Mataram in Central Java and Cirebon in West Java became stabilised under the Dutch rule that people began to look back to the past and record the history, and to seriously foster such culture as wayang of both shadow-play and stage-play types, even though their religion was Islam. Just in case, I would say that those readers who are not familiar with Islamic societies should refrain from discussing religious matters in Indonesia.
+
+### **Istana Batu Tulis**
+
+To return to our subject of Batu Tulis, an old sketch showed that the site was surrounded with a hedge and a simple hut was placed to cover the main stones. Now the hut has been replaced with a solid brick-made building and cared for by a local lady who proudly says that her family has been responsible for keeping the site since her grandfather’s time. Pajajaran is the spiritual home for them, as well as the caretakers of the graveyard in the Botanical Garden, although their religion is not any more Hinduism but Islam.
+
+In a green garden on the other side of the tamarind-lined road, Jalan Batu Tulis, stood an elegant mansion, called Istana Batu Tulis, built by the former President Soekarno[^(82)](#part0011_split_001.html_fn_82). It is said that Soekarno wished to obtain a magical power, which Sundanese people still believe dwells in the stone monument. The property belonging to the Soekarno family is not open to the public, but one can see the house and garden over the fence.
+
+### **A prasasti and statues in the Bogor Botanical Garden**
+
+Let me add a small topic. When I visited the Botanical Garden recently, I found an interesting site that I missed before, in spite of having lived near-by and walking around the garden every week or month. Beside a footpath not far from the front gate, and from the Memorial to Lady Raffles, there was a flat stone, on which some strange characters were inscribed, along with the statues of Nandi and Vishnu. The information board said in modern Indonesian language that the characters inscribed were Sunda Kuno (Old Sundanese) and the meaning was “Not far from here is a lake”, as, in fact, a lake was found at a one-hundred-metre distance. I was first disappointed to know that the stone monument was not an ancient one but presumably erected either by Dr. Frideriech [^(83)](#part0011_split_001.html_fn_83) in the 19th century or by Dr. Reinwaldt, the founder of the Garden, but was amused by the humour of a person who used the old letters for the inscription. As to the origin of the statues, it was written that they were discovered in an old pond in Kotabatu, Ciapus in the outskirts of Bogor. From the location, I guessed they would have been carvings of the Pajajaran era, but no literature that described the detailed history was found.
+
+![Illustration](images/00098.jpeg)
+
+A stone monument and the statues of Nandi and Siva in the Bogor Botanical Garden. Photographed by M. Iguchi, 2006.
+
+In Kotabatu village, several kilometres southwest of Bogor city centre, I saw that the pond had been converted to a rectangular fishing pond of swimming pool size, and villagers were dropping their lines in it. An old villager told a tradition that the area was surveyed by the Dutch in the 19th century. He also said that some Dutch and Japanese visited in recent years, but he did not hear any new plan of archaeological survey.
+
+Although the Botanical Garden is a very famous sightseeing spot in Bogor where thousands of people visit throughout the year, few people walk to the graveyard of the Pajajaran queen or the monument and statues placed either by Dr. Friederich or Dr. Reinwaldt. People who visit Batu Tulis in the city and the stone monuments of Tarumanagara in Ciampea village in the suburb are also few. I thought the authority of the prefecture or the city should make more efforts to advertise those heritages, but not much would be expected from the office that recently destroyed and demolished the replica of prasasti, which had been placed in Taman Kencana several decades ago. The anniversary day of Bogor City, 3rd May, has been determined after the foundation of Pakuan Pajajaran (3rd May 1482), but I have never seen flags and boards on which the legends are mentioned.
+
+### **Brief history of the Bogor Botanical Garden**
+
+Deviating from the main subject of this chapter, let me briefly review the birth and growth of the Buitenzorg Botanical Garden (now, the Bogor Botanical Garden, or Kebun Raya Bogor). Although this garden has long been open for the public, the original purpose of its establishment was not to show rare and curious plants for common people but to conduct botanical studies. When the East Indies, which had been occupied by the British for a while during the Napoleonic War, was returned to the Dutch in 1816, King Willem I despatched Dr. Casper Georg Carl Reinwaldt, who came from Harderwijk University [^(84)](#part0011_split_001.html_fn_84) and later became a professor at Leiden, to the East Indies as an advisor for the new governor-general, Baron van der Capellen, with an expectation that the plantation industry could be a key industry in Java where the soil was fertile, plenty of water was available and the population was dense[^(85)](#part0011_split_001.html_fn_85). In fact, the Dutch had been planting various spice plants and coffee trees ever since the VOC era. As soon as he arrived in Java, Reinwaldt proposed to establish a research centre for botanical studies and became the first director of the botanical garden, which was opened in a land of forty-seven hectares in a corner of the governor-general’s estate.
+
+In some books and articles, Reinwaldt is written in a deliberate manner that he was a German, but it does not look to be significant for the present writer. Since Germany in the 19th century prior to the formation of the German Empire on 18th January 1871 was yet to take the form of a modern country, those Germans who aspired to go abroad, which included Philipp Franz Balthasar von Siebold who was to be sent to Japan, went to Holland to seek a chance. As a school named the Reinwaldt Academy to teach museology and cultural heritage and a museum named the Sieboldhuis (Japan Museum) to house the articles collected by Siebold exist in Amsterdam and Leiden, respectively, Dutch people regard them as their country fellows.
+
+A memorable person who worked for the development in the early stage of the botanical garden was Johanes Elias Teysmann who served as a gardener[^(86)](#part0011_split_001.html_fn_86). Oil palm (*Elaeis guineensis* Arec), which is an important plant not only in Indonesia but also in the whole of Southeast Asia, originated in seeds, which he obtained from West Africa in 1848\. The palm oil that is used for manufacturing our margarine and soap may have been obtained from the offspring of Teysmann’s seedlings. Cassava (*Manihot esculena* Euph), a common root vegetable that is also useful to supplement the shortage of rice in the tropic area, was discovered by Teysmann in Batam Island where the plant was merely planted for hedges. The white and sticky starch contained in the spindle-shaped root of 20–30 cm length is commonly served by grating and baking like a pancake, but it is also made into a fermented food, especially in West Java, called *peuyeun* in Sundanese or *tape* in Indonesian. Flamboyant tree (*Delonix regis* Leg), the top part of which turns to a vivid red colour in the beginning of the rainy season everywhere in Indonesia, is said to have been transplanted by Teysmann from Singapore.
+
+Teysmann also introduced cinchona from which quinine, the sovereign remedy for malaria, was extractable from South America and grew the tree in the High-Altitude Botanical Garden in Cibodas (a branch of the Buitenzorg Botanical Garden) established in 1882 and made the East Indies a major quinine supplier, which had a share of seventy-five percent in the world market. Quinine plantations exist in the Bandung Basin still today, even though the synthesis of the same medicine is possible.
+
+It was also in the late 19th century that the cultivation of tea, which had become a common drink in Europe in the previous century and was the underlying cause of the Opium War, started in Java. Whilst the seeds of a tea plant (*Camellia sinensis*) obtained earlier in 1824 from Japan through Siebold did not fit the climate, the Indian species (*Camellia assamica*) introduced in 1878 grew well in the land of West Java and plantations were developed all around there. The production of tea is prosperous until today in plantations in Gunung Mas, Ciwidey and Sukabumi.
+
+![Illustration](images/00099.jpeg)
+
+Tea trees in the Gunning Mas Tea Plantation on the west hillside of Mt. Pangrango in West Java. The tea trees are bigger than that of Chinese species with thicker stems and bigger leaves.
+Photographed by M. Iguchi, February 2006.
+
+Teysmann also worked for the sorting and rearrangement of plants in the garden in cooperation with his assistant, Justus Karl Hassakari. It was in the time of their activity that Alfred Russel Wallace visited there in 1861 and wrote in his book[^(87)](#part0011_split_001.html_fn_87) that “the gardens are no doubt wonderfully rich in tropical and especially in Malayan plants, but there is a great absence of skilful laying-out; there are not enough men to keep the place thoroughly in order…” Hassakari proposed to build a library and a herbarium, which were completed in 1842 and 1844, respectively.
+
+The person who brought up the Buitenzorg Botanical Garden to the number one tropical-plant research centre was Dr. Melchior Treub who was the director in 1880–1909\. He made efforts to modernise research facilities and to enforce fundamental research, and promoted the studies on the causes and remedies of diseases of coffee tree, sugar cane and other plants.
+
+The story of the rubber tree (*Hevea Brasiliensis*), the seeds of which were taken out of Brazil by an English explorer, Henry Wickham, sprouted in Kew Gardens in London and were transferred to Ceylon, Singapore and Java, is written in many books[^(88)](#part0011_split_001.html_fn_88). The first seedlings, which arrived in Buitenzorg in 1876, became the ancestors of rubber trees, which made Indonesia one of the major producers of natural rubber in the world.
+
+![Illustration](images/00100.jpeg)
+
+The oldest rubber tree (*Hevea* Brasiliensis) in Indonesia in the Bogor Botanical Garden, a second generation tree of the first seedling arrive in 1877\. Photographed by M. Iguchi, October 2001.
+
+Gutta percha[^(89)](#part0011_split_001.html_fn_89), which had been used for making folk crafts and small tools, was found most suitable for the insulating covering of submarine cables after the invention of telegraphy and, when the exhaustion of trees[^(90)](#part0011_split_001.html_fn_90) in jungles in Southeast Asia was jeopardised by extensive felling, the research to raise the seedlings and to grow the trees was conducted by Dr. Willem Burck and the first plantation was opened in Cipetir, Sukabumi Prefecture, in 1888\. Then, Java met the whole demand of gutta percha in the world. The process to extract and purify the resin from the twigs and leaves, which was invented by Dr. Burck, long before the establishing of the so-called “macromolecular theory” in the 1920s, and which was to be useful until today, was such a perfect one that the present writer who used to engage in modern macromolecular research could not think of any better alternative method. I believe that Dr. Burck had grasped the characteristics and probably the peculiar molecular structure, now specified as a macro-molecule or a polymer, which is much larger than ordinary simple substances.
+
+![Illustration](images/00101.jpeg)
+
+A beautiful folkcraft (Buginese ship) made all of gutta-percha and coloured with natural pigments. Found in Samarinda, East Kalimantan (Borneo), and stored in the Bogor Research Station for Rubber Technology in November 2007 by M. Iguchi.
+
+The evolution of the golf ball from the original hardwood ball or a lump of feather covered with leather to the solid resin ball and to the ball of rubber threads covered with resins owes much to gutta percha, which was the only natural thermoplastic. Gutta percha was also a chemical-resistant plastic and containers of hydrofluoric acid were seen in all chemistry laboratories in the world until the mid-1970s when cheap synthetic polyolefin became available. Unfortunately, the use of gutta percha is limited only in dental materials today. The late Dr. Budiman, an ex-member of Bogor Rubber Research Station, was much concerned about the future of the historic gutta percha plantation at Cipetir. In a meeting on gutta percha organised by The No. XIII Plantation Corporation and held in 2007 at Gunung Mas, the Governor of Sukabumi promised to consider preserving Cipetir as a cultural asset, but I have not visited there since then.
+
+Cane sugar was also one of the most important estate crops and a special research laboratory was established in 1880 in Pasuruan, East Java, as Buitenzorg lacked the capacity. There, an outstanding new species, which was both disease-resistant and highly productive, was created[^(91)](#part0011_split_001.html_fn_91) to raise Java to the largest sugar producer in the world beyond Cuba.
+
+Dr. Melchior Treub also started a scheme for invited research fellows and opened a visitors’ laboratory in 1884\. Marquis Yoshichika Tokugawa who visited there in 1921 from Japan wrote:
+
+“The laboratory built in commemoration of Dr. Treub was most well equipped and open to visiting researchers from overseas. There were many microscopes and abundant chemicals, books and materials which were put at anyone’s disposal. A young fellow from abroad, called Dr. Boschma, showed me around. He took out a number of frogs from a box which he was studying. They were not special frogs, but he said he employed them for his study on the response of nerves against stimulus. The facilities were extremely good and I wished I could have stayed there for a while and be engaged in my work free from any disturbance.”[^(92)](#part0011_split_001.html_fn_92)
+
+The area of the botanical garden was expanded to sixty hectares in 1892 when Dr. Melchior Treub was in office and later to the present-day eighty-seven hectares in 1927\. The new research laboratory built in 1914 to commemorate the great director with the name of “Treub Laboratorium” on the facade is still of use today. More than one dozen research institutions relating to biology, agriculture and forestry, as well as Bogor Agricultural University, located in Bogor were created with the botanical garden as their core. The fact that the botanical garden is the research centre for tropical plants in Indonesia is still unchanged today.
+
+### **Notes for [Chapter 4](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8)**
+
+________________________
+
+[¹](#part0011_split_000.html_fn1) R. Ng. Poerbatijaraka, *De Batoe-Toelis bij Buitenzorg*, Albrecht & Co., Batavia 1920.
+
+[²](#part0011_split_000.html_fn2) The decoding was first made by R. H. Th. Friederich in 1853, followed by K. F. Holle (1869), C. M. Pleyte (1911), Poerbatjaraka (1921), et al.
+
+[³](#part0011_split_000.html_fn3) The translation in the present text owes to Prof. Iratius Radiman, Bandung, who kindly studied both Sundanese and Dutch texts for the present writer. The year in Saka Calendar expressed by a string of four words was first interpreted as 5, 5, 2, 1, but the inscription of the words were weathered and the third word was also readable as 4\. The year 1455 Saka (1533 AD) accorded with the records in Carita Parahiyangan and other documents. (Moh. Amir Sutaarga, *Prabu Siliwangi: Atau Ratu Purana Prebu Guru Dewataprana Sri Baduga Maharaja Taru Haji Di Pakwan Pajajaran 1474–1513*, P.T. Duta Rakjat, Bandung 1965; Herwig Zahorka, *The Sunda kingdoms of West Java: From Tarumanagara to Pakuan Pajajaran with the royal center of Bogor*, Yayasan Cipta Loka Caraka, 2007). While the present translation is based on Prof. Poerbatjaraka, some lines could be interpreted differently. For instance, the phrase, “made it possible for vehicles to pass mountains” was rendered as “placed a stone to commemorate mountains”, “macadamised roads”, “made mountain-shape garden”, etc. (E.g. Adolf Heuken, *The earliest Portuguese sources for the history of Jakarta*, Cipta Loka Caraka, 2002; Hasan Djafar in, *Ekspedisi Ciliwung*, Penerbit Buku Kompas, 2009).
+
+[⁴](#part0011_split_000.html_fn4) Atja, *Carita Parahiyangan: Naskah Titilar Karuhun Urang Sunda*, Jajasan Kebudajaan Nusalarang, Bandung 1968\. The text (in Sundanese was presented by the author through a personal friend and translated into modern Indonesian by courtesy of a student in Pajajaran University, Bandung. The English translation of the same text was uploaded later in: [http://sundanesecorner.org/2010/12/08/the-story-of-parahiyangan/](http://sundanesecorner.org/2010/12/08/the-story-of-parahiyangan/)
+
+[⁵](#part0011_split_000.html_fn5) The explanation in Yoneo Ishii (Ed.), Encyclopaedia of Indonesia, Domu-shuppan, Tokyo 1991 (石井米雄編「インドネシアの事典」, 童夢出版 1991) under “Pajajaran Kingdom”, that “According to the traditions in Sunda and Java as well as Batu Tulis in Bogor with the Old Javanese letter in the Sundanese language, Ratu Dewata founded the capital here in 1333” is not intelligible. Firstly, 1533 AD is more plausible than 1333 (Footnote 3). Secondly, the year is interpreted as the year when the stone monument was erected by Surawisesa, the 2nd king of Pakuan, not the year of the kingdom’s foundation (*See* Footnote 3). Thirdly, the king is generally called Sri Baduga Maharaja, whilst Ratu Dewata usually designates the 3rd king reigning at Pakuan. Fourthly, the letter was the old Sundanese letter (Sunda Kuno).
+
+[⁶](#part0011_split_000.html_fn6) Saleh Danasasmita, *Sejarah Bogor*, Pemerintah Daerah Kotamadya DT II Bogor, 1983.
+
+[⁷](#part0011_split_000.html_fn7) According to the hypothesis of the present writer, the location was Ciaruteun, the place where Prasasti Ciaruteun and Prasasti Kebun Kopi were discovered (*See* [Chapter 3](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8)).
+
+[⁸](#part0011_split_000.html_fn8) People of Galuh and Sunda were called *orang air* (water people) and *orang gunung* (mountain people), respectively. For instance, the former preferred the water burial, whereas internment was common among the latter. A folklore of crocodile existed in Galuh, whereas that of tiger did in Sunda (Saleh Danasasmita Footnote 6).
+
+[⁹](#part0011_split_000.html_fn9) Chinese text: 新拖國：新拖國有港, 水深六丈, 舟車出入, 兩岸皆民居。亦務耕種。架造屋宇, 悉用木植, 覆以椶櫚皮, 藉以木板, 障以籐篾。男女裸體, 以布纏腰, 剪髮僅留半寸。山產胡椒, 粒小而重, 勝於打板。地產東瓜, 甘蔗, 匏豆, 茄菜。但地無正官。好行剽掠, 番商罕至興販。 諸蕃志卷上・志國 「新拖國」 (Nagoya University, *Zhu fan zhi* [*Accounts of Various Barbarians*] *1/2*, *Sunda Country* (諸蕃志卷上・志國 「新拖國」), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/zhufanzhi1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/zhufanzhi1.html)). Some doubtful Chinese characters have been replaced with reference to other literature.
+
+[^(10)](#part0011_split_000.html_fn10) E.g. Hasan Djafar in, *Ekspedisi Ciliwung*, Penerbit Buku Kompas, 2009.
+
+[^(11)](#part0011_split_000.html_fn11) J. Noorduyn, *Three Old Sundanese poems*, KITLV Press 2006; J. Noorduyn, “Bujangga Manik’s journeys through Java; topographical data from an old Sundanese source”, *Bijdragen tot de Taal-, Land- en Volkenkunde* **138**, no 4, Leiden, 1982\. Page 413–442. (*See* the later part of this chapter).
+
+[^(12)](#part0011_split_000.html_fn12) Yakob Sumarjo*, Khazanah pantun Sunda*, Kelir, Bandung 2006\. The author noted that the source was a copy possessed by Raden Demang Cakradijayah who died in 1853, but older copies must have existed. In fact, the copy I saw in Sumedang was a copy of 1675 (*See* the description in the later part of this chapter). The full text of *Cariosan Prabu Siliwangi* was found later in Agus Setia Permana, “Balangantrang: Cariosan Prabu Siliwangi”, [http://balangantrang.blogspot.jp/2010/05/cariosan-prabu-siliwangi.html](http://balangantrang.blogspot.jp/2010/05/cariosan-prabu-siliwangi.html).
+
+[^(13)](#part0011_split_000.html_fn13) Moh. Amir Sutaarga, *Prabu Siliwangi: Atau Ratu Purana Prebu Guru Dewataprana Sri Baduga Maharaja Taru Haji di Pakwan Pajajaran,* Pustaka Jaya, Jakarta 1965\. In the real history, the couple was firstly crowned at Kawali and secondly at Pakuan.
+
+[^(14)](#part0011_split_000.html_fn14) The name of a place to the northeast of Cirebon, not Singapore Island off the tip of Malay Peninsula.
+
+[^(15)](#part0011_split_000.html_fn15) “Wangi” literally means “flavour”. “Siliwangi” is said to mean the successor of the great king, Prabu Wangi. About the death of Prabu Wangi (Prabu Linggabuana) in a battle in Bubat, East Java, *see* a later part of this chapter.
+
+[^(16)](#part0011_split_000.html_fn16) *Carita Ratu Pakuan* “Naskah Carita Ratu Pakuan (Kropak 410)” [http://babadsunda.blogspot.com/2010/07/naskah-carita-ratu-pakuan-kropak-410.html](http://babadsunda.blogspot.com/2010/07/naskah-carita-ratu-pakuan-kropak-410.html). The book is said to have been written in the late 17th or the early 18th century by a poet, Kai Raga, in Gunung Srimanganti, the present-day Garut county. Although there is a view that this is a sequel of *Cariosan Prabu Siliwangi* (Ann Kumar, John H. McGlynn, *Illuminations: The Writing Traditions of Indonesia*, Weatherhill 1996), it may not necessarily be true because the place of the old capital is different. The old capital is considered to have been Kawali (in the present writer’s understanding), although it is noted as Galuh in Saleh Danasasmita’s book (Footnote 6.).
+
+[^(17)](#part0011_split_000.html_fn17) Ajip Rosidi, *Mundinglaya di Kusumah*, Penerbit Nuansa, Bandung 1956/Yakob Sumarjo*, Simbol-Simbol Artefak Budaya Sunda: Tafsir-Tafsir Pantun Sunda*, Kelir, Bandung 2003.
+
+[^(18)](#part0011_split_000.html_fn18) Andrew N. Weintraub, “Ngahudang Carita Anu Baheula (To awaken an ancient story): An introduction to the stories of Pantun Sunda”, *Southeast Asia Paper No. 34*, University of Hawaii at Manoa 1991.
+
+[^(19)](#part0011_split_000.html_fn19) Amanda Clara, *Cerita Rakyat Dari Sabang Sampai Merauke*, Pustaka Widyatama 2008.
+
+[^(20)](#part0011_split_000.html_fn20) According to the chronicle, the mother of Surawisesa was Kentring Manik Mayang. Note that Ambetkasih bore no legitimate child; Sumbanglarang had three children.
+
+[^(21)](#part0011_split_000.html_fn21) Tome Pires, Armando Cortesao (edit), *The Suma Oriental of Tome Pires and the Book of Francisco Rodriguez Volumes 1 and 2*, Hakluyt Society, London, 1944 (Google Books)/Japanese translation by Yu Aida, Koji Iizuka, Minoru Izawa, Seiichi Izumi, Seiichi Iwao: Tome Pires, *Tohoshokokuki (Daikokai Series V)*, Iwanami Shoten 1966 (トメ ピレス (会田由, 飯塚浩二, 井沢実, 泉靖一, 岩生成一訳)「東方諸国記 (大航海時代叢書V)」, 岩波書店 1966).
+
+[^(22)](#part0011_split_000.html_fn22) In reality, there were three, Ambetkasih, Subanglarang and Kentring Manik Mayang.
+
+[^(23)](#part0011_split_000.html_fn23) Joan de Barros, *Asia de Joan de Barros [II]*, Lisbon 1953/Japanese translation by Shigeru Ikuta, Mineo Ikegami: Joan de Barros, *History of Asia (1), (2)*, Iwanami-Shoten 1981 (ジョアン・デ・バロス (生田滋, 池上岑夫訳)「アジア史 (1), (2)」, 岩波書店, 1981).
+
+[^(24)](#part0011_split_000.html_fn24) Polo (translated by R. E. Latham), *The Travels*, Penguin Classics, London 1958\. The original title was *Il Milione* (*The Million*). While the English title is rather too simple, the common title in Japanese translation, *The record of seeing and hearing in the Orient* (東方見聞録) is too artificial in the present writer’s opinion. Probably, only a few people in Japan know the original title and its significance.
+
+[^(25)](#part0011_split_000.html_fn25) Joan de Barros (Footnote 23).
+
+[^(26)](#part0011_split_000.html_fn26) In *Cariosan Prabu Siliwangi* (1) Subanglarang was the daughter of Minister Mangkbumi and Ki Gedheng Tapa was her brother, and (2) the girl whom Siliwangi obtained after a competition was Larangtapa, daughter of Prabu Singapura.
+
+[^(27)](#part0011_split_000.html_fn27) Saleh Danasasmita (Footnote 6).
+
+[^(28)](#part0011_split_000.html_fn28) Robert Wessing, “A change in the forest: myth and history in West Java”, *Journal of Southeast Asian Studies*, 1 March 1993\. The origin of the story is not shown in the book but supposed to have been *Wawacan Prabu Kean Santang* (*The Song of King Kean Santang*).
+
+[^(29)](#part0011_split_000.html_fn29) Kian Santang was a daughter of Nyai Subanglarang and Walangsungsang was her brother.
+
+[^(30)](#part0011_split_000.html_fn30) Tome Pires (Footnote 20).
+
+[^(31)](#part0011_split_000.html_fn31) Heuken, SJ Adolf, *Historical Sites of Jakarta,* 6th Ed., Cipta Loka Caraka Foundation, Jakarta 2000.
+
+[^(32)](#part0011_split_000.html_fn32) Jan Huygen van Linschoten, *Itinerario, voyage ofte schipvaart naer Oost Portugaels Indien*, 1696, Amsterdam/ Japanese translation by Iwao et al: Linschote, Tohoannaiki, Iwanami Shoten 1968 (岩生成一, 渋沢元則, 中村孝志訳)「東方案内記」, 岩波書店 1968)
+
+[^(33)](#part0011_split_000.html_fn33) Parung Angsana is the present-day Tanah Baru in the northern suburb of Bogor. Cipaku exists in the same name in Bogor city. According to Winker, the width of the road and the distance was three metres and 2.5 kilometres, respectively. The distance matches with the present map.
+
+[^(34)](#part0011_split_000.html_fn34) Saleh Danasasmita (Footnote 6).
+
+[^(35)](#part0011_split_000.html_fn35) It is said it has been designed after Blenheim Palace, the home of the Duke of Marlborough, in Oxfordshire, England, although the scale is incomparably much smaller. (Demetrius Charles Boulger, “Bogor – A Profile”, *Asian Review* Vol. 51, 1955/ Google Books).
+
+[^(36)](#part0011_split_000.html_fn36) In Lutung Kasarung tale, viz. in Stamford Raffles’s *History of Java*, Gelap Nyawang and Kidang Pananjung were said to be the sons of Lutung Kasarung (Manistri, the 11th king of Kendan/Galuh or Dharmasakti, the 9th king of Karang Kamulyan, reigned 783–99AD). Did those chamberlains live for 600 years until the Pajajaran period, as in the Sundanese belief that they had eternal lives?
+
+[^(37)](#part0011_split_000.html_fn37) Jakob Sumardjo, *Paham Kekuasaan Sunda 2008* in: [http://forumbebas.com/thread-22622.html](http://forumbebas.com/thread-22622.html)
+
+[^(38)](#part0011_split_000.html_fn38) Ranggasutrasna (Ki Ngabei), Ranggasutrasna (Raden Ngabei), Paku Buwana IV (Sunan of Surakarta), Darusuprapta, Tim Penyadur, *Centhini, Tambangraras* – *Amongraga Jilid1*, Balai Pustaka, (1999). (Indonesian Translation). *Serat Centhini* is a book in which the story of journeys of three siblings of Sunan Giri Prapen (the first son Jayengresmi, the second son Jayengsari, daughter Rancangkapti and the spouses of the first son and the daughter who married later) who escaped from their palace in Giri, Gresik, East Java, when it was attacked by Sultan Agung of Mataram in the early half of the 17th century. The situation of various places in Java Island where they visited and the words of conversation with scholars whom they met were recorded in details. The book edited in 1815 in the Solonese palace consists of twelve volumes. See more details in [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8) Appendix: Jayabaya Prophecies.
+
+[^(39)](#part0011_split_000.html_fn39) In the following abridged translation book based on the original text, one of the stones is written as “a flat stone”. Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini,* Marshall Cavendish, 2006.
+
+[^(40)](#part0011_split_000.html_fn40) It is recorded that Mt. Salak erupted at least five times in 1780–1938 and once in 1699, whereas Mt. Gede did twenty-one times in 1747–1957 (Oregon State University, “Volcano World” [http://volcano.oregonstate.edu/salak](http://volcano.oregonstate.edu/salak) (Source of Information: T. Simkin and L. Siebert, *Volcanoes of the World: Geoscience Press*, Tucson, Arizona 1994). They are supposed to have been active also before then, although no records are available.
+
+[^(41)](#part0011_split_000.html_fn41) A saying of a 16th-century Protestant lawyer and writer, François Hotman, in *Franco-Gallia: Or, an Account of the Ancient Free State of France, and Most Other Parts of Europe, Before the Loss of Their Liberties [1574]*. [http://www.gutenberg.org/files/17894/17894-h/17894-h.htm](http://www.gutenberg.org/files/17894/17894-h/17894-h.htm)
+
+[^(42)](#part0011_split_000.html_fn42) The hereditary system in the Dutch system is said to have been modelled after the clan system of Tokugawa Era Japan. (J. W. B. Money, *Java or How to Manage a Colony (1861)*, Oxford University Press, Singapore 1985). After Indonesia’s independence, a bupati (regional governor) is appointed by the Minister of Interior. Such countries in which governors, mayors and village chiefs are chosen by direct election are rather rare in the world, save USA and some other countries like Japan. For instance, the Mayor of London was elected for the first time in 2000 AD.
+
+[^(43)](#part0011_split_000.html_fn43) A derivative form of wayang, the famous shadow play in which a picture scroll of Ramayana or some other story is used (*See* [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8)).
+
+[^(44)](#part0011_split_000.html_fn44) In the *Profil Museum Prabu Geusan Ulun* (brochure), the material is written as Kertas (paper). It is not wrong, but Daluang would be more precise.
+
+[^(45)](#part0011_split_000.html_fn45) Soegiarto, Kinarti Aprilani, *Graveyard in the Bogor Botanical Gardens*, Bogor 1999 (This book might be a private print because no publication record has been found).
+
+[^(46)](#part0011_split_000.html_fn46) Fadjroel Rachman, *Bulan Jingga dalam Kepala* – *Sebuah Novel*, Gramedia 2002\. The period of Prabu Siliwangi’s reign and the year of the creation of the graves in the citation are doubtful but are refrained from argument as they were descriptions in a novel.
+
+[^(47)](#part0011_split_000.html_fn47) “Makam Ratu Galuh” by anonymous writer about the tomb of the Queen of Galuh. [http://www.kaskus.us/showthread.php?p=12544441#post12544441](http://www.kaskus.us/showthread.php?p=12544441#post12544441) (28 February 2007). The article has been archived in, [http://archive.kaskus.co.id/thread/4033287/2840](http://archive.kaskus.co.id/thread/4033287/2840)
+
+[^(48)](#part0011_split_000.html_fn48) Buitenzorg Scientific Centre, *Buitenzorg Scientific Centre (brochure)*, Archipel Drukkerij en T. Boekhuis, Buitenzorg 1948. Specifically, the theory is assumed to correspond to the one speculated on the basis of old plays by Suhamir and Salmun cited in Saleh Danasasmita’s book (Saleh Danasasmita, Footnote 6).
+
+[^(49)](#part0011_split_000.html_fn49) In the list of kings in Saleh Danasasmita’s book (Footnote 6/Appendix in [Chapter 3](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8)) are three additional kings, Tariwulan (799–806), Welengan (806–13), Linggabumi (813–52), after the 9th king.
+
+[^(50)](#part0011_split_000.html_fn50) Yakob Sumarjo, *Simbol-simbol artefak budaya Sunda: tafsir-tafsir pantun Sunda*, Kelir, Bandung 2003\. The details of the story are different in other versions, e.g. Andrew N. Weintraub, “Ngahudang Carita Anu Baheula (To Awaken an Ancient Story): An introduction to the stories of Pantun Sunda”, *Southeast Asia Paper No. 34*, University of Hawaii 1991\. Raden Aria Banga who ruled the area to the east of Cipamari (Brebes River) in this tale is considered to correspond to King Sanjaya, the 5th king of Kamulyan, who moved to Central Java and founded the Sanjaya Kingdom, but the time is reversed.
+
+[^(51)](#part0011_split_000.html_fn51) On the southeast slope of Mount Gede/Mount Pangrango at 885 m from the sea-level is a site called “Situs Gunung Padang”. While the site is considered to have been a sacred place opened in 2000 BC, a local tradition says it was a place connected to Prabu Siliwangi. In “The story of Bujangga Manik”, the hero visited there during his training travel.
+
+[^(52)](#part0011_split_000.html_fn52) In *Serat Baron Sakhender*, a story after the fall of the Pajajaran Kingdom written in 18th-century Solo was an ascetic, “Ajar Sukarsi” ([Chapter 1](#part0008_split_000.html_7K4G0-eace0453ad444634b688454ed62f4eb8)). Apart from the time difference, the “Ajar Sukaresi” in Mundinglaya Di Kusumah might be the same person.
+
+[^(53)](#part0011_split_000.html_fn53) Till Dalton (Illust), *Lutung Kasarung*, G. Kolff & Co., Bandung, ca. 1950, etc.
+
+[^(54)](#part0011_split_000.html_fn54) E.g. Christopher Torchia, *Indonesian Idioms and Expressions: Colloquial Indonesian at Work*, Tuttle 2007; Andrew N. Weintraub, “Ngahudang Carita Anu Baheula (To Awaken an Ancient Story): An introduction to the stories of Pantun Sunda”, *Southeast Asia Paper No. 34*, University of Hawaii 1991.
+
+[^(55)](#part0011_split_000.html_fn55) T. S. Raffles, *The History of Java, Vol. II,* London 1817 (Reprint with an introduction by John Bastin, Oxford University Press, Singapore 1988).
+
+[^(56)](#part0011_split_000.html_fn56) J. Noorduyn, A. Teeuw, *Three Old Sundanese Poems*, KITLV Press 2006.
+
+[^(57)](#part0011_split_000.html_fn57) While a mountain called Gunung Patuha exists 35 km to the southwest of the present-day Bandung, the location of Lingga Payung is unknown.
+
+[^(58)](#part0011_split_000.html_fn58) Virile member, the symbol of Hinduism.
+
+[^(59)](#part0011_split_000.html_fn59) With regards to the junk from Bali, the width and the length were indicated as 8 and 25 fathoms (14.6 m and 45.7 m), respectively.
+
+[^(60)](#part0011_split_000.html_fn60) In the whole Java Island, Prasasti Sukabumi, dated as 25th March 804 AD, discovered in Pare near Kediri is the first example of non-Sanskrit inscription (Jawa Kuno), according to P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague, 1974\. Note that this Sukabumi is not Sukabumi in West Java.
+
+[^(61)](#part0011_split_000.html_fn61) Garut, a town, located between Bandung and Ciamis.
+
+[^(62)](#part0011_split_000.html_fn62) Marquis Tokugawa (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004/Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanti Isanasari), *Perdjalanan Moenoedjoe Jawa*, Penerbit ITB 2006 (徳川義親 「じゃがたら紀行」, 郷土出版社 1931 (十字屋書店 1943, 中公文庫1975).
+
+[^(63)](#part0011_split_000.html_fn63) A kind of bamboo-made rattling instrument. While traditional ones had only four tones, modern angklung have adopted the diatonic scale. It is said that angklung originates from the former australoids, known as Kalang (wild devils), who did not become extinct until the early Hindu period (D. M. Campbell, *Java: Past and Present*, *Vol. I*, William Heinemann, London 1915). The inhabitation of Kalang is found in the descriptions in *The Book of Kings in the Archipelago* (Saleh Danasasmita, Footnote 6), around the arrival of Aji Saka (78 AD).
+
+[^(64)](#part0011_split_000.html_fn64) Kara, another name of Yama, the king of the deceased.
+
+[^(65)](#part0011_split_000.html_fn65) Daigoro Chihara, *A history of the construction of shrines and temples in Indonesia*, NHK Publishing 1975 (千原大五郎「インドネシア社寺建築史」, 日本放送出版協会 1975).; Ryuken Sawa (Ed.), *Historical remains and art in Indonesia*, NHK Publishing 1973 (佐和隆研編「インドネシアの遺跡と美術」, 日本放送出版協会 1973).
+
+[^(66)](#part0011_split_000.html_fn66) Perpustakaan Nasional RI, “Kepustakaan Candi: Jawa Barat – Candi Bojongmenje”. [http://candi.pnri.go.id/temples/deskripsi-jawa_barat-candi_bojongmenje](http://candi.pnri.go.id/temples/deskripsi-jawa_barat-candi_bojongmenje)
+
+[^(67)](#part0011_split_000.html_fn67) The custom is mentioned in Ma-Huan’s *The Overall Survey of the Ocean’s Shores* as: “For the wedding ceremony, a male goes first to the female’s house and the parents-in-law receive the bride three days later… (其婚姻之禮, 則男子先至女家, 成親三日後迎其婦…)”. Nagoya University, Ma Huan, *Ying yai Sheng lan* (馬歡, 瀛涯勝覽), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html); Ma Huan, *Translated from the Chinese text edited by Feng Ch’eng-Chuin; with introduction, notes and appendices by J. V. G. Mills*, Hakluyt Society, Cambridge 1970.)
+
+[^(68)](#part0011_split_000.html_fn68) The Oath of Gajah Mada, also called The Oath of Palapa, in which Gajah Mada was said to have vowed to abstain from palapa (spices?) until the whole archipelago was conquered.
+
+[^(69)](#part0011_split_000.html_fn69) In Hindu societies, there was a custom called “suttee”, in which wives committed suicide after the death of their husbands.
+
+[^(70)](#part0011_split_000.html_fn70) Wirasutisna, Haksan, *Kidung Sunda I*, Departmen Pendidikan dan Kebudayaan Jakarta: 1980; Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967; P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, Den Haag, 1974.
+
+[^(71)](#part0011_split_000.html_fn71) *Serat Pararaton atawa Katuturanira Ken Angrok* (*The Book of Genealogy or the Recorded Story about Ken Angrok*) written by an anonymous author in 1481 and 1600 AD. English translation: I. Gusti Putu Phalgunadi, *The Pararaton: A Study of the Southeast Asian Chronicle*, Sundeep Prakashan, New Delhi, India, 1996.
+
+[^(72)](#part0011_split_000.html_fn72) Stuart Robson (trans.), *Desawarnana (Nagarakertagama) by Mpu Prapanca*, KITLV Press, Leiden, 1995\. The book, consisting of 98 stanzas and 1,536 lines, is alleged to have been written by a Buddhist teacher, pen-named Prapanca, who accompanied the inspection tours of Hayam Wuruk, to praise the king. The book did not mention the Bubat War.
+
+[^(73)](#part0011_split_000.html_fn73) E.g. [http://driwancybermuseum.wordpress.com/](http://driwancybermuseum.wordpress.com/). . . ., [http://mentarisenja.wordpress.com/?s=bubat](http://mentarisenja.wordpress.com/?s=bubat), [http://www.wacananusantara.org/6/18/galuh](http://www.wacananusantara.org/6/18/galuh)
+
+[^(74)](#part0011_split_000.html_fn74) In the same age that Yuan attacked Japan in 1274 and 1281, Khubilai Khan sent a mission to Java in 1280, 1281 and 1289, but his demands of subjugation were rejected. In 1292, a large navy was despatched, but they were defeated by the clever trick of Raden Wijaya who was to be the founder of Majapahit. (*See* [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8).)
+
+[^(75)](#part0011_split_000.html_fn75) Kolam Segaran (Kolam=Pool, Segaran=Ocean). The precise size was 375 × 175 m. (Ann R. Kinney, Marijke J. Klokke, Lydia Kieven, *Worshiping Siva and Buddha: The temple art of East Java*, University of Hawaii Press, 2003). According to an archaeologist friend, this reservoir was imitated two hundred years later when Tasikarti Reservoir was constructed in Banten Kingdom, West Java.
+
+[^(76)](#part0011_split_000.html_fn76) According to a caretaker of Trowulan. According to Jonathan Rigg, *The Journal of the Indian archipelago and eastern Asia* (ed. by J. R. Logan). Singapore Vol. II, 1848, 537, it was 14” × 8.5” × 2” (35 cm × 21.5 cm × 5 cm).
+
+[^(77)](#part0011_split_000.html_fn77) Alfred Russel Wallace, *The Malay Archipelago (1869)*, Oxford University Press, Singapore 1985\. “The extreme perfection of brick-works astonished me. The bricks were exceedingly fine and hard, with sharp angles and true surfaces. They are laid with great exactness, without visible mortar or cement, yet somehow fastened together so that the joints are hardly visible, and sometimes, the two surfaces coalesce in a most comprehensive manner. Such admirable brick-work I have never seen before or since.”
+
+[^(78)](#part0011_split_000.html_fn78) “The rule of weight: 1 Jin = 20 Liang, 1 Liang = 20 Quian; The rule of volume: 1 Shen = 10 Ge.”. Chinese text: 「斤秤之法, 毎斤二十兩, 毎兩十六錢, 毎錢四姑邦, ・・・。升斗之法, 截竹為升, 為一姑刺, 該中國官升一升八合, ． ． ．」. Hiroshi Ogawa, *Expeditions of the Chinese to the south* – *Ying-yai Sheng-lan*, Yoshikawa-koubunkan 1988 (小川博「中国人の南方見聞録－瀛涯勝覧」, 吉川弘文館 1988).
+
+[^(79)](#part0011_split_000.html_fn79) Ethnically, Scottish and English are Celtic and Anglo Saxon, respectively.
+
+[^(80)](#part0011_split_000.html_fn80) Eric Oey (Ed.), *Java (Periplus Adventure Guide)*, Periplus (HK) 1997.
+
+[^(81)](#part0011_split_000.html_fn81) Later, the present writer has read an account as follows. In the 15th century after the fall of the Majapahit Kingdom, it was not easy for Moslems to teach the new religion to people who were accustomed to Hinduism and Buddhism. In a meeting of Wali Songo (Nine saints), a young saint, Sunan Kalijogo made a proposal to allow to place gamelan in their mosque, because their drum had only made the people deaf towards the teachings of Islam. Can we not place the gamelan beside the drum as tradition and to adopt the principle of “Container of Hindu-Buddhism and the contents of Islam”? (Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini,* Marshall Cavendish, 2006). The reason why exotic mosques were not constructed at that time might be attributable to this principle.
+
+[^(82)](#part0011_split_000.html_fn82) Peter Turner, *Java,* Lonely Planet Publications, 1999.
+
+[^(83)](#part0011_split_000.html_fn83) The correct spelling would be Friederich. R. H. Th. Friederich was a linguist who authored, *Over inscriptien van Java en Sumatra, voor het eerst ontcijferd*, Batavia, Lange & Co., 1857 and other books.
+
+[^(84)](#part0011_split_000.html_fn84) A famous university established in 1648\. It was abolished in 1811 under the French occupation.
+
+[^(85)](#part0011_split_000.html_fn85) C. R. Boxer, *The Dutch Seaborne Empire 1600*–*1800*, Penguin Books–Hutchinson, London 1990.
+
+[^(86)](#part0011_split_000.html_fn86) J. Levelink, A. Mawdsley, T. Rijnberg, *Four Guided Walks: Bogor Botanic Garden*, Bogorindo Botanics, Bogor 1996.
+
+[^(87)](#part0011_split_000.html_fn87) Alfred R. Wallace, *The Malay Archipelago (1869)*, Oxford University Press, Singapore 1985.
+
+[^(88)](#part0011_split_000.html_fn88) E.g. Tsurutato Nakagawa, *A story of rubber*, Ootsuki-shoten 1984 (中川鶴太郎「ゴム物語」大月書店, 1984); Henry Hobhouse, *Seeds of Wealth*, Shoemaker and Hoard, New York 2003.
+
+[^(89)](#part0011_split_000.html_fn89) The molecular structure of gutta percha is poly-1, 4-*trans*-isoprene, that is an isomer of natural rubber, poly-1, 4-*cis*-isoprene. It is solid at room temperature as the melting temperature is 64˜65°C, whilst the melting point of rubber is -5˜;0°C.
+
+[^(90)](#part0011_split_000.html_fn90) A species named after Dr. Burck, “*Palaquium gutta* burck” is most productive and famous.
+
+[^(91)](#part0011_split_000.html_fn91) Peter Boomgaard, “The making and unmaking of tropical science; Dutch research in Indonesia, 1600–2000”, *Bijdragen tot de Taal-, Land- en Volkenkunde* 162-2/3:191-217, 2006.
+
+[^(92)](#part0011_split_000.html_fn92) Marquis Tokugawa (Footnote 62\. This citation is new in this English edition, not in the Japanese edition.
+
+**Chapter 5**
+
+**Mataram where Gods and Buddha Reside**
+
+### **Rediscovery of Borobudur**
+
+Even those who are usually indifferent to Java may remember Borobudur, and the Java Man, if asked what they have learnt in school about Java. The ancient monument, which is rated as one of the finest cultural heritages of the world, had been hidden for more than one thousand years in the depths of the jungle until it was rediscovered in the beginning of the 19th century. It was during the time of the Napoleonic war when Java was occupied by the British that Thomas Stamford Raffles, who was then the Lieutenant Governor of Java and its Dependencies, heard rumours of the “mountain of statues” called Boro-bodo from local inhabitants and he gave an order to conduct surveys to Lieutenant Colonel Ir. H. C. Cornelis who had formerly engaged in the excavation of the Prambanan ruin that had been known about since eighty years earlier. In his great book, *The History of Java*[¹](#part0012_split_001.html_fn_1), published in 1817, Raffles wrote about the whole particulars that appeared after the felling of rank tropical trees and the removal of thick soil, as follows:
+
+“In the district of Boro in the province of Kedu, and near to the confluence of the rivers Elo and Praga, crowning a small hill, stands the temple of Boro Bodo, supposed by some to have been built in the sixth, and by others in the tenth, century of the Javan era. It is a square stone building consisting of seven ranges of walls, each range decreasing as you ascend, till the building terminates in a kind of dome. It occupies the whole of the upper part of a conical hill, which appears to have been cut away so as to receive the walls, and to accommodate itself to the figure of the whole structure. At the centre, resting on the very apex of the hill, is the dome, of about fifty feet diameter; and in its present ruinous state, the upper part having fallen in, only about twenty feet high. This is surrounded by a triple circle of towers, in number seventy-two, each occupied by an image looking outwards, and all connected by a stone casing of the hill, which externally has the appearance of a roof.
+
+“Descending from thence, you pass on each side of the building by steps through five handsome gateways, conducting to five successive terraces, which surround the hill on every side. The walls which support these terraces are covered with the richest sculpture on both sides, but more particularly on the side which forms an interior wall to the terrace below, and are raised so as to form a parapet on the other side. In the exterior of these parapets, at equal distances, are niches, each containing a naked figure sitting cross-legged, and considerably larger than life; the total number of which is not far short of four hundred. Above each niche is a little spire, another above each of the sides of the niche, and another upon the parapet between the sides of the neighbouring niches. The design is regular; the architectural and sculptural ornaments are profuse. The bas-reliefs represent a variety of scenes, apparently mythological, and executed with considerable taste and skill. The whole area occupied by this noble building is about six hundred and twenty feet either way.
+
+“The exterior line of the ground-plan, though apparently a perfect square when viewed at a distance, is not exactly of that form, as the centre of each face, to a considerable extent, projects many feet, and so as to cover as much ground as the conical shape of the hill will admit: the same form is observed in each of the terraces.
+
+“The whole has the appearance of one solid building, and is about a hundred feet high, independently of the central spire of about twenty feet, which has fallen in. The interior consists almost entirely of the hill itself.”
+
+![Illustration](images/00102.jpeg)
+
+*Borobudur Temple in Boro District Kedu*
+Reproduced from: *Antiquarian, Architectural, and Landscape Illustrations of the History of Java* 1844/John Bastin (preface), *Plates to Raffles’s History of Java*, Oxford University Press, 1989 (Vol. II). This sketch was made by Ir. H. C. Cornelis who conducted the first excavation in 1815.
+
+This news startled the world. It was thirty years earlier than the discovery of Troy ruins by Heinrich Schliemann that was said to be the monumental epoch in the history of archaeology. Who had built such a magnificent structure and when? I read somewhere that among Europeans was someone who believed their superiority to other races raised such a nonsensical speculation that it must have been constructed by Alexander the Great when he reached there during his eastern expedition[²](#part0012_split_001.html_fn_2), because it was hardly possible by Asians.
+
+Nevertheless the wider view was such that the temple had been built by the natives in the 8th–9th centuries when Hindu-Buddhist culture prospered there, long before Islam propagated around the island of Java. Presently, it is commonly understood that the founder was King Samaratungga of the Sailendra and that the year of its completion was 824 AD, as described below.
+
+Although Raffles’s rule was not necessarily successful and left various problems, the Dutch appreciated his efforts for promoting the study of ancient culture of Java and followed the survey of this and other remains, after the restoration of the East Indies to the Netherlands in 1816\. The second survey was conducted by the middle of the 19th century and, after the emergence of photography, Borobudur became widely known in the world. A famous naturalist, Alfred Russel Wallace, who visited the East Indies in the 1860s concluded his paragraph on Borobudur as, “The amount of human labour and skill expended on the Great Pyramid of Egypt sinks into insignificance when compared with that required to complete this sculptured hill-temple in the interior of Java.”[³](#part0012_split_001.html_fn_3) Indeed, it would not be only myself who had the same thoughts as Wallace, after visiting the two sites. While the Egyptian pyramids were a mere stone masonry, the scenes on the bas-reliefs, which Raffles described as “mythological”, had turned out to be not just ornaments but the pictorial explanations of the biography of Gautama and various other sutras. This tradition of “narrative sculptures” was inherited in the temples built shortly after then in Prambanan Plain as well as those constructed in the 12th to 15th centuries in East Java.
+
+Since the concept to preserve such ancient ruins as of Borobudur as cultural heritage was yet to be common in the later 19th century, several pieces of Buddha’s statue were presented to King Chulalongkorn of Siam (the present-day Thailand) when he visited Java, and a tea hut was put on the tower (“central spire”, in Raffles’s term) for sightseers, as taken in a photograph which remains to date. The array of stone pieces in Borobudur was still significantly disordered and irregular at that time. It was after the turn of the 20th century that proper archaeological research commenced and the necessity of preservation was voiced.
+
+The first large-scale restoration was conducted in 1907–11 under the direction of Ir. van Erp, in which as many as one million stone pieces of one hundred thousand tons were registered and rearranged. Marquis Tokugawa who visited there ten years later wrote in his famous essay that, “The Buddhist monument even looked more precious, when I thought over the time and effort that had been spent for the restoration.” [⁴](#part0012_split_001.html_fn_4) I recall this meaningful comment by a scientist and historian whenever I visit this and other ancient remains.
+
+### **The architecture of Borobudur**
+
+The structure of the temple was not a normal building but, as described by Raffles, an object that stone pieces were layed on the surface of a rhyolitic hill covered by clay. The centre of the dome, which was not clear in Raffles’s description, consisted of three layers of circular terraces, the number of stupas (Raffles’s “tower”) on them being 16, 24, and 32, from the top to the bottom, respectively (i.e. 72 in total). Regarding the dome itself as a gigantic stupa, a pole threaded with finial rings was once added on top of the tower, but it was removed later for the lack of historical evidence[⁵](#part0012_split_001.html_fn_5).
+
+![Illustration](images/00103.jpeg)
+
+Cross-section of Borobudur.
+Redrawn on: Karl With, *Java* – *Brahmanische, Buddhistische und Eigenleige Architektur und Plastik auf Java*, Filkwang Verlag. M. B. H. Haben 1\. W. 1920\. Red lines to indicate the locations of reliefs have been added by the present writer.
+
+Such a ringed pole, which can be seen in an old picture of Borobudur, can also be seen today on the office building of West Java Government in Bandung, nicknamed “Gedung Sate”, which is a famous building of Dutch–Javan eclectic style, built in 1924, designed by Ir. J. Gerber, a young architect from Delft Technical Highschool. It was when I guided someone from countryside Java during my stay in Bandung that the hungry guest fell into disappointment, having misunderstood that Gedung Sate was not a sate-house that served “sate”, a skewered meat that was a popular cuisine in Sunda (“gedung” means a “building”). In reality the nickname has its origin on the side view of the ringed pole, which looks like “sate” from the distance, while the architect must have faithfully imaged the ringed pole of a Buddhist temple.
+
+In the Borobudur temple, the numbers of niches on the five terraces were 104, 104, 88, 72 and 64, from the bottom to the top, respectively, and 432 in total, the sum of Buddha statues was 504, by adding those in the 72 stupas on the upper circular terraces. Although those sculptures are similar in both size and shape so that their difference is not easily noticeable for amateurs, their names and the mudra have been identified in detail[⁶](#part0012_split_001.html_fn_6).
+
+![Illustration](images/00104.jpeg)
+
+The ground plan of Borobudur Temple
+Redrawn on: Stutterheim, W. F., *Pictorial history of civilization in Ja*va. Translated by Mrs. A. C. de Winter-Keen, The Java Institute and G. Kolff & Co., Weltevreden, 1926.
+
+It is said that one more uncompleted sculpture of Buddha was discovered during the survey by Hartmann in 1842 in a small cell that existed in the interior of the central tower, and aroused interest at that time, but it could have been a trick by someone to plot a big discovery, as conjectured by Dr. N. J. Krom[⁵](#part0012_split_001.html_fn_5).
+
+Bas-reliefs on the outer wall of the basement and both side walls of the four corridors were as many as 1,300 in number, and they have been interpreted to represent such sutras as Lalitavistara, Jataka, Avadana, etc.[⁷](#part0012_split_001.html_fn_7) Although these sutras are certainly not at all easy to read, at least for myself, the reliefs depicting the life of Gautama (Lalitavistara) on the panels on the main wall of the first corridor can be followed by ordinary visitors. They begin with a scene of Bodhisattva in the heaven and through the scenes of Maya’s conception by seeing a white elephant in her dream, Gautama’s birth and growth, his renouncement from the world and so on, and end with his first lecture.
+
+![Illustration](images/00105.jpeg)
+
+Five scenes from 120 reliefs on the first corridor-parapet (upper row) of Borobudur, showing the Gautama’s life. From the top, [No. 13] Maya dreams a sacred dream, [No. 49] Gautama shows talent of archery, [No. 51] Gautama marries Gopa, [No. 66] Gautama parts from his horse and attendants to go into religion, [No. 120] Gautama gives his first lecture after ascetic practices. From: Hidenosuke Miura (Ed.), *Buddhist monument Borobudur in Java: Folder 1*–*3*, Borobudur Publishing Society 1924 (三浦秀之助撰,「闍婆仏蹟ボロブヅウル第1-3帙」,ボロブヅゥル刊行会 1924). By courtesy of The Tokugawa Art Museum Library .
+
+Besides those exposed reliefs, 120 panels with carvings of some scenes of karma (Mahakarmavihanga) hidden under the ground on the wall of the basement were unearthed and photographed by Dr. J. W. Ijzerman in 1885, before the first restoration, but were buried again, having been judged that the basement had been covered with soil, in the course of the construction of the temple, by changing the original design, in order to reinforce the upper structure. In fact, some of the reliefs were unfinished according to photographs taken at that time.
+
+In addition to those Buddha statues and the reliefs, the building of Borobudur is also ornamented with sculptures, such as Makara, a sea-creature in Hindu mythology, being placed at the foot of each staircase, and of the head of Kala (*Kirtimukha* in Sanskrit means “Glorious face”), the god of death, which originated from Hinduism, being put upon each gate, as well as carvings of various animals, birds and flowers on the frames on the wall and everywhere. One cannot but admire the elaborate and sophisticated idea of the designer.
+
+As to the attributes of the temple, there is one common view that Borobudur was not a stupa but a representation of the tridhatu, the basement with the hidden relief being the Kamadhatu (desire-realm), the square terraces with those of sutras being the Rupadhatu (fine-material-realm) and the upper circular terraces being the Arupyadhatu (non-material-realm). W. O. J. Nieuwenkamp (1874–1950), a Dutch scholar and painter, well known for his fine sketches and woodcuts of Java and Bali, had assumed that Borobudur had represented a huge lotus flower floating on water and drawn such a picture in 1931, judging from the ground-plan of the temple on some unearthed artefacts depicting a lotus rosette and petals around a circular flower-bed, and the results of water-level surveys, which showed that the Kedu Basin beneath the 235-metre elevation line was once a lake[⁸](#part0012_split_001.html_fn_8). Although his theory was fiercely criticised by Ir. van Erp[⁹](#part0012_split_001.html_fn_9), Dr. Soekmono[^(10)](#part0012_split_001.html_fn_10), a current authority of Borobudur wrote that Nieuwenkamp’s hypothesis should not necessarily be rejected as further geological investigation produced evidence in favour of his idea.
+
+The theory to consider Borobudur as a representation of mandala was raised earlier in 1925 by Prof. Seigai Ōmura, an eminent art critic and professor of Tokyo Fine Art School. With reference to his deep knowledge on Buddhist art, he wrote in an article contributed to Prof. Miura’s book[^(11)](#part0012_split_001.html_fn_11) that “Borobudur is neither a *vihara* (temple), a *caitya* (tower) nor a stupa, but a great stone construction of *karma mandala*, one of the four types of mandalas” and that “this had not been perceived by scholars in the world due to their deficient understanding of Esoteric Buddhism.” Unfortunately, his paper does not seem to have caught wide attention, until today, because it was written in Japanese in the not for sale, limited edition book of only 200 copies printed.
+
+Dr. Krom who engaged in the restoration in the early 1900s began the first chapter of his great book[^(12)](#part0012_split_001.html_fn_12) as follows:
+
+“Namo Buddhaya! Hail Buddha! No words more suitable than these could be found with which to begin our description of this mighty monument. How often they must have echoed through the galleries and over the terraces of the Barabudur! To comprehend fully the meaning of this most splendid creation of Hindu-Javan culture, we must transport ourselves, as far as possible, into the mind and spirit of those who, 1,100 years ago, worshipped reverently at the feet of the Lion of the Sakya-race, the Omniscient, the Protector of the Earth in divine majesty.”
+
+Whilst the pilgrims in those days are supposed to have climbed the staircases, led by monks in robes, and received lectures of sutras in front of the reliefs on each terrace, until finally feeling refreshed when they stood on the top terrace, we have to hire a guide in a casual shirt today, as no monks are available in this religiously abandoned temple. Once I met a guide who had profound knowledge on Buddhism, despite the fact that he was a Moslem, and spoke English, Dutch and Japanese. I visited Borobudur for the first time in the mid-1980s and many more times after that during my stay in Bandung and Bogor, to accompany my guests, and experienced every time that I was unconsciously saying, “Namo Amitabha!”, filled with some deep emotion, even though I was not pious in my daily life.
+
+### **The sunrise at Borobudur**
+
+An eminent scholar of English literature and novelist, Tomoji Abe, wrote in his book[^(13)](#part0012_split_001.html_fn_13), “It is said that those who wish to visit the Buddhist remains of Borobudur ought to arrive there before the daybreak and see the sun rising above the peak of Mt. Merapi[^(14)](#part0012_split_001.html_fn_14) from the top of the temple.” I do try and arrange myself to do so whenever my schedules permit. Borobudur is located 40 km north by northwest of Yogyakarta, the principal city of Central Java. If you stay there the previous night, you should get up at 4 o’clock in the morning with the voice of azan (adhan) from a near-by mosque to urge the praying for Allah as the alarm to go to the Buddhist temple. If scheduled to go straight by night train, which arrives from Jakarta or Bandung to Yogyakarta around 3 o’clock in the morning, you must start soon after depositing luggage and sipping a cup of coffee in the station or a near-by hotel. Driving in the dim light for one hour, one arrives at Hotel Manohara near the precinct of the temple, and pays the admittance there. It is still pitch-dark at 5 o’clock. With the aid of a torch given from the hotel, you can sense the stone construction and find one of the four staircases that lead to the upper terraces. On the top of the temple, if Mt. Merapi is not active and no glow is seen on its summit, check the east direction by means of a compass and sit for a while.
+
+![Illustration](images/00106.jpeg)
+
+The sunrise seen from the top terrace of Borobudur.
+19 June 2004, 5:34’32”
+
+![Illustration](images/00107.jpeg)
+
+*Ditto*, 6:05’22” (West Indonesia Time). Photographed by M. Iguchi. Peaks on the left (north) and right (south) are Mt. Merbabu and Mt. Merapi, respectively. Ash is seen trailing on the right-hand side of Merapi’s peak.
+
+After half past five, a scene appears that reminds one of the first paragraph of Sei Shonagon’s *Makura-no-Sousi* (*The Pillow Book*):
+
+*In spring, the dawn* – *when the slowly paling mountain rim is tinged with red, and wisps of faintly crimson-purple cloud float in the sky*.[^(15)](#part0012_split_001.html_fn_15)
+
+Then, one can extend the depiction with respect to the mountain by recalling a *tanka* (short poem) by Rev. Ji-en, compiled in *Shin-kokinshu*:
+
+*On the plain of heaven,*
+*The smoke from Mount Fuji.*
+*Trails in the sky of dawn of spring colour.*[^(16)](#part0012_split_001.html_fn_16)
+
+and replacing Fuji with Merapi, the latter being also a beautiful “konide”, or conical strato-volcano. Although the four seasons are not present in Java of the everlasting summer, the air in the early morning is very soft to the skin as in the spring of mid-latitude countries like Japan. A big difference from those countries is the fact that there is almost no period of twilight in the morning and evening in this low-altitude country. Within a matter of half an hour before the sunrise, the colour of the sky dramatically changes. Located at 110°2” E and 7°36” S, while the West Indonesia standard time line is set at 105° E, the sunrise at Borobudur is around six o’clock throughout the year, the deviation being only a few minutes, but the angle or the position of sunrise related to the axial tilt of the earth is largely variable. Isaw the sunrise once around the summer solstice between Mt. Merapi (2,930 m) and Mt. Merbabu (3,142 m), the latter being located 10 km to the north, but the sunrise was shifted far to the southern foot of Merapi in February.
+
+When the morning mist at the circumference of the monument below clears, being radiated by a godly sunbeam, a beautiful landscape in which palm woods are scattered in the flat fields appears. In the southern direction is seen the mountain range of Menoreh, the skyline of which is said to resemble the lying posture of Gunadharma, the legendary architect from Ceylon who designed Borobudur[^(17)](#part0012_split_001.html_fn_17). The left-hand or the eastern side of the mountain ridge in particular looks like the profile of a man’s face with a low nose and a small chin. To the northwest one can view Mt. Sumbing (3,371 m), which also resembles Mt. Fuji in the distance with Dieng Plateau in the background.
+
+![Illustration](images/00108.jpeg)
+
+A view of Mount Menoreh from the top terrace of Borobudur Temple. Photographed by M. Iguchi, May 2009.
+
+![Illustration](images/00109.jpeg)
+
+The first corridor of Borobudur Temple (The late Mr. Yoshinobu Tokugawa and a guide). Photographed by M. Iguchi, February 2001.
+
+If visiting Borobudur in the daytime, one must walk from the car park through the row of souvenir shops to the main gate and buy a ticket. On entering the approach through the grass field decorated with tropical flowers of vivid colours, the whole view of the temple appears. The temple looks like a crown and one can feel comfortable only up to there. On arriving at the staircase of the building, the visitor becomes drenched in sweat all over the body by the radiant heat from the stones scorched by the sunbeam from right overhead to such an extent that a fried egg may be cooked on the surface.
+
+The sunset at Borobudur is said to present a different grace, although I have not seen it. Marquis Tokugawa wrote as follows[^(18)](#part0012_split_001.html_fn_18):
+
+“When I had a look from the side of the tower, the red sun was about to set behind the mountains that stood in the distance beyond palm fields. It was a gorgeous sunset at an ancient Buddhist monument. What a quiet and tranquil scene it was! The glory of the sunset made the lonely traveller’s loneliness even deeper.”
+
+Another traveller, Frank Carpenter, wrote about the Buddha statues fantastically lit up at midnight by the ray of a full moon, surrounded by dark mountains that must have been more fantastic than his description in words[^(19)](#part0012_split_001.html_fn_19).
+
+The area in the periphery of Mt. Merapi extending from the Kedu Basin to the west, to the Prambanan Plain to the south and to the Solo Plain to the east is the most fertile land in fertile Java, thanks to the volcanic ash incessantly scattered from the volcano, and was called Bhumi Mataram[^(20)](#part0012_split_001.html_fn_20), or the Soil of Mother, where indigenous people inhabited ever since ancient time. In the vicinity of Magelang, ten kilometres north of Borobudur, lies the hill of Tidar, known as the “Nail of Java”, which according to a tradition had fixed the island of Java when it was floating in the sea. Thus, it was reasonable that this location had been chosen as the site to construct this holy temple.
+
+The Borobudur temple is locally called Candi Borobudur. Although the word, *candi*, derived from Candika, an alternative name of the Hindu Goddess Durga, formerly denoted the mausoleums of kings and nobles or the temples for Hindu-Buddhism statues[^(21)](#part0012_split_001.html_fn_21), it became generally applied in later centuries to old religious structures built prior to the Islamisation of Java. Let us adopt this word, *candis* for its plural form, in the text below.
+
+### **Accounts of Borobudur in old documents**
+
+Although it was *The History of Java* of Stamford Raffles that aroused interest in Candi Borobudur in the world, some descriptions on the same candi did exist in Java. In a book published for commemorating the restoration in the late 20th century[^(22)](#part0012_split_001.html_fn_22), two examples were cited. One was *Babad Tanah Jawi* (Chronicle of the Land of Java), which recorded that a certain Ki Mas Dana who had rebelled against King Amangkurat in vain was killed in 1709 at the Hill of Borobudur. The other was in *Babad Mataram* (Chronicle of Mataram) in which it was written that Crown Prince Mancanagara of Yogyakarta who went to the forbidden “Mountain of one thousand statues” to meet a miserable satria (warrior) who was enclosed in a cage, died of a disease on the next day of his return. The satria was no doubt one of the Buddha statues in the stone-basket stupa on the upper terrace of Borobudur.
+
+### **Borobudur visited by a scholar in The Centhini Story**
+
+I had also learnt from the brief view on Google Books on the internet that some descriptions on Borobudur had existed in the *Serat Centhini* (*The Centhini Story*), a book that included a variety of knowledge on early 17th-century Java. In the copy I had recently obtained[^(23)](#part0012_split_001.html_fn_23) in the Taman Pintar book market in Yogyakarta was a detailed story, the abstract of which is as follows:
+
+“Along the way, Mas Cebolang recalled the happy times with his wives, who were like the angels in the abode of Indra. The difficulties and loneliness he encountered on his journeys had sharpened his desire to return to the conveniences of life with them. It was only when he came to a forest that his heart could beat in rhythm with the warble of birds and the sound of nature. By virtue of his upbringing as the son of a great ascetic, his lips mumbled formulas of praise and gratitude towards The Almighty. Allahu Akbar! Allahu Akbar! Allahu Akbar! (The God is great!).
+
+“His steps were guided by faith and stopped only by a stupendous sight, for in front of him loomed an impressive stupa. Although there were already signs of decay due to the ravages of time, the stupa of Borobudur, since its foundation ten centuries ago had always been able to instil feelings of adoration, peace and security among Buddhists and non-Buddhists, with the exception of people without faith.
+
+“Mas Cebolang walked up the temple steps and inspected the reliefs on the walls, which recounted tales from the Jataka stories [stories of living beings who later became the Buddha after living according to religious guidance] and those of noble people who traveled around looking for knowledge and life experiences. He felt inspired when he stopped in front of a Buddha statue with its hands in the dharmmacakra position, which denotes the Buddha instructing the people to live according to the teachings and guidance of the Creator. The Buddha appealed to humanity to follow his path towards nirvana [heaven].
+
+“Likewise, Rasulullah [the Messenger of God] Muhammad ordered his followers to follow his way of life as an example, which was none other than the implementation of the teachings of the holy Qur’an. Tears welled up in his eyes and rolled down his cheeks. As the sun was setting, Mas Cebolang decided to pass the night in the temple. Later, a full moon shone brightly against a blue cloudless sky, its beauty almost perfect. And on Earth, amongst the Buddha statues and, whilst his attendants were snoring, Mas Cebolang was deep in contemplation.”[^(24)](#part0012_split_001.html_fn_24)
+
+As might be expected of a scholar who later married a daughter of the Sunan Giri, a famous family of their cultural tradition, Mas Cebolang’s understanding of the Borobudur reliefs was just right, despite the fact that his religious background was Islam. The fact that he showed profound reverence to Buddha without prejudice to the divinity of a different religion would be attributed to the characteristic of the Javanese who had respect for their ancestors’ faith. The condition of Borobudur at that time is supposed to have been much better than that observed two hundred years later by Stamford Raffles and other visitors.
+
+### **The origin of the name Borobudur**
+
+What was the origin of the name Borobudur? Unfortunately, no hint for answering this question was available in those documents in Java. Apart from a speculation by Stamford Raffles as “Great Buddha”, an authority of Javanese palaeography, Dr. Poerbatjaraka had once proposed that “boro” would mean the Sanskrit “biara” for monastery, and “budur”, the name of a sanctuary of the Vajradhara sect of Mahayana Buddhism, which appeared in *Nagarakertagama* (or *Desawarnana*), a chronicle composed by Mpu Prapanca in 1365 AD. Later, Prof. de Casparis interpreted that a word, “Bhumisambhara-bhudhara” appeared in Prasasti Karang Tengah[^(25)](#part0012_split_001.html_fn_25), dated 842 AD, meant “The mountain of the accumulation of virtue on the ten stages of the Bodhisattva” and that it was the original name of Candi Borobudur[^(26)](#part0012_split_001.html_fn_26)**.**
+
+### **Candis that remain in Central Java**
+
+In central Java, there remains a number of candis, retaining their original superstructure, although the majority of those built in the past, which is estimated at as many as more than 280 in number, have either completely disappeared or retained only some stone pieces[^(27)](#part0012_split_001.html_fn_27). In the vicinity of Borobudur, one can find two more nice candis: Candi Mendut, which houses a large Shakyamuni Buddha Triad (or Shakyamuni Triad, i.e., Shakyamuni flanked by two attendants) in its niche, and Candi Pawon, which is small but elegant and lovely. In the Prambanan Plain, a group of Hindu candis, called Candi Loro Jongglang (commonly known as Candi Prambanan), which rank with Borobudur in their scale and magnificence stand, along with Buddhist Candi Kalasan, Candi Sewu and others. There are eight old Hindu candis in Dieng Plateau, and some more in Gedung Songo on the slope of Mt. Ungara, although I have not been to the latter place[^(28)](#part0012_split_001.html_fn_28).
+
+![Illustration](images/00110.jpeg)
+
+Historical sites in Central Java
+G (Gunung)=Mountain, K (Kali)=River, C (Candi)=Temple
+The topographical map was prepared with DIVA-GIS Country Level Data.
+
+### **A beautiful statue of** **Shakyamuni in Candi Mendut**
+
+Candi Mendut can be easily accessed as it is located 2.9 kilometres to the east of Borobudur on the highway from Yogyakarta. When discovered in 1834, this candi was buried in a jungle in such a condition that only its top part was exposed on the ground, and many stone blocks had been taken away by near-by inhabitants for their housing. Having been restored in 1908 by Ir. van Erp, the candi stands with a dignified appearance in a precinct, as wide as a soccer field, surrounded by banyan and other tropical trees. On the basement with a staircase in its front side, which measures 24 metres wide, 28 metres deep and 3.5 metres high, a massive temple with a floor size of 13.7 metres square towers. The pyramid-shaped roof ornamented with small stupas has now been restored over the last few years, and the total height is 26.4 metres, whereas the top part of the temple was still flat when I visited there in 2003\. The whole surface of this candi is decorated with elaborate carvings. On the three outer walls, on the left, the back and the right sides of the building, are huge bas-reliefs of 3.5 metres wide and 2.5 metres high, which depict eight-armed Tara, four-armed Kwannon and four-armed Tara, respectively. On the wall of the entrance to the niche, there are beautiful reliefs of Hariti (goddess of childbirth and children), Yaksha (demon warrior) and others, in which the elegant “flying celestial being” appeared most attractive to me. Probably a whole day will be necessary if you wish to see all of the building’s detail.
+
+In the niche, one finds a big statue of Shakyamuni Buddha, which is about 3 metres tall, flanked by statues of Bodhisattva Avalokitesvara and Bodhisattva Vajrapani, both of 2.5-metre height, on the left- and right-hand sides, respectively. The nimbus for them looked rather small for the size of the statues. One feature that looked interesting to me was that each of them was sitting on a chair, the Shakyamuni hanging both legs down, the Avalokitesvara and the Vajrapani horizontally folding their left and right legs, respectively, because most Buddha statues, including all of those that I saw in Borobudur and elsewhere, sat cross-legged or stood upright. I speculate that the monk who ordered these statues might have been influenced by Hellenism in India or somewhere else. The mudra of Shakyamuni was apparently the wheel-of-law turning mudra, whereas those of the Avalokitesvara and the Vajrapani looked to be the blessing mudra and the earth-touching mudra, respectively. Besides the fact that the surfaces of these sculptures were well finished and smooth as if they were not made of a stone but a metal, I was impressed by the beautiful face of Shakyamuni, which was rather long-shaped with a shapely nose, not round like those in Borobudur or the giant statues of Buddha in Nara and Kamakura, Japan.
+
+![Illustration](images/00111.jpeg)
+
+The Shakyamuni Triad in Candi Mendut
+Photographed by M. Iguchi, February 2012.
+
+![Illustration](images/00112.jpeg)
+
+Upper part of Candi Mendut (viewed from the southeast)
+Photographed by M. Iguchi, February 2007.
+(The top of the upper part was unreconstructed and flat in pictures taken in June 2004.)
+
+In the outside of the dark niche, the green leaves, the yellow aerial roots and the dark-brown trunks of banyan trees showed a vivid contrast under the bright sunlight. It was when I visited there for the first time that a famous *tanka* (short poem) by Akiko Yosano[^(29)](#part0012_split_001.html_fn_29) came up in my mind. She sang:
+
+*Here in Kamakura
+the sublime Buddha is of another world,
+but how like a handsome man he seems,
+adorned with the green of summer.*
+
+Later, I found the same impression given by Yusuke Tsurumi[^(30)](#part0012_split_001.html_fn_30) in his old travelogue, i.e. “If this were shown to the genius Akiko, the phrase of ‘how like a handsome man he seems, adorned with the green of summer’ would have been produced in Mendut.”
+
+In the *Serat Centhini*, there were some descriptions on the visit of Mas Cebolang to Candi Mendut. He was so deeply moved also by this candi that he spent the night in the niche together with the statues of Buddha and Bodhisattvas.
+
+Relatively recently, I saw a signboard of “Mendut Monastery” outside of the precinct of Candi Mendut and visited there with my friends. It was a cosy, modern monastery. An entrance path lined both sides with several stone stupas of about two metres tall stretched straight forward seen from the gate and a small temple and a monk’s quarters, both single-storey, were situated on the left- and right-hand sides. The chief priest came to guide us after receiving a notice from an apprentice who was cleaning the ground. About ten metres ahead by the side of the path was a standing statue of Bodhisattva guarded by a sculpture of raksasa (giant) and at the end of the path was a big stupa of five- to six-metre height. On the left-hand side, there was a small hall of traditional Javanese architectural design, called *pendopo*, in the middle of a lotus pond, and in the hall was enshrined a statue of cross-legged Shakyamuni, made of white granite, with a golden halo behind, which looked rather new. According to the chief monk, it was presented in 2002 by Rev. Ryogen Furusho of Zenyouji Temple, Kawasaki, Japan, as written on a commemorative tablet. He told us that their denomination was Mahayana Buddhism. He also told us with deep emotion that now the monastery had such beautiful statues, buildings and garden and six members, whereas it had only humble bamboo huts when he opened the monastery twenty years ago with one of his colleagues. To my question, “Are you also taking care of Candi Mendut?”, he replied, “The candi is maintained and cleaned by the government, but we perform rituals several times a year.” I thought that the Shakyamuni Triad who had no pilgrims for ten centuries would be pleased and left the monastery by offering some banknotes for incense.
+
+![Illustration](images/00113.jpeg)
+
+A statue of Shakyamuni in the Mendut Monastery and the chief monk
+Photographed by M. Iguchi, February 2007.
+
+Both Buddhism and Hinduism were, of course, brought from India. Although the migration of Indians to Java would have commenced ever since prehistoric time, one party who immigrated and built their own kingdom is said to be Aji Saka and his followers who arrived around 78 AD, and the location of their settlement, Medang Kamulan, is supposed to be somewhere around the present-day Semarang. According to tradition, they had to fight against Negroids, whom they called “Rasaka” (wild devils), who had inhabited there, since before the migration of Javanese, and were still in existence at that time[^(31)](#part0012_split_001.html_fn_31). The Indians introduced their culture and social systems and taught letters, i.e. the Sanskrit scripts from which Java Kawi was derived in later centuries, as well as calendar, i.e. called Saka Calendar, in which the year of Aji Saka’s arrival or his death, 78 AD, was defined as the first year. The fate of their kingdom is uncertain at least to me.
+
+### **Sanjaya Dynasty** – **Records in Prasasti Canggal**
+
+The first dynasty evidently existing in Java was the Sanjaya Dynasty. The name of the first king, Sanjaya, was recorded in a stone inscription, called Prasasti Canggal, written in Pallava script and dated 732 AD (654 Saka), which was discovered early in 1879 at the site of a ruined temple at Canggal in the south Kedu. Although its abstract is repeatedly cited everywhere, let me translate the contents from the Indonesian text[^(32)](#part0012_split_001.html_fn_32) in a faithful manner (S = Stanza).
+
+| S 1 | [This is the monument for] The construction of Linga by King Sanjaya on the mountain. |
+| S 2–6 | Homage to Lord Shiva, Lord Brahma and Lord Vishnu. |
+| S 7 | Java is very prosperous, rich in gold mines and much production of rice. On this island, Shiva Temple was built for the happiness of people with the help of residents of Kunjarakunja Village. |
+| S 8–9 | The island of Java was formerly ruled by Sanna who was very wise, fair in his actions, brave in war and generous to his subjects. On his death, the country mourned, being sad for the loss of the protector. |
+| S 10–11 | The successor of King Sanna is his son named Sanjaya who is likened to the Sun. Power has been handed over to him not directly from King Sanna but through the king’s elder sister, Sannaha. |
+| S 12 | Prosperity, security and tranquillity [is maintained in] the country. People can sleep in the middle of roads, do not need to be afraid of thefts and robberies, or the occurrences of other crimes. People live all happily. |
+
+The Kunjarakunja village in this prasasti is supposed to be in the vicinity of Sleman-Muntilan in the Kedu Basin at the west foot of Mt. Merapi.
+
+According to a copper inscription, called Prasasti Mantyasih, left by King Balitung in 907 AD, the family line of the Sanjaya commenced by Ratu Sanjaya and the name of Balitung himself was found in the last, eighth place[^(33)](#part0012_split_001.html_fn_33). Sanjaya’s name bore a royal title as *Rakai Mataram Sang Ratu Sanjaya* and, hence, the kingdom was called the kingdom of Mataram[^(34)](#part0012_split_001.html_fn_34) in later times.
+
+### **Sailendra Dynasty** – **Records in Prasasti Kalasan**
+
+With regard to the Sailendra Dynasty, which had presumably existed around the same age, mention was found in a stone inscription, called Prasasti Kalasan, discovered at a Buddhist temple, Candi Kalasan, in the Prambanan Plain, leading to a presumption that the dynasty was prosperous to such an extent to be able to have such a fine temple. The translation of the content of the inscription from the Indonesian text is as follows[^(35)](#part0012_split_001.html_fn_35):
+
+| S 1 | Prayer and homages to Arya Tara, hopefully the devotees can achieve their goals. |
+| S 2–3 | Teachers of the king of Sailendra asked Maharaja Dyah Pancapana Panangkaran to construct Candi Tara. The petitions of the Teachers are the building of a statue of Dewi Tara, the temple, and several houses for the priests who are versed in the knowledge of Mahayana discipline. |
+| S 4–6 | The three high tax officers[^(36)](#part0012_split_001.html_fn_36) received orders to make Candi Tara and houses for priests. Candi Tara was founded in the affluent land of the king, who became “The decoration the Sailendra”, for the benefit of the teachers of the king of Sailendra. In the year Saka 700 [782 AD], Maharaja Panangkaran finished building of Candi Tara, where the Teachers made offerings. |
+| S 7–9 | Kalasan Village was awarded. The three high tax officers, the prosecutor of the village and high officials became the witnesses. The land gifted by the king are well guarded by the king’s successors of the Sailendra Dynasty, by the successors of three high tax officers and officials who are wise. Then, the king repeatedly asked all kings who will rule later that the temple shall be preserved forever for the happiness of all people. |
+| S 11–12 | Thanks to the construction of the monastery, everyone is expected to gain more knowledge about the birth, obtain and follow tibavopapanna [^(37)](#part0012_split_001.html_fn_37) and follow the teachings of Jina. The noble Kariyana Panangkaran repeated his request to all kings who will follow to complete the monastery into the perfect state. |
+
+The “Candi Tara” must be no other than Candi Kalasan and the ruling king of the Sailendra is regarded to be King Wisnu (alias Dharmatunga) who was mentioned in a contemporary inscription, left in Ligor[^(38)](#part0012_split_001.html_fn_38), Malay Peninsula, as “a brave killer of enemies”.
+
+The name of King Indra, the successor of King Wisnu, appeared in a stone inscription, named Prasasti Kelurak, dated 782 AD, discovered in Kelurak village in the Prambanan Plain, which mentioned that “Sri Sanggrama Dhananjaya [the throne name of Indra] gave an order to construct a sacred Buddhist temple to house the statue of Manjusri who held the wisdom of Buddha, dharma [law] and sangha [priests]”[^(39)](#part0012_split_001.html_fn_39). The temple is regarded as Candi Sewu in the Prambanan Plain.
+
+In this connection, I may add that there is a proverb in Japan, “If three persons gather, they can produce an idea comparable to that of Manjusri.” To my shame, I have never thought about the true meaning, but the proverb may be better corrected as “One must rely upon the three treasures (Buddha, dharma and sangha) to attain the wisdom of Manjusri”, although no mention was found in dictionaries I have ever checked. In fact, the wisdom of Manjusri could not be obtained even if three mediocre persons gathered together.
+
+### **The construction of Candi Borobudur**
+
+With regard to the construction of Candi Borobudur, a hint was available in the aforementioned Prasasti Karang Tengah, dated 824 AD. Although the inscription, which consisted of two parts written in Sanskrit and Old Javanese, was partially damaged, the contents were interpreted by Dr. de Casparis. In the first part, it was written in Sanskrit, that (1) Pramodawardhani, daughter of Samaratungga (reigned 812–33 AD), built a Jinalaya (Buddhist temple) and placed a beautiful statue in Saka 746 (824 AD), which shines as if the moon descended on the earth, and that (2) the establishment of a Jinamandira (Buddhist temple) called Srimad Venuvana (Sublime Bamboo-Grove) is expected to earn the reward of accomplishing the tenth stage of Bodhisattva’s career to become a Budda and, as long as gods reside on Mount Meru and the sun shines in the sky for the life of thousands of inhabitants, the temple is hopefully full of the virtue of Buddha; while in the second part of Old Javanese language was read that (3) Rakai Patapan and his wife had donated rice fields (for a temple) and villagers were invited as witnesses[^(40)](#part0012_split_001.html_fn_40).
+
+Although the names of the three temples were implicit in this inscription, Dr. de Casparis concluded with reference to the records in other inscriptions that (1) Candi Jinalaya built by Pramodawardhani was Candi Pawon dedicated to King Indra; that (2) Candi Jinamandira was Candi Borobudur completed by Samaratungga; and that (3) Rakai Patapan was another name of King Garung of the Sanjaya and the temple that received a donation from him was Candi Mendut built by King Indra[^(41)](#part0012_split_001.html_fn_41).
+
+### **The Sanjaya and the Sailendra dynasties**
+
+Then, how were the Sanjaya and the Sailendra families related? By sorting out the kings’ names in “Balitung’s list”, Dr. N. J. Krom proposed a theory that the main dynasty in Java at that time was Sanjaya, but two persons from the Sailendra had reigned, but a single-dynasty theory in which all kings appearing also in Prasasti Kalasan, Prasasti Kelurak and other inscriptions belonged to one family was proposed, bringing about a lot of arguments[^(42)](#part0012_split_001.html_fn_42). In the 1950s, Dr. de Casparis had extensively studied this problem and launched the two-dynasty theory in which the Sailendra was a powerful family independent from the Sanjaya.[^(43)](#part0012_split_001.html_fn_43)
+
+Later, in 1963, a stone inscription, which was suggestive of the origin of the Sailendra was discovered in Sojomerto, Kabupaten Pekalongan[^(44)](#part0012_split_001.html_fn_44). This inscription written in Old Malay and dated 725 AD refereed to a certain adherent of Siwa, named Dapunta Selendra and mentioned that the names of his father, mother and wife were Santanu, Bhadrawati and Sampula, respectively[^(45)](#part0012_split_001.html_fn_45). “Selendra” must be the Malay spelling of Sanscrit “Sailendra”, and the fact that the language used was Old Malay suggested that the founder of the family might have come from Sumatra. Note that the Malay language that formed the basis of the modern Indonesian language originated from the area around the east part of Sumatra and the Strait of Malacca.
+
+While Dr. de Casparis’s two-dynasty theory was monumental, the single-dynasty theory voiced by another famous palaeographer, Dr. Poerbatjaraka, and others still receives support from some researchers as questions are cast on the two-dynasty theory even in recent publications[^(46)](#part0012_split_001.html_fn_46). Personally, I should like to accept Dr. de Casparis’s theory (*See* Table 1).
+
+The throne of the Sanjaya Kingdom was succeeded, after Rakai Balitung, by Daksa (910–19), Tulodong (919–21), Dyah Wawa (924–8) and Mpu Sindok (928–9). In 928 AD, Mpu Sindok moved the home of the kingdom to the bank of Brantas River in East Java, by abandoning the land of Central Java, and founded the new capital at Medang, the location being assumed to be the area of the present-day Jombang. Thus, the Mataram Kingdom that prospered in Central Java for two centuries disappeared.
+
+King Samaratungga of the Sailendra married Princess Tara of the Sriwijaya Kingdom, which contemporarily flourished in Sumatra (Prasasti Nalanda, undermentioned). In his time, the Sailendra Kingdom had not only ruled the central part of Java Island but had relations with South and Southeast Asia, as a statue of Bodhisattva was presented to Borobudur from Bengal in 782 AD and a high-priest of Ceylon visited Java ten years later on the occasion of the inauguration of a temple [^(47)](#part0012_split_001.html_fn_47). To the question why the Sailendra were able to construct such a stupendous temple as Borobudur at the time of Samaratungga, I would assume that, in addition to the greatness of the king himself, it had largely owed to the wealth of his wife’s country, which was extremely prosperous from sea-trade.
+
+### **The** **unification of Sanjaya and Sailendra kingdoms**
+
+According to Dr. de Casparis[^(48)](#part0012_split_001.html_fn_48), the Sailendra and the Sanjaya kingdoms were virtually united when Pramodawardhani got married to Rakai Pikatan, the then crown prince of Sanjaya, around 832 when her father Samaratungga retired. Prince Balaputradewa, the younger brother of Pramodawardhani, who was still an infant at that time, later insisted the continuation of the Sailendra’s lineage in Java and resisted against his sister and her husband, but eventually moved to the Sriwijaya Kingdom, his mother’s country in Sumatra, and succeeded the throne of the kingdom. Apparently, he seems to have held the title of Sailendra, as it was described in the stone inscription in Nalanda, India, that stated, that “In 860 AD, King Balaputra of Sailendra had built a monastery and King Dewapala of Bengala had donated five villages for its maintenance. Balaputra was the son of Samaragrawira (Samaratungga) who was the grandson of ‘The decoration of the Sailendra’ and his mother, Tara, daughter of Dharmasetu (King of Sriwijaya), who was as beautiful as Goddess Tara.”[^(49)](#part0012_split_001.html_fn_49)
+
+Rakai Pikatan ascended to the throne in 838 AD, several years after his marriage with Pramodawardhani, and constructed a group of Hindu temples, represented by Candi Loro Jonggrang, in Prambanan, the details of which having been written in Prasasti Siwagrha erected by his son, Balitung, in 856 AD[^(50)](#part0012_split_001.html_fn_50). That Rakai Pikatan did not exclude Buddhism can be understood from the fact that a fine Buddhist temple, Candi Plaosan, in the neighbourhood, was built by Sri Kahulunan (the royal title of Pramodawardhani) in cooperation with her husband, as recorded in Prasasti Sri Kahulunnan[^(51)](#part0012_split_001.html_fn_51).
+
+Table 1 The genealogies of the Sanjaya and the Sailendra families (Based on Dr. de Casparis’s Two-Dynasty Theory)
+
+| Sanjaya | Sailendra |
+| Ratu Sanjaya (c. 732–760) | Selendra (c. 725?)* ? |
+| ![Illustration](images/00114.jpeg) | ![Illustration](images/00114.jpeg) |
+| Rakai Panangkaran (c. 760–780) | Bhanu (c. 752–775) ? |
+| ![Illustration](images/00114.jpeg) | ![Illustration](images/00114.jpeg) |
+| Rakai Panunggalan (c. 780–800) | Vishnu (Dharmatunga) (c. 775–782) |
+| ![Illustration](images/00114.jpeg) | ![Illustration](images/00114.jpeg) |
+| Rakai Warak (c. 800–819) | Indra (Sangramadhanamjaya) (c. 782–812) ? |
+| ![Illustration](images/00114.jpeg) | ![Illustration](images/00114.jpeg) |
+| Rakai Garung (c. 819–838) | Samaratungga (c. 8l2–832) (Married to Princess Tara, Sriwijaya)* ? |
+| ![Illustration](images/00115.jpeg) | ![Illustration](images/00114.jpeg) |
+| Rakai Pikatan (c. 838–851) | Pramodawardhani (married to Rakai Pikatan) |
+| ![Illustration](images/00114.jpeg) | Balaputra (moved to Sriwijaya)* |
+| Rakai Kayuwangi (c. 851–882) |  |
+| Rakai Balitung (c. 898–910)* |  |
+
+From: G. E. Hall, *A History of South-East Asia 4th Ed*. Macmillan Education 1981.
+( ): The period of reign in AD, (*): Added by this writer (M. Iguchi)
+
+As to the reason of the marriage between the Sanjaya’s Prince Pikatan and Sailendra’s Princess Pramodawardhani, we often see such a view that it was for political convenience in that, for instance, “Samaratungga pursued peace and wished to be able to concentrate in the construction of Borobudur”[^(52)](#part0012_split_001.html_fn_52). According to the view of Dr. de Casparis et al.[^(53)](#part0012_split_001.html_fn_53), the Sailendra was in a superior position over the Sanjaya and the latter was almost a vassal country at that time. I would like to imagine, romantically, that Pramodawardhani had fallen in love with Pikatan who attended on her father and that the father gave permission for the couple to marry. Pramodawardhani must have been an active woman as her father relied on her support for the building of temples and probably other matters. At least, she must not have been a sort of just graceful and modest princess who obeyed her parents to go marry someone who was not of her taste.
+
+### **Sima, an enigmatic queen in the Books of Tang**
+
+The age when the Sanjaya and the Sailendra prospered in Java corresponds to the era of the Tang Dynasty in China. In the *Old Book of Tang* (舊唐書, or *Old History of the Tang Dynasty*)[^(54)](#part0012_split_001.html_fn_54), completed in the mid-10th century, there were some accounts on “Ka-ling Country (訶陵國)” situated on an island in the southern sea. The book mentioned the geographical position that “The east is Bali, the west is Dva-pa-tan, the north is Chenla [Cambodia], the south faces ocean”[^(55)](#part0012_split_001.html_fn_55), the kingdom’s outline that “they make their castle with hardwood, make multi-storeyed palaces roofed with the bark of hemp-palm. The king sits in it, the whole floor of which is made of ivory”, the culture and customs that “they do not use chopsticks to eat but take foods by fingers. They have letters and good knowledge of calendar. They make wine from the [stem of] palm flower (…)”, and referred to their despatch of embassies in 640, 768, 769, 815 and 818 AD, including monks in 815 AD in particular. In the *New Book of Tang* (新唐書, or *New History of the Tang Dynasty*)[^(56)](#part0012_split_001.html_fn_56) issued one century later, the following accounts were added. “The seat of the king is in She-po (闍婆). The founder, Ki-yen (吉延), moved to the east from Pa-lu-ka-si (婆露伽斯). In this region there are twenty-four small countries, all of them serve as vassals. (…) On the summer-solstice, a gnomon of 8 feet high, if erected vertically, casts a shadow of 2 feet 4 inches (2.4 feet) long on the south side. (…) In Shangyuan Period [674–5 AD], the country people assigned a female, named Sima (悉莫), to the throne. Her rule was just and things dropped on the road were not taken up. (…)” The name of the country, Ka-ling, alternatively pronounced as Holing, also appeared in Buddhism books, one example being *Legends of the teaching of Secret Mandala* by Konghai, in which the author received a lecture from Huiguo together with a monk from Kalinga named “Benhong” .
+
+The old and the new books of Tang have been of interest to scholars ever since the late 19th century[^(57)](#part0012_split_001.html_fn_57), and what country corresponded to Ka-ling and “who was Queen Sima and who was Ki-yen who moved the capital to the east” became big issues. By applying “Ka-ling” to Kalinga, the country’s association with India was argued, but it was no more than a speculation. As to the geographical position, it was pointed out that the incidental angle of the sunbeam, written in the *New Book of Tang*, indicated 6°8’ N that did not fall in Java Island[^(58)](#part0012_split_001.html_fn_58). Today, however, the capital of Ka-ling (or Kalinga) is considered to have existed somewhere around the present-day Semarang, or Pekalongan (where the Prasasti Sojomerto was discovered), or Keling Village in Kabupaten Jepara[^(59)](#part0012_split_001.html_fn_59).
+
+### **The lineage of the Sima, the Sanjaya and other families found in history books written in West Java**
+
+I was aware of the fact that Sanjaya was a person who moved from Galuh Kingdom, in West Java, to Central Java, which I had read somewhere. Looking again into the *Sejarah Bogor (History of Bogor)* by Prof. Saleh Danasasmita[^(60)](#part0012_split_001.html_fn_60), I found some accounts on the relationship between the Sanjaya’s lineage and the Kalinga, which was as follows.
+
+“King Mandiminyak, the 5th king of Galuh Kingdom, married Parwati, a daughter of Queen Sima of Kalinga. He had a son named Sanna. Between Sanna and Sannaha, a granddaughter of Sima, Sanjaya was born. Sanjaya was adopted as a son-in-law by his father’s friend, Tarusabawa, the first king of the Sunda kingdom, married to the latter’s daughter, Tejakancana, and became the 2nd king of Sunda. His real father, Sanna, was ousted from the throne in 716 AD by his half-brother (same father and different mother) and fled to Kalinga, the country of his wife’s grandmother. Although Sanjaya had revenged on his father’s sworn enemy and simultaneously assumed the crown of Galuh (the 5th), he abdicated the throne in favour of his son, Tamperan (also called Rakeyan Panaraban) in 723 AD and became the King of North Kalinga, as a rightful successor. He married Sudiwara, a daughter of King Dewasinga of South Kalinga (Bumi Sambara) and Panangkaran was born between them, etc.”
+
+Unfortunately, the source of the documents was not given for this citation. I have remembered a book entitled *Pustaka rajya rajya i bhumi Nusantara* (meaning, *The Book of Kings in the Land of Archipelago.* Hereinafter, *The Book of Kings*, for short)[^(61)](#part0012_split_001.html_fn_61), compiled in the 18th century in West Java, and took up the file of its photocopy from my bookshelf. To my surprise, many facts about the Sanjaya family and its relation to Kalinga were written in it in significant detail. Let me summarise the corresponding part and translate from Indonesian language, because no direct reference to this book has been found in books and articles that I have surveyed.
+
+“In Sumatra, Sriwijaya Kingdom had gained the hegemony by 613 Saka (691/692 AD) and was dominant over other countries. While Sriwijaya had a pact with Sunda Kingdom of West Java, signed between the former’s King Jayanasa and the latter’s King Tarusabawa in 607 Saka (686 AD) and ambassadors were exchanged between them, they were always envious of the Keling Kingdom, which was very fertile and rich.
+
+“In the Keling Kingdom, Prabu Kartikeyasingha had died in Mt. Mahameru[^(62)](#part0012_split_001.html_fn_62) and his wife, Dewi Sima was on the throne. The kingdom had a friendly relationship with China, having sent an embassy with priests and astrologers in 570 Saka (648/649 AD) during the reign of King Kartikeyasingha. and another embassy in 578 Saka (666/667 AD). Before then, Kartikeyasingha’s father had sent embassies to China in 554 Saka (652/653 AD) and 562 Saka (640/641 AD). The founder of the Keling originated from the south Bharata (India).
+
+“Dewi Sima was an elegant and charming woman unrivalled in Java, a perfect beauty like a heavenly maiden. Sri Jayanasa of Sriwijaya had fallen in love with Sima, but his love was not realised, because Sima disliked him to such an extent that she would kill herself, if marrying the man was inevitable. Notwithstanding, Jayanasa persistently approached and distressed Sima. Apart from her hatred, the religions were different between the kings of Sriwijaya and Java, as they followed the Mahayana Buddhism and the Saura [a fact of Hinduism], respectively. It was also known that Sriwijaya had plundered the gold and diamonds from Melayu [a kingdom in Sumatra] whom they had subjugated.
+
+“In 608 Saka (686/697 AD), the king of Sriwijaya attacked Java, but in vain, because the Chinese Empire, Bakulampra Kingdom, Hujung Mendini Kingdom and other Indian countries supported Java. Then, the king of Sriwijaya ordered Javanese merchant ships berthed in the ports of Palembang and Bangka to return home, robbing their properties. In addition, the king gave orders to pirates to attack the Javanese on the sea.
+
+“Sunda Kingdom was not agreeable with the ambition of the king of Sriwijaya and asked him for calmness and reconsideration.
+
+“According to the history, Sriwijaya Kingdom conquered the regional kingdom of Sanghyang Hujung and created a sanctuary there.
+
+“Below is the narration of a great poet. Dewi Sima and Prabu Kartikeyasingha had children, two of them being Dewi Parwati (daughter) and Nalayana (son). Dewi Parwati married to Sang Mandiminyak, the king of Galuh, and they had a daughter named Dewi Sannaha. Mandiminyak married also Pwah Rababu and had a son named Sang Senna (alias Sang Bratasennawa). Senna married Sannaha and a boy named Rakryan Sanjaya was born between them. Senna was ousted from the throne by Purbasora.
+
+“Sanjaya conquered King Purbasora of Galuh and became the king of Galuh. Sanjaya had already ruled Indraprahasta Kingdom [the present-day Cirebon]. It was because Indraprahasta was supporting Galuh, as Purbasora’s wife was a daughter of the Indraprahasta, and, in fact, the army that defeated King Senna was the troops of Indraprahasta, led by Purbasora himself. By the assault of Sanjaya, the king of Indraprahasta, Purbasora and his wife, astrologers, ministers and officers were killed.
+
+“Moreover, Sanjaya advanced his army towards the east and subjugated many kingdoms in Central and East Java. Then, he attacked many countries in Sumatra, including Melayu, Sriwijaya and Barus. After then, he turned to the north. Sanjaya’s campaign lasted for three years.
+
+“In 645 Saka (732/733 AD), Sanjaya became the king of Medang in the Soil of Mataram (Medang i bhumi Mataram). Sanjaya was succeeded by his son, Panangkarana. His wife was a woman of the Selendra. Then, the Selendra became a powerful kingdom. The land of Central Java was divided and the northern and southern parts became the territories of the Sanjaya and the Selendra, respectively.”
+
+The year of Queen Sima’s coronation, 674/675 AD exactly coincides with the Shangyuan Period (674–5) recorded in the *New Book of Tang*. The years of sending embassies to China in the West Java chronicle do not agree with those in the *Old Book of Tang*, but I would refrain from arguing the reason, rather conjecture that the former document, edited in the later century on the basis of fragmental records and oral traditions, had inevitable errors. That “Keling”, “Selendra” and “Senna” denote the same words as Kalinga, Sailendra and Sanna, respectively, is undoubtful.
+
+The fact that the parents of Sanjaya, Sanna and Sannaha, were both son and daughter of the same father, Mandiminyak, born from different mothers, Rababu and Parwati, is noteworthy. Although a marriage between a half-brother and a half-sister is hardly thinkable nowadays, from both ethic and genetic viewpoints, some cases were there in old days also in Japan and elsewhere in the world[^(63)](#part0012_split_001.html_fn_63).
+
+Next, I wished to check the famous *Carita Parahiyangan* (*The Story of Parahiyangan*), written on lontar strips around the 16th century by an anonymous author, but the text I had obtained by courtesy of an authority through my friend in Bandung was still in Old Sundanese, which was hardly readable by myself. Then, I asked a student of Sundanese Literature Department of Pajajaran University to translate it into modern Indonesian, and found some accounts on the life of Sena (Sanna), such as follows[^(64)](#part0012_split_001.html_fn_64):
+
+“Pwah Rababu, a daughter of the Lord of Kendan had once a coitus with Lord Makadria, as her father told, but later married to Rahiang Sempakwaja, who became the Governor of Galungun, and gave birth to two sons, Purbasora and Demunawan. One day, when she went to Galuh, she was seduced by Mandiminyak, the youngest brother of her husband, who had succeeded the throne of Galuh, and after months delivered a male baby who was named Salah. Having been told by her husband to give the baby away to Mandiminyak, she took him to Galuh. Mandiminyak said, “Oh, this is my son!”, but ordered his retainer to put the baby in a vase and carried it to the field. When the retainer left the vase and returned, a sign shone from the field to the sky, but the baby was still alive. He was renamed Sang Sena. Sena succeeded the throne of Galuh, after his father, but seven years later he was expelled by Purbasora and fled to Mt. Merapi [Central Java].”
+
+From this description, it has become evident that Purbasora and Sanna (Sena) were half-brothers from different mothers and that the expatriation of the latter by the former was a sort of family discord. With regard to the transfer of power from Sanna to Sanjaya, the clause in Prasasti Canggal that it was done “not directly from King Sanna but through the king’s elder sister, Sannaha” was quite ambiguous, but now it could be alternatively interpreted as “through the king’s consort, Sannaha” or “through Sanjaya’s mother, Sannaha”. It might have been probable that the status of Sannaha who was the legitimate child from the legal wife of Mandiminyak was higher than that of Sanna who was an illegitimate child from the wife of Mandiminyak’s brother.
+
+Among the facts that Sanjaya conquered many countries in Java Island as well as Melayu and China (?), also written in *Carita Parahiyangan*, a line that he “waged war against Keling and defeated Sang Sriwijaya” (Sang=a respectful title) has provoked a thought in my mind. Although Kalinga had rejected the approach of Sriwijaya in the era of Queen Sima (according to *The Book of Kings*), was Kalinga under the rule of Sriwijaya at the time of the queen’s great-grandchild?
+
+Although Sanjaya was a great king in West Java, *Carita Parahiyangan* mentioned that he was estranged by Kuku (alias Seuweukarma), his father’s half-brother and Purbasora’s younger brother, who became the king of Kuningan, as well as other local rulers, as a killer of a family member, suggesting that this could be the major reason of Sanjaya’s move to Central Java.
+
+The description in *The Book of Kings* that “Panangkaran (the son of Sanjaya who was born after his father’s move to Central Java) took a woman of the Sailendra to wife and, then, the Sailendra became a powerful kingdom” told that a marital relationship was formed between the two families, although who the woman was was not written. This could be the reason, or one of the reasons, why Panangkaran was so cooperative with the Sailendra in the construction and the maintenance of Buddhist temples and probably in other matters.
+
+The phrase, “King of Medang in the Soil of Mataram (Rajya Medang i bhumi Mataram)” in *The Book of Kings* has appeared on some stone monuments, giving the Mataram Kingdom founded by Sanjaya another name, “Medang Kingdom”. Because later kings occasionally moved their capital (e.g. Rakai Pikatan to Mamrati and Dyah Balitung to Poh Pitu), however, Medang Kingdom may be more precise to be applied for the whole period of the Sanjaya Dynasty[^(65)](#part0012_split_001.html_fn_65).
+
+Another description in the same book that the area of Central Java was divided into the northern and southern parts and shared by the Sanjaya and the Sailendra, respectively, is probably noteworthy. Whether this book was refereed or not is unknown; this demarcation is written in general books and textbooks for secondary high-school in Indonesia[^(66)](#part0012_split_001.html_fn_66), along with the fact that “while Candi Gedung Songo on the mountainside of Ungaran in the northern part of Central Java and groups of candis in Dieng Plateau were built by the Sanjaya, many candis in the Kedu Basin and Prambanan Plain were built by the Sailendra”. One remarkable exception is a group of candis in Prambanan, represented by Candi Lolo Jonggrang, which is comparable with Candi Borobudur in its scale and magnificence (to be undermentioned).
+
+The name of Sudiwara, daughter of the king of South Kalinga, Dewasinga, whom Sanjaya took as his wife in Central Java, mentioned in *The History of Bogor,* was found in a stone inscription, dated 760 AD, discovered in Dinoyo near the present-day Malang. In addition to the fact that “the centre of the kingdom existed in Kanjuruhan”, it was written that “once, there was a just and powerful king named Dewasinga. This monument is to commemorate the construction of a temple, by his son, Gajayana, to enshrine the new statue of Agastya to replace the old rotten piece”.[^(67)](#part0012_split_001.html_fn_67)
+
+The fact that Gajayana had established himself in this district must correspond to the “transfer of the kingdom” written in the *New Book of Tang*, and Gajayana himself is regarded as Ki-yen. The fact that the two events, i.e. the transfer of the kingdom by Ki-yen in the late 8th century and the enthronement of Queen Sima in the late 7th century, are written in chronologically reverse order in the *New Book of Tang* must be heeded, as it is generally said the records in this *New Book* are frequently confused, while those in the *Old Book of Tang* are not.
+
+Extracting the names of kings, consorts, princes and princesses appearing in above documents and adding some more names found in some articles[^(68)](#part0012_split_001.html_fn_68) on *Babad Galuh* (Galuh Chronicle), I have drawn a genealogical chart that includes the families of Sanjaya, Queen Sima and others.
+
+![Illustration](images/00116.jpeg)
+
+The reason of Gajayana’s move to East Java has not been concluded. If one was to assume that he was expelled from Central Java by Sanjaya, the husband of his sister, Sudiwara, the question of why their relationship was so bad has to be answered. I would prefer to think that, in such a circumstance that the Buddhist Sailendra gained power and Sanjaya’s son, Panangkaran, was the supporter of Buddhism, Gajayana had decided to explore a new land for Hinduism in East Java.
+
+From the *New Book of Tang*, Kalinga seems to have continually sent ambassadors to China after Gajayana’s move to East Java. As to the question why the same book lacked accounts on the Sanjaya and the Sailendra dynasties, I can only speculate that the Chinese had no information, having received no diplomatic mission. In any event I would assume that the existence of Kalinga in Central Java had ended by the move to the east by Gajayana.
+
+### **Consideration on Borobudur**
+
+Let us stop the review of the difficult history and return to Borobudur. From the records of stone inscriptions, the construction of Borobudur is considered to have required forty-two years, ever since it was commenced by King Indra in 782 and completed by King Samaratungga in 824\. Although priests and architects might have been invited from Sriwijaya and India, the majority of inhabitants at that time would have been Javanese as inferred from the sculptures that ornamented the temple. The features of Buddha statues looks to have portrayed the gentle, round faces of Javanese men, and the appearance and gesture of people on the reliefs depicted their characteristics. In *Journeys to Java*, Marquis Tokugawa cited a comment of Mr. Hidenosuke Miura, then an assistant professor, from Tokyo Fine Art School, who he incidentally met there, “It is interesting, isn’t it? The life of Javanese people depicted here of more than one thousand years ago is not so much different from the life of today’s Javanese.”
+
+Prof. Miura’s *Javanese Buddhist Remains* – *Boroboedoer*[^(69)](#part0012_split_001.html_fn_69), published in 1925, with photographs of all reliefs and statues of Borobudur, is regarded as a rival of the aforementioned book of Dr. Krom as complete image recording of Borobudur. When I saw the book in the Tokugawa Reimeikai Library, I was much surprised by the sharpness of the reliefs in the photographs taken only ten years after the temple’s first restoration. When such photographs are compared with the real sculptures that we see today, we can notice how seriously erosion has progressed on the stone surfaces after exposure to air. The condition looks to have worsened during the last quarter-century, ever since I saw them for the first time, as they have suffered from acid rain. It is said that the whole Borobudur temple was originally covered with plaster and coloured. A humble researcher of polymer chemistry, I wondered whether it could not be possible to protect them with a thin layer of some silicone varnish even from now. When I had the honour of accompanying the late Mr. Yoshinobu Tokugawa, an expert of art history and archaeology, to Borobudur, he told me, “It is a difficult issue as if you did so would mean that you would spoil the object. One could say the fact that the ruins were excavated itself was the beginning of destruction!” I had also thought that it could not be impossible for modern technology to put a huge roof to cover the whole temple, as was done for the Wimbledon court and some baseball fields, but it would not match the original concept conceived by King Indra and Rev. Gunadharma twelve hundred years ago. The making of replicas of historical relics is a common practice, but it can be only applied to some limited number of components, such as statues and reliefs, not to the whole gigantic monument. After all, I thought that photographs, especially those taken in early days, would be of immense value as records for the future. With the current imaging technology, to create three-dimensional images of all statues and reliefs or the image of the whole of Borobudur would not be difficult.
+
+There was a tragic episode in the book of Prof. Miura in that “To publish his new theory, the manuscript, the photographic plates and other materials were brought to a printing company in Kanda-Mitoshiro Street [in Tokyo] and the book was just ready to be turned to the binding process, when the Great Kwanto Earthquake [1 September 1923] occurred and everything was reduced to ash.[^(70)](#part0012_split_001.html_fn_70)” Probably, a backup copy of the manuscript must have been safe in a different place.
+
+It is said that the social structure in Java around the 8th–10th centuries was not of such feudalistic type as in Western Europe in which the land and the military service were interlinked. In Java, in exchange for receiving services, the kings gave lands to religious organisations, high officials and royal family members, and granted rights to collect taxes and to operate industrial and commercial activities. No slave system had existed and farmers had a duty to serve for a certain number of days in agricultural off-seasons. Although they were often recruited as non-skilled labourers for the construction of temples, they would have served themselves with a pious mind. Professional architects and sculptors who were indispensable for the construction of Borobudur and other temples were probably exempted from other duties and formed artisan groups[^(71)](#part0012_split_001.html_fn_71).
+
+Nevertheless, whether the whole design of Borobudur was imaged and drafted up by the legendary architect, Gunadharma, alone is an open question, while, if it were today, a project team of one hundred selected members of Buddhism scholars, architects and artists would be organised and several thousand sheets of drawings would be prepared with full use of computer graphics. At that time when even a sheet of paper was yet to be produced[^(72)](#part0012_split_001.html_fn_72), it is hard to imagine how the master architect was able to notify the details of his design to his engineers and artists. The generation of his staff and labourers must have altered during the construction period of some forty years. In Europe, there are many churches and cathedrals that were built in several hundred-year periods, but their construction is considered to have been the continuation of much simpler works compared with that of Borobudur.
+
+As a Buddhist monument, Dunghuang (敦煌) in China is much better known in Japan, apparently because NHK has spent an enormous amount of money and persistently broadcast the film, apart from a famous novel by Yasushi Inoue[^(73)](#part0012_split_001.html_fn_73) and fine sketches by Ikuo Hirayama[^(74)](#part0012_split_001.html_fn_74). Statues and paintings of Buddha installed in several thousand caves of Dunghuang from the 4th to the 11th century are no doubt valuable for the study on the diffusion of Buddhism on the northern route, but all those relics are the kind of things that had been arbitrarily and sporadically brought there by unspecified people. When I had a chance to visit Dunghuang, I was impressed that, in terms of the artistic value, the remains are inferior to the temple of Borobudur, which had been built according to a single concept at one time.
+
+### **Dieng Plateau**
+
+Before visiting Prambanan, let me report on the situation of Dieng Plateau. It was twenty years ago that I went there for the first time. From Yogyakarta, my party took a route to the north to Tumanggung and, by turning to the left, passed the col between two mountains, Sumbing and Sundro, which both showed their beautiful conical forms. We stopped at Wonosowo and stayed overnight in a small losmen (tavern). It was cool but so cold on the mountainside town of 2,000-metre elevation from the sea-level that I had to request a pail of hot water to take a mandi (shower). Next morning, we drove off again to Dieng Plateau located twenty kilometres to the north, above 200 metres, on a winding road that was much steeper and sharper than that over the Hakone Pass in Japan or probably the famous Hanguguan in China. The hills on both sides were well cultivated and I was told that various vegetables grown there were transported far away to the market of Yogyakarta. There were some greenhouses to grow mushrooms, too. While I was thinking over the efforts of the authorities who had constructed this metallised road a hundred years ago and the hard labour of farmers, the car brought us to Dieng of 2,200-metre elevation from the sea-level. The circumstance of the tableland of 1 kilometre east–west and 1.5 kilometres north–south with gentle undulations was dreary, where the vegetation was quite shabby, some cypress trees with dark-green needles only on their top parts standing to and fro. I was told that to see morning frost, or even thin ice, was not rare in dry seasons. In the middle of the plateau was a small lake, which was turbid with a white colour produced by sulphur, reminding me that the place was an old caldera. On a small hill was an experimental geothermal power station, which emitted white steam together with the smell of sulphur. Just for information, Indonesia is now the second leading geothermal-power-producing country after the United States of America, while the abundant geothermal resources are little used in Japan due to various regulations.
+
+Next day, we first visited several Hindu temples, named Candi Arjuna, Candi Semar, etc., named in a later century, located in the northern part of the plateau. They were masonry works with a basement of some ten metres square and ten to fifteen metres tall, the roofs of which had not been restored. The inside of the niches were empty, as statues had been removed to some museums. They were said to have been constructed around 670–730 AD in the early period of the Sanjaya Dynasty, and the carvings on the walls were far less sophisticated than those of candis built later in Kedu Basin and Prambanan Plain. Candi Sembadra in the western part and Candi Bima in the southern part of the tableland were said to be the constructions built in the beginning of the 13th century, suggesting that Hinduism was maintained by some local lord after the move of the Sanjaya Dynasty to East Java, although the make of those candis was simple.
+
+Walking around Dieng Plateau, I really wondered why ancient people had chosen this remote highland as the site of their worship, by providing footpaths with several thousand steps from the foot, from four directions. The name of the place, Dieng, was derived from the Sanskrit Dihyang, which meant the abode of the gods. In an old Javanese manuscript, *Tantu Panggelaran*[^(75)](#part0012_split_001.html_fn_75), was told a mythical story, which follows.
+
+### **A myth on the birth of Java Island**
+
+“Bhatara Guru [Lord Shiva] created the island of Java together with his wife, Bhatari Parameswari [Durga] and provided Mount Dihyang [Dieng], but the island was drifting on the sea. Shiva ordered the gods to move the sacred mountain, Mahameru, from Jambudipa [India] and put it on Java as a weight to stabilise it. Visnu and Brahma transformed themselves into a long serpent and a huge turtle, respectively, and the latter carried Mount Mahameru on his back, while the former put himself around to bind it. When Mahameru was placed on the western part of Java, the island was unbalanced and tilted. During the process of moving Mahameru eastwards, the mountain broke apart and six more mountains, i.e, Kantong, Wilis, Kampud, Kawi, Arjuna, and Kemukus, were formed along the route.”
+
+Mt. Mahameru, alternatively called Mt. Semeru, located to the east of the present-day Malang as the highest peak in Java (3,666 m), is still a sacred mountain, especially for Tenggerese, an ethnic group who live around the area and have worshipped Shiva ever since the Majapahit time. Note that Semeru is equivalent to the Chinese Xumishan (須彌山) or the Japanese Miyaukau-zan (or Myōkō-zan, 妙高山). When I spoke about Mt. Semeru to my old friend, a textile engineer and scholar of Japanese history as well as a mountaineer who had conquered many high peaks in the world, he pointed out that Semeru would lead to “Sumera”, an archaic Japanese word for emperor. According to his theory, the Sanskrit word, “Semeru”, for “the supreme being”, originating in ancient Indian philosophy prior to the birth of Hinduism and Buddhism, must have been introduced in Japan in the unknown past and applied to “emperor”.
+
+### **Prambanan**
+
+Now let us go to Prambanan. If one takes the main road from Yogyakarta towards Solo for twenty kilometres in an east by northeast direction, a group of Candi Loro Jonggrang appears on the left-hand side like towers. As mentioned above, these temples built in the mid-9th century had been embedded under the soil and vegetation, like Borobudur, until their existence was reported in 1733 by C. A. Lons of VOC. Although Baron van Imhoff, who served as the governor-general of the Dutch East Indies (1743–50) and known as the founder of the Buitenzorg estate, had once visited there in the mid-18th century, the first cleaning operation was conducted much later in 1807 by Ir. H. C. Cornelis under Governor-General Engelveld. Stamford Raffles who saw the ruins six years later wrote under the heading of ‘Chandi’ Lolo Jongglang (or Temples of Lolo Jonggrang):
+
+“These lie directly in front (north) of the village of Brambanan and about two hundred and fifty yards from the road, whence they are visible, in the form of large hillocks of fallen masses of stone, surmounted, and in some instances covered, with a profusion of trees and herbage of all descriptions. In the present dilapidated state of these venerable buildings, I found it very difficult to obtain a correct plan or description of their original disposition, extent, or even of their number and figure…”[^(76)](#part0012_split_001.html_fn_76)
+
+![Illustration](images/00117.jpeg)
+
+*The big temple at Prambanan*
+Reproduced from: *Antiquarian, Architectural, and Landscape Illustrations of the History of Java* 1844 (John Bastin (preface), *Plates to Raffles’s History of Java*, Oxford University Press, 1989). This sketch was made by Ir. H. C. Cornelis who conducted the cleaning operation in 1807.
+
+Although an archaeological survey was commenced at last in 1885 by Dr. J. W. Ijzerman, the original form of the buildings was still completely unknown. After the turn of the 20th century, a study was followed by such famous scholars as Drs. van Erp and de Haan and the restoration was started in 1937\. After the interruption during the Second World War, the central Candi Siwa was rebuilt in 1953, four years after the independence of Indonesia. The efforts of restoration were persistently continued and it was in the 1990s that all eight candis in the central area were reconstructed into the present forms.
+
+Entering the gate of the Prambanan Archaeological Park and walking about one hundred metres forwards, one will see some stone blocks of black colour on the ground that are a few metres lower than the surroundings, and notice that many small structures had stood around there in the past. The outer precinct of 222metres square, elevated about two metres from the peripheral ground is the place where 224 small candis used to be arrayed surrounding the inner precinct of one hundred metres square. Although many of them have been rebuilt into the shape of candis, others retain only their basement with numerous stone pieces miserably scattered at random. Passing through the front gate and entering in the inner precinct, everyone is overwhelmed by huge candis centred by the largest Candi Siwa. Candi Siwa has a main hall twenty metres high with a tall pyramidal roof of over twenty metres standing dignifiedly on a basement of thirty-four metres square and five metres in height, hence, the total height being forty-seven metres.
+
+![Illustration](images/00118.jpeg)
+
+A bird’s-eye view of Candi Lolo Jonggrang Temple Complex from Google Earth. 1: Shiva, 2: Visnu, 3: Brahma, 4: Nandi, 5: Angsa, 6: Garuda, 7: Apit.
+The names of candi, from: Dwi Marno Sukandar et al., *Guide to the Prambanan Temple*, Yogya ADV 1991.
+
+The majestic appearance ornamented with several hundred bell-shaped ratna (jewels) on the parapet of the gallery (or corridor) and the roof and various fine bas-reliefs on the outer and inner walls of the whole building, as well as large Kala heads, cannot be depicted by my pen. Seven other candis are more or less similar in shape and also fully ornamented with sculptures, although they are smaller in size.
+
+The figure of the candis with a gently pointed roof was said to represent Mount Semeru, but how people were able to reconstruct such a beautifully shaped tower full of ornaments from dispersed stone pieces was my big question. According to a contemporary report[^(77)](#part0012_split_001.html_fn_77), it was done by trial and error, by sorting out and studying the shape of scattered blocks and building various parts one by one on the ground. Supposing that it must have been equivalent to having solved a huge, intricate three-dimensional jigsaw puzzle, I pay my deep respect not only to the work of ancient architects who had originally built these exquisite temples, but also the time and effort of all the people who were involved in their reconstruction, whenever I visit Prambanan.
+
+![Illustration](images/00119.jpeg)
+
+Reconstruction drawing of Candi Siwa elaborated for the operation commenced in 1937\. From: V. R. van Romondt, “De wederopbouw van den Çiwa Tempel te Prmbanan”, *Djawa* No.3, 20, 1940.
+
+### **Candi Lolo Jonggrang temple complex**
+
+If one ascends five metres on the staircase at the front (east) of the basement, passes the gate with a Kala head on its top, and ascends three metres more, you find a large niche of about eight metres square in which a statue of Lord Shiva (Shiva Mahadewa) with four arms, three metres tall, that has been given the name of Candi Siwa, stands. The statue is said to represent King Rakai Pikatan who had built the Candi Loro Jonggrang[^(78)](#part0012_split_001.html_fn_78). On that account, the intrepid face looks to be that of a human rather than that of the Supreme Deity. Turning around the gallery of the same candi, one finds three more niches of a little smaller sizes (ca. five metres square) in the south, the west and the north sides of the main hall, which accommodate statues of Mahaguru (Shiva’s ascetic form as a great teacher), Ganesha (Shiva’s elephant-headed son and the god of wisdom and prudence)[^(79)](#part0012_split_001.html_fn_79) and Durga (Shiva’s consort in her destructive form). The statue of Durga is believed to be the figure of Loro Jonggrang, a legendary princess who was transformed into stone, which gave the name of Candi Lolo Jonggrang to the group of candis in this precinct. The goddess of war, the eight-handed Durga, stands on the Nandi (ox) by pulling up the ox’s tail with her front-side right hand, pressing the head of Asura with her front-side left hand, and holding bow, arrow, sword and other weapons with her six other arms. Let me cite the description by Marquis Tokugawa in his *Journeys to Java*:
+
+“Perhaps, this statue is one of the masterpieces. Her pose is not such that will lead a viewer into a pious feeling, but is rather erotic. Although it was carved from a cold stone, she looked quite soft, as if warm blood streamed underneath her skin. I thought that the sculptor would have wished to express the carving, not as a goddess, but as a human. Perhaps Javanese people, having their own optimistic thoughts conceived through their easy lifestyle in the tropics, might consider a god, or a goddess, as a close existence to people, rather than putting him, or her, aside in a remote place. In any case, it was quite wondrous to imagine the vitality and efforts of an ancient artist who had made such a marvellous work with a chisel, whether the artist was motivated by his religion or by his dedication to art.”
+
+![Illustration](images/00120.jpeg)
+
+The statue of Durga
+Photographed by M. Iguchi, February 2006.
+
+If the statue of Shiva depicted Rakai Pikatan, I believe that this Durga must have been modelled after Pramodawardhani and feel attracted by her not necessarily very beautiful but charming face and her voluptuous figure, whenever I visit there.
+
+In the gallery, which surrounds the main hall, one finds forty-seven reliefs of Ramayana[^(80)](#part0012_split_001.html_fn_80) panelled around the inner wall of the parapet (*See* an example of reliefs in the front-cover), and the carvings of Lokapalas (the guardian of the world) of eight divine forms[^(81)](#part0012_split_001.html_fn_81) placed on the eight sides of the main hall wall to protect the temple from evils. The fact that those Lokapalas sat cross-legged and posed various mudras was interesting and I thought these might have been the images of sculptors who had engaged in the sculpturing of Buddha statues in Buddhist candis. The word, Lokapala, reminds one of Dyah Lokapala (or Mpu Lokapala), the original name of Rakai Balitung, son of Pikatan and Pramodawardhani, who succeeded the throne after his father’s abdication. Whether the statues are related to the prince is uncertain, at least to my knowledge.
+
+![Illustration](images/00121.jpeg)
+
+The corridor of Candi Siwa with (the late) Mr. Yoshinobu Tokugawa.
+Chand Brahma is seen in the back. Photographed by M. Iguchi, February 2002.
+
+If you leave the main hall and look at the temple again from outside, you will see, all around the outer wall of the parapet, interesting panels in the middle of which is a lion who sits facing outward in a small niche and on both sides of it unique motifs called “Prambanan motifs”. The motif has a symmetrical divine tree in the middle, a pair of birds flying on the upper parts and a pair of various animals, such as kinara-kinari (male and female avians with human upper body), deer, hares, mice, etc. On the upper part of the main hall wall, there are fine sculptures of “Apsara Trios” as well as celestial beings who are dancing and playing instruments.
+
+The works of sculptures at Candi Lolo Jonggrang looked distinguished among many of those in other candis, including Candi Mendut and Candi Borobudur. I supposed that probably the artisans who had previously engaged in the sculpturing at Borobudur and other temples had improved their skill and joyfully worked again in this new grand temple. The masterpiece of masterpieces is said to be one of the “Apsara Trio” that “cannot but fascinate anyone who sees their amorous figures. An episode has it that, in the early 20th century, an American millionaire offered one hundred million dollars, but was unquestionably rejected by the Dutch government of the East Indies.”[^(82)](#part0012_split_001.html_fn_82) Unfortunately, because the erosion of stone has progressed in Prambanan as in other remains, such sharp carvings as in photographs taken a century ago[^(83)](#part0012_split_001.html_fn_83) can hardly be seen today.
+
+![Illustration](images/00122.jpeg)
+
+A view of the upper part of the wall of Candi Siwa, Prambanan with Apsara Trio (middle), Makara (top-left) and Ratuna (top-right).
+
+![Illustration](images/00123.jpeg)
+
+Examples of the so-called “Prambanan-Motif “ on the lower part of the wall of Candi Siwa depicting hares (left) and foxes (right).
+Photographed by M. Iguchi, February 2012.
+
+A piece of contemporary sculpture, which strongly caught my eye during my recent visit to the British Museum, London, was a stone figure of Kinari, of ca. 25 cm height, displayed in the Southeast Asia section and labelled as collected by Sir Stamford Raffles in the Shiva Temple, Prambanan. It was especially interesting because I was only familiar with Kinara or Kinari carved in the bas-relief of the temple’s wall. Unfortunately, the place in the temple where this stand-alone sculpture was found was not specified. Among several other sculptures of the same age was a statue of Brahma of ca. 40 cm height, with three faces looking in the front, left and right directions, although where it originated was unknown.[^(84)](#part0012_split_001.html_fn_84)
+
+![Illustration](images/00124.jpeg)
+
+Stone figure of Kinari (female human upper body avian) of the 9th**–**10th centuries Java, from Shiva Temple, Prambanan, collected by Sir Thomas Stamford Raffles and donated by his executor, Rev. William Charles Raffles Flint, to the British Museum. Photographed by M. Iguchi, May 2014.
+
+![Illustration](images/00125.jpeg)
+
+A statue of Brahma from 10th-century Java, donated by H. I. Daniell in 1861 to the British Museum.
+Photographed by M. Iguchi, May 2014.
+
+In *Serat Centhini*, it was written that Mas Cebolang and his four students visited Prambanan, guided by the village chief, Ki Harsono, and saw the eight candi in the Prambanan complex as well as Candi Sewu, which was located near-by. To Mas Cebolang’s question, why the surface of Lolo Jonggrang’s statue was so smooth, Ki Harsono answered, “It is made of brass, not of stone.” Mas Cebolang commented, “All candi are splendid and statues are marvellous. They are damaged to a certain extent, but Candi Loro Jonggrang is still fine.” Was it true that the original statue was made of brass? The one that we see today is a stone statue, as far as I know.
+
+In any case, Mas Cebolang’s comment assures us that the condition of Prambanan in the early 17th century was still good and was not as bad as that of 200 years later when the candi was cleaned by Ir. Cornelis, although there was no description on the shape and height or whether the upper part was similar to that restored in the 20th century. It was interesting to read that Ki Harsono was engaged in the conservation of those candis. Probably, he would have considered those candis as important heritage from his ancestors, even though their religion had already been changed from Hindu/Buddhism to Islam. With regard to the fact that incense was burnt and was diffusing smells in the niches of candis, Ki Harsono explained that a number of pilgrims visited there to pray for fortune. Candi Loro Jonggrang is no doubt the only large-scale monument that the Sanjaya Dynasty left in the Soil of Mataram. How was it possible during the reign of Rakai Pikatan, while other Hindu candis they had built earlier on Dieng Plateau, the slope of Mt. Ungaran (Gedung Songo) and later in the southern part of the Prambanan Plain (i.e. Candi Baron, Candi Ijo, etc.) were smaller and simpler than many Buddhist temples built by the Sailendra, viz. Candi Borobudur and Candi Mendut in the Kedu Basin and Candi Kalasan and Candi Sewu in the Prambanan Plain? As one of the reasons, I would assume that Rakai Pikatan owed much to the wealth of the Sailendra inherited by his wife, Pramodawardhani. Another possible reason would have been related to the conflict between different religions. In the historical novel, *Arok Dedes*[^(85)](#part0012_split_001.html_fn_85) by Pramoedya Ananta Toer, a story on the coup d’etat of Ken Arok, a young man of low birth, against the Governor of Tumapel in 13th-century East Java, the great writer told as the voice of Shivaist Teacher, Dan Hyan Lohgawe:
+
+“What happened to Mataram? How many [Hindu] temples were pulled down by the army of Mahayana Sailendra? Those holy stones were stripped of their honour. They were used as the base for their stupa shrines…”
+
+Another remarkable candi in the Prambanan Archaeological Park is the aforementioned Candi Sewu, located in the northern part of the park and is accessible by a non-rail trolley, which goes around the interior of the park. This Buddhist monument is a temple complex of a significantly large scale consisting of the main temple, which has been roughly restored, and many small buildings, which are still in broken states. One interesting object is a pair of large stone-made gate guardians (*Skt.* dwarapala), represented by raksasas, who each has a big belly and holds a truncheon and a lasso in his hands as weapons against enemies of Buddhists. Guardian gods in Buddhist temples are said to have originated in Gandhara, India, where Hercules of the Greek myth was introduced. It is interesting that the god was imaged differently in other countries, as carved as muscled wrestlers by Japanese sculptors, e.g. Unkei and his disciples in the Kamakura Period (1192–1333), the most famous ones being in the south-gate of Todaiji Temple in Nara. The common weapons of Japanese guardians are also a truncheon and a lasso of different design from those of Java.[^(86)](#part0012_split_001.html_fn_86)
+
+![Illustration](images/00126.jpeg)
+
+A pair of statues of raksasas at the gate of Candi Plaosan, in Prambanan Plain, built in the mid-9th century by Sri Kahulunan (alias Pramodhawardhani).
+Photographed by M. Iguchi, June 2008.
+
+![Illustration](images/00127.jpeg)
+
+A pair of wooden statues of Niou or Kongou Rikishi (lit. Herculean-strength wrestler) at the Great South Gate of Toudaiji Temple, Nara, Japan. According to records, the large statues of 8.4-metres tall were made in 1196 AD within 69 days by a group of sculptors; the open-mouthed one (left) by Unkei and Kaikei and the close-mouthed one (right) by Joukaku and Tankei, both presumably under the direction of the master sculptor, Unkei.
+Photographed by M. Iguchi, September 2014.
+
+In the same park, one can also see Candi Lumbung and Candi Buburuh, but in disastrously broken forms. The famous Candi Kalasan and Candi Plaosan are located outside of the Archaeological Park.
+
+### **Istana Ratu Boko, a stone castle**
+
+On a hilltop, about three kilometres to the south of Candi Loro Jonggrang, there are the remains of Candi Boko, alternatively called Istana Ratu Boko. While the name may suggest a temple or a palace, I thought they were more like a castle or a fort built on a mountain. Some five hundred metres ahead on a slope from a nearby car park, a solid stone gate with guardrooms on both sides appeared, and on the inside ground of two to three hectares were the ruins of a palace, a Buddhist temple, a stage for rituals, a bathing pool and other facilities. When looking down from a teahouse for tourists, the temples of Candi Loro Jonggrang were seen like towers about 200 metres below in the distance on the flat, green ground.
+
+![Illustration](images/00128.jpeg)
+
+Gates of Istana Ratu Boko viewed from the Crematorial Temple
+Photographed by M. Iguchi, February 2012.
+
+This was the place where Prince Balaputradewa of Sailendra who was not agreeable with the extinction of his dynasty in Java after the marriage of his elder sister, Pramodawardhani, to Rakai Pikatan of Sanjaya, had entrenched himself. The war situation having not been favourable to him, Balaputra escaped to Sriwijaya, Sumatra, either being defeated or reconciled, as mentioned before. In the early part of the aforementioned Prasasti Siwagrha, it was written that, after the war, Rakai Pikatan had deplored the spilling of blood on this soil and mourned for the souls of the deceased, and soon after then, he retired in the name of Jatiningrat[^(87)](#part0012_split_001.html_fn_87). No record is available, though, Pramodawardhani is supposed to have stayed in Java without accompanying her younger brother to Sumatra.
+
+The name of Ratu Boko appears in the Loro Jonggrang Legend, but the story has no bearing on the people involved in this incident.
+
+To my knowledge, Candi Boko was the only stone castle built at that time in Java. As recorded in the *Old Book of Tang*, as “they make their castle with hard wood”, other castles must have decayed under the climate of tropical rainforest, even if teak wood, the most durable wood, abundantly available at that time, were used.
+
+### **The decline of Mataram and the move of the dynasty to East Java**
+
+After the Sanjaya and Sailendra kingdoms declined and Mpu Sindok of the Sanjaya Dynasty moved the capital to East Java (928 AD), Candi Borobudur and Candi Loro Jonggrang, as well as other candis, in Central Java became forgotten, buried under the soil. Although there was a speculation that Borobudur would have been covered by Buddhists who were afraid of the destruction by Moslems, it was unlikely because the propagation of Islam around this area was later in the 15th century.
+
+With regard to the move of the kingdom to East Java, Dr. van Bemmelen, a volcanist and geologist who worked in Java before the Second World War, had pointed out two possible reasons in a theory based on his geological research. One was the blockade of their outer port by the silted sand. Geographically, the island of Java, which is wide from east to west and narrow from north to south, is latitudinally divided by a mountainous backbone and no break exists in the middle part. In ancient times, people tended to inhabit the fertile southern part and built their kingdoms, as the land of the northern part was geologically young and frequently vacillated, but they had to go north to the shore of the Java Sea for their trading with Asia, because the Indian Ocean with high waves was unsuitable for their vessels. Since the route via Bengawan Solo, which led to the present-day Gresik in East Java, was too long, the kingdoms of Mataram crossed over the col to the west of Mts. Merapi and Merbabu and utilised Kali Garang (River Garung), which originated from Mt. Ungaran and ran to the present-day Semarang. According to Dr. van Bemmelen’s study, the coastline on the Java Sea at that time ran four kilometres south to that of today and a good natural port was available by the side of a small island, which became the present-day hill of Berkota. Mt. Ungaran was very active at that time and a large amount of volcanic ash carried down by Kali Garung was not dredgeable by the civil engineering technology of those days.
+
+Another possible reason in Dr. van Bemmelen’s theory was a volcanic disaster by Mt. Merapi, which frequently explodes up until today. Regarding the disaster in Saka 928 (1006 AD) mentioned in the stone inscription of Pucangan[^(88)](#part0012_split_001.html_fn_88), left by King Airlangga, Dr Kern, the first decipherer, had assumed that it was a devastation of war (an attack by Sriwijaya), but Dr. van Bemmelen thought it was a natural disaster and his presumption was supported by Dr. C. C. Berg. While the move of the kingdom by Mpu Sindok in 928 AD and the year in the inscription in 1006 differs by three-quarters of a century, the possibility that large volcanic eruptions had also occurred before is not deniable.
+
+Let me add an episode of Dr. van Bemmelen’s that I read in books[^(89)](#part0012_split_001.html_fn_89). During the last world war, when Prof. H. Tanakadate heard of the fall of Singapore in Saigon where he was visiting for a different mission, he immediately flew to Singapore to protect the Raffles Museum and the Botanical Garden from the hands of Japanese armies, by arbitrarily appointing himself the director, nine months before Marquis Tokugawa arrived as the supreme advisor to the occupation army. Soon after the occupation of Java, he rushed there and ordered to restore the activity of all universities and research institutions that were captured by Japanese armies. One of the institutions was the Merapi Volcanic Observatory. In his tight schedule, he spared a few days and climbed Mt. Merapi together with Dr. van Bemmelen, a volcanist friend of his, whom he had freed from a military prison, and had a lot of scientific discussion with the latter. The idea of Dr. van Bemmelen was introduced in Prof. Tanakadate’s book, but the full paper I read was found in a journal published in 1956.[^(90)](#part0012_split_001.html_fn_90)
+
+Besides such geological reasons as indicated by Dr. van Bemmelen, religious conflict might have been one factor that drove the kingdom eastwards. In Pramoedya Ananta Toer’s *Arok Dedes*, mentioned above, Reverend Dan Hyan Lohgawe also narrated:
+
+“One of the reasons the kingdom moved east, and then east again, was to escape from the influence of Yoga, Tantri and Buddhism. Forgive us, Oh Lord, that the greatness of Prambanan was not enough to fight off the wicked influence. Kalasan gave them protection. Then, King Balitung moved Mataram eastwards. Mpu Sindok moved it east again. In those days, the eastern area was still clean, free of all such influences…”
+
+After Mpu Sindok opened his Isyana Dynasty in Medang in 928, the tradition of Hindu-Buddhism was succeeded by the Kediri Dynasty (1050–1222) and the Singasari Dynasty (1222–92) but, in terms of the construction of large religious monuments, the era of building Candi Loro Jonggrang at Prambanan was the climax. In the period of the Majapahit Kingdom (established in 1293), fine cities with good urban designs were developed and candis and other facilities were constructed with precisely manufactured bricks, the traditional culture became matured into Javan culture that produced new types of literary works and stage plays, as well as some history books. In the 15th century, the Islamic Demak Kingdom rose into power in north Central Java and encroached the territory of Majapahit, leading to the demise of the latter kingdom. It was after Panembahan Senapati became the sultan and founded the New Mataram Kingdom in 1584 with its capital in Pajang (near the present-day Solo) that the gorgeous flower of Javanese culture began to blossom.
+
+### **Notes for [Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8)**
+
+________________________
+
+[¹](#part0012_split_000.html_fn1) T. S. Raffles, *The History of Java, Vol. II,* London 1817 (Reprint with an introduction by John Bastin, Oxford University Press, Singapore 1988).
+
+[²](#part0012_split_000.html_fn2) Among Minangkabau (an ethnic group in Sumatra), there is a *Tambo* (tradition) that their ancestors originated from Maharadja Diraja, one of the three sons of Iskandar (Alexander the Great) who came by boat to their land, while his two other brothers, Maharadja Alif and Maharadja Diradja, went to, and became the kings of, the Land of Sunset and the Land of Sunrise, located to the east and the west, respectively. Claire Holt, *Culture and Politics in Indonesia*, Equinox Publishing 1972.
+
+[³](#part0012_split_000.html_fn3) Alfred R. Wallace, *The Malay Archipelago (1869)*, Oxford University Press, Singapore 1985.
+
+[⁴](#part0012_split_000.html_fn4) Marquis Tokugawa (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004/Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanti Isanasari), *Perdjalanan Moenoedjoe Jawa*, Penerbit ITB 2006 (徳川義親 「じゃがたら紀行」, 郷土出版社 1931 (十字屋書店 1943, 中公文庫1975).
+
+[⁵](#part0012_split_000.html_fn5) Cited in: Daigoro Chihara, *The architecture of Borobudur*, Hara-Shobo 1970 (千原大五郎「ボロブ ドールの建築」, 原書房 1970).
+
+[⁶](#part0012_split_000.html_fn6) On the main wall of the basement to the 3rd Terrace, East side=Akshobhya/Earth-touching mudra, South side=Ratnasambhava/Blessing mudra, West side=Amithaba/ Contemplation mudra, North side=Amoghasiddhi /Fearlessness bestowing mudra. On the main wall of the 4th Terrace, All sides=Vairocana-Buddha/Dharma-exposing mudra. On the three Circular Terraces, all in the stupas=Shakyamuni/Wheel-of-law turning mudra.
+
+[⁷](#part0012_split_000.html_fn7) Mahakarmavihanga (Basement 160), Lalitavistara (Corridor I-Main wall-Top 120), Jataka and Avadana (Corridor I-Main wall-Bottom 120, Corridor I-parapet-Top 372, II-Bottom 128, Corridor II-Parapet 100), Gandavyuha (Corridor II-Main wall 128, Corridor III-Main wall 88-Parapet 88, Corridor IV-Parapet 84), Bhadracari (Corridor IV-Main 72). Figures denote the number of panels (Hidenosuke Miura (Ed), *An interpretation of Buddhist monument Borobudur in Java* (三浦秀之助撰, 「闍婆佛蹟ボロブヅウル解説」, ボロブヅウル刋行會 1925). The biography of Gautama (Lalitavistara) is explained e.g. in E. Oey, A. Cherian (Ed.), J. Miksic (text), *Borobudur: Golden Tales of the Buddhas*, Periplus 1990.
+
+[⁸](#part0012_split_000.html_fn8) B. W. Carpenter, *W. O. J. Nieuwenkamp: First European Artist in Bali*, Periplus 1997.
+
+[⁹](#part0012_split_000.html_fn9) Th. Van Elp, “Nieuwenkamp’s Nieuwe kijk op den Boroboedoer”, *Nederlandsch-Indie Oud & Nieuw, Vol 16, No.8*, December 1931.
+
+[^(10)](#part0012_split_000.html_fn10) R. Soekmono, *Candi Borobudur A Monument of Mankind*, The Unesco Press, Paris and Van Gorcum, Assen/Amsterdam 1976.
+
+[^(11)](#part0012_split_000.html_fn11) Seigai Ōmura, “Borobudur is a mandala”, [Hidenosuke Miura (Ed.), *An interpretation of Buddhist monument Borobudur in Java (Main Part-Chapter 11)*, Borobudur Publishing Society 1925] (大村西崖「ボロブヅウルは曼荼羅なり」 [三浦秀之助「闍婆佛蹟ボロブヅウル解説 (本論・第拾一章)」, ボロブヅウル刋行會 1925]. Other three mandalas are Maha mandala, Samaya mandala and Dharma mandala. This paragraph is new in this English edition, not in the Japanese edition published earlier in October 2013.
+
+[^(12)](#part0012_split_000.html_fn12) N. J. Krom, *Archaeological Description of Barabudur*, Martinus Nijhoff, The Hague 1927 (Reprint, Gyan Publishing House, New Delhi 1986).
+
+[^(13)](#part0012_split_000.html_fn13) Tomoji Abe, *The islands of fire*, Sogensha 1944 (阿部知二「火の島－ジャワ・バリ島の記」, 創元社 1944).
+
+[^(14)](#part0012_split_000.html_fn14) An active volcano to the east of Borobudur, 2, 968 m.
+
+[^(15)](#part0012_split_000.html_fn15) One of the finest essays written by Sei Shonagon (ca. 966–1025), a court lady, in the Heian Era, Japan. English translation from: Arthur Waley, *The Pillow Book of Sei Shonagon*, Tuttle 2011 (First published by George Allen & Unwin, London 1928).
+
+[^(16)](#part0012_split_000.html_fn16) Trial translation by the present writer. “Tanka” is a Japanese, traditional short poem of thirty-one syllables, written not only by high-class people but also by such commoners as soldiers and farmers, ever since the late 7th century. *Shin-kokin-shu* (*lit.* New collective volume of past and present tanka) completed in 1216, in which Rev. Ji-en’s above poem was No. 33 of the 1586 total number. Mt. Fuji was still emitting smoke in Rev. Ji-en’s time (1155–1225) after the great eruption in 864 AD.
+
+[^(17)](#part0012_split_000.html_fn17) I. G. N. Anom (Ed.), *The Restoration of Borobudur*, United Nations Educational 2006\. No literature is shown. Probably it was an oral tradition.
+
+[^(18)](#part0012_split_000.html_fn18) Marquis Tokugawa (Footnote 4).
+
+[^(19)](#part0012_split_000.html_fn19) Frank B. Carpenter, *Java and the East Indies*, Doubleday, Page & Scott Co., Garden City, New York 1926.
+
+[^(20)](#part0012_split_000.html_fn20) “Mataram” is a Sanskrit word from which the English “mother” originated. “Vande Mataram”, the name of a song, sung by Bankim Chandra Chattopadhyay in 1882 and became a national song (not the national anthem) of India meaning “Oh, the land of mother”. The origin in Java will be mentioned below.
+
+[^(21)](#part0012_split_000.html_fn21) R. Soekmono, *The Javanese Candi: Function and Meaning*, Brill, 1995.
+
+[^(22)](#part0012_split_000.html_fn22) I. G. N Anom (Ed.), *The Restoration of Borobudur*, United Nations Educational 2006.
+
+[^(23)](#part0012_split_000.html_fn23) Translation to Indonesian from Javanese. Ranggasutrasna (Ki Ngabei), Ranggasutrasna (Raden Ngabei.), Paku Buwana IV (Sunan of Surakarta), Darusuprapta, Tim Penyadur, *Centhini, Tambangraras* – *Amongraga JilidÃ¯Â¼â€˜*, Balai Pustaka (1999). *Serat Centhini* is a story of three children (two sons and one daughter, and their spouses) of Sunan Giri Prapen, who travelled around Java, when their palace in Giri in East Java was attacked by Sultan Agung Hanyokusumo in the beginning of the 17th century. The book, compiled in the court of Solo in 1815, included the details of various places where they visited and the words of conversations with scholars whom they met during their journeys.
+
+[^(24)](#part0012_split_000.html_fn24) This abstract text from: Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini*, Marshall Cavendish, 2006.
+
+[^(25)](#part0012_split_000.html_fn25) “Prasasti” is the local word for a “historic inscription”. Most candis discovered in Java were the monuments to commemorate the inauguration of temples and other structures.
+
+[^(26)](#part0012_split_000.html_fn26) Also, R. Soekmono, *Javanese Candi* – *Function and Meaning*, Brill, Leiden 1995.
+
+[^(27)](#part0012_split_000.html_fn27) Veronique Degroot, *Candi, Space and Landscape: A Study on the Distribution, Orientation and Spatial Organization of Central Javanese Temple Remains*, Sidestone Press, 2010.
+
+[^(28)](#part0012_split_000.html_fn28) On the hillside of Mt. Lawu (3, 265 m) to the east of Solo, two candis remain, Candi Sukuh and Candi Ceto, built in the 15th century in the Majapahit period. (They will be mentioned in [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8).)
+
+[^(29)](#part0012_split_000.html_fn29) Akiko (1878–1942), a passionate female novelist and poet, married to her fellow writer, Tekkan Yosano. The original tanka reads, “Kamakura ya, Mihotoke naredo Shakamuni (Shakyamuni) wa, Binan ni ohasu Natsukodachi kana.” The English translation from the homepage of Koutokuin Temple: [http://www.kotoku-in.jp/en/about/grounds_info.html](http://www.kotoku-in.jp/en/about/grounds_info.html).
+
+[^(30)](#part0012_split_000.html_fn30) Yusuke Tsurumi, *Nanyo-Yuuki* (*Pleasure travels around the southern ocean*), Dainihon-Yubenkai 1917.
+
+[^(31)](#part0012_split_000.html_fn31) Thomas S. Raffles (Footnote 1).
+
+[^(32)](#part0012_split_000.html_fn32) Sumantri, Yeni Kurniawati, *Summary of course material: Sejarah Indonesia Kuno (History of Ancient Indonesia)*, Faculty of Social Science, Indonesia University of Education, 1977 (?). [http://file.upi.edu/Direktori/FPIPS/JUR._PEND._SEJARAH/197706022003122-YENI_KURNIAWATI_SUMANTRI/Bahan_ajar_SIK.pdf](http://file.upi.edu/Direktori/FPIPS/JUR._PEND._SEJARAH/197706022003122-YENI_KURNIAWATI_SUMANTRI/Bahan_ajar_SIK.pdf)
+
+[^(33)](#part0012_split_000.html_fn33) The eight names were: Sanjaya, Panangkaran, Panunggalan, Garung, Pikatan, Kayuwangi, Watuhumalang, Watukura (=Balitung). In Prasasti Wanua Tengah III, dated 908 AD (one year after the date of Prasasti Mantyasih), discovered in the 1980s, thirteen names including the eight names in Prasasti Mantyasih were found.
+
+[^(34)](#part0012_split_000.html_fn34) To distinguish from the “New” Mataram Kingdom established after the Islamisation of Java, in the 16th century and persists to date, it is often called the “Old” Mataram Kingdom.
+
+[^(35)](#part0012_split_000.html_fn35) Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006\. The English translation by the present author (M. I). Stanza 10 is missing in the reffered book. Since S 11-12 contains four sentences, it may have been the misprint of S 10-12.
+
+[^(36)](#part0012_split_000.html_fn36) The original words were “pangkur, tawan and tirip”. Interpreted from a clause in Prasasti Muncang, dated 866 Saka (944 AD), “[this district] is no longer visited by the group of officials from the taxation office that consists of three primary tax collectors, *Pangkur*, *Tawan,* and *Tirip;…”* (Ref: Siti Maziyah, “Daerah otonom pada masa Kerajaan Mataram kuna: Tinjauan berdasar kedudukan dan fungsinya”, *Paramita* Vol. 20, No. 2, July 2010).
+
+[^(37)](#part0012_split_000.html_fn37) Unknown to the present writer (M. I.).
+
+[^(38)](#part0012_split_000.html_fn38) This was described in Face B of Ligor Inscription (dated 775 AD). In Face A, it was written that “King of Sriwijaya, who is the king of kings, built a Buddhist temple named Trisamaya caitya. Source: Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006.
+
+[^(39)](#part0012_split_000.html_fn39) Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006\. The English translation by the present author (M. I).
+
+[^(40)](#part0012_split_000.html_fn40) Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006.
+
+[^(41)](#part0012_split_000.html_fn41) R. Soekmono (Footnote 21).
+
+[^(42)](#part0012_split_000.html_fn42) E.g. Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006; the two Sailendra persons whom Dr. Krom considered to have reigned were Panangkaran and Indra Sangramadhanamjaya, but the former was actually the son of Sanjaya.
+
+[^(43)](#part0012_split_000.html_fn43) G. E. Hall, *A History of South-East Asia 4th Ed.*, MacMillan Education 1981; Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006; Veronique Degroot, *Candi, Space and Landscape: A Study on the Distribution, Orientation and Spatial Organization of Central Javanese Temple Remains*, Sidestone Press, 2010.
+
+[^(44)](#part0012_split_000.html_fn44) Kabupaten: an administrative district corresponding to a county or prefecture.
+
+[^(45)](#part0012_split_000.html_fn45) Timothy P. Barnard, *Contesting Malayness: Malay identity across boundaries*, NUS Press, 2004.
+
+[^(46)](#part0012_split_000.html_fn46) E.g. Bo-Kyung Kim, *Indefinite boundaries: Reconsidering the relationship between Borobudur and Loro Jonggrong in Central Java,* ProQuest, 2007.
+
+[^(47)](#part0012_split_000.html_fn47) R. Soekmono, J. G. de Casparis, Jacques Dumarcay, Ping Amranand*, Borobudur: Prayer in stone*, Archipelago Press, Singapore 1990.
+
+[^(48)](#part0012_split_000.html_fn48) E.g. Bo-Kyung Kim, *Indefinite boundaries: Reconsidering the relationship between Borobudur and Loro Jonggrong in Central Java*, UCLA ProQuest, 2007.
+
+[^(49)](#part0012_split_000.html_fn49) Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006.
+
+[^(50)](#part0012_split_000.html_fn50) R. Soekmono (Footnote 21).
+
+[^(51)](#part0012_split_000.html_fn51) R. Soekmono, *Pengantar sejarah kebudayaan Indonesia 2*, Kanisius-Yogyakarta, 2002.
+
+[^(52)](#part0012_split_000.html_fn52) Paul Michel Munoz, *Early Kingdoms of the Indonesian Archipelago and the Malay Peninsula*, Didier Millet, 2006.
+
+[^(53)](#part0012_split_000.html_fn53) R. Soekmono et al. (Footnote 47).
+
+[^(54)](#part0012_split_000.html_fn54) Nagoya University, *Jiu Tang Shu* [*Book of Tang*] *Vol. 197, Legends147, South/SouthwestBarbarians,* 945 AD (舊唐書卷一百九十七・列傳第一百四十七・南蠻/西南蠻 945 AD), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/jiutangshu197.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/jiutangshu197.html)
+
+[^(55)](#part0012_split_000.html_fn55) Dva-pa-tan is unknown. A theory assumes that it was “Bali” (F. Stroliczka, in: Royal Asiatic Society of Great Britain and Ireland. Straits Branch, *Miscellaneous papers relating to Indo-China and Indian archipelago, Vol. I*, Trubner 1887), but it conflicts with the geographical location of the latter.
+
+[^(56)](#part0012_split_000.html_fn56) *Nagoya University, Tang Shu* [*The New Book of Tang*] *Vol. 222—1/2, Legends 147, Foreign Countries 2*) 1060 AD (新唐書卷二百二十二下・列傳第一百四十七下・南蠻下), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html).
+
+[^(57)](#part0012_split_000.html_fn57) W. P. Groeneveldt, “Notes on the Malay Archipelago and Malacca”, in: Royal Asiatic Society of Great Britain and Ireland. Straits Branch, *Miscellaneous papers relating to Indo-China and Indian archipelago: reprinted for the Straits Branch of the Royal Asiatic Society. Second Series, Vol. I*, Trubner, 1887.
+
+[^(58)](#part0012_split_000.html_fn58) I-Tsing; J. Takakusu (trans.), *A Record of the Buddhist Religion as Practised in India and the Malay Archipelago (A. D. 671*–*695)*, Clarendon Press, London, 1896\. In his note, the translator obtained 6°8’ N from: If one assume the incidental angle of the sun beam the summer-solstice = 23.5°, and the latitude = x, 23.5 + x = arctan (2.4/8). Then, x = 6°8’. The translator did not believe that Kalinga existed in the outside of Java, however.
+
+[^(59)](#part0012_split_000.html_fn59) E.g. A. M. Sardiman, *Sejarah 2* – *SMA Kelas XI Program Ilmu Sosial*, Quadra, Bogor 2007 (A high-school textbook).
+
+[^(60)](#part0012_split_000.html_fn60) Saleh Danasasmita, *Sejarah Bogor*, Pemerintah Daerah Kotamadya DT II Bogor, 1983.
+
+[^(61)](#part0012_split_000.html_fn61) The source book was edited in the 18th century by the Committee of Pangeran Wangsakerta, in the court of Cirebon, and written on lontar (palm leaves). The modern transcription, Atja, Edi Suhardi Ekajati, *Pustaka rajya-rajya i bhumi Nusantara Vol. I – 1*, Bagian Proyek Penelitian dan Pengkajian Kebudayaan Sunda (Sundanologi), Direktorat Jenderal Kebudayaan, Departemen Pendidikan dan Kebudayaan, 1987, was a rare, limited edition, but this writer had incidentally found in the library of Museum Negeri Jawa Barat – Sri Baduga, when I was looking for literature on the pre-Tarumanagara history of West Java, and was given a special favour to copy a part (the translation into the modern Indonesian language).
+
+[^(62)](#part0012_split_000.html_fn62) If Mount Mahameru (Gunung Mahameru) is regarded as today’s Mt. Semeru, it is supposed that Kalinga had ruled up to the east part of Java Island or the king went on a campaign up to that far.
+
+[^(63)](#part0012_split_000.html_fn63) In Japan, for instance, Emperor Youmei married Princess Anahobenohashihito, his half-sister from a different mother, and Prince Shoutoku (574–622) was born between them.
+
+[^(64)](#part0012_split_000.html_fn64) *Carita Parahiyangan* is a lontar document on the history of the Sunda Kingdom, written by an anonymous author in the 16th century. The source text from: Atja, *Carita Parahiyangan: Naskah Titilar Karuhun Urang Sunda. Jajasan Kebudajaan Nusalarang*, Bandung 1968\. Later, its English translation was found on the internet: <sundanesecorner.org/2010/12/08/the-story-of-parahiyangan/>
+
+[^(65)](#part0012_split_000.html_fn65) One prasasti in which “Medang i Bhumi Mataram” was Prasasti Sanggurah (846 Saka). This prasasti is also called “Minto Stone”, because during the British occupation of Java in the early 19th century, it was presented to Lord Minto by Stamford Raffles (and still held by the Minto Family). As to Mamrati and Po Pitu, records were found in the following prasasti.
+
+[^(66)](#part0012_split_000.html_fn66) Nana Nurliana, Sudarini, *Sejarah SMP/MTs Kls VII (KTSP)*, Grasindo, etc.
+
+[^(67)](#part0012_split_000.html_fn67) R. Soekmono (Footnote 21).
+
+[^(68)](#part0012_split_000.html_fn68) Sketsalaku, *Galuh Karangkamulyan*, 18 June 2010 [http://sketsalaku.wordpress.com/2010/06/18/4/](http://sketsalaku.wordpress.com/2010/06/18/4/) (A summary of the Galuh Chronicle).
+
+[^(69)](#part0012_split_000.html_fn69) Hidenosuke Miura (Ed.), *Buddhist monument Borobudur in Java: Folder 1*–*3*, Borobudur Publishing Society 1924 (三浦秀之助撰, 「闍婆仏蹟ボロブヅウル第1-3帙 」, 戊ロブヅウル刊行会 1924); Hidenosuke Miura (Ed), *An interpretation of Buddhist monument Borobudur in Java* (三浦秀之助撰, 「闍婆佛蹟ボロブヅウル解説」, ボロブヅウル刋行會 1925.
+
+[^(70)](#part0012_split_000.html_fn70) Jushiro Takeda (Ed.), *Jagatara episodes* – *Footnotes of Japanese in the Dutch East Indies*, Tsurukawa-insatshujo 1968 (武田重四郎編「ジャガタラ閑話－蘭印時代邦人の足跡」, つるかわ印刷所 1968).
+
+[^(71)](#part0012_split_000.html_fn71) R. Soekmono et al. (Footnote 47).
+
+[^(72)](#part0012_split_000.html_fn72) *Daluang*, a kind of bark-paper prepared from the bark of “paper mulberry” might have been available (*See* [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8)).
+
+[^(73)](#part0012_split_000.html_fn73) Yasushi Inoue, *Dunghuang*, Koudansha 1959 (井上靖「敦煌」, 講談社 1959).
+
+[^(74)](#part0012_split_000.html_fn74) Yukio Hirayama, *The road to Dunfuan* – *A sketchbook of Yukio Hirayana*, Tokuma-shoten 1988 (平山郁夫「敦煌への道－平山郁夫素描集」, 徳間書店 1988); Yukio Hirayama, *The road to Dunfuan* – *A sketchbook of Yukio Hirayana*, Tokuma-shoten 1988.
+
+[^(75)](#part0012_split_000.html_fn75) “Tantu Panggelaran: Keberadaan Pulau Jawa Pada Zaman Purbakala (Tantu Panggelaran The Creation of Java Island in Ancient Times)” [http://id.wikipedia.org/wiki/Pembicaraan:Tantu_Panggelaran](http://id.wikipedia.org/wiki/Pembicaraan:Tantu_Panggelaran)
+
+[^(76)](#part0012_split_000.html_fn76) Thomas S. Raffles (Footnote 1).
+
+[^(77)](#part0012_split_000.html_fn77) V. R. Romondt, “De wederopbouw van den Civa Tempel”, *Djawa* No.3, 20, 1940.
+
+[^(78)](#part0012_split_000.html_fn78) D. Chihara, *Hindu-Buddhist Architecture in Southeast Asia*, Brill Academic Publishers 1996\. According to some Internet articles, there seems to be a theory that the model of this statue is King Balitung, but his time was much later. It must be a speculation with no evidence.
+
+[^(79)](#part0012_split_000.html_fn79) Ganesha is well known, adopted for the emblem of Bandung Institute of Technology.
+
+[^(80)](#part0012_split_000.html_fn80) The story continues in the thirty panels in Candi Brahma.
+
+[^(81)](#part0012_split_000.html_fn81) East: Indra 2x, Southeast: Agni 2x, South: Yama 2x, Southwest: Nairrta and Surya, West: Varuna 2x, Northwest: Vayu 2x, North: Kuvera and Soma, Northeast: Isana 2x. Ref: *Bijdragen tot de taal-, land- en volkenkunde: Volume 148*, Koninklijk Instituut voor Taal-, Land- en Volkenkunde (Netherlands) 1992 (books.google.com).
+
+[^(82)](#part0012_split_000.html_fn82) Yusuke Tsurumi, *Nanyo-Yuuki* (*Pleasure travels around the southern ocean*), Dainihon-Yubenkai 1917.
+
+[^(83)](#part0012_split_000.html_fn83) E.g. Karl With, *Java* – *Brahmanische, Buddhistische und Eigenleige Architektur und Plastik auf Java*, Filkwang Verlag. M. B. H. Haben 1\. W. 1920.
+
+[^(84)](#part0012_split_000.html_fn84) This paragraph and the relevant pictures are new in this English edition.
+
+[^(85)](#part0012_split_000.html_fn85) Pramoedya Ananta Toer, *Arok Dedes,* Hasta Mitra, 1999\. English translation by Max Lane, *Arok of Java*, Horizon Books 2007.
+
+[^(86)](#part0012_split_000.html_fn86) The figure comparing the Javanese and Japanese guardians is new in this English edition.
+
+[^(87)](#part0012_split_000.html_fn87) Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006.
+
+[^(88)](#part0012_split_000.html_fn88) Prasasti Pucangan, dated 1041, has a nickname, “Calcutta Stone”, because it was carried away to India by Stamford Raffles and held in the Asiatic Museum, Calcutta.
+
+[^(89)](#part0012_split_000.html_fn89) Hidezo Tanakadate, *The Seizure of Southern Cultural Institutions*, Jidai-sha, Tokyo 1944 (田中館秀三「南方文化施設の接収」, 時代社 1944); Tanakadate Hidezo’s Achievements Publishing Group, *Tanakadate Hidezo’s Achievements and Memoirs*, Sekai-Bunko, Tokyo 1975 (田中館秀三業績刊行会編「田中館秀三—業績と追憶」, 世界文庫 1975).
+
+[^(90)](#part0012_split_000.html_fn90) Rein W. van Bemmelen, “The influence of geologic events on human history (an example from central Java)”, *Verhandelingen van het Koninklijk Nederlands Geologisch Mijnbouwkundig Genootschap*, Geologische Serie, 20–36, 1956.
+
+**Chapter 5 Appendix:**
+
+Loro Jonggrang Legends
+
+In this appendix, two versions of Loro Jonggrang Legends are quoted. The first one is the story in the “monumental essay”[¹](#part0012_split_003.html_afn_1) authored by J. F. Scheltema and published in 1912, which may be the original source of articles that are abundantly found nowadays in guidebooks, children’s books, Internet articles, etc. An abstract with a similar context was found in the publications of the early 20th century[²](#part0012_split_003.html_afn_2). The second one is the legend in *Babad Prambanan* originally dictated in Javanese, which is more chronological. The English text is an abridged translation (about two-thirds in terms of the number of words) by the present writer, of Chapters 1–25 (of a total 54 chapters) of Indonesian text translated from the Javanese by Messrs. Rinkasan and Aditrijono[³](#part0012_split_003.html_afn_3).
+
+### **1\. A story in “Monumental Java”**
+
+Once upon a time Prambanan was ruled by a giant-king, Ratu Boko, possessing an only daughter, Princess Jonggrang, and an adopted son, Raden Gupolo, whose father had been killed by command of the King of Pengging. Having sworn revenge, Raden Gupolo feigned love for the beautiful daughter of that monarch[⁴](#part0012_split_003.html_afn_4) and asked Ratu Boko to assist him in making her his wife. Ambassadors were despatched with instructions to negotiate the marriage.
+
+His Majesty of Pengging received them in a friendly manner and entertained them at his Court, but, not wanting Raden Gupolo for a son-in-law, he sent secret agents in all directions to seek and bind to his service a hero with power to resist and subdue the giants, Ratu Boko’s subjects, of whom he was in mortal fear. One of those emissaries, searching the slopes of the Soombing, met with the recluse Damar Moyo, one of the children of Sumendi Petoong[⁵](#part0012_split_003.html_afn_5), the chief of the palm-water drawers.[⁶](#part0012_split_003.html_afn_6) Damar Moyo’s wife had blessed him with two sons, Bondowoso, a tall and strong fellow, and Bambang Kandilaras, less muscular but more favoured in outward appearance and of a gentler disposition. Damar Moyo recommended Bambang Kandilaras as[⁷](#part0012_split_003.html_afn_7) just the man needed for the rescue of the Princess of Pengging and ready for the task, provided her royal father would consent, in consideration of the defeat of the giants, to give his daughter to the young man with half his kingdom as dowry and the other half to follow after his death – which conditions prove that even in those remote days the saintly did not despise worldly advantage.
+
+The King of Pengging consented and Bambang Kandilaras marched against Prambanan, but no weapon could harm Ratu Boko, who roared so dreadfully that the sound and his breath combined were enough to knock any human foe down at a distance too far to distinguish a man from a woman or a giant from a warringin-tree. Bambang Kandilaras fled, reporting at Damar Moyo’s cave, and was commanded to try once more with the assistance of his brother, Bondowoso.
+
+They accomplished nothing. Bambang Kandilaras ran away even before the battle commenced, to hide himself in a ravine where the troops of Prambanan could not follow him, and Bondowoso, whose legs were blown off by a puff from Ratu Boko’s formidable lungs, sought safety in precipitate retreat to the mountain Soombing.
+
+Then Damar Moyo taught him a magical word, which, pronounced twice, would make him big and as heavy as an elephant, and give him the strength of a thousand of those animals. Thus armed, Bondowoso returned to Prambanan, where he killed half of Ratu Boko’s warriors in their sleep, while the other half, waking up, retreated with the enemy in hot pursuit to tell their king what had happened. “Nobody shall stir,” said he. “I myself alone will settle this little business.” Meeting Bondowoso near the village Tangkisan, he began to roar as loud and fume as hard as he could, but, to his astonishment, his breath lacked the accustomed power and so he had to fight for his life hand to hand.
+
+It was a terrible fight: houses and gardens were trampled down, forests rooted up and mountains kicked over, while the perspiration dripping from the bodies of the enraged combatants formed a large pool, the Telaga Powiniyan.
+
+To end the struggle, Bondowoso, in a supreme effort, seized Ratu Boko round the middle and threw him into that pool, where he sank and, drowning, made the earth tremble with a last roar of anger and distress.[⁸](#part0012_split_003.html_afn_8)
+
+Raden Gupolo, hearing the noise, hastened to his assistance with a few drops of the water of life in a cup, an elixir prepared by Mboq Loro Jonggrang – only a few drops, but enough to resuscitate the dead giant-king if put to his lips. Bambang Kandilaras, however, drew his bow and, from the place where he had watched the fight, shot the cup out of the hand of Raden Gupolo, who thereupon attacked Bondowoso. Bambang Kandilaras let more arrows fly at the giant-warriors of Prambanan, who now rushed up to avenge their king’s death. In the general *melee* Bondowoso killed also Raden Gupolo and cut off his head, which he threw away in an easterly direction, changing it into a mountain, the Gunoong Gampeng; but his brains and heart he threw away in a southwesterly direction, changing them into another mountain, the Gunoong Woongkal.
+
+Thereupon he (Bondowoso) defeated the remaining half of the army of Prambanan and went to Pengging, claiming the reward for his brother. The king of that country, glad to be rid of the giants, was as good as his word, wedded his beautiful daughter to Bambang Kandilaras and appointed Bondowoso his viceroy in Prambanan, with the rank and title of bupati.
+
+Taking up his abode in the palace of the late Raden Gupolo, Bondowoso happened to see Mboq Loro Jonggrang, who continued living in the kraton of Ratu Boko, and fell in love with her. He asked her hand in marriage and she, abhorring the man who had killed her father, and one so unprepossessing in countenance too, but afraid to provoke his displeasure by a blank refusal, answered that she was willing to become his wife on condition of his providing a suitable *sasrahan* or wedding present, nothing more nor less than six deep wells in six buildings, the like of which no mortal eye had ever seen, with a thousand statues of the former kings of Prambanan and their divine ancestors, the gods in heaven, all to be dug and built and carved in one night.
+
+Bondowoso called in the help of his father, the recluse Damar Moyo, of the King of Pengging and of his brother Bambang Kandilaras, all three of whom responded, going to Prambanan and uniting in prayer on the day before the night agreed upon by the spirits of the lower regions, who had been commandeered for the task by the saint of the mountain Soombing. The evening fell and as soon as darkness enveloped the earth a weird sound was heard of invisible hands busy laying foundations, erecting walls and sculpturing statuary. By half past three the six wells were dug, the six buildings completed and nine hundred and ninety-nine statues were standing in their places.
+
+But Mboq Loro Jonggrang, roused from her slumbers by the hammering and chiselling, and suspecting what was going on, ordered her handmaidens out to stamp the padi (rice in the hull) and to strew the ground, where the noise was loudest, with flowers and to sprinkle perfume. The spirits of the lower regions cannot bear the odour of flowers and perfume, as everybody knows, so they had to desist and deserted their almost finished work in fright, to the consternation of Bondowoso, who pronounced this curse: “Since the girls of Prambanan take pleasure in fooling a faithful suitor, may the gods grant that they shall have to wait long before they become brides!”[⁹](#part0012_split_003.html_afn_9)
+
+Having said this, yet hoping against hope, he called on his lady, who asked tauntingly whether the honour of his visit meant the announcement that the task imposed upon him by way of testing his love had been completed. This filled the measure and he answered: “No, it is not and you shall complete it yourself.” The threat was immediately realised: Loro Jonggrang changed into a statue of stone, the thousandth, which terminated the labour of the spirits and is still to be seen in a niche on the north side of the principal edifice.
+
+### **2\. A story in Babad Prambanan**
+
+### **Chapter I**
+
+This dictation of Prambanan Chronicle began at seven in the night, on Kamis Kliwon, the 29th Ruwah, wuku Madhangkungan, in the Wawu, the 1877th Javanese Year[^(10)](#part0012_split_003.html_afn_10) or the 4th March 1927 AD.
+
+The story begins with the transfer of the capital from Daha to Pengging by a descendant of King Jayabaya.
+
+The lineage of King Jayabaya was passed down to Jayamijaya, Jayasusena and Kusumawicilra, and during the time of Kusumawicilra, the home of the kingdom was moved from Daha to Pengging. King Kusumawicilra had a son named Sri Citrasoma, and Citrasoma himself had a son named Pancadriya. Pancadriya had four sons, i.e. Dewamadya, Anglingdriya, Raden Dipanata, and Raden Darmanata.
+
+After the death of King Pancadriya, the throne of Pengging was succeeded by Anglingdriya. He married two women, Dewi Sinta and Dewi Sumemi. Tambakbaya was appointed the patih (premier). Anglingdriya’s brother, Dipanata, was made the king of Salembi. The year of Anglingdriya’s coronation was 964[^(11)](#part0012_split_003.html_afn_11).
+
+The first queen gave birth to a beautiful daughter (named Dewi Larasati, as it appeared in the later part of this text). Although she had received marriage proposals from a number of princes, she liked none of them. She said that she would like to choose one who could answer her questions (mentioned below) as her future husband. Although the contest was announced all over the country, nobody who could correctly answer the questions appeared in two months. The king told the failures to get assistance from hermits in mountains.
+
+### Chapter II
+
+Nevertheless, no successful candidate turned up in another six months. The king was afraid that his daughter would never find a husband.
+
+In a mountain seclusion, there was a hermit named Suwarda who had a magical power and was able to transform himself as he liked. Resi Sukantha who wished to take Suwarda in his family had successfully let her daughter, Endang Sukesti, marry the hermit. Resi Sukantha had also two sons, one of them named Sukeli.
+
+Suwarda and Endang Sukesthi had lived happily and they had two children. The elder one was a boy named Puthut Karung who grew up to be a strong man like a raksasa[^(12)](#part0012_split_003.html_afn_12) who often practised ascetic fasting. The younger one was a daughter whose beauty exceeded her mother’s.
+
+Several years later, Karung’s grandfather and father passed away. Although he came to the village, he returned to Mount Simharan four years later, accompanying a raksasa army of 400 men. He met again with his mother and two uncles. After then, Jake Karung appointed himself the king and received support from his family. As a king, he was called Mahaprabu Karungkala. His uncles, Resi Sukeli and Resi Baeksi, became the chief ministers and four other relatives, i.e. Tumenggung Japlak Tumenggung, Tumenggung Bandawasa, Tumenggung Suliki, and Tumenggung Pengkok, became ministers. In addition, four other men, i.e. Kalababrik, Kalabenthong, Kalajamba, and Kalasidhu, were given certain positions. The title of patih was handed over to a son of Basukeli named Buhartal.
+
+King Karungkala ordered his army chief to build a town on a hillside and to destroy anyone who resisted it. The lives of villagers were rampaged and many residents scattered. The town was completed within a short period and it was named Prambanan. In the year of 990, Karungkala became the king of Prambanan.
+
+A few years later, King Karungkala wished to marry the princess of Pengging. Although he intended to ask politely, he thought to use violence if his proposal was rejected. Karungkala was pleased to hear the willingness of his uncle, Resi Basukeli, to answer the questions of the princess of Pengging and ordered his army chief to accompany the embassy with full preparation for war.
+
+At that time, King Anglingdriya of Pengging asked Patih Tambakbaya about the chaos and the suffering of people in a part of Pengging territory and was told that, in the south of Mount Merapi, there was a king named Karungkala, who, with armies of one thousand raksasas, had opened forests and built a kingdom called Prambanan. King Anglingdriya was also told that among those who wished to marry the princess there was nobody who could properly answer the princess’s questions.
+
+Prambanan was located to the south of Pengging, a five-day walk distance, and the founding of the country was a threat to Pengging. For the purpose of preemptive attack, King Anglingdriya advanced his army to Prambanan in accordance with the principle that a fire should be extinguished before it grew large.
+
+### **Chapter III**
+
+The ambassador and retinues of the king of Prambanan had arrived at Pengging. Their task was dual in that they wished to politely answer the questions, but, when failed, they would use power to capture the princess.
+
+They were ushered to the palace. After King Anglingdriya received the ambassador of Prambanan, the princess was called to present her questions. They were three. (1) How can one tell which end of a stick made of the core of tamarind wood is the root side and which end is the top side? (2) How can one judge which are the male and female of a pair of Javanese Manikin, which are very similar to each other? (3) What are the meanings of a stone balance of a well and a golden pail with a rope of “wind”?
+
+A wise man, Basukeli, replied not immediately, but paused to think for a while. For the first question, he answered that the end of the stick that was sensed heavier should be the root side and the side that was sensed lighter should be the top side of the original tree. The princess said the answer was right. For the second question, Basukeli answered that the one with wide and deep nose holes must be the male bird and the one with shallow nose holes must be the female bird. This answer was also correct.
+
+For the third question, he thought that the pail meant a place to exit and enter, gold meant glory, and the rope meant the breath of kissing people. The answer to the third question was only partially correct. According to the princess, the balancer of a well meant a stone, the pail meant a dipper, gold meant a girl who lost her hair and the wind meant the breath of kissing man and woman. Thus the ambassador of Prambanan had failed to fulfil the demand of the princess.
+
+### **Chapter IV**
+
+King Anglingdriya said that the king of Prambanan should abandon his wish and got rid of the ambassador. After that King Anglingdriya ordered Patih Tambakbaya to prepare for the possible attack of Prambanan.
+
+Outside of the palace, the ambassador and escorts had rested in the guest house. Basukeli wrote a letter to report the result and to be delivered to King Karungkala and despatched a messenger to Prambanan. At the same time he gave orders to Baeksi, Kalababrik, Kalajarnba and other army members, who all had accompanied him, to immediately attack villages around the guest house. The inhabitants surrendered and were forced to give tributes. Having heard of this event from Patih Tambakbaya, King Anglingdriya angrily ordered his army to attack Prambanan.
+
+In Prambanan, King Karungkala who received the letter became raged and ordered Tumenggung Japluk and Tumenggung Bandawasa to go to support Basukeli.
+
+The armies of Prambanan and Pengging confronted and took up their positions.
+
+### **Chapter V**
+
+Pengging soldiers led by Tumenggung Samboja, Kawelasa, Tumenggung Panggiling and Tumenggung Pengkok were assisted by Tumenggung Jagaraga who came to the battlefield on horseback. There, he faced Baeksi who was also on horseback. In a fierce battle, Baeksi was eventually speared and fell down from his horse. Resi Sukeli immediately ordered other Prambanan soldiers to rush to Tumenggung Jagaraga and Pengging soldiers. The fighting with spears and bows and arrows intensified. At the climax, Tumenggung Japlak and Tumenggung Bandawasa arrived. The Pengging side had suffered a tremendous blow and the remaining soldiers ran away from the battlefield.
+
+King Anglingdriya said he himself would go off to war, but was restrained by Patih Tambakbaya. The king remembered Ki Ajar Rencasa and invited him, who was good at magic, and told him about the situation.
+
+### **Chapter VI**
+
+Ki Ajar Rencasa agreed with the advice of Patih Tambakbaya and proposed an idea that a hero who could beat the Prambanan army and King Karungkala would be awarded the princess of Pengging. Patih Tambakbaya who had received an order to look for a candidate told the people of Pengging to resist behind the barrier, if the Prambanan soldiers had come to attack, and departed in the night without being noticed by the enemy.
+
+The story switches to Salembi. King Dipanata (brother of King Anglingdriya) had a beautiful daughter named Dewi Nataswati. Although she received marriage proposals from many young men, the king rejected them, because he hid a wicked desire to marry his own daughter who resembled his deceased wife. One day, he actually raped her. Although it was an abnormal relationship, the daughter took it as granted for a will of god. Then, the king instructed the patih to announce his marriage over the entire country. Not long after their marriage, Dewi Nastawati became pregnant and gave birth to a son. The family of the king loved the son, named Raden Baka, and hoped that he would be a great king who exceeded his father.
+
+### **Chapter VII**
+
+Darmanata, the younger brother of Anglingdriya, who became the king of Sudimara had a son named Raden Darmamaya. When grown up, Darmamaya heard that his uncle in Pengging had a beautiful daughter named Dewi Rarasati. He bid farewell to his father and left Sudimara in the hope of trying to answer the princess’s questions.
+
+Raden Darmamaya did not go straight to Pengging but stopped at Mount Merbabu to visit Ki Ajar Rencasa to ask for his help solving the princess’s questions. On his way to Pengging, Raden Darmamaya was met by Patih Tambakbaya and, having been told of the search for a hero, decided to go to fight against the raksasa army of Prambanan.
+
+On their way to Prambanan, Patih Tambakbaya and Raden Darmamaya encountered the soldiers of Prambanan and destroyed many of them with Darmamaya’s magical power. Although Basukeli and Baeksi of Prambanan responded, together with Kalajamba and Kalababrik, and advanced to counterattack Darmamaya and his soldiers, Darmamaya was unbeatable and killed many Prambanan soldiers. In this battle, both Kalababrik and Kalajamba lost their lives.
+
+### **Chapter VIII**
+
+Pressured by Pengging, Risi Basukeli of Prambanan ordered his soldiers to retreat once. The pursuit of the Pengging army lasted until midnight.
+
+Patih Tambakbaya returned to Pengging with Raden Darmamaya and brought the latter to King Anglingdriya. King Anglingdriya was delighted to hear the victory and instructed Tambakbaya to prepare the wedding of Raden Darmamaya and Princess Dewi Rarasati. When King Anglingdriya summoned his daughter and told her about the achievement of Darmamaya in the battle, she was not quite content because Darmamaya had not answered her questions.
+
+### **Chapter IX**
+
+King Anglingdriya was surprised to hear Dewi Rarasati’s ill feeling. Anyhow, Darmamaya was able to correctly answer the princess’s questions, due probably to the will of god. Thus, Raden Darmamaya and Dewi Larasati were happily married.
+
+The story now switches to Prambanan. King Karungkala was very angry to hear the defeat of his men, especially the two commanders, Kalababrik and Kalajamba, and decided to send support to Basukeli and Baeksi. The task was entrusted to Kalacinthung and Kalabenthong. Fierce fighting was resumed between the soldiers of Pengging and Prambanan. Because the powers of the two armies were balanced, the war situation was deadlocked and battles continued every day until night came.
+
+The story turns to Salembi. Raden Baka, son of King Dipanata, was already in his adulthood, but did not want to marry any princess, because in his heart had blossomed a love for his own mother, Dewi Nataswati. He became sick and did not eat. Without knowing the reason, King Dipanata was saddened by his son’s illness and told his wife to go to see their son who stayed in Kaputran with a witch doctor. When his mother came, Baka openly confessed his love and in the evening he raped his mother.
+
+King Dipanata, who heard of this incident, became furious and intended to kill Baka, but just before then Baka ran away from Kaputran and went into a forest. Reproved by her husband, Dewi Nataswati hanged herself and died. King Dipanata felt sorry for it, fell into illness and died. People of Salembi were grief-stricken at these tragedies.
+
+The tragic incident in Salembi was heard in Sudimara and the royal family members were saddened by it as relatives. In Sudimara, this was overlapped with a bad report[^(13)](#part0012_split_003.html_afn_13) that Raden Darmamaya was killed by Pengging in the battlefield.
+
+### **Chapter X**
+
+King Darmanata committed suicide without being able to withstand the sorrow for the reported death of his beloved son and the queen followed her husband. This was an incident in the year 994 in the Dupara Era.
+
+The death of King Darmanata was reported to Pengging. King Anglingdriya was saddened by the death of his brothers in Salembi and Sudimara, which occurred one after another. The retainers of Sudimara were called and told to serve Raden Darmamaya, the heir of Sudimara.
+
+Raden Darmamaya was enjoying a happy life with Dewi Rarasati, and the wife gave birth to a son, named Raden Bandung, who was as strong and handsome as Raden Gathutkaca of Pringgadani. Ajar Rencasa was in charge of taking care of the child so that he would grow up in good health. This was an event in the year 995 in the Dwapra Era.
+
+Thirty-five days after his son’s birth, Raden Darmamaya asked King Pengging permission to go fight against Prambanan and was given four commanders. When ready, he departed on horseback following the line of Pengging soldiers. They stopped at the base in Pokak to work out an operation plan.
+
+Prambanan soldiers based in Malinjon were shaken by the arrival of Pengging armies reinforced by Raden Darmamaya. King Karungkala of Prambanan was angry too and ordered his soldiers to fight back, while Tumenggung Suliki was told to remain in Prambanan to keep Dewi Rara Jonggrang[^(14)](#part0012_split_003.html_afn_14). King Karungkala himself went to the battlefield to face Pengging.
+
+A fierce battle began again between Pengging, led by Darmamaya and Tambakbaya, and Prambanan, led by Sukeli and Tumenggung Pamengkok. They exchanged gunfire with each other. The magical powers of Pamengkok and Tambakyuda were comparable. When Pamengkok was about to lose, Tambaklampir came to support. Pamengkok was almost invincible, but suddenly Tumenggung Japlak came to help. When Tambakbaya was in danger, Pamengkok and Japlakwho just came in to save him. Japlak was speared and fell from horseback. Basukeli was upset watching his soldiers being struck by the Penggings under the command of Tumenggung, Bandawasa, Tumenggung Kalacinthung and Tumenggung Kalabenthong. The battle between the Pengging–Sudimara ally and the Prambanan army was confused. Soldiers cried and gongs echoed. All weapons were blood-stained.
+
+### **Chapter XI**
+
+The battle between soldiers of Prambanan and Pengging became increasingly intense. Despite the growing number of victims, the morale of soldiers was not shaken.
+
+Only the arrival of night could stop the battle. When the Prambanan side eventually became inferior with more casualties, Karungkala himself had decided to participate in the battle. Encouraged by the king’s action, Prambanan soldiers advanced again. In the single combat between Karungkala and Darmamaya, Karungkala tried to hit the opponent with his club, but was finally pierced from the chest to the back by the spear of Darmamaya and died.
+
+Daunted by the death of their king, Basukeli, Baeksi and the soldiers of Prambanan retreated to seek the safety of their lives. The chase of Pengging soldiers continued, but ceased once at night. The inhabitants of Prambanan closed their doors in fear.
+
+The news of the death of King Karungkala was received by Rara Jonggrang. Shocked by the loss of her brother, she demanded one hundred soldiers to destroy the surrounding enemy, but her confused mind was restrained by Resi Basukeli.
+
+Basukeli proposed an idea to look for a hero who, if he successfully beat Pengging, would be allowed to take Jonggrang to be his wife. Before leaving to seek such a hero, Resi Basukeli ordered Baeksi, Suligi, Pamengkok, Japlak and Bandawasa to defend Prambanan from the attack of Pengging. In the dawn, when Basukeli departed, Pengging soldiers moved again and arrived at the edge of Prambanan town. Soldiers on both sides fought bravely, resulting in a number of losses. Although the Pengging army tried to seize Prambanan, the trench that encircled the town was strong enough to defend the town. In the evening, Pengging soldiers retreated to their base but did not lift the blockade.
+
+### **Chapter XII**
+
+People of Salembi had been searching for Raden Baka who had disappeared for six months. When they finally discovered him in a hermitage in Mount Kelir, where he had been staying for three months, they told him that both the king and queen of Salembi had passed away and that the people of Salembi were wishing him to be crowned. Although Raden Baka was shocked to hear of the death of his parents, he said he would not return home until he obtained a beautiful wife.
+
+At that moment, Resi Basukeli came to the hermitage of Raden Baka and, after exchanging greetings, explained that he had been looking for a hero who could confront Pengging and that, once succeeded in beating the enemy, the hero would become the king of Prambanan by marrying Princess Rara Jonggrang. To attract Raden Baka, Resi Basukeli talked about the unrivalled elegance and beauty of Rara Jonggrang. Raden Baka accepted that offer and simultaneously sent a messenger to Salembi to detail troops to Prambanan.
+
+### **Chapter XIII**
+
+Raden Baka mounted a brown horse named Singan, while Resi Basukeli rode on a rose-coloured horse named Layar, and they both went to Prambanan, accompanied by Salembi soldiers.
+
+Pengging soldiers who had tried to attack Prambanan again were prevented by the trench. Both armies gathered as many stones as possible as weapons until no stone piece was left in the dry riverbed of Opak River. Finally, the Pengging troops surrounded the town of Prambanan in an attempt to cut off the supply of food.
+
+The party of Raden Baka and Resi Basukeli and their retinues who arrived in the territory of Prambanan broke the encircling line and entered the town. Rara Jonggrang was very pleased to hear the report of Basukeli and promised to marry the hero, once he had beaten Pengging.
+
+### **Chapter XIV**
+
+Rara Jonggrang was, in fact, fascinated by the looks of Raden Baka. Raden Baka became the ruler of Prambanan on the premise that he would marry Rara Jonggrang after beating Pengging.
+
+Shortly after then, King Baka had a full meeting, asked about the war situation and heard from Patih Bubarham that the Pengging army was led by Raden Darmamaya, assisted by Surasamboja, Surakatawang, Paligi, Tambaklampir and Tambakbaya, and that, although they had encircled Prambanan, they were prevented by trenches equipped with barriers. King Baka revealed with a smile that Raden Darmamaya was, in fact, his cousin, as he was the son of his uncle, King Darmanata of Sudimara, so that a peaceful settlement could be possible. He considered at the same time that further fighting would be inevitable if a peace proposal was rejected.
+
+The soldiers from Salembi were ordered to defend the trench and to tell Pengging soldiers, if they came, that Prambanan was now under the rule of Raden Baka and that Raden Darmamaya should come to meet him.
+
+The story turns to Pengging. Raden Darmamaya was very surprised to hear the news that Raden Baka had married Rara Jonggrang and become the king of Prambanan. Raden Darmamaya gave orders to Pengging soldiers to stop the attack and just maintain the encircling of Prambanan. He hoped that Baka would remember the fact that the late King Pancadriya was their common grandfather. King Anglingdriya who received the same news considered in the same way as Raden Darmamaya to preferentially seek the possibility of peace, while the blockade of Prambanan was not lifted.
+
+### **Chapter XV**
+
+Although Raden Darmamaya had ordered his soldiers to give an opportunity for Prambanan to seek a peaceful solution, he thought that he should not hesitate to attack Prambanan, if Raden Baka had forgotten their blood relations by the honeyed words of Rara Jonggrang.
+
+The story of Raden Baka after the start of his life in Prambanan is interesting. While he felt he could not resist the beauty of Rara Jonggrang, she insisted that they should not have sexual contact before Baka defeated Pengging. With a feeling of shame and ardour, he ordered soldiers to prepare for war and he himself had decided to act as commander-in-chief.
+
+The battle began to grow exciting again. Both Raden Darmamaya and Raden Baka displayed their power with each other to their opponent. Cries of soldiers and the sounds of cymbals and gongs echoed, and blood spilled over the battlefield.
+
+### **Chapter XVI**
+
+By the intensified attack of King Baka, a lot of Pengging soldiers were killed. Raden Darmamaya had decided to retreat from Prambanan to their base of Malinjon.
+
+Prambanan soldiers who chased their enemy to Malinjon were repelled and the defence of Pengging was strengthened. Baka halted the attack and wished that Darmamaya would remember their cousin relationship. Prambanan soldiers returned to their base at Gondang River and Baka himself went back to Prambanan with some retainers.
+
+As soon as he arrived at the palace, King Baka met Rara Jonggrang. Although he certainly wished to have physical contact, the princess did not open her heart and kept herself in her room as Baka had not fulfilled the condition to defeat Pengging. Baka picked up flowers in the garden to approach her, but only in vain. He could not eat or sleep.
+
+Having been reported that the war situation was deadlocked, Baka told the soldiers to halt the battle as long as the enemy did not challenge. The soldiers had time to play cockfight for a while. This was in the year 997.
+
+While the troops of Prambanan and Pengging confronted each other at Godhang River, the soldiers of Prambanan in the back line were killing their time by playing cockfight. Rara Jonggrang was also relaxed and was playing with her favourite crickets. This was the situation in the year 998.
+
+Mlandhangjapalak suffered from a misfortune. When he was looking for cicadas he was captured by Raden Darmamaya and was killed. It was the consequence of his own fault to have violated the message of King Baka. This happened in the year 999[^(15)](#part0012_split_003.html_afn_15).
+
+### **Chapter XVII**
+
+King Baka’s desire for Rara Jonggrang grew more, but, whenever he showed it, Jonggrang threatened him by saying that she would commit suicide. His heart was shaken and her image occupied his mind day and night. He had presented quails and crickets to attract her, but they were not received. Sukeli who was asked to talk to Jonggrang to accept the wish of Baka could not persuade her. In excitement, Baka often walked around the garden and talked to himself as if Jonggrang was there.
+
+Raden Bandung, grandson of King Anglingdriya, grew up under the care of Ajar Rencasa. He was handsome and sturdy, having trained himself in the mountains. At the age of fifteen, he asked permission of his grandfather to join the Pengging army to fight against Prambanan and it was reluctantly agreed also by Ajar Rencasa. Raden Bandung was given a military uniform. When preparation was finished, he asked King Anglingdriya to pray for the fortune of gods and set out, followed by twelve bodyguards. The party ran day and night and made a base at Klepu for attacking Prambanan.
+
+Meanwhile, the lust of King Baka for Rara Jonggrang became uncontrollable. One night he broke into her room and, while she was upset, did not miss the chance to push her down. She tried to resist in vain and allowed him to accomplish his desire to have physical contact with the lady.
+
+### **Chapter XVIII**
+
+At dawn, Raden Bandung arrived at the battlefield and confronted the Prambanan soldiers who thought that the enemy had come from Malinjon. When battle started, his magical power took effect. Although his body was speared, he was unhurt and maintained his power to continue fighting. A number of Prambanan soldiers were killed in this battle. Tumenggung Batang who was following after Raden Bandung noticed that Raden Bandung preceded the troops of Raden Darmamaya. Raden Darmamaya sent reinforcements for his son.
+
+Raden Bandung was overwhelmed by Tumenggung Bandawasa, Tumenggung Pamengkok and Tumenggung Suliki. Although he was attacked from right- and left-handed sides, he was not hurt. At one moment, the weapon of Raden Bandawasa was pulled by Raden Bandung and Bandawasa fell on the ground. His head was kicked and destroyed. After the death of Bandawasa, Raden Bandung named himself Raden Bandung Bandawasa. Crying loud, he continued battle against the Prambanan army.
+
+When Prambanan soldiers surrounded Raden Bandung Bandawasa, Raden Darmamaya arrived to free his son and destroyed the Prambanan army.
+
+Urged by the report on the death of Tumenggung Bandawasa and the loss of his soldiers, King Baka himself went to the battlefield followed by some soldiers.
+
+After fierce fighting, King Baka fell down from horseback, his club having been grasped by Raden Bandung Bandawasa, and he died, being kicked in his head. By the death of King Baka, the soldiers of Prambanan lost their fighting spirit. Those who survived fled to Prambanan town and closed their doors for fear of Pengging’s chase.
+
+Raden Darmamaya ordered Raden Bandung Bandawasa to halt the attack in the hope of Prambanan’s surrender.
+
+The death of King Baka raised the fear of the Prambanan people. A son of Baeksi named Jake Burdan who had long yearned for Rara Jonggrang offered himself to be a guide to escape from Prambanan, but Rara Jonggrang insisted that she would stay there, and die, to defend Prambanan.
+
+In the morning, the remaining soldiers of Prambanan thought maintaining Prambanan was no longer possible and ran away, leaving their weapons. Raden Bandung Bandawasa ordered his soldiers to enter the town. All properties of Prambanan were seized and collected in one place. On entering the palace of Prambanan, the blood of Raden Bandung Bandawasa tingled with excitement as he saw the beauty of Rara Jonggrang. He fell in love at once because the features of Rara Jonggrang looked like that which he had long envisaged.
+
+### **Chapter XIX**
+
+When asked who she was, Rara Jonggrang said she was the younger sister of King Karungkala who was killed in the battlefield. Against the proposal of Raden Bandung Bandawasa, she said she was not in the mood to accept it. The fall of Prambanan was an event in the year 1009.
+
+Throughout the day Raden Bandung Bandawasa steeped himself in thought to take Rara Jonggrang as his wife.
+
+In the dusk, without being able to resist his love for Rara Jonggrang, Raden Bandung Bandawasa decided to compel his will.
+
+To confirm whether Raden Bandung Bandawasa’s love was a genuine one, Rara Jonggrang said that she wanted no gold or diamonds but something suitable to remember her deceased father, Resi Suwarda. If he could build one thousand candi (temples) in one night, by tomorrow morning, she might become his wife, but she would kill herself otherwise.
+
+Raden Bandung Bandawasa hesitated. If he raped Rara Jonggrang, she would no doubt commit suicide, while finding an alternative woman as beautiful as her was impossible. Although her request was an extremely hard one, he eventually determined his mind to try to respond to her demand. Raden Bandung Bandawasa immediately ordered his soldiers to guard the palace of Rara Jonggrang. He went outside and prayed for god’s help.
+
+Late at night Raden Bandung Bandawasa began to pile up stones to make one thousand candi and, thanks to divine help, he had almost completed the construction of one thousand candi at the first grey of dawn, save one piece of statue. Although the reason why he left one statue undone was that he had intended to make the last piece in front of Rara Jonggrang, the lack of one piece was unsatisfactory for Rara Jonggrang. Rara Jonggrang who pretended to be counting the number of candi left the venue and, when the guards averted their eyes, she went into the forest.
+
+Raden Bandung Bandawasa was saddened by Rara Jonggrang’s disappearance. He chased after her in villages and forests. Tumenggung Batang sent a messenger to Raden Darmamaya to give him notice about the departure of Raden Bandung Bandawasa. Raden Darmamaya ordered his retainers to follow after his son. They searched all around villages and forests for half a month, but could not find any trace of Raden Bandung Bandawasa or Rara Jonggrang.
+
+### **Chapter XX**
+
+Raden Bandung Bandawasa himself was continuing the search for Rara Jonggrang. Because of the disappearance of his beloved son, Raden Darmamaya fainted and made his wife sorrowful when her husband was carried to her in unconscious condition. Tumenggung Batang and ministers of Sudimara were assigned to searching for Raden Bandung Bandawasa.
+
+The story returns to Prambanan. Jake Burdan missed Rara Jonggrang whom he had longed for and went to search for her in villages and forests. He vowed that he must find her in the belief that she would finally be his wife.
+
+Tumenggung Batang and the ministers of Sudimara continued their search and reached the southern coast. They merged with another search party and returned to Pengging to report to Raden Darmamaya that they had failed to find Raden Bandung Bandawasa, even though they went up to Mentaram and Pagelan.
+
+King Anglingdriya also felt sad to hear of the disappearance of Raden Bandung Bandawasa (and the death of Ajar Rencasa).
+
+On Monday, King Anglingdriya of Pengging had a meeting and announced that he would abdicate the throne and appoint his son-in-law, Raden Darmamaya, to be his successor to rule Java. Then, he sat in the line of senior retainers. Two other sons, Suwelacala and Pandayanata, were given positions. The ministers of Sudimara and Salembi were ordered to reside at Pengging and some retainers of Prambanan were allowed to go home to attend Raden Bandung. These were the events in the year 1010 in the Teteka Era.
+
+Raden Bandung Bandawasa’s search for Rara Jonggrang did not come to fruition and neither did the efforts of Prambanan and Pengging soldiers. Raden Bandung Bandawasa had determined in his mind to return to Prambanan and in the venue of candi made a stone statue depicting Rara Jonggrang, which had four arms and stood on Andini (divine ox, also called Nandi). He faced the statue and prayed to god that a well (*sumur gumuling*, a well which lies at the back) would appear. Seven days and nights, Raden Bandung Bandawasa kissed the statue of Rara Jonggrang as if he were together with the real Rara Jonggrang. Having been content with it, he went southwestward to a forest without being noticed by anyone else. On his way he lamented the disappearance of Rara Jonggrang. When he arrived at Mount Ijo, a beautiful scenery appeared in front of him. He renounced himself from the world and changed his name to Resi Subrata.
+
+The story returns to Rara Jonggrang. When she walked along the mountainside and arrived at the forest of Sokan in North Imagiri, the time to deliver a baby conceived by King Baka came. On the edge of Opak River, she gave birth to a female baby and died. Although her body was drawn in the current, the cry of the baby was heard from the surface of the river.
+
+Randha Ruwek who was picking up vegetables at a riverside heard a baby cry and rushed there. He found a baby on a rock, took her up in his arm and returned home. He was delighted as he had no child and named her Rara Temon. It was in the year 1010 in Tekeka Era.
+
+King Sindhulacala of Gilingwesi, son of King Watugunung, had a son named Raden Sindhula who had mastered supernatural power and looked always young. He married Dewi Nagawati, daughter of his uncle, Sang Hyang Nagatatmala, and had four children, viz. Dewi Tembini, Raden Dewatacengkar, Raden Dewatapamunah, and Raden Dewaparunggu. At the age of 563[^(16)](#part0012_split_003.html_afn_16), he returned to Java and became a recluse in Mount Sigaluh.
+
+### **Chapter XXI**
+
+After winning the trust of god by meditation, Raden Dewatacengkar became the king after his father. He also possessed magical power.
+
+Resi Pancadriya, a hermit in Mount Ulaulu, had three children, Puthut Pradangga, Puthut Guntur and Endhang Jaeni. The last child, a beautiful girl, married Raden Dewatacengkar. She was faithful to both her husband and father-in-law. The husband was a handsome man with blue blood of ancestry. One day, Dewi Jaeni cut her hand when she was slicing an eggplant and a little blood spilt on the vegetable. At lunchtime, Raden Dewatacengkar said that the day’s dish was very delicious and interrogated his wife if there was anything special in the cooking. Hesitatingly, Jaeni said that a little blood was mistakenly mixed in the dish.
+
+Raden Dewatacengkar told his wife to cook human flesh once a month and ordered rural inhabitants to submit a captured thief. A part of the flesh of the thief was mixed into dishes and another part was processed into dry meat especially for Raden Dewatacengkar. Resi Pancadriya, the father-in-law of Dewatacengkar, was shocked to hear it and told his son-in-law to stop cannibalism, but Dewatacengkar did not abandon it and continued the habit in secret.
+
+### **Chapter XXII**
+
+Both Sindhula and Pancadriya, the grandfather-in-law and father-in-law of Dewatacengkar, could no longer bear Dewatacengkar’s habit, and committed suicide. The family fell into sorrow, but took it for granted as god’s will. After their deaths, Raden Dewatacengkar enthroned himself as the king of Sigaluh and his relatives became his assistants. He conquered near-by villages and subdued the inhabitants. Dewi Jaeni gave birth to a handsome son, named Raden Daniswara, who resembled his father. The coronation of Dewatacengkar and the son’s birth were the events in the year 1017 in the Teteka Era.
+
+The story moved to Jake Burdan, son of Risi Baeksi, who was looking for Rara Jonggrang. His went to Sokan and saw a girl who was fetching water by the side of the Opak River. She was as elegant as Rara Jonggrang. When he was about to talk to her, the girl, Rara Temon, was so surprised that she ran away abandoning her pail. Jake Burdan who tried to follow her was drawn into the current, but managed to reach the opposite side of the river.
+
+Half a month later, Jake Burdan began to walk again, but everyone he encountered was unknown to him. Then, he arrived at Mount Ijo. There, he met Resi Subrata, but the hermit who was practising asceticism was silent, whatever he was asked. Even so, Jake Burdan asked in insistence about the female whom he had met at Opak River, but no response came. Being furious, he stabbed the hermit (with his kris), but the hermit was not hurt. When Jake Burdan hit the head of the hermit with a stone, the hermit died by bumping his head on a rock in the riverbed. The body of the hermit disappeared by uttering a groan of censure against Jake Burdan. The voice was an oath to Jake Burdan that he who had committed a crime like a dog would one day die as a dog. The hermit himself was actually Raden Bandung Bandawasa, mentioned above.
+
+As cursed by Raden Bandung Bandawasa, Jake Burdan was turned into a red dog. He regretted his sin and prayed to god that he could recover the human figure and meet the girl whom he had seen at Opak River. He walked southward along the river to search for the girl who had shaken his heart.
+
+Rara Temon was weaving in a house in Pasokan village. The house was a raised-floor type and the ladder was removed when she was up on the floor. It was when Randha Ruwek went to Opak River to have a mandi (bath) and fetch water, and left the house for a longer time than usual, that Rara Temon fell to the ground where tigers often haunted. She asked herself whether someone would not come to put the ladder, whether someone would not come to take her as a family member and whether in future someone would not take her as a wife.
+
+Jake Burdan who was convinced that the girl must be the one whom he saw at Opak River put the ladder to the house by holding it in his mouth. In their conversation, he told her that he was Jake Burdan and that he must be in the dog form for eight years, and asked Rara Temon not to tell those facts to anybody else. He also said he might be able to regain the human form if he wished to have physical contact with someone. Jake Burdan was embraced by Rara Temon and the two had a temporal contact. Soon, Randha Ruwek came back. When he called Rara Temon to have a meal together, she came down the ladder followed by a dog. Randha Ruwek beat the dog and continued to do so, despite Rara Temon’s plea to stop it. The dog was excited and bit Randha Ruwek to death.
+
+The corpse of Randha Ruwek flamed and combusted with an indescribable voice that signified an oath that one day Jake Burdan in the form of the dog would miserably die and be eaten by some other dog. The voice was not heard by Jake Burdan whose body was entirely entwined with Rara Temon. In due time, Rara Temon gave birth to a male boy who was named Jake Anakan. This was an event in 1078.
+
+(Note: The names of Rara Temon, Jake Burdan and Jake Anakan do not appear in the following part of the text.)
+
+### **Chapter XXIII**
+
+The story goes back to Dewatacengkar. His power as the king of Sigaluh grew and, when his territory expanded close to the kingdom of Pengging, he issued an order to attack the kingdom.
+
+Until then, Pengging Kingdom was safe and prosperous under the rule of Darmamaya. Patih Tambakbaya became a priest and the position of patih was succeeded by Jake Gendang, being called Patih Kekeran. When Darmamaya heard from Jake Kendang that Sela was attacked by King Dewatacengkar of Sigaluh and that the inhabitants were not only forced to supply foods but also robbed of their properties and livestock, he ordered in a fury to go to war and said that he himself would participate. The soldiers of the Pengging armed and, mounted on horseback, looked as if they were scattered *“bunga setaman”* (flowers floated on water).
+
+When the troops of Pengging and Sigaluh confronted, King Darmamaya who descended from horseback went on the rampage followed by his soldiers. As the battle became violent, arrows flew about and a number of corpses scattered on the ground. Battle cries and the sounds of cymbals, gongs and drums echoed to enhance the atmosphere of the battlefield. Temporarily, the situation became in favour of Pengging. Dewatacengkar who saw this was enraged.
+
+### **Chapter XXIV**
+
+King Dewatacengkar rushed to the battlefield and fought against the enemy as if he was a wounded bull. Patih Gentang of Prambanan tried to hit Dewatacengkar, but he himself fell from horseback and was killed. The death of Patih Gentang urged King Darmamaya to go down to face King Dewatacengkar. Although the single fight was even, Darmamaya was eventually speared and killed. The soldiers of Pengging who saw the death of their king fled back to town. The retired king of Pengging, Anglingdriya was daunted by the death of his son-in-law and died. When the soldiers of Sigaluh encircled the town of Pengging, two sons of the deceased King Darmamaya, Dyan Pandayanata and Suwelacala, fled from the palace to the forests accompanied by court ladies.
+
+In the morning, soldiers of Pengging under the leadership of Jake Tengger surrendered to King Dewatacengkar. The king entered the palace and declared that he was now the ruler of Pengging in place of the deceased Darmamaya, and it was accepted by the Pengging people. He appointed Jake Tengger as the governor of Pengging and ordered him to construct a new town at Kuwu.
+
+### **Chapter XXV**
+
+The defeat of Pengging and the coronation of Dewatacengkar as the new king were the events in the year 1099\. The construction of the new town was completed in the year 1020 and the town was named Mendhangkamulyan.
+
+(Hereinafter, no descriptions on Prambanan and Pengging appear.)
+
+### **Notes for [Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8) Appendix**
+
+________________________
+
+[¹](#part0012_split_002.html_afn1) J. F. Scheltema, *Monumental Java*, Macmillan, London 1912 (pp.70–5).
+
+[²](#part0012_split_002.html_afn2) P. L. Narasimham, *Ancient Hindu Shrines of Java*, [In *The Theosophist,* 36, Theosophical Soc., Madras, India, 1915]; Imperial Japanese Government Railways, *An official guide to Eastern Asia: Vol. 5 East Indies, including Philippine Islands, French Indo-China, Siam, Malay Peninsula and Dutch East Indies*, Tokyo, 1917; Marquis Tokugawa (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004/Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanti Isanasari), *Perdjalanan Moenoedjoe Jawa*, Penerbit ITB 2006 (徳川義親 「じゃがたら紀行」, 郷土出版社 1931 (十字屋書店 1943, 中公文庫1975).
+
+[³](#part0012_split_002.html_afn3) *Babad Prambanan*, Translitersi dan Rinkasan oleh Sugiarti and Aditrijono, Departemen Pendidikan dan Kebudayaan, Departemen Pendidikan dan Kebudayaan, Proyek Penerbitan Buku Sastra Indonesia dan Daerah, Jakarta 1981\. “Babad” corresponds to English “chronicle”.
+
+[⁴](#part0012_split_002.html_afn4) It is more or less confusing, but “that monarch” denotes “the King of Pengging”.
+
+[⁵](#part0012_split_002.html_afn5) In the original text: “…Damar Moyo of the children of Sumendi Petoong”. Probably, it was misprinted.
+
+[⁶](#part0012_split_002.html_afn6) In the original text, *legen*. Sap drawn from the cut of stalk of a kind of palm is fermented to produce palm-wine or served as it is as a drink.
+
+[⁷](#part0012_split_002.html_afn7) In the original text: “…a gentler disposition, whom he recommended as…”
+
+[⁸](#part0012_split_002.html_afn8) A note in the original text of J. F. Scheltema (Footnote 1): “Not the last, as this legend has it, for Ratu Boko’s roaring can yet be heard on still nights, if we may believe the people who dwell on the banks of Telaga Powiniyan.”
+
+[⁹](#part0012_split_002.html_afn9) A note in the original text of J. F. Scheltema (Footnote 1): “Bondowoso’s curse took dire effect and the Javanese lassies of the neighbourhood who enter the bonds of matrimony about their fourteenth year comment with sarcastic pity on the fact that their sisters of Prambanan have, as a rule, to wait some ten rainy seasons longer – not without seeking compensation, it is alleged, after the example set by their patron saint Loro Jonggrang, whose maidenly life, according to the *Babad Candi Sewu*, of which more later on, was not altogether blameless.”
+
+[^(10)](#part0012_split_002.html_afn10) The Javanese Calendar, enacted by Sultan Agung in 1633, is a calendar in which the traditional Pawkon calendar (210 days/year) and the solar Islamic calendar (364 days/year) are combined. The Pawkon consists of Wuku (7-day week) and Pasaran (5-day week), and 30 Wuku corresponds to one year (210 days). The lunar eight years form one cycle (Windu). (Cf. Eric Oey (Ed.), *Java (Periplus Adventure Guide)*, Periplus, Singapore 1997) The terms in the text denote: Wawu=the 7th year of Windu, Madhangan=the 20th Wuku week, Ruwah=the lunar 8th month, Kliwon=the 5th day of Parasan, Kamis=the 5th day of Wuku.
+
+[^(11)](#part0012_split_002.html_afn11) 764 in the original text. The year was corrected with reference to *Serat Poncadriya dumugi Raja Erayana: Wlnastan Kintaka Maharana = Pustaka Raja Madya* in Nancy K. Florida, *Javanese Literature in Surakarta Manuscripts, Vol. 2: Manuscripts of the Mangkunagaran Palace*, Cornell University Southeast Asia Program Publications, 2000.
+
+[^(12)](#part0012_split_002.html_afn12) In this story, “raksasa” may be interpreted just as “giant” with no bearing to the raksasa (a divine guardian) in Buddhism.
+
+[^(13)](#part0012_split_002.html_afn13) Judging from the context, it must be a “false report”.
+
+[^(14)](#part0012_split_002.html_afn14) In this text, the honoric female title, “Loro” was spelled as “Rara”. The vowel, ‘a’ was often replaced by ‘o’ or *vice versa* in old Javanese documents.
+
+[^(15)](#part0012_split_002.html_afn15) This description in this paragraph is hardly understandable.
+
+[^(16)](#part0012_split_002.html_afn16) Probably a misprint.
+
+**Chapter 6**
+
+Flowers of Java – Poetry and Theatre
+
+### **Ramayana ballet at Prambanan Amphitheatre**
+
+Let us begin with the theatre by reversing the terms of the chapter title. The principal city of Java, Yogyakarta [¹](#part0013_split_001.html_fn_1), is not only the centre of administration, commerce and education but also the garden where beautiful flowers of Javan culture bloom around the keraton (palace) of the Sultan, a branch of the royal family of Java. The city, geographically located in a wide plain fanning to the south of Mt. Merapi, is not far from such famous ancient remains as Borobudur and Prambanan temples, built in the 9th–10th centuries, which are the primary attractions for sightseers from both other parts of Indonesia and foreign countries.
+
+It was one quarter of a century ago in the 1980s when I went there for the first time for the purpose of visiting Gajah Mada University that I was invited to “Ramayana Ballet” in the weekend evening. The place I was taken to, with no previous knowledge, was an amphitheatre situated in the field of Prambanan. Despite that the performance was said to be held on moonlit nights, the whole surroundings were in pitch darkness because of the thick clouds in the sky, and beyond the lighted stage of the open theatre was seen several candis (temples) of Prambanan, which I had visited in the daytime, dimly illuminated with floodlights, furnishing a fantastic atmosphere. On the left-hand side of the theatre’s stage was a traditional Javanese music band of some twenty members, called gamelan, although the details of their instruments were not observable from our stands. When the overture of a low and slow melody started and the intoned narration by the stage master, called dalang, followed, dancers of both sexes dressed over their bodies with shining gold accessories appeared and danced elegantly. The dancers also spoke their parts when their motion halted. Although the language spoken by the dalang and dancers was Javanese, which was not comprehensible at all by foreigners, it was fortunate that Mrs. W. in an adjacent seat who accompanied us from Bandung was originally a native of Java and kindly explained the scenes to me in a low voice.
+
+Rama, the hero of the story, an alleged incarnation of Vishnu was an intrepid young prince who wore a wonderful helmet on his head, held a bow in his hand and carried a bunch of arrows on his back, whilst his wife, Sinta was a slender pretty princess. In a forest, Laksmana, Rama’s brother hurt Surpanakha, a sister of the demon king Rawana, who had approached him. In revenge for it, Rawana sent a maid who had transformed herself into a golden deer to attract Sinta and, while Rama was chasing the deer to catch it for Sinta, Rawana in disguise of a Brahman kidnapped Sinta.[²](#part0013_split_001.html_fn_2)
+
+While I was absorbed in the stage, imagining the world of ancient India, and the story reached its climax, heavy rain suddenly came to stop the performance and eventually forced the rest of the ballet to be cancelled.
+
+On our way back, I told my impression to Mrs. W. and asked her some questions.
+
+“As far as I learnt in school, the Ramayana was an ancient Hindu story. It does not look to fit the present-day Indonesia where the kings and the majority of people are Moslems, does it?”
+
+“No, whatever was the origin, such stories as Mahabharata and Ramayana were Javanised during our long history. We love them as Javanese literature whatever their very origins were.”
+
+“To me, the dresses and the actions of the dancers looked similar to those depicted on the reliefs of Prambanan Temple, which I saw in the daytime.”
+
+“It would have been so at a glance, but they were actually different in details. The Ramayana ballet you saw tonight was a sort of stage play, which was formally called ‘wayan orang’ or ‘wayang wong’ that means a play by human. It was developed in the 16th century in royal courts. They are different from those that might have existed in ancient India or in the Hindu-period Java. In Java, so-called Javan literature was born in the 10th century and, to show it on the stage, a unique shadow play, which we call ‘wayang kulit’, was invented. After then, it had developed into various forms.”
+
+### **Wayang kulit performance at Sonobudoyo Museum**
+
+It was several years later that I saw wayang kulit, that was to be added to UNESCO’s List of the Masterpieces of the Oral and Intangible Heritage of Humanity in 2003 together with unique Javanese *keris* (dagger), in the Sonobudoyo Museum near the keraton (palace) of Yogyakarta, where short versions of the shadow play were performed every night. Inside the entrance of the one-storey building with a traditional-style Javanese double roof was a big hall of some fifteen metres square, in the middle of which was a partition with a screen of white cloth measuring five metres wide and one and a half metres high. On the front upper side of the screen hung a projecting bulb and on both right- and left-hand sides of the screen were numerous puppets, as many as several dozen, leant against the lower part of the partition wall. The puppets were, as “kulit” meant leather, flat objects cut out from a sheet of buffalo leather and coloured by paints, and the shapes of characters were significantly deformed. There was a rod handle in the centre of each puppet, and the upper and lower parts of arms were jointed at the shoulder and the elbow so as to be moveable by means of a narrow rod attached at the tip of each hand. The front side of the screen was the stage for a gamelan orchestra where various exotic instruments were arrayed. Most of them were percussion instruments that included large and small gongs hanging from frames, xylophones with large keys and sets of bowls turned upside down, all of them apparently made of brass, as well as several drums that more or less resembled Japanese traditional hand drums. Wind instruments and string instruments were not many and some bamboo-made flutes, similar to the Western recorders, and fiddles, similar to Chinese erhus, were seen. While I was reading the brochure in which the abstract of the day’s show, a part of the Ramayana, was printed in English, musicians dressed with batik sarongs and caps of brown, black and white colours started the tuning-up and several female singers dressed with colourful batik sat square on their positions.
+
+![Illustration](images/00129.jpeg)
+
+Wayang kulit show in the Sonobudoyo Museum Theatre, Yogyakarta
+Photographed by M. Iguchi, June 2006.
+
+At eight o’clock, no sooner than the room light was dimmed and the gamelan music started, the dalang in the same batik as the musicians who sat in front of the screen picked up a puppet, called *gunungan*[³](#part0013_split_001.html_fn_3), which represented the sacred mountain, Semeru (equivalent to Sanskrit *Mahameru* and Japanese *Miyaukau*), leant it against the middle position of the screen and solemnly recited the beginning part of the text. The dalang picked up different puppets one after another and, while skilfully manipulating them with both his hands, he spoke the characters’ parts in different voices.
+
+The rear of the partition, which should be the proper side to watch shadows, was a fantastic different world, despite that it was separated by a thin sheet, where the only rectangular screen was light in the darkness and not only the outlines of puppets but also numerous small holes perforated on the leather were vividly projected. The colours painted on leather sheet were faintly seen on the shadows, passing through the semi-transparent buffalo leather. In such a scene as two characters held a dialogue, only the hands of the shadow moved in a delicate manner, but once a battle started, the whole two shadows lively ran all around the screen, shifting their positions and jumping into the air with their arms swinging to attack the opponent. The outline of characters was occasionally blurred, adding some effect to the shadow, as the puppets were moved a little away from the screen by the dalang. (When I saw the wayang kulit later again, I thought the shadow scenes would have been more fantastic in old days when the projector lamp was not an electric bulb but a flickering oil lamp.) Although the voices of characters as well as the intoned narration in Javanese language were impossible to follow, the performance of one and a half hours went on while I was absorbed in it as if I were in a dream. How was the lively shadow produced from leather-made puppets, which were finely prepared but looked rather grotesque in daylight? Not only the puppets and the dalang’s techniques but also the text and the gamelang music must have been refined in the long passage of time. My interest became deepened even more.
+
+The number of the audience that evening was not more than twenty or thirty, despite the low admission fee that was apparently not sufficient to maintain the theatre. Later, I learnt the traditional theatres in Yogyakarta, as well as in Solo, were supported by the royal houses. Outside of the museum building, there was a small workshop to demonstrate the process of preparing puppets. The cutting of a character’s shape out of buffalo leather and the punching of large and small holes on it were done manually in accordance with the pre-drawn pencil marks, and by the side of the craftsman were partially coloured pieces. It was quite impressive that they needed several weeks to complete one puppet. When I revisited there later, I bought a piece of Bima[⁴](#part0013_split_001.html_fn_4) at the offered price for large banknotes, while asking for a discount was customary in Indonesia, to express my gratitude for the craftsman’s fine work. For reference, most wayang puppets sold at moderate prices on the street of Yogyakarta or in department stores in Jakarta as souvenirs are imitations made of carton paper, which are just good enough to put on the wall as a memory of Java, but not useful for shadow play.
+
+Wayang kulit used to be popular not only in royal courts but also among common people, as a performance held as an attraction on the occasion of a wedding in the countryside was encountered and described by Marquis Tokugawa in his *Journeys to Java*[⁵](#part0013_split_001.html_fn_5).
+
+### **Wayang kulit performance hosted by the Solonese royal house**
+
+Despite chances being scant, I luckily had an occasion to see the performance of wayang kulit hosted by a royal family. In Java, there is another royal family, the House of Susuhunan, in Solo (Surakarta), fifty kilometres to the east by northeast of Yogyakarta, that is actually the head family from which Yogyakarta’s House of Sultan had branched. It was several years ago when I arrived at the Solo Station after midnight by a night train, with the intention to visit the excavation site of Java Man at Sangiran in a suburb of the city, that it took me two hours, being driven around the town by a taxi, to finally find a small tavern near a bus terminal, because all hotels were unexpectedly full. It was because the Festival Keraton Nusantara V (The Fifth Festival of Palaces in the Archipelago) was scheduled on the next day and all sultans and their parties were gathering in the city.
+
+The eve of the festival was held on the same day in the alun-alun (square) in front of the city hall where a large stage with a roof, which looked too good for temporary use, had been constructed and was brightly lit. When the performance of wayang kulit started, a numerous audience who filled the square was joyfully gazing at the stage and listening to the dalang’s voice. The title of the evening’s show was the Bharatayuddha, the tragic story of war between the Pandawa and the Korawa families, derived from the Mahabharata and written in Java, the story of which I knew only to some extent at that time. The summary of the story, which I read afterwards, is as follows.
+
+![Illustration](images/00130.jpeg)
+
+A scene of wayang kulit, “Bharatayuddha”, performed on the eve of Festival Keraton Nusantara V (The Fifth Festival of Palaces in the Archipelago), at the square in front of the city hall of Solo. According to an expert of wayang, Mr. Djoko Wiryono, father of this writer’s young friend, the character on the left is Sengkini, the minister of the Korawa, and the two on the right are a monster king and his follower. The object on the end of the right-hand side is the so-called Gunungan or Kayon.
+Photographed by M. Iguchi, September 2006.
+
+### **The summary of Bharatayuddha**
+
+“The Korawas were the ninety-nine sons of King Dhrtarastra of Hastina, headed by Duryodana, and the Pandas were the five sons of Pandu, the king’s younger brother, namely, Yudistira, Bima and Arjuna from Queen Kunti, and Nakula and Sadewa, twin sons from concubine Madri. Since King Dhrtarastra was blind, the kingdom was governed by Pandu. Thus, the cousins were raised and educated together by common uncles and preceptors, but they were constantly rivalling with each other as the Korawas were always jealous and hated the Pandawas who always proved superior. When the king appointed Yudistira, his eldest nephew, heir to the throne, after the early death of Pandu, the Korawas became angry and devised a stratagem to destroy the Pandawas. The Pandawas managed to escape from it and spent a hard time, disguised as begging Brahmans. When they returned, the Korawas consented to a division of the Hastina kingdom and gave the Pandawas the western part where they built their capital, Ngamarta. The Korawas, not abandoning their intention to ruin the Pandawas, invited Yudistira for gambling and confiscated all his wealth, his kingdom, and his brothers’ freedom. The Pandawas lived in slavery for twelve years and an additional one year among the common people.
+
+“In the beginning of the Bharatayuddha (the last chapter of the Mahabharata), Krsna went to the capital of the Korawas by representing the Pandawas to negotiate the latter’s claim to a part of the kingdom. Although the old king Dhrtarastra and his advisors were supportive, Duryodana rejected it and even tried to kill Krsna, to deny the hope for peaceful settlement. The Great War of the Bharatas between the two cousin groups broke out and a fierce battle continued for eighteen days in the field of Kuru. The events were full of tragic incidents in which the cousins’ old uncles and venerated preceptors inexorably met their death, as did many young heroes, including the sons of Arjuna and Bima. In the final encounter, Arjuna killed Kama (his half-brother from Kunti, begotten by the sun-god Surya, but sided with the Korawas without knowing of his own origin) and Bima slew Duryodana. Funerary rites were then held for all the fallen warriors, the women lamenting their husbands and sons. Yudistira was crowned the king and reigned in Indraprastha (Ngamarta).”[⁶](#part0013_split_001.html_fn_6)
+
+The motion of puppets in the wayang kulit performance looked somewhat slower and more elegant than that in Yogyakarta, as I actually read later in a book that “while the style in Yogyakarta was more orthodox and conservative and the movement of puppets was more vigorous, direct, and simple, that in Surakarta style was more sophisticated into delicate, refined, and complex manner”[⁷](#part0013_split_001.html_fn_7). I was only watching the show by vaguely imagining the scenes of the story as the Javanese language was again not at all comprehensible. Even my friend who accompanied me from Bandung said that not all the words were clear, as they were significantly different from those of her native Sundanese language. The rear of the screen was also full of people. Having looked at the surrounding situation, I realised how deeply wayang was rooted in the minds of Javanese people, despite the chances to see the performance are meagre nowadays. In fact, the puppets of wayang are designed in various items, ranging from interior ornaments to accessories and T-shirt prints, and wayang performances are frequently broadcast on televison like *Ningyou-joururi* (a Japanese puppet show) in Japan. I heard that the orthodox wayang performance, such as of that evening, would continue overnight until next morning, but I felt a little tired and retired from the venue at around midnight.
+
+### **The origin and the evolution of wayang kulit**
+
+The texts of the Mahabharata and the Ramayana played in wayang are not the direct translations of the original Indian versions, as I was told before. The first example of a type of epic called “kakawin” written in Javanese language with a strict metre, was composed[⁸](#part0013_split_001.html_fn_8) during the reign of King Balitung, a king of the Sanjaya Dynasty, which prospered in the 8th–10th centuries. Although the capital of Java was soon moved from the land of Mataram to the eastern part of Java Island, the tradition of kakawin was inherited and applied in and after the 11th century, not only in such literary works as Arjunawiwaha, Krsnayana (Krishnayana) and others, but also such a chronological book as *Desawarnana* (also called *Nagarakertagama*).
+
+When was wayang born? The earliest known record was found in the royal charter issued in the name of King Balitung in 907 AD as inscribed in a copper plate. It was written that when a freehold was dedicated for a local monastery, *mawayang* (performance of wayang) on an episode of Bima was given for entertainment along with the recitation of the Ramayana and the Mahabharata as well as dances, songs and buffoonery[⁹](#part0013_split_001.html_fn_9). Whether this wayang was wayang kulit or some other form of wayang was not clear from this inscription, but it was considered to have been the former from some other evidence. For instance, in a paragraph in Arjunawiwaha composed in 1035 AD it was written that “They [spectators] cry and are sad, knowing that it is merely [the illusion of] carved leather that moves and speaks”. Also, in Bhomantaka (The death of Bhoma), another kakawin composed by an unknown author in the Kediri Era (1042–1222 AD), there were such sentences that “Seeking shade in the clouds they were now indistinctly visible, then reappeared like wayang puppets projected against a white screen, the light of the sun serving as the stage-lamp”, “The rice-fields were shrouded in a haze, as though hidden behind a kelir [screen]. The banana-trees moving gently resembled wayang puppets”, etc. From these facts, it is almost certain that wayang kulit had existed at the latest in the early 11th century[^(10)](#part0013_split_001.html_fn_10).
+
+Then, where did the idea to project the shadow of puppets come from? A theory has it that ancient people in Java would have thought in their animistic belief that the souls of their ancestors were brought to life in shadows and gave them advice and magical powers[^(11)](#part0013_split_001.html_fn_11). Whether this idea is acceptable or not, it is generally believed that wayang kulit was an indigenous invention in Java. Of course, some people suspected that a certain prototype show might have existed in India and been brought to Java, but no evidence to support such a hypothesis was found in India.
+
+After the 15th century when Islam spread in Java, such an opinion that Moslems had greatly contributed to the establishment of wayang kulit was advanced. It was even claimed, contradictory to the historical facts, that wayang kulit itself was created by Islamic saints.[^(12)](#part0013_split_001.html_fn_12) [^(13)](#part0013_split_001.html_fn_13) It may not be surprising because there was a belief among Moslems that Aji Saka who had brought civilisation to Java in the 1st century AD was actually a companion of Prophet Muhammad who stopped in India en route to Java and that the books of Mahabharata, Ramayana and Arjunawiwaha were authored by Aji Saka who was a Moslem[^(14)](#part0013_split_001.html_fn_14).
+
+With regard to the highly deformed figures of wayang characters in Java, which were passed down to date, a theory has it that Sunan Giri, an Islamic saint at the time of Raden Patah, had ordered an unrealistic puppet set made in order to circumvent the Islamic proscription against the portrayal of human form [^(15)](#part0013_split_001.html_fn_15). Whether this is true or not, it is noteworthy that in Bali, where the penetration of Islam was prevented, the design of wayang puppets is more natural and closer to real human figures, implying that the original form of wayang puppets in Java was supposed to have been similar to those that are still seen in Bali[^(16)](#part0013_split_001.html_fn_16).
+
+### **Balinese wayang**
+
+Seeing is believing. The Balinese wayang kulit, which my long cherished dream came true and I saw, was quite interesting. Having been informed that a show was held somewhere in Ubud every evening, I found a small theatre, called Pondok Bamboo, in a street of the city. In a humble one-page brochure given together with the ticket at the reception under the eaves of the theatre was such guidance that wayang kulit bore the characteristics of teaching, entertainment and religious service and that, in Bali where Hinduism was the major religion, it was commonly performed on such occasions as temple festivals, wedding parties, birthday celebrations and funerals. The guidance was followed by the abstract of the day’s turn, entitled “A story from Mahabharata”. While waiting for the commencement of the show, I read, “When the King of Pandawa built a new palace, Puri Kandawa Prasta, he invited King Krsna to receive advice for the inauguration ceremony, called Raja Suya. Krsna departed for a journey to receive support from neighbouring kingdoms, accompanied by Bima and Arjuna of the Pandawas. When they arrived at Magada Kingdom, King Jara Sanda was conducting a human-sacrificing ceremony every day according to the teaching of Brata Warsa. Disguised as mendicants, they entered the palace to try to persuade the king to stop the wicked ceremony, which was opposed to the teaching of Siva, but they had to take off their coats, as Jara Sanda did not listen to them and became enraged. A war was inevitable. After a fierce battle, Jara Sanda was defeated by the Pandawas.”
+
+![Illustration](images/00131.jpeg)
+
+A scene of Balinese wayang kulit.
+(Top) Shadow side, (Bottom) Backside. Photographed at Pondok Bamboo Theatre, Ubud, Bali, by M. Iguchi, February 2012.
+Note that the figures in the shadow are left-right reversed.
+
+The difference of the Balinese wayang kulit from the Javanese version was not only the feature of puppets and the shape of kayon. The sizes of both the screen and puppets were smaller than those of Java. The motion of puppets was more wild and dynamic and the shadows on the screen were dimly wavering. In the rear, although the manner of the dalang to speak both narrations and words of characters were the same as in Java, he did not pick up puppets himself, but two assistants who sat on both sides handed them one after another. The light source for projection was a coconut-oil lamp, although an auxiliary electric lamp was devised. The gamelan consisted only of two gambang (large brass-made xylophones), played by two musicians, and no singers were there, unlike the full-orchestra gamelan in Java. This scene was virtually the same as was painted in an old picture that I saw in a book[^(17)](#part0013_split_001.html_fn_17). Since the performance was aimed at sightseers, the dalang inserted some ad-libs in English with deliberate Balinese accents. Thus the show finished in one hour in a friendly atmosphere.
+
+![Illustration](images/00132.jpeg)
+
+Wayang kulit puppets of Java (left) and Bali (right), comparison.
+The character is Bima for both. Images reproduced from: [http://tokohwayangpurwa.blogspot.jp](http://tokohwayangpurwa.blogspot.jp).
+
+Apart from the aforementioned arguments, it was after the foundation of the New Mataram Kingdom by Panembahan Senopati, who unified small kingdoms coexisting after the fall of the Majapahit Kingdom, that wayang kulit was developed into a sophisticated style and moveable arms were invented, and that such characters as Cakil (giant) and his companions were added[^(18)](#part0013_split_001.html_fn_18). After the branching of the royal house into the House of Susuhunan in Solo and the House of Sultan in Yogyakarta in the middle of the 18th century, wayang was cherished in the two royal houses and brought up to the present elegant art. Although it was one side of the history that the division of the kingdom in 1755 AD, arranged by the arbitration of VOC after the three-time Wars of Succession[^(19)](#part0013_split_001.html_fn_19), had enhanced the presence of the Dutch in Java, it was undeniable on the other side that kings and nobles were freed from military matters and became able to concentrate on the development of their own art and culture. It was also in the courts of Solo and Yogyakarta that wayang wong (human wayang) mentioned in the earlier part of this chapter was established.
+
+### **Wayang wong, a stage-play**
+
+The performance of wayang wong can be seen also in the Pariwisata amphitheatre in the city of Yogyakarta, but the programme is always some extract from the Ramayana that is familiar to sightseers. Although most traditional theatres, which had once existed here and there, were closed with the emergence of cinemas and television, I was informed that one theatre survived in the Sriwedari Amusement Park in the heart of Solo. The one-storey theatre was located in a secluded corner of the park, behind the old-fashioned gilded roundabout and an arena of children’s electric cars powered by electricity taken from the ceiling by a pole. In front of the ticket office, there were signboards for announcing the programme, “Today is Citrawangi” and “Tomorrow is Tunjungsari”. On the stage in the theatre, there was a curtain on which a large gunungan (kayon) was dyed and above the curtain hung a drop curtain on which the head of Kala was woven. The floor of gamelan was situated in front of the stage at the lower level. Among the audience, there were a few groups who were apparently visiting foreigners, but others were local fans. Before the scheduled opening time of 8 pm, about half of the seats were full, despite it being a weekday evening.
+
+When the curtain opened, a flat curtain on which the outer wall of a castle was brightly painted appeared in the back of the stage, but there were no stage settings. About ten actors and actresses acting as princes, princesses and nobles in battle costumes emerged. Although their dresses and accessories looked similar to those of Ramayana ballet dancers, which I had seen in the amphitheatres in Prambanan and Yogyakarta, their carriage looked to be slower and more graceful, as if the show was an orthodox stage drama rather than a ballet. Without understanding their speech, I guessed it was the scene of a ceremony held before going to war. The second stage began in a forest with a talk from a female warrior of another clan to monkey troops, with white masks, who were similar to those in the Ramayana story. The third stage was in an open space in another forest where two warriors from the first and the second clans fought furiously with their knives, but the battle ended in a draw. In the fourth stage two female warriors from the two clans had a dialogue in front of the gate of a fortress. In the fifth stage, the two women fought and the one from the first clan was killed, but, after then, the second woman held the body of the opponent on her lap in sorrow, while men and women of both sides were showing their sympathy. Thus the show of one and a half hours ended while I was not able to understand the full context.
+
+![Illustration](images/00133.jpeg)
+
+Wayang wong performance in Sriwedari Theatre, Solo: The first stage of “Citrawangi”. In the low floor in front of the stage was the gamelan orchestra.
+Photographed by M. Iguchi, May 2009.
+
+The Citrawangi must be taken from a certain classic story, but no friends of mine were familiar with it. One of them took the trouble to ask his friend in the literature department of Gajah Mada University, but the source was not defined either. For reference, the programmes of the next and previous evenings, Tunjungsari [^(20)](#part0013_split_001.html_fn_20) and Srikandi Edan [^(21)](#part0013_split_001.html_fn_21) were episodes from the reign of King Kertanegara in the Singasari Dynasty and from the Bharatayuddha, respectively.
+
+The programme of wayang wong when I visited Solo a second time was “Basudewa Karma”. Since I had no information beforehand, I could not understand the story once again as on the previous time. After returning home, I found an abstract[^(22)](#part0013_split_001.html_fn_22) and learnt, with reference also to the pictures taken at the theatre, that it was a story of Prince Basudewa of Madura who fought with rivals and eventually got married to Princess Dewi Badrahini, a daughter of Prabu Badrawinata. It was probably not only me who wished the theatre would have provided an English brochure, even a simple one, in which the abstract was given for visitors who were unfamiliar with Javanese.
+
+One of the features of wayang wong in comparison with Japanese Kabuki and European stage plays was that no stage settings were used and they were painted on the background curtain whenever necessary.
+
+### **Stage-plays in royal courts**
+
+While it is impossible for commoners to see a wayang wong performance held in royal courts, the Marquis Tokugawa was invited in 1929 to the palaces of both Yogyakarta and Solo and left a report on the play and the atmosphere in his *Journeys to Java* as follows[^(23)](#part0013_split_001.html_fn_23):
+
+“Two pairs of actors appeared on the stage from the left and the right sides, hanging their heads down. There were no sounds in the huge hall and a solemn air filled the space, giving me a sober feeling. The calm was broken, when the king ordered, ‘Start!’ The *dalang* replied, ‘Oh!’, slowly opened the book and began to read the text. The story was a chapter of Ramayana. Then, the music started and the singer sang. (Yogyakarta.)”
+
+“When the tone of the *gamelan* changed, two young men with gorgeous clothes stepped gently into view from the far end of the corridor. One could be assumed to be about twenty-one or two and the other, seventeen or eighteen years of age. After they prayed for a while sitting on the floor, pressing their hands and hanging their heads, they raised their heads and stood up slowly with the music to start to dance. They each put a gold bird-shaped helmet on their heads, gold armour similar to the wings of butterfly on the backs of their half-naked upper bodies and a *keris* with numerous inlaid gem-stones which shone brightly under the light. I was impressed not so much by the beauty of their costume but by the appearance of these young men who looked so noble and handsome. The eye-shadow at the corner of their eyes added accent to their beauty. In front of the dazzling brilliance of the young men, even those female dancers who overshadowed ‘the three-thousands maids serving in the court’[^(24)](#part0013_split_001.html_fn_24) must be eclipsed, just as stars were against the moon. I watched quite absorbed, like a man who had lost his soul, in such a way as my face must have looked odd to other people. When I came to myself, the prince in the adjacent seat tapped on my shoulder, and told me, ‘They are my brother and son.’ I had thought they were not common people and, in fact, they were princes. What splendour! The two princes performed a brilliant dance. It was elegant and tender, but it turned to be fearsome, when the scene moved to a battlefield, as the two bodies crossed and the edges of their *keris* hit and sparkled. The gracefulness was not lost, however, during such actions. The performance ended after the highlight scene and the two young princes retired quietly after giving a round of salutes. (Solo.)”
+
+![Illustration](images/00134.jpeg)
+
+Wayang wong in the royal court of Solo. This is one of the photographs presented by Susuhunan X to Marquis Tokugawa when the latter visited Solo in 1929\. The same photograph was adopted for the cover of Marquis Tokugawa, (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004\. By courtesy of the Owari-Tokugawa Family.
+
+It is said that the most lofty and sacred of all court dances are serimpi and budoyo danced by female dancers, exclusively maiden daughters of noble bloodlines, the performance of which was only limited at least until recently without being exposed to the public. I had once had a chance to see the dance of serimpi at a dinner show in a hotel in Yogyakarta, but it was a short demonstration version of only some fifteen minutes by two dancers. Since my memory is quite vague, let me again borrow paragraphs from Marquis Tokugawa’s *Journeys to Java*.
+
+“Before long, the sound of gamelan echoed from a distance. An elderly woman came in on her knees from a door and four dancers followed wiggling their bodies. Their graceful step was the same as that of *noh*. A prince said it was Serimpi. The dancers’ figures were neat, each wearing a gold crown garnished with fragrant flowers, a silk strip wrapped around their half-naked upper-body up to the level of their breasts, a trailing batik skirt, a coloured gobelin on their waists, and nothing on their bare feet. Then, some other elderly ladies who played the role of prompters came behind on their knees. There was a slim table in the centre of the four pillars on which four cut-glass bottles filled with a red liquid and four cups of the same design were placed. The dancers entered the central area, separated at the four corners and pressed their hands together while sitting on the floor. They then stood up slowly to dance quietly and silently.
+
+“The night at the royal palace in the country of perennial summer was cool and serene, as if it were the limpid autumn in our own country.
+
+“The graceful dancers danced by waving their light clothes, and moving closely, or separately of each other under the Dutch lanterns, like butterflies fluttering around flowers. The dance turned into a duet and then into a solo. One of the dancers gently took up a cup and her partner poured the red liquid in it. She danced for a while holding up the cup and then gulped down the liquid.
+
+“The dance was still quiet. Suddenly, the dancers took up pistols from their waists and, after stepping around, raised the cock and fired all at once, making most of the guests quite astonished. They continued the dance quietly, however. Serimpi was over in about an hour. Then, Boedojo danced by nine dancers were shown. The performance was similar to Serimpi, but, on that occasion, nobody was startled by a simultaneous firing as everyone had been expecting this…”
+
+It was pointed out in a book that “the Javanese theatre embodies spiritual and cultural values of deep significance; only the No-gaku of Japan can be compared with it, and even so the Javanese has a wider range of theme and is far more than an exquisite survival.”[^(25)](#part0013_split_001.html_fn_25) *Noh* or *Noh-gaku* established by Ze-ami Motokiyo (1363?– 1443?) during the era of Shogun Yoshimitsu Ashikaga in the early Muromachi Period was protected during the Yedo Period by Shogun and other clans as ceremonial play of warriors and performed on special occasions in their houses. If I was to supplement, *Ga-gaku* promoted in the Imperial court since ancient time could belong to the same category.
+
+### **The development of wayang**
+
+The theatre of wayang kulit had generated various derivatives to form the so-called “wayang world”, the word, wayang, which literally meant “shadow”, having been applied to various plays other than wayang kulit. Wayang kulit itself, which traditionally played such classic stories as the Mahabharata and the Ramayana that are now called “wayang purwa” (*lit.* original wayang), had been applied in the 15th– 16th centuries in East Java to perform the Panji Stories[^(26)](#part0013_split_001.html_fn_26) and Damar Wulan Legend[^(27)](#part0013_split_001.html_fn_27), classified as “wayang gedog”, and in the court of New Mataram a new repertory called “wayang madya” to play episodes of former kings, viz. King Jayabaya of Kediri, was added. In addition, wayang kulit based on the history of Yogyakarta (Wayang kuluk) and that of Solo (Wayang dupara, see the illustration of the back cover of this book/a photograph in Chaptr 1) were created. The activities of Prince Diponegoro, the hero of the Java War (1825–30) was made into Wayang Jawa. Wayang to play such a fable as “mouse and deer” was also born, as I actually saw several pieces of animal puppets in the Yoshichika Southeast Asia Collection (not open to the public) in the storehouse of the Tokugawa Art Museum, Nagoya, Japan. In the later centuries, wayang was further used for the teaching of the Catholic religion. After the independence of the Republic of Indonesia, it was applied for the spreading of Pancasila (the state ideology), although it was not very successful. Nevertheless, wayang purwa is still beloved by Javanese people, while those new wayang kulit have almost diminished.
+
+![Illustration](images/00135.jpeg)
+
+A set of Wayang Katolik puppets (left) and a magnified image of Jesus (right). Owned by Pangudi Luhur Primary School, Surakarta. Photographed by M. Iguchi, February 2012\. According to the schoolmaster, Br. Aloysius Istiyanto, FIC, Wayang Catholic, formally called Wayang wahyu (wahyu=revelation) is played in the Christmas and the Easter seasons.
+
+“Wayang kelitik” or “wayang kerucil” was a kind in which the design of puppets was similar to that of wayang kulit but the bodies were made of wood board and colourfully painted. Although puppets were manipulated by holding the main axis and moveable arms, this wayang was not aimed at casting a shadow but showing the substance itself[^(28)](#part0013_split_001.html_fn_28), at least in its beginning, contrary to the description in Internet articles or even in books[^(29)](#part0013_split_001.html_fn_29). Recently, old 16 mm movie films filmed in the 1920s in Java by Marquis Tokugawa have been discovered in a corner of the Tokugawa Art Museum’s storehouse[^(30)](#part0013_split_001.html_fn_30), and I was given a chance to watch them courtesy of the Marquis’s great-grandson. In the shot of wayang kelitik in it, probably taken in Yogyakarta, there was no screen to project shadows in front of the puppeteer. Anyhow, wayang kelitik is no longer played today.
+
+![Illustration](images/00136.jpeg)
+
+Puppets of Wayang kelitik (from Yoshichika Southeast Asia Collection)
+By courtesy of the Tokugawa Art Museum.
+
+### **Wayang golek, wayang topeng**
+
+One more wayang played with puppets is “wayang golek” in which three-dimensional figures are employed. The structure of puppets is composed of a wooden cylindrical body, in the centre of which is passed an axis to turn the head fixed on its top, and two arms that hang down from the shoulders are moveable by narrow rods like those of the wayang kulit puppets. The upper and lower parts of the body are dressed with batik-made kubaya (blouse) and sarong (skirt), respectively. Although the origin of wayang golek is not sure, it is said that a prototype arrived from China was first adopted to play Menak Stories[^(31)](#part0013_split_001.html_fn_31) in the Islamised towns on the north coast of Java in the 17th century and the repertory was expanded to cover the Ramayana and other classic titles. Wayang golek became popular particularly in West Java and stories of such heroes as Mur Jangkung (Jan Pieterszoon Coen) and King Siliwangi were added in its repertory as mentioned in the Jagatara Tales (*See* [Chapter 2](#part0009_split_000.html_8IL20-eace0453ad444634b688454ed62f4eb8)). Although the puppets of wayang golek are abundantly sold as souvenirs in department stores and other shops in Jakarta, Bandung and elsewhere, wayang golek is rarely performed today. I have once seen a short performance of some fifteen minutes demonstrated for tourists in a hotel in Bandung.
+
+![Illustration](images/00137.jpeg)
+
+Puppets of wayang golek (from Yoshichika Southeast Asia Collection)
+From the patterns of the puppets’ dresses, these are considered to be high-grade pieces from Yogyakarta, not from West Java. Note that the rods to manipulate hands have been removed. By courtesy of the Tokugawa Art Museum.
+
+Among wayang played by human is a masque called “wayang topeng”, which must be older than wayang wong, as its major titles were the Panji Stories. Up until today, this play has survived in Bali, although I have not had a chance to see it, while it has long been lost in Java, neglected by the courts of Solo and Yogyakarta.
+
+![Illustration](images/00138.jpeg)
+
+Masks for Wayang topeng.
+Photographed with permission in the Bali Museum, Denpasar, Bali, by M. Iguchi, February 2012.
+
+### **Wayang beber**
+
+There was a different type of wayang called “wayang beber” in which a dalang read a text, while rewinding a picture scroll held upright between two poles. Although some people assume that its origin was older than wayang kulit and dated back to the 4th or the 5th century[^(32)](#part0013_split_001.html_fn_32), it is generally agreed that it was after the 12th century when the Panji Stories, the Mahabharata, the Ramayana and other stories were adopted[^(33)](#part0013_split_001.html_fn_33). Wayan beber must have been popular in the Majapahit Period as it was written in *The Overall Survey of the Ocean Shores* (*Ying ya sheng lan*, 1416)[^(34)](#part0013_split_001.html_fn_34) by Ma Huan (馬歡) who accompanied the great voyage of Zheng-He (鄭和) in the Ming Period China, but it had gradually declined in the later time and we could only see the scene of its performance in photographs taken in the early 20th century. The sheet used for the picture scroll was a bark-sheet called “daluang” prepared by elaborately hammering the white inner-bark of paper-mulberry (*Broussonetia* papyrifera), which was used also for books (*See* [Chapter 4](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8)), but not as much as lontar. While daluang as well as lontar were obsolete after the introduction of pulp paper and its manufacturing technology, I had recently learnt that some efforts to try to reproduce daluang were made today in an exhibition held in the Paper Museum, Asukayama, Tokyo, in which a video film of its manufacturing process, a picture of wayang beber traced on a trial sheet and some other related items were displayed[^(35)](#part0013_split_001.html_fn_35).
+
+![Illustration](images/00139.jpeg)
+
+A scene of wayang beber performance.
+Reproduced from: W. F. Stutterheim, *Pictorial history of civilization in Java.* Translated by Mrs. A. C. Winter-Keen, Java Institute and G. Kolff, 1927.
+
+### **Lontar with pictures**
+
+It may be better classified into the category of a picture book rather than that of wayang, but there were lontar documents in which not only the text but also illustrations of a story were inscribed, as we often see some pieces in museums. As mentioned in [Chapter 3](#part0010_split_000.html_9H5K0-eace0453ad444634b688454ed62f4eb8), lontar itself was a leaf of lontar or siwalan palm (*Borassus* flabellifer), cooked in water containing turmeric as an antiseptic, cut into a strip, and pressed, on which letters and/or pictures were inscribed and filled with a compound of soot and oil; the strips were bunched like a Venetian shade. An antique piece that I obtained in the courtyard of Bali National Museum in Denpasar from a pedlar was a souvenir article probably produced in the early last century. Although he said it was prepared by the traditional method, the set consisted only of eight leaves, on each of which were engraved a scene of Ramayana in the middle and a short Javanese or Balinese text and its English translation on the left and right sides, respectively. It is hard to imagine how ancient workmen persevered to make a copy of one complete book of long kakawin that needed several hundred or more leaves. Just for reference, the young fruits of siwalan palm are edible and nice, the texture and taste of which being more of less similar to lychee.
+
+Here let us review the history of Javanese dynasties after the capital of the Old Mataram Kingdom, which had built magnificent Borobudur and Prambanan temples, was transferred to East Java in the 10th century, until it was moved back to Central Java where brilliant flowers of Javanese culture bloomed after the 16th century.
+
+![Illustration](images/00140.jpeg)
+
+Lontar of Kakawin Bhomakawya (Bhomantaka) held in the National Museum, Jakarta.
+A part of image obtained by courtesy of The Lontar Foundation (Jakarta).
+
+### **The dawn of East Java**
+
+It was in 929 AD that King Mpu Sindok of the Sanjaya Kingdom moved the capital to Medan on the bank of Brantas River (around the present-day Jombang) from the land of Mataram and opened the Isyana Dynasty. The direct cause of the transfer was probably the devastation of the old area by the great eruption of Mt. Merapi, while such other issues as political turmoil, troubles with fanatic Buddhists and the exhaustion of resources for constructing monuments were also conjectured as other reasons (*See* [Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8)). The new dynasty had gathered strength in the new ground to such an extent that enabled them to campaign to Sriwijaya in Sumatra. According to some old records, a great-granddaughter of King Sindok, Princess Mahendradatta, married Prince Udayana of the Warmadewa Family in Bali and in 990 AD gave birth to Airlangga who was to become a great king in Java. In 1006 AD, when Airlangga was visiting his mother’s house in Medan to be betrothed to Princess Dyah Sri Laksmi, the daughter of his uncle, King Dharmawangsa Tegu, the castle was burnt down, attacked by the army of Sriwijaya, and the king was slain[^(36)](#part0013_split_001.html_fn_36). Airlangga fled to a forest for safety with the princess and remained there for some ten years until 1019 AD when he finally took up arms to unify the country, which had been torn after the death of his father-in-law, and assumed the crown by the request of the family. Thus the connection between Java and Bali became closer.
+
+In 1037 AD, Airlangga moved the capital to Kahuripan (or Kediri) and founded a new kingdom. Being blessed with peace, thanks to the weakening of Sriwijaya caused by the attack of Chola, India, the enhancement of rice production by the introduction of irrigation systems and the opening of trade routes to India and China enriched his country, and such measures as the demolishing of slavery and the establishing of legislative system brought happiness to his subjects.
+
+![Illustration](images/00141.jpeg)
+
+Historical sites in Central and East Java.
+Map prepared by IVA-GIS/Country Level Data. Abbrs: G (Gunung)=Mountain, K (Kali)=River, C (Candi)=Temple. Location data from Ann R. Kinney, Marijke J. Klokke, Lydia Kieven, *Worshiping Siva and Buddha: The temple art of East Java,* University of Hawaii Press, 2003.
+
+### **Arjunawiwaha, a paean to King Airlangga**
+
+King Airlangga also paid much attention to art and culture. While the translation of the Mahabharata into Javanese was said to have been achieved during the time of his father-in-law, Dharmawangsa Tegu, “Arjunawiwaha” (Arjuna’s marriage), reputed as one of the most beautiful pieces of work among numerous kakawin, was authored during Airlangga’s reign in 1035 by Mpu Kanwa, his court poet. The story[^(37)](#part0013_split_001.html_fn_37) is very shortly as follows.
+
+“Arjuna was ordered by the gods to defeat Niwatakawaca, the demonic king of titans, who had threatened to destroy the heavenly world. As a ksatria [warrior][^(38)](#part0013_split_001.html_fn_38), he discovered the weak point of the demon king, the tip of his tongue, with the help of Nymph Supraba for whom the demon king was passionate, and finally killed the foe, who had advanced to the heaven, in a fierce battle. Arjuna was made the king for the period of seven months (i.e. seven days on the earth) and enjoyed a happy time with Supraba and six other nymphs, until he returned to the earth.”
+
+This story includes such scenes that “Arjuna who had retired in a grotto of Mt. Indrakila was subjected to the temptation of beautiful celestial nymphs who were despatched by gods to test Arjuna’s steadfastness”, that “Arjuna duelled with God Siva who was in a disguise of a hunter, when their arrows shot simultaneously against a boar, which was the incarnation of Giant Murka sent by Niwatakawatja, merged into a single arrow, and both of them claimed the merit”, etc, which are quite amusing to an audience. This poem is said to be a paean to Airlangga in which his life was overlapped with a part of the Mahabharata[^(39)](#part0013_split_001.html_fn_39).
+
+Candi Belahan on the slope of Mt. Penanggungan is said to have been built as a memorial of Airlangga in 1049\. I have seen the principal stone statue removed from the candi to the Trowulan Museum. Airlangga who was deified as the incarnation of God Visnu was mounted on Garuda, the vehicle of Visnu, with his hands in meditation mudra, emitting a saint-like aura. Another statue (standing statue) of Airlangga found in Singasari is now held in the National Museum in Jakarta. Although the second statue was said to have represented God Siva[^(40)](#part0013_split_001.html_fn_40), the expression of the god with his hands held in the mudra of auspiciousness-of-wisdom looked to me rather gentle as that of a Buddha, unlike that in the Hindu temple of Lolo Jonggrang in Prambanan, which bore a rather hard look. This can be evidence to attest that Airlangga, who was generally regarded as a Vishnuist, was paying attention also to Shivaists, although this is a mere view of an amateur as myself.
+
+![Illustration](images/00142.jpeg)
+
+Upper bodies of two Airlangga statues.
+Left: Airlangga riding Garuda as the incarnation of Vishnu (Trowulan Museum), reproduced from Ann R. Kinney, Marijke J. Klokke, Lydia Kieven, *Worshiping Siva and Buddha: The temple art of East Java*, University of Hawaii Press, 2003.
+Right: A standing statue assumed to be the incarnation of Siva (National Museum Indonesia), photographed with permission by M. Iguchi, February 2012.
+
+### **The Golden Age of Javanese literature**
+
+In 1041 AD, Airlangga divided his kingdom into two parts, the western Panjalu (Kediri) and the eastern Janggala for his two sons and lived in retirement until his death in 1049, but the latter kingdom was not well governed and became stagnant, while the former maintained stability. In my personal view, the division of the kingdom that must be ascribed to Airlangga’s personal consideration was the only one misgovernment of the great king. It was after the beginning of the 12th century when King Sri Jayawarsa of Panjalu reunified the two divided kingdoms and founded the Kediri Dynasty. Thus, prosperity was restored in Java and the golden age of Javan literature started.
+
+During the reign of the third king, Jayabaya (1135–57), poet brothers, Mpu Sedah and Mpu Panuluh, composed the Bharatayuddha, a monument of classic Javan literature, and some other kakawins[^(41)](#part0013_split_001.html_fn_41).
+
+Although the Bharatayuddha was an adaptation of the last chapter of the Mahabharata, as mentioned before, homages to the king were added in the beginning and the ending parts[^(42)](#part0013_split_001.html_fn_42), and the year of drafting, 1157 AD, was noted.
+
+### **The summary of Krsnayana**
+
+A contemporary poet, Mpu Triguna composed another famous kakawin, Krsnayana, the abstract of which is as follows:
+
+“When Princess Rukmini of Kundana Kingdom was engaged for political expediency to King Suniti of Cedi, Krsna received a letter from his aunt, Rukmini’s mother, that ‘The only man my daughter ardently loves is no other than you, Krsna. Please, rescue her before it is too late!’ He went to Kundana by chariot with his army, pretending to have appeared as a relative for felicitations and was given accommodation in the outside of the palace. Krsna contacted Rukmini through a maid. Under cover of the darkness, while it was congested with a number of guests, Rukmini successfully escaped out of the palace in the disguise of a nun. Krsna put her on his chariot and ran away. When Rukma, the brother of Rukmini, who chased after them, discovered them in a shelter and accused Krsna’s infamous conduct, Krsna countered that it was a generally accepted custom for a ksatria (warrior) to obtain his bride by force. A battle began and when Rukma finally fell to the ground and lay defenceless, Rukmini seized Krsna by the feet and implored him to spare her brother’s life. Krsna carried his bride off to Dwarawati, where they enjoyed the pleasures of their union in undisturbed peace. Rukmini bore him ten children.”
+
+Krsna is also a popular hero still loved among the Javanese, like Arjuna, as persons who were given these names from parents were among my acquaintances. The statue of Arjuna and Krishna on the chariot located near the Medan Merdeka (Independence Square) in the Jakarta city cenre has been introduced in [Chapter 2](#part0009_split_000.html_8IL20-eace0453ad444634b688454ed62f4eb8).
+
+### **The Smaradahana and the Bhomantaka**
+
+During the reign of King Kameswara (1182 or 1185–94), “Smaradahana” was authored by Mpu Dharmajan. The kakawin sang a tale that:
+
+“When the God of Love, Kama was burnt by God Siva in the Heavenly World, Goddess Ratih jumped into the fire according to the custom of suttee [also spelled as ‘sati’]: both of them fell to Earth and revived as human”,
+
+with an epilogue that the couple was no one else but King Kameswara and the Queen Kirana.[^(43)](#part0013_split_001.html_fn_43) It is said that Smaradahana was the precursor of the Panji Stories, which spread not only in Indonesia but also in Malaya and Thailand[^(44)](#part0013_split_001.html_fn_44).
+
+Bhomantaka, a kakawin composed by an unknown poet and dedicated to an anonymous patron, some phrases of which were cited earlier, is believed to have been produced in the same Kediri Period. Although this long poem, which sang the tragic death of Bhoma who fought with Krsna, is no longer performed in wayang kulit and other theatre, its literary quality is pretty high, being favourably compared with the *Iliad*, *Hamlet* and *Faust*, and the lofty intellect of the composer is manifested throughout the 1,942 stanzas. In the first canto, for instance, it was solemnly sung[^(45)](#part0013_split_001.html_fn_45):
+
+In truth “the Chief judge in Poetical Affairs” is he who embodies beauty in himself as an incarnation of the God of Love.
+
+Let him be worshipped with flowers, seated in the lotus, and let the secrets of the Book of Love be unfolded.
+
+Let his temple be built of poetic language thus, and be made a worthy place for the deity of amorous longing to be given a visible form,
+
+For in the invisible world Anangga (the Bodiless) is what he is called by the musing poet who is an expert in allegorical narrative.
+
+While an ancient temple in Java, called candi, was usually a stone structure that was aimed at worshipping ancestors and inviting gods as entities, I could not but esteem the poet’s high-mind “to build a temple of poetic language”.
+
+One may remember that the time when such fine literature flourished in the Medan-Kediri Period Java (929–1222) coincides with the middle and the late period of Heian Era (ca. 930–1192) in Japan when *The Story of Genji, Makura-no-Soushi* (*The Pillow Book*) and various novels and essays appeared.
+
+### **The present-day Kediri**
+
+Around the present city of Kediri, there remains almost no monuments of the ancient kingdom, whether candi and other solid structures were buried under the ground or they had actually not been constructed, the only exception that I saw during my visit being the site called Tirta Kamandanu that was said to have been the bathing place of King Jayabaya. There was a stone gate that resembled a castle gate and on the left-hand side of it was a stone statue of some divinity, about three metres tall. Later I learnt it was a Hindu god called Harihara who had the divinities of both Visnu (Hari) and Siva (Hara). I thought that such a god that could be worshipped by both Visnuists and Shivaists was necessary in ancient Kediri where the two denominations coexisted. In the opposite side of Harihara was a carving of Ganesha[^(46)](#part0013_split_001.html_fn_46) set back to back to the former. In the lower ground behind the gate, there was a stone-framed pool of a complex shape in which waterweeds grew over the water surface. For me, it was hard to imagine a scene in which a sacred king bathed.
+
+![Illustration](images/00143.jpeg)
+
+A front view of Tirta Kamandanu, allegedly the bathing place of King Jayabaya.
+A statue of Harihara and a gate are seen on the left- and right-hand sides. Photographed by M. Iguchi, May 2009.
+
+In the suburb of the city, there was the graveyard of King Jayabaya called Petilasan. In the shrine enclosed with stone pillars was an *objet d’art* of an eyeball, which symbolised the penetrative power of the king, and in a corner of the ground some five metres away from the edge of the shrine’s precinct was a simple headstone. The graveyard constructed in the 1970s on the spot where the king had allegedly been buried gave no solemn atmosphere to me. Probably, King Jayabaya is well known by the so-called “Jayabaya Prophecies” especially in Japan (*See* the appendix of this chapter to which the present writer’s comments are added).
+
+### **The appearance of a hero, Ken Arok**
+
+The kingdom of Kediri, recorded in *Representative answers [about the region] beyond mountains* (*Lingwai daida*, 嶺外代答) by Zhou Qufei (周去非)[^(47)](#part0013_split_001.html_fn_47) in Southern Sung Dynasty China as “Java is the second richest among foreign countries next to Tajik [Saracen]”, began to decline after the turn of the 13th century. The last king Kertajaya (1185–1222) was a tyrannical and brutal man who was hostile to religious leaders. Tunggal Ametung, the local magistrate of Tumapel, the former capital of Janggala, was also an oppressive man who persecuted unfavourable monks and imposed heavy taxes on peasants. The hero appearing in such a situation was Ken Arok (or Amrok) who came from sudra, the lowest caste, and became the founder of Singasari Dynasty. His life written in the early half of *Pararaton*[^(48)](#part0013_split_001.html_fn_48), a history book composed in the later century, was briefly as follows:
+
+“Ken Arok was born to a farmer’s wife, Ken Endok, who was impregnated by Brahma. He was abandoned soon after his birth but was found, as his body emitted light, and brought up by a robber named Lembong. Having been adopted by a gambler named Bano Samparan, he spent all his time thieving, gambling and raping, and occasionally committed murder. Once, he escaped from pursuers by flying away on a leaf of fan palm according to the heavenly voice. In such a life, he learnt, one period, reading, writing and arithmetic as well as the calendar, science and literature from Jangan (a knowledgeable village man). When Arok was wandering, guided by god, he met a high priest of Sivaism named Sang Hyang Lohgawe who had sailed from India by sea, standing on three pieces of bindweed leaves. Arok went to Tumapel together with Lohgawe to serve for Tunggal Ametung. One day he saw the secret part of Ken Dedes, the daughter of a Buddhist priest, Mpu Purva, who had been kidnapped by Tunggal Ametung and made his wife, illuminate, when she descended from her coach. Having been taught by Lohgawe that such a woman would bring fortune to a man[^(49)](#part0013_split_001.html_fn_49), Arok determined in his mind to obtain her. He ordered a keris (sword) from a swordsmith named Gandrin and, when it was unfinished on the day of promise, he angrily stabbed Gandrin with that keris. At the last moment, Gandrin said, ‘You shall be stabbed by this keris, and your son, grandson and offsprings, seven all together, will be also killed in the same method.’ Arok gave the keris to his fellow soldier, Kebo Hijo, and one night he stole it and assassinated Tunggal Ametung. The guilt was put on Kebo Hijo, as Arok plotted. Arok who made Dedes his wife became the king under the name of Sri Rajasa Bhattara Sang Amurva-bhumi, founded the Singasari Kingdom, and finally ruled the whole of East Java from 1222 AD after defeating Daha (Kediri), which had dominated over Tumapel.”[^(50)](#part0013_split_001.html_fn_50)
+
+![Illustration](images/00144.jpeg)
+
+The cover illustration of Pramoedya Ananta Toer’s novel, “Arok of Java”, (Pramoedya Ananta Toer, *Arok of Java: a novel of early Indonesia*, Horizon Books 2007) in which Arok is commanding a rebellion. Reproduced by courtesy of the publisher.
+
+Whilst the *Pararaton* was composed of plain records of historical facts with the insertions of God’s dispensations, *Arok of Java*[^(51)](#part0013_split_001.html_fn_51), a historical novel by the great writer Pramoedya Ananta Toer, was quite useful for me to envisage the personalities of characters and the historical background, although the details of the story were different in some parts. For instance, Arok was depicted as a rare genius who had mastered the whole phrases of the Mahabharata and the Ramayana and spoke beautiful Sanskrit, and who notwithstanding his outrageous character always sided with the weak, like Robin Hood in English folklore, and the psychological state of Dedes in changing circumstances was realistically described. Also, the book of Pramoedya provided knowledge about the religious situation in the contemporary Java, viz. the struggle among Shivaists, Visnuists, Mahayana Buddhists and Tantrists, which was not available in textbooks. According to Pramoedya, what Arok aimed at was a society in which believers of different religions were harmonised.
+
+In addition to three sons and one daughter begot from Dedes and another three sons and one daughter from his second wife Umang, Arok had a son-in-law named Anusapati, Tunggal Ametung’s posthumous child who was in the womb of Dedes before Arok obtained her. Although Arok’s wise governance went on for twenty-five years, he was killed in 1247 AD by Anusapati who grew up and became aware of the secret of his birth with the Gandrin’s keris, as cursed by the swordsmith. After then, the assassinations of kings were repeated. Anusapati who succeeded Arok was killed by Tohjaya, a son of Umang who noticed the cause of his father’s death. Tohjaya became the king, but died for the wound given by Rangawuni, Anusapati’s son. In all cases, the weapon was the same keris of Gandrin.
+
+### **The Mongolian invasion and the founding of Majapahit**
+
+During the reign of the 5th king, Kertanegara (a son of Rangawuni), who was in power for twenty-four years from 1268, Singasari expanded its hegemony over Sumatra and conquered Bali, but, in the later period, the country met a mishap, i.e. the Yuan Expeditions, as some other Asian countries also did around the same years, e.g. Japan in the Kamakura Period[^(52)](#part0013_split_001.html_fn_52). When Khubilai Khan sent embassies and demanded allegiance in 1280, 1281 and 1289, Kertanegara rejected the demand every time and, on the third occasion, sent the mission off after injuring the diplomats’ faces. In anger, Khubilai sent a huge force with a fleet of 1,000 junks in 1292, but prior to their arrival in November, Kertanegara had been killed in May of the same year in the coup d’etat led by Lord Jayakatwang of Kediri under the control of Singasari, allegedly a descendant of the noble of the former Kediri Kingdom, who had wished to restore his ancestor’s kingdom. Thus, Singasari was already extinct and Tumapel was in the hand of Jayakatwang. The person who met the Mongolians who came to the port of Tuban was Raden Wijaya, a noble of Singasari, who had pretended to be royal to Jayakatwang and obtained a fief in the northern area of Mt. Arjuna (i.e. to be Majapahit, the present-day Trowulan). In alliance with the Mongolian army, Wijaya attacked Tumapel and captured Jayakatwang. When the Mongolian demanded to hand over two princesses of Tumapel (Kertanegara’s daughters), who were in the custody of Wijaya, for a souvenir for Khubilai, Wijaya told them to come to his castle. As soon as the Mongolian soldiers entered the palace, Wijaya’s men shut both front and back doors and assaulted the enemy. They chased the Mongolians who managed to run to their camp or ships in the harbour and killed all of them[^(53)](#part0013_split_001.html_fn_53).
+
+An episode has it that tahu (beancurd), one of the most popular foods in present-day Indonesia, is said to have been introduced at that time from China[^(54)](#part0013_split_001.html_fn_54).
+
+Raden Wijaya founded the Majapahit Kingdom in November 1293\. He was a son-in-law of the late Kertanegara, but what was more important was the fact that he was the great-grandson of Ken Arok and Ken Dedes, the bloodline continuing to the present royal families of Solo and Yogyakarta, being esteemed as the most precious one in Java. When I asked my friend descended from the Yogyakarta family, “Are you conscious in your life that Ken Arok and Ken Dedes are your ancestors?” she replied, “No, only as historical persons,” however.
+
+### **The remains of Singasari, the statue of Prajnaparamita**
+
+Some monuments of the Singasari Period remain in the vicinity of the present-day Malang city, the central part being assumed to have been the area called the Singasari Complex, which is supposed to have comprised, besides Candi Singosari for enshrining King Kertanegara, some Buddhist temples, some Tantrist buildings and other constructions. A pair of stone statues of raksasa, which guarded the area, were so large that I was quite startled when I visited there a decade ago for the first time. At the two-storeyed Candi Singosari restored in 1936, two heads of Kala, placed one each on the front of the two floors, looked different in terms of the level of carving work, the upper one having been well finished, but the lower one not. Also, the top part of the temple lacked a pyramidal roof. It is said that this candi was never finished due to the abrupt end of King Kertanegara’s reign[^(55)](#part0013_split_001.html_fn_55).
+
+![Illustration](images/00145.jpeg)
+
+A pair of huge raksasa statues of dwarapala (gate guardians) of the Singasari Period. One is seen in the distance. Photographed by M. Iguchi, February 2002.
+
+![Illustration](images/00146.jpeg)
+
+Candi Singosari (left) and two Kala’s heads (right)
+Note that the Kala’s head at right-bottom is unfinished (*See*, the first paragraph under the section title: “The remains of Singasari, the statue of Prajnaparamita”).
+Photographed by M. Iguchi, June 2010.
+
+Among several sculptures unearthed from this temple complex, the best piece must be the statue of Prajnaparamita, modelled after Ken Dedes, which can be seen in a special exhibition room in the National Museum in Jakarta. A daughter of the high Buddhist priest, Ken Dedes was a Buddhist. I believe that the anonymous carver who worked on this statue must have devoted his deep faith to the Buddhist saint as well as his sincere respect to Queen Dedes, a reputed perfect beauty practising in pursuit of perfect wisdom with her hands signing the mudra of the auspiciousness-of-wisdom, by superposing her image on that of Kwannon, the Goddess of Mercy[^(56)](#part0013_split_001.html_fn_56). This statue, the honour and distinction of which is said to have been exalted in recent exhibitions in Europe, leads a spectator to the illusion of Ken Dedes having had eternal life. There is no doubt that Ken Arok had an ambition to obtain her for himself. In front of the statue, I thought no man in the world could not but be charmed by this lady. The later life of Ken Dedes after the loss of her husband Ken Arok is unknown as long as I have surveyed literature. I supposed, “Had not she her hair shaved and did she live in a Buddhist nunnery, instead of following the custom of suttee [the self-immolation of Hindu women after their husbands’ deaths]?”
+
+![Illustration](images/00147.jpeg)
+
+Upper body of the statue of Prajnaparamita, modelled after Ken Dedes.
+Photographed with special permission by M. Iguchi, February 2012.
+
+Where was the legendary mausoleum of Ken Arok called Kagenengan located? Although *Desawarnana* (alias *Nagarakertagama*) recorded that a fine candi stood in a sanctuary surrounded by a wall with a gate to the south of Singasari[^(57)](#part0013_split_001.html_fn_57), the location is not determined today. The caretaker of Candi Singasari told me that there was a possible site at the foot of Mt. Kawi, but I gave up visiting there because it was said to be very far.
+
+About two kilometres away from the Singosari Complex, there was a rectangular pool of about 6 × 20 metres, called Petirtaan Watugede, in the ground below the near-by road, shaded by tree leaves. It was an old pool, which was said to have existed ever since the era of Ken Arok, and Ken Dedes had bathed there. It was still full of clean spring water.
+
+### **Candis in the vicinity of Malang**
+
+In the vicinity of Malang, there remained two candis, Candi Kidal and Candi Jago, dedicated to King Anusapati and King Wisnuwardhana, respectively, and on a hillside in the suburb of the city was Candi Sumbrawan, the only pure Buddhist stupa remaining to date. Among them, the most attractive to me was Candi Jago. Although the main building was only half-restored and sculptures of Amogapasa[^(58)](#part0013_split_001.html_fn_58) and the head of Kala were left on the ground of the precinct, the walls of the basement and the upper stairs of the building as well as of the flights between them were decorated all over with various reliefs. When I first visited there, I had thought the carvings with flattened figures were inferior to those true-to-life three-dimensional figures in the temples of the Old Mataram Period, namely Candi Prambanan, and put that impression in my memo, but it was a grave misunderstanding due to lack of knowledge. Later, I read[^(59)](#part0013_split_001.html_fn_59) that the scenes of some stories were depicted as if they were in wayang kulit puppet shows. Also I learnt that the existing candi was regarded to be a new construction or reconstruction in the mid-14th-century Majapahit period, judging from the feature of the style of relief and the structure of the building itself. It was a pity that I could not take good photographs, even when I revisited there with a new camera, because the carvings were badly eroded from weathering. The stories in the relief were various and included the Hindu Arjunawiwaha, Krsnayana and Parthayajn [^(60)](#part0013_split_001.html_fn_60) and the Buddhist Kunjarakarna [^(61)](#part0013_split_001.html_fn_61) and Tantric tales, suggesting the coexistence of the various religions at that time.
+
+![Illustration](images/00148.jpeg)
+
+Candi Jago, a part of the second stage and the ruin of the third stage.
+The relief shows a scene in the Mahabharata, the journey of Arjuna to Mt. Indrakila. Photographed by M. Iguchi, June 2010.
+
+![Illustration](images/00149.jpeg)
+
+Candi Sumbrawan (left) and Candi Kidal (right). Photographed by M. Iguchi, June 2010.
+
+Whilst most of the statues existed in these candis have been reposited in the National Museum, Jakarta, some pieces collected in early times before the Dutch government prohibited the export of historical arts and crafts in the late 19th century are scattered in the world. In the British Museum, I was impressed to see a statue of Goddess Mamaki of ca. 45 cm height, labelled as collected from Candi Jago[^(62)](#part0013_split_001.html_fn_62), preserved in an intact condition. Her left hand held a lotus and her right hand was showing a gesture of dispensing of boons (varadamudra). Among some other sculptures from East Java was a statue of Ganesha, labelled as a work of the 12th century, although the place of its origin was not shown.[^(63)](#part0013_split_001.html_fn_63)
+
+![Illustration](images/00150.jpeg)
+
+A statue of Mamaki of 13th to 14th centuries AD from Candi Jago, East Java, acquired in 1859 in the British Museum.
+
+![Illustration](images/00151.jpeg)
+
+A statue of Ganesha from the 12th century, East Java, given by Charles Millet Esq. in 1861 to the British Museum.
+Photographed by M. Iguchi, May 2014.
+
+### **The heyday of Majapahit**
+
+As mentioned above, the Majapahit Kingdom founded in 1293 had its heyday during the reign of Hayam Wuruk, crowned under the name of Rajasanegara (1350–89), when the power extended from Java Island (excluding the west part where the Pajajaran Kingdom existed) not only to Sumatra, Kalimantan (Borneo), Sulawesi (Celebes), Bali and eastern islands, which were to be covered in territory of the present-day Indonesia, but also to the Malay Peninsula. The source of the wealth of the kingdom was agriculture, and the richness was written in *An Account on Foreign Countries* (島夷誌略, Dao Yi Zhi Lue) written in c. 1330 in China, as:
+
+“The rice field is fertile, irrigated by abundant water, and the productivity of rice is twice that of others. People never steal and never pick up anything dropped on the roads. That is why it is called ‘Pacific Java’.”[^(64)](#part0013_split_001.html_fn_64)
+
+In his book[^(65)](#part0013_split_001.html_fn_65), *Odoric of Pordenone*, a contemporary Italian who travelled to the Middle East, India, East Indies and China introduced Java as, “The king has seven dependencies. The island is exceedingly populous and is the second best of all islands, as it grows camphor, cubebs, cardamoms, nutmegs, and many other precious spices…”, wrote, “The palace was truly marvellous, as the wall and staircases are plated with gold and silver, the pavement is tiled with gold, figures of knights are sculptured on the wall, the ceiling is all of pure gold, etc. This palace is richer and finer than any existing one in the world”, and concluded, “The Great Khan of Cathay [China] many times engaged in war with this king, but this king always vanquished and got the better of him.” Although such information is often refered to in articles, I am suspicious whether the author got them by actually stepping his feet on Java or by hearsay from others, because the descriptions of Java and other parts of the East Indies are quite short and abstract, whereas those on the region to the west of India and the places in China are much more detailed and facts that he must have seen and heard are contained. In fact, in the chapter on Java, which is comprised of only some 250 words, nothing was written about towns and people, while the appearance of the palace described was unrealistically gorgeous.
+
+*Desawarnana* (alias *Nagarakertagama*)[^(66)](#part0013_split_001.html_fn_66) written in the form of kakawin in 1365 by Mpu Prapanca who accompanied the inspection tour of Hayam Wuruk is one of the two important history books ranked with the *Pararaton*. The places of visit, including Kagenengan, the mausoleum of Jayasa (Ken Arok), as mentioned above, and the royal line of Singawari, which started from Ken Arok, were given in detail. With regard to the birth of Ken Arok, it was simply written as, “[The king was] visibly a divine incarnation, known as a son not born from the womb to the illustrious Lord of the Mountain [Siva]”, unlike the *Pararaton*, which described his complex early life. The book also neglected the Bubat War (1357), an incident that must have been most tragic in Hayam Wuruk’s life, in which his marriage to his fiancée Princess Dyah Pitaloka of Sunda was unrealised, due to the plot of Gajah Mada, who had intended to subject the Sunda Kingdom, and all party members of Sunda, including the king, the queen and the princess, perished in the field of Bubat[^(67)](#part0013_split_001.html_fn_67). Such omissions could be taken for granted as the book itself was a song to praise the illustrious royal line. Several years after the tragic incident, Hayam Wuruk married Paduka Sori, his cousin.
+
+After the death of Hayam Wuruk in 1389, the kingdom gradually declined due to troubles with the succession of the throne and, due more to the propagation of Islam. Although when Islam was first introduced in Java is not exactly known, it had spread before the beginning of the 15th century at the latest, as it was written in the Ma Huan’s *The Overall Survey of the Ocean Shores* (*Ying ya sheng lan*) in 1416 that
+
+“There are three kinds of people in this country, Moslems who came from western countries for trade, Chinese who exiled from Canton, Zhangzhou, Quanzhou, etc., and natives who worship the heresy [Hinduism].”[^(68)](#part0013_split_001.html_fn_68)
+
+In fact, in the middle of the 15th century, the lords of such port towns as Demak, Jepara, Gresik and Tuban on the north coast of Java began to convert themselves to Islam and control the trade independently from Majapahit, and one of them, Raden Patah, founded the Demak Kingdom, the first Islamic kingdom in Java ca. 1475\. Although Demak prospered by the trade with Malacca, they lost their power, after the latter fell to the Portuguese in 1511, attacked by Alfonso de Albuquerque, the Governor of India, as written in the book of Tome Pires[^(69)](#part0013_split_001.html_fn_69).
+
+The Majapahit Kingdom is generally regarded to have perished after the reign of Brawijaya VI (alias Girindrawardhana, 1478–98) and, around that time, the nobles took refuge with a number of books and cultural heritages of Java to Bali where the Islamic power did not reach. In fact, all copies of literature and history books written before the Majapahit period and remaining to date have been found in Bali and Lombok (an island located east of Bali), thanks to their efforts.
+
+As literary works in the Majapahit period, two kakawins, Arjunawijaya and Sutasoma, composed by Mpu Tantular during the reign of Hayam Wuruk, are known. Whilst the former told a rather simple story taken from an episode of the Ramayana[^(70)](#part0013_split_001.html_fn_70), the latter was based on a Buddhist tale, “Maha-Sutasoma”, in the Jataka Sutra, consisting of 562 cantos, and was unique in the Hindu-predominant East Java[^(71)](#part0013_split_001.html_fn_71). Let us follow the story, although it will be a little lengthy.
+
+### **A Buddhist tale, Sutasoma**
+
+“King Mahaketu of Hastina was disturbed by the ransacking demons, when he was told by the chief brahmin that only a son of the king would be able to destroy them. As the king practised yoga in front of a Jina (Buddha) statue, a Bodhisattwa entered the womb of his queen to be born as a son. When he grew up, the prince, named Sutasoma, thought the enhancement of his own mental culture should be the matter of priority and stole away from the palace for ascetic practices, to the disappointment of the family. In a village, Goddess Bhairawi appeared to teach him a mantra by which every kind of evil and all hostile powers could be destroyed and mankind would obtain freedom from illness and misfortune. The goddess also directed him to a hermitage on Mt. Semeru and vanished. Sutasoma met a reverend Kesewa, whom he asked to accompany him to the top of the mountain. On their way, they found a hermitage and met a hermit, Sumitra by name, who was a maternal uncle of Sutasoma. The uncle told of the past of the evil king Suciloma. According to him, although his homicide had once been stopped by Jina who came to earth, he was given an unbeatable power by Siva and got the name Jayantaka. One day, he was served a piece of flesh from a human corpse, instead of the dish which had been eaten by dogs. After that, he was fond of human flesh and was called Porusada (man-eater).
+
+“On his way to the mountain, Sutasoma was attacked by Gajamukha (an ogre with an elephant head), a monster serpent, and a hungry tigress who was about to devour her cubs, but with the help of gods, he could dissuade them and made them his disciples. When he went on alone towards the summit of Mt. Semeru, the gods tried to pull him down and let him confront the evil conduct of Jayanta. Sutasoma was not tempted by nymphs despatched by Indra, and his faith was not wavered either, even when Indra himself transformed himself into a dazzling goddess and approached.
+
+“Having completed his practice, Sutasoma was then conscious of being a Jina and saw the task before him. He descended from the mountain and met Kesewa again. He came across Dasabahu, the king of Kasi, who was his cousin, and married the latter’s sister, Candrawati. Sutasoma and Candrawati perceived that they were the incarnations of Wairocana and his spouse, Locana. Sutasoma returned to Hastina Kingdom with his wife, and Dasabahu joined them.
+
+The evil King Porusada was healed from the wound of his leg, which he had suffered earlier in a battle with Dasabahu, by vowing to Kala (God of Death) that he would capture one hundred kings and submit them as victims. When he accomplished his pledge, however, Kala demanded Sutasoma as a sole victim. He headed for Hastina. In Hastina, despite that Sutasoma was willing to sacrifice himself to relieve the captured kings, the ministers prepared for war. In the war, Porusada lost his two allied kings, killed by Dasabahu, in the initial stage but turned the table to chase the Hastina, destroying villages and sanctuaries. At last, Sutasoma went to the battlefield and confronted the enemy.
+
+“Siwa (who entered Porusada) emitted flame, but it turned into *amrta* (water of life) and revived the fallen kings of the Hastina camp. He shot his arrows, but they changed into flowers. Sutasoma was not harmed, because he was an incarnation of Buddha and ‘Buddha and Siwa are one in their deepest essence’. When he concentrated his mind in the bodhyagri position, a diamond weapon was produced to instantly change Siwa’s anger into complete serenity. Having realised Sutasoma was a Buddha, Siva left the body of Porusada. Porusada was awed by Sutasoma’s willingness to offer himself to spare the lives of other kings, and he was filled with compassion and love.
+
+“Kala was delighted with the appearance of Sutasoma and released the captive kings. He tried to stab Sutasoma, but his sword failed to penetrate his body. Kala then changed himself into a naga (dragon) and started to devour him, when he was suddenly overcome with feelings of benevolence and compassion. He desisted and begged Sutasoma to admit him as his disciple. In Hastina, the dead were revived by Indra and festivities were held. The world enjoyed a time of peace and prosperity. After some time Sutasoma and his consort left the earth and returned to the Jina’s heaven, where Porusada was received as a Jina devotee. Kala attained the status of Pasupati (the lord of the animals). Sutasoma’s son Ardhana succeeded his father as king of Hastina.”[^(72)](#part0013_split_001.html_fn_72)
+
+![Illustration](images/00152.jpeg)
+
+A scene of Kala biting into Sutasoma in the form of a dragon.
+A part of the ceiling paintings in Kerta Gosa Palace, Klungkung, Bali. Reproduced from: [http://balitourismculture.blogspot.jp/2009/08/kerta-gosa.html](http://balitourismculture.blogspot.jp/2009/08/kerta-gosa.html).
+
+The mixture of Buddhism and Hinduism (viz. Sivaism) found in many verses in this kakawin manifests the relationship between the two religions, which associated with each other in the Majapahit period. It should be noted that the verse, “Buddha and Siwa are one in their deepest essence”[^(73)](#part0013_split_001.html_fn_73), is said to be the source of Indonesia’s national ideology, “Bhinneka Tunggal Ika” (Unity in Diversity).
+
+During the reign of King Sri Adi Auraprabhawa (1466–74) in the late Majapahit period, two kakawins, Parthayajena and Kunjarakarna, were composed by Mpu Tanakung[^(74)](#part0013_split_001.html_fn_74). As mentioned above, these Hindu and Buddhist stories were carved on the wall of Candi Jago.
+
+### **The decline of Majapahit**
+
+While Islam developed eastward to Southeast Asia, such countries as Burma and Siam in which old religions were relatively strong had managed to prevent the infiltration of the Arabic religion. Then, why was the powerful Majapahit Kingdom, which held Hindu-Buddhism as state religion, easily trampled down by Islam? With regard to this theme, Pramoedya Ananta Toer wrote a historical novel, *Arus Balik* (published in 1995)[^(75)](#part0013_split_001.html_fn_75). Although the long novel of more than 750 pages written in the Indonesian language would be difficult for me to read over, even if a copy of the out-of-print book could be accessed, it was fortunate that a very detailed review was available[^(76)](#part0013_split_001.html_fn_76). According to it, in the story that:
+
+“In Tuban, a dependency of Majapahit on the north coast of Java, where kings and lords, a young man of low birth who became a warrior of Tuban, a female court dancer, a Moor who was an extreme egotist, and other characters associated with each other, Jepara which used to be under the control of Tuban first fell to the hand of the Islamic Demak, and Tuban itself soon followed the same fate”, the author attributed the reason of the fall of Tuban to the fact that “King Wilatikta lost the spirit of ksatria (warrior) and converted himself to Islam for the convenience to get profit by trade, without paying attention to the security of his country, despite that he had abundant funds enough to provide defensive measures.” Pramoedya said, “Although, in old days, big ships of Majapahit left the port, loaded with rice and spices produced in the rich hinterland, now the agriculture was neglected and foreign ships with foreign products arrived at the same port. Thus, the tidal current was reversed [*lit.* arus balik].”
+
+### **Candis in the suburb of Kediri**
+
+In the suburb of Kediri, some candis remain to date. One of them, Candi Surowono, was the mausoleum of Wijayarajasa (died in 1388), an uncle of Rajasanegara (Hayam Wuruk), who ruled this district. Although the main body of the temple was unrestored, the reliefs on the basement, which depicted Arjunawiwaha and some other tales, were not too damaged and were still clear. Although the figures of characters were flat, unlike those in old temples of the ancient Mataram period, they were not as much deformed as those of the present-day wayang kulit puppets, the finely carved faces of heroes showing delicate appearances and trees and buildings arranged all around characters furnishing some atmosphere that were not available on the screen of shadow play. If these figures were the original forms of wayang kulit, the theory that the intensive *déformer* of wayang puppets occurred in later centuries (argued earlier) would be highly plausible.
+
+Another candi called Candi Tigowangi, allegedly the mausoleum of Jayasawardhana, a brother-in-law of Rajasanegara, also lacked the main part, but the carving on the basement was beautiful. Later I learnt that the relief depicted only one tale, named Sudamala, written in the form of *kidung*, another form of poem, different from kakawin, which also had been applied to the Panji Stories. Although the characters were adopted from the Mahabharata, Sudamala was a story of Javanese origin, the abstract of which is as follows[^(77)](#part0013_split_001.html_fn_77).
+
+![Illustration](images/00153.jpeg)
+
+A relief of “Arjunawiwaha“ on the basement of Candi Surowono, Kediri.
+A scene of Arjuna trying to catch the feet of Siva who has transformed himself into a hunting king. Photographed by M. Iguchi, May 2009.
+
+![Illustration](images/00154.jpeg)
+
+A relief of “Sudamala” on the basement of Candi Tigowangi, Kediri.
+A scene of the wedding of Sudamala (Sadewa) with Ni Pada, a daughter of a sage. Photographed by M. Iguchi, May 2009.
+
+### **The abstract of the Sudamala story**
+
+“Siva cursed his wife, Huma, who had committed adultery, to be turned into a demon named Durga and exiled her to a cemetery in Gandamayu forest, where she must remain in the demonic form for twelve years or until freed by Sadewa, the youngest son of the Pandawas. At the same time, Siva punished two heavenly beings, Citrasena and Citranggada, for similar reasons and sent them to the same cemetery. They were transformed into evil spirits, named Kalanjaya and Kalantaka, to serve Durga and side with the Korawas, the sworn enemies of the Pandawas. Kunti, the mistress of the Pandawas, asked Durga’s permission to kill the two evil spirits and was, in return, told to submit Sadewa. Kunti refused the demand, but Sadewa was eventually seized by Durga’s servants. Sadewa fell in danger, but Siva, who was urged to come by the sage Narada, entered in the body of Sadewa. Given a magical power, Sadewa lifted the curse on Durga so that she was able to return to Huma. To her benefactor Sadewa, she bestowed a new name, Sudamala (*lit.* he by whom blemishes and evil are purified), gave him weapons to beat his enemies and told him to go to the hermitage of Tambapetra. Sadewa cured the hermit’s blindness and was offered to be betrothed to his two daughters, Padapa and Soka. There, his twin brother, Sakula, who had been looking for Sadewa appeared. Sadewa and Sakula married Padapa and Soka, respectively. The twin brothers went to the battlefield where their elder brothers confronted against the Korawas and, with the weapon received from Huma, defeated the evil spirits, Kalanjaya and Kalantaka, who had killed Bima and Arjuna, their second and third eldest brothers[^(78)](#part0013_split_001.html_fn_78). The evil spirits were freed from curse and sent back to the heaven.”
+
+Visiting these candis, it occurred to me that, although those who built the temples and ornamented them with “sculptures of literature” in ancient times were kings and nobles, not only they themselves but also common folks must have visited the precincts and appreciated the arts. Even though illiterate, they would have been able to recite the whole or some parts of poems from memory either for themselves or for their children, while they were enjoying seeing the sculptures of literature. On the other hand, I could barely follow the stories in modern language translations in which the original metre and rhythm had been lost. I wished I could revisit those ancient temples and spend at least one day at each site, even if I was too old to learn the old Javanese language.
+
+As described in [Chapter 4](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8), in Trowulan, the former capital of Majapahit, not stone blocks but red bricks of accurate sizes were used for candis, in the inner wall of a water reservoir and a bathing pool, as well as a building under excavation, which was assumed to have been a keraton (palace). Among them, Gerbang (gate) of Bajan Ratu, which reminded me of the tower of a candi, restored in the 1980s, was well preserved, although fine relief on the wall of its pillars looked to be mere ornaments, not the sculptures of literature. As far as I have seen, it was only in Trowulan that bricks were abundantly used, whereas stones were still the major construction materials in other places.
+
+### **Candi Panataran, the state temple of Majapahit**
+
+In the suburb of Blitar, fifty kilometres to the south of Kediri, Candi Panataran remains. Although historically a temple was dedicated in 1197 by King Sringga of the Kediri Dynasty, the main work was done in the Majapahit Period, viz. during the reigns of King Jayanagara (1309–28), Queen Tribhuwana (1328–50) and King Hayam Wuruk (Rajasanagara) (1350–89)[^(79)](#part0013_split_001.html_fn_79). As might be expected from its status of Candi Negara (State Temple) it held ruins of a number of buildings and a bathing pool, in addition to the main temple, in a vast precinct of some 80 × 150 metres. This candi was guarded by a pair of raksasa guardians just like Buddhist temples in the Old Mataram period, symbolising that the religion of the Majapahit Kingdom was not pure Hinduism but the complex of Hinduism and Buddhism.
+
+![Illustration](images/00155.jpeg)
+
+The total view of Candi Panataran with raksasa guradians at the entrance.
+The candi seen in the distance in the middle is Dated Temple, and the basement of the main temple is located behind it. Photographed by M. Iguchi, June 2012.
+
+Although not in existence today, the upper part of the main temple is supposed to have been a large tower with twelve-fold roofs, [^(80)](#part0013_split_001.html_fn_80) and its magnificence is perceived from the remaining three-storeyed stone basement, of some thirty metres square, which was embellished all around with relief and sculptures. The Ramayana reliefs of more than one hundred panels placed on the wall of the ground level were flat type and figures were densely packed in panels, carrying a different elegance from those more naturalistic ones at Candi Prambanan built in the ancient Mataram period.
+
+To me, the most impressive reliefs on the basement of the main temple were grand Krsnayana reliefs carved in panels of some seventy centimetres high and five metres wide, surrounding the outer wall of the second-level. These were the largest reliefs I have ever seen in Java. Although to follow the whole thread of the story in a limited time was difficult, some reliefs gave me the vivid images of some scenes in the story that were hardly envisaged from the short summary of the kakawin poem. For instance, in the scene in which Krsna took his future wife, Rukmini, in response to her mother’s petition, and ran away with her from the palace where she was to wed with King Suniti of Cedi, it was quite interesting that Krsna’s troops included an elephant that was probably taken to break the gate, if necessary, in addition to armed soldiers, horses and chariots dramatically depicted like in a modern cartoon strip.
+
+![Illustration](images/00156.jpeg)
+
+Top: A panel of Krsnayana relief on the second stage of Candi Panataran.
+Krsna takes out Rukmini from a palace where she was to wed King Suniti (right) and runs away by a chariot (left). Photographed by M. Iguchi, June 2010.
+
+Other reliefs, which were quite wondrous to me in Panataran, were those of an unknown story on Pendopo Terrace, a structure similar to the basement of a candi, which depicted such scenes as “A certain prince consigns a lontar letter to a parrot”, “The parrot flies away carrying the rolled letter by holding it in his beak”, “A princess receives and reads the letter delivered by the parrot” and “the prince and the princess are hugging each other in a certain pavilion, while servants are also happy in their own quarter”. Was it possible that a clever parrot could carry messages in such a manner, whilst in the case of carrier pigeon, the history of which dates back to ancient Greece and Rome[^(81)](#part0013_split_001.html_fn_81), letters were always fixed on the bird’s leg or back? It could be possible on account of the fact that, until the Showa Era in Japan, there was an art to let a trained titmouse bring a written oracle from a tiny shrine. I have not had a reliable answer to this question, however. The story itself does not seem to have been identified, although, judging from the so-called semi-spherical “Panji cap”[^(82)](#part0013_split_001.html_fn_82), it might belong to the Panji Stories.
+
+![Illustration](images/00157.jpeg)
+
+Bottom: Two reliefs of an unknown story on the Pendopo Terrace of Panataran.
+A prince with a Panji Cap is consigning a letter to a parrot (left), and a lady receives and reads it (right). Photographed by M. Iguchi, 2 June 2010.
+
+In Panataran, even such minor structures as the wall of the bathing pool were decorated with reliefs of Hindu and Tantric tales.
+
+![Illustration](images/00158.jpeg)
+
+Bathing place in Panataran.
+On the wall are carved some scenes of Tantric tales, “a bull and a crocodile”, “a dog and a tortoise”, etc. Photographed by M. Iguchi, June 2010.
+
+In the neighbourhood of Blitar, I also saw a small temple called Candi Sawentar and some remnants of old buildings, which proved that these areas were inhabited ever since ancient times.
+
+### **The mausoleum of Soekarno**
+
+In Blitar, I took the opportunity to visit the Soekarno Graveyard, where the first president of the Republic of Indonesia was enshrined. After dropping in at the exhibition hall, which housed various mementoes of the late president, and passing through the Hindu-style split gate, I was a little surprised to see hundreds of pilgrims everywhere in the graveyard, which was extraordinarily large, despite the fact it was a weekday. In the mausoleum with a Javanese-style three-fold roof, which stood about three hundred metres beyond the gate, men and women of various ages were praying one after another in front of the Islamic coffin and urged me to follow them. When I murmured, “This is indeed the Candi Soekarno!”, my friend smiled. The late President Soekarno was already a man of legend. I thought that people would pass down Soekarno’s life from one generation to another for many hundreds of years in the future.
+
+### **Candis on the mountainside of Mt. Lawu built in the late Majapahit period**
+
+On the mountainside of Mt. Lawu, which rises to the east of Solo, at the present-day border of East and Central Java, there are remains of two temples of the late Majapahit period that are believed to have been built by Hindu-Buddhists who had fled there for safety when Islam spread over Java. I had once visited them with little previous knowledge.
+
+One of them, Candi Ceto, built in 1468–75, during the reign of Brawijaya V (alias Bhre Kertabumi, the second last king of the Majapahit Dynasty), appeared on the slope 1,400 metres above the sea-level after we were driven on a hilly, winding road that passed through a vast tea plantation. In front of the precinct, there was a Hindu-style split gate, which was apparently built in modern times[^(83)](#part0013_split_001.html_fn_83). On the top of a stairway were two wooden huts roofed with woodenboards, which were supposed to have been of use for monasteries or an assembly room of monks. In the upper part, I saw three human-figure statues as well as a linga (male genital), enshrined one each in a simple wood-made niche, which were not artistically carved as those fine sculptures of the Singasari or the Kediri or the earlier Majapahit periods, but rather primitive ones, similar to the statues of Jizō (Ksitigarbha) found in countryside Japan. According to a local gentleman, one of them with a deity-like appearance and another one with a big head represented God Siwa and King Brawijaya V, respectively, but the model of the third one was not sure. In front of each statue, a small bowl to burn incense was placed and some flower petals were scattered around, suggesting that this temple was not abandoned in the strict sense, but was still visited by some faithfuls. In fact, the gentleman told me that in near-by villages there remains a number of families who have kept their ancestors’ beliefs up until today, although his own family has not, like Tenggerese people who are famous for having inhabited around Mt. Bromo in East Java as Hindus without converting to Islam.
+
+![Illustration](images/00159.jpeg)
+
+Top: The precinct of Candi Sukuh.
+Bottom: Two of the five Sudamala reliefs located in the far left side of the path.
+No. 2: Durga threatening Sadewa in a graveyard, No.3: Sadewa kneeling before liberated Durga.
+Photographed by M. Iguchi, June 2006.
+
+Another temple, Candi Sukuh, built several decades earlier in 1437, on a different hill, about 500 metres below Candi Ceto, was also unique from different viewpoints. The main structure found in the innermost part of the third terrace above two lower terraces was stone masonry of a trapezoidal pyramid about ten metres high, with a set of stairs situated on the front sector, reminding me of a Mayan pyramid in Mexico that I had visited three decades ago. On the truncated top, nothing was there but some carvings on the edges of the flat stage, because, as I learnt later, a linga originally existed there had been removed to the National Museum in Jakarta. On the same terrace, five stone panels with reliefs on their surfaces vertically stood side by side. I could not identify them at that time, but, from pictures taken, I realised later that they represented five scenes from Sudamala, the same story as carved on the basement of Candi Tigowangi. On the foot of the pyramid, there were a number of sculptures and reliefs modelled after some strange things, besides those of Garuda and Airavata[^(84)](#part0013_split_001.html_fn_84) placed on both sides of the approach. With a close look, I was astonished that many of them showed erotic poses of men and women or their genitals, which would be classified as “pornography” in today’s term. On the floor of the roofed gate between the first and the second terrace, which was now closed by an iron fence, was a relief of yoni-linga (female and male genitals). I remembered that there was a set of paving stones imitating yoni-linga also on the approach path of Candi Ceto. It was also true that, in Panataran or even those in Borobudur constructed in earlier times, there were some pieces of reliefs that ought not be exposed to children’s eyes.
+
+![Illustration](images/00160.jpeg)
+
+The precinct of Candi Ceto, beyond the building above the stairs are small shrines.
+
+![Illustration](images/00161.jpeg)
+
+Four statues in niches. (From the left to the right) Linga, King Brawijaya V and the king’s two advisors, Sabdopalon and Nayagenggong.
+Photographed by M. Iguchi, June 2006.
+
+I had thought such kinds of things were provided to attract less religious people to come to temples, particularly in the late Majapahit period when the country was disordered and religions lost their discipline. Unfortunately, this was a wrong view restrained by modern ethics. According to my friend in the National Museum in Jakarta, in ancient Java there was no sense of shame for the intercourse of man and woman and those scenes on the reliefs were the depictions of the part of their daily life. It applies also to literature. *Arjunawiwaha* contained significantly erotic lines[^(85)](#part0013_split_001.html_fn_85) and *Serat Centhini* (*The Story of Centhini*)[^(86)](#part0013_split_001.html_fn_86), a book edited in the Solonese court in 1815, includes many voluptuous episodes that may put *Lady Chatterley’s Lover*[^(87)](#part0013_split_001.html_fn_87) into shadow. These books would have certainly been prohibited, if it were several decades ago in Japan.
+
+### **A coin saver in the Majapahit period**
+
+Finally, let me add a note on an old terracotta coin saver, an archaeological find from the capital of Majapahit, the present-day Trowulan. When I first lived in Indonesia, I had an experience that the direct translation of piggy bank, “bank babi”, was naturally understood by a house-maid to my surprise, but later I learnt that a common word for coin saver there was “celengan”, which was etymologically derived from “celeng” (wild swine) with a suffix, “an”, the literal meaning being “something like a swine”. It is said that “piggy bank” originated from the fact that “since it was a common practice in the medieval England to save change in pots, which were made of orange-colour clay, called ‘pygg’, a potter who received an order to make a coin saver misunderstood the word and made one designed after a pig, and after that, pig-shaped money savers became common in England and elsewhere”[^(88)](#part0013_split_001.html_fn_88). It is interesting to note that a swine, which grows fat by receiving food, was incidentally adopted in both Europe and Asia.
+
+![Illustration](images/00162.jpeg)
+
+A terracotta piggy bank unearthed in the old capital of Majapahit.
+Held at the National Museum Jakarta.
+Photographed with permission by M. Iguchi, February 2002.
+
+Besides those mentioned above, there are a number of ancient remains in Java, which are too many for me to make pilgrimages to in the rest of my life.
+
+Javan culture blossomed gorgeous flowers, such as those mentioned in the earlier part of this chapter, on the soil of Mataram after the late 16th century in the court of the New Mataram Kingdom, which was originally founded in 1584 in Pajang the neighbour of the present-day Solo by a descendant of the Majapahit royal family, Panembahan Senopatil, by unifying small kingdoms that had arisen and rivalled each other after the death of Sultan Trenggana of Demak (reigned 1521–48).
+
+### **Notes for [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8)**
+
+________________________
+
+[¹](#part0013_split_000.html_fn1) Administratively, Yogyakarta holds the status of “Special District”, which is independent from the Central Java Government, the capital of which is placed in Semarang.
+
+[²](#part0013_split_000.html_fn2) The Ramayana begins with the despatch of Prince Rama of Ayodya to the hermitage of a sage to slay demons who daily despoiled the sage’s offerings. After fulfilling his duty, Rama was taken by the sage to the court of King Djanaka of Widehas, and surpassed all contenders in an archery contest and won the beautiful princess Sita for his bride. Although Rama’s father, King Dasarata, appointed Rama his heir, he conceded the heirship to his half-brother and went to the forest together with Sita and Laksmana, his younger brother. Then, Sita was kidnapped as written in the text. During the search for the abducted Sita, Rama and Laksmana met a white monkey, named Hanuman, and received support from the monkey king, Sugiwa. After many adventures, informed by a bird, Sempati, Hanuman jumped across the sea to Alengka and found Sita captured in Rawana’s palace. Rama’s party crossed the channel through a causeway constructed by the monkeys. Rama finally shot Rawana dead and rescued Sita. They triumphantly returned to Ayodya and Rama and Sita happily married. Kakawin Ramayana (Javanese poem version) thus ends, but one text in India has a melancholy sequel. Since a suspicion whether Sita was not raped in the captivity by Rawana remained, Rama exiled Sita to a forest. Sita soon gave birth to twin sons, Lawa and Kusa. When Rama saw the boys who had been raised by a hermit, he recognised them as his sons and repentantly asked Sita to return to the court, but Sita preferred to appeal to the Goddess of the Earth to receive her and disappeared into a crack of the earth. Rama eventually regained heaven in his original shape of Wisunu. (Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967; P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague, 1974).
+
+[³](#part0013_split_000.html_fn3) Alternatively called Kayon (*lit.* tree), which symbolises “the tree of life”.
+
+[⁴](#part0013_split_000.html_fn4) A character in Mahabharata, the second son of the Pandawa family.
+
+[⁵](#part0013_split_000.html_fn5) Marquis Tokugawa (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004/Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanti Isanasari), *Perdjalanan Moenoedjoe Jawa*, Penerbit ITB 2006 (徳川義親 「じゃがたら紀行」, 郷土出版社 1931 (十字屋書店 1943, 中公文庫1975).
+
+[⁶](#part0013_split_000.html_fn6) Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press. 1967; P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague, 1974; S. Supomo, *Bharatayuddha: An Old Javanese Poem and its Indian Sources*, International Academy of Indian Culture and Aditya Prakashan, 1993.
+
+[⁷](#part0013_split_000.html_fn7) James R. Brandon, Pandam Curitno, Roger A. Long (photo), *On thrones of gold: three Javanese shadow plays,* University of Hawaii Press 1993.
+
+[⁸](#part0013_split_000.html_fn8) It is said in Bali that the name of the composer of Kakawin Ramayana was Yogiswara. According to Nancy Florida, it was composed during the reign of King Balitung, 898–910 AD (Nancy K. Florida, *Javanese Literature in Surakarta Manuscripts: 1\. Introduction and Manuscripts of the keraton Surakarta*, Cornell University Press, 1993). Zoetmulder pointed out that the story is different in details from that depicted on the reliefs of Prambanan Temple constructed in 856 AD (P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague, 1974).
+
+[⁹](#part0013_split_000.html_fn9) Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967\. The translation of the inscription text: “Sang Tangkil Hyang sang (mamidu); si Nalu recited (macarita) Bhima Kumara and danced (mangigal) as Kisaka; si Jaluk recited the Ramayana; si Mung-muk play-acted (mamirus) and clowned (mabanol); si Galigi performed wayang (mawayang) for the gods, reciting the Bimmaya Kumdra”. Bhima Kumara meant “The young Bima” or “Bhima of love”, being assumed to be a part of the Mahabharata (P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature,* Martinus Nijhoff, The Hague, 1974).
+
+[^(10)](#part0013_split_000.html_fn10) P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague, 1974.
+
+[^(11)](#part0013_split_000.html_fn11) James R. Brandon, Pandam Curitno, Roger A. Long (photo), *On thrones of gold: three Javanese shadow plays,* University of Hawaii Press 1993.
+
+[^(12)](#part0013_split_000.html_fn12) James R. Brandon, Pandam Curitno, Roger A. Long (photo), *On thrones of gold: three Javanese shadow plays,* University of Hawaii Press 1993.
+
+[^(13)](#part0013_split_000.html_fn13) In many Internet articles (e.g. [http://en.wikipedia.org/wiki/Wayang](http://en.wikipedia.org/wiki/Wayang)), it is said that when the founder of the Demak Kingdom, Raden Patah (1475–1518), wanted to see the traditional wayang (wayang golek), the religious leaders invented the method to use thin leather puppets and show their silhouette, instead of the forbidden real images. This theory is self-contradictory to the fact that wayang golek, originating in China, was first adopted in the Islamised cities on the north coast of Java in the 17th century (*See*, text below in Section: Wayang golek, wayang topeng.) and spread to other places.
+
+[^(14)](#part0013_split_000.html_fn14) Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini*, Marshall Cavendish, 2006.
+
+[^(15)](#part0013_split_000.html_fn15) P. J. Zoetmulder (Footnote 10). Also, Neil MacGregor, *A History of the World in 100 Objects*, Allen Lane 2011.
+
+[^(16)](#part0013_split_000.html_fn16) Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967.
+
+[^(17)](#part0013_split_000.html_fn17) Claire Holt (Footnote 16).
+
+[^(18)](#part0013_split_000.html_fn18) James R. Brandon, Pandam Curitno, Roger A. Long (photo), *On thrones of gold: three Javanese shadow plays,* University of Hawaii Press 1993.
+
+[^(19)](#part0013_split_000.html_fn19) Gianti Treaty (13 February 1755). Later, the Mangkunegoro Family branched from the Susuhunan Family in 1757, and the Paku Alam Family branched from the Sultan Family in 1812\. Thus, four royal families exist in Java today.
+
+[^(20)](#part0013_split_000.html_fn20) Slamet Muljana, *Tunjung Sari: Romansa sejarah Singasari*, LkiS Yogyakarta, 2009.
+
+[^(21)](#part0013_split_000.html_fn21) “Cerita Wayang (A Wayang Story)” [http://abimanyukerem.blogspot.jp/2010/04/cerita-wayang.html](http://abimanyukerem.blogspot.jp/2010/04/cerita-wayang.html). Srikandi was a woman who became one of the wives of Arjuna.l.
+
+[^(22)](#part0013_split_000.html_fn22) [http://penitiwayanggamelan.blogspot.jp/2009/01/lampaha-basudewa-krama.html](http://penitiwayanggamelan.blogspot.jp/2009/01/lampaha-basudewa-krama.html). The title “The marriage of Basudewa” is an episode in the Bharatayuddha. The Javanese text was translated into Indonesian by courtesy of a friend of the present writer.
+
+[^(23)](#part0013_split_000.html_fn23) Yoshichika Tokugawa (Footnote 5).
+
+[^(24)](#part0013_split_000.html_fn24) A line in a long poem, *Song of Everlasting Sorrow*, written by Po Chu-i in 806 AD about the fate of the last Tang Emperor, Hsuan Tsung (685–762).
+
+[^(25)](#part0013_split_000.html_fn25) Ananda K. Coomaraswamy, *History of Indian and Indonesian Art*, Dover Publications 1965.
+
+[^(26)](#part0013_split_000.html_fn26) Love adventures of a fictional prince, Panji. Although Panji Stories are believed to have originated in the Kediri Period (1049–1222), they were composed in the form of kidung, not kakawin, in the Majapahit Period (Marijke J. Klokke, *Narrative sculpture and literary traditions in South and Southeast Asia*, Brill, 2000).
+
+[^(27)](#part0013_split_000.html_fn27) Abstract. In Majapahit, Damar Wulan, a nephew of a minister was looked upon as a rival by the twin sons of the minister and gaoled for a false charge. At that time, King Menak Jingga of Blambangan whose marriage proposal to the maiden Queen Kencanawung of Majapahit had been rejected started war on the latter kingdom. In distress, the queen announced that whoever would kill Menak Jingga and brings her his head should be her husband, but nobody who could achieve the task appeared. With a divine revelation, she gave an order to Damar Wulan in prison. Damar Wulan went to the pavilion of Menak Jingga and, with the help of two captive princesses who stole the magic weapon of the king, successfully won and beheaded the king. On his way back, he was ambushed and attacked by his cousins, the twin sons of the minister. The cousins presented the head of Menak Jingga to the queen, but she suspected what had happened. Menak Wulan who was revived by a hermit, his father who was the former minister, won the battle against his cousins and became the queen consort. A daughter of the minister, who was a lover of Damar Wulan since before, was made his concubine. (Yoe Djin Lim, *The Story of Damar-Wulan, the Most Popular Legend of Indonesia (Illustrated) & Lady of the South Sea (Nji Lara Kidul),* Classic reprint, Cornell University Library 2012). Kuncanawung is said to have been modelled after Queen Tribhuwana Tunggadewi (reigned 1328–51), a daughter of Raden Wijaya and mother of Hayam Wuruk, who had a war against the governor of Blanbangan (A. Budi Susanto, *Ingat (!)an: hikmat Indonesia masa kini, hikmah masa lalu rakyat*, Kanisius, 2005). If so, Damar Wulan may correspond to Sri Kertawardhana (alias Cakradhana), her husband.
+
+[^(28)](#part0013_split_000.html_fn28) E.g. Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967.
+
+[^(29)](#part0013_split_000.html_fn29) Arthur B. Allen, *Puppetry for Beginners*, Wells Gardner Darton, 1952; Beth Osnes, Sam Gill (Ed.), *Acting: An International Encyclopedia*, ABC-CLIO, 2001, etc.
+
+[^(30)](#part0013_split_000.html_fn30) The films as well as the Marquis’s Southeast Asia Collection will be open to the public in the near future.
+
+[^(31)](#part0013_split_000.html_fn31) Stories of Amir Hamzah, an uncle of the Prophet Muhammad. The hero, named Agung Menak in Java, was a person who propagated Islam, but the stories contain love episodes.
+
+[^(32)](#part0013_split_000.html_fn32) Beth Osnes, Sam Gill (Ed.), A*cting: An International Encyclopedia*, ABC CLIO 2001.
+
+[^(33)](#part0013_split_000.html_fn33) David Levinson and Karen Christensen (Ed.), *Encyclopedia of Modern Asia vol. 6*, Charles Scribners & Sons 2002.
+
+[^(34)](#part0013_split_000.html_fn34) “They have a class of men who make drawings on paper of such things as men, birds, beasts, eagles, or insects; [these drawings] resemble scroll-pictures; for the supports of the picture they use two wooden sticks, three feet in height, which are level with the paper at one end only; sitting cross-legged on the ground, the man takes the picture and sets it up on the ground; each time he unrolls and exposes a section of the picture he thrusts it forward towards his audience and, speaking with a loud voice in the foreign language, he explains the derivation of this section; [and] the crowd sits round and listens to him, sometimes laughing, sometimes crying, exactly as if the narrator were reciting one of our popular romances.” (Nagoya University, Ma Huan, *Ying yai Sheng lan* (馬歡, 瀛涯勝覽), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html); Ma Huan, *Translated from the Chinese text edited by Feng Ch’eng-Chuin; with introduction, notes and appendices by J. V. G. Mills*, Hakluyt Society, Cambridge 1970.).
+
+[^(35)](#part0013_split_000.html_fn35) Paper Museum, *Exposition: The beauty of beaten bark papers manufactured ever since the New Stone Age*, 19 June–4 July 2010 (公益財団法人紙の博物館「展示:新石器時代から花開いたアジアの樹皮紙 Beaten Bark Paperの美」, 19.6.2010–04.7.2010).
+
+[^(36)](#part0013_split_000.html_fn36) A disaster in 1006 AD was recorded in Prasasti Pucangan (dated 1041) left by King Airlangga. While Dr. Kern who first deciphered the inscription assumed that it was due to the attack by Sriwijaya, a theory that it was caused by a natural disaster was proposed in a later year (*See* [Chapter 5](#part0012_split_000.html_BE6O0-eace0453ad444634b688454ed62f4eb8)).
+
+[^(37)](#part0013_split_000.html_fn37) Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967.
+
+[^(38)](#part0013_split_000.html_fn38) The Hindu caste system in Java and Bali consists of four castes, Brahmana (priests), Ksatria (nobles and warriors), Wesia (bureaucrats and soldiers) and Sudra or Jaba (commoners).
+
+[^(39)](#part0013_split_000.html_fn39) Mpu Kanwa concluded the poem as, “Completed is the description of the story of which the name is Arjuna Wiwaha. This is in fact the first time that Mpu Kanwa has composed a poem and made it public. He is, however, in an anxious frame of mind, since he will accompany the King to battle. Venerated be His Majesty Airlangga, who has doubled the size of the kingdom and who approves of this work.” (Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967).
+
+[^(40)](#part0013_split_000.html_fn40) Ann R. Kinney, Marijke J. Klokke, Lydia Kieven, *Worshiping Siva and Buddha: The temple art of East Java*, University of Hawaii Press, 2003.
+
+[^(41)](#part0013_split_000.html_fn41) A tragic episode is found in the “Jayabaya myth version” (in Andjar Any, *Jayabaya, Ranggawarsita & Sabodpalan,* Aneka Ilmu, Semarang, 1989). “King Jayabaya who ordered the poet, Mpu Sedha, to write Bharatayuddha often visited the poet’s house, was satisfied with the progress of the writing, and gave him money and jewellery, while one day the king suddenly became angry with an episode in which King Salya of Mandakara Kingdom doted on his consort, Dewi Sara. The king boiled up, when the poet explained that the purpose was to decorate the literature, and gave him a death sentence. Mpu Sedha was burnt at the stake while he was smiling.” The addition of the name of Mpu Panuluh as a co-author might mean that he had taken over his brother’s writing (A conjecture of the present writer). Note that Salya appeared in the latter half of Bharatayuddha as the last commander-in-chief of the Kowaras’ army who was killed in the final battle, but the name, the episode of Salya’s doting on Sara was not found as far as the present writer has checked.
+
+[^(42)](#part0013_split_000.html_fn42) In the last canto, the authors wrote, “When Krsna and the Pandawas have gone back to heaven and the Kali era [foul era] has finally come, Vishnu has incarnated himself [not this time in Krsna but] in His Majesty Jayabaya to restore peace and prosperity in Java.”
+
+[^(43)](#part0013_split_000.html_fn43) P. J. Zoetmulder (Footnote 10).
+
+[^(44)](#part0013_split_000.html_fn44) George Coedes, *The Indianized states of Southeast Asia*, University of Hawaii Press, 1968.
+
+[^(45)](#part0013_split_000.html_fn45) A. Teeuw, Stuart O. Robson, *Bhomantaka: The death of Bhoma*, KITLV Press, 2005\. “The Chief Judge of Poetical Affairs” is literally interpreted as a high official, but judging from the fact that Arjunawiwaha, Bharatayuddha and Smaradahana were presented to King Airlangga, King Jayabaya and King Kameswara, respectively, “the Chief Judge of Poetical Affairs” may have denoted a king.
+
+[^(46)](#part0013_split_000.html_fn46) A Hindu god of knowledge and wisdom with an elephant head, a son of God Siva and Parwati.
+
+[^(47)](#part0013_split_000.html_fn47) Chinese text: 「諾蕃國之富盛多寶貨者, 莫如大食國, 其次闍婆國, 其次三佛齊國, 其次乃諸國耳」(Among foreign countries rich with treasures and money, the first is Tajik, the next is Java, the next is Sriwijaya, …) Nagoya University, Zhou Qufei [Ed.]. *Ling wai dai da Vol.2* [*Representative answers [about the region] beyond mountains*], 1172–78 (周去非撰, 嶺外代答卷二, 1172–78), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/lingwaidaida02-3.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/lingwaidaida02-3.html)
+
+[^(48)](#part0013_split_000.html_fn48) A history book of the 15th–16th centuries that covers the history of Singasari (1222–92 AD) and Majapahit periods written by an anonymous author in the 16th–17th centuries (I. Gusti Putu Phalgunadi, *The Pararaton: A Study of the Southeast Asian Chronicle*, Sundeep Prakashan, New Delhi 1996).
+
+[^(49)](#part0013_split_000.html_fn49) This legend is common with the episode in the Book of Sakhender in which “Sukmul, a Dutchman, was able to marry Princess Tanuraga of Pajajaran who had a hot secret part, and Mur Jangkung (Jan Pieterszoon Coen) was born between them.” *See* [Chapter 1](#part0008_split_000.html_7K4G0-eace0453ad444634b688454ed62f4eb8).
+
+[^(50)](#part0013_split_000.html_fn50) Abstracted from: I. Gusti Putu Phalgunadi, *The Pararaton: A Study of the Southeast Asian Chronicle*, Sundeep Prakashan, New Delhi 1996.
+
+[^(51)](#part0013_split_000.html_fn51) Pramoedya Ananta Toer; Max Lane (trans.), *Arok of Java*, Horizon Books, Singapore 2007 (Originally; Pramoedya Ananta Toer, *Arok Dedes*, Hastra Mitra, Jakarta 1999). In this novel, it was not Arok but Kebo Hijo who assassinated Tunggal Ametung.
+
+[^(52)](#part0013_split_000.html_fn52) The War of Bun-ei (1274) and the War of Kouan (1281). Prior to the two wars, Khubilai Khan sent embassies several times to Japan to become his subordinate, but his demand was rejected. At those times, Korea was an obedient vassal of Mongolia. In both wars, although the Mongolian–Korean allied forces on board thousands of boats occupied Tsushima and Iki islands and landed at the northern coasts of Kyushu, Japanese armies managed to defeat and expel them. Khubilai is said to have held his ambition to invade Japan until his death in 1294.
+
+[^(53)](#part0013_split_000.html_fn53) The details of Wijaya’s operation are described in the *Pararaton*.
+
+[^(54)](#part0013_split_000.html_fn54) Christine DuBois, Chee-Beng Tan, Sidney Mintz, *The World of Soy*, NUS Press, Singapore 2008.
+
+[^(55)](#part0013_split_000.html_fn55) Ann R. Kinney et al. (Footnote 40).
+
+[^(56)](#part0013_split_000.html_fn56) *The Heart of Great Perfect Wisdom Sutra* (般若心經) opens with the following statement: “Avalokiteshvara Bodhisattva, when deeply practising the prajna paramita (perfect wisdom), clearly saw that all five aggregates (body, feelings, sensations, perceptions, and consciousness) in their own being are empty, and thus was relieved of all suffering.” Prajnaparamita (Translation from: H. G. Baldoquin, *Dharma, color, and culture: new voices in Western Buddhism*, Parallax 2004).
+
+[^(57)](#part0013_split_000.html_fn57) Stuart Robson, *Desawarnana (Nagarakertagama) by Mpu Prapanca*, KITLV Press, Leiden 1995.
+
+[^(58)](#part0013_split_000.html_fn58) One of the Six Kwannons.
+
+[^(59)](#part0013_split_000.html_fn59) Marijke J. Klokke, *Narrative sculpture and literary traditions in South and Southeast Asia*, Brill, 2000; Ann R. Kinney et al. (Footnote 40).
+
+[^(60)](#part0013_split_000.html_fn60) Parthayajna. A story in the Book of Forest in Mahabharata in which “the escape of the Pandawa family and the adventure of Arjuna prior to his practice in Mount Indrakila” is written.
+
+[^(61)](#part0013_split_000.html_fn61) The summary is as follows: The demon king Kunjarakarna visited Lord Wairocana in the heaven and asked him to be instructed in the Law. The Lord sends him first to Yama in order to see the hell with his own eyes and learn about the cause of the five-fold sufferings. During his stay in hell Kunjarakarna is informed that the cauldron is prepared for his old sinful friend Purnawijaya. On his way back, he meets Purnawijaya and accompanies him to the heaven. Kunjarakarna is released from his demonic state, instructed by the Lord, and returns to Mount Mahameru to continue his ascetic practices. Purnawijaya learns esoteric knowledge with the mercy of the Lord, but he cannot escape his punishment completely; his stay in hell will be shortened from a hundred years to ten days. Purnawijaya was as a good man and returns to his wife. Kunjarakarna and Purnawijaya build a hermitage and become arhats (perfect ones) after performing penance for twelve years. (Abstracted from: J. Noorduyn, A. Teeuw, *Three Old Sundanese Poems*, KITLV Press, 2006).
+
+[^(62)](#part0013_split_000.html_fn62) The explanation of Candi Jago on the board for the sculpture of Goddess Mamaki in the museum, “The Buddhist temple at Jago is a memorial to Wisnuwardhana (d. 1268) king of Singasari”, is probably incorrect, because the Singasari Kingdom basically worshipped Hinduism as implied in the king’s name.
+
+[^(63)](#part0013_split_000.html_fn63) This paragraph and the relevant pictures are new in this English edition.
+
+[^(64)](#part0013_split_000.html_fn64) Chinese text, 其田膏沃, 地乎衍, 穀米富饒, 倍於他國。民不為盜, 道不拾遺。諺云「太平闍婆」者此也。 Nagoya University, Dao Yi Zhi Lue [An Account on Foreign Countries] – Java (島夷誌略 「爪哇」), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/daoyizhilue1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/daoyizhilue1.html).
+
+[^(65)](#part0013_split_000.html_fn65) Odoric of Pordenone (trans. Sir Henry Yule), *The Travels of Friar Odoric: 14th Century Journal of the Blessed Odoric of Pordenone*, Wm. B. Eerdmans Publishing 2001.
+
+[^(66)](#part0013_split_000.html_fn66) Mpu Prapanca (trans. Stuart Robson), *Desawarnana (Nagarakertagama)*, KITLV, Leiden 1995.
+
+[^(67)](#part0013_split_000.html_fn67) Cf. [Chapter 4](#part0011_split_000.html_AFM60-eace0453ad444634b688454ed62f4eb8), Pajajaran Kingdom – The Spiritual Home of Sundanese People.
+
+[^(68)](#part0013_split_000.html_fn68) Abridged translation by the present writer from the Chinese text: Nagoya University, [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html).
+
+[^(69)](#part0013_split_000.html_fn69) Tome Pires, Armando Cortesao (edit), *The Suma Oriental of Tome Pires and the Book of Francisco Rodriguez Volumes 1 and 2*, Hakluyt Society, London, 1944 (Google Books)/Japanese translation by Yu Aida, Koji Iizuka, Minoru Izawa, Seiichi Izumi, Seiichi Iwao: Tome Pires, *Tohoshokokuki (Daikokai Series V)*, Iwanami Shoten 1966 (トメ ピレス (会田由, 飯塚浩二, 井沢実, 泉靖一, 岩生成一訳)「東方諸国記 (大航海時代叢書V)」, 岩波書店 1966).
+
+[^(70)](#part0013_split_000.html_fn70) Malini Saran, Vinod C. Khanna, *The Ramayana In Indonesia*, Ravi Dayal, Delhi 2004.
+
+[^(71)](#part0013_split_000.html_fn71) The essence of the story was as follows. “The demon king Dasamukha was ransacking everywhere to conquer the world. When he was worshiping jewel linga on the upstream of Narmada River, the water rose and flooded over the river banks, forcing him to flee to a hilltop for safety. In the mouth area of the same river, Arjuna who was visiting there for pleasure, accompanying his queen and army, had built a dam for the convenience of bathing and fish-catching. Although Arjuna had no other intention, Dasamukha became enraged and went for war. In the battle, Arjuna had captured the demon king Dasamukha. Although his wife Citrawati had committed suicide after receiving a false tiding of her husband’s death, she was revived with healing water of the goddess of Narmada. Dasamukha was freed by the supplication of his grandfather, Pulaistya, and returned to his country. Arjuna Sahasrabahu reigned in Mahispati to the well-being of the whole world, bestowing gifts and promoting the dharma (religious tradition).” Abstracted from: P. J. Zoetmulder (Footnote 10).
+
+[^(72)](#part0013_split_000.html_fn72) Abstracted from: P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague 1974.
+
+[^(73)](#part0013_split_000.html_fn73) “Said Buddha and Siva are different in essence, they are indeed different but how one can recognise, the truths of Buddha and Siva (Hindu) are one. They may be divided, but they are one. No conflict lies in truth.” Trial translation by the present writer from the Indonesian text in: Abd. Moqsith Ghazali, Djohan Effendi, *Merayakan kebebasan beragama: bunga rampai menyambut 70 tahun Djohan Effendi*, Penerbit Buku Kompas, 2009.
+
+[^(74)](#part0013_split_000.html_fn74) P. J. Zoetmulder (Footnote 10).
+
+[^(75)](#part0013_split_000.html_fn75) Pramoedya Ananta Toer, *Arus Balik*, Hasta Mitra 1995.
+
+[^(76)](#part0013_split_000.html_fn76) Scherer Savitri, “Globalisation in Java in the 16th Century. A Review of Pramoedya’s *Arus Balik*” In: *Archipel*, Volume 55, 1998, pp. 43–60 ([http://www.persee.fr/web/revues/home/prescript/article/arch_0044-8613_1998_num_55_1_3441](http://www.persee.fr/web/revues/home/prescript/article/arch_0044-8613_1998_num_55_1_3441)).
+
+[^(77)](#part0013_split_000.html_fn77) Ann R. Kinney et al. (Footnote 40).
+
+[^(78)](#part0013_split_000.html_fn78) The five Pandawa brothers were Yudistra, Bima, Arjuna, Sakula and Sadewa. Although Sakula and Sadewa were not the true sons of Kunti but were born from a concubine, Madri, who died untimely, they were brought up by Kunti as equally as her own sons. Sakula was named as Nakula in the Mahabharata and Bharatayuddha.
+
+[^(79)](#part0013_split_000.html_fn79) The status of “State temple” probably corresponded, for instance, to Toudaiji Temple (The Centre of Regional Temples) in Nara Period (710–90 AD) in Japan. The aforementioned “Story of Damar Wulan” by Yoe Djin Lim (*The Story of Damar-Wulan, the Most Popular Legend of Indonesia (Illustrated) & Lady of the South Sea (Nji Lara Kidul),* Classic reprint, Cornell University Library 2012) was concluded as “If ever you pay a visit to the town of Blitar in East Java, you will find an old relic – Candi Panataran – the only memory left of the beloved king and queen (Tribhuwana) of Majapahit.”
+
+[^(80)](#part0013_split_000.html_fn80) Ann R. Kinney, Marijke J. Klokke, Lydia Kieven, *Worshiping Siva and Buddha: The temple art of East Java*, University of Hawaii Press, 2003.
+
+[^(81)](#part0013_split_000.html_fn81) Charles Frederick Partington, *The British cyclopaedia of natural history: Combining a scientific classification of animals, plants, and minerals*, vol. 3, Orr & Smith, 1837.
+
+[^(82)](#part0013_split_000.html_fn82) Named by Dr. W. F. Stutterhein, a famous archaeologist on Java (E. g. Marijke J. Klokke, *Narrative sculpture and literary traditions in South and Southeast Asia*, Brill, 2000.).
+
+[^(83)](#part0013_split_000.html_fn83) 1970s, according to: Eric Oey, *Java (Periplus Adventure Guides)*, Periplus 1997.
+
+[^(84)](#part0013_split_000.html_fn84) Airavata, an elephant, was the vehicle of Indra, while Garuda, an imaginary bird, was that of Vishnu.
+
+[^(85)](#part0013_split_000.html_fn85) Stuart Robson, *Arjunawiwaha: the marriage of Arjuna of Mpu Kanwa*, Brill 2008
+
+[^(86)](#part0013_split_000.html_fn86) *See* [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8) : Appendix: Jayabaya Prophecies.
+
+[^(87)](#part0013_split_000.html_fn87) D. H. Lawrence, *Lady Chatterley’s Lover*, Penguin Books 1969.
+
+[^(88)](#part0013_split_000.html_fn88) E.g. Paul Drake, *What Did They Mean by That?: A Dictionary of Historical and Genealogical Terms Old and New*, Heritage Books, 2004.
+
+**Chapter 6 Appendix:**
+
+**Jayabaya Prophecies**
+
+### **1\. Outline**
+
+The first Jayabaya prophecy that I read about twenty years ago was such that “A white buffalo will come to rule Java, and will remain for a long time; he will be supplanted by a yellow monkey, who will remain only for the lifetime of the maize plant; then, after a period of chaos, Java will come back to its own people”[¹](#part0013_split_003.html_afn_1). Although this and other similar prophecies must be taken with a pinch of salt[²](#part0013_split_003.html_afn_2), they seem to have been significantly popular at the time of the Second World War, as elderly people in Indonesia told me they remembered such a story. At the same time, I learnt what was more talked about among Indonesian people was the advent of Sultan Herucakra, a certain Ratu Adil (Just King), who would be expected prior to the realisation of “Java of Javanese people”, and that the name of Prince Dioponegoro who had waged a guerrilla war against the Dutch East Indies government in the early 19th century[³](#part0013_split_003.html_afn_3) had been argued in the past, and those of Soekarno and Suharto, the first and the second presidents of Indonesia, respectively, were rumoured after the independence of the country.
+
+Then, what was the original source of the Jayabaya Prophecies? According to reliable books[⁴](#part0013_split_003.html_afn_4), they were first incorporated in the *Centhini Story* (*Serat Centhini*) compiled in the early 19th century in the court of Solo, and became popular after the later stage of the same century, expatiated by Solonese poets, especially by Ronggawarsita III (1802–73), the last great court poet, who authored *The Book of Kings: Jayabaya* (*Serat pustaka Raja Madya: Jayabaya*) and *The Interpretation of the Book of Musarar* (*Koal saking Kitab Musarar*).
+
+Below is an epitomised translation of the section on “The core of Jayabaya prophecies” in a book, *Kebudayaan Jawa, perpaduannya dengan Islam* (*The Culture of Java, Influence of Islam*) authored by Kamajaya[⁵](#part0013_split_003.html_afn_5).
+
+“King Jayabaya of Kediri had once received a guest from the Rum Empire (Turkey), a priest named Maulana Ali Samsujen, who was highly respected for his ability to predict things before they happened, and became his disciple. According to *Kitab Musarar* (*Book of Musarar*) lectured by the priest, the peopling of Java Island began with the settlement of 20,000 families despatched by Sultan Galbah of Rum. The immigrants were placed in the mountainous district of Kendeng and worked to open forests, but many of them died, being disturbed by spirits and demons, in the 437th Rum year[⁶](#part0013_split_003.html_afn_6). The Sultan of Rum again ordered the settlement of people from India, Keling, Kandi and Siam in Java and other islands. The time of the second settlers commenced in the first year of Saka Calendar (78 AD) and would continue until the Day of Judgement for 2,100 solar years (or 2,163 lunar years.)
+
+“Several days later King Jayabaya wrote up a forecast on the Island of Java, in which the 2,100-year period was divided into three large ages of 700 years each, i.e. the Beginning, the Middle and the Ending ages, and each large age into seven 100-year periods, or centuries. The divination was approved by Ali Samsujen. After that, the honourable priest returned to his country, seen off at the border by King Jayabaya and his son, Crown Prince Amijaya.
+
+“Accompanying his son, Jayabaya went to Mount Padang to visit a recluse, Sang Ajar Subrata[⁷](#part0013_split_003.html_afn_7), who was another disciple of Ali Samsujen in Java. Having ushered the visitors into his meditation room, Sang Ajar, who wished to examine whether the king was the real reincarnation of God Vishnu, ordered his maid to serve a dinner, the menu of which consisted of seven items. They were one piece of kunir (turmeric) root, one banana-leaf-tray of juadah (rice cake), one bowl of geti (sugary sesame seeds), one piece of kajar (a bitter and intoxicating local root vegetable), one tray of garlic, one tray of Jasmine flowers and one tray of chrysanthemum flowers. As soon as Sang Ajar offered the dishes, Jayabaya drew out his keris (short sword) and stabbed him to death.
+
+“To Amijaya who was astonished, Jayabaya said, ‘My son, Crown Prince, do not be saddened by the death of your father-in-law, because he was really guilty against the palace. He intended to accelerate the expiration of the kings (kingdoms) in Java. The dishes of Ajar symbolised the things which are yet to happen. For the sake of those dishes, the empire will perish and a certain priest will be the person to be respected by people. According to my teacher, Baginda Ali Samsujen, his wisdom was equal to that of mine.’ When Amijaya asked about the relation between the dishes and the future kingdoms, King Jayabaya continued, ‘You know, my son, I am the incarnation of God Vishnu who had an obligation to bring prosperity to the world. In this incarnated form, I shall revive twice more in Malawapati and Janggala, after now in Kediri. After that I shall never incarnate in Java, because the situation of this island will no longer be of my concern. I shall not be involved in the welfare or the damage of the earth, and my existence will be hidden, being united only in my mind with that of my teacher. The occurrence of future events are symbolised by the dishes of the late Sang Ajar. The kingdom will change seven times with different rulers[⁸](#part0013_split_003.html_afn_8). The testament in the present situation is for your descendants.’ Then, Jayabaya explained the details of his time prediction, starting from Kala-wisesa (The Century of Rulers, 1201–1300 Saka) and ending in Kala-surasa (The Century of Peace, 2001–2100 Saka).”[⁹](#part0013_split_003.html_afn_9)
+
+Although it was written that Sultan Herucakra (Ratu Adil) would emerge in Kalasuba (The Century of Tranquillity, 1801–1900 Saka), which would come after Kalabendu (The Century of Wrath, 1701–1800), no description to suggest the arrival of a white buffalo (white man) or a yellow monkey (yellow man) was found in the Kamajaya’s book or in various other books available. The books of Ronggawarsita III were hardly accessible to the public and, even if possible, the works written in Javanese language would not be comprehensible at all for me. While I had no hope to see the Indonesian translations of *Serat Centhini*, because they were neither found in Internet bookstores nor held in libraries in Bogor and Bandung, one day I luckily discovered a set of the first four volumes[^(10)](#part0013_split_003.html_afn_10) in the antiquarian market in Taman Pintar, Yogyakarta. The descriptions relevant to my questions were found in the beginning part of volume 4. It was written as follows:
+
+“The fifth period was called Kalasakti. In this period, religion and state power began to act. People’s tax was determined to be paid in the form of reyal silver coins. Not long after then, a war occurred and the country became chaotic. The battle was put down by the help of nakhoda [=nakoda, captain] with white skin who was wealthy, powerful for battle and fully equipped. The kingdom was damaged opposed by the king’s son who first associated with and eventually became enemies.
+
+“The sixth period was called Kalajaya, or Kuthila. In this period, egotistical desires dominated. The sign of desirous people was large, like that of monkeys, because food was very short at that time. People were taxed to pay by silver and copper reyal money. Within a short time, the palace was attacked and the throne was succeeded by a fellow who was a relative of the king’s own family. Not long after that, disasters started to come. Many people suffered from poverty, the earth deteriorated, and many people lived on streets and in markets. Damage to the kingdom occurred, opposed by yellow-skinned foreigners, and the royal flag was brought down.”
+
+Since no English (or Japanese) translation of *Serat Centhini* has been published to my knowledge, a trial translation of the whole text relevant to the Jayabaya traditions is given at the end of this appendix.
+
+Since the traditions of King Jayabaya, broadly called *Jangka Jayabaya*, written in ancient times were hard reading, containing ambiguous passages, they gave rise to various interpretations in later centuries, viz. from the late 19th to the early 20th century, among poets and Islamic scholars. Such a story as of “white buffalo and yellow monkey” was probably fabricated in the early stage of Japanese occupation by their secret service or their Indonesian collaborators, to make use of the name of King Jayabaya to justify their deeds and spread among people.
+
+Notwithstanding, some story of “a nakoda with white skin” such as found in *Serat Centhini* (edited in 1815) seems to have existed two centuries earlier during the time of Jan Pieterszoon Coen, the 4th Governor-General of VOC (1619–23), who constructed the fort and the city of Batavia. In 1619, he wrote in his report as follows[^(11)](#part0013_split_003.html_afn_11):
+
+“In these countries there is a prophecy from ancient time that some people with skin of white-colour, eyes similar to those of cat and a big nose like that of pig, dressed their whole body, even from their hands to feet, will come from some far away foreign country and dominate over these countries. Because of their fear that we [Netherlanders] are the one who will rule them now or tomorrow, the result will be the rise of general hatred which constantly disturbs the peace.”[^(12)](#part0013_split_003.html_afn_12)
+
+*Serat Centhini* may be classified primarily as a travelogue of three siblings in the early 17th century who roamed a wide area in Java Island. When the palace of the Sunan Giri family in Gresik, East Java, was attacked by Raden Pekik of Surabaya under the command of Sultan Agung Hanyokrokusumo during his campaign to unify Java, and Sunan Giri Prapen (reigned 1548–1605 AD), his first wife and their children were captured and sent to Mataram; Sunan Prapen’s three children from his concubine escaped from the scene. The first son, Jayenresmi (ascetic name, Seh Amongraga), who later married Ken Tambangraras, set off on a journey, and the second son, Jayengsari (or Jayenggraga), and the daughter, Rancangkapti, followed but on a different way[^(13)](#part0013_split_003.html_afn_13). Mas Cebolang, an ascetic, who later became the husband of Rancangkapti, also went for a long journey. In *Serat Centhini*, the scenes of places around the Java Island where they visited and the words of conversations with many priests and scholars with whom they met were recorded to present encyclopaedic knowledge of contemporary Java to the future readers. Although the version of the book available today was the one compiled in 1815 in the court of Solo, it is highly probable that some original documents, or diaries, written during the journeys of Sunan Prapen’s children must have existed. The fact that the dates of their travel were not recorded in the book is a little disappointing, but it is perhaps an excessive desire of us who live today. As to the title of the book, although it is alternatively called *Suluk Tambangraras*–*Amongraga* (The song of Tambangraras–Amongraga), *Serat Centhini* named after the maid of Tambangraras is more common. The reason why the name of the lady who was not the main character was chosen for the title of the book has long been argued among experts.[^(14)](#part0013_split_003.html_afn_14)
+
+*Kitab Musarar* (The book of Musarar) mentioned in *Serat Centhini* was supposed to have been written by Sunan Giri Prapen around the end of the 16th century or the beginning of the 17th century. Although its content found on the Internet[^(15)](#part0013_split_003.html_afn_15) was hardly intelligible as reputed, forcing me to abandon reading the whole lines, such clauses as “Nakoda [captain] would come for trade,” “Nakoda would participate in the government. They would be rich and brave,” that suggested the arrival of white people were found. If these predictions were hinted by some experienced fact, the white men would have been the Portuguese who came to Java one century earlier than the Dutch. Whether Jan Pieterszoon Coen who wrote the aforementioned report in 1619 was aware of the *Kitab Musarar* or not, the possibility that some older document, which mentioned similar prophecies, had existed would not be deniable. In *Kitab Musarar*, there seems to be no phrase that suggests “The yellow-skinned foreigners” written in *Serat Centhini*. Whatever was the source document, such an idea might have occurred from the memory of the invasion of Khubilai Kahn’s army in the late 13th century. It was only after the Sino-Japanese War (1894–5) or the Russo-Japanese War (1904–5) that the existence of Japan, as a modern nation, became conscious among Javanese people.
+
+Let me add my personal opinion. Even today, more than sixty years after the Pacific War, some people in Japan still say that “Japanese armies which advanced to south-east Asia were welcomed by regional people. Although Japan lost, we had helped the independence of those people”[^(16)](#part0013_split_003.html_afn_16), such a view is definitely unacceptable at least in Indonesia. That the occupation by the Japanese army had plunged the people into the depth of misery and put the then richest country in Asia down to the level of the poorest country is the common understanding of Indonesian people whom I know, and there is nobody who appreciates the past deeds of the Japanese. The fact that Indonesia is generally a friendly country to Japan is due to the tolerant nature of Indonesian people, as a friend of mine aptly and honestly said. It is very true even today that the people to whom they feel closest are the Dutch who had contributed to the modernisation and the development of the country as the suzerain before they became independent.
+
+### **2\. Time Divination of Java by King Jayabaya[^(17)](#part0013_split_003.html_afn_17)**
+
+### **Large**
+
+1.   The beginning age, Kali-swara (Age of Sound)     1–700 Saka
+In Java, there were many natural sounds, such as uproars, noises, thunderbolts and lightning, and many miraculous events. It was because many beings became gods and goddesses, and descended to the earth to become human beings.
+
+2.   The middle age, Kali-yoga (Age of Darkness)     701–1400 Saka
+Many changes occurred on the earth and small islands emerged. Many creatures roamed around, as the dead were reincarnated.
+
+3.   The last age, Kali-sangara (Age of Downfall)     1401–2100 Saka
+Lots of rain would fall and many rivers and streams swell. The earth would lose its beneficial state, postponing the arrival of happiness and depleting the sense of gratitude of people. Many people would hold knowledge and die.
+
+### **Small**
+
+1.   Kali-swara (Age of Sound)
+
+1)   Kala-kukila (Century of Birds)     1–100 Saka
+People’s lives were like that of birds and the stronger were the winners. Since there were no kings, there were no people who were ruled or governed.
+
+2)   Kala-buddha (Century of Buddha)     101–200 Saka
+Javanese people came to believe in Buddhism following the law of Hyang Jagadnata (Indian teacher).
+
+3)   Kala-brawa (Century of Light)     201–300 Saka
+People in Java set up their worship to (Hindu) Gods who had descended to the Earth and spread knowledge.
+
+4)   Kala-tirta (Century of Water)     301–400 Saka
+Big flooding occurred. The sea water overflowed on the land and the earth became split in two. The west part was called the Island of Sumatra. A lot of water sources such as springs, lakes, etc. emerged.
+
+5)   Kala-swabara (Century of Eccentricity)     401–500 Saka
+Many strange phenomena happened on human beings.
+
+6)   Kala-rebawa (Century of Bustling)     501–600 Saka
+People in Java created activity in arts, etc.
+
+7)   Kala-purwa (Century of Beginning)     601–700 Saka
+Many plants grew. Descendants of giants who had turned to ordinary people started to become big again
+
+2.   Kali-yoga (Age of Darkness)
+
+1)   Kala-brata (Century of Asceticism)     701–800 Saka
+People experienced to live as hermits.
+
+2)   Kala-drawa (Century of Door)     801–900 Saka
+Many people were inspired and became clever to explain invisible things.
+
+3)   Kala-dwapara (Century of Miracle)     901–1000 Saka
+Many impossible things happened.
+
+4)   Kala-praniti (Century of Checking)     1001–1100 Saka
+Many people emphasised study.
+
+5)   Kala-teteka (Century of Immigrants)     1101–1200 Saka
+Many immigrants would come from other countries.
+
+6)   Kala-wisesa (Century of Ruler)     1201–1300 Saka
+Many people would be punished.
+
+7)   Kala-wisaya (Century of Slander)     1301–1400 Saka
+Many people would slander each other.
+
+3   Kali-sangara (Age of Downfall)
+
+1)   Kala-jangga (Century of Poet)     1401–1500 Saka
+Many people would aim at greatness.
+
+2)   Kala-sakti (Century of Magic)     1501–1600 Saka
+Many people would aim at supernatural power.
+
+3)   Kala-jaya (Century of Glory)     1601–1700 Saka
+Many people would aim at power for the backbone of their life.
+
+4)   Kala-bendu (Century of Wrath)     1701–1800 Saka
+Many people would like arguments and eventually harbour hostile feelings.
+
+5)   Kala-suba (Century of Happiness)     1801–1900 Saka
+The island of Java would begin to prosper without difficulties and many people would be in a good mood.
+(*)Adil (just king) would advent.
+
+6)   Kala-sumbaga (Century of Fame)     1901–2000 Saka
+Many people would become famous, clever and great.
+
+7)   Kala-surasa (Century of Gentleness)     2001–2100 Saka
+The island of Java would be peaceful, prosperous, and ordered. Many people would be warmhearted.
+(*)The Dooms Day would come.
+
+### **3\. Paragraphs on the Jayabaya Prophecies in Serat Centhini[^(18)](#part0013_split_003.html_afn_18) (Trial translation)**
+
+(Volume 3, pages 312–18)
+
+### **9\. MAS CEBOLANG LEAVES PAJANG AND ARRIVES AT DILAWEAN**
+
+### **9.1 Mas Cebolang Met Ki Antyanta and Ki Sali**
+
+Feeling happy in his heart, Ki Mas Cebolang listened to the explanation of Ki Mastuti and said gently, “Is it not prohibited if I made a pilgrimage to him who, according to the will of the Sultan of Mataram, was buried in Nglawean? Who is the one who was asked to live there as the keeper?”
+
+“My son, to my knowledge, there should be no obstacle for visiting a deceased person, as long as you are permitted by the keeper of the tomb, named Ki Ngabdul Antyanta, the elder brother of the King of Mataram. His younger brother, Ki Ngabdul Julur, also called Ki Sali, lives in the countryside of Sala as the village head. He is a descendant of Sesela, a grandson of Ki Ageng Anis. They both are descendants of Pagerarga and called *jalmalim* (the learned). If you are willing to go to Nglawean, I will guide you there. Now the bedug [a large suspended drum used to signal the time for Islamic prayers to begin] has almost finished. We must go to the mesjid [mosque] for noon prayer.” [255: 17–20]
+
+Cebolang was very happy. “Yes, please, I will follow you from behind.”
+
+They immediately started together, headed by Ki Mastuti. When the noble sound of gong was heard, they reached a river and performed ablutions. Then, they all went forward to the mosque. After Ki Antyanta completed “the beginning part of the prayer”, all of the congregation followed. They were deeply moved because the person who became the prayer leader had noble insight, was eloquent, spoke regular words, was consistent, steadfast, faithful to rules and convincing. After being devout to glorify the names Holy God and the last Prophet, they shook hands. Ki Mastuti said, “Ah, brother. You know, I have brought a guest named Ki Mas Cebolang for you.”
+
+Then, he gave the full particulars at length from the start to the end, and told also about Cebolang’s wish to make this pilgrimage. Ki Antyanta looked very pleased in his heart. He observed Cebolang for a long while to put him into his mind. “Hi Cebolang, a very good wish it is, but later, after *tahlil* [an expression of praise the God]. Rest in my house, be comfortable as if you were in Mataram, to your lover in the city, but actually *it does* not fit[^(19)](#part0013_split_003.html_afn_19). In a large city, all things are available, whereas here it is surely quiet and desolate.”
+
+Mas Cebolang bowed and said, “As you said, if I live a luxury life, I will be easily fallen to be proud and hence, can’t find the truth.”
+
+Ki Ngabdul Antyanta laughed and said, “Come on, my son, let us go to the tomb first.”
+
+Then he grasped the hands of Cebolang. Ki Mastuti and four santri [Islamic student], along with Ki Sali Sala who happened to be visiting there, followed from the back toward the cemetery located behind the mosque. [255: 21–27]
+
+The incense of aloe wood was spread there. They began *tahlil*, humming continuously. The prayer was completed and they withdrew from the tomb. Kiai Ngabdul returned home with the guests. The hall was already matted and dishes were ready. Arriving at the house, Mas Cebolang, Ki Sali and Ki Mastuti put themselves to sit in the hall. The students sat in the front porch. Dishes were served in front of them. There was tobacco and betel along with drinks and snacks. After they relaxed, the host invited them, “Please, smoke or chew betel nut, as you like. Just take drinks to wet your throats. Any snacks, okay. You should not feel hungry at all.”
+
+The invitees talked and soon sat close [to the dishes] and ate. Ki Ngabdul Antyanta was busy serving food. The sand mat was covered with white cloth. Rice smelled fragrant and deep-fried chicken, spinach with corn, and vegetables surrounded the rice in the middle. Bananas, kepel fruit, star fruit were on the left and right sides, surrounded by side dishes, such as various meats, small red onion, white garlic, young cucumber, fresh basil leaves, bean sprouts, chilli paste and deep-fried chicken. [255: 28–32]
+
+Soon after the preparation was completed, they were notified. Kiai Wisma and three guests, four of them, ate together. Everything tasted good, so that they ate voraciously. Having taken fruits, they returned to the centre of the hall. Some of them smoked and some others chewed betel. Ki Mastuti apologised softly, “Because I was full, and I did not let Nyai [wife] know beforehand, I shall return to Mutihan. Please, stay here relaxed. Brothers, may you be safe.”
+
+They shook hands. Ki Mastuti went out. Thus, the group of students was given foods that were not different from that of gentlemen. Ki Wisma was generous serving food and full of attention. He said gently, “You are my sons and friends, have a rest in the surau [small mosque], relax your body.”
+
+Mas Cebolang and the four students saluted and withdrew to the room of the lodge house. [255: 33–36]
+
+All dishes were tasty and reasonable, and were not disappointing, matching the moment of the reception. In addition, at the moment of every prayer, the person who became the priest was Ki Wisma. His brother Ki Sali from the village of Sala was not allowed to go home. After the night prayer, they sat in the hall of the mosque and met their guests. Cebolang was always asked when he met Ki Wanakarta as it was explained. Finally, he asked softly, “There is one thing which interests me. According to Ki Wanakarta, my prediction about the Mataram Kingdom will not be eternal.
+
+“On the contrary, one day the kingdom would be broken, the centre of Java’s palace Java would move from Mataram to Wanakarta, where light shines. Therefore I was very surprised, disappointed, lost my mind, felt sad and seriously thought of it. Eventually, I prayed to the God Almighty, even if the Javanese court really moves, it will hopefully last forever until the end of time.”
+
+Antyanta smiled and said softly, “I agree with your hope, but according to an already ascertained story, the Javanese court is forecast to move around by the will of God. My brother Sali, you know about the prophecy on the land of Java. Please shortly explain, so that the sorrow of your child Ki Cebolang disappears and he can finally accept the reality.” [255:37–42]
+
+Ki Sali told as follows. It was during the reign of King Jayabaya in Kediri that he was visited by a noble priest from the country of Rum [Turkey], named Molana Ngalimu Samsujen. Having mastered all knowledge, he was very good at science and famous in fortune-telling. He was able to predict things, clearly, precisely and correctly, before he actually heard or witnessed them.
+
+The king was much interested in the knowledge of the priest and asked the latter’s favour. Immediately, the priest taught the meaning of high science, revealed the mysteriousness of gods, the secrecy of Hyang Agung and secret ideas, sasmita [*Skt*. sign], which all had been mentioned in Kitab Musarar [Book of Musarar], especially the long “prediction” of future events.
+
+King Jayabaya’s heart shone brightly with the teaching. Everything was perfectly absorbed in his brain. Then, King Jayabaya configured *jangka tanah Jawa* [the time phases on the soil of Java], which would be realised. [256: 1–6]
+
+It covered the span of a period starting from the time of the settlement of people from Ngerum and ending by the coming of the Day of Judgement.
+
+It was divided into three major eras. The first era was called kali-swara, i.e. in reality, the time of the creation of sound. The length was 700 solar years, or lunar 721 years. In this era, there were a lot of strange sounds. The souls of the world often heard or saw thunder, noise, fear, darkness, the roaring storm and thunderbolts. Since faithful, noble people respectfully meditated, many gods embodied themselves and descended to the human world to become kings, or sometimes Brahmans, for the salvation of all people. [256: 7–11]
+
+The middle age was called kali-yoga, which meant the emergence of the plants. The length was solar 700 years, or 721 lunar years. In this era, natural changes occurred. The earth split and sometimes soil scattered to form islands. Dead noble people were incarnated in the human world. [256: 12–14]
+
+The description was changed to the last period called kali-sangara, which meant heavy water. The length was 700 solar years, or 721 lunar years.
+
+In those days, the land of Java had a lot of heavy rain and noise, and the time was not fitting for the land, as great floods came and the course of rivers meandered, indicating that the blessing of the land was decreasing. The more people pursued their material needs, the more they forewent their acceptance to inner happiness, because all people who were studying knowledge all their life always kept their own perception as a guide. [256: 15–18]
+
+Each of the three ages was divided into seven periods called sapta manggala, which meant seven smaller periods. The movement of the island of Java had already been settled. Each period calculated according to the solar year was more or less one hundred years. Time changes occurring three times in each hundred-year period were called mangsakala, or called the ngayah-ngayuh period (doing two or three jobs at the same time). One stage of the event was thirty-three years or thirty-four years. Such is the divination of King Jayabaya, which told the course of human life and everything in Java that had already been described long before they happened, or that were yet to be explained and settled. [256: 19–23]
+
+Now, the age of kali-swara was told to be subdivided into seven smaller periods. So, the details of each period. The earliest was the kala-kukila period, which meant the period of peksi [birds], all men were confused, went to and fro, because of the confusion, like birds that were looking for a place. The second was called kalabuddha period, which meant the period of nungkul “subject or submission”. In this period many people were submissive to God and praised as a sign of worshipping God. The third, called kala-brawa period, meaning the period of murub “lit”. That meant many people were greedy, according to the will of their own hearts, with no feeling of acceptance in their hearts. The fourth was named the period of kala-tirta, which meant the period of toya “water”. There were lots of heavy rains and floods that overflowed like oceans. The fifth period was called kala-dwabara, meaning the period of weird [beautiful]. It meant that there were a lot of elegant happenings in that era. The sixth was called kala-swabawa, meaning the period of crowd. Thus, all over the world was really a sort of lively situation. Kala-purwa, the seventh period, was the period of iwitan “start”. The meaning was that everywhere all over the earth were many things which grew. [256: 24–31]
+
+The subject of the story is changed. The age of kali-yoga was also divided into seven smaller periods. The names were as follows. The first period, kala-brata, meant the period of behaviour. As to this period, many people manungku [mobilised mind to a goal], performed asceticism to become a better person. The second, the name being kala-dupara period, meant the period of corridor. Many people obtained an open heart from God. The third period, kala-dwapara, meant the period of impossibleness in which many highly improbable events originally happened. Similarly, the fourth kala-pranika, which meant the period of setia [faithful], was the time when many people tried to make the best efforts not in silence. The name of the fifth period was kala-teteka, or the period of tigas, in which many foreign people came from other islands. The sixth was named kalawisesa, which meant the period of treatment, as many people were punished by the authority of the king. The seventh kala-wisaya was the period of sikara as many people slandered against each other. [256: 32–39]
+
+The subject of the story is changed. The age of kali-sangara was also divided into seven short periods. The details of each period were as follows. The first, kalajangga period, meant the period of false flower, when many noble people performed high deeds for the sake of greatness. The second, kala-sekti, meant the period of kawasa, when many people got surplus, dexterity and patience. The third, kala-jaya, meant the period of superiority in which more people exercised power to be strong. The fourth, kala-bendu, was the period of bebendu in which people had disagreeable opinions, resulting in external battle, although it was spiritual. The fifth, named the period of kala-suba, meant the time when many people found happiness, everyone was content and joyous. The sixth, kala-sumbaga, was the period of misuwur, which meant that many people got fame and were well known in the course of their life. Kala-surata, the seventh, was the period of alus, which meant that many people assisted with each other in peaceful mind. [256: 40–47]
+
+Ah, my son, the explanation of the phases of “time forecast” is now finished. The will of Sri Jayabaya in Kediri is hopefully added with knowledge with real pasemon [parables]. I did not tell you the details in the form of parables. Each of the seven phases occurred in the era of the Javanese court government system.
+
+(Volume 4, pages 1–11)
+
+### **1\. MAS CEBOLANG IN LAWEAN**
+
+### **1.1 Ki Sali explains the term of Seven Periods**
+
+The seven kingdoms would begin with the kingdom of Pajajaran and persisted until the end of time. The names of the other six kingdoms and kings reigning were not properly explained in the conversation or extended to a reasonable understanding level. When one faces the reality, one will surely accept God’s will. Finally, we do not mutually slander, criticise or excessively praise others, as well as the country’s wheel spins. Let you be aware and alert. [257: 1–3]
+
+In the Age of Kala-wisesa, there would be a period called Anderpati. The kingdom’s named would be Pajajaran. The administration would not be based on laws and there would be no regulations. People paid tax in the form of gold.
+
+The kingdom would be damaged due to the hostility of the king’s own brother. The strong people would act arbitrarily. A war would last for 100 years. The kingdom would be damaged and would be moved to another place. [257: 4–6]
+
+The second period in the same age would be called Kala-raja and the governor would be Dewaraja. Regulations would start to be acted. People would be burdened with tax in the form of white silver for 100 years. The religion of Buddhism would be over. The religion would be broken because of [the governor’s] enmity against his own son. [257: 7–9]
+
+The third period in the Age of Kala-wisaya would be called Adiyati period. In this period, law, justice and rules would start. The Islamic religion and state administration would begin to develop. Tax on people would be imposed in the form of labour. The kingdom would be damaged because the king’s confidence was opposed in the court. [257: 10–12]
+
+The fourth period would be Kala-jangga. In this period, discussion would be held to resolve problems. People’s tax would be paid by the harvest from land. The kingdom would be damaged due to the conflict with the king’s adopted son. [257: 13–14]
+
+The fifth period would be called Kala-sakti. In this period religion and state power would begin to act. People’s tax would be determined to be paid in the form of a silver reyal. Not long after then, a war would occur and the country would become chaotic. The battle would be put down by the help of a nakhoda [captain] with white skin who was wealthy, powerful for battle and fully equipped. The kingdom would be damaged opposed by the king’s son who first would associate with and eventually become the enemy. [257: 15–18]
+
+The sixth would be called the period of Kala-jaya, or Kuthila, in which egotistical desires dominated. The sign would be people’s large desire, like that of monkeys, because food was very short at that time. People would be taxed by silver and copper reyal coins. Within a short time, the palace would be attacked and the throne would be succeeded by a fellow who was a relative of the king’s own family. Not long after then, disaster would start to come. Many people would suffer from poverty, the earth would be deteriorated, and many people would live on the streets and in markets. Damage to the kingdom would occur, opposed by the yellow-skinned foreigners and the bringing down of the royal flag would be marked. [257: 19–23]
+
+The seventh would be the period of Kala-bendu, also called Hartati, in which what everyone thought about was nothing but money. At that time, there would be twin kingdoms in the land of Java. People would be burdened with all kinds of tax, in the form of silver and copper. Not long after then, people’s tax would be added on crops and livestock, i.e. chickens, ducks, goats, cows or buffalos. The more the country’s difficulty would grow, the more justice would be lost, resulting in that people would become insolent. The officials liked to slander and were less thoughtful, the kings did not pay attention to the people’s needs and they had no true revelation. What came would be the revelation of the devil. The behaviour of people would change, many women having no longer the feeling of shame. Caring for relatives would vanish, no true news would be heard, many people would stray and their hearts would suffer. Clever people would be cunning to stay far to follow evil people, evil people would increase, many thieves and robbers would be on the streets. Leaders of crimes would be safe and even become conspicuously stronger. Often, there would be solar eclipses, lunar eclipses, ash falls, earthquakes, thunder, rain, wind, storms, and heavy rain occurring in one season. Continual battles and riots would be there, but the enemy would not appear. Internal peace would be impossible to be available. The control of government would break up with no directives and admirable personalities would vanish, forming a sign that the country would be empty. Wise men would be lost in the period of Kala-tidha. There would be no good signs of life as the hearts [of people] were filled with many obstacles. [257: 24–35]
+
+The king and the king’s relatives would be intelligent and glorious, the prime minister would be perfect, ministers would have honest character, and the state leaders would be good and have attractive appearances, but these conditions would not hinder the coming of the Kala-bendu period. These situations would be even enhanced. Many disquieting obstacles would be there, because the desires of people in one country were various. [257: 36–37]
+
+Aroused by the cry, their hearts would be saddened for embarrassment. While comforting their hearts, they would begin to go in the wrong direction, driven by greed to own the results for themselves. Finally, their objectives would become disorientated due to their vigilance. [257: 38–39]
+
+A doctrine in Paniti Sastra [Literature Committee] would caution that, in this accursed period, people who had good personalities would be defeated. Thus would be the responsiveness and attention to the events that have occurred. For those who would undergo the period of Gemblung or Edan [crazy times], hearts were very unpleasant and confused. If one wants to do something crazy, the heart cannot bear this action, but if one does not participate in it, one will surely not get worldly wealth and will eventually starve. As it had become the will of God, those who forgot [about wealth] would be lucky, but it was actually more fortunate for those who recalled and were cautious. At the time, it was nearing the end of the Kala-duka period. The destruction of the kingdom was due to disagreement with [the king’s] concubine. [257: 40–44]
+
+They who listened to the story would shiver in their hearts, gasping until their throats ran dry, nodding their heads and shaking heads from side to side. [257: 45)]
+
+Mas Cebolang falteringly asked, “The period of gudubilah, is it over or is there some more time?”
+
+Ki Sali replied, “No, it is not the last period, there is still another period that does not make hearts shudder.” [257: 46–47]
+
+By the will of God, the Kala-bendu Period would be gone and the time would be changed. The glory of the monarch would bring about the peace of the kingdom in the land of Java. Wrath would subside, pain would disappear, because of the arrival of an invisible king. He would come from a noble ancestry, with the title of “The First King”, because he reigns without any facility, reigns temporarily and the kingdom is quiet. It means that quiet with no means was not an obstacle, that is, the time was still under the secret of God, while many people did not know. By the will of God, the period of the world would be made changed. [258: 1–3]
+
+The king would reign with more justice and graciousness, and have no wishes for worldly wealth. He was Sultan Erucakra [Ratu Adil]. He would not know his origin and had no followers. Soldiers would be only sirrulah [or God’s secret], with the flag of Koran recitation, and subject all enemies to surrender. Enemies would vanish and there would be nobody who was brave to oppose. [258: 3–5]
+
+The king always would promote the welfare of the people and, for this, the king would restrict himself in terms of eating as to be not more than seven reyal a year. Land tax for one junk (28,386 m) would be only one dinar per year. For one field, which produced one thousand money, the tax would be one money per day, being free from any other tax. Thus, people’s hearts would find rest for cheap food and clothing, and there would be no criminal acts. All criminals would repent, fearing the curse of the king who was just and compassionate. [258: 5–7]
+
+The king made a royal city in Bumipethik, adjacent to the River Katangga, in a forest that was being worked on. The king’s line would reign only up to the second descendant. During the third descendant, the capital would be moved to the area of Katangga and then his son would be killed by his own lust. [258: 7–8]
+
+Soon, there would come a replacement king who would not have a disappointing appearance. He would be named Asmarakingkin. He would be very handsome, so that he would become worshipped by the public. He would be enthroned in Kadhiri and his third descendant would move to Mandura. Soon the kingdom would perish due to the war against the king’s lover. [258: 8–9]
+
+Soon there would be three united kings, the first king with his capital of the kingdom in the land of Kapanasan, and the second and the third kings in Gegelang and Tembelang, respectively. After thirty years, the third kingdom would have a legal dispute and be eventually destroyed, so that there would be no king in the area. Then a group of regents would act like kings, because there was no one who should be respected. [258: 10–11]
+
+A few years later, there would be a foreign king from Nungswa Srenggi. He would be enthroned in Java and would find the kingdom in the northeast of Mount Drekila, at the foot of Mount Candramuka. Within several years, soldiers would come from the kingdom of Rum to attack King Nungsa Srenggi. The king [Nungsa Srenggi] and his soldiers would be defeated. [258: 11–13]
+
+The officers of the Rum Kingdom would raise a descendant of Sultan Erucakra as king and the king would reign in the area to the east of River Opak. The kingdom would be very prosperous and named Amartalaya. The administration of the third offspring would fall on the Doomsday, i.e. the age of the land of Java, being two thousand one hundred years, counted in the solar year. The story was now completed. Only the God knows. [258: 13–14]
+
+With his relieved heart, Mas Cebolang then saluted and said, “Sorry, the servant was bold and did not know the customs, because the servant was bored in his/her heart. What period does today belong to?”
+
+“According to my guess, maybe the present period is the time that is sought in connection with the period of Kala-sakti that is still far from the arrival of unfixed time [the era of incertitude]. Anyway, it’s enough, it is not worth extending the discussion,” answered Ki Sali. [258: 15–16]
+
+Ki Antyanta smiling said, “After listening to the story of Ki Sali, I am immediately reminded of the Prophet Muhammad’s sayings that the uncertain Doomsday would occur if there were forty signs.” [258: 17]
+
+“Please explain them so that later we feel there is time-matching with the above story,” continued Ki Sali.
+
+Mas Cebolang was very happy when he heard them. [258: 18]
+
+### **1.2 Ki Antyanta describes the Variety of Ages**
+
+The Prophet said to his companions, “Look carefully at the arrival of doomsday that will come after the appearance of forty kinds of the sign of times. Regarding details, you should know the following:
+
+1\. Many big and small mosques that are used for talking about world issues.
+
+2\. Many scholarly Islamic teachers who do not carry out responsible tasks.
+
+3\. Many people who neglect Islamic daily prayers and belittle the worship time.
+
+4\. Many people who do not perform religious alms giving because they expect that there is no law.
+
+5\. Within the fasting month, many people who do not fast but eat at an open place, with no fear and shame. [259: 1–7]
+
+6\. Many people who stay away from goodness and go through criminal acts.
+
+7\. Many people who talk about the faults of others in meetings openly and prolongedly.
+
+8\. Many people dare to build houses and the likes in the cemetery.
+
+9\. Many men act like women, wearing gold, silver, and silk, while the women resemble men.
+
+10\. Many people who do not have a sense of brotherhood and many people are hurtful to others. [259: 8–12]
+
+11\. Many people who are pompous and arrogant in worship forget that worship is an obligation, eventually becoming conceited.
+
+12\. Many people who are wicked do not believe in the conditional instruction of the Prophet but consider themselves just.
+
+13\. Many witnesses who lie and many people who actually witnessed something claim that they do not know.
+
+14\. Many people do not act wholeheartedly, make more lies and even keep false oaths. [259: 13–16]
+
+15\. Many people who do not honour their parents and many people who do not want to learn to read Al-Qur’an. There are many who go as they like to learn, singing various songs at any time.
+
+16\. Many men are subjected to his wife and wives do not respect husbands.
+
+17\. Many wealthy people who are not just, hate poor people, and the law courts exactly ask rewards.
+
+18\. Many kings are cruel, have wrong motivation, especially taking the wealth of people, so there is no peace.
+
+19\. Many people praise wicked people because they fear them, but they do not like to praise good and kind people, pious scholars, good scientists and other people.
+
+20\. Many people who are not able to keep the deposits of others and even dare to lie to refuse to return. [259: 17–24]
+
+21\. Many people are dishonest to the wife or husband of another person openly and do not feel ashamed.
+
+22\. Many people kill other people and conduct persecution, and many people who do magic spells.
+
+23\. Many people who drink wine or anything intoxicating that should be avoided.
+
+24\. Many people conduct evil deeds, being not ashamed to others and having no fear of God.
+
+25\. Many people take the money of orphans and the property of poor people without mercy and without hesitation.
+
+26\. Many people do all sorts of crimes without worry and doubt.
+
+27\. Many children before the age of twenty years have grey hair.
+
+28\. Many people who have consideration to commit adultery with people who have good behaviour.
+
+29\. Many people who intentionally commit adultery and many men do a kind of love.
+
+30\. Many people go to the expert of calculation to practise as medicine man to take uncommon drugs used by infidel people and many people are subject to the devil. [259: 25–34]
+
+31\. Few people love each other and many people are hostile towards each other.
+
+32\. Lots of rain falls in the wrong season, dry seasons being like wet seasons, and rainy seasons being like droughts.
+
+33\. Many people are not faithful to glorify Qur’an, and the Qur’an is even used to search for food.
+
+34\. At the same time, the beginning of the fasting month falls on a Friday, so that the day of Idur Fitr is on Friday.
+
+35\. Many young, beautiful people are not shamed by doing evil and insulting work.
+
+36\. Inappropriate acts become increased and likewise crimes and immorality spread. [259: 35–40]
+
+37\. There is a king from the country of Ngajerah, named Sri Ashab who was very wicked.
+
+Then there is the king from Yahman, who is truly sturdy, named Kahani. He is very strong and exceeds others and subdues many people and even oppresses them. There is also a famous king named Juhemi from Damsik. Then there is a king, named Malnguna Ibn Ngasiah, a narrow-faced and long-nosed man, whose voice is loud and his right eye is damaged like that of a blind man. This king acts like a hermit and is generous to all people, so that he is respected. He considered that all poor people and the priests were the utmost charities of the king.[^(20)](#part0013_split_003.html_afn_20) Then the king Malnguna dies. [260: 1–4]
+
+38\. There is a king named Malngun Assia who has no religion and no shame. This king kills scholars and monks, and damages the Islamic religion. King Malngun Ngasiyah then attacks the countries of Rum, Sam, Ngarag and Karsani. [260: 5– 6]
+
+At that time the country of Rum is ruled by King Kapti. He goes to war and is defeated and dies. God wrathfully descends to King Malngun and his soldiers kill them all. Accordingly, Muslims are born. [260: 6–7]
+
+39\. There is a king named Sri Karames. He is naked and only his face is covered. He attacks the kingdom of Islam and maltreats it. Sri Karames marries a Muslim woman. Muslim women who are pregnant are dragged in the streets and tortured. If the baby in the womb is alive, it means the beginning of lasting happiness. If the baby is dead, it means the beginning of harm. Any other pregnant woman is dissected and the baby that comes out is to be alive along with his/her mother. [260: 8–10]
+
+At that time many Muslims gathered, fled to Kumpah country, which was an Islamic empire with the king named King Kes and his son Ki Abas.
+
+All people who believed in Islam were accepted by the king. Then, they prepared to attack the infidel community. [260: 10–11]
+
+When Sri Karames heard that his country would be attacked, he soon deployed as many as thirty thousand soldiers. The journey of the expedition was not told. On arrival in Kumpah, they were faced by Islamic people.
+
+The battle raged, the Muslims were being pushed by the enemy and ran away in disorder. The soldiers of Karames saw that the enemy had gone and then went to Medina with an aim to destroy the tomb in Medina. [260: 12–14]
+
+Sri Kes together with his soldiers was much concerned and petitioned God that the soldiers who would come to destroy the tomb at Medina shall be destroyed. Thanks to the grace of God, the soldiers of Karames were extinct, swallowed in the earth, except only two men who did not die in order to report to their king.
+
+At the time, King Kes heard about the extinction of the enemy. He was very happy and prayed to give thanks to the love of God. [260: 14–16]
+
+40\. The last and fortieth sign was the reign of King Sri Imam Mahdi. This event took place when, in the fasting month, the eclipse occurred three times on the thirteenth, fourteenth, and fifteenth days.
+
+Imam Mahdi fell between a pillar and the tomb of Abraham in Mecca, at the age of forty years old. The one who became head of the soldiers was Malaikat Jibril and the one who followed behind him was Malaikat Mikhail. Imam Mahdi was enthroned like Prophet Sulaiman and like Zulkarnaen. [260: 17–19]
+
+“So, this story is hopefully enough to consider the predictions of the state. Hopefully each should give priority to the properties mentioned in the Prophet Muhammad’s deeds and forecast, all who lived in those days are hoped to be aware and alert.” [260: 20–21]
+
+Ki Antyanta said again, “Come on, I should go on to another story, which can be used as a good model. Under the rule of the king who reigned in Ngeksiganda, which was the king of Java, which was Kalifatollah [a royal king blessed by God], it is worth finding a companion[^(21)](#part0013_split_003.html_afn_21). The king was very respectful to Sayid Markaban from the country of Egypt.” [260: 21–23]
+
+All who listened saluted and bowed. Mas Cebolang said, “That’s nice. May you please describe the main story which is inserted in the sheets of the book?”
+
+Ki Antyanta said in his mind, “This kid, it is already apparent that he is rather good at ranges of knowledge. His behaviour comes close to the heart and can satisfy the heart.”
+
+Then Ki Antyanta smiled and gently said, “Your wish to be told of the excellent Sayid Markaban is really enjoyable.” [260: 23–25]
+
+### **Notes for [Chapter 6](#part0013_split_000.html_CCNA0-eace0453ad444634b688454ed62f4eb8) Appendix**
+
+________________________
+
+[¹](#part0013_split_002.html_afn1) Bruce Grant, *Indonesia*, Melbourne University Press 1996.
+
+[²](#part0013_split_002.html_afn2) One questionable point to the present writer was that maize, the indigenous plant from Central and South America, must not have existed in 13th-century Java, i.e. long before Christopher Columbus’s expedition. Cf. Herman J. Viola and Carolyn Margolis, *Seeds of Change: Five Hundred Years Since Columbus*, Smithsonian, 1991, etc.
+
+[³](#part0013_split_002.html_afn3) The so-called Java War (1825–30).
+
+[⁴](#part0013_split_002.html_afn4) Nancy Florida, *Writing Traditions in Colonial Java: The Question of Islam*; in Sarah C. Humphreys, *Cultures of Scholarship*, University of Michigan Press, 1997; Nancy K. Florida, *Introduction and manuscripts of the Karaton Surakarta: Javanese literature in Surakarta manuscripts* Vol. 1, Cornell University SEAP Publications, 1993; Kamajaya, *Kebudayaan Jawa, perpaduannya dengan Islam*, Ikatan Penerbit Indonesia, Cabang Yogyakarta 1995, etc. The description in, K. Tsuchiya, T. Kato, S. Fukai (Ed.), *Indonesia Encyclopaedia*, Dohosha Publishing), 1991 (土屋 健治, 深見 純生, 加藤 剛 (編), 「インドネシアの事典 」, 同朋舎出版), under the headword of “Jayabaya Traditions”, that “The Bharata Yuddha written by Mpu Sedah and Mpu Banuru by order of King Jayabaya contained prophecies, called Jayabaya Prophecies, and gave rise to various versions in the later time” is not understandable to the present writer. Primarily, Bharata Yuddha is an epic on the war between the Pandawa and the Korawa families.
+
+[⁵](#part0013_split_002.html_afn5) Kamajaya, *Kebudayaan Jawa, perpaduannya dengan Islam,* Ikatan Penerbit Indonesia, Cabang Yogyakarta 1995.
+
+[⁶](#part0013_split_002.html_afn6) The definition of the Rum Year is unknown to the present writer.
+
+[⁷](#part0013_split_002.html_afn7) According to a tradition, Ajar Subrata was a son of Mpu Sedah who was executed by King Jayabaya who became enraged at certain lines in Bharata Yuddha, which was his writing. Ali Samsujen gave knowledge to him, before he was invited by the king. Ali Samsujen was the father-in-law of Amijaya (Prabu Anom Jaya Amijaya) as the latter’s wife was Dewi Sulastri, the former’s daughter.
+
+[⁸](#part0013_split_002.html_afn8) In another interpretation, the number of kingdoms was eight, adding the servant to Sang Ajar’s seven dishes. Ranggasutrasna (Ki Ngabei.), Ranggasutrasna (Raden Ngabei.), Paku Buwana IV (Sunan of Surakarta), Darusuprapta, Tim Penyadur, *Centhini*, *Tambangraras-Amongraga*, Balai Pustaka, Jilid 4 (1999).
+
+[⁹](#part0013_split_002.html_afn9) The fact that the term of Jayabaya’s divination started in the 13th century does not conflict with the historical fact that the king’s reign was 1135–57 AD (1213–35 Saka). The details of the seven or eight kingdoms are found in the “Translation of Jayabaya traditions in Serat Centhini” given at the end of this appendix.
+
+[^(10)](#part0013_split_002.html_afn10) Ranggasutrasna (Ki Ngabei.), Ranggasutrasna (Raden Ngabei.), Paku Buwana IV (Sunan of Surakarta), Darusuprapta, Tim Penyadur, *Centhini, Tambangraras-Amongraga*, Balai Pustaka, Jilid 1 (1991), Jilid2 (1992), Jilid3 (1994/2008), Jilid 4 (1999). *Serat Centhini* consists of 12 volumes. Indonesian translation of volumes 5–12 was published from Gajah Mada University Press in 2005–10.
+
+[^(11)](#part0013_split_002.html_afn11) R. B. Cribb, Audrey Kahin, *Historical dictionary of Indonesia,* Scarecrow Press, 2004; Raharjo Suwandi, *A quest for justice: The millenary aspirations of a contemporary Javanese wali*, KITLV Press, 2000; Norman G. Owen, *The emergence of modern Southeast Asia: A new history*, University of Hawaii Press, 2005, etc.
+
+[^(12)](#part0013_split_002.html_afn12) Kamajaya, *Kebudayaan Jawa, perpaduannya dengan Islam*, Ikatan Penerbit Indonesia, Cabang Yogyakarta 1995; Johannes Jacobus Meinsma, J. W. G. van Haarst, D*e Opkomst van het Nederlandsch gezag in Oost-Indie*, M. Nijhoff 1869.
+
+[^(13)](#part0013_split_002.html_afn13) Written in: Ranggasutrasna (Ki Ngabei), Ranggasutrasna (Raden Ngabei), Paku Buwana IV (Sunan of Surakarta), Darusuprapta, Tim Penyadur, *Centhini, Tambangraras-Amongraga*, Balai Pustaka, Jilid 3 (2008). The year of their departure is written as 1635 in Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini*, Marshall Cavendish, 2006, the reign of Sunan Prapen is generally known as 1548–1605 (e.g. Taufik Abdullah, Sharon Siddique, *Islam and society in Southeast Asia,* Institute of Southeast Asian Studies, 1986 (Google Books)).
+
+[^(14)](#part0013_split_002.html_afn14) Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini*, Marshall Cavendish, 2006.
+
+[^(15)](#part0013_split_002.html_afn15) “Jalan Setapak Menuju Nusantara Jaya: Bedah telisik spiritual wasiat nenek moyang, Kitab Musarar Jayabaya (Footpath toward the Jayanese Archiperago: Surgical survey of an ancestor’s spiritual testament, Book of Musarar Jayabaya)”, [http://nurahmad.wordpress.com/wasiat-nusantara/kitab-musarar-jayabaya/](http://nurahmad.wordpress.com/wasiat-nusantara/kitab-musarar-jayabaya/)
+
+[^(16)](#part0013_split_002.html_afn16) For instance, a novel by Hideaki Kase, *Merdeka 17805*, Kyobundo 2001 (加瀬英明「ムルデカ17805」, 教文堂 2001) gives an impression in which the Japanese occupation is beautified. The film made on the same novel was not very successful and probably not screened in Indonesia.
+
+[^(17)](#part0013_split_002.html_afn17) From: Kamajaya, *Kebudayaan Jawa, perpaduannya dengan Islam*, Ikatan Penerbit, Cabang Yogyakarta, 1995.
+
+[^(18)](#part0013_split_002.html_afn18) Source: Ranggasutrasna (Ki Ngabei), Ranggasutrasna (Raden Ngabei.), Paku Buwana IV (Sunan of Surakarta), Darusuprapta, Tim Penyadur, *Centhini, Tambangraras-Amongraga* Jilid 3, Balai Pustaka, (1994), Jilid 4, Balai Pustaka, (1999) Indonesian Edition.
+
+[^(19)](#part0013_split_002.html_afn19) Hard to understand. The original text: “kepada kekasihmu di kota, tetapi sesungguhnya sangling (sangli ‘tidak cocok’?)”
+
+[^(20)](#part0013_split_002.html_afn20) Hard to understand. The original text: “para ulama itu amal raja yang paling baik”.
+
+[^(21)](#part0013_split_002.html_afn21) Hard to understand. The original text: “baiknya mencari seorang pendamping”.
+
+**Bibliography**
+
+Ordered according to the author’s or the first author’s family name.
+
+### Books
+
+1  Taufik Abdullah, Sharon Siddique, *Islam and society in Southeast Asia*, Institute of Southeast Asian Studies, 1986 (Google Books).
+
+2  Tomoji Abe, *The islands of fire*, Sogensha 1944 (阿部知二「火の島－ジャワ・バリ島の記」, 創元社 1944).
+
+3  Arthur B. Allen, *Puppetry for Beginners*, Wells Gardner Darton 1952.
+
+4  I. G. N. Anom (Ed.), *The Restoration of Borobudur*, United Nations Educational 2006.
+
+5  Andjar Any, *Jayabaya, Ranggawarsita & Sabodpalan*, Aneka Ilumu, Semarang 1989.
+
+6  Hiroshi Aramata, *Scientific episodes in the Great East Asia*, Chikuma-shobou 1991 (荒俣宏「大東亜科学奇譚」, 筑摩書房 1991).
+
+7  Atja, *Carita Parahiyangan: Naskah Titilar Karuhun Urang Sunda*, Jajasan Kebudajaan Nusalarang, Bandung 1968 (Historical stories of West Java compiled in the late 16th century).
+
+8  Atja, (Ed.) S. Ekadjati, *Pustaka rajya rajya i bhumi Nusantara, suntingan naskah dan terjemahan I 1*, Bagian Proyek Penelitian dan Pengkajian Kebudayaan Sunda (Sundanologi), Direktorat Jenderal Kebudayaan, Departemen Pendidikan dan Kebudayaan, 1987 (Volume 1 of a series of books, the title may be translated as “The book of kings in the archipelago” compiled in the early 18th century).
+
+9  Timothy P. Barnard, *Contesting Malayness: Malay identity across boundaries*, NUS Press, 2004.
+
+10  William Barrington D’Almeida, *Life in Java: With Sketches of the Javanese*, Hurst and Blackett, London 1864.
+
+11  Geoff Bennett, *The pepper trader: true tales of the German East Asia Squadron and the man who cast them in stone*, Equinox Publishing, 2006.
+
+12  Leonard Blussé, *Strange Company: Chinese Settlers, Mestizo Women and Dutch in VOC Batavia (KITLV Verhandelingen Ser No, 122),* Foris, Utrecht 1988/Japanese translation of “VIII Butterfly or Mantis? The Life and Times of Cornelia van Nijenroode” by Fukuya Kurihara: Leonard Blussé, *The Battle of Otemba Cornelia*, Heibonsha, 1998 (レオナルド・ブリュッセイ (栗原福也訳) 「おてんばコルネリアの闘い」, 平凡社 1998).
+
+13  Peter Boomgaard, “The making and unmaking of tropical science; Dutch research in Indonesia, 1600–2000”, *Bijdragen tot de Taal-, Land- en Volkenkunde* Vol. 162, No. 2/3, pp. 191-217, KITLV, 2006.
+
+14  F. D. K. Bosch, *Selected Studies in Indonesian Archeology*, Martinus Nijhoff, The Hague 1961.
+
+15  C. R. Boxer, *The Dutch Seaborne Empire 1600*–*1800*, Penguin Books–Hutchinson, London 1990.
+
+16  James R. Brandon, Pandam Curitno, Roger A. Long (photo), *On thrones of gold: three Javanese shadow plays*, University of Hawaii Press 1993.
+
+17  Buitenzorg Scientific Centre, *Buitenzorg Scientific Centre* Archipel Drukkerij en T Boekhuis, Buitenzorg 1948.
+
+18  D. M. Campbell, *Java: Past and Present, Vol. I, Vol II*, William Heinemann, London 1915.
+
+19  B. W. Carpenter, *W. O. J. Nieuwenkamp: First European Artist in Bali*, Periplus 1997
+
+20  Frank G. Carpenter, *Java and the East Indies*, Doubleday, Page & Scott Co., Garden City, New York 1926.
+
+21  D. Chihara, *Hindu-Buddhist Architecture in Southeast Asia*, Brill Academic Publishers 1996.
+
+22  Daigoro Chihara, *A history of the construction of shrines and temples in Indonesia*, NHK Publishing 1975 (千原大五郎「インドネシア社寺建築史」, 日本放送出版協会 1975).
+
+23  Daigoro Chihara, *The architecture of Borobudur*, Hara-Shobo 1970 (千原大五郎「ボロブドールの建築」, 原書房 1970).
+
+24  Amanda Clara, *Cerita Rakyat Dari Sabang Sampai Merauke*, Pustaka Widyatama 2008 (Folktale in Indonesia from Sabang, west, to Murauke, east).
+
+25  Classic Book Publisher, *The life of Faxian*, Xinfua-bookstore 1955 (文學古籍刊行社出版「法顯傳」, 新華書店, 上海 1955).
+
+26  Ananda K. Coomaraswamy, *History of Indian and Indonesian Art*, Dover Publications 1965.
+
+27  Michael Cooper, *They Came to Japan: An Anthology of European Reports on Japan, 1543*–*1640*, University of California Press 1965.
+
+28  E. J. H. Corners, *The Marquis: A Tale of Shonan-to*, Heinemann Books (Asia) Ltd., Singapore, 1981.
+
+29  R. B. Cribb, Audrey Kahin, *Historical dictionary of Indonesia*, Scarecrow Press, 2004
+
+30  Saleh Danasasmita, *Sejarah Bogor*, Pemerintah Daerah Kotamadya DT II Bogor, 1983 (A history of Bogor).
+
+31  Bill Dalton, *Indonesia Handbook 4th Ed*., Moon Publications 1988.
+
+32  Till Dalton (Illust), *Lutung Kasarung*, G. Kolff & Co., Bandung, ca. 1950 ほか。
+
+33  Charles Darwin, *The Origin of Species by means of natural selection or the preservation of favoured races in the struggle for life*, John Murray, London 1910 (First Edition 1859).
+
+34  Joan de Barros, *Asia de Joan de Barros [II]*, Lisbon 1953/Japanese translation by Shigeru Ikuta, Mineo Ikegami: Joan de Barros, *History of Asia (1), (2),* Iwanami-Shoten 1981(ジョアン・デ・バロス (生田滋, 池上岑夫訳) 「アジア史 (1), (2) 」, 岩波書店,1981).
+
+35  J. G. de Casparis, *Indonesian paleography*, E. J. Brill, Leiden/Koeln 1975.
+
+36  H. J. de Graaf, *Wonderlijke verhalen uit de Indische historie*, Moesson, Den Haag 1981.
+
+37  F. de Haan, *Oud Batavia – Gedenboek uitgegeven Genootschp van Kunsten en wetenschappen naar aanleiding van het driehonderdjarrig bestaan der stad 1919 (Eerste Deel),* G. Kolff & Co., Batavia 1922 (The 300th anniversary book of Batavia).
+
+38  V. Degroot, *Candi, Space and Landscape: A Study on the Distribution, Orientation and Spatial Organization of Central Javanese Temple Remains*, Sidestone Press, 2010.
+
+39  Jean Demmeni (photo), Leo Haks and Paul Zach (text), *Indonesia: Images from the Past*, Times Editions 1987.
+
+40  Da’torchi di G. Pagani, *Il milione di Marco Polo: testo di lingua del socolo decimoterzo ora per la prima volta pubblicato ed illustrato dal conte Gio. Batt. Baldelli Boni, Vol.1*, Firenze 1827 (Google Books).
+
+41  Hasan Djafar, “Ciliwung zama prasejarah” [In, Wartawan Kompas, *Ekspedisi Ciliwung*, Penerbit Buku Kompas, 2009] (Expedition of Ciliwung).
+
+42  Paul Drake, *What Did They Mean by That?: A Dictionary of Historical and Genealogical Terms Old and New*, Heritage Books 2004.
+
+43  Christine DuBois, Chee-Beng Tan, Sidney Mintz, *The World of Soy*, NUS Press, Singapore 2008.
+
+44  Dutch East Indies. Dienst der Staatsspoor- en Tramwegen*, Officieele Reisgids 2 Nov 1939*–*1 May 1940, Der Spoor en Tramwegen 28e Uitgave.*
+
+45  A. J. Eijkman, F. W. Stapel, *Leerboek der geshiedenis van Nederlandsch-Indie 9th Edition*, Gronongen-Batavia 1939 (エイクマン,スタぺル(村上直次郎,原徹郎訳) 「蘭領印度史」，東亜研究所 1942).
+
+46  Nancy K. Florida, *Introduction and manuscripts of the Karaton Surakarta: Javanese literature in Surakarta manuscripts*, Vol. 1, Cornell University SEAP Publications, 1993/ Vol. 2, Cornell University SEAP Publications, 2000.
+
+47  Nancy K. Florida, *Javanese Literature in Surakarta Manuscripts: Manuscripts of the Mangkunagaran Palace Vol. 2*, SEAP Publications, 2000.
+
+48  Nancy K. Florida, *Writing Traditions in Colonial Java: The Question of Islam* [In Sarah C. Humphreys, *Cultures of Scholarship*, University of Michigan Press, 1997].
+
+49  William Foster (Ed.), *The Voyage of Henry Middleton to the Moluccas, 1604*–*1606*, Hakluyt Society, London 1943.
+
+50  James J. Fox (Ed.), *Indonesian Heritage Vol. 9: Religion and Ritual*, Periplus, Singapore 1998.
+
+51  W. Fruin-Mees, *Geschiedenis van Java, Vol 1: Het Hindoetijdperk. Vol 2: De Mohammedaansche rijken tot de bevestiging van de macht der compagnie*, Commissie voor de Volkslectuur, Weltevreden 1919 & 1920 /Japanese translation by Matsuoka: Madame Fruin-Mees, History of Java, Iwanami Publishing 1924 (フロイン・メース夫人著・松岡 静雄訳「爪哇史」, 岩波書店1924).
+
+52  George Coedes, *The Indianized states of Southeast Asia*, University of Hawaii Press, 1968.
+
+53  Abd. Moqsith Ghazali, Djohan Effendi, *Merayakan kebebasan beragama: bunga rampai menyambut 70 tahun Djohan Effendi*, Penerbit Buku Kompas 2009 (Celebrating the freedom of religion: An anthology of Djohan Effendi).
+
+54  Akira Goto, *A history of Islamic world*, University of Air 1993 (後藤明，「イスラーム世界の歴史」, 放送大学教育振興会 1993).
+
+55  Bruce Grant, *Indonesia*, Melbourne University Press 1996.
+
+56  C. Guillot, *The Sultanate of Banten*, Gramedia Book Publishing, Jakarta 1990.
+
+57  Leo Haks and Guus Maris, *Lexicon of Foreign Artists Who Visualized Indonesia (1600*–*1950),* Archipelago Press, Singapore 2000.
+
+58  G. E. Hall, *A History of South-East Asia 4th Ed*. Macmillan Education 1981.
+
+59  Adolf Heuken SJ, *Historical Sites of Jakarta,* 6th Ed, Cipta Loka Caraca, Jakarta 2000.
+
+60  Adolf Heuken, *The earliest Portuguese sources for the history of Jakarta*, Cipta Loka Caraka, 2002.
+
+61  Ikuo Hirayama, *Hirayama on the Silk Road*, Japan Information and Culture Center/Embassy of Japan 1991, and other books.
+
+62  Yukio Hirayama, *The road to Dunfuan* – *A sketchbook of Yukio Hirayana*, Tokuma-shoten 1988 (平山郁夫「敦煌への道－平山郁夫素描集」, 徳間書店 1988).
+
+63  Henry Hobhouse, *Seeds of Wealth*, Shoemaker and Hoard, New York 2003.
+
+64  Claire Holt, *Art in Indonesia: Continuities and Change*, Cornell University Press, 1967.
+
+65  Claire Holt, *Culture and Politics in Indonesia*, Equinox Publishing 1972.
+
+66  François Hotman, [In, *Franco-Gallia: Or, an Account of the Ancient Free State of France, and Most Other Parts of Europe, Before the Loss of Their Liberties*, T. Goodwin, London, 1574 (Google Books)].
+
+67  Ma Huan (translated by J. V. G. Mills), Ying-yai Sheng-lan: *The Overall Survey of the Ocean’s Shores* [1433], Hakluyt Soc., 1970.
+
+68  Imperial Japanese Government Railways, *An official guide to Eastern Asia: Vol. 5 East Indies, including Philippine Islands, French Indo-China, Siam, Malay Peninsula and Dutch East Indies*, Tokyo, 1917.
+
+69  Yasushi Inoue, *Dunghuang*, Koudansha 1959 (井上靖「敦煌」, 講談社 1959).
+
+70  Christopher Irving, *A Catechism of Mythology: Being a Compendious History of the Heathen Gods, Goddesses, and Heroes (1822),* Kissinger Publishing 2010.
+
+71  Yoneo Ishii (Ed.), *Encyclopaedia of Indonesia*, Domu-shuppan, Tokyo 1991(石井米雄編「インドネシアの事典」, 童夢出版 1991).
+
+72  I Tsing; J. Takakusu (trans.), *A Record of the Buddhist Religion as Practised in India and the Malay Archipelago (A. D. 671*–*695),* Clarendon Press, London, 1896.
+
+73  K. Iwamoto, “Sailendra Dynasty and Borobudur”, [In: *Southeast Asia* – *History and Culture*, Society of South East Asia History, Heibonsha, Tokyo] 1981 (岩本薫, “Ｓａｉｌｅｎｄｒａ王朝とＣａｎｄｉ Ｂｏｒｏｂｕｄｕｒ”, 東南アジア史学会「東南アジア‐歴史と文化」，平凡社).
+
+74  Seiichi Iwao, *A sequel to: The study on the Nangyang Japanese town*, Iwanami-shoten 1987 (岩生成一「続・南洋日本町の研究」, 岩波書店 1987).
+
+75  Seiichi Iwao, *Licensed ships and Japanese town*, Shibundou 1962 (岩生成一「朱印船と日本町」，至文堂 1962).
+
+76  Kodaganallur Ramaswami Srinivasa Iyengar, *Asian Variations in Ramayana: Papers Presented at the International Seminar on Variations in Ramayana in Asia: Their Cultural, Social and Anthropological Significance*, New Delhi, January 1981 (Google Books).
+
+77  Roy E. Jordaan (Ed.), *In Praise of Prambanan*, KITLV Press, Leiden 1996.
+
+78  J. W. Judd, “The earlier eruptions of Krakatau”, *Nature* 40 1889, 365.
+
+79  Kamajaya, *Kebudayaan Jawa, perpaduannya dengan Islam*, Ikatan Penerbit Indonesia, Cabang Yogyakarta 1995 (The culture of Java, a mixture with Islam).
+
+80  Tadataka Kamiya, Kazunobu Kimura, *Writers requisitioned and sent to the south* – *War and Literature*, Sekai-shisou-sha 1996 (神谷 忠孝, 木村 一信「南方徴用作家－戦争と文学」，世界思想社 1996).
+
+81  Madoka Kanai, *A study on the history of Japan*–*Holland relationship*, Shibunkaku 1986 (金井圓「日蘭交渉史の研究」，思文閣 1986).
+
+82  Madoka Kanai, *Modern Japan and Holland*, University of Air 1993 (金井圓 「近世日本とオランダ」，放送大学 1993).
+
+83  Hideaki Kase, *Merdeka 17805*, Kyobundo 2001 (加瀬英明「ムルデカ17805」，教文堂 2001).
+
+84  David Keys*, Catastrophe* – *An investigation into the Origin of the Modern World*, Century, London 1999.
+
+85  Bo Kyung Kim, *Indefinite boundaries: Reconsidering the relationship between Borobudur and Loro Jonggrong in Central Java,* ProQuest, 2007.
+
+86  Ann R. Kinney, Marijke J. Klokke, Lydia Kieven, *Worshiping Siva and Buddha: The temple art of East Java*, University of Hawaii Press, 2003.
+
+87  Marijke J. Klokke, *Narrative sculpture and literary traditions in South and Southeast Asia*, Brill, 2000.
+
+88  Ichizo Kobayashi, *The Dutch East Indies which I saw*, Tonan-shoin 1940 (小林一三「蘭印を斯く見たり」, 斗南書院 1940).
+
+89  N. H. Krom, *Archaeological Description of Barabudur*, Martinus Nijhoff, The Hague 1927 (Reprint: Gyan Publishing House, New Delhi 1986).
+
+90  Ann Kumar, John H. McGlynn, *Illuminations: The Writing Traditions of Indonesia*, Weatherhill 1996.
+
+91  Tomonobu Kurihara, *Study on the history of Qin and Han*, Yoshikawa-koubunkan 1986 (栗原朋信 「秦漢史の研究」吉川弘文館 1986).
+
+92  D. H. Lawrence, *Lady Chatterley’s Lover*, Penguin Books 1969.
+
+93  J. Levelink, A. Mawdsley, T. Rijnberg, *Four Guided Walks: Bogor Botanic Garden*, Bogorindo Botanics, Bogor 1996.
+
+94  David Levinson and Karen Christensen (Ed.), *Encyclopedia of Modern Asia vol. 6*, Charles Scribners & Sons 2002.
+
+95  Yoe Djin Lim,*The Story of Damar-Wulan, the Most Popular Legend of Indonesia (Illustrated) & Lady of the South Sea (Nji Lara Kidul),* Classic reprint, Cornell University Library 2012.
+
+96  C. Scott Littleton, *Gods, Goddesses, and Mythology*, Vol. 6, Marshall Cavendish, 2005.
+
+97  J. R. Logan, *J. Indian Archipelago* IV. 1850, 254 [In, *Oxford English Dictionary, 2nd Edition, Version 4.0*].
+
+98  Neil MacGregor, *A History of the World in 100 Objects*, Allen Lane 2011.
+
+99  Tetsusi Masanobu, *Nobel-Jagatara Oharu*, San-ichi-shobo 1996 (正延哲士「小説じゃがたらお春」, 三一書房 1996).
+
+100  Johannes Jacobus Meinsma, J. W. G. van Haarst, *De Opkomst van het Nederlandsch gezag in Oost Indie*, M. Nijhoff 1869.
+
+101  Hidenosuke Miura (Ed.), *Buddhist monument Borobudur in Java: Folder 1*–*3*, Borobudur Publishing Society 1924 (三浦秀之助撰, 「闍婆仏蹟ボロブヅウル第1-3帙 」, ボロブヅゥル刊行会 1924).
+
+102  Hidenosuke Miura (Ed.), *An interpretation of Buddhist monument Borobudur in Java*, Borobudur Publishing Society 1925 (三浦秀之助撰, 「闍婆仏蹟ボロブヅウル解説」, ボロブヅゥル刊行会 1925).
+
+103  Soemarsaid Moertono, *State and Statecraft in Old Java: A Study of the Later Mataram Period, 16th to 19th Century*, Equinox Publishing, 2009.
+
+104  J. W. B. Money, *Java or How to Manage a Colony (1861),* Oxford University Press, Singapore 1985.
+
+105  Slamet Muljana, *Dari Holotan ke Jayakarta*, Yayasan Idayu, Jakarta 1980 (From Holotan to Jayakarta).
+
+106  Slamet Muljana, *Sriwijaya*, PT LKiS Pelangi Aksara, 2006 (Sriwijaja).
+
+107  Slamet Muljana, *Tunjung Sari: Romansa sejarah Singasari*, LkiS Yogyakarta 2009 (Tunjung Sari: A romance from the history of Singasari).
+
+108  Agus Aris Munandar, Edi Suhardi Ekajati, *Pustaka pararatwan i bhumi Jawadwipa, parwa 1, sargah 1-4*, Yayasan Pembangunan Jawa Barat, Jakarta 1991(Google Books).
+
+109  Paul Michel Munoz, *Early Kingdoms of the Indonesian Archipelago and the Malay Peninsula*, Didier Millet, 2006.
+
+110  Tsurutato Nakagawa, *A story of rubber*, Ootsuki-shoten 1984 (中川鶴太郎「ゴム物語」大月書店,1984).
+
+111  P. L. Narasimham, *Ancient Hindu Shrines of Java*, [In *The Theosophist,* 36, Theosophical Soc., Madras, India, 1915].
+
+112  National Science Museum, *Exposition of Pithecanthropus* – *Java Man revived*, *Yomiuri* Newspaper 1996 (国立科学博物館「ピテカントロプス展－いま復活するジャワ原人」，読売新聞社 1996).
+
+113  Kyurinsai Nishikawa (Ed.), *Accounts on Foreign Trades* – Enlarged edition Vol. 1-5, Kansetsudō, Kyoto 1708 (西川求林齋 (輯), 「増補華夷通商考」 卷之1-5, 甘節堂, 京都 1708 ), [http://archive.wul.waseda.ac.jp/kosho/i13/i13_00581/i13_00581_0004/i13_00581_0004.pdf](http://archive.wul.waseda.ac.jp/kosho/i13/i13_00581/i13_00581_0004/i13_00581_0004.pdf); 西川如見著, 飯島忠夫 西川忠幸校, 「訂日本水土考・水土解辯・増補華夷通商考」, 岩波書店 1944. “Kyurinsai” was the Buddhist name suffix of Nyoken Nishikawa.
+
+114  Seikyu Nishikawa (Ed.), *Nagasaki Night Tales*, Ryushiken, Kyoto 1720 [In: S. Mishima (Ed.), Nanban-Kibun Cho, Chobunkaku, 1929; Nyoken Nishikawa, Chonin-bukuro, Hyakusho-bukuro, Nagasaaki Night Tales, Iwanami Paterback 1942 (西川正休 (編), 「長崎夜話艸」, 柳枝軒, 京都 1720 [In: 三島才二編「南蠻稀聞帳」, 潮文閣 1929; 西川如見「町人嚢・百姓嚢・長崎夜話草」，岩波文庫 1942]). “Seikyu” was the nom de plume of Nyoken Nishikawa.
+
+115  J. Noorduyn, A. Teeuw, *Three Old Sundanese Poems*, KITLV Press 2006.
+
+116  Nana Nurliana, Sudarini, *Sejarah SMP/MTs Kls VII (KTSP),* Grasindo (A high-school history textbook).
+
+117  E. Oey, A. Cherian (Ed.), J. Miksic (text), *Borobudur: Golden Tales of the Buddhas*, Periplus 1990.
+
+118  Eric Oey (Ed.), *Java (Periplus Adventure Guide),* Periplus (HK) 1997.
+
+119  Hiroshi Ogawa, *Expeditions of the Chinese to the south* – *Ying-yai Sheng-lan*, Yoshikawa-koubunkan 1988 (小川博「中国人の南方見聞録－瀛涯勝覧」，吉川弘文館 1988)
+
+120  Seigai Ōmura, “Borobudur is a mandala”, [Hidenosuke Miura (Ed.), *An interpretation of Buddhist monument Borobudur in Java (Main Part-Chapter 11),* Borobudur Publishing Society 1925] (大村西崖「ボロブヅウルは曼荼羅なり」 [三浦秀之助「闍婆佛蹟ボロブヅウル解説 (本論・第拾一章) 」，ボロブヅウル刋行會 1925].
+
+121  Beth Osnes, Sam Gill (Ed.), *Acting: An International Encyclopedia*, ABC-CLIO 2001.
+
+122  Norman G. Owen, *The emergence of modern Southeast Asia: A new history*, University of Hawaii Press, 2005.
+
+123  Pacific Science Association, *Proceedings of the Fourth Pacific Science Congress Java 1929*, Vol. 1–4.
+
+124  Paper Museum, *Exposition: The beauty of beaten bark papers manufactured ever since the New Stone Age*, 19 June–4 July 2010 (公益財団法人紙の博物館「展示:新石器時代から花開いたアジアの樹皮紙 Beaten Bark Paper の美」, 19.6.2010–04.7.2010).
+
+125  Charles Frederick Partington, *The British cyclopaedia of natural history: Combining a scientific classification of animals*, *plants, and minerals. vol. 3*, Orr & Smith 1837.
+
+126  I. Gusti Putu Phalgunadi (translated from the Original Kawi Text), *The Pararaton: A Study of the Southeast Asian Chronicle,* Sundeep Prakashan, New Delhi, India, 1996.
+
+127  Tome Pires, Armando Cortesao (edit), *The Suma Oriental of Tome Pires and the Book of Francisco Rodriguez Volumes 1 and 2*, Hakluyt Society, London, 1944 (Google Books)/Japanese translation by Yu Aida, Koji Iizuka, Minoru Izawa, Seiichi Izumi, Seiichi Iwao: Tome Pires, *Tohoshokokuki (Daikokai Series V),* Iwanami Shoten 1966 (トメ ピレス (会田由, 飯塚浩二, 井沢実, 泉靖一, 岩生成一訳) 「東方諸国記 (大航海時代叢書V) 」, 岩波書店 1966).
+
+128  R. Ng. Poerbatjaraka, *De Batoe-Toelis bij Buitenzorg*, Albrecht & Co., Batavia 1920.
+
+129  R. Ng. Poerbatjaraka, *Riwajat Indonesia Dijilid I*, Djakarta 1952 [In, A. Surjomihardjo, *Pemekaran Kota* Jakarta*/The Growth of Jakarta*, Penerbit Djambatan 1977].
+
+130  Marco Polo, Aldo Ricci, Luigi Foscolo Benedetto, *The travels of Marco Polo: translated into English from the text of L. F. Benedetto by Prof. Aldo Ricci, with an introduction and index by Sir E. Denison Ross*, G. Routledge & Sons, London 1931.
+
+131  Odoric of Pordenone (trans. Sir Henry Yule), *The Travels of Friar Odoric: 14th Century Journal of the Blessed Odoric of Pordenone*, Wm. B. Eerdmans Publishing 2001.
+
+132  Purwadi, *Sejarah asal-usul tanah Jawa*, Persada, 2004 [In,; Hamamdin, *Aceh Hingga Bali Membentang Dalam Satu Pulau*, May 11, 2009 ([http://poestakaku.blogspot.jp/2009/05/aceh-hingga-bali-membentang-dalam-satu.html](http://poestakaku.blogspot.jp/2009/05/aceh-hingga-bali-membentang-dalam-satu.html)).
+
+133  Fadjroel Rachman, *Bulan Jingga dalam Kepala* – *Sebuah Novel*, Gramedia 2002 (Orange colour moon in the brain – A novel).
+
+134  Thomas Stamford Raffles, *The History of Java*, London 1817 (Vol I & II. Reprint with an introduction by John Bastin, Oxford University Press, Singapore 1988).
+
+135  Ranggasutrasna (Raden Ngabei.) atas prakarta Paku Buwana IV (Sunan of Surakarta), disadur ke bahasa indonesia oleh Tim Penyadur, *Centhini, Tambangraras* – *Amongraga*, Balai Pustaka, Jilid 1 (1991), Jilid 2 (1992), Jilid 3 (1994/2008), Jilid 4 (1999) (An encyclopedic travelogue in the early 17th century).
+
+136  M. C. Ricklefs, *Jogjakarta under Sultan Mangkbumi 1749*–*1792: A History of the Division of Java*, Oxford University Press, London 1974.
+
+137  Stuart Robson, *Arjunawiwāha: the marriage of Arjuna of Mpu Kanwa*, Brill 2008.
+
+138  Stuart Robson (trans.), *Desawarnana (Nagarakerutagama) by Mpu Prapanca*, KITLV Press, Leiden 1995 (Inspection tours of Hayam Wuruk recorded by Prapanca).
+
+139  V. R. Romondt, “De wederopbouw van den Civa Tempel”, *Djawa* No.3, 20, 1940.
+
+140  Ajip Rosidi, *Mundinglaya di Kusumah*, Penerbit Nuansa, Bandung 1956 (The story of Mundinglaya di Kusumah).
+
+141  James R. Rush, *Java, A Travellers’ Anthology*, Oxford University Press 1996.
+
+142  Herwig Zahorka, *The Sunda Kingdoms of West Java: From Tarumanagara to Pakuan Pajajaran with the royal center of Bogor*, Yayasan Cipta Loka Caraka, 2007.
+
+143  Arysio Santos, *The Lost Continent Finally Found*, North Atlantic Books 2011.
+
+144  Suwito Santoso, Kestity Pringgoharjono, *The Centhini story: The Javanese journey of life: based on the original Serat Centhini*, Marshall Cavendish, 2006.
+
+145  Malini Saran, Vinod C. Khanna, *The Ramayana in Indonesia*, Ravi Dayal Delhi 2004.
+
+146  A. M. Sardiman, *Sejarah 2* – *SMA Kelas XI Program Ilmu Sosial*, Quadra, Bogor 2007 (A high-school reference book for social studies).
+
+147  Tsuneo Sato et al. (Ed.), *Japan agricultural book series 70: Agricultural books by scholars 2*, Rural Culture Association Japan 1966 (佐藤常雄他編「日本農書全集70・学者の農書二」, 農山漁村文化協会 1996).
+
+148  Ryuken Sawa (Ed.), *Historical remains and art in Indonesia*, NHK Publishing 1973 (佐和隆研編「インドネシアの遺跡と美術」,日本放送出版協会 1973).
+
+149  Marie-Odette Scalliet, “Une curiosité oubliée: le Livre de dessins faits dans un voyage aux Indes par un voyageur hollandais du marquis de Paulmy”, Archipel 54, 1998.
+
+150  J. F. Scheltema, *Monumental Java*, Macmillan, London 1912 (pp.70–75).
+
+151  P. L. Schuerleer, M. J. Klokke, *Ancient Indonesian Bronzes: A Catalogue of the Exhibition in Rijksmuseum Amsterdam with a General Introduction*, Brill Academic Pub, 1988.
+
+152  François Sémah; Anne-Marie Sémah; Tony Djubiantono; *Ils ont découvert Java: il y a plus d’un million d’années = They discovered Java: more than one million years ago = Mereka menemukan pulau Jawa: lebih dari satu juta tahun yang lalu*, Pusat Penelitian Arkeologi Nasional IJakarta) : Museum national d’histoire naturelle (Paris) 1990.
+
+153  Alwi Shahab, “Jakarta anniversary date must be changed: Historian”, *The Jakarta Post*, 23 June 2004.
+
+154  Kozo Shinano, *A history of the Dutch East-India company*, Doubunkan-shuppan 1988 (科野孝蔵「オランダ東インド会社の歴史」，同文館出版 1988).
+
+155  Masaharu Shingu, *A Samurai of Zeelandia*, Shin-jinbutsuouraisha 1989 (新宮正春「ゼーランジャ城の侍」, 新人物往来社 1989).
+
+156  Koutaro Shirai, *Considerations on the arrival of foreign plants*, Ariake-shobo 1929 (白井光太郎「植物渡來考」, 有明書房 1929).
+
+157  Hiroko Shiraishi, *Information of Jagatara O-Haru*, Bensei-shuppan 2001 (白石広子「じゃがたらお春の消息」, 勉誠出版 2001).
+
+158  R. Soekmono, *Candi Borobudur A Monument of Mankind*, The Unesco Press, Paris and Van Gorcum, Assen/Amsterdam 1976.
+
+159  R. Soekmono, *Pengantar sejarah kebudayaan Indonesia 1, 2, 3*, Kanisius-Yogyakarta, 2002 (Introduction to the cultural history of Indonesia).
+
+160  R. Soekmono, *The Javanese Candi: Function and Meaning*, Brill, 1995.
+
+161  R. Soekmono, J. G. de Casparis, Jacques Dumarcay, Ping Amranand, *Borobudur: Prayer in stone*, Archipelago Press, Singapore 1990.
+
+162  W. F. Stutterheim (Trans. by Mrs. A. C. de Winter-Keen), *Pictorial history of civilization in Java*, The Java Institute and G. Kolff & Co., Weltevreden, 1927.
+
+163  R. Rio Sudibyoprono, Suwandono, Dhanisworo, Mudjijono, *Ensiklopedi wayang purwa*, Balai Pustaka, 1991 (Encyclopaedia of wayang purwa).
+
+164  Srima Sugiarti and Aditrijono (translation and summary), *Babad Prambanan*, Dept. of Education and Culture, Jakarta 1981 (Prambanan Chronicle).
+
+165  Sumantri, Yeni Kurniawati, *Summary of course material: Sejarah Indonesia Kuno (History of Ancient Indonesia),* Faculty of Social Science, Indonesia University of Education, 1977(?).
+
+166  Yakob Sumarjo, *Khazanah pantun Sunda*, Kelir, Bandung 2006 (Treasure of Pantun Sunda).
+
+167  Yakob Sumarjo, *Simbol-Simbol Artefak Budaya Sunda: Tafsir-Tafsir Pantun Sunda*, Kelir, Bandung 2003 (The symbol of Sundanese cultural artifacts: Interpretation of Pantung Sunda).
+
+168  S. Supomo, *Bharatayuddha, An Old Javan*es*e Poem and its Indian Sources*, International Academy of Indian Culture and Aditya Prakashan, 1993.
+
+169  Abdrurrachman Surjomihardjo, *Pemekaran Kota Jakarta/The Growth of Jakarta*, Penerbit Djambatan, Jakarta 1977.
+
+170  A. Budi Susanto, *Ingat(!) an: hikmat Indonesia masa kini*, *hikmah masa lalu rakyat*, Kanisius, 2005 (Memories: The wisdom of Indonesia’s past and present).
+
+171  Moh. Amir Sutaarga, *Prabu Siliwangi: Atau Ratu Purana Prebu Guru Dewataprana Sri Baduga Maharaja Taru Haji Di Pakwan Pajajaran 1474–1513*, P. T. Duta Rakjat, Bandung 1965 (Study notes on King Siliwangi).
+
+172  Raharjo Suwandi, *A quest for justice: The millenary aspirations of a contemporary Javanese wali*, KITLV Press, 2000.
+
+173  Jushiro Takeda (Ed.), *Jagatara episodes* – *Footnotes of Japanese in the Dutch East Indies*, Tsurukawa-insatshujo 1968 (武田重四郎編「ジャガタラ閑話－蘭印時代邦人の足跡」, つるかわ印刷所 1968).
+
+174  Yosaburo Takekoshi, *A book of southern countries*, Niyusha 1910 (竹越與三郎「南國記」, 二酉社 1910).
+
+175  Hidezo Tanakadate, *The Seizure of Southern Cultural Institutions*, Jidai-sha, Tokyo 1944 (田中館秀三「南方文化施設の接収」, 時代社 1944).
+
+176  Tanakadate Hidezo’s Achievements Publishing Group, *Tanakadate Hidezo’s Achievements and Memoirs*, Sekai-Bunko, Tokyo 1975 (田中館秀三業績刊行会編「田中館秀三—業績と追憶」, 世界文庫 1975).
+
+177  A. Teeuw, Stuart O. Robson, *Bhomantaka: The death of Bhoma*, KITLV Press 2005.
+
+178  Alfred Lord Tennyson, *The Works of Alfred Lord Tennyson Poet Laureate,* Macmillan and Co., London 1894.
+
+179  Ian W. B. Thornton, *Krakatau: The destruction and reassembly of an island ecosystem*, Harvard University Press, 1997.
+
+180  Pramoedya Ananta Toer, *Arok Dedes*, Hasta Mitra, 1999/Trans. by Max Lane, *Arok of Java*, Horizon Books 2007 (A story of Ken Arok and Ken Dedes).
+
+181  Pramoedya Ananta Toer, *Arus Balik*, Hasta Mitra 1995 [Reverse current].
+
+182  Pramoedya Ananta Toer, *Tales from Djakarta*, Equinox Publishing (Asia) 2000.
+
+183  Yukio Togawa, *The story of Shonan-yo*, *Yomiuri* Newspaper 1990 (戸川幸夫「昭南島物語 上・下」, 読売新聞社 1990).
+
+184  Marquis Tokugawa (translated by M. Iguchi), *Journeys to Java*, ITB Press, Bandung 2004/Marquis Tokugawa (diterjemahkan oleh Ririn Anggraeni dan Apriyanti Isanasari), *Perdjalanan Moenoedjoe Jawa*, Penerbit ITB 2006 (徳川義親 「じゃがたら紀行」, 郷土出版社 1931 (十字屋書店 1943, 中公文庫1975).
+
+185  Christopher Torchia, *Indonesian Idioms and Expressions: Colloquial Indonesian at Work*, Tuttle 2007.
+
+186  K. Tsuchiya, T. Kato, S. Fukai (Ed.), *Indonesia Encyclopaedia*, Dohosha Publishing), 1991 (土屋 健治, 深見 純生, 加藤 剛 (編), 「インドネシアの事典 」, 同朋舎出版).
+
+187  Yusuke Tsurumi, *Nanyo-Yuuki (Pleasure travels around the southern ocean),* Dainihon-Yubenkai 1917 (鶴見祐輔「南洋遊記」, 大日本雄辯會 1917).
+
+188  Peter Turner, *Java*, Lonely Planet Publications, 1999
+
+189  Peter Turner, Brendan Delahunty, Paul Greenway, James Lyon, Chris McAsey, David Willett, *Indonesia: Lonely Planet Travel Survival Kit*, Lonely Planet 1995.
+
+190  Chikuun Uchihashi (Ed.), *Double-sided mirror of Nagasaki chronicle*, 1828 (打橋竹雲選並蔵版「長崎年暦両面觀」文政十一戊子(1828) 發行).
+
+191  H. A. van Coenen Torchiana, *Tropical Holland, An Essay on the Birth, Growth and Development of Popular Government in an Oriental Possession*, University of Chicago Press, Chicago 1921.
+
+192  John C. van Dyke, *In Java and the Neighboring Islands of the Dutch East Indies*, Charles Scribner’s Sons, New York–London 1929.
+
+193  Jan Huygen van Linschoten, *Itinerario, voyage ofte schipvaart naer Oost Portugaels Indien*, 1696, Amsterdam/ Japanese translation by Iwao et al: Linschote, Tohoannaiki, Iwanami Shoten 1968(岩生成一, 渋沢元則, 中村孝志訳) 「東方案内記」, 岩波書店 1968)
+
+194  Herman J. Viola and Carolyn Margolis, *Seeds of Change: Five Hundred Years Since Columbus*, Smithsonian, 1991.
+
+195  Bernard Hubertus Maria Vlekke, *Nusantara: A history of the East Indian archipelago*, Harvard University Press, 1945.
+
+196  J. Ph. Vogel, *The Earliest Sanskrit Inscriptions of Java* (in, F. D. K. Bosch (Ed.) *Publicaties van den Oudheidkundigen Dienst in Nederlandsch-Indie, Deel 1*, Albrecht & Co., Batavia 1925).
+
+197  Masahiko Wada, *Southeast Asia in the Modern Age*, University of Air 1991 (和田正彦「近現代の東南アジア」, 放送大学教育振興会 1991).
+
+198  Arthur Waley, *The Pillow Book of Sei Shonagon*, Tuttle, 2011 (First published by George Allen & Unwin, London 1928).
+
+199  Alfred R. Wallace, *The Malay Archipelago (1869),* Oxford University Press, Singapore 1985.
+
+200  Andrew N. Weintraub, “Ngahudang Carita Anu Baheula (To awaken an ancient story) : An introduction to the stories of Pantun Sunda”, *Southeast Asia Paper No. 34*, University of Hawaii at Manoa 1991.
+
+201  Robert Wessing, “A change in the forest: myth and history in West Java”, *Journal of Southeast Asian Studies*, 1 March 1993.
+
+202  Barbara A. West, *Encyclopedia of the Peoples of Asia and Oceania*, Facts on File 2008.
+
+203  Norman White, *Hopkins: A literary biography*, Oxford University Press, 1995.
+
+204  Argo Wikanjati, *Kumpulan Kisah Nyata Hantu di 13 Kota*, Penerbit Narasi 2010.
+
+205  Simon Winchester, *Krakatoa: The Day the World Exploded: August 27, 1883*, Harper Perennial, 2005.
+
+206  Karl With, *Java* – *Brahmanische, Buddhistische und Eigenleige Architektur und Plastik auf Java*, Filkwang Verlag. M. B. H. Haben 1\. W. 1920.
+
+207  Haksan Wirasutisna, *Kidung Sunda I-II*, Departmen Pendidikan dan Kebudayaan Jakarta: 1980 (Kidung Sunda, or The song of the Bubat Tragedy).
+
+208  Ying-yai sheng-lan, *‘The overall survey of the ocean’s shores’ [1433]/ Translated from the Chinese text edited by Feng Ch’eng-Chuin; with introduction, notes and appendices by J. V. G. Mills*, Hakluyt Society, Cambrige 1970.
+
+209  Kunio Yoshimura, *Nagasaki Origins*, Nagasaki-Bunkensha 1990 (嘉村国男「ながさきことはじめ」, 長崎文献社 1990).
+
+210  K. Zandvliet, et al., *The Dutch Encounter with Asia 1600*–*1950*, Rijksmuseum Amsterdam – Waanders Publisher, Zwolle 2003.
+
+211  Zhou Qufei, *Lingwai daida* (*Representative Answers about Foreign Countries*, 1172–8 (周去非, 「嶺外代答」, 1172-78).
+
+212  P. J. Zoetmulder, *Kalangwan, A Survey of Old Javanese Literature*, Martinus Nijhoff, The Hague 1974.
+
+213  Hendrick Zwaardecroon, *Memoir for the Guidance of the Council of Jaffnapatam, 1697* (English Translation by Sophia Pieters, Introduction by R. G. Anthonisz, Notes by Gerrit de Heere), H. C. Cottle, Ceylon 1911 (Gutenberg eBook).
+
+### **Periodicals**
+
+1  Demetrius Charles Boulger, “Bogor – A Profile”, *Asian Review* Vol. 51, 1955 (Google Books).
+
+2  Nancy K. Florida, *Indonesia*, No. 53, Apr. 1992 (pp. 20–32), published by: Southeast Asia Program Publications at Cornell University.
+
+3  W. P. Groeneveldt, “Notes on the Malay Archipelago and Malacca”, [In, Royal Asiatic Society of Great Britain and Ireland. Straits Branch, *Miscellaneous papers relating to Indo-China and Indian archipelago: reprinted for the Straits Branch of the Royal Asiatic Society. Second Series*, Vol I, Trubner, 1887].
+
+4  Russell Jones, “Earl, Logan and Indonesia”, [In, *Archipel*. Volume 6, 1973\. 93–118].
+
+5  Roy E. Jordaan, “Surya and Nairrta on the Siva temple of Prambanan”, [In, *Bijdragen tot de taal-, land- en volkenkunde* 148, 1992].
+
+6  Rev. A. F. King, “A gravestone in Batavia to the memory of a Japanese Christian of the seventeenth century”, *Transactions of the Asiatic Society of Japan* Vol. XVII, Hakubunsha, Tokyo 1889, pp.79*–*101 (Google Books).
+
+7  Siti Maziyah, “Daerah otonom pada masa Kerajaan Mataram kuna: Tinjauan berdasar kedudukan dan fungsinya”, *Paramita* Vol. 20, No. 2, July 2010 (Autonomous area in the Old Mataram Period).
+
+8  Ralf Munson, “Pieter Erberveld’s Treason” *The Youth’s Instructor (Adventist Magazine)* Vol. 83, No. 48, 26 Nov. 1935.
+
+9  J. Noorduyn, “Bujangga Manik’s journeys through Java; topographical data from an old Sundanese source”, *Bijdragen tot de Taal-, Land- en Volkenkunde* **138**, no 4, Leiden, 1982.
+
+10  Jonathan Rigg, *A trip to Probolinggo* [In *The Journal of the Indian archipelago and eastern Asia* (ed. by J. R. Logan), Singapore Vol. II, 1848, 537] (Google Books).
+
+11  Savitri Scherer, “Globalisation in Java in the 16th Century. A Review of Pramoedya’s *Arus Balik*” In: *Archipel*, Volume 55, 1998\. pp. 43–60\. [http://www.persee.fr/web/revues/home/prescript/article/arch_0044-8613_1998_num_55_1_3441](http://www.persee.fr/web/revues/home/prescript/article/arch_0044-8613_1998_num_55_1_3441)).
+
+12  Yosaburo Takekoshi, *Jisseikatsu,* No.2, Nov. 1916 (竹越與三郎, 「實生活」 No. 2, Nov. 1916).
+
+13  The scots Magazine, “The Insurrection at Batavia”, *The Scots Magazine Vol. 3*, July 1741 Glasgow (Google Books).
+
+14  Rein W van Bemmelen, “The influence of geologic events on human history (an example from central Java) ”, *Verhandelingen van het Koninklijk Nederlands Geologisch Mijnbouwkundig Genootschap,* Geologische Serie, 20–36, 1956.
+
+15  Th. van Elp, “Nieuwenkamp’s Nieuwe kijk op den Boroboedoer”, *Nederlandsch-Indie Oud & Nieuw*, Vol 16, No.8, December 1931.
+
+16  Alfred Russell Wallace, “On the Physical Geography of the Malay Archipelago”, *Journal of the Royal Geographical Society of London*, Vol. 33 (1863), pp. 217-234.
+
+17  K. H. Wohletz, “Were the Dark Ages triggered by volcano-related climate changes in the 6th century?” *EOS Trans Amer Geophys Union 2000*, 48(81), F1305 ([http://deephaven.ca/were-the-dark-ages-triggered-by-volcano-related-climate-changes-in-the-6th-century/](http://deephaven.ca/were-the-dark-ages-triggered-by-volcano-related-climate-changes-in-the-6th-century/)).
+
+### **Newspapers**
+
+1  KOMPAS Citizen Image 24 Feb 2010F. [http://citizenimages.kompas.com/citizen/view/52937-Jamasan Maulid](http://citizenimages.kompas.com/citizen/view/52937-JamasanMaulid)
+
+2  The Jakarta Post, “Ex-Dutch shipyard now trendy cafes”, *The Jakarta Post* (16 September 2000), [http://www.thejakartapost.com/news/2000/09/16/exdutch-shipyard-now-trendy-cafes.html](http://www.thejakartapost.com/news/2000/09/16/exdutch-shipyard-now-trendy-cafes.html)
+
+3  The Jakarta Post, “Jakarta anniversary date must be changed: Historian”, *The Jakarta Post* (23 June 2004), [http://www.thejakartapost.com/news/2004/06/23/jakarta-anniversary-date-must-be-changed-historian.html](http://www.thejakartapost.com/news/2004/06/23/jakarta-anniversary-date-must-be-changed-historian.html)
+
+4  The Jakarta Post, “Sites tell of prehistoric societies”, *The Jakarta Post* (27 February 2007), [http://www.southeastasianarchaeology.com/2007/02/27/sites-tell-of-prehistoric-societies-indonesia/](http://www.southeastasianarchaeology.com/2007/02/27/sites-tell-of-prehistoric-societies-indonesia/)
+
+5  The Jakarta Post, “Weekly 5: Dreams of a nation immortalized – 4. The Horse statue”, *The Jakarta Post* (18 May 2012), [http://www.thejakartapost.com/news/2012/05/18/weekly-5-dreams-a-nation-immortalized.html](http://www.thejakartapost.com/news/2012/05/18/weekly-5-dreams-a-nation-immortalized.html)
+
+### **Mapa, Brochures**
+
+1  *Kaart en Tekst, eerste Atlas van Nederlandsch-Indie voor de Indishe Lagere School, Groningen-Batavia 1938*
+
+2  *Museum Prabu Geusan, Profil Museum Prabu Geusan Ulun* (A brochure of Prabu Geusan Ulun).
+
+3  Takashi Shiraishi, *Brochure for Pramoedya Selection Series* 2, Mekon, Tokyo 1968 (白石隆, 「プラムディア選集２－付録小冊子」, メコン, 東京 1968).
+
+### **Internet Websites**
+
+1  Kaoru Fujishiro, Chronological Table of Nagasaki History, (藤城かおる「長崎年表」), [http://f-makuramoto.com/01-nenpyo/](http://f-makuramoto.com/01-nenpyo/).
+
+2  Jeff Mathews, “Tennyson, Vesuvius & St. Telemachus”, [http://www.naplesldm.com/tenn.html](http://www.naplesldm.com/tenn.html)
+
+3  Nagoya University, *Dao Yi Zhi Lue [An Account on Foreign Countries] –* Java (島夷誌略 「爪哇」), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/daoyizhilue1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/daoyizhilue1.html).
+
+4  Nagoya University, *Hou Han Shu 76, Nan man xi nan yi lie zhuan* [*The book of the Later Han,* Legends of South-western Barbarians] (後漢書列傳第七十六・南蠻西南夷列傳), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/houhan076.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/houhan076.html).
+
+5  Nagoya University, *Jiu Tang Shu* [*Book of Tang*] *Vol. 197, Legends147, South/SouthwestBarbarians,* 945 AD (舊唐書卷一百九十七・列傳第一百四十七・南蠻/西南蠻 945 AD), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/jiutangshu197.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/jiutangshu197.html)
+
+6  Nagoya University, Ma Huan, *Ying yai Sheng lan* (馬歡, 瀛涯勝覽), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/yingyashenglan1.html).
+
+7  Nagoya University, *Sung Shu* [*The Book of Sun*g] *Vol. 97, Legends 57, Foreign Countries: Arotan Country* (宋書卷九十七・列傳第五十七・夷蠻: 呵羅單國), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/songshu097.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/songshu097.html).
+
+8  *Nagoya University, Tang Shu* [*The New Book of Tang*] *Vol. 222–1/2, Legends 147, Foreign Countries 2*) 1060 AD (新唐書卷二百二十二下・列傳第一百四十七下・南蠻下), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/xintangshu222c.html).
+
+9  Nagoya University, Zhou Qufei [Ed.]. *Ling wai dai da Vol.2* [*Representative answers [about the region] beyond mountains*], 1172–78 (周去非撰, 嶺外代答卷二, 1172–78), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/lingwaidaida02-3.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/lingwaidaida02-3.html)
+
+10  Nagoya University, *Zhu fan zhi* [*Accounts of Various Barbarians*] *1/2*, *Sunda Country* (諸蕃志卷上・志國 「新拖國」), [http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/zhufanzhi1.html](http://toyoshi.lit.nagoya-u.ac.jp/maruha/kanseki/zhufanzhi1.html).
+
+11  Indro Nursito, “Legitimasi Kekuasaan Raja Mataram: Kangjeng Nyai Setomi, Meriam dari Portugis yang Keramat (The Legitimacy of the Power of Mataramese King: Nyai Kangjeng [Lady] Setomi, a Sacred Portuguese cannon)”, October 1, 2010, [http://www.timlo.net/baca/4202/kangjeng-nyai-setomi-meriam-dari-portugis-yang-keramat/](http://www.timlo.net/baca/4202/kangjeng-nyai-setomi-meriam-dari-portugis-yang-keramat/).
+
+12  Oregon State University, “Volcano World”, [http://volcano.oregonstate.edu/salak](http://volcano.oregonstate.edu/salak) (Source of Information: T. Simkin and L. Siebert, *Volcanoes of the World: Geoscience Press*, Tucson, Arizona 1994).
+
+13  Agus Setia Permana, “Balangantrang: Cariosan Prabu Siliwangi”, [http://balangantrang.blogspot.jp/2010/05/cariosan-prabu-siliwangi.html](http://balangantrang.blogspot.jp/2010/05/cariosan-prabu-siliwangi.html)
+
+14  Perpustakaan Nasional RI, “Kepustakaan Candi: Jawa Barat – Candi Bojongmenje”. [http://candi.pnri.go.id/temples/deskripsi-jawa_barat-candi_bojongmenje](http://candi.pnri.go.id/temples/deskripsi-jawa_barat-candi_bojongmenje).
+
+15  Sketsalaku, *Galuh Karangkamulyan*, 18 June 2010 [http://sketsalaku.wordpress.com/2010/06/18/4/](http://sketsalaku.wordpress.com/2010/06/18/4/) (A summary of the Galuh Chronicle).
+
+16  Jakob Sumardjo, *Paham Kekuasaan Sunda 2008* [http://forumbebas.com/thread-22622.html](http://forumbebas.com/thread-22622.html).
+
+17  The Alfred Russel Wallace Website, [http://wallacefund.info/who-bought-wallaces-javanese-carving](http://wallacefund.info/who-bought-wallaces-javanese-carving).
+
+18  Troppenmuseum, “Het monument ter herinnering aan Pieter Erberveld, Batavia” [http://collectie.tropenmuseum.nl/default.aspx?ccid=499207&lang=](http://collectie.tropenmuseum.nl/default.aspx?ccid=499207&lang=).
+
+19  Xie Zhang, “Accounts on Eastern and Western Countries Vol. 3”, 1617 (張燮 「東西洋考 卷三 西洋列國考 巻三」1617), [http://ctext.org/wiki.pl?if=en&res=87006](http://ctext.org/wiki.pl?if=en&res=87006).
+
+20  “Dari Nabi Ibrahim Sampai Syailendra (From Abraham to Sailendra) ”, KEMBANG-KEMBANG SALAM, [http://mhariwijaya.blogspot.jp/2008_02_03_archive.html](http://mhariwijaya.blogspot.jp/2008_02_03_archive.html)
+
+21  “Basudewa Krama (The marriage of Basudewa) [http://penitiwayanggamelan.blogspot.jp/2009/01/lampaha-basudewa-krama.html](http://penitiwayanggamelan.blogspot.jp/2009/01/lampaha-basudewa-krama.html).
+
+22  “Naskah Carita Ratu Pakuan (Kropak 410)” [http://babadsunda.blogspot.com/2010/07/naskah-carita-ratu-pakuan-kropak-410.html](http://babadsunda.blogspot.com/2010/07/naskah-carita-ratu-pakuan-kropak-410.html).
+
+23  “Cerita Wayang (A Wayang Story) ” [http://abimanyukerem.blogspot.jp/2010/04/cerita-wayang.html](http://abimanyukerem.blogspot.jp/2010/04/cerita-wayang.html).
+
+24  “Jalan Setapak Menuju Nusantara Jaya: Bedah telisik spiritual wasiat nenek moyang, Kitab Musarar Jayabaya (Footpath toward the Jayanese Archiperago: Surgical survey of an ancestor’s spiritual testament, Book of Musarar Jayabaya) ”, [http://nurahmad.wordpress.com/wasiat-nusantara/kitab-musarar-jayabaya/](http://nurahmad.wordpress.com/wasiat-nusantara/kitab-musarar-jayabaya/).
+
+25  “Makam Ratu Galuh” by anonymous writer about the tomb of the Queen of Galuh. [http://www.kaskus.us/showthread.php?p=12544441#post12544441](http://www.kaskus.us/showthread.php?p=12544441#post12544441) (28 February 2007). The article has been archived in, [http://archive.kaskus.co.id/thread/4033287/2840](http://archive.kaskus.co.id/thread/4033287/2840).
+
+26  “Railway systems in Japan (1936). [http://www.rtri.or.jp/museum-rosen/rosen.html](http://www.rtri.or.jp/museum-rosen/rosen.html).
+
+27  “Solo”, gimonca.com. [http://www.gimonca.com/indonesia/solo.html](http://www.gimonca.com/indonesia/solo.html)
+
+28  “Tantu Panggelaran: Keberadaan Pulau Jawa Pada Zaman Purbakala (Tantu Panggelaran The Creation of Java Island in Ancient Times)” [http://id.wikipedia.org/wiki/Pembicaraan:Tantu_Panggelaran](http://id.wikipedia.org/wiki/Pembicaraan:Tantu_Panggelaran).
+
+## The Java Island
+
+![Illustration](images/00163.jpeg)

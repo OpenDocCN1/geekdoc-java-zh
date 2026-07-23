@@ -1,0 +1,247 @@
+name: Java Beginners To Advance： Beginners to Advance Java Programming Simply Follow
+  The Steps Course is Designed in Such a Way That User Can Learn Easily.
+name_cn: Java 入门到进阶：简单遵循步骤的 Java 编程课程，其设计旨在让用户轻松学习。
+slug: java-beginners-to-advance-beginners-to-advance-java-programm
+toc:
+- - '#'
+  - 第 1 章：软件安装
+- - '##'
+  - 介绍 自己的 `Eclipse` 安装
+- - '##'
+  - 2 Eclipse 安装
+- - '##'
+  - 3 Jdk1.6 安装及在 Eclipse 中配置
+- - '##'
+  - 4 Tomcat1.6 安装及在 Eclipse 中配置
+- - '##'
+  - 5 MySql5.0 安装
+- - '#'
+  - 第 2 章：理解智能人力资源管理
+- - '##'
+  - 工作流程（端到端）
+- - '##'
+  - 管理模块 Service 或业务逻辑需求
+- - '##'
+  - 软件需求规格说明书 (SRS)
+- - '#'
+  - 第 3 章：在 Windows 中安装 MySQL
+- - '##'
+  - 'Host : localhost'
+- - '##'
+  - 'Port : 3306'
+- - '##'
+  - 'Database : smarthrm'
+- - '##'
+  - 数据库信息
+- - '##'
+  - 凭据
+- - '##'
+  - smarthrm 插入 .sql
+- - '###'
+  - 表中的首次插入 SQL 语句
+- - '####'
+  - 表：`tb_manager`
+- - '####'
+  - 表：`tb_employee`
+- - '###'
+  - 更新
+- - '##'
+  - 数据库表结构
+- - '##'
+  - 招聘职位表
+- - '##'
+  - 奖励表
+- - '##'
+  - tb_pay 表
+- - '##'
+  - tb_train 表
+- - '##'
+  - tb_cj 表
+- - '##'
+  - 数据库数据
+- - '#'
+  - 第 4 章：所有 Java 文件
+- - '##'
+  - applicationResources.properties
+- - '##'
+  - CAction
+- - '##'
+  - DepartmentAction
+- - '##'
+  - EmployeeAction
+- - '##'
+  - InviteJobAction 类
+- - '##'
+  - ManagerAction 类
+- - '##'
+  - PayAction 类
+- - '##'
+  - TrainAction 类
+- - '##'
+  - ObjectDao 类
+- - '##'
+  - Form 包
+- - '###'
+  - CjForm
+- - '###'
+  - DepartmentForm
+- - '###'
+  - EmployeeForm
+- - '###'
+  - InviteJobForm
+- - '##'
+  - ManagerForm
+- - '##'
+  - PayForm
+- - '##'
+  - TrainForm
+- - '##'
+  - CjForm.hbm.xml
+- - '###'
+  - TrainForm.hbm.xml
+- - '###'
+  - EmployeeForm.hbm.xml
+- - '###'
+  - InviteForm.hbm.xml
+- - '###'
+  - ManagerForm.hbm.xml
+- - '###'
+  - PayForm.hbm.xml
+- - '##'
+  - Hibernate 配置
+- - '###'
+  - TrainForm.hbm (包 `com.abd.form`)
+- - '##'
+  - 工具类 (包 `com.abd.tool`)
+- - '###'
+  - GetAutoNumber
+- - '###'
+  - GetSystemTime
+- - '###'
+  - MyPagination
+- - '#'
+  - 项目配置
+- - '##'
+  - CSS 样式定义
+- - '##'
+  - 数据库结构
+- - '###'
+  - 基础信息
+- - '###'
+  - 表定义
+- - '##'
+  - 数据库信息
+- - '##'
+  - 凭据
+- - '##'
+  - smarthrm 插入 .sql
+- - '###'
+  - 表中的首次插入 SQL
+- - '####'
+  - 表格：tb_manager
+- - '####'
+  - 表格：tb_employee
+- - '##'
+  - 部门表 (tb_department)
+- - '##'
+  - 招聘职位表 (tb_inviteJob)
+- - '##'
+  - 招聘详情表 (tb_cj)
+- - '##'
+  - tb_pay 表
+- - '##'
+  - tb_train 表
+- - '##'
+  - 脚本与样式
+- - '###'
+  - validate.js
+- - '###'
+  - validate.css
+- - '##'
+  - 配置文件
+- - '###'
+  - Spring 配置 (beans.xml)
+- - '###'
+  - Struts 配置 (struts-config.xml)
+- - '###'
+  - 部署 (web.xml)
+- - '###'
+  - JSP 页面
+- - '##'
+  - 激励管理 - 添加激励
+- - '###'
+  - '`cj_insert.jsp`'
+- - '##'
+  - 激励管理 - 激励列表
+- - '###'
+  - '`cj_query.jsp`'
+- - '#'
+  - 项目结构概述
+- - '##'
+  - dealwith.jsp
+- - '##'
+  - department_deawith.jsp
+- - '##'
+  - department_insert.jsp
+- - '##'
+  - department_query.jsp
+- - '##'
+  - 智能人力资源管理 - 部门管理
+- - '#'
+  - 智能人力资源管理 - 员工管理
+- - '##'
+  - 添加员工表
+- - '##'
+  - 更新员工
+- - '###'
+  - 页面核心结构
+- - '#'
+  - 智能人力资源管理 - 招聘新增
+- - '##'
+  - 页面结构 (index.jsp)
+- - '##'
+  - 逻辑处理 (Operations)
+- - '###'
+  - inviteJob_operation.jsp
+- - '###'
+  - inviteJob_query.jsp
+- - '#'
+  - 招聘管理
+- - '##'
+  - 招聘列表
+- - '###'
+  - 核心逻辑与脚本
+- - '###'
+  - 分页处理
+- - '###'
+  - 列表表格
+- - '#'
+  - 智能人力资源管理 - 系统管理
+- - '##'
+  - 1. 首页 (index.jsp)
+- - '##'
+  - 2. 系统管理 - 添加用户 (manager_insert.jsp)
+- - '##'
+  - 3. 系统管理 - 用户查询 (manager_query.jsp)
+- - '##'
+  - 用户修改
+- - '###'
+  - 表单结构说明
+- - '##'
+  - pay_deawith.jsp (WebContent)
+- - '##'
+  - pay_insert.jsp (WebContent)
+- - '##'
+  - 1. 页面头部结构 (Header Structure)
+- - '##'
+  - 2. 培训列表页面 (train_deawith.jsp)
+- - '##'
+  - 3. 培训插入页面 (train_insert.jsp)
+- - '##'
+  - 4. 培训查询页面 (train_query.jsp)
+- - '#'
+  - 培训管理
+- - '##'
+  - 1. 培训列表 (train_queryOne.jsp)
+- - '##'
+  - 2. 培训详情
