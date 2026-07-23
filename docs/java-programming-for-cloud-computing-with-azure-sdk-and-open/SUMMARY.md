@@ -1,0 +1,2 @@
++   [Java 云计算编程：使用 Azure SDK 和 OpenStack SDK：利用 Azure SDK 和 OpenStack SDK 构建稳健云解决方案的初学者指南 (The ProgMaster)](README.md)
++   [Java 云计算编程：使用 Azure SDK 和 OpenStack SDK：利用 Azure SDK 和 OpenStack SDK 构建稳健云解决方案的初学者指南 (The ProgMaster)](java-programming-for-cloud-computing-with-azure-sdk-and-open_0.md)

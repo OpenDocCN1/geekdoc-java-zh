@@ -1,0 +1,143 @@
+name: Java Programming： Python Programming： Master Programming Guide： Learn In A Day
+  Series (Python, Java, SQL, PHP, HTML, Ruby)
+name_cn: Java 编程：Python 编程：编程高级指南：一天学会系列（Python, Java, SQL, PHP, HTML, Ruby）
+slug: java-programming-python-programming-master-programming-guide
+toc:
+- - '#'
+  - Java 编程：Python 编程：编程高级指南：一天学会系列（Python, Java, SQL, PHP, HTML, Ruby）
+- - '##'
+  - 目录
+- - '##'
+  - 代码结构
+- - '#'
+  - 关键字的语法与含义
+- - '#'
+  - 面向对象编程
+- - '##'
+  - 过程化方法
+- - '##'
+  - 面向对象方法
+- - '###'
+  - 示例 1
+- - '###'
+  - 示例 2
+- - '#'
+  - 变量声明与数据类型
+- - '##'
+  - 字符串
+- - '##'
+  - 引用变量
+- - '##'
+  - Equals 操作
+- - '##'
+  - 列表
+- - '#'
+  - 控制语句
+- - '##'
+  - If else
+- - '###'
+  - Switch case
+- - '###'
+  - While ()
+- - '###'
+  - Do - while ()
+- - '###'
+  - For 循环
+- - '#'
+  - 封装
+- - '#'
+  - JavaScript 简介
+- - '#'
+  - 第一章：JavaScript 基础
+- - '##'
+  - 在 JavaScript 中存储数据
+- - '##'
+  - 使用变量和常量存储数据
+- - '###'
+  - 创建变量和常量
+- - '###'
+  - JavaScript 中的决策
+- - '##'
+  - 嵌套 if
+- - '##'
+  - switch 和 break 语句
+- - '##'
+  - JavaScript 中的循环
+- - '###'
+  - for 循环
+- - '#'
+  - 第 2 章：JavaScript 中的函数和事件
+- - '##'
+  - 什么是函数？
+- - '###'
+  - 函数定义
+- - '###'
+  - 调用函数
+- - '###'
+  - 函数的参数
+- - '###'
+  - return 语句
+- - '###'
+  - 事件
+- - '###'
+  - onclick 事件类型
+- - '###'
+  - onsubmit 事件类型
+- - '#'
+  - 第 3 章：JavaScript 中的调试
+- - '##'
+  - 使用验证器 (Validator)
+- - '##'
+  - 在程序中添加调试代码
+- - '##'
+  - 使用 JavaScript 调试器 (Debugger)
+- - '##'
+  - 表单验证 (Form Validation)
+- - '##'
+  - 基础表单验证
+- - '##'
+  - 数据格式验证
+- - '#'
+  - 第 4 章：JavaScript 中的对象
+- - '##'
+  - JavaScript 对象
+- - '##'
+  - 对象属性 (Object Properties)
+- - '##'
+  - 示例
+- - '##'
+  - 对象方法 (Object Methods)
+- - '##'
+  - 示例
+- - '##'
+  - 自定义对象
+- - '##'
+  - JavaScript 简介
+- - '##'
+  - 在 JavaScript 中存储数据
+- - '##'
+  - 使用变量和常量存储数据
+- - '###'
+  - 创建变量和常量
+- - '###'
+  - JavaScript 中的决策
+- - '##'
+  - 嵌套 if
+- - '##'
+  - switch 和 break 语句
+- - '##'
+  - JavaScript 中的循环
+- - '###'
+  - for 循环
+- - '#'
+  - 第 2 对象：JavaScript 中的函数和事件
+- - '##'
+  - 什么是函数？
+- - '###'
+  - 函数定义
+- - '###'
+  - 调用函数
+- - '###'
+  - 函数的
+- - '#'
+  - 33：JavaScriptJavaScript调试

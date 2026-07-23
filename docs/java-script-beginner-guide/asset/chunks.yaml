@@ -1,0 +1,2773 @@
+- fmt: '
+
+    ![](image_rsrc26Z.jpg)
+
+
+    # JAVASCRIPT
+
+
+    ## About The Author
+
+    Karthigadevi is an Associate Professor and the Department of Computer Science
+    and Information Systems at Anna University. He earned a M.E degree in computer
+    science from Bharathiyar University and an B.E degree in computer science from
+    the University of Anna. He Was worked in industry as a software engineer and project
+    manager, specializing in Java and various web technologies—`HTML`, `CSS`, `JavaScript`,
+    `JavaServer Pages`, and `servlets`. He has taught a full range of computer science
+    courses, including client-side and server-side web-programming courses.
+
+
+    Email: [ebookauthor011@gmail.com](mailto:ebookauthor011@gmail.com)
+
+
+    ## Legal Notes
+
+    ALL RIGHTS RESERVED. NO PART OF THIS BOOK MAY BE REPRODUCED OR TRANSMITTED IN
+    ANY FORM OR BY ANY MEANS. PHOTOCOPYING, POSTING ONLINE, AND / OR DIGITAL COPYING
+    IS STRICTLY PROHIBITED UNLESS WRITTEN PERMISSION IS GRANTED BY THE BOOK’S PUBLISHING
+    COMPANY. LIMITED USE OF THE BOOK’S TEXT IS PERMITTED FOR USE IN REVIEWS WRITTEN
+    FOR THE PUBLIC.
+
+
+    ## JavaScript
+
+
+    ### Table of Contents
+
+    - [JavaScript Basic](#)
+
+    - [What is JavaScript?](#)
+
+    - [Comment](#)
+
+    - [Keywords](#)
+
+    - [Variables](#)
+
+    - [Data Types](#)
+
+    - [Escape Sequences](#)
+
+    - [Functions](#)
+
+    - [Function with Arguments](#)
+
+    - [Return Values](#)
+
+    - [Variable Scope](#)
+
+    - [Show the Texts](#)
+
+    - [Operators](#)
+
+    - [Arithmetical Operators](#)
+
+    - [Logical Operators](#)
+
+    - [Assignment Operators](#)
+
+    - [Comparison Operators](#)
+
+    - [Conditional Operator](#)
+
+    - [If Statement](#)
+
+    - [If-else Statement](#)
+
+    - [Switch Statement](#)
+
+    - [For Loop](#)
+
+    - [While Loop](#)
+
+    - [Do-While Loop](#)
+
+    - [Array](#)
+
+    - [Create an Array](#)
+
+    - [Show array element values](#)
+
+    - [Get the Size of Array](#)
+
+    - [Join Array Elements](#)
+
+    - [Reverse Element Order](#)
+
+    - [Slice Elements](#)
+
+    - [Sort Elements in Order](#)
+
+    - [Change Elements to String](#)
+
+    - [Search Specific Element (1)](#)
+
+    - [Search Specific Element (2)](#
+
+    - [Math, Time](#)
+
+    - [Math Methods](#)
+
+    - [Ceil ( ) & Floor ( )](#)
+
+    - [Max ( ) & Min ( )](#)
+
+    - [Math.PI & random( )](#)
+
+    - [Date & Time](#)
+
+    - [Date, Month, Year, Day](#)
+
+    - [Hours, Minutes, Seconds](#)
+
+    - [Different Time](#)
+
+    - [Set Date & Time](#)
+
+    - Timer Function
+
+    - [String](#)
+
+    - [String length](#)
+
+    - [Join Strings](#)
+
+    - [Search a Character](#)
+
+    - [Convert Character Case](#)
+
+    - [Change String to Array](#)
+
+    - [Extract Substring](#)
+
+    - [Convert a Number to String](#)
+
+    - [Convert a String to a Number](#)
+
+    - [Search Specific Text (1)](#)
+
+    - [Search Specific Text (2)](#
+
+    - [Object](#)
+
+    - [Object Declaration](#)
+
+    - [Navigate Web Page](#)
+
+    - [Go to Specified Page](#)
+
+    - [Open Customized Window](#)
+
+    - [Prompt to Input](#)
+
+    - [Address Element by ID](#)
+
+    - [Address Element by Tag Name](#)
+
+    - [Break Statement](#)
+
+    - [Continue Statement](#)
+
+    - [HTML Basic](#)
+
+    - [Click Event](#)
+
+    - [Onload Event](#)
+
+    - [Unload Event](#)
+
+    - [Mouseover Event](#)
+
+    - [Mouseout Event](#)
+
+    - [Onkeydown Event](#)
+
+    - [Onkeyup Event](#)
+
+    - [Focus Event](#)
+
+    - [Blur Event](#)
+
+    - [Work with Form](#)
+
+    - [Form Basic](#)
+
+    - [Access Form Attributes](#)
+
+    - [Assign Text Value](#)
+
+    - [Reset Method](#)
+
+    - [Submit Method](#)
+
+    - [Select Selection](#
+
+    - [Radio Selection](#
+
+    - [CheckBox Selection](#
+
+    - [JavaScript: Function ( ) (1)]
+
+    - [JavaScript: Function ( ) (2)]
+
+
+    ### JavaScript Basic
+
+
+    #### What is JavaScript?
+
+    JavaScript is a dynamic programming language used to make web pages interactive.
+    Its interpreter is embedded inside browser software, such as IE, Chrome, and Firefox.
+    It runs on visitor''s computer and browser.
+
+
+    The syntax of JavaScript looks like this:
+
+
+    ```html
+
+    <script type="text/javascript">...</script>
+
+    ```
+
+
+    Example:
+
+    ```html
+
+    <script type="text/javascript">
+
+    alert("Hello World");
+
+    </script>
+
+    ```
+
+
+    Explanation: `<script type="text/javascript">` is a tag for JavaScript. The JavaScript
+    codes are included within it. `alert` pops up an alert box displaying a message.
+    `alert("Hello World")` displays "Hello World" message.
+
+
+    #### Comment
+
+    JavaScript block can located anywhere in HTML. Comment is used to explain the
+    code.
+
+
+    ```javascript
+
+    // This is a single line comment
+
+    /*This is a multi line comment; JavaScript interpreter will ignore both single
+    line comment and multi line comment*/
+
+    ```
+
+
+    Example:
+
+    ```html
+
+    <script type="text/javascript">
+
+    alert("Hello World"); // "alert" pops up a message
+
+    /*alert" pops up an alert box displaying a message "Hello World". alert() is usually
+    used if you want to make sure message comes through to the user. */
+
+    </script>
+
+    ```
+
+
+    Explanation: `// "alert" pops up a message` is a single line comment. `/* "alert"
+    pops up an alert box displaying a message "Hello World". ... */` is a multi line
+    comment.
+
+
+    #### Keywords
+
+    Keywords belong to JavaScript itself. These may not be used when choosing identifier
+    names for variables, functions, properties. The following are part of JavaScript
+    keywords:
+
+
+    `break`, `case`, `continue`, `default`, `delete`, `do`, `else`, `export`, `False`,
+    `for`, `function`, `if`, `import`, `in`, `new`, `null`, `return`, `switch`, `this`,
+    `true`, `typeof`, `var`, `void`, `while`, `With`, `Array`, `Date`, `Math`, `Object`,
+    `window`, `location`, `history`, `navigator`, `document`, `images`, `links`, `forms`,
+    `elements`, `getElementById`, `innerHTML`.
+
+    '
+  raw: '
+
+
+    ![](image_rsrc26Z.jpg)
+
+
+    JAVASCRIPTAbout The AuthorKarthigadevi is an Associate Professor and the Department
+    of Computer Science and Information Systems at Anna University. He earned a M.E
+    degree in computer science from Bharathiyar University and an B.E degree in computer
+    science from the University of Anna. He Was worked in industry as a software engineer
+    and project manager, specializing in Java and various web technologies—HTML, CSS,
+    JavaScript, JavaServer Pages, and servlets. He has taught a full range of computer
+    science courses, including client-side and server-side web-programming courses.Email:[ebookauthor011@gmail.com](mailto:ebookauthor011@gmail.com)Legal
+    NotesALL RIGHTS RESERVED. NO PART OF THIS BOOK MAY BE REPRODUCED OR TRANSMITTED
+    IN ANY FORM OR BY ANY MEANS. PHOTOCOPYING, POSTING ONLINE, AND / OR DIGITAL COPYING
+    IS STRICTLY PROHIBITED UNLESS WRITTEN PERMISSION IS GRANTED BY THE BOOK’S PUBLISHING
+    COMPANY. LIMITED USE OF THE BOOK’S TEXT IS PERMITTED FOR USE IN REVIEWS WRITTEN
+    FOR THE PUBLIC.JavaScriptTable of Contents[JavaScript Basic](#part0003.xhtml_a26S)[What
+    is JavaScript?](#part0003.xhtml_a242)[Comment](#part0003.xhtml_a250)[Keywords](#part0003.xhtml_a25F)[Variables](#part0003.xhtml_a24V)[Data
+    Types](#part0003.xhtml_a25S)[Escape Sequences](#part0003.xhtml_a24M)[Functions](#part0003.xhtml_a24U)[Function
+    with Arguments](#part0003.xhtml_a256)[Return Values](#part0003.xhtml_a25J)[Variable
+    Scope](#part0003.xhtml_a26H)[Show the Texts](#part0003.xhtml_a25B)[Operators](#part0003.xhtml_a24N)[Arithmetical
+    Operators](#part0003.xhtml_a26M)[Logical Operators](#part0003.xhtml_a23Y)[Assignment
+    Operators](#part0003.xhtml_a24F)[Comparison Operators](#part0003.xhtml_a257)[Conditional
+    Operator](#part0003.xhtml_a25P)[If Statement](#part0003.xhtml_a24H)[If-else Statement](#part0003.xhtml_a265)[Switch
+    Statement](#part0003.xhtml_a26J)[For Loop](#part0003.xhtml_a253)[While Loop](#part0003.xhtml_a25H)[Do-While
+    Loop](#part0003.xhtml_a25Z)[Array](#part0003.xhtml_a254)[Create an Array](#part0003.xhtml_a26A)[Show
+    array element values](#part0003.xhtml_a24P)[Get the Size of Array](#part0003.xhtml_a26W)[Join
+    Array Elements](#part0003.xhtml_a25W)[Reverse Element Order](#part0003.xhtml_a266)[Slice
+    Elements](#part0003.xhtml_a25Y)[Sort Elements in Order](#part0003.xhtml_a25V)[Change
+    Elements to String](#part0003.xhtml_a26X)[Search Specific Element (1)](#part0003.xhtml_a25M)Search
+    Specific Element (2)[Math, Time](#part0003.xhtml_a25C)[Math Methods](#part0003.xhtml_a25R)[Ceil
+    ( ) & Floor ( )](#part0004.xhtml)[Max ( ) & Min ( )](#part0004.xhtml_a251)[Math.PI
+    & random( )](#part0004.xhtml_a26G)[Date & Time](#part0004.xhtml_a26F)[Date, Month,
+    Year, Day](#part0004.xhtml_a25N)[Hours, Minutes, Seconds](#part0004.xhtml_a244)[Different
+    Time](#part0004.xhtml_a23Z)[Set Date & Time](#part0004.xhtml_a24T)Timer Function[String](#part0004.xhtml_a25E)[String
+    length](#part0004.xhtml_a24S)[Join Strings](#part0004.xhtml_a261)[Search a Character](#part0004.xhtml_a24B)[Convert
+    Character Case](#part0004.xhtml_a24C)[Change String to Array](#part0004.xhtml_a26B)[Extract
+    Substring](#part0004.xhtml_a24A)[Convert a Number to String](#part0004.xhtml_a260)[Convert
+    a String to a Number](#part0004.xhtml_a263)[Search Specific Text (1)](#part0004.xhtml_a24W)Search
+    Specific Text (2)[Object](#part0004.xhtml_a249)[Object Declaration](#part0004.xhtml_a25G)[Navigate
+    Web Page](#part0004.xhtml_a262)[Go to Specified Page](#part0004.xhtml_a268)[Open
+    Customized Window](#part0004.xhtml_a25X)[Confirmation](#part0004.xhtml_a25U)[Prompt
+    to Input](#part0004.xhtml_a26V)[Address Element by ID](#part0004.xhtml_a25D)[Address
+    Element by Tag Name](#part0004.xhtml_a255)[Break Statement](#part0004.xhtml_a26P)Continue
+    Statement[Event](#part0004.xhtml_a26D)[HTML Basic](#part0004.xhtml_a26E)[Click
+    Event](#part0004.xhtml_a24G)[Onload Event](#part0004.xhtml_a252)[Unload Event](#part0004.xhtml_a24E)[Mouseover
+    Event](#part0004.xhtml_a26K)[Mouseout Event](#part0004.xhtml_a24J)[Onkeydown Event](#part0004.xhtml_a247)[Onkeyup
+    Event](#part0004.xhtml_a269)[Focus Event](#part0004.xhtml_a25K)[Blur Event](#part0004.xhtml_a24R)[Work
+    with Form](#part0004.xhtml_a24Y)[Form Basic](#part0004.xhtml_a246)[Access Form
+    Attributes](#part0004.xhtml_a267)[Assign Text Value](#part0004.xhtml_a24K)[Reset
+    Method](#part0004.xhtml_a264)[Submit Method](#part0004.xhtml_a245)[“Select” Selection](#part0004.xhtml_a25T)[“Radio”
+    Selection](#part0004.xhtml_a26C)[“CheckBox” Selection](#part0004.xhtml_a24Z)[JavaScript:
+    Function ( ) (1)](#part0004.xhtml_a26U)[JavaScript: Function ( ) (2)](#part0004.xhtml_a248)JavaScript
+    BasicWhat is JavaScript?JavaScript is a dynamic computer programming language
+    used to make web pages interactive. Its interpreter is embedded inside web browser
+    software, such as IE, Chrome, and Firefox etc. It runs on visitor''s computer
+    and browser.The syntax of JavaScript looks like this:
+
+
+    | <script type = “text/javascript”>……</Script> |
+
+
+    Example:<script type = “text/javascript”>alert (“Hello World”);</Script>(  Output:  Hello
+    World  )Explanation:“<script type = “text/javascript”>” is a tags for JavaScript.
+    The JavaScript codes are included within it.“alert” pops up an alert box displaying
+    a message.“alert (“Hello World”)” displays “Hello World” message.JavaScript block
+    can located anywhere in HTML.CommentComment is used to explain the code.
+
+
+    | // This is a single line comment/*This is a multi line comment; JavaScript interpreter
+    will ignore both single line comment and multi line comment.*/ |
+
+
+    Example:<script type = “text/javascript”>alert (“Hello World”);  // “alert” pops
+    up a message./* “alert” pops up an alert box displaying a message “Hello World”.
+    “alert( )” is usually used if you want to make sure message comes through to the
+    user.  */</Script>Explanation:// “alert” pops up a message is a single line comment./*
+    “alert” pops up an alert box displaying a message “Hello World”. ……  */ is a multi
+    line comment.Note that each JavaScript command ends with semicolon;KeywordsKeywords
+    belong to JavaScript itself. These may not be used when choosing identifier names
+    for variables, functions, properties.The following are part of JavaScript keywords:
+
+
+    | break | case | continue | default |
+
+
+    | delete | do | else | export |
+
+
+    | False | for | function | if |
+
+
+    | import | in | new | null |
+
+
+    | return | switch | this | true |
+
+
+    | typeof | var | void | while |
+
+
+    | With | Array | Date | Math |
+
+
+    | Object | window | location | history |
+
+
+    | navigator | document | images | links |
+
+
+    | forms | elements | getElementById | innerHTML |'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrc26Z.jpg)
+
+
+    # JAVASCRIPT
+
+
+    ## 关于作者
+
+    Karthigadevi 是安纳大学（Anna University）计算机科学与信息系统系的副教授。他在巴拉蒂亚尔大学（Bharathiyar University）获得计算机科学硕士学位，并在安纳大学获得计算机科学学士学位。他曾在行业内担任软件工程师和项目经理，精通
+    Java 以及各种网络技术——`HTML`、`CSS`、`JavaScript`、`JavaServer Pages` 和 `servlets`。他教授过全系列的计算机科学课程，包括客户端和服务端
+    Web 编程课程。
+
+
+    邮箱：ebookauthor011@gmail.com
+
+
+    ## 法律声明
+
+    版权所有。未经以任何形式或通过任何手段复制或传输本书的任何部分。除非获得本书公司的书面许可，否则严禁复印、发布到网络和/或数字复制。允许为面向公众撰写的评论中限制度地使用本书的内容。
+
+
+    ## JavaScript
+
+
+    ### 目录
+
+    - JavaScript 基础
+
+    - 什么是 JavaScript?
+
+    - 注释
+
+    - 关键字
+
+    - 变量
+
+    - 数据类型
+
+    - 转义序列
+
+    - 函数
+
+    - 带参数的函数
+
+    - 返回值
+
+    - 变量作用域
+
+    - 显示文本
+
+    - 运算符
+
+    - 算术运算符
+
+    - 逻辑运算符
+
+    - 赋值运算符
+
+    - 比较运算符
+
+    - 条件运算符
+
+    - if 语句
+
+    - if-else 语句
+
+    - switch 语句
+
+    - for 循环
+
+    - while 循环
+
+    - do-while 循环
+
+    - 数组 Array
+
+    - 创建数组
+
+    - 显示数组元素值
+
+    - 获取数组大小
+
+    - 合并数组元素
+
+    - 反转元素顺序
+
+    - 切片元素
+
+    - 有序排序元素
+
+    - 将元素转换为字符串
+
+    - 搜索特定元素 (1)
+
+    - 搜索特定元素 (2)
+
+    - 数学方法
+
+    - Ceil ( ) & Floor ( )
+
+    - Max ( ) & Min ( )
+
+    - Math.PI & random( )
+
+    - 日期与时间
+
+    - 日期、月、年、日
+
+    - 小时、分钟、秒
+
+    - 不同时间
+
+    - 设置日期与时间
+
+    - 定计时函数
+
+    - 字符串 String
+
+    - 字符串长度
+
+    - 合并字符串
+
+    - 搜索字符
+
+    - 转换字符大小
+
+    - 将字符串转换为数组
+
+    - 提取子字符串
+
+    - 将数字转换为字符串
+
+    - 将字符串转换为数字
+
+    - 搜索特定文本 (1)
+
+    - 搜索特定文本 (2)
+
+    - 对象声明
+
+    - 导航网页
+
+    - 跳转到指定页面
+
+    - 打开自定义窗口
+
+    - 提示输入
+
+    - 通过 ID 定位元素
+
+    - 通过标签名定位元素
+
+    - break 语句
+
+    - continue 语句
+
+    - HTML 基础
+
+    - 点击事件
+
+    - onload 事件
+
+    - unload 事件
+
+    - 鼠标移入事件
+
+    - 鼠标移出事件
+
+    - onkeydown 事件
+
+    - onkeyup 事件
+
+    - focus 事件
+
+    - blur 事件
+
+    - 处理表单
+
+    - 表单基础
+
+    - 访问表单属性
+
+    - 分配文本值
+
+    - 重置方法
+
+    - 提交方法
+
+    - 选择选择 (1)]](#
+
+    - [JavaScript: Function ( ) (2)]
+
+
+    ### JavaScript 基础
+
+
+    #### 什么是 JavaScript?
+
+    JavaScript 是一种动态编程语言，用于使网页具有交互性。它的解释器嵌入在浏览器软件中，如 IE、Chrome 和 Firefox。它运行在访问者的计算机和浏览器上。
+
+
+    JavaScript 的语法如下：
+
+
+    ```html
+
+    <script type="text/javascript">...</script>
+
+    ```
+
+
+    示例：
+
+    ```html
+
+    <script type="text/javascript">
+
+    alert("Hello World");
+
+    </script>
+
+    ```
+
+
+    解释：`<script type="text/javascript">` 是 JavaScript 的标签。JavaScript 代码包含在其中。`alert`
+    会弹出一个显示消息的警告框。`alert("Hello World")` 显示 "Hello World" 消息。
+
+
+    #### 注释
+
+    JavaScript 块可以位于 HTML 的任何位置。注释用于解释代码。
+
+
+    ```javascript
+
+    // 这是一个单行注释
+
+    /*这是一段多行注释；JavaScript 解释器将忽略单行注释和多行注释*/
+
+    ```
+
+
+    示例：
+
+    ```html
+
+    <script type="text/javascript">
+
+    alert("Hello World"); // "alert" 弹出一个消息
+
+    /*"alert" 弹出一个显示消息 "Hello World" 的警告框。如果你想确保消息传达给用户，通常使用 alert() */
+
+    </script>
+
+    ```
+
+
+    解释：`// "alert" 弹出一个消息` 是单行注释。`/* "alert" 弹出一个显示消息 "Hello World" 的警告框。... */` 是多行注释。
+
+
+    #### 关键字
+
+    关键字属于 JavaScript 本身。在选择变量、函数、属性的标识符名称时不能使用这些。以下是 JavaScript 关键字：
+
+
+    `break`, `case`, `continue`, `default`, `delete`, `do`, `else`, `export`, `False`,
+    `for`, `function`, `if`, `import`, `in`, `new`, `null`, `return`, `switch`, `this`,
+    `true`, `typeof`, `var`, `void`, `while`, `With`, `Array`, `Date`, `Math`, `Object`,
+    `window`, `location`, `history`, `navigator`, `document`, `images`, `links`, `forms`,
+    `elements`, `getElementById`, `innerHTML`.
+
+
+    '
+- fmt: "\n# JavaScript Basics\n\nExample: `break` // this is a JavaScript keyword.\n\
+    `return` // this is a JavaScript keyword.\n\n### Explanation\nJavaScript keyword\
+    \ may not be used when choosing identifier names for variables, functions, properties.\n\
+    \n## Variables\nA `Variable` is a symbolic name associated with a value. `Variable`\
+    \ uses `var` to define. \n\n### Example\n```html\n<script type = “text/javascript\"\
+    >\nvar abcde;\nvar abc888;\nvar my_variable;\n</script>\n```\n### Explanation\n\
+    `abcde`, `abc888` and `my_variable` are all variables. They can store some value.\
+    \ e.g. `var abcde=100;`, `var abc888=”Hello World”;`, `var my_variable=true;`.\n\
+    Notice that variable naming cannot start with number, cannot have space. e.g.\
+    \ “23var”, “abc de” are invalid variable name. But “var23”, “abcde” are valid\
+    \ variable name.\n\n## Data Types\n- `string` – a character or a string of characters\n\
+    - `number` – an integer or floating point number\n- `boolean` – a value with true\
+    \ or false.\n- `function` – a user-defined method\n- `object` – a built-in or\
+    \ user-defined object\n\n### Example\n```html\n<script type = “text/javascript\"\
+    >\nvar mystring= “I am a string”;\nvar myinteger=168;\nvar myfloat=12.88;\nvar\
+    \ mybool=true;\n</script>\n```\n### Explanation\n`var mystring=”I am a string”;`\
+    \ // `mystring` data type is `string`.\n`var myinteger=168;` // `myinteger` data\
+    \ type is `number`.\n`var myfloat=12.88;` // `myfloat` data type is `number`.\n\
+    `var mybool=true;` // `mybool` data type is `boolean`.\nNote: Double quotes are\
+    \ always used in string. e.g. “abcde”, “learning”.\n\n## Escape Sequences\nThe\
+    \ `\\` backslash character can be used to escape characters.\n- `\\n` outputs\
+    \ content to the next new line.\n- `\\r` makes a return\n- `\\t` makes a tab\n\
+    - `\\'` outputs a single quotation mark.\n- `\\\"` outputs a double quotation\
+    \ mark.\n\n### Example\n```html\n<script type = “text/javascript\">\nalert (“JavaScript\
+    \ says \\”Hello World! \\” ”);\n</script>\n```\n(Output: “Hello World”)\n### Explanation\n\
+    `\\\"` outputs a double quotation mark. Note that “Hello World” has a double quotation\
+    \ with it. Another sample: `\\t` makes a tab\n`alert (“Hello \\t\\t\\t World”);`\
+    \ // Note here has three taps\n( Output: Hello     World )\n\n## Functions\nA\
+    \ function is a code block that can repeat to run many times. To define a function,\
+    \ use `function function-name ( ) { }`.\n\n| Syntax | `function function-name\
+    \ ( ) {……}` |\nTo call a function, use `function-name ( );`\n\n| Syntax | `function-name\
+    \ ( );` |\n\n### Example\n```html\n<script type = “text/javascript\">\nfunction\
+    \ test( ){\n   alert (“show a sample”);\n}\ntest ( );\n</script>\n```\n(Output:\
+    \ show a sample)\n### Explanation\n`“function test( ) { }` is a declaration of\
+    \ `test( )` function. `test( )` is a command to call a function named `test(){`.\
+    \ When running the function `test ( )`, it will output “show a sample”.\n\n###\
+    \ Function with Arguments\nA function can have one or more arguments inside the\
+    \ bracket. Arguments are used to pass data to function.\n\n| Syntax | `function\
+    \ function-name ( var arg ) {……}` |\nTo call a function, use `function-name (argument);`\n\
+    \n| Syntax | `function-name (argument );` |\n\n### Example\n```html\n<script type\
+    \ = “text/javascript\">\nfunction test( var arg ){\n  alert ( arg );\n}\ntest(“display\
+    \ a sample”);\n</script>\n```\n(Output: display a sample)\n### Explanation\nWhen\
+    \ `test(“display a sample”)` call the function `test(var arg){…}`, it will pass\
+    \ the “display a sample” to `var arg`. After `var arg` has received the data,\
+    \ it will pass the data inside the function. `alert ( arg )` will use the data,\
+    \ and then outputs “display a sample”.\n\n### Return Values\n`return` can return\
+    \ a value to the caller.\n\n| Syntax | `function function-name ( var arg ) { return\
+    \ value }` |\nTo call a function, use `function-name (argument);`\n\n| Syntax\
+    \ | `function-name (argument );` |\n\n### Example\n```javascript\nfunction cube(var\
+    \ num){return num*num*num}\nalert ( cube(2) );\n```\n( Output: 8 )\n### Explanation\n\
+    `“cube (2)”` means that `cube(2)` calls the function `cube(var num){ }`, and pass\
+    \ the argument “2” to `var num`. `“return num*num*num” returns the result to caller\
+    \ `cube(2)`, you can treat it as `cube(2) = return num*num*num`, assigning the\
+    \ value to `cube(2)`. `alert ( cube(2) )` will show the result of `cube(2)`.\n\
+    \n## Variable Scope\nGlobal variable is declared outside the function, it can\
+    \ be used in everywhere; local variable is declared inside the function, it is\
+    \ only used inside current function.\n\n### Example\n```html\n<script type = “text/javascript\"\
+    >\nvar num=200; // This variable num is global variable.\nfunction test( ){\n\
+    \  var num=100; // This variable num is local variable\n}\nalert (num);\n</script>\n\
+    ```\n(Output: 200)\n### Explanation\n`“alert (num)”` outputs 200, which means\
+    \ variable `num` stores a value of global variable. Local variables are only visible\
+    \ within the function block where they are declared.\n\n## Show the Texts\n`document.write(\
+    \ )`\n`“document.write( )”` simply prints or display the specified text to the\
+    \ current web page.\n\n### Example\n```html\n<script type = “text/javascript\"\
+    >\ndocument.write (“Hello World Again!”);\n</script>\n```\n( Output: Hello World\
+    \ Again! )\n### Explanation\n`“document.write (“Hello World Again!”)` displays\
+    \ characters directly into the HTML page. Note that `“alert ( )` pops open dialog\
+    \ box showing a message.\n\n## Operators\n\n### Arithmetical Operators\n| Operator\
+    \ | Description |\n| :--- | :--- |\n| `+` | Addition |\n| `-` | Subtraction |\n\
+    | `*` | Multiplication |\n| `/` | Division |\n| `%` | Modulus: divides the first\
+    \ operand by the second, returns the remainder. |\n| `++` | Increment |\n| `--`\
+    \ | Decrement |\n\n### Example\n```javascript\nvar add=100+200;\nalert (add);\n\
+    var div=800/2;\nalert ( div );\nvar mod=100%3;\nalert ( mod );\nvar inc=10;\n\
+    alert ( inc );\nvar str=”abc”+”de”;\nalert ( str );\n```\n### Explanation\n`var\
+    \ add=100+200; alert (add);` outputs 300.\n`var div=800/2; alert ( div );` outputs\
+    \ 400.\n`var mod=100%3; alert ( mod );` outputs 1.\n`var inc=10; alert ( inc );`\
+    \ outputs 10.\n`var str=”abc”+”de”; alert ( str );` outputs abcde.\n\n### Logical\
+    \ Operators\n| Operator | Description |\n| :--- | :--- |\n| `&&` | AND |\n| `||`\
+    \ | OR |\n| `!` | NOT |\n\n### Example\n```javascript\nvar x=true; var y=false;\n\
+    var a=x && y; alert ( a ); // output: false\nvar b=x || y; alert ( b ); // output:\
+    \ true\nvar c=! x; alert ( c ); // output: false\n```\n### Explanation\n`true\
+    \ && true` returns true; `true && false` returns false; `false && false` returns\
+    \ false; `true || false` returns true; `false || false` returns false; `! true`\
+    \ returns false; `! false` returns true.\n\n### Assignment Operators\n| Operator\
+    \ | Example |\n| :--- | :--- |\n| `+=` | `x+=y` |\n| `-=` | `x-=y` |\n| `*=` |\
+    \ `x*=y` |\n| `/=` | `x/=y` |\n| `%=` | `x%=y` |\n\n### Example\n```javascript\n\
+    var x=200; var y=100;\nx+=y; alert ( x );\nx/=y; alert ( x );\nx-=y; alert ( x\
+    \ );\nvar m=”abc”; var n=”de”;\nm+=n; alert ( m );\n```\n### Explanation\n`x+=y\
+    \ // x=x+y;` outputs 300.\n`x/=y; // x=x/y;` outputs 200.\n`x-=y; // x=x-y;` outputs\
+    \ 100.\n`m+=n; // m=m+n;` outputs abcde.\n\n### Comparison Operators\n| Operator\
+    \ | Description |\n| :--- | :--- |\n| `>` | Greater than |\n| `<` | Less than\
+    \ |\n| `>=` | Greater than or equal to |\n| `<=` | Less than or equal to |\n|\
+    \ `==` | Equal to |\n| `!=` | Not equal to |\n\n### Example\n```javascript\nvar\
+    \ a=100; var b=200;\nvar result = (a>b); alert ( result );\nvar result = (a==b);\
+    \ alert ( result );\nvar result = (a!=b); alert ( result );\n```\n### Explanation\n\
+    `var result = (a>b); // test 100>200;` outputs false.\n`var result = (a==b); //\
+    \ test 100==200;` outputs false.\n`var result = (a!=b); // test 100!=200;` outputs\
+    \ true.\n\n### Conditional Operator\nThe syntax of conditional operator looks\
+    \ as following:\n`(test-expression) ? (if-true-do-this) : (if-false-do-this);`\n\
+    `(test-expression)` looks like `a<b`, `x!=y`, `m==n`, etc.\n\n### Example\n```html\n\
+    <script type = “text/javascript\">\nvar a=100; var b=200;\nvar result=(a<b) ?\
+    \ ”apple” : ”boy”;\nalert ( result );\n</script>\n```\n( Output: apple )\n###\
+    \ Explanation\nThe output is “apple”. The conditional operator use `(a<b)` to\
+    \ test the “a” and “b”, because “a” is less than “b”, it is true. Therefore, the\
+    \ output is “apple”.\n\n### If Statement\n```javascript\nif ( test-expression\
+    \ ) { // if true do this; }\n```\n`if statement` executes codes inside `{ … }`\
+    \ only if a specified condition is true, does not execute any codes inside `{…}`\
+    \ if the condition is false.\n\n### Example\n```javascript\nvar a=200; var b=100;\n\
+    if (a>b){\n  alert ( ”a is greater than b.” );\n}\n```\n(Output: a is greater\
+    \ than b.)\n### Explanation\n`( a>b )` is a test expression, namely `(200>100)`,\
+    \ if returns true, it will execute the codes inside the `{ }`, if returns false,\
+    \ it will not execute the codes inside the `{ }`.\n\n### If-else Statement\n```javascript\n\
+    if ( test-expression) { // if true do this; } else { // if false do this; }\n\
+    ```\n"
+  raw: 'Example:break // this is a JavaScript keyword.return    // this is a JavaScript
+    keyword.Explanation:JavaScript keyword may not be used when choosing identifier
+    names for variables, functions, properties.VariablesVariable is a symbolic name
+    associated with a value. Variable uses “var” to define.Example:<script type =
+    “text/javascript”>var abcde;var abc888;var my_variable;<script>Explanation:abcde,
+    abc888 and my_variable are all variables.They can store some value. e.g.var abcde=100;var
+    abc888=”Hello World”;var my_variable=true;Notice that variable naming cannot start
+    with number, cannot have space. e.g. “23var”, “abc de” are invalid variable name.But
+    “var23”, “abcde” are valid variable name.Data Typesstring – a character or a string
+    of charactersnumber – an integer or floating point numberboolean – a value with
+    true or false.function – a user-defined methodobject – a built-in or user-defined
+    objectExample:var mystring= “I am a string”;var myinteger=168;var myfloat=12.88;var
+    mybool=true;Explanation:var mystring=”I am a string”;  // mystring data type is
+    string.var myinteger=168;   // myinteger data type is number.var myfloat=12.88;  
+    // myfloat data type is number.var mybool=true;   // mybool data type is boolean.Note:
+    Double quotes are always used in string. e.g. “abcde”, “learning”.Escape SequencesThe
+    “ \ ” backslash character can be used to escape characters.\n outputs content
+    to the next new line.\r makes a return\t makes a tab\’ outputs a single quotation
+    mark.\” outputs a double quotation mark.Example:<script type = “text/javascript”>alert
+    (“JavaScript says \”Hello World! \” ”); </script>(Output:  “Hello World” )Explanation:\”
+    outputs a double quotation mark. Note that “Hello World” has a double quotation
+    with it. Another sample:\t makes a tabalert (“Hello \t\t\t World”);   // Note
+    here has three taps( Output:  Hello     World )FunctionsA function is a code block
+    that can repeat to run many times. To define a function, use “function function-name
+    ( ) { }”.
+
+
+    | function function-name ( ) {……} |
+
+
+    To call a function, use “function-name ( );”
+
+
+    | function-name ( ); |
+
+
+    Example:<script type = “text/javascript”>function test( ){   alert (“show a sample”);}test
+    ( );  </script>(Output:  show a sample)Explanation:“function test( ) { }” is a
+    declaration of  test( ) function.“test( )” is a command to call a function named
+    test( ){ }.When running the function test ( ), it will output “show a sample”.Function
+    with ArgumentsA function can have one or more arguments inside the bracket. Arguments
+    are used to pass data to function.
+
+
+    | function function-name ( var arg ) {……} |
+
+
+    To call a function, use “function-name (argument);”
+
+
+    | function-name (argument ); |
+
+
+    Example:<script type = “text/javascript”>function test( var arg ){alert ( arg
+    );}test(“display a sample”);</script>(Output:  display a sample)Explanation:When
+    test(“display a sample”) call the function test(var arg){…}, it will pass the
+    “display a sample” to var arg. After var arg has received the data, it will pass
+    the data inside the function. alert ( arg ) will use the data, and then outputs
+    “display a sample”.Return Values“return” can return a value to the caller.
+
+
+    | function function-name ( var arg ) {  return value  } |
+
+
+    To call a function, use “function-name (argument);”
+
+
+    | function-name (argument ); |
+
+
+    Example:function cube(var num){return num*num*num}alert ( cube(2) );( Output:   8
+    )Explanation:“cube (2)” means that cube(2) calls the function cube(var num){ },
+    and pass the argument “2” to var num.“return num*num*num” returns the result to
+    caller “cube(2)”, you can treat it as “cube(2) = return num*num*num”, assigning
+    the value to cube(2).“alert ( cube(2) )” will show the result of cube(2);Variable
+    ScopeGlobal variable is declared outside the function, it can be used in everywhere;
+    local variable is declared inside the function, it is only used inside current
+    function.Example:<script type = “text/javascript”>var num=200;  // This variable
+    num is global variable.function test( ){var num=100;  // This variable num is
+    local variable}alert (num);</script>(Output:  200)Explanation:“alert (num)” outputs
+    200, which means variable num stores a value of global variable.Local variables
+    are only visible within the function block where they are declared.Show the Texts
+
+
+    | document.write( ) |
+
+
+    “document.write( )” simply prints or display the specified text to the current
+    web page.Example:<script type = “text/javascript”>document.write (“Hello World
+    Again!”);</script>( Output:  Hello World Again! )Explanation:“document.write (“Hello
+    World Again!”)”  displays characters directly into the HTML page.Note that “alert
+    ( )” pops open a dialog box showing a message.OperatorsArithmetical Operators
+
+
+    | Operators |
+
+
+    | + |
+
+
+    | - |
+
+
+    | * |
+
+
+    | / |
+
+
+    | % |
+
+
+    | ++  or -- |
+
+
+    % modulus operator divides the first operand by the second operand, returns the
+    remainder. e.g. 4%2, remainder is 0.Example:var add=100+200;   alert (add);   var
+    div=800/2;   alert ( div );var mod=10%3;   alert ( mod );  var inc=10;   alert
+    ( ++inc );  var str=”abc”+”de”;  alert ( str );Explanation:var add=100+200;  
+    alert ( add ) will output  300var div=800/2;   alert ( div ) will output  400;var
+    mod=10%3;   alert ( mod ) will output  1;var inc=10;   alert ( ++inc ) will output 
+    11;var str=”abc”+”de”;  alert ( str ) will output abcde.Logical Operators
+
+
+    | Operators |
+
+
+    | && |
+
+
+    | &#124;&#124; |
+
+
+    | ! |
+
+
+    After using logical operators, the result will be true or false.Example:var x=true;
+    var y=false;var a=x && y;   alert ( a );   // output: falsevar b=x || y;   alert
+    ( b );   // output: truevar c=! x;   alert ( c );   // output:  falseExplanation:
+
+
+    | true && true; returns true; | true && false; returns false; | false &&false;
+    returns false; |
+
+
+    | true II  true;returns true; | true II false;returns true; | false II false;return
+    false; |
+
+
+    | ! false;returns true; | ! true;returns false; |  |
+
+
+    Assignment Operators
+
+
+    | Operators | Examples: |
+
+
+    | += | x+=y |
+
+
+    | -= | x-=y |
+
+
+    | *= | x*=y |
+
+
+    | /= | x/=y |
+
+
+    | %= | x%=y |
+
+
+    Example:var x=200;   var y=100;x+=y;  alert ( x );x/=y;   alert ( x );x-=y;   alert
+    ( x );var m=”abc”; var n=”de”;m+=n   alert ( m );Explanation:x+=y;   // x=x+y; 
+    alert ( x ); outputs 300x/=y;    // x=x/y;  alert ( x ); outputs 2x-=y;    //  x=x-y;  alert
+    ( x ); outputs 100m+=n;    // m=m+n;   alert ( m ); outputs  abcdeComparison Operators
+
+
+    | Operators |
+
+
+    | > |
+
+
+    | < |
+
+
+    | >= |
+
+
+    | <= |
+
+
+    | == |
+
+
+    | != |
+
+
+    After using comparison operators, the result will be true or false.Example:var
+    a=100; var b=200;var result = (a>b); alert ( result );var result = (a==b); alert
+    ( result );var result = (a!=b); alert ( result );Explanation:var result = (a>b);
+    // test 100>200; outputs false.var result = (a==b); // test 100==200; outputs
+    false.var result = (a!=b); // test 100!=200; outputs true.Conditional OperatorThe
+    syntax of conditional operator looks as following:
+
+
+    | (test-expression) ? (if-true-do-this) : (if-false-do-this); |
+
+
+    ( test-expression) looks like a<b, x!=y, m==n. etc.Example:<script type = “text/javascript”>var
+    a=100; var b=200;var result=(a<b) ? ”apple” : ”boy”;alert ( result );</script>(
+    Output: apple )Explanation:The output is “apple”.The conditional operator use
+    (a<b) to test the “a” and “b”, because “a” is less than “b”, it is true. Therefore,
+    the output is “apple”.If Statement
+
+
+    | if ( test-expression ) {   // if true do this;   } |
+
+
+    “if statement” executes codes inside { … } only if a specified condition is true,
+    does not execute any codes inside {…} if the condition is false.Example:var a=200;var
+    b=100;if (a>b){alert ( ”a is greater than b.” );}(Output:   a is greater than
+    b.)Explanation:( a>b ) is a test expression, namely (200>100), if returns true,
+    it will execute the codes inside the { }, if returns false, it will not execute
+    the codes  inside the { }.If-else Statement
+
+
+    | if ( test-expression) {   // if true do this;   }else  {  // if false do this;   }
+    |'
+  toc: []
+  trans: "\n\n# JavaScript 基础\n\n示例：`break` // 这是一个 JavaScript 关键字。\n`return` // 这是一个\
+    \ JavaScript 关键字。\n\n### 解析\n在为变量、函数、属性选择标识符名称时，不能使用 JavaScript 关键字。\n\n## 变量\n\
+    `Variable`（变量）是与值关联的符号名称。使用 `var` 来定义变量。\n\n### 示例\n```html\n<script type = “text/javascript\"\
+    >\nvar abcde;\nvar abc888;\nvar my_variable;\n</script>\n```\n### 解析\n`abcde`、`abc888`\
+    \ 和 `my_variable` 都是变量。它们可以存储某些值。例如 `var abcde=100;`，`var abc888=”Hello World”;`，`var\
+    \ my_variable=true;`。\n注意变量命名不能以数字开头，不能包含空格。例如，“23var”，“abc de”是无效的变量名。但“var23”，“abcde”是变量变量。\n\
+    \n## 数据类型\n- `string` – 字符或字符字符串\n- `number` – 整数或浮点数\n- `boolean` – 值为 true 或\
+    \ false 的值\n- `function` – 用户定义的方法\n- `object` – 内置或用户定义的对象\n\n### 示例\n```html\n\
+    <script type = “text/javascript\">\nvar mystring= “I am a string”;\nvar myinteger=168;\n\
+    var myfloat=12.88;\nvar mybool=true;\n</script>\n```\n### 解析\n`var mystring=”I\
+    \ am a string=”` // `mystring` 数据类型是 `string`。\n`var myinteger=168;` // `myinteger`\
+    \ 数据类型是 `number`。\n`var myfloat=12.88;` // `myfloat` 数据类型是 `number`。\n`var mybool=true;`\
+    \ // `mybool` 数据类型是 `boolean`。\n注意：字符串始终使用双引号。例如，“abcde”，“learning”。\n\n## 转义序列\n\
+    反斜杠 `\\` 用于转义字符。\n- `\\n` 将内容输出到下一行。\n- `\\r` 产生回车。\n- `\\t` 产生制表符。\n- `\\'` 输出单引号。\n\
+    - `\\\"` 输出双引号。\n\n### 示例\n```html\n<script type = “text/javascript\">\nalert\
+    \ (“JavaScript says \\”Hello World! \\” ”);\n</script>\n```\n（输出: “Hello World”）\n\
+    ### 解析\n`\\\"` 输出双引号。注意 “Hello World” 带有一个双引号。另一个示例：`\\t` 产生一个制表符\n`alert (“Hello\
+    \ \\t\\t\\t World”);` // 注意这里有三个制表符\n（ 输出: Hello     World )\n\n## 函数\n函数是一个可以重复运行多次的\
+    \ own 块。要定义函数，使用 `function function-name ( ) { }`。\n\n| 语法 | `function function-name\
+    \ ( ) {……}` |\n要调用函数，使用 `function-name ( );` |\n\n| 语法 | `function-name ( );`\
+    \ |\n\n### 示例\n```html\n<script type = “text/javascript\">\nfunction test( ){\n\
+    \   alert (“show a sample”);\n}\ntest ( );\n</script>\n```\n（输出: show a sample）\n\
+    ### 解析\n`“function test( ) { }` 是 `test( )` 函数的声明。`test( )` 是调用名为 `test(){` 函数的命令。运行函数\
+    \ `test ( )` 时，它将输出 “show a sample”。\n\n### 带参数的函数\n函数括号内可以有一个或多个参数。参数用于将数据传递给函数。\n\
+    \n| 语法 | `function function-name ( var arg ) {……}` |\n要调用函数，使用 `function-name\
+    \ (argument);` |\n\n| 语法 | `function-name (argument );` |\n\n### 示例\n```html\n\
+    <script type = “text/javascript\">\nfunction test( var arg ){\n  alert ( arg );\n\
+    }\ntest(“display a sample”);\n</script>\n```\n（输出: display a sample）\n### 解析\n\
+    当 `test(“display a sample”)` 调用函数 `test(var arg){…}` 时，它会将 “display a sample”\
+    \ 传递给 `var arg`。在 `var arg` 接收数据后，它将传递函数内部的数据。`alert ( arg )` 将使用该数据，然后输出 “display\
+    \ a sample”。\n\n### 返回值\n`return` 可以向调用者返回一个值。\n\n| 语法 | `function function-name\
+    \ ( var arg ) { return value }` |\n要调用函数，使用 `function-name (argument);` |\n\n\
+    | 语法 | `function-name (argument );` |\n\n### 示例\n```javascript\nfunction cube(var\
+    \ num){return num*num*num}\nalert ( cube(2) );\n```\n（ 输出: 8 ）\n### 解析\n`“cube\
+    \ (2)”` 意味着 `cube(2)` 调用函数 `cube(var num){ }`，并将参数 “2” 传递给 `var num`。`“return\
+    \ num*num*num” 将结果返回给调用者 `cube(2)`，你可以将其视为 `cube(2) = return num*num*num`，将值赋值给\
+    \ `cube(2)`。`alert ( cube(2) )` 将显示 `cube(2)` 的结果。\n\n## 变量作用域\n全局变量在函数外部声明，可以在地方可以使用；局部变量在函数内部声明，仅在函数内部使用。\n\
+    \n### 示例\n```html\n<script type = “text/javascript\">\nvar num=200; // 全局变量\n\
+    function test( ){\n  var num=100; // 局部变量\n}\nalert (num);\n</script>\n```\n（输出:\
+    \ 200）\n### 解析\n`alert (num)` 输出 200，这是全局变量。局部变量仅在函数块内可见。\n\n## 显示文本\n`document.write(\
+    \ )` 将指定的文本显示到当前页面。\n\n### 示例\n```html\n<script type = “text/javascript\">\ndocument.write\
+    \ (“Hello World!”);\n</script>\n```\n（输出: Hello World!）\n### 解析\n`alert ( )` 弹出对话框显示消息。\n\
+    \n## 运算符\n\n| 运算符 | 说明 |\n| :--- | :--- |\n| `+` | 加法 |\n| `-` | 减法 |\n| `*` |\
+    \ 乘法 |\n| `/` | 除法 |\n| `%` | 取模：第一个操作数除以第二个操作数，返回余数。 |\n| `++` | 递增 |\n| `--`\
+    \ | 递减 |\n\n### 示例\n```javascript\nvar add=100+200;\nalert (add);\nvar div=800/2;\n\
+    alert ( div );\nvar mod=100%3;\nalert ( mod );\nvar inc=10++;\nalert ( inc );\n\
+    ```\n### 解析\n`var add=100+200; alert (add);` 输出 300。\n`var div=800/2; alert (\
+    \ div );` 输出 400。\n`var mod=100%3; alert ( mod );` 输出 1。\n`var inc=10++; alert\
+    \ ( inc );` 输出 10。\n\n## 逻辑运算符\n| 运算符 | 说明 |\n| :--- | :--- |\n| `&&` | 与 (AND)\
+    \ |\n| `||` | 或 (OR) |\n| `!` | 非 (NOT) |\n\n### 示例\n```javascript\nvar x=true;\
+    \ var y=false;\nvar a=x && y; alert ( a ); // 输出: false\nvar b=x || y; alert (\
+    \ b ); // 输出: true\nvar c=! x; alert ( c ); // 输出: false\n```\n### 解析\n`true &&\
+    \ true` 返回 true；`true && false` 返回 false；`false && false` 返回 false；`true || false`\
+    \ 返回 true；`false || false` 返回 false；`! true` 返回 false；`! false` 返回 true。\n\n##\
+    \ 赋值运算符\n| 运算符 | 示例 |\n| :--- | :--- |\n| `+=` | `x+=y` |\n| `-=` | `x-=y` |\n\
+    | `*=` | `x*=y` |\n| `/=` | `x/=y` |\n| `%=` | `x%=y` |\n\n### 示例\n```javascript\n\
+    var x=200; var y=100;\nx+=y; alert ( x );\nx/=y; alert ( x );\nx-=y; alert ( x\
+    \ );\nvar m=”abc”; var n=”de”;\nm+=n; alert ( m );\n```\n### 解析\n`x+=y // x=x+y;`\
+    \ 输出 300。\n`x/=y; // x=x/y;` 输出 200。\n`x-=y; // x=x-y;` 输出 100。\n`m+=n; // m=m+n;`\
+    \ 输出 abcde。\n\n## 比较运算符\n| 运算符 | 说明 |\n| :--- | :--- |\n| `>` | 大于 |\n| `<` |\
+    \ 小于 |\n| `>=` | 大于等于 |\n| `<=` | 小于等于 |\n| `==` | 等于 |\n| `!=` | 不等于 |\n\n###\
+    \ 示例\n```javascript\nvar a=100; var b=200;\nvar result = (a>b); alert ( result\
+    \ );\nvar result = (a==b); alert ( result );\nvar result = (a!=b); alert ( result\
+    \ );\n```\n### 解析\n`var result = (a>b); // 测试 100>200;` 输出 false。\n`var result\
+    \ = (a==b); // 测试 100==200;` 输出 false。\n`var result = (a!=b); // 测试 100!=200;`\
+    \ 输出 true。\n\n## 条件运算符\n条件运算符的语法如下所示：\n`(test-expression) ? (if-true-do-this)\
+    \ : (if-false-do-this);`\n`(test-expression)` 类似于 `a<b`、`x!=y`、`m==n` 等。\n\n###\
+    \ 示例\n```html\n<script type = “text/javascript\">\nvar a=100; var b=200;\nvar\
+    \ result=(a<b) ? ”apple” : ”boy”;\nalert ( result );\n</script>\n```\n（ 输出: apple\
+    \ ）\n### 解析\n输出是 “apple”。条件运算符使用 `(a<b)` 测试 “a” 和 “b”，因为 “a” 小于 “b”，它是 true。因此，输出是\
+    \ “apple”。\n\n### 语句\n```javascript\nif ( test-expression ) { // 如果为真执行此操作 }\n\
+    ```\n`if 语句` 在指定的条件为真时执行 `{ … }` 中的代码；如果条件为假，则不执行 `{…}` 中的任何代码。\n\n### 示例\n```javascript\n\
+    var a=200; var b=100;\nif (a>b){\n  alert ( ”a is greater than b.” );\n}\n```\n\
+    （输出: a is greater than b。）\n### 解析\n`( a>b )` 是测试表达式，即 `(200>100)`，如果返回 true，则执行\
+    \ `{ }` 内部的代码；如果返回 false，则不执行 `{ }` 内部的代码。\n\n### If-else 语句\n```javascript\n\
+    if ( test-expression) { // 如果为真执行此操作 } else { // 如果为假执行此操作 }\n```\n\n"
+- fmt: "\n# If...else Statement\n\n`if...else statement` runs some code if a condition\
+    \ is true and runs another code if the condition is false.\n\nExample:\n```javascript\n\
+    var a=100; var b=200;\nif (a>b){\n  alert ( ”a is greater than b.”)}\nelse {\n\
+    \  alert ( “a is less than b” );\n}\n```\n(Output: `a is less than b.`)\n\nExplanation:\
+    \ `(a>b)` is a test expression, namely `(100>200)`, if `if` returns true, it will\
+    \ output `\"a is greater than b.\"` if `if` returns false, it will output `a is\
+    \ less than b`.\n\n# Switch Statement\n\n```javascript\nswitch ( var variable\
+    \ ){\n  case 1: if equals this case, do this; break;\n  case 2: if equals this\
+    \ case, do this; break;\n  case 3: if equals this case, do this; break;\n  default\
+    \ : if not equals any case, run default code; break;\n}\n```\n\nThe value of variable\
+    \ will compare each `case` first, if equals one of the `case` value; it will execute\
+    \ that `case` code. `break;` terminates the code running.\n\nExample:\n```javascript\n\
+    var number=20;\nswitch ( number ) {\n  case 10 : alert ( “Running case 10” );\
+    \ break;\n  case 20 : alert ( “Running case 20” ); break;\n  case 30 : alert (\
+    \ “Running case 30” ); break;\n  default : alert ( “Running default code” ); break;\n\
+    }\n```\n(Output: `Running case 20`)\n\nExplanation: The `number` value is `20`;\
+    \ it will match `case 20`, so it will run the code in `case 20`.\n\n# For Loop\n\
+    \n```javascript\nfor( init, test-expression, increment) { // some code; }\n```\n\
+    \n`for loop` runs a block of code by specified number of times.\n\nExample:\n\
+    ```html\n<script type = “text/javascript”>\nfor (var x = 0; x <= 5; x++) {\n \
+    \ document.write ( \"x \" );\n}\n</script>\n```\n(Output: `012345`)\n\nExplanation:\
+    \ `var x = 0` is an initializer, `x <= 5` is test-expression, the code will run\
+    \ at most 5 times. `x++` means that `x` will increase 1 each loop. After 5 times\
+    \ loop, the code will output `012345`.\n\n# While Loop\n\n```javascript\nwhile\
+    \ ( test-expression ) {\n  // some js code in here;\n}\n```\n\n`while loop` loops\
+    \ through a block of code if the specified condition is true.\n\nSample:\n```javascript\n\
+    var counter=0;\nwhile (counter < 8){\n  document.write ( “&” );\n  counter++;\n\
+    }\n```\n(Output: `&&&&&&`)\n\nExplanation: `“counter< 8\"` is a test expression,\
+    \ if the condition is true, the code will loop less than 8 times, until the `counter`\
+    \ is `8`, then the condition is false, the code will stop running.\n\n# Do-While\
+    \ Loop\n\n```javascript\ndo{ // some js code in here } while ( test-expression);\n\
+    ```\n\n`do...while` loops through a block of code once, and then repeats the loop\
+    \ if the specified condition is true.\n\nExample:\n```javascript\nvar counter=0;\n\
+    do {\n  document.write ( “@” );\n  counter++;\n} while (counter<8);\n```\n(Output:\
+    \ `@@@@@@@@`)\n\nExplanation: `“counter< 8\"` is a test expression, if the condition\
+    \ is true, the code will loop less than 8 times, until the `counter` is `8`, then\
+    \ the condition is false, the code will stop running.\n\n# Array\n\n## Create\
+    \ an Array\nAn array is a particular variable, which can contain one or more value\
+    \ at a time. `new Array()` creates an array.\n\nThe syntax to create an array:\n\
+    ```javascript\nvar array-name = new Array (“value0”, “value1”, “value2”);\n```\n\
+    \nOther syntax to create an array:\n```javascript\nvar array-name = new Array\
+    \ ( );\narray-name[index0] = “value1”;\narray-name[index1] = “value1”;\narray-name[index2]\
+    \ = “value2”;\n```\n\nExample:\n```javascript\nvar color = new Array ( );\ncolor\
+    \ [0] = “red”;\ncolor [1] = “blue”;\ncolor [2] = “green”;\n```\nExplanation: Above\
+    \ code creates an array, array name is `color`, and it has three elements: `color[0]`,\
+    \ `color[1]`, `color[2]`. Its indexes are 0, 1, and 2. Its values are `red`, `blue`,\
+    \ and `green`. Note that index begins with zero.\n\n## Show array element values\n\
+    To show array element values, use syntax as following:\n```javascript\ndocument.write\
+    \ ( array-name[index] );\n```\n\nExample:\n```html\n<script type = “text/javascript”>\n\
+    color = new Array(“yellow”, “purple”, “orange”);\ndocument.write ( color[1] );\n\
+    </script>\n```\n(Output: `purple`)\n\nExplanation: From above, you can know:\n\
+    - The value of `color[0]` is `yellow`.\n- The value of `color[1]` is `purple`.\n\
+    - The value of `color[2]` is `orange`.\nNote that the indexes begin counting from\
+    \ zero.\n\n## Get the Size of Array\nA function can get the size of an array.\n\
+    ```javascript\narray.length\n```\n\nExample:\n```html\n<script type = “text/javascript”>\n\
+    var color = new Array(“yellow”, “purple”, “orange”);\nvar size = color.length;\n\
+    document.write ( size );\n</script>\n```\n(Output: `3`)\n\nExplanation: `“var\
+    \ size=color.length\"` can return the size of array `color`, and assigns the size\
+    \ of array to `size`. `new Array(“yellow”, “purple”, “orange”)` has three elements,\
+    \ so its size is 3.\n\n## Join Array Elements\n```javascript\narray.join( );\n\
+    ```\n`array.join( )` can join elements.\n\nExample:\n```javascript\nvar arr =\
+    \ new Array( );\narr[0] = “I”;\narr[1] = “love”;\narr[2] = “JavaScript”;\ndocument.write(\
+    \ arr.join(\" \") ) );\n```\n(Output: `I love JavaScript!`)\n\n## Reverse Element\n\
+    ```javascript\narray.reverse();\n```\n`array.reverse()` can reverse the order.\n\
+    \nExample:\n```javascript\nvar arr = new Array( );\narr[0] = “A”;\narr[1] = “B”;\n\
+    arr[2] = “C”;\narr.reverse();\ndocument.write( arr.join(\",\") );\n```\n(Output:\
+    \ `C,B,A`)\n\n## Slice Elements\n```javascript\narray.slice( start, end );\n```\n\
+    `array.slice(start, end)` can slice elements.\n\nExample:\n```javascript\nvar\
+    \ arr = new Array( );\narr[0] = “a”;\narr[1] = “b”;\narr[2] = “c”;\narr[3] = “d”;\n\
+    arr[4] = “e”;\nvar sli = arr.slice(2, 4);\n```\n(Output: `c,d`)\n\n## Sort Elements\n\
+    ```javascript\narray.sort();\n```\n`array.sort()` can sort elements.\n\nExample:\n\
+    ```javascript\nvar arr = new Array( );\narr[0] = “Z”;\narr[1] = “A”;\narr[2] =\
+    \ “B”;\narr.sort();\ndocument.write( arr.join(\",\") );\n```\n(Output: `A,B,Z`)\n\
+    \n## Change Elements to String\n```javascript\narray.toString();\n```\n`array.toString()`\
+    \ can convert elements to a string.\n\nExample:\n```javascript\nvar myarray =\
+    \ new Array( );\nmyarray[0] = “Mon”;\nmyarray[1] = “Tue”;\nmyarray[2] = “Wed”;\n\
+    document.write( myarray.toString() );\n```\n(Output: `Mon,Tue,Wed`)\n\n## Search\
+    \ Specific Element (1)\n```javascript\narray.indexOf( element );\n```\n`array.indexOf(\
+    \ element )` can find the first place where an element occurs.\n\nExample:\n```javascript\n\
+    var myarray = new Array( );\nmyarray[0] = “Mon”;\nmyarray[1] = “Tue”;\nmyarray[2]\
+    \ = “Wed”;\nmyarray[3] = “Tue”;\ndocument.write( myarray.indexOf(\"Tue\") );\n\
+    ```\n(Output: `1`)\n\n## Search Specific Element (2)\n```javascript\narray.lastIndexOf(\
+    \ element );\n```\n`array.lastIndexOf( element )` can find the last place where\
+    \ an element occurs.\n\nExample:\n```javascript\nvar myarray = new Array( );\n\
+    myarray[0] = “Mon”;\nmyarray[1] = “Tue”;\nmyarray[2] = “Wed”;\nmyarray[3] = “Tue”;\n\
+    document.write( myarray.lastIndexOf(\"Tue\") );\n```\n(Output: `3`)\n\n# Math,\
+    \ Time Math Methods\n\n| Method | Returns |\n| :--- | :--- |\n| `abs()` | a number’s\
+    \ absolute value |\n| `ceil()` | an integer greater than or equal its argument\
+    \ |\n| `cos()` | an angle’s trigonometric cosine |\n| `exp()` | a number’s `Math.E`\
+    \ to the power |\n| `floor()` | an integer less than or equal its argument. |\n\
+    | `log()` | a number’s natural logarithm |\n| `random()` | a random positive value\
+    \ from 0 to 1 |\n| `max()` | a greater between two numbers |\n| `min()` | a smaller\
+    \ between two numbers |\n| `pow()` | the first argument to the power of the second\
+    \ |\n| `round()` | an integer |\n| `sin()` | an angle’s trigonometric sine |\n\
+    | `sqrt()` | a number’s square root |\n"
+  raw: '“if...else statement” runs some code if a condition is true and runs another
+    code if the condition is falseExample:var a=100; var b=200;if (a>b){alert ( ”a
+    is greater than b.”)}else {alert ( “a is less than b” );}(Output:  a is less than
+    b.)Explanation:( a>b ) is a test expression, namely (100>200), if returns true,
+    it will output  ”a is greater than b.” if returns false, it will output “a is
+    less than b”.Switch Statement
+
+
+    | switch ( var variable ){ case 1: if equals this case, do this;  break;case 2:
+    if equals this case, do this;  break;case 3: if equals this case, do this;  break;default
+    : if not equals any case, run default code;  break;} |
+
+
+    The value of variable will compare each case first, if equals one of the “case”
+    value; it will execute that “case” code. “break;” terminates the code running.Example:var
+    number=20;switch ( number ) {case 10 : alert ( “Running case 10” );  break ;case
+    20 : alert ( “Running case 20” );  break;case 30 : alert ( “Running case 30” ); 
+    break;default :  alert ( “Running default code” );  break;  }(Output:  Running
+    case 20)Explanation:The number value is 20; it will match case 20, so it will
+    run the code in case 20.For Loop
+
+
+    | for( init, test-expression, increment) { // some code; } |
+
+
+    “for loop” runs a block of code by specified number of times.Example:<script type
+    = “text/javascript”>for (var x = 0; x <= 5; x++) {document.write ( "x " );}</script>(Output:
+    012345 )Explanation:var x = 0 is an initializer,x <= 5 is test-expression, the
+    code will run at most 5 times.x++ means that x will increase 1each loop.After
+    5 times loop, the code will output 012345.While Loop
+
+
+    | while ( test-expression ) {  // some js code in here;  } |
+
+
+    “while loop” loops through a block of code if the specified condition is true.Sample:var
+    counter=0;while (counter < 8){document.write ( “&” );counter++;}( Output:  &&&&&&&&
+    )Explanation:“counter< 8” is a test expression, if the condition is true, the
+    code will loop less than 8 times, until the counter is 8, then the condition is
+    false, the code will stop running.Do-While Loop
+
+
+    | do{ // some js code in here } while ( test-expression); |
+
+
+    “do...while” loops through a block of code once, and then repeats the loop if
+    the specified condition is true.Example:var counter=0;do {document.write ( “@”
+    );counter++;} while (counter<8);( Output: @@@@@@@@ )Explanation:“counter< 8” is
+    a test expression, if the condition is true, the code will loop less than 8 times,
+    until the counter is 8, then the condition is false, the code will stop running.ArrayCreate
+    an ArrayAn array is a particular variable, which can contain one or more value
+    at a time. new Array( ) creates an array.The syntax to create an array:
+
+
+    | var array-name = new Array (“value0”, “value1”, “value2”); |
+
+
+    Other syntax to create an array:
+
+
+    | var array-name = new Array ( );array-name[index0] = “value1”;array-name[index1]
+    = “value1”;array-name[index2] = “value2”; |
+
+
+    Example:var color = new Array ( );color [0] = “red”;color [1] = “blue”;color [2]
+    = “green”;Explanation:Above code creates an array, array name is “color”, and
+    it has three elements: color [0], color [1], color [2]. Its indexes are 0, 1,
+    and 2. Its values are red, blue, and green.Note that index begins with zero.Show
+    array element valuesTo show array element values, use syntax as following:
+
+
+    | document.write (   array-name[index]    ); |
+
+
+    Example:<script type = “text/javascript”>color = new Array(“yellow”, “purple”,
+    “orange”);document.write ( color[1] );</script>( Output:  purple )Explanation:From
+    above, you can know:The value of color[0] is yellow.The value of color[1] is purple.The
+    value of color[2] is orange.Note that the indexes begin counting from zero.Get
+    the Size of ArrayA function can get the size of an array.
+
+
+    | array.length |
+
+
+    Example:<script type = “text/javascript”>var color = new Array(“yellow”, “purple”,
+    “orange”);var size = color.length;document.write ( size ); </script>(Output:  3)Explanation:“var
+    size=color.length” can return the size of array “color”, and assigns the size
+    of array to “size”.new Array(“yellow”, “purple”, “orange”) has three elements,
+    so its size is 3.Join Array Elements
+
+
+    | array.join(    );array.join(“  ”);array.join(“ , ”); |
+
+
+    array.join(   ); can join all array elements without spaces.array.join(“ “) can
+    join all array elements by spaces.array.join(“,”) can join all array elements
+    by commas.Example:var arr = new Array( );arr[0] = “I”;arr[1] = “love”;arr[2] =
+    “JavaScript!”;document.write( arr.join(“  ”) );  // join by spaces(  Output:  I
+    love JavaScript!  )Explanation:arr.join(“  ”) can join all elements of the “arr”
+    together by spaces. Of course you can try arr.join(“,”) to join elements by commas.Reverse
+    Element Order
+
+
+    | array.reverse( ); |
+
+
+    “array.reverse( )” can reverse the element order of an array.Example:var arr =
+    new Array( “A”, “B”, “C” );arr.reverse( ); // reverse the element ordervar rev
+    = arr.join(“,”);document.write( rev );( Output:  C, B, A )Explanation:“arr.reverse(
+    )” reverses the element order of “arr” array.“rev=arr.join(“,”)” joins all elements
+    of “arr” array together and assign the value with new element order to “rev”.Slice
+    Elements
+
+
+    | array.slice( start, last-1) |
+
+
+    “array.slice( start, last-1 )” can slice array elements into pieces, extract some
+    elements from start to last-1 index.“start” means the first element.“last-1” means
+    the last-1 element.Example:var arr = new Array(  “a”, “b”, “c”, “d”, “e”, “f”
+    );var sli =arr.slice( 2, 5 );document.write( sli );(  Output: c, d, e  )Explanation:“arr.slice
+    ( 2, 5 )” extracts elements from “arr” array from 2 to 5-1 index. Note that 5-1
+    index signify “e”, instead of “f”.Sort Elements in Order
+
+
+    | array.sort( ) |
+
+
+    “array.sort( )” can sort array elements orderly.Example:var arr = new Array( 2,
+    5, 3, 1, 4, 6 );arr.sort ( );var sor = arr.join(“,”);document.write( sor );( 
+    Output:  1, 2, 3, 4, 5, 6 )Explanation:“arr.sort ( )” sort the elements of “arr”
+    sequentially.“var sor = arr.join(“,”)” joins the elements of “arr” by commas;
+    and assign the value to “sor”.Change Elements to String
+
+
+    | array.toString(); |
+
+
+    “array.toString()” can change the elements of an array to string.Example:var myarray
+    = new Array( );myarray[0] =”Mon”;myarray[1] =”Tue”;myarray[2] =”Wed”;var threedays
+    = myarray.toString( );document.write( threedays );(  Output:  Mon, Tue, Wed )Explanation:“myarray.toString(
+    )” converts all elements in myarray to a string whose value is “Mon, Tue, Wed”.Search
+    Specific Element (1)
+
+
+    | indexOf( ) |
+
+
+    “indexOf( )” can find the first place where a particular element occurs in an
+    array.Example:var myarray = new Array( );myarray[0] =”Mon”;myarray[1] =”Tue”;myarray[2]
+    =”Wed”;myarray[3] =”Tue”;myarray.indexOf ( “Tue” ); ( Returns 1)Explanation:“myarray.indexOf
+    ( “Tue” )” returns the first place where the “Tue” occurs in myarray. The output
+    is 1.If the element is not found in array, indexOf( ) returns -1.Search Specific
+    Element (2)
+
+
+    | lastIndexOf( ) |
+
+
+    “lastIndexOf( )” can find the last place where a particular element occurs in
+    an array.Example:var myarray = new Array( );myarray[0] =”Mon”;myarray[1] =”Tue”;myarray[2]
+    =”Wed”;myarray[3] =”Tue”;myarray.lastIndexOf ( “Tue” ); ( Returns 3)Explanation:“myarray.lastIndexOf
+    ( “Tue” )” returns the last place where the “Tue” occurs in myarray. The output
+    is 3.If the element is not found in array, lastIndexOf( ) returns -1.Math, TimeMath
+    Methods
+
+
+    | Method | Returns |
+
+
+    | abs( ) | a number’s absolute value  |
+
+
+    | ceil( ) | an integer greater than or equal its argument |
+
+
+    | cos( ) | an angle’s trigonometric cosine |
+
+
+    | exp( ) | a number’s Math.E to the power |
+
+
+    | floor( ) | an integer less than or equal its argument. |
+
+
+    | log( ) | a number’s natural logarithm |
+
+
+    | random( ) | a random positive value from 0 to 1 |
+
+
+    | max( ) | a greater between two numbers |
+
+
+    | min( ) | a smaller between two numbers |
+
+
+    | pow( ) | the first argument to the power of the second |
+
+
+    | round( ) | an integer |
+
+
+    | sin( ) | an angle’s trigonometric sine |
+
+
+    | sqrt( ) | a number’s square root |'
+  toc: []
+  trans: "\n\n# If...else 语句\n\n`if...else statement` 在条件为真时执行某些代码，在条件为假时执行另一段代码。\n\
+    \n示例：\n```javascript\nvar a=100; var b=200;\nif (a>b){\n  alert ( ”a is greater\
+    \ than b.”)}\nelse {\n  alert ( “a is less than b” );\n}\n```\n(输出: `a is less\
+    \ than b.`)\n\n解释：`(a>b)` 是一个测试表达式，即 `(100>200)`，如果 `if` 返回 true，它将输出 `\"a is\
+    \ greater than b.\"`；如果 `if` 返回 false，它将输出 `a is less than b`。\n\n# Switch Statement\n\
+    \n```javascript\nswitch ( var variable ){\n  case 1: 如果等于此 case，执行操作; break;\n\
+    \  case 2: 如果等于此 case，执行操作; break;\n  case 3: 如果等于此 case，执行操作; break;\n  default\
+    \ : 如果不等于任何 case，运行默认代码; break;\n}\n```\n\n变量的值将首先与每个 `case` 进行比较，如果等于其中一个 `case`\
+    \ 值，它将执行该 `case` 代码。`break;` 终止代码运行。\n\n示例：\n```javascript\nvar number=20;\nswitch\
+    \ ( number ) {\n  case 10 : alert ( “Running case 10” ); break;\n  case 20 : alert\
+    \ ( “Running case 20” ); break;\n  case 30 : alert ( “Running case 30” ); break;\n\
+    \  default : alert ( “Running default code” ); break;\n}\n```\n(输出: `Running case\
+    \ 20`)\n\n解释：`number` 的值为 `20`；它将匹配 `case 20`，因此将运行 `case 20` 中的代码。\n\n# For 循环\n\
+    \n```javascript\nfor( 初始化, 测试表达式, 增量) { // 某些代码; }\n```\n\n`for loop` 通过指定的次数运行代码块。\n\
+    \n示例：\n```html\n<script type = “text/javascript”>\nfor (var x = 0; x <= 5; x++)\
+    \ {\n  document.write ( \"x \" );\n}\n</script>\n```\n(输出: `012345`)\n\n解释：`var\
+    \ x = 0` 是初始化器，`x <= 5` 是测试表达式，代码最多运行 5 次。`x++` 意味着 `x` 每次循环增加 1。在循环 5 次后，代码将输出\
+    \ `012345`。\n\n# While 循环\n\n```javascript\nwhile ( 测试表达式 ) {\n  // 在此处编写某些 js\
+    \ 代码;\n}\n```\n\n`while loop` 当指定的条件为真时循环执行一个代码块。\n\n示例：\n```javascript\nvar counter=0;\n\
+    while (counter < 8){\n  document.write ( “&” );\n  counter++;\n}\n```\n(输出: `&&&&&&`)\n\
+    \n解释：`“counter< 8\"` 是一个测试表达式，如果条件为真，代码将循环少于 8 次，直到 `counter` 等于 `8`，此时条件为假，代码将停止运行。\n\
+    \n# Do-While 循环\n\n```javascript\ndo{ // 在此处编写某些 js 代码 } while ( 测试表达式);\n```\n\
+    \n`do...while` 循环执行一次代码块，如果指定的条件为真，则重复循环。\n\n示例：\n```javascript\nvar counter=0;\n\
+    do {\n  document.write ( “@” );\n  counter++;\n} while (counter<8);\n```\n(输出:\
+    \ `@@@@@@@@`)\n\n解释：`“counter< 8\"` 是一个测试表达式，如果条件为真，代码将循环少于 8 次，直到 `counter` 等于\
+    \ `8`，此时条件为假，代码将停止运行。\n\n# 数组 (Array)\n\n## 创建数组\n数组是一种特殊的变量，可以包含一个或多个值。`new Array()`\
+    \ 创建数组。\n\n创建数组的语法：\n```javascript\nvar array-name = new Array (“value0”, “value1”,\
+    \ “value2”);\n```\n\n创建数组的另一种语法：\n```javascript\nvar array-name = new Array (\
+    \ );\narray-name[index0] = “value1”;\narray-name[index1] = “value1”;\narray-name[index2]\
+    \ = “value2”;\n```\n\n示例：\n```javascript\nvar color = new Array ( );\ncolor [0]\
+    \ = “red”;\ncolor [1] = “blue”;\ncolor [2] = “green”;\n```\n解释：上述代码创建了一个数组，数组名为\
+    \ `color`，它有三个元素：`color[0]`、`color[1]`、`color[2]`。它们的索引是 0, 1 和 2。它们的值是 `red`、`blue`\
+    \ 和 `green`。注意索引从零开始。\n\n## 显示数组元素值\n要显示数组元素值，使用以下语法：\n```javascript\ndocument.write\
+    \ ( array-name[index] );\n```\n\n示例：\n```html\n<script type = “text/javascript”>\n\
+    color = new Array(“yellow”, “purple”, “orange”);\ndocument.write ( color[1] );\n\
+    </script>\n```\n(输出: `purple`)\n\n解释：从上面你可以可以知道：\n- `color[0]` 的值为 `yellow`。\n\
+    - `color[1]` 的值为 `purple`。\n- `color[2]` 的值为 `orange`。\n\n## 获取数组长度\n从上面可以知道：\n\
+    ```javascript\nvar len = color.length;\n```\n(输出: `3`)\n\n## 修改数组元素\n要修改数组元素，使用以下语法：\n\
+    ```javascript\narray-name[index] = “new value”;\n```\n\n示例：\n```javascript\ncolor[1]\
+    \ = “black”;\n```\n\n## 删除数组元素\n要删除数组元素，使用以下语法：\n```javascript\narray-name.splice(index,\
+    \ count);\n```\n\n示例：\n```javascript\ncolor.splice(1, 1);\n```\n\n"
+- fmt: "\n### `tan()`\n| `tan()` ` | an angle’s trigonometric tangent |\n\nExample:\n\
+    ```javascript\nvar num = 10.2;\ndocument.write ( Math.round(num) );\n```\n(Output:\
+    \ 10)\nExplanation: `Math.round(num)` returns an integer of `10.2`. Result is\
+    \ `10`.\n\n### `Ceil()` & `Floor()`\n\n| `Math.ceil() ` | `Math.floor() ` |\n\
+    | :--- | :--- |\n\n`Math.ceil( )` returns an integer that is greater than or equal\
+    \ to its argument. `Math.floor( )` returns an integer that is less than or equal\
+    \ to its argument.\n\nExample: \n```javascript\nvar num = 9.5;\ndocument.write\
+    \ ( “Ceiling number is”+Math.ceil( num ) );\ndocument.write ( “Flooring number\
+    \ is”+Math.floor( num ) );\n```\n( Output: Ceiling number is 10.0 Flooring number\
+    \ is 9.0 )\nExplanation: `Math.ceil( num )` returns an integer that is greater\
+    \ than or equal `9.5`, the result is `10.0`. `Math.floor( num )` returns an integer\
+    \ that is less than or equal to `9.5`, the result is `9.0`.\n\n### `Max()` & `Min()`\n\
+    \n| `Math.max() ` | `Math.min() ` |\n| :--- | :--- |\n\n`Math.max( )` returns\
+    \ the greater one between two numbers. `Math.min( )` returns the less one between\
+    \ two numbers.\n\nExample: \n```javascript\nvar x = 100;\nvar y = 200;\ndocument.write\
+    \ (“Greater number is”+Math.max(x, y) );\ndocument.write (“Less number is”+Math.min(x,\
+    \ y) );\n```\n( Output: Greater number is 200 Less number is 100 )\nExplanation:\
+    \ `Math.max(x, y)` returns the greater number between `100` and `200`, the result\
+    \ is `200`. `Math.min(x, y)` returns the less number between `100` and `200`,\
+    \ the result is `100`.\n\n### `Math.PI` & `random()`\n\n| `Math.PI` | `Math.random()\
+    \ ` |\n| :--- | :--- |\n\n`Math.PI` is a constant that stores the value of pi.\
+    \ `Math.random( )` generates a number between `0.0` to `1.0`.\n\nExample: \n```javascript\n\
+    var pi = Math.PI;\nvar ran = Math.random( );\ndocument.write (“The PI value is”\
+    \ + pi);\ndocument.write (“The random number is” + ran);\n```\n( Output: The PI\
+    \ value is 3.141592653589793 The random number is 0.16869328 )\nExplanation: The\
+    \ value of `Math.PI` is `3.141592653589793`. `Math.random( )` generates a random\
+    \ number between `0.0` to `1.0`, in here the result is `0.16869328`.\n\n### Date\
+    \ & Time\nJavaScript often use date and time to design the web page. When using\
+    \ date and time, you must create an object of date first.\n\n| `var DateObject\
+    \ = new Date( )` |\n\n`new Date( )` can create an object of date.\n\nExample:\
+    \ \n```javascript\nvar DateObject = new Date( );\nalert ( DateObject );\n```\n\
+    ( Output: Sun Apr 12 12:23 UTC 2015 )\nExplanation: `var DateObject = new Date(\
+    \ )` creates an object of date. `alert ( DateObject )` displays the current date\
+    \ and time.\nNote that: To create an object of date, you can use other variable\
+    \ name, for instance:\n```javascript\nvar now= new Date( );\nvar TimeObjcet =\
+    \ new Date( );\n```\n\n#### Date, Month, Year, Day\nThe Date Object has following\
+    \ method:\n\n| `getDate() ` | get the date |\n| :--- | :--- |\n| `getMonth() `\
+    \ | get the month |\n| `getYear() ` | get the year |\n| `getDay() ` | get the\
+    \ day |\n\nNote that `getDay( )` returns from `0` (Sunday) to `6` (Saturday).\
+    \ `getMonth( )` returns from `0` (January) to `11` (December).\n\nExample: \n\
+    ```javascript\nvar now = new Date ( );\nvar y = now.getYear( );\nvar d = now.getDate(\
+    \ );\nalert ( y+ “ ” + d );\n```\n( Output: 2015 12 )\nExplanation: `now.getYear(\
+    \ )` returns the current year. `now.getDate( )` returns the current date.\n\n\
+    #### Hours, Minutes, Seconds\nThe Date Object has following method:\n\n| `getHours()\
+    \ ` | get the hours |\n| :--- | :--- |\n| `getMinutes() ` | get the minutes |\n\
+    | `getSeconds() ` | get the seconds |\n| `getTime() ` | get the time |\n\nNote\
+    \ that `getTime( )` returns a number from January `1, 1970` to current time.\n\
+    \nExample: \n```javascript\nvar now = new Date( );\nvar h = now.getHours( );\n\
+    var m = now.getMinutes( );\nvar s = now.getSeconds( );\nalert ( “Current time\
+    \ is” + h+ “:” + m + “:” + s );\n```\n( Output: Current time is 19:30:28 )\nExplanation:\
+    \ `getHours` returns the current hours. `getMinutes` returns the current minutes.\
+    \ `getSeconds` returns the current seconds.\n\n#### Different Time\n| `getUTCHours()\
+    \ ` | `getTimezoneOffset() ` |\n| :--- | :--- |\n\n`getUTCHours( )` returns the\
+    \ Greenwich Mean Time. (UTC). `getTimezoneOffset( )` returns the time difference\
+    \ between UTC time and local time. For example, if your time zone is `GMT+2`,\
+    \ `-120` will be returned.\n\nExample: \n```javascript\nvar now = new Date( );\n\
+    var utc = now.getUTCHours();\nvar timezone = now.getTimezoneOffset();\nalert (\
+    \ utc + timezone );\n```\n( Output: utc + timezone )\nExplanation: `getUTCHours(\
+    \ )` returns the Greenwich Mean Time. `getTimezoneOffset( )` returns the time\
+    \ difference between UTC time and local time.\n\n### Set Date & Time\nThe Date\
+    \ Object has following method:\n\n| `getDate() ` | set the date |\n| :--- | :---\
+    \ |\n| `getMonth() ` | set the month |\n| `setYear() ` | set the year |\n| `setDate()\
+    \ ` | set the day |\n| `setHours() ` | set the hours |\n| `setMinutes() ` | set\
+    \ the minutes |\n| `setSeconds() ` | set the seconds |\n| `setTime() ` | set the\
+    \ time |\n\nNote that `setDate( )` sets the day of the month.\nExample: \n```javascript\n\
+    var now = new Date( );\nnow.setDate(15);\nnow.setMonth(5);\nnow.setYear(2023);\n\
+    alert ( now );\n```\n( Output: Date object )\nExplanation: `setDate( )` sets the\
+    \ day of the month.\n"
+  raw: '| tan( ) | an angle’s trigonometric tangent |
+
+
+    Example:var num = 10.2;document.write ( Math.round(num) );(Output:  10)Explanation:Math.round(num)
+    returns an integer of 10.2\. Result is 10.Ceil ( ) & Floor ( )
+
+
+    | Math.ceil( );Math.floor( ); |
+
+
+    “Math.ceil( );” returns an integer that is greater than or equal to its argument.“Math.floor(
+    );” returns an integer that is less than or equal to its argument.Example:var
+    num = 9.5;document.write ( “Ceiling number is”+Math.ceil( num ) );document.write
+    ( “Flooring number is”+Math.floor( num ) );( Output:  Ceiling number is 10.0Flooring
+    number is 9.0 )Explanation:“Math.ceil( num ));” returns an integer that is greater
+    than or equal 9.5, the result is 10.0.“Math.floor( num );” returns an integer
+    that is less than or equal 9.5, the result is 9.0.Max ( ) & Min ( )
+
+
+    | Math.max( );Math.min( ); |
+
+
+    “Math.max( )” returns the greater one between two numbers.“Math.min( )” returns
+    the less one between two numbers.Example:var x = 100;var y = 200;document.write
+    (“Greater number is”+Math.max(x, y) );document.write (“Less number is”+Math.min(x,
+    y) );( Output:  Greater number is 200Less number is 100)Explanation:“Math.max(x,
+    y)” returns the greater number between 100 and 200, the result is 200.“Math.min(x,
+    y)” returns the less number between 100 and 200, the result is 100.Math.PI & random(
+    ) 
+
+
+    | Math.PIMath.random( ) |
+
+
+    Math.PI is a constant that stores the value of pi.Math.random( ) generates a number
+    between 0.0 to 1.0.Example:var pi = Math.PI;var ran = Math.random( );document.write
+    (“The PI value is” + pi);document.write (“The random number is” + ran);( Output: 
+    The PI value is 3.141592653589793The random number is 0.16869328)Explanation:The
+    value of Math.PI is 3.141592653589793.Math.random( ) generates a random number
+    between 0.0 to 1.0, in here the result is 0.16869328.Date & TimeJavaScript often
+    use date and time to design the web page. When using date and time, you must create
+    an object of date first.
+
+
+    | var DateObject = new Date(  ) |
+
+
+    “new Date(  )” can create an object of date.Example:var DateObject = new Date(
+    );alert ( DateObject );( Output: Sun Apr 12 12:23 UTC 2015 )Explanation:“var DateObject
+    = new Date( )” creates an object of date.“alert ( DateObject )” displays the current
+    date and time.Note that: To create an object of date, you can use other variable
+    name, for instance:var now= new Date( );var TimeObjcet = new Date( );Date, Month,
+    Year, DayThe Date Object has following method:
+
+
+    | getDate( ) | get the date |
+
+
+    | getMonth( ) | get the month |
+
+
+    | getYear( ) | get the year |
+
+
+    | getDay( ) | get the day |
+
+
+    Note that “getDay( )” returns from 0 (Sunday) to 6 (Saturday).“getMonth( )” returns
+    from 0 (January) to 11 (December).Example:var now = new Date ( );var y = now.getYear(
+    );var d = now.getDate( );alert (  y+ “ ” + d ); (  Output:  2015 12 )Explanation:“now.getYear(
+    )” returns the current year.“now.getDate( )” returns the current date.Hours, Minutes,
+    SecondsThe Date Object has following method:
+
+
+    | getHours( ) | get the hours |
+
+
+    | getMinutes( ) | get the minutes |
+
+
+    | getSeconds( ) | get the seconds |
+
+
+    | getTime( ) | get the time |
+
+
+    Note that getTime( ) returns a number from January 1,1970 to current time.Example:var
+    now = new Date( );var h = now.getHours( );var m = now.getMinutes( );var s = now.getSeconds(
+    );alert ( “Current time is” + h+ “:” + m + “:” + s );( Output:  Current time is
+    19:30:28 )Explanation:“getHours” returns the current hours.“getMinutes” returns
+    the current minutes.“getSeconds” returns the current seconds.Different Time
+
+
+    | getUTCHours( )getTimezoneOffset( ) |
+
+
+    “getUTCHours( )” returns the Greenwich Mean Time. (UTC)“getTimezoneOffset( )”
+    returns the time difference between UTC time and local time. For example, if your
+    time zone is GMT+2, -120 will be returned.Example:var now = new Date( );var utc
+    = now.getUTCHours( );var timezone = now.getTimezoneOffset( );alert ( utc + timezone
+    );( Output: 16: 20:38   300 )Explanation:“getUTCHours( )” returns the UTC time.“getTimezoneOffeset”
+    returns a number. For instance,300 means Eastern Time. 360 means Central Time.
+    420 means Mountain Time. 480 means Pacific Time.Set Date & TimeThe Date Object
+    has following method:
+
+
+    | setFullYear( ) | set the year |
+
+
+    | setMonth( ) | set the month |
+
+
+    | setDate( ) | set  the date |
+
+
+    | setHours( ) | set the hours |
+
+
+    | setMinutes( ) | set the minutes |
+
+
+    | setSeconds( ) | set the seconds |
+
+
+    Note: Please use setFullYear( ) instead of setYear( ).Example:var now = new Date();m=
+    now.setMonth( 0 ); // 0 signify Januaryd = now.setDate( 18 );y = now.setFullYear(
+    2015 );document.write ( m + d + y );( Output:  Jan 18 UTC 2015 )Explanation:“setMonth(0),
+    setDate(18) and setFullYear(2015) set the month, date and year as Jan 18 2015.Timer
+    Function
+
+
+    | window.setTimeout(  ) |
+
+
+    “window.setTimeout( )” can set interval time to perform an action repeatedly.Example:function
+    autoTimer( )  // user-defined function{alert ( “Be Careful!” );window.setTimeout(
+    “autoTmer( )” , 10000 );}(  Output:  Be careful! )Explanation:window.setTimeout(
+    “autoTimer( )” , 10000 ) has two arguments:“autoTimer( )” calls the function “autotimer(
+    ){ }”, which is a user-defined function.“10000” represents 10000 milliseconds,
+    which sets every 10000 milliseconds for autoTimer( ) to call function.Alert “Be
+    Careful!” displays every other 10 seconds.StringString length
+
+
+    | string. length |
+
+
+    “string.length” can calculate the string length.Example:<script type = “text/javascript”>var
+    mystring = “I love JavaScript”;var stringsize = mystring.length;document.write(
+    “String length is” + stringsize );</script>(  Output:  String length is 17 )Explanation:“mystring.length”
+    returns the length of mystring, including spaces.Join Strings
+
+
+    | string1 + string2 + string3 + string4 + string 5…… |
+
+
+    The “+” operator is used to join strings together.Example:<script type = “text/javascript”>var
+    string1 = “JavaScript”;var string2 = “is”;var string3 = “very easy”;alert ( string1
+    + string2 + string3 );</script>( Output:  JavaScript is very easy  )Explanation:“string1
+    + string2 + string3” uses “+” to concatenate strings together.Search a Character
+
+
+    | string.charAt( ) |
+
+
+    “string.chart( number )” is used to find a character at a string.Argument “number”
+    is an index of the string, beginning with 0.Example:var mystring = “JavaScript
+    is easy”;var charac = mystring.charAt ( 2 );alert ( charac );( Output: v )Example:“mystring.charAt(
+    2 )” find a character in mystring with index 2\. The result is “v”.Note that index
+    of string begins with zero.Convert Character Case
+
+
+    | string.toUpperCase( )string.toLowerCase( ) |
+
+
+    “toUpperCase( )” and “toLowerCase( )” can change word’s case.Example:var mystring
+    = "Hello World!";var big = mystring.toUpperCase( );var small = mystring.toLowerCase(
+    );document.write( “Uppercase is” + big + “\n” ); document.write( “Lowercase is”
+    + small);(  Output:  HELLO WORLD!hello world!         )Explanation:“mystring.toUpperCase(
+    )” and “str.toLowerCase( )” change the case of mystring.“\n” changes to new line.Change
+    String to Array
+
+
+    | string.split( “  ” ); |
+
+
+    “string.split(“  ”);” can change a string to an array.Argument (“  ”) is a separator
+    which separates the string  to elements of the array by space.Example:var mystring
+    = “ JavaScript for Beginners”var myarray = mystring.split( “  ” );document.write(
+    “\n” + myarray[0]);document.write( “\n” + myarray[1]);document.write( “\n” + myarray[2]);(  Output:  JavaScriptforBeginners  )Explanation:“mystring.split(
+    “  ” )” separates the string  to elements by space separator, which makes three
+    elements:  myarray[0], myarray[1], myarray[2].Extract Substring
+
+
+    | string.substr( start, length ); |'
+  toc: []
+  trans: "\n\n### `tan()`\n| `tan()` ` | 角度的三角正切 |\n\n示例:\n```javascript\nvar num\
+    \ = 10.2;\ndocument.write ( Math.round(num) );\n```\n( 输出: 10)\nExplanation: `Math.round(num)`\
+    \ 返回 `10.2` 的舍入整数。结果为 `10`。\n\n### `Ceil()` & `Floor()`\n\n| `Math.ceil() ` |\
+    \ `Math.floor() ` |\n| :--- | :--- |\n\n`Math.ceil( )` 返回一个大于或等于其参数的整数。`Math.floor(\
+    \ )` 返回一个小于或等于其参数的整数。\n\n示例: \n```javascript\nvar num = 9.5;\ndocument.write (\
+    \ “Ceiling number is”+Math.ceil( num ) );\ndocument.write ( “Flooring number is”+Math.floor(\
+    \ num ) );\n```\n( 输出: Ceiling number is 10.0 Flooring number is 9.0 )\nExplanation:\
+    \ `Math.ceil( num )` 返回一个大于或等于 `9.5` 的整数，结果为 `10.0`。`Math.floor( num )` 返回一个小于或等于\
+    \ `9.5` 的整数，结果为 `9.0`。\n\n### `Max()` & `Min()`\n\n| `Math.max() ` | `Math.min()\
+    \ ` |\n| :--- | :--- |\n\n`Math.max( )` 返回两个数字中较大的一个。`Math.min( )` 返回两个数字中较小的一个。\n\
+    \n示例: \n```javascript\nvar x = 100;\nvar y = 200;\ndocument.write (“Greater number\
+    \ is”+Math.max(x, y) );\ndocument.write (“Less number is”+Math.min(x, y) );\n\
+    ```\n( 输出: Greater number is 200 Less number is 100 )\nExplanation: `Math.max(x,\
+    \ y)` 返回 `100` 和 `200` 之间较大的数字，结果为 `200`。`Math.min(x, y)` 返回 `100` 和 `200` 之间较小的数字，结果为\
+    \ `100`。\n\n### `Math.PI` & `random()`\n\n| `Math.PI` | `Math.random() ` |\n|\
+    \ :--- | :--- |\n\n`Math.PI` 是存储圆周率 值的常量。`Math.random( )` 生成一个于 `0.0` 到 `1.0`\
+    \ 之间的数字。\n\n示例: \n```javascript\nvar pi = Math.PI;\nvar ran = Math.random( );\n\
+    document.write (“The PI value is” + pi);\ndocument.write (“The random number is”\
+    \ + ran);\n```\n( 输出: The PI value is 3.141592653589793 The random number is 0.16869328\
+    \ )\nExplanation: `Math.PI` 的值为 `3.141592653589793`。`Math.random( )` 生成一个于 `0.0`\
+    \ 到 `1.0` 之间的随机数，在这里的结果是 `0.16869328`。\n\n### Date & Time\nJavaScript 经常使用日期和时间来设计网页。在使用日期和时间时，必须先创建一个日期对象。\n\
+    \n| `var DateObject = new Date( )` |\n\n`new Date( )` 可以创建一个日期对象。\n\n示例: \n```javascript\n\
+    var DateObject = new Date( );\nalert ( DateObject );\n```\n( 输出: Sun Apr 12 12:23\
+    \ UTC 2015 )\nExplanation: `var DateObject = new Date( )` 创建了一个日期对象。`alert ( DateObject\
+    \ )` 显示当前的日期和时间。\n注意：要创建一个日期对象，你可以使用其他变量名，例如：\n```javascript\nvar now= new Date(\
+    \ );\nvar TimeObjcet = new Date( );\n```\n\n#### Date, Month, Year, Day\nDate\
+    \ 对象拥有以下方法：\n\n| `getDate() ` | 获取日期 |\n| :--- | :--- |\n| `getMonth() ` | 获取月份\
+    \ |\n| `getYear() ` | 获取年份 |\n| `getDay() ` | 获取星期 |\n\n注意 `getDay( )` 返回值从 `0`（星期日）到\
+    \ `6`（星期六）。`getMonth( )` 返回值从 `0`（一月）到 `11`（十二二月）。\n\n示例: \n```javascript\nvar\
+    \ now = new Date ( );\nvar y = now.getYear( );\nvar d = now.getDate( );\nalert\
+    \ ( y+ “ ” + d );\n```\n( 输出: 2015 12 )\nExplanation: `now.getYear( )` 返回当前年份。`now.getDate(\
+    \ )` 返回当前日期。\n\n#### Hours, Minutes, Seconds\nDate 对象拥有以下方法：\n\n| `getHours()\
+    \ ` | 获取小时 |\n| :--- | :--- |\n| `getMinutes() ` | 获取分钟 |\n| `getSeconds() ` |\
+    \ 获取秒 |\n| `getTime() ` | 获取时间 |\n\n注意 `getTime( )` 返回一个从 `1970 年 1 月 1 日` 到当前时间的数字。\n\
+    \n示例: \n```javascript\nvar now = new Date( );\nvar h = now.getHours( );\nvar m\
+    \ = now.getMinutes( );\nvar s = now.getSeconds( );\nalert ( “Current time is”\
+    \ + h+ “:” + m + “:” + s );\n```\n( 输出: Current time is 19:30:28 )\nExplanation:\
+    \ `getHours` 返回当前小时。`getMinutes` 返回当前分钟。`getSeconds` 返回当前秒。\n\n#### Different\
+    \ Time\n| `getUTCHours() ` | `getTimezoneOffset() ` |\n| :--- | :--- |\n\n`getUTCHours(\
+    \ )` 返回格林尼治时间（UTC）。`getTimezoneOffset( )` 返回 UTC 时间与本地时间的差异。例如，如果你的时区是 `GMT+2`，将返回\
+    \ `-120`。\n\n示例: \n```javascript\nvar now = new Date( );\nvar utc = now.getUTCHours();\n\
+    var timezone = now.getTimezoneOffset();\nalert ( utc + timezone );\n```\n( 输出:\
+    \ utc + timezone )\nExplanation: `getUTCHours( )` 返回格林尼治时间。`getTimezoneOffset(\
+    \ )` 返回 UTC 时间与本地时间的差异。\n\n### Set Date & Time\nDate 对象拥有以下方法：\n\n| `setDate()\
+    \ ` | 设置日期 |\n| :--- | :--- |\n| `setMonth() ` | 设置月份 |\n| `setYear() ` | 设置年份\
+    \ |\n| `setDate() ` | 设置日期 |\n| `setHours() ` | 设置小时 |\n| `setMinutes() ` | 设置分钟\
+    \ |\n| `setSeconds() ` | 设置秒 |\n| `setTime() ` | 设置时间 |\n\n注意 `setDate( )` 设置月份中的日期。\n\
+    示例: \n```javascript\nvar now = new Date( );\nnow.setDate(15);\nnow.setMonth(5);\n\
+    now.setYear(2023);\nalert ( now );\n```\n( 输出: Date object )\nExplanation: `setDate(\
+    \ )` 设置月份中的日期。\n\n"
+- fmt: "\n## substr()\n\n`substr( start, length )` can extract a substring from a\
+    \ string. `start` argument specify the start position to extract. `length` argument\
+    \ specify the substring length.\n\nExample:\n```javascript\nvar mystring = “JavaScript\
+    \ is easy.\";\nvar sub = mystring.substr( 4, 6 );\nalert ( sub );( Output:  Script\
+    \ )\n```\nExplanation: `mystring.substr( 4, 6 )` extract a substring from `mystring`.\
+    \ `( 4, 6 )` specify substring’s start position is 4, length is 6. Note that string\
+    \ index begins with zero.\n\n## Convert a Number to String\n\n| `number.toString(\
+    \ )` |\n\nTo meet the requirement of JS programming, sometimes a number needs\
+    \ to convert to a string data type. `number.toString( )` can change a number to\
+    \ a string.\n\nExample:\n```javascript\nvar num1 = 12; \nvar num2 = 68;\nvar str1\
+    \ = num1.toString( );\nvar str2 = num2.toString( );\nvar sum = str1 + str2;\n\
+    document.write( sum );(  Output:  1268 )\n```\nExplanation: `num1.toString( )`\
+    \ and `num2.toString( )` change two numbers to string data type. Therefore, the\
+    \ result of `str1`adding `str2` is 1268, instead of 80.\n\n## Convert a String\
+    \ to a Number\n\n| `parseInt(string);` `parseFloat( string);` |\n\n`parseInt(string)`\
+    \ and `parseFloat(string)` can change a string to integer or floating point number.\n\
+    \nExample:\n```javascript\nvar str1 = “12”;  \nvar str2 = “68”;\nvar sum = str1\
+    \ + str2;  \nalert ( sum );(  Output: 1268  )\nvar num1 = parseInt( str1 );\n\
+    var num2 = parseInt( str2 );\nvar addition = num1 + num2;\nalert ( addition );(\
+    \  Output: 80 )\n```\nExplanation: `parseInt( str1 )` and `parseInt( str2 )` convert\
+    \ two strings to number data type. Therefore, the result of `num1`adding `num2`\
+    \ is 80, instead of 1268.\n\n## Search Specific Text (1)\n\n| `indexOf( )` |\n\
+    \n`indexOf( )` can find the first place where a particular text occurs in a string.\n\
+    \nExample:\n```javascript\nvar mystring = \"Please find where find word occurs!\"\
+    ;\nvar place = mystring.indexOf(\"find\");\nalert ( place );( Output: 7)\n```\n\
+    Explanation: `mystring.indexOf ( “find” )` returns the first place where the “find”\
+    \ occurs in `mystring`. The output is 7. Character index begins with zero. If\
+    \ the text is not found in string, `indexOf( )` returns -1. \n\n## Search Specific\
+    \ Text (2)\n\n| `lastIndexOf( )` |\n\n`lastIndexOf( )` can find the last place\
+    \ where a particular text occurs in a string.\n\nExample:\n```javascript\nvar\
+    \ mystring = \"Please find where find word occurs!\";\nvar place = mystring.lastIndexOf(\"\
+    find\");\nalert ( place );( Output: 18 )\n```\nExplanation: `mystring.lastIndexOf\
+    \ ( “find” )` returns the last place where the “find” occurs in `mystring`. The\
+    \ output is 18. Character index begins with zero. If the text is not found in\
+    \ string, `indexOf( )` returns -1.\n\n## Object Declaration\n\nObject refers to\
+    \ a concrete something. For example: a car, a book, a dog, a house, etc…\n\n|\
+    \ `obj = new Object( );` `obj.property;` |\n\n`obj = new Object( )` creates a\
+    \ new object named `obj`. `obj.property` means a object’s property.\n\nExample:\n\
+    ```javascript\nhouse = new Object ( );\nhouse.color = “white”;\nhouse.size = “big”;\n\
+    document.write( “House color: ” + house.color + “\\n”);\ndocument.write( “House\
+    \ size: ” + house.size + “\\n” );(  Output:  House color: whiteHouse size:  big\
+    \ )\n```\nExplanation: `house=new Object( )` creates an object name `house`. `house.color`\
+    \ means house’s color. `house.size` means house’s size.\n\n## Navigate Web Page\n\
+    \n| `windows.history.back( );` `windows.history.forward( );` |\n\n`back( )` is\
+    \ used to navigate the previous web page. `forward( )` is used to navigate the\
+    \ next web page.\n\nExample:\n```javascript\nwindows.history.back( );(  Returns:\
+    \  Previous web page. )\nwindows.history.forward( );(  Returns:  Next web page.\
+    \ )\n```\nExplanation: `back( )` goes to previous page. `forward( )` goes to next\
+    \ page. `window.history.method( )` is used to navigate the specified web page.\
+    \ This method is usually called by a button on web page, which will be mentioned\
+    \ in later chapter.\n\n## Go to Specified Page\n\n| `window.history.go( number\
+    \ );` |\n\n`window.history.go( number)` can turn to specified web page.\n\nExample:\n\
+    ```javascript\nwindow.history.go(1);( Returns:  Next web page.)\nwindow.history.go(\
+    \ -1);( Returns: Previous web page.)\nwindow.history.go( 0 );( Returns: Reload\
+    \ current web page.)\n```\nExplanation: `window.history.method( )` is used to\
+    \ navigate the specified web page. This method is usually called by a button on\
+    \ web page, which will be mentioned in later chapter.\n\n## Open Customized Window\n\
+    \n| `window.open( name, width, height, status, menubar )` |\n\n`window.open` can\
+    \ open a new customized window. `name` argument means new window name. `width`\
+    \ argument means new window width. `height` argument means new window height.\
+    \ `status` and `menubar`.\n\nExample:\n```javascript\nwindow.open( “MyWindow”,\
+    \ “400”, “300”, “Status”, “no” );\n```\nExplanation: `MyWindow` is the window\
+    \ name. `400`, `300` are width and height. `Status` is status. `no` is menubar.\n\
+    \n## Confirmation\n\n| `window.confirm( );` |\n\n`window.confirm( )` requires\
+    \ user to confirm. Dialog box looks like this:\n\nExample:\n```javascript\nvar\
+    \ ask = window.confirm( “Are you sure?” );\nif ( ask == true ) {\n  alert (“All\
+    \ Right!”);\n} else {\n  alert (“No Good!”);\n}\n```\nExplanation: User enters\
+    \ “OK” or “Cancel”.\n\n## Prompt to Input\n\n| `window.prompt( );` |\n\n`window.prompt(\
+    \ )` requires user to input. Dialog box looks like this:\n\nExample:\n```javascript\n\
+    var ask = window.prompt( “Enter your name” );\nif ( ask != null ) {\n  alert (“Hello\
+    \ ” + ask);\n} else {\n  alert (“Cancelled”);\n}\n```\nExplanation: User enters\
+    \ a sentence into prompt box.\n"
+  raw: '“substr( start, length )” can extract a substring from a string.“start” argument
+    specify the start position to extract.“length” argument specify the substring
+    length.Example:var mystring = “JavaScript is easy.”;var sub = mystring.substr(
+    4, 6 );alert  ( sub );( Output:  Script )Explanation:“mystring.substr( 4, 6 )”
+    extract a substring from mystring.“( 4, 6 )” specify substring’s start position
+    is 4, length is 6.Note that string index begins with zero.Convert a Number to
+    String
+
+
+    | number.toString( ); |
+
+
+    To meet the requirement of JS programming, sometimes a number needs to convert
+    to a string data type.“number.toString( )” can change a number to a string.Example:var
+    num1 = 12; var num2 = 68;var str1 = num1.toString( );var str2 = num2.toString(
+    );var sum = str1 + str2;document.write( sum );(  Output:  1268 )Explanation:“num1.toString(
+    )” and “num2.toString( )” change two numbers to string data type. Therefore, the
+    result of str1adding str2 is 1268, instead of 80.Convert a String to a Number
+
+
+    | parseInt(string);parseFloat( string); |
+
+
+    “parseInt(string)” and parseFloat(string) can change a string to integer or floating
+    point number.Example:var str1 = “12”;  var str2 = “68”;var sum = str1 + str2; alert
+    ( sum ); (  Output: 1268  )var num1 = parseInt( str1 );var num2 = parseInt( str2
+    );var addition = num1 + num2;alert ( addition );(  Output: 80 )Explanation:“parseInt(
+    str1)” and “parseInt( str2 )” convert two strings to number data type. Therefore,
+    the result of num1adding num2 is 80, instead of 1268.Search Specific Text (1)
+
+
+    | indexOf( ) |
+
+
+    “indexOf( )” can find the first place where a particular text occurs in a string.Example:var
+    mystring = "Please find where find word occurs!";var place = mystring.indexOf("find");alert
+    ( place );( Output: 7)Explanation:“mystring.indexOf ( “find” )” returns the first
+    place where the “find” occurs in mystring. The output is 7.Character index begins
+    with zero.If the text is not found in string, indexOf( ) returns -1.Search Specific
+    Text (2)
+
+
+    | lastIndexOf( ) |
+
+
+    “lastIndexOf( )” can find the last place where a particular text occurs in a string.Example:var
+    mystring = "Please find where find word occurs!";var place = mystring.lastIndexOf("find");alert
+    ( place );( Output: 18 )Explanation:“mystring.lastIndexOf ( “find” )” returns
+    the last place where the “find” occurs in mystring. The output is 18.Character
+    index begins with zero.If the text is not found in string, indexOf( ) returns
+    -1.ObjectObject DeclarationObject refers to a concrete something. For example: 
+    a car, a book, a dog, a house, etc…
+
+
+    | obj = new Object( );obj.property; |
+
+
+    “obj = new Object( )” creates a new object named “obj”.“obj.property” means a
+    object’s property.Example:house = new Object ( );house.color = “white”;house.size
+    = “big”;document.write( “House color: ” + house.color + “\n”);document.write(
+    “House size: ” + house.size + “\n” );(  Output:  House color: whiteHouse size:  big     )Explanation:“house=new
+    Object( )” creates an object name “house”.“house.color” means house’s color.“house.size”
+    means house’s size.Navigate Web Page
+
+
+    | windows.history.back( );windows.history.forward( ); |
+
+
+    “back( )” is used to navigate the previous web page.“forward( )” is used to navigate 
+    the next web page.Example:windows.history.back( );(  Returns:  Previous web page.  )windows.history.forward(
+    );(  Returns:  Next web page.  )Explanation:“back( )”  goes to previous page.“forward(
+    )” goes to next page.“window.history.method( )” is used to navigate the specified
+    web page. This method is usually called by a button on web page, which will be
+    mentioned in later chapter.Go to Specified Page
+
+
+    | window.history.go( number ); |
+
+
+    “window.history.go( number)” can turn to specified web page.Example:window.history.go(1);(
+    Returns:  Next web page.)window.history.go( -1);( Returns: Previous web page.)window.history.go(
+    0 );( Returns: Reload current web page.)Explanation:“window.history.method( )”
+    is used to navigate the specified web page. This method is usually called by a
+    button on web page, which will be mentioned in later chapter.Open Customized Window
+
+
+    | window.open( name, width, height, status, menubar ) |
+
+
+    “window.open” can open a new customized window.“name” argument means new window
+    name.“width” argument means new window’s width.“height” argument means new window’s
+    height.“status” argument defines window’s status bar.“menubar” argument defines
+    window’s menu bar.Example:window.open( “MyWindow”, “width=300, height=200, status=no,
+    memubar=yes” );( Returns:  A new customized window )Explanation:“MyWindow” is
+    a new window name.“width=300, height=200” specify the size of new window.“status=
+    no” means there is no status bar.“memubar=yes” means there is a menu bar.Confirmation
+
+
+    | window.confirm( ); |
+
+
+    “window.confirm( )” requires user to confirm. Confirm dialog box looks like this:
+
+
+    | ![](image_rsrc270.jpg) |
+
+
+    When clicking “OK”, it returns true in scripting.When clicking “Cancel”, it returns
+    false in scripting.Example:var ask = window.clonfirm( “ Are you sure? ” );if (
+    ask == true ){ alert ( “All Right!” ); }else {  alert (“No Good!”); }(  Output:  All
+    Right!  or  No Good!)Explanation:When clicking “OK” button, it outputs “All Right!”.When
+    clicking “Cancel” button, it outputs “No Good!”.Prompt to Input
+
+
+    | window.prompt( ); |
+
+
+    “window.prompt( )” prompt user to input something  to prompt dialog box, which
+    looks like this:
+
+
+    | ![](image_rsrc271.jpg) |
+
+
+    The user should type some words into prompt dialog box, for example, enter “Yes,
+    I like it.”, and then click the “OK” or “Cancel” button.Example:var ask = window.prompt
+    ( “Do you like JavaScript?” );alert ( ask );(  Output:  Yes, I like it!  )Explanation:User
+    enters a sentence “Yes, I like it!”, and then click “OK” button, the value is
+    assigned to “ask”.“alert ( ask )” displays the contents that is inputted by user.Address
+    Element by ID
+
+
+    | document.getElementById(  ).innerHTML |
+
+
+    “getElementById” access an element by its id.“innerHTML” displays text in HTML
+    document.Example:<body><div id = “position”></body><script type=”text/javascript”>document.getElementById(“position”).innerHTML=
+    “OK”;</script>(  Output in “position”:  OK )Explanation:“id = position” define
+    an id as “position” in HTML document.“getElementById(“position”)” access “position”
+    element.“innerHTML” shows the text “OK” in “position”.Address Element by Tag Name
+
+
+    | document.getElementByITagName(  ).innerHTML |
+
+
+    “getElementByTagName” access an element by its tag name.“innerHTML” displays text
+    in HTML document.Example:<body><p> Notice Here </p></body><script type=”text/javascript”>document.getElementByTagName(“p”).innerHTML=
+    “OK”;</script>(  Output in “p” tag:  OK )Explanation:“<p> Notice Here </p>” define
+    a tag name as “p” in HTML document.“getElementByTagName(“p”)” access “p” tag.“innerHTML”
+    shows the text “OK” within “p” tag, which replaces the original text.Break Statement“break”
+    command works inside the loop.
+
+
+    | break; |
+
+
+    “break” keyword is used to stop the running of a loop according to the condition.Example:var
+    num=0;while (num<10){if (num==5)  break;num++;}document.write( num );( Output:  5)Explanation:“if
+    (num==5)  break;” is a break statement. If num is 5, the program will run the
+    “break” command, the break statement will exit the loop, then run “document.write(num)”.Continue
+    Statement“continue” command works inside the loop.
+
+
+    | continue; |
+
+
+    “continue” keyword is used to stop the current iteration, ignoring the following
+    codes, and then continue the next loop.Example:var num=0;while (num<10){num++;if
+    (num==5)  continue;document.write( num );}( Output: 1234678910)Explanation:Note
+    that the output has no 5.“if (num==5)  continue;” means: When the num is 5, the
+    program will run “continue” command, skipping the next command “document.write(
+    num )”, and then continue the next loop.EventHTML BasicWhen we check the source
+    code of a web page, we will find some HTML elements or tags, which look like this:Example:'
+  toc: []
+  trans: "\n\n## substr()\n\n`substr( start, length )` 可以从字符串中提取子字符串。`start` 参数指定提取的起始位置。`length`\
+    \ 参数指定子字符串的长度。\n\n示例：\n```javascript\nvar mystring = “JavaScript is easy.\";\n\
+    var sub = mystring.substr( 4, 6 );\nalert ( sub );( Output:  Script )\n```\n解释：`mystring.substr(\
+    \ 4, 6 )` 从 `mystring` 中提取子字符串。`( 4, 6 )` 指定子字符串的起始位置为 4，长度为 6。注意字符串索引从零开始。\n\n\
+    ## 将数字转换为字符串\n\n| `number.toString( )` |\n\n为了满足 JS 编程的需求，有时需要将数字转换为字符串数据类型。`number.toString(\
+    \ )`可以将数字转换为字符串。\n\n示例：\n```javascript\nvar num1 = 12; \nvar num2 = 68;\nvar str1\
+    \ = num1.toString( );\nvar str2 = num2.toString( );\nvar sum = str1 + str2;\n\
+    document.write( sum );(  Output:  1268 )\n```\n解释：`num1.toString( )` 和 `num2.toString(\
+    \ )` 将两个数字转换为字符串数据类型。因此，`str1` 相加 `str2` 的结果是 1268，而不是 80。\n\n## 将字符串转换为数字\n\n\
+    | `parseInt(string);` `parseFloat( string);` |\n\n`parseInt(string)` 和 `parseFloat(string)`可以将字符串转换为整数或浮点数。\n\
+    \n示例：\n```javascript\nvar str1 = “12”;  \nvar str2 = “68”;\nvar sum = str1 + str2;\
+    \  \nalert ( sum );(  Output: 1268  )\nvar num1 = parseInt( str1 );\nvar num2\
+    \ = parseInt( str2 );\nvar addition = num1 + num2;\nalert ( addition );(  Output:\
+    \ 80 )\n```\n解释：`parseInt( str1 )` 和 `parseInt( str2 )` 将两个字符串转换为数字数据类型。因此，`num1`\
+    \ 相加 `num2` 的结果是 80，而不是 1268。\n\n## 搜索特定文本 (1)\n\n| `indexOf( )` |\n\n`indexOf(\
+    \ )`可以在字符串中查找特定文本第一次出现的位置。\n\n示例：\n```javascript\nvar mystring = \"Please find\
+    \ where find word occurs!\";\nvar place = mystring.indexOf(\"find\");\nalert (\
+    \ place );( Output: 7)\n```\n解释：`mystring.indexOf ( “find” )` 返回“find”在 `mystring`\
+    \ 中第一次出现的位置。输出为 7。字符索引从零开始。如果在字符串中未找到该文本，`indexOf( )` 返回 -1。 \n\n## 搜索特定文本 (2)\n\
+    \n| `lastIndexOf( )` |\n\n`lastIndexOf( )`可以在字符串中查找特定文本最后一次出现的位置。\n\n示例：\n```javascript\n\
+    var mystring = \"Please find where find word occurs!\";\nvar place = mystring.lastIndexOf(\"\
+    find\");\nalert ( place );( Output: 18 )\n```\n解释：`mystring.lastIndexOf ( “find”\
+    \ )` 返回“find”在 `mystring` 中最后一次出现的位置。输出为 18。字符索引从零开始。如果在字符串中未找到该文本，`indexOf( )`\
+    \ 返回 -1。\n\n## 对象声明\n\n对象（Object）指的是某个具体的事物。例如：汽车、书、狗、房子等……\n\n| `obj = new Object(\
+    \ );` `obj.property;` |\n\n`obj = new Object( )`创建一个名为 `obj` 的新对象。`obj.property`\
+    \ 意味着对象的属性。\n\n示例：\n```javascript\nhouse = new Object ( );\nhouse.color = “white”;\n\
+    house.size = “big”;\ndocument.write( “House color: ” + house.color + “\\n”);\n\
+    document.write( “House size: ” + house.size + “\\n” );(  Output:  House color:\
+    \ whiteHouse size:  big )\n```\n解释：`house=new Object( )` 创建了一个名为 `house` 的对象。`house.color`意味着房屋的颜色。`house.size`意味着房屋的大小。\n\
+    \n## 网页间导航\n\n| `windows.history.back( );` `windows.history.forward( );` |\n\n\
+    `back( )`用于导航到上一个网页。`forward( )`用于导航到下一个网页。\n\n示例：\n```javascript\nwindows.history.back(\
+    \ );(  Returns:  Previous web page. )\nwindows.history.forward( );(  Returns:\
+    \  Next web page. )\n```\n解释：`back( )`回到上一个页面。`forward( )`前往下一个页面。`window.history.method(\
+    \ )`用于导航到指定的网页。该方法通常由网页上的按钮调用，将在后续章节中介绍。\n\n## 跳转到指定页面\n\n| `window.history.go(\
+    \ number );` |\n\n`window.history.go( number)`跳转到指定的网页。\n\n示例：\n```javascript\n\
+    window.history.go(1);( Returns:  Next web page.)\nwindow.history.go( -1);( Returns:\
+    \ Previous web page.)\nwindow.history.go( 0 );( Returns: Reload current web page.)\n\
+    ```\n解释：`window.history.method( )`用于导航到指定的网页。该方法通常由网页上的按钮调用，将在后续章节中介绍。\n\n## 打开自定义窗口\n\
+    \n| `window.open( name, width, height, status, menubar )` |\n\n`window.open`可以打开一个新的自定义窗口。`name`\
+    \ 参数意味着新窗口名称。`width` 参数意味着新窗口宽度。`height` 参数意味着新窗口高度。`status` 和 `menubar`。\n\n\
+    示例：\n```javascript\nwindow.open( “MyWindow”, “400”, “300”, “Status”, “no” );\n\
+    ```\n解释：`MyWindow`是窗口名称。`400`、`300`是宽度和高度。`Status`是状态。`no`是菜单栏。\n\n## 确认\n\n|\
+    \ `window.confirm( );` |\n\n`window.confirm( )`需要用户确认。对话框如下：\n\n示例：\n```javascript\n\
+    var ask = window.confirm( “Are you sure?” );\nif ( ask == true ) {\n  alert (“All\
+    \ Right!”);\n} else {\n  alert (“No Good!”);\n}\n```\n解释：用户点击“确定”或“取消”。\n\n##\
+    \ 输入提示\n\n| `window.prompt( );` |\n\n`window.prompt( )`需要用户输入。对话框如下：\n\n示例：\n\
+    ```javascript\nvar ask = window.prompt( “Enter your name” );\nif ( ask != null\
+    \ ) {\n  alert (“Hello ” + ask);\n} else {\n  alert (“Cancelled”);\n}\n```\n解释：用户在提示框中输入句子。\n\
+    \n"
+- fmt: "\n```html\n<html><head><title>…</title></head><body><form></form>…..</body></html>\n\
+    ```\n\nExplanation: `<html>`...`</html>` define the document of a web page. `<head>`...`</head>`\
+    \ define the head of a web page. `<title>`...`</title>` define the title of a\
+    \ web page. `<body>`...`</body>` define the body of a web page. `<form>`...`</form>`\
+    \ define a form, which accepts the requests or input from a user.\n\n### Click\
+    \ Event\nWhen a user clicks an element on the web page, a “click” event occurs.\n\
+    \n```onClick = function( );\n```\n\n`onClick = function( );` means when clicking\
+    \ an element, a function immediately executes.\n\nExample:\n```html\n<form><input\
+    \ type=\"button\" value=\"Previous\" onClick=\"history.back( )\"></form>\n```\n\
+    ( Returns: Previous web page. )\n\nExplanation: `<form>` and `</form>` is HTML\
+    \ tags, which is in web page, `form` is used to accept the request from users.\
+    \ `<input type=\"button\" value=\"Previous\"...>` defines a button in the form,\
+    \ the button has “Previous” text on it.\n\n`onClick=\"history.back( )\"` means\
+    \ when clicking the button, the `history.back( )` runs at once, and then go back\
+    \ to Previous web page.\n\n### Onload Event\nWhen a web page has completely loaded,\
+    \ an “onload” event occurs.\n\n```onload = function( );\n```\n\n`onload=function(\
+    \ )` means when a web page has loaded, `function( )` immediately executes.\n\n\
+    Example:\n```html\n<html><body onload = alert ( \"Welcome to my page!\" )>……</body></html>\n\
+    ```\nExplanation: `<html>` and `</html>` is html tags, which defines a web page.\
+    \ `<body>` and `</body>` define a web page body. `onload=alert( )` means when\
+    \ a web page loaded, `alert( )` runs at once, and shows the message “Welcome to\
+    \ my page!”.\n\n### Unload Event\nWhen a web page has unloaded, an “unload” event\
+    \ occurs.\n\n```unload = function( );\n```\n\n`unload=function( )` means when\
+    \ a web page has unloaded, `function( )` immediately executes.\n\nExample:\n```html\n\
+    <html><body unload = confirm ( \"Are you sure?\" )>……</body></html>\n```\nExplanation:\
+    \ `<html>` and `</html>` is html tags, which defines a web page. `<body>` and\
+    \ `</body>` define a web page body. `unload=confirm( )` means when a web page\
+    \ unloaded, `confirm( )` runs at once, and shows the message “Are you sure?”.\n\
+    \n### Mouseover Event\nWhen a mouse pointer moves over an element, a “mouseover”\
+    \ event occurs.\n\n```mouseover = function( );\n```\n\n`mouseover = function(\
+    \ )` means when mouse pointer moves over an element, `function( )` executes immediately.\n\
+    \nExample:\n```html\n<body><img src = \"myphoto.jpg\" mouseover = alert (\"Please\
+    \ view the photo.\") ;></</body>>\n```\nExplanation: `<img>` is a tag for defining\
+    \ an image. `src=\"myphoto.jpg\"` specify an image `myphoto.jpg` showing in web\
+    \ page. `mouseover=alert( );` means when mouse pointer moves over the image, `alert(\
+    \ )` runs immediately, and displays the message “Please view the photo”.\n\n###\
+    \ Mouseout Event\nWhen a mouse pointer moves out of an element, a “mouseout” event\
+    \ occurs.\n\n```mouseout = function( );\n```\n\n`mouseout = function( )` means\
+    \ when mouse pointer moves out of an element, `function( )` executes immediately.\n\
+    \nExample:\n```html\n<body><img src = \"myphoto.jpg\" mouseout = alert (\"See\
+    \ you!\") ;></</body>>\n```\nExplanation: `<img>` is a tag for defining an image.\
+    \ `src=\"myphoto.jpg\"` specify an image `myphoto.jpg` showing in web page. `mouseout=alert(\
+    \ );` means when mouse pointer moves out of the image, `alert( )` runs immediately,\
+    \ and displays the message “See you!”.\n\n### Onkeydown Event\nWhen a key is pressed\
+    \ down, an “onkeydown” event occurs.\n\n```onkeydown = function( );\n```\n\n`onkeydown\
+    \ = function( )` means when a key is pressed down, `function( )` executes immediately.\n\
+    \nExample:\n```html\n<body><input type=\"text\" onkeydown=\"myfunction( )\"></</body>\n\
+    <script>function myfunction( ){ alert (\"You pressed a key.\"); }</script>\n```\n\
+    Explanation: `<input type=\"text\"...>` means there is an input field in web page\
+    \ for user entering data. Input field looks like this:\n\n`onkeydown=\"myfunction(\
+    \ )\"` means when a key is pressed down, `myfunction( )` runs at once.\n\n###\
+    \ Onkeyup Event\nWhen a key is released, an “onkeyup” event occurs.\n\n```onkeyup\
+    \ = function( );\n```\n\n`onkeyup = function( )` means when a key is released,\
+    \ `function( )` executes immediately.\n\nExample:\n```html\n<body><input type=\"\
+    text\" onkeyup=\"myfunction( )\"></</body>\n<script>function myfunction( ){ alert\
+    \ (\"You released a key.\"); }</script>\n```\nExplanation: `<input type=\"text\"\
+    ...>` means there is an input field in web page for user entering data. Input\
+    \ field looks like this:\n\n`onkeyup=\"myfunction( )\"` means when a key is released,\
+    \ `myfunction( )` runs at once.\n\n### Focus Event\nWhen the user moves the cursor\
+    \ onto an element in the web page, a “focus” event occurs.\n\n```onfocus = function\
+    \ ( );\n```\n\n`onfocus = function ( )` means when the user moves the cursor onto\
+    \ an element of the web page, `function( )` immediately executes.\n\nExample:\n\
+    ```html\n<body><input type=\"text\" onfocus=\"myfunction( )\"></</body>\n<script>function\
+    \ myfunction( ){ confirm (\"Are you ready to input?.\"); }</script>\n```\nExplanation:\
+    \ `onfocus=\"myfunction( )\"` means when the user moves the cursor onto input\
+    \ field, `myfunction( )` immediately executes.\n\n### Blur Event\nWhen the user\
+    \ moves the cursor out of an element, a “blur” event occurs.\n\n```onblur = function(\
+    \ );\n```\n\n`onblur = function( )` means when the user moves the cursor out of\
+    \ an element, `function( )` immediately executes.\n\nExample:\n```html\n<body><input\
+    \ type=\"text\" onblur=\"myfunction( )\"></</body>\n<script>function myfunction(\
+    \ ){ confirm (\"Are you sure?\"); }</script>\n```\nExplanation: `onblur=\"myfunction(\
+    \ )\"` means when the user moves the cursor out of input field, `myfunction( )`\
+    \ immediately executes.\n\n### Work with Form\nA `form` in html is a important\
+    \ element, which is used to accept the requests or inputs from a user.\n\nExample:\n\
+    ```html\n<form id=\"myform\" method=\"get\" action=\"f.php\">\n  <input type=\"\
+    text\">\n  <input type=\"password\">\n  <input type=\"radio\" value=\"val2\">\n\
+    \  <input type=\"checkbox\" value=\"val3\">\n  <input type=\"submit\" value=\"\
+    OK\">\n  <input type=\"reset\" value=\"Cancel\">\n</form>\n```\nExplanation: `id`\
+    \ means a name of the element. `method=\"get/post\"` means the data send by `get`\
+    \ or `post`. `action=f.php` means the data will be processed by `f.php`. `type`\
+    \ specify the type of element.\n\n### Access Form Attributes\n`window.document.forms`\
+    \ object can access the form attributes.\n\n`document.forms.id.attribute`\n\n\
+    `document.forms.id.attribute` can access the attribute in a form.\n\nExample:\n\
+    ```javascript\nvar message1 = document.forms.myform.method;\nvar message2 = document.forms.myform.action;\n\
+    document.write ( message1);\ndocument.write ( message2);\n```\n(Output:  get \
+    \ f.php )\nExplanation: `document.forms.myform.method` can access the `method`\
+    \ in `myform`, the result is `get`. `document.forms.myform.action` can access\
+    \ the `action` in `myform`, the result is `f.php`.\n\n### Assign Text Value\n\
+    `document.forms.id.element.value = \"newvalue\";`\n\n`document.forms.id.element.value\
+    \ = \"newvalue\";` can assign a new value to an element.\n\nExample:\n```javascript\n\
+    document.forms.myform.txt.value = \"Hello World!\";\ndocument.forms.myform.txt.style.fontFamily\
+    \ = \"Arial\";\ndocument.forms.myform.txt.style.fontSize = \"16pt\";\ndocument.forms.myform.txt.style.color\
+    \ = \"blue\";\ndocument.forms.myform.txt.style.background = \"yellow\";\n```\n\
+    (Output:  Hello World! )\nExplanation: `myform` is the form id. `txt` is the “text\
+    \ field” id. `value = \"Hello World!\"` assign a new value to text field. `style.fontFamily\
+    \ = \"Arial\"` sets the font family. `style.fontSize = \"16pt\"` sets the font\
+    \ size. `style.color = \"blue\"` sets the font color. `style.background = \"yellow\"\
+    ` sets the background color.\n\n### Reset Method\n```reset( )\n```\n"
+  raw: '| <html><head><title>…</title></head><body><form>…</form>…..</body></html>
+    |
+
+
+    Explanation:<html>…</html>  define the document of a web page.<head>…</head> define
+    the head of a web page.<title>…</title> define the title of a web page.<body>…</body>
+    define the body of a web page.<form>…</form> define a form, which accepts the
+    requests or input from a user.Click EventWhen a user clicks an element on the
+    web page, a “click” event occurs.
+
+
+    | onClick = function( ); |
+
+
+    “onClick = function( );” means when clicking an element, a function immediately
+    executes.Example:<form><input type=“button” value=”Previous” onClick=“history.back(
+    )”></form>( Returns:  Previous web page. )Explanation:“<from>” and “</form>” is
+    HTML tags, which is in web page, “form” is used to accept the request from users.“<input
+    type=“button” value=”Previous”…>” defines a button in the form, the button has
+    “Previous” text on it.
+
+
+    | Previous |
+
+
+    “onClick=“history.back( )”” means when clicking the button, the “history.back(
+    )” runs at once, and then go back to Previous web page.Onload EventWhen a web
+    page has completely loaded, an “onload” event occurs.
+
+
+    | onload  = function( ); |
+
+
+    “onload=function( )” means when a web page has loaded, function( ) immediately
+    executes.Example:<html><body onload = alert ( “Welcome to my page!” )>……</body></html>Explanation:<html>
+    and </html> is html tags, which defines a web page.<body> and </body> define a
+    web page body.“onload=alert( )” means when a web page loaded, alert( ) runs at
+    once, and shows the message “Welcome to my page!”.Unload EventWhen a web page
+    has unloaded, an “unload” event occurs.
+
+
+    | unload  = function( ); |
+
+
+    “unload=function( )” means when a web page has unloaded, function( ) immediately
+    executes.Example:<html><body unload = confirm ( “Are you sure?” )>……</body></html>Explanation:<html>
+    and </html> is html tags, which defines a web page.<body> and </body> define a
+    web page body.“unload=confirm( )” means when a web page unloaded, confirm( ) runs
+    at once, and shows the message “Are you sure?”.Mouseover EventWhen a mouse pointer
+    moves over an element, a “mouseover” event occurs.
+
+
+    | mouseover = function( ); |
+
+
+    “mouseover = function( )” means when mouse pointer moves over an element, function(
+    ) executes immediately.Example:<body><img src = “myphoto.jpg” mouseover = alert
+    (“Please view the photo.”) ;></body>Explanation:<img> is a tag for defining an
+    image.“src=”myphoto.jpg”” specify an image “myphoto.jpg” showing in web page.“mouseover=alert(
+    );” means when mouse pointer moves over the image, alert( ) runs immediately,
+    and displays the message “Please view the photo”.Mouseout EventWhen a mouse pointer
+    moves out of an element, a “mouseout” event occurs.
+
+
+    | mouseout = function( ); |
+
+
+    “mouseout = function( )” means when mouse pointer moves out of an element, function(
+    ) executes immediately.Example:<body><img src = “myphoto.jpg” mouseout = alert
+    (“See you!”) ;></body>Explanation:<img> is a tag for defining an image.“src=”myphoto.jpg””
+    specify an image “myphoto.jpg” showing in web page.“mouseout=alert( );” means
+    when mouse pointer moves out of  the image, alert( ) runs immediately, and displays
+    the message “See you!”.Onkeydown EventWhen a key is pressed down, an “onkeydown”
+    event occurs.
+
+
+    | onkeydown = function( ); |
+
+
+    “onkeydown = function( )” means when a key is pressed down, a function( ) executes
+    immediately.Example:<body><input type="text" onkeydown="myfunction( )"></body><script>function
+    myfunction( ){  alert ("You pressed a key."); }</script>Explanation:<input type=”text”…>
+    means there is an input field in web page for user entering data. Input field
+    looks like this:
+
+
+    |  |
+
+
+    “onkeydown="myfunction( )"” means when a key is pressed down, myfunction( ) runs
+    at once.Onkeyup EventWhen a key is released, an “onkeyup” event occurs.
+
+
+    | onkeyup = function( ); |
+
+
+    “onkeyup = function( )” means when a key is released, a function( ) executes immediately.Example:<body><input
+    type="text" onkeyup="myfunction( )"></body><script>function myfunction( ){  alert
+    ("You released a key."); }</script>Explanation:<input type=”text”…> means there
+    is an input field in web page for user entering data. Input field looks like this:
+
+
+    |  |
+
+
+    “onkeyup="myfunction( )"” means when a key is released, myfunction( ) runs at
+    once.Focus EventWhen the user moves the cursor onto an element in the web page,
+    a “focus” event occurs.
+
+
+    | onfocus = function ( ); |
+
+
+    “onfocus = function ( )” means when the user moves the cursor onto an element
+    of the web page, a function( ) immediately executes.Example:<body><input type="text"
+    onfocus="myfunction( )"></body><script>function myfunction( ){  confirm ("Are
+    you ready to input?."); }</script>Explanation:“onfocus="myfunction( )"” means
+    when the user moves the cursor onto input field in the web page, myfunction( )
+    immediately executes.Blur EventWhen the user moves the cursor out of an element
+    in the web page, a “blur” event occurs.
+
+
+    | onblur = function ( ); |
+
+
+    “onblur = function ( )” means when the user moves the cursor out of  an element
+    of the web page, a function( ) immediately executes.Example:<body><input type="text"
+    onblur="myfunction( )"></body><script>function myfunction( ){  confirm ("Are you
+    sure to leave?."); }</script>Explanation:“onblur="myfunction( )"” means when the
+    user moves the cursor out of input field in the web page, myfunction( ) immediately
+    executes.Work with FormForm BasicA “form” in html is a very important element,
+    which is used to accept the requests or inputs from the user.Example:<form id=”myform”
+    method=”get” action=”f.php”><input id=”txt” type=”text”><input id=”pas” type=”password”><input
+    id=”rad” type=”radio” value=”val2”><input id=”chb” type=”checkbox” value=”val3”><input
+    id=”sub” type=”submit” value=”OK”><input id=”rst” type=”reset” value=”Cancel”></form>Explanation:“id”
+    means a name of the element.“method=”get/post”” means the data send by “get” or
+    “post”.“get” method sends link data openly, small quantity.“post” method sends
+    link data secretly, more quantity.“action=f.php” means the data will be processed
+    by f.php“type” specify the type of element.Access Form Attributes“window.document.forms”
+    object can access the form attributes.
+
+
+    | document.forms. id. attribute |
+
+
+    “document.forms. id. attribute” can access the attribute in a form.Example:  (Take
+    example of previous page’s form.)var message1 = document.forms.myform.method;var
+    message2 = document.forms.myform.action;document.write ( message1);document.write
+    ( message2);(Output:  get   f.php  )Explanation:“document.forms.myform.method”
+    can access the “method” in “myform”, the result is “get”.“document.forms.myform.action”
+    can access the “action” in “myform”, the result is “f.php”.Assign Text Value
+
+
+    | document.forms.id.element.value = “newvalue”; |
+
+
+    “document.forms.id.element.value = “newvalue”;” can assign a new value to an element.Example: 
+    (Take example of previous page’s form.)document.forms.myform.txt.value = “Hello
+    World!”;document.forms.myform.txt.style.fontFamily = “Arial”;document.forms.myform.txt.style.fontSize
+    = “16pt”;document.forms.myform.txt.style.color = “blue”;document.forms.myform.txt.style.background
+    = “yellow”;(Output:  Hello World!   )Explanation:“myform” is the form id.“txt”
+    is the “text field” id.value = “Hello World!” assign a new value to text field.style.fontFamily
+    = “Arial” sets the font family.style.fontSize = “16pt” sets the font size.style.color
+    = “blue” sets the font color.style.background = “yellow” sets the background color.Reset
+    Method
+
+
+    | reset( ) |'
+  toc: []
+  trans: '
+
+
+    ```html
+
+    <html><head><title>…</title></head><body><form></form>…..</body></html>
+
+    ```
+
+
+    解释：`<html>`...`</html>` 定义了网页文档。`<head>`...`</head>` 定义网页的头部。`<title>`...`</title>`
+    定义网页的标题。`<body>`...`</body>` 定义网页的正文。`<form>`...`</form>` 定义了一个表单，用于接收来自用户的请求或输入。
+
+
+    ### 点击事件 (Click Event)
+
+    当用户点击网页上的某个元素时，会触发“click”事件。
+
+
+    ```onClick = function( );
+
+    ```
+
+
+    `onClick = function( );` 意味着当点击元素时，会执行一个函数。
+
+
+    示例：
+
+    ```html
+
+    <form><input type="button" value="Previous" onClick="history.back( )"></form>
+
+    ```
+
+    （ 返回：上一个网页。 ）
+
+
+    解释：`<form>` 和 `</form>` 是 HTML 标签，位于网页中，`form` 用于接收来自用户的请求。`<input type="button"
+    value="Previous"...>` 在表单中定义了一个按钮，按钮上有“Previous”文本。
+
+
+    `onClick="history.back( )"` 意味着当点击按钮时，`history.back( )` 会立即运行，然后返回上一个网页。
+
+
+    ### 加载事件 (Onload Event)
+
+    当网页完全加载完成后，会触发“onload”事件。
+
+
+    ```onload = function( );
+
+    ```
+
+
+    `onload=function( )` 意味着当网页加载完成后，`function( )` 会立即执行。
+
+
+    示例：
+
+    ```html
+
+    <html><body onload = alert ( "Welcome to my page!" )>……</body></html>
+
+    ```
+
+    解释：`<html>` 和 `</html>` 是 html 标签，定义了一个网页。`<body>` 和 `</body>` 定义网页的正文。`onload=alert(
+    )` 意味着当网页加载时，`alert( )` 会立即运行并显示消息“Welcome to my page!”。
+
+
+    ### 卸载事件 (Unload Event)
+
+    当网页卸载时，会触发“unload”事件。
+
+
+    ```unload = function( );
+
+    ```
+
+
+    `unload=function( )` 意味着当网页卸载时，`function( )` 会立即执行。
+
+
+    示例：
+
+    ```html
+
+    <html><body unload = confirm ( "Are you sure?" )>……</body></html>
+
+    ```
+
+    解释：`<html>` 和 `</html>` 是 html 标签，定义了一个网页。`<body>` 和 `</body>` 定义网页的正文。`unload=confirm(
+    )` 意味着当网页卸载时，`confirm( )` 会立即运行并显示消息“Are you sure?”。
+
+
+    ### 鼠标悬入事件 (Mouseover Event)
+
+    当鼠标指针移动到元素上方时，会触发“mouseover”事件。
+
+
+    ```mouseover = function( );
+
+    ```
+
+
+    `mouseover = function( )` 意味着当鼠标指针移动到元素上方时，`function( )` 会立即执行。
+
+
+    示例：
+
+    ```html
+
+    <body><img src = "myphoto.jpg" mouseover = alert ("Please view the photo.") ;></</body>>
+
+    ```
+
+    解释：`<img>` 是定义图片的标签。`src="myphoto.jpg"` 指定了网页中显示的图片 `myphoto.jpg`。`mouseover=alert(
+    );` 意味着当鼠标指针移动到图片上方时，`alert( )` 会立即运行并显示消息“Please view the photo”。
+
+
+    ### 鼠标移出事件 (Mouseout Event)
+
+    当鼠标指针移出元素时，会触发“mouseout”事件。
+
+
+    ```mouseout = function( );
+
+    ```
+
+
+    `mouseout = function( )` 意味着当鼠标指针移出元素时，`function( )` 会立即执行。
+
+
+    示例：
+
+    ```html
+
+    <body><img src = "myphoto.jpg" mouseout = alert ("See you!") ;></</body>>
+
+    ```
+
+    解释：`<img>` 是定义图片的标签。`src="myphoto.jpg"` 指定了网页中显示的图片 `myphoto.jpg`。`mouseout=alert(
+    );` 意味着当鼠标指针移出图片时，`alert( )` 会立即运行并显示消息“See you!”。
+
+
+    ### 按键按下事件 (Onkeydown Event)
+
+    当按键被按下时，会触发“onkeydown”事件。
+
+
+    ```onkeydown = function( );
+
+    ```
+
+
+    `onkeydown = function( )` 意味着当按键按下时，`function( )` 会立即执行。
+
+
+    示例：
+
+    ```html
+
+    <body><input type="text" onkeydown="myfunction( )"></</body>
+
+    <script>function myfunction( ){ alert ("You pressed a key."); }</script>
+
+    ```
+
+    解释：`<input type="text"...>` 意味着网页中有一个输入框供用户输入数据。输入框如下所示：
+
+
+    `onkeydown="myfunction( )"` 意味着当按键按下时，`myfunction( )` 会立即运行。
+
+
+    ### 按键释放事件 (Onkeyup Event)
+
+    当按键被释放时，会触发“onkeyup”事件。
+
+
+    ```onkeyup = function( );
+
+    ```
+
+
+    `onkeyup = function( )` 意味着当按键释放时，`function( )` 会立即执行。
+
+
+    示例：
+
+    ```html
+
+    <body><input type="text" onkeyup="myfunction( )"></</body
+
+    <script>function myfunction( ){ alert ("You released a key."); }</script>
+
+    ```
+
+    解释：`<input type="text"...>` 意味着网页中有一个输入框供用户输入数据。输入框如下所示：
+
+
+    `onkeyup="myfunction( )"` 意味着当按键释放时，`myfunction( )` 会立即执行（立即运行）。
+
+
+    ### 聚焦事件 (Focus Event)
+
+    当用户将光标移动到元素上时，会触发“focus”事件。
+
+
+    ```focus = function( );
+
+    ```
+
+
+    `focus=function( )` 意味着当光标移动到元素时，`function( )` 会立即执行。
+
+
+    示例：
+
+    ```html
+
+    <body><input type="text" onfocus="myfunction( )"></</body>
+
+    ```
+
+    （：网页中的输入。`focus=function( )` 意味着当光标移动到元素时，`function( )` 会立即执行。
+
+
+    ### 失去聚焦事件 (Blur Event)
+
+    当用户光标移出元素时，会触发“blur”事件。
+
+
+    ```blur = function( );
+
+    ```
+
+
+    `blur=function( )` 意味着当光标移出元素时，`function( )` 会立即执行。
+
+
+    '
+- fmt: "\n## reset()\n\n`reset()` is used to clear the form data.\n\nExample:\n```html\n\
+    <form id=\"myform\" method=\"get\" action=\"f.php\">\n……\n<input type=\"button\"\
+    \ onclick=\"myfunction()\" value=\"Clear\">\n</form>\n<script>\nfunction myfunction()\
+    \ {\n  document.getElementById(\"myform\").reset();\n}\n</script>\n```\n(Result:\
+    \ The form data are completely cleared.)\n\nExplanation: `onclick=\"myfunction()\"\
+    ` means when click the button, `myfunction()` immediately executes. `document.getElementById(\"\
+    myform\")` access the `myform` by its id. `reset()` clears `myform` data.\n\n\
+    ## Submit Method\n\n### submit()\n\n`submit()` is used to submit the form data\
+    \ to server.\n\nExample:\n```html\n<form id=\"myform\" method=\"get\" action=\"\
+    f.php\">\n……\n<input type=\"button\" onclick=\"myfunction()\" value=\"Submit\"\
+    >\n</form>\n<script>\nfunction myfunction() {\n  document.getElementById(\"myform\"\
+    ).submit();\n}\n</script>\n```\n(Result: The form data are submitted to the server.)\n\
+    \nExplanation: `onclick=\"myfunction()\"` means when click the button, `myfunction()`\
+    \ immediately executes. `document.getElementById(\"myform\")` access the `myform`\
+    \ by its id. `submit()` submits `myform` data to server.\n\n## Select Selection\n\
+    \n| `<select id=\"myid \" onchange=\"function ( )\">` |\n\nWhen a `select` value\
+    \ in form is change, `onChange` event occurs and runs the `function ( )` at once.\n\
+    \n| Red | v |\n\nExample:\n```html\n<select id=\"mySelect\" onchange=\"myfunction()\"\
+    >\n  <option value=\"Red\">Red</option>\n  <option value=\"Blue\">Blue</option>\n\
+    \  <option value=\"Pink\">Pink</option>\n</select>\n<script type=\"text/javascript\"\
+    >\nfunction myfunction() {\n  var v=document.getElementById(\"mySelect\").value;\n\
+    \  alert(\"You selected: \" + v);\n} // e.g. select Pink\n</script>\n```\n(Output:\
+    \ You selected: Pink)\n\nExplanation: `document.getElementById(\"mySelect\")`\
+    \ access `mySelect` by its id. `document.getElementById(\"mySelect\").value` means\
+    \ to get a value.\n\n## Radio Selection\n\n| `<input type=\"radio\" id=\"myid\"\
+    \ value=\"myvalue\">` |\n\nA group of radio buttons allows one circle to be check\
+    \ at any time and submit the selected value to process.\n\nExample:\n```html\n\
+    ( Display: ○ red ○ blue ○ pink )\n<input type=\"radio\" id=\"color\" value=\"\
+    Red\">Red\n<input type=\"radio\" id=\"color\" value=\"Blue\">Blue\n<input type=\"\
+    radio\" id=\"color\" value=\"Pink\">Pink\n<input type=\"submit\" value=\"submit\"\
+    \ onclick=\"myfunct()\">\n<script>\nfunction myfunct() {\n  var v=document.getElementById(\"\
+    color\").value;\n  alert(v);\n} // e.g. select Blue\n</script>\n```\n(Output:\
+    \ Blue)\n\nExplanation: `document.getElementById(\"color\")` access `color` by\
+    \ its id. `document.getElementById(\"color\").value` means to get a value.\n\n\
+    ## CheckBox Selection\n\n| `<input type=\"checkbox\" id=\"myid\" value=\"myvalue\"\
+    >` |\n\nA group of check buttons allows multiple boxes to be check at any time\
+    \ and submit the selected value to process.\n\nExample:\n```html\n( Display: □\
+    \ red □ blue □ pink )\n<input type=\"checkbox\" id=\"color\" value=\"Red\">Red\n\
+    <input type=\"checkbox\" id=\"color\" value=\"Blue\">Blue\n<input type=\"checkbox\"\
+    \ id=\"color\" value=\"Pink\">Pink\n<input type=\"submit\" value=\"submit\" onclick=\"\
+    myfunct()\">\n<script>\nfunction myfunct() {\n  var v=document.getElementById(\"\
+    color\").value;\n  alert(v);\n} // e.g. select Blue Pink\n</script>\n```\n(Output:\
+    \ Blue Pink)\n\nExplanation: `document.getElementById(\"color\")` access `color`\
+    \ by its id. `document.getElementById(\"color\").value` means to get a value.\n\
+    \n## JavaScript: Function ( ) (1)\n\nThe `href` attribute in a hyperlink usually\
+    \ includes code of `JavaScript: function( )`.\n\n| `<a href=\"javascript: function(\
+    \ )\"> text</a>` |\n\n`<a>` defines a hyperlink.\n\nExample:\n```html\n<p><a href=\"\
+    javascript:confirm('Are you sure?')\"> Learn JavaScript!</</a></p>\n```\n(Output:\
+    \ Learn JavaScript!)\n\n![](image_rsrc270.jpg)\n\nExplanation: When you clicks\
+    \ the hyperlink \"Learn JavaScript!\", confirm dialog box displays \"Are you sure?\"\
+    \ immediately, you can click \"OK\" or \"Cancel\".\n\n## JavaScript: Function\
+    \ ( ) (2)\n\nThe `href` attribute in a hyperlink usually includes code of `JavaScript:\
+    \ function( )`.\n\n| `<a href=\"javascript: function( )\"> text</a>` |\n\n`<a>`\
+    \ defines a hyperlink.\n\nExample:\n```html\n<p><a href=\"javascript:prompt('Do\
+    \ you like JavaScript?')\"> JavaScript in 8 Hours! </a></p>\n```\n(Output: JavaScript\
+    \ in 8 Hours!)\n\n![](image_rsrc271.jpg)\n\nExplanation: When you clicks the hyperlink\
+    \ “JavaScript Prompt dialog box displays “Do you like JavaScript?” immediately,\
+    \ you can enter “Yes, I like it.”, then “OK”!\n"
+  raw: '“reset( )” is used to clear  the form data.Example:<form id=”myform” method=”get”
+    action=”f.php”>……<input type="button" onclick="myfunction()" value="Clear” ></form"><script>function
+    myfunction() {document.getElementById("myform").reset();}</script>(Result:  The
+    form data are completely cleared.)Explanation:“onclick="myfunction()” means when
+    click the button, myfunction( ) immediately executes.“getElementById("myform")”
+    access the “myform” by its id.“reset( )” clears “myform” data.Submit Method
+
+
+    | submit( ) |
+
+
+    “submit( )” is used to submit  the form data to server.Example:<form id=”myform”
+    method=”get” action=”f.php”>……<input type="button" onclick="myfunction()" value="Submit”
+    ></form"><script>function myfunction() {document.getElementById("myform").submit();}</script>(Result: 
+    The form data are submitted to the server.)Explanation:“onclick="myfunction()”
+    means when click the button, myfunction( ) immediately executes.“getElementById("myform")”
+    access the “myform” by its id.“submit( )” submits “myform” data to server.“Select”
+    Selection
+
+
+    | <select id="myid " onchange="function ( )"> |
+
+
+    When a “select” value in form is change, “onChange” event occurs and runs the
+    “function ( )” at once.
+
+
+    | Red | v |
+
+
+    Example:      <select id="mySelect" onchange="myfunction()"><option value="Red">Red<option
+    value="Blue">Blue<option value="Pink">Pink</select><script type=”text/javascript”>function
+    myfunction( ) {var v=document.getElementById("mySelect").value;alert ("You selected:
+    " + v);  }    // e.g. select Pink</script>(Output:  You selected: Pink  )Explanation:“getElementById("mySelect")”
+    access “mySelect” by its id.“getElementById("mySelect").value” means to get a
+    value.“Radio” Selection
+
+
+    | <input type=”radio” id= “myid” value= “myvalue”> |
+
+
+    A group of radio buttons allows one circle to be check at any time and submit
+    the selected value to process.Example:    ( Display:   ○　red                ○　blue             ○　pink  )<input
+    type= “radio”  id= “color” value= “Red”>Red<input type= “radio” id= “color” value=
+    “Blue”>Blue<input type= “radio” id= “color” value= “Pink”>Pink<input type= “submit”
+    value= “submit” onclick= “myfunct( )”><script>function myfunct( ) {var v=document.getElementById("color").value;alert
+    ( v );   // e.g. select Blue}</script>( Output:  Blue  )Explanation:“getElementById("color")”
+    access “color” by its id.“getElementById("color").value” means to get a value.“CheckBox”
+    Selection
+
+
+    | <input type=”checkbox” id= “myid” value= “myvalue”> |
+
+
+    A group of check buttons allows multiple boxes to be check at any time and submit
+    the selected value to process.Example:   ( Display:    □　red                  □　blue             □　pink   )<input
+    type= “checkbox”  id= “color” value= “Red”>Red<input type= “checkbox” id= “color”
+    value= “Blue”>Blue<input type= “checkbox” id= “color” value= “Pink”>Pink<input
+    type= “submit” value= “submit” onclick= “myfunct( )”><script>function myfunct(
+    ) {var v=document.getElementById("color").value;alert ( v );   // e.g. select
+    Blue Pink}</script>( Output:  Blue   Pink   )Explanation:“getElementById("color")”
+    access “color” by its id.“getElementById("color").value” means to get a value.JavaScript:
+    Function ( ) (1)The “href” attribute in a hyperlink usually includes code of “JavaScript:
+    function( )”.
+
+
+    | < a href= “javascript: function( )”> text </a> |
+
+
+    <a href> defines a hyperlink.Example:<p><a href = “javascript:confirm (‘Are you
+    sure?’)”> Learn JavaScript! </a></p>( Output:    Learn JavaScript! )
+
+
+    | ![](image_rsrc270.jpg) |
+
+
+    Explanation:When you clicks the hyperlink “Learn JavaScript!”, confirm dialog
+    box displays “Are you sure?” immediately, you can click “OK” or “Cancel”.JavaScript:
+    Function ( ) (2)The “href” attribute in a hyperlink usually includes code of “JavaScript:
+    function( )”.
+
+
+    | < a href= “javascript: function( )”> text </a> |
+
+
+    <a href> defines a hyperlink.Example:<p><a href = “javascript:prompt (‘Do you
+    like JavaScript?’)”>  JavaScript in 8 Hours!  </a></p>( Output:   JavaScript in
+    8 Hours!
+
+
+    | ![](image_rsrc271.jpg) |
+
+
+    )Explanation:When you clicks the hyperlink “JavaScript Prompt dialog box displays
+    “Do you like JavaScript?” immediately, you can enter “Yes, I like it.”, then “OK”!'
+  toc: []
+  trans: "\n\n## reset()\n\n`reset()` 用于清除表单数据。\n\n示例：\n```html\n<form id=\"myform\"\
+    \ method=\"get\" action=\"f.php\">\n……\n<input type=\"button\" onclick=\"myfunction()\"\
+    \ value=\"Clear\">\n</form>\n<script>\nfunction myfunction() {\n  document.getElementById(\"\
+    myform\").reset();\n}\n</script>\n```\n（结果：表单数据被完全清除。）\n\n解释：`onclick=\"myfunction()\"\
+    ` 意味着点击按钮时会立即执行 `myfunction()`。`document.getElementById(\"myform\")` 通过其 id 访问\
+    \ `myform`。`reset()` 清空 `myform` 数据。\n\n## 提交方法 (Submit Method)\n\n### submit()\n\
+    \n`submit()` 用于将表单数据提交到。\n\n示例：\n```html\n<form id=\"myform\" method=\"get\" action=\"\
+    f.php\">\n……\n<input type=\"button\" onclick=\"myfunction()\" value=\"Submit\"\
+    >\n</form>\n<script>\nfunction myfunction() {\n  document.getElementById(\"myform\"\
+    ).submit();\n}\n</script>\n```\n（结果：表单数据已提交到服务器。）\n\n解释：`onclick=\"myfunction()\"\
+    ` 意味着点击按钮时会立即执行 `myfunction()`。`document.getElementById(\"myform\")` 通过其 id 访问\
+    \ `myform`。`submit()` 将 `myform` 数据提交到服务器。\n\n## 选择框选择 (Select Selection)\n\n\
+    | `<select id=\"myid \" onchange=\"function ( )\">` |\n\n当表单中的 `select` 值发生变化时，会触发\
+    \ `onChange` 事件并立即运行 `function ( )`。\n\n| Red | v |\n\n示例：\n```html\n<select id=\"\
+    mySelect\" onchange=\"myfunction()\">\n  <option value=\"Red\">Red</option>\n\
+    \  <option value=\"Blue\">Blue</option>\n  <option value=\"Pink\">Pink</option>\n\
+    </select>\n<script type=\"text/javascript\">\nfunction myfunction() {\n  var v=document.getElementById(\"\
+    mySelect\").value;\n  alert(\"You selected: \" + v);\n} // 例如：选择 Pink\n</script>\n\
+    ```\n（输出：You selected: Pink）\n\n解释：`document.getElementById(\"mySelect\")` 通过其\
+    \ id 访问 `mySelect`。`document.getElementById(\"mySelect\").value` 意味着获取值。\n\n##\
+    \ 单选框选择 (Radio Selection)\n\n| `<input type=\"radio\" id=\"myid\" value=\"myvalue\"\
+    >` |\n\n一组单选按钮允许随时勾选一个圆，并提交选中的值进行处理。\n\n示例：\n```html\n( 显示：○ red ○ blue ○ pink\
+    \ )\n<input type=\"radio\" id=\"color\" value=\"Red\">Red\n<input type=\"radio\"\
+    \ id=\"color\" value=\"Blue\">Blue\n<input type=\"radio\" id=\"color\" value=\"\
+    Pink\">Pink\n<input type=\"submit\" value=\"submit\" onclick=\"myfunct()\">\n\
+    <script>\nfunction myfunct() {\n  var v=document.getElementById(\"color\").value;\n\
+    \  alert(v);\n} // 例如：选择 Blue\n</script>\n```\n（输出：Blue）\n\n解释：`document.getElementById(\"\
+    color\")` 通过其 id 访问 `color`。`document.getElementById(\"color\").value` 意味着获取值。\n\
+    \n## 复选框选择 (CheckBox Selection)\n\n| `<input type=\"checkbox\" id=\"myid\" value=\"\
+    myvalue\">` |\n\n一组复选按钮允许随时勾选多个框，并提交选中的值进行处理。\n\n示例：\n```html\n( 显示：□ red □ blue\
+    \ □ pink )\n<input type=\"checkbox\" id=\"color\" value=\"Red\">Red\n<input type=\"\
+    checkbox\" id=\"color\" value=\"Blue\">Blue\n<input type=\"checkbox\" id=\"color\"\
+    \ value=\"Pink\">Pink\n<input type=\"submit\" value=\"submit\" onclick=\"myfunct()\"\
+    >\n<script>\nfunction myfunct() {\n  var v=document.getElementById(\"color\").value;\n\
+    \  alert(v);\n} // 例如：选择 Blue Pink\n</script>\n```\n（输出：Blue Pink）\n\n解释：`document.getElementById(\"\
+    color\")` 通过其 id 访问 `color`。`document.getElementById(\"color\").value` 意味着获取值。\n\
+    \n## JavaScript: Function ( ) (1)\n\n超链接中的 `href` 属性通常包含 `JavaScript: function(\
+    \ )` 代码。\n\n| `<a href=\"javascript: function( )\"> 文本</a>` |\n\n`<a>` 定义了一个超链接。\n\
+    \n示例：\n```html\n<p><a href=\"javascript:confirm('Are you sure?')\"> Learn JavaScript!</</a></p>\n\
+    ```\n（输出：Learn JavaScript!）\n\n![](img/image_rsrc270.jpg)\n\n解释：当你点击“Learn JavaScript!”超链接时，确认对话框立即显示“Are\
+    \ you sure?”，你可以点击“OK”或“Cancel”。\n\n## JavaScript: Function ( ) (2)\n\n超链接中的 `href`\
+    \ 属性通常包含 `JavaScript: function( )` 代码。\n\n| `<a href=\"javascript: function( )\"\
+    > 文本</a>` |\n\n`<a>` 定义了一个超链接。\n\n示例：\n```html\n<p><a href=\"javascript:prompt('Do\
+    \ you like JavaScript?')\"> JavaScript in 8 Hours! </a></p>\n```\n（输出：JavaScript\
+    \ in 8 Hours!）\n\n![](img/image_rsrc271.jpg)\n\n解释：当你点击超链接 “JavaScript Prompt”时，Prompt\
+    \ 对话框立即显示“Do you like JavaScript?”，你可以输入“Yes, I like it.”，然后点击“OK”！\n\n"

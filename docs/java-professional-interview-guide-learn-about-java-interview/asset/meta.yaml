@@ -1,0 +1,298 @@
+name: Java Professional Interview Guide： Learn About Java Interview Questions and
+  Practise Answering About Concurrency, JDBC, Exception Handling, Spring, and Hibernate
+  (English Edition)
+name_cn: Java 高级面试指南：学习 Java 面试题并练习并发、JDBC、异常处理、Spring 和 Hibernate 的回答（英文版）
+slug: java-professional-interview-guide-learn-about-java-interview
+toc:
+- - '#'
+  - Java 高级面试指南：学习 Java 面试题并练习并发、JDBC、异常处理、Spring 和 Hibernate 的回答（英文版）
+- - '##'
+  - 关于作者
+- - '##'
+  - 关于评审员
+- - '#'
+  - 第 1 章：技术之外的准备
+- - '##'
+  - 第 2 章：Java 架构
+- - '##'
+  - 第 3 章：Java 面向对象
+- - '##'
+  - 第 4 章：异常处理
+- - '##'
+  - 第 5 章：文件处理
+- - '##'
+  - 第 6 章：并发
+- - '##'
+  - 第 7 章：JDBC
+- - '##'
+  - 第 8 章：集合 (Collections)
+- - '##'
+  - 第 9 章：杂项
+- - '##'
+  - 第 10 章：函数式编程
+- - '##'
+  - 第 11 章：设计模式
+- - '##'
+  - 第 12 章：Web 基础
+- - '##'
+  - 第 13 章：Spring 和 Spring Boot
+- - '##'
+  - 第 14 章：Hibernate
+- - '#'
+  - 第 1 章：技术之外的准备
+- - '##'
+  - 技术之外的准备
+- - '##'
+  - Java 架构
+- - '##'
+  - Java 运行环境 (JRE)
+- - '##'
+  - 类加载器
+- - '###'
+  - 启动类加载器 (Bootstrap class loader)
+- - '###'
+  - 扩展类加载器 (Extension class loader)
+- - '###'
+  - 系统或应用加载器 (System or application class loader)
+- - '##'
+  - 字节码验证
+- - '##'
+  - OutMemoryError 异常
+- - '##'
+  - 栈内存与堆内存的区别
+- - '##'
+  - JIT 编译器工作原理
+- - '##'
+  - JIT 版本的差异与禁用
+- - '##'
+  - JDK、JRE 和 JVM 之间的区别
+- - '##'
+  - 重载 main() 方法
+- - '#'
+  - 第 3 章：Java 面向对象
+- - '##'
+  - 设计类的约定
+- - '##'
+  - 什么是对象？
+- - '##'
+  - 行为
+- - '##'
+  - 身份
+- - '##'
+  - 构造函数
+- - '##'
+  - 私有构造函数
+- - '##'
+  - 为什么 Java 不被称为 100% 面向对象的语言？
+- - '##'
+  - 为什么 Java 中所有的实例变量都有默认值？
+- - '##'
+  - 访问器方法 (accessor) 和修改方法 (mutator)
+- - '##'
+  - 对象创建
+- - '###'
+  - 创建对象的不同方式
+- - '###'
+  - '`newInstance` 方法'
+- - '###'
+  - 对象的拷贝
+- - '###'
+  - '`clone` 方法'
+- - '###'
+  - 反序列化
+- - '##'
+  - 访问修饰符
+- - '###'
+  - private 修饰符
+- - '###'
+  - 封装
+- - '###'
+  - 封装的实现与原则
+- - '###'
+  - 继承
+- - '###'
+  - 关联 (Association)
+- - '###'
+  - 组合与聚合
+- - '###'
+  - is-a 关系
+- - '###'
+  - has-a 关系
+- - '#'
+  - 第 4 章：异常处理
+- - '##'
+  - 异常的层次结构
+- - '##'
+  - Error 和 Exception 的区别
+- - '##'
+  - 异常级联 (Cascading)
+- - '##'
+  - 链式异常 (Chained exception)
+- - '##'
+  - try-catch-finally 结构
+- - '##'
+  - finally 块的作用
+- - '##'
+  - ClassNotFoundException 与 NoClassDefFoundError
+- - '##'
+  - 自定义异常的创建
+- - '##'
+  - throws 关键字的作用
+- - '##'
+  - JDK 7 异常处理更新
+- - '###'
+  - 自动资源管理 (try-with-resources)
+- - '###'
+  - 多捕获语句
+- - '###'
+  - '`printStackTrace()` 方法'
+- - '###'
+  - '`throw` 关键字'
+- - '#'
+  - 第 6 章：并发
+- - '##'
+  - 核心概念
+- - '###'
+  - Executor 框架
+- - '###'
+  - 线程安全
+- - '###'
+  - 线程生命周期
+- - '###'
+  - 线程调度
+- - '##'
+  - 线程同步
+- - '###'
+  - synchronized 块
+- - '###'
+  - 内部锁 (intrinsic lock)
+- - '###'
+  - 重入同步 (reentrant synchronization)
+- - '##'
+  - 死锁 (deadlock)
+- - '###'
+  - 死锁的检测与避免
+- - '##'
+  - 线程连接 (join)
+- - '##'
+  - 线程通信 (wait/notify)
+- - '##'
+  - 线程优先级
+- - '##'
+  - 竞态条件 (race condition)
+- - '##'
+  - volatile 关键字
+- - '##'
+  - ThreadLocal
+- - '#'
+  - 第 7 章：JDBC
+- - '##'
+  - JDBC 基础
+- - '##'
+  - JDBC API
+- - '##'
+  - 数据库连接
+- - '##'
+  - 事务
+- - '#'
+  - 第 8 章：集合 (Collections)
+- - '##'
+  - 集合框架
+- - '###'
+  - List 接口
+- - '###'
+  - Set 接口
+- - '###'
+  - Map 接口
+- - '###'
+  - Queue 接口
+- - '##'
+  - ArrayList
+- - '###'
+  - LinkedList
+- - '###'
+  - HashSet
+- - '###'
+  - TreeSet
+- - '###'
+  - HashMap
+- - '###'
+  - TreeMap
+- - '##'
+  - 集合的排序机制
+- - '#'
+  - 第 10 章：函数式编程
+- - '##'
+  - 函数式接口 (FunctionalInterface)
+- - '##'
+  - Lambda 表达式
+- - '###'
+  - 语法
+- - '##'
+  - 方法引用 (method reference)
+- - '##'
+  - Stream API
+- - '###'
+  - 中间操作 (filter, map等)
+- - '###'
+  - 终端操作 (collect, reduce)
+- - '###'
+  - Optional 类
+- - '#'
+  - 第 11 章：设计模式
+- - '##'
+  - 创建模式 (Creational)
+- - '##'
+  - 结构模式 (Structural)
+- - '##'
+  - 行为模式 (Behavioral)
+- - '##'
+  - 单例模式 (Singleton)
+- - '##'
+  - 工厂模式 (Factory Pattern)
+- - '##'
+  - 观察者模式 (Observer Pattern)
+- - '##'
+  - 构建者模式 (Builder Pattern)
+- - '##'
+  - 策略模式 (Strategy Pattern)
+- - '#'
+  - 第 13 章：Spring 和 Spring Boot
+- - '##'
+  - 依赖注入 (DI)
+- - '##'
+  - Spring 容器 (IoC)
+- - '##'
+  - Spring Boot 自动配置
+- - '##'
+  - Bean 生命周期
+- - '#'
+  - 第 12 章：Web 基础
+- - '##'
+  - 企业级架构 (三层架构)
+- - '##'
+  - Servlet
+- - '###'
+  - 生命周期
+- - '###'
+  - Servlet 方法 (GET/POST等)
+- - '###'
+  - 请求处理 (Request/Response)
+- - '###'
+  - ServletConfig 与 ServletContext
+- - '##'
+  - 会话跟踪 (Session tracking)
+- - '##'
+  - JSP 基础
+- - '#'
+  - 第 14 章：Hibernate
+- - '##'
+  - ORM 概念
+- - '##'
+  - Hibernate 配置
+- - '##'
+  - SessionFactory
+- - '##'
+  - Session 接口
+- - '##'
+  - 映射配置

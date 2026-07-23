@@ -1,0 +1,334 @@
+name: Java Swing Tutorials - Herong's Tutorial Examples
+name_cn: Java Swing 教程 - Herong 的教程示例
+slug: java-swing-tutorials---herongs-tutorial-examples
+toc:
+- - '#'
+  - Java Swing 教程 - Herong 的教程示例
+- - '##'
+  - 关于本书
+- - '##'
+  - JDK (Java 开发包)
+- - '###'
+  - 结论
+- - '##'
+  - JDK (Java 开发包)(part0003.xhtml)
+- - '###'
+  - 什么是 JDK
+- - '###'
+  - 下载并安装 JDK 15
+- - '#'
+  - JDK 12 安装界面
+- - '##'
+  - 编写我的第一个 Java 程序
+- - '##'
+  - 将 JDK 的 "bin" 目录添加到 Path 设置
+- - '###'
+  - 设置 java_home
+- - '##'
+  - JDK 文档安装
+- - '###'
+  - 什么是 Swing
+- - '###'
+  - ∟Java Swing 包介绍
+- - '####'
+  - SwingHello.java - 我的第一个 Swing 程序
+- - '###'
+  - ∟本地系统的图形环境
+- - '###'
+  - ∟java.awt.GraphicsEnvironment - 图形环境类
+- - '###'
+  - ∟java.awt.Toolkit - AWT 基类
+- - '#'
+  - 屏幕分辨率
+- - '##'
+  - JFrame - 主帧类
+- - '###'
+  - 结论
+- - '###'
+  - 创建指定大小和位置的帧
+- - '###'
+  - JFrame 测试
+- - '##'
+  - 解决方案 3
+- - '##'
+  - 列出和中断 AWT 线程
+- - '#'
+  - Java Swing 教程 - Herong 示例
+- - '##'
+  - JFrame - 主框架类
+- - '###'
+  - 在框架标题栏中显示中文
+- - '###'
+  - 标题栏中的中文
+- - '##'
+  - 绘制图形 - 在框架上使用 paint()
+- - '###'
+  - 在框架上使用 paint()
+- - '##'
+  - 在组件上使用 paint()
+- - '##'
+  - 在内容区域上使用 paint()
+- - '###'
+  - 在框架上绘制中文字符
+- - '###'
+  - 在框架上绘制中文
+- - '###'
+  - 使用 javax.swing.JLabel 类创建标签
+- - '###'
+  - 使用中文字符创建标签
+- - '###'
+  - 使用 javax.swing.JButton 创建按钮
+- - '###'
+  - 使用 javax.swing.JButton 创建图标按钮
+- - '###'
+  - 组件级的按钮动作处理器
+- - '###'
+  - 帧级别的按钮动作处理器
+- - '###'
+  - 帧上的按钮动作处理器
+- - '###'
+  - 帧级别的鼠标点击处理器
+- - '###'
+  - 使用鼠标适配器的按钮
+- - '###'
+  - JCheckBox - Swing 复选框类
+- - '####'
+  - 结论：
+- - '###'
+  - javax.swing.JCheckBox 相关方法
+- - '###'
+  - ActionListener, ChangeListener 和 ItemListener
+- - '###'
+  - JCheckBox Listeners
+- - '###'
+  - isSelected() - 获取复选框状态
+- - '###'
+  - JCheckBox Selected Items
+- - '####'
+  - 结论：
+- - '###'
+  - javax.swing.JToggleButton.ToggleButtonModel
+- - '###'
+  - ActionListener, `ChangeListener` 和 `ItemListener`
+- - '####'
+  - JRadioButton 监听器
+- - '###'
+  - '`getSelection()` - 获取选中的按钮'
+- - '####'
+  - JRadioButton 按钮
+- - '#'
+  - 方法参考
+- - '##'
+  - JTextField 监听器
+- - '###'
+  - 结论：
+- - '##'
+  - JComboBox 监听器
+- - '##'
+  - getSelectedItem() 方法
+- - '##'
+  - JComboBox 选中选项
+- - '##'
+  - JComboBox 作为文本字段
+- - '##'
+  - JMenuBar, JMenu 和 JMenuItem 类
+- - '###'
+  - '`javax.swing.JMenuBar`'
+- - '###'
+  - '`javax.swing.JMenu`'
+- - '###'
+  - '`javax.swing.JMenuItem`'
+- - '##'
+  - '`JMenuBarTest.java` - 菜单栏测试程序'
+- - '##'
+  - 菜单栏监听器
+- - '#'
+  - 'of elements in the menu bar: 5'
+- - '###'
+  - 关于此教程示例的一些有趣说明
+- - '##'
+  - '`JMenuTest.java` - 菜单测试程序'
+- - '##'
+  - 具有两层级的菜单
+- - '##'
+  - 菜单项
+- - '###'
+  - 作为菜单项的单选按钮（在 macOS）
+- - '###'
+  - 单选按钮菜单测试（在 Windows）
+- - '###'
+  - JCheckBoxMenuItemTest.java - 复选框项测试
+- - '###'
+  - 作为菜单项的复选框（在 macOS）
+- - '###'
+  - 复选框项测试（在 Windows）
+- - '###'
+  - javax.swing.event.MenuListener - 监听器接口
+- - '###'
+  - 菜单监听器测试
+- - '###'
+  - setMnemonic() - 为菜单项设置键盘快捷键（助记）
+- - '###'
+  - 关于此教程示例的一些有趣说明：
+- - '#'
+  - 在主框架中创建内部帧
+- - '##'
+  - 结论
+- - '##'
+  - javax.swing.JInternalFame - 内部帧类
+- - '##'
+  - JInternalFameTest.java - 内部帧类测试
+- - '##'
+  - javax.swing.InternalFrameListener - 内部帧监听器接口
+- - '#'
+  - 内部帧监听器
+- - '##'
+  - 容器中组件的布局
+- - '###'
+  - 结论：
+- - '###'
+  - 容器中组件的布局(#part0071.xhtml)
+- - '###'
+  - 什么是布局？
+- - '###'
+  - 边界布局
+- - '###'
+  - 布局 - BorderLayout
+- - '###'
+  - 布局 - FlowLayout
+- - '##'
+  - 布局 - BoxLayout
+- - '###'
+  - '`java.awt.GridLayout` - 一种具有以下特征的布局：'
+- - '##'
+  - 布局 - GridLayout
+- - '#'
+  - 布局 - GridBagLayout
+- - '##'
+  - LookName 和 UIManager
+- - '##'
+  - 结论
+- - '##'
+  - javax.swing.JOptionPane - 创建和显示选项对话框
+- - '##'
+  - showMessageDialog() - 显示对话框
+- - '##'
+  - showConfirmDialog() - 显示确认框
+- - '###'
+  - 确认框
+- - '####'
+  - 结论
+- - '####'
+  - 接收确认框
+- - '###'
+  - 确认框
+- - '###'
+  - showInternalDialog() - 显示内部对话框
+- - '##'
+  - createDialog() - 创建对话框
+- - '##'
+  - JEditorPane - 编辑器面板
+- - '##'
+  - 创建一个简单的编辑器
+- - '##'
+  - 从编辑器面板保存文本
+- - '##'
+  - 在编辑器面板中 HTML
+- - '##'
+  - 在编辑器面板中 HTML
+- - '###'
+  - 编辑器面板 - HTML
+- - '###'
+  - 关于此示例的一些有趣说明：
+- - '###'
+  - 编辑器面板 - Unicode 文本
+- - '###'
+  - 关于此示例的一些有趣说明：
+- - '##'
+  - JFileChooser 方法
+- - '##'
+  - 示例程序
+- - '##'
+  - 关于此示例的趣味笔记
+- - '###'
+  - 使用 done() 方法的 SwingWorker 示例
+- - '####'
+  - 任务完成后接收并检索结果
+- - '#'
+  - '结果中的元素数量: 100'
+- - '###'
+  - 关于输出的一些有趣的注意：
+- - '###'
+  - 源代码：SwingWorkerDone
+- - '###'
+  - 关于输出的一些有趣的注意：
+- - '###'
+  - 使用 publish() 方法的 SwingWorker
+- - '###'
+  - 使用 "progress" 属性的 SwingWorker 示例
+- - '###'
+  - 示例程序的说明：
+- - '###'
+  - 输出中一些有趣的说明：
+- - '#'
+  - 使用进度属性的 SwingWorker 线程
+- - '##'
+  - 使用 JProgressBar 的 SwingWorker 示例
+- - '##'
+  - AWT（抽象窗口工具包）
+- - '###'
+  - 什么是 AWT (Abstract Windows Toolkit)
+- - '###'
+  - HelloAWT.java - 我的第一个 AWT 程序
+- - '###'
+  - 关闭 AWT 框架并终止
+- - '###'
+  - 问题：我想在帧中绘制一些图形。
+- - '###'
+  - 解决方案 1：你可以通过扩展 Frame 类来创建你自己的帧类，从而重写 paint() 方法，非常容易地实现这一点。paint() 方法提供了一个 Graphics
+    对象，它将为你提供绘制各种类型图形的实用方法。下面的示例代码 FramePaint1.java 展示了如何实现这一点。
+- - '###'
+  - 解决方案 2：显然，解决方案 1 并不理想，因为我们是在帧本身的 UI 元素上绘制图形。为了只在帧的内容区域绘制图形，我们可以创建一个带有自己的 paint()
+    方法的新组件，并将其添加到帧中。下面的示例代码 FramePaint2.java 展示了如何实现这一点。
+- - '###'
+  - 窗口层面的 AWT 按钮动作处理器
+- - '####'
+  - AWT 按钮动作处理器
+- - '###'
+  - 窗口层面的 AWT 按钮鼠标点击处理器
+- - '####'
+  - AWT 按钮鼠标适配器
+- - '###'
+  - AWT 文本字段和 ActionListener
+- - '####'
+  - AWT 文本字段 ActionListener
+- - '#'
+  - MenuTest.java - AWT 菜单程序
+- - '##'
+  - AWT 菜单测试
+- - '#'
+  - MenuItemTest.java - AWT 菜单项程序
+- - '##'
+  - AWT 菜单项测试
+- - '#'
+  - MenuItemActionListenerTest.java - AWT 菜单项动作监听器
+- - '#'
+  - AWT 菜单项监听器测试
+- - '###'
+  - 关于此教程示例的一些有趣说明：
+- - '##'
+  - 结论：
+- - '#'
+  - 启动浏览器
+- - '#'
+  - 启动电子邮件程序在桌面
+- - '##'
+  - edit() - 为指定文件启动默认编辑器
+- - '##'
+  - 在桌面上启动文件编辑器
+- - '#'
+  - 归档教程
+- - '##'
+  - 归档：下载并安装 JDK 12
+- - '##'
+  - 归档：下载并安装 JDK 10

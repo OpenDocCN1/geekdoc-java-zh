@@ -1,0 +1,602 @@
+name: Java SE Course Material
+name_cn: Java SE 课程材料
+slug: java-se-course-material
+toc:
+- - '#'
+  - Java SE 课程材料
+- - '##'
+  - 关于作者
+- - '##'
+  - 如何使用本材料
+- - '##'
+  - 反馈请求
+- - '##'
+  - Java 入门
+- - '###'
+  - Java 入门 - 1
+- - '###'
+  - 你将学什么？
+- - '###'
+  - Java 入门 - 2
+- - '###'
+  - 什么是 Java？
+- - '##'
+  - Java 历史
+- - '##'
+  - Java 版本
+- - '###'
+  - Java SE (标准版)
+- - '###'
+  - Java EE (企业版)
+- - '###'
+  - Java ME (微型版)
+- - '#'
+  - JAVA 语言的特性
+- - '###'
+  - 健壮性 (Robust)
+- - '###'
+  - 面向对象 (Object Oriented)
+- - '###'
+  - 动态 (Dynamic)
+- - '###'
+  - 多线程 (Multithreaded)
+- - '###'
+  - 分布式 (Distributed)
+- - '###'
+  - 平台无关性 (Platform Independent)
+- - '#'
+  - JAVA 是健壮的
+- - '#'
+  - 平台无关的语言
+- - '#'
+  - Java 程序的编译与运行
+- - '#'
+  - Java 与平台无关性
+- - '#'
+  - JVM - 使用 Java SE
+- - '#'
+  - Java SE 的目录结构
+- - '###'
+  - 目录描述
+- - '#'
+  - 基础工具
+- - '#'
+  - 第 Java 程序 – HELLO.JAVA
+- - '#'
+  - Srikanth Technologies
+- - '#'
+  - Java 入门
+- - '##'
+  - 编译和运行 Java 程序
+- - '#'
+  - Java 入门
+- - '#'
+  - JAVA 标准或原始数据类型
+- - '##'
+  - 创建标识符的规则
+- - '##'
+  - JAVA 关键字
+- - '#'
+  - Java 入门
+- - '##'
+  - 字面量
+- - '##'
+  - 转义序列
+- - '##'
+  - JAVA 运算符
+- - '###'
+  - 算术运算符
+- - '#'
+  - Java 入门
+- - '##'
+  - 结合性
+- - '##'
+  - 转换和类型转换
+- - '##'
+  - 赋值运算符
+- - '#'
+  - Java 入门
+- - '##'
+  - 关系运算符
+- - '##'
+  - 逻辑运算符与短路
+- - '##'
+  - 短路逻辑运算符 (&& 和 ||)
+- - '#'
+  - Java 入门
+- - '###'
+  - 位运算符
+- - '####'
+  - 运算符含义
+- - '##'
+  - 控制语句
+- - '###'
+  - if 语句
+- - '###'
+  - switch 语句
+- - '###'
+  - while 循环
+- - '###'
+  - do .. while 循环
+- - '###'
+  - for 循环
+- - '###'
+  - break 语句
+- - '###'
+  - continue 语句
+- - '###'
+  - 使用 System.printf 打印值
+- - '###'
+  - 使用 Scanner 读取输入
+- - '#'
+  - 旧块准备好垃圾回收
+- - '##'
+  - Java 入门
+- - '##'
+  - 初始化数组
+- - '##'
+  - 可变数量参数
+- - '##'
+  - 命令行参数
+- - '##'
+  - 程序 - Prime.java
+- - '##'
+  - 练习
+- - '###'
+  - 类 vs 对象 (Class vs. Object)
+- - '###'
+  - 继承 (INHERITANCE)
+- - '###'
+  - 多态 (POLYMORPHISM)
+- - '###'
+  - 创建类 (CREATING A CLASS)
+- - '###'
+  - 构造方法 (CONSTRUCTOR)
+- - '##'
+  - 重载构造函数
+- - '##'
+  - 对象引用
+- - '###'
+  - 比较对象引用
+- - '###'
+  - 两个对象引用之间的赋值
+- - '##'
+  - 对象数组
+- - '##'
+  - this 引用
+- - '##'
+  - 静态变量
+- - '##'
+  - 静态方法
+- - '###'
+  - 为什么 main() 是静态方法？
+- - '##'
+  - final 变量
+- - '#'
+  - Java 学生指南 - 面向对象编程
+- - '##'
+  - 继承
+- - '###'
+  - 继承中的构造函数
+- - '###'
+  - '@Override 注解'
+- - '###'
+  - 方法重写
+- - '###'
+  - 重载 vs. 重写
+- - '###'
+  - 使用 super 关键字访问超类
+- - '###'
+  - “拥有”关系
+- - '###'
+  - '`instanceof 运算符`'
+- - '##'
+  - 多级继承
+- - '##'
+  - 多继承
+- - '##'
+  - 运行时多态 - 动态方法分派
+- - '###'
+  - 分派
+- - '##'
+  - 抽象方法
+- - '##'
+  - 抽象类
+- - '##'
+  - final 变量、方法、类和参数
+- - '##'
+  - 初始化块
+- - '#'
+  - 你在本模块中将学习什么？
+- - '#'
+  - Object 类
+- - '##'
+  - 方法
+- - '#'
+  - String 类
+- - '###'
+  - StringBuffer 类
+- - '###'
+  - StringJoiner 类
+- - '###'
+  - StringJoiner 类（补充说明）
+- - '##'
+  - DateFormat 类
+- - '##'
+  - NumberFormat 类
+- - '##'
+  - SimpleDateFormat 类
+- - '##'
+  - 新的日期时间 API
+- - '###'
+  - DayOfWeek 枚举
+- - '###'
+  - Month 枚举
+- - '###'
+  - LocalDate 类
+- - '####'
+  - LocalDate 方法
+- - '####'
+  - LocalDate 静态方法
+- - '##'
+  - LocalTime 类
+- - '####'
+  - LocalTime 方法
+- - '##'
+  - 静态方法
+- - '###'
+  - 含义
+- - '##'
+  - LocalDateTime 类
+- - '##'
+  - YearMonth, MonthDay 和 Year 类
+- - '##'
+  - 其他类
+- - '##'
+  - ChronoUnit Enum
+- - '##'
+  - AgeCalculator.java
+- - '##'
+  - DateTimeFormatter 类
+- - '##'
+  - 自动装箱 (Autoboxing)
+- - '##'
+  - 你将在本模块中学到什么？
+- - '##'
+  - 接口 (INTERFACES)
+- - '###'
+  - 实现接口
+- - '###'
+  - 使用接口引用
+- - '##'
+  - 一个接口继承另一个接口
+- - '##'
+  - 接口中的默认方法
+- - '##'
+  - 接口中的静态方法
+- - '##'
+  - 函数接口 (Functional Interface)
+- - '##'
+  - 抽象类 vs 接口 (Abstract class vs. Interface)
+- - '###'
+  - 空接口 (Null interface)
+- - '##'
+  - 嵌套类 (NESTED CLASSES)
+- - '###'
+  - 静态成员类 (Static member class)
+- - '###'
+  - 非静态成员类（内部类）（Non-static member class (inner class)
+- - '###'
+  - 方法局部内部类 (Method-local inner class)
+- - '###'
+  - 匿名内部类 (Anonymous Inner class)
+- - '##'
+  - 包 (PACKAGES)
+- - '###'
+  - 创建包并将类放入其中
+- - '###'
+  - 访问包中的类
+- - '###'
+  - 导入语句 (Import Statement)
+- - '###'
+  - CLASSPATH 变量
+- - '###'
+  - JAR (Java 归档) 文件
+- - '###'
+  - 访问修饰符
+- - '###'
+  - 静态导入 (Static Import)
+- - '##'
+  - 枚举 (ENUMERATION)
+- - '##'
+  - 异常处理 (EXCEPTION HANDLING)
+- - '###'
+  - 使用 try 和 catch 处理异常
+- - '###'
+  - 处理多个异常
+- - '###'
+  - 多捕获 (Multi-Catch)
+- - '###'
+  - finally 块 (Finally Block)
+- - '##'
+  - 异常类型 – 检查异常与非检查异常
+- - '###'
+  - 非检查异常
+- - '###'
+  - 检查异常
+- - '###'
+  - catch 块的无效与有效顺序
+- - '###'
+  - 定义异常
+- - '###'
+  - Exception 类
+- - '##'
+  - 定义自定义异常 – 示例
+- - '##'
+  - Java 7.0 中更精确的重新抛出
+- - '##'
+  - 断言
+- - '##'
+  - 多线程
+- - '##'
+  - 主线程
+- - '###'
+  - 通过扩展 Thread 类创建新线程
+- - '##'
+  - 使用 Runnable 接口创建新线程
+- - '##'
+  - 线程状态 – 线程的生命周期
+- - '##'
+  - 线程优先级
+- - '##'
+  - Thread 类
+- - '##'
+  - 同步语句 (Synchronized statement)
+- - '##'
+  - 线程池 (Thread Pools)
+- - '##'
+  - 字符流
+- - '##'
+  - 字节流
+- - '##'
+  - 字符流
+- - '##'
+  - 预定义流
+- - '##'
+  - Reader 类
+- - '###'
+  - 方法
+- - '##'
+  - FileReader 类
+- - '##'
+  - BufferedReader 类
+- - '###'
+  - readLine() 方法
+- - '##'
+  - InputStreamReader 类
+- - '##'
+  - LineNumberReader 类
+- - '##'
+  - Pushback 类
+- - '##'
+  - 资源管理 (ARM)
+- - '##'
+  - Writer 类
+- - '###'
+  - 方法
+- - '##'
+  - FileWriter 类
+- - '##'
+  - Writer
+- - '##'
+  - FileWriter
+- - '##'
+  - PrintWriter 类
+- - '##'
+  - RandomAccessFile 类
+- - '##'
+  - File 类
+- - '#'
+  - 练习：接受用户路径并显示给定路径下的文件列表。
+- - '##'
+  - Files 类
+- - '###'
+  - 方法描述
+- - '##'
+  - Path 接口
+- - '###'
+  - 方法描述
+- - '##'
+  - Paths 类
+- - '###'
+  - 方法含义
+- - '##'
+  - 从文件中删除空行
+- - '##'
+  - SimpleFileVisitor 类
+- - '###'
+  - 方法描述
+- - '##'
+  - Java
+- - '#'
+  - 序列化
+- - '##'
+  - Serializable 接口
+- - '##'
+  - ObjectOutput 和 ObjectInputStream
+- - '##'
+  - 字符流对比字节流
+- - '##'
+  - 网络
+- - '##'
+  - Socket
+- - '##'
+  - Socket 编程
+- - '##'
+  - Socket 类
+- - '##'
+  - ServerSocket 类
+- - '#'
+  - 使用多线程处理客户端
+- - '##'
+  - InetAddress 类
+- - '##'
+  - URL 类
+- - '##'
+  - 集合框架 (COLCTIONS FRAMEWORK)
+- - '###'
+  - Collection 接口
+- - '###'
+  - List 接口
+- - '###'
+  - ArrayList 类
+- - '###'
+  - 泛型 (Generics)
+- - '###'
+  - Set 接口
+- - '###'
+  - HashSet 类
+- - '###'
+  - SortedSet 接口
+- - '###'
+  - TreeSet 类
+- - '###'
+  - Comparator 接口
+- - '###'
+  - Queue 接口
+- - '###'
+  - LinkedList 类
+- - '##'
+  - Vector 类
+- - '##'
+  - Enumeration 接口
+- - '##'
+  - 类层次结构概览
+- - '##'
+  - Stack 类
+- - '##'
+  - Map 接口
+- - '##'
+  - HashMap 类
+- - '##'
+  - SortedMap 接口
+- - '##'
+  - TreeMap 类
+- - '##'
+  - Properties 类
+- - '###'
+  - Collections 类
+- - '###'
+  - 方法
+- - '##'
+  - 泛型方法
+- - '###'
+  - 边界类型
+- - '##'
+  - 正则表达式
+- - '###'
+  - 字符类
+- - '###'
+  - 预定义字符类
+- - '###'
+  - 量词
+- - '###'
+  - Pattern 类
+- - '###'
+  - Matcher 类
+- - '####'
+  - 方法
+- - '##'
+  - Lambda 表达式（Lambda EXPRESSIONS）
+- - '###'
+  - 方法引用（Method Reference）
+- - '###'
+  - 方法引用的种类（Kinds of Method References）
+- - '###'
+  - Matcher 类
+- - '####'
+  - 方法
+- - '##'
+  - Lambda 表达式的组成部分
+- - '###'
+  - 内置函数式接口
+- - '###'
+  - 流 (Streams)
+- - '###'
+  - forEach() 的局限性
+- - '###'
+  - Stream.of() 方法
+- - '###'
+  - 来自数组的流
+- - '###'
+  - 来自 IO 的流
+- - '###'
+  - 流的并行性
+- - '###'
+  - 你在本模块中学习到什么？
+- - '###'
+  - Swing 库
+- - '###'
+  - 开发 Swing 应用
+- - '###'
+  - 容器类
+- - '###'
+  - JComponent 类
+- - '####'
+  - 组件外观
+- - '####'
+  - 设置和获取组件状态
+- - '####'
+  - 布局组件
+- - '###'
+  - 布局管理器
+- - '###'
+  - 布局管理器描述
+- - '###'
+  - 使用 FlowLayout
+- - '###'
+  - 使用 GridLayout
+- - '###'
+  - 使用 BorderLayout
+- - '###'
+  - 使用 GridBagLayout
+- - '#'
+  - GridBagConstraints 的属性
+- - '#'
+  - 使用绝对定位 - 空布局布局管理器
+- - '#'
+  - 使用委托事件模型处理事件
+- - '##'
+  - 创建监听器以处理动作事件
+- - '##'
+  - 使用内部类处理事件
+- - '##'
+  - 使用匿名内部类作为事件监听器
+- - '#'
+  - 使用 Lambda 表达式进行事件处理
+- - '##'
+  - Color 类
+- - '##'
+  - JLabel 类
+- - '##'
+  - JTextField - 文本字段
+- - '##'
+  - JPasswordField - 密码字段
+- - '##'
+  - JTextArea – 多行文本字段
+- - '##'
+  - JButton - 按钮
+- - '###'
+  - JCheckBox - 复选框
+- - '###'
+  - JRadioButton – 单选按钮
+- - '###'
+  - JComboBox 类
+- - '###'
+  - JScrollPane 类
+- - '###'
+  - JList 类
+- - '##'
+  - '`JOptionPane` 类'
+- - '##'
+  - '`Timer` 类'

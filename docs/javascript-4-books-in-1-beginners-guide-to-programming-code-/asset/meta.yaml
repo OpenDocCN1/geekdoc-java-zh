@@ -1,0 +1,252 @@
+name: Javascript ： 4 books in 1 ; Beginner's guide to programming code with Java ;
+  Tips and tricks to programming code with Java ; Best practice to programming code
+  with Java ; Advanced guide to programming code with Java
+name_cn: Javascript ：四本合一；Java 编程入门指南；Java 编程技巧与窍门；Java 编程最佳实践；Java 编程高级指南
+slug: javascript-4-books-in-1-beginners-guide-to-programming-code-
+toc:
+- - '#'
+  - Javascript ：四本合一；Java 编程入门指南；Java 编程技巧与窍门；Java 编程最佳实践；Java 编程高级指南
+- - '#'
+  - 介绍
+- - '#'
+  - 第一章：JavaScript...它是什么？它将如何带给我好处？
+- - '##'
+  - 好处
+- - '#'
+  - HTML 与 JavaScript
+- - '##'
+  - 内部
+- - '###'
+  - 代码
+- - '##'
+  - 外部
+- - '###'
+  - 代码
+- - '##'
+  - 控制台
+- - '#'
+  - 第 3 章：数据与 JavaScript 变量
+- - '##'
+  - 变量
+- - '##'
+  - 声明
+- - '###'
+  - 代码
+- - '##'
+  - 初始化
+- - '###'
+  - 代码
+- - '##'
+  - 赋值
+- - '###'
+  - 代码
+- - '#'
+  - 第 4 章：JavaScript 中的数学
+- - '##'
+  - 分割
+- - '###'
+  - 代码
+- - '###'
+  - 运算符
+- - '###'
+  - 代码
+- - '#'
+  - 第 5 章：JavaScript 逻辑
+- - '###'
+  - 等于
+- - '###'
+  - 代码
+- - '###'
+  - 大于/小于
+- - '###'
+  - 代码
+- - '###'
+  - 代码
+- - '###'
+  - 组合比较
+- - '###'
+  - 代码
+- - '#'
+  - 第 6 章：JavaScript 条件
+- - '###'
+  - If 语句
+- - '###'
+  - If-else
+- - '#'
+  - 第 9 章：JavaScript 中的对象
+- - '#'
+  - 第 10 章：JavaScript 数组
+- - '#'
+  - 第 11 章：DOM
+- - '###'
+  - 树与分支
+- - '###'
+  - 获取元素
+- - '####'
+  - ID
+- - '####'
+  - 标签名
+- - '####'
+  - 类名
+- - '##'
+  - CSS
+- - '###'
+  - 代码
+- - '#'
+  - 第 12 章：JavaScript 回调与事件
+- - '###'
+  - 代码
+- - '###'
+  - 代码
+- - '###'
+  - 代码
+- - '#'
+  - 第 13 章：JavaScript 与 AJAX
+- - '##'
+  - XML HTTP 请求
+- - '###'
+  - 代码
+- - '##'
+  - AJAX 与库
+- - '#'
+  - 第 14 章：JSON
+- - '##'
+  - JSON
+- - '###'
+  - 代码
+- - '##'
+  - 使用 JSON
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '#'
+  - 第 15 章：JavaScript 中的作用域
+- - '###'
+  - Code
+- - '###'
+  - 函数作用域
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - 子作用域
+- - '###'
+  - Code
+- - '#'
+  - 第 16 章：JavaScript 中的 jQuery
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '#'
+  - 第 17 章：jQuery DOM 和 API
+- - '###'
+  - Code
+- - '###'
+  - Getter 和 Setter
+- - '###'
+  - Code
+- - '##'
+  - 上下文
+- - '###'
+  - 代码
+- - '#'
+  - 第 18 章：jQuery 和 AJAX
+- - '###'
+  - Code
+- - '###'
+  - $.get
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - $.post
+- - '###'
+  - Code
+- - '###'
+  - $.AJAX
+- - '###'
+  - Code
+- - '#'
+  - 第 19 章：jQuery 和其他技巧
+- - '###'
+  - DOMContentLoaded
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - load
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - 类型检查
+- - '###'
+  - Code
+- - '#'
+  - 第 20 章：JavaScript 控制流语句
+- - '###'
+  - If-then
+- - '###'
+  - Code
+- - '###'
+  - If-then else
+- - '###'
+  - Code
+- - '###'
+  - Switches
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - Switch statement strings
+- - '###'
+  - Code
+- - '###'
+  - While and do while statements
+- - '####'
+  - Syntax
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - For statement
+- - '####'
+  - Syntax
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '##'
+  - break 语句
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '##'
+  - continue 语句
+- - '###'
+  - Code
+- - '###'
+  - Code
+- - '##'
+  - return 语句
+- - '#'
+  - 结论

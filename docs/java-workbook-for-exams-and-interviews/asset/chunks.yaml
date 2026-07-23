@@ -1,0 +1,1742 @@
+- fmt: "\n![](Images/cover00073.jpeg)\n\n# JAVA WORKBOOK FOR EXAMS AND INTERVIEWS\n\
+    ## FAST AND EASY WAY TO LEARN CODING BASICS\nJP TAM\n\n- [Java program to find\
+    \ sum of all digits](#part0002.xhtml__Toc68690837)\n- [Java program to calculate\
+    \ compound interest](#part0003.xhtml__Toc68690838)\n- [Java program to find largest\
+    \ number](#part0004.xhtml__Toc68690839)\n- [Java program to run an application](#part0005.xhtml__Toc68690840)\n\
+    - [Java program to print Fibonacci Series](#part0006.xhtml__Toc68690841)\n- [Using\
+    \ for loop to print numbers from 1 to N](#part0007.xhtml__Toc68690842)\n- [Java\
+    \ Data Type Exercises](#part0008.xhtml__Toc68690843)\n- [Fahrenheit to Celsius\
+    \ degree](#part0008.xhtml__Toc68690844)\n- [Java Data Type Exercises: Inches to\
+    \ meters](#part0009.xhtml__Toc68690845)\n- [Adds all the digits in the integer](#part0010.xhtml__Toc68690846)\n\
+    - [Takes the user to input the minutes](#part0011.xhtml__Toc68690847)\n- [Reads\
+    \ a number and display the square](#part0012.xhtml__Toc68690848)\n- [Java Conditional\
+    \ Statement : Exercises](#part0013.xhtml__Toc68690849)\n- [Check the number is\
+    \ negative, zero, or positive](#part0013.xhtml__Toc68690850)\n- [Input 5 numbers\
+    \ find their sum and average](#part0014.xhtml__Toc68690851)\n- [Display n terms\
+    \ of natural numbers and their sum](#part0015.xhtml__Toc68690852)\n- [Displays\
+    \ the weekday between 1 and 7](#part0016.xhtml__Toc68690853)\n- [Using while loop\
+    \ to print numbers from 1 to N](#part0017.xhtml__Toc68690854)\n- [Addition of\
+    \ one dimensional and two dimensional arrays](#part0018.xhtml__Toc68690855)\n\
+    - [Java program to convert Decimal to Binary](#part0019.xhtml__Toc68690856)\n\
+    - [Java program to read a file line by line](#part0020.xhtml__Toc68690857)\n\n\
+    # Java program to find sum of all digits\n\nProvided a number and we have to use\
+    \ java program to find sum of all its digits.\n\n### Example 1:\nInput:\nNumber:\
+    \ 852\nOutput:\nSum of all digits: 15\n\n### Example 2:\nInput:\nNumber: 256868\n\
+    Output:\nSum of all digits: 35\n\n### PROGRAM\n```java\nimport java.util.Scanner;\n\
+    \npublic class AddDigits {\n    public static void main(String args[]) {\n   \
+    \     // initializing and declaring the objects.\n        int num, rem=0, sum=0,\
+    \ temp;\n        Scanner scan = new Scanner(System.in);\n        // enter number\
+    \ here.\n        System.out.print(\"Enter the Number : \");\n        num = scan.nextInt();\n\
+    \        // temp is to store number.\n        temp = num;\n        while(num>0)\
+    \ {\n            rem = num%10;\n            sum = sum+rem;\n            num =\
+    \ num/10;\n        }\n        System.out.print(\"Sum of Digits of \" +temp+ \"\
+    \ is : \" +sum);\n    }\n}\n```\n\n### Output\nFirst run:\nEnter the Number :\
+    \ 582\nSum of Digits of 582 : 15\nSecond run:\nEnter the Number : 256868\nSum\
+    \ of Digits of 256868 : 35\n\n# Java program to calculate compound interest\n\n\
+    Given the principle, rate and time using java program have to find compound interest.\n\
+    \n### Example:\nEnter Principal : 5000\nEnter Rate : 5\nEnter Time : 3\nAmount\
+    \ : 5788.1250000000\nCompound Interest : 788.1250000000\n\n### PROGRAM\n```java\n\
+    import java.util.Scanner;\n\npublic class CompoundInterest {\n    public static\
+    \ void main(String args[]) {\n        // declare and initialize.\n        double\
+    \ A=0,Pri,Time,t=1,CI;\n        // create object.\n        Scanner S=new Scanner(System.in);\n\
+    \        // enter principal, rate, time here\n        System.out.print(\"Enter\
+    \ Principal : \");\n        Pri=S.nextFloat();\n        System.out.print(\"Enter\
+    \ Rate : \");\n        Rate=S.nextFloat();\n        System.out.print(\"Enter Time\
+    \ : \");\n        Time=S.nextFloat();\n        Rate=(1 + Rate/100);\n        for(int\
+    \ i=0;i<Time;i++)\n            t*=Rate;\n        A=Pri*t;\n        System.out.print(\"\
+    Amount : \" +A);\n        CI=A-Pri;\n        System.out.print(\"\\nCompound Interest\
+    \ : \" +CI);\n    }\n}\n```\n\n### Output\nFirst run:\nEnter Principal : 5000\n\
+    Enter Rate : 5\nEnter Time : 3\nAmount : 5788.1250000000\nCompound Interest :\
+    \ 788.1250000000\nSecond run:\nEnter Principal : 10000\nEnter Rate : 20\nEnter\
+    \ Time : 5\nAmount : 24883.1999999997\nCompound Interest : 14883.1999999997\n\n\
+    # Java program to find largest number\n\nThe program reads from the keyboard (three\
+    \ integer numbers), and selects the largest number.\n\n### PROGRAM\n// Java program\
+    \ to find largest number among three numbers.\n```java\nimport java.util.*;\n\n\
+    class LargestFrom3 {\n    public static void main(String []s) {\n        int a,b,c,largest;\n\
+    \        // Scanner class to read value\n        Scanner sc=new Scanner(System.in);\n\
+    \        System.out.print(\"Enter first number:\");\n        a=sc.nextInt();\n\
+    \        System.out.print(\"Enter second number:\");\n        b=sc.nextInt();\n\
+    \        System.out.print(\"Enter third number:\");\n        c=sc.nextInt();\n\
+    \        if ( a>b && a>c )\n            largest=a;\n        else if ( b>a && b>c\
+    \ )\n            largest=b;\n        else\n            largest=c;\n        System.out.println(\"\
+    Largest Number is : \"+largest);\n    }\n}\n```\n\n### Output\nCompile: javac\
+    \ LargestFrom3.java\nRun: java LargestFrom3\nOutput:\nEnter first number:45\n\
+    Enter second number:56\nEnter third number:67\nLargest Number is : 67\n\n# Java\
+    \ program to run an application\n\nUsing Java program this program can open (run)\
+    \ applications (Notepad, Calculator). We use instance of `Runtime.getRuntime()`\
+    \ and method `exec()` to open / run application.\n\n### PROGRAM\n// Java program\
+    \ to run an application.\n```java\nimport java.util.*;\n\nclass OpenNotepad {\n\
+    \    public static void main(String[] args) {\n        Runtime app=Runtime.getRuntime();\n\
+    \        try {\n            // open notepad\n            app.exec(\"notepad\"\
+    );\n            // open calculator\n            app.exec(\"calc\");\n        }\
+    \ catch (Exception Ex) {\n            System.out.println(\"Error: \" + Ex.toString());\n\
+    \        }\n    }\n}\n```\n### Output\nNotepad and Calculator will be opened.\n\
+    \n# Java program to print Fibonacci Series\n\nFibonacci Series is a series where\
+    \ the term is sum of preceding terms.\n\n### PROGRAM\n```java\nimport java.util.Scanner;\n\
+    \nclass Fab {\n    public static void main(String[] args) {\n        int SeriesNum;\n\
+    \        Scanner sc=new Scanner(System.in);\n        System.out.print(\"Enter\
+    \ the length of fibonacci : \");\n        SeriesNum=sc.nextInt();\n        int[]\
+    \ num = new int[SeriesNum];\n        num[0] = 0;\n        num[1] = 1;\n      \
+    \  //number should be sum of last numbers\n        for(int i=2; i < SeriesNum;\
+    \ i++) {\n            num[i] = num[i-1] + num[i-2];\n        }\n        System.out.println(\"\
+    fibonacci series : \");\n        for(int i=0; i<SeriesNum; i++){\n           \
+    \ System.out.print(num[i] + \" \");\n        }\n    }\n}\n```\n### OUTPUT\nEnter\
+    \ the length of fibonacci : 10\nfibonacci series : \n0 1 1 2 3 5 8 13 21 34\n"
+  raw: "\n\n![](Images/cover00073.jpeg)\n\nJAVA\n\nWORKBOOK\n\nFOR\n\nEXAMS AND INTERVIEWS\n\
+    \nFAST AND EASY WAY TO\n\nLEARN CODING BASICS\n\nJP TAM\n\n[Java program to find\
+    \ sum of all digits](#part0002.xhtml__Toc68690837)\n\n[Java program to calculate\
+    \ compound interest](#part0003.xhtml__Toc68690838)\n\n[Java program to find largest\
+    \ number](#part0004.xhtml__Toc68690839)\n\n[Java program to run an application](#part0005.xhtml__Toc68690840)\n\
+    \n[Java program to print Fibonacci Series](#part0006.xhtml__Toc68690841)\n\n[Using\
+    \ for loop to print numbers from 1 to N](#part0007.xhtml__Toc68690842)\n\n[Java\
+    \ Data Type Exercises](#part0008.xhtml__Toc68690843)\n\n[Fahrenheit to Celsius\
+    \ degree](#part0008.xhtml__Toc68690844)\n\n[Java Data Type Exercises: Inches to\
+    \ meters](#part0009.xhtml__Toc68690845)\n\n[Adds all the digits in the integer](#part0010.xhtml__Toc68690846)\n\
+    \n[Takes the user to input the minutes](#part0011.xhtml__Toc68690847)\n\n[Reads\
+    \ a number and display the square](#part0012.xhtml__Toc68690848)\n\n[Java Conditional\
+    \ Statement : Exercises](#part0013.xhtml__Toc68690849)\n\n[Check the number is\
+    \ negative, zero, or positive](#part0013.xhtml__Toc68690850)\n\n[Input 5 numbers\
+    \ find their sum and average](#part0014.xhtml__Toc68690851)\n\n[Display n terms\
+    \ of natural numbers and their sum](#part0015.xhtml__Toc68690852)\n\n[Displays\
+    \ the weekday between 1 and 7](#part0016.xhtml__Toc68690853)\n\n[Using while loop\
+    \ to print numbers from 1 to N](#part0017.xhtml__Toc68690854)\n\n[Addition of\
+    \ one dimensional and two dimensional arrays](#part0018.xhtml__Toc68690855)\n\n\
+    [Java program to convert Decimal to Binary](#part0019.xhtml__Toc68690856)\n\n\
+    [Java program to read a file line by line](#part0020.xhtml__Toc68690857)\n\n#\
+    \ Java program to find sum of all digits\n\n#### Provided a number and we have\
+    \ to use java program to find sum of all its digits.\n\nExample 1:\n\n    Input:\n\
+    \n    Number: 852\n\n    Output:\n\n    Sum of all digits: 15\n\nExample 2:\n\n\
+        Input:\n\n    Number: 256868\n\n    Output:\n\n    Sum of all digits: 35\n\
+    \n#### PROGRAM\n\n##### import java.util.Scanner;\n\n##### public class AddDigits\n\
+    \n##### {\n\n#####     public static void main(String args[])\n\n#####     {\n\
+    \n#####  // initializing and declaring the objects.\n\n#####         int num,\
+    \ rem=0, sum=0, temp;\n\n#####         Scanner scan = new Scanner(System.in);\n\
+    \n#####         // enter number here.\n\n#####         System.out.print(\"Enter\
+    \ the Number : \");\n\n#####         num = scan.nextInt();\n\n#####         //\
+    \ temp is to store number.\n\n#####         temp = num;\n\n#####         while(num>0)\n\
+    \n#####         {\n\n#####             rem = num%10;\n\n#####             sum\
+    \ = sum+rem;\n\n#####             num = num/10;\n\n#####         }\n\n#####        \
+    \ System.out.print(\"Sum of Digits of \" +temp+ \" is : \" +sum);       \n\n#####\
+    \     }\n\n##### }\n\nOutput\n\nFirst run:\n\nEnter the Number : 582\n\nSum of\
+    \ Digits of 582 is : 15\n\nSecond run:\n\nEnter the Number : 256868\n\nSum of\
+    \ Digits of 256868 is : 35\n\n# Java program to calculate compound interest\n\n\
+    #### Given the principle, rate and time, and using java program we have to find\
+    \ compound interest.\n\nExample:\n\n    Enter Principal : 5000\n\n    Enter Rate\
+    \ : 5\n\n    Enter Time : 3\n\n    Amount : 5788.125000000001\n\n    Compound\
+    \ Interest : 788.1250000000009\n\n#### PROGRAM\n\n##### import java.util.Scanner;\n\
+    \n##### public class CompoundInterest\n\n##### {\n\n##### public static void main(String\
+    \ args[])\n\n##### {\n\n##### // declare and initialize here.\n\n##### double\
+    \ A=0,Pri,Rate,Time,t=1,CI;\n\n##### // create object.\n\n##### Scanner S=new\
+    \ Scanner(System.in);\n\n##### // enter principal, rate, time here\n\n##### System.out.print(\"\
+    Enter Principal : \");\n\n##### Pri=S.nextFloat();\n\n##### System.out.print(\"\
+    Enter Rate : \");\n\n##### Rate=S.nextFloat();\n\n##### System.out.print(\"Enter\
+    \ Time : \");\n\n##### Time=S.nextFloat();\n\n##### Rate=(1 + Rate/100);\n\n#####\
+    \ for(int i=0;i<Time;i++)\n\n##### t*=Rate;\n\n##### A=Pri*t;\n\n##### System.out.print(\"\
+    Amount : \" +A);\n\n##### CI=A-Pri;\n\n##### System.out.print(\"\\nCompound Interest\
+    \ : \" +CI);\n\n##### }\n\n##### }\n\nOutput\n\nFirst run:\n\nEnter Principal\
+    \ : 5000\n\nEnter Rate : 5\n\nEnter Time : 3\n\nAmount : 5788.125000000001\n\n\
+    Compound Interest : 788.1250000000009\n\nSecond run:\n\nEnter Principal : 10000\n\
+    \nEnter Rate : 20\n\nEnter Time : 5\n\nAmount : 24883.199999999997\n\nCompound\
+    \ Interest : 14883.199999999997\n\n# Java program to find largest number \n\n\
+    #### The program reads from the keyboard (three integer numbers), and selects\
+    \ the largest number.\n\n#### PROGRAM\n\n##### //Java program to find largest\
+    \ number among three numbers.\n\n##### import java.util.*;\n\n##### class LargestFrom3\n\
+    \n##### {\n\n#####     public static void main(String []s)\n\n#####     {\n\n\
+    #####         int a,b,c,largest;\n\n#####         //Scanner class to read value\n\
+    \n#####         Scanner sc=new Scanner(System.in);\n\n#####         System.out.print(\"\
+    Enter first  number:\");\n\n#####         a=sc.nextInt();\n\n#####         System.out.print(\"\
+    Enter second number:\");\n\n#####         b=sc.nextInt();\n\n#####         System.out.print(\"\
+    Enter third  number:\");\n\n#####         c=sc.nextInt();\n\n#####         if\
+    \ ( a>b && a>c )\n\n#####             largest=a;\n\n#####         else if ( b>a\
+    \ && b>c )\n\n#####             largest=b;\n\n#####         else\n\n#####            \
+    \ largest=c;\n\n#####         System.out.println(\"Largest Number is : \"+largest);\n\
+    \n#####     }\n\n##### }\n\nOutput\n\n Complie  :javac LargestFrom3.java\n\n Run:java\
+    \ LargestFrom3\n\n Output\n\n    Enter first  number:45\n\n    Enter second number:56\n\
+    \n    Enter third  number:67\n\n    Largest Number is : 67\n\n# Java program to\
+    \ run an application\n\n#### Using Java program this program can open (run) applications\
+    \ (Notepad, Calculator). We use instance of Runtime.getRuntime() and method exec()\
+    \ to open / run application.\n\n#### PROGRAM\n\n##### //Java program to run an\
+    \ application.\n\n##### import java.util.*;\n\n##### class OpenNotepad\n\n#####\
+    \ {\n\n#####   public static void main(String[] args)\n\n#####   {\n\n#####       Runtime\
+    \ app=Runtime.getRuntime();\n\n#####       try\n\n#####       {\n\n#####           //open\
+    \ notepad\n\n#####           app.exec(\"notepad\");\n\n#####           //open\
+    \ calculator\n\n#####           app.exec(\"calc\");\n\n#####       }\n\n#####\
+    \       catch (Exception Ex)\n\n#####       {\n\n#####           System.out.println(\"\
+    Error: \" + Ex.toString());\n\n#####       }\n\n#####   }\n\n##### }\n\n#### OUTPUT\n\
+    \n  Notepad and Calculator will be opened.\n\n# Java program to print Fibonacci\
+    \ Series\n\n#### Fibonacci Series is a series where the term is the sum of two\
+    \ preceding terms.\n\n#### PROGRAM\n\n##### /*Java program to print Fibonacci\
+    \ Series.*/\n\n##### import  java.util.Scanner;\n\n##### public  class  Fabonacci\
+    \ {\n\n#####     public  static  void  main(String[] args) {\n\n#####         int\
+    \  SeriesNum ;\n\n#####         Scanner sc=new  Scanner(System.in);\n\n#####         System.out.print(\"\
+    Enter the length of fibonacci series : \");\n\n#####         SeriesNum=sc.nextInt();\n\
+    \n#####              int[] num = new  int[SeriesNum];\n\n#####              num[0]\
+    \ = 0;\n\n#####              num[1] = 1;\n\n#####             //number should\
+    \ be sum of last two numbers of Series    \n\n#####              for(int  i=2;\
+    \ i < SeriesNum; i++){\n\n#####                  num[i] = num[i-1] + num[i-2];\n\
+    \n#####              }\n\n#####              System.out.println(\"fibonacci series\
+    \ : \");\n\n#####              for(int  i=0; i< SeriesNum; i++){\n\n#####                      System.out.print(num[i]\
+    \ + \" \");\n\n#####              }\n\n#####     }\n\n##### }\n\n#### OUTPUT\n\
+    \n  Enter the length of fibonacci series : 10\n\n    fibonacci series :\n\n   \
+    \ 0 1 1 2 3 5 8 13 21 34\n\n# Using for loop to print numbers from 1 to N\n\n\
+    #### PROGRAM\n\n##### import java.util.Scanner;\n\n##### public class Print_1_To_N_UsingFor\n\
+    \n##### {\n\n##### public static void main(String[] args)\n\n##### {\n\n#####\
+    \ //create object of scanner class\n\n##### Scanner scanner = new Scanner(System.in);\n\
+    \n##### // enter the value of \" n \".\n\n##### System.out.print(\"Enter the value\
+    \ n : \");\n\n##### // read the value.\n\n##### int n = scanner.nextInt();\n\n\
+    ##### System.out.println(\"Numbers are : \" );\n\n##### for(int i=1; i<=n; i++)\n\
+    \n##### {\n\n##### System.out.println(i);\n\n##### }\n\n##### }\n\n##### }\n\n\
+    Output"
+  toc: []
+  trans: "\n\n![](img/cover0007.jpeg)\n\n# 考试与面试 Java 习题\n## 学习编程基础的快速简易方法\nJP TAM\n\
+    \n- 计算所有数字位之和的 Java 程序\n- 计算复利的 Java 程序\n- 寻找最大数的 Java 程序\n- 运行应用程序的 Java 程序\n\
+    - 打印斐波那契序列的 Java 程序\n- 使用 for 循环打印 1 到 N 的数字\n- Java 数据类型练习\n- 华氏度转摄氏度\n- Java\
+    \ 数据类型练习：英寸到米\n- 相整数中所有数字的和\n- 让用户输入分钟\n- 读取数字并显示其平方\n- Java 条件语句：练习\n- 检查数字是负数、零还是正数\n\
+    - 输入 5 个数字并计算和和平均值\n- 显示 n 项自然数及其和\n- 显示 1 到 7 之间的星期几\n- 使用 while 循环打印 1 到 N 的数字\n\
+    - 一维数组和二维数组的加法\n- 十进制转二进制的 Java 程序\n- 逐行读取文件的 Java 程序\n\n# 计算所有数字位之和的 Java 程序\n\
+    \n给定一个数字，我们必须使用 Java 程序找到它所有数字位的和。\n\n### 示例 1:\n输入：\n数字：852\n输出：\n所有数字之和：15\n\
+    \n### 示例 2:\n输入：\n数字：256868\n输出：\n所有数字之和：35\n\n### 程序\n```java\nimport java.util.Scanner;\n\
+    \npublic class AddDigits {\n    public static void main(String args[]) {\n   \
+    \     // 初始化和声明对象。\n        int num, rem=0, sum=0, temp;\n        Scanner scan\
+    \ = new Scanner(System.in);\n        //在此处输入数字。\n        System.out.print(\"Enter\
+    \ the Number : \");\n        num = scan.nextInt();\n        // temp 用于存储数字。\n\
+    \        temp = num;\n        while(num>0) {\n            rem = num%10;\n    \
+    \        sum = sum+rem;\n            num = num/10;\n        }\n        System.out.print(\"\
+    Sum of Digits of \" +temp+ \" is : \" +sum);\n    }\n}\n```\n\n### 输出\n首次运行：\n\
+    Enter the Number : 582\nSum of Digits of 582 : 15\n第二次运行：\nEnter the Number :\
+    \ 256868\nSum of Digits of 256868 : 35\n\n# 计算复利的 Java 程序\n\n给定本金、利率和时间，必须使用 Java\
+    \ 程序找到复利。\n\n### 示例:\n输入本金：5000\n输入利率：5\n输入时间：3\n金额：5788.1250000000\n复利：788.1250000000\n\
+    \n### 程序\n```java\nimport java.util.Scanner;\n\npublic class CompoundInterest\
+    \ {\n    public static void main(String args[]) {\n        // 定义并初始化。\n      \
+    \  double A=0,Pri,Time,t=1,CI;\n        // 创建对象。\n        Scanner S=new Scanner(System.in);\n\
+    \        //在此处输入本金、利率、时间\n        System.out.print(\"Enter Principal : \");\n\
+    \        Pri=S.nextFloat();\n        System.out.print(\"Enter Rate : \");\n  \
+    \      Rate=S.nextFloat();\n        System.out.print(\"Enter Time : \");\n   \
+    \     Time=S.nextFloat();\n        Rate=(1 + Rate/100);\n        for(int i=0;i<Time;i++)\n\
+    \            t*=Rate;\n        A=Pri*t;\n    }\n}\n```\n*(注：原文代码中 Rate 变量未定义，此处保留原样逻辑)*\n\
+    \n### 输出\n首次运行：\nEnter Principal : 5000\nEnter Rate : 5\nEnter Time : 3\nAmount\
+    \ : 5788.1250000000\nCompound Interest : 788.1250000000\n\n"
+- fmt: "\nEnter the value `n` : 15\n\nNumbers are :\n1, 2, 3, 4, 5, 6, 7, 8, 9, 10,\
+    \ 11, 12, 13, 14, 15\n\n# Java Data Type Exercises\n\n## Fahrenheit to Celsius\
+    \ degree\n\n![](Images/image00066.jpeg)\n\n### JAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Exercise1 {\n    public static void main(String[] Strings) {\n  \
+    \      Scanner input = new Scanner(System.in);\n        System.out.print(\"Input\
+    \ a degree in Fahrenheit: \");\n        double fahrenheit = input.nextDouble();\n\
+    \        double celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);\n        System.out.println(fahrenheit\
+    \ + \" degree Fahrenheit is equal to \" + celsius + \" in Celsius\");\n    }\n\
+    }\n```\n\n### OUTPUT\n```\nInput a degree in Fahrenheit: 212\n212.0 degree Fahrenheit\
+    \ is equal to 100.0 in Celsius\n```\n\n# Java Data Type Exercises: Inches to meters\n\
+    \nWrite a Java program that takes an inch value and converts it to meters.\n\n\
+    ### INCHES TO METERS\n1 INCH = 0.025400 METERS\n2 INCH = 0.050800 METERS\n3 INCH\
+    \ = 0.076200 METERS\n4 INCH = 0.101600 METERS\n5 INCH = 0.127000 METERS\n6 INCH\
+    \ = 0.152400 METERS\n\n### JAVA CODE\n```java\nimport java.util.Scanner;\npublic\
+    \ class Exercise2 {\n    public static void main(String[] Strings) {\n       \
+    \ Scanner input = new Scanner(System.in);\n        System.out.print(\"Input a\
+    \ value for inch: \");\n        double inch = input.nextDouble();\n        double\
+    \ meters = inch * 0.0254;\n        System.out.println(inch + \" inch is \" + meters\
+    \ + \" meters\");\n    }\n}\n```\n\n### OUTPUT\n```\nInput a value for inch: 1000\n\
+    1000.0 inch is 25.4 meters\n```\n\n# Adds all the digits in the integer\n\nCreate\
+    \ a Java program that takes an integer between 0 and 1000 and adds all of its\
+    \ digits.\n\n![](Images/image00067.jpeg)\n\n### JAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] Strings) {\n       \
+    \ Scanner input = new Scanner(System.in);\n        System.out.print(\"Input an\
+    \ integer between 0 and 1000: \");\n        int num = input.nextInt();\n     \
+    \   int firstDigit = num % 10;\n        int remainingNumber = num / 10;\n    \
+    \    int SecondDigit = remainingNumber % 10;\n        remainingNumber = remainingNumber\
+    \ / 10;\n        int thirdDigit = remainingNumber % 10;\n        remainingNumber\
+    \ = remainingNumber / 10;\n        int fourthDigit = remainingNumber % 10;\n \
+    \       int sum = thirdDigit + SecondDigit + fourthDigit;\n        System.out.println(\"\
+    The sum of digits in \" + num + \" is \" + sum);\n    }\n}\n```\n\n### OUTPUT\n\
+    ```\nInput an integer between 0 and 1000: 565\nThe sum of all digits in 565 is\
+    \ 16\n```\n\n# Takes the user to input the minutes and print the number of years\
+    \ and days\n\nWrite a Java program to convert minutes into a number of years and\
+    \ days.\n\n![](Images/image00068.jpeg)\n\n### JAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Exercise4 {\n    public static void main(String[] Strings) {\n  \
+    \      double minutesInYear = 60 * 24 * 365;\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.print(\"Input the number of minutes: \");\n        double\
+    \ min = input.nextDouble();\n        long years = (long) (min / minutesInYear);\n\
+    \        int days = (int) (min / 60 / 24) % 365;\n        System.out.println((int)\
+    \ min + \" minutes is approximately \" + years + \" years and \" + days + \" days\"\
+    );\n    }\n}\n```\n\n### OUTPUT\n```\nInput the number of minutes: 3456789\n3456789\
+    \ minutes is approximately 6 years and 210 days\n```\n\n# Reads a number and display\
+    \ the square cube, and fourth power\n\nCreate a Java program that reads a number\
+    \ and displays the square, cube, and fourth power of that number.\n\n### JAVA\
+    \ CODE\n```java\nimport java.util.Scanner;\npublic class Exercise8 {\n    public\
+    \ static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input the side length value: \");\n        double\
+    \ val = in.nextDouble();\n        System.out.printf(\"Square: %12.2f\\n\", val\
+    \ * val);\n        System.out.printf(\"Cube: %14.2f\\n\", val * val * val);\n\
+    \        System.out.printf(\"Fourth power: %6.2f\\n\", Math.pow(val, 4));\n  \
+    \  }\n}\n```\n\n### OUTPUT\n```\nInput the side length value: 15\nSquare: 25.00\n\
+    Cube: 3375.00\nFourth power: 50625.00\n```\n\n# Conditional Statement: Check the\
+    \ number is negative, zero, or positive\n\n![](Images/image00069.jpeg)\n\n###\
+    \ JAVA CODE\n```java\nimport java.util.Scanner;\npublic class Exercise27 {\n \
+    \   public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input a number: \");\n        int n = in.nextInt();\n\
+    \        if (n > 0) {\n            System.out.println(\"positive\");\n       \
+    \ } else if (n < 0) {\n            System.out.println(\"negative\");\n       \
+    \ } else {\n            System.out.println(\"zero\");\n        }\n    }\n}\n```\n\
+    \n### OUTPUT\n```\nInput a number: 7\npositive\n```\n\n# Input 5 numbers find\
+    \ their sum and average\n\n![](Images/image00070.jpeg)\n\n### JAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Exercise12 {\n    public static void main(String[]\
+    \ args) {\n        int i, n=0, s=0;\n        double avg;\n        System.out.println(\"\
+    Input the 5 numbers : \");\n        for (i = 0; i < 5; i++) {\n            Scanner\
+    \ in = new Scanner(System.in);\n            n = in.nextInt();\n            s +=\
+    \ n;\n        }\n        avg = s / 5;\n        System.out.println(\"The sum of\
+    \ 5 no is : \" + s + \"\\nThe Average is : \" + avg);\n    }\n}\n```\n\n### OUTPUT\n\
+    ```\nInput the 5 numbers : 1\n2\n3\n4\n5\nThe sum of 5 no is : 15\nThe Average\
+    \ is : 3.0\n```\n\n# Display n terms of natural numbers and their sum\n\nInput\
+    \ number: 7\n\n![](Images/image00071.jpeg)\n\n### JAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Exercise11 {\n    public static void main(String[] args) {\n    \
+    \    int i, n, sum=0;\n        {\n            Scanner in = new Scanner(System.in);\n\
+    \            System.out.print(\"Input number: \");\n            n = in.nextInt();\n\
+    \        }\n        System.out.println(\"The first n natural numbers are : \"\
+    \ + n);\n        for (i = 1; i <= n; i++) {\n            System.out.println(i);\n\
+    \            sum += i;\n        }\n        System.out.println(\"The Sum of Natural\
+    \ Number upto \" + n + \" terms : \" + sum);\n    }\n}\n```\n\n### OUTPUT\n```\n\
+    Input number: 7\nThe first n natural numbers are : 7\n1\n2\n3\n4\n5\n6\n7\nThe\
+    \ Sum of Natural Number upto 7 terms : 28\n```\n"
+  raw: 'Enter the value n : 15
+
+
+    Numbers are :
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    5
+
+
+    6
+
+
+    7
+
+
+    8
+
+
+    9
+
+
+    10
+
+
+    11
+
+
+    12
+
+
+    13
+
+
+    14
+
+
+    15
+
+
+    # Java Data Type Exercises
+
+
+    # Fahrenheit to Celsius degree
+
+
+    ![](Images/image00066.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Exercise1 {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input a degree in Fahrenheit: ");
+
+
+    #####         double fahrenheit = input.nextDouble();
+
+
+    #####         double  celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);
+
+
+    #####         System.out.println(fahrenheit + " degree Fahrenheit is equal to
+    " + celsius + " in Celsius");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input a degree in Fahrenheit: 212
+
+
+    212.0 degree Fahrenheit is equal to 100.0 in Celsius
+
+
+    # Java Data Type Exercises: Inches to meters
+
+
+    Write a Java program that takes an inch value and converts it to meters.
+
+
+    INCHES TO METERS
+
+
+    1 INCH = 0.025400 METERS
+
+
+    2 INCH = 0.050800 METERS
+
+
+    3 INCH = 0.076200 METERS
+
+
+    4 INCH = 0.101600 METERS
+
+
+    5 INCH = 0.127000 METERS
+
+
+    6 INCH =  0.152400 METERS
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Exercise2 {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input a value for inch: ");
+
+
+    #####         double inch = input.nextDouble();
+
+
+    #####         double meters = inch * 0.0254;
+
+
+    #####         System.out.println(inch + " inch is " + meters + " meters");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input a value for inch: 1000                                                                                 
+
+
+    1000.0 inch is 25.4 meters
+
+
+    # Adds all the digits in the integer
+
+
+    Create a Java program that takes an integer between 0 and 1000 and adds all of
+    its digits.
+
+
+    ![](Images/image00067.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input an integer between 0 and 1000: ");
+
+
+    #####         int num = input.nextInt();
+
+
+    #####         int firstDigit = num % 10;
+
+
+    #####         int remainingNumber = num / 10;
+
+
+    #####         int SecondDigit = remainingNumber % 10;
+
+
+    #####         remainingNumber = remainingNumber / 10;
+
+
+    #####         int thirdDigit = remainingNumber % 10;
+
+
+    #####         remainingNumber = remainingNumber / 10;
+
+
+    #####         int fourthDigit = remainingNumber % 10;
+
+
+    #####         int sum = thirdDigit + SecondDigit + firstDigit + fourthDigit;
+
+
+    #####         System.out.println("The sum of all digits in " + num + " is " +
+    sum);
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input an integer between 0 and 1000: 565                                                                     
+
+
+    The sum of all digits in 565 is 16
+
+
+    # Takes the user to input the minutes
+
+
+    ## and print the number of years and days
+
+
+    ### for the minutes
+
+
+    #### Write a Java program to convert minutes into a number of years and days.
+
+
+    ![](Images/image00068.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Exercise4 {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         double minutesInYear = 60 * 24 * 365;
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input the number of minutes: ");
+
+
+    #####         double min = input.nextDouble();
+
+
+    #####         long years = (long) (min / minutesInYear);
+
+
+    #####         int days = (int) (min / 60 / 24) % 365;
+
+
+    #####         System.out.println((int) min + " minutes is approximately " + years
+    + " years and " + days + " days");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the number of minutes: 3456789                                                                         
+
+
+    3456789 minutes is approximately 6 years and 210 days
+
+
+    # Reads a number and display the square
+
+
+    ## cube, and fourth power
+
+
+    #### Create a Java program that reads a number and displays the square, cube,
+    and fourth power of that number.
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Exercise8 {
+
+
+    #####     public static void main(String[] args)
+
+
+    #####     {
+
+
+    #####         Scanner in = new Scanner(System.in);
+
+
+    #####         System.out.print("Input the side length value: ");
+
+
+    #####         double val = in.nextDouble();
+
+
+    #####         System.out.printf("Square: %12.2f\n", val * val);
+
+
+    #####         System.out.printf("Cube: %14.2f\n", val * val * val);
+
+
+    #####         System.out.printf("Fourth power: %6.2f\n", Math.pow(val, 4));
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the side length value: 15
+
+
+    Square:       225.00
+
+
+    Cube:        3375.00
+
+
+    Fourth power: 50625.00
+
+
+    # Java Conditional Statement : Exercises
+
+
+    # Check the number is negative, zero, or positive
+
+
+    ![](Images/image00069.jpeg)
+
+
+    ### JAVA CODE
+
+
+    import java.util.Scanner;
+
+
+    public class Exercise27 {
+
+
+    public static void main(String[] args)
+
+
+        {
+
+
+            Scanner in = new Scanner(System.in);
+
+
+            System.out.print("Input a number: ");
+
+
+            int n = in.nextInt();
+
+
+            if (n > 0)
+
+
+            {
+
+
+                System.out.println("Number is positive");
+
+
+            }
+
+
+            else if (n < 0)
+
+
+            {
+
+
+                System.out.println("Number is negative");
+
+
+            }
+
+
+            else
+
+
+            {
+
+
+                System.out.println("Number is zero");
+
+
+            }
+
+
+        }
+
+
+    }
+
+
+    ### OUTPUT
+
+
+    Input a number: 7                                             
+
+
+    Number is positive
+
+
+    # Input 5 numbers find their sum and average
+
+
+    ![](Images/image00070.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Exercise12 {
+
+
+    #####   public static void main(String[] args)
+
+
+    ##### {      
+
+
+    #####     int i,n=0,s=0;
+
+
+    ##### double avg;
+
+
+    ##### {
+
+
+    #####         System.out.println("Input the 5 numbers : "); 
+
+
+    ##### }
+
+
+    ##### for (i=0;i<5;i++)
+
+
+    ##### {
+
+
+    #####     Scanner in = new Scanner(System.in);
+
+
+    #####     n = in.nextInt();
+
+
+    #####  s +=n;
+
+
+    ##### }
+
+
+    ##### avg=s/5;
+
+
+    ##### System.out.println("The sum of 5 no is : " +s+"\nThe Average is : " +avg);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the 5 numbers :                                                                                        
+
+
+    1                                                                                                    
+
+
+    2                                                                                                    
+
+
+    3                                                                                                    
+
+
+    4                                                                                                    
+
+
+    5                                                                                                    
+
+
+    The sum of 5 no is : 15                                                                                      
+
+
+    The Average is : 3.0
+
+
+    # Display n terms of natural numbers and their sum
+
+
+    #### Input number: 7
+
+
+    ![](Images/image00071.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Exercise11 {
+
+
+    #####   public static void main(String[] args)
+
+
+    ##### {
+
+
+    #####    int i, n, sum=0;
+
+
+    #####    {
+
+
+    #####    Scanner in = new Scanner(System.in); 
+
+
+    #####         System.out.print("Input number: "); 
+
+
+    #####          n = in.nextInt();
+
+
+    ##### }
+
+
+    #####   System.out.println("The first n natural numbers are : "+n);
+
+
+    ##### for(i=1;i<=n;i++)
+
+
+    #####    {
+
+
+    #####      System.out.println(i);
+
+
+    #####      sum+=i;
+
+
+    #####    }
+
+
+    ##### System.out.println("The Sum of Natural Number upto "+n+ " terms : " +sum);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input number: 7                                                                                              
+
+
+    The first n natural numbers are : 7                                                                          
+
+
+    1                                                                                                    
+
+
+    2                                                                                                    '
+  toc: []
+  trans: "\n\n输入值 `n` : 15\n\n数字为：\n1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,\
+    \ 15\n\n# Java 数据类型练习\n\n## 华氏度转摄度\n\n![](img/image00066.jpeg)\n\n### JAVA 代码\n\
+    ```java\nimport java.util.Scanner;\npublic class Exercise1 {\n    public static\
+    \ void main(String[] Strings) {\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.print(\"Input a degree in Fahrenheit: \");\n        double\
+    \ fahrenheit = input.nextDouble();\n        double celsius =(( 5 *(fahrenheit\
+    \ - 32.0)) / 9.0);\n        System.out.println(fahrenheit + \" degree Fahrenheit\
+    \ is equal to \" + celsius + \" in Celsius\");\n    }\n}\n```\n\n### 输出\n```\n\
+    Input a degree in Fahrenheit: 212\n212.0 degree Fahrenheit is equal to 100.0 in\
+    \ Celsius\n```\n\n# Java 数据类型练习：英寸转米\n\n编写一个 Java 程序，接收英寸值并将其转换为米。\n\n### 英寸转米\n\
+    1 INCH = 0.025400 METERS\n2 INCH = 0.050800 METERS\n3 INCH = 0.076200 METERS\n\
+    4 INCH = 0.101600 METERS\n5 INCH = 0.127000 METERS\n6 INCH = 0.152400 METERS\n\
+    \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise2 {\n\
+    \    public static void main(String[] Strings) {\n        Scanner input = new\
+    \ Scanner(System.in);\n        System.out.print(\"Input a value for inch: \");\n\
+    \        double inch = input.nextDouble();\n        double meters = inch * 0.0254;\n\
+    \        System.out.println(inch + \" inch is \" + meters + \" meters\");\n  \
+    \  }\n}\n```\n\n### 输出\n```\nInput a value for inch: 1000\n1000.0 inch is 25.4\
+    \ meters\n```\n\n# 计算整数所有各位数字之和\n\n编写一个 Java 程序，接收 0 到 1000 之间的整数，并计算所有各位数字之和。\n\
+    \n![](img/image00067.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] Strings) {\n       \
+    \ Scanner input = new Scanner(System.in);\n        System.out.print(\"Input an\
+    \ integer between 0 and 1000: \");\n        int num = input.nextInt();\n     \
+    \   int firstDigit = num % 10;\n        int remainingNumber = num / 10;\n    \
+    \    int SecondDigit = remainingNumber % 10;\n        remainingNumber = remainingNumber\
+    \ / 10;\n        int thirdDigit = remainingNumber % 10;\n        remainingNumber\
+    \ = remainingNumber / 10;\n        int fourthDigit = remainingNumber % 10;\n \
+    \       int sum = thirdDigit + SecondDigit + fourthDigit;\n        System.out.println(\"\
+    The sum of digits in \" + num + \" is \" + sum);\n    }\n}\n```\n\n### 输出\n```\n\
+    Input an integer between 0 and 1000: 565\nThe sum of all digits in 565 is 16\n\
+    ```\n\n# 获取用户输入分钟并打印年和天数\n\n编写一个 Java 程序，将分钟转换为年和天数。\n\n![](img/image00068.jpeg)\n\
+    \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise4 {\n\
+    \    public static void main(String[] Strings) {\n        double minutesInYear\
+    \ = 60 * 24 * 365;\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input the number of minutes: \");\n        double min = input.nextDouble();\n\
+    \        long years = (long) (min / minutesInYear);\n        int days = (int)\
+    \ (min / 60 / 24) % 365;\n        System.out.println((int) min + \" minutes is\
+    \ approximately \" + years + \" years and \" + days + \" days\");\n    }\n}\n\
+    ```\n\n### 输出\n```\nInput the number of minutes: 3456789\n3456789 minutes is approximately\
+    \ 6 years and 210 days\n```\n\n# 读取一个数字并显示平方、立方和四次方\n\n编写一个 Java 程序，读取一个数字并显示该数字的平方、立方和四次方。\n\
+    \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise8 {\n\
+    \    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input the side length value: \");\n        double\
+    \ val = in.nextDouble();\n        System.out.printf(\"Square: %12.2f\\n\", val\
+    \ * val);\n        System.out.printf(\"Cube: %14.2f\\n\", val * val * val);\n\
+    \        System.out.printf(\"Fourth power: %6.2f\\n\", Math.pow(val, 4));\n  \
+    \  }\n}\n```\n\n### 输出\n```\nInput the side length value: 15\nSquare:       225.00\n\
+    Cube:       3375.00\nFourth power: 50625.00\n```\n\n# 条件语句：判断数字是负数、零还是正数\n\n![](img/image00069.jpeg)\n\
+    \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise27 {\n\
+    \    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input a number: \");\n        int n = in.nextInt();\n\
+    \        if (n > 0) {\n            System.out.println(\"positive\");\n       \
+    \ } else if (n < 0) {\n            System.out.println(\"negative\");\n       \
+    \ } else {\n            System.out.println(\"zero\");\n        }\n    }\n}\n```\n\
+    \n### 输出\n```\nInput a number: 7\npositive\n```\n\n# 输入 5 个数字求和和平均值\n\n![](img/image00070.jpeg)\n\
+    \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise12 {\n\
+    \    public static void main(String[] args) {\n        int i, n=0, s=0;\n    \
+    \    double avg;\n        System.out.println(\"Input the 5 numbers : \");\n  \
+    \      for (i = 0; i < 5; i++) {\n            Scanner in = new Scanner(System.in);\n\
+    \            n = in.nextInt();\n            s += n;\n        }\n        avg =\
+    \ s / 5;\n        System.out.println(\"The sum of 5 no is : \" + s + \"\\nThe\
+    \ Average is : \" + avg);\n    }\n}\n```\n\n### 输出\n```\nInput the 5 numbers :\
+    \ 1\n2\n3\n4\n5\nThe sum of 5 no is : 15\nThe Average is : 3.0\n```\n\n# 显示 n\
+    \ 项自然数及其和\n\n输入数字：7\n\n![](img/image00071.jpeg)\n\n### JAVA 代码\n```java\nimport\
+    \ java.util.Scanner;\npublic class Exercise11 {\n    public static void main(String[]\
+    \ args) {\n        int i, n, sum=0;\n        {\n            Scanner in = new Scanner(System.in);\n\
+    \            System.out.print(\"Input number: \");\n            n = in.nextInt();\n\
+    \        }\n        System.out.println(\"The first n natural numbers are : \"\
+    \ + n);\n        for (i = 1; i <= n; i++) {\n            System.out.println(i);\n\
+    \            sum += i;\n        }\n        System.out.println(\"The Sum of Natural\
+    \ Number upto \" + n + \" terms : \" + sum);\n    }\n}\n```\n\n### 输出\n```\nInput\
+    \ number: 7\nThe first n natural numbers are : 7\n1\n2\n3\n4\n5\n6\n7\nThe Sum\
+    \ of Natural Number upto 7 terms : 28\n```\n\n"
+- fmt: "\nThe Sum of Natural Number upto n terms: 28\n\n# Displays the weekday between\
+    \ 1 and 7\n\n![](Images/image00072.jpeg)\n\n### JAVA CODE\n\n```java\nimport java.util.Scanner;\n\
+    \npublic class Exercise5 {\n    public static void main(String[] args) {\n   \
+    \     Scanner in = new Scanner(System.in);\n        System.out.print(\"Input number:\
+    \ \");\n        int day = in.nextInt();\n        System.out.println(getDayName(day));\n\
+    \    }\n    // Get the name for the Week\n    public static String getDayName(int\
+    \ day) {\n        String dayName = \"\";\n        switch (day) {\n           \
+    \ case 1: dayName = \"Monday\"; break;\n            case 2: dayName = \"Tuesday\"\
+    ; break;\n            case 3: dayName = \"Wednesday\"; break;\n            case\
+    \ 4: dayName = \"Thursday\"; break;\n            case 5: dayName = \"Friday\"\
+    ; break;\n            case 6: dayName = \"Saturday\"; break;\n            case\
+    \ 7: dayName = \"Sunday\"; break;\n            default: dayName = \"Invalid day\"\
+    ;\n        }\n        return dayName;\n    }\n}\n```\n\n### OUTPUT\nInput number:\
+    \ 3\nWednesday\n\n# Using while loop to print numbers from 1 to N\n\n#### PROGRAM\n\
+    ```java\nimport java.util.Scanner;\n\npublic class Print_1_To_N_UsingWhile {\n\
+    \    public static void main(String[] args) {\n        //loop counter\n      \
+    \  int i = 1;\n        //create object of scanner\n        Scanner Sc = new Scanner(System.in);\n\
+    \        // enter the value of \" n \"\n        System.out.print(\"Enter the value\
+    \ n : \");\n        // read the value.\n        int n = Sc.nextInt();\n      \
+    \  System.out.println(\"Numbers are : \");\n        while(i<=n) {\n          \
+    \  System.out.println(i);\n            i++;\n        }\n    }\n}\n```\nOutput\n\
+    Enter the value n : 15\nNumbers are :\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n\
+    13\n14\n15\n\n# Addition of one dimensional and two dimensional arrays IN JAVA\
+    \ PROGRAM\n\n#### There are 2 programs: two one-dimensional arrays added, and\
+    \ two-dimensional arrays added\n\n### 1) Addition of two one dimensional arrays\
+    \ in java\n```java\nclass AddTwoArrayClass{\n    public static void main(String[]\
+    \ args){\n        // Declaration and initialization of array\n        int a[]\
+    \ = {1,2,3,4,5};\n        int b[] = {6,7,8,9,10};\n        // Instantiation of\
+    \ third array to store results\n        int c[] = new int[5];\n        for(int\
+    \ i=0; i<5; ++i){\n            // add two array and result store in third array\n\
+    \            c[i] = a[i] + b[i];\n            //Display results\n            System.out.println(\"\
+    Enter sum of \"+i +\"index\" +\" \" + c[i]);\n        }\n    }\n}\n```\nOutput\n\
+    Enter sum of 0index 7\nEnter sum of 1index 9\nEnter sum of 2index 11\nEnter sum\
+    \ of 3index 13\nEnter sum of 4index 15\n\n### 2) Addition of two two dimensional\
+    \ arrays in java\n```java\nclass AddTwoArrayOf2DClass{\n    public static void\
+    \ main(String[] args){\n        // Declaration and initialization of 2D array\n\
+    \        int a[][] = {{1,2,3},{4,5,6}};\n        int b[][] = {{7,8,9},{10,11,12}};\n\
+    \        // Instantiation of third array to store results\n        int c[][] =\
+    \ new int[2][3];\n        for(int i=0; i<2; ++i){\n            for(int j=0; j<3;\
+    \ ++j){\n                // add two array and result store in third array\n  \
+    \              c[i][j] = a[i][j] + b[i][j];\n                System.out.println(\"\
+    Enter sum of \"+i + \" \" + j +\"index\" +\" \" + c[i][j]);\n            }\n \
+    \       }\n    }\n}\n```\nOutput\nEnter sum of 0 0index 8\nEnter sum of 0 1index\
+    \ 10\nEnter sum of 0 2index 12\nEnter sum of 1 0index 14\nEnter sum of 1 1index\
+    \ 16\nEnter sum of 1 2index 18\n\n# Java program to convert Decimal to Binary\n\
+    \nGiven an Integer (Decimal) number, and using java program we have to convert\
+    \ it to Binary.\n\n#### PROGRAM\n```java\n// Scanner class is used for taking\
+    \ input from user\nimport java.util.Scanner;\n\nclass DecimalToBinary{\n    public\
+    \ static void main(String[] args){\n        // create Scanner object\n       \
+    \ Scanner sc = new Scanner(System.in);\n        System.out.println(\"Enter Any\
+    \ Number :\");\n        //Accept input from user\n        int input_decimal_num\
+    \ = sc.nextInt();\n        String binary_string = \"\";\n        //Loop continues\
+    \ till input_decimal_num >0\n        while(input_decimal_num > 0){\n         \
+    \   //remainder add to string\n            binary_string = input_decimal_num%2\
+    \ + binary_string;\n            input_decimal_num = input_decimal_num/2;\n   \
+    \     }\n        // Display Final Result\n        System.out.println(\"Conversion\
+    \ of binary is : \" + binary_string);\n    }\n}\n```\nOutput\nEnter Any Number\
+    \ : 30\nConversion of binary is : 11110\n\n# Java program to read a file line\
+    \ by line\n\nGiven a file, and using java program we have to read its contents\
+    \ line by line.\nWe use a file called \"B.txt\" for this program that is located\
+    \ at the \"F:\" drive, thus the file path is \"F:\\B.txt,\" and the file content\
+    \ is:\nThis is line 1\nThis is line 2\nThis is line 3\nThis is line 4\n\n####\
+    \ PROGRAM\n```java\nimport java.io.FileInputStream;\nimport java.io.IOException;\n\
+    import java.util.Scanner;\n\npublic class ReadLineByLine {\n    public static\
+    \ void main(String[] args) {\n        // create object of scanner class.\n   \
+    \     Scanner Sc=new Scanner(System.in);\n        // enter file name.\n      \
+    \  System.out.print(\"Enter the file name:\");\n        String sfilename=Sc.next();\n\
+    \        Scanner Sc1= null;\n         FileInputStream fis=null;\n        try {\n\
+    \            fis=new FileInputStream(sfilename);\n            Sc1=new Scanner(fis);\n\
+    \            // this will read data till the end of data.\n            while(Sc1.hasNext())\
+    \ {\n                String data=Sc1.nextLine();\n                // print the\
+    \ data.\n                System.out.print(\"The file data is : \" +data);\n  \
+    \          }\n        } catch(IOException e) {\n            System.out.println(e);\n\
+    \        }\n    }\n}\n```\nOutput\nEnter the file name: F:/B.txt\nThe file data\
+    \ is : This is line 1\nThe file data is : This is line 2\nThe file data is : This\
+    \ is line 3\nThe file data is : This is line 4\n"
+  raw: '3                                                                                                    
+
+
+    4                                                                                                    
+
+
+    5                                                                                                    
+
+
+    6                                                                                                    
+
+
+    7                                                                                                    
+
+
+    The Sum of Natural Number upto n terms : 28
+
+
+    # Displays the weekday between 1 and 7
+
+
+    ![](Images/image00072.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Exercise5 {
+
+
+    #####   public static void main(String[] args)
+
+
+    #####     {
+
+
+    #####         Scanner in = new Scanner(System.in);
+
+
+    #####         System.out.print("Input number: ");
+
+
+    #####         int day = in.nextInt();
+
+
+    #####         System.out.println(getDayName(day));
+
+
+    #####     }
+
+
+    #####     // Get the name for the Week
+
+
+    #####     public static String getDayName(int day) {
+
+
+    #####         String dayName = "";
+
+
+    #####         switch (day) {
+
+
+    #####             case 1: dayName = "Monday"; break;
+
+
+    #####             case 2: dayName = "Tuesday"; break;
+
+
+    #####             case 3: dayName = "Wednesday"; break;
+
+
+    #####             case 4: dayName = "Thursday"; break;
+
+
+    #####             case 5: dayName = "Friday"; break;
+
+
+    #####             case 6: dayName = "Saturday"; break;
+
+
+    #####             case 7: dayName = "Sunday"; break;
+
+
+    #####             default:dayName = "Invalid day range";
+
+
+    #####         }
+
+
+    #####         return dayName;
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input number: 3                                                                                              
+
+
+    Wednesday
+
+
+    # Using while loop to print numbers from 1 to N
+
+
+    #### PROGRAM
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Print_1_To_N_UsingWhile
+
+
+    ##### {
+
+
+    ##### public static void main(String[] args)
+
+
+    ##### {
+
+
+    ##### //loop counter initialisation
+
+
+    ##### int i =1;
+
+
+    ##### //create object of scanner class
+
+
+    ##### Scanner Sc = new Scanner(System.in);
+
+
+    ##### // enter the value of " n "
+
+
+    ##### System.out.print("Enter the value n : ");
+
+
+    ##### // read the value.
+
+
+    ##### int n = Sc.nextInt();
+
+
+    ##### System.out.println("Numbers are : ");
+
+
+    ##### while(i<=n)
+
+
+    ##### {
+
+
+    ##### System.out.println(i);
+
+
+    ##### i++;
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    Output
+
+
+    Enter the value n : 15
+
+
+    Numbers are :
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    5
+
+
+    6
+
+
+    7
+
+
+    8
+
+
+    9
+
+
+    10
+
+
+    11
+
+
+    12
+
+
+    13
+
+
+    14
+
+
+    15
+
+
+    # Addition of one dimensional and two dimensional arrays
+
+
+    ## IN JAVA PROGRAM
+
+
+    #### There are 2 programs: two one-dimensional arrays added, and two two-dimensional
+    arrays added
+
+
+    ### 1)  Addition of two one dimensional arrays in java
+
+
+    ##### class AddTwoArrayClass{
+
+
+    ##### public static void main(String[] args){
+
+
+    ##### // Declaration and initialization of  array
+
+
+    ##### int a[] = {1,2,3,4,5};
+
+
+    ##### int b[] = {6,7,8,9,10};
+
+
+    ##### // Instantiation of third array to store results
+
+
+    ##### int c[] = new int[5];
+
+
+    ##### for(int i=0; i<5; ++i){
+
+
+    ##### // add two array and result store in third array
+
+
+    ##### c[i] = a[i] + b[i];
+
+
+    ##### //Display results
+
+
+    ##### System.out.println("Enter sum of "+i +"index" +" " + c[i]);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    . Output
+
+
+    Enter sum of 0index 7
+
+
+    Enter sum of 1index 9
+
+
+    Enter sum of 2index 11
+
+
+    Enter sum of 3index 13
+
+
+    Enter sum of 4index 15
+
+
+    ### 2)  Addition of two two dimensional arrays in java
+
+
+    ##### class AddTwoArrayOf2DClass{
+
+
+    ##### public static void main(String[] args){
+
+
+    ##### // Declaration and initialization of  2D array
+
+
+    ##### int a[][] = {{1,2,3},{4,5,6}};
+
+
+    ##### int b[][] = {{7,8,9},{10,11,12}};
+
+
+    ##### // Instantiation of third array to store results
+
+
+    ##### int c[][] = new int[2][3];
+
+
+    ##### for(int i=0; i<2; ++i){
+
+
+    ##### for(int j=0; j<3; ++j){
+
+
+    ##### // add two array and result store in third array
+
+
+    ##### c[i][j] = a[i][j] + b[i][j];
+
+
+    ##### System.out.println("Enter sum of "+i + " " + j +"index" +" " + c[i][j]);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    Output
+
+
+    Enter sum of 0 0index 8
+
+
+    Enter sum of 0 1index 10
+
+
+    Enter sum of 0 2index 12
+
+
+    Enter sum of 1 0index 14
+
+
+    Enter sum of 1 1index 16
+
+
+    Enter sum of 1 2index 18
+
+
+    # Java program to convert Decimal to Binary
+
+
+    Given an Integer (Decimal) number, and using java program we have to convert it
+    to Binary.
+
+
+    #### PROGRAM
+
+
+    ##### // Scanner class is used for taking input from user
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### class DecimalToBinaryConversionClass{
+
+
+    ##### public static void main(String[] args){
+
+
+    ##### // create Scanner class object
+
+
+    ##### Scanner sc = new Scanner(System.in);
+
+
+    ##### System.out.println("Enter Any Decimal Number :");
+
+
+    ##### //Accept input from user
+
+
+    ##### int input_decimal_num = sc.nextInt();
+
+
+    ##### String binary_string = " ";
+
+
+    ##### //Loop continues till input_decimal_num >0
+
+
+    ##### while(input_decimal_num > 0){
+
+
+    ##### //remainder add to string variable
+
+
+    ##### binary_string = input_decimal_num%2 + binary_string;
+
+
+    ##### input_decimal_num = input_decimal_num/2;
+
+
+    ##### }
+
+
+    ##### // Display Final Result
+
+
+    ##### System.out.println("Conversion of decimal to binary is : " + binary_string);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    Output
+
+
+    Enter Any Decimal Number :
+
+
+    30
+
+
+    Conversion of decimal to binary is : 11110
+
+
+    # Java program to read a file line by line
+
+
+    #### Given a file, and using java program we have to read its contents line by
+    line.
+
+
+    #### We use a file called "B.txt" for this program that is located at the "F:\"
+    drive, thus the file path is "F:\B.txt," and the file content is:
+
+
+        This is line 1
+
+
+        This is line 2
+
+
+        This is line 3
+
+
+        This is line 4
+
+
+    #### PROGRAM
+
+
+    ##### import java.io.FileInputStream;
+
+
+    ##### import java.io.IOException;
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class ReadLineByLine
+
+
+    ##### {
+
+
+    ##### public static void main(String[] args)
+
+
+    ##### {
+
+
+    #####         // create object of scanner class.
+
+
+    ##### Scanner Sc=new Scanner(System.in);
+
+
+    ##### // enter file name.
+
+
+    ##### System.out.print("Enter the file name:");
+
+
+    ##### String sfilename=Sc.next();
+
+
+    ##### Scanner Sc1= null;
+
+
+    ##### FileInputStream fis=null;
+
+
+    ##### try
+
+
+    ##### {
+
+
+    #####     FileInputStream FI=new FileInputStream(sfilename);
+
+
+    #####     Sc1=new Scanner(FI);
+
+
+    #####     // this will read data till the end of data.
+
+
+    #####     while(Sc1.hasNext())
+
+
+    #####     {
+
+
+    #####  String data=Sc1.nextLine();
+
+
+    #####  // print the data.
+
+
+    #####  System.out.print("The file data is : " +data);
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ##### catch(IOException e)
+
+
+    ##### {
+
+
+    ##### System.out.println(e);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    Output
+
+
+    Enter the file name: F:/B.txt
+
+
+    This is line 1
+
+
+    This is line 2
+
+
+    This is line 3
+
+
+    This is line 4'
+  toc: []
+  trans: "\n\n前 n 项自然数之和：28\n\n# 显示 1 到 7 之间的星期\n\n![](img/image00072.jpeg)\n\n###\
+    \ JAVA 代码\n\n```java\nimport java.util.Scanner;\n\npublic class Exercise5 {\n\
+    \    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input number: \");\n        int day = in.nextInt();\n\
+    \        System.out.println(getDayName(day));\n    }\n    // 获取周几名称\n    public\
+    \ static String getDayName(int day) {\n        String dayName = \"\";\n      \
+    \  switch (day) {\n            case 1: dayName = \"Monday\"; break;\n        \
+    \    case 2: dayName = \"Tuesday\"; break;\n            case 3: dayName = \"Wednesday\"\
+    ; break;\n            case 4: dayName = \"Thursday\"; break;\n            case\
+    \ 5: dayName = \"Friday\"; break;\n            case 6: dayName = \"Saturday\"\
+    ; break;\n            case 7: dayName = \"Sunday\"; break;\n            default:\
+    \ dayName = \"Invalid day\";\n        }\n        return dayName;\n    }\n}\n```\n\
+    \n### 输出\nInput number: 3\nWednesday\n\n# 使用 while 循环打印 1 到 N 的数字\n\n#### 程序\n\
+    ```java\nimport java.util.Scanner;\n\npublic class Print_1_To_N_UsingWhile {\n\
+    \    public static void main(String[] args) {\n        // 循环计数器\n        int i\
+    \ = 1;\n        // 创建 scanner 对象\n        Scanner Sc = new Scanner(System.in);\n\
+    \        // 输入 \"n\" 的值\n        System.out.print(\"Enter the value n : \");\n\
+    \        // 读取值\n        int n = Sc.nextInt();\n        System.out.println(\"\
+    Numbers are : \");\n        while(i<=n) {\n            System.out.println(i);\n\
+    \            i++;\n        }\n    }\n}\n```\n输出\nEnter the value n : 15\nNumbers\
+    \ are :\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n\n# Java 程序中一维数组和二维数组的相加\n\
+    \n#### 有 2 个程序：两个一维数组相加，两个二维数组相加\n\n### 1) Java 中两个一维数组相加\n```java\nclass AddTwoArrayClass{\n\
+    \    public static void main(String[] args){\n        // 数组的声明与初始化\n        int\
+    \ a[] = {1,2,3,4,5};\n        int b[] = {6,7,8,9,10};\n        // 实例化第三个数组存储结果\n\
+    \        int c[] = new int[5];\n        for(int i=0; i<5; ++i){\n            //\
+    \ 两个数组相加结果存储在第三个数组中\n            c[i] = a[i] + b[i];\n            // 显示结果\n  \
+    \          System.out.println(\"Enter sum of \"+i +\"index\" +\" \" + c[i]);\n\
+    \        }\n    }\n}\n```\n输出\nEnter sum of 0index 7\nEnter sum of 1index 9\n\
+    Enter sum of 2index 11\nEnter sum of 3index 13\nEnter sum of 4index 15\n\n###\
+    \ 2) Java 中两个二维数组相加\n```java\nclass AddTwoArrayOf2DClass{\n    public static void\
+    \ main(String[] args){\n        // 二维数组的声明与初始化\n        int a[][] = {{1,2,3},{4,5,6}};\n\
+    \        int b[][] = {{7,8,9},{10,11,12}};\n        // 实例化第三个数组存储结果\n        int\
+    \ c[][] = new int[2][3];\n        for(int i=0; i<2; ++i){\n            for(int\
+    \ j=0; j<3; ++j){\n                // 两个数组相加结果存储在第三个数组中\n                c[i][j]\
+    \ = a[i][j] + b[i][j];\n                System.out.println(\"Enter sum of \"+i\
+    \ + \" \" + j +\"index\" +\" \" + c[i][j]);\n            }\n        }\n    }\n\
+    }\n```\n输出\nEnter sum of 0 0index 8\nEnter sum of 0 1index 10\nEnter sum of 0\
+    \ 2index 12\nEnter sum of 1 0index 14\nEnter sum of 1 1index 16\nEnter sum of\
+    \ 1 2index 18\n\n# Java 将十进制转换为二进制的程序\n\n给定一个整数（十进制）数字，并使用 Java 程序将其转换为二进制。\n\n\
+    #### 程序\n```java\n// Scanner 类用于从用户处获取输入\nimport java.util.Scanner;\n\nclass DecimalToBinary{\n\
+    \    public static void main(String[] args){\n        // 创建 Scanner 对象\n     \
+    \   Scanner sc = new Scanner(System.in);\n        System.out.println(\"Enter Any\
+    \ Number :\");\n        // 获取用户输入\n        int input_decimal_num = sc.nextInt();\n\
+    \        String binary_string = \"\";\n        // 循环持续直到 input_decimal_num > 0\n\
+    \        while(input_decimal_num > 0){\n            // 余数加到字符串\n            binary_string\
+    \ = input_decimal_num%2 + binary_string;\n            input_decimal_num = input_decimal_num/2;\n\
+    \        }\n        // 显示最终结果\n        System.out.println(\"Conversion of binary\
+    \ is : \" + binary_string);\n    }\n}\n```\n输出\nEnter Any Number : 30\nConversion\
+    \ of binary is : 11110\n\n# Java 逐行读取文件的程序\n\n给定一个文件，并使用 Java 程序逐行读取其内容。\n我们为此程序使用一个名为\
+    \ \"B.txt\" 的文件，它位于 \"F:\" 盘，因此文件路径为 \"F:\\B.txt\"，文件内容为：\nThis is line 1\nThis\
+    \ is line 2\nThis is line 3\nThis is line 4\n\n#### 程序\n```java\nimport java.io.FileInputStream;\n\
+    import java.io.IOException;\nimport java.util.Scanner;\n\npublic class ReadLineByLine\
+    \ {\n    public static void main(String[] args) {\n        // 创建 scanner 类对象。\n\
+    \        Scanner Sc=new Scanner(System.in);\n        // 输入文件名\n        System.out.print(\"\
+    Enter the file name:\");\n        String sfilename=Sc.next();\n        Scanner\
+    \ Sc1= null;\n         FileInputStream fis=null;\n        try {\n            fis=new\
+    \ FileInputStream(sfilename);\n            Sc1=new Scanner(fis);\n           \
+    \ // 读取数据到数据末尾\n            while(Sc1.hasNext()) {\n                String data=Sc1.nextLine();\n\
+    \                // 打印数据\n                System.out.print(\"The file data is\
+    \ : \" +data);\n            }\n        } catch(IOException e) {\n            System.out.println(e);\n\
+    \        }\n    }\n}\n```\n"

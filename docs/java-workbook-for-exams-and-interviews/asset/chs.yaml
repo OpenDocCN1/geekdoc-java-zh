@@ -1,0 +1,158 @@
+- "# JAVA 考试与面试练习指南\n\n\n\n![](img/cover0007.jpeg)\n\n\n- 计算所有数字位之和的 Java 程序\n- 计算复利的\
+  \ Java 程序\n- 寻找最大数的 Java 程序\n- 运行应用程序的 Java 程序\n- 打印斐波那契序列的 Java 程序\n- 使用 for 循环打印\
+  \ 1 到 N 的数字\n- Java 数据类型练习\n- 华氏度转摄氏度\n- Java 数据类型练习：英寸到米\n- 相整数中所有数字的和\n- 让用户输入分钟\n\
+  - 读取数字并显示其平方\n- Java 条件语句：练习\n- 检查数字是负数、零还是正数\n- 输入 5 个数字并计算和和平均值\n- 显示 n 项自然数及其和\n\
+  - 显示 1 到 7 之间的星期几\n- 使用 while 循环打印 1 到 N 的数字\n- 一维数组和二维数组的加法\n- 十进制转二进制的 Java 程序\n\
+  - 逐行读取文件的 Java 程序\n\n## 计算所有数字位之和的 Java 程序\n\n给定一个数字，我们必须使用 Java 程序找到它所有数字位的和。\n\
+  \n### 示例 1:\n输入：\n数字：852\n输出：\n所有数字之和：15\n\n### 示例 2:\n输入：\n数字：256868\n输出：\n所有数字之和：35\n\
+  \n### 程序\n```java\nimport java.util.Scanner;\n\npublic class AddDigits {\n    public\
+  \ static void main(String args[]) {\n        // 初始化和声明对象。\n        int num, rem=0,\
+  \ sum=0, temp;\n        Scanner scan = new Scanner(System.in);\n        //在此处输入数字。\n\
+  \        System.out.print(\"Enter the Number : \");\n        num = scan.nextInt();\n\
+  \        // temp 用于存储数字。\n        temp = num;\n        while(num>0) {\n        \
+  \    rem = num%10;\n            sum = sum+rem;\n            num = num/10;\n    \
+  \    }\n        System.out.print(\"Sum of Digits of \" +temp+ \" is : \" +sum);\n\
+  \    }\n}\n```\n\n### 输出\n首次运行：\nEnter the Number : 582\nSum of Digits of 582 :\
+  \ 15\n第二次运行：\nEnter the Number : 256868\nSum of Digits of 256868 : 35\n\n## 计算复利的\
+  \ Java 程序\n\n给定本金、利率和时间，必须使用 Java 程序找到复利。\n\n### 示例:\n输入本金：5000\n输入利率：5\n输入时间：3\n\
+  金额：5788.1250000000\n复利：788.1250000000\n\n### 程序\n```java\nimport java.util.Scanner;\n\
+  \npublic class CompoundInterest {\n    public static void main(String args[]) {\n\
+  \        // 定义并初始化。\n        double A=0,Pri,Time,t=1,CI;\n        // 创建对象。\n   \
+  \     Scanner S=new Scanner(System.in);\n        //在此处输入本金、利率、时间\n        System.out.print(\"\
+  Enter Principal : \");\n        Pri=S.nextFloat();\n        System.out.print(\"\
+  Enter Rate : \");\n        Rate=S.nextFloat();\n        System.out.print(\"Enter\
+  \ Time : \");\n        Time=S.nextFloat();\n        Rate=(1 + Rate/100);\n     \
+  \   for(int i=0;i<Time;i++)\n            t*=Rate;\n        A=Pri*t;\n    }\n}\n\
+  ```\n*(注：原文代码中 Rate 变量未定义，此处保留原样逻辑)*\n\n### 输出\n首次运行：\nEnter Principal : 5000\n\
+  Enter Rate : 5\nEnter Time : 3\nAmount : 5788.1250000000\nCompound Interest : 788.1250000000\n\
+  \n\n\n\n\n输入值 `n` : 15\n\n数字为：\n1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15\n\
+  \n## Java 数据类型练习\n\n### 华氏度转摄度\n\n![](img/image00066.jpeg)\n\n### JAVA 代码\n```java\n\
+  import java.util.Scanner;\npublic class Exercise1 {\n    public static void main(String[]\
+  \ Strings) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+  Input a degree in Fahrenheit: \");\n        double fahrenheit = input.nextDouble();\n\
+  \        double celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);\n        System.out.println(fahrenheit\
+  \ + \" degree Fahrenheit is equal to \" + celsius + \" in Celsius\");\n    }\n}\n\
+  ```\n\n### 输出\n```\nInput a degree in Fahrenheit: 212\n212.0 degree Fahrenheit is\
+  \ equal to 100.0 in Celsius\n```\n\n## Java 数据类型练习：英寸转米\n\n编写一个 Java 程序，接收英寸值并将其转换为米。\n\
+  \n### 英寸转米\n1 INCH = 0.025400 METERS\n2 INCH = 0.050800 METERS\n3 INCH = 0.076200\
+  \ METERS\n4 INCH = 0.101600 METERS\n5 INCH = 0.127000 METERS\n6 INCH = 0.152400\
+  \ METERS\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise2\
+  \ {\n    public static void main(String[] Strings) {\n        Scanner input = new\
+  \ Scanner(System.in);\n        System.out.print(\"Input a value for inch: \");\n\
+  \        double inch = input.nextDouble();\n        double meters = inch * 0.0254;\n\
+  \        System.out.println(inch + \" inch is \" + meters + \" meters\");\n    }\n\
+  }\n```\n\n### 输出\n```\nInput a value for inch: 1000\n1000.0 inch is 25.4 meters\n\
+  ```\n\n## 计算整数所有各位数字之和\n\n编写一个 Java 程序，接收 0 到 1000 之间的整数，并计算所有各位数字之和。\n\n![](img/image00067.jpeg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+  \ static void main(String[] Strings) {\n        Scanner input = new Scanner(System.in);\n\
+  \        System.out.print(\"Input an integer between 0 and 1000: \");\n        int\
+  \ num = input.nextInt();\n        int firstDigit = num % 10;\n        int remainingNumber\
+  \ = num / 10;\n        int SecondDigit = remainingNumber % 10;\n        remainingNumber\
+  \ = remainingNumber / 10;\n        int thirdDigit = remainingNumber % 10;\n    \
+  \    remainingNumber = remainingNumber / 10;\n        int fourthDigit = remainingNumber\
+  \ % 10;\n        int sum = thirdDigit + SecondDigit + fourthDigit;\n        System.out.println(\"\
+  The sum of digits in \" + num + \" is \" + sum);\n    }\n}\n```\n\n### 输出\n```\n\
+  Input an integer between 0 and 1000: 565\nThe sum of all digits in 565 is 16\n```\n\
+  \n## 获取用户输入分钟并打印年和天数\n\n编写一个 Java 程序，将分钟转换为年和天数。\n\n![](img/image00068.jpeg)\n\n\
+  ### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise4 {\n    public\
+  \ static void main(String[] Strings) {\n        double minutesInYear = 60 * 24 *\
+  \ 365;\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+  Input the number of minutes: \");\n        double min = input.nextDouble();\n  \
+  \      long years = (long) (min / minutesInYear);\n        int days = (int) (min\
+  \ / 60 / 24) % 365;\n        System.out.println((int) min + \" minutes is approximately\
+  \ \" + years + \" years and \" + days + \" days\");\n    }\n}\n```\n\n### 输出\n```\n\
+  Input the number of minutes: 3456789\n3456789 minutes is approximately 6 years and\
+  \ 210 days\n```\n\n## 读取一个数字并显示平方、立方和四次方\n\n编写一个 Java 程序，读取一个数字并显示该数字的平方、立方和四次方。\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise8 {\n  \
+  \  public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+  \        System.out.print(\"Input the side length value: \");\n        double val\
+  \ = in.nextDouble();\n        System.out.printf(\"Square: %12.2f\\n\", val * val);\n\
+  \        System.out.printf(\"Cube: %14.2f\\n\", val * val * val);\n        System.out.printf(\"\
+  Fourth power: %6.2f\\n\", Math.pow(val, 4));\n    }\n}\n```\n\n### 输出\n```\nInput\
+  \ the side length value: 15\nSquare:       225.00\nCube:       3375.00\nFourth power:\
+  \ 50625.00\n```\n\n## 条件语句：判断数字是负数、零还是正数\n\n![](img/image00069.jpeg)\n\n### JAVA\
+  \ 代码\n```java\nimport java.util.Scanner;\npublic class Exercise27 {\n    public\
+  \ static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+  \        System.out.print(\"Input a number: \");\n        int n = in.nextInt();\n\
+  \        if (n > 0) {\n            System.out.println(\"positive\");\n        }\
+  \ else if (n < 0) {\n            System.out.println(\"negative\");\n        } else\
+  \ {\n            System.out.println(\"zero\");\n        }\n    }\n}\n```\n\n###\
+  \ 输出\n```\nInput a number: 7\npositive\n```\n\n## 输入 5 个数字求和和平均值\n\n![](img/image00070.jpeg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Exercise12 {\n \
+  \   public static void main(String[] args) {\n        int i, n=0, s=0;\n       \
+  \ double avg;\n        System.out.println(\"Input the 5 numbers : \");\n       \
+  \ for (i = 0; i < 5; i++) {\n            Scanner in = new Scanner(System.in);\n\
+  \            n = in.nextInt();\n            s += n;\n        }\n        avg = s\
+  \ / 5;\n        System.out.println(\"The sum of 5 no is : \" + s + \"\\nThe Average\
+  \ is : \" + avg);\n    }\n}\n```\n\n### 输出\n```\nInput the 5 numbers : 1\n2\n3\n\
+  4\n5\nThe sum of 5 no is : 15\nThe Average is : 3.0\n```\n\n## 显示 n 项自然数及其和\n\n\
+  输入数字：7\n\n![](img/image00071.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+  public class Exercise11 {\n    public static void main(String[] args) {\n      \
+  \  int i, n, sum=0;\n        {\n            Scanner in = new Scanner(System.in);\n\
+  \            System.out.print(\"Input number: \");\n            n = in.nextInt();\n\
+  \        }\n        System.out.println(\"The first n natural numbers are : \" +\
+  \ n);\n        for (i = 1; i <= n; i++) {\n            System.out.println(i);\n\
+  \            sum += i;\n        }\n        System.out.println(\"The Sum of Natural\
+  \ Number upto \" + n + \" terms : \" + sum);\n    }\n}\n```\n\n### 输出\n```\nInput\
+  \ number: 7\nThe first n natural numbers are : 7\n1\n2\n3\n4\n5\n6\n7\nThe Sum of\
+  \ Natural Number upto 7 terms : 28\n```\n\n\n\n\n\n前 n 项自然数之和：28\n\n## 显示 1 到 7\
+  \ 之间的星期\n\n![](img/image00072.jpeg)\n\n### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Exercise5 {\n    public static void main(String[] args) {\n     \
+  \   Scanner in = new Scanner(System.in);\n        System.out.print(\"Input number:\
+  \ \");\n        int day = in.nextInt();\n        System.out.println(getDayName(day));\n\
+  \    }\n    // 获取周几名称\n    public static String getDayName(int day) {\n        String\
+  \ dayName = \"\";\n        switch (day) {\n            case 1: dayName = \"Monday\"\
+  ; break;\n            case 2: dayName = \"Tuesday\"; break;\n            case 3:\
+  \ dayName = \"Wednesday\"; break;\n            case 4: dayName = \"Thursday\"; break;\n\
+  \            case 5: dayName = \"Friday\"; break;\n            case 6: dayName =\
+  \ \"Saturday\"; break;\n            case 7: dayName = \"Sunday\"; break;\n     \
+  \       default: dayName = \"Invalid day\";\n        }\n        return dayName;\n\
+  \    }\n}\n```\n\n### 输出\nInput number: 3\nWednesday\n\n## 使用 while 循环打印 1 到 N 的数字\n\
+  \n### 程序\n```java\nimport java.util.Scanner;\n\npublic class Print_1_To_N_UsingWhile\
+  \ {\n    public static void main(String[] args) {\n        // 循环计数器\n        int\
+  \ i = 1;\n        // 创建 scanner 对象\n        Scanner Sc = new Scanner(System.in);\n\
+  \        // 输入 \"n\" 的值\n        System.out.print(\"Enter the value n : \");\n \
+  \       // 读取值\n        int n = Sc.nextInt();\n        System.out.println(\"Numbers\
+  \ are : \");\n        while(i<=n) {\n            System.out.println(i);\n      \
+  \      i++;\n        }\n    }\n}\n```\n输出\nEnter the value n : 15\nNumbers are :\n\
+  1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n\n## Java 程序中一维数组和二维数组的相加\n\n\
+  ### 有 2 个程序：两个一维数组相加，两个二维数组相加\n\n### 1) Java 中两个一维数组相加\n```java\nclass AddTwoArrayClass{\n\
+  \    public static void main(String[] args){\n        // 数组的声明与初始化\n        int\
+  \ a[] = {1,2,3,4,5};\n        int b[] = {6,7,8,9,10};\n        // 实例化第三个数组存储结果\n\
+  \        int c[] = new int[5];\n        for(int i=0; i<5; ++i){\n            //\
+  \ 两个数组相加结果存储在第三个数组中\n            c[i] = a[i] + b[i];\n            // 显示结果\n    \
+  \        System.out.println(\"Enter sum of \"+i +\"index\" +\" \" + c[i]);\n   \
+  \     }\n    }\n}\n```\n输出\nEnter sum of 0index 7\nEnter sum of 1index 9\nEnter\
+  \ sum of 2index 11\nEnter sum of 3index 13\nEnter sum of 4index 15\n\n### 2) Java\
+  \ 中两个二维数组相加\n```java\nclass AddTwoArrayOf2DClass{\n    public static void main(String[]\
+  \ args){\n        // 二维数组的声明与初始化\n        int a[][] = {{1,2,3},{4,5,6}};\n     \
+  \   int b[][] = {{7,8,9},{10,11,12}};\n        // 实例化第三个数组存储结果\n        int c[][]\
+  \ = new int[2][3];\n        for(int i=0; i<2; ++i){\n            for(int j=0; j<3;\
+  \ ++j){\n                // 两个数组相加结果存储在第三个数组中\n                c[i][j] = a[i][j]\
+  \ + b[i][j];\n                System.out.println(\"Enter sum of \"+i + \" \" + j\
+  \ +\"index\" +\" \" + c[i][j]);\n            }\n        }\n    }\n}\n```\n输出\nEnter\
+  \ sum of 0 0index 8\nEnter sum of 0 1index 10\nEnter sum of 0 2index 12\nEnter sum\
+  \ of 1 0index 14\nEnter sum of 1 1index 16\nEnter sum of 1 2index 18\n\n## Java\
+  \ 将十进制转换为二进制的程序\n\n给定一个整数（十进制）数字，并使用 Java 程序将其转换为二进制。\n\n### 程序\n```java\n// Scanner\
+  \ 类用于从用户处获取输入\nimport java.util.Scanner;\n\nclass DecimalToBinary{\n    public static\
+  \ void main(String[] args){\n        // 创建 Scanner 对象\n        Scanner sc = new\
+  \ Scanner(System.in);\n        System.out.println(\"Enter Any Number :\");\n   \
+  \     // 获取用户输入\n        int input_decimal_num = sc.nextInt();\n        String binary_string\
+  \ = \"\";\n        // 循环持续直到 input_decimal_num > 0\n        while(input_decimal_num\
+  \ > 0){\n            // 余数加到字符串\n            binary_string = input_decimal_num%2\
+  \ + binary_string;\n            input_decimal_num = input_decimal_num/2;\n     \
+  \   }\n        // 显示最终结果\n        System.out.println(\"Conversion of binary is :\
+  \ \" + binary_string);\n    }\n}\n```\n输出\nEnter Any Number : 30\nConversion of\
+  \ binary is : 11110\n\n## Java 逐行读取文件的程序\n\n给定一个文件，并使用 Java 程序逐行读取其内容。\n我们为此程序使用一个名为\
+  \ \"B.txt\" 的文件，它位于 \"F:\" 盘，因此文件路径为 \"F:\\B.txt\"，文件内容为：\nThis is line 1\nThis\
+  \ is line 2\nThis is line 3\nThis is line 4\n\n### 程序\n```java\nimport java.io.FileInputStream;\n\
+  import java.io.IOException;\nimport java.util.Scanner;\n\npublic class ReadLineByLine\
+  \ {\n    public static void main(String[] args) {\n        // 创建 scanner 类对象。\n\
+  \        Scanner Sc=new Scanner(System.in);\n        // 输入文件名\n        System.out.print(\"\
+  Enter the file name:\");\n        String sfilename=Sc.next();\n        Scanner Sc1=\
+  \ null;\n         FileInputStream fis=null;\n        try {\n            fis=new\
+  \ FileInputStream(sfilename);\n            Sc1=new Scanner(fis);\n            //\
+  \ 读取数据到数据末尾\n            while(Sc1.hasNext()) {\n                String data=Sc1.nextLine();\n\
+  \                // 打印数据\n                System.out.print(\"The file data is :\
+  \ \" +data);\n            }\n        } catch(IOException e) {\n            System.out.println(e);\n\
+  \        }\n    }\n}\n```\n"

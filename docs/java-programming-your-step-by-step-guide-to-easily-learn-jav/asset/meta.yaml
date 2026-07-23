@@ -1,0 +1,94 @@
+name: Java ： Programming： Your Step by Step Guide to Easily Learn Java in 7 Days
+name_cn: Java 编程：7 天轻松学会 Java 逐步指南指南
+slug: java-programming-your-step-by-step-guide-to-easily-learn-jav
+toc:
+- - '#'
+  - Java 编程：7 天轻松学会 Java 逐步指南
+- - '#'
+  - 引言
+- - '##'
+  - 什么是 Java？
+- - '#'
+  - 第一章：Java 基础
+- - '##'
+  - 编译和运行 Java 程序
+- - '##'
+  - 声明与表达式
+- - '##'
+  - 类与方法
+- - '#'
+  - 第 2 章：条件语句、迭代语句和分支语句
+- - '##'
+  - If-then-else 语句
+- - '##'
+  - 布尔表达式
+- - '##'
+  - Switch-Case 语句
+- - '##'
+  - Switch 语句与字符串
+- - '##'
+  - 循环与迭代语句
+- - '##'
+  - while 语句
+- - '##'
+  - do-while 语句
+- - '##'
+  - do-while 和 while 之间有什么区别？
+- - '##'
+  - for 语句
+- - '##'
+  - 分支语句
+- - '##'
+  - Break 语句
+- - '##'
+  - Continue 语句
+- - '##'
+  - return 语句
+- - '#'
+  - 第 3 章：数组
+- - '##'
+  - 数组声明
+- - '##'
+  - 数组复制
+- - '##'
+  - 数组元素操作
+- - '##'
+  - 语句 (This Statement)
+- - '#'
+  - 第 5 章：接口与继承
+- - '##'
+  - Java 接口 (Java Interfaces)
+- - '##'
+  - 接口的声明与定义 (Interface Declaration and Definition)
+- - '##'
+  - 继承 (Inheritance)
+- - '##'
+  - 子类 (Subclasses)
+- - '##'
+  - 多重继承
+- - '##'
+  - 实例方法
+- - '##'
+  - 静态方法
+- - '##'
+  - 多态
+- - '#'
+  - Java 平台层次结构 (Java Platform Hierarchy)
+- - '#'
+  - 第 6 章：包（Packages）
+- - '##'
+  - 包的创建
+- - '##'
+  - 包命名的惯例
+- - '##'
+  - 包成员的使用
+- - '##'
+  - 包成员导入
+- - '##'
+  - 包导入
+- - '##'
+  - 静态导入语句
+- - '##'
+  - 源文件与类文件管理
+- - '##'
+  - 总结

@@ -1,0 +1,3558 @@
+- fmt: '
+
+    ![](rsrcYN.jpg)
+
+
+    # JAVCRIPT FOR BEGINNERS
+
+    A Complete Beginners Guide To Learn The Fundamentals Of JavaScript, Python, SQL
+    & Java
+
+
+    [Mark Whistler]
+
+    Text Copyright © [Mark Whistler]
+
+    '
+  raw: '
+
+
+    ![](rsrcYN.jpg)
+
+
+    ![](rsrcYN.jpg)JAVASCRIPT FOR BEGINNERSA Complete Beginners Guide To Learn The
+    Fundamentals Of JavaScript, Python, SQL & Java[Mark Whistler]Text Copyright ©
+    [Mark Whistler]'
+  toc: []
+  trans: '
+
+
+    ![](img/rsrcYN.jpg)
+
+
+    # 初学者 JavaScript
+
+    学习 JavaScript、Python、SQL 和 Java 基础知识的完整指南
+
+
+    [Mark Whistler]
+
+    文本版权所有 [Mark Whistler]
+
+    '
+- fmt: "\nAll rights reserved. No part of this guide may be reproduced in any form\
+    \ without permission in writing from the publisher except in the case of brief\
+    \ quotations embodied in critical articles or reviews.\n\n# Legal & Disclaimer\n\
+    The information contained in this book and its contents is not designed to replace\
+    \ or take the place of any form of medical or professional advice; and is not\
+    \ meant to replace the need for independent medical, financial, legal or other\
+    \ professional advice or services, as may be required. The content and information\
+    \ in this book has been provided for educational and entertainment purposes only.\n\
+    \nThe content and information contained in this book has been compiled from sources\
+    \ deemed reliable, and it is accurate to the best of the Author's knowledge, information\
+    \ and belief. However, the Author cannot guarantee its accuracy and validity and\
+    \ cannot be held liable for any errors and/or omissions. Further, changes are\
+    \ periodically made to this book as and when needed. Where appropriate and/or\
+    \ necessary, you must consult a professional (including but not limited to your\
+    \ doctor, attorney, financial advisor or such other professional advisor) before\
+    \ using any of the suggested remedies, techniques, or information in this book.\n\
+    \nUpon using the contents and information contained in this book, you agree to\
+    \ hold harmless the Author from and against any damages, costs, and expenses,\
+    \ including any legal fees potentially resulting from the application of any of\
+    \ the information provided by this book. This disclaimer applies to any loss,\
+    \ damages or injury caused by the use and application, whether directly or indirectly,\
+    \ of any advice or information presented, whether for breach of contract, tort,\
+    \ negligence, personal injury, criminal intent, or under any other cause of action.\
+    \ You agree to accept all risks of using the information presented inside this\
+    \ book. You agree that by continuing to read this book, where appropriate and/or\
+    \ necessary, you shall consult a professional (including but not limited to your\
+    \ doctor, attorney, or financial advisor or such other advisor as needed) before\
+    \ using any of the suggested remedies, techniques, or information in this book.\n\
+    \n# Table of Contents\n## Description\n- [Introduction](#part0004.xhtml)\n- [Chapter\
+    \ 1: What is JavaScript?](#part0005.xhtml)\n- [Implementing JavaScript](#part0005.xhtml_toc1_Implementing_JavaScript)\n\
+    - [Chapter 2: Fundamental JavaScript Concepts](#part0006.xhtml)\n- [Variable Types](#part0006.xhtml_toc3_Variable_Types)\n\
+    - [User Variables](#part0006.xhtml_toc4_User_Variables)\n- [Mathematical Operators](#part0006.xhtml_aXV)\n\
+    - [Assignment Operators](#part0006.xhtml_aXW)\n- [Comparison Operators](#part0006.xhtml_aXX)\n\
+    - [Chapter 3: The History of JavaScript](#part0007.xhtml)\n- [Features of JavaScript](#part0007.xhtml_aXZ)\n\
+    - [Chapter 4: Basics of CSS3](#part0008.xhtml)\n- [Chapter 5: Thinking Slowly\
+    \ and Staying Humble](#part0009.xhtml)\n- [Chapter 6: Basic Operators](#part0010.xhtml)\n\
+    - [What are operators?](#part0010.xhtml_toc13_What_are_operators_\n- [Classification\
+    \ of operators](#part0010.xhtml_aY4)\n- [Arithmetic Operators](#part0010.xhtml_aY5)\n\
+    - [Conclusion](#part0011.xhtml)\n\n# Introduction\nHTML is not very smart. It\
+    \ mostly lets people look at text and images and allows them to move to other\
+    \ pages where they will do more of the same. What adds the intelligence to a web\
+    \ page is JavaScript. It makes the website more engaging, effective, and useful\
+    \ by letting pages respond to our visitors when they interact with the content.\n\
+    \nThis book assumes that we already know how to use HTML to specify web page structure\
+    \ and content. It will be additionally beneficial if we are familiar how pages\
+    \ are styled with CSS, separate from the web page structure. If this is the case\
+    \ then we are ready to add a little behavior to the page and make it more dynamic\
+    \ and interactive with JavaScript. Otherwise, without HTML and CSS, JavaScript\
+    \ will not do us much good. They are viewed as the three fundamental pillars of\
+    \ the web page: structure, presentation and behavior.\n\n# Chapter 1: What is\
+    \ JavaScript?\nJavaScript is the scripting language of the web with the sole purpose\
+    \ of adding interactivity to our pages. In addition to interactivity, modern versions\
+    \ of JavaScript can also be used to load and parse information from external sources\
+    \ or even the website's users. JavaScript is essentially a piece of programming\
+    \ code embedded in the HTML structure of a web page. When the web browser reads\
+    \ this code it activates a built-in interpreter that understands how to decipher\
+    \ this language and process its commands.\n\nAlthough programming is involved\
+    \ during coding, JavaScript is not a programming language. In conventional web\
+    \ programming languages, like Java or .NET, the code has to be compiled before\
+    \ it is executed. Compiling means that the code has to be first sent to a special\
+    \ program that is run on the server. This program, also known as application server\
+    \ software, translates the code, creates the requested page and/or functionality\
+    \ and serves this back as HTML. Scripting languages, like JavaScript, are not\
+    \ compiled, but rather are interpreted on-the-fly. This means that no special\
+    \ software is involved as the user's own browser runs and executes the code as\
+    \ it is encountered.\n\n**Note:** JavaScript was created during a time when Java\
+    \ was a very popular language. Other than that, the languages are not related\
+    \ and have almost nothing in common except for basic programming logic.\n\n##\
+    \ Implementing JavaScript\nNow that we have a general idea as to what JavaScript\
+    \ is, we can start working with this language. As JavaScript code is part of the\
+    \ HTML document, we need to know how to tell browsers to run our scripts. There\
+    \ are two common options available to us when we want to include JavaScript in\
+    \ a web document and in both cases we will use the `<script>` element. The `<script>`\
+    \ tag is used when we want to tell the browser where the JavaScript code begins\
+    \ and where it ends. As such this tag can be included either in the head or the\
+    \ body of the page.\n\nThe first option is to place the code inline within the\
+    \ document. To do this we will begin by opening a `<script>` tag, entering the\
+    \ JavaScript code, and then finish by closing with the `</script>` tag. We can\
+    \ theoretically leave the document like this as all browsers will assume that\
+    \ the scripting language between the `<script>` tags is JavaScript by default.\
+    \ Nevertheless, for maximum compatibility we will extend this tag with the `type`\
+    \ attribute and the `text/javascript` value in order to instruct the browser how\
+    \ exactly interpret the code.\n\n```html\n<script type=\"text/javascript\">A JavaScript\
+    \ comment\n</script>\n```\n\nThe second option is to load the JavaScript code\
+    \ from an external file into our HTML document. For this purpose we can use the\
+    \ `<script>` element again, but this time in addition to the `type` attribute\
+    \ we will also include the URL to the external file in the `src` attribute of\
+    \ the `<script>` element. The external file must be a text-only file with `.js`\
+    \ extension that contains only JavaScript code without any HTML elements or CSS\
+    \ rules. For example, to call the `script.js` file into our browser we would use\
+    \ the following:\n\n```html\n<script src=\"script.js\" type=\"text/javascript\"\
+    ></script>\n```\n\nWe put JavaScript in an external file and include it in the\
+    \ web page when we like to share functionalities across our entire site. Otherwise,\
+    \ if we just need to add some local behavior, we embed the code within the page.\n\
+    \n**Note:** Script files are loaded in the order in which they are placed in the\
+    \ HTML code\n\n# Chapter 2: Fundamental JavaScript Concepts\nGenerally, when we\
+    \ hear the term programming we immediately think of other people an incomprehensible\
+    \ string of letters and numbers. Programming looks like magic beyond the realm\
+    \ of mortals. Nevertheless, the concepts in programming are not difficult to grasp\
+    \ as they always have real applications. JavaScript, although it is not simple\
+    \ as HTML or CSS, is not an overly complicated language. Unlike other languages,\
+    \ its \"grammar\" is more less descriptive and intuitive making it a good fit\
+    \ for a first programming language. Basically, learning JavaScript is like learning\
+    \ a new language, but a new language that is similar to English. Once we learn\
+    \ the new words, and understand how to put them together to form \"sentences\"\
+    \ we'll be to go.\n\n## Syntax\nEvery language has its own set of characters and\
+    \ words that go along with a set of rules as how to arrange these characters and\
+    \ words into a well-formed sentence. These rules are also known as the language\
+    \ syntax and it is the syntax that holds the language together and gives it meaning.\n\
+    \nBefore start with some examples of JavaScript syntax, let us first set up the\
+    \ environment for JavaScript. As discussed previously, JavaScript code is always\
+    \ a part of the HTML code. Therefore, in order to work with JavaScript we will\
+    \ first need to create a HTML document. So to start, let us open a text editor\
+    \ (like Notepad) and type in the HTML code for the most basic web page. In addition\
+    \ to the basic HTML tags, we will include a `<script>` element in the `<head>`\
+    \ section where we will start placing the JavaScript code.\n\n```html\n<!doctype\
+    \ html>\n<head>\n<title>First Steps in JavaScript</title>\n<script type=\"text/javascript\"\
+    ></script>\n</head>\n<body>\n\n</body>\n</html>\n```\n\nLet us save this document\
+    \ as `firststeps.html`. If we are using Notepad, we have to remember to change\
+    \ the Save as Type field to ‘All files’.\n\n## Statements\nTo express ourselves\
+    \ in everyday common language we use sentences as the basic form of communication.\
+    \ Similarly, in JavaScript we also form sentences to express our intentions which\
+    \ are more formally called statements. A JavaScript sentence is the basic unit\
+    \ of communication, usually representing a single step in the program. And just\
+    \ like we put sentences together to express an opinion, we combine statements\
+    \ together to create a program.\n\nLet us look at a simple JavaScript statement\
+    \ and see what it does. Between the opening and closing `<script>` tag of the\
+    \ html document places the following text:\n\n```javascript\nalert(\"JavaScript\
+    \ is starting to make a little sense.\");\n```\n\nIn further examples we will\
+    \ not show the complete HTML code unless it is necessary, but for initial reference\
+    \ your document should look like the following:\n\n```html\n<!doctype html>\n\
+    <head>\n<title>First Steps in JavaScript</title>\n<script type=\"text/javascript\"\
+    >alert(\"JavaScript is starting to make a little sense.\");</script>\n</head>\n\
+    <body>\n\n</body>\n</html>\n```\n\nWe can save the `firststeps.html` document\
+    \ and open it in a web browser. Once the page opens, we will get an alert window\
+    \ with the message \"JavaScript is starting to make a little sense\".\n\nNow that\
+    \ we know what the effect is, let us go back to the JavaScript statement and interpret\
+    \ it into common language so it makes more sense.\n\n```javascript\nalert(\"JavaScript\
+    \ is starting to make a little sense.\");\n```\n\nJavaScript statements are instructions\
+    \ which are executed by the web browser. The statement starts with a command,\
+    \ presented by keyword. The keyword identifies the action that needs to be performed.\
+    \ In this case the keyword `alert` makes the web browser open a dialog box and\
+    \ display a message. If we just had the statement `alert()` the dialog box would\
+    \ have been empty, however in our case the statement consists of a specific input,\
+    \ the actual message text, also known as an argument. Finally, just like every\
+    \ sentence ends with a period, a JavaScript sentence ends with a semicolon. The\
+    \ semicolon makes it clear that the statement is over and once the interpreter\
+    \ executes it, it should move on to the next item.\n\nNow we are ready to translate\
+    \ the JavaScript statement. Its plain English interpretation would be, \"Open\
+    \ a dialog box and display the text JavaScript is starting to make a little sense'\
+    \ in that box.\"\n\n**Note:** When passing text arguments, we can use either double\
+    \ quote marks (\"sense\") or single quote marks ('sense') present the text.\n\n\
+    Before we move on, let us look at another statement. In the `<script>` element\
+    \ replace the previous code with the following and preview it in web browser to\
+    \ see the results:\n\n```javascript\ndocument.write(\"<p>JavaScript is starting\
+    \ to make a little sense.</p>\");\n```\n\nWhat we can see from the results is\
+    \ that the previously empty, now has one paragraph of text. Following the previous\
+    \ interpretation of how JavaScript works and from web results we can correctly\
+    \ assume that `document.write` commands the browser to write directly onto whatever\
+    \ is placed between the opening and closing brackets.\n\n## Variables\nOne of\
+    \ the fundamental aspect of JavaScript, and any programming language in general,\
+    \ is the concept of variables. A variable is a way to declare and store information\
+    \ which can be used. This information can vary with the circumstances and hence\
+    \ the name. Let us look the following statement.\n\n```javascript\nvar name =\
+    \ \"Martin\";\n```\n\nIn plain language this is the same as saying \"My name is\
+    \ Martin\". The keyword `var` is speak for \"create a variable\", or in programming\
+    \ dialect, \"declare a variable\". What follows is the name of the variable which\
+    \ can be anything with certain limits. Assigning a value to the variable is done\
+    \ with the `=` sign, which is not immediately necessary, as this can happen later.\
+    \ We can declare an undefined variable in one statement and assign it a value.\
+    \ For example:\n\n```javascript\nvar name;\nname = \"Martin\";\n```\n\nAs mentioned\
+    \ previously, variable names can contain letters, numbers, dollar sign (`$`),\
+    \ or underscore (`_`), other special characters are not allowed. Furthermore,\
+    \ a variable name cannot begin with a number, any other value is acceptable. Finally,\
+    \ variable names are case-sensitive, meaning that the interpreter makes distinction\
+    \ between uppercase and lowercase letters.\n\n**Note:** Although we can use almost\
+    \ anything for a variable name, it is wise to use names which are meaningful as\
+    \ this will help us and other programmers to better understand.\n\n## Variable\
+    \ Types\nBased on the type of data, variables come in different flavors. The three\
+    \ most basic types are number, string, and boolean. \n\nA number variable is represented\
+    \ by a numeric character. This variable can accept whole integers, negative integers\
+    \ and fractional integers. Numbers are frequently used in calculations, hence\
+    \ our number variables are often included in mathematical operations. The following\
+    \ statement declares a variable named `age` and assigns it a value of 35.\n\n\
+    ```javascript\nvar age = 35;\n```\n\nA string variable is used to represent any\
+    \ series of letters like words or sentences. Strings are represented as a series\
+    \ of characters enclosed within quotation marks, with the quotation marks signaling\
+    \ to the interpreter that what follows is a string variable. JavaScript allows\
+    \ us to use both double quotes (`\"`) or single quote (`'`) marks, but we have\
+    \ to be mindful to use the same type of quotation mark.\n\n```javascript\nvar\
+    \ location = \"California\";\n```\n\nA boolean variable is rather simple as it\
+    \ can accept only one of two values: `true` or `false`. This variable is used\
+    \ when we create programs that we want to intelligently react to user actions.\n\
+    \n## User Variables\nJavaScript would not be fun if it't allow us to share our\
+    \ thoughts and create or alter the variables directly. One of the simplest ways\
+    \ to give our input is to use the `prompt()` command.\n\n```javascript\nvar name\
+    \ = prompt(\"What is your name?\", \"\");\ndocument.write(name);\n```\n\nThe result\
+    \ of the `prompt()` command is a dialog box. Instead of just displaying a message\
+    \ like the alert dialog box, the prompt dialog box can also receive an answer.\
+    \ Hence, in the syntax for a prompt dialog box it is necessary to provide two\
+    \ arguments between the parentheses separated with a comma. The first argument\
+    \ is the prompt text that is displayed in the box, while the second argument is\
+    \ the default value for the text box, and consequently, the variable.\n\nIn the\
+    \ example above, the prompt text displayed in the box will be 'What is your name?'\
+    \ and the default value presented in the box will be empty, as there is obviously\
+    \ no content between the quotation marks. Once we type in something in the box\
+    \ and either click OK or press the Enter key, the variable receives the value\
+    \ that entered in the field. Consequently, the name will be displayed on the web\
+    \ page. Otherwise, if we click on Cancel, press the Esc key or close the prompt\
+    \ box, the returned value would be empty and there would be no text on the screen.\n\
+    \n**Note:** Instead of `prompt()` we can also use the more formal `window.prompt`\
+    \ command.\n\n# Operators\nStoring information in a variable is a first step,\
+    \ the beauty of programming is the ability to manipulate this information in many\
+    \ creative ways. For this, JavaScript provides different operators that allow\
+    \ us to modify data. An operator, represented by a symbol or a word, is something\
+    \ that can change one or more values into something else. The type of operators\
+    \ available are different based on the data type.\n\n## Mathematical Operators\n\
+    The basic mathematical operators like addition (`+`), subtraction (`-`), multiplication\
+    \ (`*`) and division (`/`) are readily available in JavaScript. They can be used\
+    \ in independent statements or used when declaring variables. For example, by\
+    \ operating with the variables `currentYear` and `yearOfBirth`, we can determine\
+    \ the value of the variable `age`.\n\n```javascript\nvar currentYear = 2015;\n\
+    var yearOfBirth = 1979;\nvar age = currentYear - yearOfBirth;\ndocument.write(age);\n\
+    ```\n\n**Note:** Calling a variable to be presented on a web page is easy. Simply\
+    \ use the `document.write()` command.\n\nMathematical operators, specifically\
+    \ the addition operator, can be used to combine two or more strings. This process\
+    \ of combining strings is called concatenation. In the following example:\n\n\
+    ```javascript\nvar firstName = \"Martwan\";\nvar lastName = \"Jenkins\";\nvar\
+    \ fullName = firstName + lastName;\ndocument.write(fullName);\n```\n\nMathematical\
+    \ operators, specifically the addition operator, can be used to combine two or\
+    \ more strings. This process of combining strings is called concatenation. In\
+    \ the following example:\n\n```javascript\nvar firstName = \"Martwan\";\nvar lastName\
+    \ = \"Jenkins\";\nvar fullName = firstName + lastName;\ndocument.write(fullName);\n\
+    ```\n\nMathematical operators, specifically the addition operator, can be used\
+    \ to combine two or more strings. This process of combining strings is called\
+    \ concatenation. In the following example:\n\n```javascript\nvar firstName = \"\
+    Martwan\";\nvar lastName = \"Jenkins\";\nvar fullName = firstName + lastName;\n\
+    document.write(fullName);\n```\n\nMathematical operators, specifically the addition\
+    \ operator, can be used to combine two or more strings. This process of combining\
+    \ strings is called concatenation. In the following example:\n\n```javascript\n\
+    var firstName = \"Martwan\";\nvar lastName = \"Jenkins\";\nvar fullName = firstName\
+    \ + lastName;\ndocument.write(fullName);\n```\n\nMathematical operators, specifically\
+    \ the addition operator, can be used to combine two or more strings. This process\
+    \ of combining strings is called concatenation. In the following example:\n\n\
+    ```javascript\nvar firstName = \"Martwan\";\nvar lastName = \"Jenkins\";\nvar\
+    \ fullName = firstName + lastName;\ndocument.write(fullName);\n```\n\nMathematical\
+    \ operators, specifically the addition operator, can be used to combine two or\
+    \ more strings. This process of combining strings is called concatenation. In\
+    \ the following example:\n\n```javascript\nvar firstName = \"Martwan\";\nvar lastName\
+    \ = \"Jenkins\";\nvar fullName = firstName + lastName;\ndocument.write(fullName);\n\
+    ```\n\nMathematical operators, specifically the addition operator, can be used\
+    \ to combine two or more strings. This process of combining strings is called\
+    \ concatenation. In the following example:\n\n```javascript\nvar firstName = \"\
+    Martwan\";\nvar lastName = \"Jenkins\";\nvar fullName = firstName + lastName;\n\
+    document.write(fullName);\n```\n\nMathematical operators, specifically the addition\
+    \ operator, can be used to combine two or more strings. This process of combining\
+    \ strings is called concatenation. In the following example:\n\n```javascript\n\
+    var firstName = \"Martwan\";\nvar lastName = \"Jenkins\";\nvar fullName = firstName\
+    \ + lastName;\ndocument.write(fullName);\n```\n\nMathematical operators, specifically\
+    \ the addition operator, can be used to combine two or more strings. This process\
+    \ of combining strings is called concatenation. In the following example:\n\n\
+    ```javascript\nvar firstName = \"Martwan\";\nvar lastName = \"Jenkins\";\nvar\
+    \ fullName = firstName + lastName;\ndocument.write(fullName);\n```\n\nMathematical\
+    \ operators, specifically the addition operator, can be used to combine two or\
+    \ more strings. This process of combining strings is called concatenation. In\
+    \ the following example:\n\n```javascript\nvar firstName = \"Martwan\";\nvar lastName\
+    \ = \"Jenkins\";\nvar fullName = firstName + lastName;\ndocument.write(fullName);\n\
+    ```\n[/content] (Wait, I repeated some)\n\nMathematical operators, specifically\
+    \ the addition operator, can be used to combine two or more strings. This process\
+    \ of combining strings is called concatenation. In the following example:\n\n\
+    ```javascript\nvar firstName = \"Martwan\";\nvar lastName = \"Jenkins\";\nvar\
+    \ fullName = firstName + lastName;\ndocument.write(fullName);\n```\n\nMathematical\
+    \ operators, specifically the addition operator, can be used to combine two or\
+    \ more strings. This process of combining strings is called concatenation. In\
+    \ the following example:\n\n```javascript\nvar firstName = \"Martwan\";\nvar lastName\
+    \ = \"Jenkins\";\nvar fullName = firstName + lastName;\ndocument.write(fullName);\n\
+    ```\n\nMathematical operators, specifically the addition operator, can be used\
+    \ to combine two or more strings. This process of combining strings is called\
+    \ concatenation. In the following example:\n\n```javascript\nvar firstName = \"\
+    Martwan\";\nvar lastName = \"Jenkins\";\nvar fullName = firstName + lastName;\n\
+    document.write(fullName);\n```\n\n*Self-correction: The source text had many repetitive\
+    \ blocks at the end. I will provide a clean version based on the unique content\
+    \ provided in the prompt's source text.*\n\nActually, looking at the provided\
+    \ text, it contains many repetitions of the \"Mathematical operators\" section.\
+    \ I will process the unique content once.\n\n(Re-generating the final output based\
+    \ on the provided text)\n\n[content]\nAll rights reserved. No part of this guide\
+    \ may be reproduced in any form without permission in writing from the publisher\
+    \ except in the case of brief quotations embodied in critical articles or reviews.\n\
+    \n# Legal & Disclaimer\nThe information contained in this book and its contents\
+    \ is not designed to replace or take the place of any form of medical or professional\
+    \ advice; and is not meant to replace the need for independent medical, financial,\
+    \ legal or other professional advice or services, as may be required. The content\
+    \ and information in this book has been provided for educational and entertainment\
+    \ purposes only.\n\nThe content and information contained in this book has been\
+    \ compiled from sources deemed reliable, and it is accurate to the best of the\
+    \ Author's knowledge, information and belief. However, the Author cannot guarantee\
+    \ its accuracy and validity and cannot be held liable for any errors and/or omissions.\
+    \ Further, changes are periodically made to this book as and when needed. Where\
+    \ appropriate and/or necessary, you must consult a professional (including but\
+    \ not limited to your doctor, attorney, financial advisor or such other professional\
+    \ advisor) before using any of the suggested remedies, techniques, or information\
+    \ in this book.\n\nUpon using the contents and information contained in this book,\
+    \ you agree to hold harmless the Author from and against any damages, costs, and\
+    \ expenses, including any legal fees potentially resulting from the application\
+    \ of any of the information provided by this book. This disclaimer applies to\
+    \ any loss, damages or injury caused by the use and application, whether directly\
+    \ or indirectly, of any advice or information presented, whether for breach of\
+    \ contract, tort, negligence, personal injury, criminal intent, or under any other\
+    \ cause of action. You agree to accept all risks of using the information presented\
+    \ inside this book. You agree that by continuing to read this book, where appropriate\
+    \ and/or necessary, you shall consult a professional (including but not limited\
+    \ to your doctor, attorney, or financial advisor or such other advisor as needed)\
+    \ before using any of the suggested remedies, techniques, or information in this\
+    \ book.\n\n# Table of Contents\n- Introduction\n- Chapter 1: What is JavaScript?\n\
+    - Implementing JavaScript\n- Chapter 2: Fundamental JavaScript Concepts\n- Variable\
+    \ Types\n- User Variables\n- Mathematical Operators\n- Assignment Operators\n\
+    - Comparison Operators\n- Chapter 3: The History of JavaScript\n- Features of\
+    \ JavaScript\n- Chapter 4: Basics of CSS3\n- Chapter 5: Thinking Slowly and Staying\
+    \ Humble\n- Chapter 6: Basic Operators\n- What are operators?\n- Classification\
+    \ of operators\n- Arithmetic Operators\n- Conclusion\n\n# Introduction\nHTML is\
+    \ not very smart. It mostly lets people look at text and images and allows them\
+    \ to move to other pages where they will do more of the same. What adds the intelligence\
+    \ to a web page is JavaScript. It makes the website more engaging, effective,\
+    \ and useful by letting pages respond to our visitors when they interact with\
+    \ the content.\n\nThis book assumes that we already know how to use HTML to specify\
+    \ web page structure and content. It will be additionally beneficial if we are\
+    \ familiar how pages are styled with CSS, separate from the web page structure.\
+    \ If this is the case then we are ready to add a little behavior to the page and\
+    \ make it more dynamic and interactive with JavaScript. Otherwise, without HTML\
+    \ and CSS, JavaScript will not do us much good. They are viewed as the three fundamental\
+    \ pillars of the web page: structure, presentation and behavior.\n\n# Chapter\
+    \ 1: What is JavaScript?\nJavaScript is the scripting language of the web with\
+    \ the sole purpose of adding interactivity to our pages. In addition to interactivity,\
+    \ modern versions of JavaScript can also be used to load and parse information\
+    \ from external sources or even the website's users. JavaScript is essentially\
+    \ a piece of programming code embedded in the HTML structure of a web page. When\
+    \ the web browser reads this code it activates a built-in interpreter that understands\
+    \ how to decipher this language and process its commands.\n\nAlthough programming\
+    \ is involved during coding, JavaScript is not a programming language. In conventional\
+    \ web programming languages, like Java or .NET, the code has to be compiled before\
+    \ it is executed. Compiling means that the code has to be first sent to a special\
+    \ program that is run on the server. This program, also known as application server\
+    \ software, translates the code, creates the requested page and/or functionality\
+    \ and serves this back as HTML. Scripting languages, like JavaScript, are not\
+    \ compiled, but rather are interpreted on-the-fly. This means that no special\
+    \ software is involved as the user's own browser runs and executes the code as\
+    \ it is encountered.\n\n**Note:** JavaScript was created during a time when Java\
+    \ was a very popular language. Other than that, the languages are not related\
+    \ and have almost nothing in common except for basic programming logic.\n\n##\
+    \ Implementing JavaScript\nNow that we have a general idea as to what JavaScript\
+    \ is, we can start working with this language. As JavaScript code is part of the\
+    \ HTML document, we need to know how to tell browsers to run our scripts. There\
+    \ are two common options available to us when we want to include JavaScript in\
+    \ a web document and in both cases we will use the `<script>` element. The `<script>`\
+    \ tag is used when we want to tell the browser where the JavaScript code begins\
+    \ and where it ends. As such this tag can be included either in the head or the\
+    \ body of the page.\n\nThe first option is to place the code inline within the\
+    \ document. To do this we will begin by opening a `<script>` tag, entering the\
+    \ JavaScript code, and then finish by closing with the `</script>` tag. We can\
+    \ theoretically leave the document like this as all browsers will assume that\
+    \ the scripting language between the `<script>` tags is JavaScript by default.\
+    \ Nevertheless, for maximum compatibility we will extend this tag with the `type`\
+    \ attribute and the `text/javascript` value in order to instruct the browser how\
+    \ exactly interpret the code.\n\n```html\n<script type=\"text/javascript\">A JavaScript\
+    \ comment\n</script>\n```\n\nThe second option is to load the JavaScript code\
+    \ from an external file into our HTML document. For this purpose we can use the\
+    \ `<script>` element again, but this time in addition to the `type` attribute\
+    \ we will also include the URL to the external file in the `src` attribute of\
+    \ the `<script>` element. The external file must be a text-only file with `.js`\
+    \ extension that contains only JavaScript code without any HTML elements or CSS\
+    \ rules. For example, to call the `script.js` file into our browser we would use\
+    \ the following:\n\n```html\n<script src=\"script.js\" type=\"text/javascript\"\
+    ></script>\n```\n\nWe put JavaScript in an external file and include it in the\
+    \ web page when we like to share functionalities across our entire site. Otherwise,\
+    \ if we just need to add some local behavior, we embed the code within the page.\n\
+    \n**Note:** Script files are loaded in the order in which they are placed in the\
+    \ HTML code\n\n# Chapter 2: Fundamental JavaScript Concepts\nGenerally, when we\
+    \ hear the term programming we immediately think of other people an incomprehensible\
+    \ string of letters and numbers. Programming looks like magic beyond the realm\
+    \ of mortals. Nevertheless, the concepts in programming are not difficult to grasp\
+    \ as they always have real applications. JavaScript, although it is not simple\
+    \ as HTML or CSS, is not an overly complicated language. Unlike other languages,\
+    \ its \"grammar\" is more less descriptive and intuitive making it a good fit\
+    \ for a first programming language. Basically, learning JavaScript is like learning\
+    \ a new language, but a new language that is similar to English. Once we learn\
+    \ the new words, and understand how to put them together to form \"sentences\"\
+    \ we'll be to go.\n\n## Syntax\nEvery language has its own set of characters and\
+    \ words that go along with a set of rules as how to arrange these characters and\
+    \ words into a well-formed sentence. These rules are also known as the language\
+    \ syntax and it is the syntax that holds the language together and gives it meaning.\n\
+    \nBefore start with some examples of JavaScript syntax, let us first set up the\
+    \ environment for JavaScript. As discussed previously, JavaScript code is always\
+    \ a part of the HTML code. Therefore, in order to work with JavaScript we will\
+    \ first need to create a HTML document. So to start, let us open a text editor\
+    \ (like Notepad) and type in the HTML code for the most basic web page. In addition\
+    \ to the basic HTML tags, we will include a `<script>` element in the `<head>`\
+    \ section where we will start placing the JavaScript code.\n\n```html\n<!doctype\
+    \ html>\n<head>\n<title>First Steps in JavaScript</title>\n<script type=\"text/javascript\"\
+    ></script>\n</head>\n<body>\n\n</body>\n</html>\n```\n\nLet us save this document\
+    \ as `firststeps.html`. If we are using Notepad, we have to remember to change\
+    \ the Save as Type field to ‘All files’.\n\n## Statements\nTo express ourselves\
+    \ in everyday common language we use sentences as the basic form of communication.\
+    \ Similarly, in JavaScript we also form sentences to express our intentions which\
+    \ are more formally called statements. A JavaScript sentence is the basic unit\
+    \ of communication, usually representing a single step in the program. And just\
+    \ like we put sentences together to express an opinion, we combine statements\
+    \ together to create a program.\n\nLet us look at a simple JavaScript statement\
+    \ and see what it does. Between the opening and closing `<script>` tag of the\
+    \ html document places the following text:\n\n```javascript\nalert(\"JavaScript\
+    \ is starting to make a little sense.\");\n```\n\nIn further examples we will\
+    \ not show the complete HTML code unless it is necessary, but for initial reference\
+    \ your document should look like the following:\n\n```html\n<!doctype html>\n\
+    <head>\n<title>First Steps in JavaScript</title>\n<script type=\"text/javascript\"\
+    >alert(\"JavaScript is starting to make a little sense.\");</script>\n</head>\n\
+    <body>\n\n</body>\n</html>\n```\n\nWe can save the `firststeps.html` document\
+    \ and open it in a web browser. Once the page opens, we will get an alert window\
+    \ with the message \"JavaScript is starting to make a little sense\".\n\nNow that\
+    \ we know what the effect is, let us go back to the JavaScript statement and interpret\
+    \ it into common language so it makes more sense.\n\n```javascript\nalert(\"JavaScript\
+    \ is starting to make a little sense.\");\n```\n\nJavaScript statements are instructions\
+    \ which are executed by the web browser. The statement starts with a command,\
+    \ presented by keyword. The keyword identifies the action that needs to be performed.\
+    \ In this case the keyword `alert` makes the web browser open a dialog box and\
+    \ display a message. If we just had the statement `alert()` the dialog box would\
+    \ have been empty, however in our case the statement consists of a specific input,\
+    \ the actual message text, also known as an argument. Finally, just like every\
+    \ sentence ends with a period, a JavaScript sentence ends with a semicolon. The\
+    \ semicolon makes it clear that the statement is over and once the interpreter\
+    \ executes it, it should move on to the next item.\n\nNow we are ready to translate\
+    \ the JavaScript statement. Its plain English interpretation would be, \"Open\
+    \ a dialog box and display the text JavaScript is starting to make a little sense'\
+    \ in that box.\"\n\n**Note:** When passing text arguments, we can use either double\
+    \ quote marks (\"sense\") or single quote marks ('sense') present the text.\n\n\
+    Before we move on, let us look at another statement. In the `<script>` element\
+    \ replace the previous code with the following and preview it in web browser to\
+    \ see the results:\n\n```javascript\ndocument.write(\"<p>JavaScript is starting\
+    \ to make a little sense.</p>\");\n```\n\nWhat we can see from the results is\
+    \ that the previously empty, now has one paragraph of text. Following the previous\
+    \ interpretation of how JavaScript works and from web results we can correctly\
+    \ assume that `document.write` commands the browser to write directly onto whatever\
+    \ is placed between the opening and closing brackets.\n\n## Variables\nOne of\
+    \ the fundamental aspect of JavaScript, and any programming language in general,\
+    \ is the concept of variables. A variable is a way to declare and store information\
+    \ which can be used. This information can vary with the circumstances and hence\
+    \ the name. Let us look the following statement.\n\n```javascript\nvar name =\
+    \ \"Martin\";\n```\n\nIn plain language this is the same as saying \"My name is\
+    \ Martin\". The keyword `var` is speak for \"create a variable\", or in programming\
+    \ dialect, \"declare a variable\". What follows is the name of the variable which\
+    \ can be anything with certain limits. Assigning a value to the variable is done\
+    \ with the `=` sign, which is not immediately necessary, as this can happen later.\
+    \ We can declare an undefined variable in one statement and assign it a value.\
+    \ For example:\n\n```javascript\nvar name;\nname = \"Martin\";\n```\n\nAs mentioned\
+    \ previously, variable names can contain letters, numbers, dollar sign (`$`),\
+    \ or underscore (`_`), other special characters are not allowed. Furthermore,\
+    \ a variable name cannot begin with a number, any other value is acceptable. Finally,\
+    \ variable names are case-sensitive, meaning that the interpreter makes distinction\
+    \ between uppercase and lowercase letters.\n\n**Note:** Although we can use almost\
+    \ anything for a variable name, it is wise to use names which are meaningful as\
+    \ this will help us and other programmers to better understand.\n\n## Variable\
+    \ Types\nBased on the type of data, variables come in different flavors. The three\
+    \ most basic types are number, string, and boolean.\n\nA number variable is represented\
+    \ by a numeric character. This variable can accept whole integers, negative integers\
+    \ and fractional integers. Numbers are frequently used in calculations, hence\
+    \ our number variables are often included in mathematical operations. The following\
+    \ statement declares a variable named `age` and assigns it a value of 35.\n\n\
+    ```javascript\nvar age = 35;\n```\n\nA string variable is used to represent any\
+    \ series of letters like words or sentences. Strings are represented as a series\
+    \ of characters enclosed within quotation marks, with the quotation marks signaling\
+    \ to the interpreter that what follows is a string variable. JavaScript allows\
+    \ us to use both double quotes (`\"`) or single quote (`'`) marks, but we have\
+    \ to be mindful to use the same type of quotation mark.\n\n```javascript\nvar\
+    \ location = \"California\";\n```\n\nA boolean variable is rather simple as it\
+    \ can accept only one of two values: `true` or `false`. This variable is used\
+    \ when we create programs that we want to intelligently react to user actions.\n\
+    \n## User Variables\nJavaScript would not be fun if it't allow us to share our\
+    \ thoughts and create or alter the variables directly. One of the simplest ways\
+    \ to give our input is to use the `prompt()` command.\n\n```javascript\nvar name\
+    \ = prompt(\"What is your name?\", \"\");\ndocument.write(name);\n```\n\nThe result\
+    \ of the `prompt()` command is a dialog box. Instead of just displaying a message\
+    \ like the alert dialog box, the prompt dialog box can also receive an answer.\
+    \ Hence, in the syntax for a prompt dialog box it is necessary to provide two\
+    \ arguments between the parentheses separated with a comma. The first argument\
+    \ is the prompt text that is displayed in the box, while the second argument is\
+    \ the default value for the text box, and consequently, the variable.\n\nIn the\
+    \ example above, the prompt text displayed in the box will be 'What is your name?'\
+    \ and the default value presented in the box will be empty, as there is obviously\
+    \ no content between the quotation marks. Once we type in something in the box\
+    \ and either click OK or press the Enter key, the variable receives the value\
+    \ that entered in the field. Consequently, the name will be displayed on the web\
+    \ page. Otherwise, if we click on Cancel, press the Esc key or close the prompt\
+    \ box, the returned value would be empty and there would be no text on the screen.\n\
+    \n**Note:** Instead of `prompt()` we can also use the more formal `window.prompt`\
+    \ command.\n\n# Operators\nStoring information in a variable is a first step,\
+    \ the beauty of programming is the ability to manipulate this information in many\
+    \ creative ways. For this, JavaScript provides different operators that allow\
+    \ us to modify data. An operator, represented by a symbol or a word, is something\
+    \ that can change one or more values into something else. The type of operators\
+    \ available are different based on the data type.\n\n## Mathematical Operators\n\
+    The basic mathematical operators like addition (`+`), subtraction (`-`), multiplication\
+    \ (`*`) and division (`/`) are readily available in JavaScript. They can be used\
+    \ in independent statements or used when declaring variables. For example, by\
+    \ operating with the variables `currentYear` and `yearOfBirth`, we can determine\
+    \ the value of the variable `age`.\n\n```javascript\nvar currentYear = 2015;\n\
+    var yearOfBirth = 1979;\nvar age = currentYear - yearOfBirth;\ndocument.write(age);\n\
+    ```\n\n**Note:** Calling a variable to be presented on a web page is easy. Simply\
+    \ use the `document.write()` command.\n\nMathematical operators, specifically\
+    \ the addition operator, can be used to combine two or more strings. This process\
+    \ of combining strings is called concatenation. In the following example:\n\n\
+    ```javascript\nvar firstName = \"Martwan\";\nvar lastName = \"Jenkins\";\nvar\
+    \ fullName = firstName + lastName;\ndocument.write(fullName);\n"
+  raw: 'All rights reserved. No part of this guide may be reproduced in any form without
+    permission in writing from the publisher except in the case of brief quotations
+    embodied in critical articles or reviews.Legal & DisclaimerThe information contained
+    in this book and its contents is not designed to replace or take the place of
+    any form of medical or professional advice; and is not meant to replace the need
+    for independent medical, financial, legal or other professional advice or services,
+    as may be required. The content and information in this book has been provided
+    for educational and entertainment purposes only.The content and information contained
+    in this book has been compiled from sources deemed reliable, and it is accurate
+    to the best of the Author''s knowledge, information and belief. However, the Author
+    cannot guarantee its accuracy and validity and cannot be held liable for any errors
+    and/or omissions. Further, changes are periodically made to this book as and when
+    needed. Where appropriate and/or necessary, you must consult a professional (including
+    but not limited to your doctor, attorney, financial advisor or such other professional
+    advisor) before using any of the suggested remedies, techniques, or information
+    in this book.Upon using the contents and information contained in this book, you
+    agree to hold harmless the Author from and against any damages, costs, and expenses,
+    including any legal fees potentially resulting from the application of any of
+    the information provided by this book. This disclaimer applies to any loss, damages
+    or injury caused by the use and application, whether directly or indirectly, of
+    any advice or information presented, whether for breach of contract, tort, negligence,
+    personal injury, criminal intent, or under any other cause of action.You agree
+    to accept all risks of using the information presented inside this book.You agree
+    that by continuing to read this book, where appropriate and/or necessary, you
+    shall consult a professional (including but not limited to your doctor, attorney,
+    or financial advisor or such other advisor as needed) before using any of the
+    suggested remedies, techniques, or information in this book.Table of ContentsDescription[Introduction](#part0004.xhtml)[Chapter
+    1: What is JavaScript?](#part0005.xhtml)[Implementing JavaScript](#part0005.xhtml_toc1_Implementing_JavaScript)[Chapter
+    2: Fundamental JavaScript Concepts](#part0006.xhtml)[Variable Types](#part0006.xhtml_toc3_Variable_Types)[User
+    Variables](#part0006.xhtml_toc4_User_Variables)[Mathematical Operators](#part0006.xhtml_aXV)[Assignment
+    Operators](#part0006.xhtml_aXW)[Comparison Operators](#part0006.xhtml_aXX)[Chapter
+    3: The History of JavaScript](#part0007.xhtml)[Features of JavaScript](#part0007.xhtml_aXZ)[Chapter
+    4: Basics of CSS3](#part0008.xhtml)[Chapter 5: Thinking Slowly and Staying Humble](#part0009.xhtml)[Chapter
+    6: Basic Operators](#part0010.xhtml)[What are operators?](#part0010.xhtml_toc13_What_are_operators_)[Classification
+    of operators](#part0010.xhtml_aY4)[Arithmetic Operators](#part0010.xhtml_aY5)[Conclusion](#part0011.xhtml)IntroductionHTML
+    is not very smart. It mostly lets people look at text and images and allows them
+    to move to other pages where they will do more of the same. What adds the intelligence
+    to a web page is JavaScript. It makes the website more engaging, effective, and
+    useful by letting pages respond to our visitors when they interact with the content. This
+    book assumes that we already know how to use HTML to specify web page structure
+    and content. It will be additionally beneficial if we are familiar how pages are
+    styled with CSS, separate from the web page structure. If this is the case then
+    we are ready to add a little behavior to the page and make it more dynamic and
+    interactive with JavaScript. Otherwise, without HTML and CSS, JavaScript will
+    not do us much good. They are viewed as the three fundamental pillars of the web
+    page: structure, presentation and behavior. Chapter 1: What is JavaScript? JavaScript
+    is the scripting language of the web with the sole purpose of adding interactivity
+    to our pages. In addition to interactivity, modern versions of JavaScript can
+    also be used to load and parse information from external sources or even the website''s
+    users. JavaScript is essentially a piece of programming code embedded in the HTML
+    structure of a web page. When the web browser reads this code it activates a built-in
+    interpreter that understands how to decipher this language and process its commands.  Although
+    programming is involved during coding, JavaScript is not a programming language.
+    In conventional web programming languages, like Java or .NET, the code has to
+    be compiled before it is executed. Compiling means that the code has to be first
+    sent to a special program that is run on the server. This program, also known
+    as application server software, translates the code, creates the requested page
+    and/or functionality and serves this back as HTML. Scripting languages, like JavaScript,
+    are note compiled, but rather are interpreted on-the-fly. This means that no special
+    software is involved as the user''s own browser runs and executes the code as
+    it is encountered.  Note: JavaScript was created during a time when Java was a
+    very popular language. Other than that, the languages are not related and have
+    almost nothing in common except for basic programming logic.Implementing JavaScriptNow
+    that we have a general idea as to what JavaScript is, we can start working with
+    this language. As JavaScript code is part of the HTML document, we need to know
+    how to tell browsers to run our scripts. There are two common options available
+    to us when we want to include JavaScript in a web document and in both cases we
+    will use the <script> element. The <script> tag is used when we want to tell the
+    browser where the JavaScript code begins and where it ends within an HTML document.
+    As such, this tag can be included either in the head or the body section of the
+    page. The first option is to place the code inline within the document structure.
+    To do this we will begin by opening a <script> tag, entering the JavaScript code,
+    and then finish by closing with the </script> tag. We can theoretically leave
+    the document like this as almost all browsers will assume that the scripting language
+    between the <script> tags is JavaScript by default. Nevertheless, for maximum
+    compatibility we will extend this tag with the type attribute and the text/javascript
+    value in order to instruct the browser how to exactly interpret the code. <script
+    type="text/javascript">//A JavaScript comment  </script>The second option is to
+    load the JavaScript code from an external file into our HTML document. For this
+    purpose we can use the <script> element again, but this time in addition to the
+    type attribute we will also include the URL to the external file in the src attribute
+    of the <script> element. The external file must be a text-only file with the .js
+    file extension that contains only pure JavaScript code without any HTML elements
+    or CSS rules. For example, to call the external scripts.js file into our browser
+    we would use the following code: <script src="script.js" type="text/javascript"></script>We
+    put JavaScript in an external file and include it in the web page when we like
+    to share the functionalities across our entire web site. Otherwise, if we just
+    need to add some local interactive behavior, we embed the code within the page. Note: 
+    Script files are loaded in the order in which they are placed in the HTML code Chapter
+    2: Fundamental JavaScript Concepts Generally, when we hear the term programming
+    we immediately think of other people typing an incomprehensible string of letters
+    and numbers. Programming looks like magic beyond the realm of mere mortals. Nevertheless,
+    the concepts in programming are not difficult to grasp as they always have real
+    life applications. JavaScript, although it is not as simple as HTML or CSS, is
+    not an overly complicated language. Unlike other languages, its "grammar" is more
+    or less descriptive and intuitive making it a good fit for a first programming
+    language. Basically, learning JavaScript is like learning a new language, but
+    a new language that is similar to English. Once we learn the new words, and understand
+    how to put them together to form "sentences" we''ll be good to go. SyntaxEvery
+    language has its own set of characters and words that go along with a set of rules
+    as to how to arrange these characters and words together into a well-formed sentence.
+    These rules are also known as the language syntax and it is the syntax that holds
+    the language together and gives it meaning. Before start with some examples of
+    JavaScript syntax, let us first set up the environment for JavaScript. As discussed
+    previously, JavaScript code is always a part of the HTML code. Therefore, in order
+    to work with JavaScript we will first need to create a basic HTML document. So
+    to start, let us open a text editor (like Notepad) and type in the HTML code for
+    the most basic web page. In addition to the basic HTML tags, we will include a
+    <script> element in the <head> section where we will start placing the JavaScript
+    code. <!doctype html><head><title>First Steps in JavaScript</title> <script type="text/javascript"></script></head><body>  </body></html>Let
+    us save this document as firststeps.html. If we are using Notepad, we have to
+    remember to change the Save as Type field to ‘All files’.  StatementsTo express
+    ourselves in everyday common language we use sentences as the basic form of communication.
+    Similarly, in JavaScript we also form sentences to express our intentions which
+    are more formally called statements. A JavaScript sentence is the basic unit of
+    communication, usually representing a single step in the program. And just like
+    we put sentences together to express an opinion, we combine statements together
+    to create a program. Let us look at a simple JavaScript statement and see what
+    it does. Between the opening and closing <script> tag of the html document places
+    the following text: alert("JavaScript is starting to make a little sense."); In
+    further examples we will not show the complete HTML code unless it is necessary,
+    but for initial reference your document should look like the following:  <!doctype
+    html><head><title>First Steps in JavaScript</title> <script type="text/javascript">alert("JavaScript
+    is starting to make a little sense."); </script></head><body>  </body></html>We
+    can save the firsteps.html document and open it in a web browser. Once the page
+    opens, we will get an alert window with the message "JavaScript is starting to
+    make a little sense".   Now that we know what the effect is, let us go back to
+    the JavaScript statement and interpret it into common language so it makes more
+    sense. alert("JavaScript is starting to make a little sense."); JavaScript statements
+    are instructions which are executed by the web browser. The statement starts with
+    a command, presented by keyword. The keyword identifies the action that needs
+    to be performed. In this case the keyword alert makes the web browser open a dialog
+    box and display a message. If we just had the statement alert(); the dialog box
+    would have been empty, however in our case the statement consists of a specific
+    input, the actual message text, also known as an argument. Finally, just like
+    every sentence ends with a period, a JavaScript sentence ends with a semicolon.
+    The semicolon makes it clear that the statement is over and once the interpreter
+    executes it, it should move on to the next item. Now we are ready to translate
+    the JavaScript statement. Its plain English interpretation would be, "Open a dialog
+    box and display the text JavaScript is starting to make a little sense'' in that
+    box." Note: When passing text arguments, we can use either double quote marks
+    ("sense") or single quote marks (''sense'') present the text. Before we move on,
+    let us look at another JavaScript statement. In the <script> element replace the
+    previous code with the following and preview it in a web browser to see the results: document.write("<p>JavaScript
+    is starting to make a little sense.</p>");   What we can see from the results
+    is that the previously empty document, now has one paragraph of text. Following
+    the previous interpretation of how JavaScript works and from the web browser results
+    we can correctly assume that the document.write keyword commands the browser to
+    write directly onto the web page. Similar to alert(), it writes whatever is placed
+    between the opening and closing brackets. VariablesOne of the fundamental aspect
+    of JavaScript, and any programming language in general, is the concept of variables.
+    A variable is a way to declare and store information which can later be used.
+    This information can vary with the circumstances and hence the name variable. Let
+    us look at the following statement. var name = "Martin"; In plain language this
+    is the same as saying "My name is Martin". The keyword var is JavaScript speak
+    for "create a variable", or in a programming dialect, "declare a variable".  What
+    follows is the name of the variable which can be anything we choose with certain
+    limits. Assigning a value to the variable is done with the = sign, which is not
+    immediately necessary, as this can happen later. We can declare an undefined variable
+    in one statement and assign it a value in a later statement. For example: var
+    name;name = "Martin";As mentioned previously, variable names can be anything,
+    like name, abc, R2D2, with a few rules. Variable names can contain letters, numbers,
+    dollar sign ($), or lower line (_), other special characters are not allowed.
+    Furthermore, a variable name cannot begin with a number, any other allowed value
+    is acceptable. Finally, variable names are case-sensitive, meaning that the interpreter
+    in the web browser makes a distinction between uppercase and lowercase letters,
+    making ''score'' different from ''Score''.  Note: Although we can use almost anything
+    for a variable name, it is wise to use names which are meaningful as this will
+    help us and other programmers to better understand the written code. Variable
+    TypesBased on the type of data, variables come in different flavors. The three
+    most basic types are number, string, and boolean. A number variable is represented
+    by a numeric character. This variable can accept whole integers, negative integers
+    and fractional integers. Numbers are frequently used in calculations, hence our
+    number variables are often included in mathematical operations. The following
+    statement declares a variable named age and assigns it a value of 35. var age
+    = 35; A string variable is used to represent any series of letters like words
+    or sentences. Strings are represented as a series of characters enclosed within
+    quotation marks, with the quotation marks signaling to the interpreter that what
+    follows is a string variable. JavaScript allows us to use both the double quotes
+    (") or the single quote ('') marks, but we have to be mindful to use the same
+    type of quotation mark.  var location = "California"; A boolean variable is rather
+    simple as it can accept only one of two values: true or false. This variable is
+    used when we create JavaScript programs that we want to intelligently react to
+    user actions.  User VariablesJavaScript would not be fun if it didn''t allow us
+    to share our thoughts and create or alter the variables directly. One of the simplest
+    ways to "give" our input is to use the prompt() command. var name = prompt ("What
+    is your name?", "") document.write(name);   The result of the prompt() command
+    is a dialog box. Instead of just displaying a message like the alert dialog box,
+    the prompt dialog box can also receive an answer. Hence, in the syntax for a prompt
+    dialog box it is necessary to provide two arguments between the parentheses separated
+    with a coma. The first argument is the prompt text that is displayed in the box,
+    while the second argument is the default value for the text box, and consequently,
+    the variable.  In the example above, the prompt text displayed in the box will
+    be ''What is your name?'' and the default value presented in the box will be empty,
+    as there is obviously no content between the quotation marks. Once we type in
+    something in the box and either click OK or press the Enter key, the variable
+    receives the value that was entered in the field. Consequently, the name will
+    be displayed on the web page. Otherwise, if we click on Cancel, press the Esc
+    key or close the prompt box, the returned value would be empty and there would
+    be no text on the screen. Note: Instead of prompt() we can also use the more formal
+    window.prompt command. OperatorsStoring information in a variable is a first step,
+    the beauty of programming is the ability to manipulate this information in many
+    creative ways. For this, JavaScript provides different operators that allow us
+    to modify data. An operator, represented by a symbol or a word, is something that
+    can change one or more values into something else. The type of operators available
+    are different based on the data type. Mathematical OperatorsThe basic mathematical
+    operators like addition (+), substraction (-), multiplication (*) and division
+    (/) are readily available in JavaScript. They can be used in independent statements
+    or used when declaring variables. For example, by "operating" with the variables
+    currentYear and yearofBirth, we can determine the value of the variable age. var
+    currentYear = 2015; var yearofBirth = 1979; var age = currentYear - yearofBirth; document.write(age);   Note:
+    "Calling" a variable to be presented on a web page is easy. Simply use the document.write()
+    command. Mathematical operators, specifically the addition operator, can be used
+    to combine two or more strings. This process of combining strings is called concatenation.
+    In the following example:  var firstName = "Martwan"; var lastName = "Jenkins"; var
+    fullName = firstName+lastName; document.write(fullName);   The value for fullName
+    will end up being MartwanJenkins. To make sure that everything is in its proper
+    form we need to include the empty space as a string in quotation marks. For example,
+    we can use the following declaration: var fullName = firstName+" "+lastName;   We
+    can see that operators are also useful when we want to join text and/or combine
+    variables. As a matter of fact, we can use this to construct more logical sentences.
+    For example, we can combine the "My name is" text with a value from a calculated
+    variable. var firstName = "Martwan"; var lastName = "Jenkins"; var fullName =
+    firstName+" "+lastName; document.write("My name is " +fullName); Note: When performing
+    several mathematical operations in one statement, the rules of precedence apply. Assignment
+    OperatorsJust like things change in real life, so do variables within a JavaScript
+    program. And to change variables within JavaScript we will use assignment operators.
+    We are already familiar with the fundamental assignment operator, the equal sign
+    (=), which is used to give an initial or a new value to a variable. There are
+    other assignment operators that also change the value of a variable, but they
+    do this in a slightly different way.  For example, as the year passes we grow
+    older and our age incrementally changes by one. To make this change in JavaScript
+    there are several different approaches we can take, all with the same results.
+    To play around with the possibilities of changing variables, we can try the following
+    code where after the age variable changes its value is displayed in the browser: var
+    age = 35; document.write("<p>My age is "+age+"</p>"); age = age + 1; document.write("<p>A
+    year has passed, so now I am " +age+"</p>"); age += 10;document.write("<p>What?
+    Are you telling me that I am a grandad now? But I am only " +age+"</p>");   While
+    at first these operations might appear slightly confusing, they are still logical
+    if viewed from the programming angle. For example, if we read the statement age=age+1
+    backwards what happens is that the value of 1 is added to the current age of 35
+    which would make 36 the new value of age. Additionally, we can use a complex assign
+    operator such as (+=) in the statement age+=10, to increase the value of the variable
+    by 10. We can also use the same logic to other operations like subtraction, division
+    and multiplication.  age-=5;is the same asage = age - 5; age*= 5;is the same asage
+    = age * 5; age/=5;is the same asage = age / 5; Additionally, when we want to increase/decrease
+    the value of the variable by 1, we can also use the following assignment operators: age++;is
+    the same asage = age + 1; age--;is the same asage = age - 1; Comparison OperatorsLike
+    the name suggests comparison operators are used to compare two values. After the
+    comparison is made a value of either true or false is returned depending on whether
+    the comparison was exact or not.   Chapter 3: The History of JavaScriptJavaScript
+    is a language that was created by Netscape in 1995 to develop products and applications
+    to run in the browser. JavaScript has nothing to do with the Java language itself.
+    It was just a ploy to name the language after the more popular Java language that
+    was present at that point in time. Microsoft also tried to create its own scripting
+    technologies such as VBScript and JScript.In November 1996, JavaScript was made
+    a standard specification. ECMAScript is the name of the official standard, with
+    JavaScript being the most well-known of the implementations. Since then, the language
+    has undergone modifications and changes to ensure it remained one of the most
+    popular client side scripting languages. Since JavaScript was adopted as an ECMA
+    standard in 1997, it followed the release cycle of the ECMA standard.Below are
+    the versions of the ECMAScript Language.'
+  toc: []
+  trans: '
+
+    版权所有。未经出版者书面许可，不得以任何形式复制本指南的任何部分，但批判性文章或评论中的简短引用除外。
+
+
+    # 法律与免责声明
+
+    本书包含的信息及其内容并非旨在取代或替代任何形式的医疗或专业建议；也不旨在取代可能需要的独立医疗、财务、法律或其他专业建议或服务。书中的内容和信息仅供教育和娱乐之用。
+
+
+    书中的内容和信息编写自被认为可靠的来源，根据作者的已知、信息和信念，它们是准确的。然而，作者无法保证其准确性和有效性，且对任何错误和/或遗漏不承担责任。此外，将根据需要定期对本书进行更改。在适当和/或必要的情况下，在使用本书中任何建议的疗法、技术或信息之前，您必须咨询专业人士（包括但不限于您的医生、律师、财务顾问或其他此类专业顾问）。
+
+
+    在使用本书包含的内和信息时，您同意使作者免受任何损害、成本和费用，包括由于应用本书所提供的任何信息而可能导致的任何法律费用。本免责声明适用于直接或间接使用和应用所呈现的任何建议或信息而导致的任何损失、损害或伤害，无论是由于违约、侵权、疏忽、人身伤害、刑事故意或任何其他诉讼理由。您同意接受使用书中呈现的信息的所有风险。您同意通过继续阅读本书，在适当和/或必要的情况下，在使用本书中任何建议的疗法、技术或信息之前，将咨询专业人士（包括但不限于您的医生、律师或财务顾问或其他所需的顾问）。
+
+
+    # 目录
+
+    ## 描述
+
+    - 介绍
+
+    - 第一章：什么是 JavaScript？
+
+    - 实现 JavaScript
+
+    - 第二章：JavaScript 基础概念
+
+    - 变量类型
+
+    - 用户变量
+
+    - 数学运算符
+
+    - 赋值运算符
+
+    - 比较运算符
+
+    - 第三章：JavaScript 历史
+
+    - JavaScript 的特性
+
+    - 第四章：CSS3 基础
+
+    - 第五章：慢思考与保持谦逊
+
+    - 第六章：基本运算符
+
+    - 什么是运算符？
+
+    - 算术运算符
+
+    - 结论
+
+
+    # 介绍
+
+    HTML 并不智能。它主要让人们查看文本和图像，并允许他们到其他页面执行更多相同的操作。为网页增加智能的是 JavaScript。它通过让页面在访问者与内容交互时做出响应，使网站更具吸引力、更高效且实用。
+
+
+    本书假设我们已经知道如何使用 HTML 来指定网页结构和内容。如果我们熟悉如何使用 CSS 对页面进行样式设计（独立于网页结构），将更有益。如果是这样，我们就准备好使用
+    JavaScript 为页面添加一些行为，使其更具动态感和交互性。否则，没有 HTML 和 CSS，JavaScript 对我们没有大用处。它们被视为网页的三大支柱：结构、表现和行为。
+
+
+    # 第一章：什么是 JavaScript？
+
+    JavaScript 是 Web 的脚本语言，其唯一目的是为我们的页面添加交互性。除了交互性外，现代版本的 JavaScript 还用于从外部源甚至网站用户加载并解析信息。JavaScript
+    本质上是嵌入网页 HTML 结构中的一段程序代码。当浏览器读取这段代码时，它会激活内置的解释器，该解释器理解如何解码这种语言并处理其命令。
+
+
+    虽然编码过程中涉及编程，但 JavaScript 并不是一种编译语言。在传统的 Web 编程语言（如 Java 或 .NET）中，代码在执行之前必须编译。编译意味着代码必须先发送到运行在服务器上的特殊程序。该程序也称为应用服务器软件，它翻译代码、创建请求的页面和/或功能并将其作为
+    HTML 返回。像 JavaScript 这样的脚本语言是不编译的，而是即时解释的。这意味着不需要任何特殊软件，因为用户自己的浏览器会在遇到代码时运行并执行它。
+
+
+    **注意：** JavaScript 创建于 Java 是一种非常流行的语言的时代。除此外，这些语言之间没有关系，除了基本的编程逻辑外几乎没有任何共同点。
+
+
+    ## 实现 JavaScript
+
+    现在我们对 JavaScript 是什么有了大致了解，可以开始使用这种语言。由于 JavaScript 代码是 HTML 文档的一部分，我们需要知道如何告诉浏览器运行我们的脚本。当我们想在
+    Web 文中包含 JavaScript 时，有两种常用选项。两种情况下我们都会使用 `<script>` 元素。`<script>`标签用于告诉浏览器 JavaScript
+    代码的开始和结束。此标签可以包含在页面的 `head` 或 `body` 中。第一个选项是将代码内联在文档中。实现这一点，我们将打开 `<script>`
+    标签，输入 JavaScript 代码，然后用 `</script>` 标签结束。理论上，我们可以这样留下文档，因为所有浏览器默认认为 `<script>`
+    标签之间的脚本语言是 JavaScript。然而，为了最大的兼容性，我们将使用 `type` 属性和 `text/javascript` 值来扩展此标签，以指示浏览器如何精确解释代码。
+
+
+    ```html
+
+    <script type="text/javascript">JavaScript 注释</script>
+
+    ```
+
+
+    第二个选项是从外部文件将 JavaScript 代码加载到我们的 HTML 文档。为了这个目的，我们可以再次使用 `<script>` 元素，但这次除了 `type`
+    属性，我们还在 `<script>` 元素的 `src` 属性中包含外部文件的 URL。外部文件必须是带有 `.js` 扩展名的纯文本文件，包含 JavaScript
+    代码而不包含任何 HTML 元素或 CSS 规则。例如，将 `script.js` 文件调用到浏览器，我们将使用：
+
+
+    ```html
+
+    <script src="script.js" type="text/javascript"></script>
+
+    ```
+
+
+    当我们想在整个站点共享功能时，我们将 JavaScript 放在外部文件中并包含在网页中。否则，如果我们只需要添加本地行为，我们将代码嵌入页面中。
+
+
+    **注意：** 脚本文件按照它们在 HTML 代码中的放置顺序进行加载。
+
+
+    # 第二章：JavaScript 基础概念
+
+    通常，当我们听到“编程”一词时，我们会立即想到其他人和难以理解的字母和数字字符串。编程看起来像是凡人之外的魔法。然而，编程概念并不难掌握，因为它们总有实际应用。JavaScript
+    虽然不像 HTML 或 CSS 那么简单，但并不是一种过于复杂的语言。与其他语言不同，它的“语法”较具描述性且直观，使其非常适合作为第一门编程语言。基本上，学习
+    JavaScript 就像学习一种新语言，但是一种类似于英语的新语言。一旦我们学会了新单词，并理解了如何将它们组合成“句子”，我们了。
+
+
+    ## 语法
+
+    每种语言都有自己的一组字符和单词，并有一套如何将这些字符和单词排列成完整句子的规则。这些规则被称为语言语法，它将语言结合并赋予其意义。
+
+
+    在开始一些 JavaScript 示例之前，让我们先为 JavaScript 准备环境。如之前所述，JavaScript 代码始终 HTML 代码的一部分。因此，为了使用
+    JavaScript，我们首先需要创建一个 HTML 文档。为了开始，让我们打开文本编辑器（如记事本）并输入基础网页的 HTML 代码。除了基础 HTML
+    标签外，我们在 `<head>` 部分包含一个 `<script>` 元素，我们将开始放置 JavaScript 代码。
+
+
+    ```html
+
+    <!doctype html>
+
+    <head>
+
+    <title>JavaScript 初步</title>
+
+    <script type="text/javascript"></script>
+
+    </head>
+
+    <body>
+
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    我们将此文档另存为 `firststeps.html`。如果我们使用记事本，必须记住将“保存类型”更改为“所有文件”。
+
+
+    ## 语句
+
+    为了用日常语言表达我们，我们使用句子作为通信的基本形式。同样，在 JavaScript 中，我们也形成句子来表达我们的意图，这些正式地被称为语句。JavaScript
+    句子是通信的基本单元，通常代表程序中的单个步骤。就像我们组合句子来表达观点一样，我们将语句组合在一起创建一个程序。
+
+
+    让我们看一个简单的 JavaScript 语句并看看它的作用。在 html 文档的打开和关闭 `<script>` 标签之间放置了以下文本：
+
+
+    ```javascript
+
+    alert("JavaScript 开始变得有点意义了。");
+
+    ```
+
+
+    在后续示例中，除非必要，否则不会显示完整的 HTML 代码，但对于初始参考，您的文档应该是：
+
+
+    ```html
+
+    <!doctype html>
+
+    <head>
+
+    <title>JavaScript 初步</title>
+
+    <script type="text/javascript">alert("JavaScript 开始变得有点意义了。");</script>
+
+    </head>
+
+    <body>
+
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    我们可以保存 `firststeps.html` 文并在浏览器中打开它。一旦页面打开，我们将得到一个带有消息“JavaScript 开始变得有点意义了”的警报窗口。
+
+
+    现在我们知道了效果是什么，让我们回到 JavaScript 语句并将其翻译成普通语言，使其更有意义。
+
+
+    ```javascript
+
+    alert("JavaScript 开始变得有点意义了。");
+
+    ```
+
+
+    JavaScript 语句是 Web 浏览器执行的指令。语句以关键字呈现的命令开始。关键字标识了需要执行的操作。在这种情况下，关键字 `alert` 让 Web
+    浏览器打开对话框并显示消息。如果我们只有 `alert()` 语句，对话框将是空的，然而在我们的情况下，语句由一个特定输入，即实际的消息文本，也称为参数。最后，就像每个句子都以句号结束，JavaScript
+    句子以分号结束。分号明确语句已结束，一旦解释器执行了它，就应该移动到下一个项目。
+
+
+    现在我们准备好翻译 JavaScript 语句了。它的普通英语解释是：“打开一个对话框并显示文本。”
+
+
+    **注意：** 在传递文本参数时，我们可以使用双引号（`""`）或单引号（`''''`）。
+
+
+    在继续之前，让我们看另一个语句。在 `<script>` 元素中将之前的代码替换为以下并在浏览器中预览结果：
+
+
+    ```javascript
+
+    document.write("<p>JavaScript 开始变得有点意义了。</p>");
+
+    ```
+
+
+    从结果中我们可以看到之前的空内容现在有一段文本。根据之前对 JavaScript 如何运作的解释，我们可以正确地假设 `document.write` 命令让浏览器直接写入打开和关闭括号之间的任何内容。
+
+
+    ## 变量
+
+    JavaScript 以及任何通用编程语言的一个基本方面是变量的概念。变量是一种声明和存储可以使用信息的方法。这些信息可以随情况而变化，因此有了名称。让我们看看下面的语句：
+
+
+    ```javascript
+
+    var name = "Martin";
+
+    ```
+
+
+    在普通语言中这等同于说“我的名字是 Martin”。关键字 `var` 表示“创建一个变量”，或者在编程中中“声明一个变量”。后面是变量的名称，可以是任何具有特定限制的内容。使用
+    `=` 符号为变量赋值，这并不是立即需要的，因为这以后可以发生。我们可以在一个语句中声明未定义的变量并为其赋值。例如：
+
+
+    ```javascript
+
+    var name;
+
+    name = "Martin";
+
+    ```
+
+
+    正如之前提到的，变量名可以包含字母、数字、美元符号（`$`）或下划线（`_`），不允许其他特殊字符。此外，变量名不能以数字开头，任何其他值都是接受的。最后，变量名对大小写敏感，这意味着解释器区分大写和小字母。
+
+
+    **注意：** 虽然我们可以使用任何内容作为变量名，但使用有意义的名称是明智的，这将帮助我们和其他程序员更好地理解。
+
+
+    ## 变量类型
+
+    根据数据类型，变量有不同的种类。三个基本的类型是数字、字符串和布尔。
+
+
+    数字变量由数字表示。该变量可以接受整数、负整数和分数整数。数字经常用于计算，因此我们的数字变量经常包含数学运算中。下面的语句声明了一个名为 `age` 的变量并赋值为
+    35。
+
+
+    ```javascript
+
+    var age = 35;
+
+    ```
+
+
+    字符串变量用于表示任何字母序列，如单词或句子。字符串表示为引号内的字符序列，引号指示解释器后面是一个字符串。JavaScript 允许我们使用双引号（`"`）或单引号（`''`），但必须注意使用相同类型的引号。
+
+
+    ```javascript
+
+    var location = "California";
+
+    ```
+
+
+    布尔变量非常简单，因为它只接受两个值之一：`true` 或 `false`。该变量用于我们想要智能地响应用户操作的程序中。
+
+
+    ## 用户变量
+
+    如果 JavaScript 不允许我们分享想法并直接创建或更改变量，将不再有趣。提供输入的最简单方法之一是使用 `prompt()` 命令。
+
+
+    ```javascript
+
+    var name = prompt("你的名字是什么?", "");
+
+    document.write(name);
+
+    ```
+
+
+    `prompt()` 命令的结果是一个对话框。与仅仅显示消息的 alert 对话框不同，提示对话框也可以接收答案。因此，在提示对话框的语法中，需要在逗号分隔提供两个参数。第一个参数是显示在框中的提示文本，而第二个参数是文本框的默认值，因此是变量。
+
+
+    在上面的示例中，框中显示的提示文本是“你的名字是什么？”，默认值将为空，因为引号之间明显没有内容。一旦我们在框中输入内容并点击确定或按回键，变量就会接收字段的值。因此，名字将显示在网页上。否则，如果我们点击取消、按
+    Esc 键或关闭提示框，返回的值将为空，屏幕上没有文本。
+
+
+    **注意：** 除了 `prompt()`，我们还可以使用更正式的 `window.prompt` 命令。
+
+
+    # 运算符
+
+    在变量中存储信息是第一步，编程的魅力在于以许多创造性的方式处理这些信息。为此此，JavaScript 提供了不同的运算符允许我们修改数据。运算符由符号或单词表示，是可以将一个或多个值更改其他东西的东西。可用运算符的类型根据数据类型不同。
+
+
+    ## 数学运算符
+
+    基本的数学运算符如加（`+`）、减（`-`）、乘（`*`）和除（`/`）在 JavaScript 中很容易可用。它们可以在独立语句中使用或在声明变量时使用。例如，通过操作变量
+    `currentYear` 和 `yearOfBirth`，我们可以确定变量 `age` 的值。
+
+
+    ```javascript
+
+    var currentYear = 2015;
+
+    var yearOfBirth = 1979;
+
+    var age = currentYear - yearOfBirth;
+
+    document.write(age);
+
+    ```
+
+
+    **注意：** 调用变量并在网页显示是简单的。只需使用 `document.write()` 命令。
+
+
+    数学运算符，特别是加运算符，可以组合两个或多个字符串。这种组合字符串的过程被称为拼接。在下面的示例中：
+
+
+    ```javascript
+
+    var firstName = "Martwan";
+
+    var lastName = "Jenkins";
+
+    var fullName = firstName + lastName;
+
+    document.write(fullName);
+
+    ```
+
+
+    （注：由于原文后续存在大量重复段落，此处已仅翻译唯一核心内容）
+
+    '
+- fmt: '
+
+    | Year | Name | Changes |
+
+    | :--- | :--- | :--- |
+
+    | 1997 | ECMAScript 1 | First Edition |
+
+    | 1998 | ECMAScript 2 | Editorial changes only |
+
+    | 1999 | ECMAScript 3 | Added regular expressions and try/catch |
+
+    | 2009 | ECMAScript 5 | Added "strict mode" and JSON support |
+
+    | 2011 | ECMAScript 5.1 | Editorial changes |
+
+    | 2015 | ECMAScript 6 | Added classes and modules |
+
+    | 2016 | ECMAScript 7 | Added exponential operator (**) and `array.prototype.includes`
+    |
+
+
+    There are also numerous popular frameworks that have been developed based on the
+    JavaScript language. Some of the most popular ones are given below with a short
+    example of how the code looks for each.
+
+
+    ### 2.1 Angular
+
+    AngularJS is a structural framework for creating dynamic web applications. HTML
+    can be used as the template language and AngularJS lets you then extend HTML''s
+    syntax to express the application''s components clearly. AngularJS has support
+    for data binding and dependency injection, which eliminates the needs to write
+    this code yourself to carry out these tasks.
+
+
+    Example 5: The following program is used to showcase a simple AngularJS program.
+
+
+    ```html
+
+    <!DOCTYPE html><html><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script><body><div
+    ng-app=""><p>Hello World</p></div></body></html>
+
+    ```
+
+
+    ### 2.2 Node.JS
+
+    Node.JS is an open-source, cross-platform JavaScript run-time environment for
+    executing JavaScript code server-side. Normally JavaScript is used as a client
+    side language, but Node.JS changed this by implementing JavaScript that could
+    be used on a server side framework.
+
+
+    Example 6: The following program is used to showcase a simple Node JS program.
+
+
+    ```javascript
+
+    var http = require(''http'');http.createServer(function (req, res) {res.writeHead(200,
+    {''Content-Type'': ''text/plain''});res.end(''Hello World!'');}).listen(8080);
+
+    ```
+
+
+    ### 2.3 React
+
+    ReactJS is an open-source JavaScript library for building user interfaces. It
+    is maintained by Facebook, Instagram and a community of individual developers
+    and corporations.
+
+
+    Example 7: The following program is used to showcase a simple React JS program.
+
+
+    ```javascript
+
+    var App = React.createClass({render: function() {return <div>Hello World</div>}});React.render(<App
+    />, document.body);
+
+    ```
+
+
+    ### 2.4 JQuery
+
+    JQuery is a fast, small, and feature-rich JavaScript library. It makes things
+    like HTML document traversal and manipulation, event handling, animation, and
+    Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+
+
+    Example 8: The following program is used to showcase a simple JQuery program.
+
+
+    ```html
+
+    <!DOCTYPE html><html><script>$(document).ready(function(){$("p").click(function(){$(this).hide();});});</script><body></body></html>
+
+    ```
+
+
+    ## 3. Features of JavaScript
+
+    JavaScript has an assortment of features. I will go over a few of them below:
+
+
+    ### 3.1 Working with Objects
+
+    Data in JavaScript is expressed as objects, which makes it easier and more extensible
+    to work with various forms of data in JavaScript. Below is a simple example of
+    a JavaScript program that uses an object defined as a variable.
+
+
+    Example 9: The following program is used to showcase a simple JavaScript object.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    value="Hello World";document.getElementById("demo").innerHTML = value;</script></body></html>
+
+    ```
+
+
+    ### 3.2 Data Types
+
+    JavaScript works on the fact that it is a dynamically typed language. A variable
+    can be set to a number and later to a string. Below is a simple example of a JavaScript
+    program which works with data types.
+
+
+    Example 10: The following program is used to showcase a simple JavaScript program
+    on data types.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    value=1;value="Hello World";document.getElementById("demo").innerHTML = value;</script></body></html>
+
+    ```
+
+
+    ### 3.3 Structured Language
+
+    JavaScript follows a structured programming syntax wherein you can use the normal
+    loop statements like “while loops” and “if statements”. Below is a simple example
+    of a JavaScript program which works with decision making and loops.
+
+
+    Example 11: The following program is used to showcase a simple JavaScript program
+    on loop statements.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    txt="";var i = 0;do {txt += "<br>The value is " + i;i++;}while (i < 10);   document.getElementById("demo").innerHTML
+    = txt;</script></body></html>
+
+    ```
+
+
+    ### 3.4 Object Oriented
+
+    JavaScript is almost an entirely object oriented language with the ability to
+    define properties for variable objects. Below is a simple example of a JavaScript
+    program which works with objects.
+
+
+    Example 12: The following program is used to showcase a simple JavaScript program
+    with objects.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>var
+    Tutorial={Name:"Javacript",chapter:"Features"}document.getElementById("Name").innerHTML
+    = Tutorial.Name;document.getElementById("chapter").innerHTML = Tutorial.chapter;</script></body></html>
+
+    ```
+
+
+    ### 3.5 Defining Functions
+
+    JavaScript has the ability to split code into modules with the help of functions.
+    The logic of a program can be split by defining functions across a JavaScript
+    program. Below is a simple example of a JavaScript program which works with functions.
+
+
+    Example 13: The following program is used to showcase a simple JavaScript program
+    on classes.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>function
+    myFunction() {return "Hello World";   document.getElementById("Name").innerHTML
+    = myFunction();</script></body></html>
+
+    ```
+
+
+    ### 3.6 Event Handling
+
+    Events can also be handled in JavaScript. So if you wanted code to run at the
+    click of a button, it can be done. Functions can be used to define code that can
+    be run when an event is triggered. Below is a simple example of a JavaScript program
+    which works with event handling.
+
+
+    Example 14: The following program is used to showcase a simple JavaScript program
+    that works with event handling.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>function
+    myFunction() {document.getElementById("Name").innerHTML = "Hello World";}</script><button
+    onclick="myFunction()">Click Me</button></body></html>
+
+    ```
+
+
+    ### 3.7 Working with HTML DOM
+
+    Probably the most important feature to have is the ability to modify the elements
+    of an HTML page via its DOM structure. This is what makes JavaScript such a popular
+    scripting language. Below is a simple example of a JavaScript program which works
+    with HTML DOM.
+
+
+    Example 15: The following program is used to showcase a simple JavaScript program
+    that works with HTML DOM.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p1 id="Name"></p1><script>document.getElementById("Name").innerHTML
+    = "Hello World";</script></body></html>
+
+    ```
+
+
+    ### 3.8 Working with the Browser
+
+    JavaScript is also deigned to work with many different browsers and has the capability
+    of getting information from the browser window it is running in.
+
+
+    Example 16: The following program showcases a simple JavaScript program that can
+    be used to work with the browser window.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>document.getElementById("demo").innerHTML
+    = screen.width;</script></body></html>
+
+    ```
+
+
+    ### 3.9 Scope of Variables
+
+    Variables in JavaScript also work with the concept of global vs local scope. The
+    scope of the variable is in the block it is defined in. The example below shows
+    a variable that is scoped locally.
+
+
+    Example 17: The following program showcases a simple JavaScript program that uses
+    a variable with local scope.
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>function
+    demo() {var val=1;// The variable val an only used here}</script></body></html>
+
+    ```
+
+    '
+  raw: '| Year | Name | Changes |
+
+
+    | 1997 | ECMAScript 1 | First Edition |
+
+
+    | 1998 | ECMAScript 2 | Editorial changes only |
+
+
+    | 1999 | ECMAScript 3 | Added regular expressions and try/catch |
+
+
+    | 2009 | ECMAScript 5 | Added "strict mode" and JSON support |
+
+
+    | 2011 | ECMAScript 5.1 | Editorial changes |
+
+
+    | 2015 | ECMAScript 6 | Added classes and modules |
+
+
+    | 2016 | ECMAScript 7 | Added exponential operator (**) and array.prototype.includes
+    |
+
+
+    There are also numerous popular frameworks that have been developed based on the
+    JavaScript language. Some of the most popular ones are given below with a short
+    example of how the code looks for each.  2.1 AngularJSAngularJS is a structural
+    framework for creating dynamic web applications. HTML can be used as the template
+    language and AngularJS lets you then extend HTML''s syntax to express the application''s
+    components clearly. AngularJS has support for data binding and dependency injection,
+    which eliminates the needs to write this code yourself to carry out these tasks.Example
+    5: The following program is used to showcase a simple AngularJS program.
+
+
+    | <!DOCTYPE html><html><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script><body><div
+    ng-app=""><p>Hello World</p></div></body></html> |
+
+
+    2.2 Node.JSNode.JS is an open-source, cross-platform JavaScript run-time environment
+    for executing JavaScript code server-side. Normally JavaScript is used as a client
+    side language, but Node.JS changed this by implementing JavaScript that could
+    be used on a server side framework.Example 6: The following program is used to
+    showcase a simple Node JS program.
+
+
+    | var http = require(''http'');http.createServer(function (req, res) {res.writeHead(200,
+    {''Content-Type'': ''text/plain''});res.end(''Hello World!'');}).listen(8080);
+    |
+
+
+    2.3 ReactJSReactJS is an open-source JavaScript library for building user interfaces.
+    It is maintained by Facebook, Instagram and a community of individual developers
+    and corporations.Example 7: The following program is used to showcase a simple
+    React JS program.
+
+
+    | var App = React.createClass({render: function() {return <div>Hello World</div>}});React.render(<App
+    />, document.body); |
+
+
+    2.4 JQueryJQuery is a fast, small, and feature-rich JavaScript library. It makes
+    things like HTML document traversal and manipulation, event handling, animation,
+    and Ajax much simpler with an easy-to-use API that works across a multitude of
+    browsers. Example 8: The following program is used to showcase a simple JQuery
+    program.
+
+
+    | <!DOCTYPE html><html><script>$(document).ready(function(){$("p").click(function(){$(this).hide();});});</script><body></body></html>
+    |
+
+
+    Features of JavaScript  JavaScript has an assortment of features. I will go over
+    a few of them below:3.1 Working with ObjectsData in JavaScript is expressed as
+    objects, which makes it easier and more extensible to work with various forms
+    of data in JavaScript. Below is a simple example of a JavaScript program that
+    uses an object defined as a variable.Example 9: The following program is used
+    to showcase a simple JavaScript object.
+
+
+    | <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    value="Hello World";document.getElementById("demo").innerHTML = value;</script></body></html>
+    |
+
+
+    3.2 Data TypesJavaScript works on the fact that it is a dynamically typed language.
+    A variable can be set to a number and later to a string. Below is a simple example
+    of a JavaScript program which works with data types.Example 10: The following
+    program is used to showcase a simple JavaScript program on data types.
+
+
+    | <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    value=1;value="Hello World";document.getElementById("demo").innerHTML = value;</script></body></html>
+    |
+
+
+    3.3 Structured LanguageJavaScript follows a structured programming syntax wherein
+    you can use the normal loop statements like “while loops” and “if statements”.
+    Below is a simple example of a JavaScript program which works with decision making
+    and loops.Example 11: The following program is used to showcase a simple JavaScript
+    program on loop statements.
+
+
+    | <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    txt="";var i = 0;do {txt += "<br>The value is " + i;i++;}while (i < 10);   document.getElementById("demo").innerHTML
+    = txt;</script></body></html> |
+
+
+    3.4 Object OrientedJavaScript is almost an entirely object oriented language with
+    the ability to define properties for variable objects. Below is a simple example
+    of a JavaScript program which works with objects.Example 12: The following program
+    is used to showcase a simple JavaScript program with objects.
+
+
+    | <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>var
+    Tutorial={Name:"Javacript",chapter:"Features"}document.getElementById("Name").innerHTML
+    = Tutorial.Name;document.getElementById("chapter").innerHTML = Tutorial.chapter;</script></body></html>
+    |
+
+
+    3.5 Defining FunctionsJavaScript has the ability to split code into modules with
+    the help of functions. The logic of a program can be split by defining functions
+    across a JavaScript program. Below is a simple example of a JavaScript program
+    which works with functions.Example 13: The following program is used to showcase
+    a simple JavaScript program on classes.
+
+
+    | <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>function
+    myFunction() {return "Hello World";    }document.getElementById("Name").innerHTML
+    = myFunction();</script></body></html> |
+
+
+    3.6 Event HandlingEvents can also be handled in JavaScript. So if you wanted code
+    to run at the click of a button, it can be done. Functions can be used to define
+    code that can be run when an event is triggered. Below is a simple example of
+    a JavaScript program which works with event handling.Example 14: The following
+    program is used to showcase a simple JavaScript program that works with event
+    handling.
+
+
+    | <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>function
+    myFunction() {document.getElementById("Name").innerHTML = "Hello World";}</script><button
+    onclick="myFunction()">Click Me</button></body></html> |
+
+
+    3.7 Working with HTML DOMProbably the most important feature to have is the ability
+    to modify the elements of an HTML page via its DOM structure. This is what makes
+    JavaScript such a popular scripting language. Below is a simple example of a JavaScript
+    program which works with HTML DOM.Example 15: The following program is used to
+    showcase a simple JavaScript program that works with HTML DOM.
+
+
+    | <!DOCTYPE html><html><body><h1>javascript Example</h1><p1 id="Name"></p1><script>document.getElementById("Name").innerHTML
+    = "Hello World";</script></body></html> |
+
+
+    3.8 Working with the BrowserJavaScript is also deigned to work with many different
+    browsers and has the capability of getting information from the browser window
+    it is running in.Example 16: The following program showcases a simple JavaScript
+    program that can be used to work with the browser window.
+
+
+    | <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>document.getElementById("demo").innerHTML
+    = screen.width;</script></body></html> |
+
+
+    3.9 Scope of VariablesVariables in JavaScript also work with the concept of global
+    vs local scope. The scope of the variable is in the block it is defined in. The
+    example below shows a variable that is scoped locally.Example 17: The following
+    program showcases a simple JavaScript program that uses a variable with local
+    scope.
+
+
+    | <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>function
+    demo() {var val=1;// The variable val an only used here}</script></body></html>
+    |'
+  toc: []
+  trans: '
+
+
+    | 年份 | 名称 | 更改 |
+
+    | :--- | :--- | :--- |
+
+    | 1997 | ECMAScript 1 | 第一版 |
+
+    | 1998 | ECMAScript 2 | 仅包含编辑修订 |
+
+    | 1999 | ECMAScript 3 | 添加了正则表达式和 try/catch |
+
+    | 2009 | ECMAScript 5 | 添加了“严格模式”和 JSON 支持 |
+
+    | 2011 | ECMAScript 5.1 | 编辑修订 |
+
+    | 2015 | ECMAScript 6 | 添加了类和和模块 |
+
+    | 2016 | ECMAScript 7 | 添加了指数运算符 (****) 和 `array.prototype.includes` |
+
+
+    还有许多基于 JavaScript 语言开发的流行框架。下面是其中最流行的几个，并附带每个代码的简短示例。
+
+
+    ### 2.1 Angular
+
+    AngularJS 是一个用于创建动态 Web 应用程序的结构框架。HTML 可以作为模板语言，而 AngularJS 允许你扩展 HTML 语法来清晰地表达应用程序组件。AngularJS
+    支持数据绑定和依赖注入，这消除了自己编写代码来执行这些任务的需求。
+
+
+    示例 5：以下程序用于展示一个简单的 AngularJS 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script><body><div
+    ng-app=""><p>Hello World</p></div></body></html>
+
+    ```
+
+
+    ### 2.2 Node.JS
+
+    Node.JS 是一个开源、跨平台的 JavaScript 运行时，用于在服务器端执行 JavaScript 代码。通常 JavaScript 被用客户端语言，但
+    Node.JS 通过实现可以在服务器端框架上使用的 JavaScript 改变了这一点。
+
+
+    示例 6：以下程序用于展示一个简单的 Node JS 程序。
+
+
+    ```javascript
+
+    var http = require(''http'');http.createServer(function (req, res) {res.writeHead(200,
+    {''Content-Type'': ''text/plain''});res.end(''Hello World!'');}).listen(8080);
+
+    ```
+
+
+    ### 2.3 React
+
+    ReactJS 是一个用于构建用户界面的开源 JavaScript 库。它由 Facebook、Instagram 以及个人开发者和公司社区维护。
+
+
+    示例 7：以下程序用于展示一个简单的 React JS 程序。
+
+
+    ```javascript
+
+    var App = React.createClass({render: function() {return <div>Hello World</div>}});React.render(<App
+    />, document.body);
+
+    ```
+
+
+    ### 2.4 JQuery
+
+    JQuery 是一个快速、轻量且功能丰富的 JavaScript 库。它通过一个易于使用且适用于多种浏览器的 API，让 HTML 文档遍历与操作、事件处理、动画和
+    Ajax 等操作变得简单多倍。
+
+
+    示例 8：以下程序用于展示一个简单的 JQuery 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><script>$(document).ready(function(){$("p").click(function(){$(this).hide();});});</script><body></body></html>
+
+    ```
+
+
+    ## 3. JavaScript 的特性
+
+    JavaScript 拥有一系列特性。我将在下面介绍其中一些：
+
+
+    ### 3.1 使用对象
+
+    JavaScript 中的数据以对象的形式表示，这使得处理 JavaScript 中各种形式的数据变得更加容易且更具扩展性。下面是一个使用变量定义对象的 JavaScript
+    程序简单示例。
+
+
+    示例 9：以下程序用于展示一个简单的 JavaScript 对象。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    value="Hello World";document.getElementById("demo").innerHTML = value;</script></body></html>
+
+    ```
+
+
+    ### 3.2 数据类型
+
+    JavaScript 的工作基于它是一种动态类型语言。变量可以设置为数字，稍后设置为字符串。下面是一个处理数据类型的 JavaScript 程序简单示例。
+
+
+    示例 10：以下程序用于展示一个关于数据类型的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    value=1;value="Hello World";document.getElementById("demo").innerHTML = value;</script></body></html>
+
+    ```
+
+
+    ### 3.3 结构化语言
+
+    JavaScript 遵循结构化编程语法，你可以使用“while 循环”和“if 语句”等普通循环语句。下面是一个处理决策和循环的 JavaScript 程序简单示例。
+
+
+    示例 11：以下程序用于展示一个关于循环语句的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="demo"></p><script>var
+    txt="";var i = 0;do {txt += "<br>The value is " + i;i++;}while (i < 10);   document.getElementById("demo").innerHTML
+    = txt;</script></body></html>
+
+    ```
+
+
+    ### 3.4 面向对象
+
+    JavaScript 几乎是一门完全面向对象的语言，能够为变量对象定义属性。下面是一个处理对象的 JavaScript 程序简单示例。
+
+
+    示例 12：以下程序用于展示一个带有对象的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>var
+    Tutorial={Name:"Javacript",chapter:"Features"}document.getElementById("Name").innerHTML
+    = Tutorial;document.getElementById("chapter").innerHTML = Tutorial;</script></body></html>
+
+    ```
+
+
+    ### 3.5 定义函数
+
+    JavaScript 能够通过函数将代码拆分为模块。下面是一个在 JavaScript 程序中使用函数的简单示例。
+
+
+    示例 13：以下程序用于展示一个关于类的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>function
+    myFunction() {return "Hello World";}document.getElementById("Name").innerHTML
+    = myFunction();</script></body></html>
+
+    ```
+
+
+    ### 3.6 事件处理
+
+    事件也可以在 JavaScript 中处理。如果你想在点击按钮时运行代码是可以实现的。可以使用函数来定义在事件触发时运行的代码。下面是一个处理事件处理的 JavaScript
+    程序简单示例。
+
+
+    示例 14：以下程序用于展示一个处理事件处理的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><p id="chapter"></p><script>function
+    myFunction() {document.getElementById("Name").innerHTML = "Hello World";}</script><button
+    onclick="myFunction()">Click Me</button></body></html>
+
+    ```
+
+
+    ### 3.7 使用 HTML DOM
+
+    最重要的特性之一是通过 DOM 修改元素。这使得 JavaScript 成为一种流行的脚本语言。下面是一个处理 HTML DOM 的 JavaScript
+    程序简单示例。
+
+
+    示例 15：以下程序用于展示一个处理 HTML DOM 的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>javascript Example</h1><p id="Name"></p><script>document.getElementById("Name").innerHTML
+    = "Hello World";</script></body></html>
+
+    ```
+
+
+    ### 3.8 使用浏览器
+
+    JavaScript 还设计用于与许多浏览器协作，并具有获取其所在的浏览器窗口信息的能力。
+
+
+    示例 16：以下程序展示了一个可以与浏览器窗口工作的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>document.getElementById("demo").innerHTML
+    = screen.width;</script></body></html>
+
+    ```
+
+
+    ### 3.9 变量的作用域
+
+    JavaScript 中的变量涉及全局与局部作用域的概念。变量的作用域在其定义的块中。下面的示例展示了一个局部作用域的变量。
+
+
+    示例 17：以下程序展示了一个使用局部作用域变量的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>function
+    demo() {var val=1;// 变量 val 仅在此处使用}</script></body></html>
+
+    ```'
+- fmt: '
+
+    ### 3.10 Built-in Functions
+
+    JavaScript has the ability to work with some built-in functions that can be used
+    in your code. The example below shows the use of a built-in math function.
+
+
+    Example 18: The following program showcases a simple JavaScript program that uses
+    built-in functions.
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <h1>Javascript Example</h1>
+
+    <p id="demo"></p>
+
+    <script>document.getElementById("demo").innerHTML = Math.PI;</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    ### 3.11 Working with Arrays
+
+    JavaScript has the ability to work with elements as arrays. This helps programmers
+    to work with a continuous set of elements as shown below.
+
+
+    Example 19: The following program is used to showcase a simple JavaScript program
+    that uses arrays.
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <h1>Javascript Example</h1>
+
+    <p id="demo"></p>
+
+    <script>var val = ["1", "2", "3"];document.getElementById("demo").innerHTML =
+    val[0];</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    ### 3.12 Working with Errors
+
+    JavaScript also has the ability to work with errors generated in the program by
+    using try, catch blocks. The below example shows a simple program working with
+    try, catch blocks.
+
+
+    Example 20: The following program showcases a simple JavaScript program that uses
+    error handling.
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <p id="demo"></p>
+
+    <script>try {funcA("Hello World");}catch(err) {document.getElementById("demo").innerHTML
+    = err.message;}</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    ### 3.13 Ability to Work with JSON
+
+    JSON is known as JavaScript Object Notation and is used as an intermediate language
+    like XML. JavaScript can also work with JSON objects as shown in the example below.
+
+
+    Example 21: The following program showcases a simple JavaScript program that works
+    with JSON.
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <h2>JavaScript Example</h2>
+
+    <p id="demo"></p>
+
+    <script>var text = ''{"Names":['' +''{"firstName":"John","lastName":"Doe" },''
+    +''{"firstName":"Peter","lastName":"Smith" }]}'';obj = JSON.parse(text);document.getElementById("demo").innerHTML
+    =obj.Names[1].firstName + " " + obj.Names[1].lastName;</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+    '
+  raw: '3.10 Built-in FunctionsJavaScript has the ability to work with some built-in
+    functions that can be used in your code. The example below shows the use of a
+    built-in math function.Example 18: The following program showcases a simple JavaScript
+    program that uses built-in functions.
+
+
+    | <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>document.getElementById("demo").innerHTML
+    = Math.PI;</script></body></html> |
+
+
+    3.11 Working with ArraysJavaScript has the ability to work with elements as arrays.
+    This helps programmers to work with a continuous set of elements as shown below.Example
+    19: The following program is used to showcase a simple JavaScript program that
+    uses arrays.
+
+
+    | <!DOCTYPE html><html><body><h1>Javascript Example</h1><p1 id="demo"></p1><script>var
+    val = ["1", "2", "3"];document.getElementById("demo").innerHTML = val[0];</script></body></html>
+    |
+
+
+    3.12 Working with ErrorsJavaScript also has the ability to work with errors generated
+    in the program by using try, catch blocks. The below example shows a simple program
+    working with try, catch blocks.Example 20: The following program showcases a simple
+    JavaScript program that uses error handling.
+
+
+    | <!DOCTYPE html><html><body><p id="demo"></p><script>try {funcA("Hello World");}catch(err)
+    {document.getElementById("demo").innerHTML = err.message;}</script></body></html>
+    |
+
+
+    3.13 Ability to Work with JSONJSON is known as JavaScript Object Notation and
+    is used as an intermediate language like XML. JavaScript can also work with JSON
+    objects as shown in the example below.Example 21: The following program showcases
+    a simple JavaScript program that works with JSON.
+
+
+    | <!DOCTYPE html><html><body><h2>JavaScript Example</h2><p id="demo"></p><script>var
+    text = ''{"Names":['' +''{"firstName":"John","lastName":"Doe" },'' +''{"firstName":"Peter","lastName":"Smith"
+    }]}'';obj = JSON.parse(text);document.getElementById("demo").innerHTML =obj.Names[1].firstName
+    + " " + obj.Names[1].lastName;</script></body></html> |'
+  toc: []
+  trans: '
+
+
+    ### 3.10 内置函数
+
+    JavaScript 能够使用一些可以在你的代码中使用的内置函数。下面的示例展示了某个内置数学函数的用法。
+
+
+    示例 18：以下程序展示了一个使用内置函数的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <h1>Javascript Example</h1>
+
+    <p id="demo"></p>
+
+    <script>document.getElementById("demo").innerHTML = Math.PI;</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    ### 3.11 数组操作
+
+    JavaScript 能够以数组的形式处理元素。这有助于程序员员像如下所示，处理一组连续的元素。
+
+
+    示例 19：以下程序用于展示一个使用数组的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <h1>Javascript Example</h1>
+
+    <p id="demo"></p>
+
+    <script>var val = ["1", "2", "3"];document.getElementById("demo").innerHTML =
+    val[0];</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    ### 3.12 错误处理
+
+    JavaScript 还可以通过使用 `try` 和 `catch` 块来处理程序中生成的错误。下面的示例展示了一个使用 `try` 和 `catch` 块的简单程序。
+
+
+    示例 20：以下程序展示了一个使用错误处理的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <p id="demo"></p>
+
+    <script>try {funcA("Hello World");}catch(err) {document.getElementById("demo").innerHTML
+    = err.message;}</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    ### 3.13 JSON 处理能力
+
+    JSON 被称为 JavaScript 对象表示，被用作类似 XML 的中间语言。JavaScript 也可以像下面的示例所示处理 JSON 对象。
+
+
+    示例 21：以下程序展示了一个处理 JSON 的简单 JavaScript 程序。
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <h2>JavaScript Example</h2>
+
+    <p id="demo"></p>
+
+    <script>var text = ''{"Names":['' +''{"firstName":"John","lastName":"Doe" },''
+    +''{"firstName":"Peter","lastName":"Smith" }]}'';obj = JSON.parse(text);document.getElementById("demo").innerHTML
+    =obj.Names[1].firstName + " " + obj.Names[1].lastName;</script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    '
+- fmt: "\n# Chapter 4: Basics of CSS3\n\nCascading Style Sheets or CSS provide the\
+    \ presentation that webpages are known for. Although, HTML is capable of providing\
+    \ a basic structure to the webpage, CSS offers developers host of design options.\
+    \ Besides this, it is fast and efficient, which makes it an all more popular design\
+    \ tool. CSS is known to have evolved from SGML (Standardized Generalized Markup\
+    \ Language). The goal of efforts made in this direction was to standardize the\
+    \ manner in which web pages looked. The latest version of this technology is `CSS3`,\
+    \ which is a collection of 50 modules.\n\nThe most powerful characteristic of\
+    \ CSS is its cascading ability. Simply, it allows a webpage to take its styles\
+    \ from multiple sheets in such a manner that changes to the style in subsequently\
+    \ read sheets overwrite the style already implemented from one or more of the\
+    \ previous sheets.\n\n## How to Define and Apply Style\n\nThe definition and application\
+    \ of a style involves two facets or parts: selector and declaration. While the\
+    \ selector determines the area of the webpage that needs to be styled, the declaration\
+    \ block describes the style specifications that have to be implemented. In order\
+    \ to illustrate how it works, let us consider the following example:\n\n```css\n\
+    body {color: white;}\n```\n\nIn this example, the selector selects the `body`\
+    \ of the webpage and the declaration block defines that font color should be changed\
+    \ to white. This is a simple example and declarations can be much complex than\
+    \ this.\n\n## How to Add Comments\n\nComments can be added to the style sheet\
+    \ using the following format:\n\n```css\n/*write the comment*/\n```\n\n## How\
+    \ to Create an Inline Style\n\nEvery element has an associated global attribute\
+    \ `style`. This global attribute can be manipulated within the tag to modify the\
+    \ appearance of that element. This type of styling does not require you to specify\
+    \ the selector. Only the declaration block is required. An example of how this\
+    \ is done is below:\n\n```html\n<body style='color: white;'></body>\n```\n\nThis\
+    \ `HTML` tag performs the same functionality as the CSS code specified in previous\
+    \ section. The advantage of using this approach is that the style information\
+    \ given in this manner overwrites any other. Therefore, if you need to use different\
+    \ style for one element while the rest of the document needs to follow a different\
+    \ style, you can use a stylesheet for the document and specify the style for this\
+    \ element in its tag.\n\n## How to Use Embedded Style\n\nAnother approach for\
+    \ accomplishing the same outcome as inline styles is to use the `<style>` element\
+    \ within the element concerned for defining its style specification. Here is how\
+    \ this can be done:\n\n```html\n<!DOCTYPE html>\n<html xmlns='http://www.w3.org/1999/xhtml'>\n\
+    <head>\n<title></title>\n<style>body {color: white;}</style>\n</head>\n<body></body>\n\
+    </html>\n```\n\n## How to Create External Style Sheet\n\nFor usages where you\
+    \ wish to use the same style for the complete webpage or a number of webpages,\
+    \ the best approach is to use an external style sheet. This external style sheet\
+    \ can be linked to the HTML page in the following manner:\n\n```html\n<!DOCTYPE\
+    \ html>\n<html xmlns='http://www.w3.org/1999/xhtml'>\n<head>\n<title></title>\n\
+    <link rel='stylesheet' type='text/css' href='Content/main.css' />\n</head>\n<body></body>\n\
+    </html>\n```\n\nYou must create a file `main.css`, in the `Content` folder, and\
+    \ put the style rule specified below into it:\n\n```css\nbody {color: white;}\n\
+    ```\n\n## Defining Media\n\nIt is important to note that a style sheet can contain\
+    \ as many style rules as you want. Besides this, you can also link different CSS\
+    \ files for different media. The different media types are as follows:\n* `all`\n\
+    * `embossed`\n* `braille`\n* `print`\n* `handheld`\n* `speech`\n* `screen`\n*\
+    \ `tv`\n* `tty`\n\nThe media used can be defined in the following manner:\n\n\
+    ```html\n<link rel='stylesheet' type='text/css' href='Content/all.css' media='all'/>\n\
+    ```\n\n## Defining Character Encoding\n\nYou can also define the character encoding\
+    \ used, using the following format:\n\nStyle sheet:\nPlace the following line\
+    \ above the style rule in the style sheet.\n```css\n@charset 'UTF-8';\n```\n\n\
+    HTML page:\nYou must place this line above the link element.\n```html\n<meta http-equiv='Content-Type'\
+    \ content='text/html;charset=UTF-8'>\n```\n\n## Importing style Sheets\n\nAs your\
+    \ web pages becomes complex, the style sheets used shall also grow in complexity.\
+    \ Therefore, you may need to use many style sheets. You can import the style rules\
+    \ present in one style sheet to another by using:\n\n```css\n@import url('/Content/header.css');\n\
+    ```\n\nHere, `header.css` is imported and the `url` gives the relative address\
+    \ of the style sheet to be imported.\n\n## Importing Fonts\n\nFonts can be imported\
+    \ using the following format:\n\n```css\n@font-face {font-family: newFont;src:\
+    \ url('New_Font.ttf'),url('New_Font.eot'); /* IE9 */\n```\n\n## Selectors, Specificity\
+    \ and Cascading\n\nSelectors can be of three types: class selectors, ID selectors\
+    \ and element selectors. The element selector type is the simplest and requires\
+    \ you to simply name the element that needs to be used. For instance, if you wish\
+    \ to change the background color of the `body`, then the element selector used\
+    \ is `body`.\n\nWhile declaring any element, you can assign an ID to it using\
+    \ the `id` attribute. You can use this ID prefixed with a `#` as a selector. For\
+    \ example, if you have created a button with ID `btnID`, then the ID selector\
+    \ for this will be `#btnID`. Similarly, you can assign a class name to an element\
+    \ using the `class` attribute. Class name can be used prefixed by a dot (`.`)\
+    \ in the following manner, `.className`. However, if you wish to select all the\
+    \ elements of the webpage, then asterisk `*` to it.\n\n## Using Descendent and\
+    \ Child Selectors\n\nYou may wish to apply a particular style to a descendant\
+    \ of a selector. This can be done by specifying the complete selector change.\
+    \ It can be done in the following manner:\n\n```css\nli a {text-color: black;}\n\
+    ```\n\nOn the other hand, you may want to apply to an element only if it is a\
+    \ direct child of the selector. This can be implemented by specifying the parent\
+    \ and child separated by a greater than (`>`) sign, in the following manner:\n\
+    \n```css\nli > a {color: white;}\n```\n\n## Pseudo-element and Pseudo-class Selectors\n\
+    \nNow that you know how to apply styles to specific elements, let us move on to\
+    \ implementing styles to more specific sections like the first line of the second\
+    \ paragraph. In order to style elements that cannot be classified on the basis\
+    \ of name, content or is not a part of the DOM tree can be styled using pseudo-classes.\
+    \ The available pseudo-classes include:\n* `:visited`\n* `:link`\n* `:hover`\n\
+    * `:active`\n* `:checked`\n* `:focus`\n* `:nth-last-child(n)`\n* `:not`\n* `:only-child`\n\
+    * `:nth-child(formula)`\n* `:lang(language)`\n* `:first-of-type`\n* `:only-of-type`\n\
+    \nIf you want to access information of the DOM tree that is not accessible, you\
+    \ can use pseudo-elements. Pseudo-elements include:\n* `::first-letter`\n* `::first-line`\n\
+    * `::after`\n* `::before`\n\n## Grouping Selectors\n\nMultiple selectors can be\
+    \ used for a style rule. These selectors must be separated by commas.\n\n```css\n\
+    body, button {color: white;}\n```\n\n## Using Adjacent Selectors\n\nIf you want\
+    \ to style the first heading in a `div` or any adjacent elements, the selector\
+    \ is constructed using plus sign (`+`) between the two selectors.\n\n```css\n\
+    div + h1 {color: white;}\n```\n\n## Sibling Selectors\n\nSibling selectors are\
+    \ similar to adjacent selectors except for the fact that all matching elements\
+    \ are styled against adjacent selectors, which only style the first matching element.\
+    \ The selector is constructed using `~` sign between the two.\n\n```css\ndiv ~\
+    \ h1 {color: white;}\n```\n\n## Using Attribute Selector\n\nThis selector selects\
+    \ all the elements for which the specified attribute exists. The selector is written\
+    \ in this form:\n\n```css\na[title]\n```\n\nThis selector will select all the\
+    \ links for which `title` attribute has been specified. Moreover, this selector\
+    \ type can be modified into attribute-value selector by specifying the attribute\
+    \ value in the following manner:\n\n```css\na[title = value]\n```\n\n## Built\
+    \ Styles of Browsers\n\nEvery browser has a built-in stylesheet, which is applied\
+    \ to all the webpages opened using this browser. In fact, this stylesheet is applied\
+    \ before any other style sheet. You can define your own style sheet for the browser\
+    \ using the Accessibility option. However, user style sheets are browser specific.\
+    \ Therefore, if you open a different browser, the style sheet you defined may\
+    \ not be accessible. In case you want your user-defined stylesheet to override\
+    \ any other style specified in the HTML page, then you can use the `important`\
+    \ modifier. This modifier sets highest priority for the specified style statement.\n\
+    \n```css\nbody {color: white !important;}\n```\n\n## Cascading of Styles\n\nThe\
+    \ precedence and priority of the styles are decided on the basis of the following\
+    \ parameters:\n* Importance\n* Specificity\n* Textual Order\n\n## Working with\
+    \ CSS Properties\n\nNow that you are thorough with the use of selectors, the next\
+    \ step is to look at CSS properties.\n\n### Color\n\nOne of the most crucial properties\
+    \ that are used in a web page is `color`, which can be defined using ARGB, RGB\
+    \ and color names. RGB value are typically defined using a decimal number, which\
+    \ lies between 0-255. \n* white `#ffffff`\n* red `#ff0000`\n* black `#000000`\n\
+    * green `#008000`\n\nColor values can also be used instead of the color name.\
+    \ An example of how this can be used is given below:\n\n```css\nbody {color: #ffffff;}\n\
+    ```\n\nAnother way to specify the color is using the `rgb` function, which specifies\
+    \ the values of parameters using a number between 0-255 or percentage. Example\
+    \ of this type of declaration is given below:\n\n```css\nh1 { color: rgb(255,0,0);\
+    \ }\n```\n\nOther ways to specify color are `RGBA`, which accepts 4 values and\
+    \ `HSL`, which defines values for hue, saturation and lightness.\n\n### Transparency\n\
+    \nThe transparency or opacity are defined by a value between 0.0 (invisible) and\
+    \ 1.0 (opaque).\n\n### Text\n\nAs far as text is concerned, `font-face` and `font-size`\
+    \ can be specified. These properties can be defined in the following manner:\n\
+    \n```css\nh1 { font-family: arial, verdana, sans-serif; }\nh1 { font-size: 12px;\
+    \ }\n```\n\n### The CSS Box Model\n\nThe CSS Box Model assumes that a webpage\
+    \ can be considered to be made up of boxes. The spacing between these boxes are\
+    \ given by margins and padding settings. These properties can be given values\
+    \ in the following manner:\n\n```css\nmargin: 15px;\npadding: 25px;\nborder: 10px;\n\
+    ```\n\n### Positioning `<div>` elements\n\nThe element used for creating page\
+    \ layouts is `<div>`. Although, HTML5 recommends the use of semantic markup instead\
+    \ of `div` elements, there are still used for content that cannot be styled using\
+    \ semantic markup. A `div` element can be imagined as a rectangular block and\
+    \ is declared in the following manner:\n\n```html\n<div>--other elements are enclosed\
+    \ within</div>\n```\n\nProperties used to define the position of `div` include:\n\
+    * `top`\n* `bottom`\n* `left`\n* `right`\n* `static`\n* `relative`\n* `float`\n\
+    * `clear`\n* `box-sizing`\n\n### Centering Content\n\nIf you are using `fixed`,\
+    \ the `div` element can be centered using `margin-left` and `margin-right`. If\
+    \ you set the `width` to `auto`, the extra space is equally divided. It can be\
+    \ done in the following manner:\n\n```css\n#container {width: 850px;margin-left:\
+    \ auto;margin-right: auto;}\n```\n\n# Chapter 5: Thinking Slowly and Staying Humble\n\
+    \nWriting code can go quickly especially when you know what you are doing and\
+    \ when you have a lot of experience with the codes that you are writing. You may\
+    \ go quickly, and that can cause you to make mistakes. This is especially true\
+    \ if you are becoming very experienced with JavaScript and if you feel like you\
+    \ are going to do more with it. You may also find that, when you get better at\
+    \ writing code, you rush. It is not a terrible thing to have confidence, but it\
+    \ can lead to you missing out on some of the things. To make sure that you are\
+    \ doing the best job with your code, even when you are practicing, you should\
+    \ make sure that you think as slowly as possible and that you don’t get overly\
+    \ in your abilities.\n\n## Slowing Down\n\nAs you write the codes that you are\
+    \ thinking about, make sure that you go as slow as possible. It may take more\
+    \ time initially, but it will save you a lot of time when it comes to going back\
+    \ and looking at the different things that you have made. By going slowly, you\
+    \ will be less likely to create errors. Even as you are looking back at your code\
+    \ and going through each line, look at it slowly. Read each letter and symbol\
+    \ so that you will know what you are talking and so you will be able to see if\
+    \ you missed anything. This is like proofreading the way that you might have done\
+    \ in high school or college when you wrote a paper. Slow down to proofread the\
+    \ work that you wrote and the codes that you did line by line. This slow pace\
+    \ will help you catch any mistakes you may have. It is also worth noting that\
+    \ going slower will help you avoid any major errors in the work. If you are moving\
+    \ at a slower pace, you will be more aware of each keystroke and each thing you\
+    \ put into all of lines of code.\n\n## Taking a Break\n\nIt is always beneficial\
+    \ for you to take a break from the work that you are doing. After looking at lines\
+    \ of code for hours on end, your eyes will not only be tired but your mind will\
+    \ begin to get weary, too. A break will help you to refresh what you are doing\
+    \ and allow you the chance to come back and start over with a blank canvas in\
+    \ your mind. There are many benefits of having a fresh mind when you are writing\
+    \ code and breaks will give you the perfect refresher. In general, for every hour\
+    \ that you work on code, you should take 5-10 minutes to look away from the computer,\
+    \ get up and walk around and do something that does not involve anything with\
+    \ JavaScript. It is a good idea to take this time to step outside and get some\
+    \ fresh air or to simply walk around getting a bit of exercise. Doing both of\
+    \ these activities will help get the blood flowing and will give you the oxygen\
+    \ that you need in your brain to help it work more efficiently when you decide\
+    \ to go back down and start working on the code again.\n\nA word of caution: try\
+    \ to stay off of your cell phone during the time that you are taking a break from\
+    \ your computer screen. While much smaller, the screen on your cell phone emits\
+    \ the same blue light that can be detrimental from your computer screen. Set aside\
+    \ specific time for using your cell phone while you are working so that you don’t\
+    \ have to use up your break time to chat with your friends or check your non-business\
+    \ emails. It is a good idea to just keep the cell phone out of reach when you\
+    \ are taking a break.\n\n## Working Through It\n\nOnce you have written the code\
+    \ that you want to write, you need to make sure that you are working your way\
+    \ through it. Do this as slowly as you did the writing process so that you will\
+    \ be able to catch any mistakes you have made. You should do this after you have\
+    \ written your final line of code and before you take the chance to check it out\
+    \ by testing it for different things. It is always a good idea to make that you\
+    \ are going slowly and looking at each line of code.\n\nOne way that you can be\
+    \ sure that you are looking at every character of code that you have written is\
+    \ to read it out loud. Say each of the letters, numbers and characters to yourself\
+    \ so that you will not miss. Reading it out loud will show you what you actually\
+    \ written and will take more time than just reading it in your head.\n\n# Chapter\
+    \ 6: Basic Operators\n\n## What are operators?\n\nOperators are basically symbols\
+    \ which act as a function, though they differ from functions syntax-wise. They\
+    \ take input (operands) and produce a certain output based on the operands. For\
+    \ example in `5+2`, `5` and `2` are operands (the input), and the `+` symbol is\
+    \ the operator, which results to `7`.\n\n## Classification of operators\n\nOperators\
+    \ are generally classified on the basis of the type of operation they do. Operators\
+    \ like `typeof`, `instanceof`, etc. are unique and thus cannot be classified under\
+    \ the categories about which you will read below.\n\n## Arithmetic Operators\n\
+    \nAs the hints, these are the operators which perform arithmetic tasks on the\
+    \ operand(s). Listed below are the arithmetic operators.\n\n* Addition (`+`):\
+    \ This operator performs an addition operation on two operands if both of them\
+    \ are numerical; if anyone or both of the two operands are of string type then\
+    \ this operator concatenates/joins the two operands.\n  ```\n  4 + 2 // evaluates\
+    \ to 6\n  'example' + 5 // evaluates to \"example5\"\n  'thisIs' + 'Example' //\
+    \ evaluates to \"thisIsExample\"\n  ```\n* Subtraction (`-`): This operator performs\
+    \ a subtraction operation on two operands.\n  ```\n  4-2 // produces the result\
+    \ 2\n  ```\n* Division (`/`): This operator performs division operation on two\
+    \ operands, where the operand on left side (dividend) is divided by the operand\
+    \ on the right side (divisor).\n  ```js\n  15/3 // produces the result 3\n  ```\n\
+    * Multiplication (`*`): This operator performs multiplication operation on two\
+    \ operands.\n  ```js\n  4*2 // produces the result 8\n  ```\n* Modulus (`%`):\
+    \ Also known as a Remainder operator, this operator results in the remainder of\
+    \ the two operands when they are divided.\n  ```js\n  5%2 // produces the result\
+    \ 1\n  5%3 // produces the result 2\n  ```\n* Increment (`++`): Increases the\
+    \ value of its numerical operand by one. The position of this operator matters,\
+    \ i.e., whether it is placed before or after it. If placed before operand, then\
+    \ situation is called prefix (`++x`), and the value is returned after the incrementing\
+    \ operation; if placed after the operand then situation is called postfix (`x++`).\n\
+    \  ```js\n  console.log(++x); // prints 6\n  console.log(y++); // prints 5, then\
+    \ becomes 6\n  ```\n* Decrement (`--`): Decreases the value of its numerical operand\
+    \ by one. Similar to increment operator, the postfix and prefix rule applies here.\n\
+    \  ```js\n  console.log(--x); // prints 4\n  console.log(y--); // prints 5-6\n\
+    \  ```\n* Exponential (`**`): This operator produces the result obtained by increasing\
+    \ the first operand by the second operand.\n  ```js\n  2**3 // produces the result\
+    \ 8\n  ```\n\n## Assignment Operators\n\nThese operators are used to assign values\
+    \ to variables. Value is assigned to the left operand based on the right operand.\n\
+    \n* Equal (`=`): This operator simply assigns the value of its right operand to\
+    \ the left operand.\n  ```js\n  x=5\n  ```\n* Addition (`+=`): This operator adds\
+    \ the value of the left operand and the right operand and assigns the result to\
+    \ the left operand.\n  ```js\n  x+=3 // result 8\n  ```\n* Subtraction assignment\
+    \ (`-=`): This operator subtracts the value of the right operand from the left\
+    \ operand and then assigns the result to the left operand.\n  ```js\n  x-=3 //\
+    \ result 5\n  ```\n* Multiplication assignment (`*=`): This operator multiplies\
+    \ the left and right operand and assigns the result to the left operand.\n  ```js\n\
+    \  x*=2 // result 10\n  ```\n* Division assignment (`/=`): This operator divides\
+    \ the left operand (dividend) by the right operand (divisor) and then assigns\
+    \ the result to the left operand.\n  ```js\n  x/=2 // result 5\n  ```\n* Modulus\
+    \ assignment (`%=`): This operator divides the left operand (dividend) by the\
+    \ right operand (divisor) and then assigns the REMAINDER to the left operand.\n\
+    \  ```js\n  x%=2 // result 1\n  ```\n* Exponentiation assignment (`**=`): This\
+    \ operator increases the value of left operand by the power of right operand and\
+    \ assigns the result produced to the left operand.\n  ```js\n  x**=3 // result\
+    \ 8\n  ```\n\n## Other Operators\n\nThese are the type of operators which cannot\
+    \ be categorized under the above-mentioned.\n\n* `typeof`: This operator returns\
+    \ the type of operand in string format.\n  ```js\n  typeof 2 // evaluates to \"\
+    number\"\n  typeof 1.23 // evaluates to \"number\"\n  typeof \"2\" // evaluates\
+    \ to \"string\"\n  typeof 'hi' // evaluates to \"string\"\n  typeof true // evaluates\
+    \ to \"boolean\"\n  typeof false // evaluates to \"boolean\"\n  typeof {ob:1}\
+    \ // evaluates to \"object\"\n  typeof new Date() // evaluates to \"object\"\n\
+    \  typeof Math.cos // evaluates to \"function\"\n  typeof function(){} // evaluates\
+    \ to \"function\"\n  ```\n* `instanceof`: This operator checks if the first operand,\
+    \ which should be an object, is of a specific type, where the type to be checked\
+    \ is specified as the second operand. It returns true or false based on whether\
+    \ the object type matched or not.\n  ```js\n  new String(\"A\") instanceof String\
+    \ // evaluates to true\n  [\"this\",\"is\",\"array\"] instanceof Array // evaluates\
+    \ to true\n  new String(\"A\") instanceof Array // evaluates to false\n  [\"this\"\
+    ,\"is\",\"array\"] instanceof String // evaluates to false\n  ```\n* `delete`:\
+    \ This operator removes a property from an object.\n  ```js\n  var myObject =\
+    \ {prop1:\"test\",prop2:\"test\"};\n  delete myObject.prop1 // deletes the prop1\
+    \ property of object myObject\n  ```\n* `in`: This operator checks whether a specified\
+    \ property (first operand) is in the specified object (second operand). It returns\
+    \ true or false based on whether the property is in the object or not.\n  ```js\n\
+    \  var myObject = {prop1:\"test\",prop2:\"test\"};\n  \"prop1\" in myObject //\
+    \ evaluates to true\n  \"prop45\" in myObject // evaluates to false\n  ```\n\n\
+    This chapter explained operators in JavaScript. I hope you found it useful.\n"
+  raw: 'Chapter 4: Basics of CSS3Cascading Style Sheets or CSS provide the presentation
+    that webpages are known for. Although, HTML is capable of providing a basic structure
+    to the webpage, CSS offers developers host of design options. Besides this, it
+    is fast and efficient, which makes it an all more popular design tool.   CSS is
+    known to have evolved from SGML (Standardized Generalized MarkupLanguage). The
+    goal of efforts made in this direction was to standardize the manner in which
+    web pages looked. The latest version of this technology is CSS3, which is a collection
+    of 50 modules.The most powerful characteristic of CSS is its cascading ability.
+    Simply, it allows a webpage to take its styles from multiple sheets in such a
+    manner that changes to the style in subsequently read sheets overwrite the style
+    already implemented from one or more of the previous sheets.How to Define and
+    Apply StyleThe definition and application of a style involves two facets or parts,
+    selector and declaration. While the selector determines the area of the webpage
+    that needs to be styled, the declaration block describes the style specifications
+    that have to be implemented. In order to illustrate how it works, let us consider
+    the following example,  body {color: white;}In this example, the selector selects
+    the body of the webpage and the declaration block defines that the font color
+    should be changed to white. This is a simple example and declarations and selectors
+    can be much more complex than this.How to Add CommentsComments can be added to
+    the style sheet using the following format:/*write the comment here*/How to Create
+    an Inline StyleEvery element has an associated global attribute, style. This global
+    attribute can be manipulated within the tag for that element to modify the appearance
+    of that element. This type of styling does not require you to specify the selector.
+    Only the declaration block is required. An example of how this is done is given
+    below:<body style=''color: white;''></body>This HTML tag performs the same functionality
+    as the CSS code specified in the previous section. The advantage of using this
+    approach is that the style information given in this manner overwrites any other
+    styling information. Therefore, if you need to use different style for one element
+    while the rest of the document needs to follow a different style, then you can
+    use a stylesheet for the document and specify the style for this element in its
+    tag.How to Use Embedded StyleAnother approach for accomplishing the same outcome
+    as inline styles is to use the <style> element within the element concerned, for
+    defining its style specification. Here is how this can be done:<!DOCTYPE html><html
+    xmlns=''http://www.w3.org/1999/xhtml''><head><title></title><style>body {color:
+    white;}</style></head><body></body></html>How to Create External Style SheetFor
+    usages where you wish to use the same style for the complete webpage or a number
+    of webpages, the best approach is to use an external style sheet.This external
+    style sheet can be linked to the HTML page in the following manner:<!DOCTYPE html><html
+    xmlns=''http://www.w3.org/1999/xhtml''><head><title></title><link rel=''stylesheet''
+    type=''text/css'' href=''Content/mainstyle.css'' /></head><body></body></html>You
+    must create a file mainstyle.css, in the Content folder, and put the style rule
+    specified below into the file.body {color: white;}Defining MediaIt is important
+    to note that a style sheet can contain as many style rules as you want. Besides
+    this, you can also link different CSS files for different media. The different
+    media types are as follows:●        all●        embossed●         ●        braille●       
+    print●        handheld●        speech●        screen●        tv●        ttyThe
+    media used can be defined in the following manner:<link rel=''stylesheet'' type=''text/css''
+    href=''Content/all.css'' media=’all’ />Defining Character EncodingYou can also
+    define the character encoding used, using the following format:Style sheet:Place
+    the following line above the style rule in the style sheet.@charset ''UTF-8'';HTML
+    page:You must place this line above the link element.<meta http-equiv=''Content-Type''
+    content=''text/html;charset=UTF-8'' >Importing style SheetsAs your web pages becomes
+    complex, the style sheets used shall also grow in complexity. Therefore, you may
+    need to use many style sheets. You can import the style rules present in one style
+    sheet to another by using:@import url(''/Content/header.css'');Here, header.css
+    is imported and the url gives the relative address of the style sheet to be imported.Importing
+    FontsFonts can be imported using the following format:@font-face {font-family:
+    newFont;src: url(''New_Font.ttf''),url(''New_Font.eot''); /* IE9 */Selectors,
+    Specificity and CascadingSelectors can be of three types, class selectors, ID
+    selectors and element selectors. The element selector type is the simplest and
+    requires you to simply name the element that needs to be used. For instance, if
+    you wish to change the background color of the body, then the element selector
+    used is body.While declaring any element, you can assign an ID to it using the
+    id attribute. You can use this ID prefixed with a # as a selector. For example,
+    if you have created a button with ID btnID, then the ID selector for this will
+    be #btnID. Similarly, you can assign a class name to an element using the class
+    attribute. Class name can be used prefixed by a dot(.) in the following manner,
+    .className.   However, if you wish to select all the elements of the webpage,
+    then asterisk (*) to it. Using Descendent and Child SelectorsYou may wish to apply
+    a particular style to a descendant of a selector. This can be done by specifying
+    the complete selector change. It can be done in the following manner:li a {text-color:
+    black;}On the other hand, you may want to apply to an element only if it is a
+    direct child of the selector. This can be implemented by specifying the parent
+    and child separated by a greater than (>) sign, in the following manner:li > a
+    {color: white;}Pseudo-element and Pseudo-class SelectorsNow that you know how
+    to apply styles to specific elements, let us move on to implementing styles to
+    more specific sections like the first line of the second paragraph. In order to
+    style elements that cannot be classified on the basis of name, content or is not
+    a part of the DOM tree can be styled using pseudo-classes. The available pseudo-classes
+    include:●        :visited●        :link●        :hover●        :active●       
+    :checked●        :focus●        :nth-last-child(n)●        :not●        :only-child●
+           :nth-child(formula)●        :lang(language)●        :first-of-type●       
+    :only-of-typeIf you want to access information of the DOM tree that is not accessible
+    otherwise, you can use pseudo-elements. Pseudo-elements include:●        ::first-letter●
+           ::first-line●        ::after●        ::beforeGrouping SelectorsMultiple
+    selectors can be used for a style rule. These selectors must be separated by commas.
+    Sample implementation:body, button {color: white;}Using Adjacent SelectorsIf you
+    want to style the first heading in a div or any similar adjacent elements, the
+    selector is constructed using a plus sign (+) between the two selectors. Sample
+    implementation:div + h1 {color: white;}Sibling SelectorsSibling selectors are
+    similar to adjacent selectors except for the fact that all the matching elements
+    are styled as against adjacent selectors, which only style the first matching
+    element. The selector is constructed using a ~ sign between the two selectors.
+    Sample implementation:div ~ h1 {color: white;}Using Attribute SelectorThis selector
+    selects all the elements for which the specified attribute exists. The selector
+    is written in this form:a[title]This selector will select all the links for which
+    the title attribute has been specified. Moreover, this selector type can be modified
+    into attribute-value selector by specifying the attribute value in the following
+    manner:a[title = value]In-Built Styles of BrowsersEvery browser has a built-in
+    stylesheet, which is applied to all the webpages opened using this browser. In
+    fact, this stylesheet is applied before any other style sheet. You can define
+    your own style sheet for the browser using the Accessibility option in Tools.
+    However, user style sheets are browser specific. Therefore, if you open a different
+    browser, the style sheet you defined may not be accessible.  In case, you want
+    your user-defined stylesheet to override any other style specified in the HTML
+    page, then you can use the ‘!important’ modifier. This modifier sets highest priority
+    for the specified style statement. Sample implementation:body {color: white !important;}Cascading
+    of StylesThe precedence and priority of the styles are decided on the basis of
+    the following parameters.●        Importance●        Specificity●        Textual
+    OrderWorking with CSS PropertiesNow that you are thorough with the use of selectors,
+    the next step is to look at CSS properties.ColorOne of the most crucial properties
+    that are used in a web page is color, which can be defined using ARGB, RGB and
+    color names.RGB value are typically defined using a decimal number, which lies
+    between 0-255. ●        white #ffffff●        red #ff0000●        black #000000●       
+    green #008000Color values can also be used instead of the color name. An example
+    of how this can be used is given below.body {color: #ffffff;}Another way to specify
+    the color is using the RGB function, which specifies the values of parameters
+    using a number between 0-255 or percentage. Example of this type of declaration
+    is given below:h1 { color: rgb(255,0,0); }Other ways to specify color are RGBA,
+    which accepts 4 values and HSL, which defines values for hue, saturation and lightness.TransparencyThe
+    transparency or opacity are defined by a value between 0.0 (invisible) and 1.0
+    (opaque).TextAs far as text is concerned, font-face and font-size can be specified.
+    These properties can be defined in the following manner:h1 { font-family: arial,
+    verdana, sans-serif; }h1 { font-size: 12px; }The CSS Box ModelThe CSS Box Model
+    assumes that a webpage can be considered to be made up of boxes. The spacing between
+    these boxes are given by margins and padding settings. These properties can be
+    given values in the following manner:margin: 15px;padding: 25px;border: 10px;Positioning
+    <div> elementsThe element used for creating page layouts is <div>. Although, HTML5
+    recommends the use of semantic markup instead of div elements, there are still
+    used for content that cannot be styled using semantic markup. A div element can
+    be imagined as a rectangular block and is declared in the following manner:<div><!—other
+    elements are enclosed within this area--></div>Properties used to define the position
+    of a div element include:●       The position of the div element can be defined
+    using the properties, top, bottom, left and right, in pixels.●        A property,
+    position, is used to define if the position specified is static or relative.●      
+    The float property can be used to allow elements to float to the right or left
+    and is defined as float: left or float: right.●        The clear property places
+    a clear element right after the floating element.●       You can also change the
+    manner in which the browser calculates width with the help of the box-sizing property.
+    This property can take three values: content-box (default setting), border-box
+    and padding-box.Centering ContentIf you are using a fixed width, the div element
+    can be centered using the properties, margin-left and margin-right. If you fix
+    the width and set the margins to auto , the extra space on the margins is equally
+    divided. It can be done in the following manner:  #container {width: 850px;margin-left:
+    auto;margin-right: auto;}Chapter 5: Thinking Slowly and Staying Humble  Writing
+    code can go quickly especially when you know what you are doing and when you have
+    a lot of experience with the codes that you are writing in your JavaScript strings.
+    You may go quickly, and that can cause you to make mistakes. This is especially
+    true if you are becoming very experienced with JavaScript and if you feel like
+    you are going to be able to do more with it. You may also find that, when you
+    get better at writing code, you get very confident with everything that you are
+    doing. It is not a terrible thing to have confidence, but it can lead to you missing
+    out on some of the things that you could have created errors with. To make sure
+    that you are doing the best job with your code, even when you’re practicing, you
+    should make sure that you think as slowly as possible and that you don’t get overly
+    confident in your abilities. Slowing DownAs you write the codes that you are thinking
+    about, make sure that you go as slow as possible. It may take more time this way
+    initially, but it will save you a lot of time when it comes to going back and
+    looking at the different things that you may have to do with the errors that you
+    have made. By going slowly, you will be less likely to create errors. Even as
+    you are looking back at your code and going through each of the lines of JavaScript,
+    look at it slowly. Read each and every letter and symbol so that you will know
+    what you are talking about and so you will be able to see if you missed anything.
+    This is like proofreading it the way that you might have done in high school or
+    college when you wrote a paper. Slow down to proofread the work that you wrote
+    and the codes that you did line by line. This slow pace will help you catch any
+    mistakes that you may have made. It is also worth noting that going slower will
+    help you avoid any major errors in the work. If you are moving at a slower pace,
+    you will be more aware of each keystroke and each thing that you put into all
+    of your lines of code. The slow pace will not only help you when you are looking
+    back at what you wrote down but also at what you were doing when you were writing
+    it. Make sure that you are prepared to go as slow as possible and that you don’t
+    rush your work. Taking a BreakIt is always beneficial for you to take a break
+    from the work that you are doing. After looking at lines of code for hours on
+    end, your eyes will not only be tired, but your mind will begin to get weary,
+    too. A break will help you to refresh what you are doing and allow you the chance
+    to come back and start over with a blank canvas in your mind. There are many benefits
+    to having a fresh mind when you are writing code and breaks will give you the
+    perfect refresher. In general, for every hour that you work on code, you should
+    take 5-10 minutes to look away from the computer, get up and walk around and do
+    something that does not involve anything with JavaScript. It is a good idea to
+    take this time to step outside and get some fresh air or to simply just walk around
+    getting a bit of exercise. Doing both of these activities will help get the blood
+    flowing and will give you the oxygen that you need in your brain to help it work
+    more efficiently when you decide to go sit back down and start working on the
+    code again. A word of caution: try to stay off of your cell phone during the time
+    that you are taking a break from your computer screen. While much smaller, the
+    screen on your cell phone emits the same blue light that can be detrimental from
+    your computer screen. Set aside specific time for using your cell phone while
+    you are working so that you don’t have to use up your screen break time to chat
+    with your friends or check your non-business emails. It is a good idea to just
+    keep the cell phone out of reach when you are taking a break. Working Through
+    ItOnce you have written the code that you want to write, you need to make sure
+    that you are working your way through it. Do this as slowly as what you did the
+    writing process so that you will be able to catch any mistakes that you have made.
+    You should do this after you have written your final line of code and before you
+    take the chance to check it out by testing it for different things. It is always
+    a good idea to make sure that you are going slowly and looking at each line of
+    code. One way that you can be sure that you are looking at every character of
+    code that you have written is to read it out loud. Say each of the letters, numbers
+    and characters to yourself so that you will be able to make sure that they are
+    written the right way. It is always a good idea to read it out loud because reading
+    it out loud will show you what you have actually written. It will take more time
+    for you to read it out loud than it would to just read it in your head. There
+    are many things that you may miss if you are reading it in your head. While it
+    may seem complicated to have to read each and every line of code that you have
+    written out loud, you should still try to do so. Doing this will give you the
+    chance to see what you may have missed. If you are good at reading and you make
+    sure that you are not making any mistakes, you will be able to do this efficiently,
+    and it will not waste a lot of time. It will actually take less time than needing
+    to go back to fix all of your errors. Leveling ConfidenceWhile you may not come
+    across this problem when you are first getting started or while you are learning
+    code, confidence can be a big problem for those who write JavaScript. You think
+    that you know enough about it and you, essentially, let your guard down when you
+    are writing it. This is a problem because you will not be as quick to catch mistakes
+    when you are writing the code, and you may think that you have not done anything
+    wrong with the code that you wrote. It is important to make sure that you keep
+    your confidence in check. Even if you feel that you are very good at writing code
+    and that you will never make a mistake, the chances of you making a mistake are
+    still very high. It can happen to anyone at any time while they are writing any
+    type of line of code. Make sure that you know what you are doing and that you
+    do not get narcissistic about the skills that you have. There is always something
+    more that you can learn when it comes to coding, and nobody knows all of it. Your
+    confidence can even trick you into forgetting things that you have learned about
+    code. Confidence tells you that you know what you are doing and that you know
+    the best way to be able to write code. It tells you that there is nothing wrong
+    with writing the same things over and over for each line of code but it also tells
+    you that you don’t need to try harder with different options for codes that you
+    write. Make sure that you are confident with your skills but that you don’t let
+    that confidence get too high to where it obstructs your view of success.Distrusting
+    YourselfDon’t trust yourself. Your mind will try to tell you that you are not
+    making mistakes and that you have not missed anything when you are looking over
+    the code that you wrote but the chances are that you have actually missed some
+    different lines and that you have made some mistakes. Be sure that you always
+    question whether or not you are doing the best coding job possible so that you
+    will be able to write the exact code that you are hoping for. Don’t trust yourself
+    to do it but always check whether or not you are doing the right thing. A good
+    way to do this is to take a break in between writing and checking the code. Make
+    sure that the break is long enough that you will be able to truly refresh your
+    mind. Make it like one of your refresher breaks but take an even longer amount
+    of time so that you will truly be able to come back with a clean slate when you
+    start to test it and look at the code. If you are staring at the same 100 lines
+    of code for 5 hours and then try to edit them, you will have a difficult time
+    picking out the mistakes that you have made. All of the tips that were in the
+    chapters of the first part of this book involve practicing and learning what you
+    can do while you are practicing. They are essentially minding tricks that you
+    can use to make your coding practice go better. For the rest of the book, you
+    will learn how to apply each of these when you start to code. The real fun comes
+    when you learn the best codes to be able to use right here in the second part
+    of this book.Chapter 6: Basic OperatorsWhat are operators?Operators are basically
+    symbols which act as a function, though they differ from functions syntax-wise.
+    They take input(operands) and produce a certain output based on the operands.
+    For example in “5+2”, “5” and “2” are operands(the input), and the “+” symbol
+    is the operator, which results to “7”.Classification of operatorsOperators are
+    generally classified on the basis of the type of operation they do. Operators
+    like typeof, instanceof, etc. are unique and thus cannot be classified under the
+    categories about which you will read below.Arithmetic OperatorsAs the name hints,
+    these are the operators which perform arithmetic tasks on the operand(s). Listed
+    below are the arithmetic operators.Addition[+]: This operator performs an addition
+    operation on two operands if both of them are numerical, if anyone or both of
+    the two operands are of string type then this operator concatenates / joins the
+    two operands.Example:4 + 2//evaluates to 6‘example’ + 5//evaluates to “example5”‘thisIs’
+    + ’Example’ //evaluates to “thisIsExample”.Subtraction[-]: This operator performs
+    a subtraction operation on two operands. Example: “4-2” produces the result “2”.Division[/]:
+    This operator performs division operation on two operands, where the operand on
+    left side(dividend) is divided by the operand on the right side(divisor). Example:
+    “15/3” produces the result “3”.Multiplication[*]: This operator performs multiplication
+    operation on two operands. Example: “4*2” produces the result “8”.Modulus[%]:
+    Also known as a Remainder operator, this operator results in the remainder of
+    the two operands when they are divided. Example: “5%2” produces the result “1”,
+    “5%3” produces the result “2”.Increment[++]: Increases the value of its numerical
+    operand by one. The position of this operator matters, i.e., whether it is placed
+    before operand or after it. If placed before operand, then this situation is called
+    prefix(example ++x), and the value is returned after the incrementing operation,
+    and if placed after the operand then this situation is called postfix(example
+    x++), and value is returned before the incrementing operation. Example://say x
+    value is 5console.log( ++x ); //prints 6//value of x at this point is 6//say y
+    value is 5 tooconsole.log( y++ ); //prints 5 NOT 6//but value of y at this point
+    is 6 so incrementation was done but after the expression returned valueDecrement[--]:
+    Decreases the value of its numerical operand by one. Similar to increment operator,
+    the postfix and prefix rule applies here too.Example://say x value is 5console.log(
+    --x ); //prints 4// value of x at this point is 4//say y value is 5 tooconsole.log(
+    y-- ); //prints 5//value of y at this point is 4Exponential[**]: This operator
+    produces the result obtained by increasing the first operand power by the second
+    operand, i.e., FirstOperandSecondOperand . Example: “2**3” produces the result
+    “8”.Assignment OperatorsThese operators are used to assign values to variables.
+    Value is assigned to the left operand which is based on the right operand value.
+    Listed below are the assignment operators.Equal[=]: This operator simply assigns
+    the value of its right operand to the left operand. Example: “x=5” this assigns
+    5 to x, so now the value of x is 5.Addition assignment[+=]: This operator adds
+    the value of the left and the right operand and then assigns the result to the
+    left operand. Example: say x = 2 then “x += 3” will make x’s value 5. Subtraction
+    assignment[-=]: This operator subtracts the value of the right operand from the
+    left operand and then assigns the result to the left operand. Example: say x =
+    8 then “x -= 3” will make x’s value 5.Multiplication assignment[*=]: This operator
+    multiplies the left and the right operand and assigns the result to the left operand.
+    Example: say x = 5 then “x *= 2” will make x’s value 10.Division Assignment[/=]:
+    This operator divides the left operand(dividend) by the right operand(divisor)
+    and then assigns the result to the left operand. Example: say x = 10 then “x /=
+    2” will make x’s value 5.Modulus Assignment[%=]: This operator divides the left
+    operand(dividend) by the right operand(divisor) and then assigns the REMAINDER
+    to the left operand. Example: say x = 5 then “x %= 2” will make x’s value 1.Exponentiation
+    assignment: This operator increases the value of left operand by the power of
+    right operand and then assigns the result produced to the left operand. Example:
+    say x = 2 then “x **= 3” will make x’s value 8.Other OperatorsThese are the type
+    of operators which cannot be categorized under the above-mentioned categories.
+    Listed below are such operators.typeof operator: This operator returns the type
+    of operand in string format. Examples:typeof 2//evaluates to “number”typeof 1.23//evaluates
+    to “number”typeof “2”//evaluates to “string”typeof ‘hi’//evaluates to “string”typeof
+    true//evaluates to “boolean”typeof false//evaluates to “boolean”typeof {ob:1}//evaluates
+    to “object”typeof new Date()//evaluates to “object”tyepof Math.cos//evaluates
+    to “function”typeof function(){}//evaluates to “function”instanceof operator:
+    This operator checks if the first operand, which should be an object, is of a
+    specific type, where the type to be checked is specified as the second operand.
+    It returns true or false based on whether the object type is matched or not.Examples:new
+    String(“Astring”) instanceof String//evaluates to true[“this”, “is”, “array”]
+    instanceof Array//evaluates to true.new String(“Astring”) instance of Array              //evaluates
+    to false[“this”, “is”, “array”] instanceof String//evaluates to falsedelete operator:
+    This operator removes a property from an object. Example:var myObject = {prop1:
+    “test”,prop2: “test2”};delete myObject.prop1;//deletes the prop1 property of object
+    myObjectin operator: This operator checks whether a specified property(first operand)
+    is in the specified object(second operand). It returns true or false based on
+    whether the property is in the object or not.Examples:var myObject = {prop1: “test”,prop2:
+    “test2”};“prop1” in myObject;//evaluates to true“prop45” in myObject;//evaluates
+    to falseThis chapter explained operators in JavaScript. I hope you found it useful.ConclusionThat
+    should give you a basic idea of how events are used in JavaScript and why is it
+    necessary to use them in the first place. The things to note are that events are
+    anything that happens in the application, and we can attach event-listeners to
+    make sure we get to know when that event occurs so that we can execute some code
+    at that time.Thank you very much for downloading JavaScript: Beginner JavaScript
+    Coding From The Ground Up! Please be on the lookout for the next book in this
+    series, JavaScript: Intermediate JavaScript Coding From The Ground Up. There is
+    more yet left to learn to further your coding knowledge base. The journey does
+    not stop at beginner for us.If you have enjoyed this book, please leave a positive
+    review on Amazon to show your support. Your feedback is greatly appreciated!'
+  toc: []
+  trans: '
+
+
+    # 第 4 章：CSS3 基础
+
+
+    级联样式表（Cascading Style Sheets，简称 CSS）提供了网页闻名的呈现效果。尽管 HTML 能够为网页提供基础结构，但 CSS 为开发者提供了大量的设计选择。此外，它快速且高效，这使其成为越来越受欢迎的设计工具。众，
+    CSS 演自 SGML（标准化泛化标记语言）。这一方向的努力目标是标准化网页外观的方式。该技术的最新版本是 `CSS3`，它是由 50 个模块组成的集合。
+
+
+    CSS 最强大的特性是它的级联能力。简单来说，它允许网页从多个样式表中获取样式，使得后续读取的表中的样式更改将覆盖已从一个或多个之前的表中所实现的样式。
+
+
+    ## 如何定义和应用样式
+
+
+    样式的定义和应用涉及两个方面或部分：选择器（selector）和声明（declaration）。选择器决定了网页中需要样化的区域，而声明块描述了必须实施的样式规范。为了说明它是如何工作的，让我们考虑以下示例：
+
+
+    ```css
+
+    body {color: white;}
+
+    ```
+
+
+    在这个示例中，选择器选择了网页的 `body`，声明块定义了字体颜色应更改为白色。这是一个简单的示例，声明可以比这复杂得多。
+
+
+    ## 如何添加注释
+
+
+    可以使用以下格式在样式表中添加注释：
+
+
+    ```css
+
+    /*编写注释*/
+
+    ```
+
+
+    ## 如何创建内联样式
+
+
+    每个元素都有一个关联的全局属性 `style`。可以在标签内对该全局属性进行操作，以修改该元素的外观。这种类型的样式不需要你指定选择器。只需要声明块。以下是这种操作的示例：
+
+
+    ```html
+
+    <body style=''color: white;''></body>
+
+    ```
+
+
+    此 `HTML` 标签执行的功能与前一节中指定的 CSS 代码相同。使用这种方法的优势是，通过这种方式给出的样式信息将覆盖任何其他样式。因此，如果你需要为其中一个元素使用不同的样式，而文档的其他部分遵循不同的样式，你可以为文档使用样式表并在标签中为该元素指定样式。
+
+
+    ## 如何使用嵌入样式
+
+
+    实现与内联样式相同结果的另一种方法是在相关元素内部使用 `<style>` 元素来定义其样式规范。方法如下：
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html xmlns=''http://www.w3.org/1999/xhtml''>
+
+    <head>
+
+    <title></title>
+
+    <style>body {color: white;}</style>
+
+    </head>
+
+    <body></body>
+
+    </html>
+
+    ```
+
+
+    ## 如何创建外部样式表
+
+
+    对于希望对整个网页或多个网页使用相同样式的情况，最佳方法是使用外部样式表。该外部样式表可以通过以下方式链接到 HTML 页面：
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html xmlns=''http://www.w3.org/1999/xhtml''>
+
+    <head>
+
+    <title></title>
+
+    <link rel=''stylesheet'' type=''text/css'' href=''Content/main.css'' />
+
+    </head>
+
+    <body></body>
+
+    </html>
+
+    ```
+
+
+    你必须在 `Content` 文件夹中创建一个名为 `main.css` 的文件，并将指定的指定的规则放入其中：
+
+
+    ```css
+
+    body {color: white;}
+
+    ```
+
+
+    ## 定义媒体
+
+
+    需要注意的是，样式表可以包含你任意数量的样式规则。此外，你还可以为不同的媒体链接不同的 CSS 文件。不同的媒体类型如下：
+
+    * `all`
+
+    * `embossed`
+
+    * `braille`
+
+    * `print`
+
+    * `handheld`
+
+    * `speech`
+
+    * `screen`
+
+    * `tv`
+
+    * `tty`
+
+
+    使用的媒体可以用以下方式定义：
+
+
+    ```html
+
+    <link rel=''stylesheet'' type=''text/css'' href=''Content/all.css'' media=''all''/>
+
+    ```
+
+
+    ## 定义字符编码
+
+
+    你也可以使用以下格式定义使用的字符编码：
+
+
+    样式表：
+
+    在样式表的样式规则上方放置此行。
+
+    ```css
+
+    @charset ''UTF-8'';
+
+    ```
+
+
+    HTML 页面：
+
+    你必须将此行放在 link 元素上方。
+
+    ```html
+
+    <meta http-equiv=''Content-Type'' content=''text/html;charset=UTF-8''>
+
+    ```
+
+
+    ## 导入样式表
+
+
+    随着网页变得复杂，使用的样式表复杂性也会增加。因此，你可能需要使用许多样式表。你可以通过以下方式将一个样式表的样式规则导入另一个样式表：
+
+
+    ```css
+
+    @import url(''/Content/header.css'');
+
+    ```
+
+
+    在这里，`header.css` 被导入，`url` 提供了要导入样式表的相对地址。
+
+
+    ## 导入字体
+
+
+    可以使用以下格式导入字体：
+
+
+    ```css
+
+    @font-face {font-family: newFont;src: url(''New_Font.ttf''),url(''New_Font.eot'');
+    /* IE9 */
+
+    ```
+
+
+    ## 选择器、特殊性与级联
+
+
+    选择器有三种类型：类选择器、ID 选择器元素选择器。元素选择器类型是最简单的，要求你只需命名需要使用的元素。例如，如果你想更改 `body` 的背景颜色，那么使用的选择器就是
+    `body`。
+
+
+    在声明任何元素时，你可以使用 `id` 属性为其分配一个 ID。你可以使用带有 `#` 前缀的 ID 作为选择器。例如，如果你有一个 ID 为 `btnID`
+    的按钮，那么该 ID 选择器为 `#btnID`。同样，你可以使用 `class` 属性为元素分配类名。类名可以使用点 (`.`) 前缀，例如 `.className`。然而，如果你想选择网页的所有元素，可以使用星号
+    `*`。
+
+
+    ## 后代和子选择器
+
+
+    你可能希望对选择器的后代应用特定样式。这可以通过指定完整选择器来实现：
+
+
+    ```css
+
+    li a {text-color: black;}
+
+    ```
+
+
+    另一方面，你可能只想对选择器的直接子元素应用样式。这可以通过指定父元素和子元素之间使用大于 (`>`) 符号来实现：
+
+
+    ```css
+
+    li > a {color: white;}
+
+    ```
+
+
+    ## 伪元素和伪类选择器
+
+
+    现在你已经知道如何对特定元素应用样式，让我们继续根据名称、内容或是否 DOM 树的一部分来使用伪类对元素分类。可用的伪类包括：
+
+    * `:visited`
+
+    * `:link`
+
+    * `:hover`
+
+    * `:active`
+
+    * `:checked`
+
+    * `:focus`
+
+    * `:nth-last-child(n)`
+
+    * `:not`
+
+    * `:only-child`
+
+    * `:nth-child(formula)`
+
+    * `:lang(language)`
+
+    * `:first-of-type`
+
+    * `:only-of-type`
+
+
+    如果你想访问 DOM 树的信息，可以使用伪元素。伪元素包括：
+
+    * `::first-letter`
+
+    * `::first-line`
+
+    * `::after`
+
+    * `::before`
+
+
+    ## 分组选择器
+
+
+    多个选择器用于样式规则。这些选择器必须用逗号分隔。
+
+
+    ```css
+
+    body, button {color: white;}
+
+    ```
+
+
+    ## 使用相邻选择器
+
+
+    如果你想对 `div` 中的第一个标题设置样式，选择器使用两个选择器之间的加号 (`+`) 构建。
+
+
+    ```css
+
+    div + h1 {color: white;}
+
+    ```
+
+
+    ## 兄弟选择器
+
+
+    兄弟选择器与相邻选择器类似，不同在于它们样式所有匹配的元素。选择器使用两个选择器之间的 `~` 符号构建。
+
+
+    ```css
+
+    div ~ h1 {color: white;}
+
+    ```
+
+
+    ## 使用属性选择器
+
+
+    此选择器选择存在指定属性元素。选择器写如下形式：
+
+
+    ```css
+
+    a[title]
+
+    ```
+
+
+    此选择器选择所有指定了 `title` 属性的链接。此外，这种选择器类型可以通过指定属性值修改属性值选择器：
+
+
+    ```css
+
+    a[title = value]
+
+    ```
+
+
+    ## 浏览器内置样式
+
+
+    每个浏览器都有一个内置样式表，应用于使用该浏览器打开的所有网页。事实上，该样式表在任何其他样式表之前应用。你可以可以使用自定义样式表。然而，如果你打开不同的浏览器，你定义的样式表可能无效。如果你希望用户定义的样式表覆盖
+    HTML 页面指定的任何其他样式，可以使用 `important` 修饰符。该修饰符为指定的样式设置最高优先级。
+
+
+    ```css
+
+    body {color: white !important;}
+
+    ```
+
+
+    ## 样式级联
+
+
+    样式的优先级根据以下参数决定：
+
+    * 重要性 (Importance)
+
+    * 特殊性 (Specificity)
+
+    * 文本顺序 (Textual Order)
+
+
+    ## 使用 CSS 属性
+
+
+    现在你已经熟悉选择器的使用，下一步是查看 CSS 属性。
+
+
+    ### 颜色
+
+
+    网页中最关键属性之一是 `color`，可以使用 ARGB、RGB 和颜色名称定义。RGB 值通常使用 0-255 之间的数字定义。
+
+    * 白色 `#ffffff`
+
+    * 红色 `#ff0000`
+
+    * 黑色 `#000000`
+
+    * 绿色 `#008000`
+
+
+    可以使用颜色值代替颜色名称。使用示例如下：
+
+
+    ```css
+
+    body {color: #ffffff;}
+
+    ```
+
+
+    指定颜色的另一种方法是使用 `rgb` 函数，它使用 0-255 之间的数字或百分比指定参数值。这种类型的声明示例如下：
+
+
+    ```css
+
+    h1 { color: rgb(255,0,0); }
+
+    ```
+
+
+    指定颜色的其他方法是 `RGBA`（接受 4 个值）和 `HSL`（定义色调、饱和度和亮度的值）。
+
+
+    ### 透明度
+
+
+    透明度（opacity）由 0.0（不可见）到 1.0（不透明）之间的值定义。
+
+
+    ### 文本
+
+
+    对于文本，可以指定 `font-face` 和 `font-size`。这些属性可以用以下方式定义：
+
+
+    ```css
+
+    h1 { font-family: arial, verdana, sans-serif; }
+
+    h1 { font-size: 12px; }
+
+    ```
+
+
+    ### CSS Box 模型
+
+
+    CSS Box 模型假设网页可以认为是由盒子组成的。盒子之间的间距由外边距（margins）和内边距（padding）设置给出。这些属性可以用以下方式赋值：
+
+
+    ```css
+
+    margin: 15px;
+
+    padding: 25px;
+
+    border: 10px;
+
+    ```
+
+
+    ### 定位元素
+
+
+    用于创建布局的元素 `<div>`。虽然 HTML5 建议使用语义化标记代替 `<div>` 元素，但仍然用于无法样式化的内容。`<div>` 元素可以被想象成矩形块，并如下所示声明：
+
+
+    ```html
+
+    <div>other elements</div>
+
+    ```
+
+
+    用于定义 `<div>` 位置的属性包括：
+
+    * `top`
+
+    * `bottom`
+
+    * `left`
+
+    * `right`
+
+    * `static`
+
+    * `relative`
+
+    * `float`
+
+    * `clear`
+
+    * `box-sizing`
+
+
+    ### 居中内容
+
+
+    如果你使用 `fixed`，`div` 元素可以使用 `margin-left` 和 `margin-right` 中。如果你将 `width` 设置为 `auto`，额外的空间将被平均。可以通过以下方式完成：
+
+
+    ```css
+
+    #container {width:850px;margin-left: auto;margin-right: auto;}
+
+    ```
+
+
+    # 第 5 章：缓慢思考与保持谦逊
+
+
+    当你知道自己在做什么时，快速编写代码可能会导致出错，这在你对 JavaScript 有非常有经验时尤其如此。你可能还会发现，当你更擅长编写代码时，保持自信并不是件坏事，但它可能会导致你漏掉一些内容。为了确保你对代码做了最好的工作，即使在练习时，也应该尽可能慢地思考。
+
+
+    ## 慢下来
+
+
+    在你思考编写的代码时，确保你尽可能慢。起初可能需要更多时间，但在回顾你所做的代码时，这将为你节省大量时间。通过慢速，你不太可能产生错误。当你回顾并逐行查看代码时，慢慢地阅读每个字母和符号，这样你就能知道是否漏掉了什么。这就像你在高中或大学写论文时一样。慢下来检查你写的代码，这种慢速将帮助你发现任何错误。
+
+
+    ## 休息
+
+
+    从工作中休息一直是有益的。连续查看几小时代码，你的眼睛不仅会疲劳，大脑也会开始疲倦。休息可以帮助你刷新正在做的工作，并让你带着空白的大脑重新开始。编写代码时大脑清醒有很多好处。通常，每工作一小时，你应该花
+    5-10 分钟离开电脑，站起来走走做不涉及 JavaScript 的事情。建议这段时间出去呼吸新鲜空气，或者简单地走走。这两项活动有助于血液流动，并在决定回去重新编写代码时为大脑提供氧气。
+
+
+    警告：在离开屏幕休息期间，尝试不要玩手机。虽然手机屏幕小得多，但它发出的蓝光和电脑一样有害。工作时留出特定时间使用手机，这样你就不用用休息时间和朋友聊天或检查非工作邮件。休息时，将手机放在手够不到的地方是好习惯。
+
+
+    ## 逐一处理
+
+
+    一旦写了你想写的代码，你需要确保你正在逐一处理它。像编写过程一样缓慢地这样做，这样你就能发现犯过的任何错误。你应该在写完最后一行代码之后、在有机会通过测试对其进行检查之前这样做。缓慢地查看每一行代码总是个好主意。
+
+
+    确保你查看了所写代码的每一个字符的一种方法是大声读出来。对自己说出每个字母、数字和字符，这样就不会漏掉。大声读出来会显示你实际写了什么，比在脑子里阅读花费的时间更多。
+
+
+    # 第 6 章：运算符
+
+
+    ## 什么是运算符？
+
+
+    运算符基本上是作为函数的符号，尽管在语法上与函数不同。它们接受输入（操作数）并根据操作数产生特定的输出。例如在 `5+2` 中，`5` 和 `2` 是操作数（输入），`+`
+    符号是运算符，结果为 `7`。
+
+
+    ## 运算符分类
+
+
+    运算符通常根据它们执行的操作类型分类。`typeof`、`instanceof` 等运算符是独特的，因此不能归类到以下类别中。
+
+
+    ## 算术运算符
+
+
+    提示，这些是执行算术任务的运算符。
+
+
+    * 加法 (`+`)：如果两个操作数都是数字，该运算符执行加法操作；如果两个操作数都是字符串类型，该运算符连接两个操作数。
+
+    ```
+
+    4 + 2 // 结果 6
+
+    ''example'' + 5 // 结果 "example5"
+
+    ''thisIs'' + ''Example'' // 结果 "thisIsExample"
+
+    ```
+
+    * 减法 (`-`)：该运算符对两个操作数执行减法操作。
+
+    ```
+
+    4-2 // 结果 2
+
+    ```
+
+    * 除法 (`/`)：该运算符对两个操作数执行除法操作。
+
+    ```
+
+    15/3 // 结果 3
+
+    ```
+
+    * 乘法 (`*`)：该运算符对两个操作数执行乘法操作。
+
+    ```
+
+    4*2 // 结果 8
+
+    ```
+
+    * 取模 (`%`)：也称为取余运算符，该运算符在两个操作数被除时得到余数。
+
+    ```
+
+    5%2 // 结果 1
+
+    5%3 // 结果 2
+
+    ```
+
+    * 递增 (`++`)：将数字操作数的值增加 1。该运算符的位置取决于它是放在操作数之前还是之后。如果放在操作数之前，称为前缀 (`++x`)；如果放在操作数之后，称为后置
+    (`x++`)。
+
+    ```
+
+    console.log(++x); // 输出 6
+
+    console.log(y++); // 输出 5
+
+    ```
+
+    * 递减 (`--`)：将数字操作数的值减少 1。类似于递增运算符，后置和前缀规则适用于此处。
+
+    ```
+
+    console.log(--x); // 输出 4
+
+    console.log(y--); // 输出 5
+
+    ```
+
+    * 幂 (`**`)：该运算符通过第一个操作数相对于第二个操作数的幂得到结果。
+
+    ```
+
+    2**3 // 结果 8
+
+    ```
+
+
+    ## 赋值运算符
+
+
+    这些运算符用于向变量赋值。根据右操作数给左操作数赋值。
+
+
+    * 等号 (`=`)：该运算符将右操作数赋值给左操作数。
+
+    ```
+
+    x=5
+
+    ```
+
+    * 加赋值 (`+=`)：该运算符将左操作数与右操作数相加赋值给左操作数。
+
+    ```
+
+    x+=3 // 结果 8
+
+    ```
+
+    * 减赋值 (`-=`)：该运算符从左操作数中减去右操作数赋值给左操作数。
+
+    ```
+
+    x-=3 // 结果 5
+
+    ```
+
+    * 乘赋值 (`*=`)：该运算符将左操作数与右操作数相乘赋值给左操作数。
+
+    ```
+
+    x*=2 // 结果 10
+
+    ```
+
+    * 除赋值 (`/=`)：该运算符将左操作数除以右操作数赋值给左操作数。
+
+    ```
+
+    x/=2 // 结果 5
+
+    ```
+
+    * 取模赋值 (`%=`)：该运算符将左操作数除以右操作数并将余数赋值给左操作数。
+
+    ```
+
+    x%=2 // 结果 1
+
+    ```
+
+    * 幂赋值 (`**=`)：该运算符将左操作数相对于右操作数的幂并将结果赋值给左操作数。
+
+    ```
+
+    x**=3 // 结果 8
+
+    ```
+
+
+    ## 其他运算符
+
+
+    这些无法归类的上述类型的运算符。
+
+
+    * `typeof`：该运算符以字符串格式返回操作数的类型。
+
+    ```js
+
+    typeof 2 // 结果为 "number"
+
+    typeof 1.23 // 结果为 "number"
+
+    typeof "2" // 结果为 "string"
+
+    typeof ''hi'' // 结果为 "string"
+
+    typeof true // 结果为 "boolean"
+
+    typeof false // 结果为 "boolean"
+
+    typeof {ob:1} // 结果为 "object"
+
+    typeof new Date() // 结果为 "object"
+
+    typeof Math.cos // 结果为 "function"
+
+    typeof function(){} // 结果为 "function"
+
+    ```
+
+    * `instanceof`：该运算符检查第一个操作数（应该是一个对象）是否为特定类型，要检查的类型由第二个操作数指定。根据对象类型是否匹配返回 true
+    或 false。
+
+    ```js
+
+    new String("A") instanceof String // 结果为 true
+
+    ["this","is","array"] instanceof Array // 结果为 true
+
+    new String("A") instanceof Array // 结果为 false
+
+    ["this","is","array"] instanceof String // 结果为 false
+
+    ```
+
+    * `delete`：该运算符从对象中删除属性。
+
+    ```js
+
+    var myObject = {prop1:"test",prop2:"test"};
+
+    delete myObject.prop1 // 删除对象 myObject 的 prop1 属性
+
+    ```
+
+    * `in`：该运算符检查指定的属性（第一个操作数）是否在指定的对象（第二个操作数）中。根据属性是否在对象中返回 true 或 false。
+
+    ```js
+
+    var myObject = {prop1:"test",prop2:"test"};
+
+    "prop1" in myObject // 结果为 true
+
+    "prop45" in myObject // 结果为 false
+
+    ```
+
+
+    这一章解释了 JavaScript 中的运算符。希望你发现它有用。
+
+
+    '

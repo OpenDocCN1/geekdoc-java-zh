@@ -1,0 +1,2 @@
++   [JavaScript 初学者指南：学习 JavaScript、Python、SQL 和 Java 基础的完整初学者指南](README.md)
++   [JavaScript 初学者指南：学习 JavaScript、Python、SQL 和 Java 基础的完整初学者指南](javascript-for-beginners-a-complete-beginners-guide-to-learn_0.md)

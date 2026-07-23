@@ -1,0 +1,4605 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # JavaScript: The Ultimate Beginner’s Guide!
+
+
+    Andrew Johansen
+
+
+     Copyright 2015 by Andrew Johansen - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    ## Table of Contents
+
+
+    - Introduction
+
+    - Chapter 1: JavaScript – General Information
+
+    - Chapter 2: The Basic Elements of the JavaScript Language
+
+    - Chapter 3: JavaScript’s Control Flow Statements
+
+    - Chapter 4: The Different Types of Loops in JavaScript
+
+    - Chapter 5: JavaScript Functions
+
+    - Chapter 6: Events
+
+    - Chapter 7: JavaScript and Cookies
+
+    - Chapter 8: Page Redirection
+
+    - Chapter 9: Dialog Boxes
+
+    - Chapter 10: How to Use the Void Keyword
+
+    - Chapter 11: Debugging
+
+    - Conclusion
+
+
+    # Introduction
+
+
+    I want to thank you and congratulate you for getting my book…
+
+
+    “JavaScript: The Ultimate Beginner’s Guide!”
+
+
+    This book will help you become an effective JavaScript user. If you want to learn
+    the basics of the JavaScript language quickly and easily, then you must get this
+    book now.
+
+
+    This book will explain important facts regarding the JavaScript language. It doesn’t
+    contain any irrelevant information. Each page holds valuable lessons, instructions
+    and examples. After reading this book, you’ll be familiar with objects, functions,
+    variables, statements and other JavaScript elements.
+
+
+    Thanks again for purchasing this book, I hope you enjoy it!
+
+
+    # Chapter 1: General Information
+
+
+    `JavaScript` is an object-oriented scripting language that you can use in different
+    platforms. Within host environments (e.g. web browsers), you may use `JavaScript`
+    to gain programmatic control over an object.
+
+
+    This scripting language comes with a rich standard library. This library holds
+    objects (e.g. `Math`, `Date`, `Array`, etc.) and core language elements (e.g.
+    statements, operators, control structures, etc.). As of now, programmers extend
+    `JavaScript`’s basic features by adding extra objects. They do this to improve
+    the language’s effectiveness in completing certain tasks.
+
+
+    Here are two of the most popular variants of `JavaScript`:
+
+
+    - **Server-side JavaScript** – This variant is designed to help programmers run
+    `JavaScript` on a web server. For instance, server-side extensions help applications
+    to interact with databases, conduct file changes and provide a continuous flow
+    of information.
+
+    - **Client-side JavaScript** – This form of `JavaScript` is created for browsers
+    and their respective `DOM` (i.e. Document Object Model). For instance, client-side
+    `JavaScript` helps applications to save elements into an `HTML` document and react
+    to user actions (e.g. form input, mouse clicks, page navigation, etc.).
+
+
+    ## JavaScript and the Java Language
+
+
+    `Java` and `JavaScript` are two different programming languages. `JavaScript`
+    has some similarities with `Java` (e.g. naming conventions, expression syntax,
+    control-flow constructs, etc.). However, it doesn’t have two of `Java`’s distinctive
+    characteristics: powerful type checking and static typing.
+
+
+    According to many people, these languages are completely unrelated. Netscape (the
+    company who developed `JavaScript`) changed the name of the language from `LiveScript`
+    to `JavaScript` to exploit the popularity enjoyed by `Java`; thus, the similarity
+    between the names of these languages emerged because of marketing considerations.
+
+
+    At this point, let’s discuss the main differences between these programming languages.
+    This piece of information will help you in improving your knowledge about `JavaScript`
+    and general programming.
+
+
+    - **JavaScript**: This is a free-form computer language. When using `JavaScript`,
+    you don’t have to declare all of the methods, classes and variables. You don’t
+    have to worry about the types of methods that you’ll use (i.e. whether they are
+    private, public or protected). Additionally, you won’t have to implement any interface
+    for `JavaScript`.
+
+    - **Java**: This class-based computer language is created for type safety and
+    quick implementation. This means that you have to use classes and their respective
+    methods to create your programs. `Java`’s data typing and class inheritance require
+    strict object hierarchies. Simply put, the `Java` language is more complicated
+    than `JavaScript`.
+
+
+    ## How to Get Started?
+
+
+    You don’t have to download files or install programs into your computer just to
+    use `JavaScript`. You can simply access your favorite web browser to create your
+    own `JavaScript` applications. These days, `Firefox` is one of the best web browsers
+    when it comes to `JavaScript` programming. Because of that, this book will focus
+    on the tools available in `Firefox` browsers. If your computer doesn’t have `Firefox`,
+    you are advised to visit this site: `https://www.mozilla.org`.This browser is
+    free and easy to use; thus, you can easily master the basics of `JavaScript` without
+    spending any money.
+
+
+    Once you have downloaded `Firefox`, you’ll see two tools created specifically
+    for JavaScript programming. These tools are:
+
+
+    ### 1. Web Console
+
+
+    This tool displays information about the webpage loaded. It also has a command
+    line feature that you may use to run `JavaScript` statements on the loaded page.
+
+
+    To access `Web Console`, you just have to launch `Firefox`, click on `Tools`,
+    and choose `Web Console` from the menu titled `Developer`. After activating `Web
+    Console`, you’ll see a command line at the bottom of your screen. You may enter
+    `JavaScript` expressions into that command line, then the pane at the middle of
+    the screen will show you the results of the expressions you entered.
+
+
+    This feature shows results immediately – you’ll quickly know if you have entered
+    codes incorrectly.
+
+
+    Here’s a screenshot of the Web Console tool:
+
+
+    ![](images/00001.jpeg)
+
+
+    ### 2. Scratchpad
+
+
+    `Firefox`’s `Web Console` is excellent for running single `JavaScript` expressions.
+    Although you can use it to run multiple lines, you’ll find this task extremely
+    inconvenient. Additionally, you can’t use that tool to save your code snippets.
+    Fortunately, `Firefox` has another tool that solves the problems discussed above.
+    This tool is called `Scratchpad`.
+
+
+    To access this tool, you have to do:
+
+
+    1.  Launch `Firefox`.
+
+    2.  Click on `Tools`.
+
+    3.  Look for the `Developer` section and choose `Scratchpad`.
+
+    '
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    JavaScript
+
+
+    The Ultimate Beginner’s Guide!
+
+
+    Andrew Johansen
+
+
+     Copyright 2015 by Andrew Johansen - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    Table of Contents
+
+
+    Introduction
+
+
+    Chapter 1: JavaScript – General Information
+
+
+    Chapter 2: The Basic Elements of the JavaScript Language
+
+
+    Chapter 3: JavaScript’s Control Flow Statements
+
+
+    Chapter 4: The Different Types of Loops in JavaScript
+
+
+    Chapter 5: JavaScript Functions
+
+
+    Chapter 6: Events
+
+
+    Chapter 7: JavaScript and Cookies
+
+
+    Chapter 8: Page Redirection
+
+
+    Chapter 9: Dialog Boxes
+
+
+    Chapter 10: How to Use the Void Keyword
+
+
+    Chapter: 11: Debugging
+
+
+    Conclusion
+
+
+    Introduction
+
+
+    I want to thank you and congratulate you for getting my book…
+
+
+    “JavaScript: The Ultimate Beginner’s Guide!”
+
+
+    This book will help you become an effective JavaScript user. If you want to learn
+    the basics of the JavaScript language quickly and easily, then you must get this
+    book now.
+
+
+    This book will explain important facts regarding the JavaScript language. It doesn’t
+    contain any irrelevant information. Each page holds valuable lessons, instructions
+    and examples. After reading this book, you’ll be familiar with objects, functions,
+    variables, statements and other JavaScript elements.
+
+
+    Thanks again for purchasing this book, I hope you enjoy it!
+
+
+    Chapter 1: General Information
+
+
+    JavaScript is an object-oriented scripting language that you can use in different
+    platforms. Within host environments (e.g. web browsers), you may use JavaScript
+    to gain programmatic control over an object.
+
+
+    This scripting language comes with a rich standard library. This library holds
+    objects (e.g. Math, Date, Array, etc.) and core language elements (e.g. statements,
+    operators, control structures, etc.). As of now, programmers extend JavaScript’s
+    basic features by adding extra objects. They do this to improve the language’s
+    effectiveness in completing certain tasks.
+
+
+    Here are two of the most popular variants of JavaScript:
+
+
+    *   Server-side JavaScript – This variant is designed to help programmers run
+    JavaScript on a web server. For instance, server-side extensions help applications
+    to interact with databases, conduct file changes and provide a continuous flow
+    of information.
+
+
+    *   Client-side JavaScript – This form of JavaScript is created for browsers and
+    their respective DOM (i.e. Document Object Model). For instance, client-side JavaScript
+    helps applications to save elements into an HTML document and react to user actions
+    (e.g. form input, mouse clicks, page navigation, etc.).
+
+
+    JavaScript and the Java Language
+
+
+    Java and JavaScript are two different programming languages. JavaScript has some
+    similarities with Java (e.g. naming conventions, expression syntax, control-flow
+    constructs, etc.). However, it doesn’t have two of Java’s distinctive characteristics:
+    powerful type checking and static typing.
+
+
+    According to many people, these languages are              completely unrelated.
+    Netscape (the company who developed JavaScript) changed the name of the language
+    from LiveScript to JavaScript to exploit the popularity enjoyed by Java; thus,
+    the similarity between the names of these languages emerged because of marketing
+    considerations.
+
+
+    At this point, let’s discuss the main differences between these programming languages.
+    This piece of information will help you in improving your knowledge about JavaScript
+    and general programming.
+
+
+    JavaScript – This is a free-form computer language. When using JavaScript, you
+    don’t have to declare all of the methods, classes and variables. You don’t have
+    to worry about the types of methods that you’ll use (i.e. whether they are private,
+    public or protected). Additionally, you won’t have to implement any interface
+    for JavaScript.
+
+
+    Java – This class-based computer language is created for type safety and quick
+    implementation. This means that you have to use classes and their respective methods
+    to create your programs. Java’s data typing and class inheritance require strict
+    object hierarchies. Simply put, the Java language is more complicated than JavaScript.
+
+
+    How to Get Started?
+
+
+    You don’t have to download files or install programs into your computer just to
+    use JavaScript. You can simply access your favorite web browser to create your
+    own JavaScript applications. These days, Firefox is one of the best web browsers
+    when it comes to JavaScript programming. Because of that, this book will focus
+    on the tools available in Firefox browsers. If your computer doesn’t have Firefox,
+    you are advised to visit this site: [https://www.mozilla.org](https://www.mozilla.org).This
+    browser is free and easy to use; thus, you can easily master the basics of JavaScript
+    without spending any money.
+
+
+    Once you have downloaded Firefox, you’ll see two powerful tools created specifically
+    for JavaScript programming. These tools are:
+
+
+    1\. Web Console
+
+
+    This tool displays information about the webpage loaded on the screen. It also
+    has a command line feature that you may use to run JavaScript statements on the
+    loaded page.
+
+
+    To access Web Console, you just have to launch Firefox, click on “Tools,” and
+    choose “Web Console” from the menu titled “Developer.” After activating Web Console,
+    you’ll see a command line at the bottom of your screen. You may enter JavaScript
+    expressions into that command line, then the pane at the middle of the screen
+    will show you the results of the expressions you entered.
+
+
+    This feature shows results immediately – you’ll quickly know if you have entered
+    codes incorrectly.
+
+
+    Here’s a screenshot of the Web Console tool:
+
+
+    ![](images/00001.jpeg)
+
+
+    2\. Scratchpad
+
+
+    Firefox’s Web Console is excellent for running single JavaScript expressions.
+    Although you can use it to run multiple lines, you’ll find this task extremely
+    inconvenient. Additionally, you can’t use that tool to save your code snippets.
+    Fortunately, Firefox has another tool that solves the problems discussed above.
+    This tool is called “Scratchpad.”
+
+
+    To access this tool, you have to do the following:
+
+
+    1.  Launch the Firefox browser.
+
+
+    2.  Click on Tools.
+
+
+    3.  Look for the “Developer” section and choose “Scratchpad.”'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # JavaScript：终极学者指南！
+
+
+    Andrew Johansen
+
+
+     版所有 2015 Andrew Johansen - 保留所有权利
+
+
+    本文档旨在就其涵盖的主题和问题提供准确且可靠的信息。本出版物的销售是基于这样一个理念：即出版者不要求提供会计、官方许可或其他资质的专业服务。如果需要法律或专业建议，应聘请该领域内具有经验的专业人士。
+
+
+    -   源自一份由美国律师协会委员会和出版商及协会联合委员会共同接受并批准的《原则宣言》。
+
+
+    以任何方式（通过电子手段或打印格式）复制、复制或传输本文档的任何部分都是不法的。严禁录制出版物，除非获得出版者的书面许可，否则不允许对本文进行任何存储。保留所有权利。
+
+
+    此处提供的信息被声明是真实且一致的，任何由于疏忽或其他原因，在使用或滥用其中包含的任何政策、流程或指示而导致的任何责任，均由读者个人承担全部责任。在任何情况下，出版者对因本文中的信息直接或间接导致的任何赔偿、损害或资金损失不承担任何法律责任或指责。
+
+
+    各作者拥有出版者未保留的所有版权。
+
+
+    此处提供的信息仅供参考目的，且具有通用性。信息的呈现不带有任何合同或任何类型的保证或说明。
+
+
+    所使用的商标均未经任何许可，且商标的发布未经商标所有者的许可或背书。书中的所有商标和品牌仅用于说明目的，并归其所有者所有，与本文无所属关系。
+
+
+    ## 目录
+
+
+    -   引言
+
+    -   第一章：JavaScript – 通用信息
+
+    -   第二章：JavaScript 语言的基础元素
+
+    -   第三章：JavaScript 的控制流语句
+
+    -   第四章：JavaScript 中的不同循环类型
+
+    -   第五章：JavaScript 函数
+
+    -   第六章：事件
+
+    -   第七章：JavaScript 与 Cookie
+
+    -   第八章：页面跳转
+
+    -   第九章：对话框
+
+    -   第十章：如何使用 Void 关键字
+
+    -   第十一章：调试
+
+    -   结
+
+
+    # 引言
+
+
+    我想感谢你的购买，并祝贺你获得了我的书书……
+
+
+    《JavaScript：终极学者指南！”
+
+
+    这本书将帮助你成为一名高效的 JavaScript 用户。如果你想快速、轻松地学习 JavaScript 语言的基础知识，那么你现在必须拥有这本书。
+
+
+    这本书将解释有关 JavaScript 语言的重要事实。它不包含任何无关信息。每一页都包含了宝贵的课程、指令和示例。在读完这本书后，你将熟悉对象、函数、变量、语句和其他
+    JavaScript 元素。
+
+
+    再次感谢购买本书，希望你喜欢它！
+
+
+    # 第一章：通用信息
+
+
+    `JavaScript` 是一种面向对象的脚本语言，你可以在不同的平台上使用它。在主机环境（例如网络浏览器）中，你可以使用 `JavaScript` 来对对象的程序化控制。
+
+
+    这种脚本语言带有一个丰富的标准库。该库包含了对象（例如 `Math`、`Date`、`Array` 等）和核心语言元素（例如语句、运算符、控制结构等）。截至目前，程序员们通过添加额外的对象来扩展
+    `JavaScript` 的基本功能。他们这样做是为了提高该语言在完成某些任务时的效率。
+
+
+    以下是 `JavaScript` 最流行的两种变体：
+
+
+    -   **服务端 JavaScript** – 这种变体旨在帮助程序员在网络服务器上运行 `JavaScript`。例如，服务端扩展可以帮助应用程序与数据库交互、进行文件更改并提供连续的信息流。
+
+    -   **客户端 JavaScript** – 这种形式的 `JavaScript` 是为浏览器及其相应的 `DOM`（即文档对象模型）创建的。例如，客户端
+    `JavaScript` 帮助应用程序将元素保存到 `HTML` 文档中并响应用户操作（例如表单输入、鼠标点击、页面导航等）。
+
+
+    ## JavaScript 与 Java 语言
+
+
+    `Java` 和 `JavaScript` 是两种不同的编程语言。`JavaScript` 与 `Java` 有一些相似之处（例如命名规范、表达式语法、控制流结构等）。但不具备
+    Java 的两个显著特征：强大的类型检查和静态类型。
+
+
+    根据许多人的说法，这些语言完全没有关系。Netscape（开发 `JavaScript` 的公司）将语言名称从 `LiveScript` 改为 `JavaScript`
+    以利用 `Java` 的流行；因此，这些语言名称之间的相似性是因为营销考虑而产生的。
+
+
+    现在，让我们讨论这些编程语言之间的主要区别。这些信息将帮助你提高对 `JavaScript` 和通用编程的了解。
+
+
+    -   **JavaScript**: 这是一种灵活的计算机语言。在使用 `JavaScript` 时，你不需要声明所有的方法、类和变量。你不需要担心你将使用的方法类型（即它们是私有的、公有的还是受保护的）。此外，你不需要为
+    `JavaScript` 实现任何接口。
+
+    -   **Java**: 这种基于类的计算机语言是为了类型安全和快速实现而创建的。这意味着必须使用类及其相应的方法来创建你的程序。`Java` 的数据类型和类继承需要严格的对象层次结构。简单来说，`Java`
+    语言比 `JavaScript` 更复杂。
+
+
+    ## 如何开始？
+
+
+    为了使用 `JavaScript`，你不需要下载文件或向你的计算机安装程序。你只需要访问你喜欢的网络浏览器来创建你自己的 `JavaScript` 。如今，`Firefox`
+    是 JavaScript 编程最好的网络浏览器之一。因此，如果你的电脑没有 `Firefox`，建议你访问此网站：`https://www.mozilla.org`。这个浏览器免费且易用；因此，你可以轻松掌握
+    `JavaScript` 的基础而无需花费任何钱。
+
+
+    一旦你下载了 `Firefox`，就会看到两个专门为 JavaScript 编程创建的工具。这些工具是：
+
+
+    ### 1. Web 控制台
+
+
+    该工具显示有关已加载的网页的信息。它还有一个命令行功能，你可以用它在加载的页面上运行 `JavaScript` 语句。
+
+
+    要访问 `Web Console`，你只需启动 `Firefox`，点击 `Tools`（工具），并在 `Developer`（开发者）菜单中选择 `Web
+    Console`。激活 `Web Console` 后，你会在屏幕底部看到命令行。你可以向该命令行输入 `JavaScript` 表达式，然后屏幕中间的面板将向你显示输入表达式的结果。
+
+
+    此功能会立即显示结果——你会很快知道自己是否输入了错误代码。
+
+
+    这是 Web Console 工具的截图：
+
+
+    ![](img/00001.jpeg)
+
+
+    ### 2. Scratchpad
+
+
+    `Firefox` 的 `Web Console` 非常适合运行单个 `JavaScript` 表达式。虽然你可以用它运行多行，但你会发现这样做非常不方便。此外，你无法使用该工具保存你的代码片段。幸运的是，`Firefox`
+    还有另一个工具解决了上述问题。这个工具被称为 `Scratchpad`。
+
+
+    要访问此工具，你需要执行：
+
+
+    1.  启动 `Firefox`。
+
+    2.  点击 `Tools`。
+
+    3.  找到 `Developer` 部分并选择 `Scratchpad`。
+
+
+    '
+- fmt: "\nThis tool is a separate Firefox window that acts like a text editor. You\
+    \ can use it to write and run JavaScript codes on your browser. Additionally,\
+    \ you may use Scratchpad to save your new codes or load existing ones.\n\nThe\
+    \ screenshot below shows an image of the Scratchpad tool:\n\n![](images/00002.jpeg)\n\
+    \n# Your First JavaScript Application\n\nIn this section, you’ll write your first\
+    \ application using JavaScript. This simple activity will give you a taste of\
+    \ JavaScript’s features and programming environment.\n\nLaunch Scratchpad and\
+    \ enter the code below:\n\n![](images/00003.jpeg)\n\nHighlight the JavaScript\
+    \ code and press `Ctrl+R` to see the result on your screen.\n\nThe next chapter\
+    \ will discuss the syntax and features of JavaScript; thus, you will be able to\
+    \ create applications that are more complex than the one given above.\n\n# Chapter\
+    \ 2: The Basic Elements of the JavaScript Language\n\nIn this chapter, you’ll\
+    \ learn about JavaScript’s grammar, variables, data types, and constants/literals.\n\
+    \n## General Information\n\nThe syntax of this programming language is similar\
+    \ to that of Awk, Perl, Java, and Python. Additionally, it is case-sensitive and\
+    \ utilizes Unicode characters.\n\nWhen using JavaScript, programmers refer to\
+    \ computer instructions as “statements.” You should separate statements using\
+    \ a semicolon. JavaScript also supports whitespaces (e.g. tabs, spaces, and newline\
+    \ characters). This means that you may use these characters to improve the readability\
+    \ of your JavaScript statements.\n\nThe JavaScript compiler scans source codes\
+    \ from left to right and converts them into groups of input objects (i.e. comments,\
+    \ whitespaces, tokens, line terminators, and control characters).\n\n## Comments\n\
+    \nJavaScript’s syntax for writing comments is similar to that of most programming\
+    \ languages. You must use two slashes (i.e. `//`) to create a single-line comment.\
+    \ However, to create a comment that spans multiple lines, you must use `/*` and\
+    \ `*/` at the start and end of the comment, respectively. The screenshot below\
+    \ will show you how to use these characters in writing your own codes:\n\n![](images/00004.jpeg)\n\
+    \n**Important Note:** JavaScript doesn’t support nested comments (i.e. comments\
+    \ placed inside another comment).\n\n## The Declarations in JavaScript\n\nThe\
+    \ JavaScript programming language supports three types of declarations. These\
+    \ are:\n\n- `var` – Use this declaration to create a new variable. During the\
+    \ declaration, you may assign a value to the variable.\n- `let` – This declaration\
+    \ allows you to create a local variable. You may place a value on the variable\
+    \ during the declaration phase.\n- `const` – Use this declaration to create a\
+    \ constant. Constants are read-only: you can’t change their value after the declaration.\n\
+    \nLet’s discuss these declarations in detail:\n\n### The “var” Declaration\n\n\
+    The syntax of this declaration is:\n\n![](images/00005.jpeg)\n\nYou can replace\
+    \ `varname1` with any valid identifier. JavaScript has reserved keywords – words\
+    \ that cannot be used in naming variables, constants, objects, etc. You’ll learn\
+    \ about these keywords later.\n\nIn this syntax, `value1` represents the value\
+    \ of the variable. You may replace it with any valid JavaScript expression.\n\n\
+    #### How Does It Work?\n\nThe JavaScript interpreter prioritizes variable declarations\
+    \ over any type of code. The variable’s scope declared through `var` serves as\
+    \ its active execution context (i.e. either local or global).\n\nIf you’ll assign\
+    \ a value to a variable that you haven’t declared yet, you’ll get a global variable\
+    \ (i.e. a variable that can be accessed at any part of your program). Here are\
+    \ the major differences between a declared variable and an undeclared variable:\n\
+    \n- A declared variable is limited to the function through which it was declared.\
+    \ That means a function cannot access the declared variables created inside other\
+    \ functions. Undeclared variables, on the other hand, are global 100% of the time.\n\
+    - JavaScript’s interpreter will create declared variables before running any code.\
+    \ Undeclared variables, however, can only exist once the interpreter has run the\
+    \ necessary codes.\n- A declared variable is a non-changeable attribute of its\
+    \ respective function. Thus, a function cannot edit or delete the declared variables\
+    \ it contains. Undeclared variables, on the other hand, allow modifications. That\
+    \ means you can edit or delete them, depending on your needs.\n\nBecause of the\
+    \ differences outlined above, you’ll probably get unexpected or undesirable results\
+    \ from your program if you’ll fail to declare variables properly. Thus, it’s a\
+    \ good programming behavior to declare variables, regardless of their scope.\n\
+    \n### The “let” Declaration\n\nHere is the syntax of this declaration:\n\n![](images/00006.jpeg)\n\
+    \nYou may replace `var1` with the name you’d like to use for your variable.\n\n\
+    If you want to assign a value to the new variable, just replace `value1` with\
+    \ the appropriate data.\n\n#### How Does it Work?\n\nThis declaration allows you\
+    \ to create variables that are restricted in scope to the expression, block or\
+    \ statement where you used them.\n\nIf you’ll use `let`, the variables that you’ll\
+    \ get will consider their container as their scope. In this aspect, `let` is similar\
+    \ to `var`. The major difference is that a `var` variable’s scope is the whole\
+    \ function that encloses it.\n\n### The “const” Declaration\n\nWith this declaration,\
+    \ you can create a read-only reference to any value. Basically, you can still\
+    \ edit these references whenever you need to. It’s just that you won’t be able\
+    \ to transfer or reassign them after the declaration phase. The syntax of this\
+    \ declaration is:\n\n![](images/00007.jpeg)\n\n#### How Does It Work?\n\nWith\
+    \ this declaration, you can generate a constant (also known as “literal”) that\
+    \ can be either local or global. The syntax given above requires an initializer.\
+    \ That means you have to specify the variable’s value at the time of declaration.\n\
+    \nA constant is block-scoped. In this aspect, constants are similar to variables\
+    \ declared through `let`.\n\n**Important Note:** You cannot change a constant’s\
+    \ value through reassignment or re-declaration.\n\n## JavaScript Variables\n\n\
+    Variables serve as symbolic identifiers for the values needed by your programs.\
+    \ When naming your variables, you have to remember these rules:\n\n- Start the\
+    \ variable’s name using a letter, a dollar sign (i.e. `$`), or an underscore (i.e.\
+    \ `_`). You may include numbers in the name of your variable. However, you can’t\
+    \ start the name using a number. For example `javascript1` is valid but `1javascript`\
+    \ isn’t.\n- The JavaScript language is case-sensitive. That means you have to\
+    \ be consistent with letter capitalization when naming variables. For example,\
+    \ JavaScript treats `LETTER`, `Letter`, `letter` as three different variables.\n\
+    \n## How to Declare a Variable\n\nIn JavaScript, you can declare variables in\
+    \ three different ways:\n\n- Using the `var` keyword - For instance, `var z =\
+    \ 99`. You can use that syntax to create a local or global variable.\n- By assigning\
+    \ a value to a non-existing variable - For instance, `z = 99`. This method is\
+    \ much simpler than the previous one. However, you should only use this to create\
+    \ global variables.\n- Using the `let` keyword - For instance, `let a = 20`. You\
+    \ can use this syntax to declare block scope variables.\n\n## How to Evaluate\
+    \ a Variable\n\nIf you’ll declare a variable using `let` or `var` without assigning\
+    \ a value, that variable will get `undefined` as its initial value.\n\n**Important\
+    \ Note:** Accessing undeclared variables will give you an error message.\n\nYou\
+    \ may use `undefined` to check whether a variable holds a value. The image below\
+    \ will show you an excellent example:\n\n![](images/00008.jpeg)\n\nIf you’ll use\
+    \ `undefined` in the Boolean context, you’ll get `false`. For instance, the code\
+    \ below runs the function named `myFunction` since `myArray` is undefined:\n\n\
+    ```\nif (myArray) {\n  myFunction();\n}\n```\n\nThe system will give you `NaN`\
+    \ if you’ll use `undefined` in the Numeric context. Here’s an example:\n\n![](images/00010.jpeg)\n"
+  raw: 'This tool is a separate Firefox window that acts like a text editor. You can
+    use it to write and run JavaScript codes on your browser. Additionally, you may
+    use Scratchpad to save your new codes or load existing ones.
+
+
+    The screenshot below shows an image of the Scratchpad tool:
+
+
+    ![](images/00002.jpeg)
+
+
+    Your First JavaScript Application
+
+
+    In this section, you’ll write your first application using JavaScript. This simple
+    activity will give you a taste of JavaScript’s features and programming environment.
+
+
+    Launch Scratchpad and enter the code below:
+
+
+    ![](images/00003.jpeg)
+
+
+    Highlight the JavaScript code and press Ctrl+R to see the result on your screen.
+
+
+    The next chapter will discuss the syntax and features of JavaScript; thus, you
+    will be able to create applications that are more complex than the one given above.
+
+
+    Chapter 2: The Basic Elements of the JavaScript Language
+
+
+    In this chapter, you’ll learn about JavaScript’s grammar, variables, data types,
+    and constants/literals.
+
+
+    General Information
+
+
+    The syntax of this programming language is similar to that of Awk, Perl, Java,
+    and Python. Additionally, it is case-sensitive and utilizes Unicode characters.
+
+
+    When using JavaScript, programmers refer to computer instructions as “statements.”
+    You should separate statements using a semicolon. JavaScript also supports whitespaces
+    (e.g. tabs, spaces, and newline characters). This means that you may use these
+    characters to improve the readability of your JavaScript statements.
+
+
+    The JavaScript compiler scans source codes from left to right and converts them
+    into groups of input objects (i.e. comments, whitespaces, tokens, line terminators,
+    and control characters).
+
+
+    Comments
+
+
+    JavaScript’s syntax for writing comments is similar to that of most programming
+    languages. You must use two slashes (i.e. //) to create a single-line comment.
+    However, to create a comment that spans multiple lines, you must use /* and */
+    at the start and end of the comment, respectively. The screenshot below will show
+    you how to use these characters in writing your own codes:
+
+
+    ![](images/00004.jpeg)
+
+
+    Important Note: JavaScript doesn’t support nested comments (i.e. comments placed
+    inside another comment).
+
+
+    The Declarations in JavaScript
+
+
+    The JavaScript programming language supports three types of declarations. These
+    are:
+
+
+    *   var – Use this declaration to create a new variable. During the declaration,
+    you may assign a value to the variable.
+
+
+    *   let – This declaration allows you to create a local variable. You may place
+    a value on the variable during the declaration phase.
+
+
+    *   const – Use this declaration to create a constant. Constants are read-only:
+    you can’t change their value after the declaration.
+
+
+    Let’s discuss these declarations in detail:
+
+
+    The “var” Declaration
+
+
+    The syntax of this declaration is:
+
+
+    ![](images/00005.jpeg)
+
+
+    You can replace “varname1” with any valid identifier. JavaScript has reserved
+    keywords – words that cannot be used in naming variables, constants, objects,
+    etc. You’ll learn about these keywords later.
+
+
+    In this syntax, “value1” represents the value of the variable. You may replace
+    it with any valid JavaScript expression.
+
+
+    How Does It Work?
+
+
+    The JavaScript interpreter prioritizes variable declarations over any type of
+    code. The variable’s scope declared through “var” serves as its active execution
+    context (i.e. either local or global).
+
+
+    If you’ll assign a value to a variable that you haven’t declared yet, you’ll get
+    a global variable (i.e. a variable that can be accessed at any part of your program).
+    Here are the major differences between a declared variable and an undeclared variable:
+
+
+    *   A declared variable is limited to the function through which it was declared.
+    That means a function cannot access the declared variables created inside other
+    functions. Undeclared variables, on the other hand, are global 100% of the time.
+
+
+    *   JavaScript’s interpreter will create declared variables before running any
+    code. Undeclared variables, however, can only exist once the interpreter has run
+    the necessary codes.
+
+
+    *   A declared variable is a non-changeable attribute of its respective function.
+    Thus, a function cannot edit or delete the declared variables it contains. Undeclared
+    variables, on the other hand, allow modifications. That means you can edit or
+    delete them, depending on your needs.
+
+
+    Because of the differences outlined above, you’ll probably get unexpected or undesirable
+    results from your program if you’ll fail to declare variables properly. Thus,
+    it’s a good programming behavior to declare variables, regardless of their scope.
+
+
+    The “let” Declaration
+
+
+    Here is the syntax of this declaration:
+
+
+    ![](images/00006.jpeg)
+
+
+    You may replace “var1” with the name you’d like to use for your variable.
+
+
+    If you want to assign a value to the new variable, just replace “value1” with
+    the appropriate data.
+
+
+    How Does it Work?
+
+
+    This declaration allows you to create variables that are restricted in scope to
+    the expression, block or statement where you used them.
+
+
+    If you’ll use “let,” the variables that you’ll get will consider their container
+    as their scope. In this aspect, “let” is similar to “var.” The major difference
+    is that a “var” variable’s scope is the whole function that encloses it.
+
+
+    The “const” Declaration
+
+
+    With this declaration, you can create a read-only reference to any value. Basically,
+    you can still edit these references whenever you need to. It’s just that you won’t
+    be able to transfer or reassign them after the declaration phase. The syntax of
+    this declaration is:
+
+
+    ![](images/00007.jpeg)
+
+
+    How Does It Work?
+
+
+    With this declaration, you can generate a constant (also known as “literal”) that
+    can be either local or global. The syntax given above requires an initializer.
+    That means you have to specify the variable’s value at the time of declaration.
+
+
+    A constant is block-scoped. In this aspect, constants are similar to variables
+    declared through “let.”
+
+
+    Important Note: You cannot change a constant’s value through reassignment or “re-declaration.”
+
+
+    JavaScript Variables
+
+
+    Variables serve as symbolic identifiers for the values needed by your programs.
+    When naming your variables, you have to remember these rules:
+
+
+    *   Start the variable’s name using a letter, a dollar sign (i.e. $), or an underscore
+    (i.e. “_”). You may include numbers in the name of your variable. However, you
+    can’t start the name using a number. For example: “javascript1” is valid but “1javascript”
+    isn’t.
+
+
+    *   The JavaScript language is case-sensitive. That means you have to be consistent
+    with letter capitalization when naming variables. For example, JavaScript treats
+    “LETTER,” “Letter,” “letter” as three different variables.
+
+
+    How to Declare a Variable
+
+
+    In JavaScript, you can declare variables in three different ways:
+
+
+    *   Using the “var” keyword - For instance, var z = 99. You can use that syntax
+    to create a local or global variable.
+
+
+    *   By assigning a value to a non-existing variable - For instance, z = 99. This
+    method is much simpler than the previous one. However, you should only use this
+    to create global variables.
+
+
+    *   Using the “let” keyword - For instance, let a = 20. You can use this syntax
+    to declare block scope variables.
+
+
+    How to Evaluate a Variable
+
+
+    If you’ll declare a variable using “let” or “var” without assigning a value, that
+    variable will get “undefined” as its initial value.
+
+
+    Important Note: Accessing undeclared variables will give you an error message.
+
+
+    You may use undefined to check whether a variable holds a value. The image below
+    will show you an excellent example:
+
+
+    ![](images/00008.jpeg)
+
+
+    If you’ll use “undefined” in the Boolean context, you’ll get “false.” For instance,
+    the code below runs the function named myFunction since myArray is undefined:
+
+
+    ![](images/00009.jpeg)
+
+
+    The system will give you NaN if you’ll use “undefined” in the Numeric context.
+    Here’s an example:
+
+
+    ![](images/00010.jpeg)'
+  toc: []
+  trans: '
+
+
+    此工具是一个独立的 Firefox 窗口，作用类似于文本编辑器。你可以用它在浏览器中编写和运行 JavaScript 代码。此外，你还可以使用 Scratchpad
+    保存新代码或加载现有的代码。
+
+
+    下方的截图显示了 Scratchpad 工具界面：
+
+
+    ![](img/00002.jpeg)
+
+
+    # 你的第一个 JavaScript 应用程序
+
+
+    在本节中，你将使用 JavaScript 编写你的第一个应用程序。这个简单的活动将让你体验 JavaScript 的特性和编程环境。
+
+
+    启动 Scratchpad 并输入以下代码：
+
+
+    ![](img/00003.jpeg)
+
+
+    高亮 JavaScript 代码并按 `Ctrl+R` 以在屏幕上查看结果。
+
+
+    下一章将讨论 JavaScript 的语法和特性；因此，你将能够创建比上面示例更复杂的应用程序。
+
+
+    # 第 2 章：JavaScript 语言的基础元素
+
+
+    在本章中，你将学习 JavaScript 的语法、变量、数据类型以及常量/字面量。
+
+
+    ## 通用信息
+
+
+    该编程语言的语法与 Awk、Perl、Java 和 Python 相似。此外，它是区分大小写的，并使用了 Unicode 字符。
+
+
+    在使用 JavaScript 时，程序员将计算机指令称为“语句”。你应该使用分号来分隔语句。JavaScript 还支持空白字符（例如制表符、空格和换行符）。这意味着你可以使用这些字符来提高
+    JavaScript 语句的可读性。
+
+
+    JavaScript 编译器会从左到右扫描源代码，并将其转换为一组输入对象（即：注释、空白字符、标记、行终止符和控制字符）。
+
+
+    ## 注释
+
+
+    JavaScript 编写注释的语法与大多数编程语言相似。你必须使用两个斜杠（即 `//`）来创建单行注释。然而，要创建一个跨越多行的注释，你必须在注释的开头和结尾分别使用
+    `/*` 和 `*/`。下方的截图将向你展示如何在编写代码时使用这些字符：
+
+
+    ![](img/00004.jpeg)
+
+
+    **注意：** JavaScript 不支持嵌套注释（即放置在另一个内部内部注释）。
+
+
+    ## JavaScript 中的声明
+
+
+    JavaScript 编程语言支持三种类型的声明。这些是：
+
+
+    - `var` – 使用此声明创建一个新变量。在声明期间，你可以给变量赋值。
+
+    - `let` – 这种声明允许你创建一个局部变量。你可能在声明阶段给变量赋值。
+
+    - `const` – 使用此声明创建一个常量。常量是只读的：在声明后你无法更改它的值。
+
+
+    让我们详细讨论这些声明：
+
+
+    ### “var”声明
+
+
+    该声明的语法为：
+
+
+    ![](img/00005.jpeg)
+
+
+    你可以将 `varname1` 替换为任何有效的标识符。JavaScript 有保留关键字——即不能用于命名变量、常量、对象等的词汇。你将在稍后学习这些关键字。
+
+
+    在此语法中，`value1` 代表变量的值。你可以将其替换为任何有效的 JavaScript 表达式。
+
+
+    #### 它是如何工作的？
+
+
+    JavaScript 解释器对变量声明的优先级高于任何类型的代码。通过 `var` 声明的变量作用域是其活跃的执行上下文（即局部或全局）。
+
+
+    如果你给一个尚未声明的变量赋值，你将得到一个全局变量（即可以在程序的任何部分访问的变量）。以下是声明变量和未声明变量之间的主要区别：
+
+
+    - 声明的变量限于声明它的函数。这意味着函数无法访问在其他函数内部创建的声明变量。相反，未声明的变量 100% 的情况下都是全局的。
+
+    - JavaScript 解释器会在运行任何代码之前创建声明变量。然而，未声明的变量只有在解释器运行了必要的代码后才能存在。
+
+    - 声明的变量是其相应函数的不可更改的属性。因此，函数不能编辑或删除它包含的声明变量。相反，未声明的变量允许修改。这意味着你可以根据需要编辑或删除它们。
+
+
+    由于上述差异，如果你未能正确声明变量，你的程序可能会产生意料之外或不符合预期的结果。因此，无论作用域如何，声明变量都是一种良好的编程习惯。
+
+
+    ### “let”声明
+
+
+    这是该声明的语法：
+
+
+    ![](img/00006.jpeg)
+
+
+    你可以将 `var1` 替换为你想要用于变量的名称。
+
+
+    如果你想给这个新变量赋值，只需将 `value1` 替换为相应的数据即可。
+
+
+    #### 它是如何工作的？
+
+
+    这种声明允许你创建变量，其作用域被限制在使用它的表达式、块或语句中。
+
+
+    如果你使用 `let`，你得到的变量将考虑其容器视为其作用域。在这方面，`let` 与 `var` 相似。主要的区别是 `var` 变量的作用域是包含它的整个函数。
+
+
+    ### “const”声明
+
+
+    通过此声明，你可以为任何值创建一个只读引用。基本上，你仍然可以在需要时编辑这些引用。只是在声明阶段后你无法对其进行转移或重新赋值。该声明的语法为：
+
+
+    ![](img/00007.jpeg)
+
+
+    #### 它是如何工作的？
+
+
+    通过此声明，你可以生成一个常量（也称为“字面量”），它可以是局部的也可以是全局的。这种声明需要一个初始化。常量是块作用域的。在这方面，它与 `let` 声明的变量相似。
+
+
+    **注意：** 你不能通过重新赋值来更改常量的值。
+
+
+    ## JavaScript 变量
+
+
+    变量是程序所需的符号标识符。在命名变量时，你必须记住这些规则：
+
+
+    - 使用字母、美元符号（即 `$`）或下划线（即 `_`）开头命名。你可以在名称中包含数字。但是，你不能用数字开头。例如 `javascript1` 是有效的，但
+    `1javascript` 不是。
+
+    - JavaScript 语言是区分大小写的。这意味着在命名变量时必须保持大小写一致。例如，JavaScript 将 `LETTER`、`Letter` 和
+    `letter` 视为三个不同的变量。
+
+    '
+- fmt: '
+
+    If you’ll evaluate variable that holds “null,” you’ll get “0” when used in the
+    Numeric context and “false” when used in the Boolean context. Check the following
+    example:
+
+
+    ![](images/00011.jpeg)
+
+
+    # The Scope of a Variable
+
+
+    If you’ll declare variables outside of a function, you’ll get global variables.
+    That means you can utilize such variables at any part of your JavaScript program.
+    If in case you will declare variables inside a function, you’ll get local variables.
+    You can only use these variables through the function that holds them.
+
+
+    ## Hoisting
+
+
+    JavaScript allows programmers to refer to variables that haven’t been declared.
+    This technique is called variable hoisting: the system hoists (i.e. lifts to the
+    top) variables to the top section of the statement or function. However, hoisted
+    variables give “undefined” as their value. That means you’ll still get “undefined”
+    from a hoisted variable even after declaring and initializing it. Check the code
+    below:
+
+
+    ![](images/00012.jpeg)
+
+
+    Variable hoisting can turn your code into a confusing mess. To improve the readability
+    and functionality of your codes, you must place your `var` statements at the top
+    of your functions.
+
+
+    ## Global Variables
+
+
+    Actually, a global variable is a property of the programming environment’s global
+    object. In webpages, “window” serves as the global object. That means you may
+    create and access a global variable through this syntax: `window.variable`.
+
+
+    JavaScript allows you to access variables declared within one window even if you
+    are in a different window. You just have to specify the name of the window that
+    holds the variables you like to access.
+
+
+    ## JavaScript Constants
+
+
+    As discussed above, you may use `const` to generate a read-only constant in your
+    JavaScript programs. The rules involved in naming variables also apply to constants.
+    You may use letters, numbers, underscores and dollar signs. However, you cannot
+    use a number as the first character of the constant’s name.
+
+
+    Here’s an example:
+
+
+    ```
+
+    const example = “69”;
+
+    ```
+
+
+    You cannot reassign or re-declare a constant to change its value. That means you
+    have to be 100% sure of the data that you will assign on a constant at the time
+    of declaration.
+
+
+    Additionally, you cannot create a constant with the same identifier as a variable
+    or function within the same scope.
+
+
+    # Data Types and Structures
+
+
+    In this section of the book, you’ll learn about the different data types and data
+    structures supported by JavaScript. Study this material carefully since it will
+    provide you with important information regarding this programming language.
+
+
+    ## The Different Data Types in JavaScript
+
+
+    Currently, JavaScript supports seven types of data. These are:
+
+
+    *   `null` – This is a keyword that denotes a null value. Since this computer
+    language is case-sensitive, `null` is different from `NULL`, `Null`, and other
+    versions of the word.
+
+    *   `Number` – 69 or 999.99.
+
+    *   `Boolean` – This data type has two possible values: true and false.
+
+    *   `String` – This type of data involves letters. For example: Hello.
+
+    *   `undefined` – This data type is considered as a top-level attribute of any
+    program.
+
+    *   `Symbol` – This type involves distinct and unchangeable instances.
+
+    *   `Object` – Programmers use this data type to hold information and instructions
+    related to the handling and usage of data.
+
+
+    Although small in number, these data types allow you to run cool and useful functions
+    in your JavaScript programs. Functions and objects are two of the most basic elements
+    of this language. You may consider objects as containers that can store information
+    and functions as processes that your program can execute.
+
+
+    ## Converting One Data Type to Another
+
+
+    The JavaScript language is dynamically-typed; thus, you may declare variables
+    without specifying the data type that they can hold. Additionally, JavaScript
+    converts data types automatically as required during code execution. That means
+    you can declare a variable this way:
+
+
+    ```
+
+    var apple = 5;
+
+    ```
+
+
+    Later, you may go back to the same variable and give it a new value. For instance:
+
+
+    ```
+
+    apple = “This is delicious.”;
+
+    ```
+
+
+    With the codes given above, you created a variable named `apple` and gave it “5”
+    (i.e. a number data type) as the initial value, then you replaced the number with
+    a string (i.e. “This is delicious.”). Since JavaScript is dynamically-typed, the
+    reassignment of values won’t give you an error message.
+
+
+    For expressions that involve string and numeric values with `+` (i.e. one of the
+    JavaScript operators), the language converts numbers to strings. The code below
+    will help you understand this concept:
+
+
+    ```
+
+    A = “My age is ” + 18 // “My age is 18”
+
+    B = 18 + “ is my age” // “18 is my age”
+
+    ```
+
+
+    JavaScript won’t convert numbers to strings in expressions that involve other
+    operators (e.g. -, `*`, /, etc.). For instance:
+
+
+    ```
+
+    “69” – 9 // 60
+
+    “69” + 9 // “699”
+
+    ```
+
+
+    ### The String-to-Number Conversion
+
+
+    If you used a string value to represent a number, you may convert the data type
+    using the following functions:
+
+
+    *   `parseFloat()`
+
+    *   `parseInt()`
+
+
+    The `parseInt()` function returns whole numbers. That means you can use it to
+    simplify decimal numbers. Also, it is a good programming practice to include “radix”
+    (i.e. a parameter of the `parseInt()` function) whenever you use `parseInt()`.
+    Basically, radix allows you to specify the numerical system that you must use.
+
+
+    ## The Literals in JavaScript
+
+
+    In the JavaScript language, you use a literal to represent a value. The value
+    that we’re talking about here is fixed. Aside from variables, you can also add
+    fixed values in your JavaScript codes. In this section, you’ll learn about the
+    following kinds of literals:
+
+
+    *   Integers
+
+    *   Array Literals
+
+    *   Object Literals
+
+    *   Boolean Literals
+
+    *   String Literals
+
+    *   Floating-Point Literals
+
+
+    ### Integers
+
+
+    In JavaScript, you can express integers as binary, decimal, octal or hexadecimal.
+
+
+    *   Integer literals in decimal form involve a sequence of numbers that don’t
+    accept zero as the first character.
+
+    *   Octal integers use zero as their first character. As a rule, this type of
+    integer literal can only use the following digits: 0-7.
+
+    *   Hexadecimal integers begin with `0X` or `0x`. They can have numbers (i.e.
+    from 0 to 9) and letters (i.e a-f).
+
+    *   Binary integers always start with `0b` or `0B`. They can only use two digits:
+    1 and 0.
+
+
+    Here are some examples of integer literals:
+
+
+    *   Decimal – 1, 223 and -360
+
+    *   Octal – 022, 004 and -045
+
+    *   Hexadecimal – 0x2231, 0x99111 and -0xF24
+
+    *   Binary – 0b23, 0b1100 and -0b10
+
+
+    ### Array Literal
+
+
+    Basically, this type of literal is composed of 0 or more expressions. Each of
+    these expressions represents an array object, placed inside a pair of square brackets
+    (i.e. [ ]). If you’ll generate an array through an array literal, the system will
+    initialize it with your specified values as the objects. The length of the array
+    is equal to the quantity of arguments you specified.
+
+
+    The code below creates an array called `Countries` with four elements and a length
+    of four:
+
+
+    ```
+
+    var Countries = [Bulgaria”, “Colombia”, “Philippines”, “United States of America”];
+
+    ```
+
+
+    If you’ll create an array through literal inside a top-level statement, JavaScript
+    will interpret the array every time it checks the expression that holds the array
+    literal. Additionally, if you will use a literal for a function, the system will
+    create that literal whenever you invoke that function.
+
+
+    ### Extra Commas inside Arrays
+
+
+    In JavaScript, you don’t have to indicate all of the elements in an array. If
+    you’ll place two commas consecutively, the system will create the array and assign
+    “undefined” for the objects you didn’t specify. The code below creates an array
+    called `Cars:`
+
+
+    ```
+
+    var Cars = [“BMW” , , “Toyota”];
+
+    ```
+
+
+    “Cars” has three elements: BMW, undefined, and Toyota.
+
+
+    JavaScript ignores commas that are placed at the end of the array. That means
+    you cannot add an undefined object at the last section of your arrays.
+
+    '
+  raw: 'If you’ll evaluate variable that holds “null,” you’ll get “0” when used in
+    the Numeric context and “false” when used in the Boolean context. Check the following
+    example:
+
+
+    ![](images/00011.jpeg)
+
+
+    The Scope of a Variable
+
+
+    If you’ll declare variables outside of a function, you’ll get global variables.
+    That means you can utilize such variables at any part of your JavaScript program.
+    If in case you will declare variables inside a function, you’ll get local variables.
+    You can only use these variables through the function that holds them.
+
+
+    Hoisting
+
+
+    JavaScript allows programmers to refer to variables that haven’t been declared.
+    This technique is called variable hoisting: the system hoists (i.e. lifts to the
+    top) variables to the top section of the statement or function. However, hoisted
+    variables give “undefined” as their value. That means you’ll still get “undefined”
+    from a hoisted variable even after declaring and initializing it. Check the code
+    below:
+
+
+    ![](images/00012.jpeg)
+
+
+    Variable hoisting can turn your code into a confusing mess. To improve the readability
+    and functionality of your codes, you must place your “var” statements at the top
+    of your functions.
+
+
+    Global Variables
+
+
+    Actually, a global variable is a property of the programming environment’s global
+    object. In webpages, “window” serves as the global object. That means you may
+    create and access a global variable through this syntax: window.variable.
+
+
+    JavaScript allows you to access variables declared within one window even if you
+    are in a different window. You just have to specify the name of the window that
+    holds the variables you like to access.
+
+
+    JavaScript Constants
+
+
+    As discussed above, you may use “const” to generate a read-only constant in your
+    JavaScript programs. The rules involved in naming variables also apply to constants.
+    You may use letters, numbers, underscores and dollar signs. However, you cannot
+    use a number as the first character of the constant’s name.
+
+
+    Here’s an example:
+
+
+    const example = “69”;
+
+
+    You cannot reassign or re-declare a constant to change its value. That means you
+    have to be 100% sure of the data that you will assign on a constant at the time
+    of declaration.
+
+
+    Additionally, you cannot create a constant with the same identifier as a variable
+    or function within the same scope.
+
+
+    Data Types and Structures
+
+
+    In this section of the book, you’ll learn about the different data types and data
+    structures supported by JavaScript. Study this material carefully since it will
+    provide you with important information regarding this programming language.
+
+
+    The Different Data Types in JavaScript
+
+
+    Currently, JavaScript supports seven types of data. These are:
+
+
+    *   null – This is a keyword that denotes a null value. Since this computer language
+    is case-sensitive, null is different from NULL, Null, and other versions of the
+    word.
+
+
+    *   Number – 69 or 999.99.
+
+
+    *   Boolean – This data type has two possible values: true and false.
+
+
+    *   String – This type of data involves letters. For example: Hello.
+
+
+    *   undefined – This data type is considered as a top-level attribute of any program.
+
+
+    *   Symbol – This type involves distinct and unchangeable instances.
+
+
+    *   Object – Programmers use this data type to hold information and instructions
+    related to the handling and usage of data.
+
+
+    Although small in number, these data types allow you to run cool and useful functions
+    in your JavaScript programs. Functions and objects are two of the most basic elements
+    of this language. You may consider objects as containers that can store information
+    and functions as processes that your program can execute.
+
+
+    Converting One Data Type to Another
+
+
+    The JavaScript language is dynamically-typed; thus, you may declare variables
+    without specifying the data type that they can hold. Additionally, JavaScript
+    converts data types automatically as required during code execution. That means
+    you can declare a variable this way:
+
+
+    var apple = 5;
+
+
+    Later, you may go back to the same variable and give it a new value. For instance:
+
+
+    apple = “This is delicious.”;
+
+
+    With the codes given above, you created a variable named “apple” and gave it “5”
+    (i.e. a number data type) as the initial value, then you replaced the number with
+    a string (i.e. “This is delicious.”). Since JavaScript is dynamically-typed, the
+    reassignment of values won’t give you an error message.
+
+
+    For expressions that involve string and numeric values with “+” (i.e. one of the
+    JavaScript operators), the language converts numbers to strings. The code below
+    will help you understand this concept:
+
+
+    A = “My age is ” + 18 // “My age is 18”
+
+
+    B = 18 + “ is my age” // “18 is my age”
+
+
+    JavaScript won’t convert numbers to strings in expressions that involve other
+    operators (e.g. -, *, /, etc.). For instance:
+
+
+    “69” – 9 // 60
+
+
+    “69” + 9 // “699”
+
+
+    The String-to-Number Conversion
+
+
+    If you used a string value to represent a number, you may convert the data type
+    using the following functions:
+
+
+    *   parseFloat()
+
+
+    *   parseInt()
+
+
+    The parseInt() function returns whole numbers. That means you can use it to simplify
+    decimal numbers. Also, it is a good programming practice to include “radix” (i.e.
+    a parameter of the parseInt() function) whenever you use parseInt(). Basically,
+    radix allows you to specify the numerical system that you must use.
+
+
+    The Literals in JavaScript
+
+
+    In the JavaScript language, you use a literal to represent a value. The value
+    that we’re talking about here is fixed. Aside from variables, you can also add
+    fixed values in your JavaScript codes. In this section, you’ll learn about the
+    following kinds of literals:
+
+
+    *   Integers
+
+
+    *   Array Literals
+
+
+    *   Object Literals
+
+
+    *   Boolean Literals
+
+
+    *   String Literals
+
+
+    *   Floating-Point Literals
+
+
+    Integers
+
+
+    In JavaScript, you can express integers as binary, decimal, octal or hexadecimal.
+
+
+    *   Integer literals in decimal form involve a sequence of numbers that don’t
+    accept zero as the first character.
+
+
+    *   Octal integers use zero as their first character. As a rule, this type of
+    integer literal can only use the following digits: 0-7.
+
+
+    *   Hexadecimal integers begin with 0X or 0x. They can have numbers (i.e. from
+    0 to 9) and letters (i.e. a-f)
+
+
+    *   Binary integers always start with 0b or 0B. They can only use two digits:
+    1 and 0.
+
+
+    Here are some examples of integer literals:
+
+
+    *   Decimal – 1, 223 and -360
+
+
+    *   Octal – 022, 0004 and -045
+
+
+    *   Hexadecimal – 0x2231, 0x99111 and -0xF2A4
+
+
+    *   Binary – 0b23, 0b1100 and -0b10
+
+
+    Array Literal
+
+
+    Basically, this type of literal is composed of 0 or more expressions. Each of
+    these expressions represents an array object, placed inside a pair of square brackets
+    (i.e. [ ]). If you’ll generate an array through an array literal, the system will
+    initialize it with your specified values as the objects. The length of the array
+    is equal to the quantity of arguments you specified.
+
+
+    The code below creates an array called Countries with four elements and a length
+    of four:
+
+
+    var Countries = [“Bulgaria”, “Colombia”, “Philippines”, “United States of America”];
+
+
+    If you’ll create an array through a literal inside a top-level statement, JavaScript
+    will interpret the array every time it checks the expression that holds the array
+    literal. Additionally, if you will use a literal for a function, the system will
+    create that literal whenever you invoke that function.
+
+
+    Extra Commas inside Arrays
+
+
+    In JavaScript, you don’t have to indicate all of the elements in an array. If
+    you’ll place two commas consecutively, the system will create the array and assign
+    “undefined” for the objects you didn’t specify. The code below creates an array
+    called “Cars:”
+
+
+    var Cars = [“BMW” , , “Toyota”];
+
+
+    “Cars” has three elements: BMW, undefined, and Toyota.
+
+
+    JavaScript ignores commas that are placed at the end of the array. That means
+    you cannot add an undefined object at the last section of your arrays.'
+  toc: []
+  trans: '
+
+
+    如果你评估一个持有“null”的变量，在数值（Numeric）上下文中使用时将得到“0”，在布尔（Boolean）上下文中使用时将得到“false”。查看下面的示例：
+
+
+    ![](img/00011.jpeg)
+
+
+    # 变量的作用域
+
+
+    如果你在函数外部声明变量，将获得全局变量。这意味着你可以在 JavaScript 程序的任何部分利用这些变量。如果你在函数内部声明变量，将获得局部变量。你只能通过包含这些变量的函数来使用它们。
+
+
+    ## 变量提升 (Hoisting)
+
+
+    JavaScript 允许程序员引用尚未声明的变量。这种技术被称为变量提升：系统会将变量提升（即移动到顶部）到语句或函数的顶部区域。然而，提升后的变量其值为值为“undefined”。这意味着即使在对一个提升的变量进行声明和初始化之后，你仍然会从该提升变量中得到“undefined”。查看下面的代码：
+
+
+    ![](img/00012.jpeg)
+
+
+    变量提升可能会让你的代码变得混乱的一团糟。为了提高代码的可读性和功能性，你必须将 `var` 语句放在函数的顶部。
+
+
+    ## 全局变量
+
+
+    实际上，全局变量是编程环境全局对象的一个属性。在网页中，“window”充当全局对象。这意味着你可以通过这种语法创建并访问全局变量：`window.variable`。
+
+
+    JavaScript 允许你即使在不同的窗口中，也可以访问在其中一个窗口中声明的变量。你只需要指定包含你想要访问的变量的窗口名称即可。
+
+
+    ## JavaScript 常量
+
+
+    如上所述，你可能可以使用 `const` 在你的 JavaScript 程序中生成一个只读常量。涉及变量命名的规则也适用于常量。你可以使用字母、数字、下划线和美元符号。然而，你不能使用数字作为常量名的第一个字符。
+
+
+    这里有一个示例：
+
+
+    ```
+
+    const example = “69”;
+
+    ```
+
+
+    你不能通过重新赋值或重新声明常量来改变它的值。这意味着在声明常量时，你必须 100% 确定要赋值给常量的数据。
+
+
+    此外，你不能在同一作用域内创建一个与变量或函数相同标识符常量。
+
+
+    # 数据类型和结构
+
+
+    在本书的这一部分，你将学习 JavaScript 支持的不同数据类型和数据结构。请仔细学习这些材料，因为它们将为你提供有关此编程语言的重要信息。
+
+
+    ## JavaScript 中不同的数据类型
+
+
+    目前，JavaScript 支持七种数据类型。这些是：
+
+
+    *   `null` – 这是一个表示空值的关键字。由于这种计算机语言对大小写敏感，`null` 与 `NULL`、`Null` 以及该词的其他版本不同。
+
+    *   `Number` – 69 或 999.99。
+
+    *   `Boolean` – 这种数据类型有两个可能的值：true 和 false。
+
+    *   `String` – 这种类型的数据涉及字母。例如：Hello。
+
+    *   `undefined` – 这种数据类型被认为是任何程序的顶层属性。
+
+    *   `Symbol` – 这种类型涉及独特且不可变的实例。
+
+    *   `Object` – 程序员使用这种数据类型来存储与处理和使用数据相关的信息和指令。
+
+
+    尽管数量很少，但这些数据类型允许你在 JavaScript 程序中运行酷且实用的函数。函数和对象是这种语言最基本的两个元素。你可以将对象视为可以存储信息的容器，将函数视为你的程序可以执行的过程。
+
+
+    ## 将一种数据类型转换为另一种
+
+
+    JavaScript 语言是动态类型类型；因此，你可以在不指定它们可以持有的数据类型的情况下声明变量。此外，JavaScript 会在代码执行期间根据需要自动转换数据类型。这意味着你可以以这种方式声明变量：
+
+
+    ```
+
+    var apple = 5;
+
+    ```
+
+
+    之后，你可以返回同一个变量并给它一个新值。例如：
+
+
+    ```
+
+    apple = “This is delicious.”;
+
+    ```
+
+
+    通过上述代码，你创建了一个名为 `apple` 的变量，并给它一个“5”（即数字数据类型）作为初始值，然后你用字符串替换了数字（即“This is delicious.”）。由于
+    JavaScript 是动态类型的，值的重新赋值不会给你带来错误信息。
+
+
+    对于涉及字符串和数值值且包含 `+`（即 JavaScript 运算符之一）的表达式，该语言会将数字转换为字符串。下面的代码将帮助你理解这个概念：
+
+
+    ```
+
+    A = “My age is ” + 18 // “My age is 18”
+
+    B = 18 + “ is my age” // “18 is my age”
+
+    ```
+
+
+    JavaScript 在涉及其他运算符（例如 -、`*`、+/ 等）的表达式中不会将数字转换为字符串。例如：
+
+
+    ```
+
+    “69” – 9 // 60
+
+    “69” + 9 // “699”
+
+    ```
+
+
+    ### 字符串到数字的转换
+
+
+    如果你使用字符串值来表示数字，可以使用以下函数转换数据类型：
+
+
+    *   `parseFloat()`
+
+    *   `parseInt()`
+
+
+    `parseInt()` 函数返回整数。这意味着你可以用它来简化小数。此外，在使用 `parseInt()` 的时候，包含“进制”（radix，即 `parseInt()`
+    函数的参数）是一个良好的编程习惯。基本上，进制允许你指定你必须使用的数值计数系统。
+
+
+    ## JavaScript 中的字面量 (Literals)
+
+
+    在 JavaScript 语言中，你使用字面量来表示一个值。我们在这里讨论的值是固定的。除了变量外，你还可以在你的 JavaScript 代码中添加固定值。在本节中，你将学习以下类型的字面量：
+
+
+    *   整数
+
+    *   数组字面量
+
+    *   对象字面量
+
+    *   布尔字面量
+
+    *   字符串字面量
+
+    *   浮点
+
+
+    ### 整数
+
+
+    在 JavaScript 中，你可以以二进制、十进制或十六进制表示整数。
+
+
+    *   十进制字面量不接受零作为第一个字符。
+
+    *   八进制整数使用零作为其第一个字符。根据规则，这种类型的整数字面量只能使用数字 0-7。
+
+    *   十六进制整数以 `0X` 或 `0x` 开头。它们可以是数字（0-9）和字母（a-f）。
+
+    *   二进制整数始终以 `0b` 或 `0B` 开头。它们只能使用数字：1 和 0。
+
+
+    这里是整数字面量的示例：
+
+
+    *   十进制 – 1, 223 和 -360
+
+    *   八进制 – 022, 004 和 -045
+
+    *   十六进制 – 0x223, 0x9911 和 -0xF24
+
+    *   二进制 – 0b23, 0b1100 和 -0b10
+
+
+    ### 这种字面量由零或多个表达式组成。每个表达式表示一个数组对象，放在一对括号（即 [ ]）中。如果你通过数组字面量生成数组，系统将用你指定的值初始化它。数组的长度等于你指定的参数数量。
+
+
+    下面的代码创建一个名为 `Countries` 的数组，包含四个元素且长度为四个：
+
+
+    ```
+
+    var Countries = [Bulgaria”, “Colombia”, “Philippines”, “United States of America”];
+
+    ```
+
+
+    如果你在顶层语句内部通过字面量创建数组，JavaScript 每次检查持有数组字面量的表达式时都会解释该数组。此外，如果你为函数使用字面量，系统每当调用该函数时都会创建字面量。
+
+
+    ### 数组内部额外的逗号
+
+
+    在 JavaScript 中，你不需要指示数组中的所有元素。如果你连续放置两个逗号，系统将创建数组并为未指定的对象分配“undefined”。下面的代码创建一个名为
+    `Cars` 的数组：
+
+
+    ```
+
+    var Cars = [“BMW” , , “Toyota”];
+
+    ```
+
+
+    “Cars”有三个元素：BMW、undefined 和 Toyota。
+
+
+    JavaScript 忽略位于数组末尾的逗号。这意味着你不能在数组的最后部分添加一个 undefined 对象。
+
+
+    '
+- fmt: "\n**Important Note:** Trailing commas (i.e. commas that are placed at the\
+    \ end of arrays or statements) can produce errors in web browsers. Because of\
+    \ this, you should remove all of the trailing commas in your JavaScript codes.\n\
+    \n# Object Literals\n\nObject literals are lists of an object’s property names\
+    \ and assigned values. A pair of curly braces (i.e. `{}`) encloses these elements.\
+    \ In JavaScript, you can’t place an object literal at the start of your codes.\
+    \ This action can result to errors and/or undesirable effects on your JavaScript\
+    \ programs.\n\nThe property name of an object can be any string (even an empty\
+    \ one). If you are using an invalid number or identifier, you must enclose it\
+    \ with quotation marks. To access property names that involve invalid identifiers,\
+    \ use a pair of brackets (i.e. `[ ]`). \n\n# Boolean Literals\n\nThis type involves\
+    \ two values: (1) `true` and (2) `false`.\n\nKeep in mind that Boolean literals\
+    \ are different from the Boolean data type (which was discussed above). In general,\
+    \ Boolean objects serve as wrappers around the Boolean data type.\n\n# String\
+    \ Literals\n\nString literals are composed of zero or more characters placed inside\
+    \ a pair of quotation marks (i.e. either single or double quotes). Here are some\
+    \ examples:\n\n*   “water”\n*   ‘car’\n*   “3.14”\n*   “I’d like to use `\\t`\
+    \ to add a tab character”\n*   “Peter Pan”\n\nYou may invoke any method of the\
+    \ string object on a string literal – JavaScript converts string literals to string\
+    \ objects automatically, invokes the method you need and discards the string object\
+    \ that was created.\n\n**Important Note:** Unless your codes require string objects,\
+    \ you must use string literals when writing JavaScript statements.\n\n## How to\
+    \ Use Special Characters in your Strings\n\nJavaScript allows you to include special\
+    \ characters in your strings. Here’s an example:\n\n“first line \\n second line”\n\
+    \nThe table below shows the special characters supported by JavaScript:\n\n| Special\
+    \ Character | Purpose |\n| :--- | :--- |\n| `\\0` | This character adds a null\
+    \ byte into your code. |\n| `\\b` | Using this special character is like pressing\
+    \ the backspace key on your keyboard. |\n| `\\f` | With this character, you can\
+    \ add a form feed into your JavaScript statements. |\n| `\\n` | Use this if you\
+    \ want to add a newline character in your codes. Typing this special character\
+    \ is like pressing the Enter key on your keyboard. |\n| `\\r` | This character\
+    \ allows you to apply a carriage return on your codes. |\n| `\\t` | This special\
+    \ character adds a tab character (i.e. the character you’ll get after pressing\
+    \ the Tab key on your keyboard) into your codes. |\n| `\\v` | With this character,\
+    \ you can quickly add a vertical tab into your statements. |\n| `\\\\'` | Use\
+    \ this character to add an apostrophe or single quotation mark into your statements.\
+    \ |\n| `\\\\\"` | Use this character if you want to add a double quote into your\
+    \ code. |\n| `\\\\` | This character allows you to include a backslash character\
+    \ into your JavaScript statement. |\n| `\\xxx` | You can use this character to\
+    \ add a Latin-1 symbol to your codes. This special character requires octal digits\
+    \ within this range: `0- 377\\.`. For instance, `\\251` will add “©” (i.e. the\
+    \ copyright symbol) into your statement. |\n| `\\xXX` | This is similar to the\
+    \ previous one. You can use this character to add Latin-1 symbols into your codes.\
+    \ The only difference is that this particular character requires two hexadecimal\
+    \ values within this range `00-FF`. For instance, `\\xA9` adds © into your JavaScript\
+    \ code. |\n| `\\uXXXX` | This character adds Unicode symbols to your codes. It\
+    \ requires four hexadecimal values. For instance, `\\u00A9` adds © into your code.\
+    \ |\n\n## How to Escape a Character\n\nIn JavaScript, quotation marks are used\
+    \ to start and terminate strings. However, in some situations, you have to include\
+    \ a quotation mark into your codes - that is, you want an ordinary quotation mark\
+    \ (not the JavaScript symbol). In this case, you must introduce the quotation\
+    \ mark using a backslash (i.e. `\\`). This technique is called “escaping the character.”\
+    \ Typing a backslash before a special symbol turns that symbol into an ordinary\
+    \ one.\n\n**Important Note:** Sometimes, you have to add an ordinary backslash\
+    \ into your statements. Well, you can do that quickly and easily. You just have\
+    \ to type two backslashes (i.e. `\\\\`). This action “escapes” the backslash character\
+    \ itself.\n\n# Floating-Point Literals\n\nFloating-point literals have the following\
+    \ parts:\n\n*   A decimal integer\n*   An exponent\n*   A fraction\n*   A decimal\
+    \ point\n\nYou must use “E” or “e” to represent the exponent section of your floating-point\
+    \ literals. After indicating the exponent, you should place the integer (which\
+    \ can be preceded by “-” or “+”). In general, floating-point literals should should\
+    \ have at least one number and either an exponent or decimal point.\n\nHere is\
+    \ the syntax of a floating-point literal:\n\n![](images/00013.jpeg)\n\nHere are\
+    \ some examples of floating-point literals:\n\n*   .2e-34\n*   3.15\n*   -.145\n\
+    *   -4.6E+69\n\n# JavaScript Keywords\n\nThis section of the book will show you\
+    \ all of the keywords in JavaScript. All of these words serve a special purpose\
+    \ in the JavaScript programming language; thus, you can’t use any of them in naming\
+    \ your variables, functions, objects, etc.\n\n| switch | abstract | Instanceof\
+    \ | else |\n| int | enum | synchronized | boolean |\n| this | break | interface\
+    \ | export |\n| long | byte | throw | extends |\n| throws | case | native | false\
+    \ |\n| new | transient | final | catch |\n| true | class | package | char |\n\
+    | private | const | typeof | for |\n| function | var | protected | void |\n| return\
+    \ | default | volatile | if |\n| implements | while | delete | short |\n| do |\
+    \ with | static | import |\n\n# Chapter 3: JavaScript’s Control Flow Statements\n\
+    \nThis language offers a compact group of control flow statements that you can\
+    \ add to codes. In general, a control flow statement boosts the functionality\
+    \ and interactivity of a program. This section of the book focuses on control\
+    \ flow statements.\n\n## The Block Statement\n\nProgrammers consider this as the\
+    \ most basic statement in JavaScript. Use this to group your JavaScript statements.\
+    \ When writing your programs, enclose the block statement using a pair of brackets.\n\
+    \nThe image below shows the syntax of a block statement:\n\n![](images/00014.jpeg)\n\
+    \nIn general, programmers use block statements for control flow statements (i.e.\
+    \ for, if, etc.). Here’s an example:\n\n```javascript\nwhile (y > 69) {\n    123;\n\
+    }\n```\n\nIn the code snippet above, `123;` serves as the block statement.\n\n\
+    ## The Conditional Statements\n\nConditional statements are sets of commands that\
+    \ run if the assigned condition is true. The JavaScript language offers two kinds\
+    \ of conditional statements: (1) `if... else` and (2) `switch`.\n\nLet’s discuss\
+    \ these conditional statements in detail:\n\n### The “if... else” Statement\n\n\
+    With this statement, you can run a command as long as the assigned condition is\
+    \ true. It involves an `else` clause (which is optional). The `else` clause holds\
+    \ a statement that will run if the assigned condition is false. The syntax of\
+    \ a basic `if... else` statement is:\n\n![](images/00015.jpeg)\n\nSince your condition\
+    \ must get either “true” or “false,” you must use Boolean expressions when writing\
+    \ a conditional statement. If the condition is true, the first statement will\
+    \ run; otherwise, the second one will run.\n\nJavaScript allows you to set multiple\
+    \ conditions in your conditional statements. You just have to combine several\
+    \ `if` and `else` clauses in a conditional statement. Here’s the syntax that you\
+    \ must use:\n\n![](images/00016.jpeg)\n\nTo run multiple statements, you must\
+    \ place them inside a block statement (i.e. `{ …}`). Programming experts claim\
+    \ that it’s best to utilize block statements, particularly when combining if statements.\
+    \ Check the following example:\n\n![](images/00017.jpeg)\n"
+  raw: 'Important Note: Trailing commas (i.e. commas that are placed at the end of
+    arrays or statements) can produce errors in web browsers. Because of this, you
+    should remove all of the trailing commas in your JavaScript codes.
+
+
+    Object Literals
+
+
+    Object literals are lists of an object’s property names and assigned values. A
+    pair of curly braces (i.e. {}) encloses these elements. In JavaScript, you can’t
+    place an object literal at the start of your codes. This action can result to
+    errors and/or undesirable effects on your JavaScript programs.
+
+
+    The property name of an object can be any string (even an empty one). If you are
+    using an invalid number or identifier, you must enclose it with quotation marks.
+    To access property names that involve invalid identifiers, use a pair of brackets
+    (i.e. [ ]).
+
+
+    Boolean Literals
+
+
+    This type involves two values: (1) true and (2) false.
+
+
+    Keep in mind that Boolean literals are different from the Boolean data type (which
+    was discussed above). In general, Boolean objects serve as wrappers around the
+    Boolean data type.
+
+
+    String Literals
+
+
+    String literals are composed of zero or more characters placed inside a pair of
+    quotation marks (i.e. either single or double quotes). Here are some examples:
+
+
+    *   “water”
+
+
+    *   ‘car’
+
+
+    *   “3.14”
+
+
+    *   “I’d like to use \t to add a tab character”
+
+
+    *   “Peter Pan”
+
+
+    You may invoke any method of the string object on a string literal – JavaScript
+    converts string literals to string objects automatically, invokes the method you
+    need and discards the string object that was created.
+
+
+    Important Note: Unless your codes require string objects, you must use string
+    literals when writing JavaScript statements.
+
+
+    How to Use Special Characters in your Strings
+
+
+    JavaScript allows you to include special characters in your strings. Here’s an
+    example:
+
+
+    “first line \n second line”
+
+
+    The table below shows the special characters supported by JavaScript:
+
+
+    | Special Character | Purpose |
+
+
+    | \0 | This character adds a null byte into your code. |
+
+
+    | \b | Using this special character is like pressing the backspace key on your
+    keyboard. |
+
+
+    | \f | With this character, you can add a form feed into your JavaScript statements.
+    |
+
+
+    | \n | Use this if you want to add a newline character in your codes. Typing this
+    special character is like pressing the Enter key on your keyboard. |
+
+
+    | \r | This character allows you to apply a carriage return on your codes. |
+
+
+    | \t | This special character adds a tab character (i.e. the character you’ll
+    get after pressing the Tab key on your keyboard) into your codes. |
+
+
+    | \v | With this character, you can quickly add a vertical tab into your statements.
+    |
+
+
+    | \’ | Use this character to add an apostrophe or single quotation mark into your
+    statements. |
+
+
+    | \” | Use this character if you want to add a double quote into your code. |
+
+
+    | \\ | This character allows you to include a backslash character into your JavaScript
+    statement. |
+
+
+    | \xxx | You can use this character to add a Latin-1 symbol to your codes. This
+    special character requires octal digits within this range: 0- 377\. For instance,
+    \251 will add “©” (i.e. the copyright symbol) into your statement. |
+
+
+    | \xXX | This is similar to the previous one. You can use this character to add
+    Latin-1 symbols into your codes. The only difference is that this particular character
+    requires two hexadecimal values within this range 00-FF. For instance, \xA9 adds
+    © into your JavaScript code. |
+
+
+    | \uXXXX | This character adds Unicode symbols to your codes. It requires four
+    hexadecimal values. For instance, \u00A9 adds © into your code. |
+
+
+    How to Escape a Character
+
+
+    In JavaScript, quotation marks are used to start and terminate strings. However,
+    in some situations, you have to include a quotation mark into your codes - that
+    is, you want an ordinary quotation mark (not the JavaScript symbol). In this case,
+    you must introduce the quotation mark using a backslash (i.e. \). This technique
+    is called “escaping the character.” Typing a backslash before a special symbol
+    turns that symbol into an ordinary one.
+
+
+    Important Note: Sometimes, you have to add an ordinary backslash into your statements.
+    Well, you can do that quickly and easily. You just have to type two backslashes
+    (i.e. \\). This action “escapes” the backslash character itself.
+
+
+    Floating-Point Literals
+
+
+    Floating-point literals have the following parts:
+
+
+    *   A decimal integer
+
+
+    *   An exponent
+
+
+    *   A fraction
+
+
+    *   A decimal point
+
+
+    You must use “E” or “e” to represent the exponent section of your floating-point
+    literals. After indicating the exponent, you should place the integer (which can
+    be preceded by “-” or “+”). In general, floating-point literals should have at
+    least one number and either an exponent or decimal point.
+
+
+    Here is the syntax of a floating-point literal:
+
+
+    ![](images/00013.jpeg)
+
+
+    Here are some examples of floating-point literals:
+
+
+    *   .2e-34
+
+
+    *   3.15
+
+
+    *   -.145
+
+
+    *   -4.6E+69
+
+
+    JavaScript Keywords
+
+
+    This section of the book will show you all of the keywords in JavaScript. All
+    of these words serve a special purpose in the JavaScript programming language;
+    thus, you can’t use any of them in naming your variables, functions, objects,
+    etc.
+
+
+    | switch | abstract | Instanceof | else |
+
+
+    | int | enum | synchronized | boolean |
+
+
+    | this | break | interface | export |
+
+
+    | long | byte | throw | extends |
+
+
+    | throws | case | native | false |
+
+
+    | new | transient | final | catch |
+
+
+    | true | class | package | char |
+
+
+    | final | null | finally | try |
+
+
+    | private | const | typeof | for |
+
+
+    | function | continue | var | protected |
+
+
+    | void | debugger | public | goto |
+
+
+    | return | default | volatile | if |
+
+
+    | implements | while | delete | short |
+
+
+    | do | with | static | import |
+
+
+    | super | double | in |  |
+
+
+    Chapter 3: JavaScript’s Control Flow Statements
+
+
+    This language offers a compact group of control flow statements that you can add
+    to your codes. In general, a control flow statement boosts the functionality and
+    interactivity of a JavaScript program. This section of the book focuses on control
+    flow statements.
+
+
+    The Block Statement
+
+
+    Programmers consider this as the most basic statement in JavaScript. Use this
+    to group your JavaScript statements. When writing your programs, enclose the block
+    statement using a pair of brackets.
+
+
+    The image below shows the syntax of a block statement:
+
+
+    ![](images/00014.jpeg)
+
+
+    In general, programmers use block statements for control flow statements (i.e.
+    for, if, while, etc.). Here’s an example:
+
+
+    while (y > 69) {
+
+
+                  123;
+
+
+    }
+
+
+    In the code snippet given above, “123;” serves as the block statement.
+
+
+    The Conditional Statements
+
+
+    Conditional statements are sets of commands that run if the assigned condition
+    is true. The JavaScript language offers two kinds of conditional statements: (1)
+    if… else and (2) switch.
+
+
+    Let’s discuss these conditional statements in detail:
+
+
+    The “if… else” Statement
+
+
+    With this statement, you can run a command as long as the assigned condition is
+    true. It involves an “else” clause (which is optional). The “else” clause holds
+    a statement that will run if the assigned condition is false. The syntax of a
+    basic “if… else” statement is:
+
+
+    ![](images/00015.jpeg)
+
+
+    Since your condition must get either “true” or “false,” you must use Boolean expressions
+    when writing a conditional statement. If the condition is true, the first statement
+    will run; otherwise, the second one will run.
+
+
+    JavaScript allows you to set multiple conditions in your conditional statements.
+    You just have to combine several “if” and “else” clauses in a conditional statement.
+    Here’s the syntax that you must use:
+
+
+    ![](images/00016.jpeg)
+
+
+    To run multiple statements, you must place them inside a block statement (i.e.
+    { … }). Programming experts claim that it’s best to utilize block statements,
+    particularly when combining if statements. Check the following example:
+
+
+    ![](images/00017.jpeg)'
+  toc: []
+  trans: "\n\n**重要备注：** 随逗号（即放置在数组或语句末尾的逗号）可能会在浏览器中产生错误。因此，你应该移除 JavaScript 代码中所有的尾随逗号。\n\
+    \n# 对象字面量 (Object Literals)\n\n对象字面量是对象属性名及其赋值值的列表。一对大括号（即 `{}`）包围了这些元素。在 JavaScript\
+    \ 中，你不能在代码的开头放置对象字面量。这种操作可能会导致错误和/或对你的 JavaScript 程序产生不利的影响。\n\n对象的属性名可以是任何字符串（即使是空字符串）。如果你使用无效的数字或标识符，必须用引号将其括起来。要访问涉及无效标识符的属性名，请使用方括号（即\
+    \ `[ ]`）。 \n\n# 布尔字面量 (Boolean Literals)\n\n这种类型涉及两个值：(1) `true` 和 (2) `false`。\n\
+    \n请记住，布尔字面量与布尔数据类型（上文讨论过）不同。通常，布尔对象作为布尔数据类型的包装器。\n\n# 字符串字面量 (String Literals)\n\
+    \n字符串字面量由置于一对引号（即单引号或双引号）内部的零或多个字符组成。以下是一些示例：\n\n*   “water”\n*   ‘car’\n*   “3.14”\n\
+    *   “我想使用 `\\t` 来添加一个制表符”\n*   “Peter Pan”\n\n你可以对字符串字面量调用字符串对象的任何方法——JavaScript\
+    \ 会自动将字符串字面量转换为字符串对象，调用你所需的方法，并丢弃创建的字符串对象。\n\n**重要备注：** 除非你的代码需要字符串对象，否则编写 JavaScript\
+    \ 语句时必须使用字符串字面量。\n\n## 如何在字符串中使用特殊字符\n\nJavaScript 允许你在字符串中包含特殊字符。这里是一个例子：\n\n\
+    “第一行 \\n 第二行”\n\n下表了 JavaScript 支持的特殊字符：\n\n| 特殊字符 | 用途 |\n| :--- | :--- |\n|\
+    \ `\\0` | 该字符向你的代码中添加一个空字节。 |\n| `\\b` | 使用此特殊字符就像按下键盘上的退格键一样。 |\n| `\\f` | 使用此字符，你可以在\
+    \ JavaScript 语句中添加一个分页符。 |\n| `\\n` | 如果你想在代码中添加换行符，请使用此字符。输入此特殊字符就像按下键盘上的回车键。\
+    \ |\n| `\\r` | 该字符允许你在代码中应用回车。 |\n| `\\t` | 此特殊字符向代码中添加一个制表符（即按下键盘上的 Tab 键后获得的字符）。\
+    \ |\n| `\\v` | 使用此字符，你可以快速地在语句中添加一个垂直制表符。 |\n| `\\\\'` | 使用此字符在语句中添加一个单写号或单引号。\
+    \ |\n| `\\\\\"` | 如果你想在代码中添加一个双引号，请使用此字符。 |\n| `\\\\` | 该字符允许你在 JavaScript 语句中包含一个反斜杠字符。\
+    \ |\n| `\\xxx` | 你可以使用此字符向代码中添加一个 Latin-1 符号。此特殊字符需要该范围内的八进制数字：`0- 377\\.`。例如，`\\\
+    251` 将向你的语句中添加“©”（即版权符号）。 |\n| `\\xXX` | 这与上一个类似。你可以使用此字符向代码中添加 Latin-1 符号。唯一的区别是此特定字符需要范围\
+    \ `00-FF` 内的两个十六进制值。例如，`\\xA9` 会向你的 JavaScript 代码中添加 ©。 |\n| `\\uXXXX` | 该字符向代码中添加\
+    \ Unicode 符号。它需要四个十六进制值。例如，`\\u00A9` 向你的代码中添加 ©。 |\n\n## 如何转义字符\n\n在 JavaScript\
+    \ 中，引号用于开始和结束字符串。然而，在某些情况下，你必须在代码中包含引号——也就是说，你想要一个普通的引号（而不是 JavaScript 符号）。在这种情况下，你必须使用反斜杠（即\
+    \ `\\`）引入引号。这种技术被称为“字符转义”。在特殊符号之前输入反斜杠会将该符号转变为普通的符号。\n\n**重要备注：** 有时，你必须在语句中添加一个普通的反斜杠。嗯，你可以快速轻松地做到这一点。你只需要输入两个反斜杠（即\
+    \ `\\\\`）。此操作会“转义”反斜杠字符本身。\n\n# 浮点字面量 (Floating-Point Literals)\n\n浮点字面量具有以下部分：\n\
+    \n*   一个小数整数\n*   一个指数\n*   一个分数\n*   一个小数点\n\n你必须使用 “E” 或 “e” 来表示浮点字面量的指数部分。在标明指数后，你应该放置整数（其前面可以有\
+    \ \"-\" 或 “+”）。通常，浮点字面量应该至少有一个数字，并且要么有一个指数要么有一个小数点。\n\n以下是浮点字面量的语法：\n\n![](img/00013.jpeg)\n\
+    \n以下是一些浮点字面量的示例：\n\n*   .2e-34\n*   3.15\n*   -.145\n*   -4.6E+69\n\n# JavaScript\
+    \ 关键字\n\n本书的这一部分将向你展示 JavaScript 中所有的关键字。这些词在 JavaScript 编程语言中都有特殊用途；因此，你不能在命名变量、函数、对象时使用其中任何一个。\n\
+    \n| switch | abstract | Instanceof | else |\n| int | enum | synchronized | boolean\
+    \ |\n| this | break | interface | export |\n| long | byte | throw | extends |\n\
+    | throws | class | native | catch |\n| true | transient | package | char |\n|\
+    \ function | const | typeof | for |\n| private | var | protected | void |\n| return\
+    \ | default | volatile | if |\n| implements | while | delete | short |\n| do |\
+    \ with | static | import |\n\n第 3 章：JavaScript 控制语句\n\n# 第 3 章：JavaScript 的控制语句\n\
+    \n该语言提供了一组你可以添加的紧凑控制语句。通常，控制语句增强了程序的功能和交互性。本书重点关注控制语句。\n\n## 块语句 (Block Statement)\n\
+    \n程序员认为这是 JavaScript 中最基本的语句。使用它来分组你的语句。在编写程序时，使用一对大括号包围块语句。\n\n下图显示了块语句的语法：\n\
+    \n![](img/00014.jpeg)\n\n通常，程序员将块语句用于控制语句（例如 for、if 等）。这里有一个示例：\n\n```javascript\n\
+    while (y > 69) {\n    123;\n}\n```\n\n在上面的代码段中，`123;` 就是块语句。\n\n## 条件语句 (Conditional\
+    \ Statements)\n\n条件语句是在赋值条件为真时执行的命令集。JavaScript 语言提供了两种条件语句：(1) `if... else` 和\
+    \ (2) `switch`。\n\n让我们详细讨论这些条件语句：\n\n### “if... else”语句\n\n通过此语句，只要赋值条件为真，就可以运行命令。它包含一个\
+    \ `else` 子句（可选）。`else` 子句包含在赋值条件为假时运行的语句。`if... else` 语句的语法如下：\n\n![](img/00015.jpeg)\n\
+    \n由于你的条件必须得到“true”或“false”，因此编写条件语句时必须使用布尔表达式。如果条件为真，执行第一个语句；否则，执行第二个。\n\nJavaScript\
+    \ 允许你在条件语句中设置多个条件。你只需要在条件语句中组合多个 `if` 和 `else` 子句即可。这是你必须使用的语法：\n\n![](img/00016.jpeg)\n\
+    \n"
+- fmt: "\nIf possible, avoid using simple assignments in your conditional expressions.\
+    \ This is because simple assignments are often confused with equality when checking\
+    \ JavaScript codes. For instance, you must not add the following code into your\
+    \ statements:\n\n```javascript\nif (a = b) {\n    /* sample_statement */\n}\n\
+    ```\n\nIf you really need to use a simple assignment in your conditional expressions,\
+    \ place it between a pair of parentheses. Here’s an example:\n\n```javascript\n\
+    if ((x = y)) {\n    /* sample_statement */\n}\n```\n\n## The Falsy Values\n\n\
+    A “falsy value” is a value that evaluates to false. Here are the falsy values\
+    \ that you will encounter while using JavaScript:\n\n- `0`\n- `null`\n- `false`\n\
+    - `undefined`\n- `NaN`\n- `\"\"` (i.e. an empty string)\n\nAny value not listed\
+    \ above evaluates to true when used in conditional statements.\n\n## The “Switch”\
+    \ Statement\n\nThis kind of statement allows an application to check an expression\
+    \ and compare it with a predetermined set of cases. If there’s a match, the application\
+    \ runs the assigned command. Here is the syntax of a basic switch statement:\n\
+    \n![](images/00018.jpeg)\n\nFirst, the application will search for a case with\
+    \ a label that matches the expression’s value. Then, it will pass the control\
+    \ flow to that particular clause, performing the assigned statement/s. If no match\
+    \ is found, the application will check the `default` clause (which is optional)\
+    \ and pass the control flow to that clause, running the assigned statement/s.\
+    \ If the statement has no `default` clause, the application will simply run the\
+    \ statement after the switch. Typically, the final clause of a switch statement\
+    \ serves as the default clause, but it isn’t mandatory.\n\nYou may also add a\
+    \ `break` statement in your switches. A `break` statement makes sure that the\
+    \ application will get out of the switch statement once a match is found. When\
+    \ the application gets out of the switch, the system will run the statement right\
+    \ after the switch statement. If your code doesn’t have a `break`, the application\
+    \ will simply run all of the commands within your switch statement.\n\n## How\
+    \ to Handle Exceptions\n\nJavaScript allows you to throw and manage exceptions.\
+    \ To do these things, you must use the following statements:\n\n- the `throw`\
+    \ statement\n- the `try…catch` statement\n\n## The Different Types of Exceptions\n\
+    \nIn JavaScript, you can throw any type of object. However, thrown objects may\
+    \ possess different characteristics. Although it is usual to throw strings and/or\
+    \ numbers as error messages, it is usually more beneficial to utilize the exception\
+    \ types designed for this purpose. Here are two of the most popular exceptions\
+    \ in JavaScript:\n\n- `DOMError` – This exception represents a named error object.\n\
+    - `DOMException` - This exception indicates an abnormal situation that happens\
+    \ while a property or method is being used. To use this exception, you must add\
+    \ `DOMError()` into your code.\n\n## The “throw” Statement\n\nObviously, this\
+    \ statement allows you to throw exceptions. While throwing an exception, you must\
+    \ indicate the expression holding the data to be thrown. Here’s the syntax:\n\n\
+    ![](images/00019.jpeg)\n\nThe syntax given above can throw any type of expression.\
+    \ The following list shows some examples:\n\n- `throw \"Error1\"; // A String\
+    \ type exception`\n- `throw 1; // A Number type exception`\n- `throw false; //\
+    \ A Boolean type exception`\n\nImportant Note: You may specify objects while throwing\
+    \ an exception. Then, you may specify the properties of the object/s inside the\
+    \ `catch` section of your statement.\n\n## The “try… catch” Statement\n\nThis\
+    \ statement looks for statement blocks that you can try. It also specifies a response\
+    \ that will be used in case an exception is thrown. The `try…catch` statement\
+    \ catches thrown exceptions.\n\n`try…catch` statements have three parts, which\
+    \ are:\n\n1. **The `try` section** – It holds one or more JavaScript statements.\
+    \ This part is mandatory.\n2. **The `catch` section** – This part is completely\
+    \ optional (see below). It holds statements that indicate what the program must\
+    \ do in case an exception gets thrown. That means if the `try` section doesn’t\
+    \ succeed, the program control will go to the `catch` section. If a statement\
+    \ inside the `try` section throws an exception, the program control will immediately\
+    \ go to the `catch` section. If no exceptions arise, however, the system will\
+    \ skip the statement’s `catch` section.\n\nIn JavaScript, you may use the `catch`\
+    \ section to manage all exceptions that may be thrown in the `try` section. Here’s\
+    \ the syntax that you should use:\n\n![](images/00020.jpeg)\n\nIn the syntax given\
+    \ above, `catchID` represents the identifier that contains the value assigned\
+    \ in your `throw` statement. You may employ this identifier to acquire data regarding\
+    \ the thrown exception/s. JavaScript generates this identifier whenever the `catch`\
+    \ section executes. The identifier lasts only while the `catch` section is active.\
+    \ That means the identifier will cease to exist once the `catch` section has finished\
+    \ its execution.\n\nFor instance, the code below generates an exception. Once\
+    \ the exception is thrown, program control will go to the `catch` section.\n\n\
+    ![](images/00021.jpeg)\n\n3. **The `finally` section** – It holds statements that\
+    \ will run after executing the previous sections. The statements placed inside\
+    \ the `finally` section will run whether or not the program encountered an exception.\
+    \ Additionally, statements within this section will still run even if the statement\
+    \ has no `catch` section.\n\nIn general, programmers use this section to set graceful\
+    \ exits for their projects whenever an exception happens. For instance, they may\
+    \ need to liberate some resources that are affected by the problematic script.\
+    \ The image below will help you understand how this section works.\n\n![](images/00022.jpeg)\n\
+    \nWith the code given above, JavaScript opens a file and runs statements that\
+    \ utilize the file. If JavaScript encounters an error, the `finally` section will\
+    \ close the file before the whole code terminates.\n\n## How to Utilize an Error\
+    \ Object\n\nIn some cases, you may get more information about an error by checking\
+    \ its properties (i.e. its `name` and `message`). This functionality is extremely\
+    \ useful if your code’s catch section doesn’t indicate whether errors are generated\
+    \ by the user or the system itself. To utilize error objects, you have to use\
+    \ a JavaScript tool called `Error Constructor`. Here’s an example:\n\n![](images/0023.jpeg)\n\
+    \n## JavaScript Promises\n\nThe JavaScript language now supports `promises` (i.e.\
+    \ an object that allows programmers to manage the flow of delayed and asynchronous\
+    \ processes). Promises undergo the following states:\n\n- `Pending` – This is\
+    \ the initial status of a promise. In this state, a promise may get rejected or\
+    \ fulfilled.\n- `Fulfilled` – A promise becomes “fulfilled” if the system successfully\
+    \ completes all of the assigned processes.\n- `Settled` – A settled promise can\
+    \ be either rejected or fulfilled.\n- `Rejected` – In a rejected promise, the\
+    \ system failed to complete the assigned processes.\n\n## Chapter 4: The Different\
+    \ Types of Loops in JavaScript\n\nA loop allows you to repeat code snippets quickly\
+    \ and easily. This chapter will concentrate on the different kinds of loops offered\
+    \ by JavaScript.\n\n### General Information\n\nWhile writing your own codes, you’ll\
+    \ find situations where you have to use the same codes over and over again. This\
+    \ kind of task is boring and time-consuming. However, you can’t skip it since\
+    \ your application won’t work properly without the proper codes. Fortunately,\
+    \ JavaScript supports loop statements. A loop statement allows you to repeat code\
+    \ blocks automatically.\n"
+  raw: 'If possible, avoid using simple assignments in your conditional expressions.
+    This is because simple assignments are often confused with equality when checking
+    JavaScript codes. For instance, you must not add the following code into your
+    statements:
+
+
+    if (a = b) {
+
+
+                  /* sample_statement */
+
+
+    }
+
+
+    If you really need to use a simple assignment in your conditional expressions,
+    place it between a pair of parentheses. Here’s an example:
+
+
+    if ((x = y)) {
+
+
+                  /* sample_statement */
+
+
+    }
+
+
+    The Falsy Values
+
+
+    A “falsy value” is a value that evaluates to false. Here are the falsy values
+    that you will encounter while using JavaScript:
+
+
+    *   0
+
+
+    *   null
+
+
+    *   false
+
+
+    *   undefined
+
+
+    *   NaN
+
+
+    *   (“ ”) (i.e. an empty string)
+
+
+    Any value not listed above evaluates to true when used in conditional statements.
+
+
+    The “Switch” Statement
+
+
+    This kind of statement allows an application to check an expression and compare
+    it with a predetermined set of cases. If there’s a match, the application runs
+    the assigned command. Here is the syntax of a basic switch statement:
+
+
+    ![](images/00018.jpeg)
+
+
+    First, the application will search for a case with a label that matches the expression’s
+    value. Then, it will pass the control flow to that particular clause, performing
+    the assigned statement/s. If no match is found, the application will check the
+    default clause (which is optional) and pass the control flow to that clause, running
+    the assigned statement/s. If the statement has no default clause, the application
+    will simply run the statement after the switch. Typically, the final clause of
+    a switch statement serves as the default clause, but it isn’t mandatory.
+
+
+    You may also add a break statement in your switches. A break statement makes sure
+    that the application will get out of the switch statement once a match is found.
+    When the application gets out of the switch, the system will run the statement
+    right after the switch statement. If your code doesn’t have a break, the application
+    will simply run all of the commands within your switch statement.
+
+
+    How to Handle Exceptions
+
+
+    JavaScript allows you to throw and manage exceptions.  To do these things, you
+    must use the following statements:
+
+
+    *   the “throw” statement
+
+
+    *   the “try… catch” statement
+
+
+    The Different Types of Exceptions
+
+
+    In JavaScript, you can throw any type of object. However, thrown objects may possess
+    different characteristics. Although it is usual to throw strings and/or numbers
+    as error messages, it is usually more beneficial to utilize the exception types
+    designed for this purpose. Here are two of the most popular exceptions in JavaScript:
+
+
+    *   DOMError – This exception represents a named error object.
+
+
+    *   DOMException - This exception indicates an abnormal situation that happens
+    while a property or method is being used. To use this exception, you must add
+    DOMError() into your code.
+
+
+    The “throw” Statement
+
+
+    Obviously, this statement allows you to throw exceptions. While throwing an exception,
+    you must indicate the expression holding the data to be thrown. Here’s the syntax:
+
+
+    ![](images/00019.jpeg)
+
+
+    The syntax given above can throw any type of expression. The following list shows
+    some examples:
+
+
+    *   throw “Error1”;                            // A String type exception
+
+
+    *   throw 1;                                          // A Number type exception
+
+
+    *   throw false;                            // A Boolean type exception
+
+
+    Important Note: You may specify objects while throwing an exception. Then, you
+    may specify the properties of the object/s inside the “catch” section of your
+    statement.
+
+
+    The “try… catch” Statement
+
+
+    This statement looks for statement blocks that you can try. It also specifies
+    a response that will be used in case an exception is thrown. The try… catch statement
+    catches thrown exceptions.
+
+
+    Try… catch statements have three parts, which are:
+
+
+    1.  The “try” section – It holds one or more JavaScript statements. This part
+    is mandatory.
+
+
+    2.  The “catch” section – This part holds statements that indicate what the program
+    must do in case an exception gets thrown. That means if the “try” section doesn’t
+    succeed, the program control will go to the “catch” section. If a statement inside
+    the “try” section throws an exception, the program control will immediately go
+    to the catch section. If no exceptions arise, however, the system will skip the
+    statement’s catch section.
+
+
+    In JavaScript, you may use the catch section to manage all exceptions that may
+    be thrown in the try section. Here’s the syntax that you should use:
+
+
+    ![](images/00020.jpeg)
+
+
+    In the syntax given above, “catchID” represents the identifier that contains the
+    value assigned in your throw statement. You may employ this identifier to acquire
+    data regarding the thrown exception/s. JavaScript generates this identifier whenever
+    the catch section executes. The identifier lasts only while the catch section
+    is active. That means the identifier will cease to exist once the catch section
+    has finished its execution.
+
+
+    For instance, the code below generates an exception. Once the exception is thrown,
+    program control will go to the catch section.
+
+
+    ![](images/00021.jpeg)
+
+
+    Important Note: This section is completely optional.
+
+
+    3.  The “finally” section – It holds statements that will run after executing
+    the previous sections. The statements placed inside the “finally” section will
+    run whether or not the program encountered an exception. Additionally, statements
+    within this section will still run even if the statement has no “catch” section.
+
+
+    In general, programmers use this section to set graceful exits for their projects
+    whenever an exception happens. For instance, they may need to liberate some resources
+    that are affected by the problematic script. The image below will help you understand
+    how this section works.
+
+
+    ![](images/00022.jpeg)
+
+
+    With the code given above, JavaScript opens a file and runs statements that utilize
+    the file. If JavaScript encounters an error, the “finally” section will close
+    the file before the whole code terminates.
+
+
+    How to Utilize an Error Object
+
+
+    In some cases, you may get more information about an error by checking its properties
+    (i.e. its ‘name’ and ‘message’). This functionality is extremely useful if your
+    code’s catch section doesn’t indicate whether errors are generated by the user
+    or the system itself. To utilize error objects, you have to use a JavaScript tool
+    called “Error Constructor.” Here’s an example:
+
+
+    ![](images/00023.jpeg)
+
+
+    JavaScript Promises
+
+
+    The JavaScript language now supports “promises” (i.e. an object that allows programmers
+    to manage the flow of delayed and asynchronous processes).
+
+
+    Promises undergo the following states:
+
+
+    *   Pending – This is the initial status of a promise. In this state, a promise
+    may get rejected or fulfilled.
+
+
+    *   Fulfilled – A promise becomes “fulfilled” if the system successfully completes
+    all of the assigned processes.
+
+
+    *   Settled – A settled promise can be either rejected or fulfilled.
+
+
+    *   Rejected – In a rejected promise, the system failed to complete the assigned
+    processes.
+
+
+    Chapter 4: The Different Types of Loops in JavaScript
+
+
+    A loop allows you to repeat code snippets quickly and easily. This chapter will
+    concentrate on the different kinds of loops offered by JavaScript.
+
+
+    General Information
+
+
+    While writing your own codes, you’ll find situations where you have to use the
+    same codes over and over again. This kind of task is boring and time-consuming.
+    However, you can’t skip it since your application won’t work properly without
+    the proper codes.
+
+
+    Fortunately, JavaScript supports loop statements. A loop statement allows you
+    to repeat code blocks automatically. That means you won’t have to spend much time
+    and effort in completing your JavaScript codes.'
+  toc: []
+  trans: "\n\n如果可能，请避免在条件表达式中使用简单赋值。这是因为在检查 JavaScript 代码时，简单赋值经常会被与等性判断运算符混淆。例如，你绝不能将以下代码添加到你的陈述中：\n\
+    \n```javascript\nif (a = b) {\n    /* sample_statement */\n}\n```\n\n如果你确实需要在条件表达式中使用简单赋值，请将其放在一对括号之间。这里有一个示例：\n\
+    \n```javascript\nif ((x = y)) {\n    /* sample_statement */\n}\n```\n\n## 假值 (The\
+    \ Falsy Values)\n\n“假值”（falsy value）是指评估结果为 `false` 的值。以下是你在使用 JavaScript 时会遇到的假值：\n\
+    \n- `0`\n- `null`\n- `false`\n- `undefined`\n- `NaN`\n- `\"\"`（即空字符串）\n\n未列在上述列表中的值在条件语句中的求值结果均为\
+    \ `true`。\n\n## “Switch”语句\n\n这种语句允许应用程序检查一个表达式并将其与预定义的一组情况（cases）进行比较。如果匹配成功，应用程序将运行指定的命令。以下是基础\
+    \ `switch` 语句的语法：\n\n![](img/00018.jpeg)\n\n首先，应用程序将搜索标签与表达式值匹配的 `case`。然后，它会将控制流传递到该特定语句，执行指定的语句。如果没有找到匹配项，应用程序将检查\
+    \ `default` 子句（可选）并将控制流传递到该子句，运行指定的语句。如果语句没有 `default` 子句，应用程序将直接运行 `switch` 语句之后的语句。通常，`switch`\
+    \ 语句的最后一个子句作为 `default` 子句，但并不是强制性的。\n\n你还可以在 `switch` 中添加 `break` 语句。`break`\
+    \ 语句可以确保一旦找到匹配项，应用程序就会退出 `switch` 语句。当应用程序退出 `switch` 时，系统将运行 `switch` 语句之后的语句。如果你的代码中没有\
+    \ `break`，应用程序将直接运行你 `switch` 语句中的所有命令。\n\n## 如何处理异常\n\nJavaScript 允许你抛出并管理异常。要完成这些操作，你必须使用以下语句：\n\
+    \n- `throw` 语句\n- `try…catch` 语句\n\n## 异常的类型类型\n\n在 JavaScript 中，你可以抛出任何类型的对象。然而，抛出的对象可能具有不同的特征。虽然通常抛出字符串和/或数字作为错误消息，但利用专为此目的设计的异常类型通常会更有利。以下是\
+    \ JavaScript 中两种最受欢迎的异常：\n\n- `DOMError` – 这种异常表示一个命名的错误对象。\n- `DOMException`\
+    \ - 这种异常表示在使用属性或方法时发生的异常情况。要使用此异常，你必须在代码中添加 `DOMError()`。\n\n## “throw”语句\n\n\
+    显显然，该语句允许你抛出异常。在抛出异常时，你必须指定持有要抛出数据的表达式。以下是语法：\n\n![](img/00019.jpeg)\n\n上述语法可以抛出任何类型的表达式。以下列表显示了一些示例：\n\
+    \n- `throw \"Error1\"; // 字符串类型异常`\n- `throw 1; // 数字类型异常`\n- `throw false; //\
+    \ 布尔类型异常`\n\n重要提示：你可以在抛出异常时指定对象。然后，你可以在语句的 `catch` 部分指定该对象/对象的属性。\n\n## “try…\
+    \ catch”语句\n\n该语句寻找你可以尝试的语句块。它还指定了在抛出异常时使用的响应。`try…catch` 语句捕获抛出的异常。\n\n`try…catch`\
+    \ 语句有三个部分，分别是：\n\n1. **`try` 部分** – 它包含一个或多个 JavaScript 语句。这部分是强制性的。\n2. **`catch`\
+    \ 部分** –这部分完全可选（见下文）。它包含了指示程序在抛出异常时必须执行的语句。这意味着如果 `try` 部分执行失败，程序控制将转到 `catch`\
+    \ 部分。如果 `try` 部分内部的语句抛出异常，程序控制将立即转到 `catch` 部分。然而，如果没有发生异常，系统将跳过语句的 `catch` 部分。\n\
+    \n在 JavaScript 中，你可以使用 `catch` 部分来管理 `try` 部分可能抛出的所有异常。以下是你应该使用的语法：\n\n![](img/00020.jpeg)\n\
+    \n在上述语法中，`catchID` 代表包含你在 `throw` 语句中赋值的值的标识符。你可以使用此标识符来获取有关抛出的异常的数据。每当执行 `catch`\
+    \ 部分时，JavaScript 都会生成此标识符。该标识符仅在 `catch` 部分活动期间有效。这意味着一旦 `catch` 部分执行完毕，该标识符将不再存在。\n\
+    \n例如，下面的代码生成了一个异常。一旦抛出异常，程序控制将转到 `catch` 部分。\n\n![](img/00021.jpeg)\n\n3. **`finally`\
+    \ 部分** – 它包含在执行完之前的部分后运行的语句。无论程序是否遇到异常，放置在 `finally` 部分的语句都会运行。此外，即使语句没有 `catch`\
+    \ 部分，此部分内的语句仍然会运行。\n\n通常，程序员使用此部分在发生异常时为他们的项目设置优雅的退出。例如，他们可能需要释放受问题脚本影响的一些资源。下面的图片将帮助你理解该部分是如何工作的。\n\
+    \n![](img/00022.jpeg)\n\n## 如何利用错误对象\n\n在某些情况下，你可以通过检查属性（即 `name` 和 `message`）来获取有关错误的更多信息。如果你的代码\
+    \ catch 部分无法指示错误是由用户还是系统生成的，这种功能将非常有用。要利用错误对象，你必须使用名为 `Error Constructor` 的 JavaScript\
+    \ 工具。这里有一个示例：\n\n![](img/0023.jpeg)\n\n## JavaScript Promise\n\nJavaScript 语言现在支持\
+    \ `promises`（一种允许程序员管理延迟和异步过程的对象）。Promise 会经历以下状态：\n\n- `Pending` – 这是 promise\
+    \ 的初始状态。在此状态下，promise 可能被拒绝或完成。\n- `Fulfilled` – 如果系统成功完成了所有分配的任务，promise 将变为“已完成”。\n\
+    - `Settled` – 一个已定的 promise 可以被拒绝或完成。\n- `Rejected` – 在拒绝的 promise 中，系统未能完成分配的任务。\n\
+    \n## 第四章：JavaScript 中不同类型的循环\n\n循环允许你快速方便地重复代码段。本章将关注 JavaScript 提供的不同循环。\n\n\
+    ### 通用信息\n\n在编写自己的代码时，你会发现一些需要反复使用相同代码的情况。这种任务既无聊又耗时。然而，你不能跳过它，因为如果没有正确的代码，你的应用程序无法正常工作。\n\
+    \n"
+- fmt: "\nLoops are designed to repeat codes. They have different mechanisms that\
+    \ can be adjusted to improve their effectiveness in copying codes. Additionally,\
+    \ each loop type has distinct characteristics that make them extremely useful\
+    \ and convenient in certain situations. Here are the loop statements that you’ll\
+    \ find in JavaScript:\n\n* `for`\n* `while`\n* `do… while`\n* `label`\n* `break`\n\
+    * `for… of`\n* `for… in`\n* `continue`\n\n## The `for` Loop\n\nBasically, `for`\
+    \ loops repeat a statement until an assigned condition results to false. The syntax\
+    \ of JavaScript `for` loops is similar to that of C and Java. Here’s the syntax:\n\
+    \n![](images/00024.jpeg)\n\nThe following things happen whenever a `for` loop\
+    \ runs:\n\n1. The loop’s initializing expression (represented by `initialExpression`\
+    \ in the syntax above) performs its function/s. Often, an initializing expression\
+    \ triggers multiple loop counters. That means the syntax given above accepts different\
+    \ levels of complexity. You may also use this expression to declare variables.\n\
+    \   **Important Note**: The initializing expression is optional; thus, you can\
+    \ create effective `for` loops without using any initializing expression.\n\n\
+    2. The system evaluates the conditional expression. If the evaluation is true,\
+    \ the statements contained in the loop will run. However, if the evaluation is\
+    \ false, the entire loop will stop.\n   **Important Note**: The conditional expression\
+    \ is optional. If you won’t add a conditional expression in your `for` loop, the\
+    \ system will assume that the evaluation is true.\n\n3. The statement runs. If\
+    \ you want to run multiple statements, you must group them into a block (i.e.\
+    \ by enclosing them in curly braces).\n\n4. The final expression (represented\
+    \ by `incrementExpression` in the syntax) updates the entire loop, then the control\
+    \ flow will go back to the second step (see above).\n\n## The `while` Loop\n\n\
+    `While` loops execute their statement/s while the assigned condition results to\
+    \ “true.” Here is the syntax of a `while` loop:\n\n![](images/00025.jpeg)\n\n\
+    Once the condition results to “false”, the loop will stop running the assignments\
+    \ assigned to it, then the control flow will go to the statement right after the\
+    \ `while` loop.\n\nThe system evaluates the condition prior to running the loop\
+    \ itself. If the condition is true, the statement/s inside the loop will run and\
+    \ the system will check the condition again. If the condition is false, the loop\
+    \ will stop and the control flow will move on to the next statement.\n\n**Important\
+    \ Note**: Since the condition test happens first, a `while` loop may never run.\
+    \ That means you have to be extremely careful when creating `while` loops in your\
+    \ JavaScript programs.\n\nJavaScript allows you to enclose multiple statements\
+    \ using a pair of curly braces. Use this option if you want to include various\
+    \ statements in your `while` loops.\n\n## The `do… while` Loop\n\nThis kind of\
+    \ loop runs its statement/s until the assigned condition becomes false. When creating\
+    \ a `do… while` loop, you must use the following syntax:\n\n![](images/00026.jpeg)\n\
+    \nHere, the system executes the statements once before checking the assigned condition.\
+    \ If the condition is true, the system will execute the statements again. This\
+    \ process will continue until the condition becomes false. Once the condition\
+    \ evaluates to false, the control flow will go to the statement right after the\
+    \ `do… while` loop.\n\nIn this type of loop, the statements are guaranteed to\
+    \ run at least once even if the condition is false.\n\n## The `label` Statement\n\
+    \nThis kind of statement allows you to “label” (i.e. assign an identifier) your\
+    \ statements. By labeling your JavaScript statements, you can easily repeat them\
+    \ at any part of your application. For instance, you may label a certain loop,\
+    \ and utilize other statements to either continue or disrupt its execution.\n\n\
+    Here is the syntax of a `label` statement:\n\n![](images/00027.jpeg)\n\nWhen creating\
+    \ a label, you may use any identifier that isn’t a JavaScript keyword. You may\
+    \ use the syntax given above for any statement.\n\n## The `break` Statement\n\n\
+    Programmers use this statement to end loop or switch statements. When using a\
+    \ `break` statement, you must remember the following rules:\n\n* If your `break`\
+    \ statement doesn’t have a label, it will terminate the innermost loop/switch\
+    \ and pass the control flow to the next statement.\n* If your `break` statement\
+    \ has a label, it will terminate the labeled statement.\n\nThe syntax of a `break`\
+    \ statement is:\n\n![](images/00028.jpeg)\n\nUse the first variant of the syntax\
+    \ if you don’t need to specify a label. This will terminate the innermost loop/switch.\
+    \ Use the second variant if you want to terminate a certain loop/switch. Just\
+    \ enter the label of that particular loop or switch. When using the second variant,\
+    \ only the specified loop/switch will be terminated.\n\n## The `for… of` Statement\n\
+    \nThis statement is a recent addition to the JavaScript language. It creates a\
+    \ loop that can repeat “iterable objects” (e.g. maps, sets, arrays, arguments,\
+    \ etc.). It also invokes an iteration hook that will run for each distinct property\
+    \ of an object. JavaScript allows you to customize the iteration hook of any `for…\
+    \ of` statement. Here is the syntax that you must use:\n\n![](images/00029.jpeg)\n\
+    \n## The `for… in` Statement\n\nA `for… in` statement repeats the assigned statement/s\
+    \ over the properties of any object. JavaScript will execute the assigned statement/s\
+    \ for every property. The syntax of a `for… in` statement is:\n\n![](images/00030.jpeg)\n\
+    \n## The `continue` Statement\n\nYou may use this statement to restart other statements\
+    \ (e.g. for, while, do while, and label). Here are the rules that you must remember\
+    \ when using a `continue` statement:\n\n* If you won’t include a label in your\
+    \ continue statement, it will terminate the current process of the innermost loop\
+    \ and continue the next one. Unlike a break statement, a continue statement cannot\
+    \ terminate an entire loop. If used on `while` loops, the control flow will return\
+    \ to the assigned condition. If used on `for` loop, on the other hand, the control\
+    \ flow will go back to the increment expression.\n* If you’ll include a label\
+    \ in your continue statement, it will only affect the statement linked to that\
+    \ label.\n\nThe syntax of a continue statement has two forms, which are:\n\n![](images/0031.jpeg)\n\
+    \n# Chapter 5: JavaScript Functions\n\nIn general, functions serve as “subprograms”\
+    \ that you can invoke using internal/external codes. Similar to a complete program,\
+    \ a function has a group of statements known as its “body.” JavaScript allows\
+    \ you to pass values to a function. Additionally, a function can return a value.\n\
+    \n## What is a Function\n\nIn JavaScript, each function is treated as a unique\
+    \ object. Also, functions are different from procedures. Functions return a value\
+    \ 100% of the time, while some procedures don’t.\n\nYou must add a `return` statement\
+    \ in your functions if you want them to return a value. The `return` statement\
+    \ specifies the value/s that must be returned. Functions that don’t have a return\
+    \ statement give a default value. In most cases, the default value of a function\
+    \ is “undefined.”\n\nThe arguments of a function are the parameters used in calling\
+    \ it. JavaScript uses values to pass arguments to a function. If a function modifies\
+    \ an argument’s value, the modification won’t appear globally or inside the function\
+    \ itself. However, an object reference is a value too (and a special one at that)\
+    \ – if a function alters the properties of a referred object, the alteration/s\
+    \ will appear globally.\n\n## How to Define a Function\n\nIn JavaScript, you can\
+    \ define functions in different ways. Let’s discuss each approach in detail:\n\
+    \n* Using the function statement – JavaScript offers a special syntax that you\
+    \ can use to declare a function. The syntax is:\n"
+  raw: 'Loops are designed to repeat codes. They have different mechanisms that can
+    be adjusted to improve their effectiveness in copying codes. Additionally, each
+    loop type has distinct characteristics that make them extremely useful and convenient
+    in certain situations. Here are the loop statements that you’ll find in JavaScript:
+
+
+    *   “for”
+
+
+    *   “while”
+
+
+    *   “do… while”
+
+
+    *   “label”
+
+
+    *   “break”
+
+
+    *   “for…  of”
+
+
+    *   “for… in”
+
+
+    *   “continue”
+
+
+    The “for” Loop
+
+
+    Basically, “for” loops repeat a statement until an assigned condition results
+    to false. The syntax of JavaScript “for” loops is similar to that of C and Java.
+    Here’s the syntax:
+
+
+    ![](images/00024.jpeg)
+
+
+    The following things happen whenever a “for” loop runs:
+
+
+    1.  The loop’s initializing expression (represented by initialExpression in the
+    syntax above) performs its function/s. Often, an initializing expression triggers
+    multiple loop counters. That means the syntax given above accepts different levels
+    of complexity. You may also use this expression to declare variables.
+
+
+    Important Note: The initializing expression is optional; thus, you can create
+    effective “for” loops without using any initializing expression.
+
+
+    2.  The system evaluates the conditional expression. If the evaluation is true,
+    the statements contained in the loop will run. However, if the evaluation is false,
+    the entire loop will stop.
+
+
+    Important Note: The conditional expression is optional. If you won’t add a conditional
+    expression in your “for” loop, the system will assume that the evaluation is true.
+
+
+    3.  The statement runs. If you want to run multiple statements, you must group
+    them into a block (i.e. by enclosing them in curly braces).
+
+
+    4.  The final expression (represented by incrementExpression in the syntax) updates
+    the entire loop, then the control flow will go back to the second step (see above).
+
+
+    The “while” Loop
+
+
+    “While” loops execute their statement/s while the assigned condition results to
+    “true.” Here is the syntax of a “while” loop:
+
+
+    ![](images/00025.jpeg)
+
+
+    Once the condition results to “false”, the loop will stop running the assignments
+    assigned to it, then the control flow will go to the statement right after the
+    “while” loop.
+
+
+    The system evaluates the condition prior to running the loop itself. If the condition
+    is true, the statement/s inside the loop will run and the system will check the
+    condition again. If the condition is false, the loop will stop and the control
+    flow will move on to the next statement.
+
+
+    Important Note: Since the condition test happens first, a “while” loop may never
+    run. That means you have to be extremely careful when creating “while” loops in
+    your JavaScript programs.
+
+
+    JavaScript allows you to enclose multiple statements using a pair of curly braces.
+    Use this option if you want to include various statements in your “while” loops.
+
+
+    The “do… while” Loop
+
+
+    This kind of loop runs its statement/s until the assigned condition becomes false.
+    When creating a “do… while” loop, you must use the following syntax:
+
+
+    ![](images/00026.jpeg)
+
+
+    Here, the system executes the statements once before checking the assigned condition.
+    If the condition is true, the system will execute the statements again. This process
+    will continue until the condition becomes false. Once the condition evaluates
+    to false, the control flow will go to the statement right after the “do… while”
+    loop.
+
+
+    In this type of loop, the statements are guaranteed to run at least once even
+    if the condition is false.
+
+
+    The “label” Statement
+
+
+    This kind of statement allows you to “label” (i.e. assign an identifier) your
+    statements. By labeling your JavaScript statements, you can easily repeat them
+    at any part of your application. For instance, you may label a certain loop, and
+    utilize other statements to either continue or disrupt its execution.
+
+
+    Here is the syntax of a “label” statement:
+
+
+    ![](images/00027.jpeg)
+
+
+    When creating a label, you may use any identifier that isn’t a JavaScript keyword.
+    You may use the syntax given above for any statement.
+
+
+    The “break” Statement
+
+
+    Programmers use this statement to end loop or switch statements. When using a
+    “break” statement, you must remember the following rules:
+
+
+    *   If your break statement doesn’t have a label, it will terminate the innermost
+    loop/switch and pass the control flow to the next statement.
+
+
+    *   If your break statement has a label, it will terminate the labeled statement.
+
+
+    The syntax of a break statement is:
+
+
+    ![](images/00028.jpeg)
+
+
+    Use the first variant of the syntax if you don’t need to specify a label. This
+    will terminate the innermost loop/switch. Use the second variant if you want to
+    terminate a certain loop/switch. Just enter the label of that particular loop
+    or switch. When using the second variant, only the specified loop/switch will
+    be terminated.
+
+
+    The “for… of” Statement
+
+
+    This statement is a recent addition to the JavaScript language. It creates a loop
+    that can repeat “iterable objects” (e.g. maps, sets, arrays, arguments, etc.).
+    It also invokes an iteration hook that will run for each distinct property of
+    an object. JavaScript allows you to customize the iteration hook of any “for…
+    of” statement. Here is the syntax that you must use:
+
+
+    ![](images/00029.jpeg)
+
+
+    The “for… in” Statement
+
+
+    A “for… in” statement repeats the assigned statement/s over the properties of
+    any object. JavaScript will execute the assigned statement/s for every property.
+    The syntax of a “for… in” statement is:
+
+
+    ![](images/00030.jpeg)
+
+
+    The “continue” Statement
+
+
+    You may use this statement to restart other statements (e.g. for, while, do… while,
+    and label). Here are the two rules that you must remember when using a “continue”
+    statement:
+
+
+    *   If you won’t include a label in your continue statement, it will terminate
+    the current process of the innermost loop and continue the next one. Unlike a
+    break statement, a continue statement cannot terminate an entire loop. If used
+    on “while” loops, the control flow will return to the assigned condition. If used
+    on a “for” loop, on the other hand, the control flow will go back to the increment
+    expression.
+
+
+    *   If you’ll include a label in your continue statement, it will only affect
+    the statement linked to that label.
+
+
+    The syntax of a continue statement has two forms, which are:
+
+
+    ![](images/00031.jpeg)
+
+
+    Chapter 5: JavaScript Functions
+
+
+    In general, functions serve as “subprograms” that you can invoke using internal/external
+    codes. Similar to a complete program, a function has a group of statements known
+    as its “body.” JavaScript allows you to pass values to a function. Additionally,
+    a function can return a value.
+
+
+    JavaScript considers functions as first-class objects, since they possess methods
+    and properties found in other programming objects. The main difference between
+    functions and other JavaScript objects is that you can invoke a function whenever
+    you need to.
+
+
+    What is a Function?
+
+
+    In JavaScript, each function is treated as a unique object. Also, functions are
+    different from procedures. Functions return a value 100% of the time, while some
+    procedures don’t.
+
+
+    You must add a “return” statement in your functions if you want them to return
+    a value. The “return” statement specifies the value/s that must be returned. Functions
+    that don’t have a return statement give a default value. In most cases, the default
+    value of a function is “undefined.”
+
+
+    The arguments of a function are the parameters used in calling it. JavaScript
+    uses values to pass arguments to a function. If a function modifies an argument’s
+    value, the modification won’t appear globally or inside the function itself. However,
+    an object reference is a value too (and a special one at that) – if a function
+    alters the properties of a referred object, the alteration/s will appear globally.
+
+
+    How to Define a Function
+
+
+    In JavaScript, you can define functions in different ways. Let’s discuss each
+    approach in detail:
+
+
+    *   Using the function statement – JavaScript offers a special syntax that you
+    can use to declare a function. The syntax is:'
+  toc: []
+  trans: "\n\n循环的设计用于重复代码。它们具有不同的机制，可以通过调整这些机制来提高复制代码的效率。此外，每种循环类型都有独特的特性，这使得它们在某些情况下非常有用且方便。以下是你在\
+    \ JavaScript 中可以找到循环语句：\n\n* `for`\n* `while`\n* `do… while`\n* `label`\n* `break`\n\
+    * `for… of`\n* `for… in`\n* `continue`\n\n## `for` 循环\n\n基本上，`for` 循环会重复执行语句，直到指定的条件变为假。JavaScript\
+    \ `for` 循环的语法与 C 和 Java 相似。以下是语法：\n\n![](img/00024.jpeg)\n\n当 `for` 循环运行时，都会发生以下情况：\n\
+    \n1. 循环的初始化表达式（在上述语法中用 `initialExpression` 表示）执行其功能。通常情况下，初始化表达式会触发多个循环计数器。这意味着上述语法接受不同复杂程度的内容。你也可以使用此表达式来声明变量。\n\
+    \   **注意**：初始化表达式是可选的；因此，你可以在不使用任何初始化表达式的情况下创建 `for` 循环。\n\n2. 系统评估条件表达式。如果评估结果为真，则运行循环包含的语句。然而，如果评估结果为假，整个循环将停止。\n\
+    \   **注意**：条件表达式是可选的。如果你不在 `for` 循环中添加条件表达式，系统将假设评估结果为真。\n\n3. 执行语句。如果你想运行多条语句，必须将它们分组成一个块（即通过用大括号将它们括起来）。\n\
+    \n4. 最终表达式（在语法中用 `incrementExpression` 表示）更新整个循环，然后控制流将回到第二个步骤（见上文）。\n\n## `while`\
+    \ 循环\n\n`while` 循环在指定的条件为“真”时执行其语句。以下是 `while` 循环的语法：\n\n![](img/00025.jpeg)\n\
+    \n一旦条件结果为“假”，循环将停止执行分配给它的赋值，然后控制流将跳转到 `while` 循环之后的语句。\n\n系统在运行循环本身之前会先评估条件。如果条件为真，循环内部的语句将执行，系统将再次检查条件。如果条件为假，循环将停止，控制流将移动到下一条语句。\n\
+    \n**注意**：由于条件测试首先发生，`while` 循环可能永远不会运行。这意味着在 JavaScript 程序中创建 `while` 循环时必须格外小心。\n\
+    \nJavaScript 允许你使用一对大括号封装多个语句。如果你想在 `while` 循环中包含各种语句，请使用此选项。\n\n## `do… while`\
+    \ 循环\n\n这种循环执行其语句，直到指定的条件变为假。创建 `do… while` 循环时，你必须使用以下语法：\n\n![](img/00026.jpeg)\n\
+    \n在这里，系统在检查指定条件之前执行一次语句。如果条件为真，系统将再次执行这些语句。这个过程将持续到条件变为假。一旦条件评估为假，控制流将跳转到 `do…\
+    \ while` 循环之后的语句。\n\n在这种类型的循环中，即使条件为假，语句也能保证至少运行一次。\n\n## `label` 语句\n\n这种语句允许你对语句进行“标记”（即分配一个标识符）。通过标记你的\
+    \ JavaScript 语句，你可以轻松地在应用程序的任何部分重复它们。例如，你可以标记某个循环，并利用其他语句来继续或中断它的执行。\n\n以下是 `label`\
+    \ 语句的语法：\n\n![](img/00027.jpeg)\n\n创建标记时，你可以使用任何不是 JavaScript 关键字的标识符。你可以对任何语句使用上述语法。\n\
+    \n## `break` 语句\n\n程序员使用此语句来结束循环或 switch 语句。在使用 `break` 语句时，必须记住以下规则：\n\n* 如果你的\
+    \ `break` 语句没有标记，它将终止最内层的循环/switch 并将控制流传递到下一个语句。\n* 如果你的 `break` 语句有标记，它将终止被标记的语句。\n\
+    \n`break` 语句的语法为：\n\n![](img/00028.jpeg)\n\n如果你不需要指定标记，请使用语法的第一个变体。这将终止内部循环/switch。如果你想终止特定的循环/switch，请使用第二变体。只需输入该特定循环或\
+    \ switch 的标记即可。使用第二变体时，只有指定的循环/switch 将终止。\n\n## `for… of` 语句\n\n该语句是 JavaScript\
+    \ 语言最近添加的内容。它创建了一个可以重复“可迭代对象”（例如 maps、sets、arrays、arguments 等）的循环。它还调用了一个迭代钩子，该钩会在对象的每个不同属性上运行。JavaScript\
+    \ 允许你自定义任何 `for… of` 语句的迭代钩子。你必须使用的语法如下：\n\n![](img/00029.jpeg)\n\n## `for… in`\
+    \ 语句\n\n`for… in` 语句在对象的任何属性上重复指定的语句。JavaScript 将为每个属性执行指定的语句。`for… in` 语句的语法为：\n\
+    \n![](img/00030.jpeg)\n\n## `continue` 语句\n\n你可以使用此语句重启其他语句（例如 for、while、do while\
+    \ 和 label）。在使用 continue 语句时需要记住以下规则：\n\n* 如果你的 `continue` 语句没有标记，它将终止当前的循环并继续下一个。与\
+    \ break 语句不同，continue 语句不会终止整个循环。如果用于 `while` 循环，控制流将返回条件。另一方面，如果用于 `for` 循环，控制流将回到递增表达式。\n\
+    * 如果你在 `continue` 语句中包含标记，它将仅影响被标记的语句。\n\n# 第 5 章：JavaScript 函数\n\n通常情况下，函数是用于调用的“子程序”。每种函数类似于完整的程序，函数有一组被称为“函数体”的语句。JavaScript\
+    \ 允许你向函数传递值。此外，函数还可以返回值。\n\n## 什么是函数\n\n在 JavaScript 中，每个函数都被视为一个唯一的对象。此外，函数与过程不同。函数在\
+    \ 100% 的情况下都会返回值，而某些过程不会。\n\n如果你想让函数返回结果，必须在函数中添加 `return` 语句。`return` 语句指定了返回的值。没有返回语句的函数会给出默认值。大多数情况下，函数的默认值为“undefined”。\n\
+    \n函数的参数是在调用时使用的参数。JavaScript 使用值传递参数。如果函数修改了参数的值，该修改不会在全局范围内生效。然而，对象引用也是值（而且是特殊的值）——如果函数更改了所引用对象的属性，更改将会生效。\n\
+    \n## 如何定义函数\n\n在 JavaScript 中，你可以通过多种方式定义函数。让我们详细讨论每种方法：\n\n* 使用函数语句 —— JavaScript\
+    \ 提供了一种特殊的语法，你可以用它声明函数。语法如下：\n\n"
+- fmt: "\n![](images/00032.jpeg)\n\nThat syntax has three different parts, which are:\n\
+    \n* `name` – This is the name of the function. You may replace this with any valid\
+    \ identifier.\n    * `param` – This is the argument/parameter that you want to\
+    \ pass to the function. JavaScript allows you to include up to 255 parameters\
+    \ in each function.\n    * `statements` – This section holds the statements (i.e.\
+    \ the body) of a function.\n* Through the function expression – This approach\
+    \ is similar to the previous one. In fact, it uses the syntax (see below):\n\n\
+    ![](images/00033.jpeg)\n\n* Using JavaScript’s “Function Constructor” – JavaScript\
+    \ allows you to generate functions using `new` (i.e. a JavaScript operator). Here\
+    \ is the syntax that you must use:\n\n![](images/00034.jpeg)\n\nThe syntax given\
+    \ above has the following parts:\n\n* `arg1, arg2, … argN` – This part holds the\
+    \ name/s you want to use as the formal parameter/s.\n    * `functionBody` – This\
+    \ is a string that holds JavaScript statements (i.e. the body of the function).\n\
+    \n## How to Call a Function\n\nWhen defining a function, you are just naming that\
+    \ function and assigning what to be done once the function is invoked/called.\
+    \ Call a function if you want it to perform the assigned actions. For instance,\
+    \ if you have defined the “square” function, you may call it using the following\
+    \ code:\n\n```\nsquare(2);\n```\n\nThe code given above calls the `square` function\
+    \ and assigns 2 as the argument. The function runs its statements and gives 4\
+    \ as the resulting value.\n\nYour functions must be within the proper scope when\
+    \ you call them. However, you can hoist (i.e. lift to the top) your function declarations.\
+    \ Here’s an example:\n\n![](images/00035.jpeg)\n\nA function’s arguments may hold\
+    \ different programming elements (i.e. not just numbers and strings). JavaScript\
+    \ allows you to assign entire objects to your functions. For example, `show_props()`\
+    \ (i.e. a built-in function) accepts objects as arguments.\n\n### The Scope of\
+    \ a Function\n\nIf you defined a variable within a function, you won’t be able\
+    \ to access that variable from outside. That’s because you defined it within the\
+    \ function’s scope. Simply, global functions can access global variables. A nested\
+    \ function (i.e. a function placed inside another) can access variables created\
+    \ inside its mother function.\n\n### Arguments of a Function\n\nJavaScript treats\
+    \ arguments as array objects. Inside a function, you may access them using the\
+    \ following syntax:\n\n```\narguments[n]\n```\n\nIn this syntax, `n` represents\
+    \ the argument’s ordinal number, beginning at zero. That means the initial argument\
+    \ of a function is `arguments[0]`. If you use the `arguments` object, you may\
+    \ invoke functions that hold more arguments than was declared in the code. To\
+    \ determine the quantity of objects inside a function, you may use `arguments.length`.\
+    \ Then, you may use the `arguments` object to access the arguments.\n\n### Parameters\
+    \ of a Function\n\nCurrently, JavaScript supports two types of parameters: default\
+    \ and rest.\n\n#### Default Parameters\n\nIn the JavaScript language, the default\
+    \ parameter of any function is `undefined`. In most situations, however, it is\
+    \ beneficial to change this value. Before, the usual approach for setting a default\
+    \ value was to check parameter values inside the function’s body and assign a\
+    \ new value if the system shows `undefined`. With default parameters, you may\
+    \ just assign numbers or strings as the default value of your functions.\n\n####\
+    \ Rest Parameters\n\nThis kind of parameter allows you to represent any number\
+    \ of arguments as a simple array. In the code below, you’ll use rest parameters\
+    \ to get the second, third and fourth arguments. You can then multiply them using\
+    \ the first.\n\n![](images/00036.jpeg)\n\n## Chapter 6: Events\n\n### Events –\
+    \ The Basics\n\nWhenever the user or the browser controls a webpage, JavaScript\
+    \ interacts with HTML content. The system handles these interactions as events.\
+    \ Basically, the term `event` refers to any manipulation done on a webpage (e.g.\
+    \ clicking on a button, pressing a key, closing a pop-up window, etc.). As a JavaScript\
+    \ programmer, you may use events to run responses (e.g. displaying a message,\
+    \ validating records, etc.). Events belong to DOM (Document Object Model) Level\
+    \ 3. Additionally, each HTML element holds a collection of events that can initiate\
+    \ JavaScript. This chapter will discuss some of the most popular webpage events.\
+    \ This material will help you understand the relationship between events and the\
+    \ JavaScript language.\n\n### The “onclick” Event\n\nJavaScript users encounter\
+    \ this kind of event frequently. Basically, an `onclick` event happens whenever\
+    \ a user clicks the left-side button of his mouse. You may link warnings and other\
+    \ content to this event. Here’s an example:\n\n![](images/00037.jpeg)\n\nIf you\
+    \ run that code, you will get the following output:\n\n![](images/00038.jpeg)\n\
+    \n### The “onsubmit” Event\n\nThis event happens whenever a user submits a form.\
+    \ Typically, programmers link their form validations to this kind of event.\n\n\
+    ### The “onmouseout” and “onmouseover” Events\n\nThese two kinds of events can\
+    \ help you add cool effects (e.g. text, images, etc.) into your HTML documents.\
+    \ Basically, `onmouseout` runs once the user moves the mouse out of an element.\
+    \ On the other hand, `onmouseover` runs once the user brings the mouse over an\
+    \ element.\n\n### The Standard Events in HTML5\n\nThe following table shows the\
+    \ standard events supported by HTML 5.\n\n| Attribute | Explanation |\n| :---\
+    \ | :--- |\n| `onblur` | This event happens whenever a window loses focus. |\n\
+    | `offline` | This event occurs when the HTML file becomes offline. |\n| `oncanplay`\
+    \ | It happens when a playable media is present. The playable media might need\
+    \ to stop because of buffering. |\n| `onabort` | It occurs during an abort situation.\
+    \ |\n| `onbeforeprint` | This event occurs before the system prints the HTML document.\
+    \ |\n| `onafterprint` | This event happens once system has printed the HTML document.\
+    \ |\n| `onclick` | It happens once the user clicks the left-side button of his\
+    \ mouse. |\n| `ondblclick` | This event occurs when the user double-clicks the\
+    \ left-side button of his mouse. |\n| `ondrag` | It happens when the user drags\
+    \ an HTML element. |\n| `onchange` | It occurs when an HTML element changes. |\n\
+    | `ondragend` | It happens once the user stops dragging an HTML element. |\n|\
+    \ `onmouseup` | This event occurs whenever the user releases a mouse button. |\n\
+    | `onmousewheel` | It happens when the user rotates the wheel of his mouse. |\n\
+    | `onpagehide` | This event happens when the user hides. |\n| `onredo` | This\
+    \ occurs when the user conducts a redo on the HTML document. |\n| `onstorage`\
+    \ | This event occurs whenever an HTML file loads. |\n| `onmessage` | It occurs\
+    \ whenever the user triggers the assigned message. |\n| `onmousedown` | This event\
+    \ happens whenever the user presses a mouse button. |\n| `ononline` | This event\
+    \ occurs when the HTML file becomes online. |\n\n## Chapter 7: JavaScript and\
+    \ Cookies\n\n### What is a Cookie?\n\nWeb servers and browsers utilize HTTP to\
+    \ communicate. However, the HTTP protocol is stateless (i.e. it treats requests\
+    \ as independent transactions). That means that the system won’t remember any\
+    \ of the previous transactions. This can be a huge problem for commercial sites,\
+    \ since they need to share the user’s information across various webpages.\n\n\
+    In most cases, cookies help websites in tracking and remembering transactions;\
+    \ thus, cookies can help you improve the user-friendliness and overall traffic\
+    \ of your website.\n"
+  raw: "![](images/00032.jpeg)\n\nThat syntax has three different parts, which are:\n\
+    \n*   *   name – This is the name of the function. You may replace this with any\
+    \ valid identifier.\n\n    *   param – This is the  argument/parameter that you\
+    \ want to pass to the function. JavaScript allows you to include up to 255 parameters\
+    \ in each function.\n\n    *   statements – This section holds the statements\
+    \ (i.e. the body) of a function.\n\n*   Through the function expression – This\
+    \ approach is similar to the previous one. In fact, it uses the syntax (see below):\n\
+    \n![](images/00033.jpeg)\n\n*   Using JavaScript’s “Function Constructor” – JavaScript\
+    \ allows you to generate functions using “new” (i.e. a JavaScript operator). Here\
+    \ is the syntax that you must use:\n\n![](images/00034.jpeg)\n\nThe syntax given\
+    \ above has the following parts:\n\n*   *   arg1, arg2, … argN – This part holds\
+    \ the name/s you want to use as the formal parameter/s.\n\n    *   functionBody\
+    \ – This is a string that holds JavaScript statements (i.e. the body of the function).\n\
+    \nHow to Call a Function\n\nWhen defining a function, you are just naming that\
+    \ function and assigning what to be done once the function is invoked/called.\
+    \ Call a function if you want it to perform the assigned actions. For instance,\
+    \ if you have defined the “square” function, you may call it using the following\
+    \ code:\n\nsquare(2);\n\nThe code given above calls the “square” function and\
+    \ assigns 2 as the argument. The function runs its statements and gives 4 as the\
+    \ resulting value.\n\nYour functions must be within the proper scope when you\
+    \ call them. However, you can hoist (i.e. lift to the top) your function declarations.\
+    \ Here’s an example:\n\n![](images/00035.jpeg)\n\nA function’s arguments may hold\
+    \ different programming elements (i.e. not just numbers and strings). JavaScript\
+    \ allows you to assign entire objects to your functions. For example, show_props()\
+    \ (i.e. a built-in JavaScript function) accepts objects as arguments.\n\nThe Scope\
+    \ of a Function\n\nIf you defined a variable within a function, you won’t be able\
+    \ to access that variable from outside the function. That’s because you defined\
+    \ the variable within the function’s scope only. A function, however, can access\
+    \ all of the variables and other functions created within the scope in which it\
+    \ was defined. Simply put, global functions can access global variables. A nested\
+    \ function (i.e. a function placed inside another function) can access the variables\
+    \ created inside its “mother function.”\n\nThe Arguments of a Function\n\nJavaScript\
+    \ treats arguments as array objects. Inside a function, you may access the arguments\
+    \ it contains using the following syntax:\n\narguments[n]\n\nIn this syntax, “n”\
+    \ represents the argument’s ordinal number, beginning at zero. That means the\
+    \ initial argument of a function is arguments[0].\n\nIf you’ll use the JavaScript\
+    \ object called “arguments,” you may invoke functions that hold more arguments\
+    \ than what was declared in the code. This object can be extremely useful, especially\
+    \ if you have no idea about the number of arguments that you must assign to a\
+    \ function. To determine the quantity of objects inside a function, you may use\
+    \ arguments.length. Then, you may use the “arguments” object to access the function’s\
+    \ arguments.\n\nThe Parameters of a Function\n\nCurrently, JavaScript supports\
+    \ two types of parameters: default and rest.\n\nThe Default Parameters\n\nIn the\
+    \ JavaScript language, the default parameter of any function is “undefined.” In\
+    \ most situations, however, it is beneficial to change this default value. The\
+    \ default parameters can help you in this regard.\n\nBefore, the usual approach\
+    \ for setting a default value was to check parameter values inside the function’s\
+    \ body and assign a new value if the system shows “undefined.” With the default\
+    \ parameters, you won’t have to check the function’s body anymore. You may just\
+    \ assign numbers or strings as the new default value of your functions.\n\nThe\
+    \ Rest Parameters\n\nThis kind of parameter allows you to represent any number\
+    \ of arguments as a simple array. In the code below, you’ll use rest parameters\
+    \ to get the second, third and fourth arguments. You can then multiply them using\
+    \ the first argument.\n\n![](images/00036.jpeg)\n\nChapter 6: Events\n\nEvents\
+    \ – The Basics\n\nWhenever the user or the browser controls a webpage, JavaScript\
+    \ codes interact with HTML content. The system handles these interactions as events.\n\
+    \nBasically, the term “event” refers to any manipulation done on a webpage (e.g.\
+    \ clicking on a button, resizing the webpage, pressing a key, closing a pop-up\
+    \ window, etc.).\n\nAs a JavaScript programmer, you may use events to run certain\
+    \ responses (e.g. closing a window, displaying a message, validating records,\
+    \ etc.).\n\nEvents belong to DOM (Document Object Model) Level 3\\. Additionally,\
+    \ each HTML element holds a collection of events that can initiate JavaScript\
+    \ codes.\n\nThis chapter will discuss some of the most popular webpage events.\
+    \ This material will help you to understand the relationship between events and\
+    \ the JavaScript language.\n\nThe “onclick” Event\n\nJavaScript users encounter\
+    \ this kind of event frequently. Basically, an “onclick” event happens whenever\
+    \ a user clicks the left-side button of his mouse. You may link warnings, validations\
+    \ and other content to this event.\n\nHere’s an example:             \n\n![](images/00037.jpeg)\n\
+    \nIf you’ll run that code, you will get the following output:\n\n![](images/00038.jpeg)\n\
+    \nThe “onsubmit” Event\n\nThis event happens whenever a user submits a form. Typically,\
+    \ programmers link their form validations to this kind of event.\n\nThe “onmouseout”\
+    \ and “onmouseover” Events\n\nThese two kinds of events can help you add cool\
+    \ effects (e.g. text, images, etc.) into your HTML documents. Basically, “onmouseout”\
+    \ runs once the user moves the mouse out of an element. On the other hand, “onmouseover”\
+    \ runs once the user brings the mouse over an element.\n\nThe Standard Events\
+    \ in HTML 5\n\nThe following table shows the standard events supported by HTML\
+    \ 5.\n\n| Attribute | Explanation |\n\n| onblur | This event happens whenever\
+    \ a window loses focus. |\n\n| Offline | This event occurs when the HTML file\
+    \ becomes offline. |\n\n| oncanplay | It happens when a playable media is present.\
+    \ The playable media might need to stop because of buffering. |\n\n| onabort |\
+    \ It occurs during an abort situation. |\n\n| onbeforeprint | This event occurs\
+    \ before the system prints the HTML document. |\n\n| onafterprint | This event\
+    \ happens once system has printed the HTML document. |\n\n| onclick | It happens\
+    \ once the user clicks the left-side button of his mouse. |\n\n| ondblclick |\
+    \ This event occurs when the user double-clicks the left-side button of his mouse.\
+    \ |\n\n| ondrag | It happens when the user drags an HTML element. |\n\n| onchange\
+    \ | It occurs when an HTML element changes. |\n\n| ondragend | It happens once\
+    \ the user stops dragging an HTML element. |\n\n| onmouseup | This event occurs\
+    \ whenever the user releases a mouse button. |\n\n| onmousewheel | It happens\
+    \ when the user rotates the wheel of his mouse. |\n\n| onpagehide | This event\
+    \ happens when the user hides |\n\n| onredo | This occurs when the user conducts\
+    \ a redo on the HTML document. |\n\n| onstorage | This event occurs whenever an\
+    \ HTML file loads. |\n\n| onmessage | It occurs whenever the user triggers the\
+    \ assigned message. |\n\n| onmousedown | This event happens whenever the user\
+    \ presses a mouse button. |\n\n| ononline | This event occurs when the HTML file\
+    \ becomes online. |\n\nChapter 7: JavaScript and Cookies\n\nWhat is a Cookie?\n\
+    \nWeb servers and browsers utilize HTTP to communicate. However, the HTTP protocol\
+    \ is stateless (i.e. it treats requests as independent transactions). That means\
+    \ that the system won’t remember any of the previous transactions. This can be\
+    \ a huge problem for commercial sites, since they need to share the user’s information\
+    \ across various webpages.\n\nIn most cases, cookies help websites in tracking\
+    \ and remembering transactions; thus, cookies can help you improve the user-friendliness\
+    \ and overall traffic of your website."
+  toc: []
+  trans: "\n\n![](img/00032.jpeg)\n\n该语法包含三个不同的部分，分别是：\n\n* `name` – 这是函数的名称。你可以将其替换为任何有效的标识符。\n\
+    \    * `param` – 这是你想要传递给函数的参数/形参。JavaScript 允许你在每个函数中包含最多 255 个参数。\n    * `statements`\
+    \ – 这一部分包含函数的语句（即函数体）。\n* 通过函数表达式 – 这种方法与之前的方法相似。事实上，它使用了以下语法（见下文）：\n\n![](img/00033.jpeg)\n\
+    \n* 使用 JavaScript 的“函数构造函数” – JavaScript 允许你使用 `new`（即一个 JavaScript 运算符）来生成函数。以下是你必须使用的语法：\n\
+    \n![](img/00034.jpeg)\n\n上述给出的语法包含以下部分：\n\n* `arg1, arg2, … argN` – 这一部分包含你想要作为形式参数的名称。\n\
+    \    * `functionBody` – 这是一个包含 JavaScript 语句的字符串（即函数体）。\n\n## 如何调用函数\n\n在定义函数时，你只是在为该函数命名，并指定当函数被触发/调用时要执行的操作。如果你想让它执行分配的操作，请调用该函数。例如，如果你定义了“square”（平方）函数，你可以使用以下代码调用它：\n\
+    \n```\nsquare(2);\n```\n\n上述代码调用了 `square` 函数并将 2 指定为参数。该函数运行其语句并返回 4 作为结果值。\n\
+    \n当你调用函数时，函数必须在适当的作用域内。不过，你可以对函数声明进行**变量提升**（即将其提升到顶部）。这里有一个例子：\n\n![](img/00035.jpeg)\n\
+    \n函数的参数可以包含不同的编程元素（即不仅仅是数字和字符串）。JavaScript 允许你将整个对象赋值给你的函数。例如，`show_props()`（即一个内置函数）接受对象作为参数。\n\
+    \n### 函数的作用域\n\n如果你在函数内部定义了一个变量，你将无法从外部访问该变量。这是因为你是在函数的作用域内定义它的。简单来说，全局函数可以访问全局变量。嵌套函数（即放在另一个函数内部的函数）可以访问母函数内部创建的变量。\n\
+    \n### 函数参数\n\nJavaScript 将参数视为数组对象。在函数内部，你可以使用以下语法访问它们：\n\n```\narguments[n]\n\
+    ```\n\n在此语法中，`n` 代表参数的序数，从零开始。这意味着函数的初始参数是 `arguments[0]`。如果你使用 `arguments` 对象，你可以调用持有比代码中声明的更多参数的函数。要确定函数内部对象的数量，你可以使用\
+    \ `arguments.length`。然后，你可以使用 `arguments` 对象来访问参数。\n\n#### 函数参数（Parameters）\n\n\
+    目前，JavaScript 支持两种类型的参数：默认参数和剩余参数（rest）。\n\n#### 默认参数\n\n在 JavaScript 语言中，任何函数的默认参数都是\
+    \ `undefined`。然而，在大多数情况下，更改此值是有益的。以前，设置默认值的常用方法是在函数体内部检查参数值，如果系统显示为 `undefined`\
+    \ 则分配一个新值。使用默认参数，你可以直接将数字或字符串作为函数的默认值。\n\n#### 剩余参数\n\n这种参数允许你将任意数量的参数表示为一个数组。在下面的代码中，你将使用剩余参数来获取第二、第三和第四参数。然后你可以使用第一个参数将它们相乘。\n\
+    \n![](img/00036.jpeg)\n\n## 第 6 章：事件\n\n### 事件 – 基础\n\n每当用户或浏览器控制时，就会发生事件。JavaScript\
+    \ 允许你对这些事件做出响应。例如，当用户点击按钮、移动鼠标或按下键盘时，JavaScript 可以执行相应的操作。这些操作被称为事件处理器（event handlers）。\n\
+    \n每当用户或浏览器控制时，就会发生事件。JavaScript 允许你对这些事件做出响应。例如，当用户点击按钮、移动鼠标或按下键盘时，JavaScript\
+    \ 可以执行相应的操作。这些操作被称为事件处理器（event handlers）。\n\n每当用户或浏览器控制时，就会发生事件。JavaScript 允许你对这些事件做出响应。例如，`onclick`\
+    \ 是最触发的事件。\n\n### 点击事件\n\n当用户点击鼠标左键时，会触发此事件。这里有一个例子：\n\n![](img/00037.jpeg)\n\n\
+    如果你运行该代码，你将看到以下输出：\n\n![](img/00038.jpeg)\n\n### 提交事件\n\n当用户提交表单时，会触发此事件。通常，程序员会将表单链接到事件。\n\
+    \n### 鼠标移出和鼠标移入事件\n\n这两类事件可以帮助你添加酷炫的效果（如文本、图像）到 HTML 中。基本上，`onmouseout` 在鼠标离开元素时运行。另一方面，`onmouseover`\
+    \ 在鼠标悬停在元素上时运行。\n\n### HTML 标准事件\n\n下表显示了标准事件。\n\n| 属性 | 解释 |\n| :--- | :--- |\n\
+    | `onblur` | 当窗口失去焦点时发生。 |\n| `offline` | 当文件离线时发生。 |\n| `oncanplay` | 当媒体可以播放时发生。媒体可能因为缓冲而停止。\
+    \ |\n| `onabort` | 在中止期间发生。 |\n| `onbeforeprint` | 在系统打印 HTML 文档之前。 |\n| `onafterprint`\
+    \ | 系统打印 HTML 文档后发生。 |\n| `onclick` | 用户点击鼠标左键时发生。 |\n| `ondblclick` | 当用户双击鼠标左键时发生。\
+    \ |\n| `ondrag` | 当用户拖拽 HTML 元素时发生。 |\n| `onchange` | 当 HTML 元素发生变化时发生。 |\n| `ondragend`\
+    \ | 当用户停止拖拽 HTML 元素时发生。 |\n| `onmouseup` | 当用户释放鼠标按钮时发生。 |\n| `onmousewheel` |\
+    \ 当用户滚动鼠标轮时发生。 |\n| `onpagehide` | 当用户隐藏页面时发生。 |\n| `onredo` | 当用户对 HTML 文档执行重做时发生。\
+    \ |\n| `onstorage` | 每当 HTML 文件加载时发生。 |\n| `onmessage` | 当用户触发分配的消息时发生。 |\n| `onmousedown`\
+    \ | 当用户按下鼠标按钮时发生。 |\n| `ononline` | 当文件变为在线时发生。 |\n\n## 第 7 章：JavaScript 与 Cookie\n\
+    \n### 什么是 Cookie？\n\nWeb 服务器和浏览器利用 HTTP 进行通信。然而，HTTP 协议是无状态的（即它将请求视为独立的事务）。这意味着系统不会记住之前的任何事务。这对于商业网站来说是一个巨大的问题，因为它们需要在不同的网页之间共享用户信息。\n\
+    \n在大多数情况下，Cookie 帮助网站跟踪和记住事务；因此，Cookie 可以帮助你提高网站的用户友好性和整体流量。\n\n"
+- fmt: '
+
+    # How Does a Cookie Work?
+
+
+    The web server sends information to the user’s internet browser as a cookie. If
+    the browser accepts the cookie, the information will be converted to plaintext
+    inside the user’s hard drive. Once the user visits another webpage on your site,
+    his browser will send the same cookie to the web server for data retrieval. Once
+    data has been retrieved, your web server will know what has occurred before.
+
+
+    Basically, a cookie is a plaintext data record that has 5 fields (which are variable-length).
+    These fields are:
+
+
+    - `Domain`: This is your website’s domain name.
+
+    - `Secure`: If this field is tagged as “secure,” only a secure webserver can retrieve
+    the cookie. If it is blank, however, any webserver can access the cookie.
+
+    - `Expires`: This field specifies the date at which the cookie will expire. If
+    this field is blank, the cookie will expire as the the user closes the web browser.
+
+    - `Path`: This is the path to the webpage or directory that created the cookie.
+    If you want to retrieve cookies from any page or directory, you may leave this
+    field empty.
+
+    - `Name=Value`: Each cookie is set and retrieved as key-value pairs.
+
+
+    Cookies were created for CGI (i.e. Common Gateway Interface) programming. The
+    information stored in a cookie is transmitted automatically between the webserver
+    and the user’s web browser. That means CGI scripts written on the webserver can
+    read and edit cookie information stored on the user’s hard drive.
+
+
+    JavaScript allows you to manage cookies using the `Document` object’s `cookie`
+    property. The JavaScript language can create, read, alter, and delete cookies
+    that are applied on the active webpage.
+
+
+    ## How to Create a Cookie?
+
+
+    The easiest way to generate a cookie is to place a string value to the object
+    named `document.cookie`. The syntax that you should use is:
+
+
+    ```
+
+    ![](images/00039.jpeg)
+
+    ```
+
+
+    In this syntax, `expires` is completely optional. If you’ll enter a valid time
+    or date on this field, the cookie will expire on that particular time or date.
+    You won’t be able to access the values stored in an expired cookie.
+
+
+    **Important Note**: You can’t save whitespaces, commas, or semicolons into a cookie.
+    Thus, you have to encode those characters using the `escape()` function before
+    saving them onto a cookie. If you’ll encode characters this way, you should also
+    use `unescape()` to allow the system to read the value you stored.
+
+
+    ## How to Read a Cookie
+
+
+    You can read cookies easily. This is because the cookie is the value stored on
+    the object named `document.cookie`. That means you can use that string to access
+    the cookie whenever you want. Basically, `document.cookie` contains a set of `name=value`
+    pairs that are separated by semicolons. Here, `name` is the cookie’s name and
+    `value` is the cookie’s string value.
+
+
+    ## How to Set a Cookie’s Expiry Date
+
+
+    In some cases, you have to extend the cookie’s life beyond the current browsing
+    session. By doing so, you can complete long processes without having to reenter
+    any piece of information. JavaScript allows you to set your preferred expiration
+    date and save that information inside the cookie itself. You can accomplish this
+    by customizing the cookie’s “expires” attribute.
+
+
+    The image below shows you how to set a cookie’s expiration date. It extends the
+    current expiry date by one month.
+
+
+    ```
+
+    ![](images/00040.jpeg)
+
+    ```
+
+
+    ## How to Delete a Cookie
+
+
+    In most cases, you must delete cookies after using them. This ensures that the
+    webserver won’t get any information from the unnecessary cookie. Deleting a cookie
+    is easy and simple. You just have to set the expiration date to a time in the
+    past.
+
+
+    # Chapter 8: Page Redirection
+
+
+    ## Page Redirection – The Basics
+
+
+    You have probably tried to access a certain webpage but you were redirected to
+    a different one. That event occurs because of page redirection. Don’t confuse
+    this with Page Refresh (which will be discussed below).
+
+
+    There are lots of reasons why you’d need to redirect users from a certain page.
+    Here are the most common reasons:
+
+
+    - You are transferring your website to a new domain name. In this case, you need
+    to forward all of your website traffic to the new domain. You don’t have to delete
+    the old website. You can keep it and use page redirection to get all the web traffic.
+    This approach can help you keep your previous customers who may not be aware of
+    your new site.
+
+    - You created webpages based on certain criteria (e.g. browser types, the customers’
+    name, the country where the customer resides, etc.). Rather than redirecting visitors
+    through server-side mechanisms, you may employ client-side redirection to forward
+    your visitors to the correct webpage.
+
+    - You want to retain the traffic from your old SEO campaign even though you have
+    switched to a new website. Search engines may ban your website from their search
+    results pages if you’ll use page redirection to get illegal web traffic.
+
+
+    ## Page Refresh
+
+
+    In JavaScript, you may refresh webpages using the `location.reload` method. You
+    can call this method automatically or when a user clicks on a certain link. If
+    you like to refresh a webpage based on mouse clicks, you should use the code below:
+
+
+    ```
+
+    ![](images/00041.jpeg)
+
+    ```
+
+
+    ### Automatic Refresh
+
+
+    JavaScript allows you to refresh a webpage after a certain amount of time. You
+    just have to use `setTimeout()` (i.e. a pre-installed JavaScript function) to
+    run a different function after a predetermined time interval.
+
+
+    ## How Does Page Redirection Work?
+
+
+    Programmers implement page redirection in different ways. Here are some examples:
+
+
+    1. You may use JavaScript to implement a client-side page redirection. To forward
+    your website visitors to the new webpage, you just have to add a line in your
+    HTML document’s head section. Here’s an example:
+
+
+    ```
+
+    ![](images/00042.jpeg)
+
+    ```
+
+
+    2. You may display a message to your visitors visitors before them them to the
+    webpage. This approach involves a delay: the old webpage has to load the message
+    you want to show. The code below will show you how to use this using the JavaScript
+    language.
+
+
+    ```
+
+    ![](images/00043.jpeg)
+
+    ```
+
+
+    3. You may redirect users based on the browser that they are using. The following
+    example will show you how it’s done:
+
+
+    ```
+
+    ![](images/00044.jpeg)
+
+    ```
+
+
+    # Chapter 9: Dialog Boxes
+
+
+    The JavaScript language supports three kinds of dialog boxes. You may use these
+    dialog boxes to raise an alert, confirm any input, or ask users to enter certain
+    pieces of information. This chapter will discuss each type of dialog box in detail.
+
+
+    ## The Alert Box
+
+
+    Use this box to display a warning message for your website visitors. For instance,
+    if the user doesn’t enter any input in a mandatory field, you may use an alert
+    dialog box to warn that user. Programmers consider this kind of dialog box as
+    an important part of user validation.
+
+
+    **Important Note**: You may also use an alert box to display friendly messages.
+    Also, an alert box has a single button (i.e. the “OK” button). The user needs
+    to click on the button before he/she can proceed.
+
+
+    ## The Confirmation Box
+
+
+    In general, you’ll use this dialog box to ask for the user’s consent. This dialog
+    box has two buttons: OK and Quit (or Cancel). Website developers use this dialog
+    box to confirm the visitor’s intention to proceed with an action.
+
+
+    ## The Prompt Box
+
+
+    This dialog box is extremely useful if you need to display a text box that can
+    accept user input. That means you can use a prompt box to interact with your website
+    visitors. Your visitors have to enter the required information and hit the OK
+    button.
+
+
+    To display a prompt dialog box on a webpage, you must use the `prompt()` method.
+    This method accepts two parameters: (1) the label that you want to show in the
+    dialog box and (2) the text string that you want to show in the dialog box.
+
+    '
+  raw: 'How Does a Cookie Work?
+
+
+    The web server sends information to the user’s internet browser as a cookie. If
+    the browser accepts the cookie, the information will be converted to plaintext
+    inside the user’s hard drive. Once the user visits another webpage on your site,
+    his browser will send the same cookie to the web server for data retrieval. Once
+    data has been retrieved, your web server will know what has occurred before.
+
+
+    Basically, a cookie is a plaintext data record that has 5 fields (which are variable-length).
+    These fields are:
+
+
+    *   Domain – This is your website’s domain name.
+
+
+    *   Secure – If this field is tagged as “secure,” only a secure webserver can
+    retrieve the cookie. If it is blank, however, any webserver can access the cookie.
+
+
+    *   Expires – This field specifies the date at which the cookie will expire. If
+    this field is blank, the cookie will expire as soon the user closes the web browser.
+
+
+    *   Path – This is the path to the webpage or directory that created the cookie.
+    If you want to retrieve cookies from any page or directory, you may leave this
+    field empty.
+
+
+    *   Name=Value – Each cookie is set and retrieved as key-value pairs.
+
+
+    Cookies were created for CGI (i.e. Common Gateway Interface) programming. The
+    information stored in a cookie is transmitted automatically between the webserver
+    and the user’s web browser. That means CGI scripts written on the webserver can
+    read and edit cookie information stored on the user’s hard drive.
+
+
+    JavaScript allows you to manage cookies using the Document object’s cookie property.
+    The JavaScript language can create, read, alter, and delete cookies that are applied
+    on the active webpage.
+
+
+    How to Create a Cookie?
+
+
+    The easiest way to generate a cookie is to place a string value to the object
+    named document.cookie. The syntax that you should use is:
+
+
+    ![](images/00039.jpeg)
+
+
+    In this syntax, expires is completely optional. If you’ll enter a valid time or
+    date on this field, the cookie will expire on that particular time or date. You
+    won’t be able to access the values stored in an expired cookie.
+
+
+    Important Note: You can’t save whitespaces, commas, or semicolons into a cookie.
+    Thus, you have to encode those characters using the escape() function before saving
+    them onto a cookie. If you’ll encode characters this way, you should also use
+    unescape() to allow the system to read the value you stored.
+
+
+    How to Read a Cookie
+
+
+    You can read cookies easily. This is because the cookie is the value stored on
+    the object named “document.cookie”. That means you can use that string to access
+    the cookie whenever you want. Basically, document.cookie contains a set of name=value
+    pairs that are separated by semicolons. Here, name is the cookie’s name and value
+    is the cookie’s string value.
+
+
+    How to Set a Cookie’s Expiry Date
+
+
+    In some cases, you have to extend the cookie’s life beyond the current browsing
+    session. By doing so, you can complete long processes without having to reenter
+    any piece of information. JavaScript allows you to set your preferred expiration
+    date and save that information inside the cookie itself. You can accomplish this
+    by customizing the cookie’s “expires” attribute.
+
+
+    The image below shows you how to set a cookie’s expiration date. It extends the
+    current expiry date by one month.
+
+
+    ![](images/00040.jpeg)
+
+
+    How to Delete a Cookie
+
+
+    In most cases, you must delete cookies after using them. This ensures that the
+    webserver won’t get any information from the unnecessary cookie. Deleting a cookie
+    is easy and simple. You just have to set the expiration date to a time in the
+    past.
+
+
+    Chapter 8: Page Redirection
+
+
+    Page Redirection – The Basics
+
+
+    You have probably tried to access a certain webpage but you were redirected to
+    a different one. That event occurs because of page redirection. Don’t confuse
+    this with Page Refresh (which will be discussed below).
+
+
+    There are lots of reasons why you’d need to redirect users from a certain page.
+    Here are the most common reasons:
+
+
+    *   You are transferring your website to a new domain name. In this case, you
+    need to forward all of your website traffic to the new domain. You don’t have
+    to delete the old website. You can keep it and use page redirection to get all
+    the web traffic. This approach can help you keep your previous customers who may
+    not be aware of your new site.
+
+
+    *   You created webpages based on certain criteria (e.g. browser types, the customers’
+    name, the country where the customer resides, etc.). Rather than redirecting visitors
+    through server-side mechanisms, you may employ client-side redirection to forward
+    your visitors to the correct webpage.
+
+
+    *   You want to retain the traffic from your old SEO campaign even though you
+    have switched to a new website. Search engines may ban your website from their
+    search results pages if you’ll use page redirection to get illegal web traffic.
+
+
+    Page Refresh
+
+
+    In JavaScript, you may refresh webpages using the location.reload method. You
+    can call this method automatically or when a user clicks on a certain link. If
+    you like to refresh a webpage based on mouse clicks, you should use the code below:
+
+
+    ![](images/00041.jpeg)
+
+
+    Automatic Refresh
+
+
+    JavaScript allows you to refresh a webpage after a certain amount of time. You
+    just have to use setTimeout() (i.e. a pre-installed JavaScript function) to run
+    a different function after a predetermined time interval.
+
+
+    How Does Page Redirection Work?
+
+
+    Programmers implement page redirection in different ways. Here are some examples:
+
+
+    1.  You may use JavaScript to implement a client-side page redirection. To forward
+    your website visitors to the new webpage, you just have to add a line in your
+    HTML document’s head section. Here’s an example:
+
+
+    ![](images/00042.jpeg)
+
+
+    2.  You may display a message to your website visitors before forwarding them
+    to the new webpage. This approach involves a delay: the old webpage has to load
+    the message you want to show. The code below will show you how to use this approach
+    using the JavaScript language.
+
+
+    ![](images/00043.jpeg)
+
+
+    3.  You may redirect users based on the browser that they are using. The following
+    example will show you how it’s done:
+
+
+    ![](images/00044.jpeg)
+
+
+    Chapter 9: Dialog Boxes
+
+
+    The JavaScript language supports three kinds of dialog boxes. You may use these
+    dialog boxes to raise an alert, confirm any input, or ask users to enter certain
+    pieces of information. This chapter will discuss each type of dialog box in detail.
+
+
+    The Alert Box
+
+
+    Use this box to display a warning message for your website visitors. For instance,
+    if the user doesn’t enter any input in a mandatory field, you may use an alert
+    dialog box to warn that user. Programmers consider this kind of dialog box as
+    an important part of user validation.
+
+
+    Important Note: You may also use an alert box to display friendly messages. Also,
+    an alert box has a single button (i.e. the “OK” button). The user needs to click
+    on the button before he/she can proceed.
+
+
+    The Confirmation Box
+
+
+    In general, you’ll use this dialog box to ask for the user’s consent. This dialog
+    box has two buttons: OK and Quit (or Cancel).
+
+
+    Website developers use this dialog box to confirm the visitor’s intention to proceed
+    with an action. You’ll see confirmation boxes on adult websites and those that
+    require confidential information.
+
+
+    The Prompt Box
+
+
+    This dialog box is extremely useful if you need to display a text box that can
+    accept user input. That means you can use a prompt box to interact with your website
+    visitors. Your visitors have to enter the required information and hit the OK
+    button.
+
+
+    To display a prompt dialog box on a webpage, you must use the prompt() method.
+    This method accepts two parameters: (1) the label that you want to show in the
+    dialog box and (2) the text string that you want to show in the dialog box.'
+  toc: []
+  trans: '
+
+
+    # Cookie 是如何工作的？
+
+
+    Web 服务器将信息以 Cookie 的形式发送给用户的浏览器。如果浏览器接受了该 Cookie，该信息将在用户的硬盘中被转换为明文。一旦用户再次访问了你网站上的另一个网页，他的浏览器将向
+    Web 服务器发送相同的 Cookie 以进行数据检索。一旦检索到数据，你的 Web 服务器就会知道之前发生了什么。
+
+
+    基本上，Cookie 是一个包含 5 个字段（长度可变）的明文数据记录。这些字段是：
+
+
+    - `Domain`: 这是你网站的域名。
+
+    - `Secure`: 如果此字段被标记为“secure”，则只有安全的 Web 服务器可以检索 Cookie。但是，如果它是空的，任何 Web 服务器都可以访问该
+    Cookie。
+
+    - `Expires`: 此字段指定了 Cookie 过期的日期。如果此字段为空，Cookie 将在用户关闭网络浏览器时过期。
+
+    - `Path`: 这是创建 Cookie 的网页或目录的路径。如果你想从任何页面或目录检索 Cookie，可以留此字段为空。
+
+    - `Name=Value`: 每个 Cookie 都是以键值对的形式进行设置和检索的。
+
+
+    Cookie 的创建是为了 CGI（即通用网关接口）编程。存储在 Cookie 中的信息会在 Web 服务器和用户的浏览器之间自动传输。这意味着编写在 Web
+    服务器上的 CGI 脚本可以读取和编辑存储在用户硬盘上的 Cookie 信息。
+
+
+    JavaScript 允许你使用 `Document` 对象的 `cookie` 属性管理 Cookie。JavaScript 语言可以创建、读取、修改和删除应用于活动网页的
+    Cookie。
+
+
+    ## 如何创建 Cookie？
+
+
+    生成 Cookie 最简单的方法是向名为 `document.cookie` 的对象放置一个字符串值。你应该使用的语法是：
+
+
+    ```
+
+    ![](img/00039.jpeg)
+
+    ```
+
+
+    在此语法中，`expires` 是完全可选的。如果你在该字段中输入有效的时间或日期，Cookie 将在该特定时间或日期过期。你将无法访问过期 Cookie
+    中存储的值。
+
+
+    **重要说明**：你不能在 Cookie 中保存空格、逗号或分号。因此，在将它们保存到 Cookie 之前，你必须使用 `escape()` 函数对这些字符进行编码。如果你用这样编码了字符，还应该使用
+    `unescape()` 让系统读取你存储的值。
+
+
+    ## 如何读取 Cookie
+
+
+    你可以轻松地读取 Cookie。这是因为 Cookie 是存储在名为 `document.cookie` 的对象上的值。这意味着你可以随时使用该字符串来访问
+    Cookie。基本上，`document.cookie` 包含一组由分号分隔的 `name=value` 节点。这里，`name` 是 Cookie 的名称，`value`
+    是 Cookie 的字符串值。
+
+
+    ## 如何设置 Cookie 的过期日期
+
+
+    在某些情况下，你必须将 Cookie 的寿命延长到当前浏览会话之外。这样做，你可以完成长时间的过程而无需重新输入任何信息。JavaScript 允许你设置偏好的过期日期并将该信息保存在
+    Cookie 自身内部。你可以通过自定义 Cookie 的“expires”属性来实现这一点。
+
+
+    下面的图片显示了如何设置 Cookie 的过期日期。它将当前的过期日期延长了一个月。
+
+
+    ```
+
+    ![](img/00040.jpeg)
+
+    ```
+
+
+    ## 如何删除 Cookie
+
+
+    在大多数情况下，在使用 Cookie 后必须删除它们。这确保了 Web 服务器不会从必要的 Cookie 中获取任何信息。删除 Cookie 非常简单直接。你只需要将过期日期设置为过去的时间。
+
+
+    # 第 8 章：页面重定向
+
+
+    ## 页面重定向 – 基础
+
+
+    你可能尝试过访问某个网页，但被重定向到了另一个。该事件的发生是因为页面重定向。不要将其与页面刷新（将在下文中讨论）混淆。
+
+
+    有很多理由需要你从某个页面重定向用户。以下是最常见的原因：
+
+
+    - 你正在将你的网站迁移到新域名。在这种情况下，你需要将所有的网站流量重定向到新域名。你不需要删除旧网站。你可以保留它并使用页面重定向来获取所有网络流量。这种方法可以帮助你留住之前的客户，他们可能并不知道你的新网站。
+
+    - 你根据某些标准（例如浏览器类型、客户名称、客户所在的国家等）创建了网页。与其通过服务器端机制重定向访问者，你可能采用客户端重定向将访问者引导到正确的网页。
+
+    - 即使你已经切换到新网站，你仍想保留来自旧 SEO 活动的流量。如果你使用页面重定向来获取非法网络流量，搜索引擎可能会从搜索结果页面中封禁你的网站。
+
+
+    ## 页面刷新
+
+
+    在 JavaScript 中，你可以使用 `location.reload` 方法刷新网页。你可以自动调用此方法，也可以在用户点击某个链接时调用它。如果你喜欢根据鼠标点击刷新网页，应该使用下面的代码：
+
+
+    ```
+
+    ![](img/00041.jpeg)
+
+    ```
+
+
+    ### 自动刷新
+
+
+    JavaScript 允许你在一段时间后刷新网页。你只需要使用 `setTimeout()`（即一个预装的 JavaScript 函数）在预定的时间间隔后运行另一个函数。
+
+
+    ## 页面重定向是如何运作的？
+
+
+    程序员以不同的方式实现页面重定向。以下是一些示例：
+
+
+    1. 你可能使用 JavaScript 实现客户端页面重定向。为了将你的网站访问者引导到新网页，你只需要在 HTML 文档中添加一行。例如：
+
+
+    ```
+
+    ![](img/0042.jpeg)
+
+    ```
+
+
+    2. 你可以在引导访问者之前显示消息。这种方法涉及延迟：网页需要加载你想显示的消息。下面的代码将显示如何使用它：
+
+
+    ```
+
+    ![](img/00043.jpeg)
+
+    ```
+
+
+    3. 你可以根据用户使用的浏览器重定向用户。以下示例将显示如何实现：
+
+
+    ```
+
+    ![](img/0044.jpeg)
+
+    ```
+
+
+    # 第 9 章：对话框
+
+
+    JavaScript 语言支持三种对话框。你可以使用这些对话框来发出警告、确认输入或要求用户输入某些信息。本章将详细讨论每种对话框。
+
+
+    ## 警告框 (Alert Box)
+
+
+    使用此框为你的网站访问者显示警告消息。例如，如果用户在必填字段没有输入任何内容，你可以使用警告对话框来提醒该用户。程序员认为这种对话框是用户验证的重要部分。
+
+
+    **重要说明**：你也可以使用警告框显示友好的消息。此外，警告框只有一个按钮（即“确定”按钮）。用户需要点击该按钮后才能继续。
+
+
+    ## 确认框 (Confirmation Box)
+
+
+    通常，你会使用此对话框来请求用户的同意。此对话框有两个按钮：确定和退出（或取消）。网站开发者使用此对话框来确认访问者继续操作的意图。
+
+
+    ## 提示框 (Prompt Box)
+
+
+    如果你需要显示一个可以接受用户输入的文本框，这个对话框非常有用。这意味着你可以使用提示框与你的网站访问者进行交互。你的访问者必须输入所需的信息并点击确定按钮。
+
+
+    要在网页上显示提示对话框，你必须使用 `prompt()` 方法。该方法接受两个参数：(1) 你想在对话框中显示的标签，(2) 你想在对话框中显示的文本字符串。
+
+
+    '
+- fmt: '
+
+    Similar to a confirmation box, a prompt box has an OK button and a Quit/Cancel
+    button. If the website visitor hits OK, the `prompt()` method will submit the
+    data entered in the text box. If the visitor hits Quit/Cancel, on the other hand,
+    the `prompt()` method will submit null to the webserver.
+
+
+    # Chapter 10: How to Use the Void Keyword
+
+
+    The `void` keyword plays an important part in the JavaScript language. You can
+    use `void` as a unary operator (i.e. an operator that works on a single operand)
+    for any kind of operand. Basically, `void` identifies the expression to be checked
+    without giving any value.
+
+
+    ## The Syntax
+
+
+    The syntax of this keyword has two forms:
+
+
+    1. ![](images/00045.jpeg)
+
+    2. ![](images/00046.jpeg)
+
+
+    To help you understand this keyword, let’s analyze two practical examples:
+
+
+    * Programmers often use this keyword in the client-side form of JavaScript. For
+    example, they can use `void` on a URL to get the side-effects of an expression
+    without showing the result on the web browser.
+
+    * Analyze the code below. The link it contains won’t do anything since the expression
+    “0” is meaningless in the JavaScript language. JavaScript evaluates “0” but it
+    doesn’t load the expression into the HTML document.
+
+
+    ![](images/00047.jpeg)
+
+
+    # Chapter 11: Debugging
+
+
+    Programmers are humans – they make mistakes every now and then. Mistakes in a
+    script or a program are called “bugs.”
+
+
+    The act of searching for and resolving bugs is known as “debugging.” Programmers
+    consider debugging as an important aspect of the development procedure. This chapter
+    will discuss the tools and methods that you can use to perform debugging tasks.
+
+
+    ## The Error Messages in Internet Explorer
+
+
+    The simplest approach to find errors is by activating the “Error Information”
+    option of a web browser. Internet Explorer, for instance, displays an icon in
+    its status bar whenever an error occurs on a webpage. Here’s a screenshot:
+
+
+    ![](images/00048.jpeg)
+
+
+    If you’ll double-click on that icon, Internet Explorer will display a dialog box
+    containing details about the error it encountered.
+
+
+    Since you can easily overlook this icon, Internet Explorer allows you to set the
+    system so that it will display the error dialog box each time an error happens.
+    To turn on that option, just click on “Tools” and hit “Internet Options”. Click
+    on the tab named “Advanced” and put a check on the box that says: “Display a Notification
+    about Every Script Error.”
+
+
+    Here’s a screenshot:
+
+
+    ![](images/00049.jpeg)
+
+
+    ## The Error Messages in Netscape and Firefox
+
+
+    Netscape and Firefox send error details to a window named “Error Console” or “JavaScript
+    Console.” You can view this window by clicking on “Tools” and selecting “Error
+    Console.”
+
+
+    However, because these two browsers don’t have an error icon, you have to keep
+    the Error Console open as you execute your JavaScript codes.
+
+
+    ## The Error Notifications
+
+
+    The error notifications that you see on your browser (e.g. Internet Explorer,
+    Netscape, Firefox, etc.) are caused by runtime and syntax errors. These notifications
+    contain detailed information (e.g. line numbers) regarding the error. That means
+    you can use these error notifications to find and solve errors quickly.
+
+
+    If you are using Mozilla Firefox, you may click on the errors listed in the Console
+    to check the exact line that caused the problem.
+
+
+    ## Debugging your Scripts
+
+
+    JavaScript offers a powerful approach in debugging a script:
+
+
+    * Using a validator – In JavaScript, you may use a validator to ensure that your
+    codes follow the syntax rules of this language. Validators (also known as validating
+    passers) usually come with premium JavaScript and HTML editors.
+
+    * JavaScript Lint, which was developed by Douglas Crockford, is one of the leading
+    validators today. You can use it for free here: [http://www.jslint.com/](http://www.jslint.com/)
+
+
+    Just access that webpage, paste the JavaScript code onto the editing area, and
+    hit the button that says “JSLint.” This computer program will analyze your code,
+    making sure that each of its parts follows the right syntax.
+
+
+    # Conclusion
+
+
+    Thank you for reading this book!
+
+
+    I hope this book was able to teach you the basics of JavaScript.
+
+
+    The next step is to write your own webpages and applications using the JavaScript
+    programming language.
+
+
+    Would you do me a favor?
+
+
+    Finally, if you enjoyed this book, please take the time to share your thoughts
+    and post a positive review on Amazon. It’d be greatly appreciated!
+
+
+    Thank you and good luck!
+
+    '
+  raw: 'Similar to a confirmation box, a prompt box has an OK button and a Quit/Cancel
+    button. If the website visitor hits OK, the prompt() method will submit the data
+    entered in the text box. If the visitor hits Quit/Cancel, on the other hand, the
+    prompt() method will submit null to the webserver
+
+
+    Chapter 10: How to Use the Void Keyword
+
+
+    The “void” keyword plays an important part in the JavaScript language. You can
+    use “void” as a unary operator (i.e. an operator that works on a single operand)
+    for any kind of operand. Basically, “void” identifies the expression to be checked
+    without giving any value.
+
+
+    The Syntax
+
+
+    The syntax of this keyword has two forms:
+
+
+    1\. ![](images/00045.jpeg)
+
+
+    2\. ![](images/00046.jpeg)
+
+
+    To help you understand this keyword, let’s analyze two practical examples:
+
+
+    *   Programmers often use this keyword in the client-side form of JavaScript.
+    For example, they can use “void” on a URL to get the side-effects of an expression
+    without showing the result on the web browser.
+
+
+    *   Analyze the code below. The link it contains won’t do anything since the expression
+    “0” is meaningless in the JavaScript language. JavaScript evaluates “0” but it
+    doesn’t load the expression into the HTML document.
+
+
+    ![](images/00047.jpeg)
+
+
+    Chapter 11: Debugging
+
+
+    Programmers are humans – they make mistakes every now and then. Mistakes in a
+    script or a program are called “bugs.”
+
+
+    The act of searching for and resolving bugs is known as “debugging.” Programmers
+    consider debugging as an important aspect of the development procedure. This chapter
+    will discuss the tools and methods that you can use to perform debugging tasks.
+
+
+    The Error Messages in Internet Explorer
+
+
+    The simplest approach to find errors is by activating the “Error Information”
+    option of a web browser. Internet Explorer, for instance, displays an icon in
+    its status bar whenever an error occurs on a webpage. Here’s a screenshot:
+
+
+    ![](images/00048.jpeg)
+
+
+    If you’ll double-click on that icon, Internet Explorer will display a dialog box
+    containing details about the error it encountered.
+
+
+    Since you can easily overlook this icon, Internet Explorer allows you to set the
+    system so that it will display the error dialog box each time an error happens.
+    To turn on that option, just click on “Tools” and hit “Internet Options”. Click
+    on the tab named “Advanced” and put a check on the box that says: “Display a Notification
+    about Every Script Error.”
+
+
+    Here’s a screenshot:
+
+
+    ![](images/00049.jpeg)
+
+
+    The Error Messages in Netscape and Firefox
+
+
+    Netscape and Firefox send error details to a window named “Error Console” or “JavaScript
+    Console.” You can view this window by clicking on “Tools” and selecting “Error
+    Console.”
+
+
+    However, because these two browsers don’t have an error icon, you have to keep
+    the Error Console open as you execute your JavaScript codes.
+
+
+    The Error Notifications
+
+
+    The error notifications that you see on your browser (e.g. Internet Explorer,
+    Netscape, Firefox, etc.) are caused by runtime and syntax errors. These notifications
+    contain detailed information (e.g. line numbers) regarding the error. That means
+    you can use these error notifications to find and solve errors quickly.
+
+
+    If you are using Mozilla Firefox, you may click on the errors listed in the Console
+    to check the exact line that caused the problem.
+
+
+    Debugging your Scripts
+
+
+    JavaScript offers a powerful approach in debugging a script:
+
+
+    Using a validator – In JavaScript, you may use a validator to ensure that your
+    codes follow the syntax rules of this language. Validators (also known as validating
+    passers) usually come with premium JavaScript and HTML editors.
+
+
+    JavaScript Lint, which was developed by Douglas Crockford, is one of the leading
+    validators today. You can use it for free here: [http://www.jslint.com/](http://www.jslint.com/)
+
+
+    Just access that webpage, paste the JavaScript code onto the editing area, and
+    hit the button that says “JSLint.” This computer program will analyze your code,
+    making sure that each of its parts follows the right syntax.    
+
+
+    Conclusion
+
+
+    Thank you for reading this book!
+
+
+    I hope this book was able to teach you the basics of JavaScript.
+
+
+    The next step is to write your own webpages and applications using the JavaScript
+    programming language.
+
+
+    Would you do me a favor?
+
+
+    Finally, if you enjoyed this book, please take the time to share your thoughts
+    and post a positive review on Amazon.  It’d be greatly appreciated!
+
+
+    Thank you and good luck!'
+  toc: []
+  trans: '
+
+
+    与确认框类似，提示框包含一个 OK 按钮和一个退出/取消按钮。如果网站访问者点击 OK，`prompt()` 方法将提交在文本框中输入的数据。另一方面，如果访问者点击退出/取消，`prompt()`
+    方法将向 Web 服务器提交 `null`。
+
+
+    # 第 10 章：如何使用 void 关键字
+
+
+    `void` 关键字在 JavaScript 语言中起着重要作用。你可以将 `void` 作为一元运算符（即作用于单个操作数的运算符）用于任何类型的操作数。基本上，`void`
+    的作用是识别要检查的表达式，但不返回任何值。
+
+
+    ## 语法
+
+
+    该关键字的语法有两种形式：
+
+
+    1. ![](img/00045.jpeg)
+
+    2. ![](img/00046.jpeg)
+
+
+    为了帮助你理解这个关键字，让我们来分析两个实际示例：
+
+
+    * 程序员经常在 JavaScript 的客户端表单中使用此关键字。例如，他们可以在 URL 上使用 `void` 来获取表达式的副作用，而不会在网页浏览器中显示结果。
+
+    * 分析下面的代码。它包含的链接不会产生任何作用，因为表达式“0”在 JavaScript 语言中是没有意义的。JavaScript 会评估“0”，但不会将表达式加载到
+    HTML 文档中。
+
+
+    ![](img/00047.jpeg)
+
+
+    # 第 11 章：调试
+
+
+    程序员也是人——他们偶尔会犯错。脚本或程序中的错误被称为“bug”（故障）。
+
+
+    查找并解决错误的行为被称为“调试”（debugging）。程序员认为调试是开发过程中的一个重要环节。本章将讨论你可以执行调试任务的工具和方法。
+
+
+    ## Internet Explorer 中的错误信息
+
+
+    查找错误的简单方法是激活 Web 浏览器的“错误信息”选项。例如，当网页发生错误时，Internet Explorer 都会在其状态栏中显示一个图标。这是一个截图：
+
+
+    ![](img/00048.jpeg)
+
+
+    如果你双击该图标，Internet Explorer 将显示一个包含其所遇错误详细信息的对话框。
+
+
+    由于你可能会忽略此图标，Internet Explorer 允许你设置系统，以便每次发生错误时都显示错误对话框。要开启该选项，只需点击“工具”并点击“Internet
+    选项”。点击名为“高级”的选项卡，勾选“显示有关每个脚本错误的通知”框框。
+
+
+    这是一个截图：
+
+
+    ![](img/00049.jpeg)
+
+
+    ## Netscape 和 Firefox 中的错误信息
+
+
+    Netscape 和 Firefox 将错误详细发送到名为“错误控制台”或“JavaScript 控制台”的窗口。你可以通过点击“工具”并选择“错误控制台”查看此窗口。
+
+
+    然而，由于这两个浏览器没有错误图标，你在执行 JavaScript 代码时必须保持错误控制台打开。
+
+
+    ## 错误通知
+
+
+    你在浏览器（如 Internet Explorer、Netscape、Firefox 等）上看到的错误通知是由运行时语法错误引起的。这些通知包含了有关错误的详细信息（例如行号）。这意味着你可以利用这些错误通知快速找到并解决错误。
+
+
+    如果你正在使用 Mozilla Firefox，可以点击控制台中列出的错误来检查导致问题的确切行。
+
+
+    ## 调试你的脚本
+
+
+    JavaScript 为调试脚本提供了一种强大的方法：
+
+
+    * 使用验证器——在 JavaScript 中，你可以使用验证器来确保你的代码符合该语言的语法规则。验证器（也称为通过检查器）通常随高级 JavaScript
+    和 HTML 编辑器一起。
+
+    * 由 Douglas Crockford 开发的 JavaScript Lint 是目前领先的验证器之一。你可以在这里免费使用：[`www.jslint.com/`](http://www.jslint.com/)
+
+
+    只需访问该网页，将 JavaScript 代码粘贴到编辑区域，然后点击“JSLint” 按钮。此计算机程序将分析你的代码，确保其每个部分都符合正确的语法。
+
+
+    # 结
+
+
+    感谢阅读本书！
+
+
+    希望这本书能够教会你 JavaScript 的基础知识。
+
+
+    下一步是使用 JavaScript 编程语言编写你自己的网页和应用程序。
+
+
+    能帮我个忙吗？
+
+
+    最后，如果你喜欢这本书，请花时间分享你的想法并在 Amazon 上发表好评。我将不胜感激！
+
+
+    感谢，并祝你好运！
+
+
+    '

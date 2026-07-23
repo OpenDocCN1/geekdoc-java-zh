@@ -1,0 +1,164 @@
+name: Java Programming For Cloud Computing With Azure SDK And OpenStack SDK： A Hand's-On
+  Beginner's Guide To Leveraging Azure SDK And OpenStack SDK For Robust, ... Cloud
+  Solutions (The ProgMaster)
+name_cn: Java 云计算编程：使用 Azure SDK 和 OpenStack SDK：利用 Azure SDK 和 OpenStack SDK 构建稳健云解决方案的初学者指南
+  (The ProgMaster)
+slug: java-programming-for-cloud-computing-with-azure-sdk-and-open
+toc:
+- - '#'
+  - Java 云计算编程：使用 Azure SDK 和 OpenStack SDK：利用 Azure SDK 和 OpenStack SDK 构建稳健云解决方案的初学者指南
+    (The ProgMaster)
+- - '#'
+  - 第一部分：云计算 Java 编程基础
+- - '##'
+  - 第 1 章：云端 Java 编程简介
+- - '###'
+  - Java 作为云开发语言的概述
+- - '###'
+  - Java 在云计算中的重要性
+- - '###'
+  - 配置你的 Java 开发环境
+- - '###'
+  - Java 基础概念：面向对象编程、API 和 库
+- - '##'
+  - 第 2 章：理解云计算基础知识
+- - '###'
+  - 云计算概述：模型与服务
+- - '###'
+  - 核心概念：虚拟化、可扩展性和弹性
+- - '###'
+  - 云服务提供商：Azure、OpenStack 等
+- - '###'
+  - 为你的项目选择合适的平台
+- - '##'
+  - 第 3 章：开始使用 Java 和云端 SDK
+- - '###'
+  - SDK 简介：它们是什么？为什么要它们？
+- - '###'
+  - Azure SDK 和 OpenStack SDK 概述
+- - '###'
+  - 配置 Azure SDK 和 OpenStack SDK 环境
+- - '###'
+  - 第一次实战：简单的 Java 云应用程序
+- - '#'
+  - 第二部分：精通 Java 云应用的 Azure SDK
+- - '##'
+  - 第 4 章：Azure 云与 Azure SDK
+- - '###'
+  - 理解 Azure 云服务与架构
+- - '###'
+  - 安装与配置 Azure SDK
+- - '###'
+  - 探索 Azure SDK 特性：身份、资源管理与网络
+- - '###'
+  - 实战项目：在 Azure 上部署第一个 Java 应用程序
+- - '##'
+  - 第 5 章：使用 Azure 存储
+- - '###'
+  - 理解 Azure 存储选项：Blob、队列和表
+- - '###'
+  - 将 Java 应用与 Azure SDK 集成
+- - '###'
+  - 云端数据管理：上传、检索与加固
+- - '###'
+  - 实战项目：使用 Azure 存储构建 Java 应用程序
+- - '##'
+  - 第 6 章：Azure 计算服务与 Java 集成
+- - '###'
+  - Azure 计算服务概述：虚拟机、应用服务与 Kubernetes
+- - '###'
+  - 在 Azure 上部署与管理 Java 应用程序
+- - '###'
+  - 在 Azure 中进行应用程序的扩展与负载均衡
+- - '###'
+  - 实战项目：在 Azure 上部署可扩展的 Java 应用程序
+- - '##'
+  - 第 7 章：Azure 中的安全与性能优化
+- - '###'
+  - Azure 上 Java 应用程序的安全最佳实践
+- - '###'
+  - 实现 Azure 安全：身份、访问管理与加密
+- - '###'
+  - Azure 上 Java 应用程序的性能调优与监控
+- - '###'
+  - 实战项目：在 Azure 上加固并优化 Java 应用程序
+- - '#'
+  - 第三部分：利用 OpenStack SDK 用于 Java 云
+- - '##'
+  - 第 8 章：OpenStack 云与 OpenStack SDK 简介
+- - '###'
+  - OpenStack 云服务与架构
+- - '###'
+  - 配置 Java OpenStack SDK
+- - '###'
+  - OpenStack SDK 核心特性：身份、计算与网络
+- - '###'
+  - 实战项目：在 OpenStack 上部署第一个 Java 应用程序
+- - '##'
+  - 第 9 章：使用 OpenStack SDK 管理存储
+- - '###'
+  - 理解 OpenStack 存储服务：Swift、Cinder 与 Manila
+- - '###'
+  - 将 Java 应用与 OpenStack 存储 SDK 集成
+- - '###'
+  - OpenStack 中的数据管理：对象存储、块存储与文件共享
+- - '###'
+  - 实战项目：使用 OpenStack 存储构建 Java 应用程序
+- - '##'
+  - 第 10 章：OpenStack 中的计算与网络服务
+- - '###'
+  - OpenStack 计算 (Nova) 与网络 (Neutron) 服务概述
+- - '###'
+  - 在 OpenStack 计算上部署与管理 Java 应用程序
+- - '###'
+  - Java 应用程序的网络配置与优化
+- - '###'
+  - 实战项目：在 OpenStack 上部署 Java 应用程序
+- - '#'
+  - 第四部分：高级主题与实战应用
+- - '##'
+  - 第 11 章：OpenStack 中的安全与性能优化
+- - '###'
+  - OpenStack 上 Java 应用程序的安全防护
+- - '###'
+  - 实现 OpenStack 安全：身份、访问管理与加密
+- - '###'
+  - OpenStack 上 Java 应用程序的性能调优与监控
+- - '###'
+  - 实战项目：在 OpenStack 上优化 Java 应用程序
+- - '##'
+  - 第 12 章：混合云解决方案 Azure 与 OpenStack
+- - '###'
+  - 理解混合云模型：何时以及使用
+- - '###'
+  - Azure 和 OpenStack 集成
+- - '###'
+  - 使用 SDK 管理混合云环境
+- - '##'
+  - 第 13 章：Java 云原生应用的自动化与 DevOps
+- - '###'
+  - 云原生应用 简介
+- - '###'
+  - 云原生应用的 CI/CD
+- - '###'
+  - 实战项目：为 Java 云原生应用
+- - '##'
+  - 第 14 章：Java云计算的新趋势与未来方向
+- - '###'
+  - 探索未来趋势：云端的 AI、IoT 和边缘计算
+- - '###'
+  - 云端人工智能 (AI)
+- - '###'
+  - 云端中的物联网 (IoT)
+- - '###'
+  - 云端中的边缘计算
+- - '#'
+  - 附录
+- - '###'
+  - 附录 A：安装指南与资源
+- - '###'
+  - 附录 B：常见问题
+- - '###'
+  - 附录 C：关键术语与概念
+- - '###'
+  - 附录 D：其他资源与延伸阅读
