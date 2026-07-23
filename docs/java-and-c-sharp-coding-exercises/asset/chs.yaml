@@ -1,0 +1,341 @@
+- "# JAVA 与 C# 编码练习\n\n\n\n![](img/cover00118.jpeg)\n\n\n# JAVA 编程练习\n- 打印 hello\n\
+  - 打印和\n- 两个数相除\n- 打印结果\n- 打印乘法表\n- 寻找面积\n- 交换两个变量\n- 打印一个脸\n- 华氏度转摄氏度\n- 英制转米\n\
+  - 加所有数字\n- 打印年和天数\n- 计算（BMI）\n- 计算米/秒的速度\n- 两个指定的整数相除\n- 两个指定的整数相\n- 打印和\n- 找出三个数中的最大值\n\
+  - 显示乘法表\n- 显示图案\n- 打印金字塔形的图案\n- 显示数字菱形结构\n\n## C# 编程练习\n- 打印 hello 和你的名字\n- 打印指定操作的结果\n\
+  - 交换两个数字的程序\n- 打印乘法的输出\n- 加、减、乘、除\n- 打印四个数的平均值\n- 转换温度的程序\n- 计算总和\n- 计算和\n- 用于检查的\
+  \ C# 程序\n- 检查两个给定整数的 C# 程序\n- 检查一个给定正数的 C# 程序\n- 检查给定字符串是否以 'C#' 开头\n- 检查最大数的 C#\
+  \ 程序\n- 检查哪个数字最接近 100 的程序\n- 转换最后 3 个字符的程序\n- 创建新字符串的程序\n- 执行操作\n- 计算周长\n- C# 条件语句\n\
+  - 检查数字是否为奇偶数的 C 程序\n- 检查数字是正数还是负数\n- 接收人员高度的 C# 程序\n- 找出三个数中的最大值\n- 计算利润和亏损\n\n\
+  # JAVA 编程练习\n\n## 分行打印 hello 和你的名字\n```java\nimport java.util.Scanner;\n\npublic\
+  \ class Main {\n    public static void main(String[] args) {\n        Scanner input\
+  \ = new Scanner(System.in);\n        System.out.print(\"Input first name: \");\n\
+  \        String fname = input.next();\n        System.out.print(\"Input last name:\
+  \ \");\n        String lname = input.next();\n        System.out.println(\"Hello\
+  \ \" + fname + \" \" + lname);\n    }\n}\n```\n**OUTPUT:**\n```\nInput first name:\
+  \ JJ\nInput last name: TAM\nHello JJ TAM\n```\n\n## 打印两个数的和\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ input = new Scanner(System.in);\n        System.out.print(\"Input first number:\
+  \ \");\n        int num1 = input.nextInt();\n        System.out.print(\"Input second\
+  \ number: \");\n        int num2 = input.nextInt();\n        int sum = num1 + num2;\n\
+  \        System.out.println(\"Sum: \" + sum);\n    }\n}\n```\n**OUTPUT:**\n```\n\
+  Input first number: 55\nInput second number: 45\nSum: 100\n```\n\n## 两个数相除并打印到屏幕上\n\
+  ```java\nimport java.util.Scanner;\n\npublic class Main {\n    public static void\
+  \ main(String[] args) {\n        Scanner input = new Scanner(System.in);\n     \
+  \   System.out.print(\"Input first number: \");\n        int a = input.nextInt();\n\
+  \        System.out.print(\"Input second number: \");\n        int b = input.nextInt();\n\
+  \        int d = (a/b);\n        System.out.println(\"The division of a and b is:\"\
+  \ + d);\n    }\n}\n```\n**OUTPUT:**\n```\nInput first number: 100\nInput second\
+  \ number: 25\nThe division of a and b is:4\n```\n\n## 打印指定操作的结果\n```java\npublic\
+  \ class Main {\n    public static void main(String[] args) {\n        int w = -5\
+  \ + 8 * 6;\n        int x = (55 + 9) % 9;\n        int y = 20 + (-3 * 5 / 8);\n\
+  \        int z = 5 + 15 / 3 * 2 - 8 % 3;\n        System.out.print(w + \"\\n\" +\
+  \ x + \"\\n\" + y + \"\\n\" + z);\n    }\n}\n```\n\n## 打印乘法表\n```java\nimport java.util.Scanner;\n\
+  \npublic class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ in = new Scanner(System.in);\n        System.out.println(\"Input the Number: \"\
+  );\n        int n = in .nextInt();\n        for (int i = 1; i <= 10; i++) {\n  \
+  \          System.out.println(n + \"*\" + i + \" = \" + (n * i));\n        }\n \
+  \   }\n}\n```\n**OUTPUT:**\n```\nInput the Number: 15\n15*1 = 15\n15*2 = 30\n15*3\
+  \ = 45\n15*4 = 60\n15*5 = 75\n15*6 = 90\n15*7 = 105\n15*8 = 120\n15*9 = 135\n15*10\
+  \ = 150\n```\n\n## 寻找圆的面积和周长\n```java\nimport java.util.Scanner;\n\npublic class\
+  \ Main {\n    public static void main(String[] args) {\n        Scanner io = new\
+  \ Scanner(System.in);\n        System.out.println(\"Input the radius of the circle:\
+  \ \");\n        double radius = io.nextDouble();\n        System.out.println(\"\
+  Perimeter is \" + (2 * radius * Math.PI));\n        System.out.println(\"Area is\
+  \ \" + (Math.PI * radius * radius));\n    }\n}\n```\n**OUTPUT:**\n```\nInput the\
+  \ radius of the circle: 10\nPerimeter is = 62.83185307179586\nArea is = 314.1592653589793\n\
+  ```\n\n## 交换两个变量\n```java\nimport java.util.Scanner;\n\npublic class Main {\n  \
+  \  public static void main(String[] args) {\n        int x, y, z;\n        Scanner\
+  \ in = new Scanner(System.in);\n        System.out.println(\"Input first number:\
+  \ \");\n        x = in.nextInt();\n        System.out.println(\"Input second number:\
+  \ \");\n        y = in.nextInt();\n        z = x;\n        x = y;\n        y = z;\n\
+  \        System.out.println(\"Swapped values are:\" + x + \" and \" + y);\n    }\n\
+  }\n```\n**OUTPUT:**\n```\nInput first number: 25\nInput second number: 50\nSwapped\
+  \ values are:50 and 25\n```\n\n## 打印一个脸\n```java\npublic class Main {\n    public\
+  \ static void main(String[] args) {\n        String[] arra = new String[5];\n  \
+  \      arra[0] = \" +\\\"\\\"\\\"+ \";\n        arra[1] = \"[| o o |]\";\n     \
+  \   arra[2] = \" |� ^  |\";\n        arra[3] = \" | '-' |\";\n        arra[4] =\
+  \ \" +-----+\";\n        for (int i = 0; i < 5; i++) {\n            System.out.println(arra[i]);\n\
+  \        }\n    }\n}\n```\n**OUTPUT:**\n```\n+\"\"\"\"\"+\n[| o o |]\n|  ^  |\n\
+  | '-' |\n+-----+\n```\n\n\n\n\n\n```java\ndouble fahrenheit = input.nextDouble();\n\
+  double celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);\nSystem.out.println(fahrenheit\
+  \ + \" degree Fahrenheit is equal to \" + celsius + \" in Celsius\");\n}\n}\n```\n\
+  \n### 输出\n输入华氏度：96\n96.0 度华氏度等于 35.55555555555556 摄氏度\n\n### 英寸到米\n\n![](img/image00109.jpeg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+  \ static void main(String[] Strings) {\n        Scanner input = new Scanner(System.in);\n\
+  \        System.out.print(\"Input a value for inch: \");\n        double inch =\
+  \ input.nextDouble();\n        double meters = inch * 0.0254;\n        System.out.println(inch\
+  \ + \" inch is \" + meters + \" meters\");\n    }\n}\n```\n\n### 输出\n输入英寸的值：5\n\
+  5.0 英寸等于 0.127 米\n\n### 求所有数字之和\n\n![](img/image00110.jpeg)\n\n### JAVA 代码\n```java\n\
+  import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+  \ Strings) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+  Input an integer between 0 and 1000: \");\n        int num = input.nextInt();\n\
+  \        int firstDigit = num % 10;\n        int remainingNumber = num / 10;\n \
+  \       int SecondDigit = remainingNumber % 10;\n        remainingNumber = remainingNumber\
+  \ / 10;\n        int thirdDigit = remainingNumber % 10;\n        remainingNumber\
+  \ = remainingNumber / 10;\n        int fourthDigit = remainingNumber % 10;\n   \
+  \     int sum = thirdDigit + SecondDigit + firstDigit + fourthDigit;\n        System.out.println(\"\
+  The sum of all digits in \" + num + \" is \" + sum);\n    }\n}\n```\n\n### 输出\n\
+  输入一个 0 到 1000 之间的整数：750\n750 的所有数字之和为 12\n\n### 打印年份和天数\n\n### 从分钟转换\n\n![](img/image00111.jpeg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+  \ static void main(String[] Strings) {\n        double minutesInYear = 60 * 24 *\
+  \ 365;\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+  Input the number of minutes: \");\n        double min = input.nextDouble();\n  \
+  \      long years = (long) (min / minutesInYear);\n        int days = (int) (min\
+  \ / 60 / 24) % 365;\n        System.out.println((int) min + \" minutes is approximately\
+  \ \" + years + \" years and \" + days + \" days\");\n    }\n}\n```\n\n### 输出\n输入分钟数：123456\n\
+  123456 分钟大约等于 0 年 85 天\n\n### 计算 (BMI)\n\n### 身体质量指数\n\n### JAVA 代码\n```java\nimport\
+  \ java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+  \ Strings) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+  Input weight in pounds: \");\n        double weight = input.nextDouble();\n    \
+  \    System.out.print(\"Input height in inches: \");\n        double inches = input.nextDouble();\n\
+  \        double BMI = weight * 0.4535927 / (inches * 0.0254 * 0.0254);\n       \
+  \ System.out.print(\"Body Mass Index is \" + BMI+\"\\n\");\n    }\n}\n```\n### 输出\n\
+  输入体重（磅）：450\n输入身高（英寸）：72\n身体质量指数为 61.030345478814\n\n### 计算每秒米、每千公里和每英里的速度\n\n![](img/image00112.jpeg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+  \ static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n\
+  \        float timeSeconds;\n        float mps, kph, mph;\n        System.out.print(\"\
+  Input distance in meters: \");\n        float distance = scanner.nextFloat();\n\
+  \        System.out.print(\"Input hour: \");\n        float hr = scanner.nextFloat();\n\
+  \        System.out.print(\"Input minutes: \");\n        float min = scanner.nextFloat();\n\
+  \        System.out.print(\"Input seconds: \");\n        float sec = scanner.nextFloat();\n\
+  \        timeSeconds = (hr*3600) + (min*60) + sec;\n        mps = distance / timeSeconds;\n\
+  \        kph = ( distance/1000.0f ) / ( timeSeconds/3600.0f );\n        mph = kph\
+  \ / 1.609f;\n        System.out.println(\"Your speed in meters/second is \"+mps);\n\
+  \        System.out.println(\"Your speed in km/h is \"+kph);\n        System.out.println(\"\
+  Your speed in miles/h is \"+mph);\n    }\n```\n### 输出\n输入距离（米）：3000\n输入小时：5\n输入分钟：29\n\
+  你的每秒米速度为 15\n你的每小时公里速度为 54\n你的每英里速度为 32\n\n### 使用减法运算符除两个整数\n\n### JAVA 代码\n```java\n\
+  import java.util.Scanner;\npublic class Main {\n    public static float divide_using_subtraction(int\
+  \ dividend, int divisor) {\n        if (divisor == 0) {\n            return 0;\n\
+  \        }\n        int result = 0;\n        boolean negative_result = (dividend\
+  \ < 0) ^ (divisor < 0);\n        boolean positive_num = !negative_result;\n    \
+  \    n1 = Math.abs(dividend);\n        for (int i = 0; i < n1; i++) {\n        \
+  \    if (positive_num && divisor > 0)\n                result -= divisor;\n    \
+  \        else\n                result += divisor;\n        }\n        return negative_result\
+  \ ? -(float)result : (float)result;\n    }\n    public static void main(String[]\
+  \ args) {\n        Scanner in = new Scanner(System.in);\n        System.out.print(\"\
+  Input the dividend: \");\n        int dividend = in.nextInt();\n        System.out.print(\"\
+  Input the divisor: \");\n        int divisor = in.nextInt();\n        System.out.println(\"\
+  \\nResult: \" + divide_using_subtraction(dividend,divisor));\n    }\n}\n```\n*(注：原文提供的代码逻辑似乎存在多处错误（如变量未定义、循环逻辑混乱等），在翻译时保持了其结构，仅对描述性文本进行了翻译。)*\n\
+  \n\n\n\n\n### 找出三个数中的最大值\n\n### Java 条件语句\n\n### 输出\n输入第一个整数: 50\n输入第二个整数: 30\n\
+  两个整数之和: 80\n两个整数之差: 20\n两个整数的乘积: 1500\n两个整数的平均值: 40.00\n两个整数的距离: 20\n最大整数: 50\n\
+  最小整数: 30\n\n![](img/image00114.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n  public static void main(String[] args) {\n    Scanner in\
+  \ = new Scanner(System.in);\n    System.out.print(\"Input the 1st number: \");\n\
+  \    int num1 = in.nextInt();\n    System.out.print(\"Input the 2nd number: \");\n\
+  \    int num2 = in.nextInt();\n    System.out.print(\"Input the 3rd number: \");\n\
+  \    int num3 = in.nextInt();\n    if (num1 > num2)\n      if (num1 > num3)\n  \
+  \      System.out.println(\"The greatest: \" + num1);\n    if (num2 > num1)\n  \
+  \    if (num2 > num3)\n        System.out.println(\"The greatest: \" + num2);\n\
+  \    if (num3 > num1)\n      if (num3 > num2)\n        System.out.println(\"The\
+  \ greatest: \" + num3);\n  }\n}\n```\n\n### 输出\n输入第一个数字: 25\n输入第二个数字: 58\n输入第三个数字:\
+  \ 98\n最大值: 98\n\n### 显示给定整数的乘法表\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n  public static void main(String[] args)\n  {\n    int j,n;\n\
+  \    System.out.print(\"Input the number(Table to be calculated): \");\n    System.out.print(\"\
+  Input number of terms : \");\n    Scanner in = new Scanner(System.in);\n    n =\
+  \ in.nextInt();\n    System.out.println (\"\\n\");\n    for(j=0;j<=n;j++)\n    \
+  \  System.out.println(n+\" X \"+j+\" = \" +n*j);\n  }\n}\n```\n\n### 输出\n输入数字（要计算的表）:\
+  \ 输入项数 : 7\n7 X 0 = 0\n7 X 1 = 7\n7 X 2 = 14\n7 X 3 = 21\n7 X 4 = 28\n7 X 5 = 35\n\
+  7 X 6 = 42\n7 X 7 = 49\n\n### 显示类似数字的直角三角形模式\n\n![](img/image00115.jpeg)\n\n###\
+  \ JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n  public static\
+  \ void main(String[] args)\n  {\n    int i,j,n;\n    System.out.print(\"Input number\
+  \ of rows : \");\n    Scanner in = new Scanner(System.in);\n    n = in.nextInt();\n\
+  \    for(i=1;i<=n;i++)\n    {\n      for(j=1;j<=i;j++)\n        System.out.print(j);\n\
+  \      System.out.println(\"\");\n    }\n  }\n}\n```\n\n### 输出\n输入行数 : 9\n1\n12\n\
+  123\n1234\n12345\n123456\n1234567\n12345678\n123456789\n\n### 打印类似金字塔的模式\n\n![](img/image00116.jpeg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n  public\
+  \ static void main(String[] args)\n  {\n    int i,j,n,s,x;\n    System.out.print\
+  \ (\"Input number of rows : \");\n    Scanner in = new Scanner(System.in);\n   \
+  \ n = in.nextInt();\n    s=n+4-1;\n    for(i=1;i<=n;i++)\n    {\n      for(x=s;x!=0;x--)\n\
+  \      {\n        System.out.print(\" \");\n      }\n      for(j=1;j<=i;j++)\n \
+  \     {\n        System.out.print(i+\" \");\n      }\n      System.out.println();\n\
+  \      s--;\n    }\n  }\n}\n```\n\n### 输出\n输入行数 : 7\n      1\n      2 2\n      3\
+  \ 3 3\n      4 4 4 4\n      5 5 5 5 5\n      6 6 6 6 6 6\n      7 7 7 7 7 7\n\n\
+  ### 显示数字结构\n\n![](img/image0017.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n  public static void main(String args[])\n  {\n    Scanner\
+  \ in = new Scanner(System.in);\n    System.out.print(\"Input the number: \");\n\
+  \    int n = in.nextInt();\n    int count = 1;\n    int no_of_spaces = 1;\n    int\
+  \ start = 0;\n    for (int i = 1; i < (n * 2); i++)\n    {\n      for (int spc =\
+  \ n - no_of_spaces; spc > 0; spc--)\n      {\n        System.out.print(\" \");\n\
+  \      }\n      if (i < n)\n      {\n        start = i;\n        no_of_spaces++;\n\
+  \      }\n      else\n      {\n        start = n * 2 - i;\n        no_of_spaces--;\n\
+  \      }\n      for (int j = 0; j < count; j++)\n      {\n        System.out.print(start);\n\
+  \        if (j < count / 2)\n        {\n          start--;\n        }\n        else\n\
+  \        {\n          start++;\n        }\n      }\n      if (i < n)\n      {\n\
+  \        count = count + 2;\n      }\n      else\n      {\n        count = count\
+  \ - 2;\n      }\n      System.out.println();\n    }\n  }\n}\n```\n\n### 输出\n输入数字:\
+  \ 7\n      1\n    22\n    333\n    4444\n    55555\n    66666\n    7777777\n   \
+  \ 6666666\n    555555\n    4444\n    333\n    22\n      1\n\n\n\n\n\n```csharp\n\
+  Console.Write(\"Input the second number to multiply: \");\nnum2 = Convert.ToInt32(Console.ReadLine());\n\
+  Console.Write(\"Input the third number to multiply: \");\nnum3 = Convert.ToInt32(Console.ReadLine());\n\
+  int result = num1 * num2 * num3;\nConsole.WriteLine(\"Output: {0} x {1} x {2} =\
+  \ {3}\", num1, num2, num3, result);\n```\n\n### 输出:\n输入第一个乘法数字: 2\n输入第二个乘法数字: 8\n\
+  输入第三个乘法数字: 5\nOutput: 2 x 8 x 5 = 80\n\n### 对用户输入的两个数字进行加、减、乘、除\n\n### C# 代码\n```csharp\n\
+  using System;\npublic class Exercise7\n{\n    public static void Main()\n    {\n\
+  \        Console.Write(\"Enter a number: \");\n        int num1= Convert.ToInt32(Console.ReadLine());\n\
+  \        Console.Write(\"Enter another number: \");\n        int num2= Convert.ToInt32(Console.ReadLine());\n\
+  \        Console.WriteLine(\"{0} + {1} = {2}\", num1, num2, num1+num2);\n      \
+  \  Console.WriteLine(\"{0} - {1} = {2}\", num1, num2, num1-num2);\n        Console.WriteLine(\"\
+  {0} x {1} = {2}\", num1, num2, num1*num2);\n        Console.WriteLine(\"{0} / {1}\
+  \ = {2}\", num1, num2, num1/num2);\n        Console.WriteLine(\"{0} mod {1} = {2}\"\
+  , num1, num2, num1%num2);\n    }\n}\n```\n\n### 输出:\n输入一个数字: 10\n输入另一个数字: 2\n10\
+  \ + 2 = 12\n10 - 2 = 8\n10 x 2 = 20\n10 / 2 = 5\n10 mod 2 = 0\n\n### 打印四个数字的平均值\n\
+  \n### C# 代码\n```csharp\nusing System;\nusing System.IO;\npublic class Exercise9\n\
+  {\n  public static void Main()\n  {\n    double number1,number2,number3,number4;\n\
+  \    Console.Write(\"Enter the First number: \");\n    number1 = Convert.ToDouble(Console.ReadLine());\n\
+  \    Console.Write(\"Enter the Second number: \");\n    number2 = Convert.ToDouble(Console.ReadLine());\n\
+  \    Console.Write(\"Enter the third number: \");\n    number3 = Convert.ToDouble(Console.ReadLine());\n\
+  \    Console.Write(\"Enter the fourth number: \");\n    number4 = Convert.ToDouble(Console.ReadLine());\n\
+  \    double result = (number1 + number2 + number3 + number4) / 4;\n    Console.WriteLine(\"\
+  The average of {0}, {1}, {2}, {3} is: {4}\", number1, number2, number3, number4,\
+  \ result);\n  }\n}\n```\n\n### 输出:\n输入第一个数字: 7\n输入第二个数字: 17\n输入第三个数字: 17\n输入第四个数字:\
+  \ 51\n17, 17, 517, 51 的平均值是: 150.5\n\n### 将温度从摄氏度转换为开文度和华氏度的程序\n\n### kelvin = celsius\
+  \ + 273\n### fahrenheit = celsius x 18 / 10 + 32\n\n### C# 代码\n```csharp\nusing\
+  \ System;\npublic class Exercise14\n{\n  public static void Main( )\n  {\n    Console.Write(\"\
+  Enter the amount of celsius: \");\n    int celsius = Convert.ToInt32(Console.ReadLine());\n\
+  \    Console.WriteLine(\"Kelvin = {0}\", celsius + 273);\n    Console.WriteLine(\"\
+  Fahrenheit = {0}\", celsius * 18 / 10 + 32);\n  }\n}\n```\n\n### 输出:\n输入摄氏度: 40\n\
+  Kelvin = 313\nFahrenheit = 104\n\n# 计算两个整数之和，如果两个值相等，则返回它们和的倍倍\n\n### C# 代码\n```csharp\n\
+  using System;\nusing System.Collections.Generic;\npublic class Exercise19 {\n  static\
+  \ void Main(string[] args)\n  {\n    Console.WriteLine(SumTriple(2,2));\n    Console.WriteLine(SumTriple(2,0));\n\
+  \    Console.WriteLine(SumTriple(-5,2));\n  }\n  public static int SumTriple(int\
+  \ a, int b)\n  {\n    return a == b ? (a + b)*3 : a + b;\n  }\n}\n```\n\n### 输出:\n\
+  12\n2\n-3\n\n### 计算整数数组所有元素之和\n\n### C# 代码\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+  using System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\npublic class\
+  \ Exercise47\n{ \n  public static void Main()\n  {\n    int[] nums = {1, 2, 2, 3,\
+  \ 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 1};\n    Console.WriteLine(\"\\nArray1: [{0}]\"\
+  , string.Join(\", \", nums));\n    var sum = 0;\n    for (var i = 0; i < nums.Length;\
+  \ i++)\n    {\n      sum += nums[i];\n    }\n    Console.WriteLine(\"Sum: \"+ sum);\n\
+  \  }\n}\n```\n\n### 输出:\nArray1: [1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 1]\n\
+  Sum: 69\n\n### 检查数组是否包含奇数的程序\n\n### C# 代码\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+  public class Exercise53\n{\n  public static void Main()\n  {\n    int[] nums = {2,\
+  \ 4, 7, 6};\n    Console.WriteLine(\"\\nArray: [{0}]\", string.Join(\", \", nums));\n\
+  \    Console.WriteLine(\"Check if array contains an odd number? \"+CheckOdd(nums));\n\
+  \  }\n  public static bool CheckOdd(int[] nums)\n  {\n    foreach (var n in nums)\n\
+  \    {\n      if (n % 2 != 0)\n        return true;\n    }\n    return false;\n\
+  \  }\n}\n```\n\n### 输出:\nArray: [2, 4, 7, 6]\n检查数组是否包含奇数? True\n\n### 检查两个给定的整数，如果其中一个为\
+  \ 30 或它们的和为 30，则返回真\n\n### C# 代码\n```csharp\nusing System;\nnamespace exercises\n\
+  {\n  class Program\n    {\n      static void Main(string[] args)\n      {\n    \
+  \    Console.WriteLine(test(30, 0));\n        Console.WriteLine(test(25, 5));\n\
+  \        Console.WriteLine(test(20, 30));\n        Console.WriteLine(test(20, 25));\n\
+  \        Console.ReadLine();\n      }\n      public static bool test(int x, int\
+  \ y)\n      {\n        return x == 30 || y == 30 || (x + y == 30);\n      }\n  }\n\
+  }\n```\n\n### 输出:\nTrue\nTrue\nTrue\nFalse\n\n### C# Sharp 程序，检查给定的正数是否为 3 的倍数或\
+  \ 7 的倍数\n\n\n\n\n\n### C# 代码\n\n```csharp\nusing System;\nnamespace exercises\n\
+  {\n    class Program\n    {\n        static void Main(string[] args)\n        {\n\
+  \            Console.WriteLine(test(3));\n            Console.WriteLine(test(14));\n\
+  \            Console.WriteLine(test(12));\n            Console.WriteLine(test(37));\n\
+  \            Console.ReadLine();\n        }\n        public static bool test(int\
+  \ n)\n        {\n            return n % 3 == 0 || n % 7 == 0;\n        }\n    }\n\
+  }\n```\n输出:\n```\nTrue\nTrue\nTrue\nFalse\n```\n\n### 检查给定字符串是否以 'C#' 开头\n\n###\
+  \ C# 代码\n\n```csharp\nusing System;\nnamespace exercises\n{\n    class Program\n\
+  \    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(test(\"\
+  C# Sharp\"));\n            Console.WriteLine(test(\"C#\"));\n            Console.WriteLine(test(\"\
+  C++\"));\n            Console.ReadLine();\n        }\n        public static bool\
+  \ test(string str)\n        {\n            return (str.Length < 3 && str.Equals(\"\
+  C#\")) || (str.StartsWith(\"C#\") && str[2] == ' ');\n        }\n    }\n}\n```\n\
+  输出:\n```\nTrue\nTrue\nFalse\n```\n\n### C# 程序：在三个给定整数中找出最大的数\n\n### C# 代码\n\n```csharp\n\
+  using System;\nnamespace exercises\n{\n    class Program\n    {\n        static\
+  \ void Main(string[] args)\n        {\n            Console.WriteLine(test(1,2,3));\n\
+  \            Console.WriteLine(test(1,3,2));\n            Console.WriteLine(test(1,1,1));\n\
+  \            Console.WriteLine(test(1,2,2));\n            Console.ReadLine();\n\
+  \        }\n        public static int test(int x, int y, int z)\n        {\n   \
+  \         var max = Math.Max(x, Math.Max(y, z));\n            return max;\n    \
+  \    }\n    }\n}\n```\n输出:\n```\n3\n3\n1\n2\n```\n\n### 程序：在两个给定整数中检查哪个数字最接近值 100\n\
+  \n### 如果两个数字相等，则返回 0。\n\n### C# 代码\n\n```csharp\nusing System;\nnamespace exercises\n\
+  {\n    class Program\n    {\n        static void Main(string[] args)\n        {\n\
+  \            Console.WriteLine(test(78, 95));\n            Console.WriteLine(test(95,\
+  \ 95));\n            Console.WriteLine(test(99, 70));\n            Console.ReadLine();\n\
+  \        }\n        public static int test(int x, int y)\n        {\n          \
+  \  const int n = 100;\n            var val = Math.Abs(x - n);\n            var val2\
+  \ = Math.Abs(y - n);\n            return val == val2 ? 0 : (val < val2 ? x : y);\n\
+  \        }\n    }\n}\n```\n输出:\n```\n95\n0\n99\n```\n\n### 程序：将给定字符串的最后 3 个字符转换为大写\n\
+  \n如果字符串长度小于 3，则将所有字符转换为大写。\n\n### C# 代码\n\n```csharp\nusing System;\nnamespace exercises\n\
+  {\n    class Program\n    {\n        static void Main(string[] args)\n        {\n\
+  \            Console.WriteLine(test(\"Python\"));\n            Console.WriteLine(test(\"\
+  Javascript\"));\n            Console.WriteLine(test(\"js\"));\n            Console.WriteLine(test(\"\
+  PHP\"));\n            Console.ReadLine();\n        }\n        public static string\
+  \ test(string str)\n        {\n            return str.Length < 3 ? str.ToUpper()\
+  \ : str.Remove(str.Length - 3) + str.Substring(str.Length - 3).ToUpper();\n    \
+  \    }\n    }\n}\n```\n输出:\n```\nPytHON\nJavascrIPT\nJS\nPHP\n```\n\n### 程序：从给定字符串提取索引为\
+  \ 0,1, 4,5, 8,9 ... 的字符创建一个新字符串。\n\n### C# 代码\n\n```csharp\nusing System;\nusing\
+  \ System.Linq;\nnamespace exercises\n{\n    class Program\n    {\n        static\
+  \ void Main(string[] args)\n        {\n            Console.WriteLine(test(\"Python\"\
+  ));\n            Console.WriteLine(test(\"JavaScript\"));\n            Console.WriteLine(test(\"\
+  HTML\"));\n            Console.ReadLine();\n        }\n        public static string\
+  \ test(string str1)\n        {\n            var result = string.Empty;\n       \
+  \     for (var i = 0; i < str1.Length; i += 4)\n            {\n                var\
+  \ c = i + 2;\n                var n = 0;\n                n += c > str1.Length ?\
+  \ 1 : 2;\n                result += str1.Substring(i, n);\n            }\n     \
+  \       return result;\n        }\n    }\n}\n```\n输出:\n```\nPyon\nJapt\nHT\n```\n\
+  \n### 对 +, *, / 执行运算并显示结果\n\n### C# 代码\n\n```csharp\nusing System;\npublic class\
+  \ Exercise\n{\n    public static void Main()\n    {\n        int x, y;\n       \
+  \ char operation;\n        Console.Write(\"Input number: \");\n        x = Convert.ToInt32(Console.ReadLine());\n\
+  \        Console.Write(\"Input operation: \");\n        operation = Convert.ToChar(Console.ReadLine());\n\
+  \        Console.Write(\"Input second number: \");\n        y = Convert.ToInt32(Console.ReadLine());\n\
+  \        if (operation=='+')\n            Console.WriteLine(\"{0} + {1} = {2}\"\
+  , x, y);\n        else if (operation=='-')\n            Console.WriteLine(\"{0}\
+  \ - {1} = {2}\", x, y);\n        else if ((operation=='x') || (operation=='*'))\n\
+  \            Console.WriteLine(\"{0} * {1} = {2}\", x, y);\n        else if (operation=='/')\n\
+  \            Console.WriteLine(\"{0} / {1} = {2}\", x, y);\n        else\n     \
+  \       Console.WriteLine(\"Wrong Character\");\n    }\n}\n```\n输出:\n```\nInput\
+  \ number: 4\nInput operation: *\nInput second number: 4\n4 * 4 = 16\n```\n\n###\
+  \ 计算圆的周长\n\n### C# 代码\n\n```csharp\nusing System;\npublic class Exercise5\n{\n \
+  \   public static void Main()\n    {\n        double r, per_cir;\n        double\
+  \ PI = 3.1;\n        Console.WriteLine(\"Input the radius of the circle : \");\n\
+  \        r = Convert.ToDouble(Console.ReadLine());\n        per_cir = 2 * PI * r;\n\
+  \        Console.WriteLine(\"Perimeter of Circle : {0}\", per_cir);\n    }\n}\n\
+  ```\n输出:\n```\nInput the radius of the circle : 25\nPerimeter of Circle : 155\n\
+  ```\n\n\n\n\n\n##### 10 是一个偶数。\n\n### 数字是正数还是负数\n\n### C# 代码\n```csharp\nusing System;\n\
+  \npublic class Exercise3\n{\n    public static void Main()\n    {\n        int num;\n\
+  \        Console.Write(\"\\n\\n\");\n        Console.Write(\"Check whether a number\
+  \ is positive or negative:\\n\");\n        Console.Write(\"----------------------------------------------\"\
+  );\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input an integer\
+  \ : \");\n        num= Convert.ToInt32(Console.ReadLine());\n        if (num >=\
+  \ 0)\n            Console.WriteLine(\"{0} is a positive number.\\n\",num);\n   \
+  \     else\n            Console.WriteLine(\"{0} is a negative number. \\n\", num);\n\
+  \    }\n}\n```\n\n输出:\n```\nCheck whether a number is positive or negative:\n----------------------------------------------\n\
+  Input an integer : -10\n-10 is a negative number.\n```\n\n### C# 程序：接收人体身高（厘米）并根据身高进行分类\n\
+  \n### C# 代码\n```csharp\nusing System;\n\npublic class Exercise7\n{\n    public static\
+  \ void Main()\n    {\n        float PerHeight;\n        Console.Write(\"\\n\\n\"\
+  );\n        Console.Write(\"Accept the height of a person in centimeter and categorize\
+  \ them:\\n\");\n        Console.Write(\"----------------------------------------------------------------\"\
+  );\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input the height\
+  \ of the person (in centimetres):\");\n        PerHeight = Convert.ToInt32(Console.ReadLine());\n\
+  \        if (PerHeight < 150.0)\n            Console.Write(\"The person is Dwarf.\
+  \ \\n\\n\");\n        else if ((PerHeight >= 150.0) && (PerHeight <= 165.0))\n \
+  \           Console.Write(\"The person is  average heighted. \\n\\n\");\n      \
+  \  else if ((PerHeight >= 165.0) && (PerHeight <= 195.0))\n            Console.Write(\"\
+  The person is taller. \\n\\n\");\n        else\n            Console.Write(\"Abnormal\
+  \ height.\\n\\n\");\n    }\n}\n```\n\n### 输出\n```\nAccept the height of a person\
+  \ in centimeter and categorize them:\n----------------------------------------------------------------\n\
+  Input the height of the person (in centimetres):190\nThe person is taller.\n```\n\
+  \n### 找出三个数中的值\n### C# 代码\n```csharp\nusing System;\n\npublic class Exercise8\n\
+  {\n    public static void Main()\n    {\n        int num1, num2, num3;\n       \
+  \ Console.Write(\"\\n\\n\");\n        Console.Write(\"Find the largest of numbers:\\\
+  n\");\n        Console.Write(\"--------------------\");\n        Console.Write(\"\
+  \\n\\n\");\n        Console.Write(\"Input the 1st number :\");\n        num1 = Convert.ToInt32(Console.ReadLine());\n\
+  \        Console.Write(\"Input the 2nd number :\");\n        num2 = Convert.ToInt32(Console.ReadLine());\n\
+  \        Console.Write(\"Input the 3rd  number :\");\n        num3 = Convert.ToInt32(Console.ReadLine());\n\
+  \        if (num1 > num2)\n        {\n            if (num1 > num3)\n           \
+  \ {\n                Console.Write(\"The 1st Number is greatest among three. \\\
+  n\");\n            }\n            else\n            {\n                Console.Write(\"\
+  The 3rd Number is greatest among three. \\n\");\n            }\n        }\n    \
+  \    else if (num2 > num3)\n            Console.Write(\"The 2nd Number is greatest\
+  \ among three \\n\");\n        else\n            Console.Write(\"The 3rd Number\
+  \ is greatest among three \\n\");\n    }\n}\n```\n输出:\n```\nFind the largest of\
+  \ numbers:\n--------------------\nInput the 1st number :20\nInput the 2nd number\
+  \ :25\nInput the 3rd  number :15\nThe 2nd Number is greatest among three.\n```\n\
+  \n# 计算盈损\n### C# 代码\n```csharp\nusing System;\n\npublic class Exercise17\n{\n  \
+  \  public static void Main()\n    {\n        int cprice, price, plamt;\n       \
+  \ Console.Write(\"\\n\\n\");\n        Console.Write(\"Calculate profit and loss:\\\
+  n\");\n        Console.Write(\"------------\");\n        Console.Write(\"\\n\\n\"\
+  );\n        Console.Write(\"Input Cost Price: \");\n        cprice = Convert.ToInt32(Console.ReadLine());\n\
+  \        Console.Write(\"Input Selling Price: \");\n        price = Convert.ToInt32(Console.ReadLine());\n\
+  \        if (price > cprice)\n        {\n            plamt = price - cprice;\n \
+  \           Console.Write(\"\\nYou can booked profit amount : {0}\\n\", plamt);\n\
+  \        }\n        else if (cprice > price)\n        {\n            plamt = cprice\
+  \ - price;\n            Console.Write(\"\\nYou got a loss of amount : {0}\\n\",\
+  \ plamt);\n        }\n        else\n        {\n            Console.Write(\"\\nYou\
+  \ are running in no profit loss condition.\\n\");\n        }\n    }\n}\n```\n输出:\n\
+  ```\nCalculate profit and loss:\n------------\nInput Cost Price: 1000\nInput Selling\
+  \ Price: 1200\nYou can booked your profit amount : 200\n```\n\n"

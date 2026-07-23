@@ -1,0 +1,129 @@
+- fmt: "\n![](cover.jpeg)\n\n# How Streams work in Java 8\n\nVLIGHT\n\n## Table Of\
+    \ Contents\n1. Intro to Streams in Java 8\n2. How Streams work in Java 8\n3. How\
+    \ to filter a collections in Java 8\n\n## Intro to Streams in Java 8\n\n- Streams\
+    \ in Java 8 are completely different from `InputStream` or `OutputStream` before\
+    \ Java 8\n- Streams in Java 8 are Monads which is a concept in functional programming\
+    \ languages\n- Monads in a functional programming language is nothing but a structure\
+    \ which represents computations defined as Sequences of Steps\n- In a functional\
+    \ programming language, a type with a monad structure meanings to chain operations,\
+    \ or nest functions of that type together\n- Stream in Java 8 lets you to process\
+    \ data declaratively and leverage multicore architecture without the need to write\
+    \ any specific code for it\n- There are 5 main characteristics of a Stream in\
+    \ Java 8 as follow:\n    - Sequence of elements\n    - Source\n    - Aggregate\
+    \ operations\n    - Pipelining\n    - Automatic iterations\n\n## How Streams work\
+    \ in Java 8\n\n- You should familiar with Lambda Expressions, Functional Interfaces,\
+    \ and Method References if you want to fully understanding how Streams work in\
+    \ Java 8\n- Stream Operations are either intermediate or terminal\n    - **Intermediate\
+    \ Operations**: These operations will return a stream so you can chain multiple\
+    \ intermediate operations without using semicolons\n    - **Terminal Operations**:\
+    \ These operations are either void or return a non-stream result\n\n### Sample\
+    \ Code\n```java\nList<String> nameList = Arrays.asList(\"Van\", \"Nam\", \"Tuan\"\
+    , \"Tien\", \"Hoang\");\n\nnameList.stream()\n        .filter(name -> name.startsWith(\"\
+    T\"))\n        .map(String::toLowerCase)\n        .sorted()\n        .forEach(System.out::println);\n\
+    ```\n**Output**\n```\ntien\ntuan\n```\n\n### Notes\n- In the above example:\n\
+    \    - `filter()`, `map()`, and `sorted()` methods are intermediate operations\n\
+    \    - `forEach()` method is a terminal operation\n- In Java 8, a Stream can be\
+    \ created from various data sources especially Collections\n- `List` and `Set`\
+    \ in Java 8 support new methods including:\n    - `stream()`: This method is used\
+    \ to create a sequential stream\n    - `parallelStream()`: This method is used\
+    \ to create a parallel stream which is capable of operating on multiple threads\n\
+    - Calling a method `stream()` on a `List` object will return a regular stream\
+    \ object but you do not need to create Collections in order to work with streams\n\
+    \n### Example\n```java\nArrays.asList(\"Van01\", \"Van02\", \"Van03\")\n     \
+    \   .stream()\n        .findFirst()\n        .ifPresent(System.out::println);\n\
+    ```\n**Output**\n```\nVan01\n```\n\n- You can use `Stream.of()` to create a stream\
+    \ from a bunch of object references\n### Example\n```java\nStream.of(\"Lan01\"\
+    , \"Lan02\", \"Lan03\")\n        .findFirst()\n        .ifPresent(System.out::println);\n\
+    ```\n**Output**\n```\nLan01\n```\n\n## How to filter a collections in Java 8\n\
+    \n- Java 8 provides new features to support filtering of elements in a Collection\n\
+    - You can filter a Collection like `List`, `Set`, or `Map` in Java 8 using `filter()`\
+    \ method of `Stream` class with following steps:\n    - **Step 01**: You need\
+    \ to obtain a Stream from a Collection by calling `stream()` method\n    - **Step\
+    \ 02**: And then you can use `filter()` method which takes a `Predicate` as only\
+    \ argument\n\n### Notes\n- The `filter()` method does not remove elements which\
+    \ match the condition given in `predicate`, but the `filter()` method will select\
+    \ elements in an output stream\n- The `filter()` method is defined in the `Stream`\
+    \ class. It takes a `Predicate` object and then returns a stream consisting of\
+    \ the elements from original stream which matches the given `Predicate`\n- Streams\
+    \ in Java 8 support the `map()` method which takes a function as an argument to\
+    \ project the elements of a stream into another form\n"
+  raw: "\n\n![](cover.jpeg)\n\nHow Streams work in Java 8\n\nVLIGHT\n\nTable Of Contents\n\
+    \n[Intro to Streams in Java 8](#part0000_split_002.html__Toc478926448)\n\n[How\
+    \ Streams work in Java 8](#part0000_split_003.html__Toc478926449)\n\n[How to filter\
+    \ a collections in Java 8](#part0000_split_004.html__Toc478926450)\n\n# \n\nIntro\
+    \ to Streams in Java 8\n\n□  Streams in Java 8 are completely different from InputStream\
+    \ or OutputStream before Java 8\n\n□  Streams in Java 8 are Monads which is a\
+    \ concept in functional programming languages\n\n□  Monads in a functional programming\
+    \ language is nothing but a structure which represents computations defined as\
+    \ Sequences of Steps\n\n□  In a functional programming language, a type with a\
+    \ monad structure meanings to chain operations, or nest functions  of that type\
+    \ together\n\n□  Stream in Java 8 lets you to process data declaratively and leverage\
+    \ multicore architecture without the need to write any specific code for it\n\n\
+    □  There are 5 main characteristics of a Stream in Java 8 as follow:\n\n ‡  Sequence\
+    \ of elements\n\n ‡  Source\n\n ‡  Aggregate operations\n\n ‡  Pipelining\n\n\
+    \ ‡  Automatic iterations\n\n# \n\nHow Streams work in Java 8\n\n▬You should familiar\
+    \ with Lambda Expressions, Functional Interfaces, and Method References if you\
+    \ want to fully understanding how Streams work in Java 8\n\n▬Stream Operations\
+    \ are either intermediate or terminal\n\n+ Intermediate Operations: These operations\
+    \ will return a stream so you can chain multiple intermediate operations without\
+    \ using semicolons\n\n+ Terminal Operations: These operations are either void\
+    \ or return a non-stream result\n\n▬Sample Code\n\nList<String> nameList = Arrays.asList\n\
+    \n(\"Van\", \"Nam\",\"Tuan\",\"Tien\",\"Hoang\");\n\n nameList.stream()\n\n                \
+    \  .filter(name -> name.startsWith(\"T\"))\n\n                  .map(String::toLowerCase)\n\
+    \n                  .sorted()\n\n                  .forEach(System.out::println);\n\
+    \nOutput\n\ntien\n\ntuan\n\n►  Notes\n\n▬In the above example\n\n+ filter(), map(),\
+    \ and sorted() methods are intermediate operations\n\n+ forEach() method is a\
+    \ terminal operation\n\n▬In Java 8, a Stream can be created from various data\
+    \ sources especially Collections\n\n▬List and Set in Java 8 support new methods\
+    \ including\n\n+ stream(): This method is used to create a sequential stream\n\
+    \n+ parallelStream(): This method is used to create a parallel stream which is\
+    \ capable of operating on multiple threads\n\n▬Calling a method stream() on a\
+    \ List object will return a regular stream object but you do not need to create\
+    \ Collections in order to work with streams\n\nExample\n\nArrays.asList(\"Van01\"\
+    , \"Van02\", \"Van03\")\n\n           .stream()\n\n           .findFirst()\n\n\
+              .ifPresent(System.out::println);\n\nOutput\n\nVan01\n\n▬You can use\
+    \ Stream.of() to create a stream from a bunch of object references\n\nExample\n\
+    \nStream.of(\"Lan01\", \"Lan02\", \"Lan03\")\n\n             .findFirst()\n\n\
+                 .ifPresent(System.out::println);\n\nOutput\n\nLan01\n\n# \n\nHow\
+    \ to filter a collections in Java 8\n\n▬Java 8 provides new features to support\
+    \ filtering of elements in a Collection\n\n▬You can filter a Collection like List,\
+    \ Set, or Map in Java 8 using filter() method of Stream class with following steps\n\
+    \n+ Step 01: You need to obtain a Stream from a Collection by calling stream()\
+    \ method\n\n+ Step 02: And then you can use filter() method which takes a Predicate\
+    \ as only argument\n\n►  Notes\n\n+ The filter() method does not remove elements\
+    \ which match the condition given in predicate, but the filter() method will select\
+    \ elements in an output stream\n\n+ The filter() method is defined in the Stream\
+    \ class. It takes a Predicate object and then returns a stream consisting of the\
+    \ elements from original stream which matches the given Predicate\n\n▬Streams\
+    \ in Java 8 support the map() method which takes a function as an argument to\
+    \ project the elements of a stream into another form"
+  toc: []
+  trans: "\n\n![](img/cover.jpeg)\n\n# Java 8 中的 Streams 工作原理\n\nVLIGHT\n\n## 目录\n\
+    1. Java 8 Streams 简介\n2. Java 8 中的 Streams 如何工作\n3. 如何在 Java 8 中过滤集合\n\n## Java\
+    \ 8 Streams 简介\n\n- Java 8 中的 Streams 与 Java 8 之前的 `InputStream` 或 `OutputStream`\
+    \ 完全不同\n- Java 8 中的 Streams 是一种 Monad（单子器），这是函数式编程语言中的一个概念\n- 函数式编程语言中的 Monad\
+    \ 本质上是一种表示定义为“步骤序列”计算的结构\n- 在函数式编程语言中，具有 monad 结构的类型意味着可以链式操作，或将该类型的函数嵌套在一起\n\
+    - Java 8 中的 Stream 允许你以声明的方式处理数据，并利用多核架构，而无需编写任何特定的代码\n- Java 8 中的 Stream 有以下\
+    \ 5 个主要特征：\n    - 元素的序列\n    - 数据源\n    - 聚合操作\n    - 管道流操作 (Pipelining)\n   \
+    \ - 自动迭代\n\n## Java 8 中的 Streams 工作原理\n\n- 如果你想完全理解 Java 8 中 Streams 是如何工作的，你应该熟悉\
+    \ Lambda 表达式、函数式接口和方法引用\n- Stream 操作分为中间操作和终端操作两类\n    - **中间操作 (Intermediate\
+    \ Operations)**：这些操作将返回一个流，因此你可以链用多个中间操作而无需使用分号\n    - **终端操作 (Terminal Operations)**：这些操作要么返回\
+    \ void，要么返回一个非流的结果的结果\n\n### 示例代码\n```java\nList<String> nameList = Arrays.asList(\"\
+    Van\", \"Nam\", \"Tuan\", \"Tien\", \"Hoang\");\n\nnameList.stream()\n       \
+    \ .filter(name -> name.startsWith(\"T\"))\n        .map(String::toLowerCase)\n\
+    \        .sorted()\n        .forEach(System.out::println);\n```\n**输出**\n```\n\
+    tien\ntuan\n```\n\n### Notes\n- 在上述示例中：\n    - `filter()`、`map()` 和 `sorted()`\
+    \ 方法是中间操作\n    - `forEach()` 方法是终端操作\n- 在 Java 8 中，Stream 可以从各种数据源创建，特别是集合（Collections）\n\
+    - Java 8 中的 `List` 和 `Set` 支持新方法，包括：\n    - `stream()`：此方法用于创建顺序流\n    - `parallelStream()`：此方法用于创建并行流，能够在多个线程上进行操作\n\
+    - 在 `List` 对象上调用 `stream()` 方法将返回一个普通的流对象，但你不需要为了使用流而创建集合\n\n### 示例\n```java\n\
+    Arrays.asList(\"Van01\", \"Van02\", \"Van03\")\n        .stream()\n        .findFirst()\n\
+    \        .ifPresent(System.out::println);\n```\n**输出**\n```\nVan01\n```\n\n- 你可以使用\
+    \ `Stream.of()` 从一组对象引用创建流\n### 示例\n```java\nStream.of(\"Lan01\", \"Lan02\", \"\
+    Lan03\")\n        .findFirst()\n        .ifPresent(System.out::println);\n```\n\
+    **输出**\n```\nLan01\n```\n\n## 如何在 Java 8 中过滤集合\n\n- Java 8 提供了新功能来支持集合中元素过滤\n\
+    - 你可以在 Java 8 中通过 `Stream` 类的 `filter()` 方法按照以下步骤过滤 `List`、`Set` 或 `Map` 等集合：\n\
+    \    - **步骤 01**：你需要通过调用 `stream()` 方法从集合获取 Stream\n    - **步骤 02**：然后你可以使用 `filter()`\
+    \ 方法，该方法接受 `Predicate` 作为唯一参数\n\n### Notes\n- `filter()` 方法不会删除匹配 `predicate`\
+    \ 中给定条件的元素，而是 `filter()` 方法会在输出流中选择符合选择的元素\n- `filter()` 方法定义在 `Stream` 类中。它接收一个\
+    \ `Predicate` 对象，然后返回一个由原始流中符合给定 `Predicate` 的元素组成的流\n- Java 8 中的 Streams 支持 `map()`\
+    \ 方法，该方法接受函数作为参数，将流中的元素投影到另一种形式\n\n"

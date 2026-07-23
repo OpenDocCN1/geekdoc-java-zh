@@ -1,0 +1,22 @@
+name: How Streams Work In Java 8. 1
+name_cn: Java 8 流工作原理指南
+slug: how-streams-work-in-java-8-1
+toc:
+- - '#'
+  - Java 8 流工作原理指南
+- - '##'
+  - Java 8 Streams 简介
+- - '##'
+  - Java 8 中的 Streams 工作原理
+- - '###'
+  - 示例代码
+- - '###'
+  - Notes
+- - '###'
+  - 示例
+- - '###'
+  - 示例
+- - '##'
+  - 如何在 Java 8 中过滤集合
+- - '###'
+  - Notes

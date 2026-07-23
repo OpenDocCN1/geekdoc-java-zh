@@ -1,0 +1,309 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 472 751" preserveaspectratio="none">
+<image width="472" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3">How Streams work in Java 8</span></p>
+<p><span class="calibre4"> </span></p>
+<p><span class="calibre5">VLIGHT</span></p>
+<div id="part0000_split_000.html_calibre_pb_0" class="calibre7">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre9">Table Of Contents</span></p>
+<p><span class="calibre10"> </span></p>
+<p><span id="part0000_split_001.html_toc"></span><a
+href="#part0000_split_002.html__Toc478926448"><span
+class="calibre11">Intro to Streams in Java 8</span></a></p>
+<p><a href="#part0000_split_003.html__Toc478926449"><span
+class="calibre11">How Streams work in Java 8</span></a></p>
+<p><a href="#part0000_split_004.html__Toc478926450"><span
+class="calibre11">How to filter a collections in Java 8</span></a></p>
+</div>
+<p><span id="part0000_split_002.html"></span></p>
+<section id="part0000_split_002.html_calibre_pb_2"
+class="calibre12 calibre1">
+<h1 class="calibre12"><br />
+<span id="part0000_split_002.html__Toc478926448" class="calibre15"><span
+id="part0000_split_002.html_Q-82bc245d746841c5916e8cdec08110b2"
+class="calibre16">Intro to Streams in Java 8</span></span></h1>
+<p><span class="calibre10"> </span></p>
+<p><span class="calibre10"> </span></p>
+<p><span class="calibre17">□</span><span class="calibre18"> </span><span
+class="calibre19">Streams</span><span class="calibre20"> in Java 8 are
+completely different from </span><span
+class="calibre19">InputStream</span><span class="calibre20"> or
+</span><span class="calibre19">OutputStream</span><span
+class="calibre20"> before Java 8</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre17">□</span><span class="calibre18"> </span><span
+class="calibre19">Streams</span><span class="calibre20"> in Java 8 are
+</span><span class="calibre19">Monads</span><span class="calibre20">
+which is a concept in functional programming languages</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre17">□</span><span class="calibre18"> </span><span
+class="calibre19">Monads</span><span class="calibre20"> in a functional
+programming language is nothing but a </span><span
+class="calibre21">structure</span><span class="calibre20"> which
+represents computations defined as </span><span
+class="calibre19">Sequences of Steps</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre17">□</span><span class="calibre18"> </span><span
+class="calibre20">In a functional programming language, a type with a
+</span><span class="calibre19">monad structure</span><span
+class="calibre20"> meanings to </span><span class="calibre22">chain
+operations</span><span class="calibre20">, or </span><span
+class="calibre22">nest functions</span><span class="calibre23">
+</span><span class="calibre20">of that type together</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre17">□</span><span class="calibre18"> </span><span
+class="calibre19">Stream</span><span class="calibre20"> in Java 8 lets
+you to process data declaratively and leverage multicore architecture
+without the need to write any specific code for it</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre17">□</span><span class="calibre18"> </span><span
+class="calibre20">There are 5 main characteristics of a Stream in Java 8
+as follow:</span></p>
+<p><span class="calibre24"> </span></p>
+<p><span class="calibre24">  </span><span
+class="calibre25">‡</span><span class="calibre24"> </span><span
+class="calibre19">Sequence of elements</span></p>
+<p><span class="calibre24"> </span></p>
+<p><span class="calibre24">  </span><span
+class="calibre25">‡</span><span class="calibre24"> </span><span
+class="calibre19">Source</span><span class="calibre20"> </span></p>
+<p><span class="calibre24"> </span></p>
+<p><span class="calibre24">  </span><span
+class="calibre25">‡</span><span class="calibre24"> </span><span
+class="calibre19">Aggregate operations</span></p>
+<p><span class="calibre24"> </span></p>
+<p><span class="calibre24">  </span><span
+class="calibre25">‡</span><span class="calibre24"> </span><span
+class="calibre19">Pipelining</span><span class="calibre20"> </span></p>
+<p><span class="calibre24"> </span></p>
+<p><span class="calibre24">  </span><span
+class="calibre25">‡</span><span class="calibre24"> </span><span
+class="calibre19">Automatic iterations</span></p>
+<p><span class="calibre26"> </span></p>
+</section>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_5"
+class="calibre12 calibre1">
+<h1 class="calibre12"><br />
+<span id="part0000_split_003.html__Toc478926449" class="calibre15"><span
+class="calibre16">How Streams work in Java 8</span></span></h1>
+<p><span class="calibre10"> </span></p>
+<p><span class="calibre10"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre20">You should
+familiar with </span><span class="calibre19">Lambda
+Expressions</span><span class="calibre20">, </span><span
+class="calibre19">Functional Interfaces</span><span class="calibre20">,
+and </span><span class="calibre19">Method References</span><span
+class="calibre20"> if you want to fully understanding how Streams work
+in Java 8</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre19">Stream
+Operations</span><span class="calibre20"> are either intermediate or
+terminal</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ </span><span class="calibre28">Intermediate
+Operations</span><span class="calibre20">: These operations will return
+a stream so you can chain multiple intermediate operations without using
+semicolons</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ </span><span class="calibre28">Terminal
+Operations</span><span class="calibre20">: These operations are either
+void or return a non-stream result</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre29">▬</span><span class="calibre30">Sample
+Code</span></p>
+<p><span class="calibre23"> </span></p>
+<p><span class="calibre23">List</span><span
+class="calibre20">&lt;</span><span class="calibre31">String</span><span
+class="calibre20">&gt; </span><span
+class="calibre32">nameList</span><span class="calibre20"> = </span><span
+class="calibre31">Arrays</span><span class="calibre20">.</span><span
+class="calibre19">asList</span></p>
+<p><span class="calibre20">("Van",
+"Nam","Tuan","Tien","Hoang");</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">   </span><span
+class="calibre32">nameList</span><span class="calibre20">.</span><span
+class="calibre19">stream</span><span class="calibre20">()</span></p>
+<p><span class="calibre20">                  .</span><span
+class="calibre19">filter</span><span class="calibre20">(name -&gt;
+name.</span><span class="calibre19">startsWith</span><span
+class="calibre20">("T"))</span></p>
+<p><span class="calibre20">                  .</span><span
+class="calibre19">map</span><span
+class="calibre20">(String::toLowerCase)</span></p>
+<p><span class="calibre20">                  .</span><span
+class="calibre19">sorted</span><span class="calibre20">()</span></p>
+<p><span class="calibre20">                  .</span><span
+class="calibre19">forEach</span><span
+class="calibre20">(System.out::println);</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre34">Output</span></p>
+<p><span class="calibre20">tien</span></p>
+<p><span class="calibre20">tuan</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre35">►</span><span class="calibre28"> </span><span
+class="calibre21">Notes</span></p>
+<p><span class="calibre36"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre20">In the above
+example</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ </span><span
+class="calibre19">filter</span><span class="calibre20">(), </span><span
+class="calibre19">map</span><span class="calibre20">(), and </span><span
+class="calibre19">sorted</span><span class="calibre20">() methods are
+intermediate operations</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ </span><span
+class="calibre19">forEach</span><span class="calibre20">() method is a
+terminal operation</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre20">In Java 8, a
+</span><span class="calibre19">Stream</span><span class="calibre20"> can
+be created from various data sources especially </span><span
+class="calibre19">Collections</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre27">▬</span><span
+class="calibre19">List</span><span class="calibre20"> and </span><span
+class="calibre19">Set</span><span class="calibre20"> in Java 8 support
+new methods including</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ </span><span
+class="calibre19">stream</span><span class="calibre20">(): This method
+is used to create a sequential stream</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ </span><span
+class="calibre19">parallelStream</span><span class="calibre20">(): This
+method is used to create a parallel stream which is capable of operating
+on multiple threads</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre20">Calling a
+method </span><span class="calibre19">stream</span><span
+class="calibre20">() on a </span><span
+class="calibre21">List</span><span class="calibre20"> object will return
+a regular stream object but you do not need to create Collections in
+order to work with streams</span></p>
+<p><span class="calibre30"> </span></p>
+<p><span class="calibre30">Example</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">Arrays.</span><span
+class="calibre19">asList</span><span class="calibre20">("Van01",
+"Van02", "Van03")</span></p>
+<p><span class="calibre20">           .</span><span
+class="calibre19">stream</span><span class="calibre20">()</span></p>
+<p><span class="calibre20">           .</span><span
+class="calibre19">findFirst</span><span class="calibre20">()</span></p>
+<p><span class="calibre20">          .</span><span
+class="calibre19">ifPresent</span><span
+class="calibre20">(System.out::println);</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre34">Output</span></p>
+<p><span class="calibre20">Van01</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre20">You can use
+</span><span class="calibre23">Stream</span><span
+class="calibre20">.</span><span class="calibre19">of</span><span
+class="calibre20">() to create a stream from a bunch of object
+references</span></p>
+<p><span class="calibre30"> </span></p>
+<p><span class="calibre30">Example</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">Stream.</span><span
+class="calibre19">of</span><span class="calibre20">("Lan01", "Lan02",
+"Lan03")</span></p>
+<p><span class="calibre20">             .</span><span
+class="calibre19">findFirst</span><span class="calibre20">()</span></p>
+<p><span class="calibre20">             .</span><span
+class="calibre19">ifPresent</span><span
+class="calibre20">(System.out::println);</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre34">Output</span></p>
+<p><span class="calibre20">Lan01</span></p>
+<p><span class="calibre10"> </span></p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_8"
+class="calibre12 calibre1">
+<h1 class="calibre12"><br />
+<span id="part0000_split_004.html__Toc478926450" class="calibre15"><span
+class="calibre16">How to filter a collections in Java
+8</span></span></h1>
+<p><span class="calibre10"> </span></p>
+<p><span class="calibre10"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre20">Java 8
+provides new features to support filtering of elements in a
+Collection</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre27">▬</span><span class="calibre20">You can
+filter a Collection like </span><span class="calibre19">List</span><span
+class="calibre20">, </span><span class="calibre19">Set</span><span
+class="calibre20">, or </span><span class="calibre19">Map</span><span
+class="calibre20"> in Java 8 using </span><span
+class="calibre19">filter</span><span class="calibre20">() method of
+</span><span class="calibre19">Stream</span><span class="calibre20">
+class with following steps</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ Step 01: You need to obtain a Stream from a
+Collection by calling </span><span class="calibre19">stream</span><span
+class="calibre20">() method</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ Step 02: And then you can use </span><span
+class="calibre19">filter</span><span class="calibre20">() method which
+takes a </span><span class="calibre19">Predicate</span><span
+class="calibre20"> as only argument</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre35">►</span><span class="calibre28"> </span><span
+class="calibre21">Notes</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ The </span><span
+class="calibre19">filter</span><span class="calibre20">() method does
+not remove elements which match the condition given in predicate, but
+the </span><span class="calibre19">filter</span><span
+class="calibre20">() method will select elements in an output
+stream</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20">+ The </span><span
+class="calibre19">filter</span><span class="calibre20">() method is
+defined in the </span><span class="calibre19">Stream</span><span
+class="calibre20"> class. It takes a </span><span
+class="calibre19">Predicate</span><span class="calibre20"> object and
+then returns a stream consisting of the elements from original stream
+which matches the given </span><span
+class="calibre19">Predicate</span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre20"> </span></p>
+<p><span class="calibre27">▬</span><span
+class="calibre19">Streams</span><span class="calibre20"> in Java 8
+support the </span><span class="calibre19">map</span><span
+class="calibre20">() method which takes a function as an argument to
+project the elements of a stream into another form</span></p>
+<p><span class="calibre10"> </span></p>
+</section>

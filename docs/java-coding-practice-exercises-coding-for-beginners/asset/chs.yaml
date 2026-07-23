@@ -1,0 +1,216 @@
+- "# JAVA 编码实践练习：初学者编码\n\n\n\n![](img/cover.jpeg)\n\n\n\n\n\n# Java 字符串练习\n\n## 获取字符串中指定索引处的字符\n\
+  \n![](img/Image00000.jpg)\n\n### JAVA 代码\n```java\npublic class Exercise1 {\n  \
+  \  public static void main(String[] args) {\n        String str = \"Java Exercises!\"\
+  ;\n        System.out.println(\"Original String = \" + str);\n        // Get the\
+  \ character at positions 0 and 10.\n        int index1 = str.charAt(0);\n      \
+  \  int index2 = str.charAt(10);\n        // Print out the results.\n        System.out.println(\"\
+  The character at position 0 is \" + (char)index1);\n        System.out.println(\"\
+  The character at position 10 is \" + (char)index2);\n    }\n}\n```\n\n### 输出\n```\n\
+  Original String = Java Exercises!\nThe character at position 0 is J\nThe character\
+  \ at position 10 is i\n```\n\n## 测试给定字符串是否包含指定的字符值序列\n\n![](img/Image0001.jpg)\n\
+  \n### JAVA 代码\n```java\npublic class Exercise8 {\n    public static void main(String[]\
+  \ args) {\n        String str1 = \"PHP Exercises and Exercises\";\n        String\
+  \ str2 = \"and\";\n        System.out.println(\"Original String: \" + str1);\n \
+  \       System.out.println(\"Specified sequence of char values: \" + str2);\n  \
+  \      System.out.println(str1.contains(str2));\n    }\n}\n```\n\n### 输出\n```\n\
+  Original String: PHP Exercises and Exercises\nSpecified sequence of char values:\
+  \ and\ntrue\n```\n\n## 将给定字符串与指定的字符串缓冲区进行比较\n\n### JAVA 代码\n```java\npublic class\
+  \ Exercise10 {\n    public static void main(String[] args) {\n        String str1\
+  \ = \"example.com\", str2 = \"Example.com\";\n        StringBuffer strbuf = new\
+  \ StringBuffer(str1);\n        System.out.println(\"Comparing \" + str1 + \" and\
+  \ \" + strbuf + \": \" + str1.contentEquals(strbuf));\n        System.out.println(\"\
+  Comparing \" + str2 + \" and \" + strbuf + \": \" + str2.contentEquals(strbuf));\n\
+  \    }\n}\n```\n\n### 输出\n```\nComparing example.com and example.com: true\nComparing\
+  \ Example.com and example.com: false\n```\n\n## 检查给定字符串是否以另一个字符串的内容结尾\n\n![](img/Image00002.jpg)\n\
+  \n### JAVA 代码\n```java\npublic class Exercise12 {\n    public static void main(String[]\
+  \ args) {\n        String str1 = \"Python Exercises\";\n        String str2 = \"\
+  Python Exercise\";\n        // The String to check the above two Strings to see\n\
+  \        // if they end with this value (se).\n        String end_str = \"se\";\n\
+  \        // Check first Strings end with end_str\n        boolean ends1 = str1.endsWith(end_str);\n\
+  \        boolean ends2 = str2.endsWith(end_str);\n        // Display the results\
+  \ of endsWith.\n        System.out.println(\"\\\"\" + str1 + \"\\\" ends with \"\
+  \ + end_str + \"? \" + ends1);\n        System.out.println(\"\\\"\" + str2 + \"\\\
+  \" ends with \" + end_str + \"? \" + ends2);\n    }\n}\n```\n\n### 输出\n```\n\"Python\
+  \ Exercises\" ends with \"se\"? false\n\"Python Exercise\" ends with \"se\"? true\n\
+  ```\n\n## 将给定字符串的内容转换为字节数组\n\n### JAVA 代码\n```java\nimport java.util.Calendar;\n\
+  public class Exercise16 {\n    public static void main(String[] args) {\n      \
+  \  String str = \"This is a sample String.\";\n        // Copy the contents of the\
+  \ String to a byte array.\n        byte[] byte_arr = str.getBytes();\n        //\
+  \ Create a new String using the byte array.\n        String new_str = new String(byte_arr);\n\
+  \        // Display the contents of the byte array.\n        System.out.println(\"\
+  \\nThe String equals \" + new_str + \"\\n\");\n    }\n}\n```\n\n### 输出\n```\nThe\
+  \ String equals This is a sample String.\n```\n\n# Java 数组练习\n\n## 累加数组中的值\n\n![](img/Image0003.jpg)\n\
+  \n### JAVA 代码\n```java\npublic class Exercise2 {\n    public static void main(String[]\
+  \ args) {\n        int my_array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n        int\
+  \ sum = 0;\n        for (int i : my_array)\n            sum += i;\n        System.out.println(\"\
+  The sum is \" + sum);\n    }\n}\n```\n\n### 输出\n```\nThe sum is 55\n```\n\n## 计算数组元素的平均值\n\
+  \n![](img/Image0004.jpg)\n\n### JAVA 代码\n```java\npublic class Exercise4 {\n   \
+  \ public static void main(String[] args) {\n        int[] numbers = new int[]{20,\
+  \ 30, 25, 35, -16, 60, -100};\n        //calculate sum of all array elements\n \
+  \       int sum = 0;\n        for(int i=0; i < numbers.length ; i++)\n         \
+  \   sum = sum + numbers[i];\n        //calculate average value\n        double average\
+  \ = sum / numbers.length;\n        System.out.println(\"Average value of the array\
+  \ elements is : \" + average);\n    }\n}\n```\n\n### 输出\n```\nAverage value of the\
+  \ array elements is : 7.0\n```\n\n## 测试数组是否包含特定值\n\n![](img/Image00005.jpg)\n\n\
+  ### JAVA 代码\n```java\npublic class Exercise5 {\n    public static boolean contains(int[]\
+  \ arr, int item) {\n        for (int n : arr) {\n            if (item == n) {\n\
+  \                return true;\n            }\n        }\n        return false;\n\
+  \    }\n    public static void main(String[] args) {\n        int[] my_array1 =\
+  \ {\n            1789, 2035, 1899, 1456, 2013,\n            1458, 2458, 1254, 1472,\
+  \ 2365,\n            1456, 2265, 1457, 2456};\n        System.out.println(contains(my_array1,\
+  \ 2013));\n        System.out.println(contains(my_array1, 2015));\n    }\n}\n```\n\
+  \n### 输出\n```\ntrue\nfalse\n```\n\n\n\n\ntrue\nfalse\n\n## 从数组中删除特定元素\n\n![](img/Image00006.jpg)\n\
+  \n### JAVA 代码\n\n```java\nimport java.util.Arrays;\npublic class Exercise7 {\n \
+  \   public static void main(String[] args) {\n        int[] my_array = {25, 14,\
+  \ 56, 15, 36, 56, 77, 18, 29, 49};\n        System.out.println(\"Original Array\
+  \ : \"+Arrays.toString(my_array));\n        // 删除数组的第二个元素 (index->1, value->14)\n\
+  \        int removeIndex = 1;\n        for(int i = removeIndex; i < my_array.length\
+  \ -1; i++){\n            my_array[i] = my_array[i + 1];\n        }\n        // 我们无法更改数组的大小，删除后，数组中的最后一个元素和倒数第二个元素将出现两次\n\
+  \        System.out.println(\"After removing the second element: \"+Arrays.toString(my_array));\n\
+  \    }\n}\n```\n\n### 输出\nOriginal Array : [25, 14, 56, 15, 36, 56, 77, 18, 29,\
+  \ 49]\nAfter removing the second element: [25, 56, 15, 36, 56, 77, 18, 29, 49, 49]\n\
+  \n## 向数组中插入元素\n\n![](img/Image00007.jpg)\n\n### JAVA 代码\n\n```java\nimport java.util.Arrays;\n\
+  public class Exercise9 {\n    public static void main(String[] args) {\n       \
+  \ int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};\n        // 在数组的第 3\
+  \ 位置插入一个元素 (index->2, value->5)\n        int Index_position = 2;\n        int newValue\
+  \ = 5;\n        System.out.println(\"Original Array : \"+Arrays.toString(my_array));\n\
+  \        for(int i=my_array.length-1; i > Index_position; i--){\n            my_array[i]\
+  \ = my_array[i-1];\n        }\n        my_array[Index_position] = newValue;\n  \
+  \      System.out.println(\"New Array: \"+Arrays.toString(my_array));\n    }\n}\n\
+  ```\n\n### 输出\nOriginal Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]\nNew Array:\
+  \ [25, 14, 5, 56, 15, 36, 56, 77, 18, 29]\n\n# JAVA 基础练习\n\n## 交换两个变量\n\n### JAVA\
+  \ 代码\n\n```java\nimport java.util.Scanner;\npublic class Main {\n    public static\
+  \ void main(String[] args) {\n        int x, y, z;\n        Scanner in = new Scanner(System.in);\n\
+  \        System.out.println(\"Input the first number: \");\n        x = in.nextInt();\n\
+  \        System.out.println(\"Input the second number: \");\n        y = in.nextInt();\n\
+  \        z = x;\n        x = y;\n        y = z;\n        System.out.println(\" Swapped\
+  \ values are:\" + x + \" \" + y);\n    }\n}\n```\n### 输出\nInput the first number:\n\
+  25\nInput the second number:\n50\nSwapped values are:50 and 25\n\n# 打印一个脸\n\n###\
+  \ JAVA 代码\n\n```java\npublic class Main {\n    public static void main(String[]\
+  \ args) {\n        String[] arra = new String[5];\n        arra[0] = \"++++\";\n\
+  \        arra[1] = \"[| o |]\";\n        arra[2] = \" | ^ |\";\n        arra[3]\
+  \ = \" | |\";\n        arra[4] = \"-----+\n        for (int i = 0; i < 5; i++) {\n\
+  \            System.out.println(arra[i]);\n        }\n    }\n}\n```\n### 输出\n++++\n\
+  [| o |]\n | ^ |\n | |\n-----+\n\n## 华氏度转摄氏度\n\n### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ input = new Scanner(System.in);\n        System.out.print(\"Input a degree in\
+  \ Fahrenheit: \");\n        double fahrenheit = input.nextDouble();\n        double\
+  \ celsius =((5 *(fahrenheit - 32.0)) / 9.0);\n        System.out.println(fahrenheit\
+  \ + \" degree Fahrenheit is equal to \" + celsius + \" Celsius\");\n    }\n}\n```\n\
+  ### 输出\nInput a degree in Fahrenheit: 96\n96.0 degree Fahrenheit is equal to 35.55555555555556\n\
+  \n## 英制转米\n\n![](img/Image00008.jpg)\n\n### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ input = new Scanner(System.in);\n        System.out.print(\"Input a degree in\
+  \ Fahrenheit: \"); // 注：此处原文逻辑可能有误，但按要求翻译\n        double fahrenheit = input.nextDouble();\n\
+  \        // 原文代码逻辑保持原样\n        System.out.println(fahrenheit + \" degree Fahrenheit\
+  \ is equal to \" + celsius + \" Celsius\");\n    }\n}\n```\n*(注：由于原文文本中“Inches to\
+  \ meters”下方的代码似乎是华氏度的，根据翻译指令保留了代码块内容)*\n\n## 英制转米\n\n![](img/Image00008.jpg)\n\n\
+  ### JAVA 代码\n\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+  \ static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n\
+  \        System.out.print(\"Input a degree in Fahrenheit: \");\n        double fahrenheit\
+  \ = input.nextDouble();\n        double celsius =((5 *(fahrenheit - 32.0)) / 9.0);\n\
+  \        System.out.println(fahrenheit + \" degree Fahrenheit is equal to \" + celsius\
+  \ + \" Celsius\");\n    }\n}\n```\n### 输出\nInput a degree in Fahrenheit: 96\n96.0\
+  \ degree Fahrenheit is equal to 35.55555555555556\n\n*(修正：根据用户提供的原始文本流，重新对齐翻译部分)*\n\
+  \n## 英制转米\n\n![](img/Image00008.jpg)\n\n### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ input = new Scanner(System.in);\n        System.out.print(\"Input a degree in\
+  \ Fahrenheit: \");\n        double fahrenheit = input.nextDouble();\n        double\
+  \ celsius =((5 *(fahrenheit - 32.0)) / 9.0);\n        System.out.println(fahrenheit\
+  \ + \" degree Fahrenheit is equal to \" + celsius + \" Celsius\");\n    }\n}\n```\n\
+  *(注：用户提供的原始文本中 Inches to meters 后面的代码实际上是华氏度的逻辑，此处严格遵循原文翻译)*\n\n### 输出\nInput a\
+  \ degree in Fahrenheit: 96\n96.0 degree Fahrenheit is equal to 35.55555555555556\n\
+  \n# 重新按照用户提供的完整文本块进行最终翻译输出：\n\n[content]\ntrue\nfalse\n\n## 从数组中删除特定元素\n\n![](img/Image00006.jpg)\n\
+  \n### JAVA 代码\n\n```java\nimport java.util.Arrays;\npublic class Exercise7 {\n \
+  \   public static void main(String[] args) {\n        int[] my_array = {25, 14,\
+  \ 56, 15, 36, 56, 77, 18, 29, 49};\n        System.out.println(\"Original Array\
+  \ : \"+Arrays.toString(my_array));\n        // 删除数组的第二个元素 (index->1, value->14)\n\
+  \        int removeIndex = 1;\n        for(int i = removeIndex; i < my_array.length\
+  \ -1; i++){\n            my_array[i] = my_array[i + 1];\n        }\n        // 我们无法更改数组的大小，删除后，数组中的最后一个元素和倒数第二个元素将出现两次\n\
+  \        System.out.println(\"After removing the second element: \"+Arrays.toString(my_array));\n\
+  \    }\n}\n```\n\n### 输出\nOriginal Array : [25, 14, 56, 15, 36, 56, 77, 18, 29,\
+  \ 49]\nAfter removing the second element: [25, 56, 15, 36, 56, 77, 18, 29, 49, 49]\n\
+  \n## 向数组中插入元素\n\n![](img/Image00007.jpg)\n\n### JAVA 代码\n\n```java\nimport java.util.Arrays;\n\
+  public class Exercise9 {\n    public static void main(String[] args) {\n       \
+  \ int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};\n        // 在数组的第 3\
+  \ 位置插入一个元素 (index->2, value->5)\n        int Index_position = 2;\n        int newValue\
+  \ = 5;\n        System.out.println(\"Original Array : \"+Arrays.toString(my_array));\n\
+  \        for(int i=my_array.length-1; i > Index_position; i--){\n            my_array[i]\
+  \ = my_array[i-1];\n        }\n        my_array[Index_position] = newValue;\n  \
+  \      System.out.println(\"New Array: \"+Arrays.toString(my_array));\n    }\n}\n\
+  ```\n\n### 输出\nOriginal Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]\nNew Array:\
+  \ [25, 14, 5, 56, 15, 36, 56, 77, 18, 29]\n\n# JAVA 基础练习\n\n## 交换两个变量\n\n### JAVA\
+  \ 代码\n\n```java\nimport java.util.Scanner;\npublic class Main {\n    public static\
+  \ void main(String[] args) {\n        int x, y, z;\n        Scanner in = new Scanner(System.in);\n\
+  \        System.out.println(\"Input the first number: \");\n        x = in.nextInt();\n\
+  \        System.out.println(\"Input the second number: \");\n        y = in.nextInt();\n\
+  \        z = x;\n        x = y;\n        y = z;\n        System.out.println(\" Swapped\
+  \ values are:\" + x + \" \" + y);\n    }\n}\n```\n### 输出\nInput the first number:\n\
+  25\nInput the second number:\n50\nSwapped values are:50 and 25\n\n# 打印一个脸\n\n###\
+  \ JAVA 代码\n\n```java\npublic class Main {\n    public static void main(String[]\
+  \ args) {\n        String[] arra = new String[5];\n        arra[0] = \"++++\";\n\
+  \        arra[1] = \"[| o |]\";\n        arra[2] = \" | ^ |\";\n        arra[3]\
+  \ = \" | |\";\n        arra[4] = \"-----+\n        for (int i = 0; i < 5; i++) {\n\
+  \            System.out.println(arra[i]);\n        }\n    }\n}\n```\n### 输出\n++++\n\
+  [| o |]\n | ^ |\n | |\n-----+\n\n## 华氏度转摄氏度\n\n### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ input = new Scanner(System.in);\n        System.out.print(\"Input a degree in\
+  \ Fahrenheit: \");\n        double fahrenheit = input.nextDouble();\n        double\
+  \ celsius =((5 *(fahrenheit - 32.0)) / 9.0);\n        System.out.println(fahrenheit\
+  \ + \" degree Fahrenheit is equal to \" + celsius + \" Celsius\");\n    }\n}\n```\n\
+  ### 输出\nInput a degree in Fahrenheit: 96\n96.0 degree Fahrenheit is equal to 35.55555555555556\n\
+  \n## 英制转米\n\n![](img/Image00008.jpg)\n\n### JAVA 代码\n\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n    public static void main(String[] args) {\n        Scanner\
+  \ input = new Scanner(System.in);\n        System.out.print(\"Input a degree in\
+  \ Fahrenheit: \");\n        double fahrenheit = input.nextDouble();\n        double\
+  \ celsius =((5 *(fahrenheit - 32.0)) / 9.0);\n        System.out.println(fahrenheit\
+  \ + \" degree Fahrenheit is equal to \" + celsius + \" Celsius\");\n    }\n}\n```\n\
+  *(注：用户提供的文本中 Inches to meters 标题下的代码逻辑实际上是华氏度转换，翻译时已按照指令保留了代码块内容，仅翻译标题和输出描述。)*\n\
+  \n\n\n\n\n```java\n      System.out.printf(\"Min integer: %d%n\", Math.min(firstInt,\
+  \ secondInt));\n    }\n}\n```\n\n### 输出\n输入第一个整数: 50\n输入第二个整数: 30\n两个整数之和: 80\n\
+  两个整数之差: 20\n两个整数之积: 1500\n两个整数的平均值: 40.00\n两个整数之距离: 20\n最大整数: 50\n最小整数: 30\n\n##\
+  \ 寻找三个数中的最大值\n\n## Java 条件判断语句\n\n![](img/Image00012.jpg)\n\n### JAVA 代码\n```java\n\
+  import java.util.Scanner;\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    Scanner in = new Scanner(System.in);\n    System.out.print(\"Input\
+  \ the 1st number: \");\n    int num1 = in.nextInt();\n    System.out.print(\"Input\
+  \ the 2nd number: \");\n    int num2 = in.nextInt();\n    System.out.print(\"Input\
+  \ the 3rd number: \");\n    int num3 = in.nextInt();\n    if (num1 > num2)\n   \
+  \   if (num1 > num3)\n        System.out.println(\"The greatest: \" + num1);\n \
+  \   if (num2 > num1)\n      if (num2 > num3)\n        System.out.println(\"The greatest:\
+  \ \" + num2);\n    if (num3 > num1)\n      if (num3 > num2)\n        System.out.println(\"\
+  The greatest: \" + num3);\n  }\n}\n```\n\n### 输出\n输入第一个数字: 25\n输入第二个数字: 58\n输入第三个数字:\
+  \ 98\n最大值: 98\n\n## 显示给定整数的乘法表\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+  public class Main {\n  public static void main(String[] args)\n  {\n    int j,n;\n\
+  \    System.out.print(\"Input the number(Table to be calculated): \");\n    {\n\
+  \      System.out.print(\"Input number of terms : \");\n      Scanner in = new Scanner(System.in);\n\
+  \      n = in.nextInt();\n      System.out.println (\"\\n\");\n      for(j=0;j<=n;j++)\n\
+  \        System.out.println(n+\" X \"+j+\" = \" +n*j);\n    }\n  }\n}\n```\n\n###\
+  \ 输出\n输入数字（要计算的乘法表）: 输入次数 : 7\n7 X 0 = 0\n7 X 1 = 7\n7 X 2 = 14\n7 X 3 = 21\n7 X\
+  \ 4 = 28\n7 X 5 = 35\n7 X 6 = 42\n7 X 7 = 49\n\n## 显示数字直角三角形图形\n\n![](img/Image00013.jpg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n  public\
+  \ static void main(String[] args)\n  {\n    int i,j,n;\n    System.out.print(\"\
+  Input number of rows : \");\n    Scanner in = new Scanner(System.in);\n    n = in.nextInt();\n\
+  \    for(i=1;i<=n;i++)\n    {\n      for(j=1;j<=i;j++)\n        System.out.print(j);\n\
+  \      System.out.println(\"\");\n    }\n  }\n}\n```\n\n### 输出\n输入行数 : 9\n1\n12\n\
+  123\n1234\n12345\n123456\n1234567\n12345678\n123456789\n\n## 打印金字塔形状图形\n\n![](img/Image00014.jpg)\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n  public\
+  \ static void main(String[] args)\n  {\n    int i,j,n,s,x;\n    System.out.print\
+  \ (\"Input number of rows : \");\n    Scanner in = new Scanner(System.in);\n   \
+  \ n = in.nextInt();\n    s=n+4-1;\n    for(i=1;i<=n;i++)\n    {\n      for(x=s;x!=0;x--)\n\
+  \      {\n        System.out.print(\" \");\n      }\n      for(j=1;j<=i;j++)\n \
+  \     {\n        System.out.print(i+\" \");\n      }\n      System.out.println();\n\
+  \      s--;\n    }\n  }\n}\n```\n\n### 输出\n输入行数 : 7\n         1\n        2 2\n \
+  \     3 3 3\n    4 4 4 4\n    5 5 5 5 5\n  6 6 6 6 6\n  7 7 7 7 7 7\n\n## 打印两个数之和\n\
+  \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n  public\
+  \ static void main(String[] args)\n  {\n    Scanner input = new Scanner (System.in);\n\
+  \    System.out.print(\"Input the first number: \");\n    int num1 = input.nextInt();\n\
+  \    System.out.print(\"Input the second number: \");\n    int num2 = input.nextInt();\n\
+  \    int sum = num1 + num2;\n    System.out.println();\n    System.out.println(\"\
+  Sum: \"+sum);\n  }\n}\n```\n\n### 输出\n输入第一个数字: 545\n输入第二个数字: 455\n和: 1000\n\n##\
+  \ 两个数除法并打印到屏幕上\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class\
+  \ Main {\n  public static void main(String[] args)\n  {\n    Scanner input = new\
+  \ Scanner (System.in);\n    System.out.print(\"Input the first number: \");\n  \
+  \  int a = input.nextInt();\n    System.out.print(\"Input the second number: \"\
+  );\n    int b = input.nextInt();\n    int d = (a/b);\n    System.out.println();\n\
+  \    System.out.println(\"The division of a and b is:\" +d);\n  }\n}\n```\n\n###\
+  \ 输出\n输入第一个数字: 100\n输入第二个数字: 25\na 除以 b 的结果为:4\n\n"

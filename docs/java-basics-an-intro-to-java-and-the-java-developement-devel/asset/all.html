@@ -1,0 +1,1747 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 472 751" preserveaspectratio="none">
+<image width="472" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000.html"></span></p>
+<div class="calibre1">
+<p><span id="part0000.html_3-86ffdee3c592430da4ae6e0ea333e61b"
+class="calibre3"> </span></p>
+<table class="calibre4" data-cellspacing="2" data-cellpadding="0"
+data-border="1">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="calibre7"><p><span class="calibre9">Java
+Basics</span></p></td>
+</tr>
+<tr class="calibre6">
+<td class="calibre7"><p><span class="calibre3"> </span></p></td>
+</tr>
+<tr class="calibre6">
+<td class="calibre7"><p><span class="calibre10">Java can be written in
+regular text editors, and compile on Command Prompt or Terminal.
+Compilation is made by "javac", for more information please visit
+</span><a
+href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javac.html"
+class="calibre11"><span class="calibre12">Oracle</span></a><span
+class="calibre10">.</span></p>
+<p><br />
+<br />
+<span class="calibre3">For this book, I will also explain Integrated
+Development Environment Eclipse 4.2.</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre15">                                </span><span
+class="calibre9">Common Concept</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">Eclipse is a universal programming platform
+used for creation of Integrated Development Environments (IDE). This
+platform is built on an open source. Although Eclipse can be used as an
+IDE for development programs in C++, C#, and other programming
+languages, - its great popularity is as a Java IDE, and it comes with
+built-in Java support.</span><br />
+<br />
+<span class="calibre3">The term Workbench refers to the desktop
+development environment. Eclipse's Workbench window contains one or more
+perspectives. A perspective defines the initial set and layout of views
+in the Workbench window. Each perspective provides a set of
+functionality aimed at accomplishing a specific type of task or works.
+Perspectives control what appears in certain menus and toolbars.
+Examples of perspectives are Java, Debug, C++, etc.</span><br />
+<br />
+<span class="calibre3">When the Workbench is launched for the first
+time, the first thing you see is a dialog that allows you to select
+where the workspace should be located. The workspace is the directory
+where your work will be stored. After workspace location is chosen, a
+Welcome window is displayed ("Welcome to Eclipse IDE for Java
+Developers"). You can then close the "Welcome" and, if necessary, change
+the workspace. To start Java development, you should choose necessary
+perspective </span><span class="calibre10">(Window | Open Perspective |
+Other... | Java)</span><span class="calibre3">. In most cases, this is
+default perspective.</span><br />
+<br />
+<span class="calibre3">If the workspace was created before, main window
+opens with several views according to chosen perspective. Unnecessary
+windows should close. You can continue to work on previous projects, or
+create a new one.</span></p>
+<p><span class="calibre9">Creating New Project </span></p>
+<p><br />
+<span class="calibre3">To create a new project, choose File | New |
+Project function of a main menu. Choose Java Project (Adapted menu
+provides short invocation: </span><span class="calibre10">File | New |
+Java Project</span><span class="calibre3">). Now press Next button. On
+the next step you must type project name and then press Finish
+button.</span><br />
+<br />
+<span class="calibre3">All Java functions can be implemented in the
+context of classes only. Now you should create a new class with
+</span><span class="calibre10">static main()</span><span
+class="calibre3"> method that is a starting point of your Java program.
+Choose </span><span class="calibre10">File | New | Class</span><span
+class="calibre3"> function to activate Class Wizard. It allows adding a
+new source file, which contains a description of a class. Now you type
+package name and class name. The new class should be public. It must
+contain </span><span class="calibre10">main()</span><span
+class="calibre3"> method.</span><br />
+<br />
+<span class="calibre3">Assume that package called test contains class
+called TestClass. The Class Wizard generates the following
+code:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">package test;</span><br />
+<br />
+<span class="calibre3">public class TestClass {</span><br />
+<br />
+<span class="calibre3">/**</span><br />
+<span class="calibre3">* @param args</span><br />
+<span class="calibre3">*/</span><br />
+<span class="calibre3">public static void main(String[] args)
+{</span><br />
+<span class="calibre3">// TODO Auto-generated method stub</span><br />
+<br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Parameter of this method (String[] args) provides
+access to command line arguments.</span></p>
+<p><span class="calibre10">What I mean is; you want to run the program
+via terminal/cmd, and you want to control your program with flags or
+give input values inline, you have to use command line arguments.
+</span></p>
+<p><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">c:\&gt;myProgram -f arg3 arg4</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre10">As you know, arrays are zero indexed. So, the
+very first argument is </span><span
+class="calibre16">args[0]</span><span class="calibre10"> which is
+</span><span class="calibre16">myProgram</span><span class="calibre10">.
+</span><span class="calibre16">"-f"</span><span class="calibre10"> is
+second argument, and is saved in </span><span
+class="calibre16">args[1]</span><span class="calibre10">, so
+on.</span></p>
+<p><br />
+<br />
+<span class="calibre3">Let's write a program which reads values for
+</span><span class="calibre10">a </span><span class="calibre3">and
+</span><span class="calibre10">b</span><span class="calibre3">, then
+returns </span><span class="calibre10">c</span><span class="calibre3">
+as </span><span class="calibre10">a+b</span><span
+class="calibre3">.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">package test;</span><br />
+<br />
+<span class="calibre3">import java.util.Scanner;</span><br />
+<br />
+<span class="calibre3">public class TestClass {</span><br />
+<br />
+<span class="calibre3">/**</span><br />
+<span class="calibre3">* @param args</span><br />
+<span class="calibre3">*/</span><br />
+<span class="calibre3">public static void main(String[] args)
+{</span><br />
+<span class="calibre3">Scanner scanner = new
+Scanner(System.in);</span><br />
+<span class="calibre3">int a = scanner.nextInt();</span><br />
+<span class="calibre3">int b = scanner.nextInt();</span><br />
+<span class="calibre3">int c = a + b;</span><br />
+<span class="calibre3">System.out.println(c);</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><span class="calibre3"> </span></p>
+<p><br />
+<span class="calibre3">For those who do not know what is </span><span
+class="calibre10">import</span><span class="calibre3">, and </span><span
+class="calibre10">java.util.Scanner</span><span
+class="calibre3">;</span><br />
+<span class="calibre3">In order to read user input for variable
+</span><span class="calibre10">a</span><span class="calibre3">, and
+</span><span class="calibre10">b</span><span class="calibre3">, you have
+to read from console. So, you need some predefined methods from the
+Class (</span><span class="calibre10">java.util.Scanner</span><span
+class="calibre3">). Scanner class takes one argument </span><span
+class="calibre10">(System.in)</span><span class="calibre3">. Since, you
+want to scan inputs on console, you have to define </span><span
+class="calibre10">(System.in)</span><span class="calibre3">.</span></p>
+<p><br />
+<br />
+<span class="calibre3">The result is printed onto standard output device
+(console) using </span><span class="calibre10">println()</span><span
+class="calibre3"> method of out object. This object is a static field of
+System class.</span><br />
+<br />
+<span class="calibre3">As you can see, automatically generated source
+file called TestClass.java is stored in test subfolder. You cannot
+modify names of files and folders manually. Source file can contain the
+only non-nested public class with the same name as file name. The name
+of package is always the same as subfolder name. If you want to modify
+these names, you should use </span><span class="calibre10">Refactor |
+Rename...</span><span class="calibre3"> function.</span><br />
+<br />
+<span class="calibre3">New program should be launched using </span><span
+class="calibre10">Run | Run (Ctrl-F11)</span><span class="calibre3">
+function of main menu, or </span><span class="calibre10">Run as | Java
+Application</span><span class="calibre3"> function of context menu. You
+can also create </span><span class="calibre10">runtime</span><span
+class="calibre3"> configuration using </span><span class="calibre10">Run
+| Run Cofigurations...[i/] function. Choose Java application item and
+then press New. Choose necessary project name and class name and press
+Run button. Special view called Console appears in lower part of Eclipse
+window. Next times you can press [i]"Run project name"</span><span
+class="calibre3"> button (or Ctrl-F11).</span><br />
+<br />
+<span class="calibre3">If the project was previously created on another
+computer, you can copy it to the folder that represents the workspace,
+and then import your project using the import function </span><span
+class="calibre10">(File | Import... General | Existing Project into
+Workspace)</span><span class="calibre3">. Import does not involve
+physical copying project files. </span></p>
+<p><span class="calibre9">Debugging Program</span></p>
+<p><br />
+<span class="calibre3">Debugging is used to find and fix run-time
+errors. Choose </span><span class="calibre10">Window | Open Perspective
+| Debug </span><span class="calibre3">function for debugging. You can
+add breakpoints </span><span class="calibre10">(Run | Toggle Line
+Breakpoint</span><span class="calibre3"> function, or Ctrl-Shift-B) . To
+run the program in debugging mode, use the </span><span
+class="calibre10">Run | Debug F11</span><span class="calibre3"> function
+of main menu. You can also use </span><span class="calibre10">Step Into
+(F5)</span><span class="calibre3"> and </span><span
+class="calibre10">Step Over (F6)</span><span class="calibre3">
+functions. You can obtain values of variables in hints.</span><br />
+<br />
+<span class="calibre3">The </span><span class="calibre10">Run |
+Resume</span><span class="calibre3"> function allows you to resume
+execution. The </span><span class="calibre10">Run |
+Terminate</span><span class="calibre3"> function terminates
+execution.</span></p>
+<p><span class="calibre9">Common Program Structure</span></p>
+<p><br />
+<span class="calibre3">There are no global variables in Java. That
+should avoid name conflicts. Neither are global functions or procedures,
+for that matter. There are only classes with fields (data members) and
+methods (member functions). A program in Java consists of one or more
+class definitions. One of these classes must define a method
+</span><span class="calibre10">main()</span><span class="calibre3">
+method, which is where the program starts running. Code of classes
+definition should be stored in text files with the Java extension. Class
+name (without extension) must match the name of a public class that
+defined in the file. Please keep in mind that capitalized and small
+letters are different.</span><br />
+<br />
+<span class="calibre3">Each class is compiled into its own file
+containing the binary code and Class extension. Unlike C++, this binary
+code is not a set of machine commands of particular processor, but so
+called byte code.</span><br />
+<br />
+<span class="calibre3">Compiled program can be executed on your computer
+only if so-called Java Virtual Machine is installed.</span><span
+class="calibre10"> Java Virtual Machine (JVM)</span><span
+class="calibre3"> is a special program, which provides interpretation of
+byte codes. This approach allows you to create applications that can be
+transferred from one operating environment (operating system, hardware
+platform) to another without additional recompilation. Unlike C++, Java
+does not provide static linking of binary code into an executable file.
+Linking (getting of a byte code from different files with the Class
+extension and interpreting of byte code) is always dynamic.</span></p>
+<p><span class="calibre9">Identifiers, Keywords, Reserved Words, and
+Comments</span></p>
+<p><br />
+<span class="calibre3">Like C + +, Java language is
+case-sensitive.</span><br />
+<br />
+<span class="calibre3">Java source code consists of tokens. Token is a
+sequence of characters that have some meaning. Separators (space, tab,
+new line, etc.) are placed between individual tokens.</span><br />
+<br />
+<span class="calibre3">Tokens are divided into the following
+groups:</span><br />
+<br />
+<span class="calibre3">- keywords (reserved words)</span><br />
+<span class="calibre3">- identifiers</span><br />
+<span class="calibre3">- literals (explicit constants)</span><br />
+<span class="calibre3">- operators.</span><br />
+<br />
+<span class="calibre3">A set of keywords is finite. All keywords are
+reserved. Keywords cannot be used as identifiers. In Java there are also
+reserved words that are not keywords. They generally cannot be used.
+These words are const and goto.</span><br />
+<br />
+<span class="calibre3">Identifiers used for naming variables, functions
+and other software objects. The first character must be a letter or
+underscore character ("_"). Numbers also can be used as nonstarting
+characters. Using an underscore at the beginning of the name is not
+desirable.</span><br />
+<br />
+<span class="calibre3">It is advisable to use meaningful names that
+reflect the nature of the object or function. Do not use spaces inside
+identifiers. So if you need to create identifier with several words,
+these words should be written down together, starting second, third and
+other words with capital letters. For example, you can create a variable
+name:</span><br />
+<br />
+<span class="calibre17">thisIsMyVariable</span><br />
+<br />
+<span class="calibre3">Use English mnemonics for meaningful names. Names
+of classes and interfaces should begin with capital letters, and other
+names - only with lowercase letters. Names of static constants are
+composed of capital letters and an underscore characters, for example
+PI, CONST_VALUE etc.</span><br />
+<br />
+<span class="calibre3">The Java language supports three kinds of
+comments: C++-style (double slashes), C-style (/* */), and doc comments
+(/** */).</span><br />
+<br />
+<span class="calibre3">The JDK javadoc tool uses doc comments when
+preparing automatically generated documentation. The doc comments must
+be formatted according to Javadoc standards. You can add class and
+interface-level Javadoc comments as well as method, constructor and
+field-level comments. Doc comments must be placed before corresponding
+parts of code. Each comment consists of a description followed by one or
+more tags. If desired, you can use HTML formatting in your Javadoc
+comments. There is a special set of Javadoc tags such as @author,
+@param, @return, and so on. The tags allow standard representation of
+documentation concerning classes and methods. For example, the following
+comments before method;</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">/**</span><br />
+<span class="calibre3">* Returns file name with given
+index.&lt;br&gt;</span><br />
+<span class="calibre3">* File names are stored in array of
+strings.</span><br />
+<span class="calibre3">* @param i index</span><br />
+<span class="calibre3">* @return file name.</span><br />
+<span class="calibre3">* */</span><br />
+<span class="calibre3">public String getFileName(int i) {</span><br />
+<span class="calibre3">return names</span><span
+class="calibre10">;</span><br />
+<span class="calibre10">}</span></p>
+<p><br />
+<br />
+<span class="calibre10">produce such fragment of HTML documentation
+file:</span><br />
+<br />
+<span class="calibre16">Method Details</span><br />
+<span class="calibre16">getFileName</span><br />
+<br />
+<span class="calibre10">public String getFileName(int i)</span><br />
+<br />
+<span class="calibre10">Returns file name with given index.</span><br />
+<span class="calibre10">File names are stored in array of
+strings.</span><br />
+<br />
+<span class="calibre16">Parameters:</span><br />
+<span class="calibre10">i - index</span><br />
+<span class="calibre16">Returns:</span><br />
+<span class="calibre10">file name. </span><br />
+<span class="calibre10"> </span></p>
+<p><span class="calibre16">Definition of Local Variables, and Primitive
+Types</span></p>
+<p><br />
+<span class="calibre10">Java supports local variables, declared within
+method definitions. These local variables behave just like local
+variables in C++. Here are examples of local variables definition.
+</span><br />
+<br />
+<span class="calibre10">CODE : </span></p>
+<p><br />
+<span class="calibre10">int i = 11;</span><br />
+<span class="calibre10">double d= 0, x;</span><br />
+<span class="calibre10">float f; </span><br />
+<span class="calibre10">int j, k;</span></p>
+<p><br />
+<br />
+<span class="calibre10">You can define and initialize local variables
+anywhere in a function body or other block of code. You cannot use the
+same variable names in outer and inner blocks:</span><br />
+<br />
+<span class="calibre10">CODE : </span></p>
+<p><br />
+<span class="calibre10">{</span><br />
+<span class="calibre10">int i = 0;</span><br />
+<span class="calibre10">{</span><br />
+<span class="calibre10">int j = 1; // OK. j is local variable defined in
+inner block </span><br />
+<span class="calibre10">int i = 2; // Error! A variable i is defined in
+outer block</span><br />
+<span class="calibre10">}</span><br />
+<span class="calibre10">}</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre16">[i]You cannot declare variables without
+definition! </span></p>
+<p><br />
+<br />
+<span class="calibre3">The final keyword can be applied to variables.
+Such variables cannot be modified.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">final int h = 0;</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre16">The const keyword is a reserved word in Java.
+This word cannot be used in anyway.</span></p>
+<p><br />
+<br />
+<span class="calibre3">Primitive, or basic, data types are classified as
+integer (for whole numbers), floating-point (for decimal numbers),
+character (for Unicode characters), or Boolean (specifying true /
+false). The definition of local variables of primitive types looks like
+one in C++ programming language. Here is primitive data
+types;</span></p>
+<p><span class="calibre16">Integers</span></p>
+<p><br />
+<span class="calibre17">byte</span><span class="calibre3"> :
+</span><span class="calibre10">Byte-length integer</span><span
+class="calibre3"> : 8-bit</span><br />
+<span class="calibre17">short</span><span class="calibre3"> :
+</span><span class="calibre10">Short integer</span><span
+class="calibre3"> : 16-bit</span><br />
+<span class="calibre17">int</span><span class="calibre3"> : </span><span
+class="calibre10">Integer</span><span class="calibre3"> :
+32-bit</span><br />
+<span class="calibre17">long</span><span class="calibre3"> :
+</span><span class="calibre10">Long integer</span><span
+class="calibre3"> : 64-bit</span></p>
+<p><span class="calibre16">Real Numbers</span></p>
+<p><br />
+<span class="calibre17">float</span><span class="calibre3"> :
+</span><span class="calibre10">Single-precision floating
+point</span><span class="calibre3"> : 32-bit</span><br />
+<span class="calibre17">double</span><span class="calibre3"> :
+</span><span class="calibre10">Double-precision floating
+point</span><span class="calibre3"> : 64-bit</span></p>
+<p><span class="calibre16">Others</span></p>
+<p><br />
+<span class="calibre17">char</span><span class="calibre3"> :
+</span><span class="calibre10">A single Unicode character</span><span
+class="calibre3"> : 16-bit</span><br />
+<span class="calibre17">boolean</span><span class="calibre3"> :
+</span><span class="calibre10">A Boolean value (true or
+false)</span><br />
+<br />
+<br />
+<br />
+<span class="calibre3">In some languages (for instance, C and C++), the
+format and size of primitive data types may depend on the platform on
+which a program runs. In contrast, the Java programming language
+specifies the size and format of its primitive data types for all
+platforms.</span><br />
+<br />
+<span class="calibre3">Integer constants are represented by a sequence
+of decimal digits. The default type of such constants is int. It can be
+adjusted by adding letter L or l (long type) at the end of the constant.
+Integer constants can be represented in octal notation, in this case the
+first digit should be zero (0), and the number can only contain digits 0
+... 7. Integer constants can also be represented in hexadecimal number
+system, in this case constant starts with 0x (or 0X) characters. To
+represent digits between 10 and 15, letters a, b, c, d, e and f (large
+or small) are used. For example:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int octal = 023; // 19</span><br />
+<span class="calibre3">int hex = 0xEF; // 239 </span></p>
+<p><br />
+<br />
+<span class="calibre3">A literal character value is any single Unicode
+character between single quote marks. You can use whether symbols of the
+current character set, or integer constant, which precedes the backslash
+character. It is a set of special control characters (these double
+characters are called escape sequences):</span><br />
+<br />
+<span class="calibre3">'\n' - a new line,</span><br />
+<span class="calibre3">'\t' - horizontal tab,</span><br />
+<span class="calibre3">'\r' - jump at the beginning of line,
+</span><br />
+<span class="calibre3">'\'' - single quote,</span><br />
+<span class="calibre3">'\"' - double quote,</span><br />
+<span class="calibre3">'\\' - backslash character itself.</span><br />
+<br />
+<span class="calibre3">Constants of real types can be written whether
+with decimal point or in scientific notation and are </span><span
+class="calibre17">double</span><span class="calibre3"> by default. If
+necessary, type of constant can be specified by adding suffix
+</span><span class="calibre17">f</span><span class="calibre3"> or
+</span><span class="calibre17">F</span><span class="calibre3"> for type
+</span><span class="calibre17">float</span><span class="calibre3">,
+</span><span class="calibre17">d</span><span class="calibre3"> or
+</span><span class="calibre17">D</span><span class="calibre3"> for type
+double. For example:</span><br />
+<br />
+<span class="calibre3">1.5f // 1.5 (float)</span><br />
+<span class="calibre3">2.4E-2d // 0.25 (double)</span><br />
+<br />
+<span class="calibre3">You cannot assign floating point values to
+integer variables. A narrowing conversion - converting from a larger
+type (for instance, </span><span class="calibre17">double</span><span
+class="calibre3">) to a smaller type (for instance, </span><span
+class="calibre17">float</span><span class="calibre3">) - risks data. A
+narrowing conversion requires a special operation called a cast. For
+example:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int i = 10;</span><br />
+<span class="calibre3">float f = i; // Permissible
+conversion</span><br />
+<span class="calibre3">long l = f; // Error! Narrowing
+conversion</span><br />
+<span class="calibre3">long l1 = (long) f; // Type cast</span></p>
+<p><br />
+<br />
+<span class="calibre3">Numeric literals without decimal point are
+constants of type int. Numeric literals with decimal point are constants
+of type </span><span class="calibre17">double</span><span
+class="calibre3">. To assign them to smaller types, you must use type
+cast: </span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">float f = 10.5; // Error! Narrowing
+conversion</span><br />
+<span class="calibre3">float f1 = (float) 10.5; // Type cast</span></p>
+<p><br />
+<br />
+<span class="calibre3">You can specify a long integer by putting an 'L'
+or 'l' after the number. 'L' is preferred as it cannot be confused with
+the digit '1'. </span></p>
+<p><span class="calibre17">The Java programming language has no unsigned
+data types.</span><br />
+<span class="calibre10">What is an unsigned data type? Unsigned data
+type works like "</span><span class="calibre16">unsigned int variable
+</span><span class="calibre10">", and this variables cannot contain any
+negative number.</span></p>
+<p><br />
+<br />
+<span class="calibre3">The two Boolean literals are simply </span><span
+class="calibre17">true</span><span class="calibre3"> and </span><span
+class="calibre17">false</span><span class="calibre3">. There is no
+conversion between the Boolean type and other types (specifically int).
+You cannot apply explicit typecasting for obtaining </span><span
+class="calibre17">int</span><span class="calibre3"> from </span><span
+class="calibre17">Boolean</span><span class="calibre3"> and vice
+versa.</span><br />
+<br />
+<span class="calibre3">The string constant is a series of characters
+enclosed in quotation marks. For example:</span><br />
+<br />
+<span class="calibre3">"This is a string"</span><br />
+<br />
+<span class="calibre3">Adding strings to variables of other types
+provides conversion of values into their string representation. In
+particular, this approach is used to output values of several variables.
+For example:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int k = 1;</span><br />
+<span class="calibre3">double d = 2.5;</span><br />
+<span class="calibre3">System.out.println(k + " " + d); // 1
+2.5</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre17">Expressions and Operations</span></p>
+<p><br />
+<span class="calibre3">Java class includes </span><span
+class="calibre17">fields (data)</span><span class="calibre3"> and
+</span><span class="calibre17">methods (functions)</span><span
+class="calibre3">. Methods may contain statements, which in turn are
+composed of expressions. Expression consists of one or more
+operations.</span><br />
+<br />
+<span class="calibre3">Java supports almost all of the standard numeric,
+logical and comparison C++ operators. These standard operators have the
+same precedence and associativity in Java as they do in C++. Java
+supports the comma operator only in loop headings.</span><br />
+<br />
+<span class="calibre3">Java provides additional unsigned shift operator
+(&gt;&gt;&gt;).</span><br />
+<br />
+<span class="calibre3">Since Java does not allow you to manipulate
+pointers directly, it does not support the reference and dereference
+operators *, -&gt;, and &amp; (address of).</span><br />
+<br />
+<span class="calibre3">There is no </span><span
+class="calibre17">sizeof()</span><span class="calibre3"> operator in
+Java. In C++, the sizeof() operator tells you the number of bytes
+allocated for data items. Java does not need a sizeof( ) operator for
+this purpose because all the data types are the same size on all
+machines. </span></p>
+<p><span class="calibre17">Statements, Control over Program
+Execution</span></p>
+<p><br />
+<span class="calibre3">Statements are the smallest separate parts of the
+programming language. A program is a sequence of statements. Most of
+Java statements are similar to ones in C++.</span><br />
+<span class="calibre3">Empty statement consists of one
+semicolon.</span><br />
+<span class="calibre3">Expression statement is an expression that ends
+with a semicolon. For examples are as follows:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">k = i + j + 1; // assignment</span><br />
+<span class="calibre3">Arrays.sort(a); // invocation of
+function</span><br />
+<span class="calibre3">return; // termination of current function
+execution</span></p>
+<p><br />
+<br />
+<span class="calibre3">Compound statement is a sequence of statements
+enclosed in braces. Compound statement is often referred to as block.
+Compound statement does not contain semicolon after closing brace.
+Syntactically block can be considered as a separate statement, but it
+also defines scope of visibility. Identifier declared inside the block,
+has a scope from the point of definition to the closing brace. Blocks
+can be nested in each other.</span><br />
+<br />
+<span class="calibre3">Selection statement is whether conventional
+statement or switch statement. Conditional statement is used in two
+forms:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">if (condition_expression)</span><br />
+<span class="calibre3">statement1</span><br />
+<span class="calibre3">else</span><br />
+<span class="calibre3">statement2</span><br />
+<span class="calibre3">//or</span><br />
+<span class="calibre3">if (condition_expression)</span><br />
+<span class="calibre3">statement1</span></p>
+<p><br />
+<br />
+<span class="calibre3">If condition_expression is true then statement1
+is executed, otherwise flow of control jumps to statement2 (in first
+form), or to the next statement (in second form). Unlike C + +,
+expression-condition can only be of type Boolean</span><br />
+<br />
+<span class="calibre3">Syntax of </span><span
+class="calibre17">switch</span><span class="calibre3"> statement is the
+same as one in C++. In addition, Java 7 allows usage of string
+expressions in </span><span class="calibre17">switch()</span><span
+class="calibre3"> header and string constants in case
+labels:</span><br />
+<br />
+<span class="calibre3">The </span><span
+class="calibre17">break</span><span class="calibre3"> and </span><span
+class="calibre17">continue</span><span class="calibre3"> statements,
+used alone, behave the same in Java as they do in C++. However, in Java,
+they may optionally be followed by a label that specifies an enclosing
+loop. The labeled forms of these statements allow you to "break" and
+"continue" any specified loop within a method definition, not only the
+nearest enclosing loop. For example: </span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int a;</span><br />
+<span class="calibre3">. . .</span><br />
+<span class="calibre3">double b = 0;</span><br />
+<span class="calibre3">label:</span><br />
+<span class="calibre3">for (int i = 0; i &lt; 10; i++) {</span><br />
+<span class="calibre3">for (int j = 0; j &lt; 10; j++) {</span><br />
+<span class="calibre3">if (i + j + a == 0) {</span><br />
+<span class="calibre3">break label;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">b += 1 / (i + j + a);</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">The </span><span
+class="calibre17">goto</span><span class="calibre3"> statement is not
+currently part of the Java language, but goto is a reserved word in
+Java. This word cannot be used in any way.</span><br />
+<br />
+<span class="calibre3">There is no </span><span
+class="calibre17">typedef</span><span class="calibre3"> operator in
+Java. Java does not support C++ </span><span
+class="calibre17">struct</span><span class="calibre3"> and </span><span
+class="calibre17">union</span><span class="calibre3"> types.</span></p>
+<p><span class="calibre9">Packages and Functions</span></p>
+<p><br />
+<span class="calibre3">Java code does not require header files. All code
+is written inline. To avoid naming conflicts a mechanism of packages is
+used. In the Java language, packages are used to group
+classes.</span><br />
+<br />
+<span class="calibre3">A package is a collection of related classes and
+interfaces providing access protection and namespace
+management.</span><br />
+<br />
+<span class="calibre3">In the Java language, every class must be placed
+into a package. If the source code for a class doesn't have a package
+statement at the top, declaring the package the class is in, then the
+class is in the default package.</span><br />
+<br />
+<span class="calibre3">Physically each package is essential a folder
+with the same name as package. Subpackages are reflected to
+subfolders.</span><br />
+<br />
+<span class="calibre3">The first line of most Java programs is so called
+package statement. Only blank lines and comments can precede package
+statement.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">package package_name;</span></p>
+<p><br />
+<br />
+<span class="calibre3">The package statement specifies which package the
+code in the file is part of. Java code that is part of a particular
+package has access to all classes (public and non-public) in the
+package, and all non-private methods and fields in all those classes. If
+the package statement is omitted from a file, the code in that file is
+part of an unnamed default package.</span><br />
+<br />
+<span class="calibre3">Java does not allow creation of global functions.
+Instead of this, you can create so called static methods within classes.
+In simplest case, definition of a static method can be as
+follows:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">static result_type
+function_name(list_of_formal_parameters) body</span></p>
+<p><br />
+<br />
+<span class="calibre3">Parameters (arguments) of function defined in
+brackets are called formal parameters. Parameters, which are used by
+invocation of a function, are called actual parameters. Storage for
+formal parameters is allocated by invocation of a function. Appropriate
+cells are created in the program stack. Values of actual parameters are
+copied into these cells.</span><br />
+<br />
+<span class="calibre3">Function's body is a block (compound statement).
+In the following example, function returns sum of two
+arguments:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">static int sum(int a, int b)</span><br />
+<span class="calibre3">{</span><br />
+<span class="calibre3">int c = a + b;</span><br />
+<span class="calibre3">return c;</span><br />
+<span class="calibre3">} </span></p>
+<p><br />
+<br />
+<span class="calibre3">We can omit c variable:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">static int sum(int a, int b)</span><br />
+<span class="calibre3">{</span><br />
+<span class="calibre3">return a + b;</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">To invoke function from another block, you should
+use its name followed by actual arguments (constants, variables, or
+expressions of appropriate types):</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int x = 4;</span><br />
+<span class="calibre3">int y = 5;</span><br />
+<span class="calibre3">int z = sum(a, b);</span><br />
+<span class="calibre3">int t = sum(1, 3);</span></p>
+<p><br />
+<br />
+<span class="calibre3">It can be no parameters in argument
+list:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int zero()</span><br />
+<span class="calibre3">{</span><br />
+<span class="calibre3">return 0;</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">The call of such function also requires empty
+brackets:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">System.out.println(zero());</span></p>
+<p><br />
+<br />
+<span class="calibre3">The return statement within function body causes
+termination of funcntion's execution. The expression after return
+keyword defines a value, which will be return from this
+function.</span><br />
+<br />
+<span class="calibre3">Sometimes, function returns no value. To declare
+such function, void keyword is used as resulting type.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">void hello()</span><br />
+<span class="calibre3">{</span><br />
+<span class="calibre3">System.out.println("Hello!");</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">In this case, you can omit return keyword in
+function's body. The return statement (without succeeding expression)
+allows termination of function before end of body. Function with void
+type can be called using separate statement only:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">hello();</span></p>
+<p><br />
+<br />
+<span class="calibre3">Arguments can be transferred to functions by
+value only. Values of actual parameters cannot be changed within
+function's body:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">static void f(int k)</span><br />
+<span class="calibre3">{</span><br />
+<span class="calibre3">k++; // k = 2;</span><br />
+<span class="calibre3">}</span><br />
+<br />
+<span class="calibre3">public static void main(String[] args)
+{</span><br />
+<span class="calibre3">int k = 1;</span><br />
+<span class="calibre3">f(k);</span><br />
+<span class="calibre3">System.out.println(k); // k = 1;</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Within a single class, you can create several
+functions with the same names. Such functions must have different
+argument lists (count and / or types of arguments). Such approach is
+called function overloading. If names and argument lists are the same,
+compiler produces compile error.</span><br />
+<br />
+<span class="calibre3">Function overloading is used when you want to
+apply analogous operations to different types using different
+algorithms:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">static int max(int a, int b) { } // Finding of
+maximum of two integers</span><br />
+<span class="calibre3">static int max(double x, double y, double z) { }
+// Finding of maximum of three floating point values</span></p>
+<p><br />
+<br />
+<span class="calibre3">In contrast to Java, you cannot create functions
+with default arguments.</span><br />
+<br />
+<span class="calibre3">Static functions within class can be invoked
+using function's name and list of actual parameters. To invoke static
+functions from another class, you should use the following
+syntax;</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span
+class="calibre3">class_name.function_name(actual_parameters);</span></p>
+<p><br />
+<br />
+<span class="calibre3">In this way, you can only use methods of current
+package or java.lang standard package. This package provides classes
+with very useful functions. For instance, Math class provides numerical
+methods.</span><br />
+<br />
+<span class="calibre17">double</span><span class="calibre3">
+pow(</span><span class="calibre17">double</span><span
+class="calibre3">a,</span><span class="calibre17">double</span><span
+class="calibre3">b) : Calculation of a^b </span><br />
+<span class="calibre17">double</span><span class="calibre3">
+sqrt(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of square root </span><br />
+<span class="calibre17">double</span><span class="calibre3">
+sin(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of sine</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+cos(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of cosine</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+tan(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of tangent</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+asin(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of arc sine</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+acos(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of arc cosine</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+atan(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of arc tangent</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+exp(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of e^x</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+log(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Calculation of natural logarithm (base
+e)</span><br />
+<span class="calibre17">double</span><span class="calibre3">
+abs(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Obtaining of the absolute value</span><br />
+<span class="calibre17">int</span><span class="calibre3">
+abs(</span><span class="calibre17">int</span><span class="calibre3">a) :
+Obtaining of the absolute value</span><br />
+<span class="calibre17">long</span><span class="calibre3">
+round(</span><span class="calibre17">double</span><span
+class="calibre3">a) : Obtaining of the closest integer
+value</span><br />
+<br />
+<span class="calibre17">Usage : </span><br />
+<br />
+<br />
+<span class="calibre10">Math.pow(x,y);</span><br />
+<span class="calibre10">Math.sin(x);</span><br />
+<br />
+<br />
+<span class="calibre3">If you want to access classes, which are defined
+in other packages (not in java.lang), you should use special prefix:
+package_name.class_name. If you want to access classes of nested
+packages, prefix will be more complex. To avoid use of full names,
+import directive is used. The import directive should be placed at the
+top of source file (or directly after package statement).</span><br />
+<br />
+<span class="calibre3">To import a class or an interface that's in a
+different package, you have three choices:</span><br />
+<br />
+<span class="calibre3">- Import the class or the interface (using import
+keyword).</span><br />
+<span class="calibre3">- Import the entire package of which the class or
+the interface is a member (using import keyword).</span><br />
+<span class="calibre3">- Static import</span><br />
+<br />
+<span class="calibre3">The following example demonstrates two of these
+choices.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">import java.io.FileReader; // Import of the class
+or the interface</span><br />
+<span class="calibre3">import java.util.*; // Import of the entire
+package</span><br />
+<br />
+<span class="calibre3">public class TestClass {</span><br />
+<span class="calibre3">public static void main(String[] args)
+{</span><br />
+<span class="calibre3">java.io.FileWriter fw; // Fully qualified
+name</span><br />
+<span class="calibre3">FileReader fr; // Direct access to the imported
+name;</span><br />
+<span class="calibre3">ArrayList al; // ArrayList is a part of in
+java.util package</span><br />
+<span class="calibre3">. . .</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">You never need an import java.lang.* statement to
+use the compiled classes in that package. This package is always
+imported automatically.</span><br />
+<br />
+<span class="calibre3">A new additional form of import that was added in
+Java 5 version, allows import of static element of a given class. Most
+programs that need numerical functions of Math class contain the
+following statement:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">import static java.lang.Math.*;</span></p>
+<p><br />
+<br />
+<span class="calibre3">Now you can invoke static methods of Math class
+without extra qualifiers:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">double d = sin(1); </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre17">Use of Command Line Arguments and Console
+Input</span></p>
+<p><br />
+<span class="calibre3">You can easy read command line arguments in Java
+program. For example, the following program shows value of the first
+command line argument on the screen:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">public static void main(String[] args)
+{</span><br />
+<span class="calibre3">System.out.println(args[0]);</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Command line arguments within main() function can
+be accessed in the form of array of strings (arrays and strings will be
+explained later). To access particular array elements, [] is used. To
+obtain numeric value, represented by string, static functions of Integer
+and Double classes are used. In the following example, program reads
+integer and real values from the command line and finds their
+sum.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">Public class TestArgs {</span><br />
+<br />
+<span class="calibre3">public static void main(String[] args)
+{</span><br />
+<span class="calibre3">int n = Integer.parseInt(args[0]);</span><br />
+<span class="calibre3">double x =
+Double.parseDouble(args[1]);</span><br />
+<span class="calibre3">double y = n + x;</span><br />
+<span class="calibre3">System.out.println(y);</span><br />
+<span class="calibre3">}</span><br />
+<br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Count of arguments typed in command line can be
+determined using args.length expression.</span><br />
+<br />
+<span class="calibre3">To set command line arguments in eclipse
+environment, </span><span class="calibre17">Arguments</span><span
+class="calibre3"> tab of </span><span
+class="calibre17">"Run"</span><span class="calibre3"> window is used.
+Necessary arguments should be typed in "Program arguments:" text area.
+String type arguments that contain several words should be
+quoted.</span></p>
+<p><span class="calibre17">Console Input and Output</span></p>
+<p><br />
+<span class="calibre3">You can use Scanner class of java.util package
+for data input from the keyboard at runtime. For keyboard input at
+runtime you can use Scanner class of java.util package. First, we need
+to create an object of this class by </span><span
+class="calibre17">new</span><span class="calibre3">
+operation.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">Scanner s = new Scanner(System.in);</span></p>
+<p><br />
+<br />
+<span class="calibre3">Now this object can be used for reading data of
+different types. For example, </span><span
+class="calibre17">next()</span><span class="calibre3"> function returns
+the next read value of String type, </span><span
+class="calibre17">nextInt()</span><span class="calibre3"> allows to
+obtain an </span><span class="calibre17">integer</span><span
+class="calibre3">, </span><span
+class="calibre17">nextDouble()</span><span class="calibre3"> reads and
+returns the number of </span><span class="calibre17">double</span><span
+class="calibre3"> type. There are also functions </span><span
+class="calibre17">nextBoolean()</span><span class="calibre3">,
+</span><span class="calibre17">nextByte()</span><span class="calibre3">,
+</span><span class="calibre17">nextShort()</span><span
+class="calibre3">, </span><span class="calibre17">nextLong()</span><span
+class="calibre3">, </span><span
+class="calibre17">nextFloat()</span><span class="calibre3"> etc.. All
+these functions cause termination of the program that resumes after
+reading corresponding value from the keyboard. For example:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">Scanner s = new Scanner(System.in);</span><br />
+<span class="calibre3">double d = s.nextDouble();</span><br />
+<span class="calibre3">int i = s.nextInt();</span><br />
+<span class="calibre3">float f = s.nextFloat();</span></p>
+<p><br />
+<br />
+<span class="calibre3">Output onto console window is based on using
+functions of out object declared within System class. The print()
+function can print results without jump to a new line, println()
+function moves cursor to a new line after output. You can also use the
+printf() for formatted output. Using this function is similar to use of
+one in C language. </span><br />
+<br />
+<span class="calibre3">The following sample program reads real and
+integer numbers, and displays their sum:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">import java.util.Scanner;</span><br />
+<br />
+<span class="calibre3">public class Average {</span><br />
+<br />
+<span class="calibre3">public static void main(String[] args)
+{</span><br />
+<span class="calibre3">Scanner s = new Scanner(System.in);</span><br />
+<span class="calibre3">int i = s.nextInt();</span><br />
+<span class="calibre3">double d = s.nextDouble();</span><br />
+<span class="calibre3">double sum = i + d;</span><br />
+<span class="calibre3">System.out.println("Sum: " + sum);</span><br />
+<span class="calibre3">}</span><br />
+<br />
+<span class="calibre3">}</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre17">References</span></p>
+<p><br />
+<span class="calibre3">There is no pointer type in Java. The names of
+variables of non-primitive types are essentially names of references to
+corresponding objects. These non-primitive types are often called
+reference types because they are handled by reference. By comparison,
+primitive types are handled by value. Dereference * and -&gt; operators
+do not exist in Java: primitive types are always passed by value; arrays
+and objects are always passed by reference. A reference type can never
+be cast to a primitive type or vice versa. Java does not allow you to do
+pointer arithmetic.</span><br />
+<br />
+<span class="calibre3">A special keyword </span><span
+class="calibre17">null</span><span class="calibre3"> is used as a
+reference to nothing. This indicates "an absence of reference". The null
+value may be assigned to any variable of reference type.</span><br />
+<br />
+<span class="calibre3">You can create objects in dynamic store using new
+operator:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">SomeType st = new SomeType();</span></p>
+<p><br />
+<br />
+<span class="calibre3">Because reference types are not passed by value,
+assigning one object to another in Java does not copy the value of the
+object. It merely assigns a reference to the object.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">SomeType a = new SomeType();</span><br />
+<span class="calibre3">SomeType b = new SomeType();</span><br />
+<span class="calibre3">a = b;</span></p>
+<p><br />
+<br />
+<span class="calibre3">After these lines are executed, the variable a
+contains a reference to the object that b refers to. The object that a
+used to refer to is lost.</span><br />
+<br />
+<span class="calibre3">You don't need to deallocate objects. There is no
+</span><span class="calibre17">delete</span><span class="calibre3">
+operator in Java. A special mechanism called </span><span
+class="calibre17">garbage collection</span><span class="calibre3"> is
+used for object's deallocation. The garbage collection is based of
+reference counting. This means that each object contains a reference
+counter, and every time a reference is attached to an object the
+reference count is increased. Every time a reference goes out of scope
+or is set to </span><span class="calibre17">null</span><span
+class="calibre3">, the reference count is decreased. The garbage
+collector moves through the entire list of objects and when it finds one
+with a reference count of zero it releases that storage. </span></p>
+<p><span class="calibre17">Arrays</span></p>
+<p><br />
+<span class="calibre3">Java arrays are zero indexed; that is, the array
+indexes start at zero. When declaring an array, the square brackets ([])
+must come after the type, not the identifier. Placing the brackets after
+the identifier is legal but is not recommended in Java.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] a;</span></p>
+<p><br />
+<br />
+<span class="calibre3">In this example, a is a reference to an array
+that can be created later. The size of the array is not part of its type
+as it is in the C++ language. This allows you to declare an array and
+assign any array of appropriate objects to it, regardless of the array's
+length.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] numbers; // declare a reference to an int
+array of any size</span><br />
+<span class="calibre3">numbers = new int[10]; // numbers is a 10-element
+array</span><br />
+<span class="calibre3">numbers = new int[20]; // now it's a 20-element
+array</span></p>
+<p><br />
+<br />
+<span class="calibre3">Java supports single-dimensional arrays and
+multidimensional arrays (array-of-arrays). The following examples show
+how to declare different kinds of references to arrays:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] numbers; // single-dimensional
+array</span><br />
+<span class="calibre3">byte[][] scores; // two-dimensional
+array</span></p>
+<p><br />
+<br />
+<span class="calibre3">Declaring references does not actually create the
+arrays. In Java, arrays are objects and must be instantiated. The
+following examples show how to create arrays:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] numbers = new int[5]; // single-dimensional
+array</span><br />
+<span class="calibre3">String[][] names = new String[5][4]; //
+rectangular array</span><br />
+<span class="calibre3">byte[][] scores = new byte[5][]; // jagged
+array</span><br />
+<span class="calibre3">for (int x = 0; x &lt; 5; x++) {</span><br />
+<span class="calibre3">scores[x] = new byte[x + 4];</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">The last example shows how to create
+two-dimensional array with different lengths of lines. The size of an
+array can be defined using integer constants and variables as well as
+expressions with integer result.</span><br />
+<br />
+<span class="calibre3">In Java, arrays hold elements as well as their
+count. The count of elements can be obtained using special read only
+field called '</span><span class="calibre17">length</span><span
+class="calibre3">':</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] a = new int[10];</span><br />
+<span class="calibre3">System.out.println(a.length); // 10</span></p>
+<p><br />
+<br />
+<span class="calibre3">The typical array traversal is as
+follows:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">for (int i = 0; i &lt; a.length; i++)
+{</span><br />
+<span class="calibre3">a[i] = 0;</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Java provides simple way to initialize arrays at
+declaration time by enclosing the initial values in curly braces ({}).
+Array members are automatically initialized to the default initial value
+for the array type if the array is not initialized at the time it is
+declared.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] numbers = new int[] {1, 2, 3, 4,
+5};</span><br />
+<span class="calibre3">String[] names = new String[] {"Matt", "Joanne",
+"Robert"};</span></p>
+<p><br />
+<br />
+<span class="calibre3">You can omit the new statement if an initializer
+is provided, like this:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] numbers = {1, 2, 3, 4, 5};</span><br />
+<span class="calibre3">String[] names = {"Matt", "Joanne",
+"Robert"};</span></p>
+<p><br />
+<br />
+<span class="calibre3">Multidimensional arrays can be initialized in a
+similar manner:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[][] b = {{1, 2, 3},</span><br />
+<span class="calibre3">{0, 0, 1},</span><br />
+<span class="calibre3">{1, 1, 11},</span><br />
+<span class="calibre3">{0, 0, 0}};</span></p>
+<p><br />
+<br />
+<span class="calibre3">In this example, two-dimensional array contains
+four rows and three columns.</span><br />
+<br />
+<span class="calibre3">New form of for loop simplifies full array
+traversal. For instance, instead of </span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] nums = {1, 2, 3, 4, 5, 6};</span><br />
+<span class="calibre3">for (int i = 0; i &lt; nums.length; i++)
+</span><br />
+<span class="calibre3">System.out.println(nums[i]);</span></p>
+<p><br />
+<br />
+<span class="calibre3">you can write</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int[] nums = {1, 2, 3, 4, 5, 6};</span><br />
+<span class="calibre3">for(int n : nums)</span><br />
+<span class="calibre3">System.out.println(n); </span></p>
+<p><br />
+<br />
+<span class="calibre3">A new form can be applied for reading elements
+only (not for modification).</span><br />
+<br />
+<span class="calibre3">The assignment of one array to another is
+essentially copying of a reference. If you wont to assign all elements
+of array a to elements of array b, you must create a cycle. Class System
+offers you a simplest way of copying one array into another: an
+</span><span class="calibre17">arraycopy()</span><span class="calibre3">
+function:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">System.arraycopy(a, a_from, b, b_from,
+size);</span></p>
+<p><br />
+<br />
+<span class="calibre3">This is equivalent to the following
+loop:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">for (int i = a_from, j = b_from; i &lt; size +
+a_from; i++, j++) {</span><br />
+<span class="calibre3">b[j] = a[i];</span><br />
+<span class="calibre3">} </span></p>
+<p><br />
+<br />
+<span class="calibre3">You can copy entire array a into b using such
+function call:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">System.arraycopy(a, 0, b, 0,
+a.length);</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre17">Definition of Classes</span></p>
+<p><br />
+<span class="calibre3">Class is a structured data type that contains
+data members of different types, as well as functions for processing
+these data. Class definition contains of specifiers (e. g. </span><span
+class="calibre17">public</span><span class="calibre3">, </span><span
+class="calibre17">final</span><span class="calibre3">), class name, base
+class name, list of implemented interfaces, and class body enclosed in
+braces.</span><br />
+<br />
+<span class="calibre3">The class body contains declarations for the
+fields (data members in C++) and methods (member functions in C++).
+Variables and methods collectively are called members. Declaration of
+Java classes looks a lot like ones in C++. Here is an example of a
+simple class:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">class Rectangle {</span><br />
+<span class="calibre3">double width;</span><br />
+<span class="calibre3">double height;</span><br />
+<span class="calibre3">double area() {</span><br />
+<span class="calibre3">return width * height;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Note that you don't need to put in a semicolon
+after closing brace. Methods always go inside the class definition in
+Java, not outside with the :: operator as programmers usually do in
+C++.</span><br />
+<br />
+<span class="calibre3">Java initializes all fields with default values.
+In contrast to C++, Java allows fields' initialization on the
+spots:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">class Rectangle {</span><br />
+<span class="calibre3">double width = 10;</span><br />
+<span class="calibre3">double height = 20;</span><br />
+<span class="calibre3">double area() {</span><br />
+<span class="calibre3">return width * height;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">You can create initialization block inside of
+class body:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">class Rectangle {</span><br />
+<span class="calibre3">double width;</span><br />
+<span class="calibre3">double height;</span><br />
+<span class="calibre3">{</span><br />
+<span class="calibre3">width = 10;</span><br />
+<span class="calibre3">height = 20;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">double area() {</span><br />
+<span class="calibre3">return width * height;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Methods and fields can be declared with static
+keyword. A static method can be invoked without an instance of the
+class. Static fields can be accessed using class name. A static field is
+a kind of global variable declared in class scope. You don't need to
+define static members in global scope. You can initialize static fields
+on the spots:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">class SomeClass {</span><br />
+<span class="calibre3">static double x = 10;</span><br />
+<span class="calibre3">static int i = 20;</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">You can create initialization block for static
+fields:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">class SomeClass {</span><br />
+<span class="calibre3">static double x;</span><br />
+<span class="calibre3">static int i;</span><br />
+<span class="calibre3">static {</span><br />
+<span class="calibre3">x = 10;</span><br />
+<span class="calibre3">i = 20;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">In contrast to non-static initialization,
+creation of static fields occurs by the first use of a class. Java does
+not create static members for idle classes.</span><br />
+<br />
+<span class="calibre3">You can access static member using both class
+name and object name:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">SomeClass.x = 30;</span><br />
+<span class="calibre3">SomeClass s = new SomeClass();</span><br />
+<span class="calibre3">s.x = 40;</span></p>
+<p><br />
+<br />
+<span class="calibre3">In Java methods, arguments are passed by
+value.</span><br />
+<br />
+<span class="calibre3">The </span><span
+class="calibre17">this</span><span class="calibre3"> keyword refers to
+the current instance for which a method is called. All non-static
+methods implicitly obtain </span><span
+class="calibre17">this</span><span class="calibre3"> reference. You can
+explicitly use this reference if you want to return reference to current
+object or need to prevent name conflicts. Static member functions do not
+have a </span><span class="calibre17">this</span><span class="calibre3">
+reference.</span></p>
+<p><span class="calibre17">Visibility</span></p>
+<p><br />
+<span class="calibre3">Like C++, Java supports private, protected, and
+public visibility levels. Class itself can be specified as public. In
+contrast to C++, Java requires separate definition of visibility for any
+member:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">public class SomeClass {</span><br />
+<span class="calibre3">private int i;</span><br />
+<span class="calibre3">private double x;</span><br />
+<span class="calibre3">public void setI(int value) {</span><br />
+<span class="calibre3">i = value;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">public int getI() {</span><br />
+<span class="calibre3">return i;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">public void setX(double value) {</span><br />
+<span class="calibre3">x = value;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">public int getI() {</span><br />
+<span class="calibre3">return i;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">Access to </span><span
+class="calibre17">private</span><span class="calibre3"> class members is
+restricted to methods within the class. There is no </span><span
+class="calibre17">friend</span><span class="calibre3"> keyword in
+Java.</span><br />
+<br />
+<span class="calibre3">A </span><span
+class="calibre17">public</span><span class="calibre3"> class member can
+be accessed by any function from any package.</span><br />
+<br />
+<span class="calibre3">Class members without visibility attributes have
+default access. The default access has no keyword, but it is commonly
+referred to as "friendly." All the other classes in the current package
+have access to the friendly member, but to all the classes outside of
+this package the member appears to be </span><span
+class="calibre17">private</span><span class="calibre3">.</span><br />
+<br />
+<span class="calibre3">Access to </span><span
+class="calibre17">protected</span><span class="calibre3"> class members
+is restricted to methods within the class, member functions of derived
+classes, and to classes within current package. </span></p>
+<p><span class="calibre17">Constructors</span></p>
+<p><br />
+<span class="calibre3">A user instantiates a class by applying the
+</span><span class="calibre17">new</span><span class="calibre3">
+operator to the class constructor.</span><br />
+<br />
+<span class="calibre3">A constructor is a function whose name matches
+with the class name and does not define any return type. A class may
+define multiple constructors. If no constructor is defined by the class
+a default (no argument) constructor is automatically made available to
+the class. The default constructor initializes all the fields to their
+default values.</span><br />
+<br />
+<span class="calibre3">You can invoke constructor with arguments from
+another constructor using </span><span
+class="calibre17">this</span><span class="calibre3">
+keyword.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">class Rectangle {</span><br />
+<span class="calibre3">double width;</span><br />
+<span class="calibre3">double height;</span><br />
+<span class="calibre3">Rectangle(double width, double height)
+{</span><br />
+<span class="calibre3">this.width = width;</span><br />
+<span class="calibre3">this.height = height;</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">Rectangle() {</span><br />
+<span class="calibre3">this(10, 20); // calls another
+constructor</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><br />
+<br />
+<span class="calibre3">There are no destructors in Java. You can create
+a special method called </span><span
+class="calibre17">finalize()</span><span class="calibre3">. A Garbage
+Collector invokes </span><span class="calibre17">finalize()</span><span
+class="calibre3"> method before the destruction of object. Object can be
+never destroyed by Garbage Collector, and therefore </span><span
+class="calibre17">finalize()</span><span class="calibre3"> method can be
+never invoked.</span></p>
+<p><span class="calibre17">Strings</span></p>
+<p><br />
+<span class="calibre3">Strings in Java are instances of the </span><span
+class="calibre17">java.lang.String</span><span class="calibre3"> class.
+The object of string type represents Unicode character
+string.</span><br />
+<br />
+<span class="calibre3">You can create a String object simply by
+enclosing characters in double quotes:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">String s = "The first string";</span></p>
+<p><br />
+<br />
+<span class="calibre3">When one or both operands are of type string, the
+predefined addition operators concatenate the string representation of
+the operands</span><br />
+<br />
+<span class="calibre3">An instance of String is said to be immutable
+because its value cannot be modified once it has been created. Methods
+that appear to modify a String actually return a new String containing
+the modification. If you need to modify the contents of a String, you
+have to create a StringBuffer object from the String object, modify the
+contents of the StringBuffer, and then create a new String from the
+contents of the StringBuffer.</span><br />
+<br />
+<span class="calibre3">Some of the more important String methods are as
+follows: </span><br />
+<br />
+<span class="calibre17">length()</span><span class="calibre3"> : Returns
+the int number of characters in the string.</span><br />
+<span class="calibre17">charAt(int index)</span><span class="calibre3">
+: Returns the character at the specified index of the
+string.</span><br />
+<span class="calibre17">equals(Object obj)</span><span class="calibre3">
+: Compares this string to the specified object, returns true or
+false.</span><br />
+<span class="calibre17">compareTo(String value)</span><span
+class="calibre3"> : Compares a string to the argument string. The result
+is a negative integer if this String object lexicographically precedes
+the argument string. The result is a positive integer if this String
+object lexicographically follows the argument string. The result is zero
+if the strings are equal.</span><br />
+<span class="calibre17">indexOf(char ch)</span><span class="calibre3"> :
+Returns the index location of the first occurrence of the specified
+character.</span><br />
+<span class="calibre17">substring(int beginIndex,int
+endIndex)</span><span class="calibre3"> : Returns a new string that is a
+substring of the string.</span><br />
+<span class="calibre17">toLowerCase()</span><span class="calibre3"> :
+Returns the string in lowercase.</span><br />
+<span class="calibre17">toUpperCase()</span><span class="calibre3"> :
+Returns the string in uppercase.</span><br />
+<br />
+<span class="calibre3">The following example demonstrates the use of
+methods for processing of string data.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">String s1 = new String("Hello
+World.");</span><br />
+<span class="calibre3">int i = s1.length(); // i = 12</span><br />
+<span class="calibre3">char c = s1.charAt(6); // c = 'W'</span><br />
+<span class="calibre3">i = s1.indexOf('e'); // i = 1 (index of 'e' in
+"Hello World.")</span><br />
+<span class="calibre3">String s2 = "abcdef".substring(2, 5); // s2 =
+"cde"</span><br />
+<span class="calibre3">int k = "AA".compareTo("AB"); // k = -1
+</span></p>
+<p><br />
+<br />
+<span class="calibre3">The Java language provides special support for
+the string concatenation operator ( + ), and for conversion of other
+objects to strings. The "plus" operator is used for string
+concatenation:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">String s1 = "first";</span><br />
+<span class="calibre3">String s2 = s1 + " and second";</span></p>
+<p><br />
+<br />
+<span class="calibre3">If one of operands is not a string type value,
+Java automatically obtains its string representation.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">int n = 1;</span><br />
+<span class="calibre3">String sn = "n is " + n; // "n is 1"</span><br />
+<span class="calibre3">double d = 1.1;</span><br />
+<span class="calibre3">String sd = d + ""; // "1.1"</span></p>
+<p><br />
+<br />
+<span class="calibre3">You can also use "+=" operator. </span></p>
+<p><span class="calibre17">Classes Integer and Double</span></p>
+<p><br />
+<span class="calibre3">The </span><span
+class="calibre17">Integer</span><span class="calibre3"> and </span><span
+class="calibre17">Double</span><span class="calibre3"> classes wrap
+values of the primitive types </span><span
+class="calibre17">int</span><span class="calibre3"> and </span><span
+class="calibre17">double</span><span class="calibre3"> in appropriate
+objects. In addition, those classes provide several methods for
+converting a numeric values to a String and a String to numbers, as well
+as other constants and methods useful when dealing with integers and
+doubles.</span><br />
+<br />
+<span class="calibre3">The </span><span
+class="calibre17">Double.parseDouble()</span><span class="calibre3">
+function returns a new double initialized to the value represented by
+the specified string:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">String s = "1.2";</span><br />
+<span class="calibre3">double d = Double.parseDouble(s);</span></p>
+<p><br />
+<br />
+<span class="calibre3">Functions </span><span
+class="calibre17">Integer.parseInt()</span><span class="calibre3"> and
+</span><span class="calibre17">Boolean.parseBoolean()</span><span
+class="calibre3"> provide analogous functionality.</span><br />
+<br />
+<span class="calibre3">In Java 5 (JDK 1.5) objects of Integer type can
+be initialized using expressions of int type. Such object can be also
+used in expressions as integer values. Constants and expressions of int
+type can be added to lists and containers instead of Integer objects
+that will be created automatically. In previous versions, you should
+write:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">Integer m = new Integer(10); // initialization of
+Integer object</span><br />
+<span class="calibre3">int k = m.intValue() + 1; // stored value is used
+in an expression</span><br />
+<span class="calibre3">// Creation of an array: </span><br />
+<span class="calibre3">Integer[] a = {new Integer(1), new Integer(2),
+new Integer(3)};</span><br />
+<span class="calibre3">List li = new ArrayList();</span><br />
+<span class="calibre3">a[2] = new Integer(4); // replacing given element
+with new object</span><br />
+<span class="calibre3">// extraction of Integer object and using of its
+value:</span><br />
+<span class="calibre3">int i = a[1].intValue() + 2; </span></p>
+<p><br />
+<br />
+<span class="calibre3">In Java 5, this code can be more
+simply:</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">Integer m = 10; // initialization of Integer
+object</span><br />
+<span class="calibre3">int k = m + 1; // stored value is used in an
+expression</span><br />
+<span class="calibre3">// Creation of an array: </span><br />
+<span class="calibre3">Integer[] a = {1, 2, 3};</span><br />
+<span class="calibre3">a[2] = 4; // replacing given element with new
+object</span><br />
+<span class="calibre3">// extraction of Integer object and using of its
+value:</span><br />
+<span class="calibre3">int i = a[1] + 2;</span></p>
+<p><br />
+<br />
+<span class="calibre3">The same rules can be applied to Double and
+Boolean types. In fact, objects of Integer, Double, and Boolean can be
+used instead of </span><span class="calibre17">int</span><span
+class="calibre3">, </span><span class="calibre17">double</span><span
+class="calibre3">, and </span><span
+class="calibre17">Boolean</span><span class="calibre3">
+variables.</span></p>
+<p><span class="calibre17">Class Composition</span></p>
+<p><br />
+<span class="calibre3">Class composition assumes creation of classes,
+which contain object of other classes as class fields. In Java, you
+cannot place objects into another object. Only references are allowed
+here. You can create objects direct after the declaration or in
+constructors.</span><br />
+<br />
+<span class="calibre3">CODE : </span></p>
+<p><br />
+<span class="calibre3">ClassX {</span><br />
+<span class="calibre3">}</span><br />
+<br />
+<span class="calibre3">class Y {</span><br />
+<span class="calibre3">}</span><br />
+<br />
+<span class="calibre3">class Z {</span><br />
+<span class="calibre3">X x = new X();</span><br />
+<span class="calibre3">Y y;</span><br />
+<span class="calibre3">Z() {</span><br />
+<span class="calibre3">y = new Y();</span><br />
+<span class="calibre3">}</span><br />
+<span class="calibre3">}</span></p>
+<p><span class="calibre3"> </span></p>
+<p><br />
+<span class="calibre3">I think, details are the most important part of
+programming. Thus, i tried to explain every single detail.</span><br />
+<span class="calibre3">I hope I did not forget something, and you find
+this Book useful. Feel free to ask me questions if you don't understand.
+</span></p>
+<p><span class="calibre3">Email me at </span><a
+href="mailto:renuxsofttech@gmail.com" class="calibre11"><span
+class="calibre20">renuxsofttech@gmail.com</span></a></p></td>
+</tr>
+<tr class="calibre6">
+<td class="calibre7"><p><span class="calibre10"> </span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+</div>

@@ -1,0 +1,2842 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 531 751" preserveaspectratio="none">
+<image width="531" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="index_split_000.html"></span></p>
+<p><span id="index_split_000.html_p1"></span><img src="index-1_1.jpg"
+class="calibre2" alt="Image 1" /></p>
+<p><span id="index_split_000.html_p2"></span><strong>Black Book
+Series</strong></p>
+<p><strong></strong></p>
+<p><strong>Java</strong> ™ <strong>8</strong></p>
+<p><strong>Exception</strong></p>
+<p><strong>Handling</strong></p>
+<p><strong>Quiz</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>Mahavir DS Rathore</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p3"></span><strong>Copyright</strong>
+Java 8 Exception handling quiz by Mahavir DS Rathore. While every
+precaution has been taken in the preparation of this book the author
+assume No responsibility for errors or omissions, or for damages
+resulting from the use of the information contained herein.</p>
+<p><strong>About the author</strong></p>
+<p>I have has been programming &amp; teaching Java for last 18 years.
+This book is an effort to document my knowledge to share with everyone
+across the world. I am available to do training on Java anywhere in the
+world. My email id is gurumahaveer@gmail.com</p>
+<p><strong></strong></p>
+<p><strong>Who should read the book?</strong></p>
+<p>This book is for programmers who already know Core Java (Java
+Standard Edition).</p>
+<p><strong></strong></p>
+<p><strong>Acknowledgement</strong></p>
+<p>Java is owned by Oracle and trademark is acknowledged.</p>
+<p><strong>Dedication</strong></p>
+<p>To the inventors of the Java Language.</p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p4"></span> <strong></strong></p>
+<p><strong>Table of Content</strong></p>
+<p><strong>Sl.No</strong></p>
+<p><strong>Chapter</strong></p>
+<p><strong>HyperLink</strong></p>
+<p>1</p>
+<p>Java Setup</p>
+<p><a href="#index_split_000.html_p5">Go</a></p>
+<p>2</p>
+<p>What is</p>
+<p><a href="#index_split_000.html_p10">Go</a></p>
+<p>Exception?</p>
+<p>3</p>
+<p>What is Exception</p>
+<p><a href="#index_split_000.html_p14">Go</a></p>
+<p>Handling?</p>
+<p>4</p>
+<p>Java Exception</p>
+<p><a href="#index_split_000.html_p16">Go</a></p>
+<p>Hierarchy</p>
+<p>5</p>
+<p>Try and Catch</p>
+<p><a href="#index_split_000.html_p24">Go</a></p>
+<p>Block</p>
+<p>6</p>
+<p>Exception</p>
+<p><a href="#index_split_000.html_p28">Go</a></p>
+<p>Handling API</p>
+<p>7</p>
+<p>Multiple Catch</p>
+<p><a href="#index_split_000.html_p31">Go</a></p>
+<p>8</p>
+<p>Multiple</p>
+<p><a href="#index_split_000.html_p34">Go</a></p>
+<p>Exceptions</p>
+<p>9</p>
+<p>Finally Block</p>
+<p><a href="#index_split_000.html_p37">Go</a></p>
+<p>10</p>
+<p>Finally and return</p>
+<p><a href="#index_split_000.html_p41">Go</a></p>
+<p>keyword</p>
+<p>11</p>
+<p>Checked and</p>
+<p><a href="#index_split_000.html_p44">Go</a></p>
+<p>Unchecked</p>
+<p>Exception</p>
+<p>12</p>
+<p>Nested Exception</p>
+<p><a href="#index_split_000.html_p49">Go</a></p>
+<p>13</p>
+<p>Throw Keyword</p>
+<p><a href="#index_split_000.html_p54">Go</a></p>
+<p>14</p>
+<p>Exception</p>
+<p><a href="#index_split_000.html_p61">Go</a></p>
+<p><span id="index_split_000.html_p5"></span>Chaining</p>
+<p>15</p>
+<p>Try with Resource</p>
+<p><a href="#index_split_000.html_p65">Go</a></p>
+<p>16</p>
+<p>Overriding</p>
+<p><a href="#index_split_000.html_p69">Go</a></p>
+<p>Exception</p>
+<p>17</p>
+<p>User Defined</p>
+<p><a href="#index_split_000.html_p75">Go</a></p>
+<p>Exception</p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>Chapter 1</strong></p>
+<p><strong>Software Setup</strong></p>
+<p><strong>Q.1: What is the latest version of Java?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>7</p>
+<p><strong>B</strong></p>
+<p>6</p>
+<p><strong>C</strong></p>
+<p>9</p>
+<p><strong>D</strong></p>
+<p>8</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p6"></span><strong>Q.2: JRE stands for
+…………………</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Java Robust Engine</p>
+<p><strong>B</strong></p>
+<p>Java Required Engine</p>
+<p><strong>C</strong></p>
+<p>Java Runtime Engine</p>
+<p><strong>D</strong></p>
+<p>Java Runnable Engine</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q. 3: JDK stands for …………………</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Java Debugging Kit</p>
+<p><strong>B</strong></p>
+<p>Java Development Kit</p>
+<p><strong>C</strong></p>
+<p>Java Documentation Kit</p>
+<p><strong>D</strong></p>
+<p>Java Database Kit</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q. 4: To compile and execute Java</strong>
+<strong>application ……………. is needed</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>JDK</p>
+<p><strong>B</strong></p>
+<p>JRE</p>
+<p><strong>C</strong></p>
+<p>JME</p>
+<p><strong>D</strong></p>
+<p>JEE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p7"></span></p>
+<p><strong>Q.5: Which environment variable</strong> <strong>(Windows OS)
+is set for accessing java</strong> <strong>compiler and java interpreter
+at</strong> <strong>command line?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>CLASSPATH</p>
+<p><strong>B</strong></p>
+<p>JAVAHOME</p>
+<p><strong>C</strong></p>
+<p>PATH</p>
+<p><strong>D</strong></p>
+<p>HOME</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: To just execute a Java application</strong></p>
+<p><strong>………………. is needed at the</strong>
+<strong>minimum.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>JME</p>
+<p><strong>B</strong></p>
+<p>JDK</p>
+<p><strong>C</strong></p>
+<p>JEE</p>
+<p><strong>D</strong></p>
+<p>JRE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.7: The command for java interpreter</strong>
+<strong>(Windows OS) is ………….</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Javaip.exe</p>
+<p><strong>B</strong></p>
+<p>Javac.exe</p>
+<p><span id="index_split_000.html_p8"></span><strong>C</strong></p>
+<p>Java.exe</p>
+<p><strong>D</strong></p>
+<p>Javai.exe</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.8: The command for Java compiler</strong> <strong>(Windows
+OS) is ………….</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Java.exe</p>
+<p><strong>B</strong></p>
+<p>Javacompiler.exe</p>
+<p><strong>C</strong></p>
+<p>Javacomp.exe</p>
+<p><strong>D</strong></p>
+<p>Javac.exe</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.9: In which folder is 32-bit JDK</strong></p>
+<p><strong>(Windows OS) is installed by default?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>C:\Program Files\</p>
+<p><strong>B</strong></p>
+<p>C:\Windows\</p>
+<p><strong>C</strong></p>
+<p>C:\Java</p>
+<p><strong>D</strong></p>
+<p>C:\Program Files (x86)\</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.10: In which folder is 64-bit JDK</strong></p>
+<p><strong>(Windows OS) is installed by default?</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p9"></span><strong>A</strong></p>
+<p>C:\Program Files\</p>
+<p><strong>B</strong></p>
+<p>C:\Windows\</p>
+<p><strong>C</strong></p>
+<p>C:\Java</p>
+<p><strong>D</strong></p>
+<p>C:\Program Files (x86)\</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>D</p>
+<p>The latest version of Java is version 8.</p>
+<p>2</p>
+<p>C</p>
+<p>“JRE” stands for Java</p>
+<p>Runtime Engine.</p>
+<p>3</p>
+<p>B</p>
+<p>“JDK” stands for Java</p>
+<p>Development Kit.</p>
+<p>4</p>
+<p>A</p>
+<p>“JDK” is required for a</p>
+<p>Java program to be</p>
+<p>compiled and executed.</p>
+<p>5</p>
+<p>C</p>
+<p>PATH environment variable</p>
+<p>contains the location of</p>
+<p>Java commands.</p>
+<p>6</p>
+<p>D</p>
+<p>To just execute a java</p>
+<p>application only JRE is</p>
+<p>required.</p>
+<p>7</p>
+<p>C</p>
+<p>“Java.exe” is the command</p>
+<p>to activate Java interpreter.</p>
+<p>8</p>
+<p>D</p>
+<p>“Javac.exe” is the command</p>
+<p>to activate Java compiler.</p>
+<p><span id="index_split_000.html_p10"></span><img src="index-10_1.jpg"
+class="calibre2" alt="Image 2" /></p>
+<p>9</p>
+<p>D</p>
+<p>32-bit application on</p>
+<p>Windows OS is installed in</p>
+<p>“C:\Program Files (x86)\</p>
+<p>“folder by default.</p>
+<p>10</p>
+<p>A</p>
+<p>64-bit application on</p>
+<p>Windows OS is installed in</p>
+<p>“C:\Program Files\” folder by default.</p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>Chapter 2</strong></p>
+<p><strong>What is Exception?</strong></p>
+<p><strong>Q.1: ……….. Occur at Runtime.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Error</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Trigger</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p11"></span><strong>Q.2: Runtime error
+is also called as</strong></p>
+<p><strong>…………..</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Error</p>
+<p><strong>B</strong></p>
+<p>Compiler error</p>
+<p><strong>C</strong></p>
+<p>Exception</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: Syntax error yields into a</strong></p>
+<p><strong>…………</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Runtime error</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Compiler error</p>
+<p><strong>D</strong></p>
+<p>All of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: Dividing an integer by zero yields</strong> <strong>into
+a ………..</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Compiler error</p>
+<p><strong>B</strong></p>
+<p>JVM error</p>
+<p><strong>C</strong></p>
+<p>Nothing</p>
+<p><strong>D</strong></p>
+<p>Exception</p>
+<p><span id="index_split_000.html_p12"></span> <strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: A missing semi-colon for an</strong> <strong>instruction
+yields into a ………….</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Exception</p>
+<p><strong>B</strong></p>
+<p>Runtime error</p>
+<p><strong>C</strong></p>
+<p>Compiler error</p>
+<p><strong>D</strong></p>
+<p>JVM error</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: What will be the output?</strong></p>
+<p><strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>String ar = new String[1];</strong> <strong>ar[2]
+=“Ram”;</strong></p>
+<p><strong>System.out.println(ar[0]);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Compiler error</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>No error</p>
+<p><strong>D</strong></p>
+<p>JVM</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p13"></span></p>
+<p><strong>Q.7: An exception can occur when</strong></p>
+<p><strong>…………..</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>‘throw’ is called</p>
+<p><strong>B</strong></p>
+<p>Abnormal code is executed</p>
+<p><strong>C</strong></p>
+<p>Asynchronous error happen</p>
+<p><strong>D</strong></p>
+<p>All of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>B</p>
+<p>Exception occur at Runtime</p>
+<p>i.e. during program</p>
+<p>execution.</p>
+<p>2</p>
+<p>C</p>
+<p>Another name for Runtime</p>
+<p>error is Exception.</p>
+<p>3</p>
+<p>C</p>
+<p>Syntax error yields into a</p>
+<p>Compiler error.</p>
+<p>4</p>
+<p>D</p>
+<p>Division by zero yields into ArithmeticException.</p>
+<p>5</p>
+<p>C</p>
+<p>Missing semi-colon is</p>
+<p>captured as a Compiler error.</p>
+<p>6</p>
+<p>B</p>
+<p>Exception</p>
+<p>“ArrayOutOfBounds” occur.</p>
+<p>7</p>
+<p>D</p>
+<p>An exception can occur</p>
+<p><span id="index_split_000.html_p14"></span><img src="index-14_1.jpg"
+class="calibre2" alt="Image 3" /></p>
+<p>when any of below is called or occur</p>
+<p>a. ‘throw’ b. Abnormal code is executed c. Asynchronous error</p>
+<p><strong></strong></p>
+<p><strong>Chapter 3</strong></p>
+<p><strong>What is Exception Handling?</strong></p>
+<p><strong>Q.1: …………. helps in avoiding</strong> <strong>runtime crash
+of a program.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Error handling</p>
+<p><strong>B</strong></p>
+<p>Exception handling</p>
+<p><strong>C</strong></p>
+<p>Compiler handling</p>
+<p><strong>D</strong></p>
+<p>Database handling</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: Which of the following is not a</strong>
+<strong>keyword?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throw</p>
+<p><span id="index_split_000.html_p15"></span><strong>B</strong></p>
+<p>Throws</p>
+<p><strong>C</strong></p>
+<p>throwing</p>
+<p><strong>D</strong></p>
+<p>Try</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: Which of the following is not a</strong>
+<strong>keyword?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Try</p>
+<p><strong>B</strong></p>
+<p>Catch</p>
+<p><strong>C</strong></p>
+<p>except</p>
+<p><strong>D</strong></p>
+<p>Finally</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: How to raise an exception?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>throws</p>
+<p><strong>B</strong></p>
+<p>Throw</p>
+<p><strong>C</strong></p>
+<p>except</p>
+<p><strong>D</strong></p>
+<p>Raise</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: Who handles unhandled</strong>
+<strong>exceptions?</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p16"></span><img src="index-16_1.jpg"
+class="calibre2" alt="Image 4" /></p>
+<p><strong>A</strong></p>
+<p>JVM</p>
+<p><strong>B</strong></p>
+<p>OS</p>
+<p><strong>C</strong></p>
+<p>catch</p>
+<p><strong>D</strong></p>
+<p>finally</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans</strong></p>
+<p>1</p>
+<p>B</p>
+<p>Exception handling is used</p>
+<p>for avoiding crash of a</p>
+<p>program.</p>
+<p>2</p>
+<p>C</p>
+<p>‘throwing’ is not a keyword in Java.</p>
+<p>3</p>
+<p>C</p>
+<p>‘except’ is not keyword in</p>
+<p>Java.</p>
+<p>4</p>
+<p>B</p>
+<p>The ‘throw’ keyword is</p>
+<p>used for raising an</p>
+<p>exception.</p>
+<p>5</p>
+<p>A</p>
+<p>JVM handles those</p>
+<p>exception that are not</p>
+<p>handled by a program.</p>
+<p><strong>Chapter 4</strong></p>
+<p><span id="index_split_000.html_p17"></span><strong>Java Exception
+Hierarchy</strong> <strong>Q.1: ……………. class is the mother</strong>
+<strong>class of all exception classes (directly or</strong>
+<strong>indirectly).</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Error</p>
+<p><strong>D</strong></p>
+<p>Object</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: …………………… class is the</strong> <strong>mother class of
+“Exception” class.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Object</p>
+<p><strong>B</strong></p>
+<p>Error</p>
+<p><strong>C</strong></p>
+<p>Compiler</p>
+<p><strong>D</strong></p>
+<p>Throwable</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: …………. is the mother class of</strong></p>
+<p><strong>“Error” class.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Object</p>
+<p><span id="index_split_000.html_p18"></span><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Throwable</p>
+<p><strong>D</strong></p>
+<p>RuntimeException</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: ……………….. Is the mother class</strong> <strong>of
+“RuntimeException” class?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Error</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Throwable</p>
+<p><strong>D</strong></p>
+<p>Object</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: Throwable class implements</strong></p>
+<p><strong>…………………. interface</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Cloneable</p>
+<p><strong>B</strong></p>
+<p>Serializable</p>
+<p><strong>C</strong></p>
+<p>Runnable</p>
+<p><strong>D</strong></p>
+<p>Comparable</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: …………… is the mother class of</strong></p>
+<p><strong>“Throwable” class.</strong></p>
+<p><span id="index_split_000.html_p19"></span> <strong></strong></p>
+<p><strong>A</strong></p>
+<p>Object</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Error</p>
+<p><strong>D</strong></p>
+<p>JVM</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.7: …………. (And derived class)</strong> <strong>exception is
+not recoverable.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Error class</p>
+<p><strong>B</strong></p>
+<p>Throwable class</p>
+<p><strong>C</strong></p>
+<p>Exception class</p>
+<p><strong>D</strong></p>
+<p>Object class</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.8: ……………….. (And derived class)</strong> <strong>exception
+is asynchronous.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable class</p>
+<p><strong>B</strong></p>
+<p>Error class</p>
+<p><strong>C</strong></p>
+<p>Exception class</p>
+<p><strong>D</strong></p>
+<p>Object class</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p20"></span><strong>Q.9: Which of the
+following is/are</strong> <strong>derived from “Error
+class”?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>StackoverflowError</p>
+<p><strong>B</strong></p>
+<p>OutOfMemoryError</p>
+<p><strong>C</strong></p>
+<p>VirtualMachineError</p>
+<p><strong>D</strong></p>
+<p>All of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.10: When does ThreadDeath</strong> <strong>exception
+occur?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Thread.abort()</p>
+<p><strong>B</strong></p>
+<p>Thread.stop()</p>
+<p><strong>C</strong></p>
+<p>Thread.exit()</p>
+<p><strong>D</strong></p>
+<p>Thread.quit()</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.11: Which exception occur when a</strong> <strong>method is
+called recursively?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>OutOfMemoryError</p>
+<p><strong>B</strong></p>
+<p>OutOfMemoryException</p>
+<p><strong>C</strong></p>
+<p>StackoverflowException</p>
+<p><strong>D</strong></p>
+<p>StackoverflowError</p>
+<p><span id="index_split_000.html_p21"></span> <strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.12: ………….. (Exception) is</strong> <strong>compiler
+checked.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Error class</p>
+<p><strong>B</strong></p>
+<p>RuntimeException class</p>
+<p><strong>C</strong></p>
+<p>Exception class</p>
+<p><strong>D</strong></p>
+<p>Object class</p>
+<p><strong>C</strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.13: …………… (Exception) is not</strong> <strong>compiler
+checked.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Exception class</p>
+<p><strong>B</strong></p>
+<p>Throwable class</p>
+<p><strong>C</strong></p>
+<p>Object class</p>
+<p><strong>D</strong></p>
+<p>RuntimeException</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.14: Which of the following class is</strong> <strong>not
+derived from RuntimeException</strong> <strong>class?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>NullPointerException</p>
+<p><strong>B</strong></p>
+<p>ArrayIndexOutOfBoundException</p>
+<p><span id="index_split_000.html_p22"></span><strong>C</strong></p>
+<p>ArithmeticException</p>
+<p><strong>D</strong></p>
+<p>IOException</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.15: Which of following interfaces</strong> <strong>does
+Exception class implement?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Serializable</p>
+<p><strong>B</strong></p>
+<p>Throwable</p>
+<p><strong>C</strong></p>
+<p>Attribute</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.16: Which of the following interfaces</strong> <strong>does
+Error class implement?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Serializable</p>
+<p><strong>B</strong></p>
+<p>Throwable</p>
+<p><strong>C</strong></p>
+<p>Atrribute</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.17: ………………. exception is</strong> <strong>compiler
+checked.</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p23"></span><strong>A</strong></p>
+<p>Throwable class</p>
+<p><strong>B</strong></p>
+<p>Object class</p>
+<p><strong>C</strong></p>
+<p>Error class</p>
+<p><strong>D</strong></p>
+<p>RuntimeException class</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>A</p>
+<p>Throwable class is the</p>
+<p>mother class of all exception classes (directly or</p>
+<p>indirectly).</p>
+<p>2</p>
+<p>D</p>
+<p>Throwable class is the</p>
+<p>mother class of Exception.</p>
+<p>3</p>
+<p>C</p>
+<p>Throwable class is the</p>
+<p>mother class of Error class.</p>
+<p>4</p>
+<p>B</p>
+<p>Exception class is the</p>
+<p>mother class of Runtime</p>
+<p>class.</p>
+<p>5</p>
+<p>B</p>
+<p>Serializable interface is</p>
+<p>implemented by Throwable</p>
+<p>class.</p>
+<p>6</p>
+<p>A</p>
+<p>Object is the mother class of Throwable class.</p>
+<p>7</p>
+<p>A</p>
+<p>Error class exception not</p>
+<p>recoverable.</p>
+<p>8</p>
+<p>B</p>
+<p>Error class exception is</p>
+<p>asynchronous.</p>
+<p><span id="index_split_000.html_p24"></span><img src="index-24_1.jpg"
+class="calibre2" alt="Image 5" /></p>
+<p>9</p>
+<p>D</p>
+<p>StackoverflowError,</p>
+<p>OutOfMemoryError and</p>
+<p>VirtualMachineError classes are derived from Error class.</p>
+<p>10</p>
+<p>B</p>
+<p>ThreadDeath Exception</p>
+<p>occurs when Thread.stop() is called.</p>
+<p>11</p>
+<p>D</p>
+<p>StackoverflowError occur</p>
+<p>when a method is deeply</p>
+<p>recursive.</p>
+<p>12</p>
+<p>C</p>
+<p>Exception class is identified by the compiler if not</p>
+<p>handled.</p>
+<p>13</p>
+<p>D</p>
+<p>RuntimeException class is</p>
+<p>not identified by the</p>
+<p>compiler.</p>
+<p>14</p>
+<p>D</p>
+<p>IOException derives from</p>
+<p>Exception class not</p>
+<p>RuntimeException.</p>
+<p>15</p>
+<p>D</p>
+<p>Exception class does not</p>
+<p>implement any interface.</p>
+<p>16</p>
+<p>D</p>
+<p>Error class does not</p>
+<p>implement any interface.</p>
+<p>17</p>
+<p>A</p>
+<p>Throwable class exception is identified by compiler is not
+handled.</p>
+<p><strong></strong></p>
+<p><strong>Chapter 5</strong></p>
+<p><span id="index_split_000.html_p25"></span><strong>Try and Catch
+Blocks</strong> <strong>Q.1: For an unhandled exception</strong></p>
+<p><strong>…………..Is printed on the screen.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Call stack information</p>
+<p><strong>B</strong></p>
+<p>Assertion information</p>
+<p><strong>C</strong></p>
+<p>Debug information</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: Try block can be put inside a</strong></p>
+<p><strong>…………</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Interface</p>
+<p><strong>B</strong></p>
+<p>Class</p>
+<p><strong>C</strong></p>
+<p>Method</p>
+<p><strong>D</strong></p>
+<p>Nested class</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: An unhandled exception is</strong> <strong>handled by
+………..</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Compiler</p>
+<p><span id="index_split_000.html_p26"></span><strong>B</strong></p>
+<p>GC</p>
+<p><strong>C</strong></p>
+<p>JVM</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: Catch block only exists for a given</strong></p>
+<p><strong>………….</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Code block</p>
+<p><strong>B</strong></p>
+<p>Try block</p>
+<p><strong>C</strong></p>
+<p>Data block</p>
+<p><strong>D</strong></p>
+<p>Nested block</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: Try block cannot be put in a</strong></p>
+<p><strong>…………</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Class</p>
+<p><strong>B</strong></p>
+<p>Interface</p>
+<p><strong>C</strong></p>
+<p>Constructor</p>
+<p><strong>D</strong></p>
+<p>Method</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: A static block can contain a try</strong>
+<strong>block.</strong></p>
+<p><span id="index_split_000.html_p27"></span> <strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.7: A constructor can contain a try</strong>
+<strong>block.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>A</p>
+<p>Call stack (stacktrace)</p>
+<p>information is displayed on screen for an unhandled</p>
+<p>exception.</p>
+<p>2</p>
+<p>C</p>
+<p>Try block can be put inside an application.</p>
+<p>3</p>
+<p>C</p>
+<p>An unhandled exception is</p>
+<p>handled by JVM (which</p>
+<p>crashes an application).</p>
+<p>4</p>
+<p>B</p>
+<p>Catch only exists for a try block.</p>
+<p><span id="index_split_000.html_p28"></span><img src="index-28_1.jpg"
+class="calibre2" alt="Image 6" /></p>
+<p>5</p>
+<p>A,B Try block cannot be put in interface or a class.</p>
+<p>6</p>
+<p>A</p>
+<p>A static block can contain a try block.</p>
+<p>7</p>
+<p>A</p>
+<p>A constructor can contain a try block.</p>
+<p><strong>Chapter 6</strong></p>
+<p><strong>Exception Handling API</strong></p>
+<p><strong>Q.1: What is a call stack?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Execution of main method.</p>
+<p><strong>B</strong></p>
+<p>Calling of a privileged method over regular method.</p>
+<p><strong>C</strong></p>
+<p>It is a stack data structure that store information about active
+methods.</p>
+<p><strong>D</strong></p>
+<p>Collection of functions.</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: ………. method is used for</strong> <strong>printing call
+stack when an exception</strong> <strong>occur.</strong></p>
+<p><span id="index_split_000.html_p29"></span> <strong></strong></p>
+<p><strong>A</strong></p>
+<p>callStack()</p>
+<p><strong>B</strong></p>
+<p>printStackTrace()</p>
+<p><strong>C</strong></p>
+<p>stackTrace()</p>
+<p><strong>D</strong></p>
+<p>stackInfo()</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: ………….. Method is used for</strong> <strong>getting
+generic exception message.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>message()</p>
+<p><strong>B</strong></p>
+<p>toString()</p>
+<p><strong>C</strong></p>
+<p>getInfo()</p>
+<p><strong>D</strong></p>
+<p>msgException()</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: printStackTrace() method belong</strong> <strong>to
+………….. Class.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable</p>
+<p><strong>B</strong></p>
+<p>Error</p>
+<p><strong>C</strong></p>
+<p>Exception</p>
+<p><strong>D</strong></p>
+<p>Object</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p30"></span><strong>Q.5: toString()
+method belong to</strong></p>
+<p><strong>…………… class.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable</p>
+<p><strong>B</strong></p>
+<p>Error</p>
+<p><strong>C</strong></p>
+<p>Exception</p>
+<p><strong>D</strong></p>
+<p>Object</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: Return value of printStackTrace()</strong>
+<strong>method is …………………</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>String</p>
+<p><strong>B</strong></p>
+<p>Char</p>
+<p><strong>C</strong></p>
+<p>Void</p>
+<p><strong>D</strong></p>
+<p>char[]</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans</strong></p>
+<p>1</p>
+<p>C</p>
+<p>Call stack is a stack data structure</p>
+<p>that</p>
+<p>store</p>
+<p>information about active</p>
+<p>methods.</p>
+<p><span id="index_split_000.html_p31"></span><img src="index-31_1.jpg"
+class="calibre2" alt="Image 7" /></p>
+<p>2</p>
+<p>B</p>
+<p>printStackTrace() method is used for print call stack</p>
+<p>information when an</p>
+<p>exception occur.</p>
+<p>3</p>
+<p>B</p>
+<p>toString() method returns</p>
+<p>generic exception</p>
+<p>information.</p>
+<p>4</p>
+<p>A</p>
+<p>printStackTrace() method</p>
+<p>belong to Throwable class.</p>
+<p>5</p>
+<p>D</p>
+<p>toString() method belong to Object class.</p>
+<p>6</p>
+<p>C</p>
+<p>printStackTrace() method</p>
+<p>does not return anything.</p>
+<p><strong>Chapter 7</strong></p>
+<p><strong>Multiple Catch</strong></p>
+<p><strong>Q.1: How many catch blocks can be</strong> <strong>added for
+a given try block?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>1</p>
+<p><strong>B</strong></p>
+<p>2</p>
+<p><strong>C</strong></p>
+<p>15</p>
+<p><span id="index_split_000.html_p32"></span><strong>D</strong></p>
+<p>Any Number</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: In what order should the</strong> <strong>exceptions be
+caught using catch block?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>In any order</p>
+<p><strong>B</strong></p>
+<p>In Top-Down order of inheritance hierarchy</p>
+<p><strong>C</strong></p>
+<p>In Bottom-Up order of inheritance hierarchy</p>
+<p><strong>D</strong></p>
+<p>Catch block does not handle exceptions</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: What should be the order of catch</strong>
+<strong>blocks for the following exceptions?</strong></p>
+<p><strong>Throwable , Exception,</strong></p>
+<p><strong>RuntimeException</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong> Any order</p>
+<p><strong>B</strong> Throwable,</p>
+<p>Exception,</p>
+<p>RuntimeException</p>
+<p><strong>C</strong> Exception,RuntimeException,Throwable
+<strong>D</strong> RuntimeException,Exception,Throwable</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p33"></span><strong>Q.4: ‘try’ block
+cannot encapsulate?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Code within method</p>
+<p><strong>B</strong></p>
+<p>Code within constructor</p>
+<p><strong>C</strong></p>
+<p>Code within static block</p>
+<p><strong>D</strong></p>
+<p>Class</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: If exceptions are not handled in</strong>
+<strong>bottom-up order of inheritance</strong> <strong>hierarchy, What
+error do we</strong> <strong>encounter?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Compiler Error</p>
+<p><strong>B</strong></p>
+<p>Runtime Exception</p>
+<p><strong>C</strong></p>
+<p>Nothing happens</p>
+<p><strong>D</strong></p>
+<p>JVM Exception</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>D</p>
+<p>A try block can have any</p>
+<p><span id="index_split_000.html_p34"></span><img src="index-34_1.jpg"
+class="calibre2" alt="Image 8" /></p>
+<p>number of catch blocks.</p>
+<p>2</p>
+<p>C</p>
+<p>The catch block should</p>
+<p>catch exceptions in the</p>
+<p>bottom-up(reverse) order of inheritance hierarchy.</p>
+<p>3</p>
+<p>D</p>
+<p>The correct order is</p>
+<p>RuntimException, Exception</p>
+<p>and Throwable class.</p>
+<p>4</p>
+<p>D</p>
+<p>‘Try’ block cannot</p>
+<p>encapsulate a class.</p>
+<p>5</p>
+<p>A</p>
+<p>If exception are not handled in the reverse order of their
+inheritance hierarchy</p>
+<p>compiler gives an error.</p>
+<p><strong>Chapter 8</strong></p>
+<p><strong>Multiple Exceptions</strong></p>
+<p><strong>Q.1: In which version of Java was this</strong>
+<strong>(Multiple exceptions in a single catch)</strong>
+<strong>capability added?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>6</p>
+<p><span id="index_split_000.html_p35"></span><strong>B</strong></p>
+<p>5</p>
+<p><strong>C</strong></p>
+<p>7</p>
+<p><strong>D</strong></p>
+<p>8</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: What is the delimiter used to</strong> <strong>identify
+multiple exceptions in a single</strong> <strong>catch?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>| (pipe)</p>
+<p><strong>B</strong></p>
+<p>&amp; (ampersand)</p>
+<p><strong>C</strong></p>
+<p>, (comma)</p>
+<p><strong>D</strong></p>
+<p>/(slash)</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: Identify the correct syntax</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>catch(Error| Exception obj) {}</p>
+<p><strong>B</strong></p>
+<p>catch(Throwable | Exception) {}</p>
+<p><strong>C</strong></p>
+<p>catch(Throwable obj | Exception obj2) {}</p>
+<p><strong>D</strong></p>
+<p>Catch (…) {}</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: Mother and Child class exception</strong> <strong>cannot
+be caught in a single catch</strong></p>
+<p><span
+id="index_split_000.html_p36"></span><strong>block.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: What happens when Mother and</strong> <strong>Child
+class exception is caught in a</strong> <strong>single catch
+block?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>No error or exception</p>
+<p><strong>B</strong></p>
+<p>Compiler Error</p>
+<p><strong>C</strong></p>
+<p>JVM Error</p>
+<p><strong>D</strong></p>
+<p>Runtime Exception</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong></strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>C</p>
+<p>Multiple exception handling in a single catch was added in Java
+7.</p>
+<p>2</p>
+<p>A</p>
+<p>The delimiter used to</p>
+<p>segregate exceptions in a</p>
+<p>single catch is ‘|’.</p>
+<p>3</p>
+<p>A</p>
+<p>Correct syntax is :</p>
+<p>catch(Error| Exception obj)</p>
+<p><span id="index_split_000.html_p37"></span><img src="index-37_1.jpg"
+class="calibre2" alt="Image 9" /></p>
+<p>{}</p>
+<p>4</p>
+<p>A</p>
+<p>Mother and child class</p>
+<p>exception cannot be caught</p>
+<p>in a single catch.</p>
+<p>5</p>
+<p>B</p>
+<p>Compiler gives an error</p>
+<p>when programmer tries to</p>
+<p>handle mother and class</p>
+<p>exception in a single catch.</p>
+<p><strong>Chapter 9</strong></p>
+<p><strong>Finally Block</strong></p>
+<p><strong>Q.1: How many ‘finally’ blocks can be</strong> <strong>added
+to ‘try’ block?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>1</p>
+<p><strong>B</strong></p>
+<p>2</p>
+<p><strong>C</strong></p>
+<p>3</p>
+<p><strong>D</strong></p>
+<p>Any number</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: The order of exception blocks is</strong></p>
+<p><strong>……………</strong></p>
+<p><span id="index_split_000.html_p38"></span> <strong></strong></p>
+<p><strong>A</strong></p>
+<p>try, finally, catch</p>
+<p><strong>B</strong></p>
+<p>catch,finally,try</p>
+<p><strong>C</strong></p>
+<p>try,catch,finally</p>
+<p><strong>D</strong></p>
+<p>Any order</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: ‘finally’ block does not execute</strong> <strong>when
+………..</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>‘return’ keyword is called</p>
+<p><strong>B</strong></p>
+<p>Program exits</p>
+<p><strong>C</strong></p>
+<p>‘finally’ is guaranteed to be executed</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: Identify the correct statement</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>‘Finally’ block is compulsory for a given try.</p>
+<p><strong>B</strong></p>
+<p>‘Finally’ block is executed when an exception occurs.</p>
+<p><strong>C</strong></p>
+<p>‘Finally’ block is executed when there is no exception.</p>
+<p><strong>D</strong></p>
+<p>None of the above.</p>
+<p><span id="index_split_000.html_p39"></span> <strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: For a given ‘try’ block ‘finally’</strong></p>
+<p><strong>block is placed after ………..</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>‘try’ block</p>
+<p><strong>B</strong></p>
+<p>‘catch’ block</p>
+<p><strong>C</strong></p>
+<p>‘finally’ block</p>
+<p><strong>D</strong></p>
+<p>Constructor</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: A try block requires at least</strong></p>
+<p><strong>……….. Or ………….</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>‘catch’ block</p>
+<p><strong>B</strong></p>
+<p>‘finally’ block</p>
+<p><strong>C</strong></p>
+<p>‘try’ block</p>
+<p><strong>D</strong></p>
+<p>Code block</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.7: If a ‘try’ block has both catch and</strong>
+<strong>finally blocks then ………… will be</strong> <strong>placed
+first</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>‘catch’ block</p>
+<p><strong>B</strong></p>
+<p>‘finally’ block</p>
+<p><span id="index_split_000.html_p40"></span><strong>C</strong></p>
+<p>Any order</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.8: What will happen if a try block</strong> <strong>only
+has finally block and an exception</strong> <strong>occurs?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Program crashes</p>
+<p><strong>B</strong></p>
+<p>Program continues without crashes <strong>C</strong></p>
+<p>The outcome is not predictable <strong>D</strong></p>
+<p>Compiler error</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>A</p>
+<p>Only one finally block can</p>
+<p>added for a given try block.</p>
+<p>2</p>
+<p>C</p>
+<p>The order of exception</p>
+<p>blocks is – try, catch and</p>
+<p>finally.</p>
+<p>3</p>
+<p>B</p>
+<p>‘Finally’ block is not</p>
+<p>executed when program</p>
+<p>exits.</p>
+<p>4</p>
+<p>B,C ‘Finally’ block is</p>
+<p>guaranteed to be executed</p>
+<p><span id="index_split_000.html_p41"></span><img src="index-41_1.jpg"
+class="calibre2" alt="Image 10" /></p>
+<p>with or without exception</p>
+<p>occurrence.</p>
+<p>5</p>
+<p>B</p>
+<p>‘Finally’ block is placed</p>
+<p>after ‘catch’ block.</p>
+<p>6</p>
+<p>A,B A ‘try’ block should have at least ‘catch’ or ‘finally’</p>
+<p>block.</p>
+<p>7</p>
+<p>A</p>
+<p>A ‘try’ block is followed by</p>
+<p>‘catch’ block and then</p>
+<p>‘finally’ block.</p>
+<p>8</p>
+<p>A</p>
+<p>Program will crash if there is no catch block to handle the
+exception.</p>
+<p><strong>Chapter 10</strong></p>
+<p><strong>Finally block &amp; Return keyword</strong> <strong>Q.1: How
+to abruptly stop an</strong> <strong>application execution?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>System.stop()</p>
+<p><strong>B</strong></p>
+<p>System.abort()</p>
+<p><strong>C</strong></p>
+<p>System.kill()</p>
+<p><strong>D</strong></p>
+<p>System.exit()</p>
+<p><span id="index_split_000.html_p42"></span> <strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: ‘finally’ block is executed even if</strong>
+<strong>method encounter ‘return’ keyword.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: ‘finally’ block is executed even if</strong></p>
+<p><strong>‘return’ keyword is executed in ‘catch’</strong></p>
+<p><strong>block.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: ‘finally’ block is executed when a</strong>
+<strong>program execution is aborted.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: ‘finally’ block is executed when a</strong>
+<strong>program encounters an exception in</strong></p>
+<p><strong>‘catch’ block.</strong></p>
+<p><span id="index_split_000.html_p43"></span><img src="index-43_1.jpg"
+class="calibre2" alt="Image 11" /></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong></strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>D</p>
+<p>System.exit() is used to</p>
+<p>abruptly stop a program.</p>
+<p>2</p>
+<p>A</p>
+<p>‘Finally’ block is executed even if program encounter</p>
+<p>‘return’ keyword in method.</p>
+<p>3</p>
+<p>A</p>
+<p>‘Finally’ block is executed even if program encounter</p>
+<p>‘return’ keyword in catch</p>
+<p>block.</p>
+<p>4</p>
+<p>B</p>
+<p>‘Finally’ block is not</p>
+<p>executed if program is</p>
+<p>aborted.</p>
+<p>5</p>
+<p>A</p>
+<p>‘Finally’ block is executed even if exception happens in a catch
+block.</p>
+<p><span id="index_split_000.html_p44"></span><strong>Chapter
+11</strong></p>
+<p><strong>Checked and Unchecked Exception</strong> <strong>Q.1: ………………
+exception is</strong> <strong>identified by the compiler</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Checked</p>
+<p><strong>B</strong></p>
+<p>Unchecked</p>
+<p><strong>C</strong></p>
+<p>Runtime</p>
+<p><strong>D</strong></p>
+<p>All of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: ……………… exception is not</strong> <strong>identified by
+the compiler</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Unchecked</p>
+<p><strong>B</strong></p>
+<p>Checked</p>
+<p><strong>C</strong></p>
+<p>Compiler</p>
+<p><strong>D</strong></p>
+<p>JVM</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: ………….. Exception has to be</strong> <strong>handled in a
+program.</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p45"></span><strong>A</strong></p>
+<p>Compiler</p>
+<p><strong>B</strong></p>
+<p>Checked</p>
+<p><strong>C</strong></p>
+<p>Unchecked</p>
+<p><strong>D</strong></p>
+<p>JVM</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: ………….. Exception need not be</strong>
+<strong>(compulsorily) handled in a program.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Compiler</p>
+<p><strong>B</strong></p>
+<p>Checked</p>
+<p><strong>C</strong></p>
+<p>JVM</p>
+<p><strong>D</strong></p>
+<p>Unchecked</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong></strong></p>
+<p><strong>Q.5: …………… keyword is used for</strong> <strong>declaring an
+exception for a method.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throw</p>
+<p><strong>B</strong></p>
+<p>Throws</p>
+<p><strong>C</strong></p>
+<p>Decl</p>
+<p><strong>D</strong></p>
+<p>Finally</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: Checked exception can derive</strong></p>
+<p><span id="index_split_000.html_p46"></span><strong>from …………. or
+……………. class</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Error</p>
+<p><strong>D</strong></p>
+<p>RuntimeException</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.7: How many exceptions can be</strong> <strong>declared
+using ‘throws’ keyword for a</strong> <strong>method?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>1</p>
+<p><strong>B</strong></p>
+<p>2</p>
+<p><strong>C</strong></p>
+<p>3</p>
+<p><strong>D</strong></p>
+<p>Any number</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.8: Checked exception is verified by</strong>
+<strong>compiler.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p47"></span><strong>Q.9: Unchecked
+exception derive from</strong></p>
+<p><strong>…………. class</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable</p>
+<p><strong>B</strong></p>
+<p>Exception</p>
+<p><strong>C</strong></p>
+<p>Error</p>
+<p><strong>D</strong></p>
+<p>RuntimeException</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.10: Which of following is not an</strong> <strong>unchecked
+exception?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>NullPointerException</p>
+<p><strong>B</strong></p>
+<p>ArithmeticException</p>
+<p><strong>C</strong></p>
+<p>ClassCastException</p>
+<p><strong>D</strong></p>
+<p>Exception</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.11: Which of following is not a</strong> <strong>checked
+exception?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>NullPointerException</p>
+<p><strong>B</strong></p>
+<p>ArithmeticException</p>
+<p><strong>C</strong></p>
+<p>ClassCastException</p>
+<p><strong>D</strong></p>
+<p>Exception</p>
+<p><span id="index_split_000.html_p48"></span> <strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans</strong></p>
+<p><strong>Explanation</strong></p>
+<p>1</p>
+<p>A</p>
+<p>Checked Exception is</p>
+<p>identified by the compiler.</p>
+<p>2</p>
+<p>A</p>
+<p>Unchecked exception is not</p>
+<p>identified by the compiler.</p>
+<p>3</p>
+<p>B</p>
+<p>Checked exception has to</p>
+<p>be handled (compulsory).</p>
+<p>4</p>
+<p>D</p>
+<p>Unchecked exception is not</p>
+<p>required to be compulsorily handled.</p>
+<p>5</p>
+<p>B</p>
+<p>‘Throws’ keyword is used</p>
+<p>for declaring an exception</p>
+<p>for a method.</p>
+<p>6</p>
+<p>A,B</p>
+<p>Checked Exception can</p>
+<p>derive from Throwable or</p>
+<p>Exception class</p>
+<p>7</p>
+<p>D</p>
+<p>Any number of exceptions</p>
+<p>can be declared using</p>
+<p>‘throws’ keyword.</p>
+<p>8</p>
+<p>A</p>
+<p>Checked exception is</p>
+<p>known at compile time.</p>
+<p>9</p>
+<p>D</p>
+<p>Unchecked exceptions</p>
+<p>derive from</p>
+<p>RuntimeException class</p>
+<p>10</p>
+<p>D</p>
+<p>Exception class is a</p>
+<p>checked exception.</p>
+<p><span id="index_split_000.html_p49"></span><img src="index-49_1.jpg"
+class="calibre2" alt="Image 12" /></p>
+<p>11</p>
+<p>A,B,C NullPointerException, ArithmeticException and</p>
+<p>ClassCastException are not</p>
+<p>checked exceptions.</p>
+<p><strong>Chapter 12</strong></p>
+<p><strong>Nested Exception</strong></p>
+<p><strong>Q.1: Java has support for nested</strong> <strong>exception
+handling.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>TRUE</p>
+<p><strong>B</strong></p>
+<p>FALSE</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: Upto what level of nesting of</strong> <strong>exception
+handling does Java support?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>1</p>
+<p><strong>B</strong></p>
+<p>2</p>
+<p><strong>C</strong></p>
+<p>3</p>
+<p><strong>D</strong></p>
+<p>Any Level</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p50"></span></p>
+<p><strong>Q.3: What is the output?</strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>static void performJob() {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>int j = 10/0;</strong></p>
+<p><strong>}catch(ArrayIndexOutOfBoundsException</strong> <strong>e)
+{</strong></p>
+<p><strong>System.out.println(“Handle</strong> <strong>the</strong></p>
+<p><strong>array</strong></p>
+<p><strong>carefully”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>performJob();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><strong>System.out.println(“There</strong> <strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>No output</p>
+<p><strong>B</strong></p>
+<p>Handle the array carefully</p>
+<p><strong>C</strong></p>
+<p>There is some problem in the code <strong>D</strong></p>
+<p>Division by zero</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: What is the output?</strong></p>
+<p><strong>class Program {</strong></p>
+<p><span id="index_split_000.html_p51"></span><strong>static void
+performJob() {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>int j = 10/0;</strong></p>
+<p><strong>}catch(ArrayIndexOutOfBoundsException</strong> <strong>e)
+{</strong></p>
+<p><strong>System.out.println(“Handle</strong> <strong>the</strong></p>
+<p><strong>array</strong></p>
+<p><strong>carefully”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“finally</strong></p>
+<p><strong>-</strong></p>
+<p><strong>performJob”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>performJob();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><strong>System.out.println(“There</strong> <strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong>System.out.println(“finally - main”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>No output</p>
+<p><strong>B</strong></p>
+<p>finally - performJob</p>
+<p>There is some problem in the code finally – main</p>
+<p><strong>C</strong></p>
+<p>finally - performJob</p>
+<p>finally – main</p>
+<p><strong>D</strong></p>
+<p>There is some problem in the code</p>
+<p><span id="index_split_000.html_p52"></span>finally – main finally -
+performJob</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: What is the output?</strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>static void performJob() {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>int j = 10/0;</strong></p>
+<p><strong>}catch(ArrayIndexOutOfBoundsException</strong> <strong>e)
+{</strong></p>
+<p><strong>System.out.println(“Handle</strong> <strong>the</strong></p>
+<p><strong>array</strong></p>
+<p><strong>carefully”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“finally</strong></p>
+<p><strong>-</strong></p>
+<p><strong>performJob”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>int ar[] = new int[1];</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>ar[1]=0;</strong></p>
+<p><strong>performJob();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><strong>System.out.println(“There</strong> <strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong>System.out.println(“finally - main”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><span id="index_split_000.html_p53"></span><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>No output</p>
+<p><strong>B</strong></p>
+<p>There is some problem in the code finally – main</p>
+<p><strong>C</strong></p>
+<p>finally - performJob</p>
+<p>There is some problem in the code finally – main</p>
+<p><strong>D</strong></p>
+<p>finally - performJob</p>
+<p>There is some problem in the code</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong></strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>A</p>
+<p>Java has support for</p>
+<p>exception handling</p>
+<p>2</p>
+<p>D</p>
+<p>Java exception can be nested upto any level.</p>
+<p>3</p>
+<p>C</p>
+<p>By computation the output is</p>
+<p>:</p>
+<p>There is some problem in</p>
+<p>the code</p>
+<p>4</p>
+<p>B</p>
+<p>By computation the output</p>
+<p>is:</p>
+<p>finally - performJob</p>
+<p>There is some problem in</p>
+<p>the code</p>
+<p>finally - main</p>
+<p><span id="index_split_000.html_p54"></span><img src="index-54_1.jpg"
+class="calibre2" alt="Image 13" /></p>
+<p>5</p>
+<p>B</p>
+<p>By computation the output is</p>
+<p>:</p>
+<p>There is some problem in</p>
+<p>the code</p>
+<p>finally - main</p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>Chapter 13</strong></p>
+<p><strong>‘Throw’ Keyword</strong></p>
+<p><strong>Q.1: Class derived from ………… can</strong> <strong>only be
+thrown</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Object</p>
+<p><strong>B</strong></p>
+<p>Throwable</p>
+<p><strong>C</strong></p>
+<p>GC</p>
+<p><strong>D</strong></p>
+<p>All of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: …………….. Keyword is used to</strong> <strong>raise an
+exception.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throw</p>
+<p><span id="index_split_000.html_p55"></span><strong>B</strong></p>
+<p>Throws</p>
+<p><strong>C</strong></p>
+<p>Raise</p>
+<p><strong>D</strong></p>
+<p>Signal</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: What is the output?</strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>throw new Exception();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><strong>System.out.println(“There</strong> <strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong>System.out.println(“finally - main”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>No output</p>
+<p><strong>B</strong></p>
+<p>There is some problem in the code <strong>C</strong></p>
+<p>There is some problem in the code finally – main</p>
+<p><strong>D</strong></p>
+<p>finally – main</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: What is output?</strong></p>
+<p><span id="index_split_000.html_p56"></span><strong>class Program
+{</strong></p>
+<p><strong>static void performJob() {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>throw</strong></p>
+<p><strong>new</strong></p>
+<p><strong>ArrayIndexOutOfBoundsException();</strong></p>
+<p><strong>}catch(ArrayIndexOutOfBoundsException</strong> <strong>e)
+{</strong></p>
+<p><strong>System.out.println(“Handle</strong> <strong>the</strong></p>
+<p><strong>array</strong></p>
+<p><strong>carefully”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“finally</strong></p>
+<p><strong>-</strong></p>
+<p><strong>performJob”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>performJob();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><strong>System.out.println(“There</strong> <strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong>System.out.println(“finally - main”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>finally - performJob</p>
+<p>finally – main</p>
+<p><strong>B</strong></p>
+<p>No output</p>
+<p><strong>C</strong></p>
+<p>Handle the array carefully</p>
+<p>finally - performJob</p>
+<p><span id="index_split_000.html_p57"></span><strong>D</strong></p>
+<p>Handle the array carefully</p>
+<p>finally - performJob</p>
+<p>finally - main</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: What is the output?</strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>static void performJob() {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>throw</strong></p>
+<p><strong>new</strong></p>
+<p><strong>ArrayIndexOutOfBoundsException();</strong></p>
+<p><strong>}catch(ArrayIndexOutOfBoundsException</strong> <strong>e)
+{</strong></p>
+<p><strong>throw new Exception();</strong>
+<strong>System.out.println(“Handle</strong> <strong>the</strong></p>
+<p><strong>array</strong></p>
+<p><strong>carefully”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“finally</strong></p>
+<p><strong>-</strong></p>
+<p><strong>performJob”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>performJob();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><strong>System.out.println(“There</strong> <strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong>System.out.println(“finally - main”);</strong></p>
+<p><strong>}</strong></p>
+<p><span id="index_split_000.html_p58"></span><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>No output</p>
+<p><strong>B</strong></p>
+<p>Compiler Error</p>
+<p><strong>C</strong></p>
+<p>Handle the array carefully</p>
+<p>finally - performJob</p>
+<p>finally - main</p>
+<p><strong>D</strong></p>
+<p>finally - performJob</p>
+<p>finally - main</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: What is the output?</strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>static void performJob() {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>throw</strong></p>
+<p><strong>new</strong></p>
+<p><strong>ArrayIndexOutOfBoundsException();</strong></p>
+<p><strong>}</strong></p>
+<p><strong>catch(ArrayIndexOutOfBoundsException</strong> <strong>e)
+{</strong></p>
+<p><strong>throw new Exception();</strong>
+<strong>System.out.println(“Handle</strong> <strong>the</strong></p>
+<p><strong>array</strong></p>
+<p><strong>carefully”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“finally</strong></p>
+<p><strong>-</strong></p>
+<p><strong>performJob”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>try {</strong></p>
+<p><span
+id="index_split_000.html_p59"></span><strong>performJob();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><strong>System.out.println(“There</strong> <strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong>System.out.println(“finally - main”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}class Program {</strong></p>
+<p><strong>static void performJob() {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>throw</strong></p>
+<p><strong>new</strong></p>
+<p><strong>ArrayIndexOutOfBoundsException();</strong></p>
+<p><strong>}catch(ArrayIndexOutOfBoundsException</strong> <strong>e)
+{</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>throw new Exception();</strong></p>
+<p><strong>}catch(Exception obj) {</strong></p>
+<p><strong>System.out.println(“This is</strong> <strong>inner
+exception”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>System.out.println(“Handle</strong> <strong>the</strong></p>
+<p><strong>array</strong></p>
+<p><strong>carefully”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“finally</strong></p>
+<p><strong>-</strong></p>
+<p><strong>performJob”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>try {</strong></p>
+<p><strong>performJob();</strong></p>
+<p><strong>} catch (Exception e) {</strong></p>
+<p><span
+id="index_split_000.html_p60"></span><strong>System.out.println(“There</strong>
+<strong>is</strong></p>
+<p><strong>some</strong></p>
+<p><strong>problem in the code”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>finally {</strong></p>
+<p><strong>System.out.println(“finally - main”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>No output</p>
+<p><strong>B</strong></p>
+<p>Compiler Error</p>
+<p><strong>C</strong></p>
+<p>This is inner exception</p>
+<p>finally - performJob</p>
+<p>finally - main</p>
+<p><strong>D</strong></p>
+<p>This is inner exception</p>
+<p>Handle the array carefully</p>
+<p>finally - performJob</p>
+<p>finally - main</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong></strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>B</p>
+<p>Class derived from</p>
+<p>‘Throwable’(or derived</p>
+<p>class) can only be thrown</p>
+<p>2</p>
+<p>A</p>
+<p>‘Throw’ keyword is used for raising an exception.</p>
+<p>3</p>
+<p>C</p>
+<p>By computation the output</p>
+<p><span id="index_split_000.html_p61"></span><img src="index-61_1.jpg"
+class="calibre2" alt="Image 14" /></p>
+<p>is:</p>
+<p>There is some problem in the code</p>
+<p>finally - main</p>
+<p>4</p>
+<p>D</p>
+<p>By computation the output is</p>
+<p>:</p>
+<p>Handle the array carefully</p>
+<p>finally - performJob</p>
+<p>finally - main</p>
+<p>5</p>
+<p>B</p>
+<p>Compiler Error</p>
+<p>6</p>
+<p>D</p>
+<p>By Computation the output</p>
+<p>is.</p>
+<p>This is inner exception</p>
+<p>Handle the array carefully</p>
+<p>finally - performJob</p>
+<p>finally - main</p>
+<p><strong>Chapter 14</strong></p>
+<p><strong>Exception Chaining</strong></p>
+<p><strong>Q.1: ………………. class has</strong></p>
+<p><strong>infrastructure support for exception</strong>
+<strong>chaining.</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p62"></span><strong>A</strong></p>
+<p>Exception</p>
+<p><strong>B</strong></p>
+<p>Throwable</p>
+<p><strong>C</strong></p>
+<p>Error</p>
+<p><strong>D</strong></p>
+<p>RuntimeException</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: getCause() method is declared in</strong></p>
+<p><strong>……………… class</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Object</p>
+<p><strong>B</strong></p>
+<p>Error</p>
+<p><strong>C</strong></p>
+<p>RuntimeException</p>
+<p><strong>D</strong></p>
+<p>Throwable</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: Identify the correct constructor for</strong></p>
+<p><strong>‘Throwable’ class.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable(String, Throwable) <strong>B</strong></p>
+<p>Throwable(String[], Throwable) <strong>C</strong></p>
+<p>Throwable(char[], Throwable) <strong>D</strong></p>
+<p>Throwable(char, Throwable)</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: Which method initializes the cause</strong></p>
+<p><span id="index_split_000.html_p63"></span><strong>of an
+exception?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>start Cause()</p>
+<p><strong>B</strong></p>
+<p>setCause()</p>
+<p><strong>C</strong></p>
+<p>setIssue()</p>
+<p><strong>D</strong></p>
+<p>initCause()</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: Identify the correct constructor for</strong></p>
+<p><strong>‘Throwable’ class.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Throwable(int)</p>
+<p><strong>B</strong></p>
+<p>Throwable(String[])</p>
+<p><strong>C</strong></p>
+<p>Throwable(Throwable)</p>
+<p><strong>D</strong></p>
+<p>Throwable()</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: initCause() method is declared in</strong></p>
+<p><strong>…………… class</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Object</p>
+<p><strong>B</strong></p>
+<p>Throwable</p>
+<p><strong>C</strong></p>
+<p>RuntimeException</p>
+<p><strong>D</strong></p>
+<p>Error</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p64"></span></p>
+<p><strong>Q.7: …………… method return the</strong> <strong>cause of a
+‘throwable’.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>getMsg()</p>
+<p><strong>B</strong></p>
+<p>getMessage()</p>
+<p><strong>C</strong></p>
+<p>getCause()</p>
+<p><strong>D</strong></p>
+<p>getReason()</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>B</p>
+<p>Throwable class has</p>
+<p>infrastructure for exception chaining.</p>
+<p>2</p>
+<p>D</p>
+<p>getCause() method is</p>
+<p>declared in Throwable class.</p>
+<p>3</p>
+<p>A</p>
+<p>Valid constructor is :</p>
+<p>Throwable(String,</p>
+<p>Throwable)</p>
+<p>4</p>
+<p>D</p>
+<p>initCause() method</p>
+<p>initializes the cause of an exception.</p>
+<p>5</p>
+<p>C,D Valid constructors are : Throwable(Throwable)</p>
+<p>Throwable()</p>
+<p>6</p>
+<p>B</p>
+<p>initCause() method is</p>
+<p><span id="index_split_000.html_p65"></span><img src="index-65_1.jpg"
+class="calibre2" alt="Image 15" /></p>
+<p>declared in Throwable class.</p>
+<p>7</p>
+<p>C</p>
+<p>getCause() method return the cause of a ‘throwable’.</p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>Chapter 15</strong></p>
+<p><strong>Try with Resource</strong></p>
+<p><strong>Q.1: In which version of Java was ‘try</strong> <strong>with
+resource’ introduced?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>5</p>
+<p><strong>B</strong></p>
+<p>6</p>
+<p><strong>C</strong></p>
+<p>7</p>
+<p><strong>D</strong></p>
+<p>8</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: How many resources can be</strong> <strong>created in a
+single try block?</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p66"></span><strong>A</strong></p>
+<p>None</p>
+<p><strong>B</strong></p>
+<p>2</p>
+<p><strong>C</strong></p>
+<p>3</p>
+<p><strong>D</strong></p>
+<p>Any</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: An object has to implement</strong></p>
+<p><strong>………………… or …………… to be</strong></p>
+<p><strong>eligible in “try with resource” block.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>AutoCloseable</p>
+<p><strong>B</strong></p>
+<p>Closeable</p>
+<p><strong>C</strong></p>
+<p>TryClose</p>
+<p><strong>D</strong></p>
+<p>Closed</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: Identify the method of</strong> <strong>AutoCloseable
+interface?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Close()</p>
+<p><strong>B</strong></p>
+<p>close()</p>
+<p><strong>C</strong></p>
+<p>Closing</p>
+<p><strong>D</strong></p>
+<p>Closed</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><span id="index_split_000.html_p67"></span><strong>Q.5: Identify the
+method of Closeable</strong> <strong>interface?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>closed()</p>
+<p><strong>B</strong></p>
+<p>closing()</p>
+<p><strong>C</strong></p>
+<p>close()</p>
+<p><strong>D</strong></p>
+<p>end()</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: The resources are closed in</strong></p>
+<p><strong>………… order when created in ‘try</strong> <strong>with
+resource’.</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Custom</p>
+<p><strong>B</strong></p>
+<p>Forward</p>
+<p><strong>C</strong></p>
+<p>Reverse</p>
+<p><strong>D</strong></p>
+<p>Conditional</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.7: What is the output</strong></p>
+<p><strong>import java.io.*;</strong></p>
+<p><strong></strong></p>
+<p><strong>class Shape implements Closeable {</strong></p>
+<p><strong>public void close() {</strong></p>
+<p><strong>System.out.println(“Shape</strong> <strong>object close is
+closed”);</strong></p>
+<p><strong>}</strong></p>
+<p><span id="index_split_000.html_p68"></span><strong>}</strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[]){</strong></p>
+<p><strong>try(Shape obj = new Shape())</strong></p>
+<p><strong>{</strong></p>
+<p><strong></strong></p>
+<p><strong>}catch(Exception e) {</strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“Exception</strong>
+<strong>happened”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>No Output</p>
+<p><strong>B</strong></p>
+<p>Compiler Error</p>
+<p><strong>C</strong></p>
+<p>Shape object close is closed <strong>D</strong></p>
+<p>Exception happened</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong></strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>C</p>
+<p>‘Try with resource’ was</p>
+<p>introduced in Java 7.</p>
+<p>2</p>
+<p>D</p>
+<p>Any number of resources</p>
+<p>can be created in a try.</p>
+<p>3</p>
+<p>A,B An object is only eligible in try with resource when it</p>
+<p>implements Closeable or</p>
+<p><span id="index_split_000.html_p69"></span><img src="index-69_1.jpg"
+class="calibre2" alt="Image 16" /></p>
+<p>AutoCloseable.</p>
+<p>4</p>
+<p>B</p>
+<p>AutoCloseable has only one</p>
+<p>method i.e. close()</p>
+<p>5</p>
+<p>C</p>
+<p>Closeable interface has only one method i.e. close().</p>
+<p>6</p>
+<p>C</p>
+<p>The objects are closed in the reverse order of declaration.</p>
+<p>7</p>
+<p>C</p>
+<p>The output is : Shape object close is closed</p>
+<p><strong>Chapter 16</strong></p>
+<p><strong>Overriding Exception</strong></p>
+<p><strong></strong></p>
+<p><strong>Q.1: What is the output?</strong></p>
+<p><strong>class Shape {</strong></p>
+<p><strong>void draw () {</strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>shape”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Circle extends Shape{</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>void</strong></p>
+<p><strong>draw()</strong></p>
+<p><strong>throws</strong></p>
+<p><strong>RuntimeException {</strong></p>
+<p><strong>System.out.println(“Drawing</strong></p>
+<p><span
+id="index_split_000.html_p70"></span><strong>Circle”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[]) {</strong></p>
+<p><strong>Circle obj = new Circle();</strong>
+<strong>obj.draw();</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>Compiler error</p>
+<p><strong>B</strong></p>
+<p>No output</p>
+<p><strong>C</strong></p>
+<p>Drawing shape</p>
+<p><strong>D</strong></p>
+<p>Drawing Circle</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: What is the output?</strong></p>
+<p><strong>class Shape {</strong></p>
+<p><strong>void draw () {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>shape”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Circle extends Shape{</strong></p>
+<p><strong>void draw() throws Exception {</strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>Circle”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><span id="index_split_000.html_p71"></span> <strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[])</strong></p>
+<p><strong>{</strong></p>
+<p><strong>Circle obj = new Circle();</strong>
+<strong>obj.draw();</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Compiler error</p>
+<p><strong>B</strong></p>
+<p>No output</p>
+<p><strong>C</strong></p>
+<p>Drawing shape</p>
+<p><strong>D</strong></p>
+<p>Drawing Circle</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: What is the output?</strong></p>
+<p><strong>class Shape {</strong></p>
+<p><strong>void draw () throws Exception {</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>shape”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Circle extends Shape{</strong></p>
+<p><strong>void draw() throws Throwable {</strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>Circle”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_000.html_p72"></span><strong>class Program
+{</strong></p>
+<p><strong>public static void main(String args[])</strong>
+<strong>throws Exception{</strong></p>
+<p><strong>Circle obj = new Circle();</strong>
+<strong>obj.draw();</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>Compiler error</p>
+<p><strong>B</strong></p>
+<p>No output</p>
+<p><strong>C</strong></p>
+<p>Drawing shape</p>
+<p><strong>D</strong></p>
+<p>Drawing Circle</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: What is the output?</strong></p>
+<p><strong>class Shape {</strong></p>
+<p><strong>void draw () throws Exception {</strong></p>
+<p><strong>System.out.println</strong></p>
+<p><strong>(“Drawing</strong></p>
+<p><strong>shape”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Circle extends Shape{</strong></p>
+<p><strong>void draw() throws Exception {</strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>Circle”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public</strong></p>
+<p><strong>static</strong></p>
+<p><strong>void</strong></p>
+<p><strong>main(String</strong></p>
+<p><strong>args[]) throws Exception{</strong></p>
+<p><span id="index_split_000.html_p73"></span> <strong>Circle obj = new
+Circle();</strong> <strong>obj.draw();</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>Compiler error</p>
+<p><strong>B</strong></p>
+<p>No output</p>
+<p><strong>C</strong></p>
+<p>Drawing shape</p>
+<p><strong>D</strong></p>
+<p>Drawing Circle</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: What is the output?</strong></p>
+<p><strong>class Shape {</strong></p>
+<p><strong>void draw () throws Exception {</strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>shape”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>class Circle extends Shape{</strong></p>
+<p><strong>void</strong></p>
+<p><strong>draw()</strong></p>
+<p><strong>throws</strong></p>
+<p><strong>RuntimeException {</strong></p>
+<p><strong>System.out.println(“Drawing</strong>
+<strong>Circle”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public</strong></p>
+<p><strong>static</strong></p>
+<p><strong>void</strong></p>
+<p><strong>main(String</strong></p>
+<p><strong>args[]) throws Exception{</strong></p>
+<p><strong>Circle obj = new Circle();</strong>
+<strong>obj.draw();</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><span id="index_split_000.html_p74"></span><strong>A</strong></p>
+<p>Compiler error</p>
+<p><strong>B</strong></p>
+<p>No output</p>
+<p><strong>C</strong></p>
+<p>Drawing shape</p>
+<p><strong>D</strong></p>
+<p>Drawing Circle</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong></strong></p>
+<p><strong>Rules for exceptions in overridden</strong>
+<strong>methods:</strong></p>
+<p>1. If the super class method ‘throws’ an exception then child class
+can ‘throws’</p>
+<p>the same exception or child class of that exception.</p>
+<p>2. If super class method does not ‘throws’</p>
+<p>any exception then the child class overridden method can ‘throws’</p>
+<p>unchecked exception.</p>
+<p>3. If checked exception is declared for a method then it should be
+raised (throw).</p>
+<p><strong></strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p><span id="index_split_000.html_p75"></span><img src="index-75_1.jpg"
+class="calibre2" alt="Image 17" /></p>
+<p>1</p>
+<p>D</p>
+<p>By computation the output</p>
+<p>is : Drawing Circle</p>
+<p>2</p>
+<p>A</p>
+<p>Compiler Error</p>
+<p>3</p>
+<p>A</p>
+<p>Compiler Error</p>
+<p>4</p>
+<p>D</p>
+<p>By computation the output</p>
+<p>is : Drawing Circle</p>
+<p>5</p>
+<p>D</p>
+<p>By computation the output</p>
+<p>is : Drawing Circle</p>
+<p><strong>Chapter 17</strong></p>
+<p><strong>User Defined Exception</strong></p>
+<p><strong>Q.1: How to create user defined</strong> <strong>checked
+exception?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Derive from Error class</p>
+<p><strong>B</strong></p>
+<p>Derive from Throwable class <strong>C</strong></p>
+<p>Derive</p>
+<p>from</p>
+<p>RuntimeException</p>
+<p>class</p>
+<p><strong>D</strong></p>
+<p>Derive from Object class</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.2: How to create user defined</strong></p>
+<p><span id="index_split_000.html_p76"></span><strong>unchecked
+exception?</strong></p>
+<p><strong></strong></p>
+<p><strong>A</strong></p>
+<p>Derive from Error class</p>
+<p><strong>B</strong></p>
+<p>Derive from Exception class <strong>C</strong></p>
+<p>Derive</p>
+<p>from</p>
+<p>RuntimeException</p>
+<p>class</p>
+<p><strong>D</strong></p>
+<p>Derive from Object class</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.3: What is the output?</strong></p>
+<p><strong>class MyException extends Object {</strong></p>
+<p><strong>MyExcetion(String str) {</strong></p>
+<p><strong>super(str);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[]){</strong></p>
+<p><strong>int i=10;</strong></p>
+<p><strong>int j=11;</strong></p>
+<p><strong>if (j&gt; i)</strong> <strong>throw new MyException(“j
+is</strong> <strong>greater”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>Compiler Error</p>
+<p><strong>B</strong></p>
+<p>Runtime Exception</p>
+<p><strong>C</strong></p>
+<p>J is greater</p>
+<p><span id="index_split_000.html_p77"></span> <strong></strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.4: What is the output?</strong></p>
+<p><strong>class MyException extends Exception {</strong></p>
+<p><strong>MyException(String str) {</strong></p>
+<p><strong>super(str);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[]){</strong></p>
+<p><strong>int i=10;</strong></p>
+<p><strong>int j=11;</strong></p>
+<p><strong>if (j&gt; i)</strong> <strong>throw new</strong>
+<strong>MyException(“j is greater”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>Compiler Error</p>
+<p><strong>B</strong></p>
+<p>Runtime Exception</p>
+<p><strong>C</strong></p>
+<p>J is greater</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.5: What is the output?</strong></p>
+<p><strong>class</strong></p>
+<p><strong>MyException</strong></p>
+<p><strong>extends</strong></p>
+<p><strong>RuntimeException {</strong></p>
+<p><strong>MyException(String str) {</strong></p>
+<p><span id="index_split_000.html_p78"></span>
+<strong>super(str);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[]){</strong></p>
+<p><strong>int i=10;</strong></p>
+<p><strong>int j=11;</strong></p>
+<p><strong>if (j&gt; i)</strong> <strong>throw new MyException(“j
+is</strong> <strong>greater”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>RuntimeException</p>
+<p><strong>B</strong></p>
+<p>Compiler Error</p>
+<p><strong>C</strong></p>
+<p>JVM Error</p>
+<p><strong>D</strong></p>
+<p>None of the above</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Q.6: What is the output?</strong></p>
+<p><strong>class MyException extends Exception {</strong></p>
+<p><strong>MyException(String str) {</strong></p>
+<p><strong>super(str);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong></strong></p>
+<p><strong>class Program {</strong></p>
+<p><strong>public static void main(String args[])</strong>
+<strong>throws Exception{</strong></p>
+<p><strong>int i=10;</strong></p>
+<p><span id="index_split_000.html_p79"></span> <strong>int
+j=11;</strong> <strong>if (j&gt; i)</strong> <strong>throw new
+MyException(“j is</strong> <strong>greater”);</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>A</strong></p>
+<p>Object Exception</p>
+<p><strong>B</strong></p>
+<p>JVM Error</p>
+<p><strong>C</strong></p>
+<p>Runtime Exception</p>
+<p><strong>D</strong></p>
+<p>Compiler Error</p>
+<p><strong></strong></p>
+<p><strong>&lt;–-Right Answer</strong></p>
+<p><strong>Answers:</strong></p>
+<p><strong>Q.No Ans Explanation</strong></p>
+<p>1</p>
+<p>B</p>
+<p>User defined checked</p>
+<p>exception is created by</p>
+<p>deriving from Throwable</p>
+<p>class.</p>
+<p>2</p>
+<p>C</p>
+<p>User defined unchecked</p>
+<p>exception is created by</p>
+<p>deriving from</p>
+<p>RuntimeException class.</p>
+<p>3</p>
+<p>A</p>
+<p>By computation the output is</p>
+<p>:</p>
+<p>Compiler Error</p>
+<p>4</p>
+<p>A</p>
+<p>By computation the output is</p>
+<p>:</p>
+<p>Compiler Error</p>
+<p>5</p>
+<p>A</p>
+<p>By computation the output is</p>
+<p><span id="index_split_000.html_p80"></span><img src="index-80_1.jpg"
+class="calibre2" alt="Image 18" /></p>
+<p>:</p>
+<p>Runtime Exception</p>
+<p>6</p>
+<p>C</p>
+<p>By computation the output is</p>
+<p>:</p>
+<p>Runtime Exception</p>
+<p><span id="index_split_000.html_outline"></span></p>
+<p><span id="index_split_001.html"></span></p>
+<h1 class="calibre4" id="index_split_001.html_calibre_pb_0">Document
+Outline</h1>
+<ul>
+<li><a href="#index_split_000.html_p5">Chapter 1 Software Setup</a></li>
+<li><a href="#index_split_000.html_p10">Chapter 2 What is
+Exception?</a></li>
+<li><a href="#index_split_000.html_p14">Chapter 3 What is Exception
+Handling?</a></li>
+<li><a href="#index_split_000.html_p16">Chapter 4 Java Exception
+Hierarchy</a></li>
+<li><a href="#index_split_000.html_p24">Chapter 5 Try and Catch
+Blocks</a></li>
+<li><a href="#index_split_000.html_p28">Chapter 6 Exception Handling
+API</a></li>
+<li><a href="#index_split_000.html_p31">Chapter 7 Multiple
+Catch</a></li>
+<li><a href="#index_split_000.html_p34">Chapter 8 Multiple
+Exceptions</a></li>
+<li><a href="#index_split_000.html_p37">Chapter 9 Finally Block</a></li>
+<li><a href="#index_split_000.html_p41">Chapter 10 Finally block &amp;
+Return keyword</a></li>
+<li><a href="#index_split_000.html_p44">Chapter 11 Checked and Unchecked
+Exception</a></li>
+<li><a href="#index_split_000.html_p49">Chapter 12 Nested
+Exception</a></li>
+<li><a href="#index_split_000.html_p54">Chapter 13 'Throw'
+Keyword</a></li>
+<li><a href="#index_split_000.html_p61">Chapter 14 Exception
+Chaining</a></li>
+<li><a href="#index_split_000.html_p65">Chapter 15 Try with
+Resource</a></li>
+<li><a href="#index_split_000.html_p69">Chapter 16 Overriding
+Exception</a></li>
+<li><a href="#index_split_000.html_p75">Chapter 17 User Defined
+Exception</a></li>
+</ul>
+</p>

@@ -1,0 +1,78 @@
+name: INTRODUCTION TO JAVA
+name_cn: Java 入门指南
+slug: introduction-to-java
+toc:
+- - '#'
+  - 第二章：安装 Java
+- - '###'
+  - 第一 步：推荐的 Java 版本
+- - '###'
+  - 第二 步：检查安装
+- - '###'
+  - 第 3 步：安装 Java
+- - '####'
+  - 在 Ubuntu 上安装 Java
+- - '###'
+  - 如果你倾向于使用 Oracle Java 发行版
+- - '###'
+  - 你也可以备选使用以下命令
+- - '###'
+  - 最后一步：检查安装问题和其他操作系统
+- - '#'
+  - 第 3 章：Java 语言基础结构
+- - '#'
+  - 第 4 章：接口 (INTERFACES)
+- - '##'
+  - 什么是 Java 接口？
+- - '##'
+  - 接口中的抽象方法、默认方法和静态方法
+- - '##'
+  - 实现接口 (Implementing Interfaces)
+- - '##'
+  - 使用默认方法演进接口
+- - '###'
+  - 方法的多重继承
+- - '##'
+  - 函数接口
+- - '#'
+  - 第 5 章：JAVA 中的注解
+- - '#'
+  - 第 7 章：修饰符 (MODIFIERS)
+- - '#'
+  - 第 8 章：导入语句及更多 Java 语言结构
+- - '#'
+  - 第 9 章：速查表 (CHEATS)
+- - '#'
+  - 第十章：集成环境
+- - '###'
+  - 类型转换
+- - '####'
+  - '[字符串转换为数字](https://www.vogella.com/tutorials/JavaIntroduction/article.html#stringtonumber)'
+- - '####'
+  - '[Double 转 int](https://www.vogella.com/tutorials/JavaIntroduction/article.html#conversion_toint)'
+- - '####'
+  - '[SQL 日期转换](https://www.vogella.com/tutorials/JavaIntroduction/article.html#conversion_sqldate)'
+- - '###'
+  - 以下应该用于将 `Date` 转换为 SQL Date：
+- - '#'
+  - 第十一章：Java 语句
+- - '####'
+  - if-then 和 if-then-else
+- - '####'
+  - switch
+- - '##'
+  - 布尔运算
+- - '###'
+  - 布尔运算表
+- - '#'
+  - 第 12 章：JAVA 中的循环
+- - '#'
+  - 第 13 章：数组
+- - '#'
+  - 第 15 章：LAMBDAS
+- - '#'
+  - 第 16 章：STREAMS（流）
+- - '###'
+  - '17: OPTIONAL'
+- - '#'
+  - 第 19 章：JAVA 练习

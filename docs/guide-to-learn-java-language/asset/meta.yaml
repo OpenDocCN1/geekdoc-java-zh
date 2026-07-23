@@ -1,0 +1,30 @@
+name: Guide to Learn Java Language
+name_cn: Java 语言入门指南
+slug: guide-to-learn-java-language
+toc:
+- - '#'
+  - Java 语言入门指南
+- - '##'
+  - 第一章：历史
+- - '###'
+  - 从 Oak 到 Java 的历史
+- - '###'
+  - 为什么 Java 命名为 "Oak"?
+- - '###'
+  - 为什么 Java 编程命名为 "Java"?
+- - '###'
+  - Java 版本历史
+- - '##'
+  - 第二章：版本
+- - '###'
+  - Java 版本
+- - '####'
+  - Java SE (Java 平台标准版)
+- - '####'
+  - Java EE (Java 平台企业版)
+- - '####'
+  - Java ME (Java 平台微型版)
+- - '####'
+  - Java FX (Java 舞台特效)
+- - '###'
+  - Java 版本发布历史

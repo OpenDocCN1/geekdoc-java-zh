@@ -1,0 +1,967 @@
+- "# Java 快速查表：基础 Java 语法详解，参考指南\n\n\n\n![](img/cover00250.jpeg)\n\n\n## 关于本书\n本书涵盖了基础\
+  \ Java 语法。我们可以快速参考最有帮助的编程语法，例如常用命令语法、字符串函数语法、集合函数语法、类与对象语法等……所有这些语法对于编程都非常有用。\n\n\
+  我们可以将此书视为一本基础语法手册，因为它的条目是按字母顺序排列的，方便我们轻松参考重要的语法。\n\n无论现在还是未来，这本 Java 语法书都能为我们的学习和工作编码提供巨大的帮助。\n\
+  \n## 免责声明\n本书仅作为基础语法手册；它不能包含该主题的所有条目。其目的是作为快速查表书籍的补充，而不是完整的 Java 字典。\n\n\n\n# 附录\n\
+  \n- Java 关键字\n- 数据类型\n- 算术运算符\n- 赋值运算符\n- 逻辑运算符\n- 比较运算符\n- 条件运算符\n- 重载与重写\n- 默认、公共、受保护\n\
+  - 抽象、接口\n- 数据类型\n- 修饰符\n- 日期、文件\n- 语法\n\n# 逻辑运算符\n\n## `&` 语法\n`&` 用于位与运算。如果两个位都为\
+  \ 1，则返回 1；如果其中一位为假，返回 0。\n\n例如：\n```java\npublic class Main {\n    public static\
+  \ void main(String[] args) {\n        int x = 100, y = 90, z = 60;\n        System.out.println(x\
+  \ & y);\n    }\n}\n```\n输出：`92`\n\n## `|` 语法\n`|` 用于位或运算。如果其中一个位为 1，则返回 1；如果所有位均为假，返回\
+  \ 0。\n\n例如：\n```java\npublic class Main {\n    public static void main(String[]\
+  \ args) {\n        int x = 4, y = 6;\n        System.out.println(x | y);\n    }\n\
+  }\n```\n输出：`6`\n\n## `^` 语法\n`^` 用于位异异运算。如果位不同，则返回 1，否则返回 0。\n\n例如：\n```java\npublic\
+  \ class Main {\n    public static void main(String[] args) {\n        int x = 4,\
+  \ y = 6;\n        System.out.println(x ^ y);\n    }\n}\n```\n输出：`2`\n\n## `<<` 语法\n\
+  `<<` 用于左移。它将所有位向左移动指定的位数。\n\n例如：\n```java\npublic class Main {\n    public static\
+  \ void main(String[] args) {\n        int operand = 2;\n        System.out.println(operand\
+  \ << 2);\n    }\n}\n```\n输出：`8`\n\n## `>>` 语法\n`>>` 用于右移。它将所有位向右移动指定的位数。\n\n例如：\n\
+  ```java\npublic class Main {\n    public static void main(String[] args) {\n   \
+  \     int operand = 8;\n        System.out.println(operand >> 2);\n    }\n}\n```\n\
+  输出：`2`\n\n## `>>>` 语法\n`>>>` 用于无符号右移。它将所有位向右移动指定的位数。左侧的空位用 0 填充。\n\n例如：\n无符号右移：\n\
+  -2 = `11111110`（二进制），`-2 >>> 1` 返回 `01111111`\n\n## `abs()` 语法\n`Math.abs(number)`\
+  \ 返回数字的绝对值。\n\n例如：\n```java\npublic class Main {\n    public static void main(String[]\
+  \ args) {\n        System.out.println(Math.abs(-168.88));\n        System.out.println(Math.abs(168.88));\n\
+  \    }\n}\n```\n输出：\n`168.88`\n`168.88`\n\n### `abstract` 语法\n`abstract` 用于类或方法。抽象类作为父类工作，可被子类扩展。子类的方法将重写抽象类的抽象方法。`abstract\
+  \ class` 无法创建任何对象。`abstract method` 仅用于抽象类；它是没有方法体的空方法。\n\n```java\nabstract class\
+  \ Book { // 创建一个抽象类\n    abstract void read(); // 创建一个抽象方法\n}\n\nclass eBook extends\
+  \ Book { // 扩展父类\n    void read() { // 重写抽象方法\n```\n\n\n\n```java\nSystem.out.println(\"\
+  I override that abstract method.\");\n}\n\npublic class AbstractDemo {\n    public\
+  \ static void main(String[] args) {\n        eBook obj = new eBook();\n        obj.read();\n\
+  \    }\n}\n```\n// 输出: I override that abstract method.\n\n---\n\n## acos() 语法\n\
+  \n`Math.acos(number)`\n\n// 返回数字的余弦值\n\ne.g.\n```java\npublic class Main {\n   \
+  \ public static void main(String[] args) {\n        System.out.println(Math.acos(0.88));\n\
+  \        System.out.println(Math.acos(-0.88));\n        System.out.println(Math.acos(0));\n\
+  \        System.out.println(Math.acos(-1));\n        System.out.println(Math.acos(1));\n\
+  \    }\n}\n```\n// 输出:\n0.4949341263408955\n2.646658527248898\n1.5707963267948966\n\
+  3.141592653589793\n0.0\n\n---\n\n## addExact() 语法\n\n`Math.addExact(num1, num2)`\n\
+  \n// 返回两个数字之和\n\ne.g.\n```java\nclass Main {\n    public static void main(String[]\
+  \ args) {\n        int x = 36;\n        int y = 52;\n        System.out.println(Math.addExact(x,\
+  \ y)); \n    }\n}\n```\n// 输出: 88\n\n---\n\n## 算术运算符语法\n\n算术运算符意味着 `+`, `-`, `*`,\
+  \ `/`, `%`, `++`, `--`\n\n// `%` 获取余数。\n// `++` 增加 1\n// `--` 减 1。\n\ne.g.\n```java\n\
+  public class Main {\n    public static void main(String[] args) {\n        int x1\
+  \ = 10; int y1 = 2;\n        System.out.println(x1 + y1); // 10+2=12\n        int\
+  \ x2 = 10; int y2 = 2;\n        System.out.println(x2 - y2); // 10-2=8\n       \
+  \ int x3 = 10; int y3 = 2;\n        System.out.println(x3 * y3); // 10*2=20\n  \
+  \      int x4 = 10; int y4 = 2;\n        System.out.println(x4 / y4); // 10/2=5\n\
+  \        int x5 = 10; int y5 = 2;\n        System.out.println(x5 % y5); // 10%2=0\n\
+  \        int x6 = 10;\n        System.out.println(++x6); // 10+1=11\n        int\
+  \ x7 = 10;\n        System.out.println(--x7); // 10-1=9\n    }\n}\n```\n\n---\n\n\
+  ## 数组语法\n\n`int array-name[] = {\"value0\", \"value1\", \"value2\",…};`\n\n// 创建一个数组\n\
+  \ne.g.\n```java\nint arr[] = { 10, 11, 12, 13 }; // 创建一个数组\n```\n// 上述代码创建了一个名为\
+  \ `arr` 的数组，它有四个元素：\n- 编号 0 的元素是 `arr[0]`，值为 10。Key 为 0。\n- 编号 1 的元素是 `arr[1]`，值为\
+  \ 11。Key 为 1。\n- 编号 2 的元素是 `arr[2]`，值为 12。Key 为 2。\n- 编号 3 的元素是 `arr[3]`，值为 13。Key\
+  \ 为 3。\n\n在数组中，Key 的别名是“index（索引）”。Index 的别名是“key”。\n请注意 index 从 0 开始。\n\n---\n\n\
+  ## 数组语法\n\n- `int array-name[] = new int [number of elements];`\n- `int array-name[index0]\
+  \ = \"value0\";`\n- `int array-name[index1] = \"value1\";`\n- `int array-name[index2]\
+  \ = \"value2\";`\n\n// 创建一个数组\n\ne.g.\n```java\nint arr[] = new int [3]; // 创建一个数组\n\
+  arr[0] = 10;\narr[1] = 20;\narr[2] = 30;\n```\n// 上述代码创建了一个数组，数组名为 `arr`，它有三个元素：`arr[0]`、`arr[1]`、`arr[2]`。它们的索引是\
+  \ 0, 1 和 2。它们的值是 10, 20 和 30。请注意索引数字从 0 开始。\n\n---\n\n## 数组元素语法\n\n`int value =\
+  \ array[index];`\n\n// 从元素中获取值。\n\n`int array[index] = value;`\n\n// 给元素设置一个值。\n\
+  \ne.g.\n```java\nint myArr[] = {10, 20, 300, 40, 50};\nint val = myArr[2]; // 从元素中获取值。\n\
+  System.out.println(val);\n```\n// 输出: 300\n\ne.g.\n```java\nint myNum[] = new int\
+  \ [5];\nmyNum[2] = 80; // 给元素设置一个值。\nSystem.out.println(myNum[2]);\n```\n// 输出:\
+  \ 80\n\n---\n\n## 数组长度语法\n\n`array_name.length;`\n\n// 返回数组元素的总数。\n\ne.g.\n```java\n\
+  public class ArrLen {\n    public static void main(String[] args) {\n        int\
+  \ myArr[] = {100, 200, 300}; // 创建数组“myArr”\n        int len = myArr.length; //\
+  \ 获取数组长度\n        System.out.print(len);\n    }\n}\n```\n// 输出: 3\n\n---\n\n## 数组排序语法\n\
+  \n`Arrays.sort(array_name);`\n\n// 对数组排序并显示结果。\n在使用 `Arrays.sort()` 之前，必须 `import\
+  \ java.util.Arrays;`。\n\ne.g.\n```java\npackage try;\nimport java.util.Arrays;\n\
+  public class SortArr {\n    public static void main(String[] args) {\n        String\
+  \ arr[] = {\"Cod\", \"App\", \"Bay\"};\n        Arrays.sort(arr); // 排序数组\n    \
+  \    for(int n=0; n<arr.length; n++) { // 运行次数\n            System.out.print(arr[n]\
+  \ + \" \");\n        }\n    }\n}\n```\n// 输出: App Bay Cod \n\n---\n\n## ArrayList\
+  \ 语法\n\n`ArrayList<String> obj = new ArrayList<>();`\n\n// 创建 ArrayList 对象\n`ArrayList`\
+  \ 类是可调整的数组，可以修改大小。\n\ne.g.\n```java\nimport java.util.ArrayList;\npublic class Main\
+  \ {\n    public static void main(String[] args) {\n        ArrayList<String> colors\
+  \ = new ArrayList<>();\n        colors.add(\"Red\"); // 添加元素\n        colors.add(\"\
+  Yellow\");\n        colors.add(\"Green\");\n        System.out.println(colors);\
+  \ // 显示值\n        for (int i = 0; i < colors.size(); i++) { // 遍历\n            System.out.println(colors.get(i));\n\
+  \        }\n        System.out.println(colors.get(0)); // 获取元素\n        colors.set(1,\
+  \ \"White\"); // 设置元素值\n        System.out.println(colors);\n        colors.remove(2);\
+  \ // 删除元素值\n        System.out.println(colors);\n        System.out.println(colors.size());\
+  \ // 获取 ArrayList 大\n        colors.clear(); // 清除所有元素\n        System.out.println(colors);\n\
+  \    }\n}\n```\n// 输出:\n[Red, Yellow, Green]\nRed\nYellow\nGreen\n[Red, White]\n\
+  2\n[]\n\n---\n\n## asin() 语法\n\n`Math.asin(number)`\n\n// 返回数字的正弦值\n\ne.g.\n```java\n\
+  public class Main {\n    public static void main(String[] args) {\n        System.out.println(Math.asin(0.88));\n\
+  \        System.out.println(Math.asin(-0.88));\n    }\n}\n```\n// 输出: 0.9688918399818517\n\
+  -0.9688918399818507\n\n---\n\n## 断言语法\n\n`assert condition: \"message\";`\n\n//\
+  \ 断言通过检查我们假设为真来检测任何问题。\n// 如果条件为假，JVM 将停止程序。\n// 运行文件时需要使用 `java -ea`。\n\ne.g.\n\
+  ```java\nimport java.util.Scanner;\npublic class Assertion {\n    public static\
+  \ void main(String args[]) {\n        int value = 100;\n        assert value > 100\
+  \ : \"The value is not greater than 100\";\n        System.out.println(\"The value\
+  \ is \" + value);\n    }\n}\n```\n// 输出: Exception in thread \"main\" java.lang.AssertionError:\
+  \ The value is not greater than 100\n\n---\n\n## 赋值运算符\n\n赋值运算符意味着 `=`, `+=`, `-=`,\
+  \ `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `>>=`, `<<=`。\n\ne.g.\n```java\npublic class\
+  \ Main {\n    public static void main(String[] args) {\n        int n1 = 6; n1 +=\
+  \ 2;\n        System.out.println(n1); // n1 = 6+2, 8\n        int n2 = 6; n2 -=\
+  \ 2;\n        System.out.println(n2); // n2 = 6-2, 4\n        int n3 = 6; n3 *=\
+  \ 2;\n        System.out.println(n3); // n3 = 6*2, 12\n        int n4 = 6; n4 /=\
+  \ 2;\n        System.out.println(n4); // n4 = 6/2, 3\n        int n5 = 6; n5 %=\
+  \ 2;\n        System.out.println(n5); // n5 = 6%2, 0\n        int n6 = 6; n6 &=\
+  \ 2;\n        System.out.println(n6); // n6 = 6&2, 2\n        int n7 = 6; n7 |=\
+  \ 2;\n        System.out.println(n7); // n7 = 6|2, 6\n        int n8 = 6; n8 ^=\
+  \ 2;\n        System.out.println(n8); // n8 = 6², 4\n        int n9 = 6; n9 >>=\
+  \ 2;\n        System.out.println(n9); // n9 = 6>>2, 1\n        int n10 = 6; n10\
+  \ <<= 2;\n        System.out.println(n10); // n10 = 6<<2, 24\n    }\n}\n```\n\n\n\
+  \n\n\n## atan() 语法\n\nsyntax: `Math.atan(number)`\n\n// 返回介于 `-PI/2` 和 `PI/2` 弧之间的数字的正反正函数值\n\
+  \ne.g.\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    double x = 0.88;\n    double y = 0.0;\n    double z = 1.0;\n    System.out.println(Math.atan(x));\
+  \ \n    System.out.println(Math.atan(y)); \n    System.out.println(Math.atan(z));\
+  \ \n  }\n}\n```\n\n// 输出:\n0.7216548508647612\n0.0\n0.7853981633974483\n\n---\n\n\
+  ## atan2() 语法\n\nsyntax: `Math.atan2(y, x)`\n\n// 通过将直角坐标 `(x, y)` 转换为极坐标 `(r, theta)`\
+  \ 来返回角度 `theta`。\n\ne.g.\n```java\nclass Main {\n  public static void main(String[]\
+  \ args) {\n    double x = 4.2;\n    double y = 5.9;\n    double theta = Math.atan2(y,\
+  \ x);\n    System.out.println(theta);              \n    System.out.println(Math.toDegrees(theta));\
+  \    \n  }\n}\n```\n\n// 输出:\n0.9521519758701495\n54.554289672401765\n\n---\n\n\
+  ## boolean 语法\n\nsyntax: `boolean variable`\n\n// 一种具有 `true` 或 `false` 值的数据类型\n\
+  \ne.g.\n```java\nboolean good = true;\nboolean bad = false;   \nSystem.out.println(good);\n\
+  System.out.println(bad);\n```\n// 输出: true, false\n\n---\n\n## break 语法\n\nsyntax:\
+  \ `break;`\n\n// 终止循环或 `switch` 块\n\ne.g.\n```java\nfor (int n = 1; n < 8; n++)\
+  \ {\n  if (n == 6) {\n    break;\n  }\n  System.out.print(n);\n}\n```\n// 输出: 12345\n\
+  \n---\n\n## byte 语法\n\nsyntax: `byte variable`\n\n// 一种从 `-128` 到 `127` 的数字数据类型\n\
+  \ne.g.\n```java\nbyte myNum = 88;\nSystem.out.println(myNum);\n```\n// 输出: 88\n\n\
+  ---\n\n## case 语法\n\nsyntax: `case value:`\n\n// 在 `switch` 语句中标记代码块\n\ne.g.\n```java\n\
+  int number = 2;\nswitch (number) {\n  case 1:\n    System.out.println(\"Number 1\"\
+  );\n    break;\n  case 2:\n    System.out.println(\"Number 2\");\n    break;\n}\n\
+  ```\n// 输出: Number 2\n\n---\n\n## catch 语法\n\nsyntax: `catch (Exception e)`\n\n\
+  // 捕获从 `try` 语句抛出的异常\n\ne.g.\n```java\ntry {\n    int[] arr = {10, 20, 30};\n  \
+  \  System.out.println(arr[5]);\n}\ncatch (Exception e) {\n    System.out.println(\"\
+  Out of range!\");\n}\n```\n// 输出: Out of range!\n\n---\n\n## cbrt() 语法\n\nsyntax:\
+  \ `Math.cbrt(number)`\n\n// 返回数字的立方根值\n\ne.g.\n```java\nclass Main {\n  public static\
+  \ void main(String[] args) {\n    double a = 125.0;\n    double b = -27;\n    double\
+  \ c = 0.0;\n    System.out.println(Math.cbrt(a)); \n    System.out.println(Math.cbrt(b));\
+  \ \n    System.out.println(Math.cbrt(c)); \n  }\n}\n```\n// 输出:\n5.0\n-3.0\n0.0\n\
+  \n---\n\n## ceil() 语法\n\nsyntax: `Math.ceil(number)`\n\n// 返回大于或等于其参数的最近整数。\n\n\
+  e.g.\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    double num = 3.14;\n    System.out.println(Math.ceil(num));\n  }\n}\n```\n\
+  // 输出: 4.0\n\n---\n\n## char 语法\n\nsyntax: `char variable`\n\n// 用于单个字符的数据类型\n\n\
+  e.g.\n```java\nchar ch = 'C';\nSystem.out.println(ch);\n```\n// 输出: C\n\n---\n\n\
+  ## charAt() 语法\n\nsyntax: `string.charAt(index)`\n\n// 返回指定索引处的字符\n\ne.g.\n```java\n\
+  public class Main{\n  public static void main(String []args){\n    String str =\
+  \ \"kindle\";\n    char c = str.charAt(2);\n    System.out.println(c);\n  }\n}\n\
+  ```\n// 输出: n\n\n---\n\n## class 语法\n\nsyntax:\n```java\nclass Class_name {\n  variable;\n\
+  \  method_name() { }\n}\n```\n`class` 是对象的模板，并用于创建对象。`class Class_name` 定义了一个类。\n\
+  \ne.g.\n```java\npublic class MyClass { // 定义一个类\n  int num = 100;\n  public static\
+  \ void main(String[] args) {\n    MyClass myObj = new MyClass(); // 创建一个对象\n   \
+  \ System.out.println(myObj.num);\n  }\n}\n```\n// 输出: 100\n\n---\n\n## class 对象\
+  \ 语法\n\nsyntax:\n```java\nclass Class_name { // 定义一个类\n}\nobj = new Class_name();\
+  \ // 创建一个对象\n```\n\ne.g.\n```java\nclass Colour { // 定义一个类\n  String co1, co2;\n\
+  \  void bright () { \n    System.out.println(\"This flower is \" + co1);\n    System.out.println(\"\
+  That flower is \" + co2);\n  }\n  public static void main(String[] args) {\n   \
+  \ Colour obj = new Colour(); // 创建一个对象\n    obj.co1= \"red.\";  obj.co2=\"blue.\"\
+  ; // 引用\n    obj.bright (); // 对象引用一个方法\n  }\n}\n```\n// 输出:\nThis flower is red.\n\
+  That flower is blue.\n\n---\n\n## attribute 语法\n\nsyntax:\n```java\nclass Class_name\
+  \ {\n  variable1;\n  variable2;\n}\n```\n`class Class_name` 定义了属性 `variable1` 和\
+  \ `variable2`。\n\ne.g.\n```java\npublic class Main {\n  int num = 10;\n  public\
+  \ static void main(String[] args) {\n    Main obj = new Main();\n    System.out.println(obj.num);\n\
+  \  }\n}\n```\n// 输出: 10\n\n---\n\n## class 对象 语法\n\nsyntax:\n```java\npublic class\
+  \ Main {\n  int num = 10;\n}\n```\n创建一个 `Main` 类。\n```public static void main(String[]\
+  \ args) {\n  Main obj = new Main();\n  System.\n.\n(obj.num: 10\n\n---\n\n## codePointAt()\
+  \ 语法\n\nsyntax: `string.codePointAt(index)`\n\n// 返回指定索引处的 Unicode 值。\n\ne.g.\n\
+  ```java\npublic class Main{\n  public static void main(String []args){\n    String\
+  \ str = \"kindle\";\n    int u = str.codePointAt(2);\n    System.out.println(u);\n\
+  \  }\n}\n```\n// 输出: 110\n\n---\n\n## codePointBefore() 语法\n\nsyntax: `string.codePointBefore(index)`\n\
+  \n// 返回指定索引之前的 Unicode 值。\n\ne.g.\n```java\npublic class Main{\n  public static\
+  \ void main(String []args){\n    String str = \"kindle\";\n    int u = str.codePointBefore(2);\n\
+  \    System.out.println(u);\n  }\n}\n```\n// 输出: 105\n\n---\n\n## codePointCount()\
+  \ 语法\n\nsyntax: `string.codePointCount(beginIndex, endIndex)`\n\n// 返回字符串指定范围内的\
+  \ Unicode 值数量。\n\ne.g.\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    String str = \"Hello World\";\n    int num = str.codePointCount(0,\
+  \ 8);\n    System.out.println(num);\n  }\n}\n```\n// 输出: 8\n\n---\n\n## comment\
+  \ 语法\n\n单行注释以两个斜杠 `//` 开始。多行注释以 `/*` 开始并以 `*/` 结束。\n\ne.g.\n```java\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    // 这是一个单行注释\n    System.out.println(\"\
+  Hello World\");\n\n    /* 这是一个多行注释。\n    此程序将打印我们的 Hello World*/\n  }\n}\n```\n\
+  // 输出: Hello World\n\n---\n\n## compareTo() 语法\n\nsyntax: `str1.compareTo(str2)`\n\
+  \n根据 Unicode 值按字母顺序比较两个字符串。如果两个字符串相等，返回零；如果不相等，返回非零。如果第一个字符串的 Unicode 值大于第二个字符串，则返回正值。如果第一个字符串的\
+  \ Unicode 值小于第二个字符串，则返回负值。\n\ne.g.\n```java\npublic class Main {\n  public static\
+  \ void main(String[] args) {\n    String str1 = \"vacation\";\n    String str2 =\
+  \ \"vocation\";\n    System.out.println(str1.compareTo(str2));\n  }\n}\n```\n//\
+  \ 输出: -14\n\n---\n\n## compareToIgnoreCase() 语法\n\n\n\n\n\n### `str1.compareToIgnoreCase(str2)`\n\
+  \n// 根据 Unicode 值对两个字符串进行字母顺序比较，忽略大小写差异。\n// 如果两个字符串相等，返回零；如果两个字符串不相等，返回非零。\n//\
+  \ 如果第一个字符串的 Unicode 值大于第二个字符串，返回一个正值。\n// 如果第一个字符串的 Unicode 值小于第二个字符串，返回一个负值。\n\n\
+  e.g. \n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    String str1 = \"JQuery in 8 Hours\";\n    String str2 = \"jQuery in 8 hours\"\
+  ;\n    System.out.println(str1.compareToIgnoreCase(str2));\n  }\n}\n```\n// 输出:\
+  \ 0\n\n---\n\n### `concat()` 语法:\n\n`str1.concat(str2)`\n\n// 拼接两个字符串\n\ne.g.\n\
+  ```java\npublic class Main {\n  public static void main(String[] args) {\n    String\
+  \ str1 = \"Python \";\n    String str2 = \"Syntax Book\";\n    System.out.println(str1.concat(str2));\n\
+  \  }\n}\n```\n// 输出: Python Syntax Book\n\n---\n\n### 条件运算符语法:\n\n`(布尔表达式) ? (如果为真则执行此操作)\
+  \ : (如果为假则执行此操作);`\n\n// 根据布尔表达式的结果执行执行语句中的之一\n\ne.g.\n```java\nint a=100; int b=300;\n\
+  String outcome1 = (a<b) ? \"orange\" : \"pineapple\";\nSystem.out.print ( outcome1);\n\
+  ```\n// 输出: orange\n\ne.g.\n```java\nint a=100; int b=300;\nString outcome2 = (a>b)\
+  \ ? \"orange\" : \"pineapple\";\nSystem.out.print ( outcome2 );\n```\n// 输出: pineapple\n\
+  \n---\n\n### 构造函数语法:\n\n```java\nclass Class_name {  \n  Class_name () {…} // 构造函数\n\
+  }\n```\n\n// 构造函数用于初始化变量。构造函数名与类名相同。\n// 在创建对象时，构造函数会被自动调用。\n\ne.g.\n```java\npublic\
+  \ class Colour { // 定义一个类\n  String co1, co2;\n  public Colour ( ) {co1=\"red\"\
+  ; co2=\"blue\";}  // 构造函数\n  void bright ( ) {\n    System.out.println(\"This flower\
+  \ is \" + co1);\n    System.out.println(\"That flower is \" + co2);\n  }\n  public\
+  \ static void main(String[] args) {\n    Colour obj = new Colour( ); // 创建对象，调用构造函数\n\
+  \    obj.bright ( );  \n  }\n}\n```\n// 输出:\nThis flower is red.\nThat flower is\
+  \ blue.\n\n---\n\n### `contains()` 语法:\n\n`str1.contains(str2)`\n\n// 如果字符串包含指定的字符或字符序列，返回\
+  \ true；否则返回 false。\n\ne.g.\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    String str = \"RayYao\";\n    System.out.println(str.contains(\"\
+  Ray\"));\n    System.out.println(str.contains(\"Yao\"));\n    System.out.println(str.contains(\"\
+  R\"));\n    System.out.println(str.contains(\"Hay\"));\n  }\n}\n```\n// 输出: true,\
+  \ true, true, false\n\n---\n\n### `contentEquals()` 语法:\n\n`str1.contentEquals(str2)`\n\
+  \n// 如果字符串与另一个字符串完全相等，返回 true；否则返回 false。\n\ne.g.\n```java\npublic class Main {\n\
+  \  public static void main(String[] args) {\n    String str = \"RayYao\";\n    System.out.println(str.contentEquals(\"\
+  RayYao\"));\n    System.out.println(str.contentEquals(\"Yao\"));\n    System.out.println(str.contentEquals(\"\
+  Hay\"));\n  }\n}\n```\n// 输出: true, false, false\n\n---\n\n### `continue` 语法:\n\n\
+  `continue;`\n\n### 继续循环的下次迭代\n\ne.g.\n```java\nfor (int n = 1; n < 8; n++) {\n \
+  \ if (n == 6) {\n    continue;\n  }\n  System.out.print(n);\n}\n```\n// 输出: 123457\n\
+  \n---\n\n### `copySign()` 语法:\n\n`Math.copySign(x, y)`\n\n// 复制第二个参数的符号并将该符号赋值给第一个参数。\n\
+  \ne.g.\n```java\nclass Main {\n  public static void main(String[] args) {\n    float\
+  \ x = 1.68f;\n    float y = -3.14f;\n    System.out.println(Math.copySign(x, y));\
+  \ \n  }\n}\n```\n// 输出:\n-1.68\n\n---\n\n### `copyValueOf()` 语法:\n\n`str1.copyValueOf(str2,\
+  \ beginIndex, endIndex)`\n\n// 通过复制数组元素返回一个字符串。\n\ne.g.\n```java\npublic class Main\
+  \ {\n  public static void main(String[] args) {\n    String str1 = \"\"; // 定义一个空字符串\n\
+  \    char[] str2 = {'R', 'a', 'y', 'Y', 'a', 'o'};\n    System.out.print(str1.copyValueOf(str2,\
+  \ 0, 6));\n  }\n}\n```\n*(注：原文示例代码中 copyValueOf 参数不全，此处根据逻辑补全以保持完整)*\n// 输出: RayYao\n\
+  \n---\n\n### `cos()` 语法:\n\n`Math.cos()`\n\n// 返回余弦值\n\ne.g.\n```java\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    System.out.println(Math.cos(Math.PI));\n\
+  \  }\n}\n```\n// 输出: -1.0\n\n---\n\n### `cosh()` 语法:\n\n`Math.cosh()`\n\n// 返回双曲余弦值\n\
+  \ne.g.\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    System.out.println(Math.cosh(1));\n  }\n}\n```\n// 输出: 1.5430806348152427\n\
+  \n---\n\n### `sin()` 语法:\n\n`Math.sin()`\n\n// 返回正弦值\n\ne.g.\n```java\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    System.out.println(Math.sin(Math.PI\
+  \ / 2));\n  }\n}\n```\n// 输出: 1.0\n\n---\n\n### `tan()` 语法:\n\n`Math.tan()`\n\n\
+  // 返回正切值\n\ne.g.\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    System.out.println(Math.tan(Math.PI / 4));\n  }\n}\n```\n// 输出: 1.0\n\
+  \n---\n\n### `sqrt()` 语法:\n\n`Math.sqrt()`\n\n// 返回平方根数\n\ne.g.\n```java\npublic\
+  \ class Main {\n  public static void main(String[] args) {\n    System.out.println(Math.sqrt(16));\n\
+  \  }\n}\n```\n// 输出: 4.0\n\n---\n\n### `pow()` 语法:\n\n`Math.pow(base, exponent)`\n\
+  \n// 返回幂值\n\ne.g.\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    System.out.println(Math.pow(2, 3));\n  }\n}\n```\n// 输出: 8.0\n\n\
+  ---\n\n### `abs()` 语法:\n\n`Math.abs()`\n\n// 返回绝对值\n\ne.g.\n```java\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    System.out.println(Math.abs(-10));\n\
+  \  }\n}\n```\n// 输出: 10\n\n\n\n\n\n# 从 1.7e−308 到 1.7e+308 的数值数据类型\n\ne.g.\n```java\n\
+  double num = 166.88d;\nSystem.out.println(num);\n// 输出: 166.88\n```\n\n## else 语法\n\
+  \n```java\nelse {}\n```\n// 用于条件语句，当条件为假时\n\ne.g.\n```java\nint score = 60;\nif\
+  \ (score < 60) {\n  System.out.println(\"Failed!\");\n} else {\n  System.out.println(\"\
+  Passed!\");\n}\n// 输出: Passed!\n```\n\n## 封装语法\n\n```java\npublic class Encapsulation\
+  \ {\n  private String value; // 私有属性\n  public String getValue() { // Getter\n \
+  \   return value;\n  }\n  public void setValue(String newValue) { // Setter\n  \
+  \  this.value = newValue;\n  }\n}\n```\n// 封装的意义向用户隐藏敏感数据。\n// 将类变量/属性声明为 `private`\n\
+  // 提供公共的 `getter` 和 `setter` 方法来访问\n\ne.g.\n```java\nclass Encap{\n  private String\
+  \ name;\n  public String getName(){\n    return name;\n  }\n  public void setName(String\
+  \ newValue){\n    name = newValue;\n  }\n}\npublic class Main{\n  public static\
+  \ void main(String args[]){\n    Encap obj = new Encap();\n    obj.setName(\"Ray\
+  \ Yao\");\n    System.out.println(\"My name is \" + obj.getName());\n  }\n}\n//\
+  \ 输出: My name is Ray Yao\n```\n\n## endwith() 语法\n\n```java\nstr1.endwith(str2)\n\
+  ```\n// 如果字符串以指定的字符结束，则返回 true，否则返回 false。\n\ne.g.\n```java\npublic class Main {\n\
+  \  public static void main(String[] args) {\n    String str = \"RayYao\";\n    System.out.println(str.endsWith(\"\
+  Ray\"));\n    System.out.println(str.endsWith(\"Yao\"));\n    System.out.println(str.endsWith(\"\
+  o\"));\n  }\n}\n// 输出: false, true, true\n```\n\n## enum 语法\n\n```java\nenum Enum_name\
+  \ { constants }\n```\n// 声明一个带有某些常量的枚举类型类\n// `enum` 类包含一组 `constants`\n\ne.g.\n\
+  ```java\nenum Color {\n  RED,\n  YELLOW,\n  GREEN\n}\npublic class Main {\n  public\
+  \ static void main(String[] args) {\n    Color flower = Color.RED;\n    System.out.println(flower);\n\
+  \  }\n}\n// 输出: RED\n```\n\n## equals() 语法\n\n```java\nstr1.equals(str2)\n```\n\
+  // 比较两个字符串，如果两个字符串相等，则返回 true，否则返回 false。\n\ne.g.\n```java\npublic class Main {\n\
+  \  public static void main(String[] args) {\n    String str1 = \"RayYao\";\n   \
+  \ String str2 = \"RayYao\";\n    String str3 = \"Java Programming\";\n    System.out.println(str1.equals(str2));\n\
+  \    System.out.println(str1.equals(str3));\n  }\n}\n// 输出: true, false\n```\n\n\
+  ## equalsIgnoreCase() 语法\n\n```java\nstr1.equalsIgnoreCase(str2)\n```\n// 忽略大小写比较两个字符串，如果两个字符串相等，则返回\
+  \ true，否则返回 false。\n\ne.g.\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    String str1 = \"JQuery in 8 Hours\";\n    String str2 = \"jQuery\
+  \ in 8 hours\";\n    System.out.println(str1.equalsIgnoreCase(str2));\n  }\n}\n\
+  // 输出: true\n```\n\n## exp() 语法\n\n```java\nMath.exp(num)\n```\n// 返回 e 的次方\n//\
+  \ 即：`Math.exp(n) = e^n`\n\ne.g.\n```java\nclass Main {\n  public static void main(String[]\
+  \ args) {\n    double n = 3.14d;\n    System.out.println(Math.exp(n)); \n  }\n}\n\
+  // 输出: 23.103866858722185\n```\n\n## expm1() 语法\n\n```java\nMath.expm1(num)\n```\n\
+  // 返回 e^n - 1\n// 即 `Math.expm1(n) = e^n-1.`\n\ne.g.\n```java\nclass Main {\n  public\
+  \ static void main(String[] args) {\n    double n = 3.14d;\n    System.out.println(Math.expm1(n));\
+  \ \n  }\n}\n// 输出: 22.103866858722185\n```\n\n## exports 语法\n\n```java\nmodule a.module{\n\
+  \  exports a.package to b.module;\n}\n```\n// 将包导出到一个或多个特定的模块，以便该包可以被指定的模块访问。\n\n\
+  e.g.\n```java\nmodule java.base { // 来自模块 'java.base'\n......\n    exports jdk.internal\
+  \ to jdk.jfr\n......\n}\n// 将包 'jdk.internal' 导出到模块 'jdk.jfr'\n```\n\n## extends\
+  \ 语法\n\n```java\nclass Child_Class extends Parent_Class\n```\n// 子类继承自父类\n// 子类继承父类的所有特征\n\
+  \ne.g.\n```java\nclass Book {\n  protected String title = \"Shell Scripting\";\n\
+  \  public void fun() {\n    System.out.println(\"Recommend Book:\");\n  }\n}\nclass\
+  \ Ebook extends Book {\n  private String ebookName = \"in 8 Hours\";\n  public static\
+  \ void main(String[] args) {\n    Ebook myEbook = new Ebook();\n    myEbook.fun();\n\
+  \    System.out.println(myEbook.title + \" \" + myEbook.ebookName);\n  }\n}\n//\
+  \ 输出: Shell Scripting in 8 Hours\n```\n\n## file 类语法\n\n```java\nFile myfile= new\
+  \ File (file_name);\n```\n// 创建一个文件对象\n\ne.g.\n```java\nFile f = new File ( aFile.txt\
+  \ ); // 创建一个文件对象\nif (f.exists( )) {\n  System.out.println(\"Is existing?\"+ f.exists());\
+  \ \n  System.out.println(\"Can read?\"+ f.canRead());\n  System.out.println(\"Can\
+  \ write?\"+ f.canWrite());\n  System.out.println(\"Is a file?\"+ f.isFile()); \n\
+  }\n// 输出:\nIs existing? true\nCan read? true\nCan write? false\nIs a file? true\n\
+  ```\n\n## 创建文件语法\n\n```java\nFile obj= new File(\"myFile.txt\");\n```\n// 创建一个文件对象\n\
+  \ne.g.\n```java\nimport java.io.File;\nimport java.io.IOException;\npublic class\
+  \ Main { \n  public static void main(String[] args) { \n    try { \n      File obj=\
+  \ new File(\"myFile.txt\"); \n      if (obj.createNewFile()) { \n        System.out.println(\"\
+  The file created is \" + obj.getName()); \n      } else {\n        System.out.println(\"\
+  The file already exists.\");\n      } \n    } catch (IOException e) {\n      System.out.println(\"\
+  Error occurred.\");\n      e.printStackTrace();\n    }\n}\n// 输出: The file created\
+  \ is myFile.txt\n```\n\n## 删除文件语法\n\n```java\nfileObj.delete()\n```\n// 删除文件\n\n\
+  e.g.\n```java\nimport java.io.File;\npublic class DeleteFile {\n  public static\
+  \ void main(String[] args) {\n    File obj= new File(\"myFile.txt\");\n    if (obj.delete())\
+  \ {\n      System.out.println(\"The file deleted is \" + obj.getName());\n    }\
+  \ else {\n      System.out.println(\"Failed to delete the file.\");\n    }\n  }\n\
+  }\n// 输出: The file deleted is myFile.txt\n```\n\n## 读取文件语法\n\n```java\nScanner obj\
+  \ = new Scanner(fileObj);\n```\n// 创建一个文件读取对象\n\ne.g.\n```java\n// 假设 myFile.txt\
+  \ 的内容为 \"Java in 8 Hours\".\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\
+  import java.util.Scanner;\npublic class Main { \n  public static void main(String[]\
+  \ args) { \n    try {    \n      File fileObj = new File(\"myFile.txt\");\n    \
+  \  Scanner obj = new Scanner(fileObj); \n      while (obj.hasNextLine()) {\n   \
+  \     String content = obj.nextLine();\n        System.out.println(content);\n \
+  \     }\n      obj.close();\n    } catch (FileNotFoundException e) {\n      System.out.println(\"\
+  Error occurred.\");\n      e.printStackTrace();\n    }\n  }\n}\n// 输出: Java in 8\
+  \ Hours\n```\n\n## 写入文件语法\n\n```java\nFileWriter obj = new FileWriter(\"myFile.txt\"\
+  );\n```\n// 创建一个文件写入对象\n\ne.g.\n```java\nimport java.io.FileWriter;\nimport java.io.IOException;\n\
+  public class Main { \n  public static void main(String[] args) { \n    try { \n\
+  \      FileWriter obj = new FileWriter(\"myFile.txt\");\n      obj.write(\"Java\
+  \ in 8 Hours\");\n      obj.close();\n    } catch (IOException e) {\n      // 处理异常\n\
+  \    }\n  }\n}\n```\n\n\n\n\n\n```java\nSystem.out.println(\"Write file successfully!\"\
+  );\n} catch (IOException e) {\n    System.out.println(\"Error occurred.\");\n  \
+  \  e.printStackTrace();\n}\n```\n// 输出: Write file successfully!\n\n---\n\n### FileInputStream\n\
+  \n```java\nFileInputStream fin = new FileInputStream(file_name);\nfin.read(); //\
+  \ 读取文件内容\n```\n\n- `FileInputStream` 类用于处理输入流。\n- `new FileInputStream(file_name)`\
+  \ 创建一个输入流。\n- `fin.read()` 读取文件的内容。\n\n例如：\n（假设 `D:` 盘中有一个名为 `myFile.txt` 的文件，内容为\
+  \ “PHP in 8 Hours!”）\n\n```java\nimport java.io.*;\n\npublic class InputFile {\n\
+  \    public static void main(String[] args) {\n        int num;\n        try {\n\
+  \            FileInputStream fin = new FileInputStream(\"D:\\\\myFile.txt\");\n\
+  \            while ((num = fin.read()) != -1) // 读取文件\n                System.out.print((char)num);\
+  \ // 转换为字符\n            fin.close();\n        } catch (FileNotFoundException e)\
+  \ {\n            System.err.println(e);\n        } catch (IOException e) {\n   \
+  \         System.err.println(e);\n        }\n    }\n}\n```\n// 输出: PHP in 8 Hours\n\
+  - `fin` 是一个输入流对象。\n- `fin.read()` 读取 `myFile.txt`。\n- `-1` 表示文件结束。\n\n---\n\n###\
+  \ FileOutputStream\n\n```java\nFileOutputStream fout = new FileOutputStream(file_name);\n\
+  System.in.read(); // 读取输入的字符\nfout.write(); // 将字符写入文件\n```\n\n- `FileOutputStream`\
+  \ 类用于处理输出流。\n- `new FileOutputStream(file_name)` 创建一个输出流。\n- `System.in.read()`\
+  \ 从键盘读取输入的字符。\n- `fout.write()` 将字符写入文件。\n\n例如：\n（假设我们要在 `D:` 盘中写入一个文件 “myFile.txt”）\n\
+  \n```java\nimport java.io.*;\n\npublic class OutputFile {\n    public static void\
+  \ main(String[] args) {\n        char ch;\n        try {\n            FileOutputStream\
+  \ fout = new FileOutputStream(\"D:\\\\myFile.txt\");\n            System.out.println(\"\
+  请输入一个句子，以 # 键结束并按回车:\");\n            while ((ch = (char)System.in.read()) != '#')\
+  \ /*从键盘读取输入的字符*/\n                fout.write(ch); // 将字符写入文件\n            fout.close();\n\
+  \        } catch (FileNotFoundException e) {\n            System.err.println(e);\n\
+  \        } catch (IOException e) {\n            System.err.println(e);\n       \
+  \ }\n    }\n}\n```\n// （ 运行程序，并在键盘上输入 “PHP in 8 Hours!” ）\n// 结果：\n// 请检查 `D:` 盘中的\
+  \ `myFile.txt`，你会发现内容是 “PHP in 8 Hours!”。\n\n---\n\n## final syntax\n\n### `final\
+  \ class/variable/method`\n- 修饰符使类/变量/方法不可更改、不可继承且不可重写。\n\n例如：\n```java\npublic class\
+  \ Main {\n    final int n = 100;\n    public static void main(String[] args) {\n\
+  \        Main obj = new Main();\n        obj.n = 200; // 错误！\n        System.out.println(obj.n);\n\
+  \    }\n}\n```\n// 输出：（ 错误信息…… ）\n\n### `final class` 语法\n- `final` 是一个关键字。\n- `final\
+  \ class` 意味着该类不能被扩展。\n\n例如：\n```java\nfinal class FnClass { // 声明 final 类\n    //……\n\
+  }\n\nclass SubClass extends FnClass { // 错误！无法继承\n    //……\n}\n```\n// 输出：错误信息\n\
+  \n### `final method` 语法\n- `final` 是一个关键字。\n- `final method()` 意味着该方法不能被重写。\n\n\
+  例如：\n```java\nclass Animal {\n    final void study() { // 声明 final 方法\n        System.out.print(\"\
+  Animal\");\n    }\n}\n\nclass Tiger extends Animal {\n    void study() { // 错误！因为\
+  \ study() 想要重写……\n        System.out.print(\"Tiger\");\n    }\n}\n```\n// 输出：错误\n\
+  \n### `final variable` 语法\n- `final` 是一个关键字。\n- `final variable` 意味着值不能被修改。\n\n\
+  例如：\n```java\npublic class FnClass {\n    final int n = 10; // 声明 final 变量\n   \
+  \ void study() {\n        n = 20; // 错误！\n    }\n}\n```\n// 输出：错误\n\n#### `finally`\
+  \ 语法\n- 用于异常语句，无论是否发生异常都必须执行。\n\n例如：\n```java\ntry {\n    // 代码\n} catch (Exception\
+  \ e) {\n    // 处理\n} finally {\n    // 代码\n}\n```\n\n#### `float` 语法\n- 一种数据类型。\n\
+  \n例如：\n```java\nfloat num = 3.4f;\nSystem.out.println(num);\n```\n// 输出：3.4\n\n\
+  #### `floor()` 语法\n- 返回小于或等于参数的最接近整数。\n\n例如：\n```java\ndouble num = 3.14;\nSystem.out.println(Math.floor(num));\n\
+  ```\n// 输出：3.0\n\n#### `for` 语法\n- 创建循环。\n\n例如：\n```java\nfor (int n = 0; n < 5;\
+  \ n++) {\n    System.out.print(n);\n}\n```\n// 输出：01234\n\n#### `format()` 语法\n\
+  - 使用指定的参数返回格式化字符串。\n- 参数 `d` 指定数字值，`s` 指定字符串值，`f` 浮点值，`x` 十进制值，`c` 字符值。\n\n例如：\n\
+  ```java\nString s1 = String.format(\"%d\", 100);\nString s2 = String.format(\"%s\"\
+  , \"R in 8 Hours\");\nString s3 = String.format(\"%f\", 2.99);\nString s4 = String.format(\"\
+  %x\", 100);\nString s5 = String.format(\"%c\", 'W');\n```\n// 输出：100, R in 8 Hours,\
+  \ 2.990000, 64, W\n\n#### `getBytes()` 语法\n- 使用字符集编码字符串，返回字节数组。\n\n例如：\n```java\n\
+  import java.util.Arrays;\nimport java.nio.charset.Charset;\n\npublic class Main\
+  \ {\n    public static void main(String[] args) {\n        String myStr = \"Good\"\
+  ;\n        byte[] myArray;\n        // 使用 UTF-8 字符集编码\n        myArray = myStr.getBytes(Charset.forName(\"\
+  UTF-8\"));\n        System.out.println(Arrays.toString(myArray));\n        // 使用\
+  \ UTF-16 字符集编码\n        myArray = myStr.getBytes(Charset.forName(\"UTF-16\"));\n\
+  \        System.out.println(Arrays.toString(myArray));\n    }\n}\n```\n// 输出：[71,\
+  \ 111, 111, 100], [-2, -1, 0, 71, 0, 111, 0, 111, 0, 100]\n\n#### `getChars()` 语法\n\
+  - 将字符从字符串复制到字符数组。\n\n例如：\n```java\npublic class StringGetCharsExample {\n    public\
+  \ static void main(String args[]) {\n        String str = new String(\"Shell Scripting\
+  \ in 8 Hours\");\n        char[] arr = new char[10];\n    }\n}\n```\n\n\n\n\n```java\n\
+  try {\n    str.getChars(6, 15, arr, 0);\n    System.out.println(arr);\n} catch (Exception\
+  \ ex) {\n    System.out.println(ex);\n}\n```\n// 输出: Scripting\n\n## getExponent()\
+  \ 语法:\n\n`getExponent(number)`\n\n从数字中返回无偏指数。\n\ne.g.\n```java\npublic class Main\
+  \ {\n  public static void main(String[] args) {\n    float x = 60.3f;\n    System.out.println(Math.getExponent(x));\n\
+  \    double y = 82.9d;\n    System.out.println(Math.getExponent(y));\n  }\n}\n```\n\
+  // 输出:\n5\n6\n\n## 全局变量语法:\n\n`type globalVariable = value;`\n\n```java\nmyMethod(){{\n\
+  }\n```\n全局变量定义在方法外部。它在当前方法之外也有效。\n\ne.g.\n```java\nclass MyClass {\n  int m= 1000,\
+  \ n = 2000; // 全局变量\n  void meth( ){\n    int m = 10, n = 20; // 地变量\n  }\n}\n```\n\
+  `int m= 1000, n = 2000;` 在方法外定义了两个全局变量。\n\n## hashCode() 语法:\n\n`str.hashCode()`\n\
+  \n返回 `String` 的哈希值。\n\ne.g.\n```java\npublic class Main {\n  public static void\
+  \ main(String[] args) {\n    String str = \"good\";\n    System.out.println(str.hashCode());\n\
+  \  }\n}\n```\n// 输出: 3178685\n\n## HashMap 语法:\n\n`HashMap<Type, Type> obj = new\
+  \ HashMap<Type, Type>();`\n\n创建一个 `HashMap` 对象。\n`HashMap` 是一个包含键/值元素的数组。\n\ne.g.\n\
+  ```java\nimport java.util.HashMap;\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    HashMap<String, String> colors = new HashMap<String, String>(); //\
+  \ 创建一个 HashMap 对象\n    colors.put(\"Apple\", \"Red\"); // 添加一个 HashMap \n    colors.put(\"\
+  Banana\", \"Yellow\");\n    colors.put(\"Cashew\", \"Brown\");\n    System.out.println(colors);\n\
+  \    for (String fruit : colors.keySet()) { // 遍历 HashMap\n      System.out.println(fruit);\n\
+  \    }\n    System.out.println(colors.get(\"Cashew\")); // 获取元素值\n    colors.remove(\"\
+  Banana\"); // 删除一个元素\n    System.out.println(colors);\n    System.out.println(colors.size());\
+  \ // 获取元素大小\n    colors.clear(); // 清空所有元素\n    System.out.println(colors);\n  }\n\
+  }\n```\n// 输出:\n{Apple=Red, Cashew=Brown, Banana=Yellow}\nApple\nCashew\nBanana\n\
+  Brown\n{Apple=Red, Cashew=Brown}\n2\n{ }\n\n## HashSet 语法:\n\n`HashSet<String> colors\
+  \ = new HashSet<String>();`\n\n创建一个 `HashSet` 对象。\n`HashSet` 的元素是唯一的。\n\ne.g.\n\
+  ```java\nimport java.util.HashSet;\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    HashSet<String> colors = new HashSet<String>();\n    colors.add(\"\
+  Red\"); // 添加一个元素\n    colors.add(\"Yellow\");\n    colors.add(\"Green\");\n   \
+  \ System.out.println(colors); // 显示元素值\n    for (String v : colors) { // 遍历\n  \
+  \    System.out.println(v);\n    }\n    System.out.println(colors.size()); // 获取大小\n\
+  \    System.out.println(colors.contains(\"Yellow\")); // 检查包含\n    colors.remove(\"\
+  Green\"); // 删除元素\n    System.out.println(colors);\n    colors.clear(); // 清空所有元素\n\
+  \    System.out.println(colors);\n  }\n}\n```\n// 输出:\n[Red, Yellow, Green]\nRed\n\
+  Yellow\nGreen\n3\ntrue\n[Red, Yellow]\n[ ]\n\n## hypot() 语法:\n\n`Math.hypot(x, y)`\n\
+  \n返回 `sqrt(x22 +y2)` 的值且不溢出。\n\ne.g.\n```java\npublic class Main {\n  public static\
+  \ void main(String[] args) {\n    double a = 4.0;\n    double b = 3.0;\n    System.out.println(Math.hypot(a,\
+  \ b));\n  }\n}\n```\n// 输出: 5.0\n\n## IEEEremainder() 语法:\n\n`Math.IEEEremainder(x,y)`\n\
+  \n根据 IEEE 754 标准返回余数。\n\ne.g.\n```java\npublic class Main {\n  public static void\
+  \ main(String[] args) {\n    double x = 21.0;\n    double y = 2.0;\n    System.out.println(Math.IEEEremainder(x,y));\n\
+  \  }\n}\n```\n// 输出: 1.0\n\n## if 语法:\n\n`if (condition)`\n\n创建一个条件语句。\n\ne.g.\n\
+  ```java\nif (100 < 200) {\n    System.out.println(\"100 is less than 200\");\n}\n\
+  ```\n// 输出: 100 is less than 200\n\n## if-else 语法:\n\n`if ( bool-expression) { //\
+  \ 如果为真则执行此; }`\n`else { // 如果为假则执行此; }`\n\n`if...else statement` 在条件为真时运行某些代码，在条件为假时运行另一部分代码。\n\
+  \ne.g.\n```java\npublic class IfElse{\n  public static void main (String[] args)\
+  \ {\n    int x=120; int y=500;\n    if (x>y){ // 如果为真\n      System.out.print (\"\
+  x is greater than y.\");\n    }\n    else { // 如果为假\n      System.out.print (\"\
+  x is less than y\");\n    }\n  }\n}\n```\n// x is less than y\n\n## implement 语法:\n\
+  \n`class MyClass implements interface`\n\n`implement` 用在 `interface` 中。\n`interface`\
+  \ 是一个特殊的 `class`，会被一个类实现。\n\ne.g.\n```java\ninterface Book{\n  void myBook();\n\
+  }\nclass eBook implements Book{ // 实现\n  void myBook(){ // 实现\n    System.out.println(\"\
+  Implement method.\");\n  }\n}\n```\n// 输出: Implement method.\n\n## import 语法:\n\n\
+  `import Package/Class/Interface`\n\n用于导入 `package`、`class`、`interface`。\n\ne.g.\n\
+  ```java\nimport java.util.Scanner;\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    Scanner obj = new Scanner(System.in);\n    System.out.println(\"\
+  Please enter your name:\");\n    String name = obj.nextLine();\n    System.out.println(\"\
+  My name is: \" + name);\n  }\n}\n```\n// 输出:\nPlease enter your name:\nMy name is:\
+  \ Ray\n\n\n\n\n\n// 在创建 `Scanner` 对象之前，你需要先导入 `java.util.Scanner` 类。\n\n例如：\n\n\
+  ```java\nimport java.util.Scanner;\n\npublic class Example{\n  public static void\
+  \ main(String args[]){\n    String myStr;\n    Scanner obj = new Scanner(System.in);\n\
+  \    System.out.println(\"Please input your name: \");\n    myStr = obj.nextLine();\n\
+  \    System.out.println(\"My name is: \" + myStr);\n  }\n}\n```\n\n// 输出: \nPlease\
+  \ input your name:\nMy name is: Ray Yao\n\n---\n\n### instanceof 语法:\n\n```\nobject\
+  \ instanceof class\n```\n\n// 如果对象是某个特定类的实例，则返回 true\n\n例如：\n\n```java\npublic class\
+  \ Main { \n  public static void main(String[] args) { \n    Main obj = new Main();\
+  \ \n    System.out.println(obj instanceof Main);\n  }\n}\n```\n// 输出:  true\n\n\
+  ---\n\n### int 语法:\n\n```\nint variable\n```\n\n// 范围从 -2147483648 到 2147483647\
+  \ 的数字类型\n\n例如：\n\n```java\nint num = 168168;\nSystem.out.println(num); \n```\n//\
+  \ 输出:  168168\n\n---\n\n### interface 语法:\n\n```\nclass MyClass implement Interface\n\
+  ```\n\n// 接口是一种特殊的类，会被类实现。\n// 接口包含一个或多个空方法，这些方法将由类的方法来实现。\n\n例如：\n\n```java\ninterface\
+  \ Book{ // 定义一个接口\n  public void myBook(); // 定义一个空方法\n}\n\nclass eBook implements\
+  \ Book{ // 实现接口\n  public void myBook(){ // 实现空方法\n    System.out.println(\"Implement\
+  \ an empty method.\");\n  }\n}\n\npublic class InterfaceExmp {\n  public static\
+  \ void main(String[] args) {\n    eBook obj = new eBook();\n    obj.myBook();\n\
+  \  }\n}\n```\n// 输出:  Implement an empty method.\n\n---\n\n## intern()\n\n```\n\
+  str.intern()\n```\n\n/* 用于从内存中获取字符串，这确保了所有相同的字符串共享相同的内存。*/\n\n```java\npublic class\
+  \ InternExample2 { \n  public static void main(String[] args) {          \n    String\
+  \ s1 = \"RayYao\"; \n    String s2 = s1.intern(); \n    String s3 = new String(\"\
+  RayYao\");              \n    System.out.println(s1==s2); // true \n    System.out.println(s1==s3);\
+  \ // false  \n    System.out.println(s2==s3); // false \n  }\n}\n```\n// 输出: true,\
+  \ false, false\n\n---\n\n### isEmpty() 语法:\n\n```\nstr.isEmpty()\n```\n\n// 如果字符串为空则返回\
+  \ true，否则返回 false。\n\n例如：\n\n```java\npublic class Main {\n  public static void\
+  \ main(String[] args) {\n    String str1 = \"\";\n    String str2 = \"Good\";\n\
+  \    System.out.println(str1.isEmpty());\n    System.out.println(str2.isEmpty());\n\
+  \  }\n}\n```\n// 输出: true, false\n\n---\n\n### iterator 语法:\n\n```\nIterator<String>\
+  \ it = collection.iterator();\n```\n\n// 创建一个集合对象\n// Iterator 对象用于遍历集合\n\n例如：\n\
+  \n```java\nimport java.util.LinkedList;\nimport java.util.Iterator;\n\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    LinkedList<String> colors\
+  \ = new LinkedList<String>();\n    colors.add(\"Red\"); // 添加一个元素\n    colors.add(\"\
+  Yellow\");\n    colors.add(\"Green\");\n    System.out.println(colors); // 显示元素值\n\
+  \    Iterator<String> it = colors.iterator(); // 创建一个 LinkedList 对象\n    while(it.hasNext())\
+  \ { 遍历\n      System.out.println(it.next());\n    }\n  }\n}\n```\n// 输出:\n[Red,\
+  \ Yellow, Green]\nRed\nYellow\nGreen\n\n---\n\n### lambda 语法:\n\n```\n(parameter1,\
+  \ parameter2) -> expression\n```\n\n/* Lambda 表达式是一个匿名函数；它是一个可以返回值的简短代码块。 */\n\n\
+  例如：\n\n```java\nimport java.lang.FunctionalInterface;\n\ninterface MyClass{ // 接口\n\
+  \  double piValue(); // 抽象方法\n}\n\npublic class Main {\n  public static void main(String[]\
+  \ args ) {\n    MyClass refer; // 声明对 MyClass 的引用\n    refer = () -> 3.1415; //\
+  \ lambda 表达式\n    System.out.println(\"The Pi value is \" + refer.piValue());\n\
+  \  }\n}\n```\n// 输出: The Pi value is 3.1415\n\n---\n\n### lastIndexOf() 语法:\n\n\
+  ```\nstr.lastIndexOf('string') or str.lastIndexOf('character')\n```\n\n// 返回指定字符串或字符在字符串中一次出现的索引\n\
+  \n例如：\n\n```java\npublic class Main {\n  public static void main(String[] args)\
+  \ {\n    String str = \"This book is a good book\";\n    System.out.println(str.lastIndexOf(\"\
+  book\"));\n  }\n}\n```\n// 输出:  20\n\n---\n\n### length() 语法:\n\n```\nstr.length()\n\
+  ```\n\n// 返回字符串的长度\n\n例如：\n\n```java\npublic class Main {\n  public static void\
+  \ main(String[] args) {\n    String str = \"This book is a good book\";\n    System.out.println(str.length());\n\
+  \  }\n}\n```\n// 输出:  23\n\n---\n\n### LinkedList 语法:\n\n```\nLinkedList<String>\
+  \ obj = new LinkedList<>();\n```\n\n// 创建一个 LinkedList 对象\n// LinkedList 类是可调整的\n\
+  \n例如：\n\n```java\nimport java.util.LinkedList;\n\npublic class Main {\n  public\
+  \ static void main(String[] args) {\n    LinkedList<String> colors = new LinkedList<>();\n\
+  \    colors.add(\"Red\"); // 添加一个元素\n    colors.add(\"Yellow\");\n    colors.add(\"\
+  Green\");\n    System.out.println(colors); // 显示元素值\n    Iterator<String> it = colors.iterator();\
+  \ // 创建一个 LinkedList 对象\n    while(it.hasNext()) { 遍历\n      System.out.println(it.next());\n\
+  \    }\n  }\n}\n```\n// 输出: \n[Red, Yellow, Green]\nRed\nYellow\nGreen\n\nobj.addFirst(\"\
+  value\"); // 在开头添加元素\nobj.addLast(\"value\"); // 在末尾添加元素\nobj.getFirst(); // 获取第一个元素\n\
+  obj.getLast(); // 获取最后一个元素\nobj.removeFirst(); // 删除第一个元素\nobj.removeLast(); //\
+  \ 删除最后一个元素\nobj.clear(); // 清空所有元素\nobj.size(); // 获取大小\nobj.set(index, element);\
+  \ // 设置指定索引的值\nobj.get(index); // 获取指定索引的值\nobj.contains(object); // 判断是否包含某个元素\n\
+  obj.indexOf(object); // 获取元素首次出现的索引\nobj.lastIndexOf(object); // 获取元素最后一次出现的索引\n\
+  \n---\n\n### Array 语法:\n\n```\nint[] arr = new int[5];\n```\n\n// 创建一个数组\n// 数组是固定长度的\n\
+  \n例如：\n\n```java\npublic class Main {\n  public static void main(String[] args)\
+  \ {\n    int[] arr = new int[3];\n    arr[0] = 10;\n    arr[1] = 20;\n    arr[2]\
+  \ = 30;\n    System.out.println(arr[0]);\n  }\n}\n```\n// 输出: 10\n\n---\n\n### for\
+  \ 循环 语法:\n\n```\nfor (int i = 0; i < 5; i++) {\n  // 代码块\n}\n```\n\n// 重复执行代码块\n\
+  \n例如：\n\n```java\npublic class Main {\n  public static void main(String[] args)\
+  \ {\n    for (int i = 0; i < 3; i++) {\n      System.out.println(i);\n    }\n  }\n\
+  }\n```\n// 输出:\n0\n1\n2\n\n---\n\n### 增强型循环 (for-each) 语法:\n\n```\nfor (Type item\
+  \ : collection) {\n  // 代码块\n}\n```\n\n// 用于遍历集合或数组\n\n例如：\n\n```java\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    String[] fruits = {\"\
+  Apple\", \"Banana\", \"Cherry\"};\n    for (String fruit : fruits) {\n      System.out.println(fruit);\n\
+  \    }\n  }\n}\n```\n// 输出:\nApple\nBanana\nCherry\n\n---\n\n### while 循环 语法:\n\n\
+  ```\nwhile (condition) {\n  // 代码块\n}\n```\n\n// 只要条件为真，就执行代码块\n\n例如：\n\n```java\n\
+  public class Main {\n  public static void main(String[] args) {\n    int i = 0;\n\
+  \    while (i < 3) {\n      System.out.println(i);\n      i++;\n    }\n  }\n}\n\
+  ```\n// 输出:\n0\n1\n2\n\n---\n\n### do-while 循环 语法:\n\n```\ndo {\n  // 代码块\n} while\
+  \ (condition);\n```\n\n// 至少执行一次代码块，然后检查条件\n\n例如：\n\n```java\npublic class Main\
+  \ {\n  public static void main(String[] args) {\n    int i = 0;\n    do {\n    \
+  \  System.out.println(i);\n      i++;\n    } while (i < 3);\n  }\n}\n```\n// 输出:\n\
+  0\n1\n2\n\n\n\n\n\n## log10() 语法\n\n`Math.log10(number)`\n\n// 返回数字的底数为 10 的对数\n\
+  \n例如\n\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    // 为 double 类型计算 log10()\n    System.out.println(Math.log10(8.0));\n    //\
+  \ 计算零值的 log10()\n    System.out.println(Math.log10(0.0));\n  }\n}\n```\n\n// 输出:\n\
+  0.9030899869919435\n-Infinity\n\n## log1p() 语法\n\n`Math.log1p(number)`\n\n// 返回数字与\
+  \ 1 之和的自然对数（底为 e）\n\n例如\n\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    // 为 double 类型计算 log1p()\n    System.out.println(Math.log1p(8.0));\n\
+  \    // 计算零值的 log1p()\n    System.out.println(Math.log1p(0.0));\n  }\n}\n```\n\n\
+  // 输出:\n2.1972245773362196\n0.0\n\n## long 语法\n\n`long variable`\n\n// 一个从 -9223372036854775808\
+  \ 到 9223372036854775807 的数字的数据类型\n\n例如\n\n```java\nlong num = 16816800000L;\nSystem.out.println(num);\n\
+  ```\n\n// 输出: 16816800000\n\n## matches() 语法\n\n`str.matches('正则表达式的字符串')`\n\n//\
+  \ 检查字符串是否匹配指定的正则表达式。匹配则返回 true，不匹配则返回 false。\n\n例如\n\n```java\nimport java.io.*;\n\
+  public class Main {\npublic static void main(String args[]) {\nString str = new\
+  \ String(\"Shell Scripting in 8 Hours\");\nSystem.out.println(str.matches(\"(.*)Scripting(.*)\"\
+  ));\nSystem.out.println(str.matches(\"Scripting\"));\nSystem.out.println(str.matches(\"\
+  Shell(.*)\"));\nSystem.out.println(str.matches(\"(.*)Hours\"));\n}} // (.*) 表示所有字符和空格\n\
+  ```\n\n// 输出: true, false, true, false\n\n## max() 语法\n\n`Math.max(num1, num2)`\n\
+  \n// 返回两个数字之间的最大值\n\n例如\n\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    System.out.println(Math.max(102, 168));\n    // 返回 102 和 168 之间的最大值\n\
+  \  }\n}\n```\n\n// 输出: 168\n\n# 方法语法\n\n`type method_name( ){…..};` // 声明一个方法。\n\
+  \n`method_name( );` // 调用一个方法。\n\n// 方法是一个可以重复使用的代码块。\n\n例如\n\n```java\npublic class\
+  \ MethClass{\npublic static void main(String args[ ]){\nmeth( ); } // 调用 “meth”\n\
+  static void meth( ) { // 声明一个方法\nSystem.out.print( \"Here is a method\" );\n}}\n\
+  ```\n\n// 输出: Here is a method\n\n## 方法与参数语法\n\n`type method_name ( argument ) {……};`\n\
+  \n`method_name ( arg );`\n\n// 在调用方法时，可以同时将 `arg` 传递给方法。\n\n例如\n\n```java\npublic\
+  \ class MethArg{\npublic static void main ( String [ ] args ) {\nmeth( \"with param\"\
+  \ );  // 调用 meth 并传递参数\n}\nstatic void meth(String argument) { // 声明方法\nSystem.out.print(\
+  \ \"Here is a method \" + argument );\n}}\n```\n\n// 输出: Here is a method with param\n\
+  \n## min() 语法\n\n`Math.min(num1, num2)`\n\n// 返回两个数字之间的最小值\n\n例如\n\n```java\npublic\
+  \ class Main {\n  public static void main(String[] args) {\n    System.out.println(Math.min(102,\
+  \ 168));\n    // 返回 102 和 168 之间的最小值\n  }\n}\n```\n\n// 输出: 102\n\n## 模块（module）语法\n\
+  \n`module myModuleName { }`\n\n// 声明一个模块\n// Java 模块是 Java 应用程序或 Java API 的包\n\n\
+  例如\n\n```java\nmodule myModule {\n  exports myPackage;\n}\n```\n\n// 将 `myPackage`\
+  \ 导出以便在 `myModule` 外部使用\n\n## multiplyExact() 语法\n\n`Math.multiplyExact(num1, num2)`\n\
+  \n// 返回 `num1` 和 `num2` 的乘积\n\n例如\n\n```java\nclass Main {\n  public static void\
+  \ main(String[] args) {\n    System.out.println(Math.multiplyExact(x, y));\n  }\n\
+  }\n```\n\n// 输出: 18\n\n## native 语法\n\n`native()`\n\n// `native` 只是一个修饰符，仅表示该方法是用原生代码实现的\n\
+  \n例如\n\n```java\npublic native int method1(int);\npublic native boolean method2(boolean);\n\
+  ```\n\n## negate() 语法\n\n`negate(num)`\n\n// 返回 `num` 的符号反转\n\n例如\n\n```java\nclass\
+  \ Main {\n  public static void main(String[] args) {\n    int x = 100;\n    System.out.println(negate(x));\n\
+  \  }\n}\n```\n\n// 输出: -100\n\n## new 语法\n\n`new Class_name();`\n\n// 创建一个对象\n//\
+  \ 对象是类的实例\n\n例如\n\n```java\nColour obj = new Colour(); // 创建对象 `obj`\nobj.co1 =\
+  \ \"red\"; // 对象引用变量 `co1`\nobj.co2 = \"blue\"; // 对象引用变量 `co2`\nobj.bright(); //\
+  \ 对象引用方法 `bright()`\n```\n\n## offsetByCodePoints() 语法\n\n`str.offsetByCodePoints(int\
+  \ index, int codePointOffset)`\n\n// 返回字符串内部的索引，该索引是给定索引的偏移\n// 偏移量基于 `codePointOffset`\
+  \ 的代码点\n// index: 需要偏移的索引。\n// codePointOffset: 代码点单位的偏移量。\n\n例如\n\n```java\nimport\
+  \ java.lang.*;\npublic class Main {\npublic static void main(String[] args) {\n\
+  String str = \"JavaScript\";\nSystem.out.println(\"The String is \" + str);\nint\
+  \ offset = str.offsetByCodePoints(3, 5);\nSystem.out.println(\"The index is \" +\
+  \ offset);\n}\n}\n```\n\n// 输出:\nThe String is JavaScript\nThe index is 8\n\n##\
+  \ nextAfter() 语法\n\n`Math.nextAfter(x, y)`\n\n// 返回在 `y` 方向上相邻 `x` 的数值\n\n例如\n\n\
+  ```java\npublic class Main {\n  public static void main(String[] args) {\n    double\
+  \ x = 6.5;\n    double y = 9.0;\n    System.out.println(Math.nextAfter(x, y));\n\
+  \  }\n}\n```\n\n// 输出: 6.500000000000001\n\n## nextDown() 语法\n\n`Math.nextDown(num)`\n\
+  \n// 返回负无穷方向上相邻 `num` 的数值\n\n例如\n\n```java\npublic class Main {\n  public static\
+  \ void main(String[] args) {\n    double num = 6.8;\n    System.out.println(Math.nextDown(num));\n\
+  \  }\n}\n```\n\n// 输出: 6.799999999999999\n\n## nextUp() 语法\n\n`Math.nextUp(num)`\n\
+  \n// 返回正无穷方向上相邻 `num` 的数值\n\n例如\n\n```java\npublic class Main {\n  public static\
+  \ void main(String[] args) {\n    double num = 6.8;\n    System.out.println(Math.nextUp(num));\n\
+  \  }\n}\n```\n\n// 输出: 6.800000000000001\n\n## 重载（overloading）语法\n\n`public method_name(arg1){\
+  \ }`\n\n\n\n\n\n```java\npublic method_name(arg2){ }\n```\n\n## 方法重载 (Overloading)\n\
+  \n// 重载意味着类中存在两个或多个同名方法，但它们的参数不同。\n\n例如：\n\n```java\nclass Colour{\n  String x,y;\
+  \ // 声明一个类\n\n  public Colour ( String a, String b) { x=a; y=b; } // 重载\n\n  public\
+  \ Colour ( ) { x=\"red \"; y=\"blue \";} // 重载\n\n  public static void main (String\
+  \ args[ ]) {\n    Colour obj1=new Colour(\"pink \", \"white \"); \n    Colour obj2=new\
+  \ Colour( );\n    System.out.println(obj1.x + obj1.y);\n    System.out.println(obj2.x\
+  \ + obj2.y);\n  }\n}\n```\n\n// 输出：\n```\npink white\nred blue\n```\n\n---\n\n##\
+  \ 方法重写 (Overriding)\n\n重写语法：\n\n```java\npublic method_name(arg){ } // 父类中的此方法\n\
+  public method_name(arg){ } // 子类中的此方法\n```\n\n// 如果方法名和参数相同，子类的方法可以重写父类的方法。\n\n\
+  例如：\n\n```java\nclass Parent_Class{\n  int meth( int n ) { return n; } // 重写\n}\n\
+  \nclass Child_Class extends Parent_Class{\n  int meth( int n ) { return 100 + n;\
+  \ } // 重写\n}\n\npublic class OverrideClass {\n  public static void main (String\
+  \ args[ ]){\n    Child_Class obj=new Child_Class( );\n    System.out.print( obj.meth(\
+  \ 200 ));\n  }\n}\n```\n\n// 输出：300\n\n---\n\n## 包语法 (Package Syntax)\n\n包的语法：\n\
+  \n```java\npackage packageName\n```\n\n// 创建一个包\n\n例如：\n\n```java\npackage myPackage;\n\
+  \npublic class MyClass {\n  public static void main(String[] args) {\n    System.out.println(\"\
+  This is a package!\");\n  }\n}\n```\n\n// 输出：This is a package!\n\n---\n\n## PI\
+  \ 语法 (PI Syntax)\n\nPI 的语法：\n\n### `Math.PI`\n\n// `Math.PI` 是一个存储 π 值的常量。\n\n例如：\n\
+  \n```java\npublic class PIRandom{\n  public static void main (String [ ] args){\n\
+  \    double p = Math.PI;\n    System.out.println(\"The PI value is\" + p);\n  }\n\
+  }\n```\n\n// 输出：The PI value is 3.14159265358979\n\n---\n\n## 多态语法 (Polymorphism\
+  \ Syntax)\n\n多态的语法：\n\n```java\nclass Parent{ }  // 父类\nclass Child1 extends Parent{\
+  \ }  // 子类 1\nclass Child2 extends Parent{ }  // 子类 2\nobj = new Child1( );  //\
+  \ 创建一个 child1 对象\nobj = new Child2( );   // 创建一个 child2 对象\n```\n\n// 多态意味着父类可以被多个子类扩展。\n\
+  // 多态描述了对对象执行不同方法的能力。\n\n例如：\n\n```java\nclass Animals{ // 父类\n  void yell( ){\n\
+  \    System.out.println(\"yelling......\");\n  }\n}\n\nclass Dogs extends Animals{\
+  \ // 子类\n  void yell( ){ // 重写\n    System.out.println(\"Woww, Woww......\");\n\
+  \  }\n}\n\nclass Cats extends Animals{ // 子类\n  void yell( ){ // 重写\n    System.out.println(\"\
+  Meaw, Meaw......\");\n  }\n}\n\npublic class PolymorphismClass{   \n  public static\
+  \ void main(String args[ ]){ // 主函数\n    Animals animalObj;\n    animalObj = new\
+  \ Dogs( ); // 创建一个狗对象\n    animalObj.yell( ); // 狗对象调用 yell()\n    animalObj = new\
+  \ Cats( ); // 创建一个猫对象\n    animalObj.yell( ); // 猫对象调用 yell()\n  }\n}\n```\n\n//\
+  \ 输出：\n```\nWoww, Woww……\nMeaw, Meaw……\n```\n\n---\n\n## pow() 语法 (pow() Syntax)\n\
+  \npow() 语法：\n\n`Math.pow(x,y)`\n\n// 返回 `x` 的 `y` 次。\n\n例如：\n\n```java\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    // 计算 2 的 3 次方\n    System.out.println(Math.pow(2,\
+  \ 3));\n  }\n}\n```\n\n// 输出：\n```\n8.0\n```\n\n---\n\n## print() 语法 (print() Syntax)\n\
+  \nprint() 语法：\n\n### `System.out.print( );` // 在同一行打印结果。\n### `System.out.println(\
+  \ );` // 在不同的行打印结果。\n\n例如：\n\n### `System.out.print( \"A \" );`\n### `System.out.print(\
+  \ \"B \" );`\n`System.out.print( \"C\" );`\n// 输出：A B C\n\n### `System.out.println(\
+  \ \"A \" );`\n### `System.out.println( \"B \" );`\n`System.out.println( \"C\" );`\n\
+  // 输出：\n```\nA\nB\nC\n```\n\n---\n\n## 私有语法 (Private Syntax)\n\n私有语法：\n\n`private`\
+  \ 变量/方法/构造函数\n\n// 一种访问修饰符。私有变量、方法或构造函数只能在声明的类内部被访问\n\n例如：\n\n```java\nprivate int\
+  \ x;\nprivate void method() {}\nprivate MyClass() {}\n```\n\n---\n\n## 受保护语法 (Protected\
+  \ Syntax)\n\n受保护语法：\n\n`protected` 变量/方法/构造函数\n\n// 一种访问修饰符。受保护变量、方法或构造函数只能在声明的类或子类中被访问\n\
+  \n例如：\n\n```java\nprotected int x;\nprotected void method() {}\nprotected MyClass()\
+  \ {}\n```\n\n---\n\n## 公有语法 (Public Syntax)\n\n公有语法：\n\n`public` 变量/方法/构造函数\n\n\
+  // 一种访问修饰符。公共变量、方法或构造函数可以被任何类访问\n\n例如：\n\n```java\npublic int x;\npublic void method()\
+  \ {}\npublic MyClass() {}\n```\n\n---\n\n## Random 语法 (Random() Syntax)\n\nrandom\
+  \ 语法：\n\n`Math.random()`\n\n// 返回 0.0 到 1.0 之间的随机数\n\n例如：\n\n```java\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    // 生成 0.0 到 1.0 之间的随机数\n\
+  \    System.out.println(Math.random());\n  }\n}\n```\n\n// 输出：0.54002666301429\n\
+  \n---\n\n## 递归语法 (Recursion Syntax)\n\n递归语法：\n\n```java\nmyFunction(){\n  myFunction();\
+  \ // 调用 myFunction()\n```\n\n// 递归意味着函数内部调用了自身。\n\n例如：\n\n```java\npublic class\
+  \ Factorial {\n  static int fact( int n ) {\n    if (n != 0) // 停止条件\n      return\
+  \ n * fact(n-1); // 递归调用\n    else\n      return 1;\n  }\n  public static void main(String[]\
+  \ args) {\n    int num = 5, result;\n    result = fact(num);\n    System.out.println(num\
+  \ + \" factorial is \" + result);\n  }\n}\n```\n\n// 输出：5 factorial is 120\n\n---\n\
+  \n## regionMatches() 语法 (regionMatches())\n\n`regionMatches()`\n\n`str1.regionMatches(int\
+  \ offset1, String str2, int offset2, int len)`\n\n// 检查字符串区域是否相等，如果区域相等则返回 true，否则返回\
+  \ false。\n// offset1: 字符串中子区域的起始偏移。\n// offset2: 参数字符串中子区域的起始偏移。\n\n例如：\n\n```java\n\
+  import java.io.*;\npublic class Main {\n  public static void main(String args[])\
+  \ {\n    String Str1 = new String(\"Shell Scripting in 8 Hours\");\n    String Str2\
+  \ = new String(\"Scripting\");\n    String Str3 = new String(\"SCRIPTING\");\n \
+  \   System.out.print(\"Return Result: \");\n    System.out.println(Str1.regionMatches(6,\
+  \ Str2, 0, 9));\n    System.out.print(\"Return Result: \");\n    System.out.println(Str1.regionMatches(6,\
+  \ Str3, 0, 9));\n  }\n}\n```\n\n\n\n\n\n返回结果: true\n\n返回结果: false\n\n## `replace()`\
+  \ 语法\n\n```java\nstr.replace('old', 'new')\n```\n// 返回一个新的字符串，其中一个字符被替换另一个字符\n\n\
+  e.g.\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    String str = \"JavaScript\";\n    System.out.println(str.replace('a', 'e'));\n\
+  \  }\n}\n```\n// 输出: `JeveScript`\n\n## `replaceFirst()` 语法\n\n```java\nstr.replaceFirst('regex',\
+  \ 'new')\n```\n// 将第一个匹配指定正则表达式的子字符串替换为新子字符串\n\ne.g.\n```java\npublic class Main{\n\
+  \    public static void main(String[] args) {\n        String str = \"This book\
+  \ is brilliant!\";\n        String result = str.replaceFirst(\"[b]\", \"c\");\n\
+  \        System.out.println(result);\n    }\n}\n```\n// 输出: `This cook is brilliant!`\n\
+  \n## `replaceAll()` 语法\n\n```java\nstr.replaceAll('regex', 'new')\n```\n// 将字符串中每个匹配指定正则表达式的子字符串替换为新子字符串。\n\
+  \ne.g.\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    String str = \"He sings 18 songs every 3 days\";\n    String result = \"\\\\\
+  d+\";\n    System.out.println(str.replaceAll(result, \" \"));\n  } // 将数字替换为空字符串\n\
+  }\n```\n// 输出: `He sings  songs every  days`\n\n## `requires` 语法\n\n```java\nrequires\
+  \ module\n```\n// `requires` 关键字用于对其他模块的依赖\n\ne.g.\n```java\nmodule myModule {\n\
+  \    requires javafx.graphics;\n}\n```\n// 要求一个名为 `javafx.graphics` 的标准 Java 模块。\n\
+  \n## `return` 语法\n\n```java\nreturn value;\n```\n// 向函数调用者返回一个值\n\ne.g.\n```java\n\
+  public class Main {\n  static int fun(int num) {\n    return 10 + num;\n  }\n  public\
+  \ static void main(String[] args) {\n    System.out.println(fun(20)); // fun(20)\
+  \ 是调用者\n  }\n}\n```\n// 输出: `30`\n\n## `rint()` 语法\n\n```java\nMath.rint(num)\n\
+  ```\n// 返回最接近 `num` 且等于数学整数的值\n\ne.g.\n```java\nclass Main {\n  public static void\
+  \ main(String[] args) {\n    System.out.println(Math.rint(3.14)); // 3.0\n    System.out.println(Math.rint(3.54));\
+  \ // 4.0\n    System.out.println(Math.rint(-1.3)); // -1.0\n    System.out.println(Math.rint(-1.8));\
+  \ // -2.0  \n  }\n}\n```\n// 输出:\n`3.0`\n`4.0`\n`-1.0`\n`-2.0`\n\n## `round()` 语法\n\
+  \n```java\nMath.round(num)\n```\n// 返回 `num` 四舍五入到最邻整数的值\n\ne.g.\n```java\npublic\
+  \ class Main {\n  public static void main(String[] args) {\n    double num = 3.14;\n\
+  \    System.out.println(Math.round(num));\n  }\n}\n```\n// 输出: `3`\n\n## `short`\
+  \ 语法\n\n```java\nshort variable\n```\n// 范围从 -32768 到 32767 的数字类型\n\ne.g.\n```java\n\
+  short num = 1000;\nSystem.out.println(num);\n```\n// 输出: `1000`\n\n## `signum()`\
+  \ 语法\n\n```java\nMath.signum(num)\n```\n// 返回 `num` 的符号\n// 仅返回 `-1.0` 或 `1.0`\n\
+  \ne.g.\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    double num1 = -3.14;\n    System.out.println(Math.signum(num1));\n    double\
+  \ num2 = 678;\n    System.out.println(Math.signum(num2));\n  }\n}\n```\n// 输出:\n\
+  `-1.0`\n`1.0`\n\n## `sin()` 语法\n\n```java\nMath.sin(radian)\n```\n// 返回 `radian`\
+  \ 的正弦值\n\ne.g.\n```java\nclass Main {\npublic static void main(String[] args) {\n\
+  double degr = 30; // 度\ndouble radi = Math.toRadians(degr); // 弧度\nSystem.out.println(Math.sin(radi));\
+  \ \n}\n}\n```\n// 输出: `0.49999999999999994`\n\n## `sinh()` 语法\n\n```java\nMath.sinh(radian)\n\
+  ```\n// 返回 `radian` 的双曲正弦值\n\ne.g.\n```java\nclass Main {\n  public static void\
+  \ main(String[] args) {\ndouble degree1 = 60.0; // 度\n    double degree2 = 0.0;\n\
+  double radian1 = Math.toRadians(degree1); // 弧度\n    double radian2 = Math.toRadians(degree2);\n\
+  \    System.out.println(Math.sinh(radian1)); \n    System.out.println(Math.sinh(radian2));\
+  \ \n  }\n}\n```\n// 输出:\n`1.2493670505239751`\n`0.0`\n\n## `split()` 语法\n\n```java\n\
+  str.split('delimiter/regex')\n```\n// 根据指定的分隔符或正则表达式将字符串拆分为若干子字符串，并返回数组。\n\ne.g.\n\
+  ```java\npublic class Main{\npublic static void main(String []args){\nString str\
+  \ = \"ant, bat, cat, dog\";\nString[] arr = str.split(\", \");\nfor (int i=0; i\
+  \ < arr.length; i++){\nSystem.out.println(arr[i]);\n}\n}\n```\n// 输出:\n`ant`\n`bat`\n\
+  `cat`\n`dog`\n\n## `sqrt()` 语法\n\n```java\nMath.sqrt(num)\n```\n// 返回 `num` 的平方根\n\
+  \ne.g.\n```java\nclass Main {\n  public static void main(String[] args) {\n    double\
+  \ num = 9;\n    System.out.println(Math.sqrt(num));\n  }\n}\n```\n// 输出: `3.0`\n\
+  \n## `startsWith()` 语法\n\n```java\nstr.startsWith(\"characters\")\n```\n// 检查字符串是否以指定的字符开头\n\
+  \ne.g.\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    String str = \"JavaScript\";\n    System.out.println(str.startsWith(\"Java\"\
+  ));\n    System.out.println(str.startsWith(\"Script\"));\n  }\n}\n```\n// 输出:\n\
+  `true`\n`false`\n\n## `static variable` 语法\n\n```java\nstatic variable\n```\n//\
+  \ 修改变量或方法的数据类型，使其可以直接通过类引用，而不是通过对象。\n// `static variable` 被称为类变量，可以通过类或对象引用。\n\n\
+  e.g.\n```java\npublic class Main {\nstatic void fun() { // 静态方法\n    System.out.println(\"\
+  Static methods can be referenced by a class\");\n  }\n  public static void main(String[]\
+  \ args) {\n    Main.fun(); // 类引用了静态方法\n  }\n}\n```\n// 输出: `Static methods can\
+  \ be referenced by a class`\n\n## `static method` 语法\n\n```java\nstatic method\n\
+  ```\n// 修改变量或方法的数据类型，使其可以直接通过类引用，而不是通过对象。\n// `static method` 被称为类方法，可以通过类或对象调用。\n\
+  \ne.g.\n```java\npublic class StaClass {\nstatic int calculate( ) { return 10 ;}\
+  \ // 声明一个静态方法\npublic static void main (String args[){\nSystem.out.print( StaClass.calculate(\
+  \ ) ); // StaClass 直接调用静态方法 \"calculate()\"\n}\n}\n```\n// 输出: `10`\n\n## `strictfp`\
+  \ 语法\n\n```java\nstrictfp class/method\n```\n// `strictfp` 是限制类或方法中浮点计算的修饰符。它确保跨不同\
+  \ Java 平台的所有浮点操作都提供一致且相同的结果。\n\ne.g.\n```java\npublic strictfp class Main {\n  \
+  \  public static void main(String[] args){\n        System.out.println(Double.MAX_VALUE);\n\
+  \    }\n}\n```\n// 输出: `1.7976931348623157E308`\n\n## `string` 语法\n\n```java\nString\
+  \ variable = \"value\";\n```\n// 字符串值必须包含双引号内\n\ne.g.\n```java\npublic class Main\
+  \ {\n  public static void main(String[] args) {\n    String str = \"Hello World\"\
+  ;\n    System.out.println(str);\n  }\n}\n```\n// 输出: `Hello World`\n\n## `string\
+  \ length` 语法\n\n```java\nint len = String.length( );\n```\n\n\n\n\n\n```java\n//\
+  \ `String.length()` 可以获取字符串的长度。\n```\n\ne.g.\n\n```java\npublic class StrLen{\n\
+  \    public static void main (String [] args){\n        String myStr = \"Here is\
+  \ a string\";\n        int len = myStr.length(); // 获取字符串长度\n        System.out.println(\"\
+  The length of the string is \" + len);\n    }\n}\n```\n// 输出: The length of the\
+  \ string is 16\n\n------------------------------------------------------------------------------\n\
+  \n### 字符串连接语法\n\n```java\nstr = str1 + str2;\n```\n```java\nstr = str1.concat(str2);\n\
+  ```\n// `+` 可以连接两个字符串。\n// `concat()` 可以连接两个字符串。\n\ne.g.\n```java\nString s1 = \"\
+  Hello\"; String s2 = \"Friends\";\nSystem.out.print(s1 + s2); // 连接两个字符串\nSystem.out.print(s1.concat\
+  \ (s2)); // 连接两个字符串\n```\n// 输出: Hello Friends\n// 输出: Hello Friends\n\n------------------------------------------------------------------------------\n\
+  \n### StringBuffer 语法\n\n```java\nStringBuffer str = new StringBuffer();\n```\n\
+  // 创建一个 `StringBuffer` 对象。\n// `StringBuffer` 代表一个值可以动态改变的字符串。\n\ne.g.\n```java\n\
+  StringBuffer str = new StringBuffer (\"abcde\");\nstr.insert (2, \"1234\"); // 输出:\
+  \ abc1234de\nstr.append (\"5678\"); // 输出: abc1234de5678\nstr.reverse (); // 输出:\
+  \ 8765ed4321cba\n```\n// `StringBuffer str = new StringBuffer (\"abcde\" )` 创建了一个对象\
+  \ `str`，其值为 `\"abcde\"`。\n\n------------------------------------------------------------------------------\n\
+  \n### subSequence() 语法\n\n```java\nstr.subSequence(startIndex, endIndex)\n```\n\
+  // 从字符串返回返回字符序列\n\ne.g.\n```java\npublic class Main {\n  public static void main(String[]\
+  \ args) {\n    String str = \"Shell Scripting in 8 Hours\";\n    System.out.println(str.subSequence(6,\
+  \ 15));\n  }\n}\n```\n// 输出: Scripting\n\n------------------------------------------------------------------------------\n\
+  \n### subString() 语法\n\n```java\nstr.substring(startIndex)\n```\n```java\nstr.substring(startIndex,\
+  \ int endIndex)\n```\n// 返回字符串的子字符串\n\ne.g.\n```java\npublic class Main{ \n  public\
+  \ static void main(String args[]){ { \n    String str=\"Shell Scripting in 8 Hours\"\
+  ; \n    System.out.println(str.substring(6)); \n    System.out.println(str.substring(6,\
+  \ 15)); \n  }\n}\n```\n// 输出:\nScripting in 8 Hours\nScripting\n\n------------------------------------------------------------------------------\n\
+  \n## subtractExact() 语法\n\n```java\nMath.subtractExact(num1, num2)\n```\n// 返回 `num1`\
+  \ 和 `num2` 之间的差\n\ne.g.\n```java\nclass Main {\n  public static void main(String[]\
+  \ args) {\n    int x = 100;\n    int y = 20;\n    System.out.println(Math.subtractExact(x,\
+  \ y)); \n  }\n}\n```\n// 输出: 80\n\n------------------------------------------------------------------------------\n\
+  \n## super 语法\n\n```java\nsuper.method or super.variable\n```\n// `super` 代表父类的对象\n\
+  \ne.g.\n```java\nclass Book { // 父类\n  public void title() {\n    System.out.println(\"\
+  Ray Yao's Books\");\n  }\n}\nclass eBook extends Book { // 子类\n  public void title()\
+  \ {\n    super.title(); // 调用父类方法\n    System.out.println(\"C# Syntax Chart\");\n\
+  \  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n   \
+  \ Book myeBook = new eBook();\n    myeBook.title(); // 调用子类方法\n  }\n}\n```\n// 输出:\n\
+  Ray Yao's Books\nC# Syntax Chart\n\n------------------------------------------------------------------------------\n\
+  \n## super 语法\n\n```java\nsuper ( argument );\n```\n// 在子类中，`super` 用于调用父类的构造函数。\n\
+  \ne.g.\n```java\nclass Parent_Class{\n  Parent_Class (int m, int n){ // 构造函数\n \
+  \   this.m=m;  this.n=n;\n  }\n}\nclass Child_Class extends Parent_Class{\n  Child_Class(int\
+  \ m, int n){ // 构造函数\n    super ( m,n ); // 调用父类的构造函数\n  }\n}\n```\n// `super (\
+  \ argument );` 放置在子类构造函数的第一行，用于调用父类的构造函数。\n\n------------------------------------------------------------------------------\n\
+  \n## switch 语法\n\n```java\nswitch (condition) {\n  case value1:\n    statement;\n\
+  \    break;\n  case value2:\n    statement;\n    break;\n  case value3:\n    statement;\n\
+  \    break;\n  default:\n    statement;\n}\n```\n// `switch` 满足条件时\n\n```java\n\
+  int weekday = 2;\nswitch (weekday) {\n  case 1:\n    System.out.println(\"Monday\"\
+  );\n    break;\n  case 2:\n    System.out.println(\"Tuesday\");\n    break;\n  case\
+  \ 3:\n    System.out.println(\"Wednesday\");\n    break;\n  default:\n    System.out.println(\"\
+  Invalid weekday\");\n}\n```\n// 输出: Tuesday\n\n------------------------------------------------------------------------------\n\
+  \n## switch 语法\n\n```java\nswitch (expression) {\n  case value1:\n    statement;\n\
+  \    break;\n  case value2:\n    statement;\n    break;\n  case value3:\n    statement;\n\
+  \    break;\n  default:\n    statement;\n}\n```\n// `switch` 匹配表达式\n\n```java\n\
+  String fruit = \"Apple\";\nswitch (fruit) {\n  case \"Apple\":\n    System.out.println(\"\
+  Apple\");\n    break;\n  case \"Banana\":\n    System.out.println(\"Banana\");\n\
+  \    break;\n  case \"Cherry\":\n    System.out.println(\"Cherry\");\n    break;\n\
+  \  default:\n    System.out.println(\"Unknown fruit\");\n}\n```\n// 输出: Apple\n\n\
+  ------------------------------------------------------------------------------\n\
+  \n## synchronized 语法\n\n```java\nsynchronized method() {\n  statement\n}\n```\n\
+  // `synchronized` 饰符指定方法一次只有一个线程访问\n\n```java\npublic class MyClass {\n  public\
+  \ synchronized void method() {\n    // 语句\n  }\n}\n```\n\n------------------------------------------------------------------------------\n\
+  \n## synchronized 语法\n\n```java\nsynchronized (object) {\n  statement\n}\n```\n\
+  // `synchronized` 块指定代码块一次只有一个线程访问\n\n```java\npublic class MyClass {\n  public\
+  \ void method() {\n    synchronized (this) {\n      // 语句\n    }\n  }\n}\n```\n\n\
+  ------------------------------------------------------------------------------\n\
+  \n## volatile 语法\n\n```java\nvolatile boolean variable\n```\n// `volatile` 饰符确保变量的值总是从主内存中读取\n\
+  \n```java\npublic class MyClass {\n  volatile boolean flag = false;\n  public void\
+  \ setFlag() {\n    flag = true;\n  }\n  public boolean getFlag() {\n    return flag;\n\
+  \  }\n}\n```\n\n------------------------------------------------------------------------------\n\
+  \n## final 语法\n\n```java\nfinal int VARIABLE\n```\n// `final` 饰符表示变量一旦后不能被修改\n\n\
+  ```java\npublic class MyClass {\n  final int CONSTANT = 10;\n  public void method()\
+  \ {\n    // CONSTANT = 20; // 编译错误\n  }\n}\n```\n\n```java\nfinal class Class {\
+  \ }\n```\n// `final` 饰符表示类不能被继承\n\n```java\nfinal void method() { }\n```\n// `final`\
+  \ 饰符表示方法不能被重写\n\n\n\n\n\n# `MyClass` 在创建线程对象和运行线程任务之前需要继承 `Thread` 类\n\n例如：\n```java\n\
+  public class ThreadClass extends Thread{ // extends\n    public void run( ){ //\
+  \ 线程体\n        for(int n = 0; n<3; n++){\n            System.out.println(\"Thread!\"\
+  ); \n        }\n    }\n    public static void main(String[ ] args){\n        ThreadClass\
+  \ threadObj = new ThreadClass( );\n        threadObj.start( ); // start 线程\n   \
+  \ }\n}\n```\n\n# 输出:\n```\nThread!\nThread!\nThread!\n```\n\n---\n\n## thread 实现\
+  \ `runnable` 语法\n\n```java\npublic class MyClass implements Runnable{ }\n```\n\n\
+  `MyClass` 在创建线程对象和运行线程任务之前需要实现 `Runnable`\n\n例如：\n```java\npublic class ThreadClass\
+  \ implements Runnable{\n    // implements\n    public void run( ){ // 线程体\n    \
+  \    for(int n = 0; n<3; n++){\n            System.out.println(\"Thread!\");\n \
+  \       }\n    }\n    public static void main(String[ ] args){\n        Thread threadObj\
+  \ = new Thread(new ThreadClass( ));\n        threadObj.start( ); // start 线程\n \
+  \   }\n}\n```\n\n# 输出:\n```\nThread!\nThread!\nThread!\n```\n\n---\n\n## throw 语法\n\
+  \n```java\nthrow new Exception(\"message\");\n```\n\n生成一个错误和错误消息。\n\n例如：\n```java\n\
+  public class Main{\n    public static void main(String[] args){\n        System.out.println(100/0);\n\
+  \        throw new ArithmeticException(\"/ by zero\");\n    }\n}\n```\n\n# 输出:\n\
+  ```\nException in thread \"main\" java.lang.ArithmeticException: / by zero\nat Main.main(Main.java:5)\n\
+  ```\n\n---\n\n## throw 语法\n\n```java\ncatch(ArithmeticException e){\n    throw e;\
+  \  \n}\n```\n\n从 `try` 中捕获错误并抛出异常\n\n例如：\n```java\npublic class Main{\n    static\
+  \ void fun(){\n        try{\n            System.out.println(100/0);\n        }\n\
+  \        catch(ArithmeticException e){\n            throw e; // 抛出异常\n        }\n\
+  \    }\n    public static void main(String[] args){\n        fun();\n    }\n}\n\
+  ```\n\n# 输出:\n```\nException in thread \"main\" java.lang.ArithmeticException: /\
+  \ by zero\nat Main.fun(Main.java:4)\nat Main.main(Main.java:11)\n```\n\n---\n\n\
+  ## throws 语法\n\n```java\ntype method() throws exception{ }\n```\n\n方法可能会抛出异常\n\n\
+  例如：\n```java\npublic class Main{\n    static void fun() throws ArithmeticException\
+  \ {\n        System.out.println(100/0);\n    }\n    public static void main(String[]\
+  \ args){\n        fun();\n    }\n}\n```\n\n# 输出:\n```\nException in thread \"main\"\
+  \ java.lang.ArithmeticException: / by zero\nat Main.fun(Main.java:3)\nat Main.main(Main.java:6)\n\
+  ```\n\n---\n\n## time 语法\n\n```java\nLocalTime obj = LocalTime.now(); \n```\n\n\
+  创建一个时间对象\n\n例如：\n```java\nimport java.time.LocalTime; // LocalTime 类\npublic class\
+  \ Main {\n  public static void main(String[] args) {\n    LocalTime obj = LocalTime.now();\
+  \ // 创建一个时间对象\n    System.out.println(obj); // 显示当前时间\n  }\n}\n```\n\n# 输出: `13:56:28.939`\n\
+  \n---\n\n# `toCharArray()` 语法\n\n```java\nstr.toCharArray()\n```\n\n将字符串转换为字符序列或字符数组。\n\
+  \n例如：\n```java\npublic class Main {\n    public static void main(String args[]){\n\
+  \        String str = \"RayYao\";\n        char[] c = str.toCharArray();\n     \
+  \   for (int i = 0; i < c.length; i++){\n            System.out.println(c[i]);\n\
+  \        }\n    }\n}\n```\n\n# 输出:\n```\nR\na\ny\nY\na\no\n```\n\n---\n\n# `toDegrees()`\
+  \ 语法\n\n```java\nMath.toDegrees(radian)\n```\n\n将弧度转换为角度\n\n例如：\n```java\nclass\
+  \ Main {\n  public static void main(String[] args) {\n    double radian1 = 0.5235987755982989;\n\
+  \    double radian2 = 1.0471975511965978;\n    System.out.println(Math.toDegrees(radian1));\
+  \ \n    System.out.println(Math.toDegrees(radian2)); \n  }\n}\n```\n\n# 输出:\n```\n\
+  30.0\n60.0\n```\n\n---\n\n# `toIntExact()` 语法\n\n```java\nMath.toIntExact(long num)\n\
+  ```\n\n将 Long 类型数字转换为 Int 类型。\n\n例如：\n```java\nclass Main {\n  public static void\
+  \ main(String[] args) {\n    long x = 2000000L;\n    long y = -1000000L;\n    int\
+  \ num1 = Math.toIntExact(x);\n    int num2 = Math.toIntExact(y);\n    System.out.println(num1);\
+  \ \n    System.out.println(num2); \n  }\n}\n```\n\n# 输出:\n```\n2000000\n-1000000\n\
+  ```\n\n---\n\n# `toLowerCase()` 语法\n\n```java\nstr.toLowCase()\n```\n\n将字符串的字母转换为小写。\n\
+  \n例如：\n```java\npublic class Main {\n  public static void main(String[] args) {\n\
+  \    String str = \"Shell\";\n    System.out.println(str.toLowerCase());\n  }\n\
+  }\n```\n*(注：原文中 `toLowCase` 可能是拼写错误，翻译时保留其意或按上下文逻辑)*\n\n修正后的示例逻辑对应的翻译：\n```java\n\
+  public class Main {\n  public static void main(String[] args) {\n    String str\
+  \ = \"Shelling in 8\";\n    System.out.println(str.toLowerCase());\n  }\n}\n```\n\
+  \n# 输出: `shelling in 8`\n\n---\n\n# `toRadians()` 语法\n\n```java\nMath.toRadians(angle)\n\
+  ```\n\n将角度转换为弧度\n\n例如：\n```java\nclass Main {\n  public static void main(String[]\
+  \ args) {\n    double angle1 = 30.0;\n    double angle2 = 60.0;\n    System.out.println(Math.toRadians(angle1));\
+  \ \n    System.out.println(Math.toRadians(angle2)); \n  }\n}\n```\n\n# 输出:\n```\n\
+  0.5235987755982989\n1.0471975511965978\n```\n\n---\n\n# `toString()` 语法\n\n```java\n\
+  obj.toString()\n```\n\n返回一个表示该对象的字符串。\n\n例如：\n```java\npublic class Main {\n  public\
+  \ static void main(String[] args) {\n    int num = 10;\n    System.out.println(num.toString());\n\
+  \  }\n}\n```\n\n# 输出: `10`\n\n---\n\n# `toUpperCase()` 语法\n\n```java\nstr.toUpperCase()\n\
+  ```\n\n将字符串的字母转换为大写。\n\n例如：\n```java\npublic class Main {\n  public static void\
+  \ main(String[] args) {\n    String str = \"shelling in 8\";\n    System.out.println(str.toUpperCase());\n\
+  \  }\n}\n```\n\n# 输出: `SHELLING IN 8`\n\n---\n\n# `transient` 语法\n\n```java\ntransient\
+  \ type variable;\n```\n\n`transient` 修饰符使任何变量不被序列化。\n\n例如：\n```java\nimport java.io.Serializable;\n\
+  public class MyClass implements Serializable {\n    transient int myVar;\n}\n```\n\
+  \n---\n\n# `trim()` 语法\n\n```java\nstr.trim()\n```\n\n移除字符串前后的所有空格。\n\n例如：\n```java\n\
+  public class Main {\n  public static void main(String[] args) {\n    String str\
+  \ = \"      Ray Yao      \";\n    System.out.println(str.trim());\n  }\n}\n```\n\
+  \n# 输出: `Ray Yao`\n\n\n\n\n\n## 用户输入语法\n\n```java\nScanner obj = new Scanner(System.in);\n\
+  \nString variable = obj.nextLine();\n```\n\n// 创建一个 Scanner 对象\n// 读取用户输入\n// 在创建\
+  \ Scanner 对象之前，你需要先导入 `java.util.Scanner` 类。\n\ne.g.\n\n```java\nimport java.util.Scanner;\n\
+  \npublic class Example{\n  public static void main(String args[]){\n    String myStr;\n\
+  \    Scanner obj = new Scanner(System.in);\n    System.out.println(\"Please input\
+  \ your name: \");\n    myStr = obj.nextLine();\n    System.out.println(\"My name\
+  \ is: \" + myStr);\n  }\n}\n```\n\n// 输出:\n```\nPlease input your name:\nMy name\
+  \ is: Ray Yao\n```\n\n## valueOf() 语法\n\n```java\ntype.valueOf(value)\n```\n\n//\
+  \ 将不同类型的值转换为字符串\n\ne.g.\n\n```java\npublic class Main {\n  public static void main(String\
+  \ args[]) {\n    Integer i =Integer.valueOf(10);\n    Double d = Double.valueOf(20);\n\
+  \    Float f = Float.valueOf(\"30\");              \n    System.out.println(i);\n\
+  \    System.out.println(d);\n    System.out.println(f);\n  }\n}\n```\n\n// 输出:\n\
+  ```\n10\n20.0\n30.0\n```\n\n## var 语法\n\n```java\nvar variable\n```\n\n// 在 Java\
+  \ 10 中声明变量的任意数据类型。\n// \"var\" 可以自动检测数据类型\n\ne.g.\n\n```java\nvar v1 = 10; // int\n\
+  var v2 = 3.14; // double      \nvar v3 = 'C'; // char\nvar v4 = \"R in 8 Horus\"\
+  ; // string\nvar v5 = true; // boolean\n      System.out.println(v1);\n      System.out.println(v2);\n\
+  \      System.out.println(v3);\n      System.out.println(v4);\n      System.out.println(v5);\n\
+  ```\n\n// 输出:\n```\n10\n3.14\nC\nR in 8 Hours\ntrue\n```\n\n## 变量语法（声明并赋值）\n\n```java\n\
+  type variableName = value;\n```\n\n// 要定义一个变量，我们必须指定类型并为变量赋值值。\n\ne.g.\n\n```java\n\
+  public class Main {\n  public static void main(String[] args) {\nString book = \"\
+  Python Syntax Book\"; // 'book' 是一个变量\n    System.out.println(book);\n  }\n}\n```\n\
+  \n// 输出:\n```\nPython Syntax Book\n```\n\n## 变量语法（先声明后赋值）\n\n```java\ntype variableName;\n\
+  variable = value;\n```\n\n// 要定义一个变量，我们必须指定类型并为变量分配值。\n\ne.g.\n\n```java\npublic\
+  \ class Main {\n  public static void main(String[] args) {\nint num; // 声明变量 'num'\n\
+  \    num = 100;\n    System.out.println(num);\n  }\n}\n```\n\n// 输出: 100\n\n## void\
+  \ 语法\n\n```java\nvoid method(){…}\n```\n\n// 指定一个没有返回类型的方法\n\ne.g.\n\n```java\n\
+  public class Main {\n  static void fun() {\n    System.out.println(\"Scala in 8\
+  \ Hours\");\n  }\n  public static void main(String[] args) {\n    fun();\n  }\n\
+  }\n```\n\n// 输出: Scala in 8 Hours\n\n## volatile 语法\n\n```java\nvolatile type variable\
+  \ = value;\n```\n\n// 使变量值在线程间可见且不可缓存。\n// 确保变量值可以被多个线程读取、写入和修改\n\ne.g.\n\n```java\n\
+  public class MyClass {\n    public volatile int counter = 0;\n}\n```\n\n// 变量 `counter`\
+  \ 可以被其他线程读取或写入\n\n## while 语法\n\n```java\nwhile (condition) {\n  code\n}\n```\n\n\
+  // while 循环在条件为真时持续运行代码。\n\ne.g.\n\n```java\nint n = 1;\n    while (n < 6) {\n \
+  \     System.out.print(n);\n      n++;\n}\n```\n\n// 输出: 12345\n\n## 包装类语法\n\n```java\n\
+  Wrapper_class variable = value; // 创建一个包装对象\n```\n\n// 包装类意味着 Byte, Short, Integer,\
+  \ Long, Float, Double, Boolean, Character, ArrayList, LinkedList, HashMap, HashSet\
+  \ 类。\n// 我们必须使用包装类来创建包装对象。\n\ne.g.\n\n```java\npublic class Main {\n  public static\
+  \ void main(String[] args) {\nInteger i = 100; // Integer 是一个包装类\nDouble d = 100.88;\
+  \ // Double 是一个包装类\nString s = \"good\"; // String 是一个包装类\n    System.out.println(i);\n\
+  \    System.out.println(d);\n    System.out.println(s);\n}}\n```\n\n// 输出: 100 \
+  \   100.88    good\n\n# 录\n\n## Java 关键字\n\n| | |\n| :--- | :--- |\n| abstract |\
+  \ |\n| boolean | |\n| break | |\n| byte | |\n| case | |\n| catch | |\n| char | |\n\
+  | class | |\n| const | |\n| continue | |\n| default | |\n| do | |\n| double | |\n\
+  | else | |\n| extends | |\n| false | |\n| final | |\n| finally | |\n| float | |\n\
+  | for | |\n| if | |\n| implements | |\n| import | |\n| int | |\n| interface | |\n\
+  | new | |\n| null | |\n| package | |\n| private | |\n| protected | |\n| public |\
+  \ |\n| return | |\n| static | |\n| String | |\n| super | |\n| switch | |\n| this\
+  \ | |\n| throw(s) | |\n| true | |\n| try | |\n| void | |\n| while | |\n\n## 数据类型\n\
+  \n| 数据类型 | 大小 |  |\n| :--- | :--- | :--- |\n| byte | 1 byte | -128 到 127 的整数 |\n\
+  | short | 2 bytes | -32,768 到 32,767 的整数 |\n| int | 4 bytes | -2,147,483,648 到 2,147,483,647\
+  \ 的整数 |\n| long | 8 bytes | -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807\
+  \ 的整数 |\n| float | 4 bytes | 小数。足以存储 6 到 7 位小数。 |\n| double | 8 bytes | 小数。足以存储\
+  \ 15 位小数。 |\n| boolean | 1 bit | 真或假值 |\n| char | 2 bytes | 单个字符/字母或 ASCII 值 |\n\
+  \n## 算术运算符\n\n| 运算符 | 名称 | 描述 | 示例 |\n| :--- | :--- | :--- | :--- |\n| + | 加法 |\
+  \ 两个值相加 | x + y |\n| - | 减法 | 从一个值中减去另一个值 | x - y |\n| * | 乘法 | 两个值相乘 | x * y |\n\
+  | / | 除法 | 将一个值除以另一个 | x / y |\n| % | 取模 | 返回除法的余数 | x % y |\n| ++ | 递增 | 变量值加 1\
+  \ | ++ |\n| -- | 递减 | 变量值减 1 | -- |\n\n## 赋值运算符\n\n| 运算符 | 示例 | 等于 |\n| :--- | :---\
+  \ | :--- |\n| = | x = 8 | |\n| += | x += 8 | x + 8 |\n| -= | x -= 8 | x - 8 |\n\
+  | *= | x *= 8 | x * 8 |\n| /= | x /= 8 | x / 8 |\n| %= | x %= 8 | x % 8 |\n| &=\
+  \ | x &= 8 | x & 8 |\n| \\|124;= | x \\|124;= 8 | x \\|124;= 8 |\n| ^= | x ^= 8\
+  \ | x ^ 8 |\n| >>= | x >>= 8 | x >> 8 |\n| <<= | x <<= 8 | x << 8 |\n\n# 逻辑运算符\n\
+  \n| 运算符 | 名称 | 等效 |\n| :--- | :--- | :--- |\n| && | 与 | |\n| \\|124; | 或 | |\n|\
+  \ ! | 非 | |\n| true && true;returns true; | true && false;returns false; | false\
+  \ && false;returns false; |\n| true \\|124; true;returns true; | true \\|124; false;returns\
+  \ true; | false \\|124; false;returns false; |\n| ! false;returns true; | ! true;returns\
+  \ false; | |\n\n## 比较运算符\n\n| 运算符 | 名称 | 运行 |\n| :--- | :--- | :--- |\n| > | 大于\
+  \ | |\n| < | 小于 | |\n| >= | 大于等于 | |\n| <= | 小于等于 | |\n| == | 等于 | |\n| != | 不等于\
+  \ | |\n\n## 三元运算符\n\n| | |\n| :--- | :--- |\n| (test-expression) ? (if-true-do-this)\
+  \ : (if-false-do-this); |\n\n\n\n\n\n## 继承结构\n\n### 父类\n| |\n| :--- |\n| V |\n|\
+  \ V |\n| X |\n| V |\n\n### 同包（子类）\n| |\n| :--- |\n| V |\n| V |\n| X |\n| V |\n\n\
+  ### 不同包（父类）\n| |\n| :--- |\n| X |\n| V |\n| X |\n| X |\n\n### 不同包（子类）\n| |\n| :---\
+  \ |\n| X |\n| V |\n| X |\n| V |\n\n## 抽象类与接口\n\n### 抽象类结构\n```java\nabstract class\
+  \ books{\n    //定义一个抽象类\n    abstract int read( ); //定义一个抽象方法\n}\n\nclass eBooks\
+  \ extends books{\n    //继承父类\n    int read ( ){ return …; } //重写抽象方法\n}\n```\n\n\
+  ### 接口结构\n```java\ninterface books {\n    //定义一个接口\n    int booknumber( ); //定义一个空方法\n\
+  }\n\nclass eBooks implement books {\n    //实现接口\n    public int booknumber ( ) {\
+  \ //实现空方法\n        return …;\n    }\n}\n```\n\n## 数据类型\n\n| 数据类型 | 大小 | 描述 |\n|\
+  \ :--- | :--- | :--- |\n| `byte` | 1 字节 | -128 到 127 的整数 |\n| `short` | 2 字节 | -32,768\
+  \ 到 32,767 的整数 |\n| `int` | 4 字节 | -2,147,483,648 到 2,147,483,647 的整数 |\n| `long`\
+  \ | 8 字节 | -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 的整数 |\n| `float`\
+  \ | 4 字节 | 小数。足以存储 6 到 7 位小数 |\n| `double` | 8 字节 | 小数。足以存储 15 位小数 |\n| `boolean`\
+  \ | 1 位 | 真或否尔值 |\n| `char` | 2 字节 | 单个字符/字母或 ASCII 值 |\n\n## 修饰符\n\n| 修饰符 | 描述\
+  \ |\n| :--- | :--- |\n| `final` | 不能被重写/修改 |\n| `static` | 属于类，而不是对象 |\n| `abstract`\
+  \ | 方法不包含方法体 |\n| `transient` | 在序列化包含它们的对象时被跳过 |\n| `synchronized` | 一次只能由一个线程访问\
+  \ |\n| `volatile` | 不在线程本地缓存，而是从“主内存”读取 |\n\n## 日期与时间类\n\n| 类 | 描述 |\n| :--- | :---\
+  \ |\n| `LocalDate` | 日期(年、月、日 (yyyy-MM-dd)) |\n| `LocalTime` | 时间(时、分、秒和纳秒 (HH-mm-ss-ns))\
+  \ |\n| `LocalDateTime` | 日期和时间(yyyy-MM-dd-HH-mm-ss-ns) |\n| `DateTimeFormatter`\
+  \ | 用于显示和评估日期时间对象的格式化器 |\n\n## 文件与目录\n\n| 方法 | 描述 |\n| :--- | :--- |\n| `canRead()`\
+  \ | 检查文件是否可读 |\n| `canWrite()` | 检查文件是否可写 |\n| `createNewFile()` | 创建一个空文件 |\n|\
+  \ `delete()` | 删除文件 |\n| `exists()` | 检查文件是否存在 |\n| `getName()` | 返回文件名 |\n| `getAbsolutePath()`\
+  \ | 返回文件的绝对路径 |\n| `length()` | 返回以字节为单位的文件大小 |\n| `list()` | 返回目录中文件的数组 |\n| `mkdir()`\
+  \ | 创建目录 |\n\n[Ray Yao 推荐书目](http://mybook.to/yaowining)\n\n- [8 小时精进 C++](http://mybook.to/yaowining),\
+  \ [8 小时精进 Java](http://mybook.to/yaowining), [8 小时精进 Ajax](http://mybook.to/yaowining),\
+  \ [8 小时精进 AngularJs](http://mybook.to/yaowining), [8 小时精进 Asp.Net](http://mybook.to/yaowining),\
+  \ [C# 考试](http://mybook.to/yaowining), [C# 示例](http://mybook.to/yaowining), [C#\
+  \ 编程](http://mybook.to/yaowining), [C++ 考试](http://mybook.to/yaowining), [C++ 示例](http://mybook.to/yaowining),\
+  \ [C++ 编程](http://mybook.to/yaowining), [8 小时精进 Dart](http://mybook.to/yaowining),\
+  \ [8 小时精进 Django](http://mybook.to/yaowining), [8 小时精进 Erlang](http://mybook.to/yaowining),\
+  \ [8 小时精进 Git Github](http://mybook.to/yaowining), [8 小时精进 Go](http://mybook.to/yaowining),\
+  \ [8 小时精进 Haskell](http://mybook.to/yaowining), [Html Css 考试](http://mybook.to/yaowining),\
+  \ [Html Css 示例](http://mybook.to/yaowining), [Html Css 编程](http://mybook.to/yaowining),\
+  \ [Java 考试](http://mybook.to/yaowining), [Java 示例](http://mybook.to/yaowining),\
+  \ [Java 编程](http://mybook.to/yaowining), [JavaScript 考试](http://mybook.to/yaowining),\
+  \ [JavaScript 示例](http://mybook.to/yaowining), [JavaScript 编程](http://mybook.to/yaowining),\
+  \ [JQuery 考试](http://mybook.to/yaowining), [JQuery 编程](http://mybook.to/yaowining),\
+  \ [8 小时精进 Jsp Servlets](http://mybook.to/yaowining), [8 小时精进 Kotlin](http://mybook.to/yaowining)\n\
+  - [Linux 命令行](http://mybook.to/yaowining), [Linux 考试](http://mybook.to/yaowining),\
+  \ [8 小时精进 Lua](http://mybook.to/yaowining), [8 小时精进 Matlab](http://mybook.to/yaowining),\
+  \ [8 小时精进 Matplotlib](http://mybook.to/yaowining), [MySql 数据库](http://mybook.to/yaowining),\
+  \ [8 小时精进 Node.Js](http://mybook.to/yaowining), [8 小时精进 NumPy](http://mybook.to/yaowining),\
+  \ [8 小时精进 Pandas](http://mybook.to/yaowining), [8 小时精进 Perl](http://mybook.to/yaowining),\
+  \ [Php MySql 考试](http://mybook.to/yaowining), [Php MySql 示例](http://mybook.to/yaowining),\
+  \ [Php MySql 编程](http://mybook.to/yaowining), [8 小时精进 PowerShell](http://mybook.to/yaowining),\
+  \ [Python 考试](http://mybook.to/yaowining), [Python 示例](http://mybook.to/yaowining),\
+  \ [Python 编程](http://mybook.to/yaowining), [Python 备查表](http://mybook.to/yaowining),\
+  \ [R 编程](http://mybook.to/yaowining), [8 小时精进 React.Js](http://mybook.to/yaowining),\
+  \ [Ruby 编程](http://mybook.to/yaowining), [8 小时精进 Rust](http://mybook.to/yaowining),\
+  \ [8 小时精进 Scala](http://mybook.to/yaowining), [8 小时精进 Shell 脚本](http://mybook.to/yaowining),\
+  \ [8 小时精进 Swift](http://mybook.to/yaowining), [8 小时精进 TypeScript](http://mybook.to/yaowining),\
+  \ [Visual Basic 考试](http://mybook.to/yaowining), [Visual Basic 编程](http://mybook.to/yaowining),\
+  \ [8 小时精进 Vue.Js](http://mybook.to/yaowining), [8 小时精进 Xml Json](http://mybook.to/yaowining)\n\
+  \n"

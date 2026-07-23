@@ -1,0 +1,906 @@
+name: Getting started with Spring Framework： a hands-on guide to begin developing
+  applications using Spring Framework
+name_cn: Spring Framework 入门指南：Spring Framework 应用开发实用指南
+slug: getting-started-with-spring-framework-a-hands-on-guide-to-be
+toc:
+- - '#'
+  - Spring Framework 入门指南：Spring Framework 应用开发实用指南
+- - '#'
+  - 第 8 章 - 使用 Spring 进行消息、邮件、异步执行和缓存
+- - '##'
+  - 8-1 引言
+- - '##'
+  - 8-2 MyBank 应用的应用需求
+- - '##'
+  - 8-3 发送 JMS 消息
+- - '###'
+  - 配置 `ActiveMQ` Broker 以嵌入模式运行
+- - '###'
+  - 配置 `JMSConnectionFactory`
+- - '###'
+  - 使用 `JmsTemplate` 发送 JMS 消息
+- - '###'
+  - 在事务中发送 JMS 消息
+- - '###'
+  - 动态 JMS 目标和 `JmsTemplate` 配置
+- - '###'
+  - '`JmsTemplate` 与消息转换'
+- - '##'
+  - 8-4 接收 JMS 消息
+- - '###'
+  - 使用 `JmsTemplate` 同步接收 JMS 消息
+- - '###'
+  - 使用消息监听容器异步接收 JMS 消息
+- - '##'
+  - 8-5 发送邮件
+- - '##'
+  - 8-6 任务调度与异步执行
+- - '###'
+  - '`TaskExecutor` 接口'
+- - '###'
+  - '`TaskScheduler` 接口'
+- - '###'
+  - '`@Async` 和 `@Scheduled` 注解'
+- - '##'
+  - 8-7 缓存
+- - '###'
+  - 配置 `CacheManager`
+- - '###'
+  - 缓存注解 - `@Cacheable`, `@CacheEvict` 和 `@CachePut`
+- - '##'
+  - 8-8 运行 MyBank 应用
+- - '##'
+  - 8-9 总结
+- - '#'
+  - 第 9 章 - 面向面向编程 (AOP)
+- - '##'
+  - 9-1 引言
+- - '##'
+  - 9-2 简单的 AOP 示例
+- - '##'
+  - 9-3 Spring AOP 框架
+- - '###'
+  - 代理创建
+- - '##'
+  - 9-4 切点表达式
+- - '###'
+  - '`execution` 切点'
+- - '###'
+  - '`args` 切点'
+- - '###'
+  - '`bean` 切点'
+- - '###'
+  - 基于注解的切点
+- - '##'
+  - 9-5 建议 (Advice) 类型
+- - '###'
+  - '`Before` 建议'
+- - '###'
+  - '`After returning` 建议'
+- - '###'
+  - '`After throwing` 建议'
+- - '###'
+  - '`After` 建议'
+- - '###'
+  - '`Around` 建议'
+- - '##'
+  - 9-6 Spring AOP - XML 架构风格
+- - '###'
+  - 配置 AOP 切面 (Aspect)
+- - '###'
+  - 配置建议
+- - '###'
+  - 将切点表达式与建议关联
+- - '##'
+  - 9-7 总结
+- - '#'
+  - 第 10 章 – Spring Web MVC 基础
+- - '##'
+  - 10-1 引言
+- - '##'
+  - 10-2 示例 Web 项目的目录结构
+- - '##'
+  - 10-3 理解“Hello World” Web 应用
+- - '###'
+  - '`HelloWorldController.java` – Hello World Web 应用的控制器类'
+- - '###'
+  - '`helloworld.jsp` – 显示“Hello World !!!”消息的 JSP 页面'
+- - '###'
+  - '`myapp-config.xml` – Web 应用上下文 XML 文件'
+- - '###'
+  - '`web.xml` – Web 应用部署描述符'
+- - '##'
+  - 10-4 DispatcherServlet – 前控制器
+- - '##'
+  - 10-5 访问 ServletContext 和 ServletConfig 对象
+- - '##'
+  - 10-6 使用 @Controller 和 @RequestMapping 注解开发控制器
+- - '###'
+  - 使用注解控制器开发“Hello World”Web 应用程序
+- - '##'
+  - 10-7 MyBank 应用程序的需求
+- - '##'
+  - 10-8 Spring Web MVC 注解 - @RequestMapping 和 @RequestParam
+- - '###'
+  - 使用 @RequestMapping 将请求映射到控制器或控制器方法
+- - '###'
+  - '@RequestMapping 注解方法的参数'
+- - '###'
+  - '@RequestMapping 注解方法的返回值类型'
+- - '###'
+  - 使用 @RequestParam 将请求参数传递给控制器方法
+- - '##'
+  - 10-9 校验
+- - '##'
+  - 10-10 使用 @ExceptionHandler 注解处理异常
+- - '##'
+  - 10-11 加载根应用上下文 XML 文件
+- - '##'
+  - 10-12 总结
+- - '#'
+  - 第 11 章 – Spring Web MVC 中的校验与数据绑定
+- - '##'
+  - 11-1 引言
+- - '##'
+  - 11-2 使用 @ModelAttribute 注解添加和检索模型属性
+- - '###'
+  - 使用方法级 @ModelAttribute 注解添加模型属性
+- - '###'
+  - 使用 @ModelAttribute 注解检索模型属性
+- - '###'
+  - 请求处理与 @ModelAttribute 注解方法
+- - '###'
+  - '@ModelAttribute 注解方法的行为'
+- - '###'
+  - '`RequestToViewNameTranslator`'
+- - '##'
+  - 11-3 使用 @SessionAttributes 注解缓存模型属性
+- - '##'
+  - 11-4 Spring 中的数据绑定支持
+- - '###'
+  - '`WebDataBinder` – 用于 Web 请求参数的数据绑定器'
+- - '###'
+  - 配置 `WebDataBinder` 实例
+- - '###'
+  - 允许或禁止字段参与数据绑定过程
+- - '###'
+  - 使用 `BindingResult` 对象检查数据绑定和校验错误
+- - '##'
+  - 11-5 Spring 中的校验支持
+- - '###'
+  - 使用 Spring 的 `Validator` 接口校验模型属性
+- - '###'
+  - 使用 JSR 303 注解指定约束
+- - '###'
+  - 校验使用 JSR 303 注解的对象
+- - '##'
+  - 11-6 Spring 的表单标签库
+- - '###'
+  - Spring 表单标签库的 HTML5 支持
+- - '##'
+  - 11-7 总结
+- - '#'
+  - 第 12 章 – 使用 Spring Web MVC 开发 RESTful Web 服务
+- - '##'
+  - 12-1 引言
+- - '##'
+  - 12-2 固定存款服务
+- - '##'
+  - 12-3 使用 Spring Web MVC 实现 RESTful Web 服务
+- - '###'
+  - JSON (JavaScript 对象表示法)
+- - '###'
+  - FixedDeposit 服务实现
+- - '##'
+  - 12-4 使用 `RestTemplate` 访问 RESTful Web 服务
+- - '##'
+  - 12-5 使用 `HttpMessageConverter` 将 Java 对象转换为 HTTP 请求及反之
+- - '##'
+  - 12-6 `@PathVariable` 和 `@Matrix` 注解
+- - '##'
+  - 12-7 总结
+- - '#'
+  - 第 13 章 – 更多 Spring Web MVC – 国际化、文件上传和异步处理
+- - '##'
+  - 13-1 引言
+- - '##'
+  - 13-2 使用处理器（handler interceptors）
+- - '###'
+  - 实现和配置拦截器
+- - '##'
+  - 13-3 使用资源进行国际化
+- - '###'
+  - MyBank 应用程序的需求
+- - '###'
+  - MyBank 应用程序的本地化
+- - '##'
+  - 13-4 异步处理请求
+- - '###'
+  - 异步请求配置
+- - '###'
+  - 从 `@RequestMapping` 方法返回 `Callable`
+- - '###'
+  - 从 `@RequestMapping` 方法返回 `DeferredResult`
+- - '###'
+  - 设置默认超时
+- - '##'
+  - 13-5 Spring 中的类型转换和格式化支持
+- - '###'
+  - 创建自定义 `Converter`
+- - '###'
+  - 配置并使用自定义 `Converter`
+- - '###'
+  - 创建自定义 `Formatter`
+- - '###'
+  - 配置自定义 `Formatter`
+- - '###'
+  - 创建 `AnnotationFactory` 仅格式化标记 @AmountFormat 的字段
+- - '###'
+  - 配置 `AnnotationFactory` 实现
+- - '##'
+  - 13-6 Spring Web MVC 中的文件上传
+- - '###'
+  - 使用 `CommonsMultipartResolver` 上传
+- - '###'
+  - 使用 `StandardMultipartResolver` 上传文件
+- - '##'
+  - 13-7 总结
+- - '#'
+  - 第 14 章 – 使用 Spring Security 应用程序
+- - '##'
+  - 14-1 引言
+- - '##'
+  - 14-2 MyBank 应用程序的安全需求
+- - '##'
+  - 14-3 使用 Spring Security 保护 MyBank 应用程序
+- - '###'
+  - Web 请求安全
+- - '###'
+  - DelegatingFilterProxy 配置
+- - '###'
+  - 身份验证配置
+- - '###'
+  - 使用 Spring Security 的 JSP 标签库保护内容
+- - '###'
+  - 保护方法
+- - '###'
+  - 使用 global-method-security 元素配置方法级安全
+- - '###'
+  - 使用 `@Secured` 注解在 Bean 方法上指定安全约束
+- - '##'
+  - 14-4 MyBank 应用程序 - 使用 Spring Security ACL
+- - '###'
+  - 部署和使用 `14-bankapp-db-security` 项目
+- - '###'
+  - 数据库表
+- - '###'
+  - 身份验证
+- - '###'
+  - '`JdbcMutableAclService` 配置'
+- - '###'
+  - 方法级安全
+- - '###'
+  - 领域对象安全
+- - '###'
+  - 程序化管理 ACL 条目
+- - '###'
+  - '`MutableAcl` 与安全'
+- - '##'
+  - 14-5 总结
+- - '#'
+  - 第 1 章 – Spring Framework 简介
+- - '##'
+  - 1-1 简介
+- - '##'
+  - 1-2 Spring Framework 模块
+- - '##'
+  - 1-3 Spring IoC 容器
+- - '##'
+  - 1-4 Spring 框架的优势
+- - '###'
+  - 管理本地和全局事务的一致
+- - '##'
+  - 1-5 使用 `JDBC` 对象程序化数据库事务
+- - '###'
+  - 声明式事务管理
+- - '###'
+  - 1-6 `@Transactional` 注解的使用
+- - '###'
+  - 安全
+- - '###'
+  - 1-7 `@Secured` `createFixedDeposit` 方法
+- - '###'
+  - JMX (Java Management Extensions)
+- - '###'
+  - 1-8 使用 `active` 变量的 `FixedDepositService`
+- - '###'
+  - JMS (Java 消息服务)
+- - '###'
+  - 缓存
+- - '##'
+  - 1-5 一个简单的 Spring 应用程序
+- - '###'
+  - 识别应用程序及其依赖
+- - '###'
+  - 为识别出的对象创建 POJO 类
+- - '###'
+  - 创建配置元数据
+- - '###'
+  - 通过 setter 方法注入
+- - '###'
+  - 从 Spring 容器访问 bean
+- - '##'
+  - 1-6 构建 Spring 之上的框架
+- - '##'
+  - 1-7 总结
+- - '#'
+  - 第 2 章 – Spring Framework 基础
+- - '##'
+  - 2-1 引言
+- - '##'
+  - 2-2 面向接口编程设计原则
+- - '###'
+  - 场景：依赖类包含对具体类的引用
+- - '###'
+  - 提高依赖类的可测试性
+- - '###'
+  - Spring 对“面向接口编程”设计原则的支持
+- - '###'
+  - 使用“面向接口编程”方法的 MyBank 应用程序
+- - '##'
+  - 2-3 实例化 Spring bean 的方法
+- - '###'
+  - 通过静态方法实例化 bean
+- - '###'
+  - 通过实例工厂方法实例化 bean
+- - '##'
+  - 2-4 依赖注入技术
+- - '###'
+  - 基于 setter 的 DI
+- - '###'
+  - 示例列表 2-11：EmailMessageSender 类及对应的 bean 定义
+- - '###'
+  - 向工厂方法创建的 bean 实例注入依赖
+- - '###'
+  - 示例列表 2-12：FixedDepositJdbcDao 类
+- - '###'
+  - 示例列表 2-13：FixedDepositDaoFactory 类
+- - '###'
+  - 示例列表 2-14：调用 FixedDepositDaoFactory 的 getFixedDeposit 方法的配置
+- - '###'
+  - 示例列表 2-15：调用 FixedDepositDaoFactory 的 getFixedDeposit 方法并设置返回的 FixedDepositJdbcDao
+    实例的 databaseInfo 属性的配置
+- - '###'
+  - 基于构造函数的 DI
+- - '###'
+  - 示例列表 2-16：PersonalBankingService 类
+- - '###'
+  - 示例列表 2-17：PersonalBankingService bean 定义
+- - '###'
+  - 使用混合基于构造和 setter 的 DI 机制
+- - '##'
+  - Bean 范围
+- - '###'
+  - Singleton (单例)
+- - '#'
+  - 源位置 - /src/test/java/sample/spring/chapter02/bankapp
+- - '##'
+  - 图 2-6 每个 Spring 容器都会创建自己的单例作用域 bean 实例
+- - '###'
+  - 示例列表 2-25 – `applicationContext.xml` - 同一个类的多个 bean 定义
+- - '###'
+  - 示例列表 2-26 – `SingletonTest` JUnit 测试类的 `testSingletonScopePerBeanDef` 方法
+- - '##'
+  - 图 2-7 每个 bean 定义对应一个单例作用域
+- - '###'
+  - 示例列表 2-27 – 懒性初始化作用域 bean
+- - '###'
+  - 示例列表 2-28 – 懒性初始化作用域 bean
+- - '###'
+  - 图 2-8 懒性初始化作用域 bean 实例
+- - '###'
+  - 示例列表 2-29 – 懒性初始化作用域 bean
+- - '###'
+  - 示例列表 2-30 – 懒性初始化作用域 bean
+- - '###'
+  - 示例列表 2-31 – 懒性初始化作用域 bean
+- - '###'
+  - 示例列表 2-32 – 懒性初始化作用域 bean
+- - '##'
+  - 2-6 总结
+- - '#'
+  - 第 3 章 – 配置 beans
+- - '##'
+  - 3-1 引言
+- - '##'
+  - 3-2 Bean 定义
+- - '###'
+  - MyBank – Bean 定义示例
+- - '###'
+  - 继承了什么？
+- - '###'
+  - Bean 定义示例
+- - '##'
+  - 3-3 配置不同类型的属性
+- - '###'
+  - Spring 中内置的属性
+- - '###'
+  - 不同的类型指定值
+- - '##'
+  - 3-4 配置不同属性和构造参数
+- - '###'
+  - 集合类型添加 List、Set 和 Properties 类型的
+- - '###'
+  - 集合类型添加 bean
+- - '###'
+  - 集合类型添加名称
+- - '###'
+  - '`@Properties` 注解与定义'
+- - '###'
+  - 3-5 内置属性配置方法
+- - '###'
+  - 3-6 `@Transactional` 注解的使用
+- - '###'
+  - 安全
+- - '###'
+  - 3-7 `@Secured` `createFixedDeposit` 方法
+- - '###'
+  - JMX (Java Management Extensions)
+- - '###'
+  - 3-8 使用 `active` 变量的 `FixedDepositService`
+- - '###'
+  - JMS (Java 消息服务)
+- - '###'
+  - 缓存
+- - '##'
+  - 3-9 FactoryBean 接口
+- - '###'
+  - MyBank – 在数据库中存储
+- - '###'
+  - MyBank – FactoryBean
+- - '###'
+  - 访问 FactoryBean
+- - '##'
+  - 3-10 总结
+- - '#'
+  - 第 4 章 – 依赖注入
+- - '##'
+  - 4-1 引言
+- - '##'
+  - 4-2 Inner beans
+- - '##'
+  - 4-3 使用 depends-on 属性显式控制 bean 的初始化顺序
+- - '###'
+  - MyBank – 之间的隐含依赖
+- - '###'
+  - 隐含依赖
+- - '###'
+  - EventSelectorServiceImpl – 写入者
+- - '###'
+  - FixedDepositServiceImpl – 读取者
+- - '###'
+  - 如何解决隐式依赖？
+- - '###'
+  - 单例作用（Singleton-scoped）bean 的依赖
+- - '###'
+  - 原型作用（Prototype-scoped）bean 的依赖
+- - '###'
+  - '`<lookup-method>`元素'
+- - '##'
+  - 4-6 自动装依赖
+- - '###'
+  - byType
+- - '###'
+  - byName
+- - '###'
+  - default / no
+- - '###'
+  - 使 bean 不自动注入
+- - '###'
+  - 自动配置的局限性
+- - '##'
+  - 4-7 总结
+- - '#'
+  - 第 5 章 – 自定义 bean 和数据定义
+- - '##'
+  - 5-1 引言
+- - '##'
+  - 5-2 自定义 bean 的初始化和销毁
+- - '###'
+  - 让 Spring 调用由 destroy-method 指定清理方法
+- - '###'
+  - 清理方法与原型作用域
+- - '###'
+  - 为所有 bean 指定默认初始化和方法
+- - '###'
+  - InitializingBean 和 DisposableBean接口
+- - '###'
+  - JSR 250 的 @PostConstruct 和 @PreDestroy 注解
+- - '##'
+  - 5-3 使用 BeanPostProcessor 与新创建的 bean交互
+- - '###'
+  - BeanPostProcessor 示例 – 验证 bean实例
+- - '###'
+  - BeanPostProcessor 示例 – 解析 bean依赖
+- - '##'
+  - 5-4 使用 BeanFactoryPostProcessor 修改 bean 定义
+- - '###'
+  - BeanFactoryPostProcessor example
+- - '###'
+  - PropertySourcesConfigurer
+- - '###'
+  - localOverride 属性
+- - '###'
+  - '`<property-placeholder>`元素'
+- - '###'
+  - PropertyOverrideConfigurer
+- - '###'
+  - PropertyOverrideConfigurer示例
+- - '##'
+  - 5-5 总结
+- - '#'
+  - 第 6 章 - Spring 的注解驱动开发
+- - '##'
+  - 6-1 简介
+- - '##'
+  - 6-2 使用 @Component 标识 Spring 组件
+- - '##'
+  - 6-3 @Autowired - 按类型自动装配依赖
+- - '##'
+  - 6-4 @Qualifier – 按名称自动装依赖
+- - '##'
+  - 6-5 JSR 330 的 `@Inject` 和 `@Named` 注解
+- - '##'
+  - 6-6 JSR 250 的 `@Resource` 注解
+- - '##'
+  - 6-7 @Scope, @Lazy, @DependsOn 和 @Primary 注解
+- - '##'
+  - '6-8 使用 @Value 注解简化组件配置 '
+- - '##'
+  - 6-9 使用 Spring 的 Validator 接口验证对象
+- - '###'
+  - 示例列表 6-25 – `FixedDepositServiceImpl` 类 – 验证 `FixedDepositDetails` 对象
+- - '###'
+  - 示例列表 6-26 – `BankApp` 类
+- - '##'
+  - 6-10 使用 JSR 303 注解指定约束
+- - '###'
+  - 示例列表 6-27 – `FixedDepositDetails` 类 – JSR 303 注解
+- - '###'
+  - Spring 对 JSR 303 的支持
+- - '##'
+  - 6-12 总结
+- - '#'
+  - 7-1 简介
+- - '##'
+  - 7-2 MyBank 应用的需求
+- - '##'
+  - 7-3 使用 Spring JDBC 模块开发 MyBank 应用
+- - '###'
+  - 配置数据源
+- - '###'
+  - 创建使用 Spring JDBC 模块类的 DAOs
+- - '###'
+  - '`JdbcTemplate`'
+- - '###'
+  - SimpleJdbcInsert
+- - '###'
+  - BankApp 类
+- - '##'
+  - 7-4 使用 Hibernate 开发 MyBank
+- - '###'
+  - 配置 SessionFactory
+- - '###'
+  - 使用 API 创建 DAO
+- - '##'
+  - 7-5 使用 Spring 进行事务管理
+- - '###'
+  - MyBank 的事务需求
+- - '###'
+  - 编式管理
+- - '###'
+  - 声明式管理
+- - '###'
+  - 示例列表 7-16 – `applicationContext.xml` - `<annotation-driven>`
+- - '###'
+  - 示例列表 7-17 – `FixedDepositServiceImpl` 类 - `@Transactional` 注解用法
+- - '###'
+  - '`value`属性'
+- - '###'
+  - Spring 的支持
+- - '##'
+  - 7-6 总结
+- - '#'
+  - 第 8 章 - 使用 Spring 进行消息、邮件、异步执行和缓存
+- - '##'
+  - 8-1 引言
+- - '##'
+  - 8-2 MyBank 应用的应用需求
+- - '##'
+  - 8-3 发送 JMS
+- - '###'
+  - 配置 `ActiveMQ` Broker 以嵌入模式运行
+- - '###'
+  - 配置 `JMSConnectionFactory`
+- - '###'
+  - 使用 `JmsTemplate` 发送 JMS 消息
+- - '###'
+  - 在事务中发送 JMS 消息
+- - '###'
+  - 动态 JMS 目标和 `JmsTemplate` 配置
+- - '###'
+  - '`JmsTemplate` 与消息转换'
+- - '##'
+  - 8-4 接收 JMS 消息
+- - '###'
+  - 使用 `JmsTemplate` 同步接收 JMS 消息
+- - '###'
+  - 使用消息监听容器异步接收 JMS 消息
+- - '##'
+  - 8-5 发送邮件
+- - '##'
+  - 8-6 任务调度与异步执行
+- - '###'
+  - '`TaskExecutor` 接口'
+- - '###'
+  - '`TaskScheduler` 接口'
+- - '###'
+  - '`@Async` 和 `@Scheduled` 注解'
+- - '##'
+  - 8-7 缓存
+- - '###'
+  - 配置 `CacheManager`
+- - '###'
+  - 缓存注解 - `@Cacheable`, `@CacheEvict` 和 `@CachePut`
+- - '##'
+  - 8-8 运行 MyBank 应用
+- - '##'
+  - 8-9 总结
+- - '#'
+  - 第 9 章 - 面向面向编程 (AOP)
+- - '##'
+  - 9-1 引言
+- - '##'
+  - 9-2 简单的 AOP 示例
+- - '##'
+  - 9-3 Spring AOP 框架
+- - '###'
+  - 代理创建
+- - '##'
+  - 9-4 切点表达式
+- - '###'
+  - '`execution` 切点'
+- - '###'
+  - '`args` 切点'
+- - '###'
+  - '`bean` 切点'
+- - '###'
+  - 基于注解的切点
+- - '##'
+  - 9-5 建议 (Advice) 类型
+- - '###'
+  - '`Before` 建议'
+- - '###'
+  - '`After returning` 建议'
+- - '###'
+  - '`After throwing` 建议'
+- - '###'
+  - '`After` 建议'
+- - '###'
+  - '`Around` 建议'
+- - '##'
+  - 9-6 Spring AOP - XML 架构风格
+- - '###'
+  - 配置 AOP 切面 (Aspect)
+- - '###'
+  - 配置建议
+- - '###'
+  - 将切点表达式与建议关联
+- - '##'
+  - 9-7 总结
+- - '#'
+  - '第 10 章 – Spring Web MVC 基础 '
+- - '##'
+  - 10-1 引言
+- - '##'
+  - 10-2 示例 Web 项目的目录结构
+- - '##'
+  - 10-3 理解“Hello World” Web 应用
+- - '###'
+  - '`HelloWorldController.java` – Hello World Web 应用的控制器类'
+- - '###'
+  - '`helloworld.jsp` – 显示“Hello World !!!”消息的 JSP 页面'
+- - '###'
+  - '`myapp-config.xml` – Web 应用上下文 XML 文件'
+- - '###'
+  - '`web.xml` – Web 应用部署描述符'
+- - '##'
+  - 10-4 DispatcherServlet – 前控制器
+- - '##'
+  - 10-5 访问 ServletContext 和 ServletConfig 对象
+- - '##'
+  - 10-6 使用 @Controller 和 @RequestMapping 注解开发控制器
+- - '###'
+  - 使用注解控制器开发“Hello World”Web 应用程序
+- - '##'
+  - 10-7 MyBank 应用程序的需求
+- - '##'
+  - 10-8 Spring Web MVC 注解 - @RequestMapping 和 @RequestParam
+- - '###'
+  - 使用 @RequestMapping 将请求映射到控制器或控制器方法
+- - '###'
+  - '@RequestMapping 注解方法的参数'
+- - '###'
+  - '@RequestMapping 注解方法的返回值类型'
+- - '###'
+  - 使用 @RequestParam 将请求参数传递给控制器方法
+- - '##'
+  - 10-9 校验
+- - '##'
+  - 10-10 使用 @ExceptionHandler 注解处理异常
+- - '##'
+  - 10-11 加载根应用上下文 XML 文件
+- - '##'
+  - 10-12 总结
+- - '#'
+  - 第 11 章 – Spring Web MVC 中的校验与数据绑定
+- - '##'
+  - 11-1 引言
+- - '##'
+  - 11-2 使用 @ModelAttribute 注解添加和检索模型属性
+- - '###'
+  - 使用方法级 @ModelAttribute 注解添加模型属性
+- - '###'
+  - 使用 @ModelAttribute 注解检索模型属性
+- - '###'
+  - 请求处理与 @ModelAttribute 注解方法
+- - '###'
+  - '@ModelAttribute 注解方法的行为'
+- - '###'
+  - '`RequestToViewNameTranslator`'
+- - '##'
+  - 11-3 使用 @SessionAttributes 注解缓存模型属性
+- - '##'
+  - 11-4 Spring 中的数据绑定支持
+- - '###'
+  - '`WebDataBinder` – 用于 Web 请求参数的数据绑定器'
+- - '###'
+  - 配置 `WebDataBinder` 实例
+- - '###'
+  - 允许或禁止字段参与数据绑定过程
+- - '###'
+  - 使用 `BindingResult` 对象检查数据绑定和校验错误
+- - '##'
+  - 11-5 Spring 中的校验支持
+- - '###'
+  - 使用 Spring 的 `Validator` 接口校验模型属性
+- - '###'
+  - 使用 JSR 303 注解指定约束
+- - '###'
+  - 校验使用 JSR 303 注解的对象
+- - '##'
+  - 11-6 Spring 的表单标签库
+- - '###'
+  - Spring 表单标签库的 HTML5 支持
+- - '##'
+  - 11-7 总结
+- - '#'
+  - 第 12 章 – 使用 Spring Web MVC 开发 RESTful Web 服务
+- - '##'
+  - 12-1 引言
+- - '##'
+  - 12-2 固定存款服务
+- - '##'
+  - 12-3 使用 Spring Web MVC 实现 RESTful Web 服务
+- - '###'
+  - JSON (JavaScript 对象表示法)
+- - '###'
+  - FixedDeposit 服务实现
+- - '##'
+  - 12-4 使用 `RestTemplate` 访问 RESTful Web 服务
+- - '##'
+  - 12-5 使用 `HttpMessageConverter` 将 Java 对象转换为 HTTP 请求及反之
+- - '##'
+  - 12-6 `@PathVariable` 和 `@Matrix` 注解
+- - '##'
+  - 12-7 总结
+- - '#'
+  - 第 13 章 – 更多 Spring Web MVC – 国际化、文件上传和异步处理
+- - '##'
+  - 13-1 引言
+- - '##'
+  - 13-2 使用处理器（handler interceptors）
+- - '###'
+  - 实现和配置拦截器
+- - '##'
+  - 13-3 使用资源进行国际化
+- - '###'
+  - MyBank 应用程序的需求
+- - '###'
+  - MyBank 应用程序的本地化
+- - '##'
+  - 13-4 异步处理请求
+- - '###'
+  - 异步请求配置
+- - '###'
+  - 从 `@RequestMapping` 方法返回 `Callable`
+- - '###'
+  - 从 `@RequestMapping` 方法返回 `DeferredResult`
+- - '###'
+  - 设置默认超时
+- - '##'
+  - 13-5 Spring 中的类型转换和格式化支持
+- - '###'
+  - 创建自定义 `Converter`
+- - '###'
+  - 配置并使用自定义 `Converter`
+- - '###'
+  - 创建自定义 `Formatter`
+- - '###'
+  - 配置自定义 `Formatter`
+- - '###'
+  - 创建 `AnnotationFactory` 仅格式化标记 @AmountFormat 的字段
+- - '###'
+  - 配置 `AnnotationFactory` 实现
+- - '##'
+  - 13-6 Spring Web MVC 中的文件上传
+- - '###'
+  - 使用 `CommonsMultipartResolver` 上传
+- - '###'
+  - 使用 `StandardMultipartResolver` 上传文件
+- - '##'
+  - 13-7 总结
+- - '#'
+  - 第 14 章 – 使用 Spring Security 应用程序
+- - '##'
+  - 14-1 引言
+- - '##'
+  - 14-2 MyBank 应用程序的安全需求
+- - '##'
+  - 14-3 使用 Spring Security 保护 MyBank 应用程序
+- - '###'
+  - Web 请求安全
+- - '###'
+  - DelegatingFilterProxy 配置
+- - '###'
+  - 身份验证配置
+- - '###'
+  - 使用 Spring Security 的 JSP 标签库保护内容
+- - '###'
+  - 保护方法
+- - '###'
+  - 使用 global-method-security 元素配置方法级安全
+- - '###'
+  - 使用 `@Secured` 注解在 Bean 方法上指定安全约束
+- - '##'
+  - 14-4 MyBank 应用程序 - 使用 Spring Security ACL
+- - '###'
+  - 部署和使用 `14-bankapp-db-security` 项目
+- - '###'
+  - 数据库表
+- - '###'
+  - 身份验证
+- - '###'
+  - '`JdbcMutableAclService` 配置'
+- - '###'
+  - 方法级安全
+- - '###'
+  - 领域对象安全
+- - '###'
+  - 程序化管理 ACL 条目
+- - '###'
+  - '`MutableAcl` 与安全'
+- - '##'
+  - 14-5 总结
+- - '#'
+  - 附录 A – 在 Eclipse IDE（或 IntelliJ IDEA）中导入和部署示例项目
+- - '##'
+  - A-1 设置开发环境
+- - '##'
+  - A-2 将示例项目导入 Eclipse IDE（或 IntelliJ IDEA）
+- - '###'
+  - 导入示例项目
+- - '###'
+  - 在 Eclipse IDE 中配置 M2_REPO 类路径
+- - '##'
+  - A-3 使用 Tomcat 7 服务器配置 Eclipse IDE

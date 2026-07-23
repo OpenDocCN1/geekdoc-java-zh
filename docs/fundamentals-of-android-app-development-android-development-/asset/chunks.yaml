@@ -1,0 +1,1259 @@
+- fmt: "\n# Fundamentals of Android App Development\n\nAndroid Development for Beginners\
+    \ to Learn Android Technology, SQLite, Firebase and Unity by `Sujit Kumar Mishra`.\n\
+    \n**FIRST EDITION 2020**\nCopyright © BPB Publications, India\nISBN: 978-93-89845-204\n\
+    All Rights Reserved. No part of this publication may be reproduced or distributed\
+    \ in any form or by any means or stored in a database or retrieval system, without\
+    \ the prior written permission of the publisher with the exception to the program\
+    \ listings which may be entered, stored and executed in a computer system, but\
+    \ they can not be reproduced by the means of publication.\n\n## Disclaimer of\
+    \ Warranty\nThe information contained in this book is true to correct and the\
+    \ best of author’s & publisher’s knowledge. The author has made every effort to\
+    \ ensure the accuracy of these publications, but cannot be held responsible for\
+    \ any loss or damage arising from any information in this book. All trademarks\
+    \ referred to in the book are acknowledged as properties of their respective owners.\n\
+    \n### Distributors:\n- **BPB PUBLICATIONS**: 20, Ansari Road, Darya Ganj, New\
+    \ Delhi-110002, Ph: 23254990/23254991\n- **MICRO MEDIA**: Shop No. 5, Mahendra\
+    \ Chambers, 150 DN Rd. Next to Capital Cinema, V.T. (C.S.T.) Station, MUMBAI-400\
+    \ 001, Ph: 22078296/22078297\n- **DECCAN AGENCIES**: 4-3-329, Bank Street, Hyderabad-500195,\
+    \ Ph: 24756967/24756400\n- **BPB BOOK CENTRE**: 376 Old Lajpat Rai Market, Delhi-110006,\
+    \ Ph: 23861747\n\nPublished by Manish Jain for BPB Publications, 20 Ansari Road,\
+    \ Darya Ganj, New Delhi-110002 and Printed by him at Repro India Ltd, Mumbai.\n\
+    \nDedicated to `Sudha Mishra`, My Mother, whose loving spirit still sustains me.\n\
+    \n## About the Author\n`Sujit Kumar Mishra` is an experienced Sr. Software Engineer,\
+    \ who for the past seven years has been working with customers and partners designing\
+    \ technology solutions. In his career, `Sujit Kumar Mishra` has presented at key\
+    \ IT events such as `C# .Net`, `Java (Android)`, `PHP`, `SAP (MM)` and database\
+    \ `SQL Server`, `MySQL`, etc. He has also worked in senior software roles and\
+    \ project management roles for `Tata Steel`, `BPCL`, `Sun pharma`, and `KPMG`.\n\
+    \nIn 2020, `Sujit Kumar Mishra` founded his Website, where he works today, the\
+    \ Founder and Chief Technology Officer. `Sujit Kumar Mishra` is also written four\
+    \ other books: `Mysterious Island Zoya` (Novel), `Dot net & MVC interview questions:\
+    \ Interview preparation, how to be rich`, and `One Day Mathematics`, which is\
+    \ published in 2019. Outside work, `Sujit Kumar Mishra` is an Actor who worked\
+    \ on TV & Bollywood Movies.\n\n## Acknowledgement\nThere are a few people I want\
+    \ to thank for the continued and ongoing support they have given me during the\
+    \ writing of this book. First and foremost, I would like to thank my parents and\
+    \ friends, `Anoop Sriwastawa`, `Pritesh Sawant`, and `Harish`, for putting up\
+    \ with me while I was spending many weekends and evenings on writing—I could have\
+    \ never completed this book without their support.\n\nThis book wouldn’t have\
+    \ happened if I hadn’t had the support from some of the key vendors and partners\
+    \ in the IT Teams. My gratitude goes to the team at `Computer world`, especially\
+    \ `Pritesh Sawant`, for providing valuable insights into some of the new features.\
+    \ Finally, I would like to thank `BPB Publications` for giving me this opportunity\
+    \ to write my first book for them.\n\n## Forward\nAndroid Technology is the technology\
+    \ that is developed by Google USA. Its World’s most massive selling & users of\
+    \ this technology. `Android framework` is platform we can develop Web Applications,\
+    \ Mobile Applications, Map, Multimedia Application & Cloud base services for users.\
+    \ In this, we have to cover most frequently asked question & answers for student\
+    \ & professional who is facing problem during the development. I’ve spent more\
+    \ than six years working experience in IT industry. I’ve to collect information\
+    \ from different types of sources including meeting someone in the same domain\
+    \ & work with him etc. and I’ve to figure out what the problem is and how to resolve\
+    \ it form this book.\n\nMy sincere thanks go to:\n- My publisher `BPB publication`\
+    \ & his teams. He has brought enormous in my life. They always guided & encourage\
+    \ for work.\n- Android book, who read this material, without you all, it can’t\
+    \ be completed.\n- Finally, my friends & family who is always encouraging me.\n\
+    \n## Preface\nApplication layering is still a recent development in Android when\
+    \ compared to the existing application delivery solutions available today, and\
+    \ how applications are typically delivered to a physical mobile. This older model\
+    \ of application delivery had to be changed to embrace the full features and functionality\
+    \ that a virtual environment delivers.\n\nThis change was made to address the\
+    \ issue of how to deliver applications to stateless virtual machines. This stateless\
+    \ or non-persistent model of delivering and building virtual machines on demand\
+    \ meant that end users would not “own” their virtual machine and instead would\
+    \ be allocated a new, freshly built machine on demand. The next time they logged\
+    \ in, they would again log in to a freshly built device.\n\nWhat do App Volumes\
+    \ deliver? At a highlevel, `App Volumes` provides real-time application-delivery\
+    \ which can be used as delivery system for your `android` and Other Real-time\
+    \ servers. The primary goal of this book is to provide information and skills\
+    \ that are necessary to Understand the Android Apps and how is work and what is\
+    \ the future of Android.\n\n## Chapter 1: Android Basic\n### Section 1: Introduction\n\
+    Android application layering as a concept and how it works. It focuses on the\
+    \ specifics of the `Android App` and what the solution can deliver in terms of\
+    \ use cases.\n\n### Section 2: Android basic\nThis section provides necessary\
+    \ information on the android device that focuses on the specifics of the `Android\
+    \ App` and what the solution as per required.\n\n### Section 3: Android practice\
+    \ question and answers\nThis section provides android question answers which are\
+    \ most common for information on the android device.\n\n### Section 4: Android\
+    \ practice set\nThis section provides a practical android solution, this is the\
+    \ most common set for android development and how to practice in future android\
+    \ apps for your devices.\n\n## Chapter 2: SQLite Database and Android\n### Section\
+    \ 1\nDifferent components of the solution and how to work them are shown in easy\
+    \ to follow, step-by-step instructions using an actual screenshot from `SQLite`.\n\
+    \n### Section 2: SQLite basic question and answers\nProvides components of the\
+    \ solution and how to work them are shown in easy to follow, step-by-step instructions\
+    \ as per business required.\n\n### Section 3: Google Firebase service\nWhich is\
+    \ most common for real-time data and large application development for android\
+    \ devices.\n\n### Section 4: Unity service\nFor game apps development including\
+    \ 2D and 3D Game interface for the Android throughout user the `unity` is also\
+    \ providing real-time data and large application development for android devices.\n\
+    \n### Section 5: Android Project\nIt’s a practical part of the android developer.\
+    \ In this section, Android developed can practice a practical project for your\
+    \ android devices.\n\n## Implementation Examples\n\n### How to developed SMS applications\n\
+    1. Add the following code in Main Activity XML:\n```xml\n<?xml version=\"1.0\"\
+    \ encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+    \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+    http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+    \    android:layout_height=\"match_parent\"\n    android:orientation=\"vertical\"\
+    \n    android:background=\"#E0FFFF\"\n    tools:context=\".MainActivity\"\n  \
+    \  android:layout_width=\"match_parent\"\n    android:layout_height=\"wrap_content\"\
+    \n    android:text=\"@string/enter_your_mobile_number_and_messages\"\n    android:textAlignment=\"\
+    center\"\n    android:textScaleX=\"1.5\"\n    android:textSize=\"25dp\"\n    android:layout_marginTop=\"\
+    20dp\">\n\n    <EditText\n        android:id=\"@+id/fstTxt\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+    100dp\"\n        android:layout_marginTop=\"150dp\"\n        android:text=\"Mobile\
+    \ No\" />\n\n    <EditText\n        android:id=\"@+id/mblTxt\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+    100dp\"\n        android:ems=\"10\" />\n\n    <EditText\n        android:id=\"\
+    @+id/secTxt\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+    wrap_content\"\n        android:text=\"Message\"\n        android:layout_marginLeft=\"\
+    100dp\" />\n\n    <EditText\n        android:id=\"@+id/msgTxt\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+    100dp\"\n        android:ems=\"10\" />\n\n    <Button\n        android:id=\"@+id/smsbtnSend\"\
+    \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+    wrap_content\"\n        android:layout_marginLeft=\"100dp\"\n        android:text=\"\
+    Send SMS\" />\n</LinearLayout>\n```\n2. Add user permission in your Manifest file:\n\
+    ```xml\n<uses-permission android:name=\"android.permission.SEND_SMS\" />\n```\n\
+    3. Add the following code in Java file in MainActivity:\n```java\npackage com.homeworld.android;\n\
+    \nimport android.content.Intent;\nimport android.net.Uri;\nimport android.support.v7.app.AppCompatActivity;\n\
+    import android.os.Bundle;\nimport android.telephony.SmsManager;\nimport android.view.View;\n\
+    import android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.Toast;\n\
+    \npublic class MainActivity extends AppCompatActivity {\n    private EditText\
+    \ txtMobile;\n    private EditText txtMessage;\n    private Button btnms;\n\n\
+    \    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n   \
+    \     super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\
+    \        txtMobile = (EditText) findViewById(R.id.mblTxt);\n        txtMessage\
+    \ = (EditText) findViewById(R.id.msgTxt);\n        btnms = (Button) findViewById(R.id.smsbtnSend);\n\
+    \        btnms.setOnClickListener(new View.OnClickListener() {\n            @Override\n\
+    \            public void onClick(View v) {\n                try {\n          \
+    \          Intent i = new Intent(Intent.ACTION_VIEW);\n                    i.setData(Uri.parse(\"\
+    smto:\" + txtMobile.getText().toString()));\n                    i.setType(\"\
+    vnd.android.mms-message\");\n                    i.putExtra(\"address\", txtMobile.getText().toString());\n\
+    \                    i.putExtra(\"body\", txtMessage.getText().toString());\n\
+    \                    startActivity(Intent.createChooser(i, \"Send sms via Mobile:\"\
+    ));\n                } catch (Exception e) {\n                    Toast.makeText(MainActivity.this,\
+    \ \"SMS Failed to Send, Please try again\", Toast.LENGTH_SHORT).show();\n    \
+    \            }\n            }\n        });\n    }\n}\n```\n\n### How to create\
+    \ simple music player\n1. The following code of XML file of MainActivity:\n```xml\n\
+    <?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+    \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+    http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+    \    android:layout_height=\"match_parent\"\n    android:background=\"@drawable/background\"\
+    \n    tools:context=\".MainActivity\">\n\n    <ImageButton\n        android:id=\"\
+    @+id/btn_play\"\n        android:layout_width=\"90dp\"\n        android:layout_height=\"\
+    90dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:layout_marginTop=\"\
+    550dp\"\n        android:background=\"@drawable/play\" />\n\n    <ImageButton\n\
+    \        android:id=\"@+id/btn_pause\"\n        android:layout_width=\"90dp\"\n\
+    \        android:layout_height=\"90dp\"\n        android:layout_marginLeft=\"\
+    10dp\"\n        android:background=\"@drawable/pause\"\n        android:layout_startOf=\"\
+    @+id/btn_play\"\n        android:layout_leftOf=\"@+id/btn_play\" />\n\n    <ImageButton\n\
+    \        android:id=\"@+id/btn_stop\"\n        android:layout_width=\"90dp\"\n\
+    \        android:layout_height=\"90dp\"\n        android:layout_alignEnd=\"@+id/btn_play\"\
+    \n        android:layout_rightOf=\"@+id/btn_play\"\n        android:background=\"\
+    @drawable/stop\" />\n</RelativeLayout>\n```\n2. Add a new raw folder in your project\
+    \ and add one `aaja.mp3` for music play.\n3. Add the following code in the Main\
+    \ Activity Java file:\n```java\npackage com.example.marinamusicplayer;\n\nimport\
+    \ android.media.MediaPlayer;\nimport android.support.v7.app.AppCompatActivity;\n\
+    import android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\n\
+    \npublic class MainActivity extends AppCompatActivity implements View.OnClickListener\
+    \ {\n    Button play, pause, stop;\n    int pausePosittion;\n    MediaPlayer mediaPlayer;\n\
+    \n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n  \
+    \      super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\
+    \        play = (Button) findViewById(R.id.btn_play);\n        pause = (Button)\
+    \ findViewById(R.id.btn_pause);\n        stop = (Button) findViewById(R.id.btn_stop);\n\
+    \        play.setOnClickListener(this);\n        pause.setOnClickListener(this);\n\
+    \        stop.setOnClickListener(this);\n    }\n\n    @Override\n    public void\
+    \ onClick(View view) {\n        switch (view.getId()) {\n            case R.id.btn_play:\n\
+    \                if (mediaPlayer == null) {\n                    mediaPlayer =\
+    \ MediaPlayer.create(getApplicationContext(), R.raw.aaja);\n                 \
+    \   mediaPlayer.start();\n                } else if (!mediaPlayer.isPlaying())\
+    \ {\n                    mediaPlayer.seekTo(pausePosittion);\n               \
+    \     mediaPlayer.start();\n                }\n                break;\n      \
+    \      case R.id.btn_pause:\n                if (mediaPlayer != null) {\n    \
+    \                pausePosittion = mediaPlayer.getCurrentPosition();\n        \
+    \            mediaPlayer.pause();\n                }\n                break;\n\
+    \            case R.id.btn_stop:\n                if (mediaPlayer != null) {\n\
+    \                    mediaPlayer.stop();\n                    mediaPlayer = null;\n\
+    \                }\n                break;\n        }\n    }\n}\n```\n\n### How\
+    \ to call one Activity to another\n1. The following is the code of XML (MainActivity):\n\
+    ```xml\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"\
+    http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\
+    \n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"\
+    match_parent\"\n    android:layout_height=\"match_parent\"\n    android:background=\"\
+    @drawable/time\"\n    tools:context=\".MainActivity\"\n    android:layout_width=\"\
+    wrap_content\"\n    android:layout_height=\"wrap_content\"\n    android:text=\"\
+    Welcome to First Page\"\n    android:textSize=\"30dp\"\n    android:layout_centerHorizontal=\"\
+    true\">\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"\
+    90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+    450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+    Next\" />\n</RelativeLayout>\n```\n2. The following is the code of Main Activity\
+    \ Java file:\n```java\npackage com.example.marina_secret;\n\nimport android.app.Activity;\n\
+    import android.content.Intent;\nimport android.support.v7.app.AppCompatActivity;\n\
+    import android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\n\
+    \npublic class MainActivity extends AppCompatActivity {\n    private Button button;\n\
+    \n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n  \
+    \      super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\
+    \        button = (Button) findViewById(R.id.button);\n        button.setOnClickListener(new\
+    \ View.OnClickListener() {\n            @Override\n            public void onClick(View\
+    \ v) {\n                Next();\n            }\n        });\n    }\n\n    public\
+    \ void Next() {\n        Intent intent = new Intent(this, Activity2.class);\n\
+    \        startActivity(intent);\n    }\n}\n```\n3. The following will be the code\
+    \ of Activity 2 in XML file:\n```xml\n<?xml version=\"1.0\" encoding=\"utf-8\"\
+    ?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+    \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+    http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+    \    android:layout_height=\"match_parent\"\n    android:background=\"@color/colorAccent\"\
+    \n    tools:context=\".Activity2\">\n\n    <TextView\n        android:id=\"@+id/titleid\"\
+    \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+    wrap_content\"\n        android:text=\"Second Page List\"\n        android:textDirection=\"\
+    firstStrong\"\n        android:textSize=\"30sp\"\n        android:textStyle=\"\
+    italic\"\n        android:layout_centerHorizontal=\"true\"\n        android:textColor=\"\
+    #FFFFFF\"\n        android:textScaleX=\"1\"/>\n\n    <ImageView\n        android:layout_width=\"\
+    450dp\"\n        android:layout_height=\"350dp\"\n        android:layout_below=\"\
+    @+id/titleid\"\n        android:src=\"@drawable/time\"\n        android:scaleType=\"\
+    fitXY\"/>\n\n    <Button\n        android:id=\"@+id/button2\"\n        android:layout_width=\"\
+    90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+    450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+    Next\"\n        android:textSize=\"20dp\"/>\n</RelativeLayout>\n```\n4. The following\
+    \ code is of Activity 2 in Java file:\n```java\npackage com.example.marina_secret;\n\
+    \nimport android.content.Intent;\nimport android.support.v7.app.AppCompatActivity;\n\
+    import android.os.Bundle;\nimport android.view.View;\nimport android.widget.ArrayAdapter;\n\
+    import android.widget.Button;\nimport android.widget.ListView;\n\npublic class\
+    \ Activity2 extends AppCompatActivity {\n    private Button button2;\n\n    @Override\n\
+    \    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\
+    \        setContentView(R.layout.activity_2);\n        button2 = (Button) findViewById(R.id.button2);\n\
+    \        button2.setOnClickListener(new View.OnClickListener() {\n           \
+    \ @Override\n            public void onClick(View v) {\n                Next();\n\
+    \            }\n        });\n    }\n\n    public void Next() {\n        Intent\
+    \ intent = new Intent(this, MainActivity.class);\n        startActivity(intent);\n\
+    \    }\n}\n```\n\n### How to add banner ads in our project?\n1. Changes in Manifest\
+    \ file add code as below:\n```xml\n<uses-permission android:name=\"android.permission.ACCESS_NETWORK\"\
+    \ />\n```\nAdd the following code inside meta-data (For more details you can visit\
+    \ Google updation site):\n```xml\n<meta-data\n    name=\"com.google.android.ads.APPLICATION_ID\"\
+    \n    value=\"ca-app-pub-873399301722397/92347129\"/>\n```\n2. Add the following\
+    \ code in your Main Activity file:\n```java\nprivate AdView mAdView;\n// Added\
+    \ for banner in my project.\nAds.initialize(this, \"ca-app-pub-873399301722397/92347129\"\
+    );\nmAdView = findViewById(R.id.adView);\nAdRequest request = new AdRequest.Builder().build();\n\
+    mAdView.loadAd(request);\n```\n3. Add the following code in XML file for ads:\n\
+    ```xml\n<com.google.android.gms.ads.AdView\n    android:id=\"@+id/adView\"\n \
+    \   android:layout_width=\"wrap_content\"\n    android:layout_height=\"wrap_content\"\
+    \n    android:layout_centerHorizontal=\"true\"\n    android:layout_alignParentBottom=\"\
+    true\"\n    android:layout_gravity=\"center\"\n    ads:adSize=\"BANNER\"\n   \
+    \ ads:adUnitId=\"ca-app-pub-873399301722397/923471291\"/>\n```\n4. Add the following\
+    \ library in Gradle library of your project:\n```gradle\nimplementation 'com.google.android.gms:play-services-ads:17.2.1'\n\
+    ```\n\n### How to develop a feedback form in Android?\n1. Add the following code\
+    \ in your manifest file for permission:\n```xml\n<uses-permission android:name=\"\
+    android.permission.INTERNET\" />\n<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"\
+    \ />\n```\n2. Add the following code in your XML file help activity:\n```xml\n\
+    <?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+    \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+    http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+    \    android:layout_height=\"match_parent\"\n    android:paddingLeft=\"@dimen/activity_horizontal_margin\"\
+    \n    android:paddingRight=\"@dimen/activity_horizontal_margin\"\n    android:paddingTop=\"\
+    @dimen/activity_vertical_margin\"\n    android:paddingBottom=\"@dimen/activity_vertical_margin\"\
+    \n    tools:context=\".HelpActivity\"\n    android:layout_width=\"wrap_content\"\
+    \n    android:layout_height=\"wrap_content\"\n    android:text=\"@string/support\"\
+    \n    android:textScaleX=\"2\"\n    android:textStyle=\"bold\"\n    android:textSize=\"\
+    15sp\"\n    android:layout_marginTop=\"25sp\"\n    android:layout_marginStart=\"\
+    120sp\">\n\n    <ImageButton\n        android:id=\"@+id/phone_icon1\"\n      \
+    \  android:layout_width=\"40dp\"\n        android:layout_height=\"40dp\"\n   \
+    \     android:layout_marginTop=\"45sp\"\n        android:src=\"@drawable/ic_message_black_24dp\"\
+    \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+    wrap_content\"\n        android:layout_marginStart=\"50sp\"\n        android:layout_marginTop=\"\
+    55sp\"\n        android:text=\"@string/app_not_download\" />\n\n    <ImageButton\n\
+    \        android:id=\"@+id/phone_icon2\"\n        android:layout_width=\"40dp\"\
+    \n        android:layout_height=\"40dp\"\n        android:layout_marginTop=\"\
+    250sp\"\n        android:src=\"@drawable/ic_message_black_24dp\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"\
+    50sp\"\n        android:layout_marginTop=\"250sp\"\n        android:text=\"@string/delete_apps\"\
+    \ />\n\n    <ImageButton\n        android:id=\"@+id/phone_icon\"\n        android:layout_width=\"\
+    40dp\"\n        android:layout_height=\"40dp\"\n        android:layout_marginTop=\"\
+    450sp\"\n        android:src=\"@drawable/ic_feedback_black_24dp\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"\
+    @string/contact_us\" />\n</RelativeLayout>\n```\n3. Add the following code in\
+    \ Java Help file:\n```java\npackage com.island.test;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\
+    import android.content.Intent;\nimport android.os.Bundle;\nimport android.view.Menu;\n\
+    import android.view.View;\n\npublic class HelpActivity extends AppCompatActivity\
+    \ {\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n\
+    \        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_help);\n\
+    \        findViewById(R.id.btn_feedback).setOnClickListener(new View.OnClickListener()\
+    \ {\n            @Override\n            public void onClick(View v) {\n      \
+    \          sendFeedback();\n            }\n        });\n    }\n\n    @Override\n\
+    \    public boolean onCreateOptionsMenu(Menu menu) {\n        getMenuInflater().inflate(R.menu.main,\
+    \ menu);\n        return true;\n    }\n\n    //Start a new activity for sending\
+    \ email\n    private void sendFeedback() {\n        final Intent _Intent = new\
+    \ Intent(Intent.ACTION_SEND);\n        _Intent.setType(\"text/html\");\n     \
+    \   _Intent.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.mail_email)});\n\
+    \        _Intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject));\n\
+    \        _Intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_message));\n\
+    \        startActivity(Intent.createChooser(_Intent, getString(R.string.title)));\n\
+    \    }\n}\n```\n"
+  raw: ' ![](image-ry5cy4bv.jpg) Fundamentals ofAndroid AppDevelopment ![](image-3tci5ji0.jpg) Android
+    Development forBeginners to Learn Android Technology,SQLite, Firebase and Unity ![](image-3tci5ji0.jpg) by Sujit
+    Kumar Mishra ![](image-0zwtxdhl.jpg)FIRST EDITION 2020 Copyright © BPB Publications,
+    India ISBN: 978-93-89845-204 All Rights Reserved. No part of this publication
+    may be reproduced or distributed in any form or by any means or stored in a database
+    or retrieval system, without the prior written permission of the publisher with
+    the exception to the program listings which may be entered, stored and executed
+    in a computer system, but they can not be reproduced by the means of publication. LIMITS
+    OF LIABILITY AND DISCLAIMER OF WARRANTY The information contained in this book
+    is true to correct and the best of author’s & publisher’s knowledge. The author
+    has made every effort to ensure the accuracy of these publications, but cannot
+    be held responsible for any loss or damage arising from any information in this
+    book. All trademarks referred to in the book are acknowledged as properties of
+    their respective owners. Distributors: BPB PUBLICATIONS 20, Ansari Road, Darya
+    Ganj New Delhi-110002 Ph: 23254990/23254991 MICRO MEDIA Shop No. 5, Mahendra Chambers, 150
+    DN Rd. Next to Capital Cinema, V.T. (C.S.T.) Station, MUMBAI-400 001 Ph: 22078296/22078297 DECCAN
+    AGENCIES 4-3-329, Bank Street, Hyderabad-500195 Ph: 24756967/24756400 BPB BOOK
+    CENTRE 376 Old Lajpat Rai Market, Delhi-110006 Ph: 23861747 Published by Manish
+    Jain for BPB Publications, 20 Ansari Road, Darya Ganj, New Delhi-110002 and Printed
+    by him at Repro India Ltd, Mumbai Dedicated to Sudha Mishra My Mother, whose loving
+    spirit still sustains me About the Author Sujit Kumar Mishra is an experienced
+    Sr. Software Engineer, who for the past seven years has been working with customers
+    and partners designing technology solutions. In his career, Sujit Kumar Mishra
+    has presented at key IT events such as C# .Net, Java (Android), PHP, SAP (MM)
+    and database SQL Server, MySQL, etc. He has also worked in senior software roles
+    and project management roles for Tata Steel, BPCL, Sun pharma, and KPMG. In 2020,
+    Sujit Kumar Mishra founded his Website, where he works today, the Founder and
+    Chief Technology Officer. Sujit Kumar Mishra is also written four other books.
+    Mysterious Island Zoya (Novel), Dot net & MVC interview questions: Interview preparation,
+    how to be rich, and One Day Mathematics, which is published in 2019\. Outside
+    work, Sujit Kumar Mishra is an Actor who is worked on TV & Bollywood Movies.Acknowledgement There
+    are a few people I want to thank for the continued and ongoing support they have
+    given me during the writing of this book. First and foremost, I would like to
+    thank my parents and friends, Anoop Sriwastawa, Pritesh Sawant, and Harish, for
+    putting up with me while I was spending many weekends and evenings on writing—I
+    could have never completed this book without their support. This book wouldn’t
+    have happened if I hadn’t had the support from some of the key vendors and partners
+    in the IT Teams. My gratitude goes to the team at Computer world, especially Pritesh
+    Sawant, for providing valuable insights into some of the new features. Finally,
+    I would like to thank BPB Publications for giving me this opportunity to write
+    my first book for them.Forword The Android Technology is the technology that is
+    developed by Google USA. Its World’s most massive selling & users of this technology.
+    Android framework is platform we can develop Web Applications, Mobile Applications,
+    Map, Multimedia Application & Cloud base services for users. In this, we have
+    to cover most frequently asked question & answers for student & professional who
+    is facing problem during the development. I’ve spent more than six years working
+    experience in IT industry. I’ve to collect information from different types of
+    sources including meeting someone in the same domain & work with him etc. and
+    I’ve to figure out what the problem is and how to resolve it form this book. My
+    sincere thanks go to:  My publisher BPB publication & his teams. He has brought
+    enormous in my life. They always guided & encourage for work. Android book, who
+    read this material, without you all, it can’t be completed. Finally, my friends
+    & family who is always encouraging me.Preface Application layering is stilla recent
+    development in Android when compared to the existing application delivery solutions
+    available today, and how applications are typically delivered to a physical mobile.
+    This older model of application delivery had to be changed to embrace the full
+    features and functionality that a virtual environment delivers. This change was
+    made to address the issue of how to deliver applications to stateless virtual
+    machines. This stateless or non-persistent model of delivering and building virtual
+    machines on demand meant that end users would not “own” their virtual machine
+    and instead would be allocated a new, freshly built virtual machine on-demand
+    as they logged in. The next time they logged in, they would again log in to a
+    freshly built virtual mobile device, with no application or end-user data or settings. With
+    Android App deployments, IT teams would need to build and manage several gold
+    images such that they can be used as templates for these virtual mobiles or physical
+    machines so that the right applications can be delivered to the correct end-users.
+    It also meant that they would potentially need to rebuild the right image just
+    so that they could update a single application for your mobile. To address this
+    issue of having several different Apps builds to manage applications and operating
+    systems as one, admins needed a solution whereby they could manage the applications
+    independently. A way that is very familiar today in how virtualization works are
+    by abstracting the Android operating systems from the hardware. However, this
+    time you are one level up, with abstracting the applications from theAndroid operating
+    system. This approach would allow admins to deliver apps independently. One of
+    the ways how applications can be abstracted from the underlying Android OS, andbe
+    able to deliver them back independently, is via application layering. With application
+    layering, admins can create that layer of abstraction, separate the applications
+    from the underlying OS and deliver them back to the end-users on demand. Equally,
+    they can also be removed. As the applications are now independent of the operating
+    system, they can be easily updated without having to touch the android operating
+    system. Android added an application layering solution to its end-user that Google
+    bought in 2005, and Android was unveiled in 2007, with the first commercial Android
+    device launched in September 2008. The Android devices certified under standards
+    imposed by Google. Other competing Android ecosystems include Amazon.com’s Fire
+    OS, or LineageOS, etc. In December 2016, “Android users have installed more than
+    65 billion apps from Google Play in the last year.” As per estimation in February
+    2020, 3.5 billion Smartphone users in android devices. What do App Volumes deliver?
+    At a highlevel, App Volumes provides a real-time application-delivery which can
+    beused as a delivery system for your android OS and Other Real-time servers. The
+    primary goal of this book is to provide information and skills that are necessary
+    to Understand the Android Apps and how is work and what is the future of Android.
+    This book contains real-life examples that will show you how to developed Apps,
+    Basic Information of real-time examples, and Google Firebase Services for Large
+    Application, as well as how to integrate it into other Services, Unity and SQLite
+    DB. Over the two sections in this book, you will learn the following: Chapter
+    1: Section # 1 Introduction: Android application layering as a concept and how
+    it works. It then focuses on the specifics of the Android App and what the solution
+    can deliver in terms of use cases. Section # 2 Androidbasic: This section provides
+    necessary information on the android device that focuses on the specifics of the
+    Android App and what the solution as per required. Section # 3 Android practice
+    basic question and answers: This section provides android question answers which
+    are most common for information on the android device. Section # 4 Android practice
+    set: This section provides a practical android solution, this is the most common
+    set for android development and how to practice in future android apps development
+    for your devices. Chapter 2: Section # 1: discusses the different components of
+    the solution and how to work them are shown in easy to follow, step-by-step instructions
+    using an actual screenshot from a test SQLite. Section # 2: SQLite basic question
+    and answers which provides components of the solution and how to work them are
+    shown in easy to follow, step-by-step instructions as per business required. Section
+    # 3: Google Firebase service, which is most common for real-time data and large
+    application development for android devices. Section # 4: Unity service for game
+    apps development including 2D and 3D Game interface for the Android throughout
+    user the unity is also providing real-time data and large application development
+    for android devices. Section # 5: Android Project It’s a practical part of the
+    android developer. In this section, Android developed can practice a practical
+    project for your android devices.Errata We take immense pride in our work at BPB
+    Publications and follow best practices to ensure the accuracy of our content to
+    provide with an indulging reading experience to our subscribers. Our readers are
+    our mirrors, and we use their inputs to reflect and improve upon human errors
+    if any, occurred during the publishing processes involved. To let us maintain
+    the quality and help us reach out to any readers who might be having difficulties
+    due to any unforeseen errors, please write to us at : errata@bpbonline.com Your
+    support, suggestions and feedbacks are highly appreciated by the BPB Publications’
+    Family.Table of Contents 1\. Android BasicAndroid featuresAndroid practical fundamental
+    question and answerAndroid practice set one 2\. SQLite Database and AndroidSQLite
+    fundamental question and answers Firebase 3\. Technology Basic 4\. Unity - Game
+    Development Platform Unity Basic Projects IndexAndroid Practical Book The Android
+    Practical books are official advisable for software developer who is facing any
+    problem for new application development in android studio in Java programming
+    languages. In this book, we point out a few most used practical questions and
+    its solution. In this book, we can find out a few most of the time using practical
+    tools by Java programming and how to enhance your code as a technical in Java
+    programming. For more detail, you can also visit the Android documentation link
+    as given below: https://developer.android.com/docs Blog: https://sujitvital89.blogspot.com/CHAPTER
+    1 Android Basic Android is developing a mobile platform which is developed by
+    Google. It’s open-source software available for all. The Android operating system
+    is designed for a touchscreen mobile with a smartphone. It’s also available for
+    developing an application in androids like Android mobile apps, android TV, Android
+    Watch, Digital camera, Android Map, and many more. The android is comfortable
+    with UNIX and LINUX OS. The android supports two languages, namely Java and Kotlin.
+    The android developed by Android Inc ., which Google bought in 2005, Android was
+    unveiled in 2007, with the first commercial Android device launched in September
+    2008. The core Android source code is known as the Android Open Source Project
+    (AOSP), which is primarily licensed under the Apache License. Android is one of
+    the bestselling worldwide platforms for a smartphone. Android is one of the official
+    OS of Google US, which is available for open source for public use. The Android
+    OS is available for more than 100 languages with supported platform 32 bit and
+    64 bit ARM. Android Inc. was founded in Palo Alto, California , in October 2003
+    by Andy Rubin, Rich Miner, Nick Sears, and Chris White. Rubin described the Android
+    project as tremendous potential in developing smarter mobile devices that are
+    more aware of its owner’s location and preferences. Android features  Functional
+    connectivity with others resources like GSM/EDGE, IDEN, CDMA, EV-DO, UMTS, Bluetooth,
+    Wi-Fi, LTE, NFC, and WiMAX. Extra features of the keyword the android support
+    multiple keyboards and makes them easy to install; the SwiftKey, Skype, and 8pen
+    apps all offer ways to change up your keyboard style quickly. They support multiple
+    media formats for video audio and images like H.263, H.264, MPEG-4 SP, AMR, AMR-WB,
+    AAC, HE-AAC, AAC 5.1, MP3, MIDI, Ogg Vorbis, WAV, JPEG, PNG, GIF, BMP, and many
+    more. Multitasking feature helps the users to jump from one task to another task
+    at same time. There is Beautiful UI with optimized graphics and handset layout
+    for users. It is User-friendly for a user and very easy to use anyway anytime. It
+    is a Lightweight storage of the SQL Lite database. Live streaming media support. They
+    also support cloud base database with firebase connectivity for large scale database. User-friendly
+    widgets, the widgets are resizable, so users can expand them to show more content
+    or shrink them to save space. Android practical fundamental question and answer  What
+    is the Android SDK? For the development of any mobile application in Android Studio
+    we need some tools, and this requirement is satisfied by Android SDK, which is
+    a set of tools that are used for developing or writing apps. It’s a GUI, which
+    emulates the Android environment. The Android Emulator acts like an actual mobile
+    device on which the developers write their code and then debug/test the same code
+    to check if anything is wrong or debug on the mobile. What is Context in Android? The
+    Android Context is a handle to the android system; it provides services like resolving
+    resources, obtaining access to databases and preferences, and so on. An Android
+    app has activities. Context is like a handle to the environment your application
+    is currently running in. There are two types of context using on Android:  Application
+    Context Activity Context What is Activity in Android? The Activity performs actions
+    on the screen. If you want to do any operations, we can do it with activity. We
+    can create multiple activities as per our requirement on Android Studio for our
+    application. In Activity, we can add UI part and logical coding as per our application
+    requirement. What is the APK format? The APK format of the application bundle
+    is in one file. The Android packaging key is compressed with classes, user interface,
+    supportive assets, and manifest. All files are compressed to a single file is
+    called APK. What is build type in Gradle? How to use them? The Android build types
+    define properties that Gradle uses when building and packaging of your Android
+    app. A build type defines how a module is built, for example, whether ProGuard
+    is run. A product flavor defines what is built, such as which resources are included
+    in the build. Gradle creates a build variant for every possible combination of
+    your project’s product flavors and builds types. The build type Gradle automatically
+    downloads packages whenever we add any new package for our project. If Gradle
+    is not built properly we get an error in our application. What is intent in Android? The
+    intent is connected to either the external world of application or the inner world
+    of application, such as opening a PDF is intent, connect to the web browser, and
+    more. We can have used various types of intent for our activity. We can have used
+    two types of intent explicit intent and implicit intent. What is a manifest file
+    in the Android project? The manifest file is an XML file in our Android project.
+    Every Android application must have an AndroidManifest.xml file in its root directory.
+    The manifest file presents essential information about your app to the Android
+    system, information the system must have before it can run any of the app’s code.
+    In the manifest file, we can add authorization permission and deference type of
+    services as per our application requirement. How may the type of notification
+    available in an Android device? There are three types of notification available
+    on an Android device as given below:  Toast notification: It will show a pop-up
+    message on the surface of the window. And after some time, it will be automatically
+    closed. Status bar notification: It will show notifications on the status bar. Dialogue
+    notification: It is an activity related notification for your Android. What is
+    ADB? The Android Debug Bridge (ADB) is used for debugging the application. ADB
+    is a command-line tool that performs shell commands. ADB is used for direct communication
+    between the emulator ports. It gives direct control of the communication between
+    the emulator instances to the developer. What are Loaders in Android? The Android
+    Loader API was introduced in API level 11 and is used to load data from a data
+    source to display in an activity or fragment. The Loaders persist and cache results
+    across configuration changes to prevent duplicate queries. Explain the layout
+    of Android and types of layout? The Android layout defines the structure for a
+    user interface in your app, such as in an activity. All elements in the layout
+    are built using a hierarchy of View and ViewGroup objects. A View usually draws
+    something the user can see and interact with. The layout defines basic application
+    design methods. Layout as given below:  Linear layout Relative layout Table layout Grid
+    view Tab layout List view The most common layout we are using liner layout and
+    relative layout for our application. In liner layout, all the elements are displayed
+    linearly (below is an example of the linear layouts), either horizontally or vertically,
+    and this behavior is set in android: which is an attribute of the node In the
+    relative layout method, every element arranges itself relative to other elements
+    or a parent element. What is the Activity lifecycle of Android? The Activity lifecycle
+    of android as given below:  void onCreate() void onStart() void onRestart() void
+    onResume() void onPause() void onStop() void onDestroy() Android practice set
+    one  How to create new Activity for our project? 1) Firstly, click on the app
+    | res | Right-click on the layout. After that, select New | Activity and choose
+    your Activity as per requirement. Here we choose Blank Activity as shown in the
+    figure below: ![](image-a9vk1p13.jpg) Figure 1.1: Creating a new activity 2) Now,
+    enter your activity name and click on the Finish button. How to create a new button
+    on our activity? To create a new button, follow the steps below: 1) Add code in
+    your XML file of Activity for button: version=”1.0” encoding=”utf-8”?<relativelayout
+    _="" span="">xmlns:android=”http://schemas.android.com/apk/res/android”</relativelayout>xmlns:app=”http://schemas.android.com/apk/res-auto”xmlns:tools=”http://schemas.android.com/tools”android:layout_width=”match_parent”android:layout_height=”match_parent”tools:context=”.Main2Activity” android:id=”@+id/button”android:layout_width=”match_parent”android:layout_height=”wrap_content”android:layout_marginTop=”20dp”android:text=”@string/start”/> 2)
+    Now, add code in your Java file inside the main activity: Button button=(Button)findViewById(R.id.button);button.setOnClickListener(new
+    View.OnClickListener(){@Overridepublic void onClick(View v){startActivity(new
+    Intent(getApplicationContext(),MainActivity.class));/* if you want to finish the
+    first activity then just callfinish(); */}}); Output: you can see ”Button Symbol.” How
+    to create a disable button in the Android project code? Code for your XML file:
+    In button is if it is set as enabled: false button will be shown false and if
+    it is set as enabled: true it will be shown at standard button true: android:id=”@+id/btnBgSelectorDisabled”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_margin=”220dp”android:background=”test
+    me”android:enabled=”false”android:padding=”8dp”android:text=”This is disable button
+    “> How to create an image button in your project? <imagebutton _="" span=""></imagebutton>android:layout_width=”80dp”android:layout_height=”80dp”android:layout_marginTop=”80dp”android:background=”@color/colorAccent”/> You
+    can set color or image as per your requirement of the project on your background.
+    You can also set your top margin as per your requirements. ![](image-ezo5a2rz.jpg) Figure
+    1.2: Creating image button How to create a toggle and radio button? Example of
+    a radio button: The ID you can use for Java file for your basic command as per
+    your logic set in any types of button you as you created. You can also have used
+    the library for your button design: <radiobutton _="" span=""></radiobutton>android:id=”@+id/radio1”android:layout_width=”wrap_content”android:layout_height=”20dp”android:layout_marginTop=”150dp”/> Example
+    of toggle button: android:id=”@+id/togal1”android:layout_width=”wrap_content”android:layout_height=”60dp”android:layout_marginTop=”70dp”/> How
+    to set text view? The text view is used for whatever text we want to add for our
+    project and want to show in our mobile application. We can create short text and
+    long text as per our requirements. layout_centerHorizontal=”true” used for centralized
+    your text. The TextView example as given below: android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”Welcome
+    to Android.”android:layout_centerHorizontal=”true”android:textSize=”35dp”android:layout_marginTop=”150dp”/> How
+    to set EditText? You can set any type of edit text. Generally, most of the case
+    user and password form generation for our project we can use It’s a basic example
+    of the edit you can do more creative as per your requirement. The EditText field
+    user has the right to edit the text and update it in form. Example of android:layout_width=”350dp”android:layout_height=”wrap_content”android:layout_marginTop=”150dp”/> ProgressBar
+    used with example? The ProgressBar is used for multimedia files like audio and
+    video player or live streaming video players: <progressbar _="" span=""></progressbar>android:layout_width=”match_parent”android:layout_height=”30dp”android:layout_centerVertical=”true”/> What
+    is ListView? The ListView groups several items and displays them in a vertical
+    scrollable list. The list items are automatically inserted to the list using an
+    Adapter that pulls content from a source such as an array or database. In we can
+    add a list of data; for example, the mobile contact list and song list is an example
+    of a list view for your mp3 songs. We can create ListView using the code given
+    below: android:id=”@+id/list1”android:layout_marginTop=”20dp”android:layout_width=”match_parent”android:layout_height=”550dp”> What
+    is the use of VideoView? The VideoView is used for the multimedia file of a video
+    file. We can set height and width for our project as per our requirements for
+    videos: android:id=”@+id/videoview”android:layout_width=”wrap_content”android:layout_height=”250dp”/> What
+    is WebView? The WebView is used for web page showing on your Android device. The
+    web page can be loaded from the same application or URL. It is used to display
+    online content in Android activity: android:id=”@+id/webview1”android:layout_width=”180dp”android:layout_height=”150dp”> Explain
+    SeekBar? The SeekBar is an extension of ProgressBar that adds a draggable thumb.
+    The user can touch the thumb and drag left or right to set the current progress
+    level. The seek bar used for application check current progress level. Example: <seekbar
+    _="" span=""></seekbar>android:id=”@+id/seekbar1”android:layout_width=”wrap_content”android:layout_height=”80dp”android:layout_marginTop=”250dp”/> We
+    will get the following output: ![](image-qsbc251m.jpg) Figure 1.3: Creating seek
+    bar What is a Switch example? The Switch is a two-state toggle. We can select
+    any one of the two. Generally, it is used to switch from night mode to day mode
+    in a mobile device. Example: android:id=”@+id/switch1”android:layout_width=”80dp”android:layout_height=”50dp”/> We
+    will get the following output: ![](image-h1920m19.jpg) Figure 1.4: Creating a
+    switch What is ImageView and used? The resources used to display images are, for
+    example, Bitmap, JPG, or Drawable resources. ImageView is also commonly used to
+    apply tints to an image and handle image scaling. We can add multiple images for
+    our project used in the drawable resource folder. We can set the background as
+    an image view. Example of code:<imageview _="" span=""></imageview>android:layout_width=”match_parent”android:layout_height=”150dp”android:background=”@drawable/lion”/> We
+    will get the following output: ![](image-6c2cqzjt.jpg) Figure 1.5: Image View What
+    is Chronometer in Android? The Android Chronometer is a timer which can be used
+    to count time from the point of time. Android Chronometer can be used to count
+    time upwards and downwards. You can give it a start time, and it will start counting
+    up from there, or if you don’t provide a base time, it will use the time at which
+    you will call start() method. Example of code: android:id=”@+id/timer1”android:layout_marginTop=”20dp”android:layout_width=”60dp”android:layout_height=”50dp”/> Start
+    time and end Chronometer 00:00 What is AutoCompletedTextView in Android? The AutoCompletedTextView
+    is a view which is auto-completes the text when you are editing the text view.
+    It’s suggestions automatically while the user is typing. The list of suggestions
+    is displayed in a drop-down menu from which the user can choose an item to replace
+    the content of the edit box. Example of code in XML: <autocompletetextview _=""
+    span=""></autocompletetextview>android:layout_width=”match_parent”android:layout_height=”150dp”android:hint=”Enter
+    your name”android:textColor=”@color/colorAccent”android:textColorHint=”@color/colorPrimaryDark”/> The
+    following is the Java code: package com.example.demoproject; import android.os.Bundle;import
+    android.support.v7.app.AppCompatActivity;import android.support.v7.widget.AppCompatAutoCompleteTextView;import
+    android.widget.ArrayAdapter;public class MainActivity extends AppCompatActivity
+    {private String[] fruits = {“Jay”, “Kumar”, “Raj”, “Sanjay”,”Peter”}; private
+    AppCompatAutoCompleteTextView autoTextView;@Overrideprotected void onCreate(Bundle
+    savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main);autoTextView
+    = (AppCompatAutoCompleteTextView) findViewById(R.id.autoTextView);ArrayAdapteradapter
+    = new ArrayAdapter(this, android.R.layout.select_dialog_item, fruits);autoTextView.setThreshold(1);
+    //will start working from first characterautoTextView.setAdapter(adapter);}} What
+    is CalendarView? The CalendarView is view where we can have used for looking updated
+    date in our calendar. We can find out past and future dates in the calendar view.
+    Gets the maximal date supported by this CalendarView in milliseconds since January
+    1, 1970, 00:00:00 in TimeZone#getDefault() time zone. Example of XML: <calendarview
+    _="" span=""></calendarview>android:id=”@+id/calenderview1”android:layout_width=”match_parent”android:layout_height=”wrap_content”> We
+    will get the following output: ![](image-ih7j771v.jpg) Figure 1.6: Calendar View What
+    is CheckBox? The CheckBox allows you to select one or more than one option from
+    the given set. Each checkbox is managed separately and you must register a click
+    listener for each one. To define the click event handler for a checkbox, add the
+    android:onClick attribute to the element in your XML layout. The value for this
+    attribute must be the name of the method you want to call in response to a click
+    event. The check box you can add for new form registration and related works or
+    multi-selected items. Code of XML: android:id=”@+id/onclik1”android:layout_width=”wrap_content”android:layout_height=”50dp”android:layout_marginTop=”150dp”android:text=”Food”android:onClick=”onCheckboxClicked”/> <checkbox
+    _="" span="">android:id=”@+id/checkbox_flower”</checkbox>android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”Flower”android:onClick=”onCheckboxClicked”/> The
+    following is the Java code: public void onCheckboxClicked(View view) {// Is the
+    view now checked?boolean checked = ((CheckBox) view).isChecked(); // Check which
+    checkbox was clickedswitch(view.getId()) {case R.id.onclik1:if (checked)// Put
+    some meat on the foodelse// Remove the meatbreak;case R.id.checkbox_flower:if
+    (checked)// Cheese meelse// I’m lactose intolerantbreak;// TODO: lunch food}} What
+    is CheckTextView? The CheckedTextView we have to set attribute to provide a graphic
+    or drawable otherwise, it will not show the checkmark and behaves like a normal
+    This is useful when used in a ListView where the setChoiceMode has been set to
+    something other than Example XML code: android:id=”@+id/simpleChecked”android:layout_width=”match_parent”android:layout_height=”wrap_content”android:checkMark=”@drawable/checked”android:checked=”true”android:gravity=”center”android:text=”Android”
+    /> What is DatePicker and explain its uses? The DatePicker is similar to a calendar,
+    but in date picker, we can choose a date as per the required field of the calendar.
+    The date can be selected using year, month, and day spinners or a The set of spinners
+    and the calendar view are automatically synchronized. We can set a property as
+    per our requirement. We can have customized the date in Example of XML:<datepicker
+    _="" span=""></datepicker>android:id=”@+id/datepicker1”android:layout_width=”wrap_content”android:layout_centerHorizontal=”true”android:layout_marginBottom=”30dp”android:layout_height=”wrap_content”> What
+    is the ExpendableListView? Give an example. The ExpendableListView is where we
+    can add subtitle view inside the list view. Expandable lists can show an indicator
+    beside each item to display the item’s current state (the states are usually one
+    of an expanded group, collapsed group, child, or last child). You cannot use the
+    value wrap_content for the height attribute of an ExpandableListView in XML if
+    the parent’s size is not strictly specified. You can use wrap_content if the ExpandableListView
+    parent has a specific size, such as 100 pixels. Example of ExpandableListView
+    is as follows: android:id=”@+id/listview2”android:layout_width=”match_parent”android:layout_height=”350dp”android:layout_marginTop=”30dp”> We
+    will get the following output: ![](image-80kyjsu5.jpg) Figure 1.7: Expandable
+    lists What is GridLayout in Android? The GridLayout is a collection of rows and
+    columns as per the condition. The Android GridView shows items in a two-dimensional
+    scrolling grid (rows and columns), and the grid items are not necessarily predetermined,
+    but they automatically inserted to the layout using a Example of XML: <gridlayout
+    _="" span=""></gridlayout>android:layout_width=”match_parent”android:layout_height=”450dp”android:background=”#8c6c42”android:rowCount=”2”android:columnCount=”3”>android:text=”Cell
+    0”android:layout_row=”0”android:layout_column=”0”android:textSize=”15dip” /> android:text=”Cell
+    1”android:layout_row=”0”android:layout_column=”1”android:textSize=”15dip” /> android:text=”Cell
+    2”android:layout_row=”1”android:layout_column=”0”android:textSize=”15dip” /> android:text=”Cell
+    3”android:layout_row=”1”android:layout_column=”1”android:textSize=”15dip” /> android:text=”Cell
+    4”android:layout_row=”1”android:layout_column=”2”android:textSize=”15dip” /> Below
+    is the output of the above XML: ![](image-f12abjxt.jpg) Figure 1.8: Grid layout What
+    is ImageSwitcher in Android? The ImageSwitcher is used for switching images one
+    image to other images as per our project requirement here we can have used for
+    animation of images. The animation image is one example of switch images because
+    the animated images are a collection of hidden images. We need to implement the
+    ImageSwitcher component in the .xml file. The setFactory() method of ImageSwitcher
+    provides the implementation of the ViewFactory interface. Example of XML: <imageswitcher
+    _="" span="">android:id=”@+id/imgSw”</imageswitcher>android:layout_width=”match_parent”android:layout_height=”250dp”/> android:id=”@+id/btnPrevious”android:layout_below=”@+id/imgSw”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”back”
+    android:layout_marginLeft=”100dp” /> android:id=”@+id/btnNext”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_alignBottom=”@+id/btnPrevious”android:layout_toRightOf=”@+id/btnPrevious”android:text=”Next”
+    /> The following is the Java code: public class Main2Activity extends AppCompatActivity
+    { private Button previousbtn, nextbtn;private ImageSwitcher imgsw;private int[]
+    images = {R.drawable.hotel,R.drawable.hotel2};private int position = 0; @Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main2); previousbtn
+    = (Button)findViewById(R.id.btnPrevious);nextbtn = (Button)findViewById(R.id.btnNext);imgsw
+    = (ImageSwitcher) findViewById(R.id.imgSw);imgsw.setFactory(new ViewSwitcher.ViewFactory()
+    { @Overridepublic View makeView() {ImageView imgVw= new ImageView(Main2Activity.this);imgVw.setImageResource(images[position]);return
+    imgVw;}});imgsw.setInAnimation(this, android.R.anim.slide_in_left);imgsw.setOutAnimation(this,
+    android.R.anim.slide_out_right);previousbtn.setOnClickListener(new View.OnClickListener()
+    { @Overridepublic void onClick(View v) {if(position>0)position--;else if(position<0)position
+    = 0;imgsw.setImageResource(images[position]);}}); nextbtn.setOnClickListener(new
+    View.OnClickListener() {@Overridepublic void onClick(View v) {if(position<images.length_
+    _="" span=""></images.length_>position++;if(position>=images.length)position =
+    images.length-1;imgsw.setImageResource(images[position]);}});}} What is NumberPicker
+    in Android? The NumberPicker is used to select the number for the specified range.
+    The number picker contains one of SCROLL_STATE_IDLE_SCROLL_STATE_TOUCH_SCROLL
+    or SCROLL_STATE_IDLE.Value is The Android library also provides a customizable
+    and straight forward NumberPicker styled as a meter. Code of simple XML: android:id=”@+id/numberpicker1”android:layout_width=”match_parent”android:layout_height=”wrap_content”android:layout_marginTop=”25dp”> We
+    will get the following output: ![](image-qyfvrr3u.jpg) Figure 1.9: Number picker What
+    is a QuickContactBadge? The QuickContactBadge is where the house of any contact
+    number or information in your Android mobile. QuickContactBadge is used in information
+    and advice apps because, with this feature application, users can store given
+    contact numbers, email without completing the copying process. Following is the
+    XML code: android:id=”@+id/textView1”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_alignParentTop=”true”android:layout_centerHorizontal=”true”android:layout_marginTop=”38dp”android:text=”Email
+    Contact” /> <quickcontactbadge _="" span=""></quickcontactbadge>android:id=”@+id/quickContactBadge1”android:layout_width=”100sp”android:layout_height=”100sp”android:layout_below=”@+id/textView1”android:layout_centerHorizontal=”true”android:layout_marginTop=”18dp”android:src=”@drawable/hotel”
+    /> android:id=”@+id/textView2”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_centerHorizontal=”true”android:layout_centerVertical=”true”android:text=”Phone
+    Contact” /> <quickcontactbadge _="" span=""></quickcontactbadge>android:id=”@+id/quickContactBadge2”android:layout_width=”100sp”android:layout_height=”100sp”android:layout_below=”@+id/textView2”android:layout_centerHorizontal=”true”android:layout_marginTop=”20dp”android:src=”@drawable/hotel2”
+    /> The following is Java code changes: public class Main2Activity extends AppCompatActivity
+    { TextView Email,Phone;QuickContactBadge EmailPic,PhonePic; @Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main2);Email
+    = (TextView)findViewById(R.id.textView1);Phone = (TextView)findViewById(R.id.textView2);EmailPic
+    = (QuickContactBadge)findViewById(R.id.quickContactBadge1);PhonePic = (QuickContactBadge)findViewById(R.id.quickContactBadge2); //Assign
+    the contact badge to Email Pick badge.EmailPic.assignContactFromEmail(“android@examples.com”,
+    true);EmailPic.setMode(ContactsContract.QuickContact.MODE_MEDIUM); //Assign the
+    contact badge to phone pick badge.PhonePic.assignContactFromPhone(“+911234567450”,
+    true);PhonePic.setMode(ContactsContract.QuickContact.MODE_MEDIUM);}} We will get
+    the following output: ![](image-v78bgqok.jpg) Figure 1.10: Quick contact What
+    is a RatingBar? The RatingBar always returns an Integer point number for your
+    services or content. Like 1,2,3,4,5, rating as per customer review of product,
+    service or feedback. The RatingBar is a subclass of the AbsSeekBar class on the
+    android project. The number of stars set (via setNumStars(int) or in an XML layout)
+    will be shown when the layout width is set to wrap content (if another layout
+    width is set, the results may be unpredictable), but we can change as per our
+    requirement of the project. The secondary progress should not be modified by the
+    client/customer as it is used internally as the background for a fractionally
+    filled star or Integer number rating like 1,2,3,4,5….etc. They will be saved for
+    customer feedback. Following is the XML code: <ratingbar _="" span=""></ratingbar>android:id=”@+id/starreating”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_marginTop=”25sp”android:layout_marginStart=”72dp”app:layout_constraintStart_toStartOf=”parent”app:layout_constraintTop_toTopOf=”parent”/> android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”submit”android:id=”@+id/button”android:layout_centerHorizontal=”true”android:layout_marginTop=”250dp”app:layout_constraintBottom_toBottomOf=”parent”app:layout_constraintLeft_toLeftOf=”parent”app:layout_constraintRight_toRightOf=”parent”app:layout_constraintTop_toTopOf=”parent”app:layout_constraintVertical_bias=”0.615”/> The
+    following will be the changes in the Java code: public class Main2Activity extends
+    AppCompatActivity { Button button;RatingBar ratingbar; @Overrideprotected void
+    onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main2);addListenerOnButtonClick();}public
+    void addListenerOnButtonClick() {ratingbar = (RatingBar) findViewById(R.id.starreating);button
+    = (Button) findViewById(R.id.button);//Performing action on Button Clickbutton.setOnClickListener(new
+    View.OnClickListener() {@Overridepublic void onClick(View arg0) {//Getting the
+    rating and displaying it on the toastString rating = String.valueOf(ratingbar.getRating());Toast.makeText(getApplicationContext(),
+    rating, Toast.LENGTH_LONG).show();}});}} We will get the following output for
+    the above XML code: ![](image-1j9ikhfy.jpg) Figure 1.11: Rating bar What is Spinner
+    in android? The Spinner is a platform that provides a quick way to select one
+    value from a set of values. The Spinner allows selecting an item from a dropdown
+    list. The Default state, a shows its currently selected value. It provides an
+    easy way to select a value from a list of values. The following is the sample
+    code of XML: android:id=”@+id/snip1”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_centerHorizontal=”true”android:layout_marginTop=”80dp”> The
+    following is the Java code: public class MainActivity extends AppCompatActivity
+    implements AdapterView.OnItemSelectedListener{ String[] bankNames={“PNB”,”SBI”,”HDFC”,”IDFC”,”USB”};@Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main);//Getting
+    the instance of Spinner and applying OnItemSelectedListener on itSpinner spin
+    = (Spinner) findViewById(R.id.simpleSpinner);spin.setOnItemSelectedListener(this); //Creating
+    the ArrayAdapter instance having the bank name listArrayAdapter aa = new ArrayAdapter(this,android.R.layout.snip1_item,bankNames);aa.setDropDownViewResource(android.R.layout.snip1_dropdown_item);//Setting
+    the ArrayAdapter data on the Spinnerspin.setAdapter(aa);} //Performing action
+    onItemSelected and onNothing selected@Overridepublic void onItemSelected(AdapterView
+    arg0, View arg1, int position,long id) {Toast.makeText(getApplicationContext(),
+    bankNames[position], Toast.LENGTH_LONG).show();}@Overridepublic void onNothingSelected(AdapterView
+    arg0) {// TODO Auto-generated method stub}} We will get the following output of
+    the above XML code: ![](image-5caaehkc.jpg) Figure 1.12: Spinner What is SurfaceView
+    in Android? The SurfaceView is a view, which can be used for lower-level drawing
+    of a game application. The used of android.view.SurfaceHolder object to get and
+    lock the view canvas, and then paint on it. The contents are eventually displayed
+    on the user’s screen. Example: ![](image-k095pkm4.jpg) Figure 1.13: Surface view Its
+    surface view image used for lower-level game application development or Canvas
+    related project. What is view animation in Android? The view animation is a platform
+    used for view animation tasks. Like tween, animation calculates the animation
+    with information such as the start point, endpoint, size, rotation, and other
+    common aspects of animation. The animation package provides all the classes used
+    in a tween animation. We can create various types of animation on the android
+    project as given below:  Fade in/out animation Crossfading animation Blink animation Zoom
+    in/out animation Rotate animation Move animation Slide up/down animation Bounce
+    animation Sequential animation Together animation What is texture view and explain
+    its uses? The texture view is a platform which is providing multimedia views like
+    live view or offline video view in your Android mobile. We can also use a texture
+    view for crates a basic application that allows you to view the camera inside
+    a texture view and change its angle, orientation, and many more. A TextureView
+    object wraps a responding to callbacks and acquiring new buffers. Example: ![](image-nedm5jzq.jpg) Figure
+    1.14: Texture view The surface view is part of a multimedia project like Application
+    development of Camera, Audio player, Video players, etc. The Texture view is used
+    for various types of applications like developing an audio player, video player,
+    a live streaming player with a cloud-connected database for a larger application.
+    We can create a small or large application as per our requirement. The texture
+    view is used for applications such as: Spotify apps, Gana apps, or other Music
+    apps.CHAPTER 2 SQLite Database and Android SQLite fundamental question and answers  What
+    is the SQLite database? Explain. The SQLite database is a lite database for a
+    mobile application that is used for android OS with Java/Kotlin programming languages.
+    The SQLite is mostly ACID (Atomicity, Consistency, Isolation, and Durability)
+    compliant relational database management system contained in a relatively small
+    C programming library. The use of SQLite as given below:  Application file format Website Data
+    analysis Internal and temporary database Application file format and embedded
+    device Server-side database Write a standard SQL Lite command? The SQLite database
+    is using relational database command in our database; it’s similar to the SQL
+    database. Standard command as given below:  Select (Structural Query Languages) Create
+    (Data Definition Language) Alter (Data Definition Language) Drop (Data Definition
+    Language) Insert (Data Manipulation Language) Updated (Data Manipulation Language) Delete
+    (Data Manipulation Language) The Select command is used for retrieve data from
+    the server. The Create command can create data in the database, and Alter command
+    can edit data in the database. The Drop command is used to remove data while the
+    Insert command is used to insert data into the database table. The Update command
+    is used to update data in the database table. The Delete command is used to delete
+    data from the database. This is basic structure of standard SQL Lite commands
+    for a mobile device. Is SQLite threadsafe? Yes, SQLite is a threadsafe database.
+    SQLite must be compiled with the SQLITE_THREADSAFE preprocessor macro set to 1\.
+    Both the Windows and Linux precompiled binaries in the distribution are compiled
+    this way. SQLite is threadsafe because it uses mutexes to serialize access to
+    shared data structures. However, the work of acquiring and releasing these mutexes
+    will slow SQLite down slightly. Hence, if you do not need SQLite to be threadsafe,
+    you should disable the mutexes for maximum performance. How to create an auto
+    incremental field in SQLite? CREATE TABLE Mytable(a INTEGER PRIMARY KEY,b INTEGER);  Table
+    INSERT INTO t1 VALUES(NULL,123); INSERT INTO t1 VALUES((SELECT max(a) FROM t1)+1,123); What
+    are the advantages of SQLite? The following advantage of SQLite as given below:  No
+    setup or administration required SQLite comes with zero-configuration. No need
+    for server cost. SQLite is very compact, less than 400 KiB. It supports almost
+    all types of OS. It is written in ANSI-C and provides easy to use API. Reduced
+    application cost and complexity. Application support OS 32bit and 64 bits. Bugs
+    are very less likely in SQLite than in custom-written file I/O code. SQLite database
+    content can be viewed using a wide variety of third-party tools. Cost-free database
+    and flexible. What is SQLite schema error? Explain. The SQLite schema is an error
+    code that is returned when there is a change in the database. The SQLite _schema
+    error code is indicated when a prepared SQL statement is no longer valid and cannot
+    be executed. You can also use for data recovery tools SQLite database recovery
+    software by The software designed by this company will itself fix all the error
+    with a few simple clicks. What is the maximum size of varchar in SQLite? The SQLite
+    does not enforce the length of a It can store a 500-million-character string in
+    there. Your content is never truncated. SQLite understands the column type of
+    VARCHAR(N) to be the same as regardless of the value of Can we use commercial
+    used SQLite without pay royalty? Yes, you can use SQLite commercial because it’s
+    available in public domain for free. Anyone can use for commercial. Write the
+    syntax of SQLite to create a database? The following is the syntax for creating
+    a database: $sqlite1 DatabaseName.db Which type of indexes should be avoided in
+    SQLite? The index should be avoided when table as small and if table change frequently.
+    If columns are frequently manipulated or having a high number of NULL values. How
+    to upload bulk data in the SQLite query? Check out the sqllite.import command
+    - it does exactly like the example. You can set the separator with the .separator
+    command. Example: sqlite1 myDatabaseNamecreate table myTableName (a, b, c);.separator
+    ‘,’.import myFile1 myTable1 If you are importing a CSV file into a table using
+    the sqlite3 tool. import the c:\sqlite\food.csv file into the foods table:sqlite>
+    .mode csvsqlite>.import c:/sqlite/food.csv foodssqlite> .schema foodsCREATE TABLE
+    foods( “name” TEX, “population” TEXT ); To view the data of the foods table, you
+    use the following SELECT statement: SELECT name population FROM foods; Write transaction
+    property in SQLite? The transaction property as given below:  Atomicity: This
+    property ensures that the entire work unit is completed successfully. This property
+    ensures that the database changes its state upon a successfully committed transaction. This
+    property ensures that the transactions are operated independently and are transparent
+    to each other. This property ensures that the result or effect of a committed
+    transaction will persist in case of system failure. Write a foreign key query
+    in SQLite? CREATE TABLE employee(empid INTEGER PRIMARY KEY, empname TEXT);CREATE
+    TABLE track1(trackid INTEGER,trackname TEXT,trackartist INTEGER-- Must map to
+    an employee.emptid!); SQL foreign key constraint to the database schema to enforce
+    the relationship between the employee and track tables. To do so, a foreign key
+    definition may be added by modifying the declaration of the track table to the
+    following: CREATE TABLE track1 (trackid INTEGER,trackingname TEXT,trackartist
+    INTEGER,FOREIGN KEY(trackartist) REFERENCES artist(artistid)); What is use of
+    the .dump command in SQLite? The command is used in SQLite to make an SQLite database
+    dump if you are using the .dump command, all your data will be dumped forever
+    and cannot be retrieved. It is a faster way for large data. The .dump command
+    gives the ability to dump the entire database or table into a text file. Write
+    an SQLite storage class? The SQLite storage class as given below:  The SQLite
+    database class stores any null values. The integer value is stored numeric value,
+    including negative value and positive value in SQLite. This storage class is used
+    to store the floating-point values, and they are stored in 8-bytes of storage
+    in Real. The value is a text string, stored using the database encoding (UTF-8,
+    UTF-16BE) The value is a blob of data, exactly stored as it was input.  The SQLite
+    storage classes are a collection of types of data used in SQLite. In the android
+    database, SQLite is a lite weight database for your android device. SQLite is
+    not occupied a lot of space for your device as per the division of database classes. ![](image-meo3f0u1.jpg) Google
+    FirebaseCHAPTER 3 Technology Basic  What is Google Firebase technology? The Firebase
+    is a mobile and web development platform developed by Firebase in 2011\. Currently
+    Google acquired the company in 2014\. The Firebase provides the facility to API
+    that enables the integration of online chat functionality into their websites.
+    The Firebase’s first product was the Firebase real-time database, an API that
+    synchronizes application data across iOS, Android, and web devices, and stores
+    it on Firebase’s cloud. The product assists software developers in building real-time,
+    collaborative applications. What is the service of Firebase apps development? The
+    Firebase provides various types of service for developers. They can use services
+    as per requirement personal or commercial purposes.  Firebase cloud message: The
+    Firebase provides service for developers to develop cloud-based messages. We can
+    analyze a data in Firebase. Authentication We validate data of users through cloud
+    base on mobile service or web services. Firebase Auth is a service that can authenticate
+    users using only client-side code. They support Facebook, GitHub, Twitter, and
+    Google. Firebase real-time database: The Firebase support real-time database like
+    live streaming videos service. Firebase provides a real-time database and backend
+    as a service. The database is also accessible through a REST API and bindings
+    for several JavaScript frameworks such as AngularJS, React, Ember.js, Backbone.js,
+    and many more. Firebase The Firebase supports the cloud compute ring system. Firebase
+    Firebase provides secured data storage in his server. We can store data in firebase
+    50 max connections, 5 GB data transfer, 1 GB data storage and 10GiB/month bandwidth
+    free for every firebase user. What are the types of events in Firebase technology? The
+    three types of event of firebase as given below:  This event type will be triggered
+    once for every player, and every time a new player is added to our data. This
+    event type is triggered when the data has changed. child_removed: This event will
+    be triggered once every time a child is removed. How to get key in Firebase? It
+    is only possible by using Firebase REST API, just add parameter Its demo purpose
+    for using in firebase you need to be authorization for firebase. https://dinosaur-facts.firebaseio.com/dinosaurs.json?shallow=true How
+    to host the apps on the Firebase server? The following steps as given below:  Install
+    Firebase npm install -g firebase-tools Initialize Firebase firebase login Go to
+    the root folder of the app and firebase init Deploy Firebase firebase deploy The
+    Firebase server is a user-friendly server and a cost-effective platform for android
+    developers. We can install it easily as per our project requirement. The Firebase
+    server provides cloud storage & most robust authentication for your application
+    and multi-level services for your application. ![](image-t6mzjdlq.jpg) Unity -
+    Game Development PlatformUnity Basic  What is Unity? Describe. Unity is a game
+    application development platform, which is developed by Unity and it released
+    in June 2005 by Apple Inc. The We can use C# programming languages. The Unity
+    engine had been extended to support more than 25 platforms. In Unity, we can develop
+    2D and 3D game app with high-quality resolution. Unity also supports Real time
+    graphics in an application. Unity is a cross-platform engine. The Unity supports
+    Windows, Mac, and Linux OS. We can have developed a real-time game application
+    on Unity. Unity is user-friendly for the game development platform. What is a
+    new feature of Unity? The following feature of unity as given below:  All in one
+    editor, they supported Windows, Linux, and macOS. 2D and 3D Unity support for
+    a game development environment. Pathfinding tools support includes a navigation
+    system that allows you to create NPCs that can intelligently move around the game
+    world. Support dynamically alert system of navigation the characters at runtime. UI
+    support users can work faster than the previous version of Unity. Custom tools
+    available in new Unity whatever tools you need to match your team’s workflow.
+    Create and add customized extensions or find what you need on our Asset Store,
+    which features thousands of resources, tools, and extensions to speed up your
+    projects. They support animation and high-quality graphics. Native Visual Studio
+    Integration Real-time audio mixing and mastering features. Multi-threading job
+    and assets building of unity. In Unity 3D, how can you hide game objects? You
+    can hide the game object in Unity 3D What is the use of the Assets bundle in Unity? The
+    AssetBundles are files that can be exported from Unity to contain asset of your
+    choice. AssetBundles are created to simply downloading content to your application. Write
+    a list of pros and cons of Unity 3D? The list of pros and cons are given below: below:below:
+    below: below: below: below: below: below: below: below: below: below:below: below:
+    below: below: below: below: below: below: below: below: below: below: below: below:below:
+    below: below: below: below: below: below: below: below: below: below: below: below:
+    below: Differen]ce between Unity Engine and Unreal Engine? The following are the
+    difference between Unity Engine and Unreal Engine: Engine: Engine:Engine: Engine:
+    Engine: Engine: Engine: Engine: Engine: Engine:Engine: Engine: Engine: Engine:
+    Engine:Engine: Engine: Engine: Engine: Engine: Engine: Engine: Engine: Engine:
+    Engine: Engine: Engine: Engine: Engine: Engine: Engine: Engine: Engine: Engine:
+    Engine: Engine: Engine: Engine: Engine: Engine: Engine: Engine:Engine: Engine:
+    Engine: Engine: Engine: Engine: Engine: Engine: Engine:  while while in whileProjects  How
+    to developed SMS applications? Give an example. The following example as given
+    below: 1) Add the following code in Main Activity XML file: version=”1.0” encoding=”utf-8”?<linearlayout
+    _="" span="">xmlns:android=”http://schemas.android.com/apk/res/android”</linearlayout>xmlns:app=”http://schemas.android.com/apk/res-auto”xmlns:tools=”http://schemas.android.com/tools”android:layout_width=”match_parent”android:layout_height=”match_parent”android:orientation=”vertical”android:background=”#E0FFFF”tools:context=”.MainActivity”android:layout_width=”match_parent”android:layout_height=”wrap_content”android:text=”@string/enter_your_mobile_number_and_messages”android:textAlignment=”center”android:textScaleX=”1.5”android:textSize=”25dp”android:layout_marginTop=”20dp”android:id=”@+id/fstTxt”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_marginLeft=”100dp”android:layout_marginTop=”150dp”android:text=”Mobile
+    No” /android:id=”@+id/mblTxt”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_marginLeft=”100dp”android:ems=”10”/android:id=”@+id/secTxt”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”Message”android:layout_marginLeft=”100dp”
+    /android:id=”@+id/msgTxt”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_marginLeft=”100dp”android:ems=”10”
+    /android:id=”@+id/smsbtnSend”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_marginLeft=”100dp”android:text=”Send
+    SMS” /> 2) Add user permission in your Manifest file code for SMS send to users: <uses-permission
+    _="" span="">android:name=”android.permission.SEND_SMS”</uses-permission> 3) Add
+    the following code in your Java file in Main activity: package com.homeworld.androidbook; import
+    android.content.Intent;import android.net.Uri;import android.support.v7.app.AppCompatActivity;import
+    android.os.Bundle;import android.telephony.SmsManager;import android.view.View;import
+    android.widget.Button;import android.widget.CheckBox;import android.widget.EditText;import
+    android.widget.Toast; public class MainActivity extends AppCompatActivity {private
+    EditText txtMobile;private EditText txtMessage;private Button btnSms; @Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main);txtMobile
+    = (EditText)findViewById(R.id.mblTxt);txtMessage = (EditText)findViewById(R.id.msgTxt);btnSms
+    = (Button)findViewById(R.id.smsbtnSend);btnSms.setOnClickListener(new View.OnClickListener()
+    { @Overridepublic void onClick(View v) {try{Intent i = new Intent(Intent.ACTION_VIEW);i.setData(Uri.parse(“smsto:”));i.setType(“vnd.android-dir/mms-sms”);i.putExtra(“address”,
+    new String(txtMobile.getText().toString()));i.putExtra(“sms_body”,txtMessage.getText().toString());startActivity(Intent.createChooser(i,
+    “Send sms via Mobile:”));}catch(Exception e){Toast.makeText(MainActivity.this,
+    “SMS Failed to Send, Please try again”, Toast.LENGTH_SHORT).show();}}});}} We
+    will get the following output: ![](image-tcj088rc.jpg) Figure (P) 1.1: SMS application How
+    to create simple music player? Explain with example. 1) The following code is
+    of XML file of Main Activity: version=”1.0” encoding=”utf-8”?<relativelayout _=""
+    span="">xmlns:android=”http://schemas.android.com/apk/res/android”</relativelayout>xmlns:app=”http://schemas.android.com/apk/res-auto”xmlns:tools=”http://schemas.android.com/tools”android:layout_width=”match_parent”android:layout_height=”match_parent”android:background=”@drawable/background”tools:context=”.MainActivity” <imagebutton
+    _="" span=""></imagebutton>android:layout_width=”match_parent”android:layout_height=”279dp”android:background=”@drawable/logo3”
+    / android:id=”@+id/btn_play”android:layout_width=”90dp”android:layout_height=”90dp”android:layout_centerHorizontal=”true”android:layout_marginTop=”550dp”android:background=”@drawable/play”/ android:id=”@+id/btn_pause”android:layout_width=”90dp”android:layout_height=”90dp”android:layout_marginLeft=”10dp”android:background=”@drawable/pause”android:layout_toStartOf=”@id/btn_play”android:layout_toLeftOf=”@id/btn_play”android:layout_alignBottom=”@id/btn_play”android:layout_marginRight=”50dp”android:layout_marginEnd=”20dp”/ android:id=”@+id/btn_stop”android:layout_width=”90dp”android:layout_height=”90dp”android:layout_alignEnd=”@id/btn_play”android:layout_alignRight=”@id/btn_play”android:layout_alignBottom=”@id/btn_play”android:layout_marginEnd=”-114dp”android:layout_marginRight=”-114dp”android:layout_marginBottom=”-1dp”android:background=”@drawable/stop”/ Basic
+    info for code change as per requirement: android:background=”@drawable/background” This
+    code is used for image background in my project I’ve used drawable folder adding
+    a few images for designing purpose for example:  background.jpg logo.png (for
+    logo) logo3.jpg (for design) pause.png (for pause image button) play.png (for
+    play button) stop.png (for stop button) 2) All the above image are added in the
+    default drawable folder in my project you can add design as per your choice. I
+    have to add one new raw folder in my project and add one MP3 for local storage
+    aaja.mp3 for music play. In music play, don’t add long names; use a small one. 3)
+    Add the following code in the Main Activity Java file: package com.example.marinamusicplayer; import
+    android.media.MediaPlayer;import android.support.v7.app.AppCompatActivity;import
+    android.os.Bundle;import android.view.View;import android.widget.Button; public
+    class MainActivity extends AppCompatActivity implements View.OnClickListener {Button
+    play,pause,stop;int pausePosittion;MediaPlayer mediaPlayer; @Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main);play=(Button)
+    findViewById(R.id.btn_play);pause=(Button) findViewById(R.id.btn_pause);stop=(Button)
+    findViewById(R.id.btn_stop);play.setOnClickListener(this);pause.setOnClickListener(this);stop.setOnClickListener(this);} @Overridepublic
+    void onClick(View view){switch ( view.getId()) {case R.id.btn_play:if (mediaPlayer
+    == null){mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.aaja);mediaPlayer.start();}else
+    if (!mediaPlayer.isPlaying()){mediaPlayer.seekTo(pausePosittion);mediaPlayer.start();}break;case
+    R.id.btn_pause:if (mediaPlayer != null) {pausePosittion = mediaPlayer.getCurrentPosition();mediaPlayer.pause();}break;case
+    R.id.btn_stop:if(mediaPlayer!=null){mediaPlayer.stop();mediaPlayer=null;}break;}}} We
+    will get the following output: ![](image-nwndv8ke.jpg) Figure (P) 1.2: Music player Develop
+    a simple project to call one Activity to another Activity? OR How to call one
+    page to another page by clicking the button? 1) The following is the code of XML
+    Activity (Main Activity): version=”1.0” encoding=”utf-8”?<relativelayout _=""
+    span="">xmlns:android=”http://schemas.android.com/apk/res/android”</relativelayout>xmlns:app=”http://schemas.android.com/apk/res-auto”xmlns:tools=”http://schemas.android.com/tools”android:layout_width=”match_parent”android:layout_height=”match_parent”android:background=”@drawable/time”tools:context=”.MainActivity” android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”Welcome
+    to First Page”android:textSize=”30dp”android:layout_centerHorizontal=”true”android:textColor=”#FFFFFF” android:id=”@+id/button”android:layout_width=”90dp”android:layout_height=”90dp”android:layout_marginTop=”450dp”android:layout_centerHorizontal=”true”android:text=”Next”android:textSize=”20dp”
+    / In this project, we have to add a few images for the background and image button
+    for design purposes. The following will be the output for the XML file: ![](image-es85nka6.jpg) Figure
+    (P) 1.3: Main activity in XML(First page) 2) The following is the code of Main
+    Activity in Java file: package com.example.marina_secret;import android.app.Activity;import
+    android.content.Intent;import android.support.v7.app.AppCompatActivity;import
+    android.os.Bundle;import android.view.View;import android.widget.Button; public
+    class MainActivity extends AppCompatActivity {private Button button;@Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_main);button
+    = (Button) findViewById(R.id.button);button.setOnClickListener(new View.OnClickListener()
+    {@Overridepublic void onClick(View v) {Next();}});}public void Next(){Intent intent
+    = new Intent(this,Activity2.class);startActivity(intent);}} 3) The following will
+    be the code of Activity 2 in XML file: version=”1.0” encoding=”utf-8”?<relativelayout
+    _="" span="">xmlns:android=”http://schemas.android.com/apk/res/android” xmlns:app=”http://schemas.android.com/apk/res-auto”</relativelayout>mlns:tools=”http://schemas.android.com/tools”android:layout_width=”match_parent”android:layout_height=”match_parent”android:background=”@color/colorAccent”tools:context=”.Activity2” android:id=”@+id/titleid”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”Second
+    Page List”android:textDirection=”firstStrong”android:textSize=”30sp”android:textStyle=”italic”android:layout_centerHorizontal=”true”android:textColor=”#FFFFFF”android:textScaleX=”1” <imageview
+    _="" span=""></imageview>android:layout_width=”450dp”android:layout_height=”350dp”android:layout_below=”@+id/titleid”android:src=”@drawable/time”android:scaleType=”fitXY”/ android:id=”@+id/button2”android:layout_width=”90dp”android:layout_height=”90dp”android:layout_marginTop=”450dp”android:layout_centerHorizontal=”true”android:text=”Next”android:textSize=”20dp”
+    /  We will get the following output of the above XML file: ![](image-jq4xwurw.jpg) Figure
+    (P) 1.4: Main activity in Java(Second Page) 4) The following code is of Activity
+    2 in Java file: package com.example.marina_secret; import android.content.Intent;import
+    android.support.v7.app.AppCompatActivity;import android.os.Bundle;import android.view.View;import
+    android.widget.ArrayAdapter;import android.widget.Button;import android.widget.ListView; public
+    class Activity2 extends AppCompatActivity {private Button button2;@Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_2);button2
+    = (Button) findViewById(R.id.button2);button2.setOnClickListener(new View.OnClickListener()
+    {@Overridepublic void onClick(View v) {Next();}});}public void Next(){Intent intent
+    = new Intent(this, MainActivity.class);startActivity(intent);}} The following
+    screenshot shows the final output: ![](image-ubx68lt8.jpg) Figure (P) 1.5: Output
+    after clicking on “Next” button in the first page How to add banner ads in our
+    Android project? The following changes of code in our application as given below: 1)
+    Changes in Manifest file add code as given below: <uses-permission _="" span="">android:name=”android.permission.ACCESS_NETWORK_STATE”></uses-permission> Add
+    the following code inside meta-data (For more details you can visit Google ads
+    updation site): android:name=”com.google.android.gms.ads.APPLICATION_ID”android:value=”ca-app-pub-8733993011722397~1692276577”/> 2)
+    Add the following code in your Main Activity file: // Added for Ads banner in
+    my project.private AdView mAdView;Button bt;// Added for Ads banner in my project.
+    as on 26.05.2019 after Main ActivityMobileAds.initialize(this,” \n” +”ca-app-pub-8733993011722397~1692276577
+    “);mAdView = findViewById(R.id.adView);AdRequest adRequest = new AdRequest.Builder().build();mAdView.loadAd(adRequest); 3)
+    Add the following code in XML file for ads: //Chnages on XML Code<com.google.android.gms.ads.adview
+    _="" span=""></com.google.android.gms.ads.adview>xmlns:ads=”http://schemas.android.com/apk/res-auto”android:id=”@+id/adView”android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_centerHorizontal=”true”android:layout_alignParentBottom=”true”android:layout_gravity=”center”android:layout_marginTop=”280dp”ads:adSize=”BANNER”ads:adUnitId=”ca-app-pub-8733993011722397/9234712919”> 4)
+    Add the following library in Gradle library of your project: implementation ‘com.google.android.gms:play-services-ads:17.2.1‘ How
+    to develop a feedback form in Android? 1) Add the following code in your manifest
+    file for permission: <uses-permission _="" span="">android:name=”android.permission.INTERNET”
+    /</uses-permission><uses-permission _="" span="">android:name=”android.permission.ACCESS_NETWORK_STATE”
+    /></uses-permission> 2) Add the following code in your XML file help activity: version=”1.0”
+    encoding=”utf-8”?<relativelayout _="" span="">xmlns:android=”http://schemas.android.com/apk/res/android”</relativelayout>xmlns:app=”http://schemas.android.com/apk/res-auto”xmlns:tools=”http://schemas.android.com/tools”android:layout_width=”match_parent”android:layout_height=”match_parent”android:paddingLeft=”@dimen/activity_horizontal_margin”android:paddingRight=”@dimen/activity_horizontal_margin”android:paddingTop=”@dimen/activity_vertical_margin”android:paddingBottom=”@dimen/activity_vertical_margin”tools:context=”.HelpActivity” android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”@string/support”android:textScaleX=”2”android:textStyle=”bold”android:textSize=”15sp”android:layout_marginTop=”25sp”android:layout_marginStart=”120sp”/ <imagebutton
+    _="" span=""></imagebutton>android:layout_marginTop=”45sp”android:layout_width=”40dp”android:layout_height=”40dp”android:id=”@+id/phone_icon1”android:src=”@drawable/ic_message_black_24dp”/ android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_marginStart=”50sp”android:layout_marginTop=”55sp”android:text=”@string/app_not_download”
+    / <imagebutton _="" span=""></imagebutton>android:layout_marginTop=”250sp”android:layout_width=”40dp”android:layout_height=”40dp”android:id=”@+id/phone_icon2”android:src=”@drawable/ic_message_black_24dp”/ android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:layout_marginStart=”50sp”android:layout_marginTop=”250sp”android:text=”@string/delete_apps”
+    / <imagebutton _="" span=""></imagebutton>android:layout_marginTop=”450sp”android:layout_width=”40dp”android:layout_height=”40dp”android:id=”@+id/phone_icon”android:src=”@drawable/ic_feedback_black_24dp”/> android:layout_width=”wrap_content”android:layout_height=”wrap_content”android:text=”@string/contact_us”android:textScaleX=”2”android:textStyle=”bold”android:textSize=”15sp”android:layout_marginTop=”420dp”/ android:id=”@+id/btn_feedback”android:layout_width=”match_parent”android:layout_height=”wrap_content”android:layout_marginTop=”500dp”android:text=”@string/button_feedback”
+    / We will get the following output: ![](image-num3c8hr.jpg) Figure (P) 1.6: Support In
+    this code, we are adding few icons in a from assets of Android file: drawable>
+    new> Vector Assets > Clip Art (Click double) and select icon as you wish. 3) Add
+    the following code in Java Help Activity file: package com.island.test; import
+    androidx.appcompat.app.AppCompatActivity;import android.content.Intent;import
+    android.os.Bundle;import android.view.Menu;import android.view.View; public class
+    HelpActivity extends AppCompatActivity {@Overrideprotected void onCreate(Bundle
+    savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_help); findViewById(R.id.btn_feedback).setOnClickListener(new
+    View.OnClickListener() {@Overridepublic void onClick(View v) {}});findViewById(R.id.btn_feedback).setOnClickListener(new
+    View.OnClickListener() {@Overridepublic void onClick(View v) {sendFeedback();}});} public
+    boolean onCreateOptionsMenu(Menu menu) {// Inflate the menu; this adds items to
+    the action bar if it is present.getMenuInflater().inflate(R.menu.main, menu);return
+    true;} //Start a new activity for sending a feedback emailprivate void sendFeedback()
+    {final Intent _Intent = new Intent(android.content.Intent.ACTION_SEND);_Intent.setType(“text/html”);_Intent.putExtra(android.content.Intent.EXTRA_EMAIL,
+    new String[]{ getString(R.string.mail_feedback_email) });_Intent.putExtra(android.content.Intent.EXTRA_SUBJECT,
+    getString(R.string.mail_feedback_subject));_Intent.putExtra(android.content.Intent.EXTRA_TEXT,
+    getString(R.string.mail_feedback_message));startActivity(Intent.createChooser(_Intent,
+    getString(R.string.title_send_feedback)));}} When you click in Send Feedback button,
+    you can share/send email as per your requirements. We will get the following output: ![](image-cmadxomx.jpg) Figure
+    (P) 1.7: Share feedback How to Implement Google Map in your projects? The Google
+    map is identification for your business. The Google map is providing your geographical
+    location of the business in a global network. Its necessary steps are as follow: Add
+    the following code given below: Create Project | Google Map Activity | Next |
+    Finished: ![](image-o8is3c7v.jpg) Figure (P) 1.8: API key You’ll get the above
+    output after running the code. Copy this and paste it to your browser. It will
+    give the following screen: −https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r Paste
+    in Google Browser for getting API Code. 1) Select create project and 2) Create
+    API Key | Copy API Key. Like this: AIzaSyAAOGNE8m_rctmM4SFQCsz-Xwxo57PWIRI Add
+    code in your Manifest file for permission: <uses-permission _="" span="">android:name=”android.permission.ACCESS_FINE_LOCATION”
+    /></uses-permission><uses-permission _="" span="">android:name=”android.permission.ACCESS_COARSE_LOCATION”
+    /></uses-permission><uses-permission _="" span="">android:name=”android.permission.INTERNET”
+    /></uses-permission> Add API Key in Manifest file: <meta-data _="" span=""></meta-data>android:name=”com.google.android.geo.API_KEY”android:value=”AIzaSyAAOGNE8m_rctmM4SFQCsz-Xwxo57PWIRI”
+    /> Add the following code in your Map Java Activity file: package com.androidworld.googletestmap;import
+    androidx.fragment.app.FragmentActivity;import android.os.Bundle;import com.google.android.gms.maps.CameraUpdateFactory;import
+    com.google.android.gms.maps.GoogleMap;import com.google.android.gms.maps.OnMapReadyCallback;import
+    com.google.android.gms.maps.SupportMapFragment;import com.google.android.gms.maps.model.LatLng;import
+    com.google.android.gms.maps.model.MarkerOptions; public class MapsActivity extends
+    FragmentActivity implements OnMapReadyCallback {private GoogleMap mMap; @Overrideprotected
+    void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.activity_maps);//
+    Obtain the SupportMapFragment and get notified when the map is ready to be used.SupportMapFragment
+    mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);mapFragment.getMapAsync(this);} /***
+    Manipulates the map once available.* This callback is triggered when the map is
+    ready to be used.* This is where we can add markers or lines, add listeners or
+    move the camera. In this case,* we just add a marker near Sydney, Australia.*
+    If Google Play services are not installed on the device, the user will be prompted
+    to install* it inside the SupportMapFragment. This method will only be triggered
+    once the user has* installed Google Play services and returned to the app.*/ @Overridepublic
+    void onMapReady(GoogleMap googleMap) {mMap = googleMap;// Add a marker in Sydney
+    and move the cameraLatLng sydney = new LatLng(-34, 151);mMap.addMarker(new MarkerOptions().position(sydney).title(“Android
+    Test Map”));mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));}} There will
+    be no changes in XML file, and we will get the following output of map: ![](image-wa5xvdri.jpg) Figure
+    (P) 1.9: Google mapIndex ACID – Page - 35Activity – Page – 3Activity Life Cycle
+    – Page – 5Android Feature - Page – 2Android Context – Page - 3Animation – Page
+    – 32ADB – Page – 4APK – Page – 3Auto Complete Test – Page – 13Bulk Data – Page
+    - 38Calendar View –Page - 15Chronometer – Page – 13Date Picker – Page - 17Dialogue
+    – Page – 4.Dump – Page - 39Edit Text – Page – 9Event in Firebase - Page - 44Expendable-list-view
+    – Page - 18Firebase Key – Page - 44Foreign Key – Page – 39Gradle – Page – 4Grid
+    Layout - 19Image View – Page - 12Intent – Page – 4ListView – Page – 17Loaders
+    – Page – 5Layout – Page – 19Manifest – Page - 4Notification – Page – 4Number Picker
+    – Page - 24Pro Guard – Page – 3Pros & Cons – Page - 50Quick Contact Badge – Page
+    - 26Radio Button – Page – 8Rating Bar – Page – 27RDBMS – Page - 35SDK – Page -
+    3Seek Bar – Page – 11Service of Firebase – Page - 44Spinner – Page – 30Switch
+    –Page – 21Status – Page – 4Storage Class – Page - 40Surface View – Page – 33Texture
+    View – Page – 33Text View – Page - 9Transaction Property – Page - 39Toast – Page
+    – 4Video View – Page – 10Web-View – Page – 11Unity - Page – 50Unity Feature –
+    Page – 49Unity Engine – Page – 50Unreal Engine – Page - 51'
+  toc: []
+  trans: "\n\n# Android 应用开发基础\n\n面向初学者学习 Android 技术、SQLite、Firebase 和 Unity 的 Android\
+    \ 开发指南，作者为 `Sujit Kumar Mishra`。\n\n**2020 年第一版**\n版权 © BPB Publications, 印度\n\
+    ISBN: 978-93-89845-204\n保留所有权利。未经出版者事先书面许可，不得以任何形式或通过任何手段复制、分发或在数据库或检索系统中存储本书的任何部分，可以在计算机系统中输入、存储和执行的程序列表外，但这些程序不能通过出版手段进行复制。\n\
+    \n## 免责声明\n本书中包含的信息是真实、正确的，并根据作者和出版者所知的最佳信息。作者已尽一切努力确保这些出版物的准确性，但对书中任何信息可能导致的任何损失或损害不承担责任。书中提到的所有商标均确认为其各自所有者的财产。\n\
+    \n### 分销商：\n- **BPB PUBLICATIONS**: 20, Ansari Road, Darya Ganj, New Delhi-110002,\
+    \ 电话: 23254990/23254991\n- **MICRO MEDIA**: Shop No. 5, Mahendra Chambers, 150\
+    \ DN Rd. Next to Capital Cinema, V.T. (C.S.T.) Station, MUMBAI-400 001, 电话: 22078296/22078297\n\
+    - **DECCAN AGENCIES**: 4-3-329, Bank Street, Hyderabad-500195, 电话: 24756967/24756400\n\
+    - **BPB BOOK CENTRE**: 376 Old Lajpat Rai Market, Delhi-110006, 电话: 23861747\n\
+    \n由 Manish Jain 为 BPB Publications 出版（地址：20 Ansari Road, Darya Ganj, New Delhi-110002），并在\
+    \ Repro India Ltd, Mumbai 印刷。\n\n献给 `Sudha Mishra`，我的母亲，她慈爱的精神依然支持着我。\n\n## 关于作者\n\
+    `Sujit Kumar Mishra` 是一位经验丰富的软件工程师，过去七年来一直与客户和合作伙伴一起设计技术解决方案。在职业生涯中，`Sujit Kumar\
+    \ Mishra` 在 `C# .Net`、`Java (Android)`、`PHP`、`SAP (MM)` 以及数据库 `SQL Server`、`MySQL`\
+    \ 等关键 IT 活动中进行过。他曾在 `Tata Steel`、`BPCL`、`Sun pharma` 和 `KPMG` 担任高级软件职位和项目管理职位。\n\
+    \n2020 年，`Sujit Kumar Mishra` 创立了自己的网站，目前在那里担任创始人兼首席技术官。`Sujit Kumar Mishra` 还写了其他四本书：小说《神秘岛\
+    \ Zoya》、《Dot net & MVC 面试题：面试准备，如何致富》以及 2019 年出版的《一日数学》。在工作之外，`Sujit Kumar Mishra`\
+    \ 是一位出演过电视和宝莱坞电影的演员。\n\n## 谢谢\n我想感谢几位在本书写作期间向我持续支持的人。首先，我要感谢我的父母和朋友 `Anoop Sriwastawa`、`Pritesh\
+    \ Sawant` 和 `Harish`，感谢在我花费许多周末和晚上写作时包容我——没有他们的支持，我永远无法完成这本书。\n\n如果没有 IT 团队中一些关键供应商和合作伙伴的支持，这本书就不会诞生。我感谢\
+    \ `Computer world` 团队，特别是 `Pritesh Sawant`，他为其中的一些新功能提供了宝贵的见解。最后，感谢 `BPB Publications`\
+    \ 给我这个机会为他们写我的第一本书。\n\n## 前言\nAndroid 技术是由美国 Google 开发的技术。它是全球销售最畅销、用户最多的技术。`Android\
+    \ framework` 是一个我们可以为用户开发 Web 应用程序、移动应用程序、地图、多媒体应用和云服务的平台。在此，我们必须涵盖在开发过程中遇到问题的学生和专业人士最常见的问题解答。我在\
+    \ IT 行业拥有六多年的工作经验。我必须从不同类型的来源收集信息，包括与同一领域的人见面并合作等，并且必须从书中找出问题所在以及如何解决它。\n\n诚挚地感谢：\n\
+    - 我的出版者 `BPB publication` 及其团队。他给我的生活带来了巨大的变化。他们总是指导并鼓励我工作。\n- 读这些材料的 Android\
+    \ 书书读者，没有你们，它无法完成。\n- 最后，一直鼓励我的朋友和家人。\n\n## 序言\n与目前现有的应用程序交付解决方案以及应用程序通常如何交付到物理手机相比，Android\
+    \ 的应用层化仍然是一项近期进展。这种旧的应用程序交付模型必须改变，以采用虚拟环境提供的完整特性和功能。\n\n这种改变是为了解决如何向无状态虚拟机交付应用程序的问题。这种无状态或非持久的按需交付和构建虚拟机模型意味着终端用户并不“拥有”他们的虚拟机，而是根据需要分配一台全新的、新构建的机器。当他们下次登录时，将再次登录到一个新构建的设备。\n\
+    \nApp Volumes 提供了什么？从高层次来说，`App Volumes` 提供实时应用交付，可以作为您的 `android` 实时服务器的交付系统。本书的主要目标是提供必要的信息，以理解\
+    \ Android 应用以及如何工作。\n\n## 第一章：Android 基础\n### 第 1 节：介绍\n应用层化作为一个概念以及如何工作。\n###\
+    \ 第 2 节\n本节提供了关于 `Android App` 要求的必要信息。\n### 第 3 节：问题与解答\n本节提供了关于 Android 设备的常见答案。\n\
+    ### 第 4 节：练习\n本节提供了实用的 解决方案，并在未来的 Android 应用中进行练习。\n\n## 第二章：SQLite 与 Android\n\
+    ### 第 1 节\n使用 `SQLite` 的实际截图显示了不同的组件以及如何工作。\n### 第 2 节：问题与解答\n本节提供了根据业务要求的分步说明以及如何工作。\n\
+    ### 第 3 节：Firebase 服务\n对于 Android 设备，这是最常见的实时数据。\n### 第 4 节：Unity 服务\n包括 2D 和\
+    \ 3D 游戏开发以及 Android 界面。\n### 第 5 节：Android 项目\n这是 Android Android 开发者的实用部分。\n\n\
+    ## 实现示例\n\n### 如何开发 SMS 应用\n1. 在 Activity XML 中添加以下代码：\n```xml\n<?xml version=\"\
+    1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+    \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+    http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+    \    android:layout_height=\"match_parent\"\n    android:orientation=\"vertical\"\
+    \n    android:background=\"#E0FFFF\"\n    tools:context=\".MainActivity\"\n  \
+    \  android:layout_width=\"match_parent\"\n    android:layout_height=\"wrap_content\"\
+    \n    android:text=\"@string/enter_mobile_number_and_messages\"\n    android:textAlignment=\"\
+    center\"\n    android:textScaleX=\"1.5\"\n    android:textSize=\"25dp\"\n    android:layout_marginTop=\"\
+    20dp\">\n\n    <EditText\n        android:id=\"@+id/fstTxt\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+    100dp\"\n        android:layout_marginTop=\"150dp\"\n        android:text=\"Mobile\
+    \ No\" />\n\n    <EditText\n        android:id=\"@+id/mblTxt\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+    100dp\"\n        android:ems=\"10\" />\n\n    <EditText\n        android:id=\"\
+    @+id/secTxt\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+    wrap_content\"\n        android:text=\"Message\"\n        android:layout_marginLeft=\"\
+    100dp\" />\n\n    <EditText\n        android:id=\"@+id/msgTxt\"\n        android:layout_width=\"\
+    wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+    100dp\"\n        android:ems=\"10\" />\n\n    <Button\n        android:id=\"@+id/smsbtnSend\"\
+    \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+    wrap_content\"\n        android:layout_marginLeft=\"100dp\"\n        android:text=\"\
+    Send SMS\" />\n</LinearLayout>\n```\n2. 在你的 Manifest 文件中添加权限：\n```xml\n<uses-permission\
+    \ android:name=\"android.permission.SEND_SMS\" />\n```\n3. 在 MainActivity 的 Java\
+    \ 文件中添加以下代码：\n```java\npackage com.homeworld.android;\n\nimport android.content.Intent;\n\
+    import android.net.Uri;\nimport android.support.v7.app.AppCompatActivity;\nimport\
+    \ android.os.Bundle;\nimport android.telephony.SmsManager;\nimport android.view.View;\n\
+    import android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.Toast;\n\
+    \npublic class MainActivity extends AppCompatActivity {\n    private EditText\
+    \ txtMobile;\n    private EditText txtMessage;\n    private Button btnms;\n\n\
+    \    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n   \
+    \     super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\
+    \        txtMobile = (EditText) findViewById(R.id.mblTxt);\n        txtMessage\
+    \ = (EditText) findViewById(R.id.msgTxt);\n        btnms = (Button) findViewById(R.id.smsbtnSend);\n\
+    \        btnms.setOnClickListener(new View.OnClickListener() {\n            @Override\n\
+    \            public void onClick(View v) {\n                try {\n          \
+    \          Intent i = new Intent(Intent.ACTION_VIEW);\n                    i.setData(Uri.parse(\"\
+    smto:\" + txtMobile.toString()));\n                    i.setType(\"vnd.android.mms\"\
+    );\n                    i.putExtra(\"address\", txtMobile.toString());\n     \
+    \               i.putExtra(\"body\", txtMessage.toString());\n               \
+    \     startActivity(Intent.createChooser(i, \"Send via Mobile:\"));\n        \
+    \        } catch (Exception e) {\n                    Toast.makeText(MainActivity.this,\
+    \ \"SMS to Send, Please try again\", Toast.LENGTH_SHORT).show();\n           \
+    \     }\n            }\n        });\n    }\n}\n```\n\n### 如何创建音乐播放器\n1. MainActivity\
+    \ 的 XML 代码：\n```xml\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\
+    \ xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"\
+    http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\
+    \n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\
+    \n    android:background=\"@drawable/background\"\n    tools:context=\".MainActivity\"\
+    >\n\n    <ImageButton\n        android:id=\"@+id/btn_play\"\n        android:layout_width=\"\
+    90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_centerHorizontal=\"\
+    true\"\n        android:layout_marginTop=\"550dp\"\n        android:background=\"\
+    @drawable/play\" />\n\n    <ImageButton\n        android:id=\"@+id/btn_pause\"\
+    \n        android:layout_width=\"90dp\"\n        android:layout_height=\"90dp\"\
+    \n        android:layout_marginLeft=\"10dp\"\n        android:background=\"@drawable/pause\"\
+    \n        android:layout_startOf=\"@+id/btn_play\"\n        android:layout_leftOf=\"\
+    @+id/btn_play\" />\n\n    <ImageButton\n        android:id=\"@+id/btn_stop\"\n\
+    \        android:layout_width=\"90dp\"\n        android:layout_height=\"90dp\"\
+    \n        android:layout_alignEnd=\"@+id/btn_play\"\n        android:layout_rightOf=\"\
+    @+id/btn_play\"\n        android:background=\"@drawable/stop\" />\n</RelativeLayout>\n\
+    ```\n2. 在你的项目中添加新的 raw 文件夹并添加一个用于音乐 `aaja.mp3`。\n3. 在 Main Activity 文件中添加以下代码：\n\
+    ```java\npackage com.example.marinamusicplayer;\n\nimport android.media.MediaPlayer;\n\
+    import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\n\
+    import android.view.View;\nimport android.widget.Button;\n\npublic class MainActivity\
+    \ extends AppCompatActivity implements View.OnClickListener {\n    Button play,\
+    \ pause, stop;\n    int pausePosittion;\n    MediaPlayer mediaPlayer;\n\n    @Override\n\
+    \    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\
+    \        setContentView(R.layout.activity_main);\n        play = (Button) findViewById(R.id.btn_play);\n\
+    \        pause = (Button) findViewById(R.id.btn_pause);\n        stop = (Button)\
+    \ findViewById(R.id.btn_stop);\n        play.setOnClickListener(this);\n     \
+    \   pause.setOnClickListener(this);\n        stop.setOnClickListener(this);\n\
+    \    }\n\n    @Override\n    public void onClick(View view) {\n        switch\
+    \ (view.getId()) {\n            case R.id.btn_play:\n                if (mediaPlayer\
+    \ == null) {\n                    mediaPlayer = MediaPlayer.create(getApplicationContext(),\
+    \ R.raw.aaja);\n                    mediaPlayer.start();\n                } else\
+    \ if (!mediaPlayer.isPlaying()) {\n                    mediaPlayer.seekTo(pausePosittion);\n\
+    \                    mediaPlayer.start();\n                }\n               \
+    \ break;\n            case R.id.btn_pause:\n                if (mediaPlayer !=\
+    \ null) {\n                    pausePosittion = mediaPlayer.getCurrentPosition();\n\
+    \                    mediaPlayer.pause();\n                }\n               \
+    \ break;\n            case R.id.btn_stop:\n                if (mediaPlayer !=\
+    \ null) {\n                    mediaPlayer.stop();\n                    mediaPlayer\
+    \ = null;\n                }\n                break;\n        }\n    }\n}\n```\n\
+    \n### 如何从一个 Activity 调用另一个 Activity\n1. XML (MainActivity) 的代码：\n```xml\n<?xml\
+    \ version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+    \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+    http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+    \    android:layout_height=\"match_parent\"\n    android:background=\"@drawable/time\"\
+    \n    tools:context=\".MainActivity\"\n    android:layout_width=\"wrap_content\"\
+    \n    android:layout_height=\"wrap_content\"\n    android:text=\"Welcome to First\
+    \ Page\"\n    android:textSize=\"30dp\"\n    android:layout_centerHorizontal=\"\
+    true\">\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"\
+    90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+    450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+    Next\" />\n</RelativeLayout>\n```\n2. Main Activity Java 代码：\n```java\npackage\
+    \ com.example.marina_secret;\n\nimport android.app.Activity;\nimport android.content.Intent;\n\
+    import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\n\
+    import android.view.View;\nimport android.widget.Button;\n\npublic class MainActivity\
+    \ extends AppCompatActivity {\n    private Button button;\n\n    @Override\n \
+    \   protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\
+    \        setContentView(R.layout.activity_main);\n        button = (Button) findViewById(R.id.button);\n\
+    \        button.setOnClickListener(new View.OnClickListener() {\n            @Override\n\
+    \            public void onClick(View v) {\n                Next();\n        \
+    \    }\n        });\n    }\n\n    public void Next() {\n        Intent intent\
+    \ = new Intent(this, Activity2.class);\n        startActivity(intent);\n    }\n\
+    }\n```\n3. Activity 2 的 XML 代码：\n```xml\n<?xml version=\"1.0\" encoding=\"utf-8\"\
+    ?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+    \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+    http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+    \    android:layout_height=\"match_parent\"\n    android:background=\"@color/accent\"\
+    \n    tools:context=\".Activity2\">\n\n    <TextView\n        android:id=\"@+id/titleid\"\
+    \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+    wrap_content\"\n        android:text=\"Second Page\"\n        android:textSize=\"\
+    30sp\"\n        android:textStyle=\"italic\"\n        android:centerHorizontal=\"\
+    true\"\n        android:textColor=\"#FFFFFF\"/>\n\n    <ImageView\n        android:layout_width=\"\
+    450dp\"\n        android:layout_height=\"350dp\"\n        android:layout_below=\"\
+    @+id/titleid\"\n        android:src=\"@drawable/time\"\n        android:scaleType=\"\
+    fitXY\"/>\n\n    <Button\n        android:id=\"@+id/button2\"\n        android:layout_width=\"\
+    90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+    450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+    Next\"\n        android:textSize=\"20dp\"/>\n</RelativeLayout>\n```\n4. Activity\
+    \ 2 的 Java 代码：\n```java\npackage com.example.marina_secret;\n\nimport android.content.Intent;\n\
+    import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\n\
+    import android.view.View;\nimport android.widget.Button;\n\npublic class Activity2\
+    \ extends AppCompatActivity {\n    private Button button2;\n\n    @Override\n\
+    \    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\
+    \        setContentView(R.layout.activity_2);\n        button2 = (Button) findViewById(R.id.button2);\n\
+    \        button2.setOnClickListener(new View.OnClickListener() {\n           \
+    \ @Override\n            public void onClick(View v) {\n                Next();\n\
+    \            }\n        });\n    }\n\n    public void Next() {\n        Intent\
+    \ intent = new Intent(this, MainActivity.class);\n        startActivity(intent);\n\
+    \    }\n}\n```\n\n### 如何在项目中添加横幅广告？\n1. 在 Manifest 文件添加以下代码：\n```xml\n<uses-permission\
+    \ android:name=\"android.permission.ACCESS_NETWORK\" />\n```\n在 meta-data 中添加以下代码（更多详情请访问\
+    \ Google 更新网站）：\n```xml\n<meta-data\n    name=\"com.google.android.ads.APPLICATION_ID\"\
+    \n    value=\"ca-app-pub-873399301722397/92347129\"/>\n```\n2. 在你的 Main Activity\
+    \ 文件中添加以下代码：\n```java\nprivate AdView mAdView;\n// 为我的项目添加横幅广告\nAds.initialize(this,\
+    \ \"ca-app-pub-873399301722397/92347129\");\nmAdView = findViewById(R.id.adView);\n\
+    AdRequest request = new AdRequest.Builder().build();\nmAdView.loadAd(request);\n\
+    ```\n3. 在 XML 文件中添加以下广告代码：\n```xml\n<com.google.android.gms.ads.AdView\n    android:id=\"\
+    @+id/adView\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"\
+    wrap_content\"\n    android:layout_centerHorizontal=\"true\"\n    android:layout_alignParentBottom=\"\
+    true\"\n    android:layout_gravity=\"center\"\n    ads:adSize=\"BANNER\"\n   \
+    \ ads:adUnitId=\"ca-app-pub-873399301722397/923471291\"/>\n```\n4. 在项目的 Gradle\
+    \ 中添加以下库：\n```gradle\nimplementation 'com.google.android.gms:play-services-ads:17.2.1'\n\
+    ```\n\n### 如何在 Android 中开发反馈表单？\n1. 在你的清单文件中添加以下权限代码：\n```xml\n<uses-permission\
+    \ android:name=\"android.permission.INTERNET\" />\n```\n2. 在 layout 文件中添加以下代码：\n\
+    ```xml\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"\
+    http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\
+    \n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"\
+    match_parent\"\n    android:layout_height=\"match_parent\"\n    android:background=\"\
+    @drawable/time\"\n    tools:context=\".MainActivity\"\n    android:layout_width=\"\
+    wrap_content\"\n    android:layout_height=\"wrap_content\"\n    android:text=\"\
+    Welcome to First Page\"\n    android:textSize=\"30dp\"\n    android:layout_centerHorizontal=\"\
+    true\">\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"\
+    90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+    450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+    Next\" />\n</RelativeLayout>\n```\n"

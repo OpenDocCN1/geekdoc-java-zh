@@ -1,0 +1,511 @@
+name: Java Cheat Sheet, Syntax Quick Reference Handbook, by Table and Chart ： Syntax
+  Quick Study Guide
+name_cn: Java 速查表，语法快速参考手册，表格与图表：语法快速学习指南
+slug: java-cheat-sheet-syntax-quick-reference-handbook-by-table-an
+toc:
+- - '#'
+  - Java 速查表，语法快速参考手册，表格与图表：语法快速学习指南
+- - '##'
+  - 关于本书
+- - '##'
+  - 免责声明
+- - '#'
+  - 索引
+- - '##'
+  - '& 语法'
+- - '##'
+  - '| 语法'
+- - '##'
+  - ^ 语法
+- - '##'
+  - << 语法
+- - '##'
+  - '>> 语法'
+- - '#'
+  - 右移运算符 (>>)
+- - '##'
+  - 无符号右移 (>>>)
+- - '#'
+  - 注释
+- - '##'
+  - '`//` 和 `/* */`'
+- - '#'
+  - 三元运算符 (:)
+- - '##'
+  - 字符串拼接
+- - '##'
+  - + 连接符号语法：
+- - '#'
+  - Math 方法
+- - '##'
+  - abs() 语法：
+- - '##'
+  - acos() 语法：
+- - '##'
+  - asin() 语法：
+- - '#'
+  - 抽象类与方法
+- - '##'
+  - abstract 语法：
+- - '#'
+  - 集合 (Collections)
+- - '##'
+  - add() 语法：
+- - '##'
+  - addAll() 语法：
+- - '##'
+  - addExact() 语法：
+- - '#'
+  - 匿名函数
+- - '##'
+  - 匿名函数语法：
+- - '#'
+  - 算术运算符
+- - '##'
+  - 算术运算符语法：
+- - '#'
+  - 数组
+- - '##'
+  - 语法：
+- - '##'
+  - 数组初始化：
+- - '##'
+  - 数组元素语法：
+- - '###'
+  - 数组操作
+- - '###'
+  - 数组长度语法
+- - '###'
+  - 数组排序语法
+- - '#'
+  - ArrayList 语法
+- - '##'
+  - ArrayList 函数
+- - '#'
+  - assertion 断言语法
+- - '#'
+  - 赋值运算符
+- - '##'
+  - atan 语法：
+- - '##'
+  - atan2 语法：
+- - '#'
+  - boolean 语法
+- - '##'
+  - BorderJFrame & BorderLayout 语法
+- - '##'
+  - break 语法
+- - '##'
+  - 按钮事件语法
+- - '##'
+  - byte 语法
+- - '##'
+  - canRead() 语法：
+- - '##'
+  - canWrite() 语法：
+- - '##'
+  - CardLayout 事件语法
+- - '##'
+  - CardJFrame & CardLayout 语法
+- - '##'
+  - case 语法
+- - '##'
+  - cbrt() 语法：
+- - '##'
+  - ceil() 语法：
+- - '#'
+  - char 语法
+- - '##'
+  - charAt() 语法：
+- - '##'
+  - Check Box 事件
+- - '##'
+  - class 语法
+- - '##'
+  - '`continue` 语法'
+- - '#'
+  - 类语法
+- - '##'
+  - 修饰符 类 类名 {
+- - '##'
+  - 类与对象语法
+- - '##'
+  - 类属性语法
+- - '##'
+  - close() & AutoCloseable 语法
+- - '##'
+  - codePointAt() 语法：
+- - '##'
+  - codePointBefore() 语法：
+- - '##'
+  - codePointCount() 语法：
+- - '##'
+  - Color 对象语法
+- - '###'
+  - 'concat() 语法:'
+- - '###'
+  - '三元运算符语法:'
+- - '###'
+  - '构造函数语法:'
+- - '###'
+  - 'contains() 语法:'
+- - '###'
+  - 'containsAll() 语法:'
+- - '###'
+  - 'contentEquals() 语法:'
+- - '###'
+  - 'copySign() 语法:'
+- - '###'
+  - 'copyValueOf() 语法:'
+- - '###'
+  - 'cos() 语法:'
+- - '###'
+  - 'cosh() 语法:'
+- - '###'
+  - '自定义布局语法:'
+- - '###'
+  - '日期对象语法:'
+- - '###'
+  - '日期与时间语法:'
+- - '##'
+  - '`decrementExact()` 语法'
+- - '##'
+  - '`default` 语法'
+- - '##'
+  - '`default` 修饰符语法'
+- - '##'
+  - '`delete()` 语法'
+- - '##'
+  - '`do / while` 语法'
+- - '##'
+  - '`double` 语法'
+- - '##'
+  - '`else` 语法'
+- - '##'
+  - '`encapsulation` 语法'
+- - '##'
+  - '`endswith()` 语法：'
+- - '##'
+  - '`enum` 语法'
+- - '##'
+  - '`equals()` 语法：'
+- - '##'
+  - '`equalsIgnoreCase()` 语法：'
+- - '##'
+  - '`exists()` 语法：'
+- - '##'
+  - '`exp()` 语法：'
+- - '##'
+  - '`expm1()` 语法：'
+- - '##'
+  - '`exports` 语法'
+- - '##'
+  - '`extends` 语法'
+- - '#'
+  - file 类语法
+- - '###'
+  - 文件创建语法
+- - '###'
+  - 文件删除语法
+- - '###'
+  - 文件读取语法
+- - '###'
+  - 文件读取语法 (FileReader)
+- - '###'
+  - 文件写入语法
+- - '###'
+  - FileInputStream 语法
+- - '###'
+  - FileOutputStream 语法
+- - '###'
+  - FileReader 语法
+- - '###'
+  - FileWriter 语法
+- - '##'
+  - Final 语法
+- - '##'
+  - Final 类语法
+- - '##'
+  - final 方法语法
+- - '##'
+  - final 变量语法()
+- - '##'
+  - finally 语法
+- - '##'
+  - float 语法
+- - '##'
+  - floor() 语法
+- - '##'
+  - Font 对象语法
+- - '##'
+  - FlowJFrame & FlowLayout 语法
+- - '##'
+  - for 循环语法
+- - '##'
+  - format() 语法：
+- - '##'
+  - gc() & finalize() 语法
+- - '##'
+  - getbytes() 语法
+- - '##'
+  - getChars() 语法
+- - '##'
+  - getContentPane() 语法
+- - '##'
+  - getExponent() 语法：
+- - '##'
+  - getName() 语法：
+- - '##'
+  - getter 语法
+- - '##'
+  - 全局变量语法
+- - '##'
+  - GridBagJFrame & GridBagLayout 语法
+- - '##'
+  - GridJFrame & GridLayout 语法
+- - '##'
+  - hasNext() 语法
+- - '##'
+  - HashSet 语法
+- - '###'
+  - '`hypot()` 语法'
+- - '###'
+  - '`IEEEremainder()` 语法'
+- - '###'
+  - '`if` 语法'
+- - '###'
+  - '`if-else` 语法'
+- - '###'
+  - '`implement` 语法'
+- - '###'
+  - '`import` 语法'
+- - '###'
+  - '`incrementExact()` 语法'
+- - '###'
+  - '`indexOf()` 语法'
+- - '###'
+  - '`inheritance` 语法'
+- - '###'
+  - '`input by user` 语法'
+- - '###'
+  - '`instanceof` 语法'
+- - '###'
+  - '`int` 语法'
+- - '###'
+  - '`interface` 语法'
+- - '###'
+  - '`intern()` 语法'
+- - '###'
+  - '`isEmpty()` 语法'
+- - '###'
+  - '`isFile()` 语法'
+- - '###'
+  - iterator 语法
+- - '##'
+  - JButton 语法
+- - '##'
+  - JCheckBox 语法
+- - '##'
+  - JComboBox 语法
+- - '##'
+  - JFrame 语法
+- - '##'
+  - JLabel 语法
+- - '##'
+  - JPanel 语法
+- - '##'
+  - JPasswordField 语法
+- - '##'
+  - JRadioButton 语法
+- - '##'
+  - JTextArea 语法
+- - '##'
+  - 'JTextField 语法:'
+- - '###'
+  - 'keySet() 语法:'
+- - '###'
+  - 'lambda 表达式语法:'
+- - '###'
+  - 'lastIndexOf() 语法:'
+- - '###'
+  - 'length() 语法:'
+- - '###'
+  - 'LinkedList 语法:'
+- - '###'
+  - 'LinkedList 函数语法:'
+- - '###'
+  - 'LocalDateTime 语法:'
+- - '###'
+  - 'LocalDate 语法:'
+- - '###'
+  - 'LocalTime 语法:'
+- - '###'
+  - '局部变量语法:'
+- - '##'
+  - 'matches 语法:'
+- - '##'
+  - 'max() 语法:'
+- - '##'
+  - '方法语法:'
+- - '##'
+  - '方法与参数:'
+- - '##'
+  - 'min() 语法:'
+- - '##'
+  - nextAfter() 语法
+- - '##'
+  - 'nextDown() 语法:'
+- - '##'
+  - 'nextLine() 语法:'
+- - '##'
+  - 'nextUp() 语法:'
+- - '##'
+  - 'now() 语法:'
+- - '##'
+  - 'object 语法:'
+- - '##'
+  - 'offsetByCodePoints() 语法:'
+- - '##'
+  - 'pi 语法:'
+- - '##'
+  - '`private` 语法'
+- - '##'
+  - '`protected` 语法'
+- - '##'
+  - '`public` 语法'
+- - '##'
+  - Radio Button 事件
+- - '##'
+  - '`random()` 语法'
+- - '##'
+  - '`read()` 语法'
+- - '##'
+  - '`readObject()` 语法'
+- - '##'
+  - 递归语法
+- - '##'
+  - '`regionMatches()` 语法'
+- - '##'
+  - 正则表达式语法
+- - '##'
+  - '`remove()` 语法'
+- - '##'
+  - '`removeAll()` 语法:'
+- - '##'
+  - '`replace()` 语法:'
+- - '##'
+  - '`replaceFirst()` 语法:'
+- - '##'
+  - '`replaceAll()` 语法:'
+- - '##'
+  - '`retainAll()` 语法:'
+- - '##'
+  - '`return` 语法:'
+- - '##'
+  - '`rint()` 语法:'
+- - '##'
+  - '`round()` 语法:'
+- - '###'
+  - static 语法
+- - '###'
+  - static 方法语法
+- - '###'
+  - strictfp 语法
+- - '###'
+  - string 语法
+- - '###'
+  - string length 语法
+- - '###'
+  - string connection 语法
+- - '###'
+  - StringBuffer 语法
+- - '###'
+  - subSequence() 语法
+- - '###'
+  - subString() 语法
+- - '###'
+  - 'subtractExact() 语法:'
+- - '###'
+  - super 语法
+- - '###'
+  - switch / case 语法
+- - '###'
+  - tan() 语法：
+- - '###'
+  - tanh() 语法：
+- - '###'
+  - 文本字段语法：
+- - '###'
+  - this 语法：
+- - '###'
+  - thread isAlive() 语法：
+- - '###'
+  - thread start 语法：
+- - '###'
+  - thread extends 语法：
+- - '###'
+  - throw 语法：
+- - '###'
+  - throw 语法：
+- - '###'
+  - throws 语法：
+- - '###'
+  - transient 语法
+- - '###'
+  - super 语法
+- - '###'
+  - super 语法
+- - '###'
+  - super 语法：
+- - '##'
+  - 时间语法
+- - '##'
+  - toArray() 语法
+- - '##'
+  - toCharArray() 语法
+- - '##'
+  - 'toDegrees() 语法:'
+- - '##'
+  - 'toIntExact() 语法:'
+- - '##'
+  - 'toLowCase() 语法:'
+- - '##'
+  - 'toRadians() 语法:'
+- - '##'
+  - toString() 语法
+- - '##'
+  - toUpperCase() 语法
+- - '##'
+  - transient 语法
+- - '##'
+  - 'valueOf() 语法:'
+- - '##'
+  - 'var 语法:'
+- - '##'
+  - '变量语法:'
+- - '##'
+  - '变量语法:'
+- - '##'
+  - 'void 语法:'
+- - '##'
+  - 'volatile 语法:'
+- - '##'
+  - 'while 语法:'
+- - '##'
+  - '包装类语法:'
+- - '##'
+  - 'write() 语法:'
+- - '##'
+  - 'writeObject() 语法:'
+- - '#'
+  - 录
+- - '###'
+  - Java 关键字图表
+- - '###'
+  - 数据类型图表
+- - '###'
+  - 算术运算符图表
+- - '###'
+  - 赋值运算符图表
+- - '###'
+  - 比较运算符图表

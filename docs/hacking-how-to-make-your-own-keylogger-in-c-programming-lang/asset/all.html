@@ -1,0 +1,2149 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 566 751" preserveaspectratio="none">
+<image width="566" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3">Hacking</span></p>
+<p><span class="calibre5">HOW TO MAKE YOUR OWN KEYLOGGER IN C++
+PROGRAMMING LANGUAGE</span></p>
+<p><span class="calibre5">ALAN T. NORMAN</span></p>
+<p><span class="calibre7">Copyright © All Right Reserved.</span></p>
+<p><span class="calibre7">No part of this publication may be reproduced,
+distributed, or transmitted in any form or by any means, including
+photocopying, recording, or other electronic or mechanical methods, or
+by any information storage and retrieval system without the prior
+written permission of the publisher, except in the case of very brief
+quotations embodied in critical reviews and certain other noncommercial
+uses permitted by copyright law.</span></p>
+<p><span class="calibre10">Disclaimer Notice:</span></p>
+<p><span class="calibre11">Please not the information contained within
+this document is for educational and entertainment purposes only. Every
+attempt has been made to provide accurate, up to date and reliable
+complete information. No warranties of any kind are expressed or
+implied.</span></p>
+<p><span class="calibre11">By reading this document, the reader agrees
+that under no circumstances are is the author responsible for any
+losses, direct or indirect, which are incurred as a result of the issue
+of information contained within this document, including, but not
+limited to errors, omissions, or inaccuracies.</span></p>
+<div id="part0000_split_000.html_calibre_pb_0" class="calibre12">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<section id="part0000_split_001.html_calibre_pb_2"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span id="part0000_split_001.html__Toc341776606"
+class="calibre15"></span><span
+id="part0000_split_001.html__Toc346961131"
+class="calibre15"></span><span
+id="part0000_split_001.html__Toc349816406" class="calibre15"><span
+class="calibre16">Table of Contents</span><span
+class="calibre17"></span><span class="calibre18"></span></span></h2>
+<p><span class="calibre7"> </span></p>
+<p><span id="part0000_split_001.html_toc" class="calibre15"></span><a
+href="#part0000_split_002.html__Toc475658079" class="calibre15"><span
+class="calibre20">Introduction</span></a></p>
+<p><a href="#part0000_split_004.html__Toc475658080"
+class="calibre15"><span class="calibre20">Chapter 1. Setting Up The
+Environment</span></a></p>
+<p><a href="#part0000_split_005.html__Toc475658081"
+class="calibre15"><span class="calibre20">Chapter 2. Setting the Eclipse
+environment:</span></a></p>
+<p><a href="#part0000_split_007.html__Toc475658082"
+class="calibre15"><span class="calibre20">Chapter 3. Programming Basics
+(Crash course on C++)</span></a></p>
+<p><a href="#part0000_split_010.html__Toc475658083"
+class="calibre15"><span class="calibre20">Chapter 4. A Typical
+Program</span></a></p>
+<p><a href="#part0000_split_012.html__Toc475658084"
+class="calibre15"><span class="calibre20">Chapter 5. Pointers and
+Files</span></a></p>
+<p><a href="#part0000_split_014.html__Toc475658085"
+class="calibre15"><span class="calibre20">Chapter 6. Basic
+Keylogger</span></a></p>
+<p><a href="#part0000_split_015.html__Toc475658086"
+class="calibre15"><span class="calibre20">Chapter 7. Upper and Lower
+case letters</span></a></p>
+<p><a href="#part0000_split_016.html__Toc475658087"
+class="calibre15"><span class="calibre20">Chapter 8. Encompassing other
+characters</span></a></p>
+<p><a href="#part0000_split_017.html__Toc475658088"
+class="calibre15"><span class="calibre20">Chapter 9. Hide Keylogger
+console window</span></a></p>
+<p><a href="#part0000_split_018.html__Toc475658089"
+class="calibre15"><span class="calibre20">About The
+Author</span></a></p>
+<p><a href="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" class="calibre15"><span
+class="calibre20">Conclusion</span></a></p>
+<div id="part0000_split_001.html_calibre_pb_3" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_002.html"></span></p>
+<div id="part0000_split_002.html_21-52d75bc0781f4949a3e9f129f8a42dee"
+style="height:0pt">
+
+</div>
+<div id="part0000_split_002.html__Toc346961137" style="height:0pt">
+
+</div>
+<section id="part0000_split_002.html_calibre_pb_5"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_002.html__Toc475658079"
+class="calibre15"><span
+class="calibre22">Introduction</span></span></h1>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">Today, with the existence of a program called
+a Keylogger, gaining unauthorized access to a computer user’s passwords,
+accounts and confidential information has become as easy as falling off
+a log. You don’t necessarily need to have physical access to the user’s
+computer before you are able to monitor it, sometimes all it takes is a
+single click on a link to your program by the user.</span></p>
+<p><span class="calibre7">Anyone with basic knowledge about computer can
+use a Keylogger. By the time you are done with this chapter, hopefully
+you will be able to make your own Keylogger through simple, well
+explained and illustrated steps I have made for you.</span></p>
+<h3 class="calibre23"><span class="calibre24">What is a
+Keylogger?</span></h3>
+<p><span class="calibre7">A Keylogger, sometimes called a “keystroke
+logger” or “system monitor” is a computer program that monitors and
+records every keystroke made by a computer user to gain unauthorized
+access to passwords and other confidential information.</span></p>
+<h3 class="calibre23"><span class="calibre24">Making your own Keylogger
+Vs Downloading One</span></h3>
+<p><span class="calibre7">Why it’s better to write your own Keylogger as
+opposed to just downloading it from the internet is the reason of
+Anti-virus detection. If you write your own custom codes for a keylogger
+and keep the source code to yourself, companies that specialize in
+creating Anti-virus will have nothing about your Keylogger and thus, the
+chances of cracking it will be considerably low.</span></p>
+<p><span class="calibre7">Furthermore, downloading a Keylogger from the
+Internet is tremendously dangerous, as you have no idea what might have
+been imbedded in the program. In other words, you might have your own
+system “monitored”.</span></p>
+</section>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_6"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span class="calibre16">Requirements For Making
+Your own Keylogger</span></h2>
+<p><span class="calibre7">In other to make your own Keylogger, you will
+need to have some certain packages ready to use. Some of these packages
+include:</span></p>
+<h3 class="calibre23"><span class="calibre24">1. A Virtual
+Machine</span></h3>
+<p><span class="calibre7">When codes are written and needed to be
+tested, it is not always advisable to run them directly on your
+computer. This is because the code might have a destructive nature and
+running them could leave your system damaged. It is in cases of testing
+written programs that the utilization of a Virtual Machine comes
+handy.</span></p>
+<p><span class="calibre7">A virtual machine is a program that has an
+environment similar to the one your computer system has, where programs
+that might be destructive can be tested without causing the slightest
+harm to it, should it be destructive.</span></p>
+<p><span class="calibre7">You will be right if you say - whatever
+happens within a virtual machine stays within a virtual machine. A
+virtual machine can be downloaded easily.</span></p>
+<h3 class="calibre23"><span class="calibre24">2. Windows Operating
+System</span></h3>
+<p><span class="calibre7">The Keylogger we will be making will be one
+that can only infect a windows PC. We choose to make such a Keylogger
+because majority of the desktop users utilize a windows platform.
+However, besides that, making a Keylogger that can infect a windows
+system is far easier compared to making one that will function on a Mac
+PC. For this reason, we begin with the easy works and later we can
+advance to the more complex ones in my next books.</span></p>
+<h3 class="calibre23"><span class="calibre24">3. IDE – Integrated
+Development Environment</span></h3>
+<p><span class="calibre7">An IDE is a software suite that consolidates
+the basic tools that developers need to write and test
+software.</span></p>
+<p><span class="calibre7">Typically, an IDE contains a code editor, a
+debugger and a compiler that the developer accesses through a single
+graphical interface (GUI). We will utilize an IDE called “eclipse” for
+this project.</span></p>
+<h3 class="calibre23"><span class="calibre24">4. Compiler</span></h3>
+<p><span class="calibre7">A compiler is a special program that processes
+statements written in a particular computer language and converts them
+to machine language or “code” that a computer processor can
+understand.</span></p>
+<p><span class="calibre7">Before we start writing our Keylogger, we will
+need to set up our environment and also learn some basic things about
+C++. C++ because most of the codes for windows are written in it and our
+Keylogger is targeted for windows. </span></p>
+<p><span class="calibre7">You definitely want your Keylogger to have the
+capability of running universally across all systems that utilize the
+windows operating system.</span></p>
+<p><span class="calibre7">Just so you know before hand, C++ is not the
+next easiest programming language to learn because of the nature of its
+syntax. Notwithstanding, don’t give up already, we will begin with the
+simple things and move on gradually to the more advanced ones, taking a
+comprehensive step-by-step approach.</span></p>
+<p><span class="calibre7">I also advise that you use external materials
+on C++ to expand your knowledge on the areas we will touch during the
+cause of this project as this will enhance your productivity.</span></p>
+<p><span class="calibre7">Hopefully, by the end of this chapter you will
+be able to make your own Keylogger and also modify it to suit your
+purposes.</span></p>
+<div id="part0000_split_003.html_calibre_pb_7" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_9"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_004.html__Toc475658080"
+class="calibre15"><span class="calibre22">Setting Up The
+Environment</span></span></h1>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">Just like we need to set our computer systems
+up before we get working with them, in the same light we also need to
+setup an environment which will enable us code in C++ and in the final
+account of things, make a Keylogger.</span></p>
+<p><span class="calibre7">The first thing we will need is an Integrated
+Development Environment (IDE) and as stated earlier, we will be using
+Eclipse. The IDE of our choice (Eclipse) is java based and so we need to
+visit the Java website (</span><a href="http://www.eclipse.org"
+class="calibre15"><span
+class="calibre20">www.eclipse.org</span></a><span class="calibre7">) to
+download it.</span></p>
+<p><img src="images/00001.jpeg" class="calibre25" /></p>
+<p><span class="calibre7">When we get on the Java site, we will discover
+that there are numerous options of eclipse programs that are available
+for download. However, since we intend to use the C++ programing
+language we download “Eclipse for C/C++ developers" still having at the
+back of our minds that we are working on a windows platform. Hence,
+while there are Eclipse versions for Linux, Solaris, Mac systems and
+others we will download Eclipse for the Windows platform. </span></p>
+<p><img src="images/00002.jpeg" class="calibre26" /></p>
+<p><span class="calibre7">We also need to choose between the 32 or
+64-bit operating system option, depending on the one your computer runs
+on. You can easily check which your system runs on by right clicking on
+“PC” or “My computer” and then on properties. This steps lead to the
+display of your system specifications. After the determination of the
+bits your system runs on, go ahead and download the Eclipse file that is
+compatible with it.</span></p>
+<p><span class="calibre7">When the download is complete, the downloaded
+file will be in your download folder by default unless you made changes
+locate it. We will be required to unzip the file, as it will be
+zipped.</span></p>
+<p><span class="calibre7">After the unzipping and installation of the
+Eclipse file, an attempt to run it will result in the display of an
+error message stating that Eclipse cannot work without a Java Run time
+Environment (JRE) or a Java Development Kit (JDK). This is no problem at
+all, as all we need do is return to the Internet and download a JDK. The
+latest versions of the JDK usually come with the JRE.</span></p>
+<p><span class="calibre7">We can simply Google “Java development kit”
+and click on a link leading to the Oracle website where we can make the
+required download. </span></p>
+<p><img src="images/00003.jpeg" class="calibre27" /></p>
+<p><span class="calibre7">On the site, we have got the JDK program for a
+lot of different operating systems and for different system bits ranging
+from JDK for Linux system to JDK for Mac OS Solaris and more. However,
+as we know, we are interested in a JDK for the windows OS. So we go
+right ahead and download it making sure it fits our system bits (32 or
+64). </span></p>
+<p><img src="images/00004.jpeg" class="calibre28" /></p>
+<p><span class="calibre7">We will be required to accept the Oracle
+Binary Code License agreement by clicking on the box provided before we
+can begin the download. We do this and go ahead with the download and
+installation of the JDK.</span></p>
+<p><span class="calibre7">Now, unlike most programs we download, we have
+to set environment variables path. We do this for the JDK because it
+does not automatically set its path like most other programs do. The
+implication of an unset variable path is that: each time we want to run
+such a file (with unset variable path), we have to specify the full path
+to the executable file such as: </span></p>
+<p><span class="calibre7"> </span><span class="calibre29">C:\Program
+Files\Java\jdk1.7.0\bin\javac”Myclass.java</span><span
+class="calibre7">. This could be really tedious and also lead to lots of
+errors.</span></p>
+<p><span class="calibre7">For instance Eclipse requires JDK to run, but
+if the JDK path is not set, Eclipse will be unable to locate it and thus
+will not be able to run unless the path manually inputted. Setting path
+simply means setting an address to make the location of the program
+possible. </span></p>
+<h3 class="calibre23"><span class="calibre24">Setting The JDK
+Path</span></h3>
+<ol type="1">
+<li><span class="calibre32">              </span><span
+class="calibre7">Navigate to file explorer (shortcut: windows + E),
+right-click on “PC” or “My computer,” from the drop down menu that is
+displayed, click on “Properties.”</span><img src="images/00005.jpeg"
+class="calibre33" /></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Click on advanced settings and then from the pop-up
+menu that appears, click on “environment variables” then navigate down
+to system variables and select one at random.</span><img
+src="images/00006.jpeg" class="calibre34" /></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Press “P” on your keyboard and you will be redirected
+to “Path.” Now let’s go ahead and edit it. The default path will begin
+like so: </span><span class="calibre29">%systemRoot%</span><span
+class="calibre7">... As it is shown in a more complete form in the
+figure below. (The address was only shown in notepad for enlargement
+purposes, you need not place the path in notepad too.) We are going to
+make an addition to the default path.</span><img src="images/00007.jpeg"
+class="calibre35" /></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Add </span><span
+class="calibre29">C:\mingw\binbin;</span><span class="calibre7"> to the
+already existing address, so it looks just the way it is in the figure
+below. Avoid making any other change in the path, else an error message
+will be encountered on attempt to run Eclipse.</span><img
+src="images/00008.jpeg" class="calibre36" /></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Click on “OK” as many times as you are prompted to and
+finally, click on apply and the JDK path is set.</span></li>
+</ol>
+<p><span class="calibre7">True, we have made a couple of downloads and
+we should jump right into the meat of the matter: making our Keylogger
+but wait just a minute, are we not forgetting something? Of course we
+are! </span></p>
+<p><span class="calibre7">We have a Virtual Machine where all operations
+regarding our Keylogger will be carried out. We have Eclipse where all
+our code writing will be done, we also have the JDK which will enable us
+run Eclipse on our system. What we lack is a compiler which will
+translate our C++ written codes to machine language which is
+understandable to our computer systems.</span></p>
+<p><span class="calibre7">Without wasting time, we can download our
+compiler from </span><a href="http://www.mingw.org"
+class="calibre15"><span class="calibre20">www.mingw.org</span></a><span
+class="calibre20"> </span><span class="calibre7">even though there are
+still other sites we can make downloads from. However, MinGW is
+straightforward.</span></p>
+<p><img src="images/00009.jpeg" class="calibre38" /></p>
+<p><span class="calibre7">Hit the download button at the top right hand
+corner to start downloading the compiler. Again, the compiler is going
+to be in a zipped format and like we did for the JDK we downloaded
+previously, unzip it by extracting its content to any location of your
+choice. Finally, install the compiler.</span></p>
+<p><span class="calibre7">Now, with the variable path set, the JDK and a
+compiler installed, we can comfortably lunch the eclipse environment
+without getting any error messages and write our codes with certainty
+that they will be interpreted to our computer and will be executed
+too.</span></p>
+<div id="part0000_split_004.html_calibre_pb_10" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_005.html"></span></p>
+<section id="part0000_split_005.html_calibre_pb_12"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_005.html__Toc475658081"
+class="calibre15"><span class="calibre22">Setting the Eclipse
+environment:</span></span></h1>
+<p><span class="calibre7">On lunching Eclipse, greetings with a welcome
+screen that will offer a tour around the eclipse environment will be
+displayed. If you happen to be one that loves practical guides, you
+could go on with it, else close it. Immediately after the greeting note,
+Eclipse displays a small default program, which will print “hello world”
+when, compiled. Do not worry about how complex these codes might seem at
+first glance, as we progress things will unwrap and you will see that
+coding is just piece of cake waiting to be eaten.</span></p>
+<p><img src="images/00010.jpeg" class="calibre39" /></p>
+<p><span class="calibre7">*The lines in purple, blue and green texts are
+called “Codes.” We will be playing around with them in no
+time.</span></p>
+</section>
+<p><span id="part0000_split_006.html"></span></p>
+<section id="part0000_split_006.html_calibre_pb_13"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span class="calibre16">Steps To Setup the
+Environment for Coding:</span></h2>
+<ol type="1">
+<li><span class="calibre32">              </span><span
+class="calibre7">Close the default program. We can achieve this by
+clicking on the projects ‘x’ button at the left hand side of the
+screen.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Click on “File” in the upper left corner, select “New”
+and then C++ project because we want to create a C++
+environment.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Give the project you want to create a befitting name
+e.g. Keylogger, Calculator, Mary Jane, anything.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Under “Project type” select “Empty project.” Select
+“MinGW GCC” (which is the compiler we downloaded) under “Toolchains.”
+Click on “Next” to proceed with author and copyright settings or click
+“Finish” to go to Eclipse code editor directly.</span></li>
+</ol>
+<p><span class="calibre42">…and we are done with things in that
+category. Now, just like we did for the JDK, we need to go ahead and set
+some paths right here. </span></p>
+<h3 class="calibre23"><span class="calibre24">Listed below are the
+steps:</span></h3>
+<ol type="1">
+<li><span class="calibre32">              </span><span class="calibre7">
+Go to your project name, right-click on it and from the drop-down menu
+that appears scroll down and click “Properties”.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Expand the C/C++ build and from the drop down menu,
+click on “Environment.” </span></li>
+</ol>
+<p><span class="calibre7"> </span></p>
+<p><img src="images/00011.jpeg" class="calibre46" /></p>
+<ol start="3" type="1">
+<li><span class="calibre32">              </span><span
+class="calibre7">Under “Environment path to select,” click on “Path” and
+click on “Edit.” The default path displayed is long, cumbersome and
+tedious however, we only need to add a small path variable to its
+beginning.</span></li>
+</ol>
+<p><img src="images/00012.jpeg" class="calibre48" /></p>
+<ol start="4" type="1">
+<li><span class="calibre32">              </span><span
+class="calibre7">Remember the path we copied out when we were setting
+our JDK path variable?</span></li>
+</ol>
+<p><span class="calibre29">C:\mingw\binbin;</span><span
+class="calibre7"> paste it at the beginning of the eclipse path variable
+so it looks like it does in the figure below:</span></p>
+<p><img src="images/00013.jpeg" class="calibre50" /></p>
+<ol start="5" type="1">
+<li><span class="calibre32">              </span><span
+class="calibre7">Click on “Apply”</span></li>
+</ol>
+<p><span class="calibre7">We have just one more thing to do and we are
+done with setting up eclipse. This is setting the binary
+parser.</span></p>
+<ol type="1">
+<li><span class="calibre32">              </span><span
+class="calibre7">Click on “File” and from the drop down menu that
+appears, click on “Properties,”  “C++ Build” and then go into
+settings.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Under “Settings“ Click on “Binary Parser.” Make sure
+that the PE Windows parser is ticked.</span><img src="images/00014.jpeg"
+class="calibre51" /></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Click on “Ok” and that’s all about the
+settings.</span></li>
+</ol>
+<h3 class="calibre23"><span class="calibre24">How to run written
+Codes</span></h3>
+<p><span class="calibre7">Now that your environment is set your coding
+can begin. However it does not all end at just writing many and many
+lines of codes, running them is important. Running written codes at
+intervals is important as it enables the coder know if what he is
+writing is coming out the way he wants it. You run your codes as you
+write so you know the outcome of what you have written and if there any
+changes you will like to make. Here are simple steps to running your
+written codes:</span></p>
+<ol type="1">
+<li><span class="calibre32">              </span><span
+class="calibre7">At the upper left corner of the eclipse environment,
+there is a hammer symbol. The hammer signifies “Build.” Without building
+the written code, it will not run. Click on it (Shortcut: Ctrl B) to
+build your code.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">There is a big green “Play” button at the top middle
+portion of your screen, click on it to run your written program. The
+button signifies “Run,” click on it and your program will run. That’s
+it, simple as ABC.</span></li>
+</ol>
+<div id="part0000_split_006.html_calibre_pb_14" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_007.html"></span></p>
+<section id="part0000_split_007.html_calibre_pb_16"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_007.html__Toc475658082"
+class="calibre15"><span class="calibre22">Programming Basics (Crash
+course on C++)</span></span></h1>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">True, we are concerned with making a Keylogger
+and you must be wondering why we are still beating around the bush.
+Thing is, it is really necessary that we equip ourselves with basic
+knowledge of the environments we will work in and the tools we will
+use.</span></p>
+<p><span class="calibre7">C++ is the programming language we have
+decided to use and so we will go through basic areas of this language
+which will give us a sense of direction of where we are headed (making a
+Keylogger.) later on, as we progress we will learn more and more and
+more of this language. </span></p>
+</section>
+<p><span id="part0000_split_008.html"></span></p>
+<section id="part0000_split_008.html_calibre_pb_17"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span class="calibre16">Terms</span></h2>
+<p><span class="calibre53">Variable.</span><span class="calibre54"> A
+variable is a location in memory where a value can be stored for use by
+a program. An analogy is the post office boxes where each box has an
+address (post office box number). When the box is opened, the content
+will be retrieved. Similarly, each memory location has an address and
+when that is invoked, the content can be retrieved.</span></p>
+<p><span class="calibre53">Identifier. </span><span class="calibre55">An
+identifier is a sequence of characters taken from the C++ character
+set.  </span></p>
+<p><span class="calibre29"> </span><span class="calibre7">Each variable
+needs an identifier that distinguishes it from another. For instance,
+given a variable a, ‘a’ is the identifier and the value is the content.
+An identifier can consist of alphabets, digits and / or
+underscores.</span></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre7">It must not start with a digit</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">C++ is case sensitive; that is upper case and lower
+case letters are considered different from each other. For example boy
+!= BOY (where != means not equal to)</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">It must not be a reserved word</span></li>
+</ul>
+<p><span class="calibre53">Reserved words. </span><span
+class="calibre55">A reserved word or keyword is a word that has special
+meaning to the C++ compiler. Some C++ keywords are: double, asm, break,
+operator, static, void, etc.</span></p>
+<p><span class="calibre7">To declare a variable, it must be first given
+a name and type of data to hold. For example:</span></p>
+<p><span class="calibre7">Int a; where ‘a’ is an identifier and is of
+type integer.</span></p>
+<p><span class="calibre7">There are several C++ data types and each of
+these data types have their functions. Listed below are the various data
+types:</span></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre29">Int:</span><span class="calibre7"> These are small
+whole numbers e.g.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Long int:</span><span class="calibre7"> Large whole
+numbers</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Float:</span><span class="calibre7"> small real
+numbers</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Double:</span><span class="calibre7"> Theses are
+numbers with decimal points, e.g. 20.3, 0.45</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Long double:</span><span class="calibre7"> Very large
+real numbers</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Char:</span><span class="calibre7"> A single
+character</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Bool:</span><span class="calibre7"> Boolean value. It
+can take one of two values: true or false</span></li>
+</ul>
+</section>
+<p><span id="part0000_split_009.html"></span></p>
+<section id="part0000_split_009.html_calibre_pb_18"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span class="calibre16">Understanding Code
+Statements</span></h2>
+<p><span class="calibre7">When we first launched Eclipse and were
+welcomed with a greeting note, we saw a default program shortly after
+which if we ran using the steps we learnt earlier would have displayed
+“Hello World.” Let us go through the functions of those codes that were
+written in green, purple and red in that default program and how they
+operate.</span><img src="images/00015.jpeg" class="calibre60" /></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre29">#include:</span><span class="calibre7"> The statement
+#include is a call for statements from a library to be included in the
+program being written. A library can be said to be a room which houses a
+lot of pre-written codes that we can utilize at any time. It saves us
+the stress of having to write every single thing we might need while
+coding.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">&lt;iostream&gt; :</span><span class="calibre7"> This
+is a library file which contains some certain functions which will
+enable us utilize some certain commands. Some of these commands include:
+Cout and Cin.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Cout:</span><span class="calibre7"> This is a command
+that displays the outcome of written codes to the computer user. For
+example, if you write codes for a program that will ask a user
+questions, the Cout statement is what will make the questions visible to
+the user.</span></li>
+<li><span class="calibre32">              </span><span
+class="calibre29">Cin:</span><span class="calibre7"> This statement is a
+command which is used to receive input from a user. For instance if you
+write a program that collects the biometrics of different people, the
+Cin command is what will enable your program take in the information the
+computer user will key in. </span></li>
+</ul>
+<p><span class="calibre7">A good example explaining both the Cin and
+Cout statement is a calculator. CIn allows the calculator to take in
+your inputs and Cout lets it display an answer to you. </span></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre29">//:</span><span class="calibre7"> The double slash is
+a comment line. This means that the particular line it precedes will not
+be taking into consideration. It is used by the code writer to explain
+what a particular line of code does either for his remembrance or for
+other programmers that might work with his code. We also have a
+multi-line comment. A multi-line comment has a single slash and an
+asterisk sign together (/*). It functions just like a single line
+comment except that the statement being written can exceed a single
+line.</span></li>
+</ul>
+<h3 class="calibre23"><span class="calibre24">Examples of:</span></h3>
+<p><span class="calibre29">A single line comment:</span><span
+class="calibre7"> //Life is not a bed of roses.</span></p>
+<p><span class="calibre29">Multi-line comment: /*</span><span
+class="calibre7">Roses are red violets are blue,</span></p>
+<p><span class="calibre7">most poems rhyme but this one doesn’t.*\
+</span></p>
+<div id="part0000_split_009.html_calibre_pb_19" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_010.html"></span></p>
+<section id="part0000_split_010.html_calibre_pb_21"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_010.html__Toc475658083"
+class="calibre15"><span class="calibre22">A Typical
+Program</span></span></h1>
+<p><span class="calibre7">The diagram below shows a simple program which
+is designed to ask the computer user to input two separate values which
+it prints out. Let’s go through the lines of this code step-by-step
+understanding what each means.</span></p>
+<p><img src="images/00016.jpeg" class="calibre62" /></p>
+<p><span class="calibre63">Line 1:</span><span class="calibre29">
+</span><span class="calibre54">This line contains #include
+&lt;iostream&gt;. It is what begins this program. The #include statement
+calls the Cin and Cout commands out of the library &lt;iostream&gt;.
+Without this line, the program will neither take in nor display any
+input.</span></p>
+<p><span class="calibre29">Line 2:</span><span class="calibre7"> “Using
+namespace” is a command, and “std” which stands for ‘standard’ is a
+library.</span></p>
+<p><span class="calibre7">When you write “Using namespace std” you are
+bringing everything from that library into your class, but it is not
+quite like using the #include command. Namespace in C++ is a way to put
+word in a scope, and any word that is outside of that scope cannot see
+the code inside the namespace. In order for the code that is outside of
+a namespace to see code that is INSIDE of a namespace, you must use the
+“Using namespace” command.</span></p>
+<p><span class="calibre29">Line 4: </span><span class="calibre7">On this
+line, the main() is a function and “int” specifies the type of values
+that the function will be dealing with (integers.) A function in C++ is
+a group of statements that together forms a task. This is the first
+function always in C++ and it must always be written.</span></p>
+<p><span class="calibre63">Lines 5 &amp; 14:</span><span
+class="calibre29"> </span><span class="calibre54">The curly braces on
+line 5 and 14 indicate the start and end of a compound
+statement.</span></p>
+<p><span class="calibre29">Line 6:</span><span class="calibre7"> Here,
+two variables are allocated, variable ‘a’ and variable ‘b’. As stated
+earlier, a variable is a location assigned to the RAM used to store
+data. Therefore, two memory allocations are made to store integers.
+Variable ‘a’ was assigned a value of 10 and variable ‘b’ a value 20.
+This process is called initialization, i.e. setting an initial value so
+even without input by a user there is a starting value.</span></p>
+<p><span class="calibre63">Line 7:</span><span class="calibre29">
+</span><span class="calibre54">On this line initialization was made. The
+variable of type double was initialized just as the variable of type
+integer was initialized.</span></p>
+<p><span class="calibre63">Line 9:</span><span class="calibre29">
+</span><span class="calibre54">On this line the print out statement Cout
+is utilized. It prints the statement “Enter the values for “a and b”
+though without the quotation marks. Only statements within the quotation
+marks get printed. Note that the a and b written in the statement “Enter
+the values for a and b” will not display the value contained in the
+variable ‘a’ it will only display it as the letter of an alphabet
+because it lies within the quotation marks. </span></p>
+<p><span class="calibre7">At the end of this line, we have a reserved
+word endL. The endL word causes every statement that comes after it to
+begin on a new line.</span></p>
+<p><span class="calibre63">Line 10:</span><span class="calibre7">
+</span><span class="calibre54">This line contains the Cin &gt;&gt;
+statement. The Cin statement prompts the user to input a value for both
+a and b. Without the computer user making such input, the program will
+not progress. </span></p>
+<p><span class="calibre63">Line 11:</span><span class="calibre29">
+</span><span class="calibre54">When observed, in the statement Cout 
+&lt;&lt;  “ Value of a: ” it can be seen that after the column (ushering
+in the expected input of the user) there is a space before the quotation
+mark which ends the statement. These spaces will make the output look as
+shown below when the program is set to run.</span></p>
+<p><span class="calibre7">                    Value of a: 50</span></p>
+<p><span class="calibre7">However, without this space, the output will
+take this form:</span></p>
+<p><span class="calibre7">                   Value of a:50</span></p>
+<p><span class="calibre7">Meanwhile, the stand alone ‘a’ is what will
+display the value inputted by the user. The endL at the center of both
+statements takes “Value of b: ” to the next line on display when the
+program is set to run.</span></p>
+<p><span class="calibre63">Line 13:</span><span class="calibre29">
+</span><span class="calibre54">The </span><span class="calibre63">return
+0;</span><span class="calibre54"> statement enables the main function to
+return an integer data type. Technically, in C or C++, main function has
+to return a value because it is declared as “int main”. If main is
+declared like “void main”, then there’s no need of </span><span
+class="calibre63">return 0</span><span class="calibre54">.</span></p>
+<p><span class="calibre7">Next up, we have a couple of operators, which
+enable us carry out some operations. Some of these operators include –
+the math operator, comparison operator,</span></p>
+<p><span class="calibre7">The math operator: Like the name implies, it
+enables us carry out mathematical operations. The math operators we have
+in the real world are the very same ones we have here. They
+are:</span></p>
+<ul>
+<li><span class="calibre7">Addition</span></li>
+<li><span class="calibre7">Subtraction</span></li>
+<li><span class="calibre7">Multiplication</span></li>
+<li><span class="calibre7">Division &amp;</span></li>
+<li><span class="calibre7">Modulus</span></li>
+</ul>
+<p><span class="calibre7">The modulus is the number that remains when
+you divide two numbers. Example, when you divide 5 by 2, the result will
+be 2 with a remainder of 1. The remainder 1 is the modulus.</span></p>
+<p><span class="calibre42">We also have Comparison operators and they
+are:</span></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre29">The equal – equal operator == :</span><span
+class="calibre7"> It is worthy of note that the double equal sign
+operator ( == ) doesn’t function like the single equal sign operator ( =
+). While the single equal sign operator is used for assigning values to
+a variable, the double sign operator compares the values between two
+variables especially when used with a conditional statement (
+*conditional statements will be treated later).  </span></li>
+</ul>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">For instance, writing a = b will assign
+whatever values in b to a </span></p>
+<p><span class="calibre7">                                       
+While</span></p>
+<p><span class="calibre7">Writing something like if  a == b … ( where
+“if” is a conditional statement) will confirm if the value contained in
+b is same as that in a. And if it is, a particular operation specified
+by the code writer will be executed.</span></p>
+<p><span class="calibre29">Not-equal-to operator  != : </span><span
+class="calibre42">This operator as the name implies that the two or more
+variables in comparison are not equal. For instance, a != b implies that
+the values in the variables a and b are different.</span></p>
+<p><span class="calibre29">The and-and operator &amp;&amp;: </span><span
+class="calibre42">This represents the word and. So, if you have for
+example:</span></p>
+<p><span class="calibre7">                                             
+a != c &amp;&amp; b == a</span></p>
+<p><span class="calibre7">It can be read as a condition which reads as “
+a is not equal to c AND b equals a.”</span></p>
+<p><span class="calibre29">The OR operator || </span><span
+class="calibre7">Just like the regular OR word we use everyday, the one
+here in C++ means the same.</span></p>
+<p><span class="calibre7">                                      a != c
+|| b == a</span></p>
+<p><span class="calibre7">The statement above simply reads: “a is not
+equal to c  OR b equals a”</span></p>
+<p><span class="calibre7">Now, let us walk through actual lines of code
+where the comparison statements are used together with some conditional
+statement.</span><img src="images/00017.jpeg" class="calibre66" /></p>
+<p><span class="calibre7">Do you see the logic of the code above
+already?</span></p>
+<p><span class="calibre7">Basically, Line 9 is stating that if the value
+contained in the variable </span><span class="calibre29">a</span><span
+class="calibre7"> is same as that contained in </span><span
+class="calibre29">b</span><span class="calibre7"> and the value in
+</span><span class="calibre29">c</span><span class="calibre7"> is not
+equal to that in </span><span class="calibre29">b </span><span
+class="calibre7">then the statement “I will not sleep” written on Line
+11 will be displayed. However, if any of these conditions happen to be
+false (for instance </span><span class="calibre29">a </span><span
+class="calibre7">does not equal </span><span class="calibre29">b
+</span><span class="calibre7">or </span><span class="calibre29">c
+</span><span class="calibre7"> equals </span><span
+class="calibre29">d</span><span class="calibre7">) then the statement on
+line 15 which reads “I will fight against sleep” will be printed.
+</span></p>
+<p><span class="calibre7">The </span><span
+class="calibre29">else</span><span class="calibre7"> written on Line 15
+is a conditional statement, which just like it does in the real world
+means that if the condition on Line 9 evaluates to </span><span
+class="calibre29">false</span><span class="calibre7"> then the statement
+on Line 11 be skipped and another condition down the line be
+considered.</span></p>
+<p><span class="calibre7">If the </span><span class="calibre29">OR
+</span><span class="calibre7">statement was used in place of the
+</span><span class="calibre29">else </span><span
+class="calibre7">statement</span><span class="calibre29">, </span><span
+class="calibre7">it will imply that only one of the conditions on Line 9
+will have to be true (either the value in </span><span
+class="calibre29">a </span><span class="calibre7">== </span><span
+class="calibre29">b </span><span class="calibre7">or </span><span
+class="calibre29">c</span><span class="calibre7"> != </span><span
+class="calibre29">d</span><span class="calibre7">) for the statement on
+Line 11 to be considered and that on Line 15 to be ignored. </span></p>
+<p><span class="calibre7">Going through series and series of codes for
+different programs will enhance understanding and on the long run get
+you used to the operators, their various functions and how they can be
+used.</span></p>
+<p><span class="calibre7">By adding some new statements to our
+previously analyzed program and explaining them step by step our
+understanding of coding in C++ will improve greatly. When this is
+achieved, walking through the process of making a Keylogger will cause
+you no sweat.</span></p>
+<p><span class="calibre7">Let us analyze the following programs
+below:     </span></p>
+<p><img src="images/00018.jpeg" class="calibre67" /></p>
+<p><span class="calibre7">The code from Line 1 to 7 is familiar codes
+and hence, they have been omitted.</span></p>
+<p><span class="calibre7">In Line 9 and 11, the Cout function is used
+and the statement “Enter value for a: ” and “Enter value for b: ” will
+be printed out (note the space at the end of both sentences, between
+colon and the quotation mark that ends the statements. Remember its
+purpose). On Line 10 and 12, the Cin functions which will require the
+computer user to input a value, is utilized. Once both values requested
+of the user by the program are entered, the program does evaluation
+based on the conditional statements on Line 14 and if the result is
+true, the program prints as directed by Line16 “A is greater than
+B”.</span></p>
+<p><span class="calibre7">On Line 18, the conditional statement
+</span><span class="calibre29">else if </span><span class="calibre7">is
+a type of conditional statement used in between the </span><span
+class="calibre29">if</span><span class="calibre7"> and </span><span
+class="calibre29">else </span><span class="calibre7">statements. It is
+used to add several other conditions which if all evaluated to
+</span><span class="calibre29">false</span><span class="calibre7">, will
+result to the printing of line under the </span><span
+class="calibre29">else </span><span class="calibre7">statement. As
+utilized in this program, if the condition </span><span
+class="calibre29">a &gt; b </span><span class="calibre7">is false, the
+line under the </span><span class="calibre29">else </span><span
+class="calibre7">statement –A is less than B- will be printed except the
+</span><span class="calibre29">else if </span><span
+class="calibre7">condition is true then “A is equal to B” will be
+printed.</span><img src="images/00019.jpeg" class="calibre68" /></p>
+<p><span class="calibre7">As observed from the codes written above, the
+user inputted the value 1 for the variable </span><span
+class="calibre29">a</span><span class="calibre7"> and 3 for the variable
+</span><span class="calibre29">b</span><span class="calibre7">. These
+values do not meet the condition on Line 14, neither do they meet that
+on Line 18 and so the </span><span class="calibre29">else</span><span
+class="calibre7"> statement is considered. The statement on Line 24 “A
+is less than B is printed.”</span></p>
+</section>
+<p><span id="part0000_split_011.html"></span></p>
+<section id="part0000_split_011.html_calibre_pb_22"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span class="calibre16">Loops</span></h2>
+<p><span class="calibre7">A loop in C++ can be said to be a circular
+path through which conditional statements being evaluated continue on in
+circles never to stop until the required condition is met or an escape
+route is provided. Let us analyze a program which loops are used. There
+are several loops such as the </span><span class="calibre29">While
+</span><span class="calibre7">loop, the </span><span
+class="calibre29">For </span><span class="calibre7">loop,
+the              .Let us begin with the </span><span
+class="calibre29">While </span><span class="calibre7">loop.</span></p>
+<p><img src="images/00020.jpeg" class="calibre69" /></p>
+<p><span class="calibre7">It can be seen that the</span><span
+class="calibre29"> while</span><span class="calibre7"> statement is
+placed just before the lines of code in which repetitive evaluation is
+required, the user input inclusive (Cin and Cout statements). After the
+</span><span class="calibre29">while</span><span class="calibre7">,
+there is always a parenthesis which holds things such as </span><span
+class="calibre29">true</span><span class="calibre7">,</span><span
+class="calibre29"> false</span><span class="calibre7">,</span><span
+class="calibre29"> 1 </span><span class="calibre7">or </span><span
+class="calibre29">0</span><span class="calibre7">. The number
+</span><span class="calibre29">1</span><span class="calibre7"> can be
+replaced with </span><span class="calibre29">true </span><span
+class="calibre7">like </span><span class="calibre29">0 </span><span
+class="calibre7">with false. The loop can be set to run continuously
+without stopping or set to a number of times to run before
+stopping.</span></p>
+<p><span class="calibre7">Like you know, Line 12 and 14 are just
+statements that will be printed out and Line 13 and 14 will ask the user
+to input values repetitively (Loop) . From Line 17 down to 23 lies the
+conditional statement to be evaluated. On Line 25 both variable
+</span><span class="calibre29">a </span><span class="calibre7">and
+</span><span class="calibre29">b</span><span class="calibre7"> are
+assigned a value -1. Now supposing all other conditions evaluate to
+false the program will continue to run until the condition on Line 25
+evaluates to true (a == -1 || b == -1) i.e. the user inputs a value of
+-1 then the instruction on Line 26 will be carried out i.e. the loop
+will break and the statement on Line 29 will be printed.</span></p>
+<p><span class="calibre7">However, the way we went about our conditional
+statement for the loop to be terminated is not so efficient. This is so
+because if the user inputs a value of -1 for </span><span
+class="calibre29">a</span><span class="calibre7"> as Line 13 requires,
+the loop will not break but the user will be asked again for an input
+for the variable </span><span class="calibre29">b</span><span
+class="calibre7">. Only when both </span><span class="calibre29">a
+</span><span class="calibre7">and </span><span class="calibre29">b
+</span><span class="calibre7">are assigned a value of -1 will the loop
+be broken. </span></p>
+<p><span class="calibre7">Let us look at a more efficient way of
+utilizing our conditional statements and break statement so that when
+the user inputs a -1 value for either of both variables, the loop will
+terminate. </span></p>
+<p><img src="images/00021.jpeg" class="calibre70" /></p>
+<p><span class="calibre7">As seen in the figure above, the </span><span
+class="calibre29">if</span><span class="calibre7"> statement (that leads
+to the break out of the loop) and the </span><span
+class="calibre29">break </span><span class="calibre7">statement are
+brought directly under Line 13 that asks for user input so that upon the
+input of a value -1 by the user, the loop will be broken and the
+</span><span class="calibre29">else </span><span
+class="calibre7">statement printed. In a situation where a value aside
+from -1 is inputted, the statement on Line 12 will be printed out after
+which Line 13 will request an input from the user for variable
+</span><span class="calibre29">b</span><span class="calibre7">. Again if
+a value other than -1 is inputted for variable </span><span
+class="calibre29">b</span><span class="calibre7">, the rest of the
+conditional statements below will be evaluated and a corresponding
+result will be printed out:</span></p>
+<p><img src="images/00022.jpeg" class="calibre71" /></p>
+<p><span class="calibre7">Furthermore, it is important you know that
+knowing how to arrange your lines of code so they produce a particular
+output is not woven around C++. It requires just basic logic. All you
+need know is the different statements, what they are used for and how
+they can be used. The way they are to be arranged to carry out a
+specific function can be wholly your idea.</span></p>
+<p><span class="calibre42">Next we will be doing the </span><span
+class="calibre29">For </span><span class="calibre42">loop. However,
+before we go into that, let us see how</span><span class="calibre29">
+increments</span><span class="calibre42"> work.</span></p>
+<p><img src="images/00023.jpeg" class="calibre72" /></p>
+<p><span class="calibre7">Everything from our previous program so far
+stays the same, however on Line 9, there is a variable </span><span
+class="calibre29">i</span><span class="calibre7"> that is initialized
+i.e. set to 0.  This variable </span><span class="calibre29">i
+</span><span class="calibre7">is created so it could be used within the
+</span><span class="calibre29">while </span><span class="calibre7">loop
+to set the number of times the program within the loop will run before
+terminating.</span></p>
+<p><span class="calibre7">                              </span><span
+class="calibre29">While( i &lt;= 3 )</span><span class="calibre7"> on
+line 10 is a condition which instructs the program to keep on running
+while the value of </span><span class="calibre29">i </span><span
+class="calibre7">is less than 3 but stop once </span><span
+class="calibre29">i </span><span class="calibre7">has becomes 3 i.e. the
+program will run three times. </span></p>
+<p><img src="images/00024.jpeg" class="calibre73" /></p>
+<p><span class="calibre7">On Line 35, the </span><span
+class="calibre29">i++ </span><span class="calibre7">is an increment
+statement, which simply implies that the value 1 should be added to
+</span><span class="calibre29">i </span><span class="calibre7">each time
+a loop is completed. It can also be written as: </span><span
+class="calibre29">i = i + 1 </span><span
+class="calibre7">however,</span><span class="calibre29"> i++
+</span><span class="calibre7">is short and is what most people
+use.</span></p>
+<p><span class="calibre29">&lt;&lt; i </span><span class="calibre7">has
+been added at the end of every conditional statement so the number of
+completed cycles will be displayed after each loop.</span></p>
+<h3 class="calibre23"><span class="calibre24">For Loop:</span></h3>
+<p><span class="calibre7">The </span><span
+class="calibre29">For</span><span class="calibre7"> carries out
+basically the same function as the </span><span class="calibre29">While
+</span><span class="calibre7">loop. They are alike in the sense that
+both make a program run in iterations. However, a difference between
+them both is in the way they are utilized in the program.</span></p>
+<p><img src="images/00025.jpeg" class="calibre74" /></p>
+<p><span class="calibre7">It can be seen from the figure above, how the
+</span><span class="calibre29">for </span><span class="calibre7">loop is
+written. </span><span class="calibre29">For( int  i = 0; i &lt; 3; i++)
+</span><span class="calibre7">simply means that the variable
+</span><span class="calibre29">i </span><span class="calibre7">is
+assigned to hold data of type variable and is initialized to zero.
+</span><span class="calibre29">i &lt; 3; i++ </span><span
+class="calibre7">instructs the program to run continuously (keeping
+count of the number of completed loops) until </span><span
+class="calibre29">i </span><span class="calibre7">is 1 value less than 3
+i.e. The program will run only two times. Also, it is worthy of note
+that since the increment is made within the parenthesis after the
+</span><span class="calibre29">for </span><span class="calibre7">loop,
+the increment will only function for the program within that block (Line
+10 to 25).</span></p>
+<h3 class="calibre23"><span class="calibre24">Utilizing the Math
+Operators</span></h3>
+<p><span class="calibre7">As stated earlier, the math operators here in
+the world of C++ are no different than those in the real world. Let us
+see how these operators can be used, especially with other data types
+such as </span><span class="calibre29">float </span><span
+class="calibre7">and </span><span class="calibre29">double </span><span
+class="calibre7">as we have been so far been playing with integers only.
+We will also see why certain data types </span><img
+src="images/00026.jpeg" class="calibre75" /><span
+class="calibre7">cannot hold some values, decimal or
+integers.</span></p>
+<p><span class="calibre7">On Line 6, 7 and 8 of the program above,
+values are assigned to the variables of type: </span><span
+class="calibre29">int</span><span class="calibre7">, </span><span
+class="calibre29">double</span><span class="calibre7">, and </span><span
+class="calibre29">float</span><span class="calibre7"> alike. These
+values assigned fit the variable types.</span></p>
+<p><span class="calibre7">A simple division operation is carried out on
+Line 10, which is </span><span class="calibre29">a/b</span><span
+class="calibre7">. when the program is run, the value </span><span
+class="calibre29">2</span><span class="calibre7"> is printed out as the
+answer. You might begin to wonder if the entire math in the world is
+wrong because Mr. Computer never makes mistakes. However, you got it
+right and Mr. Computer was wrong this once! The answer evaluated to 2
+because the variables </span><span class="calibre29">a </span><span
+class="calibre7">and </span><span class="calibre29">b </span><span
+class="calibre7">are of the type </span><span
+class="calibre29">integer</span><span class="calibre7"> and integers
+cannot hold decimal values so it prints put only the whole part.
+</span></p>
+<p><img src="images/00027.jpeg" class="calibre76" /></p>
+<p><span class="calibre7">If variables </span><span class="calibre29">a
+</span><span class="calibre7">and </span><span class="calibre29">b
+</span><span class="calibre7">were of type float or double, the result
+would have been printed in full, i.e. both the whole and decimal part as
+shown in the figure below,</span></p>
+<p><span class="calibre7">In the program above on Line 10, a division
+operation similar to the previous one is carried out. However in this
+particular operation the values were assigned variable of type
+</span><span class="calibre29">double </span><span class="calibre7">(
+</span><span class="calibre29">c = 10.3, d = 60.234 </span><span
+class="calibre7">). It can be seen that upon running the program, the
+answer printed out is </span><span class="calibre29">0.171</span><span
+class="calibre7">. The answer comes with its decimal part because of the
+variable type assigned (</span><span
+class="calibre29">double</span><span class="calibre7">). </span></p>
+<p><span class="calibre42">So far we have been treating the basics of
+C++ and it is expected that by now, you are able to write a simple
+program, perhaps a “Hello world” program. However if there are certain
+things you still do not understand or don’t really get a hold of, do not
+panic for as we progress with the coding, you will definitely get
+along</span><span class="calibre29">. </span></p>
+<p><span class="calibre29">FUNCTIONS: </span><span
+class="calibre7">Functions are groups of codes brought together as a
+single body to carry out a specific function. The functions we speak of
+here are similar to the normal </span><span class="calibre29">main
+</span><span class="calibre7">function we usually write at the beginning
+of our code however, they come under the </span><span
+class="calibre29">main </span><span class="calibre7">function. We can
+also create functions outside of the </span><span class="calibre29">main
+</span><span class="calibre7">and later call them within the
+</span><span class="calibre29">main</span><span
+class="calibre7">.</span></p>
+<p><span class="calibre7">We need functions because we need to group
+certain blocks or family designed to carry out specific functions. For
+instance suppose we need a function to add, subtract and divide a set of
+numbers, writing codes to carry out this arithmetic operation severally
+will be really difficult. However, a function capable of carrying out
+the required arithmetic operation can be written and called within the
+main function each time it is required. </span></p>
+<p><img src="images/00028.jpeg" class="calibre77" /><span
+class="calibre7">Let us go through practical examples to make the
+creation and use of functions a lot clearer.</span><br />
+<span class="calibre7">Generally, in the program above, a function
+</span><span class="calibre29">sum</span><span class="calibre7"> is
+created to cause the addition of two variables </span><span
+class="calibre29">a</span><span class="calibre7"> and </span><span
+class="calibre29">b</span><span class="calibre7">. This function will on
+the long run make our work easier. For instance, anywhere within the
+program where a similar math operation is required, all that needs to be
+done is to call the function. </span></p>
+<p><span class="calibre7">On line 5,a function </span><span
+class="calibre29">sum</span><span class="calibre7"> is created to accept
+and process input of type </span><span
+class="calibre29">variable</span><span class="calibre7">. Within the
+parenthesis, the function </span><span class="calibre29">sum</span><span
+class="calibre7">, has two variables </span><span class="calibre29">a
+</span><span class="calibre7">and </span><span class="calibre29">b
+</span><span class="calibre7">declared. On line 8, the </span><span
+class="calibre29">main </span><span class="calibre7">variable is
+declared also and within it, the specific jobs for the </span><span
+class="calibre29">function </span><span class="calibre7">to carry out is
+defined.</span></p>
+<p><span class="calibre29">“The sum of 3 and 5 is: ” </span><span
+class="calibre7">written on Line 10 like you know, is just a statement
+that will be printed out. However, at the end of this Line, the function
+</span><span class="calibre29">sum</span><span class="calibre7"> is
+called and the variables </span><span class="calibre29">a </span><span
+class="calibre7">and </span><span class="calibre29">b </span><span
+class="calibre7">are set to </span><span class="calibre29">3
+</span><span class="calibre7">and </span><span class="calibre29">5
+</span><span class="calibre7">respectively. On Line 14, the function,
+which was created outside the main function, is brought into it.
+Finally, on Line 16 a math operation meant to cause the sum of
+</span><span class="calibre29">a </span><span class="calibre7">and
+</span><span class="calibre29">b</span><span class="calibre7"> is
+written. On running the program, the sum of the variables </span><span
+class="calibre29">a </span><span class="calibre7">and </span><span
+class="calibre29">b </span><span class="calibre7">(3,5) displays the
+result </span><span class="calibre29">8</span><span
+class="calibre7">.</span></p>
+<p><span class="calibre7">That done, let us analyze a similar program
+with some new things in it.</span></p>
+<p><img src="images/00029.jpeg" class="calibre79" /><span
+class="calibre7"> </span></p>
+<p><span class="calibre7">There are several new things here, basically
+the </span><span class="calibre29">getline</span><span class="calibre7">
+statement on Line 13. For now let us just take the syntax for how we see
+it as it has got a whole background to its own and will lead us off our
+tracks if we run after it. We will learn more and more about it as we
+progress.</span></p>
+<p><span class="calibre7">There is also the </span><span
+class="calibre29">string </span><span class="calibre7">variable type as
+seen on Line 22. The String variable type is used to contain spaces and
+lots and lots of letters. In fact, most all the statements we have
+printed to the display window so far in this course can be held by
+</span><span class="calibre29">string</span><span class="calibre7">.
+</span></p>
+<p><img src="images/00030.jpeg" class="calibre80" /></p>
+<p><span class="calibre7">Just so we know, the little figure above was
+just written to introduce a new variable type, which we will definitely
+use later on. The variable type is </span><span
+class="calibre29">char</span><span class="calibre7">. This variable type
+holds characters such as a dollar sign, a single letter like the one on
+Line 13 above etc. It is usually utilized with single quotation marks.
+</span></p>
+<p><span class="calibre7">Finally, let us go into </span><span
+class="calibre29">pointers </span><span class="calibre7">and
+</span><span class="calibre29">files</span><span class="calibre7">,
+after which we will start writing our codes for a Keylogger. </span></p>
+<div id="part0000_split_011.html_calibre_pb_23" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_012.html"></span></p>
+<section id="part0000_split_012.html_calibre_pb_25"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_012.html__Toc475658084"
+class="calibre15"><span class="calibre22">Pointers and
+Files</span></span></h1>
+<h2 class="calibre81"><span class="calibre16">Pointers:</span></h2>
+<p><img src="images/00031.jpeg" class="calibre82" /></p>
+<p><span class="calibre83"> </span><span class="calibre7">Basically, a
+pointer in not just C++ but in other programming languages is used in
+showing the memory locations of variables. Let us analyze the little
+program above to help us understand how pointers are used.</span></p>
+<p><span class="calibre7">Codes from Line 1 to 6 serve the same purpose
+they have always served in previous codes we have written. A variable
+</span><span class="calibre29">num of </span><span class="calibre7">type
+</span><span class="calibre29">int </span><span class="calibre7">is
+declared on Line 9. Since a pointer discloses the memory location of a
+variable, there has to be a variable whose location declared. On Line
+10, the pointer is declared. This is done by using a variable type, same
+as that of the variable, whose location is to be established, followed
+by an asterisk and finally the name of the pointer. The pointer can have
+any name, </span><span class="calibre29">ptr </span><span
+class="calibre7">was used in above program.</span></p>
+<p><span class="calibre7">Now, one Line 9, the pointer is told to point
+to the variable </span><span class="calibre29">num</span><span
+class="calibre7">. This is done by typing the name of the pointer
+(</span><span class="calibre29">ptr</span><span
+class="calibre7">)</span><span class="calibre29"> </span><span
+class="calibre7">and equating it to an ampersand sign
+(&amp;)</span><span class="calibre29"> </span><span class="calibre7">and
+the variable name (</span><span class="calibre29">num</span><span
+class="calibre7">) with no space in-between. On line 13, a COut
+statement is written to output </span><span class="calibre29">num
+</span><span class="calibre7">(which we set earlier to a value of 10)
+and </span><span class="calibre29">ptr, </span><span
+class="calibre7">which will display the memory location of </span><span
+class="calibre29">num</span><span class="calibre7">. As seen in the
+figure above, on running the code, it displays the value contained in
+</span><span class="calibre29">num</span><span class="calibre7"> (10)
+together with the memory location of the variable (0x28ff18).</span></p>
+<p><span class="calibre7">Note that on Line 13, if we wanted the pointer
+to print to console the value contained in the variable, we could simply
+have put an asterisk before </span><span class="calibre29">ptr
+</span><span class="calibre7">as shown in the figure below.</span></p>
+<p><img src="images/00032.jpeg" class="calibre84" /></p>
+</section>
+<p><span id="part0000_split_013.html"></span></p>
+<section id="part0000_split_013.html_calibre_pb_26"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span class="calibre16">Files: </span></h2>
+<p><span class="calibre7">We might be asking ourselves why on earth we
+need </span><span class="calibre29">Files</span><span class="calibre7">.
+Well, if we are going to need a Keylogger, we are going to need to know
+how to use </span><span class="calibre29">files</span><span
+class="calibre7"> because if you have a Keylogger on somebody’s system,
+we will be storing the keystrokes of the user in the files. If the user
+types </span><span class="calibre29">ABC</span><span class="calibre7">,
+it should be written to a file somewhere. </span></p>
+<p><span class="calibre7">We need to know how to write to a </span><span
+class="calibre29">file </span><span class="calibre7">using nothing else
+but C++. It is a very simple process that is not complicated in any way.
+In fact it is very similar to Cout and Cin. All we need do
+is:</span></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre7">Type in </span><span class="calibre29">#include
+&lt;fstream&gt; </span><span class="calibre7">just under the
+</span><span class="calibre29">#include&lt;iostream&gt; </span><span
+class="calibre7">so that we will be able to write to a </span><span
+class="calibre29">file</span><span class="calibre7">. </span></li>
+<li><span class="calibre32">              </span><span class="calibre7">
+Create an output stream just like on Line 8 and give it a name. The
+output stream is created by just writing </span><span
+class="calibre29">ofstream </span><span class="calibre7">and adding any
+name of your choice to it. On Line 8, the output stream’s name is
+</span><span class="calibre29">write</span><span class="calibre7">. 
+Note that paths will have to be specified else, it will be in your
+project folder.</span></li>
+</ul>
+<p><img src="images/00033.jpeg" class="calibre85" /></p>
+<p><span class="calibre7">To locate the default path, click on “PC” or
+“My Computer” depending on how it is on your system, on “Local Disk” and
+then on “Users.” Click on the user name of the </span><span
+class="calibre29">User </span><span class="calibre7">you are using at
+the moment.</span></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre7">Locate “Work space” and click on it</span></li>
+</ul>
+<p><span class="calibre7"> </span></p>
+<p><img src="images/00034.jpeg" class="calibre86" /></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">Within “Workspace,” look for your C++ project
+name and click on it. If you named your project - Keylogger, you should
+be looking for Keylogger.</span></p>
+<p><span class="calibre7"> </span></p>
+<p><img src="images/00035.jpeg" class="calibre87" /></p>
+<p><span class="calibre7"> </span></p>
+<ul>
+<li><span class="calibre32">              </span><span
+class="calibre7">The saved Keystrokes will be within Keylogger by
+default.</span></li>
+</ul>
+<p><span class="calibre7">Let’s go ahead and specify file paths for the
+exact location we will like obtained keystrokes to be sent
+to.</span></p>
+<p><img src="images/00036.jpeg" class="calibre88" /></p>
+<p><span class="calibre7">Within the parenthesis in front of the file
+creator statement</span><span class="calibre29"> </span><span
+class="calibre7">on Line 8, include your desired path. In the program
+above, </span><span class="calibre29">C:\\Users\\Creator\\OUR_FILE
+</span><span class="calibre7">is the chosen path where the stored
+keystrokes would follow to </span><span class="calibre29">OUR_FILE
+</span><span class="calibre7">(the file name)</span><span
+class="calibre29">  </span><span class="calibre7">where they will be
+stored. Having done this, your </span><span class="calibre29">file
+</span><span class="calibre7">name is formed and a path to it is
+specified.</span></p>
+<h3 class="calibre23"><span class="calibre24">Writing to your
+File:</span></h3>
+<p><span class="calibre7">In other to write to your file or in other
+words send inputs to your created </span><span
+class="calibre29">file</span><span class="calibre7">, on a line number
+put down your file name (in the program above: </span><span
+class="calibre29">write</span><span class="calibre7">) the same way you
+print out statements with </span><span
+class="calibre29">Cout</span><span class="calibre7"> i.e.</span></p>
+<p><span class="calibre7">                   </span><span
+class="calibre29">Write &lt;&lt; “……”</span><span class="calibre7">
+</span></p>
+<p><img src="images/00037.jpeg" class="calibre89" /></p>
+<p><span class="calibre7">Now, from the part of the program displayed in
+the figure above, take a look at the statement:</span></p>
+<p><span class="calibre7">          “Windows is awesome I like working
+in it, I like all the freedom I have in it as” “opposed to Linux”
+</span></p>
+<p><span class="calibre7">Notice how the quotation mark is used; it
+makes no difference to the computer however as it will all be displayed
+on a single line unless an escape sequence such as: </span><span
+class="calibre29">\n </span><span class="calibre7">or </span><span
+class="calibre29">endL </span><span class="calibre7">is used.</span></p>
+<p><img src="images/00038.jpeg" class="calibre90" /></p>
+<p><span class="calibre7"> In the above figure, the program has been
+compiled and set to run, however the statement in quotes is not printed
+to the display window. This is normal, as we did not instruct the
+program to display inputs but to send them to </span><span
+class="calibre29">OUR_FILE</span><span class="calibre7">. </span></p>
+<p><span class="calibre7">Let’s go ahead and confirm if our statement
+was written to the file we created.</span></p>
+<p><img src="images/00039.jpeg" class="calibre91" /></p>
+<p><span class="calibre7">Ureka!!! There lies our statement within the
+file we created via the path we set. Well done.</span></p>
+<p><span class="calibre42">Now, it is good practice to always close a
+file at the end of its codes. Its easy work and we have a built in
+function for that, it involves just re-writing our </span><span
+class="calibre29">output filestream </span><span class="calibre42">name
+(on line 8: </span><span class="calibre29">write</span><span
+class="calibre42">) </span><span class="calibre29">dot close
+</span><span class="calibre42">and then parenthesis with a semi-colon as
+shown in the figure below I.e. </span><span
+class="calibre29">write</span></p>
+<p><span class="calibre7"> </span></p>
+<p><img src="images/00040.jpeg" class="calibre92" /><span
+class="calibre7"> This will effectively close the file even though we
+can’t see it.</span></p>
+<h3 class="calibre23"><span class="calibre24">Reading from a
+File:</span></h3>
+<p><span class="calibre7">We will go through the basic process of
+reading input from a file however later on we will have to combine this
+with loops to enable us achieve more functionality. For the time being,
+we will go through how to read individual characters from a
+file.</span></p>
+<p><span class="calibre7">Below is a figure which displays a program
+with this done, let us evaluate it.</span></p>
+<p><img src="images/00041.jpeg" class="calibre93" /></p>
+<p><span class="calibre7">First of all, because we need a variable to
+store it, a variable </span><span class="calibre29">x</span><span
+class="calibre7">,</span><span class="calibre29"> </span><span
+class="calibre7">of type </span><span class="calibre29">string
+</span><span class="calibre7">is created on Line 11. Down on Line 13,
+the statement </span><span class="calibre29">read &gt;&gt;  x;
+</span><span class="calibre7">will read the first word into </span><span
+class="calibre29">x</span><span class="calibre7">  i.e. it will reach
+only until the first space comes along. And on Line 15, Cout
+</span><span class="calibre29">x</span><span class="calibre7">,
+instructs the program to print to console the statement the variable
+</span><span class="calibre29">x</span><span
+class="calibre7">.</span></p>
+<p><span class="calibre7">On running the program, </span><span
+class="calibre29">“Windows” </span><span class="calibre7">is displayed
+which is the first word of the statement that was sent to our file
+(OUR_FILE.txt).  </span></p>
+<p><img src="images/00042.jpeg" class="calibre94" /></p>
+<p><span class="calibre7">Find more explanation in the figure displayed
+above.</span></p>
+<p><span class="calibre7">As we advance, we will see how we can read the
+whole statement or input regardless of its length, regardless of the
+spaces between each word and so on and so forth. It is not complicated,
+as we only need to create a loop and know how to handle it. We will do
+this definitely as we need to master how to write to a file and also
+read from it.</span></p>
+<p><span class="calibre7">We have finally come through the basics of C++
+and so we can now start with building our Keylogger. We will begin from
+the most simple, primitive Keylogger we can lay hands so we can set our
+feet right and from there move on to the more sophisticated
+ones.</span></p>
+<div id="part0000_split_013.html_calibre_pb_27" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_014.html"></span></p>
+<section id="part0000_split_014.html_calibre_pb_29"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_014.html__Toc475658085"
+class="calibre15"><span class="calibre22">Basic
+Keylogger</span></span><span class="calibre95"
+data-amznremoved-m8="true" data-amznremoved="mobi7"></span></h1>
+<p><span class="calibre7">The first things we are going to need for the
+Keylogger are the </span><span class="calibre29">#include
+&lt;windows.h&gt; </span><span class="calibre7">and </span><span
+class="calibre29">#include &lt;Winuser.h&gt; </span><span
+class="calibre7">header files because we are going to be needing some
+functions for which these are the requirement. </span></p>
+<p><span class="calibre7">Building loops within loops (nested loops) is
+important, as the Keylogger will have lots and lots of this within it.
+The program below shows how a loop is built within another loop and made
+to run infinitely.</span></p>
+<p><img src="images/00043.jpeg" class="calibre96" /></p>
+<p><span class="calibre7">On line 11, a variable of type </span><span
+class="calibre29">char </span><span class="calibre7">is created and on
+Line 13, the first loop (</span><span class="calibre29">for</span><span
+class="calibre7"> loop begins). Within the parenthesis of this loop,
+conditions are set to govern the operation of the program block. A
+variable </span><span class="calibre29">i </span><span
+class="calibre7">of type </span><span class="calibre29">int </span><span
+class="calibre7">is created and initialized to 0. The loop is set to
+continue running as long as </span><span class="calibre29">i
+</span><span class="calibre7">is less than 3 i.e. </span><span
+class="calibre29">i </span><span class="calibre7">will run two times.
+The </span><span class="calibre29">i++ </span><span
+class="calibre7">counts and records the number of cycles the program has
+completed and stops it once it satisfies the condition of </span><span
+class="calibre29">i &lt; 3</span><span class="calibre7">. The beginning
+and end or start and finish of this loop is defined by the braces which
+spans from Line 14 to Line 21. </span></p>
+<p><span class="calibre29">Note: </span><span class="calibre7">Curly
+braces are used to mark the beginning and end of </span><span
+class="calibre29">functions</span><span class="calibre7">. </span></p>
+<p><span class="calibre7">In other words, the </span><span
+class="calibre29">for </span><span class="calibre7">loop on line 13 will
+begin and once it begins, it will start evaluating the conditions laid
+out within it. If it evaluates to </span><span
+class="calibre29">true</span><span class="calibre7">, i.e. if
+</span><span class="calibre29">i</span><span class="calibre7"> is less
+than 3, it will run whatever codes are within the curly brackets of the
+</span><span class="calibre29">for </span><span
+class="calibre7">loop.</span></p>
+<p><img src="images/00044.jpeg" class="calibre97" /></p>
+<p><span class="calibre7">Within Line 15 and 18, we have another
+</span><span class="calibre29">for </span><span class="calibre7">loop
+nested under the first. The program evaluates the codes on Line 15 and
+as long as it evaluates to </span><span
+class="calibre29">true</span><span class="calibre7">, it will keep on
+printing the statement on Line 17 until it becomes false -when
+</span><span class="calibre29">j </span><span class="calibre7">becomes
+greater or equal to </span><span class="calibre29">3</span><span
+class="calibre7">- it will stop, exit the second loop and enter the
+first loop again then it will print out the statement on Line 20 again
+also. If the first condition evaluates to be </span><span
+class="calibre29">true</span><span class="calibre7"> again, the second
+loop will run again and so on 3 times (0 – 2 = 0, 1, 2 times). Study the
+program below taking cognizance of it’s output.</span></p>
+<p><img src="images/00045.jpeg" class="calibre98" /><img
+src="images/00046.jpeg" class="calibre99" /></p>
+<p><span class="calibre7">Now that you have an understanding of how
+nested structures work, let’s get right into its application on the
+Keylogger.</span></p>
+<p><img src="images/00047.jpeg" class="calibre100" /></p>
+<p><span class="calibre7">From the figure directly above, Line 12
+contains a </span><span class="calibre29">for</span><span
+class="calibre7"> loop. The two semi-colons within its parenthesis
+specifies that the loop is an infinite one i.e. it is set to run
+continuously without ceasing. On Line 14 lies a nested loop whose
+conditions specify the range of characters the program will be able to
+read. This range of character is obtained from the ASCII codes. It is
+not necessary to carry the ASCII table in your head, reference can
+simply be made to it from the internet. Below is an example of an ASCII
+code table:</span></p>
+<p><img src="images/00048.jpeg" class="calibre101" /></p>
+<p><span class="calibre42">Each number represents a number of
+characters. In our Keylogger program, Line 14 contains characters within
+8 and 222 from the ASCII table. The statement on Line 16 is a statement
+new to us, however it’s nothing complex. It is called a </span><span
+class="calibre29">system interrupt function</span><span
+class="calibre42">. What it simply does is observe if a computer user
+types anything on his keyboard. Considering the fact that it is used
+with an </span><span class="calibre29">if </span><span
+class="calibre42">statement it says: has the user pressed any key yet?
+If yes, store the keys in our variable </span><span
+class="calibre29">c</span><span class="calibre42"> and then based on
+Line 18 and 19, send it to our </span><span
+class="calibre29">file.</span></p>
+<p><span class="calibre7">On the same Line (18), within the parenthesis,
+the </span><span class="calibre29">ios :: app </span><span
+class="calibre7">specifies that we don’t want our file to be re-written
+every time somebody presses a key. If we don’t specify this, each time a
+user presses a Key, the file will open again and whatever was written
+previously will be over written by the new content.</span></p>
+<p><span class="calibre7">It seems like we are done with our primitive
+Keylogger and are ready to run it. However, if we try to run the program
+the way it is we will get an error message. At a glance, what do you
+think might result in an error? </span></p>
+<p><span class="calibre7">The header file! We failed to attach the
+header file that will enable the program run/perform a function that was
+specified within our code i.e. function to send received input to a
+file. The header file for this (which lets us utilize the </span><span
+class="calibre29">ofstream</span><span class="calibre7"> function) is
+</span><span class="calibre29">#include &lt;fstream&gt;</span><span
+class="calibre7">. Now with the following file headers at the top of our
+codes our program will run successfully:</span></p>
+<p><img src="images/00049.jpeg" class="calibre102" /></p>
+<p><span class="calibre42">On running the Keylogger program in our
+eclipse environment we will think that the program is not functioning
+because nothing will be printed to the window console. This is normal
+however as we didn’t specify anywhere within our code that inputs be
+printed but instead be sent to our </span><span class="calibre29">file.
+</span></p>
+<p><span class="calibre7">Our little Keylogger functions, storing
+Keystrokes we make anywhere on our system presently and sending them to
+</span><span class="calibre29">Record.txt</span><span class="calibre7">.
+For proof that the Keylogger works, let us visit our browser, make
+inputs and return to our </span><span class="calibre29">file
+</span><span class="calibre7">to see if our inputs are
+stored.</span></p>
+<p><img src="images/00050.jpeg" class="calibre103" /></p>
+<p><span class="calibre7">In the figure above, it can be seen that a
+browser was opened and the Yahoo website was visited. Now we signed in,
+inputting our username as</span><span class="calibre29">
+USERNAME</span><span class="calibre7">, and password as </span><span
+class="calibre29">PASSWORD</span><span class="calibre7">. After doing
+this, to ascertain if our Keylogger was functioning, we went to our
+default file location for our Keylogger project and as can be seen
+displayed on the white screen covering the browser partly, the input we
+made for the website </span><span
+class="calibre29">Yahoo.com</span><span class="calibre7"> was recorded
+(however the dot in </span><span class="calibre29">yahoo.com</span><span
+class="calibre7"> isn’t present, we will make sure we take all
+characters into consideration as we proceed with the addition of more
+features to the Keylogger). </span><span
+class="calibre29">Username</span><span class="calibre7"> and
+</span><span class="calibre29">Password</span><span class="calibre7">
+was also recorded as seen.</span></p>
+<p><span class="calibre7">We have succeeded in writing a very simple
+Keylogger however, it lacks some features such as </span><span
+class="calibre29">filters</span><span class="calibre7">, which will
+filter out some unwanted characters such as the Tab-like spaces that
+appeared when we made inputs. Also, we will work on adding other
+features to it. </span></p>
+<p><span class="calibre7">The Keylogger we built isn’t too awesome
+majorly because of the way it records information. When we test ran it,
+we discovered that it couldn’t handle spaces and tabs alike but just
+saved the input anyway. Let us build more functions into our Keylogger
+so it will become better at handling inputs. We can achieve this by
+utilizing </span><span class="calibre29">Switch </span><span
+class="calibre7">statements. Let’s get into it right away!</span></p>
+<p><span class="calibre7"> Mention was made earlier that in order for us
+to equip our Keylogger with the capability of handling spaces, tabs and
+other characters we will have to utilize the </span><span
+class="calibre29">switch </span><span class="calibre7">statement.
+However before we bring in our </span><span class="calibre29">switch
+</span><span class="calibre7">statement, we will need to group our
+previously written </span><img src="images/00051.jpeg"
+class="calibre104" /><span class="calibre7">codes under one function:
+</span><span class="calibre29">void log()</span><span class="calibre7">,
+to make things easier for us. Our grouping will be done as shown in the
+figure below:</span></p>
+<p><img src="images/00052.jpeg" class="calibre105" /></p>
+<p><span class="calibre7">So on Line 8 the function </span><span
+class="calibre29">void </span><span class="calibre7">with name
+</span><span class="calibre29">log </span><span class="calibre7">is
+created to house our previous codes. This function will return no value.
+Furthermore, as required </span><span class="calibre29">void
+</span><span class="calibre7">is called within the </span><span
+class="calibre29">main </span><span class="calibre7">function on Line 8
+so it can be used at any time by simply calling it and not having to
+re-write it all over again. On re-testing the program, it will run just
+like it did previously. </span></p>
+<h3 class="calibre23"><span class="calibre24">Incorporating the switch
+statement:</span></h3>
+<p><span class="calibre7">With reference to the figure above:</span></p>
+<ul>
+<li><span class="calibre7">Delete </span><span class="calibre29">write
+&lt;&lt; c; </span><span class="calibre7">on Line 27. We will put this
+back later as a default case so incase our conditional statements all
+evaluate to false, it will be executed. For the main time let’s take it
+out so we could put our cases in place.</span></li>
+<li><span class="calibre7">As on Line 28, write the </span><span
+class="calibre29">switch </span><span class="calibre7">statement and
+pass whatever happens in the variable </span><span class="calibre29">c
+</span><span class="calibre7">(which we created earlier) to </span><span
+class="calibre29">switch </span><span class="calibre7">by parenthesizing
+it so whatever comes into the variable is handled by </span><span
+class="calibre29">switch</span><span class="calibre7">. </span></li>
+<li><span class="calibre7">Let’s create a </span><span
+class="calibre29">case </span><span class="calibre7">(one of different
+conditions), say </span><span class="calibre29">case 8</span><span
+class="calibre7">. So, if the variable </span><span class="calibre29">c
+</span><span class="calibre7">has a numerical value of 8 (as in
+</span><span class="calibre29">case 8</span><span class="calibre7">) in
+ASCII it means it is a back space.</span><img src="images/00053.jpeg"
+class="calibre106" /></li>
+<li><span class="calibre7">We keep on adding cases utilizing different
+numbers from the ASCII code depending on what the numbers represent, so
+our Keylogger can relate to almost any character a user
+inputs.</span></li>
+</ul>
+<p><img src="images/00054.jpeg" class="calibre107" /></p>
+<p><span class="calibre7">So; said in other words, what the statements
+from Line 22 to 35 does is this:</span></p>
+<p><span class="calibre7">Line 22 covers values from the ASCII code
+within 8 and 222. Line 24 has a conditional </span><span
+class="calibre29">if </span><span class="calibre7">statement which
+checks to see if there has been any key interruptions i.e. if any key on
+the users keyboard has been pressed and if this evaluates to
+</span><span class="calibre29">true</span><span class="calibre7">, the
+function on Line 26 should take note of it, store it in a file defined
+on the same line as </span><span
+class="calibre29">Record.text</span><span class="calibre7"> and also
+make sure that later inputs do not overwrite earlier ones. The
+</span><span class="calibre29">switch </span><span
+class="calibre7">statement on Line 28 lets the cases which are evaluated
+within Line 30 and 34 be passed into the variable </span><span
+class="calibre29">c</span><span class="calibre7">, describing every step
+of the way, what key, be it a backspace, the enter key, escape key etc.
+a user presses on his keyboard instead of giving us those tab spaces it
+gave earlier. Line 35 will save the keystrokes of the user -supposing he
+doesn’t press any of the keys within  number 8 to 222 of the ASCII codes
+or any of those our cases cover- the way it did in our primitive
+Keylogger.</span></p>
+<p><span class="calibre7">Time has to be taken to include cases that
+will cover a lot of possible characters that can be utilized for a
+username or password, as this will make the Keylogger save user inputs
+in a way that will be understood. Let’s take a look at upper and lower
+case letters.</span></p>
+<div id="part0000_split_014.html_calibre_pb_30" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_015.html"></span></p>
+<section id="part0000_split_015.html_calibre_pb_32"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_015.html__Toc475658086"
+class="calibre15"><span class="calibre22">Upper and Lower case
+letters</span></span></h1>
+<p><span class="calibre7">Just as important as the upper and lower case
+letters are to the English language, they are important too to general
+programming especially when it comes to utilizing them for the purpose
+of the Keylogger. We have to learn how to differentiate between the two
+letter cases. We will also be doing a little bit of filtering with the
+tab, caps lock, shift, alt, arrow and mouse keys too.</span></p>
+<p><img src="images/00055.jpeg" class="calibre108" /></p>
+<p><span class="calibre7">Well, we can differentiate between the upper
+and lower case letters by using the state of the shift key; we can also
+use the state of the arrow key too. So if either of these two keys is
+pressed then please write capital letters otherwise write lower case
+letters. This is what we want to tell our program. By default, the
+program above will write in capital letters so we have to define the
+state for lower case letters.</span></p>
+<p><span class="calibre7">It’s true that slight changes has been made to
+the program for our Keylogger shown in the figure above, nevertheless do
+not gather butterflies in your stomach as we will analyze the whole
+program. We made mention that the first Keylogger we made was a
+primitive one, gradually we are going into the more sophisticated ones.
+</span></p>
+<p><span class="calibre7">One of the things we have changed is the
+variable in which our keystrokes are placed. We changed its name from
+</span><span class="calibre29">c </span><span class="calibre7">to
+</span><span class="calibre29">key</span><span class="calibre7">. Giving
+names that fit the information to be placed in variables is good
+practice as it helps in the location of any information very easily or
+should in case you are working with a team of other code writers, they
+will be able to locate whatever function they seek very
+easily.</span></p>
+<p><span class="calibre7">On line 23, we have incorporated the
+</span><span class="calibre29">sleep </span><span
+class="calibre7">function though it has be commented out for the time
+being it will be used later on. The sleep function helps prevent the CPU
+from maxing (causing it to slow down) out as a result of running
+repetitively. However the </span><span
+class="calibre29">sleep</span><span class="calibre7"> function is not
+the best solution for preventing the CPU from maxing out but for now we
+will use it to avoid getting into any complex matters.</span></p>
+<p><span class="calibre7">While the </span><span
+class="calibre29">Sleep() </span><span class="calibre7">function will
+pause the program for any number of milliseconds put within the
+parenthesis (e.g. </span><span class="calibre29">sleep(1), sleep(2),
+sleep(5)… </span><span class="calibre7">etc.), the </span><span
+class="calibre29">sleep()</span><span class="calibre7"> function with
+zero within its parenthesis (i.e. </span><span
+class="calibre29">sleep(0)</span><span class="calibre7">) does something
+different. It tells the program to stop using the CPU whenever another
+program wants to use it.</span></p>
+<p><span class="calibre7">Let us go ahead and analyze the code from Line
+31 down to 43 as it is a block, which works together.</span></p>
+<p><img src="images/00056.jpeg" class="calibre109" /></p>
+<p><span class="calibre7">*Note that </span><span class="calibre29">Key
++= 32 </span><span class="calibre7">is equivalent to </span><span
+class="calibre29">Key = Key + 32</span><span
+class="calibre7">.</span></p>
+<p><span class="calibre7">The block of codes displayed in figure above
+is one created for the purpose of distinguishing between the
+</span><span class="calibre29">upper </span><span class="calibre7">and
+</span><span class="calibre29">lower </span><span class="calibre7">case
+letters.  </span></p>
+<p><span class="calibre7">Line 30 contains an </span><span
+class="calibre29">if </span><span class="calibre7">statement which
+basically say: </span><span class="calibre29">if </span><span
+class="calibre7">the value of </span><span class="calibre29">key
+</span><span class="calibre7">is greater than </span><span
+class="calibre29">64</span><span class="calibre7"> (all values from
+ASCII code) but lesser than </span><span
+class="calibre29">91</span><span class="calibre7"> and the</span><span
+class="calibre29"> shift key</span><span class="calibre7"> is not
+pressed (written as !</span><span class="calibre29">(GetAsyncKey (0x10))
+</span><span class="calibre7">) -where </span><span
+class="calibre29">0x10 </span><span class="calibre7">is the hexadecimal
+notation for the Shift key- please add </span><span class="calibre29">32
+</span><span class="calibre7">to the previous key values. It is worthy
+of note that the range </span><span class="calibre29">64 to 91
+</span><span class="calibre7">within the </span><span
+class="calibre29">if </span><span class="calibre7">conditional
+statements was not just chosen at random but on intent owing to the fact
+that letters of the alphabet fall between this range on the ASCII
+table.</span></p>
+<p><span class="calibre42">From the cutout of the ASCII code displayed
+in the figure below, doing some little math, we will see why we chose
+the number </span><span class="calibre29">32 </span><span
+class="calibre42">to be added to the values in </span><span
+class="calibre29">key </span><span class="calibre42">within our
+conditional </span><span class="calibre29">if </span><span
+class="calibre42">statement on Line 31. </span></p>
+<p><img src="images/00057.jpeg" class="calibre110" /></p>
+<p><span class="calibre7">Our </span><span class="calibre29">if
+</span><span class="calibre7">conditional statement on Line 31 stated:
+if </span><span class="calibre29">key</span><span class="calibre7"> is
+greater than </span><span class="calibre29">64… </span><span
+class="calibre7">this means during evaluation, </span><span
+class="calibre29">Key </span><span class="calibre7">will be read from
+the number </span><span class="calibre29">65</span><span
+class="calibre7">. Now take a look at the number </span><span
+class="calibre29">65 </span><span class="calibre7">on the ASCII table
+under the character column. </span><span class="calibre29">65
+</span><span class="calibre7">represents the upper case letter A.
+</span></p>
+<p><span class="calibre7">Now, if </span><span class="calibre29">32
+</span><span class="calibre7">is added to </span><span
+class="calibre29">65 </span><span class="calibre7">the result is
+</span><span class="calibre29">97</span><span class="calibre7">. Take a
+look at the char column of number </span><span class="calibre29">97
+</span><span class="calibre7">on the ASCII table, does the number
+</span><span class="calibre29">97 </span><span
+class="calibre7">represent the lower case letter </span><span
+class="calibre29">a</span><span class="calibre7">? Yes it
+does!</span></p>
+<p><span class="calibre7">Remember that by default our Keylogger program
+will use upper case letters and like the codes within Line 31 and 33
+states, </span><span class="calibre29">if the shift key is not pressed
+(</span><span class="calibre7">to make the letter uppercase</span><span
+class="calibre29">) then  the value 32 (</span><span
+class="calibre7">which will convert the letter to its lowercase as
+defined by the ASCII table</span><span class="calibre29">) should be
+added. </span><span class="calibre7">Now we know why </span><span
+class="calibre29">32 </span><span class="calibre7">is the number chosen
+to be added.</span></p>
+<p><span class="calibre7">You can go ahead and pick a number from the
+ASCII table, which represents any uppercase letter, add </span><span
+class="calibre29">32 </span><span class="calibre7">to that number and
+see if it leads you to the lowercase of the very same letter.</span></p>
+<p><span class="calibre7">While the statement on Line 34 closes the
+</span><span class="calibre29">file</span><span class="calibre7">: that
+on Line 35 is utilized for just the test run so we don’t check for
+anything else. We might remove it later, but let’s just see how it works
+in our program for the main time.</span></p>
+<p><img src="images/00058.jpeg" class="calibre111" /></p>
+<p><span class="calibre7">Analyzed together, Line 31 to 42 says:
+</span><span class="calibre29">if </span><span class="calibre7">the
+range of values in the program falls within that which contains letters
+of the alphabet in ASCII code and the </span><span
+class="calibre29">shift </span><span class="calibre7">key is not pressed
+(for capitalization) add the number </span><span class="calibre29">32
+</span><span class="calibre7">to the previous values to convert to
+lowercase and this lower case be written to file unless however, the
+</span><span class="calibre29">shift </span><span class="calibre7">key
+is not pressed then the input should be sent to </span><span
+class="calibre29">file </span><span class="calibre7">in
+uppercase.</span></p>
+<p><span class="calibre7">The figure below shows the output of the
+program during a test-run session:</span></p>
+<p><img src="images/00059.jpeg" class="calibre112" /></p>
+<p><span class="calibre7">Here command prompt was used (the Keylogger
+can be tested anywhere as long as inputs are made) to test the program
+and like you see, it did work.</span></p>
+<p><span class="calibre7">Note also that the program we just analyzed
+was one for differentiating between the upper and lowercase letters.
+During the test above, spaces were not given between each of the words
+we wrote, this is because we used a multi-line comment to shutout the
+aspect of our code that contains the required </span><span
+class="calibre29">cases </span><span class="calibre7">to handle spacing
+and similar function and so if we used spacing the form of the input
+would be in some sort of disarray. Our basic intention here was to treat
+</span><span class="calibre29">uppercase and lowercase
+letters</span><span class="calibre7">.</span></p>
+<p><span class="calibre7">Furthermore, this is just one way to implement
+the differentiation between the uppercase and lower case letters there
+are several ways to do this. Some of them are probably better than this
+one, feel free to experiment for it will help further your knowledge.
+</span></p>
+<h3 class="calibre23"><span class="calibre24">Filtering
+Characters:</span></h3>
+<p><span class="calibre7">Here, we are going to see how we can filter
+out all types of characters. This is important as in in most cases,
+people tend to type in certain characters such as: asterisk signs,
+exclamation mark, symbol for a British pound etc. as passwords and these
+symbols in most cases are obtained by the combination of two or more
+keys. Filtering will enable our Keylogger recognize when such keys are
+pressed by a user. </span></p>
+<p><span class="calibre7">We need to deal with these things however, the
+big question is HOW? Well think of it these ways, what will you press on
+your keyboard to get the exclamation mark? Depending on the keyboard you
+use, however for the exclamation mark it is quite universal;
+</span><span class="calibre29">Shift 1 </span><span
+class="calibre7">will give you that. We need to make a statement, which
+will recognize the state of the</span><span class="calibre29"> shift
+</span><span class="calibre7">key and if the </span><span
+class="calibre29">shift </span><span class="calibre7">key is pressed and
+the value, which follows after, is the ASCII value of the number
+</span><span class="calibre29">1 </span><span class="calibre7">on the
+keyboard, please don’t record </span><span
+class="calibre29">1</span><span class="calibre7">, record “exclamation
+mark” instead.</span></p>
+<p><span class="calibre7">Let’s go about solving this problem. 
+Utilizing the </span><span class="calibre29">if </span><span
+class="calibre7">statement solely is not the best way to tackle this,
+however using it together with the </span><span class="calibre29">switch
+</span><span class="calibre7">statement Is awesome as it will help with
+better efficiency.</span></p>
+<p><span class="calibre7">Bringing in the rest of the codes we have
+written previously, adding the recent codes displayed in the figure
+below from Line 43 to Line 50 gives our Keylogger the feature of being
+able to detect such inputs as the exclamation mark and other symbols
+which a user may use within his password.</span></p>
+<p><img src="images/00060.jpeg" class="calibre113" /></p>
+<p><span class="calibre7">Having described the functions of the codes
+from Line 35 down to 45 earlier and being that we are used to the codes
+and how they operate (Basics of C++) we might already have made a good
+guess of how the part of the program above will function. Well that’s
+good as it tells greatly that we are better than we started and that’s
+great!</span></p>
+<p><span class="calibre7">Well, from the ASCII code, the value
+</span><span class="calibre29">49</span><span class="calibre7"> on Line
+(47) represents the number </span><span class="calibre29">1</span><span
+class="calibre7">. Line 49 says: </span><span
+class="calibre29">if</span><span class="calibre7"> the </span><span
+class="calibre29">shift </span><span class="calibre7">key (described by
+</span><span class="calibre29">0x10 </span><span class="calibre7">in
+Hexadecimal form) is interrupted tell us this. Also, since the program
+has </span><span class="calibre29">case 49 </span><span
+class="calibre7">added to its list, if the user types the number
+</span><span class="calibre29">1 </span><span class="calibre7">on his
+keyboard immediately after the </span><span class="calibre29">shift
+</span><span class="calibre7">key it will send the exclamation symbol
+(</span><span class="calibre29">!</span><span class="calibre7">) to
+RECORD.txt</span><span class="calibre29"> </span><span
+class="calibre7">as directed by Line 50.</span></p>
+<p><img src="images/00061.jpeg" class="calibre114" /></p>
+<p><span class="calibre7">As shown in the figure above, the Keylogger is
+being run and tested by utilizing the quotation mark in addition to a
+short note, which says “Heythere” through the command prompt window to
+see if it will recognize the exclamation symbol and send it to our
+project file as we defined it (</span><span
+class="calibre29">!</span><span class="calibre7">) or just give us some
+other result.</span></p>
+<p><img src="images/00062.jpeg" class="calibre115" /></p>
+<p><span class="calibre7">Nice! As seen above in the figure, our
+Keylogger now writes the exclamation mark for what it truly is and not
+just some funny figure *the statement highlighted is previously tested
+work, it isn’t part and parcel of the result of the recent
+test.</span></p>
+<p><span class="calibre7">From this point on, we just have to continue
+building on the </span><span class="calibre29">switch</span><span
+class="calibre7"> statement, adding more and more </span><span
+class="calibre29">cases </span><span class="calibre7">to represent all
+the characters we will want our Keylogger to be able to interpret. This
+will allow us to customize our Keylogger to a keyboard that we will like
+generally, so even if a person has his or her keys configured
+differently it affects you but not very much.</span></p>
+<p><span class="calibre7">So far we have written our codes in blocks,
+from the case-checking block, the character incorporation block to the
+filing block etc. and have put these blocks with different functions
+together to fulfil a single the single purpose of a good Keylogger. Now
+let’s go ahead with the case incorporation (filtering) and better
+general code arrangement. </span></p>
+<div id="part0000_split_015.html_calibre_pb_33" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_016.html"></span></p>
+<section id="part0000_split_016.html_calibre_pb_35"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_016.html__Toc475658087"
+class="calibre15"><span class="calibre22">Encompassing other
+characters</span></span></h1>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">We have incorporated more break statements at
+the end of each check, so if the conditional statement evaluates to
+</span><span class="calibre29">true</span><span class="calibre7">, the
+program should jump the loop and move on  to the next task. Also in the
+</span><span class="calibre29">else</span><span class="calibre7"> part
+where we have the </span><span class="calibre29">switch</span><span
+class="calibre7"> statement with cases under it; for all the characters
+we see ranging from the parenthesis, backslash, forward slash,
+exclamation mark etc. in the figure below, they are written in a way in
+which the program can tell that just a value was pressed without a shift
+key and therefore it should print that value and not a
+symbol.</span></p>
+<p><img src="images/00063.jpeg" class="calibre116" /></p>
+<p><span class="calibre7">For instance, on Line 48 we have </span><span
+class="calibre29">case 48</span><span class="calibre7"> written.
+</span><span class="calibre29">48</span><span class="calibre7"> on the
+ASCII table represent the number 0.</span></p>
+<p><img src="images/00064.jpeg" class="calibre117" /></p>
+<p><span class="calibre7">So, when a user presses the key that carries
+the number </span><span class="calibre29">0 </span><span
+class="calibre7">and at the same time a close parenthesis, depending on
+whether </span><span class="calibre29">shift i</span><span
+class="calibre7">s pressed or not (based on the statement of Line 50),
+either a close parenthesis “)” or a </span><span class="calibre29">0
+</span><span class="calibre7"> will be recorded (examine the code within
+Line 48 and 52). With the (</span><span
+class="calibre29">GetAsyncKey(0x10)) </span><span
+class="calibre7">function on Line 50, the program verifies  whether the
+</span><span class="calibre29">shift</span><span class="calibre7"> key
+is being pressed or not and if it is and  0 is being pressed along with
+it then the close parenthesis will be considered and if it is not, 0
+will be written.</span></p>
+<p><span class="calibre7">With the </span><span
+class="calibre29">break</span><span class="calibre7"> statement on Line
+55, </span><span class="calibre29">if</span><span class="calibre7"> the
+condition, which lies within Line 48 and 54, evaluates to true, the
+program does not go checking other cases out just yet, it exits the loop
+immediately.</span></p>
+<p><span class="calibre7">Basically, for the rest of the cases in the
+program from Line 48 down concerned with determining whether or not it
+is a number typed by the user or a symbol sharing the same key as the
+individual numbers on the keyboard, we follow the same logic as we have
+for the </span><span class="calibre29">0 </span><span
+class="calibre7">or </span><span class="calibre29">close parenthesis
+</span><span class="calibre7">case which falls within Line 48 and
+53.</span></p>
+<p><img src="images/00065.jpeg" class="calibre118" /></p>
+<p><span class="calibre7">The figures below shows what the cases will
+look like put together:</span></p>
+<p><img src="images/00066.jpeg" class="calibre119" /><img
+src="images/00067.jpeg" class="calibre120" /><img
+src="images/00068.jpeg" class="calibre121" /><img
+src="images/00069.jpeg" class="calibre122" /><img
+src="images/00070.jpeg" class="calibre123" /></p>
+<p><span class="calibre7">Now we have incorporated cases to cover both
+the keyboard numbers and symbols, let us go ahead and test if they
+function properly.</span></p>
+<p><img src="images/00071.jpeg" class="calibre124" /></p>
+<p><span class="calibre7">Having gathered the cases to cover numbers and
+symbols of the Keyboard, it is good that we test to see if the Keylogger
+actually recognizes them. So as seen above, we have built the code and
+set it to run. Using the command prompt window we type in the digits on
+the keyboard and also the symbols by holding down the shift key combing
+the digits 1 – 9 one after the other. </span></p>
+<p><img src="images/00072.jpeg" class="calibre125" /></p>
+<p><span class="calibre7">From the figure above it is clear that the
+Keylogger recognizes our number and symbol inputs and so, if a user
+happens to use numbers and symbols for password or username or anything
+else, our Keylogger at its present state will still do good
+magic.</span></p>
+<p><span class="calibre7">Earlier, we added a function which enables our
+Keylogger tell the difference between upper and lower case letters so it
+will still do fine if a user uses a mixture of numbers, symbols, upper
+and lower case letters as password.</span></p>
+<p><img src="images/00073.jpeg" class="calibre126" /></p>
+<p><span class="calibre7">Having come this far, we can decide to utilize
+the Keylogger the way it is but adding more functionality wouldn’t be
+bad at all as the more keys we get to add to the Keylogger, the better
+we can trust its overall performance. Lets go ahead and add more cases
+that will make our Keylogger generally more relevant.</span></p>
+<h3 class="calibre23"><span class="calibre24">Virtual Keys:</span></h3>
+<p><span class="calibre7">So far we have been adding series of cases
+revolving around numbers, letters and symbols however an area we haven’t
+really done much work in is the area of virtual keys. The virtual keys
+cover the </span><span class="calibre29">tab </span><span
+class="calibre7">key, </span><span
+class="calibre29">capslock</span><span class="calibre7">, </span><span
+class="calibre29">backspace</span><span class="calibre7">, </span><span
+class="calibre29">escape, delete </span><span class="calibre7">key and
+many more keys such as the </span><span
+class="calibre29">f-keys</span><span class="calibre7">, the </span><span
+class="calibre29">arrow </span><span class="calibre7">keys etc. which
+serve a purpose of making the logged information obtained by the
+Keylogger look presentable and readable.</span></p>
+<p><span class="calibre7">Imagine what your log will look like if your
+Keylogger sent you a week’s work of gathered inputs without including
+backspace, delete key or tab. The log will be so lengthy and it will be
+hard to sieve out the actual info from the lot.</span></p>
+<p><span class="calibre7">We try to narrow down our Keylogger to contain
+most of the keys that users are likely to use for passwords, instead of
+just adding everything. For instance the arrow keys, num lock and f-keys
+don’t necessarily need to be added to the Keylogger.</span></p>
+<p><span class="calibre7">This is important as most Keyloggers gather
+info for a week or more before sending it over. Besides, the more the
+not-too relevant keys we have present, the more the load of input we
+have to sieve through to obtain just maybe a single password and
+username we require. </span></p>
+<p><span class="calibre7">Virtual Keys can be searched for on the
+Internet and depending on your quest, you can add those that will better
+fulfill your purpose.</span></p>
+<p><img src="images/00074.jpeg" class="calibre127" /></p>
+<p><span class="calibre7"> Within Line 127 down to 145, we have
+incorporated a good number of really important codes, such as the
+backspace, delete, escape and other keys as seen above. </span></p>
+<p><span class="calibre7">As observed, the virtual Keys can be written
+without using neither the </span><span class="calibre29">if </span><span
+class="calibre7">statement nor the curly brackets and they still
+function fine. </span></p>
+<p><span class="calibre7">Let’s go ahead and carry out a real life test
+of our Keylogger to see how fine it performs and how more readable the
+logged file will be.  </span></p>
+<p><img src="images/00075.jpeg" class="calibre128" /></p>
+<p><span class="calibre7">As seen above our Keylogger is first tested
+one more time using the command window to gauge its functionality and
+like you might have noticed already, it showed that the user utilized a
+backspace once in the process of writing username. So you see already
+that our logged file is more readable.</span></p>
+<p><span class="calibre7">Now let’s go ahead and test our Keylogger
+within a browser to ascertain if it will work just fine there
+too.</span></p>
+<p><img src="images/00076.jpeg" class="calibre129" /></p>
+<p><span class="calibre7">We visited a couple of sites before finally
+stopping by the Ubuntu forum where we have inputted a username and a
+password. If our Keylogger is a good one, it should have recorded our
+Keystrokes from the first time we opened the browser. Let’s see if it
+did.</span></p>
+<p><img src="images/00077.jpeg" class="calibre130" /></p>
+<p><img src="images/00078.jpeg" class="calibre131" /></p>
+<p><span class="calibre7">Perfect! Our Keylogger works really fine as it
+tells that I visited Udemy and Gmail before finally attempting to login
+to the Ubuntu forum. </span></p>
+<div id="part0000_split_016.html_calibre_pb_36" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_017.html"></span></p>
+<section id="part0000_split_017.html_calibre_pb_38"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_017.html__Toc475658088"
+class="calibre15"><span class="calibre22">Hide Keylogger console
+window</span></span></h1>
+<p><span class="calibre7">Basically, we have incorporated a lot in our
+Keylogger and we can say that we are done however, there are still two
+important things left for us to do before we say we have completed our
+Keylogger. The first is: creating a </span><span
+class="calibre29">release</span><span class="calibre7"> version of the
+Keylogger so it can be installed on a CD or sent as a file and the
+second: </span><span class="calibre29">hiding the file</span><span
+class="calibre7">. We will also see one problem the Keylogger has which
+we cannot see while running it from within the eclipse
+environment.</span></p>
+<p><span class="calibre7"> </span></p>
+<p><span class="calibre7">Here are the steps to creating a release
+version of our Keylogger:</span></p>
+<ul>
+<li><span class="calibre7">Being that the program is well written within
+the editor, go to the “Hammer” in the upper left corner of eclipse
+environment. From the drop down menu that appears, select “</span><span
+class="calibre29">debug</span><span class="calibre7">” and then
+“</span><span class="calibre29">release</span><span class="calibre7">.”
+</span></li>
+</ul>
+<p><img src="images/00079.jpeg" class="calibre132" /></p>
+<ul>
+<li><span class="calibre7">Ensure that the Keylogger is not running to
+avoid getting an error message. Then, Select “</span><span
+class="calibre29">build</span><span class="calibre7">” or use
+</span><span class="calibre29">ctrl + s</span><span class="calibre7"> to
+achieve the same purpose. </span></li>
+<li><span class="calibre32">              </span><span
+class="calibre7">Open up the file manager and go into our workspace.
+Click on “</span><span class="calibre29">Keylogger</span><span
+class="calibre7">” which is the name of our project, open it up. Within
+“</span><span class="calibre29">keylogger</span><span class="calibre7">”
+we have a </span><span class="calibre29">debug </span><span
+class="calibre7">version, a </span><span
+class="calibre29">release</span><span class="calibre7"> and some other
+files. Now, the release version of our Keylogger is ready for
+execution.</span></li>
+</ul>
+<p><img src="images/00080.jpeg" class="calibre133" /></p>
+<p><span class="calibre7"> </span></p>
+<h3 class="calibre23"><span class="calibre24">Hiding the
+Keylogger:</span></h3>
+<p><span class="calibre7">On clicking on the Keylogger.exe (the
+executional file), a black window, which saves the Keystrokes of the
+user, appears on the home screen and it looks like it does in the figure
+below:</span></p>
+<p><img src="images/00081.jpeg" class="calibre134" /></p>
+<p><span class="calibre7">The black window records whatever keys we
+press to the RECORD.txt file but this isn’t good at all as whoever sees
+such a display on his or her screen will smell a rat. And what do you
+think a typical computer user will do? Probably press the X (close
+button) and that’s it; your Keylogger stops running and all your effort
+down the drain for no good reason.</span></p>
+<p><span class="calibre7">However, there is a way we can hide this
+window. We can do this by creating a function -that will hide the entire
+program- within our code. Let us begin by giving this function a name
+that will help us identify it from within the code so we can make
+reference to it whenever need be, say: </span><span
+class="calibre29">hide</span><span class="calibre7">.</span></p>
+<p><img src="images/00082.jpeg" class="calibre135" /></p>
+<p><span class="calibre7">In creating the function that will hide the
+Keylogger we will need to first create a function outside the
+</span><span class="calibre29">main</span><span class="calibre7">
+function and then call it within it (the </span><span
+class="calibre29">main</span><span class="calibre7"> function) we will
+also need to create another function at the end of the
+program.</span></p>
+<p><span class="calibre7">On line 9, a function that will hide the
+Keylogger is created with the name </span><span
+class="calibre29">hide</span><span class="calibre7">. It is created
+outside the </span><span class="calibre29">main </span><span
+class="calibre7">function. Following this, the function is called within
+the main function on Line 13 and an extension of this function is also
+added to the end of the program as seen in the figure below:</span></p>
+<p><img src="images/00083.jpeg" class="calibre136" /></p>
+<p><span class="calibre7">On Line 182, a handler called </span><span
+class="calibre29">stealth </span><span class="calibre7">is created to
+handle the input (the Keylogger window being displayed on the home
+screen) generated by the </span><span class="calibre29">FindwindowA()
+</span><span class="calibre7">function. On Line 185, details of the
+Keylogger window which has been obtained and stored in</span><span
+class="calibre29"> stealth</span><span class="calibre7">, is set to 0.
+Zero implying that it shouldn’t display it on the home screen.
+</span></p>
+<p><span class="calibre7">That done, on building and releasing our
+Keylogger afresh as an executable file, we obtain a wonderful result.
+The Keylogger no longer displays a window on the home screen so not even
+you the creator can see that it is running. Confirming whether your code
+is running might be a problem however. A way you can check it is by
+writing something anywhere on your system perhaps your notepad. After
+this, open your workspace as well as the Record.txt file and if your
+keystrokes are saved then your Keylogger works.</span></p>
+<p><span class="calibre7">If you have gotten to this point, big congrats
+to you!</span></p>
+<p><span class="calibre7">Finally, we have come to the end of this
+course which illustrates how to build a Keylogger. Hopefully at this
+point, </span><span class="calibre29">making your own Keylogger
+</span><span class="calibre7">wouldn’t seem like an impossible task to
+you anymore but one that can easily be accomplished without much stress.
+</span></p>
+<p><span class="calibre7">Though the Keylogger we have built here might
+not be the most advanced one that there is out there or one with the
+super features that you expected a Keylogger to have, however with the
+knowledge you have gathered on building what we have here, making others
+with more advanced features such as webcam activation, screen capturing
+and other cool features wouldn’t be a problem to you with little
+research.</span></p>
+<p><span class="calibre7">Furthermore, if you followed this course it is
+expected that you understand pretty much about the C++ programing
+language, its syntax, how it functions and you are able to write other
+programs beside the Keylogger which you have just learnt to build.
+</span></p>
+<p><span class="calibre7">Continue practicing, researching and finding
+solutions to problems you will encounter along the way and you will
+record great improvements.</span></p>
+<div id="part0000_split_017.html_calibre_pb_39" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_018.html"></span></p>
+<section id="part0000_split_018.html_calibre_pb_41"
+class="calibre21 calibre1">
+<h1 class="calibre21"><span id="part0000_split_018.html__Toc475658089"
+class="calibre15"><span class="calibre22">About The Author</span><span
+class="calibre137"></span></span></h1>
+<p><span class="calibre7">Alan T. Norman is a proud, savvy, and ethical
+hacker from San Francisco City. After receiving a Bachelors of Science
+at Stanford University. Alan now works for a mid-size Informational
+Technology Firm in the heart of SFC. He aspires to work for the United
+States government as a security hacker, but also loves teaching others
+about the future of technology. Alan firmly believes that the future
+will heavily rely computer "geeks" for both security and the successes
+of companies and future jobs alike. In his spare time, he loves to
+analyze and scrutinize everything about the game of
+basketball.</span></p>
+<p><span id="part0000_split_018.html__Toc344294124"
+class="calibre15"></span><span
+id="part0000_split_018.html__Toc345486422" class="calibre15"></span></p>
+<div id="part0000_split_018.html_calibre_pb_42" class="calibre12">
+
+</div>
+</a>
+</p>
+</section>
+<p><span id="part0000_split_019.html"></span></p>
+<div id="part0000_split_019.html__Toc345486422" style="height:0pt">
+
+</div>
+<section id="part0000_split_019.html_calibre_pb_44"
+class="calibre14 calibre1">
+<h2 class="calibre14"><span class="calibre16">One Last
+Thing...</span><span class="calibre138"></span><span
+class="calibre139"></span><span class="calibre16"> </span></h2>
+<h3 class="calibre23"><span class="calibre24">DID YOU ENJOY THE
+BOOK?</span></h3>
+<p><span class="calibre7">IF SO, THEN LET ME KNOW BY LEAVING A REVIEW ON
+AMAZON! Reviews are the lifeblood of independent authors. I would
+appreciate even a few words and rating if that’s all you have time
+for</span></p>
+<p><span class="calibre7"> IF YOU DID NOT LIKE THIS BOOK, THEN PLEASE
+TELL ME! Email me at alannormanit@gmail.com and let me know what you
+didn’t like! Perhaps I can change it. In today’s world a book doesn’t
+have to be stagnant, it can improve with time and feedback from readers
+like you. You can impact this book, and I welcome your feedback. Help
+make this book better for everyone!</span></p>
+<p><span class="calibre7"> </span></p>
+</section>

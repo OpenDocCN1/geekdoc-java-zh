@@ -1,0 +1,72 @@
+name: Java 17： More about Java and Android Software Development
+name_cn: Java 17：深入了解 Java 和 Android 软件开发
+slug: java-17-more-about-java-and-android-software-development
+toc:
+- - '#'
+  - 1 引言
+- - '#'
+  - 2 碎片
+- - '##'
+  - 2.1 旋转手机
+- - '##'
+  - 2.2 屏幕尺寸
+- - '##'
+  - 2.3 Fragments 之间的通信
+- - '##'
+  - 2.3 练习 1:TheBirds
+- - '##'
+  - 2.4 Two activities
+- - '##'
+  - 2.5 The fragment life cycle
+- - '###'
+  - 2.5.1 四个方法
+- - '##'
+  - 2.6 一个 ListFragment
+- - '##'
+  - 2.6 练习 2：Kings
+- - '##'
+  - 2.7 一个 DialogFragment
+- - '#'
+  - 3 手机
+- - '##'
+  - 3.1 发送短信
+- - '#'
+  - 4 使用相机
+- - '##'
+  - 4.1 `PASSIVE_PROVIDER`
+- - '##'
+  - '4.2 练习 3: Google Play Services'
+- - '##'
+  - 4.3 问题 1：PuzzleApp
+- - '#'
+  - 7 外部存储
+- - '#'
+  - 8 Web 开发
+- - '##'
+  - 8.1 练习 4：微浏览器 (MiniBrowser)
+- - '##'
+  - 8.2 LoadData()
+- - '##'
+  - 8.3 连接到 URL
+- - '##'
+  - 8.4 下载文件
+- - '#'
+  - 9 关于服务的更多内容
+- - '##'
+  - 9.1 一个 IntentService
+- - '##'
+  - 9.2 一个永不结束的服务
+- - '#'
+  - 10 通知
+- - '#'
+  - 11 AndroidManifest.xml
+- - '##'
+  - 11.1 Marshmallow 及后续
+- - '##'
+  - 11.2 应用商店
+- - '#'
+  - 12 最后一个示例：WineApp
+- - '##'
+  - 12.1 开发计划
+- - '##'
+  - 12.2 项目

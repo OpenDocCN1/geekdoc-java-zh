@@ -1,0 +1,169 @@
+name: IMAGE VIEWER in Java 8
+name_cn: Java 8 图像查看器
+slug: image-viewer-in-java-8
+toc:
+- - '#'
+  - Java 8 图像查看器
+- - '##'
+  - 黄超（Bing-Chao Huang）
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '##'
+  - 本书的组织结构
+- - '###'
+  - 1. 第一卷：开发图像查看组件
+- - '###'
+  - 2. 第二卷：开发交互式形状绘制工具
+- - '###'
+  - 3. 第三卷：开发交互式正多边形绘制工具
+- - '###'
+  - 4. 第四卷：草稿保存与加载
+- - '###'
+  - 5. 其他
+- - '#'
+  - 第 1 卷目录
+- - '##'
+  - 为什么选择这本书
+- - '##'
+  - 本书所需
+- - '#'
+  - 引言
+- - '##'
+  - JavaFX 历史
+- - '##'
+  - 前提
+- - '##'
+  - JavaFX 应用程序简介
+- - '###'
+  - Scene 和 Stage
+- - '###'
+  - 节点
+- - '###'
+  - JavaFX 和 Swing
+- - '###'
+  - JavaFX 的精髓
+- - '####'
+  - 内置布局面板
+- - '####'
+  - 参考 Oracle 在线文档“Working with Layouts in JavaFX”：
+- - '###'
+  - 使用 CSS 进行自定义
+- - '##'
+  - JavaFX 中的 CSS 与 HTML CSS 的相似性
+- - '###'
+  - 参考 Oracle 在线文档“Skinning JavaFX Applications with CSS”：
+- - '##'
+  - 使用 FXML 创建用户界面
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Mastering FXML”：'
+- - '##'
+  - 属性与绑定的强大能力
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Properties and Binding Tutorial”：'
+- - '##'
+  - 变换与过渡的复杂机制
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Transformations, Animations, and Visual Effects”：'
+- - '##'
+  - 2D 几何原语与文本都是 JavaFX 节点
+- - '###'
+  - 参考 Oracle 在线文档“Using Text in JavaFX”：
+- - '##'
+  - 其他处理许多复杂问题以缩短开发时间的显著功能
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Adding HTML Content to JavaFX Applications”：'
+- - '###'
+  - 用于编辑 HTML 页面的 HTMLEditor 类
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Working with JavaFX UI Components -- HTML Editor”：'
+- - '###'
+  - 用于渲染数据的图表组件
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Working with JavaFX UI Components -- Working with JavaFX
+    Charts”：'
+- - '###'
+  - 用于播放媒体的 MediaView 类
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Incorporating Media Assets Into JavaFX Applications”：'
+- - '#'
+  - JavaFX 基础 UI 组件
+- - '###'
+  - '参考 Oracle 在线文档“JavaFX: Working with JavaFX UI Components”：'
+- - '###'
+  - 1.1.1 JavaFX 线程与 Java 启动线程
+- - '###'
+  - 1.1.2 捕获图像渲染区域的调整事件
+- - '##'
+  - 1.2 创建菜单栏
+- - '###'
+  - 1.2.1 将文件添加到菜单
+- - '###'
+  - 1.2.2 从打开对话框选择图像文件并在 StackPane 中显示
+- - '###'
+  - 导入语句
+- - '###'
+  - 列表 1-7. 创建 `FileChooser` 对象、`ImageView` 对象并为 `Load` 菜单项添加 `EventHandler` 以加载图像：
+- - '###'
+  - 列表 1-8. `ImageViewer` 类的完整源代码如下：
+- - '##'
+  - 1.3 创建 Option 菜单和 View 子菜单
+- - '###'
+  - 1.3.1 创建 ToggleGroup、单选框菜单项并为 `selectedToggle` 属性添加监听器
+- - '###'
+  - 导入语句：
+- - '###'
+  - 列表 1-9. 创建 `Option` 菜单、`ToggleGroup`、`RadioMenuItem`s、`View` 子菜单并为 `ToggleGroup`
+    的 `selectedToggle` 属性添加监听器：
+- - '###'
+  - 列表 1-10. `ImageViewer` 类的完整源码如下：
+- - '##'
+  - 1.4 实现“适应宽度”、“适应高度”和“原始尺寸”选项
+- - '###'
+  - 1.4.1 方法一：分别将 `ImageView` 的 `fitWidth`/`fitHeight` 属性绑定到 `Scene` 的 `width`/`height`
+    属性
+- - '####'
+  - 1.4.1.1 实现“适应宽度”显示选项
+- - '####'
+  - 1.4.1.2 实现“适应高度”显示选项
+- - '####'
+  - 1.4.1.3 实现“原始尺寸”显示选项
+- - '####'
+  - 1.4.1.4 `ImageViewer` 类的完整源代码
+- - '###'
+  - 1.4.2 方法二：更改 `fitWidth` 属性和 `fitHeight` 属性的值
+- - '###'
+  - 1.4.2.1 捕获场景缩放事件以调整图像查看尺寸
+- - '###'
+  - 1.4.2.2 `ImageViewer` 类的完整源代码
+- - '##'
+  - 9. 通过鼠标拖动窗口边缘调整场景宽度和高度，并分别测试三种查看选项。
+- - '##'
+  - 1.5 总结
+- - '#'
+  - 第 2 章：带有浏览按钮的增强图像查看器
+- - '##'
+  - 开发 ImageViewer V1.1
+- - '###'
+  - 引言
+- - '###'
+  - 2.1.8 使用便利方法注册事件处理器以处理鼠标事件
+- - '###'
+  - 2.1.9 完善 `createNextButton()` 方法的源代码
+- - '###'
+  - 2.1.10 为 `Node` 安装 `Tooltip`
+- - '##'
+  - 2.2 在 `StackPane` 中调整 `Next` 按钮的默认位置
+- - '##'
+  - 2.3 在 `StackPane` 中添加 `Previous` 按钮并调整其位置
+- - '##'
+  - 2.4 实现鼠标点击事件处理器
+- - '###'
+  - '2.4.1 配置 `FileChooser` '
+- - '###'
+  - 2.4.2 创建 `
+- - '###'
+  - 2.5.1 总结
+- - '###'
+  - '2.1.1 2. '

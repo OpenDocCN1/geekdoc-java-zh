@@ -1,0 +1,4700 @@
+- fmt: "\n![](Images/cover00118.jpeg)\n\n# JAVA AND C# CODING EXERCISES\n## CODING\
+    \ FOR BEGINNERS\nAuthor: JJ TAM\n\n## JAVA CODING EXERCISES\n- Print hello\n-\
+    \ Print the sum\n- Divide two numbers\n- Print the result\n- Print multiplication\
+    \ table\n- Find the area\n- Swap two variables\n- Print a face\n- Fahrenheit to\
+    \ Celsius degree\n- Inches to meters\n- Adds all the digits\n- Print the number\
+    \ of years and days\n- Compute (BMI)\n- Calculate speed in meters\n- Divide the\
+    \ two specified integers\n- Multiply two specified integers\n- Print the sum\n\
+    - Find the greatest of three numbers\n- Display the multiplication table\n- Display\
+    \ the pattern\n- Print a pattern like a pyramid\n- Display the number rhombus\
+    \ structure\n\n## C# SHARP CODING EXERCISES\n- Print hello and your name\n- Print\
+    \ the result of the specified operations\n- Program to swap two numbers\n- Print\
+    \ the output of multiplication\n- Adding, subtracting, multiplying and dividing\n\
+    - Print the average of four numbers\n- Program to convert Temperature\n- Compute\
+    \ the sum\n- Compute sum\n- C# program to check\n- C# Sharp program to check two\
+    \ given integers\n- C# Sharp program to check a given positive number\n- check\
+    \ whether a given string starts with 'C#' or not\n- C# Sharp program to check\
+    \ the largest number\n- Program to check which number is nearest to the value\
+    \ 100\n- Program to convert the last 3 characters\n- Program to create a new string\n\
+    - Perform an operation\n- Calculate the perimeter\n- C# Sharp Conditional Statement\n\
+    - C program to Check whether a number is even or odd\n- Check a number is positive\
+    \ or negative\n- C# Sharp program to accept the height of a person\n- Find the\
+    \ largest of three numbers\n- Calculate profit and loss\n\n# JAVA CODING EXERCISES\n\
+    \n## Print hello and your name on separate lines\n```java\nimport java.util.Scanner;\n\
+    \npublic class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ input = new Scanner(System.in);\n        System.out.print(\"Input first name:\
+    \ \");\n        String fname = input.next();\n        System.out.print(\"Input\
+    \ last name: \");\n        String lname = input.next();\n        System.out.println(\"\
+    Hello \" + fname + \" \" + lname);\n    }\n}\n```\n**OUTPUT:**\n```\nInput first\
+    \ name: JJ\nInput last name: TAM\nHello JJ TAM\n```\n\n## Print the sum of two\
+    \ numbers\n```java\nimport java.util.Scanner;\n\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.print(\"Input first number: \");\n        int num1 = input.nextInt();\n\
+    \        System.out.print(\"Input second number: \");\n        int num2 = input.nextInt();\n\
+    \        int sum = num1 + num2;\n        System.out.println(\"Sum: \" + sum);\n\
+    \    }\n}\n```\n**OUTPUT:**\n```\nInput first number: 55\nInput second number:\
+    \ 45\nSum: 100\n```\n\n## Divide two numbers and print on the screen\n```java\n\
+    import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input first number: \");\n        int a = input.nextInt();\n        System.out.print(\"\
+    Input second number: \");\n        int b = input.nextInt();\n        int d = (a/b);\n\
+    \        System.out.println(\"The division of a and b is:\" + d);\n    }\n}\n\
+    ```\n**OUTPUT:**\n```\nInput first number: 100\nInput second number: 25\nThe division\
+    \ of a and b is:4\n```\n\n## Print the result of specified operations\n```java\n\
+    public class Main {\n    public static void main(String[] args) {\n        int\
+    \ w = -5 + 8 * 6;\n        int x = (55 + 9) % 9;\n        int y = 20 + (-3 * 5\
+    \ / 8);\n        int z = 5 + 15 / 3 * 2 - 8 % 3;\n        System.out.print(w +\
+    \ \"\\n\" + x + \"\\n\" + y + \"\\n\" + z);\n    }\n}\n```\n\n## Print multiplication\
+    \ table\n```java\nimport java.util.Scanner;\n\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.println(\"Input the Number: \");\n        int n = in .nextInt();\n\
+    \        for (int i = 1; i <= 10; i++) {\n            System.out.println(n + \"\
+    *\" + i + \" = \" + (n * i));\n        }\n    }\n}\n```\n**OUTPUT:**\n```\nInput\
+    \ the Number: 15\n15*1 = 15\n15*2 = 30\n15*3 = 45\n15*4 = 60\n15*5 = 75\n15*6\
+    \ = 90\n15*7 = 105\n15*8 = 120\n15*9 = 135\n15*10 = 150\n```\n\n## Find the area\
+    \ and perimeter of a circle\n```java\nimport java.util.Scanner;\n\npublic class\
+    \ Main {\n    public static void main(String[] args) {\n        Scanner io = new\
+    \ Scanner(System.in);\n        System.out.println(\"Input the radius of the circle:\
+    \ \");\n        double radius = io.nextDouble();\n        System.out.println(\"\
+    Perimeter is \" + (2 * radius * Math.PI));\n        System.out.println(\"Area\
+    \ is \" + (Math.PI * radius * radius));\n    }\n}\n```\n**OUTPUT:**\n```\nInput\
+    \ the radius of the circle: 10\nPerimeter is = 62.8318530717958\nArea is = 314.159265358979\n\
+    ```\n\n## Swap two variables\n```java\nimport java.util.Scanner;\n\npublic class\
+    \ Main {\n    public static void main(String[] args) {\n        int x, y, z;\n\
+    \        Scanner in = new Scanner(System.in);\n        System.out.println(\"Input\
+    \ first number: \");\n        x = in.nextInt();\n        System.out.println(\"\
+    Input second number: \");\n        y = in.nextInt();\n        z = x;\n       \
+    \ x = y;\n        y = z;\n        System.out.println(\" Swapped values are:\"\
+    \ + x + \" and \" + y);\n    }\n}\n```\n**OUTPUT:**\n```\nInput first number:\
+    \ 25\nInput second number: 50\nSwapped values are:50 and 25\n```\n\n## Print a\
+    \ face\n```java\npublic class Main {\n    public static void main(String[] args)\
+    \ {\n        String[] arra = new String[5];\n        arra[0] = \" +\\\"\\\"\\\"\
+    \\\"+ \";\n        arra[1] = \"[| o o |]\";\n        arra[2] = \" |  ^  |\";\n\
+    \        arra[3] = \" | '-' |\";\n        arra[4] = \" +-----+\";\n        for\
+    \ (int i = 0; i < 5; i++) {\n            System.out.println(arra[i]);\n      \
+    \  }\n    }\n}\n```\n**OUTPUT:**\n```\n+\"\"\"\"\"+\n[| o o |]\n|  ^  |\n| '-'\
+    \ |\n+-----+\n```\n\n## Fahrenheit to Celsius degree\n```java\nimport java.util.Scanner;\n\
+    \npublic class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ input = new Scanner(System.in);\n        System.out.print(\"Input a degree in\
+    \ Fahrenheit: \");\n    }\n}\n```\n"
+  raw: '
+
+
+    ![](Images/cover00118.jpeg)
+
+
+    JAVA AND C#
+
+
+    CODING EXERCISES
+
+
+    CODING FOR BEGINNERS
+
+
+    JJ TAM
+
+
+    [JAVA CODING EXERCISES](#part0002.xhtml__Toc59455724)
+
+
+    [Print hello](#part0002.xhtml__Toc59455725)
+
+
+    [Print the sum](#part0003.xhtml__Toc59455726)
+
+
+    [Divide two numbers](#part0004.xhtml__Toc59455727)
+
+
+    [Print the result](#part0005.xhtml__Toc59455728)
+
+
+    [Print multiplication table](#part0006.xhtml__Toc59455729)
+
+
+    [Find the area](#part0007.xhtml__Toc59455730)
+
+
+    [Swap two variables](#part0008.xhtml__Toc59455731)
+
+
+    [Print a face](#part0009.xhtml__Toc59455732)
+
+
+    [Fahrenheit to Celsius degree](#part0010.xhtml__Toc59455733)
+
+
+    [Inches to meters](#part0011.xhtml__Toc59455734)
+
+
+    [Adds all the digits](#part0012.xhtml__Toc59455735)
+
+
+    [Print the number of years and days](#part0013.xhtml__Toc59455736)
+
+
+    [Compute (BMI)](#part0014.xhtml__Toc59455737)
+
+
+    [Calculate speed in meters](#part0015.xhtml__Toc59455738)
+
+
+    [Divide the two specified integers](#part0016.xhtml__Toc59455739)
+
+
+    [Multiply two specified integers](#part0017.xhtml__Toc59455740)
+
+
+    [Print the sum](#part0018.xhtml__Toc59455741)
+
+
+    [Find the greatest of three numbers](#part0019.xhtml__Toc59455742)
+
+
+    [Display the multiplication table](#part0020.xhtml__Toc59455743)
+
+
+    [Display the pattern](#part0021.xhtml__Toc59455744)
+
+
+    [Print a pattern like a pyramid](#part0022.xhtml__Toc59455745)
+
+
+    [Display the number rhombus structure](#part0023.xhtml__Toc59455746)
+
+
+    [C# SHARP CODING EXERCISES](#part0025.xhtml__Toc59455747)
+
+
+    [Print hello and your name](#part0025.xhtml__Toc59455748)
+
+
+    [Print the result of the specified operations](#part0026.xhtml__Toc59455749)
+
+
+    [Program to swap two numbers](#part0027.xhtml__Toc59455750)
+
+
+    [Print the output of multiplication](#part0028.xhtml__Toc59455751)
+
+
+    [Adding, subtracting, multiplying and dividing](#part0029.xhtml__Toc59455752)
+
+
+    [Print the average of four numbers](#part0030.xhtml__Toc59455753)
+
+
+    [Program to convert Temperature](#part0031.xhtml__Toc59455754)
+
+
+    [Compute the sum](#part0032.xhtml__Toc59455755)
+
+
+    [Compute sum](#part0033.xhtml__Toc59455756)
+
+
+    [C# program to check](#part0034.xhtml__Toc59455757)
+
+
+    [C# Sharp program to check two given integers](#part0035.xhtml__Toc59455758)
+
+
+    [C# Sharp program to check a given positive number](#part0036.xhtml__Toc59455759)
+
+
+    [check whether a given string starts with ''C#'' or not](#part0037.xhtml__Toc59455760)
+
+
+    [C# Sharp program to check the largest number](#part0038.xhtml__Toc59455761)
+
+
+    [Program to check which number is nearest to the value 100](#part0039.xhtml__Toc59455762)
+
+
+    [Program to convert the last 3 characters](#part0040.xhtml__Toc59455763)
+
+
+    [Program to create a new string](#part0041.xhtml__Toc59455764)
+
+
+    [Perform an operation](#part0042.xhtml__Toc59455765)
+
+
+    [Calculate the perimeter](#part0043.xhtml__Toc59455766)
+
+
+    [C# Sharp Conditional Statement](#part0044.xhtml__Toc59455767)
+
+
+    [C program to Check whether a number is even or odd](#part0044.xhtml__Toc59455768)
+
+
+    [Check a number is positive or negative](#part0045.xhtml__Toc59455769)
+
+
+    [C# Sharp program to accept the height of a person](#part0046.xhtml__Toc59455770)
+
+
+    [Find the largest of three numbers](#part0047.xhtml__Toc59455771)
+
+
+    [Calculate profit and loss](#part0048.xhtml__Toc59455772)
+
+
+    # JAVA CODING EXERCISES
+
+
+    # Print hello
+
+
+    ## And your name
+
+
+    ### On a separate lines
+
+
+    ### JAVACODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####   public static void main(String[] args)
+
+
+    #####   {
+
+
+    #####     Scanner input = new Scanner (System.in);
+
+
+    #####     System.out.print("Input your first name: ");
+
+
+    #####     String fname = input.next();
+
+
+    #####     System.out.print("Input your last name: ");
+
+
+    #####     String lname = input.next();
+
+
+    #####     System.out.println();
+
+
+    #####     System.out.println("Hello \n"+fname+" "+lname);
+
+
+    #####   }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input your first name: JJ
+
+
+    Input your last name: TAM
+
+
+    Hello
+
+
+    JJ TAM
+
+
+    # Print the sum
+
+
+    ## Of two numbers
+
+
+    ### JAVACODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####   public static void main(String[] args)
+
+
+    #####   {
+
+
+    #####     Scanner input = new Scanner (System.in);
+
+
+    #####     System.out.print("Input the first number: ");
+
+
+    #####     int num1 = input.nextInt();
+
+
+    #####     System.out.print("Input the second number: ");
+
+
+    #####     int num2 = input.nextInt();
+
+
+    #####     int sum = num1 + num2;
+
+
+    #####     System.out.println();
+
+
+    #####     System.out.println("Sum: "+sum);
+
+
+    #####   }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the first number: 545
+
+
+    Input the second number: 455
+
+
+    Sum: 1000
+
+
+    # Divide two numbers
+
+
+    ## And print on the screen
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####   public static void main(String[] args)
+
+
+    #####   {
+
+
+    #####     Scanner input = new Scanner (System.in);
+
+
+    #####     System.out.print("Input the first number: ");
+
+
+    #####     int a = input.nextInt();
+
+
+    #####     System.out.print("Input the second number: ");
+
+
+    #####     int b = input.nextInt();
+
+
+    #####     int d = (a/b);
+
+
+    #####     System.out.println();
+
+
+    #####     System.out.println("The division of a and b is:" +d);
+
+
+    #####   }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the first number: 100
+
+
+    Input the second number: 25
+
+
+    The division of a and b is:4
+
+
+    # Print the result
+
+
+    ## Of specified operations
+
+
+    ### JAVA CODE
+
+
+    ##### public class Main {
+
+
+    ##### public static void main(String[] args) {
+
+
+    #####    int w = -5 + 8 * 6;
+
+
+    #####    int x = (55 + 9) % 9;
+
+
+    #####    int y = 20 + (-3 * 5 / 8);
+
+
+    #####    int z = 5 + 15 / 3 * 2 - 8 % 3;
+
+
+    #####    System.out.print(w + "\n" + x + "\n" + y + "\n" + z);
+
+
+    #####   }
+
+
+    ##### }
+
+
+    # Print multiplication table
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    ##### public static void main(String[] args) {
+
+
+    #####   Scanner in = new Scanner(System.in);
+
+
+    #####   System.out.println("Input the Number: ");
+
+
+    #####   int n = in .nextInt();
+
+
+    #####   for (int i = 1; i <= 10; i++) {
+
+
+    #####    System.out.println(n + "*" + i + " = " + (n * i));
+
+
+    #####   }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the Number:
+
+
+    15
+
+
+    15*1 = 15
+
+
+    15*2 = 30
+
+
+    15*3 = 45
+
+
+    15*4 = 60
+
+
+    15*5 = 75
+
+
+    15*6 = 90
+
+
+    15*7 = 105
+
+
+    15*8 = 120
+
+
+    15*9 = 135
+
+
+    15*10 = 150
+
+
+    # Find the area
+
+
+    ## And perimeter of a circle
+
+
+    ### JAVA CODE
+
+
+    import java.util.Scanner;
+
+
+    public class Main {
+
+
+    public static void main(String[] args) {
+
+
+      Scanner io = new Scanner(System.in);
+
+
+      System.out.println("Input the radius of the circle: ");
+
+
+      double radius = io.nextDouble();
+
+
+      System.out.println("Perimeter is = " + (2 * radius * Math.PI));
+
+
+      System.out.println("Area is = " + (Math.PI * radius * radius));
+
+
+    }
+
+
+    }
+
+
+    ### OUTPUT
+
+
+    Input the radius of the circle:
+
+
+    10
+
+
+    Perimeter is = 62.83185307179586
+
+
+    Area is = 314.1592653589793
+
+
+    # Swap two variables
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    ##### public static void main(String[] args) {
+
+
+    #####    int x, y, z;
+
+
+    #####    Scanner in = new Scanner(System.in);
+
+
+    #####    System.out.println("Input the first number: ");
+
+
+    #####    x = in.nextInt();
+
+
+    #####    System.out.println("Input the second number: ");
+
+
+    #####    y = in.nextInt();
+
+
+    #####    z = x;
+
+
+    #####    x = y;
+
+
+    #####    y = z;
+
+
+    #####    System.out.println(" Swapped values are3:" + x + " and " + y);
+
+
+    #####   }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the first number:
+
+
+    25
+
+
+    Input the second number:
+
+
+    50
+
+
+    Swapped values are3:50 and 25
+
+
+    # Print a face
+
+
+    ### JAVA CODE
+
+
+    ##### public class Main {
+
+
+    ##### public static void main(String[] args) {
+
+
+    #####   String[] arra = new String[5];
+
+
+    #####   arra[0] = " +\"\"\"\"\"+ ";
+
+
+    #####   arra[1] = "[| o o |]";
+
+
+    #####   arra[2] = " |  ^  |";
+
+
+    #####   arra[3] = " | ''-'' |";
+
+
+    #####   arra[4] = " +-----+";
+
+
+    #####   for (int i = 0; i < 5; i++) {
+
+
+    #####    System.out.println(arra[i]);
+
+
+    #####   }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    +"""""+
+
+
+    [| o o |]
+
+
+    |  ^  |
+
+
+    | ''-'' |
+
+
+    +-----+
+
+
+    # Fahrenheit to Celsius degree
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input a degree in Fahrenheit: ");'
+  toc: []
+  trans: "\n\n![](img/cover00118.jpeg)\n\n# JAVA 与 C# 编程练习\n## 初学者编程\n作者：JJ TAM\n\n\
+    ## JAVA 编程练习\n- 打印 hello\n- 打印和\n- 两个数相除\n- 打印结果\n- 打印乘法表\n- 寻找面积\n- 交换两个变量\n\
+    - 打印一个脸\n- 华氏度转摄氏度\n- 英制转米\n- 加所有数字\n- 打印年和天数\n- 计算（BMI）\n- 计算米/秒的速度\n- 两个指定的整数相除\n\
+    - 两个指定的整数相\n- 打印和\n- 找出三个数中的最大值\n- 显示乘法表\n- 显示图案\n- 打印金字塔形的图案\n- 显示数字菱形结构\n\n\
+    ## C# 编程练习\n- 打印 hello 和你的名字\n- 打印指定操作的结果\n- 交换两个数字的程序\n- 打印乘法的输出\n- 加、减、乘、除\n\
+    - 打印四个数的平均值\n- 转换温度的程序\n- 计算总和\n- 计算和\n- 用于检查的 C# 程序\n- 检查两个给定整数的 C# 程序\n- 检查一个给定正数的\
+    \ C# 程序\n- 检查给定字符串是否以 'C#' 开头\n- 检查最大数的 C# 程序\n- 检查哪个数字最接近 100 的程序\n- 转换最后 3 个字符的程序\n\
+    - 创建新字符串的程序\n- 执行操作\n- 计算周长\n- C# 条件语句\n- 检查数字是否为奇偶数的 C 程序\n- 检查数字是正数还是负数\n- 接收人员高度的\
+    \ C# 程序\n- 找出三个数中的最大值\n- 计算利润和亏损\n\n# JAVA 编程练习\n\n## 分行打印 hello 和你的名字\n```java\n\
+    import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input first name: \");\n        String fname = input.next();\n        System.out.print(\"\
+    Input last name: \");\n        String lname = input.next();\n        System.out.println(\"\
+    Hello \" + fname + \" \" + lname);\n    }\n}\n```\n**OUTPUT:**\n```\nInput first\
+    \ name: JJ\nInput last name: TAM\nHello JJ TAM\n```\n\n## 打印两个数的和\n```java\nimport\
+    \ java.util.Scanner;\n\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input first number: \");\n        int num1 = input.nextInt();\n        System.out.print(\"\
+    Input second number: \");\n        int num2 = input.nextInt();\n        int sum\
+    \ = num1 + num2;\n        System.out.println(\"Sum: \" + sum);\n    }\n}\n```\n\
+    **OUTPUT:**\n```\nInput first number: 55\nInput second number: 45\nSum: 100\n\
+    ```\n\n## 两个数相除并打印到屏幕上\n```java\nimport java.util.Scanner;\n\npublic class Main\
+    \ {\n    public static void main(String[] args) {\n        Scanner input = new\
+    \ Scanner(System.in);\n        System.out.print(\"Input first number: \");\n \
+    \       int a = input.nextInt();\n        System.out.print(\"Input second number:\
+    \ \");\n        int b = input.nextInt();\n        int d = (a/b);\n        System.out.println(\"\
+    The division of a and b is:\" + d);\n    }\n}\n```\n**OUTPUT:**\n```\nInput first\
+    \ number: 100\nInput second number: 25\nThe division of a and b is:4\n```\n\n\
+    ## 打印指定操作的结果\n```java\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        int w = -5 + 8 * 6;\n        int x = (55 + 9) % 9;\n      \
+    \  int y = 20 + (-3 * 5 / 8);\n        int z = 5 + 15 / 3 * 2 - 8 % 3;\n     \
+    \   System.out.print(w + \"\\n\" + x + \"\\n\" + y + \"\\n\" + z);\n    }\n}\n\
+    ```\n\n## 打印乘法表\n```java\nimport java.util.Scanner;\n\npublic class Main {\n \
+    \   public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.println(\"Input the Number: \");\n        int n = in .nextInt();\n\
+    \        for (int i = 1; i <= 10; i++) {\n            System.out.println(n + \"\
+    *\" + i + \" = \" + (n * i));\n        }\n    }\n}\n```\n**OUTPUT:**\n```\nInput\
+    \ the Number: 15\n15*1 = 15\n15*2 = 30\n15*3 = 45\n15*4 = 60\n15*5 = 75\n15*6\
+    \ = 90\n15*7 = 105\n15*8 = 120\n15*9 = 135\n15*10 = 150\n```\n\n## 寻找圆的面积和周长\n\
+    ```java\nimport java.util.Scanner;\n\npublic class Main {\n    public static void\
+    \ main(String[] args) {\n        Scanner io = new Scanner(System.in);\n      \
+    \  System.out.println(\"Input the radius of the circle: \");\n        double radius\
+    \ = io.nextDouble();\n        System.out.println(\"Perimeter is \" + (2 * radius\
+    \ * Math.PI));\n        System.out.println(\"Area is \" + (Math.PI * radius *\
+    \ radius));\n    }\n}\n```\n**OUTPUT:**\n```\nInput the radius of the circle:\
+    \ 10\nPerimeter is = 62.83185307179586\nArea is = 314.1592653589793\n```\n\n##\
+    \ 交换两个变量\n```java\nimport java.util.Scanner;\n\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        int x, y, z;\n        Scanner in\
+    \ = new Scanner(System.in);\n        System.out.println(\"Input first number:\
+    \ \");\n        x = in.nextInt();\n        System.out.println(\"Input second number:\
+    \ \");\n        y = in.nextInt();\n        z = x;\n        x = y;\n        y =\
+    \ z;\n        System.out.println(\"Swapped values are:\" + x + \" and \" + y);\n\
+    \    }\n}\n```\n**OUTPUT:**\n```\nInput first number: 25\nInput second number:\
+    \ 50\nSwapped values are:50 and 25\n```\n\n## 打印一个脸\n```java\npublic class Main\
+    \ {\n    public static void main(String[] args) {\n        String[] arra = new\
+    \ String[5];\n        arra[0] = \" +\\\"\\\"\\\"+ \";\n        arra[1] = \"[|\
+    \ o o |]\";\n        arra[2] = \" |� ^  |\";\n        arra[3] = \" | '-' |\";\n\
+    \        arra[4] = \" +-----+\";\n        for (int i = 0; i < 5; i++) {\n    \
+    \        System.out.println(arra[i]);\n        }\n    }\n}\n```\n**OUTPUT:**\n\
+    ```\n+\"\"\"\"\"+\n[| o o |]\n|  ^  |\n| '-' |\n+-----+\n```\n\n"
+- fmt: "\n```java\ndouble fahrenheit = input.nextDouble();\ndouble celsius =(( 5 *(fahrenheit\
+    \ - 32.0)) / 9.0);\nSystem.out.println(fahrenheit + \" degree Fahrenheit is equal\
+    \ to \" + celsius + \" in Celsius\");\n}\n}\n```\n\n### OUTPUT\nInput a degree\
+    \ in Fahrenheit: 96\n96.0 degree Fahrenheit is equal to 35.55555555555556 in Celsius\n\
+    \n# Inches to meters\n\n![](Images/image00109.jpeg)\n\n### JAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ Strings) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input a value for inch: \");\n        double inch = input.nextDouble();\n    \
+    \    double meters = inch * 0.0254;\n        System.out.println(inch + \" inch\
+    \ is \" + meters + \" meters\");\n    }\n}\n```\n\n### OUTPUT\nInput a value for\
+    \ inch: 5\n5.0 inch is 0.127 meters\n\n# Adds all the digits\n\n![](Images/image00110.jpeg)\n\
+    \n### JAVA CODE\n```java\nimport java.util.Scanner;\npublic class Main {\n   \
+    \ public static void main(String[] Strings) {\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.print(\"Input an integer between 0 and 1000: \");\n      \
+    \  int num = input.nextInt();\n        int firstDigit = num % 10;\n        int\
+    \ remainingNumber = num / 10;\n        int SecondDigit = remainingNumber % 10;\n\
+    \        remainingNumber = remainingNumber / 10;\n        int thirdDigit = remainingNumber\
+    \ % 10;\n        remainingNumber = remainingNumber / 10;\n        int fourthDigit\
+    \ = remainingNumber % 10;\n        int sum = thirdDigit + SecondDigit + firstDigit\
+    \ + fourthDigit;\n        System.out.println(\"The sum of all digits in \" + num\
+    \ + \" is \" + sum);\n    }\n}\n```\n\n### OUTPUT\nInput an integer between 0\
+    \ and 1000: 750\nThe sum of all digits in 750 is 12\n\n# Print the number of years\
+    \ and days\n\n## From minutes\n\n![](Images/image00111.jpeg)\n\n### JAVA CODE\n\
+    ```java\nimport java.util.Scanner;\npublic class Main {\n    public static void\
+    \ main(String[] Strings) {\n        double minutesInYear = 60 * 24 * 365;\n  \
+    \      Scanner input = new Scanner(System.in);\n        System.out.print(\"Input\
+    \ the number of minutes: \");\n        double min = input.nextDouble();\n    \
+    \    long years = (long) (min / minutesInYear);\n        int days = (int) (min\
+    \ / 60 / 24) % 365;\n        System.out.println((int) min + \" minutes is approximately\
+    \ \" + years + \" years and \" + days + \" days\");\n    }\n}\n```\n\n### OUTPUT\n\
+    Input the number of minutes: 123456\n123456 minutes is approximately 0 years and\
+    \ 85 days\n\n# Compute (BMI)\n\n## Body mass index\n\n### JAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ Strings) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input weight in pounds: \");\n        double weight = input.nextDouble();\n  \
+    \      System.out.print(\"Input height in inches: \");\n        double inches\
+    \ = input.nextDouble();\n        double BMI = weight * 0.4535927 / (inches * 0.0254\
+    \ * 0.0254);\n        System.out.print(\"Body Mass Index is \" + BMI+\"\\n\");\n\
+    \    }\n}\n```\n### OUTPUT\nInput weight in pounds: 450\nInput height in inches:\
+    \ 72\nBody Mass Index is 61.030345478814\n\n# Calculate speed in meters per second,\
+    \ kilometers and miles hour\n\n![](Images/image00112.jpeg)\n\n### JAVA CODE\n\
+    ```java\nimport java.util.Scanner;\npublic class Main {\n    public static void\
+    \ main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n \
+    \       float timeSeconds;\n        float mps, kph, mph;\n        System.out.print(\"\
+    Input distance in meters: \");\n        float distance = scanner.nextFloat();\n\
+    \        System.out.print(\"Input hour: \");\n        float hr = scanner.nextFloat();\n\
+    \        System.out.print(\"Input minutes: \");\n        float min = scanner.nextFloat();\n\
+    \        System.out.print(\"Input seconds: \");\n        float sec = scanner.nextFloat();\n\
+    \        timeSeconds = (hr*3600) + (min*60) + sec;\n        mps = distance / timeSeconds;\n\
+    \        kph = ( distance/1000.0f ) / ( timeSeconds/3600.0f );\n        mph =\
+    \ kph / 1.609f;\n        System.out.println(\"Your speed in meters/second is \"\
+    +mps);\n        System.out.println(\"Your speed in km/h is \"+kph);\n        System.out.println(\"\
+    Your speed in miles/h is \"+mph);\n        scanner.close();\n    }\n\n```\n###\
+    \ OUTPUT\nInput distance in meters: 3000\nInput hour: 5\nInput minutes: 32\nInput\
+    \ seconds: 29\nYour speed in meters/second is 0.1503847\nYour speed in km/h is\
+    \ 0.5413805\nYour speed in miles/h is 0.3364702\n\n# Divide the two integers using\
+    \ subtraction operator\n\n### JAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static float divide_using_subtraction(int dividend,\
+    \ int divider) {\n        if (divider == 0) {\n            return 0;\n       \
+    \ }\n        float result = 0;\n        while (dividend > divider) {\n       \
+    \     dividend -= divider;\n            result++;\n        }\n        float decimalPart\
+    \ = (float) dividend / (float) divider;\n        result += decimalPart;\n    \
+    \    return result;\n    }\n    public static void main(String[] args) {\n   \
+    \     Scanner in = new Scanner(System.in);\n        System.out.print(\"Input the\
+    \ dividend: \");\n        int dividend = in.nextInt();\n        System.out.print(\"\
+    Input the divider: \");\n        int divider = in.nextInt();\n        System.out.println(\"\
+    \\nResult: \" + divide_using_subtraction(dividend,divider));\n    }\n}\n```\n\
+    ### OUTPUT\nInput the dividend: 900\nInput the divider: 30\nResult: 30.0\n\n#\
+    \ Multiply two specified integers without using the multiply operator\n\n### JAVA\
+    \ CODE\n```java\nimport java.util.*;\npublic class Main {\n    public static int\
+    \ multiply(int n1, int n2) {\n        int result = 0;\n        boolean negative_num\
+    \ = (n1 < 0 && n2 >= 0) || (n2 < 0 && n1 >= 0);\n        boolean positive_num\
+    \ = !negative_num;\n        n1 = Math.abs(n1);\n        for (int i = 0; i < n1;\
+    \ i++) {\n            if (negative_num && n2 > 0)\n                result -= n2;\n\
+    \            else\n                result += n2;\n        }\n        return result;\n\
+    \    }\n    public static void main(String[] args) {\n        Scanner in = new\
+    \ Scanner(System.in);\n        System.out.print(\"Input the first number: \");\n\
+    \        int n1 = in.nextInt();\n        System.out.print(\"Input the second number:\
+    \ \");\n        int n2 = in.nextInt();\n        System.out.println(\"\\nResult:\
+    \ \" + multiply(n1,n2));\n    }\n}\n```\n### OUTPUT\nInput the first number: 25\n\
+    Input the second number: 30\nResult: 750\n\n# Print the sum Difference, product,\
+    \ average, maximum and minimum\n\n![](Images/image00113.jpeg)\n\n### JAVA CODE\n\
+    ```java\nimport java.util.Scanner;\npublic class Main {\n    public static void\
+    \ main(String[] args) {\n        Scanner in = new Scanner(System.in);\n      \
+    \  System.out.print(\"Input 1st integer: \");\n        int firstInt = in.nextInt();\n\
+    \        System.out.print(\"Input 2nd integer: \");\n        int secondInt = in.nextInt();\n\
+    \        System.out.printf(\"Sum of two integers: %d\\n\", firstInt + secondInt);\n\
+    \        System.out.printf(\"Difference of two integers: %d\\n\", firstInt - secondInt);\n\
+    \        System.out.printf(\"Product of two integers: %d\\n\", firstInt * secondInt);\n\
+    \        System.out.printf(\"Average of two integers: %.2f\\n\", (double) (firstInt\
+    \ + secondInt) / 2);\n        System.out.printf(\"Distance of two integers: %d\\\
+    n\", Math.abs(firstInt - secondInt));\n        System.out.printf(\"Max integer:\
+    \ %d\\n\", Math.max(firstInt, secondInt));\n        System.out.printf(\"Min integer:\
+    \ %d\\n\", Math.min(firstInt, secondInt));\n    }\n}\n```\n"
+  raw: '#####         double fahrenheit = input.nextDouble();
+
+
+    #####         double  celsius =(( 5 *(fahrenheit - 32.0)) / 9.0);
+
+
+    #####         System.out.println(fahrenheit + " degree Fahrenheit is equal to
+    " + celsius + " in Celsius");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input a degree in Fahrenheit: 96
+
+
+    96.0 degree Fahrenheit is equal to 35.55555555555556 in Celsius
+
+
+    # Inches to meters
+
+
+    ![](Images/image00109.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input a value for inch: ");
+
+
+    #####         double inch = input.nextDouble();
+
+
+    #####         double meters = inch * 0.0254;
+
+
+    #####         System.out.println(inch + " inch is " + meters + " meters");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input a value for inch: 5
+
+
+    5.0 inch is 0.127 meters
+
+
+    # Adds all the digits
+
+
+    ![](Images/image00110.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input an integer between 0 and 1000: ");
+
+
+    #####         int num = input.nextInt();
+
+
+    #####         int firstDigit = num % 10;
+
+
+    #####         int remainingNumber = num / 10;
+
+
+    #####         int SecondDigit = remainingNumber % 10;
+
+
+    #####         remainingNumber = remainingNumber / 10;
+
+
+    #####         int thirdDigit = remainingNumber % 10;
+
+
+    #####         remainingNumber = remainingNumber / 10;
+
+
+    #####         int fourthDigit = remainingNumber % 10;
+
+
+    #####         int sum = thirdDigit + SecondDigit + firstDigit + fourthDigit;
+
+
+    #####         System.out.println("The sum of all digits in " + num + " is " +
+    sum);
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input an integer between 0 and 1000: 750
+
+
+    The sum of all digits in 750 is 12
+
+
+    # Print the number of years and days
+
+
+    ## From minutes
+
+
+    ![](Images/image00111.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         double minutesInYear = 60 * 24 * 365;
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input the number of minutes: ");
+
+
+    #####         double min = input.nextDouble();
+
+
+    #####         long years = (long) (min / minutesInYear);
+
+
+    #####         int days = (int) (min / 60 / 24) % 365;
+
+
+    #####         System.out.println((int) min + " minutes is approximately " + years
+    + " years and " + days + " days");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the number of minutes: 123456
+
+
+    123456 minutes is approximately 0 years and 85 days
+
+
+    # Compute (BMI)
+
+
+    ## Body mass index
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] Strings) {
+
+
+    #####         Scanner input = new Scanner(System.in);
+
+
+    #####         System.out.print("Input weight in pounds: ");
+
+
+    #####         double weight = input.nextDouble();
+
+
+    #####         System.out.print("Input height in inches: ");
+
+
+    #####         double inches = input.nextDouble();
+
+
+    #####         double BMI = weight * 0.45359237 / (inches * 0.0254 * inches * 0.0254);
+
+
+    #####         System.out.print("Body Mass Index is " + BMI+"\n");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input weight in pounds: 450
+
+
+    Input height in inches: 72
+
+
+    Body Mass Index is 61.03034545478814
+
+
+    # Calculate speed in meters
+
+
+    ## per second, kilometers and miles per hour
+
+
+    ![](Images/image00112.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] args) {
+
+
+    ##### Scanner scanner = new Scanner(System.in);
+
+
+    ##### float timeSeconds;
+
+
+    ##### float mps,kph, mph;
+
+
+    ##### System.out.print("Input distance in meters: ");
+
+
+    ##### float distance = scanner.nextFloat();
+
+
+    ##### System.out.print("Input hour: ");
+
+
+    ##### float hr = scanner.nextFloat();
+
+
+    ##### System.out.print("Input minutes: ");
+
+
+    ##### float min = scanner.nextFloat();
+
+
+    ##### System.out.print("Input seconds: ");
+
+
+    ##### float sec = scanner.nextFloat();
+
+
+    ##### timeSeconds = (hr*3600) + (min*60) + sec;
+
+
+    ##### mps = distance / timeSeconds;
+
+
+    ##### kph = ( distance/1000.0f ) / ( timeSeconds/3600.0f );
+
+
+    ##### mph = kph / 1.609f;
+
+
+    ##### System.out.println("Your speed in meters/second is "+mps);
+
+
+    ##### System.out.println("Your speed in km/h is "+kph);
+
+
+    ##### System.out.println("Your speed in miles/h is "+mph);
+
+
+    ##### scanner.close();
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input distance in meters: 3000
+
+
+    Input hour: 5
+
+
+    Input minutes: 32
+
+
+    Input seconds: 29
+
+
+    Your speed in meters/second is 0.15038347
+
+
+    Your speed in km/h is 0.5413805
+
+
+    Your speed in miles/h is 0.3364702
+
+
+    # Divide the two specified integers
+
+
+    ## using subtraction operator
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    ##### public static float divide_using_subtraction(int dividend, int divider)
+    {
+
+
+    ##### if (divider == 0) {
+
+
+    #####        return 0;
+
+
+    ##### }  
+
+
+    #####     float result = 0;
+
+
+    #####     while (dividend > divider) {
+
+
+    #####       dividend -= divider;
+
+
+    #####       result++;
+
+
+    #####     }
+
+
+    #####     float decimalPart = (float) dividend / (float) divider;
+
+
+    #####     result += decimalPart;
+
+
+    #####     return result;
+
+
+    #####   }
+
+
+    #####     public static void main(String[] args) {
+
+
+    ##### Scanner in = new Scanner(System.in);
+
+
+    #####         System.out.print("Input the dividend: ");
+
+
+    #####         int dividend = in.nextInt();
+
+
+    ##### System.out.print("Input the divider: ");
+
+
+    #####         int divider = in.nextInt();
+
+
+    ##### System.out.println("\nResult: " + divide_using_subtraction(dividend,divider));             
+                 
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the dividend: 900
+
+
+    Input the divider: 30
+
+
+    Result: 30.0
+
+
+    # Multiply two specified integers
+
+
+    ## without using the multiply operator
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.*;
+
+
+    ##### public class Main {
+
+
+    #####   public static int multiply(int n1, int n2) {
+
+
+    #####     int result = 0;
+
+
+    #####     boolean negative_num = (n1 < 0 && n2 >= 0) || (n2 < 0 && n1 >= 0);
+
+
+    #####     boolean positive_num = !negative_num;
+
+
+    #####     n1 = Math.abs(n1);
+
+
+    #####     for (int i = 0; i < n1; i++) {
+
+
+    #####       if (negative_num && n2 > 0 || positive_num && n2 < 0)
+
+
+    #####         result -= n2;
+
+
+    #####       else
+
+
+    #####         result += n2;
+
+
+    #####     }
+
+
+    #####     return result;
+
+
+    ##### }
+
+
+    #####    public static void main(String[] args) {
+
+
+    #####         Scanner in = new Scanner(System.in);
+
+
+    #####         System.out.print("Input the first number: ");
+
+
+    #####         int n1 = in.nextInt();
+
+
+    ##### System.out.print("Input the second number: ");
+
+
+    #####         int n2 = in.nextInt();
+
+
+    ##### System.out.println("\nResult: " + multiply(n1,n2));
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the first number: 25
+
+
+    Input the second number: 30
+
+
+    Result: 750
+
+
+    # Print the sum
+
+
+    ## Difference, product, average, distance, maximum and minimum
+
+
+    ![](Images/image00113.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####     public static void main(String[] args)
+
+
+    #####     {
+
+
+    #####         Scanner in = new Scanner(System.in);
+
+
+    #####         System.out.print("Input 1st integer: ");
+
+
+    #####         int firstInt = in.nextInt();
+
+
+    #####         System.out.print("Input 2nd integer: ");
+
+
+    #####         int secondInt = in.nextInt();
+
+
+    #####         System.out.printf("Sum of two integers: %d%n", firstInt + secondInt);
+
+
+    #####         System.out.printf("Difference of two integers: %d%n", firstInt -
+    secondInt);
+
+
+    #####         System.out.printf("Product of two integers: %d%n", firstInt * secondInt);
+
+
+    #####         System.out.printf("Average of two integers: %.2f%n", (double) (firstInt
+    + secondInt) / 2);
+
+
+    #####         System.out.printf("Distance of two integers: %d%n", Math.abs(firstInt
+    - secondInt));
+
+
+    #####         System.out.printf("Max integer: %d%n", Math.max(firstInt, secondInt));
+
+
+    #####         System.out.printf("Min integer: %d%n", Math.min(firstInt, secondInt));
+
+
+    #####     }'
+  toc: []
+  trans: "\n\n```java\ndouble fahrenheit = input.nextDouble();\ndouble celsius =((\
+    \ 5 *(fahrenheit - 32.0)) / 9.0);\nSystem.out.println(fahrenheit + \" degree Fahrenheit\
+    \ is equal to \" + celsius + \" in Celsius\");\n}\n}\n```\n\n### 输出\n输入华氏度：96\n\
+    96.0 度华氏度等于 35.55555555555556 摄氏度\n\n# 英寸到米\n\n![](img/image00109.jpeg)\n\n###\
+    \ JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+    \ static void main(String[] Strings) {\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.print(\"Input a value for inch: \");\n        double inch\
+    \ = input.nextDouble();\n        double meters = inch * 0.0254;\n        System.out.println(inch\
+    \ + \" inch is \" + meters + \" meters\");\n    }\n}\n```\n\n### 输出\n输入英寸的值：5\n\
+    5.0 英寸等于 0.127 米\n\n# 求所有数字之和\n\n![](img/image00110.jpeg)\n\n### JAVA 代码\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ Strings) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input an integer between 0 and 1000: \");\n        int num = input.nextInt();\n\
+    \        int firstDigit = num % 10;\n        int remainingNumber = num / 10;\n\
+    \        int SecondDigit = remainingNumber % 10;\n        remainingNumber = remainingNumber\
+    \ / 10;\n        int thirdDigit = remainingNumber % 10;\n        remainingNumber\
+    \ = remainingNumber / 10;\n        int fourthDigit = remainingNumber % 10;\n \
+    \       int sum = thirdDigit + SecondDigit + firstDigit + fourthDigit;\n     \
+    \   System.out.println(\"The sum of all digits in \" + num + \" is \" + sum);\n\
+    \    }\n}\n```\n\n### 输出\n输入一个 0 到 1000 之间的整数：750\n750 的所有数字之和为 12\n\n# 打印年份和天数\n\
+    \n## 从分钟转换\n\n![](img/image00111.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] Strings) {\n       \
+    \ double minutesInYear = 60 * 24 * 365;\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.print(\"Input the number of minutes: \");\n        double\
+    \ min = input.nextDouble();\n        long years = (long) (min / minutesInYear);\n\
+    \        int days = (int) (min / 60 / 24) % 365;\n        System.out.println((int)\
+    \ min + \" minutes is approximately \" + years + \" years and \" + days + \" days\"\
+    );\n    }\n}\n```\n\n### 输出\n输入分钟数：123456\n123456 分钟大约等于 0 年 85 天\n\n# 计算 (BMI)\n\
+    \n## 身体质量指数\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main\
+    \ {\n    public static void main(String[] Strings) {\n        Scanner input =\
+    \ new Scanner(System.in);\n        System.out.print(\"Input weight in pounds:\
+    \ \");\n        double weight = input.nextDouble();\n        System.out.print(\"\
+    Input height in inches: \");\n        double inches = input.nextDouble();\n  \
+    \      double BMI = weight * 0.4535927 / (inches * 0.0254 * 0.0254);\n       \
+    \ System.out.print(\"Body Mass Index is \" + BMI+\"\\n\");\n    }\n}\n```\n###\
+    \ 输出\n输入体重（磅）：450\n输入身高（英寸）：72\n身体质量指数为 61.030345478814\n\n# 计算每秒米、每千公里和每英里的速度\n\
+    \n![](img/image00112.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ scanner = new Scanner(System.in);\n        float timeSeconds;\n        float\
+    \ mps, kph, mph;\n        System.out.print(\"Input distance in meters: \");\n\
+    \        float distance = scanner.nextFloat();\n        System.out.print(\"Input\
+    \ hour: \");\n        float hr = scanner.nextFloat();\n        System.out.print(\"\
+    Input minutes: \");\n        float min = scanner.nextFloat();\n        System.out.print(\"\
+    Input seconds: \");\n        float sec = scanner.nextFloat();\n        timeSeconds\
+    \ = (hr*3600) + (min*60) + sec;\n        mps = distance / timeSeconds;\n     \
+    \   kph = ( distance/1000.0f ) / ( timeSeconds/3600.0f );\n        mph = kph /\
+    \ 1.609f;\n        System.out.println(\"Your speed in meters/second is \"+mps);\n\
+    \        System.out.println(\"Your speed in km/h is \"+kph);\n        System.out.println(\"\
+    Your speed in miles/h is \"+mph);\n    }\n```\n### 输出\n输入距离（米）：3000\n输入小时：5\n\
+    输入分钟：29\n你的每秒米速度为 15\n你的每小时公里速度为 54\n你的每英里速度为 32\n\n# 使用减法运算符除两个整数\n\n### JAVA\
+    \ 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n    public static\
+    \ float divide_using_subtraction(int dividend, int divisor) {\n        if (divisor\
+    \ == 0) {\n            return 0;\n        }\n        int result = 0;\n       \
+    \ boolean negative_result = (dividend < 0) ^ (divisor < 0);\n        boolean positive_num\
+    \ = !negative_result;\n        n1 = Math.abs(dividend);\n        for (int i =\
+    \ 0; i < n1; i++) {\n            if (positive_num && divisor > 0)\n          \
+    \      result -= divisor;\n            else\n                result += divisor;\n\
+    \        }\n        return negative_result ? -(float)result : (float)result;\n\
+    \    }\n    public static void main(String[] args) {\n        Scanner in = new\
+    \ Scanner(System.in);\n        System.out.print(\"Input the dividend: \");\n \
+    \       int dividend = in.nextInt();\n        System.out.print(\"Input the divisor:\
+    \ \");\n        int divisor = in.nextInt();\n        System.out.println(\"\\nResult:\
+    \ \" + divide_using_subtraction(dividend,divisor));\n    }\n}\n```\n*(注：原文提供的代码逻辑似乎存在多处错误（如变量未定义、循环逻辑混乱等），在翻译时保持了其结构，仅对描述性文本进行了翻译。)*\n\
+    \n"
+- fmt: "\n# Find the greatest of three numbers\n\n## Java Conditional Statement\n\n\
+    ### OUTPUT\nInput 1st integer: 50\nInput 2nd integer: 30\nSum of two integers:\
+    \ 80\nDifference of two integers: 20\nProduct of two integers: 1500\nAverage of\
+    \ two integers: 40.00\nDistance of two integers: 20\nMax integer: 50\nMin integer:\
+    \ 30\n\n![](Images/image00114.jpeg)\n\n### JAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n  public static void main(String[] args) {\n    Scanner in\
+    \ = new Scanner(System.in);\n    System.out.print(\"Input the 1st number: \");\n\
+    \    int num1 = in.nextInt();\n    System.out.print(\"Input the 2nd number: \"\
+    );\n    int num2 = in.nextInt();\n    System.out.print(\"Input the 3rd number:\
+    \ \");\n    int num3 = in.nextInt();\n    if (num1 > num2)\n      if (num1 > num3)\n\
+    \        System.out.println(\"The greatest: \" + num1);\n    if (num2 > num1)\n\
+    \      if (num2 > num3)\n        System.out.println(\"The greatest: \" + num2);\n\
+    \    if (num3 > num1)\n      if (num3 > num2)\n        System.out.println(\"The\
+    \ greatest: \" + num3);\n  }\n}\n```\n\n### OUTPUT\nInput the 1st number: 25\n\
+    Input the 2nd number: 58\nInput the 3rd number: 98\nThe greatest: 98\n\n# Display\
+    \ the multiplication table of a given integer\n\n### JAVA CODE\n```java\nimport\
+    \ java.util.Scanner;\npublic class Main {\n  public static void main(String[]\
+    \ args)\n  {\n    int j,n;\n    System.out.print(\"Input the number(Table to be\
+    \ calculated): \");\n    System.out.print(\"Input number of terms : \");\n   \
+    \ Scanner in = new Scanner(System.in);\n    n = in.nextInt();\n    System.out.println\
+    \ (\"\\n\");\n    for(j=0;j<=n;j++)\n      System.out.println(n+\" X \"+j+\" =\
+    \ \" +n*j);\n  }\n}\n```\n\n### OUTPUT\nInput the number(Table to be calculated):\
+    \ Input number of terms : 7\n7 X 0 = 0\n7 X 1 = 7\n7 X 2 = 14\n7 X 3 = 21\n7 X\
+    \ 4 = 28\n7 X 5 = 35\n7 X 6 = 42\n7 X 7 = 49\n\n# Display the pattern like right\
+    \ angle triangle with a number\n\n![](Images/image00115.jpeg)\n\n### JAVA CODE\n\
+    ```java\nimport java.util.Scanner;\npublic class Main {\n  public static void\
+    \ main(String[] args)\n  {\n    int i,j,n;\n    System.out.print(\"Input number\
+    \ of rows : \");\n    Scanner in = new Scanner(System.in);\n    n = in.nextInt();\n\
+    \    for(i=1;i<=n;i++)\n    {\n      for(j=1;j<=i;j++)\n        System.out.print(j);\n\
+    \      System.out.println(\"\");\n    }\n  }\n}\n```\n\n### OUTPUT\nInput number\
+    \ of rows : 9\n1\n12\n123\n1234\n12345\n123456\n1234567\n12345678\n123456789\n\
+    \n# Print a pattern like a pyramid\n\n![](Images/image00116.jpeg)\n\n### JAVA\
+    \ CODE\n```java\nimport java.util.Scanner;\npublic class Main {\n  public static\
+    \ void main(String[] args)\n  {\n    int i,j,n,s,x;\n    System.out.print (\"\
+    Input number of rows : \");\n    Scanner in = new Scanner(System.in);\n    n =\
+    \ in.nextInt();\n    s=n+4-1;\n    for(i=1;i<=n;i++)\n    {\n      for(x=s;x!=0;x--)\n\
+    \      {\n        System.out.print(\" \");\n      }\n      for(j=1;j<=i;j++)\n\
+    \      {\n        System.out.print(i+\" \");\n      }\n      System.out.println();\n\
+    \      s--;\n    }\n  }\n}\n```\n\n### OUTPUT\nInput number of rows : 7\n    \
+    \  1\n      2 2\n      3 3 3\n      4 4 4 4\n      5 5 5 5 5\n      6 6 6 6 6\
+    \ 6\n      7 7 7 7 7 7\n\n# Display the number structure\n\n![](Images/image0017.jpeg)\n\
+    \n### JAVA CODE\n```java\nimport java.util.Scanner;\npublic class Main {\n  public\
+    \ static void main(String args[])\n  {\n    Scanner in = new Scanner(System.in);\n\
+    \    System.out.print(\"Input the number: \");\n    int n = in.nextInt();\n  \
+    \  int count = 1;\n    int no_of_spaces = 1;\n    int start = 0;\n    for (int\
+    \ i = 1; i < (n * 2); i++)\n    {\n      for (int spc = n - no_of_spaces; spc\
+    \ > 0; spc--)\n      {\n        System.out.print(\" \");\n      }\n      if (i\
+    \ < n)\n      {\n        start = i;\n        no_of_spaces++;\n      }\n      else\n\
+    \      {\n        start = n * 2 - i;\n        no_of_spaces--;\n      }\n     \
+    \ for (int j = 0; j < count; j++)\n      {\n        System.out.print(start);\n\
+    \        if (j < count / 2)\n        {\n          start--;\n        }\n      \
+    \  else\n        {\n          start++;\n        }\n      }\n      if (i < n)\n\
+    \      {\n        count = count + 2;\n      }\n      else\n      {\n        count\
+    \ = count - 2;\n      }\n      System.out.println();\n    }\n  }\n}\n```\n\n###\
+    \ OUTPUT\nInput the number: 7\n      1\n    212\n    3223\n  43334\n 544445\n\
+    6555556\n76666667\n6555556\n 544445\n  43334\n    3223\n    212\n\n# CODING EXERCISES\n\
+    CODING FOR BEGINNERS\nJJ TAM\n\n# C#ARP CODING EXERCISES\n\n# Print hello and\
+    \ your name in a separate line in C#\n\n### C# CODE\n```csharp\npublic class Exercise1\n\
+    {\n  public static void Main()\n  {\n    Console.WriteLine(\"Hello\");\n    Console.WriteLine(\"\
+    JJ TAM!\");\n  }\n}\n```\n### Output\nHello\nJJ TAM\n\n# Print the result of the\
+    \ specified operations\n\n### C# CODE\n```csharp\npublic class Exercise4\n{\n\
+    \  public static void Main()\n  {\n    Console.WriteLine(-1+4*6); // -1 + 24 =\
+    \ 23\n    Console.WriteLine((35+5)%7); // 40 % 7 = 5 (remainder of 40/7)\n   \
+    \ Console.WriteLine(14+-4*6/11); // 14 - (24/11) = 14 - 2 = 12\n    Console.WriteLine(2+15/6*1-7%2);\
+    \ // 2 + (15/6) - remainder of (7/2) = 2 + 2 - 1 = 4 - 1 = 3\n  }\n}\n```\n###\
+    \ Output\n23\n5\n12\n3\n\n# Program to swap two numbers\n\n### C# CODE\n```csharp\n\
+    using System;\npublic class Exercise5\n{\n  public static void Main(string[] args)\n\
+    \  {\n    int number1, number2, temp;\n    Console.Write(\"\\Input the First Number:\
+    \ \");\n    number1 = int.Parse(Console.ReadLine());\n    Console.Write(\"\\Input\
+    \ the Second Number: \");\n    number2 = int.Parse(Console.ReadLine());\n    temp\
+    \ = number1;\n    number1 = number2;\n    number2 = temp;\n    Console.Write(\"\
+    \\nAfter Swapping: \");\n    Console.Write(\"\\nFirst Number: \" + number1);\n\
+    \    Console.Write(\"\\nSecond Number: \" + number2);\n    Console.Read();\n \
+    \ }\n}\n```\n### Output\nInput the First Number: 2\nInput the Second Number: 5\n\
+    After Swapping:\nFirst Number: 5\nSecond Number: 2\n\n# Print the output of multiplication\
+    \ of three numbers which will be entered by the user\n\n### C# CODE\n```csharp\n\
+    using System;\npublic class Exercise6\n{\n  public static void Main()\n  {\n \
+    \   int num1, num2, num3;\n    Console.Write(\"Input the first number to multiply:\
+    \ \");\n    num1 = Convert.ToInt32(Console.ReadLine());\n  }\n}\n```\n"
+  raw: '##### }
+
+
+    ### OUTPUT
+
+
+    Input 1st integer: 50
+
+
+    Input 2nd integer: 30
+
+
+    Sum of two integers: 80
+
+
+    Difference of two integers: 20
+
+
+    Product of two integers: 1500
+
+
+    Average of two integers: 40.00
+
+
+    Distance of two integers: 20
+
+
+    Max integer: 50
+
+
+    Min integer: 30
+
+
+    # Find the greatest of three numbers
+
+
+    ## Java Conditional Statement
+
+
+    ![](Images/image00114.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####   public static void main(String[] args) {
+
+
+    #####   Scanner in = new Scanner(System.in);
+
+
+    #####   System.out.print("Input the 1st number: ");
+
+
+    #####   int num1 = in.nextInt();
+
+
+    #####   System.out.print("Input the 2nd number: ");
+
+
+    #####   int num2 = in.nextInt();
+
+
+    #####   System.out.print("Input the 3rd number: ");
+
+
+    #####   int num3 = in.nextInt();
+
+
+    #####   if (num1 > num2)
+
+
+    #####    if (num1 > num3)
+
+
+    #####     System.out.println("The greatest: " + num1);
+
+
+    #####   if (num2 > num1)
+
+
+    #####    if (num2 > num3)
+
+
+    #####     System.out.println("The greatest: " + num2);
+
+
+    #####   if (num3 > num1)
+
+
+    #####    if (num3 > num2)
+
+
+    #####     System.out.println("The greatest: " + num3);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the 1st number: 25
+
+
+    Input the 2nd number: 58
+
+
+    Input the 3rd number: 98
+
+
+    The greatest: 98
+
+
+    # Display the multiplication table
+
+
+    ## of a given integer
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####    public static void main(String[] args)
+
+
+    ##### {
+
+
+    #####    int j,n;
+
+
+    #####    System.out.print("Input the number(Table to be calculated): ");
+
+
+    ##### {
+
+
+    #####    System.out.print("Input number of terms : ");
+
+
+    #####     Scanner in = new Scanner(System.in);
+
+
+    #####     n = in.nextInt();
+
+
+    #####    System.out.println ("\n");
+
+
+    #####    for(j=0;j<=n;j++)
+
+
+    #####      System.out.println(n+" X "+j+" = " +n*j);
+
+
+    #####    }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the number(Table to be calculated): Input number of terms : 7
+
+
+    7 X 0 = 0
+
+
+    7 X 1 = 7
+
+
+    7 X 2 = 14
+
+
+    7 X 3 = 21
+
+
+    7 X 4 = 28
+
+
+    7 X 5 = 35
+
+
+    7 X 6 = 42
+
+
+    7 X 7 = 49
+
+
+    # Display the pattern
+
+
+    ## like right angle triangle
+
+
+    ### with a number
+
+
+    ![](Images/image00115.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####    public static void main(String[] args)
+
+
+    ##### {
+
+
+    #####    int i,j,n;
+
+
+    #####    System.out.print("Input number of rows : ");
+
+
+    ##### Scanner in = new Scanner(System.in);
+
+
+    #####     n = in.nextInt();
+
+
+    #####    for(i=1;i<=n;i++)
+
+
+    #####    {
+
+
+    ##### for(j=1;j<=i;j++)
+
+
+    #####   System.out.print(j);
+
+
+    #####     System.out.println("");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input number of rows : 9
+
+
+    1
+
+
+    12
+
+
+    123
+
+
+    1234
+
+
+    12345
+
+
+    123456
+
+
+    1234567
+
+
+    12345678
+
+
+    123456789
+
+
+    # Print a pattern like a pyramid
+
+
+    ![](Images/image00116.jpeg)
+
+
+    ### JAVA CODE
+
+
+    import java.util.Scanner;
+
+
+    public class Main {
+
+
+      public static void main(String[] args)
+
+
+    {
+
+
+       int i,j,n,s,x;
+
+
+       System.out.print ("Input number of rows : ");
+
+
+       Scanner in = new Scanner(System.in);
+
+
+        n = in.nextInt();
+
+
+       s=n+4-1;
+
+
+        for(i=1;i<=n;i++)
+
+
+       {
+
+
+       for(x=s;x!=0;x--)
+
+
+        {
+
+
+       System.out.print(" ");
+
+
+        }
+
+
+        for(j=1;j<=i;j++)
+
+
+        {
+
+
+         System.out.print(i+" ");
+
+
+         }
+
+
+    System.out.println();
+
+
+        s--;
+
+
+       }
+
+
+    }
+
+
+    }
+
+
+    ### OUTPUT
+
+
+    Input number of rows : 7
+
+
+              1
+
+
+             2 2
+
+
+            3 3 3
+
+
+           4 4 4 4
+
+
+          5 5 5 5 5
+
+
+         6 6 6 6 6 6
+
+
+        7 7 7 7 7 7 7
+
+
+    # Display the number rhombus structure
+
+
+    ![](Images/image00117.jpeg)
+
+
+    ### JAVA CODE
+
+
+    ##### import java.util.Scanner;
+
+
+    ##### public class Main {
+
+
+    #####   public static void main(String args[])
+
+
+    #####     {
+
+
+    #####         Scanner in = new Scanner(System.in);
+
+
+    #####         System.out.print("Input the number:  ");
+
+
+    #####         int n = in.nextInt();
+
+
+    #####         int count = 1;
+
+
+    #####         int no_of_spaces = 1;
+
+
+    #####         int start = 0;
+
+
+    #####         for (int i = 1; i < (n * 2); i++)
+
+
+    #####         {
+
+
+    #####             for (int spc = n - no_of_spaces; spc > 0; spc--)
+
+
+    #####             {
+
+
+    #####                 System.out.print(" ");
+
+
+    #####             }
+
+
+    #####             if (i < n)
+
+
+    #####             {
+
+
+    #####                 start = i;          //for number
+
+
+    #####                 no_of_spaces++;    //for spaces
+
+
+    #####             } else
+
+
+    #####             {
+
+
+    #####                 start = n * 2 - i;   //for number
+
+
+    #####                 no_of_spaces--;      //for space
+
+
+    #####             }
+
+
+    #####             for (int j = 0; j < count; j++)
+
+
+    #####             {
+
+
+    #####                 System.out.print(start);
+
+
+    #####                 if (j < count / 2)
+
+
+    #####                 {
+
+
+    #####                     start--;
+
+
+    #####                 } else
+
+
+    #####                 {
+
+
+    #####                     start++;
+
+
+    #####                 }
+
+
+    #####             }
+
+
+    #####             if (i < n)
+
+
+    #####             {
+
+
+    #####                 count = count + 2;
+
+
+    #####             } else {
+
+
+    #####                 count = count - 2;
+
+
+    #####             }
+
+
+    #####             System.out.println();
+
+
+    #####         }
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Input the number: 7
+
+
+          1
+
+
+         212
+
+
+        32123
+
+
+       4321234
+
+
+      543212345
+
+
+    65432123456
+
+
+    7654321234567
+
+
+    65432123456
+
+
+      543212345
+
+
+       4321234
+
+
+        32123
+
+
+         212
+
+
+          1
+
+
+    C# SHARP
+
+
+    CODING EXERCISES
+
+
+    CODING FOR BEGINNERS
+
+
+    JJ TAM
+
+
+    # C# SHARP CODING EXERCISES
+
+
+    # Print hello and your name
+
+
+    ## in a separate line in C#
+
+
+    ### C# CODE
+
+
+    ##### public class Exercise1
+
+
+    ##### {
+
+
+    #####     public static void Main( )
+
+
+    #####     {
+
+
+    #####          System.Console.WriteLine("Hello");
+
+
+    #####          System.Console.WriteLine("JJ TAM!");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    Hello
+
+
+    JJ TAM
+
+
+    # Print the result of the specified operations
+
+
+    ### C# CODE
+
+
+    ##### public class Exercise4
+
+
+    ##### {
+
+
+    #####     public static void Main()
+
+
+    #####     {
+
+
+    #####         System.Console.WriteLine(-1+4*6);
+
+
+    ##### //-1 + 24 = 23
+
+
+    #####         System.Console.WriteLine((35+5)%7);
+
+
+    ##### //40 % 7 = 5 (remainder of 40/7)
+
+
+    #####         System.Console.WriteLine(14+-4*6/11);
+
+
+    #####         //14 - (24/11)= 14 - 2 = 12
+
+
+    #####         System.Console.WriteLine(2+15/6*1-7%2);
+
+
+    ##### //2 + (15/6) - remainder of (7/2) = 2 + 2 - 1 = 4 - 1 = 3
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    23                                                                                                           
+
+
+    5                                                                                                            
+
+
+    12                                                                                                           
+
+
+    3
+
+
+    # Program to swap two numbers
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### public class Exercise5
+
+
+    ##### {
+
+
+    #####        public static void Main(string[] args)
+
+
+    #####          {
+
+
+    #####             int number1, number2, temp;
+
+
+    #####             Console.Write("\nInput the First Number : ");
+
+
+    #####             number1 = int.Parse(Console.ReadLine());
+
+
+    #####             Console.Write("\nInput the Second Number : ");
+
+
+    #####             number2 = int.Parse(Console.ReadLine());
+
+
+    #####             temp = number1;
+
+
+    #####             number1 = number2;
+
+
+    #####             number2 = temp;
+
+
+    #####             Console.Write("\nAfter Swapping : ");
+
+
+    #####             Console.Write("\nFirst Number : "+number1);
+
+
+    #####             Console.Write("\nSecond Number : "+number2);
+
+
+    #####             Console.Read();
+
+
+    #####         }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    Input the First Number : 2   
+
+
+    Input the Second Number : 5   
+
+
+    After Swapping :                                                                                             
+
+
+    First Number : 5                                                                                             
+
+
+    Second Number : 2
+
+
+    # Print the output of multiplication
+
+
+    ## of three numbers
+
+
+    ### which will be entered by the user
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### public class Exercise6
+
+
+    ##### {
+
+
+    #####   public static void Main()
+
+
+    #####   {
+
+
+    #####     int num1, num2, num3;
+
+
+    #####     Console.Write("Input the first number to multiply: ");
+
+
+    #####     num1 = Convert.ToInt32(Console.ReadLine());'
+  toc: []
+  trans: "\n\n# 找出三个数中的最大值\n\n## Java 条件语句\n\n### 输出\n输入第一个整数: 50\n输入第二个整数: 30\n两个整数之和:\
+    \ 80\n两个整数之差: 20\n两个整数的乘积: 1500\n两个整数的平均值: 40.00\n两个整数的距离: 20\n最大整数: 50\n最小整数:\
+    \ 30\n\n![](img/image00114.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n  public static void main(String[] args) {\n    Scanner in\
+    \ = new Scanner(System.in);\n    System.out.print(\"Input the 1st number: \");\n\
+    \    int num1 = in.nextInt();\n    System.out.print(\"Input the 2nd number: \"\
+    );\n    int num2 = in.nextInt();\n    System.out.print(\"Input the 3rd number:\
+    \ \");\n    int num3 = in.nextInt();\n    if (num1 > num2)\n      if (num1 > num3)\n\
+    \        System.out.println(\"The greatest: \" + num1);\n    if (num2 > num1)\n\
+    \      if (num2 > num3)\n        System.out.println(\"The greatest: \" + num2);\n\
+    \    if (num3 > num1)\n      if (num3 > num2)\n        System.out.println(\"The\
+    \ greatest: \" + num3);\n  }\n}\n```\n\n### 输出\n输入第一个数字: 25\n输入第二个数字: 58\n输入第三个数字:\
+    \ 98\n最大值: 98\n\n# 显示给定整数的乘法表\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n  public static void main(String[] args)\n  {\n    int j,n;\n\
+    \    System.out.print(\"Input the number(Table to be calculated): \");\n    System.out.print(\"\
+    Input number of terms : \");\n    Scanner in = new Scanner(System.in);\n    n\
+    \ = in.nextInt();\n    System.out.println (\"\\n\");\n    for(j=0;j<=n;j++)\n\
+    \      System.out.println(n+\" X \"+j+\" = \" +n*j);\n  }\n}\n```\n\n### 输出\n\
+    输入数字（要计算的表）: 输入项数 : 7\n7 X 0 = 0\n7 X 1 = 7\n7 X 2 = 14\n7 X 3 = 21\n7 X 4 = 28\n\
+    7 X 5 = 35\n7 X 6 = 42\n7 X 7 = 49\n\n# 显示类似数字的直角三角形模式\n\n![](img/image00115.jpeg)\n\
+    \n### JAVA 代码\n```java\nimport java.util.Scanner;\npublic class Main {\n  public\
+    \ static void main(String[] args)\n  {\n    int i,j,n;\n    System.out.print(\"\
+    Input number of rows : \");\n    Scanner in = new Scanner(System.in);\n    n =\
+    \ in.nextInt();\n    for(i=1;i<=n;i++)\n    {\n      for(j=1;j<=i;j++)\n     \
+    \   System.out.print(j);\n      System.out.println(\"\");\n    }\n  }\n}\n```\n\
+    \n### 输出\n输入行数 : 9\n1\n12\n123\n1234\n12345\n123456\n1234567\n12345678\n123456789\n\
+    \n# 打印类似金字塔的模式\n\n![](img/image00116.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n  public static void main(String[] args)\n  {\n    int i,j,n,s,x;\n\
+    \    System.out.print (\"Input number of rows : \");\n    Scanner in = new Scanner(System.in);\n\
+    \    n = in.nextInt();\n    s=n+4-1;\n    for(i=1;i<=n;i++)\n    {\n      for(x=s;x!=0;x--)\n\
+    \      {\n        System.out.print(\" \");\n      }\n      for(j=1;j<=i;j++)\n\
+    \      {\n        System.out.print(i+\" \");\n      }\n      System.out.println();\n\
+    \      s--;\n    }\n  }\n}\n```\n\n### 输出\n输入行数 : 7\n      1\n      2 2\n    \
+    \  3 3 3\n      4 4 4 4\n      5 5 5 5 5\n      6 6 6 6 6 6\n      7 7 7 7 7 7\n\
+    \n# 显示数字结构\n\n![](img/image0017.jpeg)\n\n### JAVA 代码\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n  public static void main(String args[])\n  {\n    Scanner\
+    \ in = new Scanner(System.in);\n    System.out.print(\"Input the number: \");\n\
+    \    int n = in.nextInt();\n    int count = 1;\n    int no_of_spaces = 1;\n  \
+    \  int start = 0;\n    for (int i = 1; i < (n * 2); i++)\n    {\n      for (int\
+    \ spc = n - no_of_spaces; spc > 0; spc--)\n      {\n        System.out.print(\"\
+    \ \");\n      }\n      if (i < n)\n      {\n        start = i;\n        no_of_spaces++;\n\
+    \      }\n      else\n      {\n        start = n * 2 - i;\n        no_of_spaces--;\n\
+    \      }\n      for (int j = 0; j < count; j++)\n      {\n        System.out.print(start);\n\
+    \        if (j < count / 2)\n        {\n          start--;\n        }\n      \
+    \  else\n        {\n          start++;\n        }\n      }\n      if (i < n)\n\
+    \      {\n        count = count + 2;\n      }\n      else\n      {\n        count\
+    \ = count - 2;\n      }\n      System.out.println();\n    }\n  }\n}\n```\n\n###\
+    \ 输出\n输入数字: 7\n      1\n    22\n    333\n    4444\n    55555\n    66666\n    7777777\n\
+    \    6666666\n    555555\n    4444\n    333\n    22\n      1\n\n"
+- fmt: "\n```csharp\nConsole.Write(\"Input the second number to multiply: \");\nnum2\
+    \ = Convert.ToInt32(Console.ReadLine());\nConsole.Write(\"Input the third number\
+    \ to multiply: \");\nnum3 = Convert.ToInt32(Console.ReadLine());\nint result =\
+    \ num1 * num2 * num3;\nConsole.WriteLine(\"Output: {0} x {1} x {2} = {3}\", num1,\
+    \ num2, num3, result);\n```\n\n### Output:\nInput the first number to multiply:\
+    \ 2\nInput the second number to multiply: 8\nInput the third number to multiply:\
+    \ 5\nOutput: 2 x 8 x 5 = 80\n\n# Adding, subtracting, multiplying and dividing\
+    \ of two numbers which will be entered by the user\n\n## C# CODE\n```csharp\n\
+    using System;\npublic class Exercise7\n{\n    public static void Main()\n    {\n\
+    \        Console.Write(\"Enter a number: \");\n        int num1= Convert.ToInt32(Console.ReadLine());\n\
+    \        Console.Write(\"Enter another number: \");\n        int num2= Convert.ToInt32(Console.ReadLine());\n\
+    \        Console.WriteLine(\"{0} + {1} = {2}\", num1, num2, num1+num2);\n    \
+    \    Console.WriteLine(\"{0} - {1} = {2}\", num1, num2, num1-num2);\n        Console.WriteLine(\"\
+    {0} x {1} = {2}\", num1, num2, num1*num2);\n        Console.WriteLine(\"{0} /\
+    \ {1} = {2}\", num1, num2, num1/num2);\n        Console.WriteLine(\"{0} mod {1}\
+    \ = {2}\", num1, num2, num1%num2);\n    }\n}\n```\n\n### Output:\nEnter a number:\
+    \ 10\nEnter another number: 2\n10 + 2 = 12\n10 - 2 = 8\n10 x 2 = 20\n10 / 2 =\
+    \ 5\n10 mod 2 = 0\n\n# Print the average of four numbers\n\n## C# CODE\n```csharp\n\
+    using System;\nusing System.IO;\npublic class Exercise9\n{\n  public static void\
+    \ Main()\n  {\n    double number1,number2,number3,number4;\n    Console.Write(\"\
+    Enter the First number: \");\n    number1 = Convert.ToDouble(Console.ReadLine());\n\
+    \    Console.Write(\"Enter the Second number: \");\n    number2 = Convert.ToDouble(Console.ReadLine());\n\
+    \    Console.Write(\"Enter the third number: \");\n    number3 = Convert.ToDouble(Console.ReadLine());\n\
+    \    Console.Write(\"Enter the fourth number: \");\n    number4 = Convert.ToDouble(Console.ReadLine());\n\
+    \    double result = (number1 + number2 + number3 + number4) / 4;\n    Console.WriteLine(\"\
+    The average of {0}, {1}, {2}, {3} is: {4}\", number1, number2, number3, number4,\
+    \ result);\n  }\n}\n```\n\n### Output:\nEnter the First number: 7\nEnter the Second\
+    \ number: 17\nEnter the third number: 17\nEnter the four number: 51\nThe average\
+    \ of 17, 17, 517, 51 is: 150.5\n\n# Program to convert Temperature from celsius\
+    \ degrees to Kelvin and Fahrenheit\n\n## kelvin = celsius + 273\n## fahrenheit\
+    \ = celsius x 18 / 10 + 32\n\n### C# CODE\n```csharp\nusing System;\npublic class\
+    \ Exercise14\n{\n  public static void Main( )\n  {\n    Console.Write(\"Enter\
+    \ the amount of celsius: \");\n    int celsius = Convert.ToInt32(Console.ReadLine());\n\
+    \    Console.WriteLine(\"Kelvin = {0}\", celsius + 273);\n    Console.WriteLine(\"\
+    Fahrenheit = {0}\", celsius * 18 / 10 + 32);\n  }\n}\n```\n\n### Output:\nEnter\
+    \ the amount of celsius: 40\nKelvin = 313\nFahrenheit = 104\n\n# Compute the sum\
+    \ of two integers, if two values are equal return the triple of their sum\n\n\
+    ## C# CODE\n```csharp\nusing System;\nusing System.Collections.Generic;\npublic\
+    \ class Exercise19 {\n  static void Main(string[] args)\n  {\n    Console.WriteLine(SumTriple(2,2));\n\
+    \    Console.WriteLine(SumTriple(2,0));\n    Console.WriteLine(SumTriple(-5,2));\n\
+    \  }\n  public static int SumTriple(int a, int b)\n  {\n    return a == b ? (a\
+    \ + b)*3 : a + b;\n  }\n}\n```\n\n### Output:\n12\n2\n-3\n\n# Compute sum of all\
+    \ the elements of an array of integers\n\n## C# CODE\n```csharp\nusing System;\n\
+    using System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing\
+    \ System.Threading.Tasks;\npublic class Exercise47\n{ \n  public static void Main()\n\
+    \  {\n    int[] nums = {1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 1};\n    Console.WriteLine(\"\
+    \\nArray1: [{0}]\", string.Join(\", \", nums));\n    var sum = 0;\n    for (var\
+    \ i = 0; i < nums.Length; i++)\n    {\n      sum += nums[i];\n    }\n    Console.WriteLine(\"\
+    Sum: \"+ sum);\n  }\n}\n```\n\n### Output:\nArray1: [1, 2, 2, 3, 3, 4, 5, 6, 5,\
+    \ 7, 7, 7, 8, 8, 1]\nSum: 69\n\n# C# program to check if array contains an odd\
+    \ number\n\n## C# CODE\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    public class Exercise53\n{\n  public static void Main()\n  {\n    int[] nums =\
+    \ {2, 4, 7, 6};\n    Console.WriteLine(\"\\nArray: [{0}]\", string.Join(\", \"\
+    , nums));\n    Console.WriteLine(\"Check if array contains an odd number? \"+CheckOdd(nums));\n\
+    \  }\n  public static bool CheckOdd(int[] nums)\n  {\n    foreach (var n in nums)\n\
+    \    {\n      if (n % 2 != 0)\n        return true;\n    }\n    return false;\n\
+    \  }\n}\n```\n\n### Output:\nArray: [2, 4, 7, 6]\nCheck if array contains an odd\
+    \ number? True\n\n# C# program to check two given integers and return true if\
+    \ one of them is 30 or their sum is 30\n\n## C# CODE\n```csharp\nusing System;\n\
+    namespace exercises\n{\n  class Program\n    {\n      static void Main(string[]\
+    \ args)\n      {\n        Console.WriteLine(test(30, 0));\n        Console.WriteLine(test(25,\
+    \ 5));\n        Console.WriteLine(test(20, 30));\n        Console.WriteLine(test(20,\
+    \ 25));\n        Console.ReadLine();\n      }\n      public static bool test(int\
+    \ x, int y)\n      {\n        return x == 30 || y == 30 || (x + y == 30);\n  \
+    \    }\n  }\n}\n```\n\n### Output:\nTrue\nTrue\nTrue\nFalse\n\n# C# Sharp program\
+    \ to check a given positive number is a multiple of 3 or a multiple of 7\n"
+  raw: '#####     Console.Write("Input the second number to multiply: ");
+
+
+    #####     num2 = Convert.ToInt32(Console.ReadLine());
+
+
+    #####     Console.Write("Input the third number to multiply: ");
+
+
+    #####     num3 = Convert.ToInt32(Console.ReadLine());
+
+
+    #####     int result = num1 * num2 * num3;
+
+
+    #####     Console.WriteLine("Output: {0} x {1} x {2} = {3}",
+
+
+    #####                         num1, num2, num3, result);
+
+
+    #####   }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    Input the first number to multiply: 2                                                                        
+
+
+    Input the second number to multiply: 8                                                                       
+
+
+    Input the third number to multiply: 5                                                                        
+
+
+    Output: 2 x 8 x 5 = 80
+
+
+    # Adding, subtracting, multiplying and dividing
+
+
+    ## of two numbers which
+
+
+    ### will be entered by the user
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### public class Exercise7
+
+
+    ##### {
+
+
+    #####     public static void Main()
+
+
+    #####     {
+
+
+    #####         Console.Write("Enter a number: ");
+
+
+    #####         int num1= Convert.ToInt32(Console.ReadLine());
+
+
+    #####         Console.Write("Enter another number: ");
+
+
+    #####         int num2= Convert.ToInt32(Console.ReadLine());
+
+
+    #####         Console.WriteLine("{0} + {1} = {2}", num1, num2, num1+num2);
+
+
+    #####         Console.WriteLine("{0} - {1} = {2}", num1, num2, num1-num2);
+
+
+    #####         Console.WriteLine("{0} x {1} = {2}", num1, num2, num1*num2);
+
+
+    #####         Console.WriteLine("{0} / {1} = {2}", num1, num2, num1/num2);
+
+
+    #####         Console.WriteLine("{0} mod {1} = {2}", num1, num2, num1%num2);
+
+
+    #####    }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    Enter a number: 10                                                                                           
+
+
+    Enter another number: 2                                                                                      
+
+
+    10 + 2 = 12                                                                                                  
+
+
+    10 - 2 = 8                                                                                                   
+
+
+    10 x 2 = 20                                                                                                  
+
+
+    10 / 2 = 5                                                                                                   
+
+
+    10 mod 2 = 0
+
+
+    # Print the average of four numbers
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### using System.IO;
+
+
+    ##### public class Exercise9
+
+
+    ##### {
+
+
+    #####   public static void Main()
+
+
+    #####   {
+
+
+    #####      double number1,number2,number3,number4;
+
+
+    #####      Console.Write("Enter the First number: ");
+
+
+    #####      number1 = Convert.ToDouble(Console.ReadLine());
+
+
+    #####      Console.Write("Enter the Second number: ");
+
+
+    #####      number2 = Convert.ToDouble(Console.ReadLine());
+
+
+    #####      Console.Write("Enter the third number: ");
+
+
+    #####      number3 = Convert.ToDouble(Console.ReadLine());
+
+
+    #####      Console.Write("Enter the fourth number: ");
+
+
+    #####      number4 = Convert.ToDouble(Console.ReadLine());
+
+
+    #####      double result = (number1 + number2 + number3 + number4) / 4;
+
+
+    #####      Console.WriteLine("The average of {0}, {1}, {2}, {3} is: {4} ",
+
+
+    #####   number1, number2, number3, number4, result);
+
+
+    #####    }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    Enter the First number: 17                                                                                   
+
+
+    Enter the Second number: 17                                                                                   
+
+
+    Enter the third number: 517                                                                                  
+
+
+    Enter the four number: 51                                                                                   
+
+
+    The average of 17, 17, 517, 51 is: 150.5
+
+
+    # Program to convert Temperature
+
+
+    ## from celsius degrees
+
+
+    ### to Kelvin and Fahrenheit
+
+
+    kelvin = celsius + 273
+
+
+    fahrenheit = celsius x 18 / 10 + 32
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### public class Exercise14
+
+
+    ##### {
+
+
+    #####    public static void Main( )
+
+
+    #####     {
+
+
+    #####         Console.Write("Enter the amount of celsius: ");
+
+
+    #####         int celsius = Convert.ToInt32(Console.ReadLine());
+
+
+    #####         Console.WriteLine("Kelvin = {0}", celsius + 273);
+
+
+    #####         Console.WriteLine("Fahrenheit = {0}", celsius * 18 / 10 + 32);
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    Enter the amount of celsius: 40                                                                              
+
+
+    Kelvin = 313                                                                                                 
+
+
+    Fahrenheit = 104
+
+
+    # Compute the sum
+
+
+    ## of two given integers,
+
+
+    ### if two values are equal then return the triple of their sum
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### using System.Collections.Generic;
+
+
+    ##### public class Exercise19 {
+
+
+    #####   static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(SumTriple(2,2));
+
+
+    #####             Console.WriteLine(SumTriple(12,10));
+
+
+    #####             Console.WriteLine(SumTriple(-5,2));         
+
+
+    #####         }
+
+
+    #####         public static int SumTriple(int a, int b)
+
+
+    #####         {
+
+
+    #####             return a == b ? (a + b)*3 : a + b;
+
+
+    #####         }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    12                                                                    
+
+
+    22                                                                    
+
+
+    -3
+
+
+    # Compute sum
+
+
+    ## of all the elements
+
+
+    ### of an array of integers
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### using System.Collections.Generic;
+
+
+    ##### using System.Linq;
+
+
+    ##### using System.Text;
+
+
+    ##### using System.Threading.Tasks;
+
+
+    ##### public class Exercise47
+
+
+    ##### { 
+
+
+    #####    public static void Main()
+
+
+    #####       {
+
+
+    #####          int[] nums = {1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 1};
+
+
+    #####          Console.WriteLine("\nArray1: [{0}]", string.Join(", ", nums));
+
+
+    #####          var sum = 0;
+
+
+    #####             for (var i = 0; i < nums.Length; i++)
+
+
+    #####             {
+
+
+    #####                 sum += nums[i];
+
+
+    #####             }
+
+
+    #####            Console.WriteLine("Sum: "+ sum);
+
+
+    #####     }
+
+
+    ##### }
+
+
+    ### Output:
+
+
+    Array1: [1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 1]                 
+
+
+    Sum: 69
+
+
+    # C# program to check
+
+
+    ## if an array contains an odd number
+
+
+    ### CODE
+
+
+    ##### using System;
+
+
+    ##### using System.Collections.Generic;
+
+
+    ##### using System.Linq;
+
+
+    ##### using System.Text;
+
+
+    ##### using System.Threading.Tasks;
+
+
+    ##### public class Exercise53
+
+
+    ##### { 
+
+
+    #####    public static void Main()
+
+
+    #####       {
+
+
+    #####          int[] nums = {2, 4, 7, 8, 6};
+
+
+    #####          Console.WriteLine("\nOriginal array: [{0}]", string.Join(", ",
+    nums));
+
+
+    #####          Console.WriteLine("Check if an array contains an odd number? "+even_odd(nums));
+
+
+    #####       } 
+
+
+    #####     public static bool even_odd(int[] nums) 
+
+
+    #####     {
+
+
+    #####          foreach (var n in nums)
+
+
+    #####             {
+
+
+    #####                 if (n % 2 != 0)
+
+
+    #####                 return true;
+
+
+    #####             }
+
+
+    #####         return false;
+
+
+    #####      }
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Original array: [2, 4, 7, 8, 6]                                       
+
+
+    Check if an array contains an odd number? True
+
+
+    # C# Sharp program to check two given integers
+
+
+    ### and return true if one of them is 30 or if their sum is 30
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### namespace exercises
+
+
+    ##### {
+
+
+    #####      class Program
+
+
+    #####     {
+
+
+    #####         static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(test(30, 0));
+
+
+    #####             Console.WriteLine(test(25, 5));
+
+
+    #####             Console.WriteLine(test(20, 30));
+
+
+    #####             Console.WriteLine(test(20, 25));
+
+
+    #####             Console.ReadLine();
+
+
+    #####         }
+
+
+    #####       public static bool test(int x, int y)
+
+
+    #####         {
+
+
+    #####             return x == 30 || y == 30 || (x + y == 30);
+
+
+    #####         }
+
+
+    #####   }
+
+
+    ##### }
+
+
+    Output:
+
+
+    True
+
+
+    True
+
+
+    True
+
+
+    False
+
+
+    # C# Sharp program to check a given positive number
+
+
+    ## is a multiple of 3 or a multiple of 7'
+  toc: []
+  trans: "\n\n```csharp\nConsole.Write(\"Input the second number to multiply: \");\n\
+    num2 = Convert.ToInt32(Console.ReadLine());\nConsole.Write(\"Input the third number\
+    \ to multiply: \");\nnum3 = Convert.ToInt32(Console.ReadLine());\nint result =\
+    \ num1 * num2 * num3;\nConsole.WriteLine(\"Output: {0} x {1} x {2} = {3}\", num1,\
+    \ num2, num3, result);\n```\n\n### 输出:\n输入第一个乘法数字: 2\n输入第二个乘法数字: 8\n输入第三个乘法数字:\
+    \ 5\nOutput: 2 x 8 x 5 = 80\n\n# 对用户输入的两个数字进行加、减、乘、除\n\n## C# 代码\n```csharp\n\
+    using System;\npublic class Exercise7\n{\n    public static void Main()\n    {\n\
+    \        Console.Write(\"Enter a number: \");\n        int num1= Convert.ToInt32(Console.ReadLine());\n\
+    \        Console.Write(\"Enter another number: \");\n        int num2= Convert.ToInt32(Console.ReadLine());\n\
+    \        Console.WriteLine(\"{0} + {1} = {2}\", num1, num2, num1+num2);\n    \
+    \    Console.WriteLine(\"{0} - {1} = {2}\", num1, num2, num1-num2);\n        Console.WriteLine(\"\
+    {0} x {1} = {2}\", num1, num2, num1*num2);\n        Console.WriteLine(\"{0} /\
+    \ {1} = {2}\", num1, num2, num1/num2);\n        Console.WriteLine(\"{0} mod {1}\
+    \ = {2}\", num1, num2, num1%num2);\n    }\n}\n```\n\n### 输出:\n输入一个数字: 10\n输入另一个数字:\
+    \ 2\n10 + 2 = 12\n10 - 2 = 8\n10 x 2 = 20\n10 / 2 = 5\n10 mod 2 = 0\n\n# 打印四个数字的平均值\n\
+    \n## C# 代码\n```csharp\nusing System;\nusing System.IO;\npublic class Exercise9\n\
+    {\n  public static void Main()\n  {\n    double number1,number2,number3,number4;\n\
+    \    Console.Write(\"Enter the First number: \");\n    number1 = Convert.ToDouble(Console.ReadLine());\n\
+    \    Console.Write(\"Enter the Second number: \");\n    number2 = Convert.ToDouble(Console.ReadLine());\n\
+    \    Console.Write(\"Enter the third number: \");\n    number3 = Convert.ToDouble(Console.ReadLine());\n\
+    \    Console.Write(\"Enter the fourth number: \");\n    number4 = Convert.ToDouble(Console.ReadLine());\n\
+    \    double result = (number1 + number2 + number3 + number4) / 4;\n    Console.WriteLine(\"\
+    The average of {0}, {1}, {2}, {3} is: {4}\", number1, number2, number3, number4,\
+    \ result);\n  }\n}\n```\n\n### 输出:\n输入第一个数字: 7\n输入第二个数字: 17\n输入第三个数字: 17\n输入第四个数字:\
+    \ 51\n17, 17, 517, 51 的平均值是: 150.5\n\n# 将温度从摄氏度转换为开文度和华氏度的程序\n\n## kelvin = celsius\
+    \ + 273\n## fahrenheit = celsius x 18 / 10 + 32\n\n### C# 代码\n```csharp\nusing\
+    \ System;\npublic class Exercise14\n{\n  public static void Main( )\n  {\n   \
+    \ Console.Write(\"Enter the amount of celsius: \");\n    int celsius = Convert.ToInt32(Console.ReadLine());\n\
+    \    Console.WriteLine(\"Kelvin = {0}\", celsius + 273);\n    Console.WriteLine(\"\
+    Fahrenheit = {0}\", celsius * 18 / 10 + 32);\n  }\n}\n```\n\n### 输出:\n输入摄氏度: 40\n\
+    Kelvin = 313\nFahrenheit = 104\n\n# 计算两个整数之和，如果两个值相等，则返回它们和的倍倍\n\n## C# 代码\n```csharp\n\
+    using System;\nusing System.Collections.Generic;\npublic class Exercise19 {\n\
+    \  static void Main(string[] args)\n  {\n    Console.WriteLine(SumTriple(2,2));\n\
+    \    Console.WriteLine(SumTriple(2,0));\n    Console.WriteLine(SumTriple(-5,2));\n\
+    \  }\n  public static int SumTriple(int a, int b)\n  {\n    return a == b ? (a\
+    \ + b)*3 : a + b;\n  }\n}\n```\n\n### 输出:\n12\n2\n-3\n\n# 计算整数数组所有元素之和\n\n## C#\
+    \ 代码\n```csharp\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Text;\nusing System.Threading.Tasks;\npublic class Exercise47\n{\
+    \ \n  public static void Main()\n  {\n    int[] nums = {1, 2, 2, 3, 3, 4, 5, 6,\
+    \ 5, 7, 7, 7, 8, 8, 1};\n    Console.WriteLine(\"\\nArray1: [{0}]\", string.Join(\"\
+    , \", nums));\n    var sum = 0;\n    for (var i = 0; i < nums.Length; i++)\n \
+    \   {\n      sum += nums[i];\n    }\n    Console.WriteLine(\"Sum: \"+ sum);\n\
+    \  }\n}\n```\n\n### 输出:\nArray1: [1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 1]\n\
+    Sum: 69\n\n# 检查数组是否包含奇数的程序\n\n## C# 代码\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    public class Exercise53\n{\n  public static void Main()\n  {\n    int[] nums =\
+    \ {2, 4, 7, 6};\n    Console.WriteLine(\"\\nArray: [{0}]\", string.Join(\", \"\
+    , nums));\n    Console.WriteLine(\"Check if array contains an odd number? \"+CheckOdd(nums));\n\
+    \  }\n  public static bool CheckOdd(int[] nums)\n  {\n    foreach (var n in nums)\n\
+    \    {\n      if (n % 2 != 0)\n        return true;\n    }\n    return false;\n\
+    \  }\n}\n```\n\n### 输出:\nArray: [2, 4, 7, 6]\n检查数组是否包含奇数? True\n\n# 检查两个给定的整数，如果其中一个为\
+    \ 30 或它们的和为 30，则返回真\n\n## C# 代码\n```csharp\nusing System;\nnamespace exercises\n\
+    {\n  class Program\n    {\n      static void Main(string[] args)\n      {\n  \
+    \      Console.WriteLine(test(30, 0));\n        Console.WriteLine(test(25, 5));\n\
+    \        Console.WriteLine(test(20, 30));\n        Console.WriteLine(test(20,\
+    \ 25));\n        Console.ReadLine();\n      }\n      public static bool test(int\
+    \ x, int y)\n      {\n        return x == 30 || y == 30 || (x + y == 30);\n  \
+    \    }\n  }\n}\n```\n\n### 输出:\nTrue\nTrue\nTrue\nFalse\n\n# C# Sharp 程序，检查给定的正数是否为\
+    \ 3 的倍数或 7 的倍数\n\n"
+- fmt: "\n### C# CODE\n\n```csharp\nusing System;\nnamespace exercises\n{\n    class\
+    \ Program\n    {\n        static void Main(string[] args)\n        {\n       \
+    \     Console.WriteLine(test(3));\n            Console.WriteLine(test(14));\n\
+    \            Console.WriteLine(test(12));\n            Console.WriteLine(test(37));\n\
+    \            Console.ReadLine();\n        }\n        public static bool test(int\
+    \ n)\n        {\n            return n % 3 == 0 || n % 7 == 0;\n        }\n   \
+    \ }\n}\n```\nOutput:\n```\nTrue\nTrue\nTrue\nFalse\n```\n\n# check whether a given\
+    \ string starts with 'C#' or not\n\n### C# CODE\n\n```csharp\nusing System;\n\
+    namespace exercises\n{\n    class Program\n    {\n        static void Main(string[]\
+    \ args)\n        {\n            Console.WriteLine(test(\"C# Sharp\"));\n     \
+    \       Console.WriteLine(test(\"C#\"));\n            Console.WriteLine(test(\"\
+    C++\"));\n            Console.ReadLine();\n        }\n        public static bool\
+    \ test(string str)\n        {\n            return (str.Length < 3 && str.Equals(\"\
+    C#\")) || (str.StartsWith(\"C#\") && str[2] == ' ');\n        }\n    }\n}\n```\n\
+    Output:\n```\nTrue\nTrue\nFalse\n```\n\n# C# Sharp program to check the largest\
+    \ number among three given integers\n\n### C# CODE\n\n```csharp\nusing System;\n\
+    namespace exercises\n{\n    class Program\n    {\n        static void Main(string[]\
+    \ args)\n        {\n            Console.WriteLine(test(1,2,3));\n            Console.WriteLine(test(1,3,2));\n\
+    \            Console.WriteLine(test(1,1,1));\n            Console.WriteLine(test(1,2,2));\n\
+    \            Console.ReadLine();\n        }\n        public static int test(int\
+    \ x, int y, int z)\n        {\n            var max = Math.Max(x, Math.Max(y, z));\n\
+    \            return max;\n        }\n    }\n}\n```\nOutput:\n```\n3\n3\n1\n2\n\
+    ```\n\n# Program to check which number is nearest to the value 100 among two given\
+    \ integers\n\n### Return 0 if the two numbers are equal.\n\n### C# CODE\n\n```csharp\n\
+    using System;\nnamespace exercises\n{\n    class Program\n    {\n        static\
+    \ void Main(string[] args)\n        {\n            Console.WriteLine(test(78,\
+    \ 95));\n            Console.WriteLine(test(95, 95));\n            Console.WriteLine(test(99,\
+    \ 70));\n            Console.ReadLine();\n        }\n        public static int\
+    \ test(int x, int y)\n        {\n            const int n = 100;\n            var\
+    \ val = Math.Abs(x - n);\n            var val2 = Math.Abs(y - n);\n          \
+    \  return val == val2 ? 0 : (val < val2 ? x : y);\n        }\n    }\n}\n```\n\
+    Output:\n```\n95\n0\n99\n```\n\n# Program to convert the last 3 characters of\
+    \ a given string in upper case\n\nIf the length of the string has less than 3\
+    \ then all the characters.\n\n### C# CODE\n\n```csharp\nusing System;\nnamespace\
+    \ exercises\n{\n    class Program\n    {\n        static void Main(string[] args)\n\
+    \        {\n            Console.WriteLine(test(\"Python\"));\n            Console.WriteLine(test(\"\
+    Javascript\"));\n            Console.WriteLine(test(\"js\"));\n            Console.WriteLine(test(\"\
+    PHP\"));\n            Console.ReadLine();\n        }\n        public static string\
+    \ test(string str)\n        {\n            return str.Length < 3 ? str.ToUpper()\
+    \ : str.Remove(str.Length - 3) + str.Substring(str.Length - 3).ToUpper();\n  \
+    \      }\n    }\n}\n```\nOutput:\n```\nPytHON\nJavascrIPT\nJS\nPHP\n```\n\n# Program\
+    \ to create a new string of the characters at indexes 0,1, 4,5, 8,9 ... from a\
+    \ given string.\n\n### C# CODE\n\n```csharp\nusing System;\nusing System.Linq;\n\
+    namespace exercises\n{\n    class Program\n    {\n        static void Main(string[]\
+    \ args)\n        {\n            Console.WriteLine(test(\"Python\"));\n       \
+    \     Console.WriteLine(test(\"JavaScript\"));\n            Console.WriteLine(test(\"\
+    HTML\"));\n            Console.ReadLine();\n        }\n        public static string\
+    \ test(string str1)\n        {\n            var result = string.Empty;\n     \
+    \       for (var i = 0; i < str1.Length; i += 4)\n            {\n            \
+    \    var c = i + 2;\n                var n = 0;\n                n += c > str1.Length\
+    \ ? 1 : 2;\n                result += str1.Substring(i, n);\n            }\n \
+    \           return result;\n        }\n    }\n}\n```\nOutput:\n```\nPyon\nJapt\n\
+    HT\n```\n\n# Perform an operation on +, *, / and displays the result of\n\n###\
+    \ C# CODE\n\n```csharp\nusing System;\npublic class Exercise\n{\n    public static\
+    \ void Main()\n    {\n        int x, y;\n        char operation;\n        Console.Write(\"\
+    Input number: \");\n        x = Convert.ToInt32(Console.ReadLine());\n       \
+    \ Console.Write(\"Input operation: \");\n        operation = Convert.ToChar(Console.ReadLine());\n\
+    \        Console.Write(\"Input second number: \");\n        y = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (operation=='+')\n            Console.WriteLine(\"{0} + {1} = {2}\"\
+    , x, y, x+y);\n        else if (operation=='-')\n            Console.WriteLine(\"\
+    {0} - {1} = {2}\", x, y, x-y);\n        else if ((operation=='x') || (operation=='*'))\n\
+    \            Console.WriteLine(\"{0} * {1} = {2}\", x, y, x*y);\n        else\
+    \ if (operation=='/')\n            Console.WriteLine(\"{0} / {1} = {2}\", x, y,\
+    \ x/y);\n        else\n            Console.WriteLine(\"Wrong Character\");\n \
+    \   }\n}\n```\nOutput:\n```\nInput number: 4\nInput operation: *\nInput second\
+    \ number: 4\n4 * 4 = 16\n```\n\n# Calculate the perimeter of a circle\n\n### C#\
+    \ CODE\n\n```csharp\nusing System;\npublic class Exercise5\n{\n    public static\
+    \ void Main()\n    {\n        double r, per_cir;\n        double PI = 3.1;\n \
+    \       Console.WriteLine(\"Input the radius of the circle : \");\n        r =\
+    \ Convert.ToDouble(Console.ReadLine());\n        per_cir = 2 * PI * r;\n     \
+    \   Console.WriteLine(\"Perimeter of Circle : {0}\", per_cir);\n    }\n}\n```\n\
+    Output:\n```\nInput the radius of the circle : 25\nPerimeter of Circle : 157\n\
+    ```\n\n# C# Sharp Conditional Statement # program to Check whether a number is\
+    \ even or odd\n\n### C# CODE\n\n```csharp\nusing System;\npublic class Exercise2\n\
+    {\n    public static void Main()\n    {\n        int num1, rem1;\n        Console.Write(\"\
+    \\n\\n\");\n        Console.Write(\"Check whether a number is even or odd :\\\
+    n\");\n        Console.Write(\"---------------------------------------\");\n \
+    \       Console.Write(\"\\n\\n\");\n        Console.Write(\"Input an integer :\
+    \ \");\n        num1= Convert.ToInt32(Console.ReadLine());\n        rem1 = num1\
+    \ % 2;\n        if (rem1 == 0)\n            Console.WriteLine(\"{0} is an even\
+    \ integer.\\n\",num1);\n        else\n            Console.WriteLine(\"{0} is an\
+    \ odd integer.\\n\",num1);\n    }\n}\n```\nOutput:\n```\nCheck whether a number\
+    \ is even or odd :\n---------------------------------------\n\nInput an integer\
+    \ : 10\n10 is an even integer.\n```\n"
+  raw: '### C# CODE
+
+
+    ##### using System;
+
+
+    ##### namespace exercises
+
+
+    ##### {
+
+
+    ##### class Program
+
+
+    #####     {
+
+
+    #####         static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(test(3));
+
+
+    #####             Console.WriteLine(test(14));
+
+
+    #####             Console.WriteLine(test(12));
+
+
+    #####             Console.WriteLine(test(37));
+
+
+    #####             Console.ReadLine();
+
+
+    #####         }
+
+
+    #####         public static bool test(int n)
+
+
+    #####         {
+
+
+    #####             return n % 3 == 0 || n % 7 == 0;
+
+
+    #####         }
+
+
+    #####     }
+
+
+    ##### }
+
+
+    Output:
+
+
+    True
+
+
+    True
+
+
+    True
+
+
+    False
+
+
+    # check whether a given string starts with ''C#'' or not
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### namespace exercises
+
+
+    ##### {
+
+
+    ##### class Program
+
+
+    #####     {
+
+
+    #####         static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(test("C# Sharp"));
+
+
+    #####             Console.WriteLine(test("C#"));
+
+
+    #####             Console.WriteLine(test("C++"));
+
+
+    #####             Console.ReadLine();
+
+
+    #####         }
+
+
+    #####    public static bool test(string str)
+
+
+    #####         {
+
+
+    #####             return (str.Length < 3 && str.Equals("C#")) || (str.StartsWith("C#")
+    && str[2] == '' '');
+
+
+    #####         }
+
+
+    #####     }
+
+
+    ##### }
+
+
+    Output:
+
+
+    True
+
+
+    True
+
+
+    False
+
+
+    # C# Sharp program to check the largest number
+
+
+    ## among three given integers
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### namespace exercises
+
+
+    ##### {
+
+
+    #####    class Program
+
+
+    #####     {
+
+
+    #####         static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(test(1,2,3));
+
+
+    #####             Console.WriteLine(test(1,3,2));
+
+
+    #####             Console.WriteLine(test(1,1,1));
+
+
+    #####             Console.WriteLine(test(1,2,2));
+
+
+    #####             Console.ReadLine();
+
+
+    #####         }
+
+
+    #####        public static int test(int x, int y, int z)
+
+
+    #####         {
+
+
+    #####             var max = Math.Max(x, Math.Max(y, z));
+
+
+    #####             return max;
+
+
+    #####         }
+
+
+    #####     }
+
+
+    ##### }
+
+
+     Output:
+
+
+    3
+
+
+    3
+
+
+    1
+
+
+    2
+
+
+    # Program to check which number is nearest to the value 100
+
+
+    ## among two given integers
+
+
+    ### Return 0 if the two numbers are equal.
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### namespace exercises
+
+
+    ##### {
+
+
+    #####    class Program
+
+
+    #####     {
+
+
+    #####         static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(test(78, 95));
+
+
+    #####             Console.WriteLine(test(95, 95));
+
+
+    #####             Console.WriteLine(test(99, 70));
+
+
+    #####             Console.ReadLine();
+
+
+    #####         }
+
+
+    #####         public static int test(int x, int y)
+
+
+    #####         {
+
+
+    #####             const int n = 100;
+
+
+    #####             var val = Math.Abs(x - n);
+
+
+    #####             var val2 = Math.Abs(y - n);
+
+
+    #####             return val == val2 ? 0 : (val < val2 ? x : y);
+
+
+    #####         }
+
+
+    #####     }
+
+
+    ##### }
+
+
+    Output:
+
+
+    95
+
+
+    0
+
+
+    99
+
+
+    # Program to convert the last 3 characters
+
+
+    ## of a given string in upper case
+
+
+    ### If the length of the string has less than 3 then uppercase all the characters.
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### namespace exercises
+
+
+    ##### {
+
+
+    #####    class Program
+
+
+    #####     {
+
+
+    #####         static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(test("Python"));
+
+
+    #####             Console.WriteLine(test("Javascript"));
+
+
+    #####             Console.WriteLine(test("js"));
+
+
+    #####             Console.WriteLine(test("PHP"));
+
+
+    #####             Console.ReadLine();
+
+
+    #####         }
+
+
+    #####      public static string test(string str)
+
+
+    #####         {
+
+
+    #####             return str.Length < 3 ? str.ToUpper() : str.Remove(str.Length
+    - 3) + str.Substring(str.Length - 3).ToUpper();
+
+
+    #####         }
+
+
+    #####   }
+
+
+    ##### }
+
+
+     Output:
+
+
+    PytHON
+
+
+    JavascrIPT
+
+
+    JS
+
+
+    PHP
+
+
+    # Program to create a new string
+
+
+    ### of the characters at indexes 0,1, 4,5, 8,9 ... from a given string.
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### using System.Linq;
+
+
+    ##### namespace exercises
+
+
+    ##### {
+
+
+    #####    class Program
+
+
+    #####     {
+
+
+    #####        static void Main(string[] args)
+
+
+    #####         {
+
+
+    #####             Console.WriteLine(test("Python"));
+
+
+    #####             Console.WriteLine(test("JavaScript"));
+
+
+    #####             Console.WriteLine(test("HTML"));
+
+
+    #####             Console.ReadLine();
+
+
+    #####         }
+
+
+    #####         public static string test(string str1)
+
+
+    #####           {
+
+
+    #####            var result = string.Empty;
+
+
+    #####             for (var i = 0; i < str1.Length; i += 4)
+
+
+    #####             {
+
+
+    #####                 var c = i + 2;
+
+
+    #####                 var n = 0;
+
+
+    #####                 n += c > str1.Length ? 1 : 2;
+
+
+    #####                 result += str1.Substring(i, n);
+
+
+    #####             }
+
+
+    #####             return result;
+
+
+    #####         }
+
+
+    #####     }
+
+
+    ##### }
+
+
+    Output:
+
+
+    Pyon
+
+
+    JaScpt
+
+
+    HT
+
+
+    # Perform an operation
+
+
+    ### on +, -, *, x, / and displays the result of that operation
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### public class Exercise4
+
+
+    ##### {
+
+
+    #####     public static void Main()
+
+
+    #####     {
+
+
+    #####         int x, y;
+
+
+    #####         char operation;
+
+
+    #####         Console.Write("Input first number: ");
+
+
+    #####         x = Convert.ToInt32(Console.ReadLine());
+
+
+    #####         Console.Write("Input operation: ");
+
+
+    #####         operation = Convert.ToChar(Console.ReadLine());
+
+
+    #####         Console.Write("Input second number: ");
+
+
+    #####         y = Convert.ToInt32(Console.ReadLine());
+
+
+    #####         if (operation==''+'')
+
+
+    #####             Console.WriteLine("{0} + {1} = {2}", x, y, x+y);
+
+
+    #####         else if (operation==''-'')
+
+
+    #####             Console.WriteLine("{0} - {1} = {2}", x, y, x-y);
+
+
+    #####         else if ((operation==''x'') || (operation==''*''))
+
+
+    #####             Console.WriteLine("{0} * {1} = {2}", x, y, x*y);
+
+
+    #####         else if (operation==''/'')
+
+
+    #####             Console.WriteLine("{0} / {1} = {2}", x, y, x/y);
+
+
+    #####         else
+
+
+    #####             Console.WriteLine("Wrong Character");
+
+
+    #####     }
+
+
+    ##### }
+
+
+    Output:
+
+
+    Input first number: 4                                                                                        
+
+
+    Input operation: *                                                                                           
+
+
+    Input second number: 4                                                                                       
+
+
+    4 * 4 = 16
+
+
+    # Calculate the perimeter
+
+
+    ## of a circle
+
+
+    ### C# CODE
+
+
+    ##### using System;
+
+
+    ##### public class Exercise5
+
+
+    ##### {
+
+
+    #####     public static void Main()
+
+
+    #####     {
+
+
+    #####         double r,per_cir;
+
+
+    #####         double PI = 3.14;
+
+
+    #####         Console.WriteLine("Input the radius of the circle : ");
+
+
+    #####         r = Convert.ToDouble(Console.ReadLine());
+
+
+    #####         per_cir = 2 * PI * r;
+
+
+    #####         Console.WriteLine("Perimeter of Circle : {0}", per_cir);
+
+
+    #####         Console.Read();
+
+
+    #####     }
+
+
+    ##### }
+
+
+    Output:
+
+
+    Input the radius of the circle :                                                                           
+
+
+    25
+
+
+    Perimeter of Circle : 157
+
+
+    # C# Sharp Conditional Statement
+
+
+    # C program to Check whether a number is even or odd
+
+
+    ### C# CODE
+
+
+    ##### using System; 
+
+
+    ##### public class Exercise2 
+
+
+    ##### { 
+
+
+    #####     public static void Main() 
+
+
+    #####     {
+
+
+    #####     int num1, rem1;
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Check whether a number is even or odd :\n");
+
+
+    #####     Console.Write("---------------------------------------");
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Input an integer : ");
+
+
+    #####     num1= Convert.ToInt32(Console.ReadLine());
+
+
+    #####     rem1 = num1 % 2;
+
+
+    #####     if (rem1 == 0)
+
+
+    ##### Console.WriteLine("{0} is an even integer.\n",num1);
+
+
+    #####     else
+
+
+    ##### Console.WriteLine("{0} is an odd integer.\n",num1);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    Output:
+
+
+    ##### Check whether a number is even or odd :                                                                      
+
+
+    ##### ---------------------------------------
+
+
+    ##### Input an integer : 10                                                                                        '
+  toc: []
+  trans: "\n\n### C# 代码\n\n```csharp\nusing System;\nnamespace exercises\n{\n    class\
+    \ Program\n    {\n        static void Main(string[] args)\n        {\n       \
+    \     Console.WriteLine(test(3));\n            Console.WriteLine(test(14));\n\
+    \            Console.WriteLine(test(12));\n            Console.WriteLine(test(37));\n\
+    \            Console.ReadLine();\n        }\n        public static bool test(int\
+    \ n)\n        {\n            return n % 3 == 0 || n % 7 == 0;\n        }\n   \
+    \ }\n}\n```\n输出:\n```\nTrue\nTrue\nTrue\nFalse\n```\n\n# 检查给定字符串是否以 'C#' 开头\n\n\
+    ### C# 代码\n\n```csharp\nusing System;\nnamespace exercises\n{\n    class Program\n\
+    \    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(test(\"\
+    C# Sharp\"));\n            Console.WriteLine(test(\"C#\"));\n            Console.WriteLine(test(\"\
+    C++\"));\n            Console.ReadLine();\n        }\n        public static bool\
+    \ test(string str)\n        {\n            return (str.Length < 3 && str.Equals(\"\
+    C#\")) || (str.StartsWith(\"C#\") && str[2] == ' ');\n        }\n    }\n}\n```\n\
+    输出:\n```\nTrue\nTrue\nFalse\n```\n\n# C# 程序：在三个给定整数中找出最大的数\n\n### C# 代码\n\n```csharp\n\
+    using System;\nnamespace exercises\n{\n    class Program\n    {\n        static\
+    \ void Main(string[] args)\n        {\n            Console.WriteLine(test(1,2,3));\n\
+    \            Console.WriteLine(test(1,3,2));\n            Console.WriteLine(test(1,1,1));\n\
+    \            Console.WriteLine(test(1,2,2));\n            Console.ReadLine();\n\
+    \        }\n        public static int test(int x, int y, int z)\n        {\n \
+    \           var max = Math.Max(x, Math.Max(y, z));\n            return max;\n\
+    \        }\n    }\n}\n```\n输出:\n```\n3\n3\n1\n2\n```\n\n# 程序：在两个给定整数中检查哪个数字最接近值\
+    \ 100\n\n### 如果两个数字相等，则返回 0。\n\n### C# 代码\n\n```csharp\nusing System;\nnamespace\
+    \ exercises\n{\n    class Program\n    {\n        static void Main(string[] args)\n\
+    \        {\n            Console.WriteLine(test(78, 95));\n            Console.WriteLine(test(95,\
+    \ 95));\n            Console.WriteLine(test(99, 70));\n            Console.ReadLine();\n\
+    \        }\n        public static int test(int x, int y)\n        {\n        \
+    \    const int n = 100;\n            var val = Math.Abs(x - n);\n            var\
+    \ val2 = Math.Abs(y - n);\n            return val == val2 ? 0 : (val < val2 ?\
+    \ x : y);\n        }\n    }\n}\n```\n输出:\n```\n95\n0\n99\n```\n\n# 程序：将给定字符串的最后\
+    \ 3 个字符转换为大写\n\n如果字符串长度小于 3，则将所有字符转换为大写。\n\n### C# 代码\n\n```csharp\nusing System;\n\
+    namespace exercises\n{\n    class Program\n    {\n        static void Main(string[]\
+    \ args)\n        {\n            Console.WriteLine(test(\"Python\"));\n       \
+    \     Console.WriteLine(test(\"Javascript\"));\n            Console.WriteLine(test(\"\
+    js\"));\n            Console.WriteLine(test(\"PHP\"));\n            Console.ReadLine();\n\
+    \        }\n        public static string test(string str)\n        {\n       \
+    \     return str.Length < 3 ? str.ToUpper() : str.Remove(str.Length - 3) + str.Substring(str.Length\
+    \ - 3).ToUpper();\n        }\n    }\n}\n```\n输出:\n```\nPytHON\nJavascrIPT\nJS\n\
+    PHP\n```\n\n# 程序：从给定字符串提取索引为 0,1, 4,5, 8,9 ... 的字符创建一个新字符串。\n\n### C# 代码\n\n```csharp\n\
+    using System;\nusing System.Linq;\nnamespace exercises\n{\n    class Program\n\
+    \    {\n        static void Main(string[] args)\n        {\n            Console.WriteLine(test(\"\
+    Python\"));\n            Console.WriteLine(test(\"JavaScript\"));\n          \
+    \  Console.WriteLine(test(\"HTML\"));\n            Console.ReadLine();\n     \
+    \   }\n        public static string test(string str1)\n        {\n           \
+    \ var result = string.Empty;\n            for (var i = 0; i < str1.Length; i +=\
+    \ 4)\n            {\n                var c = i + 2;\n                var n = 0;\n\
+    \                n += c > str1.Length ? 1 : 2;\n                result += str1.Substring(i,\
+    \ n);\n            }\n            return result;\n        }\n    }\n}\n```\n输出:\n\
+    ```\nPyon\nJapt\nHT\n```\n\n# 对 +, *, / 执行运算并显示结果\n\n### C# 代码\n\n```csharp\n\
+    using System;\npublic class Exercise\n{\n    public static void Main()\n    {\n\
+    \        int x, y;\n        char operation;\n        Console.Write(\"Input number:\
+    \ \");\n        x = Convert.ToInt32(Console.ReadLine());\n        Console.Write(\"\
+    Input operation: \");\n        operation = Convert.ToChar(Console.ReadLine());\n\
+    \        Console.Write(\"Input second number: \");\n        y = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (operation=='+')\n            Console.WriteLine(\"{0} + {1} = {2}\"\
+    , x, y);\n        else if (operation=='-')\n            Console.WriteLine(\"{0}\
+    \ - {1} = {2}\", x, y);\n        else if ((operation=='x') || (operation=='*'))\n\
+    \            Console.WriteLine(\"{0} * {1} = {2}\", x, y);\n        else if (operation=='/')\n\
+    \            Console.WriteLine(\"{0} / {1} = {2}\", x, y);\n        else\n   \
+    \         Console.WriteLine(\"Wrong Character\");\n    }\n}\n```\n输出:\n```\nInput\
+    \ number: 4\nInput operation: *\nInput second number: 4\n4 * 4 = 16\n```\n\n#\
+    \ 计算圆的周长\n\n### C# 代码\n\n```csharp\nusing System;\npublic class Exercise5\n{\n\
+    \    public static void Main()\n    {\n        double r, per_cir;\n        double\
+    \ PI = 3.1;\n        Console.WriteLine(\"Input the radius of the circle : \");\n\
+    \        r = Convert.ToDouble(Console.ReadLine());\n        per_cir = 2 * PI *\
+    \ r;\n        Console.WriteLine(\"Perimeter of Circle : {0}\", per_cir);\n   \
+    \ }\n}\n```\n输出:\n```\nInput the radius of the circle : 25\nPerimeter of Circle\
+    \ : 155\n```\n\n"
+- fmt: "\n##### 10 is an even integer.\n\n# Check a number is positive or negative\n\
+    \n### C# CODE\n```csharp\nusing System;\n\npublic class Exercise3\n{\n    public\
+    \ static void Main()\n    {\n        int num;\n        Console.Write(\"\\n\\n\"\
+    );\n        Console.Write(\"Check whether a number is positive or negative:\\\
+    n\");\n        Console.Write(\"----------------------------------------------\"\
+    );\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input an integer\
+    \ : \");\n        num= Convert.ToInt32(Console.ReadLine());\n        if (num >=\
+    \ 0)\n            Console.WriteLine(\"{0} is a positive number.\\n\",num);\n \
+    \       else\n            Console.WriteLine(\"{0} is a negative number. \\n\"\
+    , num);\n    }\n}\n```\n\nOutput:\n```\nCheck whether a number is positive or\
+    \ negative:\n----------------------------------------------\nInput an integer\
+    \ : -10\n-10 is a negative number.\n```\n\n# C# Sharp program to accept the height\
+    \ of a person\n## in centimeter and categorize the person according to their height\n\
+    \n### C# CODE\n```csharp\nusing System;\n\npublic class Exercise7\n{\n    public\
+    \ static void Main()\n    {\n        float PerHeight;\n        Console.Write(\"\
+    \\n\\n\");\n        Console.Write(\"Accept the height of a person in centimeter\
+    \ and categorize them:\\n\");\n        Console.Write(\"----------------------------------------------------------------\"\
+    );\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input the height\
+    \ of the person (in centimetres):\");\n        PerHeight = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (PerHeight < 150.0)\n            Console.Write(\"The person is Dwarf.\
+    \ \\n\\n\");\n        else if ((PerHeight >= 150.0) && (PerHeight <= 165.0))\n\
+    \            Console.Write(\"The person is  average heighted. \\n\\n\");\n   \
+    \     else if ((PerHeight >= 165.0) && (PerHeight <= 195.0))\n            Console.Write(\"\
+    The person is taller. \\n\\n\");\n        else\n            Console.Write(\"Abnormal\
+    \ height.\\n\\n\");\n    }\n}\n```\n\n### OUTPUT\n```\nAccept the height of a\
+    \ person in centimeter and categorize them:\n----------------------------------------------------------------\n\
+    Input the height of the person (in centimetres):190\nThe person is taller.\n```\n\
+    \n# Find the largest of three\n### C# CODE\n```csharp\nusing System;\n\npublic\
+    \ class Exercise8\n{\n    public static void Main()\n    {\n        int num1,\
+    \ num2, num3;\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Find\
+    \ the largest of numbers:\\n\");\n        Console.Write(\"--------------------\"\
+    );\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input the 1st\
+    \ number :\");\n        num1 = Convert.ToInt32(Console.ReadLine());\n        Console.Write(\"\
+    Input the 2nd number :\");\n        num2 = Convert.ToInt32(Console.ReadLine());\n\
+    \        Console.Write(\"Input the 3rd  number :\");\n        num3 = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (num1 > num2)\n        {\n            if (num1 > num3)\n         \
+    \   {\n                Console.Write(\"The 1st Number is greatest among three.\
+    \ \\n\");\n            }\n            else\n            {\n                Console.Write(\"\
+    The 3rd Number is greatest among three. \\n\");\n            }\n        }\n  \
+    \      else if (num2 > num3)\n            Console.Write(\"The 2nd Number is greatest\
+    \ among three \\n\");\n        else\n            Console.Write(\"The 3rd Number\
+    \ is greatest among three \\n\");\n    }\n}\n```\nOutput:\n```\nFind the largest\
+    \ of numbers:\n--------------------\nInput the 1st number :20\nInput the 2nd number\
+    \ :25\nInput the 3rd  number :15\nThe 2nd Number is greatest among three.\n```\n\
+    \n# Calculate profit and loss\n### C# CODE\n```csharp\nusing System;\n\npublic\
+    \ class Exercise17\n{\n    public static void Main()\n    {\n        int cprice,\
+    \ price, plamt;\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"\
+    Calculate profit and loss:\\n\");\n        Console.Write(\"------------\");\n\
+    \        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input Cost Price:\
+    \ \");\n        cprice = Convert.ToInt32(Console.ReadLine());\n        Console.Write(\"\
+    Input Selling Price: \");\n        price = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (price > cprice)\n        {\n            plamt = price - cprice;\n\
+    \            Console.Write(\"\\nYou can booked profit amount : {0}\\n\", plamt);\n\
+    \        }\n        else if (cprice > price)\n        {\n            plamt = cprice\
+    \ - price;\n            Console.Write(\"\\nYou got a loss of amount : {0}\\n\"\
+    , plamt);\n        }\n        else\n        {\n            Console.Write(\"\\\
+    nYou are running in no profit loss condition.\\n\");\n        }\n    }\n}\n```\n\
+    Output:\n```\nCalculate profit and loss:\n------------\nInput Cost Price: 1000\n\
+    Input Selling Price: 1200\nYou can booked your profit amount : 200\n```\n"
+  raw: '##### 10 is an even integer.
+
+
+    # Check a number is positive or negative
+
+
+    ### C# CODE
+
+
+    ##### using System; 
+
+
+    ##### public class Exercise3 
+
+
+    ##### { 
+
+
+    #####     public static void Main() 
+
+
+    #####     {
+
+
+    #####     int num;
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Check whether a number is positive or negative:\n");
+
+
+    #####     Console.Write("----------------------------------------------");
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Input an integer : ");
+
+
+    #####     num= Convert.ToInt32(Console.ReadLine());
+
+
+    #####     if (num >= 0)
+
+
+    ##### Console.WriteLine("{0} is a positive number.\n",num);
+
+
+    #####     else
+
+
+    #####         Console.WriteLine("{0} is a negative number. \n", num);
+
+
+    ##### }
+
+
+    ##### }
+
+
+    Output:
+
+
+    ##### Check whether a number is positive or negative:                                                              
+
+
+    ##### ----------------------------------------------
+
+
+    ##### Input an integer : -10                                                                                       
+
+
+    ##### -10 is a negative number.
+
+
+    # C# Sharp program to accept the height of a person
+
+
+    ## in centimeter and categorize the person according to their height
+
+
+    ### C# CODE
+
+
+    ##### using System; 
+
+
+    ##### public class Exercise7 
+
+
+    ##### { 
+
+
+    #####     public static void Main()
+
+
+    ##### {
+
+
+    #####     float PerHeight;
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Accept the height of a person in centimeter and categorize
+    them:\n");
+
+
+    #####     Console.Write("----------------------------------------------------------------");
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Input the height of the person (in centimetres):");
+
+
+    #####     PerHeight = Convert.ToInt32(Console.ReadLine());
+
+
+    #####     if (PerHeight < 150.0)
+
+
+    #####         Console.Write("The person is Dwarf. \n\n");
+
+
+    #####     else if ((PerHeight >= 150.0) && (PerHeight <= 165.0))
+
+
+    #####        Console.Write("The person is  average heighted. \n\n");
+
+
+    #####     else if ((PerHeight >= 165.0) && (PerHeight <= 195.0))
+
+
+    #####         Console.Write("The person is taller. \n\n");
+
+
+    #####     else
+
+
+    #####         Console.Write("Abnormal height.\n\n");
+
+
+    ##### }  
+
+
+    ##### }
+
+
+    ### OUTPUT
+
+
+    Accept the height of a person in centimeter and categorize them:                                             
+
+
+    ----------------------------------------------------------------
+
+
+    Input the height of the person (in centimetres):190                                                          
+
+
+    The person is taller.
+
+
+    # Find the largest of three numbers
+
+
+    ### C# CODE
+
+
+    ##### using System; 
+
+
+    ##### public class Exercise8 
+
+
+    ##### { 
+
+
+    #####     public static void Main()
+
+
+    ##### {
+
+
+    #####     int num1, num2, num3;
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Find the largest of three numbers:\n");
+
+
+    #####     Console.Write("------------------------------------");
+
+
+    #####     Console.Write("\n\n");
+
+
+    #####     Console.Write("Input the 1st number :");
+
+
+    #####     num1 = Convert.ToInt32(Console.ReadLine());
+
+
+    #####     Console.Write("Input the  2nd number :");
+
+
+    #####     num2 = Convert.ToInt32(Console.ReadLine());
+
+
+    #####     Console.Write("Input the 3rd  number :");
+
+
+    #####     num3 = Convert.ToInt32(Console.ReadLine());
+
+
+    #####   if (num1 > num2)
+
+
+    #####     {
+
+
+    #####         if (num1 > num3)
+
+
+    #####         {
+
+
+    #####             Console.Write("The 1st Number is the greatest among three. \n\n");
+
+
+    #####         }
+
+
+    #####         else
+
+
+    #####         {
+
+
+    #####             Console.Write("The 3rd Number is the greatest among three. \n\n");
+
+
+    #####         }
+
+
+    #####     }
+
+
+    #####     else if (num2 > num3)
+
+
+    #####         Console.Write("The 2nd Number is the greatest among three \n\n");
+
+
+    #####     else
+
+
+    #####         Console.Write("The 3rd Number is the greatest among three \n\n");
+
+
+    ##### }
+
+
+    ##### }
+
+
+    Output:
+
+
+    Find the largest of three numbers:                                                                           
+
+
+    ------------------------------------                                                                                                 
+
+
+    Input the 1st number :20                                                                                     
+
+
+    Input the  2nd number :25                                                                                    
+
+
+    Input the 3rd  number :15                                                                                    
+
+
+    The 2nd Number is the greatest among three
+
+
+    # Calculate profit and loss
+
+
+    ### C# CODE
+
+
+    ##### using System; 
+
+
+    ##### public class Exercise17 
+
+
+    ##### { 
+
+
+    #####     public static void Main() 
+
+
+    ##### { 
+
+
+    #####     int cprice,sprice, plamt;
+
+
+    #####            Console.Write("\n\n");
+
+
+    #####            Console.Write("Calculate profit and loss:\n");
+
+
+    #####            Console.Write("----------------------------");
+
+
+    #####            Console.Write("\n\n");
+
+
+    #####      Console.Write("Input Cost Price: "); 
+
+
+    #####      cprice= Convert.ToInt32(Console.ReadLine());
+
+
+    #####      Console.Write("Input Selling Price: "); 
+
+
+    #####      sprice= Convert.ToInt32(Console.ReadLine()); 
+
+
+    #####     if(sprice>cprice)
+
+
+    #####     { 
+
+
+    #####         plamt = sprice-cprice; 
+
+
+    #####         Console.Write("\nYou can booked your profit amount : {0}\n", plamt); 
+
+
+    #####     } 
+
+
+    #####     else if(cprice>sprice) 
+
+
+    #####     { 
+
+
+    #####         plamt = cprice-sprice; 
+
+
+    #####         Console.Write("\nYou got a loss of amount : {0}\n", plamt); 
+
+
+    #####     } 
+
+
+    #####     else  
+
+
+    #####     { 
+
+
+    #####         Console.Write("\nYou are running in no profit no loss condition.\n"); 
+
+
+    #####     } 
+
+
+    ##### }
+
+
+    ##### } 
+
+
+    Output:
+
+
+    Calculate profit and loss:                                                                                   
+
+
+    ----------------------------                                             
+
+
+    Input Cost Price: 1000                                                                                       
+
+
+    Input Selling Price: 1200                                                                                    
+
+
+    You can booked your profit amount : 200'
+  toc: []
+  trans: "\n\n##### 10 是一个偶数。\n\n# 数字是正数还是负数\n\n### C# 代码\n```csharp\nusing System;\n\
+    \npublic class Exercise3\n{\n    public static void Main()\n    {\n        int\
+    \ num;\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Check whether\
+    \ a number is positive or negative:\\n\");\n        Console.Write(\"----------------------------------------------\"\
+    );\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input an integer\
+    \ : \");\n        num= Convert.ToInt32(Console.ReadLine());\n        if (num >=\
+    \ 0)\n            Console.WriteLine(\"{0} is a positive number.\\n\",num);\n \
+    \       else\n            Console.WriteLine(\"{0} is a negative number. \\n\"\
+    , num);\n    }\n}\n```\n\n输出:\n```\nCheck whether a number is positive or negative:\n\
+    ----------------------------------------------\nInput an integer : -10\n-10 is\
+    \ a negative number.\n```\n\n# C# 程序：接收人体身高（厘米）并根据身高进行分类\n\n### C# 代码\n```csharp\n\
+    using System;\n\npublic class Exercise7\n{\n    public static void Main()\n  \
+    \  {\n        float PerHeight;\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"\
+    Accept the height of a person in centimeter and categorize them:\\n\");\n    \
+    \    Console.Write(\"----------------------------------------------------------------\"\
+    );\n        Console.Write(\"\\n\\n\");\n        Console.Write(\"Input the height\
+    \ of the person (in centimetres):\");\n        PerHeight = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (PerHeight < 150.0)\n            Console.Write(\"The person is Dwarf.\
+    \ \\n\\n\");\n        else if ((PerHeight >= 150.0) && (PerHeight <= 165.0))\n\
+    \            Console.Write(\"The person is  average heighted. \\n\\n\");\n   \
+    \     else if ((PerHeight >= 165.0) && (PerHeight <= 195.0))\n            Console.Write(\"\
+    The person is taller. \\n\\n\");\n        else\n            Console.Write(\"Abnormal\
+    \ height.\\n\\n\");\n    }\n}\n```\n\n### 输出\n```\nAccept the height of a person\
+    \ in centimeter and categorize them:\n----------------------------------------------------------------\n\
+    Input the height of the person (in centimetres):190\nThe person is taller.\n```\n\
+    \n# 找出三个数中的值\n### C# 代码\n```csharp\nusing System;\n\npublic class Exercise8\n\
+    {\n    public static void Main()\n    {\n        int num1, num2, num3;\n     \
+    \   Console.Write(\"\\n\\n\");\n        Console.Write(\"Find the largest of numbers:\\\
+    n\");\n        Console.Write(\"--------------------\");\n        Console.Write(\"\
+    \\n\\n\");\n        Console.Write(\"Input the 1st number :\");\n        num1 =\
+    \ Convert.ToInt32(Console.ReadLine());\n        Console.Write(\"Input the 2nd\
+    \ number :\");\n        num2 = Convert.ToInt32(Console.ReadLine());\n        Console.Write(\"\
+    Input the 3rd  number :\");\n        num3 = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (num1 > num2)\n        {\n            if (num1 > num3)\n         \
+    \   {\n                Console.Write(\"The 1st Number is greatest among three.\
+    \ \\n\");\n            }\n            else\n            {\n                Console.Write(\"\
+    The 3rd Number is greatest among three. \\n\");\n            }\n        }\n  \
+    \      else if (num2 > num3)\n            Console.Write(\"The 2nd Number is greatest\
+    \ among three \\n\");\n        else\n            Console.Write(\"The 3rd Number\
+    \ is greatest among three \\n\");\n    }\n}\n```\n输出:\n```\nFind the largest of\
+    \ numbers:\n--------------------\nInput the 1st number :20\nInput the 2nd number\
+    \ :25\nInput the 3rd  number :15\nThe 2nd Number is greatest among three.\n```\n\
+    \n# 计算盈损\n### C# 代码\n```csharp\nusing System;\n\npublic class Exercise17\n{\n\
+    \    public static void Main()\n    {\n        int cprice, price, plamt;\n   \
+    \     Console.Write(\"\\n\\n\");\n        Console.Write(\"Calculate profit and\
+    \ loss:\\n\");\n        Console.Write(\"------------\");\n        Console.Write(\"\
+    \\n\\n\");\n        Console.Write(\"Input Cost Price: \");\n        cprice = Convert.ToInt32(Console.ReadLine());\n\
+    \        Console.Write(\"Input Selling Price: \");\n        price = Convert.ToInt32(Console.ReadLine());\n\
+    \        if (price > cprice)\n        {\n            plamt = price - cprice;\n\
+    \            Console.Write(\"\\nYou can booked profit amount : {0}\\n\", plamt);\n\
+    \        }\n        else if (cprice > price)\n        {\n            plamt = cprice\
+    \ - price;\n            Console.Write(\"\\nYou got a loss of amount : {0}\\n\"\
+    , plamt);\n        }\n        else\n        {\n            Console.Write(\"\\\
+    nYou are running in no profit loss condition.\\n\");\n        }\n    }\n}\n```\n\
+    输出:\n```\nCalculate profit and loss:\n------------\nInput Cost Price: 1000\nInput\
+    \ Selling Price: 1200\nYou can booked your profit amount : 200\n```\n\n"

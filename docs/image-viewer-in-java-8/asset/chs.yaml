@@ -1,0 +1,2123 @@
+- "# Java 8 图像查看器\n\n\n\n![](img/cover00163.jpeg)\n\n\n\n\n\n\n\n郭淑芬（Shufen Kuo）于\
+  \ 1988 年夏天搬往旧金湾区，之后一直担任软件工程师。她在各种平台上拥有丰富的实战经验，从 PC DOS 到许多 Unix/Linux 工作站，再从 PC\
+  \ Linux 到 PC Windows。\n\n她从 2001 年开始编写 Java 程序。多年来，她一直使用 `Abstract Windowing Toolkit`\
+  \ (`AWT`) 和 `Swing`（`Java Foundation Classes` (`JFC`) 的 GUI 组件）来为她的 Java 项目开发图形界面。从\
+  \ 2012 年起，她沉浸在 `JavaFX` 世界中；对其本质的探索激发了她编写书籍来推广 `JavaFX` 的强大之处。\n\n在开发 Java 应用程序之前，她在运行\
+  \ X Window 系统的 UNIX/Linux/Solaris 上拥有超过 12 年的 `C/C++` 应用程序开发经验。\n\n郭淑芬于 1987 年从华盛顿州立大学获得计算机科学（Computer\
+  \ Science）硕士学位。\n\n目前，她正在使用 `JavaFX` 开发具有丰富 GUI 的 Java 应用程序，并编写关于 `JavaFX` 编码的教程，利用她在设计和开发面向对象图形工具方面的专业知识。\n\
+  \n她的出版物包括：\n\n* “两步字符串匹配程序，”`Pattern Recognition`，24(7), 711-716, 1991。\n* “一种寻找两个字符串最长公共子序列长度的改进算法，”`ACM\
+  \ SIGIR Forum`，1989 年春夏季，第 23 卷，第 3-4 期，89-99 页。\n\n## 黄超（Bing-Chao Huang）\n\n黄超博士于\
+  \ 1987 年从华盛顿州立大学获得计算机科学博士学位。他于 1984 年从斯坦福大学获得计算机科学硕士学位。\n\n他的出版物包括：\n\n* D.E. Knuth\
+  \ 著作的《计算机程序设计艺术》第 1 卷：基础算法，第三版（1997 年），第 116-177 页中的 `Algorithm I`。\n* “恒定额外空间下的快速稳定合并与排序，”`The\
+  \ Computer Journal` 35(1992), 643-650\n* “最优时间和空间下的稳定集合与多集合操作，”`Information Processing\
+  \ Letters` 16(1991), 131-136\n* “最优时间和空间界限下的稳定重复键提取，”`Acta Informatica` 26(1989),\
+  \ 473-484\n* “实用的原地合并，”`CACM` 31(1988), 348-352\n* “最优时间和空间下的稳定集合与多集合操作，”第七届 ACM\
+  \ SIGACT-SIGMOD-SIGART 数据库原理研讨会（1988）\n* “实用的原地合并，”ACM-IEEE/CS 秋季联合计算机会议（1987）\n\
+  * “一种单向无栈快速排序算法，”`BIT` 26(1986), 127-130，与 D.E. Knuth 合著\n* “一种反转排列的算法，”`Information\
+  \ Processing Letters` 12(1981), 237-238\n\n# 致谢\n\n| 特别感谢：Tan 博士及其家人，我的姐妹 Jacob\
+  \ Chung 博士，我的姐姐 Shuching Chung 博士，以及我的两只猫 Mimi 和 Maomao。 |\n| -- 郭淑芬 |\n\n# 前言\n\
+  \n## 本书的组织结构\n\n本书是 `Coding in JavaFX Step by Step Build Graphics Toolkit` 系列书的第一卷（`VOLUME\
+  \ Ⅰ`）。由于内容非常丰富，无法整合在一本书中管理，因此章节被组织在不同的卷册中：\n\n### 1. 第一卷：开发图像查看组件\n* **第 1 章**：基础图像查看器\n\
+  * **第 2 章**：带有浏览按钮的增强图像查看器\n* **第 3 章**：具有幻灯片功能的增强图像查看器\n\n### 2. 第二卷：开发交互式形状绘制工具\n\
+  * **第 1 章**：线条绘制器\n  根据绘板上的鼠标事件绘制线条。\n* **第 2 章**：折线绘制器\n  根据绘板上的鼠标事件绘制折线。\n* **第\
+  \ 3 章**：多边形绘制器\n  根据绘板上的鼠标事件绘制多边形。\n* **第 4 章**：路径绘制器\n  根据绘板上的鼠标事件绘制路径。\n* **第\
+  \ 5 章**：二次贝塞尔曲线绘制器\n*  根据绘板上的鼠标事件绘制由二次贝塞尔曲线组成的路径。\n* **第 6 章**：基础绘制工具\n  在名为 `drawtool`\
+  \ 的包中创建集成类，以方便各种形状绘制器的开发——矩形绘制器、圆形绘制器和椭圆绘制器。\n* **第 7 章**：带有预定义绘制器的增强绘制工具\n  增强\
+  \ `drawtool` 包并实现多种绘制器，位于 `drawtool.drawer` 包中，包含这些预定义的形状绘制器——`LineDrawer`、`PolylineDrawer`、`PolygonDrawer`、`PathDrawer`、`BazierCurveDrawer`、`RectangleDrawer`、`CircleDrawer`、`EllipseDrawer`\
+  \ 和 `ShapeMover`——它们都是 `ShapeDrawer` 的子类。\n* **第 8 章**：初始 `JFXDrawTools` \n  通过集成所有预定义的形状绘制器并利用增强的形状绘制\
+  \ API，开发 `JFXDrawTools` 的初始版本。\n\n### 3. 第三卷：开发交互式正多边形绘制工具\n* **第 1 章**：具有正多边形形状能力的增强绘制工具\n\
+  \  引入 `RegularPolygon` 类。\n* **第 2 章**：带有正多边形的增强绘制工具\n  引入 `RegularPolygonDrawer`，它是\
+  \ `ShapeDrawer` 的子类，位于 `drawtool.drawer`。\n* **第 3 章**：带有正多边形绘制器的 JFXDrawTools\n\
+  \  将正多边形绘制器集成到 JFXDrawTools。\n\n### 4. 第四卷：草稿保存与加载\n* **第 1 章**：带有写入器的增强绘制工具\n \
+  \ 引入 `DrawWriter` 类，位于 `drawtool.io`。\n* **第 2 章**：带有加载器的增强绘制工具\n  引入 `DrawLoader`\
+  \ 类，位于 `drawtool.io`。\n* **第 3 章**：带有写入器和加载器的 JFXDrawTools\n  将草稿保存和加载功能集成到 JFXDrawTools。\n\
+  \n### 5. 其他\n每章末都有一个总结部分，列出了该章节涉及的 JavaFX 库的关键方面。这里是一些核心内容：\n* `javafx.scene.shape`\
+  \ 包中的 `Shape` 类，用于几何图形。\n* `FXML`，一种符合 `XML` 的标记语言，用于构建 GUI。\n* 属性和绑定机制。\n* 用于加载和显示图像的\
+  \ `Image` 类和 `ImageView` 类。\n* `javafx.concurrent` 包中的并发能力。\n* 应用于幻灯片对象的 `FadeTransition`\
+  \ 和 `ParallelTransition`。\n* `javafx.scene.layout` 包中的内置布局面板。\n\n\n\n\n| jfxdrawtools\
+  \ | `JFXDrawTools.java` |\n\n# 第 卷目录\n\n让我们浏览一下第 卷的内容：\n\n* 第 1 章: 基础图像查看器\n   \
+  \ * 1.1 作为 `Application` 的子类创建 `ImageViewer` 类\n    * 1.2 创建菜单栏\n    * 1.3 创建选项菜单和视图子菜单\n\
+  \    * 1.4 实现自适应宽度、自适应高度和原始尺寸查看选项\n    * 1.5 总结\n* 第 2 章: 带有浏览按钮的增强型图像查看器\n    *\
+  \ 2.1 添加“下一页”按钮\n    * 2.2 在 `StackPane` 中调整“下一页”按钮的默认位置\n    * 2.3 添加“上一页”按钮并调整其在\
+  \ `StackPane` 中的位置\n    * 2.4 实现鼠标点击事件处理器\n    * 2.5 `Image Viewer V1.1` 的完整源代码\n\
+  \    * 2.6 总结\n* 第 3 章: 带有幻灯片轮的增强型图像查看器\n    * 3.1 在 `BorderPane` 底部添加状态栏\n    *\
+  \ 3.2 改进按钮的响应效果\n    * 3.3 添加幻灯片功能\n    * 3.4 在幻灯片之间添加淡入过渡\n    * 3.5 `Image Viewer\
+  \ V1.2` 的完整源代码\n    * 3.6 总结\n\n图 1. JavaFX 8 中图像查看器的快照。\n\n![](img/image00122.jpeg\
+  \ \"image_viewer_1.jpg\")\n\n## 为什么选择这本书\n\n本书适用于兴趣使用 JavaFX 库开发丰富客户端应用程序的 GUI 的软件开发者。\n\
+  \n书中通过分步开发真实的 Java 应用程序，展示了 JavaFX 中的重要功能。\n\n书中使用了说明性图表来帮助读者立即掌握抽象概念。每章中使用的所有图表都是使用本系列书中开发的图形工具创建的。\n\
+  \n如果你属于以下情况，这本书就适合你：\n\n*   Java GUI 程序员（无论是新手还是专业人士），刚开始接触 JavaFX。\n*   具备 JavaFX\
+  \ 基础知识并想学习如何开发交互式工具的 Java 程序员。\n*   对面向对象的 JavaFX 图形工具和实际应用感兴趣，并希望获得完整且文档良好的源代码的专业软件工程师。\n\
+  \n## 本书所需\n\n如果你想编译和运行书中包含的应用程序，你需要下载并安装 `JDK 8`。这里是下载最新版本 `JDK 8` 的网站。要从此 Kindle\
+  \ 电子书中复制完整源代码，建议如下：\n\n1. 在你的电脑上安装 `Calibre`（一个免费开源软件）。\n2. 使用 `Calibre` 中的“添加书籍”功能添加\
+  \ `Calibre` 的 .mobi 文件。\n3. 从 `Calibre` 中打开书籍并将源代码复制到 Java 文件中。\n\n### 引言\n\n本系列书籍是一份针对软件开发者使用\
+  \ JavaFX 构建 Java 应用程序 GUI 的教程，JavaFX 已成为 Java SE 开发工具包 (JDK 8) 的一部分。系列书籍的主要目标是提供一份全面的手册，介绍\
+  \ JavaFX 的常用功能和精髓。通过分步开发复杂的工具包，展示了 JavaFX 提供的 API 的用法。系列书中包含了图形工具包的完整源代码、一组可重用的类以及可嵌入的\
+  \ JavaFX 应用程序。\n\n## JavaFX 历史\n\n现在让我们浏览 JavaFX 演进的时间线，并领略 JavaFX 的前身：\n\nSeeBeyond\
+  \ Technology Corporation 的 Chris Oliver 开发了一项名为 `F3` 的脚本，它是“形式跟随功能”（Form Follows\
+  \ Function）的缩写；它允许开发者访问 Swing 类并为快速开发丰富的互联网应用程序创建用户界面 (GUI)。\n\nSun Microsystems\
+  \ 在 2005 年 9 月收购了 SeeBeyond，`F3` 在 2007 年 5 月更名为 JavaFX Script。\n\n2008 年 12 月，JavaFX\
+  \ 1.0 发布，开发者一直依赖 JavaFX Script 开发 JavaFX 应用程序，直到三年后 JavaFX 2.0 发布。\n\n2010 年 1 月，Oracle\
+  \ 完成了对 Sun Microsystems 的收购并继续维护 JavaFX。\n\n2010 年 9 月的 JavaOne 大上，Oracle 宣布 JavaFX\
+  \ Script 将停止使用。\n\n2011 年 10 月，JavaFX 2.0 发布，开发者开始使用标准 Java 语言而非 JavaFX Script 来访问\
+  \ JavaFX 库的 API。然而，除了 Java SE JDK 和 JavaFX Runtime 之外，开发和运行使用 JavaFX 2.0 编译的应用程序还需要安装\
+  \ JavaFX SDK。\n\n2013 年 2 月，JavaFX 2.2.7 发布，JDK7 包含了 JavaFX SDK 和 JavaFX Runtime。JavaFX\
+  \ 与 JDK 的集成为 JavaFX 开发者带来了极大的便利。使用 JDK 7 及更高版本编译的 JavaFX 应用程序不需要额外的安装。\n\n2014 年\
+  \ 3 月 18 日，JavaFX 8 作为 Java SE 开发工具包 (JDK 8) 的一部分发布。\n\n截至本书 2016 年 3 月出版时，最新的 JDK\
+  \ 版本为：2015 年 10 月 20 日的 JDK 866 以及 2016 年 1 月的 JDK 872。\n\nJDK 9 的发布（GA）计划于 2017\
+  \ 年 3 月 23 日。\n\n## 前提\n\n书中介绍的 JavaFX 应用程序使用 JavaFX 包提供的 API 构建 GUI。不需要熟悉 Swing\
+  \ 包，但读者必须熟悉 Java 编程语言的基础。如果你是 Java 新手，请访问此网站 `http://docs.oracle.com/javase/tutorial/index.html`\
+  \ 获取 Java 技术的初步知识。按以下顺序阅读 Oracle 在线文档：\n\n1. 简单的 Java 应用程序“Hello World!”与安装：\n \
+  \   访问 `http://docs.oracle.com/javase/tutorial/getStarted/index.html`\n2. Java 语言的概念和特性：\n\
+  \    访问 `http://docs.oracle.com/javase/tutorial/java/index.html`\n3. Java 集合框架：\n\
+  \    访问 `http://docs.oracle.com/javase/tutorial/collections/index.html`\n4. 核心 Java\
+  \ 类：\n    访问 `http://docs.oracle.com/javase/tutorial/essential/index.html`\n\n##\
+  \ JavaFX 应用程序简介\n\n以下示例旨在让新接触 JavaFX 的读者快速预览如何创建 JavaFX 应用程序。\n\n要开始学习，你需要创建一个继承自\
+  \ `javafx.application.Application` 的类（这是 JavaFX 应用程序的入口），并重写必须覆盖的抽象 `start` 方法。一个典型的\
+  \ `start` 方法如下：\n\n\n\n\n\n```java\npackage imageviewer;\n\nimport javafx.application.Application;\n\
+  import javafx.scene.Scene;\nimport javafx.scene.layout.BorderPane;\nimport javafx.scene.layout.StackPane;\n\
+  import javafx.stage.Stage;\n\n/**\n * File Name: ImageViewer.java\n *\n * @author\
+  \ Shufen Kuo\n */\n\npublic class ImageViewer extends Application {\n\n  @Override\n\
+  \  public void start(Stage stage) {\n    BorderPane rootPane = new BorderPane();\n\
+  \    StackPane imageArea = new StackPane();\n    rootPane.getChildren().add(imageArea);\n\
+  \n    Scene scene = new Scene(rootPane, 600, 400); \n    stage.setTitle(\"ImageViewer\
+  \ V1.0\");\n    stage.setScene(scene);\n    stage.show();\n  }\n\n  public static\
+  \ void main(String[] args) {\n    launch(args);\n  }\n}\n```\n\n### Scene 和 Stage\n\
+  \n在 `start` 方法中出现了两个重要的类 `Scene` 和 `Stage`。通常情况下，主要任务是创建在名为场景图（scene graph）的分层次树结构中管理的图形用户界面（GUI），将场景图的根节点关联到\
+  \ `Scene` 对象，然后将场景放置在 `Stage` 对象上。`Stage` 代表 JavaFX 应用程序顶层容器，作为场景图的窗口与用户进行交互。\n\n\
+  接下来的快照让你对 JavaFX 应用程序的 GUI 外观有一个初步了解：图 1. JavaFX 应用程序快照。（Images/image00123.jpeg\
+  \ javafx_app_guis）\n\n### 节点\n\nJavaFX 引入了一个基础类 `javafx.scene.Node`，它继承自 `java.lang.Object`\
+  \ 并提供了对所有用户界面都有用的常用属性和方法。我们经常使用节点（nodes）一词来引用 GUI。\n\n场景图可能包含各种节点。节点可以是父节点（带有子节点的节点）或叶子节点（没有子节点的节点）；每个节点只能有一个父节点，而根节点没有。场景图中的所有节点都派自\
+  \ `javafx.scene.Node`。为了快速识别场景图中基本的节点类型，我们根据是否具有添加子节点的能力来区分它们。\n\n*   你可能向这些节点添加子节点：\n\
+  \    以下类被频繁用作父节点：`Group`、`Pane` 以及内置的布局面板（它们是 `Pane` 的直接子类）。通常你调用 `getChildren()`\
+  \ 方法来获取类型为 `ObservableList<Node>` 的列表（它是 `java.util.List` 的子接口），然后使用开发者熟悉的 `Collection`\
+  \ 中定义的各种实用程序来操作列表的内容。\n\n*   你可能无法向这些节点添加子节点：\n    以下类始终被用作叶子节点：`Canvas`、`ImageView`、`MediaView`\
+  \ 以及 `Shape` 的所有直接子类，例如 `Rectangle`、`Ellipse` 等。\n\n### JavaFX 和 Swing\n\n现在，有一个有趣的问题。多年来开发者一直使用\
+  \ Swing API 构建 Java 应用程序的 GUI，这些是 Java Foundation Classes（JFC）的 GUI 组件。为什么除了 Swing\
+  \ 之外我们还需要 JavaFX？\n\n如果你拥有大量用 Swing 编写遗留代码，并希望将 JavaFX 特性整合到 Swing 代码中，JDK 8 提供了机制；反之，你可以在\
+  \ JavaFX 应用程序中包含 Swing 组件。\n\nJavaFX-Swing 互操作性主题在本书中未介绍。如果你对这个主题感兴趣，请在此访问 Oracle\
+  \ 在线文档“JavaFX: Interoperability -- Java-Swing Interoperability”：[`docs.oracle.com/javase/8/javafx/interoperability-tutorial/fx_swing.htm`](http://docs.oracle.com/javase/8/javafx/interoperability-tutorial/fx_swing.htm)\n\
+  \nJavaFX 是下一代 Java GUI。为了说明使用 JavaFX 能力的优势，除了 JavaFX 和 Swing 之间的互操作性外，我们在下面的章节介绍了\
+  \ JavaFX 的重要特性。\n\n### JavaFX 的精髓\n\nJavaFX 不仅允许你快速创建具有视觉用户界面的应用程序，还包含了诱人且独特的能力。它们列举如下：\n\
+  \n#### 内置布局面板\n\nJavaFX 的布局面板（layout panes）是容器，能够自动对节点执行各种类型的摆放操作。你可以在布局面板中放置任意数量的节点，布局面板本身也是一个节点，因此也可以嵌套在另一个布局面板中。使用布局面板的主要优势是避免手动指定每个节点的大小和位置的繁琐。由于场景图中的这些节点是以树结构管理的，布局算法会根据其布局类型和指定的布局属性递归地计算每个节点的大小和位置，并且当窗口大小调整事件发生时，会触发动态重新计算。\n\
+  \n有 8 种内置布局面板，位于 `javafx.scene.layout` 包中：\n\n*   `BorderPane`：`BorderPane` 将节点分别放置在五个位置，以创建经典窗口的外观，通常顶部区域用于菜单栏或工具栏，底部区域用于状态栏，左右侧区域用于导航面板，中心区域用于工作区域。\n\
+  *   `HBox`：`HBox` 将节点放置在一行（水平方向）。\n*   `VBox`：`VBox` 将节点放置在一列（垂直方向）。\n*   `GridPane`：`GridPane`\
+  \ 将节点放置在具有多行多列的网格中。这是一个显示一系列键值对属性的实用用用户界面。\n*   `StackPane`：`StackPane` 将所有节点堆叠在一起，默认以居中对齐。所有子节点在容器中心相互重叠，后创建的节点位于先上方。但你可以使用静态方法\
+  \ `StackPane.setAlignment(Node child, Pos value)` 和 `StackPane.setMargin(Node child,\
+  \ Insets value)` 来调整节点的强制位置。\n*   `FlowPane`：`你可以可以指定 `FlowPane` 的方向属性。对于水平 `FlowPane`，节点从左到右排列，在容器宽度边界处换行。对于垂直\
+  \ `FlowPane`，节点从上到下排列，在容器高度边界处换列。\n*   `TilePane`：`TilePane` 与 `FlowPane` 类似，不同之处\
+  \ `TilePane` 网格中的每个单元具有相同的大小。\n*   `AnchorPane`：`AnchorPane` 相对于指定的锚点放置节点，共有四个点：`topAnchor`、`rightAnchor`、`bottomAnchor`\
+  \ 和 `leftAnchor`。\n\n#### 参考 Oracle 在线文档“Working with Layouts in JavaFX”：\n\n[`docs.oracle.com/javase/8/javafx/layout-tutorial/index.html`](http://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html)\n\
+  \n### 使用 CSS 进行自定义\n\nJavaFX 允许使用 CSS（层叠样式表）来描述应用程序用户界面的样式。通过 CSS 定义如颜色、字体、外边距、内边距、宽度、高度、线条、背景图像等演示属性，并与应用程序代码分离，在许多方面显示了巨大的便利性：\n\
+  \n*   从软件提供者的角度自定义：从同一组代码编译的应用程序可以呈现各种样式，每种样式符合不同的客户需求。\n*   从应用程序用户的角度自定义：即使在软件发布后，如果应用程序用户对\
+  \ UI 的外观有偏好，也可以在客户现场修改 CSS 文件定义的演示属性。\n*   对样式设计者的利益：应用程序代码与样式定义的分离提高了代码的可读性，并通让图形设计师专注于处理\
+  \ CSS，从而简化了任务。\n*   对软件开发者的利益：\n\n\n\n\n\n在测试过程中，开发者可能会频繁更改 CSS 文件中定义的样式属性，以评估 GUI（图形用户界面）的不同外观。如果每次更改都需要退出并重启应用程序，那将是一项非常麻烦的任务。为了方便这一评估过程，最佳策略是设计一个临时的\
+  \ `Load` 按钮，当任何样式属性发生变化时，只需点击该按钮重新加载 CSS，而无需退出并重启应用程序，从而节省大量的测试时间。\n\n## JavaFX\
+  \ 中的 CSS 与 HTML CSS 的相似性\n\nJavaFX 中 CSS 的语法与 HTML 中的 CSS 相同，因此任何具有浏览器 CSS 经验的设计师都可以花费极少的学习成本为\
+  \ JavaFX 应用程序的 UI 设计样式。\n\n### 参考 Oracle 在线文档“Skinning JavaFX Applications with\
+  \ CSS”：\n\n[`docs.oracle.com/javase/8/javafx/user-interface-tutorial/css_tutorial.htm`](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/css_tutorial.htm)\n\
+  \n## 使用 FXML 创建用户界面\n\nFXML 是一种符合 XML（可扩展标记语言）格式的标记语言，具有额外的规则，用于创建 JavaFX 应用程序的用户界面。考虑到手动编写\
+  \ FXML 容易出错，一种可行的方法是通过 GUI 构建器生成 FXML 代码。\n\n在本系列书籍中，我们介绍了一个实用的应用程序 `JFXDrawTools`，它是一种专门用于创建自\
+  \ `Shape` 子类实例的 GUI 构建器。用户可以交互式地创建草图（无论是 `Shape` 还是 `ImageView`），操作其属性并将编辑结果保存为\
+  \ FXML 格式的文件，这些文件稍后可以加载回以继续编辑过程，或者被其他 JavaFX 应用程序动态加载。\n\n将应用程序的 GUI（视图 View）与其业务逻辑（模型\
+  \ Model）分离被认为是一种良好的编程实践。FXML 文件表示视图，而控制器（controller）是一个在视图和模型之间传递信息的 Java 类。使用 FXML\
+  \ 构建 GUI 使得应用程序开发者能够有效地采用 MVC（模型-视图-控制器）架构。\n\n### 参考 Oracle 在线文档“JavaFX: Mastering\
+  \ FXML”：\n\n[`docs.oracle.com/javase/8/javafx/fxml-tutorial/index.html`](http://docs.oracle.com/javase/8/javafx/fxml-tutorial/index.html)\n\
+  \n## 属性与绑定的强大能力\n\nJavaFX 特有的属性（Properties）概念遵循了 JavaBeans 组件中引入的设计规范，它通常与绑定（Binding）机制结合使用，整体上为各种编程需求提供了强大、精炼且简洁的解决方案。\n\
+  \n在本系列书籍介绍的 `JFXDrawTools` 应用程序中，我们详尽地演示了属性和绑定的用法。在属性窗口（Properties Window）的实现中，使用了合适的\
+  \ UI 控件（如文本字段、选择框、组合框等）来查看相关对象的属性。绑定机制被用于 UI 控件与其对应的对象属性进行双向链接，这种关系在属性窗口即将显示时建立。当用户更改\
+  \ UI 控件中显示的数据时，更改会立即反映到相关对象的相应属性。\n\n### 参考 Oracle 在线文档“JavaFX: Properties and Binding\
+  \ Tutorial”：\n\n[`docs.oracle.com/javase/8/javafx/properties-binding-tutorial/index.html`](http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/index.html)\n\
+  \n## 变换与过渡的复杂机制\n\nJavaFX 内置的节点变换（transformations）能力对于开发图形编辑器、绘图工具、图像查看器、GUI 构建器等图形软件包非常方便。\n\
+  \n这里是处理变换的类：`Translate`、`Rotate`、`Scale` 和 `Shear`。它们都派自 `Transform` 类，并位于 `javafx.scene.transform`\
+  \ 包。\n\nJavaFX 过渡（transitions）为创建动画提供了简洁的方法。有许多需要动画功能的应用，这里是一些案例：在警报情况下引起注意、在删除操作期间将对象投入回收站、在数据加载期间指示中间状态等……\n\
+  \n在本系列书籍介绍的 `ImageViewer` 应用程序中，我们在幻灯片功能中对图像对象应用了 `FadeTransition` 和 `ParallelTransition`，以同时使新图像淡入并将旧图像淡出。\n\
+  \n这里是处理过渡的类：`FadeTransition`、`RotateTransition`、`ScaleTransition`、`TranslateTransition`、`FillTransition`、`StrokeTransition`、`PathTransition`、`ParallelTransition`、`SequentialTransition`、`PauseTransition`。它们都派自\
+  \ `Transition` 类（这是一个定义动画基本功能的抽象类），并位于 `javafx.animation` 包。\n\n### 参考 Oracle 在线文档“JavaFX:\
+  \ Transformations, Animations, and Visual Effects”：\n\n[`docs.oracle.com/javase/8/javafx/visual-effects-tutorial/index.htm`](http://docs.oracle.com/javase/8/javafx/visual-effects-tutorial/index.html)\n\
+  \n## 2D 几何原语与文本都是 JavaFX 节点\n\nJavaFX 提供了一个 `Shape` 类，它继承自 `javafx.scene.Node` 类，是\
+  \ 2D 几何基本形式的超类。应用于几何原语的面向对象概念促进了图形应用程序的。\n\n这里是派自 `Shape` 的类：`Arc`、`Circle`、`CubicCurve`、`Ellipse`、`Line`、`Path`、`Polygon`、`Polyline`、`QuadCurve`、`Rectangle`、`SVGPath`、`Text`。除了\
+  \ `Text` 类外，其余位于 `javafx.scene.shape` 包。\n\n请注意位于 `javafx.scene.text` 包的 `Text`\
+  \ 类也被视为形状，它为文本绘制工具的发展提供了支持。所有 JavaFX 节点的功能适用于文本对象。你可以像处理任何几何形状一样处理它。文本对象可以放置在布局面板中以利用自动布局能力、应用变换和过渡，以及使用\
+  \ CSS 自定义样式等。\n\n### 参考 Oracle 在线文档“Using Text in JavaFX”：\n\n[`docs.oracle.com/javase/8/javafx/user-interface-tutorial/text-settings.htm`](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/text-settings.htm)\n\
+  \n## 其他处理许多复杂问题以短开发时间的显著功能\n\n* `ImageView` 类用于加载和显示图像\n\n  `ImageView` 类继承自 `javafx.scene.Node`，配合\
+  \ `Image` 类用于加载和显示图像。JavaFX 还提供了对位图图像进行操作的 API，`PixelReader` 定义了从 `Image` 对象读取像素的方法，而\
+  \ `PixelWriter` 定义了向 `Image` 对象写入像素的方法。所有这些都位于 `javafx.scene.image` 包。\n\n  ###\
+  \ 参考 Oracle 在线文档“Using the Image Ops API”：\n\n  [`docs.oracle.com/javase/8/javafx/graphics-tutorial/image_ops.htm`](http://docs.oracle.com/javase/8/javafx/graphics-tutorial/image_ops.htm)\n\
+  \n* `WebView` 类用于管理网页\n\n\n\n\n\nJavaFX 架构中嵌入了一个 Web 引擎组件，它位于 `javafx.scene.web`\
+  \ 包中提供一组 API，用于开发具有 浏览器功能的应用程序。要查看网页，首先需要创建一个扩展 `javafx.scene.Parent` 的 `WebView`\
+  \ 对象（该对象继承了节点（node）的所有特性），然后获取与之关联的 `WebEngine`。`WebEngine` 提供了与操作网页相关的方法，例如：加载/显示网页（通过提供给定的\
+  \ URL 或页面内容）、访问由 `WebEngine` 为加载的网页创建的文档对象模型（DOM）、处理由 JavaScript 触发的各种事件等。\n\n###\
+  \ 参考 Oracle 在线文档“JavaFX: Adding HTML Content to JavaFX Applications”：\n\n[`docs.oracle.com/javase/8/javafx/embedded-browser-tutorial/index.html`](http://docs.oracle.com/javase/8/javafx/embedded-browser-tutorial/index.html)\n\
+  \n### 用于编辑 HTML 页面的 HTMLEditor 类\n\n对对 HTML 编辑能力的完整支持来自 `HTMLEditor` 类，该类扩展自 `javafx.scene.control.Control`\
+  \ 并位于 `javafx.scene.web` 包中。要在 JavaFX 应用程序中嵌入 HTML 编辑器，你只需创建 `HTMLEditor` 的实例，将其添加到场景图（scene\
+  \ graph）中，它就可以与用户交互了。以下两个方法对于获取和设置编辑器的 HTML 内容有用：`getHtmlText()` 和 `setHtmlText(java.lang.String\
+  \ htmlText)`。\n\n与处理多行纯文本的类似控件 `TextArea` 不同，`HTMLEditor` 格式化符合 HTML 语法的文本。\n\n\
+  HTML 编辑器的用法广泛应用于软件各个领域，例如：博主撰写发布的文章（内容管理系统）、邮件系统用户撰写消息（消息系统）、在线卖家为上架准备产品描述（电子商务管理系统）等。\n\
+  \n### 参考 Oracle 在线文档“JavaFX: Working with JavaFX UI Components -- HTML Editor”：\n\
+  \n[`docs.oracle.com/javase/8/javafx/user-interface-tutorial/editor.htm`](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/editor.htm)\n\
+  \n### 用于渲染数据的图表组件\n\n以下类位于 `javafx.scene.chart` 包中，用于绘制各种类型的图表：\n\n* `AreaChart`,\
+  \ `StackedAreaChart`\n* `BarChart`, `StackedBarChart`\n* `BubbleChart`\n* `LineChart`\n\
+  * `PieChart`\n* `ScatterChart`\n\n`Chart` 类是所有图表组件的基类，扩展自 `javafx.scene.layout.Region`\
+  \ 类，因此继承了 `javafx.scene.Node` 类的所有适用特性。\n\n### 参考 Oracle 在线文档“JavaFX: Working with\
+  \ JavaFX UI Components -- Working with JavaFX Charts”：\n\n[`docs.oracle.com/javase/8/javafx/user-interface-tutorial/charts.htm`](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/charts.htm)\n\
+  \n### 用于播放媒体的 MediaView 类\n\n扩展 `javafx.scene.Node` 的 `MediaView` 类与 `MediaPlayer`\
+  \ 和 `Media` 类一起使用，在 JavaFX 应用程序中播放媒体。所有与媒体相关的类都位于 `javafx.scene.media` 包。\n\n###\
+  \ 参考 Oracle 在线文档“JavaFX: Incorporating Media Assets Into JavaFX Applications”：\n\
+  \n[`docs.oracle.com/javase/8/javafx/media-tutorial/`](http://docs.oracle.com/javase/8/javafx/media-tutorial/)\n\
+  \n# JavaFX 基础 UI 组件\n\n除了上述的 JavaFX 核心外，JavaFX 还提供了基础 UI 组件，它们位于 `javafx.scene.control`\
+  \ 包中并派自 `javafx.scene.control.Control` 类；它们通常被称为 UI 控件。\n\n以下是可用的 UI 控件，未标记星号 (\\\
+  *) 的控件在 Swing 中有对应的控件：\n\n* `Label`, `Button`, `RadioButton`, `ToggleButton`,\n\
+  * `CheckBox`, `ChoiceBox`,\n* `ComboBox`, `ListView`, `TableView`,\n* `TextField`,\
+  \ `TextArea`, `PasswordField`, `HTMLEditor`\n* `ScrollBar`, `ScrollPane`, `Slider`,\
+  \ `ProgressBar`, `ProgressIndicator`, `ToolBar`,\n* `MenuBar`, `MenuButton`, `SplitMenuButton`,\n\
+  * `ColorPicker`, `DatePicker`, `Separator`, `Pagination`, `SplitPane`, `TabPane`,\
+  \ `TitledPane`, `Accordion`, `TreeView`, `TreeTableView`, `Hyperlink`。\n\n以下 UI\
+  \ 组件通常与上述 UI 控件归为同一类。\n\n* `Tooltip` 位于 `javafx.scene.control` 包中，但派自 `javafx.scene.control.PopupControl`\
+  \ 类。\n* `MenuItem`, `Menu`, `CheckMenuItem`, `RadioMenuItem` 位于 `javafx.scene.control`\
+  \ 包中。扩展 `java.lang.Object` 的 `MenuItem` 是另外三个类的基类。\n* `FileChooser` 位于 `javafx.stage`\
+  \ 包并扩展自 `java.lang.Object`。\n\n### 参考 Oracle 在线文档“JavaFX: Working with JavaFX UI\
+  \ Components”：\n\n[`docs.oracle.com/javase/8/javafx/user-interface-tutorial/editor.htm`](http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/editor.htm)\n\
+  \n\n\n\n\nJavaFX 程序的图形用户界面是通过层次树结构管理的，这种结构被称为场景图（scene graph）。在 `ImageViewer` 应用中，我们使用\
+  \ `BorderPane` 作为场景图的根节点，并将 `StackPane` 放在 `BorderPane` 的中心作为图像渲染区域。`BorderPane`\
+  \ 和 `StackPane` 都是内置的布局面板，位于 `javafx.scene.layout` 包中，并且是 `javafx.scene.layout.Pane`\
+  \ 类的直接子类。\n\n`BorderPane` 类允许你创建具有经典主窗口外观的图形用户界面。在下一节中，你将看到在 `BorderPane` 顶部添加了一个菜单栏，在随后的章节中，会在底部添加一个状态栏。\n\
+  \n`StackPane` 类将其子节点按堆叠方式布局，将后创建的子节点置在前一个节点之上。在 `ImageViewer` 应用中，由于一次只查看一张图像，因此\
+  \ `StackPane` 只有一个节点。如果图像的大小小于 `StackPane` 的大小，图像将放置在 `StackPane` 的中心。如果图像的大小大于\
+  \ `StackPane`，`StackPane` 将自动扩展以容纳整个图像；如果应用程序窗口中的视图空间不够大，默认情况下只能看到图像的中心部分。在稍后的章节中，我们将演示如何避免\
+  \ `StackPane` 被其内容重置大小，请参见此处。\n\n`Scene` 对象作为场景图的容器被创建，并接收一个根节点作为参数。在 `ImageViewer`\
+  \ 应用中，根节点是 `BorderPane`，`Scene` 对象的初始宽度和高度设置为 600 像素和 400 像素。`BorderPane` 和 `StackPane`\
+  \ 都是可调整大小的布局面板；因此，如果用户动态调整应用程序窗口的大小，场景将调整大小，并将调整大小事件传递给其根节点，从而重新计算图像渲染区域的大小。\n\n\
+  你使用 `Stage` 类中定义的 `setScene` 方法将场景放置在 `Stage` 上使其运行。`Stage` 是 `javafx.stage.Window`\
+  \ 的直接子类；它是 JavaFX 应用的顶层窗口。\n\nJavaFX 系统会创建一个 `Stage` 对象（称为主阶段，primary stage），并将其传递给\
+  \ `start` 方法，`start` 是 `Application` 类中定义的一个抽象方法。开发者可以根据需要为应用程序构建额外的 `Stage` 对象。\n\
+  \n以下代码演示了如何创建一个作为 `Application` 直接子类的 `ImageViewer` 类，并重写 `start` 方法。代码如下：\n\n列表\
+  \ 1-1. 创建扩展 `Application` 类的 `ImageViewer` 类，重写 `start` 方法，创建 `BorderPane` 作为场景的根节点，并将\
+  \ `StackPane` 放在 `BorderPane` 的中心作为图像渲染区域：\n\n```\n package imageviewer;\n\nimport\
+  \ javafx.application.Application;\nimport javafx.scene.Scene;\nimport javafx.scene.layout.BorderPane;\n\
+  import javafx.scene.layout.StackPane;\nimport javafx.stage.Stage;\n\n/**\n * FileName:ImageViewer.java\n\
+  \ *\n * 此应用创建一个 BorderPane 作为场景的根节点，\n * 并在 BorderPane 的中心添加一个 StackPane\n * 场景的初始大小设置为\
+  \ 600x400\n * StackPane 的大小将自动设置以适应场景的大小。\n * 当用户调整窗口大时，StackPane 将会被调整大小。\n */\n\
+  \npublic class ImageViewer extends Application {\n\n  @Override\n  public void start(Stage\
+  \ stage) {\n    BorderPane rootPane = new BorderPane();\n    StackPane imageArea\
+  \ = new StackPane();\n    rootPane.setCenter(imageArea);\n\n    Scene scene = new\
+  \ Scene(rootPane, 600, 400); \n    stage.setTitle(\"ImageViewer V1.0\");\n    stage.setScene(scene);\n\
+  \    stage.show();\n  }\n\n  public static void main(String[] args) {\n    launch(args);\n\
+  \  }\n}\n```\n\n### 1.1.1 JavaFX 线程与 Java 启动线程\n\n`Application` 类是 JavaFX 应用的入口点。它定义了以下重要方法：\n\
+  \n`public void init() throws Exception`\n\n`public abstract void start(Stage primaryStage)\
+  \ throws Exception`\n\n`public void stop() throws Exception`\n\n`init` 方法不执行任何操作，从\
+  \ Java 启动线程中调用。而 `start` 方法是一个抽象方法且必须被重写，它在 `init` 方法返回后从 JavaFX 线程中调用。如果你需要在 `start`\
+  \ 方法之前执行一些初始工作，可以通过重写 `init` 方法来实现；但至关重要是，作为活跃场景成员的节点必须从 JavaFX 线程访问。同样，`Scene`\
+  \ 对象或 `Stage` 对象的构造也必须从 JavaFX 线程访问。\n\n### 1.1.2 捕获图像渲染区域的调整事件\n\n出于调试和测试目的，在此处注册了一个\
+  \ `ChangeListener`，它提供了一个 `changed` 方法，以便在图像渲染区域的宽度或高度变化时收到通知。当用户调整应用程序窗口大时，图像渲染区域的宽度或高度就会发生变化。\n\
+  \n为了观察属性值注册监听器，我们使用此方法：\n\n```\n void addListener(ChangeListener<? super T> listener)\
+  \ \n```\n\n该方法定义在 `javafx.beans.value.ObservableValue` 接口中，提供了 `changed(ObservableValue<?\
+  \ extends T> observable, T oldValue, T newValue)` 方法的实现，当属性值更改时调用。\n\n同一个 `ChangeListener`\
+  \ 允许注册到多个 `ObservableValue` 上。为了避免内存泄漏问题，当不再需要观察值时，使用 `removeListener(ChangeListener<?\
+  \ super T> listener)` 方法取消监听器是一种良好的编程习惯，该方法会移除可观测值与监听器之间的链接。\n\n`StackPane` 类从 `javafx.scene.layout.Region`\
+  \ 类继承 `width` 和 `height` 属性。这两个属性的类型都是 `ReadOnlyDoubleProperty`，它是实现 `ObservableValue`\
+  \ 接口的抽象类。正如名称所示，`ObservableValue` 持有一个可观测的值，你可以监听值的变化并采取必要的行动。\n\n以下代码演示了如何监控放置在\
+  \ `BorderPane` 中心 `StackPane` 图像渲染区域的调整大小事件。\n\n导入语句：\n\n```\n import javafx.beans.value.ChangeListener;\n\
+  import javafx.beans.value.ObservableValue;\n```\n\n列表 1-2. 为图像渲染区域的宽度和高度属性添加监听器：\n\
+  \n```\n imageArea.widthProperty().addListener(new ChangeListener<Object>() {\n \
+  \ public void changed(ObservableValue o, Object oldVal, Object newVal) {\n    System.out.format(\"\
+  imageArea width changed from %.1f to %.1f%n\",\n      oldVal, newVal);\n  }\n});\n\
+  imageArea.heightProperty().addListener(new ChangeListener<Object>() {\n  public\
+  \ void changed(ObservableValue o, Object oldVal, Object newVal) {\n    System.out.format(\"\
+  imageArea height changed from %.1f to %.1f%n\",\n      oldVal, newVal);\n  }\n});\n\
+  ```\n\n列表 1-3. `ImageViewer` 类的完整源代码如下：\n\n\n\n\n\n```java\n package imageviewer;\n\
+  \nimport javafx.application.Application;\nimport javafx.beans.value.ChangeListener;\n\
+  import javafx.beans.value.ObservableValue;\nimport javafx.scene.Scene;\nimport javafx.scene.layout.BorderPane;\n\
+  import javafx.scene.layout.StackPane;\nimport javafx.stage.Stage;\n\n/**\n * File\
+  \ Name: ImageViewer.java\n * (in directory: ImageViewer1.0/src/example1/imageviewer/)\n\
+  \ * 此应用程序创建了一个 BorderPane 作为场景的根节点，\n * 并且在 BorderPane 的中心添加了一个 StackPane。\n * 场景的初始大小设置为\
+  \ 600 x 400。\n * StackPane 的大小将自动设置，以适应场景的大小。\n * 当用户调整窗口大时，StackPane 会随之调整大小。\n\
+  \ *\n * @author Shufen Kuo\n */\n\npublic class ImageViewer extends Application\
+  \ {\n\n  @Override\n  public void start(Stage stage) {\n    BorderPane rootPane\
+  \ = new BorderPane();\n    StackPane imageArea = new StackPane();\n    rootPane.setCenter(imageArea);\n\
+  \n    Scene scene = new Scene(rootPane, 600, 400);\n\n    imageArea.widthProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal,\n        Object newVal) {\n        System.out.format(\"imageArea width\
+  \ changed from %.1f to %.1f%n\",\n          oldVal, newVal);\n      }\n    });\n\
+  \    imageArea.heightProperty().addListener(new ChangeListener<Object>() {\n   \
+  \   public void changed(ObservableValue o, Object oldVal,\n        Object newVal)\
+  \ {\n        System.out.format(\"imageArea height changed from %.1f to %.1f%n\"\
+  ,\n          oldVal, newVal);\n     }\n    });\n\n    stage.setTitle(\"ImageViewer\
+  \ V1.0\");\n    stage.setScene(scene);\n    stage.show();\n  }\n\n  public static\
+  \ void main(String[] args) {\n    launch(args);\n  }\n}\n```\n\n图 1-1. `ImageViewer\
+  \ V1.0` 初始外观截图。\n\n![](img/image00124.gif \"first.gif\")\n\n编译并运行该应用程序。\n\n在命令行中编译和运行\
+  \ ImageViewer 的输出：\n\n```\n Microsoft Windows [Version 6.3.9600]\n(c) 2013 Microsoft\
+  \ Corporation. All rights reserved.\n\nF:\\My Documents\\DocRoot\\SHUFEN_JAVA\\\
+  MyBookJFX\\VolumeOne\\ImageViewer1.0\\src\\example1>\njavac -encoding utf-8 -Xlint:unchecked\
+  \ imageviewer\\*.java\n\njar cf imageviewer.jar imageviewer\n\njava -cp imageviewer.jar\
+  \ imageviewer.ImageViewer\nimageArea width changed from 0.0 to 600.0\nimageArea\
+  \ height changed from 0.0 to 400.0\n```\n\n现在，通过拖动应用程序窗口的边缘或角落更改场景的大小，你将看到类似的输出：\n\
+  \n```\n imageArea width changed from 600.0 to 437.0\nimageArea height changed from\
+  \ 400.0 to 263.0\nimageArea width changed from 437.0 to 636.0\nimageArea height\
+  \ changed from 263.0 to 384.0\nimageArea width changed from 636.0 to 587.0\nimageArea\
+  \ height changed from 384.0 to 448.0\n```\n\n## 1.2 创建菜单栏\n\n在本节中，我们正在创建一个 `MenuBar`，并将其添加到\
+  \ `BorderPane` 的顶部，`BorderPane` 是场景图的根节点。\n\n通常，一个 `MenuBar` 对象包含多个水平排列的 `Menu`，而每个\
+  \ `Menu` 又包含多个 `MenuItem`。由于 `Menu` 类继承自 `MenuItem` 类，你可以在一个 `Menu` 内部放置另一个 `Menu`，这种嵌套的称为子菜单。由于\
+  \ `MenuBar` 渲染在窗口上，用户看到的只是菜单名称，只有当鼠标左键点击菜单名称，或者按下定义为菜单快捷键的内存助记键组合时，每个菜单的内容才会显示。\n\
+  \n采用菜单用户界面的优点包括以下点：\n\n*   **占用空间更少**\n    当用户不需要菜单时，它仅占用其名称所需的空间。\n*   **可组织性**\n\
+  \    为了方便访问，你可以根据功能将菜单项组织成树形结构，将相似的菜单项分组在同一个菜单中，通过子菜单避免单个菜单过于拥挤，并将请求频繁的菜单项放置在较高层。通常最重要的项被放在树的顶层。\n\
+  *   **单按键调用动作**\n    你可以使用助记键机制导航 `MenuBar` 内的菜单，并定义快捷键使使用户可以通过一个按键调用 `MenuItem`\
+  \ 的动作。例如，同时按下 Alt 和 F 键显示文件菜单，同时按下 Ctrl 和 S 键执行保存文件操作。\n\n要向 `MenuBar` 添加一个 `Menu`，我们首先调用\
+  \ `getMenus()` 方法，该方法返回一个包含 `Menu` 的 `ObservableList`。`ObservableList` 是 `java.util.List`\
+  \ 的子接口，因此我们可以使用 `add` 方法（Java `Collection` 接口中定义的内置工具方法之一）将菜单附加到列表中。代码如下：\n\n```java\n\
+  MenuBar menuBar = new MenuBar();\nMenu menuFile = new Menu(\"File\");\nmenuBar.getMenus().add(menuFile);\n\
+  ```\n（注：此处原文中存在大量重复的说明和代码，已根据要求进行处理，保留核心逻辑与翻译）\n\n### 1.2.1 将文件添加到菜单\n\n在此应用程序中，`MenuBar`\
+  \ 包含 `File` 菜单。以下代码显示了如何完成这些任务。导入语句：\n\n```java\nimport javafx.application.Platform;\n\
+  import javafx.scene.control.Menu;\nimport javafx.scene.control.MenuBar;\nimport\
+  \ javafx.scene.control.MenuItem;\nimport javafx.event.ActionEvent;\nimport javafx.event.EventHandler;\n\
+  ```\n\n列表 1-6. 为 `ImageViewer` 应用程序添加菜单栏，将其放置在 `BorderPane` 的顶部：\n\n```java\n //\
+  \ 添加菜单栏\nMenuBar menuBar = new MenuBar();\nMenu menuFile = new Menu(\"File\");\n\
+  MenuItem load = new MenuItem(\"Load\");\nMenuItem exit = new MenuItem(\"Exit\");\n\
+  menuFile.getItems().addAll(load, exit);\nmenuBar.getMenus().add(menuFile);\nrootPane.setTop(menuBar);\n\
+  \n// 为退出菜单项添加动作\nexit.setOnAction(new EventHandler<ActionEvent>() {\n  @Override\n\
+  \  public void handle(ActionEvent e) {\n    Platform.exit();\n  }\n});\n```\n\n\
+  ### 1.2.2 从打开对话框选择图像文件并在 StackPane 中显示\n\n为了导航文件系统，我们使用 `FileChooser` 类，它提供了一个方便的方法\
+  \ `showOpenDialog(Window owner)` 用于选择打开的文件。\n\n`Load` 菜单的动作是浏览本地文件系统、选择图像文件并显示在图像区域。\n\
+  \n`setOnAction(EventHandler<ActionEvent> value)` 方法由 `MenuItem` 类提供，用于添加事件处理器来处理\
+  \ `Load` 菜单的 `ActionEvent`。\n\n为了加载并显示图像，我们结合使用 `ImageView` 类和 `Image` 类。`Image`\
+  \ 类根据字符串类型的 URL 加载图像，而 `ImageView` 类在图像区域显示图像。\n\n首先，我们创建一个 `ImageView` 并作为 `StackPane`\
+  \ 的子节点。随后，当获取图像文件时，我们将创建一个 `Image` 对象来加载文件，并调用 `ImageView` 类提供的 `setImage(Image\
+  \ value)` 方法查看图像。\n\n详细说明如下：当执行 `FileChooser` 的 `showOpenDialog` 方法时，会弹出文件打开对话框。当用户选择文件并点击对话框中的“打开”按钮时，`showOpenDialog`\
+  \ 方法会将所选的文件（类型为 `File`）返回给调用者，调用者将其转换为字符串表示的 URL，并根据该 URL 创建 `Image` 对象；此时，图像已加载到内存中，但尚未显示在屏幕上。\n\
+  \n\n\n\n以下代码片段实现了这些任务：\n\n### 导入语句\n\n```java\n import java.io.File;\nimport javafx.scene.image.Image;\n\
+  import javafx.scene.image.ImageView;\nimport javafx.stage.FileChooser;\n```\n\n\
+  ### 列表 1-7. 创建 `FileChooser` 对象、`ImageView` 对象并为 `Load` 菜单项添加 `EventHandler` 以加载图像：\n\
+  \n```\n // 创建文件选择器\nfinal FileChooser fileChooser = new FileChooser();\nfileChooser.setTitle(\"\
+  Open an Image File\");\n\n// 创建视图，添加到图像区域\nfinal ImageView imageView = new ImageView();\n\
+  imageArea.getChildren().add(imageView);\n\n// 为 Load 菜单项添加动作\nload.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n  @Override\n  public void handle(ActionEvent e)\
+  \ {\n    // 打开 FileChooser 对话框\n    File file = fileChooser.showOpenDialog(stage);\n\
+  \    if (file != null) {\n      String url = file.toURI().toString();\n      Image\
+  \ image = new Image(url);\n      imageView.setImage(image);\n    }\n  }\n});\n```\n\
+  \n请记住将变量 `stage` 声明为 `final`，因为它在内部类（`Load` 菜单项的匿名 `EventHandler` 类）中被访问。\n\n现在，我们需要处理关于图像渲染区域\
+  \ `StackPane` 可缩放的重大事项。为了在显示较大的图像时避免调整 `StackPane` 的大小，我们需要为 `StackPane` 设置最小尺寸。以下是实现此操作的代码：\n\
+  \n```\n imageArea.setMinSize(0, 0);\n```\n\n如果不添加上述代码，当加载大于 `StackPane` 当前尺寸的图像时，`StackPane`\
+  \ 的尺寸会发生变化。这是一个例子：\n\n假设 `StackPane` 的当前尺寸为 600 x 375；在显示尺寸为 1280 x 960 的图像后，`StackPane`\
+  \ 的尺寸被扩大为 1280 x 960；然而，可见部分仍为 600 x 375。\n\n为 `StackPane` 设置最小尺寸可以确保每当打开新图像时，都不会发生尺寸变化事件，同时也简化了后续章节中要开发的代码。\n\
+  \n### 列表 1-8. `ImageViewer` 类的完整源代码如下：\n\n```java\n package imageviewer;\n\nimport\
+  \ java.io.File;\nimport javafx.application.Application;\nimport javafx.application.Platform;\
+  \ \nimport javafx.beans.value.ChangeListener;\nimport javafx.beans.value.ObservableValue;\n\
+  import javafx.event.ActionEvent;\nimport javafx.event.EventHandler;\nimport javafx.scene.Scene;\n\
+  import javafx.scene.control.Menu;\nimport javafx.scene.control.MenuBar;\nimport\
+  \ javafx.scene.control.MenuItem;\nimport javafx.scene.image.Image;\nimport javafx.scene.image.ImageView;\n\
+  import javafx.scene.layout.BorderPane;\nimport javafx.scene.layout.StackPane;\n\
+  import javafx.stage.FileChooser;\nimport javafx.stage.Stage;\n\n/**\n * 文件名: ImageViewer.java\n\
+  \ * (目录: ImageViewer1.0/src/example2/imageviewer/)\n * 此应用程序创建了一个 BorderPane 作为场景的根节点，\n\
+  \ * 在 BorderPane 的中心添加了一个 StackPane\n * 场景的初始尺寸设置为 600 x 400\n * StackPane 的尺寸将自动设置以适应场景尺寸\n\
+  \ * 当用户调整窗口大时，StackPane 将被调整大小\n *\n * 在 BorderPane 顶部添加菜单栏\n * 创建 File 菜单，并使用 FileChooser\
+  \ 的 Open 对话框\n * 选择图像文件，加载并在图像渲染区域中显示图像。\n *\n * @author Shufen Kuo\n */\n\npublic\
+  \ class ImageViewer extends Application {\n\n  @Override\n  public void start(final\
+  \ Stage stage) {\n    BorderPane rootPane = new BorderPane();\n    StackPane imageArea\
+  \ = new StackPane();\n    // 为 StackPane 设置最小尺寸，以避免\n    // 加载大尺寸图像时调整大小\n    imageArea.setMinSize(0,\
+  \ 0);\n    rootPane.setCenter(imageArea);\n\n    Scene scene = new Scene(rootPane,\
+  \ 600, 400);\n\n    imageArea.widthProperty().addListener(new ChangeListener<Object>()\
+  \ {\n      public void changed(ObservableValue o, Object oldVal,\n          Object\
+  \ newVal) {\n        System.out.format(\"imageArea width changed from %.1f to %.1f%n\"\
+  ,\n          oldVal, newVal);\n      }\n    });\n    imageArea.heightProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal,\n          Object newVal) {\n        System.out.format(\"imageArea height\
+  \ changed from %.1f to %.1f%n\",\n          oldVal, newVal);\n      }\n    });\n\
+  \n    // 添加菜单栏\n    MenuBar menuBar = new MenuBar();\n    Menu menuFile = new Menu(\"\
+  File\");\n    MenuItem load = new MenuItem(\"Load\");\n    MenuItem exit = new MenuItem(\"\
+  Exit\");\n    menuFile.getItems().addAll(load, exit);\n    menuBar.getMenus().add(menuFile);\n\
+  \    rootPane.setTop(menuBar);\n\n    // 为 exit 菜单项添加动作\n    exit.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ e) {\n        Platform.exit();\n      }\n    });\n\n    // 创建文件选择器\n    final\
+  \ FileChooser fileChooser = new FileChooser();\n    fileChooser.setTitle(\"Open\
+  \ an Image File\");\n\n    // 创建视图，添加到图像区域\n    final ImageView imageView = new\
+  \ ImageView();\n    imageArea.getChildren().add(imageView);\n\n    // 为 Load 菜单项添加动作\n\
+  \    load.setOnAction(new EventHandler<ActionEvent>() {\n      @Override\n     \
+  \ public void handle(ActionEvent e) {\n        // 打开 FileChooser 对话框\n        File\
+  \ file = fileChooser.showOpenDialog(stage);\n        if (file != null) {\n     \
+  \     String url = file.toURI().toString();\n          Image image = new Image(url);\n\
+  \          imageView.setImage(image);\n        }\n      }\n    });\n\n    stage.setTitle(\"\
+  ImageViewer V1.0\");\n    stage.setScene(scene);\n    stage.show();\n  }\n\n  public\
+  \ static void main(String[] args) {\n    launch(args);\n  }\n}\n```\n\n编译并运行应用程序。点击\
+  \ `File` 菜单中的 `Load` 菜单，导航到包含图像文件的目录，选择一个图像文件，点击 `FileChooser` 对话框中的 `Open` 按钮，图像将被加载并显示在窗口中心。\n\
+  \n图 1-2. 菜单栏带有 `File` 时的截图\n\n图 1-3. 从文件选择器中选择图像文件的截图\n\n图 1-4. 在中心显示小尺寸图像的截图\n\n\
+  图 1-5. 在中心显示大尺寸图像的截图\n\n## 1.3 创建 Option 菜单和 View 子菜单\n\n我们需要一个 `Option` 菜单允许用户选择首选的视图标准。`Option`\
+  \ 菜单包含一个 `View` 子菜单，包含三个互斥的选择，如下：\n\n`Fit Width`：通过调整 `ImageView` 的 `fitWidth` 属性来渲染图像，在保持原始宽比的同时，适应当前可用视图区域的宽度。\n\
+  \n`Fit Height`：通过调整 `ImageView` 的 `fitHeight` 属性来渲染图像，在保持原始宽比的同时，适应当前可用视图区域的高度。\n\
+  \n`Original Size`：按原始尺寸渲染图像，超出当前可用视图区域边界的图像外部部分将被隐藏。这被设置为初始视图选项。\n\n请注意，可用视图空间是由应用程序窗口（称为\
+  \ `Stage`）的当前宽度和高度决定的，这取决于 `Scene`（场景的容器）的当前尺寸。初始场景设置为 600 像素 x 400 像素，因此图像渲染区域的尺寸将与场景相同。在我们在\
+  \ `BorderPane` 顶部添加了菜单栏后，可用渲染区域的高度变为场景高度减去菜单栏的高度，而宽度保持不变。\n\n### 1.3.1 创建 ToggleGroup、单选框菜单项并为\
+  \ `selectedToggle` 属性添加监听器\n\n\n\n\n\n要在菜单中实现互斥选择，我们需要创建 `RadioMenuItem` 对象和单个 `ToggleGroup`\
+  \ 对象，然后将每个 `RadioMenuItem` 关联到同一个 `ToggleGroup`。\n\n为了监听选中的单选菜单项的变化，我们使用：\n\n```\n\
+  \ void addListener(ChangeListener<? super T> listener) \n```\n\n来为 `ToggleGroup`\
+  \ 对象的 `selectedToggle` 属性注册一个 `ChangeListener`。\n\n下面的代码段展示了如何完成这些任务。\n\n### 导入语句：\n\
+  \n```\n import javafx.scene.control.RadioMenuItem;\nimport javafx.scene.control.Toggle;\n\
+  import javafx.scene.control.ToggleGroup;\n```\n\n### 列表 1-9. 创建 `Option` 菜单、`ToggleGroup`、`RadioMenuItem`s、`View`\
+  \ 子菜单并为 `ToggleGroup` 的 `selectedToggle` 属性添加监听器：\n\n```\n // 创建 Option 菜单\nMenu\
+  \ menuOption = new Menu(\"Option\");\n\n// 创建切换组\nfinal ToggleGroup groupOption\
+  \ = new ToggleGroup();\n\n// 创建单选菜单项\nfinal RadioMenuItem fitWidth = new RadioMenuItem(\"\
+  Fit Width\");\nfitWidth.setToggleGroup(groupOption);\nfinal RadioMenuItem fitHeight\
+  \ = new RadioMenuItem(\"Fit Height\");\nfitHeight.setToggleGroup(groupOption);\n\
+  final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\noriginal.setToggleGroup(groupOption);\n\
+  \n// 为切换组添加监听器\ngroupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n  public void changed(ObservableValue<? extends Toggle> ov,\n             \
+  \         Toggle old_toggle, Toggle new_toggle) {\n    if (groupOption.getSelectedToggle()\
+  \ != null) {\n      RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \      if (choiceItem == fitWidth) {\n        System.out.println(\"fitwidth\");\n\
+  \      } else if (choiceItem == fitHeight) {\n        System.out.println(\"fitheight\"\
+  );\n      } else {\n        System.out.println(\"original size\");\n      }\n  \
+  \  } \n  }\n});\n\n// 为 Option 菜单创建 View 子菜单\nMenu menuView = new Menu(\"View\"\
+  );\nmenuView.getItems().addAll(fitWidth, fitHeight, original);\n\n// 设置 Original\
+  \ Size 为默认选择\noriginal.setSelected(true);\n\n// 将 option 添加到菜单栏\nmenuOption.getItems().add(menuView);\n\
+  menuBar.getMenus().add(menuOption);\n```\n\n### 列表 1-10. `ImageViewer` 类的完整源码如下：\n\
+  \n```\n package imageviewer;\n\nimport java.io.File;\nimport javafx.application.Application;\n\
+  import javafx.application.Platform; \nimport javafx.beans.value.ChangeListener;\n\
+  import javafx.beans.value.ObservableValue;\nimport javafx.event.ActionEvent;\nimport\
+  \ javafx.event.EventHandler;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Menu;\n\
+  import javafx.scene.control.MenuBar;\nimport javafx.scene.control.MenuItem;\nimport\
+  \ javafx.scene.control.RadioMenuItem;\nimport javafx.scene.control.Toggle;\nimport\
+  \ javafx.scene.control.ToggleGroup;\nimport javafx.scene.image.Image;\nimport javafx.scene.image.ImageView;\n\
+  import javafx.scene.layout.BorderPane;\nimport javafx.scene.layout.StackPane;\n\
+  import javafx.stage.FileChooser;\nimport javafx.stage.Stage;\n\n/**\n * 文件名: ImageViewer.java\n\
+  \ * (位于目录: ImageViewer1.0/src/example3/imageviewer/)\n * 此应用程序创建一个 BorderPane 作为场景的根节点，\n\
+  \ * 在 BorderPane 的中心添加一个 StackPane\n * 场景的初始大小设置为 600x400\n * StackPane 的大小将自动设置以适应场景的大小\n\
+  \ * 当用户调整窗口大时， StackPane 将被调整大小\n *\n * 在顶部添加一个菜单栏\n * 在菜单中实现互斥选择\n * 为了监听选中的单选菜单项的变化\n\
+  \ * 我们为 ToggleGroup 对象的 selectedToggle 属性注册一个 ChangeListener\n * 下面的代码段展示了如何完成这些任务\n\
+  \ *\n * 作者: Shufen\n */\n\npublic class ImageViewer extends Application {\n\n  @Override\n\
+  \  public void start(final stage) {\n    BorderPane rootPane = new BorderPane();\n\
+  \    StackPane imageArea = new StackPane();\n    rootPane.setCenter(imageArea);\n\
+  \n    MenuBar menuBar = new MenuBar();\n    rootPane.setTop(menuBar);\n\n    Scene\
+  \ scene = new Scene(rootPane, 600, 400);\n\n    // 创建文件选择器\n    FileChooser fileChooser\
+  \ = new FileChooser();\n    fileChooser.setTitle(\"Open Image\");\n\n    // 添加 ImageView\
+  \ 到图像区域\n    ImageView imageView = new ImageView();\n    imageArea.getChildren().add(imageView);\n\
+  \n    // 为 load 项添加动作\n    MenuItem load = new MenuItem(\"Load\");\n    load.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ e) {\n        // 打开文件选择对话框\n        File file = fileChooser.showOpenDialog(stage);\n\
+  \        if (file != null) {\n          String url = file.toURI().toString();\n\
+  \          Image image = new Image(url);\n          imageView.setImage(image);\n\
+  \        }\n      }\n    });\n\n    // 创建 Option 菜单\n    Menu menuOption = new Menu(\"\
+  Option\");\n\n    // 创建切换组\n    final ToggleGroup groupOption = new ToggleGroup();\n\
+  \n    // 创建单选菜单项\n    final RadioMenuItem fitWidth = new RadioMenuItem(\"Fit Width\"\
+  );\n    fitWidth.setToggleGroup(groupOption);\n    final RadioMenuItem fitHeight\
+  \ = new RadioMenuItem(\"Fit Height\");\n    fitHeight.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\n    original.setToggleGroup(groupOption);\n\
+  \n    // 为切换组添加监听器\n    groupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n      public void changed(ObservableValue<? extends Toggle> ov,\n         \
+  \                 Toggle old_toggle, Toggle new_toggle) {\n        if (groupOption.getSelectedToggle()\
+  \ != null) {\n          RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \          if (choiceItem == fitWidth) {\n            System.out.println(\"fitwidth\"\
+  );\n          } else if (choiceItem == fitHeight) {\n            System.out.println(\"\
+  fitheight\");\n          } else {\n            System.out.println(\"original size\"\
+  );\n          }\n        } \n      }\n    });\n\n    // 为 Option 菜单创建 View 子菜单\n\
+  \    Menu menuView = new Menu(\"View\");\n    menuView.getItems().addAll(fitWidth,\
+  \ fitHeight, original);\n\n    // 设置 Original Size 为默认选择\n    original.setSelected(true);\n\
+  \n    // 将 option 添加到菜单栏\n    menuOption.getItems().add(menuView);\n    menuBar.getMenus().add(menuOption);\n\
+  \n    stage.setTitle(\"ImageViewer V1.0\");\n    stage.setScene(scene);\n    stage.show();\n\
+  \  }\n\n  public static void main(String[] args) {\n    launch(args);\n  }\n}\n\
+  ```\n\n图 1-6. `Option` 菜单包含 `View` 子菜单的快照\n\n![](img/image00129.gif \"optionmenu.gif\"\
+  )\n\n编译并运行应用程序。在 `View` 子菜单中选择不同的单选菜单，你将看到如下下面的输出：\n\n命令行中运行程序的输出：\n\n\n\n\n\n```\n\
+  \ Microsoft Windows [Version 6.3.9600]\n(c) 2013 Microsoft Corporation. All rights\
+  \ reserved.\n\nF:\\My Documents\\DocRoot\\SHUFEN_JAVA\\MyBookJFX\\VolumeOne\\ImageViewer1.0\\\
+  src\\example3>\njavac -encoding utf-8 -Xlint:unchecked imageviewer\\*.java\n\njar\
+  \ cf imageviewer.jar imageviewer\n\njava -cp imageviewer.jar imageviewer.ImageViewer\n\
+  original size\nimageArea width changed from 0.0 to 600.0\nimageArea height changed\
+  \ from 0.0 to 375.0\nfitheight\nfitwidth\n```\n\n## 1.4 实现“适应宽度”、“适应高度”和“原始尺寸”选项\n\
+  \n在本节中，我们将演示如何调整图像的显示大小以适应应用程序窗口。`ImageView` 被创建为 `StackPane` 的子节点，根据 `StackPane`\
+  \ 的默认布局策略，图像会被放置在 `StackPane` 的中心；因此，如果图像尺寸大于当前可用显示空间（该空间取决于 `Scene` 的大小），图像的外围部分将被遮挡，导致用户无法查看整个图像。\n\
+  \n在上一节中，我们创建了一个包含三个显示选项的 `Option` 菜单：`适应宽度 (Fit Width)`、`适应高度 (Fit Height)` 和 `原始尺寸\
+  \ (Original Size)`。图像根据当前选择的选项进行渲染，初始设置为`原始尺寸`。默认情况下，我们在执行缩放时希望保留图像的原始宽高比例。为了实现这一点，我们如下所示将\
+  \ `preserveRatio` 属性的值设置为 `true`：\n\n列表 1-11. 将 `preserveRatio` 属性的值设置为 `true`：\n\
+  \n```\n final ImageView imageView = new ImageView();\nimageView.setPreserveRatio(true);\n\
+  ```\n\n现在，让我们探索两种根据当前选择的选项渲染图像的方法。\n\n### 1.4.1 方法一：分别将 `ImageView` 的 `fitWidth`/`fitHeight`\
+  \ 属性绑定到 `Scene` 的 `width`/`height` 属性\n\n我们使用 `Property` 接口中定义的 `bind` 和 `unbind`\
+  \ 方法来实现“适应宽度”、“适应高度”和“原始尺寸”显示选项。\n\n这里的吸引人之处在于，一旦绑定生效，每当 `Scene` 的宽度和/或高度动态发生变化时，图像的显示宽度和/或高度就会随之发生变化。\n\
+  \n#### 1.4.1.1 实现“适应宽度”显示选项\n\n如果用户选择“适应宽度”作为显示选项，我们将 `ImageView` 的 `fitWidth` 属性绑定到\
+  \ `Scene` 的 `width` 属性上，并解绑 `fitHeight` 属性。代码如下：\n\n列表 1-12. 将 `ImageView` 对象的 `fitWidth`\
+  \ 属性绑定到 `Scene` 的 `width` 属性：\n\n```\n imageView.fitWidthProperty().bind(scene.widthProperty());\n\
+  imageView.fitHeightProperty().unbind();\n// 除了解绑，还必须将适应高度设置为 0\nimageView.setFitHeight(0);\n\
+  ```\n\n#### 1.4.1.2 实现“适应高度”显示选项\n\n如果选择“适应高度”作为显示选项，我们将 `ImageView` 的 `fitHeight`\
+  \ 属性绑定到 `Scene` 的 `height` 属性（减去菜单栏的高度），并解绑 `fitHeight` 属性。\n\n我们正在使用 `subtract`\
+  \ 方法来计算图像的可用显示高度。`DoubleProperty` 类继承自 `DoubleExpression` 类的 `subtract(double other)`\
+  \ 方法返回一个新的 `NumberBinding` 对象，该对象用于计算此 `NumberExpression` 与给定常量值之间的差。代码如下：\n\n列表\
+  \ 1-13. 将 `ImageView` 的 `fitHeight` 属性绑定到 `scene` 的 `height` 属性，减去菜单栏的高度：\n\n```\n\
+  \ // 渲染图像的可用高度是\n// 从场景高度中减去菜单栏的高度\nimageView.fitHeightProperty().bind(\n   scene.heightProperty().subtract(menuBar.getHeight()));\n\
+  imageView.fitWidthProperty().unbind();\n// 除了解绑，还必须将适应宽度设置为 0 \nimageView.setFitWidth(0);\
+  \ \n```\n\n#### 1.4.1.3 实现“原始尺寸”显示选项\n\n如果选择“原始尺寸”作为显示选项，我们将解绑 `ImageView` 对象的 `fitWeight`\
+  \ 属性以及 `fitHeight` 属性。代码如下：\n\n列表 1-14. 解绑 `ImageView` 对象的 `fitWidth` 属性以及 `fitHeight`\
+  \ 属性：\n\n```\nimageView.fitWidthProperty().unbind();\nimageView.fitHeightProperty().unbind();\n\
+  // 除了解绑，还必须将宽度/高度设置为 0\nimageView.setFitWidth(0);\nimageView.setFitHeight(0);\n\
+  ```\n\n请注意，更改 `ImageView` 对象的 `fitWidth`/`fitHeight` 属性的值不会影响底层 `Image` 对象的 `width`/`height`\
+  \ 属性。`Image` 对象的属性（如 `width` 和 `height`）保持不变，而与 `ImageView` 显示选项相关的属性则由用户进行动态更改。\n\
+  \n方法一的优点是，你不需要注册事件处理程序来响应 `Scene` 的调整大小事件。当应用程序窗口动态调整大时，`Scene` 随之调整大小，`ImageView`\
+  \ 的相应属性也随之改变，图像渲染区域（一个 `StackPane` 对象）的大小会自动重新计算。\n\n以下代码片段展示了方法一的实现。\n\n列表 1-15.\
+  \ 监听选择的变化，并使用 `bind` 和 `unbind` 方法调整图像视图的 `fitWidth` 和 `fitHeight`：\n\n```\n final\
+  \ StackPane imageArea = new StackPane();\n\n   ...\n\nfinal Scene scene = new Scene(rootPane,\
+  \ 600, 400); \n\n   ...\n\nfinal MenuBar menuBar = new MenuBar();\n\n   ...\n\n\
+  // 创建切换组\nfinal ToggleGroup groupOption = new ToggleGroup();\n\n// 创建单选菜单并添加到切换组\n\
+  final RadioMenuItem fitWidth = new RadioMenuItem(\"Fit Width\");\nfitWidth.setToggleGroup(groupOption);\n\
+  final RadioMenuItem fitHeight = new RadioMenuItem(\"Fit Height\");\nfitHeight.setToggleGroup(groupOption);\n\
+  final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\noriginal.setToggleGroup(groupOption);\n\
+  \ngroupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n  public void changed(ObservableValue<? extends Toggle> ov,\n          Toggle\
+  \ old_toggle, Toggle new_toggle) {\n    if (groupOption.getSelectedToggle() != null)\
+  \ {\n      RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \      if (choiceItem == fitWidth) {\n        System.out.println(\"fitwidth\");\n\
+  \        imageView.fitWidthProperty().bind(scene.widthProperty());\n        imageView.fitHeightProperty().unbind();\n\
+  \        // 除了解绑，还必须将适应高度设置为 0\n        imageView.setFitHeight(0);\n      } else\
+  \ if (choiceItem == fitHeight) {\n        System.out.println(\"fitheight\");\n \
+  \       // 渲染图像的可用高度是\n        // 从场景高度中减去菜单栏的高度\n        imageView.fitHeightProperty().bind(\n\
+  \          scene.heightProperty().subtract(menuBar.getHeight()));\n        imageView.fitWidthProperty().unbind();\n\
+  \        // 除了解绑，还必须将适应宽度设置为 0 \n        imageView.setFitWidth(0); \n      } else\
+  \ {\n        System.out.println(\"original size\");\n        imageView.fitWidthProperty().unbind();\n\
+  \        imageView.fitHeightProperty().unbind();\n        // 除了解绑，还必须将宽度/高度设置为 0\n\
+  \        imageView.setFitWidth(0);\n        imageView.setFitHeight(0);\n      }\n\
+  \    } \n  }\n});\n```\n\n#### 1.4.1.4 `ImageViewer` 类的完整源代码\n\n方法一的 `ImageViewer`\
+  \ 类的完整源代码如下：\n\n列表 1-16. ImageViewer 类的完整源代码如下所示：\n\n\n\n\n\n```java\npackage imageviewer;\n\
+  \nimport java.io.File;\nimport javafx.application.Application;\nimport javafx.application.Platform;\n\
+  import javafx.beans.value.ChangeListener;\nimport javafx.beans.value.ObservableValue;\n\
+  import javafx.event.ActionEvent;\nimport javafx.event.EventHandler;\nimport javafx.scene.Scene;\n\
+  import javafx.scene.control.Menu;\nimport javafx.scene.control.MenuBar;\nimport\
+  \ javafx.scene.control.MenuItem;\nimport javafx.scene.control.RadioMenuItem;\nimport\
+  \ javafx.scene.control.Toggle;\nimport javafx.scene.control.ToggleGroup;\nimport\
+  \ javafx.scene.image.Image;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.BorderPane;\n\
+  import javafx.scene.layout.StackPane;\nimport javafx.stage.FileChooser;\nimport\
+  \ javafx.stage.Stage;\n\n/**\n * File Name: ImageViewer.java\n * (目录: ImageViewer1.0/src/example4/imageviewer/)\n\
+  \ * 此应用程序创建了一个 BorderPane 作为场景的根节点，\n * 并在 BorderPane 的中心添加了一个 StackPane。\n * 场景的初始大小设置为\
+  \ 600x400。\n * StackPane 的大小将自动设置为以适应场景的大小。\n * 当用户调整窗口大时，StackPane 将随之调整大小。\n *\n\
+  \ * 在 BorderPane 顶部添加菜单栏。\n * 创建文件（File）菜单，并使用 FileChooser 的打开对话框\n * 选择图像文件，在图像渲染区域加载并显示图像。\n\
+  \ * \n * 创建选项（Option）菜单，包含一个视图（View）子菜单，让用户选择图像查看\n * 标准：适应宽度（Fit Width）、适应高度（Fit\
+  \ Height）或默认选项原始大小（Original Size）。\n *\n * 使用 bind 和 unbind 方法调整图像查看大小：\n * 将 imageView\
+  \ 的 fitWidth/fitHeight 绑定到场景的宽度/高度，\n * 这样每当场景调整大小时，imageView 的尺寸将自动更改。\n *\n *\
+  \ @author Shufen Kuo\n */\npublic class ImageViewer extends Application {\n\n  @Override\n\
+  \  public void start(final Stage stage) {\n    BorderPane rootPane = new BorderPane();\n\
+  \    final StackPane imageArea = new StackPane();\n    // 为 StackPane 设置最小大小以避免在\n\
+  \    // 加载大图像时调整大小\n    imageArea.setMinSize(0, 0);\n    rootPane.setCenter(imageArea);\n\
+  \n    // 创建 imageView 并添加到图像区域\n    final ImageView imageView = new ImageView();\n\
+  \    imageView.setPreserveRatio(true);\n    imageArea.getChildren().add(imageView);\n\
+  \n    final Scene scene = new Scene(rootPane, 600, 400);\n\n    imageArea.widthProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal,\n          Object newVal) {\n        System.out.format(\"imageArea width\
+  \ changed from %.1f to %.1f%n\",\n            oldVal, newVal);\n      }\n    });\n\
+  \    imageArea.heightProperty().addListener(new ChangeListener<Object>() {\n   \
+  \   public void changed(ObservableValue o, Object oldVal,\n          Object newVal)\
+  \ {\n        System.out.format(\"imageArea height changed from %.1f to %.1f%n\"\
+  ,\n            oldVal, newVal);\n      }\n    });\n\n    // 添加菜单栏\n    final MenuBar\
+  \ menuBar = new MenuBar();\n    Menu menuFile = new Menu(\"File\");\n    MenuItem\
+  \ load = new MenuItem(\"Load\");\n    MenuItem exit = new MenuItem(\"Exit\");\n\
+  \    menuFile.getItems().addAll(load, exit);\n    menuBar.getMenus().add(menuFile);\n\
+  \    rootPane.setTop(menuBar);\n\n    // 为退出菜单项添加动作\n    exit.setOnAction(new EventHandler<ActionEvent>()\
+  \ {\n      @Override\n      public void handle(ActionEvent e) {\n        Platform.exit();\n\
+  \      }\n    });\n\n    // 创建文件选择器\n    final FileChooser fileChooser = new FileChooser();\n\
+  \    fileChooser.setTitle(\"Open an Image File\");\n\n    // 为 Load 菜单项添加动作\n  \
+  \  load.setOnAction(new EventHandler<ActionEvent>() {\n      @Override\n      public\
+  \ void handle(ActionEvent e) {\n        // 打开 FileChooser 对话框\n        File file\
+  \ = fileChooser.showOpenDialog(stage);\n        if (file != null) {\n          String\
+  \ url = file.toURI().toString();\n          Image image = new Image(url);\n    \
+  \      imageView.setImage(image);\n        }\n      }\n    });\n\n    // 创建 Option\
+  \ 菜单\n    Menu menuOption = new Menu(\"Option\");\n\n    // 创建切换组\n    final ToggleGroup\
+  \ groupOption = new ToggleGroup();\n\n    // 创建单选菜单项\n    final RadioMenuItem fitWidth\
+  \ = new RadioMenuItem(\"Fit Width\");\n    fitWidth.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem fitHeight = new RadioMenuItem(\"Fit Height\");\n    fitHeight.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\n    original.setToggleGroup(groupOption);\n\
+  \n    // 监听切换组中选择的变化\n    groupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n      public void changed(ObservableValue<? extends Toggle> ov,\n         \
+  \ Toggle old_toggle, Toggle new_toggle) {\n        if (groupOption.getSelectedToggle()\
+  \ != null) {\n          RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \          if (choiceItem == fitWidth) {\n            System.out.println(\"fitwidth\"\
+  );\n            imageView.fitWidthProperty().bind(scene.widthProperty());\n    \
+  \      } else if (choiceItem == fitHeight) {\n            System.out.println(\"\
+  fitheight\");\n            imageView.fitHeightProperty().bind(scene.heightProperty());\n\
+  \          } else {\n            System.out.println(\"original size\");\n      \
+  \      imageView.fitWidthProperty().unbind();\n            imageView.fitHeightProperty().unbind();\n\
+  \          }\n\n        }\n      }\n    });\n\n    //为 菜单创建 View 子菜单\n    Menu menuView\
+  \ = new Menu(\"View\");\n    menuView.getItems().addAll(fitWidth, fitHeight, original);\n\
+  \n    // 设置原始大小为默认\n    original.setSelected(true);\n\n    // 将 option 菜单添加到菜单栏\n\
+  \    menuOption.getItems().add(menuView);\n    menuBar.getMenus().add(menuOption);\n\
+  \n    stage.setTitle(\"ImageViewer V1.01\");\n    stage.setScene(scene);\n    stage.show();\n\
+  \  }\n\n  public static void main(String[] args) {\n    launch(args);\n  }\n}\n\
+  ```\n\n请注意，方法一将版本号从 V1.0 升级到了 V1.01。\n\n编译并运行应用程序。按照如下方式测试查看选项：首先，加载一个小图像，反复选择所有查看选项，同时使用鼠标拖动窗口边缘或角来动态调整窗口大小。然后，加载较大的图像再次测试所有可能的标准。\n\
+  \n图 1-7。原始大小的图像渲染（320 像素 x 363 像素）。\n(Images/image00130.jpeg)\n\n图 1-8。缩放以适应场景宽度的图像。\n\
+  (Images/image00131.jpeg)\n\n图 1-9。缩放以适应场景高度可用查看空间的图像。\n(Images/image00132.jpeg)\n\
+  \n### 1.4.2 方法二：更改 `fitWidth` 属性和 `fitHeight` 属性的值\n\n`ImageView` 类提供了两个属性，允许我们缩放图像查看尺寸：\n\
+  \n*   `fitWidth`\n\n*   `fitHeight`\n\n要更改这两个属性的值，我们我们使用 `setFitWidth` 方法和 `setFitHeight`\
+  \ 方法。\n\n如果选择了 `Fit Width` 查看选项，查看宽度将根据当前场景宽度进行设置。以下是代码片段：\n\n列表 1-17. 调用 `setFitWidth`\
+  \ 方法使图像查看宽度与场景宽度相同：\n\n\n\n\n\n```\nimageView.setFitWidth(scene.getWidth());\n//\
+  \ Besides setFitWidth, must also set fit height to 0\nimageView.setFitHeight(0);\n\
+  ```\n\n如果选择了 `Fit Height`（适应高度）查看选项，则查看高度将根据当前场景（scene）的高度减去菜单栏的高度来设置。以下是代码片段：\n\
+  \nListing 1-18. 调用 `setFitHeight` 方法将图像查看高度设置为场景高度减去菜单栏的高度：\n\n```\n imageView.setFitHeight(scene.getHeight()\
+  \ - menuBar.getHeight());\n// Besides setFitHeight, must also set fit width to 0\
+  \ \nimageView.setFitWidth(0); \n```\n\n如果选择了 `Original Size`（原始尺寸）选项，我们需要通过将 `fitWidth`\
+  \ 属性和 `fitHeight` 属性均赋值为 `0` 来清除之前设置的值。以下是代码片段：\n\nListing 1-19. 调用 `setFitHeight`\
+  \ 和 `setFitHeight` 方法，并传入 `0` 作为值：\n\n```\n // Clear previous set value\nimageView.setFitWidth(0);\n\
+  imageView.setFitHeight(0);\n```\n\n以下代码展示了目前方案二的实现情况。\n\nListing 1-20. 监听切换组（toggle\
+  \ group）中单选菜单项的变化，调整图像视图 `fitWidth` 和 `fitHeight` 属性的值：\n\n```\n // Listen to the\
+  \ change of selection in the toggle group\ngroupOption.selectedToggleProperty().addListener(new\
+  \ ChangeListener<Toggle>() {\n  public void changed(ObservableValue<? extends Toggle>\
+  \ ov,\n          Toggle old_toggle, Toggle new_toggle) {\n    if (groupOption.getSelectedToggle()\
+  \ != null) {\n      RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \      if (choiceItem == fitWidth) {\n        imageView.setFitWidth(scene.getWidth());\n\
+  \        // Besides setFitWidth, must also set fit height to 0\n        imageView.setFitHeight(0);\n\
+  \      } else if (choiceItem == fitHeight) {\n        imageView.setFitHeight(scene.getHeight()\
+  \ - menuBar.getHeight());\n        // Besides setFitHeight, must also set fit width\
+  \ to 0 \n        imageView.setFitWidth(0); \n      } else {\n        // Clear previous\
+  \ set value\n        imageView.setFitWidth(0);\n        imageView.setFitHeight(0);\n\
+  \      }\n    } \n  }\n}); \n```\n\n### 1.4.2.1 捕获场景缩放事件以调整图像查看尺寸\n\n为了完成方案二，还有一个问题需要解决：图像的查看大小取决于场景的大小，初始设置为\
+  \ 600 像素乘以 400 像素，这可能会发生动态变化。当用户拖动应用程序窗口的边缘或角时，场景会被调整大小。我们需要捕获此缩放事件以相应调整图像的查看大小。也就是说，如果当前选查看选项是\
+  \ `Fit Width`（适应宽度），则场景的新宽度将作为图像视图对象 `fitWidth` 属性的值。如果选的是 `Fit Height`，则场景的新高度减去菜单栏的高度将作为\
+  \ `fitHeight` 属性的值。\n\n为了响应场景大小的变化，我们分别为 `width` 属性和 `height` 属性添加了监听器，以捕获场景的缩放事件。\n\
+  \n以下代码片段完成了这些任务：\n\nListing 1-21. 监听场景 `width` 和 `height` 的变化，调整图像视图的 `fitWidth`\
+  \ 和 `fitHeight`：\n\n```\n // Listen to the width change of scene and adjust fitWidth\
+  \ of image view\nscene.widthProperty().addListener(new ChangeListener<Object>()\
+  \ {\n  public void changed(ObservableValue o, Object oldVal, Object newVal) {\n\
+  \    if (fitWidth.isSelected()) {\n      imageView.setFitWidth((double)newVal);\n\
+  \    }\n  }\n});\n// Listen to the height change of scene and adjust fitHeight of\
+  \ image view   \nscene.heightProperty().addListener(new ChangeListener<Object>()\
+  \ {\n  public void changed(ObservableValue o, Object oldVal, Object newVal) {\n\
+  \    if (fitHeight.isSelected()) {\n      imageView.setFitHeight((double) newVal\
+  \ - menuBar.getHeight());\n    }\n  }\n});\n```\n\n### 1.4.2.2 `ImageViewer` 类的完整源代码\n\
+  \n方案二的 `ImageViewer` 类的完整源代码如下：\n\nListing 1-22. `ImageViewer` 的完整源代码如下：\n\n\n\n\
+  \n\n```java\npackage imageviewer;\n\nimport java.io.File;\nimport javafx.application.Application;\n\
+  import javafx.application.Platform; \nimport javafx.beans.value.ChangeListener;\n\
+  import javafx.beans.value.ObservableValue;\nimport javafx.event.ActionEvent;\nimport\
+  \ javafx.event.EventHandler;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Menu;\n\
+  import javafx.scene.control.MenuBar;\nimport javafx.scene.control.MenuItem;\nimport\
+  \ javafx.scene.control.RadioMenuItem;\nimport javafx.scene.control.Toggle;\nimport\
+  \ javafx.scene.control.ToggleGroup;\nimport javafx.scene.image.Image;\nimport javafx.scene.image.ImageView;\n\
+  import javafx.scene.layout.BorderPane;\nimport javafx.scene.layout.StackPane;\n\
+  import javafx.stage.FileChooser;\nimport javafx.stage.Stage;\n\n/**\n * 文件名: ImageViewer.java\n\
+  \ * (位于目录: ImageViewer1.0/src/example5/imageviewer/)\n * 该应用程序创建了一个 BorderPane 作为场景的根节点，\n\
+  \ * 并在 BorderPane 的中心添加了一个 StackPane。\n * 场景的初始大小设置为 600 x 400。\n * StackPane 的大小将自动设置为以适应场景的大小。\n\
+  \ * 当用户调整窗口大时，StackPane 将随之调整大小。\n *\n * 在 BorderPane 顶部添加菜单栏。\n * 创建文件（File）菜单，并使用\
+  \ FileChooser 的打开对话框\n * 选择图像文件，在图像渲染区域加载并显示图像。\n * \n * 创建选项（Option）菜单，包含视图（View）子菜单，让用户选择图像查看\n\
+  \ * 标准：适应宽度（Fit Width）、适应高度（Fit Height）或默认选项原始大小（Original Size）。\n *\n * 使用 ImageView\
+  \ 类提供的 setFitWidth 方法和 setFitHeight 方法调整图像查看大小\n * 为场景的宽度属性和高度属性添加监听器。\n * 当查看选项设置为适应宽度或适应高度时，通过缩放图像视图来\n\
+  \ * 响应场景的动态缩放事件。\n *\n * @author Shufen Kuo\n */\n\npublic class ImageViewer extends\
+  \ Application {\n\n  @Override\n  public void start(final Stage stage) {\n    BorderPane\
+  \ rootPane = new BorderPane();\n    final StackPane imageArea = new StackPane();\n\
+  \    // 设置 StackPane 的最小尺寸以避免在\n    //加载大图像时调整大小\n    imageArea.setMinSize(0, 0);\n\
+  \    rootPane.setCenter(imageArea);\n\n    // 创建图像视图，并添加到图像区域\n    final ImageView\
+  \ imageView = new ImageView();\n    imageView.setPreserveRatio(true);\n    imageArea.getChildren().add(imageView);\n\
+  \n    final Scene scene = new Scene(rootPane, 600, 400);\n\n    imageArea.widthProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal,\n          Object newVal) {\n        System.out.format(\"imageArea width\
+  \ changed from %.1f to %.1f%n\",\n            oldVal, newVal);\n      }\n    });\n\
+  \    imageArea.heightProperty().addListener(new ChangeListener<Object>() {\n   \
+  \   public void changed(ObservableValue o, Object oldVal,\n          Object newVal)\
+  \ {\n        System.out.format(\"imageArea height changed from %.1f to %.1f%n\"\
+  ,\n            oldVal, newVal);\n      }\n    });\n\n    // 添加菜单栏\n    final MenuBar\
+  \ menuBar = new MenuBar();\n    Menu menuFile = new Menu(\"File\");\n    MenuItem\
+  \ load = new MenuItem(\"Load\");\n    MenuItem exit = new MenuItem(\"Exit\");\n\
+  \    menuFile.getItems().addAll(load, exit);\n    menuBar.getMenus().add(menuFile);\n\
+  \    rootPane.setTop(menuBar);\n\n    // 为退出菜单项添加动作\n    exit.setOnAction(new EventHandler<ActionEvent>()\
+  \ {\n      @Override\n      public void handle(ActionEvent e) {\n        Platform.exit();\n\
+  \      }\n    });\n\n    // 创建文件选择器\n    final FileChooser fileChooser = new FileChooser();\n\
+  \    fileChooser.setTitle(\"Open an Image File\");\n\n    // 为加载菜单项添加动作\n    load.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ e) {\n        // 打开 FileChooser 对话\n        File file = fileChooser.showOpenDialog(stage);\n\
+  \        if (file != null) {\n          String url = file.toURI().toString();\n\
+  \          Image image = new Image(url);\n          imageView.setImage(image);\n\
+  \        }\n      }\n    });\n\n    // 创建选项菜单\n    Menu menuOption = new Menu(\"\
+  Option\");\n\n    // 创建切换组\n    final ToggleGroup groupOption = new ToggleGroup();\n\
+  \n    // 创建单选菜单项\n    final RadioMenuItem fitWidth = new RadioMenuItem(\"Fit Width\"\
+  );\n    fitWidth.setToggleGroup(groupOption);\n    final RadioMenuItem fitHeight\
+  \ = new RadioMenuItem(\"Fit Height\");\n    fitHeight.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\n    original.setToggleGroup(groupOption);\n\
+  \n    // 监听切换组选择的改变\n    groupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n      public void changed(ObservableValue<? extends Toggle> ov,\n         \
+  \ Toggle old_toggle, Toggle new_toggle) {\n        if (groupOption.getSelectedToggle()\
+  \ != null) {\n          RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \          if (choiceItem == fitWidth) {\n            System.out.println(\"fit Width\"\
+  );\n            imageView.setFitWidth(scene.getWidth());\n          } else if (choiceItem\
+  \ == fitHeight) {\n            System.out.println(\"Fit Height\");\n           \
+  \ imageView.setFitHeight(scene.getHeight());\n          } else {\n            System.out.println(\"\
+  Original Size\");\n            imageView.setFitWidth(0);\n            imageView.setFitHeight(0);\n\
+  \          }\n        }\n      }\n    });\n\n    // 监听场景宽度改变并调整图像视图宽度\n    scene.widthProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal,\n          Object newVal) {\n        if (fitWidth.isSelected()) {\n  \
+  \          imageView.setFitWidth((double)newVal);\n        }\n      }\n    });\n\
+  \    // 监听场景高度改变并调整图像视图高度\n    scene.heightProperty().addListener(new ChangeListener<Object>()\
+  \ {\n      public void changed(ObservableValue o, Object oldVal,\n          Object\
+  \ newVal) {\n        if (fitHeight.isSelected()) {\n          imageView.setFitHeight((double)newVal);\n\
+  \        }\n      }\n    });\n\n    // 为选项菜单创建视图子菜单\n    Menu menuView = new Menu(\"\
+  View\");\n    menuView.getItems().addAll(fitWidth, fitHeight, original);\n\n   \
+  \ // 设置原始大小为默认选择\n    original.setSelected(true);\n\n    // 将选项菜单添加到菜单栏\n    menuOption.getItems().add(menuView);\n\
+  \n    stage.setTitle(\"ImageViewer V1.02\");\n    stage.setScene(scene);\n    stage.show();\n\
+  \  }\n\n  public static void main(String[] args) {\n    launch(args);\n  }\n}\n\
+  ```\n\n请注意我们将版本号从 V1.01 升级到了 V1.02 方法二。\n\n编译并运行应用程序。按照以下步骤测试应用程序：\n\n1. 加载小于初始场景尺寸（600\
+  \ 像素 x400 像素）的图像，以原始大小查看。\n2. 选择适应宽度（Fit Width）选项，图像视图将缩放以适应场景宽度。\n3. 选择适应高度（Fit\
+  \ Height）选项，图像视图将缩放以适应场景高度。\n4. 选择原始大小（Original Size）选项，图像视图将恢复原始大小。\n5. 加载比当前场景尺寸更大的图像，由于场景中没有足够的空间显示整个图像，你将只看到中心部分。\n\
+  6. 分别选择适应宽度（Fit Width）和适应高度（Fit height）选项以查看不同的查看结果。\n7. 通过拖动窗口边缘调整场景宽度，尝试放大和缩小宽度以查看不同的结果。\n\
+  8. 通过拖动窗口边缘调整场景高度，尝试放大和缩小高度以查看不同的结果。\n\n\n\n\n\n## 9. 通过鼠标拖动窗口边缘调整场景宽度和高度，并分别测试三种查看选项。\n\
+  \n在后续章节中将采用方法一（V1.01）来继续开发 `ImageViewer` V1.1。\n\n图 1-10. 以原始尺寸（1280 像素乘 960 像素）查看图像的快照，图像的外部部分被遮挡。\n\
+  \n![](img/image00133.jpeg \"mao_original.jpg\")\n\n图 1-11. 图像缩放以适应场景宽度的快照，图像顶部和底部的小部分被遮挡。\n\
+  \n![](img/image00134.jpeg \"mao_fit_width.jpg\")\n\n图 1-12. 图像缩放以适应场景窗口中可用高度的快照。\n\
+  \n![](img/image00135.jpeg \"mao_fit_height.jpg\")\n\n图 1-13. 图像缩放以适应宽度，同时场景高度动态增加的快照。\n\
+  \n![](img/image00136.jpeg \"mao_fit_width_resize_height.jpg\")\n\n图 1-14. 图像缩放以适应高度，同时场景尺寸动态变化的快照。\n\
+  \n![](img/image00137.jpeg \"mao_fit_height_resize_both.jpg\")\n\n在命令行中编译并运行 ImageViewer\
+  \ 的输出：\n\n```\n Microsoft Windows [Version 6.3.9600]\n(c) 2013 Microsoft Corporation.\
+  \ All rights reserved.\n\nF:\\My Documents\\DocRoot\\SHUFEN_JAVA\\MyBookJFX\\VolumeOne\\\
+  ImageViewer1.0\\src\\example5>\njavac -encoding utf-8 -Xlint:unchecked imageviewer\\\
+  *.java\n\njar cf imageviewer.jar imageviewer\n\njava -cp imageviewer.jar imageviewer.ImageViewer\n\
+  original size\nimageArea width changed from 0.0 to 600.0\nimageArea height changed\
+  \ from 0.0 to 375.0\nfitwidth\nfitheight\noriginal size\nfitwidth\nfitheight\noriginal\
+  \ size\nimageArea height changed from 375.0 to 439.0\nimageArea width changed from\
+  \ 600.0 to 615.0\nimageArea width changed from 615.0 to 380.0\nimageArea height\
+  \ changed from 439.0 to 527.0\n```\n\n## 1.5 总结\n\n本章介绍了 JavaFX 库的以下关键方面，按它们在章节中出现的顺序列出：\n\
+  \n*   内置的 JavaFX 布局面板，位于 `javafx.scene.layout` 包中：\n    *   `BorderPane`\n    *\
+  \   `StackPane`\n    （参见节 创建 `ImageViewer` 类作为 `Application` 子类）\n\n*   `Scene`\
+  \ 类，位于 `javafx.scene` 包中，是场景图的容器。\n    （参见此处，节 方法一：分别将 `ImageView` 的 `fitWidth`/`fitHeight`\
+  \ 属性绑定到场景的 `width`/`height` 属性， 以及节 捕获场景缩放事件以调整图像查看大小）\n\n*   `Stage` 类，位于 `javafx.stage`\
+  \ 包中，是 JavaFX 应用程序的顶层容器。\n    （参见此处）\n\n*   `Application` 类，位于 `javafx.application`\
+  \ 包中，是 JavaFX 应用程序的入口点。\n    （参见节 创建 `ImageViewer` 类作为 `Application` 子类）\n\n*  \
+  \ `void start(Stage stage)` 方法，`Application` 类中的抽象方法，必须重写。\n    （参见列表 1-1.， 以及节\
+  \ JavaFX 应用程序线程与 Java 启动器线程）\n\n*   `void addListener(ChangeListener<? super T>\
+  \ listener)` 方法，定义在 `javafx.beans.value.ObservableValue` 接口中，通过提供 `changed(ObservableValue<?\
+  \ extends T> observable`, T`oldValue`, T` newValue` 方法来添加 `ChangeListener`，该方法在该属性值更改时被调用。\n\
+  \    （参见节：捕获图像渲染区域的缩放事件， 以及捕获场景缩放事件以调整图像查看大小](#part0007.xhtml_scene-resize)）\n\n\
+  *   `MenuBar`、`Menu` 和 `MenuItem` 是基础 JavaFX UI 组件，位于 `javafx.scene.control` 包中，用于设计占用更少空间的紧凑外观的图形用户界面。\n\
+  \    （参见节 创建菜单栏）\n\n*   `java.io.File showOpenDialog(Window ownerWindow`)` 方法，是\
+  \ `javafx.stage.FileChooser` 类提供的方便方法，用于显示文件打开对话框以浏览本地文件系统。\n    （参见节 从文件打开对话框选择图像文件并在\
+  \ `StackPane` 上显示图像）\n\n*   `void setOnAction(EventHandler<ActionEvent> value)`\
+  \ 方法，由 `MenuItem` 类提供，用于在 `ActionEvent` 发生时注册 `EventHandler`。\n    （参见节 从文件打开对话框选择图像并在\
+  \ `StackPane` 上显示图像）\n\n*   `ImageView` 和 `Image` 是类，位于 `javafx.scene.image`，用于加载和查看图像。\n\
+  \    （参见此处）\n\n*   `RadioMenuItem` 和 `ToggleGroup` 位于 `javafx.scene.control`，用于创建互斥选择。\n\
+  \    （参见节 创建菜单栏）\n\n*   `void bind(Value<? extends T> observable)` 和 `void unbind()`\
+  \ 是 `Property` 接口中的方法，用于创建/移除绑定。\n    （参见此处）\n\n*   `DoubleBinding subtract(double\
+  \ other`)` 方法定义在 `DoubleExpression` 类中，计算此 `NumberExpression` 与给定常量之间的差。\n    （参见此处）\n\
+  \n*   `fitWidth` 和 `fitHeight` 是定义在 `ImageView` 类中的属性，用于调整图像大小。\n    （参见此处）\n\n\
+  # 第 2 章：带有浏览按钮的增强图像查看器\n\n## 开发 ImageViewer V1.1\n\n### 引言\n\n在之前的章节中，我们演示了 JavaFX\
+  \ 应用程序 `ImageViewer V1.0` 的迭代开发。到为止，它包含了基本功能，但是一个实用的方便工具。更多功能将在本章和下一章中逐步添加。\n\n\
+  本章是动作的实现以及两个按钮 `Next` 和 `Previous` 的正确放置，用于打开下一个或上一个图像。\n\n版本升级为 1.1。通过从 `ImageViewer`\
+  \ V1.1 提取的详细描述和良好的代码，你将熟悉总结节中提到的 JavaFX 基础功能。\n\n`ImageViewer` V1.1 的完整开发过程具有以下步骤的特征：\n\
+  \n*   2.1 添加 `Next` 按钮](#part0008.xhtml_add_next)\n    *   2.1.1 使用 `Group` 作为父容器](#part0008.xhtml_group-as-container)\n\
+  \    *   2.1.2 使用 `Shape` 类渲染 2D 几何图形](#part0008.xhtml_shape-class)\n    *   2.1.3\
+  \ 使用 `Rectangle` 形状作为自定义按钮的边界框](#part0008.xhtml_rectangle-as-bounding-box)\n   \
+  \ *   2.1.4 绘制 `Shape` 的背景和边界`](part0008.xhtml_paint-shape)\n    *   2.1.5 设置 `arcHeight`\
+  \ 和 `arcWidth` 属性的值以渲染圆矩形](#part0008.xhtml_arc-height-arc-width)\n    *   2.1.6\
+  \ 使用 `Polygon` 形状作为 `Next` 图标的视觉符号](#part0008.xhtml_polygon-as-icon)\n    *   2.1.7\
+  \ 为 `Node` 设置 `Cursor` 属性的值](#part0008.xhtml_mouse-cursor)\n\n\n\n\n\n### 2.1.8\
+  \ 使用便利方法注册事件处理器以处理鼠标事件\n\n### 2.1.9 完善 `createNextButton()` 方法的源代码\n\n### 2.1.10\
+  \ 为 `Node` 安装 `Tooltip`\n\n## 2.2 在 `StackPane` 中调整 `Next` 按钮的默认位置\n\n## 2.3 在 `StackPane`\
+  \ 中添加 `Previous` 按钮并调整其位置\n\n## 2.4 实现鼠标点击事件处理器\n\n### 2.4.1 配置 `FileChooser` \n\
+  \n### 2.4.2 创建列表迭代器以遍历当前目录下的现有文件\n\n### 2.4.3 在 `ImageViewer` 类中定义属性\n\n## 2.5 完善\
+  \ `Image Viewer V1.1` 的源代码\n\n### 2.5.1 完善 `FileUtils` 类的源代码\n\n### 2.5.2 完善 `ImageViewer`\
+  \ 类的源代码\n\n## 2.6 总结\n\n## 2.1 添加 `Next` 按钮\n\n我们没有使用内置 JavaFX 控件中的 `Button` 类，而是通过使用以下类来实现自定义工具类，从而设计一个自定义按钮：\n\
+  \n* `Group`\n  作为父级容器。\n\n* `Shape`\n    * `Rectangle`\n      作为边界框。\n    * `Polygon`\n\
+  \      作为 `Next` 图标的视觉标识。\n\n* `LinearGradient` 和 `Color`\n  用于填充背景和描绘边框。\n\n* `EventHandler`\
+  \ 和 `MouseEvent`\n  用于处理鼠标进入、点击和离开事件。\n\n### 2.1.1 使用 `Group` 作为父级容器\n\n`Group`\
+  \ 类位于 `javafx.scene` 包中，是 `javafx.scene.Parent` 的子类。`Group` 的功能非常直观。它允许你将各种节点组合在一起而不施加自动布局。下面的代码段显示了如何向\
+  \ `Group` 添加节点：\n\n```\nGroup buttonGroup = new Group();\nRectangle rect = new Rectangle(0,\
+  \ 0, 25, 35);\nPolygon polygon = new Polygon();\nbuttonGroup.getChildren().addAll(rect,\
+  \ polygon);\n```\n\n关于 `Group` 特性的更多信息，请参阅卷Ⅱ：开发交互式形状绘制工具，第 1 章 线路绘制器，第 1.1.1 节在\
+  \ BorderPane 中心添加 Pane 作为绘板。\n\n### 2.1.2 使用 `Shape` 类渲染 2D 几何基元\n\nJavaFX 提供了一个非常有吸引力的类\
+  \ `Shape` 用于渲染 2D 几何基元。它是一个继承自 `javafx.scene.Node` 类的抽象类，作为某些基础 2D 几何形状的基类。它的直接子类有：`Arc`、`Circle`、`CubicCurve`、`Ellipse`、`Line`、`Path`、`Polygon`、`Polyline`、`QuadCurve`、`Rectangle`、`SVGPath`、`Text`。`Shape`\
+  \ 类定义了 2D 几何基元的通用属性，如 `fill`、`stroke`、`strokeType`、`strokeWidth` 等。\n\n为形状分别设置 `fill`\
+  \ 和 `stroke` 属性的值是非常常见的。使用 `setFill` 方法指定渲染背景的颜色，使用 `setStroke` 方法指定渲染边框的颜色。请注意，Line、Polyline\
+  \ 和 Path 的 `fill` 属性的默认值为 `null`，而其他形状为 `Color.BLACK`；Line、Polyline 和 Path 的 `stroke`\
+  \ 属性的默认值为 `Color.BLACK`，而其他形状为 `null`。\n\n现在我们将展示你如何利用 `Shape` 的功能来实现自定义的 `Next`\
+  \ 按钮。\n\n### 2.1.3 使用 `Rectangle` 形状作为自定义按钮的边界框\n\n以下是完成这些操作的代码：使用带有参数 x, y, width\
+  \ 和 height 的构造函数创建一个 Rectangle，并为每个所需的属性设置适当的值。\n\n列表 2-1。创建一个 `Rectangle` 并设置这些属性的值：`fill`、`stroke`、`arcHeight`、`arcWidth`：\n\
+  \n```\nRectangle rect = new Rectangle(0, 0, 25, 35);\nrect.arcHeight = 10;\nrect.arcWidth\
+  \ = 10;\nrect.setFill(Color.GRAY);\nrect.setStroke(Color.LIGHTGRAY);\n```\n\n###\
+  \ 2.1.4 绘制背景和边框\n\n`LinearGradient` 和 `Color` 位于 `javafx.scene.paint` 包中，是 `Paint`\
+  \ 的两个子类，用于绘制背景和边框。\n\n`LinearGradient` 和 `Color` 位于 `javafx.scene.paint` 包中，是 `Paint`\
+  \ 的两个子类，用于绘制背景和边框。\n\n`LinearGradient` 和 `Color` 位于 `javafx.scene.paint` 包中，是 `Paint`\
+  \ 的两个子类，用于绘制背景和边框。\n\n### 2.1.5 设置 `arcHeight` 和 `arcWidth` 属性渲染圆矩形\n\n`arcHeight`\
+  \ 和 `arcWidth` 是 `Rectangle` 类中定义的属性，用于指定矩形形状四个角弧的高度和宽度直径。它们的默认值为 `0.0`。\n\n接下来的图展示了如何为\
+  \ `arcHeight` 和 `arcWidth` 属性设置正确的值以渲染圆矩形。与圆矩形角弧重叠的圆和椭圆是为了方便比较。\n\n\n\n\n\n我们没有使用图像作为\
+  \ `Next` 按钮的视觉标识，而是实例化了一个箭头形状的 `Polygon`。使用 `getPoints()` 方法获取一个类型为 `ObservableList<Double>`\
+  \ 的列表，然后使用 `Collection` 接口中定义的内置工具类来操作列表内容。存储在 `Double` 类型值数组中的一系列 x 和 y 坐标被添加到列表中，代表\
+  \ `Polygon` 的顶点。\n\n`Color.WHITE` 是 `Color` 类中定义的许多 `Color` 类型的静态字段之一，我们选择它作为填充\
+  \ `Polygon` 背景的颜色，并使用静态方法 `Color.web` 创建了一种深蓝色的颜色，用以绘制 `Polygon` 的边框颜色。\n\n以下是完成这些任务的代码段：\n\
+  \nListing 2-2. 创建一个 `Polygon` 并为属性 `fill` 和 `stroke` 赋值：\n\n```\n Polygon polygon\
+  \ = new Polygon();\nDouble[] dArray = {\n      5.0, 2.0,\n      22.0, 17.0,\n  \
+  \    5.0, 32.0,\n      5.0, 25.0,\n      14.0, 17.0,\n      5.0, 9.0};\npolygon.getPoints().addAll(dArray);\n\
+  polygon.setFill(Color.WHITE);\npolygon.setStroke(Color.web(\"#436B8B\"));\n```\n\
+  \n下面的快照显示了上述代码渲染的 `Polygon`：\n\n图 2-3. 作为 `Next` 图标的多边形快照。\n\n![](img/image00140.jpeg\
+  \ \"next_polygon.jpg\")\n\n### 2.1.7 为 `Node` 设置 `Cursor` 属性值\n\n`Node` 类定义的 `cursor`\
+  \ 允许你更改此节点及其所有后代节点的鼠标指针。`Cursor` 类位于 `javafx.scene` 包中并继承自 `java.lang.Object`，它通过\
+  \ `Cursor` 类型的静态字段定义了一些可选鼠标指针，例如 `CLOSED_HAND`、`CROSSHAIR`、`DEFAULT`、`HAND`、`OPEN_HAND`、`TEXT`、`WAIT`\
+  \ 等。如果没有显式设置 `cursor` 属性的值，则使用默认的鼠标指针（箭头形状）。\n\n我们使用 `Cursor.OPEN_HAND` 作为 `Next`\
+  \ 按钮的鼠标指针。以下是代码段：\n\n```\n Group buttonGroup = new Group();\nbuttonGroup.setCursor(Cursor.OPEN_HAND);\n\
+  ```\n\n### 2.1.8 使用便利方法注册事件处理器以处理鼠标事件\n\n`EventHandler<T extends Event>` 是继承自 `java.util.EventListener`\
+  \ 的接口，它定义了 `handle(`T` 事件) 方法，用于在指定事件发生时被调用。\n\n我们将使用 `Node` 类提供的便利方法来注册事件处理器，以处理鼠标事件类型，如\
+  \ `MOUSE_CLICKED`、`MOUSE_ENTERED` 和 `MOUSE_EXITED`，这些是 `MouseEvent` 类（`javafx.scene.input.InputEvent`\
+  \ 的子类）中定义的 `EventType` 静态字段。\n\n以下是用于为上述事件注册事件处理器的便利方法：\n\n* `public final void\
+  \ setOnMouseClicked(EventHandler<? super MouseEvent> value)`\n    设置 `Node` 类中定义的\
+  \ `OnMouseClicked` 属性的值，提供 `handle` 方法的实现，该方法在鼠标点击此节点时被调用。\n\n* `public final void\
+  \ setOnMouseEntered(EventHandler<? super MouseEvent> value)`\n    设置 `Node` 类中定义的\
+  \ `OnMouseEntered` 属性的值，提供 `handle` 方法的实现，该方法在鼠标进入此节点时被调用。\n\n* `public final void\
+  \ setOnMouseExited(EventHandler<? super MouseEvent> value)`\n    设置 `Node` 类中定义的\
+  \ `OnMouseExited` 属性的值。提供 `handle` 方法的实现，该方法在鼠标离开此节点时被调用。\n\n以下是显示这些便利方法用的代码段：\n\
+  \nListing 2-3. 使用便利方法注册事件处理器：\n\n```\n // 注册鼠标点击事件处理器\n    buttonGroup.setOnMouseClicked(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        System.out.println(\"Mouse clicked\");\n      }\n    });\n\n  \
+  \  // 注册鼠标进入事件处理器\n    // 当鼠标进入时改变按钮的外观\n    buttonGroup.setOnMouseEntered(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        System.out.println(\"\
+  Mouse entered\");\n        rect.setFill(lgEntered);\n        polygon.setFill(Color.web(\"\
+  #436B8B\"));\n        polygon.setStroke(Color.WHITE);\n      }\n    });\n\n    //\
+  \ 注册鼠标离开事件处理器\n    // 当鼠标离开时恢复原始外观\n    buttonGroup.setOnMouseExited(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        System.out.println(\"\
+  Mouse exited\");\n        rect.setFill(lg);\n        polygon.setFill(Color.WHITE);\n\
+  \        polygon.setStroke(Color.web(\"#436B8B\"));\n      }\n    }); \n```\n\n\
+  ### 2.1.9 `createNextButton()` 方法的完整源代码\n\n导入语句：\n\n```\n import javafx.scene.Cursor;\n\
+  import javafx.scene.Group;\nimport javafx.scene.Node;\nimport javafx.scene.control.Tooltip;\n\
+  import javafx.scene.input.MouseEvent;\nimport javafx.scene.color.Color;\nimport\
+  \ javafx.scene.shape.Polygon;\nimport javafx.scene.shape.Rectangle;\nimport javafx.scene.layout.Group;\n\
+  import javafx.scene.event.EventHandler;\nimport javafx.scene.event.MouseEvent;\n\
+  ```\n\n\n\n\n`Tooltip` 类位于 `javafx.scene.control` 包中，并继承自 `javafx.scene.control.PopupControl`\
+  \ 类，它是用于在鼠标悬停在节点上时显示该节点帮助信息的基础 UI 组件之一。\n\n如果节点是如 `Button` 等 UI 控件，你可以为该节点设置在 `javafx.scene.control.Control`\
+  \ 类中定义的 `tooltip` 属性值。这里是 `setTooltip` 方法：\n\n```\n public final void setTooltip(Tooltip\
+  \ value) \n```\n\n由于 `Next` 按钮是一个类似于按钮的自定义节点，并没有派自 `javafx.scene.control.Control`\
+  \ 类，因此我们将使用 `Tooltip` 类提供的 `install` 方法来将 `Tooltip` 与 `Next` 按钮关联。这里是 `install`\
+  \ 方法：\n\n```\n public static void install(Node node, Tooltip t) \n```\n\n接下来的代码片段展示了通过调用\
+  \ `createNextButton()` 方法创建 `Next` 节点、为该节点安装 `Tooltip`，并将其添加到 `StackPane`（即图像渲染区域）的子列表中。\n\
+  \n导入语句：\n\n```\n import javafx.scene.control.Tooltip;\n```\n\n列表 2-5. 创建 `Next`\
+  \ 按钮，安装 `Tooltip` 并将节点添加到图像渲染区域：\n\n```\n final Node nextButton = createNextButton();\n\
+  \n...\n\n// Install tooltip\nTooltip t = new Tooltip(\"Next Image\");\nTooltip.install(nextButton,\
+  \ t);\n// Add next button to stack pane\nimageArea.getChildren().add(nextButton);\n\
+  ```\n\n接下来的截图显示了布局在默认位置（`StackPane` 中心）的 `Next` 按钮。\n\n图 2-4. 放置在默认位置的 `Next` 按钮截图。\n\
+  \n![](img/image00141.gif \"next_button_center1.gif\")\n\n图 2-5. 放置在默认位置的 `Next`\
+  \ 按钮截图，该截图是在鼠标进入按钮时拍摄的，矩形的填充颜色渐变发生了变化，且安装的 tooltip 已弹出。\n\n![](img/image00142.gif\
+  \ \"next_button_center2.gif\")\n\n（图 2-1 到 2-5 是在 Windows XP 上使用 jdk1.7.0_25 运行应用程序的截图；其余是在\
+  \ Windows 8.1 上使用 jdk1.8.0_66 的截图）\n\n## 2.2 在 `StackPane` 中调整 `Next` 按钮的默认位置\n\n\
+  在本节中，我们将演示如何将 `StackPane` 的子节点放置在所需的位置。\n\n`StackPane` 将所有子节点堆叠在一起，并以中心作为默认对齐方式。这意味着默认情况下，StackPane\
+  \ 的子会在面板中心相互重叠。\n\n在我们的应用程序中，将 `Next` 按钮放在 `StackPane` 的中心是不行的。幸运的是，`StackPane`\
+  \ 提供了静态方法：\n\n```\n public static void setAlignment(Node child, Pos value)\npublic\
+  \ static void setMargin(Node child, Insets value)\n```\n\n允许我们调整单个子节点的位置。`Next`\
+  \ 按钮的最佳位置是窗口的右侧，位于场景的可视范围内。接下来的代码片段调整了下一个按钮的默认位置。\n\n导入语句：\n\n```\n import javafx.geometry.Insets;\n\
+  import javafx.geometry.Pos;\n```\n\n列表 2-6. 使用 `StackPane` 的静态方法 `setAlignment`\
+  \ 和 `setMargin` 调整 `Next` 按钮的默认位置：\n\n```\n StackPane.setAlignment(nextButton, Pos.CENTER_RIGHT);\n\
+  \  StackPane.setMargin(nextButton, new Insets(8));\n```\n\n接下来的截图显示了位于应用程序窗口右侧的\
+  \ `Next` 按钮。\n\n图 2-6. 位于窗口右侧的 `Next` 按钮截图，位于场景的可视范围内。\n\n![next_button_right.jpg](img/image00143.jpeg\
+  \ \"next_button_right.gif\")\n\n请记住，我们将 `StakePane` 的最小尺寸设置为 (0, 0)，以避免其因子节点 `ImageView`\
+  \ 而自动更改大小。如果不这样做，每当加载并显示大于 `StackPane` 可视边界的图像时，`Next` 按钮的位置可能会出现复杂的情况。该设置简化了调整\
+  \ `Next` 按钮位置的解决方案。\n\n下一张截图显示了按原始尺寸显示的大尺寸图像，图像超出 `StakePane` 边界的部分是不可见的。如果我们没有为\
+  \ `StakePane` 设置最小尺寸，它的尺寸将随其内容而扩大，导致 `Next` 按钮将掉到可视边界之外。\n\n图 2-7. 在动态调整应用程序窗口大小后，位于窗口右侧的\
+  \ `Next` 按钮截图。\n\n![](img/image00144.jpeg \"next_button_adjust.jpg\")\n\n## 2.3\
+  \ 添加 `Previous` 按钮并调整其在 `StackPane` 中的位置\n\n在本节中，添加了一个 `Previous` 按钮并放置在 `StakePane`\
+  \ 的左侧。对齐方式设置为 `Pos.CENTER_LEFT`，左边距设置为 8 像素。这些步骤与之前节描述的创建 `Next` 按钮并调整其位置的过程类似。\n\
+  \n列表 2-7. 定义 `createPrevButton` 方法以创建 `Previous` 按钮：\n\n```\n /**\n   * 使用 createPrevButton()\
+  \ 方法创建上一个按钮\n   */\n Node createPrevButton() {\n    // ... implementation details\
+  \ ...\n }\n```\n\n（注：提示词中 2.3 节提供的文本已截断。我已根据规则对可用部分进行了格式化处理。）\n\n\n\n\n\n```\n final\
+  \ Node nextButton = createNextButton();\n  final Node prevButton = createPrevButton();\n\
+  \n    ...\n\n  public void start(final Stage stage) {\n\n      ...\n\n    // Install\
+  \ tooltip for nextButton\n    Tooltip t = new Tooltip(\"Next Image\");\n    Tooltip.install(nextButton,\
+  \ t);\n\n    // Install tooltip for prevButton\n    Tooltip t2 = new Tooltip(\"\
+  Previous Image\");\n    Tooltip.install(prevButton, t2);\n\n    // Adjust next button's\
+  \ position to the right side of StackPane\n    StackPane.setAlignment(nextButton,\
+  \ Pos.CENTER_RIGHT);\n    StackPane.setMargin(nextButton, new Insets(8));\n\n  \
+  \  // Adjust previous button's position to the right side of StackPane\n    StackPane.setAlignment(prevButton,\
+  \ Pos.CENTER_LEFT);\n    StackPane.setMargin(prevButton, new Insets(8));\n\n   \
+  \ // Add next button and previous button to stack pane\n    imageArea.getChildren().addAll(nextButton,\
+  \ prevButton);\n\n      ...\n\n  }\n```\n\n图 2-8. 带有 `Next` 按钮和 `Previous` 按钮的 ImageViewer\
+  \ 快照，置于 `StackPane` 的可见边界内。\n\n![](img/image00145.jpeg \"next_prev_buttons.jpg\"\
+  )\n\n## 2.4 实现鼠标点击事件处理器\n\n在第使用简便方法注册事件处理器来处理鼠标事件 节中，我们已经演示了如何为鼠标点击事件注册事件处理器。在本节中，我们将注册事件处理器并实现当鼠标点击按钮时被调用的\
+  \ `handle` 方法。如果点击了 `Next` 按钮，将加载当前加载文件的下一张图像文件；如果点击了 `Previous` 按钮，将加载当前加载文件之前的图像文件。\n\
+  \n在妥善地执行这些任务之前，我们将配置一个 `FileChooser`，仅显示扩展名匹配指定过滤器的文件，并建立一个存在当前目录的文件列表，该列表每当从 `FileChooser`\
+  \ 的文件打开对话框打开图像文件时都会创建一次。\n\n### 2.4.1 配置 `FileChooser`\n\n要配置 `FileChooser`，我们使用\
+  \ `FileChooser.ExtensionFilter` 类来定义文件扩展名过滤器，以显示具有以下扩展名的文件：“*.bmp”、“*.gif”、“*.jpeg”、“*.jpg”、“*.png”。\n\
+  \n调用 `FileChooser` 类提供的 `getExtensionFilters` 方法来获取类型为 `ObservableList<FileChooser.ExtensionFilter>`\
+  \ 的列表，然后使用 `addAll` 方法添加所需数量的过滤器。我们定义了一个 `FileUtils` 类来解决这个问题。代码如下：\n\n列表 2-9. 定义\
+  \ `FileUtils` 类，提供一个静态方法 `configure` 为给定的 `FileChooser` 添加文件扩展名过滤器：\n\n```\n package\
+  \ imageviewer;\n\nimport javafx.stage.FileChooser;\n\n/**\n * File Name: FileUtils.java\n\
+  \ * (位于目录: ImageViewer1.1/src/example4/imageviewer/)\n *\n * @author Shufen Kuo\n\
+  \ */\n\npublic class FileUtils {\n\n  /**\n   * 定义文件扩展名过滤器以过滤支持的图像文件，\n   * 匹配扩展名为文件：\n\
+  \   * .bmp, .gif, .jpeg, .jpg 和 .png\n   * @param fileChooser \n   */\n  static\
+  \ void configure(FileChooser fileChooser) {\n    fileChooser.getExtensionFilters().addAll(\n\
+  \        new FileChooser.ExtensionFilter(\"All Images\",\n          \"*.bmp\", \"\
+  *.gif\", \"*.jpeg\", \"*.jpg\", \"*.png\"),\n        new FileChooser.ExtensionFilter(\"\
+  All Files\", \"*.*\"),\n        new FileChooser.ExtensionFilter(\"BMP\", \"*.bmp\"\
+  ),\n        new FileChooser.ExtensionFilter(\"GIF\", \"*.gif\"),\n        new FileChooser.ExtensionFilter(\"\
+  JPEG\", \"*.jpeg\"),\n        new FileChooser.ExtensionFilter(\"JPG\", \"*.jpg\"\
+  ),\n        new FileChooser.ExtensionFilter(\"PNG\", \"*.png\"));    \n    // 将\
+  \ \".\" 设置为默认目录\n    fileChooser.setInitialDirectory(new File(\".\"));\n  }  \n\
+  }\n```\n\n我们在上述代码使用的 `FileChooser.ExtensionFilter` 构造函数接受两个参数，第一个是弹出文件打开对话框时显示在\
+  \ `\"Files of types:\"` 字段中的描述，第二个是变长参数 `String` 类型，每个参数都指定一个符合正则表达式语法的字符串。\n\n\
+  在 `FileUtils.configure` 方法内部，除了添加文件扩展名过滤器外，我们还将当前目录设置为初始目录：\n\n`fileChooser.setInitialDirectory(new\
+  \ File(\".\"));`\n\n从这里调用了在 `FileUtils` 类中定义的静态方法 `configure`：\n\n```\n // 创建文件选择器\n\
+  \    final FileChooser fileChooser = new FileChooser();\n    fileChooser.setTitle(\"\
+  Open an Image File\");\n    FileUtils.configure(fileChooser);\n```\n\n`FileChooser`\
+  \ 的功能和外观取决于操作系统。图 2-9 显示了 Windows XP 中的 `FileChooser`，图 2-10 显示了 Windows 8.1 中的\
+  \ `FileChooser`。\n\n图 2-9. 文件打开对话框（Windows XP 中）快照，扩展名过滤器列表中添加的第一个过滤器 `\"All Images\"\
+  ` 在点击组合框时显示在 `\"Files of types:\"` 字段中。\n\n![](img/image00146.jpeg \"file_chooser_filter.jpg\"\
+  )\n\n图 2-10. 文件打开对话框（Windows 8.1 中）快照，代码中与正则表达式 \"*.gif\" 关联的名称 `\"GIF\"` 显示在字段中。\n\
+  \n![](img/image00146.jpeg \"file_chooser_filter.jpg\")\n\n通常应用程序希望 `FileChooser`\
+  \ 记住其访问过的目录。这里是这样做的方法：\n\n列表 2-10. 在事件处理器的 `handle` 方法中设置 `FileChooser` 的访问目录：\n\
+  \n```\n // 为菜单项添加动作\n    load.setOnAction(new EventHandler<ActionEvent>() {\n  \
+  \    @Override\n      public void handle(ActionEvent e) {\n        // 打开文件选择器\n\
+  \        File file = fileChooser.showOpenDialog(stage);\n        if (file != null)\
+  \ {\n          // 设置访问目录\n          File lastDir = file.getParentFile();\n     \
+  \     fileChooser.setInitialDirectory(lastDir);\n          String url = file.toURI().toString();\n\
+  \          Image image = new Image(url);\n          imageView.setImage(image);\n\
+  \        }\n      }\n    });\n```\n\n### 2.4.2 创建迭代器遍历当前目录的文件\n\n为了从 `FileChooser`\
+  \ 的文件对话框打开图像文件时建立当前目录的文件列表，我们将使用 JDK 7 引入的 `java.nio.file` 包提供的 API。\n\n`Files`\
+  \ 类提供的以下静态方法\n\n```\nstatic DirectoryStream<Path> newDirectoryStream(Path dir, String\
+  \ glob)\n```\n\n打开指定的目录并返回 `DirectoryStream<Path>`。`DirectoryStream` 类型实现了 `Iterable`，因此可以使用\
+  \ for-each 语法遍历目录中的文件。\n\n以下是读取目录并逐个将文件列表的代码片段：\n\n```\n List<Path> list = new ArrayList<>();\n\
+  \n    try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir,\n      \
+  \  \"*.{bmp,gif,jpeg,jpg,png}\")) {\n      for (Path entry : stream) {\n       \
+  \ // 忽略目录内的子目录\n        if (Files.isDirectory(entry, LinkOption.NOFOLLOW_LINKS))\n\
+  \          continue;\n        list.add(entry);\n      }\n    } catch (DirectoryIteratorException\
+  \ de) {\n      throw de.getCause();\n    }\n```\n\n以下是静态方法 `listIterator` 的完整代码，它读取目录、逐个将文件添加到\
+  \ `List`、按字母排序并返回一个指向下一个可用文件的 `ListIterator`。该方法定义在 `FileUtils` 类中。\n\n导入语句：\n\n\
+  ```\n import java.io.IOException;\nimport java.nio.file.DirectoryIteratorException;\n\
+  import java.nio.file.DirectoryStream;\nimport java.nio.file.Files;\nimport java.nio.file.LinkOption;\n\
+  import java.nio.file.Path;\nimport java.util.ArrayList;\nimport java.util.Collections;\n\
+  import java.util.Comparator;\nimport java.util.List;\nimport java.util.ListIterator;\n\
+  import javafx.stage.FileChooser;\n```\n\n\n\n\n列表 2-11. 在 `FileUtils` 类中定义的静态方法\
+  \ `listIterator`，它读取目录，将文件逐个添加到列表中，对列表进行排序，并返回 `ListIterator` 实例：\n\n```java\n /**\n\
+  \   * 使用 Files.newDirectoryStream(Path, String) 读取目录，\n   * 将文件添加到列表，返回指向参数中指定\n\
+  \   * 文件的 listIteratior，即第一次调用 next()\n   * 时返回指定的文件，\n   * 文件列表按字母顺序排序，\n   * newDirectoryStream\
+  \ 方法的第二个参数是\n   * 用于过滤匹配模式的文件的 glob 模式：\n   *   \"*.{bmp,gif,jpeg,jpg,png}\",\n\
+  \   * 我们只对后缀为以下的文件感兴趣：\n   *  .bmp, .gif, .jpeg, .jpg 和 .png。\n   * \n   * @param\
+  \ file\n   * @return\n   * @throws IOException \n   */\n  static ListIterator<Path>\
+  \ listIterator(Path file) throws IOException {\n    Path dir = file.getParent();\n\
+  \    List<Path> list = new ArrayList<>();\n\n    try (DirectoryStream<Path> stream\
+  \ = Files.newDirectoryStream(dir,\n        \"*.{bmp,gif,jpeg,jpg,png}\")) {\n  \
+  \    for (Path entry : stream) {\n        // 忽略 dir 内部的子目录\n        if (Files.isDirectory(entry,\
+  \ LinkOption.NOFOLLOW_LINKS))\n          continue;\n        list.add(entry);\n \
+  \     }\n    } catch (DirectoryIteratorException de) {\n      throw de.getCause();\n\
+  \    }\n\n    // Path 中的 compareTo 方法按顺序比较两个抽象路径。\n    Collections.sort(list, new\
+  \ Comparator<Path>() {\n      public int compare(Path o1, Path o2) {\n        return\
+  \ o1.getFileName().compareTo(o2.getFileName());\n      }\n    });\n\n    int index\
+  \ = 0; // 当前文件在列表中的索引\n    // 查找选择文件的索引\n    for (Path entry : list) {\n       if\
+  \ (entry.equals(file)) break;\n       index++;\n    }\n    if (index == list.size())\
+  \ {\n      // 文件不在列表中\n      index = 0;\n    } \n    return list.listIterator(index);\
+  \ \n  }\n```\n\n我们将在下一节描述 `FileUtils.listIterator(Path file)` 方法的使用。\n\n### 2.4.3\
+  \ 在 `ImageViewer` 类中定义属性\n\n在本节中，我们将演示如何在类中定义属性。在应用程序的入口点 `ImageViewer` 类中，我们定义了以下三个属性：\n\
+  \n`listIterator`\n\n类型为 `ObjectProperty<ListIterator<Path>>`。`listIterator(Path\
+  \ file)` 方法是 `FileUtils` 类中定义的静态方法，通过 `Load` 菜单项的操作处理器调用，以获取 `ListIterator` 实例并设置为该属性的值。\n\
+  \n`lastClickedButton`\n\n类型为 `StringProperty`，用于跟踪最后点击的按钮，以便能够正确移动 `listIterator`\
+  \ 属性中指定的 `ListIterator` 光标。你将看到 `lastClickedButton` 属性的值为 `NEXT` 或 `PREVIOUS`。\n\
+  \n`curImage`\n\n类型为 `ObjectProperty<Image>`。它被用于在 `ImageViewer` 中显示当前图像。\n\n\n\n\
+  \n\n\n```java\n Node createNextButton() {\n    // Create a group as button\n   \
+  \ Group buttonGroup = new Group();\n\n    ...\n\n    // Register mouse clicked event\
+  \ handler for nextButton\n    buttonGroup.setOnMouseClicked(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        // Get\
+  \ iterator\n        ListIterator<java.nio.file.Path> iterator = listIterator.get();\n\
+  \        if (iterator != null && iterator.hasNext()) {\n          java.nio.file.Path\
+  \ path = iterator.next();\n          if (lastClickedButton.get().equals(PREVIOUS))\
+  \ {\n            // If last clicked button is prevButton\n            // the first\
+  \ call of next() is the current image, \n            // must move cursor one step\
+  \ forward.\n            if (iterator.hasNext())\n              path = iterator.next();\n\
+  \            else\n              return;\n          }\n          System.out.format(\"\
+  Next button clicked: %s%n\", path.getFileName());\n          String url = path.toUri().toString();\n\
+  \          curImage.set(new Image(url));\n          lastClickedButton.set(NEXT);\n\
+  \        }\n      }\n    });\n\n    ...\n}\n```\n\nListing 2-17. `Previous` 按钮的点击事件处理程序代码变为：\n\
+  \n```java\n Node createPrevButton() {\n    // Create a group as button\n    Group\
+  \ buttonGroup = new Group();\n\n    ...\n\n    // Register mouse clicked event handler\
+  \ for prevButton\n    buttonGroup.setOnMouseClicked(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        // Get\
+  \ list iterator\n        ListIterator<java.nio.file.Path> iterator = listIterator.get();\n\
+  \        if (iterator != null && iterator.hasPrevious()) {\n          java.nio.file.Path\
+  \ path = iterator.previous();\n          if (lastClickedButton.get().equals(NEXT))\
+  \ {\n            // If the last clicked button is nextButton\n            // the\
+  \ first call of previous() is the current image,\n            // must move cursor\
+  \ one step backward\n            if (iterator.hasPrevious())\n              path\
+  \ = iterator.previous();\n            else\n              return;\n          }\n\
+  \          System.out.format(\"Prev button clicked: %s%n\", path.getFileName());\n\
+  \          String url = path.toUri().toString();\n          curImage.set(new Image(url));\n\
+  \          lastClickedButton.set(PREVIOUS);\n        }\n      }\n    });\n\n   \
+  \ ...\n}\n```\n\n## 2.5 `Image Viewer V1.1` 的完整源代码\n\n### 2.5.1 `FileUtils` 类的完整源代码\n\
+  \nListing 2-18. `FileUtils` 类的完整源代码：\n\n```java\n package imageviewer;\n\nimport\
+  \ java.io.File;\nimport java.io.IOException;\nimport java.nio.file.DirectoryIteratorException;\n\
+  import java.nio.file.DirectoryStream;\nimport java.nio.file.Files;\nimport java.nio.file.LinkOption;\n\
+  import java.nio.file.Path;\nimport java.util.ArrayList;\nimport java.util.Collections;\n\
+  import java.util.Comparator;\nimport java.util.List;\nimport java.util.ListIterator;\n\
+  import javafx.stage.FileChooser;\n\n/**\n * File Name: FileUtils.java\n * (in directory:\
+  \ ImageViewer1.1/src/example4/imageviewer/)\n *\n * @author Shufen Kuo\n */\n\n\
+  public class FileUtils {\n\n  /**\n   * 定义文件扩展名过滤器以过滤支持的图像文件，\n   * 匹配扩展名为：\n  \
+  \ * .bmp, .gif, .jpeg, .jpg 和 .png\n   * @param fileChooser \n   */\n  static void\
+  \ configure(FileChooser fileChooser) {\n    fileChooser.getExtensionFilters().addAll(\n\
+  \        new FileChooser.ExtensionFilter(\"All Images\",\n          \"*.bmp\", \"\
+  *.gif\", \"*.jpeg\", \"*.jpg\", \"*.png\"),\n        new FileChooser.ExtensionFilter(\"\
+  All Files\", \"*.*\"),\n        new FileChooser.ExtensionFilter(\"BMP\", \"*.bmp\"\
+  ),\n        new FileChooser.ExtensionFilter(\"GIF\", \"*.gif\"),\n        new FileChooser.ExtensionFilter(\"\
+  JPEG\", \"*.jpeg\"),\n        new FileChooser.ExtensionFilter(\"JPG\", \"*.jpg\"\
+  ),\n        new FileChooser.ExtensionFilter(\"PNG\", \"*.png\"));    \n    // 设置\
+  \ \".\" 为默认目录\n    fileChooser.setInitialDirectory(new File(\".\"));\n  }\n\n  /**\n\
+  \   * 使用 Files.newDirectoryStream(Path, String) 读取目录，\n   * 将文件添加到列表中，返回指向参数中指定\n\
+  \   * 文件的迭代器，即 next() 的第一次调用\n   * 返回指定的文件，\n   * 文件列表按字母顺序排序，\n   * newDirectoryStream\
+  \ 方法中的第二个参数是\n   * 用于过滤匹配模式的 glob 模式：\n   *   \"*.{bmp,gif,jpeg,jpg,png}\",\n  \
+  \ * 我们对对以以下结尾的文件感兴趣：\n   *  .bmp, .gif, .jpeg, .jpg 和 .png。\n   * \n   * @param\
+  \ file\n   * @return\n   * @throws IOException \n   */\n  static ListIterator<Path>\
+  \ listIterator(Path file) throws IOException {\n    Path dir = file.getParent();\n\
+  \    List<Path> list = new ArrayList<>();\n\n    try (DirectoryStream<Path> stream\
+  \ = Files.newDirectoryStream(dir,\n        \"*.{bmp,gif,jpeg,jpg,png}\")) {\n  \
+  \    for (Path entry : stream) {\n        // 忽略目录内的子目录\n        if (Files.isDirectory(entry,\
+  \ LinkOption.NOFOLLOW_LINKS))\n          continue;\n        list.add(entry);\n \
+  \     }\n    } catch (DirectoryIteratorException de) {\n      throw de.getCause();\n\
+  \    }\n\n    // Path 中的 compareTo 方法按字母顺序比较两个抽象路径。\n    Collections.sort(list,\
+  \ new Comparator<Path>() {\n      public int compare(Path o1, Path o2) {\n     \
+  \   return o1.getFileName().compareTo(o2.getFileName());\n      }\n    });\n\n \
+  \   int index = 0; // 当前文件在列表中的索引\n    // 搜索指定文件的索引\n    for (Path entry : list)\
+  \ {\n       if (entry.equals(file)) break;\n       index++;\n    }\n    if (index\
+  \ == list.size()) {\n      //文件不在列表中\n      index = 0;\n    } \n    return list.listIterator(index);\
+  \ \n  }\n}\n```\n\n### 2.5.2 `ImageViewer` 类的完整源代码\n\nListing 2-19. `ImageViewer`\
+  \ 类的完整源代码：\n\n\n\n\n\n```java\npackage imageviewer;\n\nimport java.io.File;\nimport\
+  \ java.io.IOException;\nimport java.util.ListIterator;\nimport javafx.application.Application;\n\
+  import javafx.application.Platform; \nimport javafx.beans.property.ObjectProperty;\n\
+  import javafx.beans.property.SimpleObjectProperty;\nimport javafx.beans.property.SimpleStringProperty;\n\
+  import javafx.beans.property.StringProperty;\nimport javafx.beans.value.ChangeListener;\n\
+  import javafx.beans.value.ObservableValue;\nimport javafx.event.ActionEvent;\nimport\
+  \ javafx.event.EventHandler;\nimport javafx.geometry.Insets;\nimport javafx.geometry.Pos;\n\
+  import javafx.scene.Cursor;\nimport javafx.scene.Group;\nimport javafx.scene.Node;\n\
+  import javafx.scene.Scene;\nimport javafx.scene.control.Menu;\nimport javafx.scene.control.MenuBar;\n\
+  import javafx.scene.control.MenuItem;\nimport javafx.scene.control.RadioMenuItem;\n\
+  import javafx.scene.control.Toggle;\nimport javafx.scene.control.ToggleGroup;\n\
+  import javafx.scene.control.Tooltip;\nimport javafx.scene.image.Image;\nimport javafx.scene.image.ImageView;\n\
+  import javafx.scene.input.MouseEvent;\nimport javafx.scene.layout.BorderPane;\n\
+  import javafx.scene.layout.StackPane;\nimport javafx.scene.paint.Color;\nimport\
+  \ javafx.scene.paint.CycleMethod;\nimport javafx.scene.paint.LinearGradient;\nimport\
+  \ javafx.scene.paint.Stop;\nimport javafx.scene.shape.Polygon;\nimport javafx.scene.shape.Rectangle;\n\
+  import javafx.stage.FileChooser;\nimport javafx.stage.Stage;\n\n/**\n * 文件名: ImageViewer.java\
+  \ V1.1\n * (目录: ImageViewer1.1/src/example4/imageviewer/)\n * 该应用程序创建了一个 BorderPane\
+  \ 作为场景的根节点，\n * 在 BorderPane 的中心添加了一个 StackPane。\n * 场景的初始大小设置为 600x400。\n * StackPane\
+  \ 的大小将自动调整以适应场景的大小。\n * 当用户调整窗口大时，StackPane 会随之调整大小。\n *\n * 在 BorderPane 顶部添加菜单栏。\n\
+  \ * 创建“文件(File)”菜单，使用 FileChooser 的打开对话框\n * 选择图像文件，并在图像渲染区域加载并显示图像。\n * \n * 创建“选项(Option)”菜单包含“视图(View)”子菜单，让用户选择\n\
+  \ * 图片查看标准：适应宽度(Fit Width)、适应高度(Fit Height) 或默认的原始大小(Original Size)。\n *\n * 使用\
+  \ bind 和 unbind 方法调整图像查看大小：\n * 将 ImageView 的 fitWidth/fitHeight 属性绑定到场景的 width/height\
+  \ 属性，\n * 这样，每当场景调整大小时，ImageView 的大小将自动更改。\n * \n * 在场景中添加“下一个(Next)”和“上一个(Previous)”按钮，\n\
+  \ * 在加载第一张图片后，用户可以使用这些按钮\n * 无需再次打开 FileChooser 即可查看下一张或预览图片。\n * \n * 调整下一个按钮在\
+  \ StackPane 中的默认位置\n *\n * 添加上一个按钮并调整其在 StackPane 中的位置\n *\n * 为下一个和上一个按钮实现鼠标点击事件的处理器(Handlers)\n\
+  \ *\n * @author Shufen Kuo\n */\n\npublic class ImageViewer extends Application\
+  \ {\n  final Node nextButton = createNextButton();\n  final Node prevButton = createPrevButton();\n\
+  \n  // 创建切换组\n  final ToggleGroup groupOption = new ToggleGroup();\n  final String\
+  \ FIT_WIDTH = \"Fit Width\";\n  final String FIT_HEIGHT = \"Fit Height\";\n  final\
+  \ String ORIGINAL_SIZE = \"Original Size\";\n\n  // 用于遍历当前选择目录中的文件\n  final ObjectProperty<ListIterator<java.nio.file.Path>>\
+  \ listIterator =\n      new SimpleObjectProperty<>();\n\n  final String NEXT = \"\
+  NEXT\";\n  final String PREVIOUS = \"PREVIOUS\";\n  // 用于跟踪最后点击的按钮\n  final StringProperty\
+  \ lastClickedButton = new SimpleStringProperty();\n\n  final ObjectProperty<Image>\
+  \ curImage = new SimpleObjectProperty<>();\n\n  @Override\n  public void start(final\
+  \ Stage stage) {\n    BorderPane rootPane = new BorderPane();\n    final StackPane\
+  \ imageArea = new StackPane();\n    // 设置 StackPane 的最小尺寸以避免在\n    // 加载大图片时调整大小\n\
+  \    imageArea.setMinSize(0, 0);\n    rootPane.setCenter(imageArea);\n\n    // 创建\
+  \ ImageView，并添加到图像区域\n    final ImageView imageView = new ImageView();\n    imageView.imageProperty().bind(curImage);\n\
+  \    imageView.setPreserveRatio(true);\n    imageArea.getChildren().add(imageView);\n\
+  \n    final Scene scene = new Scene(rootPane, 600, 400);\n\n    imageArea.widthProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal,\n          Object newVal) {\n        System.out.format(\"imageArea width\
+  \ changed from %.1f to %.1f%n\",\n            oldVal, newVal);\n      }\n    });\n\
+  \    imageArea.heightProperty().addListener(new ChangeListener<Object>() {\n   \
+  \   public void changed(ObservableValue o, Object oldVal,\n          Object newVal)\
+  \ {\n        System.out.format(\"imageArea height changed from %.1f to %.1f%n\"\
+  ,\n            oldVal, newVal);\n      }\n    });\n\n    // 添加菜单栏\n    final MenuBar\
+  \ menuBar = new MenuBar();\n    Menu menuFile = new Menu(\"File\");\n    MenuItem\
+  \ load = new MenuItem(\"Load\");\n    MenuItem exit = new MenuItem(\"Exit\");\n\
+  \    menuFile.getItems().addAll(load, exit);\n    menuBar.getMenus().add(menuFile);\n\
+  \    rootPane.setTop(menuBar);\n\n    // 为 exit 添加动作\n    exit.setOnAction(new EventHandler<ActionEvent>()\
+  \ {\n      @Override\n      public void handle(ActionEvent e) {\n        Platform.exit();\n\
+  \      }\n    });\n    // 创建文件选择器\n    final FileChooser fileChooser = new FileChooser();\n\
+  \    fileChooser.setTitle(\"Open an Image\");\n    FileUtils.configure(fileChooser);\n\
+  \    // 为 load 添加动作\n    load.setOnAction(new EventHandler<ActionEvent>() {\n  \
+  \    @Override\n      public void handle(ActionEvent e) {\n        // 打开 FileChooser\
+  \ 对话框\n        File file = fileChooser.showDialog(stage);\n        if (file != null)\
+  \ {\n          // 设置上次访问的目录\n          File lastDir = file.getParent();\n      \
+  \    fileChooser.setInitialDirectory(lastDir);\n          // 从选择器打开时创建迭代器\n    \
+  \      try {\n            ListIterator<java.nio.file.Path> it =\n              \
+  \  FileUtils.listIterator(file.toPath());\n            listIterator.set(it);\n \
+  \           String url = it.next().toURI().toString();\n            curImage.set(new\
+  \ Image(url));\n            // 因为迭代指向下一个文件，设置为 NEXT\n            lastClickedButton.setValue(NEXT);\n\
+  \          } catch (IOException ex) {}\n        }\n      }\n    });\n    // 创建 Option\
+  \ 菜单\n    Menu menuOption = new Menu(\"Option\");\n    // 创建 Radio 项\n    final\
+  \ RadioMenuItem fitWidth = new RadioMenuItem(\"Fit Width\");\n    fitWidth.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem fitHeight = new RadioMenuItem(\"Fit Height\");\n    fitHeight.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\n    original.setToggleGroup(groupOption);\n\
+  \n    // 监听切换组中的选择\n    groupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n      public void changed(ObservableValue<? extends Toggle> ov,\n         \
+  \ Toggle old_toggle, Toggle new_toggle) {\n        if (groupOption.getSelectedToggle()\
+  \ != null) {\n          RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \          if (choiceItem == fitWidth) {\n            System.out.println(\"fitwidth\"\
+  );\n            imageView.fitWidthProperty().bind(scene.widthProperty());\n    \
+  \        imageView.fitHeightProperty().unbind();\n            // 解除绑定后，将高度设置为 0\n\
+  \            imageView.setFitHeight(0);\n          } else if (choiceItem == fitHeight)\
+  \ {\n            System.out.println(\"fitheight\");\n            // 渲染的可用高度是从场景高度中减去菜单栏的高度\n\
+  \            imageView.fitHeightProperty().bind(\n                scene.heightProperty().subtract(menuBar.getHeight()));\n\
+  \            imageView.fitWidthProperty().unbind();\n            // 解除绑定后，将宽度设置为\
+  \ 0\n            imageView.setFitWidth(0);\n          } else {\n            System.out.println(\"\
+  original size\");\n            imageView.fitWidthProperty().unbind();\n        \
+  \    imageView.fitHeightProperty().unbind();\n            // 解除绑定后，将高度/宽度设置为 0\n\
+  \            imageView.setFitWidth(0);\n            imageView.setFitHeight(0);\n\
+  \          }\n        }\n      }\n    });\n    // 为 Option 菜单创建 View 子菜单\n    Menu\
+  \ menuView = new Menu(\"View\");\n    menuView.getItems().addAll(fitWidth, fitHeight,\
+  \ original);\n    // 设置原始大小为默认选择\n    original.setSelected(true);\n    // 将选项菜单添加到菜单栏\n\
+  \    menuOption.getItems().add(menuView);\n    menuBar.getMenus().add(menuOption);\n\
+  \    // 安装 Tooltip\n    Tooltip t = new Tooltip(\"Next Image\");\n    Tooltip.install(nextButton,\
+  \ t);\n    // 为 prevButton 安装 tooltip\n    Tooltip t2 = new Tooltip(\"Previous Image\"\
+  );\n    Tooltip.install(prevButton, t2);\n    // 将下一个按钮调整到 StackPane 的右侧\n    StackPane.setAlignment(nextButton,\
+  \ Pos.CENTER_RIGHT);\n    StackPane.setMargin(nextButton, new Insets(8));\n    //\
+  \ 将上一个按钮调整到 StackPane 的左侧\n    StackPane.setAlignment(prevButton, Pos.CENTER_LEFT);\n\
+  \    StackPane.setMargin(prevButton, new Insets(8));\n    // 将下一个和上一个按钮添加到 stack\
+  \ pane\n    imageArea.getChildren().addAll(nextButton, prevButton);\n    // 监听场景的宽变化\n\
+  \    scene.widthProperty().addListener(new ChangeListener<Object>() {\n      public\
+  \ void changed(ObservableValue o, Object oldVal,\n          Object newVal) {\n \
+  \       System.out.format(\"Scene width changed from %.1f to %.1f%n\",\n       \
+  \     (double) oldVal, (double) newVal);\n      }\n    });\n    // 监听场景的高度变化\n \
+  \   scene.heightProperty().addListener(new ChangeListener<Object>() {\n      public\
+  \ void changed(ObservableValue o, Object oldVal,\n          Object newVal) {\n \
+  \       System.out.format(\"Scene height changed from %.1f to %.1f%n\",\n      \
+  \      (double) oldVal, (double) newVal);\n      }\n    });\n    stage.setTitle(\"\
+  ImageViewer V1.1\");\n    stage.setScene(scene);\n    stage.show();\n  }\n\n  /**\n\
+  \   * 使用 Rectangle 作为背景创建下一个按钮，\n   * Polygon 作为图标，Group 作为容器，\n   * Rectangle 的大小为\
+  \ 25x35，\n   * Polygon 的厚度为 8 像素，\n   * Polygon 的内边距为 (2, 5, 2, 5)，\n   * 鼠标进入时更改\
+  \ rectangle 外观。\n   * @return\n   */\n  Node createNextButton() {\n     创建 group\
+  \ 作为按钮\n    Group buttonGroup = new Group();\n    // 创建 rectangle 形状作为背景\n    final\
+  \ Rectangle rect = new Rectangle(0, 0, 25, 35);\n    // Rectangle 的外观\n    final\
+  \ LinearGradient lg = new LinearGradient(0, 0, 1, 0, true,\n        CycleMethod.NO_CYCLE,\
+  \ new Stop[]{\n      Stop(0, Color.web(\"#5173A8\")),\n      Stop(0.6, Color.web(\"\
+  #A8B9D4\")),\n      Stop(1, Color.web(\"#877C6\"))});\n    rect.setFill(lg);\n \
+  \   rect.setStroke(Color.web(\"#ACD7FF\"));\n    rect.setArcHeight(6.5);\n    rect.setArcWidth(6.5);\n\
+  \    // 鼠标进入按钮时的外观\n    final LinearGradient lgEntered = new LinearGradient(0, 0,\
+  \ 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n      Stop(0, Color.web(\"\
+  #877C6\")),\n      Stop(0.4, Color.web(\"#A8B9D4\")),\n      Stop(1, Color.web(\"\
+  #5173A8\"))});\n    // 创建代表 Next 图标的 polygon 形状\n    // 8 像素厚度，内边距为 2, 2, 5\n  \
+  \  final polygon = new Polygon();\n    Double[] dArray = {\n      5.0, 2.0,\n  \
+  \    22.0, 17.0,\n      5.0, 25.0,\n      14.0, 17.0,\n      5.0, 9.0};\n    polygon.getPoints().addAll(dArray);\n\
+  \    polygon.setFill(Color.WHITE);\n    polygon.setStroke(Color.web(\"#436BB\"));\n\
+  \    // 设置光标\n    buttonGroup.setCursor(Cursor.OPEN_HAND);\n    // 为 nextButton\
+  \ 注册点击事件\n    buttonGroup.setOnMouseClicked(new EventHandler<MouseEvent>() {\n \
+  \     @Override\n      public void handle(MouseEvent me) {\n        // 获取迭代器\n \
+  \       ListIterator<java.nio.file.Path> iterator = listIterator.get();\n      \
+  \  if (iterator != null && iterator.hasNext()) {\n          java.nio.file.Path path\
+  \ = iterator.next();\n          if (lastClickedButton.get().equals(PREVIOUS)) {\n\
+  \            // 如果上次点击的是 prevButton\n            // 第一次调用 next() 获取的是当前图片，\n   \
+  \         // 必须向前移动一步。\n            if (iterator.hasNext())\n              path\
+  \ = iterator.next();\n            else\n              return;\n          }\n   \
+  \       System.out.format(\"Next button clicked: %s%n\", path.getFileName());\n\
+  \          String url = path.toUri().toString();\n          curImage.set(new Image(url));\n\
+  \          lastClickedButton.set(NEXT);\n        }\n      }\n    });\n    // 注册鼠标进入处理器\n\
+  \    // 鼠标进入时更改按钮的外观\n    buttonGroup.setOnMouseEntered(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        System.out.println(\"\
+  Mouse entered\");\n        rect.setFill(lgEntered);\n        polygon.setFill(Color.web(\"\
+  #436BB\"));\n        polygon.setStroke(Color.WHITE);\n      }\n    });\n    // 注册鼠标离开处理器\n\
+  \    // 鼠标离开时恢复原始外观\n    buttonGroup.setOnMouseExited(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        System.out.println(\"\
+  Mouse exited\");\n        rect.setFill(lg);\n        polygon.setFill(Color.WHITE);\n\
+  \        polygon.setStroke(Color.web(\"#436BB\"));\n      }\n    });\n    buttonGroup.getChildren().addAll(rect,\
+  \ polygon);\n    return buttonGroup;\n  }\n\n  /**\n   * 使用 Rectangle 作为背景创建上一个按钮，\n\
+  \   * Polygon 作为图标，Group 作为容器，\n   * Rectangle 的大小为 25x35，\n   * Polygon 的厚度为 8\
+  \ 像素，\n   * Polygon 的内边距为 (2, 5, 2, 5)，\n   * 鼠标进入时更改 rectangle 外观。\n   * @return\n\
+  \   */\n  Node createPrevButton() {\n    // 创建 group 作为按钮\n    Group buttonGroup\
+  \ = new Group();\n    // 创建 rectangle 形状作为背景\n    final Rectangle rect = new Rectangle(0,\
+  \ 0, 25, 35);\n    // Rectangle 的外观\n    final LinearGradient lg = new LinearGradient(0,\
+  \ 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n      Stop(0, Color.web(\"\
+  #877C6\")),\n      Stop(0.4, Color.web(\"#A8B9D4\")),\n      Stop(1, Color.web(\"\
+  #5173A8\"))});\n    rect.setFill(lg);\n    rect.setStroke(Color.web(\"#ACD7FF\"\
+  ));\n    rect.setArcHeight(6.5);\n    rect.setArcWidth(6.5);\n    // ... (逻辑与 NextButton\
+  \ 类似)\n    return buttonGroup;\n  }\n}\n```\n\n\n\n\n\n图 2-11.`Image Viewer V1.1`\
+  \ 截图，鼠标悬停在 `Previous`（上一个）按钮上。\n\n![](img/image00148.jpeg \"next_prev_finish.jpg\"\
+  )\n\n从命令行编译并运行程序，通过从 `FileChooser` 的打开对话框加载大、小尺寸图像、选择不同的视图选项、动态调整应用程序窗口、点击 `Next`（下一个）按钮加载下一张图像、点击\
+  \ `Previous` 按钮加载上一张图像……等等来测试程序。输出结果所示：\n\n在命令行中编译和运行 ImageViewer 的输出：\n\n```\n\
+  \ Microsoft Windows [Version 6.3.9600]\n(c) 2013 Microsoft Corporation. All rights\
+  \ reserved.\n\nF:\\My Documents\\DocRoot\\SHUFEN_JAVA\\MyBookJFX\\VolumeOne\\ImageViewer1.1\\\
+  src\\example4>\njavac  -encoding utf-8 -Xlint:unchecked imageviewer\\*.java\n\n\
+  jar cf imageviewer.jar imageviewer\n\njava -cp imageviewer.jar imageviewer.ImageViewer\n\
+  original size\nimageArea width changed from 0.0 to 600.0\nimageArea height changed\
+  \ from 0.0 to 375.0\nfitwidth\nfitheight\noriginal size\nMouse entered\nNext button\
+  \ clicked: jasmin.bmp\nMouse exited\nMouse entered\nNext button clicked: Shufen2009_11\
+  \ 306.jpg\nMouse exited\nMouse entered\nPrev button clicked: Shufen2009_11 305.jpg\n\
+  Mouse exited\nScene height changed from 400.0 to 501.0\nimageArea height changed\
+  \ from 375.0 to 476.0\nScene width changed from 600.0 to 691.0\nimageArea width\
+  \ changed from 600.0 to 691.0\nMouse entered\nNext button clicked: Shufen2010_01\
+  \ 420.jpg\nMouse exited\n```\n\n## 2.6 总结\n\n本章介绍了 JavaFX 库的以下关键方面，按出现顺序列出：\n\n\
+  - `Group` 类，位于 `javafx.scene.Group` 包，是 `javafx.scene.Parent` 的子类。（参见“将 `Group`\
+  \ 作为容器”章节）\n- `Shape` 类，位于 `javafx.scene.shape` 包，提供了渲染 2D 原形（如矩形、多边形等）的功能。（参见“使用\
+  \ `Shape` 渲染 2D 原形”章节）\n- `Rectangle` 类，位于 `javafx.scene.shape` 包，是 `javafx.scene.shape.Shape`\
+  \ 的直接子类。它提供了根据属性（如 `x`、`y`、`width`、`height` 等）绘制矩形的功能。（参见“使用 `Shape` 渲染 2D 原形”和“将\
+  \ `Rectangle` 作为边界框”章节）\n- `Polygon`，位于 `javafx.scene.shape` 包，是 `javafx.scene.shape.Shape`\
+  \ 的直接子类。使用 `getPoints()` 方法获取 `ObservableList<Double>` 类型，然后使用 `Collection` 接口定义的内置工具，将一系列存储在\
+  \ `Double` 数组中的 `x` 和 `y` 坐标添加到列表中，这些坐标代表 `Polygon` 的点。（参见“使用 `Shape` 渲染 2D 原形”和“使用\
+  \ `Polygon` 作为视觉图标”章节）\n- `LinearGradient` 和 `Color`，位于 `javafx.scene.paint` 包，是\
+  \ `Paint` 类的两个直接子类。（参见“`Shape` 的背景和边界”章节）\n- `CycleMethod` 和 `Stop`，位于 `javafx.scene.paint`\
+  \ 包，与 `LinearGradient` 和 `RadialGradient` 类配合使用的类：\n    - `CycleMethod`：枚举类型，定义了常量：`CycleMethod.NO_CYCLE`、`CycleMethod.REFLECT`\
+  \ 和 `CycleMethod.REPEAT`。\n    - `Stop`：定义了应用于颜色渐变的偏移量和颜色。（参见“将 `Rectangle` 作为边界框”和“`Shape`\
+  \ 的背景和边界”章节）\n- `arcHeight` 和 `arcWidth` 是 `Rectangle` 类中定义的属性，用于渲染圆角矩形。（参见“设置 `arcHeight`\
+  \ 和 `arcWidth` 属性渲染圆角矩形”章节）\n- `Cursor` 类，位于 `javafx.scene` 包并继承 `java.lang.Object`，以\
+  \ `Cursor` 类型的静态字段定义了一些实用的鼠标光标，如 `CLOSED_HAND`、`CROSSHAIR`、`HAND`、`OPEN_HAND`、`TEXT`、`WAIT`\
+  \ 等。（参见“为 Node 设置 `Cursor` 属性”章节）\n- `EventHandler<T extends Event>`，继承 `java.util.EventListener`\
+  \ 的接口，定义了在指定事件发生时调用的 `handle(T event)` 方法。（参见“使用便利方法注册事件处理器以处理鼠标事件”章节）\n- `MouseEvent`，位于\
+  \ `javafx.scene.input` 包，是 `javafx.scene.input.InputEvent` 的子类。它定义了事件类型，如 `MOUSE_CLICKED`、`MOUSE_DRAGGED`、`MOUSE_ENTERED`、`MOUSE_EXITED`、`MOUSE_MOVED`、`MOUSE_PRESSED`、`MOUSE_RELEASED`\
+  \ 等，并提供了 `getX()`、`getY()` 等方法用于获取事件发生时鼠标的位置。（参见“使用便利方法注册事件处理器以处理鼠标事件”章节）\n- `Node`\
+  \ 类提供的某些便利方法，用于注册 `EventHandler` 以处理鼠标事件：\n    ```\n    public final void setOnMouseClicked(EventHandler<?\
+  \ super MouseEvent> value)\n    public final void setOnMouseEntered(EventHandler<?\
+  \ super MouseEvent> value)\n    public final void setOnMouseExited(EventHandler<?\
+  \ super MouseEvent> value)\n    ```\n    （参见“使用便利方法注册事件处理器以处理鼠标事件”章节）\n- `Tooltip`\
+  \ 类（位于 `javafx.scene.control` 包并继承 `javafx.scene.control.PopupControl`）提供的 `static\
+  \ void install(Node node, Tooltip t)` 方法，用于鼠标悬停在给定 `Node` 上显示帮助帮助。（参见“为 Node 安装\
+  \ `Tooltip`”章节）\n- `StackPane` 静态方法，用于自定义指定子节点的布局约束：\n    ```\n    static void setAlignment(Node\
+  \ child, Pos value)\n    static void setMargin(Node child, Insets value)\n    ```\n\
+  \    （参见“在 StackPane 中调整 `Next` 按钮的默认位置”和“在 StackPane 中添加 `Previous` 按钮并调整其位置”章节）\n\
+  - `Pos`，位于 `javafx.geometry` 包，是一个定义位置和对齐常量的枚举类型，如 `CENTER`、`CENTER_RIGHT`、`TOP_RIGHT`\
+  \ 等。（参见“在 StackPane 中调整 `Next` 按钮的默认位置”和“在 StackPane 中添加 `Previous` 按钮并调整其位置”章节）\n\
+  - `Insets` 类，位于 `javafx.geometry` 包，通常用于 `setMargin` 方法或 `setPadding` 方法，指定矩形区域四边（上、右、下、左）的偏移量。（参见“在\
+  \ StackPane 中调整 `Next` 按钮的默认位置”和 prev-button-set-margin-codes）\n- `FileChooser.ExtensionFilter`\
+  \ 是 `FileChooser` 类中定义的嵌套类，用于定义过滤器以仅显示扩展匹配给定过滤器的文件。（参见“配置 `FileChooser`”章节）\n- 位于\
+  \ `javafx.beans.property` 包的一些类：\n    - `ObjectProperty<T>`：抽象类，派自 `javafx.beans.binding.ObjectExpression<T>`\
+  \ 类，实现 `Property<T>` 和 `WritableObjectValue<T>`。\n    - `SimpleObjectProperty<T>`：派自\
+  \ `ObjectProperty<T>` 类。\n    - `StringProperty`\n\n\n\n\n\n`is` 是一个抽象类，继承自 `javafx.beans.binding.StringExpression`\
+  \ 类，实现了 `Property<java.lang.String>` 和 `WritableStringValue`。\n\n`WritableStringValue`\
+  \ 继承自 `WritableObjectValue<java.lang.String>`。\n\n`SimpleStringProperty` 继承自 `StringProperty`\
+  \ 类。\n\n（参见节章节 在 `ImageViewer` 类中定义属性）\n\n*   `Property<T>` 接口，位于 `javafx.beans.property`\
+  \ 包中，定义了所有属性通用的方法，如下：\n\n    ```\nvoid bind(ObservableValue<? extends T> observable)\n\
+  \    ```\n\n    将此属性单向绑定到给定的 `ObservableValue`。\n\n    ```\nvoid unbind()\n```\n\
+  \n    取消此属性的绑定。\n\n（参见节章节 在 `ImageViewer` 类中定义属性）\n\n*   `WritableObjectValue<T>`\
+  \ 接口，位于 `javafx.beans.value` 包中并继承自 `WritableValue<T>`，定义了以下方法：\n\n    ```\nT get()\n\
+  \    ```\n\n    获取封装的值。\n\n    ```\n    void set(T value)\n    ```\n\n    设置封装的值。\n\
+  \n（参见 此处）\n\n# 第 3 章\n\n具有幻灯片功能的增强图像查看器\n\n--开发图像查看器 V1.2\n\n# 前言\n\n在这一阶段，`ImageViewer`\
+  \ 已经具备了作为高效图像查看工具足够的能力。基于目前构建的基础结构，可以容易地逐步开发更多功能。\n\n本章重点介绍幻灯片功能的实现以及对 GUI 整体外观和效果的微调。我们将演示如何使用位于\
+  \ `javafx.concurrent` 包中的并发类开发多线程 JavaFX 应用程序。\n\n`ImageViewer` 的版本号升级到了 1.2。通过从\
+  \ ImageViewer V1.2 中摘取的详细描述和文档良好的示例代码段，你将熟悉 总结 节中所述的 JavaFX 库的基本功能。\n\nImageViewer\
+  \ V1.2 的完整开发过程具有以下步骤的特点：\n\n*   3.1 在 `BorderPane` 底部添加状态栏\n    *   3.1.1 创建 `HBox`\
+  \ 布局作为状态栏和 `Text` 节点显示图像名称\n    *   3.1.2 设置 `imageName` 属性的值\n*   3.2 改进按钮的响应 Aspect\n\
+  \    *   3.2.1 禁用按钮表示没有更多图片可以打开\n    *   3.2.2 鼠标按下时改变按钮外观\n*   3.3 添加幻灯片功能\n  \
+  \  *   3.3.1 添加“开始幻灯片”和“停止幻灯片”菜单项\n        *   3.3.1.1 绑定菜单项的禁用属性\n    *   3.3.2\
+  \ 在另一个线程上执行幻灯片\n        *   3.3.2.1 创建继承自 `Service` 类的 `SlideshowService` 类\n  \
+  \      *   3.3.2.2 配置幻灯片服务对象\n        *   3.3.2.3 为“开始幻灯片”和“停止幻灯片”菜单项实现动作事件事件处理器\n\
+  \    *   3.3.3 ImageViewer 应用程序完整的 `start(Stage stage)` 方法\n    *   3.3.4 与 `Load`\
+  \ 菜单项和 `Previous` 按钮的事件处理器协调\n*   3.4 在幻灯片之间添加淡入切换效果\n    *   3.4.1 `SlideshowService`\
+  \ 类的源代码\n*   3.5 图像查看器 V1.2 的完整源代码\n*   3.6 总结\n\n## 3.1 在 `BorderPane` 底部添加状态栏\n\
+  \n在实现幻灯片功能之前，我们将在根面板（一个 `BorderPane`）的底部添加一个状态栏。状态栏用于显示图像名称，即当前图像的文件名。\n\n### 3.1.1\
+  \ 创建 `HBox` 布局作为状态栏和 `Text` 节点显示图像名称\n\n创建一个 `HBox`（内置布局面板之一，它将其子元素水平排列在行中）作为状态栏。并创建一个\
+  \ `Text` 节点来显示图像名称。创建一个 `HBox` 作为状态栏，代码段如下：\n\n```\nBorderPane rootPane = new BorderPane();\n\
+  HBox statusBar = new HBox();\nText statusText = new Text(\"\");\nstatusBar.getChildren().add(statusText);\n\
+  rootPane.setBottom(statusBar);\n```\n\n\n\n\n在之前的章节中，我们已经演示了 `Properties` 和 `Binding`\
+  \ 在各种情况下的用法。这里有另一个案例。`Text` 节点的 `text` 属性绑定了 `imageName`，`imageName` 是在 `ImageViewer`\
+  \ 类中定义的类型为 `StringProperty` 的字段。以下是实现这些操作的代码片段：\n\n```java\n StringProperty imageName\
+  \ = new SimpleStringProperty();\n    Text statusText = new Text(\"\");\n    statusText.textProperty().bind(imageName);\n\
+  ```\n\n何时设置 `imageName` 属性的值将在下一节中描述。\n\n到目前为止，`ImageViewer` 类中进行的所有更改在下面的代码片段中以**粗体**显示：\n\
+  \n### 导入语句\n\n```java\n import javafx.scene.layout.HBox;\nimport javafx.scene.text.Font;\n\
+  import javafx.scene.text.FontWeight;\nimport javafx.scene.text.Text;\n```\n\n###\
+  \ 列表 3-1. 添加一个 `HBox` 状态栏，其中包含一个显示图像名称的 `Text` 节点，为 `Scene` 指定背景颜色，并修改绑定 `fitHeight`\
+  \ 属性的代码\n\n```java\n public class ImageViewer extends Application {\n\n      ...\n\
+  \n    final StringProperty imageName = new SimpleStringProperty();\n\n      ...\n\
+  \n@Override\n  public void start(final Stage stage) {\n    BorderPane rootPane =\
+  \ new BorderPane();\n    final StackPane imageArea = new StackPane();\n    // 设置\
+  \ StackPane 的最小大小以避免在加载大型图像时调整大小\n    imageArea.setMinSize(0, 0);\n    rootPane.setCenter(imageArea);\n\
+  \n    // 添加状态栏和状态文本\n    final HBox statusBar = new HBox();\n    statusBar.setPadding(new\
+  \ Insets(4, 12, 4, 12));\n    statusBar.setSpacing(4);\n    statusBar.setStyle(\n\
+  \        \"-fx-background-color: linear-gradient(#F0FFFF, #708090)\");\n    final\
+  \ Text statusText = new Text(\"\");\n    statusText.textProperty().bind(imageName);\n\
+  \    statusText.setFont(Font.font(\"Verdana\", FontWeight.BOLD, 12));\n    statusText.setFill(Color.DARKSLATEBLUE);\n\
+  \n    statusBar.getChildren().add(statusText);\n    rootPane.setBottom(statusBar);\n\
+  \n      ...\n\n    rootPane.setStyle(\"-fx-background-color: transparent;\");\n\
+  \    final Scene scene = new Scene(rootPane, 600, 400, Color.BLACK);\n\n      ...\n\
+  \n    // 监听切换组选择的变化\n    groupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n      public void changed(ObservableValue<? extends Toggle> ov,\n         \
+  \ Toggle old_toggle, Toggle new_toggle) {\n        if (groupOption.getSelectedToggle()\
+  \ != null) {\n          RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \          if (choiceItem == fitWidth) {\n            System.out.println(\"fitwidth\"\
+  );\n            imageView.fitWidthProperty().bind(scene.widthProperty());\n    \
+  \        imageView.fitHeightProperty().unbind();\n            // 除了取消绑定，还必须将拟高度设置为\
+  \ 0\n            imageView.setFitHeight(0);\n          } else if (choiceItem ==\
+  \ fitHeight) {\n            System.out.println(\"fitheight\");\n            // 用于渲染图像的可用高度是\n\
+  \            // 从场景高度中减去菜单栏高度和状态栏高度之和\n            imageView.fitHeightProperty().bind(\n\
+  \                scene.heightProperty().subtract(\n                  menuBar.getHeight()\
+  \ + statusBar.getHeight()));\n            imageView.fitWidthProperty().unbind();\n\
+  \            // 除了取消绑定，还必须将拟宽度设置为 0 \n            imageView.setFitWidth(0);\n  \
+  \        } else {\n            System.out.println(\"original size\");\n        \
+  \    imageView.fitWidthProperty().unbind();\n            imageView.fitHeightProperty().unbind();\n\
+  \            // 除了取消绑定，还必须将宽度/高度设置为 0\n            imageView.setFitWidth(0);\n \
+  \           imageView.setFitHeight(0);\n          }\n        }\n      }\n    });\n\
+  \n      ...\n  }\n```\n\n### 3.1.2 设置 `imageName` 属性的值\n\n用于在状态栏中显示图像名称的 `Text`\
+  \ 节点的 `text` 属性绑定了在 `ImageViewer` 类中定义的 `imageName` 属性。每当打开新的图像文件并将其显示在图像渲染区域时，都会从\
+  \ `File` 对象中获取图像名称，并将其设置为 `imageName` 属性的值。以下是实现这些操作的代码片段：\n\n```java\n File file\
+  \ = fileChooser.showOpenDialog(stage);\nString url = file.toURI().toString();\n\
+  imageName.set(url.substring(url.lastIndexOf(\"/\")+1).replaceAll(\"%20\", \" \"\
+  ));\n```\n\n以下行代码从字符串表示的 url 获取图像名称，\n\n```java\n imageName.set(url.substring(url.lastIndexOf(\"\
+  /\")+1).replaceAll(\"%20\", \" \"));\n```\n\n被插入到 `Load` 菜单项的操作处理器中，以及 `Next` 和\
+  \ `Previous` 按钮的鼠标点击事件处理器中。由于 `statusText`（一个 `Text` 对象）的 `text` 属性绑定了 `imageName`\
+  \ 属性，每当 `imageName` 属性的值改变，状态栏上渲染的文本将随之改变。\n\n### 列表 3-2. `Load` 菜单项的操作处理器如下\n\n\
+  ```java\n // 为菜单项添加操作\n    load.setOnAction(new EventHandler<ActionEvent>() {\n\
+  \      @Override\n      public void handle(ActionEvent e) {\n        // 打开文件选择器对话框\n\
+  \        File file = fileChooser.showOpenDialog(stage);\n        if (file != null)\
+  \ {\n          // 设置上次访问的目录为初始目录\n          File lastDir = file.getParentFile();\n\
+  \          fileChooser.setInitialDirectory(lastDir);\n          // 从文件选择器打开文件时创建迭代器\n\
+  \          try {\n            ListIterator<java.nio.file.Path> it =\n          \
+  \      FileUtils.listIterator(file.toPath());\n            listIterator.set(it);\n\
+  \            file = it.next().toFile();\n            String url = file.toURI().toString();\
+  \          \n            curImage.set(new Image(url));\n            imageName.set(url.substring(\n\
+  \              url.lastIndexOf(\"/\")+1).replaceAll(\"%20\", \" \"));\n        \
+  \    // 设置为 NEXT，因为迭代器指向\n            // 下一个可用文件\n            lastClickedButton.setValue(NEXT);\n\
+  \          } catch (IOException ex) {}\n        }\n      }\n    });\n```\n\n###\
+  \ 列表 3-3. `Next` 按钮的鼠标点击处理器如下\n\n```java\n // 为 nextButton 注册鼠标点击处理器\n    buttonGroup.setOnMouseClicked(new\
+  \ EventHandler() {\n      @Override\n      public void handle(MouseEvent me) {\n\
+  \        // 获取迭代器\n        ListIterator<java.nio.file.Path> iterator = listIterator.get();\n\
+  \        if (iterator != null && iterator.hasNext()) {\n          java.nio.file.Path\
+  \ path = iterator.next();\n          if (lastClickedButton.get().equals(PREVIOUS))\
+  \ {\n            // 如果上次点击的按钮是 prevButton\n            // 第一次调用 next 是当前图像，\n  \
+  \          // 必须向前移动一步。\n            if (iterator.hasNext())\n              path\
+  \ = iterator.next();\n            else\n              return;\n          }\n   \
+  \       System.out.format(\"Next button clicked: %s%n\", path.getFileName());\n\
+  \          String url = path.toUri().toString();\n          curImage.set(new Image(url));\n\
+  \          imageName.set(url.substring(\n              url.lastIndexOf(\"/\")+1).replaceAll(\"\
+  %20\", \" \"));\n\n          lastClickedButton.set(NEXT);\n        }\n      }\n\
+  \    });\n```\n\n### 列表 3-4. `Previous` 按钮的鼠标点击处理器如下\n\n\n\n\n\n```java\n // 为 prevButton\
+  \ 注册鼠标点击事件处理器\n    buttonGroup.setOnMouseClicked(new EventHandler() {\n      @Override\n\
+  \      public void handle(MouseEvent me) {\n        // 获取迭代器\n        ListIterator<java.nio.file.Path>\
+  \ iterator = listIterator.get();\n        if (iterator != null && iterator.hasPrevious())\
+  \ {\n          java.nio.file.Path path = iterator.previous();\n          if (lastClickedButton.get().equals(NEXT))\
+  \ {\n            // 如果上一次点击的按钮是 nextButton\n            // 第一次调用 previous() 是当前图像，\n\
+  \            // 必须将光标后移动一步\n            if (iterator.hasPrevious())\n          \
+  \    path = iterator.previous();\n            else\n              return;\n    \
+  \      }\n          System.out.format(\"Prev button clicked: %s%n\", path.getFileName());\n\
+  \          String url = path.toUri().toString();\n          curImage.set(new Image(url));\n\
+  \          imageName.set(url.substring(\n              url.lastIndexOf(\"/\")+1).replaceAll(\"\
+  %20\", \" \"));\n\n          lastClickedButton.set(PREVIOUS);\n        }\n     \
+  \ }\n    });\n```\n\n当选择 `Fit Height`（适应高度）视图选项时，拍摄如下快照，当前图像文件名显示在状态栏上，场景背景颜色为黑色。\n\
+  \n图 3-1. 显示在场景窗口底部状态栏上的当前图像文件名的快照。\n\n![](img/image00149.jpeg \"status_bar.jpg\"\
+  )\n\n## 3.2 改进按钮的响应 Aspect\n\n在本节中，我们将花一点精力微调按钮的外观和感受，同时也增强用户友好性。\n\n### 3.2.1 禁用按钮以指示没有更多图像可以打开\n\
+  \n首先，当没有下一张或上一张图像可以打开时，我们将按钮的禁用状态设置为 `true`。一旦按钮被禁用，它将不会接收任何鼠标或键盘事件。按钮在创建后立即，其禁用状态被初始化为\
+  \ `false`。\n\n列表 3-5. 初始化按钮的禁用状态：\n\n```java\n public class ImageViewer extends\
+  \ Application {\n  final Node nextButton = createNextButton();\n  final Node prevButton\
+  \ = createPrevButton();\n  {\n    disableButton(nextButton, true);\n    disableButton(prevButton,\
+  \ true);\n  }\n\n    ...\n\n}\n```\n\n`Node` 类中定义的 `disable` 属性类型为 `BooleanProperty`，它指定了该节点的禁用状态。将此节点的\
+  \ `disable` 属性设置为 `true`，会导致该节点的 `disabled` 属性以及其所有后代的 `disabled` 属性都变为 `true`。请注意，可能一个节点的\
+  \ `disabled` 属性为 `true`，但其 `disable` 属性并不为 `true`。\n\n`Node` 类中定义的 `opacity` 属性类型为\
+  \ `DoubleProperty`，指定了该节点的透明程度。其值范围 $\\≧ 0$ 且 $\\≦ 1$。不透明度值为 0 的节点意味着它是完全透明的。\n\n\
+  以下代码演示了如何利用节点的 `opacity` 属性来渲染一个处于禁用状态的按钮。\n\n列表 3-6. 定义 `disableButton` 方法：\n\n\
+  ```java\n /**\n   * 此方法利用节点的 opacity 属性来\n   * 区分禁用状态， \n   * 如果被禁用，则将透明度值设置为 0.4。\n\
+  \   * \n   * @param button\n   * @param isDisable \n   */\n  void disableButton(Node\
+  \ button, boolean isDisable) {\n    // 如果没有更多图像可以打开，将透明度值改为 0.4\n    double opacity\
+  \ = (isDisable) ? 0.4 : 1;\n    button.setOpacity(opacity);\n    button.setDisable(isDisable);\n\
+  \  }\n```\n\n现在，初始屏幕看起来如下。\n\n图 3-2. 初始应用程序窗口的快照，按钮已禁用。\n\n![](img/image00150.jpeg\
+  \ \"initial_scene.jpg\")\n\n为了确定是否有下一张图像或上一张图像，会在以下时机调用 `ListIterator` 接口中定义的 `hasNext()`\
+  \ 和 `hasPrevious()` 方法进行验证：\n\n*   当从 `Load` 菜单项的操作事件处理器中首次创建当前目录下的文件列表时。\n*   当在\
+  \ `Next` 或 `Previous` 按钮上发生鼠标点击事件并加载图像时。\n\n我们将定义一个 `loadFile(File file)` 方法，以模块化处理\
+  \ `Load` 菜单项操作事件的任务：\n\n列表 3-7. 定义 `loadFile` 方法以创建列表迭代器、加载指定文件并更新按钮状态：\n\n```java\n\
+  \ /**\n   * 调用静态方法 FileUtils.listIterator(Path) 以 \n   * 获取一个列表迭代器来遍历目录中的文件，\n \
+  \  * 如果没有更多文件可以打开，则禁用按钮。\n   *\n   * @param file \n   */\n  void loadFile(File file)\
+  \ {\n    // 创建列表迭代器\n    try {\n      ListIterator<java.nio.file.Path> it =\n  \
+  \      FileUtils.listIterator(file.toPath());\n\n      // 更新 listIterator 属性的值\n\
+  \      listIterator.set(it);\n\n      // 如果没有上一个文件，则禁用 prevButton\n      // 在调用\
+  \ next() 之前检查 hasPrevious()\n      disableButton(prevButton, !it.hasPrevious());\n\
+  \n      file = it.next().toFile();\n      String url = file.toURI().toString();\n\
+  \      curImage.set(new Image(url));\n      imageName.set(url.substring(\n     \
+  \     url.lastIndexOf(\"/\")+1).replaceAll(\"%20\", \" \"));\n\n      lastClickedButton.set(PREVIOUS);\n\
+  \    } catch (IOException ex) {\n    }\n  }\n```\n\n上述 `loadFile` 方法是从 `load` 菜单项的操作事件调用的。更改如下文所示。\n\
+  \n列表 3-8. 从 `FileChooser` 选择并打开文件后调用 `loadFile`：\n\n```java\n // 为菜单项添加动作\n    load.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ e) {\n        // 打开文件选择器\n        File file = fileChooser.showDialog(stage);\n\
+  \        if (file != null) {\n          // 设置初始目录\n          File lastDir = file.getParentFile();\n\
+  \          fileChooser.setInitialDirectory(lastDir);\n          loadFile(file);\n\
+  \        }\n      }\n    });\n```\n\n当在 `Next` 按钮上发生鼠标点击事件时，将加载并显示下一张可用图像。与此同时，我们需要检查是否没有更多图像可以加载。以下是代码片段，更改如下：\n\
+  \n列表 3-9. 在鼠标事件处理器内部更新 `Next` 按钮的禁用状态：\n\n```java\n Node createNextButton() {\n\n\
+  \    ...\n\n     // 为 nextButton 注册鼠标点击事件处理器\n    buttonGroup.setOnMouseClicked(new\
+  \ EventHandler() {\n      @Override\n      public void handle(MouseEvent me) {\n\
+  \        // 获取迭代器\n        ListIterator<java.nio.file.Path> iterator = listIterator.get();\n\
+  \        if (iterator != null && iterator.hasNext()) {\n          java.nio.file.Path\
+  \ path = iterator.next();\n          if (lastClickedButton.get().equals(PREVIOUS))\
+  \ {\n            // 如果上一次点击的按钮是 prevButton\n            // 第一次调用 next() 是当前图像，\n\
+  \            // 必须将光标向前移动一步\n            if (iterator.hasNext())\n             \
+  \ path = iterator.next();\n            else {\n              // 没有后续图像，禁用按钮\n  \
+  \            disableButton(nextButton, true);\n              return;\n         \
+  \   }\n          }\n          System.out.format(\"Next button clicked: %s%n\", path.getFileName());\n\
+  \          String url = path.toURI().toString();\n          imageName.set(url.substring(\n\
+  \            url.lastIndexOf(\"/\")+1).replaceAll(\"%20\", \" \"));\n          curImage.set(new\
+  \ Image(url));\n          lastClickedButton.set(NEXT);\n          // 当没有更多图像时禁用下一个按钮\n\
+  \          disableButton(nextButton, !iterator.hasNext());\n          if (prevButton.isDisable())\n\
+  \            disableButton(prevButton, false);\n        }\n      }\n    });\n\n\
+  \    ...\n  }\n}\n```\n\n\n\n\n\n当 `Previous` 按钮发生鼠标点击事件时，将加载上一张可用图像并将其显示在图像渲染区域。与此同时，我们需要检查是否没有更多以前的图像可以加载。以下是代码片段，更改部分已用粗体显示：\n\
+  \n### 列表 3-10. 在鼠标点击事件处理器中更新 `Previous` 按钮的禁用状态：\n\n```\n Node createPrevButton()\
+  \ {\n\n    ...\n\n     // 为 prevButton 注册鼠标点击事件处理器\n    buttonGroup.setOnMouseClicked(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        // 获取迭代器\n        ListIterator<java.nio.file.Path> iterator = listIterator.get();\n\
+  \        if (iterator != null && iterator.hasPrevious()) {\n          java.nio.file.Path\
+  \ path = iterator.previous();\n          if (lastClickedButton.get().equals(NEXT))\
+  \ {\n            // 如果上次点击的按钮是 nextButton\n            // 第一次 previous() 是当前图像，\n\
+  \            // 必须将光标后移一步\n            if (iterator.hasPrevious())\n           \
+  \   path = iterator.previous();\n            else {\n              // 没有以前的图像，禁用\
+  \ prevButton\n              disableButton(prevButton, true);\n              return;\n\
+  \            }\n          }\n          System.out.format(\"Prev button clicked:\
+  \ %s%n\", path.getFileName());\n          String url = path.toUri().toString();\n\
+  \          imageName.set(url.substring(\n            url.lastIndexOf(\"/\")+1).replaceAll(\"\
+  %20\", \" \"));  \n          curImage.set(new Image(url));\n          lastClickedButton.set(PREVIOUS);\n\
+  \          // 当没有之前的图像时禁用之前的按钮\n          disableButton(prevButton, !iterator.hasPrevious());\n\
+  \          if (nextButton.isDisabled()) \n            disableButton(nextButton,\
+  \ false); \n        }\n      }\n    });\n\n    ...\n  }\n```\n\n图 3-3. 当没有之前的文件可以打开时\
+  \ `Previous` 按钮禁用的截图。\n\n![](img/image00151.jpeg \"button_disable.jpg\")\n\n图 3-4.\
+  \ 当没有下一个文件可以打开时 `Next` 按钮禁用的截图。\n\n![](img/image00152.jpeg \"next_button_disable.jpg\"\
+  )\n\n### 3.2.2 当鼠标按下时更改按钮的外观\n\n现在，我们将当按钮上发生鼠标按下事件时更改按钮的背景绘制颜色。与此同时，创建 `Next` 按钮和\
+  \ `Previous` 按钮的代码通过模块化的鼠标事件处理代码进行了整理。定义了 `registerButtonEvent` 方法用于为以下 `EventType`\
+  \ 注册事件处理器：`MOUSE_ENTERED`、`MOUSE_PRESSED`、`MOUSE_RELEASED` 和 `MOUSE_EXITED`。\n\n\
+  当鼠标按下按钮上时，填充矩形的绘制颜色会发生变化，填充多边形的绘制颜色与鼠标进入时相同。当鼠标释放或离开按钮时，填充颜色和描边将恢复到原始值。\n\n### 导入语句：\n\
+  \n```\n import javafx.scene.paint.Paint;\nimport javafx.scene.shape.Shape;\n```\n\
+  \n### 列表 3-11. 定义 `registerButtonEvent` 方法：\n\n```\n /**\n   * 此方法为按钮注册鼠标进入/按下/释放/离开事件，\n\
+  \   * 改变按钮的外观以区分不同的事件类型。\n   * \n   * @param buttonGroup\n   * @param rect\n   *\
+  \ @param polygon\n   * @param bg\n   * @param entered\n   * @param pressed \n  \
+  \ */\n  void registerButtonEvent(Node buttonGroup,\n    final Shape rect, final\
+  \ Shape polygon,\n    final Paint bg, final Paint entered, final Paint pressed)\
+  \ {\n\n    // 注册鼠标进入事件处理器\n    // 当鼠标进入时改变按钮的外观\n    buttonGroup.setOnMouseEntered(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        System.out.println(\"Mouse entered\");\n        // 检查左鼠标键是否按下\n\
+  \        rect.setFill(me.isPrimaryButtonDown()? pressed : entered);\n        polygon.setFill(Color.web(\"\
+  #436B8B\"));\n        polygon.setStroke(Color.WHITE);\n      }\n    });\n\n    //\
+  \ 注册鼠标按下事件处理器\n    // 当鼠标进入时改变按钮的外观（注：此处原文可能有误，应为按下）\n    buttonGroup.setOnMousePressed(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        System.out.println(\"Mouse pressed\");\n        if (me.isPrimaryButtonDown())\
+  \ {\n          rect.setFill(pressed);\n          polygon.setFill(Color.web(\"#436B8B\"\
+  ));\n          polygon.setStroke(Color.WHITE);\n        }\n      }\n    });\n\n\
+  \    // 鼠标离开事件处理器\n    // 当鼠标离开时恢复到原始外观\n    EventHandler<MouseEvent> exited = new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        System.out.println(\"Mouse exited/released\");\n        rect.setFill(bg);\n\
+  \        polygon.setFill(Color.WHITE);\n        polygon.setStroke(Color.web(\"#436B8B\"\
+  ));\n      }\n    };\n\n    buttonGroup.setOnMouseExited(exited);\n\n    // 注册鼠标释放事件处理器\n\
+  \    // 当鼠标释放时恢复到原始外观\n    // 外观与鼠标离开时相同\n    buttonGroup.setOnMouseReleased(exited);\n\
+  \  }\n```\n\n### 列表 3-12. `createNextButton` 方法变得如下：\n\n\n\n\n\n```java\n /**\n\
+  \   * 使用 Rectangle 作为背景创建下一个页按钮，\n   * 使用 Polygon 作为图标，使用 Group 作为容器，\n   * Rectangle\
+  \ 的尺寸为 25x 35，\n   * polygon 的厚度为 8 像素，\n   * polygon 的内边距为 (2, 2, 2, 5)，\n   *\
+  \ 当鼠标进入/按下/释放/移出时更改按钮的外观。\n   *\n   * @return\n   */\n  Node createNextButton()\
+  \ {\n\n    // 创建一个 group 作为按钮\n    Group buttonGroup = new Group();\n\n    // 创建一个\
+  \ rectangle 形形作为背景\n    final Rectangle rect = new Rectangle(0, 0, 25, 35);\n\n\
+  \    // 使用线性渐变填充下一个按钮的矩形\n    final LinearGradient lg = new LinearGradient(0, 0,\
+  \ 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n      new Stop(0, Color.web(\"\
+  #5173A8\")),\n      new Stop(0.6, Color.web(\"#A8B9D4\")),\n      new Stop(1, Color.web(\"\
+  #87A7C6\"))});\n    rect.setFill(lg);\n    rect.setStroke(Color.web(\"#ACD7FF\"\
+  ));\n    rect.setArcHeight(6.5);\n    rect.setArcWidth(6.5);\n\n    // 当鼠标进入下一个按钮时，绘制填充矩形\n\
+  \    final LinearGradient lgEntered = new LinearGradient(0, 0, 1, 0, true,\n   \
+  \     CycleMethod.NO_CYCLE, new Stop[]{\n      new Stop(0, Color.web(\"#87A7C6\"\
+  )),\n      new Stop(0.4, Color.web(\"#A8B9D4\")),\n      new Stop(1, Color.web(\"\
+  #5173A8\"))});\n\n    // 当鼠标按下下一个按钮时，绘制填充矩形\n    final LinearGradient lgPressed\
+  \ = new LinearGradient(0, 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n\
+  \      new Stop(0, Color.web(\"#87A7C6\")),\n      new Stop(0.4, Color.web(\"#A8B9D4\"\
+  )),\n      new Stop(1, Color.web(\"#2F4F4F\"))});\n\n    // 创建一个表示下一个图标视觉标志的 polygon\
+  \ 形\n    // 8 像素厚度，内缩为 2, 2, 2, 5\n    final Polygon polygon = new Polygon();\n\
+  \    Double[] dArray = {\n      5.0, 2.0,\n      22.0, 17.0,\n      5.0, 32.0,\n\
+  \      5.0, 25.0,\n      14.0, 17.0,\n      5.0, 9.0};\n    polygon.getPoints().addAll(dArray);\n\
+  \    polygon.setFill(Color.WHITE);\n    polygon.setStroke(Color.web(\"#436B8B\"\
+  ));\n\n    // 设置光标\n    buttonGroup.setCursor(Cursor.OPEN_HAND);\n\n    // 为 nextButton\
+  \ 注册鼠标点击事件处理器\n    buttonGroup.setOnMouseClicked(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        if (me.getButton()\
+  \ != MouseButton.PRIMARY)\n          return;\n        // 获取迭代器\n        ListIterator<java.nio.file.Path>\
+  \ iterator = listIterator.get();\n        if (iterator != null && iterator.hasNext())\
+  \ {\n          java.nio.file.Path path = iterator.next();\n          if (lastClickedButton.get().equals(PREVIOUS))\
+  \ {\n            // 如果上一次点击的按钮是 prevButton\n            // next 的第一次调用是当前图像，\n \
+  \           // 必须将光标向前移动一步\n            if (iterator.hasNext())\n              path\
+  \ = iterator.next();\n            else{\n              // 有下一个图像，禁用下一个按钮\n     \
+  \         disableButton(nextButton, true);\n              return;\n            }\n\
+  \          }\n          System.out.format(\"Next button clicked: %s%n\", path.getFileName());\n\
+  \          String url = path.toUri().toString();\n          curImage.set(new Image(url));\n\
+  \          imageName.set(url.substring(\n              url.lastIndexOf(\"/\")+1).replaceAll(\"\
+  %20\", \" \"));\n\n          lastClickedButton.set(NEXT);\n          // 当没有图像时禁用下一个按钮\n\
+  \          disableButton(nextButton, !iterator.hasNext());\n          if (prevButton.isDisabled())\
+  \ \n            disableButton(prevButton, false); \n        }\n      }\n    });\n\
+  \n    registerButtonEvent(buttonGroup, rect, polygon, lg, lgEntered, lgPressed);\n\
+  \n    buttonGroup.getChildren().addAll(rect, polygon);\n    return buttonGroup;\n\
+  \  }\n```\n\n列表 3-13. `createPrevButton` 方法变为：\n\n```java\n /**\n   * 使用 Rectangle\
+  \ 作为背景创建上一个页按钮，\n   * 使用 Polygon 作为图标，使用 Group 作为容器，\n   * Rectangle 的尺寸为 25x 35，\n\
+  \   * polygon 的厚度为 8 像素，\n   * polygon 的内边距为 (2, 2, 2, 5)，\n   * 当鼠标进入/按下/释放/移出时更改按钮的外观。\n\
+  \   * \n   * @return\n   */\n  Node createPrevButton() {\n\n    // 创建一个 group 作为按钮\n\
+  \    Group buttonGroup = new Group();\n\n    // 创建一个 rectangle 形形作为背景\n    final\
+  \ Rectangle rect = new Rectangle(0, 0, 25, 35);\n\n    // 使用线性渐变填充上一个按钮的矩形\n   \
+  \ final LinearGradient lg = new LinearGradient(0, 0, 1, 0, true,\n        CycleMethod.NO_CYCLE,\
+  \ new Stop[]{\n      new Stop(0, Color.web(\"#87A7C6\")),\n      new Stop(0.6, Color.web(\"\
+  #A8B9D4\")),\n      new Stop(1, Color.web(\"#5173A8\"))});\n    rect.setFill(lg);\n\
+  \    rect.setStroke(Color.web(\"#ACD7FF\"));\n    rect.setArcHeight(6.5);\n    rect.setArcWidth(6.5);\n\
+  \n    // 当鼠标进入上一个按钮时，绘制填充矩形\n    final LinearGradient lgEntered = new LinearGradient(0,\
+  \ 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n      new Stop(0, Color.web(\"\
+  #87A7C6\")),\n      new Stop(0.4, Color.web(\"#A8B9D4\")),\n      new Stop(1, Color.web(\"\
+  #5173A8\"))});\n\n    // 当鼠标按下上一个按钮时，绘制填充矩形\n    final LinearGradient lgPressed\
+  \ = new LinearGradient(0, 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n\
+  \      new Stop(0, Color.web(\"#87A7C6\")),\n      new Stop(0.4, Color.web(\"#A8B9D4\"\
+  )),\n      new Stop(1, Color.web(\"#2F4F4F\"))});\n\n    // 创建一个表示上一个图标视觉标志的 polygon\
+  \ 形\n    // 8 像素厚度，内缩为 2, 2, 2, 5\n    final Polygon polygon = new Polygon();\n\
+  \    Double[] dArray = {\n      19.0, 2.0,\n      22.0, 17.0,\n      19.0, 32.0,\n\
+  \      19.0, 25.0,\n      14.0, 17.0,\n      19.0, 9.0};\n    polygon.getPoints().addAll(dArray);\n\
+  \    polygon.setFill(Color.WHITE);\n    polygon.setStroke(Color.web(\"#436B8B\"\
+  ));\n\n    // 设置光标\n    buttonGroup.setCursor(Cursor.OPEN_HAND);\n\n    // 为 prevButton\
+  \ 注册鼠标点击事件处理器\n    buttonGroup.setOnMouseClicked(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        if (me.getButton()\
+  \ != MouseButton.PRIMARY)\n          return;\n        // 获取迭代器\n        ListIterator<java.nio.file.Path>\
+  \ iterator = listIterator.get();\n        if (iterator != null && iterator.hasPrevious())\
+  \ {\n          java.nio.file.Path path = iterator.previous();\n          if (lastClickedButton.get().equals(NEXT))\
+  \ {\n            // 如果上一次点击的按钮是 nextButton\n            // previous 的第一次调用是当前图像，\n\
+  \            // 必须将光标向后移动一步\n            if (iterator.hasPrevious())\n         \
+  \     path = iterator.previous();\n            else{\n              // 有上一个图像，禁用上一个按钮\n\
+  \              disableButton(prevButton, true);\n              return;\n       \
+  \     }\n          }\n          System.out.format(\"Prev button clicked: %s%n\"\
+  , path.getFileName());\n          String url = path.toUri().toString();\n      \
+  \    curImage.set(new Image(url));\n          imageName.set(url.substring(\n   \
+  \           url.lastIndexOf(\"/\")+1).replaceAll(\"%20\", \" \"));\n\n         \
+  \ lastClickedButton.set(PREVIOUS);\n          // 当没有上一个图像时禁用上一个按钮\n          disableButton(prevButton,\
+  \ !iterator.hasPrevious());\n          if (nextButton.isDisabled()) \n         \
+  \   disableButton(nextButton, false); \n        }\n      }\n    });\n\n    registerButtonEvent(buttonGroup,\
+  \ rect, polygon, lg, lgEntered, lgPressed);\n\n    buttonGroup.getChildren().addAll(rect,\
+  \ polygon);\n    return buttonGroup;\n  }\n```\n\n\n\n\n![](img/image00156.jpeg\
+  \ \"next_button_pressed.jpg\")\n\n## 3.3 添加幻灯片功能\n\n一旦从 `FileChooser` 的文件打开对话框打开图像文件，应用程序将获取当前目录下的图像文件列表。一个实用的功能是允许用户逐个浏览这些图像，而无需手动点击\
+  \ `Next` 按钮。实现幻灯片机制的步骤所示。\n\n### 3.3.1 添加“开始幻灯片”和“停止幻灯片”菜单项\n\n这里使用的最简单 GUI 是 `MenuItem`。在菜单栏的\
+  \ `Option` 菜单中添加了两个菜单项：`Start Slideshow` 和 `Stop Slideshow`，它们初始状态都是禁用的。为了区分是否正在运行幻灯片，在\
+  \ `ImageViewer` 类中定义了一个作为类字段、类型为 `BooleanProperty` 的变量 `isSlideshowOn`，并初始化为 `false`。以下代码段展示了如何实现这些功能：\n\
+  \n导入语句：\n\n```\n import javafx.beans.property.BooleanProperty;\nimport javafx.beans.property.SimpleBooleanProperty;\n\
+  ```\n\n列表 3-14. 添加 `Start Slideshow` 和 `Stop Slideshow` 菜单项：\n\n```\n public class\
+  \ ImageViewer extends Application {\n\n    ...\n\n  final BooleanProperty isSlideshowOn\
+  \ = new SimpleBooleanProperty(false);\n\n    ...\n\n  @Override\n  public void start(final\
+  \ Stage stage) {\n\n    ...\n\n    // 创建开始/停止幻灯片的菜单项\n    final MenuItem startSlide\
+  \ = new MenuItem(\"Start Slideshow\");\n    final MenuItem stopSlide = new MenuItem(\"\
+  Stop Slideshow\");\n\n    startSlide.disableProperty().bind(isSlideshowOn.or(\n\
+  \        nextButton.disableProperty()));\n    stopSlide.disableProperty().bind(isSlideshowOn.not().or(\n\
+  \        nextButton.disableProperty()));\n\n    // 为开始幻灯片菜单项添加事件处理器\n    startSlide.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ ae) {\n        System.out.println(\"Start Slideshow...\");\n      }\n    });\n\
+  \n    // 为停止幻灯片菜单项添加事件处理器\n    stopSlide.setOnAction(new EventHandler<ActionEvent>()\
+  \ {\n      @Override\n      public void handle(ActionEvent ae) {\n        System.out.println(\"\
+  Stop Slideshow...\");\n      }\n    });    \n\n    // 将选项菜单添加到菜单栏\n    menuOption.getItems().addAll(menuView,\
+  \ startSlide, stopSlide);\n\n      ... \n```\n\n#### 3.3.1.1 绑定菜单项的禁用属性\n\n由于以下\
+  \ `bind` 语句，初始时 `startSlide` 和 `stopSlide` 菜单项是禁用的：\n\n```\n startSlide.disableProperty().bind(isSlideshowOn.or(\n\
+  \        nextButton.disableProperty()));\n    stopSlide.disableProperty().bind(isSlideshowOn.not().or(\n\
+  \        nextButton.disableProperty())); \n```\n\n在上述绑定语句中，使用了两个逻辑操作——`or` 和 `not`——来计算禁用属性的值。`javafx.beans.binding.BooleanExpression`\
+  \ 类是一个实现 `ObservableBooleanValue` 的抽象类，它提供了这些方法：\n\n`public BooleanBinding not()`\
+  \ 方法\n\n该方法对此 `BooleanExpression` 执行逻辑非（NOT）操作，并返回一个 `BooleanBinding` 类型的对象，该对象是\
+  \ `BooleanExpression` 的直接子类。\n\n`public BooleanBinding or(ObservableBooleanValue\
+  \ other)` 方法\n\n该方法对此 `BooleanExpression` 和给定的 `ObservableBooleanValue` 执行逻辑或（OR）操作，并返回一个\
+  \ `BooleanBinding` 类型的对象，该对象是 `BooleanExpression` 的直接子类。\n\n如果当前正在运行幻灯片或 `Next`\
+  \ 按钮禁用，则 `Start Slideshow` 菜单项被禁用。同样，如果幻灯片未运行或 `Next` 按钮禁用，则 `Stop Slideshow` 菜单项被禁用。记住，当没有后续图像可以查看时，`Next`\
+  \ 按钮是禁用的。\n\n图 3-9 初始 `Option` 菜单外观的截图，`Start Slideshow` 和 `Stop Slideshow` 菜单项均为禁用状态。\n\
+  \n![](img/image00157.jpeg \"start_stop_disabled.jpg\")\n\n图 3-10 加载图像文件后 `Option`\
+  \ 菜单外观的截图，`Start Slideshow` 菜单项启用，因为没有开启幻灯片且至少有一个后续文件可以查看；而 `Stop Slideshow` 菜单项被禁用，因为没有开启幻灯片。\n\
+  \n![](img/image00158.jpeg \"start_slideshow_enabled.jpg\")\n\n### 3.3.2 在另一个线程上执行幻灯片\n\
+  \n将耗时任务委托给另一个线程是一种良好的编程习惯，这样 UI 线程（也称为 Java FX 线程）始终对用户的操作做出响应。\n\n`javafx.concurrent`\
+  \ 包提供了 `Task` 和 `Service` 两个类，它们都实现了 `Worker` 接口，用于方便开发多线程 JavaFX 应用程序。\n\n以下是位于\
+  \ `javafx.concurrent` 包中的并发相关类：\n\n`Task`\n\n一个扩展 `java.util.concurrent.FutureTask`\
+  \ 并实现 `Worker<V>` 接口的抽象类，它是一个一次性的 `Worker` 对象，不可复用。由于其父类 `FutureTask` 实现了 `Runnable`\
+  \ 接口，它也是一个 `Runnable` 对象。\n\n要开始执行 `Task`，你可以使用 `java.lang.Thread` 类的 API 或派自 `Executor`\
+  \ 和 `ExecutorService` 接口的 API，它们都位于 `java.util.concurrent` 包中。\n\n`Service`\n\n\
+  一个扩展 `java.lang.Object` 并实现 `Worker<V>` 接口的抽象类，是一个可复用的 `Worker` 对象。`Service` 类提供了\
+  \ `start()`、`cancel()`、`reset()` 和 `restart()` 等方法来操作此服务。\n\n`ScheduledService`\n\
+  \n`Service` 的直接子类，允许指定自动启动和重启服务的延迟。\n\n`WorkerStateEvent`\n\n`javafx.event.Event`\
+  \ 的子类，定义了 `EventType` 的静态字段，如 `WORKER_STATE_CANCELLED`、`WORKER_STATE_FAILED`、`WORKER_STATE_READY`、`WORKER_STATE_RUNNING`、`WORKER_STATE_SUCCEEDED`\
+  \ 等。当 `Worker` 的状态发生变化时会触发 `WorkerStateEvent`。\n\n考虑我们的情况：首次加载文件时创建文件列表，假设列表包含一个或多个后续文件，此时\
+  \ `Start Slideshow` 菜单项启用，用户可以启动幻灯片，在幻灯片运行时取消它，稍后再次重启。为了满足这种场景，我们倾向于使用可复用的 `Service`\
+  \ 对象而不是一次性的 `Task` 对象。\n\n#### 3.3.2.1 创建扩展 `Service` 类的 `SlideshowService` 类\n\n\
+  我们需要创建一个扩展 `Service<V>` 的类。当 `Service` 启动时，它会执行一个 `Task`。需要重写下面的 `createTask` 方法：\n\
+  \n```\nprotected abstract Task<V> createTask()\n```\n\n在 `createTask()` 方法中，通过重写\
+  \ `call()` 方法并创建一个 `Task` 对象返回给调用者。\n\n`Task` 中的 `call()` 方法承担幻灯片的任务，基本上包含一个 `while`\
+  \ 循环，逐个加载图像，直到满足以下条件之一：文件列表中没有更多后续图像，或者幻灯片被用户取消。\n\n以下列表演示了如何创建一个可复用的 `SlideshowService`（`Service`\
+  \ 类的子类），以执行幻灯片任务。\n\n列表 3-15. 创建 `SlideshowService` 类：\n\n\n\n\n\n```java\n package\
+  \ imageviewer;\n\nimport java.nio.file.Path;\nimport java.util.ListIterator;\nimport\
+  \ javafx.beans.property.ObjectProperty;\nimport javafx.beans.property.SimpleObjectProperty;\n\
+  import javafx.beans.property.SimpleStringProperty;\nimport javafx.beans.property.StringProperty;\n\
+  import javafx.beans.value.ChangeListener;\nimport javafx.beans.value.ObservableValue;\n\
+  import javafx.concurrent.Service;\nimport javafx.concurrent.Task;\nimport javafx.scene.image.Image;\n\
+  \n/**\n * File Name: SlideshowService.java\n * (in directory: ImageViewer1.2/src/example4/imageviewer/)\n\
+  \ *\n * @author Shufen Kuo\n */\n\npublic class SlideshowService extends Service<Void>\
+  \ {\n  private ObjectProperty<Image> image;\n  private ObjectProperty<ListIterator<Path>>\
+  \ iterator;\n  private StringProperty imageName;\n  private ListIterator<Path> it;\n\
+  \n  public SlideshowService() {\n    this(new SimpleObjectProperty<ListIterator<Path>>(),\n\
+  \        new SimpleObjectProperty<Image>(),\n        new SimpleStringProperty());\n\
+  \  }\n\n  public SlideshowService(ObjectProperty<ListIterator<Path>> iterator,\n\
+  \      ObjectProperty<Image> image, StringProperty imageName) {\n    this.image\
+  \ = image;\n    this.imageName = imageName;\n    this.iterator = iterator;\n   \
+  \ iterator.addListener(new ChangeListener<ListIterator<Path>>() {\n      @Override\n\
+  \      public void changed(ObservableValue<? extends ListIterator<Path>> o,\n  \
+  \        ListIterator<Path> oldVal, ListIterator<Path> newVal) {\n        it = newVal;\n\
+  \      }\n    });    \n  }\n\n  public Image getImage() {\n    return image.get();\n\
+  \  }\n\n  public void setImage(Image value) {\n    image.set(value);\n  }\n\n  public\
+  \ ObjectProperty<Image> imageProperty() {\n    return image;\n  }\n\n  public ListIterator<Path>\
+  \ getIterator() {\n    return iterator.get();\n  }\n\n  public void setListIterator(ListIterator<Path>\
+  \ value) {\n    iterator.set(value);\n  }\n\n  public ObjectProperty<ListIterator<Path>>\
+  \ iteratorProperty() {\n    return iterator;\n  }\n\n  public String getImageName()\
+  \ {\n    return imageName.get();\n  }\n\n  public void setImageName(String value)\
+  \ {\n    imageName.set(value);\n  }\n\n  public StringProperty imageNameProperty()\
+  \ {\n    return imageName;\n  }\n\n  @Override\n  protected Task<Void> createTask()\
+  \ {\n    return new Task<Void>() {\n      @Override\n      protected Void call()\
+  \ {\n        if (it == null) return null;\n        while (it.hasNext()) {\n    \
+  \      if (isCancelled()) {\n            updateMessage(\"Cancelled\");\n       \
+  \     break;\n          }\n          String url = it.next().toUri().toString();\n\
+  \          setImage(new Image(url));\n          setImageName(url.substring(\n  \
+  \            url.lastIndexOf(\"/\") + 1).replaceAll(\"%20\", \" \"));\n        \
+  \  // Pause for 3000 ms\n          try {\n            Thread.sleep(3000);\n    \
+  \      } catch (InterruptedException ex) {\n            if (isCancelled()) {\n \
+  \             updateMessage(\"Cancelled\");\n              break;\n            }\n\
+  \          }\n        }\n        return null;\n      }\n    };    }  \n}\n```\n\n\
+  以下语句创建了一个 `SlideshowService` 对象。\n\n```java\n // 创建一个可用的 Worker 对象\n  final SlideshowService\
+  \ service = new SlideshowService(listIterator,\n      curImage, imageName);\n```\n\
+  \n向 `SlideshowService` 类的构造函数传递了三个参数：\n\n`listIterator`\n\n类型为 `ObjectProperty<ListIterator<Path>>`，指定一个\
+  \ `ListIterator`，用于遍历文件列表。该列表是在从文件选择器的文件打开对话框打开图像文件时创建的。\n\n`curImage`\n\n类型为 `ObjectProperty<Image>`，与\
+  \ `ImageView` 对象的 `image` 属性绑定。\n\n`imageName`\n\n类型为 `StringProperty`，与文本对象 `statusText`\
+  \ 的 `text` 属性绑定，用于在状态栏中显示图片名称。\n\n### 3.3.2.2 配置幻灯片服务对象\n\n我们定义了一个 `configureSlideshow`\
+  \ 方法来执行配置。一旦创建了服务对象，就会调用该方法执行这些工作：\n\n2. 将 `ImageViewer` 类中定义的 `isSlideshowOn` 属性与\
+  \ `service` 的 `running` 属性绑定。当且仅当服务正在运行时，`isSlideshowOn` 属性的值为 `true`。\n\n```java\n\
+  BooleanProperty isSlideshowOn = new SimpleBooleanProperty(false);\nSlideshowService\
+  \ service = new SlideshowService(listIterator,\n  curImage, imageName);\nisSlideshowOn.bind(service.runningProperty());\n\
+  ```\n\n3. 注册事件处理器来处理以下事件类型的 `WorkerStateEvent`：`WORKER_STATE_RUNNING`、`WORKER_STATE_SUCCEEDED`、`WORKER_STATE_FAILED`\
+  \ 和 `WORKER_STATE_CANCELLED`。\n\n以下是 `Service` 类定义的便利方法，用于为上述事件类型注册事件处理器：\n\n* `public\
+  \ final void setOnRunning(EventHandler<WorkerStateEvent> value)`\n  设置 `onRunning`\
+  \ 属性的值，提供 `handle` 方法的实现，当 `Worker` 的状态转换到 `RUNNING` 时会调用该方法。\n\n* `public final\
+  \ void setOnSucceeded(EventHandler<WorkerStateEvent> value)`\n  设置 `onSucceeded`\
+  \ 属性的值，提供 `handle` 方法的实现，当 `Worker` 的状态转换到 `SUCCEEDED` 时会调用该方法。\n\n* `public final\
+  \ void setOnFailed(EventHandler<WorkerStateEvent> value)`\n  设置 `onFailed` 属性的值，提供\
+  \ `handle` 方法的实现，当 `Worker` 的状态转换到 `FAILED` 时会调用该方法。\n\n* `public final void setOnCancelled(EventHandler<WorkerStateEvent>\
+  \ value)`\n  设置 `onCancelled` 属性的值，提供 `handle` 方法的实现，当 `Worker` 的状态转换到 `CANCELLED`\
+  \ 时会调用该方法。\n\n`Worker.State` 是 `javafx.concurrent.Worker` 的一个内部类，是一个枚举类型，定义了 `Worker`\
+  \ 的状态常量：`CANCELLED`、`FAILED`、`READY`、`RUNNING`、`SCHEDULED` 和 `SUCCEEDED`。\n\n`Worker`\
+  \ 对象初始处于 `READY` 状态。当 `Worker` 开始执行任务时，转换到 `SCHEDULED` 状态，不久后进入 `RUNNING` 状态，并一直保持\
+  \ `RUNNING` 状态，直到发生以下情况之一：\n\n任务成功完成：\n`Worker` 转换到 `SUCCEEDED` 状态。\n\n抛出异常：\n`Worker`\
+  \ 转换到 `FAILED` 状态。\n\n任务被取消：\n`Worker` 转换到 `CANCELLED` 状态。可以通过调用 `Worker` 接口定义的\
+  \ `cancel()` 方法来取消 `Worker`。如果取消成功，则返回 `true`。\n\n处理 `WORKER_STATE_RUNNING` 事件类型的事件处理器中执行的任务非常简单：\n\
+  \n1. 将 `lastClickedButton` 属性的值设置为 `NEXT`，因为幻灯片正在运行意味着 `Next` 按钮正在自动连续点击。\n2. 检查\
+  \ `Previous` 按钮是否禁用，如果是，则启用它。\n\n并且创建一个单一的 `EventHandler` 来处理多种类型的事件。注册用于处理 `WORKER_STATE_SUCCEEDED`\
+  \ 的事件处理器也注册用于处理 `WORKER_STATE_FAILED` 和 `WORKER_STATE_CANCELLED`。当 `Worker` 的状态转换到\
+  \ `SUCCEEDED`、`FAILED` 或 `CANCELLED` 时，要执行的任务为：\n\n1. 如果列表迭代器中没有下一个文件，则禁用 `Next`\
+  \ 按钮；否则启用它。\n2. 如果 `Previous` 按钮是禁用的，则启用它。\n\n以下是 `configureSlideshow` 方法的实现：\n\n\
+  导入语句：\n\n```java\nimport javafx.concurrent.WorkerStateEvent;\n```\n\n列表 3-16. `configureSlideshow`\
+  \ 方法：\n\n\n\n\n\n```java\n/**\n   * \n   */\n  void configureSlideshow() {\n   \
+  \ // 如果服务正在运行，那么 isSlideshowOn 的值值为 true，\n    // 否则，它为 false \n    isSlideshowOn.bind(service.runningProperty());\n\
+  \n    service.setOnRunning(new EventHandler<WorkerStateEvent>() {\n      @Override\n\
+  \      public void handle(WorkerStateEvent we) {\n        System.out.println(\"\
+  Service is transited to running status\");\n        lastClickedButton.set(NEXT);\n\
+  \        if (prevButton.isDisable()) {\n          disableButton(prevButton, false);\n\
+  \        }\n      }\n    });\n\n    EventHandler<WorkerStateEvent> taskDone = new\
+  \ EventHandler<WorkerStateEvent>() {\n      @Override\n      public void handle(WorkerStateEvent\
+  \ we) {\n        disableButton(nextButton, !listIterator.get().hasNext());\n   \
+  \     if (prevButton.isDisable()) {\n          disableButton(prevButton, false);\n\
+  \        }\n      }\n    };\n\n    service.setOnSucceeded(taskDone);\n    service.setOnFailed(taskDone);\n\
+  \    service.setOnCancelled(taskDone);    \n  }\n```\n\n### 3.3.2.3 为 `Start Slideshow`\
+  \ 和 `Stop Slideshow` 菜单项实现动作事件的事件处理器\n\n执行 `Start Slideshow` 操作的场景如下：当用户点击 `Start\
+  \ Slideshow` 菜单项时，服务被启动，其状态从 `READY` 变为 `SCHEDULED`，再变为 `RUNNING`。一旦状态切换到 `RUNNING`，`isSlideshowOn`\
+  \ 属性的值就会更改为 `true`（参见此处），并且结果是 `Stop Slideshow` 菜单项的禁用状态被更改为 `false`（参见此处）。\n\n\
+  我们使用 `Service` 类中提供的 `void start()` 方法来启动服务。该方法是从处理 `Start Slideshow` 菜单项动作事件的事件处理器中调用的。在调用\
+  \ `start()` 方法之前检查服务的状态是非常重要的，以确保服务处于 `READY` 状态。\n\n在 `javafx.concurrent.Worker`\
+  \ 接口中定义的 `Worker.State getState()` 方法用于检查服务的状态。只有当服务处于 `READY` 状态时，才能成功启动服务。如果它未就绪，请先重置，然后启动服务。\n\
+  \n以下是执行这些操作的代码片段：\n\n```java\n startSlide.setOnAction(new EventHandler<ActionEvent>()\
+  \ {\n      @Override\n      public void handle(ActionEvent ae) {\n        System.out.println(\"\
+  Start Slideshow...\");\n        if (service.getState() != Worker.State.READY)\n\
+  \          service.reset(); // transit to READY\n        service.start();\n    \
+  \  }\n    });\n```\n\n用户可以在幻灯片服务运行时运行时取消幻灯片。`boolean cancel()` 方法是从处理 `Stop Slideshow`\
+  \ 菜单项动作事件的事件处理器中调用的。\n\n以下代码演示了如何为 `Start Slideshow` 和 `Stop Slideshow` 菜单项实现动作事件的事件处理器。\n\
+  \n导入语句：\n\n```java\n import javafx.concurrent.Worker;\n```\n\n列表 3-17. 为 `Start\
+  \ Slideshow` 和 `Stop Slideshow` 菜单项实现动作事件的事件处理器：\n\n```java\n startSlide.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ ae) {\n        System.out.println(\"Start Slideshow...\");\n        if (service.getState()\
+  \ != Worker.State.READY)\n          service.reset(); // transit to READY\n     \
+  \   // 如果最后点击的按钮是上一个按钮，\n        // 则下一个图像是当前图像，\n        // 必须在启动服务之前将光标向前移动一步\n\
+  \        if (lastClickedButton.get().equals(PREVIOUS) &&\n            listIterator.get().hasNext())\
+  \ {\n          listIterator.get().next();\n        }\n        service.start();\n\
+  \      }\n    });\n    stopSlide.setOnAction(new EventHandler<ActionEvent>() {\n\
+  \      @Override\n      public void handle(ActionEvent ae) {\n        System.out.println(\"\
+  Stop Slideshow...\");\n        service.cancel();\n      }\n    }); \n```\n\n###\
+  \ 3.3.3 ImageViewer 应用程序完整的 `start(Stage stage)` 方法\n\n接的列表显示了此阶段 `ImageViewer`\
+  \ V1.2 完整的 `start` 方法，更改部分已用**粗体**字体标记。\n\n列表 3-18. `ImageViewer` V1.2 的 `start`\
+  \ 方法如下：\n\n\n\n\n```java\npublic class ImageViewer extends Application {\n\n  ...\n\
+  \n  final BooleanProperty isSlideshowOn = new SimpleBooleanProperty(false);\n  //\
+  \ Create a reusable Worker object\n  final SlideshowService service = new SlideshowService(listIterator,\n\
+  \      curImage, imageName);\n\n  @Override\n  public void start(final Stage stage)\
+  \ {\n    BorderPane rootPane = new BorderPane();\n    final StackPane imageArea\
+  \ = new StackPane();\n    // Set min size for StackPane to avoid resizing\n    //\
+  \ when loading large size image\n    imageArea.setMinSize(0, 0);\n    rootPane.setCenter(imageArea);\n\
+  \n    // Add status bar and status text\n    final HBox statusBar = new HBox();\n\
+  \    statusBar.setPadding(new Insets(4, 12, 4, 12));\n    statusBar.setSpacing(4);\n\
+  \    statusBar.setStyle(\n        \"-fx-background-color: linear-gradient(#F0FFFF,\
+  \ #708090)\");\n    final Text statusText = new Text(\"\");\n    statusText.textProperty().bind(imageName);\n\
+  \    statusText.setFont(Font.font(\"Verdana\", FontWeight.BOLD, 12));\n    statusText.setFill(Color.DARKSLATEBLUE);\n\
+  \n    statusBar.getChildren().add(statusText);\n    rootPane.setBottom(statusBar);\n\
+  \n    // Create image view, add to image area\n    final ImageView imageView = new\
+  \ ImageView();\n    imageView.imageProperty().bind(curImage);\n    imageView.setPreserveRatio(true);\n\
+  \    imageArea.getChildren().add(imageView);\n\n    // Since JavaFX 8, to see through\
+  \ background color of scene,\n    // must set root pane's background to transparent\n\
+  \    rootPane.setStyle(\"-fx-background-color: transparent;\");\n    final Scene\
+  \ scene = new Scene(rootPane, 600, 400, Color.BLACK);\n\n    imageArea.widthProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal,\n          Object newVal) {\n        System.out.format(\"imageArea width\
+  \ changed from %.1f to %.1f%n\",\n            oldVal, newVal);\n      }\n    });\n\
+  \    imageArea.heightProperty().addListener(new ChangeListener<Object>() {\n   \
+  \   public void changed(ObservableValue o, Object oldVal,\n          Object newVal)\
+  \ {\n        System.out.format(\"imageArea height changed from %.1f to %.1f%n\"\
+  ,\n            oldVal, newVal);\n      }\n    });\n\n    // Add menu bar\n    final\
+  \ MenuBar menuBar = new MenuBar();\n    Menu menuFile = new Menu(\"File\");\n  \
+  \  MenuItem load = new MenuItem(\"Load\");\n    MenuItem exit = new MenuItem(\"\
+  Exit\");\n    menuFile.getItems().addAll(load, exit);\n    menuBar.getMenus().add(menuFile);\n\
+  \    rootPane.setTop(menuBar);\n\n    // Add action for exit menu item\n    exit.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ e) {\n        Platform.exit();\n      }\n    });\n\n    // Create a file chooser\n\
+  \    final FileChooser fileChooser = new FileChooser();\n    fileChooser.setTitle(\"\
+  Open an Image File\");\n    FileUtils.configure(fileChooser);\n\n    // Add action\
+  \ for menu item Load\n    load.setOnAction(new EventHandler<ActionEvent>() {\n \
+  \     @Override\n      public void handle(ActionEvent e) {\n        // Open FileChooser\
+  \ dialog\n        File file = fileChooser.showOpenDialog(stage);\n        if (file\
+  \ != null) {\n          // Set last visited dir as initial directory\n         \
+  \ File lastDir = file.getParentFile();\n          fileChooser.setInitialDirectory(lastDir);\n\
+  \          loadFile(file);\n        }\n      }\n    });\n\n    // Create Option\
+  \ menu\n    Menu menuOption = new Menu(\"Option\");\n\n    // Create radio menu\
+  \ items\n    final RadioMenuItem fitWidth = new RadioMenuItem(\"Fit Width\");\n\
+  \    fitWidth.setToggleGroup(groupOption);\n    final RadioMenuItem fitHeight =\
+  \ new RadioMenuItem(\"Fit Height\");\n    fitHeight.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\n    original.setToggleGroup(groupOption);\n\
+  \n    // Listen to the change of selection in the toggle group\n    groupOption.selectedToggleProperty().addListener(new\
+  \ ChangeListener<Toggle>() {\n      public void changed(ObservableValue<? extends\
+  \ Toggle> ov,\n          Toggle old_toggle, Toggle new_toggle) {\n        if (groupOption.getSelectedToggle()\
+  \ != null) {\n          RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \          if (choiceItem == fitWidth) {\n            System.out.println(\"fitwidth\"\
+  );\n            imageView.fitWidthProperty().bind(scene.widthProperty());\n    \
+  \        imageView.fitHeightProperty().unbind();\n            // Besides unbind,\
+  \ must also set fit height to 0\n            imageView.setFitHeight(0);\n      \
+  \    } else if (choiceItem == fitHeight) {\n            System.out.println(\"fitheight\"\
+  );\n            // Available height for rendering image is\n            // subtract\
+  \ sum of menubar's height and statusBar's height\n            // from scene height\n\
+  \            imageView.fitHeightProperty().bind(\n                scene.heightProperty().subtract(\n\
+  \                  menuBar.getHeight() + statusBar.getHeight()));\n            imageView.fitWidthProperty().unbind();\n\
+  \            // Besides unbind, must also set fit width to 0 \n            imageView.setFitWidth(0);\n\
+  \          }\n        }\n      }\n    });\n  }\n}\n```\n\n\n\n\n### 3.3.4 与 `Load`\
+  \ 菜单项和 `Previous` 按钮的事件处理器进行协调\n\n由于幻灯片在独立的线程上运行，应用程序仍然对用户的操作保持响应，例如鼠标点击 `Load`\
+  \ 菜单项或 `Previous` 按钮。\n\n为了让幻灯片运行得流畅，我们将完善 `Load` 菜单项的动作处理程序以及 `Previous` 按钮的鼠标点击事件处理器。也就是说，只有在幻灯片未运行时，我们才会继续加载当前选择的文件或上一个文件。后续列表中的更改以**粗体**显示。\n\
+  \n请注意，如果用户在幻灯片运行时点击 `Next` 按钮，图像渲染的整体流程看起来并不突兀，因此我们没有对其进行额外的处理。\n\n列表 3-19. `loadFile`\
+  \ 方法变为如下：\n\n```java\n /**\n   * \n   * @param file \n   */\n  void loadFile(File\
+  \ file) {\n    // 创建迭代器\n    try {\n      ListIterator<java.nio.file.Path> it =\n\
+  \        FileUtils.listIterator(file.toPath());\n\n      // 更新 listIterator 属性的值\n\
+  \      listIterator.set(it);\n\n      // 如果幻灯片未开启，则加载文件\n      // 否则，在这里什么都不做\n\
+  \      // 因为幻灯片服务将执行此任务\n      if (!isSlideshowOn.get()) {\n        // 如果没有上一个文件，则禁用\
+  \ prevButton\n        // 在调用 next() 之前检查 hasPrevious()\n        disableButton(prevButton,\
+  \ !it.hasPrevious());\n\n        file = it.next().toFile();\n        String url\
+  \ = file.toURI().toString();\n        curImage.set(new Image(url));\n        imageName.set(url.substring(\n\
+  \            url.lastIndexOf(\"/\") + 1).replaceAll(\"%20\", \" \"));\n\n      \
+  \  // 检查 hasNext，如果没有下一个文件则禁用 nextButton\n        disableButton(nextButton, !it.hasNext());\n\
+  \n        lastClickedButton.setValue(NEXT);\n      }\n    } catch (IOException ex)\
+  \ {\n    }\n  }\n```\n\n下面的代码片段节自 `createPrevButton` 方法。\n\n列表 3-20. `Previous`\
+  \ 按钮的鼠标点击事件处理器变为：\n\n```java\n // 为 按钮注册鼠标点击事件处理器\n    buttonGroup.setOnMouseClicked(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        if (me.getButton() != MouseButton.PRIMARY)\n          return;\n\
+  \        ListIterator<java.nio.file.Path> iterator = (ListIterator)listIterator.get();\n\
+  \        if (iterator != null && iterator.hasPrevious()) {\n          java.nio.file.Path\
+  \ path = iterator.previous();\n          if (lastClickedButton.get().equals(NEXT))\
+  \ {\n            // 如果上一次点击的按钮是 nextButton\n            // 第一次调用 previous() 是当前图像\n\
+  \            // 必须向后移动一步\n            if (iterator.hasPrevious())\n            \
+  \  path = iterator.previous();\n            else {\n              // 没有上一个图像，禁用\
+  \ prevButton\n              disableButton(prevButton, true);\n              return;\n\
+  \            }\n          }\n          System.out.format(\"Prev button clicked:\
+  \ %s%n\", path.getFileName());\n          // 如果幻灯片未开启，在此加载文件\n          // 否则，在这里什么都不做\n\
+  \          // 因为幻灯片服务将执行此任务\n          if (!isSlideshowOn.get()) {\n           \
+  \ String url = path.toUri().toString();\n            curImage.set(new Image(url));\n\
+  \            imageName.set(url.substring(\n              url.lastIndexOf(\"/\")+1).replaceAll(\"\
+  %20\", \" \"));\n\n            lastClickedButton.set(PREVIOUS);\n            disableButton(prevButton,\
+  \ !iterator.hasPrevious());\n            if (nextButton.isDisabled()) \n       \
+  \       disableButton(nextButton, false);\n          }\n        }    \n      }\n\
+  \    });\n```\n\n编译并运行程序，测试以下内容以理解应用程序如何处理事件的并发：\n\n*   从 `FileChooser` 的文件打开对话框在图像目录中加载一个图像文件。\n\
+  *   启动幻灯片。\n*   在幻灯片运行时，执行以下操作：\n    *   来回选择不同的 `View` 选项。\n    *   点击 `Previous`\
+  \ 按钮或 `Next` 按钮。\n    *   从 `FileChooser` 的文件打开对话框在不同的图像目录中加载另一个图像文件。\n\n图 3-11.\
+  \ 幻灯片运行时 `Option` 菜单的外观，`Start Slideshow` 菜单项被禁用，`Stop Slideshow` 菜单项被启用。\n\n![](img/image00159.jpeg\
+  \ \"slideshow_on.jpg\")\n\n## 3.4 在幻灯片之间添加淡入过渡\n\n为了增强幻灯片的运动感，将在幻灯片之间添加淡入过渡。以下是\
+  \ `javafx.animation` 包中用于淡入过渡动画的类：\n\n*   `Animation`\n    继承自 `java.lang.Object`\
+  \ 的抽象类，提供了动画所需的常用属性和方法。\n*   `Transition`\n    继承自 `Animation` 的抽象类，提供了过渡动画所需的常用属性和方法。可用的过渡有：`FadeTransition`、`FillTransition`、`ParallelTransition`、`PathTransition`、`PauseTransition`、`RotateTransition`、`ScaleTransition`、`SequentialTransition`、`StrokeTransition`、`TranslateTransition`。\n\
+  *   `FadeTransition`\n    `Transition` 的直接子类，改变透明度。\n*   `ParallelTransition`\n\
+  \    `Transition` 的直接子类，对 `Animation` 对象列表执行过渡。这是我们将用于创建 `FadeTransition` 对象的构造函数：\n\
+  \n```java\npublic FadeTransition(Duration duration, Node node)\n```\n\n`Duration`\
+  \ 类位于 `javafx.util`，提供了几个用于创建持续对象的工厂方法。这里使用的是其中一个：\n\n```java\npublic static Duration\
+  \ millis(double ms)\n```\n\n上述方法为 `FadeTransition` 创建了一个指定毫秒数的 `Duration` 属性：\n\n\
+  *   `duration`\n    类型为 `ObjectProperty<Duration>`，持有透明度从 `fromValue` 转换到 `toValue`\
+  \ 的持续时间。该属性的值通过构造函数的第一个参数指定。\n*   `node`\n    类型为 `ObjectProperty<Node>`，持有执行此过渡的目标节点。该属性的值通过构造函数的第二个参数指定。\n\
+  *   `fromValue`\n    类型为 `DoubleProperty`，持有此淡入过渡的起始透明度值。\n*   `toValue`\n    类型为\
+  \ `DoubleProperty`，持有此淡入过渡的结束透明度值。\n\n以下是创建用于图像淡入的 `FadeTransition` 的代码片段，该图像的透明度在\
+  \ 2000 毫秒内从 0 变为 1：\n\n```java\nFadeTransition fadein = new FadeTransition(Duration.millis(2000),\
+  \ inView);\n        fadein.setFromValue(0.0);\n        fadein.setToValue(1.0);\n\
+  ```\n\n同样，以下是创建用于图像淡出的 `FadeTransition` 的代码片段，该图像的透明度在 2000 毫秒内从 1 变为 0：\n\n```java\n\
+  FadeTransition fadeout = new FadeTransition(Duration.millis(2000), outView);\n \
+  \       fadeout.setFromValue(1.0);\n        fadeout.setToValue(0.0);\n```\n\n现在，我们有两个\
+  \ `FadeTransition` 对象，一个用于执行淡入过渡，另一个用于执行淡出，我们希望这两个过渡并行处理。由于每个过渡都有自己的目标节点，采用了 `ParallelTransition`\
+  \ 的以下构造函数：\n\n```java\npublic ParallelTransition(Animation... children)\n```\n\n\
+  以下是创建 `ParallelTransition` 并使用 `Animation` 类提供的 `playFromStart()` 方法启动动画的代码片段：\n\
+  \n```java\nTransition animate = new ParallelTransition(fadein, fadeout);\n     \
+  \   animate.playFromStart();\n```\n\n\n\n\n\n`SlideshowService` 的请求者需要提供两个 `ImageView`\
+  \ 对象，一个用于淡入过渡，另一个用于淡出过渡。\n\n下面的代码段演示了 `SlideshowService` 的请求者如何使用 `setImageView`\
+  \ 方法和 `setFadeOutImageView` 方法提供两个 `ImageView` 对象。\n\nListing 3-21. 为 `SlideshowService`\
+  \ 内部执行的幻灯片之间的淡过渡提供两个 `ImageView` 对象：\n\n```java\n public class ImageViewer extends\
+  \ Application {\n\n    ...\n\n  final StringProperty imageName = new SimpleStringProperty();\n\
+  \n  final ObjectProperty<Image> curImage = new SimpleObjectProperty<>();\n\n  //\
+  \ 创建可复用的 Worker 对象\n  final SlideshowService service = new SlideshowService(listIterator,\n\
+  \      curImage, imageName);\n\n    ...\n\n  @Override\n  public void start(final\
+  \ Stage stage) {\n    BorderPane rootPane = new BorderPane();\n    final StackPane\
+  \ imageArea = new StackPane();\n    // 设置 StackPane 的最小尺寸以避免在\n    // 加载大尺寸时调整大小\n\
+  \    imageArea.setMinSize(0, 0);\n    rootPane.setCenter(imageArea);\n\n      ...\n\
+  \n    // 将图像视图添加到图像区域    \n    final ImageView imageView = new ImageView();\n  \
+  \  imageView.imageProperty().bind(curImage);\n    imageView.setPreserveRatio(true);\n\
+  \    imageArea.getChildren().add(imageView);\n\n    // 用于幻灯片中的淡入过渡\n    ImageView\
+  \ outView = new ImageView();\n    outView.preserveRatioProperty().bind(imageView.preserveRatioProperty());\n\
+  \    outView.fitWidthProperty().bind(imageView.fitWidthProperty());\n    outView.fitHeightProperty().bind(imageView.fitHeightProperty());\n\
+  \    imageArea.getChildren().add(outView);\n    service.setImageView(imageView);\n\
+  \    service.setFadeOutImageView(outView);\n\n      ... \n```\n```\n\n### 3.4.1\
+  \ `SlideshowService` 类的完整源代码\n\n下面的列表显示了此阶段 `SlideshowService` 类的完整源代码，其中更改已用粗体字体显示。\n\
+  \nListing 3-22. `SlideshowService` 类如下：\n\n```java\n package imageviewer;\n\nimport\
+  \ java.nio.file.Path;\nimport java.util.ListIterator;\nimport javafx.animation.FadeTransition;\n\
+  import javafx.animation.ParallelTransition;\nimport javafx.animation.Transition;\n\
+  import javafx.beans.property.ObjectProperty;\nimport javafx.beans.property.SimpleObjectProperty;\n\
+  import javafx.beans.property.SimpleStringProperty;\nimport javafx.beans.property.StringProperty;\n\
+  import javafx.beans.value.ChangeListener;\nimport javafx.beans.value.ObservableValue;\n\
+  import javafx.concurrent.Service;\nimport javafx.concurrent.Task;\nimport javafx.scene.image.Image;\n\
+  import javafx.scene.image.ImageView;\nimport javafx.util.Duration;\n\n/**\n * 文件名:\
+  \ SlideshowService.java\n * (位于目录: ImageViewer1.2/src/example5/imageviewer/)\n *\n\
+  \ * 在幻灯片之间添加淡入过渡\n *\n * @author Shufen Kuo\n */\n\npublic class SlideshowService\
+  \ extends Service<Void> {\n  private ObjectProperty<ImageView> imageView = new SimpleObjectProperty<>();\n\
+  \  private ObjectProperty<ImageView> fadeOutIV = new SimpleObjectProperty<>();\n\
+  \  private ObjectProperty<Image> image;\n  private ObjectProperty<ListIterator<Path>>\
+  \ iterator;\n  private StringProperty imageName;\n  private ListIterator<Path> it;\n\
+  \n  public SlideshowService() {\n    this(new SimpleObjectProperty<ListIterator<Path>>(),\n\
+  \        new SimpleObjectProperty<Image>(),\n        new SimpleStringProperty());\n\
+  \  }\n\n  public SlideshowService(ObjectProperty<ListIterator<Path>> iterator,\n\
+  \      ObjectProperty<Image> image, StringProperty imageName) {\n    this.image\
+  \ = image;\n    this.imageName = imageName;\n    this.iterator = iterator;\n   \
+  \ iterator.addListener(new ChangeListener<ListIterator<Path>>() {\n      @Override\n\
+  \      public void changed(ObservableValue<? extends ListIterator<Path>> o,\n  \
+  \        ListIterator<Path> oldVal, ListIterator<Path> newVal) {\n        it = newVal;\n\
+  \      }\n    });    \n  }\n\n  public ImageView getImageView() {\n    return imageView.get();\n\
+  \  }\n\n  public void setImageView(ImageView value) {\n    imageView.set(value);\n\
+  \  }\n\n  public ObjectProperty<ImageView> imageViewProperty() {\n    return imageView;\n\
+  \  }\n\n  public ImageView getFadeOutImageView() {\n    return fadeOutIV.get();\n\
+  \  }\n\n  public void setFadeOutImageView(ImageView value) {\n    fadeOutIV.set(value);\n\
+  \  }\n\n  public ObjectProperty<ImageView> fadeOutImageViewProperty() {\n    return\
+  \ fadeOutIV;\n  }\n\n  public Image getImage() {\n    return image.get();\n  }\n\
+  \n  public void setImage(Image value) {\n    image.set(value);\n  }\n\n  public\
+  \ ObjectProperty<Image> imageProperty() {\n    return image;\n  }\n\n  public ListIterator<Path>\
+  \ getIterator() {\n    return iterator.get();\n  }\n\n  public void setListIterator(ListIterator<Path>\
+  \ value) {\n    iterator.set(value);\n  }\n\n  public ObjectProperty<ListIterator<Path>>\
+  \ iteratorProperty() {\n    return iterator;\n  }\n\n  public String getImageName()\
+  \ {\n    return imageName.get();\n  }\n\n  public void setImageName(String value)\
+  \ {\n    imageName.set(value);\n  }\n\n  public StringProperty imageNameProperty()\
+  \ {\n    return imageName;\n  }\n\n  @Override\n  protected Task<Void> createTask()\
+  \ {\n    return new Task<Void>() {\n      @Override\n      protected Void call()\
+  \ {\n        if (it == null) return null;\n\n        Transition animate = null;\n\
+  \        ImageView inView = imageView.get();\n        ImageView outView = fadeOutIV.get();\n\
+  \        if (inView != null && outView != null) {\n          FadeTransition fadein\
+  \ = new FadeTransition(Duration.millis(2000), inView);\n          fadein.setFromValue(0.0);\n\
+  \          fadein.setToValue(1.0);\n\n          FadeTransition fadeout = new FadeTransition(Duration.millis(2000),\
+  \ outView);\n          fadeout.setFromValue(1.0);\n          fadeout.setToValue(0.0);\n\
+  \n          animate = new ParallelTransition(fadein, fadeout);\n        }\n\n  \
+  \      while (it.hasNext()) {\n          if (isCancelled()) {\n            updateMessage(\"\
+  Cancelled\");\n            break;\n          }\n\n          if (inView != null &&\
+  \ outView != null) {\n            Image prevImage = getImage();\n            outView.setImage(prevImage);\n\
+  \            // Must reset opacity's from value for outView\n            outView.setOpacity(1);\
+  \ \n            // Must reset opacity's from value for inView\n            inView.setOpacity(0);\
+  \            \n          }        \n\n          String url = it.next().toUri().toString();\n\
+  \          setImage(new Image(url));\n          setImageName(url.substring(\n  \
+  \            url.lastIndexOf(\"/\") + 1).replaceAll(\"%20\", \" \"));\n\n      \
+  \    // 在暂停前启动淡入淡出动画\n          if (animate != null) \n            animate.playFromStart();\n\
+  \n          // 暂停 3000 毫秒\n          try {\n            Thread.sleep(3000);\n  \
+  \        } catch (InterruptedException ex) {\n            if (isCancelled()) {\n\
+  \              updateMessage(\"Cancelled\");\n              break;\n           \
+  \ }\n          }\n        }\n\n        // 返回前重置 outView\n        if (outView !=\
+  \ null) {\n          outView.setImage(null);\n        }\n\n        return null;\n\
+  \      }\n    };\n  }\n}\n```\n\n## 3.5 `Image Viewer V1.2` 的完整源代码\n\nListing 3-23.\
+  \ `ImageViewer` 类的完整源代码：\n\n\n\n\n\n```java\npackage imageviewer;\n\nimport java.io.File;\n\
+  import java.io.IOException;\nimport java.util.ListIterator;\nimport javafx.application.Application;\n\
+  import javafx.application.Platform; \nimport javafx.beans.property.BooleanProperty;\n\
+  import javafx.beans.property.ObjectProperty;\nimport javafx.beans.property.SimpleBooleanProperty;\n\
+  import javafx.beans.property.SimpleObjectProperty;\nimport javafx.beans.property.SimpleStringProperty;\n\
+  import javafx.beans.property.StringProperty;\nimport javafx.beans.value.ChangeListener;\n\
+  import javafx.beans.value.ObservableValue;\nimport javafx.concurrent.Worker;\nimport\
+  \ javafx.concurrent.WorkerStateEvent;\nimport javafx.event.ActionEvent;\nimport\
+  \ javafx.event.EventHandler;\nimport javafx.geometry.Insets;\nimport javafx.geometry.Pos;\n\
+  import javafx.scene.Cursor;\nimport javafx.scene.Group;\nimport javafx.scene.Node;\n\
+  import javafx.scene.Scene;\nimport javafx.scene.control.Menu;\nimport javafx.scene.control.MenuBar;\n\
+  import javafx.scene.control.MenuItem;\nimport javafx.scene.control.RadioMenuItem;\n\
+  import javafx.scene.control.Toggle;\nimport javafx.scene.control.ToggleGroup;\n\
+  import javafx.scene.control.Tooltip;\nimport javafx.scene.image.Image;\nimport javafx.scene.image.ImageView;\n\
+  import javafx.scene.input.MouseButton;\nimport javafx.scene.input.MouseEvent;\n\
+  import javafx.scene.layout.BorderPane;\nimport javafx.scene.layout.HBox;\nimport\
+  \ javafx.scene.layout.StackPane;\nimport javafx.scene.paint.Color;\nimport javafx.scene.paint.CycleMethod;\n\
+  import javafx.scene.paint.LinearGradient;\nimport javafx.scene.paint.Paint;\nimport\
+  \ javafx.scene.paint.Stop;\nimport javafx.scene.shape.Polygon;\nimport javafx.scene.shape.Rectangle;\n\
+  import javafx.scene.shape.Shape;\nimport javafx.scene.text.Font;\nimport javafx.scene.text.FontWeight;\n\
+  import javafx.scene.text.Text;\nimport javafx.stage.FileChooser;\nimport javafx.stage.Stage;\n\
+  \n/**\n * 文件名: ImageViewer.java V1.2\n * (位于目录: ImageViewer1.2/src/example5/imageviewer/)\n\
+  \ * 此应用程序创建了一个 BorderPane 作为场景的根节点，\n *并在 BorderPane 的中心添加了一个 StackPane。\n * 场景的初始大小设置为\
+  \ 600x400。\n * StackPane 的大小将自动调整以适应场景大小。\n * 当用户调整窗口大小时，StackPane 会随之调整。\n *\n\
+  \ * 在 BorderPane 顶部添加菜单栏。\n * 创建文件（File）菜单，并使用 FileChooser 的打开对话框\n * 选择图像文件，在图像渲染区域加载并显示图像。\n\
+  \ * \n * 创建选项（Option）菜单，包含一个视图（View）子菜单，让用户选择\n * 图片查看标准：适应宽度、适应高度或默认的原始大小（Original\
+  \ Size）。\n *\n * 使用 bind 和 unbind 方法调整图像查看大小：\n * 将图像视图的 fitWidth/fitHeight 属性绑定到\n\
+  \ * 场景的 width/height 属性，\n * 这样当场景调整大小时，图像视图的大小会自动更改。\n * \n * 在场景中添加下一个（Next）和上一个（Previous）按钮，\n\
+  \ * 在加载第一张图片后，用户可以使用这些按钮\n * 查看下一张或预览图像，而无需再次打开 FileChooser。\n * \n * 调整下一个按钮在 StackPane\
+  \ 中的默认位置\n * 添加上一个按钮并调整其在 StackPane 中的位置\n * 为下一个和上一个按钮实现鼠标点击事件处理器（Handlers）\n *\
+  \ \n * 添加状态栏显示图像名称\n * 禁用按钮以表示没有更多图像可以打开\n * 区分不同事件类型的按钮外观：\n *   进入/按下/释放/离开 (entered/pressed/released/exited)\n\
+  \ * 在线程中执行幻灯片播放\n * 与加载菜单项和上一个按钮的事件处理器进行协调 \n * 为幻灯片添加淡入淡出效果\n *\n * @author Shufen\
+  \ Kuo\n */\npublic class ImageViewer extends Application {\n  final Node nextButton\
+  \ = createNextButton();\n  final Node prevButton = createPrevButton();\n  {\n  \
+  \  disableButton(nextButton, true);\n    disableButton(prevButton, true);\n  }\n\
+  \n  // 创建切换组\n  final ToggleGroup groupOption = new ToggleGroup();\n  final String\
+  \ FIT_WIDTH = \"Fit Width\"; // 适应宽度\n  final String FIT_HEIGHT = \"Fit Height\"\
+  ; // 适应高度\n  final String ORIGINAL_SIZE = \"Original Size\"; // 原始大小\n\n  // 用于遍历当前选择目录中的文件\n\
+  \  final ObjectProperty<ListIterator<java.nio.file.Path>> listIterator =\n     \
+  \ new SimpleObjectProperty<>();\n\n  final String NEXT = \"NEXT\";\n  final String\
+  \ PREVIOUS = \"PREVIOUS\";\n  // 用于跟踪最后点击的按钮\n  final StringProperty lastClickedButton\
+  \ = new SimpleStringProperty();\n\n  final ObjectProperty<Image> curImage = new\
+  \ SimpleObjectProperty<>();\n\n  final StringProperty imageName = new SimpleStringProperty();\n\
+  \n  final BooleanProperty isSlideshowOn = new SimpleBooleanProperty(false);\n  //\
+  \ 创建可复用的 Worker 对象\n  final SlideshowService service = new SlideshowService(listIterator,\
+  \ curImage, imageName);\n\n  @Override\n  public void start(final Stage stage) {\n\
+  \    BorderPane rootPane = new BorderPane();\n    final StackPane imageArea = new\
+  \ StackPane();\n    // 设置 StackPane 的最小大小以避免在\n    // 加载大图像时调整 own\n    imageArea.setMinSize(0,\
+  \ 0);\n    rootPane.setCenter(imageArea);\n\n    // 添加状态栏和文本\n    final HBox statusBar\
+  \ = new HBox();\n    statusBar.setPadding(new Insets(4, 12, 4, 12));\n    statusBar.setSpacing(4);\n\
+  \    statusBar.setStyle(\"-fx-background-color: linear-gradient(#FFFF, #7080)\"\
+  );\n    final Text statusText = new Text(\"\");\n    statusText.textProperty().bind(imageName);\n\
+  \    statusText.setFont(Font.font(\"Verdana\", FontWeight.BOLD, 12));\n    statusText.setFill(Color.DARKBLUE);\n\
+  \    statusBar.getChildren().add(statusText);\n    rootPane.setBottom(statusBar);\n\
+  \n    // 创建图像视图并添加到区域\n    final ImageView imageView = new ImageView();\n    imageView.imageProperty().bind(curImage);\n\
+  \    imageView.setPreserveRatio(true);\n    imageArea.getChildren().add(imageView);\n\
+  \n    // 用于幻灯片的淡入淡出\n    ImageView outView = new ImageView();\n    outView.preserveRatio().bind(imageView.preserveRatio());\n\
+  \    outView.fitWidthProperty().bind(imageView.fitWidthProperty());\n    outView.fitHeightProperty().bind(imageView.fitHeightProperty());\n\
+  \    imageArea.getChildren().add(outView);\n    service.setImageView(imageView);\n\
+  \    service.setFadeImageView(outView);\n\n    // 从 JavaFX 8 开始，为了看到背景颜色\n    //\
+  \ 必须将根节点的背景设置为透明\n    rootPane.setStyle(\"-fx-background-color: transparent;\");\n\
+  \    final Scene scene = new Scene(rootPane, 600, 400, Color.BLACK);\n\n    imageArea.widthProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal, Object newVal) {\n        System.out.format(\"imageArea width changed\
+  \ from %.1f to %.1f%n\", oldVal, newVal);\n      }\n    });\n    imageArea.heightProperty().addListener(new\
+  \ ChangeListener<Object>() {\n      public void changed(ObservableValue o, Object\
+  \ oldVal, Object newVal) {\n        System.out.format(\"imageArea height changed\
+  \ from %.1f to %.1f%n\", oldVal, newVal);\n      }\n    });\n\n    // 添加菜单栏\n  \
+  \  final MenuBar menuBar = new MenuBar();\n    Menu menuFile = new Menu(\"File\"\
+  );\n    MenuItem load = new MenuItem(\"Load\");\n    MenuItem exit = new MenuItem(\"\
+  Exit\");\n    menuFile.getItems().addAll(load, exit);\n    menuBar.getMenus().add(menuFile);\n\
+  \    rootPane.setTop(menuBar);\n\n    // 为退出菜单项添加动作\n    exit.setOnAction(new EventHandler<ActionEvent>()\
+  \ {\n      @Override\n      public void handle(ActionEvent e) {\n        Platform.exit();\n\
+  \      }\n    });\n\n    // 创建文件选择器\n    final FileChooser fileChooser = new FileChooser();\n\
+  \    fileChooser.setTitle(\"Open an Image File\");\n    FileUtils.configure(fileChooser);\n\
+  \n    // 为加载菜单项添加动作\n    load.setOnAction(new EventHandler<ActionEvent>() {\n  \
+  \    @Override\n      public void handle(ActionEvent e) {\n        // 打开文件选择对话框\n\
+  \        File file = fileChooser.showOpenDialog(stage);\n        if (file != null)\
+  \ {\n          // 设置上次访问的目录作为初始目录\n          File lastDir = file.getParentFile();\n\
+  \          fileChooser.setInitialDirectory(lastDir);\n          loadFile(file);\n\
+  \        }\n      }\n    });\n\n    // 创建选项菜单\n    Menu menuOption = new Menu(\"\
+  Option\");\n\n    // 创建单选菜单项\n    final RadioMenuItem fitWidth = new RadioMenuItem(\"\
+  Fit Width\");\n    fitWidth.setToggleGroup(groupOption);\n    final RadioMenuItem\
+  \ fitHeight = new RadioMenuItem(\"Fit Height\");\n    fitHeight.setToggleGroup(groupOption);\n\
+  \    final RadioMenuItem original = new RadioMenuItem(\"Original Size\");\n    original.setToggleGroup(groupOption);\n\
+  \n    // 监听切换组的选择变化\n    groupOption.selectedToggleProperty().addListener(new ChangeListener<Toggle>()\
+  \ {\n      public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle,\
+  \ Toggle new_toggle) {\n        if (groupOption.getSelectedToggle() != null) {\n\
+  \          RadioMenuItem choiceItem = (RadioMenuItem) groupOption.getSelectedToggle();\n\
+  \          if (choiceItem == fitWidth) {\n            System.out.println(\"fitwidth\"\
+  );\n            imageView.fitWidthProperty().bind(scene.widthProperty());\n    \
+  \        imageView.fitHeightProperty().unbind();\n            // 除了取消绑定，还必须将高度设置为\
+  \ 0\n            imageView.setFitHeight(0);\n          } else if (choiceItem ==\
+  \ fitHeight) {\n            System.out.println(\"fitheight\");\n            // 渲染图像的可用高度是\n\
+  \            // 从场景高度中减去菜单栏和状态栏的高度之和\n            imageView.fitHeightProperty().bind(\n\
+  \                scene.heightProperty().subtract(menuBar.getHeight() + statusBar.getHeight()));\n\
+  \            imageView.fitWidthProperty().unbind();\n            // 除了取消绑定，还必须将宽度设置为\
+  \ 0\n            imageView.setFitWidth(0);\n          } else {\n            System.out.println(\"\
+  original size\");\n            imageView.fitWidthProperty().unbind();\n        \
+  \    imageView.fitHeightProperty().unbind();\n            // 除了取消绑定，还必须将高度/宽度设置为\
+  \ 0\n            imageView.setFitWidth(0);\n            imageView.setFitHeight(0);\n\
+  \          }\n        }\n      }\n    });\n    // 为选项菜单创建视图子菜单\n    Menu menuView\
+  \ = new Menu(\"View\");\n    menuView.getItems().addAll(fitWidth, fitHeight, original);\n\
+  \n    // 设置原始大小为默认值\n    original.setSelected(true);\n\n    // 创建开始/停止幻灯片项\n   \
+  \ final MenuItem startSlide = new MenuItem(\"Start Slideshow\");\n    final MenuItem\
+  \ stopSlide = new MenuItem(\"Stop Slideshow\");\n\n    startSlide.disableProperty().bind(isSlideshowOn.or(nextButton.disableProperty()));\n\
+  \    stopSlide.disableProperty().bind(isSlideshowOn.not().or(nextButton.disableProperty()));\n\
+  \n    configureSlideshow();\n\n    // 为开始幻灯片菜单项添加处理器\n    startSlide.setOnAction(new\
+  \ EventHandler<ActionEvent>() {\n      @Override\n      public void handle(ActionEvent\
+  \ ae) {\n        System.out.println(\"Start slideshow...\");\n        if (service.getState()\
+  \ != Worker.READY)\n          service.reset(); // 到 READY 状态\n        // 如果最后点击的是上一个按钮，\n\
+  \        // 则 next() 是当前图像，\n        // 向前移动一步\n        if (lastClickedButton.get().equals(PREVIOUS)\
+  \ && listIterator.get().hasNext()) {\n          listIterator.get().next();\n   \
+  \     }\n        service.start();\n      }\n    });\n\n    // 为停止幻灯片菜单项添加处理器\n \
+  \   stopSlide.setOnAction(new EventHandler<ActionEvent>() {\n      @Override\n \
+  \     public void handle(ActionEvent ae) {\n        System.out.println(\"Stop slideshow...\"\
+  );\n        service.cancel();\n      }\n    });\n\n    // 将选项菜单添加到菜单栏\n    menuOption.getItems().addAll(menuView,\
+  \ startSlide, stopSlide);\n    menuBar.getMenus().add(menuOption);\n\n    // 安装工具提示\n\
+  \    Tooltip t = new Tooltip(\"Next Image\");\n    Tooltip.install(nextButton, t);\n\
+  \n    // 为上一个按钮安装工具提示\n    Tooltip t2 = new Tooltip(\"Previous Image\");\n    Tooltip.install(prevButton,\
+  \ t2);\n\n    // 将下一个按钮的位置调整到 StackPane 的右侧\n    StackPane.setAlignment(nextButton,\
+  \ Pos.CENTER_RIGHT);\n    StackPane.setMargin(nextButton, new Insets(8));\n\n  \
+  \  // 将上一个按钮的位置调整到 StackPane 的左侧\n    StackPane.setAlignment(prevButton, Pos.CENTER_LEFT);\n\
+  \    StackPane.setMargin(prevButton, new Insets(8));\n\n    // 将下一个和上一个按钮添加到 stack\
+  \ pane\n    imageArea.getChildren().addAll(nextButton, prevButton);\n\n    // 监听场景宽的变化\n\
+  \    scene.widthProperty().addListener(new ChangeListener<Object>() {\n      public\
+  \ void changed(ObservableValue o, Object oldVal, Object newVal) {\n        System.out.format(\"\
+  Scene width changed from %.1f to %.1f%n\", oldVal, newVal);\n      }\n    });\n\n\
+  \    // 监听场景高度的变化\n    scene.heightProperty().addListener(new ChangeListener<Object>()\
+  \ {\n      public void changed(ObservableValue o, Object oldVal, Object newVal)\
+  \ {\n        System.out.format(\"Scene height changed from %.1f to %.1f%n\", oldVal,\
+  \ newVal);\n      }\n    });\n\n    stage.setTitle(\"ImageViewer V1.2\");\n    stage.setScene(scene);\n\
+  \    stage.show();\n  }\n\n  /**\n   * 使用矩形作为背景、多边形作为图标、组作为容器创建下一个按钮，\n   * 矩形的大小为\
+  \ 25x35，\n   * 多边形的厚度为 8 像素，\n   * 多边形的内边距为 (2, 2, 2, 5\n   * 在鼠标进入/按下/释放/离开时更改按钮外观。\n\
+  \   *\n   * @return\n   */\n  Node createNextButton() {\n    // 创建组作为按钮\n    Group\
+  \ buttonGroup = new Group();\n\n    // 创建矩形形状作为背景\n    final Rectangle rect = new\
+  \ Rectangle(0, 0, 25, 35);\n\n    // 矩形的视觉效果\n    final LinearGradient lg = new\
+  \ LinearGradient(0, 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n\
+  \          new Stop(0, Color.web(\"#5173A8\")),\n          new Stop(0.6, Color.web(\"\
+  #A8B9D4\")),\n          new Stop(1, Color.web(\"#87A7C6\"))});\n    rect.setFill(lg);\n\
+  \    rect.setStroke(Color.web(\"#ACD7FF\"));\n    rect.setArcHeight(6.5);\n    rect.setArcWidth(6.5);\n\
+  \n    // 当鼠标进入下一个按钮时绘制填充矩形\n    final LinearGradient lgEntered = new LinearGradient(0,\
+  \ 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n          new Stop(0,\
+  \ Color.web(\"#87AC6\")),\n          new Stop(0.4, Color.web(\"#A8BD4\")),\n   \
+  \       new Stop(1, Color.web(\"#5173A8\"))});\n    // 当鼠标按下下一个按钮时绘制填充矩形\n    final\
+  \ LinearGradient lgPressed = new LinearGradient(0, 0, 1, 0, true,\n        CycleMethod.NO_CYCLE,\
+  \ new Stop[]{\n          new Stop(0, Color.web(\"#877C6\")),\n          new Stop(0.4,\
+  \ Color.web(\"#A8BD4\")),\n          new Stop(1, Color.web(\"#2F4FF\"))});\n   \
+  \ // 创建多边形形状表示 Next 图标\n    // 8 像素厚度，内边距为 2, 2, 5\n    final polygon = new Polygon();\n\
+  \    Double[] dArray = {\n      5.0, 2.0,\n      22.0, 17.0,\n      5.0, 32.0,\n\
+  \      5.0, 25.0,\n      14.0, 17.0,\n      5.0, 9.0};\n    polygon.getPoints().addAll(dArray);\n\
+  \    polygon.setFill(Color.WHITE);\n    polygon.setStroke(Color.web(\"#436B8\"));\n\
+  \    // 设置光标\n    buttonGroup.setCursor(Cursor.OPEN_HAND);\n\n    // 为下一个按钮注册鼠标点击事件\n\
+  \    buttonGroup.setOnMouseClicked(new EventHandler<MouseEvent>() {\n      @Override\n\
+  \      public void handle(MouseEvent me) {\n        if (me.getButton() != MouseButton.PRIMARY)\n\
+  \          return;\n        // 获取迭代器\n        ListIterator<java.nio.file.Path> iterator\
+  \ = listIterator.get();\n        if (iterator != null && iterator.hasNext()) {\n\
+  \          java.nio.file.Path path = iterator.next();\n          if (lastClickedButton.get().equals(PREVIOUS))\
+  \ {\n            // 如果最后点击的是上一个按钮，\n            // 则 next() 调用的是当前图像，\n        \
+  \    // 向前移动一步。\n            if (iterator.hasNext())\n              path = iterator.next();\n\
+  \            } else {\n              // 没有下一个图像，禁用下一个按钮\n              disableButton(nextButton,\
+  \ true);\n              return;\n            }\n          }\n          System.out.format(\"\
+  Next button clicked: %s%n\", path.getFileName());\n          String url = path.toUri().toString();\n\
+  \          curImage.set(new Image(url));\n          imageName.set(url.substring(url.lastIndexOf(\"\
+  /\") + 1).replaceAll(\"/\", \" \"));\n          lastClickedButton.set(NEXT);\n \
+  \         // 当没有更多图像时禁用下一个\n          disableButton(nextButton, !iterator.hasNext());\n\
+  \          if (prevButton.isDisable())\n            disableButton(prevButton, false);\n\
+  \        }\n      }\n    });\n\n    registerButtonEvent(buttonGroup, rect, polygon,\
+  \ lgEntered, lgPressed);\n    buttonGroup.getChildren().addAll(rect, polygon);\n\
+  \    return buttonGroup;\n  }\n\n  /**\n   * 使用矩形作为背景、多边形作为图标、组作为容器创建上一个按钮，\n  \
+  \ * 矩形的大小为 25x35，\n   * 多边形的厚度为 8 像素，\n   * 多边形的内边距为 (2, 5, 2, 5)，\n   * 在鼠标进入/按下/释放/离开时更改按钮外观。\n\
+  \   *\n   * @return\n   */\n  Node createPrevButton() {\n    // 创建组作为按钮\n    Group\
+  \ buttonGroup = new Group();\n\n    // 创建矩形形状作为背景\n    final Rectangle rect = new\
+  \ Rectangle(0, 0, 25, 35);\n\n    // 矩形的视觉效果\n    final LinearGradient lg = new\
+  \ LinearGradient(0, 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n\
+  \          new Stop(0, Color.web(\"#87A7C6\")),\n          new Stop(0.4, Color.web(\"\
+  #A8B9D4\")),\n          new Stop(1, Color.web(\"#5173A8\"))});\n    rect.setFill(lg);\n\
+  \    rect.setStroke(Color.web(\"#ACD7FF\"));\n    rect.setArcHeight(6.5);\n    rect.setArcWidth(6.5);\n\
+  \n    // 当鼠标进入上一个按钮时绘制填充矩形\n    final LinearGradient lgEntered = new LinearGradient(0,\
+  \ 0, 1, 0, true,\n        CycleMethod.NO_CYCLE, new Stop[]{\n          new Stop(0,\
+  \ Color.web(\"#5173A8\")),\n          new Stop(0.6, Color.web(\"#A8BD4\")),\n  \
+  \        new Stop(1, Color.web(\"#87A7C6\"))});\n\n    // 当鼠标按下上一个按钮时绘制填充矩形\n  \
+  \  final LinearGradient lgPressed = new LinearGradient(0, 0, 1, 0, true,\n     \
+  \   CycleMethod.NO_CYCLE, new Stop[]{\n          new Stop(0, Color.web(\"#2F4F4F\"\
+  )),\n          new Stop(0.6, Color.web(\"#A8BD4\")),\n          new Stop(1, Color.web(\"\
+  #87A7C6\"))});\n\n    // 创建多边形形状表示 Next 图标\n    // 8 像素厚度，内边距为 2, 2, 5\n    final\
+  \ polygon = new Polygon();\n    Double[] dArray = {\n      19.0, 2.0,\n      2.0,\
+  \ 17.0,\n      19.0, 32.0,\n      19.0, 25.0,\n      10.0, 17.0,\n      19.0, 9.0};\n\
+  \    polygon.getPoints().addAll(dArray);\n    polygon.setFill(Color.WHITE);\n  \
+  \  polygon.setStroke(Color.web(\"#436B8\"));\n    // 设置光标\n    buttonGroup.setCursor(Cursor.OPEN_HAND);\n\
+  \n    // 为上一个按钮注册鼠标点击事件\n    buttonGroup.setOnMouseClicked(new EventHandler<MouseEvent>()\
+  \ {\n      @Override\n      public void handle(MouseEvent me) {\n        if (me.getButton()\
+  \ != MouseButton.PRIMARY)\n          return;\n        // 获取迭代器\n        ListIterator<java.nio.file.Path>\
+  \ iterator = listIterator.get();\n        if (iterator != null && iterator.hasPrevious())\
+  \ {\n          java.nio.file.Path path = iterator.previous();\n          if (lastClickedButton.get().equals(NEXT))\
+  \ {\n            // 如果最后点击的是下一个按钮，\n            // 第一次调用 previous() 是当前图像，\n   \
+  \         // 向后移动一步\n            if (iterator.hasPrevious())\n              path\
+  \ = iterator.previous();\n            } else {\n              // 没有上一个图像，禁用上一个按钮\n\
+  \              disableButton(prevButton, true);\n              return;\n       \
+  \     }\n          System.out.format(\"Prev button clicked: %s%n\", path.getFileName());\n\
+  \          // 如果幻灯片未开启，加载文件\n          if (!isSlideshowOn.get()) {\n           \
+  \ String url = path.toUri().toString();\n            curImage.set(new Image(url));\n\
+  \            imageName.set(url.substring(url.lastIndexOf(\"/\") + 1).replaceAll(\"\
+  /\", \" \"));\n            lastClickedButton.set(PREVIOUS);\n            // 当没有更多上一个图像时禁用上一个\n\
+  \            disableButton(prevButton, !iterator.hasPrevious());\n            if\
+  \ (nextButton.isDisable())\n              disableButton(nextButton, false);\n  \
+  \        }\n        }\n      }\n    });\n\n    registerButtonEvent(buttonGroup,\
+  \ rect, polygon, lgEntered, lgPressed);\n    buttonGroup.getChildren().addAll(rect,\
+  \ polygon);\n    return buttonGroup;\n  }\n\n  /**\n   * 方法利用节点的透明度属性来区分禁用状态，\n\
+  \   * 如果禁用，将透明度设置为 0.4。\n   *\n   * @param button 按钮\n   * @param isDisable 是否禁用\n\
+  \   */\n  void disableButton(Node button, boolean isDisable) {\n    // 如果没有更多图像可以打开，将透明度设置为\
+  \ 0.4\n    double opacity = isDisable ? 0.4 : 1;\n    button.setOpacity(opacity);\n\
+  \    button.setDisable(isDisable);\n  }\n\n  /**\n   * 静态方法 FileUtils.listIterator(Path)\
+  \ 被调用以   * 获取遍历目录下的文件的迭代器，\n   * 在没有更多文件时禁用按钮。\n   *\n   * @param file 文件\n   */\n\
+  \  void loadFile(File file) {\n    // 创建迭代器\n    try {\n      ListIterator<java.nio.file.Path>\
+  \ it =\n        FileUtils.listIterator(file.toPath());\n\n      // 更新 listIterator\
+  \ 属性\n      listIterator.set(it);\n\n      // 如果幻灯片未开启，加载文件\n      // 否则这里什么都不做，\n\
+  \      // 因为幻灯片服务会执行任务\n      if (!isSlideshowOn.get()) {\n        // 如果没有上一个文件，\n\
+  \        // 在调用 next() 之前检查 hasPrevious()\n        disableButton(prevButton, !it.hasPrevious());\n\
+  \n        file = it.next().toFile();\n        String url = file.toURI().toString();\n\
+  \        curImage.set(new Image(url));\n        imageName.set(url.substring(\n \
+  \           url.lastIndexOf(\"/\") + 1).replaceAll(\"/\", \" \"));\n\n        //\
+  \ 检查 hasNext，没有更多文件时禁用下一个按钮\n        disableButton(nextButton, !it.hasNext());\n\
+  \n        lastClickedButton.setValue(NEXT);\n      }\n    } catch (IOException ex)\
+  \ {\n    }\n  }\n\n  /**\n   * 方法为按钮注册进入/按下/释放/离开事件，\n   * 按钮的外观以区分不同事件类型。\n   *\n\
+  \   * @param buttonGroup 组\n   * @param rect 矩形\n   * @param polygon 多边形\n   * @param\
+  \ bg 背景\n   * @param entered 进入\n   * @param pressed 按下\n   */\n  void registerButtonEvent(Node\
+  \ buttonGroup,\n    final Shape rect, final Shape polygon,\n    final Paint bg,\
+  \ final Paint entered, final Paint pressed) {\n\n    // 鼠标进入事件处理器\n    // 当鼠标进入时更改按钮的外观\n\
+  \    buttonGroup.setOnMouseEntered(new EventHandler<MouseEvent>() {\n      @Override\n\
+  \      public void handle(MouseEvent me) {\n        System.out.println(\"Mouse entered\"\
+  );\n        // 检查左鼠标键是否按下\n        rect.setFill(me.isPrimaryButtonDown() ? pressed\
+  \ : entered);\n      }\n    });\n\n    // 鼠标按下处理器\n    // 当鼠标按下时更改按钮的外观\n    buttonGroup.setOnMousePressed(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        System.out.println(\"Mouse pressed\");\n        if (me.getButton()\
+  \ == MouseButton.PRIMARY) {\n          rect.setFill(pressed);\n        }\n     \
+  \ }\n    });\n\n    // 鼠标释放处理器\n    // 当鼠标释放时更改按钮的外观\n    buttonGroup.setOnMouseReleased(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        System.out.println(\"Mouse released\");\n        rect.setFill(bg);\n\
+  \      }\n    });\n\n    // 鼠标离开处理器\n    // 当鼠标离开时更改按钮的外观\n    buttonGroup.setOnMouseExited(new\
+  \ EventHandler<MouseEvent>() {\n      @Override\n      public void handle(MouseEvent\
+  \ me) {\n        System.out.println(\"Mouse exited\");\n        rect.setFill(bg);\n\
+  \      }\n    });\n  }\n\n  // 此处原文本已截断，缺少完整的 configureSlideshow 方法和类结束括号\n  //\
+  \ 根据逻辑推断，后续应为：\n  void configureSlideshow() {\n    // ... 逻辑在上方翻译中\n  }\n}\n```\n\
+  \n\n\n\n\n以下快照显示了淡入/淡出过渡。由于我们使用了 `ParallelTransition` 而不是 `SequentialTransition`，你会看到淡出的图像与淡入图像混合在一起。\n\
+  \n### 图 3-12. 要淡出的图像快照\n\n![](img/image00160.jpeg \"fadeout.jpg\")\n\n### 图 3-13.\
+  \ 以并行方式执行的淡入和淡出过渡的快照。\n\n![](img/image00161.jpeg \"fade_transition.jpg\")\n\n###\
+  \ 图 3-14. 正在淡入的图像快照。\n\n![](img/image00162.jpeg \"fadein.jpg\")\n\n编译并运行应用程序。尝试以下步骤进行测试：\n\
+  \n*   从 `FileChooser` 的文件打开对话框在图像目录中加载图像文件。\n*   开始幻灯片。\n*   在幻灯片运行时，执行以下操作：\n \
+  \   *   反复选择不同的 `View` 选项。\n    *   点击 `Previous`（上一个）或 `Next`（下一个）按钮。\n    *  \
+  \ 从 `FileChooser` 的文件打开对话框在另一个图像目录中加载另一个图像文件。\n*   停止幻灯片。\n\n在命令行中编译和运行 ImageViewer\
+  \ 的输出：\n\n```\n     Microsoft Windows [Version 6.3.9600]\n(c) 2013 Microsoft Corporation.\
+  \ All rights reserved.\n\nF:\\My Documents\\DocRoot\\SHUFEN_JAVA\\MyBookJFX\\VolumeOne\\\
+  ImageViewer1.2\\src\\example5>\njavac  -encoding utf-8 -Xlint:unchecked imageviewer\\\
+  *.java\n\njar cf imageviewer.jar imageviewer\n\njava -cp imageviewer.jar imageviewer.ImageViewer\n\
+  original size\nimageArea width changed from 0.0 to 600.0\nimageArea height changed\
+  \ from 0.0 to 352.0\nStart Slideshow...\nService is transited to running status\n\
+  Mouse entered\nMouse exited/released\nfitwidth\nfitheight\noriginal size\nMouse\
+  \ entered\nMouse pressed\nMouse exited/released\nNext button clicked: Shufen2010_05\
+  \ 1091.jpg\nMouse pressed\nMouse exited/released\nNext button clicked: Shufen2010_05\
+  \ 1166.jpg\nMouse exited/released\nMouse entered\nMouse pressed\nMouse exited/released\n\
+  Prev button clicked: Shufen2010_05 1166.jpg\nMouse pressed\nMouse exited/released\n\
+  Prev button clicked: Shufen2010_05 1166.jpg\nMouse pressed\nMouse exited/released\n\
+  Prev button clicked: Shufen2010_05 1142.jpg\nMouse exited/released\nMouse entered\n\
+  Mouse exited/released\nMouse entered\nMouse pressed\nMouse exited/released\nNext\
+  \ button clicked: jasmin.gif\nMouse pressed\nMouse exited/released\nNext button\
+  \ clicked: Jasmin_1.jpg\nMouse exited/released\nMouse entered\nMouse exited/released\n\
+  Mouse entered\nMouse pressed\nMouse exited/released\nPrev button clicked: Jasmin_1_320x363.jpg\n\
+  Mouse exited/released\nStop Slideshow...\n```\n\n## 3.6 总结\n\n本章介绍了 JavaFX 库的以下关键方面，按它们在章节中出现的顺序列出：\n\
+  \n*   `HBox` 类是内置的 JavaFX 布局面板之一，位于 `javafx.scene.layout` 包中，是 `javafx.scene.layout.Pane`\
+  \ 的直接子类，将其子节点水平地排列在一行中。（参见章节 在 BorderPane 底部添加状态栏）\n*   `Text` 类位于 `javafx.scene.text`\
+  \ 包中，是 `javafx.scene.shape.Shape` 类的直接子类之一，负责处理渲染几何图形状的常见需求。（参见章节 在 BorderPane 底部添加状态栏）\n\
+  *   `void setPadding(Insets value)` 方法由 `Region` 类提供，定义了区域的上、右、下、左内边距。（参见此处）\n*\
+  \   `void setSpacing(double value)` 方法由 `HBox` 类提供，指定 HBox 面板中子节点之间的水平间距。（参见此处）\n\
+  *   `void setStyle(String value)` 方法由 `Node` 类提供，指定此节点的 CSS 样式。（参见此处）\n*   `static\
+  \ Font font(java.lang.String family, FontWeight weight, double size)` 方法位于 `javafx.scene.text.Font`\
+  \ 类，用于获取渲染文本的字体。（参见此处）\n*   `Scene(Parent root, double width, double height, Paint\
+  \ fill)` 是 `Scene` 类的构造函数之一，用于创建一个具有指定背景色的 `Scene`。（参见此处）\n*   某些类位于 `javafx.beans.property`\
+  \ 包中：\n    *   `StringProperty` 是一个抽象类，派自 `javafx.beans.binding.StringExpression`\
+  \ 类，实现了 `Property<java.lang.String>` 和 `WritableStringValue`。\n    *   `WritableStringValue`\
+  \ 扩展了 `WritableObjectValue<java.lang.String>`。\n    *   `SimpleStringProperty` 派自\
+  \ `StringProperty` 类。（参见此处）\n*   `void bind(ObservableValue<? extends T> observable)`\
+  \ 方法定义在 `Property` 接口中，位于 `javafx.beans.property` 包中，将此属性单向绑定到给定的 `ObservableValue`。（参见此处\
+  \ | 此处 | 此处）\n*   `DoubleBinding subtract(double other)` 方法定义在 `javafx.beans.binding.DoubleExpression`\
+  \ 类中，计算此 `NumberExpression` 与给定常量之间的差。（参见此处）\n*   `void setDisable(boolean value)`\
+  \ 方法由 `Node` 类提供，指定此节点的 `disable` 。（参见章节 禁用按钮以表示无图像可打开 和 此处）\n*   `void setOpacity(double\
+  \ value)` 方法由 `Node` 类提供，指定节点的透明度。（参见此处）\n*   `MouseEvent` 位于 `javafx.scene.input`\
+  \ 包中，是 `javafx.scene.input.InputEvent` 的子类。它定义了如 `MOUSE_CLICKED`、`MOUSE_DRAGGED`、`MOUSE_ENTERED`、`MOUSE_EXITED`、`MOUSE_MOVED`、`MOUSE_PRESSED`、`MOUSE_RELEASED`\
+  \ 等事件类型，并提供了如 `getX()`、`getY()` 等获取鼠标事件位置的方法。（参见章节 鼠标按下时更改外观）\n*   `void setOnMousePressed(EventHandler<?\
+  \ super MouseEvent> value)` 是 `Node` 类提供的便利方法，注册处理 `MouseEvent` `MOUSE_PRESSED`\
+  \ 类型的 `EventHandler`。（参见章节 鼠标按下时更改外观）\n*   `MenuBar`、`Menu` 和 `MenuItem` 是基础 JavaFX\
+  \ UI 组件，位于 `javafx.scene.control` 包中，用于使用更少的空间设计紧凑视觉的用户界面。（参见章节 添加幻灯片和停止幻灯片菜单）\n\
+  *   来自 `javafx.beans.property` 包的一些类：\n    *   `BooleanProperty` 是一个抽象类，派自 `javafx.beans.binding.BooleanExpression`\
+  \ 类，实现了 `Property<java.lang.Boolean>` 和 `WritableBooleanValue`。\n    *   `WritableBooleanValue`\
+  \ 扩展了 `WritableValue<java.lang.Boolean>`。\n    *   `SimpleBooleanProperty` 派自 `BooleanProperty`\
+  \ 类。（参见章节 添加幻灯片和停止幻灯片菜单 和 此处）\n*   `BooleanBinding` 类是位于 `javafx.beans.binding`\
+  \ 包中的抽象类，它扩展了 `BooleanExpression` 类并实现了 `Binding<java.lang.Boolean>`。（参见此处）\n\n\n\
+  \n\n\n- `BooleanExpression` 类位于 `javafx.beans.binding` 包中，是一个实现 `ObservableBooleanValue`\
+  \ 的抽象类，`ObservableBooleanValue` 是扩展 `ObservableValue<java.lang.Boolean>` 的接口。`BooleanExpression`\
+  \ 类提供了执行 AND、OR 和 NOT 等逻辑操作的便利方法。\n（参见此处）\n\n- `BooleanExpression` 类中的一些便利方法：\n\n\
+  \  `BooleanBinding not()`\n  对此 `BooleanExpression` 执行逻辑 NOT 操作，并返回一个 `BooleanBinding`\
+  \ 类型的对象，该对象是 `BooleanExpression` 的直接子类。\n\n  `BooleanBinding or(ObservableBooleanValue\
+  \ other)`\n  对此 `BooleanExpression` 和给定的 `ObservableBooleanValue` 执行逻辑 OR 操作，并返回一个\
+  \ `BooleanBinding` 类型的对象，该对象是 `BooleanExpression` 的直接子类。\n  （参见此处）\n\n- `Worker<V>`\
+  \ 是位于 `javafx.concurrent` 包中的接口，它为并发实现定义了通用 API。\n（参见章节在线程上执行幻灯片）\n\n- 位于 `javafx.concurrent`\
+  \ 包中的并发类：\n\n  `Task`\n  实现 `Worker<V>` 接口的抽象类，是一个一次性的 `Worker` 对象。\n\n  `Service`\n\
+  \  实现 `Worker<V>` 接口的抽象类，是一个可重用的 `Worker` 对象。\n\n  `ScheduledService`\n  `Service`\
+  \ 类的直接子类，允许指定启动和自动重启服务的延迟时长。\n\n  `WorkerStateEvent`\n  `javafx.event.Event` 的子类，定义了事件类型的静态字段，如\
+  \ `WORKER_STATE_CANCELLED`、`WORKER_STATE_FAILED`、`WORKER_STATE_READY`、`WORKER_STATE_RUNNING`、`WORKER_STATE_SUCCEEDED`\
+  \ 等。当 `Worker` 的状态发生转换时，会触发 `WorkerStateEvent`。\n  （参见章节在线程上执行幻灯片）\n\n- `protected\
+  \ abstract V call()` 方法定义在 `Task` 类中，必须重写，并在任务执行时被调用。（参见此处 | 此处 | 此处）\n\n- `protected\
+  \ abstract Task<V> createTask()` 方法定义在 `Service` 类中，必须重写，并在服务启动时被调用。（参见此处 | 此处 |\
+  \ 此处）\n\n- `Service` 类提供的某些用于注册 `EventHandler` 以处理 Worker 状态事件的便利方法：\n\n  `public\
+  \ final void setOnRunning(EventHandler<WorkerStateEvent> value)`\n  `public final\
+  \ void setOnSucceeded(EventHandler<WorkerStateEvent> value)`\n  `public final void\
+  \ setOnFailed(EventHandler<WorkerStateEvent> value)`\n  `public final void setOnCancelled(EventHandler<WorkerStateEvent>\
+  \ value)`\n  （参见章节配置幻灯片服务对象）\n\n- `Worker.State` 是 `javafx.concurrent.Worker` 接口的嵌套类，是一个定义\
+  \ `Worker` 状态常量的枚举类型，它们是：`CANCELLED`、`FAILED`、`READY`、`RUNNING`、`SCHEDULED` 和 `SUCCEEDED`。\n\
+  \  （参见此处 和 此处）\n\n- `javafx.concurrent` 包中 `Service` 类提供的某些方法：\n\n  `public void\
+  \ start()`\n  启动此服务；只有当服务处于 `READY` 状态时才能成功启动。\n\n  `public void reset()`\n  重置此服务；结果服务的状态将转换为\
+  \ `READY` 状态。\n\n  `Worker.State getState()`\n  定义在 `Worker` 接口中，获取 `state` 属性的值，该值代表\
+  \ `Worker` 的当前状态。\n\n  `public boolean cancel()`\n  定义在 `Worker` 接口中，取消此服务，如果服务取消成功则返回\
+  \ `true`。\n  （参见章节为“开始幻灯片”和“停止幻灯片”菜单项实现动作事件的处理程序）\n\n- `javafx.animation` 包中用于在幻灯片之间并行执行淡入淡出效果过渡动画的类：\n\
+  \n  `Animation`\n  `Transition`\n  `FadeTransition`\n  `ParallelTransition`\n  （参见章节在幻灯片之间添加淡入过渡）\n\
+  \n- `javafx.util.Duration` 类实现了 `java.lang.Comparable<Duration>`，持续时间。（参见此处）\n\n\
+  - `public void playFromStart()` 方法由 `Animation` 类提供，从起始位置播放动画。（参见此处）\n\n# 结语\n\n\
+  作者正在编写该系列书籍的其他卷，并将陆续发布。让我们在序言部分揭示的功能之外，预览一下即将推出的特性：\n\n*   更多交互式绘图工具：自由手绘制工具、橡皮带绘制工具、文本写入、颜色渐变、圆弧绘制、光标移动工具等。\n\
+  *   调色板工具\n*   图像裁剪工具\n*   路径过渡动画器\n*   动态上下文菜单控制器\n*   以及更多……\n\n祝猴年快乐、健康、万事如意。\n\
+  \n"

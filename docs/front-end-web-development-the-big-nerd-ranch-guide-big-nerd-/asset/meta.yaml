@@ -1,0 +1,612 @@
+name: Front-End Web Development： The Big Nerd Ranch Guide (Big Nerd Ranch Guides)
+name_cn: 前端 Web 开发：Big Nerd Ranch 指南
+slug: front-end-web-development-the-big-nerd-ranch-guide-big-nerd-
+toc:
+- - '#'
+  - 前端 Web 开发：Big Nerd Ranch 指南
+- - '#'
+  - 献辞
+- - '#'
+  - 致谢
+- - '##'
+  - 隐藏和显示详情图
+- - '###'
+  - 编写隐藏详情图的 JavaScript
+- - '###'
+  - 监听按键事件
+- - '###'
+  - 再次显示详情图
+- - '###'
+  - 使用 `transform` 属性
+- - '###'
+  - 添加 CSS 过渡
+- - '###'
+  - 使用计时函数
+- - '###'
+  - 通过 JavaScript 触发过渡
+- - '###'
+  - 模块模式
+- - '##'
+  - 设置 CoffeeRun
+- - '##'
+  - 创建 DataStore 模块
+- - '##'
+  - 向命名空间添加模块
+- - '###'
+  - 构造函数的原型
+- - '##'
+  - 创建 Truck 模块
+- - '###'
+  - 添加订单
+- - '###'
+  - 移除订单
+- - '##'
+  - 调试
+- - '###'
+  - 使用 DevTools 定位 Bug
+- - '###'
+  - 使用 `bind` 设置 `this` 的值
+- - '###'
+  - 创建 Truck 实例
+- - '##'
+  - 进阶探索：私有模块数据
+- - '##'
+  - 银挑战：使数据私有
+- - '##'
+  - 进阶探索：在 `forEach` 回调中设置 `this`
+- - '###'
+  - Bootstrap 如何工作
+- - '###'
+  - 添加文本输入字段
+- - '###'
+  - 添加下拉菜单
+- - '###'
+  - 添加范围滑块
+- - '###'
+  - 添加提交和重置按钮
+- - '##'
+  - 创建 FormHandler 模块
+- - '###'
+  - 导入 jQuery
+- - '###'
+  - 使用选择器配置 FormHandler 实例
+- - '##'
+  - 添加提交 Handler
+- - '###'
+  - 提取数据
+- - '###'
+  - 接收并调用回调
+- - '#'
+  - '`npm scripts`'
+- - '#'
+  - '`Adding an npm Script`'
+- - '#'
+  - '`Serving from Files`'
+- - '#'
+  - '`Reading a file with the `fs` module`'
+- - '#'
+  - '`Using the `path` module`'
+- - '#'
+  - '`Using your custom module`'
+- - '#'
+  - '`Error Handling`'
+- - '#'
+  - '`Bronze Challenge: Creating a Custom Error Page`'
+- - '#'
+  - '`Silver Challenge: Providing a MIME Type Dynamically`'
+- - '#'
+  - '`Gold Challenge: Moving Error Handling to Its Own Module`'
+- - '##'
+  - '`Setting Up WebSockets`'
+- - '##'
+  - '`Testing Your WebSockets Server`'
+- - '##'
+  - '`Creating the Chat Server Functionality`'
+- - '##'
+  - '`For the More Curious: socket.io`'
+- - '##'
+  - '`For the More Curious: Service`'
+- - '##'
+  - '`Bronze Challenge: Repeating?`'
+- - '##'
+  - '`Silver Challenge: Speaking`'
+- - '##'
+  - '`Gold Challenge: Chat`'
+- - '#'
+  - 17. 使用 ES6
+- - '##'
+  - '`Using Babel`'
+- - '##'
+  - '`Compiling JavaScript`'
+- - '##'
+  - '`The ChatClient`'
+- - '##'
+  - '`Building the `ChatMessage`'
+- - '##'
+  - '`Class`'
+- - '##'
+  - '`Modules as Module`'
+- - '##'
+  - '`Bronze Challenge: Message`'
+- - '##'
+  - '`Silver Challenge: `` `'
+- - '##'
+  - '`Gold Challenge: The Adventure`'
+- - '##'
+  - '`Introduction to Ember`'
+- - '##'
+  - '`Installing Ember`'
+- - '##'
+  - '`Starting up the server`'
+- - '##'
+  - '`Configuration`'
+- - '##'
+  - '`Silver Challenge: `` `'
+- - '#'
+  - 20. Routing, Routes, and Models
+- - '##'
+  - '`Nesting Routes`'
+- - '##'
+  - '`Ember Inspector`'
+- - '##'
+  - '`beforeModel`'
+- - '##'
+  - '`The `Controller` `'
+- - '#'
+  - 21. Models and Data Binding
+- - '##'
+  - '`createRecord`'
+- - '##'
+  - '`get` and `set`'
+- - '##'
+  - '`Computed Properties`'
+- - '##'
+  - '`For the More Curious: Destroying Data`'
+- - '##'
+  - '`Bronze Challenge: Changing Computed Property`'
+- - '##'
+  - '`Silver Challenge: Flagging New Sightings`'
+- - '##'
+  - '`Adapters`'
+- - '##'
+  - '`Content Security`'
+- - '##'
+  - '`Serializers`'
+- - '##'
+  - '`For the More Curious: Ember CLI`'
+- - '##'
+  - '`Silver Challenge: Content Security`'
+- - '##'
+  - '`Handlebars`'
+- - '##'
+  - '`Helpers`'
+- - '##'
+  - '`Conditionals`'
+- - '##'
+  - '`Loops with {{each}}`'
+- - '##'
+  - '`Links`'
+- - '##'
+  - '`Bronze Challenge: Adding Rollovers`'
+- - '##'
+  - '`Silver Challenge: Changing the Date Format`'
+- - '##'
+  - '`Gold Challenge: Creating a Thumbnail Helper`'
+- - '#'
+  - 24. Controllers
+- - '##'
+  - '`New Sightings`'
+- - '##'
+  - '`Editing a Sighting`'
+- - '##'
+  - '`Route Actions`'
+- - '##'
+  - '`Silver Challenge: Sighting Date`'
+- - '#'
+  - 25. Components
+- - '##'
+  - '`Iterator Items as Components`'
+- - '##'
+  - '`Data Down, Actions Up`'
+- - '##'
+  - '`Class Name Bindings`'
+- - '##'
+  - '`Data Down`'
+- - '##'
+  - '`Bronze Challenge: Customizing the Alert Message`'
+- - '##'
+  - '`Gold Challenge: Array of Alerts`'
+- - '#'
+  - 26. Afterword
+- - '##'
+  - '`The Final Challenge`'
+- - '##'
+  - '`Shameless Plugs`'
+- - '#'
+  - 第一部分：核心浏览器编程
+- - '#'
+  - 第一章：搭建你的开发环境
+- - '###'
+  - Atom 插件
+- - '##'
+  - 命令行快速上手
+- - '###'
+  - 查找你所在的目录
+- - '###'
+  - 图 1.21 切换和检查目录
+- - '###'
+  - 图 1.22 一个文件结构示例
+- - '###'
+  - 图 1.24 使用 dir 列出目录中的文件
+- - '###'
+  - 获取管理员权限
+- - '###'
+  - 图 1.25 sudo 警告
+- - '###'
+  - 图 1.26 以管理员身份打开命令提示符
+- - '##'
+  - 安装 Node.js 和 browser-sync
+- - '###'
+  - 图 1.27 下载 Node.js
+- - '#'
+  - 建立你的第一个项目
+- - '##'
+  - 设置 Ottergram
+- - '###'
+  - 初始 HTML
+- - '###'
+  - 链接样式表
+- - '###'
+  - 添加内容
+- - '###'
+  - 添加图像
+- - '##'
+  - 在浏览器中查看网页
+- - '##'
+  - Chrome 开发者工具
+- - '##'
+  - 银牌挑战：添加 favicon.ico
+- - '#'
+  - 3 样式
+- - '##'
+  - 创建样式基准
+- - '###'
+  - 图 3.3 从不同的服务器请求资源
+- - '##'
+  - 样式的结构
+- - '###'
+  - 图 3.4 样式规则的结构
+- - '##'
+  - 你的第一个样式规则
+- - '###'
+  - 图 3.5 稍微彩色 Ottergram
+- - '###'
+  - 盒模型
+- - '###'
+  - 继承
+- - '##'
+  - 让图片适应窗口
+- - '##'
+  - 颜色
+- - '##'
+  - 调整项目之间的间距
+- - '###'
+  - 关系选择器
+- - '##'
+  - 添加字体
+- - '##'
+  - 铜挑战：更改颜色
+- - '##'
+  - 给 JavaScript：优先级！当选择器发生冲突时
+- - '#'
+  - 使用 Flexbox 实现的响应式布局
+- - '##'
+  - 扩展界面
+- - '###'
+  - 添加详细图
+- - '###'
+  - 水平布局
+- - '##'
+  - Flexbox
+- - '###'
+  - 属性
+- - '###'
+  - 排序
+- - '###'
+  - 对齐
+- - '###'
+  - 绝对定位
+- - '#'
+  - 4 响应式布局
+- - '##'
+  - 设置清单
+- - '##'
+  - 创建 CheckList
+- - '##'
+  - 创建行构造函数
+- - '##'
+  - 使用 jQuery 创建 DOM 元素
+- - '##'
+  - 在提交时创建检查行
+- - '###'
+  - 使用 call 操控 this
+- - '##'
+  - 通过点击行交付订单
+- - '###'
+  - 创建 CheckList.prototype.removeRow 方法
+- - '###'
+  - 移除被覆盖的条目
+- - '###'
+  - 编写 `addClickHandler` 方法
+- - '#'
+  - 6 JavaScript 处理事件
+- - '##'
+  - 为锚点标签
+- - '##'
+  - 第一个脚本
+- - '##'
+  - 声明变量
+- - '##'
+  - 在控制台中操作
+- - '##'
+  - 访问 DOM 元素
+- - '##'
+  - 声明参数
+- - '##'
+  - 接收并调用回调
+- - '##'
+  - 返回值
+- - '##'
+  - 银挑战：链接劫持
+- - '##'
+  - 给 JavaScript：类型
+- - '#'
+  - 7 使用 CSS 实现视觉效果
+- - '##'
+  - 隐藏和显示详情图
+- - '###'
+  - 编写隐藏详情图的 JavaScript
+- - '###'
+  - 监听按键事件
+- - '###'
+  - 再次显示详情图
+- - '###'
+  - 使用 `transform` 属性
+- - '###'
+  - 添加 CSS 过渡
+- - '###'
+  - 使用计时函数
+- - '###'
+  - 通过 JavaScript 触发过渡
+- - '###'
+  - 模块模式
+- - '###'
+  - 使用 IIFE 修改
+- - '##'
+  - 设置 CoffeeRun
+- - '##'
+  - 将模块添加到命名空间
+- - '##'
+  - 构造函数
+- - '###'
+  - 构造函数的原型
+- - '###'
+  - 添加订单
+- - '###'
+  - 删除订单
+- - '###'
+  - 调试
+- - '###'
+  - 使用 DevTools 定位 Bug
+- - '###'
+  - 使用 `bind` 设置 `this` 的值
+- - '###'
+  - 创建 Truck 实例
+- - '###'
+  - '在页面加载时初始化 '
+- - '###'
+  - 图 8.31 控制台自动全
+- - '###'
+  - 图 8.32 忙碌的咖啡
+- - '##'
+  - 铜挑战：非星际
+- - '##'
+  - 银挑战：Truck ID
+- - '##'
+  - 进阶：私有模块
+- - '##'
+  - 银挑战：使数据私有
+- - '##'
+  - 进阶：在 `forEach` 回调中设置 this
+- - '#'
+  - 9 介绍 Bootstrap
+- - '##'
+  - 添加 Bootstrap
+- - '###'
+  - Bootstrap 如何工作
+- - '###'
+  - 创建订单表单
+- - '###'
+  - 添加文本输入字段
+- - '###'
+  - 关联标签与表单元素
+- - '###'
+  - 添加自动聚焦
+- - '###'
+  - 添加电子邮件字段
+- - '##'
+  - 使用占位符显示输入
+- - '##'
+  - 使用单选按钮选择
+- - '##'
+  - 添加下拉菜单
+- - '###'
+  - 添加范围滑块
+- - '###'
+  - 添加提交和重置按钮
+- - '###'
+  - jQuery 简介
+- - '###'
+  - 导入 jQuery
+- - '###'
+  - 使用选择器配置 FormHandler 实例
+- - '##'
+  - 添加提交 Handler
+- - '###'
+  - 提取数据
+- - '###'
+  - 接收并调用回调
+- - '###'
+  - 使用 FormHandler
+- - '###'
+  - 将 createOrder 注册为提交处理器
+- - '##'
+  - 青铜挑战：加大尺寸
+- - '##'
+  - 银挑战：当滑块变化时数值
+- - '##'
+  - 金挑战：添加成就
+- - '#'
+  - 11 从数据到 DOM
+- - '##'
+  - 设置清单
+- - '##'
+  - 创建 CheckList
+- - '##'
+  - 创建行构造函数
+- - '##'
+  - 使用 jQuery 创建 DOM 元素
+- - '##'
+  - 在提交时创建检查行
+- - '###'
+  - 使用 call 操控 this
+- - '##'
+  - 通过点击行交付订单
+- - '###'
+  - 创建 CheckList.prototype.removeRow 方法
+- - '###'
+  - 移除被覆盖的条目
+- - '###'
+  - 编写 `addClickHandler` 方法
+- - '#'
+  - 12 验证表单
+- - '##'
+  - required 属性
+- - '##'
+  - 使用正则表达式进行验证
+- - '##'
+  - Constraint Validation API
+- - '###'
+  - 监听 input 事件
+- - '###'
+  - 将验证检查与输入关联
+- - '###'
+  - 触发有效性检查
+- - '##'
+  - 为有效和无效元素设置样式
+- - '##'
+  - 进阶挑战：自定义验证
+- - '##'
+  - 低咖啡的自定义验证
+- - '##'
+  - 给 JavaScript：Webshims 库
+- - '#'
+  - 13 Ajax
+- - '##'
+  - XMLHttpRequest 对象
+- - '##'
+  - RESTful Web 服务
+- - '##'
+  - RemoteDataStore 模块
+- - '##'
+  - 向服务器发送数据
+- - '###'
+  - 使用 jQuery 的 $.post 方法
+- - '###'
+  - 添加回调函数
+- - '###'
+  - 检查 Ajax 请求和响应
+- - '##'
+  - 从服务器检索数据
+- - '###'
+  - 检查响应数据
+- - '###'
+  - 添加回调
+- - '###'
+  - 使用 jQuery 的 $.ajax 方法
+- - '###'
+  - 将 DataStore 替换为 RemoteDataStore
+- - '###'
+  - 银牌挑战：针对远程服务器进行验证
+- - '###'
+  - 给更具 JavaScript：Postman
+- - '#'
+  - 14 Deferred（延迟）与 Promise（承诺）
+- - '##'
+  - Promises 与 Deferred
+- - '##'
+  - 返回 Deferred
+- - '##'
+  - 使用 then 注册回调
+- - '##'
+  - 使用 then 处理失败
+- - '##'
+  - 在仅限回调的情况下使用 Deferred
+- - '###'
+  - 解析 Promise
+- - '###'
+  - 在匿名函数的最后面，不带参数地调用 `resolve`
+- - '###'
+  - 将其他 DataStore 方法 Promise 化
+- - '##'
+  - Node 和 npm
+- - '###'
+  - npm init
+- - '###'
+  - npm scripts
+- - '##'
+  - Hello, World
+- - '##'
+  - 添加 npm 脚本
+- - '##'
+  - 从文件提供
+- - '###'
+  - 使用 fs 模块读取文件
+- - '###'
+  - 处理请求 URL
+- - '###'
+  - 使用 path 模块
+- - '###'
+  - 创建自定义模块
+- - '###'
+  - 使用自定义模块
+- - '##'
+  - 错误处理
+- - '##'
+  - 进阶阅读：npm 模块注册表
+- - '##'
+  - 铜挑战：创建自定义错误页面
+- - '##'
+  - 进阶阅读：MIME 类型
+- - '##'
+  - 银挑战：动态提供 MIME 类型
+- - '##'
+  - 金挑战：将错误处理移动到模块
+- - '#'
+  - 16 使用 WebSocket 进行实时通信
+- - '##'
+  - 设置 WebSockets
+- - '##'
+  - 测试你的 WebSockets 服务器
+- - '##'
+  - 创建聊天服务器功能
+- - '##'
+  - 进阶好奇：socket.io
+- - '##'
+  - 进阶好奇：Service
+- - '##'
+  - 铜挑战：重复？
+- - '##'
+  - 银挑战：说话
+- - '##'
+  - 金挑战：聊天

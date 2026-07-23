@@ -1,0 +1,40 @@
+name: Java 8： The Fundamentals
+name_cn: Java 8：基础指南
+slug: java-8-the-fundamentals
+toc:
+- - '#'
+  - JavaScript
+- - '##'
+  - Types
+- - '###'
+  - Strings（字符串）
+- - '###'
+  - Numbers（数字）
+- - '###'
+  - Booleans（布尔值）
+- - '###'
+  - Null（空）
+- - '###'
+  - Undefined（未定义）
+- - '###'
+  - Objects（对象）
+- - '###'
+  - Truthy and Falsey Values（真值和假值）
+- - '###'
+  - 动态类型
+- - '###'
+  - 对象
+- - '##'
+  - JavaScript 对象表示法 (JSON)
+- - '##'
+  - 原型 (Prototypes)
+- - '##'
+  - 函数式编程
+- - '##'
+  - 函数参数
+- - '##'
+  - 作用域与“this”
+- - '##'
+  - 异常处理
+- - '##'
+  - 结论

@@ -1,0 +1,98 @@
+name: Java EE and HTML5 Enterprise Application Development
+name_cn: Java EE 和 HTML5 企业级应用开发
+slug: java-ee-and-html5-enterprise-application-development
+toc:
+- - '#'
+  - Java EE 和 HTML5 企业级应用开发
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于技术编辑
+- - '##'
+  - Web 应用的客户端和服务安全
+- - '##'
+  - 如何使用本书和代码
+- - '#'
+  - Java EE 和 HTML5 企业级开发简介
+- - '##'
+  - 开发工具
+- - '##'
+  - NetBeans
+- - '##'
+  - Java EE 7
+- - '##'
+  - 移动设备的使用
+- - '##'
+  - 新 HTML5 特性
+- - '##'
+  - 语法元素
+- - '##'
+  - HTML5 程序的组成
+- - '##'
+  - 开发应用程序
+- - '#'
+  - 总结
+- - '#'
+  - 第 5 章：HTML5、JavaScript 和 CSS
+- - '##'
+  - HTML5 项目设置
+- - '##'
+  - REST 服务
+- - '##'
+  - CRUD 操作
+- - '###'
+  - 使用 GET 请求读取（CRUD 中的 R）
+- - '###'
+  - 让我们逐行分析其提供的功能：
+- - '###'
+  - 模型 (Model)
+- - '###'
+  - 视图 (View)
+- - '###'
+  - 图 5-2 NetBeans JavaScript 调试器
+- - '###'
+  - 使用 PUT 请求进行更新（CRUD 中的 U）
+- - '###'
+  - 使用 DELETE 请求（CRUD 中的 D）
+- - '###'
+  - 服务器发送事件 (SSE)
+- - '##'
+  - WebSocket
+- - '##'
+  - 响应式设计
+- - '##'
+  - 语法优雅样式表 (SASS)
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章：HTML5 和 Java 应用程序安全
+- - '##'
+  - 客户端安全
+- - '##'
+  - 跨站脚本
+- - '##'
+  - 跨站请求伪造
+- - '###'
+  - 理解 CSRF 攻击
+- - '###'
+  - 风险与影响
+- - '##'
+  - 预防策略
+- - '###'
+  - 点击劫持 (Clickjacking)
+- - '###'
+  - 身份验证与授权 (Authentication and Authorization)
+- - '###'
+  - 客户端安全常识
+- - '###'
+  - 服务端安全
+- - '####'
+  - 身份验证 (Authentication)
+- - '####'
+  - 基础身份验证 (Basic Authentication)
+- - '##'
+  - REST 资源安全
+- - '##'
+  - WebSocket 安全
+- - '##'
+  - 总结

@@ -1,0 +1,597 @@
+- fmt: '
+
+    ![](image_rsrcVC.jpg)
+
+    '
+  raw: '
+
+
+    ![](image_rsrcVC.jpg)'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrcVC.jpg)
+
+
+    '
+- fmt: "\n# JAVA CODING EXERCISES CODING FOR BEGINNERS JJ TAM\n\n- [Print hello](#part0003.xhtml)\n\
+    - [Print the sum](#part0004.xhtml)\n- [Divide two numbers](#part0005.xhtml)\n\
+    - [Print the result](#part0006.xhtml)\n- [Print multiplication table](#part0007.xhtml)\n\
+    - [Find the area](#part0008.xhtml)\n- [Swap two variables](#part0009.xhtml)\n\
+    - [Print a face](#part0010.xhtml)\n- [Fahrenheit to Celsius degree](#part0011.xhtml)\n\
+    - [Inches to meters](#part0012.xhtml)\n- [Adds all the digits](#part0013.xhtml)\n\
+    - [Print the number of years and days](#part0014.xhtml)\n- [Compute (BMI)](part0015.xhtml)\n\
+    - [Calculate speed in meters](#part0016.xhtml)\n- [Divide the two specified integers](#part0017.xhtml)\n\
+    - [Multiply two specified integers](#part0018.xhtml)\n- [Print the sum](#part0019.xhtml)\n\
+    - [Find the greatest of three numbers](#part0020.xhtml)\n- [Display the multiplication\
+    \ table](#part0021.xhtml)\n- [Display the pattern](#part0022.xhtml)\n- [Print\
+    \ a pattern like a pyramid](#part0023.xhtml)\n- [Display the number rhombus structure](#part0024.xhtml)\n\
+    \n## Print hello\nPrint hello and your name on separate lines.\n\nJAVACODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner input = new Scanner (System.in);\n        System.out.print(\"\
+    Input your first name: \");\n        String fname = input.next();\n        System.out.print(\"\
+    Input your last name: \");\n        String lname = input.next();\n        System.out.println();\n\
+    \        System.out.println(\"Hello \\n\"+fname+\" \"+lname);\n    }\n}\n```\n\
+    OUTPUT\n```\nInput your first name: JJ\nInput your last name: TAM\nHello\nJJ TAM\n\
+    ```\n\n## Print the sum\nOf two numbers.\n\nJAVACODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ input = new Scanner (System.in);\n        System.out.print(\"Input the first\
+    \ number: \");\n        int num1 = input.nextInt();\n        System.out.print(\"\
+    Input the second number: \");\n        int num2 = input.nextInt();\n        int\
+    \ sum = num1 + num2;\n        System.out.println();\n        System.out.println(\"\
+    Sum: \"+sum);\n    }\n}\n```\nOUTPUT\n```\nInput the first number: 545\nInput\
+    \ the second number: 455\nSum: 1000\n```\n\n## Divide two numbers\nAnd print on\
+    \ the screen.\n\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic class Main\
+    \ {\n    public static void main(String[] args) {\n        Scanner input = new\
+    \ Scanner (System.in);\n        System.out.print(\"Input the first number: \"\
+    );\n        int a = input.nextInt();\n        System.out.print(\"Input the second\
+    \ number: \");\n        int b = input.nextInt();\n        int d = (a/b);\n   \
+    \     System.out.println();\n        System.out.println(\"The division of a and\
+    \ b is:\" +d);\n    }\n}\n```\nOUTPUT\n```\nInput the first number: 100\nInput\
+    \ the second number: 25\nThe division of a and b is:4\n```\n\n## Print the result\n\
+    Of specified operations.\n\nJAVA CODE\n```java\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        int w = -5 + 8 * 6;\n        int\
+    \ x = (55 + 9) % 9;\n        int y = 20 + (-3 * 5 / 8);\n        int z = 5 + 15\
+    \ / 3 * 2 - 8 % 3;\n        System.out.print(w + \"\\n\" + x + \"\\n\" + y + \"\
+    \\n\" + z);\n    }\n}\n```\n\n## Print multiplication table\nJAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner in = new Scanner(System.in);\n        System.out.println(\"\
+    Input the Number: \");\n        int n = in .nextInt();\n        for (int i = 1;\
+    \ i <= 10; i++) {\n            System.out.println(n + \"*\" + i + \" = \" + (n\
+    \ * i));\n        }\n    }\n}\n```\nOUTPUT\n```\nInput the Number:\n15\n15*1 =\
+    \ 15\n15*2 = 30\n15*3 = 45\n15*4 = 60\n15*5 = 75\n15*6 = 90\n15*7 = 105\n15*8\
+    \ = 120\n15*9 = 135\n15*10 = 150\n```\n\n## Find the area\nAnd perimeter of a\
+    \ circle.\n\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic class Main\
+    \ {\n    public static void main(String[] args) {\n        Scanner io = new Scanner(System.in);\n\
+    \        System.out.println(\"Input the radius of the circle: \");\n        double\
+    \ radius = io.nextDouble();\n        System.out.println(\"Perimeter is = \" +\
+    \ (2 * radius * Math.PI));\n        System.out.println(\"Area is = \" + (Math.PI\
+    \ * radius * radius));\n    }\n}\n```\nOUTPUT\n```\nInput the radius of the circle:\n\
+    10\nPerimeter is = 62.83185307179586\nArea is = 314.1592653589793\n```\n\n## Swap\
+    \ two variables\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic class Main\
+    \ {\n    public static void main(String[] args) {\n        int x, y, z;\n    \
+    \    Scanner in = new Scanner(System.in);\n        System.out.println(\"Input\
+    \ the first number: \");\n        x = in.nextInt();\n        System.out.println(\"\
+    Input the second number: \");\n        y = in.nextInt();\n        z = x;\n   \
+    \     x = y;\n        y = z;\n        System.out.println(\" Swapped values are3:\"\
+    \ + x + \" and \" + y);\n    }\n}\n```\nOUTPUT\n```\nInput the first number: 25\n\
+    Input the second number: 50\nSwapped values are3:50 and 25\n```\n\n## Print a\
+    \ face\nJAVA CODE\n```java\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        String[] arra = new String[5];\n        arra[0] = \" +\\\"\\\
+    \"\\\"\\\"\\\"+ \";\n        arra[1] = \"[| o o |]\";\n        arra[2] = \" |\
+    \  ^  |\";\n        arra[3] = \" | '-' |\";\n        arra[4] = \" +-----+\";\n\
+    \        for (int i = 0; i < 5; i++) {\n            System.out.println(arra[i]);\n\
+    \        }\n    }\n}\n```\nOUTPUT\n```\n+\"\"\"\"\"+[| o o |]|  ^  || '-' |\n\
+    +-----+\n```\n\n## Fahrenheit to Celsius degree\nJAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] Strings) {\n       \
+    \ Scanner input = new Scanner(System.in);\n        System.out.print(\"Input a\
+    \ degree in Fahrenheit: \");\n        double fahrenheit = input.nextDouble();\n\
+    \        double celsius=((5 *(fahrenheit - 32.0)) / 9.0);\n        System.out.println(fahrenheit\
+    \ + \" degree is equal to \" + celsius + \" in Celsius\");\n    }\n}\n```\nOUTPUT\n\
+    ```\nInput a degree in Fahrenheit: 96\n96.0 degree is equal to 35.555555555556\n\
+    ```\n\n## Inches to meters\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic\
+    \ class Main {\n    public static void main(String[] Strings) {\n        Scanner\
+    \ input = new Scanner(System.in);\n        System.out.print(\"Input a value for\
+    \ inch: \");\n        double inch = input.nextDouble() ;\n        double meters\
+    \ = inch * 0.0254;\n        System.out.println(inch + \" inch is \" + meters);\n\
+    \    }\n}\n```\nOUTPUT\n```\nInput a value for inch: 5\n5.0 inch is 0.127\n```\n\
+    \n## Adds all the digits\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic\
+    \ class Main {\n    public static void main(String[] Strings) {\n        Scanner\
+    \ input = new Scanner(System.in);\n        System.out.print(\"Input an integer\
+    \ between 0 and 1000: \");\n        int num = input.nextInt();\n        int firstDigit\
+    \ = num % 10;\n        int remainingNumber = num / 10;\n        int SecondDigit\
+    \ = remainingNumber % 10;\n        remainingNumber = remainingNumber / 10;\n \
+    \       int thirdDigit = remainingNumber % 10;\n        remainingNumber = remainingNumber\
+    \ / 10;\n        int fourthDigit = remainingNumber % 10;\n        int sum = thirdDigit\
+    \ + SecondDigit + firstDigit + fourthDigit;\n        System.out.println(\"The\
+    \ sum of all digits in \" + num + \" is \" + sum);\n    }\n}\n```\nOUTPUT\n```\n\
+    Input an integer between 0 and 1000: 750\nThe sum of all digits in 750 is 12\n\
+    ```\n\n## Print the number of years and days From minutes\nJAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ Strings) {\n        double minutesInYear = 60 * 24 * 365;\n        Scanner input\
+    \ = new Scanner(System.in);\n        System.out.print(\"Input the number of minutes:\
+    \ \");\n        double min = input.nextDouble();\n        long years = (long)\
+    \ (min / minutesInYear);\n        int days = (int) (min / 60 / 24) % 365;\n  \
+    \      System.out.println((int) min + \" minutes is approximately \" + years +\
+    \ \" years and \" + days + \" days\");\n    }\n}\n```\nOUTPUT\n```\nInput the\
+    \ number of minutes: 123456\n123456 minutes is approximately 0 years and 85 days\n\
+    ```\n\n## Compute (BMI) Body mass index\nJAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] Strings) {\n       \
+    \ Scanner input = new Scanner(System.in);\n        System.out.print(\"Input weight\
+    \ in pounds: \");\n        double weight = input.nextDouble();\n        System.out.print(\"\
+    Input height in inches: \");\n        double inches = input.nextDouble();\n  \
+    \      double BMI = weight * 0.4535927 / (inches * 0.0254 * inches * 0.0254);\n\
+    \        System.out.print(\"Body Mass Index is \" + BMI+\"\\n\");\n    }\n}\n\
+    ```\nOUTPUT\n```\nInput weight in pounds: 450\nInput height in inches: 72\nBody\
+    \ Mass Index is 61.0303454478814\n```\n\n## Calculate speed in meters per second,\
+    \ kilometers and miles per hour\nJAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ scanner = new Scanner(System.in);\n        float timeSeconds;\n        float\
+    \ mps,kph, mph;\n        System.out.print(\"Input distance in meters: \");\n \
+    \       float distance = scanner.nextFloat();\n        System.out.print(\"Input\
+    \ hour: \");\n        float hr = scanner.nextFloat();\n        System.out.print(\"\
+    Input minutes: \");\n        float min = scanner.nextFloat();\n        System.out.print(\"\
+    Input seconds: \");\n        float sec = scanner.nextFloat();\n        timeSeconds\
+    \ = (hr*3600) + (min*60) + sec;\n        mps = distance / timeSeconds;\n     \
+    \   kph = ( distance/1000.0f ) / ( timeSeconds/3600.0f );\n        mph = kph /\
+    \ 1.609f;\n        System.out.println(\"Your speed in meters/second is \"+mps);\n\
+    \        System.out.println(\"Your speed in km/h is \"+kph);\n        System.out.println(\"\
+    Your speed in miles/h is \"+mph);\n        scanner.close();\n    }\n}\n```\nOUTPUT\n\
+    ```\nInput distance in meters: 3000\nInput hour: 5\nInput minutes: 32\nInput seconds:\
+    \ 29\nYour speed in meters/second is 0.15038347\nYour speed in km/h is 0.5413805\n\
+    Your speed in miles/h is 0.3364702\n```\n\n## Divide the two specified integers\
+    \ using subtraction operator\nJAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static float divide_using_subtraction(int dividend,\
+    \ int divider) {\n        if (divider == 0) {\n            return 0;\n       \
+    \ }\n        float result = 0;\n        while (dividend > divider) {\n       \
+    \     dividend -= divider;\n            result++;\n        }\n        float decimalPart\
+    \ = (float) dividend / (float) divider;\n        result += decimalPart;\n    \
+    \    return result;\n    }\n    public static void main(String[] args) {\n   \
+    \     Scanner in = new Scanner(System.in);\n        System.out.print(\"Input the\
+    \ dividend: \");\n        int dividend = in.nextInt();\n        System.out.print(\"\
+    Input the divider: \");\n        int divider = in.nextInt();\n        System.out.println(\"\
+    \\nResult: \" + divide_using_subtraction(dividend,divider));\n    }\n}\n```\n\
+    OUTPUT\n```\nInput the dividend: 900\nInput the divider: 30\nResult: 30.0\n```\n\
+    \n## Multiply two specified integers without using multiply operator\nJAVA CODE\n\
+    ```java\nimport java.util.*;\npublic class Main {\n    public static int multiply(int\
+    \ n1, int n2) {\n        int result = 0;\n        boolean negative_num = (n1 <\
+    \ 0 && n2 >= 0) || (n2 < 0 && n1 >= 0);\n        boolean positive_num = !negative_num;\n\
+    \        n1 = Math.abs(n1);\n        for (int i = 0; i < n1; i++) {\n        \
+    \    if (negative_num && n2 > 0 || positive_num && n2 < 0)\n                result\
+    \ -= n2;\n            else\n                result += n2;\n        }\n       \
+    \ return result;\n    }\n    public static void main(String[] args) {\n      \
+    \  Scanner in = new Scanner(System.in);\n        System.out.print(\"Input the\
+    \ first number: \");\n        int n1 = in.nextInt();\n        System.out.print(\"\
+    Input the second number: \");\n        int n2 = in.nextInt();\n        System.out.println(\"\
+    \\nResult: \" + multiply(n1,n2));\n    }\n}\n```\nOUTPUT\n```\nInput the first\
+    \ number: 25\nInput the second number: 30\nResult: 75\n```\n\n## Print the sum,\
+    \ difference, average, distance and minimum\nJAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ in = new Scanner(System.in);\n        System.out.print(\"Input 1st integer:\
+    \ \");\n        int firstInt = in.nextInt();\n        System.out.print(\"Input\
+    \ 2nd integer: \");\n        int secondInt = in.nextInt();\n        System.out.printf(\"\
+    Sum of two integers: %d\\n\", firstInt + secondInt);\n        System.out.printf(\"\
+    Difference of two integers: %d\\n\", firstInt - secondInt);\n        System.out.printf(\"\
+    Product of two integers: %d\\n\", firstInt * secondInt);\n        System.out.printf(\"\
+    Average of two integers: %.2f\\n\", (double) (firstInt + secondInt) / 2);\n  \
+    \      System.out.printf(\"Distance of two integers: %d\\n\", Math.abs(firstInt\
+    \ - secondInt));\n        System.out.printf(\"Max integer: %d\\n\", Math.max(firstInt,\
+    \ secondInt));\n        System.out.printf(\"Min integer: %d\\n\", Math.min(firstInt,\
+    \ secondInt));\n    }\n}\n```\nOUTPUT\n```\nInput 1st integer: 50\nInput 2nd integer:\
+    \ 30\nSum of two integers: 80\nDifference of two integers: 20\nProduct of two\
+    \ integers: 1500\nAverage of two integers: 40.00\nDistance of two integers: 20\n\
+    Max integer: 50\nMin integer: 30\n```\n\n## Find the greatest of three numbers\
+    \ Java Conditional Statement\n```java\nimport java.util.Scanner;\npublic class\
+    \ Main {\n    public static void main(String[] args) {\n        Scanner in = new\
+    \ Scanner(System.in);\n        System.out.print(\"Input the 1st number: \");\n\
+    \        int num1 = in.nextInt();\n        System.out.print(\"Input the 2nd number:\
+    \ \");\n        int num2 = in.nextInt();\n        System.out.print(\"Input the\
+    \ 3rd number: \");\n        int num3 = in.nextInt();\n        if (num1 > num2)\n\
+    \            if (num1 > num3)\n                System.out.println(\"The greatest:\
+    \ \" + num1);\n        if (num2 > num1)\n            if (num2 > num3)\n      \
+    \          System.out.println(\"The greatest: \" + num2);\n        if (num3 >\
+    \ num1)\n            if (num3 > num2)\n                System.out.println(\"The\
+    \ greatest: \" + num3);\n    }\n}\n```\nOUTPUT\n```\nInput the 1st number: 25\n\
+    Input the 2nd number: 58\nInput the 3rd number: 98\nThe greatest: 98\n```\n\n\
+    ## Display the multiplication table of a given integer\nJAVA CODE\n```java\nimport\
+    \ java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        int j,n;\n        System.out.print(\"Input the number(Table\
+    \ to be calculated): \");\n        System.out.print(\"Input number of terms :\
+    \ \");\n        Scanner in = new Scanner(System.in);\n        n = in.nextInt();\n\
+    \        System.out.println (\"\\n\");\n        for(j=0;j<=n;j++)\nSystem.out.println(n+\"\
+    \ X \"+j+\" = \" +n*j);\n    }\n}\n```\nOUTPUT\n```\nInput the number(Table to\
+    \ be calculated): \nInput number of terms : 7\n7 X 0 = 0\n7 X 1 = 7\n7 X 2 = 14\n\
+    7 X 3 = 21\n7 X 4 = 28\n7 X 5 = 35\n7 X 6 = 42\n7 X 7 = 49\n```\n\n## Display\
+    \ the pattern like right angle triangle with a number\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        int\
+    \ i,j,n;\n        System.out.print(\"Input number of rows : \");\n        Scanner\
+    \ in = new Scanner(System.in);\n        n = in.nextInt();\n        for(i=1;i<=n;i++)\n\
+    \            for(j=1;j<=i;j++)\n                System.out.print(j);\n       \
+    \     System.out.println(\"\");\n    }\n}\n```\nOUTPUT\n```\nInput number of rows\
+    \ : 9\n1\n12\n123\n1234\n12345\n123456\n1234567\n12345678\n123456789\n```\n\n\
+    ## Print a pattern like a pyramid\n```java\nimport java.util.Scanner;\npublic\
+    \ class Main {\n    public static void main(String[] args) {\n        int i,j,n,s;\n\
+    \        System.out.print(\"Input number of rows : \");\n        Scanner in =\
+    \ new Scanner(System.in);\n        n = in.nextInt();\n        s=n+4;\n       \
+    \ for(i=1;i<=n;i++) {\n            for(x=s;x!=0;x--)\n                System.out.print(\"\
+    \ \");\n            for(j=1;j<=i;j++)\n                System.out.print(i+\" \"\
+    );\n            System.out.println();\n            s--;\n        }\n    }\n}\n\
+    ```\nOUTPUT\n```\nInput number of rows : 7\n       1 \n      2 2 \n    3 3 3 \n\
+    \   4 4 4 4 \n  5 5 5 5 5 \n6 6 6 6 6  \n7 7 7 7 7 7 7 \n```\n\n## Display the\
+    \ number rhombus structure\n```java\nimport java.util.Scanner;\npublic class Main\
+    \ {\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input the number: ���������\")\")\n        int n =\
+    \ in.nextInt();\n        int count = 1;\n        int no_of_spaces = 1;\n     \
+    \   int start = 0;\n        for (int i = 1; i < (n * 2); i++) {\n            for\
+    \ (int spc = n - no_of_spaces; spc > 0; spc--)\n                System.out.print(\"\
+    \ \");\n            if (i < n) {\n                start = i;\n               \
+    \ no_of_spaces++;\n            } else {\n                start = n * 2 - i;\n\
+    \                no_of_spaces--;\n            }\n            for (int j = 0; j\
+    \ < count; j++) {\n                System.out.print(start);\n                if\
+    \ (j < count / 2) {\n                    start--;\n                } else {\n\
+    \                    start++;\n                }\n            }\n            System.out.println();\n\
+    \            if (i < n) {\n                count = count + 2;\n            } else\
+    \ {\n                count = count - 2;\n            }\n        }\n    }\n}\n\
+    ```\nOUTPUT\n```\nInput the number: 7\n      1\n     22\n    333\n   4444\n  55555\n\
+    \ 666666\n7777777\n7777777\n 666666\n  55555\n   4444\n    333\n    22\n     \
+    \ 1\n```\n"
+  raw: 'JAVACODING EXERCISESCODING FOR BEGINNERSJJ TAM[Print hello](#part0003.xhtml)[Print
+    the sum](#part0004.xhtml)[Divide two numbers](#part0005.xhtml)[Print the result](#part0006.xhtml)[Print
+    multiplication table](#part0007.xhtml)[Find the area](#part0008.xhtml)[Swap two
+    variables](#part0009.xhtml)[Print a face](#part0010.xhtml)[Fahrenheit to Celsius
+    degree](#part0011.xhtml)[Inches to meters](#part0012.xhtml)[Adds all the digits](#part0013.xhtml)[Print
+    the number of years and days](#part0014.xhtml)[Compute (BMI)](#part0015.xhtml)[Calculate
+    speed in meters](#part0016.xhtml)[Divide the two specified integers](#part0017.xhtml)[Multiply
+    two specified integers](#part0018.xhtml)[Print the sum](#part0019.xhtml)[Find
+    the greatest of three numbers](#part0020.xhtml)[Display the multiplication table](#part0021.xhtml)[Display
+    the pattern](#part0022.xhtml)[Print a pattern like a pyramid](#part0023.xhtml)[Display
+    the number rhombus structure](#part0024.xhtml)Print helloAnd your nameOn a separate
+    linesJAVACODEimport java.util.Scanner;public class Main {public static void main(String[]
+    args){Scanner input = new Scanner (System.in);System.out.print("Input your first
+    name: ");String fname = input.next();System.out.print("Input your last name: ");String
+    lname = input.next();System.out.println();System.out.println("Hello \n"+fname+"
+    "+lname);}}OUTPUTInput your first name: JJInput your last name: TAMHelloJJ TAMPrint
+    the sumOf two numbersJAVACODEimport java.util.Scanner;public class Main {public
+    static void main(String[] args){Scanner input = new Scanner (System.in);System.out.print("Input
+    the first number: ");int num1 = input.nextInt();System.out.print("Input the second
+    number: ");int num2 = input.nextInt();int sum = num1 + num2;System.out.println();System.out.println("Sum:
+    "+sum);}}OUTPUTInput the first number: 545Input the second number: 455Sum: 1000Divide
+    two numbersAnd print on the screenJAVA CODEimport java.util.Scanner;public class
+    Main {public static void main(String[] args){Scanner input = new Scanner (System.in);System.out.print("Input
+    the first number: ");int a = input.nextInt();System.out.print("Input the second
+    number: ");int b = input.nextInt();int d = (a/b);System.out.println();System.out.println("The
+    division of a and b is:" +d);}}OUTPUTInput the first number: 100Input the second
+    number: 25The division of a and b is:4Print the resultOf specified operationsJAVA
+    CODEpublic class Main {public static void main(String[] args) {int w = -5 + 8
+    * 6;int x = (55 + 9) % 9;int y = 20 + (-3 * 5 / 8);int z = 5 + 15 / 3 * 2 - 8
+    % 3;System.out.print(w + "\n" + x + "\n" + y + "\n" + z);}}Print multiplication
+    tableJAVA CODEimport java.util.Scanner;public class Main {public static void main(String[]
+    args) {Scanner in = new Scanner(System.in);System.out.println("Input the Number:
+    ");int n = in .nextInt();for (int i = 1; i <= 10; i++) {System.out.println(n +
+    "*" + i + " = " + (n * i));}}}OUTPUTInput the Number:1515*1 = 1515*2 = 3015*3
+    = 4515*4 = 6015*5 = 7515*6 = 9015*7 = 10515*8 = 12015*9 = 13515*10 = 150Find the
+    areaAnd perimeter of a circleJAVA CODEimport java.util.Scanner;public class Main
+    {public static void main(String[] args) {Scanner io = new Scanner(System.in);System.out.println("Input
+    the radius of the circle: ");double radius = io.nextDouble();System.out.println("Perimeter
+    is = " + (2 * radius * Math.PI));System.out.println("Area is = " + (Math.PI *
+    radius * radius));}}OUTPUTInput the radius of the circle:10Perimeter is = 62.83185307179586Area
+    is = 314.1592653589793Swap two variablesJAVA CODEimport java.util.Scanner;public
+    class Main {public static void main(String[] args) {int x, y, z;Scanner in = new
+    Scanner(System.in);System.out.println("Input the first number: ");x = in.nextInt();System.out.println("Input
+    the second number: ");y = in.nextInt();z = x;x = y;y = z;System.out.println("
+    Swapped values are3:" + x + " and " + y);}}OUTPUTInput the first number:25Input
+    the second number:50Swapped values are3:50 and 25Print a faceJAVA CODEpublic class
+    Main {public static void main(String[] args) {String[] arra = new String[5];arra[0]
+    = " +\"\"\"\"\"+ ";arra[1] = "[| o o |]";arra[2] = " |  ^  |";arra[3] = " | ''-''
+    |";arra[4] = " +-----+";for (int i = 0; i < 5; i++) {System.out.println(arra[i]);}}}OUTPUT+"""""+[|
+    o o |]|  ^  || ''-'' |+-----+Fahrenheit to Celsius degreeJAVA CODEimport java.util.Scanner;public
+    class Main {public static void main(String[] Strings) {Scanner input = new Scanner(System.in);System.out.print("Input
+    a degree in Fahrenheit: ");double fahrenheit = input.nextDouble();double  celsius
+    =(( 5 *(fahrenheit - 32.0)) / 9.0);System.out.println(fahrenheit + " degree Fahrenheit
+    is equal to " + celsius + " in Celsius");}}OUTPUTInput a degree in Fahrenheit:
+    9696.0 degree Fahrenheit is equal to 35.55555555555556 in CelsiusInches to meters![](image_rsrcVD.jpg)JAVA
+    CODEimport java.util.Scanner;public class Main {public static void main(String[]
+    Strings) {Scanner input = new Scanner(System.in);System.out.print("Input a value
+    for inch: ");double inch = input.nextDouble() ;double meters = inch * 0.0254;System.out.println(inch
+    + " inch is " + meters + " meters");}}OUTPUTInput a value for inch: 55.0 inch
+    is 0.127 metersAdds all the digits![](image_rsrcVE.jpg)JAVA CODEimport java.util.Scanner;public
+    class Main {public static void main(String[] Strings) {Scanner input = new Scanner(System.in);System.out.print("Input
+    an integer between 0 and 1000: ");int num = input.nextInt();int firstDigit = num
+    % 10;int remainingNumber = num / 10;int SecondDigit = remainingNumber % 10;remainingNumber
+    = remainingNumber / 10;int thirdDigit = remainingNumber % 10;remainingNumber =
+    remainingNumber / 10;int fourthDigit = remainingNumber % 10 ;int sum = thirdDigit
+    + SecondDigit + firstDigit + fourthDigit;System.out.println("The sum of all digits
+    in " + num + " is " + sum);}}OUTPUTInput an integer between 0 and 1000: 750The
+    sum of all digits in 750 is 12Print the number of years and daysFrom minutes![](image_rsrcVF.jpg)JAVA
+    CODEimport java.util.Scanner;public class Main {public static void main(String[]
+    Strings) {double minutesInYear = 60 * 24 * 365;Scanner input = new Scanner(System.in);System.out.print("Input
+    the number of minutes: ");double min = input.nextDouble() ;long years = (long)
+    (min / minutesInYear);int days = (int) (min / 60 / 24) % 365;System.out.println((int)
+    min + " minutes is approximately " + years + " years and " + days + " days");}}OUTPUTInput
+    the number of minutes: 123456123456 minutes is approximately 0 years and 85 daysCompute
+    (BMI)Body mass indexJAVA CODEimport java.util.Scanner;public class Main {public
+    static void main(String[] Strings) {Scanner input = new Scanner(System.in);System.out.print("Input
+    weight in pounds: ");double weight = input.nextDouble();System.out.print("Input
+    height in inches: ");double inches = input.nextDouble();double BMI = weight *
+    0.45359237 / (inches * 0.0254 * inches * 0.0254);System.out.print("Body Mass Index
+    is " + BMI+"\n");}}OUTPUTInput weight in pounds: 450Input height in inches: 72Body
+    Mass Index is 61.03034545478814Calculate speed in metersper second, kilometers
+    and miles per hour![](image_rsrcVG.jpg)JAVA CODEimport java.util.Scanner;public
+    class Main {public static void main(String[] args) {​ Scanner scanner = new Scanner(System.in);​
+    float timeSeconds;​ float mps,kph, mph;​ System.out.print("Input distance in meters:
+    ");​ float distance = scanner.nextFloat();​ System.out.print("Input hour: ");​
+    float hr = scanner.nextFloat();​ System.out.print("Input minutes: ");​ float min
+    = scanner.nextFloat();​ System.out.print("Input seconds: ");​ float sec = scanner.nextFloat();​
+    timeSeconds = (hr*3600) + (min*60) + sec;​ mps = distance / timeSeconds;​ kph
+    = ( distance/1000.0f ) / ( timeSeconds/3600.0f );​ mph = kph / 1.609f;​ System.out.println("Your
+    speed in meters/second is "+mps);​ System.out.println("Your speed in km/h is "+kph);​
+    System.out.println("Your speed in miles/h is "+mph);​ scanner.close();​ }}OUTPUTInput
+    distance in meters: 3000Input hour: 5Input minutes: 32Input seconds: 29Your speed
+    in meters/second is 0.15038347Your speed in km/h is 0.5413805Your speed in miles/h
+    is 0.3364702Divide the two specified integersusing subtraction operatorJAVA CODEimport
+    java.util.Scanner;public class Main {​ public static float divide_using_subtraction(int
+    dividend, int divider) {​ if (divider == 0) {return 0;​ } ​   float result = 0;while
+    (dividend > divider) {dividend -= divider;result++;}float decimalPart = (float)
+    dividend / (float) divider;result += decimalPart;return result;}public static
+    void main(String[] args) {Scanner in = new Scanner(System.in);System.out.print("Input
+    the dividend: ");int dividend = in.nextInt();​ System.out.print("Input the divider:
+    ");int divider = in.nextInt();​ System.out.println("\nResult: " + divide_using_subtraction(dividend,divider));                           ​
+    }}OUTPUTInput the dividend: 900Input the divider: 30Result: 30.0Multiply two specified
+    integerswithout using the multiply operatorJAVA CODEimport java.util.*;public
+    class Main {public static int multiply(int n1, int n2) {int result = 0;boolean
+    negative_num = (n1 < 0 && n2 >= 0) || (n2 < 0 && n1 >= 0);boolean positive_num
+    = !negative_num;n1 = Math.abs(n1);for (int i = 0; i < n1; i++) {if (negative_num
+    && n2 > 0 || positive_num && n2 < 0)result -= n2;elseresult += n2;}return result;}public
+    static void main(String[] args) {Scanner in = new Scanner(System.in);System.out.print("Input
+    the first number: ");int n1 = in.nextInt();​ System.out.print("Input the second
+    number: ");int n2 = in.nextInt();​ System.out.println("\nResult: " + multiply(n1,n2));
+    ​​ }}OUTPUTInput the first number: 25Input the second number: 30Result: 750Print
+    the sumDifference, product, average, distance, maximum and minimum![](image_rsrcVH.jpg)JAVA
+    CODEimport java.util.Scanner;public class Main {public static void main(String[]
+    args){Scanner in = new Scanner(System.in);System.out.print("Input 1st integer:
+    ");int firstInt = in.nextInt();System.out.print("Input 2nd integer: ");int secondInt
+    = in.nextInt();System.out.printf("Sum of two integers: %d%n", firstInt + secondInt);System.out.printf("Difference
+    of two integers: %d%n", firstInt - secondInt);System.out.printf("Product of two
+    integers: %d%n", firstInt * secondInt);System.out.printf("Average of two integers:
+    %.2f%n", (double) (firstInt + secondInt) / 2);System.out.printf("Distance of two
+    integers: %d%n", Math.abs(firstInt - secondInt));System.out.printf("Max integer:
+    %d%n", Math.max(firstInt, secondInt));System.out.printf("Min integer: %d%n", Math.min(firstInt,
+    secondInt));}}OUTPUTInput 1st integer: 50Input 2nd integer: 30Sum of two integers:
+    80Difference of two integers: 20Product of two integers: 1500Average of two integers:
+    40.00Distance of two integers: 20Max integer: 50Min integer: 30Find the greatest
+    of three numbersJava Conditional Statement![](image_rsrcVJ.jpg)JAVA CODEimport
+    java.util.Scanner;public class Main {public static void main(String[] args) {Scanner
+    in = new Scanner(System.in);System.out.print("Input the 1st number: ");int num1
+    = in.nextInt();System.out.print("Input the 2nd number: ");int num2 = in.nextInt();System.out.print("Input
+    the 3rd number: ");int num3 = in.nextInt();if (num1 > num2)if (num1 > num3)System.out.println("The
+    greatest: " + num1);if (num2 > num1)if (num2 > num3)System.out.println("The greatest:
+    " + num2);if (num3 > num1)if (num3 > num2)System.out.println("The greatest: "
+    + num3);}}OUTPUTInput the 1st number: 25Input the 2nd number: 58Input the 3rd
+    number: 98The greatest: 98Display the multiplication tableof a given integerJAVA
+    CODEimport java.util.Scanner;public class Main {public static void main(String[]
+    args){int j,n;System.out.print("Input the number(Table to be calculated): ");{System.out.print("Input
+    number of terms : ");Scanner in = new Scanner(System.in);​     n = in.nextInt();System.out.println
+    ("\n");for(j=0;j<=n;j++)System.out.println(n+" X "+j+" = " +n*j);}}}OUTPUTInput
+    the number(Table to be calculated): Input number of terms : 77 X 0 = 07 X 1 =
+    77 X 2 = 147 X 3 = 217 X 4 = 287 X 5 = 357 X 6 = 427 X 7 = 49Display the patternlike
+    right angle trianglewith a number![](image_rsrcVK.jpg)JAVA CODEimport java.util.Scanner;public
+    class Main {public static void main(String[] args){int i,j,n;System.out.print("Input
+    number of rows : ");Scanner in = new Scanner(System.in);​     n = in.nextInt()
+    ;for(i=1;i<=n;i++){​ for(j=1;j<=i;j++)​   System.out.print(j);System.out.println("");}}}OUTPUTInput
+    number of rows : 9112123123412345123456123456712345678123456789Print a pattern
+    like a pyramid![](image_rsrcVM.jpg)JAVA CODEimport java.util.Scanner;public class
+    Main {public static void main(String[] args){int i,j,n,s,x;System.out.print ("Input
+    number of rows : ");Scanner in = new Scanner(System.in);​     n = in.nextInt();s=n+4-1;for(i=1;i<=n;i++
+    ){for(x=s;x!=0;x--){System.out.print(" ");}for(j=1;j<=i;j++){System.out.print(i+"
+    ");}​ System.out.println();s--;}}}OUTPUTInput number of rows : 712 23 3 34 4 4
+    45 5 5 5 56 6 6 6 6 67 7 7 7 7 7 7Display the number rhombus structure![](image_rsrcVN.jpg)JAVA
+    CODEimport java.util.Scanner;public class Main {public static void main(String
+    args[]){Scanner in = new Scanner(System.in);System.out.print("Input the number:  ")
+    ;int n = in.nextInt();int count = 1;int no_of_spaces = 1;int start = 0;for (int
+    i = 1; i < (n * 2); i++){for (int spc = n - no_of_spaces; spc > 0; spc--){System.out.print("
+    ");}if (i < n){start = i;          //for numberno_of_spaces++;    //for spaces}
+    else{start = n * 2 - i;   //for numberno_of_spaces--;      //for space}for (int
+    j = 0; j < count; j++){System.out.print(start);if (j < count / 2){start--;} else{start++;}}if
+    (i < n){count = count + 2;} else {count = count - 2;}System.out.println();}}}OUTPUTInput
+    the number:  7      1     212    32123   4321234  54321234565432123456765432123456765432123456  543212345   4321234    32123     212      1'
+  toc: []
+  trans: "\n\n# JAVA 编码练习：初学者编程 JJ TAM\n\n- 打印 hello\n- 打印两个数字之和\n- 除法两个数字\n- 打印结果\n\
+    - 打印乘法表\n- 求面积\n- 交换两个变量\n- 打印一个脸\n- 华氏度转摄氏度\n- 英寸转米\n- 相加所有数字\n- 打印年数和天数\n- 计算\
+    \ (BMI)\n- 计算米/秒速度\n- 除法两个指定的整数\n- 乘法两个指定的整数\n- 打印和\n- 找出三个数中的最大值\n- 显示乘法表\n-\
+    \ 显示图案\n- 打印金字塔图案\n- 显示数字菱形结构\n\n## 打印 hello\n分行打印 hello 和你的名字。\n\nJAVACODE\n\
+    ```java\nimport java.util.Scanner;\npublic class Main {\n    public static void\
+    \ main(String[] args) {\n        Scanner input = new Scanner (System.in);\n  \
+    \      System.out.print(\"Input your first name: \");\n        String fname =\
+    \ input.next();\n        System.out.print(\"Input your last name: \");\n     \
+    \   String lname = input.next();\n        System.out.println();\n        System.out.println(\"\
+    Hello \\n\"+fname+\" \"+lname);\n    }\n}\n```\nOUTPUT\n```\nInput your first\
+    \ name: JJ\nInput your last name: TAM\nHello\nJJ TAM\n```\n\n## 打印数字之和\n两个数字之和。\n\
+    \nJAVACODE\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        Scanner input = new Scanner (System.in);\n\
+    \        System.out.print(\"Input the first number: \");\n        int num1 = input.nextInt();\n\
+    \        System.out.print(\"Input the second number: \");\n        int num2 =\
+    \ input.nextInt();\n        int sum = num1 + num2;\n        System.out.println();\n\
+    \        System.out.println(\"Sum: \"+sum);\n    }\n}\n```\nOUTPUT\n```\nInput\
+    \ the first number: 545\nInput the second number: 455\nSum: 1000\n```\n\n## 除法两个数字\n\
+    并在屏幕上打印。\n\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic class Main {\n\
+    \    public static void main(String[] args) {\n        Scanner input = new Scanner\
+    \ (System.in);\n        System.out.print(\"Input the first number: \");\n    \
+    \    int a = input.nextInt();\n        System.out.print(\"Input the second number:\
+    \ \");\n        int b = input.nextInt();\n        int d = (a/b);\n        System.out.println();\n\
+    \        System.out.println(\"The division of a and b is:\" +d);\n    }\n}\n```\n\
+    OUTPUT\n```\nInput the first number: 100\nInput the second number: 25\nThe division\
+    \ of a and b is:4\n```\n\n## 打印结果\n指定操作的结果。\n\nJAVA CODE\n```java\npublic class\
+    \ Main {\n    public static void main(String[] args) {\n        int w = -5 + 8\
+    \ * 6;\n        int x = (55 + 9) % 9;\n        int y = 20 + (-3 * 5 / 8);\n  \
+    \      int z = 5 + 15 / 3 * 2 - 8 % 3;\n        System.out.print(w + \"\\n\" +\
+    \ x + \"\\n\" + y + \"\\n\" + z);\n    }\n}\n```\n\n## 打印乘法表\nJAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner in = new Scanner(System.in);\n        System.out.println(\"\
+    Input the Number: \");\n        int n = in .nextInt();\n        for (int i = 1;\
+    \ i <= 10; i++) {\n            System.out.println(n + \"*\" + i + \" = \" + (n\
+    \ * i));\n        }\n    }\n}\n```\nOUTPUT\n```\nInput the Number:\n15\n15*1 =\
+    \ 15\n15*2 = 30\n15*3 = 45\n15*4 = 60\n15*5 = 75\n15*6 = 90\n15*7 = 105\n15*8\
+    \ = 120\n15*9 = 135\n15*10 = 150\n```\n\n## 求面积\n圆的面积和周长。\n\nJAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner io = new Scanner(System.in);\n        System.out.println(\"\
+    Input the radius of the circle: \");\n        double radius = io.nextDouble();\n\
+    \        System.out.println(\"Perimeter is = \" + (2 * radius * Math.PI));\n \
+    \       System.out.println(\"Area is = \" + (Math.PI * radius * radius));\n  \
+    \  }\n}\n```\nOUTPUT\n```\nInput the radius of the circle:\n10\nPerimeter is =\
+    \ 62.8318530718\nArea is = 314.159265359\n```\n\n## 交换两个变量\nJAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        int x, y, z;\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.println(\"Input the first number: \");\n        x = in.nextInt();\n\
+    \        System.out.println(\"Input the second number: \");\n        y = in.nextInt();\n\
+    \        z = x;\n        x = y;\n        System.out.println(\"Swapped values are:\"\
+    \ + x + \" and \" + y);\n    }\n}\n```\nOUTPUT\n```\nInput the first number: 25\n\
+    Input the second number: 50\nSwapped values are:50 and 25\n```\n\n## 打印一个脸\nJAVA\
+    \ CODE\n```java\npublic class Main {\n    public static void main(String[] args)\
+    \ {\n        String[] arra = new String[5];\n        arra[0] = \"*****\";\n  \
+    \      arra[1] = \"| o o |\";\n        arra[2] = \"| ^ ^ |\";\n        arra[3]\
+    \ = \"| --- |\";\n        arra[4] = \"*****\";\n        for (int i = 0; i < 5;\
+    \ i++) {\n            System.out.println(arra[i]);\n        }\n    }\n}\n```\n\
+    OUTPUT\n```\n*****\n| o o |\n| ^ ^ |\n|  --- |\n*****\n```\n\n## 华氏度转摄氏度\nJAVA\
+    \ CODE\n```java\nimport java.util.Scanner;\npublic class Main {\n    public static\
+    \ void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.print(\"Input a degree in Fahrenheit: \");\n        double\
+    \ fahrenheit = input.nextDouble();\n        double celsius = (fahrenheit - 32.0)\
+    \ / 9.0;\n        System.out.println(fahrenheit + \" degree is equal to \" + celsius\
+    \ + \" in Celsius\");\n    }\n}\n```\nOUTPUT\n```\nInput a degree in Fahrenheit:\
+    \ 96\n96.0 degree is equal to 35.5555555556\n```\n\n## 英寸转米\nJAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input a value for inch: \");\n        double inch = input.nextDouble() ;\n   \
+    \     double meters = inch * 0.0254;\n        System.out.println(inch + \" inch\
+    \ is \" + meters);\n    }\n}\n```\nOUTPUT\n```\nInput a value for inch: 5\n5.0\
+    \ inch is 0.127\n```\n\n## 相加所有数字\nJAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ input = new Scanner(System.in);\n        System.out.print(\"Input an integer\
+    \ between 0 and 1000: \");\n        int num = input.nextInt();\n        int firstDigit\
+    \ = num % 10;\n        int remainingNumber = num / 10;\n        int SecondDigit\
+    \ = remainingNumber % 10;\n        remainingNumber = remainingNumber / 10;\n \
+    \       int thirdDigit = remainingNumber % 10;\n        remainingNumber = remainingNumber\
+    \ / 10;\n        int fourthDigit = remainingNumber % 10;\n        int sum = thirdDigit\
+    \ + SecondDigit + firstDigit + fourthDigit;\n        System.out.println(\"The\
+    \ sum of all digits in \" + num + \" is \" + sum);\n    }\n}\n```\nOUTPUT\n```\n\
+    Input an integer between 0 and 1000: 750\nThe sum of all digits in 750 is 12\n\
+    ```\n\n## 从分钟打印年数和天数\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic class\
+    \ Main {\n    public static void main(String[] args) {\n        double minutesInYear\
+    \ = 60 * 24 * 365;\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    Input the number of minutes: \");\n        double min = input.nextDouble();\n\
+    \        long years = (long) (min / minutesInYear);\n        int days = (int)\
+    \ (min / 60 / 24) % 365;\n        System.out.println((int) min + \" minutes is\
+    \ approximately \" + years + \" years and \" + days + \" days\");\n    }\n}\n\
+    ```\nOUTPUT\n```\nInput the number of minutes: 123456\n123456 minutes is approximately\
+    \ 0 years and 85 days\n```\n\n## 计算 (BMI) 体指数\nJAVA CODE\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ input = new Scanner(System.in);\n        System.out.print(\"Input weight in\
+    \ pounds: \");\n        double weight = input.nextDouble();\n        System.out.print(\"\
+    Input height in inches: \");\n        double inches = input.nextDouble();\n  \
+    \      double BMI = weight * 0.453592 / (inches * 0.0254);\n        System.out.print(\"\
+    Body Mass Index is \" + BMI + \"\\n\");\n    }\n}\n```\nOUTPUT\n```\nInput weight\
+    \ in pounds: 450\nInput height in inches: 72\nBody Mass Index is 61.0303457881\n\
+    ```\n\n## 计算米/秒、每小时和英里/小时\nJAVA CODE\n```java\nimport java.util.Scanner;\npublic\
+    \ class Main {\n    public static void main(String[] args) {\n        Scanner\
+    \ scanner = new Scanner(System.in);\n        float timeSeconds;\n        float\
+    \ mps, kph, mph;\n        System.out.print(\"Input distance in meters: \");\n\
+    \        float distance = scanner.nextFloat();\n        System.out.print(\"Input\
+    \ hour: \");\n        float hr = scanner.nextFloat();\n        System.out.print(\"\
+    Input minutes: \");\n        float min = scanner.nextFloat();\n        System.out.print(\"\
+    Input seconds: \");\n        float sec = scanner.nextFloat();\n        timeSeconds\
+    \ = (hr*3600) + (min*60) + sec;\n        mps = distance / timeSeconds;\n     \
+    \   kph = ( distance/1000.0f ) / (timeSeconds/3600.0f );\n        mph = kph /\
+    \ 1.609f;\n        System.out.println(\"Your speed in meters/second is \"+mps);\n\
+    \        System.out.println(\"Your speed in km/h is \"+kph);\n        System.out.println(\"\
+    Your speed in miles/h is \"+mph);\n        scanner.close();\n    }\n}\n```\nOUTPUT\n\
+    ```\nInput distance in meters: 3000\nInput hour: 5\nInput minutes: 32\nInput seconds:\
+    \ 29\nYour speed in meters/second is 0.1503834\nYour speed in km/h is 0.541385\n\
+    Your speed in miles/h is 0.336472\n```\n\n## 使用减法运算符除两个指定的整数\nJAVA CODE\n```java\n\
+    import java.util.Scanner;\npublic class Main {\n    public static float divide_using_traction(int\
+    \ dividend, int divider) {\n        if (divider == 0) {\n            return 0;\n\
+    \        }\n        float result = 0;\n        while (dividend > divider) {\n\
+    \            dividend -= divider;\n            result++;\n        }\n        float\
+    \ decimalPart = (float) dividend / (float) divider;\n        result += decimalPart;\n\
+    \        return result;\n    }\n    public static void main(String[] args) {\n\
+    \        Scanner in = new Scanner(System.in);\n        System.out.print(\"Input\
+    \ the dividend: \");\n        int dividend = in.nextInt();\n        System.out.print(\"\
+    Input the divider: \");\n        int divider = in.nextInt();\n        System.out.println(\"\
+    \\nResult: \" + divide_using_traction(dividend,divider));\n    }\n}\n```\nOUTPUT\n\
+    ```\nInput the dividend: 900\nInput the divider: 30\nResult: 30.0\n```\n\n## 不使用乘法运算符乘以两个指定的整数\n\
+    JAVA CODE\n```java\nimport java.util.*;\npublic class Main {\n    public static\
+    \ int multiply(int n1, int n2) {\n        int result = 0;\n        boolean negative_num\
+    \ = (n1 < 0 && n2 >= 0) || (n2 < 0 && n1 >= 0);\n        boolean positive_num\
+    \ = !negative_num;\n        n1 = Math.abs(n1);\n        for (int i = 0; i < n1;\
+    \ i++) {\n            if (negative_num && n2 > 0 || positive_num && n2 < 0)\n\
+    \                result -= n2;\n            else\n                result += n2;\n\
+    \        }\n        return result;\n    }\n    public static void main(String[]\
+    \ args) {\n        Scanner in = new Scanner(System.in);\n        System.out.print(\"\
+    Input the first number: \");\n        int n1 = in.nextInt();\n        System.out.print(\"\
+    Input the second number: \");\n        int n2 = in.nextInt();\n        System.out.println(\"\
+    \\nResult: \" + multiply(n1,n2));\n    }\n}\n```\nOUTPUT\n```\nInput the first\
+    \ number: 25\nInput the second number: 30\nResult: 75\n```\n\n## 打印和、差、平均值、距离和最小值\n\
+    JAVA CODE\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input 1st integer: \");\n        int firstInt = in.nextInt();\n\
+    \        System.out.print(\"Input 2nd integer: \");\n        int secondInt = in.nextInt();\n\
+    \        System.out.printf(\"Sum of two integers: %d\\n\", firstInt + secondInt);\n\
+    \        System.out.printf(\"Difference of two integers: %d\\n\", firstInt - secondInt);\n\
+    \        System.out.printf(\"Product of two integers: %d\\n\", firstInt * secondInt);\n\
+    \        System.out.printf(\"Average of two integers: %.2f\\n\", (firstInt + secondInt)\
+    \ / 2);\n        System.out.printf(\"Distance of two integers: %d\\n\", Math.abs(firstInt\
+    \ - secondInt));\n        System.out.printf(\"Max integer: %d\\n\", Math.max(firstInt,\
+    \ secondInt));\n        System.out.printf(\"Min integer: %d\\n\", Math.min(firstInt,\
+    \ secondInt));\n    }\n}\n```\nOUTPUT\n```\nInput 1st integer: 50\nInput 2nd integer:\
+    \ 30\nSum of two integers: 80\nDifference of two integers: 20\nProduct of two\
+    \ integers: 1500\nAverage of two integers: 40.00\nDistance of two integers: 20\n\
+    Max integer: 50\nMin integer: 30\n```\n\n## 找出三个数中的最大值 使用条件语句\n```java\nimport\
+    \ java.util.Scanner;\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        Scanner in = new Scanner(System.in);\n        System.out.print(\"\
+    Input the 1st number: \");\n        int num1 = in.nextInt();\n        System.out.print(\"\
+    Input the 2nd number: \");\n        int num2 = in.nextInt();\n        System.out.print(\"\
+    Input the 3rd number: \");\n        int num3 = in.nextInt();\n        if (num1\
+    \ > num2)\n            if (num1 > num3)\n                System.out.println(\"\
+    The greatest: \" + num1);\n        if (num2 > num1)\n            if (num2 > num3)\n\
+    \                System.out.println(\"The greatest: \" + num2);\n        if (num3\
+    \ > num1)\n            if (num3 > num2)\n                System.out.println(\"\
+    The greatest: \" + num3);\n    }\n}\n```\nOUTPUT\n```\nInput the 1st number: 25\n\
+    Input the 2nd number: 58\nInput the 3rd number: 98\nThe greatest: 98\n```\n\n\
+    ## 显示给定整数的乘法表\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        int j,n;\n        System.out.print(\"\
+    Input the number(Table to be calculated): \");\n        System.out.print(\"Input\
+    \ number of terms : \");\n        Scanner in = new Scanner(System.in);\n     \
+    \   n = in.nextInt();\n        System.out.println (\"\\n\");\n        for(j=0;j<=n;j++)\n\
+    System.out.println(n+\" X \"+j+\" = \" +n*j);\n    }\n}\n```\nOUTPUT\n```\nInput\
+    \ the number(Table to be calculated): \nInput number of terms : 7\n7 X 0 = 0\n\
+    7 X 1 = 7\n7 X 2 = 14\n7 X 3 = 21\n7 X 4 = 28\n7 X 5 = 35\n7 X 6 = 42\n7 X 7 =\
+    \ 49\n```\n\n## 显示数字直角三角形图案\n```java\nimport java.util.Scanner;\npublic class\
+    \ Main {\n    public static void main(String[] args) {\n        int i,j,n;\n \
+    \       System.out.print(\"Input number of rows : \");\n        Scanner in = new\
+    \ Scanner(System.in);\n        n = in.nextInt();\n        for(i=1;i<=n;i++)\n\
+    \            for(j=1;j<=i;j++)\n                System.out.print(j);\n       \
+    \     System.out.println(\"\");\n    }\n}\n```\nOUTPUT\n```\nInput number of rows\
+    \ : 9\n1\n12\n123\n1234\n12345\n123456\n1234567\n12345678\n123456789\n```\n\n\
+    ## 打印金字塔图案\n```java\nimport java.util.Scanner;\npublic class Main {\n    public\
+    \ static void main(String[] args) {\n        int i,j,n,s;\n        System.out.print(\"\
+    Input number of rows : \");\n        Scanner in = new Scanner(System.in);\n  \
+    \      n = in.nextInt();\n        s=n+4;\n        for(i=1;i<=n;i++) {\n      \
+    \      for(x=s;x!=0;x--)\n                System.out.print(\" \");\n         \
+    \   for(j=1;j<=i;j++)\n                System.out.print(i+\" \");\n          \
+    \  System.out.println();\n            s--;\n        }\n    }\n}\n```\nOUTPUT\n\
+    ```\nInput number of rows : 7\n       1 \n      2 2 \n    3 3 3 \n   4 4 4 4 \n\
+    \  5 5 5 5 5 \n6 6 6 6 6 \n7 7 7 7 7 7 \n```\n\n## 显示数字菱形结构\n```java\nimport java.util.Scanner;\n\
+    public class Main {\n    public static void main(String[] args) {\n        int\
+    \ count, no_of_spaces, i, start;\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.print(\"Input the number: \");\n        int n = in.nextInt();\n\
+    \        for (int i = 1; i < (n * 2); i++) {\n            for (int spc = n - no_of_spaces;\
+    \ spc > 0; spc--)\n                System.out.print(\" \");\n            if (i\
+    \ < n) {\n                start = i;\n                no_of_spaces++;\n      \
+    \      } else {\n                start = n * 2 - i;\n                no_of_spaces--;\n\
+    \            }\n            for (int j = 0; j < count; j++) {\n              \
+    \  System.out.print(start);\n                if (j < count / 2) {\n          \
+    \          start--;\n                } else {\n                    start++;\n\
+    \                }\n            }\n            System.out.println();\n       \
+    \ }\n    }\n}\n```\nOUTPUT\n```\nInput the number: 7\n      1\n     22\n    333\n\
+    \   4444\n  55555\n 666666\n7777777\n7777777\n 666666\n  55555\n   4444\n    333\n\
+    \     22\n      1\n```\n\n"

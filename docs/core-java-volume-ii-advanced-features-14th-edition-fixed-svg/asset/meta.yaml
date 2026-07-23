@@ -1,0 +1,760 @@
+name: Core Java, Volume II： Advanced Features, 14th Edition (Fixed SVGs)
+name_cn: Java 核心第二卷：高级特性，第 14 版 (修复 SVGs)
+slug: core-java-volume-ii-advanced-features-14th-edition-fixed-svg
+toc:
+- - '#'
+  - Java 核心第二卷：高级特性，第 14 版 (修复 SVGs)
+- - '#'
+  - 前言
+- - '##'
+  - 致读者
+- - '##'
+  - 本书简介
+- - '#'
+  - 第 4 章涵盖了网络 API。Java 让进行复杂的网络编程变得异常简单。我们将向你展示如何与服务器建立网络连接、如何实现自己的服务器，以及如何建立 HTTP
+    连接。本章还包含了新的 HTTP 客户端的内容。
+- - '#'
+  - 第 5 章涵盖了数据库编程。重点是 `JDBC`，即 Java 数据库连接 API，它允许 Java 程序连接到关系型数据库。我们将向你展示如何使用 `JDBC`
+    API 的核心子集编写实用的程序来处理现实中的数据库任务。（对 `JDBC` API 的完整介绍需要一本几乎和这本书一样大的书。）
+- - '#'
+  - 第 7 章讨论了一个我们认为重要性只会增加的特性：国际化。Java 编程语言是少数从一开始就设计用于处理 Unicode 的语言之一，但 Java 平台上的国际化支持要远得多。因此，你可以让
+    Java 应用程序国际化，使其不仅能够跨平台，还能跨越国界。例如，我们将向你展示如何编写一个可以使用英语、德语或中文的退休金计算器。
+- - '#'
+  - 第 8 章讨论了脚本和编译器 API，这些 API 允许你的程序调用 JavaScript 或 Groovy 等脚本语言的代码，并编译 Java 代码。
+- - '#'
+  - 第 9 章涉及了 Java 安全模型、用户身份验证以及 Java 安全库中的加密函数。你将学习如消息签名和代码签名、授权与认证以及加密等重要特性。我们以使用
+    `AES` 和 `RSA` 加密算法的示例作为结束。
+- - '#'
+  - 第 10 章介绍了 GUI 编程。我将向你展示如何创建窗口、如何在窗口上绘图、如何用几何形状绘图、如何使用多种字体格式化文本，以及如何显示图像。接下来，你将看到如何编写响应事件（如鼠标点击或按键）的代码。
+- - '#'
+  - 第 11 章详细讨论了 `Swing` GUI 工具包。`Swing` 工具包允许你构建跨平台的图形用户界面。你将学习有关各种类型的按钮、文本组件、边框、滑块、列表框、菜单和对话框。
+- - '#'
+  - 第 12 章包含了高级 Swing 内容，特别是重要但复杂的树和表格组件。我们还涵盖了 `Java 2D` API，你可以用它来创建真实的图形和特殊特效。当然，现在没有多少程序员需要编写
+    `Swing` 用户界面了，因此我们特别关注那些对服务器上生成的图像非常有用的特性。
+- - '#'
+  - 第 13 章涉及了外部函数，它允许你调用用其他编程语言编写的代码。当你与 Java 不支持的设备或服务交互时，你可能需要转向目标平台操作系统的 API。或者，你可能调用一个经过测试的机器学习或数据分析库。
+- - '##'
+  - 惯例
+- - '#'
+  - 致谢
+- - '#'
+  - 第 1 章 ▪ 流（Streams）
+- - '##'
+  - 1.1 从迭代到流操作
+- - '##'
+  - 1.2 流的创建
+- - '###'
+  - java.util.stream.Stream<T>
+- - '###'
+  - java.util.Spliterators
+- - '###'
+  - java.util.Arrays
+- - '###'
+  - java.lang.String
+- - '###'
+  - java.util.regex.Pattern
+- - '###'
+  - java.nio.file.Files
+- - '###'
+  - java.util.stream.StreamSupport
+- - '###'
+  - java.lang.Iterable
+- - '###'
+  - java.util.Scanner
+- - '###'
+  - java.util.function.Supplier
+- - '###'
+  - filter, map, and flatMap 方法
+- - '####'
+  - filter
+- - '####'
+  - map
+- - '####'
+  - flatMap
+- - '###'
+  - mapMulti
+- - '##'
+  - 1.4 提取子流和合并流
+- - '##'
+  - 1.5 其他流转换
+- - '##'
+  - 1.6 简单约览
+- - '##'
+  - 1.7 Optional 类型
+- - '###'
+  - 1.7.1 获取 Optional 值
+- - '###'
+  - 1.7.2 消费 Optional 值
+- - '###'
+  - 1.7.3 Optional 值的管道化
+- - '###'
+  - 1.7.5 创建 Optional 值
+- - '###'
+  - 1.7.6 使用 `flatMap` 组合 Optional 值函数
+- - '###'
+  - 1.7.7 将 Optional 转换为 Stream
+- - '##'
+  - 1.8 收集结果
+- - '##'
+  - 1.9 Collectors (Collectors)
+- - '###'
+  - 1.9.1 收集到集合
+- - '###'
+  - 1.9.2 收集到 Map
+- - '###'
+  - 1.9.4 下游收集器 (Downstream Collectors)
+- - '###'
+  - 1.9.5 实现收集器
+- - '##'
+  - 1.10 归约操作
+- - '##'
+  - 1.11 Gatherers（收集器）
+- - '###'
+  - 1.11.1 预定义的 Gatherers
+- - '###'
+  - 1.11.2 实现 Gatherers
+- - '###'
+  - java.util.Stream<T>
+- - '###'
+  - java.util.stream.Gatherers
+- - '###'
+  - java.util.stream.Gatherer<T, A, R>
+- - '##'
+  - 1.12 原始类型
+- - '##'
+  - 1.13 并行流
+- - '#'
+  - 区域的快速复习：每个区域都有一个语言代码（例如英语的 `en`）和一个国家代码（例如美国的 `US`）。区域 `en_US` 描述的是在美国使用的英语，而
+    `en_IE` 是爱尔兰使用的的英语。某些国家有多个区域。例如，`ga_IE` 是爱尔兰的盖尔克语，正如前面的示例所示，JDK 至少知道瑞士的三个区域。
+- - '#'
+  - 第 2 章 输入与输出
+- - '##'
+  - 2.1 输入/输出
+- - '###'
+  - 2.1.1 字节读写
+- - '###'
+  - java.io.InputStream
+- - '###'
+  - java.io.OutputStream
+- - '###'
+  - 2.1.2 完整的流 (Complete Stream)
+- - '###'
+  - 2.1.3 输入输出流
+- - '###'
+  - 2.1.4 文本输出
+- - '###'
+  - 2.1.5 如何读取文本
+- - '###'
+  - 2.1.6 如何写入输出
+- - '###'
+  - 2.1.7 文本格式对象
+- - '###'
+  - 2.1.8 字符编码
+- - '###'
+  - 2.1.9 默认字符编码
+- - '###'
+  - 2.1.10 读取输入
+- - '##'
+  - 2.2 二进制数据
+- - '###'
+  - 2.2.1 DataInput 和 DataOutput
+- - '###'
+  - java.io.DataInput
+- - '###'
+  - java.io.DataOutput
+- - '##'
+  - 2.2.2 随机访问文件
+- - '##'
+  - 2.3 存档
+- - '###'
+  - 2.3.1 路径 (Paths)
+- - '###'
+  - 2.3.2 读写文件 (Reading and Writing Files)
+- - '###'
+  - 2.3.3 创建文件和目录
+- - '###'
+  - 2.3.4 复制、移动和删除
+- - '###'
+  - 2.3.5 获取信息
+- - '###'
+  - java.nio.file.Files
+- - '###'
+  - java.nio.file.attribute.BasicFileAttributes
+- - '###'
+  - java.nio.file.attribute.FileTime
+- - '###'
+  - 2.3.6 访问目录
+- - '###'
+  - 2.3.7 Glob 模式
+- - '###'
+  - java.nio.file.FileSystem
+- - '###'
+  - java.nio.file.FileSystems
+- - '###'
+  - java.nio.file.PathMatcher
+- - '###'
+  - 2.3.8 目录
+- - '###'
+  - 2.3.9 ZIP 系统
+- - '##'
+  - 2.4 内存映射文件
+- - '###'
+  - 2.4.1 内存映射文件性能
+- - '###'
+  - 2.4.2 缓冲区结构
+- - '##'
+  - 2.5 文件锁
+- - '##'
+  - 2.6 保存和加载序列化对象
+- - '###'
+  - 2.6.2 理解序列化格式
+- - '###'
+  - 2.6.3 Transient Fields
+- - '###'
+  - 2.6.4 `readObject` and `writeObject` Methods
+- - '###'
+  - 2.6.5 `readExternal` 和 `writeExternal` 方法
+- - '###'
+  - 2.6.6 `readResolve` 和 `writeReplace` 方法
+- - '###'
+  - 2.6.7 版本控制
+- - '###'
+  - 2.6.8 反序列化
+- - '###'
+  - 2.6.9 使用序列化进行克隆
+- - '##'
+  - 2.7 正则表达式
+- - '###'
+  - 2.7.1 正则表达式语法
+- - '###'
+  - 2.7.2 测试匹配
+- - '###'
+  - 2.7.3 在字符串中查找所有匹配
+- - '###'
+  - 2.7.4 组
+- - '###'
+  - 2.7.6 替换匹配项
+- - '###'
+  - 2.7.7 Flags
+- - '#'
+  - 第 3 章 XML
+- - '##'
+  - 3.1 XML 简介
+- - '##'
+  - 3.2 XML 文档结构
+- - '##'
+  - 3.3 解析 XML 文档
+- - '###'
+  - org.w3c.dom.CharacterData
+- - '###'
+  - org.w3c.dom.NodeList
+- - '###'
+  - org.w3c.dom.NamedNodeMap
+- - '##'
+  - 3.4 验证 XML 文档
+- - '###'
+  - 3.4.1 文档类型定义
+- - '###'
+  - 3.4.2 XML 架构 (Schema)
+- - '###'
+  - 3.4.3 实际示例
+- - '##'
+  - 3.5 使用 XPath 定位信息
+- - '##'
+  - 3.6 使用命名空间
+- - '##'
+  - 3.7 流式解析器
+- - '###'
+  - 3.7.1 使用 SAX 解析器
+- - '###'
+  - org.xml.sax.ContentHandler
+- - '###'
+  - org.xml.sax.Attributes
+- - '###'
+  - javax.xml.stream.XMLInputFactory
+- - '###'
+  - javax.xml.stream.XMLStreamReader
+- - '###'
+  - 3.8.1 不带命名空间的文档
+- - '###'
+  - 3.8.2 带命名空间的文档
+- - '###'
+  - 3.8.3 写入文档
+- - '###'
+  - 3.8.4 使用 StAX 写入 XML
+- - '##'
+  - 3.9 XSL 转换
+- - '###'
+  - javax.xml.transform.TransformerFactory
+- - '###'
+  - javax.xml.transform.stream.StreamSource
+- - '###'
+  - javax.xml.transform.sax.SAXSource
+- - '###'
+  - org.xml.sax.XMLReader
+- - '###'
+  - javax.xml.transform.dom.DOMResult
+- - '###'
+  - org.xml.sax.helpers.AttributesImpl
+- - '#'
+  - 第 4 章：网络
+- - '##'
+  - 4.1 连接到服务器
+- - '###'
+  - 4.1.1 使用 telnet
+- - '###'
+  - 4.1.2 使用 Java
+- - '###'
+  - 4.1.3 超时
+- - '###'
+  - 4.1.4 Internet 地址
+- - '##'
+  - 4.2 实现服务器
+- - '###'
+  - 4.2.1 Socket (ServerSocket)
+- - '###'
+  - 4.2.2 多个客户端
+- - '###'
+  - 4.2.3 关闭
+- - '###'
+  - 4.2.4 中断的套字
+- - '###'
+  - 4.2.5 安全套字
+- - '##'
+  - 4.3 获取网络数据
+- - '###'
+  - 4.3.1 URLs 和 URIs
+- - '###'
+  - 4.3.2 连接资源
+- - '###'
+  - 4.3.3 表单
+- - '##'
+  - 4.4 客户端
+- - '###'
+  - 4.4.1 HttpClient 类
+- - '###'
+  - 4.4.2 请求类
+- - '###'
+  - 4.4.3 `HttpResponse`
+- - '###'
+  - 4.4.4 异步处理
+- - '##'
+  - 4.5 简单的服务器
+- - '###'
+  - 4.5.1 命令行工具
+- - '###'
+  - 4.5.2 HTTP API
+- - '###'
+  - 4.5.3 处理器 (Handlers)
+- - '###'
+  - 4.5.4 过滤器 (Filters)
+- - '##'
+  - 4.6 发送电子邮件
+- - '#'
+  - 第 5 章 ▪数据库编程
+- - '##'
+  - 5.1 JDBC 设计
+- - '###'
+  - 5.1.1 驱动类型
+- - '###'
+  - 5.1.2 典型用途
+- - '##'
+  - 5.2 结构化语言
+- - '##'
+  - 5.3 配置
+- - '###'
+  - 5.3.1 数据库 URL
+- - '###'
+  - 5.3.2 文件
+- - '###'
+  - 5.3.3 启动数据库
+- - '##'
+  - 5.4 使用 JDBC 语句
+- - '###'
+  - 5.4.1 执行 SQL 语句
+- - '###'
+  - 5.4.2 管理连接、语句和结果集
+- - '###'
+  - 5.4.3 SQL 异常
+- - '###'
+  - 5.4.4 填充数据库
+- - '##'
+  - 5.5 查询执行
+- - '###'
+  - 5.5.1 准备语句
+- - '###'
+  - 5.5.2 读取和写入 LOB
+- - '###'
+  - 5.5.3 SQL 转义（Escapes）
+- - '###'
+  - 5.5.4 多结果
+- - '###'
+  - 5.5.5 获取自动生成键
+- - '##'
+  - 5.6 可滚动和更新的结果集
+- - '###'
+  - 5.6.1 可滚动结果集
+- - '###'
+  - 5.6：`ResultSet` 类型和并发性值
+- - '###'
+  - 5.6.2 可更新的结果集
+- - '###'
+  - java.sql.Connection
+- - '###'
+  - java.sql.ResultSet
+- - '###'
+  - java.sql.DatabaseMetaData
+- - '##'
+  - 5.7 Row Sets
+- - '###'
+  - 5.7.1 Constructing Row Sets
+- - '###'
+  - 5.7.2 Cached Row Sets
+- - '###'
+  - javax.sql.RowSet
+- - '###'
+  - javax.sql.rowset.CachedRowSet
+- - '###'
+  - javax.sql.rowset.RowSetProvider
+- - '###'
+  - javax.sql.rowset.RowSetFactory
+- - '##'
+  - 5.8 元数据
+- - '#'
+  - java.sql.ParameterMetaData
+- - '##'
+  - 5.9 事务
+- - '###'
+  - 5.9.1 使用 JDBC 编写事务
+- - '###'
+  - 5.9.2 保存点 (Save Points)
+- - '###'
+  - 5.9.3 批量更新 (Batch Updates)
+- - '####'
+  - java.sql.Connection
+- - '####'
+  - java.sql.Savepoint
+- - '####'
+  - java.sql.Statement
+- - '####'
+  - java.sql.DatabaseMetaData
+- - '###'
+  - 5.9.4 高级 SQL 类型
+- - '##'
+  - 5.10 Web 和企业级应用中的连接管理
+- - '#'
+  - 第 6 章 日期和时间 API
+- - '##'
+  - 6.1 时间线
+- - '##'
+  - 6.2 本地日期
+- - '###'
+  - java.time.Period
+- - '##'
+  - 6.3 日期调整器（Date Adjusters）
+- - '###'
+  - java.time.LocalDate
+- - '###'
+  - java.time.temporal.TemporalAdjusters
+- - '##'
+  - 6.4 本地时间（Local Time）
+- - '##'
+  - 6.5 时区（Zoned Time）
+- - '##'
+  - 6.6 格式化与解析
+- - '###'
+  - java.time.format.DateTimeFormatter
+- - '###'
+  - java.time.LocalDate
+- - '###'
+  - java.time.ZonedDateTime
+- - '##'
+  - 6.7 与旧代码互操作
+- - '#'
+  - 第 8 章 编译与脚本
+- - '##'
+  - 8.1 编译器 API
+- - '###'
+  - 8.1.1 编译器
+- - '###'
+  - 8.1.2 任务
+- - '###'
+  - 8.1.3 捕获诊断信息
+- - '###'
+  - 8.1.4 从内存读取源
+- - '###'
+  - 8.1.5 将字节码写入
+- - '###'
+  - 8.1.6 示例：动态 Java
+- - '###'
+  - javax.tools.Tool
+- - '###'
+  - javax.tools.JavaCompiler
+- - '###'
+  - javax.tools.StandardFileManager
+- - '###'
+  - javax.tools.JavaCompiler.CompilationTask
+- - '###'
+  - javax.tools.Collector
+- - '###'
+  - javax.tools.Diagnostic
+- - '###'
+  - javax.tools.SimpleJavaFileObject
+- - '###'
+  - javax.tools.ForwardingFileManager
+- - '##'
+  - 8.2 脚本编程
+- - '###'
+  - 8.2.1 获取引擎
+- - '###'
+  - 8.2.2 评估与绑定
+- - '###'
+  - Scriptscript
+- - '###'
+  - 8.2.3 重定向输入输出
+- - '###'
+  - 8.2.4 调用函数和方法
+- - '###'
+  - 8.2.5 编译
+- - '###'
+  - 8.2.6 示例：脚本表（Sheets）
+- - '#'
+  - 第 9 章 安全
+- - '##'
+  - 9.1 类加载器
+- - '###'
+  - 9.1.1 类加载过程
+- - '###'
+  - 9.1.2 类加载器层级
+- - '###'
+  - 9.1.3 使用类加载器作为命名空间
+- - '###'
+  - 9.1.4 编写自己的类加载器
+- - '###'
+  - 9.1.5 字节码验证
+- - '##'
+  - 9.2 用户认证
+- - '###'
+  - 9.2.1 JAAS 框架
+- - '###'
+  - 9.2.2 JAAS 登录模块
+- - '###'
+  - 9.3.1 消息摘要
+- - '###'
+  - 9.3.3 消息签名
+- - '###'
+  - 9.3.4 验证签名
+- - '###'
+  - 9.3.5 身份验证问题
+- - '###'
+  - 9.3.6 证书签名
+- - '###'
+  - 9.3.7 代码签名
+- - '##'
+  - 9.4 加密
+- - '###'
+  - 9.4.1 对称密码
+- - '###'
+  - 9.4.2 密钥生成
+- - '###'
+  - javax.crypto.Cipher
+- - '###'
+  - javax.crypto.KeyGenerator
+- - '###'
+  - javax.crypto.spec.SecretKeySpec
+- - '###'
+  - 9.4.3 加密流
+- - '###'
+  - javax.crypto.CipherInputStream
+- - '###'
+  - javax.crypto.CipherOutputStream
+- - '###'
+  - 9.4.4 公钥加密
+- - '#'
+  - 第 10 章 图形用户界面编程
+- - '##'
+  - 10.1 Java 用户界面工具包的历史
+- - '##'
+  - 10.2 显示 Frame
+- - '###'
+  - 10.2.1 创建 Frame
+- - '###'
+  - 10.2.2 Frame 属性
+- - '###'
+  - java.awt.Component
+- - '###'
+  - java.awt.Frame
+- - '###'
+  - java.awt.Toolkit
+- - '###'
+  - javax.swing.ImageIcon
+- - '##'
+  - 10.3 在组件中显示信息
+- - '###'
+  - 10.3.1 使用 2D 形状
+- - '###'
+  - 10.3.2 使用颜色
+- - '###'
+  - 10.3.3 使用字体
+- - '###'
+  - 10.3.4 显示图像
+- - '##'
+  - 10.4 事件处理
+- - '###'
+  - 10.4.1 基本事件处理概念
+- - '###'
+  - 10.4.5 Actions
+- - '###'
+  - 10.4.6 鼠标事件
+- - '###'
+  - 10.4.7 AWT 事件层次结构
+- - '##'
+  - 10.5 首好 API (Preferences)
+- - '##'
+  - 10.6 布局管理器
+- - '###'
+  - 10.6.1 布局简介
+- - '###'
+  - java.awt.Container
+- - '###'
+  - java.awt.FlowLayout
+- - '###'
+  - 10.6.2 边界布局 (Border Layout)
+- - '###'
+  - java.awt.BorderLayout
+- - '###'
+  - 10.6.3 网格布局 (Grid Layout)
+- - '###'
+  - java.awt.GridLayout
+- - '##'
+  - 10.7 文本输入
+- - '###'
+  - javax.swing.text.JTextField
+- - '###'
+  - javax.swing.JTextField
+- - '###'
+  - java.awt.Component
+- - '###'
+  - 10.7.2 标签与标记
+- - '###'
+  - javax.swing.JLabel
+- - '###'
+  - 10.7.3 密码字段
+- - '###'
+  - javax.swing.JPasswordField
+- - '##'
+  - 10.8 选择组件
+- - '###'
+  - 10.8.1 复选框 (Checkboxes)
+- - '###'
+  - 10.8.2 单选按钮
+- - '###'
+  - 10.8.3 边界 (Borders)
+- - '###'
+  - 10.8.4 下拉框 (Combo Boxes)
+- - '##'
+  - 10.9 菜单
+- - '###'
+  - 10.9.1 菜单构建
+- - '###'
+  - javax.swing.JMenu
+- - '###'
+  - javax.swing.JMenuItem
+- - '###'
+  - javax.swing.AbstractButton
+- - '###'
+  - javax.swing.JFrame
+- - '###'
+  - 10.9.2 菜单项中的图标
+- - '###'
+  - javax.swing.JMenuItem
+- - '###'
+  - javax.swing.AbstractButton
+- - '###'
+  - javax.swing.AbstractAction
+- - '###'
+  - 10.9.3 复选框和单选按钮
+- - '###'
+  - 10.9.4 弹出菜单
+- - '###'
+  - 10.9.5 键盘记忆
+- - '###'
+  - 10.9.6 启用和禁用菜单项
+- - '###'
+  - 10.9.7 工具栏
+- - '###'
+  - 10.9.8 提示
+- - '##'
+  - 10.10 Grid Bag 基础
+- - '###'
+  - 10.10.1 gridx, gridy, gridwidth, gridheight 参数
+- - '###'
+  - 10.10.2 Weight 字段
+- - '###'
+  - 10.10.3 fill 和 anchor 参数
+- - '###'
+  - 10.10.4 内边距 (Padding)
+- - '###'
+  - 10.10.5 指定 gridx, gridy, gridwidth, gridheight 参数的替代方法
+- - '###'
+  - 10.10.6 Grid Bag 布局配方
+- - '###'
+  - 10.10.7 Grid Bag 约束的辅助类
+- - '##'
+  - 10.11 自定义布局
+- - '##'
+  - 10.12 对话框
+- - '###'
+  - 10.12.3 数据交换
+- - '###'
+  - 10.12.4 文件对话框
+- - '###'
+  - 10.12.5 创建一个 `JFileChooser` 对象
+- - '###'
+  - 10.12.6 通过调用 `setCurrentDirectory` 方法设置目录。
+- - '###'
+  - 10.12.7 如果你有一个期望用户选择的文件名，请使用 `setSelectedFile` 方法提供它：
+- - '###'
+  - 10.12.8 若允许用户在对话框中选择多个文件，请调用 `setMultiSelectionEnabled` 方法。这当然是可选的，并不常见。
+- - '###'
+  - 10.12.9 如果你想将对话框中显示的文件限制为特定类型（例如，所有扩展名为 `.gif` 的文件），你需要设置一个过滤器。我们将在本节稍后的部分讨论过滤器。
+- - '###'
+  - 10.12.10 默认情况下，用户使用文件选择器只能选择文件。如果你让用户选择目录，请使用 `setFileSelectionMode` 方法。使用 `JFileChooser.FILES_ONLY`（默认值）、`JFileChooser.DIRECTORIES_ONLY`
+    或 `JFileChooser.FILES_AND_DIRECTORIES` 调用它。
+- - '###'
+  - 10.12.11 通过调用 `showOpenDialog` 或 `showSaveDialog` 方法显示对话框。在这些调用中，你必须提供父组件：
+- - '###'
+  - 10.12.12 使用 `getSelectedFile()` 或 `getSelectedFiles()` 方法获取选定的文件或文件。这些方法返回单个 `File`
+    对象或一个 `File` 对象数组。如果你只需要文件的名称，请调用其 `getPath` 方法。例如：
+- - '###'
+  - javax.swing.JFileChooser
+- - '###'
+  - javax.swing.filechooser.FileFilter
+- - '###'
+  - javax.swing.filechooser.FileNameExtensionFilter
+- - '##'
+  - 12.1 表格模型
+- - '##'
+  - 12.2 行与列的操作处理
+- - '###'
+  - 12.2.1 列类
+- - '###'
+  - 12.2.2 访问表格列
+- - '###'
+  - 12.2.3 调整列宽
+- - '###'
+  - 12.2.6 行排序
+- - '###'
+  - 12.2.7 行过滤
+- - '###'
+  - 12.2.8 隐藏和显示列
+- - '##'
+  - 12.3 单元格渲染与编辑
+- - '###'
+  - 12.3.1 渲染单元格
+- - '###'
+  - 12.3.2 单元格编辑
+- - '###'
+  - 12.3.3 渲染器
+- - '#'
+  - Listing 12.2 v2ch12/tableModel/InvestmentTable.java

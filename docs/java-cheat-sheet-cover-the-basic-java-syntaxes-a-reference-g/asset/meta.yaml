@@ -1,0 +1,416 @@
+name: Java Cheat Sheet, Cover the Basic Java Syntaxes, A Reference Guide
+name_cn: Java 快速查表：基础 Java 语法详解，参考指南
+slug: java-cheat-sheet-cover-the-basic-java-syntaxes-a-reference-g
+toc:
+- - '#'
+  - Java 快速查表：基础 Java 语法详解，参考指南
+- - '##'
+  - 关于本书
+- - '##'
+  - 免责声明
+- - '#'
+  - 逻辑运算符
+- - '##'
+  - '`&` 语法'
+- - '##'
+  - '`|` 语法'
+- - '##'
+  - '`^` 语法'
+- - '##'
+  - '`<<` 语法'
+- - '##'
+  - '`>>` 语法'
+- - '##'
+  - '`>>>` 语法'
+- - '#'
+  - 方法语法
+- - '##'
+  - abs() 语法
+- - '##'
+  - abstract 语法
+- - '##'
+  - acos() 语法
+- - '##'
+  - addExact() 语法
+- - '##'
+  - 算术运算符语法
+- - '##'
+  - 数组语法
+- - '##'
+  - 数组元素语法
+- - '##'
+  - 数组长度语法
+- - '##'
+  - 数组排序语法
+- - '##'
+  - ArrayList 语法
+- - '##'
+  - asin() 语法
+- - '##'
+  - 断言语法
+- - '##'
+  - 赋值运算符
+- - '##'
+  - atan() 语法
+- - '##'
+  - atan2() 语法
+- - '##'
+  - boolean 语法
+- - '##'
+  - break 语法
+- - '##'
+  - byte 语法
+- - '##'
+  - case 语法
+- - '##'
+  - catch 语法
+- - '##'
+  - cbrt() 语法
+- - '##'
+  - ceil() 语法
+- - '##'
+  - char 语法
+- - '##'
+  - charAt() 语法
+- - '##'
+  - class 语法
+- - '##'
+  - class 对象 语法
+- - '##'
+  - attribute 语法
+- - '##'
+  - codePointAt() 语法
+- - '##'
+  - codePointBefore() 语法
+- - '##'
+  - codePointCount() 语法
+- - '##'
+  - comment 语法
+- - '##'
+  - compareTo() 语法
+- - '##'
+  - compareToIgnoreCase() 语法
+- - '###'
+  - '`str1.compareToIgnoreCase(str2)`'
+- - '##'
+  - '`concat()` 语法'
+- - '##'
+  - 条件运算符语法
+- - '##'
+  - 构造函数语法
+- - '##'
+  - '`contains()` 语法'
+- - '##'
+  - '`contentEquals()` 语法'
+- - '##'
+  - continue 语法
+- - '###'
+  - 继续循环的下次迭代
+- - '##'
+  - '`copySign()` 语法'
+- - '##'
+  - '`copyValueOf()` 语法'
+- - '##'
+  - '`cos()` 语法'
+- - '##'
+  - '`cosh()` 语法'
+- - '##'
+  - '`sin()` 语法'
+- - '##'
+  - '`tan()` 语法'
+- - '##'
+  - '`sqrt()` 语法'
+- - '##'
+  - '`pow()` 语法'
+- - '##'
+  - '`abs()` 语法'
+- - '#'
+  - 从 1.7e−308 到 1.7e+308 的数值数据类型
+- - '##'
+  - else 语法
+- - '##'
+  - 封装语法
+- - '##'
+  - endwith() 语法
+- - '##'
+  - enum 语法
+- - '##'
+  - equals() 语法
+- - '##'
+  - equalsIgnoreCase() 语法
+- - '##'
+  - exp() 语法
+- - '##'
+  - expm1() 语法
+- - '##'
+  - exports 语法
+- - '##'
+  - extends 语法
+- - '##'
+  - file 类语法
+- - '##'
+  - 创建文件语法
+- - '##'
+  - 删除文件语法
+- - '##'
+  - 读取文件语法
+- - '##'
+  - 写入文件语法
+- - '###'
+  - FileInputStream
+- - '###'
+  - FileOutputStream
+- - '##'
+  - final syntax
+- - '###'
+  - '`final class/variable/method`'
+- - '###'
+  - '`final class` 语法'
+- - '###'
+  - '`final method` 语法'
+- - '###'
+  - '`final variable` 语法'
+- - '##'
+  - finally 语法
+- - '##'
+  - float 语法
+- - '##'
+  - floor() 语法
+- - '##'
+  - for 语法
+- - '##'
+  - format() 语法
+- - '##'
+  - getBytes() 语法
+- - '##'
+  - getChars() 语法
+- - '##'
+  - getExponent() 语法
+- - '##'
+  - 全局变量语法
+- - '##'
+  - hashCode() 语法
+- - '##'
+  - HashMap 语法
+- - '##'
+  - HashSet 语法
+- - '##'
+  - hypot() 语法
+- - '##'
+  - IEEEremainder() 语法
+- - '##'
+  - if 语法
+- - '##'
+  - if-else 语法
+- - '##'
+  - implement 语法
+- - '##'
+  - import 语法
+- - '##'
+  - instanceof 语法
+- - '##'
+  - int 语法
+- - '##'
+  - interface 语法
+- - '##'
+  - intern()
+- - '##'
+  - isEmpty() 语法
+- - '##'
+  - iterator 语法
+- - '##'
+  - lambda 语法
+- - '##'
+  - lastIndexOf() 语法
+- - '##'
+  - length() 语法
+- - '##'
+  - LinkedList 语法
+- - '##'
+  - Array 语法
+- - '##'
+  - for 循环 语法
+- - '##'
+  - 增强型循环 (for-each) 语法
+- - '##'
+  - while 循环 语法
+- - '##'
+  - do-while 循环 语法
+- - '##'
+  - log10() 语法
+- - '##'
+  - log1p() 语法
+- - '##'
+  - long 语法
+- - '##'
+  - matches() 语法
+- - '##'
+  - max() 语法
+- - '##'
+  - 方法与参数语法
+- - '##'
+  - min() 语法
+- - '##'
+  - 模块（module）语法
+- - '##'
+  - multiplyExact() 语法
+- - '##'
+  - native 语法
+- - '##'
+  - negate() 语法
+- - '##'
+  - new 语法
+- - '##'
+  - offsetByCodePoints() 语法
+- - '##'
+  - nextAfter() 语法
+- - '##'
+  - nextDown() 语法
+- - '##'
+  - nextUp() 语法
+- - '##'
+  - 重载（overloading）语法
+- - '##'
+  - 方法重载 (Overloading)
+- - '##'
+  - 方法重写 (Overriding)
+- - '##'
+  - 包语法 (Package Syntax)
+- - '##'
+  - PI 语法 (PI Syntax)
+- - '###'
+  - '`Math.PI`'
+- - '##'
+  - 多态语法 (Polymorphism Syntax)
+- - '##'
+  - pow() 语法
+- - '##'
+  - print() 语法
+- - '###'
+  - '`System.out.print( );`'
+- - '###'
+  - '`System.out.println( );`'
+- - '###'
+  - '`System.out.print( "A " );`'
+- - '###'
+  - '`System.out.print( "B " );`'
+- - '###'
+  - '`System.out.println( "A " );`'
+- - '###'
+  - '`System.out.println( "B " );`'
+- - '##'
+  - 私有语法 (Private Syntax)
+- - '##'
+  - 受保护语法 (Protected Syntax)
+- - '##'
+  - 公有语法 (Public Syntax)
+- - '##'
+  - Random 语法
+- - '##'
+  - 递归语法 (Recursion)
+- - '##'
+  - regionMatches() 语法
+- - '##'
+  - '`replace()` 语法'
+- - '##'
+  - '`replaceFirst()` 语法'
+- - '##'
+  - '`replaceAll()` 语法'
+- - '##'
+  - requires 语法
+- - '##'
+  - return 语法
+- - '##'
+  - rint() 语法
+- - '##'
+  - round() 语法
+- - '##'
+  - short 语法
+- - '##'
+  - signum() 语法
+- - '##'
+  - sin() 语法
+- - '##'
+  - sinh() 语法
+- - '##'
+  - split() 语法
+- - '##'
+  - sqrt() 语法
+- - '##'
+  - startsWith() 语法
+- - '##'
+  - static variable 语法
+- - '##'
+  - static method 语法
+- - '##'
+  - strictfp 语法
+- - '##'
+  - string 语法
+- - '##'
+  - string length 语法
+- - '###'
+  - 字符串连接语法
+- - '###'
+  - StringBuffer 语法
+- - '###'
+  - subSequence() 语法
+- - '###'
+  - subString() 语法
+- - '##'
+  - subtractExact() 语法
+- - '##'
+  - super 语法
+- - '##'
+  - switch 语法
+- - '##'
+  - synchronized 语法
+- - '##'
+  - volatile 语法
+- - '##'
+  - final 语法
+- - '##'
+  - MyClass 在创建线程对象和运行线程任务之前继承 `Thread` 类
+- - '##'
+  - thread 实现 `runnable` 语法
+- - '##'
+  - throw 语法
+- - '##'
+  - throws 语法
+- - '##'
+  - time 语法
+- - '##'
+  - toCharArray() 语法
+- - '##'
+  - toDegrees() 语法
+- - '##'
+  - toIntExact() 语法
+- - '##'
+  - toLowerCase() 语法
+- - '##'
+  - toRadians() 语法
+- - '##'
+  - toString() 语法
+- - '##'
+  - toUpperCase() 语法
+- - '##'
+  - transient 语法
+- - '##'
+  - trim() 语法
+- - '##'
+  - 用户输入语法
+- - '##'
+  - valueOf() 语法
+- - '##'
+  - var 语法
+- - '##'
+  - 变量语法（声明并赋值）
+- - '##'
+  - 变量语法（先声明后赋值）
+- - '##'
+  - void 语法
+- - '##'
+  - while 语法
+- - '##'
+  - 包装类语法
+- - '#'
+  - 附录

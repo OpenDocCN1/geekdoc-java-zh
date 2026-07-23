@@ -1,0 +1,178 @@
+- "# Android 应用开发基础：初学者学习 Android 技术、SQLite、Firebase 和 Unity 的 Android 开发（英文版）\n\n\
+  \n\n\n\n\n\n\n\n献给 `Sudha Mishra`，我的母亲，她慈爱的精神依然支持着我。\n\n## 关于作者\n`Sujit Kumar Mishra`\
+  \ 是一位经验丰富的软件工程师，过去七年来一直与客户和合作伙伴一起设计技术解决方案。在职业生涯中，`Sujit Kumar Mishra` 在 `C# .Net`、`Java\
+  \ (Android)`、`PHP`、`SAP (MM)` 以及数据库 `SQL Server`、`MySQL` 等关键 IT 活动中进行过。他曾在 `Tata\
+  \ Steel`、`BPCL`、`Sun pharma` 和 `KPMG` 担任高级软件职位和项目管理职位。\n\n2020 年，`Sujit Kumar Mishra`\
+  \ 创立了自己的网站，目前在那里担任创始人兼首席技术官。`Sujit Kumar Mishra` 还写了其他四本书：小说《神秘岛 Zoya》、《Dot net\
+  \ & MVC 面试题：面试准备，如何致富》以及 2019 年出版的《一日数学》。在工作之外，`Sujit Kumar Mishra` 是一位出演过电视和宝莱坞电影的演员。\n\
+  \n## 谢谢\n我想感谢几位在本书写作期间向我持续支持的人。首先，我要感谢我的父母和朋友 `Anoop Sriwastawa`、`Pritesh Sawant`\
+  \ 和 `Harish`，感谢在我花费许多周末和晚上写作时包容我——没有他们的支持，我永远无法完成这本书。\n\n如果没有 IT 团队中一些关键供应商和合作伙伴的支持，这本书就不会诞生。我感谢\
+  \ `Computer world` 团队，特别是 `Pritesh Sawant`，他为其中的一些新功能提供了宝贵的见解。最后，感谢 `BPB Publications`\
+  \ 给我这个机会为他们写我的第一本书。\n\n## 前言\nAndroid 技术是由美国 Google 开发的技术。它是全球销售最畅销、用户最多的技术。`Android\
+  \ framework` 是一个我们可以为用户开发 Web 应用程序、移动应用程序、地图、多媒体应用和云服务的平台。在此，我们必须涵盖在开发过程中遇到问题的学生和专业人士最常见的问题解答。我在\
+  \ IT 行业拥有六多年的工作经验。我必须从不同类型的来源收集信息，包括与同一领域的人见面并合作等，并且必须从书中找出问题所在以及如何解决它。\n\n诚挚地感谢：\n\
+  - 我的出版者 `BPB publication` 及其团队。他给我的生活带来了巨大的变化。他们总是指导并鼓励我工作。\n- 读这些材料的 Android 书书读者，没有你们，它无法完成。\n\
+  - 最后，一直鼓励我的朋友和家人。\n\n## 序言\n与目前现有的应用程序交付解决方案以及应用程序通常如何交付到物理手机相比，Android 的应用层化仍然是一项近期进展。这种旧的应用程序交付模型必须改变，以采用虚拟环境提供的完整特性和功能。\n\
+  \n这种改变是为了解决如何向无状态虚拟机交付应用程序的问题。这种无状态或非持久的按需交付和构建虚拟机模型意味着终端用户并不“拥有”他们的虚拟机，而是根据需要分配一台全新的、新构建的机器。当他们下次登录时，将再次登录到一个新构建的设备。\n\
+  \nApp Volumes 提供了什么？从高层次来说，`App Volumes` 提供实时应用交付，可以作为您的 `android` 实时服务器的交付系统。本书的主要目标是提供必要的信息，以理解\
+  \ Android 应用以及如何工作。\n\n## 第一章：Android 基础\n### 第 1 节：介绍\n应用层化作为一个概念以及如何工作。\n### 第\
+  \ 2 节\n本节提供了关于 `Android App` 要求的必要信息。\n### 第 3 节：问题与解答\n本节提供了关于 Android 设备的常见答案。\n\
+  ### 第 4 节：练习\n本节提供了实用的 解决方案，并在未来的 Android 应用中进行练习。\n\n## 第二章：SQLite 与 Android\n\
+  ### 第 1 节\n使用 `SQLite` 的实际截图显示了不同的组件以及如何工作。\n### 第 2 节：问题与解答\n本节提供了根据业务要求的分步说明以及如何工作。\n\
+  ### 第 3 节：Firebase 服务\n对于 Android 设备，这是最常见的实时数据。\n### 第 4 节：Unity 服务\n包括 2D 和 3D\
+  \ 游戏开发以及 Android 界面。\n### 第 5 节：Android 项目\n这是 Android Android 开发者的实用部分。\n\n## 实现示例\n\
+  \n### 如何开发 SMS 应用\n1. 在 Activity XML 中添加以下代码：\n```xml\n<?xml version=\"1.0\" encoding=\"\
+  utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+  \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+  http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+  \    android:layout_height=\"match_parent\"\n    android:orientation=\"vertical\"\
+  \n    android:background=\"#E0FFFF\"\n    tools:context=\".MainActivity\"\n    android:layout_width=\"\
+  match_parent\"\n    android:layout_height=\"wrap_content\"\n    android:text=\"\
+  @string/enter_mobile_number_and_messages\"\n    android:textAlignment=\"center\"\
+  \n    android:textScaleX=\"1.5\"\n    android:textSize=\"25dp\"\n    android:layout_marginTop=\"\
+  20dp\">\n\n    <EditText\n        android:id=\"@+id/fstTxt\"\n        android:layout_width=\"\
+  wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+  100dp\"\n        android:layout_marginTop=\"150dp\"\n        android:text=\"Mobile\
+  \ No\" />\n\n    <EditText\n        android:id=\"@+id/mblTxt\"\n        android:layout_width=\"\
+  wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+  100dp\"\n        android:ems=\"10\" />\n\n    <EditText\n        android:id=\"@+id/secTxt\"\
+  \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+  wrap_content\"\n        android:text=\"Message\"\n        android:layout_marginLeft=\"\
+  100dp\" />\n\n    <EditText\n        android:id=\"@+id/msgTxt\"\n        android:layout_width=\"\
+  wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginLeft=\"\
+  100dp\"\n        android:ems=\"10\" />\n\n    <Button\n        android:id=\"@+id/smsbtnSend\"\
+  \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+  wrap_content\"\n        android:layout_marginLeft=\"100dp\"\n        android:text=\"\
+  Send SMS\" />\n</LinearLayout>\n```\n2. 在你的 Manifest 文件中添加权限：\n```xml\n<uses-permission\
+  \ android:name=\"android.permission.SEND_SMS\" />\n```\n3. 在 MainActivity 的 Java\
+  \ 文件中添加以下代码：\n```java\npackage com.homeworld.android;\n\nimport android.content.Intent;\n\
+  import android.net.Uri;\nimport android.support.v7.app.AppCompatActivity;\nimport\
+  \ android.os.Bundle;\nimport android.telephony.SmsManager;\nimport android.view.View;\n\
+  import android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.Toast;\n\
+  \npublic class MainActivity extends AppCompatActivity {\n    private EditText txtMobile;\n\
+  \    private EditText txtMessage;\n    private Button btnms;\n\n    @Override\n\
+  \    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\
+  \        setContentView(R.layout.activity_main);\n        txtMobile = (EditText)\
+  \ findViewById(R.id.mblTxt);\n        txtMessage = (EditText) findViewById(R.id.msgTxt);\n\
+  \        btnms = (Button) findViewById(R.id.smsbtnSend);\n        btnms.setOnClickListener(new\
+  \ View.OnClickListener() {\n            @Override\n            public void onClick(View\
+  \ v) {\n                try {\n                    Intent i = new Intent(Intent.ACTION_VIEW);\n\
+  \                    i.setData(Uri.parse(\"smto:\" + txtMobile.toString()));\n \
+  \                   i.setType(\"vnd.android.mms\");\n                    i.putExtra(\"\
+  address\", txtMobile.toString());\n                    i.putExtra(\"body\", txtMessage.toString());\n\
+  \                    startActivity(Intent.createChooser(i, \"Send via Mobile:\"\
+  ));\n                } catch (Exception e) {\n                    Toast.makeText(MainActivity.this,\
+  \ \"SMS to Send, Please try again\", Toast.LENGTH_SHORT).show();\n             \
+  \   }\n            }\n        });\n    }\n}\n```\n\n### 如何创建音乐播放器\n1. MainActivity\
+  \ 的 XML 代码：\n```xml\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout\
+  \ xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"\
+  http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\
+  \n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\
+  \n    android:background=\"@drawable/background\"\n    tools:context=\".MainActivity\"\
+  >\n\n    <ImageButton\n        android:id=\"@+id/btn_play\"\n        android:layout_width=\"\
+  90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_centerHorizontal=\"\
+  true\"\n        android:layout_marginTop=\"550dp\"\n        android:background=\"\
+  @drawable/play\" />\n\n    <ImageButton\n        android:id=\"@+id/btn_pause\"\n\
+  \        android:layout_width=\"90dp\"\n        android:layout_height=\"90dp\"\n\
+  \        android:layout_marginLeft=\"10dp\"\n        android:background=\"@drawable/pause\"\
+  \n        android:layout_startOf=\"@+id/btn_play\"\n        android:layout_leftOf=\"\
+  @+id/btn_play\" />\n\n    <ImageButton\n        android:id=\"@+id/btn_stop\"\n \
+  \       android:layout_width=\"90dp\"\n        android:layout_height=\"90dp\"\n\
+  \        android:layout_alignEnd=\"@+id/btn_play\"\n        android:layout_rightOf=\"\
+  @+id/btn_play\"\n        android:background=\"@drawable/stop\" />\n</RelativeLayout>\n\
+  ```\n2. 在你的项目中添加新的 raw 文件夹并添加一个用于音乐 `aaja.mp3`。\n3. 在 Main Activity 文件中添加以下代码：\n\
+  ```java\npackage com.example.marinamusicplayer;\n\nimport android.media.MediaPlayer;\n\
+  import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport\
+  \ android.view.View;\nimport android.widget.Button;\n\npublic class MainActivity\
+  \ extends AppCompatActivity implements View.OnClickListener {\n    Button play,\
+  \ pause, stop;\n    int pausePosittion;\n    MediaPlayer mediaPlayer;\n\n    @Override\n\
+  \    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\
+  \        setContentView(R.layout.activity_main);\n        play = (Button) findViewById(R.id.btn_play);\n\
+  \        pause = (Button) findViewById(R.id.btn_pause);\n        stop = (Button)\
+  \ findViewById(R.id.btn_stop);\n        play.setOnClickListener(this);\n       \
+  \ pause.setOnClickListener(this);\n        stop.setOnClickListener(this);\n    }\n\
+  \n    @Override\n    public void onClick(View view) {\n        switch (view.getId())\
+  \ {\n            case R.id.btn_play:\n                if (mediaPlayer == null) {\n\
+  \                    mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.aaja);\n\
+  \                    mediaPlayer.start();\n                } else if (!mediaPlayer.isPlaying())\
+  \ {\n                    mediaPlayer.seekTo(pausePosittion);\n                 \
+  \   mediaPlayer.start();\n                }\n                break;\n          \
+  \  case R.id.btn_pause:\n                if (mediaPlayer != null) {\n          \
+  \          pausePosittion = mediaPlayer.getCurrentPosition();\n                \
+  \    mediaPlayer.pause();\n                }\n                break;\n         \
+  \   case R.id.btn_stop:\n                if (mediaPlayer != null) {\n          \
+  \          mediaPlayer.stop();\n                    mediaPlayer = null;\n      \
+  \          }\n                break;\n        }\n    }\n}\n```\n\n### 如何从一个 Activity\
+  \ 调用另一个 Activity\n1. XML (MainActivity) 的代码：\n```xml\n<?xml version=\"1.0\" encoding=\"\
+  utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+  \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+  http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+  \    android:layout_height=\"match_parent\"\n    android:background=\"@drawable/time\"\
+  \n    tools:context=\".MainActivity\"\n    android:layout_width=\"wrap_content\"\
+  \n    android:layout_height=\"wrap_content\"\n    android:text=\"Welcome to First\
+  \ Page\"\n    android:textSize=\"30dp\"\n    android:layout_centerHorizontal=\"\
+  true\">\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"\
+  90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+  450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+  Next\" />\n</RelativeLayout>\n```\n2. Main Activity Java 代码：\n```java\npackage com.example.marina_secret;\n\
+  \nimport android.app.Activity;\nimport android.content.Intent;\nimport android.support.v7.app.AppCompatActivity;\n\
+  import android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\n\
+  \npublic class MainActivity extends AppCompatActivity {\n    private Button button;\n\
+  \n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n    \
+  \    super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n\
+  \        button = (Button) findViewById(R.id.button);\n        button.setOnClickListener(new\
+  \ View.OnClickListener() {\n            @Override\n            public void onClick(View\
+  \ v) {\n                Next();\n            }\n        });\n    }\n\n    public\
+  \ void Next() {\n        Intent intent = new Intent(this, Activity2.class);\n  \
+  \      startActivity(intent);\n    }\n}\n```\n3. Activity 2 的 XML 代码：\n```xml\n\
+  <?xml version=\"1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+  \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+  http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+  \    android:layout_height=\"match_parent\"\n    android:background=\"@color/accent\"\
+  \n    tools:context=\".Activity2\">\n\n    <TextView\n        android:id=\"@+id/titleid\"\
+  \n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"\
+  wrap_content\"\n        android:text=\"Second Page\"\n        android:textSize=\"\
+  30sp\"\n        android:textStyle=\"italic\"\n        android:centerHorizontal=\"\
+  true\"\n        android:textColor=\"#FFFFFF\"/>\n\n    <ImageView\n        android:layout_width=\"\
+  450dp\"\n        android:layout_height=\"350dp\"\n        android:layout_below=\"\
+  @+id/titleid\"\n        android:src=\"@drawable/time\"\n        android:scaleType=\"\
+  fitXY\"/>\n\n    <Button\n        android:id=\"@+id/button2\"\n        android:layout_width=\"\
+  90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+  450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+  Next\"\n        android:textSize=\"20dp\"/>\n</RelativeLayout>\n```\n4. Activity\
+  \ 2 的 Java 代码：\n```java\npackage com.example.marina_secret;\n\nimport android.content.Intent;\n\
+  import android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport\
+  \ android.view.View;\nimport android.widget.Button;\n\npublic class Activity2 extends\
+  \ AppCompatActivity {\n    private Button button2;\n\n    @Override\n    protected\
+  \ void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n\
+  \        setContentView(R.layout.activity_2);\n        button2 = (Button) findViewById(R.id.button2);\n\
+  \        button2.setOnClickListener(new View.OnClickListener() {\n            @Override\n\
+  \            public void onClick(View v) {\n                Next();\n          \
+  \  }\n        });\n    }\n\n    public void Next() {\n        Intent intent = new\
+  \ Intent(this, MainActivity.class);\n        startActivity(intent);\n    }\n}\n\
+  ```\n\n### 如何在项目中添加横幅广告？\n1. 在 Manifest 文件添加以下代码：\n```xml\n<uses-permission android:name=\"\
+  android.permission.ACCESS_NETWORK\" />\n```\n在 meta-data 中添加以下代码（更多详情请访问 Google\
+  \ 更新网站）：\n```xml\n<meta-data\n    name=\"com.google.android.ads.APPLICATION_ID\"\
+  \n    value=\"ca-app-pub-873399301722397/92347129\"/>\n```\n2. 在你的 Main Activity\
+  \ 文件中添加以下代码：\n```java\nprivate AdView mAdView;\n// 为我的项目添加横幅广告\nAds.initialize(this,\
+  \ \"ca-app-pub-873399301722397/92347129\");\nmAdView = findViewById(R.id.adView);\n\
+  AdRequest request = new AdRequest.Builder().build();\nmAdView.loadAd(request);\n\
+  ```\n3. 在 XML 文件中添加以下广告代码：\n```xml\n<com.google.android.gms.ads.AdView\n    android:id=\"\
+  @+id/adView\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"\
+  wrap_content\"\n    android:layout_centerHorizontal=\"true\"\n    android:layout_alignParentBottom=\"\
+  true\"\n    android:layout_gravity=\"center\"\n    ads:adSize=\"BANNER\"\n    ads:adUnitId=\"\
+  ca-app-pub-873399301722397/923471291\"/>\n```\n4. 在项目的 Gradle 中添加以下库：\n```gradle\n\
+  implementation 'com.google.android.gms:play-services-ads:17.2.1'\n```\n\n### 如何在\
+  \ Android 中开发反馈表单？\n1. 在你的清单文件中添加以下权限代码：\n```xml\n<uses-permission android:name=\"\
+  android.permission.INTERNET\" />\n```\n2. 在 layout 文件中添加以下代码：\n```xml\n<?xml version=\"\
+  1.0\" encoding=\"utf-8\"?>\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\
+  \n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"\
+  http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n\
+  \    android:layout_height=\"match_parent\"\n    android:background=\"@drawable/time\"\
+  \n    tools:context=\".MainActivity\"\n    android:layout_width=\"wrap_content\"\
+  \n    android:layout_height=\"wrap_content\"\n    android:text=\"Welcome to First\
+  \ Page\"\n    android:textSize=\"30dp\"\n    android:layout_centerHorizontal=\"\
+  true\">\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"\
+  90dp\"\n        android:layout_height=\"90dp\"\n        android:layout_marginTop=\"\
+  450dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:text=\"\
+  Next\" />\n</RelativeLayout>\n```\n"

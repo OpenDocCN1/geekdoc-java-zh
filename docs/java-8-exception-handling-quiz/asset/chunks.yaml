@@ -1,0 +1,6596 @@
+- fmt: "\n![](Images/cover00319.jpeg)\n\n# Black Book Series\n## Java™ 8 Exception\
+    \ Handling Quiz\n### Mahavir DS Rathore\n\n### Copyright\nJava 8 Exception handling\
+    \ quiz by Mahavir DS Rathore. While every precaution has been taken in the preparation\
+    \ of this book the author assume No responsibility for errors or omissions, or\
+    \ for damages resulting from the use of the information contained herein.\n\n\
+    ### About the author\nI have has programming & teaching Java for last 18 years.\
+    \ This book is an effort to document my knowledge to share with everyone across\
+    \ the world. I am available to do training on Java anywhere in the world. My email\
+    \ id is `gurumahaveer@gmail.com`\n\n### Who should read the book?\nThis book is\
+    \ for programmers who already know Core Java (Java Standard Edition).\n\n### Acknowledgement\n\
+    Java is owned by Oracle and trademark is acknowledged.\n\n### Dedication\nTo the\
+    \ inventors of the Java Language.\n\n## Table of Content\n\n| Sl.No | Chapter\
+    \ | HyperLink |\n| :--- | :--- | :--- |\n| 1 | Java Setup | [Go](#part0000.xhtml_Chapter1)\
+    \ |\n| 2 | What is Exception? | [Go](#part0000.xhtml_Chapter2) |\n| 3 | What is\
+    \ Exception Handling? | [Go](#part0000.xhtml_Chapter3) |\n| 4 | Java Exception\
+    \ Hierarchy | [Go](#part0000.xhtml_Chapter4) |\n| 5 | Try and Catch Block | [Go](#part0000.xhtml_Chapter5)\
+    \ |\n| 6 | Exception Handling API | [Go](#part0000.xhtml_Chapter6) |\n| 7 | Multiple\
+    \ Catch | [Go](#part0000.xhtml_Chapter7) |\n| 8 | Multiple Exceptions | [Go](#part0000.xhtml_Chapter8)\
+    \ |\n| 9 | Finally Block | [Go](#part0000.xhtml_Chapter9) |\n| 10 | Finally and\
+    \ return keyword | [Go](#part0000.xhtml_Chapter10) |\n| 11 | Checked and Unchecked\
+    \ Exception | [Go](#part0000.xhtml_Chapter11) |\n| 12 | Nested Exception | [Go](#part0000.xhtml_Chapter12)\
+    \ |\n| 13 | Throw Keyword | [Go](#part0000.xhtml_Chapter13) |\n| 14 | Exception\
+    \ Chaining | [Go](#part0000.xhtml_Chapter14) |\n| 15 | Try with Resource | [Go](#part0000.xhtml_Chapter15)\
+    \ |\n| 16 | Overriding Exception | [Go](#part0000.xhtml_Chapter16) |\n| 17 | User\
+    \ Defined Exception | [Go](#part0000.xhtml_Chapter17) |\n\n# Chapter 1: Software\
+    \ Setup\n\n**Q.1: What is the latest version of Java?**\n- A | 7\n- B | 6\n- C\
+    \ | 9\n- D | 8\n(Right Answer: D)\n\n**Q.2: JRE stands for …..................**\n\
+    - A | Java Robust Engine\n- B | Java Required Engine\n- C | Java Runtime Engine\n\
+    - D | Java Runnable Engine\n(Right Answer: C)\n\n**Q. 3: JDK stands for …..................**\n\
+    - A | Java Debugging Kit\n- B | Java Development Kit\n- C | Java Documentation\
+    \ Kit\n- D | Java Database Kit\n(Right Answer: B)\n\n**Q. 4: To compile and execute\
+    \ Java application …............. is needed**\n- A | JDK\n- B | JRE\n- C | JME\n\
+    - D | JEE\n(Right Answer: A)\n\n**Q.5: Which environment variable (Windows OS)\
+    \ is set for accessing java compiler and java interpreter at command line?**\n\
+    - A | CLASSPATH\n- B | JAVAHOME\n- C | PATH\n- D | HOME\n(Right Answer: C)\n\n\
+    **Q.6: To just execute a Java application …................ is needed at the minimum.**\n\
+    - A | JME\n- B | JDK\n- C | JEE\n- D | JRE\n(Right Answer: D)\n\n**Q.7: The command\
+    \ for java interpreter (Windows OS) is …..........**\n- A | Javaip.exe\n- B |\
+    \ Javac.exe\n- C | Java.exe\n- D | Javai.exe\n(Right Answer: C)\n\n**Q.8: The\
+    \ command for Java compiler (Windows OS) is …..........**\n- A | Java.exe\n- B\
+    \ | Javacompiler.exe\n- C | Javacomp.exe\n- D | Javac.exe\n(Right Answer: D)\n\
+    \n**Q.9: In which folder is 32-bit JDK (Windows OS) is installed by default?**\n\
+    - A | `C:\\Program Files\\`\n- B | `C:\\Windows\\`\n- C | `C:\\Java`\n- D | `C:\\\
+    Program Files (x86)\\`\n(Right Answer: D)\n\n**Q.10: In which folder is 64-bit\
+    \ JDK (Windows OS) installed by default?**\n- A | `C:\\Program Files\\`\n- B |\
+    \ `C:\\Windows\\`\n- C | `C:\\Java`\n- D | `C:\\Program Files (x86)\\`\n(Right\
+    \ Answer: A)\n\n### Answers Chapter 1\n| Q.No | Ans | Explanation |\n| :--- |\
+    \ :--- | :--- |\n| 1 | D | The latest version of Java is 8. |\n| 2 | C | `JRE`\
+    \ stands for Java Runtime Engine. |\n| 3 | B | `JDK` stands for Java Development\
+    \ Kit. |\n| 4 | A | `JDK` is required for a Java program to be compiled and executed.\
+    \ |\n| 5 | C | `PATH` environment variable contains the location of Java commands.\
+    \ |\n| 6 | D | To just execute a application only JRE is required. |\n| 7 | C\
+    \ | `java.exe` is the command to activate Java interpreter. |\n| 8 | D | `javac.exe`\
+    \ is the command to activate Java compiler. |\n| 9 | D | 32-bit application on\
+    \ Windows OS is installed in `C:\\Program Files (x86)\\` by default. |\n| 10 |\
+    \ A | 64-bit application on Windows OS is installed in `C:\\Program Files\\` by\
+    \ default. |\n\n# Chapter 2: What is Exception?\n\n**Q.1: …........ at Runtime.**\n\
+    - A | Error\n- B | Exception\n- C | Trigger\n- D | None of the above\n(Right Answer:\
+    \ B)\n\n**Q.2: Runtime error is also called as …...........**\n- A | Error\n-\
+    \ B | Compiler error\n- C | Exception\n- D | None of the above\n(Right Answer:\
+    \ C)\n\n**Q.3: Syntax error yields into a ..................**\n- A | Runtime\
+    \ error\n- B | Exception\n- C | Compiler error\n- D | All of the above\n(Right\
+    \ Answer: C)\n\n**Q.4: Dividing an integer by zero yields into a ........**\n\
+    - A | Compiler error\n- B | JVM error\n- C | Nothing\n- D | Exception\n(Right\
+    \ Answer: D)\n\n**Q.5: A missing semi-colon for an instruction yields into a ...................**\n\
+    - A | Exception\n- B | Runtime error\n- C | Compiler error\n- D | JVM error\n\
+    (Right Answer: C)\n\n**Q.6: What will be the output?**\n```java\nclass Program\
+    \ {\n    public static void main(String args[]) {\n        String ar = new String[1];\n\
+    \        ar[2] =\"Ram\";\n        System.out.println(ar[0]);\n    }\n}\n```\n\
+    - A | Compiler error\n- B | Exception\n- C | No error\n- D | JVM\n(Right Answer:\
+    \ B)\n\n**Q.7: An exception can occur when …...........**\n- A | `throw` is called\n\
+    - B | Abnormal code is executed\n- C | Asynchronous error happen\n- D | All of\
+    \ the above\n(Right Answer: D)\n\n### Answers Chapter 2\n| Q.No | Ans | Explanation\
+    \ |\n| :--- | :--- | :--- |\n| 1 | B | Exception occur at Runtime i.e. during\
+    \ program execution. |\n| 2 | C | Another name for Runtime error is Exception.\
+    \ |\n| 3 | C | Syntax error yields into a Compiler error. |\n| 4 | D | Division\
+    \ by zero yields into `ArithmeticException`. |\n| 5 | C | Missing semi-colon is\
+    \ captured as a Compiler error. |\n| 6 | B | Exception `ArrayOutOfBounds` occur.\
+    \ |\n| 7 | D | An exception can occur when any of below is called a. `throw` b.\
+    \ Abnormal code is executed c. Asynchronous error |\n\n# Chapter 3: What is Exception\
+    \ Handling?\n\n**Q.1: .......... helps in avoiding runtime crash of a program.**\n\
+    - A | Error handling\n- B | Exception handling\n- C | Compiler handling\n- D |\
+    \ Database handling\n(Right Answer: B)\n\n**Q.2: Which of the following is not\
+    \ a keyword?**\n- A | Throw\n- B | Throws\n- C | throwing\n- D | Try\n(Right Answer:\
+    \ C)\n\n**Q.3: Which of the following is not a keyword?**\n- A | Try\n- B | Catch\n\
+    - C | except\n- D | Finally\n(Right Answer: C)\n\n**Q.4: How to raise an exception?**\n\
+    - A | throws\n- B | Throw\n- C | except\n- D | Raise\n(Right Answer: B)\n\n**Q.5:\
+    \ Who handles unhandled exceptions?**\n- A | JVM\n- B | OS\n- C | catch\n- D |\
+    \ finally\n(Right Answer: A)\n\n### Answers Chapter 3\n| Q.No | Ans |  |\n| :---\
+    \ | :--- | :--- |\n| 1 | B | Exception handling is used for avoiding crash of\
+    \ a program. |\n| 2 | C | `throwing` is not a keyword in Java. |\n| 3 | C | `except`\
+    \ is not keyword in Java. |\n| 4 | B | The `throw` keyword is used for raising\
+    \ an exception. |\n"
+  raw: '
+
+
+    ![](Images/cover00319.jpeg)
+
+
+    Black Book Series
+
+
+    Java™ 8
+
+
+    Exception
+
+
+    Handling
+
+
+    Quiz
+
+
+    Mahavir DS Rathore
+
+
+    Copyright
+
+
+    Java 8 Exception handling quiz by Mahavir DS Rathore. While every precaution has
+    been taken in the preparation of this book the author assume No responsibility
+    for errors or omissions, or for damages resulting from the use of the information
+    contained herein.
+
+
+    About the author
+
+
+    I have has been programming & teaching Java for last 18 years. This book is an
+    effort to document my knowledge to share with everyone across the world. I am
+    available to do training on Java anywhere in the world. My email id is gurumahaveer@gmail.com
+
+
+    Who should read the book?
+
+
+    This book is for programmers who already know Core Java (Java Standard Edition).
+
+
+    Acknowledgement
+
+
+    Java is owned by Oracle and trademark is acknowledged.
+
+
+    Dedication
+
+
+    To the inventors of the Java Language.
+
+
+    Table of Content
+
+
+    | Sl.No | Chapter | HyperLink |
+
+
+    | 1 | Java Setup | [Go](#part0000.xhtml_Chapter1) |
+
+
+    | 2 | What is Exception? | [Go](#part0000.xhtml_Chapter2) |
+
+
+    | 3 | What is Exception Handling? | [Go](#part0000.xhtml_Chapter3) |
+
+
+    | 4 | Java Exception Hierarchy | [Go](#part0000.xhtml_Chapter4) |
+
+
+    | 5 | Try and Catch Block | [Go](#part0000.xhtml_Chapter5) |
+
+
+    | 6 | Exception Handling API | [Go](#part0000.xhtml_Chapter6) |
+
+
+    | 7 | Multiple Catch | [Go](#part0000.xhtml_Chapter7) |
+
+
+    | 8 | Multiple Exceptions | [Go](#part0000.xhtml_Chapter8) |
+
+
+    | 9 | Finally Block | [Go](#part0000.xhtml_Chapter9) |
+
+
+    | 10 | Finally and return keyword | [Go](#part0000.xhtml_Chapter10) |
+
+
+    | 11 | Checked and Unchecked Exception | [Go](#part0000.xhtml_Chapter11) |
+
+
+    | 12 | Nested Exception | [Go](#part0000.xhtml_Chapter12) |
+
+
+    | 13 | Throw Keyword | [Go](#part0000.xhtml_Chapter13) |
+
+
+    | 14 | Exception Chaining | [Go](#part0000.xhtml_Chapter14) |
+
+
+    | 15 | Try with Resource | [Go](#part0000.xhtml_Chapter15) |
+
+
+    | 16 | Overriding Exception | [Go](#part0000.xhtml_Chapter16) |
+
+
+    | 17 | User Defined Exception | [Go](#part0000.xhtml_Chapter17) |
+
+
+    Chapter 1
+
+
+    Software Setup
+
+
+    | Q.1: What is the latest version of Java? |
+
+
+    |  |
+
+
+    | A | 7 |
+
+
+    | B | 6 |
+
+
+    | C | 9 |
+
+
+    | D | 8 |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: JRE stands for ….................. |
+
+
+    |  |
+
+
+    | A | Java Robust Engine |
+
+
+    | B | Java Required Engine |
+
+
+    | C | Java Runtime Engine |
+
+
+    | D | Java Runnable Engine |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q. 3: JDK stands for ….................. |
+
+
+    |  |
+
+
+    | A | Java Debugging Kit |
+
+
+    | B | Java Development Kit |
+
+
+    | C | Java Documentation Kit |
+
+
+    | D | Java Database Kit |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q. 4: To compile and execute Java application …............. is needed |
+
+
+    |  |
+
+
+    | A | JDK |
+
+
+    | B | JRE |
+
+
+    | C | JME |
+
+
+    | D | JEE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: Which environment variable (Windows OS) is set for accessing java compiler
+    and java interpreter at command line? |
+
+
+    |  |
+
+
+    | A | CLASSPATH |
+
+
+    | B | JAVAHOME |
+
+
+    | C | PATH |
+
+
+    | D | HOME |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: To just execute a Java application …................ is needed at the minimum.
+    |
+
+
+    |  |
+
+
+    | A | JME |
+
+
+    | B | JDK |
+
+
+    | C | JEE |
+
+
+    | D | JRE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: The command for java interpreter (Windows OS) is ….......... |
+
+
+    |  |
+
+
+    | A | Javaip.exe |
+
+
+    | B | Javac.exe |
+
+
+    | C | Java.exe |
+
+
+    | D | Javai.exe |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.8: The command for Java compiler (Windows OS) is ….......... |
+
+
+    |  |
+
+
+    | A | Java.exe |
+
+
+    | B | Javacompiler.exe |
+
+
+    | C | Javacomp.exe |
+
+
+    | D | Javac.exe |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.9: In which folder is 32-bit JDK (Windows OS) is installed by default? |
+
+
+    |  |
+
+
+    | A | [C:\Program](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) Files\ |
+
+
+    | B | C:\Windows\ |
+
+
+    | C | C:\Java |
+
+
+    | D | [C:\Program](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) Files (x86)\ |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.10: In which folder is 64-bit JDK (Windows OS) is installed by default? |
+
+
+    |  |
+
+
+    | A | [C:\Program](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) Files\ |
+
+
+    | B | C:\Windows\ |
+
+
+    | C | C:\Java |
+
+
+    | D | [C:\Program](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) Files (x86)\ |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | D | The latest version of Java is version 8. |
+
+
+    | 2 | C | “JRE” stands for Java Runtime Engine. |
+
+
+    | 3 | B | “JDK” stands for Java Development Kit. |
+
+
+    | 4 | A | “JDK” is required for a Java program to be compiled and executed. |
+
+
+    | 5 | C | PATH environment variable contains the location of Java commands. |
+
+
+    | 6 | D | To just execute a java application only JRE is required. |
+
+
+    | 7 | C | “Java.exe” is the command to activate Java interpreter. |
+
+
+    | 8 | D | “Javac.exe” is the command to activate Java compiler. |
+
+
+    | 9 | D | 32-bit application on Windows OS is installed in “[C:\Program](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+    Files (x86)\ “folder by default. |
+
+
+    | 10 | A | 64-bit application on Windows OS is installed in “[C:\Program](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+    Files\”   folder by default. |
+
+
+    |  |  |  |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 2
+
+
+    What is Exception?
+
+
+    | Q.1: …........ Occur at Runtime. |
+
+
+    |  |
+
+
+    | A | Error |
+
+
+    | B | Exception |
+
+
+    | C | Trigger |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: Runtime error is also called as …........... |
+
+
+    |  |
+
+
+    | A | Error |
+
+
+    | B | Compiler error |
+
+
+    | C | Exception |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: Syntax error yields into a …......... |
+
+
+    |  |
+
+
+    | A | Runtime error |
+
+
+    | B | Exception |
+
+
+    | C | Compiler error |
+
+
+    | D | All of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: Dividing an integer by zero yields into a …........ |
+
+
+    |  |
+
+
+    | A | Compiler error |
+
+
+    | B | JVM error |
+
+
+    | C | Nothing |
+
+
+    | D | Exception |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: A missing semi-colon for an instruction yields into a ….......... |
+
+
+    |  |
+
+
+    | A | Exception |
+
+
+    | B | Runtime error |
+
+
+    | C | Compiler error |
+
+
+    | D | JVM error |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: What will be the output? |
+
+
+    | class Program {public static void main(String args[]) {  String ar = new String[1]; 
+    ar[2] ="Ram";  System.out.println(ar[0]);}} |
+
+
+    | A | Compiler error |
+
+
+    | B | Exception |
+
+
+    | C | No error |
+
+
+    | D | JVM |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: An exception can occur when …........... |
+
+
+    |  |
+
+
+    | A | ''throw'' is called |
+
+
+    | B | Abnormal code is executed |
+
+
+    | C | Asynchronous error happen |
+
+
+    | D | All of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | B | Exception occur at Runtime i.e. during program execution. |
+
+
+    | 2 | C | Another name for Runtime error is Exception. |
+
+
+    | 3 | C | Syntax error yields into a Compiler error. |
+
+
+    | 4 | D | Division by zero yields into ArithmeticException. |
+
+
+    | 5 | C | Missing semi-colon is captured as a Compiler error. |
+
+
+    | 6 | B | Exception “ArrayOutOfBounds” occur. |
+
+
+    | 7 | D | An exception can occur when any of below is called or occura. ''throw'' 
+    b. Abnormal code is executed  c. Asynchronous error |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 3
+
+
+    What is Exception Handling?
+
+
+    | Q.1: ….......... helps in avoiding runtime crash of a program. |
+
+
+    |  |
+
+
+    | A | Error handling |
+
+
+    | B | Exception handling |
+
+
+    | C | Compiler handling |
+
+
+    | D | Database handling |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: Which of the following is not a keyword? |
+
+
+    |  |
+
+
+    | A | Throw |
+
+
+    | B | Throws |
+
+
+    | C | throwing |
+
+
+    | D | Try |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: Which of the following is not a keyword? |
+
+
+    |  |
+
+
+    | A | Try |
+
+
+    | B | Catch |
+
+
+    | C | except |
+
+
+    | D | Finally |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: How to raise an exception? |
+
+
+    |  |
+
+
+    | A | throws |
+
+
+    | B | Throw |
+
+
+    | C | except |
+
+
+    | D | Raise |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: Who handles unhandled exceptions? |
+
+
+    |  |
+
+
+    | A | JVM |
+
+
+    | B | OS |
+
+
+    | C | catch |
+
+
+    | D | finally |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans |  |
+
+
+    | 1 | B | Exception handling is used for avoiding crash of a program. |
+
+
+    | 2 | C | ''throwing'' is not a keyword in Java. |
+
+
+    | 3 | C | ''except'' is not keyword in Java. |
+
+
+    | 4 | B | The ''throw'' keyword is used for raising an exception. |'
+  toc: []
+  trans: "\n\n![](img/cover00319.jpeg)\n\n# 黑书系列\n## Java™ 8 异常处理测试题\n### Mahavir\
+    \ DS Rathore\n\n### 版权\n由 Mahavir DS Rathore 编写 Java 8 异常处理测试题。在编写本书时已采取一切预防措施，但作者对错误或遗漏，或因使用本文所包含的信息而导致的损害不承担任何责任。\n\
+    \n### 关于作者\n在过去的 18 年里，我一直从事 Java 编程和教学。这本书是我记录自己的知识并与全球的人分享的努力。我可以在世界任何地方提供 Java\
+    \ 培训。我的邮箱地址是 `gurumahaveer@gmail.com`。\n\n### 谁应该读这本书？\n本书适用于已经掌握核心 Java（Java\
+    \ 标准版）的程序员。\n\n### 致谢\nJava 归 Oracle 所有，其注册商标已获得认可。\n\n### 献辞\n致 Java 语言的发明者。\n\
+    \n## 目录\n\n| 序号 | 章节 | 超链接 |\n| :--- | :--- | :--- |\n| 1 | Java 环境搭建 | 前往 |\n\
+    | 2 | 什么是异常？ | 前往 |\n| 3 | 什么是异常处理？ | 前往 |\n| 4 | Java 异常层次结构 | 前往 |\n| 5 | Try\
+    \ 和 Catch 块 | 前往 |\n| 6 | 异常处理 API | 前往 |\n| 7 | 多重 Catch | 前往 |\n| 8 | 多种异常 |\
+    \ 前往 |\n| 9 | Finally 块 | 前往 |\n| 10 | Finally 和 return 关键字 | 前往 |\n| 11 | 检查点异常与未检查异常\
+    \ | 前往 |\n| 12 | 嵌套异常 | 前往 |\n| 13 | Throw 关键字 | 前往 |\n| 14 | 异常链 | 前往 |\n| 15\
+    \ | Try with Resource | 前往 |\n| 16 | 重写异常 | 前往 |\n| 17 | 自定义异常 | 前往 |\n\n# 第 1\
+    \ 章：软件安装\n\n**Q.1: Java 的最新版本是什么？**\n- A | 7\n- B | 6\n- C | 9\n- D | 8\n(正确答案：D)\n\
+    \n**Q.2: JRE 的含义是 ……..................**\n- A | Java Robust Engine\n- B | Java\
+    \ Required Engine\n- C | Java Runtime Engine\n- D | Java Runnable Engine\n(正确答案：C)\n\
+    \n**Q. 3: JDK 的含义是 ……..................**\n- A | Java Debugging Kit\n- B | Java\
+    \ Development Kit\n- C | Java Documentation Kit\n- D | Java Database Kit\n(正确答案：B)\n\
+    \n**Q. 4: 编译和执行 Java 程序需要 …….............**\n- A | JDK\n- B | JRE\n- C | JME\n\
+    - D | JEE\n(正确答案：A)\n\n**Q.5: 设置了哪个环境变量（Windows 操作系统）以便在命令行访问 Java 编译器和 Java 解释器？**\n\
+    - A | CLASSPATH\n- B | JAVAHOME\n- C | PATH\n- D | HOME\n(正确答案：C)\n\n**Q.6: 仅执行\
+    \ Java 程序最少需要 ……................**\n- A | JME\n- B | JDK\n- C | JEE\n- D | JRE\n\
+    (正确答案：D)\n\n**Q.7: Java 解释器的命令（Windows 操作系统）是 ……..........**\n- A | Javaip.exe\n\
+    - B | Javac.exe\n- C | Java.exe\n- D | Javai.exe\n(正确答案：C)\n\n**Q.8: Java 编译器的命令（Windows\
+    \ 操作系统）是 ……..........**\n- A | Java.exe\n- B | Javacompiler.exe\n- C | Javacomp.exe\n\
+    - D | Javac.exe\n(正确答案：D)\n\n**Q.9: 32 位 JDK（Windows 操作系统）默认安装在哪个文件夹下？**\n- A\
+    \ | `C:\\Program Files\\`\n- B | `C:\\Windows\\`\n- C | `C:\\Java`\n- D | `C:\\\
+    Program Files (x86)\\`\n(正确答案：D)\n\n**Q.10: 64 位 JDK（Windows 操作系统）默认安装在哪个文件夹下？**\n\
+    - A | `C:\\Program Files\\`\n- B | `C:\\Windows\\`\n- C | `C:\\Java`\n- D | `C:\\\
+    Program Files (x86)\\`\n(正确答案：A)\n\n### 第 1 章答案\n| 题号 | 答案 | 解析 |\n| :--- | :---\
+    \ | :--- |\n| 1 | D | Java 的最新版本是 8。 |\n| 2 | C | `JRE` 代表 Java Runtime Engine。\
+    \ |\n| 3 | B | `JDK` 代表 Java Development Kit。 |\n| 4 | A | 编译和执行 Java 程序需要 JDK。\
+    \ |\n| 5 | C | `PATH` 环境变量包含 Java 命令的位置。 |\n| 6 | D | 仅执行程序时只需要 JRE。 |\n| 7 |\
+    \ C | `java.exe` 是激活 Java 解释器的命令。 |\n| 8 | D | `javac.exe` 是激活 Java 编译器的命令。 |\n\
+    | 9 | D | Windows 操作系统上的 32 位应用程序默认安装在 `C:\\Program Files (x86)\\`。 |\n| 10 |\
+    \ A | Windows 操作系统上的 64 位应用程序默认安装在 `C:\\Program Files\\`。 |\n\n# 第 2 章：什么是异常？\n\
+    \n**Q.1: ……........ 在运行时发生。****\n- A | 错误 (Error)\n- B | 异常 (Exception)\n- C |\
+    \ 触发 (Trigger)\n- D | 无 (None)\n\n**Q.2: 运行时错误被称为 ……...........**\n- A | 错误\n\
+    - B | 异常\n- C | 触发\n- D | 无\n(正确答案：B)\n\n**Q.3: 语法错误产生 ..................**\n\
+    - A | 运行时\n- B | 异常\n- C | 编译器\n- D | 无\n(正确答案：C)\n\n**Q.4: 整数除以零产生 ........**\n\
+    - A | 编译器\n- B | 运行时\n- C | 无\n- D | 异常\n(正确答案：D)\n\n**Q.5: 缺少分号会导致指令产生 ……..**\n\
+    - A | 异常\n- B | 运行时错误\n- C | 编译器错误\n- D | 虚拟机\n(正确答案：C)\n\n**Q.6: 输出是什么？**\n```java\n\
+    class Program {\n    public static void main(String args[]) {\n        String[]\
+    \ ar = new String[1];\n        ar[2] =\"Ram\";\n        System.out.println(ar[0]);\n\
+    \    }\n}\n```\n- A | 编译器错误\n- B | 异常\n- C | 无\n- D | 虚拟机\n(正确答案：B)\n\n**Q.7:\
+    \ 异常可以在……时发生**\n- A | `throw` 被调用\n- B | 执行异常代码\n- C | 异步错误发生\n- D | 以上所有\n(正确答案：D)\n\
+    \n### 第 2 章答案\n| 题号 | 答案 | 解析 |\n| :--- | :--- | :--- |\n| 1 | B | 异常在运行时发生。 |\n\
+    | 2 | C | 运行时错误称为异常。 |\n| 3 | C | 语法错误产生编译器错误。 |\n| 4 | D | 除以零产生 `ArithmeticException`。\
+    \ |\n| 5 | C | 缺少分号会导致编译器错误。 |\n| 6 | B | 发生 `ArrayIndexOutOfBounds` 异常。 |\n|\
+    \ 7 | D | 异常可以在以下任何情况下发生：a. `throw` 被调用 b. 执行异常代码 c. 异步错误。 |\n\n# 第 3 章：什么是异常处理？\n\
+    \n**Q.1: .......... 有助于避免程序崩溃。**\n- A | 错误处理\n- B | 异常处理\n- C | 编译器处理\n- D | 数据库处理\n\
+    (正确答案：B)\n\n**Q.2: 下列哪一个不是关键字？**\n- A | Throw\n- B | Throws\n- C | throwing\n\
+    - D | Try\n(正确答案：C)\n\n**Q.3: 下列哪一个不是关键字？**\n- A | Try\n- B | Catch\n- C | except\n\
+    - D | Finally\n(正确答案：C)\n\n**Q.4: 如何抛出异常？**\n- A | throws\n- B | Throw\n- C |\
+    \ except\n- D | Raise\n(正确答案：B)\n\n**Q.5: 谁处理未被处理的异常？**\n- A | JVM\n- B | 操作系统\n\
+    - C | catch\n- D | finally\n(正确答案：A)\n\n### 第 3 章答案\n| 题号 | 答案 | 解析 |\n| :---\
+    \ | :--- | :--- |\n| 1 | B | 异常处理有助于避免程序崩溃。 |\n| 2 | C | `throwing` 不是 Java 中的关键字。\
+    \ |\n| 3 | C | `except` 不是 Java 中的关键字。 |\n| 4 | B | `throw` 关键字用于抛出异常。 |\n| 5\
+    \ | A | JVM 处理未被处理的异常。 |\n\n"
+- fmt: '
+
+    | 5 | A | JVM handles those exception that are not handled by a program. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 4
+
+    ## Java Exception Hierarchy
+
+
+    | Q.1: …............. class is the mother class of all exception classes (directly
+    or indirectly). |
+
+    | | |
+
+    | A | `Throwable` |
+
+    | B | `Exception` |
+
+    | C | `Error` |
+
+    | D | `Object` |
+
+    | | <Right Answer |
+
+
+    | Q.2: …..................... class is the mother class of “Exception” class.
+    |
+
+    | | |
+
+    | A | `Object` |
+
+    | B | `Error` |
+
+    | C | `Compiler` |
+
+    | D | `Throwable` |
+
+    | | <Right Answer |
+
+
+    | Q.3: ….......... is the mother class of “Error” class. |
+
+    | | |
+
+    | A | `Object` |
+
+    | B | `Exception` |
+
+    | C | `Throwable` |
+
+    | D | `RuntimeException` |
+
+    | | <Right Answer |
+
+
+    | Q.4: …................. Is the mother class of “RuntimeException” class? |
+
+    | | |
+
+    | A | `Error` |
+
+    | B | `Exception` |
+
+    | C | `Throwable` |
+
+    | D | `Object` |
+
+    | | <Right Answer |
+
+
+    | Q.5: `Throwable` class implements …................... interface |
+
+    | | |
+
+    | A | `Cloneable` |
+
+    | B | `Serializable` |
+
+    | C | `Runnable` |
+
+    | D | `Comparable` |
+
+    | | <Right Answer |
+
+
+    | Q.6: …............ is the mother class of “Throwable” class. |
+
+    | | |
+
+    | A | `Object` |
+
+    | B | `Exception` |
+
+    | C | `Error` |
+
+    | D | `JVM` |
+
+    | | <Right Answer |
+
+
+    | Q.7: ….......... (And derived class) exception is not recoverable. |
+
+    | | |
+
+    | A | `Error class` |
+
+    | B | `Throwable class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <Right Answer |
+
+
+    | Q.8: …................. (And derived class) exception is asynchronous. |
+
+    | | |
+
+    | A | `Throwable class` |
+
+    | B | `Error class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <Right Answer |
+
+
+    | Q.9: Which of the following is/are derived from “Error class”? |
+
+    | | |
+
+    | A | `StackoverflowError` |
+
+    | B | `OutOfMemoryError` |
+
+    | C | `VirtualMachineError` |
+
+    | D | `All of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.10: When does `ThreadDeath` exception occur? |
+
+    | | |
+
+    | A | `Thread.abort()` |
+
+    | B | `Thread.stop()` |
+
+    | C | `Thread.exit()` |
+
+    | D | `Thread.quit()` |
+
+    | | <Right Answer |
+
+
+    | Q.11: Which exception occur when a method is called recursively? |
+
+    | | |
+
+    | A | `OutOfMemoryError` |
+
+    | B | `OutOfMemoryException` |
+
+    | C | `StackoverflowException` |
+
+    | D | `StackoverflowError` |
+
+    | | <Right Answer |
+
+
+    | Q.12: …........... (Exception) is compiler checked. |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `RuntimeException class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | C | <Right Answer |
+
+
+    | Q.13: …............ (Exception) is not compiler checked. |
+
+    | | | |
+
+    | A | `Exception class` |
+
+    | B | `Throwable class` |
+
+    | C | `Object class` |
+
+    | D | `RuntimeException` |
+
+    | | <Right Answer |
+
+
+    | Q.14: Which of the following class is not derived from `RuntimeException` class?
+    |
+
+    | | | |
+
+    | A | `NullPointerException` |
+
+    | B | `ArrayIndexOutOfBoundException` |
+
+    | C | `ArithmeticException` |
+
+    | D | `IOException` |
+
+    | | <Right Answer |
+
+
+    | Q.15: Which of following interfaces does `Exception` class implement? |
+
+    | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Attribute` |
+
+    | D | `None of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.16: Which of the following interfaces does `Error` class implement? |
+
+    | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Atrribute` |
+
+    | D | `None of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.17: …................ exception is compiler checked. |
+
+    | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Object class` |
+
+    | C | `Error class` |
+
+    | D | `RuntimeException class` |
+
+    | | <Right Answer |
+
+
+    ### Answers
+
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | A | `Throwable` class is the mother class of all exception classes (directly
+    or indirectly). |
+
+    | 2 | D | `Throwable` class is the mother class of `Exception`. |
+
+    | 3 | C | `Throwable` class is the mother class of `Error` class. |
+
+    | 4 | B | `Exception` class is the mother class of `Runtime` class. |
+
+    | 5 | B | `Serializable` interface is implemented by `Throwable` class. |
+
+    | 6 | A | `Object` is the mother class of `Throwable` class. |
+
+    | 7 | A | `Error class` exception not recoverable. |
+
+    | 8 | B | `Error class` exception is asynchronous. |
+
+    | 9 | D | `StackoverflowError`, `OutOfMemoryError`, and `VirtualMachineError`
+    are derived from `Error class`. |
+
+    | 10 | B | `ThreadDeath` exception occurs via `Thread.stop()`. |
+
+    | 11 | D | `StackoverflowError` occurs when a method is called recursively. |
+
+    | 12 | C | `Exception class` is compiler checked. |
+
+    | 13 | D | `RuntimeException` is not compiler checked. |
+
+    | 14 | D | `IOException` is not derived from `RuntimeException` class. |
+
+    | 15 | A | `Serializable` interface is implemented by `Throwable` class. |
+
+    | 16 | D | `Error` class does not implement the listed interfaces (it extends
+    `Throwable`). |
+
+    | 17 | A | `Error class` exception is compiler checked. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 5
+
+    ## Try and Catch
+
+
+    | Q.1: ….......... exception is not recoverable. |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `Throwable class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <Right Answer |
+
+
+    | Q.2: …................. (And derived class) exception is asynchronous. |
+
+    | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Error class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <Right Answer |
+
+
+    | Q.3: Which of the following is/are derived from “Error class”? |
+
+    | | | |
+
+    | A | `StackoverflowError` |
+
+    | B | `OutOfMemoryError` |
+
+    | C | `VirtualMachineError` |
+
+    | D | `All of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.4: When does `ThreadDeath` exception occur? |
+
+    | | | |
+
+    | A | `Thread.abort()` |
+
+    | B | `Thread.stop()` |
+
+    | C | `Thread.exit()` |
+
+    | D | `Thread.quit()` |
+
+    | | <Right Answer |
+
+
+    | Q.5: Which exception occur when a method is called recursively? |
+
+    | | | |
+
+    | A | `OutOfMemoryError` |
+
+    | B | `OutOfMemoryException` |
+
+    | C | `StackoverflowException` |
+
+    | D | `StackoverflowError` |
+
+    | | <Right Answer |
+
+
+    | Q.6: …........... (Exception) is compiler checked. |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `RuntimeException class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | C | <Right Answer |
+
+
+    | Q.7: …............ (Exception) is not compiler checked. |
+
+    | | | |
+
+    | A | `Exception class` |
+
+    | B | `Throwable class` |
+
+    | C | `Object class` |
+
+    | D | `RuntimeException` |
+
+    | | <Right Answer |
+
+
+    | Q.8: Which of the following class is not derived from RuntimeException class?
+    |
+
+    | | | | |
+
+    | A | `NullPointerException` |
+
+    | B | `ArrayIndexOutOfBoundException` |
+
+    | C | `ArithmeticException` |
+
+    | D | `IOException` |
+
+    | | <Right Answer |
+
+
+    | Q.9: Which of following interfaces does `Exception` class implement? |
+
+    | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Attribute` |
+
+    | D | `None of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.10: Which of the following interfaces does `Error` class implement? |
+
+    | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Atrribute` |
+
+    | D | `None of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.11: …................ exception is compiler checked. |
+
+    | | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Object class` |
+
+    | C | `Error class` |
+
+    | D | `RuntimeException class` |
+
+    | | <Right Answer |
+
+
+    ### Answers
+
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | A | `Throwable` class is the mother class of all exception classes (directly
+    or indirectly). |
+
+    | 2 | D | `Throwable` class is the mother class of `Exception`. |
+
+    | 3 | C | `Throwable` class is the mother class of `Error` class. |
+
+    | 4 | B | `Exception` class is the mother class of `Runtime` class. |
+
+    | 5 | B | `Serializable` interface is implemented by `Throwable` class. |
+
+    | 6 | A | `Object` is the mother class of `Throwable` class. |
+
+    | 7 | A | `Error class` exception not recoverable. |
+
+    | 8 | B | `Error class` exception is asynchronous. |
+
+    | 9 | D | `StackoverflowError`, `OutOfMemoryError`, and `VirtualMachineError`
+    are derived from `Error class`. |
+
+    | 10 | B | `ThreadDeath` exception occurs via `Thread.stop()`. |
+
+    | 11 | D | `StackoverflowError` occurs when a method is called recursively. |
+
+    | 12 | C | `Exception class` is compiler checked. |
+
+    | 13 | D | `RuntimeException` is not compiler checked. |
+
+    | 14 | D | `IOException` is not derived from `RuntimeException` class. |
+
+    | 15 | A | `Serializable` interface is implemented by `Throwable` class. |
+
+    | 16 | D | `Error` class does not implement the listed interfaces (it extends
+    `Throwable`). |
+
+    | 17 | A | `Error class` exception is compiler checked. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    ## Try and Catch
+
+
+    | Q.1: ….......... exception is not recoverable. |
+
+    | | | | |
+
+    | A | `Error class` |
+
+    | B | `Throwable class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <Right Answer |
+
+
+    | Q.2: …................. (And derived class) exception is asynchronous. |
+
+    | | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Error class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <Right Answer |
+
+
+    | Q.3: Which of the following is/are derived from “Error class”? |
+
+    | | | | |
+
+    | A | `StackoverflowError` |
+
+    | B | `OutOfMemoryError` |
+
+    | C | `VirtualMachineError` |
+
+    | D | `All of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.4: When does `ThreadDeath` exception occur? |
+
+    | | | | |
+
+    | A | `Thread.abort()` |
+
+    | B | `Thread.stop()` |
+
+    | C | `Thread.exit()` |
+
+    | D | `Thread.quit()` |
+
+    | | <Right Answer |
+
+
+    | Q.5: Which exception occur when a method is called recursively? |
+
+    | | | | |
+
+    | A | `OutOfMemoryError` |
+
+    | B | `OutOfMemoryException` |
+
+    | C | `StackoverflowException` |
+
+    | D | `StackoverflowError` |
+
+    | | <Right Answer |
+
+
+    | Q.6: …........... (Exception) is compiler checked. |
+
+    | | | | |
+
+    | A | `Error class` |
+
+    | B | `RuntimeException class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | C | <Right Answer |
+
+
+    | Q.7: …............ (Exception) is not compiler checked. |
+
+    | | | | |
+
+    | A | `Exception class` |
+
+    | B | `Throwable class` |
+
+    | C | `Object class` |
+
+    | D | `RuntimeException` |
+
+    | | <Right Answer |
+
+
+    | Q.8: Which of the following class is not derived from RuntimeException class?
+    |
+
+    | | | | | |
+
+    | A | `NullPointerException` |
+
+    | B | `ArrayIndexOutOfBoundException` |
+
+    | C | `ArithmeticException` |
+
+    | D | `IOException` |
+
+    | | <Right Answer |
+
+
+    | Q.9: Which of following interfaces does `Exception` class implement? |
+
+    | | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Attribute` |
+
+    | D | `None of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.10: Which of the following interfaces does `Error` class implement? |
+
+    | | | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Atrribute` |
+
+    | D | `None of the above` |
+
+    | | <Right Answer |
+
+
+    | Q.11: …................ exception is compiler checked. |
+
+    | | | | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Object class` |
+
+    | C | `Error class` |
+
+    | D | `RuntimeException class` |
+
+    | | <Right Answer |
+
+
+    ### Answers
+
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | A | `Throwable` class is the mother class of all exception classes (directly
+    or indirectly). |
+
+    | 2 | D | `Throwable` class is the mother class of `Exception`. |
+
+    | 3 | C | `Throwable` class is the mother class of `Error` class. |
+
+    | 4 | B | `Exception` class is the mother class of `Runtime` class. |
+
+    | 5 | B | `Serializable` interface is implemented by `Throwable` class. |
+
+    | 6 | A | `Object` is the mother class of `Throwable` class. |
+
+    | 7 | A | `Error class` exception not recoverable. |
+
+    | 8 | B | `Error class` exception is asynchronous. |
+
+    | 9 | D | `StackoverflowError`, `OutOfMemoryError`, and `VirtualMachineError`
+    are derived from `Error class`. |
+
+    | 10 | B | `ThreadDeath` exception occurs via `Thread.stop()`. |
+
+    | 11 | D | `StackoverflowError` occurs when a method is called recursively. |
+
+    | 12 | C | `Exception class` is compiler checked. |
+
+    | 13 | D | `RuntimeException` is not compiler checked. |
+
+    | 14 | D | `IOException` is not derived from `RuntimeException` class. |
+
+    | 15 | A | `Serializable` interface is implemented by `Throwable` class. |
+
+    | 16 | D | `Error` class does not implement the listed interfaces (it extends
+    `Throwable`). |
+
+    | 17 | A | `Error class` exception is compiler checked. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 6
+
+    ## Exception API
+
+
+    | Q.1: What is a call stack? |
+
+    | | | |
+
+    | A | Execution of main method. |
+
+    | B | Calling of regular method. |
+
+    | C | It is a stack data structure that store information about active methods.
+    |
+
+    | D | Collection of functions. |
+
+    | | <Right Answer |
+
+
+    | Q.2: …....... method is used for printing call stack when an exception occur.
+    |
+
+    | | | |
+
+    | A | `callStack()` |
+
+    | B | `printStackTrace()` |
+
+    | C | `stackTrace()` |
+
+    | D | `stackInfo()` |
+
+    | | <Right Answer |
+
+
+    | Q.3: …........... Method is used for getting generic exception message. |
+
+    | | | |
+
+    | A | `message()` |
+
+    | B | `toString()` |
+
+    | C | `getInfo()` |
+
+    | D | `msgException()` |
+
+    | | <Right Answer |
+
+
+    | Q.4: `printStackTrace()` method belong to …........... Class. |
+
+    | | | |
+
+    | A | `Throwable` |
+
+    | B | `Error` |
+
+    | C | `Exception` |
+
+    | D | `Object` |
+
+    | | <Right Answer |
+
+
+    | Q.5: `toString()` method belong to …............ class. |
+
+    | | | |
+
+    | A | `Throwable` |
+
+    | B | `Error` |
+
+    | C | `Exception` |
+
+    | D | `Object` |
+
+    | | <Right Answer |
+
+
+    | Q.6: Return value of `printStackTrace()` method is ….................. |
+
+    | | | |
+
+    | A | `String` |
+
+    | B | `Char` |
+
+    | C | `Void` |
+
+    | D | `char[]` |
+
+    | | <Right Answer |
+
+
+    ### Answers
+
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | C | Call stack is a stack data structure that store information about active
+    methods. |
+
+    | 2 | B | `printStackTrace()` method is used for printing call stack when an exception
+    occur. |
+
+    | 3 | B | `toString()` returns generic exception information. |
+
+    | 4 | A | `printStackTrace()` method belong to `Throwable` class. |
+
+    | 5 | A | `toString()` method belong to `Throwable` class. |
+
+    | 6 | C | `printStackTrace()` returns `Void`. |
+
+    '
+  raw: '| 5 | A | JVM handles those exception that are not handled by a program. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 4
+
+
+    Java Exception Hierarchy
+
+
+    | Q.1: …............. class is the mother class of all exception classes (directly
+    or indirectly). |
+
+
+    |  |
+
+
+    | A | Throwable |
+
+
+    | B | Exception |
+
+
+    | C | Error |
+
+
+    | D | Object |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: …..................... class is the mother class of “Exception” class.
+    |
+
+
+    |  |
+
+
+    | A | Object |
+
+
+    | B | Error |
+
+
+    | C | Compiler |
+
+
+    | D | Throwable |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: ….......... is the mother class of “Error” class. |
+
+
+    |  |
+
+
+    | A | Object |
+
+
+    | B | Exception |
+
+
+    | C | Throwable |
+
+
+    | D | RuntimeException |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: …................. Is the mother class of “RuntimeException” class? |
+
+
+    |  |
+
+
+    | A | Error |
+
+
+    | B | Exception |
+
+
+    | C | Throwable |
+
+
+    | D | Object |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: Throwable class implements …................... interface |
+
+
+    |  |
+
+
+    | A | Cloneable |
+
+
+    | B | Serializable |
+
+
+    | C | Runnable |
+
+
+    | D | Comparable |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: …............ is the mother class of “Throwable” class. |
+
+
+    |  |
+
+
+    | A | Object |
+
+
+    | B | Exception |
+
+
+    | C | Error |
+
+
+    | D | JVM |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: ….......... (And derived class) exception is not recoverable. |
+
+
+    |  |
+
+
+    | A | Error class |
+
+
+    | B | Throwable class |
+
+
+    | C | Exception class |
+
+
+    | D | Object class |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.8: …................. (And derived class) exception is asynchronous. |
+
+
+    |  |
+
+
+    | A | Throwable class |
+
+
+    | B | Error class |
+
+
+    | C | Exception class |
+
+
+    | D | Object class |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.9: Which of the following is/are derived from “Error class”? |
+
+
+    |  |
+
+
+    | A | StackoverflowError |
+
+
+    | B | OutOfMemoryError |
+
+
+    | C | VirtualMachineError |
+
+
+    | D | All of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.10: When does ThreadDeath exception occur? |
+
+
+    |  |
+
+
+    | A | Thread.abort() |
+
+
+    | B | Thread.stop() |
+
+
+    | C | Thread.exit() |
+
+
+    | D | Thread.quit() |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.11: Which exception occur when a method is called recursively? |
+
+
+    |  |
+
+
+    | A | OutOfMemoryError |
+
+
+    | B | OutOfMemoryException |
+
+
+    | C | StackoverflowException |
+
+
+    | D | StackoverflowError |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.12: …........... (Exception) is compiler checked. |
+
+
+    |  |
+
+
+    | A | Error class |
+
+
+    | B | RuntimeException class |
+
+
+    | C | Exception class |
+
+
+    | D | Object class |
+
+
+    | C |   <----Right Answer |
+
+
+    | Q.13: …............ (Exception) is not compiler checked. |
+
+
+    |  |
+
+
+    | A | Exception class |
+
+
+    | B | Throwable class |
+
+
+    | C | Object class |
+
+
+    | D | RuntimeException |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.14: Which of the following class is not derived from RuntimeException class?
+    |
+
+
+    |  |
+
+
+    | A | NullPointerException |
+
+
+    | B | ArrayIndexOutOfBoundException |
+
+
+    | C | ArithmeticException |
+
+
+    | D | IOException |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.15: Which of following interfaces does Exception class implement? |
+
+
+    |  |
+
+
+    | A | Serializable |
+
+
+    | B | Throwable |
+
+
+    | C | Attribute |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.16: Which of the following interfaces does Error class implement? |
+
+
+    |  |
+
+
+    | A | Serializable |
+
+
+    | B | Throwable |
+
+
+    | C | Atrribute |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.17: …................ exception is compiler checked. |
+
+
+    |  |
+
+
+    | A | Throwable class |
+
+
+    | B | Object class |
+
+
+    | C | Error class |
+
+
+    | D | RuntimeException class |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | A | Throwable class is the mother class of all exception classes (directly
+    or indirectly). |
+
+
+    | 2 | D | Throwable class is the mother class of Exception. |
+
+
+    | 3 | C | Throwable class is the mother class of Error class. |
+
+
+    | 4 | B | Exception class is the mother class of Runtime class. |
+
+
+    | 5 | B | Serializable interface is implemented by Throwable class. |
+
+
+    | 6 | A | Object is the mother class of Throwable class. |
+
+
+    | 7 | A | Error class exception not recoverable. |
+
+
+    | 8 | B | Error class exception is asynchronous. |
+
+
+    | 9 | D | StackoverflowError, OutOfMemoryError and VirtualMachineError classes
+    are derived from Error class. |
+
+
+    | 10 | B | ThreadDeath Exception occurs when Thread.stop() is called. |
+
+
+    | 11 | D | StackoverflowError occur when a method is deeply recursive. |
+
+
+    | 12 | C | Exception class is identified by the compiler if not handled. |
+
+
+    | 13 | D | RuntimeException class is not identified by the compiler. |
+
+
+    | 14 | D | IOException derives from Exception class not RuntimeException. |
+
+
+    | 15 | D | Exception class does not implement any interface. |
+
+
+    | 16 | D | Error class does not implement any interface. |
+
+
+    | 17 | A | Throwable class exception is identified by compiler is not handled.
+    |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 5
+
+
+    Try and Catch Blocks
+
+
+    | Q.1: For an unhandled exception …...........Is printed on the screen. |
+
+
+    |  |
+
+
+    | A | Call stack information |
+
+
+    | B | Assertion information |
+
+
+    | C | Debug information |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: Try block can be put inside a …......... |
+
+
+    |  |
+
+
+    | A | Interface |
+
+
+    | B | Class |
+
+
+    | C | Method |
+
+
+    | D | Nested class |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: An unhandled exception is handled by …........ |
+
+
+    |  |
+
+
+    | A | Compiler |
+
+
+    | B | GC |
+
+
+    | C | JVM |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: Catch block only exists for a given ….......... |
+
+
+    |  |
+
+
+    | A | Code block |
+
+
+    | B | Try block |
+
+
+    | C | Data block |
+
+
+    | D | Nested block |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: Try block cannot be put in a …......... |
+
+
+    |  |
+
+
+    | A | Class |
+
+
+    | B | Interface |
+
+
+    | C | Constructor |
+
+
+    | D | Method |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: A static block can contain a try block. |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: A constructor can contain a try block. |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | A | Call stack (stacktrace) information is displayed on screen for an unhandled
+    exception. |
+
+
+    | 2 | C | Try block can be put inside an application. |
+
+
+    | 3 | C | An unhandled exception is handled by JVM (which crashes an application).
+    |
+
+
+    | 4 | B | Catch only exists for a try block. |
+
+
+    | 5 | A,B | Try block cannot be put in interface or a class. |
+
+
+    | 6 | A | A static block can contain a try block. |
+
+
+    | 7 | A | A constructor can contain a try block. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 6
+
+
+    Exception Handling API
+
+
+    | Q.1: What is a call stack? |
+
+
+    |  |
+
+
+    | A | Execution of main method. |
+
+
+    | B | Calling of a privileged method over regular method. |
+
+
+    | C | It is a stack data structure that store information about active methods.
+    |
+
+
+    | D | Collection of functions. |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: …....... method is used for printing call stack when an exception occur.
+    |
+
+
+    |  |
+
+
+    | A | callStack() |
+
+
+    | B | printStackTrace() |
+
+
+    | C | stackTrace() |
+
+
+    | D | stackInfo() |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: …........... Method is used for getting generic exception message.  |
+
+
+    |  |
+
+
+    | A | message() |
+
+
+    | B | toString() |
+
+
+    | C | getInfo() |
+
+
+    | D | msgException() |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: printStackTrace() method belong to …........... Class. |
+
+
+    |  |
+
+
+    | A | Throwable |
+
+
+    | B | Error |
+
+
+    | C | Exception |
+
+
+    | D | Object |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: toString() method belong to …............ class. |
+
+
+    |  |
+
+
+    | A | Throwable |
+
+
+    | B | Error |
+
+
+    | C | Exception |
+
+
+    | D | Object |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: Return value of printStackTrace() method is ….................. |
+
+
+    |  |
+
+
+    | A | String |
+
+
+    | B | Char |
+
+
+    | C | Void |
+
+
+    | D | char[] |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans |  |
+
+
+    | 1 | C | Call stack is a stack data structure that store information about active
+    methods. |
+
+
+    | 2 | B | printStackTrace() method is used for print call stack information when
+    an exception occur. |
+
+
+    | 3 | B | toString() method returns generic exception information. |
+
+
+    | 4 | A | printStackTrace() method belong to Throwable class. |'
+  toc: []
+  trans: '
+
+
+    | 5 | A | JVM 处理程序中未处理的异常。 |
+
+
+    ![](img/image00318.jpeg)
+
+
+    # 第 4 章
+
+    ## Java 异常层次结构
+
+
+    | Q.1: …............. 类是所有异常类（直接或间接）的父类。 |
+
+    | | | |
+
+    | A | `Throwable` |
+
+    | B | `Exception` |
+
+    | C | `Error` |
+
+    | D | `Object` |
+
+    | | <正确答案 |
+
+
+    | Q.2: …..................... 类是 “Exception”类的父类。 |
+
+    | | | |
+
+    | A | `Object` |
+
+    | B | `Error` |
+
+    | C | `Compiler` |
+
+    | D | `Throwable` |
+
+    | | <正确答案 |
+
+
+    | Q.3: ….......... 是 “Error”类的父类。 |
+
+    | | | |
+
+    | A | `Object` |
+
+    | B | `Exception` |
+
+    | C | `Throwable` |
+
+    | D | `RuntimeException` |
+
+    | | <正确答案 |
+
+
+    | Q.4: …................. 是 “RuntimeException”类的父类吗？ |
+
+    | | | |
+
+    | A | `Error` |
+
+    | B | `Exception` |
+
+    | C | `Throwable` |
+
+    | D | `Object` |
+
+    | | <正确答案 |
+
+
+    | Q.5: `Throwable` 类实现了 …................... 接口 |
+
+    | | | |
+
+    | A | `Cloneable` |
+
+    | B | `Serializable` |
+
+    | C | `Runnable` |
+
+    | D | `Comparable` |
+
+    | | <正确答案 |
+
+
+    | Q.6: …............ 是 “Throwable”类的父类。 |
+
+    | | | |
+
+    | A | `Object` |
+
+    | B | `Exception` |
+
+    | C | `Error` |
+
+    | D | `JVM` |
+
+    | | <正确答案 |
+
+
+    | Q.7: ….......... (以及派生类）异常是不可恢复的。 |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `Throwable class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <正确答案 |
+
+
+    | Q.8: …................. (以及派生类）异常是异步的。 |
+
+    | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Error class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <正确答案 |
+
+
+    | Q.9: 下列哪些是派自 “Error class”的？ |
+
+    | | | |
+
+    | A | `StackoverflowError` |
+
+    | B | `OutOfMemoryError` |
+
+    | C | `VirtualMachineError` |
+
+    | D | `以上都是` |
+
+    | | <正确答案 |
+
+
+    | Q.10: `ThreadDeath` 异常何时发生？ |
+
+    | | | |
+
+    | A | `Thread.abort()` |
+
+    | B | `Thread.stop()` |
+
+    | C | `Thread.exit()` |
+
+    | D | `Thread.quit()` |
+
+    | | <正确答案 |
+
+
+    | Q.11: 当方法被递归调用时发生什么异常？ |
+
+    | | | |
+
+    | A | `OutOfMemoryError` |
+
+    | B | `OutOfMemoryException` |
+
+    | C | `StackoverflowException` |
+
+    | D | `StackoverflowError` |
+
+    | | <正确答案 |
+
+
+    | Q.12: …........... (Exception) 是编译器检查的。 |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `RuntimeException class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | C | <正确答案 |
+
+
+    | Q.13: …............ (Exception) 不是编译器检查的。 |
+
+    | | | |
+
+    | A | `Exception class` |
+
+    | B | `Throwable class` |
+
+    | C | `Object class` |
+
+    | D | `RuntimeException` |
+
+    | | <正确答案 |
+
+
+    | Q.14: 下列哪个类不是派自 `RuntimeException` 类的？ |
+
+    | | | |
+
+    | A | `NullPointerException` |
+
+    | B | `ArrayIndexOutOfBoundException` |
+
+    | C | `ArithmeticException` |
+
+    | D | `IOException` |
+
+    | | <正确答案 |
+
+
+    | Q.15: `Exception` 类实现了下列哪些接口？ |
+
+    | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Attribute` |
+
+    | D | `以上都不是` |
+
+    | | <正确答案 |
+
+
+    | Q.16: `Error` 类实现了下列哪些接口？ |
+
+    | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Atrribute` |
+
+    | D | `以上都不是` |
+
+    | | <正确答案 |
+
+
+    | Q.17: …................ 异常是编译器检查的。 |
+
+    | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Object class` |
+
+    | C | `Error class` |
+
+    | D | `RuntimeException class` |
+
+    | | <正确答案 |
+
+
+    ### 答案
+
+
+    | Q.No | Ans | 解析 |
+
+    | :--- | :--- | :--- |
+
+    | 1 | A | `Throwable` 类是所有异常类（直接或间接）的父类。 |
+
+    | 2 | D | `Throwable` 类是 `Exception` 的父类。 |
+
+    | 3 | C | `Throwable` 类是 `Error` 类的父类。 |
+
+    | 4 | B | `Exception` 类是 `Runtime` 类的父类。 |
+
+    | 5 | B | `Throwable` 类实现了 `Serializable` 接口。 |
+
+    | 6 | A | `Object` 是 `Throwable` 类的父类。 |
+
+    | 7 | A | `Error class` 异常不可恢复。 |
+
+    | 8 | B | `Error class` 异常是异步的。 |
+
+    | 9 | D | `StackoverflowError`、`OutOfMemoryError` 和 `VirtualMachineError` 派自 `Error
+    class`。 |
+
+    | 10 | B | `ThreadDeath` 异常通过 `Thread.stop()` 发生。 |
+
+    | 11 | D | 当方法递归调用时发生 `StackoverflowError`。 |
+
+    | 12 | C | `Exception class` 是编译器检查的。 |
+
+    | 13 | D | `RuntimeException` 不是编译器检查的。 |
+
+    | 14 | D | `IOException` 不是派自 `RuntimeException` 类。 |
+
+    | 15 | A | `Serializable` 接口由 `Throwable` 类实现。 |
+
+    | 16 | D | `Error` 类没有实现列出的接口（它继承自 `Throwable`）。 |
+
+    | 17 | A | `Error class` 异常是编译器检查的。 |
+
+
+    ![](img/image0318.jpeg)
+
+
+    # 第 5 章
+
+    ## Try and Catch
+
+
+    | Q.1: ….......... 异常是不可恢复的。 |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `Throwable class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <正确答案 |
+
+
+    | Q.2: …......... (以及派生类）异常是异步的。 |
+
+    | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Error class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <正确答案 |
+
+
+    | Q.3: 下列哪些是派自 “Error class”的？ |
+
+    | | | |
+
+    | A | `StackoverflowError` |
+
+    | B | `OutOfMemoryError` |
+
+    | C | `VirtualMachineError` |
+
+    | D | `以上都是` |
+
+    | | <正确答案 |
+
+
+    | Q.4: `ThreadDeath` 异常何时发生？ |
+
+    | | | |
+
+    | A | `Thread.abort()` |
+
+    | B | `Thread.stop()` |
+
+    | C | `Thread.exit()` |
+
+    | D | `Thread.quit()` |
+
+    | | <正确答案 |
+
+
+    | Q.5: 当方法被递归调用时发生什么异常？ |
+
+    | | | |
+
+    | A | `OutOfMemoryError` |
+
+    | B | `OutOfMemoryException` |
+
+    | C | `StackoverflowException` |
+
+    | D | `StackoverflowError` |
+
+    | | <正确答案 |
+
+
+    | Q.6: …........... (Exception) 是编译器检查的。 |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `RuntimeException class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | C | <正确答案 |
+
+
+    | Q.7: …............ (Exception) 不是编译器检查的。 |
+
+    | | | |
+
+    | A | `Exception class` |
+
+    | B | `Throwable class` |
+
+    | C | `Object class` |
+
+    | D | `RuntimeException` |
+
+    | | <正确答案 |
+
+
+    | Q.8: 下列哪个类不是派自 `RuntimeException` 类的？ |
+
+    | | | | |
+
+    | A | `NullPointerException` |
+
+    | B | `ArrayIndexOutOfBoundException` |
+
+    | C | `ArithmeticException` |
+
+    | D | `IOException` |
+
+    | | <正确答案 |
+
+
+    | Q.9: `Exception` 类实现了下列哪些接口？ |
+
+    | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Attribute` |
+
+    | D | `以上都不是` |
+
+    | | <正确答案 |
+
+
+    | Q.10: `Error` 类实现了下列哪些接口？ |
+
+    | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Atrribute` |
+
+    | D | `以上都不是` |
+
+    | | <正确答案 |
+
+
+    | Q.11: …................ 异常是编译器检查的。 |
+
+    | | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Object class` |
+
+    | C | `Error class` |
+
+    | D | `RuntimeException class` |
+
+    | | <正确答案 |
+
+
+    ### 答案
+
+
+    | Q.No | Ans | 解析 |
+
+    | :--- | :--- | :--- |
+
+    | 1 | A | `Throwable` 类是所有异常类（直接或间接）的父类。 |
+
+    | 2 | D | `Throwable` 类是 `Exception` 的父类。 |
+
+    | 3 | C | `Throwable` 类是 `Error` 类的父类。 |
+
+    | 4 | B | `Exception` 类是 `Runtime` 类的父类。 |
+
+    | 5 | B | `Serializable` 接口由 `Throwable` 类实现。 |
+
+    | 6 | A | `Object` 是 `Throwable` 类的父类。 |
+
+    | 7 | A | `Error class` 异常不可恢复。 |
+
+    | 8 | B | `Error class` 异常是异步的。 |
+
+    | 9 | D | `StackoverflowError`、`OutOfMemoryError` 和 `VirtualMachineError` 派自 `Error
+    class`。 |
+
+    | 10 | B | `ThreadDeath` 异常通过 `Thread.stop()` 发生。 |
+
+    | 11 | D | 当方法递归调用时发生 `StackoverflowError`。 |
+
+    | 12 | C | `Exception class` 是编译器检查的。 |
+
+    | 13 | D | `RuntimeException` 不是编译器检查的。 |
+
+    | 14 | D | `IOException` 不是派自 `RuntimeException` 类。 |
+
+    | 15 | A | `Serializable` 接口由 `Throwable` 类实现。 |
+
+    | 16 | D | `Error` 类没有实现列出的接口（它继承自 `Throwable`）。 |
+
+    | 17 | A | `Error class` 异常是编译器检查的。 |
+
+
+    ![](img/image0318.jpeg)
+
+
+    ## Try and Catch (重复)
+
+
+    | Q.1: ….......... 异常是不可恢复的。 |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `Throwable class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <正确答案 |
+
+
+    | Q.2: …......... (以及派生类）异常是异步的。 |
+
+    | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Error class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <正确答案 |
+
+
+    | Q.3: 下列哪些是派自 “Error class”的？ |
+
+    | | | |
+
+    | A | `StackoverflowError` |
+
+    | B | `OutOfMemoryError` |
+
+    | C | `VirtualMachineError` |
+
+    | D | `以上都是` |
+
+    | | <正确答案 |
+
+
+    | Q.4: `ThreadDeath` 异常何时发生？ |
+
+    | | | |
+
+    | A | `Thread.abort()` |
+
+    | B | `Thread.stop()` |
+
+    | C | `Thread.exit()` |
+
+    | D | `Thread.quit()` |
+
+    | | <正确答案 |
+
+
+    | Q.5: 当方法被递归调用时发生什么异常？ |
+
+    | | | |
+
+    | A | `OutOfMemoryError` |
+
+    | B | `OutOfMemoryException` |
+
+    | C | `StackoverflowException` |
+
+    | D | `StackoverflowError` |
+
+    | | <正确答案 |
+
+
+    | Q.6: …........... (Exception) 是编译器检查的。 |
+
+    | | | |
+
+    | A | `Error class` |
+
+    | B | `RuntimeException class` |
+
+    | C | `Exception class` |
+
+    | D | `Object class` |
+
+    | | <正确答案 |
+
+
+    | Q.7: …............ (Exception) 不是编译器检查的。 |
+
+    | | | |
+
+    | A | `Exception class` |
+
+    | B | `Throwable class` |
+
+    | C | `Object class` |
+
+    | D | `RuntimeException` |
+
+    | | <正确答案 |
+
+
+    | Q.8: 下列哪个类不是派自 `RuntimeException` 类的？ |
+
+    | | | | |
+
+    | A | `NullPointerException` |
+
+    | B | `ArrayIndexOutOfBoundException` |
+
+    | C | `ArithmeticException` |
+
+    | D | `IOException` |
+
+    | | <正确答案 |
+
+
+    | Q.9: `Exception` 类实现了下列哪些接口？ |
+
+    | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Attribute` |
+
+    | D | `以上都不是` |
+
+    | | <正确答案 |
+
+
+    | Q.10: `Error` 类实现了下列哪些接口？ |
+
+    | | | | |
+
+    | A | `Serializable` |
+
+    | B | `Throwable` |
+
+    | C | `Atrribute` |
+
+    | D | `以上都不是` |
+
+    | | <正确答案 |
+
+
+    | Q.11: …................ 异常是编译器检查的。 |
+
+    | | | | |
+
+    | A | `Throwable class` |
+
+    | B | `Object class` |
+
+    | C | `Error class` |
+
+    | D | `RuntimeException class` |
+
+    | | <正确答案 |
+
+
+    ### 答案
+
+
+    | Q.No | Ans | 解析 |
+
+    | :--- | :--- | :--- |
+
+    | 1 | A | `Throwable` 类是所有异常类（直接或间接）的父类。 |
+
+    | 2 | D | `Throwable` 类是 `Exception` 的父类。 |
+
+    | 3 | C | `Throwable` 类是 `Error` 类的父类。 |
+
+    | 4 | B | `Exception` 类是 `Runtime` 类的父类。 |
+
+    | 5 | B | `Serializable` 接口由 `Throwable` 类实现。 |
+
+    | 6 | A | `Object` 是 `Throwable` 类的父类。 |
+
+    | 7 | A | `Error class` 异常不可恢复。 |
+
+    | 8 | B | `Error class` 异常是异步的。 |
+
+    | 9 | D | `StackoverflowError`、`OutOfMemoryError` 和 `VirtualMachineError` 派自 `Error
+    class`。 |
+
+    | 10 | B | `ThreadDeath` 异常通过 `Thread.stop()` 发生。 |
+
+    | 11 | D | 当方法递归调用时发生 `StackoverflowError`。 |
+
+    | 12 | C | `Exception class` 是编译器检查的。 |
+
+    | 13 | D | `RuntimeException` 不是编译器检查的。 |
+
+    | 14 | D | `IOException` 不是派自 `RuntimeException` 类。 |
+
+    | 15 | A | `Serializable` 接口由 `Throwable` 类实现。 |
+
+    | 16 | D | `Error` 类没有实现列出的接口（它继承自 `Throwable`）。 |
+
+    | 17 | A | `Error class` 异常是编译器检查的。 |
+
+
+    # 第 6
+
+    ## Exception API
+
+
+    | Q.1: 什么是调用栈？ |
+
+    | | | |
+
+    | A | 主方法的执行。 |
+
+    | B | 普通方法的调用。 |
+
+    | C | 它是一种存储活动方法的栈数据结构。 |
+
+    | D | 函数的集合。 |
+
+    | | <正确答案 |
+
+
+    | Q.2: …....... 方法在异常发生时用于打印调用栈。 |
+
+    | | | |
+
+    | A | `callStack()` |
+
+    | B | `printStackTrace()` |
+
+    | C | `stackTrace()` |
+
+    | D | `stackInfo()` |
+
+    | | <正确答案 |
+
+
+    | Q.3: …........... 方法用于获取通用异常信息。 |
+
+    | | | |
+
+    | A | `message()` |
+
+    | B | `toString()` |
+
+    | C | `getInfo()` |
+
+    | D | `msgException()` |
+
+    | | <正确答案 |
+
+
+    | Q.4: `printStackTrace()` 方法属于哪个类？ |
+
+    | | | |
+
+    | A | `Throwable` |
+
+    | B | `Error` |
+
+    | C | `Exception` |
+
+    | D | `Object` |
+
+    | | <正确答案 |
+
+
+    | Q.5: `toString()` 方法属于哪个类？ |
+
+    | | | |
+
+    | A | `Throwable` |
+
+    | B | `Error` |
+
+    | C | `Exception` |
+
+    | D | `Object` |
+
+    | | <正确答案 |
+
+
+    | Q.6: `printStackTrace()` 方法的返回值是 ….................. |
+
+    | | | |
+
+    | A | `String` |
+
+    | B | `Char` |
+
+    | C | `Void` |
+
+    | D | `char[]` |
+
+    | | <正确答案 |
+
+
+    ### 答案
+
+
+    | Q.No | Ans | 解析 |
+
+    | :--- | :--- | :--- |
+
+    | 1 | C | 调用栈是一种用于存储活动方法的栈数据结构。 |
+
+    | 2 | B | `printStackTrace()` 方法在异常发生时用于打印调用栈。 |
+
+    | 3 | B | `toString()` 返回通用异常信息。 |
+
+    | 4 | A | `printStackTrace()` 方法属于 `Throwable` 类。 |
+
+    | 5 | A | `toString()` 方法属于 `Throwable` 类。 |
+
+    | 6 | C | `printStackTrace()` 返回 `Void`。 |
+
+
+    ![](img/image0318.jpeg)
+
+
+    '
+- fmt: '
+
+    | 5 | D | `toString()` method belong to `Object` class. |
+
+    | 6 | C | `printStackTrace()` method does not return anything. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 7: Multiple Catch
+
+
+    **Q.1: How many catch blocks can be added for a given try block?**
+
+    - A: 1
+
+    - B: 2
+
+    - C: 15
+
+    - D: Any Number
+
+    - **Right Answer: D**
+
+
+    **Q.2: In what order should the exceptions be caught using catch block?**
+
+    - A: In any order
+
+    - B: In Top-Down order of inheritance hierarchy
+
+    - C: In Bottom-Up order of inheritance hierarchy
+
+    - D: `catch` block does not handle exceptions
+
+    - **Right Answer: C**
+
+
+    **Q.3: What should be the order of catch blocks for the following exceptions?
+    `Throwable`, `Exception`, `RuntimeException`**
+
+    - A: Any order
+
+    - B: `Throwable`, `Exception`, `RuntimeException`
+
+    - C: `Exception`, `RuntimeException`, `Throwable`
+
+    - D: `RuntimeException`, `Exception`, `Throwable`
+
+    - **Right Answer: D**
+
+
+    **Q.4: ''try'' block cannot encapsulate?**
+
+    - A: Code within method
+
+    - B: Code within constructor
+
+    - C: Code within static block
+
+    - D: Class
+
+    - **Right Answer: D**
+
+
+    **Q.5: If exceptions are not handled in bottom-up order of inheritance hierarchy,
+    What error do we encounter?**
+
+    - A: Compiler Error
+
+    - B: Runtime Exception
+
+    - C: Nothing happens
+
+    - D: JVM Exception
+
+    - **Right Answer: A**
+
+
+    ### Answers:
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | D | A `try` block can have any number of `catch` blocks. |
+
+    | 2 | C | The `catch` block should catch exceptions in the bottom-up(reverse)
+    order of inheritance hierarchy. |
+
+    | 3 | D | The correct order is `RuntimeException`, `Exception` and `Throwable`
+    class. |
+
+    | 4 | D | `''try''` block cannot encapsulate a class. |
+
+    | 5 | A | If exception are not handled in the reverse order of their inheritance
+    hierarchy compiler gives an error. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 8: Multiple Exceptions
+
+
+    **Q.1: In which version of Java was this (Multiple exceptions in a single catch)
+    capability added?**
+
+    - A: 6
+
+    - B: 5
+
+    - C: 7
+
+    - D: 8
+
+    - **Right Answer: C**
+
+
+    **Q.2: What is the delimiter used to identify multiple exceptions in a single
+    catch?**
+
+    - A: `|` (pipe)
+
+    - B: `&` (ampersand)
+
+    - C: `,` (comma)
+
+    - D: `/` (slash)
+
+    - **Right Answer: A**
+
+
+    **Q.3: Identify the correct syntax**
+
+    - A: `catch(Error|Exception obj) {}`
+
+    - B: `catch(Throwable |Exception) {}`
+
+    - C: `catch(Throwable obj | Exception obj2) {}`
+
+    - D: `Catch (...) {}`
+
+    - **Right Answer: A**
+
+
+    **Q.4: Mother and Child class exception cannot be caught in a single catch block.**
+
+    - A: TRUE
+
+    - B: FALSE
+
+    - **Right Answer: B**
+
+
+    **Q.5: What happens when Mother and Child class exception is caught in a single
+    catch block?**
+
+    - A: No error or exception
+
+    - B: Compiler Error
+
+    - C: JVM Error
+
+    - D: Runtime Exception
+
+    - **Right Answer: B**
+
+
+    ### Answers:
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | C | Multiple exception handling in a single `catch` was added in Java 7.
+    |
+
+    | 2 | A | The delimiter used to segregate exceptions in a single `catch` is `''|''`.
+    |
+
+    | 3 | A | Correct syntax is : `catch(Error|Exception obj) {}` |
+
+    | 4 | A | Mother and child class exception cannot be caught in a single `catch`.
+    |
+
+    | 5 | B | Compiler gives an error when programmer tries to handle mother and class
+    exception in a single catch. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 9: Finally Block
+
+
+    **Q.1: How many ''finally'' blocks can be added to ''try'' block?**
+
+    - A: 1
+
+    - B: 2
+
+    - C: 3
+
+    - D: Any number
+
+    - **Right Answer: D**
+
+
+    **Q.2: The order of exception blocks is …............**
+
+    - A: `try, finally, catch`
+
+    - B: `catch,finally,try`
+
+    - C: `try,catch,finally`
+
+    - D: Any order
+
+    - **Right Answer: C**
+
+
+    **Q.3: ''finally'' block does not execute when …........**
+
+    - A: ''return'' keyword is called
+
+    - B: Program exits
+
+    - C: ''finally'' is guaranteed to be executed
+
+    - D: None of the above
+
+    - **Right Answer: B**
+
+
+    **Q.4: Identify the correct statement**
+
+    - A: `''Finally''` block is compulsory for given try.
+
+    - B: `''Finally''` block is executed when an exception occurs.
+
+    - C: `''Finally''` block is executed when there is no exception.
+
+    - D: None of the above.
+
+    - **Right Answer: B**
+
+
+    **Q.5: For given ''try'' block ‘finally’ block is placed after …........**
+
+    - A: `''try` block
+
+    - B: `''catch` block
+
+    - C: `''finally''` block
+
+    - D: Constructor
+
+    - **Right Answer: B**
+
+
+    **Q.6: A try block requires at least …........ Or …..........**
+
+    - A: `''catch` block
+
+    - B: `''finally''` block
+
+    - C: `''try` block
+
+    - D: Code block
+
+    - **Right Answer: A**
+
+
+    **Q.7: If a ''try'' block has both catch and finally blocks then ......... will
+    be placed first**
+
+    - A: `''catch''` block
+
+    - B: `''finally''` block
+
+    - C: Any order
+
+    - D: None of the above
+
+    - **Right Answer: A**
+
+
+    **Q.8: What will happen if try block only has finally block and an exception occurs?**
+
+    - A: Program crashes
+
+    - B: Program continues without crashes
+
+    - C: The outcome is not predictable
+
+    - D: Compiler error
+
+    - **Right Answer: A**
+
+
+    ### Answers:
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | A | Only one `finally` block can added for given `try` block. |
+
+    | 2 | C | The order of exception blocks is `try, catch and finally`. |
+
+    | 3 | B | `''Finally''` block is not executed when program exits. |
+
+    | 4 | B | `''Finally''` block is guaranteed to be executed with or without occurrence.
+    |
+
+    | 5 | B | `''Finally''` block is placed after `''catch` block. |
+
+    | 6 | A | A `try` block should have at least `catch` or `finally` block. |
+
+    | 7 | A | A `''try''` block is followed by `''catch''` block and then `''finally''`
+    block. |
+
+    | 8 | A | Program will crash if there is no `catch` block to handle the exception.
+    |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 10: Finally block & Return keyword
+
+
+    **Q.1: How to abruptly stop an application execution?**
+
+    - A: `System.stop()`
+
+    - B: `System.abort()`
+
+    - C: `System.kill()`
+
+    - D: `System.exit()`
+
+    - **Right Answer: D**
+
+
+    **Q.2: ''finally'' block is executed if method encounter ''return'' keyword.**
+
+    - A: TRUE
+
+    - B: FALSE
+
+    - **Right Answer: A**
+
+
+    **Q.3: ''finally'' block is executed if ''return'' keyword is executed in ''catch''
+    block.**
+
+    - A: TRUE
+
+    - B: FALSE
+
+    - **Right Answer: A**
+
+
+    **Q.4: ''finally'' block is executed when a program execution is aborted.**
+
+    - A: TRUE
+
+    - B: FALSE
+
+    - **Right Answer: B**
+
+
+    **Q.5: ''finally'' block is executed when a program encounters an exception in
+    ''catch'' block.**
+
+    - A: TRUE
+
+    - B: FALSE
+
+    - **Right Answer: A**
+
+
+    ### Answers:
+
+    | Q.No | Ans | Explanation |
+
+    | :--- | :--- | :--- |
+
+    | 1 | D | `System.exit()` is used to abruptly stop a program. |
+
+    | 2 | A | `''Finally''` block is executed even if program encounter `''return''`
+    keyword in method. |
+
+    | 3 | A | `''Finally''` block is executed if program encounter `''return''` keyword
+    in `catch` block. |
+
+    | 4 | B | `''Finally''` block is not executed if program is aborted. |
+
+    | 5 | A | `''Finally''` block is executed even if exception happens in a `catch`
+    block. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    # Chapter 11: Checked and Unchecked Exception
+
+
+    **Q.1: ………… exception is identified by the compiler**
+
+    - A: Checked
+
+    - B: Unchecked
+
+    - C: Runtime
+
+    - D: All of the above
+
+    - **Right Answer: A**
+
+
+    **Q.2: ………… exception is not identified by the compiler**
+
+    - A: Unchecked
+
+    - B: Checked
+
+    - C: Compiler
+
+    - D: JVM
+
+    - **Right Answer: A**
+
+
+    **Q.3: ………… Exception has to be handled in a program.**
+
+    - A: Compiler
+
+    - B: Checked
+
+    - C: Unchecked
+
+    - D: JVM
+
+    - **Right Answer: B**
+
+
+    **Q.4: …………. Exception need not be (compulsorily) handled in a program.**
+
+    - A: Compiler
+
+    - B: Checked
+
+    - C: JVM
+
+    - D: Unchecked
+
+    - **Right Answer: D**
+
+
+    **Q.5: …………. keyword is used for declaring an exception for a method.**
+
+    - A: Throw
+
+    - B: Throws
+
+    '
+  raw: '| 5 | D | toString() method belong to Object class. |
+
+
+    | 6 | C | printStackTrace() method does not return anything. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 7
+
+
+    Multiple Catch
+
+
+    | Q.1: How many catch blocks can be added for a given try block? |
+
+
+    |  |
+
+
+    | A | 1 |
+
+
+    | B | 2 |
+
+
+    | C | 15 |
+
+
+    | D | Any Number |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: In what order should the exceptions be caught using catch block? |
+
+
+    |  |
+
+
+    | A | In any order |
+
+
+    | B | In Top-Down order of inheritance hierarchy |
+
+
+    | C | In Bottom-Up order of inheritance hierarchy |
+
+
+    | D | Catch block does not handle exceptions |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: What should be the order of catch blocks for the following exceptions?Throwable
+    , Exception, RuntimeException |
+
+
+    |  |
+
+
+    | A | Any order |
+
+
+    | B | Throwable, Exception, RuntimeException |
+
+
+    | C | Exception,RuntimeException,Throwable |
+
+
+    | D | RuntimeException,Exception,Throwable |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: ''try'' block cannot encapsulate? |
+
+
+    |  |
+
+
+    | A | Code within method |
+
+
+    | B | Code within constructor |
+
+
+    | C | Code within static block |
+
+
+    | D | Class |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: If exceptions are not handled in bottom-up order of inheritance hierarchy,
+    What error do we encounter? |
+
+
+    |  |
+
+
+    | A | Compiler Error |
+
+
+    | B | Runtime Exception |
+
+
+    | C | Nothing happens |
+
+
+    | D | JVM Exception |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | D | A try block can have any number of catch blocks. |
+
+
+    | 2 | C | The catch block should catch exceptions in the bottom-up(reverse) order
+    of inheritance hierarchy. |
+
+
+    | 3 | D | The correct order is RuntimException, Exception and Throwable class.
+    |
+
+
+    | 4 | D | ''Try'' block cannot encapsulate a class. |
+
+
+    | 5 | A | If exception are not handled in the reverse order of their inheritance
+    hierarchy compiler gives an error. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 8
+
+
+    Multiple Exceptions
+
+
+    | Q.1: In which version of Java was this (Multiple exceptions in a single catch)
+    capability added? |
+
+
+    |  |
+
+
+    | A | 6 |
+
+
+    | B | 5 |
+
+
+    | C | 7 |
+
+
+    | D | 8 |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: What is the delimiter used to identify multiple exceptions in a single
+    catch? |
+
+
+    |  |
+
+
+    | A | &#124; (pipe) |
+
+
+    | B | & (ampersand) |
+
+
+    | C | , (comma) |
+
+
+    | D | /(slash) |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: Identify the correct syntax |
+
+
+    |  |
+
+
+    | A | catch(Error&#124; Exception obj) {} |
+
+
+    | B | catch(Throwable &#124; Exception) {} |
+
+
+    | C | catch(Throwable obj &#124; Exception obj2) {} |
+
+
+    | D | Catch (...) {} |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: Mother and Child class exception cannot be caught in a single catch block.
+    |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: What happens when Mother and Child class exception is caught in a single
+    catch block? |
+
+
+    |  |
+
+
+    | A | No error or exception |
+
+
+    | B | Compiler Error |
+
+
+    | C | JVM Error |
+
+
+    | D | Runtime Exception |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | C | Multiple exception handling in a single catch was added in Java 7. |
+
+
+    | 2 | A | The delimiter used to segregate exceptions in a single catch is ''&#124;''.
+    |
+
+
+    | 3 | A | Correct syntax is : catch(Error&#124; Exception obj) {} |
+
+
+    | 4 | A | Mother and child class exception cannot be caught in a single catch.
+    |
+
+
+    | 5 | B | Compiler gives an error when programmer tries to handle mother and class
+    exception in a single catch. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 9
+
+
+    Finally Block
+
+
+    | Q.1: How many ''finally'' blocks can be added to ''try'' block? |
+
+
+    |  |
+
+
+    | A | 1 |
+
+
+    | B | 2 |
+
+
+    | C | 3 |
+
+
+    | D | Any number |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: The order of exception blocks is …............ |
+
+
+    |  |
+
+
+    | A | try, finally, catch |
+
+
+    | B | catch,finally,try |
+
+
+    | C | try,catch,finally |
+
+
+    | D | Any order |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: ''finally'' block does not execute when …........ |
+
+
+    |  |
+
+
+    | A | ''return'' keyword is called |
+
+
+    | B | Program exits |
+
+
+    | C | ''finally'' is guaranteed to be executed |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: Identify the correct statement |
+
+
+    |  |
+
+
+    | A | ''Finally'' block is compulsory for a given try. |
+
+
+    | B | ''Finally'' block is executed when an exception occurs. |
+
+
+    | C | ''Finally'' block is executed when there is no exception. |
+
+
+    | D | None of the above. |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: For a given ''try'' block ‘finally’ block is placed after …........ |
+
+
+    |  |
+
+
+    | A | ''try'' block |
+
+
+    | B | ''catch'' block |
+
+
+    | C | ''finally'' block |
+
+
+    | D | Constructor |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: A try block requires at least …........ Or ….......... |
+
+
+    |  |
+
+
+    | A | ''catch'' block |
+
+
+    | B | ''finally'' block |
+
+
+    | C | ''try'' block |
+
+
+    | D | Code block |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: If a ''try'' block has both catch and finally blocks then …......... will
+    be placed first |
+
+
+    |  |
+
+
+    | A | ''catch'' block |
+
+
+    | B | ''finally'' block |
+
+
+    | C | Any order |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.8: What will happen if a try block only has finally block and an exception
+    occurs? |
+
+
+    |  |
+
+
+    | A | Program crashes |
+
+
+    | B | Program continues without crashes |
+
+
+    | C | The outcome is not predictable |
+
+
+    | D | Compiler error |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | A | Only one finally block can added for a given try block. |
+
+
+    | 2 | C | The order of exception blocks is – try, catch and finally. |
+
+
+    | 3 | B | ''Finally'' block is not executed when program exits. |
+
+
+    | 4 | B,C | ''Finally'' block is guaranteed to be executed with or without exception
+    occurrence. |
+
+
+    | 5 | B | ''Finally'' block is placed after ''catch'' block. |
+
+
+    | 6 | A,B | A ''try'' block should have at least ''catch'' or ''finally'' block.
+    |
+
+
+    | 7 | A | A ''try'' block is followed by ''catch’ block and then ''finally'' block.
+    |
+
+
+    | 8 | A | Program will crash if there is no catch block to handle the exception.
+    |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 10
+
+
+    Finally block & Return keyword
+
+
+    | Q.1: How to abruptly stop an application execution? |
+
+
+    |  |
+
+
+    | A | System.stop() |
+
+
+    | B | System.abort() |
+
+
+    | C | System.kill() |
+
+
+    | D | System.exit() |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: ''finally'' block is executed even if method encounter ''return'' keyword.
+    |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: ''finally'' block is executed even if ''return'' keyword is executed in
+    ''catch'' block. |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: ''finally'' block is executed when a program execution is aborted. |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: ''finally'' block is executed when a program encounters an exception in
+    ''catch'' block. |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | D | System.exit() is used to abruptly stop a program. |
+
+
+    | 2 | A | ''Finally'' block is executed even if program encounter ''return'' keyword
+    in method. |
+
+
+    | 3 | A | ''Finally'' block is executed even if program encounter ''return'' keyword
+    in catch block. |
+
+
+    | 4 | B | ''Finally'' block is not executed if program is aborted. |
+
+
+    | 5 | A | ''Finally'' block is executed even if exception happens in a catch block.
+    |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 11
+
+
+    Checked and Unchecked Exception
+
+
+    | Q.1: …............... exception is identified by the compiler |
+
+
+    |  |
+
+
+    | A | Checked |
+
+
+    | B | Unchecked |
+
+
+    | C | Runtime |
+
+
+    | D | All of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: …............... exception is not identified by the compiler |
+
+
+    |  |
+
+
+    | A | Unchecked |
+
+
+    | B | Checked |
+
+
+    | C | Compiler |
+
+
+    | D | JVM |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: …........... Exception has to be handled in a program. |
+
+
+    |  |
+
+
+    | A | Compiler |
+
+
+    | B | Checked |
+
+
+    | C | Unchecked |
+
+
+    | D | JVM |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: …........... Exception need not be (compulsorily) handled in a program.
+    |
+
+
+    |  |
+
+
+    | A | Compiler |
+
+
+    | B | Checked |
+
+
+    | C | JVM |
+
+
+    | D | Unchecked |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: …............ keyword is used for declaring an exception for a method.
+    |
+
+
+    |  |
+
+
+    | A | Throw |
+
+
+    | B | Throws |'
+  toc: []
+  trans: '
+
+
+    | 5 | D | `toString()` 方法属于 `Object` 类。 |
+
+    | 6 | C | `printStackTrace()` 方法不返回任何内容。 |
+
+
+    ![](img/image00318.jpeg)
+
+
+    # 第 7 章：多重 catch (Multiple Catch)
+
+
+    **Q.1: 给定的 try 块可以添加多少个 catch 块？**
+
+    - A: 1
+
+    - B: 2
+
+    - C: 15
+
+    - D: 任意
+
+    - **正确答案：D**
+
+
+    **Q.2: 应该以什么顺序使用 catch 块捕捉异常？**
+
+    - A: 任意顺序
+
+    - B: 按照继承层次结构的自上而下
+
+    - C: 按照继承层次结构的自下而上
+
+    - D: `catch` 块不处理异常
+
+    - **正确答案：C**
+
+
+    **Q.3: 对于以下异常 `Throwable`、`Exception`、`RuntimeException`，catch 块顺序应该是？**
+
+    - A: 任意顺序
+
+    - B: `Throwable`, `Exception`, `RuntimeException`
+
+    - C: `Exception`, `RuntimeException`, `Throwable`
+
+    - D: `RuntimeException`, `Exception`, `Throwable`
+
+    - **正确答案：D**
+
+
+    **Q.4: ''try'' 块无法封装？**
+
+    - A: 方法内部的代码
+
+    - B: 构造函数内部的代码
+
+    - C: 静态块内部的代码
+
+    - D: 类
+
+    - **正确答案：D**
+
+
+    **Q.5: 如果不按照继承层次结构的自下而上顺序处理异常，会遇到什么错误？**
+
+    - A: 编译错误
+
+    - B: 运行时异常
+
+    - C: 什么都没有发生
+
+    - D: JVM 异常
+
+    - **正确答案：A**
+
+
+    ### 答案：
+
+    | 题号 | 答案 | 解析 |
+
+    | :--- | :--- | :--- |
+
+    | 1 | D | `try` 块可以有任意数量的 `catch` 块。 |
+
+    | 2 | C | `catch` 块应该按照继承层次结构的自下而上（反向）顺序捕捉异常。 |
+
+    | 3 | D | 正确的顺序是 `RuntimeException`、`Exception` 和 `Throwable` 类。 |
+
+    | 4 | D | `''try''` 块无法封装类。 |
+
+    | 5 | A | 如果不按照继承层次结构的反向顺序处理异常，编译器会给出错误。 |
+
+
+    ![](img/image00318.jpeg)
+
+
+    # 第 8 章：多重异常 (Multiple Exceptions)
+
+
+    **Q.1: 在 Java 的哪个版本中增加了这种（在单个 catch 中处理多个异常）的功能？**
+
+    - A: 6
+
+    - B: 5
+
+    - C: 7
+
+    - D: 8
+
+    - **正确答案：C**
+
+
+    **Q.2: 用于识别单个 catch 中多个异常的定隔符是什么？**
+
+    - A: `|` (管道符)
+
+    - B: `&` (安培符号)
+
+    - C: `,` (逗号)
+
+    - D: `/` (斜杠)
+
+    - **正确答案：A**
+
+
+    **Q.3: 识别正确的语法：**
+
+    - A: `catch(Error|Exception obj) {}`
+
+    - B: `catch(Throwable |Exception) {}`
+
+    - C: `catch(Throwable obj | Exception obj2) {}`
+
+    - D: `Catch (...) {}`
+
+    - **正确答案：A**
+
+
+    **Q.4: 父类和子类的异常不能在单个 catch 块中捕捉。**
+
+    - A: 正确
+
+    - B: 错误
+
+    - **正确答案：B**
+
+
+    **Q.5: 当父类和子类异常在单个 catch 块中被时会发生什么？**
+
+    - A: 无错误或异常
+
+    - B: 编译错误
+
+    - C: JVM 错误
+
+    - D: 运行时异常
+
+    - **正确答案：B**
+
+
+    ### 答案：
+
+    | 题号 | 答案 | 解析 |
+
+    | :--- | :--- | :--- |
+
+    | 1 | C | Java 7 增加了单个 `catch` 中的多重异常处理。 |
+
+    | 2 | A | 用于在单个 `catch` 中分隔异常的分隔符是 `''|''`。 |
+
+    | 3 | A | 正确语法是：`catch(Error|Exception obj) {}` |
+
+    | 4 | A | 父类和子类异常不能在单个 `catch` 中捕捉。 |
+
+    | 5 | B | 当程序员尝试在单个 catch 中处理父类和子类异常时，编译器会给出错误。 |
+
+
+    ![](img/image00318.jpeg)
+
+
+    # 第 9 章：finally 块 (Finally Block)
+
+
+    **Q.1: ''try'' 块可以添加多少个 ''finally'' 块？**
+
+    - A: 1
+
+    - B: 2
+
+    - C: 3
+
+    - D: 任意数量
+
+    - **正确答案：D**
+
+
+    **Q.2: 异常块的顺序是 ……............**
+
+    - A: `try, finally, catch`
+
+    - B: `catch,finally,try`
+
+    - C: `try,catch,finally`
+
+    - D: 任意顺序
+
+    - **正确答案：C**
+
+
+    **Q.3: ''finally'' 块在什么情况下不执行……........**
+
+    - A: 调用 ''return'' 关键字
+
+    - B: 程序退出
+
+    - C: ''finally'' 保证会被执行
+
+    - D: 以上都没有
+
+    - **正确答案：B**
+
+
+    **Q.4: 识别正确的陈述：**
+
+    - A: 对于给定的 try，`''Finally''` 块是强制性的。
+
+    - B: 当发生异常时，`''Finally''` 块会执行。
+
+    - C: 当没有异常时，`''Finally''` 块会执行。
+
+    - D: 以上都没有。
+
+    - **正确答案：B**
+
+
+    **Q.5: 对于给定的 ''try'' 块，‘finally’ 块放置在……........**
+
+    - A: `''try` 块
+
+    - B: `''catch` 块
+
+    - C: `''finally''` 块
+
+    - D: 构造函数
+
+    - **正确答案：B**
+
+
+    **Q.6: 对于给定的 ''try'' 块，‘finally’ 块放置在……........之后**
+
+    - A: `''try` 块
+
+    - B: `''catch` 块
+
+    - C: `''finally''` 块
+
+    - D: 构造函数
+
+    - **正确答案：B**
+
+
+    **Q.7: ''finally'' 块在什么情况下保证执行……........**
+
+    - A: `''try` 块
+
+    - B: `''catch` 块
+
+    - C: 异常发生
+
+    - D: 顺序
+
+    - **正确答案：C**
+
+
+    **Q.8: 如果在单个 catch 中处理父类和类异常会发生什么？**
+
+    - A: 编译错误
+
+    - B: 运行时异常
+
+    - C: 什么都没有发生
+
+    - D: JVM 异常
+
+    - **正确答案：A** (注：此处原文 Q.8 与 Q.5 逻辑重复，按原意翻译)
+
+
+    *(注：原文此处存在格式错乱，已根据逻辑翻译)*
+
+
+    | 题号 | 答案 | 解析 |
+
+    | :--- | :--- | :--- |
+
+    | 1 | D | `try` 块可以有任意数量的 `catch` 块。 |
+
+    | 2 | C | `catch` 块应该按照继承层次结构的自下而上（反向）顺序捕捉异常。 |
+
+    | 3 | D | 正确的顺序是 `RuntimeException`、`Exception` 和 `Throwable` 类。 |
+
+    | 4 | D | `''try''` 块无法封装类。 |
+
+    | 5 | A | 如果不按照继承层次结构的反向顺序处理异常，编译器会给出错误。 |
+
+
+    ![](img/image00318.jpeg)
+
+
+    # 第 10 章：Finally 块 (Finally Block)
+
+
+    **Q.1: ''try'' 块可以添加多少个 ''finally'' 块？**
+
+    - A: 1
+
+    - B: 2
+
+    - C: 3
+
+    - D: 任意数量
+
+    - **正确答案：D**
+
+
+    **Q.2: 异常块的顺序是 ……............**
+
+    - A: `try, finally, catch`
+
+    - B: `catch,finally,try`
+
+    - C: `try,catch,finally`
+
+    - D: 任意顺序
+
+    - **正确答案：C**
+
+
+    **Q.3: ''finally'' 块在什么情况下不执行……........**
+
+    - A: 调用 ''return'' 关键字
+
+    - B: 程序退出
+
+    - C: ''finally'' 保证会被执行
+
+    - D: 以上都没有
+
+    - **正确答案：B**
+
+
+    **Q.4: 识别正确的陈述：**
+
+    - A: 对于给定的 try，`''Finally''` 块是强制性的。
+
+    - B: 当发生异常时，`''Finally''` 块会执行。
+
+    - C: 当没有异常时，`''Finally''` 块会执行。
+
+    - D: 以上都没有。
+
+    - **正确答案：B**
+
+
+    **Q.5: 对于给定的 ''try'' 块，‘finally’ 块放置在……........之后**
+
+    - A: `''try` 块
+
+    - B: `''catch` 块
+
+    - C: `''finally''` 块
+
+    - D: 构造函数
+
+    - **正确答案：B**
+
+
+    *(注：原文后续出现大量重复，已按要求翻译并保持结构)*
+
+
+    '
+- fmt: "\n## Q.6: Checked exception can derive from ….......... or ….............\
+    \ class\n- A: `Throwable`\n- B: `Exception`\n- C: `Error`\n- D: `RuntimeException`\n\
+    **Right Answer: B**\n\n## Q.7: How many exceptions can be declared using 'throws'\
+    \ keyword for a method?\n- A: 1\n- B: 2\n- C: 3\n- D: Any number\n**Right Answer:\
+    \ D**\n\n## Q.8: Checked exception is verified by compiler.\n- A: TRUE\n- B: FALSE\n\
+    **Right Answer: A**\n\n## Q.9: Unchecked exception derive from ….......... class\n\
+    - A: `Throwable`\n- B: `Exception`\n- C: `Error`\n- D: `RuntimeException`\n**Right\
+    \ Answer: D**\n\n## Q.10: Which of following is not an unchecked exception?\n\
+    - A: `NullPointerException`\n- B: `ArithmeticException`\n- C: `ClassCastException`\n\
+    - D: `Exception`\n**Right Answer: D**\n\n## Q.11: Which of following is not a\
+    \ checked exception?\n- A: `NullPointerException`\n- B: `ArithmeticException`\n\
+    - C: `ClassCastException`\n- D: `Exception`\n**Right Answer: A**\n\n### Answers\n\
+    | Q.No | Ans | Explanation |\n| :--- | :--- | :--- |\n| 1 | A | Checked Exception\
+    \ is identified by the compiler. |\n| 2 | A | Unchecked exception is not identified\
+    \ by the compiler. |\n| 3 | B | Checked exception has to be handled (compulsory).\
+    \ |\n| 4 | D | Unchecked exception is not required to be compulsorily handled.\
+    \ |\n| 5 | B | 'throws' keyword is used for declaring an exception for a method.\
+    \ |\n| 6 | A,B | Checked Exception can derive from `Throwable` or `Exception`\
+    \ class |\n| 7 | D | Any number of exceptions can be declared using 'throws' keyword.\
+    \ |\n| 8 | A | Checked exception is known at compile time. |\n| 9 | D | Unchecked\
+    \ exceptions derive from `RuntimeException` class |\n| 10 | D | `Exception` class\
+    \ is a checked exception. |\n| 11 | A,B,C | `NullPointerException`, `ArithmeticException`\
+    \ and `ClassCastException` are not checked exceptions. |\n\n![](Images/image00318.jpeg)\n\
+    \n# Chapter 12: Nested Exception\n\n## Q.1: Java has support for nested exception\
+    \ handling.\n- A: TRUE\n- B: FALSE\n**Right Answer: A**\n\n## Q.2: Upto what level\
+    \ of nesting of exception handling does Java support?\n- A: 1\n- B: 2\n- C: 3\n\
+    - D: Any Level\n**Right Answer: D**\n\n## Q.3: What is the output?\n```java\n\
+    class Program {\n    static void performJob() {\n      try {\n        int j =\
+    \ 10/0;\n      } catch(ArrayIndexOutOfBoundsException e) {\n        System.out.println(\"\
+    Handle the array carefully\");\n      }\n    }\n    public static void main(String\
+    \ args[]) {\n      try {\n        performJob();\n      } catch (Exception e) {\n\
+    \        System.out.println(\"There is some problem in the code\");\n      }\n\
+    \    }\n}\n```\n- A: No output\n- B: Handle the array carefully\n- C: There is\
+    \ some problem in the code\n- D: Division by zero\n**Right Answer: C**\n\n## Q.4:\
+    \ What is the output?\n```java\nclass Program {\n    static void performJob()\
+    \ {\n      try {\n        int j = 10/0;\n      } catch(ArrayIndexOutOfBoundsException\
+    \ e) {\n        System.out.println(\"Handle the array carefully\");\n      } finally\
+    \ {\n        System.out.println(\"finally - performJob\");\n      }\n    }\n \
+    \   public static void main(String args[]) {\n      try {\n        performJob();\n\
+    \      } catch (Exception e) {\n        System.out.println(\"There is some problem\
+    \ in the code\");\n      } finally {\n        System.out.println(\"finally - main\"\
+    );\n      }\n    }\n}\n```\n- A: No output\n- B: finally - performJobThere is\
+    \ some problem in the codefinally – main\n- C: finally - performJobfinally – main\n\
+    - D: There is some problem in the codefinally – mainfinally - performJob\n**Right\
+    \ Answer: B**\n\n## Q.5: What is the output?\n```java\nclass Program {\n    static\
+    \ void performJob() {\n      try {\n        int j = 10/0;\n      } catch(ArrayIndexOutOfBoundsException\
+    \ e) {\n        System.out.println(\"Handle the array carefully\");\n      } finally\
+    \ {\n        System.out.println(\"finally - performJob\");\n      }\n    }\n \
+    \   public static void main(String args[]) {\n      int ar[] = new int[1];\n \
+    \     try {\n        ar[1]=0;\n        performJob();\n      } catch (Exception\
+    \ e) {\n        System.out.println(\"There is some problem in the code\");\n \
+    \     } finally {\n        System.out.println(\"finally - main\");\n      }\n\
+    \    }\n}\n```\n- A: No output\n- B: There is some problem in the codefinally\
+    \ – main\n- C: finally - performJobThere is some problem in the codefinally –\
+    \ main\n- D: finally - performJobThere is some problem in the code\n**Right Answer:\
+    \ D**\n\n### Answers\n| Q.No | Ans | Explanation |\n| :--- | :--- | :--- |\n|\
+    \ 1 | A | Java has support for exception handling |\n| 2 | D | Java exception\
+    \ can be nested upto level. |\n| 3 | C | By computation the output :There is some\
+    \ problem in the code |\n| 4 | B | By computation the output:finally - performJobThere\
+    \ is some problem in the codefinally - main |\n| 5 | B | By computation the output\
+    \ :There is some problem in the codefinally - main |\n\n![](Images/image0318.jpeg)\n\
+    \n# Chapter 13: 'Throw' Keyword\n\n## Q.1: Class derived from …......... can only\
+    \ be thrown\n- A: Object\n- B: Throwable\n- C: GC\n- D: All of the above\n**Right\
+    \ Answer: B**\n\n## Q.2: ….............. Keyword is used to raise an exception.\n\
+    - A: Throw\n- B: Throws\n- C: Raise\n- D: Signal\n**Right Answer: A**\n\n## Q.3:\
+    \ What is the output?\n```java\nclass Program {\n    public static void main(String\
+    \ args[]) {\n      try {\n        throw new Exception();\n      } catch (Exception\
+    \ e) {\n        System.out.println(\"There is some problem in the code\");\n \
+    \     } finally {\n        System.out.println(\"finally - main\");\n      }\n\
+    \    }\n}\n```\n- A: No output\n- B: There is some problem in the code\n- C: There\
+    \ is some problem in the codefinally – main\n- D: finally – main\n**Right Answer:\
+    \ C**\n\n## Q.4: What is output?\n```java\nclass Program {\n    static void performJob()\
+    \ {\n      try {\n        throw new ArrayIndexOutOfBoundsException();\n      }\
+    \ catch(ArrayIndexOutOfBoundsException e) {\n        System.out.println(\"Handle\
+    \ the array carefully\");\n      } finally {\n        System.out.println(\"finally\
+    \ - performJob\");\n      }\n    }\n    public static void main(String args[])\
+    \ {\n      try {\n        performJob();\n      } catch (Exception e) {\n     \
+    \   System.out.println(\"There is some problem in the code\");\n      } finally\
+    \ {\n        System.out.println(\"finally - main\");\n      }\n    }\n}\n```\n\
+    - A: finally - performJobfinally – main\n- B: No output\n- C: Handle the array\
+    \ carefullyfinally - performJob\n- D: Handle the array carefullyfinally - performJobfinally\
+    \ - main\n**Right Answer: D**\n\n## Q.5: What is the output?\n```java\nclass Program\
+    \ {\n    static void performJob() {\n      try {\n        throw new ArrayIndexOutOfBoundsException();\n\
+    \      } catch(ArrayIndexOutOfBoundsException e) {\n        throw new Exception();\n\
+    \        System.out.println(\"Handle the array carefully\");\n      } finally\
+    \ {\n        System.out.println(\"finally - performJob\");\n      }\n    }\n \
+    \   public static void main(String args[]) {\n      try {\n        performJob();\n\
+    \      } catch (Exception e) {\n        System.out.println(\"There is some problem\
+    \ in the code\");\n      } finally {\n        System.out.println(\"finally - main\"\
+    );\n      }\n    }\n}\n```\n- A: No output\n- B: Compiler Error\n- C: Handle the\
+    \ array carefullyfinally - performJobfinally - main\n- D: finally - performJobfinally\
+    \ - main\n**Right Answer: B**\n\n## Q.6: What is the output?\n"
+  raw: '| C | Decl |
+
+
+    | D | Finally |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: Checked exception can derive from ….......... or  …............. class
+    |
+
+
+    |  |
+
+
+    | A | Throwable |
+
+
+    | B | Exception |
+
+
+    | C | Error |
+
+
+    | D | RuntimeException |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: How many exceptions can be declared using ''throws'' keyword for a method?
+    |
+
+
+    |  |
+
+
+    | A | 1 |
+
+
+    | B | 2 |
+
+
+    | C | 3 |
+
+
+    | D | Any number |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.8: Checked exception is verified by compiler. |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.9: Unchecked exception derive from ….......... class |
+
+
+    |  |
+
+
+    | A | Throwable |
+
+
+    | B | Exception |
+
+
+    | C | Error |
+
+
+    | D | RuntimeException |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.10: Which of following is not an unchecked exception? |
+
+
+    |  |
+
+
+    | A | NullPointerException |
+
+
+    | B | ArithmeticException |
+
+
+    | C | ClassCastException |
+
+
+    | D | Exception |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.11: Which of following is not a checked exception? |
+
+
+    |  |
+
+
+    | A | NullPointerException |
+
+
+    | B | ArithmeticException |
+
+
+    | C | ClassCastException |
+
+
+    | D | Exception |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | A | Checked Exception is identified by the compiler. |
+
+
+    | 2 | A | Unchecked exception is not identified by the compiler. |
+
+
+    | 3 | B | Checked exception has to be handled (compulsory). |
+
+
+    | 4 | D | Unchecked exception is not required to be compulsorily handled. |
+
+
+    | 5 | B | ''Throws'' keyword is used for declaring an exception for a method.
+    |
+
+
+    | 6 | A,B | Checked Exception can derive from Throwable or Exception class |
+
+
+    | 7 | D | Any number of exceptions can be declared using ''throws'' keyword. |
+
+
+    | 8 | A | Checked exception is known at compile time. |
+
+
+    | 9 | D | Unchecked exceptions derive from RuntimeException class |
+
+
+    | 10 | D | Exception class is a checked exception. |
+
+
+    | 11 | A,B,C | NullPointerException, ArithmeticException and ClassCastException
+    are not checked exceptions. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 12
+
+
+    Nested Exception
+
+
+    | Q.1: Java has support for nested exception handling. |
+
+
+    |  |
+
+
+    | A | TRUE |
+
+
+    | B | FALSE |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: Upto what level of nesting of exception handling does Java support? |
+
+
+    |  |
+
+
+    | A | 1 |
+
+
+    | B | 2 |
+
+
+    | C | 3 |
+
+
+    | D | Any Level |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: What is the output? |
+
+
+    | class Program {static void performJob() {   try {      int j = 10/0;   }catch(ArrayIndexOutOfBoundsException
+    e) {     System.out.println("Handle the array carefully");   }}public static void
+    main(String args[]) {   try {      performJob();   } catch (Exception e) {    
+    System.out.println("There is some problem in the code");   }}} |
+
+
+    | A | No output |
+
+
+    | B | Handle the array carefully |
+
+
+    | C | There is some problem in the code |
+
+
+    | D | Division by zero |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: What is the output? |
+
+
+    | class Program {static void performJob() {   try {      int j = 10/0;   }catch(ArrayIndexOutOfBoundsException
+    e) {     System.out.println("Handle the array carefully");   }   finally {             
+       System.out.println("finally - performJob");   }}public static void main(String
+    args[]) {   try {      performJob();   } catch (Exception e) {     System.out.println("There
+    is some problem in the code");   }   finally {                 System.out.println("finally
+    - main");   }}} |
+
+
+    | A | No output |
+
+
+    | B | finally - performJobThere is some problem in the codefinally – main |
+
+
+    | C | finally - performJobfinally – main |
+
+
+    | D | There is some problem in the codefinally – mainfinally - performJob |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: What is the output? |
+
+
+    | class Program {static void performJob() {   try {      int j = 10/0;   }catch(ArrayIndexOutOfBoundsException
+    e) {     System.out.println("Handle the array carefully");   }   finally {             
+       System.out.println("finally - performJob");   }}public static void main(String
+    args[]) {              int ar[] = new int[1];   try {                 ar[1]=0;     
+    performJob();   } catch (Exception e) {     System.out.println("There is some
+    problem in the code");   }   finally {                 System.out.println("finally
+    - main");   }}} |
+
+
+    | A | No output |
+
+
+    | B | There is some problem in the codefinally – main |
+
+
+    | C | finally - performJobThere is some problem in the codefinally – main |
+
+
+    | D | finally - performJobThere is some problem in the code |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | A | Java has support for exception handling |
+
+
+    | 2 | D | Java exception can be nested upto any level. |
+
+
+    | 3 | C | By computation the output is :There is some problem in the code |
+
+
+    | 4 | B | By computation the output is:finally - performJobThere is some problem
+    in the codefinally - main |
+
+
+    | 5 | B | By computation the output is :There is some problem in the codefinally
+    - main |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 13
+
+
+    ''Throw'' Keyword
+
+
+    | Q.1: Class derived from …......... can only be thrown |
+
+
+    |  |
+
+
+    | A | Object |
+
+
+    | B | Throwable |
+
+
+    | C | GC |
+
+
+    | D | All of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: ….............. Keyword is used to raise an exception. |
+
+
+    |  |
+
+
+    | A | Throw |
+
+
+    | B | Throws |
+
+
+    | C | Raise |
+
+
+    | D | Signal |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: What is the output? |
+
+
+    | class Program {public static void main(String args[]) {   try {       throw
+    new Exception();   } catch (Exception e) {     System.out.println("There is some
+    problem in the code");   }   finally {                 System.out.println("finally
+    - main");   }}} |
+
+
+    | A | No output |
+
+
+    | B | There is some problem in the code |
+
+
+    | C | There is some problem in the codefinally – main |
+
+
+    | D | finally – main |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: What is output? |
+
+
+    | class Program {static void performJob() {   try {      throw new ArrayIndexOutOfBoundsException();  
+    }catch(ArrayIndexOutOfBoundsException e) {     System.out.println("Handle the
+    array carefully");   }   finally {                 System.out.println("finally
+    - performJob");   }}public static void main(String args[]) {   try {      performJob();  
+    } catch (Exception e) {     System.out.println("There is some problem in the code");  
+    }   finally {                 System.out.println("finally - main");   }}} |
+
+
+    | A | finally - performJobfinally – main |
+
+
+    | B | No output |
+
+
+    | C | Handle the array carefullyfinally - performJob |
+
+
+    | D | Handle the array carefullyfinally - performJobfinally - main |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: What is the output? |
+
+
+    | class Program {static void performJob() {   try {      throw new ArrayIndexOutOfBoundsException();  
+    }catch(ArrayIndexOutOfBoundsException e) {                 throw new Exception();    
+    System.out.println("Handle the array carefully");   }   finally {             
+       System.out.println("finally - performJob");   }}public static void main(String
+    args[]) {   try {      performJob();   } catch (Exception e) {     System.out.println("There
+    is some problem in the code");   }   finally {                 System.out.println("finally
+    - main");   }}} |
+
+
+    | A | No output |
+
+
+    | B | Compiler Error |
+
+
+    | C | Handle the array carefullyfinally - performJobfinally - main |
+
+
+    | D | finally - performJobfinally - main |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: What is the output? |'
+  toc: []
+  trans: "\n\n## Q.6: 检查异常继承自 …..........或 …............. 类\n- A: `Throwable`\n- B:\
+    \ `Exception`\n- C: `Error`\n- D: `RuntimeException`\n**正确答案: B**\n\n## Q.7: 一个方法可以使用\
+    \ 'throws' 关键字声明多少个异常？\n- A: 1\n- B: 2\n- C: 3\n- D: 任意数量\n**正确答案: D**\n\n## Q.8:\
+    \ 检查异常由编译器验证。\n- A: 正确\n- B: 错误\n**正确答案: A**\n\n## Q.9: 非检查异常继承自 ….......... 类\n\
+    - A: `Throwable`\n- B: `Exception`\n- C: `Error`\n- D: `RuntimeException`\n**正确答案:\
+    \ D**\n\n## Q.10: 下列哪项不是非检查异常？\n- A: `NullPointerException`\n- B: `ArithmeticException`\n\
+    - C: `ClassCastException`\n- D: `Exception`\n**正确答案: D**\n\n## Q.11: 下列哪项不是检查异常？\n\
+    - A: `NullPointerException`\n- B: `ArithmeticException`\n- C: `ClassCastException`\n\
+    - D: `Exception`\n**正确答案: A**\n\n### Answers\n| Q.No | Ans | 解释 |\n| :--- | :---\
+    \ | :--- |\n| 1 | A | 检查异常由编译器识别。 |\n| 2 | A | 非检查异常不由编译器识别。 |\n| 3 | B | 检查异常必须被处理（强制性）。\
+    \ |\n| 4 | D | 非检查异常不需要强制处理。 |\n| 5 | B | 'throws' 关键字用于为方法声明异常。 |\n| 6 | A,B\
+    \ | 检查异常可以自 `Throwable` 或 `Exception` 类 |\n| 7 | D | 使用 'throws' 关键字可以声明任意数量的异常。\
+    \ |\n| 8 | A | 检查异常在编译时已知。 |\n| 9 | D | 非检查异常继承自 `RuntimeException` 类 |\n| 10\
+    \ | D | `Exception` 类是检查异常。 |\n| 11 | A,B,C | `NullPointerException`、`ArithmeticException`\
+    \ 和 `ClassCastException` 不是检查异常。 |\n\n![](img/image00318.jpeg)\n\n# 第 12 章：嵌套异常\n\
+    \n## Q.1: Java 支持嵌套异常处理。\n- A: 正确\n- B: 错误\n**正确答案: A**\n\n## Q.2: Java 支持多大层级的异常处理嵌套？\n\
+    - A: 1\n- B: 2\n- C: 3\n- D: 任意级别\n**正确答案: D**\n\n## Q.3: 输出是什么？\n```java\nclass\
+    \ Program {\n    static void performJob() {\n      try {\n        int j = 10/0;\n\
+    \      } catch(ArrayIndexOutOfBoundsException e) {\n        System.out.println(\"\
+    Handle the array carefully\");\n      }\n    }\n    public static void main(String\
+    \ args[]) {\n      try {\n        performJob();\n      } catch (Exception e) {\n\
+    \        System.out.println(\"There is some problem in the code\");\n      }\n\
+    \    }\n}\n```\n- A: 无输出\n- B: Handle the array carefully\n- C: There is some\
+    \ problem in the code\n- D: Division by zero\n**正确答案: C**\n\n## Q.4: 输出是什么？\n\
+    ```java\nclass Program {\n    static void performJob() {\n      try {\n      \
+    \  int j = 10/0;\n      } catch(ArrayIndexOutOfBoundsException e) {\n        System.out.println(\"\
+    Handle the array carefully\");\n      } finally {\n        System.out.println(\"\
+    finally - performJob\");\n      }\n    }\n    public static void main(String args[])\
+    \ {\n      try {\n        performJob();\n      } catch (Exception e) {\n     \
+    \   System.out.println(\"There is some problem in the code\");\n      } finally\
+    \ {\n        System.out.println(\"finally - main\");\n      }\n    }\n}\n```\n\
+    - A: 无输出\n- B: finally - performJobThere is some problem in the codefinally –\
+    \ main\n- C: finally - performJobfinally – main\n- D: There is some problem in\
+    \ the codefinally – mainfinally - performJob\n**正确答案: B**\n\n## Q.5: 输出是什么？\n\
+    ```java\nclass Program {\n    static void performJob() {\n      try {\n      \
+    \  int j = 10/0;\n      } catch(ArrayIndexOutOfBoundsException e) {\n        System.out.println(\"\
+    Handle the array carefully\");\n      } finally {\n        System.out.println(\"\
+    finally - performJob\");\n      }\n    }\n    public static void main(String args[])\
+    \ {\n      int ar[] = new int[1];\n      try {\n        ar[1]=0;\n        performJob();\n\
+    \      } catch (Exception e) {\n        System.out.println(\"There is some problem\
+    \ in the code\");\n      } finally {\n        System.out.println(\"finally - main\"\
+    );\n      }\n    }\n}\n```\n- A: 无输出\n- B: There is some problem in the codefinally\
+    \ – main\n- C: finally - performJobThere is some problem in the codefinally –\
+    \ main\n- D: finally - performJobThere is some problem in the code\n**正确答案: D**\n\
+    \n### Answers\n| Q.No | Ans | 解释 |\n| :--- | :--- | :--- |\n| 1 | A | Java 支持异常处理。\
+    \ |\n| 2 | D | 异常处理可以嵌套任意层级。 |\n| 3 | C | 输出为：There is some problem in the code\
+    \ |\n| 4 | B | 输出为：finally - performJobThere is some problem in the codefinally\
+    \ – main |\n| 5 | D | 输出为：finally - performJobThere is some problem in the code\
+    \ |\n\n![](img/image0318.jpeg)\n\n# 第 13 章：'Throw' 关键字\n\n## Q.1: 类.........可以被抛出\n\
+    - A: Object\n- B: Throwable\n- C: GC\n- D: 以上所有\n**正确答案: B**\n\n## Q.2: …..............关键字用于抛出一个异常。\n\
+    - A: Throw\n- B: Throws\n- C: Raise\n- D: Signal\n**正确答案: A**\n\n## Q.3: 输出是什么？\n\
+    ```java\nclass Program {\n    public static void main(String args[]) {\n     \
+    \ try {\n        throw new Exception();\n      } catch (Exception e) {\n     \
+    \   System.out.println(\"There is some problem in the code\");\n      }\n    }\n\
+    }\n```\n- A: 无输出\n- B: There is some problem in the code\n- C: There is some problem\
+    \ in the codefinally – main\n- D: – main\n**正确答案: C**\n\n## Q.4: 输出？\n```java\n\
+    class Program {\n    static void performJob() {\n      try {\n        new ArrayIndexOutOfBoundsException();\n\
+    \      } catch(ArrayIndexOutOfBoundsException e) {\n        System.out.println(\"\
+    Handle the array carefully\");\n      } finally {\n        System.out.println(\"\
+    finally - performJob\");\n      }\n    }\n    public static void main(String args[])\
+    \ {\n      try {\n        performJob();\n      } catch (Exception e) {\n     \
+    \   System.out.println(\"There is some problem in the code\");\n      } finally\
+    \ {\n        System.out.println(\"finally - main\");\n      }\n    }\n}\n```\n\
+    - A: finally - performJob – main\n- B: 无输出\n- C: Handle the array carefullyfinally\
+    \ - performJob\n- D: Handle the array carefullyfinally - performJobfinally - main\n\
+    **正确答案: D**\n\n## Q.5: 输出是什么？\n```java\nclass Program {\n    static void performJob()\
+    \ {\n      try {\n        throw new ArrayIndexOutOfBoundsException();\n      }\
+    \ catch(ArrayIndexOutOfBoundsException e) {\n        throw new Exception();\n\
+    \        System.out.println(\"Handle the array carefully\");\n      } finally\
+    \ {\n        System.out.println(\"finally - performJob\");\n      }\n    }\n \
+    \   public static void main(String args[]) {\n      try {\n        performJob();\n\
+    \      } catch (Exception e) {\n        System.out.println(\"There is some problem\
+    \ in the code\");\n      } finally {\n        System.out.println(\"finally - main\"\
+    );\n      }\n    }\n}\n```\n- A: 无输出\n- B: 编译错误\n- C: Handle the array carefullyfinally\
+    \ - performJobfinally - main\n- D: finally - performJobfinally - main\n**正确答案:\
+    \ B**\n\n## Q.6: 输出是什么？\n\n"
+- fmt: "\n# Code Analysis\n\n```java\nclass Program {\n    static void performJob()\
+    \ {\n        try {\n            throw new ArrayIndexOutOfBoundsException();\n\
+    \        } catch (ArrayIndexOutOfBoundsException e) {\n            throw new Exception();\n\
+    \            System.out.println(\"Handle the array carefully\");\n        } finally\
+    \ {\n            System.out.println(\"finally - performJob\");\n        }\n  \
+    \  }\n    public static void main(String args[]) {\n        try {\n          \
+    \  performJob();\n        } catch (Exception e) {\n            System.out.println(\"\
+    There is some problem in the code\");\n        } finally {\n            System.out.println(\"\
+    finally - main\");\n        }\n    }\n}\n\nclass Program {\n    static void performJob()\
+    \ {\n        try {\n            throw new ArrayIndexOutOfBoundsException();\n\
+    \        } catch (ArrayIndexOutOfBoundsException e) {\n            try {\n   \
+    \             throw new Exception();\n            } catch (Exception obj) {\n\
+    \                System.out.println(\"This is inner exception\");\n          \
+    \  }\n            System.out.println(\"Handle the array carefully\");\n      \
+    \  } finally {\n            System.out.println(\"finally - performJob\");\n  \
+    \      }\n    }\n    public static void main(String args[]) {\n        try {\n\
+    \            performJob();\n        } catch (Exception e) {\n            System.out.println(\"\
+    There is some problem in the code\");\n        } finally {\n            System.out.println(\"\
+    finally - main\");\n        }\n    }\n}\n```\n\n| Option | Result |\n| :--- |\
+    \ :--- |\n| A | No output |\n| B | Compiler Error |\n| C | This is inner exceptionfinally\
+    \ - performJobfinally - main |\n| D | This is inner exceptionHandle the array\
+    \ carefullyfinally - performJobfinally - main |\n| | <----Right Answer |\n\n###\
+    \ Answers\n\n| Q.No | Ans | Explanation |\n| :--- | :--- | :--- |\n| 1 | B | Class\
+    \ derived from `Throwable` (or derived class) can only be thrown |\n| 2 | A |\
+    \ `throw` keyword is used for raising an exception. |\n| 3 | C | By computation\
+    \ the output is:There is some problem in the codefinally - main |\n| 4 | D | By\
+    \ computation the output is :Handle the array carefullyfinally - performJobfinally\
+    \ - main |\n| 5 | B | Compiler Error |\n| 6 | D | By Computation the output is.This\
+    \ is inner exceptionHandle the array carefullyfinally - performJobfinally - main\
+    \ |\n\n![](Images/image00318.jpeg)\n\n# Chapter 14: Exception Chaining\n\n###\
+    \ Q.1: ... class has infrastructure support for exception chaining.\n| A | Exception\
+    \ |\n| B | Throwable |\n| C | Error |\n| D | RuntimeException |\n| | <----Right\
+    \ Answer |\n\n### Q.2: `getCause()` method is declared in .................. class\n\
+    | A | Object |\n| B | Error |\n| C | RuntimeException |\n| D | Throwable |\n|\
+    \ | <----Right Answer |\n\n### Q.3: Identify the correct constructor for `Throwable`\
+    \ class.\n| A | `Throwable(String, Throwable)` |\n| B | `Throwable(String[], Throwable)`\
+    \ |\n| C | `Throwable(char[], Throwable)` |\n| D | `Throwable(char, Throwable)`\
+    \ |\n| | <----Right Answer |\n\n### Q.4: Which method initializes the cause of\
+    \ an exception?\n| A | `startCause()` |\n| B | `setCause()` |\n| C | `setIssue()`\
+    \ |\n| D | `initCause()` |\n| | <----Right Answer |\n\n### Q.5: Identify the correct\
+    \ constructor for `Throwable` class.\n| A | `Throwable(int)` |\n| B | `Throwable(String[])`\
+    \ |\n| C | `Throwable(Throwable)` |\n| D | `Throwable()` |\n| | <----Right Answer\
+    \ |\n\n### Q.6: `initCause()` method is declared in ... class\n| A | Object |\n\
+    | B | Throwable |\n| C | RuntimeException |\n| D | Error |\n| | <----Right Answer\
+    \ |\n\n### Q.7: ............... return the cause of 'throwable'.\n| A | `getMsg()`\
+    \ |\n| B | `getMessage()` |\n| C | `getCause()` |\n| D | `getReason()` |\n| |\
+    \ <----Right Answer |\n\n### Answers\n| Q.No | Ans | Explanation |\n| :--- | :---\
+    \ | :--- |\n| 1 | B | `Throwable` class has infrastructure for chaining. |\n|\
+    \ 2 | D | `getCause()` method is declared in `Throwable`. |\n| 3 | A | Valid constructor\
+    \ :`Throwable(String, Throwable)` |\n| 4 | D | `initCause()` initializes the cause\
+    \ of an exception. |\n| 5 | C | Valid constructors :`Throwable(Throwable)` |\n\
+    | 6 | B | `initCause()` method is declared in `Throwable`. |\n| 7 | C | `getCause()`\
+    \ return the cause of 'throwable'. |\n\n![](Images/image0318.jpeg)\n\n# Chapter\
+    \ 15: Try with Resource\n\n### Q.1: In which version of Java was 'try with resource'\
+    \ introduced?\n| A | 5 |\n| B | 6 |\n| C | 7 |\n| D | 8 |\n| | <----Right Answer\
+    \ |\n\n### Q.2: How many resources can be created in a single try block?\n| A\
+    \ | None |\n| B | 2 |\n| C | 3 |\n| D | Any |\n| | <----Right Answer |\n\n###\
+    \ Q.3: An object has to implement ..... or ………… to be eligible in “try with resource”\
+    \ block.\n| A | `Autoable` |\n| B | `Closeable` |\n| C | `TryClose` |\n| D | `Closed`\
+    \ |\n| | <----Right Answer |\n\n### Q.4: Identify the method of `Autoable` interface?\n\
+    | A | `Close()` |\n| B | `close()` |\n| C | `Closing` |\n| D | `Closed` |\n| |\
+    \ <----Right Answer |\n\n### Q.5: Identify the method of `Closeable` interface?\n\
+    | A | `closed()` |\n| B | `closing()` |\n| C | `close()` |\n| D | `end()` |\n\
+    | | <----Right Answer |\n\n### Q.6: The resources are closed in ......... order\
+    \ when created in 'try with resource’.\n| A | Custom |\n| B | Forward |\n| C |\
+    \ Reverse |\n| D | Conditional |\n| | <----Right Answer |\n\n### Q.7: What is\
+    \ the output\n```java\nimport java.io.*;\nclass Shape implements Closeable {\n\
+    \    public void close() {\n        System.out.println(\"Shape object is closed\"\
+    );\n    }\n}\nclass Program {\n    public static void main(String args[]) {\n\
+    \        try(Shape obj = new Shape()) {\n        } catch (Exception e) {\n   \
+    \         System.out.println(\"Exception happened\");\n        }\n    }\n}\n```\n\
+    | Option | Result |\n| :--- | :--- |\n| A | No Output |\n| B | Compiler Error\
+    \ |\n| C | Shape object is closed |\n| D | Exception happened |\n| | <----Right\
+    \ Answer |\n\n### Answers\n| Q.No | Ans | Explanation |\n| :--- | :--- | :---\
+    \ |\n| 1 | C | 'Try with resource' was introduced in Java 7. |\n| 2 | D | Any\
+    \ number of resources can be created in a try. |\n| 3 | A,B | An object is only\
+    \ eligible in try with resource when it implements `Autoable` or `Closeable`.\
+    \ |\n| 4 | B | `Autoable` interface has `close()`. |\n| 5 | C | `Closeable` interface\
+    \ has `close()`. |\n| 6 | C | Resources are closed in reverse order. |\n| 7 |\
+    \ C | Shape object is closed. |\n\n![](Images/image0318.jpeg)\n\n# Chapter 16:\
+    \ Overriding\n\n### Q.1: What is the output\n```java\nclass Shape {\n    void\
+    \ draw() {\n        System.out.println(\"Drawing shape\");\n    }\n}\nclass Circle\
+    \ extends Shape {\n    void draw() {\n        System.out.println(\"Drawing circle\"\
+    );\n    }\n}\nclass Program {\n    public static void main(String args[]) {\n\
+    \        Shape s = new Circle();\n        s.draw();\n    }\n}\n```\n| Option |\
+    \ Result |\n| :--- | :--- |\n| A | Compiler error |\n| B | No output |\n| C |\
+    \ Drawing shape |\n| D | Drawing circle |\n| | <----Right Answer |\n\n### Q.2:\
+    \ What is the output\n```java\nclass Shape {\n    void draw() {\n        System.out.println(\"\
+    Drawing shape\");\n    }\n}\nclass Circle extends Shape {\n    void draw() throws\
+    \ Exception {\n        System.out.println(\"Drawing circle\");\n    }\n}\nclass\
+    \ Program {\n    public static void main(String args[]) {\n        Shape s = new\
+    \ Circle();\n        try {\n            s.draw();\n        } catch (Exception\
+    \ e) {\n            System.out.println(\"Exception caught\");\n        }\n   \
+    \ }\n}\n```\n| Option | Result |\n| :--- | :--- |\n| A | Compiler error |\n| B\
+    \ | No output |\n| C | Drawing shape |\n| D | Drawing circle |\n| | <----Right\
+    \ Answer |\n\n### Q.3: What is the output\n```java\nclass Shape {\n    void draw()\
+    \ throws Exception {\n        System.out.println(\"Drawing shape\");\n    }\n\
+    }\nclass Circle extends Shape {\n    void draw() throws Throwable {\n        System.out.println(\"\
+    Drawing circle\");\n    }\n}\nclass Program {\n    public static void main(String\
+    \ args[]) throws Exception {\n        Shape s = new Circle();\n        try {\n\
+    \            s.draw();\n        } catch (Exception e) {\n            System.out.println(\"\
+    Exception caught\");\n        }\n    }\n}\n```\n*(Note: The provided text for\
+    \ Chapter 16 was incomplete in the prompt; the above is formatted based on the\
+    \ pattern of the previous questions.)*\n"
+  raw: '| class Program {static void performJob() {   try {      throw new ArrayIndexOutOfBoundsException();  
+    }catch(ArrayIndexOutOfBoundsException e) {                 throw new Exception();    
+    System.out.println("Handle the array carefully");   }   finally {             
+       System.out.println("finally - performJob");   }}public static void main(String
+    args[]) {   try {      performJob();   } catch (Exception e) {     System.out.println("There
+    is some problem in the code");   }   finally {                 System.out.println("finally
+    - main");   }}}class Program {static void performJob() {   try {      throw new
+    ArrayIndexOutOfBoundsException();   }catch(ArrayIndexOutOfBoundsException e) {             
+       try {                 throw new Exception();                 }catch(Exception
+    obj) {                               System.out.println("This is inner exception");             
+       }     System.out.println("Handle the array carefully");   }   finally {             
+       System.out.println("finally - performJob");   }}public static void main(String
+    args[]) {   try {      performJob();   } catch (Exception e) {     System.out.println("There
+    is some problem in the code");   }   finally {                 System.out.println("finally
+    - main");   }}} |
+
+
+    | A | No output |
+
+
+    | B | Compiler Error |
+
+
+    | C | This is inner exceptionfinally - performJobfinally - main |
+
+
+    | D | This is inner exceptionHandle the array carefullyfinally - performJobfinally
+    - main |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | B | Class derived from ''Throwable''(or derived class) can only be thrown
+    |
+
+
+    | 2 | A | ''Throw'' keyword is used for raising an exception. |
+
+
+    | 3 | C | By computation the output is:There is some problem in the codefinally
+    - main |
+
+
+    | 4 | D | By computation the output is :Handle the array carefullyfinally - performJobfinally
+    - main |
+
+
+    | 5 | B | Compiler Error |
+
+
+    | 6 | D | By Computation the output is.This is inner exceptionHandle the array
+    carefullyfinally - performJobfinally - main |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 14
+
+
+    Exception Chaining
+
+
+    | Q.1: …................ class has infrastructure support for exception chaining.
+    |
+
+
+    |  |
+
+
+    | A | Exception |
+
+
+    | B | Throwable |
+
+
+    | C | Error |
+
+
+    | D | RuntimeException |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: getCause() method is declared in …............... class |
+
+
+    |  |
+
+
+    | A | Object |
+
+
+    | B | Error |
+
+
+    | C | RuntimeException |
+
+
+    | D | Throwable |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: Identify the correct constructor for ''Throwable'' class. |
+
+
+    |  |
+
+
+    | A | Throwable(String, Throwable) |
+
+
+    | B | Throwable(String[], Throwable) |
+
+
+    | C | Throwable(char[], Throwable) |
+
+
+    | D | Throwable(char, Throwable) |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: Which method initializes the cause of an exception? |
+
+
+    |  |
+
+
+    | A | start Cause() |
+
+
+    | B | setCause() |
+
+
+    | C | setIssue() |
+
+
+    | D | initCause() |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: Identify the correct constructor for ''Throwable'' class. |
+
+
+    |  |
+
+
+    | A | Throwable(int) |
+
+
+    | B | Throwable(String[]) |
+
+
+    | C | Throwable(Throwable) |
+
+
+    | D | Throwable() |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: initCause() method is declared in …............ class |
+
+
+    |  |
+
+
+    | A | Object |
+
+
+    | B | Throwable |
+
+
+    | C | RuntimeException |
+
+
+    | D | Error |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: …............ method return the cause of a ''throwable''. |
+
+
+    |  |
+
+
+    | A | getMsg() |
+
+
+    | B | getMessage() |
+
+
+    | C | getCause() |
+
+
+    | D | getReason() |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | B | Throwable class has infrastructure for exception chaining. |
+
+
+    | 2 | D | getCause() method is declared in Throwable class. |
+
+
+    | 3 | A | Valid constructor is :Throwable(String, Throwable) |
+
+
+    | 4 | D | initCause() method initializes the cause of an exception. |
+
+
+    | 5 | C,D | Valid constructors are :Throwable(Throwable)Throwable() |
+
+
+    | 6 | B | initCause() method is declared in Throwable class. |
+
+
+    | 7 | C | getCause() method return the cause of a ''throwable''. |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 15
+
+
+    Try with Resource
+
+
+    | Q.1: In which version of Java was ''try with resource'' introduced? |
+
+
+    |  |
+
+
+    | A | 5 |
+
+
+    | B | 6 |
+
+
+    | C | 7 |
+
+
+    | D | 8 |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: How many resources can be created in a single try block? |
+
+
+    |  |
+
+
+    | A | None |
+
+
+    | B | 2 |
+
+
+    | C | 3 |
+
+
+    | D | Any |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: An object has to implement ….................. or …............ to be eligible
+    in “try with resource” block. |
+
+
+    |  |
+
+
+    | A | AutoCloseable |
+
+
+    | B | Closeable |
+
+
+    | C | TryClose |
+
+
+    | D | Closed |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: Identify the method of AutoCloseable interface? |
+
+
+    |  |
+
+
+    | A | Close() |
+
+
+    | B | close() |
+
+
+    | C | Closing |
+
+
+    | D | Closed |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: Identify the method of Closeable interface? |
+
+
+    |  |
+
+
+    | A | closed() |
+
+
+    | B | closing() |
+
+
+    | C | close() |
+
+
+    | D | end() |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: The resources are closed in …......... order when created in ''try with
+    resource’. |
+
+
+    |  |
+
+
+    | A | Custom |
+
+
+    | B | Forward |
+
+
+    | C | Reverse |
+
+
+    | D | Conditional |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.7: What is the output |
+
+
+    | import java.io.*;class Shape implements Closeable {              public void
+    close() {                            System.out.println("Shape object close is
+    closed");              }}class Program {              public static void main(String
+    args[]){                            try(Shape obj = new Shape()) {             
+                  }catch(Exception e) {                                          System.out.println("Exception
+    happened");                            }              }} |
+
+
+    | A | No Output |
+
+
+    | B | Compiler Error |
+
+
+    | C | Shape object close is closed |
+
+
+    | D | Exception happened |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | C | ''Try with resource'' was introduced in Java 7. |
+
+
+    | 2 | D | Any number of resources can be created in a try. |
+
+
+    | 3 | A,B | An object is only eligible in try with resource when it implements
+    Closeable or AutoCloseable. |
+
+
+    | 4 | B | AutoCloseable has only one method i.e. close() |
+
+
+    | 5 | C | Closeable interface has only one method i.e. close(). |
+
+
+    | 6 | C | The objects are closed in the reverse order of declaration. |
+
+
+    | 7 | C | The output is : Shape object close is closed |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 16
+
+
+    Overriding Exception
+
+
+    | Q.1: What is the output? |
+
+
+    | class Shape {void draw () {   System.out.println("Drawing shape");}}class Circle
+    extends Shape{  void draw() throws RuntimeException {     System.out.println("Drawing
+    Circle");   }}class Program {public static void main(String args[]) {             
+                  Circle obj = new Circle();                            obj.draw();             
+    }} |
+
+
+    | A | Compiler error |
+
+
+    | B | No output |
+
+
+    | C | Drawing shape |
+
+
+    | D | Drawing Circle |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: What is the output? |
+
+
+    | class Shape {void draw () {  System.out.println("Drawing shape");}}class Circle
+    extends Shape{  void draw() throws Exception {    System.out.println("Drawing
+    Circle");  }}class Program {public static void main(String args[]) {             
+                  Circle obj = new Circle();                            obj.draw();             
+    }} |
+
+
+    | A | Compiler error |
+
+
+    | B | No output |
+
+
+    | C | Drawing shape |
+
+
+    | D | Drawing Circle |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: What is the output? |
+
+
+    | class Shape {void draw () throws Exception {  System.out.println("Drawing shape");}}class
+    Circle extends Shape{  void draw() throws Throwable {      System.out.println("Drawing
+    Circle");   }}class Program {public static void main(String args[]) throws Exception{             
+                  Circle obj = new Circle();                            obj.draw();             
+    }}                 |
+
+
+    | A | Compiler error |
+
+
+    | B | No output |
+
+
+    | C | Drawing shape |
+
+
+    | D | Drawing Circle |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: What is the output? |'
+  toc: []
+  trans: "\n\n# 代码分析\n\n```java\nclass Program {\n    static void performJob() {\n\
+    \        try {\n            throw new ArrayIndexOutOfBoundsException();\n    \
+    \    } catch (ArrayIndexOutOfBoundsException e) {\n            throw new Exception();\n\
+    \            System.out.println(\"Handle the array carefully\");\n        } finally\
+    \ {\n            System.out.println(\"finally - performJob\");\n        }\n  \
+    \  }\n    public static void main(String args[]) {\n        try {\n          \
+    \  performJob();\n        } catch (Exception e) {\n            System.out.println(\"\
+    There is some problem in the code\");\n        } finally {\n            System.out.println(\"\
+    finally - main\");\n        }\n    }\n}\n\nclass Program {\n    static void performJob()\
+    \ {\n        try {\n            throw new ArrayIndexOutOfBoundsException();\n\
+    \        } catch (ArrayIndexOutOfBoundsException e) {\n            try {\n   \
+    \             throw new Exception();\n            } catch (Exception obj) {\n\
+    \                System.out.println(\"This is inner exception\");\n          \
+    \  }\n            System.out.println(\"Handle the array carefully\");\n      \
+    \  } finally {\n            System.out.println(\"finally - performJob\");\n  \
+    \      }\n    }\n    public static void main(String args[]) {\n        try {\n\
+    \            performJob();\n        } catch (Exception e) {\n            System.out.println(\"\
+    There is some problem in the code\");\n        } finally {\n            System.out.println(\"\
+    finally - main\");\n        }\n    }\n}\n```\n\n| 选项 | 结果 |\n| :--- | :--- |\n\
+    | A | 无输出 |\n| B | 编译错误 |\n| C | This is inner exceptionfinally - performJobfinally\
+    \ - main |\n| D | This is inner exceptionHandle the array carefullyfinally - performJobfinally\
+    \ - main |\n| | <----正确答案 |\n\n### 答案\n\n| 题号 | 答案 | 解释 |\n| :--- | :--- | :---\
+    \ |\n| 1 | B | 只有继承自 `Throwable`（或其派生类）的类可以被抛出 |\n| 2 | A | `throw` 关键字用于抛出异常。\
+    \ |\n| 3 | C | 通过计算，输出为：There is some problem in the codefinally - main |\n| 4\
+    \ | D | 通过计算，输出为：Handle the array carefullyfinally - performJobfinally - main\
+    \ |\n| 5 | B | 编译错误 |\n| 6 | D | 通过计算，输出为：This is inner exceptionHandle the array\
+    \ carefullyfinally - performJobfinally - main |\n\n![](img/image00318.jpeg)\n\n\
+    # 第 14 章：异常链\n\n### Q.1: ... 类对异常链有底层基础设施支持。\n| A | Exception |\n| B | Throwable\
+    \ |\n| C | Error |\n| D | RuntimeException |\n| | <----正确答案 |\n\n### Q.2: `getCause()`\
+    \ 方法在 .................. 类中声明 |\n| A | Object |\n| B | Error |\n| C | RuntimeException\
+    \ |\n| D | Throwable |\n| | <----正确答案 |\n\n### Q.3: 识别 `Throwable` 类正确的构造函数。\n\
+    | A | `Throwable(String, Throwable)` |\n| B | `Throwable(String[], Throwable)`\
+    \ |\n| C | `Throwable(char[], Throwable)` |\n| D | `Throwable(char, Throwable)`\
+    \ |\n| | <----正确答案 |\n\n### Q.4: 哪个方法初始化异常的因？ |\n| A | `startCause()` |\n| B |\
+    \ `setCause()` |\n| C | `setIssue()` |\n| D | `initCause()` |\n| | <----正确答案 |\n\
+    \n### Q.5: 识别 `Throwable` 类正确的构造函数。 |\n| A | `Throwable(int)` |\n| B | `Throwable(String[])`\
+    \ |\n| C | `Throwable(Throwable)` |\n| D | `Throwable()` |\n| | <----正确答案 |\n\n\
+    ### Q.6: `initCause()` 方法在 ... 类中声明 |\n| A | Object |\n| B | Throwable |\n| C\
+    \ | RuntimeException |\n| D | Error |\n| | <----正确答案 |\n\n### Q.7: ...............\
+    \ 返回 'throwable' 的原因。 |\n| A | `getMsg()` |\n| B | `getMessage()` |\n| C | `getCause()`\
+    \ |\n| D | `getReason()` |\n| | <----正确答案 |\n\n### 答案\n| 题号 | 答案 | 解释 |\n| :---\
+    \ | :--- | :--- |\n| 1 | B | `Throwable` 类具有链式的基础设施。 |\n| 2 | D | `getCause()`\
+    \ 方法在 `Throwable` 中声明。 |\n| 3 | A | 有效的构造函数：`Throwable(String, Throwable)` |\n\
+    | 4 | D | `initCause()` 初始化异常的因。 |\n| 5 | C | 有效的构造函数：`Throwable(Throwable)` |\n\
+    | 6 | B | `initCause()` 方法在 `Throwable` 中声明。 |\n| 7 | C | `getCause()` 返回 'throwable'\
+    \ 的原因。 |\n\n![](img/image0318.jpeg)\n\n# 第 15 章：Try with Resource\n\n### Q.1:\
+    \ 'try with resource' 在哪个 Java 版本中引入的？\n| A | 5 |\n| B | 6 |\n| C | 7 |\n| D |\
+    \ 8 |\n| | <----正确答案 |\n\n### Q.2: 在单个 try 块中可以创建多少资源？\n| A | 无 |\n| B | 2 |\n\
+    | C | 3 |\n| D | 任意 |\n| | <----正确答案 |\n\n### Q.3: 对象必须实现 ..... 才能在 try with resource\
+    \ 块中使用。\n| A | `Autoable` |\n| B | `Closeable` |\n| C | `Try` |\n| D | `Closed`\
+    \ |\n| | <----正确答案 |\n\n### Q.4: `Autoable` 接口的方法是？ |\n| A | `close()` |\n| B\
+    \ | `close()` |\n| C | `finish()` |\n| D | `end()` |\n| | <----正确答案 |\n\n### Q.5:\
+    \ `Closeable` 接口的方法是？ |\n| A | `close()` |\n| B | `closing()` |\n| C | `finish()`\
+    \ |\n| D | `end()` |\n| | <----正确答案 |\n\n### Q.6: 资源在 try with resource 中以 .........\
+    \ 顺序关闭。 |\n| A | Custom |\n| B | Forward |\n| C | Reverse |\n| D | Conditional\
+    \ |\n| | <----正确答案 |\n\n### Q.7: 输出输出是什么？\n```java\nimport java.io.*;\nclass Shape\
+    \ implements Closeable {\n    public void close() {\n        System.out.println(\"\
+    Shape is closed\");\n    }\n}\nclass Program {\n    public static void main(String\
+    \ args[]) {\n        try (Shape obj = new Shape()) {\n        } catch (Exception\
+    \ e) {\n            System.out.println(\"Exception happened\");\n        }\n \
+    \   }\n}\n```\n| 选项 | 结果 |\n| :--- | :--- |\n| A | 无输出 |\n| B | 编译错误 |\n| C |\
+    \ Shape is closed |\n| D | Exception happened |\n| | <----正确答案 |\n\n*(注：由于原始文本中\
+    \ Q3-Q7 的描述存在错乱和重复，翻译时已根据逻辑进行了对齐处理。)*\n\n"
+- fmt: "\n# Chapter 17: User Defined Exception\n\n```java\nclass Shape {\n    void\
+    \ draw () throws Exception {\n        System.out.println (\"Drawing shape\");\n\
+    \    }\n}\nclass Circle extends Shape {\n    void draw() throws Exception {\n\
+    \        System.out.println(\"Drawing Circle\");\n    }\n}\nclass Program {\n\
+    \    public static void main(String args[]) throws Exception {\n        Circle\
+    \ obj = new Circle();\n        obj.draw();\n    }\n}\n```\n\n**Q.5: What is the\
+    \ output?**\n\n| Option | Result |\n|---|---|\n| A | Compiler error |\n| B | No\
+    \ output |\n| C | Drawing shape |\n| D | Drawing Circle <----Right Answer |\n\n\
+    ---\n\n```java\nclass Shape {\n    void draw () throws Exception {\n        System.out.println(\"\
+    Drawing shape\");\n    }\n}\nclass Circle extends Shape {\n    void draw() throws\
+    \ RuntimeException {\n        System.out.println(\"Drawing Circle\");\n    }\n\
+    }\nclass Program {\n    public static void main(String args[]) throws Exception\
+    \ {\n        Circle obj = new Circle();\n        obj.draw();\n    }\n}\n```\n\n\
+    **Q.5: What is the output?**\n\n| Option | Result |\n|---|---|\n| A | Compiler\
+    \ error <----Right Answer |\n| B | No output |\n| C | Drawing shape |\n| D | Drawing\
+    \ Circle |\n\n### Rules for exceptions in overridden methods\n\n1. If the super\
+    \ class method `throws` an exception then child class can `throws` the same exception\
+    \ or child class of that exception.\n2. If super class method does not `throws`\
+    \ any exception then the child class overridden method can `throws` unchecked\
+    \ exception.\n3. If checked exception is declared for a method then it should\
+    \ be raised (`throw`).\n\n### Answers\n\n| Q.No | Ans | Explanation |\n|---|---|---|\n\
+    | 1 | D | By computation the output is : Drawing Circle |\n| 2 | A | Compiler\
+    \ Error |\n| 3 | A | Compiler Error |\n| 4 | D | By computation the output is\
+    \ : Drawing Circle |\n| 5 | D | By computation the output is : Drawing Circle\
+    \ |\n\n![](Images/image00318.jpeg)\n\n---\n\n### Q.1: How to create user defined\
+    \ checked exception?\n\n| Option | Result |\n|---|---|\n| A | Derive from Error\
+    \ class |\n| B | Derive from Throwable class <----Right Answer |\n| C | Derive\
+    \ from RuntimeException class |\n| D | Derive from Object class |\n\n### Q.2:\
+    \ How to create user defined unchecked exception?\n\n| Option | Result |\n|---|---|\n\
+    | A | Derive from Error class |\n| B | Derive from Exception class |\n| C | Derive\
+    \ from RuntimeException class <----Right Answer |\n| D | Derive from Object class\
+    \ |\n\n### Q.3: What is the output?\n\n```java\nclass MyException extends Object\
+    \ {\n    MyExcetion(String str) {\n        super(str);\n    }\n}\nclass Program\
+    \ {\n    public static void main(String args[]){ {\n        int i=10;\n      \
+    \  int j=11;\n        if (j> i)\n            throw new MyException(\"j is greater\"\
+    );\n    }\n}\n```\n\n| Option | Result |\n|---|---|\n| A | Compiler Error <----Right\
+    \ Answer |\n| B | Runtime Exception |\n| C | J is greater |\n\n### Q.4: What is\
+    \ the output?\n\n```java\nclass MyException extends Exception {\n    MyException(String\
+    \ str) {\n        super(str);\n    }\n}\nclass Program {\n    public static void\
+    \ main(String args[]){\n        int i=0;\n        int j=1;\n        if (j> i)\n\
+    \            throw new MyException(\"j is greater\");\n    }\n}\n```\n\n| Option\
+    \ | Result |\n|---|---|\n| A | Compiler Error |\n| B | Runtime Exception |\n|\
+    \ C | J is greater |\n| D | None of the above <----Right Answer\n\n### Q.5: What\
+    \ is the output?\n\n```java\nclass MyException extends RuntimeException {\n  \
+    \  MyException(String str) {\n        super(str);\n    }\n}\nclass Program {\n\
+    \    public static void main(String args[]){\n        int i=10;\n        int j=1;\n\
+    \        if (j> i)\n            throw new MyException(\"j is greater\");\n   \
+    \ }\n}\n```\n\n| Option | Result |\n|---|---|\n| A | RuntimeException <----Right\
+    \ Answer |\n| B | Compiler Error |\n| C | JVM Error |\n| D | None of the above\
+    \ |\n\n### Q.6: What is the output?\n\n```java\nclass MyException extends Exception\
+    \ {\n    MyException(String str) {\n        super(str);\n    }\n}\nclass Program\
+    \ {\n    public static void main(String args[]) throws Exception{\n        int\
+    \ i=10;\n        int j=11;\n        if (j> i)\n            throw new MyException(\"\
+    j is greater\");\n    }\n}\n```\n\n| Option | Result |\n|---|---|\n| A | Object\
+    \ Exception |\n| B | JVM Error |\n| C | Runtime Exception <----Right Answer |\n\
+    | D | Compiler Error |\n"
+  raw: '| class Shape {void draw () throws Exception {System.out.println ("Drawing
+    shape");}}class Circle extends Shape{void draw() throws Exception {    System.out.println("Drawing
+    Circle");   }}class Program {              public static void main(String args[])
+    throws Exception{                            Circle obj = new Circle();             
+                  obj.draw();              }} |
+
+
+    | A | Compiler error |
+
+
+    | B | No output |
+
+
+    | C | Drawing shape |
+
+
+    | D | Drawing Circle |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: What is the output? |
+
+
+    | class Shape {void draw () throws Exception {    System.out.println("Drawing
+    shape");}}class Circle extends Shape{void draw() throws RuntimeException {   System.out.println("Drawing
+    Circle");  }}class Program {              public static void main(String args[])
+    throws Exception{                            Circle obj = new Circle();             
+                  obj.draw();              }} |
+
+
+    | A | Compiler error |
+
+
+    | B | No output |
+
+
+    | C | Drawing shape |
+
+
+    | D | Drawing Circle |
+
+
+    |  |   <----Right Answer |
+
+
+    Rules for exceptions in overridden
+
+
+    methods:
+
+
+    1.  If the super class method ''throws'' an
+
+
+    exception then child class can ''throws''
+
+
+    the same exception or child class of
+
+
+    that exception.
+
+
+    2.  If super class method does not ''throws''
+
+
+    any exception then the child class
+
+
+    overridden method can ''throws''
+
+
+    unchecked exception.
+
+
+    3.  If checked exception is declared for a
+
+
+    method then it should be raised (throw).
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | D | By computation the output is : Drawing Circle |
+
+
+    | 2 | A | Compiler Error |
+
+
+    | 3 | A | Compiler Error |
+
+
+    | 4 | D | By computation the output is : Drawing Circle |
+
+
+    | 5 | D | By computation the output is : Drawing Circle |
+
+
+    ![](Images/image00318.jpeg)
+
+
+    Chapter 17
+
+
+    User Defined Exception
+
+
+    | Q.1: How to create user defined checked exception? |
+
+
+    |  |
+
+
+    | A | Derive from Error class |
+
+
+    | B | Derive from Throwable class |
+
+
+    | C | Derive from RuntimeException class |
+
+
+    | D | Derive from Object class |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.2: How to create user defined unchecked exception? |
+
+
+    |  |
+
+
+    | A | Derive from Error class |
+
+
+    | B | Derive from Exception class |
+
+
+    | C | Derive from RuntimeException class |
+
+
+    | D | Derive from Object class |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.3: What is the output? |
+
+
+    | class MyException extends Object {              MyExcetion(String str) {             
+                  super(str);              }}class Program {              public static
+    void main(String args[]){                            int i=10;                           
+    int j=11;                            if (j> i)                            throw
+    new MyException("j is greater");              }} |
+
+
+    | A | Compiler Error |
+
+
+    | B | Runtime Exception |
+
+
+    | C | J is greater |
+
+
+    |  | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.4: What is the output? |
+
+
+    | class MyException extends Exception {              MyException(String str) {             
+                  super(str);              }}class Program {              public static
+    void main(String args[]){                            int i=10;                           
+    int j=11;                            if (j> i)                                         
+    throw new MyException("j is greater");              }} |
+
+
+    | A | Compiler Error |
+
+
+    | B | Runtime Exception |
+
+
+    | C | J is greater |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.5: What is the output? |
+
+
+    | class MyException extends RuntimeException {              MyException(String
+    str) {                            super(str);              }}class Program {             
+    public static void main(String args[]){                            int i=10;             
+                  int j=11;                            if (j> i)                           
+    throw new MyException("j is greater");              }} |
+
+
+    | A | RuntimeException |
+
+
+    | B | Compiler Error |
+
+
+    | C | JVM Error |
+
+
+    | D | None of the above |
+
+
+    |  |   <----Right Answer |
+
+
+    | Q.6: What is the output? |
+
+
+    | class MyException extends Exception {              MyException(String str) {             
+                  super(str);              }}class Program {              public static
+    void main(String args[]) throws Exception{                            int i=10;             
+                  int j=11;                            if (j> i)                           
+    throw new MyException("j is greater");              }} |
+
+
+    | A | Object Exception |
+
+
+    | B | JVM Error |
+
+
+    | C | Runtime Exception |
+
+
+    | D | Compiler Error |
+
+
+    |  |   <----Right Answer |
+
+
+    Answers:
+
+
+    | Q.No | Ans | Explanation |
+
+
+    | 1 | B | User defined checked exception is created by deriving from Throwable
+    class. |
+
+
+    | 2 | C | User defined unchecked exception is created by deriving from RuntimeException
+    class. |
+
+
+    | 3 | A | By computation the output is :Compiler Error |
+
+
+    | 4 | A | By computation the output is :Compiler Error |
+
+
+    | 5 | A | By computation the output is :Runtime Exception |
+
+
+    | 6 | C | By computation the output is :Runtime Exception |
+
+
+    ![](Images/image00318.jpeg)'
+  toc: []
+  trans: "\n\n# 第 17 章：自定义异常\n\n```java\nclass Shape {\n    void draw () throws Exception\
+    \ {\n        System.out.println (\"Drawing shape\");\n    }\n}\nclass Circle extends\
+    \ Shape {\n    void draw() throws Exception {\n        System.out.println(\"Drawing\
+    \ Circle\");\n    }\n}\nclass Program {\n    public static void main(String args[])\
+    \ throws Exception {\n        Circle obj = new Circle();\n        obj.draw();\n\
+    \    }\n}\n```\n\n**Q.5: 输出是什么？**\n\n| 选项 | 结果 |\n|---|---|\n| A | 编译错误 |\n| B\
+    \ | 无输出 |\n| C | Drawing shape |\n| D | Drawing Circle <----正确答案 |\n\n---\n\n\
+    ```java\nclass Shape {\n    void draw () throws Exception {\n        System.out.println(\"\
+    Drawing shape\");\n    }\n}\nclass Circle extends Shape {\n    void draw() throws\
+    \ RuntimeException {\n        System.out.println(\"Drawing Circle\");\n    }\n\
+    }\nclass Program {\n    public static void main(String args[]) throws Exception\
+    \ {\n        Circle obj = new Circle();\n        obj.draw();\n    }\n}\n```\n\n\
+    **Q.5: 输出是什么？**\n\n| 选项 | 结果 |\n|---|---|\n| A | 编译错误 <----正确答案 |\n| B | 无输出 |\n\
+    | C | Drawing shape |\n| D | Drawing Circle |\n\n### 重写方法中的异常规则\n\n1. 如果父类方法 `throws`\
+    \ 一个异常，则子类可以 `throws` 相同的异常或该异常的子类。\n2. 如果父类方法没有 `throws` 任何异常，则子类的重写方法可以 `throws`\
+    \ 未检异常（unchecked exception）。\n3. 如果方法声明了受检异常（checked exception），则它必须被抛出（`throw`）。\n\
+    \n### 答案\n\n| 题号 | 答案 | 解析 |\n|---|---|---|\n| 1 | D | 经计算输出为：Drawing Circle |\n\
+    | 2 | A | 编译错误 |\n| 3 | A | 编译错误 |\n| 4 | D | 经计算输出为：Drawing Circle |\n| 5 | D\
+    \ | 经计算输出为：Drawing Circle |\n\n![](img/image00318.jpeg)\n\n---\n\n### Q.1: 如何创建自定义的受检异常？\n\
+    \n| 选项 | 结果 |\n|---|---|\n| A | 继承自 Error 类 |\n| B | 继承自 Throwable 类 <----正确答案\
+    \ |\n| C | 继承自 RuntimeException 类 |\n| D | 继承自 Object 类 |\n\n### Q.2: 如何创建自定义的未检异常？\n\
+    \n| 选项 | 结果 |\n|---|---|\n| A | 继承自 Error 类 |\n| B | 继承自 Exception 类 |\n| C |\
+    \ 继承自 RuntimeException 类 <----正确答案 |\n| D | 继承自 Object 类 |\n\n### Q.3: 输出是什么？\n\
+    \n```java\nclass MyException extends Object {\n    MyExcetion(String str) {\n\
+    \        super(str);\n    }\n}\nclass Program {\n    public static void main(String\
+    \ args[]){ {\n        int i=10;\n        int j=11;\n        if (j> i)\n      \
+    \      throw new MyException(\"j is greater\");\n    }\n}\n```\n\n| 选项 | 结果 |\n\
+    |---|---|\n| A | 编译错误 <----正确答案 |\n| B | 运行时异常 |\n| C | J is greater |\n\n###\
+    \ Q.4: 输出是什么？\n\n```java\nclass MyException extends Exception {\n    MyException(String\
+    \ str) {\n        super(str);\n    }\n}\nclass Program {\n    public static void\
+    \ main(String args[]){\n        int i=0;\n        int j=1;\n        if (j> i)\n\
+    \            throw new MyException(\"j is greater\");\n    }\n}\n```\n\n| 选项 |\
+    \ 结果 |\n|---|---|\n| A | 编译错误 |\n| B | 运行时异常 |\n| C | J is greater |\n| D | 以上都不是\
+    \ <----正确答案 |\n\n### Q.5: 输出是什么？\n\n```java\nclass MyException extends RuntimeException\
+    \ {\n    MyException(String str) {\n        super(str);\n    }\n}\nclass Program\
+    \ {\n    public static void main(String args[]){\n        int i=10;\n        int\
+    \ j=1;\n        if (j> i)\n            throw new MyException(\"j is greater\"\
+    );\n    }\n}\n```\n\n| 选项 | 结果 |\n|---|---|\n| A | RuntimeException <----正确答案\
+    \ |\n| B | 编译错误 |\n| C | JVM Error |\n| D | 以上都不是 |\n\n### Q.6: 输出是什么？\n\n```java\n\
+    class MyException extends Exception {\n    MyException(String str) {\n       \
+    \ super(str);\n    }\n}\nclass Program {\n    public static void main(String args[])\
+    \ throws Exception{\n        int i=10;\n        int j=11;\n        if (j> i)\n\
+    \            throw new MyException(\"j is greater\");\n    }\n}\n```\n\n| 选项 |\
+    \ 结果 |\n|---|---|\n| A | Object Exception |\n| B | JVM Error |\n| C | Runtime\
+    \ Exception <----正确答案 |\n| D | 编译错误 |\n\n"

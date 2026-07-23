@@ -1,0 +1,130 @@
+name: Java 16： Mobile phones and Android Software Development no isbn
+name_cn: Java 16：手机与 Android 软件开发
+slug: java-16-mobile-phones-and-android-software-development-no-is
+toc:
+- - '#'
+  - Java 16：手机与 Android 软件开发
+- - '#'
+  - 前言
+- - '#'
+  - 1 引言
+- - '##'
+  - 练习 1：计算
+- - '#'
+  - 2 Widgets
+- - '##'
+  - 2.1 一个邮政编码应用
+- - '##'
+  - 练习 2：人员 (People)
+- - '#'
+  - 3 布局 (Layout)
+- - '##'
+  - 3.1 相对布局 (RelativeLayout)
+- - '##'
+  - 3.2 LinearLayout
+- - '##'
+  - 3.3 TableLayout
+- - '##'
+  - 3.4 GridLayout
+- - '###'
+  - 3.5 ConstraintLayout
+- - '###'
+  - 3.6 Containers
+- - '##'
+  - 4.1 上下文菜单（Context menu）
+- - '##'
+  - 4.2 主菜单（Main menu）
+- - '##'
+  - 4.3 在 XML 中定义菜单
+- - '##'
+  - '练习 4: ImageApp'
+- - '##'
+  - 4.4 关于 Activity
+- - '##'
+  - 4.5 多个 Activity
+- - '##'
+  - 问题 1：LoanApp
+- - '#'
+  - 5 文件（Files）
+- - '##'
+  - 5.1 读取资源
+- - '##'
+  - 练习 5：邮政编码（Zipcodes）
+- - '##'
+  - 5.2 普通文件
+- - '##'
+  - 5.3 内部存储
+- - '##'
+  - '练习 6: NameBook'
+- - '##'
+  - '问题 2: PuzzleApp'
+- - '#'
+  - 6 SQLite
+- - '##'
+  - 6.1 创建数据库
+- - '##'
+  - 6.2 SQL SELECT
+- - '##'
+  - 6.3 SQL INSERT, UPDATE 和 DELETE
+- - '##'
+  - 6.4 其他活动
+- - '##'
+  - 练习 7：电话录 (PhoneBook)
+- - '#'
+  - 7 线程
+- - '#'
+  - 8 Android 服务
+- - '##'
+  - 服务的类型
+- - '##'
+  - 服务的执行与生命周期
+- - '##'
+  - 实现
+- - '###'
+  - onStartCommand
+- - '##'
+  - 绑定服务的详情
+- - '###'
+  - 绑定过程
+- - '##'
+  - 8.1 Intent 类
+- - '##'
+  - 8.2 ServiceApp1
+- - '##'
+  - 8.3 ServiceApp2
+- - '##'
+  - 8.4 ServiceApp3
+- - '##'
+  - 8.5 ServiceApp4
+- - '##'
+  - 8.7 手机响铃
+- - '##'
+  - 8.8 本地服务
+- - '#'
+  - 9 数据访问层
+- - '##'
+  - 9.1 数据访问层
+- - '##'
+  - 9.2 笔记
+- - '##'
+  - 9.3 纪念日
+- - '##'
+  - 9.4 预约管理 (Appointments)
+- - '##'
+  - 9.5 其他工具
+- - '###'
+  - 工具：选择月份
+- - '###'
+  - 工具：秒表
+- - '###'
+  - 工具：倒计时
+- - '###'
+  - 工具：闹钟
+- - '###'
+  - 工具：时钟
+- - '###'
+  - 预约服务 (AppointmentService)
+- - '##'
+  - 9.6 项目评审
+- - '#'
+  - 附录 A，安装 Android Studio

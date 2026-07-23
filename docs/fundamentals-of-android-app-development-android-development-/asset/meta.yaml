@@ -1,0 +1,17 @@
+name: Fundamentals of Android App Development： Android Development for Beginners to
+  Learn Android Technology, SQLite, Firebase and Unity (English Edition)
+name_cn: Android 应用开发基础：初学者学习 Android 技术、SQLite、Firebase 和 Unity 的 Android 开发（英文版）
+slug: fundamentals-of-android-app-development-android-development-
+toc:
+- - '##'
+  - 实现示例
+- - '###'
+  - 如何开发 SMS 应用
+- - '###'
+  - 如何创建音乐播放器
+- - '###'
+  - 如何从一个 Activity 调用另一个 Activity
+- - '###'
+  - 如何在项目中添加横幅广告？
+- - '###'
+  - 如何在 Android 中开发反馈表单？

@@ -1,0 +1,4820 @@
+- fmt: "\n![](Images/cover00136.jpeg)\n\n# JAVA CODING: BASICS FOR ABSOLUTE BEGINNERS\n\
+    ## STEP BY STEP GUIDE TO LEARN CODING QUICKLY\n\n- [Features of Java](#part0003.xhtml__Toc95227064)\n\
+    - [C++ vs Java](#part0004.xhtml__Toc95227065)\n- [First Java Program](#part0005.xhtml__Toc95227066)\n\
+    - [Difference between JDK, JRE, and JVM](#part0006.xhtml__Toc95227067)\n- [Java\
+    \ Variables](#part0007.xhtml__Toc95227068)\n- [Data Types in Java](#part0008.xhtml__Toc95227069)\n\
+    - [Operators in Java](#part0009.xhtml__Toc95227070)\n- [Java Control Statements](#part0010.xhtml__Toc95227071)\n\
+    - [Loops in Java](#part0011.xhtml__Toc95227072)\n- [Java While Loop](#part0012.xhtml__Toc95227073)\n\
+    - [Java do-while Loop](#part0013.xhtml__Toc95227074)\n- [Java Break Statement](#part0014.xhtml__Toc95227075)\n\
+    \n## What is Java\nJava is a platform as well as a programming language. Java\
+    \ is a high-level programming language that is also robust, object-oriented, and\
+    \ secure.\n\nJava was created in 1995 by Sun Microsystems (which is now a division\
+    \ of Oracle). The founder of Java, James Gosling, is recognised as the \"Father\
+    \ of Java.\" It was known as Oak before Java. Because Oak was already a recognised\
+    \ business, James Gosling and his team decided to alter the name to Java.\n\n\
+    Platform: A platform is any hardware or software environment in which a programme\
+    \ runs. Java is referred to as a platform because it has a runtime environment\
+    \ (`JRE`) and API.\n\n## Java Example\nLet's take a look at an example of Java\
+    \ programming. The next page contains a full description of the Hello Java example.\n\
+    \n`Simple.java`\n\n```java\nclass Simple {\n  public static void main(String args[])\
+    \ {\n    System.out.println(\"Hello Java\");\n  }\n}\n```\n\n## Types of Java\
+    \ Applications\nJava programming can be used to construct four different sorts\
+    \ of applications:\n\n### 1) Standalone Application\nDesktop applications and\
+    \ window-based programmes are examples of stand-alone applications. These are\
+    \ typical programmes that must be installed on each machine. Media player, antivirus,\
+    \ and other standalone applications are examples. In Java, `AWT` and `Swing` are\
+    \ used to create standalone apps.\n\n### 2) Web Application\nA web application\
+    \ is an application that runs on the server and generates a dynamic page. `Servlet`,\
+    \ `JSP`, `Struts`, `Spring`, `Hibernate`, `JSF`, and other technologies are now\
+    \ used to develop web applications in Java.\n\n### 3) Enterprise Application\n\
+    A distributed application, such as banking software, is referred to as an enterprise\
+    \ application. High-level security, load balancing, and clustering are just a\
+    \ few of the benefits. `EJB` is a Java framework for developing enterprise applications.\n\
+    \n### 4) Mobile Application\nA mobile application is a programme designed specifically\
+    \ for mobile devices. Currently, mobile applications are developed using `Android`\
+    \ and `Java ME`.\n\n## Java Platforms\nJava is available on four different platforms\
+    \ or editions:\n\n### 1) Java SE (Java Standard Edition)\nIt's a Java programming\
+    \ environment. Java programming APIs like `java.lang`, `java.io`, `java.net`,\
+    \ `java.util`, `java.sql`, and `java.math` are included. OOPs, `String`, `Regex`,\
+    \ `Exception`, Inner classes, Multithreading, I/O Stream, Networking, `AWT`, `Swing`,\
+    \ `Reflection`, `Collection`, and other key subjects are covered.\n\n### 2) Java\
+    \ EE (Java Enterprise Edition)\nIt's a business platform that's primarily used\
+    \ for creating online and corporate apps. It is constructed using the Java SE\
+    \ platform. `Servlet`, `JSP`, `Web Services`, `EJB`, `JPA`, and other subjects\
+    \ are covered.\n\n### 3) Java ME (Java Micro Edition)\nIt's a mobile application-focused\
+    \ microplatform.\n\n### 4) JavaFX\nIt's a programming language that's used to\
+    \ create rich online apps. It makes use of a simple user interface API.\n\n# Features\
+    \ of Java\nThe major goal of the Java programming language's development was to\
+    \ make it portable, simple, and secure. Apart from that, there are a number of\
+    \ good aspects that contribute to the language's popularity. Java buzzwords refer\
+    \ to the aspects of the language.\n\nThe following is a list of the most essential\
+    \ characteristics of the Java programming language.\n\n![](Images/image00121.jpeg)\n\
+    \n### Simple\nJava is a fairly straight language to learn, with a grammar that\
+    \ is simple, clear, and easy to comprehend. Java is a simple programming language,\
+    \ according to Sun Microsystem, because:\n- Java syntax is based on `C++` (making\
+    \ it easier for programmers to pick up after they've learned `C++`).\n- Many difficult\
+    \ and rarely-used features, such as explicit pointers and operator overloading,\
+    \ have been eliminated from Java.\n- Because Java has `Automatic Garbage Collection`,\
+    \ there is no need to remove unreferenced objects.\n\n### Object-oriented\nJava\
+    \ is a computer language that focuses on objects. In Java, everything is an object.\
+    \ Object-oriented programming refers to the organisation of software as a collection\
+    \ of various types of objects that include both data and behaviour.\nObject-oriented\
+    \ programming (OOPs) is a software development and maintenance technique that\
+    \ follows a set of rules.\n\n### Platform Independent\nJava is platform independent\
+    \ in contrast to other languages such as `C`, `C++`, and others, which are compiled\
+    \ into platform-specific machines, whereas Java is a write-once, run-anywhere\
+    \ language. The hardware or software environment in which a programme runs is\
+    \ referred to as a platform.\nSoftware-based and hardware-based platforms are\
+    \ the two sorts of platforms. Java is a platform that is built on software.\n\n\
+    ### Secured\nThe security of Java is its most well-known feature. We can create\
+    \ anti-virus solutions using Java. Because of the following, Java is protected:\n\
+    - There is no specific pointing device.\n- Java programmes are run in a sandbox\
+    \ environment.\n- `Security Manager` is a component of the Java Runtime Environment\
+    \ (`JRE`) that is used to dynamically load Java classes into the Java Virtual\
+    \ Machine (`JVM`). It improves security by isolating the package for local file\
+    \ system classes from those imported from network sources.\n- `Bytecode Verifier`:\
+    \ It examines code fragments for illegal code that could compromise object access\
+    \ privileges.\n- `Security Manager`: It determines the resources a class has access\
+    \ to, such as reading and writing to the local disc.\n\n### Robust\nRobust's English\
+    \ mining industry is thriving. Java is a robust programming language because:\n\
+    - It makes extensive use of memory management.\n- There aren't any pointers, hence\
+    \ there aren't any security issues.\n- Automatic garbage collection is provided\
+    \ by Java and operates on the Java Virtual Machine to get rid of things that are\
+    \ no longer in use.\nIn Java, there are exception handling and type checking mechanisms.\
+    \ All of these factors contribute to Java's robustness.\n\n### Architecture-neutral\n\
+    Because there are no implementation-dependent aspects in Java, such as the size\
+    \ of primitive types, it is architecture neutral.\nIn `C` programming, the `int`\
+    \ data type takes up two bytes in 32-bit architecture and four bytes in 64-bit\
+    \ architecture. In Java, however, it takes up 4 bytes of memory on both 32-bit\
+    \ and 64-bit architectures.\n\n### Portable\nJava is portable because it allows\
+    \ you to move the Java bytecode from one platform to another. It does not necessitate\
+    \ any kind of implementation.\n\n### High-performance\nBecause Java bytecode is\
+    \ \"near\" to native code, it is faster than other traditional interpreted programming\
+    \ languages. It is nevertheless slower than a compiled language (for example,\
+    \ `C++`).\n\n### Distributed\nBecause it allows users to construct distributed\
+    \ programmes in Java, it is distributed. For developing distributed applications,\
+    \ `RMI` and `EJB` are employed. This Java capability allows us to access files\
+    \ by calling methods from any system connected to the internet.\n\n### Multi-threaded\n"
+  raw: '
+
+
+    ![](Images/cover00136.jpeg)
+
+
+    JAVA CODING:
+
+
+    BASICS FOR ABSOLUTE BEGINNERS
+
+
+    STEP BY STEP GUIDE TO LEARN CODING QUICKLY
+
+
+    [Features of Java](#part0003.xhtml__Toc95227064)
+
+
+    [C++ vs Java](#part0004.xhtml__Toc95227065)
+
+
+    [First Java Program](#part0005.xhtml__Toc95227066)
+
+
+    [Difference between JDK, JRE, and JVM](#part0006.xhtml__Toc95227067)
+
+
+    [Java Variables](#part0007.xhtml__Toc95227068)
+
+
+    [Data Types in Java](#part0008.xhtml__Toc95227069)
+
+
+    [Operators in Java](#part0009.xhtml__Toc95227070)
+
+
+    [Java Control Statements](#part0010.xhtml__Toc95227071)
+
+
+    [Loops in Java](#part0011.xhtml__Toc95227072)
+
+
+    [Java While Loop](#part0012.xhtml__Toc95227073)
+
+
+    [Java do-while Loop](#part0013.xhtml__Toc95227074)
+
+
+    [Java Break Statement](#part0014.xhtml__Toc95227075)
+
+
+    ## What is Java
+
+
+    Java is a platform as well as a programming language. Java is a high-level programming
+    language that is also robust, object-oriented, and secure.
+
+
+    Java was created in 1995 by Sun Microsystems (which is now a division of Oracle).
+    The founder of Java, James Gosling, is recognised as the "Father of Java." It
+    was known as Oak before Java. Because Oak was already a recognised business, James
+    Gosling and his team decided to alter the name to Java.
+
+
+    Platform: A platform is any hardware or software environment in which a programme
+    runs. Java is referred to as a platform because it has a runtime environment (JRE)
+    and API.
+
+
+    ## Java Example
+
+
+    Let''s take a look at an example of Java programming. The next page contains a
+    full description of the Hello Java example.
+
+
+    Simple.java
+
+
+    1.  class Simple{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  System.out.println("Hello Java");  
+
+
+    4.  }  
+
+
+    5.  }
+
+
+    ## Types of Java Applications
+
+
+    Java programming can be used to construct four different sorts of applications:
+
+
+    #### 1) Standalone Application
+
+
+    Desktop applications and window-based programmes are examples of stand-alone applications.
+    These are typical programmes that must be installed on each machine. Media player,
+    antivirus, and other standalone applications are examples. In Java, AWT and Swing
+    are used to create standalone apps.
+
+
+    #### 2) Web Application
+
+
+    A web application is an application that runs on the server and generates a dynamic
+    page. Servlet, JSP, Struts, Spring, Hibernate, JSF, and other technologies are
+    now used to develop web applications in Java.
+
+
+    #### 3) Enterprise Application
+
+
+    A distributed application, such as banking software, is referred to as an enterprise
+    application. High-level security, load balancing, and clustering are just a few
+    of the benefits. EJB is a Java framework for developing enterprise applications.
+
+
+    #### 4) Mobile Application
+
+
+    A mobile application is a programme designed specifically for mobile devices.
+    Currently, mobile applications are developed using Android and Java ME.
+
+
+    ## Java Platforms
+
+
+    Java is available on four different platforms or editions:
+
+
+    #### 1) Java SE (Java Standard Edition)
+
+
+    It''s a Java programming environment. Java programming APIs like java.lang, java.io,
+    java.net, java.util, java.sql, and java.math are included. OOPs, String, Regex,
+    Exception, Inner classes, Multithreading, I/O Stream, Networking, AWT, Swing,
+    Reflection, Collection, and other key subjects are covered.
+
+
+    #### 2) Java EE (Java Enterprise Edition)
+
+
+    It''s a business platform that''s primarily used for creating online and corporate
+    apps. It is constructed using the Java SE platform. Servlet, JSP, Web Services,
+    EJB, JPA, and other subjects are covered.
+
+
+    #### 3) Java ME (Java Micro Edition)
+
+
+    It''s a mobile application-focused microplatform.
+
+
+    #### 4) JavaFX
+
+
+    It''s a programming language that''s used to create rich online apps. It makes
+    use of a simple user interface API.
+
+
+    # Features of Java
+
+
+    The major goal of the Java programming language''s development was to make it
+    portable, simple, and secure. Apart from that, there are a number of good aspects
+    that contribute to the language''s popularity. Java buzzwords refer to the aspects
+    of the language.
+
+
+    The following is a list of the most essential characteristics of the Java programming
+    language.
+
+
+    ![](Images/image00121.jpeg)
+
+
+    ### Simple
+
+
+    Java is a fairly straight language to learn, with a grammar that is simple, clear,
+    and easy to comprehend. Java is a simple programming language, according to Sun
+    Microsystem, because:
+
+
+    Java syntax is based on C++ (making it easier for programmers to pick up after
+    they''ve learned C++).
+
+
+    Many difficult and rarely-used features, such as explicit pointers and operator
+    overloading, have been eliminated from Java.
+
+
+    Because Java has Automatic Garbage Collection, there is no need to remove unreferenced
+    objects.
+
+
+    ### Object-oriented
+
+
+    Java is a computer language that focuses on objects. In Java, everything is an
+    object. Object-oriented programming refers to the organisation of software as
+    a collection of various types of objects that include both data and behaviour.
+
+
+    Object-oriented programming (OOPs) is a software development and maintenance technique
+    that follows a set of rules.
+
+
+    ### Platform Independent
+
+
+    Java is platform independent in contrast to other languages such as C, C++, and
+    others, which are compiled into platform-specific machines, whereas Java is a
+    write-once, run-anywhere language. The hardware or software environment in which
+    a programme runs is referred to as a platform.
+
+
+    Software-based and hardware-based platforms are the two sorts of platforms. Java
+    is a platform that is built on software.
+
+
+    ### Secured
+
+
+    The security of Java is its most well-known feature. We can create anti-virus
+    solutions using Java. Because of the following, Java is protected:
+
+
+    There is no specific pointing device.
+
+
+    Java programmes are run in a sandbox environment.
+
+
+    Security Manager is a component of the Java Runtime Environment (JRE) that is
+    used to dynamically load Java classes into the Java Virtual Machine. It improves
+    security by isolating the package for local file system classes from those imported
+    from network sources.
+
+
+    Bytecode Verifier: It examines code fragments for illegal code that could compromise
+    object access privileges.
+
+
+    Security Manager:  It determines the resources a class has access to, such as
+    reading and writing to the local disc.
+
+
+    ### Robust
+
+
+    Robust''s English mining industry is thriving. Java is a robust programming language
+    because:
+
+
+    It makes extensive use of memory management.
+
+
+    There aren''t any pointers, hence there aren''t any security issues.
+
+
+    Automatic garbage collection is provided by Java and operates on the Java Virtual
+    Machine to get rid of things that are no longer in use by a Java application.
+
+
+    In Java, there are exception handling and type checking mechanisms. All of these
+    factors contribute to Java''s robustness.
+
+
+    ### Architecture-neutral
+
+
+    Because there are no implementation-dependent aspects in Java, such as the size
+    of primitive types, it is architecture neutral.
+
+
+    In C programming, the int data type takes up two bytes in 32-bit architecture
+    and four bytes in 64-bit architecture. In Java, however, it takes up 4 bytes of
+    memory on both 32-bit and 64-bit architectures.
+
+
+    ### Portable
+
+
+    Java is portable because it allows you to move the Java bytecode from one platform
+    to another. It does not necessitate any kind of implementation.
+
+
+    ### High-performance
+
+
+    Because Java bytecode is "near" to native code, it is faster than other traditional
+    interpreted programming languages. It is nevertheless slower than a compiled language
+    (for example, C++). Because Java is an interpreted language, it is slower than
+    compiled languages such as C, C++, and others.
+
+
+    ### Distributed
+
+
+    Because it allows users to construct distributed programmes in Java, it is distributed.
+    For developing distributed applications, RMI and EJB are employed. This Java capability
+    allows us to access files by calling methods from any system connected to the
+    internet.
+
+
+    ### Multi-threaded'
+  toc: []
+  trans: "\n\n![](img/cover00136.jpeg)\n\n# JAVA 编码：零基础入门\n## 快速学习编程的分步指南\n\n- Java\
+    \ 特性\n- C++ vs Java\n- 第一个 Java 程序\n- JDK, JRE 和 JVM 之间的区别\n- Java 变量\n- Java\
+    \ 中的数据类型\n- Java 运算符\n- Java 控制语句\n- Java 中的循环\n- Java While 循环\n- Java do-while\
+    \ 循环\n- Java Break 语句\n\n## 什么是 Java\nJava 既是一个平台也是一种编程语言。Java 是一种高级编程语言，具有健壮性、面向对象性和安全性。\n\
+    \nJava 是由 Sun Microsystems（现为 Oracle 的一个部门）于 1995 年创建的。Java 的创始人詹姆斯·高斯林（James\
+    \ Gosling）被认为“Java 之父”。在 Java 诞生之前，它被称为 Oak。由于 Oak 已经是一个广知的商标，詹姆斯·高斯林和他的团队决定将其改为\
+    \ Java。\n\n平台：平台是指运行运行的任何硬件或软件环境。Java 被称为平台是因为因为它拥有运行时环境（`JRE`）和 API。\n\n## Java\
+    \ 示例\n让我们来看一个 Java 编程示例。下一页包含 Hello Java 示例的完整描述。\n\n`Simple.java`\n\n```java\n\
+    class Simple {\n  public static void main(String args[]) {\n    System.out.println(\"\
+    Hello Java\");\n  }\n}\n```\n\n## Java 应用程序类型\nJava 编程可以用于构建四种应用程序：\n\n### 1)\
+    \ 独立应用程序\n桌面应用程序和基于窗口的程序是独立应用程序的示例。这些必须在每台机器上安装的典型程序。媒体播放器、防病毒软件和其他独立都是示例。在 Java\
+    \ 中，使用 `AWT` 和 `Swing` 创建独立应用。\n\n### 2) Web 应用程序\nWeb 应用程序是在服务器上运行并生成动态页面的应用程序。现在使用\
+    \ `Servlet`、`JSP`、`Struts`、`Spring`、`Hibernate`、`JSF` 等技术开发 Java Web 应用程序。\n\n\
+    ### 3) 企业级应用程序\n分布式应用（例如银行软件）被称为企业级应用程序。高安全性、负载均衡和集群只是其优点。`EJB` 是开发企业级应用的 Java\
+    \ 框架。\n\n### 4) 移动应用程序\n移动应用程序是专为移动设备设计的程序。目前，移动应用程序使用 `Android` 和 `Java ME` 开发。\n\
+    \n## Java 平台\nJava 可用于四个不同的平台或版本：\n\n### 1) Java SE (Java 标准版)\n这是一个 Java 编程环境。包含了\
+    \ Java 编程 API，如 `java.lang`、`java.io`、`java.net`、`java.util`、`java.sql` 和 `java.math`。涵盖了\
+    \ OOP、`String`、`Regex`、`Exception`、内部类、多线程、I/O 流、网络、`AWT`、`Swing`、反射、集合等其他核心主题。\n\
+    \n### 2) Java EE (Java 企业版版)\n这是一个主要用于创建在线和企业应用的业务平台。它使用 Java SE 平台构建。涵盖了 `Servlet`、`JSP`、Web\
+    \ 服务、`EJB`、`JPA` 和其他主题。\n\n### 3) Java ME (Java 微型版)\n这是一个专注于移动应用程序的微平台。\n\n###\
+    \ 4) JavaFX\n这是一个用于创建富丰富的在线应用的编程语言。它利用简单的用户界面 API。\n\n# Java 特性\nJava 编程语言开发的主要目标是使其具有可移植性、简单性和安全性。此外，还有许多有助于该语言流行的优秀方面。Java\
+    \ “热术语”指的是该语言的特性。\n\n以下是 Java 编程语言最基本的特性列表。\n\n![](img/image00121.jpeg)\n\n###\
+    \ 简单\nJava 是一门非常容易学习的语言，语法简单、清晰且易于理解。根据 Sun Micros 的 的，Java 是一种简单的编程语言，因为：\n-\
+    \ Java 语法基于 `C++`（这使得程序员在学习过 `C++` 后更容易上手）。\n- Java 消除了许多困难且很少使用的特性，例如显式指针和运算符重载。\n\
+    - 因为 Java 具有`自动垃圾回收`，所以不需要手动删除未引用的对象。\n\n### 面向对象\nJava 是一种关注对象的计算机语言。在 Java 中，一切都是对象。面向对象编程（OOPs）是指对数据和行为的组织。\n\
+    \n### 平台无关\n与 `C`、`C++` 等编译为特定平台的语言不同，Java 是平台无关的，它是“编写一次，到处运行”的语言。运行程序的硬件或软件环境被称为平台。平台分为软件平台和硬件平台两种。\n\
+    \n### 安全\n安全性是 Java 最广为人知的特性。我们可以 Java 创建防病毒解决方案。由于以下原因，Java 是安全的：\n- 没有特定的指针。\n\
+    - Java 程序运行在沙箱环境中。\n- `字节码验证器`：它检查可能破坏对象访问权限的代码片段。\n- `管理器`：它是运行时环境的一个组件，用于确定类可以的资源，例如读取和写入本地磁盘。\n\
+    \n### 健壮\nJava 行业非常繁荣。Java 是一种健壮的编程语言，因为：\n- 它大量利用内存管理。\n- 没有指针，因此没有安全问题。\n- Java\
+    \ 提供自动垃圾回收，并在虚拟机上运行以清除不再使用的项。\n在 Java 中有异常处理和类型检查机制。所有这些因素共同构成了 Java 的健壮性。\n\n\
+    ### 架构中性\n由于 Java 中没有与实现相关的方面（例如原始类型的大小），因此它是架构中性的。\n在 `C` 编程中，`int` 数据类型在 32\
+    \ 位架构上占用 2 字节，在 64 位架构上占用 4 字节。但在 Java 中，它在 32 位和 64 位架构上都占用 4 字节内存。\n\n### 可移植\n\
+    由于 Java 允许将 Java 字节码从一个平台移动到另一个平台，因此它是可移植的。它不需要任何特定的实现。\n\n### 高性能\n由于 Java 字节码接近原生代码，它比其他传统的解释型编程语言更快。尽管如此，它仍然比编译语言（例如\
+    \ `C++`）慢。\n\n### 分布式\n因为 Java 允许用户在 Java 中构建分布式程序，所以它是分布式的。开发分布式应用程序使用 `RMI`\
+    \ 和 `EJB`。这种 Java 能力允许我们通过调用连接到互联网的任何系统来访问文件。\n\n### 多线程\n\n"
+- fmt: '
+
+    A thread is like a second software that runs in the background. By defining many
+    threads, we can design Java applications that handle multiple tasks at once. The
+    fundamental benefit of multi-threading is that each thread does not take up memory.
+    It has a shared memory space. Threads are essential for multi-media, Web applications,
+    and other applications.
+
+
+    ## Dynamic
+
+
+    Java is a dynamic programming language. It allows classes to be loaded dynamically.
+    It means that classes are loaded only when they are needed. It also has support
+    for functions written in its native languages, C and C++.
+
+
+    Java allows for dynamic compilation and memory management (garbage collection).
+
+
+    # C++ vs Java
+
+
+    The programming languages C++ and Java have a lot of similarities and differences.
+    The following is a summary of the most significant differences between C++ and
+    Java:
+
+
+    ![](Images/image00122.jpeg)
+
+
+    ![](Images/image00123.jpeg)
+
+
+    ![](Images/image00124.jpeg)
+
+
+    ![](Images/image00125.jpeg)
+
+
+    ## C++ Program Example
+
+
+    File: `main.cpp`
+
+
+    ```cpp
+
+    1.  #include <iostream>
+
+    2.  using namespace std;
+
+    3.  int main() {
+
+    4.  cout << "Hello C++ Programming";
+
+    5.  return 0;
+
+    6.  }
+
+    ```
+
+
+    Output:
+
+    Hello C++ Programming
+
+
+    ## Java Program Example
+
+
+    File: `Simple.java`
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  System.out.println("Hello Java");
+
+    4.  }
+
+    5.  }
+
+    ```
+
+
+    Output:
+
+    Hello Java
+
+
+    # First Java Program
+
+
+    We will learn how to write a simple Java application in this section. After installing
+    the JDK, we can quickly construct a basic hello Java application.
+
+
+    You must first construct a class that contains the `main` function in order to
+    create a simple Java programme. Let''s start with the requirements.
+
+
+    1. Install the Java Development Kit. Download and install the JDK if you haven''t
+    already done so.
+
+    2. Set the `jdk/bin` directory''s path.
+
+    3. Make a Java programme.
+
+    4. Run the Java programme after it has been compiled.
+
+
+    ### Hello World Example
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  System.out.println("Hello Java");
+
+    4.  }
+
+    5.  }
+
+    ```
+
+
+    | To compile: | `javac Simple.java` |
+
+    | To execute: | `java Simple` |
+
+
+    Output:
+
+    Hello Java
+
+
+    # Difference between JDK, JRE, and JVM
+
+
+    Before moving on to Java, we must first understand the differences between JDK,
+    JRE, and JVM. Here''s a quick summary of JVM.
+
+
+    Go to the following page if you want to learn more about the Java Virtual Machine
+    in depth. Let''s look at the distinctions between the JDK, JRE, and JVM first.
+
+
+    ### JVM
+
+
+    `JVM` (Java Virtual Machine) is a machine that is abstract. Because it does not
+    exist physically, it is called a virtual machine. It''s a specification that creates
+    a runtime environment for Java bytecode to run in. It can also run applications
+    written in other languages that have been compiled into Java bytecode.
+
+
+    For a wide range of hardware and software platforms, JVMs are available. Because
+    each operating system''s setup differs, JVM, JRE, and JDK are platform dependent.
+    Java, on the other hand, is platform agnostic. The JVM is divided into three parts:
+    specification, implementation, and instance.
+
+
+    The JVM''s principal functions are as follows:
+
+
+    * Loads code
+
+    * Verifies code
+
+    * Executes code
+
+    * Provides runtime environment
+
+
+    ### JRE
+
+
+    The Java Runtime Environment (`JRE`) is an acronym for Java Runtime Environment.
+    It''s also referred to as Java RTE. The Java Runtime Environment (`JRE`) is a
+    collection of software tools for creating Java applications. It''s responsible
+    for creating the runtime environment. It is the `JVM` implementation. It is a
+    real thing. It comprises a collection of libraries as well as other files that
+    JVM uses during execution.
+
+
+    ### JDK
+
+
+    The term `JDK` stands for Java Development Kit. The Java Development Kit (`JDK`)
+    is a software development environment for creating Java programmes and applets.
+    It is a real thing. It includes JRE as well as developer tools.
+
+
+    # Java Variables
+
+
+    A variable is a container that holds the value during the execution of a Java
+    programme. A data type is assigned to a variable.
+
+
+    The term "variable" refers to the name of a memory region. Local, instance, and
+    static variables are the three types of variables in Java.
+
+
+    In Java, data types are divided into two categories: primitive and non-primitive.
+
+
+    ## Variable
+
+
+    A variable is the name of a memory-allocated reserved space. To put it another
+    way, it''s the name of the memory place. It''s made out of the words "variy +
+    ability," which signifies that its value can be modified.
+
+
+    ```java
+
+    1.  int data=50; //Here data is variable
+
+    ```
+
+
+    ### Types of Variables
+
+
+    * local variable
+
+    * instance variable
+
+    * static variable
+
+
+    #### 1) Local Variable
+
+
+    A local variable is a variable declared within the method''s body. This variable
+    can only be used within that method, and the other methods in the class are unaware
+    that it exists.
+
+
+    The keyword `static` cannot be used to declare a local variable.
+
+
+    #### 2) Instance Variable
+
+
+    An instance variable is a variable declared inside the class but outside the method
+    body. It hasn''t been declared static. Because its value is instance-specific
+    and not shared across instances, it''s called an instance variable.
+
+
+    #### 3) Static variable
+
+
+    A static variable is one that has been declared as `static`. It''s not possible
+    for it to be local. You can make a duplicate of the static variable and share
+    it across all of the class''s instances. Static variables are only allocated once,
+    when the class is loaded into memory.
+
+
+    ### Example - variables in java
+
+
+    ```java
+
+    1.  public class A {
+
+    2.  static int m=100; //static variable
+
+    3.  void method() {
+
+    4.  int n=90; //local variable
+
+    5.  }
+
+    6.  public static void main(String args[]) {
+
+    7.  int data=50;//instance variable
+
+    8.  }
+
+    9}//end of class
+
+    ```
+
+
+    ### Java Example: Add Two Numbers
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  int a=10;
+
+    4.  int b=10;
+
+    5.  int c=a+b;
+
+    6.  System.out.println(c);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    Output:
+
+    20
+
+
+    ### Java Variable Example: Widening
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  int a=10;
+
+    4.  float f=a;
+
+    5.  System.out.println(a);
+
+    6.  System.out.println(f);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    Output:
+
+    10
+
+    10.0
+
+
+    ### Java Variable Example: Narrowing (Typecasting)
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  float f=10.5f;
+
+    4.  int a=(int)f;
+
+    5.  System.out.println(f);
+
+    6.  System.out.println(a);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    Output:
+
+    10.5
+
+    10
+
+
+    ### Java Variable Example: Overflow
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  int a=130;
+
+    4.  byte b=(byte)a;
+
+    5.  System.out.println(a);
+
+    6.  System.out.println(b);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    Output:
+
+    130
+
+    -126
+
+
+    ### Java Variable Example: Adding Lower Type
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  byte a=10;
+
+    4.  byte b=10;
+
+    5.  byte c=(byte)(a+b);
+
+    6.  System.out.println(c);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    Output:
+
+    20
+
+
+    # Data Types in Java
+
+
+    The different sizes and values that can be stored in the variable are defined
+    by data types. In Java, there are two types of data types:
+
+
+    The primitive data types are `boolean`, `char`, `byte`, `short`, `int`, `long`,
+    `float`, and `double`, among others.
+
+
+    Non-primitive data types: Classes, Interfaces, and Arrays are examples of non-primitive
+    data types.
+
+
+    ## Primitive Data Types
+
+
+    Primitive data types are the building blocks of data manipulation in the Java
+    programming language. These are the most basic data types in the Java programming
+    language.
+
+
+    * boolean data type
+
+    * byte data type
+
+    * char data type
+
+    * short data type
+
+    * int data type
+
+    * long data type
+
+    * float data type
+
+    * double data type
+
+
+    ![](Images/image00126.jpeg)
+
+
+    ## Boolean Data Type
+
+    '
+  raw: 'A thread is like a second software that runs in the background. By defining
+    many threads, we can design Java applications that handle multiple tasks at once.
+    The fundamental benefit of multi-threading is that each thread does not take up
+    memory. It has a shared memory space. Threads are essential for multi-media, Web
+    applications, and other applications.
+
+
+    ### Dynamic
+
+
+    Java is a dynamic programming language. It allows classes to be loaded dynamically.
+    It means that classes are loaded only when they are needed. It also has support
+    for functions written in its native languages, C and C++.
+
+
+    Java allows for dynamic compilation and memory management (garbage collection).
+
+
+    # C++ vs Java
+
+
+    The programming languages C++ and Java have a lot of similarities and differences.
+    The following is a summary of the most significant differences between C++ and
+    Java:
+
+
+    ![](Images/image00122.jpeg)
+
+
+    ![](Images/image00123.jpeg)
+
+
+    ![](Images/image00124.jpeg)
+
+
+    ![](Images/image00125.jpeg)
+
+
+    ## C++ Program Example
+
+
+    File: main.cpp
+
+
+    1.  #include <iostream>  
+
+
+    2.  using namespace std;  
+
+
+    3.  int main() {  
+
+
+    4.  cout << "Hello C++ Programming";  
+
+
+    5.  return 0;  
+
+
+    6.  }  
+
+
+    Output:
+
+
+    Hello C++ Programming
+
+
+    ## Java Program Example
+
+
+    File: Simple.java
+
+
+    1.  class Simple{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  System.out.println("Hello Java");  
+
+
+    4.  }  
+
+
+    5.  }  
+
+
+    Output:
+
+
+    Hello Java
+
+
+    # First Java Program
+
+
+    We will learn how to write a simple Java application in this section. After installing
+    the JDK, we can quickly construct a basic hello Java application.
+
+
+    You must first construct a class that contains the main function in order to create
+    a simple Java programme. Let''s start with the requirements.
+
+
+    Install the Java Development Kit. Download and install the JDK if you haven''t
+    already done so.
+
+
+    Set the jdk/bin directory''s path.
+
+
+    Make a Java programme.
+
+
+    Run the Java programme after it has been compiled.
+
+
+    ### Hello World Example
+
+
+    1.  class Simple{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  System.out.println("Hello Java");  
+
+
+    4.  }  
+
+
+    5.  }  
+
+
+    | To compile: | javac Simple.java |
+
+
+    | To execute: | java Simple |
+
+
+    Output:
+
+
+    Hello Java
+
+
+    # Difference between JDK, JRE, and JVM
+
+
+    Before moving on to Java, we must first understand the differences between JDK,
+    JRE, and JVM. Here''s a quick summary of JVM.
+
+
+    Go to the following page if you want to learn more about the Java Virtual Machine
+    in depth. Let''s look at the distinctions between the JDK, JRE, and JVM first.
+
+
+    ### JVM
+
+
+    JVM (Java Virtual Machine) is a machine that is abstract. Because it does not
+    exist physically, it is called a virtual machine. It''s a specification that creates
+    a runtime environment for Java bytecode to run in. It can also run applications
+    written in other languages that have been compiled into Java bytecode.
+
+
+    For a wide range of hardware and software platforms, JVMs are available. Because
+    each operating system''s setup differs, JVM, JRE, and JDK are platform dependent.
+    Java, on the other hand, is platform agnostic. The JVM is divided into three parts:
+    specification, implementation, and instance.
+
+
+    The JVM''s principal functions are as follows:
+
+
+    *   Loads code
+
+
+    *   Verifies code
+
+
+    *   Executes code
+
+
+    *   Provides runtime environment
+
+
+    ### JRE
+
+
+    The Java Runtime Environment (JRE) is an acronym for Java Runtime Environment.
+    It''s also referred to as Java RTE. The Java Runtime Environment (JRE) is a collection
+    of software tools for creating Java applications. It''s responsible for creating
+    the runtime environment. It is the JVM implementation. It is a real thing. It
+    comprises a collection of libraries as well as other files that JVM uses during
+    execution.
+
+
+    ### JDK
+
+
+    The term JDK stands for Java Development Kit. The Java Development Kit (JDK) is
+    a software development environment for creating Java programmes and applets. It
+    is a real thing. It includes JRE as well as developer tools.
+
+
+    # Java Variables
+
+
+    A variable is a container that holds the value during the execution of a Java
+    programme. A data type is assigned to a variable.
+
+
+    The term "variable" refers to the name of a memory region. Local, instance, and
+    static variables are the three types of variables in Java.
+
+
+    In Java, data types are divided into two categories: primitive and non-primitive.
+
+
+    ## Variable
+
+
+    A variable is the name of a memory-allocated reserved space. To put it another
+    way, it''s the name of the memory place. It''s made out of the words "variy +
+    ability," which signifies that its value can be modified.
+
+
+    1.  int data=50;//Here data is variable  
+
+
+    ### Types of Variables
+
+
+    *   local variable
+
+
+    *   instance variable
+
+
+    *   static variable
+
+
+    #### 1) Local Variable
+
+
+    A local variable is a variable declared within the method''s body. This variable
+    can only be used within that method, and the other methods in the class are unaware
+    that it exists.
+
+
+    The keyword "static" cannot be used to declare a local variable.
+
+
+    #### 2) Instance Variable
+
+
+    An instance variable is a variable declared inside the class but outside the method
+    body. It hasn''t been declared static.
+
+
+    Because its value is instance-specific and not shared across instances, it''s
+    called an instance variable.
+
+
+    #### 3) Static variable
+
+
+    A static variable is one that has been declared as static. It''s not possible
+    for it to be local. You can make a single duplicate of the static variable and
+    share it across all of the class''s instances. Static variables are only allocated
+    memory once, when the class is loaded into memory.
+
+
+    ### Example - variables in java
+
+
+    1.  public class A  
+
+
+    2.  {  
+
+
+    3.  static int m=100;//static variable  
+
+
+    4.  void method()  
+
+
+    5.  {    
+
+
+    6.  int n=90;//local variable    
+
+
+    7.  }  
+
+
+    8.  public static void main(String args[])  
+
+
+    9.  {  
+
+
+    10.  int data=50;//instance variable    
+
+
+    11.  }  
+
+
+    12.  }//end of class   
+
+
+    ### Java Variable Example:
+
+
+    ### Add Two Numbers
+
+
+    1.  public class Simple{    
+
+
+    2.  public static void main(String[] args){    
+
+
+    3.  int a=10;    
+
+
+    4.  int b=10;    
+
+
+    5.  int c=a+b;    
+
+
+    6.  System.out.println(c);    
+
+
+    7.  }  
+
+
+    8.  }    
+
+
+    Output:
+
+
+    20
+
+
+    ### Java Variable Example:
+
+
+    ### Widening
+
+
+    1.  public class Simple{  
+
+
+    2.  public static void main(String[] args){  
+
+
+    3.  int a=10;  
+
+
+    4.  float f=a;  
+
+
+    5.  System.out.println(a);  
+
+
+    6.  System.out.println(f);  
+
+
+    7.  }}  
+
+
+    Output:
+
+
+    10
+
+
+    10.0
+
+
+    ### Java Variable Example:
+
+
+    ### Narrowing (Typecasting)
+
+
+    1.  public class Simple{  
+
+
+    2.  public static void main(String[] args){  
+
+
+    3.  float f=10.5f;  
+
+
+    4.  //int a=f;//Compile time error  
+
+
+    5.  int a=(int)f;  
+
+
+    6.  System.out.println(f);  
+
+
+    7.  System.out.println(a);  
+
+
+    8.  }}  
+
+
+    Output:
+
+
+    10.5
+
+
+    10
+
+
+    ### Java Variable Example:
+
+
+    ### Overflow
+
+
+    1.  class Simple{  
+
+
+    2.  public static void main(String[] args){  
+
+
+    3.  //Overflow  
+
+
+    4.  int a=130;  
+
+
+    5.  byte b=(byte)a;  
+
+
+    6.  System.out.println(a);  
+
+
+    7.  System.out.println(b);  
+
+
+    8.  }}  
+
+
+    Output:
+
+
+    130
+
+
+    -126
+
+
+    ### Java Variable Example:
+
+
+    ### Adding Lower Type
+
+
+    1.  class Simple{  
+
+
+    2.  public static void main(String[] args){  
+
+
+    3.  byte a=10;  
+
+
+    4.  byte b=10;  
+
+
+    5.  //byte c=a+b;//Compile Time Error: because a+b=20 will be int  
+
+
+    6.  byte c=(byte)(a+b);  
+
+
+    7.  System.out.println(c);  
+
+
+    8.  }}  
+
+
+    Output:
+
+
+    20
+
+
+    # Data Types in Java
+
+
+    The different sizes and values that can be stored in the variable are defined
+    by data types. In Java, there are two types of data types:
+
+
+    The primitive data types are boolean, char, byte, short, int, long, float, and
+    double, among others.
+
+
+    Non-primitive data types: Classes, Interfaces, and Arrays are examples of non-primitive
+    data types.
+
+
+    ## Primitive Data Types
+
+
+    Primitive data types are the building blocks of data manipulation in the Java
+    programming language. These are the most basic data types in the Java programming
+    language.
+
+
+    *   boolean data type
+
+
+    *   byte data type
+
+
+    *   char data type
+
+
+    *   short data type
+
+
+    *   int data type
+
+
+    *   long data type
+
+
+    *   float data type
+
+
+    *   double data type
+
+
+    ![](Images/image00126.jpeg)
+
+
+    ## Boolean Data Type'
+  toc: []
+  trans: '
+
+
+    线程（thread）就像一个在后台运行的第二个软件。通过定义许多线程，我们可以设计出同时处理多个任务的 Java 应用程序。多线程的根本优势是每个线程不占用内存，它们共享一个内存空间。线程对于多媒体、Web
+    应用程序和其他应用程序至关重要。
+
+
+    ## 动态
+
+
+    Java 是一种动态编程语言。它允许类被动态加载。这意味着类只在需要时才被加载。它还支持用其原生语言 C 和 C++ 编写的函数。
+
+
+    Java 允许动态编译和内存管理（垃圾回收）。
+
+
+    # C++ vs Java
+
+
+    C++ 和 Java 编程语言之间有很多相似之处和不同之处。以下是 C++ 和 Java 之间最显著差异总结：
+
+
+    ![](img/image00122.jpeg)
+
+
+    ![](img/image00123.jpeg)
+
+
+    ![](img/image00124.jpeg)
+
+
+    ![](img/image00125.jpeg)
+
+
+    ## C++ 程序示例
+
+
+    文件：`main.cpp`
+
+
+    ```cpp
+
+    1.  #include <iostream>
+
+    2.  using namespace std;
+
+    3.  int main() {
+
+    4.  cout << "Hello C++ Programming";
+
+    5.  return 0;
+
+    6.  }
+
+    ```
+
+
+    输出：
+
+    Hello C++ Programming
+
+
+    ## Java 程序示例
+
+
+    文件：`Simple.java`
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  System.out.println("Hello Java");
+
+    4.  }
+
+    5.  }
+
+    ```
+
+
+    输出：
+
+    Hello Java
+
+
+    # 第一个 Java 程序
+
+
+    在本节中，我们将学习如何编写一个简单的 Java 应用程序。安装 JDK 之后，我们可以快速构建一个基础的 hello Java 应用程序。
+
+
+    为了创建一个简单的 Java 程序，你必须先构造包含 `main` 函数的类。让我们从要求开始。
+
+
+    1. 安装 Java 开发包。如果尚未安装，请下载并安装 JDK。
+
+    2. 设置 `jdk/bin` 目录路径。
+
+    3. 编写 Java 程序。
+
+    4. 编译后运行 Java 程序。
+
+
+    ### Hello World 示例
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  System.out.println("Hello Java");
+
+    4.  }
+
+    5.  }
+
+    ```
+
+
+    | 编译： | `javac Simple.java` |
+
+    | 执行： | `java Simple` |
+
+
+    输出：
+
+    Hello Java
+
+
+    # JDK, JRE 和 JVM 之间的区别
+
+
+    在学习 Java 之前，我们必须先理解 JDK、JRE 和 JVM 之间的区别。这里是对 JVM 的简要总结。
+
+
+    如果你想深入学习 Java 虚拟机，请访问以下页面。让我们先来看看 JDK、JRE 和 JVM 之间的区别。
+
+
+    ### JVM
+
+
+    `JVM`（Java 虚拟机）是一个抽象的机器。因为它在物理上不存在，所以它被称为虚拟机。它是一个规范，为 Java 字节码的运行创建一个运行时环境。它还可以运行用其他语言编写并编译成
+    Java 字节码的应用程序。
+
+
+    针对各种硬件和软件平台，都有可用的 JVM。由于每个操作系统的设置不同，JVM、JRE 和 JDK 是依赖于平台的。而 Java 是与平台无关的。JVM 分为三个部分：规范、实现和实例。
+
+
+    JVM 的主要功能如下：
+
+
+    * 加载代码
+
+    * 验证代码
+
+    * 执行代码
+
+    * 提供运行时环境
+
+
+    ### JRE
+
+
+    Java Runtime Environment (`JRE`）是 Java Runtime Environment 的缩写。它也被称为 Java RTE。Java
+    Runtime Environment (`JRE`) 是用于创建 Java 应用程序的软件工具集。它负责创建运行时环境。它是 `JVM` 的实现。它是真实的。它包含一系列库以及
+    JVM 在执行期间使用的其他文件。
+
+
+    ### JDK
+
+
+    `JDK` 一词代表 Java Development Kit（Java 开发包）。Java Development Kit (`JDK`) 是用于创建 Java
+    程序和 Applet 的软件开发环境。它是真实的。它包含了 JRE 以及开发者工具。
+
+
+    # Java 变量
+
+
+    变量是一个在 Java 程序执行期间存储值的容器。变量被分配了一个数据类型。
+
+
+    “变量”一词指的是内存区域的名称。局部变量、实例变量和静态变量是 Java 中的三类变量。
+
+
+    在 Java 中，数据类型分为两类：基本类型和非基本类型。
+
+
+    ## 变量
+
+
+    变量是内存分配的留留空间的名称。换句话说，它是内存位置的名字。它由 "variy + ability" 两个词组成，意味着它的值可以被修改。
+
+
+    ```java
+
+    1.  int data=50; // 这里 data 是变量
+
+    ```
+
+
+    ### 变量的类型
+
+
+    * 局部变量
+
+    * 实例变量
+
+    * 静态变量
+
+
+    #### 1) 局部变量
+
+
+    局部变量是在方法体内部声明的变量。该变量只能在该方法内部使用，类中的其他方法并不知道它的存在。
+
+
+    关键字 `static` 不能用于声明局部变量。
+
+
+    #### 2) 实例变量
+
+
+    实例变量是在类内部方法体外部声明的变量。它没有被声明为 `static`。由于它的值是特定于实例的且不在实例间共享，因此被称为实例变量。
+
+
+    #### 3) 静态变量
+
+
+    静态变量是被声明为 `static` 的变量。它不可能是局部的。你可以制作静态变量的副本并在类的所有实例共享它。静态变量只在类加载到内存时分配一次。
+
+
+    ### 示例 - Java 中的变量
+
+
+    ```java
+
+    1.  public class A {
+
+    2.  static int m=100; // 静态变量
+
+    3.  void method() {
+
+    4.  int n=90; // 局部变量
+
+    5.  }
+
+    6.  public static void main(String args[]) {
+
+    7.  int data=50;// 实例变量
+
+    8.  }
+
+    9}// 类结束
+
+    ```
+
+
+    ### Java 示例：两个数相加
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  int a=10;
+
+    4.  int b=10;
+
+    5.  int c=a+b;
+
+    6.  System.out.println(c);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    输出：
+
+    20
+
+
+    ### Java 变量示例：宽型转换
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  int a=10;
+
+    4.  float f=a;
+
+    5.  System.out.println(a);
+
+    6.  System.out.println(f);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    输出：
+
+    10
+
+    10.0
+
+
+    ### Java 变量示例：窄型转换（强制转换）
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  float f=10.5f;
+
+    4.  int a=(int)f;
+
+    5.  System.out.println(f);
+
+    6.  System.out.println(a);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    输出：
+
+    10.5
+
+    10
+
+
+    ### Java 变量示例：溢出
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  int a=130;
+
+    4.  byte b=(byte)a;
+
+    5.  System.out.println(a);
+
+    6.  System.out.println(b);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    输出：
+
+    130
+
+    -126
+
+
+    ### Java 变量示例：低类型相加
+
+
+    ```java
+
+    1.  class Simple {
+
+    2.  public static void main(String args[]) {
+
+    3.  byte a=10;
+
+    4.  byte b=10;
+
+    5.  byte c=(byte)(a+b);
+
+    6.  System.out.println(c);
+
+    7.  }
+
+    8.}
+
+    ```
+
+
+    输出：
+
+    20
+
+
+    # Java 中的数据类型
+
+
+    数据类型定义了变量中可以存储的不同大小和值。在 Java 中，有两种数据类型：
+
+
+    基本数据类型是 `boolean`、`char`、`byte`、`short`、`int`、`long`、`float` 和 `double` 等。
+
+
+    非基本数据类型：类、接口和数组是非基本数据类型的示例。
+
+
+    ## 基本数据类型
+
+
+    基本数据类型是 Java 编程语言中数据操作的构建块。这些是 Java 编程语言中最基础的数据类型。
+
+
+    * boolean 类型
+
+    * byte 类型
+
+    * char 类型
+
+    * short 类型
+
+    * int 类型
+
+    * long 类型
+
+    * float 类型
+
+    * double 类型
+
+
+    ![](img/image00126.jpeg)
+
+
+    ## boolean 类型
+
+
+    '
+- fmt: "\nOnly two potential values are stored in the `Boolean` data type: `true`\
+    \ and `false`. Simple flags that track true/false circumstances are stored in\
+    \ this data type.\n\nThe `Boolean` data type specifies a single bit of data, but\
+    \ its \"size\" cannot be precisely defined.\n\nExample:\n```\nBoolean one = false\n\
+    ```\n\n## Byte Data Type\n\nThe primitive data type `byte` is an example of this.\
+    \ It's an 8-bit two's complement signed integer. It has a value range of `-128`\
+    \ to `127` (inclusive). It has a minimum of `-128` and a high of `127`. It has\
+    \ a value of `0` by default.\n\nThe `byte` data type is used to preserve memory\
+    \ in huge arrays where space is at a premium. Because a `byte` is four times smaller\
+    \ than an `integer`, it saves space. It can also be substituted with the `\"int\"\
+    ` data type.\n\nExample:\n```\nbyte a = 10, byte b = -20\n```\n\n## Short Data\
+    \ Type\n\nA 16-bit signed two's complement integer is the `short` data type. It\
+    \ has a value range of `-32,768` to `32,767` (inclusive). It has a minimum of\
+    \ `-32,768` and a maximum of `32,767`. It has a value of `0` by default.\n\nThe\
+    \ `short` data type, like the `byte` data type, can be used to save memory. A\
+    \ `short` data type is twice the size of an `integer`.\n\nExample:\n```\nshort\
+    \ s = 10000, short r = -5000\n```\n\n## Int Data Type\n\nA 32-bit signed two's\
+    \ complement integer is represented by the `int` data type. Its range of values\
+    \ is `-2,147,483,648` (`-2^31 -1`) to `2,147,483,647` (`2^31 -1`) (inclusive).\
+    \ It has a minimum of `-2,147,483,648` and a maximum of `2,147,483,647`. It has\
+    \ a value of `0` by default.\n\nUnless there is a memory constraint, the `int`\
+    \ data type is usually chosen as the default data type for integral values.\n\n\
+    Example:\n```\nint a = 100000, int b = -200000\n```\n\n## Long Data Type\n\nA\
+    \ 64-bit two's complement integer is the `long` data type. It has a value range\
+    \ of `-9,223,372,036,854,775,808` (`-2^63 -1`) to `9,223,372,036,854,775,807`\
+    \ (`2^63 -1`) (inclusive). Its lowest and maximum values are `-9,223,372,036,854,775,808`\
+    \ and `9,223,372,036,854,775,807`. It has a value of `0` by default. When you\
+    \ need a larger range of values than `int` can supply, you should utilise the\
+    \ `long` data type.\n\nExample:\n```\nlong a = 100000L, long b = -200000\n```\n\
+    \n## Float Data Type\n\nThe `float` data type is a 32-bit IEEE 754 floating point\
+    \ with single precision. It has an infinite value range. If you need to preserve\
+    \ memory in big arrays of floating point integers, use a `float` (rather than\
+    \ a `double`). For precise numbers, such as currency, the `float` data type should\
+    \ never be used. `0.0F` is the default value.\n\nExample:\n```\nfloat f1 = 234.5f\n\
+    ```\n\n## Double Data Type\n\nA `double` data type is a 64-bit IEEE 754 floating\
+    \ point with double precision. It has an infinite value range. Like `float`, the\
+    \ `double` data type is commonly used for decimal values. For precise values,\
+    \ such as currency, the `double` data type should never be utilised. `0.0d` is\
+    \ the default value.\n\nExample:\n```\ndouble d1 = 12.3\n```\n\n## Char Data Type\n\
+    \nA single 16-bit Unicode character is represented by the `char` data type. It\
+    \ has a value range of `'u0000'` (or `0`) to `'uffff'` (or `65,535` inclusive).\
+    \ Characters are stored using the `char` data type.\n\nExample:\n```\nchar letterA\
+    \ = 'A'\n```\n\n# Operators in Java\n\nIn Java, an operator is a symbol that performs\
+    \ operations. For instance, `+`, `-`, `*`, `/`, and so on.\n\nIn Java, there are\
+    \ many different types of operators, which are listed below:\n\n* Unary Operator\n\
+    * Arithmetic Operator\n* Shift Operator\n* Relational Operator\n* Bitwise Operator\n\
+    * Logical Operator\n* Ternary Operator\n* Assignment Operator\n\n## Java Operator\
+    \ Precedence\n\n![](Images/image00127.jpeg)\n\n![](Images/image00128.jpeg)\n\n\
+    ### Java Unary Operator\n\nOnly one operand is required for the Java unary operators.\
+    \ Unary operators are employed to carry out a variety of tasks.\n\n![](Images/image00129.jpeg)\n\
+    \n### Java Unary Operator Example: ++ and --\n\n```java\nclass OperatorExample\
+    \ {\n    public static void main(String[] args[]) {\n        int x = 10;\n   \
+    \     System.out.println(x++); // 10 (1)\n        System.out.println(++x); //\
+    \ 12\n        System.out.println(x--); // 12 (1)\n        System.out.println(--x);\
+    \ // 10\n    }\n}\n```\nOutput:\n```\n10\n12\n12\n10\n```\n\n### Java Unary Operator\
+    \ Example 2: ++ and --\n\n```java\nclass OperatorExample {\n    public static\
+    \ void main(String[] args[]) {\n        int a = 10;\n        int b = 10;\n   \
+    \     System.out.println(a++ + ++a); // 10+12=22\n        System.out.println(b++\
+    \ + b++); // 10+11=21\n    }\n}\n```\nOutput:\n```\n22\n21\n```\n\n### Java Unary\
+    \ Operator Example: ~ and !\n\n```java\nclass OperatorExample {\n    public static\
+    \ void main(String[] args[]) {\n        int a = 10;\n        int b = -10;\n  \
+    \      boolean c = true;\n        boolean d = false;\n        System.out.println(~a);\
+    \ // -11 (minus of total positive value starts from 0)\n        System.out.println(~b);\
+    \ // 9 (positive of total minus, starts from 0)\n        System.out.println(!c);\
+    \ // false (opposite of boolean value)\n        System.out.println(!d); // true\n\
+    \    }\n}\n```\nOutput:\n```\n-11\n9\nfalse\ntrue\n```\n\n### Java Arithmetic\
+    \ Operators\n\nAddition, subtraction, multiplication, and division are all performed\
+    \ using Java arithmetic operations. They function as fundamental mathematical\
+    \ procedures.\n\n### Java Arithmetic Operator Example\n\n```java\nclass OperatorExample\
+    \ {\n    public static void main(String[] args[]) {\n        int a = 10;\n   \
+    \     int b = 5;\n        System.out.println(a+b); // 15\n        System.out.println(a-b);\
+    \ // 5\n        System.out.println(a*b); // 50\n        System.out.println(a/b);\
+    \ // 2\n        System.out.println(a%b); // 0\n    }\n}\n```\nOutput:\n```\n15\n\
+    5\n50\n2\n0\n```\n\n### Java Arithmetic Operator Example: Expression\n\n```java\n\
+    class OperatorExample {\n    public static void main(String[] args[]) {\n    \
+    \    System.out.println(10*10/5+3-1*4/2);\n    }\n}\n```\nOutput:\n```\n21\n```\n\
+    \n### Java - Left Shift Operator\n\nThe Java left shift operator shifts all the\
+    \ bits in a value to the left by a specified number of times.\n\n### Java Left\
+    \ Shift Operator Example\n\n```java\nclass OperatorExample {\n    public static\
+    \ void main(String[] args[]) {\n        System.out.println(10<<2); // 10*2^2=10*4=40\n\
+    \        System.out.println(10<<3); // 10*2^3=10*8=80\n        System.out.println(20<<2);\
+    \ // 20*2^2=20*4=80\n        System.out.println(15<<4); // 15*2^4=15*16=240\n\
+    \    }\n}\n```\nOutput:\n```\n40\n80\n80\n240\n```\n\n### Java - Right Shift Operator\n\
+    \nThe Java right shift operator `>>` shifts the left operand's value to the right\
+    \ by the number of bits given by the right operand.\n\n### Java - Right Shift\
+    \ Operator Example\n\n```java\nclass OperatorExample {\n    public static void\
+    \ main(String[] args[]) {\n        System.out.println(10>>2); // 2\n        System.out.println(20>>2);\
+    \ // 5\n        System.out.println(20>>3); // 2\n    }\n}\n```\n\n### Java Shift\
+    \ Operator Example: >> vs >>>\n\n```java\nclass OperatorExample {\n    public\
+    \ static void main(String[] args[]) {\n        // For positive number, >> and\
+    \ >>> works same\n        System.out.println(20>>2);\n        System.out.println(20>>>2);\n\
+    \        // For negative number, >>> changes parity bit (MSB) to 0\n        System.out.println(-20>>2);\n\
+    \        System.out.println(-20>>>2);\n    }\n}\n```\nOutput:\n```\n5\n5\n-5\n\
+    1073741819\n```\n\n### Java AND Operator Example: Logical && and Bitwise &\n\n\
+    If the first condition is false, the `&&` operator does not verify the second\
+    \ condition. Only if the first condition is true is the second checked.\n\nWhether\
+    \ the first condition is true or false, the bitwise `&` operator always verifies\
+    \ both criteria.\n\n```java\nclass OperatorExample {\n    public static void main(String[]\
+    \ args[]) {\n        int a = 10;\n        int b = 5;\n        int c = 20;\n  \
+    \      System.out.println(a<b&&a++<c); // false && true=false\n        System.out.println(a<b&a<c);\
+    \ // false & true=false\n    }\n}\n```\n"
+  raw: 'Only two potential values are stored in the Boolean data type: true and false.
+    Simple flags that track true/false circumstances are stored in this data type.
+
+
+    The Boolean data type specifies a single bit of data, but its "size" cannot be
+    precisely defined.
+
+
+    Example:
+
+
+    1.  Boolean one = false  
+
+
+    ## Byte Data Type
+
+
+    The primitive data type byte is an example of this. It''s an 8-bit two-s complement
+    signed integer. It has a value range of -128 to 127\. (inclusive). It has a minimum
+    of -128 and a high of 127\. It has a value of 0 by default.
+
+
+    The byte data type is used to preserve memory in huge arrays where space is at
+    a premium. Because a byte is four times smaller than an integer, it saves space.
+    It can also be substituted with the "int" data type.
+
+
+    Example:
+
+
+    1.  byte a = 10, byte b = -20  
+
+
+    ## Short Data Type
+
+
+    A 16-bit signed two''s complement integer is the short data type. It has a value
+    range of -32,768 to 32,767\. (inclusive). It has a minimum of -32,768 and a maximum
+    of 32,767\. It has a value of 0 by default.
+
+
+    The short data type, like the byte data type, can be used to save memory. A short
+    data type is twice the size of an integer.
+
+
+    Example:
+
+
+    1.  short s = 10000, short r = -5000  
+
+
+    ## Int Data Type
+
+
+    A 32-bit signed two''s complement integer is represented by the int data type.
+    Its range of values is - 2,147,483,648 (-231 -1) to 2,147,483,647 (231 -1). (inclusive).
+    It has a minimum of 2,147,483,648 and a maximum of 2,147,483,647\. It has a value
+    of 0 by default.
+
+
+    Unless there is a memory constraint, the int data type is usually chosen as the
+    default data type for integral values.
+
+
+    Example:
+
+
+    1.  int a = 100000, int b = -200000  
+
+
+    ## Long Data Type
+
+
+    A 64-bit two''s complement integer is the long data type. It has a value range
+    of -9,223,372,036,854,775,808(-263 -1) to 9,223,372,036,854,775,807(263 -1). (inclusive).
+    Its lowest and maximum values are 9,223,372,036,854,775,808 and 9,223,372,036,854,775,807\.
+    It has a value of 0 by default. When you need a larger range of values than int
+    can supply, you should utilise the long data type.
+
+
+    Example:
+
+
+    1.  long a = 100000L, long b = -200000
+
+
+    ## Float Data Type
+
+
+    The float data type is a 32-bit IEEE 754 floating point with single precision.
+    It has an infinite value range. If you need to preserve memory in big arrays of
+    floating point integers, use a float (rather than a double). For precise numbers,
+    such as currency, the float data type should never be used. 0.0F is the default
+    value.
+
+
+    Example:
+
+
+    1.  float f1 = 234.5f  
+
+
+    ## Double Data Type
+
+
+    A double data type is a 64-bit IEEE 754 floating point with double precision.
+    It has an infinite value range. Like float, the double data type is commonly used
+    for decimal values. For precise values, such as currency, the double data type
+    should never be utilised. 0.0d is the default value.
+
+
+    Example:
+
+
+    1.  double d1 = 12.3  
+
+
+    ## Char Data Type
+
+
+    A single 16-bit Unicode character is represented by the char data type. It has
+    a value range of ''u0000'' (or 0) to ''uffff'' (or 65,535 inclusive). Characters
+    are stored using the char data type.
+
+
+    Example:
+
+
+    1.  char letterA = ''A''  
+
+
+    # Operators in Java
+
+
+    In Java, an operator is a symbol that performs operations. For instance, +, -,
+    *, /, and so on.
+
+
+    In Java, there are many different types of operators, which are listed below:
+
+
+    *   Unary Operator,
+
+
+    *   Arithmetic Operator,
+
+
+    *   Shift Operator,
+
+
+    *   Relational Operator,
+
+
+    *   Bitwise Operator,
+
+
+    *   Logical Operator,
+
+
+    *   Ternary Operator and
+
+
+    *   Assignment Operator.
+
+
+    ## Java Operator Precedence
+
+
+    ![](Images/image00127.jpeg)
+
+
+    ![](Images/image00128.jpeg)
+
+
+    ### Java Unary Operator
+
+
+    Only one operand is required for the Java unary operators. Unary operators are
+    employed to carry out a variety of tasks.
+
+
+    ![](Images/image00129.jpeg)
+
+
+    ### Java Unary Operator
+
+
+    ### Example: ++ and --
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  int x=10;  
+
+
+    4.  System.out.println(x++);//10 (11)  
+
+
+    5.  System.out.println(++x);//12  
+
+
+    6.  System.out.println(x--);//12 (11)  
+
+
+    7.  System.out.println(--x);//10  
+
+
+    8.  }}  
+
+
+    Output:
+
+
+    10
+
+
+    12
+
+
+    12
+
+
+    10
+
+
+    ### Java Unary Operator
+
+
+    ### Example 2: ++ and --
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  int a=10;  
+
+
+    4.  int b=10;  
+
+
+    5.  System.out.println(a++ + ++a);//10+12=22  
+
+
+    6.  System.out.println(b++ + b++);//10+11=21  
+
+
+    8.  }}  
+
+
+    Output:
+
+
+    22
+
+
+    21
+
+
+    ### Java Unary Operator Example: ~ and !
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  int a=10;  
+
+
+    4.  int b=-10;  
+
+
+    5.  boolean c=true;  
+
+
+    6.  boolean d=false;  
+
+
+    7.  System.out.println(~a);//-11 (minus of total positive value which starts from 0)  
+
+
+    8.  System.out.println(~b);//9 (positive of total minus, positive starts from 0)  
+
+
+    9.  System.out.println(!c);//false (opposite of boolean value)  
+
+
+    10.  System.out.println(!d);//true  
+
+
+    11.  }}  
+
+
+    Output:
+
+
+    -11
+
+
+    9
+
+
+    false
+
+
+    true
+
+
+    ### Java Arithmetic Operators
+
+
+    Addition, subtraction, multiplication, and division are all performed using Java
+    arithmetic operations. They function as fundamental mathematical procedures.
+
+
+    ### Java Arithmetic Operator
+
+
+    ### Example
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  int a=10;  
+
+
+    4.  int b=5;  
+
+
+    5.  System.out.println(a+b);//15  
+
+
+    6.  System.out.println(a-b);//5  
+
+
+    7.  System.out.println(a*b);//50  
+
+
+    8.  System.out.println(a/b);//2  
+
+
+    9.  System.out.println(a%b);//0  
+
+
+    10.  }}  
+
+
+    Output:
+
+
+    15
+
+
+    5
+
+
+    50
+
+
+    2
+
+
+    0
+
+
+    ### Java Arithmetic Operator
+
+
+    ### Example: Expression
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  System.out.println(10*10/5+3-1*4/2);  
+
+
+    4.  }}  
+
+
+    Output:
+
+
+    21
+
+
+    ### Java - Left Shift Operator
+
+
+    The Java left shift operator shifts all the bits in a value to the left by a specified
+    number of times.
+
+
+    ### Java Left Shift Operator
+
+
+    ### Example
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  System.out.println(10<<2);//10*2^2=10*4=40  
+
+
+    4.  System.out.println(10<<3);//10*2^3=10*8=80  
+
+
+    5.  System.out.println(20<<2);//20*2^2=20*4=80  
+
+
+    6.  System.out.println(15<<4);//15*2^4=15*16=240  
+
+
+    7.  }}  
+
+
+    Output:
+
+
+    40
+
+
+    80
+
+
+    80
+
+
+    240
+
+
+    ### Java - Right Shift Operator
+
+
+    The Java right shift operator >> shifts the left operand''s value to the right
+    by the number of bits given by the right operand.
+
+
+    ### Java - Right Shift Operator
+
+
+    ### Example
+
+
+    1.  public OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  System.out.println(10>>2);//10/2^2=10/4=2  
+
+
+    4.  System.out.println(20>>2);//20/2^2=20/4=5  
+
+
+    5.  System.out.println(20>>3);//20/2^3=20/8=2  
+
+
+    6.  }}  
+
+
+    Output:
+
+
+    2
+
+
+    5
+
+
+    2
+
+
+    ### Java Shift Operator
+
+
+    ### Example: >> vs >>>
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  //For positive number, >> and >>> works same  
+
+
+    4.  System.out.println(20>>2);  
+
+
+    5.  System.out.println(20>>>2);  
+
+
+    6.  //For negative number, >>> changes parity bit (MSB) to 0  
+
+
+    7.  System.out.println(-20>>2);  
+
+
+    8.  System.out.println(-20>>>2);  
+
+
+    9.  }}  
+
+
+    Output:
+
+
+    5
+
+
+    5
+
+
+    -5
+
+
+    1073741819
+
+
+    ### Java AND Operator
+
+
+    ### Example:
+
+
+    ### Logical && and Bitwise &
+
+
+    If the first condition is false, the logical && operator does not verify the second
+    condition. Only if the first condition is true is the second condition checked.
+
+
+    Whether the first condition is true or false, the bitwise & operator always verifies
+    both criteria.
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  int a=10;  
+
+
+    4.  int b=5;  
+
+
+    5.  int c=20;  
+
+
+    6.  System.out.println(a<b&&a<c);//false && true = false  
+
+
+    7.  System.out.println(a<b&a<c);//false & true = false  
+
+
+    8.  }}  
+
+
+    Output:
+
+
+    false
+
+
+    false
+
+
+    ### Java AND Operator
+
+
+    ### Example:
+
+
+    ### Logical && vs Bitwise &
+
+
+    1.  public class OperatorExample{  
+
+
+    2.  public static void main(String args[]){  
+
+
+    3.  int a=10;  
+
+
+    4.  int b=5;  
+
+
+    5.  int c=20;  
+
+
+    6.  System.out.println(a<b&&a++<c);//false && true = false  '
+  toc: []
+  trans: "\n\n`Boolean` 数据类型仅存储两个潜在值：`true` 和 `false`。该数据类型用于存储跟踪真/假情况的简单标志位。\n\n\
+    `Boolean` 数据类型指定了一个位的数据，但其“大小”无法精确定义。\n\n示例：\n```\nBoolean one = false\n```\n\n\
+    ## Byte 字节数据类型\n\n原始型数据类型 `byte` 是这种类型的一个例子。它是一个 8 位补码有符号整数。它的取值范围是从 `-128` 到\
+    \ `127`（包含）。它的最小值为 `-128`，最大值为 `127`。默认值为 `0`。\n\n`byte` 数据类型用于在空间极其有限的大数组中节省内存。因为\
+    \ `byte` 的空间是 `integer` 的四分之一，所以它可以节省空间。它也可以用 `\"int\"` 数据类型替换。\n\n示例：\n```\n\
+    byte a = 10, byte b = -20\n```\n\n## Short 短型数据类型\n\n`short` 数据类型是 16 位补码有符号整数。它的取值范围是从\
+    \ `-32,768` 到 `32,767`（包含）。它的最小值为 `-32,768`，最大值为 `32,767`。默认值为 `0`。\n\n`short`\
+    \ 数据类型和 `byte` 数据类型一样可以节省内存。`short` 数据类型的大小是 `integer` 的两倍。\n\n示例：\n```\nshort\
+    \ s = 10000, short r = -5000\n```\n\n## Int 整型数据类型\n\n`int` 数据类型表示 32 位补码有符号整数。它的取值范围是从\
+    \ `-2,147,483,648` (`-2³¹ -1`) 到 `2,147,483,647` (`2³¹ -1`)（包含）。它的最小值为 `-2,147,483,648`，最大值为\
+    \ `2,147,483,647`。默认值为 `0`。\n\n除非有内存限制，否则 `int` 数据类型通常被选为整数值的默认数据类型。\n\n示例：\n\
+    ```\nint a = 100000, int b = -200000\n```\n\n## Long 长型数据类型\n\n`long` 数据类型是 64\
+    \ 位补码整数。它的取值范围是从 `-9,223,372,036,854,775,808` (`-2⁶³ -1`) 到 `9,223,372,036,854,775,807`\
+    \ (`2⁶³ -1`)（包含）。它的最小值和最大值分别为 `-9,223,372,036,854,775,808` 和 `9,223,372,036,854,775,807`。默认值为\
+    \ `0`。当你需要比 `int` 更大的取值范围时，应该使用 `long` 数据类型。\n\n示例：\n```\nlong a = 100000L, long\
+    \ b = -200000\n```\n\n## Float 浮型数据类型\n\n`float` 数据类型是 32 位单精度 IEEE 754 浮点数。它具有无限的取值范围。如果你需要在大型浮点整数数组中节省内存，请使用\
+    \ `float`（而不是 `double`）。对于货币等精确数字，不应使用 `float`。默认值为 `0.0F`。\n\n示例：\n```\nfloat\
+    \ f1 = 3.5\n```\n\n## Double 双型数据类型\n\n`double` 类型是 64 位双精度 IEEE 754 浮点数。它具有无限的取值范围。和\
+    \ `float` 一样，`double` 类型通常用于小数值。对于货币等精确数值，不应使用 `double`。默认值为 `0.0d`。\n\n示例：\n\
+    ```\ndouble d1 = 2.3\n```\n\n## Char 字符类型\n\n`char` 类型表示 16 位 Unicode 字符。它的取值范围是从\
+    \ `'u0000'` 到 `'uffff'`（包含）。字符使用 `char` 类型存储。\n\n示例：\n```\nchar letter = 'A'\n\
+    ```\n\n# Java 运算符\n\n在 Java 中，运算符是执行操作的符号。例如 `+`、`-`、`*`、`/` 等。在 Java 中有许多不同的运算符，列如下：\n\
+    \n-   一元运算符\n-   算术运算符\n-   位移运算符\n-   关系运算符\n-   位运算运算符\n-   逻辑运算符\n-   三目运算符\n\
+    -   赋值运算符\n\n## Java 运算符优先级\n\n![](img/image0127.jpeg)\n\n![](img/image0128.jpeg)\n\
+    \n### Java 一元运算符\n\nJava 一元运算符只需要一个操作数。一元运算符用于执行各种任务。\n\n![](img/image0129.jpeg)\n\
+    \n### Java 一元运算符示例：++ 和 --\n\n```java\nclass OperatorExample {\n    public static\
+    \ void main(String[] args[]) {\n        int x = 10;\n        System.out.println(x++);\
+    \ // 10\n        System.out.println(++x); // 12\n        System.out.println(x--);\
+    \ // 12\n        System.out.println(--x); // 10\n    }\n}\n```\n输出：\n```\n10\n\
+    12\n12\n10\n```\n\n### Java 一元运算符示例 2：++ 和 --\n\n```java\nclass OperatorExample\
+    \ {\n    public static void main(String[] args[]) {\n        int a = 10;\n   \
+    \     int b = 10;\n        System.out.println(a++ + ++a); // 10+12=22\n      \
+    \  System.out.println(b-- + b); // 10+9=19\n    }\n}\n```\n输出：\n```\n22\n19\n\
+    ```\n\n### Java 一元运算符示例：~ 和 !\n\n```java\nclass OperatorExample {\n    public\
+    \ static void main(String[] args[]) {\n        int a = 10;\n        int b = -10;\n\
+    \        boolean c = true;\n        boolean d = false;\n        System.out.println(~a);\
+    \ // -11 (正值的取反)\n        System.out.println(~b); // 9 (负值的取反)\n        System.out.println(!c);\
+    \ // false (布尔值的取反)\n        System.out.println(!d); // true\n    }\n}\n```\n\
+    输出：\n```\n-11\n9\nfalse\ntrue\n```\n\n### Java 算术运算符\n\n加、减、乘、除都是通过 Java 算术运算执行的。它们作为基础数学过程。\n\
+    \n### Java 算术运算符示例\n\n```java\nclass OperatorExample {\n    public static void\
+    \ main(String[] args[]) {\n        int a = 10;\n        int b = 5;\n        System.out.println(a+b);\
+    \ // 15\n        System.out.println(a-b); // 5\n        System.out.println(a*b);\
+    \ // 50\n        System.out.println(a/b); // 2\n        System.out.println(a%b);\
+    \ // 0\n    }\n}\n```\n输出：\n```\n15\n5\n50\n2\n0\n```\n\n### Java 算术运算符示例：表达式\n\
+    \n```java\nclass OperatorExample {\n    public static void main(String[] args[])\
+    \ {\n        System.out.println(10*10/5+3-1*4/2);\n    }\n}\n```\n输出：\n```\n21\n\
+    ```\n\n### Java - 左移运算符\n\nJava 左移运算符将值中的所有位向左移动指定的次数。\n\n### Java 左移运算符示例\n\n\
+    ```java\nclass OperatorExample {\n    public static void main(String[] args[])\
+    \ {\n        System.out.println(10<<2); // 10*2²=10*4=40\n        System.out.println(10<<3);\
+    \ // 10*2³=10*8=80\n        System.out.println(20<<2); // 20*2²=20*4=80\n    \
+    \    System.out.println(15<<4); // 15*2⁴=15*16=240\n    }\n}\n```\n输出：\n```\n\
+    40\n80\n80\n240\n```\n\n### Java - 右移运算符\n\nJava 右移运算符 `>>` 将左操作数的值向右移动，移动位数由右操作数给出。\n\
+    \n### Java 右移运算符示例\n\n```java\nclass OperatorExample {\n    public static void\
+    \ main(String[] args[]) {\n        System.out.println(10>>2); // 2\n        System.out.println(20>>2);\
+    \ // 5\n        System.out.println(20>>3); // 2\n    }\n}\n```\n\n### Java 位移运算符示例：>>\
+    \ vs >>>\n\n```java\nclass OperatorExample {\n    public static void main(String[]\
+    \ args[]) {\n        // 对于正数，>> 和 >>> 效果相同\n        System.out.println(20>>2);\n\
+    \        System.out.println(20>>>2);\n        // 对于负数，>>> 将符号位（最高位）更改为 0\n   \
+    \     System.out.println(-20>>2);\n        System.out.println(-20>>>2);\n    }\n\
+    }\n```\n输出：\n```\n5\n5\n-5\n1073741819\n```\n\n### Java 与运算符示例：逻辑 && 和 位运算 &\n\
+    \n如果第第一个条件为假，`&&` 运算符将不会验证第二个条件。只有当第一个条件为真时，才会检查第二个。\n\n无论第一个条件是真是假，位运算符 `&` 运算符都会验证两个标准。\n\
+    \n```java\nclass OperatorExample {\n    public static void main(String[] args[])\
+    \ {\n        int a = 10;\n        int b = 5;\n        int c = 20;\n        System.out.println(a<b&&a++<c);\
+    \ // false && true=false\n        System.out.println(a<b&a<c); // false & true=false\n\
+    \    }\n}\n```\n\n"
+- fmt: "\n# Java OR Operator\n\n### Example\n```java\n7. System.out.println(a);//10\
+    \ because second condition is not checked\n8. System.out.println(a<b&a++<c);//false\
+    \ && true = false\n9. System.out.println(a);//11 because second condition is checked\n\
+    10. }}\n```\n**Output:**\n```\nfalse\n10\nfalse\n11\n```\n\n### Logical || and\
+    \ Bitwise |\n\nIf the first condition is true, the logical `||` operator does\
+    \ not examine the second condition. Only if the first condition is false is the\
+    \ second condition checked.\n\nWhether the first condition is true or false, the\
+    \ bitwise `|` operator always verifies both criteria.\n\n### Example\n```java\n\
+    1. public class OperatorExample{\n2. public static void main(String args[]){\n\
+    3. int a=10;\n4. int b=5;\n5. int c=20;\n6. System.out.println(a>b||a<c);//true\
+    \ || true = true\n7. System.out.println(a>b|a<c);//true | true = true\n8. //||\
+    \ vs |\n9. System.out.println(a>b||a++<c);//true || true = true\n10. System.out.println(a);//10\
+    \ because second condition is not checked\n11. System.out.println(a>b|a++<c);//true\
+    \ | true = true\n12. System.out.println(a);//11 because second condition is checked\n\
+    13. }}\n```\n**Output:**\n```\ntrue\ntrue\ntrue\n10\ntrue\n11\n```\n\n# Java Ternary\
+    \ Operator\n\nIn Java programming, the Ternary operator is a one-line substitute\
+    \ for the `if-then-else` expression. It's the only conditional operator that accepts\
+    \ three inputs.\n\n### Example\n```java\n1. public class OperatorExample{\n2.\
+    \ public static void main(String args[]){\n3. int a=2;\n4. int b=5;\n5. int min=(a<b)?a:b;\n\
+    6. System.out.println(min);\n7. }}\n```\n**Output:**\n```\n2\n```\n\n#### Another\
+    \ Example:\n```java\n1. public class OperatorExample{\n2. public static void main(String\
+    \ args[]){\n3. int a=10;\n4. int b=5;\n5. int min=(a<b)?a:b;\n6. System.out.println(min);\n\
+    7. }}\n```\n**Output:**\n```\n5\n```\n\n# Java Assignment Operator\n\nOne of the\
+    \ most used operators in Java is the assignment operator. It's used to assign\
+    \ the operand on the left to the value on the right.\n\n### Example\n```java\n\
+    1. public class OperatorExample{\n2. public static void main(String args[]){\n\
+    3. int a=10;\n4. int b=20;\n5. a+=4;//a=a+4 (a=10+4)\n6. b-=4;//b=b-4 (b=20-4)\n\
+    7. System.out.println(a);\n8. System.out.println(b);\n9. }}\n```\n**Output:**\n\
+    ```\n14\n16\n```\n\n### Example\n```java\n1. public class OperatorExample{\n2.\
+    \ public static void main(String[] args){\n3. int a=10;\n4. a+=3;//10+3\n5. System.out.println(a);\n\
+    6. a-=4;//13-4\n7. System.out.println(a);\n8. a*=2;//9*2\n9. System.out.println(a);\n\
+    10. a/=2;//18/2\n11. System.out.println(a);\n12. }}\n```\n**Output:**\n```\n13\n\
+    9\n18\n9\n```\n\n### Example: Adding short\n```java\n1. public class OperatorExample{\n\
+    2. public static void main(String args[]){\n3. short a=10;\n4. short b=10;\n5.\
+    \ //a+=b;//a=a+b internally so fine\n6. a=a+b;//Compile time error because 10+10=20\
+    \ now int\n7. System.out.println(a);\n8. }}\n```\n**Output:** `Compile time error`\n\
+    \n#### After type cast:\n```java\n1. public class OperatorExample{\n2. public\
+    \ static void main(String args[]){\n3. short a=10;\n4. short b=10;\n5. a=(short)(a+b);//20\
+    \ which is int converted to short\n6. System.out.println(a);\n7. }}\n```\n**Output:**\
+    \ `20`\n\n# Java Control Statements\n\nThe Java compiler runs the code from beginning\
+    \ to end. The statements in the code are executed in the order they occur. Java,\
+    \ on the other hand, includes statements for controlling the flow of code. Control\
+    \ statements are what they're called. It is one of Java's most important aspects\
+    \ as it ensures a smooth flow.\n\nThere are three sorts of control statements:\n\
+    1. **Decision Making**\n   - `if` statements\n   - `switch` statement\n2. **Loop\
+    \ statements**\n   - `do while` loop\n   - `while` loop\n   - `for` loop\n   -\
+    \ `for-each` loop\n3. **Jump statements**\n   - `break` statement\n   - `continue`\
+    \ statement\n\n## Decision-Making statements\nDecision-making statements, as the\
+    \ name implies, decide which statements to execute and when. Decision-making statements\
+    \ analyse the Boolean expression and control the flow based on the result. In\
+    \ Java, there are two sorts of decision-making statements: `if` and `switch`.\n\
+    \n### 1) If Statement\nTo assess a condition in Java, use the `if` statement.\
+    \ Depending on the circumstances, the program's control is diverted. The `if`\
+    \ statement returns a Boolean value, either true or false. There are four forms\
+    \ of `if`-statements in Java, as shown:\n1. Simple `if` statement\n2. `if-else`\
+    \ statement\n3. `if-else-if` ladder\n4. Nested `if`-statement\n\n#### 1) Simple\
+    \ if statement\nIt is the most fundamental of all Java control statements. It\
+    \ evaluates a Boolean statement and if the expression is true, allows the programme\
+    \ to begin a block of code. The `if` statement syntax is seen below:\n\n```java\n\
+    if(condition) {\n    statement; // executes when condition is true\n}\n```\nConsider\
+    \ the following java example in which the `if` statement is utilised:\n\n**Student.java**\n\
+    ```java\n1. public class Student {\n2. public static void main(String[] args)\
+    \ {\n3. int x=10;\n4. int y=12;\n5. if(x+y > 20) {\n6. System.out.println(\"x+y\
+    \ is greater than 20\");\n7. }\n8. }\n```\n**Output:** `x + y is greater than\
+    \ 20`\n\n#### 2) if-else statement\nThe `if-else` statement is an expansion of\
+    \ the `if`-statement that employs the `else` block of code. If the `if`-condition\
+    \ block is evaluated as false, the `else` block is executed.\n\nSyntax:\n```java\n\
+    if(condition) {\n    statement; // executes when condition is true\n} else {\n\
+    \    statement; // executes when condition is false\n}\n```\n**EXAMPLE**\n**Student.java**\n\
+    ```java\n1. public class Student {\n2. public static void main(String[] args)\
+    \ {\n3. int x=10;\n4. int y=12;\n5. if(x+y < 10) {\n6. System.out.println(\"x+y\
+    \ is less than 10\");\n7. } else {\n8. System.out.println(\"x+y is greater than\
+    \ 20\");\n9. }\n10. }\n11. }\n```\n**Output:** `x + y is greater than 20`\n\n\
+    #### 3) if-else-if ladder\nThe `if-else-if` statement is made up of an `if` statement\
+    \ and several `else-if` statements. In other words, a decision tree is created\
+    \ by a sequence of `if-else` statements in which the computer can enter the block\
+    \ of code where the condition is true. At the end of the chain, we may also define\
+    \ an `else` statement.\n\nThe `if-else-if` statement's syntax is shown below:\n\
+    ```java\nif(condition 1) {\n    statement; // executes when condition 1 is true\n\
+    } else if(condition 2) {\n    statement; // executes when condition 2 is true\n\
+    } else {\n    statement; // executes when all conditions are false\n}\n```\n**EXAMPLE**\n\
+    **Student.java**\n```java\n1. public class Student {\n2. public static void main(String[]\
+    \ args) {\n3. String city=\"Delhi\";\n4. if(city == \"Meerut\") {\n    System.out.println(\"\
+    city is meerut\");\n} else if(city == \"Noida\") {\n    System.out.println(\"\
+    city is noida\");\n} else if(city == \"Agra\") {\n    System.out.println(\"city\
+    \ is agra\");\n} else {\n    System.out.println(city);\n}\n5. }\n6. }\n```\n**Output:**\
+    \ `Delhi`\n\n#### 4) Nested if-statement\nThe `if` statement can contain an `if`\
+    \ or `if-else` statement inside another `if` or `else-if` statement. The following\
+    \ is the syntax of a nested if-statement:\n```java\nif(condition 1) {\n    statement;\
+    \ // executes when condition 1 is true\n    if(condition 2) {\n        statement;\
+    \ // executes when condition 2 is true\n    } else {\n        statement; // executes\
+    \ when condition 2 is false\n    }\n}\n```\n**EXAMPLE**\n**Student.java**\n```java\n\
+    1. public class Student {\n2. public static void main(String[] args) {\n3. String\
+    \ address=\"Delhi, India\";\n4. if(address.endsWith(\"India\")) {\n    if(address.contains(\"\
+    Meerut\")) {\n```\n"
+  raw: "7.  System.out.println(a);//10 because second condition is not checked  \n\
+    \n8.  System.out.println(a<b&a++<c);//false && true = false  \n\n9.  System.out.println(a);//11 because second condition is checked  \n\
+    \n10.  }}  \n\nOutput:\n\nfalse\n\n10\n\nfalse\n\n11\n\n### Java OR Operator\n\
+    \n### Example:\n\n### Logical || and Bitwise |\n\nIf the first condition is true,\
+    \ the logical || operator does not examine the second condition. Only if the first\
+    \ condition is false is the second condition checked.\n\nWhether the first condition\
+    \ is true or false, the bitwise | operator always verifies both criteria.\n\n\
+    1.  public class OperatorExample{  \n\n2.  public static void main(String args[]){  \n\
+    \n3.  int a=10;  \n\n4.  int b=5;  \n\n5.  int c=20;  \n\n6.  System.out.println(a>b||a<c);//true || true = true  \n\
+    \n7.  System.out.println(a>b|a<c);//true | true = true  \n\n8.  //|| vs |  \n\n\
+    9.  System.out.println(a>b||a++<c);//true || true = true  \n\n10.  System.out.println(a);//10 because second condition is not checked  \n\
+    \n11.  System.out.println(a>b|a++<c);//true | true = true  \n\n12.  System.out.println(a);//11 because second condition is checked  \n\
+    \n13.  }}  \n\nOutput:\n\ntrue\n\ntrue\n\ntrue\n\n10\n\ntrue\n\n11\n\n### Java\
+    \ Ternary Operator\n\nIn Java programming, the Ternary operator is a one-line\
+    \ substitute for the if-then-else expression. It's the only conditional operator\
+    \ that accepts three inputs.\n\n### Java Ternary Operator\n\n### Example\n\n1.\
+    \  public class OperatorExample{  \n\n2.  public static void main(String args[]){  \n\
+    \n3.  int a=2;  \n\n4.  int b=5;  \n\n5.  int min=(a<b)?a:b;  \n\n6.  System.out.println(min);  \n\
+    \n7.  }}  \n\nOutput:\n\n2\n\nAnother Example:\n\n1.  public class OperatorExample{  \n\
+    \n2.  public static void main(String args[]){  \n\n3.  int a=10;  \n\n4.  int b=5;  \n\
+    \n5.  int min=(a<b)?a:b;  \n\n6.  System.out.println(min);  \n\n7.  }}  \n\nOutput:\n\
+    \n5\n\n### Java Assignment Operator\n\nOne of the most used operators in Java\
+    \ is the assignment operator. It's used to assign the operand on the left to the\
+    \ value on the right.\n\n### Java Assignment Operator\n\n### Example\n\n1.  public class OperatorExample{  \n\
+    \n2.  public static void main(String args[]){  \n\n3.  int a=10;  \n\n4.  int b=20;  \n\
+    \n5.  a+=4;//a=a+4 (a=10+4)  \n\n6.  b-=4;//b=b-4 (b=20-4)  \n\n7.  System.out.println(a);  \n\
+    \n8.  System.out.println(b);  \n\n9.  }}  \n\nOutput:\n\n14\n\n16\n\n### Java\
+    \ Assignment Operator\n\n### Example\n\n1.  public class OperatorExample{  \n\n\
+    2.  public static void main(String[] args){  \n\n3.  int a=10;  \n\n4.  a+=3;//10+3  \n\
+    \n5.  System.out.println(a);  \n\n6.  a-=4;//13-4  \n\n7.  System.out.println(a);  \n\
+    \n8.  a*=2;//9*2  \n\n9.  System.out.println(a);  \n\n10.  a/=2;//18/2  \n\n11.\
+    \  System.out.println(a);  \n\n12.  }}  \n\nOutput:\n\n13\n\n9\n\n18\n\n9\n\n\
+    ### Java Assignment Operator\n\n### Example: Adding short\n\n1.  public class OperatorExample{  \n\
+    \n2.  public static void main(String args[]){  \n\n3.  short a=10;  \n\n4.  short b=10;  \n\
+    \n5.  //a+=b;//a=a+b internally so fine  \n\n6.  a=a+b;//Compile time error because 10+10=20 now int  \n\
+    \n7.  System.out.println(a);  \n\n8.  }}  \n\nOutput:\n\nCompile time error\n\n\
+    After type cast:\n\n1.  public class OperatorExample{  \n\n2.  public static void main(String args[]){  \n\
+    \n3.  short a=10;  \n\n4.  short b=10;  \n\n5.  a=(short)(a+b);//20 which is int now converted to short  \n\
+    \n6.  System.out.println(a);  \n\n7.  }}  \n\nOutput:\n\n20\n\n# Java Control\
+    \ Statements \n\nThe Java compiler runs the code from beginning to end. The statements\
+    \ in the code are executed in the order that they occur in the code. Java, on\
+    \ the other hand, includes statements for controlling the flow of Java code. Control\
+    \ flow statements are what they're called. It is one of Java's most important\
+    \ aspects, as it ensures a smooth programme flow.\n\nThere are three different\
+    \ sorts of control flow statements in Java.\n\n1.  Decision Making statements\n\
+    \n    *   if statements\n\n    *   switch statement\n\n2.  Loop statements\n\n\
+    \    *   do while loop\n\n    *   while loop\n\n    *   for loop\n\n    *   for-each\
+    \ loop\n\n3.  Jump statements\n\n    *   break statement\n\n    *   continue statement\n\
+    \n### Decision-Making statements:\n\nDecision-making statements, as the name implies,\
+    \ decide which statements to execute and when. Decision-making statements analyse\
+    \ the Boolean expression and control the programme flow based on the condition's\
+    \ result. In Java, there are two sorts of decision-making statements: If and switch\
+    \ statements.\n\n### 1) If Statement:\n\nTo assess a condition in Java, use the\
+    \ \"if\" statement. Depending on the circumstances, the program's control is diverted.\
+    \ The If statement's condition returns a Boolean value, either true or false.\
+    \ There are four forms of if-statements in Java, as shown below.\n\n1.  Simple\
+    \ if statement\n\n2.  if-else statement\n\n3.  if-else-if ladder\n\n4.  Nested\
+    \ if-statement\n\n### 1) Simple if statement:\n\nIt is the most fundamental of\
+    \ all Java control flow statements. It evaluates a Boolean statement and, if the\
+    \ expression is true, allows the programme to begin a block of code.\n\nThe if\
+    \ statement's syntax is seen below.\n\n1.  if(condition) {    \n\n2.  statement 1; //executes when condition is true   \n\
+    \n3.  }   \n\nConsider the following java code example, in which the if statement\
+    \ is utilised.\n\nStudent.java\n\nStudent.java\n\n1.  public class Student {    \n\
+    \n2.  public static void main(String[] args) {    \n\n3.  int x = 10;    \n\n\
+    4.  int y = 12;    \n\n5.  if(x+y > 20) {    \n\n6.  System.out.println(\"x + y is greater than 20\"\
+    );    \n\n7.  }    \n\n8.  }      \n\n9.  }     \n\nOutput:\n\nx + y is greater\
+    \ than 20\n\n### 2) if-else statement\n\nThe if-else statement is an expansion\
+    \ of the if-statement that employs the else block of code. If the if-condition\
+    \ block's is evaluated as false, the else block is executed.\n\nSyntax:\n\n1.\
+    \  if(condition) {    \n\n2.  statement 1; //executes when condition is true   \n\
+    \n3.  }  \n\n4.  else{  \n\n5.  statement 2; //executes when condition is false   \n\
+    \n6.  }  \n\nEXAMPLE\n\nStudent.java\n\n1.  public class Student {  \n\n2.  public static void main(String[] args) {  \n\
+    \n3.  int x = 10;  \n\n4.  int y = 12;  \n\n5.  if(x+y < 10) {  \n\n6.  System.out.println(\"\
+    x + y is less than      10\");  \n\n7.  }   else {  \n\n8.  System.out.println(\"\
+    x + y is greater than 20\");  \n\n9.  }  \n\n10.  }  \n\n11.  }  \n\nOutput:\n\
+    \nx + y is greater than 20\n\n### 3) if-else-if ladder:\n\nThe if-else-if statement\
+    \ is made up of an if statement and several else-if statements. In other words,\
+    \ a decision tree is created by a sequence of if-else statements in which the\
+    \ computer can enter the block of code where the condition is true. At the end\
+    \ of the chain, we may also define an else statement.\n\nThe if-else-if statement's\
+    \ syntax is shown below.\n\n1.  if(condition 1) {    \n\n2.  statement 1; //executes when condition 1 is true   \n\
+    \n3.  }  \n\n4.  else if(condition 2) {  \n\n5.  statement 2; //executes when condition 2 is true   \n\
+    \n6.  }  \n\n7.  else {  \n\n8.  statement 2; //executes when all the conditions are false   \n\
+    \n9.  }  \n\nEXAMPLE\n\nStudent.java\n\n1.  public class Student {  \n\n2.  public static void main(String[] args) {  \n\
+    \n3.  String city = \"Delhi\";  \n\n4.  if(city == \"Meerut\") {  \n\n5.  System.out.println(\"\
+    city is meerut\");  \n\n6.  }else if (city == \"Noida\") {  \n\n7.  System.out.println(\"\
+    city is noida\");  \n\n8.  }else if(city == \"Agra\") {  \n\n9.  System.out.println(\"\
+    city is agra\");  \n\n10.  }else {  \n\n11.  System.out.println(city);  \n\n12.\
+    \  }  \n\n13.  }  \n\n14.  }  \n\nOutput:\n\nDelhi\n\n### 4\\. Nested if-statement\n\
+    \nThe if statement can contain an if or if-else statement inside another if or\
+    \ else-if statement in nested if-statements.\n\nThe following is the syntax of\
+    \ a nested if-statement.\n\n1.  if(condition 1) {    \n\n2.  statement 1; //executes when condition 1 is true   \n\
+    \n3.  if(condition 2) {  \n\n4.  statement 2; //executes when condition 2 is true   \n\
+    \n5.  }  \n\n6.  else{  \n\n7.  statement 2; //executes when condition 2 is false   \n\
+    \n8.  }  \n\n9.  }  \n\nEXAMPLE\n\nStudent.java\n\n1.  public class Student {    \n\
+    \n2.  public static void main(String[] args) {    \n\n3.  String address = \"\
+    Delhi, India\";    \n\n5.  if(address.endsWith(\"India\")) {    \n\n6.  if(address.contains(\"\
+    Meerut\")) {    "
+  toc: []
+  trans: "\n\n# Java 或逻辑运算符\n\n### 示例\n```java\n7. System.out.println(a);//10 because\
+    \ second condition is not checked\n8. System.out.println(a<b&a++<c);//false &&\
+    \ true = false\n9. System.out.println(a);//11 because second condition is checked\n\
+    10. }}\n```\n**输出:**\n```\nfalse\n10\nfalse\n11\n```\n\n### 逻辑 || 与按位 | |\n\n\
+    如果第一个条件为真，逻辑运算符 `||` 将不会检查第二个条件。只有当第一个条件为假时，才会检查第二个条件。\n\n无论第一个条件是真是假，按位运算符 `|`\
+    \ 总是会验证两个判断标准。\n\n### 示例\n```java\n1. public class OperatorExample{\n2. public\
+    \ static void main(String args[]){\n3. int a=10;\n4. int b=5;\n5. int c=20;\n\
+    6. System.out.println(a>b||a<c);//true || true = true\n7. System.out.println(a>b|a<c);//true\
+    \ | true = true\n8. //|| vs |\n9. System.out.println(a>b||a++<c);//true || true\
+    \ = true\n10. System.out.println(a);//10 because second condition is not checked\n\
+    11. System.out.println(a>b|a++<c);//true | true = true\n12. System.out.println(a);//11\
+    \ because second condition is checked\n13. }}\n```\n**输出:**\n```\ntrue\ntrue\n\
+    true\n10\ntrue\n11\n```\n\n# Java 三元运算符\n\n在 Java 编程中，三元运算符是 `if-then-else` 表达式的单行替代方案。它是唯一接受三个输入的条件运算符。\n\
+    \n### 示例\n```java\n1. public class OperatorExample{\n2. public static void main(String\
+    \ args[]){\n3. int a=2;\n4. int b=5;\n5. int min=(a<b)?a:b;\n6. System.out.println(min);\n\
+    7. }}\n```\n**输出:**\n```\n2\n```\n\n#### 另一个示例：\n```java\n1. public class OperatorExample{\n\
+    2. public static void main(String args[]){\n3. int a=10;\n4. int b=5;\n5. int\
+    \ min=(a<b)?a:b;\n6. System.out.println(min);\n7. }}\n```\n**输出:**\n```\n5\n```\n\
+    \n# Java 赋值运算符\n\nJava 中最常用的运算符之一是赋值运算符。它用于将左侧的操作数赋值为右侧的值。\n\n### 示例\n```java\n\
+    1. public class OperatorExample{\n2. public static void main(String args[]){\n\
+    3. int a=10;\n4. int b=20;\n5. a+=4;//a=a+4 (a=10+4)\n6. b-=4;//b=b-4 (b=20-4)\n\
+    7. System.out.println(a);\n8. System.out.println(b);\n9. }}\n```\n**输出:**\n```\n\
+    14\n16\n```\n\n### 示例\n```java\n1. public class OperatorExample{\n2. public static\
+    \ void main(String[] args){\n3. int a=10;\n4. a+=3;//10+3\n5. System.out.println(a);\n\
+    6. a-=4;//13-4\n7. System.out.println(a);\n8. a*=2;//9*2\n9. System.out.println(a);\n\
+    10. a/=2;//18/2\n11. System.out.println(a);\n12. }}\n```\n**输出:**\n```\n13\n9\n\
+    18\n9\n```\n\n### 示例：累加 short 类型\n```java\n1. public class OperatorExample{\n\
+    2. public static void main(String args[]){\n3. short a=10;\n4. short b=10;\n5.\
+    \ //a+=b;//a=a+b internally so fine\n6. a=a+b;//Compile time error because 10+10=20\
+    \ now int\n7. System.out.println(a);\n8. }}\n```\n**输出:** `Compile time error`\n\
+    \n#### 类型转换：\n```java\n1. public class OperatorExample{\n2. public static void\
+    \ main(String args[]){\n3. short a=10;\n4. short b=10;\n5. a=(short)(a+b);//20\
+    \ is converted to short\n6. System.out.println(a);\n7. }}\n```\n**输出:** `20`\n\
+    \n# Java 控制语句\n\nJava 编译器从头到尾运行代码。语句按照出现的顺序执行。另一方面，控制语句用于控制代码流。它是 Java 最重要的部分之一，因为它确保了流的顺畅。\n\
+    \n控制语句有三种：\n1. **决策语句**\n   - `if` 语句\n   - `switch` 语句\n2. **循环语句**\n   - `do\
+    \ while` 循环\n   - `while` 循环\n   - `for` 循环\n   - `for-each` 循环\n3. **跳转语句**\n\
+    \   - `break` 语句\n   - `continue` 语句\n\n## 决策语句\n正如名称所示，决策语句决定执行哪些语句。决策语句分析布尔表达式并根据结果控制流。在\
+    \ Java 中，有两种决策语句：`if` 和 `switch`。\n\n### 1) if 语句\n它是所有 Java 控制语句中最基础的。如果 `if`\
+    \ 表达式为真，允许程序开始代码块。`if` 语句有四种形式：\n1. 简单 `if` 语句\n2. `if-else` 语句\n3. `if-else-if`\
+    \ 链\n4. 嵌套 `if` 语句\n\n#### 1) 简单 if 语句\n`if` 语句的语法如下：\n```java\nif(condition)\
+    \ {\n    statement; // 当 condition 为真时执行\n}\n```\n考虑以下使用 `if` 语句的 Java 示例：\n\n\
+    **Student.java**\n```java\n1. public class Student {\n2. public static void main(String[]\
+    \ args) {\n3. int x=10;\n4. int y=12;\n5. if(x+y > 20) {\n6. System.out.println(\"\
+    x+y is greater than 20\");\n7. }\n8. }\n```\n**输出:** `x + y is greater than 20`\n\
+    \n#### 2) if-else 语句\n`if-else` 语句是 `if` 语句的扩展。如果 `if` 条件块被评估为假，则执行 `else` 块。\n\
+    \n语法：\n```java\nif(condition) {\n    statement; // 当 condition 为真时执行\n} else {\n\
+    \    statement; // 当 condition 为假时执行\n}\n```\n**示例**\n**Student.java**\n```java\n\
+    1. public class Student {\n2. public static void main(String[] args) {\n3. int\
+    \ x=10;\n4. int y=12;\n5. if(x+y < 10) {\n6. System.out.println(\"x+y is less\
+    \ than 10\");\n7. } else {\n8. System.out.println(\"x+y is greater than 20\");\n\
+    9. }\n10. }\n11. }\n```\n**输出:** `x + y is greater than 20`\n\n#### 3) if-else-if\
+    \ 链\n`if-else-if` 语句由一个 `if` 语句和多个 `else-if` 语句组成。换句话说，通过一系列 `if-else` 语句创建决策树，计算机可以进入条件为真的代码块。在链的末尾，我们也可以定义一个\
+    \ `else` 语句。\n\n`if-else-if` 语句的语法如下：\n```java\nif(condition 1) {\n    statement;\
+    \ // 当 condition 1 为真时执行\n} else if(condition 2) {\n    statement; // 当 condition\
+    \ 2 为真时执行\n} else {\n    statement; // 当所有条件为假时执行\n}\n```\n**示例**\n**Student.java**\n\
+    ```java\n1. public class Student {\n2. public static void main(String[] args)\
+    \ {\n3. String city=\"Delhi\";\n4. if(city == \"Meerut\") {\n    System.out.println(\"\
+    city is meerut\");\n} else if(city == \"Noida\") {\n    System.out.println(\"\
+    city is noida\");\n} else if(city == \"Agra\") {\n    System.out.println(\"city\
+    \ is agra\");\n} else {\n    System.out.println(city);\n}\n5. }\n6. }\n```\n**输出:**\
+    \ `Delhi`\n\n#### 4) 嵌套 if 语句\n`if` 语句可以在另一个 `if` 或 `else-if` 语句内部包含 `if` 或 `if-else`\
+    \ 语句。以下是嵌套 `if` 语句的语法：\n```java\nif(condition 1) {\n    statement; // 当 condition\
+    \ 1 为真时执行\n    if(condition 2) {\n        statement; // 当 condition 2 为真时执行\n\
+    \    } else {\n        statement; // 当 condition 2 为假时执行\n    }\n}\n```\n**示例**\n\
+    **Student.java**\n```java\n1. public class Student {\n2. public static void main(String[]\
+    \ args) {\n3. String address=\"Delhi, India\";\n4. if(address.endsWith(\"India\"\
+    )) {\n    if(address.contains(\"Meerut\")) {\n```\n\n"
+- fmt: "\n```java\n7. System.out.println(\"Your city is Meerut\");\n8 }else if(address.contains(\"\
+    Noida\")) {\n9. System.out.println(\"Your city is Noida\");\n10 }else {\n11. System.out.println(address.split(\"\
+    ,\")[0]);\n12 }\n13 }else {\n14 System.out.println(\"You are not living in India\"\
+    );\n15 }\n16 }\n17 }\n```\nOutput:\nDelhi\n\n### Switch Statement\n\nSwitch statements\
+    \ in Java are comparable to if-else-else` statements. A single case is run based\
+    \ on the variable that is being switched in the `switch` statement, which comprises\
+    \ various blocks of code called cases. Instead of using `if-else-if` statements,\
+    \ you can use the `switch` statement. It also improves the program's readability.\n\
+    \nSyntax:\n```java\nswitch (expression){\ncase value1:\n    statement1;\n    break;\n\
+    ...\ncase valueN:\n    statementN;\n    break;\ndefault:\n    default statement;\n\
+    }\n```\n\n#### EXAMPLE\n\n`Student.java`\n```java\npublic class Student implements\
+    \ Cloneable {\n    public static void main(String[] args) {\n        int num =\
+    \ 2;\n        switch (num){\n        case 0:\n            System.out.println(\"\
+    number is 0\");\n            break;\n        case 1:\n            System.out.println(\"\
+    number is 1\");\n            break;\n        default:\n            System.out.println(num);\n\
+    \        }\n    }\n}\n```\nOutput:\n2\n\nWe must remember that the case expression\
+    \ will be of the same type as the variable when employing `switch` statements.\
+    \ It will, however, be a constant value. Only `int`, `string`, and `Enum` type\
+    \ variables are allowed to be used with this `switch`.\n\n# Loops in Java\n\n\
+    The Java `for` loop is used to repeatedly iterate a section of the programme.\
+    \ If the number of iterations is fixed, the `for` loop is suggested.\n\nIn Java,\
+    \ there are three different forms of `for` loops:\n\n* Simple `for` Loop\n* [For-each](https://www.javatpoint.com/for-each-loop)\
+    \ or Enhanced `for` Loop\n* Labeled `for` Loop\n\n## Simple for Loop\n\nIn C/C++,\
+    \ a simple `for` loop is the same. We can set the variable's value, check the\
+    \ condition, and increment or decrease the value. Syntax:\n\n```java\nfor(initialization;\
+    \ condition; increment/decrement){\n    //statement or code to be executed\n}\n\
+    ```\n![](Images/image00130.jpeg)\n\n#### Example:\n\n`ForExample.java`\n```java\n\
+    //Java Program to demonstrate the example of for loop\n//which prints table of\
+    \ 1\npublic class ForExample {\n    public static void main(String[] args) {\n\
+    \        //Code of Java for loop\n        for(int i=1;i<=10;i++){\n          \
+    \  System.out.println(i);\n        }\n    }\n}\n```\nOutput:\n1\n2\n3\n4\n5\n\
+    6\n7\n8\n9\n10\n\n## Nested for Loop\n\nThe term \"nested for loop\" refers to\
+    \ a `for` loop that is contained within another loop. When the outer loop executes,\
+    \ the inner loop completes.\n\nExample:\n```java\npublic class NestedForExample\
+    \ {\n    public static void main(String[] args) {\n        //loop of i\n     \
+    \   for(int i=1;i<=3;i++){\n            //loop of j\n            for(int j=1;j<=3;j++){\n\
+    \                System.out.println(i+\" \"+j);\n            }//end of i\n   \
+    \     }}//end of j\n    }\n}\n```\nOutput:\n1 1\n1 2\n1 3\n2 1\n2 2\n2 3\n3 1\n\
+    3 2\n3 3\n\n#### Pyramid Example 1:\n\n`PyramidExample.java`\n```java\npublic\
+    \ class PyramidExample {\n    public static void main(String[] args) {\n     \
+    \   for(int i=1;i<=5;i++){\n            for(int j=1;j<=i;j++){\n             \
+    \   System.out.print(\"*\");\n            }\n            System.out.println();//new\
+    \ line\n        }\n    }\n}\n```\nOutput:\n*\n**\n***\n****\n*****\n\n## For-each\
+    \ Loop\n\nIn Java, the `for-each` loop is used to iterate over an array or collection.\
+    \ Because we don't have to increment the value or use subscript, it's easier to\
+    \ use than a standard `for` loop. It is based on elements rather than the index.\
+    \ It returns each element one by one.\n\nSyntax:\n```java\nfor(data_type variable\
+    \ : array_name){\n    //code to be executed\n}\n```\n\n#### Example:\n\n`ForEachExample.java`\n\
+    ```java\n//Java For-each loop which prints the elements of the array\npublic class\
+    \ ForEachExample {\n    public static void main(String[] args) {\n        //Declaring\
+    \ an array\n        int arr[]={12,23,44,56};\n        //Printing array using for-each\
+    \ loop\n        for(int i:arr){\n            System.out.println(i);\n        }\n\
+    \    }\n}\n```\nOutput:\n12\n23\n44\n56\n\n## Labeled For Loop in Java\n\nEach\
+    \ Java `for` loop can be given a name. We do this by placing label before the\
+    \ `for` loop. It comes in handy when utilizing nested `for` loop because it allows\
+    \ us to break/continue individual `for` loops.\n\nSyntax:\n```java\nlabelname:\n\
+    for(initialization; condition; increment/decrement){\n    //code to be executed\n\
+    }\n```\n\n#### Example:\n\n`LabeledForExample.java`\n```java\n//A Java program\
+    \ to demonstrate the use of labeled for loop\npublic class LabeledForExample {\n\
+    \    public static void main(String[] args) {\n        //Using Label for outer\
+    \ and for loop\n        aa:\n        for(int i=1;i<=3;i++){\n            bb:\n\
+    \            for(int j=1;j<=3;j++){\n                if(i==2&&j==2){\n       \
+    \             break aa;\n                }\n                System.out.println(i+\"\
+    \ \"+j);\n            }\n        }\n    }\n}\n```\nOutput:\n1 1\n1 2\n1 3\n\n\
+    If you use `break bb;`, it will only break the inner loop, which is how any loop\
+    \ works by default.\n\n`LabeledForExample2.java`\n```java\npublic class LabeledForExample2\
+    \ {\n    public static void main(String[] args) {\n        aa:\n        for(int\
+    \ i=1;i<=3;i++){\n            bb:\n            for(int j=1;j<=3;j++){\n      \
+    \          if(i==2&&j==2){\n                    break bb;\n                }\n\
+    \                System.out.println(i+\" \"+j);\n            }\n        }\n  \
+    \  }\n}\n```\nOutput:\n1 1\n1 2\n1 3\n2 1\n3 1\n3 2\n3 3\n\n## Infinitive for\
+    \ Loop\n\nIt will be an infinitive `for` loop if you use two semicolons `;;` in\
+    \ the `for` loop.\n\nSyntax:\n```java\nfor(;;){\n    //code to be executed\n}\n\
+    ```\n\n#### Example:\n\n`ForExample.java`\n```java\n//Java program to demonstrate\
+    \ the use of infinite for loop\n//which prints a statement\npublic class ForExample\
+    \ {\n    public static void main(String[] args) {\n        //Using no condition\
+    \ in for loop\n        for(;;){\n            System.out.println(\"infinitive loop\"\
+    );\n        }\n    }\n}\n```\nOutput:\ninfinitive loop\ninfinitive loop\ninfinitive\
+    \ loop\ninfinitive loop\ninfinitive loop\nYou must now exit the program by pressing\
+    \ `ctrl+c`.\n\n![](Images/image00131.jpeg)\n![](Images/image00132.jpeg)\n![](Images/image00133.jpeg)\n\
+    \n# Java While Loop\n\nThe `while` loop is used to execute a section of code until\
+    \ the provided Boolean condition is true. The loop comes to an end as soon as\
+    \ the Boolean condition is false.\n\nThe `while` loop is a type of if statement\
+    \ that repeats itself. The `while` loop is recommended if the number of iterations\
+    \ is not fixed.\n\nSyntax:\n```java\nwhile (condition){\n    //code to be executed\n\
+    \    increment/decrement statement\n}\n```\n\n### Do-while Loop (Note: The provided\
+    \ text cut off here, but following structure based on available context)\n\nThe\
+    \ many components of a `do-while` loop are as follows:\n\n1. A condition is an\
+    \ expression that is put to the test. The loop body is run if the condition is\
+    \ true, and control is passed to the update expression. We exit the while loop\
+    \ when the condition turns false.\n\nExample:\n`i <=100`\n\n2. Update expression:\
+    \ This expression increments or decrements the loop variable every time the loop\
+    \ body is run.\n\nExample:\n`i++`\n\nFlowchart - Java While Loop\n\nThe crucial\
+    \ thing to remember about the while loop is that it may or may not run. The loop\
+    \ body is skipped if the condition to be tested is false, and the first statement\
+    \ after the `while` loop is executed.\n\n![](Images/image00134.jpeg)\n\n#### EXAMPLE\n\
+    \nWe output integer numbers from 1 to 10 in the example below. Unlike the `for`\
+    \ loop, the condition variable must be initialised and incremented (here, `i`).\
+    \ If not, the loop will run indefinitely.\n\n`WhileExample.java`\n```java\npublic\
+    \ class WhileExample {\n    public static void main(String[] args) {\n       \
+    \ int i=1;\n        while(i<=10){\n            System.out.println(i);\n      \
+    \      i++;\n        }\n    }\n}\n```\nOutput:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\
+    \n## Infinitive While Loop\n\nIt will be an infinitive `while` loop if you pass\
+    \ `true` to the `while` loop.\n"
+  raw: '7.  System.out.println("Your city is Meerut");    
+
+
+    8.  }else if(address.contains("Noida")) {    
+
+
+    9.  System.out.println("Your city is Noida");    
+
+
+    10.  }else {    
+
+
+    11.  System.out.println(address.split(",")[0]);    
+
+
+    12.  }    
+
+
+    13.  }else {    
+
+
+    14.  System.out.println("You are not living in India");    
+
+
+    15.  }    
+
+
+    16.  }    
+
+
+    17.  }    
+
+
+    Output:
+
+
+    Delhi
+
+
+    ### Switch Statement:
+
+
+    Switch statements in Java are comparable to if-else-else statements. A single
+    case is run based on the variable that is being switched in the switch statement,
+    which comprises various blocks of code called cases. Instead of using if-else-if
+    statements, you can use the switch statement. It also improves the program''s
+    readability.
+
+
+    1.  switch (expression){  
+
+
+    2.  case value1:  
+
+
+    3.  statement1;  
+
+
+    4.  break;  
+
+
+    5.  .  
+
+
+    6.  .  
+
+
+    7.  .  
+
+
+    8.  case valueN:  
+
+
+    9.  statementN;  
+
+
+    10.  break;  
+
+
+    11.  default:  
+
+
+    12.  default statement;  
+
+
+    13.  }  
+
+
+    EXAMPLE
+
+
+    Student.java
+
+
+    1.  public class Student implements Cloneable {  
+
+
+    2.  public static void main(String[] args) {  
+
+
+    3.  int num = 2;  
+
+
+    4.  switch (num){  
+
+
+    5.  case 0:  
+
+
+    6.  System.out.println("number is 0");  
+
+
+    7.  break;  
+
+
+    8.  case 1:  
+
+
+    9.  System.out.println("number is 1");  
+
+
+    10.  break;  
+
+
+    11.  default:  
+
+
+    12.  System.out.println(num);  
+
+
+    13.  }  
+
+
+    14.  }  
+
+
+    15.  }  
+
+
+    Output:
+
+
+    2
+
+
+    We must remember that the case expression will be of the same type as the variable
+    when employing switch statements. It will, however, be a constant value. Only
+    int, string, and Enum type variables are allowed to be used with this switch.
+
+
+    # Loops in Java
+
+
+    The Java for loop is used to repeatedly iterate a section of the programme. If
+    the number of iterations is fixed, the for loop is suggested.
+
+
+    In Java, there are three different forms of for loops.
+
+
+    *   Simple for Loop
+
+
+    *   [For-each](https://www.javatpoint.com/for-each-loop) or Enhanced for Loop
+
+
+    *   Labeled for Loop
+
+
+    ## Simple for Loop
+
+
+    In C/C++, a simple for loop is the same. We can set the variable''s value, check
+    the condition, and increment or decrease the value.  Syntax:
+
+
+    1.  for(initialization; condition; increment/decrement){    
+
+
+    2.  //statement or code to be executed    
+
+
+    3.  } 
+
+
+    ![](Images/image00130.jpeg)
+
+
+    Example:
+
+
+    ForExample.java
+
+
+    1.  //Java Program to demonstrate the example of for loop  
+
+
+    2.  //which prints table of 1  
+
+
+    3.  public class ForExample {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  //Code of Java for loop  
+
+
+    6.  for(int i=1;i<=10;i++){  
+
+
+    7.  System.out.println(i);  
+
+
+    8.  }  
+
+
+    9.  }  
+
+
+    10.  }  
+
+
+    11.  Output:
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    5
+
+
+    6
+
+
+    7
+
+
+    8
+
+
+    9
+
+
+    10
+
+
+    ## Nested for Loop
+
+
+    The term "nested for loop" refers to a for loop that is contained within another
+    loop. When the outer loop executes, the inner loop completes.
+
+
+    Example:
+
+
+    1.  public class NestedForExample {  
+
+
+    2.  public static void main(String[] args) {  
+
+
+    3.  //loop of i  
+
+
+    4.  for(int i=1;i<=3;i++){  
+
+
+    5.  //loop of j  
+
+
+    6.  for(int j=1;j<=3;j++){  
+
+
+    7.  System.out.println(i+" "+j);  
+
+
+    8.  }//end of i  
+
+
+    9.  }//end of j  
+
+
+    10.  }  
+
+
+    11.  }  
+
+
+    Output:
+
+
+    1 1
+
+
+    1 2
+
+
+    1 3
+
+
+    2 1
+
+
+    2 2
+
+
+    2 3
+
+
+    3 1
+
+
+    3 2
+
+
+    3 3
+
+
+    Pyramid Example 1:
+
+
+    PyramidExample.java
+
+
+    1.  public class PyramidExample {  
+
+
+    2.  public static void main(String[] args) {  
+
+
+    3.  for(int i=1;i<=5;i++){  
+
+
+    4.  for(int j=1;j<=i;j++){  
+
+
+    5.  System.out.print("* ");  
+
+
+    6.  }  
+
+
+    7.  System.out.println();//new line  
+
+
+    8.  }  
+
+
+    9.  }  
+
+
+    10.  }  
+
+
+    Output:
+
+
+    *
+
+
+    * *
+
+
+    * * *
+
+
+    * * * *
+
+
+    * * * * *
+
+
+    ## For-each Loop
+
+
+    In Java, the for-each loop is used to iterate over an array or collection. Because
+    we don''t have to increment the value or use subscript notation, it''s easier
+    to use than a standard for loop.
+
+
+    It is based on elements rather than the index. It returns each element in the
+    defined variable one by one.
+
+
+    Syntax:
+
+
+    1.  for(data_type variable : array_name){    
+
+
+    2.  //code to be executed    
+
+
+    3.  }    
+
+
+    Example:
+
+
+    ForEachExample.java
+
+
+    1.  //Java For-each loop example which prints the  
+
+
+    2.  //elements of the array  
+
+
+    3.  public class ForEachExample {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  //Declaring an array  
+
+
+    6.  int arr[]={12,23,44,56,78};  
+
+
+    7.  //Printing array using for-each loop  
+
+
+    8.  for(int i:arr){  
+
+
+    9.  System.out.println(i);  
+
+
+    10.  }  
+
+
+    11.  }  
+
+
+    12.  }  
+
+
+    Output:
+
+
+    12
+
+
+    23
+
+
+    44
+
+
+    56
+
+
+    78
+
+
+    ## Labeled For Loop in Java
+
+
+    Each Java for loop can be given a name. We do this by placing label before the
+    for loop. It comes in handy when utilising the nested for loop because it allows
+    us to break/continue individual for loops.
+
+
+    Syntax:
+
+
+    1.  labelname:    
+
+
+    2.  for(initialization; condition; increment/decrement){    
+
+
+    3.  //code to be executed    
+
+
+    4.  }    
+
+
+    Example:
+
+
+    LabeledForExample.java
+
+
+    1.  //A Java program to demonstrate the use of labeled for loop  
+
+
+    2.  public class LabeledForExample {  
+
+
+    3.  public static void main(String[] args) {  
+
+
+    4.  //Using Label for outer and for loop  
+
+
+    5.  aa:  
+
+
+    6.  for(int i=1;i<=3;i++){  
+
+
+    7.  bb:  
+
+
+    8.  for(int j=1;j<=3;j++){  
+
+
+    9.  if(i==2&&j==2){  
+
+
+    10.  break aa;  
+
+
+    11.  }  
+
+
+    12.  System.out.println(i+" "+j);  
+
+
+    13.  }  
+
+
+    14.  }  
+
+
+    15.  }  
+
+
+    16.  }  
+
+
+    Output:
+
+
+    1 1
+
+
+    1 2
+
+
+    1 3
+
+
+    2 1
+
+
+    If you use break bb;, it will only break the inner loop, which is how any loop
+    works by default.
+
+
+    LabeledForExample2.java
+
+
+    1.  public class LabeledForExample2 {  
+
+
+    2.  public static void main(String[] args) {  
+
+
+    3.  aa:  
+
+
+    4.  for(int i=1;i<=3;i++){  
+
+
+    5.  bb:  
+
+
+    6.  for(int j=1;j<=3;j++){  
+
+
+    7.  if(i==2&&j==2){  
+
+
+    8.  break bb;  
+
+
+    9.  }  
+
+
+    10.  System.out.println(i+" "+j);  
+
+
+    11.  }  
+
+
+    12.  }  
+
+
+    13.  }  
+
+
+    14.  }  
+
+
+    Output:
+
+
+    1 1
+
+
+    1 2
+
+
+    1 3
+
+
+    2 1
+
+
+    3 1
+
+
+    3 2
+
+
+    3 3
+
+
+    ## Infinitive for Loop
+
+
+    It will be an infinitive for loop if you use two semicolons ;; in the for loop.
+
+
+    Syntax:
+
+
+    1.  for(;;){  
+
+
+    2.  //code to be executed  
+
+
+    3.  }  
+
+
+    Example:
+
+
+    ForExample.java
+
+
+    1.  //Java program to demonstrate the use of infinite for loop  
+
+
+    2.  //which prints an statement  
+
+
+    3.  public class ForExample {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  //Using no condition in for loop  
+
+
+    6.  for(;;){  
+
+
+    7.  System.out.println("infinitive loop");  
+
+
+    8.  }  
+
+
+    9.  }  
+
+
+    10.  }  
+
+
+    Output:
+
+
+    infinitive loop
+
+
+    infinitive loop
+
+
+    infinitive loop
+
+
+    infinitive loop
+
+
+    infinitive loop
+
+
+    ctrl+c
+
+
+    You must now exit the program by pressing ctrl+c.
+
+
+    ![](Images/image00131.jpeg)
+
+
+    ![](Images/image00132.jpeg)
+
+
+    ![](Images/image00133.jpeg)
+
+
+    # Java While Loop
+
+
+    The while loop in Java is used to execute a section of code until the provided
+    Boolean condition is true. The loop comes to an end as soon as the Boolean condition
+    is false.
+
+
+    The while loop is a type of if statement that repeats itself. The while loop is
+    recommended if the number of iterations is not fixed.
+
+
+    Syntax:
+
+
+    1.  while (condition){    
+
+
+    2.  //code to be executed   
+
+
+    3.  I ncrement / decrement statement  
+
+
+    4.  }
+
+
+    The many components of a do-while loop are as follows:
+
+
+    1\. A condition is an expression that is put to the test. The loop body is run
+    if the condition is true, and control is passed to the update expression. We exit
+    the while loop when the condition turns false.
+
+
+    Example:
+
+
+    i <=100
+
+
+    2\. Update expression: This expression increments or decrements the loop variable
+    every time the loop body is run.
+
+
+    Example:
+
+
+    i++;
+
+
+    Flowchart - Java While Loop
+
+
+    The crucial thing to remember about the while loop is that it may or may not run.
+    The loop body is skipped if the condition to be tested is false, and the first
+    statement after the while loop is executed.
+
+
+    ![](Images/image00134.jpeg)
+
+
+    EXAMPLE
+
+
+    We output integer numbers from 1 to 10 in the example below. Unlike the for loop,
+    the condition variable must be initialised and incremented independently (here,
+    i). If not, the loop will run indefinitely.
+
+
+    WhileExample.java
+
+
+    1.  public class WhileExample {  
+
+
+    2.  public static void main(String[] args) {  
+
+
+    3.  int i=1;  
+
+
+    4.  while(i<=10){  
+
+
+    5.  System.out.println(i);  
+
+
+    6.  i++;  
+
+
+    7.  }  
+
+
+    8.  }  
+
+
+    9.  }  
+
+
+    Output:
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    5
+
+
+    6
+
+
+    7
+
+
+    8
+
+
+    9
+
+
+    10
+
+
+    ## Infinitive While Loop
+
+
+    It will be an infinitive while loop if you pass true to the while loop.'
+  toc: []
+  trans: "\n\n```java\n7. System.out.println(\"Your city is Meerut\");\n8 }else if(address.contains(\"\
+    Noida\")) {\n9. System.out.println(\"Your city is Noida\");\n10 }else {\n11. System.out.println(address.split(\"\
+    ,\")[0]);\n12 }\n13 }else {\n14 System.out.println(\"You are not living in India\"\
+    );\n15 }\n16 }\n17 }\n```\nOutput:\nDelhi\n\n### Switch 语句\n\nJava 中的 `switch`\
+    \ 语句类似于 `if-else-else` 语句。单个 `case` 的执行取决于 `switch` 语句中切换的变量，该语句由称为 `cases` 的各种代码块组成。你可以使用\
+    \ `switch` 语句来代替 `if-else-if` 语句。它还能提高程序的可读性。\n\n语法：\n```java\nswitch (expression){\n\
+    case value1:\n    statement1;\n    break;\n...\ncase valueN:\n    statementN;\n\
+    \    break;\ndefault:\n    default statement;\n}\n```\n\n#### 示例\n\n`Student.java`\n\
+    ```java\npublic class Student implements Cloneable {\n    public static void main(String[]\
+    \ args) {\n        int num = 2;\n        switch (num){\n        case 0:\n    \
+    \        System.out.println(\"number is 0\");\n            break;\n        case\
+    \ 1:\n            System.out.println(\"number is 1\");\n            break;\n \
+    \       default:\n            System.out.println(num);\n        }\n    }\n}\n\
+    ```\nOutput:\n2\n\n我们必须记住，在使用 `switch` 语句时，case 表达式的类型将与变量类型相同。然而，它是一个常量。只有 `int`、`string`\
+    \ 和 `Enum` 类型变量允许用于此 `switch`。\n\n# Java 中的循环\n\nJava 的 `for` 循环用于重复遍历程序的某个。如果迭代次数是固定的，建议使用\
+    \ `for` 循环。\n\n在 Java 中，有三种形式的 `for` 循环：\n\n* 简单 `for` 循环\n* [For-each](https://www.javatpoint.com/for-each-loop)\
+    \ 或增强型 `for` 循环\n* 标签 `for` 循环\n\n## 简单 for 循环\n\n在 C/C++ 中，简单 `for` 循环是相同的。我们可以设置变量的值、检查条件并增加或减少该值。语法：\n\
+    \n```java\nfor(initialization; condition; increment/decrement){\n    //要执行的语句或代码\n\
+    }\n```\n![](img/image00130.jpeg)\n\n#### 示例：\n\n`ForExample.java`\n```java\n//\
+    \ 演示 for 循环示例的 Java 程序\n// 打印 1 的乘法表\npublic class ForExample {\n    public static\
+    \ void main(String[] args) {\n        // Java for 循环代码\n        for(int i=1;i<=10;i++){\n\
+    \            System.out.println(i);\n        }\n    }\n}\n```\nOutput:\n1\n2\n\
+    3\n4\n5\n6\n7\n8\n9\n10\n\n## 嵌套 for 循环\n\n“嵌套 for 循环”一词指的是包含在另一个循环中的 `for` 循环。当外层循环执行时，内层循环会完成。\n\
+    \n示例：\n```java\npublic class NestedForExample {\n    public static void main(String[]\
+    \ args) {\n        // i 的循环\n        for(int i=1;i<=3;i++){\n            // j\
+    \ 的循环\n            for(int j=1;j<=3;j++){\n                System.out.println(i+\"\
+    \ \"+j);\n            }//i 的结束\n        }}//j 的结束\n    }\n}\n```\nOutput:\n1 1\n\
+    1 2\n1 3\n2 1\n2 2\n2 3\n3 1\n3 2\n3 3\n\n#### 金字塔 示例 1：\n\n`PyramidExample.java`\n\
+    ```java\npublic class PyramidExample {\n    public static void main(String[] args)\
+    \ {\n        for(int i=1;i<=5;i++){\n            for(int j=1;j<=i;j++){\n    \
+    \            System.out.print(\"*\");\n            }\n            System.out.println();//换行\n\
+    \        }\n    }\n}\n```\nOutput:\n*\n**\n***\n****\n*****\n\n## For-each 循环\n\
+    \n在 Java 中，`for-each` 循环用于遍历数组或集合。因为我们不需要增加值或使用下标，所以它比标准的 `for` 循环更容易使用。它是基于元素而不是索引的。它逐个返回每个元素。\n\
+    \n语法：\n```java\nfor(data_type variable : array_name){\n    //要执行的代码\n}\n```\n\n\
+    #### 示例：\n\n`ForEachExample.java`\n```java\n// 打印数组元素的 Java For-each 循环\npublic\
+    \ class ForEachExample {\n    public static void main(String[] args) {\n     \
+    \   // 声明数组\n        int arr[]={12,23,44,56};\n        // 使用 for-each 循环打印数组\n\
+    \        for(int i:arr){\n            System.out.println(i);\n        }\n    }\n\
+    }\n```\nOutput:\n12\n23\n44\n56\n\n## Java 中的标签 For 循环\n\n每个 Java `for` 循环都可以赋予一个名称。我们通过在\
+    \ `for` 循环之前放置标签来实现。这在利用嵌套 `for` 循环时非常方便，因为它允许我们跳出/继续单个 `for` 循环。\n\n语法：\n```java\n\
+    labelname:\nfor(initialization; condition; increment/decrement){\n    //要执行的代码\n\
+    }\n```\n\n#### 示例：\n\n`LabeledForExample.java`\n```java\n// 演示标签 for 循环使用的 Java\
+    \ 程序\npublic class LabeledForExample {\n    public static void main(String[] args)\
+    \ {\n        // 为外层和 for 循环使用标签\n        aa:\n        for(int i=1;i<=3;i++){\n\
+    \            bb:\n            for(int j=1;j<=3;j++){\n                if(i==2&&j==2){\n\
+    \                    break aa;\n                }\n                System.out.println(i+\"\
+    \ \"+j);\n            }\n        }\n    }\n}\n```\nOutput:\n1 1\n1 2\n1 3\n\n\
+    如果你使用 `break bb;`，它将只会跳出内层循环，这是任何循环默认的工作方式。\n\n`LabeledForExample2.java`\n```java\n\
+    public class LabeledForExample2 {\n    public static void main(String[] args)\
+    \ {\n        aa:\n        for(int i=1;i<=3;i++){\n            bb:\n          \
+    \  for(int j=1;j<=3;j++){\n                if(i==2&&j==2){\n                 \
+    \   break bb;\n                }\n                System.out.println(i+\" \"+j);\n\
+    \            }\n        }\n    }\n}\n```\nOutput:\n1 1\n1 2\n1 3\n2 1\n3 1\n3\
+    \ 2\n3 3\n\n## 无限 for 循环\n\n如果你在 `for` 循环中使用两个分号 `;;`，它将是一个无限 `for` 循环。\n\n语法：\n\
+    ```java\nfor(;;){\n    //要执行的代码\n}\n```\n\n#### 示例：\n\n`ForExample.java`\n```java\n\
+    // 演示无限 for 循环使用的 Java 程序\n// 打印一条语句\npublic class ForExample {\n    public static\
+    \ void main(String[] args) {\n        // 在 for 循环中使用没有条件\n        for(;;){\n \
+    \           System.out.println(\"infinitive loop\");\n        }\n    }\n}\n```\n\
+    Output:\ninfinitive loop\ninfinitive loop\ninfinitive loop\ninfinitive loop\n\
+    infinitive loop\n你现在可以通过按 `ctrl+c` 退出程序。\n\n![](img/image00131.jpeg)\n![](img/image00132.jpeg)\n\
+    ![](img/image00133.jpeg)\n\n# Java While 循环\n\n`while` 循环用于重复执行一段代码，直到提供的布尔条件为真。一旦布尔条件为假，循环就会结束。\n\
+    \n`while` 语句是一种重复的 if 语句。如果迭代次数固定，建议使用 `for` 循环。\n\n语法：\n```java\nwhile (condition){\n\
+    \    //执行代码\n    增/减语句\n}\n```\n\n### 循环（注：提供的文本在此处中断，但根据上下文）\n\n`do-while` 循环的许多组件如下：\n\
+    \n1. 条件是一个被测试的表达式。如果条件为真，则执行循环体，并将控制传递给更新表达式。当条件变为假时，我们退出 while 循环。\n\n示例：\n`i\
+    \ <=100`\n\n2. 更新表达式：每当执行循环体时，该表达式都会增加或减少循环变量。\n\n示例：\n`i++`\n\n流程图 - Java While\
+    \ 循环\n\n关于 `while` 循环的关键点是它可能运行也可能不。如果待测试条件为假，将跳过循环体，并执行 `while` 循环之后的第一个语句。\n\
+    \n![](img/image00134.jpeg)\n\n#### 示例\n\n我们在示例中输出从 1 到 10 的整数。与 `for` 循环不同，条件变量必须初始化并增加（这里是\
+    \ `i`）。否则，循环将无限运行。\n\n`WhileExample.java`\n```java\npublic class WhileExample\
+    \ {\n    public static void main(String[] args) {\n        int i=1;\n        while(i<=10){\n\
+    \            System.out.println(i);\n            i++;\n        }\n    }\n}\n```\n\
+    Output:\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n## 无限 while 循环\n\n如果你向 `while` 循环传递\
+    \ `true`，它将是一个无限 `while` 循环。\n\n"
+- fmt: "\n### Syntax\n\n```java\nwhile(true){\n  //code to be executed\n}\n```\n\n\
+    ### Example: `WhileExample2.java`\n\n```java\npublic class WhileExample2 {\n \
+    \ public static void main(String[] args) {\n    // setting the infinite while\
+    \ loop by passing true to the condition\n    while(true){\n      System.out.println(\"\
+    infinitive while loop\");\n    }\n  }\n}\n```\n\n### Output\n```\ninfinitive while\
+    \ loop\ninfinitive while loop\ninfinitive while loop\ninfinitive while loop\n\
+    infinitive while loop\nctrl+c\n```\n\nTo end the infinite loop in the following\
+    \ code, we must use the `Ctrl + C` command.\n\n# Java do-while Loop\n\nThe Java\
+    \ `do-while` loop is used to repeatedly iterate a section of a programme until\
+    \ the specified condition is met. A `do-while` loop is recommended if the number\
+    \ of iterations is not fixed and the loop must be executed at least once.\n\n\
+    An exit control loop is a Java `do-while` loop. In contrast to `while` and `for`\
+    \ loops, the `do-while` loop checks the condition at the end of the loop body.\
+    \ Because the condition is tested after the loop body, the Java `do-while` loop\
+    \ is executed at least once.\n\n### Syntax\n\n```java\ndo{\n  //code to be executed\
+    \ / loop body\n  //update statement\n}while (condition);\n```\n\n### The different\
+    \ parts - do-while loop:\n\n1. A condition is an expression that is put to the\
+    \ test. The loop body is run if the condition is true, and control is passed to\
+    \ the update expression. The loop immediately breaks when the condition turns\
+    \ false.\n   Example: `i <=100`\n\n2. Update expression: This expression increments\
+    \ or decrements the loop variable every time the loop body is run.\n   Example:\
+    \ `i++`\n\n### EXAMPLE\n\nWe output integer numbers from 1 to 10 in the example\
+    \ below. Unlike the `for` loop, the condition variable must be initialised and\
+    \ incremented independently (here, `i`). If not, the loop will run indefinitely.\n\
+    \n### `DoWhileExample.java`\n\n```java\npublic class DoWhileExample {\n  public\
+    \ static void main(String[] args) {\n    int i=1;\n    do{\n      System.out.println(i);\n\
+    \      i++;\n    }while(i<=10);\n  }\n}\n```\n\n### Output\n```\n1\n2\n3\n4\n\
+    5\n6\n7\n8\n9\n10\n```\n\n## Infinitive do-while Loop – JAVA\n\nIt will be an\
+    \ infinitive `do-while` loop if you pass `true` in the `do-while` loop.\n\n###\
+    \ Syntax\n\n```java\ndo{\n  //code to be executed\n}while(true);\n```\n\n### Example:\
+    \ `DoWhileExample2.java`\n\n```java\npublic class DoWhileExample2 {\n  public\
+    \ static void main(String[] args) {\n    do{\n      System.out.println(\"infinitive\
+    \ do while loop\");\n    }while(true);\n  }\n}\n```\n\n### Output\n```\ninfinitive\
+    \ do while loop\ninfinitive do while loop\ninfinitive do while loop\nctrl+c\n\
+    ```\n\n# Java Break Statement\n\nWhen a `break` statement is reached within a\
+    \ loop, the loop is instantly ended, and programme control is resumed at the next\
+    \ statement after the loop.\n\nTo break a loop or `switch` statement in Java,\
+    \ use the `break` statement. At the stated situation, it interrupts the program's\
+    \ current flow. It only breaks the inner loop in the case of the inner loop.\n\
+    \nThe Java `break` statement can be used in all forms of loops, including `for`\
+    \ loops, `while` loops, and `do-while` loops.\n\n### Syntax\n\n```java\njump-statement;\n\
+    break;\n```\n\n![](Images/image00135.jpeg)\n\n## Break Statement with - Loop\n\
+    \n### Example: `BreakExample.java`\n\n```java\n//Java Program to demonstrate the\
+    \ use of break statement\n//inside the for loop.\npublic class BreakExample {\n\
+    \  public static void main(String[] args) {\n    //using for loop\n    for(int\
+    \ i=1;i<=10;i++){\n      if(i==5){\n        //breaking the loop\n        break;\n\
+    \      }\n      System.out.println(i);\n    }\n  }\n}\n```\n\n### Output\n```\n\
+    1\n2\n3\n4\n```\n\n## Break Statement with Inner Loop\n\nIt only breaks the inner\
+    \ loop if you use the `break` statement inside.\n\n### Example: `BreakExample2.java`\n\
+    \n```java\n//Java Program to illustrate the use of break statement\n//inside an\
+    \ inner loop.\npublic class BreakExample2 {\n  public static void main(String[]\
+    \ args) {\n    //outer loop\n    for(int i=1;i<=3;i++){\n      //inner loop\n\
+    \      for(int j=1;j<=3;j++){\n        if(i==2&&j==2){\n          //using break\
+    \ inside the inner loop\n          break;\n        }\n        System.out.println(i+\"\
+    \ \"+j);\n      }\n    }\n  }\n}\n```\n\n### Output\n```\n1 1\n1 2\n1 3\n2 1\n\
+    3 1\n3 2\n3 3\n```\n\n## Break Statement with Labeled For Loop\n\nWith a label,\
+    \ we may use the `break` statement. Since JDK 1.5, the feature has been available.\
+    \ So, whether it's an outer or inner loop, we can now break it in Java.\n\n###\
+    \ Example: `BreakExample3.java`\n\n```java\n//Java Program to illustrate the use\
+    \ of continue statement\n//with label inside an inner loop to break outer loop\n\
+    public class BreakExample3 {\n  public static void main(String[] args) {\n   \
+    \ aa:\n    for(int i=1;i<=3;i++){\n      bb:\n      for(int j=1;j<=3;j++){\n \
+    \       if(i==2&&j==2){\n          //using break statement with label\n      \
+    \    break aa;\n        }\n        System.out.println(i+\" \"+j);\n      }\n \
+    \   }\n  }\n}\n```\n\n### Output\n```\n1 1\n1 2\n1 3\n2 1\n```\n\n## Break Statement\
+    \ in - while loop\n\n### Example: `BreakWhileExample.java`\n\n```java\n//Java\
+    \ Program to demonstrate the use of break statement\n//inside the while loop.\n\
+    public class BreakWhileExample {\n  public static void main(String[] args) {\n\
+    \    //while loop\n    int i=1;\n    while(i<=10){\n      if(i==5){\n        //using\
+    \ break statement\n        i++;\n        break;//it will break the loop\n    \
+    \  }\n      System.out.println(i);\n      i++;\n    }\n  }\n}\n```\n\n### Output\n\
+    ```\n1\n2\n3\n4\n```\n\n## Break Statement in do-while loop\n\n### Example: `BreakDoWhileExample.java`\n\
+    \n```java\n//Java Program to demonstrate the use of break statement\n//inside\
+    \ the Java do-while loop.\npublic class BreakDoWhileExample {\n  public static\
+    \ void main(String[] args) {\n    //declaring variable\n    int i=1;\n    //do-while\
+    \ loop\n    do{\n      if(i==5){\n        //using break statement\n        i++;\n\
+    \        break;//it will break the loop\n      }\n      System.out.println(i);\n\
+    \      i++;\n    }while(i<=10);\n  }\n}\n```\n\n### Output\n```\n1\n2\n3\n4\n\
+    ```\n"
+  raw: 'Syntax:
+
+
+    1.  while(true){  
+
+
+    2.  //code to be executed  
+
+
+    3.  }  
+
+
+    Example:
+
+
+    WhileExample2.java
+
+
+    1.  public class WhileExample2 {    
+
+
+    2.  public static void main(String[] args) {   
+
+
+    3.  // setting the infinite while loop by passing true to the condition  
+
+
+    4.  while(true){    
+
+
+    5.  System.out.println("infinitive while loop");    
+
+
+    6.  }    
+
+
+    7.  }    
+
+
+    8.  }    
+
+
+    Output:
+
+
+    infinitive while loop
+
+
+    infinitive while loop
+
+
+    infinitive while loop
+
+
+    infinitive while loop
+
+
+    infinitive while loop
+
+
+    ctrl+c
+
+
+    To end the infinite loop in the following code, we must use the Ctrl + C command.
+
+
+    # Java do-while Loop
+
+
+    The Java do-while loop is used to repeatedly iterate a section of a programme
+    until the specified condition is met. A do-while loop is recommended if the number
+    of iterations is not fixed and the loop must be executed at least once.
+
+
+    An exit control loop is a Java do-while loop. In contrast to while and for loops,
+    the do-while loop checks the condition at the end of the loop body. Because the
+    condition is tested after the loop body, the Java do-while loop is executed at
+    least once.
+
+
+    Syntax:
+
+
+    1.  do{    
+
+
+    2.  //code to be executed / loop body  
+
+
+    3.  //update statement   
+
+
+    4.  }while (condition);  
+
+
+    The different parts - do-while loop:
+
+
+    1\. A condition is an expression that is put to the test. The loop body is run
+    if the condition is true, and control is passed to the update expression. The
+    loop immediately breaks when the condition turns false.
+
+
+    Example:
+
+
+    i <=100
+
+
+    2\. Update expression: This expression increments or decrements the loop variable
+    every time the loop body is run.
+
+
+    Example:
+
+
+    i++;
+
+
+    EXAMPLE
+
+
+    We output integer numbers from 1 to 10 in the example below. Unlike the for loop,
+    the condition variable must be initialised and incremented independently (here,
+    i). If not, the loop will run indefinitely.
+
+
+    DoWhileExample.java
+
+
+    1.  public class DoWhileExample {    
+
+
+    2.  public static void main(String[] args) {    
+
+
+    3.  int i=1;    
+
+
+    4.  do{    
+
+
+    5.  System.out.println(i);    
+
+
+    6.  i++;    
+
+
+    7.  }while(i<=10);    
+
+
+    8.  }    
+
+
+    9.  }
+
+
+    Output:
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    5
+
+
+    6
+
+
+    7
+
+
+    8
+
+
+    9
+
+
+    10
+
+
+    ## Infinitive do-while Loop – JAVA
+
+
+    It will be an infinitive do-while loop if you pass true in the do-while loop.
+
+
+    Syntax:
+
+
+    1.  do{  
+
+
+    2.  //code to be executed  
+
+
+    3.  }while(true);  
+
+
+    Example:
+
+
+    DoWhileExample2.java
+
+
+    1.  public class DoWhileExample2 {  
+
+
+    2.  public static void main(String[] args) {  
+
+
+    3.  do{  
+
+
+    4.  System.out.println("infinitive do while loop");  
+
+
+    5.  }while(true);  
+
+
+    6.  }  
+
+
+    7.  }  
+
+
+    Output:
+
+
+    infinitive do while loop
+
+
+    infinitive do while loop
+
+
+    infinitive do while loop
+
+
+    ctrl+c
+
+
+    # Java Break Statement
+
+
+    When a break statement is reached within a loop, the loop is instantly ended,
+    and programme control is resumed at the next statement after the loop.
+
+
+    To break a loop or switch statement in Java, use the break statement. At the stated
+    situation, it interrupts the program''s current flow. It only breaks the inner
+    loop in the case of the inner loop.
+
+
+    The Java break statement can be used in all forms of loops, including for loops,
+    while loops, and do-while loops.
+
+
+    Syntax:
+
+
+    1.  jump-statement;    
+
+
+    2.  break;   
+
+
+    ![](Images/image00135.jpeg)
+
+
+    ## Break Statement with - Loop
+
+
+    Example:
+
+
+    BreakExample.java
+
+
+    1.  //Java Program to demonstrate the use of break statement    
+
+
+    2.  //inside the for loop.  
+
+
+    3.  public class BreakExample {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  //using for loop  
+
+
+    6.  for(int i=1;i<=10;i++){  
+
+
+    7.  if(i==5){  
+
+
+    8.  //breaking the loop  
+
+
+    9.  break;  
+
+
+    10.  }  
+
+
+    11.  System.out.println(i);  
+
+
+    12.  }  
+
+
+    13.  }  
+
+
+    14.  }  
+
+
+    Output:
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    ## Break Statement with -  Inner Loop
+
+
+    It only breaks the inner loop if you use the break statement inside it.
+
+
+    Example:
+
+
+    BreakExample2.java
+
+
+    1.  //Java Program to illustrate the use of break statement    
+
+
+    2.  //inside an inner loop   
+
+
+    3.  public class BreakExample2 {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  //outer loop   
+
+
+    6.  for(int i=1;i<=3;i++){    
+
+
+    7.  //inner loop  
+
+
+    8.  for(int j=1;j<=3;j++){    
+
+
+    9.  if(i==2&&j==2){    
+
+
+    10.  //using break statement inside the inner loop  
+
+
+    11.  break;    
+
+
+    12.  }    
+
+
+    13.  System.out.println(i+" "+j);    
+
+
+    14.  }    
+
+
+    15.  }    
+
+
+    16.  }  
+
+
+    17.  }  
+
+
+    Output:
+
+
+    1 1
+
+
+    1 2
+
+
+    1 3
+
+
+    2 1
+
+
+    3 1
+
+
+    3 2
+
+
+    3 3
+
+
+    ## Break Statement with Labeled For Loop
+
+
+    With a label, we may use the break statement. Since JDK 1.5, the feature has been
+    available. So, whether it''s an outer or inner loop, we can now break it in Java.
+
+
+    Example:
+
+
+    BreakExample3.java
+
+
+    1.  //Java Program to illustrate the use of continue statement  
+
+
+    2.  //with label inside an inner loop to break outer loop  
+
+
+    3.  public class BreakExample3 {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  aa:  
+
+
+    6.  for(int i=1;i<=3;i++){    
+
+
+    7.  bb:  
+
+
+    8.  for(int j=1;j<=3;j++){    
+
+
+    9.  if(i==2&&j==2){    
+
+
+    10.  //using break statement with label  
+
+
+    11.  break aa;    
+
+
+    12.  }    
+
+
+    13.  System.out.println(i+" "+j);    
+
+
+    14.  }    
+
+
+    15.  }    
+
+
+    16.  }  
+
+
+    17.  }  
+
+
+    Output:
+
+
+    1 1
+
+
+    1 2
+
+
+    1 3
+
+
+    2 1
+
+
+    ## Break Statement in - while  loop
+
+
+    Example:
+
+
+    BreakWhileExample.java
+
+
+    1.  //Java Program to demonstrate the use of break statement  
+
+
+    2.  //inside the while loop.  
+
+
+    3.  public class BreakWhileExample {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  //while loop  
+
+
+    6.  int i=1;  
+
+
+    7.  while(i<=10){  
+
+
+    8.  if(i==5){  
+
+
+    9.  //using break statement  
+
+
+    10.  i++;  
+
+
+    11.  break;//it will break the loop  
+
+
+    12.  }  
+
+
+    13.  System.out.println(i);  
+
+
+    14.  i++;  
+
+
+    15.  }  
+
+
+    16.  }  
+
+
+    17.  }  
+
+
+    Output:
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    ## Break Statement in do-while loop
+
+
+    Example:
+
+
+    BreakDoWhileExample.java
+
+
+    1.  //Java Program to demonstrate the use of break statement  
+
+
+    2.  //inside the Java do-while loop.  
+
+
+    3.  public class BreakDoWhileExample {  
+
+
+    4.  public static void main(String[] args) {  
+
+
+    5.  //declaring variable  
+
+
+    6.  int i=1;  
+
+
+    7.  //do-while loop  
+
+
+    8.  do{  
+
+
+    9.  if(i==5){  
+
+
+    10.  //using break statement  
+
+
+    11.  i++;  
+
+
+    12.  break;//it will break the loop  
+
+
+    13.  }  
+
+
+    14.  System.out.println(i);  
+
+
+    15.  i++;  
+
+
+    16.  }while(i<=10);  
+
+
+    17.  }  
+
+
+    18.  }  
+
+
+    Output:
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4'
+  toc: []
+  trans: "\n\n### 语法\n\n```java\nwhile(true){\n  //要执行的代码\n}\n```\n\n### 示例：`WhileExample2.java`\n\
+    \n```java\npublic class WhileExample2 {\n  public static void main(String[] args)\
+    \ {\n    //通过向条件传递 true 来设置无限循环\n    while(true){\n      System.out.println(\"\
+    infinitive while loop\");\n    }\n  }\n}\n```\n\n### 输出\n```\ninfinitive while\
+    \ loop\ninfinitive while loop\ninfinitive while loop\ninfinitive while loop\n\
+    infinitive while loop\nctrl+c\n```\n\n要结束以下代码中的无限循环，我们必须使用 `Ctrl + C` 命令。\n\n\
+    # Java do-while 循环\n\nJava `do-while` 循环用于反复迭代程序的某部分，直到满足指定的条件。如果迭代次数不固定且循环至少执行一次，则建议使用\
+    \ `do-while` 循环。\n\n退出控制循环是 Java `do-while` 循环。与 `while` 和 `for` 循环不同，`do-while`\
+    \ 循环在循环体结束后检查条件。因为条件是在循环体之后测试的，所以 Java `do-while` 循环至少执行一次。\n\n### 语法\n\n```java\n\
+    do{\n  //要执行的代码 / 循环体\n  //更新语句\n}while (condition);\n```\n\n### do-while 循环的不同组成部分：\n\
+    \n1. 条件是一个被用于测试的表达式。如果条件为真，则运行循环体，并将控制传递给更新表达式。当条件变为假时，循环立即中断。\n   示例：`i <=100`\n\
+    \n2. 更新表达式：该表达式每执行一次循环体，就会递增或递减循环变量。\n   示例：`i++`\n\n### 示例\n\n在下面的示例中，我们输出从 1\
+    \ 到 10 的整数。与 `for` 循环不同，条件变量必须独立初始化和递增（此处是 `i`）。否则，循环将无限运行。\n\n### `DoWhileExample.java`\n\
+    \n```java\npublic class DoWhileExample {\n  public static void main(String[] args)\
+    \ {\n    int i=1;\n    do{\n      System.out.println(i);\n      i++;\n    }while(i<=10);\n\
+    \  }\n}\n```\n\n### 输出\n```\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n```\n\n## 无限 do-while\
+    \ 循环 – JAVA\n\n如果你在 `do-while` 循环中传递 `true`，它将成为一个无限 `do-while` 循环。\n\n### 语法\n\
+    \n```java\ndo{\n  //要执行的代码\n}while(true);\n```\n\n### 示例：`DoWhileExample2.java`\n\
+    \n```java\npublic class DoWhileExample2 {\n  public static void main(String[]\
+    \ args) {\n    do{\n      System.out.println(\"infinitive do while loop\");\n\
+    \    }while(true);\n  }\n}\n```\n\n### 输出\n```\ninfinitive do while loop\ninfinitive\
+    \ do while loop\ninfinitive do while loop\nctrl+c\n```\n\n# Java break 语句\n\n\
+    当循环内部遇到 `break` 语句时，循环立即结束，并在循环后的下一个语句处恢复程序控制。\n\n要在 Java 中跳出循环或 `switch` 语句，请使用\
+    \ `break` 语句。在指定情况下，它会中断程序的当前流。在嵌套循环的情况下，它只会跳出内层循环。\n\nJava `break` 语句可以用于所有形式的循环，包括\
+    \ `for` 循环、`while` 循环和 `do-while` 循环。\n\n### 语法\n\n```java\njump-statement;\n\
+    break;\n```\n\n![](img/image00135.jpeg)\n\n## 循环中的 break 语句\n\n### 示例：`BreakExample.java`\n\
+    \n```java\n//演示在 for 循环中使用 break 语句的 Java 程序\npublic class BreakExample {\n  public\
+    \ static void main(String[] args) {\n    //使用 for 循环\n    for(int i=1;i<=10;i++){\n\
+    \      if(i==5){\n        //跳出循环\n        break;\n      }\n      System.out.println(i);\n\
+    \    }\n  }\n}\n```\n\n### 输出\n```\n1\n2\n3\n4\n```\n\n## 嵌套循环中的 break 语句\n\n\
+    只有当你从内层循环内部使用 `break` 语句时，它才会跳出内层循环。\n\n### 示例：`BreakExample2.java`\n\n```java\n\
+    //演示在内层循环中使用 break 语句的 Java 程序\npublic class BreakExample2 {\n  public static\
+    \ void main(String[] args) {\n    //外层循环\n    for(int i=1;i<=3;i++){\n      //内层循环\n\
+    \      for(int j=1;j<=3;j++){\n        if(i==2&&j==2){\n          //在内层循环内部 break\n\
+    \          break;\n        }\n        System.out.println(i+\" \"+j);\n      }\n\
+    \    }\n  }\n}\n```\n\n### 输出\n```\n1 1\n1 2\n1 3\n2 1\n3 1\n3 2\n3 3\n```\n\n\
+    ## 带标签的 for 循环中的 break 语句\n\n通过标签，我们可以使用 `break` 语句。自 JDK 1.5 以来，该功能一直可用。因此，现在在\
+    \ Java 中无论是外层循环还是内层循环，我们都可以跳出它。\n\n### 示例：`BreakExample3.java`\n\n```java\n//演示在内层循环中使用带标签的\
+    \ continue 语句来跳出外层循环的 Java 程序\npublic class BreakExample3 {\n  public static void\
+    \ main(String[] args) {\n    aa:\n    for(int i=1;i<=3;i++){\n      bb:\n    \
+    \  for(int j=1;j<=3;j++){\n        if(i==2&&j==2){\n          //使用带标签的 break 语句\n\
+    \          break aa;\n        }\n        System.out.println(i+\" \"+j);\n    \
+    \  }\n    }\n  }\n}\n```\n\n### 输出\n```\n1 1\n1 2\n1 3\n2 1\n```\n\n## while 循环中的\
+    \ break 语句\n\n### 示例：`BreakWhileExample.java`\n\n```java\n//演示在 while 循环中使用 break\
+    \ 语句的 Java 程序\npublic class BreakWhileExample {\n  public static void main(String[]\
+    \ args) {\n    //while 循环\n    int i=1;\n    while(i<=10){\n      if(i==5){\n\
+    \        //使用 break 语句\n        i++;\n        break;//跳出循环\n      }\n      System.out.println(i);\n\
+    \      i++;\n    }\n  }\n}\n```\n\n### 输出\n```\n1\n2\n3\n4\n```\n\n## do-while\
+    \ 循环中的 break 语句\n\n### 示例：`BreakDoWhileExample.java`\n\n```java\n//演示在 Java do-while\
+    \ 循环中使用 break 语句的 Java 程序\npublic class BreakDoWhileExample {\n  public static\
+    \ void main(String[] args) {\n    //声明变量\n    int i=1;\n    //do-while 循环\n  \
+    \  do{\n      if(i==5){\n        //使用 break 语句\n        i++;\n        break;//跳出循环\n\
+    \      }\n      System.out.println(i);\n      i++;\n    }while(i<=10);\n  }\n\
+    }\n```\n\n### 输出\n```\n1\n2\n3\n4\n```\n\n"

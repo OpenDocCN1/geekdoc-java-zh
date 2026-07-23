@@ -1,0 +1,52 @@
+name: Java 10： Java2D, Drawing of the window Software Development
+name_cn: Java 10：Java2D 窗口绘图软件开发
+slug: java-10-java2d-drawing-of-the-window-software-development
+toc:
+- - '##'
+  - 练习 1
+- - '##'
+  - 练习 2
+- - '##'
+  - 练习 6
+- - '##'
+  - 练习 7
+- - '##'
+  - 练习 8
+- - '##'
+  - 练习 9
+- - '###'
+  - 平移 (Translation)
+- - '##'
+  - 练习 10
+- - '###'
+  - 旋转 (Rotation)
+- - '###'
+  - 缩放 (Scaling)
+- - '###'
+  - 练习题 11
+- - '###'
+  - 伸展 (Stretching)
+- - '##'
+  - 练习 12
+- - '##'
+  - 练习 13
+- - '##'
+  - 练习 14
+- - '##'
+  - 问题 1
+- - '###'
+  - ConvolveOp
+- - '###'
+  - AffineTransformOp
+- - '###'
+  - LookupOp
+- - '###'
+  - RescaleOp
+- - '###'
+  - ColorConvertOp
+- - '##'
+  - 练习 15
+- - '##'
+  - 问题 2
+- - '##'
+  - 问题 3

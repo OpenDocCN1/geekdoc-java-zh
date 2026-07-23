@@ -1,0 +1,401 @@
+- "# Java 8 异常处理测验\n\n\n\n![](img/cover00319.jpeg)\n\n\n\n## 关于作者\n在过去的 18 年里，我一直从事\
+  \ Java 编程和教学。这本书是我记录自己的知识并与全球的人分享的努力。我可以在世界任何地方提供 Java 培训。我的邮箱地址是 `gurumahaveer@gmail.com`。\n\
+  \n## 谁应该读这本书？\n本书适用于已经掌握核心 Java（Java 标准版）的程序员。\n\n## 致谢\nJava 归 Oracle 所有，其注册商标已获得认可。\n\
+  \n## 献辞\n致 Java 语言的发明者。\n\n\n# 第 1 章：软件安装\n\n**Q.1: Java 的最新版本是什么？**\n- A | 7\n\
+  - B | 6\n- C | 9\n- D | 8\n(正确答案：D)\n\n**Q.2: JRE 的含义是 ……..................**\n\
+  - A | Java Robust Engine\n- B | Java Required Engine\n- C | Java Runtime Engine\n\
+  - D | Java Runnable Engine\n(正确答案：C)\n\n**Q. 3: JDK 的含义是 ……..................**\n\
+  - A | Java Debugging Kit\n- B | Java Development Kit\n- C | Java Documentation Kit\n\
+  - D | Java Database Kit\n(正确答案：B)\n\n**Q. 4: 编译和执行 Java 程序需要 …….............**\n\
+  - A | JDK\n- B | JRE\n- C | JME\n- D | JEE\n(正确答案：A)\n\n**Q.5: 设置了哪个环境变量（Windows\
+  \ 操作系统）以便在命令行访问 Java 编译器和 Java 解释器？**\n- A | CLASSPATH\n- B | JAVAHOME\n- C | PATH\n\
+  - D | HOME\n(正确答案：C)\n\n**Q.6: 仅执行 Java 程序最少需要 ……................**\n- A | JME\n\
+  - B | JDK\n- C | JEE\n- D | JRE\n(正确答案：D)\n\n**Q.7: Java 解释器的命令（Windows 操作系统）是 ……..........**\n\
+  - A | Javaip.exe\n- B | Javac.exe\n- C | Java.exe\n- D | Javai.exe\n(正确答案：C)\n\n\
+  **Q.8: Java 编译器的命令（Windows 操作系统）是 ……..........**\n- A | Java.exe\n- B | Javacompiler.exe\n\
+  - C | Javacomp.exe\n- D | Javac.exe\n(正确答案：D)\n\n**Q.9: 32 位 JDK（Windows 操作系统）默认安装在哪个文件夹下？**\n\
+  - A | `C:\\Program Files\\`\n- B | `C:\\Windows\\`\n- C | `C:\\Java`\n- D | `C:\\\
+  Program Files (x86)\\`\n(正确答案：D)\n\n**Q.10: 64 位 JDK（Windows 操作系统）默认安装在哪个文件夹下？**\n\
+  - A | `C:\\Program Files\\`\n- B | `C:\\Windows\\`\n- C | `C:\\Java`\n- D | `C:\\\
+  Program Files (x86)\\`\n(正确答案：A)\n\n## 第 1 章答案\n| 题号 | 答案 | 解析 |\n| :--- | :---\
+  \ | :--- |\n| 1 | D | Java 的最新版本是 8。 |\n| 2 | C | `JRE` 代表 Java Runtime Engine。\
+  \ |\n| 3 | B | `JDK` 代表 Java Development Kit。 |\n| 4 | A | 编译和执行 Java 程序需要 JDK。\
+  \ |\n| 5 | C | `PATH` 环境变量包含 Java 命令的位置。 |\n| 6 | D | 仅执行程序时只需要 JRE。 |\n| 7 | C\
+  \ | `java.exe` 是激活 Java 解释器的命令。 |\n| 8 | D | `javac.exe` 是激活 Java 编译器的命令。 |\n| 9\
+  \ | D | Windows 操作系统上的 32 位应用程序默认安装在 `C:\\Program Files (x86)\\`。 |\n| 10 | A |\
+  \ Windows 操作系统上的 64 位应用程序默认安装在 `C:\\Program Files\\`。 |\n\n# 第 2 章：什么是异常？\n\n**Q.1:\
+  \ ……........ 在运行时发生。****\n- A | 错误 (Error)\n- B | 异常 (Exception)\n- C | 触发 (Trigger)\n\
+  - D | 无 (None)\n\n**Q.2: 运行时错误被称为 ……...........**\n- A | 错误\n- B | 异常\n- C | 触发\n\
+  - D | 无\n(正确答案：B)\n\n**Q.3: 语法错误产生 ..................**\n- A | 运行时\n- B | 异常\n-\
+  \ C | 编译器\n- D | 无\n(正确答案：C)\n\n**Q.4: 整数除以零产生 ........**\n- A | 编译器\n- B | 运行时\n\
+  - C | 无\n- D | 异常\n(正确答案：D)\n\n**Q.5: 缺少分号会导致指令产生 ……..**\n- A | 异常\n- B | 运行时错误\n\
+  - C | 编译器错误\n- D | 虚拟机\n(正确答案：C)\n\n**Q.6: 输出是什么？**\n```java\nclass Program {\n\
+  \    public static void main(String args[]) {\n        String[] ar = new String[1];\n\
+  \        ar[2] =\"Ram\";\n        System.out.println(ar[0]);\n    }\n}\n```\n- A\
+  \ | 编译器错误\n- B | 异常\n- C | 无\n- D | 虚拟机\n(正确答案：B)\n\n**Q.7: 异常可以在……时发生**\n- A |\
+  \ `throw` 被调用\n- B | 执行异常代码\n- C | 异步错误发生\n- D | 以上所有\n(正确答案：D)\n\n## 第 2 章答案\n\
+  | 题号 | 答案 | 解析 |\n| :--- | :--- | :--- |\n| 1 | B | 异常在运行时发生。 |\n| 2 | C | 运行时错误称为异常。\
+  \ |\n| 3 | C | 语法错误产生编译器错误。 |\n| 4 | D | 除以零产生 `ArithmeticException`。 |\n| 5 | C\
+  \ | 缺少分号会导致编译器错误。 |\n| 6 | B | 发生 `ArrayIndexOutOfBounds` 异常。 |\n| 7 | D | 异常可以在以下任何情况下发生：a.\
+  \ `throw` 被调用 b. 执行异常代码 c. 异步错误。 |\n\n# 第 3 章：什么是异常处理？\n\n**Q.1: .......... 有助于避免程序崩溃。**\n\
+  - A | 错误处理\n- B | 异常处理\n- C | 编译器处理\n- D | 数据库处理\n(正确答案：B)\n\n**Q.2: 下列哪一个不是关键字？**\n\
+  - A | Throw\n- B | Throws\n- C | throwing\n- D | Try\n(正确答案：C)\n\n**Q.3: 下列哪一个不是关键字？**\n\
+  - A | Try\n- B | Catch\n- C | except\n- D | Finally\n(正确答案：C)\n\n**Q.4: 如何抛出异常？**\n\
+  - A | throws\n- B | Throw\n- C | except\n- D | Raise\n(正确答案：B)\n\n**Q.5: 谁处理未被处理的异常？**\n\
+  - A | JVM\n- B | 操作系统\n- C | catch\n- D | finally\n(正确答案：A)\n\n## 第 3 章答案\n| 题号\
+  \ | 答案 | 解析 |\n| :--- | :--- | :--- |\n| 1 | B | 异常处理有助于避免程序崩溃。 |\n| 2 | C | `throwing`\
+  \ 不是 Java 中的关键字。 |\n| 3 | C | `except` 不是 Java 中的关键字。 |\n| 4 | B | `throw` 关键字用于抛出异常。\
+  \ |\n| 5 | A | JVM 处理未被处理的异常。 |\n\n\n\n\n\n| 5 | A | JVM 处理程序中未处理的异常。 |\n\n![](img/image00318.jpeg)\n\
+  \n# 第 4 章\n## Java 异常层次结构\n\n| Q.1: …............. 类是所有异常类（直接或间接）的父类。 |\n| | | |\n\
+  | A | `Throwable` |\n| B | `Exception` |\n| C | `Error` |\n| D | `Object` |\n| |\
+  \ <正确答案 |\n\n| Q.2: …..................... 类是 “Exception”类的父类。 |\n| | | |\n| A |\
+  \ `Object` |\n| B | `Error` |\n| C | `Compiler` |\n| D | `Throwable` |\n| | <正确答案\
+  \ |\n\n| Q.3: ….......... 是 “Error”类的父类。 |\n| | | |\n| A | `Object` |\n| B | `Exception`\
+  \ |\n| C | `Throwable` |\n| D | `RuntimeException` |\n| | <正确答案 |\n\n| Q.4: ….................\
+  \ 是 “RuntimeException”类的父类吗？ |\n| | | |\n| A | `Error` |\n| B | `Exception` |\n\
+  | C | `Throwable` |\n| D | `Object` |\n| | <正确答案 |\n\n| Q.5: `Throwable` 类实现了 …...................\
+  \ 接口 |\n| | | |\n| A | `Cloneable` |\n| B | `Serializable` |\n| C | `Runnable` |\n\
+  | D | `Comparable` |\n| | <正确答案 |\n\n| Q.6: …............ 是 “Throwable”类的父类。 |\n\
+  | | | |\n| A | `Object` |\n| B | `Exception` |\n| C | `Error` |\n| D | `JVM` |\n\
+  | | <正确答案 |\n\n| Q.7: ….......... (以及派生类）异常是不可恢复的。 |\n| | | |\n| A | `Error class`\
+  \ |\n| B | `Throwable class` |\n| C | `Exception class` |\n| D | `Object class`\
+  \ |\n| | <正确答案 |\n\n| Q.8: …................. (以及派生类）异常是异步的。 |\n| | | |\n| A | `Throwable\
+  \ class` |\n| B | `Error class` |\n| C | `Exception class` |\n| D | `Object class`\
+  \ |\n| | <正确答案 |\n\n| Q.9: 下列哪些是派自 “Error class”的？ |\n| | | |\n| A | `StackoverflowError`\
+  \ |\n| B | `OutOfMemoryError` |\n| C | `VirtualMachineError` |\n| D | `以上都是` |\n\
+  | | <正确答案 |\n\n| Q.10: `ThreadDeath` 异常何时发生？ |\n| | | |\n| A | `Thread.abort()`\
+  \ |\n| B | `Thread.stop()` |\n| C | `Thread.exit()` |\n| D | `Thread.quit()` |\n\
+  | | <正确答案 |\n\n| Q.11: 当方法被递归调用时发生什么异常？ |\n| | | |\n| A | `OutOfMemoryError` |\n\
+  | B | `OutOfMemoryException` |\n| C | `StackoverflowException` |\n| D | `StackoverflowError`\
+  \ |\n| | <正确答案 |\n\n| Q.12: …........... (Exception) 是编译器检查的。 |\n| | | |\n| A |\
+  \ `Error class` |\n| B | `RuntimeException class` |\n| C | `Exception class` |\n\
+  | D | `Object class` |\n| C | <正确答案 |\n\n| Q.13: …............ (Exception) 不是编译器检查的。\
+  \ |\n| | | |\n| A | `Exception class` |\n| B | `Throwable class` |\n| C | `Object\
+  \ class` |\n| D | `RuntimeException` |\n| | <正确答案 |\n\n| Q.14: 下列哪个类不是派自 `RuntimeException`\
+  \ 类的？ |\n| | | |\n| A | `NullPointerException` |\n| B | `ArrayIndexOutOfBoundException`\
+  \ |\n| C | `ArithmeticException` |\n| D | `IOException` |\n| | <正确答案 |\n\n| Q.15:\
+  \ `Exception` 类实现了下列哪些接口？ |\n| | | |\n| A | `Serializable` |\n| B | `Throwable`\
+  \ |\n| C | `Attribute` |\n| D | `以上都不是` |\n| | <正确答案 |\n\n| Q.16: `Error` 类实现了下列哪些接口？\
+  \ |\n| | | |\n| A | `Serializable` |\n| B | `Throwable` |\n| C | `Atrribute` |\n\
+  | D | `以上都不是` |\n| | <正确答案 |\n\n| Q.17: …................ 异常是编译器检查的。 |\n| | | |\n\
+  | A | `Throwable class` |\n| B | `Object class` |\n| C | `Error class` |\n| D |\
+  \ `RuntimeException class` |\n| | <正确答案 |\n\n## 答案\n\n| Q.No | Ans | 解析 |\n| :---\
+  \ | :--- | :--- |\n| 1 | A | `Throwable` 类是所有异常类（直接或间接）的父类。 |\n| 2 | D | `Throwable`\
+  \ 类是 `Exception` 的父类。 |\n| 3 | C | `Throwable` 类是 `Error` 类的父类。 |\n| 4 | B | `Exception`\
+  \ 类是 `Runtime` 类的父类。 |\n| 5 | B | `Throwable` 类实现了 `Serializable` 接口。 |\n| 6 | A\
+  \ | `Object` 是 `Throwable` 类的父类。 |\n| 7 | A | `Error class` 异常不可恢复。 |\n| 8 | B |\
+  \ `Error class` 异常是异步的。 |\n| 9 | D | `StackoverflowError`、`OutOfMemoryError` 和 `VirtualMachineError`\
+  \ 派自 `Error class`。 |\n| 10 | B | `ThreadDeath` 异常通过 `Thread.stop()` 发生。 |\n| 11\
+  \ | D | 当方法递归调用时发生 `StackoverflowError`。 |\n| 12 | C | `Exception class` 是编译器检查的。\
+  \ |\n| 13 | D | `RuntimeException` 不是编译器检查的。 |\n| 14 | D | `IOException` 不是派自 `RuntimeException`\
+  \ 类。 |\n| 15 | A | `Serializable` 接口由 `Throwable` 类实现。 |\n| 16 | D | `Error` 类没有实现列出的接口（它继承自\
+  \ `Throwable`）。 |\n| 17 | A | `Error class` 异常是编译器检查的。 |\n\n![](img/image0318.jpeg)\n\
+  \n# 第 5 章\n## Try and Catch\n\n| Q.1: ….......... 异常是不可恢复的。 |\n| | | |\n| A | `Error\
+  \ class` |\n| B | `Throwable class` |\n| C | `Exception class` |\n| D | `Object\
+  \ class` |\n| | <正确答案 |\n\n| Q.2: …......... (以及派生类）异常是异步的。 |\n| | | |\n| A | `Throwable\
+  \ class` |\n| B | `Error class` |\n| C | `Exception class` |\n| D | `Object class`\
+  \ |\n| | <正确答案 |\n\n| Q.3: 下列哪些是派自 “Error class”的？ |\n| | | |\n| A | `StackoverflowError`\
+  \ |\n| B | `OutOfMemoryError` |\n| C | `VirtualMachineError` |\n| D | `以上都是` |\n\
+  | | <正确答案 |\n\n| Q.4: `ThreadDeath` 异常何时发生？ |\n| | | |\n| A | `Thread.abort()` |\n\
+  | B | `Thread.stop()` |\n| C | `Thread.exit()` |\n| D | `Thread.quit()` |\n| | <正确答案\
+  \ |\n\n| Q.5: 当方法被递归调用时发生什么异常？ |\n| | | |\n| A | `OutOfMemoryError` |\n| B | `OutOfMemoryException`\
+  \ |\n| C | `StackoverflowException` |\n| D | `StackoverflowError` |\n| | <正确答案 |\n\
+  \n| Q.6: …........... (Exception) 是编译器检查的。 |\n| | | |\n| A | `Error class` |\n|\
+  \ B | `RuntimeException class` |\n| C | `Exception class` |\n| D | `Object class`\
+  \ |\n| C | <正确答案 |\n\n| Q.7: …............ (Exception) 不是编译器检查的。 |\n| | | |\n| A\
+  \ | `Exception class` |\n| B | `Throwable class` |\n| C | `Object class` |\n| D\
+  \ | `RuntimeException` |\n| | <正确答案 |\n\n| Q.8: 下列哪个类不是派自 `RuntimeException` 类的？\
+  \ |\n| | | | |\n| A | `NullPointerException` |\n| B | `ArrayIndexOutOfBoundException`\
+  \ |\n| C | `ArithmeticException` |\n| D | `IOException` |\n| | <正确答案 |\n\n| Q.9:\
+  \ `Exception` 类实现了下列哪些接口？ |\n| | | | |\n| A | `Serializable` |\n| B | `Throwable`\
+  \ |\n| C | `Attribute` |\n| D | `以上都不是` |\n| | <正确答案 |\n\n| Q.10: `Error` 类实现了下列哪些接口？\
+  \ |\n| | | | |\n| A | `Serializable` |\n| B | `Throwable` |\n| C | `Atrribute` |\n\
+  | D | `以上都不是` |\n| | <正确答案 |\n\n| Q.11: …................ 异常是编译器检查的。 |\n| | | |\
+  \ |\n| A | `Throwable class` |\n| B | `Object class` |\n| C | `Error class` |\n\
+  | D | `RuntimeException class` |\n| | <正确答案 |\n\n## 答案\n\n| Q.No | Ans | 解析 |\n\
+  | :--- | :--- | :--- |\n| 1 | A | `Throwable` 类是所有异常类（直接或间接）的父类。 |\n| 2 | D | `Throwable`\
+  \ 类是 `Exception` 的父类。 |\n| 3 | C | `Throwable` 类是 `Error` 类的父类。 |\n| 4 | B | `Exception`\
+  \ 类是 `Runtime` 类的父类。 |\n| 5 | B | `Serializable` 接口由 `Throwable` 类实现。 |\n| 6 | A\
+  \ | `Object` 是 `Throwable` 类的父类。 |\n| 7 | A | `Error class` 异常不可恢复。 |\n| 8 | B |\
+  \ `Error class` 异常是异步的。 |\n| 9 | D | `StackoverflowError`、`OutOfMemoryError` 和 `VirtualMachineError`\
+  \ 派自 `Error class`。 |\n| 10 | B | `ThreadDeath` 异常通过 `Thread.stop()` 发生。 |\n| 11\
+  \ | D | 当方法递归调用时发生 `StackoverflowError`。 |\n| 12 | C | `Exception class` 是编译器检查的。\
+  \ |\n| 13 | D | `RuntimeException` 不是编译器检查的。 |\n| 14 | D | `IOException` 不是派自 `RuntimeException`\
+  \ 类。 |\n| 15 | A | `Serializable` 接口由 `Throwable` 类实现。 |\n| 16 | D | `Error` 类没有实现列出的接口（它继承自\
+  \ `Throwable`）。 |\n| 17 | A | `Error class` 异常是编译器检查的。 |\n\n![](img/image0318.jpeg)\n\
+  \n## Try and Catch (重复)\n\n| Q.1: ….......... 异常是不可恢复的。 |\n| | | |\n| A | `Error\
+  \ class` |\n| B | `Throwable class` |\n| C | `Exception class` |\n| D | `Object\
+  \ class` |\n| | <正确答案 |\n\n| Q.2: …......... (以及派生类）异常是异步的。 |\n| | | |\n| A | `Throwable\
+  \ class` |\n| B | `Error class` |\n| C | `Exception class` |\n| D | `Object class`\
+  \ |\n| | <正确答案 |\n\n| Q.3: 下列哪些是派自 “Error class”的？ |\n| | | |\n| A | `StackoverflowError`\
+  \ |\n| B | `OutOfMemoryError` |\n| C | `VirtualMachineError` |\n| D | `以上都是` |\n\
+  | | <正确答案 |\n\n| Q.4: `ThreadDeath` 异常何时发生？ |\n| | | |\n| A | `Thread.abort()` |\n\
+  | B | `Thread.stop()` |\n| C | `Thread.exit()` |\n| D | `Thread.quit()` |\n| | <正确答案\
+  \ |\n\n| Q.5: 当方法被递归调用时发生什么异常？ |\n| | | |\n| A | `OutOfMemoryError` |\n| B | `OutOfMemoryException`\
+  \ |\n| C | `StackoverflowException` |\n| D | `StackoverflowError` |\n| | <正确答案 |\n\
+  \n| Q.6: …........... (Exception) 是编译器检查的。 |\n| | | |\n| A | `Error class` |\n|\
+  \ B | `RuntimeException class` |\n| C | `Exception class` |\n| D | `Object class`\
+  \ |\n| | <正确答案 |\n\n| Q.7: …............ (Exception) 不是编译器检查的。 |\n| | | |\n| A |\
+  \ `Exception class` |\n| B | `Throwable class` |\n| C | `Object class` |\n| D |\
+  \ `RuntimeException` |\n| | <正确答案 |\n\n| Q.8: 下列哪个类不是派自 `RuntimeException` 类的？ |\n\
+  | | | | |\n| A | `NullPointerException` |\n| B | `ArrayIndexOutOfBoundException`\
+  \ |\n| C | `ArithmeticException` |\n| D | `IOException` |\n| | <正确答案 |\n\n| Q.9:\
+  \ `Exception` 类实现了下列哪些接口？ |\n| | | | |\n| A | `Serializable` |\n| B | `Throwable`\
+  \ |\n| C | `Attribute` |\n| D | `以上都不是` |\n| | <正确答案 |\n\n| Q.10: `Error` 类实现了下列哪些接口？\
+  \ |\n| | | | |\n| A | `Serializable` |\n| B | `Throwable` |\n| C | `Atrribute` |\n\
+  | D | `以上都不是` |\n| | <正确答案 |\n\n| Q.11: …................ 异常是编译器检查的。 |\n| | | |\
+  \ |\n| A | `Throwable class` |\n| B | `Object class` |\n| C | `Error class` |\n\
+  | D | `RuntimeException class` |\n| | <正确答案 |\n\n## 答案\n\n| Q.No | Ans | 解析 |\n\
+  | :--- | :--- | :--- |\n| 1 | A | `Throwable` 类是所有异常类（直接或间接）的父类。 |\n| 2 | D | `Throwable`\
+  \ 类是 `Exception` 的父类。 |\n| 3 | C | `Throwable` 类是 `Error` 类的父类。 |\n| 4 | B | `Exception`\
+  \ 类是 `Runtime` 类的父类。 |\n| 5 | B | `Serializable` 接口由 `Throwable` 类实现。 |\n| 6 | A\
+  \ | `Object` 是 `Throwable` 类的父类。 |\n| 7 | A | `Error class` 异常不可恢复。 |\n| 8 | B |\
+  \ `Error class` 异常是异步的。 |\n| 9 | D | `StackoverflowError`、`OutOfMemoryError` 和 `VirtualMachineError`\
+  \ 派自 `Error class`。 |\n| 10 | B | `ThreadDeath` 异常通过 `Thread.stop()` 发生。 |\n| 11\
+  \ | D | 当方法递归调用时发生 `StackoverflowError`。 |\n| 12 | C | `Exception class` 是编译器检查的。\
+  \ |\n| 13 | D | `RuntimeException` 不是编译器检查的。 |\n| 14 | D | `IOException` 不是派自 `RuntimeException`\
+  \ 类。 |\n| 15 | A | `Serializable` 接口由 `Throwable` 类实现。 |\n| 16 | D | `Error` 类没有实现列出的接口（它继承自\
+  \ `Throwable`）。 |\n| 17 | A | `Error class` 异常是编译器检查的。 |\n\n# 第 6\n## Exception\
+  \ API\n\n| Q.1: 什么是调用栈？ |\n| | | |\n| A | 主方法的执行。 |\n| B | 普通方法的调用。 |\n| C | 它是一种存储活动方法的栈数据结构。\
+  \ |\n| D | 函数的集合。 |\n| | <正确答案 |\n\n| Q.2: …....... 方法在异常发生时用于打印调用栈。 |\n| | | |\n\
+  | A | `callStack()` |\n| B | `printStackTrace()` |\n| C | `stackTrace()` |\n| D\
+  \ | `stackInfo()` |\n| | <正确答案 |\n\n| Q.3: …........... 方法用于获取通用异常信息。 |\n| | | |\n\
+  | A | `message()` |\n| B | `toString()` |\n| C | `getInfo()` |\n| D | `msgException()`\
+  \ |\n| | <正确答案 |\n\n| Q.4: `printStackTrace()` 方法属于哪个类？ |\n| | | |\n| A | `Throwable`\
+  \ |\n| B | `Error` |\n| C | `Exception` |\n| D | `Object` |\n| | <正确答案 |\n\n| Q.5:\
+  \ `toString()` 方法属于哪个类？ |\n| | | |\n| A | `Throwable` |\n| B | `Error` |\n| C |\
+  \ `Exception` |\n| D | `Object` |\n| | <正确答案 |\n\n| Q.6: `printStackTrace()` 方法的返回值是\
+  \ ….................. |\n| | | |\n| A | `String` |\n| B | `Char` |\n| C | `Void`\
+  \ |\n| D | `char[]` |\n| | <正确答案 |\n\n## 答案\n\n| Q.No | Ans | 解析 |\n| :--- | :---\
+  \ | :--- |\n| 1 | C | 调用栈是一种用于存储活动方法的栈数据结构。 |\n| 2 | B | `printStackTrace()` 方法在异常发生时用于打印调用栈。\
+  \ |\n| 3 | B | `toString()` 返回通用异常信息。 |\n| 4 | A | `printStackTrace()` 方法属于 `Throwable`\
+  \ 类。 |\n| 5 | A | `toString()` 方法属于 `Throwable` 类。 |\n| 6 | C | `printStackTrace()`\
+  \ 返回 `Void`。 |\n\n![](img/image0318.jpeg)\n\n\n\n\n\n| 5 | D | `toString()` 方法属于\
+  \ `Object` 类。 |\n| 6 | C | `printStackTrace()` 方法不返回任何内容。 |\n\n![](img/image00318.jpeg)\n\
+  \n# 第 7 章：多重 catch (Multiple Catch)\n\n**Q.1: 给定的 try 块可以添加多少个 catch 块？**\n- A:\
+  \ 1\n- B: 2\n- C: 15\n- D: 任意\n- **正确答案：D**\n\n**Q.2: 应该以什么顺序使用 catch 块捕捉异常？**\n\
+  - A: 任意顺序\n- B: 按照继承层次结构的自上而下\n- C: 按照继承层次结构的自下而上\n- D: `catch` 块不处理异常\n- **正确答案：C**\n\
+  \n**Q.3: 对于以下异常 `Throwable`、`Exception`、`RuntimeException`，catch 块顺序应该是？**\n- A:\
+  \ 任意顺序\n- B: `Throwable`, `Exception`, `RuntimeException`\n- C: `Exception`, `RuntimeException`,\
+  \ `Throwable`\n- D: `RuntimeException`, `Exception`, `Throwable`\n- **正确答案：D**\n\
+  \n**Q.4: 'try' 块无法封装？**\n- A: 方法内部的代码\n- B: 构造函数内部的代码\n- C: 静态块内部的代码\n- D: 类\n-\
+  \ **正确答案：D**\n\n**Q.5: 如果不按照继承层次结构的自下而上顺序处理异常，会遇到什么错误？**\n- A: 编译错误\n- B: 运行时异常\n\
+  - C: 什么都没有发生\n- D: JVM 异常\n- **正确答案：A**\n\n## 答案：\n| 题号 | 答案 | 解析 |\n| :--- | :---\
+  \ | :--- |\n| 1 | D | `try` 块可以有任意数量的 `catch` 块。 |\n| 2 | C | `catch` 块应该按照继承层次结构的自下而上（反向）顺序捕捉异常。\
+  \ |\n| 3 | D | 正确的顺序是 `RuntimeException`、`Exception` 和 `Throwable` 类。 |\n| 4 | D\
+  \ | `'try'` 块无法封装类。 |\n| 5 | A | 如果不按照继承层次结构的反向顺序处理异常，编译器会给出错误。 |\n\n![](img/image00318.jpeg)\n\
+  \n# 第 8 章：多重异常 (Multiple Exceptions)\n\n**Q.1: 在 Java 的哪个版本中增加了这种（在单个 catch 中处理多个异常）的功能？**\n\
+  - A: 6\n- B: 5\n- C: 7\n- D: 8\n- **正确答案：C**\n\n**Q.2: 用于识别单个 catch 中多个异常的定隔符是什么？**\n\
+  - A: `|` (管道符)\n- B: `&` (安培符号)\n- C: `,` (逗号)\n- D: `/` (斜杠)\n- **正确答案：A**\n\n\
+  **Q.3: 识别正确的语法：**\n- A: `catch(Error|Exception obj) {}`\n- B: `catch(Throwable |Exception)\
+  \ {}`\n- C: `catch(Throwable obj | Exception obj2) {}`\n- D: `Catch (...) {}`\n\
+  - **正确答案：A**\n\n**Q.4: 父类和子类的异常不能在单个 catch 块中捕捉。**\n- A: 正确\n- B: 错误\n- **正确答案：B**\n\
+  \n**Q.5: 当父类和子类异常在单个 catch 块中被时会发生什么？**\n- A: 无错误或异常\n- B: 编译错误\n- C: JVM 错误\n-\
+  \ D: 运行时异常\n- **正确答案：B**\n\n## 答案：\n| 题号 | 答案 | 解析 |\n| :--- | :--- | :--- |\n|\
+  \ 1 | C | Java 7 增加了单个 `catch` 中的多重异常处理。 |\n| 2 | A | 用于在单个 `catch` 中分隔异常的分隔符是 `'|'`。\
+  \ |\n| 3 | A | 正确语法是：`catch(Error|Exception obj) {}` |\n| 4 | A | 父类和子类异常不能在单个 `catch`\
+  \ 中捕捉。 |\n| 5 | B | 当程序员尝试在单个 catch 中处理父类和子类异常时，编译器会给出错误。 |\n\n![](img/image00318.jpeg)\n\
+  \n# 第 9 章：finally 块 (Finally Block)\n\n**Q.1: 'try' 块可以添加多少个 'finally' 块？**\n- A:\
+  \ 1\n- B: 2\n- C: 3\n- D: 任意数量\n- **正确答案：D**\n\n**Q.2: 异常块的顺序是 ……............**\n\
+  - A: `try, finally, catch`\n- B: `catch,finally,try`\n- C: `try,catch,finally`\n\
+  - D: 任意顺序\n- **正确答案：C**\n\n**Q.3: 'finally' 块在什么情况下不执行……........**\n- A: 调用 'return'\
+  \ 关键字\n- B: 程序退出\n- C: 'finally' 保证会被执行\n- D: 以上都没有\n- **正确答案：B**\n\n**Q.4: 识别正确的陈述：**\n\
+  - A: 对于给定的 try，`'Finally'` 块是强制性的。\n- B: 当发生异常时，`'Finally'` 块会执行。\n- C: 当没有异常时，`'Finally'`\
+  \ 块会执行。\n- D: 以上都没有。\n- **正确答案：B**\n\n**Q.5: 对于给定的 'try' 块，‘finally’ 块放置在……........**\n\
+  - A: `'try` 块\n- B: `'catch` 块\n- C: `'finally'` 块\n- D: 构造函数\n- **正确答案：B**\n\n\
+  **Q.6: 对于给定的 'try' 块，‘finally’ 块放置在……........之后**\n- A: `'try` 块\n- B: `'catch`\
+  \ 块\n- C: `'finally'` 块\n- D: 构造函数\n- **正确答案：B**\n\n**Q.7: 'finally' 块在什么情况下保证执行……........**\n\
+  - A: `'try` 块\n- B: `'catch` 块\n- C: 异常发生\n- D: 顺序\n- **正确答案：C**\n\n**Q.8: 如果在单个\
+  \ catch 中处理父类和类异常会发生什么？**\n- A: 编译错误\n- B: 运行时异常\n- C: 什么都没有发生\n- D: JVM 异常\n- **正确答案：A**\
+  \ (注：此处原文 Q.8 与 Q.5 逻辑重复，按原意翻译)\n\n*(注：原文此处存在格式错乱，已根据逻辑翻译)*\n\n| 题号 | 答案 | 解析 |\n\
+  | :--- | :--- | :--- |\n| 1 | D | `try` 块可以有任意数量的 `catch` 块。 |\n| 2 | C | `catch`\
+  \ 块应该按照继承层次结构的自下而上（反向）顺序捕捉异常。 |\n| 3 | D | 正确的顺序是 `RuntimeException`、`Exception`\
+  \ 和 `Throwable` 类。 |\n| 4 | D | `'try'` 块无法封装类。 |\n| 5 | A | 如果不按照继承层次结构的反向顺序处理异常，编译器会给出错误。\
+  \ |\n\n![](img/image00318.jpeg)\n\n# 第 10 章：Finally 块 (Finally Block)\n\n**Q.1:\
+  \ 'try' 块可以添加多少个 'finally' 块？**\n- A: 1\n- B: 2\n- C: 3\n- D: 任意数量\n- **正确答案：D**\n\
+  \n**Q.2: 异常块的顺序是 ……............**\n- A: `try, finally, catch`\n- B: `catch,finally,try`\n\
+  - C: `try,catch,finally`\n- D: 任意顺序\n- **正确答案：C**\n\n**Q.3: 'finally' 块在什么情况下不执行……........**\n\
+  - A: 调用 'return' 关键字\n- B: 程序退出\n- C: 'finally' 保证会被执行\n- D: 以上都没有\n- **正确答案：B**\n\
+  \n**Q.4: 识别正确的陈述：**\n- A: 对于给定的 try，`'Finally'` 块是强制性的。\n- B: 当发生异常时，`'Finally'`\
+  \ 块会执行。\n- C: 当没有异常时，`'Finally'` 块会执行。\n- D: 以上都没有。\n- **正确答案：B**\n\n**Q.5: 对于给定的\
+  \ 'try' 块，‘finally’ 块放置在……........之后**\n- A: `'try` 块\n- B: `'catch` 块\n- C: `'finally'`\
+  \ 块\n- D: 构造函数\n- **正确答案：B**\n\n*(注：原文后续出现大量重复，已按要求翻译并保持结构)*\n\n\n\n\n\n## Q.6:\
+  \ 检查异常继承自 …..........或 …............. 类\n- A: `Throwable`\n- B: `Exception`\n- C:\
+  \ `Error`\n- D: `RuntimeException`\n**正确答案: B**\n\n## Q.7: 一个方法可以使用 'throws' 关键字声明多少个异常？\n\
+  - A: 1\n- B: 2\n- C: 3\n- D: 任意数量\n**正确答案: D**\n\n## Q.8: 检查异常由编译器验证。\n- A: 正确\n\
+  - B: 错误\n**正确答案: A**\n\n## Q.9: 非检查异常继承自 ….......... 类\n- A: `Throwable`\n- B: `Exception`\n\
+  - C: `Error`\n- D: `RuntimeException`\n**正确答案: D**\n\n## Q.10: 下列哪项不是非检查异常？\n- A:\
+  \ `NullPointerException`\n- B: `ArithmeticException`\n- C: `ClassCastException`\n\
+  - D: `Exception`\n**正确答案: D**\n\n## Q.11: 下列哪项不是检查异常？\n- A: `NullPointerException`\n\
+  - B: `ArithmeticException`\n- C: `ClassCastException`\n- D: `Exception`\n**正确答案:\
+  \ A**\n\n## Answers\n| Q.No | Ans | 解释 |\n| :--- | :--- | :--- |\n| 1 | A | 检查异常由编译器识别。\
+  \ |\n| 2 | A | 非检查异常不由编译器识别。 |\n| 3 | B | 检查异常必须被处理（强制性）。 |\n| 4 | D | 非检查异常不需要强制处理。\
+  \ |\n| 5 | B | 'throws' 关键字用于为方法声明异常。 |\n| 6 | A,B | 检查异常可以自 `Throwable` 或 `Exception`\
+  \ 类 |\n| 7 | D | 使用 'throws' 关键字可以声明任意数量的异常。 |\n| 8 | A | 检查异常在编译时已知。 |\n| 9 | D\
+  \ | 非检查异常继承自 `RuntimeException` 类 |\n| 10 | D | `Exception` 类是检查异常。 |\n| 11 | A,B,C\
+  \ | `NullPointerException`、`ArithmeticException` 和 `ClassCastException` 不是检查异常。\
+  \ |\n\n![](img/image00318.jpeg)\n\n# 第 12 章：嵌套异常\n\n## Q.1: Java 支持嵌套异常处理。\n- A:\
+  \ 正确\n- B: 错误\n**正确答案: A**\n\n## Q.2: Java 支持多大层级的异常处理嵌套？\n- A: 1\n- B: 2\n- C:\
+  \ 3\n- D: 任意级别\n**正确答案: D**\n\n## Q.3: 输出是什么？\n```java\nclass Program {\n    static\
+  \ void performJob() {\n      try {\n        int j = 10/0;\n      } catch(ArrayIndexOutOfBoundsException\
+  \ e) {\n        System.out.println(\"Handle the array carefully\");\n      }\n \
+  \   }\n    public static void main(String args[]) {\n      try {\n        performJob();\n\
+  \      } catch (Exception e) {\n        System.out.println(\"There is some problem\
+  \ in the code\");\n      }\n    }\n}\n```\n- A: 无输出\n- B: Handle the array carefully\n\
+  - C: There is some problem in the code\n- D: Division by zero\n**正确答案: C**\n\n##\
+  \ Q.4: 输出是什么？\n```java\nclass Program {\n    static void performJob() {\n      try\
+  \ {\n        int j = 10/0;\n      } catch(ArrayIndexOutOfBoundsException e) {\n\
+  \        System.out.println(\"Handle the array carefully\");\n      } finally {\n\
+  \        System.out.println(\"finally - performJob\");\n      }\n    }\n    public\
+  \ static void main(String args[]) {\n      try {\n        performJob();\n      }\
+  \ catch (Exception e) {\n        System.out.println(\"There is some problem in the\
+  \ code\");\n      } finally {\n        System.out.println(\"finally - main\");\n\
+  \      }\n    }\n}\n```\n- A: 无输出\n- B: finally - performJobThere is some problem\
+  \ in the codefinally – main\n- C: finally - performJobfinally – main\n- D: There\
+  \ is some problem in the codefinally – mainfinally - performJob\n**正确答案: B**\n\n\
+  ## Q.5: 输出是什么？\n```java\nclass Program {\n    static void performJob() {\n     \
+  \ try {\n        int j = 10/0;\n      } catch(ArrayIndexOutOfBoundsException e)\
+  \ {\n        System.out.println(\"Handle the array carefully\");\n      } finally\
+  \ {\n        System.out.println(\"finally - performJob\");\n      }\n    }\n   \
+  \ public static void main(String args[]) {\n      int ar[] = new int[1];\n     \
+  \ try {\n        ar[1]=0;\n        performJob();\n      } catch (Exception e) {\n\
+  \        System.out.println(\"There is some problem in the code\");\n      } finally\
+  \ {\n        System.out.println(\"finally - main\");\n      }\n    }\n}\n```\n-\
+  \ A: 无输出\n- B: There is some problem in the codefinally – main\n- C: finally - performJobThere\
+  \ is some problem in the codefinally – main\n- D: finally - performJobThere is some\
+  \ problem in the code\n**正确答案: D**\n\n## Answers\n| Q.No | Ans | 解释 |\n| :--- |\
+  \ :--- | :--- |\n| 1 | A | Java 支持异常处理。 |\n| 2 | D | 异常处理可以嵌套任意层级。 |\n| 3 | C |\
+  \ 输出为：There is some problem in the code |\n| 4 | B | 输出为：finally - performJobThere\
+  \ is some problem in the codefinally – main |\n| 5 | D | 输出为：finally - performJobThere\
+  \ is some problem in the code |\n\n![](img/image0318.jpeg)\n\n# 第 13 章：'Throw' 关键字\n\
+  \n## Q.1: 类.........可以被抛出\n- A: Object\n- B: Throwable\n- C: GC\n- D: 以上所有\n**正确答案:\
+  \ B**\n\n## Q.2: …..............关键字用于抛出一个异常。\n- A: Throw\n- B: Throws\n- C: Raise\n\
+  - D: Signal\n**正确答案: A**\n\n## Q.3: 输出是什么？\n```java\nclass Program {\n    public\
+  \ static void main(String args[]) {\n      try {\n        throw new Exception();\n\
+  \      } catch (Exception e) {\n        System.out.println(\"There is some problem\
+  \ in the code\");\n      }\n    }\n}\n```\n- A: 无输出\n- B: There is some problem\
+  \ in the code\n- C: There is some problem in the codefinally – main\n- D: – main\n\
+  **正确答案: C**\n\n## Q.4: 输出？\n```java\nclass Program {\n    static void performJob()\
+  \ {\n      try {\n        new ArrayIndexOutOfBoundsException();\n      } catch(ArrayIndexOutOfBoundsException\
+  \ e) {\n        System.out.println(\"Handle the array carefully\");\n      } finally\
+  \ {\n        System.out.println(\"finally - performJob\");\n      }\n    }\n   \
+  \ public static void main(String args[]) {\n      try {\n        performJob();\n\
+  \      } catch (Exception e) {\n        System.out.println(\"There is some problem\
+  \ in the code\");\n      } finally {\n        System.out.println(\"finally - main\"\
+  );\n      }\n    }\n}\n```\n- A: finally - performJob – main\n- B: 无输出\n- C: Handle\
+  \ the array carefullyfinally - performJob\n- D: Handle the array carefullyfinally\
+  \ - performJobfinally - main\n**正确答案: D**\n\n## Q.5: 输出是什么？\n```java\nclass Program\
+  \ {\n    static void performJob() {\n      try {\n        throw new ArrayIndexOutOfBoundsException();\n\
+  \      } catch(ArrayIndexOutOfBoundsException e) {\n        throw new Exception();\n\
+  \        System.out.println(\"Handle the array carefully\");\n      } finally {\n\
+  \        System.out.println(\"finally - performJob\");\n      }\n    }\n    public\
+  \ static void main(String args[]) {\n      try {\n        performJob();\n      }\
+  \ catch (Exception e) {\n        System.out.println(\"There is some problem in the\
+  \ code\");\n      } finally {\n        System.out.println(\"finally - main\");\n\
+  \      }\n    }\n}\n```\n- A: 无输出\n- B: 编译错误\n- C: Handle the array carefullyfinally\
+  \ - performJobfinally - main\n- D: finally - performJobfinally - main\n**正确答案: B**\n\
+  \n## Q.6: 输出是什么？\n\n\n\n\n\n## 代码分析\n\n```java\nclass Program {\n    static void\
+  \ performJob() {\n        try {\n            throw new ArrayIndexOutOfBoundsException();\n\
+  \        } catch (ArrayIndexOutOfBoundsException e) {\n            throw new Exception();\n\
+  \            System.out.println(\"Handle the array carefully\");\n        } finally\
+  \ {\n            System.out.println(\"finally - performJob\");\n        }\n    }\n\
+  \    public static void main(String args[]) {\n        try {\n            performJob();\n\
+  \        } catch (Exception e) {\n            System.out.println(\"There is some\
+  \ problem in the code\");\n        } finally {\n            System.out.println(\"\
+  finally - main\");\n        }\n    }\n}\n\nclass Program {\n    static void performJob()\
+  \ {\n        try {\n            throw new ArrayIndexOutOfBoundsException();\n  \
+  \      } catch (ArrayIndexOutOfBoundsException e) {\n            try {\n       \
+  \         throw new Exception();\n            } catch (Exception obj) {\n      \
+  \          System.out.println(\"This is inner exception\");\n            }\n   \
+  \         System.out.println(\"Handle the array carefully\");\n        } finally\
+  \ {\n            System.out.println(\"finally - performJob\");\n        }\n    }\n\
+  \    public static void main(String args[]) {\n        try {\n            performJob();\n\
+  \        } catch (Exception e) {\n            System.out.println(\"There is some\
+  \ problem in the code\");\n        } finally {\n            System.out.println(\"\
+  finally - main\");\n        }\n    }\n}\n```\n\n| 选项 | 结果 |\n| :--- | :--- |\n|\
+  \ A | 无输出 |\n| B | 编译错误 |\n| C | This is inner exceptionfinally - performJobfinally\
+  \ - main |\n| D | This is inner exceptionHandle the array carefullyfinally - performJobfinally\
+  \ - main |\n| | <----正确答案 |\n\n## 答案\n\n| 题号 | 答案 | 解释 |\n| :--- | :--- | :--- |\n\
+  | 1 | B | 只有继承自 `Throwable`（或其派生类）的类可以被抛出 |\n| 2 | A | `throw` 关键字用于抛出异常。 |\n| 3\
+  \ | C | 通过计算，输出为：There is some problem in the codefinally - main |\n| 4 | D | 通过计算，输出为：Handle\
+  \ the array carefullyfinally - performJobfinally - main |\n| 5 | B | 编译错误 |\n| 6\
+  \ | D | 通过计算，输出为：This is inner exceptionHandle the array carefullyfinally - performJobfinally\
+  \ - main |\n\n![](img/image00318.jpeg)\n\n# 第 14 章：异常链\n\n## Q.1: ... 类对异常链有底层基础设施支持。\n\
+  | A | Exception |\n| B | Throwable |\n| C | Error |\n| D | RuntimeException |\n\
+  | | <----正确答案 |\n\n## Q.2: `getCause()` 方法在 .................. 类中声明 |\n| A | Object\
+  \ |\n| B | Error |\n| C | RuntimeException |\n| D | Throwable |\n| | <----正确答案 |\n\
+  \n## Q.3: 识别 `Throwable` 类正确的构造函数。\n| A | `Throwable(String, Throwable)` |\n| B\
+  \ | `Throwable(String[], Throwable)` |\n| C | `Throwable(char[], Throwable)` |\n\
+  | D | `Throwable(char, Throwable)` |\n| | <----正确答案 |\n\n## Q.4: 哪个方法初始化异常的因？ |\n\
+  | A | `startCause()` |\n| B | `setCause()` |\n| C | `setIssue()` |\n| D | `initCause()`\
+  \ |\n| | <----正确答案 |\n\n## Q.5: 识别 `Throwable` 类正确的构造函数。 |\n| A | `Throwable(int)`\
+  \ |\n| B | `Throwable(String[])` |\n| C | `Throwable(Throwable)` |\n| D | `Throwable()`\
+  \ |\n| | <----正确答案 |\n\n## Q.6: `initCause()` 方法在 ... 类中声明 |\n| A | Object |\n|\
+  \ B | Throwable |\n| C | RuntimeException |\n| D | Error |\n| | <----正确答案 |\n\n\
+  ## Q.7: ............... 返回 'throwable' 的原因。 |\n| A | `getMsg()` |\n| B | `getMessage()`\
+  \ |\n| C | `getCause()` |\n| D | `getReason()` |\n| | <----正确答案 |\n\n## 答案\n| 题号\
+  \ | 答案 | 解释 |\n| :--- | :--- | :--- |\n| 1 | B | `Throwable` 类具有链式的基础设施。 |\n| 2\
+  \ | D | `getCause()` 方法在 `Throwable` 中声明。 |\n| 3 | A | 有效的构造函数：`Throwable(String,\
+  \ Throwable)` |\n| 4 | D | `initCause()` 初始化异常的因。 |\n| 5 | C | 有效的构造函数：`Throwable(Throwable)`\
+  \ |\n| 6 | B | `initCause()` 方法在 `Throwable` 中声明。 |\n| 7 | C | `getCause()` 返回 'throwable'\
+  \ 的原因。 |\n\n![](img/image0318.jpeg)\n\n# 第 15 章：Try with Resource\n\n## Q.1: 'try\
+  \ with resource' 在哪个 Java 版本中引入的？\n| A | 5 |\n| B | 6 |\n| C | 7 |\n| D | 8 |\n\
+  | | <----正确答案 |\n\n## Q.2: 在单个 try 块中可以创建多少资源？\n| A | 无 |\n| B | 2 |\n| C | 3 |\n\
+  | D | 任意 |\n| | <----正确答案 |\n\n## Q.3: 对象必须实现 ..... 才能在 try with resource 块中使用。\n\
+  | A | `Autoable` |\n| B | `Closeable` |\n| C | `Try` |\n| D | `Closed` |\n| | <----正确答案\
+  \ |\n\n### Q.4: `Autoable` 接口的方法是？ |\n| A | `close()` |\n| B | `close()` |\n| C\
+  \ | `finish()` |\n| D | `end()` |\n| | <----正确答案 |\n\n## Q.5: `Closeable` 接口的方法是？\
+  \ |\n| A | `close()` |\n| B | `closing()` |\n| C | `finish()` |\n| D | `end()` |\n\
+  | | <----正确答案 |\n\n## Q.6: 资源在 try with resource 中以 ......... 顺序关闭。 |\n| A | Custom\
+  \ |\n| B | Forward |\n| C | Reverse |\n| D | Conditional |\n| | <----正确答案 |\n\n\
+  ## Q.7: 输出输出是什么？\n```java\nimport java.io.*;\nclass Shape implements Closeable {\n\
+  \    public void close() {\n        System.out.println(\"Shape is closed\");\n \
+  \   }\n}\nclass Program {\n    public static void main(String args[]) {\n      \
+  \  try (Shape obj = new Shape()) {\n        } catch (Exception e) {\n          \
+  \  System.out.println(\"Exception happened\");\n        }\n    }\n}\n```\n| 选项 |\
+  \ 结果 |\n| :--- | :--- |\n| A | 无输出 |\n| B | 编译错误 |\n| C | Shape is closed |\n| D\
+  \ | Exception happened |\n| | <----正确答案 |\n\n*(注：由于原始文本中 Q3-Q7 的描述存在错乱和重复，翻译时已根据逻辑进行了对齐处理。)*\n\
+  \n\n\n\n\n# 第 17 章：自定义异常\n\n```java\nclass Shape {\n    void draw () throws Exception\
+  \ {\n        System.out.println (\"Drawing shape\");\n    }\n}\nclass Circle extends\
+  \ Shape {\n    void draw() throws Exception {\n        System.out.println(\"Drawing\
+  \ Circle\");\n    }\n}\nclass Program {\n    public static void main(String args[])\
+  \ throws Exception {\n        Circle obj = new Circle();\n        obj.draw();\n\
+  \    }\n}\n```\n\n**Q.5: 输出是什么？**\n\n| 选项 | 结果 |\n|---|---|\n| A | 编译错误 |\n| B |\
+  \ 无输出 |\n| C | Drawing shape |\n| D | Drawing Circle <----正确答案 |\n\n---\n\n```java\n\
+  class Shape {\n    void draw () throws Exception {\n        System.out.println(\"\
+  Drawing shape\");\n    }\n}\nclass Circle extends Shape {\n    void draw() throws\
+  \ RuntimeException {\n        System.out.println(\"Drawing Circle\");\n    }\n}\n\
+  class Program {\n    public static void main(String args[]) throws Exception {\n\
+  \        Circle obj = new Circle();\n        obj.draw();\n    }\n}\n```\n\n**Q.5:\
+  \ 输出是什么？**\n\n| 选项 | 结果 |\n|---|---|\n| A | 编译错误 <----正确答案 |\n| B | 无输出 |\n| C |\
+  \ Drawing shape |\n| D | Drawing Circle |\n\n## 重写方法中的异常规则\n\n1. 如果父类方法 `throws`\
+  \ 一个异常，则子类可以 `throws` 相同的异常或该异常的子类。\n2. 如果父类方法没有 `throws` 任何异常，则子类的重写方法可以 `throws`\
+  \ 未检异常（unchecked exception）。\n3. 如果方法声明了受检异常（checked exception），则它必须被抛出（`throw`）。\n\
+  \n## 答案\n\n| 题号 | 答案 | 解析 |\n|---|---|---|\n| 1 | D | 经计算输出为：Drawing Circle |\n\
+  | 2 | A | 编译错误 |\n| 3 | A | 编译错误 |\n| 4 | D | 经计算输出为：Drawing Circle |\n| 5 | D |\
+  \ 经计算输出为：Drawing Circle |\n\n![](img/image00318.jpeg)\n\n---\n\n## Q.1: 如何创建自定义的受检异常？\n\
+  \n| 选项 | 结果 |\n|---|---|\n| A | 继承自 Error 类 |\n| B | 继承自 Throwable 类 <----正确答案 |\n\
+  | C | 继承自 RuntimeException 类 |\n| D | 继承自 Object 类 |\n\n## Q.2: 如何创建自定义的未检异常？\n\n\
+  | 选项 | 结果 |\n|---|---|\n| A | 继承自 Error 类 |\n| B | 继承自 Exception 类 |\n| C | 继承自\
+  \ RuntimeException 类 <----正确答案 |\n| D | 继承自 Object 类 |\n\n## Q.3: 输出是什么？\n\n```java\n\
+  class MyException extends Object {\n    MyExcetion(String str) {\n        super(str);\n\
+  \    }\n}\nclass Program {\n    public static void main(String args[]){ {\n    \
+  \    int i=10;\n        int j=11;\n        if (j> i)\n            throw new MyException(\"\
+  j is greater\");\n    }\n}\n```\n\n| 选项 | 结果 |\n|---|---|\n| A | 编译错误 <----正确答案\
+  \ |\n| B | 运行时异常 |\n| C | J is greater |\n\n## Q.4: 输出是什么？\n\n```java\nclass MyException\
+  \ extends Exception {\n    MyException(String str) {\n        super(str);\n    }\n\
+  }\nclass Program {\n    public static void main(String args[]){\n        int i=0;\n\
+  \        int j=1;\n        if (j> i)\n            throw new MyException(\"j is greater\"\
+  );\n    }\n}\n```\n\n| 选项 | 结果 |\n|---|---|\n| A | 编译错误 |\n| B | 运行时异常 |\n| C |\
+  \ J is greater |\n| D | 以上都不是 <----正确答案 |\n\n## Q.5: 输出是什么？\n\n```java\nclass MyException\
+  \ extends RuntimeException {\n    MyException(String str) {\n        super(str);\n\
+  \    }\n}\nclass Program {\n    public static void main(String args[]){\n      \
+  \  int i=10;\n        int j=1;\n        if (j> i)\n            throw new MyException(\"\
+  j is greater\");\n    }\n}\n```\n\n| 选项 | 结果 |\n|---|---|\n| A | RuntimeException\
+  \ <----正确答案 |\n| B | 编译错误 |\n| C | JVM Error |\n| D | 以上都不是 |\n\n## Q.6: 输出是什么？\n\
+  \n```java\nclass MyException extends Exception {\n    MyException(String str) {\n\
+  \        super(str);\n    }\n}\nclass Program {\n    public static void main(String\
+  \ args[]) throws Exception{\n        int i=10;\n        int j=11;\n        if (j>\
+  \ i)\n            throw new MyException(\"j is greater\");\n    }\n}\n```\n\n| 选项\
+  \ | 结果 |\n|---|---|\n| A | Object Exception |\n| B | JVM Error |\n| C | Runtime\
+  \ Exception <----正确答案 |\n| D | 编译错误 |\n\n"
