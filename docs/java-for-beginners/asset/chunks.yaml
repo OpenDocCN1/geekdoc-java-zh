@@ -1,0 +1,3186 @@
+- fmt: "\n![Image](images/kf-logo.png)\n\n“LEARNING STARTS WITH VIEWING THE WORLD\
+    \ DIFFERENTLY.”\n\n*Knowledge flow —* A mobile learning platform provides Apps\
+    \ and Books.\n\nKnowledge flow brings you learning book of Java for Beginners.\
+    \ This book is for all information technology and computer science students and\
+    \ professionals across the world.\n\nFollow us on\n\n- [Facebook](https://www.facebook.com/knowledgeflow.in/)\n\
+    - [Google plus](https://plus.google.com/113472427882571304943/posts)\n- [Twitter](https://twitter.com/Knowledgeflow1)\n\
+    \nFor more information visit us at\n\n- [Knowledgeflow.in](http://knowledgeflow.in/)\n\
+    - [knowledgeflowapps.blogspot.in](https://www.google.com/url?q=http://knowledgeflowapps.blogspot.in&sa=D&usg=AFQjCNHc2wWlbXLmU1mDqn5EwiMCGAoQKw)\n\
+    \nThank you for using Knowledge flow eBooks\n\n![Image](images/page-divider.png)\n\
+    \n# JAVA FOR BEGINNERS\n\n1 [1. Introduction to Java](#index_split_003.html_id_Introduction_to_Java)\n\
+    2 [2. Features of java](#index_split_004.html_id_Features_of_Java)\n3 [3. Data\
+    \ Types, Variables and Arrays](#index_split_005.html_id_Data_Types)\n4 [4. Operators](#index_split_006.html_id_Operators)\n\
+    5 [5. Control statements](#index_split_007.html_id_Control_Statements)\n6 [6.\
+    \ Classes and methods](#index_split_008.html_id_Classes_and_Methods)\n7 [7. Inheritance](#index_split_009.html_id_Inheritance)\n\
+    8 [8. Packages and Interface](#index_split_010.html_id_Packages)\n9 [9. Exception\
+    \ Handling](#index_split_011.html_id_Exceptional_Handling)\n10 [10. Event Handling](#index_split_012.html_id_Event_handling)\n\
+    11 [11. The Applet Class](#index_split_013.html_id_The_Applet_class)\n\n![Image](images/page-divider.png)\n\
+    \n## Disclaimer\n\nThis eBook contents is for informational and study purposes\
+    \ only. The Knowledge flow makes no claims, promises, or guarantees about the\
+    \ accuracy, completeness, or adequacy of the contents of this eBook and no legal\
+    \ liability or other responsibility is accepted by Knowledge flow for any errors,\
+    \ omissions, or statements on this eBook. \n\n![Image](images/kf-logo.png)\n\n\
+    ![Image](images/page-divider.png)\n\n## Introduction to Java\n\nJava was designed\
+    \ and conceived by James Gosling, Patrick Naughton, Chris Warth, Ed Frank and\
+    \ Mike Sherdan, which was done at Sun Microsystems in year 1991. It took almost\
+    \ 18 months for `java` to come into existence as a working version. Initially\
+    \ `java` was known as “Oak”, which was then renamed as “Java” in year 1995. Since\
+    \ `java` had much had much of its character designed from `C` and `C++`.\n\nThis\
+    \ character inherited by the two well known and simple programming makes `java`\
+    \ more appealing to computer and it giants which would lead to a large scale success.\
+    \ But `java` is misunderstood as the sophisticated internet version representation\
+    \ of `C++`. It has significant difference practically and philosophically when\
+    \ compared to `C++`. If you have good knowledge in `C++` then you will find `java`\
+    \ as your cup of tea and you will at ease using and understanding `java`.\n\n\
+    ![Image](images/java-logo.jpeg)\n\nLogo of Java\n\nTherefore, there are two main\
+    \ reasons for the evolution of the computer languages.\n\nJava had enhanced and\
+    \ refined the object oriented scenario of `C++`. This gave more features to the\
+    \ users which are as follows.\n\n- Multithreading.\n- Library which would provide\
+    \ easy internet access.\n- One of the `java`’s magic was the byte code. Byte code\
+    \ is set of instruction which is highly optimized and designed to be executed\
+    \ by `JVM` (Java Virtual Machine). It is an interpreter for byte code. This lead\
+    \ to the design of truly portable programs.\n\nJava redesigned the internet with\
+    \ new feature and networked program which are as follows.\n\n- Applets - It is\
+    \ a kind of `java` program that is to be transmitted over and executed automatically\
+    \ by `java` compatible web browsers.\n- Security - It provided the security of\
+    \ downloading various applets and programs from internet without containing any\
+    \ virus or Trojan horses.\n- Portability- Since there is large and different kind\
+    \ of operating systems therefore it provides the freedom of running in any operating\
+    \ system so its program can be used in different OS without any issues of compatibility.\n\
+    \nThe evolutions in `java` are as follows.\n\n- Java 1.0\n- Java 1.1\n- Java 1.2\n\
+    - J2SE\n- J2SE 1.2\n- J2SE 1.3\n- J2SE 1.4\n- J2SE 5\n- J2SE 5 made various changes\
+    \ to Java\n\nThe new feature that was added is as follow:\n\n- Generics\n- Annotations\n\
+    - Auto boxing and auto-unboxing\n- Enumerations\n- Enhanced, for-each style for\
+    \ loop\n- Variable-length arguments\n- Static import\n- Formed I/O\n- Concurrency\
+    \ utilities\n\nIn J2SE 5, and the developers kit was called `JDK 5`. 1.5 used\
+    \ as internal version number and this is referred as developer version number.\n\
+    \nJava became the center of innovation in computer technological world. The existence\
+    \ of `JVM` and byte code changed the scenario of security and portability in the\
+    \ programming world. The way the new ideas are put into the language has been\
+    \ redefined by the JCP i.e. java community process.\n\n![Image](images/page-divider.png)\n\
+    \n## Features of Java\n\n### Object-oriented programming\n\n- This is the core\
+    \ feature of `java`.\n- This is to manage the increase in the complexity.\n- It\
+    \ provides a very sophisticated and well defined interface for the data.\n- It\
+    \ is also known as data controlling access code.\n- Another important feature\
+    \ of `java` being object oriented is abstraction.\n- Complexity can be managed\
+    \ using abstraction.\n\n### The three OOP principles\n\n- **Encapsulation**: Its\
+    \ agenda is to manipulate the data and keep the data isolated and safe from the\
+    \ external interference and misuse. The encapsulation is done by the use of the\
+    \ protective wrapper. This prevents the external sources from accessing the data\
+    \ or the code.\n\n![Image](images/encapsulation.png)\nEncapsulation in Java\n\n\
+    - **Inheritance**: In this this the object would acquire the property of other\
+    \ object present. It just follows the concept of the hierarchical classification.\
+    \ This consists of classes, sub classes. Inheritance also is linked or interacts\
+    \ with encapsulation as well.\n\n![Image](images/inheritance.png)\nInheritance\n\
+    \n- **Polymorphism**: It is means many ways to carry out the method but from one\
+    \ input.\n\n![Image](images/polymorphism.png)\nPolymorphism\n\n### Byte code\n\
+    \nThis is highly optimized by set of instructions designed which is designed to\
+    \ be executed by Java virtual machine that is `JVM`.\n\n### JVM\n\n- It was designed\
+    \ as an interpreter for the byte code.\n- Another feature of `java` program is\
+    \ that it is simple.\n- This enables the professionals to learn.\n- Work in a\
+    \ very effective manner but it is also very easy to understand.\n\n### Robust\n\
+    \nThe ability that includes creating a robust program that can be a multiplatform\
+    \ program are given a very high priority in design of Java.\n\n### Multithreading\n\
+    \nThe real world requirements are met by `java` which helps to achieve the requirement\
+    \ of creating interactive and networked programs.\n\n### High performance\n\n\
+    - The advantage of being a multi platform functioning program helps to find the\
+    \ cross platform solution.\n- It provides benefits of being an platform independent\
+    \ code with the help of `java` run time system.\n\n### Distributed\n\n- This is\
+    \ because it is been designed for the internet which has a distributed environment\
+    \ because of the handling of TCP/IP protocols.\n- This allows the program to find\
+    \ out methods across a network.\n- `URL` is used in this to access a file on internet.\n\
+    - This property supports `RMI` (Remote Method Invocation).\n\n### Dynamic\n\n\
+    - This is the action that is taken during the run-time such as to resolve, verify\
+    \ and add objects.\n- It provides us the function which will allow us to link\
+    \ code dynamically that will be safe.\n\n### Simple program\n\n```java\n/* Call\
+    \ this file “Example.java” */\nclass Example {\npublic static void main (string\
+    \ args []) {\n    System.out.println (\"this is a simple java program.\");\n \
+    \   }\n}\n```\n\nCommand line argument to pass the class name is\n\n```bash\n\
+    C :\\> java Example\n```\n\nSimple output of the above program\n\n```\nthis is\
+    \ a simple java program.\n```\n"
+  raw: "\n\n![Image](images/kf-logo.png)\n\n“LEARNING STARTS WITH VIEWING THE WORLD\
+    \ DIFFERENTLY.”\n\n*Knowledge flow —* A mobile learning platform provides Apps\
+    \ and Books.\n\nKnowledge flow brings you learning book of Java for Beginners.\
+    \ This book is for all information technology and computer science students and\
+    \ professionals across the world.\n\nFollow us on\n\n[Facebook](https://www.facebook.com/knowledgeflow.in/)\n\
+    \n[Google plus](https://plus.google.com/113472427882571304943/posts)\n\n[Twitter](https://twitter.com/Knowledgeflow1)\n\
+    \nFor more information visit us at\n\n[Knowledgeflow.in](http://knowledgeflow.in/)\n\
+    \n[knowledgeflowapps.blogspot.in](https://www.google.com/url?q=http://knowledgeflowapps.blogspot.in&sa=D&usg=AFQjCNHc2wWlbXLmU1mDqn5EwiMCGAoQKw)\n\
+    \nThank you for using Knowledge flow eBooks\n\n![Image](images/page-divider.png)\n\
+    \nJAVA FOR BEGINNERS\n\n[1\\. Introduction to Java](#index_split_003.html_id_Introduction_to_Java)\n\
+    \n[2. Features of java](#index_split_004.html_id_Features_of_Java)\n\n[3\\. Data\
+    \ Types, Variables and Arrays](#index_split_005.html_id_Data_Types)\n\n[4. Operators](#index_split_006.html_id_Operators)\n\
+    \n[5\\. Control statements](#index_split_007.html_id_Control_Statements)\n\n[6\\\
+    . Classes and methods](#index_split_008.html_id_Classes_and_Methods)\n\n[7. Inheritance](#index_split_009.html_id_Inheritance)\n\
+    \n[8. Packages and Interface](#index_split_010.html_id_Packages)\n\n[9\\. Exception\
+    \ Handling](#index_split_011.html_id_Exceptional_Handling)\n\n[10. Event Handling](#index_split_012.html_id_Event_handling)\n\
+    \n[11\\. The Applet Class](#index_split_013.html_id_The_Applet_class)\n\n![Image](images/page-divider.png)\n\
+    \n## Disclaimer\n\nThis eBook contents is for informational and study purposes\
+    \ only. The Knowledge flow makes no claims, promises, or guarantees about the\
+    \ accuracy, completeness, or adequacy of the contents of this eBook and no legal\
+    \ liability or other responsibility is accepted by Knowledge flow for any errors,\
+    \ omissions, or statements on this eBook. \n\n![Image](images/kf-logo.png)\n\n\
+    ![Image](images/page-divider.png)\n\n## Introduction to Java\n\nJava was designed\
+    \ and conceived by **James Gosling, Patrick Naughton, Chris Warth, Ed Frank and\
+    \ Mike Sherdan**, which was done at Sun Microsystems in year 1991\\. It took almost\
+    \ 18 months for java to come into existence as a working version. Initially java\
+    \ was known as “Oak”, which was then renamed as “Java” in year 1995\\. Since java\
+    \ had much had much of its character designed from C and C++.\n\nThis character\
+    \ inherited by the two well known and simple programming makes java more appealing\
+    \ to computer and it giants which would lead to a large scale success. But java\
+    \ is misunderstood as the sophisticated internet version representation of C++.\
+    \ It has significant difference practically and philosophically when compared\
+    \ to C++. If you have good knowledge in C++ then you will find java as your cup\
+    \ of tea and you will at ease using and understanding java.\n\n![Image](images/java-logo.jpeg)\n\
+    \nLogo of Java\n\nTherefore, there are two main reasons for the evolution of the\
+    \ computer languages.\n\nJava had enhanced and refined the object oriented scenario\
+    \ of C++. This gave more features to the users which are as follows.\n\n*   Multithreading.\n\
+    \n*   Library which would provide easy internet access.\n\n*   One of the java’s\
+    \ magic was the byte code. Byte code is set of instruction which is highly optimized\
+    \ and designed to be executed by JVM (Java Virtual Machine). It is an interpreter\
+    \ for byte code. This lead to the design of truly portable programs.\n\nJava redesigned\
+    \ the internet with new feature and networked program which are as follows.\n\n\
+    *   Applets - It is a kind of java program that is to be transmitted over and\
+    \ executed automatically by java compatible web browsers.\n\n*   Security - It\
+    \ provided the security of downloading various applets and programs from internet\
+    \ without containing any virus or Trojan horses.\n\n*   Portability- Since there\
+    \ is large and different kind of operating systems therefore it provides the freedom\
+    \ of running in any operating system so its program can be used in different OS\
+    \ without any issues of compatibility.\n\nThe evolutions in java are as follows.\n\
+    \n*   Java 1.0\n\n*   Java 1.1\n\n*   Java 1.2\n\n*   J2SE\n\n*   J2SE 1.2\n\n\
+    *   J2SE 1.3\n\n*   J2SE 1.4\n\n*   J2SE 5\n\n*   J2SE 5 made various changes\
+    \ to Java\n\nThe new feature that was added is as follow.\n\n*   Generics\n\n\
+    *   Annotations\n\n*   Auto boxing and auto-unboxing\n\n*   Enumerations\n\n*\
+    \   Enhanced, for-each style for loop\n\n*   Variable-length arguments\n\n*  \
+    \ Static import\n\n*   Formatted I/O\n\n*   Concurrency utilities\n\nIn J2SE 5,\
+    \ and the developers kit was called JDK 5\\. 1.5 used as internal version number\
+    \ and this is referred as developer version number.\n\nJava became the center\
+    \ of innovation in computer technological world. The existence of JVM and byte\
+    \ code changed the scenario of security and portability in the programming world.\
+    \ The way the new ideas are put into the language has been redefined by the JCP\
+    \ i.e. java community process.\n\n![Image](images/page-divider.png)\n\n## Features\
+    \ of Java\n\nObject-oriented programming\n\n*   This is the core feature of java.\n\
+    \n*   This is to manage the increase in the complexity.\n\n*   It provides a very\
+    \ sophisticated and well defined interface for the data.\n\n*   It is also known\
+    \ as data controlling access code.\n\n*   Another important feature of java being\
+    \ object oriented is abstraction.\n\n*   Complexity can be managed using abstraction.\n\
+    \nThe three OOP principles\n\n*   Encapsulation- Its agenda is to manipulate the\
+    \ data and keep the data isolated and safe from the external interference and\
+    \ misuse. The encapsulation is done by the use of the protective wrapper. This\
+    \ prevents the external sources from accessing the data or the code.\n\n![Image](images/encapsulation.png)\n\
+    \nEncapsulation in Java\n\n*   Inheritance- In this the object would acquire the\
+    \ property of other object present. It just follows the concept of the hierarchical\
+    \ classification. This consists of classes, sub classes. Inheritance also is linked\
+    \ or interacts with encapsulation as well.\n\n![Image](images/inheritance.png)\n\
+    \nInheritance\n\n*   Polymorphism- It is means many ways to carry out the method\
+    \ but from one input.\n\n![Image](images/polymorphism.png)\n\nPolymorphism\n\n\
+    Byte code\n\nThis is highly optimized by set of instructions designed which is\
+    \ designed to be executed by Java virtual machine that is JVM.\n\nJVM\n\n*   It\
+    \ was designed as an interpreter for the byte code.\n\n*   Another feature of\
+    \ java program is that it is simple.\n\n*   This enables the professionals to\
+    \ learn.\n\n*   Work in a very effective manner but it is also very easy to understand.\n\
+    \nRobust\n\nThe ability that includes creating a robust program that can be a\
+    \ multiplatform program are given a very high priority in design of Java.\n\n\
+    Multithreading\n\nThe real world requirements are met by java which helps to achieve\
+    \ the requirement of creating interactive and networked programs.\n\nHigh performance\n\
+    \n*   The advantage of being a multi platform functioning program helps to find\
+    \ the cross platform solution.\n\n*   It provides benefits of being an platform\
+    \ independent code with the help of java run time system.\n\nDistributed\n\n*\
+    \   This is because it is been designed for the internet which has a distributed\
+    \ environment because of the handling of TCP/IP protocols.\n\n*   This allows\
+    \ the program to find out methods across a network.\n\n*   URL is used in this\
+    \ to access a file on internet.\n\n*   This property supports RMI (Remote Method\
+    \ Invocation).\n\nDynamic\n\n*   This is the action that is taken during the run-time\
+    \ such as to resolve, verify and add objects.\n\n*   It provides us the function\
+    \ which will allow us to link code dynamically that will be safe.\n\nSimple program\n\
+    \n/* Call this file “Example.java” */\n\nClass Example {\n\nPublic static void\
+    \ main (string args []) {\n\nSystem.out.println (“this is a simple java program.”);\n\
+    \n}\n\n}\n\nCommand line argument to pass the class name is\n\nC :\\> java Example\n\
+    \nSimple output of the above program\n\nthis is a simple java program."
+  toc: []
+  trans: '
+
+
+    ![Image](img/kf-logo.png)
+
+
+    “学习始于不同的视角看待世界。”
+
+
+    *Knowledge flow —* 一个移动端学习平台，提供 App 和书籍。
+
+
+    Knowledge flow 为你带来《Java 初学者教程》。这本书面向全球所有信息技术和计算机科学专业的学生和专业人士。
+
+
+    关注我们
+
+
+    - [Facebook](https://www.facebook.com/knowledgeflow.in/)
+
+    - [Google plus](https://plus.google.com/113472427882571304943/posts)
+
+    - [Twitter](https://twitter.com/Knowledgeflow1)
+
+
+    欲了解更多信息请访问：
+
+
+    - [Knowledgeflow.in](http://knowledgeflow.in/)
+
+    - [knowledgeflowapps.blogspot.in](https://www.google.com/url?q=http://knowledgeflowapps.blogspot.in&sa=D&usg=AFQjCNHc2wWlbXLmU1mDqn5EwiMCGAoQKw)
+
+
+    感谢使用 Knowledge flow 电子书
+
+
+    ![Image](img/page-divider.png)
+
+
+    # JAVA 初学者教程
+
+
+    1 1. Java 简介
+
+    2 2. Java 特特性
+
+    3 3. 数据类型、变量和数组
+
+    4 4. 运算符
+
+    5 5. 控制语句
+
+    6 6. 类与方法
+
+    7 7. 继承
+
+    8 8. 包与接口
+
+    9 9. 异常处理
+
+    10 10. 事件处理
+
+    11 11. Applet 类
+
+
+    ![Image](img/page-divider.png)
+
+
+    ## 免责声明
+
+
+    本电子书内容仅供信息和学习参考。Knowledge flow 对本电子书内容的准确性、完整性或充分性不作任何声明、承诺或保证，Knowledge flow
+    对电子书中的任何错误、遗漏或陈述不承担法律责任或其他责任。
+
+
+    ![Image](img/kf-logo.png)
+
+
+    ![Image](img/page-divider.png)
+
+
+    ## Java 简介
+
+
+    Java 由 James Gosling、Patrick Naughton、Chris Warth、Ed Frank 和 Mike Sherdan 于 1991
+    年在 Sun Microsystems 设计和构思。`java` 花了几乎 18 个月才出现一个可运行的版本。最初 `java` 被称为“Oak”，随后在
+    1995 年更名为“Java”。由于 `java` 的许多特性是设计自 `C` 和 `C++`。
+
+
+    这种继承了这两种知名且简单的编程语言的特性，使得 `java` 对计算机行业巨头更具吸引力，从而导致了大规模的成功。但 `java` 被误解为 `C++`
+    的复杂的互联网版本。在实践和哲学上，它与 `C++` 有显著区别。如果你有良好的 `C++` 知识，你会发现 `java` 是你的菜，并且在使用和理解 `java`
+    时感到轻松。
+
+
+    ![Image](img/java-logo.jpeg)
+
+
+    Java Logo
+
+
+    因此，计算机语言的进化有两个主要原因。
+
+
+    Java 增强并完善了 `C++` 的面向对象场景。这为用户提供了更多功能，如下：
+
+
+    - 多线程。
+
+    - 提供便捷互联网访问的库。
+
+    - `java` 的魔力之一是字节码。字节码是一组高度优化的指令集，设计用于由 `JVM`（Java 虚拟机）执行。它是字节码的解释器。这导致了真正具有可移植性程序的设计。
+
+
+    Java 通过新的功能和网络程序重新设计了互联网，这些如下：
+
+
+    - Applets - 这是一种 `java` 程序，可以通过兼容 `java` 的网络浏览器传输并自动执行。
+
+    - 安全 - 它提供了从互联网下载各种 applet 和程序的安全性，且不包含任何病毒或木马。
+
+    - 可移植性 - 由于存在大量且不同的操作系统，因此它提供了在任何操作系统上运行的自由，因此其程序可以在不同的操作系统中使用，而不会出现任何兼容性问题。
+
+
+    `java` 的进化如下：
+
+
+    - Java 1.0
+
+    - Java 1.1
+
+    - Java 1.2
+
+    - J2SE
+
+    - J2SE 1.2
+
+    - J2SE 1.3
+
+    - J2SE 1.4
+
+    - J2SE 5
+
+    - J2SE 5 对 Java 进行了各种更改
+
+
+    新增的功能如下：
+
+
+    - 泛型 (Generics)
+
+    - 注解 (Annotations)
+
+    - 自动装箱和自动拆箱 (Auto boxing and auto-unboxing)
+
+    - 枚举 (Enumerations)
+
+    - 增强型 for-each 循环
+
+    - 变长参数 (Variable-length arguments)
+
+    - 静态导入 (Static import)
+
+    - 格式化 I/O (Formed I/O)
+
+    - 并发工具类 (Concurrency utilities)
+
+
+    在 J2SE 5 中，开发工具包被称为 `JDK 5`。
+
+
+    在 J2SE 5 中，开发工具包被称为 `JDK 5`。
+
+
+    ## Java 特性
+
+
+    ![Image](img/page-divider.png)
+
+
+    ### 面向对象编程
+
+
+    - 这是 `java` 的核心特性。
+
+    - 它提供了良好的定义良好的接口。
+
+    - `java` 的另一个重要特性是抽象性。
+
+    - 这种抽象来管理复杂性。
+
+
+    ### OOP 原则
+
+
+    - **封装**: 它保护数据免受外部干扰和误用。通过包装器实现。
+
+    - 这防止了外部源访问数据。
+
+
+    ![Image](img/encapsulation.png)
+
+    封装
+
+
+    在 Java 中的封装
+
+
+    - **继承**: 在此对象可以获取其他对象的属性。它遵循分级概念。
+
+    - 它包含类和子类。
+
+    - 这种特性是面向对象的。
+
+    - 继承也可以与封装进行交互。
+
+
+    ![Image](img/inheritance.png)
+
+    继承
+
+
+    - **多态**: 它意味着有多种执行方法的方法。
+
+
+    ![Image](img/polymorphism.png)
+
+    多态
+
+
+    ### 字节码
+
+
+    这是一组高度优化的指令，设计用于由虚拟机执行。
+
+
+    ### JVM
+
+
+    - 它被设计为字节码的解释器。
+
+    - `java` 的另一个特性是简单。
+
+    - 这使得专业人士能够学习。
+
+    - 以非常有效的方式工作，但也容易理解。
+
+
+    ### 健壮性
+
+
+    创建健壮的多平台程序的能力在 Java 设计中被赋予极高优先级。
+
+
+    ### 多线程
+
+
+    `java` 满足了现实世界的需求，有助于创建交互式和网络程序。
+
+
+    ### 高性能
+
+
+    - 多平台运行程序的优势有助于找到跨平台解决方案。
+
+    - 通过 `java` 运行时系统的帮助提供了平台无关代码的优势。
+
+
+    ### 分布式
+
+
+    - 这是因为它是为互联网设计的，由于处理了 TCP/IP 协议具有分布式环境。
+
+    - 这允许程序跨网络发现方法。
+
+    - `URL` 用于访问互联网上的文件。
+
+    - 该属性支持 `RMI`（远程方法调用）。
+
+
+    ### 动态
+
+
+    - 这是在运行时采取的操作，例如解析、验证和添加对象。
+
+    - 它为我们提供了函数，允许我们动态地链接代码，这种方式是安全的。
+
+
+    '
+- fmt: "\n# Calling of the file in `java cmd`\n\nCalling of the file: “Example.java”.\n\
+    \n![Image](images/page-divider.png)\n\n## Data Types\n\n### Integers\nIt includes\
+    \ whole valued signed numbers which are as follow.\n\n- `Byte`: Whose width is\
+    \ 8 and it ranges from -128 to 127. It is the smallest integer type. It is useful\
+    \ when user is dealing with stream or flowing data from a network or a file.\n\
+    Declaration of two `byte` variables called `x` and `y` is as follow:\n```java\n\
+    Byte x, y;\n```\n\n- `Short`: The width of this type of integer is 16 and it ranges\
+    \ from -32,768 to 32,767. It is the least commonly used data type in `java`.\n\
+    Declaration:\n```java\nShort a;\nShort b;\n```\n\n- `Int`: The width of this type\
+    \ of integer is 32 and it ranges from -2,147,483,648 to 2,147,483,647. It is more\
+    \ efficient as compared to `byte` and `short`. It is commonly used to control\
+    \ loops and indexed arrays.\nDeclaration:\n```java\nInt a;\n```\n\n- `Long`: The\
+    \ width of this type of integer is 64 and it ranges from -9,223,372,036,854,775,808\
+    \ to 9,223,372,036,854,775,807. This is used for those values which are large\
+    \ enough that the integer cannot handle them.\nDeclaration:\n```java\nInt light\
+    \ speed;\nLong days;\nLong second;\nSeconds = days *24 *60*60;\n```\n\n### Floating\
+    \ point type\nThis is for real numbers used for calculation such as square roots,\
+    \ sine and cosine. These are of two types.\n\n- `Float`: Width in bits is 32 and\
+    \ range is from 1.4e-045 to 3.4e + 038. `Float` is used as a variable type for\
+    \ the fractional component, but specifies single precision. It can be used in\
+    \ representing dollars and cents.\nDeclaration:\n```java\nFloat hightemp;\n```\n\
+    \n- `Double`: Width in bits is 64 and range is from 4.9e-324 to 1.8e + 308. it\
+    \ is used and is optimized in such a way that I can be used for high speed mathematic\
+    \ calculation. It has double precision which is faster than the single precision.\
+    \ Function such as `sin()` and `sqrt()` etc, return `double` values.\nDeclaration:\n\
+    ```java\nDouble pi, r, a;\nr = 10.4;\npi = 3.14;\na = pi* r * r;\n```\n\n### Characters\n\
+    - The data type used to store or declare character in `java` is `char`.\n- It\
+    \ is 16-bit type in `java`. Range of a `char` is 0 to 65,536.\n- There are no\
+    \ `chars` which are negative in nature.\n\nProgram demonstration for `char`:\n\
+    ```java\nClass charExample\n{\nPublic static void main (String args []) {\n  \
+    \  Char a, b;\n    a=88;\n    b=’y’;\n    system.out.print (“a and b: “);\n  \
+    \  system.out.println (a + “ “ +b);\n}\n}\n```\n\n### Booleans\n- It is a primitive\
+    \ type for logical values.\n- This tends have only one of two possible values,\
+    \ `true` or `false`.\n- It is governed by `if` or `for` control statements.\n\n\
+    ## Variables\nIt is basic unit of storage and variables have scope, visibility\
+    \ and lifetime.\n\nDeclaration of variables:\n```java\nInt x, y, z;\n```\nOr\n\
+    ```java\nInt x=1, y=2, z=5;\n```\n\n## Type conversion and casting\nIf there is\
+    \ any compatibility existing between two types then `java` would automatically\
+    \ performs the conversion.\n\n#### Java automatic conversion\n- It will be performed\
+    \ when two conditions are met.\n- When the two types are compatible;\n- Destination\
+    \ type is larger than the source type.\n- After the two conditions are been satisfied\
+    \ a widening conversion takes place.\n\n#### Casting compatible types\n- It is\
+    \ a simple and explicit type of conversion.\n- When a floating type of conversion\
+    \ is attached to an integer type this type of conversion is called truncation.\n\
+    - It is a kind of conversion sometime called narrowing conversion.\n\n## Arrays\n\
+    It is a group of similar variables that would be referred by a common name. The\
+    \ element available in the array is accessed through index. This can be created\
+    \ and may have one or more dimension.\n\n### Types of arrays\nThere are two main\
+    \ types of arrays:\n1. One-dimensional arrays\n2. Multi-dimensional arrays\n\n\
+    ### One-dimensional Arrays\nIt’s a list of similar types of data. Before you create\
+    \ array you need to create a variable of any type.\nSyntax:\n```java\nType variable-name\
+    \ [ ];\nInt year_month [ ];\n```\n\n### Multi-dimensional Arrays\nIt is arrays\
+    \ of arrays need to specify each dimensional array variables, additional index\
+    \ using other square brackets represented as.\n```java\nInt twoD [ ] [ ] = new\
+    \ int [6] [7];\n```\n![Image](images/page-divider.png)\n\n## Operators\nThere\
+    \ are four main types of operator:\n- Arithmetic operators\n- Bitwise operators\n\
+    - Relational operators\n- Boolean logical operators\n\n### Arithmetic operators\n\
+    \ Addition Addition: This operator is used to add the values. It is represented\
+    \ by `+`. For example `A = a + 4`.\n- Subtraction: This operator is used to subtract\
+    \ the values. It is represented by `-`. For example `A = a - 4`.\n- Multiplication:\
+    \ This operator is used to multiply the values. It is represented by `*`. For\
+    \ example `A = a * 4`.\n- Division: This operator is used to divide the values.\
+    \ It is represented by `/`.\n- Modulus: This operator is used to find the remainder.\
+    \ It is represented by `%`. For example `A = 4`.\n- Increment: This operator is\
+    \ used to increase its values. It is represented by `++`. For example `a++`.\n\
+    - Decrement: This operator is used to decrease its operands. It is represented\
+    \ by `--`. For example `a--`.\n\n### Bitwise operators\n- Unary NOT: This inverts\
+    \ all of the bits. It is represented by `~`.\n- And: It produces 1 if both operands\
+    \ are 1. It is represented by `&`.\n- OR: If either of operand is one it is represented\
+    \ by `|`.\n- XOR: If either of operand is one but not both, it is represented\
+    \ by `^`.\n- Left shift: It shifts or moves all of the bits to the left side.\
+    \ It is represented by `<<`.\n- Right shift: It shifts or moves all of the bits\
+    \ to the right side. It is represented by `>>`.\n\n### Relational operators\n\
+    - Equal to: This operator shows that the values are equal to each other. It is\
+    \ represented by `==`.\n- Not equal to: This relation operator shows that the\
+    \ values are not equal to each other. It is represented by `!=`.\n- Greater than:\
+    \ This operator shows that one value is greater when compared to other. It is\
+    \ represented by `>`.\n- Less than: This operator shows that one value is less\
+    \ when compared to other. It is represented by `<`.\n- Greater than or equal to:\
+    \ This shows that one value is greater or equal but not less compared to other.\
+    \ It is represented by `>=`.\n- Less than or equal to: This shows that one value\
+    \ is smaller or equal but not greater compared to other. It is represented by\
+    \ `<=`.\n\n### Boolean logical operators\n- Logical AND: It is represented by\
+    \ `&`.\n- Logical OR: It is signed `|`.\n- Logical XOR: It is shown using `^`.\n\
+    - Logical Unary Not: It is depicted as `!`.\n\n### Assignment operators\nThe assignment\
+    \ is the single equal sign that is represented by `=`.\nGeneral representation:\n\
+    ```java\nvar = expression;\n```\nIn this the variable, which is represented as\
+    \ `var` should be compatible with the type of `expression`.\n```java\nInt a, b,\
+    \ c;\na = b = c = 100;\n```\n\n### ? Operator\nThis is used for replacement of\
+    \ if then else statements and it is represented as `?`.\nFor example:\n```java\n\
+    expression a ? expression b : expression c\n```\n"
+  raw: 'Calling of the file in java cmd
+
+
+    Calling of the file: “Example.java”.
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Data Types
+
+
+    Integers
+
+
+    It includes whole valued signed numbers which are as follow.
+
+
+    Byte- Whose width is 8 and it ranges from -128 to 127\. It is the smallest integer
+    type. It is useful when user is dealing with stream or flowing data from a network
+    or a file.
+
+
+    Declaration of two byte variables called x and y is as follow
+
+
+    Byte x, y;
+
+
+    Short- The width of this type of integer is 16 and it ranges from -32,768 to 32,767\.
+    It is the least commonly used data type in java.
+
+
+    Declaration
+
+
+    Short a;
+
+
+    Short b;
+
+
+    Int- The width of this type of integer is 32 and it ranges from -2,147,483,648
+    to 2,147,483,647\. It is more efficient as compared to byte and short. It is commonly
+    used to control loops and indexed arrays.
+
+
+    Declaration
+
+
+    Int a;
+
+
+    Long- The width of this type of integer is 64 and it ranges from -9,223,372,036,854,775,808
+    to 9,223,372,036,854,775,807\. This is used for those values which are large enough
+    that the integer cannot handle them.
+
+
+    Declaration
+
+
+    Int light speed;
+
+
+    Long days;
+
+
+    Long second;
+
+
+    Seconds = days *24 *60*60;
+
+
+    Floating point type
+
+
+    This is for real numbers used for calculation such as square roots, sine and cosine.
+    These are of two types.
+
+
+    Float- Width in bits is 32 and range is from 1.4e-045 to 3.4e + 038. Float is
+    used as a variable type for the fractional component, but specifies single precision.
+    It can be used in representing dollars and cents.
+
+
+    Declaration
+
+
+    Float hightemp;
+
+
+    Double- Width in bits is 64 and range is from 4.9e-324 to 1.8e + 308.it is used
+    and is optimized in such a way that I can be used for high speed mathematic calculation.
+    It has double precision which is faster than the single precision. Function such
+    as sin()and sqrt() etc, return double values.
+
+
+    Declaration
+
+
+    Double pi, r, a;
+
+
+    r = 10.4;
+
+
+    pi = 3.14;
+
+
+    a = pi* r * r;
+
+
+    Characters
+
+
+    *   The data type used store or declare character in java is char.
+
+
+    *   It is 16-bit type in java. Range of a char is 0 to 65,536.
+
+
+    *   There are no chars which are negative in nature.
+
+
+    Program demonstration for char
+
+
+    Class charExample
+
+
+    {
+
+
+    Public static void main (String args []) {
+
+
+    Char a, b;
+
+
+    a=88;
+
+
+    b=’y’;
+
+
+    system.out.print (“a and b: “);
+
+
+    system.out.println (a + “ “ +b);
+
+
+    }
+
+
+    }
+
+
+    Booleans
+
+
+    *   It is a primitive type for logical values.
+
+
+    *   This tends have only one of two possible values, true or false.
+
+
+    *   It is governed by if or for control statements.
+
+
+    ## Variables
+
+
+    It is basic unit of storage and variables have scope, visibility and lifetime.
+
+
+    Declaration of variables
+
+
+    Int x, y, z;
+
+
+    Or
+
+
+    Int x=1, y=2, z=5;
+
+
+    Type conversion and casting
+
+
+    If there is any compatibility existing between two types then java would automatically
+    performs the conversion.
+
+
+    Java automatic conversion
+
+
+    *   It will be performed when two conditions are met.
+
+
+    *   When the two types are compatible;
+
+
+    *   Destination type is larger than the source type.
+
+
+    *   After the two conditions are been satisfied a widening conversion takes place.
+
+
+    Casting compatible types
+
+
+    *   It is a simple and explicit type of conversion.
+
+
+    *   When a floating type of conversion is attached to an integer type this type
+    of conversion is called truncation.
+
+
+    *   It is a kind of conversion sometime called narrowing conversion.
+
+
+    ## Arrays
+
+
+    It is a group of similar variables that would be referred by a common name. The
+    element available in the array is accessed through index. This can be created
+    and may have one or more dimension.
+
+
+    Types of arrays
+
+
+    There are two main types of arrays are.
+
+
+    1.  One-dimensional arrays
+
+
+    2.  Multi-dimensional arrays
+
+
+    One-dimensional Arrays
+
+
+    It’s a list of similar types of data. Before you create array you need to create
+    a variable of any type.
+
+
+    Syntax
+
+
+    Type variable-name [ ];
+
+
+    Int year_month [ ];
+
+
+    Multi-dimensional Arrays
+
+
+    It is arrays of arrays need to specify each dimensional array variables, additional
+    index using other square brackets represented as.
+
+
+    Int twoD [ ] [ ] = new int [6] [7];
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Operators
+
+
+    There are four main types of operator.
+
+
+    *   Arithmetic operators
+
+
+    *   The Bitwise operators
+
+
+    *   Relational operators
+
+
+    *   Boolean logical operators
+
+
+    Arithmetic operators
+
+
+    *   Addition- This operator is used to add the values. It is represented by “+“.
+    For example A = a + 4.
+
+
+    *   Subtraction-This operator is used to subtract the values. It is represented
+    by “- “. For example A = a - 4.
+
+
+    *   Multiplication- This operator is used to multiply the values. It is represented
+    by “*“. For example A = a * 4.
+
+
+    *   Division-This operator is used to divide the values. It is represented by
+    “/“. For example A = a / 4.
+
+
+    *   Modulus- This operator is used to find the remainder of the values when divided.
+    It is represented by “%“. For example A = 2 % 4\. Where A = 0.
+
+
+    *   Increment-This operator is used to increases its operand by one. It is represented
+    by “++“. For example a = a++ which is equal to a= a+1.
+
+
+    *   Decrement: This operator is used to decreases its operands by one. It is represented
+    by “--“. For example a = a-- which is equal to a= a-1.
+
+
+    Bitwise operators
+
+
+    Unary NOT- This inverts all of the bits of operand contained and it is represented
+    by “~“.
+
+
+    For example
+
+
+    ~00101010 = 11010101
+
+
+    And- It produces 1 bit if both operands are also 1 and it is represented by “&“.
+
+
+    For example
+
+
+    00101010
+
+
+    &00001111
+
+
+    000101010
+
+
+    OR- If either of the operand is one it produces 1 and It is represented by “|“.
+
+
+    For example
+
+
+    00101010
+
+
+    |00001111
+
+
+    00101111
+
+
+    XOR- If either of the bit operand is 1, then result is also one otherwise its
+    0 and it is represented by “^”.
+
+
+    For example
+
+
+    00101010
+
+
+    ^00001111
+
+
+    00100101
+
+
+    Left shift- It shifts or moves all of the bits in the particular given value to
+    the left side number of times that is been declared and it is represented by ”≪”.
+
+
+    Right shift- It shifts or moves all of the bits in the particular given value
+    to the right side number of times that is been declared and it is represented
+    by ”≫”.
+
+
+    Relational operators
+
+
+    Equal to- This relation operator shows that the values are equal to each other
+    and it is represented by “==”.
+
+
+    Not equal to- This relation operator shows that the values are not equal to each
+    other and it is represented by “!=”.
+
+
+    Greater than- This relation operator shows that one value is greater when compared
+    to other and it is represented by “>”.
+
+
+    Less than-This relation operator shows that one value is less when compared to
+    other and it is represented by “<”.
+
+
+    Greater than or equal to- This relation operator shows that one value is greater
+    or equal but not less when compared to other and it is represented by “>=”.
+
+
+    Less than or equal to-This relation operator shows that one value is smaller or
+    equal but not greater when compared to other and it is represented by “<=”.
+
+
+    Boolean logical operators
+
+
+    Logical AND- It is represented by “&”.
+
+
+    For example
+
+
+    A & B = If a is false and b is true it results as false, but is both are true
+    it results as true. Similarly when both are false it results as false.
+
+
+    Logical OR- It is signed |.
+
+
+    For example
+
+
+    A | B = If a is false and b is true it results as true, but is both are true it
+    results as true. Similarly when both are false it results as false.
+
+
+    Logical XOR- It is shown using “^”.
+
+
+    For example
+
+
+    A ^ B = If a is false and b is true it results as true, but is both are true it
+    results as false. Similarly when both are false it results as false.
+
+
+    Logical Unary Not- It is depicted as “!”.
+
+
+    For example
+
+
+    ! A = If a is false it results as true, but if a is true it results as false.
+
+
+    Assignment operators
+
+
+    The assignment is the single equal sign that is represented by “=”.
+
+
+    The general representation
+
+
+    var = expression;
+
+
+    In this the variable, which is represented as var should be compatible with the
+    type of expression.
+
+
+    Int a, b, c;
+
+
+    a = b = c = 100;
+
+
+    The ? Operator
+
+
+    This is used for replacement of if then else statements and it is represented
+    as “?”.
+
+
+    For example
+
+
+    expression a ? expression b : expression c'
+  toc: []
+  trans: "\n\n# 在 `java cmd` 中调用文件\n\n调用文件：“Example.java”。\n\n![Image](img/page-divider.png)\n\
+    \n## 数据类型\n\n### 整数\n它包括以下带符号的整数。\n\n- `Byte`: 宽度为 8 位，范围从 -128 到 127。它是最小的整数类型。当用户处理来自网络或文件的流或流动数据时它非常有用。\n\
+    两个名为 `x` 和 `y` 的 `byte` 变量声明如下：\n```java\nByte x, y;\n```\n\n- `Short`: 这种整数的宽度为\
+    \ 16 位，范围从 -32,768 到 32,767。它是 `java` 中不常用的数据类型。\n声明：\n```java\nShort a;\nShort\
+    \ b;\n```\n\n- `Int`: 这种整数的宽度为 32 位，范围从 -2,147,483,648 到 2,147,483,647。与 `byte`\
+    \ 和 `short` 相比，它更高效。它通常用于控制循环和索引数组。\n声明：\n```java\nInt a;\n```\n\n- `Long`: 这种整数的宽度为\
+    \ 64 位，范围从 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807。它用于那些整数无法处理的大数值。\n\
+    声明：\n```java\nInt light speed;\nLong days;\nLong second;\nSeconds = days *24 *60*60;\n\
+    ```\n\n### 浮点类型\n这是用于用于计算的实数，如平方根、正弦和余弦。它们分为类型。\n\n- `Float`: 宽度为 32 位，范围从 1.4e-045\
+    \ 到 3.4e + 038。`Float` 用作小数部分的变量类型，但指定为单精度。它可以用于表示美元和分。\n声明：\n```java\nFloat hightemp;\n\
+    ```\n\n- `Double`: 宽度为 64 位，范围从 4.9e-324 到 1.8e + 308。它被使用并经过优化，可以用于高速数学计算。它具有双精度，比单精度更快。诸如\
+    \ `sin()` 和 `sqrt()` 等函数返回 `double` 值。\n声明：\n```java\nDouble pi, r, a;\nr = 10.4;\n\
+    pi = 3.14;\na = pi* r * r;\n```\n\n### 字符\n- `java` 中用于存储或声明字符的数据类型是 `char`。\n\
+    - 它是 `java` 中的 16 位类型。`char` 的范围是 0 到 65,536。\n- 本质上没有负数的 `chars`。\n\n`char` 的程序演示：\n\
+    ```java\nClass charExample\n{\nPublic static void main (String args []) {\n  \
+    \  Char a, b;\n    a=88;\n    b=’y’;\n    system.out.print (“a and b: “);\n  \
+    \  system.out.println (a + “ “ +b);\n}\n}\n```\n\n### 布尔型\n- 它是逻辑值的原始类型。\n- 它倾向于只有两个可能值之一，`true`\
+    \ 或 `false`。\n- 它受 `if` 或 `for` 控制语句支配。\n\n## 变量\n它是存储的基本单元，变量具有作用域、可见性和生命周期。\n\
+    \n变量声明：\n```java\nInt x, y, z;\n```\n或\n```java\nInt x=1, y=2, z=5;\n```\n\n##\
+    \ 类型转换与强制转换\n如果两个类型之间存在任何兼容性，`java` 将自动执行转换。\n\n#### Java 自动转换\n- 它在满足两个条件时执行。\n\
+    - 当两个类型兼容时；\n- 目标类型大于源类型。\n- 在两个条件都满足后，会发生宽转换。\n\n#### 强制转换兼容类型\n- 这是一种简单且显式的类型转换。\n\
+    - 当浮点类型转换附加到整数类型时，这种转换被称为截断。\n- 这是一种转换，有时被称为窄化转换。\n\n## 数组\n它是相似变量的组，通过共同名称引用。数组中的可用元素通过索引访问。它可以被创建，并可能有一个或多个维度。\n\
+    \n### 数组的类型\n数组主要有两种类型：\n1. 一维数组\n2. 多维数组\n\n### 一维数组\n它是相似类型数据的列表。在创建数组之前，你需要先创建一个任意类型的变量。\n\
+    语法：\n```java\nType variable-name [ ];\nInt year_month [ ];\n```\n\n### 多维数组\n\
+    它是数组的数组，需要指定每个维度数组变量，使用其他方括号表示的额外索引。\n```java\nInt twoD [ ] [ ] = new int [6]\
+    \ [7];\n```\n![Image](img/page-divider.png)\n\n## 运算符\n有四种主要的运算符：\n- 算术运算符\n-\
+    \ 位运算运算符\n- 关系运算符\n- 布尔逻辑运算符\n\n### 算术运算符\n- 加法 Addition：此运算符用于相加值。用 `+` 表示。例如\
+    \ `A = a + 4`。\n- 减法：此运算符用于减去值。用 `-` 表示。例如 `A = a - 4`。\n- 乘法：此运算符用于相乘值。用 `*`\
+    \ 表示。例如 `A = a * 4`。\n- 除法：此运算符用于除值。用 `/` 表示。\n- 取模 Modulus：此运算符用于寻找余数。用 `%` 表示。例如\
+    \ `A = 4`。\n- 递增 Increment：此运算符用于增加其值。用 `++` 表示。例如 `a++`。\n- 递减 Decrement：此运算符用于减少操作数。用\
+    \ `--` 表示。例如 `a--`。\n\n### 位运算运算符\n- 一元取反 NOT：它反转所有位。用 `~` 表示。\n- 与逻辑 And：如果两个操作数均为\
+    \ 1，则产生 1。用 `&` 表示。\n- 逻辑或 OR：如果任一操作数为 1，则用 `|` 表示。\n- 异或 XOR：如果其中一个操作数为 1 但不是两者，则用\
+    \ `^` 表示。\n- 左移：它将所有位向左侧移动。用 `<<` 表示。\n- 右移：它将所有位向右侧移动。用 `>>` 表示。\n\n### 关系运算符\n\
+    - 等于 Equal to：此运算符显示值相等。用 `==` 表示。\n- 不等于 Not equal to：此关系运算符显示值不相等。用 `!=` 表示。\n\
+    - 大于 Greater than：此运算符显示一个值比另一个值大。用 `>` 表示。\n- 小于 Less than：此运算符显示一个值比另一个值小。用\
+    \ `<` 表示。\n- 大于等于 Greater than or equal to：这显示一个值大于或等于另一个值而不小于。用 `>=` 表示。\n- 小于等于\
+    \ Less than or equal to：这显示一个值小于或等于另一个值而不大于。用 `<=` 表示。\n\n### 布尔逻辑运算符\n- 逻辑与 AND：用\
+    \ `&` 表示。\n- 逻辑或 OR：符号为 `|`。\n- 逻辑异或 XOR：使用 `^` 显示。\n- 逻辑一元取反 Unitary Not：显示为\
+    \ `!`。\n\n### 赋值运算符\n赋值是等号，用 `=` 表示。\n通用表示：\n```java\nvar = expression;\n```\n\
+    在此处，表示 `var` 的变量应与 `expression` 的类型兼容。\n```java\nInt a, b, c;\na = b = c = 100;\n\
+    ```\n\n### ? 运算符\n这用于替换 if then else 语句，并用 `?` 表示。\n例如：\n```\nexpression a ? expression\
+    \ b : expression c\n```\n\n"
+- fmt: "\nThis above example states that if the expression `a` is true then expression\
+    \ `b` is evaluated otherwise expression `c` is evaluated.\n\n![Image](images/page-divider.png)\n\
+    \n## Control Statements\n\nThere three types of statements in `java`.\n\n1.  Selection\
+    \ statements\n2.  Iteration statements\n3.  Jump statements\n\n## Selection statements\n\
+    \n*   It is to manage the flow of programs that is to be executed based on the\
+    \ dynamic conditions which can be only realized during the run time.\n*   It provides\
+    \ flexibility.\n\n### `If` statement\n- It provides different paths for execution\
+    \ of program.\n\n#### Syntax\n\n```\nIf (condition provided) statement a;\n\n\
+    Else\nStatement b;\n```\n\nThis means if the condition is true, then `statement\
+    \ a` is executed but if false then `statement b` is executed.\n\n#### For example\n\
+    ```\nint a, b;\n\nIf (x < y) a=0;\n\nElse\nb=0; own```\n\nNow there is one type\
+    \ of procedure using `if` statement i.e. nested `if` statement and it is very\
+    \ common method in programming world.\n\n#### For example\n```\nIf (a == 10) {\n\
+    \    If (b < 15) i = j;\n    If (c > 50) p = q;\n    Else\n    i = p;\n}\nElse\n\
+    \    i = q;\n```\n\nNow, the second `if` statement in the parenthesis is associated\
+    \ with `else`. Another type of procedure is of using `if` statement is the `if-else-if`\
+    \ ladder statement.\n\n#### For example\n```\nIf (condition)\nStatement;\n\nElse\
+    \ if (condition)\nStatement;\n\nElse if (condition)\nStatement;\n\n...\n\nElse\n\
+    Statement;\n```\n\n### `Switch` statements\n\nIt is a multi branched statement.\n\
+    \n#### Syntax\n\n```\nSwitch (expression)\n{\n    Case value 1:\n        Statement\n\
+    \        Break;\n    Case value 2:\n        Statement\n        Break;\n...\n \
+    \   Case vale n:\n        Statement\n        Break;\n    Default:\n        Statement;\n\
+    }\n```\n\nThe functioning of the `switch` statement is compares the given value\
+    \ with all the cases and when the match found the program sequence is executed.\n\
+    \n#### For example\n```java\nClass sampswitch {\n    Public static void main (string\
+    \ args [])\n    {\n        Switch (i)\n        {\n            Case0:\n       \
+    \         System.out.println (“i is zero.”);\n                Break;\n       \
+    \     Case1:\n                System.out.println(“i is one.”)\n              \
+    \  Break;\n            Default:\n                System.out.println (“i is greater\
+    \ than 4.”)\n        }\n    }\n}\n```\n\n#### Output\n```\ni is zero.\ni is one.\n\
+    i is greater than 4.\ni is greater than 4.\n```\n\n#### Example of nested switch\
+    \ loop program\n```java\nSwitch (countfigures)\n{\n    Case 1:\n        Switch\
+    \ (targetvalue)\n        {//nested switch//\n            Case 0:\n           \
+    \     System.out.println (“target is zero”;\n                Break;\n        \
+    \    Case 1:\n                System.out.println (“target is one”;\n         \
+    \       Break;\n        }\n        Break;\n    Case 2: //...\n}\n```\n\n#### Important\
+    \ features of `switch` statement are:\n*   `Switch` statement can only check for\
+    \ equality unlike `if`.\n*   There cannot be two cases constant in the same `switch`\
+    \ with identical values.\n*   It is more effective than using the set of nested\
+    \ `if` statement.\n\n## Iteration statements\n\nThese statements are used to create\
+    \ loop. There are three types of iteration statement used in `java`.\n\n### `While`\
+    \ statement\n\nIts function is to repeat or block statement while its controlling\
+    \ expression is true.\n\n#### Syntax\n\n```\nWhile (condition) {\n    // body\
+    \ of loop\n}\n```\n\nThe loop is executed when the condition is true. When it\
+    \ is false the control will pass to the next line of the code following the loop.\n\
+    \n#### For example\n```java\nClass while {\n    Public static void main (string\
+    \ args [])\n    {\n        Int n = 5;\n        While (n>0)\n        {\n      \
+    \      System.out.println (“tick “+ n);\n            n--;\n        }\n    }\n\
+    }\n```\n\n#### Output\n```\nIt will tick 5 times\nTick 5\nTick 4\nTick 3\nTick\
+    \ 2\nTick 1\n```\n\n### `Do-while` statement\n\nThis loop executes its body at\
+    \ least once because it contains its condition expression at the bottom of the\
+    \ loop.\n\n#### Syntax\n\n```\ndo\n{\n    System.out.println (“tick”+ n);\n  \
+    \  n-- ;\n}\nWhile n > 0);\n```\n\n### `For` statement\n\n*   It is a very powerful\
+    \ as well as very versatile construct.\n*   The condition what is provided in\
+    \ `for` statement until and unless the condition is not been satisfied it won’t\
+    \ execute.\n*   If the condition is evaluated and the value is false then it is\
+    \ terminated.\n\n#### Syntax\n\n```\nFor (initialize; condition; iterate)\n{\n\
+    \    Body\n}\n```\n\n#### For example\n```java\nClass fortick\n{\n    Public static\
+    \ void main (string args [])\n    {\n        Int n;\n        For (n=11; n>0; n--);\n\
+    \    }\n}\n```\n\n## Jump statements\n\n`Java` supports three jump statements\
+    \ which are as follows:\n\n1.  `Break`\n2.  `Continue`\n3.  `Return`\n\n### `Break`\n\
+    \nIt is used to terminate a statement which is in sequence in a `switch` statement\
+    \ and it can be used for exiting a loop. Some time It can be used instead of `goto`.\n\
+    \n### `Continue`\n\nIt provides an early iteration for a loop.\n\n#### For example\n\
+    ```java\nClass continue\n{\n    Public static void main (string args [])\n   \
+    \ {\n        For (int i=0; i<5; i ++)\n        {\n            System.out.print\
+    \ (i + ““ );\n            If (i%2 ==0) continue;\n            System.out.print\
+    \ (““ );\n        }\n    }\n}\n```\n\n### `Return`\n\nIt is used to return from\
+    \ a method and It is a transfer back calling of the method.\n\n#### For example\n\
+    ```java\nClass return {\n{\n    Public static void main (string args [])\n   \
+    \ {\n        Boolean t = true;\n        System.out.println (“return”);\n     \
+    \   If (t)\n        System.out.println (“return”);\n    }\n}\n```\n\n## Classes\
+    \ and Methods\n\nClasses might contain only data or may contain both.\n\n![Image](images/class.png)\n\
+    \n#### Syntax\n\n```\n`ClassName`\n{\n    `variableName`;\n    `methodName`(`parameters`)\n\
+    }\n```\n\n#### Example\n```java\nClass box\n{\n    int width;\n    int height;\n\
+    \    int depth;\n}\n```\n\n#### Overloading\n\nWhen two or more methods are same\
+    \ name the parameters are different.\n\n![Image](images/overloading.png)\n\n####\
+    \ Example\n```java\nClass overload\n{\n    void test () {\n        System.out.println\
+    \ (“no parameter”);\n    }\n\n    void test (int a) {\n        System.out.println\
+    \ (“a: “+ a);\n    }\n\n    void test (int a, int b) {\n        System.out.println\
+    \ (“a and b: “+ a +““+ b);\n    }\n\n    void test (double a) {\n        System.out.println\
+    \ (“double a: “+ a);\n    }\n}\n```\n\n#### For example\n```java\nClass overload1\n\
+    {\n    Public static void main (string args [])\n    {\n        Overload1 ob =\
+    \ new overload ();\n        Double result;\n        ob.test ();\n        ob.test\
+    \ (10);\n        ob.test (10, 20);\n        ob.test (123.25);\n        System.out.println\
+    \ (“result:” +result);\n    }\n}\n```\n\n## Inheritance\n\nInheritance is a super\
+    \ class from which all the classes are inherited and which does inheriting from\
+    \ a super class is called the sub class.\n\n![Image](images/inheritance.png)\n\
+    \n### Basic program of inheritance\n```java\nClass x\n{\n    int i, j;\n    void\
+    \ show ( )\n    {\n        System.out.println (“i and j:” + i +““+ j);\n    }\n\
+    }\n\nClass y extends x\n{\n    Int a;\n    show() {\n        System.out.println\
+    \ (“a: “+ a );\n    }\n    Void sum ( )\n    {\n        System.out.println (“i\
+    \ + j + a: “+ (i + j + a) );\n    }\n}\n```\n\n#### For example\n```java\nClass\
+    \ simheritance\n{\n    Public static void main (string args [])\n    {\n     \
+    \   q Superob = new q ( );\n        p superob = new p ( );\n        Subob. i =\
+    \ 8;\n        Subob. j = 7;\n        Subob. a = 9;\n        System.out.println\
+    \ (“contents”);\n        Subob.showij ( );\n        Subob.showa ( );\n       \
+    \ System.out.println (“sum of i, j and a”);\n    }\n}\n```\n\n#### Output\n```\n\
+    Contents:\nI and j: 8 7\na: 9\nSum of i, j and a: 24\n```\n\n## Overriding\n\n\
+    *   When sub classes are identical of a super class this scenario is called method\
+    \ overriding.\n*   It provides the characteristic called polymorphism in `java`.\n\
+    \n![Image](images/inheritance-showing-overriding.png)\n\n### Inheritance showing\
+    \ overriding\n\nExample code\n```java\nClass x {\n    int a, b;\n    X (int p,\
+    \ int q)\n    {\n        p= a;\n        q= b;\n    }\n    Void show ( )\n    {\n\
+    \        System.out.println (“a and b: “+ i +“ ”+ j);\n    }\n}\n\nClass y extends\
+    \ x {\n    Int r;\n    Y (int a, int b, int c)\n    {\n        Super (a, b);\n\
+    \        r = c;\n    }\n    Void show ( ) {\n        System.out.println (“r: “+\
+    \ r );\n    }\n}\n\nClass override {\n    Public static void main (string args\
+    \ [])\n    {\n        y subob = new y (1, 2, 3);\n        subob. Show ();\n  \
+    \  }\n}\n```\n"
+  raw: 'This above example states that if the expression a is true then expression
+    b is evaluated otherwise expression c is evaluated.
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Control Statements
+
+
+    There three types of statements in java.
+
+
+    1.  Selection statements
+
+
+    2.  Iteration statements
+
+
+    3.  Jump statements
+
+
+    Selection statements
+
+
+    *   It is to manage the flow of programs that is to be executed based on the dynamic
+    conditions which can be only realized during the run time.
+
+
+    *   It provides flexibility.
+
+
+    If statement- It provides different paths for execution of program.
+
+
+    Syntax
+
+
+    If (condition provided) statement a;
+
+
+    Else
+
+
+    Statement b;
+
+
+    This means if the condition is true, then statement a is executed but if false
+    then statement b is executed.
+
+
+    For example
+
+
+    int a, b;
+
+
+    If (x < y) a=0;
+
+
+    Else
+
+
+    b=0;
+
+
+    Now there is one type of procedure using if statement i.e. nested if statement
+    and it is very common method in programming world.
+
+
+    For example
+
+
+    If (a == 10) {
+
+
+    If (b < 15) i = j;
+
+
+    If (c > 50) p = q;
+
+
+    Else
+
+
+    i = p;
+
+
+    }
+
+
+    Else
+
+
+    i = q;
+
+
+    Now, the second if statement in the parenthesis is associated with else. Another
+    type of procedure is of using if statement is the if-else-if ladder statement.
+
+
+    For example
+
+
+    If (condition)
+
+
+    Statement;
+
+
+    Else if (condition)
+
+
+    Statement;
+
+
+    Else if (condition)
+
+
+    Statement;
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    Else
+
+
+    Statement;
+
+
+    Switch statements
+
+
+    It is a multi branched statement.
+
+
+    Syntax
+
+
+    Switch (expression)
+
+
+    {
+
+
+    Case value 1:
+
+
+    Statement
+
+
+    Break;
+
+
+    Case value 2:
+
+
+    Statement
+
+
+    Break;
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    Case vale n:
+
+
+    Statement
+
+
+    Break;
+
+
+    Default:
+
+
+    Statement;
+
+
+    }
+
+
+    The functioning of the switch statement is compares the given value with all the
+    cases and when the match found the program sequence is executed.
+
+
+    For example
+
+
+    Class sampswitch {
+
+
+    Public static void main (string args [])
+
+
+    {
+
+
+    Switch (i)
+
+
+    {
+
+
+    Case0:
+
+
+    System.out.println (“i is zero.”);
+
+
+    Break;
+
+
+    Case1:
+
+
+    System.out.println(“i is one.”)
+
+
+    Break;
+
+
+    Default:
+
+
+    System.out.println (“i is greater than 4.”)
+
+
+    }
+
+
+    Output
+
+
+    i is zero.
+
+
+    i is one.
+
+
+    i is greater than 4.
+
+
+    i is greater than 4.
+
+
+    Example of nested switch loop program
+
+
+    Switch (countfigures)
+
+
+    {
+
+
+    Case 1:
+
+
+    Switch (targetvalue)
+
+
+    {//nested switch//
+
+
+    Case 0:
+
+
+    System.out.println (“target is zero”;
+
+
+    Break;
+
+
+    Case 1:
+
+
+    System.out.println (“target is one”;
+
+
+    Break;
+
+
+    }
+
+
+    Break;
+
+
+    Case 2: //...
+
+
+    Important features of switch statement are.
+
+
+    *   Switch statement can only check for equality unlike if.
+
+
+    *   There cannot be two cases constant in the same switch with identical values.
+
+
+    *   It is more effective than using the set of nested if statement.
+
+
+    Iteration statements
+
+
+    These statements are used to create loop. There are three types of iteration statement
+    used in java.
+
+
+    While statement
+
+
+    Its function is to repeat or block statement while its controlling expression
+    is true.
+
+
+    Syntax
+
+
+    While (condition) {
+
+
+    // body of loop
+
+
+    }
+
+
+    The loop is executed when the condition is true. When it is false the control
+    will pass to the next line of the code following the loop.
+
+
+    For example
+
+
+    Class while {
+
+
+    Public static void main (string args [])
+
+
+    {
+
+
+    Int n = 5;
+
+
+    While (n>0)
+
+
+    {
+
+
+    System.out.println (“tick “+ n);
+
+
+    n--;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    Output
+
+
+    It will tick 5 times
+
+
+    Tick 5
+
+
+    Tick 4
+
+
+    Tick 3
+
+
+    Tick 2
+
+
+    Tick 1
+
+
+    Do-while statement
+
+
+    This loop executes its body at least once because it contains its condition expression
+    at the bottom of the loop.
+
+
+    Syntax
+
+
+    do
+
+
+    {
+
+
+    System.out.println (“tick”+ n);
+
+
+    n-- ;
+
+
+    }
+
+
+    While n > 0);
+
+
+    }
+
+
+    }
+
+
+    For statement
+
+
+    *   It is a very powerful as well as very versatile construct.
+
+
+    *   The condition what is provided in for statement until and unless the condition
+    is not been satisfied it won’t execute.
+
+
+    *   If the condition is evaluated and the value is false then it is terminated.
+
+
+    Syntax
+
+
+    For (initialize; condition; iterate)
+
+
+    {
+
+
+    Body
+
+
+    }
+
+
+    For example
+
+
+    Class fortick
+
+
+    {
+
+
+    Public static void main (string args [])
+
+
+    {
+
+
+    Int n;
+
+
+    For (n=11; n>0; n--);
+
+
+    }
+
+
+    }
+
+
+    Jump statements
+
+
+    Java supports three jump statements which are as follows.
+
+
+    1.  Break
+
+
+    2.  Continue
+
+
+    3.  Return
+
+
+    Break
+
+
+    It is used to terminate a statement which is in sequence in a switch statement
+    and it can be used for exiting a loop. Some time It can be used instead of goto.
+
+
+    Continue
+
+
+    It provides an early iteration for a loop.
+
+
+    For example
+
+
+    Class continue
+
+
+    {
+
+
+    Public static void main (string args [])
+
+
+    {
+
+
+    For (int i=0; i<5; i ++)
+
+
+    {
+
+
+    System.out.print (i + ““ );
+
+
+    If (i%2 ==0) continue;
+
+
+    System.out.print (““ );
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    Return
+
+
+    It is used to return from a method and It is a transfer back calling of the method.
+
+
+    For example
+
+
+    Class return {
+
+
+    Public static void main (string args [])
+
+
+    {
+
+
+    Boolean t = true;
+
+
+    System.out.println (“return”);
+
+
+    If (t) return;
+
+
+    System.out.println (“this won’t work”);
+
+
+    }
+
+
+    }
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Classes and Methods
+
+
+    Classes might contain only code or data but may also contain both. A class is
+    declared by keyword class and it can be complex in nature.
+
+
+    ![Image](images/class.png)
+
+
+    Syntax
+
+
+    Class classname
+
+
+    {
+
+
+    Type instance-variable a;
+
+
+    Type instance-variable b;
+
+
+    .
+
+
+    .
+
+
+    .
+
+
+    Type instance-variable n;
+
+
+    }
+
+
+    Type method a (parameter-list)
+
+
+    {
+
+
+    //body of method
+
+
+    }
+
+
+    Type methodname a (parameter-list)
+
+
+    //body of method
+
+
+    .
+
+
+    .
+
+
+    }
+
+
+    }
+
+
+    Classes are also called the box which defines variable- width, height and depth.
+
+
+    Example
+
+
+    Class box
+
+
+    {
+
+
+    Double width;
+
+
+    Double height;
+
+
+    Double depth;
+
+
+    }
+
+
+    Class that implements stack of data and integer.
+
+
+    Example
+
+
+    Class stack
+
+
+    {
+
+
+    Int stk [] = new int [10];
+
+
+    Stack ()
+
+
+    Tos=-1
+
+
+    }
+
+
+    Void push (int item) {
+
+
+    If (tos==9)
+
+
+    System.out.println (‘it’s full”);
+
+
+    Else
+
+
+    Stk [++tos] = item;
+
+
+    }
+
+
+    Int pop ()
+
+
+    {if (tos<0) {
+
+
+    System.out.println (“stack underflow”);
+
+
+    Return 0;
+
+
+    } else
+
+
+    Return stk[tos--];
+
+
+    }
+
+
+    }
+
+
+    Overloading method
+
+
+    When two or more methods are defined in the same place and the name defined is
+    same but the parameters are different. This method is an overloading method. This
+    provides polymorphism in java.
+
+
+    ![Image](images/overloading.png)
+
+
+    Example
+
+
+    Class overload1
+
+
+    {
+
+
+    Void test () {
+
+
+    System.out.println (“no parameter”);
+
+
+    }
+
+
+    Void test (int a)
+
+
+    {
+
+
+    System.out.println (“a: “+ a);
+
+
+    }
+
+
+    Void test (int a, int b)
+
+
+    {
+
+
+    System.out.println (“a and b: “+ a + ““+ b);
+
+
+    }
+
+
+    Double test (double a)
+
+
+    {
+
+
+    System.out.println (“double a: “+ a);
+
+
+    Return a*a;
+
+
+    }
+
+
+    }
+
+
+    Class overload
+
+
+    {
+
+
+    Public static void main (string args [ ])
+
+
+    {
+
+
+    Overload1 ob = new overload ();
+
+
+    Double result;
+
+
+    ob.test ();
+
+
+    ob.test (10);
+
+
+    ob.test (10, 20);
+
+
+    Result = ob.test (123.25);
+
+
+    System.out.println (“result:” +result);
+
+
+    }
+
+
+    }
+
+
+    Output
+
+
+    A= 10
+
+
+    A and B= 10 20
+
+
+    Double a= 123.25
+
+
+    Result= 15190.5625
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Inheritance
+
+
+    Inheritance is a super class from which all the classes are inherited and which
+    does inheriting from a super class is called the sub class.
+
+
+    Basic program of inheritance
+
+
+    Class x
+
+
+    {
+
+
+    int i, j;
+
+
+    void show I j ( )
+
+
+    {
+
+
+    System.out.println (“i and j:” + i + ““+ j );
+
+
+    }
+
+
+    }
+
+
+    Class y extends x
+
+
+    Int a; {
+
+
+    System.out.println (“a: “+ a );
+
+
+    }
+
+
+    Void sum ( )
+
+
+    {
+
+
+    System.out.println (“i + j + a: “+ (i + j + a) );
+
+
+    }
+
+
+    }
+
+
+    Class simpinheritance
+
+
+    {
+
+
+    Public static void main (string args [ ])
+
+
+    {
+
+
+    q Superob = new q ( );
+
+
+    p superob = new p ( );
+
+
+    Subob. i = 8;
+
+
+    Subob. j = 7;
+
+
+    Subob. a = 9;
+
+
+    System.out.println (“contents”);
+
+
+    Subob.showij ( );
+
+
+    Subob.showa ( );
+
+
+    System.out.println (“sum of i, j and a”);
+
+
+    }
+
+
+    }
+
+
+    Output
+
+
+    Contents: I and j: 8 7
+
+
+    a: 9
+
+
+    Sum of i, j and a: i + j +a: 24
+
+
+    Main use of inheritance in java is for overriding and code reusability.
+
+
+    Overriding
+
+
+    *   When sub classes are identical of a super class this scenario is called method
+    overriding.
+
+
+    *   It provides the characteristic called polymorphism in java.
+
+
+    ![Image](images/inheritance-showing-overriding.png)
+
+
+    Inheritance showing overriding
+
+
+    Example code
+
+
+    Class x {
+
+
+    int a, b
+
+
+    X (int p, int q)
+
+
+    {
+
+
+    p= a;
+
+
+    q= b;
+
+
+    }
+
+
+    Void show ( )
+
+
+    {
+
+
+    System.out.println (“a and b: “+ i +” “+ j);
+
+
+    }
+
+
+    }
+
+
+    Class y extends x {
+
+
+    Int r;
+
+
+    Y (int a, int b, int c)
+
+
+    {
+
+
+    Super (a, b);
+
+
+    r = c;
+
+
+    }
+
+
+    Void show ( ) {
+
+
+    System.out.println (“r: “+ r );
+
+
+    }
+
+
+    }
+
+
+    Class override {
+
+
+    Public static void main (string args [])
+
+
+    {
+
+
+    y subob =new y (1, 2, 3);
+
+
+    Subob. Show ();'
+  toc: []
+  trans: "\n上文的示例说明，如果表达式 `a` 为真，则求值表达式 `b`，否则求值表达式 `c`。\n\n![Image](img/page-divider.png)\n\
+    \n## 控制语句\n\n`java` 中有三种语句。\n\n1.  选择语句\n2.  迭代语句\n3.  跳转语句\n\n## 选择语句\n\n*  \
+    \ 它的作用是根据在运行时才能确定的动态条件来管理待执行程序的执行流转。\n*   它提供了灵活性。\n\n### `If` 语句\n- 它为程序的执行提供了不同的路径。\n\
+    \n#### 语法\n\n```\nIf (condition provided) statement a;\n\nElse\nStatement b;\n\
+    ```\n\n这意味着如果条件为真，则执行 `statement a`；但如果条件为假，则执行 `statement b`。\n\n#### 示例\n```\n\
+    int a, b;\n\nIf (x < y) a=0;\n\nElse\nb=0; \n```\n\n现在有一类使用 `if` 语句的程序类型，即嵌套 `if`\
+    \ 语句，这在编程世界中是非常常见的方法。\n\n#### 示例\n```\nIf (a == 10) {\n    If (b < 15) i = j;\n\
+    \    If (c > 50) p = q;\n    Else\n    i = p;\n}\nElse\n    i = q;\n```\n\n现在，括号中的第二个\
+    \ `if` 语句与 `else` 关联。另一种使用 `if` 语句的程序类型是 `if-else-if` 阶梯语句。\n\n#### 示例\n```\n\
+    If (condition)\nStatement;\n\nElse if (condition)\nStatement;\n\nElse if (condition)\n\
+    Statement;\n\n...\n\nElse\nStatement;\n```\n\n### `Switch` 语句\n\n这是一个多分支语句。\n\n\
+    #### 语法\n\n```\nSwitch (expression)\n{\n    Case value 1:\n        Statement\n\
+    \        Break;\n    Case value 2:\n        Statement\n        Break;\n...\n \
+    \   Case vale n:\n        Statement\n        Break;\n    Default:\n        Statement;\n\
+    }\n```\n\n`switch` 语句的功能是将给定的值与所有 case 进行比较，当找到匹配项时，执行程序序列。\n\n#### 示例\n```java\n\
+    Class sampswitch {\n    Public static void main (string args [])\n    {\n    \
+    \    Switch (i)\n        {\n            Case0:\n                System.out.println\
+    \ (“i is zero.”);\n                Break;\n            Case1:\n              \
+    \  System.out.println(“i is one.”)\n                Break;\n            Default:\n\
+    \                System.out.println (“i is greater than 4.”)\n        }\n    }\n\
+    }\n```\n\n#### 输出\n```\ni is zero.\ni is one.\ni is greater than 4.\ni is greater\
+    \ than 4.\n```\n\n#### 嵌套 switch 循环程序示例\n```java\nSwitch (countfigures)\n{\n \
+    \   Case 1:\n        Switch (targetvalue)\n        {//nested switch//\n      \
+    \      Case 0:\n                System.out.println (“target is zero”;\n      \
+    \          Break;\n            Case 1:\n                System.out.println (“target\
+    \ is one”;\n                Break;\n        }\n        Break;\n    Case 2: //...\n\
+    }\n```\n\n#### `switch` 语句的重要特性是：\n*   与 `if` 不同，`Switch` 语句只能检查相等性。\n*   在同一个\
+    \ `switch` 中不能有两个具有相同值的 case 常量。\n*   它比使用一组嵌套的 `if` 语句更有效。\n\n## 迭代语句\n\n这些语句用于创建循环。`java`\
+    \ 中使用了三种类型的迭代语句。\n\n### `While` 语句\n\n它的功能是在控制表达式为真时重复或阻塞执行语句。\n\n#### 语法\n\n\
+    ```\nWhile (condition) {\n    // 循环体体\n}\n```\n\n当条件为真时，执行循环。当条件为假时，控制权将传递到循环后的下一行代码。\n\
+    \n#### 示例\n```java\nClass while {\n    Public static void main (string args [])\n\
+    \    {\n        Int n = 5;\n        While (n>0)\n        {\n            System.out.println\
+    \ (“tick “+ n);\n            n--;\n        }\n    }\n}\n```\n\n#### 输出\n```\n\
+    It will tick 5 times\nTick 5\nTick 4\nTick 3\nTick 2\nTick 1\n```\n\n### `Do-while`\
+    \ 语句\n\n此循环至少执行一次其循环体，因为它将条件表达式放在循环的底部。\n\n#### 语法\n\n```\ndo\n{\n    System.out.println\
+    \ (“tick”+ n);\n    n-- ;\n}\nWhile n > 0);\n```\n\n### `For` 语句\n\n*   它是一种非常强大且多功能的构造结构。\n\
+    *   `for` 语句中提供的条件，除非条件不满足，否则它不会执行。\n*   如果条件被求值且结果为假，则终止执行。\n\n#### 语法\n\n```\n\
+    For (initialize; condition; iterate)\n{\n    循环体\n}\n```\n\n#### 示例\n```java\n\
+    Class fortick\n{\n    Public static void main (string args [])\n    {\n      \
+    \  Int n;\n        For (n=11; n>0; n--);\n    }\n}\n```\n\n## 跳跳语句\n\n`Java` 支持三种跳转语句，如下：\n\
+    \n1.  `Break`\n2.  `Continue`\n3.  `Return`\n\n### `Break`\n\n它用于终止 `switch` 语句中的语句。\n\
+    \n### `Continue`\n\n它为循环提供了提前结束。\n\n#### 示例\n```java\nClass continue\n{\n    Public\
+    \ static void main (string args [])\n    {\n        For (int i=0; i<5; i++)\n\
+    \        {\n            If (i%2 == 0) continue;\n            System.out.println(i);\n\
+    \        }\n    }\n}\n```\n\n### `Return`\n\n它用于从方法返回值。\n\n#### 示例\n```java\n\
+    Class return {\n{\n    Public static void main (string args [])\n    {\n     \
+    \   Boolean t = true;\n        System.out.println(return);\n    }\n}\n```\n\n\
+    ## 类与方法\n\n类可能只包含数据，也可能包含两者。\n\n![Image](img/class.png)\n\n#### 语法\n\n```\n`ClassName`\n\
+    {\n    `methodName`(`parameters`)\n}\n```\n\n#### 示例\n```java\nClass box\n{\n\
+    \    int width;\n    int height;\n}\n```\n\n#### 重载\n\n多个方法名称相同但参数不同。\n\n![Image](img/overloading.png)\n\
+    \n#### 示例\n```java\nClass overload\n{\n    void test () {\n        System.out.println\
+    \ (“no parameter”);\n    }\n\n    void test (int a) {\n        System.out.println\
+    \ (“a: “+ a);\n    }\n\n    void test (int a, int b) {\n        System.out.println\
+    \ (“a and b: “+ a +“+ b);\n    }\n\n    void test (double a) {\n        System.out.println\
+    \ (“double a: “+ a);\n    }\n}\n```\n\n#### 示例\n```java\nClass overload1\n{\n\
+    \    Public static void main (string args [])\n    {\n        Overload ob = new\
+    \ overload ();\n        ob.test ();\n        ob.test (10);\n        ob.test (10,\
+    \ 20);\n        ob.test (125);\n    }\n}\n```\n\n## 继承\n\n继承是子类自父类，这种类被称为子类。\n\
+    \n![Image](img/inheritance.png)\n\n### 继承的基础程序\n```java\nClass x\n{\n    int i,\
+    \ j;\n    void show ( )\n    {\n        System.out.println (“i and j:” + i +“+\
+    \ j);\n    }\n}\n\nClass y extends x\n{\n    int a;\n    show() {\n        System.out.println\
+    \ (“a: “+ a );\n    }\n    void sum ( )\n    {\n        System.out.println (“i\
+    \ + j + a: “+ (i + j + a) );\n    }\n}\n```\n\n#### 示例\n```java\nClass simheritance\n\
+    {\n    Public static void main (string args [])\n    {\n        q Superob = new\
+    \ q ( );\n        p superob = new p ( );\n        Subob. i = 8;\n        Subob.\
+    \ j = 7;\n        Subob. a = 9;\n        System.out.println (“contents”);\n  \
+    \      Subob.showij ( );\n        Subob.showa ( );\n    }\n}\n```\n\n#### 输出\n\
+    ```\nContents:\nI and j: 8 7\na: 9\nSum of i, j and a: 24\n```\n\n## 重写\n\n* \
+    \  当子类与父类的方法相同时，这种场景被称为方法重写。\n*   它为 `java` 提供了多态性特性。\n\n![Image](img/inheritance-showing-overriding.png)\n\
+    \n### 继承显示重写\n\n示例代码\n```java\nClass x {\n    int a, b;\n    X (int p, int q)\n\
+    \    {\n        p= a;\n        q= b;\n    }\n    Void show ( )\n    {\n      \
+    \  System.out.println (“a and b: “+ i +“ ”+ j);\n    }\n}\n\nClass y extends x\
+    \ {\n    Int r;\n    Y (int a, int b, int c)\n    {\n        Super (a, b);\n \
+    \       r = c;\n    }\n    Void show ( ) {\n        System.out.println (“r: “+\
+    \ r );\n    }\n}\n\nClass override {\n    Public static void main (string args\
+    \ [])\n    {\n        y subob = new y (1, 2, 3);\n        subob. Show ();\n  \
+    \  }\n}\n```\n"
+- fmt: "\n}\n\n}\n\n# Output\n\n`r = 3`\n\n# Types of inheritance\n\nThere are three\
+    \ types of inheritance.\n\n- Single inheritance\n- Multiple inheritance\n- Hierarchical\
+    \ inheritance\n\n![Image](images/type-of-inheritance.png)\n\n### Types of inheritance\n\
+    \nIn java multiple and hybrid will only supported with use of interface.\n\n![Image](images/hybrid-inheritance.png)\n\
+    \n### Multiple and hybrid inheritance\n\n![Image](images/page-divider.png)\n\n\
+    ## Packages\n\nPackages contain names were classes are stored.\n\n### Syntax\n\
+    \n```java\nPackage pkg;\n```\n\nTo represent multi packaging\n\n```java\nPackage\
+    \ pkgx [.pkgy [.pkgz]];\n```\n\nFor example\n\n```java\nPackage java.awt.image\
+    \ a;\n```\n\n### Finding of packages\n\nThere are three ways to find the packages.\
+    \ The java runtime system uses the working directory; if the package is contained\
+    \ in the sub directory then it will be discovered or you can set the location\
+    \ by setting the location of class as shown.\n\n```java\nPackage mpack\n```\n\n\
+    It can use class path with `java` as well as `javac` to specify the location of\
+    \ class as shown.\n\n`C: \\ myprograms\\java\\mpack`\n\n### Access protection\n\
+    \nFor the protection of packages there are three specifiers in existence in java.\n\
+    \n1. `Private`- cannot be seen or accessed from outside the class.\n2. `Public`-\
+    \ it has feature to be accessed from anywhere.\n3. `Protected`- this can be accessed\
+    \ only by classes which are sub-classes.\n\n![Image](images/package-name.png)\n\
+    \n### Package syntax\n\n### Importing a package\n\nThe statement that imports\
+    \ the package come immediately after the packaging statement and its main function\
+    \ is to import the package by saving more time to its location.\n\n#### Syntax\n\
+    \n```java\nImport pkga [.pkgb]. (classname d *);\n```\n\n## Interface\n\nIt is\
+    \ similar to class which contains constants, methods and signatures.\n\n![Image](images/calculator.png)\n\
+    \n### Java simple calculator interface\n\nInterface for java\n\n### Declaration\n\
+    \n```java\nAccess interface m\n{\n    Return method 1 (parameter list);\n    Return\
+    \ method 2 (parameter list);\n    Type final variable name 1 = value;\n    Type\
+    \ final variable name 2 = value;\n    //…\n    Return type method name n (parameter\
+    \ list);\n    Type final varname n = value;\n}\n```\n\nSimple interface contains\
+    \ only one function or method known as callback function.\n\nFor example\n\n```java\n\
+    Interface callback\n{\n    Void callback (int parm);\n}\n```\n\n### Implementing\
+    \ interface\n\nTo creating any interface implementation of class is included in\
+    \ definition of a class.\n\nFor example\n\n```java\nClass client call back\n{\n\
+    \    Public void callback (int x)\n    {\n        System.out.println (“callback”\
+    \ + x);\n    }\n}\n```\n\n![Image](images/page-divider.png)\n\n## Exceptional\
+    \ Handling\n\nIt is a drawback that affects the performance of java program because\
+    \ it can occur at any point. It occurrence is at execution state.\n\n### Reasons\n\
+    \n- Invalid data\n- File absent\n- Loss of network connection and time out when\
+    \ the JVM is at run.\n\nThe common exceptions are.\n\n- `Checked`- These exceptions\
+    \ cannot be forecasted by the programmer and it cannot be even ignored during.\n\
+    - `Runtime`- This is a dynamic exception, but it can be ignored unlike the checked\
+    \ one.\n- `Errors`- these are also ignored because nothing can be done to overcome\
+    \ it and this is not under programmer’s control.\n\n![Image](images/exception.png)\n\
+    \nException hierarchy\n\nIt has two sub divisions: Input output exception classes\
+    \ and runtime exception class.\n\n### Throw\n\nThese are exceptions which are\
+    \ thrown by JVM during runtime.\n\n#### Syntax\n\n```java\nthrow Throwableinstance;\n\
+    ```\n\n![Image](images/throw.png)\n\n### Throw\n\nWhen this statement is used\
+    \ there is an immediate stop in the execution of program.\n\nFor example\n\n```java\n\
+    Class throwdem\n{\n    Static void demopro ( )\n    {\n        Try {\n       \
+    \     Throw new NullPointerException (“dem “);\n        } catch (NullPointerException\
+    \ e)\n        {\n            System.out.println (“caught inside demopro. “);\n\
+    \            Throw e;\n        }\n    }\n    Public static void main (string args\
+    \ [ ] {\n        Try {\n            Demopro ( );\n        }\n        Catch (NullPointerException\
+    \ e) {\n            System.out.println (recatch: “+ e);\n        }\n    }\n}\n\
+    ```\n\n### Finally\n\nIt is a code that is used in executing before or after the\
+    \ try and catch block is executed or completed.\n\n#### Syntax\n\n```java\nClass\
+    \ finally dem\n{\n    Static void pro x ( )\n    {\n        Try {\n          \
+    \  System.out.println (“in proc x”);\n            Throw new runtimeException (“demo”);\n\
+    \        }\n        Finally\n        {\n            System.out.println (“pro x\
+    \ finally”);\n        }\n    }\n}\n```\n\n![Image](images/page-divider.png)\n\n\
+    ## Event handling\n\n### Event\n\nIt shows the change in state of a source.\n\n\
+    ### Event sources\n\nIt is an object generating an event.\n\n#### Syntax\n\n```java\n\
+    Public void add TypeListener (TypeListner l)\n```\n\nFor example\n\n- `Addkeylistner\
+    \ ()` - to register a keyboard event.\n- `Addmousemotionlistner ()` - to register\
+    \ a mouse motion listener.\n\n### Action Event Class\n\nThis happens when button\
+    \ is pressed. Double clicking of the item or any item in the menu is selected.\n\
+    \n![Image](images/event-occurrence.png)\n\nEvent occurrence in java\n\n### Key\
+    \ event class\n\nThis generated from the key input of the keyboard and there are\
+    \ three types of key events.\n\n1. `KEY_PRESSED`\n2. `KEY_RELEASED`\n3. `KEY_TYPED`\n\
+    \n### Mouse event class\n\nThere are eight types of mouse event classes.\n\n1.\
+    \ `MOUSE_DRAGGED`\n2. `MOUSE_CLICKED`\n3. `MOUSE_ENTERED`\n4. `MOUSE_EXITED`\n\
+    5. `MOUSE_MOVED`\n6. `MOUSE_PRESSED`\n7. `MOUSE_RELEASED`\n8. `MOUSE_WHEELED`\n\
+    \n### Action listener interface\n\nIt is used to define the actions these are\
+    \ performed which are invoked at the call of an event. It is used to know the\
+    \ reaction of the method.\n\n![Image](images/page-divider.png)\n\n## The Applet\
+    \ class\n\nIt contains several methods which are useful for java execution and\
+    \ detailed control. The Applet initialization and termination are as follow.\n\
+    \n### Starting\n\n- `init()`- Used to initialize method it is the first method.\n\
+    - `start()`- After initialization method this method comes and its function is\
+    \ to restart or display on screen.\n- `paint()`- In this the output of the applet\
+    \ is redrawn each time it is called.\n\n### Stopping\n\n- `stop()`- It is to leave\
+    \ the browser which is opened and contains applet.\n- `destroy()`- It is for the\
+    \ applet once has to removed from the memory.\n\n![Image](images/applet.png)\n\
+    \n### Applet generation\n\nHTML applet tag\n\n```html\n<APPLET\n[CODEBASE= codebaseurl]\n\
+    CODE=applet file\n[ALT=alternatetext]\n[NAME=appletinstancename]\nWIDTH=pixels\
+    \ HEIGHT=pixels\n[ALIGN=alignment]\n[VSPACE=pixels] [HSPACE=pixels]\n>\n[PARANAME=attribute\
+    \ name VALUE= attributevalue>]\n…\n[HTML displayed in absence of java]\n</APPLET>\n\
+    ```\n\n![Image](images/html-applet-tag.png)\n\nHTML Applet tag\n\nThe Audioclip\
+    \ interface\n\n- `play()`- To begin the audio.\n- `stop()`- To stop the audio.\n\
+    - `loop()`- To play the loop without break.\n\nThe Applet sub interface\n\nIt\
+    \ provides a link through which an Applet and the browser can communicate.\n\n\
+    ![Image](images/page-divider.png)\n\nThank you for reading\n\nKnowledge flow Book!\n\
+    \n![Image](images/page-divider.png)\n"
+  raw: '}
+
+
+    }
+
+
+    Output
+
+
+    r = 3
+
+
+    Types of inheritance
+
+
+    There are three types of inheritance.
+
+
+    *   Single inheritance
+
+
+    *   Multiple inheritance
+
+
+    *   Hierarchical inheritance
+
+
+    ![Image](images/type-of-inheritance.png)
+
+
+    Types of inheritance
+
+
+    In java multiple and hybrid will only supported with use of interface.
+
+
+    ![Image](images/hybrid-inheritance.png)
+
+
+    Multiple and hybrid inheritance
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Packages
+
+
+    Packages contain names were classes are stored.
+
+
+    Syntax
+
+
+    Package pkg;
+
+
+    To represent multi packaging
+
+
+    Package pkgx [.pkgy [.pkgz]];
+
+
+    For example
+
+
+    Package java.awt.image a;
+
+
+    Finding of packages
+
+
+    There are three ways to find the packages. The java runtime system uses the working
+    directory; if the package is contained in the sub directory then it will be discovered
+    or you can set the location by setting the location of class as shown.
+
+
+    Package mpack
+
+
+    It can use class path with java as well as javac to specify the  location of class
+    as shown.
+
+
+    C: \ myprograms\java\mpack
+
+
+    Access protection
+
+
+    For the protection of packages there are three specifiers in existence in java.
+
+
+    1.  Private- cannot be seen or accessed from outside the class.
+
+
+    2.  Public- it has feature to be accessed from anywhere.
+
+
+    3.  Protected- this can be accessed only by classes which are sub-classes.
+
+
+    ![Image](images/package-name.png)
+
+
+    Package syntax
+
+
+    Importing a package
+
+
+    The statement that imports the package come immediately after the packaging statement
+    and its main function is to import the package by saving more time to its location.
+
+
+    Syntax
+
+
+    Import pkga [.pkgb]. (classname d *);
+
+
+    ## Interface
+
+
+    It is similar to class which contains constants, methods and signatures.
+
+
+    ![Image](images/calculator.png)
+
+
+    Java simple calculator interface
+
+
+    Interface for java
+
+
+    Declaration
+
+
+    Access interface m
+
+
+    {
+
+
+    Return method 1 (parameter list);
+
+
+    Return method 2 (parameter list);
+
+
+    Type final variable name 1 = value;
+
+
+    Type final variable name 2 = value;
+
+
+    //…
+
+
+    Return type method name n (parameter list);
+
+
+    Type final varname n = value;
+
+
+    }
+
+
+    Simple interface contains only one function or method known as callback function.
+
+
+    For example
+
+
+    Interface callback
+
+
+    {
+
+
+    Void callback (int parm);
+
+
+    }
+
+
+    Implementing interface
+
+
+    To creating any interface implementation of class is included in definition of
+    a class.
+
+
+    For example
+
+
+    Class client call back
+
+
+    {
+
+
+    Public void callback (int x)
+
+
+    {
+
+
+    System.out.println (“callback” + x);
+
+
+    }
+
+
+    }
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Exceptional Handling
+
+
+    It is a drawback that affects the performance of java program because it can occur
+    at any point. It occurrence is at execution state.
+
+
+    Reasons
+
+
+    *   Invalid data
+
+
+    *   File absent
+
+
+    *   Loss of network connection and time out when the JVM is at run.
+
+
+    The common exceptions are.
+
+
+    Checked- These exceptions cannot be forecasted by the programmer and it cannot
+    be even ignored during.
+
+
+    Runtime- This is a dynamic exception, but it can be ignored unlike the checked
+    one.
+
+
+    Errors- These are also ignored because nothing can be done to overcome it and
+    this is not under programmer’s control.
+
+
+    ![Image](images/exception.png)
+
+
+    Exception hierarchy
+
+
+    It has two sub divisions: Input output exception classes and runtime exception
+    class.
+
+
+    Throw
+
+
+    These are exceptions which are thrown by JVM during runtime.
+
+
+    Syntax
+
+
+    throw Throwableinstance;
+
+
+    ![Image](images/throw.png)
+
+
+    Throw
+
+
+    When this statement is used there is an immediate stop in the execution of program.
+
+
+    For example
+
+
+    Class throwdem
+
+
+    {
+
+
+    Static void demopro ( )
+
+
+    {
+
+
+    Try {
+
+
+    Throw new NullPointerException (“dem “);
+
+
+    } catch (NullPointerException e)
+
+
+    {
+
+
+    System.out.println (“caught inside demopro. “);
+
+
+    Throw e;
+
+
+    }
+
+
+    }
+
+
+    Public static void main (string args [ ] {
+
+
+    Try {
+
+
+    Demopro ( );
+
+
+    }
+
+
+    Catch (NullPointerException e) {
+
+
+    System.out.println (recatch: “+ e);
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    Finally
+
+
+    It is a code that is used in executing before or after the try and catch block
+    is executed or completed.
+
+
+    Syntax
+
+
+    Class finally dem
+
+
+    {
+
+
+    Static void pro x ( )
+
+
+    {
+
+
+    Try
+
+
+    {
+
+
+    System.out.println (“in proc x”);
+
+
+    Throw new runtimeException (“demo”);
+
+
+    }
+
+
+    Finally
+
+
+    {
+
+
+    System.out.println (“pro x finally”);
+
+
+    }
+
+
+    }
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## Event handling
+
+
+    Event
+
+
+    It shows the change in state of a source.
+
+
+    Event sources
+
+
+    It is an object generating an event.
+
+
+    Syntax
+
+
+    Public void add TypeListener (TypeListner l)
+
+
+    For example
+
+
+    *   Addkeylistner ( ) - to register a keyboard event.
+
+
+    *   Addmousemotionlistner ( ) - to register a mouse motion listener.
+
+
+    Action Event Class
+
+
+    This happens when button is pressed. Double clicking of the item or any item in
+    the menu is selected.
+
+
+    ![Image](images/event-occurrence.png)
+
+
+    Event occurrence in java
+
+
+    Key event class
+
+
+    This generated from the key input of the keyboard and there are three types of
+    key events.
+
+
+    1.  KEY_PRESSED
+
+
+    2.  KEY_RELEASED
+
+
+    3.  KEY_TYPED.
+
+
+    Mouse event class
+
+
+    There are eight types of mouse event classes.
+
+
+    1.  MOUSE_DRAGGED
+
+
+    2.  MOUSE_CLICKED
+
+
+    3.  MOUSE_ENTERED
+
+
+    4.  MOUSE_EXITED
+
+
+    5.  MOUSE_MOVED
+
+
+    6.  MOUSE_PRESSED
+
+
+    7.  MOUSE_RELEASED
+
+
+    8.  MOUSE_WHEELED
+
+
+    Action listener interface
+
+
+    It is used to define the actions these are all performed which are invoked at
+    the call of an event. It is used to know the reaction of the method.
+
+
+    ![Image](images/page-divider.png)
+
+
+    ## The Applet class
+
+
+    It contains several methods which are useful for java execution and detailed control.
+    The Applet initialization and termination are as follow.
+
+
+    For starting
+
+
+    init( )- Used to initialize method it is the first method.
+
+
+    start( )- After initialization method this method comes and its function is to
+    restart or display on screen.
+
+
+    paint( )- In this the output of the applet is redrawn each time it is called.
+
+
+    For stopping
+
+
+    stop( )- It is to leave the browser which is opened and contains applet.
+
+
+    destroy( )- It is for the applet once which has to removed from the memory.
+
+
+    ![Image](images/applet.png)
+
+
+    Applet generation
+
+
+    HTML applet tag
+
+
+    <APPLET
+
+
+    [CODEBASE= codebaseurl]
+
+
+    CODE=applet file
+
+
+    [ALT=alternatetext]
+
+
+    [NAME=appletinstancename]
+
+
+    WIDTH=pixels HEIGHT=pixels
+
+
+    [ALIGN=alignment]
+
+
+    [VSPACE=pixels] [HSPACE=pixels]
+
+
+    >
+
+
+    [PARANAME=attribute name VALUE= attributevalue>]
+
+
+    …
+
+
+    [HTML displayed in absence of java]
+
+
+    </APPLET>
+
+
+    ![Image](images/html-applet-tag.png)
+
+
+    HTML Applet tag
+
+
+    The Audioclip interface
+
+
+    play( )- To begin the audio.
+
+
+    stop( )- To stop the audio.
+
+
+    loop( )- To play the loop without break.
+
+
+    The Applet sub interface
+
+
+    It provides a link through which an Applet and the browser can communicate.
+
+
+    ![Image](images/page-divider.png)
+
+
+    Thank you for reading
+
+
+    Knowledge flow Book!
+
+
+    ![Image](images/page-divider.png)'
+  toc: []
+  trans: "\n\n}\n\n}\n\n# 输出\n\n`r = 3`\n\n# 继承类型\n\n有三种继承类型。\n\n- 单继承\n- 多重继承\n-\
+    \ 层次级继承\n\n![Image](img/type-of-inheritance.png)\n\n### 继承类型\n\n在 java 中，多继承和混合继承仅通过使用接口支持。\n\
+    \n![Image](img/hybrid-inheritance.png)\n\n### 多继承和混合继承\n\n![Image](img/page-divider.png)\n\
+    \n## 包 (Packages)\n\n包包含了类的位置。\n\n### 语法\n\n```java\nPackage pkg;\n```\n\n表示多级包\n\
+    \n```java\nPackage pkgx [.pkgy [.pkgz]];\n```\n\n例如\n\n```java\nPackage java.awt.image\
+    \ a;\n```\n\n### 查找包\n\n有三种查找包的方法。java 运行时系统使用工作目录；如果包位于子目录，则它会被发现；或者你可以像所示通过设置类的位置来设置位置。\n\
+    \n```java\nPackage mpack\n```\n\n也可以配合 `java` 和 `javac` 使用类路径（class path）来指定类的位置，如下：\n\
+    \n`C: \\ myprograms\\java\\mpack`\n\n### 访问保护\n\n为了保护包，java 中存在三种修饰符。\n\n1. `Private`\
+    \ - 无法从类外部可见或访问。\n2. `Public` - 具有从任何地方访问的特性。\n3. `Protected` - 只能由子类访问。\n\n![Image](img/package-name.png)\n\
+    \n### 包语法\n\n### 导入包\n\n导入包的语句紧接在包语句之后，其主要功能是通过导入包并保存到其位置来节省更多时间。\n\n#### 语法\n\
+    \n```java\nImport pkga [.pkgb]. (classname d *);\n```\n\n## 接口 (Interface)\n\n\
+    它类似于类，包含了常量、方法和签名。\n\n![Image](img/calculator.png)\n\n### Java 简单计算器接口\n\n用于 java\
+    \ 的接口\n\n### 声明\n\n```java\nAccess interface m\n{\n    Return method 1 (parameter\
+    \ list);\n    Return method 2 (parameter list);\n    Type final variable name\
+    \ 1 = value;\n    Type final variable name 2 = value;\n    //…\n    Return type\
+    \ method name n (parameter list);\n    Type final varname n = value;\n}\n```\n\
+    \n简单接口只包含一个函数或方法，被称为回调函数。\n\n例如\n\n```java\nInterface callback\n{\n    Void callback\
+    \ (int parm);\n}\n```\n\n### 实现接口\n\n创建任何接口的实现类都包含在类的定义中。\n\n例如\n\n```java\nClass\
+    \ client call back\n{\n    Public void callback (int x)\n    {\n        System.out.println\
+    \ (“callback” + x);\n    }\n}\n```\n\n![Image](img/page-divider.png)\n\n## 异常处理\
+    \ (Exceptional Handling)\n\n这是一个影响 java 程序性能的缺点，因为它可以发生在任何点。它的发生处于执行状态下。\n\n###\
+    \ 原因\n\n- 无效数据\n- 文件不存在\n- JVM 运行时网络连接丢失和超时。\n\n常见的异常有：\n\n- `Checked`（检检异常）-\
+    \ 这些异常无法由程序员预测，而且在执行期间甚至无法被忽略。\n- `Runtime`（运行时异常）- 这是一种动态异常，但与检异常不同，它可以被忽略。\n\
+    - `Errors`（错误）- 这些也会被忽略，因为无法做什么来克服它，而且这不受程序员控制。\n\n![Image](img/exception.png)\n\
+    \n异常层次结构\n\n它分为两个部分：输入输出异常类和运行时异常类。\n\n### throw (抛出)\n\n这些是 JVM 在运行时抛出的异常。\n\n\
+    #### 语法\n\n```java\nthrow Throwableinstance;\n```\n\n![Image](img/throw.png)\n\
+    \n### throw (抛出)\n\n当使用此语句时，程序的执行立即停止。\n\n例如\n\n```java\nClass throwdem\n{\n \
+    \   Static void demopro ( )\n    {\n        Try {\n            Throw new NullPointerException\
+    \ (“dem “);\n        } catch (NullPointerException e)\n        {\n           \
+    \ System.out.println (“caught inside demipro. “);\n            Throw e;\n    \
+    \    }\n    }\n    Public static void main (string args [ ] {\n        Try {\n\
+    \            Demopro ( );\n        }\n        Catch (NullPointerException e) {\n\
+    \            System.out.println (recatch: “+ e);\n        }\n    }\n}\n```\n\n\
+    ### finally\n\n它是在执行 try 和 catch 块之前或之后完成后执行的代码。\n\n#### 语法\n\n```java\nClass\
+    \ finally dem\n{\n    Static void pro x ( )\n    {\n        Try {\n          \
+    \  System.out.println (“in proc x”);\n            Throw new runtimeException (“demo”);\n\
+    \        }\n        Finally\n        {\n            System.out.println (“pro x\
+    \ finally”);\n        }\n    }\n}\n```\n\n![Image](img/page-divider.png)\n\n##\
+    \ 事件处理 (Event handling)\n\n### 事件 (Event)\n\n它显示源状态的变化。\n\n### 事件源 (Event sources)\n\
+    \n它是生成事件的对象。\n\n#### 语法\n\n```java\nPublic void add TypeListener (TypeListner\
+    \ l)\n```\n\n例如\n\n- `Addkeylistner ()` - 注册键盘事件。\n- `Addmousemotionlistner ()`\
+    \ - 注册鼠标移动监听器。\n\n### 事件类 (Action Event Class)\n\n这在按钮被按下时发生。双击项目或选择菜单中的任何项目。\n\
+    \n![Image](img/event-occurrence.png)\n\njava 中的事件发生\n\n### 键键事件类 (Key event class)\n\
+    \n它由键盘按键输入产生，有三种类型。\n\n1. `KEY_PRESSED`\n2. `KEY_RELEASED`\n3. `KEY_TYPED`\n\n\
+    ### 鼠标事件类 (Mouse event class)\n\n有八种鼠标事件类。\n\n1. `MOUSE_DRAGGED`\n2. `MOUSE_CLICKED`\n\
+    3. `MOUSE_ENTERED`\n4. `MOUSE_EXITED`\n5. `MOUSE_MOVED`\n6. `MOUSE_PRESSED`\n\
+    7. `MOUSE_RELEASED`\n8. `MOUSE_WHELED`\n\n### 监听器接口 (Action listener interface)\n\
+    \n它用于定义调用事件时执行的操作。它用于感知方法的响应。\n\n![Image](img/page-divider.png)\n\n## Applet 类\
+    \ (The Applet class)\n\n它包含了用于 java 执行和详细控制的方法。Applet 的初始化和终止如下：\n\n### 开始 (Starting)\n\
+    \n- `init()` - 初始化方法，它是第一个方法。\n- `start()` - 初始化方法之后调用此方法，其功能是重启或在屏幕上显示。\n- `paint()`\
+    \ - 每次调用它时都会重绘 applet 的输出。\n\n### 停止 (Stopping)\n\n- `stop()` - 用于离开打开并包含 applet\
+    \ 的浏览器。\n- `destroy()` - 用于从内存中移除 applet。\n\n![Image](img/applet.png)\n\n### Applet\
+    \ 生成 (Applet generation)\n\nHTML applet 标签\n\n```html\n<APPLET\n[CODEBASE= codebaseurl]\n\
+    CODE=applet file\n[ALT=alternatetext]\n[NAME=appletinstancename]\nWIDTH=pixels\
+    \ HEIGHT=pixels\n[ALIGN=alignment]\n[VSPACE=pixels] [HSPACE=pixels]\n>\n[PARANAME=attribute\
+    \ name VALUE= attributevalue>]\n…\n[没有 java 时显示的 HTML]\n</APPLET>\n```\n\n![Image](img/html-applet-tag.png)\n\
+    \nHTML applet 标签\n\n音频接口 (Audioclip interface)\n\n- `play()` - 开始音频。\n- `stop()`\
+    \ - 停止音频。\n- `loop()` - 无断循环播放。\n\nApplet 子接口 (Applet sub interface)\n\n它提供了一个\
+    \ Applet 和浏览器之间进行通信的链接。\n\n![Image](img/page-divider.png)\n\n感谢阅读\n\n知识流书籍！\n\n\
+    ![Image](img/page-divider.png)\n"

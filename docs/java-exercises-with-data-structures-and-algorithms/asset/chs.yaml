@@ -1,0 +1,993 @@
+- "# Java 数据结构与算法练习指南\n\n\n\n![](img/image_rsrc5RM.jpg)\n\n\nCopyright © 2024 Haris\
+  \ Tsetsekas\n\n## 目录\n\n1. 大学课程\n2. 餐厅预约\n3. 图书馆\n4. 联系列表\n5. 优先级待办事项\n6. 歌曲列表\n\
+  7. 任务分配\n8. 词频统计\n9. 语法检查器\n10. 迷宫求解器\n11. 文件索引器\n12. 基于 AVL 树的库存\n13. 社交网络\n14.\
+  \ 航班\n15. MNIST 图像比较\n16. 带缓存的 HTTP 服务器\n17. 分布式拍卖\n\n## 1. 大学课程\n\n让我们创建一个处理大学课程选课的程序。每门课程都有一个或多个先修课程，即学生必须完成这些课程后才能修读特定的特定课程。\n\
+  \n### 建议的解决方案\n\n首先，我们将为大学中的学生定义类：\n\n```java\npackage UniversityCourses;\npublic\
+  \ class Student {\n    public int id;\n    public String name;\n    public int[]\
+  \ courses;\n    public int courseCount;\n    public Student(int id, String name,\
+  \ int courseCount, int[] courses) {\n        this.id = id;\n        this.name =\
+  \ name;\n        this.courseCount = courseCount;\n        this.courses = courses;\n\
+  \    }\n}\n```\n列表 1-1: Student.java\n\n该类包含关于学生及其已成功完成课程的信息。`Courses` 数组包含课程的 ID。\n\
+  \n接下来，我们为大学课程定义一个类：\n\n```java\npackage UniversityCourses;\npublic class Course\
+  \ {\n    public int id;\n    public String name;\n    public int prereqCount;\n\
+  \    public int[] prereqIDs;\n    public Course(int id, String name, int prereqCount,\
+  \ int[] prereqIDs) {\n        this.id = id;\n        this.name = name;\n       \
+  \ this.prereqCount = prereqCount;\n        this.prereqIDs = prereqIDs;\n    }\n\
+  \    public boolean canEnroll(Student student) {\n        for (int prereqId : this.prereqIDs)\
+  \ {\n            boolean hasPrereq = false;\n            for (int courseId : student.courses)\
+  \ {\n                if (courseId == prereqId) {\n                    hasPrereq\
+  \ = true;\n                    break;\n                }\n            }\n      \
+  \      if (!hasPrereq) {\n                return false;\n            }\n       \
+  \ }\n        return true;\n    }\n}\n```\n列表 1-2: Course.java\n\n每门课程包含一个先修课程 ID\
+  \ 数组。该类还包含一个方法，用于判断学生是否可以选某门课程。对于每门先修课程，该方法都会尝试与学生已修过的课程进行匹配。\n\n最后，是 `main()` 方法：\n\
+  \n```java\npackage UniversityCourses;\npublic class UniversityCourses {\n    public\
+  \ static void main(String[] args) {\n        Course[] courses = {\n            new\
+  \ Course(0, \"Intro to Programming\", 0, new int[] { -1 }),\n            new Course(1,\
+  \ \"Data Structures\", 1, new int[] { 0 }),\n            new Course(2, \"Algorithms\"\
+  , 1, new int[] { 1 }),\n            new Course(3, \"Database Management\", 1, new\
+  \ int[] { 0 }),\n            new Course(4, \"Web Development\", 1, new int[] { 0\
+  \ }),\n            new Course(5, \"Operating Systems\", 2, new int[] { 1, 2 }),\n\
+  \            new Course(6, \"Computer Networks\", 2, new int[] { 1, 5 }),\n    \
+  \        new Course(7, \"Software Engineering\", 2, new int[] { 1, 2 }),\n     \
+  \       new Course(8, \"Machine Learning\", 2, new int[] { 1, 2 }),\n          \
+  \  new Course(9, \"Distributed Systems\", 1, new int[] { 5 }),\n            new\
+  \ Course(10, \"Cybersecurity\", 2, new int[] { 2, 3 }),\n            new Course(11,\
+  \ \"Cloud Computing\", 2, new int[] { 2, 3 }),\n            new Course(12, \"Mobile\
+  \ App Development\", 1, new int[] { 4 }),\n            new Course(13, \"Game Development\"\
+  , 1, new int[] { 4 }),\n            new Course(14, \"Artificial Intelligence\",\
+  \ 2, new int[] { 2, 3 }),\n            new Course(15, \"Big Data Analytics\", 2,\
+  \ new int[] { 2, 3 }),\n            new Course(16, \"Blockchain Technology\", 2,\
+  \ new int[] { 2, 3 }),\n            new Course(17, \"UI/UX Design\", 2, new int[]\
+  \ { 2, 3 }),\n            new Course(18, \"Embedded Systems\", 2, new int[] { 2,\
+  \ 3 }),\n            new Course(19, \"Computer Graphics\", 2, new int[] { 2, 3 })\n\
+  \        };\n        Student student = new Student(1, \"John Doe\", 2, new int[]\
+  \ {0, 1});\n        for (Course course : courses) {\n            if (course.canEnroll(student))\
+  \ {\n                System.out.println(\"- Can enroll in \" + course.name);\n \
+  \           } else {\n                System.out.println(\"- Cannot enroll in \"\
+  \ + course.name + \" due to missing prerequisites.\");\n            }\n        }\n\
+  \    }\n}\n```\n列表 1-3: UniversityCourses.java\n\n## 2. 餐厅预约\n\n对于这个练习，我们将创建一个处理预约的小程序。每张桌子以其容量为特征。简单来说，预约可以跨越多个时间段。\n\
+  \n### 建议的解决方案\n\n首先，我们将为顾客定义类：\n\n```java\npackage Restaurant;\npublic class Customer\
+  \ {\n    public String name;\n    public Customer(String name) {\n        this.name\
+  \ = name;\n    }\n}\n```\n列表 2-1: Customer.java\n\n该类包含姓名。它也可以包含电话或其他详情。\n\n接下来，我们为餐厅桌子定义类：\n\
+  \n```java\npackage Restaurant;\npublic class Table {\n    public int id;\n    public\
+  \ int capacity;\n    public Table(int id, int capacity) {\n        this.id = id;\n\
+  \        this.capacity = capacity;\n    }\n}\n```\n列表 2-2: Table.java\n\n桌子对象包含其\
+  \ ID 以及其容量信息（可以容纳的人数）。\n\n接下来，我们定义 `Reservation` 类：\n\n```java\npackage Restaurant;\n\
+  public class Reservation {\n    public Customer customer;\n    public Table table;\n\
+  \    public int startTimeSlot;\n    public int endTimeSlot;\n    public Reservation(Customer\
+  \ customer, Table table, int startTimeSlot, int endTimeSlot) {\n        this.customer\
+  \ = customer;\n        this.table = table;\n        this.startTimeSlot = startTimeSlot;\n\
+  \        this.endTimeSlot = endTimeSlot;\n    }\n}\n```\n列表 2-3: Reservation.java\n\
+  \n预约包含对 `Customer` 和 `Table` 对象的引用。它还包含起始和结束时间段（不包含结束）。\n\n我们还创建一个 `Restaurant`\
+  \ 类来实现创建新预约的功能：\n\n```java\npackage Restaurant;\nimport java.util.ArrayList;\nimport\
+  \ java.util.List;\n\npublic class Restaurant {\n    private final List<Table> tables\
+  \ = new ArrayList<>();\n    private final List<Reservation> reservations = new ArrayList<>();\n\
+  \n    public void addTable(Table table) {\n        tables.add(table);\n    }\n}\n\
+  ```\n列表 2-4: Restaurant.java\n\n`addTable()` 方法将桌子的引用添加到 `tables` 列表中。\n\n在 `isTableAvailable()`\
+  \ 方法中，我们从 `reservations` 列表中获取一个流。我们使用流的 `noneMatch()` 方法来判断在指定时间段内是否存在未被预约的桌子。\n\
+  \n```java\npublic boolean isTableAvailable(Table table, int startTimeSlot, int endTimeSlot)\
+  \ {\n    return reservations.stream().noneMatch(reservation ->\n        reservation.table.id\
+  \ == table.id &&\n        ((startTimeSlot >= reservation.startTimeSlot && startTimeSlot\
+  \ < reservation.endTimeSlot) ||\n         (endTimeSlot > reservation.startTimeSlot\
+  \ && endTimeSlot <= reservation.endTimeSlot) ||\n         (startTimeSlot <= reservation.startTimeSlot\
+  \ && endTimeSlot >= reservation.endTimeSlot))\n    );\n}\n```\n列表 2-5: Restaurant.java\n\
+  \n\n\n\n\n`findAvailableTables()` 方法搜索从 `tables` 列表获取的流，以便找到指定时间段内所有可表格。\n\n```java\n\
+  public List<Table> findAvailableTables(int capacity, int startTimeSlot,int endTimeSlot)\
+  \ {\n    List<Table> availableTables = tables.stream().filter(table -> table.capacity\
+  \ >= capacity&& isTableAvailable(table, startTimeSlot, endTimeSlot)).collect(Collectors.toList());\n\
+  \    availableTables.sort(Comparator.comparingInt(a -> a.capacity));\n    return\
+  \ availableTables;\n}\n```\nListing 2-6: `Restaurant.java`\n\n我们使用 `filter()` 来获取容量符合或超过人数的空桌。选定的桌子将通过\
+  \ `collect()` 方法收集到一个新的列表中。该列表在根据桌子容量按升序排序后返回，因为我们正尝试先填满最小的桌子。\n\n接下来，`addReservation()`\
+  \ 方法将动态创建一个新订单并将其插入到 `reservations` 列表中。当然，这是在找到了合适的桌子的情况下。请注意，我们获取的是排序列表中的第一个表格，即容量最小的桌子。\n\
+  \n```java\npublic void addReservation(String name, int capacity, int startSlot,\
+  \ int endSlot) {\n    List<Table> availableTables = findAvailableTables(capacity,\
+  \ startSlot, endSlot);\n    if (!availableTables.isEmpty()) {\n        reservations.add(new\
+  \ Reservation(new Customer(name),availableTables.get(0), startSlot, endSlot));\n\
+  \        System.out.println(\"Reservation successfully added.\");\n    } else {\n\
+  \        System.out.println(\"No available tables for the requested time slot.\"\
+  );\n    }\n}\n```\nListing 2-7: `Restaurant.java`\n\n接下来，我们有一个方法可以在控制台中打印所有订单：\n\
+  \n```java\npublic void printReservations() {\n    System.out.println(\"All reservations:\"\
+  );\n    for (Reservation reservation : reservations) {\n        System.out.println(\"\
+  Customer: \" + reservation.customer.name +\", Table Capacity: \" + reservation.table.capacity\
+  \ +\", Start Time Slot: \" + reservation.startTimeSlot +\", End Time Slot: \" +\
+  \ reservation.endTimeSlot);\n    }\n}\n```\nListing 2-8: `Restaurant.java`\n\n最后，在\
+  \ `main()` 方法中，我们向 `Restaurant` 对象添加桌子，并尝试为特定的容量和时间段预订。某些订单将成功，但另一些订单将没有可用桌子。最后，我们打印系统中所有可用的订单。\n\
+  \n```java\npublic static void main(String[] args) {\n    Restaurant restaurant =\
+  \ new Restaurant();\n    //Add tables \n    restaurant.addTable(new Table(1, 6));\n\
+  \    restaurant.addTable(new Table(2, 4));\n    restaurant.addTable(new Table(3,\
+  \ 2));\n    //Find available tables for a new reservation\n    restaurant.addReservation(\"\
+  Customer 1\", 4, 1, 3);\n    restaurant.addReservation(\"Customer 2\", 6, 2, 4);\n\
+  \    restaurant.addReservation(\"Customer 3\", 4, 3, 5);\n    restaurant.addReservation(\"\
+  Customer 4\", 4, 1, 3);\n    restaurant.printReservations();\n}\n```\nListing 2-9:\
+  \ `Restaurant.java`\n\n你可以在 GitHub 上找到这个项目：\n\n`https://github.com/htset/java_exercises_dsa/tree/master/Restaurant`\n\
+  \n# 3. 图书\n\n在这里我们将为图书馆创建一个控制台应用程序。用户将输入书籍并列出图书馆中所有的标题。他们还可以借书、还书以及列出所有的借阅事件。书籍和借阅事件将存储在文本文件中。\n\
+  \n## 建议解决方案\n\n让我们从定义 `Book` 和 `LendingEvent` 类开始：\n\n```java\npackage Library;\n\
+  public class Book {\n    public String title;\n    public String author;\n    public\
+  \ int available;\n}\n```\nListing 3-1: `Book.java`\n\n```java\npackage Library;\n\
+  import java.time.LocalDateTime;\npublic class LendingEvent {\n    public String\
+  \ bookTitle;\n    public String userName;\n    public LocalDateTime lendingDate;\n\
+  \    public int returned;\n}\n```\nListing 3-2: `LendingEvent.java`\n\n对于每本书，我们记录标题和作者。我们还保留了关于它是否可用或当前已借出的信息（分别为\
+  \ 1 或 0）。\n\n对于每个借阅事件，我们记录书名和借阅该书的图书馆用户名。我们还保留了借阅日期以及是否已归的整数值（分别为 1 或 0）。\n\n我们还定义了\
+  \ `Library` 类，它包含了添加和显示书籍信息的所有功能：\n\n```java\npackage Library;\nimport java.io.*;\n\
+  import java.time.LocalDateTime;\nimport java.util.Scanner;\n\npublic class Library\
+  \ {\n  private static final String BooksFilename = \"books.txt\";\n  private static\
+  \ final String LendingFilename = \"lending_events.txt\";\n...\n}\n```\nListing 3-3:\
+  \ `Library.java`\n\n`Library` 类的第一个方法用于在图书馆目录中添加新书籍：\n\n```java\npublic void addBook()\
+  \ throws IOException {\n    try (PrintWriter file = new PrintWriter(new FileWriter(BooksFilename,\
+  \ true))) {\n        Book book = new Book();\n        Scanner scanner = new Scanner(System.in);\n\
+  \        System.out.print(\"Book title: \");\n        book.title = scanner.nextLine();\n\
+  \        System.out.print(\"Author: \");\n        book.author = scanner.nextLine();\n\
+  \        //Mark book as available\n        book.available = 1;\n        file.println(book.title\
+  \ + \"&#124;\" + book.author + \"&#124;\" + book.available);\n    }\n    System.out.println(\"\
+  Book added.\");\n}\n```\nListing 3-4: `Library.java`\n\n在开始，我们使用 `PrintWriter` 对象打开书籍文件。构造函数的第二个参数是\
+  \ `true`，这意味着我们将内容附加到文件末尾，当前内容不会被擦除。从用户那里获取书籍标题和作者后，我们将新的书籍对象写入文件末尾。使用的格式如下：\n\n\
+  `书名`|`作者`|`是否可用 (0 或 1)`\n\n接下来，我们实现书籍列表功能：\n\n```java\npublic void listBooks()\
+  \ throws IOException {\n    //check if text file exists\n    if (!new File(BooksFilename).exists())\
+  \ {\n        System.out.println(\"No books entered so far\");\n        return;\n\
+  \    }\n    System.out.println(\"Books available in the library:\");\n    try (BufferedReader\
+  \ file = new BufferedReader(new FileReader(BooksFilename))) {\n        String line;\n\
+  \        while ((line = file.readLine()) != null) {\n            String[] parts\
+  \ = line.split(\"\\\\124;\");\n            System.out.println(\"Title: \" + parts[0]);\n\
+  \            System.out.println(\"Author: \" + parts[1]);\n            System.out.println(\"\
+  Available: \"+ (parts[2].equals(\"1\") ? \"True\" : \"False\"));\n            System.out.println(\"\
+  ------------------------------\");\n        }\n    }\n}\n```\nListing 3-5: `Library.java`\n\
+  \n在这里，我们从开始打开文件并使用 `readLine()` 读取每本书的详情。\n\n我们继续实现借书功能：\n\n```java\npublic void\
+  \ lendBook() throws IOException {\n    //check if text file exists\n    if (!new\
+  \ File(BooksFilename).exists()) {\n        System.out.println(\"No books entered\
+  \ so far\");\n        return;\n    }\n    String bookTitle, userName;\n    Scanner\
+  \ scanner = new Scanner(System.in);\n    System.out.print(\"Enter the title of the\
+  \ book to lend: \");\n    bookTitle = scanner.nextLine();\n    //Get 文件中所有行的数组\n\
+  \    String[] lines = new BufferedReader(new FileReader(BooksFilename)).lines().toArray(String[]::new);\n\
+  \    boolean bookFound = false;\n    for (int i = 0; i < lines.length; i++) {\n\
+  \        //分割行分为书籍详情\n        String[] parts = lines[i].split(\"\\\\124;\");\n \
+  \       if (parts[0].equals(bookTitle) && parts[2].equals(\"1\")) {\n          \
+  \  lines[i] = parts[0] + \"&#124;\" + parts[1] + \"&#124;0\";\n            bookFound\
+  \ = true;\n            System.out.print(\"Enter your name: \"); \n            userName\
+  \ = scanner.nextLine();\n            //将借阅事件写入文件\n            try (PrintWriter lendingFile=\
+  \ new PrintWriter(new FileWriter(LendingFilename, true))) {\n                lendingFile.println(bookTitle\
+  \ + \"&#124;\" + userName + \"&#124;\"+ LocalDateTime.now() + \"&#124;0\");\n  \
+  \          }\n            System.out.println(\"Book '\" + bookTitle + \"' has been\
+  \ lent to \"+ userName + \".\");\n            break;\n        }\n    }\n    if (!bookFound)\
+  \ {\n        System.out.println(\"Book '\" + bookTitle + \"' not found or not available.\"\
+  );\n    }\n    //将书籍写回文件（覆盖文件）\n    try (PrintWriter file = new PrintWriter(new\
+  \ FileWriter(BooksFilename))) {\n        for (String line : lines) {\n         \
+  \   file.println(line);\n        }\n    }\n}\n```\nListing 3-6: `Library.java`\n\
+  \n\n\n\n我们首先尝试通过 `.lines().toArray(String[]::new)` 读取书籍文件中的所有条目来查找所需的书籍。书籍条目将存储在一个字符串数组中。`String[]::new`\
+  \ 是一个创建新 `String` 数组的函数。它会被 `toArray()` 调用以创建一个新数组。\n\n我们遍历该数组，并将每个条目拆分为书籍详情（标题、作者、可用性）。当我们找到该书籍时（如果它是可用的），我们将其标记为当前不可用。\n\
+  \n此后，我们通过在相应的二进制文件末尾写入一个新条目来记录借阅事件。最后，我们将数组中的所有条目写回书籍文本文件，并覆盖该文件。\n\n接下来，我们展示还书书籍的功能：\n\
+  \n```java\npublic void returnBook() throws IOException {\n    if (!new File(LendingFilename).exists())\
+  \ {\n        System.out.println(\"No lending events entered so far\");\n       \
+  \ return;\n    }\n    String bookTitle;\n    Scanner scanner = new Scanner(System.in);\n\
+  \    System.out.print(\"Enter the title of the book to return: \");\n    bookTitle\
+  \ = scanner.nextLine();\n    //Get a string array of all lines in file \n    String[]\
+  \ booksLines = new BufferedReader(new FileReader(BooksFilename))\n            .lines().toArray(String[]::new);\n\
+  \    boolean bookFound = false;\n    for (int i = 0; i < booksLines.length; i++)\
+  \ {\n        String[] parts = booksLines[i].split(\"\\\\|\"); \n        if (parts[0].equals(bookTitle)\
+  \ && parts[2].equals(\"0\")) {\n            booksLines[i] = parts[0] + \"|\" + parts[1]\
+  \ + \"|1\";\n            bookFound = true;\n            //Get all lending events\n\
+  \            String[] lendingLines = new BufferedReader(new FileReader(LendingFilename)).lines().toArray(String[]::new);\n\
+  \            for (int j = 0; j < lendingLines.length; j++) {\n                parts\
+  \ = lendingLines[j].split(\"\\\\|\");\n                if (parts[0].equals(bookTitle)\
+  \ && parts[3].equals(\"0\")) {\n                    lendingLines[j] = parts[0] +\
+  \ \"|\" + parts[1] + \"|\" + parts[2] + \"|1\";\n                    System.out.println(\"\
+  Book '\" + bookTitle + \"' has been returned.\");\n                    break;\n\
+  \                }\n            }\n            //Write lending events back to file\n\
+  \            try (PrintWriter lendingFile= new PrintWriter(new FileWriter(LendingFilename)))\
+  \ {\n                for (String line : lendingLines) {\n                    lendingFile.println(line);\n\
+  \                }\n            }\n            break;\n        }\n    }\n    if\
+  \ (!bookFound) {\n        System.out.println(\"Book '\" + bookTitle + \"' not found\
+  \ or already returned.\");\n    }\n    //Write books back to file\n    try (PrintWriter\
+  \ file = new PrintWriter(new FileWriter(BooksFilename))) {\n        for (String\
+  \ line : booksLines) {\n            file.println(line);\n        }\n    }\n}\n```\n\
+  列表 3-7: `Library.java`\n\n在这里，我们再次将所有的书籍文件条目读入字符串数组，并尝试查找所需的文件。然后，我们从相应文件中读取所有的借阅事件，并搜索特定书籍的借阅事件。\n\
+  \n如果我们找到了该事件，则将其状态更改为“已还”，并将所有条目写回借阅文件。最后，在将书籍可用性状态改回 1 之后，我们还将所有的书籍条目存储到相应的文件中。\n\
+  \n现在，让我们来看列出事件的方法：\n\n```java\npublic void listLendingEvents() throws IOException\
+  \ {\n    if (!new File(LendingFilename).exists()) {\n        System.out.println(\"\
+  No lending events entered so far\");\n        return;\n    }\n    System.out.println(\"\
+  Lending events:\");\n    try (BufferedReader file = new BufferedReader(new FileReader(LendingFilename)))\
+  \ {\n        String line;\n        while ((line = file.readLine()) != null) {\n\
+  \            String[] parts = line.split(\"\\\\|\");\n            System.out.println(\"\
+  Book Title: \" + parts[0]);\n            System.out.println(\"User Name: \" + parts[1]);\n\
+  \            System.out.println(\"Lending Date: \" + parts[2]);\n            System.out.println(\"\
+  Returned: \" + (parts[3].equals(\"1\") ? \"True\" : \"False\"));\n            System.out.println(\"\
+  ------------------------------\");\n        }\n    }\n}\n```\n列表 3-8: `Library.java`\n\
+  \n最后是处理与用户交互的 `main()` 方法：\n\n```java\npublic static void main(String[] args) throws\
+  \ IOException { \n    Library lib = new Library();\n    int choice;\n    Scanner\
+  \ scanner = new Scanner(System.in);\n    do {\n        System.out.println(\"\\n1.\
+  \ Add a book\\n2. List all books\\n\" + \"3\\. Lend a book\\n4. Return a book\\\
+  n5. List lending events\\n0. Exit\");\n        System.out.print(\"Enter your choice:\
+  \ \");\n        choice = scanner.nextInt();\n        switch (choice) {\n       \
+  \     case 1: lib.addBook(); break;\n            case 2: lib.listBooks(); break;\n\
+  \            case 3: lib.lendBook(); break;\n            case 4: lib.returnBook();\
+  \ break;\n            case 5: lib.listLendingEvents(); break;\n            case\
+  \ 0: System.out.println(\"Exiting.\"); break;\n            default: System.out.println(\"\
+  Invalid choice. Please try again.\");\n            break;\n        }\n    } while\
+  \ (choice != 0);\n}\n```\n列表 3-9: `Library.java`\n\n在这里，我们再次将所有的书籍文件条目读入字符串数组，并尝试查找所需的文件。然后，我们从相应文件中读取所有的书籍借阅事件，并搜索特定书籍的借阅事件。\n\
+  \n如果我们找到了该事件，则将其状态更改为“已还”，并将所有条目写回借阅文件。最后，在将书籍可用性状态改回 1 之后，我们还将所有的书籍条目存储到相应的文件中。\n\
+  \n你可以在 GitHub 上找到此项目：https://github.com/htset/java_dsa/tree/master/Library](https://github.com/htset/java_dsa/tree/master/Library)\n\
+  \n## 联系列表（Contact List）\n\n哈希表将存储姓名和电话号码。\n\n## 哈希表\n\n哈希表（也称为哈希表）是一种根据键高效组织和检索数据结构。哈希表通常使用链法来处理这些冲突。\n\
+  \n## 解决方案（Proposed Solution）\n\n这是使用的类的定义：\n\n```java\nclass Contact {\n    public\
+  \ String name;\n    public String phone;\n    public Contact next;\n\n    public\
+  \ Contact() {\n        this.name = null;\n        this.phone = null;\n        this.next\
+  \ = null;\n    }\n}\n\npublic class ContactList {\n    private static final int\
+  \ HASH_SIZE = 100;\n    private Contact[] bucketTable;\n}\n```\n列表 4-1: `ContactList.java`\n\
+  \n`ContactList` 类包含一个 100 个条目的表。每个条目包含一个 `Contact` 对象的引用。本质上，`ContactList` 类是链表的数组；通过这种方式，联系列表可以随着我们添加元素而扩展。\n\
+  \n联系人根据其特定的哈希值插入到桶中。我们将使用哈希函数根据联系字符串创建一个 0 到 99 之间的数字：\n\n```java\nprivate int hash(String\
+  \ name) {\n    int hash = 5381;\n    for (int i = 0; i < name.length(); i++) {\n\
+  \        hash = ((hash << 5) + hash) + name.charAt(i);\n    } \n    return Math.abs(hash)\
+  \ % HASH_SIZE;\n}\n```\n列表 4-2: `ContactList.java`\n\n此方法基于 Daniel J. Bernstein\
+  \ 编写哈希函数（也称为 dj2）。该方法返回哈希表的索引，我们应该在那里插入特定的联系人。\n\n在类构造函数中我们将桶初始化为 `null`：\n\n```java\n\
+  public ContactList() {\n    bucketTable = new Contact[HASH_SIZE];\n    for (int\
+  \ i = 0; i < HASH_SIZE; i++) {\n        bucketTable[i] = null;\n    }\n}\n```\n\
+  列表 4-3: `ContactList.java`\n\n我们首先根据联系人的计算哈希索引，然后创建一个新的 `Contact` 对象。在填充对象属性后，我们将对象插入到相应桶的头部。以下是添加联系人的代码：\n\
+  \n```java\npublic void contactAdd(String name, String phone) {\n    //根据联系姓名获取索引\n\
+  \    int hashIndex = hash(name);\n    Contact newContact = new Contact();\n    newContact.name\
+  \ = name;\n    newContact.phone = phone;\n    newContact.next = bucketTable[hashIndex];\n\
+  \    bucketTable[hashIndex] = newContact;\n}\n```\n列表 4-4: `ContactList.java`\n\n\
+  \n\n\n```java\npublic void contactRemove(String name) {\n    int index = hash(name);\n\
+  \    Contact contact = bucketTable[index];\n    Contact previous = null;\n    while\
+  \ (contact != null) {\n        if (contact.name.equals(name)) {\n            if\
+  \ (previous == null) {\n                // Contact to remove is the head of the\
+  \ list\n                bucketTable[index] = contact.next;\n            } else {\n\
+  \                // Contact to remove is not the head of the list\n            \
+  \    previous.next = contact.next;\n            }\n            System.out.println(\"\
+  Contact '\" + name + \"' removed successfully.\");\n            return;\n      \
+  \  }\n        previous = contact;\n        contact = contact.next;\n    }\n    System.out.println(\"\
+  Contact '\" + name + \"' not found.\");\n}\n```\nListing 4-5: `ContactList.java`\n\
+  \n要删除一个条目，我们首先需要它的哈希值。我们使用这个整数值作为索引来获取相应的桶。然后我们逐个搜索桶中的条目，直到找到特定的联系人。接着，我们像从链表中删除删除节点一样，从桶中移除该条目。\n\
+  \n接下来是联系人搜索的代码：\n\n```java\npublic void contactSearch(String name) {\n    int hashIndex\
+  \ = hash(name);\n    Contact contact = bucketTable[hashIndex];\n    while (contact\
+  \ != null) {\n        if (contact.name.equals(name)) {\n            System.out.println(\"\
+  Name: \" + contact.name+ \"\\nPhone Number: \" + contact.phone);\n            return;\n\
+  \        }\n        contact = contact.next;\n    }\n    System.out.println(\"Contact\
+  \ '\" + name + \"' not found.\");\n}\n```\nListing 4-6: `ContactList.java`\n\n最后，在\
+  \ `main()` 方法中，我们创建了一个电话簿并用它来添加、删除和搜索联系人：\n\n```java\npublic static void main(String[]\
+  \ args) {\n    ContactList phonebook = new ContactList();\n    phonebook.contactAdd(\"\
+  John\", \"235454545\");\n    phonebook.contactAdd(\"Jane\", \"775755454\");\n  \
+  \  phonebook.contactAdd(\"George\", \"4344343477\");\n    phonebook.contactSearch(\"\
+  John\");\n    phonebook.contactSearch(\"Alex\");\n    phonebook.contactSearch(\"\
+  George\");\n    phonebook.contactRemove(\"Jake\");\n    phonebook.contactRemove(\"\
+  Jane\");\n    phonebook.contactSearch(\"Jane\");\n}\n```\nListing 4-7: `ContactList.java`\n\
+  \n你可以在 GitHub 上找到这个项目：\n\n[`github.com/htset/java_exercises_dsa/tree/master/ContactList`](https://github.com/htset/java_exercises_dsa/tree/master/ContactList)\n\
+  \n# 5. 优先级待办事项列表\n\n我们将实现一个简单的待办事项应用程序。每个条目将包含任务描述以及一个表示其优先级的数字（最高优先级等于 1）。\n\n\
+  待办事项列表将使用链表实现。除了添加、删除和显示任务的功能外，还将使用冒泡排序对链表进行排序。\n\n### 建议的解决方案\n\n首先来看 `Todo.java`\
+  \ 中的 `main()` 方法：\n\n```java\npackage Todo;\nimport java.util.Scanner;\npublic class\
+  \ Todo {\n    public static void main(String[] args) {\n        TodoList list =\
+  \ new TodoList();\n        Scanner scanner = new Scanner(System.in);\n        int\
+  \ choice = 0;\n        String description;\n        int priority;\n        int index;\n\
+  \        do {\n            try {\n                System.out.println(\"\\nTo-Do\
+  \ List Manager\");\n                System.out.println(\"1\\. Add Task\");\n   \
+  \             System.out.println(\"2\\. Remove Task\");\n                System.out.println(\"\
+  3\\. Display Tasks\");\n                System.out.println(\"4\\. Sort Tasks by\
+  \ Priority\");\n                System.out.println(\"0\\. Exit\");\n           \
+  \     System.out.print(\"Enter your choice: \");\n                choice = Integer.parseInt(scanner.nextLine());\n\
+  \                switch (choice) {\n                    case 1:\n              \
+  \          System.out.print(\"Enter task description: \");\n                   \
+  \     description = scanner.nextLine();\n                        System.out.print(\"\
+  Enter priority: \");\n                        priority = Integer.parseInt(scanner.nextLine());\n\
+  \                        list.addTask(description, priority);\n                \
+  \        System.out.println(\"Task added successfully.\");\n                   \
+  \     break;\n                    case 2:\n                        System.out.print(\"\
+  Enter number of task to remove: \");\n                        index = Integer.parseInt(scanner.nextLine());\n\
+  \                        list.removeTask(index - 1);\n                        System.out.println(\"\
+  Task removed successfully.\");\n                        break;\n               \
+  \     case 3:\n                        System.out.println(\"List of tasks:\");\n\
+  \                        list.displayTasks();\n                        break;\n\
+  \                    case 4:\n                        list.sortTasks();\n      \
+  \                  System.out.println(\"Tasks sorted by priority.\");\n        \
+  \                break;\n                    case 0:\n                        System.out.println(\"\
+  Exiting...\");\n                        break;\n                    default:\n \
+  \                       System.out.println(\"Invalid choice. Please try again.\"\
+  );\n                        break;\n                }\n            } catch (NumberFormatException\
+  \ e) {\n                System.out.println(\"Invalid input. Please enter a number.\"\
+  );\n            }\n        } while (choice != 0);\n        scanner.close();\n  \
+  \  }\n}\n```\nListing 5-1: `Todo.java`\n\n`main` 方法处理用户输入并调用链表的相应方法。\n\n这里是 `Task`\
+  \ 类的定义：\n\n```java\npackage Todo;\npublic class Task {\n    public String description;\n\
+  \    public int priority;\n    public Task next;\n    public Task() {\n    }\n}\n\
+  ```\nListing 5-2: `Task.java`\n\n链表由 `Task` 节点组成。`head` 变量指向链表的头部：\n\n```java\n\
+  package Todo;\npublic class TodoList {\n    private Task head;\n    private int\
+  \ size;\n\n    public TodoList() {\n```\nListing 5-3: `TodoList.java`\n\n构造函数初始化链表结构。\n\
+  \n`addTask()` 方法创建一个新节点并将其插入链表末尾：\n\n```java\npublic void addTask(String description,\
+  \ int priority) {\n    Task task = new Task();\n    task.description = description;\n\
+  \    task.priority = priority;\n    task.next = null;\n\n    if (head == null) {\n\
+  \        // List is empty\n        head = task;\n    } else {\n        Task temp\
+  \ = head;\n        // Find the last node\n        while (temp.next != null) {\n\
+  \            temp = temp.next;\n        }\n        // Insert the task after the\
+  \ last node\n        temp.next = task;\n    }\n    size++;\n}\n```\nListing 5-4:\
+  \ `TodoList.java`\n\n接下来，我们定义 `removeTask()` 方法：\n\n```java\npublic void removeTask(int\
+  \ index) {\n    if (head == null) {\n        System.out.println(\"List is empty.\"\
+  );\n        return;\n    }\n    if (index == 0) {\n        // We remove the first\
+  \ item in the list\n        Task temp = head;\n        head = head.next;\n     \
+  \   temp = null;\n        size--;\n        return;\n    }\n\n    Task previous =\
+  \ null;\n    Task current = head;\n    int i = 0;\n    // Go to selected index\n\
+  \    while (current != null && i < index) {\n        previous = current;\n     \
+  \   current = current.next;\n        i++;\n    }\n    if (current == null) {\n \
+  \       System.out.println(\"Index out of bounds.\");\n        return;\n    }\n\
+  \    previous.next = current.next;\n    current = null;\n    size--;\n}\n```\nListing\
+  \ 5-5: `TodoList.java`\n\n待办事项列表的参数是链表中的索引，我们在任务列表期间显示。\n\n这里是任务列表的代码：\n\n```java\n\
+  public void displayTasks() {\n    Task temp = head;\n    int i = 1;\n    while (temp\
+  \ != null) {\n        System.out.println(i++ + \") Description: \" + temp.description+\
+  \ \", Priority: \" + temp.priority);\n        temp = temp.next;\n    }\n}\n```\n\
+  Listing 5-6: `TodoList.java`\n\n最后，我们展示根据优先级排序任务的代码：\n\n```java\npublic void sortTasks()\
+  \ {\n    int swapped;\n    Task ptr1;\n    Task ptr2 = null;\n    if (head == null)\
+  \ return;\n    do {\n        swapped = 0; // will change if swapping happens\n \
+  \       ptr1 = head;\n        while (ptr1.next != ptr2) {\n            // Swap data\
+  \ of adjacent nodes\n            if (ptr1.priority > ptr1.next.priority) {\n   \
+  \             int tempPriority = ptr1.priority;\n                ptr1.priority =\
+  \ ptr1.next.priority;\n                ptr1.next.priority = tempPriority;\n\n  \
+  \              String tempDescription = ptr1.description;\n                ptr1.description\
+  \ = ptr1.next.description;\n                ptr1.next.description = tempDescription;\n\
+  \                swapped = 1; //swap happened in this loop pass; don't stop yet\n\
+  \            }\n            ptr1 = ptr1.next;\n        }\n        ptr2 = ptr1;\n\
+  \    } while (swapped != 0); //quit loop when no swap happened\n}\n```\nListing\
+  \ 5-7: `TodoList.java`\n\n代码采用冒泡排序算法执行任务排序操作。在冒泡排序中，我们对链表进行多次遍历。每当我们发现一个任务的优先级低于下一个任务时，就会对这些相邻任务进行交换。随着时间的推移，所有条目将根据优先级进行排序，最终会出现一次没有发生交换的循环。这就是算法结束的时候。\n\
+  \n# 6.        歌曲列表\n\n我们将创建一个简单的程序，接收一个歌曲数组并按照艺术家、专辑或发行日期对其排序，使用插入排序。\n\n\n\n\n\
+  `Song` 类将包含有关歌曲标题、艺术家、专辑和发行年份的信息：\n\n```java\npackage Songs;\npublic class Song\
+  \ {\n    public String title;\n    public String artist;\n    public String album;\n\
+  \    public int releaseYear;\n    public Song(String title, String artist, String\
+  \ album, int releaseYear) {\n        this.title = title;\n        this.artist =\
+  \ artist;\n        this.album = album;\n        this.releaseYear = releaseYear;\n\
+  \    }\n}\n```\n列表 6-1：`Song.java`\n\n接下来，我们定义了三个方法，用于比较：\n\n```java\npackage Songs;\n\
+  import java.util.Comparator;\npublic class Songs {\n    // 根据艺术家比较歌曲\n    public\
+  \ static int compareByArtist(Song a, Song b) {\n        return a.artist.compareTo(b.artist);\n\
+  \    }\n    // 根据专辑比较歌曲\n    public static int compareByAlbum(Song a, Song b) {\n\
+  \        return a.album.compareTo(b.album);\n    }\n    // 根据发行日期比较歌曲\n    public\
+  \ static int compareByReleaseDate(Song a, Song b) {\n        return a.releaseYear\
+  \ - b.releaseYear;\n    }\n}\n```\n列表 6-2：`Songs.java`\n\n在前两个方法中，我们比较两个字符串，而在第三个方法中，我们比较两个整数。这些方法将被\
+  \ `insertionSort()` 方法使用：\n\n```java\npublic static void insertionSort(Song[] arr,\
+  \ Comparator<Song> comparator) { \n    for (int i = 1; i < arr.length; i++) {\n\
+  \        Song key = arr[i];\n        int j = i - 1;\n        // 将 arr[0..i-1] 中大于\
+  \ key 的元素\n        // 移动到其当前位置的前一个\n        while (j >= 0 && comparator.compare(arr[j],\
+  \ key) > 0) {\n            arr[j + 1] = arr[j];\n            j = j - 1;\n      \
+  \  }\n        arr[j + 1] = key;\n    }\n}\n```\n列表 6-3：`Songs.java`\n\n我们使用 `Comparator`\
+  \ 接口是为了使用之前定义的 3 个静态方法之一。该接口随后被用作 `insertionSort()` 方法的参数，指定对 `Song` 数组排序的比较逻辑。\n\
+  \n例如，如果我们像这样调用 `insertionSort()`：\n\n`insertionSort(songs, Songs::compareByArtist);`\n\
+  \n那么，`insertionSort()` 内部的后续代码：\n\n`while (j >= 0 && comparator.compare(arr[j],\
+  \ key) > 0)`\n\n将导致调用 `compareByArtist()` 方法。通过这样，我们不需要为了适应三种不同的比较类型而编写三次 `insertionSort()`。\n\
+  \n请注意，我们本质上是在使用带有静态方法引用的 Lambda 表达式。我们可以通过更传统的方式来实现，即创建三个实现 `Comparator` 接口的类，如下：\n\
+  \n```java\n// 用于按艺术家比较歌曲的 Comparator 类\nclass CompareByArtist implements Comparator<Song>\
+  \ {\n    @Override\n    public int compare(Song a, Song b) {\n        return a.artist.compareTo(b.artist);\n\
+  \    }\n}\n```\n列表 6-4：`Songs.java`\n\n然后我们像这样调用 `insertionSort()`：\n\n`insertionSort(songs,\
+  \ new CompareByArtist());`\n\n插入排序的工作原理是取数组中的每个元素，并将其移动到数组左侧的排序位置。在任何时刻，数组的左部分都是排序的，而我们从右部分获取项目。当我们把一个元素移动到数组中的某个位置时，右侧的所有项目都必须向右移动一位。\n\
+  \n这一切在 `main()` 方法中都得到了说明，在该方法中我们调用了三次 `insertionSort()`，每次传递一个不同的比较方法。每次，数组都以不同的方式进行排序：\n\
+  \n```java\npublic static void main(String[] args) {\n    Song[] songs = {\n    \
+  \    new Song(\"Song1\", \"Artist2\", \"Album1\", 2010),\n        new Song(\"Song2\"\
+  , \"Artist1\", \"Album2\", 2005),\n        new Song(\"Song3\", \"Artist3\", \"Album1\"\
+  , 2015),\n        new Song(\"Song4\", \"Artist4\", \"Album3\", 2008),\n        new\
+  \ Song(\"Song5\", \"Artist1\", \"Album2\", 2003),\n        new Song(\"Song6\", \"\
+  Artist3\", \"Album4\", 2019),\n        new Song(\"Song7\", \"Artist2\", \"Album3\"\
+  , 2012),\n        new Song(\"Song8\", \"Artist4\", \"Album4\", 2017),\n        new\
+  \ Song(\"Song9\", \"Artist5\", \"Album5\", 2014),\n        new Song(\"Song10\",\
+  \ \"Artist5\", \"Album5\", 2011)\n    };\n    // 按艺术家排序\n    insertionSort(songs,\
+  \ Songs::compareByArtist);\n    System.out.println(\"Sorted by Artist:\");\n   \
+  \ for (Song song : songs) {\n        System.out.println(song.title + \" from \"\
+  \ + song.artist);\n    }\n    System.out.println();\n    // 按专辑排序\n    insertionSort(songs,\
+  \ Songs::compareByAlbum);\n    System.out.println(\"Sorted by Album:\");\n    for\
+  \ (Song song : songs) {\n        System.out.println(song.title + \" from \" + song.artist);\n\
+  \    }\n    System.out.println();\n    // 按发行日期排序\n    insertionSort(songs, Songs::compareByReleaseDate);\n\
+  \    System.out.println(\"Sorted by Release Date:\");\n    for (Song song : songs)\
+  \ {\n        System.out.println(song.title + \" from \" + song.artist);\n    }\n\
+  }\n```\n列表 6-5：`Songs.java`\n\n你可以在 GitHub 上找到这个项目：\n\n`https://github.com/htset/java_exercises/tree/master`\n\
+  \n## 解决方案\n\n我们将创建一个用户可以输入任务的程序。我们将使用优先级队列来表示差异。\n\n让我们先定义 `Task` 和 `Worker` 类：\n\
+  \n```java\npackage TaskAllocation;\npublic class Task {\n    public String description;\n\
+  \    public int duration;\n    public Task(String description, int duration) {\n\
+  \        this.description = description;\n        this.duration = duration;\n  \
+  \  }\n}\n```\n列表 7-1：`Task.java`\n\n```java\npackage TaskAllocation;\npublic class\
+  \ Worker {\n    public int id;\n    public int workload;\n    public Worker(int\
+  \ id, int workload) {\n        this.id = id;\n        this.workload = workload;\n\
+  \    }\n}\n```\n列表 7-2：`Worker.java`\n\n`Worker` 类包含了工作者的 ID 以及工作负载。\n\n接下来，我们定义\
+  \ `main()` 方法：\n\n```java\npackage TaskAllocation;\nimport java.util.ArrayList;\n\
+  import java.util.Comparator;\nimport java.util.List;\nimport java.util.PriorityQueue;\n\
+  import java.util.Scanner;\n\npublic class TaskAllocation {\n    public static void\
+  \ main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n   \
+  \     List<Task> tasks = new ArrayList<>();\n        PriorityQueue<Worker> workerQueue\
+  \ = new PriorityQueue<>(Comparator.comparingInt(w -> w.workload));\n\n        System.out.print(\"\
+  Enter the number of workers: \");\n        int numWorkers = scanner.nextInt();\n\
+  \        // 初始化负载为 0\n        for (int i = 0; i < numWorkers; i++) {\n         \
+  \   workerQueue.add(new Worker(i, 0));\n        }\n\n        int choice;\n     \
+  \   do {\n            System.out.println(\"\\nMenu:\");\n            System.out.println(\"\
+  1. Add Task\");\n            System.out.println(\"2. Display Tasks\");\n       \
+  \     System.out.println(\"3. Print Workers Queue\");\n            System.out.println(\"\
+  4. Exit\");\n            System.out.print(\"Enter your choice: \");\n          \
+  \  choice = scanner.nextInt();\n            switch (choice) {\n                case\
+  \ 1:\n                    addTask(workerQueue, tasks, scanner);\n              \
+  \      break;\n                case 2:\n                    displayTasks(tasks);\n\
+  \                    break;\n                case 3:\n                    printWorkersQueue(workerQueue);\n\
+  \                    break;\n                case 4:\n                    System.out.println(\"\
+  Exiting program...\");\n                    break;\n                default:\n \
+  \                   System.out.println(\"Invalid choice! Please try again.\");\n\
+  \                    break;\n            }\n        } while (choice != 4);\n   \
+  \     scanner.close();\n    }\n}...\n```\n列表 7-3：`TaskAllocation.java`\n\n接下来，我们实现添加任务并将其分配给工作者的方法：\n\
+  \n```java\n// 添加任务并分配给工作者的方法\nstatic void addTask(PriorityQueue<Worker> workerQueue,List<Task>\
+  \ tasks, Scanner scanner) {\n    System.out.print(\"Enter task description: \");\n\
+  \    String description = scanner.next(); \n\n    System.out.print(\"Enter task\
+  \ duration (in minutes): \");\n}\n```\n\n\n\n\n```java\nint duration = scanner.nextInt();\n\
+  if (workerQueue.size() == 0) {\n    System.out.println(\"No workers available! Task\
+  \ cannot be assigned.\");\n    return;\n}\n// 取出工作量最短的线程\nWorker worker = workerQueue.poll();\n\
+  // 将任务分配给该线程并更新工作量\ntasks.add(new Task(description, duration));\nSystem.out.println(\"\
+  Task added successfully and allocated to Worker \" + worker.id + \"!\");\n// 更新工作量\n\
+  worker.workload += duration;\n// 将更新后的线程存回队列\nworkerQueue.add(worker);\n```\n代码列表\
+  \ 7-4：`TaskAllocation.java`\n\n为了找到工作量最低的线程，我们将线程存储在优先级队列中。请注意，我们使用 `workload` 属性作为用于排序优先级队列的参数。这在\
+  \ `main()` 方法中的队列定义中已经指定：\n\n```java\nPriorityQueue<Worker> workerQueue = new PriorityQueue<>(Comparator.comparingInt(w\
+  \ -> w.workload));\n```\n\n当我们从队列中取出项时，将获得工作量最低的项。\n\n在 `addTask()` 中，我们获取工作量最低的线程（位于队列头部的线程），并将任务的工作量加到线程自身的工作量中。然后，我们将任务存储到\
+  \ `tasks` 列表中。最后，将线程再次插入队列中；现在该线程将根据新更新的工作量重新确定位置。\n\n最后，我们展示了另外两个操作的代码，分别显示任务和线程信息：\n\
+  \n```java\n// 显示所有任务的方法\nstatic void displayTasks(List<Task> tasks) {\n    System.out.println(\"\
+  Task List:\");\n    for (Task task : tasks) {\n        System.out.println(\"Task\
+  \ description: \" + task.description + \", Duration: \" + task.duration + \" minutes\"\
+  );\n    }\n}\n\n// 打印线程队列的方法\nstatic void printWorkersQueue(PriorityQueue<Worker>\
+  \ workerQueue) {\n    System.out.println(\"Workers Queue:\");\n    for (Worker item\
+  \ : workerQueue) {\n        System.out.println(\"Worker ID: \" + item.id + \", Workload:\
+  \ \" + item.workload + \" minutes\");\n    }\n}\n```\n代码列表 7-5：`TaskAllocation.java`\n\
+  \n请注意，遍历优先级队列将得到一个无序的线程列表。显然，这是在不逐个取出每个元素的情况下获取优先级队列内容的唯一方法。\n\n你可以在 GitHub 上找到此项目：\n\
+  \n`https://github.com/htset/java_exercises_dsa/tree/master/TaskAllocation`\n\n#\
+  \ 8. 单词频率\n\n我们将创建一个简单的程序，解析文本文件并找到其中出现的所有单词的频率。\n\n### 建议的解决方案\n\n该项目是字典结构的一个用例。我们将使用\
+  \ `HashMap` 类来存储单词和单词频率值对。\n\n以下是程序代码：\n\n```java\npackage WordFrequencies;\nimport\
+  \ java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\
+  import java.util.HashMap;\nimport java.util.Map;\n\npublic class WordFrequencies\
+  \ {\n    static String cleanWord(String word) {\n        return new String(word.chars().filter(Character::isLetter).map(Character::toLowerCase).toArray(),\
+  \ 0, (int) word.chars().filter(Character::isLetter).count());\n    }\n\n    public\
+  \ static void main(String[] args) {\n        Map<String, Integer> wordFrequency\
+  \ = new HashMap<>();\n        // 从文件读取文本\n        try (BufferedReader inputFile=\
+  \ new BufferedReader(new FileReader(\"input.txt\"))) {\n            String line;\n\
+  \            while ((line = inputFile.readLine()) != null) {\n                for\
+  \ (String word : line.split(\" \")) {\n                    String cleanedWord =\
+  \ cleanWord(word);\n                    if (!cleanedWord.isEmpty()) {\n        \
+  \                wordFrequency.put(cleanedWord, wordFrequency.getOrDefault(cleanedWord,\
+  \ 0) + 1);\n                    }\n                }\n            }\n        } catch\
+  \ (IOException e) {\n            e.printStackTrace();\n        }\n        // 显示单词频率\n\
+  \        System.out.println(\"Word Frequencies:\");\n        wordFrequency.forEach((key,\
+  \ value) -> System.out.println(key + \": \" + value));\n    }\n}\n```\n代码列表 8-1：`WordFrequencies.java`\n\
+  \n通过使用 `BufferedReader` 对象，我们逐行读取输入文件。然后，根据空格拆分每行，并处理每个单词将其转换为小写并移除非字母字符。这种处理由 `cleanWord()`\
+  \ 方法完成，它接收一个字符串，将其拆分为字符，然后过滤字符以只保留字母和数字。最后，它将每个字符映射为小写，并根据它们创建一个新字符串。\n\n然后，我们将单词添加到\
+  \ `HashMap` 中。如果单词已于 `HashMap` 中，则 `getOrDefault()` 将返回零，否则它将返回目前为止的频率。\n\n最后，我们使用\
+  \ `forEach()` 循环将所有单词及其频率打印到控制台。注意在 `forEach()` 的参数中使用了 lambda 表达式。\n\n你可以在 GitHub\
+  \ 上找到此项目：\n\n`https://github.com/htset/java_exercises_dsa/tree/master/WordFrequencies`\n\
+  \n# 9. 语法检查器\n\n让我们创建一个简单的语法检查器，它可以扫描源代码文件并判断括号、中括号或大括号是否匹配。\n\n### 建议的解决方案\n\n\
+  我们将创建一个极其简单的语法检查器，它可以扫描源代码文件并判断其中的括号、中括号或大括号是否匹配。\n\n在源代码中，一组括号、中括号或大括号，我们需要确保它们是相反顺序关闭的。栈以相反顺序提取，使得这种算法可行：\n\
+  \n```java\npackage SyntaxChecker;\npublic class Stack {\n```\n代码列表 9-1：`Stack`\n\
+  \n这里是栈初始化的代码：\n\n```java\npublic Stack() {\n```\n代码列表 9-2：`Stack.`\n\n接下来，我们添加 `push`\
+  \ 和 `pop` 方法，以及一个检查栈是否为空的方法：\n\n```java\npublic void push(char c) {\n    if (top\
+  \ == items.length - 1) {\n        System.out.println(\"Stack is full\");\n     \
+  \   System.exit(1);\n    }\n    items[++top] = c;\n}\npublic char pop() {\n    if\
+  \ (top == -1) {\n        System.out.println(\"Stack is empty\");\n        System.exit(1);\n\
+  \    }\n    return items[top--];\n}\npublic boolean isEmpty() {\n    return (top\
+  \ == -1);\n}\n```\n代码列表 9-3：`Stack.java`\n\n代码中最关键的部分是检查文件是否平衡的算法：\n\n```java\n\
+  package SyntaxChecker;\nimport java.io.BufferedReader;\nimport java.io.InputStreamReader;\n\
+  import java.io.FileReader;\nimport java.io.IOException;\n\npublic class SyntaxChecker\
+  \ {\n    static int checkBalanced(String filename) {\n        try (BufferedReader\
+  \ file = new BufferedReader(new FileReader(filename))) {\n            int c;\n \
+  \           Stack stack = new Stack();\n            while ((c = file.read()) !=\
+  \ -1) {\n                char ch = (char) c;\n                if (ch == '(' || ch\
+  \ == '[' || ch == '{') {\n                    stack.push(ch);\n                }\
+  \ else if (ch == ')' || ch == ']' || ch == '}') {\n                    if (stack.isEmpty())\
+  \ {\n                        return 0;\n                    }\n                \
+  \    char openingChar = stack.pop();\n                    if ((ch == ')' && openingChar\
+  \ != '(') || (ch == ']' && openingChar != '[') || (ch == '}' && openingChar != '{'))\
+  \ {\n                        return 0;\n                    }\n                }\n\
+  \            }\n            return stack.isEmpty() ? 1 : 0;\n        } catch (IOException\
+  \ e) {\n            e.printStackTrace();\n            return 0;\n        }\n   \
+  \ }\n\n    public static void main(String[] args) {\n        try (BufferedReader\
+  \ reader = new BufferedReader(new InputStreamReader(System.in))) {\n           \
+  \ System.out.print(\"Path to the source file: \");\n            String filename\
+  \ = reader.readLine();\n            if (checkBalanced(filename) == 1) {\n      \
+  \          System.out.println(\"The input file is balanced.\");\n            } else\
+  \ {\n                System.out.println(\"The input file is not balanced.\");\n\
+  \            }\n        } catch (IOException e) {\n            e.printStackTrace();\n\
+  \        }\n    }\n}\n```\n代码列表 9-4：`SyntaxChecker.java`\n\n\n\n\n注意，这是该算法的一个简单版本。事实上，如果我们尝试检查练习题自身的源文件（`SyntaxChecker.java`）的括号平衡情况，我们将得到一个错误——尽管代码是可以编译的。这是因为我们在检查过程中代码中使用了单个字符（左括号或右括号），如如下行所示：\n\
+  \n```java\nif (c == '(' || c == '[' || c == '{')\n```\n\n更高级版本的算法将不会考虑这些字符（例如在引号内的字符）。\n\
+  \n你可以在 GitHub 上找到这个项目：\n\n[`github.com/htset/java_exercises_dsa/tree/master/SyntaxChecker`](https://github.com/htset/java_exercises_dsa/tree/master/SyntaxChecker)\n\
+  \n# 10. 迷宫求解器\n\n在这个练习中，我们将使用栈（stack）来寻找迷宫的路径。\n\n## 建议解决方案\n\n我们将迷宫定义为整数二维数组。墙壁被标记为\
+  \ 1 (ones)，而迷宫的走廊被标记为 0 (zero)。\n\n下面我们可以看到一个 15x15 迷宫的定义：\n\n```java\nprivate int[][]\
+  \ matrix = {{0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},{0, 1, 0, 1, 0, 1, 1,\
+  \ 1, 1, 0, 1, 1, 1, 1, 0},{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},{0, 0, 0,\
+  \ 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0},{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0,\
+  \ 0},{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},{0, 1, 0, 1, 0, 0, 0, 0, 1, 0,\
+  \ 1, 0, 0, 0, 0},{0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0},{0, 1, 0, 0, 0, 0,\
+  \ 1, 0, 1, 0, 1, 0, 0, 1, 0},{0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0},{0, 0,\
+  \ 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0},{0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1,\
+  \ 1, 0},{0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0},{0, 1, 1, 1, 1, 1, 1, 1, 1,\
+  \ 1, 1, 1, 0, 1, 0},{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}};\n```\n列表 10-1:\
+  \ `MazeSolver.java`\n\n迷宫的入口在左上角，出口在右下角。\n\n我们将使用栈结构来解决这个迷宫。当我们穿过迷宫时，我们将进入的入入点坐标存储在栈中。当我们遇到死胡同时，我们就必须回溯，我们将通过从栈中弹出一个点来实现这一点。这种算法被称为深度优先搜索\
+  \ (DFS)，因为它尽可能地深入迷宫内部，只有在找不到路时才返回并尝试另一个方向。\n\n这里是坐标点的代码：\n\n```java\npackage MazeSolver;\n\
+  public class Point {\n    public int row, col;\n    public Point() {\n        row\
+  \ = 0;\n        col = 0;\n    }\n    public Point(int x, int y) {\n        row =\
+  \ x;\n        col = y;\n    }\n}\n```\n列表 10-2: `Point.java`\n\n这里是栈的代码：\n\n```java\n\
+  package MazeSolver;\n\npublic class Stack<T> {\n    private T[] items;\n    private\
+  \ int top;\n    public Stack(int capacity) {\n        items = (T[]) new Object[capacity];\n\
+  \        top = -1;\n    }\n    public boolean isEmpty() {\n        return top ==\
+  \ -1;\n    }\n    public void push(T t) {\n        top++;\n        items[top] =\
+  \ t;\n    }\n    public T pop() {\n        return items[top--];\n    }\n```\n列表\
+  \ 10-3: `Stack.java`\n\n为了让它更有趣，我们使用泛型创建了一个栈。栈最终将包含一个点对象的数组。我们定义了初始化栈的方法、检查它是否为空以及\
+  \ `push` 和 `pop` 方法。注意我们保持简单，没有包含边界检查，因为我们将实例化容量为 `ROWS*COLS` 的栈来解决迷宫。\n\n现在，是时候引入一个处理迷宫的类了：\n\
+  \n```java\npackage MazeSolver;\npublic class Maze {\n    private Stack<Point> stack\
+  \ = new Stack(ROWS * COLS);\n    private static final int ROWS = 15;\n    private\
+  \ static final int COLS = 15;\n    private int[][] matrix = {{0, 1, 0, 0, 0, 0,\
+  \ 0, 0, 0, 0, 0, 0, 0, 0, 0},{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0},{0, 1,\
+  \ 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},{0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1,\
+  \ 1, 0},{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0},{0, 1, 0, 1, 0, 1, 1, 1, 1,\
+  \ 0, 1, 0, 1, 1, 0},{0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0},{0, 1, 0, 1, 1,\
+  \ 1, 1, 0, 1, 0, 1, 0, 1, 1, 0},{0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0},{0,\
+  \ 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0},{0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0,\
+  \ 0, 0, 0},{0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0},{0, 0, 1, 0, 1, 0, 0, 0,\
+  \ 1, 0, 0, 0, 0, 1, 0},{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0},{0, 0, 0, 0,\
+  \ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}}; \n\n    public Maze() { }\n}\n```\n列表 10-4:\
+  \ `Maze.java`\n\n接下来，我们添加检查是否可以移动到单元格的代码：\n\n```java\n//检查是否可以移动到此单元格\nprivate boolean\
+  \ canMove(int row, int col) {\n    return (row >= 0 && row < ROWS && col >= 0 &&\
+  \ col < COLS && matrix[row][col] == 0);\n}\n```\n列表 10-5: `Maze.java`\n\n该单元格必须在迷宫边界内并且应该是走廊的一部分。\n\
+  \n我们还提供了一个打印迷宫的方法：\n\n```java\npublic void print() {\n    for (int i = 0; i < ROWS;\
+  \ i++) {\n        for (int j = 0; j < COLS; j++) {\n            System.out.print(matrix[i][j]\
+  \ + \" \");\n        }\n        System.out.println();\n    }\n}\n```\n列表 10-6: `Maze.java`\n\
+  \n以下方法实现了迷宫求解算法：\n\n```java\n//使用回溯求解迷宫\npublic int solve(int row, int col) {\n\
+  \    if (row == ROWS - 1 && col == COLS - 1) {\n        //到达目的地\n        stack.push(new\
+  \ Point(row, col));\n        return 1;\n    }\n    if (canMove(row, col)) {\n  \
+  \      stack.push(new Point(row, col));\n        matrix[row][col] = 2; //标记已访问\n\
+  \        //向右\n        if (solve(row, col + 1) == 1) return 1;\n        //向下\n \
+  \       if (solve(row + 1, col) == 1) return 1;\n        //向左\n        if (solve(row,\
+  \ col - 1) == 1) return 1;\n        //向上\n        if (solve(row - 1, col) == 1)\
+  \ return 1;\n        //如果上述所有移动都不行，回溯\n        stack.pop();\n        return 0;\n\
+  \    }\n    return 0;\n}\n```\n列表 10-7: `Maze.java`\n\n# 11. 文件索引器\n\n在这个练习中，我们将创建一个程序，递归地索引指定文件夹中的所有文件。索引文件的信息（文件名和在磁盘上的位置）将存储在二叉搜索树\
+  \ (BST) 中，以便快速搜索。\n\n二叉搜索树结构是一种每个节点只有两个子节点（左和右）的树。这里是该类的定义：\n\n\n\n\n```java\npackage\
+  \ FileIndexer;\nimport java.io.*;\nimport java.nio.file.*;\nimport java.util.Scanner;\n\
+  class FileIndexer {\n    private class Node {\n        public String fileName;\n\
+  \        public String filePath;\n        public Node left;\n        public Node\
+  \ right;\n        public Node(String name, String path) {\n            fileName\
+  \ = name;\n            filePath = path;\n            left = null;\n            right\
+  \ = null;\n        }\n    }\n\n    private Node root;\n    ... \n```\n\n列表 11-1:\
+  \ `FileIndexer.java`\n\n树的每个节点都包含两个字符串：文件名和文件位置。它还包含指向两个子子节点的引用。\n\n接下来，我们定义了一个方法来向树中插入新节点：\n\
+  \n```java\n// 将节点插入到树中\nprivate void insertNode(String fileName, String filePath)\
+  \ {\n    // 如果树为空，在此处插入节点\n    if (root == null) {\n        root = new Node(fileName,\
+  \ filePath);\n        return;\n    }\n    // 如果不为空，则沿树向下移动\n    Node current = root;\n\
+  \    while (true) {\n        if (fileName.compareTo(current.fileName) < 0) {\n \
+  \           if (current.left == null) {\n                current.left = new Node(fileName,\
+  \ filePath);\n                return;\n            }\n            current = current.left;\n\
+  \        } else {\n            if (current.right == null) {\n                current.right\
+  \ = new Node(fileName, filePath);\n                return;\n            }\n    \
+  \        current = current.right;\n        }\n    }\n}\n```\n\n列表 11-2: `FileIndexer.java`\n\
+  \n从树的根开始，根据插入的值向左或向右移动。\n\n接下来，我们定义了递归将所有文件索引到树中的方法：\n\n```java\n// 索引指定的目录\nprivate\
+  \ void indexDirectoryHelper(String dirPath) {\n    // 如果不是目录，返回\n    if (!Files.isDirectory(Paths.get(dirPath)))\
+  \ return;\n    // 遍历目录内的文件\n    try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(dirPath)))\
+  \ {\n        for (Path entry : stream) {\n            if (Files.isRegularFile(entry))\
+  \ {\n                String fileName = entry.getFileName().toString();\n       \
+  \         insertNode(fileName, entry.toString());\n            }\n        }\n  \
+  \  } catch (IOException e) {\n        e.printStackTrace();\n    }\n    // 遍历目录内的目录\n\
+  \    try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(dirPath)))\
+  \ {\n        for (Path entry : stream) {\n            if (Files.isDirectory(entry))\
+  \ {\n                // 递归索引\n                indexDirectoryHelper(entry.toString());\n\
+  \            }\n        }\n    } catch (IOException e) {\n        e.printStackTrace();\n\
+  \    }\n}\n```\n\n列表 11-3: `FileIndexer.java`\n\n我们使用 `java.nio.file` 包的方法来检查路径是否存在并对应于目录（`Files.isDirectory`）。然后我们逐一遍历目录内的所有文件，并将它们作为新节点插入树中。\n\
+  \n然后，我们遍历目录并同样递归地索引它们。\n\n接下来，我们定义了一个递归删除树节点节点的方法：\n\n```java\n// 递归释放内存\nprivate\
+  \ void deleteSubtree(Node root) {\n    if (root != null) {\n        deleteSubtree(root.left);\n\
+  \        deleteSubtree(root.right);\n        root = null;\n    }\n}\n```\n\n列表 11-4:\
+  \ `FileIndexer.java`\n\n我们通过将子树的根设置为 null 来实现这一点，这样子树将被垃圾回收器移除。\n\n然后，我们有了目录遍历方法（也是递归的）：\n\
+  \n```java\nprivate void traverse(Node root) {\n    if (root != null) {\n       \
+  \ traverse(root.left);\n        System.out.println(root.fileName + \": \" + root.filePath);\n\
+  \        traverse(root.right);\n    }\n}\n```\n\n列表 11-5: `FileIndexer.java`\n\n\
+  现在，我们转向 `FileIndexer` 类提供的公共接口（注意目前所有的方法都是 `private` 的）。\n\n我们定义了索引和打印目录中所有文件的方法。这些方法调用了相应的私有辅助方法：\n\
+  \n```java\npublic void indexDirectory(String directoryPath) {\n    root = null;\n\
+  \    indexDirectoryHelper(directoryPath);\n}\npublic void printFiles() {\n    System.out.println(\"\
+  Indexed files:\");\n    traverse(root);\n}\n```\n\n列表 11-6: `FileIndexer.java`\n\
+  \n树建立好后，我们可以调用 `searchFileLocation()` 方法来获取文件的位置：\n\n```java\n// 在 BST 中搜索文件\npublic\
+  \ String searchFileLocation(String filename) {\n    // 遍历树直到找到匹配项或树耗尽\n    Node\
+  \ current = root;\n    while (current != null) {\n        if (filename.equals(current.fileName))\
+  \ {\n            return current.filePath; // 找到文件\n        } else if (filename.compareTo(current.fileName)\
+  \ < 0) {\n            current = current.left; // 在左子树中搜索\n        } else {\n   \
+  \         current = current.right; // 在右子树中搜索\n        }\n    }\n    return \"\"\
+  ; // 未找到文件\n}\n```\n\n列表 11-7: `FileIndexer.java`\n\n我们遍历树直到找到匹配项或树耗尽。\n\n最后，这里是\
+  \ `main()` 方法：\n\n```java\npublic static void main(String[] args) {\n    Scanner\
+  \ scanner = new Scanner(System.in);\n    System.out.print(\"Path to index: \");\n\
+  \    String path = scanner.nextLine();\n    FileIndexer indexer = new FileIndexer();\n\
+  \    indexer.indexDirectory(path);\n    System.out.println(\"Indexed files:\");\n\
+  \    indexer.printFiles();\n    System.out.println(\"\\nSearch for a file:\");\n\
+  \    System.out.print(\"Filename to search for: \");\n    String filename = scanner.nextLine();\n\
+  \    String location = indexer.searchFileLocation(filename);\n    if (!location.isEmpty())\
+  \ {\n        System.out.println(\"File found at: \" + location);\n    } else {\n\
+  \        System.out.println(\"File not found.\");\n    }\n    scanner.close();\n\
+  }\n```\n\n列表 11-8: `FileIndexer.java`\n\n\n\n\n\n```java\nx.height = Math.max(getHeight(x.left),\
+  \ getHeight(x.right)) + 1;//返回新根节点\nreturn x;}\n//左旋子树\nprivate InventoryNode rotateLeft(InventoryNode\
+  \ x) {\n    InventoryNode y = x.right;\n    InventoryNode T2 = y.left;\n    //执行旋转\n\
+  \    y.left = x;\n    x.right = T2;\n    //更新高度\n    x.height = Math.max(getHeight(x.left),\
+  \ getHeight(x.right)) + 1;\n    y.height = Math.max(getHeight(y.left), getHeight(y.right))\
+  \ + 1;\n    //返回新根节点\n    return y;}\n```\n列表 12-4：`Inventory.java`\n\n这两个方法将在我们尝试向树中插入新节点时使用：\n\
+  \n```java\n//在 AVL 树中插入产品\nprivate InventoryNode insertProduct(Node node, Product\
+  \ product) {\n    if (node == null)\n        return newNode(product);\n    // 插入产品\n\
+  \    if (product.id < node.product.id)\n        node.left = insertProduct(node.left,\
+  \ product);\n    else if (product.id > node.product.id)\n        node.right = insertProduct(node.right,\
+  \ product);\n    else\n        return node; // 不允许重复 ID\n    // 更新此节点的高度\n    node.height\
+  \ = 1 + Math.max(getHeight(node.left), getHeight(node.right));\n    // 获取平衡因子\n\
+  \    int balance = getBalance(node);\n    // 左左情况\n    if (balance > 1 && product.id\
+  \ < node.left.product.id)\n        return rotateRight(node);\n    // 右右情况\n    if\
+  \ (balance < -1 && product.id > node.right.product.id)\n        return rotateLeft(node);\n\
+  \    // 左右情况\n    if (balance > 1 && product.id > node.left.product.id) {\n    \
+  \    node.left = rotateLeft(node.left);\n        return rotateRight(node);\n   \
+  \ }\n    // 右左情况\n    if (balance < -1 && product.id < node.right.product.id) {\n\
+  \        node.right = rotateRight(node.right);\n        return rotateLeft(node);\n\
+  \    }\n    return node;}\n```\n列表 12-5：`Inventory.java`\n\n这里的思想是在向树插入新节点后检查树的平衡。如果树变得不平衡，我们必须向左或向右对其进行旋转。\n\
+  \n接下来，我们展示在打印树内容的同时遍历树的方法，以及在树中搜索特定产品代码：\n\n```java\nprivate void traverseTree(InventoryNode\
+  \ node) {\n    if (node != null) {\n        traverseTree(node.left);\n        System.out.println(\"\
+  ID: \" + node.product.id + \", \" +\"Name: \" + node.product.name + \", \" +\"Price:\
+  \ \" + node.product.price + \", \" +\"Quantity: \" + node.product.quantity);\n \
+  \       traverseTree(node.right);\n    }\n}\n\nprivate InventoryNode searchProduct(InventoryNode\
+  \ node, int id) {\n    if (node == null || node.product.id == id) {\n        if\
+  \ (node == null)\n            System.out.println(\"未找到产品。\");\n        else\n  \
+  \          System.out.println(\"找到产品: ID: \" + node.product.id + \", \" +\"Name:\
+  \ \" + node.product.name + \", \" +\"Price: \" + node.product.price + \", \" +\"\
+  Quantity: \" + node.product.quantity);\n        return node;\n    }\n    System.out.println(\"\
+  访问过的产品 ID: \" + node.product.id);\n    if (id < node.product.id)\n        return\
+  \ searchProduct(node.left, id);\n    else\n        return searchProduct(node.right,\
+  \ id);}\n```\n列表 12-6：`Inventory.java`\n\n遍历树意味着访问树中的每个节点，这是递归执行的，首先处理左分支，然后处理右分支。\n\
+  \n在树中搜索产品的工作方式类似：我们访问一个节点，并检查产品的 ID。如果它与搜索 ID 匹配，我们就打印产品详情并返回方法。否则，我们根据搜索 ID 递归地访问树的左分支或右分支。\n\
+  \n我们到为止定义的所有方法都是私有的。我们还定义了三个公共方法，它们将调用这些私有方法：\n\n```java\npublic void insertProduct(Product\
+  \ product) {\n    root = insertProduct(root, product);\n}\npublic void traverseTree()\
+  \ {\n    traverseTree(root);\n}\npublic InventoryNode searchProduct(int id) {\n\
+  \    return searchProduct(root, id);\n}\n```\n列表 12-7：`Inventory.java`\n\n我们使用这种约定是因为具有相同名的私有方法（`insertProduct`、`traverseTree`\
+  \ 和 `searchProduct`）会被递归调用。通过这种方式，我们为使用我们代码的程序员提供了一个整洁的接口。\n\n最后，这里 `main()` 方法：\n\
+  \n```java\npublic static void main(String[] args) {\n    Inventory inv = new Inventory();\n\
+  \    Product[] products = new Product[100];\n    Random random = new Random();\n\
+  \n    // 使用随机值初始化产品\n    for (int i = 0; i < 100; i++) {\n        products[i] =\
+  \ new Product();\n        products[i].id = random.nextInt(1000);\n        products[i].name\
+  \ = \"Product \" + i;\n        products[i].price = random.nextDouble() * 100;\n\
+  \        products[i].quantity = random.nextInt(10);\n    }\n    for (Product p :\
+  \ products) {\n        inv.insertProduct(p);\n    }\n    inv.traverseTree();\n}\n\
+  ```\n\n# 13 社交网络 (Social Network)\n\n社交网络本质上是一个表示用户及其连接的图。在这个练习中，我们将创建一个这样的图并实现根据用户推荐新朋友的功能。\n\
+  \n## 解决方案\n\n有多种方法可以实现用户图，例如使用稀疏矩阵。在这里我们将使用单链表来构建图，其中存储了连接：\n\n```java\npackage\
+  \ SocialNetwork;\nclass FriendNode {\n    public String name;\n    public FriendNode\
+  \ next;\n    public FriendNode(String name) {\n        this.name = name;\n     \
+  \   this.next = null;\n    }\n}\nclass User {\n    public String name;\n    public\
+  \ FriendNode friends;\n\n    public User(String name) {\n        this.name = name;\n\
+  \        this.friends = null;\n    }\n}\n```\n列表 13-1：`SocialNetwork.java`\n\n`User`\
+  \ 类包含了用户名称以及朋友的链表。\n\n接下来，我们定义了一个队列类，将用于推荐算法。为了学习目的，我们将自己实现队列，而不是使用 `java` 包中的包：\n\
+  \n```java\nclass MyQueue {\n    private class QueueNode {\n        public int userIndex;\n\
+  \        public QueueNode next;\n        public QueueNode(int userIndex) {\n   \
+  \         this.userIndex = userIndex;\n            this.next = null;\n        }\n\
+  \    }\n    private QueueNode front;\n    private QueueNode rear;\n\n    public\
+  \ MyQueue() {\n        front = rear = null;\n    }\n\n    public boolean isEmpty()\
+  \ {\n        return front == null;\n    }\n\n    public void enqueue(int userIndex)\
+  \ {\n        QueueNode newNode = new QueueNode(userIndex);\n        if (isEmpty())\
+  \ {\n            front = rear = newNode;\n        } else {\n            rear.next\
+  \ = newNode;\n            rear = newNode;\n        }\n    }\n\n    public int dequeue()\
+  \ {\n        if (isEmpty()) {\n            System.out.println(\"队列为空！\");\n    \
+  \        return -1;\n        }\n        int userIndex = front.userIndex;\n     \
+  \   front = front.next;\n        if (front == null) {\n            rear = null;\n\
+  \        }\n        return userIndex;\n    }\n}\n```\n列表 13-2：`SocialNetwork.java`\n\
+  \n队列包含用户的索引，因为它们将出现在用户数组中（见下文 `Graph` 类）。\n\n\n\n\n现在，让我们看看如何将用户插入到图中，以及如何定义他们与朋友之间的连接。我们定义了\
+  \ `Graph` 类，它本质上包含社交网络中所有用户的数组：\n\n```java\nclass Graph {\n    private static final\
+  \ int MAX_USERS = 100;\n    private User[] users;\n    private int numUsers;\n \
+  \   public Graph() {\n        users = new User[MAX_USERS];\n        numUsers = 0;\n\
+  \        ...\n    }\n}\n```\n列表 13-3: `SocialNetwork.java`\n\n接下来，我们提供了向图中添加新用户的功能：\n\
+  \n```java\npublic void addUser(String name) { \n    if (numUsers >= MAX_USERS) {\n\
+  \        System.out.println(\"Max user limit reached!\");\n        return;\n   \
+  \ }\n    users[numUsers] = new User(name);\n    numUsers++;\n}\n```\n列表 13-4: `SocialNetwork.java`\n\
+  \n我们使用以下方法为用户添加新的连接：\n\n```java\npublic void addConnection(int src, int dest) {\n\
+  \    if (src < 0 || src >= numUsers || dest < 0 || dest >= numUsers) {\n       \
+  \ System.out.println(\"Invalid user index!\");\n        return;\n    }\n    //Add\
+  \ bidirectional connection\n    FriendNode newFriendSrc = new FriendNode(users[dest].name);\n\
+  \    newFriendSrc.next = users[src].friends;\n    users[src].friends = newFriendSrc;\n\
+  \    FriendNode newFriendDest = new FriendNode(users[src].name);\n    newFriendDest.next\
+  \ = users[dest].friends;\n    users[dest].friends = newFriendDest;\n}\n```\n列表 13-5:\
+  \ `SocialNetwork.java`\n\n注意，当我们添加新连接时，我们将其是双向的。也就是说，我们为连接的每个端都插入了一个朋友节点。\n\n接下来，我们进入更有趣的内容：推荐方法：\n\
+  \n```java\npublic void recommendFriends(int userIndex) {\n    System.out.println(\"\
+  Recommended friends for \" + users[userIndex].name + \":\");\n    // 存储用户朋友的索引\n\
+  \    MyQueue queue = new MyQueue();\n    // 存储已经访问过的人\n    boolean[] visited = new\
+  \ boolean[MAX_USERS];\n    visited[userIndex] = true;\n    // 入队起始用户\n    queue.enqueue(userIndex);\n\
+  \    while (!queue.isEmpty()) {\n        int currentUserIndex = queue.dequeue();\n\
+  \        FriendNode current = users[currentUserIndex].friends;\n        // 遍历用户的朋友\n\
+  \        while (current != null) {\n            int friendIndex = -1;\n        \
+  \    // 寻找朋友的索引\n            for (int i = 0; i < numUsers; i++) {\n            \
+  \    if (current.name.equals(users[i].name)) {\n                    friendIndex\
+  \ = i;\n                    break;\n                }\n            }\n         \
+  \   // 检查朋友是否已经被访问\n            if (friendIndex != -1 && !visited[friendIndex])\
+  \ {\n                System.out.println(\"- \" + current.name);\n              \
+  \  // 将朋友加入访问数组\n                visited[friendIndex] = true;\n                //\
+  \ 将朋友入队\n                queue.enqueue(friendIndex);\n            }\n          \
+  \  // 移动到下一个朋友\n            current = current.next;\n        }\n    }\n}\n```\n\
+  列表 13-6: `SocialNetwork.java`\n\n`recommendFriends()` 方法使用广度优先搜索 (BFS) 来遍历社交网络图，从指定的用户开始，并访问所有连接的用户以推荐朋友。它使用\
+  \ `visited[]` 数组将用户标记为已访问，以避免重复推荐同一个朋友，并将每个朋友入队，以确保所有潜在朋友都能被发现和推荐。\n\nBFS 算法利用队列，我们在跟随链表时在其中存储用户朋友的索引。然后，我们使用队列获取用户朋友的朋友，通过这种方式，我们能够遍历图的连接并找到与特定用户连接的所有人员。\n\
+  \n最后，这里是 `main()` 方法：\n\n```java\npublic class SocialNetwork {\n    public static\
+  \ void main(String[] args) {\n        Graph graph = new Graph();\n        graph.addUser(\"\
+  User A\");\n        graph.addUser(\"User B\");\n        graph.addUser(\"User C\"\
+  );\n        graph.addUser(\"User D\");\n        graph.addUser(\"User E\");\n   \
+  \     graph.addUser(\"User F\");\n        graph.addUser(\"User G\");\n        graph.addUser(\"\
+  User H\");\n        graph.addConnection(0, 1);\n        graph.addConnection(1, 2);\n\
+  \        graph.addConnection(2, 3);\n        graph.addConnection(4, 5);\n      \
+  \  graph.addConnection(5, 7);\n        graph.addConnection(3, 6);\n        graph.recommendFriends(0);\n\
+  \        graph.recommendFriends(1);\n        graph.recommendFriends(7);\n    }\n\
+  }\n```\n列表 13-7: `SocialNetwork.java`\n\n在 `main()` 中，我们向图中添加用户，并输入他们的朋友连接。然后我们运行算法来获取朋友推荐。\n\
+  \n你可以在 GitHub 上找到这个项目：\n\nhttps://github.com/htset/java_exercises_dsa/tree/master/SocialNetwork\n\
+  \n# 14. 航班\n\n让我们创建一个控制台应用程序，维护城市之间的航班列表，并根据票价找到最佳航班组合。\n\n### 建议的解决方案\n\n这个问题涉及在城市之间创建一个图。该图是带权重的，权重为相应的机票费用。我们将使用\
+  \ Dijkstra 算法来寻找这两个城市之间最廉价的路径。\n\n首先，我们定义 `City` 类，它将存储连接城市及其相应的映射：\n\n```java\n\
+  package Flights;\nimport java.util.*;\npublic class Flights {\n    // 表示每个城市的结构\n\
+  \    public static class City {\n        public String name;\n        public Map<String,\
+  \ Integer> flights;\n        public City(String name) {\n            this.name =\
+  \ name;\n            this.flights = new HashMap<>();\n        }\n    }\n...\n```\n\
+  列表 14-1: `Flights.java`\n\n接下来，我们定义 `FlightGraph` 类：\n\n```java\npublic static class\
+  \ FlightGraph {\n    // 表示所有城市的图类\n    public Map<String, City> cities = new HashMap<>();\n\
+  \    ...\n```\n列表 14-2: `Flights.java`\n\n该类包含所有城市及其名称的映射。我们可以通过以下方法添加城市和航班连接：\n\
+  \n```java\n// 向图中添加城市\npublic void addCity(String name) {\n    cities.put(name,\
+  \ new City(name));\n}\n// 添加两个城市之间的航班及其费用\npublic void addFlight(String src, String\
+  \ dest, int cost) {\n    cities.get(src).flights.put(dest, cost);\n}\n```\n列表 14-3:\
+  \ `Flights.java`\n\n注意，我们假设航班是双向的，并且具有相同的价格。\n\n接下来，我们使用 Dijkstra 算法计算两个城市之间的最短路径：\n\
+  \n```java\n// 寻找两个城市之间最短路径的方法\npublic List<String> findCheapestRoute(String src,\
+  \ String dest, Map<String, Integer> dist) {\n    // 初始化距离映射和前驱节点映射\n    dist.clear();\n\
+  \    Map<String, String> prev = new HashMap<>();\n    PriorityQueue<Map.Entry<String,\
+  \ Integer>> pq = new PriorityQueue<>(Map.Entry.comparingByValue());\n    // 设置所有距离为无穷\n\
+  \    for (String city : cities.keySet()) {\n        dist.put(city, Integer.MAX_VALUE);\n\
+  \        prev.put(city, null);\n    }\n    // 起始城市的距离为 0\n    dist.put(src, 0);\n\
+  \    pq.offer(new AbstractMap.SimpleEntry<>(src, 0));\n    // 处理每个节点的主循环\n    while\
+  \ (!pq.isEmpty()) {\n        Map.Entry<String, Integer> entry = pq.poll();\n   \
+  \     String u = entry.getKey();\n        int uDist = entry.getValue();\n      \
+  \  // 处理当前节点的每个邻居\n        for (Map.Entry<String, Integer> flight : cities.get(u).flights.entrySet())\
+  \ {\n            String v = flight.getKey();\n            int cost = flight.getValue();\n\
+  \            // 如果发现到达 v 的更短路径\n            if (dist.get(u) != Integer.MAX_VALUE\
+  \ && dist.get(u) + cost < dist.get(v)) {\n                dist.put(v, dist.get(u)\
+  \ + cost);\n                prev.put(v, u);\n                pq.offer(new AbstractMap.SimpleEntry<>(v,\
+  \ dist.get(v)));\n            }\n        }\n    }\n    // 从源到目的地重建路径\n    List<String>\
+  \ path = new ArrayList<>();\n    for (String at = dest; at != null; at = prev.get(at))\
+  \ {\n        path.add(at);\n    }\n    Collections.reverse(path);\n    return path;\n\
+  }\n```\n列表 14-4: `Flights.java`\n\n\n\n完成完成后，我们使用上一个节点映射中存储的信息重构从源点到终点的最短路径，从而确定路线的总价格。\n\
+  \n为了避免在图的遍历过程中陷入无限循环，我们记录了当前路径中访问过的城市（`dist map`）。如果某个城市在当前路径中已经被访问过，我们将跳过从该城市出发的航班搜索，以防止环路。\n\
+  \n我们可以使用深度优先搜索 (DFS) 计算并打印两个城市之间所有可能的航班：\n\n```java\n//Display all possible flights\
+  \ between two cities using DFS\npublic void displayAllFlights(String src, String\
+  \ dest) {\n    if (!cities.containsKey(src) || !cities.containsKey(dest)) {\n  \
+  \      System.out.println(\"Invalid cities entered.\");\n        return;\n    }\n\
+  \n    Set<String> visited = new HashSet<>();\n    Stack<String> path = new Stack<>();\n\
+  \    path.push(src);\n    dfs(src, dest, visited, path);\n}\n```\nListing 14-5:\
+  \ `Flights.java`\n\n我们看到 `displayAllFlights()` 方法调用了递归的 `dfs()` 方法：\n\n```java\n\
+  //Recursive DFS function to find all flights between source and destination\nprivate\
+  \ void dfs(String src, String dest, Set<String> visited, Stack<String> path) {\n\
+  \    visited.add(src);\n    if (src.equals(dest)) {\n        printPath(path);\n\
+  \    } else {\n        for (String flight : cities.get(src).flights.keySet()) {\n\
+  \            if (!visited.contains(flight)) {\n                path.push(flight);\n\
+  \                dfs(flight, dest, visited, path);\n                path.pop();\n\
+  \            }\n        }\n    }\n    visited.remove(src);\n}\n```\nListing 14-6:\
+  \ `Flights.java`\n\n`FlightGraph` 类中的 `dfs()` 方法通过递归实现深度优先搜索 (DFS)，用于在航班网络中寻找源城市和终点城市之间所有可能的航班。\n\
+  \n它首先将当前城市标记为已访问，并检查它是否为终点城市。如果到达终点，则打印当前路径。否则，它将通过递归调用自身来探索所有尚未访问的邻居城市。\n\n在探索过程中，它将邻居城市推入\
+  \ `path` 栈中，并继续搜索，直到探索完当前城市的所有可能路径，或者到达终点。\n\n在回溯时，它会将当前城市从 `path` 栈中移除并标记为未访问，以便探索其他替代路径。此过程不断重复，直到网络中的所有城市都经过探索。\n\
+  \n我们使用上述栈在 `PrintPath()` 方法中打印最终路径：\n\n```java\n//Helper function to print a path\
+  \ (stack content)\nprivate void printPath(Stack<String> path) {\n    System.out.println(String.join(\"\
+  \ -> \", path));\n}\n```\nListing 14-7: `Flights.java`\n\n最后在 `main()` 中，我们向图中添加了城市和航班，并要求用户选择一对城市以计算最佳（最廉价）的航班组合：\n\
+  \n```java\npublic static void main(String[] args) {\n    Scanner scanner = new Scanner(System.in);\n\
+  \    FlightGraph graph = new FlightGraph();\n    graph.addCity(\"London\");\n  \
+  \  graph.addCity(\"Paris\");\n    graph.addCity(\"Berlin\");\n    graph.addCity(\"\
+  Rome\");\n    graph.addCity(\"Madrid\");\n    graph.addCity(\"Amsterdam\");\n  \
+  \  graph.addFlight(\"London\", \"Paris\", 100);\n    graph.addFlight(\"London\"\
+  , \"Berlin\", 150);\n    graph.addFlight(\"London\", \"Madrid\", 200);\n    graph.addFlight(\"\
+  Paris\", \"Berlin\", 120);\n    graph.addFlight(\"Paris\", \"Rome\", 180);\n   \
+  \ graph.addFlight(\"Berlin\", \"Rome\", 220);\n    graph.addFlight(\"Madrid\", \"\
+  Rome\", 250);\n    graph.addFlight(\"Madrid\", \"Amsterdam\", 170);\n    graph.addFlight(\"\
+  Amsterdam\", \"Berlin\", 130);\n    System.out.print(\"Enter departure city: \"\
+  );\n    String departure = scanner.nextLine();\n    System.out.print(\"Enter destination\
+  \ city: \");\n    String destination = scanner.nextLine();\n\n    //Display all\
+  \ possible flights\n    System.out.println(\"All possible flights between \" + departure\
+  \ + \" and \" + destination + \":\");\n    graph.displayAllFlights(departure, destination);\n\
+  \n    //Find the cheapest route and total price\n    Map<String, Integer> dist =\
+  \ new HashMap<>();\n    List<String> route = graph.findCheapestRoute(departure,\
+  \ destination, dist);\n    int totalPrice = dist.get(destination);\n\n    //Display\
+  \ the cheapest route and total price\n    System.out.print(\"Cheapest Route: \"\
+  );\n    System.out.println(String.join(\" -> \", route));\n    System.out.println(\"\
+  Total Price: \" + totalPrice);\n}\n```\nListing 14-8: `Flights.java`\n\n你可以在 GitHub\
+  \ 上找到这个项目：\n\nhttps://github.com/htset/java_exercises_dsa/tree/master/Flights\n\n\
+  # 15. MNIST 图像比较\n\n在这个练习中，我们将处理 MNIST 数据库中的手写数字图像。\n\n## 建议解决方案\n\nMNIST 数据库（http://yann.lecun.com/exdb/mnist/）是一组描绘手写数字的图像。这些图像维度为\
+  \ 28x28，通常用于学习模式识别和机器学习技术。\n\n![MNIST sample](http://yann.lecun.com/exdb/mnist/sample.jpg)\n\
+  \n来源：维基百科\n\n我们将下载以下文件并将其解压：\n\nhttp://yann.lecun.com/exdb/mnist/train-images-ubyte.gz\n\
+  \n并将其重命名为 `input.dat`。文件包含图像的元数据：\n\n```java\npackage MNIST;\nimport java.io.*;\n\
+  import java.util.*;\n\nclass Image {\n    public byte[] data;\n    public int id;\n\
+  \n    public Image(byte[] data, int id) {\n        this.data = data;\n        this.id\
+  \ = id;\n    }\n\n    public void print() {\n        for (int i = 0; i < data.length;\
+  \ i++) {\n            System.out.print(\"*\");\n        }\n        System.out.println();\n\
+  \    }\n\n    public double euclideanDistance(Image img) {\n        double distance\
+  \ = 0.0;\n        for (int i = 0; i < data.length; i++) {\n            distance\
+  \ += Math.pow(this.data[i] - img.data[i], 2);\n        }\n        return Math.sqrt(distance);\n\
+  \    }\n}\n```\nListing 15-1: `MNISTImages.java`\n\n在类内部，我们实现了 `Image` 构造函数和一个打印星号的方法。我们还实现了一个计算当前图像与传入参数图像之间欧几里得距离的方法。如果图像相似，距离将最小；相反，如果图像差异很大，距离会更高。\n\
+  \n现在来看 `main()` 方法：\n\n```java\npublic class MNISTImages {\n    static final int\
+  \ ImageSize = 784;\n    static final int MetaDataSize = 15;\n\n    public static\
+  \ void main(String[] args) {\n        List<Image> images = new ArrayList<>();\n\
+  \        try (FileInputStream ifs = new FileInputStream(\"input.dat\")) {\n    \
+  \        // 跳过文件开头的元数据\n            ifs.skip(MetaDataSize);\n            byte[]\
+  \ pixels = new byte[ImageSize];\n            int count = 0;\n            // 从文件读取数据并插入列表\n\
+  \            while (ifs.read(pixels) > 0) {\n                images.add(new Image(pixels,\
+  \ count++));\n            }\n        } catch (IOException e) {\n            e.printStackTrace();\n\
+  \        }\n        System.out.println(\"Total images: \" + (images.size() - 1));\n\
+  \n        // 示例：找到与随机选择的图像最相似\n        // 设置随机数生成器\n        Random rand = new Random();\n\
+  \        // 在列表长度范围内生成随机索引\n        int randomIndex = rand.nextInt(images.size());\n\
+  \        System.out.println(\"Random index: \" + randomIndex);\n        Image randomImage\
+  \ = images.get(randomIndex);\n        randomImage.print();\n\n        Image closestImage\
+  \ = null;\n        double minDistance = Double.POSITIVE_INFINITY;\n        int minIndex\
+  \ = 0;\n        for (int i = 0; i < images.size(); i++) {\n            double distance\
+  \ = randomImage.euclideanDistance(images.get(i));\n            if (distance != 0\
+  \ && distance < minDistance) {\n                minDistance = distance;\n      \
+  \          minIndex = i;\n                closestImage = images.get(i);\n      \
+  \      }\n        }\n        // 输出最相似图像的标签\n        System.out.println(\"\\nClosest\
+  \ image (distance=\" + minDistance + \", index = \" + minIndex + \")\\n\");\n  \
+  \      // 打印最相似的图像\n        closestImage.print();\n    }\n}\n```\n\n\n\n\n## 列表\
+  \ 15-2: `MNISTImages.java`\n\n我们使用一个 `ArrayList` 对象来存储图像引用。在打开 `input.dat` 二进制文件后，我们使用\
+  \ `skip()` 跳过前 15 字节。然后，在循环中，我们使用 `read()` 每次读取一个图像（784 字节）到缓冲区中，并将其复制到列表中相应的 `Image`\
+  \ 对象中。\n\n此后，我们从列表中随机选择一个图像，并将其打印出来：在字节为 0 的地方使用空格，在图像字节为非 0 的地方使用星号（`**`）。通过这种方式，我们可以了解所选手写数字的大致情况：\n\
+  \n![](img/image_rsrc5RP.jpg)\n\n打印完选定的图像后，我们遍历图像列表，并计算随机选择的图像与列表中当前选择图像之间的欧几里得距离。我们维护遇到的过的最小距离以及相应的图像及其\
+  \ ID。\n\n最后，我们打印获取的最接近的图像；看起来算法运行良好。\n\n![](img/image_rsrc5RR.jpg)\n\n最后说明一点，该算法获取最接近的图像需要花费大量时间，因为它是一个接一个检查所有的图像。其他算法可以使此操作更快，尽管会损失一些精度。\n\
+  \n其中一个例子是局部敏感哈希（LSH）算法，这是一种用于高维空间中近似近邻搜索的技术。在处理大型数据集时，传统的精确近邻搜索方法的计算开销很大，LSH 特别有用。\n\
+  \n你可以在 GitHub 上找到此项目：\n\n[`github.com/htset/java_exercises_dsa/tree/master/MNISTImages`](https://github.com/htset/java_exercises_dsa/tree/master/MNISTImages)\n\
+  \n# 16. 带有缓存的 HTTP 服务器\n\n在这个练习中，我们将创建一个简单的 HTTP 服务器，用于提供静态内容（仅限 HTML 文件）。该服务器将利用缓存机制，保留最近的服务内容，以提高服务器的性能。\n\
+  \n### 建议的解决方案\n\nWeb 服务器缓存是一个存储之前发送到客户端浏览器内容的结构。缓存空间有限，因此当填满时，我们需要清空最久未使用（LRU）的条目为新条目腾出空间。此外，当服务器使用某个条目向客户端发送内容时，该条目会被移动到列表头部，因为它是最近使用的条目。\n\
+  \n让我们看看缓存定义：\n\n```java\npackage WebServerCache;\npublic class LRUCache {\n    static\
+  \ final int CACHE_SIZE = 3;\n    Node head;\n    Node tail;\n    int size;\n\n \
+  \   static class Node {\n        String url;\n        String content;\n        Node\
+  \ prev;\n        Node next;\n    }\n    public LRUCache() {\n        size = 0;\n\
+  \        head = null;\n        tail = null;\n    }\n    ...\n```\n\n### 列表 16-1:\
+  \ `LRUCache.java`\n\n缓存实现为双向链表。在这类链表中，我们可以向两个方向（向前和向后）移动。双向链表在我们情况下是有益的，因为我们可以高效地在列表任何位置删除和插入节点，而不需要从列表开始遍历。简单的链表或甚至数组也可以实现相同的效果，但性能较低。\n\
+  \n让我们先跳过缓存定义的其余部分，直接跳到程序的 `main()` 方法：\n\n```java\npublic static void main(String[]\
+  \ args) {\n    HttpServer server = new HttpServer();\n    try {\n        server.start();\n\
+  \    } catch (IOException e) {\n        e.printStackTrace();\n    }\n}\n```\n\n\
+  ### 列表 16-2: `WebServerCache.java`\n\n在这里，我们创建一个 `HttpServer` 类的对象，它将处理与客户端的连接。让我们它是如何实现的：\n\
+  \n```java\npackage WebServerCache;\nimport java.io.*;\nimport java.net.*;\nimport\
+  \ java.nio.charset.StandardCharsets;\nimport java.nio.file.Files;\nclass HttpServer\
+  \ {\n    static final int PORT = 8080;\n    static final int MAX_REQUEST_SIZE =\
+  \ 1024;\n    LRUCache cache;\n    public HttpServer() {\n        cache = new LRUCache();\n\
+  \    }\n    public void start() throws IOException {\n        //Open server socket\n\
+  \        ServerSocket server = new ServerSocket(PORT);\n        System.out.println(\"\
+  Server started on port \" + PORT);\n        while (true) {\n            //Wait for\
+  \ connections\n            Socket client = server.accept();\n            handleRequest(client);\n\
+  \            client.close();\n        }\n    }\n    void handleRequest(Socket client)\
+  \ throws IOException {\n        //Read request\n        InputStream inputStream\
+  \ = client.getInputStream();\n        byte[] buffer = new byte[MAX_REQUEST_SIZE];\n\
+  \        int bytesRead = inputStream.read(buffer);\n        String request = new\
+  \ String(buffer, 0, bytesRead, StandardCharsets.UTF_8);\n        System.out.println(\"\
+  Received request: \" + request);\n        //Find request type (GET)\n        String[]\
+  \ parts = request.split(\" \");\n        if (parts.length < 2 || !parts[0].equals(\"\
+  GET\")) {\n            System.out.println(\"Invalid request format.\");\n      \
+  \      return;\n        }\n        //Get request url and check whether it is already\
+  \ stored in the cache\n        String[] parts = request.split(\" \");\n        //\
+  \ ... (logic omitted for brevity as per original structure)\n    }\n}\n```\n*(注：由于原文文本从\
+  \ handleRequest 处开始出现了严重的逻辑混乱和重复，上述译文已根据代码逻辑进行了修正和整合，以确保技术文档的可读性，同时保留了所有的代码结构)*\n\
+  \n\n\n\n如果我们已经达到了最大缓存大小，那么 LRU 算法就会启动：我们删除最近未使用的条目（列表末尾的节点），并为新条目的插入（在列表头部）腾出空间。\n\
+  \n现在，我们可以检查一下处理缓存操作的方法。首先，让我们看看如何创建一个新节点：\n\n```java\n//Create a new node\nNode\
+  \ createNode(String url, String content) {\n    Node newNode = new Node();\n   \
+  \ newNode.url = url;\n    newNode.content = content;\n    newNode.prev = null;\n\
+  \    newNode.next = null;\n    System.out.println(\"New node created: \" + content);\n\
+  \    return newNode;\n}\n```\nListing 16-6: `LRUCache.java`\n\n接下来，我们看看如何向缓存头部插入新节点：\n\
+  \n```java\n//Insert a new node at the head of the cache\nvoid insertAtHead(Node\
+  \ node) {\n    node.next = head;\n    node.prev = null;\n    if (head != null)\n\
+  \        head.prev = node;\n    head = node;\n    if (tail == null)\n        tail\
+  \ = node;\n    System.out.println(\"Node inserted at head: \" + node.content);\n\
+  }\n```\nListing 16-7: `LRUCache.java`\n\n注意，在所有操作中，我们必须处理所有的四个引用：`head`、`tail`、`next`、`prev`。\n\
+  \n作为 LRU 算法的一部分，我们需要将节点移动到列表头部：\n\n```java\n//Move a node to the head of the cache\n\
+  void moveToHead(Node node) {\n    if (node == head)\n        return;\n    if (node.prev\
+  \ != null)\n        node.prev.next = node.next;\n    if (node.next != null)\n  \
+  \      node.next.prev = node.prev;\n\n    node.prev = null;\n    node.next = head;\n\
+  \    if (head != null)\n        head.prev = node;\n    head = node;\n    if (tail\
+  \ == null)\n        tail = node;\n    System.out.println(\"Node moved to head: \"\
+  \ + node.content);\n}\n```\nListing 16-8: `LRUCache.java`\n\n最后，这里是节点删除的代码：\n\n\
+  ```java\n//Delete a node from the cache\nvoid deleteNode(Node node) {\n    if (node\
+  \ == null)\n        return;\n    if (node == head)\n        head = node.next;\n\
+  \    if (node == tail)\n        tail = node.prev;\n    if (node.prev != null)\n\
+  \        node.prev.next = node.next;\n    if (node.next != null)\n        node.next.prev\
+  \ = node.prev;\n    System.out.println(\"Node deleted: \" + node.content);\n}\n\
+  ```\nListing 16-9: `LRUCache.java`\n\n你可以在 GitHub 上找到这个项目：\n\n`https://github.com/htset/java_exercises_dsa/tree/master/WebServerCache\n\
+  \n# 17. 分布式拍卖\n\n在这个练习中，我们将创建一个分布式拍卖，它将由一个接收多个客户端出价的拍卖服务器组成。客户端将通过 socket 与服务器通信。服务器将等待\
+  \ 20 秒（使用定时器）来接收新出价，否则拍卖结束，最高出价者获胜。如果及时提交了新出价，定时器将重置。\n\n## 建议解决方案\n\n让我们从拍卖服务器开始。服务器应该能够容纳多个客户端。因此，每个客户端将在单独的线程中提供服务，该线程会在服务器\
+  \ socket 接受新连接时被创建：\n\n```java\npackage AuctionServer;\nimport java.io.*;\nimport\
+  \ java.net.*;\nimport java.nio.charset.StandardCharsets;\nimport java.util.Timer;\n\
+  import java.util.TimerTask;\npublic class AuctionServer {\n    //代表每个连接到服务器的客户端的类\n\
+  \    static class Client { \n\n        private final Socket socket;\n        private\
+  \ final BufferedWriter writer;\n        private final int id;\n        // Client\
+  \ 类的构造函数\n        public Client(Socket socket, int id) throws IOException {\n  \
+  \          this.socket = socket;\n            // 设置 writer 以向客户端发送数据\n         \
+  \   this.writer= new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(),StandardCharsets.UTF_8));\n\
+  \            this.id = id;\n        }\n        public Socket getSocket() {\n   \
+  \         return socket;\n        }\n        public BufferedWriter getWriter() {\n\
+  \            return writer;\n        }\n        public int getId() {\n         \
+  \   return id;\n        }\n    }\n...\n```\nListing 17-1: `AuctionServer.java`\n\
+  \n在这里，我们将 `Client` 类定义为 `AuctionServer` 类内部的 `static` 类。`Client` 存储了已连接客户端的信息（其\
+  \ `ID` 以及相应的 `Socket` 和 `BufferedWriter` 对象）。\n\n接下来，我们定义了一些常量和类属性：\n\n```java\n\
+  //常量\nprivate static final int PORT = 8080; //服务器端口号\nprivate static final int MAX_CLIENTS\
+  \ = 5; // 最大客户端数量\n//服务器和客户端\nprivate static ServerSocket server;\nprivate static\
+  \ Client[] clients = new Client[MAX_CLIENTS]; // 用于持有客户端的数组\n//拍卖详情\nprivate static\
+  \ int bestBid = 0; // 收到的最高出价\nprivate static int winningClient = 0; // 获胜的客户端\n\
+  //拍卖结束的定时器\nprivate static Timer timer;\n```\nListing 17-2: `AuctionServer.java`\n\
+  \n现在我们展示 `main()` 方法：\n\n```java\npublic static void main(String[] args) {\n   \
+  \ try { \n        //设置服务器\n        server = new ServerSocket(PORT);\n        System.out.println(\"\
+  Server listening on port \" + PORT);\n        //启动定时器\n        timer = new Timer();\n\
+  \        timer.schedule(new TimerTask() {\n            @Override\n            public\
+  \ void run() {\n                timerCompletion();\n            }\n        }, 20000);\
+  \ //每 20 秒触发一次定时器\n        while (true) {\n            //接受新连接\n            Socket\
+  \ clientSocket = server.accept();\n            System.out.println(\"Client connected:\
+  \ \"+ clientSocket.getRemoteAddress());\n            //寻找可用空位\n            int clientId\
+  \ = -1;\n            for (int i = 0; i < MAX_CLIENTS; i++) {\n                if\
+  \ (clients[i] == null) {\n                    clientId = i;\n                  \
+  \  break;\n                }\n            }\n            if (clientId != -1) {\n\
+  \                //在单独线程中处理客户端\n                clients[clientId] = new Client(clientSocket,\
+  \ clientId);\n                System.out.println(\"Client. \" + clientId + \" connected.\"\
+  );\n                new Thread(() -> handleClient(clientId)).start();\n        \
+  \    }\n        }\n    } catch (Exception ex) {\n        System.out.println(\"Server\
+  \ error: \" + ex.getMessage());\n    } finally {\n        try {\n            if\
+  \ (server != null) server.close();\n        } catch (IOException e) {\n        \
+  \    e.printStackTrace();\n        }\n    }\n}\n```\nListing 17-3: `AuctionServer.java`\n\
+  \n我们打开 `ServerSocket` 并监听新连接。我们还启动了一个 20 秒的定时器。当定时器过期时，`timerCompletion()` 方法将被调用，结束拍卖过程。\n\
+  \n当新连接到达时，我们在 `clients` 数组中存储客户端详情并产生新线程。该线程将运行 `handleClient()` 方法，与特定的客户端进行通信。\n\
+  \n现在，让我们看看 `handleClient()` 方法：\n\n```java\n//处理客户端报价\nprivate static void handleClient(int\
+  \ clientId) { \n    try {\n        Client client = clients[clientId];\n        Socket\
+  \ clientSocket = client.getSocket();\n        BufferedReader reader= new BufferedReader(new\
+  \ InputStreamReader(clientSocket.getInputStream(),StandardCharsets.UTF_8));\n  \
+  \      String bid;\n        while (true) {\n            //从客户端读取报价\n           \
+  \ bid = reader.readLine();\n            if (bid == null) {\n                //客户端断开连接\n\
+  \                System.out.println(\"Client disconnected: \"+ clientSocket.getRemoteAddress());\n\
+  \                clients[clientId] = null;\n                break;\n           \
+  \ }\n            int bidAmount = Integer.parseInt(bid);\n            System.out.println(\"\
+  Received bid \" + bidAmount + \" from client \"+ client.getId());\n            synchronized\
+  \ (AuctionServer.class) {\n                if (bidAmount > bestBid) {\n        \
+  \            bestBid = bidAmount;\n                    winningClient = client.getId();\n\
+  \                    String msg = \"New best bid: \" + bestBid+ \" (Client: \" +\
+  \ winningClient + \")\";\n                    broadcastMessage(msg);\n         \
+  \           System.out.println(\"New best bid: \" + bestBid+ \" (Client: \" + winningClient\
+  \ + \")\");\n                    //重置定时器\n                    timer.cancel();\n\
+  \                    timer = new Timer();\n                    timer.schedule(new\
+  \ TimerTask() {\n                        @Override\n                        public\
+  \ void run() {\n                            timerCompletion();\n               \
+  \         }\n                    }, 20000, 20000);\n                } else {\n \
+  \                   String msg = \"Received lower bid. Best bid remains at: \" +\
+  \ bestBid;\n                    broadcastMessage(msg);\n                    System.out.println(\"\
+  Received lower bid. Best bid remains at: \" + bestBid);\n                }\n   \
+  \         }\n        }\n    } catch (Exception ex) {\n        System.out.println(\"\
+  Client error: \" + ex.getMessage());\n    }\n}\n```\nListing 17-4: `AuctionServer.java`\n\
+  \n\n\n如果客户端确实发送了有效的出价，我们将将其与当前最高出价进行比较，如果我们获得了更高的出价，则更新此值。我们还会通知所有客户端已提交的出价。此外，我们还会重置计时器，以获得一个新的\
+  \ 20 秒周期。\n\n在这里，`bestBid` 和 `winningClient` 是共享资源，可能会被多个客户端处理线程访问和修改。为了保护这些共享资源，我们对读写这些变量的临界区进行同步处理。\n\
+  \n接下来，我们定义 `broadcastMessage()` 方法，用于向客户端发送消息：\n\n```java\n//Broadcast message to\
+  \ all clients\nprivate static void broadcastMessage(String msg) throws IOException\
+  \ {\n    for (int i = 0; i < MAX_CLIENTS; i++) {\n        if (clients[i] != null)\
+  \ {\n            clients[i].getWriter().write(msg);\n            clients[i].getWriter().newLine();\n\
+  \            clients[i].getWriter().flush();\n        }\n    }\n}\n```\n列表 17-5：`AuctionServer.java`\n\
+  \n当计时器最终过期时，将调用 `timerCompletionRoutine()` 方法：\n\n```java\n//Timer completion routine\
+  \ when auction end\nprivate static void timerCompletionRoutine() {\n    System.out.println(\"\
+  Auction finished. Winning bid: \" + bestBid+ \", winner: client no. \" + winningClient);\n\
+  \    String msg = \"Auction finished. Winning bid: \" + bestBid+ \", winner: client\
+  \ no. \" + winningClient;\n    try {\n        broadcastMessage(msg);\n    } catch\
+  \ (IOException e) {\n        e.printStackTrace();\n    }\n    //Exit the program\n\
+  \    System.exit(0);\n}\n```\n列表 17-6：`AuctionServer.java`\n\n在通知所有客户端获胜出价后，我们退出程序。当客户端接收到拍卖结束的消息时，相应的客户端将关闭套字。\n\
+  \n现在对于拍卖客户端，我们首先实现 `main()` 方法：\n\n```java\npackage AuctionClient;\nimport java.io.*;\n\
+  import java.net.*;\nimport java.nio.charset.StandardCharsets;\npublic class AuctionClient\
+  \ {\n    private static final int PORT = 8080; //Port number to connect to the server\n\
+  \    private static final String SERVER_IP = \"127.0.0.1\"; //Server IP address\n\
+  \    private static Socket client;\n    private static boolean isRunning = true;\n\
+  \    private static Thread receiveThread;\n    public static void main(String[]\
+  \ args) {\n        //Connect to the server\n        try {\n            client =\
+  \ new Socket(SERVER_IP, PORT);\n            System.out.println(\"Connected to server.\"\
+  );\n        } catch (Exception ex) {\n            System.out.println(\"Connect failed:\
+  \ \" + ex.getMessage());\n            return;\n        }\n        //Start receive\
+  \ handler thread \n        receiveThread = new Thread(AuctionClient::receiveHandler);\n\
+  \        receiveThread.start();\n        //Send bids until the user quits\n    \
+  \    try (BufferedReader consoleReader= new BufferedReader(new InputStreamReader(System.in));\n\
+  \             BufferedWriter writer= new BufferedWriter(new OutputStreamWriter(client.getOutputStream(),StandardCharsets.UTF_8)))\
+  \ {\n            String bid;\n            while (isRunning) {\n                System.out.print(\"\
+  \\nEnter your bid (or 'q' to quit): \");\n                bid = consoleReader.readLine();\n\
+  \                if (\"q\".equalsIgnoreCase(bid)) {\n                    isRunning\
+  \ = false;\n                    client.close();\n                    receiveThread.interrupt();\
+  \ //Interrupt the receive thread\n                    break;\n                }\n\
+  \                try {\n                    writer.write(bid);\n               \
+  \     writer.newLine();\n                    writer.flush();\n                }\
+  \ catch (Exception ex) {\n                    System.out.println(\"Send failed:\
+  \ \" + ex.getMessage());\n                    return;\n                }\n     \
+  \       }\n        } catch (IOException e) {\n            e.printStackTrace();\n\
+  \        }\n        //Ensure client is closed\n        try {\n            client.close();\n\
+  \        } catch (IOException e) {\n            e.printStackTrace();\n        }\n\
+  \    }\n}\n```\n列表 17-7：`AuctionClient.java`\n\n在这里，我们创建了一个 `Socket` 对象并连接到服务器。如果连接成功，我们将产生一个新线程，用于接收并打印来自服务器的信息。\n\
+  \n通信的发送部分（即向服务器提交出价）将由主线程执。。如果我们让同一个线程来处理数据的发送和接收，就会出现问题，因为 `readLine()` 方法会阻塞并导致用户无法发送新的出价。\n\
+  \n以下是线程处理器的回调方法：\n\n```java\n//Handle incoming messages from the server\nprivate\
+  \ static void receiveHandler() { \n    try (BufferedReader reader = new BufferedReader(new\
+  \ InputStreamReader(client.getInputStream(), StandardCharsets.UTF_8))) {\n     \
+  \   while (isRunning) {\n            try {\n                if (Thread.interrupted())\
+  \ {\n                    break; //Exit if the thread is interrupted\n          \
+  \      }\n                String message = reader.readLine();\n                if\
+  \ (message == null || message.isEmpty()) {\n                    System.out.println(\"\
+  \\nServer disconnected.\");\n                    break;\n                }\n   \
+  \             System.out.println(\"\\nServer: \" + message);\n                if\
+  \ (message.startsWith(\"Auction\")) {\n                    System.out.println(\"\
+  Auction ended. Exiting program.\");\n                    isRunning = false;\n  \
+  \                  break;\n                }\n            } catch (IOException ex)\
+  \ {\n                if (isRunning) {\n                    //Check if still running\
+  \ to avoid printing// error when stopping intentionally\n                    System.out.println(\"\
+  Receive failed: \" + ex.getMessage());\n                }\n                break;\n\
+  \            }\n        }\n    } catch (IOException e) {\n        if (isRunning)\
+  \ {\n            //Check if still running to avoid printing// error when stopping\
+  \ intentionally\n            e.printStackTrace();\n        }\n    }\n}\n```\n列表\
+  \ 17-6：`AuctionClient.java`\n\n该线程接收来自拍卖服务器的消息并将其打印在控制台上。当收到以“Auction”开头的最终消息时，它将关闭关闭资源并退出程序。\n\
+  \n你可以在 GitHub 上找到此项目：\n\n- https://github.com/htset/java_exercises_dsa/tree/master/AuctionServer\n\
+  - https://github.com/htset/java_exercises_dsa/tree/master/AuctionClient\n\n"

@@ -1,0 +1,5675 @@
+<p><img src="image_rsrc5RM.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveaspectratio="xMidYMid meet" viewbox="0 0 1207 1920" height="100%" width="100%">
+<image xlink:href="image_rsrc5RM.jpg" height="1920" width="1207"></image>
+</svg>
+<p><span id="part0001.xhtml"></span></p>
+<p>Java Exercises with Data Structures and Algorithms</p>
+<p>ISBN: 9798325955266</p>
+<p>Copyright<span class="class_s5NV"> </span>© 2024 b<span
+class="class_s5NV">y</span> Haris Tsetsekas</p>
+<p><span id="part0002.xhtml"></span></p>
+<h2 class="heading_sU-1">Table of Contents</h2>
+<p><a href="#part0003.xhtml_a5M0"><span
+class="class_s5NY-0">1.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">University Courses</span></a></p>
+<p><a href="#part0004.xhtml_a5M1"><span
+class="class_s5NY-0">2.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Restaurant Reservations</span></a></p>
+<p><a href="#part0005.xhtml_a5M2"><span
+class="class_s5NY-0">3.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Library</span></a></p>
+<p><a href="#part0006.xhtml_a5M3"><span
+class="class_s5NY-0">4.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Contact List</span></a></p>
+<p><a href="#part0007.xhtml_a5M4"><span
+class="class_s5NY-0">5.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Priority Todo List</span></a></p>
+<p><a href="#part0008.xhtml_a5M5"><span
+class="class_s5NY-0">6.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Songs List</span></a></p>
+<p><a href="#part0009.xhtml_a5M6"><span
+class="class_s5NY-0">7.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Task allocation</span></a></p>
+<p><a href="#part0010.xhtml_a5M7"><span
+class="class_s5NY-0">8.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Word Frequencies</span></a></p>
+<p><a href="#part0011.xhtml_a5M8"><span
+class="class_s5NY-0">9.</span><span class="class_s5P2">​</span><span
+class="class_s5NY-0">Syntax Checker</span></a></p>
+<p><a href="#part0012.xhtml_a5M9"><span
+class="class_s5NY-0">10.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">Maze Solver</span></a></p>
+<p><a href="#part0013.xhtml_a5MA"><span
+class="class_s5NY-0">11.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">File Indexer</span></a></p>
+<p><a href="#part0014.xhtml_a5MB"><span
+class="class_s5NY-0">12.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">Inventory with AVL Tree</span></a></p>
+<p><a href="#part0015.xhtml_a5MC"><span
+class="class_s5NY-0">13.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">Social Network</span></a></p>
+<p><a href="#part0016.xhtml_a5MD"><span
+class="class_s5NY-0">14.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">Flights</span></a></p>
+<p><a href="#part0017.xhtml_a5ME"><span
+class="class_s5NY-0">15.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">MNIST Image Comparison</span></a></p>
+<p><a href="#part0018.xhtml_a5MF"><span
+class="class_s5NY-0">16.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">HTTP Server with Caching</span></a></p>
+<p><a href="#part0019.xhtml_a5MG"><span
+class="class_s5NY-0">17.</span><span class="class_s5P4">​</span><span
+class="class_s5NY-0">Distributed Auction</span></a></p>
+<p><span id="part0003.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">1.</span><span
+class="class_s5NT">          </span><span
+id="part0003.xhtml_a5M0"></span><span class="class_s5NS">University
+Courses</span></p>
+</div>
+<p>Let’s create a program that will handle the enrollment for university
+courses. Each course has one or more prerequisites, i.e. courses that
+must have been completed by a student in order to be able to enroll in
+the specific one.</p>
+<h2 class="heading_sU-0" id="part0003.xhtml_id__798_18_">Proposed
+Solution</h2>
+<p>First of all, we will define the class for a student in the
+university:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package UniversityCourses;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Student {</p>
+<p>public int id;</p>
+<p>public String name;</p>
+<p>public int[] courses;</p>
+<p>public int courseCount;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Student(int id, String name, int courseCount, int[] courses)
+{</p>
+<p>this.id = id;</p>
+<p>this.name = name;</p>
+<p>this.courseCount = courseCount;</p>
+<p>this.courses = courses;</p>
+<p>}</p>
+<p>}</p></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 1-1: Student.java</p>
+<p>This class contains information about the student and the courses
+that have been completed successfully. The<span class="class_s5NV">
+</span><span class="class_s5NW">Course</span><span
+class="class_s5NX">s</span> array contains the ID of the course.</p>
+<p>Next, we define a class for the university courses:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package UniversityCourses;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Course {</p>
+<p>public int id;</p>
+<p>public String name;</p>
+<p>public int prereqCount;</p>
+<p>public int[] prereqIDs;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Course(int id, String name, int prereqCount, int[] prereqIDs)
+{</p>
+<p>this.id = id;</p>
+<p>this.name = name;</p>
+<p>this.prereqCount = prereqCount;</p>
+<p>this.prereqIDs = prereqIDs;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public boolean canEnroll(Student student) {</p>
+<p>for (int prereqId : this.prereqIDs) {</p>
+<p>boolean hasPrereq = false;</p>
+<p>for (int courseId : student.courses) {</p>
+<p>if (courseId == prereqId) {</p>
+<p>hasPrereq = true;</p>
+<p>break;</p>
+<p>}</p>
+<p>}</p>
+<p>if (!hasPrereq) {</p>
+<p>return false;</p>
+<div class="class_s1Z-9">
+<p>}</p>
+</div>
+<p>}</p>
+<p>return true;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 1-2: Course.java</p>
+<p>Each course contains an array of the IDs of the prerequisite courses.
+The class also includes a method that finds out whether a student can
+enroll at a course. For each prerequisite course, this method tries to
+match it with a course already taken by the student.</p>
+<p>Finally, the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package UniversityCourses;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class UniversityCourses {</p>
+<p>public static void main(String[] args) {</p>
+<p>Course[] courses = {</p>
+<p>new Course(0, "Intro to Programming", 0, new int[] { -1 }),</p>
+<p>new Course(1, "Data Structures", 1, new int[] { 0 }),</p>
+<p>new Course(2, "Algorithms", 1, new int[] { 1 }),</p>
+<p>new Course(3, "Database Management", 1, new int[] { 0 }),</p>
+<p>new Course(4, "Web Development", 1, new int[] { 0 }),</p>
+<p>new Course(5, "Operating Systems", 2, new int[] { 1, 2 }),</p>
+<p>new Course(6, "Computer Networks", 2, new int[] { 1, 5 }),</p>
+<div class="class_s1Z-10">
+<p>new Course(7, "Software Engineering", 2, new int[] { 1, 2 }),</p>
+</div>
+<p>new Course(8, "Machine Learning", 2, new int[] { 1, 2 }),</p>
+<p>new Course(9, "Distributed Systems", 1, new int[] { 5 }),</p>
+<p>new Course(10, "Cybersecurity", 2, new int[] { 2, 3 }),</p>
+<p>new Course(11, "Cloud Computing", 2, new int[] { 2, 3 }),</p>
+<p>new Course(12, "Mobile App Development", 1, new int[] { 4 }),</p>
+<p>new Course(13, "Game Development", 1, new int[] { 0 }),</p>
+<p>new Course(14, "Artificial Intelligence", 2, new int[] { 2, 8 }),</p>
+<p>new Course(15, "Big Data Analytics", 2, new int[] { 2, 3 }),</p>
+<p>new Course(16, "Blockchain Technology", 2, new int[] { 2, 3 }),</p>
+<p>new Course(17, "UI/UX Design", 1, new int[] { 14 }),</p>
+<p>new Course(18, "Embedded Systems", 2, new int[] { 1, 5 }),</p>
+<p>new Course(19, "Computer Graphics", 1, new int[] { 0 })</p>
+<p>};</p>
+<div class="class_s21-0">
+
+</div>
+<p>Student student = new Student(1, "John Doe", 5, new int[] { 0, 1, 2,
+3, 4 });</p>
+<div class="class_s21-0">
+
+</div>
+<p>Course[] targetCourses = {</p>
+<p>courses[13], // Game Development</p>
+<p>courses[16], // Blockchain Technology</p>
+<p>courses[17], // UI/UX Design (student cannot enroll)</p>
+<div class="class_s1Z-10">
+<p>courses[18]  // Embedded Systems</p>
+</div>
+<p>};</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("Enrollment status for " + student.name + ":
+");</p>
+<p>for (int i = 0; i &lt; 4; ++i) {</p>
+<p>if (targetCourses[i].canEnroll(student)) {</p>
+<p>System.out.println("- Can enroll in " + targetCourses[i].name);</p>
+<p>} else {</p>
+<p>System.out.println("- Cannot enroll in " + targetCourses[i].name</p>
+<p>+ " due to missing prerequisites.");</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 1-3: UniversityCourses.java</p>
+<p>We create sample courses and a sample user that is still at the
+earlier stages of studies. We then try to find out if this student can
+enroll at 4 specific courses. We will see that the student will not be
+able to enroll at the most advanced ones, for lack of successfully
+completed prerequisite courses.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/UniversityCourses"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/UniversityCourses</a></p>
+<p><span id="part0004.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">2.</span><span
+class="class_s5NT">          </span><span
+id="part0004.xhtml_a5M1"></span><span class="class_s5NS">Restaurant
+Reservations</span></p>
+</div>
+<p>For this exercise, we will create a small program that will create
+table reservations for a restaurant. Each table is characterized by its
+capacity. For simplicity, we will split the reservation time in one-hour
+slots; a reservation can span multiple consecutive slots.</p>
+<h2 class="heading_sU-0" id="part0004.xhtml_id__798_19_">Proposed
+Solution</h2>
+<p>First of all, we will define the class for a customer:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Restaurant;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Customer {</p>
+<p>public String name;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Customer(String name) {</p>
+<p>this.name = name;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-1: Customer.java</p>
+<p>This class contains the name of the customer. It could also include
+the customer phone number or other details.</p>
+<p>Next, we define a class for the restaurant tables:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Restaurant;</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-12">
+<p>public class Table {</p>
+</div>
+<p>public int id;</p>
+<p>public int capacity;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Table(int id, int capacity) {</p>
+<p>this.id = id;</p>
+<p>this.capacity = capacity;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-2: Table.java</p>
+<p>Each table object contains its ID as well as information about its
+capacity (the number of people it can accommodate).</p>
+<p>Next, we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">Reservatio</span><span class="class_s5NX">n</span>
+class:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Restaurant;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Reservation {</p>
+<p>public Customer customer;</p>
+<p>public Table table;</p>
+<p>public int startTimeSlot;</p>
+<p>public int endTimeSlot;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Reservation(Customer customer, Table table, int
+startTimeSlot,</p>
+<p>int endTimeSlot) {</p>
+<p>this.customer = customer;</p>
+<p>this.table = table;</p>
+<p>this.startTimeSlot = startTimeSlot;</p>
+<p>this.endTimeSlot = endTimeSlot;</p>
+<div class="class_s1Z-8">
+<p>}</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-3: Reservation.java</p>
+<p>Each reservation contains references to<span class="class_s5NV">
+</span><span class="class_s5NW">Custome</span><span
+class="class_s5NX">r</span> and<span class="class_s5NV"> </span><span
+class="class_s5NW">Tabl</span><span class="class_s5NX">e</span> objects.
+It also contains the starting and the ending time slot (not
+inclusive).</p>
+<p>We also create a<span class="class_s5NV"> </span><span
+class="class_s5NW">Restauran</span><span class="class_s5NX">t</span>
+class that will implement the functionality for the creation of new
+reservations:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Restaurant;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.Comparator;</p>
+<p>import java.util.List;</p>
+<p>import java.util.stream.Collectors;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Restaurant {</p>
+<p>private final List&lt;Table&gt; tables = new ArrayList&lt;&gt;();</p>
+<p>private final List&lt;Reservation&gt; reservations = new
+ArrayList&lt;&gt;();</p>
+<div class="class_s21-0">
+
+</div>
+<p>public void addTable(Table table) {</p>
+<p>tables.add(table);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-4: Restaurant.java</p>
+<p>Method <span class="class_s5NW">addTable(</span><span
+class="class_s5NX">)</span> adds the reference of a table into the<span
+class="class_s5NV"> </span><span class="class_s5NW">table</span><span
+class="class_s5NX">s</span> list.</p>
+<p>In method<span class="class_s5NV"> </span><span
+class="class_s5NW">isTableAvailable(</span><span
+class="class_s5NX">)</span> we use a stream that we obtain from the<span
+class="class_s5NV"> </span><span
+class="class_s5NW">reservation</span><span class="class_s5NX">s</span>
+list. We use the<span class="class_s5NV"> </span><span
+class="class_s5NW">noneMatch(</span><span class="class_s5NX">)</span>
+method of the stream to determine if there exists a table that is not
+reserved in the specified timeslot.</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public boolean isTableAvailable(Table table,
+int startTimeSlot, int endTimeSlot) {<br />
+  return reservations.stream().noneMatch(reservation -&gt;<br />
+      reservation.table.id == table.id &amp;&amp;<br />
+          ((startTimeSlot &gt;= reservation.startTimeSlot<br />
+              &amp;&amp; startTimeSlot &lt; reservation.endTimeSlot)
+||<br />
+              (endTimeSlot &gt; reservation.startTimeSlot<br />
+                  &amp;&amp; endTimeSlot &lt;= reservation.endTimeSlot)
+||<br />
+              (startTimeSlot &lt;= reservation.startTimeSlot<br />
+                  &amp;&amp; endTimeSlot &gt;=
+reservation.endTimeSlot)));<br />
+}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-5: Restaurant.java</p>
+<p>Method <span class="class_s5NW">findAvailableTables(</span><span
+class="class_s5NX">)</span> searches the stream obtained from the<span
+class="class_s5NV"> </span><span class="class_s5NW">table</span><span
+class="class_s5NX">s</span> list, in order to find all the tables that
+are available inside the specified timeslot.</p>
+<table class="class_s32">
+<tbody class="class-3">
+<tr>
+<td class="class_s2Y"><p>public List&lt;Table&gt;
+findAvailableTables(int capacity, int startTimeSlot,</p>
+<p>int endTimeSlot) {</p>
+<p>List&lt;Table&gt; availableTables = tables.stream()</p>
+<p>.filter(table -&gt; table.capacity &gt;= capacity</p>
+<p>&amp;&amp; isTableAvailable(table, startTimeSlot, endTimeSlot))</p>
+<p>.collect(Collectors.toList());</p>
+<div class="class_s1Z-22">
+<p>availableTables.sort(Comparator.comparingInt(a -&gt;
+a.capacity));</p>
+</div>
+<p>return availableTables;</p>
+<p>}</p></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-6: Restaurant.java</p>
+<p>We use<span class="class_s5NV"> </span><span
+class="class_s5NW">filter(</span><span class="class_s5NX">)</span> to
+get only the free tables whose capacity matches or exceed the person
+count. The selected tables will be collected into a new list by<span
+class="class_s5NV"> </span><span class="class_s5NW">collect(</span><span
+class="class_s5NX">)</span> method. This list is returned after being
+sorted in ascending order, according to the table capacity, as we are
+trying to fill the smallest tables first.</p>
+<p>Next, the<span class="class_s5NV"> </span><span
+class="class_s5NW">addReservation(</span><span
+class="class_s5NX">)</span> method will create a new reservation on the
+fly and will insert it into the<span class="class_s5NV"> </span><span
+class="class_s5NW">reservation</span><span class="class_s5NX">s</span>
+list. That’s of course, if a suitable table is found. Note that we get
+the first table in the sorted list, i.e. the table with the smallest
+capacity.</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void addReservation(String name, int
+capacity, int startSlot, int endSlot) {</p>
+<p>List&lt;Table&gt; availableTables = findAvailableTables(capacity,
+startSlot, endSlot);</p>
+<p>if (!availableTables.isEmpty()) {</p>
+<p>reservations.add(new Reservation(new Customer(name),</p>
+<p>availableTables.get(0), startSlot, endSlot));</p>
+<p>System.out.println("Reservation successfully added.");</p>
+<p>} else {</p>
+<p>System.out.println("No available tables for the requested time
+slot.");</p>
+<div class="class_s1Z-7">
+<p>}</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-7: Restaurant.java</p>
+<p>Next, we have a method to print all the reservations in the
+console:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void printReservations() {</p>
+<p>System.out.println("All reservations:");</p>
+<p>for (Reservation reservation : reservations) {</p>
+<p>System.out.println("Customer: " + reservation.customer.name +</p>
+<p>", Table Capacity: " + reservation.table.capacity +</p>
+<p>", Start Time Slot: " + reservation.startTimeSlot +</p>
+<p>", End Time Slot: " + reservation.endTimeSlot);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-8: Restaurant.java</p>
+<p>Finally, in the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span> method,
+we add tables to the<span class="class_s5NV"> </span><span
+class="class_s5NW">Restauran</span><span class="class_s5NX">t</span>
+object and try to make reservations for specific capacities and
+timeslots. Some will be successful, but for others there will not be any
+table available. At the end, we print all the available reservations in
+the system.</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>Restaurant restaurant = new Restaurant();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Add tables</p>
+<div class="class_s1Z-7">
+<p>restaurant.addTable(new Table(1, 6));</p>
+</div>
+<p>restaurant.addTable(new Table(2, 4));</p>
+<p>restaurant.addTable(new Table(3, 2));</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Find available tables for a new reservation</p>
+<p>restaurant.addReservation("Customer 1", 4, 1, 3);</p>
+<p>restaurant.addReservation("Customer 2", 6, 2, 4);</p>
+<p>restaurant.addReservation("Customer 3", 4, 3, 5);</p>
+<p>restaurant.addReservation("Customer 4", 4, 1, 3);</p>
+<div class="class_s21-0">
+
+</div>
+<p>restaurant.printReservations();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 2-9: Restaurant.java</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/Restaurant"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/Restaurant</a></p>
+<p><span id="part0005.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">3.</span><span
+class="class_s5NT">          </span><span
+id="part0005.xhtml_a5M2"></span><span
+class="class_s5NS">Library</span></p>
+</div>
+<p>Here we will create a console application for a library. Users will
+be able to enter books and list all the titles available in the library.
+They will also be able to lend books, return books as well as list all
+the book lending events. The books and the lending events will be stored
+in text files.</p>
+<h2 class="heading_sU-0" id="part0005.xhtml_id__798_20_">Proposed
+Solution</h2>
+<p>Let’s begin with the definition of the<span class="class_s5NV">
+</span><span class="class_s5NW">Boo</span><span
+class="class_s5NX">k</span> and<span class="class_s5NV"> </span><span
+class="class_s5NW">LendingEven</span><span class="class_s5NX">t</span>
+classes:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Library;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Book {</p>
+<p>public String title;</p>
+<p>public String author;</p>
+<p>public int available;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-1: Book.java</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Library;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.time.LocalDateTime;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class LendingEvent {</p>
+<p>public String bookTitle;</p>
+<p>public String userName;</p>
+<p>public LocalDateTime lendingDate;</p>
+<div class="class_s1Z-8">
+<p>public int returned;</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-2: LendingEvent.java</p>
+<p>For each book, we record the title and the author. We also keep
+information about whether it is available or is currently lent (1 or 0
+respectively).</p>
+<p>For each lending event we record the book title and the name of the
+library user that has borrowed it. We also keep the lending date as well
+as an integer value of whether it has been returned or not (1 or 0
+respectively).</p>
+<p>We also define the<span class="class_s5NV"> </span><span
+class="class_s5NW">Librar</span><span class="class_s5NX">y</span> class,
+that contains all the functionality for adding and displaying book
+information:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><div class="class_s1Z-12">
+<p>package Library;<br />
+</p>
+<p>import java.io.*;<br />
+import java.time.LocalDateTime;<br />
+import java.util.Scanner;<br />
+</p>
+<p>public class Library {<br />
+  private static final String BooksFilename = "books.txt";<br />
+  private static final String LendingFilename =
+"lending_events.txt";</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-3: Library.java</p>
+<p>The first method of class<span class="class_s5NV"> </span><span
+class="class_s5NW">Librar</span><span class="class_s5NX">y</span> is
+used to add a new book in library catalog:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void addBook() throws IOException {</p>
+<p>try (PrintWriter file = new PrintWriter(new FileWriter(BooksFilename,
+true))) {</p>
+<p>Book book = new Book();</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<p>System.out.print("Book title: ");</p>
+<p>book.title = scanner.nextLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.print("Author: ");</p>
+<p>book.author = scanner.nextLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Mark book as available</p>
+<p>book.available = 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>file.println(book.title + "|" + book.author + "|" +
+book.available);</p>
+<p>}</p>
+<p>System.out.println("Book added successfully.");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-4: Library.java</p>
+<p>At the beginning, we open the books file using a <span
+class="class_s5NW">PrintWrite</span><span class="class_s5NX">r</span>
+object. The second parameter to the constructor is <span
+class="class_s5P0">true</span>, which means that we will append to the
+end of the file and the current contents will not be erased.</p>
+<p>After we get the book title and author from the user, we write the
+new book object at the end of the file. The following format is
+used:</p>
+<p>book title|book author|Available (0 or 1)</p>
+<p>Next, we implement the listing of the books:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void listBooks() throws IOException
+{</p>
+<p>//check if text file exists</p>
+<p>if (!new File(BooksFilename).exists()) {</p>
+<p>System.out.println("No books entered so far");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("Books available in the library:");</p>
+<p>try (BufferedReader file = new BufferedReader(new
+FileReader(BooksFilename))) {</p>
+<p>String line;</p>
+<p>while ((line = file.readLine()) != null) {</p>
+<p>String[] parts = line.split("\\|");</p>
+<p>System.out.println("Title: " + parts[0]);</p>
+<p>System.out.println("Author: " + parts[1]);</p>
+<p>System.out.println("Available: "</p>
+<p>+ (parts[2].equals("1") ? "True" : "False"));</p>
+<p>System.out.println("------------------------------");</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-5: Library.java</p>
+<p>Here, we open the file from the beginning and we use<span
+class="class_s5NV"> </span><span
+class="class_s5NW">readLine(</span><span class="class_s5NX">)</span> to
+read the details of each book from the text file.</p>
+<p>We proceed with the book lending functionality:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void lendBook() throws IOException {</p>
+<p>//check if text file exists</p>
+<p>if (!new File(BooksFilename).exists()) {</p>
+<p>System.out.println("No books entered so far");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>String bookTitle, userName;</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<p>System.out.print("Enter the title of the book to lend: ");</p>
+<p>bookTitle = scanner.nextLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Get a string array of all lines in file</p>
+<p>String[] lines = new BufferedReader(new
+FileReader(BooksFilename))</p>
+<p>.lines().toArray(String[]::new);</p>
+<p>boolean bookFound = false;</p>
+<div class="class_s21-0">
+
+</div>
+<p>for (int i = 0; i &lt; lines.length; i++) {</p>
+<p>//Split line into book details</p>
+<p>String[] parts = lines[i].split("\\|");</p>
+<p>if (parts[0].equals(bookTitle) &amp;&amp; parts[2].equals("1")) {</p>
+<p>lines[i] = parts[0] + "|" + parts[1] + "|0";</p>
+<p>bookFound = true;</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.print("Enter your name: ");</p>
+<div class="class_s1Z-10">
+<p>userName = scanner.nextLine();</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>//Write lending event into file</p>
+<p>try (PrintWriter lendingFile</p>
+<p>= new PrintWriter(new FileWriter(LendingFilename, true))) {</p>
+<p>lendingFile.println(bookTitle + "|" + userName + "|"</p>
+<p>+ LocalDateTime.now() + "|0");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("Book '" + bookTitle + "' has been lent to "</p>
+<p>+ userName + ".");</p>
+<p>break;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (!bookFound) {</p>
+<p>System.out.println("Book '" + bookTitle + "' not found or not
+available.");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Write books back to file (overwrite file)</p>
+<p>try (PrintWriter file = new PrintWriter(new
+FileWriter(BooksFilename))) {</p>
+<p>for (String line : lines) {</p>
+<p>file.println(line);</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-6: Library.java</p>
+<p>We first try to find the requested book by reading all the entries
+from the books file with<span class="class_s5NV"> </span><span
+class="class_s5NW">.lines().toArray(String[]::new</span><span
+class="class_s5NX">)</span>. The book entries will be stored in an array
+of strings. <span class="class_s5NW">String[]::ne</span><span
+class="class_s5NX">w</span> is a function that makes new<span
+class="class_s5NV"> </span><span class="class_s5NW">Strin</span><span
+class="class_s5NX">g</span> arrays. It will be called by<span
+class="class_s5NV"> </span><span class="class_s5NW">toArray(</span><span
+class="class_s5NX">)</span> in order to create the new array.</p>
+<p>We iterate this array and we split each entry into the book details
+(title, author, availability). When we find the book (and if it is
+available), we mark it as not currently available.</p>
+<p>Afterwards, we record the lending event by writing a new entry at the
+end of the respective binary file. Finally, we write all the entries in
+the array back to the books text file, overwriting the file.</p>
+<p>Next, we present the functionality for returning a book:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void returnBook() throws IOException
+{</p>
+<p>if (!new File(LendingFilename).exists()) {</p>
+<p>System.out.println("No lending events entered so far");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>String bookTitle;</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<p>System.out.print("Enter the title of the book to return: ");</p>
+<p>bookTitle = scanner.nextLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Get a string array of all lines in file</p>
+<div class="class_s1Z-7">
+<p>String[] booksLines = new BufferedReader(new
+FileReader(BooksFilename))</p>
+</div>
+<p>.lines().toArray(String[]::new);</p>
+<p>boolean bookFound = false;</p>
+<div class="class_s21-0">
+
+</div>
+<p>for (int i = 0; i &lt; booksLines.length; i++) {</p>
+<p>String[] parts = booksLines[i].split("\\|");</p>
+<p>if (parts[0].equals(bookTitle) &amp;&amp; parts[2].equals("0")) {</p>
+<p>booksLines[i] = parts[0] + "|" + parts[1] + "|1";</p>
+<p>bookFound = true;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Get all lending events</p>
+<p>String[] lendingLines = new BufferedReader(new
+FileReader(LendingFilename))</p>
+<p>.lines().toArray(String[]::new);</p>
+<div class="class_s21-0">
+
+</div>
+<p>for (int j = 0; j &lt; lendingLines.length; j++) {</p>
+<p>parts = lendingLines[j].split("\\|");</p>
+<p>if (parts[0].equals(bookTitle) &amp;&amp; parts[3].equals("0")) {</p>
+<p>lendingLines[j] = parts[0] + "|" + parts[1] + "|" + parts[2] +
+"|1";</p>
+<p>System.out.println("Book '" + bookTitle + "' has been
+returned.");</p>
+<p>break;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Write lending events back to file</p>
+<p>try (PrintWriter lendingFile</p>
+<p>= new PrintWriter(new FileWriter(LendingFilename))) {</p>
+<div class="class_s1Z-13">
+<p>for (String line : lendingLines) {</p>
+</div>
+<p>lendingFile.println(line);</p>
+<p>}</p>
+<p>}</p>
+<p>break;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (!bookFound) {</p>
+<p>System.out.println("Book '" + bookTitle + "' not found or already
+returned.");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Write books back to file</p>
+<p>try (PrintWriter file = new PrintWriter(new
+FileWriter(BooksFilename))) {</p>
+<p>for (String line : booksLines) {</p>
+<p>file.println(line);</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-7: Library.java</p>
+<p>Here, we read again all the book file entries into an array of
+strings, and we try to find the requested file. Then, we read all the
+book lending events from the respective file and we search for the
+lending event of the specific book.</p>
+<p>If we find the event, then we change its status to “returned” and we
+write all the entries back to the <span
+id="part0005.xhtml_page_25"></span>lending file. Finally, we also store
+all the book entries into the respective file, after having changed the
+book availability status back to 1 again.</p>
+<p>Now, let’s see the events listing method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void listLendingEvents() throws
+IOException {</p>
+<p>if (!new File(LendingFilename).exists()) {</p>
+<p>System.out.println("No lending events entered so far");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("Lending events:");</p>
+<p>try (BufferedReader file = new BufferedReader(new
+FileReader(LendingFilename))) {</p>
+<p>String line;</p>
+<p>while ((line = file.readLine()) != null) {</p>
+<p>String[] parts = line.split("\\|");</p>
+<p>System.out.println("Book Title: " + parts[0]);</p>
+<p>System.out.println("User Name: " + parts[1]);</p>
+<p>System.out.println("Lending Date: " + parts[2]);</p>
+<p>System.out.println("Returned: " + (parts[3].equals("1") ? "True" :
+"False"));</p>
+<p>System.out.println("------------------------------");</p>
+<p>}</p>
+<p>}</p>
+<p>}</p></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-8: Library.java</p>
+<p>And finally, the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span> method
+that handles the interaction with the user:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) throws
+IOException {</p>
+<div class="class_s1Z-7">
+<p>Library lib = new Library();</p>
+</div>
+<p>int choice;</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<p>do {</p>
+<p>System.out.println("\n1. Add a book\n2. List all books\n" +</p>
+<p>"3. Lend a book\n4. Return a book\n5. List lending events\n0.
+Exit");</p>
+<p>System.out.print("Enter your choice: ");</p>
+<p>choice = scanner.nextInt();</p>
+<div class="class_s21-0">
+
+</div>
+<p>switch (choice) {</p>
+<p>case 1:</p>
+<p>lib.addBook();</p>
+<p>break;</p>
+<p>case 2:</p>
+<p>lib.listBooks();</p>
+<p>break;</p>
+<p>case 3:</p>
+<p>lib.lendBook();</p>
+<p>break;</p>
+<p>case 4:</p>
+<p>lib.returnBook();</p>
+<p>break;</p>
+<p>case 5:</p>
+<p>lib.listLendingEvents();</p>
+<p>break;</p>
+<p>case 0:</p>
+<p>System.out.println("Exiting.");</p>
+<p>break;</p>
+<p>default:</p>
+<p>System.out.println("Invalid choice. Please try again.");</p>
+<div class="class_s1Z-13">
+<p>break;</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>} while (choice != 0);</p>
+<p>}</p>
+<p>}</p></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 3-9: Library.java</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/Library"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/Library</a></p>
+<p><span id="part0006.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">4.</span><span
+class="class_s5NT">          </span><span
+id="part0006.xhtml_a5M3"></span><span class="class_s5NS">Contact
+List</span></p>
+</div>
+<p>In this exercise, we will create a list that will store the names and
+the phone numbers of our contacts. For faster search performance, the
+contacts will be stored in a <span class="class_s5P0">hash map</span>
+structure.</p>
+<h2 class="heading_sU-0" id="part0006.xhtml_id__798_21_">Proposed
+Solution</h2>
+<p>A <span class="class_s5P0">hash map</span>, also known as a <span
+class="class_s5P0">hash table</span>, is a data structure that
+efficiently organizes and retrieves data based on key-value pairs. It
+employs a technique called <span class="class_s5P0">hashing</span>,
+where each key is mapped to a unique index in an array using a hash
+function. This mapping allows for rapid insertion, deletion, and
+retrieval of values based on their associated keys.</p>
+<p>In cases where multiple keys hash to the same index (known as <span
+class="class_s5P0">collisions</span>), hash maps often employ strategies
+such as <span class="class_s5P0">chaining</span> to handle these
+collisions gracefully and maintain performance.</p>
+<p>Here is the definition of the classes used:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>class Contact {</p>
+<p>public String name;</p>
+<p>public String phone;</p>
+<p>public Contact next;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Contact() {</p>
+<p>this.name = null;</p>
+<div class="class_s1Z-7">
+<p>this.phone = null;</p>
+</div>
+<p>this.next = null;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class ContactList {</p>
+<p>private static final int HASH_SIZE = 100;</p>
+<p>private Contact[] bucketTable;</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 4-1: ContactList.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">ContactLis</span><span class="class_s5NX">t</span>
+class contains a table of 100 entries. Each entry contains a reference
+to a<span class="class_s5NV"> </span><span
+class="class_s5NW">Contac</span><span class="class_s5NX">t</span>
+object. The<span class="class_s5NV"> </span><span
+class="class_s5NW">Contac</span><span class="class_s5NX">t</span> class
+contains the name and the phone number, as well as a reference to
+another<span class="class_s5NV"> </span><span
+class="class_s5NW">Contac</span><span class="class_s5NX">t</span>
+object, making it a linked list node. Essentially, the<span
+class="class_s5NV"> </span><span
+class="class_s5NW">ContactLis</span><span class="class_s5NX">t</span>
+class is an array of linked lists; in this way the contact list can
+expand as we add new elements, avoiding collisions.</p>
+<p>A contact will be inserted into one of the buckets according to its
+specific hash number. We will use a hash function that will create a
+number between 0 and 99 based on the contact’s name string:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>private int hash(String name) {</p>
+<p>int hash = 5381;</p>
+<p>for (int i = 0; i &lt; name.length(); i++) {</p>
+<p>hash = ((hash &lt;&lt; 5) + hash) + name.charAt(i);</p>
+<p>}</p>
+<div class="class_s1Z-9">
+<p>return Math.abs(hash) % HASH_SIZE;</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 4-2: ContactList.java</p>
+<p>This method is based on a hash function written by Daniel J.
+Bernstein (also know as <span class="class_s5P0">djb</span>)<span
+id="part0006.xhtml_a5PS"></span><a href="#part0019.xhtml_a5PY"
+class="class_s5PB noteref">[1]</a>. This method returns the index of the
+hash map, where we should insert the specific contact.</p>
+<p>In the class constructor we initialize the buckets with nulls:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public ContactList() {</p>
+<p>bucketTable = new Contact[HASH_SIZE];</p>
+<p>for (int i = 0; i &lt; HASH_SIZE; i++) {</p>
+<p>bucketTable[i] = null;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 4-3: ContactList.java</p>
+<p>Here is the code for the contact addition:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void contactAdd(String name, String
+phone) {</p>
+<p>//get index from contact name</p>
+<p>int hashIndex = hash(name);</p>
+<p>Contact newContact = new Contact();</p>
+<p>newContact.name = name;</p>
+<p>newContact.phone = phone;</p>
+<p>newContact.next = bucketTable[hashIndex];</p>
+<p>bucketTable[hashIndex] = newContact;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 4-4: ContactList.java</p>
+<p>We first calculate the hash index based on the contact’s name and
+then we create a new<span class="class_s5NV"> </span><span
+class="class_s5NW">Contac</span><span class="class_s5NX">t</span>
+object. After populating the object properties, we insert the object at
+the beginning of the respective bucket.</p>
+<p>Here is the code for contact removal:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void contactRemove(String name) {</p>
+<p>int index = hash(name);</p>
+<p>Contact contact = bucketTable[index];</p>
+<p>Contact previous = null;</p>
+<div class="class_s21-0">
+
+</div>
+<p>while (contact != null) {</p>
+<p>if (contact.name.equals(name)) {</p>
+<p>if (previous == null) {</p>
+<p>//Contact to remove is the head of the list</p>
+<p>bucketTable[index] = contact.next;</p>
+<p>} else {</p>
+<p>//Contact to remove is not the head of the list</p>
+<p>previous.next = contact.next;</p>
+<p>}</p>
+<p>System.out.println("Contact '" + name + "' removed
+successfully.");</p>
+<p>return;</p>
+<p>}</p>
+<p>previous = contact;</p>
+<p>contact = contact.next;</p>
+<p>}</p>
+<p>System.out.println("Contact '" + name + "' not found.");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 4-5: ContactList.java</p>
+<p>To remove an entry, we first need to get its hash value. We use this
+integer value as the index to get the respective bucket. We then search
+the bucket entries, one by one, until we locate the specific contact. We
+then remove the entry from the buckets, in the same way we remove a node
+from a linked list.</p>
+<p>Next, the code for contact search is presented:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void contactSearch(String name) {</p>
+<p>int hashIndex = hash(name);</p>
+<p>Contact contact = bucketTable[hashIndex];</p>
+<p>while (contact != null) {</p>
+<p>if (contact.name.equals(name)) {</p>
+<p>System.out.println("Name: " + contact.name</p>
+<p>+ "\nPhone Number: " + contact.phone);</p>
+<p>return;</p>
+<p>}</p>
+<p>contact = contact.next;</p>
+<p>}</p>
+<p>System.out.println("Contact '" + name + "' not found.");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 4-6: ContactList.java</p>
+<p>Finally, in the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span> method,
+we create a phonebook and we use it to add, remove and search
+contacts:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>ContactList phonebook = new ContactList();</p>
+<p>phonebook.contactAdd("John", "235454545");</p>
+<div class="class_s1Z-7">
+<p>phonebook.contactAdd("Jane", "775755454");</p>
+</div>
+<p>phonebook.contactAdd("George", "4344343477");</p>
+<div class="class_s21-0">
+
+</div>
+<p>phonebook.contactSearch("John");</p>
+<p>phonebook.contactSearch("Alex");</p>
+<p>phonebook.contactSearch("George");</p>
+<div class="class_s21-0">
+
+</div>
+<p>phonebook.contactRemove("Jake");</p>
+<p>phonebook.contactRemove("Jane");</p>
+<p>phonebook.contactSearch("Jane");</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 4-7: ContactList.java</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/ContactList"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/ContactList</a></p>
+<p><span id="part0007.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">5.</span><span
+class="class_s5NT">          </span><span
+id="part0007.xhtml_a5M4"></span><span class="class_s5NS">Priority Todo
+List</span></p>
+</div>
+<p>We are going to implement a simple todo list application. Each entry
+will contain the task description as well as a number that will signify
+its priority (top priority is equal to 1).</p>
+<p>The todo list will be implemented using a <span
+class="class_s5P0">linked list</span>. Apart from the options to add,
+delete and display tasks, there will also be functionality to sort the
+linked list using <span class="class_s5P0">bubble sort</span>.</p>
+<h2 class="heading_sU-0" id="part0007.xhtml_id__798_22_">Proposed
+Solution</h2>
+<p>First let’s see the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span> method,
+in <span class="class_s5P0">Todo.java</span>:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Todo;</p>
+<p>import java.util.Scanner;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Todo {</p>
+<p>public static void main(String[] args) {</p>
+<p>TodoList list = new TodoList();</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<div class="class_s21-0">
+
+</div>
+<p>int choice = 0;</p>
+<p>String description;</p>
+<p>int priority;</p>
+<p>int index;</p>
+<div class="class_s21-0">
+
+</div>
+<p>do {</p>
+<p>try {</p>
+<p>System.out.println("\nTo-Do List Manager");</p>
+<div class="class_s1Z-10">
+<p>System.out.println("1. Add Task");</p>
+</div>
+<p>System.out.println("2. Remove Task");</p>
+<p>System.out.println("3. Display Tasks");</p>
+<p>System.out.println("4. Sort Tasks by Priority");</p>
+<p>System.out.println("0. Exit");</p>
+<p>System.out.print("Enter your choice: ");</p>
+<p>choice = Integer.parseInt(scanner.nextLine());</p>
+<div class="class_s21-0">
+
+</div>
+<p>switch (choice) {</p>
+<p>case 1:</p>
+<p>System.out.print("Enter task description: ");</p>
+<p>description = scanner.nextLine();</p>
+<p>System.out.print("Enter priority: ");</p>
+<p>priority = Integer.parseInt(scanner.nextLine());</p>
+<p>list.addTask(description, priority);</p>
+<p>System.out.println("Task added successfully.");</p>
+<p>break;</p>
+<p>case 2:</p>
+<p>System.out.print("Enter number of task to remove: ");</p>
+<p>index = Integer.parseInt(scanner.nextLine());</p>
+<p>list.removeTask(index - 1);</p>
+<p>System.out.println("Task removed successfully.");</p>
+<p>break;</p>
+<p>case 3:</p>
+<p>System.out.println("List of tasks:");</p>
+<p>list.displayTasks();</p>
+<p>break;</p>
+<p>case 4:</p>
+<p>list.sortTasks();</p>
+<p>System.out.println("Tasks sorted by priority.");</p>
+<p>break;</p>
+<p>case 0:</p>
+<div class="class_s1Z-19">
+<p>System.out.println("Exiting...");</p>
+</div>
+<p>break;</p>
+<p>default:</p>
+<p>System.out.println("Invalid choice. Please try again.");</p>
+<p>break;</p>
+<p>}</p>
+<p>} catch (NumberFormatException e) {</p>
+<p>System.out.println("Invalid input. Please enter a number.");</p>
+<p>}</p>
+<p>} while (choice != 0);</p>
+<p>scanner.close();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 5-1: Todo.java</p>
+<p>The main method handles the user input and calls the respective
+methods of the todo list.</p>
+<p>Here is the definition of the Task class that makes the objects of
+the linked list structure:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Todo;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Task {</p>
+<p>public String description;</p>
+<p>public int priority;</p>
+<p>public Task next;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Task() {</p>
+<p>this.description = null;</p>
+<p>this.priority = 0;</p>
+<div class="class_s1Z-7">
+<p>this.next = null;</p>
+</div>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 5-2: Task.java</p>
+<p>The linked list consists of<span class="class_s5NV"> </span><span
+class="class_s5NW">Tas</span><span class="class_s5NX">k</span> nodes
+that get linked one to the other via the<span class="class_s5NV">
+</span><span class="class_s5NW">nex</span><span
+class="class_s5NX">t</span> reference. The<span class="class_s5NV">
+</span><span class="class_s5NW">hea</span><span
+class="class_s5NX">d</span> variable points to the first element in the
+list:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><div class="class_s1Z-12">
+<p>package Todo;<br />
+</p>
+<p>public class TodoList {<br />
+  private Task head;<br />
+  private int size;<br />
+</p>
+<p>public TodoList() {<br />
+    head = null;<br />
+    size = 0;<br />
+  }</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 5-3: TodoList.java</p>
+<p>The class constructor initializes the linked list structure.</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">addTask(</span><span class="class_s5NX">)</span>
+method creates a new task node and inserts it at the end of the linked
+list:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void addTask(String description, int
+priority) {</p>
+<p>Task task = new Task();</p>
+<p>task.description = description;</p>
+<p>task.priority = priority;</p>
+<p>task.next = null;</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-7">
+<p>if (head == null) {</p>
+</div>
+<p>//List is empty</p>
+<p>head = task;</p>
+<p>} else {</p>
+<p>Task temp = head;</p>
+<p>//Find the last node</p>
+<p>while (temp.next != null) {</p>
+<p>temp = temp.next;</p>
+<p>}</p>
+<p>//Insert the new task after the last node</p>
+<p>temp.next = task;</p>
+<p>}</p>
+<p>size++;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 5-4: TodoList.java</p>
+<p>Next, we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">removeTask(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void removeTask(int index) {</p>
+<p>if (head == null) {</p>
+<p>System.out.println("List is empty.");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (index == 0) {</p>
+<p>//If we remove the first item in the list</p>
+<p>Task temp = head;</p>
+<p>head = head.next;</p>
+<p>temp = null;</p>
+<p>size--;</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-7">
+<p>Task previous = null;</p>
+</div>
+<p>Task current = head;</p>
+<p>int i = 0;</p>
+<p>//Go to the selected index</p>
+<p>while (current != null &amp;&amp; i &lt; index) {</p>
+<p>previous = current;</p>
+<p>current = current.next;</p>
+<p>i++;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (current == null) {</p>
+<p>System.out.println("Index out of bounds.");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>previous.next = current.next;</p>
+<p>current = null;</p>
+<p>size--;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 5-5: TodoList.java</p>
+<p>The argument to the method is the index of the entry inside the
+linked list, as it is presented during task listing in the console. As
+we will see in the next snippet, we start listing the tasks from number
+1, which is something that we take into account in the calculations
+above.</p>
+<p>Here is the code for the task listing:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void displayTasks() {</p>
+<div class="class_s1Z-7">
+<p>Task temp = head;</p>
+</div>
+<p>int i = 1;</p>
+<p>while (temp != null) {</p>
+<p>System.out.println(i++ + ") Description: " + temp.description</p>
+<p>+ ", Priority: " + temp.priority);</p>
+<p>temp = temp.next;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 5-6: TodoList.java</p>
+<p>Finally, we present the code for the sorting of tasks according to
+their priority:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void sortTasks() {</p>
+<p>int swapped;</p>
+<p>Task ptr1;</p>
+<p>Task ptr2 = null;</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (head == null)</p>
+<p>return;</p>
+<div class="class_s21-0">
+
+</div>
+<p>do {</p>
+<p>swapped = 0; // will change if swapping happens</p>
+<p>ptr1 = head;</p>
+<div class="class_s21-0">
+
+</div>
+<p>while (ptr1.next != ptr2) {</p>
+<p>//Swap data of adjacent nodes</p>
+<p>if (ptr1.priority &gt; ptr1.next.priority) {</p>
+<p>int tempPriority = ptr1.priority;</p>
+<p>ptr1.priority = ptr1.next.priority;</p>
+<p>ptr1.next.priority = tempPriority;</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-13">
+<p>String tempDescription = ptr1.description;</p>
+</div>
+<p>ptr1.description = ptr1.next.description;</p>
+<p>ptr1.next.description = tempDescription;</p>
+<div class="class_s21-0">
+
+</div>
+<p>swapped = 1; //swap happened in this loop pass; don't stop yet</p>
+<p>}</p>
+<p>ptr1 = ptr1.next;</p>
+<p>}</p>
+<p>ptr2 = ptr1;</p>
+<p>} while (swapped != 0); //quit loop when no swap happened</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 5-7: TodoList.java</p>
+<p>The code employs the <span class="class_s5P0">bubble sort</span>
+algorithm to perform the task sorting operation. In bubble sort, we
+perform multiple passes of the linked list. Each time we find a task
+that has lower priority than its next task, then we perform swapping of
+those adjacent tasks. Over time, all entries will be sorted according to
+priority and there will eventually be a loop pass where no swapping will
+occur. This is when the algorithm will end.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/Todo"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/Todo</a></p>
+<p><span id="part0008.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">6.</span><span
+class="class_s5NT">          </span><span
+id="part0008.xhtml_a5M5"></span><span class="class_s5NS">Songs
+List</span></p>
+</div>
+<p>Let’s create a simple program that takes an array of songs and sorts
+them by artist, album or release date, using <span
+class="class_s5P0">insertion sort</span>.</p>
+<h2 class="heading_sU-0" id="part0008.xhtml_id__798_23_">Proposed
+Solution</h2>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">Son</span><span class="class_s5NX">g</span> class
+will contain information about the title of the song, the artist, the
+album and the release year:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Songs;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Song {</p>
+<p>public String title;</p>
+<p>public String artist;</p>
+<p>public String album;</p>
+<p>public int releaseYear;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Song(String title, String artist, String album, int
+releaseYear) {</p>
+<p>this.title = title;</p>
+<p>this.artist = artist;</p>
+<p>this.album = album;</p>
+<p>this.releaseYear = releaseYear;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 6-1: Song.java</p>
+<p>Next, we define three methods, that will be used for the
+comparisons:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Songs;</p>
+<p>import java.util.Comparator;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Songs {</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Compare songs based on artist</p>
+<p>public static int compareByArtist(Song a, Song b) {</p>
+<p>return a.artist.compareTo(b.artist);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Compare songs based on album</p>
+<p>public static int compareByAlbum(Song a, Song b) {</p>
+<p>return a.album.compareTo(b.album);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Compare songs based on release date</p>
+<p>public static int compareByReleaseDate(Song a, Song b) {</p>
+<p>return a.releaseYear - b.releaseYear;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 6-2: Songs.java</p>
+<p>In the first two methods, we compare two strings, while in the third
+one we compare two integers. Those methods will be used by the<span
+class="class_s5NV"> </span><span
+class="class_s5NW">insertionSort(</span><span
+class="class_s5NX">)</span> method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void insertionSort(Song[] arr,
+Comparator&lt;Song&gt; comparator) {</p>
+<div class="class_s1Z-7">
+<p>for (int i = 1; i &lt; arr.length; i++) {</p>
+</div>
+<p>Song key = arr[i];</p>
+<p>int j = i - 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Move elements of arr[0..i-1], that are greater than key,</p>
+<p>//to one position ahead of their current position</p>
+<p>while (j &gt;= 0 &amp;&amp; comparator.compare(arr[j], key) &gt; 0)
+{</p>
+<p>arr[j + 1] = arr[j];</p>
+<p>j = j - 1;</p>
+<p>}</p>
+<p>arr[j + 1] = key;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 6-3: Songs.java</p>
+<p>We use the<span class="class_s5NV"> </span><span
+class="class_s5NW">Comparato</span><span class="class_s5NX">r</span>
+interface in order to use one of the 3 static methods that we defined
+earlier. This interface is then used as a parameter for the<span
+class="class_s5NV"> </span><span
+class="class_s5NW">insertionSort(</span><span
+class="class_s5NX">)</span> method to specify the comparison logic for
+sorting the<span class="class_s5NV"> </span><span
+class="class_s5NW">Son</span><span class="class_s5NX">g</span>
+array.</p>
+<p>For instance, if we call<span class="class_s5NV"> </span><span
+class="class_s5NW">insertionSort(</span><span
+class="class_s5NX">)</span> like this:</p>
+<p>insertionSort(songs, Songs::compareByArtist);</p>
+<p>then, the following code inside<span class="class_s5NV"> </span><span
+class="class_s5NW">insertionSort(</span><span
+class="class_s5NX">)</span>:</p>
+<p>while (j &gt;= 0 &amp;&amp; comparator.compare(arr[j], key) &gt;
+0)</p>
+<p>will result in calling the<span class="class_s5NV"> </span><span
+class="class_s5NW">compareByArtist(</span><span
+class="class_s5NX">)</span> method. In this way, we don’t have to
+write<span class="class_s5NV"> </span><span
+class="class_s5NW">insertionSort(</span><span
+class="class_s5NX">)</span> three times to accommodate for the three
+different types of comparison.</p>
+<p>Note that we are essentially using a Lambda Expression with a
+reference to a static method. We could do this in a more traditional
+way, by creating three classes that implement the Comparator interface,
+like the following:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Comparator class for comparing songs by
+artist</p>
+<p>class CompareByArtist implements Comparator&lt;Song&gt; {</p>
+<p>@Override</p>
+<p>public int compare(Song a, Song b) {</p>
+<p>return a.artist.compareTo(b.artist);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 6-4: Songs.java</p>
+<p>Then we would call <span
+class="class_s5NW">insertionSort(</span><span
+class="class_s5NX">)</span> like this:</p>
+<p>insertionSort(songs,<span class="class_s5PU"> </span>ne<span
+class="class_s5PU">w</span> CompareByArtis<span
+class="class_s5PU">t</span>());</p>
+<p>Insertion sort works by taking each element in the array and moving
+it to the left part of the array in a sorted position. At any time, the
+left part of the array is sorted, while we take items from the right
+part. As we move an element to a place in the array, all the <span
+id="part0008.xhtml_page_47"></span>items to the right will have to move
+one place to the right.</p>
+<p>This is all illustrated in the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span> method
+where we call<span class="class_s5NV"> </span><span
+class="class_s5NW">insertionSort(</span><span
+class="class_s5NX">)</span> three times, each time passing a different
+comparison method. Each time, the array is sorted in a different
+way:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>Song[] songs = {</p>
+<p>new Song("Song1", "Artist2", "Album1", 2010),</p>
+<p>new Song("Song2", "Artist1", "Album2", 2005),</p>
+<p>new Song("Song3", "Artist3", "Album1", 2015),</p>
+<p>new Song("Song4", "Artist4", "Album3", 2008),</p>
+<p>new Song("Song5", "Artist1", "Album2", 2003),</p>
+<p>new Song("Song6", "Artist3", "Album4", 2019),</p>
+<p>new Song("Song7", "Artist2", "Album3", 2012),</p>
+<p>new Song("Song8", "Artist4", "Album4", 2017),</p>
+<p>new Song("Song9", "Artist5", "Album5", 2014),</p>
+<p>new Song("Song10", "Artist5", "Album5", 2011)</p>
+<p>};</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Sort by artist</p>
+<p>insertionSort(songs, Songs::compareByArtist);</p>
+<p>System.out.println("Sorted by Artist:");</p>
+<p>for (Song song : songs) {</p>
+<p>System.out.println(song.title + " from " + song.artist);</p>
+<p>}</p>
+<p>System.out.println();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Sort by album</p>
+<p>insertionSort(songs, Songs::compareByAlbum);</p>
+<p>System.out.println("Sorted by Album:");</p>
+<div class="class_s1Z-7">
+<p>for (Song song : songs) {</p>
+</div>
+<p>System.out.println(song.title + " from " + song.album);</p>
+<p>}</p>
+<p>System.out.println();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Sort by release date</p>
+<p>insertionSort(songs, Songs::compareByReleaseDate);</p>
+<p>System.out.println("Sorted by Release Date:");</p>
+<p>for (Song song : songs) {</p>
+<p>System.out.println(song.title + " released in " +
+song.releaseYear);</p>
+<p>}</p>
+<p>}</p>
+<p>}</p></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 6-5: Songs.java</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/Songs"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/Songs</a></p>
+<p><span id="part0009.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">7.</span><span
+class="class_s5NT">          </span><span
+id="part0009.xhtml_a5M6"></span><span class="class_s5NS">Task
+allocation</span></p>
+</div>
+<p>We will create a program where users can enter the description of
+tasks and their durations. The tasks will be allocated to workers, based
+on the amount of work that they already have taken over. This means that
+the task will be allocated to the worker with the lower workload.</p>
+<h2 class="heading_sU-0" id="part0009.xhtml_id__798_24_">Proposed
+Solution</h2>
+<p>We will use a <span class="class_s5P0">priority queue</span> to
+express the differences in priority between the various workers, based
+on their workload so far.</p>
+<p>Let’s first define the<span class="class_s5NV"> </span><span
+class="class_s5NW">Tas</span><span class="class_s5NX">k</span> and<span
+class="class_s5NV"> </span><span class="class_s5NW">Worke</span><span
+class="class_s5NX">r</span> classes:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package TaskAllocation;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Task {</p>
+<p>public String description;</p>
+<p>public int duration;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Task(String description, int duration) {</p>
+<p>this.description = description;</p>
+<p>this.duration = duration;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 7-1: Task.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">Tas</span><span class="class_s5NX">k</span> class
+consists of the task description and duration in minutes.</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package TaskAllocation;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Worker {</p>
+<p>public int id;</p>
+<p>public int workload;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Worker(int id, int workload) {</p>
+<p>this.id = id;</p>
+<p>this.workload = workload;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 7-2: Worker.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">Worke</span><span class="class_s5NX">r</span> class
+contains the ID of the worker as well as the workload (also in
+minutes).</p>
+<p>Next, we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package TaskAllocation;</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.Comparator;</p>
+<p>import java.util.List;</p>
+<p>import java.util.PriorityQueue;</p>
+<p>import java.util.Scanner;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class TaskAllocation {</p>
+<p>public static void main(String[] args) {</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<p>List&lt;Task&gt; tasks = new ArrayList&lt;&gt;();</p>
+<p>PriorityQueue&lt;Worker&gt; workerQueue</p>
+<div class="class_s1Z-10">
+<p>= new PriorityQueue&lt;&gt;(Comparator.comparingInt(w -&gt;
+w.workload));</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.print("Enter the number of workers: ");</p>
+<p>int numWorkers = scanner.nextInt();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Initialize workers with ID and 0 workload</p>
+<p>for (int i = 0; i &lt; numWorkers; i++) {</p>
+<p>workerQueue.add(new Worker(i, 0));</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>int choice;</p>
+<p>do {</p>
+<p>System.out.println("\nMenu:");</p>
+<p>System.out.println("1. Add Task");</p>
+<p>System.out.println("2. Display Tasks");</p>
+<p>System.out.println("3. Print Workers Queue");</p>
+<p>System.out.println("4. Exit");</p>
+<p>System.out.print("Enter your choice: ");</p>
+<p>choice = scanner.nextInt();</p>
+<div class="class_s21-0">
+
+</div>
+<p>switch (choice) {</p>
+<p>case 1:</p>
+<p>addTask(workerQueue, tasks, scanner);</p>
+<p>break;</p>
+<p>case 2:</p>
+<p>displayTasks(tasks);</p>
+<p>break;</p>
+<p>case 3:</p>
+<p>printWorkersQueue(workerQueue);</p>
+<p>break;</p>
+<p>case 4:</p>
+<p>System.out.println("Exiting program...");</p>
+<div class="class_s1Z-13">
+<p>break;</p>
+</div>
+<p>default:</p>
+<p>System.out.println("Invalid choice! Please try again.");</p>
+<p>break;</p>
+<p>}</p>
+<p>} while (choice != 4);</p>
+<div class="class_s21-0">
+
+</div>
+<p>scanner.close();</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 7-3: TaskAllocation.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span> method
+displays the menu and gets the user’s selections. It also initializes a
+list that will store the tasks, and a priority queue that will contain
+the workers.</p>
+<p>Also note that when the program starts, the users should select the
+total number of workers; the workers will be subsequently referred to by
+their ID.</p>
+<p>Next, we implement the method that adds a new task to the system:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Method to add a task and allocate it to a
+worker</p>
+<p>static void addTask(PriorityQueue&lt;Worker&gt; workerQueue,</p>
+<p>List&lt;Task&gt; tasks, Scanner scanner) {</p>
+<p>System.out.print("Enter task description: ");</p>
+<p>String description = scanner.next();</p>
+<div class="class_s1Z-7">
+<p>System.out.print("Enter task duration (in minutes): ");</p>
+</div>
+<p>int duration = scanner.nextInt();</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (workerQueue.size() == 0) {</p>
+<p>System.out.println("No workers available! Task cannot be
+assigned.");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Dequeue the worker with the shortest workload</p>
+<p>Worker worker = workerQueue.poll();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Assign the task to the worker and update workload</p>
+<p>tasks.add(new Task(description, duration));</p>
+<p>System.out.println("Task added successfully and allocated to Worker
+"</p>
+<p>+ worker.id + "!");</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Update workload</p>
+<p>worker.workload += duration;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Store updated worker back to queue</p>
+<p>workerQueue.add(worker);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 7-4: TaskAllocation.java</p>
+<p>In order to find the worker that has the lowest workload, we store
+workers in the priority queue. Note that we are using the<span
+class="class_s5NV"> </span><span class="class_s5NW">workloa</span><span
+class="class_s5NX">d</span> property as the parameter that will be used
+to sort the priority queue. <span
+id="part0009.xhtml_page_54"></span>This is specified in the definition
+of the queue in<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>:</p>
+<p>    PriorityQueue&lt;Worker&gt; workerQueue</p>
+<p>        = new PriorityQueue&lt;&gt;(<span
+class="class_s5PD">Comparator.comparingInt(w -&gt;
+w.workload)</span>);</p>
+<p>When we dequeue an item from the queue, then we will get the item
+with lowest workload.</p>
+<p>In<span class="class_s5NV"> </span><span
+class="class_s5NW">addTask(</span><span class="class_s5NX">)</span>, we
+get the worker with the lowest workload (the one that is positioned at
+the front of the queue) and we add the task’s workload to the worker’s
+own workload. Then, we store the task into the tasks list. Finally, the
+worker is inserted into the queue again; now the worker will be
+positioned according to the newly updated workload.</p>
+<p>Finally, we present the code for two other operations, displaying the
+tasks and the workers information respectively:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Method to display all tasks</p>
+<p>static void displayTasks(List&lt;Task&gt; tasks) {</p>
+<p>System.out.println("Task List:");</p>
+<p>for (Task task : tasks) {</p>
+<p>System.out.println("Task description: " + task.description</p>
+<p>+ ", Duration: " + task.duration + " minutes");</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-8">
+<p>//Method to print the workers queue</p>
+</div>
+<p>static void printWorkersQueue(PriorityQueue&lt;Worker&gt;
+workerQueue) {</p>
+<p>System.out.println("Workers Queue:");</p>
+<p>for (Worker item : workerQueue) {</p>
+<p>System.out.println("Worker ID: " + item.id + ", Workload: "</p>
+<p>+ item.workload + " minutes");</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 7-5: TaskAllocation.java</p>
+<p>Note that traversing the priority queue will give us an <span
+class="class_s5P0">unordered</span> workers list. Apparently, this is
+the only way to get the contents of a priority queue, without dequeueing
+each element.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/TaskAllocation"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/TaskAllocation</a></p>
+<p><span id="part0010.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">8.</span><span
+class="class_s5NT">          </span><span
+id="part0010.xhtml_a5M7"></span><span class="class_s5NS">Word
+Frequencies</span></p>
+</div>
+<p>We will create a simple program that will parse a text file and will
+find the frequencies of all the words that appear in it.</p>
+<h2 class="heading_sU-0" id="part0010.xhtml_id__798_25_">Proposed
+Solution</h2>
+<p>This project is a use case for a dictionary structure. We will use
+a<span class="class_s5NV"> </span><span
+class="class_s5NW">HashMa</span><span class="class_s5NX">p</span> class
+that will store word and word frequency pairs.</p>
+<p>Here is the program code:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package WordFrequencies;</p>
+<p>import java.io.BufferedReader;</p>
+<p>import java.io.FileReader;</p>
+<p>import java.io.IOException;</p>
+<p>import java.util.HashMap;</p>
+<p>import java.util.Map;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class WordFrequencies {</p>
+<div class="class_s21-0">
+
+</div>
+<p>static String cleanWord(String word) {</p>
+<p>return new String(word</p>
+<p>.chars()</p>
+<p>.filter(Character::isLetter)</p>
+<p>.map(Character::toLowerCase)</p>
+<p>.toArray(), 0, (int)
+word.chars().filter(Character::isLetter).count());</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-8">
+<p>public static void main(String[] args) {</p>
+</div>
+<p>Map&lt;String, Integer&gt; wordFrequency = new HashMap&lt;&gt;();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Read text from file</p>
+<p>try (BufferedReader inputFile</p>
+<p>= new BufferedReader(new FileReader("input.txt"))) {</p>
+<p>String line;</p>
+<p>while ((line = inputFile.readLine()) != null) {</p>
+<p>for (String word : line.split(" ")) {</p>
+<p>String cleanedWord = cleanWord(word);</p>
+<p>if (!cleanedWord.isEmpty()) {</p>
+<p>wordFrequency.put(cleanedWord,</p>
+<p>wordFrequency.getOrDefault(cleanedWord, 0) + 1);</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Display word frequencies</p>
+<p>System.out.println("Word Frequencies:");</p>
+<p>wordFrequency.forEach((key, value)</p>
+<p>-&gt; System.out.println(key + ": " + value));</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 8-1: WordFrequencies.java</p>
+<p>By using a <span class="class_s5NW">BufferedReade</span><span
+class="class_s5NX">r</span> object, we are reading the input file, line
+by line. Then, we split each line, based on spaces and we process each
+word to make it lowercase and remove non-letter characters. This
+processing is performed by the<span class="class_s5NV"> </span><span
+class="class_s5NW">cleanWord(</span><span class="class_s5NX">)</span>
+method, that takes a string, breaks it into characters, then filters the
+characters to keep only letters and numbers. Finally, it maps each
+character into lowercase ones and creates a new string based on
+them.</p>
+<p>Then, we add the word in the<span class="class_s5NV"> </span><span
+class="class_s5NW">HashMa</span><span class="class_s5NX">p</span>. If
+the word does not already exist in the<span class="class_s5NV">
+</span><span class="class_s5NW">HashMa</span><span
+class="class_s5NX">p</span>, then<span class="class_s5NV"> </span><span
+class="class_s5NW">getOrDefault(</span><span class="class_s5NX">)</span>
+will return zero, otherwise it will return its frequency so far.</p>
+<p>Finally, we employ a<span class="class_s5NV"> </span><span
+class="class_s5NW">forEach(</span><span class="class_s5NX">)</span> loop
+to print all the words and their frequencies to the console. Note the
+use of a <span class="class_s5P0">lambda function</span> as argument
+to<span class="class_s5NV"> </span><span
+class="class_s5NW">forEach(</span><span class="class_s5NX">)</span>.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/WordFrequencies"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/WordFrequencies</a></p>
+<p><span id="part0011.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">9.</span><span
+class="class_s5NT">          </span><span
+id="part0011.xhtml_a5M8"></span><span class="class_s5NS">Syntax
+Checker</span></p>
+</div>
+<p>Let’s create a trivial syntax checker that will scan a source code
+file and will determine whether the parentheses, brackets, or braces in
+the code are balanced or not.</p>
+<h2 class="heading_sU-0" id="part0011.xhtml_id__798_26_">Proposed
+Solution</h2>
+<p>In source code, when we open a series of parentheses, brackets, or
+braces, we have to make sure that they are closed in the reverse
+order.</p>
+<p>The fact that items entered in a <span
+class="class_s5P0">stack</span> are extracted in the reverse order,
+makes it suitable for this algorithm:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package SyntaxChecker;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Stack {</p>
+<p>private char[] items;</p>
+<p>private int top;</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 9-1: Stack.java</p>
+<p>Here is the code for the stack initialization:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public Stack() {</p>
+<p>items = new char[100];</p>
+<p>top = -1;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 9-2: Stack. java</p>
+<p>Next, we add the code for stack <span class="class_s5P0">push</span>
+and <span class="class_s5P0">pop</span>, as well as a method to check if
+the stack is empty:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void push(char c) {</p>
+<p>if (top == items.length - 1) {</p>
+<p>System.out.println("Stack is full");</p>
+<p>System.exit(1);</p>
+<p>}</p>
+<p>items[++top] = c;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public char pop() {</p>
+<p>if (top == -1) {</p>
+<p>System.out.println("Stack is empty");</p>
+<p>System.exit(1);</p>
+<p>}</p>
+<p>return items[top--];</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public boolean isEmpty() {</p>
+<p>return (top == -1);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 9-3: Stack. java</p>
+<p>The most interesting part of the code is the algorithm that checks
+whether the file is balanced or not:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package SyntaxChecker;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.io.BufferedReader;</p>
+<div class="class_s1Z-12">
+<p>import java.io.InputStreamReader;</p>
+</div>
+<p>import java.io.FileReader;</p>
+<p>import java.io.IOException;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class SyntaxChecker {</p>
+<p>static int checkBalanced(String filename) {</p>
+<p>try (BufferedReader file = new BufferedReader(new
+FileReader(filename))) {</p>
+<p>int c;</p>
+<p>Stack stack = new Stack();</p>
+<div class="class_s21-0">
+
+</div>
+<p>while ((c = file.read()) != -1) {</p>
+<p>char ch = (char) c; //read() returns an int</p>
+<p>if (ch == '(' || ch == '[' || ch == '{') {</p>
+<p>stack.push(ch);</p>
+<p>} else if (ch == ')' || ch == ']' || ch == '}') {</p>
+<p>if (stack.isEmpty()) {</p>
+<p>return 0;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>char openingChar = stack.pop();</p>
+<div class="class_s21-0">
+
+</div>
+<p>if ((ch == ')' &amp;&amp; openingChar != '(') ||</p>
+<p>(ch == ']' &amp;&amp; openingChar != '[') ||</p>
+<p>(ch == '}' &amp;&amp; openingChar != '{')) {</p>
+<p>return 0;</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>return stack.isEmpty() ? 1 : 0;</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<div class="class_s1Z-9">
+<p>return 0;</p>
+</div>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public static void main(String[] args) {</p>
+<p>try (BufferedReader reader</p>
+<p>= new BufferedReader(new InputStreamReader(System.in))) {        </p>
+<p>System.out.print("Path to the source file: ");</p>
+<p>String filename = reader.readLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (checkBalanced(filename) == 1) {</p>
+<p>System.out.println("The input file is balanced.");</p>
+<p>} else {</p>
+<p>System.out.println("The input file is not balanced.");</p>
+<p>}</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 9-4: SyntaxChecker. java</p>
+<p>We open and parse the source code file, and we push the bracket <span
+class="class_s5P0">opening</span> characters into the stack. When we
+encounter a <span class="class_s5P0">closing</span> character, then we
+pop the first available opening character from the stack.</p>
+<p>If there is a mismatch between those two characters, we conclude that
+the file is not balanced. At the end, <span
+id="part0011.xhtml_page_63"></span>we also check that the stack is
+emptied; if not, then the file is still unbalanced.</p>
+<p>Note that this is a trivial version of the algorithm. In fact, if we
+try to check the exercises’s own source file (<span
+class="class_s5P0">SyntaxChecker.java</span>) for parentheses balancing,
+we will get an error – even though the code compiles. That’s because we
+use single characters (opening or closing) in our code during checking,
+like in the following line:</p>
+<p>if (c == '(' || c == '[' || c == '{')</p>
+<p>A more advanced version of the algorithm would not take those
+characters (e.g. those enclosed in quotes) into account.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/SyntaxChecker"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/SyntaxChecker</a></p>
+<p><span id="part0012.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">10.</span><span class="class_s5NT">
+</span><span id="part0012.xhtml_a5M9"></span><span
+class="class_s5NS">Maze Solver</span></p>
+</div>
+<p>In this exercise, we will use a <span class="class_s5P0">stack</span>
+to find our way through a maze.</p>
+<h2 class="heading_sU-0" id="part0012.xhtml_id__798_27_">Proposed
+Solution</h2>
+<p>We will define a maze as a two-dimensional array of integers. The
+walls will be marked with ones (1), while the corridors of the maze will
+be marked with zeroes (0).</p>
+<p>Below, we can see the definition of a 15x15 maze:</p>
+<table class="class_s32">
+<tbody class="class-4">
+<tr>
+<td class="class_s2Y"><p>private int[][] matrix = {</p>
+<p>{0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},</p>
+<p>{0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},</p>
+<p>{0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0},</p>
+<p>{0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0},</p>
+<p>{0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0},</p>
+<p>{0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0},</p>
+<p>{0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0},</p>
+<p>{0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0},</p>
+<p>{0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0},</p>
+<p>{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0},</p>
+<p>{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}</p>
+<p>};</p>
+<div class="class_s21-1">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-1: MazeSolver.java</p>
+<p>The entrance of the maze is at the top left corner, and the exit at
+the bottom right corner.</p>
+<p>We will use a stack structure to solve this maze. As we move through
+the maze, we store the entered point coordinates in the stack. When we
+reach a dead end, then we will have to backtrack, and we will do this by
+popping one point from the stack. This algorithm is called <span
+class="class_s5P0">Depth-first search (DFS)</span>, as it goes inside
+the maze as deep as possible, only to go back and try another direction
+when no way is found.</p>
+<p>Here is the code for the coordinate points:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package MazeSolver;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Point {</p>
+<p>public int row, col;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Point() {</p>
+<p>row = 0;</p>
+<p>col = 0;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Point(int x, int y) {</p>
+<p>row = x;</p>
+<p>col = y;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-2: Point.java</p>
+<p>And here is the code for the stack:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><div class="class_s1Z-12">
+<p>package MazeSolver;</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>public class Stack&lt;T&gt; {</p>
+<p>private T[] items;</p>
+<p>private int top;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Stack(int capacity) {</p>
+<p>items = (T[]) new Object[capacity];</p>
+<p>top = -1;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public boolean isEmpty() {</p>
+<p>return top == -1;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public void push(T t) {</p>
+<p>top++;</p>
+<p>items[top] = t;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public T pop() {</p>
+<p>return items[top--];</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-3: Stack.java</p>
+<p>To make it more interesting, we have created a stack using <span
+class="class_s5P0">Java generics</span>. The stack will eventually
+contain an array of point coordinates. We have defined methods to
+initialize the stack, to check if it’s empty, as well as to push and pop
+objects in the stack.</p>
+<p>Note that we keep it simple and don’t include bounds checking, as we
+will instantiate a stack with the maximum capacity needed to solve the
+maze (<span class="class_s5P0">ROWS*COLS</span>).</p>
+<p>Now, it is time to introduce a class that will handle the maze:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package MazeSolver;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Maze {</p>
+<p>private Stack&lt;Point&gt; stack = new Stack&lt;&gt;(ROWS *
+COLS);</p>
+<div class="class_s21-0">
+
+</div>
+<p>private static final int ROWS = 15;</p>
+<p>private static final int COLS = 15;</p>
+<p>private int[][] matrix = {</p>
+<p>{0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},</p>
+<p>{0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0},</p>
+<p>{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},</p>
+<p>{0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0},</p>
+<p>{0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0},</p>
+<p>{0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0},</p>
+<p>{0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0},</p>
+<p>{0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0},</p>
+<p>{0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0},</p>
+<p>{0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0},</p>
+<p>{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0},</p>
+<p>{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}</p>
+<p>};</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-8">
+<p>public Maze() { }</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-4: Maze.java</p>
+<p>Next, we add the code to check whether we can move to a cell:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Check if we can move to this cell</p>
+<p>private boolean canMove(int row, int col) {</p>
+<p>return (row &gt;= 0</p>
+<p>&amp;&amp; row &lt; ROWS</p>
+<p>&amp;&amp; col &gt;= 0</p>
+<p>&amp;&amp; col &lt; COLS</p>
+<p>&amp;&amp; matrix[row][col] == 0);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-5: Maze.java</p>
+<p>The cell must me within the maze bounds and should be part of a
+corridor.</p>
+<p>We also provide a method to print the maze:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void print() {</p>
+<p>for (int i = 0; i &lt; ROWS; i++) {</p>
+<p>for (int j = 0; j &lt; COLS; j++) {</p>
+<p>System.out.print(matrix[i][j] + " ");</p>
+<p>}</p>
+<p>System.out.println();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-6: Maze.java</p>
+<p>The following method implements the maze solving algorithm:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Solve the maze using backtracking</p>
+<p>public int solve(int row, int col) {</p>
+<p>if (row == ROWS - 1 &amp;&amp; col == COLS - 1) {</p>
+<p>//destination reached</p>
+<p>stack.push(new Point(row, col));</p>
+<p>return 1;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (canMove(row, col)) {</p>
+<p>stack.push(new Point(row, col));</p>
+<p>matrix[row][col] = 2; //Mark visited</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Move right</p>
+<p>if (solve(row, col + 1) == 1)</p>
+<p>return 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Move down</p>
+<p>if (solve(row + 1, col) == 1)</p>
+<p>return 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Move left</p>
+<p>if (solve(row, col - 1) == 1)</p>
+<p>return 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Move up</p>
+<p>if (solve(row - 1, col) == 1)</p>
+<p>return 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//If none of the above movements work, backtrack</p>
+<div class="class_s1Z-9">
+<p>stack.pop();</p>
+</div>
+<p>return 0;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>return 0;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-7: Maze.java</p>
+<p>First of all, we check whether the destination has been reached, by
+comparing the current row and column with the constant values<span
+class="class_s5NV"> </span><span class="class_s5NW">ROW</span><span
+class="class_s5NX">S</span> and<span class="class_s5NV"> </span><span
+class="class_s5NW">COL</span><span class="class_s5NX">S</span>.</p>
+<p>In the opposite case, we first check if we can actually move to this
+cell, i.e., if it is part of a corridor and is within the maze bounds.
+If so, we add its coordinates into the stack and we mark the cell with
+the number 2, to mark the fact that we have already passed from this
+cell.</p>
+<p>Then, we proceed with calling recursively the<span
+class="class_s5NV"> </span><span class="class_s5NW">solve(</span><span
+class="class_s5NX">)</span> method for all four directions, starting
+with right and down, and then trying with left and up. If none of those
+movements results in solving the maze (i.e. they all return 0), then we
+will have to backtrack. Since this point in the maze was not eventually
+part of the solution, we pop it from the stack.</p>
+<p>We also define a method to print the path followed to solve the maze.
+We get it by popping the visited cells of the maze from the stack, one
+by one:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><div class="class_s1Z-8">
+<p>public void printPath() {</p>
+</div>
+<p>while (!stack.isEmpty()) {</p>
+<p>Point p = stack.pop();</p>
+<p>System.out.print("(" + p.row + ", " + p.col + "), ");</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-8: Maze.java</p>
+<p>Finally, let’s see the main method of the program:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package MazeSolver;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class MazeSolver {</p>
+<p>public static void main(String[] args) {</p>
+<p>Maze maze = new Maze();</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("This is the maze:");</p>
+<p>maze.print();</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (maze.solve(0, 0) == 1) {</p>
+<p>System.out.println("\n\nThis is the path found:");</p>
+<p>maze.printPath();</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("\n\nThis is the maze with all the points
+crossed:");</p>
+<p>maze.print();</p>
+<p>} else {</p>
+<p>System.out.println("No path found");</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 10-9: MazeSolver.java</p>
+<p>We first print the initial maze, then we solve the maze. Next, we
+print the solution path. Finally, we display the map once more; all the
+points that we crossed during our search will be marked with ‘2’.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/MazeSolver"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/MazeSolver</a></p>
+<p><span id="part0013.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">11.</span><span class="class_s5NT">
+</span><span id="part0013.xhtml_a5MA"></span><span
+class="class_s5NS">File Indexer</span></p>
+</div>
+<p>For this exercise, we will create a program that will recursively
+index all the files in a specified folder. The information about the
+indexed files (filename and location in the disk) will be stored in a
+<span class="class_s5P0">Binary Search Tree (BST)</span> for faster
+searching.</p>
+<h2 class="heading_sU-0" id="part0013.xhtml_id__798_28_">Proposed
+Solution</h2>
+<p>The Binary Search Tree structure is a tree where each node has only
+two children, left and right. Here is the definition of the class:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package FileIndexer;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.io.*;</p>
+<p>import java.nio.file.*;</p>
+<p>import java.util.Scanner;</p>
+<div class="class_s21-0">
+
+</div>
+<p>class FileIndexer {</p>
+<p>private class Node {</p>
+<p>public String fileName;</p>
+<p>public String filePath;</p>
+<p>public Node left;</p>
+<p>public Node right;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Node(String name, String path) {</p>
+<p>fileName = name;</p>
+<p>filePath = path;</p>
+<p>left = null;</p>
+<p>right = null;</p>
+<div class="class_s1Z-7">
+<p>}</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>private Node root;</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-1: FileIndexer.java</p>
+<p>Each node of the tree contains two strings, the file name and the
+file location. It also contains references to the two children
+nodes.</p>
+<p>Next, we define a method to insert a new node into the tree:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Insert node to tree</p>
+<p>private void insertNode(String fileName, String filePath) {</p>
+<p>//If the tree is empty, insert node here</p>
+<p>if (root == null) {</p>
+<p>root = new Node(fileName, filePath);</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//If not empty, then go down the tree</p>
+<p>Node current = root;</p>
+<p>while (true) {</p>
+<p>if (fileName.compareTo(current.fileName) &lt; 0) {</p>
+<p>if (current.left == null) {</p>
+<p>current.left = new Node(fileName, filePath);</p>
+<p>return;</p>
+<p>}</p>
+<p>current = current.left;</p>
+<div class="class_s1Z-9">
+<p>} else {</p>
+</div>
+<p>if (current.right == null) {</p>
+<p>current.right = new Node(fileName, filePath);</p>
+<p>return;</p>
+<p>}</p>
+<p>current = current.right;</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-2: FileIndexer.java</p>
+<p>Starting from the root of the tree, we move downwards to the left or
+to the right depending on the inserted value.</p>
+<p>Next, we define the method that will recursively index all files into
+the tree:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Index the specified directory</p>
+<p>private void indexDirectoryHelper(String dirPath) {</p>
+<p>//If it's not a directory, return</p>
+<p>if (!Files.isDirectory(Paths.get(dirPath)))</p>
+<p>return;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Loop over files within directory</p>
+<p>try (DirectoryStream&lt;Path&gt; stream</p>
+<p>= Files.newDirectoryStream(Paths.get(dirPath))) {</p>
+<p>for (Path entry : stream) {</p>
+<p>if (Files.isRegularFile(entry)) {</p>
+<p>String fileName = entry.getFileName().toString();</p>
+<p>insertNode(fileName, entry.toString());</p>
+<p>}</p>
+<div class="class_s1Z-9">
+<p>}</p>
+</div>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Loop over directories within directory</p>
+<p>try (DirectoryStream&lt;Path&gt; stream</p>
+<p>= Files.newDirectoryStream(Paths.get(dirPath))) {</p>
+<p>for (Path entry : stream) {</p>
+<p>if (Files.isDirectory(entry)) {</p>
+<p>//Recursive indexing</p>
+<p>indexDirectoryHelper(entry.toString());</p>
+<p>}</p>
+<p>}</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-3: FileIndexer.java</p>
+<p>We use the <span class="class_s5NW">java.nio.fil</span><span
+class="class_s5NX">e</span> package methods to check if a path exists
+and corresponds to a directory <span class="class_s5NV">(</span><span
+class="class_s5NW">Files.isDirector</span><span
+class="class_s5NX">y</span>). We then loop over all the files inside the
+directory, one by one, and we insert them in the tree as new nodes.</p>
+<p>Then, we loop over the directories and also index them
+recursively.</p>
+<p>Next, we define a method to recursively delete the nodes of the
+tree:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><div class="class_s1Z-8">
+<p>//Deallocate memory recursively</p>
+</div>
+<p>private void deleteSubtree(Node root) {</p>
+<p>if (root != null) {</p>
+<p>deleteSubtree(root.left);</p>
+<p>deleteSubtree(root.right);</p>
+<p>root = null;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-4: FileIndexer.java</p>
+<p>We perform this by setting the root of the subtree to null, so that
+the subtree will be removed by the garbage collector.</p>
+<p>Then, we have the directory traversal method (also recursive):</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>private void traverse(Node root) {</p>
+<p>if (root != null) {</p>
+<p>traverse(root.left);</p>
+<p>System.out.println(root.fileName + ": " + root.filePath);</p>
+<p>traverse(root.right);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-5: FileIndexer.java</p>
+<p>Now, we turn to the <span class="class_s5P0">public</span> interface
+provided by the<span class="class_s5NV"> </span><span
+class="class_s5NW">FileIndexe</span><span class="class_s5NX">r</span>
+class (note that all method until now were<span class="class_s5NV">
+</span><span class="class_s5NW">privat</span><span
+class="class_s5NX">e</span>).</p>
+<p>We define methods to index and print all the files in a directory.
+Those methods call the respective private helper methods:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void indexDirectory(String
+directoryPath) {</p>
+<p>root = null;</p>
+<p>indexDirectoryHelper(directoryPath);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public void printFiles() {</p>
+<p>System.out.println("Indexed files:");</p>
+<p>traverse(root);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-6: FileIndexer.java</p>
+<p>After the tree has been set up, we can call method <span
+class="class_s5NW">searchFileLocation(</span><span
+class="class_s5NX">)</span> to get the location of a file:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Search for a file in the BST</p>
+<p>public String searchFileLocation(String filename) {</p>
+<p>//Traverse the tree until a match is found or the tree is
+exhausted</p>
+<p>Node current = root;</p>
+<p>while (current != null) {</p>
+<p>if (filename.equals(current.fileName)) {</p>
+<p>return current.filePath; //File found</p>
+<p>} else if (filename.compareTo(current.fileName) &lt; 0) {</p>
+<p>current = current.left; //Search in the left subtree</p>
+<p>} else {</p>
+<p>current = current.right; //Search in the right subtree</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s1Z-7">
+<p>return ""; //File not found</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-7: FileIndexer.java</p>
+<p>We traverse the tree until we find a node with the specified file
+name. If the tree is exhausted, then we return null.</p>
+<p>Finally, here is the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.print("Path to index recursively: ");</p>
+<p>String path = scanner.nextLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>FileIndexer indexer = new FileIndexer();</p>
+<p>indexer.indexDirectory(path);</p>
+<p>indexer.printFiles();</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.print("Let's search for a file's location. Give the file
+name: ");</p>
+<p>String filenameToSearch = scanner.nextLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>String location = indexer.searchFileLocation(filenameToSearch);</p>
+<p>if (!location.isEmpty()) {</p>
+<p>System.out.println("File " + filenameToSearch</p>
+<p>+ " found. Location: " + location);</p>
+<p>} else {</p>
+<p>System.out.println("File " + filenameToSearch + " not found.");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-7">
+<p>scanner.close();</p>
+</div>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 11-8: FileIndexer.java</p>
+<p>Users can index the contents of a folder and then they can search for
+a specific filename.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/FileIndexer"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/FileIndexer</a></p>
+<p><span id="part0014.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">12.</span><span class="class_s5NT">
+</span><span id="part0014.xhtml_a5MB"></span><span
+class="class_s5NS">Inventory with AVL Tree</span></p>
+</div>
+<p>In this exercise, we will create an inventory program, that will
+store information about the company’s products in an AVL tree
+structure.</p>
+<h2 class="heading_sU-0" id="part0014.xhtml_id__798_29_">Proposed
+Solution</h2>
+<p>An <span class="class_s5P0">AVL (Adelson-Velsky and Landis)
+tree</span> is a <span class="class_s5P0">self-balancing</span> binary
+search tree structure. With the term <span
+class="class_s5P0">balanced</span>, we mean that both branches of the
+tree have the same depth or differ by one level at the most. To achieve
+this, a process called <span class="class_s5P0">rebalancing</span> is
+occasionally performed, that changes the tree structure in way that the
+tree is closer to be balanced.</p>
+<p>The AVL tree has almost the same structure as a simple binary search
+tree (BST); the difference lies in the rebalancing algorithm. Let’s see
+the structure:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Inventory;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.util.Random;</p>
+<div class="class_s21-0">
+
+</div>
+<p>class Product {</p>
+<p>public int id;</p>
+<p>public String name;</p>
+<p>public float price;</p>
+<p>public int quantity;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-12">
+<p>class InventoryNode {</p>
+</div>
+<p>public Product product;</p>
+<p>public InventoryNode left;</p>
+<p>public InventoryNode right;</p>
+<p>public int height;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-1: Inventory.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">InventoryNod</span><span class="class_s5NX">e</span>
+class contains a product object and two references to the tree’s
+branches. Most importantly, it also contains the<span
+class="class_s5NV"> </span><span class="class_s5NW">heigh</span><span
+class="class_s5NX">t</span> property, which is used to track the tree’s
+height.</p>
+<p>Next, we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">Inventor</span><span class="class_s5NX">y</span>
+class, which contains a reference that is the root of the AVL tree. We
+also define two internal methods of the tree:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>class Inventory {</p>
+<p>private InventoryNode root;</p>
+<div class="class_s21-0">
+
+</div>
+<p>private int getHeight(InventoryNode node) {</p>
+<p>return node == null ? 0 : node.height;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>private int getBalance(InventoryNode node) {</p>
+<p>return node == null ? 0 : getHeight(node.left) -
+getHeight(node.right);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-2: Inventory.java</p>
+<p>The former gives us the height of the tree, while the latter checks
+whether the tree is balanced or not.</p>
+<p>Afterwards, we add code for the creation of a new node in the
+tree:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Create a new node with the given product</p>
+<p>private InventoryNode newNode(Product product) {</p>
+<p>InventoryNode node = new InventoryNode();</p>
+<p>node.product = product;</p>
+<p>node.left = null;</p>
+<p>node.right = null;</p>
+<p>node.height = 1;</p>
+<p>return node;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-3: Inventory.java</p>
+<p>Note that the height of the node is set to 1.</p>
+<p>Next, we proceed with the definition of two methods for the rotation
+of the tree to the left or to the right:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Right rotate subtree</p>
+<p>private InventoryNode rotateRight(InventoryNode y) {</p>
+<p>InventoryNode x = y.left;</p>
+<p>InventoryNode T2 = x.right;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Perform rotation</p>
+<p>x.right = y;</p>
+<p>y.left = T2;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Update heights</p>
+<div class="class_s1Z-7">
+<p>y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;</p>
+</div>
+<p>x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Return new root</p>
+<p>return x;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Left rotate subtree</p>
+<p>private InventoryNode rotateLeft(InventoryNode x) {</p>
+<p>InventoryNode y = x.right;</p>
+<p>InventoryNode T2 = y.left;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Perform rotation</p>
+<p>y.left = x;</p>
+<p>x.right = T2;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Update heights</p>
+<p>x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;</p>
+<p>y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Return new root</p>
+<p>return y;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-4: Inventory.java</p>
+<p>Those two methods will be used when we will try to insert a new node
+into the tree:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><div class="class_s1Z-8">
+<p>//Insert a product in the AVL tree</p>
+</div>
+<p>private InventoryNode insertProduct(InventoryNode node, Product
+product) {</p>
+<p>if (node == null)</p>
+<p>return newNode(product);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Insert the product</p>
+<p>if (product.id &lt; node.product.id)</p>
+<p>node.left = insertProduct(node.left, product);</p>
+<p>else if (product.id &gt; node.product.id)</p>
+<p>node.right = insertProduct(node.right, product);</p>
+<p>else</p>
+<p>return node; //Duplicate IDs not allowed</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Update height of this node</p>
+<p>node.height = 1 + Math.max(getHeight(node.left),
+getHeight(node.right));</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Get balance factor</p>
+<p>int balance = getBalance(node);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Left Left Case</p>
+<p>if (balance &gt; 1 &amp;&amp; product.id &lt;
+node.left.product.id)</p>
+<p>return rotateRight(node);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Right Right Case</p>
+<p>if (balance &lt; -1 &amp;&amp; product.id &gt;
+node.right.product.id)</p>
+<p>return rotateLeft(node);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Left Right Case</p>
+<p>if (balance &gt; 1 &amp;&amp; product.id &gt; node.left.product.id)
+{</p>
+<p>node.left = rotateLeft(node.left);</p>
+<p>return rotateRight(node);</p>
+<div class="class_s1Z-7">
+<p>}</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>//Right Left Case</p>
+<p>if (balance &lt; -1 &amp;&amp; product.id &lt; node.right.product.id)
+{</p>
+<p>node.right = rotateRight(node.right);</p>
+<p>return rotateLeft(node);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>return node;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-5: Inventory.java</p>
+<p>The idea here is to check for the tree balance after inserting a new
+node to it. If the tree becomes unbalanced, then we will have to rotate
+it either to the left or to the right.</p>
+<p>Next, we present the methods to traverse the tree while printing its
+contents, as well as the code to search for a specific product in the
+tree:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>private void traverseTree(InventoryNode node)
+{</p>
+<p>if (node != null) {</p>
+<p>traverseTree(node.left);</p>
+<p>System.out.println("ID: " + node.product.id + ", " +</p>
+<p>"Name: " + node.product.name + ", " +</p>
+<p>"Price: " + node.product.price + ", " +</p>
+<p>"Quantity: " + node.product.quantity);</p>
+<p>traverseTree(node.right);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-8">
+<p>private InventoryNode searchProduct(InventoryNode node, int id) {</p>
+</div>
+<p>if (node == null || node.product.id == id) {</p>
+<p>if (node == null)</p>
+<p>System.out.println("Product not found.");</p>
+<p>else</p>
+<p>System.out.println("Found product: ID: " + node.product.id + ", "
++</p>
+<p>"Name: " + node.product.name + ", " +</p>
+<p>"Price: " + node.product.price + ", " +</p>
+<p>"Quantity: " + node.product.quantity);</p>
+<p>return node;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("Visited product ID: " + node.product.id);</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (id &lt; node.product.id)</p>
+<p>return searchProduct(node.left, id);</p>
+<p>else</p>
+<p>return searchProduct(node.right, id);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-6: Inventory.java</p>
+<p>Traversing the tree means visiting each node in the tree, and this is
+performed recursively, first for the left branch and then for the right
+branch.</p>
+<p>Searching for a product in the tree works in similar fashion: we
+visit a node, and we check the product’s ID. If it matches the search
+ID, then we print the product details, and the method returns.
+Otherwise, <span id="part0014.xhtml_page_88"></span>we visit the left or
+the right branch of the tree recursively, depending on the search
+ID.</p>
+<p>All the methods we have defined so far are private. We also define
+three public methods that will call those private methods:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void insertProduct(Product product)
+{</p>
+<p>root = insertProduct(root, product);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public void traverseTree() {</p>
+<p>traverseTree(root);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public InventoryNode searchProduct(int id) {</p>
+<p>return searchProduct(root, id);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-7: Inventory.java</p>
+<p>We use this convention because the respective private methods with
+the same name <span class="class_s5NV">(</span><span
+class="class_s5NW">insertProduc</span><span
+class="class_s5NX">t</span>,<span class="class_s5NV"> </span><span
+class="class_s5NW">traverseTre</span><span class="class_s5NX">e</span>
+and<span class="class_s5NV"> </span><span
+class="class_s5NW">searchProduc</span><span class="class_s5NX">t</span>)
+are called recursively. In this way, we provide a clean interface to
+programmers that will use our code.</p>
+<p>Finally, here is the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>Inventory inv = new Inventory();</p>
+<p>Product[] products = new Product[100];</p>
+<div class="class_s21-0">
+
+</div>
+<p>Random random = new Random();</p>
+<div class="class_s1Z-7">
+<p>//Initialize products with random values</p>
+</div>
+<p>for (int i = 0; i &lt; 100; i++) {</p>
+<p>products[i] = new Product();</p>
+<p>products[i].id = i + 1;</p>
+<p>products[i].name = "Product " + (i + 1);</p>
+<p>products[i].price = random.nextFloat() * 100.0f;</p>
+<p>products[i].quantity = random.nextInt(100) + 1;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Shuffle products array</p>
+<p>for (int i = 99; i &gt;= 0; i--) {</p>
+<p>int j = random.nextInt(i + 1);</p>
+<p>Product temp = products[i];</p>
+<p>products[i] = products[j];</p>
+<p>products[j] = temp;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Insert products into the inventory</p>
+<p>for (Product product : products) {</p>
+<p>inv.insertProduct(product);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Display all products in the inventory</p>
+<p>System.out.println("Inventory:");</p>
+<p>inv.traverseTree();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Search for a specific product</p>
+<p>int productIdToSearch = 35;</p>
+<p>InventoryNode foundProduct =
+inv.searchProduct(productIdToSearch);</p>
+<p>if (foundProduct != null) {</p>
+<p>System.out.println("Product found: ID: " + foundProduct.product.id +
+", " +</p>
+<div class="class_s1Z-13">
+<p>"Name: " + foundProduct.product.name + ", " +</p>
+</div>
+<p>"Price: " + foundProduct.product.price + ", " +</p>
+<p>"Quantity: " + foundProduct.product.quantity);</p>
+<p>} else {</p>
+<p>System.out.println("Product with ID " + productIdToSearch + " not
+found.");</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 12-8: Inventory.java</p>
+<p>We create 100 products with random quantities and prices and place
+them in an array. Then we shuffle the array in a random order.
+Afterwards, we insert the products into the AVL tree, and we print its
+contents.</p>
+<p>Finally, a search is performed for a specific product ID. During the
+search process we print the visited nodes to get an idea of how fast we
+will find the specific ID inside the AVL tree.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/Inventory"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/Inventory</a></p>
+<p><span id="part0015.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">13.</span><span class="class_s5NT">
+</span><span id="part0015.xhtml_a5MC"></span><span
+class="class_s5NS">Social Network</span></p>
+</div>
+<p>A social network is essentially a <span
+class="class_s5P0">graph</span> of nodes that depicts the users of the
+network along with their connections to their friends. In this exercise,
+we will create such a graph and we will implement the functionality to
+recommend new friends according to a user’s current connections.</p>
+<h2 class="heading_sU-0" id="part0015.xhtml_id__798_30_">Proposed
+Solution</h2>
+<p>There are various ways to implement the users’ graph, for example
+using <span class="class_s5P0">sparse two-dimensional matrices</span>.
+Here we will construct the graph with the use of a <span
+class="class_s5P0">one-dimensional array</span> of users, where the
+connections are stored in a linked list:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package SocialNetwork;</p>
+<div class="class_s21-0">
+
+</div>
+<p>class FriendNode {</p>
+<p>public String name;</p>
+<p>public FriendNode next;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public FriendNode(String name) {</p>
+<p>this.name = name;</p>
+<p>this.next = null;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>class User {</p>
+<p>public String name;</p>
+<div class="class_s1Z-8">
+<p>public FriendNode friends;</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>public User(String name) {</p>
+<p>this.name = name;</p>
+<p>this.friends = null;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 13-1: SocialNetwork.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">Use</span><span class="class_s5NX">r</span> class
+contains the name of the user as well as a linked list of the user’s
+friends.</p>
+<p>Next, we define a <span class="class_s5P0">queue</span> class that
+will be used by the friend recommendation algorithm. For learning
+purposes, we will make our own queue instead of using the one from<span
+class="class_s5NV"> </span><span class="class_s5NW">java.uti</span><span
+class="class_s5NX">l</span> package:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>class MyQueue {</p>
+<p>private class QueueNode {</p>
+<p>public int userIndex;</p>
+<p>public QueueNode next;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public QueueNode(int userIndex) {</p>
+<p>this.userIndex = userIndex;</p>
+<p>this.next = null;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>private QueueNode front;</p>
+<p>private QueueNode rear;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public MyQueue() {</p>
+<div class="class_s1Z-7">
+<p>front = rear = null;</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public boolean isEmpty() {</p>
+<p>return front == null;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public void enqueue(int userIndex) {</p>
+<p>QueueNode newNode = new QueueNode(userIndex);</p>
+<p>if (isEmpty()) {</p>
+<p>front = rear = newNode;</p>
+<p>} else {</p>
+<p>rear.next = newNode;</p>
+<p>rear = newNode;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public int dequeue() {</p>
+<p>if (isEmpty()) {</p>
+<p>System.out.println("Queue is empty!");</p>
+<p>return -1;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>int userIndex = front.userIndex;</p>
+<p>front = front.next;</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (front == null) {</p>
+<p>rear = null;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>return userIndex;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 13-2: SocialNetwork.java</p>
+<p>The queue contains the indexes of the users, as they will appear
+inside the users’ array (see below in the<span class="class_s5NV">
+</span><span class="class_s5NW">Grap</span><span
+class="class_s5NX">h</span> class). We define the class for the queue
+nodes, and methods to enqueue and dequeue user indexes inside the queue,
+as well as to check whether it is empty or not.</p>
+<p>Now, let’s see how we will insert users into the graph and how we
+will define the connections with their friends. We define the<span
+class="class_s5NV"> </span><span class="class_s5NW">Grap</span><span
+class="class_s5NX">h</span> class, that essentially contains an array of
+all the users of the social network:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>class Graph {</p>
+<p>private static final int MAX_USERS = 100;</p>
+<p>private User[] users;</p>
+<p>private int numUsers;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Graph() {</p>
+<p>users = new User[MAX_USERS];</p>
+<p>numUsers = 0;</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 13-3: SocialNetwork.java</p>
+<p>Next, we provide the functionality to add a new user to the
+graph:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void addUser(String name) {</p>
+<div class="class_s1Z-7">
+<p>if (numUsers &gt;= MAX_USERS) {</p>
+</div>
+<p>System.out.println("Max user limit reached!");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>users[numUsers] = new User(name);</p>
+<p>numUsers++;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 13-4: SocialNetwork.java</p>
+<p>We use the following method to add a new connection to a user:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void addConnection(int src, int dest)
+{</p>
+<p>if (src &lt; 0 || src &gt;= numUsers || dest &lt; 0 || dest &gt;=
+numUsers) {</p>
+<p>System.out.println("Invalid user index!");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Add bidirectional connection</p>
+<p>FriendNode newFriendSrc = new FriendNode(users[dest].name);</p>
+<p>newFriendSrc.next = users[src].friends;</p>
+<p>users[src].friends = newFriendSrc;</p>
+<div class="class_s21-0">
+
+</div>
+<p>FriendNode newFriendDest = new FriendNode(users[src].name);</p>
+<p>newFriendDest.next = users[dest].friends;</p>
+<p>users[dest].friends = newFriendDest;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 13-5: SocialNetwork.java</p>
+<p>Note that when we add a new connection, we make it bidirectional.
+That is, we insert a friend node for each one of the connection’s
+ends.</p>
+<p>Next, we proceed to the more interesting stuff, the recommender
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public void recommendFriends(int userIndex)
+{</p>
+<p>System.out.println("Recommended friends for " + users[userIndex].name
++ ":");</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Store the indexes of the user’s friends</p>
+<p>MyQueue queue = new MyQueue();</p>
+<p>//Store the persons that we have already visited</p>
+<p>boolean[] visited = new boolean[MAX_USERS];</p>
+<div class="class_s21-0">
+
+</div>
+<p>visited[userIndex] = true;</p>
+<p>//Enqueue the starting user</p>
+<p>queue.enqueue(userIndex);</p>
+<div class="class_s21-0">
+
+</div>
+<p>while (!queue.isEmpty()) {</p>
+<p>int currentUserIndex = queue.dequeue();</p>
+<p>FriendNode current = users[currentUserIndex].friends;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Traverse the user's friends</p>
+<p>while (current != null) {</p>
+<p>int friendIndex = -1;</p>
+<p>//Find the friend's index</p>
+<p>for (int i = 0; i &lt; numUsers; i++) {</p>
+<p>if (current.name.equals(users[i].name)) {</p>
+<p>friendIndex = i;</p>
+<p>break;</p>
+<div class="class_s1Z-13">
+<p>}</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Check if the friend is already visited</p>
+<p>if (friendIndex != -1 &amp;&amp; !visited[friendIndex]) {</p>
+<p>System.out.println("- " + current.name);</p>
+<p>//Add friend to visited array</p>
+<p>visited[friendIndex] = true;</p>
+<p>//Enqueue friend</p>
+<p>queue.enqueue(friendIndex);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Move to the next friend</p>
+<p>current = current.next;</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 13-6: SocialNetwork.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">recommendFriends(</span><span
+class="class_s5NX">)</span> method uses <span
+class="class_s5P0">breadth-first search (BFS)</span> to traverse the
+social network graph, starting from the specified user and visiting all
+connected users to recommend friends. It marks users as visited (using
+the<span class="class_s5NV"> </span><span
+class="class_s5NW">visited[</span><span class="class_s5NX">]</span>
+array) to avoid recommending the same friend multiple times and enqueues
+each friend to ensure all potential friends are discovered and
+recommended.</p>
+<p>The BFS algorithm makes use of a queue, where we store the indexes of
+the user’s friends as we follow the <span
+id="part0015.xhtml_page_98"></span>linked list. We then use the queue to
+get the friends of the user’s friends, and in this way, we are able to
+travel through the connections of the graph and find all the connected
+people to the specific user.</p>
+<p>Finally, here is the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public class SocialNetwork {</p>
+<p>public static void main(String[] args) {</p>
+<p>Graph graph = new Graph();</p>
+<p>graph.addUser("User A");</p>
+<p>graph.addUser("User B");</p>
+<p>graph.addUser("User C");</p>
+<p>graph.addUser("User D");</p>
+<p>graph.addUser("User E");</p>
+<p>graph.addUser("User F");</p>
+<p>graph.addUser("User G");</p>
+<p>graph.addUser("User H");</p>
+<div class="class_s21-0">
+
+</div>
+<p>graph.addConnection(0, 1);</p>
+<p>graph.addConnection(1, 2);</p>
+<p>graph.addConnection(2, 3);</p>
+<p>graph.addConnection(4, 5);</p>
+<p>graph.addConnection(5, 7);</p>
+<p>graph.addConnection(3, 6);</p>
+<div class="class_s21-0">
+
+</div>
+<p>graph.recommendFriends(0);</p>
+<p>graph.recommendFriends(1);</p>
+<p>graph.recommendFriends(7);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 13-7: SocialNetwork.java</p>
+<p>In<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>, we add
+users to the graph and we enter their friend connections. Then we run
+the algorithm to get friend recommendations.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/SocialNetwork"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/SocialNetwork</a></p>
+<p><span id="part0016.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">14.</span><span class="class_s5NT">
+</span><span id="part0016.xhtml_a5MD"></span><span
+class="class_s5NS">Flights</span></p>
+</div>
+<p>Let’s create a console application that will maintain a list of
+flights between cities and that will find the best combination of
+flights in terms of ticket cost.</p>
+<h2 class="heading_sU-0" id="part0016.xhtml_id__798_31_">Proposed
+Solution</h2>
+<p>This problem involves creating a graph between the cities. This graph
+will be weighted, with the cost of the respective ticket. We will use
+<span class="class_s5P0">Dijkstra’s algorithm</span> to find the
+cheapest path between two of those cities.</p>
+<p>First, we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">Cit</span><span class="class_s5NX">y</span> class
+that will store a map of the connected cities and the respective
+costs:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package Flights;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.util.*;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class Flights {</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Structure to represent each city</p>
+<p>public static class City {</p>
+<p>public String name;</p>
+<p>public Map&lt;String, Integer&gt; flights;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public City(String name) {</p>
+<p>this.name = name;</p>
+<p>this.flights = new HashMap&lt;&gt;();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-8">
+<p>...</p>
+</div>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-1: Flights.java</p>
+<p>Next, we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">FlightGrap</span><span class="class_s5NX">h</span>
+class:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Graph class to represent all cities and
+flights</p>
+<p>public static class FlightGraph {</p>
+<p>//Map of city names and their objects</p>
+<p>public Map&lt;String, City&gt; cities = new HashMap&lt;&gt;();</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-2: Flights.java</p>
+<p>This class contains all the cities objects in a map along with their
+names. We can add cities and flights to our graph with the following
+methods:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Add a city to the graph</p>
+<p>public void addCity(String name) {</p>
+<p>cities.put(name, new City(name));</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Add a flight between two cities and its cost</p>
+<p>public void addFlight(String src, String dest, int cost) {</p>
+<p>//Assuming flights are bidirectional</p>
+<p>cities.get(src).flights.put(dest, cost);</p>
+<p>cities.get(dest).flights.put(src, cost);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-3: Flights.java</p>
+<p>Note that we assume that flights are bidirectional, and that they
+have the same price in both directions.</p>
+<p>Next, we calculate the cheapest route between two cities using
+Dijkstra’s algorithm:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Function to find the cheapest route between
+two cities</p>
+<p>//using Dijkstra's algorithm</p>
+<p>public List&lt;String&gt; findCheapestRoute(String src, String
+dest,</p>
+<p>Map&lt;String, Integer&gt; dist) {</p>
+<p>//Initialize the distance map and previous node map</p>
+<p>dist.clear();</p>
+<p>Map&lt;String, String&gt; prev = new HashMap&lt;&gt;();</p>
+<p>PriorityQueue&lt;Map.Entry&lt;String, Integer&gt;&gt; pq</p>
+<p>= new PriorityQueue&lt;&gt;(Map.Entry.comparingByValue());</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Set all distances to infinity initially</p>
+<p>for (String city : cities.keySet()) {</p>
+<p>dist.put(city, Integer.MAX_VALUE);</p>
+<p>prev.put(city, null);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Distance to the source is 0</p>
+<p>dist.put(src, 0);</p>
+<p>pq.offer(new AbstractMap.SimpleEntry&lt;&gt;(src, 0));</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Main loop to process each node</p>
+<p>while (!pq.isEmpty()) {</p>
+<p>Map.Entry&lt;String, Integer&gt; entry = pq.poll();</p>
+<p>String u = entry.getKey();</p>
+<p>int uDist = entry.getValue();</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-10">
+<p>//Process each neighbor of the current node</p>
+</div>
+<p>for (Map.Entry&lt;String, Integer&gt; flight :
+cities.get(u).flights.entrySet()) {</p>
+<p>String v = flight.getKey();</p>
+<p>int cost = flight.getValue();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//If a shorter path to v is found</p>
+<p>if (dist.get(u) != Integer.MAX_VALUE &amp;&amp; dist.get(u) + cost
+&lt; dist.get(v)) {</p>
+<p>dist.put(v, dist.get(u) + cost);</p>
+<p>prev.put(v, u);</p>
+<p>pq.offer(new AbstractMap.SimpleEntry&lt;&gt;(v, dist.get(v)));</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Reconstructing the path from source to destination</p>
+<p>List&lt;String&gt; path = new ArrayList&lt;&gt;();</p>
+<p>for (String at = dest; at != null; at = prev.get(at)) {</p>
+<p>path.add(at);</p>
+<p>}</p>
+<p>Collections.reverse(path);</p>
+<div class="class_s21-0">
+
+</div>
+<p>return path;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-4: Flights.java</p>
+<p>Initially, we initialize a dictionary to store the distances from the
+source city to every other city, marking the source city's distance as 0
+and all <span id="part0016.xhtml_page_104"></span>other cities as <span
+class="class_s5P0">infinity</span>. We use a priority queue to process
+cities based on their distance from the source, dequeuing the city with
+the shortest distance first.</p>
+<p>For each dequeued city, we examine its neighboring cities, updating
+their distances if a shorter path through the current city is found.
+This process continues until all cities are visited or until the
+destination city is reached.</p>
+<p>Upon completion, we reconstruct the shortest path from the source to
+the destination using the information stored in the previous node map,
+facilitating the determination of the total price of the route.</p>
+<p>To avoid getting stuck in loops during the graph traversal, we keep
+track of the cities visited in the current path <span
+class="class_s5NV">(</span><span class="class_s5NW">dis</span><span
+class="class_s5NX">t</span> map). If a city has already been visited in
+the current path, we skip exploring flights from that city to prevent
+loops.</p>
+<p>We can calculate and print all the possible flights between two
+cities using <span class="class_s5P0">Depth-First Search
+(DFS)</span>:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Display all possible flights between two
+cities using DFS</p>
+<p>public void displayAllFlights(String src, String dest) {</p>
+<p>if (!cities.containsKey(src) || !cities.containsKey(dest)) {</p>
+<p>System.out.println("Invalid cities entered.");</p>
+<p>return;</p>
+<div class="class_s1Z-9">
+<p>}</p>
+</div>
+<div class="class_s21-0">
+
+</div>
+<p>Set&lt;String&gt; visited = new HashSet&lt;&gt;();</p>
+<p>Stack&lt;String&gt; path = new Stack&lt;&gt;();</p>
+<p>path.push(src);</p>
+<p>dfs(src, dest, visited, path);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-5: Flights.java</p>
+<p>We see that method<span class="class_s5NV"> </span><span
+class="class_s5NW">displayAllFlights(</span><span
+class="class_s5NX">)</span> calls the recursive<span class="class_s5NV">
+</span><span class="class_s5NW">dfs(</span><span
+class="class_s5NX">)</span> method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Recursive DFS function to find all flights
+between source and destination</p>
+<p>private void dfs(String src, String dest, Set&lt;String&gt;
+visited,</p>
+<p>Stack&lt;String&gt; path) {</p>
+<p>visited.add(src);</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (src.equals(dest)) {</p>
+<p>printPath(path);</p>
+<p>} else {</p>
+<p>for (String flight : cities.get(src).flights.keySet()) {</p>
+<p>if (!visited.contains(flight)) {</p>
+<p>path.push(flight);</p>
+<p>dfs(flight, dest, visited, path);</p>
+<p>path.pop();</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>visited.remove(src);</p>
+<div class="class_s1Z-7">
+<p>}</p>
+</div>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-6: Flights.java</p>
+<p>The<span class="class_s5NV"> </span><span
+class="class_s5NW">dfs(</span><span class="class_s5NX">)</span> method
+in the<span class="class_s5NV"> </span><span
+class="class_s5NW">FlightGrap</span><span class="class_s5NX">h</span>
+class implements <span class="class_s5P0">Depth-First Search
+(DFS)</span> recursively to find all possible flights between a source
+and a destination city within a flight network.</p>
+<p>It begins by marking the current city as visited and checks if it
+matches the destination city. If the destination is reached, it prints
+the current path. Otherwise, it explores all neighboring cities not yet
+visited by recursively calling itself for each neighbor.</p>
+<p>During exploration, it pushes the neighboring city onto the<span
+class="class_s5NV"> </span><span class="class_s5NW">pat</span><span
+class="class_s5NX">h</span> stack and continues the search until all
+possible paths from the current city are explored or until the
+destination is reached.</p>
+<p>Upon backtracking, it removes the current city from the<span
+class="class_s5NV"> </span><span class="class_s5NW">pat</span><span
+class="class_s5NX">h</span> stack and marks it as unvisited, allowing
+exploration of alternative paths. This process is repeated until all
+cities in the network are explored.</p>
+<p>We use the aforementioned stack to print the final path in<span
+class="class_s5NV"> </span><span
+class="class_s5NW">PrintPath(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Helper function to print a path (stack
+content)</p>
+<p>private void printPath(Stack&lt;String&gt; path) {</p>
+<p>System.out.println(String.join(" -&gt; ", path));</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-7: Flights.java</p>
+<p>Finally in<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>, we add
+cities and flights to the graph and we ask the user to select a pair of
+cities to calculate the best (cheapest) combination of flights:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>Scanner scanner = new Scanner(System.in);</p>
+<p>FlightGraph graph = new FlightGraph();</p>
+<div class="class_s21-0">
+
+</div>
+<p>graph.addCity("London");</p>
+<p>graph.addCity("Paris");</p>
+<p>graph.addCity("Berlin");</p>
+<p>graph.addCity("Rome");</p>
+<p>graph.addCity("Madrid");</p>
+<p>graph.addCity("Amsterdam");</p>
+<div class="class_s21-0">
+
+</div>
+<p>graph.addFlight("London", "Paris", 100);</p>
+<p>graph.addFlight("London", "Berlin", 150);</p>
+<p>graph.addFlight("London", "Madrid", 200);</p>
+<p>graph.addFlight("Paris", "Berlin", 120);</p>
+<p>graph.addFlight("Paris", "Rome", 180);</p>
+<p>graph.addFlight("Berlin", "Rome", 220);</p>
+<p>graph.addFlight("Madrid", "Rome", 250);</p>
+<p>graph.addFlight("Madrid", "Amsterdam", 170);</p>
+<p>graph.addFlight("Amsterdam", "Berlin", 130);</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.print("Enter departure city: ");</p>
+<p>String departure = scanner.nextLine();</p>
+<p>System.out.print("Enter destination city: ");</p>
+<p>String destination = scanner.nextLine();</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-7">
+<p>//Display all possible flights</p>
+</div>
+<p>System.out.println("All possible flights between " + departure</p>
+<p>+ " and " + destination + ":");</p>
+<p>graph.displayAllFlights(departure, destination);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Find the cheapest route and total price</p>
+<p>Map&lt;String, Integer&gt; dist = new HashMap&lt;&gt;();</p>
+<p>List&lt;String&gt; route = graph.findCheapestRoute(departure,
+destination, dist);</p>
+<p>int totalPrice = dist.get(destination);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Display the cheapest route and total price</p>
+<p>System.out.print("Cheapest Route: ");</p>
+<p>System.out.println(String.join(" -&gt; ", route));</p>
+<p>System.out.println("Total Price: " + totalPrice);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 14-8: Flights.java</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/Flights"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/Flights</a></p>
+<p><span id="part0017.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">15.</span><span class="class_s5NT">
+</span><span id="part0017.xhtml_a5ME"></span><span
+class="class_s5NS">MNIST Image Comparison</span></p>
+</div>
+<p>In this exercise, we will play with handwriting images from the MNIST
+database.</p>
+<h2 class="heading_sU-0" id="part0017.xhtml_id__798_32_">Proposed
+Solution</h2>
+<p>The MNIST database (<a href="http://yann.lecun.com/exdb/mnist/"
+class="class_s5NY-1">http://yann.lecun.com/exdb/mnist/</a> ) is a set of
+images depicting handwritten digits. The images are of 28x28 dimension
+and are typically used when studying pattern recognition and machine
+learning techniques.</p>
+<div class="class_s4BB-0">
+<img src="image_rsrc5RN.jpg" class="class_s4BB-1"
+alt="MNIST sample images" />
+</div>
+<p>Source: Wikipedia</p>
+<p>We will download the following file and we will unzip it in our
+project’s directory:</p>
+<p><a href="http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz"
+class="class_s5NY-0">http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz</a></p>
+<p>We will also rename it as <span
+class="class_s5P0">input.dat</span>.</p>
+<p>The first 15 bytes of this file, contain metadata about the images,
+i.e. the number of the images and their dimensions. Therefore, we will
+start reading from the 16th byte in steps of 28x28=784 bytes.</p>
+<p>First, we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">Imag</span><span class="class_s5NX">e</span> class
+that will store the image data in an array of<span class="class_s5NV">
+</span><span class="class_s5NW">byt</span><span
+class="class_s5NX">e</span>:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package MNISTImages;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.io.*;</p>
+<p>import java.util.ArrayList;</p>
+<p>import java.util.List;</p>
+<p>import java.util.Random;</p>
+<div class="class_s21-0">
+
+</div>
+<p>class Image {</p>
+<p>public byte[] data;</p>
+<p>public int id;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Image(byte[] data, int id) {</p>
+<p>this.data = new byte[data.length];</p>
+<p>System.arraycopy(data, 0, this.data, 0, data.length);</p>
+<p>this.id = id;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public void print() {</p>
+<div class="class_s1Z-7">
+<p>for (int i = 0; i &lt; data.length; i++) {</p>
+</div>
+<p>if (data[i] == 0)</p>
+<p>System.out.print(" ");</p>
+<p>else</p>
+<p>System.out.print("*");</p>
+<p>if ((i + 1) % 28 == 0)</p>
+<p>System.out.println();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public double euclideanDistance(Image img) {</p>
+<p>double distance = 0.0;</p>
+<p>for (int i = 0; i &lt; data.length; i++) {</p>
+<p>distance += Math.sqrt(Math.pow((data[i] - img.data[i]), 2));</p>
+<p>}</p>
+<p>return Math.sqrt(distance);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 15-1: MNISTImages.java</p>
+<p>Inside the class, we implement the<span class="class_s5NV">
+</span><span class="class_s5NW">Imag</span><span
+class="class_s5NX">e</span> constructor and a method that prints the
+image as a series of asterisks.</p>
+<p>We also implement the method that will calculate the <span
+class="class_s5P0">Euclidean distance</span> between two images, the
+current image and another one passed as method parameter. We are
+essentially calculating the sum of the differences between the
+respective bytes of two images. If the images are similar in content,
+then the <span id="part0017.xhtml_page_112"></span>distance will be
+minimized. Conversely, the distance will be higher, for images that have
+significant differences.</p>
+<p>Now, let’s see the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public class MNISTImages {</p>
+<p>static final int ImageSize = 784;</p>
+<p>static final int MetaDataSize = 15;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public static void main(String[] args) {</p>
+<p>List&lt;Image&gt; images = new ArrayList&lt;&gt;();</p>
+<div class="class_s21-0">
+
+</div>
+<p>try (FileInputStream ifs = new FileInputStream("input.dat")) {</p>
+<p>//Skip the metadata at the beginning of the file</p>
+<p>ifs.skip(MetaDataSize);</p>
+<div class="class_s21-0">
+
+</div>
+<p>byte[] pixels = new byte[ImageSize];</p>
+<p>int count = 0;</p>
+<p>//Read data from the file and insert images into the list</p>
+<p>while (ifs.read(pixels) &gt; 0) {</p>
+<p>images.add(new Image(pixels, count++));</p>
+<p>}</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("Total images: " + (images.size() - 1));</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Example: Find the closest image to a randomly selected image</p>
+<div class="class_s1Z-7">
+<p>//Seed the random number generator</p>
+</div>
+<p>Random rand = new Random();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Generate a random index within the range of the list length</p>
+<p>int randomIndex = rand.nextInt(images.size());</p>
+<p>System.out.println("Random index: " + randomIndex);</p>
+<div class="class_s21-0">
+
+</div>
+<p>Image randomImage = images.get(randomIndex);</p>
+<p>randomImage.print();</p>
+<div class="class_s21-0">
+
+</div>
+<p>Image closestImage = null;</p>
+<p>double minDistance = Double.POSITIVE_INFINITY;</p>
+<p>int minIndex = 0;</p>
+<div class="class_s21-0">
+
+</div>
+<p>for (int i = 0; i &lt; images.size(); i++) {</p>
+<p>double distance = randomImage.euclideanDistance(images.get(i));</p>
+<p>if (distance != 0 &amp;&amp; distance &lt; minDistance) {</p>
+<p>minDistance = distance;</p>
+<p>minIndex = i;</p>
+<p>closestImage = images.get(i);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Output the label of the closest image</p>
+<p>System.out.println("\nClosest image (distance=" + minDistance +</p>
+<p>", index = " + minIndex + ")\n");</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Print closest image</p>
+<p>closestImage.print();</p>
+<p>}</p>
+<div class="class_s1Z-12">
+<p>}</p>
+</div>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 15-2: MNISTImages.java</p>
+<p>We use an <span class="class_s5NW">ArrayLis</span><span
+class="class_s5NX">t</span> object to store the image references. After
+we open the <span class="class_s5P0">input.dat</span> binary file, we
+skip the first 15 bytes with<span class="class_s5NV"> </span><span
+class="class_s5NW">skip(</span><span class="class_s5NX">)</span>. Then,
+in a loop, we read one image at a time (784 bytes) with<span
+class="class_s5NV"> </span><span class="class_s5NW">read(</span><span
+class="class_s5NX">)</span> into a buffer and we copy them to the
+respective<span class="class_s5NV"> </span><span
+class="class_s5NW">Imag</span><span class="class_s5NX">e</span> object
+into the list.</p>
+<p>Afterwards, we get a randomly selected image from the list, and we
+print it using empty space where the byte is zero and an asterisk (‘*’)
+in places where the image bytes are non-zero. This way, we can get an
+idea of the handwriting digit that was chosen:</p>
+<div id="part0017.xhtml_page_115" class="class_s4HC-0">
+<img src="image_rsrc5RP.jpg" class="class_s4HC-1" />
+</div>
+<p>After printing the selected image, we iterate the images list, and we
+calculate the Euclidian distance between the randomly selected image and
+the currently selected image from the list. We maintain the minimum
+distance encountered and the corresponding image along with its ID.</p>
+<p>At the end, we print the closest image that we got; it seems that the
+algorithm is working fine.</p>
+<div id="part0017.xhtml_page_116" class="class_s4HC-0">
+<img src="image_rsrc5RR.jpg" class="class_s4HC-1" />
+</div>
+<p>As a final note, this algorithm will take a lot of time to get the
+closest image, as it is checking all the images, one by one. There are
+other algorithms that will make this operation faster, albeit, with a
+loss of precision.</p>
+<p>One such example is the Locality-Sensitive Hashing<span
+id="part0017.xhtml_a5PN"></span><a href="#part0019.xhtml_a5PC"
+class="class_s5PB noteref">[2]</a> (LSH) algorithm, a technique used for
+approximate nearest neighbor search in high-dimensional spaces. LSH is
+particularly useful when dealing with large datasets where traditional
+exact nearest neighbor search methods become computationally
+expensive.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/MNISTImages"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/MNISTImages</a></p>
+<p><span id="part0018.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">16.</span><span class="class_s5NT">
+</span><span id="part0018.xhtml_a5MF"></span><span
+class="class_s5NS">HTTP Server with Caching</span></p>
+</div>
+<p>In this exercise, we will create a simple HTTP server that will serve
+static content (only HTML files). The web server will make use of a
+cache mechanism that will keep the most recently served content, in
+order to boost the server’s performance.</p>
+<h2 class="heading_sU-0" id="part0018.xhtml_id__798_33_">Proposed
+Solution</h2>
+<p>The web server cache is a structure that stores the content that was
+previously sent to the client browser. The cache has limited space, so
+when it is filled up, we will need to empty the <span
+class="class_s5P0">least recently used</span> <span
+class="class_s5P0">(LRU)</span> entry in order to make space for the new
+entry. Moreover, when an entry is used by the server to send content to
+the client, then this entry is moved to the head of the list, as it is
+the more recently used entry.</p>
+<p>Let’s see the cache definition:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package WebServerCache;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class LRUCache {</p>
+<p>static final int CACHE_SIZE = 3;</p>
+<p>Node head;</p>
+<p>Node tail;</p>
+<p>int size;</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-8">
+<p>static class Node {</p>
+</div>
+<p>String url;</p>
+<p>String content;</p>
+<p>Node prev;</p>
+<p>Node next;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public LRUCache() {</p>
+<p>size = 0;</p>
+<p>head = null;</p>
+<p>tail = null;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-1: LRUCache.java</p>
+<p>The cache is implemented as a <span class="class_s5P0">doubly linked
+list</span>. In this kind of linked list, we can move to both
+directions, forward and backward. The doubly linked list is beneficial
+in our case as we can efficiently remove and insert nodes anywhere in
+the list without needing to traverse the list from the beginning. The
+same effect could be achieved with simple linked lists, or even arrays,
+but with lower performance.</p>
+<p>Let’s skip the rest of the cache definition for now, and jump to
+the<span class="class_s5NV"> </span><span
+class="class_s5NW">main(</span><span class="class_s5NX">)</span> method
+of our program:</p>
+<table class="class_s4M6">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>HttpServer server = new HttpServer();</p>
+<div class="class_s1Z-7">
+<p>try {</p>
+</div>
+<p>server.start();</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-2: WebServerCache.java</p>
+<p>Here, we create an object of the<span class="class_s5NV">
+</span><span class="class_s5NW">HttpServe</span><span
+class="class_s5NX">r</span> class, that will handle the connections with
+the clients. Let’s see how it is implemented:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package WebServerCache;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.io.*;</p>
+<p>import java.net.*;</p>
+<p>import java.nio.charset.StandardCharsets;</p>
+<p>import java.nio.file.Files;</p>
+<div class="class_s21-0">
+
+</div>
+<p>class HttpServer {</p>
+<p>static final int PORT = 8080;</p>
+<p>static final int MAX_REQUEST_SIZE = 1024;</p>
+<p>LRUCache cache;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public HttpServer() {</p>
+<p>cache = new LRUCache();</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public void start() throws IOException {</p>
+<p>//Open server socket</p>
+<p>ServerSocket server = new ServerSocket(PORT);</p>
+<p>System.out.println("Server started on port " + PORT);</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-7">
+<p>while (true) {</p>
+</div>
+<p>//Wait for connections</p>
+<p>Socket client = server.accept();</p>
+<p>handleRequest(client);</p>
+<p>client.close();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>void handleRequest(Socket client) throws IOException {</p>
+<p>//Read request</p>
+<p>InputStream inputStream = client.getInputStream();</p>
+<p>byte[] buffer = new byte[MAX_REQUEST_SIZE];</p>
+<p>int bytesRead = inputStream.read(buffer);</p>
+<p>String request = new String(buffer, 0, bytesRead,
+StandardCharsets.UTF_8);</p>
+<p>System.out.println("Received request: " + request);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Find request type (GET)</p>
+<p>String[] parts = request.split(" ");</p>
+<p>if (parts.length &lt; 2 || !parts[0].equals("GET")) {</p>
+<p>System.out.println("Invalid request format.");</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Get request url and check whether it is already stored in the
+cache</p>
+<p>String url = parts[1];</p>
+<p>String content = cache.getContent(url);</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (content.isEmpty()) {</p>
+<p>//If not found in cache, read it from the HTML file</p>
+<p>try {</p>
+<div class="class_s1Z-10">
+<p>content = new String(Files.readAllBytes(new
+File(url.substring(1)).toPath()),</p>
+</div>
+<p>StandardCharsets.UTF_8);</p>
+<p>System.out.println("Got content from file: " + content);</p>
+<p>cache.putContent(url, content);</p>
+<p>} catch (FileNotFoundException e) {</p>
+<p>System.out.println("File not found: " + url.substring(1));</p>
+<p>content = "HTTP/1.1 404 Not Found\r\n\r\n";</p>
+<p>} catch (IOException e) {</p>
+<p>System.out.println("File not found: " + url.substring(1));</p>
+<p>content = "HTTP/1.1 404 Not Found\r\n\r\n";</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>} else {</p>
+<p>System.out.println("Serving content from cache.");</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Check if the content is HTML or plain text</p>
+<p>String contentType = "text/plain"; //Default content type is plain
+text</p>
+<p>if (url.endsWith(".html") || url.endsWith(".htm")) {</p>
+<p>//If the URL ends with .html or .htm, it's HTML content</p>
+<p>contentType = "text/html";</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Build the response</p>
+<p>String response = "HTTP/1.1 200 OK\r\nContent-Type: "</p>
+<p>+ contentType + "\r\n\r\n" + content;</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-7">
+<p>byte[] responseBytes = response.getBytes(StandardCharsets.UTF_8);</p>
+</div>
+<p>OutputStream outputStream = client.getOutputStream();</p>
+<p>outputStream.write(responseBytes);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-3: WebServerCache.java</p>
+<p>Here we create a<span class="class_s5NV"> </span><span
+class="class_s5NW">ServerSocke</span><span class="class_s5NX">t</span>
+object that continuously accepts HTTP connections from web browsers at
+port 8080. When a connection is accepted, then the <span
+class="class_s5NW">handleRequest(</span><span
+class="class_s5NX">)</span> method is called.</p>
+<p>Initially, the web request stream is received into the<span
+class="class_s5NV"> </span><span class="class_s5NW">buffe</span><span
+class="class_s5NX">r</span> byte array. Then we create a string object
+that will contain the request. The string is split in order to retrieve
+the request type and the URL; only GET requests are handled by our
+server.</p>
+<p>We then use the request URL to search in the cache for a previously
+stored response for this URL. If such an entry is not found in the
+cache, then we open the requested HTML file (The HTML files are stored
+in the same folder as our executable), and we transmit its HTML content
+in the response. Note that, before sending the content, we must send the
+header of the response:</p>
+<p>HTTP/1.1 200 OK\nContent-Type: text/html</p>
+<p>If the URL is found in the cache, then we get the content from there
+and we send it with the response.</p>
+<p>Let’s see how we do this, in method<span class="class_s5NV">
+</span><span class="class_s5NW">getContent(</span><span
+class="class_s5NX">)</span> from the<span class="class_s5NV">
+</span><span class="class_s5NW">LRUCach</span><span
+class="class_s5NX">e</span> class:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Get the content associated with a URL from
+the cache</p>
+<p>public String getContent(String url) {</p>
+<p>Node current = head;</p>
+<p>while (current != null) {</p>
+<p>if (current.url.equals(url)) {</p>
+<p>moveToHead(current);</p>
+<p>System.out.println("Got content from cache: " + current.content);</p>
+<p>return current.content;</p>
+<p>}</p>
+<p>current = current.next;</p>
+<p>}</p>
+<p>return "";</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-4: LRUCache.java</p>
+<p>We start from the head of the list, and we search for the URL in the
+cache’s nodes. If we find the URL, then we move the node to the head of
+the cache (the <span class="class_s5P0">most recently used entry</span>)
+and we return the stored HTML content. The method returns an empty
+string if the URL is not found in the cache.</p>
+<p>When a page is read from its file, then we store its content into the
+cache, with<span class="class_s5NV"> </span><span
+class="class_s5NW">putContent(</span><span
+class="class_s5NX">)</span>:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><div class="class_s1Z-8">
+<p>//Put a URL-content pair into the cache</p>
+</div>
+<p>public void putContent(String url, String content) {</p>
+<p>if (size == CACHE_SIZE) {</p>
+<p>deleteNode(tail);</p>
+<p>size--;</p>
+<p>}</p>
+<p>Node newNode = createNode(url, content);</p>
+<p>insertAtHead(newNode);</p>
+<p>size++;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-5: LRUCache.java</p>
+<p>If we have reached the maximum cache size, then the <span
+class="class_s5P0">LRU algorithm</span> kicks in: we delete the least
+recently used entry (the node at the tail of the list) and we make space
+for the insertion of the new entry (at the head of the list).</p>
+<p>Now we can examine the methods that handle the cache operations.
+First, let’s see how we can create a new node:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Create a new node</p>
+<p>Node createNode(String url, String content) {</p>
+<p>Node newNode = new Node();</p>
+<p>newNode.url = url;</p>
+<p>newNode.content = content;</p>
+<p>newNode.prev = null;</p>
+<p>newNode.next = null;</p>
+<p>System.out.println("New node created: " + content);</p>
+<p>return newNode;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-6: LRUCache.java</p>
+<p>Next, we see how to insert a new node at the head of the cache:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Insert a new node at the head of the
+cache</p>
+<p>void insertAtHead(Node node) {</p>
+<p>node.next = head;</p>
+<p>node.prev = null;</p>
+<p>if (head != null)</p>
+<p>head.prev = node;</p>
+<p>head = node;</p>
+<p>if (tail == null)</p>
+<p>tail = node;</p>
+<p>System.out.println("Node inserted at head: " + node.content);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-7: LRUCache.java</p>
+<p>Note that in all operations we have to take care of all four
+references:<span class="class_s5NV"> </span><span
+class="class_s5NW">head, tail, next, pre</span><span
+class="class_s5NX">v</span>.</p>
+<p>As part of the LRU algorithm, we have to move a node to the head of
+the list:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Move a node to the head of the cache</p>
+<p>void moveToHead(Node node) {</p>
+<p>if (node == head)</p>
+<p>return;</p>
+<p>if (node.prev != null)</p>
+<p>node.prev.next = node.next;</p>
+<p>if (node.next != null)</p>
+<div class="class_s1Z-9">
+<p>node.next.prev = node.prev;</p>
+</div>
+<p>node.prev = null;</p>
+<p>node.next = head;</p>
+<p>if (head != null)</p>
+<p>head.prev = node;</p>
+<p>head = node;</p>
+<p>if (tail == null)</p>
+<p>tail = node;</p>
+<p>System.out.println("Node moved to head: " + node.content);</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-8: LRUCache.java</p>
+<p>Finally, here is the code for node deletion:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Delete a node from the cache</p>
+<p>void deleteNode(Node node) {</p>
+<p>if (node == null)</p>
+<p>return;</p>
+<p>if (node == head)</p>
+<p>head = node.next;</p>
+<p>if (node == tail)</p>
+<p>tail = node.prev;</p>
+<p>if (node.prev != null)</p>
+<p>node.prev.next = node.next;</p>
+<p>if (node.next != null)</p>
+<p>node.next.prev = node.prev;</p>
+<p>System.out.println("Node deleted: " + node.content);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 16-9: LRUCache.java</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/WebServerCache"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/WebServerCache</a></p>
+<p><span id="part0019.xhtml"></span></p>
+<div class="heading_s1P">
+<p><span class="class_s5NS">17.</span><span class="class_s5NT">
+</span><span id="part0019.xhtml_a5MG"></span><span
+class="class_s5NS">Distributed Auction</span></p>
+</div>
+<p>In this exercise, we will create a distributed auction, that will
+consist of an auction server that receives bids from multiple clients.
+The clients will communicate with the server via sockets. The server
+will wait for 20 seconds (using a timer) for a new bid, or else the
+auction is over and the maximum bid wins. The timer will be reset upon
+timely submission of new bid.</p>
+<h2 class="heading_sU-0" id="part0019.xhtml_id__798_34_">Proposed
+Solution</h2>
+<p>Let’s start wih the auction server. The server should be able to
+accommodate multiple clients. For this reason, each client will be
+served in a separate <span class="class_s5P0">thread</span>, that will
+be spawned when the server socket accepts a new connection:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package AuctionServer;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.io.*;</p>
+<p>import java.net.*;</p>
+<p>import java.nio.charset.StandardCharsets;</p>
+<p>import java.util.Timer;</p>
+<p>import java.util.TimerTask;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class AuctionServer {</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Client class representing each client connected to the server</p>
+<p>static class Client {</p>
+<div class="class_s1Z-7">
+<p>private final Socket socket;</p>
+</div>
+<p>private final BufferedWriter writer;</p>
+<p>private final int id;</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Constructor for the Client class</p>
+<p>public Client(Socket socket, int id) throws IOException {</p>
+<p>this.socket = socket;</p>
+<p>//Setting up writer to send data to the client</p>
+<p>this.writer</p>
+<p>= new BufferedWriter(</p>
+<p>new OutputStreamWriter(socket.getOutputStream(),</p>
+<p>StandardCharsets.UTF_8));</p>
+<p>this.id = id;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public Socket getSocket() {</p>
+<p>return socket;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public BufferedWriter getWriter() {</p>
+<p>return writer;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>public int getId() {</p>
+<p>return id;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>...</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-1: AuctionServer.java</p>
+<p>Here we define the<span class="class_s5NV"> </span><span
+class="class_s5NW">Clien</span><span class="class_s5NX">t</span> class
+as a<span class="class_s5NV"> </span><span
+class="class_s5NW">stati</span><span class="class_s5NX">c</span> class
+inside the<span class="class_s5NV"> </span><span
+class="class_s5NW">AuctionServe</span><span class="class_s5NX">r</span>
+class.<span class="class_s5NV"> </span><span
+class="class_s5NW">Clien</span><span class="class_s5NX">t</span> stores
+information about the connected client (its ID and the
+corresponding<span class="class_s5NV"> </span><span
+class="class_s5NW">Socke</span><span class="class_s5NX">t</span>
+and<span class="class_s5NV"> </span><span
+class="class_s5NW">BufferedWrite</span><span class="class_s5NX">r</span>
+objects).</p>
+<p>Next, we have the definition of some constants and the class
+properties:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Constants</p>
+<p>private static final int PORT = 8080; //Port number for the
+server</p>
+<p>private static final int MAX_CLIENTS = 5; //Maximum number of
+clients</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Server and clients</p>
+<p>private static ServerSocket server;</p>
+<p>private static Client[] clients = new Client[MAX_CLIENTS]; //Array to
+hold clients</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Auction details</p>
+<p>private static int bestBid = 0; //Highest bid received</p>
+<p>private static int winningClient = 0; //Client ID of the highest
+bidder</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Timer for auction end</p>
+<p>private static Timer timer;</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-2: AuctionServer.java</p>
+<p>Now we present the <span class="class_s5NW">main(</span><span
+class="class_s5NX">)</span> method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>public static void main(String[] args) {</p>
+<p>try {</p>
+<div class="class_s1Z-9">
+<p>server = new ServerSocket(PORT); //Setting up the server socket</p>
+</div>
+<p>System.out.println("Server listening on port " + PORT);</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Start the timer</p>
+<p>timer = new Timer();</p>
+<p>timer.schedule(new TimerTask() {</p>
+<p>@Override</p>
+<p>public void run() {</p>
+<p>timerCompletionRoutine();</p>
+<p>}</p>
+<p>}, 20000, 20000); //Schedule the timer to trigger every 20
+seconds</p>
+<div class="class_s21-0">
+
+</div>
+<p>while (true) {</p>
+<p>//Accept a new client connection</p>
+<p>Socket clientSocket = server.accept();</p>
+<p>System.out.println("Client connected: "</p>
+<p>+ clientSocket.getRemoteSocketAddress());</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Find an available slot for the client</p>
+<p>int clientId = -1;</p>
+<p>for (int i = 0; i &lt; MAX_CLIENTS; i++) {</p>
+<p>if (clients[i] == null) {</p>
+<p>clientId = i;</p>
+<p>clients[i] = new Client(clientSocket, clientId + 1);</p>
+<p>System.out.println("Client no. " + (clientId + 1) + "
+connected.");</p>
+<p>break;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<div class="class_s1Z-10">
+<p>//Handle client in a separate thread</p>
+</div>
+<p>int finalClientId = clientId;</p>
+<p>new Thread(() -&gt; handleClient(finalClientId)).start();</p>
+<p>}</p>
+<p>} catch (Exception ex) {</p>
+<p>System.out.println("Server error: " + ex.getMessage());</p>
+<p>} finally {</p>
+<p>try {</p>
+<p>if (server != null) server.close();</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-3: AuctionServer.java</p>
+<p>We open a new<span class="class_s5NV"> </span><span
+class="class_s5NW">ServerSocke</span><span class="class_s5NX">t</span>
+and we listen for new connections.</p>
+<p>We also start a timer with 20 seconds duration. When the timer
+expires, then the<span class="class_s5NV"> </span><span
+class="class_s5NW">timerCompletionRoutine(</span><span
+class="class_s5NX">)</span> method will be called, ending the auction
+process.</p>
+<p>When a new connection arrives, we store the client details in the
+clients’ array and we spawn a new thread. The thread will run the<span
+class="class_s5NV"> </span><span
+class="class_s5NW">handleClient(</span><span class="class_s5NX">)</span>
+method, that will handle the communication with the specific client.</p>
+<p>Now, let’s see the<span class="class_s5NV"> </span><span
+class="class_s5NW">handleClient(</span><span class="class_s5NX">)</span>
+method:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Handle client bids</p>
+<p>private static void handleClient(int clientId) {</p>
+<div class="class_s1Z-7">
+<p>try {</p>
+</div>
+<p>Client client = clients[clientId];</p>
+<p>Socket clientSocket = client.getSocket();</p>
+<p>BufferedReader reader</p>
+<p>= new BufferedReader(</p>
+<p>new InputStreamReader(clientSocket.getInputStream(),</p>
+<p>StandardCharsets.UTF_8));</p>
+<div class="class_s21-0">
+
+</div>
+<p>String bid;</p>
+<p>while (true) {</p>
+<p>//Read a bid from the client</p>
+<p>bid = reader.readLine();</p>
+<p>if (bid == null) {</p>
+<p>//Client disconnected</p>
+<p>System.out.println("Client disconnected: "</p>
+<p>+ clientSocket.getRemoteSocketAddress());</p>
+<p>clients[clientId] = null;</p>
+<p>break;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>int bidAmount = Integer.parseInt(bid);</p>
+<p>System.out.println("Received bid " + bidAmount + " from client "</p>
+<p>+ client.getId());</p>
+<div class="class_s21-0">
+
+</div>
+<p>synchronized (AuctionServer.class) {</p>
+<p>if (bidAmount &gt; bestBid) {</p>
+<p>bestBid = bidAmount;</p>
+<p>winningClient = client.getId();</p>
+<div class="class_s21-0">
+
+</div>
+<p>String msg = "New best bid: " + bestBid</p>
+<p>+ " (Client: " + winningClient + ")";</p>
+<div class="class_s1Z-19">
+<p>broadcastMessage(msg);</p>
+</div>
+<p>System.out.println("New best bid: " + bestBid</p>
+<p>+ " (Client: " + winningClient + ")");</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Reset the timer</p>
+<p>timer.cancel();</p>
+<p>timer = new Timer();</p>
+<p>timer.schedule(new TimerTask() {</p>
+<p>@Override</p>
+<p>public void run() {</p>
+<p>timerCompletionRoutine();</p>
+<p>}</p>
+<p>}, 20000, 20000);</p>
+<p>} else {</p>
+<p>String msg = "Received lower bid. Best bid remains at: " +
+bestBid;</p>
+<p>broadcastMessage(msg);</p>
+<p>System.out.println("Received lower bid. Best bid remains at: "  </p>
+<p>+ bestBid);</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>} catch (Exception ex) {</p>
+<p>System.out.println("Client error: " + ex.getMessage());</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-4: AuctionServer.java</p>
+<p>This method takes care of the communication with the client. It gets
+as input the client’s ID, that was passed in<span class="class_s5NV">
+</span><span class="class_s5NW">main(</span><span
+class="class_s5NX">)</span>:</p>
+<div class="class_sM9-1">
+<p>new Thread(() -&gt; handleClient(finalClientId)).start();</p>
+</div>
+<p>Then, in an endless<span class="class_s5NV"> </span><span
+class="class_s5NW">whil</span><span class="class_s5NX">e</span> loop, it
+blocks in the<span class="class_s5NV"> </span><span
+class="class_s5NW">reader.readLine(</span><span
+class="class_s5NX">)</span> method, waiting for input from the client.
+When a message arrives, the method is unblocked and continues to check
+the input. If the bid is null, then the client has disconnected.</p>
+<p>If the client has actually sent a valid bid, we compare it with the
+current maximum bid and we update this value if we got a higher bid. We
+also proceed with informing all clients about the submitted bid. We also
+reset the timer to get a new 20 seconds’ period.</p>
+<p>Here,<span class="class_s5NV"> </span><span
+class="class_s5NW">bestBi</span><span class="class_s5NX">d</span>
+and<span class="class_s5NV"> </span><span
+class="class_s5NW">winningClien</span><span class="class_s5NX">t</span>
+are shared resources that might be accessed and modified by multiple
+client handler threads. To protect these shared resources, we
+synchronize the critical sections where these variables are read or
+written.</p>
+<p>Next, we define the broadcastMessage() method, that sends messages to
+the clients:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Broadcast message to all clients</p>
+<p>private static void broadcastMessage(String msg) throws IOException
+{</p>
+<p>for (int i = 0; i &lt; MAX_CLIENTS; i++) {</p>
+<p>if (clients[i] != null) {</p>
+<p>clients[i].getWriter().write(msg);</p>
+<p>clients[i].getWriter().newLine();</p>
+<p>clients[i].getWriter().flush();</p>
+<p>}</p>
+<div class="class_s1Z-7">
+<p>}</p>
+</div>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-5: AuctionServer.java</p>
+<p>When the timer eventually expires, the<span class="class_s5NV">
+</span><span class="class_s5NW">timerCompletionRoutine(</span><span
+class="class_s5NX">)</span> method will be called:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Timer completion routine when auction
+ends</p>
+<p>private static void timerCompletionRoutine() {</p>
+<p>System.out.println("Auction finished. Winning bid: " + bestBid</p>
+<p>+ ", winner: client no. " + winningClient);</p>
+<div class="class_s21-0">
+
+</div>
+<p>String msg = "Auction finished. Winning bid: " + bestBid</p>
+<p>+ ", winner: client no. " + winningClient;</p>
+<p>try {</p>
+<p>broadcastMessage(msg);</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Exit the program</p>
+<p>System.exit(0);</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-6: AuctionServer.java</p>
+<p>After informing all clients about the winning bid, we exit the
+program. The client sockets will be closed by the respective clients
+when they receive the message of the auction completion.</p>
+<p>Now for the auction client, we first implement the<span
+class="class_s5NV"> </span><span class="class_s5NW">main(</span><span
+class="class_s5NX">)</span> method:</p>
+<table class="class_s4M6">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>package AuctionClient;</p>
+<div class="class_s21-0">
+
+</div>
+<p>import java.io.*;</p>
+<p>import java.net.*;</p>
+<p>import java.nio.charset.StandardCharsets;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public class AuctionClient {</p>
+<div class="class_s21-0">
+
+</div>
+<p>private static final int PORT = 8080; //Port number to connect to the
+server</p>
+<p>private static final String SERVER_IP = "127.0.0.1"; //Server IP
+address</p>
+<div class="class_s21-0">
+
+</div>
+<p>private static Socket client;</p>
+<p>private static boolean isRunning = true;</p>
+<p>private static Thread receiveThread;</p>
+<div class="class_s21-0">
+
+</div>
+<p>public static void main(String[] args) {</p>
+<p>//Connect to the server</p>
+<p>try {</p>
+<p>client = new Socket(SERVER_IP, PORT);</p>
+<p>System.out.println("Connected to server.");</p>
+<p>} catch (Exception ex) {</p>
+<p>System.out.println("Connect failed: " + ex.getMessage());</p>
+<p>return;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Start receive handler thread</p>
+<div class="class_s1Z-7">
+<p>receiveThread = new Thread(AuctionClient::receiveHandler);</p>
+</div>
+<p>receiveThread.start();</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Send bids until the user quits</p>
+<p>try (BufferedReader consoleReader</p>
+<p>= new BufferedReader(new InputStreamReader(System.in));</p>
+<p>BufferedWriter writer</p>
+<p>= new BufferedWriter(new
+OutputStreamWriter(client.getOutputStream(),</p>
+<p>StandardCharsets.UTF_8))) {</p>
+<div class="class_s21-0">
+
+</div>
+<p>String bid;</p>
+<p>while (isRunning) {</p>
+<p>System.out.print("\nEnter your bid (or 'q' to quit): ");</p>
+<p>bid = consoleReader.readLine();</p>
+<div class="class_s21-0">
+
+</div>
+<p>if ("q".equalsIgnoreCase(bid)) {</p>
+<p>isRunning = false;</p>
+<p>client.close();</p>
+<p>receiveThread.interrupt(); //Interrupt the receive thread</p>
+<p>break;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>try {</p>
+<p>writer.write(bid);</p>
+<p>writer.newLine();</p>
+<p>writer.flush();</p>
+<p>} catch (Exception ex) {</p>
+<p>System.out.println("Send failed: " + ex.getMessage());</p>
+<div class="class_s1Z-13">
+<p>return;</p>
+</div>
+<p>}</p>
+<p>}</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>//Ensure client is closed</p>
+<p>try {</p>
+<p>client.close();</p>
+<p>} catch (IOException e) {</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-7: AuctionClient.java</p>
+<p>Here, we create a<span class="class_s5NV"> </span><span
+class="class_s5NW">Socke</span><span class="class_s5NX">t</span> object,
+and we connect to the server. If the connection is successful, we spawn
+a new thread that will be used to receive and print the information from
+the server.</p>
+<p>The sending part of the communication, i.e. the submission of bids to
+the server, will be performed by the main thread. If we had the same
+thread handle sending and receiving of data, we would have a problem, as
+the<span class="class_s5NV"> </span><span
+class="class_s5NW">readLine(</span><span class="class_s5NX">)</span>
+method would block and would not let the user send a new bid.</p>
+<p>Here is the callback method for the thread handler:</p>
+<table class="class_s32">
+<tbody>
+<tr>
+<td class="class_s2Y"><p>//Handle incoming messages from the server</p>
+<p>private static void receiveHandler() {</p>
+<div class="class_s1Z-7">
+<p>try (BufferedReader reader</p>
+</div>
+<p>= new BufferedReader(</p>
+<p>new InputStreamReader(client.getInputStream(),
+StandardCharsets.UTF_8))) {</p>
+<p>while (isRunning) {</p>
+<p>try {</p>
+<p>if (Thread.interrupted()) {</p>
+<p>break; //Exit if the thread is interrupted</p>
+<p>}</p>
+<p>String message = reader.readLine();</p>
+<p>if (message == null || message.isEmpty()) {</p>
+<p>System.out.println("\nServer disconnected.");</p>
+<p>break;</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div>
+<p>System.out.println("\nServer: " + message);</p>
+<div class="class_s21-0">
+
+</div>
+<p>if (message.startsWith("Auction")) {</p>
+<p>System.out.println("Auction ended. Exiting program.");</p>
+<p>isRunning = false;</p>
+<p>break;</p>
+<p>}</p>
+<p>} catch (IOException ex) {</p>
+<p>if (isRunning) {</p>
+<p>//Check if still running to avoid printing</p>
+<p>// error when stopping intentionally</p>
+<p>System.out.println("Receive failed: " + ex.getMessage());</p>
+<p>}</p>
+<p>break;</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s1Z-7">
+<p>} catch (IOException e) {</p>
+</div>
+<p>if (isRunning) {</p>
+<p>//Check if still running to avoid printing</p>
+<p>// error when stopping intentionally</p>
+<p>e.printStackTrace();</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<div class="class_s21-0">
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Listing 17-6: AuctionClient.java</p>
+<p>This thread receives messages from the auction server and prints them
+in the console. When the final message, starting with “Auction” arrives,
+then it closes down the resources and exits the program.</p>
+<p>You can find this project in GitHub:</p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/AuctionServer"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/AuctionServer</a></p>
+<p><a
+href="https://github.com/htset/java_exercises_dsa/tree/master/AuctionClient"
+class="class_s5NY-0">https://github.com/htset/java_exercises_dsa/tree/master/AuctionClient</a></p>
+<hr />

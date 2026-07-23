@@ -1,0 +1,40 @@
+name: Java Exercises with Data Structures and Algorithms
+name_cn: Java 数据结构与算法练习指南
+slug: java-exercises-with-data-structures-and-algorithms
+toc:
+- - '#'
+  - 3. 图书
+- - '##'
+  - 建议解决方案
+- - '##'
+  - 联系列表（Contact List）
+- - '##'
+  - 哈希表
+- - '##'
+  - 解决方案（Proposed Solution）
+- - '#'
+  - 6. 歌曲列表
+- - '##'
+  - 解决方案
+- - '#'
+  - 8. 单词频率
+- - '###'
+  - 建议的解决方案
+- - '#'
+  - 9. 语法检查器
+- - '###'
+  - 建议的解决方案
+- - '#'
+  - 10. 迷宫求解器
+- - '##'
+  - 建议解决方案
+- - '#'
+  - 13 社交网络 (Social Network)
+- - '##'
+  - 解决方案
+- - '#'
+  - 15. MNIST 图像比较
+- - '##'
+  - 建议解决方案
+- - '##'
+  - '列表 15-2: `MNISTImages.java`'
