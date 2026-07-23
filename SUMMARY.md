@@ -213,6 +213,7 @@
 +   [Java 编程入门指南](docs/introduction-to-java-programming/README.md)
 +   [Java 编程入门指南，第 2 版](docs/introduction-to-java-programming-2nd-edition/README.md)
 +   [Java 编程入门指南：高级特性（核心系列）更新至 Java 8](docs/introduction-to-java-programming-advanced-features-core-seri/README.md)
++   [Java 编程与数据结构入门：全面版含 MyLab Programming 及 Pearson eText 访问卡包](docs/introduction-to-java-programming-and-data-structures-compreh/README.md)
 +   [Java 编程与语言入门指南](docs/introduction-to-java-programming-and-languages/README.md)
 +   [Java 编程语言入门指南](docs/introduction-to-java-programming-language/README.md)
 +   [通过游戏开发 Java 入门指南](docs/introduction-to-java-through-game-development/README.md)
