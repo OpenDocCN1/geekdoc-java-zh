@@ -318,6 +318,7 @@
 +   [Java 编程高级指南](docs/java-programming---advanced/README.md)
 +   [Java 编程入门：历史、基础及创建第一个程序指南](docs/java-programming---an-introduction-history-and-the-fundament/README.md)
 +   [Java 编程解码：逐步理解复杂代码、掌握核心概念并精通调试的指南](docs/java-programming-decoded-step-by-step-guide-to-understand-co/README.md)
++   [Java 编程练习：卷二：Java 标准库](docs/java-programming-exercises-volume-two-java-standard-library/README.md)
 +   [Java 编程初学者指南：速成课程 (Java, Python, C++, R, C) (编程，Java 编程，C++ 编程，Python 编程，R 编程，C 编程，第 1 册)](docs/java-programming-for-beginners-crash-course-java-python-c-r-/README.md)
 +   [Java 编程初学者指南：通过面向对象编程学习来提升软件工程技能。学习虚拟机、Javascript 和机器码 (2022)](docs/java-programming-for-beginners-improve-your-software-enginee/README.md)
 +   [Java 编程入门指南：快速学习编码！](docs/java-programming-for-beginners-learn-coding-fast/README.md)
