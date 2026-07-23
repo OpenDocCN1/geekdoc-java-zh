@@ -1,0 +1,933 @@
+- "# Java 编程入门指南：快速学习编码！\n\n\n\n![](img/rsrc4VP.jpg)\n\n\n\n\n## 关于作者\n\n**Ray Yao:**\n\
+  - 美国 Zend 认证 PHP 工程师\n- 美国 Sun 认证 JAVA 程序员\n- 美国 Oracle 认证 SCWCD 开发人员\n- 美国 CompTIA\
+  \ 认证 A+ 专业人士\n- 微软认证 ASP. NET 专家\n- 微软认证 MCP 专业人士\n- 微软认证 TECHNOLOGY 专专家\n- 美国 CompTIA\
+  \ 认证 NETWORK+ 专业人士\n\n## 推荐书籍\n- [8 小时精通 C++ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 JAVA 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 AngularJS 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [C# 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 C# 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [C# 编程：包含 100 问答](https://www.amazon.com/-/e/B0863BQT8T)\n- [C++ 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 C++ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [编码面试：1000 问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Django 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Go 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [HTML CSS 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 HTML CSS 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [JAVA 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 JAVA 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [JAVA 编程：包含 100 问答](https://www.amazon.com/-/e/B0863BQT8T)\n- [JavaScript 50 个实用程序](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [JavaScript 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 JavaScript\
+  \ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [JQuery 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 JQuery 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Kotlin 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Linux 命令行](https://www.amazon.com/-/e/B0863BQT8T)\n- [Linux 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Linux Shell 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 MySQL 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Node](https://www.amazon.com/-/e/B0863BQT8T)\n- [.](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 js 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [PHP 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 PHP MySQL 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 PowerShell\
+  \ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [Python 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 Python 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [Python 编程：包含 100 问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 R 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 Ruby 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Rust 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Scala 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Visual Basic 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 Visual Basic\
+  \ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\n## 前言\n\n本书涵盖了所有必要的 Java 知识。你可以快速、轻松地掌握\
+  \ Java 的核心技能。\n\n本书为初学者提供了超过 80 个实战示例，并包含了针对大学考试、工程师认证以及工作面试的测试与答案。\n\n\n\n\n\n\
+  # 源代码下载\n\n本书提供了源代码下载；你可以下载源代码以便更好地学习，或者将源代码复制到你喜欢的编辑器中来测试程序。\n\n源代码下载链接：[https://forms.aweber.com/form/68/2126212468.htm]\n\
+  \n**注意：** 本书仅适合初学者，不适合有经验的程序员。\n\n## 附录\n- 测试与答案\n- 推荐书籍\n\n# 第一章 开始 JAVA\n\n##\
+  \ 安装 Java\n\n为了创建任何 Java 程序，需要在本地计算机系统上可用 Java 开发环境。\n\n`JDK`（也称为 `JSDK`, `Java\
+  \ SE`）`JDK` (`Java Development Kit`) 包含了所有的 Java 类库以及所有构建和运行 Java 程序的工具。`JDK` 可以创建\
+  \ Java 开发环境。\n\n下载 `JDK`：`http://oracle.com/download/com/download/http://www.oracle.com/technetwork/java/javase/downloads/index`\n\
+  \n请点击链接在 Oracle 网站下载最新版本的 `JDK`。（图 1）\n\n如果你的计算机是 32 位操作系统，请下载 `x86` 版本的 `JDK`；如果你的计算机是\
+  \ 64 位操作系统，请下载 `x64` 版本的 `JDK`。（图 2）\n\n将最新版本的 `JDK` 安装到你的计算机上。恭喜你！一旦成功安装 `JDK`，系统就准备好运行\
+  \ Java 程序了！\n\n## IDE (集成开发环境)\n\n`IDE` (`Integrated Development Environment`) 用于编写、编辑和运行\
+  \ Java。`IDE` 包含许多 Java 开发工具、编译器和调试器。互联网上有许多优秀的免费 IDE 可以下载，请通过以下链接下载一个 IDE：\n\n|\
+  \ IDE(编辑器) | 网站地址 |\n| :--- | :--- |\n| Eclipse | `http://www.eclipse.org` |\n|\
+  \ NetBeans | `https://netbeans.org/` |\n| DrJava | `http://www.drjava.org/` |\n\n\
+  \n\n\n\n| Jedit | [`www.jedit.org/) [.`](http://www.jedit.org/) [jedit](http://www.jedit.org/)\
+  \ [.](http://www.jedit.org/) [org/](http://www.jedit.org/) |\n| BlueJ | [`www.bluej.org/)\
+  \ [.`](http://www.bluej.org/) [bluej](http://www.bluej.org/) [.](http://www.bluej.org/)\
+  \ [org/](http://www.bluej.org/) |\n| JCreator | [`www.jcreator.com/) [.`](http://www.jcreator.com/)\
+  \ [jcreator](http://www.jcreator.com/) [.](http://www.jcreator.com/) [com/](http://www.jcreator.com/)\
+  \ |\n\n请在你的电脑上安装其中一种编辑器。（本本书使用 `Eclipse` 作为编辑器）。恭喜！一旦成功安装了 IDE，从现在起就可以编写、编辑和运行 Java\
+  \ 程序了。\n\n## 什么是 Java？\nJava 是一种基于类的、面向对象的编程语言，它是一种安全、快速且可靠的程序，适用于互联网、数据库、手机以及无数种设备等通用领域。\n\
+  \n### 示例 1.1\n```java\npublic class Hi{\n    public static void main (String [ ]\
+  \ args){\n        System . out . print(“Hello World”);\n    }\n}\n```\n**输出：** Hello\
+  \ World\n**解释：** `public class` 是两个关键字；它们用于声明 Java 程序。`Hi` 是程序名。`public static void\
+  \ main (String [ ] args) {… }` 用于声明主方法。`main` 方法包含要执行的主程序代码。`String [ ] args` 用于手动接受输入。`System.\
+  \ out. print( )` 用于显示或打印。每个 Java 命令都应该以分号（`;`）结束。\n\n## 运行第一个程序\n`Eclipse`是最流行的\
+  \ Java IDE（集成开发环境）之一。它用于编写、编辑、调试和运行 Java 程序。\n\n### 下载 Eclipse 安装程序\n[`www.eclipse.org/downloads/)\
+  \ [.`](http://www.eclipse.org/downloads/) [eclipse](http://www.eclipse.org/downloads/)\
+  \ [.](http://www.eclipse.org/downloads/) [org/downloads/](http://www.eclipse.org/downloads/)\n\
+  \n请点击链接从 `Eclipse` 网站下载最新版本的 `Eclipse Installer`（图 1）！\n\n### 解压 Eclipse 文件\n注意：不需要安装，`Eclipse`\
+  \ 应该解压到你喜的目录中。例如，`C:\\Eclipse`。请在桌面上为 `eclipse.exe` 创建快捷方式。（重申：`Eclipse` 不需要安装，但应该解压到某个目录中。）\n\
+  \n### 运行 Eclipse\n双击 `eclipse.exe` 运行 `Eclipse`，设置默认工作区，勾选“使用此作为默认且不再询问”，并点击确定，如图\
+  \ 2 和图 3 所示。\n\n## 编写并运行第一个 Java 程序\n### 步骤 1：创建 Java 项目\n启动 `Eclipse` > `File`\
+  \ > `New` > `Java Project` > `Project Name` > “FirstProject” > `Finish`。（图 4）\n\n\
+  ### 步骤 2：创建包\n包（Package）用于包含不同类别的 Java 文件。不同的包包含不同的 Java 文件。选择项目 “FirstProject”\
+  \ > `new` > `package` > `name` > “newPackage” > `Finish`。（图 5）\n\n### 步骤 3：创建类\n\
+  选择包 “newPackage” > `new` > `class` > `name` > “HelloWorld” > `Finish`。（图 6）\n\n\
+  ### 步骤 4：编写 Java 代码\n在 `Eclipse` 中编写 Java 代码。（图 7）\n\n### 示例 1.2\n```java\npackage\
+  \ newPackage;\npublic class HelloWorld {\n  public static void main (String[] args){\n\
+  \    System. out. print(\"Hello World! \");\n  }\n}\n```\n（图 7 Eclipse 中的 Java 程序）\n\
+  \n### 步骤 5：运行程序\n点击工具栏中的白色三角形绿色按钮运行程序，你可以看到输出：（图 8）\n**输出：**\n恭喜！由 `Eclipse` 运行的第一个\
+  \ Java 程序成功了！\n\n## Java 注释\n```java\n//*  ……  */\n```\nJava 注释用于解释当前代码，描述代码正在做什么。Java\
+  \ 编译器将忽略注释。`//` 用于单行注释。`/*…*/` 用于多行注释。\n\n### 示例 1.3\n```java\nSystem. out. println\
+  \ (“Hello World”);  // show “Hello World”\n/*   System . out . println( ) 是一个 Java\
+  \ 输出命令，意味着显示或打印 .*/\n```\n**解释：** `// show “Hello World”` 是单行注释。`/* System . out\
+  \ . println( ) is a Java output command, meaning display or print . */` 是多行注释。\n\
+  \n## 输出命令\n```java\nSystem. out. print ( );  // 在同一行打印结果。\nSystem. out. println\
+  \ ( );  // 在不同行打印结果。\n```\n\n### 示例 1.4\n```java\nSystem. out. print( \"1 \" );\n\
+  System. out. print( \"2 \" );\nSystem. out. print( \"3\" );\n```\n**输出：** 1 2 3\n\
+  解释解释 `System. out. print( )` 在同一行打印。`System. out. println( )` 在不同行打印。\n\n## 转义字符\n\
+  `\\` 字符用于转义：\n- `\\n` 将内容输出到下一行。\n- `\\r` 产生返回。\n- `\\t` 制表符。\n\n### 示例 1.5\n```java\n\
+  public class Hi{\n    public static void main (String [ ] args){\n        System.\
+  \ out. print(\"Hello World\");\n    }\n}\n```\n**解释：** `\"` 输出双引号。注意 `Hello World`\
+  \ 带有双引号。\n\n## 关键字\n某些单词被语言保留：\n| `abstract` | `byte` | `char` | `continue` | `double`\
+  \ | `float` | `implements` | `interface` | `package` | `public` | `this` | `try`\
+  \ | `const` | `new` | `while` |\n\n## 数据类型\n| 数据类型 | 解释 |\n| :--- | :--- |\n| `String`\
+  \ | 双引号的字符串 |\n| `char` | 单引号的单字符 |\n| `int` | 整数 |\n| `float` | 浮点数 |\n| `boolean`\
+  \ | 真或假的值 |\n| `double` | 大浮点数 |\n\n## 创建变量\n变量是与值关联的符号名称。使用以下语法可以创建变量：\n`dataType\
+  \ variableName = value;`\n\n### 示例 1.8\n```java\npublic static void main (String\
+  \ [ ] args ) {\n  String mystring = “Hello World”;\n  char mychar = ‘m’;\n  int\
+  \ myinteger = 168168;\n  double myflt = 28.98;\n  boolean mybool = true;\n}\n```\n\
+  **解释：** `mystring` 是变量名，其值为 “Hello World”。 `myinteger` 是变量名，其值为 168168。`mybool`\
+  \ 是变量名，其值为 true。\n\n 算术运算符\n| 运算符 |\n| :--- |\n| `+` |\n| `-` |\n| `*` |\n| `/`\
+  \ |\n| `%` |\n| `++` |\n| `--` |\n\n\n\n\n\n### 示例 1.9\n```java\npublic class TryClass{\n\
+  \    public static void main (String [ ] args) {\n        int sum = 100 + 200;\n\
+  \        String str = \"We love\" + \"Java\";\n        int incre = 10;\n       \
+  \ incre = ++ incre;\n        System. out. println ( sum );    // 输出: 300\n     \
+  \   System. out.println ( str );   // 输出: We love Java.\n        System. out.println\
+  \ ( incre ); // 输出: 11\n    }\n}\n```\n**输出:**\n300\nWe love Java\n11\n\n### 解释\n\
+  - `int sum = 100 + 200` 表示 100 加 200。\n- `String str = “We love” + “Java\"` 连接了两个字符串。\n\
+  - `++incre` 将其值增加 1。\n\n## 逻辑运算符\n\n| 运算符 |\n| :--- |\n| `&&` |\n| `||` |\n| `!`\
+  \ |\n\n使用逻辑运算符后，结果将为 `true` 或 `false`。\n\n### 示例 1.10\n```java\npublic class TryClass{\n\
+  \    public static void main (String [ ] args) {\n        boolean x=true;\n    \
+  \    boolean y=false;\n        boolean a, b, c;\n        a= x && y;\n        System.\
+  \ out. print(a);   // 输出: false\n        b=x || y;\n        System. out. print(b);\
+  \   // 输出: true\n        c=! x;\n        System. out. print(c);   // 输出: false\n\
+  \    }\n}\n```\n\n### 解释\n- `true && true;` 返回 `true;`\n- `true && false;` 返回 `false;`\n\
+  - `false && false;` 返回 `false;`\n- `true || true;` 返回 `true;`\n- `true || false;`\
+  \ 返回 `true;`\n- `false || false;` 返回 `false;`\n- `! false;` 返回 `true;`\n- `! true;`\
+  \ 返回 `false;`\n\n## 赋值运算符\n\n| 运算符 |\n| :--- |\n| `+=` |\n| `-=` |\n| `*=` |\n|\
+  \ `/=` |\n| `%=` |\n\n### 示例 1.11\n```java\nint x=200; int y=100;\nx+= y; System.\
+  \ out. print(x);\nx-= y; System. out. print(x);\nx/= y; System. out. print(x);\n\
+  x%= y; System. out. print(x);\n```\n\n### 解释\n- `x+=y;` // `x=x+y`, `x=200+100`,\
+  \ 输出 300 .\n- `x-=y;` // `x=x-y`, `x=200-100`, 输出 100 .\n- `x/=y;` // `x=x/y`, `x=200/100`,\
+  \ 输出 2 .\n- `x%y;` // `x=%y`, `x=200%100`, 输出 0 .\n\n## 比较运算符\n\n| 运算符 |\n| :---\
+  \ |\n| `>` |\n| `<` |\n| `>=` |\n| `<=` |\n| `==` |\n| `!=` |\n\n使用比较运算符后，结果将为 `true`\
+  \ 或 `false`。\n\n### 示例 1.12\n```java\nint x=200; int y=100;\nboolean result1=(x>\
+  \ y); System. out. print(result1);\nboolean result2=(x<= y); System. out. print(result2);\n\
+  boolean result3=(x!= y ); System. out. print(result3);\n```\n\n### 解释\n- `x>y` //\
+  \ 测试 200>100, 输出 true .\n- `x<=y` // 测试 200<=100, 输出 false .\n- `x!=y` // 测试 200\
+  \ !=100, 输出 true .\n\n## 三元运算符\n三元运算符的语法如下所示：\n\n| `(test-expression) ? (if-true-do-this)\
+  \ : (if-false-do-this);` |\n\n`(test-expression)` 例如 `a<b`、`x!= y`、`m==n` 等。\n\n\
+  ### 示例 1.13\n```java\nint a=100; int b=200;\nString result1 = (a<b) ? ”apple” :\
+  \ ”banana”;\nSystem. out. print ( result1);\n```\n**输出:**\napple\n\n### 示例 1.14\n\
+  ```java\nint a=100; int b=200;\nString result2 = (a>b) ? ”apple” : ”banana”;\nSystem.\
+  \ out. print ( result2 );\n```\n**输出:**\nbanana\n\n### 解释\n如果测试表达式返回 `true`，则输出“apple”。\n\
+  如果测试表达式返回 `false`，则输出“banana”。\n\n## 练习：计算\n使用 Eclipse 编写运行 Java 程序\n\n### 步骤 1：创建\
+  \ Java 项目\n启动 Eclipse > `File` > `New` > `Java Project` > `Project Name` > “Test”\
+  \ > `Finish`。（图 1）\n\n### 步骤 2：创建包\n包（Package）用于包含各种类的 Java 文件。不同的包包含不同的 Java 文件。\n\
+  选择项目 “Test” > `New` > `package` > “myPackage” > `Finish`。\n\n### 步骤 3：创建类\n选择 “myPackage”\
+  \ > `New` > `class` > “Calculation” > `Finish`。（图 2）\n\n### 步骤 4：编写 Java 代码\n在 Eclipse\
+  \ 中编写 Java 代码：\n```java\npackage myPackage;\npublic class Calculation{\n  public\
+  \ static void main (String args ]){\n    int a=100; int b=200;\n    String result1\
+  \ = (a<b) ? ”apple” : ”banana”;\n    System. out. print ( result1);\n\n  }\n}\n\
+  ```\n\n### 步骤 5：运行程序\n点击运行按钮运行程序，你可以看到：\n**输出:**\napple\n\n## 总结\n- `//` 是单行注释。\n\
+  - `/*...*/` 是多行注释。\n- `System. out.print() ` 会打印结果。\n- `System. out.println() `\
+  \ 会打印并换行。\n- 三元运算符用于条件判断。\n- `if` 语句用于条件判断。\n- `if-else` 语句用于条件判断。\n- `switch` 语句用于多分支选择。\n\
+  - `for` 循环用于指定次数循环。\n- `while` 循环用于条件循环。\n- `do-while` 循环用于至少执行一次的循环。\n\n\n\n\n\n\
+  `do... while` 循环执行一次代码块，然后如果指定的条件为真，则重复该循环。\n\n示例 2.6\n```java\npublic class TryClass{\n\
+  \    public static void main (String [ ] args){\n        int counter=0;\n      \
+  \  do {\n            System. out. print ( \"@\");\n            counter++;\n    \
+  \    } while (counter<8);\n        // 执行 8 次\n    }\n}\n```\n输出: `@@@@@@@@`\n解释：`“counter<\
+  \ 8”` 是一个测试表达式，如果条件为真，代码将循环少于 8 次，直到 `counter` 等于 8 为止，此时条件为假，代码将停止运行。\n\n## break\
+  \ 语句\n\n| `break;` |\n\n`break` 关键字用于根据条件停止循环的运行。\n\n示例 2.7\n```java\npublic class\
+  \ TryClass{\n    public static void main (String [ ] args){\n        int num=0;\n\
+  \        while (num<10){\n            if (num==5)\n                break;     //\
+  \ 离开 while 循环\n            num++;\n        }\n        System. out. print( num );\n\
+  \    }\n}\n```\n输出: `5`\n解释：`“if (num==5) break;”` 是一个 break 语句。如果 `num` 为 5，程序将执行\
+  \ `break` 命令，break 语句将离开 while 循环，然后执行 `System. out. print(num)`。\n\n## continue\
+  \ 语句\n\n| `continue;` |\n\n`continue` 关键字用于停止当前的迭代，忽略后续代码，然后继续下一次循环。\n\n示例 2.8\n\
+  ```java\npublic class TryClass{\n    public static void main (String [ ] args){\n\
+  \        int num=0;\n        while (num<10){\n            num++;\n            if\
+  \ (num==5)\n                continue;     // 进入下一次 while 循环\n            System.\
+  \ out. print( num );\n        }\n    }\n}\n```\n输出: `1234678910`\n解释：注意输出中没有 5。`“if\
+  \ (num==5) continue;”` 包含了 `continue` 命令。当 `num` 为 5 时，程序将执行 `continue`，跳过下一个命令\
+  \ `System. out. print( num )`，然后继续下一次 while 循环。\n\n## 布尔表达式\n\n| `If ( bool-expression\
+  \ ) { statements }` | `while ( boolean-expression ) { statement }` |\n\n`boolean-expression`\
+  \ 应该是一个测试表达式。例如：`a>b;`；`x<=y;`；`m!=n;`。它不能仅仅是一个变量。\n\n示例 2.9\n```java\npublic class\
+  \ TryClass{\n    public static void main (String [ ] args){\n        int num=10;\n\
+  \        if( num ){\n            // 错误！因为“num”不是布尔表达式\n            System. out.\
+  \ print (\"No good\");\n        }\n        while ( num ){\n            // 错误！“num”不是布尔表达式\n\
+  \            System. out. print (\"No good\");\n        }\n    }\n}\n```\n解释：`if(\
+  \ num )` 和 `while ( num )` 不是正确的代码，因为 `()` 内部应该是一个 `boolean-expression`，例如 `if(num\
+  \ ==10)` 和 `while(num<10)` 是正确的！\n\n## 练习：运行 100 次\n\n## While 语句程序\n\n启动 Eclipse\
+  \ > 选择 `“myPackage” > new > class > name > `WhileStatement` > Finish。在 Eclipse 中编写以下代码。\n\
+  \n```java\npackage myPackage;\npublic class WhileStatement {\n    public static\
+  \ void main(String[ ] args) {\n        int n = 1;\n        int sum = 0;\n      \
+  \  while(n <= 100) {\n            // 执行 100 次\n            sum += n;    // sum =\
+  \ sum + n\n            n++;\n        }\n        System. out. println(\"Sum = \"\
+  \ + sum);\n    }\n}\n```\n输出: `Sum = 5050`\n解释：`“n<=100”` 是一个测试表达式，如果条件为真，代码将循环少于\
+  \ 100 次，直到 `counter` 等于 100 为止，此时条件为假，代码将停止运行。`“sum += n;”` 等同于 `“sum = sum + n”`。`“n++;”`\
+  \ 意味着 `n` 在每次循环中增加 1。\n\n## 总结\n\n- `if 语句` 仅在指定条件为真时执行 `{ … }` 中的代码，如果条件为假，则不执行\
+  \ `{…}` 中的任何代码。\n- `if... else 语句` 在条件为真时运行某些代码，在条件为假时运行另一部分代码。\n- `Switch 语句`：变量的值将与每个\
+  \ `case` 进行比较，如果等于某个 `“case”` 值，将执行该 `“case”` 代码。`break;` 终止执行。\n- `for 循环` 按指定的次数运行代码块。\n\
+  - `while 循环` 如果指定条件为真，则循环代码块。\n- `do... while` 循环执行一次代码块，然后如果指定的条件为真，则重复该循环。\n-\
+  \ `break` 关键字用于根据条件停止循环的运行。\n- `continue` 关键字用于停止当前迭代并继续下一次循环。\n\n## 创建数组 (1)\n\n\
+  数组是包含多个值的变量。创建数组的方法如下：\n\n| `String myarray[] = { \"Apple\", \"Banana\", \"Orange\"\
+  \ };` |\n| `int nums[] = { 1, 2, 3 };` |\n| `double prices[] = { 1.5, 2.5, 3.5 };`\
+  \ |\n\n示例 3.1\n```java\nString myarray[] = { \"Apple\", \"Banana\", \"Orange\" };\n\
+  System.out.print(myarray[0]); // 输出第一个元素\n```\n输出: `Apple`\n解释：`myarray[0]` 是数组中的第一个元素。\n\
+  \n## 创建数组 (2)\n\n可以使用 `new` 关键字来创建数组。\n\n| `String[] myarray = new String[3];` |\n\
+  | `int[] nums = new int[5];` |\n| `double[] prices = new double[4];` |\n\n示例 3.2\n\
+  ```java\nString[] myarray = new String[3];\nmyarray[0] = \"Apple\";\nmyarray[1]\
+  \ = \"Banana\";\nmyarray[2] = \"Orange\";\n```\n解释：`new String[3]` 声明了一个长度为 3 的字符串数组。\n\
+  \n## 数组长度\n\n`length` 属性返回数组中元素的个数。\n\n| `int size = myarray.length;` |\n\n示例 3.3\n\
+  ```java\nString myarray[] = { \"Apple\", \"Banana\", \"Orange\" };\nSystem.out.println(myarray.length);\n\
+  ```\n输出: `3`\n解释：`myarray.length` 返回数组的长度。\n\n## 数组元素\n\n可以使用索引来访问数组中的元素。索引从 0 开始。\n\
+  \n| `String firstElement = myarray[0];` |\n\n示例 3.4\n```java\nString myarray[] =\
+  \ { \"Apple\", \"Banana\", \"Orange\" };\nSystem.out.println(myarray[1]); // 输出第二个元素\n\
+  ```\n输出: `Banana`\n解释：`myarray[1]` 访问的是第二个元素。\n\n## 修改数组值\n\n你可以通过索引更改数组元素的值。\n\n\
+  | `myarray[0] = \"Pear\";` |\n\n示例 3.5\n```java\nString myarray[] = { \"Apple\"\
+  , \"Banana\", \"Orange\" };\nmyarray[1] = \"Grape\";\nSystem.out.println(myarray[1]);\n\
+  ```\n输出: `Grape`\n解释：`myarray[1]` 的值已被更改为 \"Grape\"。\n\n## 遍历数组\n\n你可以使用 `for` 循环遍历数组中的所有元素。\n\
+  \n| `for (int i=0; i<myarray.length; i++) { ... }` |\n\n示例 3.6\n```java\nString\
+  \ myarray[] = { \"Apple\", \"Banana\", \"Orange\" };\nfor(int i=0; i<myarray.length;\
+  \ i++){\n    System.out.print(myarray[i] + \" \");\n}\n```\n输出: `Apple Banana Orange\
+  \ `\n解释：循环遍历了数组并打印了每个元素。\n\n\n\n\n\n### 示例 3.7\n```java\nfloat num = 10.2f;\nSystem.out.print(Math.round(num));\
+  \ // 返回一个整数\n```\n**输出：** `10`\n**解释：** `Math.round(num)` 返回 `10.2f` 的整数，结果为 `10`。\n\
+  \n### Ceil() & Floor()\n| `Math.ceil()` | `Math.floor()` |\n| :--- | :--- |\n\n\
+  - `Math.ceil()` 返回大于或等于其参数的最接近整数。\n- `Math.floor()` 返回小于或等于其参数的最接近整数。\n\n#### 示例\
+  \ 3.8\n```java\npublic class TryClass {\n    public static void main (String []\
+  \ args) {\n        float num = 9.5f;\n        System.out.println(\"Ceiling number\
+  \ is \"+Math.ceil ( num ) );\n        System.out.println(\"Flooring number is \"\
+  +Math.floor ( num ) );\n    }\n}\n```\n**输出：**\n```\nCeiling number is 10.0\nFlooring\
+  \ number is 9.0\n```\n**解释：** `Math.ceil( num )` 返回大于或等于 `9.5f` 的最接近整数，结果为 `10.0`。`Math.floor(\
+  \ num )` 返回小于或等于 `9.5f` 的最接近整数，结果为 `9.0`。\n\n### Max() & Min()\n| `Math.max()` |\
+  \ `Math.min()` |\n| :--- | :--- |\n\n- `Math.max()` 返回两个数字之间的较大者。\n- `Math.min()`\
+  \ 返回两个数字之间的较小者。\n\n#### 示例 3.9\n```java\npublic class TryClass {\n    public static\
+  \ void main (String [] args) {\n        int x = 100;\n        int y = 200;\n   \
+  \     System.out.println(\"Greater number is \"+Math.max (x, y) );\n        System.out.println(\"\
+  Less number is \"+Math.min (x, y) );\n    }\n}\n```\n**输出：**\n```\nGreater number\
+  \ is 200\nLess number is 100\n```\n**解释：** `Math.max(x, y)` 返回 `100` 和 `200` 之间的较大数，结果为\
+  \ `200`。`Math.min(x, y)` 返回 `100` 和 `200` 之间的较小数，结果为 `100`。\n\n### pow() & sqrt()\n\
+  | `Math.pow()` | `Math.sqrt()` |\n| :--- | :--- |\n\n- `Math.pow()` 返回第一个参数的到第二个参数的幂。\n\
+  - `Math.sqrt()` 返回参数的平方根。\n\n#### 示例 3.10\n```java\npublic class TryClass {\n  \
+  \  public static void main (String [] args) {\n        int num = 4;\n        System.out.println(\"\
+  Square number is \"+Math.pow (num,2) );\n        System.out.println(\"Square root\
+  \ is \"+Math.sqrt (num) );\n    }\n}\n```\n**输出：**\n```\nSquared number is 16.0\n\
+  Square root is 2.0\n```\n**解释：** `Math.pow(num,2)` 返回第一个参数 `4` 的到第二个参数 `2` 的幂，结果为\
+  \ `16.0`。`Math.sqrt(num)` 返回参数 `4` 的平方根，结果为 `2.0`。\n\n### Math.PI & random()\n|\
+  \ `Math.PI` | `Math.random()` |\n| :--- | :--- |\n\n- `Math.PI` 是一个存储 `pi` 值的常量。\n\
+  - `Math.random()` 生成一个 `0.0` 到 `1.0` 之间的数字。\n\n#### 示例 3.11\n```java\npublic class\
+  \ TryClass {\n    public static void main (String [] args) {\n        double pi\
+  \ = Math.PI ;\n        double ran = Math.random();\n        System.out.println(\"\
+  The PI value is\" + pi);\n        System.out.println(\"The random number is\" +\
+  \ ran);\n    }\n}\n```\n**输出：**\n```\nThe PI value is 3.141592653589793\nThe random\
+  \ number is 0.xxxx\n```\n**解释：** `Math.PI` 的值为 `3.141592653589793`。`Math.random()`\
+  \ 生成一个 `0.0` 到 `1.0` 之间的随机数。\n\n### 练习：通过循环语句为数组赋值\n在 Eclipse 中编写以下代码：\n```java\n\
+  package myPackage;\npublic class TestArray {\n    public static void main(String[]\
+  \ args) {\n        int[] myArray;\n        myArray = new int[10]; // 创建一个数组 \"myArray\"\
+  \n        for (int n = 0; n < myArray.length; n++){ // 运行 10 次\n            myArray[n]\
+  \ = n; // 将 \"n\" 的值设置为每个数组元素\n            System.out.print(myArray[n] + \"\");\
+  \ // 输出每个元素\n        }\n    }\n}\n```\n**输出：** `0 1 2 3 4 5 6 7 8 9`\n**解释：**\n\
+  - `myArray = new int[10]` 创建了一个长度为 10 的数组 `myArray`。\n- `myArray = new int[10]`\
+  \ 创建了一个数组 `myArray`。\n- `for (int n = 0; n < myArray.length; n++){` 运行 10 次。\n-\
+  \ `for (int n = 0; n < myArray.length; n++){` 运行 10 次。\n- `myArray[n] = n;` 将 \"\
+  n\" 的值设置为每个数组元素。\n- `myArray[n] = n;` 将 \"n\" 的值设置为每个数组元素。\n- `System.out.print(myArray[n]\
+  \ + \"\");` 输出每个元素。\n- `System.out.print(myArray[n] + \"\");` 输出每个元素。\n\n\n\n\n\n\
+  ### 示例 4.6\n```java\npublic class TryClass{\n    public static void main(String\
+  \ args[ ]) {\n        String Str = \"Very Good\";\n        System. out. println(Str.substring\
+  \ (5, 7) );  /* 从索引“5”到索引“7-1”提取某些字符 */\n    }\n}\n```\n**输出：** `Go`  \n**解释：**\
+  \ `Str.substring(5, 7)` 返回“Very Good”从索引“5”到索引“7-1”的子字符串。结果是“Go”。\n\n## 大小写转换\n\
+  `String.toUpperCase( )` 返回字符串的大写形式。  \n`String.toLowerCase( )` 返回字符串的小写形式。\n\n|\
+  \ `String.toUpperCase( );` `String.toLowerCase( );` |\n\n### 示例 4.7\n```java\npublic\
+  \ class TryClass{\n    public static void main(String args[ ]){\n        String\
+  \ Str = \"Very Good\";\n        System. out. println(Str.toUpperCase( ) );\n   \
+  \     System. out. println(Str.toLowerCase( ) );\n    }\n}\n```\n**输出：** `VERY GOOD`\
+  \  \n**输出：** `very good`  \n**解释：** `Str.toUpperCase( )` 将“Very Good”变为“VERY GOOD”。`Str.toLowerCase(\
+  \ )` 将“Very Good”变为“very good”。\n\n## 字符替换\n`str.replace( )` 可以更改字符串中的旧字符为新字符，并返回一个新字符串。\n\
+  \n| `str.replace(oldCharacter, newCharacter);` |\n\n### 示例 4.8\n```java\npublic\
+  \ class TryClass{\n    public static void main(String args[ ]){\n        String\
+  \ Str = \"Very Good\";\n        System. out. println( Str.replace (\"Good\", \"\
+  Well\") );\n    }  // 将“Good”替换为“Well”\n}\n```\n**输出：** `Very Well`  \n**解释：** `Str.replace(“Good”,\
+  \ “Well”)` 将字符串“Very Good”中的字符“Good”改为字符“Well”，并返回新字符串“Very Well”。\n\n## 字符串类型转换\n\
+  `Integer. toString(number)`可以将数字转换为字符串。  \n`String.trim(  )``可以移除字符串开头或结尾的空格。\n\n\
+  | `Integer. toString( number);` `String. trim(  );` |\n\n### 示例 4.9\n```java\npublic\
+  \ class TryClass{\n    public static void main(String args[ ]){\n        int num\
+  \ = 169;\n        String str = \"      Good        \";   // 注意空格\n        String\
+  \ str1 = Integer.toString ( num );    // 转换为字符串\n        String str2 = str.trim\
+  \ ( );     // 移除空格\n        System. out. println( str1+\" is a String\" );\n   \
+  \     System. out. println( str2+\"is trimmed\" );\n    }\n}\n```\n**输出：** `169\
+  \ is a String`  \n**输出：** `  Good is trimmed`  \n**解释：** `Integer. toString( num\
+  \ )` 将整数 169 转换为字符串 169。`str. trim( )` 将字符串“      Good      ”裁剪为字符串“Good”。\n\n##\
+  \ StringBuffer\n`StringBuffer` 代表一个可以动态更改的字符串。如果字符串值在程序运行时可能会变化，请使用 `StringBuffer`\
+  \ 而不是 `String`。\n\n| `StringBuffer str = new StringBuffer( );  str. insert ( );str.\
+  \ append ( );str.reverse ( );` |\n\n### 示例 4.10\n```java\nStringBuffer sb = new\
+  \ StringBuffer ( “abcde” );\nsb.insert ( 2, “123”);   // 输出：abc123des\nsb.append\
+  \ ( “456”);    // 输出：abc123de456\nsb.reverse ( );    // 输出：654ed321cba\n```\n**解释：**\
+  \ `StringBuffer sb = new StringBuffer ( “abcde” )` 创建了一个对象“sb”，其值为“abcde”。`sb.insert\
+  \ ( 2, “123”)` 在索引“2”处插入“123”。`sb.append ( “456”)` 在字符串末尾追加“456”。`str. reverse (\
+  \ )` 反转字符串的顺序。\n\n## 练习：判断对（错）\n### 比较字符串值\n启动 Eclipse > 选择“myPackage” > new > class\
+  \ > name > `TwoStrings` > Finish。在 Eclipse 中编写以下代码。\n\n```java\npackage myPackage;\n\
+  public class TwoStrings {\n    public static void main(String[] args) {\n      \
+  \  String s1, s2, s3, s4;\n        s1 = \"C++ in 8 Hours\";\n        s2 = \"C++\
+  \ in 8 Hours\";\n        s3 = \"Python in 8 Hours\";\n        s4 = s2;    // 分配字符串值\n\
+  \        System. out . println(s1. equals(s2));\n        System. out . println(s1.\
+  \ equals(s3));\n        System. out . println(s3. equals(s4));\n    }\n}\n```\n\
+  点击工具栏中的绿色三角形按钮运行程序并查看输出：\n**输出：** `true` `false` `false`  \n**解释：** `String s1 ,\
+  \ s2 , s3 , s4 ;` 声明了四个字符串变量。`s1 . equals(s2 )` 比较两个字符串的值，如果两个字符串的值相同，则返回 true。\n\
+  \n## 总结\n- `String s1 , s2 , s3 , s4 ;` 声明了四个字符串变量。`s1 . equals(s2 )` 比较两个字符串的值，如果两个字符串的值相同，则返回\
+  \ true。\n- `String.substring(start, end)` 返回从索引 start 到 end-1 的子字符串。\n- `Str.substring(5,\
+  \ 7)` 返回“Very Good”从索引“5”到索引“7-1”的子字符串。\n- `String.toUpperCase( )` 返回字符串的大写形式。\n\
+  - `String.toLowerCase( )` 返回字符串的小写形式。\n- `str.replace( )` 可以更改字符串中的旧字符为新字符。\n- `Integer.\
+  \ toString(number)`可以将数字转换为字符串。\n- `String.trim(  )``可以移除字符串开头或结尾的空格。\n- `StringBuffer`\
+  \ 代表一个可以动态更改的字符串。如果字符串值在程序运行时可能会变化，请使用 `StringBuffer` 而不是 `String`。\n- `StringBuffer.insert(\
+  \ )` 在指定索引处插入字符串。\n- `StringBuffer.append( )` 在字符串末尾追加字符串。\n- `StringBuffer.reverse(\
+  \ )` 反转字符串的顺序。\n- `String.equals( )` 比较两个字符串的值。\n- `String.length( )` 返回字符串的长度。\n\
+  - `String.charAt(index)` 获取指定索引处的字符。\n- `String.indexOf(substring)` 返回子字符串首次出现的索引。\n\
+  - `String.concat(string)` 将字符串连接到另一个后面。\n- `String.startsWith(prefix)` 检查字符串是否以指定前缀开头。\n\
+  - `String.endsWith(suffix)` 检查字符串是否以指定后缀结尾。\n- `String.split(regex)` 根据正则表达式分割字符串。\n\
+  - `String.replace(old, new)` 替换指定的子字符串。\n- `String.replaceAll(regex, replacement)`\
+  \ 使用正则表达式替换所有匹配项。\n- `String.replaceFirst(regex, replacement)` 使用正则表达式替换第一个匹配项。\n\
+  - `String.format(format, args)` 按照指定的格式格式化字符串。\n\n## 练习：判断对（错）\n### 比较字符串值\n启动 Eclipse\
+  \ > 选择“myPackage” > new > class > name > `TwoStrings` > Finish。在 Eclipse 中编写以下代码。\n\
+  \n```java\npackage myPackage;\npublic class TwoStrings {\n    public static void\
+  \ main(String[] args) {\n        String s1, s2, s3, s4;\n        s1 = \"C++ in 8\
+  \ Hours\";\n        s2 = \"C++ in 8 Hours\";\n        s3 = \"Python in 8 Hours\"\
+  ;\n        s4 = s2;    // 分配字符串值\n        System. out . println(s1. equals(s2));\n\
+  \        System. out . println(s1. equals(s3));\n        System. out . println(s3.\
+  \ equals(s4));\n    }\n}\n```\n点击工具栏中的绿色三角形按钮运行程序并查看输出：\n**输出：** `true` `false`\
+  \ `false`  \n**解释：** `String s1 , s2 , s3 , s4 ;` 声明了四个字符串变量。`s1 . equals(s2 )`\
+  \ 比较两个字符串的值，如果两个字符串的值相同，则返回 true。\n\n\n\n\n\n`obj = new Class-name( );` 为该类创建了一个名为\
+  \ `obj` 的新对象。`obj. variable;` 表示 `obj` 引用一个变量。`obj. function-name ( );` 表示 `obj`\
+  \ 引用一个方法。\n\n### 示例 5.5\n```java\nColor obj = new Color( ) ;  // 创建一个对象“obj”\nobj.\
+  \ c1= \"yellow\";  // 一个对象引用一个变量\nobj. c2=”purple”;     // 一个对象引用一个变量\nobj. brightness\
+  \ ( );  // 一个对象引用一个方法\n```\n解释：`Color obj = new Color;` 创建了一个名为 `obj` 的对象，然后引用变量\
+  \ `c1` 和 `c2`。`obj. brightness ( );` 调用了函数 `brightness ( );`（在上一页），并返回 `blue`。\n\
+  \n## 类与对象\n示例：\n```java\npublic class Color {\n    // 定义一个类\n    String c1, c2;\n\
+  \    void brightness ( ) { \n        System. out . println(\"This flower is \" +\
+  \ c1);\n        System. out . println(\"That flower is \" + c2);\n    }\n    public\
+  \ static void main(String[] args) {\n        Color obj = new Color( );      // 创建一个对象\n\
+  \        obj. c1= \"yellow. \";\n        obj. c2=\"purple. \";     // 引用\n     \
+  \   obj. brightness ( );      // 一个对象引用一个方法\n    }\n}\n```\n输出：\n```\nThis flower\
+  \ is yellow.\nThat flower is purple.\n```\n解释：`public class Color { }` 定义了一个类。`Color\
+  \ obj = new Color( );` 创建了一个对象。\n\n## 构造函数\n构造函数用于初始化变量。构造函数名与类名相同。\n\n```java\n\
+  class Class-name{\n    Class-name( ) { …}      // 用于初始化的构造函数\n}\n```\n`class Class-name{\
+  \ …}` 定义了一个类。`Class-name( ) { …}` 声明了一个构造函数。\n\n### 示例 5.6\n```java\npublic class\
+  \ Color {  // 创建一个类\n    String c1, c2;\n    Color ( ) {\n      c1=”yellow\";\n\
+  \      c2=”purple\"; \n    }  // 构造函数\n}\n```\n解释：`Color ( ) { c1=”yellow\"; c2=”purple\"\
+  ; }` 是构造函数。它将变量 `c1` 初始化为 `yellow`，将 `c2` 初始化为 `purple`，当对象创建时，构造函数会被自动调用。\n\n###\
+  \ 构造函数示例\n示例：\n```java\npublic class Color {\n   // 定义一个类\n    String c1, c2;\n\
+  \    Color ( ) {\n        c1=\"yellow\";\n        c2=\"purple\";\n    }    // 构造函数\n\
+  \    void brightness ( ) {\n        System. out . println(\"This flower is \" +\
+  \ c1);\n        System. out . println(\"That flower is \" + c2);\n    }\n    public\
+  \ static void main(String[] args) {\n        Color obj = new Color( );  // 创建一个对象，调用构造函数\n\
+  \        obj. brightness ( );\n    }\n}\n```\n输出：\n```\nThis flower is yellow.\n\
+  That flower is purple.\n```\n解释：`Color ( ) {c1=\"yellow\"; c2=\"purple\";}` 创建了一个构造函数。`Color\
+  \ obj = new Color( );` 创建了一个对象，并自动调用构造函数。\n\n### 重载\n重载意味着类中存在两个或多个同名方法，且它们的参数不同。\n\
+  \n### 示例 5.7\n```java\npackage correctPackage;\nclass Color{\n    String x,y;  //\
+  \ 声明类\n    Color ( String a, String b) { x=a; y=b; }  // 重载\n    Color ( ) {\n \
+  \     x=\"yellow \";\n      y=\"purple \";\n    }  // 重载\n    public static void\
+  \ main (String args[ ]) {\n        Color obj1=new Color(\"green \", \"orange \"\
+  );\n        Color obj2=new Color( );\n        System. out . println(obj1. x + obj2.\
+  \ y);\n    }\n}\n```\n输出：\n```\ngreenorange\nyellowpurple\n```\n解释：在这个类中，有两个名为 `Color(\
+  \ )` 且带有参数的方法，这被称为“重载”。\n\n### `this` 关键字 (1)\n`this` 用于表示当前对象。\n\n### 示例 5.8\n\
+  ```java\npackage correctPackage;\nclass MyClass {\n    int num;\n    void test(int\
+  \ num) {\n        this. num=num;  // “this”代表“obj”\n        System. out . println(\
+  \ this. num );\n    }\n    public static void main(String[ args) {\n        MyClass\
+  \ obj = new MyClass( );\n        obj. test(10);\n    }\n}\n```\n输出：\n```\n10\n```\n\
+  解释：在上方，当 `obj. test(10)` 调用 `test ( ) {` 方法时，`this` 代表对象 `obj`。\n\n### `this` 关键字\
+  \ (2)\n`this` 可以表示另一个同名的构造函数。\n\n### 示例 5.9\n```java\nclass MyClass {\n    int x,\
+  \ y;\n    MyClass ( ) {\n        this ( 100, 200 );  // ”this”表示 MyClass ( int a,\
+  \ int b){ }\n    }\n    MyClass ( int a, int b){\n        x=a;\n        y=b;\n \
+  \   }\n}\n```\n解释：`this ( 100, 200 )` 表示 `MyClass ( int a, int b){ }`。\n\n### 成员变量与\
+  \ 局部变量\n`this` 用于表示当前对象。\n\n成员变量定义在类中，它在当前类中工作。\n局部变量定义在方法中，它在当前方法中工作。\n\n### 示例\n\
+  示例：\n```java\npublic class Color {\n   // 定义一个类\n    String c1, c2;\n    Color (\
+  \ ) {\n        c1=\"yellow\";\n        c2=\"purple\";\n    }    // 构造构造函数\n    void\
+  \ brightness ( ) {\n        System. out . println(\"This flower is \" + c1);\n \
+  \       System. out . println(\"That flower is \" + c2);\n    }\n    public static\
+  \ void main(String[] args) {\n        Color obj = new Color( );  // 创建一个对象，调用构造函数\n\
+  \        obj. brightness ( );\n    }\n}\n```\n输出：\n```\nThis flower is yellow.\n\
+  That flower is purple.\n```\n解释：`Color ( ) {c1=\"yellow\"; c2=\"purple\";}` 创建了一个构造函数。`Color\
+  \ obj = new Color( );` 创建了一个对象，并自动调用构造函数。\n\n(抱歉，此处似乎出现了重复内容)\n\n[content]\n\n`obj\
+  \ = new Class-name( );` 为该类创建了一个名为 `obj` 的新对象。`obj. variable;` 表示 `obj` 引用一个变量。`obj.\
+  \ function-name ( );` 表示 `obj` 引用一个方法。\n\n### 示例 5.5\n```java\nColor obj = new Color(\
+  \ ) ;  // 创建一个对象“obj”\nobj. c1= \"yellow\";  // 一个对象引用一个变量\nobj. c2=”purple”;  \
+  \   // 一个对象引用一个变量\nobj. brightness ( );  // 一个对象引用一个方法\n```\n解释：`Color obj = new\
+  \ Color;` 创建了一个名为 `obj` 的对象，然后引用变量 `c1` 和 `c2`。`obj. brightness ( );` 调用了函数 `brightness\
+  \ ( );`（在上一页），并返回 `blue`。\n\n## 类与对象\n示例：\n```java\npublic class Color {\n    //\
+  \ 定义一个类\n    String c1, c2;\n    void brightness ( ) { \n        System. out . println(\"\
+  This flower is \" + c1);\n        System. out . println(\"That flower is \" + c2);\n\
+  \    }\n    public static void main(String[] args) {\n        Color obj = new Color(\
+  \ );      // 创建一个对象\n        obj. c1= \"yellow. \";\n        obj. c2=\"purple. \"\
+  ;     // 引用\n        obj. brightness ( );      // 一个对象引用一个方法\n    }\n}\n```\n输出：\n\
+  ```\nThis flower is yellow.\nThat flower is purple.\n```\n解释：`public class Color\
+  \ { }` 定义了一个类。`Color obj = new Color( );` 创建了一个对象。\n\n## 构造函数\n构造函数用于初始化变量。构造函数名与类名相同。\n\
+  \n```java\nclass Class-name{\n    Class-name( ) { …}      // 用于初始化的构造函数\n}\n```\n\
+  `class Class-name{ …}` 定义了一个类。`Class-name( ) { …}` 声明了一个构造函数。\n\n### 示例 5.6\n```java\n\
+  public class Color {  // 创建一个类\n    String c1, c2;\n    Color ( ) {\n      c1=”yellow\"\
+  ;\n      c2=”purple\"; \n    }  // 构造函数\n}\n```\n解释：`Color ( ) { c1=”yellow\"; c2=”purple\"\
+  ; }` 是构造函数。它将变量 `c1` 初始化为 `yellow`，将 `c2` 初始化为 `purple`，当对象创建时，构造函数会被自动调用。\n\n###\
+  \ 构造函数示例\n示例：\n```java\npublic class Color {\n   // 定义一个类\n    String c1, c2;\n\
+  \    Color ( ) {\n        c1=\"yellow\";\n        c2=\"purple\";\n    }    // 构造函数\n\
+  \    void brightness ( ) {\n        System. out . println(\"This flower is \" +\
+  \ c1);\n        System. out . println(\"That flower is \" + c2);\n    }\n    public\
+  \ static void main(String[] args) {\n        Color obj = new Color( );  // 创建一个对象，调用构造函数\n\
+  \        obj. brightness ( );\n    }\n}\n```\n输出：\n```\nThis flower is yellow.\n\
+  That flower is purple.\n```\n解释：`Color ( ) {c1=\"yellow\"; c2=\"purple\";}` 创建了一个构造函数。`Color\
+  \ obj = new Color( );` 创建了一个对象，并自动调用构造函数。\n\n### 重载\n重载意味着类中存在两个或多个同名方法，且它们的参数不同。\n\
+  \n### 示例 5.7\n```java\npackage correctPackage;\nclass Color{\n    String x,y;  //\
+  \ 声明类\n    Color ( String a, String b) { x=a; y=b; }  // 重载\n    Color ( ) {\n \
+  \     x=\"yellow \";\n      y=\"purple \";\n    }  // 重载\n    public static void\
+  \ main (String args[ ]) {\n        Color obj1=new Color(\"green \", \"orange \"\
+  );\n        Color obj2=new Color( );\n        System. out . println(obj1. x + obj2.\
+  \ y);\n    }\n}\n```\n输出：\n```\ngreenorange\nyellowpurple\n```\n解释：在这个类中，有两个名为 `Color(\
+  \ )` 且带有参数的方法，这被称为“重载”。\n\n### `this` 关键字 (1)\n`this` 用于表示当前对象。\n\n### 示例 5.8\n\
+  ```java\npackage correctPackage;\nclass MyClass {\n    int num;\n    void test(int\
+  \ num) {\n        this. num=num;  // “this”代表“obj”\n        System. out . println(\
+  \ this. num );\n    }\n    public static void main(String[ args) {\n        MyClass\
+  \ obj = new MyClass( );\n        obj. test(10);\n    }\n}\n```\n输出：\n```\n10\n```\n\
+  解释：在上方，当 `obj. test(10)` 调用 `test ( ) {` 方法时，`this` 代表对象 `obj`。\n\n### `this` 关键字\
+  \ (2)\n`this` 可以表示另一个同名的构造函数。\n\n### 示例 5.9\n```java\nclass MyClass {\n    int x,\
+  \ y;\n    MyClass ( ) {\n        this ( 100, 200 );  // ”this”表示 MyClass ( int a,\
+  \ int b){ }\n    }\n    MyClass ( int a, int b){\n        x=a;\n        y=b;\n \
+  \   }\n}\n```\n解释：`this ( 100, 200 )` 表示 `MyClass ( int a, int b){ }`。\n\n### 成员变量与\
+  \ 局部变量\n`this` 用于表示当前对象。\n\n成员变量定义在类中，它在当前类中工作。\n局部变量定义在方法中，它在当前方法中工作。\n\n### 示例\n\
+  示例：\n```java\npublic class Color {\n   // 定义一个类\n    String c1, c2;\n    Color (\
+  \ ) {\n        c1=\"yellow\";\n        c2=\"purple\";\n    }    // 构造构造函数\n    void\
+  \ brightness ( ) {\n        System. out . println(\"This flower is \" + c1);\n \
+  \       System. out . println(\"That flower is \" + c2);\n    }\n    public static\
+  \ void main(String[] args) {\n        Color obj = new Color( );  // 创建一个对象，调用构造函数\n\
+  \        obj. brightness ( );\n    }\n}\n```\n(抱歉，此处似乎出现了重复内容)\n\n\n\n\n\n`super\
+  \ ( argument );` 位于子类构造函数的第一行，用于调用父类的构造函数。\n\n### 示例 6.2\n```java\nclass super_class{\n\
+  \    super_class (int x, int y){   \n        // 构造函数\n        this. x=x;  \n   \
+  \     this . y=y;\n    }\n}\nclass sub_class extends super_class{\n    sub_class(int\
+  \ x, int y){   \n        // 构造函数\n        super ( x,y ); // 调用父类的构造函数\n    }\n}\n\
+  ```\n**解释：** `super ( x,y );` 调用了 `super` 类中的构造函数。\n\n## 重写 (Overriding)\n如果方法名和参数相同，子类的方法可以重写父类的方法。\n\
+  \n### 示例 6.3\n```java\nclass Super_class{\n    int test( int num ) { return num;\
+  \ } // 重写\n}\nclass Sub_class extends Super_class{\n    int test( int num ) { return\
+  \ 100 + num; } // 重写\n}\npublic class OverridingClass {\n    public static void\
+  \ main (String args[ ]){\n        Sub_class obj=new Sub_class( );\n        System.\
+  \ out. print( obj. test( 200 ));\n    }\n}\n```\n**输出：** 300\n**解释：** 当 `obj. test(\
+  \ 200 )` 调用 `int test( ){ }` 时，子类中的 `int test( ){ }` 重写了父类中的 `int test( ){ }`，因为它们具有相同的名称和相同的参数。\n\
+  \n## 重载 (Overloading) 与 重写 (Overriding)\n\n| 类型 | 描述 |\n| :--- | :--- |\n| 重载 |\
+  \ 方法名相同，参数不同，在同一个类中。 |\n| 重写 | 方法名相同，参数相同，位于父类和子类之间。 |\n\n### 示例 6.4 (重载)\n```java\n\
+  class Color{ \n    String x,y;  \n    Color ( String a, String b) { x=a; y=b; }\
+  \ // 重载\n    Color ( ) {  \n        x=”yellow\";  \n        y=”purple\";\n    }\
+  \ // 重载\n}\n```\n\n### 示例 6.5 (重写)\n```java\nclass super_class{\n    int test( int\
+  \ num ) { return num; } // 重写\n}\nclass sub_class extends super_class{\n    int\
+  \ test( int num ) { return 100 + num; } // 重写\n}\n```\n**解释：** 示例 1 是重载。示例 2 是重写。\n\
+  \n## 静态变量 (Static variable)\n`static variable` 被称为类变量，可以通过类或对象进行引用。\n- `非静态变量` 无法通过类引用。\n\
+  - `非静态变量` 只能通过对象引用。\n\n### 示例 6.6\n```java\nclass MyClass {\n    static int count=100;\
+  \ // 一个静态变量\n    public static void main (String args[ ]){\n        System. out.\
+  \ print( MyClass.count );\n        /* MyClass 直接引用静态变量 “count” */\n    }\n}\n```\n\
+  **输出：** 100\n**解释：** `static int count=100` 定义了一个静态变量。`MyClass. count` 意味着类 `MyClass`\
+  \ 直接引用了静态变量 `count`。注意，对象也可以引用静态变量。\n\n## 静态方法 (Static Method)\n`static method`\
+  \ 被称为类方法，可以通过类或对象进行调用。\n- `非静态方法` 无法通过类引用。\n- `非静态方法` 只能通过对象引用。\n\n### 示例 6.7\n\
+  ```java\nclass MyClass {\n    static int count( ) { return 100 ;} // 定义一个静态方法\n\
+  \    public static void main (String args[ ]){\n        System. out. print( MyClass.count(\
+  \ ) );\n        /* MyClass 直接调用静态方法 “count()” */\n    }\n}\n```\n**输出：** 100\n**解释：**\
+  \ `static int count( ) { return 100 }` 定义了一个静态方法。`MyClass. count( )` 意味着类 `MyClass`\
+  \ 直接调用静态方法 `count()`。注意，对象也可以调用静态方法。\n\n## final 变量 (final Variable)\n`final` 是一个关键字。\n\
+  `final+变量` 意味着该变量的值不能被。\n\n### 示例 6.8\n```java\nclass MyClass{\n    final int x\
+  \ =100; // 定义一个 final 变量\n    static void test()){ x = 200 ;} // 错误！ “x” 是 final\
+  \ 变量\n    public static void main (String args[ ]){\n        System. out. print(\
+  \ MyClass. test( ) );\n    }\n}\n```\n**解释：** `final int x =100` 定义了一个 final 变量\
+  \ `x`，其值为 100 且无法更改。`static void test( ) { x = 200;}` 试图修改 `x` 的值，但发生了错误。\n\n##\
+  \ final 方法 (final Method( ))\n`final` 是一个关键字。\n`final method( )` 意味着该方法不能被重写。\n\n\
+  ### 示例 6.9\n```java\nclass animal{\n    final void test ( ){ // 定义一个 final 方法\n\
+  \        System. out. print(“animal”);\n    }\n}\nclass dog extends animal {\n \
+  \   void test ( ){ // 错误！因为 test() 想要重写…\n        System. out. print(“dog”);\n \
+  \   }\n}\n```\n**解释：** (由于原文未提供解释，此处保持格式逻辑)\n\n## final 类 (final class)\n`final`\
+  \ 是一个关键字。\n`final class` 意味着该类不能被继承。\n\n### 示例 6.10\n```java\nfinal class animal\
+  \ {\n    // 定义一个 final 类\n    // 定义一些变量;\n    // 定义一些方法;\n}\nclass elephant extends\
+  \ animal { // 错误！无法继承\n}\n```\n**解释：** `final class` 定义了一个 final 类。`elephant extends\
+  \ animal` 无法继承。\n\n## 多态 (Polymorphism)\n多态是指对不同对象执行相同方法的能力。\n\n### 示例 6.11\n```java\n\
+  class Animal{\n    cry( ){ // 父类\n        System. out. print(\"crying...... \");\n\
+  \    }\n}\nclass Dog extends Animal{ // 子类\n    cry( ){ // 重写\n        System. out.\
+  \ print(\"Wow, Wow...... \");\n    }\n}\nclass Cat extends Animal{ // 子类\n    cry(\
+  \ ){ // 重写\n        System. out. print(\"Meow, Meow...... \");\n    }\n}\nclass\
+  \ PolymorphismDemo{\n    public static void main(String args[ ]){\n        Animal\
+  \ animalVar;\n        animalVar = new Dog( ); // 创建 dog 对象\n        animalVar. cry(\
+  \ ); // dog 调用 cry()\n        animalVar = new Cat( ); // 创建 cat 对象\n        animalVar.\
+  \ cry( ); // cat 调用 cry()\n    }\n}\n```\n**输出：**\nWow, Wow......\nMeow, Meow......\n\
+  **解释：** `animalVar = new Dog( )` 创建了一个 dog 对象，因此 `animalVar. cry( )` 调用了子类 `Dog`\
+  \ 中的 `cry()` 方法`animalVar = new Cat( )` 创建了一个 cat 对象，因此 `animalVar. cry( )` 调用了子类\
+  \ `Cat` 中的 `cry()` 方法。\n\n## 包与导入 (Package & Import)\n`package package-name;`\n\
+  `import package. class;`\n\n`package package-name` 创建或使用一个包。`import package. class`\
+  \ 导入一个包或其类。\n\n### 示例 6.12 (在 file1)\n```java\npackage myPackage;\n/* 创建包含两个类的包\
+  \ */\nclass MyClass1 {…}\nclass MyClass2 {…}\n```\n\n### 示例 6.13 (在 file2)\n```java\n\
+  package myPackage;\n// 使用包 “myPackage”\nimport myPackage. *; // 导入 myPackage 的所有类\n\
+  ```\n**解释：** `package myPackage` 创建了一个名为 `myPackage` 的包，包含两个类（file1 中的 `MyClass1`\
+  \ 和 `MyClass2`）。`import myPackage. * ` 将 file1 中包 `myPackage` 的所有类导入到 file2。注意 `package`\
+  \ 命令必须位于 `import` 命令的上方。\n\n## 构建包，导入类\n\n| 命令 | 描述 |\n| :--- | :--- |\n| `package\
+  \ myPackage;` | 构建一个包 |\n| `import anyClass;` | 导入一个类 |\n\n\n\n\n\n### 示例 6.14 (在\
+  \ Drive.java 中)\n\n```java\npackage myPackage;   // 创建一个包含类的包\npublic class Drive{\n\
+  \    public void getDistance (int mph, float time){\n        System. out. println(\"\
+  SPEED:\" + mph + \" MILES/HOUR\");\n        System. out. println(\"TIME:\" + time\
+  \ + \" HOURS\");\n        System. out. println(\"DISTANCE:\" + time*mph + \" MILES\"\
+  );\n    }\n}\n```\n\n### 示例 (在 TestDrive.java 中)\n\n```java\npackage myPackage;\
+  \    // 使用 \"myPackage\"\nimport myPackage.Drive;    // 导入 myPackage 中的类 \"Drive\"\
+  \npublic class TestDrive{\n    public static void main (String args[ ]) {\n    \
+  \    Drive myDrive = new Drive( );\n        myDrive. getDistance(120, 5);\n    }\n\
+  }\n```\n\n### 输出\n```\nSPEED: 120 MILES/HOUR\nTIME: 5 HOURS\nDISTANCE: 600 MILES\n\
+  ```\n\n### 解释\n- `package myPackage;` 在 `Drive.java` 中创建了一个包 `myPackage`。\n- `import\
+  \ myPackage. Drive;` 导入了 `myPackage` 中的类 `Drive`。\n- `Drive myDrive = new Drive(\
+  \ )` 可以在文件 `TestDrive` 中创建一个对象 `myDrive`，因为 `Drive` 类已经从 `Drive.java` 导入。\n- `myDrive.\
+  \ getDistance(120, 5);` 调用了 `Drive.java` 中的方法。\n\n**注意：** `package` 命令必须位于 `import`\
+  \ 命令之上。\n\n## 练习：继承\n\n## 继承示例\n启动 Eclipse > 选择 `myPackage` > new > class > name\
+  \ > `InheritanceDemo` > Finish（完成）。在 Eclipse 中编写以下代码。\n\n```java\npackage myPackage;\n\
+  class code1{\n    // 父类\n    int x, y;\n    code1(int a, int b){\n        // 构造函数\n\
+  \        x = a; y = b;\n    }\n}\nclass code2 extends code1{\n  // 子类\n    code2\
+  \ (int a, int b){\n        // 构造函数\n        super (a,b); // 调用父类中的构造函数 \n    }\n\
+  }\npublic class InheritanceDemo {\n    public static void main(String[] args) {\n\
+  \      // 主函数\n      int result;\n      code2 number = new code2(100, 200); /* 创建对象\
+  \ \"number\"，并自动调用 code2 构造函数 */\n      result = number. x + number. y;\n      System.\
+  \ out . println(\"Sum = \" + result);\n    }\n}\n```\n\n点击工具栏中的白色三角形按钮运行程序并查看输出：\n\
+  \n### 输出\n```\nSum = 300\n```\n\n### 解释\n- `class code1` 创建了一个超类 `code1`。\n- `code1(int\
+  \ a, int b){ }` 定义了一个构造函数。\n- `class code2 extends code1` 创建了扩展超类 `code1` 的子类 `code2`。\n\
+  - `code2 (int a, int b){ }` 定义了一个构造函数。\n- `super (a,b)` 调用超类中的构造函数，以便初始化变量 `x` 和\
+  \ `y`。\n- `public class InheritanceDemo` 创建了一个主类。\n- `code2 number = new code2(100,\
+  \ 200)` 创建了一个对象 `number`，自动调用构造函数 `code2( ){ }`并将两个参数 `100` 和 `200` 传递给构造函数，从而初始化变量\
+  \ `x` 和 `y`。\n- `member. x` 引用变量 `x`，其值为 `100`。\n- `member. y` 引用变量 `y`，其值为 `200`。\n\
+  \n## 总结\n- 类被子类扩展，这被称为继承。\n- 在子类中，`super` 用于调用父类的构造函数。\n- 如果方法名和参数相同，子类的方法可以重写超类的方法。\n\
+  - `static variable` 称为类变量，可以通过类或对象引用。\n- `Non static variable` 无法通过类引用。\n- `Non\
+  \ static variable` 只能通过对象引用。\n- `static method` 称为类方法，可以通过类或对象调用。\n- `Non static\
+  \ method` 无法通过类引用。\n- `Non static method` 只能通过对象引用。\n- `final+ variable` 意味着变量值不能修改。\n\
+  - `final method( )` 意味着该方法不能被重写。\n- `final class` 意味着该类不能被扩展。\n- 多态描述了对对象执行不同方法的能力。\n\
+  - `package package-name` 创建或使用包。\n- `import package. class` 导入包或其类。\n\n# 第 7 章：抽象与接口\n\
+  \n## 抽象\n`Abstract class` 当作父类使用，会被其子类扩展。子类的方法将重写抽象类的抽象方法。\n\n### 示例 7.1\n```java\n\
+  abstract class books{\n  // 定义抽象类\n  abstract int read( );  // 定义抽象方法\n}\nclass\
+  \ eBooks extends books{\n  // 扩展父类\n  int read ( ){ return 100; } // 重写方法\n}\n```\n\
+  \n### 解释\n- `abstract class books{ }` 定义了一个抽象类。\n- `abstract int read( )` 定义了一个抽象方法。\n\
+  - `class eBooks extends books { }` 意味着子类 `eBooks` 扩展了父类 `books`。\n- `int read (\
+  \ ) { }` 意味着该方法重写了父类中的抽象方法。\n\n### 抽象示例\n```java\npackage myPackage;\nabstract class\
+  \ Books{\n    // 创建抽象类\n    abstract void read();\n    // 创建抽象方法\n}\nclass eBooks\
+  \ extends Books{\n  // 扩展父类\n  void read(){\n    // 重写抽象方法\n    System. out . println(\"\
+  Overrides the abstract method! \");\n  }\n}\npublic class AbstractExample {\n  \
+  \  public static void main(String[] args){\n        eBooks obj =new eBooks();\n\
+  \        obj. read();\n    }\n}\n```\n\n### 输出\n```\nOverrides the abstract method!\n\
+  ```\n\n## 权限\nJava 有四种修饰符来定义成员：`default`、`public`、`private`、`protected`。\n\n| 类\
+  \ | default | public | private | protected |\n| :--- | :--- | :--- | :--- | :---\
+  \ |\n| 同一类 | V | V | V | V |\n| 同一包父类 | V | V | X | V |\n| 同一包子类 | V | V | X | V\
+  \ |\n| 不同包父类 | X | V | X | X |\n| 不同包子类 | X | V | X | V |\n\n\n\n\n\n`default member`\
+  \ 无法被不同的包访问。`public member` 可以被任何包和类访问。`private member` 无法被不同的类访问。`protected member`\
+  \ 可以被任何子类访问。\n\n### 默认成员 (Default Member)\n`default member` 无法被不同的包访问，注意包名必须与包所在的目录名称相同。`default\
+  \ member` 无任何修饰符。\n\n示例 7.2\n同一包中包含两个文件如下：\n(在 myPackage 的 file1 中)\n```java\npackage\
+  \ myPackage ;\npublic class ParentClass{\n  int num =100;  // 这是一个默认成员\n}\n```\n\
+  (在 myPackage 的 file2 中)\n```java\npackage myPackage ;\npublic class SubClass extends\
+  \ ParentClass{\npublic static void main(String[] args) {\n  SubClass s=new SubClass(\
+  \ );\n  System. out. print ( s.num );  /* s 引用了同包中的 num，可以！  */\n}}\n```\n**输出：**\
+  \ 100\n**解释：** `int num=100` 定义了一个默认成员。`s. num` 可以访问同包中的默认成员。\n\n### 公有成员 (Public\
+  \ Member)\n`public member` 可以被任何包或任何类访问，特别是在不同的包之间。\n\n示例 7.3\n不同包中包含两个文件如下：\n(在\
+  \ MyPackage 的 file1 中)\n```java\npackage myPackage ;\npublic class ParentClass{\n\
+  \  public int num=100;  // 这是一个公成员\n}\n```\n(在 NewPackage 的 file2 中)\n```java\n\
+  package newPackage ;\nimport myPackage. ParentClass;\npublic class SubClass extends\
+  \ ParentClass{\npublic static void main(String[] args) {\n  SubClass s=new SubClass(\
+  \ );\n  System. out. print ( s.num );  /* s 引用了不同包中的 num，可以！  */\n}}\n```\n**输出：**\
+  \ 100\n**解释：** `public int num=100` 定义了一个公成员。`s. num` 可以访问不同包中的公成员。\n\n### 私有成员\
+  \ (Private Member)\n`private member` 无法被不同的类访问。\n\n示例：\n```java\nclass MyClass {\n\
+  \  private MyClass( ){  // 私有构造函数\n    System. out . println(“这是一个私有方法! ”);\n}\n\
+  public class NewClass {\n  public static void main ( String args [ ] ) {\n    MyClass\
+  \ obj = new MyClass ( );  /* 错误！访问私有构造函数  */\n  }\n}\n```\n**输出：** ( 错误信息! )\n**解释：**\
+  \ `private MyClass( )` 定义了一个私有构造函数 `MyClass`。`new MyClass ( )` 尝试调用私有构造函数 `MyClass`，但发生了错误，因为它们位于不同的类。\n\
+  \n#### 私有示例 (Private Example)\n`private member` 可以被同一个类访问。\n\n示例：\n```java\npackage\
+  \ myPackage;\npublic class OurClass { \n  private int a = 100;  // 声明一个私有变量 \n \
+  \ private int b = 200;  // 声明一个私有变量\npublic void accessVariable(){\n    System.\
+  \ out . println(\"a = \" + a);  // 访问私有变量\n    System. out . println(\"b = \" +\
+  \ b);   // 访问私有变量 \n  }\n}}\npublic class PrivateExample {\n  public static void\
+  \ main ( String args [ ] ){\n    OurClass obj = new OurClass( ); /* 可以!，访问默认构造函数\
+  \ */\n    obj. accessVariable();\n  }\n}\n```\n**输出：**\na = 100\nb = 200\n\n###\
+  \ 受保护成员 (Protected Member)\n`protected member` 可以被任何子类访问。\n\n示例 7.5\n不同包中包含两个文件如下：\n\
+  (在 MyPackage 的 file1 中)\n```java\npackage myPackage;\npublic class ParentClass{\n\
+  \  // 父类\n  protected int num =100;  // 受保护成员\n}\n```\n(在 NewPackage 的 file2 中)\n\
+  ```java\npackage newPackage;\nimport myPackage. ParentClass;\npublic class SubClass\
+  \ extends ParentClass{\n  // 子类\n  public static void main(String[] args) {\n  \
+  \  SubClass s=new SubClass( );\n    System. out. print ( s.num );  // 访问受保护成员\n\
+  \  }\n}}\n```\n**输出：** 100\n**解释：** `protected int num =100` 定义了一个受保护成员。`s.num `\
+  \ 可以访问不同包中子类的受保护成员。\n\n### 接口 (Interface)\n`Interface` 是一个特殊的类，会被类实现。接口包含一个或多个空方法，这些方法将由类的方法实现。\n\
+  \n示例 7.6\n```java\ninterface books {\n  // 定义一个接口\n  int booknumber( );     // 定义一个空方法\n\
+  }\nclass eBooks implement books {\n  // 实现接口\n  public int booknumber ( ) {  //\
+  \ 实现空方法\n    return 100;\n  }\n}\n```\n**解释：** `interface books` 定义了一个名为 `books`\
+  \ 的接口。`int booknumber( )` 定义了一个空方法 `booknumber`。`class eBooks implement books{}`\
+  \ 意味着类 `eBooks` 实现 `books` 接口。`public int booknumber( ){` 实现了 `booknumber( )`。\n\
+  \n#### 接口示例 (Interface Example)\n示例：\n```java\npackage myPackage;\ninterface Books{\n\
+  \  // 定义一个接口\n  public void booksNumbers();  // 定义一个空方法\n}\nclass eBooks implements\
+  \ Books{\n  // 实现接口\n  public void booksNumbers(){  // 实现空方法\n    System. out .\
+  \ println(\"实现了空方法! \");\n  }\n}\npublic class InterfaceExample {\n  public static\
+  \ void main(String args[]) {\n    eBooks obj = new eBooks();\n    obj. booksNumbers();\n\
+  \  }\n}\n```\n**输出：** 实现了空方法!\n\n### 抽象与接口 (Abstract & Interface)\n\n| 抽象 | 解释 |\n\
+  | :--- | :--- |\n| ```java\nabstract class books{\n  // 定义一个抽象类\n  abstract int\
+  \ read( );  // 定义一个抽象方法\n}\nclass eBooks extends books{//继承父类\n  int read ( ){ return\
+  \ …; } // 重写抽象方法\n}\n``` | |\n\n| 接口 | 解释 |\n| :--- | :--- |\n| ```java\ninterface\
+  \ books {\n  // 定义一个接口\n  int booknumber( );     // 定义一个空方法\n}\nclass eBooks implement\
+  \ books { //实现接口\n  public int booknumber ( ) {  // 实现空方法\n    return …;\n  }\n\
+  }\n``` | |\n\n\n\n\n\n## 初始化变量\n在创建对象时，需要一个构造函数来初始化变量。\n\n### 示例 7.7\n```java\n\
+  class Book {\n  // 创建一个类\n  public String title;\n  public int number;\n  public\
+  \ Book ( ) {\n    // 定义构造函数\n    title = “Learning Java ”;  // 初始化\n    number =\
+  \ 100;  // 初始化\n  }\n}\npublic class Publisher {\n  // 创建主类\n  public static void\
+  \ main ( String args [ ]) { //主方法\n    Book eBook = new Book ( );  // 创建对象\n   \
+  \ System. out. print( eBook. title + eBook. number);\n  }\n}\n```\n**输出:**\nLearning\
+  \ Java 100\n\n**解释:** `public Book ( ) { }` 是一个初始化变量的构造函数。\n\n## 另一个类\n主类可以使用另一个类来调用另一个方法。\n\
+  \n### 示例 7.8\n```java\nclass AnotherClass {\n    // 定义另一个类\n  public static void\
+  \ AnotherMethod( ){ // 方法\n    System. out. print ( “Very Good” );\n}\npublic class\
+  \ MainClass {\n  // 定义主类\n  public static void main (String args ]){ //主方法\n   \
+  \ AnotherClass.AnotherMethod( ); // 调用另一个方法\n  }\n}\n```\n**输出:**\nVery Good\n\n\
+  **解释:** `AnotherClass.AnotherMethod( )` 使用另一个类调用方法。\n\n## 练习：Max & Min\n\n### 示例\n\
+  启动 Eclipse > 选择 “myPackage” > 新 > 类 > `AbstractDemo` > 完成。\n在 Eclipse 中编写以下代码：\n\
+  \n```java\npackage myPackage;\nabstract class A {\n  // 定义抽象类\n  abstract int max\
+  \ (int x, int y); // 定义抽象方法\n  int min(int x, int y);\n}\nclass B extends A {\n\
+  \  // 继承父类\n  int max (int x, int y){\n  // 重写抽象方法\n  return x>y?x:y;\n}}\npublic\
+  \ class AbstractDemo {\npublic static void main(String[] args) {\nA a;\nB b=new\
+  \ B();\nint max=b. max(100, 200);\nint min=b. min(100, 200);\nSystem. out.println(\"\
+  Max=\"+max);\nSystem. out.println(\"Min=\" +min);\n}}\n```\n点击工具栏中的白色三角形运行程序并查看输出：\n\
+  **输出:**\nMax = 200\nMin = 100\n\n**解释:**\n- `abstract class A{ }` 定义了一个抽象类。\n- `abstract\
+  \ int max( )` 定义了一个抽象方法。\n- `class B extends A { }` 表示子类继承父类 `A`。\n- `int max (\
+  \ ) {` 表示子类重写了父类中的抽象方法。\n\n### 示例\n启动 Eclipse > 选择 “myPackage” > 新 > 类 > 名称 `InterfaceDemo`\
+  \ > 完成。\n在 Eclipse 中编写以下代码：\n\n```java\npackage myPackage;\ninterface myInterface\
+  \ {\n    // 定义接口\n  public void compareNumbers (int num1, int num2); /* 定义方法 */\n\
+  }\nclass MaxNum implements myInterface {\n  // 实现接口\n  public void compareNumbers\
+  \ (int num1, int num2){\n  /* 实现方法 */\n  if (num1>=num2)\n    System. out.println(\"\
+  Two numbers are: \"+num1+\" \"+num2);\n  else\n    System. out.println(\"Maxmum\
+  \ is:\"+num1);\n}\nclass MinNum implements myInterface {\n// 实现接口\n  public void\
+  \ compareNumbers (int num1, int num2){\n  /* 实现方法 */\n  if (num1<=num2)\n    System.\
+  \ out.println(\"Two numbers are: \"+num1+\" \"+num2);\n  else\n    System. out.println(\"\
+  Minmum is:\"+num2);\n}}\npublic class InterfaceDemo {\npublic static void main(String[]\
+  \ args) {\nMaxNum maxObject = new MaxNum();\nmaxObject.compareNumbers(100, 120);\n\
+  MinNum minObject = new MinNum();\nminObject.compareNumbers(60, 80);\n}}\n```（注：此处原文代码逻辑存在多处括号未闭合错误，翻译已按原样保留）\n\
+  点击工具栏中的白色三角形运行程序并查看输出：\n**输出:**\nTwo numbers are: 100 & 120\nMaxmum is:120\nTwo\
+  \ numbers are: 60 & 80\nMinmum is:60\n\n**解释:**\n- `interface myInterface` 定义了一个名为\
+  \ `myInterface` 的接口。\n- `void compareNumbers ( )` 定义了接口中的方法。\n- `class MaxNum implements\
+  \ myInterface { }` 表示类 `MaxNum` 实现了接口 `myInterface`。\n- `class MinNum implements\
+  \ myInterface { }` 表示类 `MinNum` 实现了接口 `myInterface`。\n- `public void compareNumbers(\
+  \ )` 实现了接口中的方法。\n\n## 总结\n抽象类作为父类，会被其子类扩展。子类的方法将重写抽象类的抽象方法。\nJava 有四种修饰符来定义成员：`default`、`public`、`private`,\
+  \ `protected`。\n- `default` 成员不能被不同的包访问，注意包名必须与目录名相同。\n- `default` 没有修饰符。\n- `public`\
+  \ 成员可以被任何包或任何类访问，尤其是不同的包。\n- `private` 成员不能被不同的类访问。\n- `private` 成员可以被同类访问。\n- `protected`\
+  \ 成员可以被子类访问。\n接口是一个特殊的类，会被类实现。接口包含一个或多个方法，会被类实现。\n\n# 第 8 章：异常\n异常是在运行过程中发生的错误，破坏命令的正常流。\n\
+  \n### 示例 8.1\n```java\nint a=10, b=0;\nc = a/b; // 错误！因为 “b” 是 0\nSystem. out. print(\
+  \ c );\n```\n**输出:**\njava.lang.ArithmeticException: / zero\n\n**解释:** `c = a/b`\
+  \ 发生了，因为 `b` 是 0。\n\n### 示例 8.2\n```java\nint a=10, b=0;\ntry {\n  c = a/b;\n} catch\
+  \ ( ArithmeticException e ) {\n  // 处理异常\nSystem. out. print (\" Divided By Zero\
+  \ \");\n}\n```\n**输出:**\nDivided By Zero\n\n**解释:** `try-catch` 可以捕获 `ArithmeticException`。\n\
+  \n### 示例 8.3\n```java\nint a[] = new int [10]; // 最后一个索引是 9\na[10]=100; // 错误！因为索引越界\n\
+  System. out. print ( a[10] );\n```\n**输出:**\njava.lang.ArrayIndexOutOfBoundsException:\
+  \ 10\n\n**解释:** `try{...}` 包含 `a[10]`，并导致了异常。\n\n### 示例 8.4\n```java\nchar ch =\
+  \ \"ABC\". charAt(100); // 错误！索引越界\nSystem. out. print ( ch );\n```\n**输出:**\njava.lang.StringIndexOutOfBoundsException:\
+  \ 100\n\n**解释:** `try{...}` 包含 `“ABC”.charAt(100)` 并导致了异常，因为 `“ABC” 的长度为 3，没有第 100\
+  \ 个字符。\n\n## finally 命令\ntry-catch 块后面可以跟一个 `finally` 命令，它总是最后执行的。\n\n### 示例 8.5\n\
+  ```java\npublic class ExceptionSample {\npublic static void main (String args [\
+  \ ]) {\n  try {\n    char ch = \"ABC\". charAt(100); // 错误！\n  } catch (IndexOutOfBoundsException\
+  \ e) {\n    System. out. print ( \"Character index out of bounds. \" );\n  }\n \
+  \ finally {\n    System. out.print(\"The End\");\n  }  // 必须执行\n}}\n```\n**输出:**\n\
+  Character index out of bounds. The End\n\n**解释:** `“finally { System. out.print(“The\
+  \ End”); }”` 必须执行。\n\n## 抛出异常\n任何程序都可以准备好手动抛出自己的异常。\n\n```java\nthrow new exception\
+  \ ( “exception message”);\n```\n\n\n\n\n\n`throw` 用于手动抛出异常和错误消息。`e.getMessage()`\
+  \ 可以显示错误消息。\n\n### 示例 8.6\n```java\npublic class ExceptionSample {\n    public static\
+  \ void main (String args []) {\n        try {\n            int a[] = new int[10];\
+  \ // 最后元素是 a[9]，没有 a[10] .\n            if ( a[10] >0 ) throw new ArrayIndexOutOfBoundsException(\"\
+  Error\"); // throw\n        } catch ( ArrayIndexOutOfBoundsException e) {\n    \
+  \        System. out. print (\"Error index:\"+e. getMessage())); // alert\n    \
+  \    }\n    }\n}\n```\n**输出：**\n`Error index: 10`\n\n**解释：**\n`throw new exception(\"\
+  …\")` 可以抛出一个异常。抛出 `Exception`。任何方法都可以准备好手动抛出自己的异常。`e.getMessage()` 显示错误消息。\n\n|\
+  \ `method()` 出异常 {…}` |\n\n### 示例 8.7\n```java\npublic class ExceptionSample {\n\
+  \    public static void main (String args []) {\n        try {\n            int\
+  \ b = 0;\n            calculate( b ); //调用函数，发生了异常！\n        } catch( Exception\
+  \ e) {\n            System. out.println(\"The error is\"+ e. getMessage()));\n \
+  \       }\n    }\n    public static int calculate( int num) throws ArithmeticException\
+  \ {\n        // 手动抛出异常\n        int a=10, c;\n        c = a/num; // num 为 0，错误！\n\
+  \        return c;\n    }\n}\n```\n**输出：**\n`(The error is: / by zero. )`\n\n**解释：**\n\
+  `int calculate( int num) throws ArithmeticException` 抛出一个异常。`e.getMessage()` 显示错误消息。\n\
+  \n## File 类\n`File` 类用于显示文件的属性、检查文件是否存在、可写、可读、重命名文件……\n\n| `File f = new File (file-name);`\
+  \ // 创建文件对象 |\n| `f.exists();` // 检查是否存在 |\n| `f.canRead();` // 检查是否可读 |\n| `f.canWrite();`\
+  \ // 检查是否可写 |\n| `f.isFile();` // 检查是否是文件 |\n\n### 示例 8.8\n```java\nFile f = new\
+  \ File ( MyFile );\nif (f.exists( )) {\n    System. out.println(\"Exists:\"+ f.exists()\
+  \ ); // Exists: true\n    System. out.println(\"Can read:”+ f.canRead()); // Can\
+  \ read: true\n    System. out.println(\"Can write:”+ f.canWrite()); // Can write:\
+  \ false\n    System. out.println(\"Is file:”+ f.isFile()); // Is file: true\n}\n\
+  ```\n**解释：**\n以上所有方法都返回 `true` 或 `false`。\n\n## FileOutputStream\n`FileOutputStream`\
+  \ 类用于处理输出流。\n\n| `FileOutputStream fout = new FileOutputStream (file-name);` |\n\
+  | `System. in. read();` // 读取输入的字符 |\n| `fout. write();` // 将字符写入文件 |\n\n`new FileOutputStream\
+  \ (file-name)` 创建一个输出流。`System. in.read()` 从键盘读取输入的字符。`fout.write()` 将字符写入文件。\n\n\
+  ### 示例 8.9\n（在同一项目文件夹中准备一个空文件 `MyFile.txt`，以及以下 Java 文件 `OutputFile.java`）\n```java\n\
+  package myPackage;\nimport java.io.*;\npublic class OutputFile {\n    public static\
+  \ void main(String[] args) {\n        char ch;\n        int number;\n        try\
+  \ {\n            FileOutputStream fout = new FileOutputStream(\"MyFile. txt\");\n\
+  \            System. out.println(\"Please input some words, finish with # key and\
+  \ enter:\");\n            while((ch = (char)System. in.read()) != '#') /*从键盘读取输入的字符*/\n\
+  \                fout.write(ch); // 将字符写入文件\n            fout.close();\n       \
+  \ } catch(FileNotFoundException e) {\n            System. err.println(e);\n    \
+  \    } catch(IOException e) {\n            System. err.println(e);\n        }\n\
+  \    }\n}\n```\n（运行程序，并在键盘上输入“C++ is very good!”）\n**输出：**\n`请检查 MyFile. txt，你会发现内容是\
+  \ “C++ is very good!”.`\n\n**解释：**\n`fout` 是一个输出流对象。`System. in.read()` 从键盘读取字符。`fout.write(ch)`\
+  \ 将字符写入文件。当你查看 `MyFile.txt` 时，其内容为：`C++ is very good`。\n\n## FileInputStream\n`FileInputStream`\
+  \ 类用于处理输入流。\n\n| `FileInputStream fin = new FileInputStream (file-name);` |\n| `fin.\
+  \ read();` // 读取文件内容 |\n\n`new FileInputStream (file-name)` 创建一个输入流。`fin.read()`\
+  \ 读取文件内容。\n\n### 示例 8.10\n（假设同一项目文件夹中 `MyFile.txt` 内容为“C++ is very good!”，以及以下 Java\
+  \ 文件 `InputFile.java`）\n```java\npackage myPackage;\nimport java.io.*;\npublic class\
+  \ InputFile {\n    public static void main(String[] args) {\n        char ch;\n\
+  \        int number;\n        try {\n            FileInputStream fin = new FileInputStream(\"\
+  MyFile.txt\");\n            while((number=fin.read()) != -1) // 读取文件\n         \
+  \       System. out.print((char)number); // 转换为字符\n            fin.close();\n  \
+  \      } catch(FileNotFoundException e) {\n            System. err.println(e);\n\
+  \        } catch(IOException e) {\n            System. err.println(e);\n       \
+  \ }\n    }\n}\n```\n**输出：**\n`C++ is very good!`\n\n**解释：**\n`fin` 是一个输入流对象。`fin.read()`\
+  \ 读取文件内容。`-1` 表示文件结束。\n\n## 创建线程\n线程可以用于同时执行多个任务。每个线程代表一个子任务。创建线程有两种方法。\n\n####\
+  \ 方法一\n```java\npublic class ThreadDemo extends Thread { // 继承\n    public void\
+  \ run() {\n        // 线程体\n    }\n    public static void main(String args[]) {\n\
+  \        ThreadDemo myThread = new ThreadDemo();\n        myThread.start(); // 启动线程\n\
+  \    }\n}\n```\n**解释：**\n方法一使用了 `Thread` 类。`run()` 在线程启动时自动运行。`myThread = new ThreadDemo()`\
+  \ 创建了一个线程对象 `myThread`。`start()` 启动线程。\n\n#### 方法二\n```java\nclass ThreadDemo implements\
+  \ Runnable { // 实现\n    public void run() {\n        // 线程体\n    }\n    public static\
+  \ void main(String args[]) {\n        Thread myThread = new Thread(new ThreadDemo());\n\
+  \        myThread.start(); // 启动线程\n    }\n}\n```\n\n\n\n\n## 解析\n方法二使用了 `implements\
+  \ Runnable` 接口。线程启动时，`run()` 会自动运行。`new Thread(new ThreadDemo())` 创建了一个线程对象 `myThread`。`start()`\
+  \ 启动线程。\n\n## 继承 Thread (示例 8.11)\n\n```java\npublic class ThreadDemo extends Thread\
+  \ { \n    // extends\n    public void run() {\n        // 线程体\n        for(int i\
+  \ = 0; i < 3; i++) {\n            System.out.println(\"Thread! \");\n        }\n\
+  \    }\n    public static void main(String[] args) {\n        ThreadDemo myThread\
+  \ = new ThreadDemo();\n        myThread.start(); // start thread\n    }\n}\n```\n\
+  **输出：**\n```\nThread!\nThread!\nThread!\n```\n**解析：**\n线程启动时，`run()` 会自动运行。`myThread\
+  \ = new ThreadDemo();` 创建了一个线程对象 `myThread`。`start()` 启动线程。\n\n## 实现 Runnable (示例\
+  \ 8.12)\n```java\nclass ThreadDemo implements Runnable { \n    // implements\n \
+  \   public void run() {\n        // 线程体\n        for(int i = 0; i < 3; i++) {\n\
+  \            System.out.println(\"Thread! \");\n        }\n    }\n    public static\
+  \ void main(String[] args) {\n        Thread myThread = new Thread(new ThreadDemo());\n\
+  \        myThread.start(); // start thread\n    }\n}\n```\n**输出：**\n```\nThread!\n\
+  Thread!\nThread!\n```\n**解析：**\n线程启动时，`run()` 会自动运行。`myThread = new Thread(new ThreadDemo())`\
+  \ 创建了一个线程对象 `myThread`。`start()` 启动线程。\n\n## 多线程 (示例 8.13)\n```java\nclass ThreadDemo\
+  \ extends Thread {\n    public ThreadDemo(String threadName) {\n        super(threadName);\
+  \ // 初始化线程名\n    }\n    public void run() {\n        // 线程体\n        for(int i =\
+  \ 0; i < 2; i++) {\n            System.out.println(getName() + \" running! \");\n\
+  \        }\n    }\n}\npublic class UseThread {\n    public static void main(String[]\
+  \ args) {\n        ThreadDemo myThread1 = new ThreadDemo(\"1st thread\");\n    \
+  \    ThreadDemo myThread2 = new ThreadDemo(\"2nd thread\");\n        ThreadDemo\
+  \ myThread3 = new ThreadDemo(\"3rd thread\");\n        myThread1.start(); // start\
+  \ thread\n        myThread2.start(); // start thread\n        myThread3.start();\
+  \ // start thread\n    }\n}\n```\n**输出：**\n```\n1st thread running!\n1st thread\
+  \ running!\n2nd thread running!\n2nd thread running!\n3rd thread running!\n3rd thread\
+  \ running!\n```\n**解析：**\n`super(threadName)` 通过 `Thread` 类构造函数初始化线程名。`getName()`\
+  \ 返回线程名。线程启动时，`run()` 会自动运行。`new myThread(\"1st thread\")` 创建了一个名为 `1st Thread`\
+  \ 的线程对象。`myThread1.start();` 启动线程 `myThread1`。\n\n## 线程的方法\n- `thread.start()` 启动线程。\n\
+  - `thread.stop()` 停止线程。\n- `thread.sleep()` 让线程休眠一段时间。\n- `thread.wait()` 让线程处于等待状态。\n\
+  - `thread.notify()` 唤醒正在等待的线程。\n- `thread.yield()` 让相同优先级的其他线程运行。\n- `thread.isAlive()`\
+  \ 测试当前线程存活。\n- `thread.currentThread()` 获取当前线程。\n- `thread.interrupt()` 停止“阻塞”的线程。\n\
+  - `thread.suspend()` 让线程暂停。\n- `thread.resume()` 重新启动线程。\n- `thread.join()` 在其他线程结束后后运行此线程。\n\
+  \n**例如：**\n```java\nif(time_to_stop){\n    thread.currentThread().stop(); // 停止当前线程\
+  \ .\n}\n```\n\n## 线程示例 (示例 8.14)\n```java\nclass ThreadDemo implements Runnable\
+  \ {\n    public void run() {\n        // 线程体\n        ……\n        wait(); // 让线程处于等待状态\
+  \ .\n        ……\n    }\n}\nclass TextThread {\n    public static void main(String\
+  \ args[]) {\n        Thread myThread = new Thread(new ThreadDemo());\n        myThread.start();\
+  \ // start thread\n        Thread.sleep(1000); // 让线程休眠 1 秒\n        notify(); //\
+  \ 唤醒正在等待的线程\n        Thread.yield(); /* 让相同优先级的其他线程优先运行 . */\n    }\n}\n```\n**解析：**\n\
+  `wait()` 让当前线程等待。`new Thread(new ThreadDemo())` 创建一个线程。`myThread.start()` 启动线程。`Thread.sleep(1000)`\
+  \ 让线程休眠 1000 毫秒。`notify()` 唤醒正在等待的线程。`Thread.yield()` 让相同优先级的线程优先运行。\n**注意：** 现在不建议使用\
+  \ `suspend()` 和 `resume()`。\n\n## 练习：OutOfRangeException 示例\n启动 Eclipse > 选择 \"\
+  myPackage\" > new > class > name > `ArrayOutRange` > 完成。在 Eclipse 中编写以下代码。\n\n```java\n\
+  package myPackage;\npublic class ArrayOutRange {\n    public static void main(String[]\
+  \ args) {\n        try {\n            int n = 0;\n            String color[] = {\"\
+  Red\", \"Yellow\", \"Green\"};\n            while (n < 4) {\n                System.out.println(color[n]);\n\
+  \                n++;\n            }\n        } catch (ArrayIndexOutOfBoundsException\
+  \ e) {\n            System.out.println(\"Exception Occurs!\");\n        }\n    }\n\
+  }\n```\n点击运行 按钮运行程序，可以看到输出：\n**输出：**\n```\nRed\nYellow\nGreen\nException Occurs!\n\
+  ```\n\n## 步骤说明\n- **第 1 步：多线程**：启动 Eclipse > 选择 \"myPackage\" > new > class > name\
+  \ > `ArrayOutRange` > 完成。\n- **第 2 步：包**：`ThreadClass` 用于包含各种...\n- **第 3 步：类**：创建\
+  \ `ThreadClass`。\n- **第 4 步：编写 Java 代码**：\n```java\npackage myPackage;\npublic class\
+  \ ThreadClass {\n    public static void main(String[] args) {\n        ThreadDemo\
+  \ myThread1 = new ThreadDemo(\"Thread One\");\n        ThreadDemo myThread2 = new\
+  \ ThreadDemo(\"Thread Two\");\n        myThread1.start(); // start thread\n    \
+  \    myThread2.start(); // start thread\n    }\n}\n\nclass ThreadDemo extends Thread\
+  \ {\n    public ThreadDemo(String str) {\n        super(str); // 初始化线程名\n    }\n\
+  \    public void run() {\n        // 线程体\n        for(int i = 0; i < 2; i++) {\n\
+  \            try {\n                sleep((int)(Math.random() * 1500)); // 让线程休眠\n\
+  \            } catch (InterruptedException e) {}\n            System.out.println(getName()\
+  \ + \" running!\");\n        }\n    }\n}\n```\n- **第 5 步：运行程序**：点击运行 按钮运行程序，你可以看到输出：\n\
+  **输出：**\n```\nThread One running!\nThread Two running!\nThread One running!\nThread\
+  \ Two running!\n```\n**解析：** `thread1.start()` 和 `thread2.start()` 交替运行。`sleep((int)(Math.random()\
+  \ * 1500))` 让一个线程休眠而另一个在运行。\n\n## 总结\n异常是程序运行发生的错误，会破坏正常执行流。`try-catch` 可以捕获并处理异常。当数组索引越界时，会发生异常。当字符索引越界时，会发生异常。`try-catch`\
+  \ 块后面可以跟 `finally` 命令，它总是会被执行。`throw` 用于手动抛出异常和错误信息。任何方法都可以准备好手动抛出自己的异常。`e.getMessage()`\
+  \ 显示错误信息。File 类用于显示文件的属性，检查文件是否存在、可写、可读、重命名文件。`new FileOutputStream(file-name)`\
+  \ 创建输出流。`System.in.read()` 从键盘读取字符。`fout.write()` 将字符写入文件。`new FileInputStream(file-name)`\
+  \ 创建输入流。`fin.read()` 读取文件内容。线程可以并发执行多个任务。每个线程代表一个子任务。创建线程有两种：1.继承 Thread；2. 实现 Runnable。\n\
+  \n## 测试与答案\n### 测试\n请选择正确答案\n\n**(1)**\n```java\npackage myPackage;\npublic class\
+  \ Calculation {\n    public static void main(String args[]) {\n        int a = 100,\
+  \ b = 5;\n        fill in here c = a/b*10; // \"c\" 的数据类型\n        System.out.print(\"\
+  C = \" + c);\n    }\n}\n```\nA. var\nB. string\nC. boolean\nD. int\n\n**(2)**\n\
+  ```java\npackage myPackage;\npublic class WhileStatement {\n    public static void\
+  \ main(String[] args) {\n        int n = 1;\n        int sum = 0;\n        fill\
+  \ in here (n <= 100) { // 循环语句\n            sum += n;\n            n++;\n      \
+  \  }\n        System.out.println(\"Sum = \" + sum);\n    }\n}\n```\n\n\n\n\n\n1.\
+  \ A. `for` B. `while` C. `do` D. `switch`\n\n(3)\n```java\npackage myPackage;\n\
+  public class TestArray {\n    public static void main(String[] args) {\n       \
+  \ int[] myArray;\n        myArray = fill in here int[10]; // 创建数组对象\n        for\
+  \ (int n = 0; n < myArray.length; n++){\n            myArray[n] = n;\n         \
+  \   System.out.print(myArray[n] + \"\");\n        }\n    }\n}\n```\nA. `array` B.\
+  \ `create` C. `new` D. `object`\n\n(4)\n```java\npackage myPackage;\npublic class\
+  \ TwoStrings {\n    public static void main(String[] args) {\n        fill in here\
+  \ s1, s2, s3, s4; // 声明四个变量\n        s1 = \"C++ in 8 Hours\";\n        s2 = \"C++\
+  \ in 8 Hours\";\n        s3 = \"Python in 8 Hours\";\n        s4 = s2;\n       \
+  \ System.out.println(s1.equals(s2));\n        System.out.println(s1.equals(s3));\n\
+  \        System.out.println(s3.equals(s4));\n    }\n}\n```\nA. `String` B. `var`\
+  \ C. `variable` D. `void`\n\n(5)\n```java\npackage myPackage;\npublic class Message\
+  \ {\n    String name, email, phone;\n    public fill in here (String theName, String\
+  \ theEmail, String thePhone){ // 创建构造函数\n        name = theName;\n        email\
+  \ = theEmail;\n        phone = thePhone;\n    }\n    void displayEmail() {\n   \
+  \     System.out.println(\"Email:\" + email);\n    }\n    void displayPhone() {\n\
+  \        System.out.println(\"Phone:\" + phone);\n    }\n    public static void\
+  \ main(String[] args) {\n        Message JACK = new Message (\"JACK\", \"JACK@xxx.xxx\"\
+  , \"678-xxx-9999\");\n        System.out.println(JACK.name);\n        JACK.displayEmail();\n\
+  \        Message ANDY = new Message (\"ANDY\", \"ANDY@xxx.xxx\", \"567-xxx-0000\"\
+  );\n        System.out.println(ANDY.name);\n        ANDY.displayPhone();\n    }\n\
+  }\n```\nA. `constructor` B. `function` C. `method` D. `Message`\n\n(6)\n```java\n\
+  package myPackage;\nclass code1{\n    int x, y;\n    code1(int a, int b){\n    \
+  \    x = a;\n        y = b;\n    }\n}\nclass code2 fill in here code1{ // 继承\n \
+  \   code2 (int a, int b){\n        super (a,b);\n    }\n}\npublic class InheritanceDemo\
+  \ {\n    public static void main(String[] args) {\n        int result;\n       \
+  \ code2 number = new code2(100, 200);\n        result = number.x + number.y;\n \
+  \       System.out.println(\"Sum = “ + result);\n    }\n}\n```\nA. `inheritance`\
+  \ B. `extend` C. `extends` D. `inherits`\n\n(7)\n```java\nfill in here class books{\
+  \ // 定义一个抽象类\n    fill in here int read( ); // 定义一个抽象方法\n}\nclass eBooks extends\
+  \ books{ // 继承父类\n    int read ( ){ return 100; } // 实现抽象方法\n}\n```\nA. `abstract`\
+  \ B. `interface` C. `void` D. `public`\n\n(8)\n```java\nfill in here books { //\
+  \ 定义一个接口\n    int booknumber( ); // 定义空方法\n}\nclass eBooks implement books { //\
+  \ 实现接口\n    public int booknumber ( ) { // 实现方法\n        return 100;\n    }\n}\n\
+  ```\nA. `abstract` B. `interface` C. `void` D. `public`\n\n(9)\n```java\npackage\
+  \ myPackage;\npublic class ArrayOutRange {\n    public static void main(String[]\
+  \ args) {\n        int n = 0;\n        fill in here color[]={\"Red\", \"Yellow\"\
+  , \"Green\"}; // 创建字符串数组\n        while(n < 4){\n            System.out.println(color[n]);\n\
+  \            n++;\n        }\n    }\n}\n```\nA. `String` B. `var` C. `variable`\
+  \ D. `void`\n\n(10)\n```java\npackage threadPackage;\npublic class ThreadClass {\n\
+  \    public static void main(String[] args) {\n        myThread thread1=new myThread(\"\
+  Thread One\");\n        myThread thread2=new myThread(\"Thread Two\");\n       \
+  \ thread1.fill in here ; // 启动 thread1\n        thread2.fill in here ; // 启动 thread2\n\
+  \    }\n}\nclass myThread extends Thread{\n    public myThread(String str) // 构造函数\n\
+  \        super(str);\n    } // 初始化线程\n    public void run(){\n        for(int I=0;\
+  \ I<2; I++){\n            System.out.println(getName()+ \" is running! \");\n  \
+  \          try{\n                sleep((int)(Math.random()*500));\n            }catch(InterruptedException\
+  \ e){ }\n        }\n        System.out.println(getName()+ \" completed! \");\n \
+  \   }\n}\n```\nA. `start()` B. `run()` C. `init()` D. `invoke()`\n\n(11)\n```java\n\
+  int a = 100;\nboolean result = a fill in here b; // 比较运算符\n```\nA. `==` B. `?` C.\
+  \ `=` D. `%=`\n\n(12)\n```java\npublic class TryClass{\n    public static void main\
+  \ (String args){\n        fill in here number=20; // 声明变量\n        switch(number)\
+  \ {\n            case 10: System.out.print(\"apple\");\n            case 20: System.out.print(\"\
+  banana\");\n            case 30: System.out.print(\"cherry\");\n            default:\
+  \ System.out.print(\"date\");\n        }\n    }\n}\n```\nA. `switch` B. `while`\
+  \ C. `do` D. `for`\n\n(13)\n```java\npublic class TryClass{\n    public static void\
+  \ main (String args){\n        fill in here x=100;\n        int y =200;\n      \
+  \  System.out.println(\"Greater is \"+ max(x, y));\n        System.out.println(\"\
+  Less is \"+ min(x, y));\n    }\n}\n```\nA. `Mathematics` B. `Arith` C. `Math` D.\
+  \ `Arithmetic`\n\n(14)\n```java\nStringBuilder sb = fill in here (“abc123” // 创建\
+  \ StringBuilder 对象\nsb.append(\"456\"); // 输出:abc123456\nsb.reverse( );\n```\nA.\
+  \ `new` B. `create` C. `class` D. `append`\n\n(15)\n```java\npackage correctPackage;\n\
+  class MyClass {\n    int num;\n    void test(int num) {\n        fill in here num;\
+  \ // 关键字表示当前对象\n        System.out.println(num);\n    }\n    public static void\
+  \ main(String[]) {\n        MyClass obj = newClass();\n        obj.test(10);\n \
+  \   }\n}\n```\nA. `this` B. `MyClass` C. `object` D. `super`\n\n(16)\n```java\n\
+  class MyClass {\n    fill in here count=100; // 可以可以直接通过类引用的变量\n    public static\
+  \ void main (String args[]){\n        System.out.print( MyClass.count );\n    }\n\
+  }\n```\nA. `final` B. `static` C. `dynamic` D. `abstract`\n\n(17)\n```java\nclass\
+  \ MyClass{\n    fill in here int x =100; // 定义值不能改变的变量\n    static void test( ){\
+  \ \n        x = 200;\n    } // 错误\n    public static void main (String args[]){\n\
+  \        System.out.print( MyClass.test( ) );\n    }\n}\n```\nA. `static` B. `private`\
+  \ C. `final` D. `void`\n\n(18)\n```java\npublic class ExceptionSample {\n    public\
+  \ static void main (String args {}) {\n        try {\n            int a=10, b=0,\
+  \ c;\n            c = a/b; // 错误\n            System.out.print ( c );\n        }fill\
+  \ in here ( ArithmeticException e) { // 处理异常\n            System.out.print (\" Divided\
+  \ By Zero \");\n        }\n    }\n}\n// 输出: Divided By Zero\n```\nA. `catch` B.\
+  \ `handle` C. `exception` D. `finally`\n\n(19)\n```java\nclass MyClass {\n    fill\
+  \ in here MyClass( ){ 设置不能被不同类访问的构造函数\n        System.out.print(“OK! ”);\n    }\n\
+  }\npublic class NewClass{\n    public static void main ( String args ) {\n     \
+  \   MyClass mc=new MyClass ( ); // 错误\n    }\n}\n```\nA. `public` B. `default` C.\
+  \ `protected` D. `private`\n\n(20)\n```java\npublic class ExceptionSample {\n  \
+  \  public static void main (String args {}) {\n        try {\n            int b\
+  \ = 0;\n            calculate( b );\n        }catch( Exception e) {\n          \
+  \  System.out.println(\"The error is\"+ e. getMessage( ));\n        }\n    }\n \
+  \   public static int calculate( int num) fill in here ArithmeticException {// 抛出一个异常\n\
+  \        int a=10, c;\n        c = a/num; // num 为 0，错误\n        return c;\n   \
+  \ }\n}\n```\n1. `throw` B. `throws` C. `exception` D. `finally`\n\n\n\n\n\n### (21)\
+  \ 字符串拼接\n```java\npublic class TryClass {\n    public static void main (String [\
+  \ ] args) {\n        int sum = 100 + 200;\n        String str = \"We love\" fill\
+  \ in here \"Java\"; //connect two strings\n        int incre = 10;\n        incre\
+  \ = ++ incre;\n        System. out. println ( sum ); // Output: 300\n        System.\
+  \ out. println ( str ); // Output: We love Java.\n        System. out. println (\
+  \ incre ); // Output: 11\n    }\n}\n```\nA. connect\nB. `&`\nC. join\nD. `+`\n\n\
+  ### (22) 循环结构\n```java\npublic class TryClass {\n    public static void main (String\
+  \ [ ] args) {\n        int x;\n        fill in here (x = 0; x <= 5; x++) {\n   \
+  \         System. out. print( x );\n        }\n    }\n}\n```\nA. `if`\nB. `do`\n\
+  C. `for`\nD. `while`\n\n### (23) 随机数\n```java\npublic class TryClass {\n    public\
+  \ static void main (String [ ] args) {\n        double pi = Math.PI ;\n        double\
+  \ ran = fill in here ( ); //creates a random number\n        System. out.println(\"\
+  The PI value is\" + pi);\n        System. out.println(\"The random number is\" +\
+  \ ran);\n    }\n}\n```\nA. `random`\nB. `Math.random`\nC. `At. random`\nC. `ran`\n\
+  \n### (24) 字符串长度属性\n```java\npublic class TryClass {\n    public static void main\
+  \ (String [ ] args) {\n        String str = \"This is a string\";\n        int length\
+  \ = str. fill in here ; //return the length of the string\n        System. out.println(\
+  \ \"The size of string is \" + length);\n    }\n}\n```\nA. `length()`\nB. `size()`\n\
+  C. `length`\nD. `size`\n\n### (25) 类与构造函数\n```java\npublic class fill in here {\n\
+  \    // define a class\n    String c1, c2;\n    Color ( ) {\n        c1=\"yellow\"\
+  ;\n        c2=\"purple\";\n    } // constructor\n    void brightness ( ) {\n   \
+  \     System. out .println(\"This flower is \" + c1);\n        System. out .println(\"\
+  That flower is \" + c2);\n    }\n    public static void main(String[] args) {\n\
+  \        Color obj = new Color( ); //create an object, call constructor\n      \
+  \  obj. brightness ( );\n    }\n}\n```\nA. `MyClass`\nB. `Class`\nC. `NewClass`\n\
+  D. `Color`\n\n### (26) super 关键字\n```java\nclass super_class {\n    super_class\
+  \ (int x, int y) {\n        // constructor\n        this. x=x;\n        this . y=y;\n\
+  \    }\n}\nclass sub_class extends super_class {\n    sub_class(int x, int y) {\n\
+  \        // constructor\n        fill in here ( x,y ); //calls the constructor in\
+  \ super class\n    }\n}\n```\nA. `super_class`\nB. `super`\nC. `sub_class`\nD. `sub`\n\
+  \n### (27) 抽象类\n```java\nabstract class Books {\n    //create an abstract class\n\
+  \    abstract void read(); //create an abstract method\n}\nclass eBooks extends\
+  \ Books {\n    void fill in here () {\n        //override the abstract method\n\
+  \        System. out .println(\"Overrides the abstract method! \");\n    }\n}\n\
+  public class AbstractExample {\n    public static void main(String[] args) {\n \
+  \       eBooks obj =new eBooks();\n        obj. read();\n    }\n}\n```\nA. `Book`\n\
+  B. `eBooks`\nC. `read`\nD. `abstract`\n\n### (28) 文件流操作\n```java\nFileOutputStream\
+  \ fout = new FileOutputStream (file-name);\nSystem. in. read( ); //read inputted\
+  \ characters\nfout. fill in here ; //write characters to file\n```\nA. `write()`\n\
+  B. `read()`\nC. `writeFile()`\nD. `readFile()`\n\n### (29) 构造函数链\n```java\nclass\
+  \ MyClass {\n    int x, y;\n    MyClass ( ) {\n        fill in here ( 100, 200 );\
+  \ /* a keyword that represents another same-name constructor */\n    }\n    MyClass\
+  \ ( int a, int b) {\n        x=a;\n        y=b;\n    }\n}\n```\nA. `_construct`\n\
+  B. `constructor`\nC. `construct`\nD. `this`\n\n### (30) 方法重写\n```java\nclass Super_class\
+  \ {\n    int test( int num ) { return num; }\n}\nclass Sub_class extends Super_class\
+  \ {\n    int fill in here ( int num ) { return 100 + num; } // overriding\n}\npublic\
+  \ class OverridingClass {\n    public static void main (String args[ ] ) {\n   \
+  \     Sub_class obj=new Sub_class( );\n        System. out. print( obj. test( 200\
+  \ ));\n    }\n}\n```\nA. `myFunction`\nB. `myMethod`\nC. `test`\nD. `myTest`\n\n\
+  ### (31) 访问修饰符\n```java\nclass ParentClass {\n    fill in here int num=100; // define\
+  \ a member that is only accessible by sub’s object\n}\npublic class SubClass extends\
+  \ ParentClass {\n    public static void main(String[] args) {\n        SubClass\
+  \ s=new SubClass( );\n        System. out .print( s. num );\n    }\n}\n```\nA. `default`\n\
+  B. `public`\nC. `protected`\nD. `private`\n\n### (32) FileInputStream\n```java\n\
+  FileInputStream fin = new FileInputStream (file-name);\nfin. fill in here ( ); //reads\
+  \ content of a file\nNote:This book is only for beginners, it is not suitable programmers.\n\
+  ```\nA. `write()`\nB. `read()`\nC. `writeFile()`\nD. `readFile()`\n\n**Answers**\n\
+  01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16\n\n\
+  **Recommended Books**\n- [Advanced C++ Programming in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [Advanced JAVA in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n- [AngularJS\
+  \ for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [C# Interview & Certification\
+  \ Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [C# Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [C# Programming Include 100 Q & A](https://www.amazon.com/-/e/B0863BQTT)\n- [C++\
+  \ Interview & Certification Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [C++\
+  \ Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [Coding Interview,1000\
+  \ Q & A](https://www.amazon.com/-/e/B0863BQTT)\n- [Django Programming in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [Go Programming in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n- [HTML CSS\
+  \ Interview & Certification Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [HTML\
+  \ CSS Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [JAVA\
+  \ Interview & Certification Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [JAVA\
+  \ Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [JAVA Programming\
+  \ Include 100 Q & A](https://www.amazon.com/-/e/B0863BQTT)\n- [JavaScript 50 Useful\
+  \ Programs](https://www.amazon.com/-/e/B0863BQTT)\n- [JavaScript Interview & Certification\
+  \ Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [JavaScript Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [JQuery Interview & Certification Exam](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [JQuery Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [Kotlin\
+  \ Programming in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n- [Linux Command\
+  \ Line](https://www.amazon.com/-/e/B0863BQTT)\n- [Linux Interview & Certification\
+  \ Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [Linux Shell Programming in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [MySQL Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [Node](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [js Programming in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n- [PHP Interview\
+  \ & Certification Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [PHP MySQL Programming\
+  \ for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [PowerShell Programming\
+  \ in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n- [Python Interview & Certification\
+  \ Exam](https://www.amazon.com/-/e/B0863BQTT)\n- [Python Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [Python Programming Include 100 Q & A](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [R Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [Ruby Programming\
+  \ for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n- [Rust Programming in 8\
+  \ Hours](https://www.amazon.com/-/e/B0863BQTT)\n- [Scala Programming in 8 Hours](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [Visual Basic Interview & Certification Exam](https://www.amazon.com/-/e/B0863BQTT)\n\
+  - [Visual Basic Programming for Beginners](https://www.amazon.com/-/e/B0863BQTT)\n\
+  \n"
