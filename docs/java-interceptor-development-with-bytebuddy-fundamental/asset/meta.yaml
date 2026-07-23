@@ -1,0 +1,278 @@
+name: Java Interceptor Development with ByteBuddy： Fundamental
+name_cn: ByteBuddy Java 拦截器开发：基础
+slug: java-interceptor-development-with-bytebuddy-fundamental
+toc:
+- - '#'
+  - ByteBuddy Java 拦截器开发：基础
+- - '#'
+  - '1'
+- - '#'
+  - '2'
+- - '#'
+  - 使用 ByteBuddy 开发 Java 拦截器：基础
+- - '#'
+  - '3'
+- - '##'
+  - 作者
+- - '##'
+  - 感谢
+- - '#'
+  - '4'
+- - '##'
+  - 本书读者
+- - '##'
+  - 源代码
+- - '#'
+  - '5'
+- - '###'
+  - 拦截方法参数值
+- - '###'
+  - 拦截实例变量和类变量
+- - '###'
+  - 拦截返回值
+- - '###'
+  - 总结
+- - '#'
+  - 第 6 章：使用 OnMethodExit 拦截异常
+- - '###'
+  - '@Thrown 注解参数的数据类型'
+- - '###'
+  - onThrowable 属性的数据类型
+- - '###'
+  - 从建议方法抛出新异常
+- - '###'
+  - 总结
+- - '#'
+  - 第 7 章：从方法进入建议到退出建议传递数据
+- - '##'
+  - 结论
+- - '#'
+  - 第 8 章：Around Advice
+- - '###'
+  - 用于 create 方法的 Around Advice
+- - '##'
+  - '`createData` 方法的 Around 建议'
+- - '###'
+  - '@Super'
+- - '###'
+  - '@SuperMethod'
+- - '###'
+  - '@This'
+- - '###'
+  - '@AllArguments'
+- - '###'
+  - '@Argument'
+- - '###'
+  - '@FieldValue'
+- - '##'
+  - Conclusion
+- - '#'
+  - 第 10 章：生成实例变量
+- - '###'
+  - 拷贝 `define` 方法 方法实例变量
+- - '###'
+  - value 方法
+- - '###'
+  - 总结
+- - '#'
+  - 第 11 章：生成 Java 方法
+- - '###'
+  - 使用 MethodDelegation 生成方法
+- - '###'
+  - 使用 Advice 生成方法
+- - '###'
+  - 生成带有局部变量的方法
+- - '###'
+  - 生成带有嵌套 visit 的方法
+- - '###'
+  - InterfacePlugin
+- - '###'
+  - process11
+- - '###'
+  - 观察到的行为
+- - '###'
+  - 使用 define 方法克隆构造函数
+- - '###'
+  - 使用 defineConstructor 方法生成构造函数
+- - '###'
+  - 为什么插件程序没有声明，但 `DataProducer.java` 仍然包含默认构造函数？
+- - '###'
+  - 使用 `visit` 方法生成构造函数
+- - '###'
+  - 结论
+- - '#'
+  - 第 13 章：生成泛型构造函数、方法和变量
+- - '###'
+  - 泛型实例变量
+- - '###'
+  - 使用泛型类型开发拦截器
+- - '###'
+  - 总结
+- - '#'
+  - 第 14 章：添加和移除 Java 注解
+- - '##'
+  - 简介
+- - '##'
+  - 从 Java 类中移除注解
+- - '##'
+  - 为方法添加注解
+- - '##'
+  - 向 Java 方法添加嵌套注解
+- - '##'
+  - 从 Java 方法中移除注解
+- - '#'
+  - 给方法参数添加注解
+- - '##'
+  - 从方法参数移除注解
+- - '###'
+  - 在构造函数上添加注解
+- - '###'
+  - 从构造函数移除注解
+- - '###'
+  - 总结
+- - '#'
+  - 第 15 章：移除构造函数、方法和实例变量
+- - '###'
+  - 移除构造函数
+- - '###'
+  - 移除方法
+- - '##'
+  - 结论
+- - '#'
+  - 第 16 章：搜索与替换
+- - '###'
+  - Java 方法中的搜索与替换方法
+- - '###'
+  - Java 方法中的实例变量搜索与替换
+- - '#'
+  - 第 17 章：ElementMatchers
+- - '###'
+  - ElementMatchers.isSetter
+- - '###'
+  - ElementMatcherUtil
+- - '###'
+  - ElementMatchers.isGetter
+- - '###'
+  - ElementMatchers.isAnnotatedWith
+- - '###'
+  - ElementMatchers.isConstructor
+- - '###'
+  - '`ElementMatchers.isFinal()`'
+- - '###'
+  - '`ElementMatchers.returns`, `ElementMatchers.takesGenericArgument`'
+- - '###'
+  - '`ElementMatchers.canThrow`, `ElementMatchers.or`'
+- - '###'
+  - InterceptorRepositoryPlugin
+- - '###'
+  - ElementMatchers.nameStartsWith
+- - '###'
+  - ElementMatchers.nameIgnoreCase
+- - '###'
+  - ElementMatchers.not
+- - '###'
+  - ElementMatchers.isVarArgs
+- - '###'
+  - ElementMatchers.isOverriddenFrom
+- - '###'
+  - InterceptorQueryPlugin
+- - '###'
+  - FilterableList
+- - '###'
+  - ElementMatchers.genericFieldType
+- - '###'
+  - '`ElementMatchers.isAnnotatedWith`'
+- - '###'
+  - ElementMatchers.isDeclaredBy
+- - '###'
+  - ElementMatchers.hasParameter 和 ElementMatcher
+- - '###'
+  - Import static for ElementMatchers
+- - '###'
+  - Conclusion
+- - '#'
+  - 第 18 章：生成内部类
+- - '##'
+  - 生成第一级内部类
+- - '##'
+  - 生成内部类的方法
+- - '##'
+  - 生成第二级内部类
+- - '##'
+  - 将第二级内部类添加到第一级内部类
+- - '###'
+  - 向外部类添加第一层内部类
+- - '###'
+  - RepositoryPlugin
+- - '###'
+  - 在内部类和匿名类生成新方法
+- - '###'
+  - 拦截内部类和匿名类的方法
+- - '###'
+  - 总结
+- - '#'
+  - 第 19 章：生成接口、枚举、注解、子类和抽象类
+- - '###'
+  - 生成新接口
+- - '###'
+  - (3) 为 Java 接口配置名称
+- - '###'
+  - (4) 为 Java 接口配置方法
+- - '###'
+  - (5) 完成配置并生成 Java 接口的 Java 类
+- - '###'
+  - (6) 将生成的 Java 类保存到磁盘
+- - '##'
+  - 生成新的 Java 枚举
+- - '###'
+  - (1) 实例化 ByteBuddy 实例：
+- - '###'
+  - (2) 创建枚举
+- - '###'
+  - (3) 为枚举创建名称
+- - '###'
+  - (4) 可选为枚举实现 Java 接口
+- - '###'
+  - (5) 可选声明方法
+- - '###'
+  - (6) 完成配置并生成 Java 枚举的 Java 类：
+- - '###'
+  - (7) 将 Java 类保存到磁盘
+- - '##'
+  - 生成新的 Java 注解
+- - '###'
+  - (1) 实例化 ByteBuddy 实例
+- - '###'
+  - (2) 创建注解
+- - '###'
+  - (3) 为新注解配置名称
+- - '###'
+  - (4) 为新注解配置 @Retention 注解
+- - '###'
+  - (5) 为新注解配置 @Target 注解
+- - '###'
+  - (6) 为新注解配置属性
+- - '###'
+  - (7) 完成配置并生成 Java 注解的 Java 类
+- - '###'
+  - (8) 将新注解的 Java 类保存到磁盘
+- - '###'
+  - 生成新的 Java 类
+- - '###'
+  - 生成 lambda 表达式
+- - '#'
+  - 重基（Rebase）Java 类
+- - '#'
+  - 总结
+- - '#'
+  - 第 20 章：插桩 JDK 类
+- - '###'
+  - InterceptorAgent
+- - '###'
+  - 'MANIFEST.MF 中的 Premain-Class '
+- - '###'
+  - Maven pom.xml
+- - '##'
+  - 在 Eclipse 中运行程序
+- - '##'
+  - 结论

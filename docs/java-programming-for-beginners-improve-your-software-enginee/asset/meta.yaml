@@ -1,0 +1,266 @@
+name: Java Programming for Beginners： Improve your Software Engineering Skills by
+  Learning to Code using an Object-Oriented Program. Learn about the Virtual Machine,
+  Javascript, and Machine Code (2022)
+name_cn: Java 编程初学者指南：通过面向对象编程学习来提升软件工程技能。学习虚拟机、Javascript 和机器码 (2022)
+slug: java-programming-for-beginners-improve-your-software-enginee
+toc:
+- - '#'
+  - Java 编程初学者指南：通过面向对象编程学习来提升软件工程技能。学习虚拟机、Javascript 和机器码 (2022)
+- - '##'
+  - 引言
+- - '###'
+  - 强类型检查
+- - '###'
+  - 数组边界检查
+- - '###'
+  - 为什么 Java 很重要？
+- - '###'
+  - 为什么选择 Java？
+- - '###'
+  - Java
+- - '##'
+  - 第 1 章
+- - '###'
+  - Java 基础
+- - '###'
+  - Java 标记 (tokens)
+- - '###'
+  - 关键字 (Keywords)
+- - '###'
+  - 标识符 (Identifiers)
+- - '###'
+  - 运算符 (Operators)
+- - '###'
+  - 分隔符 (Separators)
+- - '###'
+  - 字面量 (Literals)
+- - '###'
+  - 注释 (Comments)
+- - '###'
+  - Java 中的变量类型
+- - '###'
+  - 变量命名
+- - '###'
+  - Java 基本类型
+- - '###'
+  - 方法命名规范
+- - '###'
+  - 在代码中使用构造函数
+- - '###'
+  - '如何初始化变量 '
+- - '##'
+  - 第 3 章
+- - '###'
+  - Java 基础
+- - '###'
+  - Java 开发包 (JDK)
+- - '####'
+  - Java SE
+- - '####'
+  - Java EE
+- - '####'
+  - Java ME
+- - '###'
+  - Java 运行时环境
+- - '###'
+  - Java 虚拟机
+- - '###'
+  - 字节码
+- - '##'
+  - 在编辑器中编写程序
+- - '###'
+  - Eclipse
+- - '###'
+  - IntelliJ IDEA
+- - '###'
+  - Netbeans
+- - '###'
+  - Java 的优点
+- - '###'
+  - Java 的缺点
+- - '##'
+  - 第 5 章
+- - '###'
+  - 对象与类
+- - '###'
+  - 构造函数
+- - '###'
+  - 创建对象
+- - '###'
+  - 访问变量和方法
+- - '###'
+  - 输出
+- - '##'
+  - 第 6 章：规范的工作代码示例
+- - '###'
+  - 第 1 节：Java 项目与包
+- - '###'
+  - 尝试一下
+- - '###'
+  - 要点与更多
+- - '###'
+  - 第 2 节：类、父类与程序
+- - '###'
+  - 尝试一下
+- - '###'
+  - 关键点与其他
+- - '##'
+  - 类 (Classes)
+- - '###'
+  - 类变量
+- - '###'
+  - 局部变量
+- - '###'
+  - 实例变量
+- - '###'
+  - 构造函数 (Constructors)
+- - '###'
+  - 构造函数的类型
+- - '###'
+  - 参数构造函数
+- - '###'
+  - 创建对象 (Creating Objects)
+- - '###'
+  - 如何访问方法和实例变量
+- - '###'
+  - Java 包 (Package)
+- - '###'
+  - 导入语句 (Import Statement)
+- - '###'
+  - 修饰符 (Modifiers)
+- - '###'
+  - 访问修饰符 (Access Modifiers)
+- - '###'
+  - 非访问修饰符 (Non-access Modifiers)
+- - '###'
+  - Static（静态）
+- - '###'
+  - Abstract（抽象）
+- - '####'
+  - 抽象类（Abstract class）
+- - '####'
+  - 抽象方法（Abstract method）
+- - '###'
+  - Synchronized（同步）
+- - '###'
+  - Volatile（易变的）
+- - '###'
+  - Transient（瞬态的）
+- - '##'
+  - 第 8 章：决策与循环控制
+- - '###'
+  - If 语句（If statement）
+- - '####'
+  - If else 语句（If else statement）
+- - '####'
+  - 嵌套 if 语句（Nested if statement）
+- - '####'
+  - Switch
+- - '####'
+  - 条件运算符（Conditional Operator）
+- - '###'
+  - 循环控制（Loop Control）
+- - '####'
+  - 循环语句（Loop statements）
+- - '####'
+  - Break
+- - '####'
+  - Continue
+- - '###'
+  - For 循环实现
+- - '###'
+  - While 循环实现
+- - '###'
+  - Do While 循环实现
+- - '###'
+  - 增强型 For 循环
+- - '###'
+  - 异常层次结构
+- - '###'
+  - 捕获异常
+- - '###'
+  - Catch 块
+- - '###'
+  - ADT、数据结构与 Java 集合
+- - '##'
+  - 数组 (Array)
+- - '###'
+  - 数组 ADT 操作
+- - '###'
+  - 示例：
+- - '###'
+  - JAVA Collections 中的 ArrayList 实现
+- - '###'
+  - 示例：
+- - '###'
+  - 输出：
+- - '##'
+  - 链表 (Linked List)
+- - '###'
+  - 链表 ADT 操作
+- - '###'
+  - JAVA Collections 中的 LinkedList 实现
+- - '###'
+  - 示例：
+- - '###'
+  - 输出：
+- - '##'
+  - 第 10 章：文件处理
+- - '###'
+  - 读取文本文件
+- - '###'
+  - BufferedReader
+- - '###'
+  - FileReader
+- - '###'
+  - Scanner
+- - '###'
+  - 在 Java 包 `io;` 中将文本文件读取为 String
+- - '###'
+  - 写入文本文件
+- - '###'
+  - 重命名和删除文件
+- - '###'
+  - 重命名
+- - '####'
+  - 删除文件
+- - '###'
+  - Java 高级主题
+- - '###'
+  - Generic 型
+- - '###'
+  - 泛型类型
+- - '###'
+  - 调用和实例化泛型类型
+- - '###'
+  - 菱形语法
+- - '###'
+  - 泛型方法
+- - '###'
+  - 边界类型参数
+- - '###'
+  - 多重边界
+- - '##'
+  - 第 11 章：集合
+- - '###'
+  - 集合的函数化
+- - '###'
+  - Collection 接口
+- - '###'
+  - Map 接口
+- - '###'
+  - Spliterator
+- - '##'
+  - 总结
+- - '###'
+  - 关键点
+- - '###'
+  - 结论
+- - '###'
+  - Java 开发工具包 (JDK)
+- - '###'
+  - Java 运行环境 (JRE)
+- - '###'
+  - Java 虚拟机 (JVM)
+- - '###'
+  - 最后的想法

@@ -1,0 +1,2422 @@
+- fmt: '
+
+    ![](Image00000.jpg)
+
+
+    # JAVAPROGRAMMINGFORKIDSAGES 12 - 18
+
+    Copyright © 2021 S Basu All rights reserved.
+
+
+    Disclaimer:The information and materials presented here are for educational purposes
+    only. Every effort has been made to make this book as complete and as accurate
+    as possible but no warranty or fitness is implied. The information provided is
+    on an "as is" basis. The ideas and opinions expressed are of the author''s own
+    imagination and the author is not affiliated to any organization, school or educational
+    discipline and will not be held accountable or liable for any inadvertent misrepresentation.
+
+
+    ## Chapter 1 : Introduction
+
+    Java is the most important programming language. If you have the full grasp of
+    Java basics, then you can easily learn any object oriented programming language
+    in this world.
+
+
+    ### What is Java?
+
+    Important points to note are:
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is object oriented programming or OOP?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is object oriented programming or OOP?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is JDK?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is JRE?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is JVM?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### JVM Architecture
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ## Chapter 2 : Java JDK and Eclipse IDE Installation
+
+    ### 2.1: JDK download
+
+    ### 2.2: Download and install Eclipse IDE
+
+
+    ## Chapter 3: Class, Object, Variables and Data types
+
+    ### 3.1: What is a Java Class & Object?
+
+    ### 3.2: What is Java Variable?
+
+    ### 3.3: Java Data Types
+
+    ### 3.4: What are access modifiers?
+
+    ### 3.5: What is Java package?
+
+    ### 3.6: Examples
+
+    #### Example 1
+
+    #### Example 2
+
+
+    ## Chapter 4: Constructors & Methods
+
+    ### 4.1: Constructor
+
+    #### Example
+
+    ### 4.2: Method
+
+    #### Example
+
+    ### 4.3: What is public static void main (String[ ] args)?
+
+    ### 4.4: Mathematical Operators in Java
+
+
+    ## Chapter 5: Conditional Statements & Loops
+
+    ### 5.1: Conditional Statements
+
+    #### Example
+
+    ### 5.2: Loops
+
+    #### 5.2.1: for loop
+
+    #### Example
+
+    #### 5.2.2: while loop
+
+    #### Example
+
+    ### 5.3: Break statement
+
+    #### Example
+
+
+    ## Chapter 6: Array
+
+    #### Example 1
+
+    #### Example 2
+
+
+    ## Chapter 7: Object Oriented Programming Concepts
+
+    ### 7.1: Encapsulation
+
+    #### Example
+
+    ### 7.2: Inheritance
+
+    #### Example
+
+    ### 7.3: Polymorphism
+
+    #### 7.3.1: Dynamic Polymorphism
+
+    #### Example
+
+    #### 7.3.2: Static Polymorphism
+
+    #### Example
+
+    #### TEST
+
+    Answers
+
+
+    # Chapter 1 : Introduction
+
+    Java is the most important programming language. If you have the full grasp of
+    Java basics, then you can easily learn any object oriented programming language
+    in this world.
+
+
+    ### What is Java?
+
+    Important points to note are:
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is object oriented programming or OOP?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is JDK?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ![](Image0002.jpg)
+
+
+    ### What is JRE?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is JVM?
+
+    * Java is an object oriented programming (OOP) language.
+
+    * Java is platform independent meaning that it can run on any machine containing
+    `JVM`.
+
+    * In order to code and execute a Java code, `JDK` is needed.
+
+
+    In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### JVM Architecture
+
+    In order to code and execute a Java code, `JDK` is needed.
+
+
+    ![](Image0003.jpg)
+
+
+    ### What does compilation mean?
+
+    In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### What is byte code?
+
+    In order to code and execute a Java code, `JDK` is needed.
+
+
+    ### JVM Architecture
+
+    In order to code and execute a Java code, `JDK` is needed.
+
+    In order to code and execute a Java code, `JDK` is needed.
+
+
+    ![](Image0004.jpg)
+
+
+    ### JVM Architecture
+
+    is divided into three sections:
+
+    1. Class Loader
+
+    2. JVM Memory
+
+    3. Execution Engine
+
+
+    ![](Image0005.jpg)
+
+
+    ### JVM Memory
+
+    is further divided into:
+
+    * Method area - It stores methods.
+
+    * Heap area - It stores instances.
+
+    * Stack area - It stores local variables.
+
+    * PC Register - It stores the address of currently executing instruction.
+
+
+    ### Execution Engine
+
+    is further divided into:
+
+    * Interpreter - It converts byte code to machine code.
+
+    * JIT Compiler - JIT stands for Just In Time compiler and its main task is to
+    increases the performance and efficiency of Interpreter.
+
+
+    Now let’s summarize the Java program before we start coding, we need to download
+    and install `JDK` and an `IDE`.
+
+
+    ### What is IDE?
+
+    IDE stands for Integrated Development Environment. It is a software application
+    needed to write programs in Java. There are multiple IDE present but we will be
+    using Eclipse IDE to write our Java code.
+
+
+    ## Chapter 2 : Java JDK and Eclipse IDE Installation
+
+
+    ### 2.1: JDK download
+
+    * Open Google chrome (or any browser you like ) and search for java download and
+    select the oracle website highlighted in the screen below.
+
+    ![](Image0007.jpg)
+
+    * Download the latest JDK version.
+
+    ![](Image0008.jpg)
+
+    * Select your operating system. (since I am using windows, so downloading windows-x64
+    installer highlighted in the screen below )
+
+    ![](Image0009.jpg)
+
+    * Check on review box, click download and install.
+
+    ![](Image0010.jpg)(Image0011.jpg)(Image0012.jpg)(Image0013.jpg)
+
+    * Click close.
+
+    * Now check whether the Java PATH is automatically added to your Environment Variables
+    or not.
+
+
+    ### What is Java PATH?
+
+    Java PATH is an environment variable which helps us to locate the `JDK` bin directory
+    or folder which contains all the important files needed to execute a Java program.
+
+    Let’s access the Environment Variables.
+
+    * Open control panel -> click on System and Security .![](Image0014.jpg)
+
+    * Click on System![](Image0015.jpg)
+
+    * Click on Advanced system settings![](Image0016.jpg)
+
+    * Click on Environment Variables.![](Image0017.jpg)
+
+    * Under System variables , select Path -> click Edit![](Image0018.jpg)
+
+    * Javapath shows highlighted in the screen below.![](Image0019.jpg)
+
+    * Click ok and exit.
+
+    We have successfully installed JDK in our machine. Now let’s download and install
+    Eclipse IDE.
+
+
+    ### 2.2: Download and install Eclipse IDE
+
+    * Go to website [https://www.eclipse.org/downloads/packages/](https://www.eclipse.org/downloads/packages/)
+    and download the latest version of Eclipse IDE .
+
+    '
+  raw: '
+
+
+    ![](Image00000.jpg)
+
+
+    JAVAPROGRAMMINGFORKIDSAGES 12 - 18Copyright © 2021 S BasuAll rights reserved.Disclaimer
+    :The information and materials presented here are for educational purposes only.
+    Every effort has been made to make this book as complete and as accurate as possible
+    but no warranty or fitness is implied. The information provided is on an "as is"
+    basis. The ideas and opinions expressed are of the author''s own imagination and
+    the author is not affiliated to any organization, school or educational discipline
+    and will not be held accountable or liable for any inadvertent misrepresentation.Contents[Chapter
+    1 : Introduction](#text00004.html_a1RT)[What is Java?](#text00004.html_a1RU)[What
+    is object oriented programming or OOP?](#text00004.html_a1RV)[What is JDK?](#text00004.html_a1RW)[What
+    is JRE?](#text00004.html_a1RX)[What is JVM?](#text00004.html_a1RY)[JVM Architecture](#text00004.html_a1RZ)[Chapter
+    2 : Java JDK and Eclipse IDE Installation](#text00005.html_a1S0)[2.1: JDK download](#text00005.html_a1S1)[2.2:
+    Download and install Eclipse IDE](#text00005.html_a1S2)[Chapter 3 : Class, Object,
+    Variables and Data types](#text00006.html_a1S3)[3.1: What is a Java Class & Object?](#text00006.html_a1S4)[3.2:
+    What is Java Variable?](#text00006.html_a1S5)[3.3: Java Data Types](#text00006.html_a1S6)[3.4:
+    What are access modifiers?](#text00006.html_a1S7)[3.5: What is Java package?](#text00006.html_a1S8)[3.6:
+    Examples](#text00006.html_a1S9)[Example 1](#text00006.html_a1SA)[Example 2](#text00006.html_a1SB)[Chapter
+    4: Constructors & Methods](#text00007.html_a1SC)[4.1: Constructor](#text00007.html_a1SD)[Example](#text00007.html_a1SE)[4.2:
+    Method](#text00007.html_a1SF)[Example](#text00007.html_a1SG)[4.3: What is public
+    static void main (String[ ] args)?](#text00007.html_a1SH)[4.4: Mathematical Operators
+    in Java](#text00007.html_a1SJ)[Chapter 5: Conditional Statements & Loops](#text00008.html_a1SK)[5.1:
+    Conditional Statements](#text00008.html_a1SM)[Example](#text00008.html_a1SN)[5.2:
+    Loops](#text00008.html_a1SP)[5.2.1: for loop](#text00008.html_a1SR)[Example](#text00008.html_a1SS)[5.2.2:
+    while loop](#text00008.html_a1ST)[Example](#text00008.html_a1SU)[5.3: Break statement](#text00008.html_a1SV)[Example](#text00008.html_a1SW)[Chapter
+    6: Array](#text00009.html_a1SX)[Example 1](#text00009.html_a1SY)[Example 2](#text00009.html_a1SZ)[Chapter
+    7: Object Oriented Programming Concepts](#text00010.html_a1T0)[7.1: Encapsulation](#text00010.html_a1T1)[Example](#text00010.html_a1T2)[7.2:
+    Inheritance](#text00010.html_a1T3)[Example](#text00010.html_a1T4)[7.3: Polymorphism](#text00010.html_a1T5)[7.3.1:
+    Dynamic Polymorphism](#text00010.html_a1T6)[Example](#text00010.html_a1T7)[7.3.2:
+    Static Polymorphism](#text00010.html_a1T8)[Example](#text00010.html_a1T9)[TEST](#text00011.html_a1TA)[Answers](#text00012.html_a1TB)Chapter
+    1 : IntroductionJava is the most important programming language. If you have the
+    full grasp of Java basics, then you can easily learn any object oriented programming
+    language in this world.What is Java?Important points to note are:
+
+
+    *   Java is an object oriented programming (OOP) language .
+
+
+    *   Java is platform independent meaning that it can run on any machine containing
+    JVM .
+
+
+    *   In order to code and execute a Java code, JDK is needed.
+
+
+    What is object oriented programming or OOP?
+
+
+    *   Object oriented programming or OOP is all about working with classes , objects
+    , methods and variables (explained in Chapter 3 ). 
+
+
+    *   The most important concepts of OOP are: Encapsulation , Inheritance and Polymorphism
+    (explained in Chapter 7 ). 
+
+
+    What is JDK?
+
+
+    *   JDK stands for Java Development Kit which is needed to code and execute Java
+    .
+
+
+    *   JDK includes both JVM and JRE.
+
+
+    ![](Image00002.jpg)What is JRE?
+
+
+    *   JRE stands for Java Runtime Environment .
+
+
+    *   JRE contains classes , libraries and software that a Java program needs in
+    order to run successfully.
+
+
+    *   JRE also contains JVM .
+
+
+    What is JVM?
+
+
+    *   JVM stands for Java virtual machine .
+
+
+    *   JVM is responsible for converting the byte code present in .class file into
+    machine depended code which is understood by that specific processor or operating
+    system or machine.
+
+
+    JVM ArchitectureJava files are saved with a .java extension. When we compile the
+    .java file, .class file is generated and this .class file contains byte code.
+    JVM handles the .class file and generates the desired output of the Java program.![](Image00003.jpg)What
+    does compilation mean in Java?Java compilation is the process of converting a
+    .java file (which contains readable text Java code) into a .class file (which
+    contains byte code).What is byte code?Byte codes are sequence of 0s and 1s.![](Image00004.jpg)Let’s
+    look into JVM Architecture .JVM architecture is divided into three main sections:
+
+
+    1.  Class Loader
+
+
+    2.  JVM Memory
+
+
+    3.  Execution Engine
+
+
+    ![](Image00005.jpg)Class LoaderIt is responsible for loading the .class file to
+    the JVM memory .JVM MemoryIt is further divided into:
+
+
+    *   Method area – It stores all the methods information. (methods explained in
+    chapter 4 ).
+
+
+    *   Heap area – It stores all the objects and its corresponding instance variables
+    (objects and variables explained in chapter 3 ).
+
+
+    *   Stack Area – It stores all the local variables and the results of the methods
+    (local variables explained in chapter 3 ).
+
+
+    *   PC Register – PC register store the address of the currently executing Java
+    virtual machine instruction.
+
+
+    *   Native Method Stacks - Native method stacks contains native codes which are
+    written in another language instead of Java .
+
+
+    Execution EngineIt is further divided into:
+
+
+    *   Interpreter – It converts the byte code to machine dependent code which is
+    understood by the machine and desired output is generated.
+
+
+    *   JIT Compiler – JIT stands for Just in Time compiler and its main task is to
+    increases the performance and efficiency of Interpreter .
+
+
+    Now let’s summarize the Java program execution process![](Image00006.jpg)Before
+    we start coding, we need to download and install JDK and an IDE .What is Java
+    IDE?IDE stands for Integrated Development Environment . It is a software application
+    needed to write programs in Java.There are multiple IDE present but we will be
+    using Eclipse IDE to write our Java code. Chapter 2 : Java JDK and Eclipse IDE
+    Installation2.1: JDK download
+
+
+    *   Open Google chrome browser (or any browser you like ) and search for java
+    jdk download and select the oracle website highlighted in the screen shot below.
+
+
+    ![](Image00007.jpg)
+
+
+    *   Download the latest JDK version.
+
+
+    ![](Image00008.jpg)
+
+
+    *   Select your operating system. (since I am using windows, so downloading windows-x64
+    installer highlighted in the screen shot below )
+
+
+    ![](Image00009.jpg)
+
+
+    *   Check on review box, click download and install.
+
+
+    ![](Image00010.jpg)![](Image00011.jpg)![](Image00012.jpg)![](Image00013.jpg)
+
+
+    *   Click close.
+
+
+    *   Now check whether the Java PATH is automatically added to your Environment
+    Variables or not.
+
+
+    What is Java PATH?Java PATH is an environment variable which helps us to locate
+    the JDK bin directory or folder which contains all the important files needed
+    to execute a Java program.Let’s access the Environment Variables.➢         Open
+    control panel -> click on System and Security .![](Image00014.jpg)➢         Click
+    on System![](Image00015.jpg)➢         Click on Advanced system settings.![](Image00016.jpg)➢
+            Click on Environment Variables.![](Image00017.jpg)➢         Under System
+    variables , select Path -> click Edit![](Image00018.jpg)➢         Javapath shows
+    highlighted in the screen shot below.![](Image00019.jpg)➢         Click ok and
+    exit.We have successfully installed JDK in our machine. Now let’s download and
+    install Eclipse IDE.2.2: Download and install Eclipse IDE
+
+
+    *   Go to website [https://www.eclipse.org/downloads/packages/](https://www.eclipse.org/downloads/packages/)
+    and download the latest version of Eclipse IDE .'
+  toc: []
+  trans: "\n\n![](img/Image00000.jpg)\n\n# 少儿 Java 编程 12-18 岁\n版权所有 © 2021 S Basu\
+    \ 保留所有权利。\n\n免责声明：此处提供的信息和材料仅供教育目的。我们已尽力使本书尽可能完整和准确，但不意味着任何保证或适用性。所提供的信息均按“现状”提供。文中所述的观点和意见均为作者本人的想象，作者不属于任何组织、学校或教育学科，且对任何无意的错误陈述不承担责任。\n\
+    \n## 第 1 章：引论\nJava 是最重要的编程语言。如果你完全掌握了 Java 基础，你就可以轻松地学习世界上任何面向对象编程的语言。\n\n###\
+    \ 什么是 Java？\n需要注意的重要点有：\n* Java 是一种面向对象编程（OOP）语言。\n* Java 是平台无关的，这意味着它可以运行在任何包含\
+    \ `JVM` 的机器上。\n 为了编写和执行 Java 代码，需要 `JDK`。\n\n### 什么是面向对象编程或 OOP？\n* Java 是一种面向对象编程（OOP）语言。\n\
+    * Java 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n* 为了编写和执行 Java 代码，需要 `JDK`。\n\n### 什么是面向对象编程或\
+    \ OOP？\n* Java 是一种面向对象编程（OOP）语言。\n* Java 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n*\
+    \ 为了编写和执行 Java 代码，需要 `JDK`。\n\n### 什么是 JDK？\n* Java 是一种面向对象编程（OOP）语言。\n* Java\
+    \ 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n* 为了编写和执行 Java 代码，需要 `JDK`。\n\n### 什么是 JRE？\n\
+    * Java 是一种面向对象编程（OOP）语言。\n* Java 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n* 为了编写和执行\
+    \ Java 代码，需要 `JDK`。\n\n### 什么是 JVM？\n* Java 是一种面向对象编程（OOP）语言。\n* Java 是平台无关的，这意味着它可以运行在任何包含\
+    \ `JVM` 的机器上。\n* 为了编写和执行 Java 代码，需要 `JDK`。\n\n### JVM 架构\n* Java 是一种面向对象编程（OOP）语言。\n\
+    * Java 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n* 为了编写和执行 Java 代码，需要 `JDK`。\n\n## 第\
+    \ 2 章：Java JDK 和 Eclipse IDE 安装\n### 2.1：JDK 下载\n### 2.2：下载并安装 Eclipse IDE\n\n\
+    ## 第 3 章：类、对象、变量和数据类型\n### 3.1：什么是 Java 类和对象？\n### 3.2：什么是 Java 变量？\n### 3.3：Java\
+    \ 数据类型\n### 3.4：什么是访问修饰符？\n### 3.5：什么是 Java 包？\n### 3.6：示例\n#### 示例 1\n#### 示例\
+    \ 2\n\n## 第 4 章：构造函数与方法\n### 4.1：构造函数\n#### 示例\n### 4.2：方法\n#### 示例\n### 4.3：什么是\
+    \ public static void main (String[ ] args)？\n### 4.4：Java 中的数学运算符\n\n## 第 5 章：条件语句与循环\n\
+    ### 5.1：条件语句\n#### 示例\n### 5.2：循环\n#### 5.2.1：for 循环\n#### 示例\n#### 5.2.2：while\
+    \ 循环\n#### 示例\n### 5.3：break 语句\n#### 示例\n\n## 第 6 章：数组\n#### 示例 1\n#### 示例 2\n\
+    \n## 第 7 章：面向对象编程概念\n### 7.1：封装\n#### 示例\n### 7.2：继承\n#### 示例\n### 7.3：多态\n####\
+    \ 7.3.1：动态多态\n#### 示例\n#### 7.3.2：静态多态\n#### 示例\n#### 测试\n答案\n\n# 第 1 章：引论\nJava\
+    \ 是最重要的编程语言。如果你完全掌握了 Java 基础，你就可以轻松地学习世界上任何面向对象编程的语言。\n\n### 什么是 Java？\n需要注意的重要点有：\n\
+    * Java 是一种面向对象编程（OOP）语言。\n* Java 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n* 为了编写和执行\
+    \ Java 代码，需要 `JDK`。\n\n### 什么是面向对象编程或 OOP？\n* Java 是一种面向对象编程（OOP）语言。\n* Java 是平台无关的，这意味着它可以运行在任何包含\
+    \ `JVM` 的机器上。\n* 为了编写和执行 Java 代码，需要 `JDK`。\n\n### 什么是 JDK？\n* Java 是一种面向对象编程（OOP）语言。\n\
+    * Java 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n* 为了编写和执行 Java 代码，需要 `JDK`。\n\n![](img/Image0002.jpg)\n\
+    \n### 什么是 JRE？\n* Java 是一种面向对象编程（OOP）语言。\n* Java 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n\
+    * 为了编写和执行 Java 代码，需要 `JDK`。\n\n### 什么是 JVM？\n* Java 是一种面向对象编程（OOP）语言。\n* Java\
+    \ 是平台无关的，这意味着它可以运行在任何包含 `JVM` 的机器上。\n* 为了编写和执行 Java 代码，需要 `JDK`。\n\n为了编写和执行 Java\
+    \ 代码，需要 `JDK`。\n\n### JVM 架构\n为了编写和执行 Java 代码，需要 `JDK`。\n\n![](img/Image0003.jpg)\n\
+    \n### 编译意味着什么？\n为了编写和执行 Java 代码，需要 `JDK`。\n\n### 什么是字节码？\n为了编写和执行 Java 代码，需要 `JDK`。\n\
+    \n### JVM 架构\n为了编写和执行 Java 代码，需要 `JDK`。\n为了编写和执行 Java 代码，需要 `JDK`。\n\n![](img/Image0004.jpg)\n\
+    \n### JVM 架构\n分为三个部分：\n1. 类加载器 (Class Loader)\n2. JVM 内存\n3. 执行引擎 (Execution Engine)\n\
+    \n![](img/Image0005.jpg)\n\n### JVM 内存\n进一步分为：\n* 方法区 - 存储方法。\n* 堆区 - 存储实例。\n\
+    * 栈区 - 存储局部变量。\n* PC 寄存器 - 存储正在执行指令的地址。\n\n### 执行引擎\n进一步分为：\n* 解释器 (Interpreter)\
+    \ - 将字节码转换为机器码。\n* JIT 编译器 - JIT 代表即时编译器，其主要任务是提高解释器的性能和效率。\n\n现在在我们开始编码之前，让我们总结一下\
+    \ Java 程序，我们需要下载并安装 `JDK` 和 `IDE`。\n\n### 什么是 IDE？\nIDE 代表集成开发环境（Integrated Development\
+    \ Environment）。它是编写 Java 程序所需的软件应用程序。虽然有多个 IDE，但我们将使用 Eclipse IDE 来编写 Java 代码。\n\
+    \n## 第 2 章：Java JDK 和 Eclipse IDE 安装\n\n### 2.1：JDK 下载\n* 打开 Google Chrome（或你喜欢的任何浏览器）并搜索\
+    \ java download，选择下方屏幕中显示的 oracle 网站。\n![](img/Image0007.jpg)\n* 下载最新版本的 JDK。\n\
+    ![](img/Image0008.jpg)\n* 选择你的操作系统。（因为我使用的是 windows，所以下载了下方屏幕中显示的 windows-x64\
+    \ 安装程序）\n![](img/Image0009.jpg)\n* 勾选确认框，点击下载并安装。\n![](img/Image0010.jpg)(Image0011.jpg)(Image0012.jpg)(Image0013.jpg)\n\
+    * 点击关闭。\n* 现在检查 Java PATH 是否已自动添加到你的环境变量中。\n\n### 什么是 Java PATH？\nJava PATH 是一个环境变量，帮助我们定位\
+    \ `JDK` 的 bin 目录或文件夹，其中包含了执行 Java 程序所需的所有重要文件。\n让我们访问环境变量：\n* 打开控制面板 -> 点击系统和安全\
+    \ .![](img/Image0014.jpg)\n* 点击系统![](img/Image0015.jpg)\n* 点击高级系统设置![](img/Image0016.jpg)\n\
+    * 点击环境变量。(Image0017.jpg)\n* 在系统变量下，选择 Path -> 点击编辑![](img/Image0018.jpg)\n* Javapath\
+    \ 显示如下方屏幕所示。![](img/Image0019.jpg)\n* 点击确定并退出。\n我们已经已经在机器上成功安装了 JDK。现在让我们下载并安装\
+    \ Eclipse IDE。\n\n### 2.2：下载并安装 Eclipse IDE\n* 访问网站 [`www.eclipse.org/downloads/packages/`](https://www.eclipse.org/downloads/packages/)\
+    \ 并下载最新版本的 Eclipse IDE 。\n\n"
+- fmt: "\n(since I am using windows operating system, so downloaded Eclipse IDE for\
+    \ Windows )![](Image00020.jpg)![](Image00021.jpg)\n\n*   After finish downloading,\
+    \ open the download folder in your machine.\n\n![](Image00022.jpg)The downloaded\
+    \ folder is a ZIP folder and we need to extract it in order to access Eclipse\
+    \ application.So right click on ZIP folder and click extract all.![](Image00023.jpg)Browse\
+    \ for your extract location and click on Extract .![](Image00024.jpg)Now open\
+    \ the eclipse folder and look for the eclipse application highlighted in the screen\
+    \ shot below.![](Image00025.jpg)Click and open the eclipse application.![](Image00026.jpg)Select\
+    \ a workspace and click on launch![](Image00027.jpg)We have now successfully installed\
+    \ Eclipse IDE .Let’s begin coding..\n\n# Chapter 3 : Class, Object, Variables\
+    \ and Data types\n\n## 3.1: What is a Java Class & Object?\n\n### `Class`\nImportant\
+    \ points to note are:\n*   Java class is a blueprint for creating an object .\n\
+    *   Java class contains methods and variables .\n*   The syntax for creating a\
+    \ Java class is:\n    ```\n    access_modifier class class_name {……..}\n    ```\n\
+    \n### `Object`\n*   An object instance of a class .\n*   An object contains the\
+    \ copy of methods and variables present inside its class .\n*   The syntax for\
+    \ creating a Java object is:\n    ```\n    type object_name = new class_name (\
+    \ )\n    ```\n    The `type` denotes the type of object declared. The `new` keyword\
+    \ is used to create an object . The `new` keyword is followed by call to a constructor\
+    \ (constructor explained in chapter 4). For example: `Animal a = new Animal( )`,\
+    \ here `a` is an object of type `Animal` ( Class name) and the `new` keyword is\
+    \ followed by call to `Animal` default constructor .\n\nI know it all sounds extremely\
+    \ complicated, let’s try to simplify a little bit below. Let us consider a class\
+    \ room containing three students, `John`, `Ram` and `Katy`. These three students\
+    \ have few things in common and they are as follows:\n1. All three are students\
+    \ of a class room.\n2. They each have a name.\n3. They each have a `student_ID`.\n\
+    4. They each have an `age`.\n5. They each have a `gender`.\n6. They each have\
+    \ their home address.\n\nThese six things listed above are called attributes of\
+    \ a student. In Java world, we can depict these attributes in the form of a `variable`.\
+    \ A student performs multiple functions like studying, eating, playing etc. In\
+    \ Java world, these functions can be depicted by `methods`. We have successfully\
+    \ stated the attributes and functions of a `Student`. Now the big question is\
+    \ where we can store these information?. Well we can store this information in\
+    \ a class . The students `John`, `Ram` and `Katy` have their own individual characteristics\
+    \ and they all fall under the student category. In Java world, these three students\
+    \ are referred as `objects` of class `student` and the `objects` will contain\
+    \ a copy of all variables and methods declared within its class .![](Image00028.jpg)Let’s\
+    \ summarize the concept:\n*   `Student` is a class .\n*   `John`, `Ram` and `Katy`\
+    \ are `objects` which belong to class `Student`.\n*   `Name`, `Gender`, `Age`,\
+    \ `Student_ID`, `Address` are `variables` of class `Student`.\n\nWe will look\
+    \ into another example of Java class and object .![](Image00029.jpg)There are\
+    \ multiple animals which belong to the animal kingdom. There are `dogs`, `tigers`,\
+    \ `monkeys`, `lion` etc. All animals have few things in common like they all fall\
+    \ under the animal category, they all have a name, weight, age and they also perform\
+    \ some common functions like eating, playing and many more. In Java world, we\
+    \ can write all the above information in a class `Animal` and the `objects` of\
+    \ class `Animal` will be `dog`, `tiger`, `monkey`. In other words we can say an\
+    \ `object` is a small miniscule entity of the vast class which has its own properties\
+    \ and characteristic.\n\n## 3.2: What is Java Variable?\n\nImportant points to\
+    \ note are:\n*   Java `variables` act as a container to hold data.\n*   The `variables`\
+    \ are declared with a `Data type`.\n    Example: `int age`\n    Here `age` is\
+    \ a variable name whose data type is `int` or integer meaning that the variable\
+    \ `age` can hold only numeric whole numbers.\n\nJava `variables` are of three\
+    \ types:\n1. `Local variable` – These `variables` are declared within methods\
+    \ (methods discussed in chapter 4) and the `variables` get destroyed soon after\
+    \ exiting the method .\n2. `Instance variable` – These `variables` are declared\
+    \ within the class .\n3. `Static variables` – The values of these `variables`\
+    \ remains constant or static and it also does not require any object to access\
+    \ it.\n\n## 3.3: Java Data Types\n\nJava data types are divided into two categories:\n\
+    1. `Primitive Data Type` – It contains  such as `boolean`, `char`, `int`, `short`,\
+    \ `byte`, `long`, `float`, and `double`.\n2. `Non-Primitive Data Type` : It contains\
+    \ `String`, `Array`, etc.\n\n| Data type |\n| :--- |\n| `int` |\n| `float` |\n\
+    | `char` |\n| `boolean` |\n| `String` |\n\nIn the above `Student` class example\
+    \ of section 3.1:\n*   `Variable Name` will be of data types `String`.\n*   `Variable\
+    \ Gender` is usually denoted by a single character `M` (for male) or `F` (for\
+    \ female) so its data types will be `char`.\n*   `Variable Age` will be of data\
+    \ type `int`.\n*   `Variable Student_ID` may contain numbers and character values\
+    \ together, so let’s assign a data type of `String` to it.\n*   `Variable Address`\
+    \ will be of data types `String`.\n\n## 3.4: What are access modifiers?\n\n`access\
+    \ modifiers` denote the accessibility of a class or a method . It is broadly divided\
+    \ into 4 types:\n1: `Public access modifiers` – This means that the class or method\
+    \ is accessible from everywhere.\n2: `Private access modifiers` – This means that\
+    \ the class or method is accessible only from within.\n3: `Default access modifiers`\
+    \ – This means that the class or method is accessible only within its package\
+    \ .\n4: `Protected access modifiers` – This means that the class or method is\
+    \ accessible from within its package or any package through inheritance (inheritance\
+    \ discussed in chapter 7).\n\n## 3.5: What is Java package?\n\n*   A `Java package`\
+    \ contain group of Java classes .\n*   `Java packages` are mainly done to avoid\
+    \ name conflicts.\nIf a package contains two class files of the same name, it\
+    \ will lead to name conflict and error in the Java project may occur. In order\
+    \ to prevent that from happening, separate packages should be created for storing\
+    \ the class file which has the same name.![](Image0030.jpg)\n\n## 3.6: Examples\n\
+    \n### Example 1\nLaunch Eclipse IDE and create a new Java project .\n*   Click\
+    \ on `File` -> `New` -> `Java Project` .![](Image0031.jpg)\n*   Give the Project\
+    \ name ( I named `hello_world` ) and click on `Finish` .![](Image00032.jpg)\n\
+    *   On `Create module-info.java` window, for now I will be clicking on `Don’t\
+    \ Create` .![](Image00033.jpg)\nOur `hello_world` Java project is created.![](Image00034.jpg)\n\
+    *   Right click on the `src` folder -> Click `New` -> `Package` (we are creating\
+    \ a new package) .\nWhat is the default `src` folder of Eclipse IDE?\nDefault\
+    \ `src` folder is the source folder which contains the source code or the main\
+    \ code of our project.![](Image00035.jpg)![](Image00036.jpg)Click Finish\n*  \
+    \ Right click on the `hello_world` package -> click `New` -> Click `Class` (we\
+    \ are creating a new Java class )![](Image00037.jpg)\nGive the Class name (I gave\
+    \ `Hello` ) starting with a capital letter -> check on `public static void main(String[]\
+    \ args)` box -> click `Finish` .![](Image00038.jpg)\n*   In `Hello.java` , write\
+    \ one line of code highlighted in the screen shot below and execute the program\
+    \ by clicking on the run button.![](Image00039.jpg)\n\nCode explanation:\n*  \
+    \ `System.out.print` is used to display or print output.\n`System.out.println`\
+    \ is same as `System.out.print` but the `println` displays output in separate\
+    \ lines.\n*   At line 5, you will notice a very important line of code that is\
+    \ `public static void main(String[] args)`. It is the Java `main` method and it\
+    \ acts as an entry point to our Java Program. Any Java program will only start\
+    \ execution process after it encounters this very important line of code. (We\
+    \ will discuss more about this line of code in Chapter 4).\n\n### Example 2\n\
+    Let’s create another Java class .\n"
+  raw: '(since I am using windows operating system, so downloaded Eclipse IDE for
+    Windows )![](Image00020.jpg)![](Image00021.jpg)
+
+
+    *   After finish downloading, open the download folder in your machine.
+
+
+    ![](Image00022.jpg)The downloaded folder is a ZIP folder and we need to extract
+    it in order to access Eclipse application.So right click on ZIP folder and click
+    extract all.![](Image00023.jpg)Browse for your extract location and click on Extract
+    .![](Image00024.jpg)Now open the eclipse folder and look for the eclipse application
+    highlighted in the screen shot below.![](Image00025.jpg)Click and open the eclipse
+    application.![](Image00026.jpg)Select a workspace and click on launch![](Image00027.jpg)We
+    have now successfully installed Eclipse IDE .Let’s begin coding..Chapter 3 : Class,
+    Object, Variables and Data types3.1: What is a Java Class & Object?ClassImportant
+    points to note are:
+
+
+    *   Java class is a blueprint for creating an object .
+
+
+    *   Java class contains methods and variables .
+
+
+    *   The syntax for creating a Java class is:
+
+
+    access_modifier class class_name {……..}Object
+
+
+    *   An object instance of a class .
+
+
+    *   An object contains the copy of methods and variables present inside its class
+    .
+
+
+    *   The syntax for creating a Java object is:
+
+
+    type   object_name = new class_name ( )The type denotes the type of object declared.The
+    new keyword is used to create an object .The new keyword is followed by call to
+    a constructor (constructor explained in chapter 4).For example: Animal a = new
+    Animal( ) , here a is an object of type Animal ( Class name) and the new keyword
+    is followed by call to Animal default constructor .I know it all sounds extremely
+    complicated, let’s try to simplify a little bit below.Let us consider a class
+    room containing three students, John , Ram and Katy . These three students have
+    few things in common and they are as follows:
+
+
+    1.  All three are students of a class room.
+
+
+    2.  They each have a name.
+
+
+    3.  They each have a student_ID.
+
+
+    4.  They each have an age.
+
+
+    5.  They each have a gender.
+
+
+    6.  They each have their home address.
+
+
+    These six things listed above are called attributes of a student. In Java world,
+    we can depict these attributes in the form of a variable .A student performs multiple
+    functions like studying, eating, playing etc. In Java world, these functions can
+    be depicted by methods .We have successfully stated the attributes and functions
+    of a Student. Now the big question is where we can store these information?. Well
+    we can store this information in a class .The students John , Ram and Katy have
+    their own individual characteristics and they all fall under the student category.
+    In Java world, these three students are referred as objects of class student and
+    the objects will contain a copy of all variables and methods declared within its
+    class .![](Image00028.jpg)Let’s summarize the concept:
+
+
+    *   Student is a class .
+
+
+    *   John , Ram and Katy are objects which belong to class Student .
+
+
+    *   Name, Gender, Age, Student_ID, Address are variables of class Student .
+
+
+    We will look into another example of Java class and object .![](Image00029.jpg)There
+    are multiple animals which belong to the animal kingdom. There are dogs , tigers
+    , monkeys , lion etc. All animals have few things in common like they all fall
+    under the animal category, they all have a name, weight, age and they also perform
+    some common functions like eating, playing and many more.In Java world, we can
+    write all the above information in a class Animal and the objects of class Animal
+    will be dog , tiger , monkey .In other words we can say an object is a small miniscule
+    entity of the vast class which has its own properties and characteristic.3.2:
+    What is Java Variable?Important points to note are:
+
+
+    *   Java variables act as a container to hold data.
+
+
+    *   The variables are declared with a Data type .
+
+
+    Example: int ageHere age is a variable name whose data type is int or integer
+    meaning that the variable age can hold only numeric whole numbers.Java variables
+    are of three types:
+
+
+    1.  Local variable – These variables are declared within methods (methods discussed
+    in chapter 4) and the variables get destroyed soon after exiting the method .
+
+
+    2.  Instance variable – These variables are declared within the class .
+
+
+    3.  Static variables – The values of these variables remains constant or static
+    and it also does not require any object to access it.
+
+
+    3.3: Java Data TypesJava data types are divided into two categories:
+
+
+    1.  Primitive Data Type – It contains such as boolean, char, int, short, byte,
+    long, float, and double.
+
+
+    2.  Non-Primitive Data Type : It contains String, Array, etc.
+
+
+    | Data type |
+
+
+    | int |
+
+
+    | float |
+
+
+    | char |
+
+
+    | boolean |
+
+
+    | String |
+
+
+    In the above Student class example of section 3.1:
+
+
+    *   Variable Name will be of data types String.
+
+
+    *   Variable Gender is usually denoted by a single character M (for male) or F
+    (for female) so its data types will be char.
+
+
+    *   Variable Age will be of data type int.
+
+
+    *   Variable Student_ID may contain numbers and character values together, so
+    let’s assign a data type of String to it.
+
+
+    *   Variable Address will be of data types String.
+
+
+    3.4: What are access modifiers?Access modifiers denote the accessibility of a
+    class or a method . It is broadly divided into 4 types:1: Public access modifiers
+    – This means that the class or method is accessible from everywhere.2: Private
+    access modifiers – This means that the class or method is accessible only from
+    within.3: Default access modifiers – This means that the class or method is accessible
+    only from within its package .4: Protected access modifiers – This means that
+    the class or method is accessible from within its package or any package other
+    than its own package through inheritance only (inheritance discussed in chapter
+    7).3.5: What is Java package?
+
+
+    *   A Java package contain group of Java classes .
+
+
+    *   Java packages are mainly done to avoid name conflicts.
+
+
+    If a package contains two Java class files of the same name, it will lead to name
+    conflict and error in the Java project may occur in future. In order to prevent
+    that from happening, separate packages should be created for storing the class
+    file which has the same name.![](Image00030.jpg)Now let’s code..3.6: ExamplesExample
+    1Launch Eclipse IDE and create a new Java project .
+
+
+    *   Click on File -> New -> Java Project .
+
+
+    ![](Image00031.jpg)
+
+
+    *   Give the Project name ( I named hello_world ) and click on Finish .
+
+
+    ![](Image00032.jpg)
+
+
+    *   On Create module-info.java window, for now I will be clicking on Don’t Create
+    .
+
+
+    ![](Image00033.jpg)Our hello_world Java project is created.![](Image00034.jpg)
+
+
+    *   Right click on the src folder -> Click New -> Package (we are creating a new
+    package) .
+
+
+    What is the default src folder of Eclipse IDE?Default src folder is the source
+    folder which contains the source code or the main code of our project.![](Image00035.jpg)![](Image00036.jpg)Click
+    Finish
+
+
+    *   Right click on the hello_world package -> click New -> Click Class (we are
+    creating a new Java class )
+
+
+    ![](Image00037.jpg)Give the Class name (I gave Hello ) starting with a capital
+    letter -> check on public static void main(String[] args) box   -> click Finish
+    .![](Image00038.jpg)
+
+
+    *   In Hello.java , write one line of code highlighted in the screen shot below
+    and execute the program by clicking on the run button.
+
+
+    ![](Image00039.jpg)Code explanation:
+
+
+    *   System.out.print is used to display or print output.
+
+
+    System.put.println is same as System.out.print but the println displays output
+    in separate lines.
+
+
+    *   At line 5, you will notice a very important line of code that is public static
+    void main(String[] args). It is the Java main method and it acts as an entry point
+    to our Java Program. Any Java program will only start execution process after
+    it encounters this very important line of code. (We will discuss more about this
+    line of code in Chapter 4).
+
+
+    Example 2Let’s create another Java class .'
+  toc: []
+  trans: "\n\n（因为我使用的是 Windows 操作系统，所以我下载了 Windows 版本的 Eclipse IDE）![](img/Image00020.jpg)![](img/Image00021.jpg)\n\
+    \n*   下载完成后，在电脑上打开下载文件夹。\n\n![](img/Image00022.jpg)下载的文件夹是一个 ZIP 文件夹，我们需要将其解压才能访问\
+    \ Eclipse 应用程序。因此，右键点击 ZIP 文件夹并点击“提取所有”。![](img/Image00023.jpg)浏览你的解压位置并点击“提取”。![](img/Image00024.jpg)现在打开\
+    \ eclipse 文件夹，寻找下方截图所示的 eclipse 应用程序![](img/Image00025.jpg)点击并打开 eclipse 应用程序![](img/Image00026.jpg)选择一个工作空间并点击启动（launch）![](img/Image00027.jpg)我们现在已成功安装了\
+    \ Eclipse IDE。让我们开始编码吧..\n\n# 第 3 章：类、对象、变量和数据类型\n\n## 3.1: 什么是 Java 类和对象？\n\n\
+    ### `Class`\n需要注意的要点是：\n*   Java 类是创建对象的蓝图。\n*   Java 类包含方法和变量。\n*   创建 Java 类的语法为：\n\
+    \    ```\n    access_modifier class class_name {……..}\n    ```\n\n### `Object`\n\
+    *   类的对象实例。\n*   对象包含其类中存在的方法和变量的副本。\n*   创建 Java 对象的语法为：\n    ```\n    type object_name\
+    \ = new class_name ( )\n    ```\n    `type` 表示声明的对象的类型。`new` 关键字用于创建对象。`new` 关键字后面跟着对构造函数的调用（构造函数将在第\
+    \ 4 章中解释）。例如：`Animal a = new Animal( )`，这里 `a` 是 `Animal` 类型的对象（类名），`new` 关键字后面跟着对\
+    \ `Animal` 默认构造函数的调用。\n\n我知道这听起来非常复杂，让我们尝试在下面将其简化一下。让我们考虑一个包含三个学生 `John`、`Ram`\
+    \ 和 `Katy` 的教室。这三个学生有一些共同点，如下所示：\n1. 他们三个人都是教室里的学生。\n2. 他们每个人都有一个名字。\n3. 他们每个人都有一个\
+    \ `student_ID`。\n4. 他们每个人都有一个 `age`。\n5. 他们每个人都有一个 `gender`。\n6. 他们每个人都有自己的家庭地址。\n\
+    \n上述列出的六点被称为学生的属性。在 Java 世界中，我们可以用 `variable` 的形式来描述这些属性。学生执行多个功能，如学习、吃饭、玩耍等。在\
+    \ Java 世界中，这些功能可以用 `methods` 来描述。我们已经成功陈述了 `Student` 的属性和功能。现在大问题是我们在哪里存储这些信息呢？嗯，我们可以这些信息存储在类中。学生\
+    \ `John`、`Ram` 和 `Katy` 有他们各自的特征，他们都属于学生类别。在 Java 世界中，这三个学生被称为类 `student` 的 `objects`，而\
+    \ `objects` 将包含其所在类中声明的所有变量和方法的副本![](img/Image00028.jpg)让我们总结一下这个概念：\n*   `Student`\
+    \ 是一个类。\n*   `John`、`Ram` 和 `Katy` 是属于 `Student` 类的 `objects`。\n*   `Name`、`Gender`、`Age`、`Student_ID`、`Address`\
+    \ 是 `Student` 类的 `variables`。\n\n我们将查看另一个 Java 类和对象的例子![](img/Image00029.jpg)有多种动物属于动物界。有\
+    \ `dogs`狗、`tigers`老虎、`monkeys`猴子、`lion`狮等。所有动物有一些共同点，比如它们都属于动物类别，它们都有名字、重量、年龄，并且还执行一些共同的功能，如吃饭、玩耍等。在\
+    \ Java 世界中，我们可以将所有以上信息写入类 `Animal` 中，`Animal` 类的 `objects` 将是 `dog`、`tiger`、`monkey`。换句话说，我们可以说\
+    \ `object` 是巨大类中的一个微小实体，它有自己的属性和特性。\n\n## 3.2: 什么是 Java 变量？\n\n需要注意的要点是：\n*  \
+    \ Java `variables` 充当数据的容器。\n*   `variables` 使用 `Data type` 声明。\n    示例：`int age`\n\
+    \    这里 `age` 是变量名，其数据类型为 `int` 或整数，这意味着变量 `age` 只能存储数值整数。\n\nJava `variables`\
+    \ 分三种类型：\n1. `Local variable` 局部变量——这些 `variables` 在方法内部声明（方法将在第 4 章讨论），并且 `variables`\
+    \ 在退出方法后就会被销毁。\n2. `Instance variable` 实例变量——这些 `variables` 在类内部声明。\n3. `Static\
+    \ variables` 静态变量——这些 `variables` 的值保持不变，不需要任何对象即可访问。\n\n## 3.3: Java 数据类型\n\n\
+    Java 数据类型分为两类：\n1. `Primitive Data Type` 原始数据类型——它包含如 `boolean`、`char`、`int`、`short`、`byte`、`long`、`float`\
+    \ 和 `double`。\n2. `Non-Primitive Data Type` 非原始数据类型：它包含 `String`、`Array` 等。\n\n\
+    | 数据类型 |\n| :--- |\n| `int` |\n| `float` |\n| `char` |\n| `boolean` |\n| `String`\
+    \ |\n\n在上面的 `Student` 类示例中：\n*   `Name`、`Gender`、`Age`、`Student_ID`、`Address`\
+    \ 是 `Student` 类的 `variables`。\n*   `Student` 是一个类。\n*   `John`、`Ram` 和 `Katy`\
+    \ 是属于 `Student` 类的 `objects`。\n*   `Age` 将是 `int`。\n*   `Student_ID` 将是 `String`。\n\
+    *   `Address` 将是 `String`。\n*   `Gender` 将是 `String`。\n*   `Name` 将是 `String`。\n\
+    \n## 3.4: 什么是访问修符？\n\n`access modifiers` 表示类或方法的可见性。大致分为四种：\n1. `Public` 公有修符——意味着可以随处可见。\n\
+    2. `Private` 私有修符——意味着仅在内部可见。\n3. `Default` 默认修符——意味着仅在包内可见。\n4. `Protected` 保护修符——意味着可以通过继承在包内（继承将在第\
+    \ 7 章讨论）。\n\n## 3.5: 什么是 Java 包？\n\n*   `Java package` 包含类的组。\n*   `Java packages`\
+    \ 主要用于避免命名冲突。\n如果一个包包含两个同名的类文件，会导致命名冲突并在 Java 项目中发生错误。为了防止这种情况发生，应该创建不同的包来存储类文件![](img/Image0030.jpg)\n\
+    \n## 3.6: 示例\n\n### 示例 1\n启动 Eclipse 并创建一个新的 Java 项目。\n*   点击 `File` -> `New`\
+    \ -> `Java Project`![](img/Image0031.jpg)\n*   输入项目名称（我命名为 `hello_world`）并点击 `Finish`![](img/Image00032.jpg)\n\
+    *   在 `Create module-info.java` 窗口，目前我将点击 `Don’t Create`![](img/Image00033.jpg)\n\
+    我们的 `hello_world` Java 项目已创建![](img/Image00034.jpg)\n*   右键点击 `src` 文件夹 -> `New`\
+    \ -> `Package`（我们正在创建一个包）。\n什么是默认的 `src` 文件夹？\n默认 `src` 文件夹是源代码文件夹，包含了我们项目的源代码或主代码![](img/Image00035.jpg)![](img/Image00036.jpg)点击\
+    \ Finish\n*   右键点击 `hello_world` 包 -> 点击 `New` -> 点击 `Class`（我们正在创建一个新的 Java 类）![](img/Image0037.jpg)\n\
+    输入类名（我给了 `Hello`），大写字母开头 -> 勾选 `public static void main(String[] args)` 复选框 ->\
+    \ 点击 `Finish`![](img/Image0038.jpg)\n*   在 `Hello.java` 中，编写下方截图所示的代码，并通过点击运行按钮执行程序![](img/Image0039.jpg)\n\
+    \n代码解释：\n*   `System.out.print` 用于显示或打印输出。\n`System.out.println` 与 `System.out.print`\
+    \ 相同，但 `println` 会分行输出。\n*   在第 5 行，你会注意到一行非常重要的代码，它是 `public static void main(String[]\
+    \ args)`。它是 Java `main` 方法，作为 Java 程序的入口。任何 Java 程序在遇到这行非常重要的代码后才会开始执行过程。（我们将在第\
+    \ 4 章详细讨论这行代码）。\n\n### 示例 2\n让我们创建另一个 Java 类。\n\n"
+- fmt: "\n*   Right click on `hello_world` package -> New -> Class (I named my class\
+    \ file `students`)\n\n![](Image00040.jpg)\n\n*   In `students.java`, write the\
+    \ following lines of code.\n\n![](Image00041.jpg)\n\nCode explanation:\n\n*  \
+    \ At line 5, we declared an instance variable (explained in section 3.2) name\
+    \ `name` whose data type (explained in section 3.3) is `String`.\n\n*   At line\
+    \ 8, the very important line of code `public static void main(String[] args)`\
+    \ is written.\n\nPlease Note: Always remember Java objects must be declared only\
+    \ after typing this very important line of code.\n\n*   At line 9, 10, 11 different\
+    \ objects of class `Students` are created.\n\n*   With the help of `.` operator,\
+    \ we access the variable `name` from class `Students`.\n\nPlease Note: To access\
+    \ any variable or method of a class from an object, `.` operator is used.\n\n\
+    *   At line 13, 14, 15, we pass values or data into the `name` variable of each\
+    \ object.\n\n*   At line 17, 18, 19, we print out the values.\n\nNow let’s run\
+    \ the above piece of code![](Image00042.jpg)\n\n# Chapter 4: Constructors & Methods\n\
+    \nIn previous chapter we learnt about the basic idea of a method. In this chapter\
+    \ we will create a Java program containing constructors and methods.\n\n## 4.1:\
+    \ Constructor\n\nWe learnt about Java object syntax in chapter 3, section 3.1\
+    \ and we learnt that the `new` keyword is followed by call to a constructor so\
+    \ what is Java constructor?\n\n*   Java constructor is a special Java method that\
+    \ is used to initialize Java objects.\n*   Java constructor’s name must match\
+    \ with the Java class name.\n*   Java constructor does not have a return type\
+    \ (return type discussed in section 4.2).\n*   Java constructor is always called\
+    \ during object creation. If a class does not contain any constructor, then Java\
+    \ compiler automatically created a default constructor and executes the program.\n\
+    \nJava constructor is of two types:\n\n1.  Default constructor\n2.  Parameterized\
+    \ constructor\n\n### Default constructor\nDefault constructor does not contain\
+    \ any parameter.\n\n### Parameterized constructor\nParameterized constructor contains\
+    \ parameters.\n\n### What is Parameter?\nParameter is a variable which is passed\
+    \ to a method or constructor. A method or constructor can have one parameter or\
+    \ multiple parameters.\n\nExample ➢ Launch Eclipse IDE -> create a new class (I\
+    \ named my class `Multiply`)![](Image00043.jpg)\n\nCode explanation:\n\n*   At\
+    \ line 4, instance variable (instance variable discussed in chapter 3, section\
+    \ 3.2) `value1` and `value2` are declared.\n*   At line 6, we created our default\
+    \ constructor.\n*   At line 10, we created our parameterized constructor and it\
+    \ takes two parameters `x` and `y`.\n*   At line 12, we passed `x` to `value1`\
+    \ meaning that when we will assign a value to variable `x`, that value will in\
+    \ turn get assigned to variable `value1`.\n*   At line 13, we passed `y` to `value2`\
+    \ meaning that when we will assign a value to variable `y`, that value will in\
+    \ turn get assigned to variable `value2`.\n*   At line 16, method `multiply` is\
+    \ declared and this method will return the multiplication result.\n*   At line\
+    \ 21, Java `main` method is declared (we have discussed about this very important\
+    \ line of code in chapter 3 and we will discuss more about this method as we proceed\
+    \ further).\n*   At line 22, object `m` is created and values are passed to `Multiply`\
+    \ constructor (parameterized constructor created in line 10. Value 10 is assigned\
+    \ to instance variable `value1` and other value 10 is assigned to `value2`).\n\
+    *   At line 23, method `multiply` is called.\n\nNow let’s run the above piece\
+    \ of code![](Image00044.jpg)\n\n## 4.2: Method\n\n*   A Java method is a block\
+    \ of code performing some task.\n\nExample: Let us consider a `Math` class, `Math`\
+    \ contains numbers and with those numbers we can perform multiple functions like\
+    \ addition, subtraction, multiplication, division etc. In Java, we can write these\
+    \ functions in a method.\n\n*   The signature of a Java method is:\n`access_modifier\
+    \ return_type method_name {……………}` (`access_modifier` discussed in section 3.4\
+    \ of chapter 3)\n\n### What is return type in Java?\nReturn type is the data type\
+    \ of the value returned by the method.\n\nExample: Let us consider the method\
+    \ signature written below:\n`public int addition ( ) {}`\nIn the above method\
+    \ signature, the method’s name is `addition` and its return type is `int`. This\
+    \ means that the `addition` method will return a value of data type `int`. In\
+    \ order to return the value of a method `return` keyword is used.\n\nLet us consider\
+    \ another method signature written below:\n`public void show ( ) {}`\nIn the above\
+    \ method signature, the method’s name is `show` and its return type is `void`.\
+    \ This means that the `show` method will return no value.\n\nExample\n\n*   Launch\
+    \ Eclipse IDE -> create a new Class within the `hello_world` package (created\
+    \ in chapter 3) (I named my Class `Math`)![](Image00045.jpg)\n*   In `Math.java`\
+    \ write the following lines of code.\n\n![](Image00046.jpg)\n\nCode explanation:\n\
+    \n*   At Line 3, `Math` class is declared and this class contains two methods\
+    \ `addition` and `subtraction`.\n*   At line 5, `addition` method is declared.\
+    \ Let’s look into its signature![](Image00047.jpg)\n*   At line 6, we declared\
+    \ a local variable `z` (local variable discussed in chapter 3, section 3.3).\n\
+    *   At line 7, we perform arithmetic operation.\n*   At line 8, we return the\
+    \ value of `z` with the help of `return` keyword.\n*   Line 11–14, contains `subtraction`\
+    \ and it follows the same process of `addition`.\n*   Line 17 contains the main\
+    \ method which will act as entry point of `Math`.\n*   At line 19, object `m`\
+    \ of class `Math` is created.\n*   At line 20 and 21, methods of `Math` are accessed.\
+    \ `.` operator is used. In addition method, value 10 is assigned to `x` and other\
+    \ value 10 is assigned to `y`. Then the results of those methods are printed by\
+    \ `System.out.println`.\n\n### What is Argument?\nArguments are data values which\
+    \ are passed to method parameters.\n\n## 4.3: What is static void main (String[]\
+    \ args)?\nWe have learnt in chapter 3 as well as in this chapter that `public\
+    \ static void main(String[] args)` is the most important line of code in any Java\
+    \ program. This line of code acts as entry point or starting point of any Java\
+    \ program![](Image00048.jpg)\nPlease Note: JVM accesses the Java main method (JVM\
+    \ discussed in chapter 1)\n\n## 4.4: Mathematical Operators in Java\n\n| Arithmetic\
+    \ Operator |\n| :--- |\n| + |\n| - |\n| * |\n| / |\n| % |\n| ++ |\n| -- |\n\n\
+    # Chapter 5: Conditional Statements & Loops\n\n## 5.1: Conditional Statements\n\
+    \n*   Java contains multiple conditional statements and they are:\n    1.  `if`\n\
+    \    2.  `else`\n    3.  `else if`\n\n*   The syntax of `if` and `else` is:\n\
+    `if ( condition ) {……………. code ………}else{………….. code ………………}`\n\n*   The syntax\
+    \ of `if`, `else if` and `else` is:\n`if ( condition ) {…….. code ……………….}else\
+    \ if ( condition ) {……….. code ………………..}else{……………….. code ……………}`These conditional\
+    \ statements check where a certain condition returns Boolean value TRUE or FALSE.\
+    \ If the condition returns TRUE, a block of code executes, else another block\
+    \ of code executes.\n\nExecution flow of `if` and `else`](Image00050.jpg)\nExecution\
+    \ flow of `if`, `else if` and `else`](Image00051.jpg)\n\n### Logical operations\
+    \ available in Java\n\n| Operator |\n| :--- |\n| x > y |\n| x < y |\n| x == y\
+    \ |\n| x != y |\n| x >= y |\n| x <= y |\n\nLet’s code..Example\n\n*   Launch Eclipse\
+    \ IDE and create a new Java Class `ConditionalStatements`\n*At line 3, Class `ConditionalStatements`\
+    \ is declared.\n*   At line 5, `public static void main(String[] args)` is written\
+    \ (this line of code was discussed in chapter 3 and chapter 4 ).\n"
+  raw: '*   Right click on hello_world package -> New -> Class (I named my class file
+    students )
+
+
+    ![](Image00040.jpg)
+
+
+    *   In students.java , write the following lines of code.
+
+
+    ![](Image00041.jpg)Code explanation:
+
+
+    *   At line 5, we declared an instance variable (explained in section 3.2) name
+    whose data type (explained in section 3.3) is String .
+
+
+    *   At line 8, the very important line of code public static void main(String[]
+    args) is written.
+
+
+    Please Note: Always remember Java objects must be declared only after typing this
+    very important line of code.
+
+
+    *   At line 9, 10, 11 different objects of class Students are created.
+
+
+    *   With the help of dot (.) operator , we access the variable name from class
+    Students.
+
+
+    Please Note: To access any variable or method of a class from an object , dot
+    operator is used.
+
+
+    *   At line 13, 14, 15, we pass values or data into the name variable of each
+    object .
+
+
+    *   At line 17, 18, 19, we print out the values.
+
+
+    Now let’s run the above piece of code![](Image00042.jpg)Chapter 4: Constructors
+    & MethodsIn previous chapter we learnt about the basic idea of a method . In this
+    chapter we will create a Java program containing constructors and methods .4.1:
+    ConstructorWe learnt about Java object syntax in chapter 3, section 3.1 and we
+    learnt that the new keyword is followed by call to a constructor so what is Java
+    constructor? .
+
+
+    *   Java constructor is a special Java method that is used to initialize Java
+    objects .
+
+
+    *   Java constructor’ s name must match with the Java class name.
+
+
+    *   Java constructor does not have a return type (return type discussed in section
+    4.2).
+
+
+    *   Java constructor is always called during object creation. If a class does
+    not contain any constructor , then Java compiler automatically created a default
+    constructor and executes the program.
+
+
+    Java constructor is of two types:
+
+
+    1.  Default constructor
+
+
+    2.  Parameterized constructor
+
+
+    Default constructorDefault constructor does not contain any parameter .Parameterized
+    constructorParameterized constructor contains parameters .What is Parameter?Parameter
+    is a variable which is passed to a method or constructor . A method or constructor
+    can have one parameter or multiple parameters .Example➢        Launch Eclipse
+    IDE -> create a new class ( I named my class Multiply )![](Image00043.jpg)Code
+    explanation:
+
+
+    *   At line 4, instance variable (instance variable discussed in chapter 3, section
+    3.2 ) value1 and value 2 are declared.
+
+
+    *   At line 6, we created our default constructor .
+
+
+    *   At line 10, we created our parameterized constructor and it takes two parameters
+    x and y .
+
+
+    *   At line 12, we passed x to value1 meaning that when we will assign a value
+    to variable x , that value will in turn get assigned to variable value1 .
+
+
+    *   At line 13, we passed y to value2 meaning that when we will assign a value
+    to variable y , that value will in turn get assigned to variable value2 .
+
+
+    *   At line 16, method multiply is declared and this method will return the multiplication
+    result.
+
+
+    *   At line 21, Java main method is declared (we have discussed about this very
+    important line of code in chapter 3 and we will discuss more about this method
+    as we proceed further).
+
+
+    *   At line 22, object m is created and values are passed to Multiply constructor
+    (parameterized constructor created in line 10\. Value 10 is assigned to instance
+    variable value1 and other value 10 is assigned to value2)
+
+
+    *   At line 23, method multiply is called.
+
+
+    Now let’s run the above piece of code![](Image00044.jpg)4.2: Method
+
+
+    *   A Java method is a block of code performing some task.
+
+
+    For example: Let us consider a Math class , Math contains numbers and with those
+    numbers we can perform multiple functions like addition, subtraction, multiplication,
+    division etc. In Java , we can write these functions in a method .
+
+
+    *   The signature of a Java method is:
+
+
+    access_modifier return_type method_name {……………}(access_modifier discussed in section
+    3.4 of chapter 3 )What is return type in Java?Return type is the data type of
+    the value returned by the method .Example: Let us consider the method signature
+    written below:public int addition ( ) {}In the above method signature , the method
+    ’s name is addition and its return type is int . This means that the addition
+    method will return a value of data type int .In order to return the value of a
+    method return keyword is used.Let us consider another method signature written
+    below:public void show ( ) {}In the above method signat ure, the method ’s name
+    is show and its return type is void . This means that the show method will return
+    no value.Example
+
+
+    *   Launch Eclipse IDE -> create a new Class within the hello_world package (created
+    in chapter 3 )
+
+
+    (I named my Class Math )![](Image00045.jpg)
+
+
+    *   In Math.java write the following lines of code.
+
+
+    ![](Image00046.jpg)Code explanation:
+
+
+    *   At Line 3, Math class is declared and this class contains two methods addition
+    and subtraction .
+
+
+    *   At line 5, addition method is declared.
+
+
+    Let’s look into its signature.![](Image00047.jpg)
+
+
+    *   At line 6, we declared a local variable z (local variable discussed in chapter
+    3, section 3.2).
+
+
+    *   At line 7, we perform the arithmetic operation.
+
+
+    *   At line 8, we return the value of z with the help of return keyword .
+
+
+    *   Line 11 – 14, contains method subtraction and it follows the same process
+    of method addition .
+
+
+    *   Line 17 contains the main line of code which will start the execution process
+    and will act as an entry point to Math.java .
+
+
+    *   At line 19, object m of class Math is created. This object will contain a
+    copy of all methods and variables of class Math . In order to access those information
+    dot (.) operator is used.
+
+
+    *   At line 20 and 21, the methods of class Math are accessed and arguments are
+    passed into those methods (In addition method , value 10 is assigned to variable
+    x and other value 10 is assigned to variable y . In subtraction method, the value
+    10 is assigned to variable x and other value 5 is assigned to variable y) . Then
+    the results of those methods are printed by System.out.println .
+
+
+    What is Argument?Arguments are data values which are passed to the method parameters
+    .Now let’s run the above piece of code![](Image00048.jpg)4.3: What is public static
+    void main (String[ ] args)?We have learnt in chapter 3 as well as in this chapter
+    that public static void main ( String[ ] args ) is the most important line of
+    code in any Java program. This line of code acts as an entry point or starting
+    point of any Java program.![](Image00049.jpg)Please Note: JVM accesses the Java
+    main method . ( JVM discussed in chapter 1)4.4: Mathematical Operators in Java
+
+
+    | Arithmetic Operator |
+
+
+    | + |
+
+
+    | - |
+
+
+    | * |
+
+
+    | / |
+
+
+    | % |
+
+
+    | ++ |
+
+
+    | -- |
+
+
+    Chapter 5: Conditional Statements & Loops5.1: Conditional Statements
+
+
+    *   Java contains multiple conditional statements and they are:
+
+
+    1.  if
+
+
+    2.  else
+
+
+    3.  else if
+
+
+    *   The syntax of if and else is:
+
+
+    if ( condition ) {……………. code ………}else {………….. code ………………}
+
+
+    *   The syntax of if , else if and else is:
+
+
+    if ( condition ) {…….. code ……………….}else if ( condition ) {……….. code ………………..}else
+    {……………….. code ……………}These conditional statements check where a certain condition
+    returns Boolean value TRUE or FALSE . If the condition returns TRUE , a block
+    of code executes, else another block of code executes.Execution flow of if and
+    else![](Image00050.jpg)Execution flow of if , else if and else![](Image00051.jpg)Logical
+    operations available in Java
+
+
+    | Operator |
+
+
+    | x > y |
+
+
+    | x < y |
+
+
+    | x == y |
+
+
+    | x != y |
+
+
+    | x >= y |
+
+
+    | x <= y |
+
+
+    Let’s code..Example
+
+
+    *   Launch Eclipse IDE and create a new Java Class (I named my class ConditionalStatements
+    ) and write the following lines of code shown in the screen shot below.
+
+
+    ![](Image00052.jpg)Code explanation:
+
+
+    *   At line 3, Class ConditionalStatements is declared.
+
+
+    *   At line 5, public static void main (String[ ] args) is written (this line
+    of code was discussed in chapter 3 and chapter 4 ).'
+  toc: []
+  trans: "\n\n*   右键点击 `hello_world` 程序包 -> New -> Class (我将我的类文件命名为 `students`)\n\
+    \n![](img/Image00040.jpg)\n\n*   在 `students.java` 中，编写以下代码。\n\n![](img/Image00041.jpg)\n\
+    \n代码解释：\n\n*   在第 5 行，我们声明了一个实例变量（在第 3.2 节中解释）名为 `name`，其数据类型（在第 3.3 节中解释）为 `String`。\n\
+    \n*   在第 8 行，编写了非常重要的代码 `public static void main(String[] args)`。\n\n请注意：始终记住，Java\
+    \ 对象必须在输入这行非常重要的代码后才能进行声明。\n\n*   在第 9、10, 11 行，创建了 `Students` 类的不同对象。\n\n*  \
+    \ 通过 `.` 运算符，我们从 `Students` 类中访问变量 `name`。\n\n请注意：要从对象访问类的任何变量或方法，均使用 `.` 运算符。\n\
+    \n*   在第 13、14, 15 行，我们将值或数据传递给每个对象的 `name` 变量。\n\n*   在第 17、18, 19 行，我们打印出这些值。\n\
+    \n现在让我们运行上面的代码![](img/Image00042.jpg)\n\n# 第 4 章：构造函数与方法\n\n在上一一章中，我们学习了方法的基本概念。在本章中，我们将创建一个包含构造函数和方法的\
+    \ Java 程序。\n\n## 4.1: 构造函数\n\n我们在第 3 章第 3.1 节学习了 Java 对象的语法，并了解到 `new` 关键字后面跟着构造函数的调用，那么什么是\
+    \ Java 构造函数呢？\n\n*   Java 构造函数是一种特殊的 Java 方法，用于初始化 Java 对象。\n*   Java 构造函数的名称必须与\
+    \ Java 类名匹配。\n*   Java 构造函数没有返回值（返回值在第 4.2 节中讨论）。\n*   Java 构造函数在对象创建期间始终会被被调用。如果一个类不包含任何构造函数，那么\
+    \ Java 编译器会自动创建一个默认构造函数并执行程序。\n\nJava 构造函数分为两种：\n\n1.  默认构造函数\n2.  带参数构造函数\n\n\
+    ### 默认构造函数\n默认构造函数不包含任何参数。\n\n### 带参数构造函数\n带参数构造函数包含参数。\n\n### 什么是参数？\n参数是传递给方法或构造函数的变量。方法或构造函数可以有一个参数或多个参数。\n\
+    \n示例 ➢ 启动 Eclipse IDE -> 创建一个新类（我将我的类命名为 `Multiply`![](img/Image00043.jpg)\n\n\
+    代码解释：\n\n*   在第 4 行，声明了实例变量（实例变量在第 3 章第 3.2 节中解释）`value1` 和 `value2`。\n*   在第\
+    \ 6 行，我们创建了默认构造函数。\n*   在第 10 行，我们创建了带参数构造函数，它接收两个参数 `x` 和 `y`。\n*   在第 12 行，我们将\
+    \ `x` 传递给 `value1`，这意味着当给变量 `x` 赋值时，该值反过来会被赋值给变量 `value1`。\n*   在第 13 行，我们将 `y`\
+    \ 传递给 `value2`，这意味着当给变量 `y` 赋值时，该值反过来会被赋值给变量 `value2`。\n*   在第 16 行，声明了方法 `multiply`，该方法将返回乘法结果。\n\
+    *   在第 21 行，声明了 Java `main` 方法（我们在第 3 章中讨论过这行非常重要的代码，随着学习进行，我们将进一步讨论该方法）。\n* \
+    \  在第 22 行，创建了对象 `m` 并值传递给 `Multiply` 构造函数（第 10 行创建的带参数构造函数。值 10 被赋值给实例变量 `value1`，另一个值\
+    \ 10 被赋值给 `value2`）。\n*   在第 23 行，调用了方法 `multiply`。\n\n现在让我们运行上面的代码![](img/Image00044.jpg)\n\
+    \n## 4.2: 方法\n\n*   Java 方法是执行某些任务的代码块。\n\n示例：让我们考虑一个 `Math` 类，`Math` 包含数字，通过这些数字我们可以执行多个功能，如加法、减法、乘法、除法等。在\
+    \ Java 中，我们可以在方法中编写这些函数。\n\n*   Java 方法的签名是：\n`access_modifier return_type method_name\
+    \ {……………}` (`access_modifier` 在第 3 章第 3.4 节中讨论)\n\n### Java 中的返回值是什么？\n返回值是方法所返回的值的数据类型。\n\
+    \n示例：让我们考虑下面写的方法签名：\n`public int addition ( ) {}`\n在上面的方法签名中，方法名为 `addition`，其返回类型是\
+    \ `int`。这意味着 `addition` 方法将返回数据类型为 `int` 的值。为了返回方法的值，使用了 `return` 关键字。\n\n让我们考虑下面写的另一个方法签名：\n\
+    `public void show ( ) {}`\n在上面的方法签名中，方法名为 `show`，其返回类型是 `void`。这意味着 `show` 方法不返回任何值。\n\
+    \n示例\n\n*   启动 Eclipse IDE -> 在 `hello_world` 包（在第 3 章创建的）中创建一个新类（我将我的类命名为 `Math`![](img/Image00045.jpg)\n\
+    *   在 `Math.java` 中编写以下代码。\n\n![](img/Image00046.jpg)\n\n代码解释：\n\n*   在第 3 行，声明了\
+    \ `Math` 类，该类包含两个方法 `addition` 和 `subtraction`。\n*   在第 5 行，声明了 `addition` 方法。让我们看看签名![](img/Image00047.jpg)\n\
+    *   在第 6 行，我们声明了一个局部变量 `z`（局部变量在第 3 章第 3.3 节中讨论）。\n*   在第 7 行，我们执行算术运算。\n*   在第\
+    \ 8 行，通过 `return` 关键字返回 `z` 的值。\n*   第 11–14 行包含 `subtraction`，它遵循与 `addition`\
+    \ 相同的过程。\n*   第 17 行包含 main 方法，它作为 `Math` 的入口。\n*   在第 19 行，创建了 `Math` 类的对象 `m`。\n\
+    *   在第 20 和 21 行，访问了 `Math` 的方法。使用了 `.` 运算符。在 `addition` 方法中，值 10 被赋值给 `x`，另一个值\
+    \ 10 被赋值给 `y`。然后通过 `System.out.println` 打印方法的结果。\n\n### 什么是参数 (Argument)？\n参数是传递给方法的值。\n\
+    \n## 4.3: 什么是 static void main (String[] args)?\n我们在第 3 章以及本章了解到 `public static\
+    \ void main(String[] args)` 是任何 Java 程序中最重要的代码。这行代码作为 Java 程序的入口或起点![](img/Image00048.jpg)\n\
+    请注意：JVM 访问 main 方法（JVM 在第 1 章中讨论）\n\n## 4.4: Java 中的算术运算符\n\n| 算术运算符 |\n| :---\
+    \ |\n| + |\n| - |\n| * |\n| / |\n| % |\n| ++ |\n| -- |\n\n# 第 5 章：条件语句与循环\n\n\
+    ## 5.1: 条件语句\n\n*   Java 包含条件语句，它们有：\n    1.  `if`\n    2.  `else`\n    3.  `else\
+    \ if`\n\n*   `if` 和 `else` 的语法是：\n`if ( condition ) {……………. code ………}else{…………..\
+    \ code ………………}`\n\n*   `if`, `else if` 和 `else` 的语法是：\n`if ( condition ) {……..\
+    \ code ……………….}else if ( condition ) {……….. code ………………..}else{……………….. code ……………}`这些条件语句检查条件是否返回布尔值\
+    \ TRUE 或 FALSE。如果条件返回 TRUE，则执行代码块，否则执行另一个代码块。\n\n`if` 和 `else` 的执行流程![](img/Image00050.jpg)\n\
+    `if`, `else if` 和 `else` 的执行流程![](img/Image00051.jpg)\n\n### Java 中可用的逻辑运算\n\n\
+    | 运算符 |\n| :--- |\n| x > y |\n| x < y |\n| x == y |\n| x != y |\n| x >= y |\n\
+    | x <= y |\n\n让我们编写代码..示例\n\n*   启动 Eclipse IDE 并创建一个新的 Java 类 `ConditionalStatements`\n\
+    第 3 行，声明了类 `ConditionalStatements`。\n*   在第 5 行，编写了 `public static void main(String[]\
+    \ args)`（这行代码我们在第 3 章和第 4 章中讨论过）。\n\n"
+- fmt: "\n*   At lines 7 and 8, instance variables (discussed in section 3.2 of chapter\
+    \ 3 ) `x` and `y` are declared and values 5 and 10 are assigned to it.\n*   At\
+    \ line 10, `if` condition is declared. It checks whether the value of `x` is greater\
+    \ than the value of `y`. If the condition is satisfied or return Boolean value\
+    \ `TRUE`, line 11 executes.\n*   At line 13, `else if` condition is declared.\
+    \ It checks whether the value of `x` is equal to the value of `y`. If both values\
+    \ are equal, line 14 executes.\n*   At line 16, `else` condition is declared and\
+    \ this block of code runs if both `if` and `else if` condition is not satisfied.\n\
+    \nIn this example, the value of `x` is 5 and the value of `y` is 10, so the value\
+    \ of `x` is not greater than the value of `y` and hence the condition will return\
+    \ `FALSE` and line 11 will not execute. The value of `x` is obviously not equal\
+    \ to the value of `y`, so the condition will return `FALSE` and the line 14 will\
+    \ not execute. Value of `x` was not greater than `y` (stated in `if` condition)\
+    \ and value of `x` was not equal to the value of `y` (stated in `else if` condition),\
+    \ so this means that `x` is less than `y` and else block of code executes. Now\
+    \ let’s run the above piece of code.![](Image00053.jpg)\n\n## 5.2: Loops\n\n*\
+    \   There are two types of loop:\n    1. `for` loop\n    2. `while` loop\n\nThese\
+    \ loops are used to loop through a block of code to test whether a certain condition\
+    \ is satisfied or not.\n*   `for` loop works best with Arrays (we will learn about\
+    \ Array basics in Chapter 6 ).\n\n### 5.2.1: for loop\nThe syntax is:\n```\nfor\
+    \ ( initialization , condition , increment ) { ………… code ………………}\n```\n*   The\
+    \ `initialization` part initialize a variable and it executes only once in the\
+    \ `for` loop lifecycle.\n*   The `condition` part contains a logical operation.\n\
+    *   The `increment` part increments the variable and it executes every time after\
+    \ the block of code executes.\n\nExecution flow of a `for` loop![](Image00054.jpg)\n\
+    \n#### Example\n*   Launch Eclipse IDE and create a new `Class` (I named my class\
+    \ `Loops` ).\n*   Write the following lines of code in `Loops.java`.\n\n![](Image00055.jpg)Code\
+    \ explanation:\n*   At line 3, `class Loops` is declared.\n*   At line 5, the\
+    \ `main` method is written (this line of code is discussed in chapter 3 and 4).\n\
+    *   At line 7, the `for` loop is stated.\n*   In `initialization` part, the variable\
+    \ `i` is declared and a value of 0 is assigned to it.\n*   In `condition` part,\
+    \ the condition of `i <= 5` is set.\n*   In `increment` part , we increment the\
+    \ value of `i` by 1. The value of `i` will increment every time the condition\
+    \ is satisfied or returns `TRUE` and the block of code executes.\n*   At line\
+    \ 8, the value of `i` is printed.\n\nExecution process of the above piece of code:\n\
+    *   `i = 0` -> the condition is checked (`i` is less than 5, so the condition\
+    \ returns `TRUE`) -> line 8 runs -> `i` incremented 1. Present value of `i` is\
+    \ 1.\n*   `i = 1` -> the condition is checked (`i` is less than 5, so the condition\
+    \ returns `TRUE`) -> line 8 runs -> `i` incremented 1. Present value of `i` is\
+    \ 2.\n*   `i = 2` -> the condition is checked (`i` is less than 5, so the condition\
+    \ returns `TRUE`) -> line 8 runs -> `i` incremented 1. Present value of `i` is\
+    \ 3.\n*   `i = 3` -> the condition is checked (`i` is less than 5, so the condition\
+    \ returns `TRUE`) -> line 8 runs -> `i` incremented 1. Present value of `i` is\
+    \ 4.\n*   `i = 4` -> the condition is checked (`i` is less than 5, so the condition\
+    \ returns `TRUE`) -> line 8 runs -> `i` incremented 1. Present value of `i` is\
+    \ 5.\n*   `i = 5` -> the condition is checked (`i` is equal to 5, so the condition\
+    \ returns `TRUE`) -> line 8 runs -> `i` incremented 1. Present value of `i` is\
+    \ 6.\n*   `i = 6` -> the condition is checked (`i` is NOT less than equal to 5,\
+    \ so the condition is `FALSE`) -> EXIT out of the loop.![](Image00056.jpg)\n\n\
+    Now let’s run the above piece of code![](Image00057.jpg)\n\n### 5.2.2: while loop\n\
+    `while` loop keeps on executing a block of code as long as the condition is `TRUE`.\n\
+    The syntax is:\n```\nwhile ( condition ) {………. code…………..}\n```\nExample![](Image00058.jpg)Code\
+    \ explanation:\n*   At line 7, instance variable `i` (instance variable discussed\
+    \ in chapter 3, section 3.2) is declared and a value of 0 is assigned to it.\n\
+    *   At line 9, `while` loop is declared with a condition. This loop will go on\
+    \ till the value of `i` is less than 5.\n\nPlease note: It is very important to\
+    \ increment the value of `i` as we did on line 11 of the above piece of code.\
+    \ If we do not increment, the `while` loop will never stop.\n\n## 5.3: Break statement\n\
+    Break statements are used to break out of a loop if certain condition is satisfied.\n\
+    Example: In Eclipse IDE , create a new `Class` (I named my class `Break` )Image00059.jpg)Execution\
+    \ flow of the above piece of code![](Image00060.jpg)\n\n## Chapter 6: Array\n\n\
+    *   An `Array` is a collection of elements all having the same data type.\n* \
+    \  The syntax for `Array` declaration is:\n    ```\n    data_type[] array_name\n\
+    \    data_type[] array_name = { element1 , element2 …….}\n    data_type[] array_name\
+    \ = new data_type[ array size ]\n    ```\nLet us consider the `Fruits` category.\
+    \ Fruits can be divided into `apple`, `orange`, `banana`, etc.Image00061.jpg\n\
+    In `Java`, we can store all the fruits items or elements (shown in the screen\
+    \ shot above) into a single variable using `array`.\nFor example:\n```\nString[]\
+    \ fruits = {\"apple\", \"orange\", \"banana\" };\n```\n`fruits` is an array which\
+    \ holds or stores elements of data type `String` and `fruits` stores `apple`,\
+    \ `orange` and `banana`.\n\n### How to access any value from an Array?\n*   An\
+    \ array element can only be accessed from its index value.\n*   The syntax for\
+    \ accessing an element from an array is:\n    ```\n    array_name [index_value]\n\
+    \    ```\nImage00062.jpg\nIn the above `fruits` example, `apple` is present at\
+    \ index value 0. `orange` is present at index value 1 and `banana` is present\
+    \ at index value 2.\n*   In order to access `apple` from the `fruits` array, we\
+    \ need to write `fruits[0]`.\n*   In order to access `orange` from the `fruits`\
+    \ array, we need to write `fruits[1]`.\n*   In order to access `banana` from the\
+    \ `fruits` array, we need to write `fruits[2]`.\n\nPlease note: The index value\
+    \ always starts with 0.\n\n#### Example 1\n1. Without using `for` loop: Launch\
+    \ Eclipse IDE -> create a new `Class` ( I named my class `ArrayFruits` )Image00063.jpg\n\
+    Now let’s run the above piece of code![](Image00064.jpg)\n2. Using `for` loop\
+    \ (for loop discussed in chapter 5)!Image00065.jpg\nCode explanation:\n*   In\
+    \ line 9, you will notice the condition `i < fruits.length ;`\n\nWhat is `length`?\
+    \ `length` is a special variable which returns the length of an array . In this\
+    \ example, the length of array `fruits` is 3 because it contains 3 elements `apple`,\
+    \ `orange` and `banana`. This condition states to continue the `for` loop till\
+    \ `i` is less than the length of the array . Since the length of the array is\
+    \ 3, the `for` loop will loop 3 times.\nExecution flow of the above piece of code![](Image00066.jpg)\n\
+    \n#### Example 2\nLet’s create another `class` ( I named my class `Car` )Image00067.jpg\n\
+    Code explanation:\n*   At line 5, we declared an array `show` whose data type\
+    \ is `string`. We also set its size meaning that this array will only hold 2 elements.\n\
+    *   At line 7, we declared a method `car_info` with two parameters `make` and\
+    \ `model` ( This method will return an array of data type `string` ).\n*   At\
+    \ line 9, we store `make` at array position 0.\n*   At line 10, we store `model`\
+    \ at array position 1.\n*   At line 11, we return the array `show`.\n*   At line\
+    \ 18, we access the `car_info` method and pass values into it. `car_info` returns\
+    \ an array of data type `string` and that result gets stored in another array\
+    \ `x`.\n*   From line 20 to 21, we print out the elements from array `x`.\n\n\
+    Now let’s run the above piece of codeImage00068.jpg\nPlease note: In order to\
+    \ return multiple values from a method , we can use `array` as we did in above\
+    \ example.\n\n## Chapter 7: Object Oriented Programming Concepts\nThe most important\
+    \ Object Oriented Programming or OOP concepts are:-\n\n1.  `Encapsulation`\n2.\
+    \  `Inheritance`\n3.  `Polymorphism`\n\n### 7.1: Encapsulation\n"
+  raw: '*   At lines 7 and 8, instance variables (discussed in section 3.2 of chapter
+    3 ) x and y are declared and values 5 and 10 are assigned to it.
+
+
+    *   At line 10, if condition is declared. It checks whether the value of x is
+    greater than the value of y . If the condition is satisfied or return Boolean
+    value TRUE , line 11 executes .
+
+
+    *   At line 13, else if condition is declared. It checks whether the value of
+    x is equal to the value of y . If both values are equal, line 14 executes.
+
+
+    *   At line 16, else condition is declared and this block of code runs if both
+    if and else if condition is not satisfied.
+
+
+    In this example, the value of x is 5 and the value of y is 10, so the value of
+    x is not greater than the value of y and hence the condition will return FALSE
+    and line 11 will not execute. The value of x is obviously not equal to the value
+    of y, so the condition will return FALSE and the line 14 will not execute.Value
+    of x was not greater than y (stated in if condition) and value of x was not equal
+    to the value of y (stated in else if condition), so this means that x is less
+    than y and else block of code executes.Now let’s run the above piece of code.![](Image00053.jpg)5.2:
+    Loops
+
+
+    *   There are two types of loop:
+
+
+    1.  for loop
+
+
+    2.  while loop
+
+
+    These loops are used to loop through a block of code to test whether a certain
+    condition is satisfied or not.
+
+
+    *   for loop works best with Arrays (we will learn about Array basics in Chapter
+    6 ).
+
+
+    5.2.1: for loopThe syntax is:for ( initialization , condition , increment ) { ………
+    code ………………}
+
+
+    *   The initialization part initialize a variable and it executes only once in
+    the for loop lifecycle.
+
+
+    *   The condition part contains a logical operation.
+
+
+    *   The increment part increments the variable and it executes every time after
+    the block of code executes.
+
+
+    Execution flow of a for loop![](Image00054.jpg)Example
+
+
+    *   Launch Eclipse IDE and create a new Class (I named my class Loops ).
+
+
+    *   Write the following lines of code in Loops.java .
+
+
+    ![](Image00055.jpg)Code explanation:
+
+
+    *   At line 3, class Loops is declared.
+
+
+    *   At line 5, the main method is written (this line of code is discussed in chapter
+    3 and 4) .
+
+
+    *   At line 7, the for loop is stated.
+
+
+    *   In initialization part, the variable i is declared and a value of 0 is assigned
+    to it.
+
+
+    *   In condition part , the condition of i <= 5 is set.
+
+
+    *   In increment part , we increment the value of i by 1\. The value of i will
+    increment by 1 every time the condition is satisfied or returns TRUE and the block
+    of code executes.
+
+
+    *   At line 8, the value of i is printed.
+
+
+    Execution process of the above piece of code:
+
+
+    *   i = 0 -> the condition is checked ( i is indeed less than 5, so the condition
+    returns TRUE ) -> line 8 runs -> i is incremented 1.
+
+
+    Present value of i is 1.
+
+
+    *   i = 1 -> the condition is checked ( i is indeed less than 5, so the condition
+    returns TRUE ) -> lines 8 runs -> i is incremented 1.
+
+
+    Present value of i is 2.
+
+
+    *   i = 2 -> the condition is checked ( i is indeed less than 5, so the condition
+    returns TRUE ) -> lines 8 runs -> i is incremented 1.
+
+
+    Present value of i is 3.
+
+
+    *   i = 3 -> the condition is checked ( i is indeed less than 5, so the condition
+    returns TRUE ) -> lines 8 runs -> i is incremented 1.
+
+
+    Present value of i is 4.
+
+
+    *   i = 4 -> the condition is checked ( i is indeed less than 5, so the condition
+    returns TRUE ) -> lines 8 runs -> i is incremented 1.
+
+
+    Present value of i is 5.
+
+
+    *   i = 5 -> the condition is checked ( i is indeed equal to 5, so the condition
+    returns TRUE ) -> lines 8 runs -> i is incremented 1.
+
+
+    Present value of i is 6.
+
+
+    *   i = 6 -> the condition is checked (i is NOT less than or equal to 5, so the
+    condition is FALSE) -> EXIT out of the loop.
+
+
+    ![](Image00056.jpg)Now let’s run the above piece of code:![](Image00057.jpg)5.2.2:
+    while loopwhile loop keeps on executing a block of code as long as the condition
+    is TRUE .The syntax is:while ( condition ) {………. code …………..}Example![](Image00058.jpg)Code
+    explanation:
+
+
+    *   At line 7, instance variable (instance variable discussed in chapter 3, section
+    3.2) i is declared and a value 0 is assigned to it.
+
+
+    *   At line 9, while loop is declared with a condition . This loop will go on
+    till the value of i is less than 5.
+
+
+    Please note: It is very important to increment the value of i as we did on line
+    11 of the above piece of code. If we do not increment, the while loop will never
+    stop.5.3: Break statementBreak statements are used to break out of a loop if certain
+    condition is satisfied.Example➢         In Eclipse IDE , create a new Class (I
+    named my class BreakExample )![](Image00059.jpg)Execution flow of the above piece
+    of code:![](Image00060.jpg)Chapter 6: Array
+
+
+    *   An Array is a collection of elements all having the same data type .
+
+
+    *   The syntax for Array declaration is:
+
+
+    data_type[ ] array_nameordata_type[ ] array_name = { element1 , element2 …….}ordata_type[
+    ] array_name = new data_type[ array size ]Let us consider the Fruits category.
+    Fruits can be divided into apple , orange , banana , strawberry etc.![](Image00061.jpg)In
+    Java , we can store all the fruits items or elements (shown in the screen shot
+    above) into a single variable using array .For example:String[ ] fruits = { “apple”,
+    “orange”, “banana” }fruits is an array which holds or stores elements of data
+    type String and fruits stores elements apple , orange and banana .How to access
+    any value from an Array?
+
+
+    *   An array element can only be accessed from its index value .
+
+
+    *   The syntax for accessing an element from an array is:
+
+
+    array_name [ index_value ]![](Image00062.jpg)In the above fruits example, apple
+    is present at index value 0\. orange is present at index value 1 and banana is
+    present at index value 2.
+
+
+    *   In order to access apple from the fruits array , we need to write fruits[0].
+
+
+    *   In order to access orange from the fruits array , we need to write fruits[1].
+
+
+    *   In order to access banana from the fruits array , we need to write fruits[2].
+
+
+    Please note: The index value always starts with 0.Example 1
+
+
+    1.  Without using for loop
+
+
+    ➢        Launch Eclipse IDE -> create a new Class ( I named my class ArrayFruits
+    )![](Image00063.jpg)Now let’s run the above piece of code:![](Image00064.jpg)
+
+
+    2.  Using for loop
+
+
+    ( for loop discussed in chapter 5)![](Image00065.jpg)Code explanation:
+
+
+    *   In line 9, you will notice the condition i < fruits.length ;
+
+
+    What is length?length is a special variable which returns the length of an array
+    . In this example, the length of array fruits is 3 because it contains 3 elements
+    apple , orange and banana .This condition states to continue the for loop till
+    i is less than the length of the array . Since the length of the array is 3, the
+    for loop will loop 3 times.Execution flow of the above piece of code:![](Image00066.jpg)Example
+    2➢         Let’s create another class ( I named my class Car )![](Image00067.jpg)Code
+    explanation:
+
+
+    *   At line 5, we declared an array show whose data type is string . We also set
+    its size meaning that this array will only hold 2 elements.
+
+
+    *   At line 7, we declared a method car_info with two parameters make and model
+    .
+
+
+    ( This method will return an array of data type string ).
+
+
+    *   At line 9, we store make at array position 0.
+
+
+    *   At line 10, we store model at array position 1.
+
+
+    *   At line 11, we return the array show .
+
+
+    *   At line 18, we access the car_info method and pass values into it.
+
+
+    car_info returns an array of data type string and that result gets stored in another
+    array x .
+
+
+    *   From line 20 to 21, we print out the elements from array x .
+
+
+    Let’s run the above piece of code:![](Image00068.jpg)Please note: In order to
+    return multiple values from a method , we can use array as we did in above example.Chapter
+    7: Object Oriented Programming ConceptsThe most important Object Oriented Programming
+    or OOP concepts are:-
+
+
+    1.  Encapsulation
+
+
+    2.  Inheritance
+
+
+    3.  Polymorphism
+
+
+    7.1: Encapsulation'
+  toc: []
+  trans: "\n\n*   在第 7 和第 8 行，声明了实例变量（在第 3 章 3.2 节讨论过）`x` 和 `y`，并为它们赋值 5 和 10。\n*\
+    \   在第 10 行，声明了一个 `if` 条件。它检查 `x` 的值是否大于 `y` 的值。如果条件满足或返回布尔值 `TRUE`，则执行第 11 行。\n\
+    *   在第 13 行，声明了一个 `else if` 条件。它检查 `x` 的值是否等于 `y` 的值。如果两个值相等，则执行第 14 行。\n*   在第\
+    \ 16 行，声明了 `else` 条件，当 `if` 和 `else if` 条件都不满足时，将运行此代码块。\n\n在这个示例中，`x` 的值为 5，`y`\
+    \ 的值为 10，因此 `x` 的值不大于 `y` 的值，该条件将返回 `FALSE` 且不会执行第 11 行。`x` 的值显然不等于 `y` 的值，因此条件将返回\
+    \ `FALSE` 且不会执行第 14 行。`x` 的值大于 `y`（在 `if` 条件中设定），且 `x` 的值不等于 `y`（在 `else if` 条件中设定），这意味着\
+    \ `x` 小于 `y`，因此执行 `else` 代码块。现在让我们运行上面的代码。![](img/Image00053.jpg)\n\n## 5.2: 循环\n\
+    \n*   循环有两种类型：\n    1.  `for` 循环\n    2.  `while` 循环\n\n这些循环用于遍历一个代码块，以测试某个条件是否满足。\n\
+    *   `for` 循环处理数组（Arrays）时效果最好（我们将在第 6 章学习数组的各种知识）。\n\n### 5.2.1: for 循环\n语法如下：\n\
+    ```\nfor ( initialization , condition , increment ) { ………… code ………………}\n```\n\
+    *   `initialization` 部分初始化一个变量，它在 `for` 循环生命周期中只执行一次。\n*   `condition` 部分包含一个逻辑操作。\n\
+    *   `increment` 部分递增变量，它在每次代码块执行后执行一次。\n\n`for` 循环的执行流![](img/Image00054.jpg)\n\
+    \n#### 示例\n*   启动 Eclipse IDE 并创建一个新的 `Class`（我将我的类命名为 `Loops`）。\n*   在 `Loops.java`\
+    \ 中编写以下代码行。\n\n![](img/Image00055.jpg)代码解释：\n*   在第 3 行，声明了 `class Loops`。\n*\
+    \   在第 5 行，编写了 `main` 方法（此行代码在第 3 和第 4 章讨论过）。\n*   在第 7 行，写出了 `for` 循环。\n*   在\
+    \ `initialization` 部分，声明了变量 `i` 并给它赋值为 0。\n*   在 `condition` 部分，设置了条件 `i <= 5`。\n\
+    *   在 `increment` 部分，我们将 `i` 的值加了 1。每当条件满足或返回 `TRUE` 且代码块执行时，`i` 的值就会加 1。\n* \
+    \  在第 8 行，打印 `i` 的值。\n\n上述代码的执行过程：\n*   `i = 0` -> 检查条件（`i` 小于 5，所以条件返回 `TRUE`）\
+    \ -> 执行第 8 行 -> `i` 加 1。当前 `i` 的值为 1。\n*   `i = 1` -> 检查条件（`i` 小于 5，所以条件返回 `TRUE`）\
+    \ -> 执行第 8 行 -> `i` 加 1。当前 `i` 的值为 2。\n*   `i = 2` -> 检查条件（`i` 小于 5，所以条件返回 `TRUE`）\
+    \ -> 执行第 8 行 -> `i` 加 1。当前 `i` 的值为 3。\n*   `i = 3` -> 检查条件（`i` 小于 5，所以条件返回 `TRUE`）\
+    \ -> 执行第 8 行 -> `i` 加 1。当前 `i` 的值为 4。\n*   `i = 4` -> 检查条件（`i` 小于 5，所以条件返回 `TRUE`）\
+    \ -> 执行第 8 行 -> `i` 加 1。当前 `i` 的值为 5。\n*   `i = 5` -> 检查条件（`i` 等于 5，所以条件返回 `TRUE`）\
+    \ -> 执行第 8 行 -> `i` 加 1。当前 `i` 的值为 6。\n*   `i = 6` -> 检查条件（`i` 不小于等于 5，所以条件为 `FALSE`）\
+    \ -> 退出循环![](img/Image00056.jpg)\n\n现在让我们运行上面的代码![](img/Image00057.jpg)\n\n###\
+    \ 5.2.2: while 循环\n只要条件为 `TRUE`，`while` 循环就会持续执行一个代码块。\n语法如下：\n```\nwhile ( condition\
+    \ ) {………. code…………..}\n```\n示例![](img/Image00058.jpg)代码解释：\n*   在第 7 行，只要条件为 `TRUE`，`while`\
+    \ 循环就会持续执行一个代码块。\n*   注意：如果不满足条件，循环将停止。\n\n## 5.3: Break 语句\n\n`break` 语句用于在满足特定条件时跳出循环。\n\
+    示例：\n```\nint i = 0;\nwhile (i < 10) {\n    if (i == 5) {\n        break;\n  \
+    \  }\n    System.out.println(i);\n    i++;\n}\n```\n代码解释：\n*   在第 1 行，初始化变量 `i`\
+    \ 为 0。\n*   在第 3 行，声明了一个 `if` 条件，检查 `i` 是否等于 5。\n*   如果 `i` 等于 5，执行 `break` 语句，跳出循环。\n\
+    *   在第 5 行，打印 `i` 的值。\n*   在第 6 行，`i` 的值加 1。\n\n执行过程：\n*   `i = 0` -> 检查 `i <\
+    \ 10`（真） -> 检查 `i == 5`（假） -> 打印 0 -> `i` 为 1。\n*   `i = 1` -> 检查 `i < 10`（真）\
+    \ -> 检查 `i == 5`（假） -> 打印 1 -> `i` 为 2。\n*   `i = 2` -> 检查 `i < 10`（真） -> 检查 `i\
+    \ == 5`（假） -> 打印 2 -> `i` 为 3。\n*   `i = 3` -> 检查 `i < 10`（真） -> 检查 `i == 5`（假）\
+    \ -> 打印 3 -> `i` 为 4。\n*   `i = 4` -> 检查 `i < 10`（真） -> 检查 `i == 5`（假） -> 打印 4\
+    \ -> `i` 为 5。\n*   `i = 5` -> 检查 `i < 10`（真） -> 检查 `i == 5`（真） -> 执行 `break` ->\
+    \ 退出循环。\n\n## 6: 数组 (Arrays)\n\n数组是用于存储相同类型多个值的结构。\n示例：\n```\nint[] numbers =\
+    \ {10, 20, 30, 40, 50};\n```\n代码解释：\n*   `int[] numbers` 声明并初始化了一个整数数组。\n*   `{10,\
+    \ 20, 30, 40, 50}` 是数组的初始值。\n\n### 6.1: 访问数组\n数组通过索引（index）访问，索引从 0 开始。\n示例：\n\
+    ```java\nSystem.out.println(numbers[0]); // 输出 10\nSystem.out.println(numbers[2]);\
+    \ // 输出 30\n```\n\n### 6.2: 修改数组\n你可以通过索引修改数组的值。\n示例：\n```java\nnumbers[1] = 100;\n\
+    System.out.println(numbers[1]); // 输出 100\n```\n\n### 6.3: 遍历数组\n可以使用 `for` 循环或\
+    \ `for-each` 循环来遍历数组。\n示例：\n```java\nfor (int i = 0; i < numbers.length; i++)\
+    \ {\n    System.out.println(numbers[i]);\n}\n```\n或者使用 `for-each`:\n```java\n\
+    for (int num : numbers) {\n    System.out.println(num);\n}\n```\n\n## 7: 类与对象\
+    \ (Classes and Objects)\n\n类是创建对象的蓝图。\n示例：\n```java\nclass Car {\n    String brand;\n\
+    \    int year;\n\n    void drive() {\n        System.out.println(\"The car is\
+    \ driving.\");\n    }\n}\n```\n实例化对象：\n```java\nCar myCar = new Car();\nmyCar.brand\
+    \ = \"Toyota\";\nmyCar.year = 2022;\nmyCar.drive();\n```\n\n### 7.1: 继承 (Inheritance)\n\
+    继承允许类使用另一个类的属性和方法。\n示例：\n```java\nclass Animal {\n    void eat() {\n        System.out.println(\"\
+    This animal eats.\");\n    }\n}\n\nclass Dog extends Animal {\n    void bark()\
+    \ {\n        System.out.println(\"The dog barks.\");\n    }\n}\n```\n\n### 7.2:\
+    \ 多态 (Polymorphism)\n多态允许不同类对同一个方法调用做出不同的响应。\n示例：\n```java\nAnimal myDog = new\
+    \ Dog();\nmyDog.eat(); // 输出 This animal eats.\n```\n"
+- fmt: "\n* Encapsulation is the mechanism in which all the Java methods and variable\
+    \ are wrapped up into a single unit (`Class`).\n\n![](Image00069.jpg)\n\n* Encapsulation\
+    \ helps to protect the data present inside the unit and prevents any malicious\
+    \ activity.\n\n* In Encapsulation, the variables of a class is declared `private`\
+    \ (private access modifiers explained in chapter 3, section 3.4).\n\nIn order\
+    \ to access the private variable from outside the class, `get` and `set` methods\
+    \ are used. `set` method is used to set a value and `get` method is used to get\
+    \ the value.\n\nExample➢ Launch Eclipse IDE -> create a new `Class` (I named my\
+    \ class `Encap`).![](Image00070.jpg)\n\nIn `Encap` class, I declared two variables\
+    \ `username` and `password`. Since both `username` and `password` carries very\
+    \ important and sensitive data (sensitive data are those data which must be hidden\
+    \ and protected at any cost), so we declared its access modifier as `private`\
+    \ meaning that no class outside `Encap` class can access these variables. In order\
+    \ to access these private variables, we need `get` and `set` methods.\n\n➢ To\
+    \ generate `get` and `set` methods of variables `username` and `password`, click\
+    \ on the yellow bulb like icon beside `username` and `password` and select Create\
+    \ getter and setter for ‘username’ and Create getter and setter for ‘password’\
+    \ respectively.![](Image00071.jpg)![](Image00072.jpg)![](Image00073.jpg)![](Image00074.jpg)![](Image00075.jpg)\n\
+    \nWhat is this `this` keyword? `this` keyword refers to the current object. In\
+    \ the above example, Class `Encap` is `public` meaning that any other class can\
+    \ access Class `Encap` but its variables are `private` meaning no other class\
+    \ can access these variables except for Class `Encap`. The `get` and `set` methods\
+    \ are `public` meaning that any other class can access these methods.\n\n➢ Let’s\
+    \ create another class (I named my class `Encap2`) and access the `get` and `set`\
+    \ method declared in class `Encap`.![](Image00076.jpg)\n\nCode explanation:\n\n\
+    * Since Class `Encap` was `public`, Class `Encap2` can access it easily.\n\nIn\
+    \ line 6, an object of class `Encap` is created and its `set` and `get` methods\
+    \ are accessed. First we pass a value to variable `username` using its `set` method\
+    \ at line 8 and then we get and print out the value using its `get` method at\
+    \ line 9. Then we pass a value to variable `password` using its `set` method at\
+    \ line 11 and then we get and print out the value using its `get` method at line\
+    \ 12. Let’s run the above piece of code:![](Image00077.jpg)\n\n## 7.2: Inheritance\n\
+    \nImportant points to note are:\n\n* Inheritance is a mechanism in which a subclass\
+    \ or child class inherits all the properties from superclass or parent class.\n\
+    * The main usage of Inheritance is code reusability.\n* The subclass or child\
+    \ class inherits properties from its parent class using `extends` keyword.\n\n\
+    ```\nclass Parent {………………..code…………}\nclass Child extends Parent {……………….code………………}\n\
+    ```\n\n* A subclass can contain its own properties as well as its parent class\
+    \ properties.\n\nExample: Let us consider a school district XYZ contains three\
+    \ schools, elementary school, middle school and high school and all the three\
+    \ schools are built on the same street and on the same location. The common attribute\
+    \ between these schools are:\n\n1. They all are schools or educational institution.\n\
+    2. They all are built on the same street but have different building names and\
+    \ numbers.\n3. They all fall under the same school district.\n\n![](Image00078.jpg)\n\
+    \nWhile coding, instead of writing these common information for each school again\
+    \ and again, we can write them once in a single place (in a superclass or parent\
+    \ class) and call them whenever any other class needs them.\n\nExample➢ Launch\
+    \ Eclipse IDE, create a new class (I named my class `SchoolSuperClass`) and this\
+    \ class will act as a superclass. \n➢ Create three more classes, one for elementary\
+    \ school (I named my class `ElementaryChild`), one for middle school (I named\
+    \ my class `MiddleChild`) and one for high school (I named my class `HighChild`).\
+    \ These three classes will act as a child class of superclass `SchoolSuperClass.java`.\
+    \ \n➢ In superclass `SchoolSuperClass.java`, write the following lines of code:![](Image00079.jpg)\n\
+    \nIn this class, we declared all the variables and methods which are common to\
+    \ all three schools.\n\n* Open `ElementaryChild.java`, and write the following\
+    \ lines of code\n\n![](Image00080.jpg)\n\nCode explanation:\n\n* At line 3, with\
+    \ the help of `extends` keyword, all properties of superclass `SchoolSuperClass`\
+    \ are incorporated into child class `ElementaryChild`.\n* At line 7, object `e`\
+    \ of `ElementaryChild` class is created.\n* At line 9 and line 10, the variables\
+    \ `school_Id` and `building_num` are accessed from superclass and values are passed\
+    \ into it.\n* At line 12 and 13, the values of the variables are printed.\n* At\
+    \ line 14, the `street_address()` method present in superclass is called.\n\n\
+    Now let’s run the above piece of code:![](Image00081.jpg)\n\n* Open the second\
+    \ class file `MiddleChild.java` and write the following lines of code:![](Image00082.jpg)\n\
+    \nThe above piece of code is very similar to `ElementaryChild.java`, only data\
+    \ is different. Let’s run the above piece of code:![](Image00083.jpg)\n\nWe followed\
+    \ the same process above for `HighChild.java`.\n\n## 7.3: Polymorphism\n\nPolymorphism\
+    \ is a mechanism in which a method can be executed in many forms based on the\
+    \ object that is acting upon it.\nPolymorphism is of 2 types:\n\n1. Dynamic Polymorphism\
+    \ or Run Time polymorphism\n2. Static Polymorphism or Compile time polymorphism\n\
+    \n### 7.3.1: Dynamic Polymorphism\n\nThe most important example of this type of\
+    \ Polymorphism is Method overriding.\n\n* When superclass and subclass have method\
+    \ with same name and signature, the method of the subclass tends to overrides\
+    \ the method of the superclass. This mechanism is called Method overriding.\n\
+    * When method of the superclass and subclass have same method (with same name\
+    \ and signature), the compiler does not understand which method to execute. This\
+    \ type of conflict is resolved at run time and due to this Dynamic Polymorphism\
+    \ is also called Run time polymorphism.\n\n### Example\n\nLet’s create a Method\
+    \ overriding scenario.\n➢ Launch Eclipse IDE and create a new Superclass (I named\
+    \ my class `Animal`)![](Image00084.jpg)\n➢ Create two subclasses (I named one\
+    \ subclass `Cow` and other subclass `Lion`) `Cow.java`](Image00085.jpg) `Lion.java`Image00086.jpg)\n\
+    \nSuperclass `Animal` have an `eat` method and both subclasses `Cow` and `Lion`\
+    \ also have the same method with same name and signature (highlighted in the screen\
+    \ shot above). In Class `Cow.java`, at line 10, we created object `c` of type\
+    \ `Animal` and a call was made to the `Cow` constructor. At line 11, we called\
+    \ the `eat` method. After running `Cow.java` we get an output of![](Image00087.jpg)\
+    \ In Class `Lion.java`, at line 10, we created object `l` of type `Animal` and\
+    \ a call was made to the `Lion` constructor. At line 11, we called the `eat` method.\
+    \ After running `Lion.java` we get an output of![](Image00088.jpg)\n\nIn both\
+    \ cases we see that the `eat` method of each subclass (`Cow` and `Lion`) overrides\
+    \ the `eat` method of superclass (`Animal`).\n\n### 7.3.2: Static Polymorphism\n\
+    \nThe most important example of this type of Polymorphism is Method Overloading.\n\
+    \n* In Method Overloading, a class can contain multiple methods with same name\
+    \ with different signature.\n* Static Polymorphism is also called Compile time\
+    \ Polymorphism because in this case the compiler knows which method to execute\
+    \ based on the method signature and the conflict is resolved at compile time.\n\
+    \nExample➢ Launch Eclipse IDE -> create a new class (I named my class `SPExample`)![](Image00089.jpg)\
+    \ Code explanation:\n\n* At line 5, a method named `show` is declared.\n* At line\
+    \ 9, another method named `show` is declared with a parameter.\n* At line 15,\
+    \ `show()` method is called.\n* At line 16, the other `show()` method is called\
+    \ and an argument is passed into it.\n"
+  raw: '*   Encapsulation is the mechanism in which all the Java methods and variable
+    are wrapped up into a single unit ( Class ) .
+
+
+    ![](Image00069.jpg)
+
+
+    *   Encapsulation helps to protect the data present inside the unit and prevents
+    any malicious activity.
+
+
+    *   In Encapsulation, the variables of a class is declared private (private access
+    modifiers explained in chapter 3, section 3.4) .
+
+
+    In order to access the private variable from outside the class , get and set methods
+    are used.set method is used to set a value and get method is used to get the value.Example➢
+            Launch Eclipse IDE -> create a new Class (I named my class Encap ).![](Image00070.jpg)In
+    Encap class , I declared two variables username and password .Since both username
+    and password carries very important and sensitive data (sensitive data are those
+    data which must be hidden and protected at any cost) , so we declared its access
+    modifier as private meaning that no class outside Encap class can access these
+    variables . In order to access these private variables , we need get and set methods
+    .➢        To generate get and set methods of variables username and password ,
+    click on the yellow bulb like icon beside username and password and select Create
+    getter and setter for ‘username’ and Create getter and setter for ‘password’ respectively.![](Image00071.jpg)![](Image00072.jpg)![](Image00073.jpg)![](Image00074.jpg)![](Image00075.jpg)What
+    is this keyword ?this keyword refers to the current object .In the above example,
+    Class Encap is public meaning that any other class can access Class Encap but
+    its variables are private meaning no other class can access these variables except
+    for Class Encap . The get and set methods are public meaning that any other class
+    can access these methods .➢        Let’s create another class (I named my class
+    Encap2 ) and access the get and set method declared in class Encap .![](Image00076.jpg)Code
+    explanation:
+
+
+    *   Since Class Encap was public , Class Encap2 can access it easily.
+
+
+    In line 6, an object of class Encap is created and its set and get methods are
+    accessed.First we pass a value to variable username using its set method at line
+    8 and then we get and print out the value using its get method at line 9.Then
+    we pass a value to variable password using its set method at line11 and then we
+    get and print out the value using its get method at line 12.Let’s run the above
+    piece of code:![](Image00077.jpg)7.2: InheritanceImportant points to note are:
+
+
+    *   Inheritance is a mechanism in which a subclass or child class inherits all
+    the properties from superclass or parent class .
+
+
+    *   The main usage of Inheritance is code reusability.
+
+
+    *   The subclass or child class inherits properties from its parent class using
+    extends keyword .
+
+
+    class Parent {………………..code…………}class Child extends Parent {……………….code………………}
+
+
+    *   A subclass can contain its own properties as well as its parent class properties.
+
+
+    Example: Let us consider a school district XYZ contains three schools, elementary
+    school , middle school and high school and all the three schools are built on
+    the same street and on the same location. The common attribute between these schools
+    are:
+
+
+    1.  They all are schools or educational institution.
+
+
+    2.  They all are built on the same street but have different building names and
+    numbers.
+
+
+    3.  They all fall under the same school district.
+
+
+    ![](Image00078.jpg)While coding, instead of writing these common information for
+    each school again and again, we can write them once in a single place (in a superclass
+    or parent class ) and call them whenever any other class needs them.Example➢       
+    Launch Eclipse IDE , create a new class (I named my class SchoolSuperClass ) and
+    this class will act as a superclass .➢        Create three more classes , one
+    for elementary school (I named my class ElementaryChild ) , one for middle school
+    ( I named my class MiddleChild ) and one for high school ( I named my class HighChild
+    ). These three classes will act as a child class of superclass SchoolSuperClass.java
+    .➢         In superclass SchoolSuperClass.java, write the following lines of code:![](Image00079.jpg)In
+    this class , we declared all the variables and methods which are common to all
+    three schools.
+
+
+    *   Open ElementaryChild.java, and write the following lines of code
+
+
+    ![](Image00080.jpg)Code explanation:
+
+
+    *   At line 3, with the help of extends keyword , all properties of superclass
+    SchoolSuperClass are incorporated into child class ElementaryChild.
+
+
+    *   At line 7, object e of ElementaryChild class is created.
+
+
+    *   At line 9 and line 10, the variables school_Id and building_num are accessed
+    from superclass and values are passed into it.
+
+
+    *   At line 12 and 13, the values of the variables are printed.
+
+
+    *   At line 14, the street_address( ) method present in superclass is called.
+
+
+    Now let’s run the above piece of code:![](Image00081.jpg)
+
+
+    *   Open the second class file MiddleChild.java and write the following lines
+    of code:
+
+
+    ![](Image00082.jpg)The above piece of code is very similar to ElementaryChild.java,
+    only data is different.Let’s run the above piece of code:![](Image00083.jpg)We
+    followed the same process above for HighChild.java.7.3: PolymorphismPolymorphism
+    is a mechanism in which a method can be executed in many forms based on the object
+    that is acting upon it.Polymorphism is of 2 types:
+
+
+    1.  Dynamic Polymorphism or Run Time polymorphism
+
+
+    2.  Static Polymorphism or Compile time polymorphism
+
+
+    7.3.1: Dynamic Polymorphism The most important example of this type of Polymorphism
+    is Method overriding .
+
+
+    *   When superclass and subclass have method with same name and signature , the
+    method of the subclass tends to overrides the method of the superclass . This
+    mechanism is called Method overriding .
+
+
+    *   When method of the superclass and subclass have same method (with same name
+    and signature), the compiler does not understand which method to execute. This
+    type of conflict is resolved at run time and due to this Dynamic Polymorphism
+    is also called Run time polymorphism .
+
+
+    ExampleLet’s create a Method overriding scenario.➢         Launch Eclipse IDE
+    and create a new Superclass (I named my class Animal )![](Image00084.jpg)➢        
+    Create two subclasses (I named one subclass Cow and other subclass Lion )Cow.java![](Image00085.jpg)Lion.java![](Image00086.jpg)Superclass
+    Animal have an eat method and both subclasses Cow and Lion also have the same
+    method with same name and signature (highlighted in the screen shot above) .In
+    Class Cow.java , at line 10, we created object c of type Animal and a call was
+    made to the Cow constructor . At line 11, we called the eat method .After running
+    Cow.java we get an output of![](Image00087.jpg)In Class Lion.java , at line 10,
+    we created object l of type Animal and a call was made to the Lion constructor
+    .At line 11, we called the eat method .After running Lion.java we get an output
+    of![](Image00088.jpg)In both cases we see that the eat method of each subclass
+    (Cow and Lion) overrides the eat method of superclass (Animal).7.3.2: Static PolymorphismThe
+    most important example of this type of Polymorphism is Method Overloading .
+
+
+    *   In Method Overloading , a class can contain multiple methods with same name
+    with different signature .
+
+
+    *   Static Polymorphism is also called Compile time Polymorphism because in this
+    case the compiler knows which method to execute based on the method signature
+    and the conflict is resolved at compile time.
+
+
+    Example➢         Launch Eclipse IDE -> create a new class (I named my class SPExample
+    )![](Image00089.jpg)Code explanation:
+
+
+    *   At line 5, a method named show is declared.
+
+
+    *   At line 9, another method named show is declared with a parameter . 
+
+
+    *   At line 15, show( ) method is called.
+
+
+    *   At line 16, the other show( ) method is called and an argument is passed into
+    it.'
+  toc: []
+  trans: "\n\n*   封装（Encapsulation）是将所有 Java 方法和变量封装成单个单元（`Class` 类）的机制。\n\n![](img/Image00069.jpg)\n\
+    \n*   封装有助于保护单元内部的数据，并防止任何恶意活动。\n\n*   在封装中，类的变量被声明为 `private`（第 3 章第 3.4 节解释了\
+    \ `private` 访问修饰符）。\n\n为了从类外部访问私有变量，使用了 `get` 和 `set` 方法。`set` 方法用于设置值，`get` 方法用于获取值。\n\
+    \n示例➢ 启动 Eclipse IDE -> 创建一个新的 `Class`（我将我的类命名为 `Encap`）。![](img/Image00070.jpg)\n\
+    \n在 `Encap` 类中，我声明了两个变量 `username` 和 `password`。由于 `username` 和 `password` 都携带了非常重要且敏感的数据（敏感数据是指那些必须不惜代价隐藏和保护的数据），因此我们将访问修饰符声明为\
+    \ `private`，这意味着 `Encap` 类之外任何类无法访问这些变量。为了访问这些私有变量，我们需要 `get` 和 `set` 方法。\n\n\
+    ➢ 为了生成变量 `username` 和 `password` 的 `get` 和 `set` 方法，点击 `username` 和 `password`\
+    \ 旁边的黄色灯泡图标，并分别选择 Create getter and setter for ‘username’ 和 Create getter and\
+    \ setter for ‘password’。![](img/Image00071.jpg)![](img/Image00072.jpg)![](img/Image00073.jpg)![](img/Image00074.jpg)![](img/Image00075.jpg)\n\
+    \n这个 `this` 关键字是什么？`this` 关键字引用当前对象。在上面的示例中，类 `Encap` 是 `public` 的，这意味着任何其他类都可以访问\
+    \ `Encap` 类，但它的变量是 `private` 的，这意味着除了 `Encap` 类没有类可以访问这些变量。`get` 和 `set` 方法是 `public`\
+    \ 的，这意味着任何其他类都可以访问这些方法。\n\n➢ 让我们创建另一个类（我将我的类命名为 `Encap2`）并访问在 `Encap` 类中声明的 `get`\
+    \ 和 `set` 方法。![](img/Image00076.jpg)\n\n代码解释：\n\n*   由于类 `Encap` 是 `public` 的，因此类\
+    \ `Encap2` 可以轻松地访问它。\n\n在第 6 行，创建了 `Encap` 类对象并访问了它的 `set` 和 `get` 方法。首先，我们在第\
+    \ 8 行使用其 `set` 方法为变量 `username` 赋值，然后在第 9 行使用其 `get` 方法获取并打印该值。然后，我们在第 11 行使用其\
+    \ `set` 方法为变量 `password` 赋值，然后在第 12 行使用其 `get` 方法获取并打印该值。让我们运行上述代码：![](img/Image00077.jpg)\n\
+    \n## 7.2: 继承 (Inheritance)\n\n需要注意的重要点有：\n\n*   继承是一种子类或子类从超父类或父类继承所有属性的机制。\n\
+    *   继承的主要用途是代码重用。\n*   子类或子类使用 `extends` 关键字从其父类继承属性。\n\n```\nclass Parent {………………..code…………}\n\
+    class Child extends Parent {……………….code………………}\n```\n\n*   子类可以包含它自己的属性，也可以包含其父类的属性。\n\
+    \n示例：让我们考虑一个 XYZ 学区包含三所学校：小学、中学和高中，且这三所学校都位于同一条街道的同一个位置。这些学校之间的共同属性是：\n\n1. 它们都是学校或教育机构。\n\
+    2. 它们都位于同一条街道上，但有不同的建筑名称和编号。\n3. 它们都属于同一个学区。\n\n![](img/Image00078.jpg)\n\n在编写代码时，与其为每所学校重复编写这些共同信息，我们可以在一个地方写一次（在超类或父类中），并在任何其他类需要它们时调用它们。\n\
+    \n示例➢ 启动 Eclipse IDE，创建一个新类（我将我的类命名为 `SchoolSuperClass`），该类将作为超类起作用。 \n ➢ 创建另外三个类，一个用于小学（我将我的类命名为\
+    \ `ElementaryChild`），一个用于中学（我将我的类命名为 `MiddleChild`），一个用于高中（我将我的类命名为 `HighChild`）。这三个类将作为超类\
+    \ `SchoolSuperClass.java` 的子类作用。 \n ➢ 在超类 `SchoolSuperClass.java` 中，编写以下代码：![](img/Image00079.jpg)\n\
+    \n在这个类中，我们声明了所有三所学校通用的变量和方法。\n\n* 打开 `ElementaryChild.java`，并编写以下代码\n\n![](img/Image00080.jpg)\n\
+    \n代码解释：\n\n*   在第 3 行，通过 `extends` 关键字，超类 `SchoolSuperClass` 的所有属性都被整合到子类 `ElementaryChild`\
+    \ 中。\n*   在第 7 行，创建了 `ElementaryChild` 类的对象 `e`。\n*   在第 9 行和第 10 行，从超类访问变量 `school_Id`\
+    \ 和 `building_num` 并向其传递值。\n*   在第 12 行和 13 行，打印了变量的值。\n*   在第 14 行，调用了超类中的 `street_address()`\
+    \ 方法。\n\n现在让我们运行上述代码：![](img/Image00081.jpg)\n\n* 打开第二个类文件 `MiddleChild.java`，编写以下代码\n\
+    \n![](img/Image00082.jpg)\n\n上述代码与 `ElementaryChild.java` 非常相似，只是数据不同。让我们运行上述代码：![](img/Image00083.jpg)\n\
+    \n我们在 `HighChild.java` 中遵循相同的过程。\n\n## 7.3: 多态 (Polymorphism)\n\n多态是一种方法根据所作用的对象以多种形式执行的机制。\n\
+    多态有两种类型：\n\n1. 动态多态（Dynamic Polymorphism）\n2. 静态多态（Static Polymorphism）\n\n###\
+    \ 7.3.1: 动态多态\n\n这种类型多态最重要的例子是方法重写（Method Overriding）。\n\n*   当超类和子类具有相同名称的方法时，子类的方法会重写超类的方法。\n\
+    *   当超类和子类具有相同名称的方法时，编译器无法确定执行哪个方法。这种类型的冲突在运行时解决的。\n\n### 示例\n\n让我们创建一个方法重写的场景。\n\
+    ➢ 启动 Eclipse IDE 并创建一个超类（我将我的类命名为 `Animal`）![](img/Image00084.jpg)\n➢ 创建两个子类（将一个子类命名为\
+    \ `Cow`，另一个子类命名为 `Lion`）`Cow.java`](Image00085.jpg) `Lion.java`Image00086.jpg)\n\
+    \n超类 `Animal` 有一个 `eat` 方法，两个子类 `Cow` 和 `Lion` 也具有相同名称的方法（如截图所示）。在 `Cow.java`\
+    \ 中，第 10 行我们创建了 `Animal` 类型的对象 `c` 并调用了 `Cow` 的构造函数。在第 11 行，我们调用了 `eat` 方法。运行\
+    \ `Cow.java` 后得到输出：![](img/Image00087.jpg) 在 `Lion.java` 中，第 10 行我们创建了 `Animal`\
+    \ 类型的对象 `l` 并调用了 `Lion` 的构造函数。在第 11 行，我们调用了 `eat` 方法。运行 `Lion.java` 后得到输出：![](img/Image00088.jpg)\n\
+    \n在两种情况下，我们都看到每个子类的 `eat` 方法都重写了超类的 `eat` 方法。\n\n### 7.3.2: 静态多态\n\n这种类型多态最重要的例子是方法重载（Method\
+    \ Overloading）。\n\n*   在方法重载中，一个类可以包含多个具有相同名称但签名不同的方法。\n*   静态多态也被称为编译多态，因为在这种情况下，编译器根据方法签名知道要执行哪个方法，冲突在编译时解决。\n\
+    \n示例➢ 启动 Eclipse IDE -> 创建一个类（我将我的类命名为 `SPExample`）![](img/Image00089.jpg) 代码解释：\n\
+    \n*   在第 5 行，声明了一个名为 `show` 的方法。\n*   在第 9 行，声明了另一个带有参数的 `show` 方法。\n*   在第 15\
+    \ 行，调用了 `show()` 方法。\n*   在第 16 行，调用了另一个 `show()` 方法并传入了一个参数。\n\n"
+- fmt: '
+
+    Now let’s run the above piece of code![](Image00090.jpg)
+
+
+    In the above example, we see there are two methods, both have the same name (`show`)
+    but have different signature (one without parameter and other with parameter).
+    When we run the above piece of code, it runs perfectly because the compiler was
+    able to distinguish between the two methods based on their signature.TEST
+
+
+    ### 1. Write a program which will print even and odd numbers from 1 to 10.
+
+
+    When a number is divided by 2, if its remainder returns 0, then the number is
+    even. When a number is divided by 2, if its remainder does not returns 0, then
+    the number is odd.
+
+
+    ### 2. Write a program that will loop through an array and will break out of the
+    loop once a condition is satisfied.
+
+
+    Given: `Array car` containing 5 elements `Toyota`, `Kia`, `Ford`, `Tesla`, `Truck`.
+    Exit out of the loop once `car` equal to `Tesla`.
+
+
+    ### 3. Write a program which will contain two methods with parameters and these
+    methods will return values once called and arguments are passed into it.
+
+
+    ### Method 1 should return an integer result after performing arithmetic multiply
+    operation. ### Method 2 should return an integer result after performing arithmetic
+    division operation.
+
+
+    ### 4. Write a program which will contain one method with a parameter and this
+    method will return the result once called and an argument is passed into it.
+
+
+    The method much have a parameter whose data type is `string` and this method must
+    return the string value once called and an argument is passed into it.
+
+
+    ### Answers
+
+    1.![](Image00091.jpg)
+
+    2.![](Image00092.jpg)
+
+    3.![](Image00093.jpg)
+
+    4.![](Image00094.jpg)
+
+
+    Wish you all the best and thank you very much for buying this book. Always remember,
+    the most important learning is Self-Learning..
+
+    '
+  raw: 'Now let’s run the above piece of code![](Image00090.jpg)In the above example,
+    we see there are two methods , both have the same name (show ) but have different
+    signature (one without parameter and other with parameter) .When we run the above
+    piece of code, it runs perfectly because the compiler was able to distinguish
+    between the two methods based on their signature .TEST
+
+
+    1.  Write a program which will print even and odd numbers from 1 to 10.
+
+
+    When a number is divided by 2, if its remainder returns 0, then the number is
+    even .When a number is divided by 2, if its remainder does not returns 0, then
+    the number is odd .
+
+
+    2.  Write a program that will loop through an array and will break out of the
+    loop once a condition is satisfied.
+
+
+    Given: Array car containing 5 elements Toyota, Kia, Ford, Tesla, Truck.Exit out
+    of the loop once car equal to Tesla.
+
+
+    3.  Write a program which will contain two methods with parameters and these methods
+    will return values once called and arguments are passed into it.
+
+
+    Method 1 should return an integer result after performing arithmetic multiply
+    operation.Method 2 should return an integer result after performing arithmetic
+    division operation.
+
+
+    4.  Write a program which will contain one method with a parameter and this method
+    will return the result once called and an argument is passed into it.
+
+
+    The method much have a parameter whose data type is string and this method must
+    return the string value once called and an argument is passed into it.Answers1.![](Image00091.jpg)2.![](Image00092.jpg)3.![](Image00093.jpg)4.![](Image00094.jpg)Wish
+    you all the best and thank you very much for buying this book.Always remember,
+    the most important learning is Self-Learning..'
+  toc: []
+  trans: '
+
+    现在让我们运行上面的代码![](img/Image00090.jpg)
+
+
+    在上面的示例中，我们看到有两个方法，它们具有相同的名称（`show`），但签名不同（一个没有参数，另一个有参数）。当我们运行上面的代码时，它完美地运行了，因为编译器能够根据签名来区分这两个方法。TEST
+
+
+    ### 1. 编写一个程序，打印从 1 到 10 的所有偶数和奇数。
+
+
+    当一个数除以 2 时，如果余数为 0，则该数为偶数。当一个数除以 2 时，如果余数不为 0，则该数为奇数。
+
+
+    ### 2. 编写一个程序，遍历数组并在满足条件时跳出循环。
+
+
+    给定：`Array car` 包含 5 个元素 `Toyota`、`Kia`、`Ford`、`Tesla`、`Truck`。当 `car` 等于 `Tesla`
+    时退出循环。
+
+
+    ### 3. 编写包含两个带参数的方法，这些方法在被调用并传入参数后将返回值。
+
+
+    ### 方法 1 应在执行算术乘法操作后返回整数结果。### 方法 2 应在执行算术除法操作后返回整数结果。
+
+
+    ### 4. 编写一个包含一个带参数的方法，该方法在被调用并传入参数后将返回结果。
+
+
+    该方法必须有一个数据类型为 `string` 的参数，且该方法在被调用并传入参数后必须返回字符串值。
+
+
+    ### 答案
+
+    1.![](img/Image00091.jpg)
+
+    2.![](img/Image00092.jpg)
+
+    3.![](img/Image00093.jpg)
+
+    4.![](img/Image00094.jpg)
+
+
+    祝一切顺利，非常感谢您购买本书。请记住，最重要的学习是自学。
+
+    '
