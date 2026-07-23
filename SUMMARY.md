@@ -323,6 +323,7 @@
 +   [12-18 岁儿童 Java 编程：Java 编程语言简单、简洁且易上的指南](docs/java-programming-for-kids-ages-12-18-simple-concise-easy-gui/README.md)
 +   [Java 编程指南](docs/java-programming-guide-00003/README.md)
 +   [Java 编程初学者指南](docs/java-programming-guide-for-beginners/README.md)
++   [Java 编程初学者指南：学者掌握 Java 编程的完整实战速成课程](docs/java-programming-the-complete-beginners-guide-the-complete-p/README.md)
 +   [Java 快速教程（Vamei）](docs/java-qkgd-vamei/README.md)
 +   [Java Servlet 3.1 规范](docs/java-svlt-31-spec/README.md)
 +   [Java 中文官方教程 2022 版](docs/java-tut-22/README.md)
