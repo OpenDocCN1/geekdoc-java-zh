@@ -324,6 +324,7 @@
 +   [Java 编程入门指南：快速学习编码！](docs/java-programming-for-beginners-learn-coding-fast/README.md)
 +   [Java编程初学者指南：图解步骤式编码指南中学习 Java 开发](docs/java-programming-for-beginners-learn-java-development-in-thi/README.md)
 +   [Java 初学者指南：学习编程、掌握 Java 并构建实战应用](docs/java-programming-for-beginners-learn-to-code-master-java-and/README.md)
++   [区块链、人工智能与移动应用的 Java 编程](docs/java-programming-for-blockchain-ai-mobile-apps/README.md)
 +   [12-18 岁儿童 Java 编程：Java 编程语言简单、简洁且易上的指南](docs/java-programming-for-kids-ages-12-18-simple-concise-easy-gui/README.md)
 +   [Java 编程指南](docs/java-programming-guide-00003/README.md)
 +   [Java 编程初学者指南](docs/java-programming-guide-for-beginners/README.md)
