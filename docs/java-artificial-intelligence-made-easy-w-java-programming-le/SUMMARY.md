@@ -1,0 +1,2 @@
++   [Java：人工智能；简单易学；基于 Java 编程；立即学习创建问题解决算法！包含机器学习与数据结构（人工智能系列）](README.md)
++   [Java：人工智能；简单易学；基于 Java 编程；立即学习创建问题解决算法！包含机器学习与数据结构（人工智能系列）](java-artificial-intelligence-made-easy-w-java-programming-le_0.md)

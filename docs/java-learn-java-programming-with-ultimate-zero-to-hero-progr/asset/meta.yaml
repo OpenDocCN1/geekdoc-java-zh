@@ -1,0 +1,32 @@
+name: Java： Learn Java Programming With Ultimate Zero to Hero Programming Crash Course
+  for Beginners (Java, Java Programming Language, Java Coding, Java for ... Java Programming
+  for Beginners, JavaScript)
+name_cn: Java：初学者 Java 编程零基础到大师速成课程（Java、Java 编程语言、Java 编码、Java、初学者 Java 编程、JavaScript）
+slug: java-learn-java-programming-with-ultimate-zero-to-hero-progr
+toc:
+- - '#'
+  - 第 3 章 – 类（Classes）与对象
+- - '##'
+  - 类与对象的蓝图
+- - '##'
+  - 声明对象 (Declaring Objects)
+- - '##'
+  - 实例化对象 (Instantiating objects)
+- - '##'
+  - 初始化对象 (Initializing Objects)
+- - '##'
+  - 使用对象 (Using Objects)
+- - '##'
+  - 对象引用
+- - '##'
+  - 垃圾回收
+- - '##'
+  - 运算符
+- - '##'
+  - 通用编程
+- - '##'
+  - 算术运算符
+- - '##'
+  - 元运算符
+- - '##'
+  - 条件、相等与关系运算符

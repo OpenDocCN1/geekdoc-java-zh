@@ -1,0 +1,160 @@
+name: Kids Learning Java： Kids learn coding like playing games
+name_cn: Kids学习 Java：像玩游戏一样学编程
+slug: kids-learning-java-kids-learn-coding-like-playing-games
+toc:
+- - '#'
+  - Kids学习 Java：像玩游戏一样学编程
+- - '##'
+  - 2. Java 基础概念
+- - '###'
+  - 2.1 HelloWorld 详解
+- - '###'
+  - 2.2 变量
+- - '##'
+  - 3. 算术运算符
+- - '###'
+  - 3.1 算术运算符
+- - '###'
+  - 3.2 方法
+- - '###'
+  - 3.3 类
+- - '###'
+  - JLabel
+- - '###'
+  - BorderLayout
+- - '###'
+  - JTextField
+- - '###'
+  - JButton
+- - '###'
+  - JButton 点击事件
+- - '###'
+  - GridLayout
+- - '###'
+  - GUI 计算器
+- - '###'
+  - 赋值运算符
+- - '#'
+  - 赋值运算符
+- - '##'
+  - 2. 创建数量加法器和减法器
+- - '#'
+  - 关系运算符
+- - '##'
+  - 1. 创建文件：`RelationalOperator.java`
+- - '#'
+  - If 条件语句
+- - '##'
+  - 1. 创建一个 `IfStatement.java`
+- - '##'
+  - 2. 创建一个 `IfStatementGUI.java`
+- - '#'
+  - 逻辑运算符
+- - '##'
+  - 1. 创建 `LogicalOperator.java`
+- - '##'
+  - 2. 创建 `LogicalOperator2.java`
+- - '##'
+  - 3. 创建 `PocketMoneyGUI.java`
+- - '#'
+  - while 循环语句
+- - '##'
+  - 1. 创建文件：`WhileLoop.java`
+- - '#'
+  - while 循环游戏
+- - '##'
+  - 1. 创建 `WhileLoopGames.java`
+- - '###'
+  - 1. 创建 `OneArray.java`
+- - '###'
+  - 2. 创建 `OneArray2.java`
+- - '##'
+  - 二维数组
+- - '###'
+  - 1. 创建 `BinaryArray.java`
+- - '###'
+  - 2. 创建一个 `TwoArray2.html` 打印二维数组的所有元素
+- - '##'
+  - 找狗游戏
+- - '###'
+  - 1. 根据二维数组映射创建按钮
+- - '###'
+  - 2. 创建文件：`FindDogGame.java`
+- - '###'
+  - 3. 将数组名称填入按钮中，并添加按钮点击事件，如果按钮名称为 1 则变为 * *，如果按钮名称为 2 则变为 Dog
+- - '###'
+  - 4. 打印随机数 0-9
+- - '###'
+  - 5. 随机生成 1-2 初始化二维数组，将数组名称填入按钮中，并添加按钮点击事件，如果按钮名称为 1 则变为 * *，如果按钮名称为 2 则变为 Dog
+- - '#'
+  - 方法重载
+- - '#'
+  - 继承
+- - '##'
+  - 1. 创建文件：`TestInheritance.java`
+- - '#'
+  - 重写
+- - '##'
+  - 1. 创建文件：`TestOverride.java`
+- - '#'
+  - Java 线程
+- - '#'
+  - Canvas 进度条
+- - '#'
+  - 画布小球碰撞
+- - '##'
+  - 1. 在画布上画一个圆 `(x, y)= (80, 80)`，`width= 100`, `height= 100`。
+- - '##'
+  - 2. 创建一个类 `Ball`，然后创建方法 `draw(Graphics g, int x, int y, int r, Color c)` 在画布上画
+    3 个圆。
+- - '##'
+  - 3. 创建一个类 `Ball`，通过构造方法传递 `x, y, r, color`，然后创建一个方法 `draw(Graphics g)` 在画布上画 1
+    个圆。
+- - '##'
+  - 4. 创建一个 `Ball` 并打开一个 `Canvas`。让小球向下移动
+- - '##'
+  - 5. 小球向上和向下
+- - '##'
+  - 创建类
+- - '###'
+  - 1. 创建文件 `TestSprite.java`
+- - '###'
+  - 构造方法
+- - '###'
+  - 2. 创建文件 `TestConstructor.java`
+- - '#'
+  - 飞机游戏
+- - '##'
+  - 1. 在画布上绘制图片。
+- - '###'
+  - 1.1 将两张飞机图片放入目录 `images/blue_plane.png` 和 `images/red_plane.png`
+- - '###'
+  - 1.2 在画布上绘制 `images/blue_plane.png` 和 `images/red_plane.png`。
+- - '##'
+  - 2. 创建 `AirplaneGame.java`
+- - '##'
+  - 3. 创建 `Airplane` 类并在画布上绘制图片。
+- - '##'
+  - 4. 按键事件
+- - '###'
+  - 4.1 在 `Canvas` 中添加 `KeyListener` 监听
+- - '##'
+  - 5. 飞机发射蓝色子弹。
+- - '###'
+  - 5.1 子弹从飞机的顶部中心位置射出
+- - '###'
+  - 5.2 启动一个 `CanvasThread` 让子弹向上移动
+- - '###'
+  - 5.3 飞机和子弹继承自 `Sprite` 以实现复用。
+- - '###'
+  - 6. 敌机持续向下移动。
+- - '###'
+  - 6.1 敌机随机从画布顶部开始并向下移动
+- - '###'
+  - 6.2 保持敌机持续向下移动
+- - '###'
+  - 6.3 飞机、子弹和敌机继承自 `Sprite` 以实现复用。
+- - '###'
+  - 7. 子弹与敌机碰撞并爆炸。
+- - '###'
+  - 7.1 子弹与敌机碰撞

@@ -1,0 +1,112 @@
+name: Java： The Complete Guide For Beginners To Learn Java Programming Fast (java,
+  Java For Beginners, Java Programming For Beginners, Java Programming, . Crash Course,
+  Java Workbook, Java Handbook) [paperback] Gorman, Leonardo [jan 04, 2017]
+name_cn: Java：初学者快速学习 Java 编程完全指南
+slug: java-the-complete-guide-for-beginners-to-learn-java-programm
+toc:
+- - '#'
+  - Java：初学者快速学习 Java 编程完全指南
+- - '##'
+  - 介绍
+- - '##'
+  - 第 1 章 什么是编程？
+- - '###'
+  - 常用术语与定义
+- - '###'
+  - 什么是编程？
+- - '###'
+  - 如何生成算法
+- - '###'
+  - 理解计算机分析
+- - '###'
+  - 如何验证你的代码是否正确
+- - '##'
+  - 第 2 章 - 什么是 Java？
+- - '##'
+  - 第 3 章 - 条件与控制流
+- - '###'
+  - 条件
+- - '###'
+  - 控制流
+- - '##'
+  - 第 4 章 面向对象的 Java
+- - '###'
+  - 源文件声明规则
+- - '##'
+  - 第 5 章 数据结构
+- - '###'
+  - Byte
+- - '###'
+  - 字节 (Byte)
+- - '###'
+  - 短整数 (Short)
+- - '###'
+  - 整数 (Int)
+- - '###'
+  - 长整数 (Long)
+- - '###'
+  - 浮点数 (Float)
+- - '###'
+  - 双精度浮点数 (Double)
+- - '###'
+  - 布尔值 (Boolean)
+- - '###'
+  - 字符 (Char)
+- - '###'
+  - 引用数据 (Reference Data)
+- - '###'
+  - 变量 (Variables)
+- - '###'
+  - 抽象（Abstraction）
+- - '###'
+  - APIs（APIs）
+- - '###'
+  - 赋值问题（Assignment Issues）
+- - '###'
+  - 位运算（Bitwise Operations）
+- - '###'
+  - 括号（Braces）
+- - '###'
+  - 类结构（Class Structure）
+- - '###'
+  - 代码成熟问题（Code Maturity Issues）
+- - '###'
+  - 空语句（Empty Statements）
+- - '###'
+  - 封装（Encapsulation）
+- - '###'
+  - 企业级 JavaBeans（Enterprise Java Beans）
+- - '###'
+  - 错误修复（Error Fixes）
+- - '###'
+  - 终化（Finalization）
+- - '###'
+  - 通用（General）
+- - '###'
+  - 导入（Imports）
+- - '###'
+  - 初始化技巧与建议
+- - '###'
+  - JDK 迁移支持
+- - '###'
+  - Java 代码指标
+- - '###'
+  - Java 持久化 API (JPA)
+- - '###'
+  - JavaDoc
+- - '###'
+  - JavaServer Faces
+- - '###'
+  - 日志
+- - '###'
+  - Maven
+- - '###'
+  - NetBeans 开发
+- - '###'
+  - 性能
+- - '###'
+  - 潜在错误
+- - '###'
+  - 资源
+- - '##'
+  - 结论

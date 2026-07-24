@@ -1,0 +1,2233 @@
+- fmt: '
+
+    ![](Images/cover00063.jpeg)
+
+
+    # Java Html Programming For Beginners
+
+
+     Copyright 2014 by S.J. Cole - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    ## Table of Contents
+
+
+    - [Introduction](#part0000.xhtml__Toc404012743)
+
+    - [Java For The Complete Beginner Or Novice](#part0000.xhtml__Toc404012744)
+
+    - [The inner workings of Java](#part0000.xhtml__Toc404012745)
+
+    - [Understanding the NetBeans Software](#part0000.xhtml__Toc404012746)
+
+    - [Understanding Java Comments](#part0000.xhtml__Toc404012747)
+
+    - [The Structure Of Java Code And How To Run Programs](#part0000.xhtml__Toc404012748)
+
+    - [How to run Java programs](#part0000.xhtml__Toc404012749)
+
+    - [Everything About The Output Window](#part0000.xhtml__Toc404012750)
+
+    - [How To Share Your Java Programs](#part0000.xhtml__Toc404012751)
+
+    - [Understanding java variables](#part0000.xhtml__Toc404012752)
+
+    - [Final Advice](#part0000.xhtml__Toc404012753)
+
+
+    # Introduction
+
+
+    Computer programming is complicated stuff, especially for the complete beginner.
+    There is one thing though; with a little enthusiasm and a lot of desire to learn,
+    you can learn any computer programming language. Java Html is the most popular
+    programming language, even more popular than `C++` or other computer languages.
+    This makes it a must learn for any budding programmer.
+
+
+    Java as a language has gotten a lot of press coverage in recent times. Part of
+    this extensive coverage is the fact that the media touts Java as a complete change
+    in the normal or traditional way of programming. How so? The media holds the view
+    that the language has intentions firmly in being a vehicle for `OOP` (object-oriented
+    programming) which the media also touts as a serious change to the standards of
+    programming. While the statement may hold some truth, Codes and data structures
+    in `OOP` have different arrangement, and the `OOP` environment does indeed have
+    the potential to produce safe, clear, and modular programs. You should not be
+    so quick to buy into the media hype; after all, programming is programming, and
+    the same frame of mind required to create programs is similar across the board
+    regardless of the language used. In fact, anyone who has been in the coding world
+    will tell you that every now and then, there are imaginary illusions of programs
+    that will “have a ripple paradigm shift effect” only for them to fall short of
+    the expectations of the computer that designed them. Nevertheless, this is not
+    to mean that Java is short of exceptional.
+
+
+    While learning any new language may be a challenge, nothing is impossible if you
+    have the correct approach. This is something we shall look at in a chapter of
+    this book. Rather than dedicating an entire chapter on the importance of Java,
+    which I am sure you already know otherwise you would not be here, I will simply
+    state some of the characteristics of Java that make it such a powerful language.
+
+
+    - While it may not exactly be `OOP`, it is the closest you will get. This makes
+    it a “cleaner” language than `C++` or any other computer programming language
+    for that matter. It also makes it easy to make modular programs and reusable code.
+
+    - Java as a language is not platform dependent. This means you can write a program
+    the same manner regardless of whether you are running `OSX`, `UNIX`, or `Windows`.
+
+    - The language is distributed making it easy to do distributed computing thanks
+    to its networking capability, which is integrated into the language.
+
+    - Java is also very secure with the interpreter, compiler, language and run time
+    environment developed with security in mind.
+
+    - Early error detection in Java is quite easy since `java` compilers can detect
+    problems long before the problem even gets to the execution time.
+
+    - Java is also multithreaded, which means that you can do several tasks simultaneously
+    unlike in other programs where you need to have some program specific procedures
+    for multreading.
+
+
+    # Java For The Complete Beginner Or Novice
+
+
+    While Java is an exciting language, it is easy to get lost in the maze. This is
+    because to create programs using the language, you need to install a few computer
+    peripherals and programs. This is before you can write a single code. The tool
+    (software) also Interface development interface (`IDE`) we need to write our code
+    is `NETBEANS`, which is the most popular `IDE` for writing programs in Java. Here
+    is the kicker; while it is easy to navigate to the `NETANS` URL and download the
+    program, things are never that easy. For `NETBEANS` to operate (load up) on your
+    system, you need to install some necessary Java files and components. First, you
+    need the Java Virtual Machine.
+
+
+    ## Java Virtual Machine
+
+
+    We have already stated that Java is independent from any platform and will run
+    on any modern operating system; this component is the reason why Java does not
+    care what OS you are running. `Java Virtual Machine` is the program that interprets/processes
+    your code correctly. The program is one of the mandatory programs you must install
+    before you can create any Java code or program. You can download the program from
+    the relevant website.
+
+
+    P.s. Across the web, there are many sources of Java related programs. I suggest
+    you only download all your files from the official Sun Microsystems website, Java’s
+    parent company.
+
+
+    Once you are on the website, you can proceed to download the Java Virtual machine
+    also known as `JRE` (Java Runtime Environment). Additionally, while on the website,
+    you can check whether your computer is running a version of `JRE` by clicking
+    on the relevant “do I have Java?” link. The resulting search result will tell
+    you the version of `JRE` running on your computer, if any.
+
+
+    If you do not have the program installed, install it and restart your computer.
+
+
+    Next is the Java Software development Kit
+
+
+    ## Java Software Development Kit
+
+    '
+  raw: '
+
+
+    ![](Images/cover00063.jpeg)
+
+
+    Java Html Programming For Beginners
+
+
+     Copyright 2014 by S.J. Cole - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    Table of Contents
+
+
+    [Introduction](#part0000.xhtml__Toc404012743)
+
+
+    [Java For The Complete Beginner Or Novice](#part0000.xhtml__Toc404012744)
+
+
+    [The inner workings of Java](#part0000.xhtml__Toc404012745)
+
+
+    [Understanding the NetBeans Software](#part0000.xhtml__Toc404012746)
+
+
+    [Understanding Java Comments](#part0000.xhtml__Toc404012747)
+
+
+    [The Structure Of Java Code And How To Run Programs](#part0000.xhtml__Toc404012748)
+
+
+    [How to run Java programs](#part0000.xhtml__Toc404012749)
+
+
+    [Everything About The Output Window](#part0000.xhtml__Toc404012750)
+
+
+    [How To Share Your Java Programs](#part0000.xhtml__Toc404012751)
+
+
+    [Understanding java variables](#part0000.xhtml__Toc404012752)
+
+
+    [Final Advice](#part0000.xhtml__Toc404012753)
+
+
+    Introduction
+
+
+    Computer programming is complicated stuff, especially for the complete beginner.
+    There is one thing though; with a little enthusiasm and a lot of desire to learn,
+    you can learn any computer programming language. Java Html is the most popular
+    programming language, even more popular than C++ or other computer languages.
+    This makes it a must learn for any budding programmer.
+
+
+    Java as a language has gotten a lot of press coverage in recent times. Part of
+    this extensive coverage is the fact that the media touts Java as a complete change
+    in the normal or traditional way of programming. How so? The media holds the view
+    that the language has intentions firmly in being a vehicle for OOP (object-oriented
+    programming) which the media also touts as a serious change to the standards of
+    programming. While the statement may hold some truth, Codes and data structures
+    in OOP have different arrangement, and the OOP environment does indeed have the
+    potential to produce safe, clear, and modular programs. You should not be so quick
+    to buy into the media hype; after all, programming is programming, and the same
+    frame of mind required to create programs is similar across the board regardless
+    of the language used. In fact, anyone who has been in the coding world will tell
+    you that every now and then, there are imaginary illusions of programs that will
+    “have a ripple paradigm shift effect” only for them to fall short of the expectations
+    of the computer that designed them. Nevertheless, this is not to mean that Java
+    is short of exceptional.
+
+
+    While learning any new language may be a challenge, nothing is impossible if you
+    have the correct approach. This is something we shall look at in a chapter of
+    this book. Rather than dedicating an entire chapter on the importance of Java,
+    which I am sure you already know otherwise you would not be here, I will simply
+    state some of the characteristics of Java that make it such a powerful language.
+
+
+    *While it may not exactly be OOP, it is the closest you will get. This makes it
+    a “cleaner” language than C++ or any other computer programming language for that
+    matter. It also makes it easy to make modular programs and reusable code.
+
+
+    *Java as a language is not platform dependent. This means you can write a program
+    the same manner regardless of whether you are running OSX, UNIX, or Windows.
+
+
+    *The language is distributed making it easy to do distributed computing thanks
+    to its networking capability, which is integrated into the language.
+
+
+    *Java is also very secure with the interpreter, compiler, language and run time
+    environment developed with security in mind.
+
+
+    *Early error detection in Java is quite easy since java compilers can detect problems
+    long before the problem even gets to the execution time.
+
+
+    *Java is also multithreaded, which means that you can do several tasks simultaneously
+    unlike in other programs where you need to have some program specific procedures
+    for multithreading to work.
+
+
+    # Java For The Complete Beginner Or Novice
+
+
+    While Java is an exciting language, it is easy to get lost in the maze. This is
+    because to create programs using the language, you need to install a few computer
+    peripherals and programs. This is before you can write a single code. The tool
+    (software) also Interface development interface (IDE) we need to write our code
+    is NETBEANS, which is the most popular IDE for writing programs in Java. Here
+    is the kicker; while it is easy to navigate to the NETBEANS URL and download the
+    program, things are never that easy. For NETBEANS to operate (load up) on your
+    system, you need to install some necessary Java files and components. First, you
+    need the Java Virtual Machine.
+
+
+    Java Virtual Machine
+
+
+    We have already stated that Java is independent from any platform and will run
+    on any modern operating system; this component is the reason why Java does not
+    care what OS you are running. Java Virtual Machine is the program that interprets/processes
+    your code correctly. The program is one of the mandatory programs you must install
+    before you can create any Java code or program. You can download the program from
+    the relevant website.
+
+
+    P.s. Across the web, there are many sources of Java related programs. I suggest
+    you only download all your files from the official Sun Microsystems website, Java’s
+    parent company.
+
+
+    Once you are on the website, you can proceed to download the Java Virtual machine
+    also known as JRE (Java Runtime Environment). Additionally, while on the website,
+    you can check whether your computer is running a version of JRE by clicking on
+    the relevant “do I have Java?” link. The resulting search result will tell you
+    the version of JRE running on your computer, if any.
+
+
+    If you do not have the program installed, install it and restart your computer.
+
+
+    Next is the Java Software development Kit
+
+
+    Java Software Development Kit'
+  toc: []
+  trans: '
+
+
+    ![](img/cover00063.jpeg)
+
+
+    # 初学者 Java HTML 编程
+
+
+     Copyright 2014 by S.J. Cole - 版权所有。
+
+
+    本文档旨在就其涵盖的主题和问题提供准确且可靠的信息。本出版物的销售理念是，即出版者不需要提供会计、官方许可或其他经过认证的专业服务。如果需要法律或专业建议，应聘请该专业领域的资深人士。
+
+
+    - 摘自一份由美国律师协会委员会和出版商与与协会委员会共同接受并批准的《原则宣言》。
+
+
+    以任何形式（无论是电子手段还是打印格式）复制、复制或传输本文档的任何部分都是违法的。严禁录制本出版物，除非获得出版者的书面许可，否则不允许本文档的任何存储。保留所有权利。
+
+
+    此处提供的信息据称是真实且一致的，这意味着对于因使用或滥用本文包含的任何政策、流程或指示而导致的任何疏忽或其他形式的责任，均完全由接收的读者自行承担。在任何情况下，对于因本文信息而直接或间接导致的任何赔偿、损害或金钱损失，出版者均不承担任何法律责任或责任。
+
+
+    相应作者拥有出版者未持有的所有版权。
+
+
+    此处信息仅供参考之用，且具有通用性。信息的呈现不带有任何合同或任何类型的保证说明。
+
+
+    所使用的商标均未经任何许可，且该商标的发布未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，归其所有者所有，与本文档无关。
+
+
+    ## 目录
+
+
+    - 引言
+
+    - 面向完全初学者或新手的 Java
+
+    - Java 的工作原理
+
+    - 了解 NetBeans 软件
+
+    - 理解 Java 注释
+
+    - Java 代码结构及如何运行程序
+
+    - 如何运行 Java 程序
+
+    - 关于输出窗口的所有信息
+
+    - 如何分享你的 Java 程序
+
+    - 理解 Java 变量
+
+    - 最终建议
+
+
+    # 引言
+
+
+    计算机编程是一项复杂的工作，对完全初学者来说尤其是。但有一点：只要有一点热情和大量的学习欲望，你可以学习任何计算机编程语言。Java 是最流行的编程语言，甚至比
+    `C++` 或其他语言还要流行。这使其成为任何初出程序员的必修课。
+
+
+    作为一种语言，Java 最近引起了大量的媒体报道。这些广泛报道的一部分是，媒体宣称 Java 是对常规或传统编程方式的彻底改变。这是如何呢？媒体认为这种语言的初衷是成为
+    `OOP`（面向对象编程）的媒介，媒体也宣称这是对编程标准的重大变革。虽然这一说法可能有些道理，但 `OOP` 中的代码和数据结构有不同的安排，而且 `OOP`
+    环境确实具有产生安全、清晰和模块化程序的潜力。你不应该如此快地接受媒体的炒作；毕竟，编程就是编程，无论使用哪种语言，创建程序所需的心态都是相似的。事实上，任何进入过代码世界的人都会告诉你，每隔一段时间就会出现某些程序将“产生范式转移效应”的幻想幻象，但它们往往无法达到设计它们的计算机的预期。尽管如此，这并不意味着
+    Java 并不出众。
+
+
+    虽然学习任何新语言可能是一项挑战，但如果你有正确的方法，一切皆可能的。我们将在本书的一个章节中讨论这一点。我不会花整一章来介绍 Java 的重要性（我确定你已经知道了，否则你不会来这里），我将简单说明
+    Java 的一些特性，这些特性使其成为强大的语言。
+
+
+    - 它可能不完全是 `OOP`，但它是你最接近它的。这使其成为一种比 `C++` 或任何其他计算机编程语言更“干净”的语言。它还让创建模块化程序和可重复代码变得容易。
+
+    - Java 这种语言不依赖平台。这意味着无论你运行的是 `OSX`、`UNIX` 还是 `Windows`，都可以以相同的方式编写程序。
+
+    - 该语言是分布式的，得益于集成在语言中的网络功能，易于分布式计算。
+
+    - Java 非常安全，其解释器、编译器、语言和运行时环境在开发时考虑了安全性。
+
+    - Java 的早期错误检测非常容易，因为 `java` 编译器可以在问题到达执行时间很之前检测到问题。
+
+    - Java 还是多线程的，这意味着你可以同时执行多个任务，而其他程序需要特定的多线程程序。
+
+
+    # 面向完全初学者或新手的 Java
+
+
+    虽然 Java 是一种令人兴奋的语言，但在迷宫中很容易迷失。这是因为要使用该语言创建程序，你需要安装一些计算机外设和程序。这是在编写代码之前。我们编写代码所需的工具（软件）集成开发环境（IDE）是
+    `NetBeans`，它是编写 Java 程序最流行的 `IDE`。关键在于；虽然导航到 `NetBeans` URL 并下载程序很容易，但事情并非如此简单。为了让
+    `NetBeans` 在你的系统上运行（加载），你需要安装一些必要的 Java 文件和组件。首先，你需要 Java 虚拟机。
+
+
+    ## Java 虚拟机
+
+
+    我们已经说过 Java 是独立于任何平台的，可以在任何现代操作系统上运行；这个组件正是 Java 不在乎你运行什么操作系统的原因。`Java 虚拟机` 是解释/处理你代码的程序。
+
+
+    '
+- fmt: '
+
+    After installing the JRE, we are not yet ready to write our first code. At this
+    point, all we have done is installing the support software needed to run Java
+    programs on your computer. You need a tool to write and test code, the Software
+    Development kit, which you can also download from the [Sun Microsystems official](http://www.oracle.com/technetwork/indexes/downloads/index.html?ssSourceSiteId=ocomen)
+    website. I suggest that you download the Java SE (standard edition) and additionally,
+    the `JDK 6` that you will find on the Java SE page. When you navigate to the `JDK
+    6` page, you might get confused because there are many options. Depending on the
+    IDE you are using, you can select the relevant option. In our case, we are using
+    NETBEANS so you should locate the following `JDK 6 Update X` with `NetBeans 6.x`.
+
+
+    Click on download and head over to the next page to select a download file relevant
+    to your operating system. Download and install the file. It is important to note
+    that the file is a compressed file of over 130 bytes so you should ensure your
+    internet connection is working while you perform the download, otherwise the file
+    might corrupt halfway through the download. So far, we have done everything right.
+    We have downloaded and installed the necessary environments and software needed
+    to write your first code. However, before we launch the applications we have installed,
+    we need to understand the inner working of the world of Java.
+
+
+    ## Inner workings of Java
+
+
+    In Java, you write your code on a text editor. However, in NetBeans, there is
+    a special area designated for writing your code. The code you write at this point
+    is “the source code” and you save it with the file extension `.java`. After you
+    create the source code, you have to turn it into Java Byte Code by running it
+    through the `JaVac` program; we call this process “compiling”. The `JaVac` program
+    then creates a `.class` extension file if there are no errors in the computing
+    process. This (`.class`) file is the file you run in the Java Virtual Machine.
+    Here is the above explanation in steps:
+
+
+    1. Create a `.java` extension source code.
+
+    2. Compile a `.class` extension file by using the `JaVac` program.
+
+    3. Run the complied `.class` file on the Virtual machine.
+
+
+    NetBeans offers you the advantage of creating and compiling for you, behind the
+    scenes. It takes your source code and creates a Java file, then it runs `JaVac`
+    to compile the `.class` file. In addition, NetBeans can also run the program within
+    its own software, which saves you the trouble of using a terminal window to type
+    long strings of commands.
+
+
+    This is the inner working of the Java environment/ world. Because you now have
+    a clearer understanding, you can now proceed to launch the NetBeans software and
+    proceed to the next step of our learning process.
+
+
+    # Understanding the NetBeans Software
+
+
+    Now that we have seen the working of Java, installed all the required software,
+    it is time we pick up from where we left in the previous chapter i.e. launching
+    the NetBeans software.
+
+
+    Like every other program, if you learn what to expect when NetBeans launches,
+    you will not stare at your screen blankly wondering what to do next. Here is what
+    to expect.
+
+
+    The first time you load NetBeans, the system may be a bit slow as it starts all
+    the resources required to run it. Be patient. When the program does start, you
+    need to navigate to start new project which is on `File>New Project` part of the
+    NetBeans menu at the top. This should be similar to the Image below.
+
+
+    ![](Images/image00034.jpeg)
+
+    Figure 1
+
+
+    If you look at the above figure, you will notice that the dialog box on the far
+    right hand side has options of the kind of projects you want to create. You can
+    create projects in all the forms available there. In our instance, we are creating
+    a Java application. Therefore, we need to select the Java category and Java application
+    in the project tab and click on next to move on to step two.
+
+
+    When you click on the next button, the program will give you the option of choosing
+    a name for your project. As you type the name of your project, you will notice
+    that the name at the bottom will change to match the name of your project i.e.
+    in “Create Main Class.” We shall aptly name our project “FirstProject”.
+
+
+    ![](Images/image00035.jpeg)
+
+    Figure 2
+
+
+    In the above figure, the “Create Main Class” name is `firstproject.Main`. We cannot
+    leave it like that otherwise; the class will contain the name “Main”. We need
+    to change it to `FirstProject` as shown in the figure below.
+
+
+    ![](Images/image00036.jpeg)
+
+    Figure 3
+
+
+    After renaming, the class created will bear the name “FirstProject”. Notice that
+    the project class name has a capital “F” at the start and a capital “P”. Additionally,
+    the package name has the name `firstproject` with a lower case “f” and “p”.
+
+
+    The Project Location text box will appear and offer you the option of changing
+    the default save location. If you would prefer to save the file on any other location
+    than the default area, you can do it here. Additionally, the NetBeans program
+    will also create default folder containing your project name in the same default
+    location you opt for. Clicking on the finish button will prompt NetBeans to work
+    in the background and create the necessary files for use. When it is through,
+    the system will return you to the IDE where you can see and locate all your projects.
+    If by any chance the project area found in the top left corner is not visible,
+    you should navigate to the `window>project tab` on the menu bar.
+
+
+    ![](Images/image00037.jpeg)
+
+    Figure 4
+
+
+    You can expand your project by pressing `+`, after which, your project will look
+    similar to the figure below.
+
+
+    ![](Images/image00038.jpeg)
+
+    Figure 5
+
+
+    You should then click `+` on the source to expand it and peek at your project
+    name. We are doing this to see our Java source code. This is shown in the figure
+    below.
+
+
+    ![](Images/image0039.jpeg)
+
+    Figure 6
+
+
+    The source code (the same source code) should appear on the right in the text
+    area and will bear the name `FirstProject.java`. Sometimes, the code window will
+    not display. This is not something to be overly concerned about, simply click
+    and press enter on the `FirstProject.java` available in your project window to
+    call up the code window; after this, you can start on your code. Here is a sample
+    image of the coding window. The `@author` you part is where your name as an author
+    will appear.
+
+
+    ![](Images/image00040.jpeg)
+
+    Figure 7
+
+
+    You should note that the class bears the name `FirstProject`.
+
+
+    ```java
+
+    public class FirstProject {
+
+    ```
+
+
+    How so you wonder? After all, this is actually the same name as that of your java
+    source file available on your project window, `FirstProject.java`. There is a
+    simple explanation for this. The complier demands of it. Once you run a program,
+    the class name and the source file must match for the compiler to work. What does
+    this mean? It means that if your `.java` file bears the name `firstproject` while
+    the class bears `FirstProject`, you will receive a compile error simply because
+    the letter class do not match, i.e. the first one is lower class while the second
+    one is upper class.
+
+
+    Remember that our whole project bears the name `first project` as a working experiment;
+    you can name your package any other name such as `anyprogram` the name package
+    does not necessarily have to bear the same name as the java source file or the
+    class found in the source file. The only two that must match are the name of the
+    class and the java source file.
+
+
+    We have now looked at the basics of creating a java source code within the Java
+    environment. Let us move on swiftly.
+
+
+    # Java Comments
+
+
+    After we have created a new project in the NetBeans program, you may notice that
+    some of the code is grey and contains many asterisks and slashes like in the figure
+    below.
+
+
+    ![](Images/image00041.jpeg)
+
+    Figure 8
+
+    '
+  raw: 'After installing the JRE, we are not yet ready to write our first code. At
+    this point, all we have done is installing the support software needed to run
+    Java programs on your computer. You need a tool to write and test code, the Software
+    Development kit, which you can also download from the [Sun Microsystems official](http://www.oracle.com/technetwork/indexes/downloads/index.html?ssSourceSiteId=ocomen)
+    website. I suggest that you download the Java SE (standard edition) and additionally,
+    the JDK 6 that you will find on the Java SE page. When you navigate to the JDK
+    6 page, you might get confused because there are many options. Depending on the
+    IDE you are using, you can select the relevant option. In our case, we are using
+    NETBEANS so you should locate the following JDK 6 Update X with NetBeans 6.x.
+
+
+    Click on download and head over to the next page to select a download file relevant
+    to your operating system. Download and install the file. It is important to note
+    that the file is a compressed file of over 130 bytes so you should ensure your
+    internet connection is working while you perform the download, otherwise the file
+    might corrupt halfway through the download. So far, we have done everything right.
+    We have downloaded and installed the necessary environments and software needed
+    to write your first code. However, before we launch the applications we have installed,
+    we need to understand the inner working of the world of Java.
+
+
+    ## The inner workings of Java
+
+
+    In Java, you write your code on a text editor. However, in NetBeans, there is
+    a special area designated for writing your code. The code you write at this point
+    is “the source code” and you save it with the file extension .java. After you
+    create the source code, you have to turn it into Java Byte Code by running it
+    through the JaVac program; we call this process “compiling”. The JaVac program
+    then creates a .class extension file if there are no errors in the computing process.
+    This (.class) file is the file you run in the Java Virtual Machine. Here is the
+    above explanation in steps
+
+
+    1.  Create a .java extension  source code
+
+
+    2.  Compile a .class extension file by using the JaVac program
+
+
+    3.  Run the complied .class file on the Virtual machine
+
+
+    NetBeans offers you the advantage of creating and compiling for you, behind the
+    scenes. It takes your source code and creates a Java file, then it runs JaVac
+    to compile the .class file. In addition, NetBeans can also run the program within
+    its own software, which saves you the trouble of using a terminal window to type
+    long strings of commands.
+
+
+    This is the inner working of the Java environment/ world. Because you now have
+    a clearer understanding, you can now proceed to launch the NetBeans software and
+    proceed to the next step of our learning process.
+
+
+    # Understanding the NetBeans Software
+
+
+    Now that we have seen the working of Java, installed all the required software,
+    it is time we pick up from where we left in the previous chapter i.e. launching
+    the NetBeans software.
+
+
+    Like every other program, if you learn what to expect when NetBeans launches,
+    you will not stare at your screen blankly wondering what to do next. Here is what
+    to expect. 
+
+
+    The first time you load NetBeans, the system may be a bit slow as it starts all
+    the resources required to run it. Be patient. When the program does start, you
+    need to navigate to start new project which is on File>New Project part of the
+    NetBeans menu at the top. This should be similar to the Image below.
+
+
+    ![](Images/image00034.jpeg)
+
+
+    Figure 1
+
+
+    If you look at the above figure, you will notice that the dialog box on the far
+    right hand side has options of the kind of projects you want to create. You can
+    create projects in all the forms available there. In our instance, we are creating
+    a Java application. Therefore, we need to select the Java category and Java application
+    in the project tab and click on next to move on to step two.
+
+
+    When you click on the next button, the program will give you the option of choosing
+    a name for your project. As you type the name of your project, you will notice
+    that the name at the bottom will change to match the name of your project i.e.
+    in “Create Main Class.” We shall aptly name our project “FirstProject”
+
+
+    ![](Images/image00035.jpeg)
+
+
+    Figure 2
+
+
+    In the above figure, the “Create Main Class” name is firstproject.Main. We cannot
+    leave it like that otherwise; the class will contain the name “Main”. We need
+    to change it to FirstProject as shown in the figure below.
+
+
+    ![](Images/image00036.jpeg)
+
+
+    Figure 3
+
+
+    After renaming, the class created will bear the name “FirstProject”. Notice that
+    the project class name has a capital “F” at the start and a capital “P”. Additionally,
+    the package name has the name “firstproject’ with a lower case “f” and “p”.
+
+
+    The Project Location text box will appear and offer you the option of changing
+    the default save location. If you would prefer to save the file on any other location
+    other than the default area, you can do it here. Additionally, the NetBeans program
+    will also create default folder containing your project name in the same default
+    location you opt for. Clicking on the finish button will prompt NetBeans to work
+    in the background and create the necessary files for use. When it is through,
+    the system will return you to the IDE where you can see and locate all your projects.
+    If by any chance the project area found in the top left corner is not visible,
+    you should navigate to the  window>project tab on the menu bar
+
+
+    ![](Images/image00037.jpeg)
+
+
+    Figure 4
+
+
+    You can expand your project by pressing the +symbol, after which, your project
+    will look something similar to the figure below.
+
+
+    ![](Images/image00038.jpeg)
+
+
+    Figure 5
+
+
+    You should then click the + on the source package to expand it and peek at your
+    project name. We are doing this to see our Java file source code. This is shown
+    in the figure below.
+
+
+    ![](Images/image00039.jpeg)
+
+
+    Figure 6
+
+
+    The source code (the same source code) should appear on the right in the text
+    area and will bear the name FirstProject.java. Sometimes, the code window will
+    not display. This is not something to be overly concerned about, simply click
+    and press enter on the FirstProject.java available in your project window to call
+    up the code window; after this, you can start working on your code. Here is a
+    sample image of the coding window. The @author you part is where your name as
+    an author will appear.
+
+
+    ![](Images/image00040.jpeg)
+
+
+    Figure 7
+
+
+    You should note that the class bears the name FirstProject.
+
+
+    public class FirstProject {
+
+
+    How so you wonder. After all, this is actually the same name as that of your java
+    source file available on your project window, FirstProject.java. There is a simple
+    explanation for this. The complier demands of it. Once you run a program, the
+    class name and the source file must match for the compiler to work. What does
+    this mean? It means that if your .java file bears the name firstproject while
+    the class bears the name FirstProject, you will receive a compile error simply
+    because the letter class do not match, i.e. the first one is lower class while
+    the second one is upper class.
+
+
+    Remember that our whole project bears the name first project as a working experiment;
+    you can name your package any other name such as anyprogram the name package does
+    not necessarily have to bear the same name as the java source file or the class
+    found in the source file. The only two that must match are the name of the class
+    and the java source file.
+
+
+    We have now looked at the basics of creating a java source code within the Java
+    environment. Let us move on swiftly.
+
+
+    # Understanding Java Comments
+
+
+    After we have created a new project in the NetBeans program, you may notice that
+    some of the code is grey and contains many asterisks and slashes like in the figure
+    below.
+
+
+    ![](Images/image00041.jpeg)
+
+
+    Figure 8'
+  toc: []
+  trans: '
+
+    安装完 JRE 后，我们还没有准备好编写第一段代码。此时，我们所做的仅仅是安装了在你的计算机上运行 Java 程序所需的支持软件。你需要一个工具来编写和测试代码，即软件开发包（SDK），你也可以从
+    [Sun Microsystems 官方](http://www.oracle.com/technetwork/indexes/downloads/index.html?ssSourceSiteId=ocomen)网站下载。我建议你下载
+    Java SE（标准版），此外还有你在 Java SE 页面找到的 `JDK 6`。当你导航到 `JDK 6` 页面时，你可能会感到困惑，因为有很多选项。根据你正在使用的
+    IDE，可以选择相关的选项。在我们的情况下，我们正在使用 NETBEANS，所以你应该找到与 `NetBeans 6.x` 匹配的以下 `JDK 6 Update
+    X`。
+
+
+    点击下载并进入下一个页面，选择与你的操作系统相关的下载文件。下载并安装该文件。需要注意的是，该文件是一个超过 130 字节的压缩文件，因此在执行下载时应确保你的网络连接正常，否则文件可能会在下载过程中损坏。到目前为止，我们所做的一切都是正确的。我们已经下载并安装了编写第一段代码所需的各种和软件。然而，在我们启动已安装的应用之前，我们需要理解
+    Java 世界的内部原理。
+
+
+    ## Java 的内部原理
+
+
+    在 Java 中，你在文本编辑器上编写代码。然而，在 NetBeans 中，有一个专门的区域用于编写你的代码。你此时编写的代码是“源代码”，你用 `.java`
+    扩展名保存它。创建源代码后，你必须通过运行 `JaVac` 程序来将其转换为 Java 字节码；我们称这个过程为“编译”。如果计算过程中没有错误，`JaVac`
+    程序会创建一个 `.class` 扩展名的文件。这个（`.class`）文件就是你在 Java 虚拟机中运行的文件。以下是上述说明的步骤：
+
+
+    1. 创建一个带有 `.java` 扩展名的源代码。
+
+    2. 使用 `JaVac` 程序编译成带有 `.class` 扩展名的文件。
+
+    3. 在虚拟机上运行编译后的 `.class` 文件。
+
+
+    NetBeans 为你提供了在后台自动完成创建和编译的优势。它获取你的源代码并创建一个 Java 文件，然后运行 `JaVac` 来编译成 `.class`
+    文件。此外，NetBeans 还可以其自身的软件中运行程序，这省去了你使用终端窗口输入长字符串命令的麻烦。
+
+
+    这就是 Java 环境/世界的内部原理。由于你现在有了更清晰的理解，现在可以启动 NetBeans 软件并进入我们学习过程的下一步。
+
+
+    # 理解 NetBeans 软件
+
+
+    既然我们已经了解了 Java 的工作原理并安装了所有需要的软件，是时候从上一章留下的地方继续了，即启动 NetBeans 软件。
+
+
+    像所有其他程序一样，如果你了解了 NetBeans 启动时会发生什么，你就不会对着屏幕发呆，不知道下一步该做什么。以下是预期的内容。
+
+
+    第一次加载 NetBeans 时，系统可能会有点慢，因为它正在启动运行它所需的所有资源。请耐心等待。当程序启动后，你需要导航到 NetBeans 顶部菜单的
+    `File>New Project`（文件>新建项目）开始新项目。这应该与下面的图片相似。
+
+
+    ![](img/image00034.jpeg)
+
+    图 1
+
+
+    如果你看上面的图片，你会发现右侧的对话框提供了想要创建的项目类型选项。你可以在那里可以使用的所有形式创建项目。在我们的案例中，我们正在创建一个 Java 应用程序。因此，我们需要在项目标签页中选择
+    Java 类别和 Java Application，并点击 next（下一步）进入第二步。
+
+
+    当你点击 next 按钮时，程序将给你选择项目名称的选项。当你输入项目名称时，你会发现底部的名称将更改以匹配你的项目名称，即在“Create Main Class（创建主类）”中。我们将恰当地地将项目命名为“FirstProject”。
+
+
+    ![](img/image00035.jpeg)
+
+    图 2
+
+
+    在上面的图中，“Create Main Class”的名称是 `firstproject.Main`。我们不能让它保持那样，否则该类将包含“Main”名称。我们需要像下图所示将其更改为
+    `FirstProject`。
+
+
+    ![](img/image00036.jpeg)
+
+    图 3
+
+
+    重命名后，创建的类将带有“FirstProject”的名字。注意项目类名开头有一个大写的“F”，后面也有一个大写的“P”。此外，包名为 `firstproject`，字母是小写的“f”和“p”。
+
+
+    Project Location（项目位置）文本框将会出现，并为你提供更改默认保存位置的选项。如果你希望将文件保存到默认区域以外的任何位置，可以在这里进行。此外，NetBeans
+    程序还会在你选择的相同默认位置创建一个包含你项目名的默认文件夹。点击 finish（完成）按钮将提示 NetBeans 在后台工作并创建所需的文件。完成后，系统将带你回到
+    IDE，你可以在那里看到并定位你所有的项目。如果万一左上角的项目区域不可见，你应该导航到菜单栏上的 `window>project tab（窗口>项目标签页）`。
+
+
+    ![](img/image00037.jpeg)
+
+    图 4
+
+
+    你可以通过 `+` 展开项目，项目如下所示。
+
+
+    ![](img/image0038.jpeg)
+
+    图 5
+
+
+    你应该点击 `+` 展开项目并查看项目名称。我们这样做是为了看到源代码。
+
+
+    ![](img/image0039.jpeg)
+
+    图 6
+
+
+    源代码应该出现在右侧，并带有 `FirstProject.java` 的名称。有时，代码窗口不会显示。这并不是需要过度担心的事情，只需点击项目窗口中的 `FirstProject.java`
+    即可调用代码窗口；之后你就可以开始编写代码了。这里是代码的示例图像。@author 部分是你作为作者的名字出现的地方。
+
+
+    ![](img/image00040.jpeg)
+
+    图 7
+
+
+    你应该注意类名为 `FirstProject`。
+
+
+    ```java
+
+    public class FirstProject {
+
+    ```
+
+
+    你可能会问为什么这样？毕竟，这实际上与你项目窗口中的 Java 源代码文件 `FirstProject.java` 的名称相同。这里有一个简单的解释。这是编译器的要求。一旦你运行程序，类名和源代码文件必须匹配编译器才能工作。这意味着什么？这意味着如果你的
+    `.java` 文件名为 `firstproject` 而类名为 `FirstProject`，你将收到编译错误，仅仅是因为字母大小写不匹配，即第一个是小写而第二个是大写。
+
+
+    记住，我们的整个项目作为一个实验命名为 `first project`；你可以为包命名为任何名称，例如 `anyprogram`，包名并不一定与 Java
+    源代码文件或源代码中的类名相同。只有后两个必须匹配。
+
+
+    我们在 NetBeans 程序中创建一个新项目后，你可能会注意到代码中的部分是灰色的，并且包含许多星号和斜杠，如下所示。
+
+
+    ![](img/image00041.jpeg)
+
+    图 8
+
+
+    # Java 注释
+
+    '
+- fmt: '
+
+    When this occurs, we call the grey’s comments. In the running stages of the program,
+    the grey’s (comments) are moot. This is to mean that you can use the comment feature
+    to state or explain what the code you are creating wants to achieve. You can achieve
+    this by typing two slashes and then the comment. Here is a sample.
+
+
+    ```
+
+    //Place your single line comment here
+
+    ```
+
+
+    You can have more than one comment line by doing either of the following:
+
+
+    ```java
+
+    //We are going to
+
+    //spread the comments into two
+
+    ```
+
+
+    Or
+
+
+    ```java
+
+    /*
+
+    This comment spreads over two lines
+
+    */
+
+    ```
+
+
+    If you look at the comment above, you will notice that it starts with `/*` but
+    ends with `*/`.
+
+
+    Additionally, if you look at the previous image (figure 8) you will notice that
+    there are comments that begin with a single forward slash and two asterisks (`/**`)
+    but end with one asterisks and one forwards slash; this is called a Javadoc comment.
+    For example
+
+
+    ```java
+
+    /**
+
+    *Here is an example of a Javadoc comment
+
+    */
+
+    ```
+
+
+    This type of code is for code documentation. You can then turn the documented
+    code into a HTML page that you can share with others if you think it will be helpful
+    to them. You can access the Javadoc comments by clicking run on the NetBeans menu;
+    from the run menu, you should select `Generate Javadoc`. This will be useful as
+    your coding prowess manifests. However, there is not much to see right now because
+    we have not done much as of yet. You can also choose to delete the Javadoc comments.
+    Here is how our code would look without the comments
+
+
+    ![](Images/image00042.jpeg)
+
+
+    Figure 9
+
+
+    Next, we learn how to run programs and the structure of our code.
+
+
+    # The Structure Of Java Code And How To Run Programs
+
+
+    As we were winding up the previous chapter, we cleaned up our code (refer to figure
+    9). In the figure, you should notice the package name comes first. Additionally,
+    you should note that a semicolon is what ends the line. The semicolon is important
+    and if you omit it, the program will not compile.
+
+
+    ```java
+
+    package firstproject;
+
+    ```
+
+
+    Next is the class name
+
+
+    ```java
+
+    public class FirstProject {
+
+
+    }
+
+    ```
+
+
+    Ideally, you should think of the class as a code segment. However, Java dictates
+    that you tell it where the code segments start and end. You can achieve this by
+    using curly brackets. You can use the left curly bracket at the start of a code,
+    and use the right curly bracket to end the code `{this is an example of a curly
+    code segment}` you should however note that anything that goes inside the left
+    and right curly is part of the said code segment. Additionally, anything inside
+    both the left and right curly for the class is in fact, a code segment. Here is
+    what I mean:
+
+
+    ```java
+
+    public static void main( String[ ] args ) {
+
+
+    }
+
+    ```
+
+
+    More important than anything else is the word `main`. Why? Because each time any
+    Java program boots up, it first looks for the method bearing the name `main`.
+    Simply put, a method is a piece of code. The program then executes codes within
+    the curly as part of the main. There are possibilities that you will get an error
+    message within the Java program if your code does not have a main method. However,
+    since this is the main entry point for your program, there is little chance you
+    will omit it.
+
+
+    The public part of the code (the blue part) simply means that the method is viewable
+    outside that class. On the other hand, `static` means that the creation of a new
+    object is not necessary while `void` means that, there is not returnable value
+    and the command gets on with it.
+
+
+    Command line arguments are the parts between the round brackets of the `main`.
+    Except for the technical bits, you should not concern yourself with this. You
+    should only strive to remember that our class is `FirstProject`, which contains
+    the method `main` and that both the class and the main use their own set of curly
+    brackets. You should also remember that a huge part of your code is part of the
+    class `FirstProject`.
+
+
+    # How to run Java programs
+
+
+    Any program you run on NetBeans will run on the output window that you can find
+    at the bottom of your screen directly underneath your code. This design is logical
+    because, with the output window readily available, you do not have to call up
+    the console window or the terminal because in NetBeans, the output window plays
+    the role of the console.
+
+
+    In NetBeans, you can run a program in a number of ways with the easiest being,
+    pressing the `F6` key on your keyword. You can also use the menus found at the
+    top of NetBeans to run the program. In the menus, locate the menu `Run` and execute
+    the `run main project` option.
+
+
+    ![](Images/image00043.jpeg)
+
+
+    Figure 10
+
+
+    In the NetBeans tool bar, you will notice a “green play” arrow; you can use this
+    to run a program.
+
+
+    ![](Images/image00044.jpeg)
+
+
+    Figure 11
+
+
+    You can also run a program by navigating to your projects window. This is especially
+    effective in ensuring that the correct source code is running. To do this, you
+    need to click on your java source file contained in the project window and then
+    right click for options. Execute the `run` command. See figure below.
+
+
+    ![](Images/image00045.jpeg)
+
+
+    Figure 12
+
+
+    If you use any of the program execution methods above on our code so far, you
+    should get something similar to figure13 below on the output window
+
+
+    ![](Images/image00046.jpeg)
+
+
+    Figure 13
+
+
+    In figure 13 above, you can see that the first line is the `run` command. The
+    second is our code “My First Project.” If there is something you are not sure
+    of and would like to run the code again, you can simply press the “two almost
+    fast-forward green arrows” visible on figure 13 above.
+
+
+    # Everything About The Output Window
+
+
+    So far, we can create a code and turn it into a program. If we use the example
+    of the code we have made so far, we can successfully turn it into a program even
+    though it will not do much. For our next learning step, we are going to add a
+    code to our project to gauge how it works. We will begin by outputting text to
+    the console frame, and then we are going to add the line below to our main method.
+
+
+    ```java
+
+    public static void main( String[ ] args ) {
+
+
+    System.out.println( "My First Project" );
+
+    }
+
+    ```
+
+
+    P.s. After typing the full stop after the `System`, NetBeans will display a list
+    of options that you can choose from, similar to figure 14 below.
+
+
+    ![](Images/image00047.jpeg)
+
+
+    Figure 14
+
+
+    If you double click out, it will become part of your code, after which, you can
+    type another full stop. After this full stop, another list of options will pop
+    up. See figure 15 below.
+
+
+    ![](Images/image00048.jpeg)
+
+
+    Figure 15
+
+
+    When this list pops up, select `println()`. This prints a line to the output window.
+    However, there has to be text between the round brackets of `println()` the text
+    goes between double quote as elaborated in figure 16 below
+
+
+    ![](Images/image0049.jpeg)
+
+
+    Figure 16
+
+
+    Once the double quotes are in place, type your text between then (like writing
+    present spoken word) as illustrated in figure 17 below.
+
+
+    ![](Images/image0050.jpeg)
+
+
+    Figure 17
+
+
+    If you look at figure 17 above, you will notice that the line ends in a semicolon.
+    This is synonymous with every complete line of code in Java; a missing semicolon
+    will make the program return errors and fail to compile.
+
+
+    We need to save our work before we test it out; click on the save option or the
+    save all option on the NetBeans tool bar.
+
+
+    Always remember to test your work each time you add any new code to the source
+    code. This is to make sure that your work does not have any error and to make
+    sure that you do not write several codes with many errors.
+
+
+    # To Share Your Java Programs
+
+
+    Every programmer will tell you that the best way to test out your programs is
+    to send it to colleagues for testing. To share, you need to create a `JAR` file
+    (Java archive file). Frankly, NetBeans can compile the files for you straight
+    from the menu. You need to navigate to the run menu and select `clean and build
+    main project`.
+
+
+    Once you do this, NetBeans saves your complete work inclusive all necessary files
+    in the local directory in a `dist` folder. See figure18 below.
+
+    '
+  raw: 'When this occurs, we call the grey’s comments. In the running stages of the
+    program, the grey’s (comments) are moot. This is to mean that you can use the
+    comment feature to state or explain what the code you are creating wants to achieve.
+    You can achieve this by typing two slashes and then the comment. Here is a sample.
+
+
+    //Place your single line comment here
+
+
+    You can have more than one comment line by doing either of the following:
+
+
+    //We are going to
+
+
+    //spread the comments into two
+
+
+    Or
+
+
+    /*
+
+
+    This comment spreads over two lines
+
+
+    */
+
+
+    If you look at the comment above, you will notice that it starts with /* but ends
+    with */
+
+
+    Additionally, if you look at the previous image (figure 8) you will notice that
+    there are comments that begin with a single forward slash and two asterisks (/**)
+    but end with one asterisks and one forwards slash; this is called a Javadoc comment.
+    For example
+
+
+    /**
+
+
+    *Here is an example of a Javadoc comment
+
+
+    */
+
+
+    This type of code is for code documentation. You can then turn the documented
+    code into a HTML page that you can share with others if you think it will be helpful
+    to them. You can access the Javadoc comments by clicking run on the NetBeans menu;
+    from the run menu, you should select Generate Javadoc. This will be useful as
+    your coding prowess manifests. However, there is not much to see right now because
+    we have not done much as of yet. You can also choose to delete the Javadoc comments.
+    Here is how our code would look without the comments
+
+
+    ![](Images/image00042.jpeg)
+
+
+    Figure 9
+
+
+    Next, we learn how to run programs and the structure of our code.
+
+
+    # The Structure Of Java Code And How To Run Programs
+
+
+    As we were winding up the previous chapter, we cleaned up our code (refer to figure
+    9). In the figure, you should notice the package name comes first. Additionally,
+    you should note that a semicolon is what ends the line. The semicolon is important
+    and if you omit it, the program will not compile.
+
+
+    package firstproject;
+
+
+    Next is the class name
+
+
+    public class FirstProject {
+
+
+    }
+
+
+    Ideally, you should think of the class as a code segment. However, Java dictates
+    that you tell it where the code segments start and end. You can achieve this by
+    using curly brackets. You can use the left curly bracket at the start of a code,
+    and use the right curly bracket to end the code {this is an example of a curly
+    code segment} you should however note that anything that goes inside the left
+    and right curly is part of the said code segment. Additionally, anything inside
+    both the left and right curly for the class is in fact, a code segment. Here is
+    what I mean:
+
+
+    public static void main( String[ ] args ) {
+
+
+    }
+
+
+    More important than anything else is the word “main”. Why? Because each time any
+    Java program boots up, it first looks for the method bearing the name ‘main’.
+    Simply put, a method is a piece of code. The program then executes codes within
+    the curly as part of the main. There are possibilities that you will get an error
+    message within the Java program if your code does not have a main method. However,
+    since this is the main entry point for your program, there is little chance you
+    will omit it.
+
+
+    The public part of the code (the blue part) simply means that the method is viewable
+    outside that class. On the other hand, static means that the creation of a new
+    object is not necessary while void means that, there is not returnable value and
+    the command gets on with it.
+
+
+    Command line arguments are the parts between the round brackets of the main. Except
+    for the technical bits, you should not concern yourself with this. You should
+    only strive to remember that our class is FirstProject, which contains the method
+    main and that both the class and the main use their own set of curly brackets.
+    You should also remember that a huge part of your code is part of the class FirstProject.
+
+
+    ## How to run Java programs
+
+
+    Any program you run on NetBeans will run on the output window that you can find
+    at the bottom of your screen directly underneath your code. This design is logical
+    because, with the output window readily available, you do not have to call up
+    the console window or the terminal because in NetBeans, the output window plays
+    the role of the console.
+
+
+    In NetBeans, you can run a program in a number of ways with the easiest being,
+    pressing the F6 key on your keyword. You can also use the menus found at the top
+    of NetBeans to run the program. In the menus, locate the menu Run and execute
+    the run main project option. Check out the figure below.
+
+
+    ![](Images/image00043.jpeg)
+
+
+    Figure 10
+
+
+    In the NetBeans tool bar, you will notice a “green play” arrow; you can use this
+    to run a program.
+
+
+    ![](Images/image00044.jpeg)
+
+
+    Figure 11
+
+
+    You can also run a program by navigating to your projects window. This is especially
+    effective in ensuring that the correct source code is running. To do this, you
+    need to click on your java source file contained in the project window and then
+    right click for options. Execute the run command. See figure below.
+
+
+    ![](Images/image00045.jpeg)
+
+
+    Figure 12
+
+
+    If you use any of the program execution methods above on our code so far, you
+    should get something similar to figure13 below on the output window
+
+
+    ![](Images/image00046.jpeg)
+
+
+    Figure 13
+
+
+    In figure 13 above, you can see that the first line is the run command. The second
+    is our code “My First Project.” If there is something you are not sure of and
+    would like to run the code again, you can simply press the “two almost fast-forward
+    green arrows” visible on figure 13 above.
+
+
+    # Everything About The Output Window
+
+
+    So far, we can create a code and turn it into a program. If we use the example
+    of the code we have made so far, we can successfully turn it into a program even
+    though it will not do much. For our next learning step, we are going to add a
+    code to our project to gauge how it works. We will begin by outputting text to
+    the console frame, and then we are going to add the line below to our main method.
+
+
+    public static void main( String[ ] args ) {
+
+
+    System.out.println( "My First Project" );
+
+
+    }
+
+
+    P.s. After typing the full stop after the “System”, NetBeans will display a list
+    of options that you can choose from, similar to figure 14 below.
+
+
+    ![](Images/image00047.jpeg)
+
+
+    Figure 14
+
+
+    If you double click out, it will become part of your code, after which, you can
+    type another full stop. After this full stop, another list of options will pop
+    up. See figure 15 below.
+
+
+    ![](Images/image00048.jpeg)
+
+
+    Figure 15
+
+
+    When this list pops up, select println ( ). This prints a line to the output window.
+    However, there has to be text between the round brackets of printIn “()” the text
+    goes between the par of double quote as elaborated in figure 16 below
+
+
+    ![](Images/image00049.jpeg)
+
+
+    Figure 16
+
+
+    Once the double quotes are in place, type your text between then (like when writing
+    present spoken word) as illustrated in figure 17 below.
+
+
+    ![](Images/image00050.jpeg)
+
+
+    Figure 17
+
+
+    If you look at figure 17 above, you will notice that the line ends in a semicolon.
+    This is synonymous with every complete line of code in Java; a missing semicolon
+    will make the program return errors and fail to compile.
+
+
+    We need to save our work before we test it out; click on the save option or the
+    save all option on the NetBeans tool bar.
+
+
+    Always remember to test your work each time you add any new code to the source
+    code. This is to make sure that your work does not have any error and to make
+    sure that you do not write several codes with many errors.
+
+
+    How To Share Your Java Programs
+
+
+    Every programmer will tell you that the best way to test out your programs is
+    to send it to colleagues for testing. To share, you need to create a JAR file
+    (Java archive file). Luckily, NetBeans can compile the files for you straight
+    from the menu. You need to navigate to the run menu and select “clean and build
+    main project.”
+
+
+    Once you do this, NetBeans saves your complete work inclusive all necessary files
+    in the local directory in a “dist” folder. See figure18 below.'
+  toc: []
+  trans: '
+
+    当这种情况发生时，我们将其称为灰色注释。在程序的运行阶段，这些灰色的（注释）是无关紧要的。这意味着你可以使用注释功能来说明或解释你正在创建的代码想要实现的目标。你可以通过输入两个斜杠后跟注释内容来实现这一点。这里有一个示例。
+
+
+    ```java
+
+    //在此处放置你的单行注释
+
+    ```
+
+
+    你可以通过以下任一方式拥有多行注释：
+
+
+    ```java
+
+    //我们正准备
+
+    //将注释拆分为两行
+
+    ```
+
+
+    或者
+
+
+    ```java
+
+    /*
+
+    此注释跨越了两个行
+
+    */
+
+    ```
+
+
+    如果你查看上面的注释，你会发现它以 `/*` 开头，以 `*/` 结尾。
+
+
+    此外，如果你查看上一张图片（图 8），你会发现有些注释以单个正斜杠和两个星号 (`/**`) 开头，以一个星号和一个正斜杠结束；这被称为 Javadoc 注释。例如：
+
+
+    ```java
+
+    /**
+
+    *这是一个 Javadoc 注释的示例
+
+    */
+
+    ```
+
+
+    这种代码用于代码文档。如果你认为这对他们有帮助，可以将文档化的代码转换为 HTML 页面并与他们共享。你可以通过点击 NetBeans 菜单中的运行来访问
+    Javadoc 注释；在运行菜单中，你应该选择 `Generate Javadoc`。随着你编程能力的提高，这将非常有用。然而，现在没什么可看的，因为我们目前还做得不多。你也可以选择删除
+    Javadoc 注释。以下是我们的代码没有注释的样子：
+
+
+    ![](img/image00042.jpeg)
+
+
+    图 9
+
+
+    接下来，我们学习如何运行程序以及代码的结构。
+
+
+    # Java 代码的结构以及如何运行程序
+
+
+    在我们结束上一章节时，我们清理了代码（参见图 9）。在图中，你应该注意到包名排在最前面。此外，你应该注意分号是行的结束标记。分号是非常重要的，如果由于遗漏了它，程序将无法编译。
+
+
+    ```java
+
+    package firstproject;
+
+    ```
+
+
+    接下来是类名
+
+
+    ```java
+
+    public class FirstProject {
+
+
+    }
+
+    ```
+
+
+    理想情况下，你应该将类看作一个代码段。然而， Java 规定你必须告诉它代码段的开始和结束。你可以通过使用大括号来实现这一点。你可以在代码的开头使用左大括号，并使用右大括号结束代码
+    `{这是一个大括号代码段的示例}`，但你应该注意，左右大括号内部的任何内容都是该代码段的一部分。此外，类左右大括号内部的任何内容实际上都是一个代码段。这就是我的意思是：
+
+
+    ```java
+
+    public static void main( String[ ] args ) {
+
+
+    }
+
+    ```
+
+
+    比其他任何事情都重要的是 `main` 这个词。为什么？因为每当任何 Java 程序启动时，它都会首先寻找名为 `main` 的方法。简单来说，方法是一段代码。程序随后执行大括号内的代码作为
+    main 的部分。如果你的代码中没有 `main` 方法，你可能会在 Java 程序中收到错误消息。然而，由于这是程序的程序的入口点，你不太可能遗漏它。
+
+
+    代码的公共部分（蓝色部分）仅意味着该方法在类外部是可见的。另一方面，`static` 意味着不需要创建新对象，而 `void` 意味着没有返回值，命令将继续执行。
+
+
+    命令行参数是 `main` 圆括号之间的部分。除了技术细节外，你不应该担心这些。你只需要努力记住我们的类是 `FirstProject`，它包含了方法 `main`，并且类和
+    main 都使用它们自己的一组大括号。你还应该记住，代码的很大一部分是类 `FirstProject` 的一部分。
+
+
+    # 如何运行 Java 程序
+
+
+    你在 NetBeans 上运行的任何程序都会直接在输出窗口中运行，你可以在屏幕底部代码正下方找到输出窗口。这种设计是有逻辑的，因为输出窗口可用，你不需要调用控制台窗口或终端，因为在
+    NetBeans 中，输出窗口充当了控制台。
+
+
+    在 NetBeans 中，你可以通过多种方式运行程序，最简单的是在键盘上按下 `F6` 键。你也可以使用 NetBeans 顶部的菜单来运行程序。在菜单中，找到
+    `Run` 菜单并执行 `run main project` 。
+
+
+    ![](img/image00043.jpeg)
+
+
+    图 10
+
+
+    在 NetBeans 工具栏上，你会看到一个“绿色播放”箭头；你可以用它来运行程序。
+
+
+    ![](img/image00044.jpeg)
+
+
+    图 11
+
+
+    你也可以通过导航到项目窗口来运行程序。这对于确保运行的是正确的源代码特别为有效。要做到这一点，你需要点击项目窗口中的 java 源文件，然后右键点击查看选项。执行
+    `run` 命令。见下方所示。
+
+
+    ![](img/image00045.jpeg)
+
+
+    图 12
+
+
+    如果你对我们目前的代码使用上述任何程序执行方法，你应该应该在输出窗口中得到类似于图 13 的内容
+
+
+    ![](img/image00046.jpeg)
+
+
+    图 13
+
+
+    在上面的图 13 中，你可以看到第一行是 `run` 命令。第二行是我们的代码“My Code”。如果你对某些内容不确定并想再次运行，你可以查看图 13 上方的绿色箭头。
+
+
+    # 关于输出窗口的所有信息
+
+
+    到目前，我们可以创建一个代码并将其转换为程序。如果我们使用我们目前代码的示例，我们就可以成功将其转换为程序，尽管它目前没做什么。在接下来的学习步骤中，我们将开始输出文本到控制台，我们在
+    main 方法中添加以下代码：
+
+
+    ```java
+
+    public static void main( String[ ] args ) {
+
+
+    System.out.println( "My Project" );
+
+    }
+
+    ```
+
+
+    提示：在 `System` 之后输入句号后，NetBeans 将显示一组供选项，类似于图 14。
+
+
+    ![](img/image0047.jpeg)
+
+
+    图 14
+
+    '
+- fmt: "\n![](Images/image00051.jpeg)\n\nFigure 18\n\nIf you double click the `dist`\
+    \ folder, this is what you will get\n\n![](Images/image00052.jpeg)\n\nFigure 19\n\
+    \nIn figure 19 above, the files in the `dist` file is what you send to your “programmer\
+    \ friends”. In the text file, there are instructions on how to run the program\
+    \ on a console and or a terminal window. Send the file to your friends and wait\
+    \ for them to marvel at your programing prowess.\n\n# Understanding java variables\n\
+    \nAs a programmer fresh out of the minting press, you will want to practice to\
+    \ develop your programming skills. Java programs work by manipulating data stored\
+    \ in memory. In the same manner a database would have variable data, the data\
+    \ in these memories is also variable, which means that the data can be in form\
+    \ of objects, texts, numbers or pointers to other memory areas plus many more.\
+    \ Each of this data has an assigned name that makes it easier for the data to\
+    \ be re-called when needed. The name and value assigned to this data is a “variable.”\
+    \ Let us start by looking at the number values.\n\nThere are many options for\
+    \ storing numbers in Java. For storage of whole numbers, e.g. 8-10-12, you use\
+    \ the integer (`int`) variable. To store 8-4-10-5-12-8 etc. you use the `double`\
+    \ variable. Storage is done with an equals sign (=). Using our first source code,\
+    \ let us look at some examples\n\nTo set up an integer (whole number) you need\
+    \ to add the code below to the `main` method of your “my first project” project.\n\
+    \n```java\npublic static void main(String[ ] args) {\n    int first_number;\n\
+    \    System.out.println(\"My First Project\");\n}\n```\n\nFor Java to recognize\
+    \ that you are storing a whole number, you need to first type the word `int` with\
+    \ a space to follow. Next, you need to coin a name for your integer variable.\
+    \ While you can give the integer variables any name you want, there are some rules\
+    \ you must put into consideration while you are naming.\n\n- A variable name cannot\
+    \ start with a number. This means that using `first_number` as your variable is\
+    \ ok but using `1st_number` is not. This is not to mean that you cannot use numbers\
+    \ as part of your variable name anywhere else; it just cannot be the beginning.\n\
+    - A variable’s name cannot be the same as a java keyword. These are many and NetBeans\
+    \ will turn them blue like in the example of `int` above.\n- Your variable name\
+    \ cannot contain spaces. If we were to use `int first number` in the variable\
+    \ declaration, we will get an error and thus the use of the underscore. Additionally,\
+    \ it is not unheard of to have a first word that starts with a low case character\
+    \ while the other words that follow are in upper case e.g. `firstNumber`, or `myFirstNumber`\n\
+    - The name of a variable is case sensitive. This means that there is a difference\
+    \ between `firstNumber` and `FirstNumber`\n\nWhen you need to store something\
+    \ in the variable called `first_number` you need to type an equals sign followed\
+    \ by the value you intend to store. Follow the code below.\n\n![](Images/image00053.jpeg)\n\
+    \nIn the above code, we are telling Java we want to store a value of 10 in the\
+    \ integer variable we have so aptly called `first_number`. You can also do the\
+    \ above in one line if you prefer.\n\n![](Images/image00054.jpeg)\n\nIn order\
+    \ to see how this works, you need to tweak the `println` method to this:\n\n```java\n\
+    System.out.println(\"First number = \" + first_number);\n```\n\nWe now have direct\
+    \ text between the round brackets of the `println` in enclose of double quotes.\n\
+    `(\"First number = \"`\n\nAdditionally, we have the name of our variable following\
+    \ a `+` sign `+ first_number );`\n\nThe `+` sign simply means join together. This\
+    \ means we are joining the name of our variable to the direct text. This joining\
+    \ process is what we call concatenation.\n\nThe figure below, figure20 illustrates\
+    \ how your coding window will appear. You should note the number of times each\
+    \ line ends with a semicolon\n\n![](Images/image00055.jpeg)\n\nFigure 20\n\nIf\
+    \ you run the program, here is what should display at the bottom of the output\
+    \ window\n\n![](Images/image00056.jpeg)\n\nFigure 21\n\nThe variable `number`\
+    \ we stored in the variable we gave the name `first_number` is in the first output\
+    \ directly after the `=` sign\n\nWhat if we were to make some additions? Let us\
+    \ add two more `int` variables. One will store a second number and the other one\
+    \ will store an answer.\n\n![](Images/image00057.jpeg)\n\nIn java, we can three\
+    \ variable names on the same line as we have above, but only if the variables\
+    \ are the same (type) which in our instance is the `int`. additionally, you will\
+    \ notice that each of the variable names separates from the other by a comma.\n\
+    \nHere is how our new variable would look like:\n\n![](Images/image00058.jpeg)\n\
+    \nFor the `answer` variable, we need to add the first and second number (`first+second`).\
+    \ In most programming we use the `(+)` symbol to add. This prompts java to add\
+    \ up the values in the `first_number` and `second_number`. Additionally, when\
+    \ it adds up the values, it stores the data total in the variable on the left\
+    \ of the equal sign. This means that instead of assigning 10 or 20 to the variables\
+    \ name, it will automatically add them up and automatically assign. The figure\
+    \ below figure22 describes what we just looked at.\n\n![](Images/image00059.jpeg)\n\
+    \nFigure 22\n\nThe above figure can also equate to this:\n\n```java\nanswer =\
+    \ 10 + 20;\n```\n\nHowever, java is already aware of the values inside the two\
+    \ variable, `first_number` and `second_number`, which means you can simply use\
+    \ the names.\n\nTo get the output, we need to tweak our `println` method again,\
+    \ to this:\n\n![](Images/image00060.jpeg)\n\nYou should also note that we are\
+    \ combining direct text that is surrounded by double quotes. Here is a figure\
+    \ of how your code window should now appear\n\n![](Images/image00061.jpeg)\n\n\
+    Figure 23\n\nAgain, when you run the program, the figure below is what should\
+    \ display on your output window\n\n![](Images/image00062.jpeg)\n\nFigure 24\n\n\
+    Here is a list of what our program has accomplished:\n1- Stored one number\n2-\
+    \ Stored second number\n3- Added the two numbers together\n4- Stored the addition\
+    \ result in a third variable\n5- Printed out all these results\n\nAdditionally,\
+    \ we can use numbers directly. To do this, you need to change the `answer` line\
+    \ to the following:\n\n```java\nanswer = first_number + second_number + 12;\n\
+    ```\n\nNow run your program and notice what prints out. Notice how little changes\
+    \ in the code affect the overall output.\n\nThe maximum value for `int` value\
+    \ is 2147483647, which means that the numbers you can store are large. If you\
+    \ need to have a minus number, the lowest value is -2147483648. Values larger\
+    \ than this require the double variable type.\n\n# Final Advice\n\nHere is the\
+    \ thing; programming with Java in the initial stages of learning will demand a\
+    \ lot of patience. Remember that it is easy to lose hope when things are not going\
+    \ as smoothly as you would. Persevere and you will reap the wonderful and tasty\
+    \ fruits of using java for programming. Programming is all about making mistakes,\
+    \ learning from them, and making better codes as you go along. While learning\
+    \ a new language (programming or otherwise) may be a bit of a task, it is well\
+    \ worth the pain (especially java language).\n\nAs a programmer, you cannot overlook\
+    \ the importance of Java in the computer-liberated world we are living in. If\
+    \ you are to have any success, you have to understand this very important language.\
+    \ Additionally, most of the systems in development today are using java more,\
+    \ and more, and abandoning other languages when creating databases and applications.\
+    \ The fact that the operating environment required for working with java are free\
+    \ also helps catapult it to the top of the list of all-time best programming language.\
+    \ As a programmer, I have found learning java makes it extremely easy to learn\
+    \ all the other programming languages because it prepares you mentally and code\
+    \ wise.\n"
+  raw: '![](Images/image00051.jpeg)
+
+
+    Figure 18
+
+
+    If you double click the dist folder, this is what you will get
+
+
+    ![](Images/image00052.jpeg)
+
+
+    Figure 19
+
+
+    In figure 19 above, the files in the dist file is what you send to your “programmer
+    friends”. In the text file, there are instructions on how to run the program on
+    a console and or a terminal window. Send the file to your friends and wait for
+    them to marvel at your programing prowess.
+
+
+    ## Understanding java variables
+
+
+    As a programmer fresh out of the minting press, you will want to practice to develop
+    your programming skills. Java programs work by manipulating data stored in memory.
+    In the same manner a database would have variable data, the data in these memories
+    is also variable, which means that the data can be in form of objects, texts,
+    numbers or pointers to other memory areas plus many more. Each of this data has
+    an assigned name that makes it easier for the data to be re-called when needed.
+    The name and value assigned to this data is a “variable.” Let us start by looking
+    at the number values.
+
+
+    There are many options for storing numbers in Java. For storage of whole numbers,
+    e.g. 8-10-12, you use the integer (int) variable. To store 8-4-10-5-12-8 etc.
+    you use the double variable. Storage is done with an equals sign (=). Using our
+    first source code, let us look at some examples
+
+
+    To set up an integer (whole number) you need to add the code below to the main
+    method of your “my first project” project.
+
+
+    public static void main(String[ ] args) {
+
+
+    int first_number;
+
+
+    System.out.println("My First Project");
+
+
+    }
+
+
+    For Java to recognize that you are storing a whole number, you need to first type
+    the word int with a space to follow. Next, you need to coin a name for your integer
+    variable. While you can give the integer variables any name you want, there are
+    some rules you must put into consideration while you are naming.
+
+
+    *A variable name cannot start with a number. This means that using first_number
+    as your variable is ok but using 1st_number is not. This is not to mean that you
+    cannot use numbers as part of your variable name anywhere else; it just cannot
+    be the beginning.
+
+
+    *A variable’s name cannot be the same as a java keyword. These are many and NetBeans
+    will turn them blue like in the example of int above.
+
+
+    *Your variable name cannot contain spaces. If we were to use int first number
+    in the variable declaration, we will get an error and thus the use of the underscore.
+    Additionally, it is not unheard of to have a first word that starts with a low
+    case character while the other words that follow are in upper case e.g. firstNumber,
+    or myFirstNumber
+
+
+    *The name of a variable is case sensitive. This means that there is a difference
+    between firstNumber and FirstNumber
+
+
+    When you need to store something in the variable called first_number you need
+    to type an equals sign followed by the value you intend to store. Follow the code
+    below.
+
+
+    ![](Images/image00053.jpeg)
+
+
+    In the above code, we are telling Java we want to store a value of 10 in the integer
+    variable we have so aptly called first_number. You can also do the above in one
+    line if you prefer.
+
+
+    ![](Images/image00054.jpeg)
+
+
+    In order to see how this works, you need to tweak the printIn method to this:
+
+
+    System.out.println( "First number = " + first_number );
+
+
+    We now have direct text between the round brackets of the printIn in enclose of
+    double quotes.
+
+
+    ("First number = "
+
+
+    Additionally, we have the name of our variable following a +sign
+
+
+    + first_number );
+
+
+    The + sign simply means join together. This means we are joining the name of our
+    variable to the direct text. This joining process is what we call concatenation.
+
+
+    The figure below, figure20 illustrates how your coding window will appear. You
+    should note the number of times each line ends with a semicolon
+
+
+    ![](Images/image00055.jpeg)
+
+
+    Figure 20
+
+
+    If you run the program, here is what should display at the bottom of the output
+    window
+
+
+    ![](Images/image00056.jpeg)
+
+
+    Figure 21
+
+
+    The variable number we stored in the variable we gave the name first_number is
+    in the first output directly after the = sign
+
+
+    What if we were to make some additions? Let us add two more int variables. One
+    will store a second number and the other one will store an answer.
+
+
+    ![](Images/image00057.jpeg)
+
+
+    In java, we can three variable names on the same line as we have above, but only
+    if the variables are the same (type) which in our instance is the int. additionally,
+    you will notice that each of the variable names separates from the other by a
+    comma.
+
+
+    Here is how our new variable would look like:
+
+
+    ![](Images/image00058.jpeg)
+
+
+    For the answer variable, we need to add the first and second number (first+second).
+    In most programming we use the (+) symbol to add. This prompts java to add up
+    the values in the first_number and second_number. Additionally, when it adds up
+    the values, it stores the data total in the variable on the left of the equal
+    sign. This means that instead of assigning 10 or 20 to the variables name, it
+    will automatically add them up and automatically assign. The figure below figure22
+    describes what we just looked at.
+
+
+    ![](Images/image00059.jpeg)
+
+
+    Figure 22
+
+
+    The above figure can also equate to this:
+
+
+    answer = 10 + 20;
+
+
+    However, java is already aware of the values inside the two variable, first_number
+    and second_number, which means you can simply use the names.
+
+
+    To get the output, we need to tweak our printIn method again, to this:
+
+
+    ![](Images/image00060.jpeg)
+
+
+    You should also note that we are combining direct text that is surrounded by double
+    quotes. Here is a figure of how your code window should now appear
+
+
+    ![](Images/image00061.jpeg)
+
+
+    Figure 23
+
+
+    Again, when you run the program, the figure below is what should display on your
+    output window
+
+
+    ![](Images/image00062.jpeg)
+
+
+    Figure 24
+
+
+    Here is a list of what our program has accomplished
+
+
+    1-Stored one number
+
+
+    2-Stored second number
+
+
+    3-Added the two numbers together
+
+
+    4-Stored the addition result in a third variable
+
+
+    5-Printed out all these results
+
+
+    Additionally, we can use numbers directly. To do this, you need to change the
+    answer line to the following
+
+
+    answer = first_number + second_number + 12;
+
+
+    Now run your program and notice what prints out. Notice how little changes in
+    the code affect the overall output.
+
+
+    The maximum value for int value is 2147483647, which means that the numbers you
+    can store are large. If you need to have a minus number, the lowest value is -2147483648\.
+    Values larger than this require the double variable type.
+
+
+    # Final Advice
+
+
+    Here is the thing; programming with Java Html in the initial stages of learning
+    will demand a lot of patience. Remember that it is very easy to lose hope when
+    things are not going as smoothly as you would want. Persevere and you will reap
+    the wonderful and tasty fruits of using java for programming. Programming is all
+    about making mistakes, learning from them, and making better codes as you go along.
+    While learning a new language (programming or otherwise) may be a bit of a task,
+    it is well worth the pain (especially java language).
+
+
+    As a programmer, you cannot overlook the importance of Java in the computer-liberated
+    world we are living in. If you are to have any success, you have to understand
+    this very important language. Additionally, most of the systems in development
+    today are using java more, and more, and abandoning other languages when creating
+    databases and applications. The fact that the operating environment required for
+    working with java are free also helps catapult it to the top of the list of all-time
+    best programming language. As a programmer, I have found that learning java makes
+    it extremely easy to learn all the other programming languages because it prepares
+    you mentally and code wise.'
+  toc: []
+  trans: "\n\n![](img/image00051.jpeg)\n\n图 18\n\n如果你双击 `dist` 文件夹，你会得到以下内容\n\n![](img/image00052.jpeg)\n\
+    \n图 19\n\n在上面的图 19 中，`dist`文件夹中的文件就是你要发送给你的“程序员朋友们”的内容。在文件中，有关于如何在控制台或终端窗口运行程序的指令。将文件发送给你的朋友，等待他们对你的编程造诣感到惊叹。\n\
+    \n# 理解 Java 变量\n\n作为一名刚出炉的程序员，你将想要通过练习来提高你的编程技能。Java 程序通过操作内存中存储的数据来工作。就像数据库会有可变的数据一样，这些内存中的数据也是可变的，这意味着数据可以是对象、文本、数字或指向其他内存区域的指针等形式。每条数据都有一个分配的名称，以便在需要时更容易地调用这些数据。分配给这些数据的名称和值被称为“变量”。让我们从查看数值开始。\n\
+    \n在 Java 中存储数字有许多选择。对于存储整数（例如 8-10-12），你使用整数（`int`）变量。要存储 8-4-10-5-12-8 等，你使用\
+    \ `double` 变量。使用等号 (=) 进行存储。通过我们的第一个源代码，让我们来看一些示例。\n\n要设置一个整数（整数字），你需要将下面的代码添加到你的“my\
+    \ first project”项目的 `main` 方法中。\n\n```java\npublic static void main(String[ ]\
+    \ args) {\n    int first_number;\n    System.out.println(\"My First Project\"\
+    );\n}\n```\n\n为了让 Java 识别出你正在存储一个整数，你首先需要输入单词 `int` 并在后面跟一个空格。接下来，你需要为你的整数变量取一个名称。虽然你可以给整数变量起任何你名称，但在命名时，你必须考虑一些规则。\n\
+    \n- 变量名不能以数字开头。这意味着使用 `first_number` 作为你的变量是可以的，但使用 `1st_number` 则是不行的。这并不意味着你不能在变量名的其他地方使用数字；它不能位于开头。\n\
+    - 变量名不能与 Java 关键字相同。这些关键字有很多，而且 NetBeans 会将它们变成蓝色，就像上面 `int` 的示例一样。\n- 你的变量名不能包含空格。如果我们在变量声明中使用\
+    \ `int first number`，我们将得到错误，因此使用了下划线。此外，第一个单词以小写字母开头而随后的单词大写字母的情况并不罕见，例如 `firstNumber`\
+    \ 或 `myFirstNumber`。\n- 变量名对大小写敏感。这意味着 `firstNumber` 和 `FirstNumber` 之间是有的。\n\n\
+    当你需要在名为 `first_number` 的变量中存储内容时，你需要输入一个等号，后面跟着你想要存储的值。遵循下面的代码。\n\n![](img/image00053.jpeg)\n\
+    \n在上面的代码中，我们正在告诉 Java 我们想在我们恰好命名为 `first_number` 的整数变量中存储一个 10 的值。如果你愿意，也可以用一行完成上述操作。\n\
+    \n![](img/image00054.jpeg)\n\n为了看到它是如何工作的，你需要将 `println` 方法修改为如下：\n\n```java\n\
+    System.out.println(\"First number = \" + first_number);\n```\n\n现在我们在 `println`\
+    \ 的圆括号之间有了用双引号包围的直接文本。\n`(\"First number = \"`\n\n此外，我们在 `+` 符号后面跟着我们的变量名 `+ first_number\
+    \ );`\n\n`+` 符号简单意味着连接。这意味着我们正在将变量名与直接文本连接。这种连接过程就是我们说的拼接（concatenation）。\n\n\
+    下图（图 20）说明了你的代码窗口将如何显示。你应该注意每行以分号结尾的次数。\n\n![](img/image00055.jpeg)\n\n图 20\n\n\
+    如果你运行程序，这里是输出窗口底部应该显示的内容\n\n![](img/image00056.jpeg)\n\n图 21\n\n我们存存储在名为 `first_number`\
+    \ 的变量中的变量 `number` 位于 `=` 符号后的第一个输出中。\n\n如果我们做一些加法会怎样？让我们再添加两个 `int` 变量。一个将存储第二个数字，另一个将存储答案。\n\
+    \n![](img/image00057.jpeg)\n\n在 Java 中，我们可以像上面那样在同一行中写三个变量名，但只有当变量类型相同时才可以，在我们的例子中是\
+    \ `int`。此外，你会注意到每个变量名之间通过逗号隔开。\n\n我们的新变量看起来是这样的：\n\n![](img/image00058.jpeg)\n\
+    \n对于 `answer` 变量，我们需要加上第一个和第二个数字（`first+second`）。在大多数编程中，我们使用 `(+)` 符号进行加法。这提示\
+    \ Java 相加 `first_number` 和 `second_number` 中的值。此外，当它相加值时，它会将总和存储在等号左边的变量中。这意味着与其给变量名赋值\
+    \ 10 或 20，它会自动将它们相加并赋值。下图（图 22）描述了我们刚刚看到的内容。\n\n![](img/image00059.jpeg)\n\n图\
+    \ 22\n\n上面的图也可以等同于：\n\n```java\nanswer = 10 + 20;\n```\n\n然而，Java 已经知道两个变量 `first_number`\
+    \ 和 `second_number` 内部的值，这意味着你可以直接使用名称。\n\n为了获得输出，我们需要再次修改我们的 `println` 方法为：\n\
+    \n![](img/image00060.jpeg)\n\n你应该注意到我们正在组合被双引号包围的直接文本。这里是你的代码窗口现在应该显示的图。\n\n![](img/image00061.jpeg)\n\
+    \n图 23\n\n再次，当你运行程序时，下图是在你的输出窗口上应该显示的内容\n\n![](img/image00062.jpeg)\n\n图 24\n\n\
+    这是我们的程序完成的任务列表：\n1- 存储了一个数字\n2- 存储了第二个数字\n3- 将两个数字相加\n4- 将加法结果存储在第三个变量中\n5- 打印出这些结果\n\
+    \n此外，我们可以直接使用数字。要这样做，你需要将 `answer` 那行改为如下：\n\n```java\nanswer = first_number +\
+    \ second_number + 12;\n```\n\n现在运行你的程序并注意打印了什么。注意代码中的微小变化是如何影响整体输出的。\n\n`int`\
+    \ 值的最大值为 2147483647，这意味着你可以存储的数字很大。如果你需要一个负数，最低值是 -2147483648。比这更大的值需要双精度类型。\n\
+    \n# 最后建议\n\n情况是这样的：在学习的初始阶段使用 Java 编程需要大量的耐心。记住，当事情进展不如顺利时，很容易失去希望。坚持下去，你将获得使用\
+    \ Java 编程的奇妙且甜美的果实。编程就是关于犯错、从中学习，并随着进步编写更好的代码。\n\n作为一名程序员，你不能忽视 Java 在我们所生活的计算机解放世界中的重要性。如果你想取得成功，就必须理解这门非常重要的语言。此外，今天开发的大多数系统越来越多地使用\
+    \ Java，并在创建数据库和应用程序时放弃其他语言。使用 Java 所需的操作环境是免费的，这一事实也有助于它推向最佳编程语言列表的顶端。\n\n"
+- fmt: '
+
+    Learning means you have to dedicate some time to learning. It means you have to
+    be prepared to put in the hours of trying, failing, but still trying again. I
+    will leave you with something that sound very shallow but is entire true; practice
+    makes perfect.
+
+    '
+  raw: Learning means you have to dedicate some time to learning. It means you have
+    to be prepared to put in the hours of trying, failing, but still trying again.
+    I will leave you with something that sound very shallow but is entire true; practice
+    makes perfect.
+  toc: []
+  trans: '
+
+
+    学习意味着你必须投入时间来学习。它意味着你必须准备好投入大量的时间去尝试、失败，然后再次尝试。我留给你一句听起来非常浅显、但完全属实的话：熟能生巧。
+
+    '

@@ -1,0 +1,52 @@
+name: Java： The Simple Guide to Learn Java Programming In No Time (Programming,Database,
+  Java for dummies, coding books, java programming) (HTML,Javascript,Programming,Developers,Coding,CSS,PHP
+  Book 2)
+name_cn: Java：快速学习 Java 编程入门指南（编程、数据库、Java 学者指南、编程书籍、Java 编程）（HTML、Javascript、编程、开发者、编码、CSS、PHP
+  书籍2）
+slug: java-the-simple-guide-to-learn-java-programming-in-no-time-p
+toc:
+- - '#'
+  - Java：快速学习 Java 编程入门指南（编程、数据库、Java 学者指南、编程书籍、Java 编程）（HTML、Javascript、编程、开发者、编码、CSS、PHP
+    书籍2）
+- - '#'
+  - 介绍
+- - '#'
+  - 第 1 章 – 通用编程指南
+- - '##'
+  - 变量作用域
+- - '##'
+  - 类字段和局部变量
+- - '##'
+  - 方法参数和局部变量
+- - '##'
+  - 装箱与拆箱（Boxing and unboxing）
+- - '##'
+  - 接口（Interfaces）
+- - '##'
+  - 字符串（Strings）
+- - '##'
+  - 标准库
+- - '##'
+  - 不变性
+- - '##'
+  - 测试
+- - '#'
+  - 第 2 章 - 如何以及何时使用异常
+- - '##'
+  - 引言
+- - '##'
+  - 异常：何时使用它们
+- - '##'
+  - 使用 try-with-resources
+- - '##'
+  - 异常与 lambda
+- - '##'
+  - 标准异常
+- - '##'
+  - 定义你自己的异常
+- - '##'
+  - 文档异常
+- - '##'
+  - 异常与日志
+- - '##'
+  - 结论
