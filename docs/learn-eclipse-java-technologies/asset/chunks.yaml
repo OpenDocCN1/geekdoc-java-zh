@@ -1,0 +1,5762 @@
+- fmt: '
+
+    ![](Images/cover00149.jpeg)
+
+
+    Copyright © All rights reserved
+
+
+    No part of this book may be reproduced, or stored in a retrieval system, or transmitted
+    in any form or by any means, electronic, mechanical, photocopying, recording,
+    or otherwise, without express written permission of the publisher.
+
+
+    I would like to dedicate the book to the students who will be using it. I wish
+    you future career success and hope you never stop learning.
+
+
+    # TABLE OF CONTENT
+
+
+    - [Overview](#part0003.xhtml_id_Toc70071421)
+
+    - [Installation](#part0004.xhtml_id_Toc70071422)
+
+    - [Explore Windows](#part0005.xhtml_id_Toc70071423)
+
+    - [Explore Menus](#part0006.xhtml_id_Toc70071424)
+
+    - [Explore Views](#part0007.xhtml_id_Toc70071425)
+
+    - [Perspectives](#part0008.xhtml_id_Toc70071426)
+
+    - [Workspaces](#part0009.xhtml_id_Toc70071427)
+
+    - [Create Java Project](#part0010.xhtml_id_Toc70071428)
+
+    - [Create Java Package](#part0011.xhtml_id_Toc70071429)
+
+    - [Create Java Class](#part0012.xhtml_id_Toc70071430)
+
+    - [Create Java Interface](#part0013.xhtml_id_Toc70071431)
+
+    - [Create XML File](#part0014.xhtml_id_Toc70071432)
+
+    - [Java Build Path](#part0015.xhtml_id_Toc70071433)
+
+    - [Run Configuration](#part0016.xhtml_id_Toc70071434)
+
+    - [Running Program](#part0017.xhtml_id_Toc70071435)
+
+    - [Create Jar Files](#part0018.xhtml_id_Toc70071436)
+
+    - [Close Project](#part0019.xhtml_id_Toc70071437)
+
+    - [Reopen Project](#part0020.xhtml_id_Toc70071438)
+
+    - [Build Project](#part0021.xhtml_id_Toc70071439)
+
+    - [Debug Configuration](#part0022.xhtml_id_Toc70071440)
+
+    - [Debugging Program](#part0023.xhtml_id_Toc70071441)
+
+    - [Preferences](#part0024.xhtml_id_Toc70071442)
+
+    - [Content Assist](#part0025.xhtml_id_Toc70071443)
+
+    - [Quick Fix](#part0026.xhtml_id_Toc70071444)
+
+    - [Hover Help](#part0027.xhtml_id_Toc70071445)
+
+    - [Search Menu](#part0028.xhtml_id_Toc70071446)
+
+    - [Navigation](#part0029.xhtml_id_Toc70071447)
+
+    - [Refactoring](#part0030.xhtml_id_Toc70071448)
+
+    - [Add Bookmarks](#part0031.xhtml_id_Toc70071449)
+
+    - [Task Management](#part0032.xhtml_id_Toc70071450)
+
+    - [Install Plugins](#part0033.xhtml_id_Toc70071451)
+
+    - [Code Templates](#part0034.xhtml_id_Toc70071452)
+
+    - [Shortcuts](#part0035.xhtml_id_Toc70071453)
+
+    - [Restart Option](#part0036.xhtml_id_Toc70071454)
+
+    - [Tips & Tricks](#part0037.xhtml_id_Toc70071455)
+
+    - [Web Browsers](#part0038.xhtml_id_Toc70071456)
+
+
+    # Overview
+
+
+    ## What is Eclipse?
+
+
+    In the context of computing, Eclipse is an integrated development environment
+    (IDE) for developing applications using the Java programming language and other
+    programming languages such as C/C++, Python, PERL, Ruby etc.
+
+
+    The Eclipse platform which provides the foundation for the Eclipse IDE is composed
+    of plug-ins and is designed to be extensible using additional plug-ins. Developed
+    using Java, the Eclipse platform can be used to develop rich client applications,
+    integrated development environments and other tools. Eclipse can be used as an
+    IDE for any programming language for which a plug-in is available.
+
+
+    The Java Development Tools (`JDT`) project provides a plug-in that allows Eclipse
+    to be used as a Java IDE, PyDev is a plugin that allows Eclipse to be used as
+    a Python IDE, C/C++ Development Tools (`CDT`) is a plug-in that allows Eclipse
+    to be used for developing application using C/C++, the Eclipse Scala plug-in allows
+    Eclipse to be used an IDE to develop Scala applications and PHPeclipse is a plug-in
+    to eclipse that provides complete development tool for PHP.
+
+
+    ## Licensing
+
+
+    Eclipse platform and other plug-ins from the Eclipse foundation is the Eclipse.
+
+
+    ## Eclipse Releases
+
+
+    | Codename | Year | Version |
+
+    | :--- | :--- | :--- |
+
+    | Callisto | 2006 | 3.2 |
+
+    | Europa | 2007 | 3.3 |
+
+    | Ganymede | 2008 | 3.4 |
+
+    | Galileo | 2009 | 3.5 |
+
+    | Helios | 2010 | 3.6 |
+
+    | Indigo | 2011 | 3.7 |
+
+    | Juno | 2012 | 3.8 |
+
+    | Kepler | 2013 | 4.2 |
+
+    | Luna | 2014 | 4.3 |
+
+
+    # Installation
+
+
+    ## Downloading Eclipse
+
+
+    The Eclipse platform and other plug-ins from the Eclipse foundation can download
+    `http://www.eclipse.org/`.
+
+
+    ![Images/image0014.jpeg)
+
+
+    ## Installing Eclipse
+
+
+    The Eclipse platform and other plug-ins from the Eclipse foundation are
+
+
+    *   `7-zip`
+
+    *   `PeZip`
+
+    *   `IZArc`
+
+
+    ![Images/image0045.jpeg)
+
+
+    ## Launching Eclipse
+
+
+    The Eclipse platform and other plug-ins from the Eclipse foundation start using
+    `eclipse.exe`.
+
+
+    ![Images/image0046.jpeg)
+
+
+    # Explore Windows
+
+
+    ## Parts of an Eclipse Window
+
+
+    The major visible parts of an eclipse window are
+
+
+    *   Views
+
+    *   Editors (all appear in one editor area)
+
+    *   Menu Bar
+
+    *   Toolbar
+
+
+    ![Images/image0047.jpeg)
+
+
+    ## Using Multiple Windows
+
+
+    Multiple Eclipse Windows can be open at the same time. To open a new window, click
+    on the `Windows` menu and select the `New Window` menu item.
+
+
+    # Explore Menus
+
+
+    ## Typical Eclipse Menus
+
+
+    The typical menus available on the menu bar of an Eclipse window are
+
+
+    *   File menu
+
+    *   Edit menu
+
+    *   Navigate menu
+
+    *   Search menu
+
+    *   Project menu
+
+    *   Run menu
+
+    *   Window menu
+
+    *   Help menu
+
+
+    ![Images/image0049.jpeg)
+
+
+    ## Brief Description of Menus
+
+
+    | Sr.No | Menu Name & Description |
+
+    '
+  raw: '
+
+
+    ![](Images/cover00149.jpeg)
+
+
+    Copyright © All rights reserved
+
+
+    No part of this book may be reproduced, or stored in a retrieval system, or transmitted
+    in any form or by any means, electronic, mechanical, photocopying, recording,
+    or otherwise, without express written permission of the publisher.
+
+
+    I would like to dedicate the book to the students who will be using it. I wish
+    you future career success and hope you never stop learning.
+
+
+    TABLE OF CONTENT
+
+
+    [Overview](#part0003.xhtml_id_Toc70071421)
+
+
+    [Installation](#part0004.xhtml_id_Toc70071422)
+
+
+    [Explore Windows](#part0005.xhtml_id_Toc70071423)
+
+
+    [Explore Menus](#part0006.xhtml_id_Toc70071424)
+
+
+    [Explore Views](#part0007.xhtml_id_Toc70071425)
+
+
+    [Perspectives](#part0008.xhtml_id_Toc70071426)
+
+
+    [Workspaces](#part0009.xhtml_id_Toc70071427)
+
+
+    [Create Java Project](#part0010.xhtml_id_Toc70071428)
+
+
+    [Create Java Package](#part0011.xhtml_id_Toc70071429)
+
+
+    [Create Java Class](#part0012.xhtml_id_Toc70071430)
+
+
+    [Create Java Interface](#part0013.xhtml_id_Toc70071431)
+
+
+    [Create XML File](#part0014.xhtml_id_Toc70071432)
+
+
+    [Java Build Path](#part0015.xhtml_id_Toc70071433)
+
+
+    [Run Configuration](#part0016.xhtml_id_Toc70071434)
+
+
+    [Running Program](#part0017.xhtml_id_Toc70071435)
+
+
+    [Create Jar Files](#part0018.xhtml_id_Toc70071436)
+
+
+    [Close Project](#part0019.xhtml_id_Toc70071437)
+
+
+    [Reopen Project](#part0020.xhtml_id_Toc70071438)
+
+
+    [Build Project](#part0021.xhtml_id_Toc70071439)
+
+
+    [Debug Configuration](#part0022.xhtml_id_Toc70071440)
+
+
+    [Debugging Program](#part0023.xhtml_id_Toc70071441)
+
+
+    [Preferences](#part0024.xhtml_id_Toc70071442)
+
+
+    [Content Assist](#part0025.xhtml_id_Toc70071443)
+
+
+    [Quick Fix](#part0026.xhtml_id_Toc70071444)
+
+
+    [Hover Help](#part0027.xhtml_id_Toc70071445)
+
+
+    [Search Menu](#part0028.xhtml_id_Toc70071446)
+
+
+    [Navigation](#part0029.xhtml_id_Toc70071447)
+
+
+    [Refactoring](#part0030.xhtml_id_Toc70071448)
+
+
+    [Add Bookmarks](#part0031.xhtml_id_Toc70071449)
+
+
+    [Task Management](#part0032.xhtml_id_Toc70071450)
+
+
+    [Install Plugins](#part0033.xhtml_id_Toc70071451)
+
+
+    [Code Templates](#part0034.xhtml_id_Toc70071452)
+
+
+    [Shortcuts](#part0035.xhtml_id_Toc70071453)
+
+
+    [Restart Option](#part0036.xhtml_id_Toc70071454)
+
+
+    [Tips & Tricks](#part0037.xhtml_id_Toc70071455)
+
+
+    [Web Browsers](#part0038.xhtml_id_Toc70071456)
+
+
+    # Overview
+
+
+    ## What is Eclipse?
+
+
+    In the context of computing, Eclipse is an integrated development environment
+    (IDE) for developing applications using the Java programming language and other
+    programming languages such as C/C++, Python, PERL, Ruby etc.
+
+
+    The Eclipse platform which provides the foundation for the Eclipse IDE is composed
+    of plug-ins and is designed to be extensible using additional plug-ins. Developed
+    using Java, the Eclipse platform can be used to develop rich client applications,
+    integrated development environments and other tools. Eclipse can be used as an
+    IDE for any programming language for which a plug-in is available.
+
+
+    The Java Development Tools (JDT) project provides a plug-in that allows Eclipse
+    to be used as a Java IDE, PyDev is a plugin that allows Eclipse to be used as
+    a Python IDE, C/C++ Development Tools (CDT) is a plug-in that allows Eclipse to
+    be used for developing application using C/C++, the Eclipse Scala plug-in allows
+    Eclipse to be used an IDE to develop Scala applications and PHPeclipse is a plug-in
+    to eclipse that provides complete development tool for PHP.
+
+
+    ## Licensing
+
+
+    Eclipse platform and other plug-ins from the Eclipse foundation is released under
+    the Eclipse Public License (EPL). EPL ensures that Eclipse is free to download
+    and install. It also allows Eclipse to be modified and distributed.
+
+
+    ## Eclipse Releases
+
+
+    Every year, since 2006, the Eclipse foundation releases the Eclipse Platform and
+    a number of other plug-ins in June.
+
+
+    | Codename | Year | Platform Version |
+
+
+    | Callisto | 2006 | 3.2 |
+
+
+    | Europa | 2007 | 3.3 |
+
+
+    | Ganymede | 2008 | 3.4 |
+
+
+    | Galileo | 2009 | 3.5 |
+
+
+    | Helios | 2010 | 3.6 |
+
+
+    | Indigo | 2011 | 3.7 |
+
+
+    | Juno | 2012 | 3.8 and 4.2 |
+
+
+    | Kepler | 2013 | 4.3 |
+
+
+    | Luna | 2014 | 4.4.0 |
+
+
+    # Installation
+
+
+    ## Downloading Eclipse
+
+
+    You can download eclipse from **http://www.eclipse.org/downloads/**. The download
+    page lists a number of flavors of eclipse.
+
+
+    ![Image](Images/image00045.jpeg)
+
+
+    The capabilities of each packaging of eclipse are different. Java developers typically
+    use Eclipse Classic or Eclipse IDE for developing Java applications.
+
+
+    The drop down box in the right corner of the download page allows you to set the
+    operating system on which eclipse is to be installed. You can choose between Windows,
+    Linux and Mac. Eclipse is packaged as a zip file.
+
+
+    ## Installing Eclipse
+
+
+    To install on windows, you need a tool that can extract the contents of a zip
+    file. For example you can use −
+
+
+    *   **7-zip**
+
+
+    *   **PeaZip**
+
+
+    *   **IZArc**
+
+
+    Using any one of these tools, extract the contents of the eclipse zip file to
+    any folder of your choice.
+
+
+    ![Image](Images/image00046.jpeg)
+
+
+    ## Launching Eclipse
+
+
+    On the windows platform, if you extracted the contents of the zip file to c:\,
+    then you can start eclipse by using c:\eclipse\eclipse.exe
+
+
+    When eclipse starts up for the first time it prompts you for the location of the
+    workspace folder. All your data will be stored in the workspace folder. You can
+    accept the default or choose a new location.
+
+
+    ![Image](Images/image00047.jpeg)
+
+
+    If you select "Use this as the default and do not ask again", this dialog box
+    will not come up again. You can change this preference using the Workspaces Preference
+    Page. See the **Preference tutorial** page for more details.
+
+
+    # Explore Windows
+
+
+    ## Parts of an Eclipse Window
+
+
+    The major visible parts of an eclipse window are −
+
+
+    *   Views
+
+
+    *   Editors (all appear in one editor area)
+
+
+    *   Menu Bar
+
+
+    *   Toolbar
+
+
+    An eclipse perspective is the name given to an initial collection and arrangement
+    of views and an editor area. The default perspective is called java. An eclipse
+    window can have multiple perspectives open in it but only one perspective can
+    be active at any point of time. A user can switch between open perspectives or
+    open a new perspective. A perspective controls what appears in some menus and
+    tool bars.
+
+
+    ![Image](Images/image00048.jpeg)
+
+
+    A perspective has only one editor area in which multiple editors can be open.
+    The editor area is usually surrounded by multiple views. In general, editors are
+    used to edit the project data and views are used to view the project metadata.
+    For example the package explorer shows the java files in the project and the java
+    editor is used to edit a java file.
+
+
+    The eclipse window can contain multiple editors and views but only one of them
+    is active at any given point of time. The title bar of the active editor or view
+    looks different from all the others.
+
+
+    The UI elements on the menu bar and tool bar represent commands that can be triggered
+    by an end user.
+
+
+    ## Using Multiple Windows
+
+
+    Multiple Eclipse Windows can be open at the same time. To open a new window, click
+    on the Windows menu and select the New Window menu item.
+
+
+    Each window can have a different perspective open in them. For example you could
+    open two Eclipse windows one in the Java perspective and the other in the Debug
+    perspective. The window showing the Java perspective can be used for editing the
+    java code and the window showing the debug perspective can be used for debugging
+    the application being developed.
+
+
+    # Explore Menus
+
+
+    ## Typical Eclipse Menus
+
+
+    The typical menus available on the menu bar of an Eclipse window are −
+
+
+    *   File menu
+
+
+    *   Edit menu
+
+
+    *   Navigate menu
+
+
+    *   Search menu
+
+
+    *   Project menu
+
+
+    *   Run menu
+
+
+    *   Window menu
+
+
+    *   Help menu
+
+
+    ![Image](Images/image00049.jpeg)
+
+
+    Plug-ins can add new menus and menu items. For example when the java editor is
+    open you will see the Source menu and when the XML editor is open, you will see
+    the **Design** menu.
+
+
+    ## Brief Description of Menus
+
+
+    | Sr.No | Menu Name & Description |'
+  toc: []
+  trans: '
+
+
+    ![](img/cover00149.jpeg)
+
+
+    版权 © 版权所有
+
+
+    未经出版者书面许可，本书的任何部分不得复制、存储在检索系统中，或以任何形式或通过任何手段（电子、机械、复印、录音或其他）进行传输。
+
+
+    我想将此本书献给使用它的学生们。祝愿你们职业道路成功，并希望你们永停止学习。
+
+
+    # 目录
+
+
+    - 概述
+
+    - 安装
+
+    - 探索窗口
+
+    - 探索菜单
+
+    - 探索视图
+
+    - 透视图
+
+    - 工作空间
+
+    - 创建 Java 项目
+
+    - 创建 Java 包
+
+    - 创建 Java 类
+
+    - 创建 Java 接口
+
+    - 创建 XML 文件
+
+    - Java 编译路径
+
+    - 运行配置
+
+    - 运行程序
+
+    - 创建 Jar 文件
+
+    - 关闭项目
+
+    - 重新打开项目
+
+    - 构建项目
+
+    - 调试配置
+
+    - 调试程序
+
+    - 首选项
+
+    - 内容辅助
+
+    - 快速修复
+
+    - 悬停帮助
+
+    - 搜索菜单
+
+    - 导航
+
+    - 重构
+
+    - 添加书签
+
+    - 任务管理
+
+    - 安装插件
+
+    - 代码模板
+
+    - 快捷键
+
+    - 重启选项
+
+    - 技巧与妙窍
+
+    - 浏览器
+
+
+    # 概述
+
+
+    ## 什么是 Eclipse？
+
+
+    在计算领域，Eclipse 是一个集成开发环境（IDE），用于使用 Java 编程语言以及 C/C++、Python、PERL、Ruby 等其他语言开发应用程序。
+
+
+    Eclipse 平台为 Eclipse IDE 提供了基础，由插件组成，并设计为可以使用额外的插件进行扩展。Eclipse 平台使用 Java 开发，可用于开发富客户端、集成开发环境和其他工具。只要有相应的插件，Eclipse
+    就可以作为任何编程语言的 IDE 使用。
+
+
+    Java 开发工具（`JDT`）项目提供了一个允许 Eclipse 用作 Java IDE 的插件；PyDev 是允许 Eclipse 用作 Python
+    IDE 的插件；C/C++ 开发工具（`CDT`）是一个允许 Eclipse 用于使用 C/C++ 开发应用程序的插件；Eclipse Scala 插件允许
+    Eclipse 作为开发 Scala 应用的 IDE；而 PHPeclipse 是一个为 PHP 提供完整开发工具的插件。
+
+
+    ## 许可
+
+
+    Eclipse 平台及其他插件是 Eclipse。
+
+
+    ## Eclipse 版本
+
+
+    | 代号 | 年份 | 版本 |
+
+    | :--- | :--- | :--- |
+
+    | Callisto | 2006 | 3.2 |
+
+    | Europa | 2007 | 3.3 |
+
+    | Ganymede | 2008 | 3.4 |
+
+    | Galileo | 2009 | 3.5 |
+
+    | Helios | 2010 | 3.6 |
+
+    | Indigo | 2011 | 3.7 |
+
+    | Juno | 2012 | 3.8 |
+
+    | Kepler | 2013 | 4.2 |
+
+    | Luna | 2014 | 4.3 |
+
+
+    # 安装
+
+
+    ## 下载 Eclipse
+
+
+    Eclipse 平台及其他插件可以从 http://www.eclipse.org/ 下载。
+
+
+    ![Images/image014.jpeg)
+
+
+    ## 安装 Eclipse
+
+
+    Eclipse 平台及其他插件有：
+
+
+    *   `7-zip`
+
+    *   `PeZip`
+
+    *   `IZArc`
+
+
+    ![Images/image045.jpeg)
+
+
+    ## 启动 Eclipse
+
+
+    Eclipse 平台及其他插件通过 `eclipse.exe` 启动。
+
+
+    ![Images/image046.jpeg)
+
+
+    # 探索窗口
+
+
+    ## Eclipse 窗口部分
+
+
+    Eclipse 窗口的主要可见部分有：
+
+
+    *   视图
+
+    *   编辑器（均显示在一个编辑器区域）
+
+    *   菜单栏
+
+    *   工具栏
+
+
+    ![Images/image047.jpeg)
+
+
+    ## 使用多窗口
+
+
+    可以同时打开多个 Eclipse 窗口。要打开新窗口，点击 `Windows` 菜单并选择 `New Window` 菜单项。
+
+
+    # 探索菜单
+
+
+    ##  菜单
+
+
+    Eclipse 窗口菜单栏上的典型菜单有
+
+
+    *   文件菜单
+
+    *   编辑菜单
+
+    *   导航菜单
+
+    *   搜索菜单
+
+    *   项目菜单
+
+    *   运行菜单
+
+    *   窗口菜单
+
+    *   帮助菜单
+
+
+    ![Images/image049.jpeg)
+
+
+    ## 菜单简述
+
+
+    | 序号 | 菜单名称与描述 |
+
+
+    '
+- fmt: '
+
+    ## Menus
+
+
+    - **File**: The `File` menu allows you to open files for editing, close editors,
+    save editor content and rename files. Among the other things, it also allows you
+    to import and export workspace content and shutdown Eclipse.
+
+    - **Edit**: The `Edit` menu presents items like copy & paste.
+
+    - **Source**: The `Source` menu is visible only when a java editor is open. It
+    presents a number of useful menu items related to editing java source code.
+
+    - **Navigate**: The `Navigate` menu allows you to quickly locate resources and
+    navigate to them.
+
+    - **Search**: The `Search` menu presents items that allow you to search the workspace
+    for files that contain specific data.
+
+    - **Project**: The menu items related to building a project can be found on the
+    `Project` menu.
+
+    - **Run**: The menu items on the `Run` menu allow you to start a program in the
+    run mode or debug mode. It also presents menu items that allow you to debug the
+    code.
+
+    - **Window**: The `Window` menu allows you to open and close views and perspectives.
+    It also allows you to bring up the `Preferences` dialog.
+
+    - **Help**: The `Help` menu can be used to bring up the `Help` window, `Eclipse
+    Marketplace` view or Install new plug-ins. The `about Eclipse` menu item gives
+    you version information.
+
+
+    ## Customizing Menus
+
+
+    The visible menu items on a menu depend on the installed plug-ins and customization
+    done using the `Customize Perspective` dialog box.
+
+
+    # Explore Views
+
+
+    ### About Views
+
+
+    Eclipse views allow users to see a graphical representation of project metadata.
+    For example the project navigator view presents a graphical representation of
+    the folders and files associated with a project and properties view presents a
+    graphical representation of an element selected in another view or editor.
+
+
+    An eclipse perspective can show any number of views and editors. All editor instances
+    appear in a single editor area, whereas views are placed inside view folders.
+    A workbench window can display any number of view folders. Each view folder can
+    display one or more views.
+
+
+    ### Organizing Views
+
+
+    The following picture shows four views arranged in a view folder.
+
+
+    ![Image](Images/image00050.jpeg)
+
+
+    The picture given below shows the same four views arranged in two view folders.
+
+
+    ![Image](Images/image00051.jpeg)
+
+
+    ### Moving Views
+
+
+    To move a view from one view folder to another, just click on the view title and
+    drag to the title bar area of another view folder. The green line shown below
+    is a result of dragging the title bar of the `Properties` view from one view folder
+    to the title bar area of another view folder. The `Properties` view can be moved
+    to where the green line is by releasing the mouse button and sending out a drop
+    event.
+
+
+    ![Image](Images/image00052.jpeg)
+
+
+    ### Creating View Folders
+
+
+    View folders can be dynamically created by dragging the title bar of a view to
+    anywhere outside the editor area and title bar of another view folder. As you
+    drag the title bar around, green lines will indicate where exactly the new view
+    folder will be created.
+
+
+    ![Image](Images/image00053.jpeg)
+
+
+    Moving the drag icon to the bottom of a window allows you to create a view folder
+    that spans the entire width of the window. Moving the drag icon to the left or
+    right edge of window allows you to create a view folder that spans the entire
+    height of the window.
+
+
+    ### Opening a view
+
+
+    To open a view, click on the `Window` menu and select the `Show View` menu item.
+
+
+    ![Image](Images/image00054.jpeg)
+
+
+    Clicking on the `Other` menu item brings up the `Show View` dialog box that allows
+    you to locate and activate a view.
+
+
+    ![Image](Images/image00055.jpeg)
+
+
+    The views are organized by category. To quickly locate a view just type the name
+    of a view into the filter text box. To open a view, select it and click on the
+    `OK` button. The subsequent pages of this tutorial introduce you to a number of
+    useful views.
+
+
+    # Perspectives
+
+
+    ### What is a Perspective?
+
+
+    An eclipse perspective is the name given to an initial collection and arrangement
+    of views and an editor area. The default perspective is called `java`. An eclipse
+    window can have multiple perspectives open in it but only one perspective is active
+    at any point of time. A user can switch between open perspectives or open a new
+    perspective. The active perspective controls what appears in some menus and tool
+    bars.
+
+
+    ### Opening a Perspective
+
+
+    To open a new perspective, click on the `Windows` menu and select `Open Perspective`
+    → `Other`
+
+
+    ![Image](Images/image00056.jpeg)
+
+
+    The `Open Perspective` dialog box shows all the available perspectives. The same
+    dialog can be brought up by clicking on the `Open Perspective` button (![Image](Images/image00057.jpeg)
+    ) on the tool bar.
+
+
+    ### Switching between Perspectives
+
+
+    The most commonly used perspectives for java development are the `Java` perspective
+    and `Debug` perspective. Users can switch between open perspectives by clicking
+    on the `Perspective` name on the toolbar.
+
+
+    ![Image](Images/image00058.jpeg)
+
+
+    ### Closing a Perspective
+
+
+    To close a perspective, right click on the perspective name in toolbar and select
+    the `Close` menu item.
+
+
+    ![Image](Images/image00059.jpeg)
+
+
+    ### Customizing a Perspective
+
+
+    The `customize perspective` dialog can be used to customize a perspective. Customizing
+    a perspective means:
+
+
+    - Determining the icons visible on the toolbar when a perspective is active.
+
+    - Determining the menu items visible when a perspective is active.
+
+    - Determine the menu items in `New` submenu, `Show View` submenu and `Open Perspective`
+    submenu.
+
+
+    ![Image](Images/image00060.jpeg)
+
+
+    The tab descriptions of `customize perspective` are given below:
+
+
+    - The `Tool Bar Visibility` tab can be used to determine which icons are visible
+    on the toolbar when a perspective is active.
+
+    - The `Menu Visibility` tab can be used to determine which menu items are visible
+    when a perspective is active.
+
+    - The `Command Groups Availability` tab can be used to control the visibility
+    of toolbar icons and menu items.
+
+    - The `Shortcuts` tab can be used to determine the menu items in `New` submenu,
+    `Show View` submenu and `Open Perspective` submenu.
+
+
+    Based on the `Shortcuts` selection in the picture given below, to bring up the
+    `New Java Project from Ant Build File` wizard users have to bring up the `New`
+    menu, click on `Other`, expand the `Java` category and then select `Java Project
+    from Ant Build File`. On the other hand, to start the `New Class` wizard they
+    can bring up the `New` menu and select the `Class` item because its selected in
+    the picture given below. By selecting the `Java Project from Ant Build File` check
+    box this item will also appear under the `New` menu.
+
+
+    ![Image](Images/image00061.jpeg)
+
+
+    # Workspaces
+
+
+    ### About Eclipse Workspace
+
+
+    The eclipse workspace contains resources such as:
+
+
+    - Projects
+
+    - Files
+
+    - Folders
+
+
+    The workspace has a hierarchical structure. Projects are at the top level of the
+    hierarchy and inside them you have files and folders. Plug-ins use an API provided
+    by the `resources` plug-in to manage the resources in the workspace.
+
+
+    ### UI Elements for Managing the Workspace
+
+
+    Users use the functionality provided by views, editors and wizard to create and
+    manage resources in the workspace. One among the many views that show the content
+    of the workspace is the `Project Explorer` view.
+
+
+    ![Image](Images/image00062.jpeg)
+
+
+    The `File` Wizard (`File` → `New` → `File`) can be used to create a new file.
+
+
+    ![Image](Images/image00063.jpeg)
+
+
+    The `Folder` Wizard (`File` → `New` → `Folder`) can be used to create a new folder.
+
+
+    ![Image](Images/image00064.jpeg)
+
+
+    # Create Java Project
+
+
+    ### Opening the New Java Project wizard
+
+
+    The `New Java Project` wizard can be used to create a new java project. There
+    are many ways to open this wizard:
+
+
+    - By clicking on the `File` menu and choosing `New` → `Java Project`.
+
+    - By right clicking anywhere in the `Project Explorer` and selecting `New` → `Java
+    Project`.
+
+    - By clicking on the `New` button (![Image](Images/image00065.jpeg) ) in the Tool
+    bar and selecting `Java Project`.
+
+    '
+  raw: '| 1 | FileThe File menu allows you to open files for editing, close editors,
+    save editor content and rename files. Among the other things, it also allows you
+    to import and export workspace content and shutdown Eclipse. |
+
+
+    | 2 | EditThe Edit menu presents items like copy & paste. |
+
+
+    | 3 | SourceThe Source menu is visible only when a java editor is open. It presents
+    a number of useful menu items related to editing java source code. |
+
+
+    | 4 | NavigateThe Navigate menu allows you to quickly locate resources and navigate
+    to them. |
+
+
+    | 5 | SearchThe Search menu presents items that allow you to search the workspace
+    for files that contain specific data. |
+
+
+    | 6 | ProjectThe menu items related to building a project can be found on the
+    Project menu. |
+
+
+    | 7 | RunThe menu items on the Run menu allow you to start a program in the run
+    mode or debug mode. It also presents menu items that allow you to debug the code.
+    |
+
+
+    | 8 | WindowThe Window menu allows you to open and close views and perspectives.
+    It also allows you to bring up the Preferences dialog. |
+
+
+    | 9 | HelpThe Help menu can be used to bring up the Help window, Eclipse Marketplace
+    view or Install new plug-ins. The about Eclipse menu item gives you version information.
+    |
+
+
+    ## Customizing Menus
+
+
+    The visible menu items on a menu depend on the installed plug-ins and customization
+    done using the **Customize Perspective** dialog box.
+
+
+    # Explore Views
+
+
+    ## About Views
+
+
+    Eclipse views allow users to see a graphical representation of project metadata.
+    For example the project navigator view presents a graphical representation of
+    the folders and files associated with a project and properties view presents a
+    graphical representation of an element selected in another view or editor.
+
+
+    An eclipse perspective can show any number of views and editors. All editor instances
+    appear in a single editor area, whereas views are placed inside view folders.
+    A workbench window can display any number of view folders. Each view folder can
+    display one or more views.
+
+
+    ## Organizing Views
+
+
+    The following picture shows four views arranged in a view folder.
+
+
+    ![Image](Images/image00050.jpeg)
+
+
+    The picture given below shows the same four views arranged in two view folders.
+
+
+    ![Image](Images/image00051.jpeg)
+
+
+    ## Moving Views
+
+
+    To move a view from one view folder to another, just click on the view title and
+    drag to the title bar area of another view folder. The green line shown below
+    is a result of dragging the title bar of the Properties view from one view folder
+    to the title bar area of another view folder. The Properties view can be moved
+    to where the green line is by releasing the mouse button and sending out a drop
+    event.
+
+
+    ![Image](Images/image00052.jpeg)
+
+
+    ## Creating View Folders
+
+
+    View folders can be dynamically created by dragging the title bar of a view to
+    anywhere outside the editor area and title bar of another view folder. As you
+    drag the title bar around, green lines will indicate where exactly the new view
+    folder will be created.
+
+
+    ![Image](Images/image00053.jpeg)
+
+
+    Moving the drag icon to the bottom of a window allows you to create a view folder
+    that spans the entire width of the window. Moving the drag icon to the left or
+    right edge of window allows you to create a view folder that spans the entire
+    height of the window.
+
+
+    ## Opening a view
+
+
+    To open a view, click on the **Window** menu and select the **Show View** menu
+    item.
+
+
+    ![Image](Images/image00054.jpeg)
+
+
+    Clicking on the **Other** menu item brings up the Show View dialog box that allows
+    you to locate and activate a view.
+
+
+    ![Image](Images/image00055.jpeg)
+
+
+    The views are organized by category. To quickly locate a view just type the name
+    of a view into the filter text box. To open a view, select it and click on the
+    OK button. The subsequent pages of this tutorial introduce you to a number of
+    useful views.
+
+
+    # Perspectives
+
+
+    ## What is a Perspective?
+
+
+    An eclipse perspective is the name given to an initial collection and arrangement
+    of views and an editor area. The default perspective is called java. An eclipse
+    window can have multiple perspectives open in it but only one perspective is active
+    at any point of time. A user can switch between open perspectives or open a new
+    perspective. The active perspective controls what appears in some menus and tool
+    bars.
+
+
+    ## Opening a Perspective
+
+
+    To open a new perspective, click on the Windows menu and select Open Perspective
+    → Other
+
+
+    ![Image](Images/image00056.jpeg)
+
+
+    The Open Perspective dialog box shows all the available perspectives. The same
+    dialog can be brought up by clicking on the Open Perspective button (![Image](Images/image00057.jpeg) )
+    on the tool bar.
+
+
+    ## Switching between Perspectives
+
+
+    The most commonly used perspectives for java development are the Java perspective
+    and Debug perspective. Users can switch between open perspectives by clicking
+    on the Perspective name on the toolbar.
+
+
+    ![Image](Images/image00058.jpeg)
+
+
+    ## Closing a Perspective
+
+
+    To close a perspective, right click on the perspective name in toolbar and select
+    the Close menu item.
+
+
+    ![Image](Images/image00059.jpeg)
+
+
+    ## Customizing a Perspective
+
+
+    The customize perspective dialog can be used to customize a perspective. Customizing
+    a perspective means −
+
+
+    *   Determining the icons visible on the toolbar when a perspective is active.
+
+
+    *   Determining the menu items visible when a perspective is active.
+
+
+    *   Determine the menu items in New submenu, Show View submenu and Open Perspective
+    submenu.
+
+
+    ![Image](Images/image00060.jpeg)
+
+
+    The tab descriptions of customize perspective are given below −
+
+
+    *   The **Tool Bar Visibility** tab can be used to determine which icons are visible
+    on the toolbar when a perspective is open.
+
+
+    *   The **Menu Visibility** tab can be used to determine which menu items are
+    visible when a perspective is active.
+
+
+    *   The **Command Groups Availability** tab can be used to control the visibility
+    of toolbar icons and menu items.
+
+
+    *   The **Shortcuts** tab can be used to determine the menu items in New submenu,
+    Show View submenu and Open Perspective submenu.
+
+
+    Based on the Shortcuts selection in the picture given below, to bring up the "New
+    Java Project from Existing Ant Build File" wizard users have to bring up the New
+    submenu (File → New), click on Other, expand the Java category and then select
+    "Java Project from Existing Ant Build File". On the other hand, to start the New
+    Class wizard they can bring up the New submenu (File → New) and select the Class
+    menu item because its selected in the picture given below. By selecting the "Java
+    Project from Existing Ant Build File" check box this item will also appear under
+    the New menu.
+
+
+    ![Image](Images/image00061.jpeg)
+
+
+    # Workspaces
+
+
+    ## About Eclipse Workspace
+
+
+    The eclipse workspace contains resources such as −
+
+
+    *   Projects
+
+
+    *   Files
+
+
+    *   Folders
+
+
+    The workspace has a hierarchical structure. Projects are at the top level of the
+    hierarchy and inside them you can have files and folders. Plug-ins use an API
+    provided by the resources plug-in to manage the resources in the workspace.
+
+
+    ## UI Elements for Managing the Workspace
+
+
+    Users use the functionality provided by views, editors and wizard to create and
+    manage resources in the workspace. One among the many views that show the content
+    of the workspace is the Project Explorer view.
+
+
+    ![Image](Images/image00062.jpeg)
+
+
+    The File Wizard (File → New → File) can be used to create a new file.
+
+
+    ![Image](Images/image00063.jpeg)
+
+
+    The Folder Wizard (File → New → Folder) can be used to create a new folder.
+
+
+    ![Image](Images/image00064.jpeg)
+
+
+    # Create Java Project
+
+
+    ## Opening the New Java Project wizard
+
+
+    The New Java Project wizard can be used to create a new java project. There are
+    many ways to open this wizard −
+
+
+    *   By clicking on the File menu and choosing New →Java Project.
+
+
+    *   By right clicking anywhere in the Project Explorer and selecting New → Java
+    Project.
+
+
+    *   By clicking on the New button (![Image](Images/image00065.jpeg) ) in the Tool
+    bar and selecting Java Project.'
+  toc: []
+  trans: '
+
+
+    ## 菜单
+
+
+    - **文件 (File)**：`File` 菜单允许你打开文件进行编辑、关闭编辑器、保存编辑器内容以及重命名文件。除其他功能外，它还允许你导入导出工作空间内容并关闭
+    Eclipse。
+
+    - **编辑 (Edit)**：`Edit` 菜单提供了复制和粘贴等项。
+
+    - **源 (Source)**：`Source` 菜单仅在打开 Java 编辑器时才可见。它提供了许多与编辑 Java 源代码相关的有用菜单项。
+
+    - **导航 (Navigate)**：`Navigate` 菜单允许你快速定位资源并导航到它们。
+
+    - **搜索 (Search)**：`Search` 菜单提供的项可以在工作空间中搜索包含特定数据的文件。
+
+    - **项目 (Project)**：与构建项目相关的菜单项可以在 `Project` 菜单中找到。
+
+    - **运行 (Run)**：`Run` 菜单上的项允许你以运行模式或调试模式启动程序。它还提供了允许你调试代码的菜单项。
+
+    - **窗口 (Window)**：`Window` 菜单允许你打开和关闭视图和视角。它还允许你调出 `Preferences`（首选项）对话框。
+
+    - **帮助 (Help)**：`Help` 菜单可用于调出 `Help`（帮助）窗口、`Eclipse Marketplace` 或安装新插件。`about
+    Eclipse` 菜单项提供版本信息。
+
+
+    ## 自定义菜单
+
+
+    菜单上可见的菜单项取决于已安装的插件以及使用 `Customize Perspective`（自定义视角）对话框进行的自定义。
+
+
+    # 探索视图
+
+
+    ### 关于视图
+
+
+    Eclipse 视图（views）允许用户查看项目元数据的图形化表示。例如，项目导航视图（project navigator）显示与项目相关的文件夹和文件的图形化表示，而属性视图（properties
+    view）显示另一个视图或编辑器中选中元素的图形化表示。
+
+
+    一个 Eclipse 视角可以显示任意数量的视图和编辑器。所有的编辑器实例出现在单个编辑器区域，而视图被放置在视图文件夹中。工作窗口可以显示任意数量的视图文件夹。每个视图文件夹可以显示一个或多个视图。
+
+
+    ### 组织视图
+
+
+    下面的图片显示了视图文件夹中的四个视图。
+
+
+    ![Image](img/image00050.jpeg)
+
+
+    下方提供的图片显示了排列在两个视图文件夹中的相同四个视图。
+
+
+    ![Image](img/image00051.jpeg)
+
+
+    ### 移动视图
+
+
+    要将视图从一个视图文件夹移动到另一个，只需点击视图标题并将其拖动到另一个视图文件夹的标题栏区域。下方显示的绿线是将 `Properties` 视图的标题栏从一个视图文件夹拖到另一个视图文件夹的标题栏区域的结果。通过释放鼠标按钮并发送丢落事件，可以将
+    `Properties` 视图移动到绿线所在的位置。
+
+
+    ![Image](img/image00052.jpeg)
+
+
+    ### 创建视图文件夹
+
+
+    可以通过将视图的标题栏拖到编辑器区域以外的任何地方或其他视图文件夹的标题栏来动态创建视图文件夹。当你拖动标题栏时，绿线将指示新视图文件夹将创建的确切位置。
+
+
+    ![Image](img/image00053.jpeg)
+
+
+    将拖动图标移动到窗口底部可以创建一个跨越整个窗口宽度的视图文件夹。将拖动图标移动到窗口的左边缘或右边缘可以创建一个跨越整个窗口高度的视图文件夹。
+
+
+    ### 打开视图
+
+
+    要打开视图，点击 `Window` 菜单并选择 `Show View`（显示视图）菜单项。
+
+
+    ![Image](img/image00054.jpeg)
+
+
+    点击 `Other`菜单项会调出 `Show View` 对话框，允许你定位并激活视图。
+
+
+    ![Image](img/image00055.jpeg)
+
+
+    视图按类别组织。要快速定位视图，只需在过滤器文本框中输入视图名称。要打开视图，请选择它并点击 `OK` 按钮。本教程的后续页面将向你介绍许多实用的视图。
+
+
+    # 视角 (Perspectives)
+
+
+    ### 什么是视角？
+
+
+    Eclipse 视角（perspective）是对视图和编辑器区域初始集合和排列的命名。默认视角称为 `java`。一个 Eclipse 窗口可以打开多个视角，但在任何时刻只有一个视角是激活状态。用户可以在已打开的视角之间切换，或者打开一个新的视角。激活的视角控制某些菜单和工具栏中显示的内容。
+
+
+    ### 打开视角
+
+
+    要打开新视角，点击 `Windows` 菜单并选择 `Open Perspective`（打开视角）→ `Other`。
+
+
+    ![Image](img/image00056.jpeg)
+
+
+    `Open Perspective` 对话框显示所有可用的视角。也可以点击工具栏上的 `Open Perspective` 按钮（![Image](img/image00057.jpeg)
+    ）来调出相同的对话框。
+
+
+    ### 切换视角
+
+
+    Java 开发中最常用的视角是 `Java` 视角和 `Debug` 视角。用户可以通过点击工具栏上的 `Perspective` 名称在已打开的视角之间切换。
+
+
+    ![Image](img/image00058.jpeg)
+
+
+    ### 关闭视角
+
+
+    要关闭视角，右键点击工具栏上的视角名称并选择 `Close`（关闭）菜单项。
+
+
+    ![Image](img/image00059.jpeg)
+
+
+    ### 自定义视角
+
+
+    可以使用 `customize perspective`（自定义视角）对话框来自定义视角。自定义视角意味着：
+
+
+    - 确定在视角激活时在工具栏上可见的图标。
+
+    - 确定在视角激活时可见的菜单项。
+
+    - 确定 `New` 子菜单、`Show View` 子菜单和 `Open Perspective` 子菜单中的菜单项。
+
+
+    ![Image](img/image00060.jpeg)
+
+
+    `customize perspective` 的选项卡描述如下：
+
+
+    - `Tool Bar Visibility` 选项卡用于在视角激活时在工具栏上显示哪些图标。
+
+    - `Menu Visibility` 选项卡用于在视角激活时显示哪些菜单项。
+
+    - `Command Groups Availability` 选项卡用于控制工具图标和菜单项的可见性。
+
+    - `Shortcuts` 选项卡用于确定 `New` 子菜单、`Show View` 子菜单和 `Open Perspective` 子菜单中的项。
+
+
+    根据下方图片的 `Shortcuts` 选择，要调出 `New Project from Ant File` 对话框，用户必须调出 `New` 菜单，点击
+    `Other`，展开 `Java` 类别然后选择 `Java Project from Ant File`。另一方面，要启动 `New Class` 对话框，他们可以调出
+    `New` 菜单并选择 `Class` 项（如下所示）。通过勾选 `Java Project from Ant File` 复选框，该项也会出现在 `New`
+    菜单下。
+
+
+    ![Image](img/image00061.jpeg)
+
+
+    # 工作空间 (Workspaces)
+
+
+    ### 关于工作空间
+
+
+    Eclipse 工作空间包含以下资源：
+
+
+    字体 项目
+
+    - 文件
+
+    - 文件夹
+
+
+    工作空间具有分级结构。项目位于顶层，内部包含文件和文件夹。插件使用 `resources` 插件提供的 API 来管理工作空间中的资源。
+
+
+    ### 管理工作空间的 UI 元素
+
+
+    用户使用视图、编辑器和向导提供的功能在工作空间中创建和管理资源。显示工作内容的视图之一是 `Project Explorer` 视图。
+
+
+    ![Image](img/image00062.jpeg)
+
+
+    `File` 向导（`File` → `New` → `File`）用于创建新文件。
+
+
+    ![Image](img/image00063.jpeg)
+
+
+    `Folder` 向导（`File` → `New` → `Folder`）用于创建新文件夹。
+
+
+    ![Image](img/image00064.jpeg)
+
+
+    # 创建 Java 项目
+
+
+    ### 打开 New Java Project 向导
+
+
+    `New Java Project` 向导可用于创建新的 Java 项目。有许多方法可以打开此向导：
+
+
+    - 点击 `File` 菜单并选择 `New` → `Java Project`。
+
+    - 在 `Project Explorer` 任意位置右键点击并选择 `New` → `Java Project`。
+
+    - 点击工具栏上的 `New` 按钮（![Image](img/image00065.jpeg) ）并选择 `Java Project`。
+
+
+    '
+- fmt: '
+
+    ## Using the New Java Project wizard
+
+
+    The New Java Project Wizard has two pages. On the first page −
+
+
+    * Enter the Project Name
+
+    * Select the Java Runtime Environment (`JRE`) or leave it at the default
+
+    * Select the Project Layout which determines whether there would be a separate
+    folder for the source codes and class files. The recommended option is to create
+    separate folders for sources and class files.
+
+
+    ![Image](Images/image00066.jpeg)
+
+
+    You can click on the `Finish` button to create the project or click on the `Next`
+    button to change the java build settings.
+
+
+    On the second page you can change the `Java Build Settings` like setting the Project
+    dependency (if there are multiple projects) and adding additional jar files to
+    the build path.
+
+
+    ### Viewing the Newly Created Project
+
+
+    The package explorer shows the newly created Java project. The icon that represents
+    a Project is decorated with a `J` to show that it is a Java Project. The folder
+    icon is decorated to show that it is a java source folder.
+
+
+    ![Image](Images/image00067.jpeg)
+
+
+    # Create Java Package
+
+
+    ### Opening the New Java Package wizard
+
+
+    You can use the New Java Package wizard to create a Java package. The Java Package
+    wizard can be opened in different ways −
+
+
+    * By clicking on the `File` menu and selecting `New` → `Package`.
+
+    * By right click in the package explorer and selecting `New` → `Package`.
+
+    * By clicking on the package icon which is in the tool bar(![Image](Images/image00068.jpeg)
+    ).
+
+
+    If you are creating a sub package, before opening the Java Package wizard select
+    the parent package so that name field can have a default value in it.
+
+
+    ### Using the New Java Package Wizard
+
+
+    Once the Java Package wizard comes up −
+
+
+    * Enter/confirm the source folder name.
+
+    * Enter the package name.
+
+    * Click on the `Finish` button.
+
+
+    ![Image](Images/image00069.jpeg)
+
+
+    ### Viewing the Newly Created Package
+
+
+    The package explorer will show the newly created package under the source folder.
+
+
+    ![Image](Images/image00070.jpeg)
+
+
+    # Create Java Class
+
+
+    ### Opening the New Java Class Wizard
+
+
+    You can use the New Java Class wizard to create a Java class. The Java Class wizard
+    can be invoked in different ways −
+
+
+    * By clicking on the `File` menu and selecting `New` → `Class`.
+
+    * By right clicking in the package explorer and selecting `New` → `Class`.
+
+    * By clicking on the class drop down button (![Image](Images/image00071.jpeg)
+    ) and selecting class ( ![Image](Images/image00072.jpeg)).
+
+
+    Before bringing up the New Java Class wizard, if possible, select the package
+    in which the class is to be created so that the wizard can automatically fill
+    in the package name for you.
+
+
+    ### Using the New Java Class Wizard
+
+
+    Once the java class wizard comes up −
+
+
+    * Ensure the source folder and package are correct.
+
+    * Enter the class name.
+
+    * Select the appropriate class modifier.
+
+    * Enter the super class name or click on the `Browse` button to search for an
+    existing class.
+
+    * Click on the `Add` button to select the interfaces implemented by this class.
+
+    * Examine and modify the check boxes related to method stubs and comments.
+
+
+    ![Image](Images/image00073.jpeg)
+
+
+    * Click on the `Finish` button.
+
+
+    ### Viewing the Newly Created Java class
+
+
+    The newly created class should appear in the Package Explorer view and a java
+    editor instance that allows you to modify the new class. It should appear in the
+    editor area.
+
+
+    ![Image](Images/image00074.jpeg)
+
+
+    # Create Java Interface
+
+
+    ### Opening the New Java Interface Wizard
+
+
+    The New Java Interface wizard can be used to create a new java interface. There
+    are many ways of opening this wizard −
+
+
+    * Clicking on the `File` menu and selecting `New` → `Interface`.
+
+    * Right clicking in the package explorer and selecting `New` > `Interface`.
+
+    * Clicking on the class drop down button (![Image](Images/image00075.jpeg)) in
+    the tool bar and selecting Interface (![Image](Images/image00076.jpeg)).
+
+
+    Before bringing up the New Java Interface wizard, if possible, select the package
+    in which the interface is to be created so that the wizard can automatically fill
+    in the package name for you.
+
+
+    ### Using the New Java Interface Wizard
+
+
+    Once the java interface wizard comes up −
+
+
+    * Ensure the source folder and package are correct.
+
+    * Enter the interface name.
+
+    * Click on the `Add` button to select the extended interfaces.
+
+    * Select the `Generate comments` check box if you like comments to be generated.
+
+    * Click on the `Finish` button.
+
+
+    ![Image](Images/image00077.jpeg)
+
+
+    ### Viewing the Newly Created Java Interface
+
+
+    The newly created interface should appear in the Package Explorer view and a java
+    editor instance that allows you to modify the new interface should appear in the
+    editor area.
+
+
+    ![Image](Images/image00078.jpeg)
+
+
+    # Create XML File
+
+
+    ### Opening the New XML File wizard
+
+
+    You can use the New XML file wizard to create an XML file. To invoke this wizard
+    −
+
+
+    * Click on the `File` menu and select `New` → `Other` or
+
+    * Click on the new drop down box (![Image](Images/image00079.jpeg)) select other
+    or
+
+    * Press `ctrl` + `N`
+
+
+    Once the Select a wizard dialog box comes up −
+
+
+    * In the filter text box enter `xml`, this should show only the wizards related
+    to xml.
+
+    * Expand XML category and select `XML File`.
+
+
+    ![Image](Images/image00080.jpeg)
+
+
+    * Click on `Next` to bring up the New XML File.
+
+
+    #### Note
+
+
+    If the XML perspective is open the New XML wizard can be invoked by −
+
+
+    * Clicking on the `File` menu and selecting `New` → `XML File`.
+
+    * Clicking on the `XML File` button (![Image](Images/image00081.jpeg) ) on the
+    tool bar.
+
+
+    ### Using the New XML Wizard
+
+
+    Once the XML File wizard comes up −
+
+
+    * Enter or select the parent folder.
+
+    * Enter the name of the xml file.
+
+
+    ![Image](Images/image00082.jpeg)
+
+
+    * Click on `Next` to base the xml file on DTD, XML Schema else click on `Finish`.
+
+
+    ### Viewing the Newly Created XML File
+
+
+    The newly created XML file should appear in the Package Explorer view and an java
+    editor instance that allows you to modify the newly created file should appear
+    in the editor area.
+
+
+    ![Image](Images/image00083.jpeg)
+
+
+    The XML editor allows you to edit an XML file using either the Design view or
+    Source view.
+
+
+    # Java Build Path
+
+
+    ### Setting the Java Build Path
+
+
+    The Java build path is used while compiling a Java project to discover dependent
+    classes. It is made up of the following items:
+
+
+    * Code in the source folders.
+
+    * Jars and classes folder associated with the project.
+
+    * Classes and libraries exported by projects referenced by this project.
+
+
+    The java build path can be seen and modified by using the Java Build Path page
+    of the Java Project properties dialog. To bring up the Java Project properties
+    dialog, right click on a Java Project in the Package Explorer view and select
+    the `Properties` menu item. On the left side tree select `Java Build Path`.
+
+
+    ![Image](Images/image00084.jpeg)
+
+
+    A common requirement seen while developing java applications is to add existing
+    jars to the java build path. This can be accomplished using the Libraries tab.
+    In the Libraries tab, click on `Add JARs` if the jar is already in the Eclipse
+    workspace or click on `Add External JARs` if the jar is elsewhere in the file
+    system.
+
+
+    # Run Configuration
+
+
+    ### Creating and Using a Run Configuration
+
+
+    The Run Configurations dialog allows create multiple run configurations. Each
+    run configuration can start an application. The Run Configuration dialog can be
+    invoked by selecting the Run Configurations menu item from the Run menu.
+
+
+    ![Image](Images/image00085.jpeg)
+
+
+    To create a run configuration for a Java application select `Java Application`
+    from the list on the left hand side and click on the `New` button. In the dialog
+    box that comes up in the main tab specify:
+
+
+    * A name for the run configuration.
+
+    * The name of a Project.
+
+    * The name of the main class.
+
+
+    In the arguments tab specify:
+
+
+    * Zero or more program arguments.
+
+    * Zero or more Virtual Machine arguments.
+
+
+    ![Image](Images/image00086.jpeg)
+
+    '
+  raw: '## Using the New Java Project wizard
+
+
+    The New Java Project Wizard has two pages. On the first page −
+
+
+    *   Enter the Project Name
+
+
+    *   Select the Java Runtime Environment (JRE) or leave it at the default
+
+
+    *   Select the Project Layout which determines whether there would be a separate
+    folder for the source codes and class files. The recommended option is to create
+    separate folders for sources and class files.
+
+
+    ![Image](Images/image00066.jpeg)
+
+
+    You can click on the Finish button to create the project or click on the Next
+    button to change the java build settings.
+
+
+    On the second page you can change the **Java Build Settings** like setting the
+    Project dependency (if there are multiple projects) and adding additional jar
+    files to the build path.
+
+
+    ## Viewing the Newly Created Project
+
+
+    The package explorer shows the newly created Java project. The icon that represents
+    a Project is decorated with a J to show that it is a Java Project. The folder
+    icon is decorated to show that it is a java source folder.
+
+
+    ![Image](Images/image00067.jpeg)
+
+
+    # Create Java Package
+
+
+    ## Opening the New Java Package wizard
+
+
+    You can use the New Java Package wizard to create a Java package. The Java Package
+    wizard can be opened in different ways −
+
+
+    *   By clicking on the File menu and selecting New → Package.
+
+
+    *   By right click in the package explorer and selecting New → Package.
+
+
+    *   By clicking on the package icon which is in the tool bar(![Image](Images/image00068.jpeg) ).
+
+
+    If you are creating a sub package, before opening the Java Package wizard select
+    the parent package so that name field can have a default value in it.
+
+
+    ## Using the New Java Package Wizard
+
+
+    Once the Java Package wizard comes up −
+
+
+    *   Enter/confirm the source folder name.
+
+
+    *   Enter the package name.
+
+
+    *   Click on the Finish button.
+
+
+    ![Image](Images/image00069.jpeg)
+
+
+    ## Viewing the Newly Created Package
+
+
+    The package explorer will show the newly created package under the source folder.
+
+
+    ![Image](Images/image00070.jpeg)
+
+
+    # Create Java Class
+
+
+    ## Opening the New Java Class Wizard
+
+
+    You can use the New Java Class wizard to create a Java class. The Java Class wizard
+    can be invoked in different ways −
+
+
+    *   By clicking on the File menu and selecting New → Class.
+
+
+    *   By right clicking in the package explorer and selecting New → Class.
+
+
+    *   By clicking on the class drop down button (![Image](Images/image00071.jpeg) )
+    and selecting class ( ![Image](Images/image00072.jpeg)).
+
+
+    Before bringing up the New Java Class wizard, if possible, select the package
+    in which the class is to be created so that the wizard can automatically fill
+    in the package name for you.
+
+
+    ## Using the New Java Class Wizard
+
+
+    Once the java class wizard comes up −
+
+
+    *   Ensure the source folder and package are correct.
+
+
+    *   Enter the class name.
+
+
+    *   Select the appropriate class modifier.
+
+
+    *   Enter the super class name or click on the Browse button to search for an
+    existing class.
+
+
+    *   Click on the Add button to select the interfaces implemented by this class.
+
+
+    *   Examine and modify the check boxes related to method stubs and comments.
+
+
+    ![Image](Images/image00073.jpeg)
+
+
+    *   Click the Finish button.
+
+
+    ## Viewing the Newly Created Java class
+
+
+    The newly created class should appear in the Package Explorer view and a java
+    editor instance that allows you to modify the new class. It should appear in the
+    editor area.
+
+
+    ![Image](Images/image00074.jpeg)
+
+
+    # Create Java Interface
+
+
+    ## Opening the New Java Interface Wizard
+
+
+    The New Java Interface wizard can be used to create a new java interface. There
+    are many ways of opening this wizard −
+
+
+    *   Clicking on the File menu and selecting New → Interface.
+
+
+    *   Right clicking in the package explorer and selecting New > Interface.
+
+
+    *   Clicking on the class drop down button (![Image](Images/image00075.jpeg))
+    in the tool bar and selecting Interface (![Image](Images/image00076.jpeg)).
+
+
+    Before bringing up the New Java Interface wizard, if possible, select the package
+    in which the interface is to be created so that the wizard can automatically fill
+    in the package name for you.
+
+
+    ## Using the New Java Interface Wizard
+
+
+    Once the java interface wizard comes up −
+
+
+    *   Ensure the source folder and package are correct.
+
+
+    *   Enter the interface name.
+
+
+    *   Click on the **Add** button to select the extended interfaces.
+
+
+    *   Select the Generate comments check box if you like comments to be generated.
+
+
+    *   Click on the Finish button.
+
+
+    ![Image](Images/image00077.jpeg)
+
+
+    ## Viewing the Newly Created Java Interface
+
+
+    The newly created interface should appear in the Package Explorer view and a java
+    editor instance that allows you to modify the new interface should appear in the
+    editor area.
+
+
+    ![Image](Images/image00078.jpeg)
+
+
+    # Create XML File
+
+
+    ## Opening the New XML File wizard
+
+
+    You can use the New XML file wizard to create an XML file. To invoke this wizard
+    −
+
+
+    *   Click on the File menu and select New → Other or
+
+
+    *   Click on the new drop down box (![Image](Images/image00079.jpeg)) select other
+    or
+
+
+    *   Press ctrl + N
+
+
+    Once the Select a wizard dialog box comes up −
+
+
+    *   In the filter text box enter xml, this should show only the wizards related
+    to xml.
+
+
+    *   Expand XML category and select XML File.
+
+
+    ![Image](Images/image00080.jpeg)
+
+
+    *   Click on Next to bring up the New XML File wizard.
+
+
+    ### Note
+
+
+    If the XML perspective is open the New XML wizard can be invoked by −
+
+
+    *   Clicking on the File menu and selecting New → XML File or.
+
+
+    *   Clicking on the XML File button (![Image](Images/image00081.jpeg) ) on the
+    tool bar.
+
+
+    ## Using the New XML File wizard
+
+
+    Once the New XML File wizard comes up −
+
+
+    *   Enter or select the parent folder.
+
+
+    *   Enter the name of the xml file.
+
+
+    ![Image](Images/image00082.jpeg)
+
+
+    *   Click on the **Next** button to base the xml file on DTD, XML Schema or XML
+    template else click on **Finish**.
+
+
+    ## Viewing the Newly Created XML File
+
+
+    The newly created XML file should appear in the Package Explorer view and an XML
+    editor instance that allows you to modify the newly created XML file should appear
+    in the editor area.
+
+
+    ![Image](Images/image00083.jpeg)
+
+
+    The XML editor allows you to edit an XML file using either the Design view or
+    Source view.
+
+
+    # Java Build Path
+
+
+    ## Setting the Java Build Path
+
+
+    The Java build path is used while compiling a Java project to discover dependent
+    classes . It is made up of the following items −
+
+
+    *   Code in the source folders.
+
+
+    *   Jars and classes folder associated with the project.
+
+
+    *   Classes and libraries exported by projects referenced by this project.
+
+
+    The java build path can be seen and modified by using the Java Build Path page
+    of the Java Project properties dialog.
+
+
+    To bring up the Java Project properties dialog box, right click on a Java Project
+    in the Package Explorer view and select the Properties menu item. On the left
+    hand side tree select **Java Build Path**.
+
+
+    ![Image](Images/image00084.jpeg)
+
+
+    A common requirement seen while developing java applications is to add existing
+    jars to the java build path. This can be accomplished using the Libraries tab.
+    In the Libraries tab, just click on **Add JARs** if the jar is already in the
+    Eclipse workspace or click on Add External JARs if the jar is elsewhere in the
+    file system.
+
+
+    # Run Configuration
+
+
+    ## Creating and Using a Run Configuration
+
+
+    The Run Configurations dialog allows you create multiple run configurations. Each
+    run configuration can start an application. The Run Configuration dialog can be
+    invoked by selecting the Run Configurations menu item from the Run menu.
+
+
+    ![Image](Images/image00085.jpeg)
+
+
+    To create a run configuration for a Java application select Java Application from
+    the list on the left hand side and click on the New button. In the dialog box
+    that comes up in the main tab specify −
+
+
+    *   A name for the run configuration.
+
+
+    *   The name of a Project.
+
+
+    *   The name of the main class.
+
+
+    In the arguments tab specify −
+
+
+    *   Zero or more program arguments.
+
+
+    *   Zero or more Virtual Machine arguments.
+
+
+    ![Image](Images/image00086.jpeg)'
+  toc: []
+  trans: '
+
+
+    ## 使用新建 Java 项目向导
+
+
+    新建 Java 项目向导有两个页面。在第一页上−
+
+
+    * 输入项目名称
+
+    * 选择 Java 运行时环境 (`JRE`) 或保持默认值
+
+    * 选择项目布局，这决定了是否会为源代码和类文件创建独立的文件夹。推荐的选项是为源码和类文件创建单独文件夹。
+
+
+    ![Image](img/image00066.jpeg)
+
+
+    你可以点击 `Finish`（完成）按钮来创建项目，或点击 `Next`（下一步）按钮更改 Java 构建设置。
+
+
+    在第二页中，你可以更改 `Java Build Settings`，例如设置项目依赖（如果存在多个项目）以及向构建路径添加额外的 jar 文件。
+
+
+    ### 查看新创建的项目
+
+
+    包管理器（package explorer）显示了新创建的 Java 项目。代表项目的图标带有一个 `J` 装饰，以显示它是一个 Java 项目。文件夹图标带有一个装饰，以显示它是一个
+    Java 源码文件夹。
+
+
+    ![Image](img/image00067.jpeg)
+
+
+    # 创建 Java 包
+
+
+    ### 打开新建 Java 包向导
+
+
+    你可以使用新建 Java 包向导来创建 Java 包。Java 包向导可以通过不同的方式打开−
+
+
+    * 点击 `File`（文件）菜单并选择 `New`（新建）→ `Package`（包）。
+
+    * 在包管理器中右键点击并选择 `New` → `Package`。
+
+    * 点击工具栏上的包图标(![Image](img/image00068.jpeg) )
+
+
+    如果你正在创建子包，在打开 Java 包向导之前请选择父包，这样名称字段就可以有一个默认值。
+
+
+    ### 使用新建 Java 包向导
+
+
+    一旦 Java 包向导出现−
+
+
+
+
+    * 输入/确认源文件夹名称。
+
+    * 输入包名。
+
+    * 点击 `Finish`（完成）按钮。
+
+
+    ![Image](img/image00069.jpeg)
+
+
+    ### 查看新创建的包
+
+
+    包管理器将在源文件夹下显示新创建的包。
+
+
+    ![Image](img/image00070.jpeg)
+
+
+    # 创建 Java 类
+
+
+    ### 打开新建 Java 类向导
+
+
+    你可以使用新建 Java 类向导来创建 Java 类。Java 类向导可以通过不同的方式调用−
+
+
+    * 点击 `File`（文件）菜单并选择 `New` → `Class`（类）。
+
+    * 在包管理器中右键点击并选择 `New` → `Class`。
+
+    * 点击类下拉按钮 (![Image](img/image00071.jpeg) ) 并选择 class ( ![Image](img/image00072.jpeg))。
+
+
+    在调出新建 Java 类向导之前，如果可能，请选择要创建该类的包，这样向导就可以自动为你填写包名。
+
+
+    ### 使用新建 Java 类向导
+
+
+    一旦 java 类向导出现−
+
+
+    * 确保源文件夹和包是正确的。
+
+    * 输入类名。
+
+    * 选择合适的类修饰符。
+
+    * 输入超类名或点击 `Browse`（浏览）按钮搜索已有的类。
+
+    * 点击 `Add`（添加）按钮选择此类实现的接口。
+
+    * 检查并修改与方法存根（method stubs）和注释相关的复选框。
+
+
+    ![Image](img/image00073.jpeg)
+
+
+    * 点击 `Finish`（完成）按钮。
+
+
+    ### 查看新创建的 Java 类
+
+
+    新创建的类应该出现在包管理器视图中，并且一个允许你修改新类的 Java 编辑器实例。它应该出现在编辑器区域。
+
+
+    ![Image](img/image00074.jpeg)
+
+
+    # 创建 Java 接口
+
+
+    ### 打开新建 Java 接口向导
+
+
+    新建 Java 接口向导可创建新的 java 接口。有许多方法打开此向导−
+
+
+    * 点击 `File`（文件）菜单并选择 `New` → `Interface`（接口）。
+
+    * 在包管理器中右键点击并选择 `New` > `Interface`。
+
+    * 点击工具栏上的类下拉按钮 (![Image](img/image00075.jpeg)) 并选择 Interface (![Image](img/image00076.jpeg))。
+
+
+    在调出新建 Java 接口向导之前，如果可能，请选择要创建接口的包，这样向导就可以自动为你填写包名。
+
+
+    ### 使用新建 Java 接口向导
+
+
+    一旦 java 接口向导出现−
+
+
+    * 确保源文件夹和包是正确的。
+
+    * 输入接口名称。
+
+    * 点击 `Add`（添加）按钮选择扩展的接口。
+
+    * 如果你想生成注释，请勾选 `Generate comments`（生成注释）复选框。
+
+    * 点击 `Finish`（完成）按钮。
+
+
+    ![Image](img/image00077.jpeg)
+
+
+    ### 查看新创建的 Java 接口
+
+
+    新创建的接口应该出现在包管理器视图中，一个允许你修改新接口的 Java 编辑器实例应该出现在编辑器区域。
+
+
+    ![Image](img/image00078.jpeg)
+
+
+    # 创建 XML 文件
+
+
+    ### 打开新建 XML 文件向导
+
+
+    你可以使用新建 XML 文件向导来创建 XML 文件。要调用此向导−
+
+
+    * 点击 `File`（文件）菜单并选择 `New` → `Other`（其他）或
+
+    * 点击新的下拉框 (![Image](img/image00079.jpeg)) 选择 other（其他）或
+
+    * 按下 `ctrl` + `N`
+
+
+    一旦“选择向导（Select a wizard）”对话框出现−
+
+
+    * 在过滤文本框中输入 `xml`，这将仅显示与 xml 相关的向导。
+
+    * 展开 XML 分类并选择 `XML File`。
+
+
+    ![Image](img/image00080.jpeg)
+
+
+    * 点击 `Next`（下一步）调出 XML 向导。
+
+
+    #### 注意
+
+
+    如果打开了 XML 视图，可以通过以下方式调用 XML 向导−
+
+
+    * 点击 `File`（文件）菜单并选择 `New` → `XML File`。
+
+    * 点击工具栏上的 `XML File` 按钮 (![Image](img/image00081.jpeg) )
+
+
+    ### 使用 XML 向导
+
+
+    一旦 XML 向导出现−
+
+
+    * 输入或选择父文件夹。
+
+    * 输入文件名。
+
+
+    ![Image](img/image00082.jpeg)
+
+
+    * 点击 `Next` 基于 DTD xml 文件，否则点击 `Finish`（完成）。
+
+
+    ### 查看新创建的 XML 文件
+
+
+    新创建的 XML 文件应该出现在包管理器中，一个允许你修改新文件的 java 编辑实例应该出现在编辑器区域。
+
+
+    ![Image](img/image00083.jpeg)
+
+
+    XML 编辑器允许使用设计（Design）视图或源（Source）视图编辑 XML 文件。
+
+
+    # Java 构建路径
+
+
+    ### 设置 Java 构建路径
+
+
+    Java 构建路径用于编译 Java 项目时发现依赖。它由以下项目组成：
+
+
+    * 源文件夹中的代码。
+
+    * 与项目相关的 jar 和类文件夹。
+
+    * 此项目引用的项目出的类。
+
+
+    可以通过 Java 项目属性对话框的 Java Build Path 页面查看并修改 Java 构建路径。要调出 Java 项目属性对话框，在包管理器视图中右键点击
+    Java 项目并选择 `Properties`（属性）菜单项。在左侧树中选择 `Java Build Path`。
+
+
+    ![Image](img/image00084.jpeg)
+
+
+    开发 java 应用时常见的需求是将现有的 jar 添加到 Java 构建路径。可以通过 Libraries 标签页来实现。在 Libraries 标签页，如果
+    jar 已在 Eclipse 工作区中，点击 `Add JARs`；如果 jar 在文件系统的其他地方，点击 `Add External JARs`。
+
+
+    # 运行配置
+
+
+    ### 创建和使用运行配置
+
+
+    Run Configurations 对话框允许创建多个运行配置。每个运行配置都可以启动应用程序。可以通过选择 Run 菜单中的 Run Configurations
+    菜单项来调用 Run Configurations 对话框。
+
+
+    [content]
+
+    /
+
+
+    要为 Java 应用创建运行配置，请从左侧列表中选择 `Java Application` 并点击 `New`（新建）按钮。在弹出对话框的主页中指定：
+
+
+    * 运行配置名称。
+
+    * 项目名称。
+
+    * 主类名称。
+
+
+    在 arguments 标签页指定：
+
+
+    * 零或多个程序参数。
+
+    * 零或多个虚拟机参数。
+
+
+    '
+- fmt: '
+
+    The Commons tab provides common options such as the ability to allocate a console
+    for standard input and output.
+
+
+    ![Image](Images/image00087.jpeg)
+
+
+    To save the run configuration click on the Apply button and to launch the application
+    click on the Run button.
+
+
+    # Running Program
+
+
+    ## Running a Java Program
+
+
+    The quickest way to run a Java program is by using the Package Explorer view.
+
+
+    In the Package Explorer view −:
+
+    * Right click on the java class that contains the main method.
+
+    * Select `Run As` → `Java Application`.
+
+
+    The same action can be performed using the Package Explorer view by selecting
+    the class that contains the main method and clicking `Alt + Shift + X, J`.
+
+
+    Either actions mentioned above create a new `Run Configuration` and use it to
+    start the Java application.
+
+
+    If a `Run` configuration has already been created you can use it to start the
+    Java application by selecting `Run Configurations` from the `Run` menu, clicking
+    on the name of the run configuration and then clicking on the `Run` button.
+
+
+    ![Image](Images/image00088.jpeg)
+
+
+    The `Run` item on the `Run` menu can be used to restart the java application that
+    was previously started.
+
+
+    ![Image](Images/image00089.jpeg)
+
+
+    The shortcut key to launch the previously launched Java application is `Ctrl +
+    F11`.
+
+
+    # Create Jar Files
+
+
+    ## Opening the Jar File wizard
+
+
+    The Jar File wizard can be used to export the content of a project into a jar
+    file. To bring up the Jar File wizard −:
+
+    * In the Package Explorer select the items that you want to export. If you want
+    to export all the classes and resources in the project just select the project.
+
+    * Click on the `File` menu and select `Export`.
+
+    * In the filter text box of the first page of the export wizard type in `JAR`.
+
+
+    ![Image](Images/image00090.jpeg)
+
+    * Under the Java category select `JAR` file.
+
+    * Click on `Next`.
+
+
+    ## Using the Jar File wizard
+
+
+    In the JAR File Specification page −:
+
+    * Enter the JAR file name and folder.
+
+    * The default is to export only the classes. To export the source code also, click
+    on the `Export Java source files and resources` check box.
+
+
+    ![Image](Images/image00091.jpeg)
+
+    * Click on `Next` to change the JAR packaging options.
+
+    * Click on `Next` to change the JAR Manifest specification.
+
+    * Click on `Finish`.
+
+
+    # Close Project
+
+
+    ## Why Close a Project?
+
+
+    An eclipse workspace can contain any number of projects. A project can be either
+    in the open state or closed state.
+
+
+    Open projects −:
+
+    * Consume memory.
+
+    * Take up build time especially when the `Clean All Projects` (`Project → Clean
+    all projects`) with the `Start a build immediately` option is used.
+
+
+    ![Image](Images/image00092.jpeg)
+
+
+    ## How to Close a Project?
+
+
+    If a project is not under active development it can be closed. To close a project,
+    from the `Project` select the `Close Project` menu item.
+
+
+    ![Image](Images/image00093.jpeg)
+
+
+    ## Closed Project in Package Explorer
+
+
+    A closed project is visible in the Package Explorer view but its contents cannot
+    be edited using the Eclipse user interface. Also, an open project cannot have
+    dependency on a closed project. The Package Explorer view uses a different icon
+    to represent a closed project.
+
+
+    ![Image](Images/image00094.jpeg)
+
+
+    # Reopen Project
+
+
+    ## Reopening a Closed Project
+
+
+    To reopen a closed project, in the Package Explorer view, select the closed project
+    and click on the `Project` menu and select `Open Project`.
+
+
+    ![Image](Images/image00095.jpeg)
+
+
+    Once the project is open its content can be edited using the Eclipse user interface.
+
+
+    # Build Project
+
+
+    ## Building a Java Project
+
+
+    A project can have zero or more builders associated with it. A java project is
+    associated with a java builder. To see the builders associated with a project
+    −:
+
+    * In the Package Explorer view right click on the project and select `Properties`.
+
+    * In the left hand side tree click `Builders`.
+
+
+    ![Image](Images/image00096.jpeg)
+
+
+    It''s the java builder that distinguishes a Java project from other types of projects.
+    By click on the `New` button you can associate the `Ant` builder with a java project.
+    The java builder is responsible for compiling the java source code and generating
+    classes.
+
+
+    The java builder is notified of changes to the resources in a workspace and can
+    automatically compile java code. To disable automatic compilation deselect the
+    `Build Automatically` option from the `Project` menu.
+
+
+    ![Image](Images/image00097.jpeg)
+
+
+    If automatic compilation is disabled then you can explicitly build a project by
+    selecting the `Build Project` menu item on the `Project` menu. The `Build Project`
+    menu item is disabled if the `Build Automatically` menu item is selected.
+
+
+    # Debug Configuration
+
+
+    ## Creating and Using a Debug Configuration
+
+
+    An eclipse debug configuration is similar to a run configuration but it used to
+    start an application in the debug mode. Because the application is started in
+    the debug mode the users are prompted to switch to the debug perspective. The
+    debug perspective offers a number of views that are suitable for debugging applications.
+
+
+    The Debug Configuration dialog can be invoked by selecting the `Debug Configurations`
+    menu item from the `Run` menu.
+
+
+    ![Image](Images/image00098.jpeg)
+
+
+    To create a debug configuration for a Java application, select `Java Application`
+    from the list on the left hand side and click on the `New` button. In the dialog
+    box that comes up in the main tab specify −:
+
+    * A name for the debug configuration.
+
+    * The name of `Project`.
+
+    * The name of main class.
+
+
+    In the arguments tab, specify −:
+
+    * Zero or more program arguments.
+
+    * Zero or more Virtual Machine arguments.
+
+
+    ![Image](Images/image00099.jpeg)
+
+
+    To save the run configuration, click on the Apply button and to launch the application
+    in the debug mode click on the Debug button.
+
+
+    # Debugging Program
+
+
+    ## Debugging a Java Program
+
+
+    The quickest way to debug a Java program is to the Package Explorer view. In the
+    Package Explorer view −:
+
+    * Right click on the java class that contains the main method.
+
+    * Select `Debug As` → `Java Application`.
+
+
+    The same action can be performed using the Package Explorer by selecting the class
+    that contains the main method and clicking `Alt + Shift + D, J`.
+
+
+    Either actions mentioned above create a new `Debug Configuration` and use it to
+    start the Java application.
+
+
+    If a `Debug` configuration has already been created you can use it to start the
+    Java application by selecting `Debug Configurations` from the `Run` menu, clicking
+    on the name of the debug configuration and then clicking on the `Debug` button.
+
+
+    ![Image](Images/image00100.jpeg)
+
+
+    The `Debug` item on the `Run` menu can be used to restart the java application
+    that was previously started in the debug mode.
+
+
+    ![Image](Images/image00101.jpeg)
+
+
+    The shortcut key to launch the previously launched Java application in the debug
+    mode is `F11`. When a java program is started in the debug mode, users are prompted
+    to switch to the debug perspective. The debug perspective offers additional views
+    that can be used to troubleshoot an application.
+
+
+    The java editor allows users to place break points in the java code. To set a
+    break point, in the editor area right click on the marker bar and select `Toggle
+    Breakpoint`.
+
+
+    ![Image](Images/image00102.jpeg)
+
+
+    Breakpoints are shown on the marker bar. They are also visible in the `Breakpoints`
+    View.
+
+
+    When the execution of code reaches a break point the JVM suspends the execution
+    of the program. At this point, you can inspect the memory and execute the program
+    in a controlled manner.
+
+
+    When the execution of a program is paused, the `debug` view can be used to inspect
+    the call stack.
+
+
+    ![Image](Images/image00103.jpeg)
+
+
+    The `variables` view can be used to inspect the value of variables.
+
+
+    ![Image](Images/image00104.jpeg)
+
+
+    The `run` menu has menu items that allow you to Resume execution, step over a
+    line of code, step into a function etc.
+
+
+    ![Image](Images/image00105.jpeg)
+
+
+    The picture given above shows the shortcut keys associated with actions such as
+    Resume, Step Into and Step Over, etc.
+
+    '
+  raw: 'The Commons tab provides common options such as the ability to allocate a
+    console for standard input and output.
+
+
+    ![Image](Images/image00087.jpeg)
+
+
+    To save the run configuration click on the Apply button and to launch the application
+    click on the Run button.
+
+
+    # Running Program
+
+
+    ## Running a Java Program
+
+
+    The quickest way to run a Java program is by using the Package Explorer view.
+
+
+    In the Package Explorer view −
+
+
+    *   Right click on the java class that contains the main method.
+
+
+    *   Select Run As → Java Application.
+
+
+    The same action can be performed using the Package Explorer view by selecting
+    the class that contains the main method and clicking Alt + Shift + X, J.
+
+
+    Either actions mentioned above create a new **Run Configuration** and use it to
+    start the Java application.
+
+
+    If a Run configuration has already been created you can use it to start the Java
+    application by selecting Run Configurations from the Run menu, clicking on the
+    name of the run configuration and then clicking on the Run button.
+
+
+    ![Image](Images/image00088.jpeg)
+
+
+    The **Run** item on the **Run** menu can be used to restart the java application
+    that was previously started.
+
+
+    ![Image](Images/image00089.jpeg)
+
+
+    The shortcut key to launch the previously launched Java application is Ctrl +
+    F11.
+
+
+    # Create Jar Files
+
+
+    ## Opening the Jar File wizard
+
+
+    The Jar File wizard can be used to export the content of a project into a jar
+    file. To bring up the Jar File wizard −
+
+
+    *   In the Package Explorer select the items that you want to export. If you want
+    to export all the classes and resources in the project just select the project.
+
+
+    *   Click on the **File** menu and select **Export**.
+
+
+    *   In the filter text box of the first page of the export wizard type in JAR.
+
+
+    ![Image](Images/image00090.jpeg)
+
+
+    *   Under the Java category select **JAR** file.
+
+
+    *   Click on **Next**.
+
+
+    ## Using the Jar File wizard
+
+
+    In the JAR File Specification page −
+
+
+    *   Enter the JAR file name and folder.
+
+
+    *   The default is to export only the classes. To export the source code also,
+    click on the Export Java source files and resources check box.
+
+
+    ![Image](Images/image00091.jpeg)
+
+
+    *   Click on **Next** to change the JAR packaging options.
+
+
+    *   Click on **Next** to change the JAR Manifest specification.
+
+
+    *   Click on **Finish**.
+
+
+    # Close Project
+
+
+    ## Why Close a Project?
+
+
+    An eclipse workspace can contain any number of projects. A project can be either
+    in the open state or closed state.
+
+
+    Open projects −
+
+
+    *   Consume memory.
+
+
+    *   Take up build time especially when the Clean All Projects (Project → Clean
+    all projects) with the **Start a build immediately** option is used.
+
+
+    ![Image](Images/image00092.jpeg)
+
+
+    ## How to Close a Project?
+
+
+    If a project is not under active development it can be closed. To close a project,
+    from the Project select the Close Project menu item.
+
+
+    ![Image](Images/image00093.jpeg)
+
+
+    ## Closed Project in Package Explorer
+
+
+    A closed project is visible in the Package Explorer view but its contents cannot
+    be edited using the Eclipse user interface. Also, an open project cannot have
+    dependency on a closed project. The Package Explorer view uses a different icon
+    to represent a closed project.
+
+
+    ![Image](Images/image00094.jpeg)
+
+
+    # Reopen Project
+
+
+    ## Reopening a Closed Project
+
+
+    To reopen a closed project, in the Package Explorer view, select the closed project
+    and click on the Project menu and select Open Project.
+
+
+    ![Image](Images/image00095.jpeg)
+
+
+    Once the project is open its content can be edited using the Eclipse user interface.
+
+
+    # Build Project
+
+
+    ## Building a Java Project
+
+
+    A project can have zero or more builders associated with it. A java project is
+    associated with a java builder. To see the builders associated with a project
+    −
+
+
+    *   In the Package Explorer view right click on the project and select Properties.
+
+
+    *   In the left hand side tree click Builders.
+
+
+    ![Image](Images/image00096.jpeg)
+
+
+    It''s the java builder that distinguishes a Java project from other types of projects.
+    By click on the New button you can associate the Ant builder with a java project.
+    The java builder is responsible for compiling the java source code and generating
+    classes.
+
+
+    The java builder is notified of changes to the resources in a workspace and can
+    automatically compile java code. To disable automatic compilation deselect the
+    Build Automatically option from the Project menu.
+
+
+    ![Image](Images/image00097.jpeg)
+
+
+    If automatic compilation is disabled then you can explicitly build a project by
+    selecting the Build Project menu item on the Project menu. The Build Project menu
+    item is disabled if the Build Automatically menu item is selected.
+
+
+    # Debug Configuration
+
+
+    ## Creating and Using a Debug Configuration
+
+
+    An eclipse debug configuration is similar to a run configuration but it used to
+    start an application in the debug mode. Because the application is started in
+    the debug mode the users are prompted to switch to the debug perspective. The
+    debug perspective offers a number of views that are suitable for debugging applications.
+
+
+    The Debug Configuration dialog can be invoked by selecting the Debug Configurations
+    menu item from the Run menu.
+
+
+    ![Image](Images/image00098.jpeg)
+
+
+    To create a debug configuration for a Java application, select Java Application from
+    the list on the left hand side and click on the New button. In the dialog box
+    that comes up in the main tab specify −
+
+
+    *   A name for the debug configuration.
+
+
+    *   The name of a Project.
+
+
+    *   The name of a main class.
+
+
+    In the arguments tab, specify −
+
+
+    *   Zero or more program arguments.
+
+
+    *   Zero or more Virtual Machine arguments.
+
+
+    ![Image](Images/image00099.jpeg)
+
+
+    To save the run configuration, click on the Apply button and to launch the application
+    in the debug mode click on the Debug button.
+
+
+    # Debugging Program
+
+
+    ## Debugging a Java Program
+
+
+    The quickest way to debug a Java program is to using the Package Explorer view.
+    In the Package Explorer view −
+
+
+    *   Right click on the java class that contains the main method.
+
+
+    *   Select Debug As → Java Application.
+
+
+    The same action can be performed using the Package Explorer by selecting the class
+    that contains the main method and clicking Alt + Shift + D, J.
+
+
+    Either actions mentioned above create a new **Debug Configuration** and use it
+    to start the Java application.
+
+
+    If a Debug configuration has already been created you can use it to start the
+    Java application by selecting Debug Configurations from the Run menu, clicking
+    on the name of the debug configuration and then clicking on the Debug button.
+
+
+    ![Image](Images/image00100.jpeg)
+
+
+    The Debug menu item on the Run menu can be used to restart the java application
+    that was previously started in the debug mode.
+
+
+    ![Image](Images/image00101.jpeg)
+
+
+    The shortcut key to launch the previously launched Java application in the debug
+    mode is F11\. When a java program is started in the debug mode, users are prompted
+    to switch to the debug perspective. The debug perspective offers additional views
+    that can be used to troubleshoot an application.
+
+
+    The java editor allows users to place break points in the java code. To set a
+    break point, in the editor area right click on the marker bar and select Toggle
+    Breakpoint.
+
+
+    ![Image](Images/image00102.jpeg)
+
+
+    Breakpoints are shown on the marker bar. They are also visible in the Breakpoints
+    View.
+
+
+    When the execution of code reaches a break point the JVM suspends the execution
+    of the program. At this point, you can inspect the memory and execute the program
+    in a controlled manner.
+
+
+    When the execution of a program is paused, the debug view can be used to inspect
+    the call stack.
+
+
+    ![Image](Images/image00103.jpeg)
+
+
+    The variables view can be used to inspect the value of variables.
+
+
+    ![Image](Images/image00104.jpeg)
+
+
+    The run menu has menu items that allow you to Resume execution, step over a line
+    of code, step into a function etc.
+
+
+    ![Image](Images/image00105.jpeg)
+
+
+    The picture given above shows the shortcut keys associated with actions such as
+    Resume, Step Into and Step Over, etc.'
+  toc: []
+  trans: '
+
+    Common（公共）选项卡提供了常用选项，例如为标准输入和输出分配控制台。
+
+
+    ![Image](img/image00087.jpeg)
+
+
+    要保存运行配置，点击 Apply（应用）按钮；启动应用程序，点击 Run（运行）按钮。
+
+
+    # 运行程序
+
+
+    ## 运行 Java 程序
+
+
+    运行 Java 程序最快的方法是使用包管理器（Package Explorer）视图。
+
+
+    在包管理器视图中 −：
+
+    * 右键点击包含 main 方法的类。
+
+    * 选择 `Run As`（运行方式）→ `Java Application`（Java 程序）。
+
+
+    也可以通过包管理器视图选择包含 main 方法的并点击 `Alt + Shift + X, J` 执行相同的操作。
+
+
+    上述操作都会创建一个新的 `Run Configuration`（运行配置）并使用它启动 Java 应用程序。
+
+
+    如果已经创建了 `Run` 配置，可以通过从 `Run`（运行）菜单选择 `Run Configurations`（运行配置），点击运行配置名称，然后点击
+    `Run`（运行）按钮来启动 Java 应用程序。
+
+
+    ![Image](img/image00088.jpeg)
+
+
+    `Run` 菜单上的 `Run` 项目可以重启之前启动的 Java 应用程序。
+
+
+    ![Image](img/image00089.jpeg)
+
+
+    启动之前运行过的 Java 程序的快捷键是 `Ctrl + F11`。
+
+
+    # 创建 Jar 文件
+
+
+    ## 打开 Jar 文件向导
+
+
+    可以使用 Jar 文件向导将项目内容导出为 jar 文件。要打开 Jar 文件向导 −：
+
+    * 在包管理器中选择你想要导出的项目。如果你想导出项目中的所有类和资源，只需选择该项目。
+
+    * 点击 `File`（文件）菜单并选择 `Export`（导出）。
+
+    * 在导出向导第一页的过滤器文本框中输入 `JAR`。
+
+
+    ![Image](img/image00090.jpeg)
+
+    * 在 Java 类别下选择 `JAR` file。
+
+    * 点击 `Next`（下一步）。
+
+
+    ## 使用 Jar 文件向导
+
+
+    在 Jar File 规范页面 −：
+
+    * 输入 JAR 文件名和文件夹。
+
+    * 默认只导出类。要同时导出源代码，点击 `Export Java source files and resources`（导出 Java 源代码和资源）复选框。
+
+
+    ![Image](img/image00091.jpeg)
+
+    * 点击 `Next`（下一步）更改 JAR 打包选项。
+
+    * 点击 `Next`（下一步）更改 JAR Manifest 规范。
+
+    * 点击 `Finish`（完成）。
+
+
+    # 关闭项目
+
+
+    ## 为什么要关闭项目？
+
+
+    一个 eclipse 工作空间（workspace）可以包含任意数量的项目。项目可以是打开状态或关闭状态。
+
+
+    打开的项目 −：
+
+    * 消耗内存。
+
+    * 占用构建时间，特别是当使用 `Clean All Projects`（`Project → Clean all projects`）并带有 `Start
+    a build immediately`（立即启动构建）选项时。
+
+
+    ![Image](img/image00092.jpeg)
+
+
+    ## 如何关闭项目？
+
+
+    如果项目未处于开发状态，可以将其关闭。要关闭项目，从 `Project`（项目）选择 `Close Project`（关闭项目）菜单项。
+
+
+    ![Image](img/image00093.jpeg)
+
+
+    ## 包管理器中的关闭项目
+
+
+    关闭的项目在包管理器视图中可见，但无法使用 Eclipse 用户界面编辑其内容。此外，打开的项目不能依赖于关闭的项目。包管理器视图使用不同的图标来表示关闭的项目。
+
+
+    ![Image](img/image00094.jpeg)
+
+
+    # 重新打开项目
+
+
+    ## 重新打开关闭的项目
+
+
+    要重新打开关闭的项目，在包管理器视图中选择该项目，点击 `Project`（项目）菜单并选择 `Open Project`（打开项目）。
+
+
+    ![Image](img/image00095.jpeg)
+
+
+    项目打开后，可以使用 Eclipse 用户界面编辑其内容。
+
+
+    # 构建项目
+
+
+    ## 构建 Java 项目
+
+
+    项目可以关联零或多个构建器（builders）。Java 项目与一个 java builder 关联。要查看与项目关联的构建器 −：
+
+    * 在包管理器视图中右键点击项目并选择 `Properties`（属性）。
+
+    * 在左侧树中点击 `Builders`（构建器）。
+
+
+    ![Image](img/image00096.jpeg)
+
+
+    正是 java builder 区分了 Java 项目与其他类型的项目。通过点击 `New`（新建）按钮，你可以将 `Ant` 构建器与 java 项目关联。java
+    builder 负责编译 java 源代码并生成类。
+
+
+    java builder 会被工作空间资源的变化的变化并自动编译 java 代码。要禁用自动编译，从 `Project`（项目）菜单中取消勾选 `Build
+    Automatically`（自动构建）选项。
+
+
+    ![Image](img/image00097.jpeg)
+
+
+    如果禁用了自动编译，你可以通过选择 `Project` 菜单上的 `Build Project`（构建项目）菜单项来显式构建项目。如果选择了 `Build
+    Automatically` 菜单项，则 `Build Project` 菜单项将被禁用。
+
+
+    # 调试配置
+
+
+    ## 创建和使用调试配置
+
+
+    eclipse 调试配置类似于运行配置，但它用于以调试模式启动应用程序。由于程序是以调试模式启动的，用户会被提示切换到调试视图（debug perspective）。调试视图提供了许多适用于调试应用程序的视图。
+
+
+    可以通过从 `Run`（运行）菜单选择 `Debug Configurations`（调试配置）菜单项调用调试配置对话框。
+
+
+    ![Image](img/image00098.jpeg)
+
+
+    要为 Java 应用程序创建调试配置，从左侧列表选择 `Java Application` 并点击 `New` 按钮。在弹出的主标签页对话框中指定 −：
+
+    * 调试配置名称。
+
+    * `Project`（项目）名称。
+
+    * 类名称。
+
+
+    在 arguments（参数）标签页中指定 −：
+
+    * 多个程序参数。
+
+    * 多个虚拟机参数。
+
+
+    ![Image](img/image00099.jpeg)
+
+
+    要保存配置，点击 Apply（应用）按钮；以调试模式启动，点击 Debug 按钮。
+
+
+    # 调试程序
+
+
+    ## 调试 Java 程序
+
+
+    调试 Java 程序最快的方法是通过包管理器视图。在包管理器视图中 −：
+
+    * 右键点击包含 main 方法的类。
+
+    * 选择 `Debug As`（调试方式）→ `Java Application`（Java 程序）。
+
+
+    也可以通过包管理器视图选择包含 main 方法的并点击 `Alt + Shift + X, J` 执行相同的操作。
+
+
+    上述操作都会创建一个新的 `Debug Configuration`（调试配置）并使用它启动 Java 应用程序。
+
+
+    如果已经创建了 `Debug` 配置，可以通过从 `Run` 菜单选择 `Debug Configurations`，点击调试配置名称，然后点击 `Debug`
+    按钮来启动 Java 应用程序。
+
+
+    ![Image](img/image00100.jpeg)
+
+
+    `Run` 菜单上的 `Debug` 项目可以重启之前以调试模式启动的 Java 应用程序。
+
+
+    ![Image](img/image00101.jpeg)
+
+
+    启动之前运行过的 Java 程序的调试模式启动快捷键是 `F11`。当 java 程序以调试模式启动时，用户会被提示切换到调试视图（debug perspective）。调试视图提供了许多用于排错应用程序的视图。
+
+
+    java 编辑器允许用户在 java 代码中放置断点。要设置断点，在编辑器区域右键点击标记栏并选择 `Toggle Breakpoint`（切换断点）。
+
+
+    ![Image](img/image00102.jpeg)
+
+
+    断点显示在标记栏上。在 `Breakpoints`（断点）视图中也可见。
+
+
+    当代码执行到达断点时，JVM 会挂程序执行。此时，你可以检查内存并按控制执行程序。
+
+
+    当程序执行暂停时，可以使用 `debug`（调试）视图检查调用堆栈。
+
+
+    ![Image](img/image00103.jpeg)
+
+
+    `variables`（变量）视图可以检查变量的值。
+
+
+    ![Image](img/image00104.jpeg)
+
+
+    `run` 菜单拥有菜单项，允许你恢复执行、跳过行代码、进入函数等。
+
+
+    ![Image](img/image00105.jpeg)
+
+
+    给出的图片显示了与 Resume（恢复）、Step Into（进入）和 Step Over（跳过）等操作相关的快捷键。
+
+    '
+- fmt: '
+
+    # Preferences
+
+
+    ## Setting Preferences
+
+
+    The Preferences dialog allows Eclipse users to manage their preferences. This
+    dialog box is managed by the framework but any plug-in can add multiple pages
+    to the dialog box.
+
+
+    To invoke this dialog, click on the `Window` menu and select the `Preferences`
+    menu item.
+
+
+    The preference pages are organized by category. You can locate a preference page
+    by expanding the nodes of the tree in the left hand side of the dialog box.
+
+
+    ![Image](Images/image00106.jpeg)
+
+
+    The filter text box on the left hand side top corner allows you to quickly locate
+    a preference page. As you type characters into the filter text box the items shown
+    in the left hand side tree are filtered. For e.g. type in `font` to quickly get
+    to the `Font` preferences page.
+
+
+    ![Image](Images/image00107.jpeg)
+
+
+    After you make changes to the appropriate preferences click on the `OK` button
+    to save the changes and close the dialog box or click on the `Cancel` button to
+    discard the changes and close the dialog box.
+
+
+    # Content Assist
+
+
+    ## Using Content Assist
+
+
+    Within an editor, content assist helps reduce the characters typed by providing
+    a context sensitive list of possible completions to the characters already typed.
+    The context assist can be invoked by clicking `Ctrl` + `Space`.
+
+
+    If you are editing the body of a method in the java editor and press `Ctrl` +
+    `Space` on a new line it will bring up a dialog showing −
+
+
+    *   The class variables
+
+    *   The class methods
+
+    *   Super class methods
+
+    *   Other relevant classes
+
+
+    ![Image](Images/image00108.jpeg)
+
+
+    To select an item from the list just highlight the item using the up or down arrow
+    keys and press enter.
+
+
+    If you type some characters and then press `Ctrl` + `space` the dialog box will
+    show only items that start with the characters typed in.
+
+
+    ![Image](Images/image00109.jpeg)
+
+
+    # Quick Fix
+
+
+    ## Using Quix Fix
+
+
+    As you type characters into an eclipse editor it analyzes the document content
+    for potential error and warnings. The java editor uses the java syntax to detect
+    errors in the code. When it finds error or warning, it −
+
+
+    *   Highlights errors using red squiggly lines.
+
+    *   Highlights warnings using yellow squiggly lines.
+
+    *   Displays errors and warnings in the Problem view.
+
+    *   Adds a light bulb with a warning sign or error sign to the vertical ruler.
+
+
+    The quick fix dialog provides a list of possible corrections. The quick fix dialog
+    can be invoked by −
+
+
+    *   Placing the mouse pointer on a squiggly line.
+
+    *   Clicking on the light bulb.
+
+    *   Placing the cursor in the highlighted text and selecting Quick fix from the
+    Edit menu or clicking shortcut `Ctrl` + `1`.
+
+
+    ![Image](Images/image00110.jpeg)
+
+
+    In the above diagram, `getId` is highlighted because the `Person` class does not
+    have a method called `getId()`. Selecting `Create method ''getId()'' in type ''Person''`
+    would cause the `getId()` method to be added to the `Person` class.
+
+
+    The Quick Fix dialog can also be displayed by right clicking on the error item
+    in the Problems view and selecting the `Quick Fix` menu item.
+
+
+    # Hover Help
+
+
+    ## Using Hover Help
+
+
+    The java editor is associated with different type of hovers. A hover provides
+    additional information about the element under the mouse pointer. All the hovers
+    associated with a java editor can be seen in the Java editor Hovers preference
+    page.
+
+
+    ![Image](Images/image00111.jpeg)
+
+
+    In the java editor, placing the mouse pointer over the class being imported displays
+    the java doc associated with that class.
+
+
+    ![Image](Images/image00112.jpeg)
+
+
+    Placing a mouse pointer on a method shows the java documentation for that method.
+
+
+    ![Image](Images/image00113.jpeg)
+
+
+    # Search Menu
+
+
+    ## Searching the Workspace
+
+
+    The Eclipse search dialog box allows you to search for files that contain a literal
+    or a character pattern in the entire workspace, a set of projects, a specific
+    project or folders selects in the package explorer view.
+
+
+    The search dialog box can be invoked by −
+
+
+    *   Clicking on the `Search` menu and selecting `Search` or `File` or `Java`.
+
+    *   Clicking `Ctrl` + `H`.
+
+
+    ![Image](Images/image00114.jpeg)
+
+
+    The File Search page allows you to search any type of file but the Java Search
+    page focuses on Java files only.
+
+
+    ![Image](Images/image00115.jpeg)
+
+
+    For example, to search for usage of the `Person` type, in the Java Search page
+    −
+
+
+    *   Enter `Person` into the `search box`.
+
+    *   Set the `Search For` radio button to `Type`.
+
+    *   Set the `Limit To` radio button to `References`.
+
+    *   Click `Search`.
+
+
+    The search result appears in the Search View.
+
+
+    ![Image](Images/image00116.jpeg)
+
+
+    # Navigation
+
+
+    ## Navigating the Eclipse Workspace
+
+
+    The navigate menu provides a number of menu items that allow you to quickly locate
+    and navigate to a resource.
+
+
+    ![Image](Images/image00117.jpeg)
+
+
+    Among them, the `Open Type`, `Open Type in Hierarchy` and `Open Resource` menu
+    items tend to be very useful.
+
+
+    ## Open Type
+
+
+    The Open Type menu item brings up a dialog box that allows you to locate a Java
+    type. In the filter text box enter in either the fully qualified name or name
+    of a class. The `*` character which stands for 0 or more characters and `?` which
+    stands for a single character can be used to specify patterns. The dialog box
+    will show all the names that match the given pattern.
+
+
+    ![Image](Images/image00118.jpeg)
+
+
+    Select the type you are interested in and click `OK`.
+
+
+    Eclipse will open up an editor showing the selected type. If source code is not
+    available for the type it will use the Class File editor to show the byte code.
+
+
+    ![Image](Images/image00119.jpeg)
+
+
+    You can use the Attach Source button to specify where the source code is located.
+
+
+    The source code for the types that comes with the distribution is in `src.zip`
+    which is located in java home folder.
+
+
+    ## Open Type in Hierarchy
+
+
+    The Open Type in Hierarchy menu items allows to open a type in the Hierarchy view.
+    The Open Type in Hierarchy dialog box can be used to locate any type in the build
+    path.
+
+
+    ![Image](Images/image00120.jpeg)
+
+
+    Once you select a type, its hierachy is shown in the Type Hierarchy view.
+
+
+    ![Image](Images/image00121.jpeg)
+
+
+    The Type Hierarchy is an excellent view for learning about a type. On the left
+    hand side pane type, its super type and sub type are available. On the right hand
+    side pane you can see the attributes and methods of selected type.
+
+
+    ## Open Resource
+
+
+    The open resource menu item can be used to locate a file in the workspace. The
+    `*` character which stands for 0 or more characters and `?` which stands for a
+    single character can be used to specify patterns. The dialog box will show all
+    the names that match the given pattern.
+
+
+    ![Image](Images/image00122.jpeg)
+
+
+    Select the file that you want to open in an editor and click the OK button.
+
+
+    # Refactoring
+
+
+    ## Refactoring using Eclipse
+
+
+    Renaming a class that is used widely throughout a project could take a lot of
+    time but the Eclipse refactoring wizard makes the job easier by automatically
+    detecting all dependencies on the class being renamed and modifying them also.
+
+
+    The refactor menu can be opened by −
+
+
+    *   Right clicking on a Java element in the Package Explorer view and selecting
+    Refactor menu item.
+
+    *   Right clicking on a Java element in the Java editor and selecting Refactor
+    menu item.
+
+    *   Selecting a Java element in either the Package Explorer view or Java Editor
+    and clicking `Shift` + `Alt` + `T`.
+
+
+    ![Image](Images/image00123.jpeg)
+
+
+    The refactor menu shows all the possible changes that are supported on the selected
+    Java element. To rename a class, select the Rename menu item.
+
+
+    ![Image](Images/image00124.jpeg)
+
+
+    Click on the Next button to see a preview of the changes (if available). Then
+    click on Finish to get the wizard to do its work.
+
+    '
+  raw: '# Preferences
+
+
+    ## Setting Preferences
+
+
+    The Preferences dialog allows Eclipse users to manage their preferences. This
+    dialog box is managed by the framework but any plug-in can add multiple pages
+    to the dialog box.
+
+
+    To invoke this dialog, click on the Window menu and select the Preferences menu
+    item.
+
+
+    The preference pages are organized by category. You can locate a preference page
+    by expanding the nodes of the tree in the left hand side of the dialog box.
+
+
+    ![Image](Images/image00106.jpeg)
+
+
+    The filter text box on the left hand side top corner allows you to quickly locate
+    a preference page. As you type characters into the filter text box the items shown
+    in the left hand side tree are filtered. For e.g. type in font to quickly get
+    to the Font preferences page.
+
+
+    ![Image](Images/image00107.jpeg)
+
+
+    After you make changes to the appropriate preferences click on the **OK** button
+    to save the changes and close the dialog box or click on the **Cancel** button
+    to discard the changes and close the dialog box.
+
+
+    # Content Assist
+
+
+    ## Using Content Assist
+
+
+    Within an editor, content assist helps reduce the characters typed by providing
+    a context sensitive list of possible completions to the characters already typed.
+    The context assist can be invoked by clicking Ctrl + Space.
+
+
+    If you are editing the body of a method in the java editor and press Ctrl + Space
+    on a new line it will bring up a dialog showing −
+
+
+    *   The class variables
+
+
+    *   The class methods
+
+
+    *   Super class methods
+
+
+    *   Other relevant classes
+
+
+    ![Image](Images/image00108.jpeg)
+
+
+    To select an item from the list just highlight the item using the up or down arrow
+    keys and press enter.
+
+
+    If you type some characters and then press Ctrl + space the dialog box will show
+    only items that start with the characters typed in.
+
+
+    ![Image](Images/image00109.jpeg)
+
+
+    # Quick Fix
+
+
+    ## Using Quix Fix
+
+
+    As you type characters into an eclipse editor it analyzes the document content
+    for potential error and warnings. The java editor uses the java syntax to detect
+    errors in the code. When it finds error or warning, it −
+
+
+    *   Highlights errors using red squiggly lines.
+
+
+    *   Highlights warnings using yellow squiggly lines.
+
+
+    *   Displays errors and warnings in the
+
+
+    Problem
+
+
+    view.
+
+
+    *   Adds a light bulb with a warning sign or error sign to the vertical ruler.
+
+
+    The quick fix dialog provides a list of possible corrections. The quick fix dialog
+    can be invoked by −
+
+
+    *   Placing the mouse pointer on a squiggly line.
+
+
+    *   Clicking on the light bulb.
+
+
+    *   Placing the cursor in the highlighted text and selecting Quick fix from the
+    Edit menu or clicking shortcut Ctrl + 1.
+
+
+    ![Image](Images/image00110.jpeg)
+
+
+    In the above diagram, getId is highlighted because the Person class does not have
+    a method called getId(). Selecting Create method ''getId()'' in type ''Person'' would
+    cause the getId() method to be added to the Person class.
+
+
+    The Quick Fix dialog can also be displayed by right clicking on the error item
+    in the Problems view and selecting the Quick Fix menu item.
+
+
+    # Hover Help
+
+
+    ## Using Hover Help
+
+
+    The java editor is associated with different type of hovers. A hover provides
+    additional information about the element under the mouse pointer. All the hovers
+    associated with a java editor can be seen in the Java editor Hovers preference
+    page.
+
+
+    ![Image](Images/image00111.jpeg)
+
+
+    In the java editor, placing the mouse pointer over the class being imported displays
+    the java doc associated with that class.
+
+
+    ![Image](Images/image00112.jpeg)
+
+
+    Placing a mouse pointer on a method shows the java documentation for that method.
+
+
+    ![Image](Images/image00113.jpeg)
+
+
+    # Search Menu
+
+
+    ## Searching the Workspace
+
+
+    The Eclipse search dialog box allows you to search for files that contain a literal
+    or a character pattern in the entire workspace, a set of projects, a specific
+    project or folders selects in the package explorer view.
+
+
+    The search dialog box can be invoked by −
+
+
+    *   Clicking on the Search menu and selecting Search or File or Java.
+
+
+    *   Clicking Ctrl + H.
+
+
+    ![Image](Images/image00114.jpeg)
+
+
+    The File Search page allows you to search any type of file but the Java Search
+    page focuses on Java files only.
+
+
+    ![Image](Images/image00115.jpeg)
+
+
+    For example, to search for usage of the Person type, in the Java Search page −
+
+
+    *   Enter Person into the **search box**.
+
+
+    *   Set the **Search** For radio button to **Type**.
+
+
+    *   Set the Limit To radio button to **References**.
+
+
+    *   Click Search.
+
+
+    The search result appears in the Search View.
+
+
+    ![Image](Images/image00116.jpeg)
+
+
+    # Navigation
+
+
+    ## Navigating the Eclipse Workspace
+
+
+    The navigate menu provides a number of menu items that allow you to quickly locate
+    and navigate to a resource.
+
+
+    ![Image](Images/image00117.jpeg)
+
+
+    Among them, the Open Type, Open Type in Hierarchy and Open Resource menu items
+    tend to be very useful.
+
+
+    ## Open Type
+
+
+    The Open Type menu item brings up a dialog box that allows you to locate a Java
+    type. In the filter text box enter in either the fully qualified name or name
+    of a class. The ''*'' character which stands for 0 or more characters and ''?''
+    which stands for a single character can be used to specify patterns. The dialog
+    box will show all the names that match the given pattern.
+
+
+    ![Image](Images/image00118.jpeg)
+
+
+    Select the type you are interested in and click **OK**.
+
+
+    Eclipse will open up an editor showing the selected type. If source code is not
+    available for the selected type it will use the Class File editor to show the
+    byte code of the selected type.
+
+
+    ![Image](Images/image00119.jpeg)
+
+
+    You can use the Attach Source button to specify where the source code for the
+    class is located.
+
+
+    The source code for the types that comes with the java distribution is in src.zip
+    which is located in the java home folder.
+
+
+    ## Open Type in Hierarchy
+
+
+    The Open Type in Hierarchy menu items allows you to open a type in the Type Hierarchy
+    view. The Open Type in Hierarchy dialog box can be used to locate any Java type
+    in the build path.
+
+
+    ![Image](Images/image00120.jpeg)
+
+
+    Once you select a type, its hierachy is shown in the Type Hierarchy view.
+
+
+    ![Image](Images/image00121.jpeg)
+
+
+    The Type Hierarchy is an excellent view for learning about the hierarchy of a
+    type. On the left hand side pane type, its super type and sub type are available.
+    On the right hand side pane you can see the attributes and methods of a selected
+    type are shown.
+
+
+    ## Open Resource
+
+
+    The open resource menu item can be used to locate a file in the workspace. The
+    ''*'' character which stands for 0 or more characters and ''?'' which stands for
+    a single character can be used to specify patterns. The dialog box will show all
+    the names that match the given pattern.
+
+
+    ![Image](Images/image00122.jpeg)
+
+
+    Select the file that you want to open in an editor and click on the OK button.
+
+
+    # Refactoring
+
+
+    ## Refactoring using Eclipse
+
+
+    Renaming a class that is used widely throughout a project could take a lot of
+    time but the Eclipse refactoring wizard makes the job easier by automatically
+    detecting all dependencies on the class being renamed and modifying them also.
+
+
+    The refactor menu can be opened by −
+
+
+    *   Right clicking on a Java element in the Package Explorer view and selecting
+    Refactor menu item.
+
+
+    *   Right clicking on a Java element in the Java editor and selecting Refactor
+    menu item.
+
+
+    *   Selecting a Java element in either the Package Explorer view or Java Editor
+    and clicking Shift + Alt + T.
+
+
+    ![Image](Images/image00123.jpeg)
+
+
+    The refactor menu shows all the possible changes that are supported on the selected
+    Java element. To rename a class, select the Rename menu item.
+
+
+    ![Image](Images/image00124.jpeg)
+
+
+    Click on the Next button to see a preview of the changes (if available). Then
+    click on Finish to get the wizard to do its work.
+
+
+    # Add Bookmarks
+
+
+    ## About Bookmarks
+
+
+    Eclipse editors allow you to place a book mark on any line within the editor.
+    You can use bookmarks to serve as reminders and quickly navigate to any line in
+    a file.
+
+
+    ## Adding a Bookmark'
+  toc: []
+  trans: '
+
+
+    # 偏好
+
+
+    ## 设置偏好
+
+
+    偏好对话框允许 Eclipse 用户管理其偏好。此对话框由框架管理，但任何插件都可以向对话框添加多个页面。
+
+
+    要调用此对话框，请点击 `Window`（窗口）菜单并选择 `Preferences`（偏好）菜单项。
+
+
+    偏好页面按类别组织。您可以通过展开对话框左侧树形结构的节点来定位偏好页面。
+
+
+    ![Image](img/image00106.jpeg)
+
+
+    左上角的过滤文本框允许您快速定位偏好页面。当您在过滤文本框中输入字符时，左侧树形中显示的项将经过过滤。例如，输入 `font` 即可快速找到 `Font`（字体）偏好页面。
+
+
+    ![Image](img/image00107.jpeg)
+
+
+    在对相应的偏好进行更改后，点击 `OK` 按钮保存更改并关闭对话框，或点击 `Cancel`（取消）按钮丢弃更改并关闭对话框。
+
+
+    # 内容辅助
+
+
+    #### 使用内容辅助
+
+
+    在编辑器中，内容辅助通过通过为已输入的字符提供上下文敏感的可能补全列表，来帮助减少输入的字符。可以通过点击 `Ctrl` + `Space` 来调用内容辅助。
+
+
+    如果您正在 Java 编辑器中编辑方法体，并在新行上按 `Ctrl` + `Space`，它将弹出一个对话框显示 −
+
+
+    *   类变量
+
+    *   类方法
+
+    *   父类方法
+
+    *   其他相关类
+
+
+    ![Image](img/image00108.jpeg)
+
+
+    要从列表中选择项，只需使用上或下方向键高亮该项并按回车键。
+
+
+    如果您输入一些字符然后按 `Ctrl` + `space`，对话框将仅显示以输入的字符开头的项。
+
+
+    ![Image](img/image00109.jpeg)
+
+
+    # 快速修复
+
+
+    ## 使用快速修复
+
+
+    当您在 Eclipse 编辑器中输入字符时，它会分析文档内容以检测潜在的错误和警告。Java 编辑器使用 Java 语法检测代码中的错误。当它发现错误或警告时，它
+    −
+
+
+    *   使用红色波浪线突出显示错误。
+
+    *   使用黄色波浪线突出显示警告。
+
+    *   在 Problem（问题）视图中显示错误和警告。
+
+    *   在垂直标尺上添加带有警告符号或错误符号的灯泡。
+
+
+    快速修复对话框提供了可能的更正列表。可以通过以下方式调用快速修复对话框 −
+
+
+    *   将鼠标指针置在波浪线线上。
+
+    *   点击灯泡。
+
+    *   将光标置于高亮文本中，从 Edit（编辑）菜单中选择 Quick fix（快速修复）或点击快捷键 `Ctrl` + `1`。
+
+
+    ![Image](img/image00110.jpeg)
+
+
+    在上面的图中，`getId` 被高亮是因为 `Person` 类没有名为 `getId()` 的方法。选择 `Create method ''getId()''
+    in type ''Person''` 将导致 `getId()` 方法添加到 `Person` 类中。
+
+
+    快速修复对话框也可以通过右键点击 Problems 视图中的错误项并选择 `Quick Fix`（快速修复）菜单项来显示。
+
+
+    # 悬停帮助
+
+
+    ## 使用悬停帮助
+
+
+    Java 编辑器与不同类型的悬停相关。悬停提供了有关鼠标指针下元素的额外信息。所有与 Java 编辑器相关的悬停都可以在 Java editor Hovers
+    偏好页面中查看。
+
+
+    ![Image](img/image00111.jpeg)
+
+
+    在 Java 编辑器中，将鼠标指针悬停在导入的类上会显示与该类相关的 JavaDoc。
+
+
+    ![Image](img/image00112.jpeg)
+
+
+    将鼠标指针停在方法上会显示该方法的 Java 文档。
+
+
+    ![Image](img/image00113.jpeg)
+
+
+    # 搜索菜单
+
+
+    ## 搜索工作空间
+
+
+    Eclipse 搜索对话框允许您在整个工作空间、一组项目、特定项目或包资源管理器视图中选择的文件夹中，搜索包含字面量或字符模式的文件。
+
+
+    可以通过以下方式调用搜索对话框 −
+
+
+    *   点击 `Search`（搜索）菜单并选择 `Search` 或 `File`（文件）或 `Java`。
+
+    *   点击 `Ctrl` + `H`。
+
+
+    ![Image](img/image00114.jpeg)
+
+
+    File Search（文件搜索）页面允许您搜索任何类型的文件，但 Java Search（Java 搜索）页面仅专注于 Java 文件。
+
+
+    ![Image](img/image00115.jpeg)
+
+
+    例如，在 Java Search 页面中搜索 `Person` 类型的使用情况 −
+
+
+    *   在 `search box`（搜索框）中输入 `Person`。
+
+    *   将 `Search For` 按钮设置为 `Type`（类型）。
+
+    *   将 `Limit To` 按钮设置为 `References`（引用）。
+
+    *   点击 `Search`（搜索）。
+
+
+    搜索结果出现在 Search 视图中。
+
+
+    ![Image](img/image00116.jpeg)
+
+
+    # 导航
+
+
+    ## 导航 Eclipse 工作空间
+
+
+    导航菜单提供了许多菜单项，允许您快速定位并导航到资源。
+
+
+    ![Image](img/image00117.jpeg)
+
+
+    其中，`Open Type`（打开类型）、`Open Type in Hierarchy`（在层次结构中打开类型）和 `Open Resource`（打开资源）菜单项非常有用。
+
+
+    ## Open Type
+
+
+    Open Type 菜单项弹出一个对话框，允许您定位 Java 类型。在过滤文本框中输入类的全限定名或名称。可以使用 `*`（代表 0 或多个字符）和 `?`（代表单个字符）来指定模式。对话框将显示所有匹配给定模式的名称。
+
+
+    ![Image](img/image00118.jpeg)
+
+
+    选择您感兴趣的类型并点击 `OK`。
+
+
+    Eclipse 将打开编辑器显示所选类型。如果类型没有源代码，它将使用 Class File 显示字节码。
+
+
+    ![Image](img/image00119.jpeg)
+
+
+    您可以使用 Attach Source 按钮指定源代码的位置。
+
+
+    随发行提供的源代码位于 java 目录下的 `src.zip`。
+
+
+    ## Open Type in Hierarchy
+
+
+    Open Type in Hierarchy 菜单项允许在层次视图中打开类型。Open Type in Hierarchy 对话框用于定位构建路径中的任何类型。
+
+
+    ![Image](img/image00120.jpeg)
+
+
+    一旦选择了类型，其层次结构将在 Hierarchy 视图中显示。
+
+
+    ![Image](img/image00121.jpeg)
+
+
+    Type Hierarchy 是学习类型的极佳视图。在左侧面板中可以看到父类型和子类型。在右侧面板中可以看到可选类型的属性和方法。
+
+
+    ## Open Resource
+
+
+    Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`（代表 0 或多个字符）和 `?`（代表单个字符）来指定模式。对话框将显示所有匹配给定模式的名称。
+
+
+    ![Image](img/image00122.jpeg)
+
+
+    选择您要在编辑器中打开的文件并点击 OK 按钮。
+
+
+    # 重构
+
+
+    ## 使用 Eclipse 进行重构
+
+
+    重命名在项目中广泛使用的类可能花费大量时间，但 Eclipse 重构向导通过自动检测对重命名类的所有依赖并进行修改，使工作变得更加简单。
+
+
+    可以通过以下方式打开重构菜单 −
+
+
+    *   在包资源管理器视图中右键点击 Java 元素并选择 Refactor（重构）菜单项。
+
+    *   在 Java 编辑器中右键点击 Java 元素并选择 Ref 构菜单项。
+
+    *   在包资源管理器或 Java 编辑器中选择 Java 元素并点击 `Shift` + `Alt` + `T`。
+
+
+    ![Image](img/image00123.jpeg)
+
+
+    重构菜单显示了支持所选 Java 元素的所有更改。要重命名类，选择 Rename（重命名）菜单项。
+
+
+    ![Image](img/image00124.jpeg)
+
+
+    点击 Next 按钮查看更改预览（可用）。然后点击 Finish 让向导完成工作。
+
+
+    '
+- fmt: '
+
+    To set a bookmark, right-click on the vertical ruler near the line on which you
+    want the bookmark and select `Add Bookmark`. In the `Add Bookmark` dialog box
+    enter a name for the Bookmark.
+
+
+    ![Image](Images/image00125.jpeg)
+
+
+    A bookmark icon appears in the vertical ruler. Also, a row is added to the table
+    in the Bookmarks view.
+
+
+    ![Image](Images/image00126.jpeg)
+
+
+    ## Opening the Bookmarks View
+
+
+    To open the Bookmarks view −
+
+
+    *   Click on the `Window` menu and select `Show View → Other`.
+
+    *   In the filter text box enter `Bookmark`.
+
+    *   Under `General`, select `Bookmarks`.
+
+
+    ![Image](Images/image00127.jpeg)
+
+
+    *   Click on `OK`.
+
+
+    ## Using the Bookmarks View
+
+
+    The Bookmarks view shows bookmarks placed in resources across the workspace.
+
+
+    ![Image](Images/image00128.jpeg)
+
+
+    Using the Bookmarks view you can navigate to a bookmark by double clicking on
+    a bookmark or right clicking on a bookmark and selecting "Go to" menu item.
+
+
+    # Task Management
+
+
+    ## Managing Tasks
+
+
+    Programmers like to place TODO markers in their code which serves as a reminder
+    for tasks that need to be completed. Comments in the Java code that has the word
+    `TODO` in them are recognized as task and shown on the marker bar and in the Tasks
+    view.
+
+
+    ![Image](Images/image00129.jpeg)
+
+
+    An eclipse editor can be used to associate tasks with the file being edited by
+    right clicking on the marker bar and selecting `Add Task`. In the dialog box that
+    comes up enter the task description and select a priority from the priority drop
+    down list and then click on the `OK` button.
+
+
+    ![Image](Images/image00130.jpeg)
+
+
+    To remove a task using an Eclipse editor, right-click on the task icon in the
+    marker bar and select the `Remove Task` menu item.
+
+
+    ## Opening the Tasks View
+
+
+    To open the Tasks view −
+
+
+    *   Click on the `Window` menu and select `Show View → Other`.
+
+    *   In the filter text box enter `Tasks`.
+
+    *   Under `General`, select `Tasks`.
+
+
+    ![Image](Images/image00131.jpeg)
+
+
+    *   Click on `OK`.
+
+
+    ## Using the Tasks View
+
+
+    The Tasks view can be used to view all the tasks and add tasks not associated
+    with any resource.
+
+
+    ![Image](Images/image00132.jpeg)
+
+
+    It can also be used to −
+
+
+    *   Change the priority associated with a task.
+
+    *   Mark a task as completed.
+
+    *   Remove a task or all completed tasks.
+
+
+    # Install Plugins
+
+
+    ## Locating and Installing Plug-ins
+
+
+    The Eclipse platform which provides the foundation for the Eclipse IDE is composed
+    of plug-ins and is designed to be extensible using additional plug-ins.
+
+
+    Several hundreds of plug-ins are available. Each plug-in adds more functionality
+    to Eclipse. You can locate a plug-in that provides certain functionality by searching
+    the Eclipse Market place (`http://marketplace.eclipse.org/`). For example you
+    can locate plug-ins that allows eclipse to be used as a Python IDE.
+
+
+    ![Image](Images/image00133.jpeg)
+
+
+    From within the Eclipse IDE, you can search the market place by using the `Eclipse
+    Marketplace` dialog which can be invoked by clicking on the `Help` menu and selecting
+    `Eclipse Marketplace`.
+
+
+    ![Image](Images/image00134.jpeg)
+
+
+    In the screenshot above, to install `PyDev-Python IDE for Eclipse`, just click
+    on the `Install` button. Using the dialog box that comes up you can install the
+    plug-in.
+
+
+    ![Image](Images/image00135.jpeg)
+
+
+    You can also install a plug-in by using the `Install New Software` menu item accessible
+    from the `Help` menu (`Help → Install New Software`).
+
+
+    ![Image](Images/image00136.jpeg)
+
+
+    In this case you have to know the URL of the remote site from which the plug-in
+    can be downloaded. You can supply this URL by clicking on the `Add` button.
+
+
+    ![Image](Images/image00137.jpeg)
+
+
+    The `install` dialog box shows the plug-in components available in the remote
+    site and allows you to install them.
+
+
+    ![Image](Images/image00138.jpeg)
+
+
+    # Code Templates
+
+
+    ## Using Code Templates
+
+
+    Code templates help reduce typing time by inserting code into the editor. Each
+    code template is given a short literal. Typing the literal into the editor window
+    and press `Ctrl + Space` brings up a dialog box from which a code template associated
+    with that literal can be selected.
+
+
+    Typing `for` within the body of a method in the java editor window and clicking
+    `Ctrl + space` shows the code templates associated with `for`.
+
+
+    ![Image](Images/image00139.jpeg)
+
+
+    Selecting `for - iterate over array` inserts code for iterating through `depArray`
+    which was declared earlier in the method body.
+
+
+    Another useful code template literal is `sysout` which can be used to insert the
+    `System.out.println()` method call.
+
+
+    ![Image](Images/image00140.jpeg)
+
+
+    ## Modifying/Adding code templates
+
+
+    You can add new code templates using the `Preferences` dialog box. Bring up the
+    `Preferences` dialog box by clicking on the `Windows` menu and selecting the `Preferences`
+    menu item. To locate the `Templates` page type `Templates` into the filter text
+    box.
+
+
+    ![Image](Images/image00141.jpeg)
+
+
+    You can read more about the variables that can be used to customize the code that
+    is inserted by reading the Eclipse help. To bring up the help window click on
+    the `Help` menu and select `Help Contents`. In the search text box enter `Java
+    Editor Template Variables`. From the list on the left hand side select `Java Editor
+    Template Variables`.
+
+
+    # Shortcuts
+
+
+    # Shortcuts
+
+
+    ## About Shortcuts
+
+
+    You can navigate the Eclipse User Interface using only the keyboard by −
+
+
+    *   Using mnemonics associated with menus and menu items.
+
+    *   Using mnemonics associated with controls in a dialog box or view.
+
+    *   Using accelerators associated with actions on the toolbar.
+
+
+    ![Image](Images/image00143.jpeg)
+
+
+    The `Key Assist` action which can be invoked by `Ctrl + Shift + L` shows all the
+    accelerators available in Eclipse.
+
+
+    ![Image](Images/image00144.jpeg)
+
+
+    The key combination assigned to an action can be changed using the `Keys` preference
+    page. There are many commands or actions for which there are shortcut keys. This
+    preference page also allows you to assign shortcut keys to.
+
+
+    For example, to assign `Alt + C` as the shortcut key to trigger the `New Class`
+    dialog box select `New Class` in the command list, navigate to the `Bindings`
+    text box and then the `when` dropdown list allows you to select a context in which
+    the shortcut key is valid. Ensure that there are no conflicts for the selected
+    key and click on the `OK` button.
+
+
+    ![Image](Images/image00145.jpeg)
+
+
+    Now you can press `Alt + C` to bring up the `New Class` wizard.
+
+
+    # Restart Option
+
+
+    ## Restarting Eclipse
+
+
+    The restart option allows users to restart eclipse. To restart eclipse, click
+    on the `File` menu and select the `Restart` menu item.
+
+
+    ![Image](Images/image00146.jpeg)
+
+
+    After a plug-in is installed, users will be prompted to restart eclipse. If they
+    choose not to restart at that point they can restart eclipse later by using the
+    restart option. If eclipse user interface misbehaves, users may want to restart
+    eclipse using this option.
+
+
+    # Tips & Tricks
+
+
+    TIP #1 DISCOVERING SHORTCUT KEYS
+
+
+    *   Press `Ctrl + Shift + L` to open a widget that shows all the shortcut keys.
+
+
+    TIP #2 – CONTENT ASSIST
+
+
+    *   In the Java editor press `Ctrl + Space` to see a list of suggested completions.
+    Typing one or more characters before clicking `Ctrl + Space` will shorten the
+    list.
+
+
+    TIP #3 – PARAMETER HINT
+
+
+    *   When the cursor is in a method argument, press `Ctrl + Shift + Space` to see
+    a list of parameter hints.
+
+
+    TIP #4 – CAMEL CASE SUPPORT IN CODE COMPLETION
+
+
+    *   Code completion supports camel case patterns. Entering `NPE` and clicking
+    `Ctrl + Space` will propose `NullPointerException` and `NoPermissionException`.
+
+
+    TIP #5 – CREATING GETTERS AND SETTERS
+
+
+    *   Click on `Source → Generate Getter and Setter` to open the wizard that allows
+    you to generate getter and setter methods.
+
+
+    TIP #6 – GENERATING HASHCODE() AND EQUALS() METHODS
+
+
+    *   Click on `Source → Generate hashCode() and equals()` to generate this methods
+    for a Java class.
+
+    '
+  raw: 'To set a bookmark, right-click on the vertical ruler near the line on which
+    you want the bookmark and select Add Bookmark. In the Add Bookmark dialog box
+    enter a name for the Bookmark.
+
+
+    ![Image](Images/image00125.jpeg)
+
+
+    A bookmark icon appears in the vertical ruler. Also, a row is added to the table
+    in the Bookmarks view.
+
+
+    ![Image](Images/image00126.jpeg)
+
+
+    ## Opening the Bookmarks View
+
+
+    To open the Bookmarks view −
+
+
+    *   Click on the Window menu and select Show View → Other.
+
+
+    *   In the filter text box enter Bookmark.
+
+
+    *   Under **General**, select Bookmarks.
+
+
+    ![Image](Images/image00127.jpeg)
+
+
+    *   Click on OK.
+
+
+    ## Using the Bookmarks View
+
+
+    The Bookmarks view shows bookmarks placed in resources across the workspace.
+
+
+    ![Image](Images/image00128.jpeg)
+
+
+    Using the Bookmarks view you can navigate to a bookmark by double clicking on
+    a bookmark or right clicking on a bookmark and selecting "Go to" menu item.
+
+
+    # Task Management
+
+
+    ## Managing Tasks
+
+
+    Programmers like to place TODO markers in their code which serves as a reminder
+    for tasks that need to be completed. Comments in the Java code that has the word
+    TODO in them are recognized as task and shown on the marker bar and in the Tasks
+    view.
+
+
+    ![Image](Images/image00129.jpeg)
+
+
+    An eclipse editor can be used to associate tasks with the file being edited by
+    right clicking on the marker bar and selecting Add Task. In the dialog box that
+    comes up enter the task description and select a priority from the priority drop
+    down list and then click on the OK button.
+
+
+    ![Image](Images/image00130.jpeg)
+
+
+    To remove a task using an Eclipse editor, right-click on the task icon in the
+    marker bar and select the Remove Task menu item.
+
+
+    ## Opening the Tasks View
+
+
+    To open the Tasks view −
+
+
+    *   Click on the Window menu and select Show View → Other.
+
+
+    *   In the filter text box enter Tasks.
+
+
+    *   Under **General**, select Tasks.
+
+
+    ![Image](Images/image00131.jpeg)
+
+
+    *   Click **OK**.
+
+
+    ## Using the Tasks View
+
+
+    The Tasks view can be used to view all the tasks and add tasks not associated
+    with any resource.
+
+
+    ![Image](Images/image00132.jpeg)
+
+
+    It can also be used to −
+
+
+    *   Change the priority associated with a task.
+
+
+    *   Mark a task as completed.
+
+
+    *   Remove a task or all completed tasks.
+
+
+    # Install Plugins
+
+
+    ## Locating and Installing Plug-ins
+
+
+    The Eclipse platform which provides the foundation for the Eclipse IDE is composed
+    of plug-ins and is designed to be extensible using additional plug-ins.
+
+
+    Several hundreds of plug-ins are available. Each plug-in adds more functionality
+    to Eclipse. You can locate a plug-in that provides certain functionality by searching
+    the Eclipse Market place (**http://marketplace.eclipse.org/**). For example you
+    can locate plug-ins that allows eclipse to be used as a Python IDE.
+
+
+    ![Image](Images/image00133.jpeg)
+
+
+    From within the Eclipse IDE, you can search the market place by using the Eclipse
+    Marketplace dialog which can be invoked by clicking on the Help menu and selecting
+    Eclipse Marketplace.
+
+
+    ![Image](Images/image00134.jpeg)
+
+
+    In the screenshot above, to install PyDev-Python IDE for Eclipse, just click on
+    the Install button. Using the dialog box that comes up you can install the plug-in.
+
+
+    ![Image](Images/image00135.jpeg)
+
+
+    You can also install a plug-in by using the Install New Software menu item accessible
+    from the Help menu (Help → Install New Software).
+
+
+    ![Image](Images/image00136.jpeg)
+
+
+    In this case you have to know the URL of the remote site from which the plug-in
+    can be downloaded. You can supply this URL by clicking on the Add button.
+
+
+    ![Image](Images/image00137.jpeg)
+
+
+    The **install** dialog box shows the plug-in components available in the remote
+    site and allows you to install them.
+
+
+    ![Image](Images/image00138.jpeg)
+
+
+    # Code Templates
+
+
+    ## Using Code Templates
+
+
+    Code templates help reduce typing time by inserting code into the editor. Each
+    code template is given a short literal. Typing the literal into the editor window
+    and press Ctrl + Space brings up a dialog box from which a code template associated
+    with that literal can be selected.
+
+
+    Typing for within the body of a method in the java editor window and clicking
+    Ctrl + space shows the code templates associated with for.
+
+
+    ![Image](Images/image00139.jpeg)
+
+
+    Selecting for - iterate over array inserts code for iterating through depArray
+    which was declared earlier in the method body.
+
+
+    Another useful code template literal is **sysout** which can be used to insert
+    the System.out.println() method call.
+
+
+    ![Image](Images/image00140.jpeg)
+
+
+    ## Modifying/Adding code templates
+
+
+    You can add new code templates using the Preferences dialog box. Bring up the
+    Preferences dialog box by clicking on the Windows menu and selecting the Preferences
+    menu item. To locate the Templates page type Templates into the filter text box.
+
+
+    ![Image](Images/image00141.jpeg)
+
+
+    You can read more about the variables that can be used to customize the code that
+    is inserted by reading the Eclipse help. To bring up the help window click on
+    the Help menu and select Help Contents. In the search text box enter Java Editor
+    Template Variables. From the list on the left hand side select Java Editor Template
+    Variables.
+
+
+    ![Image](Images/image00142.jpeg)
+
+
+    # Shortcuts
+
+
+    ## About Shortcuts
+
+
+    You can navigate the Eclipse User Interface using only the keyboard by −
+
+
+    *   Using mnemonics associated with menus and menu items.
+
+
+    *   Using mnemonics associated with controls in a dialog box or view or editor.
+
+
+    *   Using accelerators associated with actions such as menu items and buttons
+    on the toolbar.
+
+
+    ![Image](Images/image00143.jpeg)
+
+
+    The Key Assist action which can be invoked by clicking Ctrl + Shift + L shows
+    us all the accelerators or shortcut keys available in Eclipse.
+
+
+    ![Image](Images/image00144.jpeg)
+
+
+    The key combination assigned to an action can be changed using the Keys preference
+    page. There are many commands or actions in Eclipse for which there are no shortcut
+    keys. This preference page also allows you to assign shortcut keys to these actions.
+
+
+    For example, to assign **Alt + C** as the shortcut key to trigger the command
+    that brings up the **New Class** dialog box select **New Class** in the command
+    list, navigate to the **Bindings** text box and then press **Alt + C.** The when
+    dropdown list allows you to select a context in which the shortcut key is valid.
+    Ensure that there are no conflicts for the selected key combination and click
+    on the OK button.
+
+
+    ![Image](Images/image00145.jpeg)
+
+
+    Now you can press **Alt + C** to bring up the New Class wizard.
+
+
+    # Restart Option
+
+
+    ## Restarting Eclipse
+
+
+    The restart option allows users to restart eclipse. To restart eclipse, click
+    on the File menu and select the **Restart** menu item.
+
+
+    ![Image](Images/image00146.jpeg)
+
+
+    After a plug-in is installed, users will be prompted to restart eclipse. If they
+    choose not to restart at that point they can restart eclipse later by using the
+    restart option. If eclipse user interface misbehaves, users may want to restart
+    eclipse using this option.
+
+
+    # Tips & Tricks
+
+
+    TIP #1 − DISCOVERING SHORTCUT KEYS
+
+
+    *   Press Ctrl + Shift + L to open a widget that shows all the shortcut keys.
+
+
+    TIP #2 − CONTENT ASSIST
+
+
+    *   In the Java editor press **Ctrl + Space** to see a list of suggested completions.
+    Typing one or more characters before clicking **Ctrl + Space** will shorten the
+    list.
+
+
+    TIP #3 − PARAMETER HINT
+
+
+    *   When the cursor is in a method argument, press **Ctrl + Shift + Space** to
+    see a list of parameter hints.
+
+
+    TIP #4 − CAMEL CASE SUPPORT IN CODE COMPLETION
+
+
+    *   Code completion supports camel case patterns. Entering NPE and clicking **Ctrl
+    + Space** will propose **NullPointerException** and **NoPermissionException**.
+
+
+    TIP #5 − CREATING GETTERS AND SETTERS
+
+
+    *   Click on Source → Generate Getter and Setter to open the wizard that allows
+    you to generate getter and setter methods.
+
+
+    TIP #6 − GENERATING HASHCODE() AND EQUALS() METHODS
+
+
+    *   Click on Source → Generate hashCode() and equals() to generate this methods
+    for a Java class.'
+  toc: []
+  trans: '
+
+
+    要设置书签，请右键点击要设置书签行附近的垂直标尺，并选择`添加书签 (Add Bookmark)`。在`添加书签`对话框中为书签输入一个名称。
+
+
+    ![Image](img/image00125.jpeg)
+
+
+    垂直标尺上会出现书签图标。此外，书签视图（Bookmarks view）中的表格会增加出一行。
+
+
+    ![Image](img/image00126.jpeg)
+
+
+    ## 打开书签视图
+
+
+    要打开书签视图 −
+
+
+    *   点击`窗口 (Window)` 菜单并选择`显示视图 → 其他 (Show View → Other)`。
+
+    *   在过滤器文本框中输入 `Bookmark`。
+
+    *   在`常规 (General)` 下，选择`书签 (Bookmarks)`。
+
+
+    ![Image](img/image00127.jpeg)
+
+
+    *   点击`确定 (OK)`。
+
+
+    ## 使用书签视图
+
+
+    书签视图显示放置在工作区资源中的书签。
+
+
+    ![Image](img/image00128.jpeg)
+
+
+    使用书签视图，你可以通过双击书签或右键点击书签并选择“转到 (Go to)”菜单项来导航到书签。
+
+
+    # 任务管理
+
+
+    ## 管理任务
+
+
+    程序员喜欢在代码中放置 TODO 标记，作为对需要完成的任务的提醒。Java 代码中包含 `TODO` 单词的注释会被识别为任务，并显示在标记栏和任务（Tasks）视图中。
+
+
+    ![Image](img/image00129.jpeg)
+
+
+    可以通过右键点击标记栏并选择`添加任务 (Add Task)`，使用 Eclipse 编辑器将任务与正在编辑的文件关联。在弹出的对话框中，输入任务描述，从优先级下拉列表中选择一个优先级，然后点击`确定
+    (OK)` 按钮。
+
+
+    ![Image](img/image00130.jpeg)
+
+
+    要使用 Eclipse 编辑器删除任务，请右键点击标记栏中的任务图标，并选择`删除任务 (Remove Task)` 菜单项。
+
+
+    ## 打开任务视图
+
+
+    要打开任务视图 −
+
+
+    *   点击`窗口 (Window)` 菜单并选择`显示视图 → 其他 (Show View → Other)`。
+
+    *   在过滤器文本框中输入 `Tasks`。
+
+    *   在`常规 (General)` 下，选择`任务 (Tasks)`。
+
+
+    ![Image](img/image00131.jpeg)
+
+
+    *   点击`确定 (OK)`。
+
+
+    ## 使用任务视图
+
+
+    任务视图可查看所有任务，并添加未与任何资源的任务。
+
+
+    ![Image](img/image00132.jpeg)
+
+
+    它还可以用于 −
+
+
+    *   更改与任务关联的优先级。
+
+    *   将任务标记为已完成。
+
+    *   删除某个任务或所有已完成的任务。
+
+
+    # 安装插件
+
+
+    ## 查找并安装插件
+
+
+    为 Eclipse IDE 提供基础的 Eclipse 平台由插件组成，并设计为可以使用附加插件进行扩展。
+
+
+    有数百个插件可用。每个插件都为 Eclipse 增加了更多功能。你可以通过搜索 Eclipse 市场（`http://marketplace.eclipse.org/`）来查找提供特定功能的插件。例如，你可以找到允许
+    Eclipse 作为 Python IDE 使用的插件。
+
+
+    ![Image](img/image00133.jpeg)
+
+
+    在 Eclipse IDE 内部，你可以使用`Eclipse 市场 (Eclipse Marketplace)`对话框搜索市场，该对话框可以通过点击`帮助
+    (Help)` 菜单并选择`Eclipse Marketplace`来调用。
+
+
+    ![Image](img/image00134.jpeg)
+
+
+    在上面的截图中，要安装 `PyDev-Python IDE for Eclipse`，只需点击`安装 (Install)` 按钮。使用弹出的对话框即可安装插件。
+
+
+    ![Image](img/image00135.jpeg)
+
+
+    你也可以通过从`帮助 (Help)` 菜单访问的`安装新软件 (Install New Software)` 菜单项（`帮助 → 安装新软件`）来安装插件。
+
+
+    ![Image](img/image00136.jpeg)
+
+
+    在这种情况下，你必须知道可以下载插件的远程站点 URL。你可以点击`添加 (Add)` 按钮来提供此 URL。
+
+
+    ![Image](img/image00137.jpeg)
+
+
+    `安装 (install)`对话框显示远程站点可用的插件组件，并允许你安装它们。
+
+
+    ![Image](img/image00138.jpeg)
+
+
+    # 代码模板
+
+
+    ## 使用代码模板
+
+
+    代码模板通过向编辑器中插入代码来减少打字时间。每个代码模板都给出了短的字面量。在编辑器窗口中输入该字面量并按 `Ctrl + Space` 就会弹出一个对话框，从中可以选择与该字面量相关的代码模板。
+
+
+    在 Java 编辑器窗口的方法体内输入 `for` 并点击 `Ctrl + space`，会显示与 `for` 相关的代码模板。
+
+
+    ![Image](img/image00139.jpeg)
+
+
+    选择 `for - iterate over array` 会插入遍历方法体中早早声明的 `depArray` 代码。
+
+
+    另一个实用的代码模板字面量是 `sysout`，它可以插入 `System.out.println()` 方法调用。
+
+
+    ![Image](img/image00140.jpeg)
+
+
+    ## 修改/添加代码模板
+
+
+    你可以使用`偏好 (Preferences)` 对话框添加新的代码模板。通过点击`窗口 (Windows)` 菜单并选择`偏好 (Preferences)`
+    菜单项来打开`偏好`对话框。要找到`模板 (Templates)` 页面，在过滤器文本框中输入 `Templates`。
+
+
+    ![Image](img/image00141.jpeg)
+
+
+    你可以通过阅读 Eclipse 帮助来了解更多关于用于自定义插入代码的变量。要打开帮助窗口，点击`帮助 (Help)` 菜单并选择`帮助 (Help)`。
+
+
+    # 快捷键
+
+
+    ## 快捷键
+
+
+    你可以仅使用键盘导航 Eclipse 用户界面 −
+
+
+    *   使用菜单项的助记符。
+
+    *   使用对话框或视图控件的助记符。
+
+    *   使用工具栏操作的加速。
+
+
+    ![Image](img/image00143.jpeg)
+
+
+    通过 `Ctrl + Shift + L` 调用`快捷键辅助 (Key Assist)` 操作可以显示所有可用快捷键。
+
+
+    ![Image](img/image00144.jpeg)
+
+
+    操作的组合键可以使用`按键 (Keys)` 偏好页面进行更改。许多命令或操作都有快捷键。此偏好页面允许。
+
+
+    例如，要将 `Alt + C` 指定为触发`新建类 (New Class)`对话框的快捷键，在命令列表中选择 `New Class`，导航到`绑定 (Bindings)`文本框，然后从
+    `when` 下拉列表中选择上下文。确保所选按键没有冲突并点击`确定 (OK)` 按钮。
+
+
+    ![Image](img/image00145.jpeg)
+
+
+    现在你可以按 `Alt + C` 打开`新建类 (New Class)` 向导。
+
+
+    # 重启选项
+
+
+    ## 重启 Eclipse
+
+
+    重启选项允许用户重启 Eclipse。要重启 Eclipse，点击`文件 (File)` 菜单并选择`重启 (Restart)` 菜单项。
+
+
+    ![Image](img/image00146.jpeg)
+
+
+    在安装插件后，用户将会被提示重启 Eclipse。如果他们选择现在不重启，以后可以使用重启选项重启 Eclipse。如果 Eclipse 用户界面运行异常，用户可能希望使用此选项重启
+    Eclipse。
+
+
+    # 技巧与心得
+
+
+    技巧 #1 发现快捷键
+
+
+    *   按 `Ctrl + Shift + L` 打开显示所有可用快捷键的小部件。
+
+
+    技巧 #2 – 内容辅助
+
+
+    *   在 Java 编辑器中按 `Ctrl + Space` 查看建议的完成内容。点击 `Ctrl + Space` 之前输入一个或多个字符将缩小列表。
+
+
+    技巧 #3 – 参数提示
+
+
+    *   当光标在方法参数中时，按 `Ctrl + Shift + Space` 查看参数提示列表。
+
+
+    技巧 #4 – 代码完成支持驼峰命名
+
+
+    *   代码完成支持驼峰模式。输入 `NPE` 并点击 `Ctrl + Space` 将建议 `NullPointerException` 和 `NoPermissionException`。
+
+
+    技巧 #5 创建 Getter 和 Setter
+
+
+    *   点击`源 → 生成 Getter 和 Setter` 打开允许你生成 getter 和 setter 方法的向导。
+
+
+    技巧 #6 生成 hashCode() 和 equals() 方法
+
+
+    *   点击`源 → 生成 hashCode() 和 equals()` 为 Java 类生成这些方法。
+
+
+    '
+- fmt: '
+
+    # TIP #7 − ADDING CODE AROUND A BLOCK OF CODE
+
+
+    * Select a block of code and press `Alt+Shift+Z` to see a menu of items like `if
+    statement`, `for loop`, `try/catch` etc that can enclose the selected block of
+    code.
+
+
+    # TIP #8 − LOCATING A MATCHING BRACKET
+
+
+    * Select an opening or closing bracket and press `Ctrl+Shift+P` to find its matching
+    bracket.
+
+
+    # TIP #9 − SMART JAVADOC
+
+
+    * Type `/**` and press `Enter` to automatically addes a Javadoc comment stub.
+
+
+    # TIP #10 − ORGANIZAING IMPORTS
+
+
+    * Press `Ctrl+Shift+O` to organize all the imports.
+
+
+    # TIP #11 − ACTIVATING THE MENU BAR
+
+
+    * Press `F10` to activate the Menu bar.
+
+
+    # TIP #12 − MAKING A VIEW/EDITOR ACTIVE
+
+
+    * Press `Ctrl+F7` to see a list of open views and editor area and switch to one
+    of them.
+
+
+    # Web Browsers
+
+
+    ## Internal Web Browser
+
+
+    The Internal Web Browser view allows you to surf the internet from within the
+    Eclipse Workbench Window. To activate the Internal Web Browser view click on the
+    `Window` and select `Show View → Other`.
+
+
+    In the filter text box of the `Show View` dialog box enter `browser`. From the
+    tree select `Internal Web Browser` and click `OK`.
+
+
+    ![Image](Images/image00147.jpeg)
+
+
+    To navigate to a web page, in the URL text box of the Internal Web Browser view
+    enter a URL for that web page.
+
+
+    ![Image](Images/image00148.jpeg)ss
+
+    '
+  raw: 'TIP #7 − ADDING CODE AROUND A BLOCK OF CODE
+
+
+    *   Select a block of code and press Alt+Shift+Z to see a menu of items like if
+    statement, for loop, try/catch etc that can enclose the selected block of code.
+
+
+    TIP #8 − LOCATING A MATCHING BRACKET
+
+
+    *   Select an opening or closing bracket and press Ctrl+Shift+P to find its matching
+    bracket.
+
+
+    TIP #9 − SMART JAVADOC
+
+
+    *   Type ''/**'' and press Enter to automatically addes a Javadoc comment stub.
+
+
+    TIP #10 − ORGANIZAING IMPORTS
+
+
+    *   Press Ctrl+Shift+O to organize all the imports.
+
+
+    TIP #11 − ACTIVATING THE MENU BAR
+
+
+    *   Press F10 to activate the Menu bar.
+
+
+    TIP #12 − MAKING A VIEW/EDITOR ACTIVE
+
+
+    *   Press Ctrl+F7 to see a list of open views and editor area and switch to one
+    of them.
+
+
+    # Web Browsers
+
+
+    ## Internal Web Browser
+
+
+    The Internal Web Browser view allows you to surf the internet from within the
+    Eclipse Workbench Window. To activate the Internal Web Browser view click on the
+    Window and select Show View → Other.
+
+
+    In the filter text box of the Show View dialog box enter browser. From the tree
+    select Internal Web Browser and click **OK**.
+
+
+    ![Image](Images/image00147.jpeg)
+
+
+    To navigate to a web page, in the URL text box of the Internal Web Browser view
+    enter a URL for that web page.
+
+
+    ![Image](Images/image00148.jpeg)ss'
+  toc: []
+  trans: '
+
+
+    # 提示 #7 − 为代码块添加代码
+
+
+    * 选择一段代码并按 `Alt+Shift+Z` 即可显示菜单，其中包含 `if statement`、`for loop`、`try/catch` 等选项，可用于包裹所选的代码块。
+
+
+    # 提示 #8 − 定位匹配括号
+
+
+    * 选择一个左括号或右括号并按 `Ctrl+Shift+P` 查找与之匹配的括号。
+
+
+    # 提示 #9 − 智能 Javadoc
+
+
+    * 输入 `/**` 并按 `Enter` 自动添加 Javadoc 注释模板。
+
+
+    # 提示 #10 − 组织导入
+
+
+    * 按 `Ctrl+Shift+O` 整理所有导入项。
+
+
+    # 提示 #11 − 激活菜单栏
+
+
+    * 按 `F10` 激活菜单栏。
+
+
+    # 提示 #12 − 使视图/编辑器激活
+
+
+    * 按 `Ctrl+F7` 查看打开的视图和编辑器区域列表，并切换到其中一个。
+
+
+    # Web 浏览器
+
+
+    ## 内部浏览器
+
+
+    内部浏览器视图允许你直接直接在 Eclipse Workbench 窗口内浏览互联网。要激活内部浏览器视图，请点击 `Window` 并选择 `Show View
+    → Other`。
+
+
+    在 `Show View` 对话框的过滤器文本框中输入 `browser`。从树中选择 `Internal Web Browser` 并点击 `OK`。
+
+
+    ![Image](img/image00147.jpeg)
+
+
+    要跳转到网页，在内部浏览器视图的 URL 文本框中输入该网页的 URL。
+
+
+    ![Image](img/image00148.jpeg)ss
+
+
+    '

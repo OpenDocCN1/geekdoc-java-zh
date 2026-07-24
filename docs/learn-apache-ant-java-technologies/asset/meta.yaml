@@ -1,0 +1,10 @@
+name: Learn Apache ANT [Java Technologies]
+name_cn: Learn Apache ANT [Java 技术]
+slug: learn-apache-ant-java-technologies
+toc:
+- - '##'
+  - 好处 (Benefits)
+- - '###'
+  - build.xml
+- - '###'
+  - build.properties

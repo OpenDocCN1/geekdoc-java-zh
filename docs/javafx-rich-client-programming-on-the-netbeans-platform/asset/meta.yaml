@@ -1,0 +1,848 @@
+name: JavaFX Rich Client Programming on the NetBeans Platform
+name_cn: NetBeans 平台 JavaFX 丰富客户端编程
+slug: javafx-rich-client-programming-on-the-netbeans-platform
+toc:
+- - '#'
+  - NetBeans 平台 JavaFX 丰富客户端编程
+- - '#'
+  - 使用 NetBeans GUI 表单设计器
+- - '##'
+  - 程序结构
+- - '###'
+  - 单线程模型
+- - '###'
+  - Listing 2.15 方法 `buildData()` 点击此处查看代码图像
+- - '###'
+  - Listing 2.16 Java 日志与处理程序配置 点击此处查看代码图像
+- - '###'
+  - Listing 2.17 日志输出（XML 格式）点击此处查看代码图像
+- - '###'
+  - Listing 2.18 控制台上的日志消息 点击此处查看代码图像
+- - '##'
+  - 使用 Swing 组件
+- - '###'
+  - JLabel
+- - '###'
+  - JTextField
+- - '###'
+  - JTextArea
+- - '###'
+  - JRadioButton
+- - '###'
+  - JButton
+- - '###'
+  - JTree
+- - '#'
+  - 事件处理器与松散耦合
+- - '##'
+  - 2.4 改进用户体验
+- - '###'
+  - JTextComponent
+- - '##'
+  - 2.5 并发与线程安全
+- - '###'
+  - 线程安全对象
+- - '###'
+  - SwingPropertySupport
+- - '###'
+  - ConcurrentHashMap
+- - '###'
+  - 同步方法
+- - '#'
+  - 添加监听器与线程安全
+- - '###'
+  - 列表 2.31 PersonSwingApp 类 PersonJFrame
+- - '##'
+  - Swing 中的并发
+- - '##'
+  - 2.6 Swing 后台任务
+- - '###'
+  - 引入 SwingWorker
+- - '###'
+  - 测试后台线程
+- - '###'
+  - 并发小提示
+- - '###'
+  - 并发与属性更改事件
+- - '###'
+  - SwingWorker 提示
+- - '###'
+  - 监控 SwingWorker 状态
+- - '####'
+  - 应用程序 PersonSwingApp
+- - '####'
+  - JProgressBar
+- - '###'
+  - 内置进度指示
+- - '##'
+  - 2.7 关键点总结
+- - '##'
+  - 接下来？
+- - '#'
+  - 3. JavaFX 简介
+- - '##'
+  - 你将学习
+- - '##'
+  - 3.1 什么是 JavaFX？
+- - '###'
+  - 历史简介
+- - '###'
+  - 场景图的隐喻
+- - '###'
+  - Import 和 JavaFX
+- - '###'
+  - 应用线性渐变
+- - '###'
+  - JavaFX 和 CSS
+- - '##'
+  - 创建 JavaFX FXML 应用程序
+- - '##'
+  - FXML 与控制器类
+- - '###'
+  - CSS 文件
+- - '##'
+  - 3.3 JavaFX 属性
+- - '###'
+  - 什么是 JavaFX 属性？
+- - '####'
+  - 列表 3.9 访问 JavaFX 属性元数据
+- - '####'
+  - 在 Observable 中使用监听器
+- - '####'
+  - 列表 3.10 注册 JavaFX InvalidationListener
+- - '###'
+  - 绑定
+- - '####'
+  - 单向绑定
+- - '####'
+  - 双向绑定 (Bidirectional Binding)
+- - '####'
+  - 双向绑定不是对称的
+- - '###'
+  - 流 API 与绑定 API (Fluent API and Bindings API)
+- - '###'
+  - 自定义绑定
+- - '##'
+  - 带泛型的 ObjectBinding
+- - '###'
+  - 列表 3.16 带泛型的 ObjectBinding
+- - '##'
+  - 3.4 整合应用
+- - '###'
+  - 列表 3.17 Track.fxml
+- - '###'
+  - 列表 3.18
+- - '####'
+  - 列表 3.19 HBox and Button 节点
+- - '####'
+  - 列表 3.20 RaceTrackController.java
+- - '####'
+  - 列表 3.22 Start/Pause 按钮
+- - '###'
+  - 列表 3.23 较快与较慢的按钮
+- - '##'
+  - 3.5 关键点总结
+- - '###'
+  - 接下来做什么？
+- - '#'
+  - 4. 使用 JavaFX
+- - '##'
+  - 4.1 创建 JavaFX 属性
+- - '###'
+  - 你将学习
+- - '###'
+  - 带有懒求值的 JavaFX 属性
+- - '###'
+  - 对象属性
+- - '###'
+  - 不变属性
+- - '###'
+  - 计算属性
+- - '##'
+  - 属性实现
+- - '###'
+  - 列表 4.6 Person JavaFX 属性 fullname [点击此处查看代码图片]
+- - '###'
+  - equals() 和 hashCode
+- - '###'
+  - 列表 4.7 Person equals() 和 hashCode [点击此处查看代码图片]
+- - '##'
+  - 4.2 在 JavaFX 程序中使用 JavaFX 属性
+- - '###'
+  - 创建 JavaFX FXML 应用程序
+- - '###'
+  - 将 Person.java 添加到应用程序 PersonFXBound
+- - '###'
+  - FXML 标记
+- - '###'
+  - 控制器类
+- - '###'
+  - JavaFX 代码
+- - '##'
+  - 4.3 可观察集合 (Observable Collections)
+- - '##'
+  - 4.4 JavaFX Applications
+- - '###'
+  - Program Structure
+- - '#'
+  - Scene Builder 与 FXML
+- - '###'
+  - 列表 4.17 Scene Builder 生成的 FXML
+- - '#'
+  - JavaFX 控件
+- - '##'
+  - Label
+- - '###'
+  - TextField
+- - '###'
+  - TextArea
+- - '###'
+  - RadioButton
+- - '###'
+  - Button
+- - '###'
+  - TreeView
+- - '###'
+  - JavaFX Controller 类
+- - '####'
+  - Listing 4.18 PersonFXMLController—控制器类 点击此处查看代码图像
+- - '####'
+  - 4.19 Controller initialize() 方法 点击此处查看图像
+- - '#'
+  - TreeView 选择监听器
+- - '###'
+  - Listing 4.21 用于 TreeView 模型选择属性的 ChangeListener
+- - '###'
+  - Listing 4.22 绑定与清空表单编辑器
+- - '###'
+  - Listing 4.23 控制 onKeyReleased 和 RadioButton 选择处理程序
+- - '###'
+  - Listing 4.24 Update 按钮动作处理程序
+- - '###'
+  - 列表 4.25 针对 FamilyTreeManager Map 的 MapChangeListener 点击查看代码图像
+- - '##'
+  - 关于松耦合的说明
+- - '##'
+  - 4.5 并发与线程安全
+- - '###'
+  - JavaFX 中的并发
+- - '####'
+  - Platform.runLater()
+- - '####'
+  - Platform.isFXApplicationThread()
+- - '###'
+  - 可观察属性与线程安全
+- - '###'
+  - 列表 4.26 修改后的 MapChangeListener 点击查看代码图像
+- - '##'
+  - 4.6 JavaFX 后台任务
+- - '###'
+  - Worker 和 Task
+- - '###'
+  - Worker.State 值
+- - '###'
+  - 只读的 JavaFX 属性
+- - '###'
+  - 线程安全的 Task 方法
+- - '###'
+  - 程序 PersonFXMLMultiThread：在后台线程中更新 Person 数据
+- - '###'
+  - 整数计数器与线程安全
+- - '###'
+  - 列表 4.29 Controller 类的更改：声明和 initialize() 点击查看代码图像
+- - '###'
+  - 列表 4.30 方法 updateButtonAction() 点击查看代码图像
+- - '#'
+  - 更新任务完成：Bart Seymour
+- - '##'
+  - 4.7 监控后台任务
+- - '###'
+  - 使用方法 updateValue()
+- - '###'
+  - ProgressBar
+- - '##'
+  - 安全地更新 UI
+- - '###'
+  - 扩展 Task
+- - '###'
+  - Listing 4.33 方法 `processAllButtonAction()`
+- - '###'
+  - Listing 4.34 方法 `resetUI()`
+- - '##'
+  - 更新只读 JavaFX 属性
+- - '###'
+  - 发布部分结果
+- - '###'
+  - Listing 4.35 为 FXML 添加控件
+- - '###'
+  - Listing 4.36 `ProcessAllTask`
+- - '####'
+  - 代码列表 4.37 全部处理按钮
+- - '###'
+  - 从后台任务更新 JavaFX 场景图
+- - '####'
+  - 图 4.18 PersonFXMLAppWorker3：在 UI 中运行带有部分结果的后台任务
+- - '####'
+  - 代码列表 4.38 用于后台任务 UI 的 FXML 控件
+- - '####'
+  - 4.39 ClassAllTask
+- - '##'
+  - 4.8 关键点总结
+- - '#'
+  - 5. 模块化简介
+- - '##'
+  - 你将学到
+- - '##'
+  - 5.1 模块化架构
+- - '###'
+  - 模块
+- - '###'
+  - NetBeans Platform 运行时容器
+- - '##'
+  - 5.2 创建 NetBeans Platform 应用
+- - '###'
+  - NetBeans Platform 项目
+- - '##'
+  - 5.3 创建模块
+- - '###'
+  - 创建 NetBeans 模块
+- - '###'
+  - 创建其他模块
+- - '##'
+  - 5.4 配置模块
+- - '##'
+  - 5.5 注册服务提供者
+- - '###'
+  - 全局查找 (Global Lookup)
+- - '###'
+  - 注解 @ServiceProvider
+- - '##'
+  - 5.6 配置选择窗口
+- - '###'
+  - NetBeans Platform 窗口
+- - '###'
+  - 将 Swing UI 代码迁移到 TopComponent
+- - '###'
+  - Lookup API
+- - '###'
+  - 作为服务提供者的 Lookup
+- - '####'
+  - Lookup 提示
+- - '#'
+  - 将 Lookup 作为对象仓库
+- - '#'
+  - 配置 TopComponent
+- - '##'
+  - 配置类变量和构造函数
+- - '##'
+  - 监听器
+- - '###'
+  - '`ViewerTopComponent` 中添加 `SelectionListener`'
+- - '####'
+  - InstanceContent 提示
+- - '####'
+  - 配置 TopComponent 生命周期方法
+- - '####'
+  - 辅助方法
+- - '##'
+  - 5.7 带有表单编辑的窗口
+- - '###'
+  - 设置模块
+- - '###'
+  - 创建窗口
+- - '###'
+  - 配置 PersonEditor UI
+- - '##'
+  - 5.8 模块生命周期
+- - '###'
+  - 使用 OnStart
+- - '###'
+  - 使用 OnStop
+- - '##'
+  - 5.9 我们目前了解
+- - '##'
+  - 5.10 关键点总结
+- - '#'
+  - 6 JavaFX 集成
+- - '##'
+  - 6.1 JavaFX 和 NetBeans Platform
+- - '###'
+  - 8 增强
+- - '####'
+  - 创建 NetBeans Platform 应用程序
+- - '####'
+  - 创建 模块
+- - '##'
+  - 6.2 通信策略
+- - '##'
+  - 6.3 与 NetBeans 平台
+- - '###'
+  - 创建 NetBeans 平台应用程序
+- - '###'
+  - 创建 模块
+- - '###'
+  - 配置带有有包的模块
+- - '##'
+  - 6.4 关键点总结
+- - '###'
+  - 使用 JavaFX 选择窗口
+- - '###'
+  - 添加 FXML 和代码
+- - '###'
+  - 配置 FXML
+- - '###'
+  - 配置 控制器
+- - '###'
+  - 配置 TopComponent
+- - '#'
+  - 7. 节点管理器
+- - '##'
+  - 你将学到
+- - '###'
+  - 7.2 资源视图
+- - '###'
+  - 7.3 资源视图 (Explorer Views)
+- - '###'
+  - 快速搜索 (Quick Search)
+- - '###'
+  - BeanTreeView
+- - '###'
+  - OutlineView
+- - '###'
+  - 主详情视图 (Master-Detail)
+- - '###'
+  - 使用 IconView 的主详情视图
+- - '###'
+  - 使用 MenuView 的主详情视图
+- - '###'
+  - 使用 ChoiceView 的主详情视图
+- - '###'
+  - PropertySheet
+- - '##'
+  - 7.4 选择功能
+- - '###'
+  - 修改 PersonNode 属性表
+- - '###'
+  - 修改 GenderTopComponent 属性表
+- - '###'
+  - 为您的应用程序添加功能
+- - '###'
+  - 修改 GenderTopComponent 中的 OutlineView
+- - '###'
+  - 创建 SelectionHistory
+- - '###'
+  - 创建并配置 SelectionHistoryTopComponent
+- - '###'
+  - 列表 7.27 监听 Global Lookup 的更改
+- - '##'
+  - 7.5 要点总结
+- - '#'
+  - 8. NetBeans Platform 窗口系统
+- - '##'
+  - 8.1 框架概述
+- - '###'
+  - 窗口布局
+- - '###'
+  - MultiView 窗口
+- - '###'
+  - TopComponents 窗口操作
+- - '##'
+  - 8.2 TopComponent 基础
+- - '###'
+  - 构建示例
+- - '###'
+  - TopComponent Java 代码
+- - '##'
+  - 8.3 窗口持久化
+- - '##'
+  - RoleExample 应用程序基于角色的 TopComponent
+- - '###'
+  - 凭据检查与角色分配
+- - '###'
+  - 凭据检查与角色分配
+- - '###'
+  - LoginComponent
+- - '##'
+  - 8.11 关键点总结
+- - '#'
+  - 9. Action 框架
+- - '##'
+  - 你将学习
+- - '##'
+  - 菜单系统配置
+- - '##'
+  - 始终可用的操作
+- - '###'
+  - 添加始终可用的操作
+- - '###'
+  - 新操作类别
+- - '##'
+  - 构建自定义 JPanel 表单
+- - '##'
+  - 实现 ActionListener
+- - '##'
+  - 2. 操作与查找（Actions and Lookup）
+- - '###'
+  - 回调操作（Callback Actions）
+- - '##'
+  - 创建回退操作（Fallback Action）
+- - '###'
+  - 创建并安装回调动作器
+- - '##'
+  - 上下文感知操作
+- - '###'
+  - NetBeans 平台能力模式
+- - '###'
+  - 实现上下文感知操作
+- - '###'
+  - 创建能力模块
+- - '###'
+  - 创建能力接口
+- - '###'
+  - 将模块包设为公共
+- - '##'
+  - 5. NetBeans 显示 GUI 注册对话框
+- - '###'
+  - Nodes类别中注册此新操作
+- - '###'
+  - 位于 File 菜单中，并在工具栏的 Save All 图标之前
+- - '###'
+  - 保持其他选项未勾选
+- - '###'
+  - 图 9.17 注册上下文感知操作
+- - '###'
+  - 动作类别
+- - '##'
+  - 6. 显示 显示名称、图标和位置对话框
+- - '###'
+  - Class Name 指定 NodeCalendarAction
+- - '###'
+  - Display Name 指定 Calendar
+- - '###'
+  - 图标文件指定 calendar.png
+- - '###'
+  - 图 9.18 指定名称、图标和位置
+- - '##'
+  - 7. NetBeans 创建 NodeCalendarAction.java 文件
+- - '###'
+  - 文件使用 CalendarCapability 作为其上下文类型
+- - '###'
+  - 如列表 9.8 所示实现 actionPerformed() 方法
+- - '###'
+  - 我们还注册了快捷键“Meta-E”（E 代表 Event）来调用 NodeCalendar 操作
+- - '###'
+  - 请注意，此快捷键仅在选中 PersonNode 时激活
+- - '##'
+  - 修改 GenderViewer 模块
+- - '##'
+  - 在 PersonNode 中实现 CalendarCapability
+- - '###'
+  - 配置节点的首选动作
+- - '###'
+  - 列表 9.13 NodeCalendarAction.java—选择多个
+- - '###'
+  - 列表 9.14 GenderNode.java—带有 CalendarCapability
+- - '##'
+  - 9.3 编辑节点
+- - '###'
+  - 属性表（属性）
+- - '##'
+  - 8.4 TopComponent 客户端属性
+- - '##'
+  - 8.5 创建非单例 TopComponents
+- - '##'
+  - 8.6 窗口生命周期管理
+- - '###'
+  - 激活了窗口管理器
+- - '###'
+  - 使用 OnShowing
+- - '##'
+  - 8.7 TopComponent 模式
+- - '###'
+  - 布局提示
+- - '##'
+  - 8.8 窗口组
+- - '###'
+  - 窗口组示例
+- - '###'
+  - XML 文件
+- - '###'
+  - 测试窗口组行为
+- - '##'
+  - 8.9 窗口布局
+- - '###'
+  - 创建 TopComponents
+- - '###'
+  - 只读窗口布局
+- - '###'
+  - 隐藏空编辑器区域
+- - '###'
+  - 没有任何模式是孤岛
+- - '##'
+  - 8.10 窗口布局角色
+- - '#'
+  - 10. 构建 CRUD
+- - '##'
+  - 你将学习到
+- - '##'
+  - 10.1 创建-读取-删除应用程序
+- - '###'
+  - 定义能力
+- - '###'
+  - 创建感知的操作
+- - '###'
+  - 实现能力
+- - '###'
+  - 使用监听器
+- - '###'
+  - 在这里中刷新
+- - '###'
+  - 创建一个类
+- - '###'
+  - 实现能力
+- - '###'
+  - 10.2 数据库配置
+- - '###'
+  - 布局（布局）
+- - '##'
+  - 10.2 使用数据库进行 CRUD
+- - '###'
+  - 创建数据库
+- - '###'
+  - 模块
+- - '###'
+  - EclipseLink 模块
+- - '###'
+  - 数据库服务器
+- - '###'
+  - 创建数据库
+- - '###'
+  - 实现 FamilyTreeManager
+- - '###'
+  - 创建新模块
+- - '###'
+  - 实体类
+- - '###'
+  - persistence.xml
+- - '##'
+  - 10.3 监控文件更改
+- - '###'
+  - 列表 10.16 PersonEditor.java—方法 canClose()
+- - '###'
+  - 列表 10.17 ViewCapability 类
+- - '##'
+  - 10.4 关键点总结
+- - '#'
+  - 11. 索引
+- - '#'
+  - 12. 向导 (Wizards)
+- - '##'
+  - 你将学到
+- - '##'
+  - 12.1 向导概述
+- - '###'
+  - 12.2 向导向导
+- - '###'
+  - 构建示例
+- - '###'
+  - 一个简易向导
+- - '###'
+  - 注册向导
+- - '###'
+  - 调用数字序列
+- - '###'
+  - 新序列向导：面板 1
+- - '###'
+  - 12.3 向导输入
+- - '###'
+  - 使用表单设计器向导
+- - '###'
+  - 视觉面板添加组件
+- - '###'
+  - NumberVisualPanel.java
+- - '###'
+  - 12.4 方法 performed—版本 I
+- - '###'
+  - 其他向导协调输入
+- - '###'
+  - 第二个数字的验证
+- - '###'
+  - 简单验证
+- - '##'
+  - 准备使用验证库
+- - '##'
+  - 使用 Simple Validation 库
+- - '##'
+  - 12.6 提前结束选项
+- - '##'
+  - 12.7 异步验证 (Asynchronous Validation)
+- - '##'
+  - 12.8 动态序列
+- - '###'
+  - PizzaWizard 示例应用程序
+- - '###'
+  - 构建动态步骤向导
+- - '###'
+  - PizzaWizardIterator
+- - '###'
+  - 向导贴士 (Wizard Tip)
+- - '##'
+  - 12.9 向导实例化迭代器
+- - '###'
+  - WizardDescriptor.InstantiatingIterator
+- - '###'
+  - WizardDescriptor.AsynchronousInstantiatingIterator
+- - '###'
+  - WizardDescriptor.ProgressInstantiatingIterator
+- - '##'
+  - 12.10 关键点总结
+- - '#'
+  - 13. 文件系统
+- - '##'
+  - 13.1 文件系统 API
+- - '##'
+  - 13.2 文件系统 API 概述
+- - '###'
+  - 探索 FileSystem API
+- - '###'
+  - 创建 NetBeans 应用程序
+- - '###'
+  - 添加操作
+- - '###'
+  - 清空并选择输出窗口
+- - '###'
+  - 创建文件夹
+- - '###'
+  - 在文件夹中获取或创建文件
+- - '###'
+  - 写入和读取文件
+- - '##'
+  - 文件系统 API 有用方法
+- - '##'
+  - 13.3 监控文件更改
+- - '###'
+  - FileObject 属性
+- - '###'
+  - Favorites 窗口
+- - '###'
+  - 添加模块 ChangeDetector
+- - '###'
+  - 窗口
+- - '###'
+  - 添加模块依赖
+- - '###'
+  - 配置 TopComponent
+- - '###'
+  - 添加 TopComponent 代码
+- - '###'
+  - 在窗口中更新和显示层级结构
+- - '###'
+  - 实现 FileChangeListener
+- - '###'
+  - 使用“收藏”窗口尝试 ChangeDetector
+- - '##'
+  - 13.4 在应用程序中包含文件
+- - '###'
+  - 创建模块 AppConfigFile
+- - '###'
+  - 在模块中安装文件
+- - '###'
+  - 注册操作
+- - '###'
+  - 添加模块依赖项
+- - '###'
+  - 实现操作
+- - '##'
+  - 剖析 Layer 文件
+- - '#'
+  - 探索系统文件系统
+- - '###'
+  - 创建模块 FileSystemViewer
+- - '###'
+  - 创建 View System FileSystem 动作
+- - '###'
+  - 添加模块依赖
+- - '###'
+  - 实现动作
+- - '##'
+  - 使用 Layer 文件进行模块间通信
+- - '###'
+  - FileObject 的 MIME 类型与查找
+- - '###'
+  - DataObject 工厂与 DataObject 查找
+- - '###'
+  - 从 DataObjects 访问 FileObjects
+- - '###'
+  - DataObjects 与 Nodes
+- - '###'
+  - 使用 DataNode 和 Lookup
+- - '###'
+  - Output Window
+- - '#'
+  - 14.2 创建新文件类型
+- - '##'
+  - 创建 NetBeans Platform 应用程序和模块
+- - '###'
+  - 添加 Favorites 和 Templates 模块
+- - '##'
+  - 创建新文件类型
+- - '###'
+  - 创建并编辑新的 FTR 文件
+- - '###'
+  - 根据内容提供子节点
+- - '##'
+  - 14.3 使用 MultiView 窗口
+- - '###'
+  - 使用 Visual Library
+- - '###'
+  - 构建 Scene 并添加 Widgets
+- - '###'
+  - 列表 14.15 FamilyTreeVisualElement—添加小部件
+- - '#'
+  - 创建工具栏操作以向视图添加小组件
+- - '###'
+  - 添加 FamilyTreeVisualFXElement
+- - '###'
+  - 创建 JavaFX FXML、控制器类和 CSS 文件
+- - '###'
+  - 配置 FamilyTreeVisualElement.java
+- - '###'
+  - 配置 FXML、控制器类文件
+- - '###'
+  - 14.24 FtrVisualController—字段与鼠标拽
+- - '###'
+  - 14.25 FtrVisualController—从字符串内容
+- - '##'
+  - 14.4 创建基于 XML 的类型
+- - '###'
+  - 14.21 定义特殊 XML文件的 FamilyTreeApp
+- - '###'
+  - 14.22 XML 文件显示了关于信息
+- - '###'
+  - 14.23 视图中的 FamilyTreeApp 和模块
+- - '###'
+  - 创建新的 XML 类型
+- - '###'
+  - 视图中的图标
+- - '###'
+  - 14.25 视图中的图标和对话框
+- - '###'
+  - 14.26 节点的布局
+- - '###'
+  - 14.27 监听 Global Lookup 的更改
+- - '###'
+  - 14.28 节点的布局
+- - '###'
+  - 14.29 TrashNode.java—处理拖动
+- - '###'
+  - 14.30 TrashNode.java—处理拖动
+- - '###'
+  - 14.35 TrashNode.java—处理拖动
+- - '###'
+  - 14.36 TrashNode.java—处理拖动
+- - '###'
+  - 14.37 全部处理按钮
+- - '###'
+  - 14.38 用于后台任务 UI 的 FXML 控件
+- - '###'
+  - 14.39 ClassAllTask

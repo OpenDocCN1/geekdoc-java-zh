@@ -1,0 +1,5130 @@
+<p><img src="image8.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="image8.jpg" class="class9" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div id="part0001.xhtml_lMgFRRDpRtGIftZBV7KV3A1820" class="class16">
+About the Author
+</div>
+<div class="class18">
+Paul Watson is a technology enthusiast and has massive experience in
+various technologies like web application development, automation
+testing, build automation, continuous integration and deployment
+technologies. He has worked on most of the technology stacks.<br />
+He has hands on experience on UFT, LeanFT, Selenium and Appium. He has
+used testing frameworks like JUnit, TestNG, Cucumber with Selenium. He
+has also worked on Struts, Spring, Bootstratp, Angular JS.  
+</div>
+<div class="class20">
+His hobbies include travelling to new tourist places, watching
+basketball, cricket and learning latest technological stuff.
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div id="part0002.xhtml_toc1_A_special_note_of_Thanks_to_My_Wife"
+class="class27">
+A special note of Thanks to My Wife
+</div>
+<div class="class29">
+I would like to dedicate this book to my lovely wife for loving me so
+much and helping me write this book. Without her support, this book
+would not have been a reality.
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div id="part0003.xhtml_toc2_Who_this_book_is_for" class="class27">
+Who this book is for
+</div>
+<div class="class29">
+This book is for automation engineers who want to learn LeanFT to
+automate the web and windows applications in Java.
+</div>
+<div>
+It is assumed that reader has basic programming skills in Java language.
+Whether you are a beginner or an experienced developer, this book will
+help you master the skills on LeanFT.<br />
+
+</div>
+<div class="class20">
+The book starts with introduction of LeanFT and then dives into key
+concepts as mentioned below.
+</div>
+<div class="class41">
+Supported applications,Installation ,LeanFT settings,Core Concepts,New
+LeanFT project in IntelliJ IDEA ,LeanFT Project in Eclipse,Object
+Identification and Management ,Automating Web applications, Automating
+windows applications,Synchronization,Assertions and Reports, LeanFT
+Frameworks,Converting the UFT Object Repository to Application models in
+LeanFT,Integrating the LeanFT tests with CI servers like <a
+href="http://www.softpost.org/bamboo/adding-maven-task-in-bamboo/">Bamboo</a>
+, <a
+href="http://www.softpost.org/jenkins/creating-and-configuring-the-builds-in-jenkins/">Jenkins </a>
+and <a
+href="http://www.softpost.org/teamcity/build-steps-for-maven-project-in-teamcity/">TeamCity</a>
+, Challenges and Solutions,LeanFT common issues and solutions,Comparing
+LeanFT with other tools,LeanFT Java References.
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div class="class48">
+Table of Contents
+</div>
+<div id="part0004.xhtml_Table_of_Contents" class="class50">
+<a href="#part0001.xhtml" class="class1891">About the Author</a>
+</div>
+<div class="class50">
+<a href="#part0002.xhtml" class="class1891">A special note of Thanks to
+My Wife</a>
+</div>
+<div class="class50">
+<a href="#part0003.xhtml" class="class1891">Who this book is for</a>
+</div>
+<div class="class50">
+<a href="#part0005.xhtml" class="class1891">1. Introduction</a>
+</div>
+<div class="class50">
+<a href="#part0006.xhtml" class="class1891">2. Supported
+applications</a>
+</div>
+<div class="class50">
+<a href="#part0007.xhtml" class="class1891">3. Installation</a>
+</div>
+<div class="class57">
+<a
+href="#part0007.xhtml_toc5_3.1_Installation_of_LeanFT_and_plugins_for_IDEs"
+class="class1891">3.1 Installation of LeanFT and plugins for IDEs</a>
+</div>
+<div class="class57">
+<a href="#part0007.xhtml_toc6_3.2_Installing_browser_Extensions"
+class="class1891">3.2 Installing browser Extensions</a>
+</div>
+<div class="class50">
+<a href="#part0008.xhtml" class="class1891">4. Getting Started</a>
+</div>
+<div class="class57">
+<a href="#part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1829"
+class="class1891">4.1 LeanFT settings</a>
+</div>
+<div class="class57">
+<a href="#part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1830"
+class="class1891">4.2 License types in LeanFT</a>
+</div>
+<div class="class50">
+<a href="#part0009.xhtml" class="class1891">5. Core Concepts</a>
+</div>
+<div class="class57">
+<a href="#part0009.xhtml_toc11_5.1_Object_identification_Center"
+class="class1891">5.1 Object identification Center</a>
+</div>
+<div class="class57">
+<a href="#part0009.xhtml_toc12_5.2_Understanding_LeanFT_SDK_API"
+class="class1891">5.2 Understanding LeanFT SDK API</a>
+</div>
+<div class="class50">
+<a href="#part0010.xhtml" class="class1891">6. New LeanFT project in
+IntelliJ IDEA</a>
+</div>
+<div class="class57">
+<a href="#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1835"
+class="class1891">6.1 Installing the LeanFT jar files in
+Maven Repository</a>
+</div>
+<div class="class57">
+<a href="#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1836"
+class="class1891">6.2 Creating LeanFT Maven Project</a>
+</div>
+<div class="class57">
+<a href="#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1837"
+class="class1891">6.3 Creating LeanFT Project with Gradle and TestNG</a>
+</div>
+<div class="class57">
+<a href="#part0010.xhtml_toc17_6.4_LeanFT_Properties"
+class="class1891">6.4 LeanFT Properties</a>
+</div>
+<div class="class57">
+<a href="#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1839"
+class="class1891">6.5 Setting up LeanFT project in IntelliJ IDEA</a>
+</div>
+<div class="class50">
+<a href="#part0011.xhtml" class="class1891">7. LeanFT Project in
+Eclipse</a>
+</div>
+<div class="class57">
+<a
+href="#part0011.xhtml_toc20_7.1_Creating_maven_project_with_JUnit_with_LeanFT_in_Eclipse"
+class="class1891">7.1 Creating maven project with JUnit with LeanFT in
+Eclips<span id="part0004.xhtml_page_4"></span> e</a>
+</div>
+<div class="class57">
+<a href="#part0011.xhtml_lMgFRRDpRtGIftZBV7KV3A1842"
+class="class1891">7.2 Creating maven project with TestNG in Eclipse</a>
+</div>
+<div class="class50">
+<a href="#part0012.xhtml" class="class1891">8. Object Identification and
+Management</a>
+</div>
+<div class="class57">
+<a href="#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1844"
+class="class1891">8.1 Description programming</a>
+</div>
+<div class="class57">
+<a href="#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1845"
+class="class1891">8.2 Application model</a>
+</div>
+<div class="class57">
+<a href="#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1846"
+class="class1891">8.3 Using regular expression in property values</a>
+</div>
+<div class="class50">
+<a href="#part0013.xhtml" class="class1891">9. Automating Web
+applications</a>
+</div>
+<div class="class57">
+<a href="#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1848"
+class="class1891">9.1 First web application test</a>
+</div>
+<div class="class57">
+<a
+href="#part0013.xhtml_toc28_9.2_Identifying_the_Web_elements_using_XPATH_and_CSS"
+class="class1891">9.2 Identifying the Web elements using
+XPATH and CSS</a>
+</div>
+<div class="class57">
+<a
+href="#part0013.xhtml_toc29_9.3_Identifying_objects_using_Visual_Relational_Identifiers___VRI"
+class="class1891">9.3 Identifying objects using Visual Relational
+Identifiers – VRI</a>
+</div>
+<div class="class57">
+<a href="#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1851"
+class="class1891">9.4 Handling embedded browser control in Windows
+app</a>
+</div>
+<div class="class57">
+<a href="#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1852"
+class="class1891">9.5 Firing events on Web Elements using LeanFT</a>
+</div>
+<div class="class57">
+<a href="#part0013.xhtml_toc32_9.6_Executing_JavaScript_in_web_page"
+class="class1891">9.6 Executing JavaScript in web page</a>
+</div>
+<div class="class50">
+<a href="#part0014.xhtml" class="class1891">10. Automating windows
+applications</a>
+</div>
+<div class="class57">
+<a href="#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1855"
+class="class1891">10.1 Automating standard windows application</a>
+</div>
+<div class="class57">
+<a href="#part0014.xhtml_toc35_10.2_Automating_Java_Application"
+class="class1891">10.2 Automating Java Application</a>
+</div>
+<div class="class57">
+<a href="#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1857"
+class="class1891">10.3 Automating WPF applications</a>
+</div>
+<div class="class57">
+<a href="#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1858"
+class="class1891">10.4 Automating SAP Application</a>
+</div>
+<div class="class50">
+<a href="#part0015.xhtml" class="class1891">11. Synchronization</a>
+</div>
+<div class="class50">
+<a href="#part0016.xhtml" class="class1891">12. Assertions and
+Reports</a>
+</div>
+<div class="class57">
+<a href="#part0016.xhtml_lMgFRRDpRtGIftZBV7KV3A1861"
+class="class1891">12.1 Assertions in LeanFT</a>
+</div>
+<div class="class57">
+<a
+href="#part0016.xhtml_toc41_12.2_Generating_reports_with_screenshots_and_recordings"
+class="class1891">12.2 Generating reports with screenshots and
+recording<span id="part0004.xhtml_page_5"></span> s</a>
+</div>
+<div class="class50">
+<a href="#part0017.xhtml" class="class1891">13. LeanFT Frameworks</a>
+</div>
+<div class="class57">
+<a href="#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1864"
+class="class1891">13.1 LeanFT with Cucumber</a>
+</div>
+<div class="class57">
+<a href="#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1865"
+class="class1891">13.2 Keyword Driven frameworks</a>
+</div>
+<div class="class57">
+<a href="#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1866"
+class="class1891">13.3 Data Driven Frameworks</a>
+</div>
+<div class="class50">
+<a href="#part0018.xhtml" class="class1891">14. Converting the UFT
+Object Repository to Application models in LeanFT</a>
+</div>
+<div class="class50">
+<a href="#part0019.xhtml" class="class1891">15. Integrating the LeanFT
+tests with CI servers</a>
+</div>
+<div class="class57">
+<a href="#part0019.xhtml_toc48_15.1_Adding_maven_task_in_Bamboo"
+class="class1891">15.1 Adding maven task in Bamboo</a>
+</div>
+<div class="class57">
+<a
+href="#part0019.xhtml_toc49_15.2_Creating_and_Configuring_the_builds_in_Jenkins"
+class="class1891">15.2 Creating  and Configuring the builds in
+Jenkins</a>
+</div>
+<div class="class57">
+<a
+href="#part0019.xhtml_toc50_15.3_Build_steps_for_Maven_project_in_TeamCity"
+class="class1891">15.3 Build steps for Maven project in TeamCity</a>
+</div>
+<div class="class50">
+<a href="#part0020.xhtml" class="class1891">16. Challenges and
+Solutions</a>
+</div>
+<div class="class57">
+<a href="#part0020.xhtml_toc52_16.1_Challenges_of_LeanFT_automation"
+class="class1891">16.1 Challenges of LeanFT automation</a>
+</div>
+<div class="class57">
+<a
+href="#part0020.xhtml_toc53_16.2_Working_with_third_party_objects_using"
+class="class1891">16.2 Working with third party objects using</a>
+</div>
+<div class="class57">
+<a href="#part0020.xhtml_lMgFRRDpRtGIftZBV7KV3A1875"
+class="class1891">Native Object properties and methods</a>
+</div>
+<div class="class50">
+<a href="#part0021.xhtml" class="class1891">17. LeanFT common issues
+and solutions</a>
+</div>
+<div class="class50">
+<a href="#part0022.xhtml" class="class1891">18. Comparing LeanFT with
+other tools</a>
+</div>
+<div class="class57">
+<a href="#part0022.xhtml_lMgFRRDpRtGIftZBV7KV3A1878"
+class="class1891">18.1 Difference between HP UFT and LeanFT</a>
+</div>
+<div class="class57">
+<a
+href="#part0022.xhtml_toc58_18.2_Comparison_of_LeanFT_with_Selenium_and_Ranorex"
+class="class1891">18.2 Comparison of LeanFT with Selenium and
+Ranorex</a>
+</div>
+<div>
+<a href="#part0023.xhtml" class="class1891">19. LeanFT Java
+References</a>
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml_toc3_1._Introduction" class="class118">
+1. Introduction
+</div>
+<div class="class29">
+LeanFT stands for Lean Functional testing. This is a tool developed by
+HP and very similar to the Ranorex.
+</div>
+<div class="class29">
+Key points to note about LeanFT are given below.
+</div>
+<ol>
+<li>It's a licensed tool.</li>
+<li>Developed by HP in 2015.</li>
+<li>It's light version of UFT (QTP).</li>
+<li>With LeanFT, you can write tests in .Net language as well as
+Java.</li>
+<li>LeanFT plugin are available for Visual Studio and Eclipse.</li>
+<li>LeanFT uses description programming as well as Application models to
+identify the objects.</li>
+</ol>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml_lMgFRRDpRtGIftZBV7KV3A1824" class="class136">
+<span class="class1916">2.</span> <a
+href="http://www.softpost.org/automation-testing/leanft-with-c-net/supported-applications-by-leanft/"
+class="class1917">Supported applications</a>
+</div>
+<div class="class29">
+LeanFT supports below types of applications.
+</div>
+<ol>
+<li>Web applications on IE, Chrome, Firefox, Microsoft Edge</li>
+<li>Windows application - WPF, Silverlight and more</li>
+<li>SAP applications</li>
+<li>Java applications</li>
+<li>Standard windows and forms</li>
+</ol>
+<div class="class29">
+In fact, all applications supported by UFT (QTP) are also supported by
+LeanFT.
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml_lMgFRRDpRtGIftZBV7KV3A1825" class="class151">
+3. Installation
+</div>
+<div
+id="part0007.xhtml_toc5_3.1_Installation_of_LeanFT_and_plugins_for_IDEs"
+class="class153">
+3.1 Installation of LeanFT and plugins for IDEs
+</div>
+<div class="class41">
+First visit <a
+href="https://saas.hpe.com/en-us/software/leanft">https://saas.hpe.com/en-us/software/leanft </a>
+and download the trail version of LeanFT.
+</div>
+<div class="class29">
+Before starting the installation process of LeanFT, ensure below things
+</div>
+<ol>
+<li>You have a node.js and IDE tools (Visual Studio, IntelliJ IDEA,
+Eclipse) already installed on your system.</li>
+<li>Anti-virus software is disabled</li>
+</ol>
+<div class="class41">
+At the time of installation, you will choose which plugins to be
+installed.<br />
+By default, LeanFT is installed at C:\Program Files
+(x86)\HP\LeanFT<br />
+Once installed, start the LeanFT engine (from installation directory or
+from Start menu of Windows). By default, LeanFT service runs on port
+5095
+</div>
+<div class="class29">
+Below screen shot shows the installation options during installation
+process. Please select full installation with visual studio and Eclipse
+options checked.
+</div>
+<div class="class164-1">
+<img src="image163.jpg" id="page_9" class="class164-0" />
+</div>
+<div class="class29">
+If you have got IntelliJ installed on your system, you will see below
+screen. Just select the checkbox next to IntelliJ IDEA to install the
+LeanFT plugin for IntelliJ IDEA.
+</div>
+<div class="class169-0">
+<img src="image168.jpg" id="page_10" class="class169-1" />
+</div>
+<div class="class171">
+LeanFT plugins
+</div>
+<div class="class29">
+After installation of LeanFT, start the runtime engine as shown in below
+image. By default, engine runs on the port 5095.
+</div>
+<div class="class176-1">
+<img src="image175.jpg" id="page_11" class="class176-0" />
+</div>
+<div id="part0007.xhtml_toc6_3.2_Installing_browser_Extensions"
+class="class178">
+3.2 Installing browser Extensions
+</div>
+<div class="class29">
+After installation of LeanFT, you can view the browser extension files
+at below location in LeanFT installation directory.
+</div>
+<div class="class183-0">
+<img src="image182.jpg" class="class183-1" />
+</div>
+<div class="class171">
+Browser extensions for LeanFT
+</div>
+<div class="class29">
+Just drag and drop the extension files on the browsers. Browser will
+install these extensions when you drop these extension files on it.
+</div>
+<div class="class29">
+Without installing and enabling these extensions in browsers, you will
+not be able to automate the web application.
+</div>
+<div class="class29">
+Below image shows the LeanFT extension enabled in chrome browser.
+</div>
+<div class="class191-0">
+<img src="image190.jpg" class="class191-1" />
+</div>
+<div class="class171">
+LeanFT extension in Chrome
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml_toc10_4._Getting_Started" class="class151">
+4. Getting Started
+</div>
+<div id="part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1829" class="class153">
+4.1 LeanFT settings
+</div>
+<div class="class29">
+You can view and edit the LeanFT settings from within IntelliJ IDEA IDE
+as shown in below image.
+</div>
+<div class="class204-0">
+<img src="image203.jpg" class="class204-1" />
+</div>
+<div class="class171">
+LeanFT Engine and Object Identification Settings
+</div>
+<div class="class209-1">
+<img src="image208.jpg" id="page_14" class="class209-0" />
+</div>
+<div class="class171">
+Add-ins in LeanFT
+</div>
+<div class="class216">
+<a
+href="http://www.softpost.org/wp-content/uploads/2016/07/Engine-connection-and-object-synchronization-timeout-in-LeanFT.png"><img
+src="image214.jpg" id="page_15" class="class215" /></a>
+</div>
+<div class="class171">
+Engine connection and object synchronization timeout in LeanFT
+</div>
+<div class="class221-0">
+<img src="image220.jpg" id="page_16" class="class221-1" />
+</div>
+<div class="class223">
+Object Identification settings in LeanF<span
+id="part0008.xhtml_page_17"></span> T
+</div>
+<div class="class225">
+Here are the most important LeanFT settings.
+</div>
+<ol>
+<li>Add-ins - In this section, we can specify which add-ins you want to
+load.</li>
+<li>Engine connection and Run-time settings - In this section, we can
+specify the port of engine and Engine Idle time out. We can also specify
+object synchronization timeout. LeanFT will wait for this much time
+before throwing the exception.</li>
+<li>Mobile Settings - In this setting we can specify the mobile center
+server address to automate the mobile applications with LeanFT.</li>
+<li>Object Identification settings - In this tab, we can specify which
+properties should be used to identify the objects.</li>
+</ol>
+<div id="part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1830" class="class153">
+4.2 License types in LeanFT
+</div>
+<div class="class29">
+LeanFT comes with 4 types of licenses as shown in below image.
+</div>
+<ol>
+<li>Seat License - Tied to one machine</li>
+<li>Concurrent license - Multiple machines can use this license</li>
+<li>Commuter license</li>
+<li>Remote commuter license</li>
+</ol>
+<div class="class244">
+<a
+href="http://www.softpost.org/wp-content/uploads/2015/09/license-wizard.jpg"><img
+src="image242.jpg" class="class243" /></a>
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml_toc13_5._Core_Concepts" class="class151">
+5. Core Concepts
+</div>
+<div id="part0009.xhtml_toc11_5.1_Object_identification_Center"
+class="class153">
+5.1 Object identification Center
+</div>
+<div class="class41">
+Object Identification Center is just like Object Spy in QTP/UFT<br />
+Object Identification Center runs in 2 modes.
+</div>
+<ol>
+<li>simple - allows you to just view the object property - values</li>
+<li>edit - allows you to view and edit the object property values</li>
+</ol>
+<div class="class257">
+Object identification center allows you to do below things
+</div>
+<ol>
+<li>Inspect the objects.</li>
+<li>Learn about the object parent details, hierarchy.</li>
+<li>Learn about the object properties and values.</li>
+<li>One cool feature of Object Identification center is that generation
+of code snippets in Java or C#</li>
+<li>Highlight the object</li>
+<li>We can also capture the screenshot of the object</li>
+<li>It also allows you to add the object to Application model</li>
+</ol>
+<div class="class29">
+You can launch the Object Identification center from IntelliJ IDEA as
+shown in below image.
+</div>
+<div class="class270-1">
+<img src="image269.jpg" id="page_20" class="class270-0" />
+</div>
+<div class="class171">
+Launching LeanFT Object Identification Center in IntelliJ IDE<span
+id="part0009.xhtml_page_21"></span> A
+</div>
+<div class="class273">
+Below image shows how to inspect the elements inside web page using
+Object Identification Center.
+</div>
+<div class="class216">
+<a
+href="http://www.softpost.org/wp-content/uploads/2016/07/Object-Identification-Center-in-LeanFT.png"><img
+src="image277.jpg" class="class278" /></a>
+</div>
+<div class="class171">
+Object Identification Center in LeanF<span
+id="part0009.xhtml_page_22"></span> T
+</div>
+<div id="part0009.xhtml_toc12_5.2_Understanding_LeanFT_SDK_API"
+class="class281">
+5.2 Understanding LeanFT SDK API
+</div>
+<div class="class29">
+Some of the most important packages and classes  in LeanFT API are
+mentioned below.
+</div>
+<ol>
+<li>com.hp.lft.report - Reporter class can be used to dump data in
+report</li>
+<li>com.hp.lft.sdk - Core functionality</li>
+<li>com.hp.lft.sdk.insight - used to identify the objects based on
+images</li>
+<li>com.hp.lft.sdk.apitesting.uft - UFT API used in LeanFT</li>
+<li>com.hp.lft.sdk.java - API to automate Java application (Swing/AWT
+etc)</li>
+<li>com.hp.lft.sdk.mobile - API to automate mobile applications</li>
+<li>com.hp.lft.sdk.sap.gui and com.hp.lft.sdk.sap.ui5 - API to automate
+SAP applications</li>
+<li>com.hp.lft.sdk.stdwin - API to automate Standard windows
+applications</li>
+<li>com.hp.lft.sdk.utils - helper methods</li>
+<li><span class="class1899">                     </span>
+com.hp.lft.sdk.web - API to automate Standard Web applications</li>
+<li><span class="class1899">                     </span>
+com.hp.lft.sdk.winforms and com.hp.lft.sdk.wpf - API to automate .Net
+applications</li>
+<li><span class="class1899">                     </span>
+com.hp.lft.unittesting and com.hp.lft.unittesting.datadriving - API to
+work with Unit testing framework of LeanFT</li>
+<li><span class="class1899">                     </span>
+com.hp.lft.verifications - It provides Verify class that can be used to
+assert the expected values</li>
+</ol>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1834" class="class151">
+6. New LeanFT project in IntelliJ IDEA
+</div>
+<div id="part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1835" class="class153">
+6.1 Installing the LeanFT jar files in Maven Repository
+</div>
+<div class="class29">
+To integrate the LeanFT with Maven, you will have to install the LeanFT
+library files in local maven repositories.
+</div>
+<div class="class29">
+Execute below commands to install the LeanFT jar files in a
+local repository.
+</div>
+<div class="class315">
+<div class="class308">
+mvn install:install-file -Dfile="com.hp.lft.sdk-standalone.jar"
+-DgroupId="com.hp.lft" -DartifactId="com.hp.lft.sdk" -Dversion="12.53.0"
+-Dpackaging="jar" -DgeneratePom=true
+</div>
+<div class="class310">
+mvn install:install-file -Dfile="com.hp.lft.report.jar"
+-DgroupId="com.hp.lft" -DartifactId="com.hp.lft.report"
+-Dversion="12.53.0" -Dpackaging="jar" -DgeneratePom=true
+</div>
+<div class="class310">
+mvn install:install-file -Dfile="com.hp.lft.unittesting.jar"
+-DgroupId="com.hp.lft" -DartifactId="com.hp.lft.unittesting"
+-Dversion="12.53.0" -Dpackaging="jar" -DgeneratePom=true
+</div>
+<div class="class313">
+mvn install:install-file -Dfile="com.hp.lft.verifications.jar"
+-DgroupId="com.hp.lft" -DartifactId="com.hp.lft.verifications"
+-Dversion="12.53.0" -Dpackaging="jar" -DgeneratePom=tru<span
+id="part0010.xhtml_page_24"></span> e
+</div>
+</div>
+<div class="class29">
+Then add below dependencies in your POM file.
+</div>
+<div class="class315">
+<div class="class319">
+<span class="class1884">        </span> <span
+class="class1895">&lt;dependency&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;groupId&gt;</span> <span
+class="class1884">com.hp.lft</span> <span
+class="class1895">&lt;/groupId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;artifactId&gt;</span> <span
+class="class1884">com.hp.lft.sdk</span> <span
+class="class1895">&lt;/artifactId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;version&gt;</span> <span
+class="class1884">12.53.0</span> <span
+class="class1895">&lt;/version&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1895">&lt;/dependency&gt;</span> <span
+class="class1884">   </span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1895">&lt;dependency&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;groupId&gt;</span> <span
+class="class1884">com.hp.lft</span> <span
+class="class1895">&lt;/groupId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;artifactId&gt;</span> <span
+class="class1884">com.hp.lft.report</span> <span
+class="class1895">&lt;/artifactId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;version&gt;</span> <span
+class="class1884">12.53.0</span> <span
+class="class1895">&lt;/version&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1895">&lt;/dependency&gt;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1895">&lt;dependency&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;groupId&gt;</span> <span
+class="class1884">com.hp.lft</span> <span
+class="class1895">&lt;/groupId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;artifactId&gt;</span> <span
+class="class1884">com.hp.lft.unittesting</span> <span
+class="class1895">&lt;/artifactId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;version&gt;</span> <span
+class="class1884">12.53.0</span> <span
+class="class1895">&lt;/version&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1895">&lt;/dependency&gt;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1895">&lt;dependency&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;groupId&gt;</span> <span
+class="class1884">com.hp.lft</span> <span
+class="class1895">&lt;/groupId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;artifactId&gt;</span> <span
+class="class1884">com.hp.lft.verifications</span> <span
+class="class1895">&lt;/artifactId&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1895">&lt;version&gt;</span> <span
+class="class1884">12.53.0</span> <span
+class="class1895">&lt;/version&gt;</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1895">&lt;/dependency&gt;</span>
+</div>
+<div class="class330">
+
+</div>
+</div>
+<div class="class366">
+Sometimes you might need to deploy the jar files in organization central
+repository. Below sample command shows how to deploy LeanFT jar file to
+central repository.
+</div>
+<div id="part0010.xhtml_page_25" class="class369">
+<span class="class1907">mvn deploy:deploy-file -DgroupId=</span> <span
+class="class1908">"com.hp.lft"</span> <span
+class="class1907">-DartifactId=</span> <span
+class="class1908">"com.hp.lft.sdk"</span> <span
+class="class1907">-Dversion=</span> <span
+class="class1908">"12.53.0"</span> <span
+class="class1907">-Dpackaging=jar -Dfile=</span> <span
+class="class1908">"com.hp.lft.sdk-standalone.jar"</span> <span
+class="class1907">-DrepositoryId=&lt;id-in-settings.xml&gt;
+-Durl=&lt;url-of-the-central-repository&gt;</span>
+</div>
+<div id="part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1836" class="class178">
+6.2 Creating LeanFT Maven Project
+</div>
+<div class="class29">
+We can create a new LeanFT maven project in IntelliJ IDEA as shown in
+below images.
+</div>
+<div class="class29">
+Note that once the project is created, you can add required dependencies
+in POM.xml file.
+</div>
+<div class="class376-0">
+<img src="image375.jpg" class="class376-1" />
+</div>
+<div class="class171">
+LeanFT Junit Maven project in IntelliJ IDE<span
+id="part0010.xhtml_page_26"></span> A
+</div>
+<div class="class379">
+Then enter group id and artifact id for your project and also give the
+name of the project. Once the maven project is created, add LeanFT
+dependencies as shown in below image.
+</div>
+<div class="class383-1">
+<img src="image382.jpg" class="class383-0" />
+</div>
+<div class="class171">
+Adding LeanFT libraries to Maven project in IntelliJ IDEA
+</div>
+<div>
+After that, you can write your tests and enjoy automating applications
+using LeanFT.
+</div>
+<div id="part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1837" class="class153">
+6.3 Creating LeanFT Project with Gradle and TestNG
+</div>
+<div class="class41">
+To create a LeanFT project with Gradle and TestNG, follow below
+steps.<br />
+First of all, create a sample Gradle project in IntelliJ IDEA. Then add
+a libs directory under root directory and copy all <span
+id="part0010.xhtml_page_27"></span> LeanFT library files from C:\Program
+Files (x86)\HP\LeanFT\SDK\Java in it.
+</div>
+<div class="class29">
+Then ensure that your build.gradle file contains below configuration.
+</div>
+<div class="class315">
+<div class="class319">
+<span class="class1884">group</span> <span
+class="class1893">'org.softpost'</span>
+</div>
+<div class="class322">
+<span class="class1884">version</span> <span
+class="class1893">'1.0-SNAPSHOT'</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">apply plugin:</span> <span
+class="class1893">'java'</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">repositories</span> <span
+class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">    mavenCentral</span> <span
+class="class1889">()</span>
+</div>
+<div class="class322">
+<div class="class403">
+}
+</div>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">dependencies</span> <span
+class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">    testCompile group:</span> <span
+class="class1893">'org.testng'</span> <span class="class1884">,
+name:</span> <span class="class1893">'testng'</span> <span
+class="class1884">, version:</span> <span
+class="class1893">'6.9.10'</span>
+</div>
+<div class="class322">
+<span class="class1884">    compile fileTree</span> <span
+class="class1889">(</span> <span class="class1884">dir:</span> <span
+class="class1893">'libs'</span> <span class="class1884">,
+include:</span> <span class="class1893">'*.jar'</span> <span
+class="class1889">)</span>
+</div>
+<div class="class322">
+<div class="class403">
+}
+</div>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1892">test</span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">    useTestNG</span> <span
+class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">        suites</span> <span
+class="class1893">'src/test/resources/testng.xml'</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">}</span>
+</div>
+<div class="class425">
+<div class="class403">
+}
+</div>
+</div>
+</div>
+<div class="class428">
+After this, create a sample TestNG test class and add LeanFT test as
+shown in below example. Notice that you will have to initialize the
+LeanFT SDK before starting the tests and clean up SDK at the end of
+tests.
+</div>
+<div class="class538">
+<div id="part0010.xhtml_page_28" class="class319">
+<span class="class1890">package</span> <span
+class="class1884">org</span> <span class="class1889">.</span> <span
+class="class1894">softpost</span> <span class="class1889">;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.report.Reporter</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">org.testng.annotations.AfterClass</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">org.testng.annotations.AfterMethod</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">org.testng.annotations.BeforeClass</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">org.testng.annotations.BeforeMethod</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">org.testng.annotations.Test</span> <span
+class="class1889">;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.sdk.*</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.verifications.*</span> <span
+class="class1889">;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">java.net.URI</span> <span class="class1889">;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1890">public</span> <span
+class="class1890">class</span> <span
+class="class1911">SimpleLeanFTTest</span>
+</div>
+<div class="class322">
+<div class="class403">
+{
+</div>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1885">@BeforeClass</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1890">public</span> <span class="class1900">void</span>
+<span class="class1901">beforeClass</span> <span
+class="class1889">()</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">}</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1885">@AfterClass</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1890">public</span> <span class="class1900">void</span>
+<span class="class1901">afterClass</span> <span
+class="class1889">()</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">}</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1885">@BeforeMethod</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1890">public</span> <span class="class1900">void</span>
+<span class="class1901">beforeMethod</span> <span
+class="class1889">()</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1890">try</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">            ModifiableSDKConfiguration
+config</span> <span class="class1889">=</span> <span
+class="class1890">new</span> <span
+class="class1884">ModifiableSDKConfiguration</span> <span
+class="class1889">();</span>
+</div>
+<div class="class322">
+<span class="class1884">            config</span> <span
+class="class1889">.</span> <span
+class="class1894">setServerAddress</span> <span
+class="class1889">(</span> <span class="class1890">new</span> <span
+class="class1884">URI</span> <span class="class1889">(</span> <span
+class="class1893">"ws://localhost:5095"</span> <span
+class="class1889">));</span>
+</div>
+<div class="class322">
+<span class="class1884">            SDK</span> <span
+class="class1889">.</span> <span class="class1894">init</span> <span
+class="class1889">(</span> <span class="class1884">config</span> <span
+class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">            Reporter</span> <span
+class="class1889">.</span> <span class="class1894">init</span> <span
+class="class1889">();</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span class="class1889">}</span>
+</div>
+<div class="class322">
+<span class="class1889">       <span id="part0010.xhtml_page_29"></span>
+ </span> <span class="class1890">catch</span> <span
+class="class1889">(</span> <span class="class1884">Exception ex</span>
+<span class="class1889">)</span>
+</div>
+<div class="class322">
+<div class="class500">
+{
+</div>
+</div>
+<div class="class322">
+<span class="class1884">            System</span> <span
+class="class1889">.</span> <span class="class1894">out</span> <span
+class="class1889">.</span> <span class="class1894">println</span> <span
+class="class1889">(</span> <span class="class1893">"Exception occured
+"</span> <span class="class1889">+</span> <span
+class="class1884">ex</span> <span class="class1889">.</span> <span
+class="class1894">toString</span> <span class="class1889">());</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span class="class1889">}</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">}</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1885">@AfterMethod</span>
+</div>
+<div class="class322">
+<span class="class1884">   </span> <span class="class1890">public</span>
+<span class="class1900">void</span> <span
+class="class1901">afterMethod</span> <span class="class1889">()</span>
+<span class="class1890">throws</span> <span
+class="class1884">Exception        </span>
+</div>
+<div class="class322">
+<span class="class1884">   </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">        Reporter</span> <span
+class="class1889">.</span> <span class="class1894">generateReport</span>
+<span class="class1889">();</span>
+</div>
+<div class="class322">
+<span class="class1884">        SDK</span> <span
+class="class1889">.</span> <span class="class1894">cleanup</span> <span
+class="class1889">();</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">}</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1885">@Test</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1890">public</span> <span class="class1900">void</span>
+<span class="class1901">test</span> <span class="class1889">()</span>
+<span class="class1890">throws</span> <span
+class="class1884">GeneralLeanFtException</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">        Verify</span> <span
+class="class1889">.</span> <span class="class1894">areEqual</span> <span
+class="class1889">(</span> <span class="class1913">22</span> <span
+class="class1889">,</span> <span class="class1913">22</span> <span
+class="class1889">,</span> <span class="class1893">"Verify that 22 ==
+22"</span> <span class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">}</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<div class="class403">
+}
+</div>
+</div>
+<div class="class536">
+
+</div>
+</div>
+<div class="class428">
+After this build your project and then run the tests<span
+id="part0010.xhtml_page_30"></span> .
+</div>
+<div id="part0010.xhtml_toc17_6.4_LeanFT_Properties" class="class281">
+6.4 LeanFT Properties
+</div>
+<div class="class29">
+When we create a LeanFT project using templates, one properties file
+(leanft.properties) is created and stored in resources directory.
+</div>
+<div class="class29">
+Here are the most important settings in this file that we can use.
+</div>
+<ol>
+<li>serverAddress - specify the LeanFT engine address</li>
+<li>SDK Mode - Replay or Interactive</li>
+<li>LeanFT Service Address - ws://localhost:5095</li>
+<li>Connection timeout - 60 sec</li>
+<li>Response timeout - 600 sec</li>
+<li>Server autolaunch - true</li>
+</ol>
+<div class="class29">
+Here are the most important settings related to LeanFT Report
+</div>
+<ol>
+<li>title - Name of the report. By default, it is Run Results.</li>
+<li>description - Description of the report. By default, it is
+empty.</li>
+<li>targetDirectory - Directory where report should be stored. By
+default it is current directory.</li>
+<li>overrideExisting - Whether to override existing report. By default,
+it's value is true.</li>
+<li>report folder - RunResults</li>
+<li>override existing - true</li>
+<li>filter level - All, Warning, Error, Off</li>
+<li>snapshot level - All, OnError, Of<span
+id="part0010.xhtml_page_31"></span> f</li>
+</ol>
+<div id="part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1839" class="class178">
+6.5 Setting up LeanFT project in IntelliJ IDEA
+</div>
+<div class="class29">
+In this topic, we will see how to set up a LeanFT project in IntelliJ
+IDEA.
+</div>
+<div class="class29">
+We can create a new LeanFT project in 2 ways.
+</div>
+<ol>
+<li>Using LeanFT templates</li>
+<li>Custom framework</li>
+</ol>
+<div class="class29">
+If you have installed the LeanFT plugin for IntelliJ IDEA, you can
+create new project from templates as shown in below image. Note that we
+can create a project based on 4 types of templates.
+</div>
+<div class="class216">
+<a
+href="http://www.softpost.org/wp-content/uploads/2016/07/New-LeanFT-project-in-IntelliJ-IDEA.png"><img
+src="image570.jpg" class="class571" /></a>
+</div>
+<div class="class171">
+New LeanFT project in IntelliJ IDEA
+</div>
+<div class="class216">
+<a
+href="http://www.softpost.org/wp-content/uploads/2016/07/Sample-LeanFT-project-structure.png"><img
+src="image576.jpg" id="page_32" class="class571" /></a>
+</div>
+<div class="class171">
+Sample LeanFT project structure
+</div>
+<div class="class29">
+To create your own custom framework, you will have to initialize and
+clean up SDK as shown in below example. Note that in all upcoming
+examples, we have inherited BaseTest class.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.ModifiableSDKConfiguration;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.SDK;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.After;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Before;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">java.net.URI;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Before</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">       <span id="part0010.xhtml_page_33"></span>
+ ModifiableSDKConfiguration config =</span> <span
+class="class1881">new</span> <span
+class="class1882">ModifiableSDKConfiguration();</span>
+</div>
+<div class="class584">
+<span class="class1882">        config.setServerAddress(</span> <span
+class="class1881">new</span> <span class="class1882">URI(</span> <span
+class="class1897">"ws://localhost:5095"</span> <span
+class="class1882">));</span>
+</div>
+<div class="class599">
+<span class="class-0">SDK.init(config);</span>
+</div>
+<div class="class599">
+<span class="class-0">Reporter.init();</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class603">
+<span class="class-1">@After</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">clean()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">Reporter.generateReport();</span>
+</div>
+<div class="class599">
+<span class="class-0">SDK.cleanup();</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class610">
+}
+</div>
+</div>
+<div class="class366">
+Then we can write test methods as shown in below example.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.ModifiableSDKConfiguration;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.SDK;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.EditField;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.EditFieldDescription;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">java.net.URI;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span class="class1886">static
+org.junit.Assert.assertEquals;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">ChromeTest</span>
+<span class="class1881">extends</span> <span
+class="class1882">BaseTest</span>
+</div>
+<div id="part0010.xhtml_page_34" class="class591">
+{
+</div>
+<div class="class603">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+<span class="class1882">{</span>
+</div>
+<div class="class629">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Try</span>
+</div>
+<div class="class584">
+<span class="class1881">       </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class629">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class584">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">finally</span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class610">
+}
+</div>
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml_toc22_7._LeanFT_Project_in_Eclipse"
+class="class151">
+7. LeanFT Project in Eclipse
+</div>
+<div
+id="part0011.xhtml_toc20_7.1_Creating_maven_project_with_JUnit_with_LeanFT_in_Eclipse"
+class="class153">
+7.1 Creating maven project with JUnit with LeanFT in Eclipse
+</div>
+<div class="class29">
+Below images will help you understand how to create a maven project with
+JUnit and LeanFT in Eclipse.
+</div>
+<div class="class29">
+Click on New project menu and then click on Other.
+</div>
+<div class="class662-1">
+<img src="image661.jpg" class="class662-0" />
+</div>
+<div class="class171">
+LeanFT - Maven project with JUnit in Eclips<span
+id="part0011.xhtml_page_36"></span> e
+</div>
+<div class="class379">
+Then Select LeanFT JUnit Maven project as shown in below image.
+</div>
+<div class="class668-1">
+<img src="image667.jpg" class="class668-0" />
+</div>
+<div class="class171">
+LeanFT - Maven Junit Template in Eclips<span
+id="part0011.xhtml_page_37"></span> e
+</div>
+<div class="class671">
+Provide the group id and Artifact id for your project.
+</div>
+<div class="class675-1">
+<img src="image674.jpg" class="class675-0" />
+</div>
+<div class="class171">
+LeanFT - Maven JUnit project in Eclipse
+</div>
+<div class="class29">
+Project is created as shown in below image.
+</div>
+<div class="class681-1">
+<img src="image680.jpg" id="page_38" class="class681-0" />
+</div>
+<div class="class29">
+Then add external jars for LeanFT as shown in below image.
+</div>
+<div class="class686-0">
+<img src="image685.jpg" class="class686-1" />
+</div>
+<div class="class171">
+Add LeanFT libraries as external jars
+</div>
+<div class="class29">
+After running maven build, you should be able to see the results in
+RunResults Directory<span id="part0011.xhtml_page_39"></span> .
+</div>
+<div id="part0011.xhtml_lMgFRRDpRtGIftZBV7KV3A1842" class="class178">
+7.2 Creating maven project with TestNG in Eclipse
+</div>
+<div class="class29">
+Below images will help you understand how to set up a  LeanFT maven
+project with TestNG in Eclipse.
+</div>
+<div class="class694-1">
+<img src="image693.jpg" class="class694-0" />
+</div>
+<div class="class171">
+LeanFT - Maven project with JUnit in Eclipse
+</div>
+<div class="class699-0">
+<img src="image698.jpg" id="page_40" class="class699-1" />
+</div>
+<div class="class171">
+LeanFT TestNG group Id in Eclipse
+</div>
+<div class="class704-1">
+<img src="image703.jpg" id="page_41" class="class704-0" />
+</div>
+<div class="class171">
+LeanFT TestNG Maven Project in Eclipse
+</div>
+<div class="class29">
+LeanFT puts the tests in src/main/java directory. You should move those
+test classes to src/test/java because maven always looks in
+src/text/java directory for any tests to be executed.
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml_toc26_8._Object_Identification_and_Management"
+class="class151">
+8. Object Identification and Management
+</div>
+<div id="part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1844" class="class153">
+8.1 Description programming
+</div>
+<div class="class29">
+Usually in UFT, we use object repository (Application model in LeanFT)
+to store the objects inside application. So we can use those objects in
+automation code but we can also use description programming to define
+new test objects in the code itself.
+</div>
+<div class="class29">
+Below example shows how to define new test object using description
+programming in LeanFT. We have used description programming to define 2
+objects of type - EditField and Link. Note that we can multiple
+property-value pairs to identify the objects.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.navigate("http:</span> <span
+class="class1887">//</span> <span
+class="class1888">www.softpost.org/selenium-test-page/</span> <span
+class="class1887">");</span>
+</div>
+<div class="class593">
+<span class="class-1">browser.sync();</span>
+</div>
+<div class="class582">
+<span class="class1882">   </span> <span class="class1887">//Build edit
+box object and set value in it</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.describe(EditField.class,new
+EditFieldDescription.Builder()</span>
+</div>
+<div class="class635">
+<span class="class-2">.id("fn").build()).setValue("Sagar");</span>
+</div>
+<div class="class582">
+<span class="class1882">   </span> <span class="class1887">//Build link
+object and click on it.</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.describe(Link.class, new
+LinkDescription.Builder()</span>
+</div>
+<div class="class725">
+<span
+class="class-3">.tagName("A").innerText("Home").build()).click()</span>
+<span id="part0012.xhtml_page_43" class="class-3"></span> <span
+class="class-3">;</span>
+</div>
+</div>
+<div id="part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1845" class="class153">
+8.2 Application model
+</div>
+<div class="class29">
+Application models are similar to the object repository in UFT.
+</div>
+<div class="class29">
+We can create a new application model in IntelliJ IDEA as shown in below
+image.
+</div>
+<div class="class733-0">
+<img src="image732.jpg" class="class733-1" />
+</div>
+<div class="class171">
+Creating new LeanFT Application model item in IntelliJ IDE<span
+id="part0012.xhtml_page_44"></span> A
+</div>
+<div class="class736">
+Below image shows sample AppModel.tsrx file. In designer mode, we can
+add, remove objects in application model.
+</div>
+<div class="class740-1">
+<img src="image739.jpg" id="page_45" class="class740-0" />
+</div>
+<div class="class742">
+Below image shows how to add the objects to application model using
+Object Identification Center.
+</div>
+<div class="class746-0">
+<img src="image745.jpg" class="class746-1" />
+</div>
+<div class="class171">
+Adding objects in Application model in LeanFT projec<span
+id="part0012.xhtml_page_46"></span> t
+</div>
+<div class="class749">
+Note that 2 files are created after new Application model is created.
+</div>
+<ol>
+<li>YourModel.tsrx file -It is an XML file. We can also view this file
+in design mode where we can add and edit the objects.</li>
+<li>YourModel.java file containing the code representing the objects in
+the application model.</li>
+</ol>
+<div class="class29">
+Below code shows how to use the application model to write the tests.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.Browser;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.BrowserFactory;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.BrowserType;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class760">
+/**
+</div>
+<div class="class584">
+<span class="class1909"> </span> <span class="class1910">*</span> <span
+class="class1909">Created by Sagar on 22</span> <span
+class="class1910">-</span> <span class="class1909">07</span> <span
+class="class1910">-</span> <span class="class1909">2016.</span>
+</div>
+<div class="class763">
+<span class="class-4">*/</span>
+</div>
+<div class="class584">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span
+class="class1882">AppModelTest</span> <span
+class="class1881">extends</span> <span class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class603">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test1()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class584">
+<span class="class1882">        browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class584">
+<span class="class1882">        AppModel model =</span> <span
+class="class1881">new</span> <span
+class="class1882">AppModel(browser);</span>
+</div>
+<div class="class582">
+<span class="class1882">       <span id="part0012.xhtml_page_47"></span>
+ model.SeleniumTestPage().firstName().setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class610">
+}
+</div>
+</div>
+<div class="class366">
+Another important point to note is that we can use Application model
+together with description programming to identify the objects as shown
+in below sample code. Note that we have used SeleniumTestPage object
+from the Application model but we have used description programming to
+identify the EditField object inside page.
+</div>
+<div class="class315">
+<div class="class308">
+model.SeleniumTestPage().describe(EditField.class,new
+EditFieldDescription.Builder()
+</div>
+<div class="class779">
+<span class="class-6">.id("fn").build()).setValue("Salunke");</span>
+</div>
+</div>
+<div id="part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1846" class="class153">
+8.3 Using regular expression in property values
+</div>
+<div class="class29">
+To define the property values of a object, we can use the regular
+expressions.
+</div>
+<div class="class29">
+Below example shows how to use regular expressions to define the
+property values. Note that we are clicking on such a link with inner
+text matching regular expression .*Dev.*
+</div>
+<div id="part0012.xhtml_page_48" class="class824">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.RegExpProperty;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span
+class="class1882">RegularExpressionTest</span> <span
+class="class1881">extends</span> <span class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class603">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class629">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Try</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box</span>
+</div>
+<div class="class584">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">            .id(</span> <span
+class="class1897">"fn"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class582">
+<span class="class1882">    </span> <span class="class1887">//click on
+link containing Dev substring</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.describe(Link.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">LinkDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                    .tagName(</span> <span
+class="class1897">"A"</span> <span
+class="class1882">).index(1).innerText(</span> <span
+class="class1881">new</span> <span
+class="class1882">RegExpProperty(</span> <span
+class="class1897">".*Dev.*"</span> <span
+class="class1882">)).build()).click();</span>
+</div>
+<div class="class582">
+<span class="class1882">           <span
+id="part0012.xhtml_page_49"></span>  </span> <span
+class="class1887">//Wait until page loads</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1881">Thread</span> <span
+class="class1882">.sleep(3000);</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class584">
+<span class="class1882">     Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div id="part0012.xhtml_page_50" class="class610">
+}
+</div>
+</div>
+<div class="class273">
+We can also use regular expressions to specify values of object
+properties in Application Models.
+</div>
+<div class="class829-1">
+<img src="image828.jpg" class="class829-0" />
+</div>
+<div class="class171">
+Regular expressions in Application models in LeanFT
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div id="part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1847" class="class151">
+9. Automating Web applications
+</div>
+<div id="part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1848" class="class153">
+9.1 First web application test
+</div>
+<div class="class29">
+Here is the first web application test using LeanFT. In below code, we
+are launching the chrome browser and then navigating
+to http://www.softpost.org/selenium-test-page/. After that we are
+entering value in edit box and clicking on Home link. Same code will
+work on other browsers (Firefox, Internet Explorer, Edge) as well. To
+launch other browsers, you just need to change the browser type in
+launch method.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.ModifiableSDKConfiguration;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.SDK;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.EditField;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.EditFieldDescription;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">java.net.URI;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span class="class1886">static
+org.junit.Assert.assertEquals;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">ChromeTest</span>
+<span class="class1881">extends</span> <span
+class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class582">
+<span class="class1882">       <span id="part0013.xhtml_page_52"></span>
+ </span> <span class="class1881">Try</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box</span>
+</div>
+<div class="class584">
+<span class="class1882">   browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">            .id(</span> <span
+class="class1897">"fn"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//click on Home link</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.describe(Link.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">LinkDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                    .tagName(</span> <span
+class="class1897">"A"</span> <span class="class1882">).innerText(</span>
+<span class="class1897">"Home"</span> <span
+class="class1882">).build()).click();</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Wait until page loads</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class584">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div id="part0013.xhtml_page_53" class="class610">
+}
+</div>
+</div>
+<div class="class29">
+Note that BaseTest class provides code to initialize and clean up the
+LeanFT SDK.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.ModifiableSDKConfiguration;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.SDK;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.After;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Before;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">java.net.URI;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Before</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">init()</span>
+</div>
+<div class="class593">
+<span class="class-1">{</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">try</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            ModifiableSDKConfiguration config
+=</span> <span class="class1881">new</span> <span
+class="class1882">ModifiableSDKConfiguration();</span>
+</div>
+<div class="class584">
+<span class="class1882">            config.setServerAddress(</span>
+<span class="class1881">new</span> <span class="class1882">URI(</span>
+<span class="class1897">"ws://localhost:5095"</span> <span
+class="class1882">));</span>
+</div>
+<div class="class635">
+<span class="class-2">SDK.init(config);</span>
+</div>
+<div class="class635">
+<span class="class-2">Reporter.init();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(</span> <span
+class="class1881">Exception</span> <span class="class1882">ex)</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1881">System</span> <span
+class="class1882">.out.println(</span> <span
+class="class1897">"Exception occured "</span> <span class="class1882">+
+ex.toString());</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class593">
+<span class="class-1">@After</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">clean()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">Reporter.generateReport();</span>
+</div>
+<div class="class599">
+<span class="class-0">SDK.cleanup();</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div id="part0013.xhtml_page_54" class="class916">
+}
+</div>
+</div>
+<div
+id="part0013.xhtml_toc28_9.2_Identifying_the_Web_elements_using_XPATH_and_CSS"
+class="class153">
+9.2 Identifying the Web elements using XPATH and CSS
+</div>
+<div class="class29">
+We can use XPATH and CSS selectors to identify the web elements. Below
+example illustrates how to use XPATH and CSS in LeanFT.
+</div>
+<div class="class29">
+In below example, we have identified edit box using XPATH and CSS.
+</div>
+<div class="class41">
+For more advanced XPATH expressions, you can visit - <a
+href="http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using-xpath-in.html">http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using-xpath-in.html</a>
+</div>
+<div class="class41">
+For more advanced CSS expressions, you can visit - <a
+href="http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using.html">http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using.html</a>
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span
+class="class1882">CssXpathTest</span> <span
+class="class1881">extends</span> <span class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Try</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">           <span
+id="part0013.xhtml_page_55"></span>  </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box using xpath</span>
+</div>
+<div class="class584">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">            .xpath(</span> <span
+class="class1897">"//input[@id='fn']"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box using css</span>
+</div>
+<div class="class584">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                    .cssSelector(</span> <span
+class="class1897">"input[id='fn']"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Salunke"</span> <span class="class1882">);</span>
+</div>
+<div class="class629">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class584">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div id="part0013.xhtml_page_56" class="class610">
+}
+</div>
+</div>
+<div
+id="part0013.xhtml_toc29_9.3_Identifying_objects_using_Visual_Relational_Identifiers___VRI"
+class="class153">
+9.3 Identifying objects using Visual Relational Identifiers – VRI
+</div>
+<div class="class29">
+This is the advanced feature in UFT and LeanFT that allows you to
+identify the objects based upon the position of adjacent objects. For
+example in below image we can identify the edit box using text
+associated with it.
+</div>
+<div class="class965-0">
+<img src="image964.jpg" class="class965-1" />
+</div>
+<div class="class171">
+VRI in LeanFT
+</div>
+<div class="class29">
+Here is the complete example that shows how to use VRI in LeanFT. Note
+that we can provide multiple visual relational identifiers to identify a
+object.
+</div>
+<div id="part0013.xhtml_page_57" class="class538">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.HorizontalVisualRelation;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.VisualRelation;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">VriTest</span>
+<span class="class1881">extends</span> <span
+class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Try</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box</span>
+</div>
+<div class="class584">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">            .id(</span> <span
+class="class1897">"fn"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class582">
+<span class="class1882">     WebElement e2 =
+browser.describe(WebElement.class,</span> <span
+class="class1881">new</span> <span
+class="class1882">WebElementDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">     .xpath(</span> <span
+class="class1897">"//td[text()='Last Name']"</span> <span
+class="class1882">).build());</span>
+</div>
+<div class="class584">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                  <span
+id="part0013.xhtml_page_58"></span>   .vri(</span> <span
+class="class1881">new</span> <span
+class="class1882">VisualRelation().setTestObject(e2).</span>
+</div>
+<div class="class994">
+<span
+class="class-3">setHorizontalRelation(HorizontalVisualRelation.LEFT_AND_INLINE)).build())</span>
+</div>
+<div class="class584">
+<span class="class1882">                    .setValue(</span> <span
+class="class1897">"Salunke"</span> <span class="class1882">);</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//click on Home link</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.describe(Link.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">LinkDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                    .tagName(</span> <span
+class="class1897">"A"</span> <span class="class1882">).innerText(</span>
+<span class="class1897">"Home"</span> <span
+class="class1882">).build()).click();</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//Wait until page loads</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class584">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div id="part0013.xhtml_page_59" class="class610">
+}
+</div>
+</div>
+<div id="part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1851" class="class1017">
+9.4 Handling embedded browser control in Windows app
+</div>
+<div class="class29">
+Sometimes, Windows application have elements that embed the browser
+control. To identify the elements inside the browser control as Web
+elements, you will have to register the browser control with LeanFT.
+</div>
+<div class="class29">
+To register the browser control with LeanFT, follow below steps.
+</div>
+<ol>
+<li>Launch the utility - C:\Program Files
+(x86)\HP\LeanFT\bin\SettingNewBrowserControlApplication.exe</li>
+<li>Then enter the path of the application that contains browser control
+in the utility window and click on register</li>
+<li>Finally you need to restart the LeanFT engine.</li>
+</ol>
+<div class="class686-0">
+<img src="image1026.jpg" class="class686-1" />
+</div>
+<div class="class171">
+Registering browser control with LeanF<span
+id="part0013.xhtml_page_60"></span> T
+</div>
+<div class="class29">
+Once the browser control is registered, all objects inside it will be
+identified as web objects.
+</div>
+<div>
+Note that LeanFT can handle browser control based on IE engine only!
+</div>
+<div id="part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1852" class="class153">
+9.5 Firing events on Web Elements using LeanFT
+</div>
+<div class="class29">
+We can fire html events like click, change etc on any Web element using
+EventInfo class in LeanFT.
+</div>
+<div class="class29">
+Here is the complete example that illustrates how to fire events.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.NativeObject;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">java.util.List;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span
+class="class1882">ChromeNativeObjectTest</span> <span
+class="class1881">extends</span> <span class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">try</span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class584">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">)<span id="part0013.xhtml_page_61"></span>
+;</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class582">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box</span>
+</div>
+<div class="class584">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">            .id(</span> <span
+class="class1897">"fn"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class582">
+<span class="class1882">           browser.describe(Link.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">LinkDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                    .tagName(</span> <span
+class="class1897">"A"</span> <span class="class1882">).innerText(</span>
+<span class="class1897">"Home"</span> <span
+class="class1882">).build()).fireEvent(EventInfoFactory.createEventInfo(</span>
+<span class="class1897">"click"</span> <span
+class="class1882">));</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1881">Thread</span> <span
+class="class1882">.sleep(3000);</span>
+</div>
+<div class="class629">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class584">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class584">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class584">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class635">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class610">
+}
+</div>
+</div>
+<div class="class366">
+Alternatively, you can also execute custom JavaScript using below
+syntax.
+</div>
+<div id="part0013.xhtml_page_62" class="class369">
+<span class="class1884">String html</span> <span
+class="class1889">=</span> <span class="class1884">  browser</span>
+<span class="class1889">.</span> <span class="class1894">getPage</span>
+<span class="class1889">().</span> <span
+class="class1894">runJavaScript</span> <span class="class1889">(</span>
+<span class="class1893">"document.body.innerHTML;"</span> <span
+class="class1889">);</span>
+</div>
+<div class="class366">
+To fire change event on element with id -fn, You can use below
+Javascript as argument to runJavaScript() method.
+</div>
+<div class="class315">
+<div class="class319">
+<span class="class1890">var</span> <span class="class1884">evt</span>
+<span class="class1889">=</span> <span class="class1892">document</span>
+<span class="class1884">.createEvent(</span> <span
+class="class1893">'HTMLEvents'</span> <span class="class1884">);</span>
+</div>
+<div class="class322">
+<span class="class1884">evt.initEvent (</span> <span
+class="class1893">'change'</span> <span class="class1884">,</span> <span
+class="class1890">true</span> <span class="class1884">,</span> <span
+class="class1890">true</span> <span class="class1884">);</span>
+</div>
+<div class="class425">
+<span class="class1892">document</span> <span
+class="class1884">.findElementById(</span> <span
+class="class1893">'fn'</span> <span
+class="class1884">).dispatchEvent(<span
+id="part0013.xhtml_page_63"></span> evt);</span>
+</div>
+</div>
+<div id="part0013.xhtml_toc32_9.6_Executing_JavaScript_in_web_page"
+class="class1083">
+9.6 Executing JavaScript in web page
+</div>
+<div class="class29">
+While automating web applications, you might need to execute the
+JavaScript to perform certain operations.
+</div>
+<div class="class29">
+LeanFT allows you to execute custom JavaScript as shown in below
+example. We can use runJavaScript method of Page class to execute any
+valid JavaScript.
+</div>
+<div class="class315">
+<div class="class319">
+<span class="class1890">package</span> <span
+class="class1884">leanft</span> <span class="class1889">;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.report.Reporter</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.report.Status</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.sdk.web.*</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.verifications.Verify</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1890">import</span> <span
+class="class1898">org.junit.Test</span> <span class="class1889">;</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1890">public</span> <span
+class="class1890">class</span> <span
+class="class1911">ExecuteJavaScriptTest</span> <span
+class="class1890">extends</span> <span class="class1884">BaseTest</span>
+</div>
+<div class="class322">
+<div class="class403">
+{
+</div>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1885">@Test</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span
+class="class1890">public</span> <span class="class1900">void</span>
+<span class="class1901">test</span> <span class="class1889">()</span>
+<span class="class1890">throws</span> <span
+class="class1884">Exception</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">{</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">        Browser browser</span> <span
+class="class1889">=</span> <span class="class1884">BrowserFactory</span>
+<span class="class1889">.</span> <span class="class1894">launch</span>
+<span class="class1889">(</span> <span
+class="class1884">BrowserType</span> <span class="class1889">.</span>
+<span class="class1894">INTERNET_EXPLORER</span> <span
+class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1890">Try</span>
+</div>
+<div class="class322">
+<span class="class1890">        </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1912">//Navigate to
+http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class322">
+<span class="class1884">            browser</span> <span
+class="class1889">.</span> <span class="class1894">navigate</span> <span
+class="class1889">(</span> <span
+class="class1893">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">         browser</span> <span
+class="class1889">.</span> <span class="class1894">sync</span> <span
+class="class1889">();</span>
+</div>
+<div class="class322">
+<span class="class1884">            String html</span> <span
+class="class1889">=</span> <span class="class1884">  browser</span>
+<span class="class1889">.</span> <span class="class1894">getPage</span>
+<span class="class1889">().</span> <span
+class="class1894">runJavaScript</span> <span class="class1889">(</span>
+<span class="class1893">"document.body.<span
+id="part0013.xhtml_page_64"></span> innerHTML;"</span> <span
+class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">            System</span> <span
+class="class1889">.</span> <span class="class1894">out</span> <span
+class="class1889">.</span> <span class="class1894">println</span> <span
+class="class1889">(</span> <span class="class1893">"HTML Source of the
+page"</span> <span class="class1889">+</span> <span
+class="class1884">html</span> <span class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">            System</span> <span
+class="class1889">.</span> <span class="class1894">out</span> <span
+class="class1889">.</span> <span class="class1894">println</span> <span
+class="class1889">(</span> <span class="class1893">"Scrolling to
+120,100"</span> <span class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">            browser</span> <span
+class="class1889">.</span> <span class="class1894">getPage</span> <span
+class="class1889">().</span> <span
+class="class1894">runJavaScript</span> <span class="class1889">(</span>
+<span class="class1893">"window.scrollTo(120,100);"</span> <span
+class="class1889">);</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">            String documentState</span> <span
+class="class1889">=</span> <span class="class1884">browser</span> <span
+class="class1889">.</span> <span class="class1894">getPage</span> <span
+class="class1889">().</span> <span
+class="class1894">runJavaScript</span> <span class="class1889">(</span>
+<span class="class1893">"document.readyState"</span> <span
+class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">            System</span> <span
+class="class1889">.</span> <span class="class1894">out</span> <span
+class="class1889">.</span> <span class="class1894">println</span> <span
+class="class1889">(</span> <span class="class1893">"Document State is
+"</span> <span class="class1889">+</span> <span
+class="class1884">documentState</span> <span class="class1889">);</span>
+</div>
+<div class="class330">
+
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span class="class1889">}</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1890">catch</span> <span class="class1889">(</span> <span
+class="class1884">AssertionError ex</span> <span
+class="class1889">)</span>
+</div>
+<div class="class322">
+<div class="class500">
+{
+</div>
+</div>
+<div class="class322">
+<span class="class1884">           </span> <span
+class="class1912">//Report the Exception</span>
+</div>
+<div class="class322">
+<span class="class1884">           Reporter</span> <span
+class="class1889">.</span> <span class="class1894">reportEvent</span>
+<span class="class1889">(</span> <span
+class="class1893">"Exception"</span> <span class="class1889">,</span>
+<span class="class1893">"Test failed"</span> <span
+class="class1889">,</span> <span class="class1884">Status</span> <span
+class="class1889">.</span> <span class="class1894">Failed</span> <span
+class="class1889">,</span> <span class="class1884">ex</span> <span
+class="class1889">);</span>
+</div>
+<div class="class322">
+<span class="class1884">           </span> <span
+class="class1890">throw</span> <span class="class1884">ex</span> <span
+class="class1889">;</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span class="class1889">}</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span
+class="class1890">Finally</span>
+</div>
+<div class="class322">
+<span class="class1890">        </span> <span class="class1889">{</span>
+</div>
+<div class="class322">
+<span class="class1884">            </span> <span
+class="class1912">//Close the browser</span>
+</div>
+<div class="class322">
+<span class="class1884">            browser</span> <span
+class="class1889">.</span> <span class="class1894">close</span> <span
+class="class1889">();</span>
+</div>
+<div class="class322">
+<span class="class1884">        </span> <span class="class1889">}</span>
+</div>
+<div class="class322">
+<span class="class1884">    </span> <span class="class1889">}</span>
+</div>
+<div class="class322">
+<div class="class403">
+}
+</div>
+</div>
+<div class="class536">
+
+</div>
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml_toc38_10._Automating_windows_applications"
+class="class151">
+10. Automating windows applications
+</div>
+<div id="part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1855" class="class153">
+10.1 Automating standard windows application
+</div>
+<div class="class29">
+To automate the standard windows apps, you will need to import below
+packages in LeanFT project.
+</div>
+<div class="class29">
+com.hp.lft.sdk.stdwin
+</div>
+<div class="class29">
+Here is the sample application that launches the notepad and enters text
+in it. Then it tries to close the notepad. After that it clicks on Don't
+save button on the Dialog box.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.Desktop;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.stdwin.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span class="class1886">static
+org.junit.Assert.assertEquals;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span
+class="class1882">NotepadTest</span> <span
+class="class1881">extends</span> <span class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1882">  </span> <span
+class="class1881">void</span> <span class="class1882">test()</span>
+<span class="class1881">throws</span> <span
+class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">new</span> <span
+class="class1882">ProcessBuilder(</span> <span
+class="class1897">"C:\\Windows\\System32\\notepad.exe"</span> <span
+class="class1882">).start();</span>
+</div>
+<div class="class582">
+<span class="class1882">        </span> <span
+class="class1881">Thread</span> <span
+class="class1882">.sleep(3000);</span>
+</div>
+<div class="class582">
+<span class="class1882">        </span> <span
+class="class1881">Window</span> <span class="class1882">notepadWin =
+Desktop.describe(</span> <span class="class1881">Window</span> <span
+class="class1882">.class,</span>
+</div>
+<div class="class584">
+<span class="class1882">                </span> <span
+class="class1881">new</span> <span
+class="class1882">WindowDescription.Builder().windowTitleRegExp(</span>
+<span class="class1897">"Notepad"</span> <span
+class="class1882">).build())<span id="part0014.xhtml_page_66"></span>
+;</span>
+</div>
+<div class="class599">
+<span class="class-0">Editor editor =
+notepadWin.describe(Editor.class,</span>
+</div>
+<div class="class584">
+<span class="class1882">                </span> <span
+class="class1881">new</span> <span
+class="class1882">EditorDescription.Builder().nativeClass(</span> <span
+class="class1897">"Edit"</span> <span
+class="class1882">).windowClassRegExp(</span> <span
+class="class1897">"Edit"</span> <span
+class="class1882">).build());</span>
+</div>
+<div class="class582">
+<span class="class1882">        editor.sendKeys(</span> <span
+class="class1897">"This is automated text"</span> <span
+class="class1882">);</span>
+</div>
+<div class="class582">
+<span class="class1882">        </span> <span
+class="class1881">Thread</span> <span
+class="class1882">.sleep(3000);</span>
+</div>
+<div class="class599">
+<span class="class-0">notepadWin.close();</span>
+</div>
+<div class="class582">
+<span class="class1882">        Desktop.describe(</span> <span
+class="class1881">Window</span> <span class="class1882">.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">WindowDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .ownedWindow(</span> <span
+class="class1881">false</span> <span
+class="class1882">).childWindow(</span> <span
+class="class1881">false</span> <span
+class="class1882">).windowClassRegExp(</span> <span
+class="class1897">"Notepad"</span> <span
+class="class1882">).windowTitleRegExp(</span> <span class="class1897">"
+Notepad"</span> <span class="class1882">).build())</span>
+</div>
+<div class="class584">
+<span class="class1882">                .describe(</span> <span
+class="class1881">Dialog</span> <span class="class1882">.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">DialogDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .ownedWindow(</span> <span
+class="class1881">true</span> <span
+class="class1882">).childWindow(</span> <span
+class="class1881">false</span> <span class="class1882">).text(</span>
+<span class="class1897">"Notepad"</span> <span
+class="class1882">).nativeClass(</span> <span
+class="class1897">"#32770"</span> <span
+class="class1882">).build())</span>
+</div>
+<div class="class584">
+<span class="class1882">                .describe(</span> <span
+class="class1881">Button</span> <span class="class1882">.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">ButtonDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .text(</span> <span
+class="class1897">"Do&amp;n't Save"</span> <span
+class="class1882">).nativeClass(</span> <span
+class="class1897">"Button"</span> <span
+class="class1882">).build()).click();</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div id="part0014.xhtml_page_67" class="class916">
+}
+</div>
+</div>
+<div id="part0014.xhtml_toc35_10.2_Automating_Java_Application"
+class="class1206">
+10.2 Automating Java Application
+</div>
+<div class="class29">
+Automating the Java applications is just like that of Standard windows
+applications. Only difference is that you need to import classes in
+below package.
+</div>
+<div class="class29">
+import com.hp.lft.sdk.java.*;
+</div>
+<div class="class29">
+Here is the sample example that identifies the Java window with title -
+XYZ and then clicks on the check box with attached text as "Gender"
+inside a frame.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.CheckedState;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.Desktop;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.java.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class582">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">JavaTest</span>
+<span class="class1881">extends</span> <span
+class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class603">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class593">
+<span class="class-1">{</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">Window</span> <span class="class1882">javaWin =
+Desktop.describe(</span> <span class="class1881">Window</span> <span
+class="class1882">.class,</span> <span class="class1881">new</span>
+<span class="class1882">WindowDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .title(</span> <span
+class="class1897">"XYZ"</span> <span
+class="class1882">).build());</span>
+</div>
+<div class="class582">
+<span class="class1882">        CheckBox checkBox =
+javaWin.describe(InternalFrame.class,</span> <span
+class="class1881">new</span> <span
+class="class1882">InternalFrameDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .title(</span> <span
+class="class1897">"Frame1"</span> <span
+class="class1882">).build()).describe(CheckBox.class,</span> <span
+class="class1881">new</span> <span
+class="class1882">CheckBoxDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .attachedText(</span> <span
+class="class1897">"Gender"</span> <span
+class="class1882">).build())<span id="part0014.xhtml_page_68"></span>
+;</span>
+</div>
+<div class="class629">
+<span class="class-0">checkBox.setState(CheckedState.CHECKED);</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class610">
+}
+</div>
+</div>
+<div id="part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1857" class="class178">
+10.3 Automating WPF applications
+</div>
+<div class="class29">
+Below example illustrates how to automate WPF application using LeanFT.
+Note that we need to import classes from below package.
+</div>
+<div class="class29">
+com.hp.lft.sdk.wpf
+</div>
+<div class="class29">
+In below example, we are first identifying the WPF window with title -
+Bus Application. After that we have identified the ComboBox with name
+sourceCity and finally we have listed down all the options in sourceCity
+ComboBox.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.Desktop;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.wpf.ComboBox;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.wpf.ComboBoxDescription;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.wpf.Window;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.wpf.WindowDescription;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class760">
+/**
+</div>
+<div class="class584">
+<span class="class1909"> </span> <span class="class1910">*</span> <span
+class="class1909">Created by Sagar on 20</span> <span
+class="class1910">-</span> <span class="class1909">07</span> <span
+class="class1910">-</span> <span class="class1909">2016.</span>
+</div>
+<div class="class763">
+<span class="class-4">*/</span>
+</div>
+<div class="class584">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">WpfTest</span>
+<span class="class1881">extends</span> <span
+class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test1()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">      <span id="part0014.xhtml_page_69"></span>
+ </span> <span class="class1881">Window</span> <span
+class="class1882">win = Desktop.describe(</span> <span
+class="class1881">Window</span> <span class="class1882">.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">WindowDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .objectName(</span> <span
+class="class1897">"Bus Application"</span> <span
+class="class1882">).fullType(</span> <span
+class="class1897">"window"</span> <span
+class="class1882">).windowTitleRegExp(</span> <span
+class="class1897">"Bus Application"</span> <span
+class="class1882">).build());</span>
+</div>
+<div class="class582">
+<span class="class1882">       ComboBox box=
+win.describe(ComboBox.class,</span> <span class="class1881">new</span>
+<span class="class1882">ComboBoxDescription.Builder()</span>
+</div>
+<div class="class584">
+<span class="class1882">                .objectName(</span> <span
+class="class1897">"sourceCity"</span> <span
+class="class1882">).build());</span>
+</div>
+<div class="class582">
+<span class="class1882">        </span> <span
+class="class1881">for</span> <span class="class1882">(</span> <span
+class="class1881">String</span> <span class="class1882">s
+:box.getItems())</span>
+</div>
+<div class="class599">
+<span class="class-0">{</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1881">System</span> <span
+class="class1882">.out.println(s);</span>
+</div>
+<div class="class599">
+<span class="class-0">}</span>
+</div>
+<div class="class603">
+<span class="class-1">}</span>
+</div>
+<div class="class610">
+}
+</div>
+</div>
+<div id="part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1858" class="class178">
+10.4 Automating SAP Application
+</div>
+<div class="class29">
+Automating SAP applications is very much similar to automation of
+standard windows applications.
+</div>
+<div class="class29">
+Please note that you will have to use classes from below SAP packages.
+</div>
+<div class="class315">
+<div class="class319">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.sdk.sap.gui.*</span> <span
+class="class1889">;</span>
+</div>
+<div class="class425">
+<span class="class1890">import</span> <span
+class="class1898">com.hp.lft.sdk.sap.ui5.*</span> <span
+class="class1889">;</span>
+</div>
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<div id="part0015.xhtml_lMgFRRDpRtGIftZBV7KV3A1859" class="class151">
+11. Synchronization
+</div>
+<div class="class29">
+By default, LeanFT will wait for 20 seconds when trying to find the
+objects. If it doesn't identify the object withing 20 seconds, exception
+is thrown.
+</div>
+<div class="class29">
+You can change this timeout from LeanFT settings dialog.
+</div>
+<div class="class29">
+Additionally you can also add custom wait conditions.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.GeneralLeanFtException;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.stdwin.ToolBar;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.stdwin.Window;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.stdwin.WindowDescription;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Assert;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class760">
+/**
+</div>
+<div class="class584">
+<span class="class1909"> </span> <span class="class1910">*</span> <span
+class="class1909">Created by Sagar on 21</span> <span
+class="class1910">-</span> <span class="class1909">07</span> <span
+class="class1910">-</span> <span class="class1909">2016.</span>
+</div>
+<div class="class763">
+<span class="class-4">*/</span>
+</div>
+<div class="class584">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">SynchTest</span>
+<span class="class1881">extends</span> <span
+class="class1882">BaseTest</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">@Test</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test1()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span
+class="class1882">        WaitUntilTestObjectState.WaitUntilEvaluator&lt;</span>
+<span class="class1881">Window</span> <span class="class1882">&gt;
+evaluator =</span> <span class="class1881">new</span> <span
+class="class1882">WaitUntilTestObjectState.WaitUntilEvaluator&lt;</span>
+<span class="class1881">Window</span> <span class="class1882">&gt;()
+{</span>
+</div>
+<div class="class635">
+<span class="class-2">@Override</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1881">public</span> <span class="class1881">boolean</span>
+<span class="class1882">evaluate(</span> <span
+class="class1881">Window</span> <span
+class="class1882">testObject)</span> <span
+class="class1881">throws</span> <span
+class="class1882">GeneralLeanFtException</span>
+</div>
+<div class="class635">
+<span class="class-2">{</span>
+</div>
+<div class="class584">
+<span class="class1882">               <span
+id="part0015.xhtml_page_71"></span>  </span> <span
+class="class1881">return</span> <span
+class="class1882">testObject.getWindowState()==WindowState.MAXIMIZED;</span>
+</div>
+<div class="class635">
+<span class="class-2">}</span>
+</div>
+<div class="class599">
+<span class="class-0">};</span>
+</div>
+<div class="class584">
+<span class="class1882">        </span> <span
+class="class1881">new</span> <span
+class="class1882">ProcessBuilder(</span> <span
+class="class1897">"C:\\Windows\\System32\\notepad.exe"</span> <span
+class="class1882">).start();</span>
+</div>
+<div class="class582">
+<span class="class1882">        </span> <span
+class="class1881">Window</span> <span class="class1882">notepadWindow =
+Desktop.describe(</span> <span class="class1881">Window</span> <span
+class="class1882">.class,</span>
+</div>
+<div class="class584">
+<span class="class1882">                </span> <span
+class="class1881">new</span> <span
+class="class1882">WindowDescription.Builder().windowClassRegExp(</span>
+<span class="class1897">"Notepad"</span> <span
+class="class1882">).windowTitleRegExp(</span> <span
+class="class1897">"Notepad"</span> <span
+class="class1882">).build());</span>
+</div>
+<div class="class599">
+<span class="class-0">notepadWindow.maximize();</span>
+</div>
+<div class="class599">
+<span
+class="class-0">Assert.assertTrue(evaluator.evaluate(notepadWindow));</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class610">
+}
+</div>
+</div>
+<p><span id="part0016.xhtml"></span></p>
+<div id="part0016.xhtml_toc42_12._Assertions_and_Reports"
+class="class151">
+12. Assertions and Reports
+</div>
+<div id="part0016.xhtml_lMgFRRDpRtGIftZBV7KV3A1861" class="class153">
+12.1 Assertions in LeanFT
+</div>
+<div class="class29">
+We can do assertions in LeanFT using Verify class in Validations
+namespace.
+</div>
+<div class="class29">
+This class allows you to put the assertions in the code. Here is the
+sample example showing usage of Verify class.
+</div>
+<div class="class29">
+Note that Verify class provides below methods.
+</div>
+<ol>
+<li>areEqual , areNotEqual</li>
+<li>isTrue, isFalse</li>
+<li>startsWith, contains, endsWith</li>
+<li>lessOrEqual, less, greater, greaterOrEqual</li>
+<li>isMatch</li>
+<li>isNullOrEmpty, isNotNullOrEmpty</li>
+</ol>
+<div class="class315">
+<div class="class1325">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class1327">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.ModifiableSDKConfiguration;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.SDK;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.EditField;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.EditFieldDescription;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.verifications.Verify;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">java.net.URI;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span class="class1886">static
+org.junit.Assert.assertEquals;</span>
+</div>
+<div class="class1327">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">ChromeTest</span>
+<span class="class1881">extends</span> <span
+class="class1882">BaseTest</span>
+</div>
+<div class="class1341">
+{
+</div>
+<div class="class1343">
+<span class="class-1">@Test</span>
+</div>
+<div class="class1329">
+<span class="class1882">   <span id="part0016.xhtml_page_73"></span>
+ </span> <span class="class1881">public</span> <span
+class="class1881">void</span> <span class="class1882">test()</span>
+<span class="class1881">throws</span> <span
+class="class1881">Exception</span>
+</div>
+<div class="class1329">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class1347">
+<span class="class-5">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">Try</span>
+</div>
+<div class="class1329">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class1329">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class1353">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box</span>
+</div>
+<div class="class1329">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class1329">
+<span class="class1882">            .id(</span> <span
+class="class1897">"fn"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1887">//click on Home link</span>
+</div>
+<div class="class1329">
+<span class="class1882">            browser.describe(Link.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">LinkDescription.Builder()</span>
+</div>
+<div class="class1329">
+<span class="class1882">                    .tagName(</span> <span
+class="class1897">"A"</span> <span class="class1882">).innerText(</span>
+<span class="class1897">"Home"</span> <span
+class="class1882">).build()).click();</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1887">//Wait until page loads</span>
+</div>
+<div class="class1353">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class1329">
+<span
+class="class1882">            Verify.isTrue(browser.getTitle().toLowerCase().contains(</span>
+<span class="class1897">"tutorial"</span> <span
+class="class1882">),</span> <span class="class1897">"Verifying the title
+of Home page"</span> <span class="class1882">);</span>
+</div>
+<div class="class1364">
+<span class="class-0">}</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class1367">
+<span class="class-0">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class1329">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class1329">
+<span class="class1882">          <span
+id="part0016.xhtml_page_74"></span>  </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class1367">
+<span class="class-0">}</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class1329">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class1353">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class1367">
+<span class="class-0">}</span>
+</div>
+<div class="class1343">
+<span class="class-1">}</span>
+</div>
+<div class="class1379">
+}
+</div>
+</div>
+<div class="class366">
+Here is the HTML report showing verification point.
+</div>
+<div class="class662-1">
+<img src="image1384.jpg" class="class662-0" />
+</div>
+<div class="class1386">
+Verify class in LeanF<span id="part0016.xhtml_page_75"></span> T
+</div>
+<div
+id="part0016.xhtml_toc41_12.2_Generating_reports_with_screenshots_and_recordings"
+class="class153">
+12.2 Generating reports with screenshots and recordings
+</div>
+<div class="class29">
+Reports can be generated in 2 ways in LeanFT.
+</div>
+<ol>
+<li>Screenshots using Reporter and TestObject.GetSnapshot</li>
+<li>Video recordings of test execution using Microsoft expression
+encoder.</li>
+</ol>
+<div class="class29">
+By default, LeanFT creates the reports in  RunResults folder in the root
+directory of Java project. But you can change that
+using ModifiableReportConfiguration class as shown in below example.
+</div>
+<div class="class41">
+You can also use below method to send your log messages to the
+report.<br />
+Reporter.reportEvent
+</div>
+<div class="class315">
+<div class="class1325">
+<span class="class1881">package</span> <span
+class="class1882">leanft;</span>
+</div>
+<div class="class1327">
+<span class="class1881">import</span> <span
+class="class1882">com.hp.lft.report.*;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1882">com.hp.lft.sdk.Desktop;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1882">com.hp.lft.sdk.stdwin.Window;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1882">com.hp.lft.sdk.stdwin.WindowDescription;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1882">com.hp.lft.sdk.web.*;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1882">com.hp.lft.verifications.Verify;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1882">org.junit.Test;</span>
+</div>
+<div class="class1327">
+<span class="class1881">import</span> <span
+class="class1882">java.awt.image.RenderedImage;</span>
+</div>
+<div class="class1327">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span
+class="class1882">ChromeReportTest</span> <span
+class="class1881">extends</span> <span class="class1882">BaseTest
+{</span>
+</div>
+<div class="class1343">
+<span class="class-1">@Test</span>
+</div>
+<div class="class1329">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1881">test</span> <span class="class1882">() throws
+Exception</span>
+</div>
+<div id="part0016.xhtml_page_76" class="class1343">
+<span class="class-1">{</span>
+</div>
+<div class="class1364">
+<span class="class-0">ModifiableReportConfiguration reportConfig =
+ReportConfigurationFactory.createDefaultReportConfiguration();</span>
+</div>
+<div class="class1329">
+<span class="class1882">        reportConfig.setOverrideExisting(</span>
+<span class="class1881">true</span> <span class="class1882">);</span>
+</div>
+<div class="class1329">
+<span class="class1882">        reportConfig.setTargetDirectory(</span>
+<span class="class1897">"RunResults"</span> <span
+class="class1882">);</span> <span class="class1887">// The folder must
+exist under C:\</span>
+</div>
+<div class="class1329">
+<span class="class1882">        reportConfig.setReportFolder(</span>
+<span class="class1897">"myreportdirectory"</span> <span
+class="class1882">);</span>
+</div>
+<div class="class1329">
+<span class="class1882">        reportConfig.setTitle(</span> <span
+class="class1897">"My Report Title"</span> <span
+class="class1882">);</span>
+</div>
+<div class="class1329">
+<span class="class1882">        reportConfig.setDescription(</span>
+<span class="class1897">"Report Description"</span> <span
+class="class1882">);</span>
+</div>
+<div class="class1367">
+<span
+class="class-0">reportConfig.setSnapshotsLevel(CaptureLevel.OnError);</span>
+</div>
+<div class="class1367">
+<span class="class-0">Reporter.init(reportConfig);</span>
+</div>
+<div class="class1367">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class1327">
+<span class="class1882">        </span> <span
+class="class1881">Try</span>
+</div>
+<div class="class1329">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to
+http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class1329">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class1353">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box</span>
+</div>
+<div class="class1329">
+<span class="class1882">           EditField firstName =
+browser.describe(EditField.</span> <span class="class1881">class</span>
+<span class="class1882">,</span> <span class="class1881">new</span>
+<span class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class1329">
+<span class="class1882">            .id(</span> <span
+class="class1897">"fn"</span> <span class="class1882">).build());</span>
+</div>
+<div class="class1329">
+<span class="class1882">            firstName.setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1887">//take screensho<span
+id="part0016.xhtml_page_77"></span> t</span>
+</div>
+<div class="class1427">
+<span class="class-7">RenderedImage img =
+browser.getPage().getSnapshot();</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1881">if</span> <span
+class="class1882">(firstName.getValue().equalsIgnoreCase(</span> <span
+class="class1897">"sagar"</span> <span class="class1882">))</span>
+</div>
+<div class="class1329">
+<span class="class1882">                Reporter.reportEvent(</span>
+<span class="class1897">"Verify Editbox"</span> <span
+class="class1882">,</span> <span class="class1897">"Value is
+sagar"</span> <span class="class1882">, Status.Passed,img);</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1881">else</span>
+</div>
+<div class="class1329">
+<span class="class1882">                Reporter.reportEvent(</span>
+<span class="class1897">"Verify Editbox"</span> <span
+class="class1882">,</span> <span class="class1897">"Value is not
+sagar"</span> <span class="class1882">, Status.Failed,img);</span>
+</div>
+<div class="class1364">
+<span class="class-0">}</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class1367">
+<span class="class-0">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class1329">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class1329">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class1367">
+<span class="class-0">}</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class1329">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class1353">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class1367">
+<span class="class-0">}</span>
+</div>
+<div class="class1343">
+<span class="class-1">}</span>
+</div>
+<div id="part0016.xhtml_page_78" class="class1446">
+}
+</div>
+</div>
+<div class="class736">
+Here is the sample report generated by above code.
+</div>
+<div class="class1452-1">
+<img src="image1451.jpg" class="class1452-0" />
+</div>
+<div class="class171">
+HTML report in LeanFT showing screenshot captured during run
+</div>
+<p><span id="part0017.xhtml"></span></p>
+<div id="part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1863" class="class151">
+13. LeanFT Frameworks
+</div>
+<div id="part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1864" class="class153">
+13.1 LeanFT with Cucumber
+</div>
+<div class="class29">
+We can integrate LeanFT tests with Cucumber BDD framework. If you know
+how to use JUnit with Cucumber, you will find it very easier to
+integrate LeanFT with Cucumber.
+</div>
+<div class="class29">
+Please follow below steps to integrate the LeanFT with Cucumber.
+</div>
+<ol>
+<li>Create a maven project using LeanFT template</li>
+<li>Add cucumber and selenium dependency in POM.xml</li>
+<li>Write feature files and scenarios</li>
+<li>Write the step definitions for steps in Scenario</li>
+<li>Execute feature file</li>
+</ol>
+<div class="class29">
+Here is the dependency that you will have to add for cucumber.
+</div>
+<div class="class315">
+<div class="class582">
+<span class="class1923">       </span> <span
+class="class1886">&lt;dependency&gt;</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1886">&lt;groupId&gt;</span> <span
+class="class1882">info.cukes</span> <span
+class="class1886">&lt;/groupId&gt;</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1886">&lt;artifactId&gt;</span> <span
+class="class1882">cucumber-java</span> <span
+class="class1886">&lt;/artifactId&gt;</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1886">&lt;version&gt;</span> <span
+class="class1882">1.2.4</span> <span
+class="class1886">&lt;/version&gt;</span>
+</div>
+<div class="class584">
+<span class="class1882">            </span> <span
+class="class1886">&lt;scope&gt;</span> <span
+class="class1882">test</span> <span
+class="class1886">&lt;/scope&gt;</span>
+</div>
+<div class="class1476">
+<span class="class1882">        </span> <span
+class="class1886">&lt;/dependency<span
+id="part0017.xhtml_page_80"></span> &gt;</span>
+</div>
+</div>
+<div class="class671">
+Then you have to create a feature file as shown in below example.
+</div>
+<div class="class315">
+<div class="class1482">
+<div class="class1480">
+Feature: My feature
+</div>
+</div>
+<div class="class1484">
+
+</div>
+<div class="class1488">
+<div class="class1486">
+Scenario: My Scenario
+</div>
+</div>
+<div class="class1488">
+<div class="class1490">
+Given I am on www.softpost.org page
+</div>
+</div>
+<div class="class1494">
+<div class="class1490">
+Then I verify that title contains tutorial word
+</div>
+</div>
+</div>
+<div class="class366">
+After that you can create step definitions as shown in below example.
+</div>
+<div class="class315">
+<div class="class580">
+<span class="class1881">package</span> <span
+class="class1886">org.softpost;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.ModifiableSDKConfiguration;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.SDK;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.Browser;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.BrowserFactory;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.BrowserType;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">cucumber.api.java.After;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">cucumber.api.java.Before;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">cucumber.api.java.en.Given;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">cucumber.api.java.en.Then;</span>
+</div>
+<div class="class584">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Assert;</span>
+</div>
+<div class="class582">
+<span class="class1881">import</span> <span
+class="class1886">java.net.URI;</span>
+</div>
+<div class="class760">
+/**
+</div>
+<div class="class584">
+<span class="class1909"> </span> <span class="class1910">*</span> <span
+class="class1909">Created by Sagar on 23</span> <span
+class="class1910">-</span> <span class="class1909">07</span> <span
+class="class1910">-</span> <span class="class1909">2016.</span>
+</div>
+<div class="class763">
+<span class="class-4">*/</span>
+</div>
+<div class="class584">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span class="class1882">Steps</span>
+</div>
+<div class="class591">
+{
+</div>
+<div class="class593">
+<span class="class-1">Browser browser;</span>
+</div>
+<div class="class593">
+<span class="class-1">@Before</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">init()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span class="class1882">       <span id="part0017.xhtml_page_81"></span>
+ ModifiableSDKConfiguration config =</span> <span
+class="class1881">new</span> <span
+class="class1882">ModifiableSDKConfiguration();</span>
+</div>
+<div class="class584">
+<span class="class1882">        config.setServerAddress(</span> <span
+class="class1881">new</span> <span class="class1882">URI(</span> <span
+class="class1897">"ws://localhost:5095"</span> <span
+class="class1882">));</span>
+</div>
+<div class="class599">
+<span class="class-0">SDK.init(config);</span>
+</div>
+<div class="class599">
+<span class="class-0">Reporter.init();</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class582">
+<span class="class1882">    @Given(</span> <span class="class1897">"^I
+am on www\\.softpost\\.org page$"</span> <span
+class="class1882">)</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">i_am_on_www_softpost_org_page()</span> <span
+class="class1881">throws</span> <span class="class1881">Throwable</span>
+</div>
+<div class="class593">
+<span class="class-1">{</span>
+</div>
+<div class="class599">
+<span class="class-0">browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class584">
+<span class="class1882">        browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org"</span> <span
+class="class1882">);</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class582">
+<span class="class1882">    @Then(</span> <span class="class1897">"^I
+verify that title contains tutorial word$"</span> <span
+class="class1882">)</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span
+class="class1882">i_verify_that_title_contains_tutorial_word()</span>
+<span class="class1881">throws</span> <span
+class="class1881">Throwable</span>
+</div>
+<div class="class584">
+<span class="class1881">   </span> <span class="class1882">{</span>
+</div>
+<div class="class584">
+<span
+class="class1882">        Assert.assertTrue(browser.getTitle().toLowerCase().contains(</span>
+<span class="class1897">"tutorial"</span> <span
+class="class1882">));</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div class="class603">
+<span class="class-1">@After</span>
+</div>
+<div class="class584">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">clean()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+</div>
+<div class="class584">
+<span class="class1881">    </span> <span class="class1882">{</span>
+</div>
+<div class="class599">
+<span class="class-0">browser.close();</span>
+</div>
+<div class="class1540">
+<span class="class-5">SDK.cleanup();</span>
+</div>
+<div class="class593">
+<span class="class-1">}</span>
+</div>
+<div id="part0017.xhtml_page_82" class="class610">
+}
+</div>
+</div>
+<div id="part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1865" class="class153">
+13.2 Keyword Driven frameworks
+</div>
+<div class="class29">
+Keyword driven frameworks are very popular in LeanFT.
+</div>
+<div class="class29">
+Please follow below steps to create keyword driven framework.
+</div>
+<ol>
+<li>Find main operations and features of the application.</li>
+<li>Map each feature or operation to a keyword.</li>
+<li>Write a code to automate specific keyword.</li>
+<li>Create test sheet containing test cases made up of one or more
+keywords. You can store the test sheet in Excel file, Database or in the
+form of JUnit or TestNG test class.</li>
+<li>Unless you are using JUnit or TestNG to execute the tests, you might
+need to create a driver script to execute each test case.</li>
+</ol>
+<div class="class29">
+Here is the case study on WPF Flight application provided by HP.
+</div>
+<div class="class29">
+In this application, we can create a keyword for each major feature like
+log in to the application, searching a flight, selecting a flight,
+Placing a order, Searching a order, Deleting the order, Cancelling the
+order, Book a flight, Verify flights.
+</div>
+<div class="class29">
+Then we can create test cases for various user scenarios using same
+keywords as mentioned above.
+</div>
+<div class="class29">
+Here are couple of test cases created using above keywords. Note that in
+below test cases, we have re-used login keyword<span
+id="part0017.xhtml_page_83"></span> .
+</div>
+<div class="class29">
+Here is the test case to search for a flight.
+</div>
+<ol>
+<li>Login to the Flight application.</li>
+<li>Search for the flights from London to Paris in next week for one
+person.</li>
+<li>Verify that flights are displayed from London to Paris only.</li>
+</ol>
+<div class="class29">
+Here is the test case to search for a order.
+</div>
+<ol>
+<li>Login to the Flight application.</li>
+<li>Book a flight and note down order number say 88.</li>
+<li>Search for order with id 88.</li>
+<li>Verify that flight details are correctly displayed.</li>
+</ol>
+<div id="part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1866" class="class153">
+13.3 Data Driven Frameworks
+</div>
+<div class="class29">
+Data driven framework are used when you need to test the application
+with various types of data.
+</div>
+<div class="class29">
+You can store the data in below formats.
+</div>
+<ol>
+<li>Microsoft Excel Files</li>
+<li>Databases</li>
+</ol>
+<div class="class29">
+In data driven frameworks, we test the same feature but with different
+set of data. For example, in HP flight application, we can test the
+Login functionality with various combination of User Id and Password.
+</div>
+<div class="class29">
+Note that here Login functionality is same but Test data is different
+during each run.
+</div>
+<p><span id="part0018.xhtml"></span></p>
+<div id="part0018.xhtml_lMgFRRDpRtGIftZBV7KV3A1867" class="class1582">
+14. Converting the UFT Object Repository to Application models in LeanFT
+</div>
+<div class="class29">
+We can use below command line utility to convert the Object repository
+to Application models in LeanFT.
+</div>
+<div class="class204-0">
+<img src="image1586.jpg" class="class204-1" />
+</div>
+<div class="class171">
+OR2AppModelConverter in Java
+</div>
+<div class="class29">
+Here is the syntax of this utility.
+</div>
+<div class="class29">
+OR2AppModelConverter myuftOR.tsr  myAppModel.tsrx myLogFile.log Warning
+</div>
+<div class="class29">
+First argument is the path of the object repository file. Second
+argument is the path of the application model file. Third argument is
+the path of the log file and last argument is the log level (It can be
+Info, Warning or Error).
+</div>
+<p><span id="part0019.xhtml"></span></p>
+<div
+id="part0019.xhtml_toc51_15._Integrating_the_LeanFT_tests_with_CI_servers"
+class="class1582">
+15. Integrating the LeanFT tests with CI servers
+</div>
+<div id="part0019.xhtml_toc48_15.1_Adding_maven_task_in_Bamboo"
+class="class153">
+15.1 Adding maven task in Bamboo
+</div>
+<div class="class29">
+The important settings of maven task are given below.
+</div>
+<ol>
+<li>Provide the path of maven executable</li>
+<li>Provide any valid <a
+href="http://www.softpost.org/maven/maven-commands/">maven goal</a></li>
+</ol>
+<div class="class29">
+Below image shows how to configure the maven task in Bamboo. We have set
+up the clean test goal.
+</div>
+<div class="class1606-0">
+<img src="image1605.jpg" class="class1606-1" />
+</div>
+<div class="class171">
+maven task in Bambo<span id="part0019.xhtml_page_86"></span> o
+</div>
+<div class="class366">
+Below image shows the sample output of the build plan using maven task.
+</div>
+<div class="class1612-1">
+<img src="image1611.jpg" class="class1612-0" />
+</div>
+<div class="class171">
+maven output in Bambo<span id="part0019.xhtml_page_87"></span> o
+</div>
+<div
+id="part0019.xhtml_toc49_15.2_Creating_and_Configuring_the_builds_in_Jenkins"
+class="class1615">
+15.2 Creating  and Configuring the builds in Jenkins
+</div>
+<div class="class29">
+Now let us understand how to create and configure a typical build in
+Jenkins.
+</div>
+<div class="class29">
+To create new build (also called as job), click on New Item link on
+Jenkins Home page. It will open below page.
+</div>
+<div class="class191-0">
+<img src="image1620.jpg" class="class191-1" />
+</div>
+<div class="class171">
+New Jenkins Build projec<span id="part0019.xhtml_page_88"></span> t
+</div>
+<div class="class225">
+Then enter name of project, select freestyle project option and click on
+OK. It will open Build configuration page as shown below. Enter project
+description and add parameter if you want pass any parameter to the
+build.
+</div>
+<div class="class1452-1">
+<img src="image1625.jpg" class="class1452-0" />
+</div>
+<div class="class171">
+Build configuration in Jenkins - Build name, description, parameter<span
+id="part0019.xhtml_page_89"></span> s
+</div>
+<div class="class736">
+Next you need to configure the SCM like git as shown in below image. In
+this example, we are using repository on GITHUB. But you can use any
+other version control software.
+</div>
+<div class="class1631-1">
+<img src="image1630.jpg" class="class1631-0" />
+</div>
+<div class="class171">
+git - Source code management in Jenkins buil<span
+id="part0019.xhtml_page_90"></span> d
+</div>
+<div class="class1634">
+Next - you have to specify the build triggers. You can specify the
+trigger in the form of Cron expressions. You can also poll SCM at
+regular intervals and if changes are detected, build will be run.
+</div>
+<div class="class1638-1">
+<img src="image1637.jpg" class="class1638-0" />
+</div>
+<div class="class171">
+Build triggers in Jenkins
+</div>
+<div class="class29">
+Your job/project is made up of multiple build steps. So you can add
+build steps as shown in below image. Note that you will not see all
+build steps as shown in below image unless you have installed proper
+plugins. For examples - MSBuild step will not be available unless you
+install MSBuild plugin in Jenkins.
+</div>
+<div class="class1644-1">
+<img src="image1643.jpg" id="page_91" class="class1644-0" />
+</div>
+<div class="class171">
+Build steps in Jenkins
+</div>
+<div class="class1649-0">
+<img src="image1648.jpg" class="class1649-1" />
+</div>
+<div class="class171">
+maven build step in Jenkins
+</div>
+<div class="class29">
+Last thing you need to do is configure post-build actions. Below image
+shows possible post-build actions that you can do.
+</div>
+<div class="class1655-1">
+<img src="image1654.jpg" id="page_92" class="class1655-0" />
+</div>
+<div class="class171">
+post-build actions in Jenkins
+</div>
+<div class="class29">
+Above step is optional. So just go ahead and click on Save button. Well
+done! You have just created a sample build in Jenkins. To view your
+build project, just go to homepage. You will see your build(Highlighted
+in yellow color) as shown in below image.
+</div>
+<div class="class1661-1">
+<img src="image1660.jpg" id="page_93" class="class1661-0" />
+</div>
+<div class="class1386">
+Jenkins build on Dashboard
+</div>
+<div
+id="part0019.xhtml_toc50_15.3_Build_steps_for_Maven_project_in_TeamCity"
+class="class153">
+15.3 Build steps for Maven project in TeamCity
+</div>
+<div class="class29">
+In this topic, you will learn how to set up a build steps for maven
+project in TeamCity.
+</div>
+<div class="class29">
+As shown in below image, you have to select runner type as Maven. Then
+you have to provide the goals to be executed. By default, it uses
+POM.xml in the root directory of the project. You may also run code
+coverage process along with test goal which gives report on how many
+classes were covered by tests<span id="part0019.xhtml_page_94"></span> .
+</div>
+<div class="class671">
+Here is the list of some of the popular maven goals that can be used.
+</div>
+<ol>
+<li>test - execute tests using surefire plugin. We can also pass various
+parameters to maven JUnit test goal  and maven testNG test goal</li>
+<li>verify - executes unit tests as well as does verification provided
+by plugins</li>
+<li>install</li>
+<li>site</li>
+<li>deploy</li>
+</ol>
+<div class="class1676-0">
+<img src="image1675.jpg" class="class1676-1" />
+</div>
+<div class="class171">
+maven build step in TeamCity
+</div>
+<div class="class1679">
+Below image shows that sample build log.
+</div>
+<div class="class1683-1">
+<img src="image1682.jpg" class="class1683-0" />
+</div>
+<div class="class171">
+maven build log in TeamCity
+</div>
+<p><span id="part0020.xhtml"></span></p>
+<div id="part0020.xhtml_lMgFRRDpRtGIftZBV7KV3A1872" class="class151">
+16. Challenges and Solutions
+</div>
+<div id="part0020.xhtml_toc52_16.1_Challenges_of_LeanFT_automation"
+class="class153">
+16.1 Challenges of LeanFT automation
+</div>
+<div class="class29">
+Here is the list of main LeanFT challenges.
+</div>
+<ol>
+<li>LeanFT does not support third party controls. We have to use Native
+objects to automate such third party objects.</li>
+<li>Dynamic Elements like check boxes, buttons, radio buttons inside
+nested tables. We have to use HTML DOM to handle such elements.</li>
+</ol>
+<div
+id="part0020.xhtml_toc53_16.2_Working_with_third_party_objects_using"
+class="class178">
+16.2 Working with third party objects using
+</div>
+<div id="part0020.xhtml_lMgFRRDpRtGIftZBV7KV3A1875" class="class153">
+Native Object properties and methods
+</div>
+<div class="class29">
+Below example illustrates how to access native object properties in
+LeanFT. In below example, we have set the value in edit box using native
+value property. We have also used native click method to click on Home
+link.
+</div>
+<div class="class315">
+<div class="class1325">
+<span class="class1881">package</span> <span
+class="class1886">leanft;</span>
+</div>
+<div class="class1327">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Reporter;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.report.Status;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.NativeObject;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">com.hp.lft.sdk.web.</span> <span
+class="class1881">*</span> <span class="class1886">;</span>
+</div>
+<div class="class1329">
+<span class="class1881">import</span> <span
+class="class1886">org.junit.Test;</span>
+</div>
+<div class="class1327">
+<span class="class1881">import</span> <span
+class="class1886">java.util.List;</span>
+</div>
+<div class="class1327">
+<span class="class1881">public</span> <span
+class="class1881">class</span> <span
+class="class1882">ChromeNativeObjectTest</span> <span
+class="class1881">extends</span> <span class="class1882">BaseTest</span>
+</div>
+<div id="part0020.xhtml_page_97" class="class1341">
+{
+</div>
+<div class="class1709">
+<span class="class-1">@Test</span>
+</div>
+<div class="class1329">
+<span class="class1882">    </span> <span
+class="class1881">public</span> <span class="class1881">void</span>
+<span class="class1882">test()</span> <span
+class="class1881">throws</span> <span class="class1881">Exception</span>
+<span class="class1882">{</span>
+</div>
+<div class="class1364">
+<span class="class-0">Browser browser =
+BrowserFactory.launch(BrowserType.CHROME);</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">Try</span>
+</div>
+<div class="class1329">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1887">//Navigate to</span> <span
+class="class1888">http://www.softpost.org/selenium-test-page/</span>
+</div>
+<div class="class1329">
+<span class="class1882">            browser.navigate(</span> <span
+class="class1897">"http://www.softpost.org/selenium-test-page/"</span>
+<span class="class1882">);</span>
+</div>
+<div class="class1353">
+<span class="class-2">browser.sync();</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1887">//set value in edit box</span>
+</div>
+<div class="class1329">
+<span
+class="class1882">            browser.describe(EditField.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class1329">
+<span class="class1882">            .id(</span> <span
+class="class1897">"fn"</span> <span
+class="class1882">).build()).setValue(</span> <span
+class="class1897">"Sagar"</span> <span class="class1882">);</span>
+</div>
+<div class="class1721">
+<span class="class1882">            </span> <span
+class="class1887">//get native object</span>
+</div>
+<div class="class1329">
+<span class="class1882">            NativeObject obj =
+browser.describe(EditField.class,</span> <span
+class="class1881">new</span> <span
+class="class1882">EditFieldDescription.Builder()</span>
+</div>
+<div class="class1329">
+<span class="class1882">                    .id(</span> <span
+class="class1897">"fn"</span> <span
+class="class1882">).build()).getNativeObject();</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1887">//list native members of the object</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1881">List</span> <span class="class1882">&lt;</span> <span
+class="class1881">String</span> <span class="class1882">&gt; list =
+obj.getMembers();</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1881">for</span> <span class="class1882">(</span> <span
+class="class1881">String</span> <span class="class1882">  s :
+list  )</span>
+</div>
+<div class="class1353">
+<span class="class-2">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">                </span> <span
+class="class1881">System</span> <span
+class="class1882">.out.println(s);</span>
+</div>
+<div class="class1353">
+<span class="class-2">}</span>
+</div>
+<div class="class1327">
+<span class="class1882">            obj.setProperty(</span> <span
+class="class1897">"value"</span> <span class="class1882">,</span> <span
+class="class1897">"Native"</span> <span class="class1882">);</span>
+</div>
+<div class="class1327">
+<span class="class1882">           <span
+id="part0020.xhtml_page_98"></span>  </span> <span
+class="class1881">Thread</span> <span
+class="class1882">.sleep(3000);</span>
+</div>
+<div class="class1327">
+<span class="class1882">            </span> <span
+class="class1887">//click on Home link using native click method</span>
+</div>
+<div class="class1329">
+<span class="class1882">            browser.describe(Link.class,</span>
+<span class="class1881">new</span> <span
+class="class1882">LinkDescription.Builder()</span>
+</div>
+<div class="class1329">
+<span class="class1882">                    .tagName(</span> <span
+class="class1897">"A"</span> <span class="class1882">).innerText(</span>
+<span class="class1897">"Home"</span> <span
+class="class1882">).build()).getNativeObject().invokeMethod(</span>
+<span class="class1897">"click"</span> <span class="class1882">);</span>
+</div>
+<div class="class1367">
+<span class="class-0">}</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">catch</span> <span class="class1882">(AssertionError
+ex)</span>
+</div>
+<div class="class1367">
+<span class="class-0">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">           </span> <span
+class="class1887">//Report the Exception</span>
+</div>
+<div class="class1329">
+<span class="class1882">           Reporter.reportEvent(</span> <span
+class="class1897">"Exception"</span> <span class="class1882">,</span>
+<span class="class1897">"Test failed"</span> <span class="class1882">,
+Status.Failed, ex);</span>
+</div>
+<div class="class1329">
+<span class="class1882">           </span> <span
+class="class1881">throw</span> <span class="class1882">ex;</span>
+</div>
+<div class="class1367">
+<span class="class-0">}</span>
+</div>
+<div class="class1329">
+<span class="class1882">        </span> <span
+class="class1881">Finally</span>
+</div>
+<div class="class1329">
+<span class="class1881">        </span> <span class="class1882">{</span>
+</div>
+<div class="class1329">
+<span class="class1882">            </span> <span
+class="class1887">//Close the browser</span>
+</div>
+<div class="class1353">
+<span class="class-2">browser.close();</span>
+</div>
+<div class="class1367">
+<span class="class-0">}</span>
+</div>
+<div class="class1343">
+<span class="class-1">}</span>
+</div>
+<div class="class1379">
+}
+</div>
+</div>
+<p><span id="part0021.xhtml"></span></p>
+<div id="part0021.xhtml_lMgFRRDpRtGIftZBV7KV3A1876" class="class151">
+17. LeanFT common issues and solutions
+</div>
+<div class="class29">
+I have listed down common issues and solutions that you may encounter
+while working with LeanFT.
+</div>
+<ol>
+<li>Failed to connect to LeanFT run time engine on….This exception comes
+when LeanFT run time engine is not running. Just start the engine and
+this error should vanish.</li>
+<li>An Internal problem has occurred, please make sure the LeanFT
+SDK was properly initialized….This exception comes when you have not
+initialized LeanFT SDK. To get rid of this exception, add below lines at
+the beginning of the code.</li>
+</ol>
+<div class="class1771">
+<div class="class1763">
+<div class="class1761">
+ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();
+</div>
+</div>
+<div class="class1766">
+<div class="class1761">
+config.setServerAddress(new URI("ws://localhost:5095"));
+</div>
+</div>
+<div class="class1769">
+<div class="class1761">
+SDK.init(config);
+</div>
+</div>
+</div>
+<ol start="3">
+<li>IntelliJ IDEA does not start when LeanFT is plugin is enabled – To
+fix this issue kill the LeanFT plugin for IntelliJ IDEA in process
+explorer</li>
+<li>com.hp.lft.sdk.ReplayObjectNotUniqueException: Object not unique –
+This exception comes when LeanFT finds more than one object matching the
+description. To fix this issue, you need to add more properties so that
+only one object is identified<span id="part0021.xhtml_page_100"></span>
+.</li>
+<li>Object not found – This exception comes when LeanFT is not able to
+find the object in the application. To fix this issue, ensure that
+object really exists in the application and you are using correct
+description to identify the object.</li>
+</ol>
+<p><span id="part0022.xhtml"></span></p>
+<div id="part0022.xhtml_toc59_18._Comparing_LeanFT_with_other_tools"
+class="class151">
+18. Comparing LeanFT with other tools
+</div>
+<div id="part0022.xhtml_lMgFRRDpRtGIftZBV7KV3A1878" class="class153">
+18.1 Difference between HP UFT and LeanFT
+</div>
+<div class="class29">
+Here is the list of main differences between UFT and LeanFT.
+</div>
+<ol>
+<li>UFT scripts can be written in VBScript only.</li>
+<li>LeanFT scripts can be written in languages like Java, C#.Net and
+Java script.</li>
+<li>LeanFT does not support automation of various technologies
+like Oracle, Siebel, PeopleSoft, Delphi, Power Builder, Stingray, Flex,
+VisualAge. UFT supports all these platforms.</li>
+</ol>
+<div
+id="part0022.xhtml_toc58_18.2_Comparison_of_LeanFT_with_Selenium_and_Ranorex"
+class="class153">
+18.2 Comparison of LeanFT with Selenium and Ranorex
+</div>
+<div class="class29">
+Based upon my experience, I can say that LeanFT and Ranorex are
+equivalent in terms of features.
+</div>
+<div class="class1791">
+Difference between Selenium and LeanFT
+</div>
+<ol>
+<li>Biggest difference between Selenium and LeanFT (and Ranorex) is that
+Selenium can only support automation of web pages and not windows
+applications. But LeanFT and Ranorex can automate the windows and forms
+very easily along with web application.</li>
+<li>Another major difference between Selenium and other 2 tools is that
+Selenium is free<span id="part0022.xhtml_page_102"></span> !</li>
+</ol>
+<div class="class1796">
+Difference between LeanFT and Ranorex
+</div>
+<ol>
+<li>LeanFT is developed by HP while Ranorex is developed by Ranorex
+Gmbh.</li>
+<li>Ranorex coding can be done only in C#.Net While LeanFT can be coded
+in C#.Net as well as Java.</li>
+<li>Ranorex uses xpath to identify objects in windows as well as web
+applications. LeanFT uses property value pairs to identify the objects
+in Windows apps. LeanFT also supports xpath in web applications.</li>
+</ol>
+<p><span id="part0023.xhtml"></span></p>
+<div id="part0023.xhtml_toc60_19._LeanFT_Java_References"
+class="class151">
+19. LeanFT Java References
+</div>
+<div class="class29">
+You can find the LeanFT resources at below urls.
+</div>
+<ol>
+<li>http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HelpCenterRoot/DemoApps.htm -
+Demo applications provided by HP</li>
+<li>http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReference/index.html?com/hp/lft/sdk/example-files/master-examples-list.html -
+Sample examples in Java</li>
+<li>http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReferenc<span
+id="part0023.xhtml_page_104"></span> e/index.html - LeanFT Java SDK</li>
+<li>http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/UFT_OR_Converter.htm -
+Coverting UFT Object repository into Application models in LeanFT</li>
+<li>http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/RunRemotely.htm -
+Executing the tests remotely in LeanFT</li>
+<li>http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/CI_Tools.htm -
+Integrating LeanFT with CI servers like TeamCity</li>
+</ol>

@@ -1,0 +1,2597 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 128 183" preserveaspectratio="none">
+<image width="128" height="183" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="text00000.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>Copyright © All rights reserved</p>
+<p> </p>
+<p>No part of this book may be reproduced, or stored in a retrieval
+system, or transmitted in any form or by any means, electronic,
+mechanical, photocopying, recording, or otherwise, without express
+written permission of the publisher.</p>
+<p> </p>
+<p><span id="text00001.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>I would like to dedicate the book to the students who will be using
+it. I wish you future career success and hope you never stop
+learning.</p>
+<p> </p>
+<p><span id="text00002.html"></span></p>
+<p>TABLE OF CONTENT</p>
+<p> </p>
+<p><span id="text00002.html_id_toc" class="text_"></span> <a
+href="#text00003.html_id_Toc67988449" class="calibre1"><span
+class="text_1">Introduction</span></a></p>
+<p><a href="#text00004.html_id_Toc67988450" class="calibre1"><span
+class="text_2">Environment Setup</span></a></p>
+<p><a href="#text00005.html_id_Toc67988451" class="calibre1"><span
+class="text_2">Build Files</span></a></p>
+<p><a href="#text00006.html_id_Toc67988452" class="calibre1"><span
+class="text_2">Property Task</span></a></p>
+<p><a href="#text00007.html_id_Toc67988453" class="calibre1"><span
+class="text_2">Property Files</span></a></p>
+<p><a href="#text00008.html_id_Toc67988454" class="calibre1"><span
+class="text_2">Data Types</span></a></p>
+<p><a href="#text00009.html_id_Toc67988455" class="calibre1"><span
+class="text_2">Building Projects</span></a></p>
+<p><a href="#text00010.html_id_Toc67988456" class="calibre1"><span
+class="text_2">Build Documentation</span></a></p>
+<p><a href="#text00011.html_id_Toc67988457" class="calibre1"><span
+class="text_2">Creating JAR files</span></a></p>
+<p><a href="#text00012.html_id_Toc67988458" class="calibre1"><span
+class="text_2">Create WAR Files</span></a></p>
+<p><a href="#text00013.html_id_Toc67988459" class="calibre1"><span
+class="text_2">Packaging Applications</span></a></p>
+<p><a href="#text00014.html_id_Toc67988460" class="calibre1"><span
+class="text_2">Deploying Applications</span></a></p>
+<p><a href="#text00015.html_id_Toc67988461" class="calibre1"><span
+class="text_2">Executing Java code</span></a></p>
+<p><a href="#text00016.html_id_Toc67988462" class="calibre1"><span
+class="text_2">Eclipse Integration</span></a></p>
+<p><a href="#text00017.html_id_Toc67988463" class="calibre1"><span
+class="text_2">JUnit Integration</span></a></p>
+<p><a href="#text00018.html_id_Toc67988464" class="calibre1"><span
+class="text_2">Extending Ant</span></a></p>
+<h1 class="block_7"><span class="text_3"><br />
+</span></h1>
+<p><span id="text00003.html"></span></p>
+<h1 class="block_7"><span id="text00003.html_id_Toc67988449"
+class="text_4">Introduction</span></h1>
+<p>ANT stands for <strong>Another Neat</strong>  Tool. It is a
+Java-based build tool from computer software development company Apache.
+Before going into the details of Apache Ant, let us first understand why
+we need a build tool.</p>
+<h2 class="block_9">Need for a Build Tool</h2>
+<p>On an average, a developer spends a substantial amount of time doing
+mundane tasks like build and deployment that include −</p>
+<ul>
+<li>Compiling the code</li>
+<li>Packaging the binaries</li>
+<li>Deploying the binaries to the test server</li>
+<li>Testing the changes</li>
+<li>Copying the code from one location to another</li>
+</ul>
+<p>To automate and simplify the above tasks, Apache Ant is useful. It is
+an Operating System build and deployment tool that can be executed from
+the command line.</p>
+<h2 class="block_9">History of Apache Ant</h2>
+<p>Ant was created by software developer James Duncan Davidson who is
+also the original creator of webserver application Tomcat.</p>
+<p>Ant was originally used to build Tomcat, and was bundled as a part of
+Tomcat distribution.</p>
+<p>It was born out of the problems and complexities associated with the
+Apache Make tool.</p>
+<p>It was promoted as an independent project in Apache in the year 2000.
+The latest version of Apache Ant as on September 2020
+is <strong>1.10.9</strong> .</p>
+<h2 class="block_9">Features of Apache Ant</h2>
+<p>The features of Apache Ant are listed below −</p>
+<ul>
+<li>It is the most complete Java build and deployment tool
+available.</li>
+<li>It is platform neutral and can handle platform specific properties,
+such as file separators.</li>
+<li>It can be used to perform platform specific tasks such as modifying
+the modified time of a file using 'touch' command.</li>
+<li>Ant scripts are written using plain XML. If you are already familiar
+with XML, you can learn Ant pretty quickly.</li>
+<li>Ant is good at automating complicated repetitive tasks.</li>
+<li>Ant comes with a big list of predefined tasks.</li>
+<li>Ant provides an interface to develop custom tasks.</li>
+<li>Ant can be easily invoked from the command line and it can integrate
+with free and commercial IDEs.</li>
+</ul>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00004.html"></span></p>
+<h1 class="block_11"><span id="text00004.html_id_Toc67988450"
+class="calibre4">Environment Setup</span></h1>
+<p>Apache Ant is distributed under the Apache Software License which is
+a fully-fledged open source license certified by the open source
+initiative.</p>
+<p><span class="calibre4">The latest Apache Ant version, including its
+full-source code, class files, and documentation can be found at </span>
+<a href="https://ant.apache.org/" class="text_5"
+target="_blank">https://ant.apache.org</a> <span
+class="calibre4">.</span></p>
+<h2 class="block_9">Installing Apache Ant</h2>
+<p>It is assumed that you have already downloaded and installed Java
+Development Kit (JDK) on your computer. If not, please follow the
+instructions available
+at <strong>file:///C:/java/java_environment_setup.htm</strong></p>
+<ul>
+<li>Ensure that the JAVA_HOME environment variable is set to the folder,
+where your JDK is installed.</li>
+<li><span class="calibre4">Download the binaries from </span> <a
+href="https://ant.apache.org/" class="text_5"
+target="_blank">https://ant.apache.org</a></li>
+<li>Unzip the zip file to a convenient location c:\folder by using
+Winzip, winRAR, 7-zip or similar tools.</li>
+<li>Create a new environment variable called <strong>ANT_HOME</strong>
+ that points to the Ant installation folder. In this case, it
+is <strong>c:\apache-ant-1.10.9-bin</strong>  folder.</li>
+<li>Append the path to the Apache Ant batch file to the PATH environment
+variable. In our case, this would be
+the <strong>c:\apache-ant-1.10.9-bin\bin</strong>  folder.</li>
+</ul>
+<h2 class="block_9">Verifying the Installation</h2>
+<p>To verify the successful installation of Apache Ant on your computer,
+type ant on your command prompt.</p>
+<p>You should see an output as given below −</p>
+<p>C:\&gt;ant -version</p>
+<p>Apache Ant(TM) version 1.10.9 compiled on September 27 2020</p>
+<p>If you do not see the above output, then please verify that you have
+followed the installation steps properly.</p>
+<h2 class="block_9">Installing Eclipse</h2>
+<p>This tutorial also covers integration of Ant with Eclipse integrated
+development environment (IDE). Hence, if you have not installed Eclipse,
+please download and install Eclipse.</p>
+<h3 class="block_14">Steps to install Eclipse</h3>
+<ul>
+<li><span class="calibre4">Download the latest Eclipse binaries
+from </span> <a href="https://www.eclipse.org/" class="text_5"
+target="_blank">www.eclipse.org</a></li>
+<li>Unzip the Eclipse binaries to a convenient location, say
+c:\folder.</li>
+<li>Run Eclipse from c:\eclipse\eclipse.exe.</li>
+</ul>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00005.html"></span></p>
+<h1 class="block_11"><span id="text00005.html_id_Toc67988451"
+class="calibre4">Build Files</span></h1>
+<p>Typically, Ant's build file, called <strong>build.xml</strong>
+ should reside in the base directory of the project. However, there is
+no restriction on the file name or its location. You are free to use
+other file names or save the build file in some other location.</p>
+<p>For this exercise, create a file called build.xml anywhere in your
+computer with the following contents −</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="text_6">?&gt;</span></p>
+<p><span class="text_8">&lt;project</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"Hello World Project"</span> <span
+class="text_9">default</span> <span class="text_6">=</span> <span
+class="text_7">"info"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"info"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;echo&gt;</span> <span class="calibre4">Hello
+World - Welcome to Apache Ant!</span> <span
+class="text_8">&lt;/echo&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Note that there should be no blank line(s) or whitespace(s) before
+the xml declaration. If you allow them, the following error message
+occurs while executing the ant build −</p>
+<p>The processing instruction target matching "[xX][mM][lL]" is not
+allowed.</p>
+<p>All build files require the project element and at least one target
+element.</p>
+<p>The XML element <strong>project</strong>  has three attributes which
+are as follows −</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_"><p>Sr.No</p></td>
+<td class="td_"><p>Attributes &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>1</p></td>
+<td class="td_1"><p>name</p>
+<p>The Name of the project. (Optional)</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>2</p></td>
+<td class="td_1"><p>default</p>
+<p>The default target for the build script. A project may contain any
+number of targets. This attribute specifies which target should be
+considered as the default. (Mandatory)</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>3</p></td>
+<td class="td_1"><p>basedir</p>
+<p>The base directory (or) the root folder for the project.
+(Optional)</p></td>
+</tr>
+</tbody>
+</table>
+<p>A target is a collection of tasks that you want to run as one unit.
+In our example, we have a simple target to provide an informational
+message to the user.</p>
+<p>Targets can have dependencies on other targets. For example,
+a <strong>deploy</strong>  target may have a dependency on the package
+target, the <strong>package</strong>  target may have a dependency on
+the compile target and so forth. Dependencies are denoted using
+the <strong>depends</strong>  attribute.</p>
+<p>For example −</p>
+<div class="frame_">
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"deploy"</span> <span class="text_9">depends</span> <span
+class="text_6">=</span> <span class="text_7">"package"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="calibre7">....</span></p>
+<p>&lt;/target&gt;</p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"package"</span> <span class="text_9">depends</span>
+<span class="text_6">=</span> <span
+class="text_7">"clean,compile"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="calibre7">....</span></p>
+<p>&lt;/target&gt;</p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"clean"</span> <span class="text_8">&gt;</span></p>
+<p><span class="calibre7">....</span></p>
+<p>&lt;/target&gt;</p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"compile"</span> <span class="text_8">&gt;</span></p>
+<p><span class="calibre7">....</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>The target element has the following attributes −</p>
+<table class="table_1">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_2"><p>Sr.No</p></td>
+<td class="td_3"><p>Attributes &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_4"><p>1</p></td>
+<td class="td_5"><p>name</p>
+<p>The name of the target (Required)</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_4"><p>2</p></td>
+<td class="td_5"><p>depends</p>
+<p>Comma separated list of all targets that this target depends on.
+(Optional)</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_4"><p>3</p></td>
+<td class="td_5"><p>description</p>
+<p>A short description of the target. (optional)</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_4"><p>4</p></td>
+<td class="td_5"><p>if</p>
+<p>Allows the execution of a target based on the trueness of a
+conditional attribute. (optional)</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_4"><p>5</p></td>
+<td class="td_5"><p>unless</p>
+<p>Adds the target to the dependency list of the specified Extension
+Point. An Extension Point is similar to a target, but it does not have
+any tasks. (Optional)</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>echo</strong>  task in the above example is a trivial
+task that prints a message. In our example,it prints the
+message <strong>Hello World</strong> .</p>
+<p>To run the ant build file, open up command prompt and navigate to the
+folder, where the build.xml resides, and then type <strong>ant
+info</strong> . You could also type <strong>ant</strong>  instead. Both
+will work,because <strong>info</strong>  is the default target in the
+build file.</p>
+<p>You should see the following output −</p>
+<p>C:\&gt;ant</p>
+<p>Buildfile: C:\build.xml</p>
+<p> </p>
+<p>info: [echo] Hello World - Welcome to Apache Ant!</p>
+<p> </p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 0 seconds</p>
+<p> </p>
+<p>C:\&gt;</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00006.html"></span></p>
+<h1 class="block_11"><span id="text00006.html_id_Toc67988452"
+class="calibre4">Property Task</span></h1>
+<p>Ant build files are written in XML, which does not allow declaring
+variables as you do in your favorite programming language. However, as
+you may have imagined, it would be useful if Ant allowed declaring
+variables such as project name, project source directory, etc.</p>
+<p>Ant uses the <strong>property</strong>  element which allows you to
+specify the properties. This allows the properties to be changed from
+one build to another or from one environment to another.</p>
+<h2 class="block_9">Ant Properties</h2>
+<p>By default, Ant provides the following pre-defined properties that
+can be used in the build file −</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_"><p>Sr.No</p></td>
+<td class="td_"><p>Properties &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>1</p></td>
+<td class="td_1"><p>ant.file</p>
+<p>The full location of the build file.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>2</p></td>
+<td class="td_1"><p>ant.version</p>
+<p>The version of the Apache Ant installation.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>3</p></td>
+<td class="td_1"><p>basedir</p>
+<p>The basedir of the build, as specified in the basedir attribute of
+the project element.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>4</p></td>
+<td class="td_1"><p>ant.java.version</p>
+<p>The version of the JDK that is used by Ant.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>5</p></td>
+<td class="td_1"><p>ant.project.name</p>
+<p>The name of the project, as specified in the name attribute of the
+project element.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>6</p></td>
+<td class="td_1"><p>ant.project.default-target</p>
+<p>The default target of the current project.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>7</p></td>
+<td class="td_1"><p>ant.project.invoked-targets</p>
+<p>Comma separated list of the targets that were invoked in the current
+project.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>8</p></td>
+<td class="td_1"><p>ant.core.lib</p>
+<p>The full location of the Ant jar file.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>9</p></td>
+<td class="td_1"><p>ant.home</p>
+<p>The home directory of Ant installation.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>10</p></td>
+<td class="td_1"><p>ant.library.dir</p>
+<p>The home directory for Ant library files - typically ANT_HOME/lib
+folder.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Ant also makes the system properties (Example: file.separator)
+available to the build file.</p>
+<p>In addition to the above, the user can define additional properties
+using the <strong>property</strong>  element.</p>
+<p>The following example shows how to define a property
+called <strong>sitename</strong>  −</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="text_6">?&gt;</span></p>
+<p><span class="text_8">&lt;project</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"Hello World Project"</span> <span
+class="text_9">default</span> <span class="text_6">=</span> <span
+class="text_7">"info"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"sitename"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span
+class="text_7">"www.tutorialspoint.com"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"info"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;echo&gt;</span> <span
+class="calibre4">Apache Ant version is ${ant.version} - You are at
+${sitename}</span> <span class="text_8">&lt;/echo&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Running Ant on the above build file produces the following output
+−</p>
+<p>C:\&gt;ant</p>
+<p>Buildfile: C:\build.xml</p>
+<p> </p>
+<p>info: [echo] Apache Ant version is Apache Ant(TM) version 1.10.9</p>
+<p><span class="calibre7">compiled on September 27 2020 - You are at
+www.tutorialspoint.com</span></p>
+<p> </p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 0 seconds</p>
+<p>C:\&gt;</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00007.html"></span></p>
+<h1 class="block_11"><span id="text00007.html_id_Toc67988453"
+class="calibre4">Property Files</span></h1>
+<p>Setting properties directly in the build file is fine, if you are
+working with a handful of properties. However, for a large project, it
+makes sense to store the properties in a separate property file.</p>
+<h2 class="block_9">Benefits</h2>
+<p>Storing the properties in a separate file offers the following
+benefits −</p>
+<ul>
+<li>It allows you to reuse the same build file, with different property
+settings for different execution environment. For example, build
+properties file can be maintained separately for DEV, TEST, and PROD
+environments.</li>
+<li>It is useful, when you do not know the values for a property (in a
+particular environment) up-front. This allows you to perform the build
+in other environments, where the property value is known.</li>
+</ul>
+<p>There is no hard and fast rule, but typically the property file is
+named as <strong>build.properties</strong>  and is placed along-side
+the <strong>build.xml</strong>  file. You could create multiple build
+properties files based on the deployment environments - such
+as <strong>build.properties.dev</strong>
+ and <strong>build.properties.test</strong> .</p>
+<p>The contents of the build property file are similar to the normal
+java property file. They contain one property per line. Each property is
+represented by a name and a value pair.</p>
+<p>The name and value pairs are separated by an equals (=) sign. It is
+highly recommended that the properties are annotated with proper
+comments. Comments are listed using the hash (#) character.</p>
+<p>The following example shows a <strong>build.xml</strong>  file and
+its associated <strong>build.properties</strong>  file −</p>
+<h3 class="block_14">build.xml</h3>
+<p>Given below is an example for build.xml file.</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="text_6">?&gt;</span></p>
+<p><span class="text_8">&lt;project</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"Hello World Project"</span> <span
+class="text_9">default</span> <span class="text_6">=</span> <span
+class="text_7">"info"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">file</span> <span class="text_6">=</span> <span
+class="text_7">"build.properties"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"info"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;echo&gt;</span> <span
+class="calibre4">Apache Ant version is ${ant.version} - You are at
+${sitename}</span> <span class="text_8">&lt;/echo&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<h3 class="block_14">build.properties</h3>
+<p>An example for build.properties file is mentioned below −</p>
+<p># The Site Name</p>
+<p>sitename=www.tutorialspoint.com</p>
+<p>buildversion=3.3.2</p>
+<p>In the above example, <strong>sitename</strong>  is a custom property
+which is mapped to the website name. You can declare any number of
+custom properties in this fashion.</p>
+<p>Another custom property listed in the above example is
+the <strong>buildversion</strong> , which, in this instance, refers to
+the version of the build.</p>
+<p>In addition to the above, Ant comes with a number of predefined build
+properties, which are listed in the previous section, but is given below
+once again for your reference.</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_"><p>Sr.No</p></td>
+<td class="td_"><p>Properties &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>1</p></td>
+<td class="td_1"><p>ant.file</p>
+<p>The full location of the build file.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>2</p></td>
+<td class="td_1"><p>ant.version</p>
+<p>The version of the Apache Ant installation.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>3</p></td>
+<td class="td_1"><p>basedir</p>
+<p>The basedir of the build, as specified in the basedir attribute of
+the project element.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>4</p></td>
+<td class="td_1"><p>ant.java.version</p>
+<p>The version of the JDK that is used by Ant.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>5</p></td>
+<td class="td_1"><p>ant.project.name</p>
+<p>The name of the project, as specified in the name attribute of the
+project element.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>6</p></td>
+<td class="td_1"><p>ant.project.default-target</p>
+<p>The default target of the current project.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>7</p></td>
+<td class="td_1"><p>ant.project.invoked-targets</p>
+<p>Comma separated list of the targets that were invoked in the current
+project.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>8</p></td>
+<td class="td_1"><p>ant.core.lib</p>
+<p>The full location of the Ant jar file.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>9</p></td>
+<td class="td_1"><p>ant.home</p>
+<p>The home directory of Ant installation.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>10</p></td>
+<td class="td_1"><p>ant.library.dir</p>
+<p>The home directory for Ant library files - typically ANT_HOME/lib
+folder.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The example presented in this chapter uses
+the <strong>ant.version</strong>  built-in property.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00008.html"></span></p>
+<h1 class="block_11"><span id="text00008.html_id_Toc67988454"
+class="calibre4">Data Types</span></h1>
+<p>Ant provides a number of predefined data types. Do not confuse the
+term "data types" with those that are available in the programming
+language. Instead, consider them as a set of services that are built
+into the product already.</p>
+<h2 class="block_9">Data Types in Ant</h2>
+<p>The following data types are provided by Apache Ant.</p>
+<h3 class="block_14">Fileset</h3>
+<p>The fileset data type represents a collection of files. It is used as
+a filter to include or exclude files that match a particular
+pattern.</p>
+<p>For example, refer the following code. Here, the src attribute points
+to the source folder of the project.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${src}"</span> <span class="text_9">casesensitive</span>
+<span class="text_6">=</span> <span class="text_7">"yes"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.java"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;exclude</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*Stub*"</span> <span class="text_8">/&gt;</span></p>
+<p>&lt;/fileset&gt;</p>
+</div>
+<p>The fileset selects all .java files in the source folder except those
+contain the word 'Stub'.The case-sensitive filter is applied to the
+fileset, which means a file with the name Samplestub.java will not be
+excluded from the fileset.</p>
+<h3 class="block_14">Pattern set</h3>
+<p>A pattern set is a pattern that allows to filter files or folders
+easily based on certain patterns. The patterns can be created using the
+following meta characters −</p>
+<ul>
+<li>? - Matches one character only.</li>
+<li>- Matches zero or many characters.</li>
+<li>** - Matches zero or many directories recursively.</li>
+</ul>
+<p>The following example depicts the usage of a pattern set.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;patternset</span> <span
+class="text_9">id</span> <span class="text_6">=</span> <span
+class="text_7">"java.files.without.stubs"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"src/**/*.java"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;exclude</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"src/**/*Stub*"</span> <span
+class="text_8">/&gt;</span></p>
+<p>&lt;/patternset&gt;</p>
+</div>
+<p>The patternset can then be reused with a fileset as follows −</p>
+<div class="frame_">
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${src}"</span> <span class="text_9">casesensitive</span>
+<span class="text_6">=</span> <span class="text_7">"yes"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;patternset</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"java.files.without.stubs"</span> <span
+class="text_8">/&gt;</span></p>
+<p>&lt;/fileset&gt;</p>
+</div>
+<h3 class="block_14">File list</h3>
+<p>The filelist data type is similar to the file set except the
+following differences −</p>
+<ul>
+<li>It contains explicitly named lists of files and it does not support
+wild cards.</li>
+<li>This data type can be applied for existing or non-existing
+files.</li>
+</ul>
+<p>Let us see the following example of the filelist data type. Here, the
+attribute <strong>webapp.src.folder</strong>  points to the web
+application source folder of the project.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;filelist</span> <span
+class="text_9">id</span> <span class="text_6">=</span> <span
+class="text_7">"config.files"</span> <span class="text_9">dir</span>
+<span class="text_6">=</span> <span
+class="text_7">"${webapp.src.folder}"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;file</span> <span class="text_9">name</span>
+<span class="text_6">=</span> <span
+class="text_7">"applicationConfig.xml"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;file</span> <span class="text_9">name</span>
+<span class="text_6">=</span> <span
+class="text_7">"faces-config.xml"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;file</span> <span class="text_9">name</span>
+<span class="text_6">=</span> <span class="text_7">"web.xml"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;file</span> <span class="text_9">name</span>
+<span class="text_6">=</span> <span class="text_7">"portlet.xml"</span>
+<span class="text_8">/&gt;</span></p>
+<p>&lt;/filelist&gt;</p>
+</div>
+<h3 class="block_14">Filter set</h3>
+<p>By using a filterset data type along with the copy task, you can
+replace certain text in all the files that matches the pattern with a
+replacement value.</p>
+<p>A common example is to append the version number to the release notes
+file, as shown in the following code.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;copy</span> <span
+class="text_9">todir</span> <span class="text_6">=</span> <span
+class="text_7">"${output.dir}"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${releasenotes.dir}"</span> <span
+class="text_9">includes</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.txt"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;filterset&gt;</span></p>
+<p><span class="text_8">&lt;filter</span> <span
+class="text_9">token</span> <span class="text_6">=</span> <span
+class="text_7">"VERSION"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"${current.version}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/filterset&gt;</span></p>
+<p>&lt;/copy&gt;</p>
+</div>
+<p>In the above mentioned code −</p>
+<ul>
+<li>The attribute <strong>output.dir</strong>  points to the output
+folder of the project.</li>
+<li>The attribute <strong>releasenotes.dir</strong>  points to the
+release notes folder of the project.</li>
+<li>The attribute <strong>current.version</strong>  points to the
+current version folder of the project.</li>
+<li>The copy task, as the name suggests, is used to copy files from one
+location to another.</li>
+</ul>
+<h3 class="block_14">Path</h3>
+<p>The <strong>path</strong>  data type is commonly used to represent a
+class-path. Entries in the path are separated using semicolons or
+colons. However, these characters are replaced at the runtime by the
+executing system's path separator character.</p>
+<p>The classpath is set to the list of jar files and classes in the
+project, as shown in the example below.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;path</span> <span class="text_9">id</span>
+<span class="text_6">=</span> <span
+class="text_7">"build.classpath.jar"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;pathelement</span> <span
+class="text_9">path</span> <span class="text_6">=</span> <span
+class="text_7">"${env.J2EE_HOME}/${j2ee.jar}"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"lib"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.jar"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p>&lt;/path&gt;</p>
+</div>
+<p>In the code given above −</p>
+<ul>
+<li>The attribute <strong>env.J2EE_HOME</strong>  points to the
+environment variable <strong>J2EE_HOME</strong> .</li>
+<li>The attribute <strong>j2ee.jar</strong>  points to the name of the
+J2EE jar file in the J2EE base folder.</li>
+</ul>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00009.html"></span></p>
+<h1 class="block_11"><span id="text00009.html_id_Toc67988455"
+class="calibre4">Building Projects</span></h1>
+<p>Now that we have learnt about the data types in Ant, it is time to
+put that knowledge into practice. We will build a project in this
+chapter. The aim of this chapter is to build an Ant file that compiles
+the java classes and places them in the WEB-INF\classes folder.</p>
+<p>Consider the following project structure −</p>
+<ul>
+<li>The database scripts are stored in the <strong>db</strong>
+ folder.</li>
+<li>The java source code is stored in the <strong>src</strong>
+ folder.</li>
+<li>The images, js, META-INF, styles (css) are stored in
+the <strong>war</strong>  folder.</li>
+<li>The Java Server Pages (JSPs) are stored in the <strong>jsp</strong>
+ folder.</li>
+<li>The third party jar files are stored in the <strong>lib</strong>
+ folder.</li>
+<li>The java class files are stored in
+the <strong>WEB-INF\classes</strong>  folder.</li>
+</ul>
+<p>This project forms the <strong>Hello World</strong>  Fax Application
+for the rest of this tutorial.</p>
+<p>C:\work\FaxWebApplication&gt;tree</p>
+<p>Folder PATH listing</p>
+<p>Volume serial number is 00740061 EC1C:ADB1</p>
+<p>C:.</p>
+<p>+---db</p>
+<p>+---src</p>
+<p>. +---faxapp</p>
+<p>. +---dao</p>
+<p>. +---entity</p>
+<p>. +---util</p>
+<p>. +---web</p>
+<p>+---war</p>
+<p><span class="calibre7">+---images</span></p>
+<p><span class="calibre7">+---js</span></p>
+<p><span class="calibre7">+---META-INF</span></p>
+<p><span class="calibre7">+---styles</span></p>
+<p><span class="calibre7">+---WEB-INF</span></p>
+<p><span class="calibre7">+---classes</span></p>
+<p><span class="calibre7">+---jsp</span></p>
+<p><span class="calibre7">+---lib</span></p>
+<p>Here is the <strong>build.xml</strong>  required for this project.
+Let us consider it piece by piece.</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="text_6">?&gt;</span></p>
+<p><span class="text_8">&lt;project</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"fax"</span> <span class="text_9">basedir</span> <span
+class="text_6">=</span> <span class="text_7">"."</span> <span
+class="text_9">default</span> <span class="text_6">=</span> <span
+class="text_7">"build"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"src.dir"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"src"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"web.dir"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"war"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build.dir"</span> <span class="text_9">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/classes"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"name"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"fax"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;path</span> <span class="text_9">id</span>
+<span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/lib"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"*.jar"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;pathelement</span> <span
+class="text_9">path</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/path&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Compile source tree
+java files"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;mkdir</span> <span class="text_9">dir</span>
+<span class="text_6">=</span> <span class="text_7">"${build.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;javac</span> <span
+class="text_9">destdir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span class="text_9">source</span>
+<span class="text_6">=</span> <span class="text_7">"1.5"</span> <span
+class="text_9">target</span> <span class="text_6">=</span> <span
+class="text_7">"1.5"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;src</span> <span class="text_9">path</span>
+<span class="text_6">=</span> <span class="text_7">"${src.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/javac&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"clean"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Clean output
+directories"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;delete&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.class"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/delete&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>First, let us declare some properties for the source, web, and build
+folders.</p>
+<p>&lt;property name="src.dir" value="src"/&gt;</p>
+<p>&lt;property name="web.dir" value="war"/&gt;</p>
+<p>&lt;property name="build.dir"
+value="${web.dir}/WEB-INF/classes"/&gt;</p>
+<p>In the above mentioned example −</p>
+<ul>
+<li>src.dir refers to the source folder of the project, where the java
+source files can be found.</li>
+<li>web.dir refers to the web source folder of the project, where you
+can find the JSPs,web.xml, css, javascript and other web related
+files</li>
+<li>build.dir refers to the output folder of the project
+compilation.</li>
+</ul>
+<p>Properties can refer to other properties. As shown in the above
+example, the <strong>build.dir</strong>  property makes a reference to
+the <strong>web.dir</strong>  property.</p>
+<p>In this example, the <strong>src.dir</strong>  refers to the source
+folder of the project.</p>
+<p>The default target of our project is the <strong>compile</strong>
+ target. But first, let us look at the <strong>clean</strong>
+ target.</p>
+<p>The clean target, as the name suggests, deletes the files in the
+build folder.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"clean"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Clean output
+directories"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;delete&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.class"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/delete&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>The master-classpath holds the classpath information. In this case,
+it includes the classes in the build folder and the jar files in the lib
+folder.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;path</span> <span class="text_9">id</span>
+<span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/lib"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"*.jar"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;pathelement</span> <span
+class="text_9">path</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">/&gt;</span></p>
+<p>&lt;/path&gt;</p>
+</div>
+<p>Finally, the build targets to build the files.</p>
+<p>First of all, we create the build directory, if it does not exist,
+then, we execute the javac command (specifying jdk1.5 as our target
+compilation). We supply the source folder and the classpath to the javac
+task and ask it to drop the class files in the build folder.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Compile main source
+tree java files"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;mkdir</span> <span class="text_9">dir</span>
+<span class="text_6">=</span> <span class="text_7">"${build.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;javac</span> <span
+class="text_9">destdir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span class="text_9">source</span>
+<span class="text_6">=</span> <span class="text_7">"1.5"</span> <span
+class="text_9">target</span> <span class="text_6">=</span> <span
+class="text_7">"1.5"</span></p>
+<p><span class="text_9">debug</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_9">deprecation</span>
+<span class="text_6">=</span> <span class="text_7">"false"</span> <span
+class="text_9">optimize</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_9">failonerror</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;src</span> <span class="text_9">path</span>
+<span class="text_6">=</span> <span class="text_7">"${src.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/javac&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>Executing Ant on this file compiles the java source files and places
+the classes in the build folder.</p>
+<p>The following outcome is the result of running the Ant file −</p>
+<div class="frame_">
+<p><span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\&gt;ant</span></p>
+<p><span class="text_9">Buildfile</span> <span class="text_6">:</span>
+<span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\build</span> <span class="text_6">.</span> <span
+class="calibre4">xml</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p><span class="text_9">Total</span> <span class="calibre4">time</span>
+<span class="text_6">:</span> <span class="text_10">6.3</span> <span
+class="calibre4">seconds</span></p>
+</div>
+<p>The files are compiled and placed in the <strong>build.dir</strong>
+ folder.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00010.html"></span></p>
+<h1 class="block_11"><span id="text00010.html_id_Toc67988456"
+class="calibre4">Build Documentation</span></h1>
+<p>Documentation is a must in any project. Documentation plays a great
+role in the maintenance of a project. Java makes documentation easier by
+the use of the inbuilt <strong>javadoc</strong>  tool. Ant makes it even
+easier by generating the documentation on demand.</p>
+<p>As you know, the javadoc tool is highly flexible and allows a number
+of configuration options. Ant exposes these configuration options via
+the javadoc task. If you are unfamiliar with javadocs, we suggest that
+you start with this Java Documentation Tutorial.</p>
+<p>The following section lists the most commonly used javadoc options
+that are used in Ant.</p>
+<h2 class="block_9">Attributes</h2>
+<p>Source can be specified using <strong>sourcepath</strong>
+, <strong>sourcepathref</strong>  or <strong>sourcefiles</strong> .</p>
+<ul>
+<li><strong>sourcepath</strong>  is used to point to the folder of the
+source files (e.g. src folder).</li>
+<li><strong>sourcepathref</strong>  is used to refer a path that is
+referenced by the path attribute (e.g, delegates.src.dir).</li>
+<li><strong>sourcefiles</strong>  is used when you want to specify the
+individual files as a comma separated list.</li>
+</ul>
+<p>Destination path is specified using the <strong>destdir</strong>
+ folder (e.g build.dir).</p>
+<p>You could filter the <strong>javadoc</strong>  task by specifying the
+package names which are to be included. This is achieved by using
+the <strong>packagenames</strong>  attribute, a comma separated list of
+package files.</p>
+<p>You could filter the javadoc process to show only the public,
+private, package, or protected classes and members. This is achieved by
+using the <strong>private</strong> , <strong>public</strong>
+, <strong>package</strong>  and <strong>protected</strong>
+ attributes.</p>
+<p>You could also tell the javadoc task to include the author and
+version information by using the respective attributes.</p>
+<p>You could also group the packages together using the group attribute,
+so that it becomes easy to navigate.</p>
+<h2 class="block_9">Putting it all together</h2>
+<p>Let us continue our theme of the <strong>Hello world</strong>  Fax
+application and add a documentation target to our Fax application
+project.</p>
+<p>Given below is an example javadoc task used in our project. In this
+example, we have specified the javadoc to use
+the <strong>src.dir</strong>  as the source directory,
+and <strong>doc</strong>  as the target.</p>
+<p>We have also customised the window title, the header, and the footer
+information that appear on the java documentation pages.</p>
+<p>Also, we have created three groups −</p>
+<ul>
+<li>one for the utility classes in our source folder,</li>
+<li>one for the user interfaces classes, and</li>
+<li>one for the database related classes.</li>
+</ul>
+<p>You may notice that the data package group has two packages -–
+faxapp.entity and faxapp.dao.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"generate-javadoc"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;javadoc</span> <span
+class="text_9">packagenames</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.*"</span> <span class="text_9">sourcepath</span>
+<span class="text_6">=</span> <span
+class="text_7">"${src.dir}"</span></p>
+<p><span class="text_9">destdir</span> <span class="text_6">=</span>
+<span class="text_7">"doc"</span> <span class="text_9">version</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_9">windowtitle</span> <span class="text_6">=</span> <span
+class="text_7">"Fax Application"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;doctitle&gt;</span> <span
+class="calibre4">&lt;![CDATA[= Fax Application =]]&gt;</span> <span
+class="text_8">&lt;/doctitle&gt;</span></p>
+<p><span class="text_8">&lt;bottom&gt;</span></p>
+<p><span class="calibre7">&lt;![CDATA[Copyright © 2011. All Rights
+Reserved.]]&gt;</span></p>
+<p><span class="text_8">&lt;/bottom&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"util packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.util.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"web packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.web.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"data packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.entity.*:faxapp.dao.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/javadoc&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"java doc has been generated!"</span> <span
+class="text_8">/&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>Let us execute the javadoc Ant task. It generates and places the java
+documentation files in the doc folder.</p>
+<p>When the <strong>javadoc target</strong>  is executed, it produces
+the following outcome −</p>
+<div class="frame_">
+<p><span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\&gt;ant generate</span> <span class="text_6">-</span>
+<span class="calibre4">javadoc</span></p>
+<p><span class="text_9">Buildfile</span> <span class="text_6">:</span>
+<span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\build</span> <span class="text_6">.</span> <span
+class="calibre4">xml</span></p>
+<p><span class="calibre4">java doc has been generated</span> <span
+class="text_6">!</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p><span class="text_9">Total</span> <span class="calibre4">time</span>
+<span class="text_6">:</span> <span class="text_10">10.63</span> <span
+class="calibre4">second</span></p>
+</div>
+<p>The java documentation files are now present in
+the <strong>doc</strong>  folder.</p>
+<p>Typically, the javadoc files are generated as a part of the release
+or package targets.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00011.html"></span></p>
+<h1 class="block_11"><span id="text00011.html_id_Toc67988457"
+class="calibre4">Creating JAR files</span></h1>
+<p>The next logical step after compiling your java source files, is to
+build the java archive, i.e., the Java Archive (JAR) file. Creating JAR
+files with Ant is quite easy with the <strong>jar</strong>  task.</p>
+<h2 class="block_9">Attributes</h2>
+<p>The commonly used attributes of the jar task are as follows −</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_"><p>Sr.No</p></td>
+<td class="td_"><p>Attributes &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>1</p></td>
+<td class="td_1"><p>basedir</p>
+<p>The base directory for the output JAR file. By default, this is set
+to the base directory of the project.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>2</p></td>
+<td class="td_1"><p>compress</p>
+<p>Advises Ant to compress the file as it creates the JAR file.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>3</p></td>
+<td class="td_1"><p>keepcompression</p>
+<p>While the compress attribute is applicable to the individual files,
+the keepcompression attribute does the same thing, but it applies to the
+entire archive.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>4</p></td>
+<td class="td_1"><p>destfile</p>
+<p>The name of the output JAR file.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>5</p></td>
+<td class="td_1"><p>duplicate</p>
+<p>Advises Ant on what to do when duplicate files are found. You could
+add, preserve, or fail the duplicate files.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>6</p></td>
+<td class="td_1"><p>excludes</p>
+<p>Advises Ant to not include these comma separated list of files in the
+package.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>7</p></td>
+<td class="td_1"><p>excludesfile</p>
+<p>Same as above, except the exclude files are specified using a
+pattern.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>8</p></td>
+<td class="td_1"><p>inlcudes</p>
+<p>Inverse of excludes.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>9</p></td>
+<td class="td_1"><p>includesfile</p>
+<p>Inverse of excludesfile.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>10</p></td>
+<td class="td_1"><p>update</p>
+<p>Advises Ant to overwrite files in the already built JAR
+file.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Continuing our <strong>Hello World</strong>  Fax Application project,
+let us add a new target to produce the jar files.</p>
+<p>But before that, let us consider the jar task given below.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;jar</span> <span
+class="text_9">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}/lib/util.jar"</span></p>
+<p><span class="text_9">basedir</span> <span class="text_6">=</span>
+<span class="text_7">"${build.dir}/classes"</span></p>
+<p><span class="text_9">includes</span> <span class="text_6">=</span>
+<span class="text_7">"faxapp/util/**"</span></p>
+<p><span class="text_9">excludes</span> <span class="text_6">=</span>
+<span class="text_7">"**/Test.class"</span></p>
+<p>/&gt;</p>
+</div>
+<p>Here, the <strong>web.dir</strong>  property points to the path of
+the web source files. In our case, this is where the util.jar will be
+placed.</p>
+<p>The <strong>build.dir</strong>  property in this example, points to
+the build folder, where the class files for
+the <strong>util.jar</strong>  can be found.</p>
+<p>In this example, we create a jar file called util.jar using the
+classes from the <strong>faxapp.util.*</strong>  package. However, we
+are excluding the classes that end with the name Test. The output jar
+file will be placed in the web application lib folder.</p>
+<p>If we want to make the util.jar an executable jar file, we need to
+add the <strong>manifest</strong>  with the <strong>Main-Class</strong>
+ meta attribute.</p>
+<p>Therefore, the above example will be updated as follows −</p>
+<div class="frame_">
+<p>&lt;jar destfile="${web.dir}/lib/util.jar"</p>
+<p><span class="calibre7">basedir="${build.dir}/classes"</span></p>
+<p><span class="calibre7">includes="faxapp/util/**"</span></p>
+<p><span class="calibre7">excludes="**/Test.class" class="ts"</span></p>
+<p><span class="calibre7">&lt;manifest class="ts"</span></p>
+<p><span class="text_8">&lt;attribute</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"Main-Class"</span> <span class="text_9">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint.util.FaxUtil"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="calibre7">&lt;/manifest class="ts"</span></p>
+<p>&lt;/jar class="ts"</p>
+</div>
+<p>To execute the jar task, wrap it inside a target, most commonly, the
+build or package target, and execute them.</p>
+<div class="frame_">
+<p>&lt;target name="build-jar" class="ts"</p>
+<p>&lt;jar destfile="${web.dir}/lib/util.jar"</p>
+<p><span class="calibre7">basedir="${build.dir}/classes"</span></p>
+<p><span class="calibre7">includes="faxapp/util/**"</span></p>
+<p><span class="calibre7">excludes="**/Test.class" class="ts"</span></p>
+<p><span class="calibre7">&lt;manifest class="ts"</span></p>
+<p><span class="text_8">&lt;attribute</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"Main-Class"</span> <span class="text_9">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint.util.FaxUtil"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="calibre7">&lt;/manifest class="ts"</span></p>
+<p>&lt;/jar class="ts"</p>
+<p>&lt;/target class="ts"</p>
+</div>
+<p>Running Ant on this file creates the util.jar file for us.</p>
+<p>The following outcome is the result of running the Ant file −</p>
+<div class="frame_">
+<p><span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\</span> <span class="text_8">class</span> <span
+class="text_6">=</span> <span class="text_7">"ts"</span> <span
+class="calibre4">ant build</span> <span class="text_6">-</span> <span
+class="calibre4">jar</span></p>
+<p><span class="text_9">Buildfile</span> <span class="text_6">:</span>
+<span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\build</span> <span class="text_6">.</span> <span
+class="calibre4">xml</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p><span class="text_9">Total</span> <span class="calibre4">time</span>
+<span class="text_6">:</span> <span class="text_10">1.3</span> <span
+class="calibre4">seconds</span></p>
+</div>
+<p>The util.jar file is now placed in the output folder.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00012.html"></span></p>
+<h1 class="block_11"><span id="text00012.html_id_Toc67988458"
+class="calibre4">Create WAR Files</span></h1>
+<p>Creating Web Archive (WAR) files with Ant is extremely simple, and
+very similar to the creating JAR files task. After all, WAR file, like
+JAR file is just another ZIP file.</p>
+<p>The WAR task is an extension to the JAR task, but it has some nice
+additions to manipulate what goes into the WEB-INF/classes folder, and
+generating the web.xml file. The WAR task is useful to specify a
+particular layout of the WAR file.</p>
+<p>Since, the WAR task is an extension of the JAR task, all attributes
+of the JAR task apply to the WAR task.</p>
+<table class="table_1">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_6"><p>Sr.No</p></td>
+<td class="td_7"><p>Attributes &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_8"><p>1</p></td>
+<td class="td_9"><p>webxml</p>
+<p>Path to the web.xml file.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_8"><p>2</p></td>
+<td class="td_9"><p>lib</p>
+<p>A grouping to specify what goes into the WEB-INF\lib folder.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_8"><p>3</p></td>
+<td class="td_9"><p>classes</p>
+<p>A grouping to specify what goes into the WEB-INF\classes
+folder.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_8"><p>4</p></td>
+<td class="td_9"><p>metainf</p>
+<p>Specifies the instructions for generating the MANIFEST.MF
+file.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Continuing our <strong>Hello World</strong>  Fax Application project,
+let us add a new target to produce the jar files. But before that, let
+us consider the war task.</p>
+<p>Consider the following example −</p>
+<div class="frame_">
+<p><span class="text_8">&lt;war</span> <span
+class="text_9">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"fax.war"</span> <span class="text_9">webxml</span> <span
+class="text_6">=</span> <span class="text_7">"${web.dir}/web.xml"</span>
+<span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WebContent"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.*"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;lib</span> <span class="text_9">dir</span>
+<span class="text_6">=</span> <span
+class="text_7">"thirdpartyjars"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;exclude</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"portlet.jar"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/lib&gt;</span></p>
+<p><span class="text_8">&lt;classes</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/web"</span> <span
+class="text_8">/&gt;</span></p>
+<p>&lt;/war&gt;</p>
+</div>
+<p>As per the previous examples, the <strong>web.dir</strong>  variable
+refers to the source web folder, i.e., the folder that contains the JSP,
+css, javascript files etc.</p>
+<p>The <strong>build.dir</strong>  variable refers to the output folder.
+This is where the classes for the WAR package can be found. Typically,
+the classes will be bundled into the WEB-INF/classes folder of the WAR
+file.</p>
+<p>In this example, we are creating a war file
+called <strong>fax.war</strong> . The WEB.XML file is obtained from the
+web source folder. All files from the 'WebContent' folder under web are
+copied into the WAR file.</p>
+<p>The WEB-INF/lib folder is populated with the jar files from the
+thirdpartyjars folder. However, we are excluding the portlet.jar as this
+is already present in the application server's lib folder. Finally, we
+are copying all classes from the build directory's web folder and
+putting them into the WEB-INF/classes folder.</p>
+<p>Wrap the war task inside an Ant target (usually package) and run it.
+This will create the WAR file in the specified location.</p>
+<p>It is entirely possible to nest the classes, lib, metainf and webinf
+directors, so that they live in scattered folders anywhere in the
+project structure. But, best practices suggest that your Web project
+should have the Web Content structure that is similar to the structure
+of the WAR file. The Fax Application project has its structure outlined
+using this basic principle.</p>
+<p>To execute the war task, wrap it inside a target, most commonly, the
+build or package target, and run them.</p>
+<div class="frame_">
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build-war"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;war</span> <span
+class="text_9">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"fax.war"</span> <span class="text_9">webxml</span> <span
+class="text_6">=</span> <span class="text_7">"${web.dir}/web.xml"</span>
+<span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WebContent"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.*"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;lib</span> <span class="text_9">dir</span>
+<span class="text_6">=</span> <span
+class="text_7">"thirdpartyjars"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;exclude</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"portlet.jar"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/lib&gt;</span></p>
+<p><span class="text_8">&lt;classes</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/web"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/war&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>Running Ant on this file will create the <strong>fax.war</strong>
+ file for us.</p>
+<p>The following outcome is the result of running the Ant file −</p>
+<div class="frame_">
+<p><span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\&gt;ant build</span> <span class="text_6">-</span>
+<span class="calibre4">war</span></p>
+<p><span class="text_9">Buildfile</span> <span class="text_6">:</span>
+<span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\build</span> <span class="text_6">.</span> <span
+class="calibre4">xml</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p><span class="text_9">Total</span> <span class="calibre4">time</span>
+<span class="text_6">:</span> <span class="text_10">12.3</span> <span
+class="calibre4">seconds</span></p>
+</div>
+<p>The fax.war file is now placed in the output folder. The contents of
+the war file will be as mentioned below −</p>
+<p>fax.war:</p>
+<p><span class="calibre7">+---jsp This folder contains the jsp
+files</span></p>
+<p><span class="calibre7">+---css This folder contains the stylesheet
+files</span></p>
+<p><span class="calibre7">+---js This folder contains the javascript
+files</span></p>
+<p> </p>
+<p><span class="calibre7">+---images This folder contains the image
+files</span></p>
+<p><span class="calibre7">+---META-INF This folder contains the
+Manifest.Mf</span></p>
+<p><span class="calibre7">+---WEB-INF</span></p>
+<p><span class="calibre7">+---classes This folder contains the compiled
+classes</span></p>
+<p><span class="calibre7">+---lib Third party libraries and the utility
+jar files</span></p>
+<p><span class="calibre7">WEB.xml Configuration file that defines the
+WAR package</span></p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00013.html"></span></p>
+<h1 class="block_11"><span id="text00013.html_id_Toc67988459"
+class="calibre4">Packaging Applications</span></h1>
+<p>We have learnt the different aspects of Ant using the <strong>Hello
+World</strong>  Fax web application in bits and pieces.</p>
+<p>Now, it is time to put everything together to create a full and
+complete build.xml file.Consider <strong>build.properties</strong>
+ and <strong>build.xml</strong>  files as follows −</p>
+<h2 class="block_9">build.properties</h2>
+<p>The file is given below for build.properties.</p>
+<p><span class="calibre4">deploy</span> <span class="text_6">.</span>
+<span class="calibre4">path</span> <span class="text_6">=</span> <span
+class="calibre4">c</span> <span class="text_6">:</span> <span
+class="calibre4">\tomcat6\webapps</span></p>
+<h2 class="block_9">build.xml</h2>
+<p>The build.xml file is as follows −</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="text_6">?&gt;</span></p>
+<p><span class="text_8">&lt;project</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"fax"</span> <span class="text_9">basedir</span> <span
+class="text_6">=</span> <span class="text_7">"."</span> <span
+class="text_9">default</span> <span class="text_6">=</span> <span
+class="text_7">"usage"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">file</span> <span class="text_6">=</span> <span
+class="text_7">"build.properties"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"src.dir"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"src"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"web.dir"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"war"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"javadoc.dir"</span> <span class="text_9">value</span>
+<span class="text_6">=</span> <span class="text_7">"doc"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build.dir"</span> <span class="text_9">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/classes"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"name"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"fax"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;path</span> <span class="text_9">id</span>
+<span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/lib"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"*.jar"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;pathelement</span> <span
+class="text_9">path</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/path&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"javadoc"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;javadoc</span> <span
+class="text_9">packagenames</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.*"</span> <span class="text_9">sourcepath</span>
+<span class="text_6">=</span> <span
+class="text_7">"${src.dir}"</span></p>
+<p><span class="text_9">destdir</span> <span class="text_6">=</span>
+<span class="text_7">"doc"</span> <span class="text_9">version</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_9">windowtitle</span> <span class="text_6">=</span> <span
+class="text_7">"Fax Application"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;doctitle&gt;</span> <span
+class="calibre4">&lt;![CDATA[</span> <span
+class="text_8">&lt;h1&gt;</span> <span class="calibre4">= Fax
+Application =</span> <span class="text_8">&lt;/h1&gt;</span> <span
+class="calibre4">]]&gt;</span> <span
+class="text_8">&lt;/doctitle&gt;</span></p>
+<p><span class="text_8">&lt;bottom&gt;</span> <span
+class="calibre4">&lt;![CDATA[Copyright © 2011. All Rights
+Reserved.]]&gt;</span> <span class="text_8">&lt;/bottom&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"util packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.util.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"web packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.web.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"data packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.entity.*:faxapp.dao.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/javadoc&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"usage"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"${name} build file"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"-----------------------------------"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"Available targets are:"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"deploy --&gt;</span> <span class="calibre4">Deploy
+application as directory"/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"deploywar --&gt;</span> <span class="calibre4">Deploy
+application as a WAR file"/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Compile main source
+tree java files"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;mkdir</span> <span class="text_9">dir</span>
+<span class="text_6">=</span> <span class="text_7">"${build.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;javac</span> <span
+class="text_9">destdir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span class="text_9">source</span>
+<span class="text_6">=</span> <span class="text_7">"1.5"</span></p>
+<p><span class="text_9">target</span> <span class="text_6">=</span>
+<span class="text_7">"1.5"</span> <span class="text_9">debug</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span></p>
+<p><span class="text_9">deprecation</span> <span class="text_6">=</span>
+<span class="text_7">"false"</span> <span class="text_9">optimize</span>
+<span class="text_6">=</span> <span class="text_7">"false"</span> <span
+class="text_9">failonerror</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;src</span> <span class="text_9">path</span>
+<span class="text_6">=</span> <span class="text_7">"${src.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/javac&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"deploy"</span> <span class="text_9">depends</span> <span
+class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_9">description</span> <span class="text_6">=</span> <span
+class="text_7">"Deploy application"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;copy</span> <span
+class="text_9">todir</span> <span class="text_6">=</span> <span
+class="text_7">"${deploy.path}/${name}"</span> <span
+class="text_9">preservelastmodified</span> <span class="text_6">=</span>
+<span class="text_7">"true"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.*"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/copy&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"deploywar"</span> <span class="text_9">depends</span>
+<span class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_9">description</span> <span class="text_6">=</span> <span
+class="text_7">"Deploy application as a WAR file"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;war</span> <span
+class="text_9">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"${name}.war"</span> <span class="text_9">webxml</span>
+<span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/web.xml"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.*"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/war&gt;</span></p>
+<p><span class="text_8">&lt;copy</span> <span
+class="text_9">todir</span> <span class="text_6">=</span> <span
+class="text_7">"${deploy.path}"</span> <span
+class="text_9">preservelastmodified</span> <span class="text_6">=</span>
+<span class="text_7">"true"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"."</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"*.war"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/copy&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"clean"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Clean output
+directories"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;delete&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.class"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/delete&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>In the above mentioned example −</p>
+<ul>
+<li>We first declare the path to the webapps folder in Tomcat in the
+build properties file as the <strong>deploy.path</strong>
+ variable.</li>
+<li>We also declare the source folder for the java files in
+the <strong>src.dir</strong>  variable.</li>
+<li>Then, we declare the source folder for the web files in
+the <strong>web.dir</strong>  variable. <strong>javadoc.dir</strong>  is
+the folder for storing the java documentation,
+and <strong>build.dir</strong>  is the path for storing the build output
+files.</li>
+<li>After that, we declare the name of the web application, which
+is <strong>fax</strong>  in our case.</li>
+<li>We also define the master class path, which contains the JAR files
+present in the WEB-INF/lib folder of the project.</li>
+<li>We also include the class files present in
+the <strong>build.dir</strong>  in the master class path.</li>
+<li>The Javadoc target produces the javadoc required for the project and
+the usage target is used to print the common targets that are present in
+the build file.</li>
+</ul>
+<p>The above example shows two deployment
+targets: <strong>deploy</strong>  and <strong>deploywar</strong> .</p>
+<p>The deploy target copies the files from the web directory to the
+deploy directory preserving the last modified date time stamp. This is
+useful, when deploying to a server that supports hot deployment.</p>
+<p>The clean target clears all the previously built files.</p>
+<p>The deploywar target builds the war file and then, copies the war
+file to the deploy directory of the application server.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00014.html"></span></p>
+<h1 class="block_11"><span id="text00014.html_id_Toc67988460"
+class="calibre4">Deploying Applications</span></h1>
+<p>In the previous chapter, we have learnt how to package an application
+and deploy it to a folder.</p>
+<p>In this chapter, we are going to deploy the web application directly
+to the application server deploy folder and then, we are going to add a
+few Ant targets to start and stop the services.</p>
+<p>Let us continue with the <strong>Hello World</strong>  fax web
+application. This is a continuation of the previous chapter; the new
+components are highlighted in <strong>bold</strong> .</p>
+<h3 class="block_14">build.properties</h3>
+<p>The file for build.properties is given below −</p>
+<div class="frame_">
+<p># Ant properties for building the springapp</p>
+<p><span class="calibre4">appserver</span> <span class="text_6">.</span>
+<span class="calibre4">home</span> <span class="text_6">=</span> <span
+class="calibre4">c</span> <span class="text_6">:</span> <span
+class="calibre4">\\install\\apache</span> <span class="text_6">-</span>
+<span class="calibre4">tomcat</span> <span class="text_6">-</span> <span
+class="text_10">7.0</span> <span class="text_6">.</span> <span
+class="text_10">19</span></p>
+<p># for Tomcat 5 use $appserver.home}/server/lib</p>
+<p># for Tomcat 6 use $appserver.home}/lib</p>
+<p><span class="calibre4">appserver</span> <span class="text_6">.</span>
+<span class="calibre4">lib</span> <span class="text_6">=</span> <span
+class="calibre4">$</span> <span class="text_6">{</span> <span
+class="calibre4">appserver</span> <span class="text_6">.</span> <span
+class="calibre4">home</span> <span class="text_6">}/</span> <span
+class="calibre4">lib</span></p>
+<p><span class="calibre4">deploy</span> <span class="text_6">.</span>
+<span class="calibre4">path</span> <span class="text_6">=</span> <span
+class="calibre4">$</span> <span class="text_6">{</span> <span
+class="calibre4">appserver</span> <span class="text_6">.</span> <span
+class="calibre4">home</span> <span class="text_6">}/</span> <span
+class="calibre4">webapps</span></p>
+<p><span class="calibre4">tomcat</span> <span class="text_6">.</span>
+<span class="calibre4">manager</span> <span class="text_6">.</span>
+<span class="calibre4">url</span> <span class="text_6">=</span> <span
+class="calibre4">http</span> <span class="text_6">:</span> <span
+class="text_11">//www.tutorialspoint.com:8080/manager</span></p>
+<p><span class="calibre4">tomcat</span> <span class="text_6">.</span>
+<span class="calibre4">manager</span> <span class="text_6">.</span>
+<span class="calibre4">username</span> <span class="text_6">=</span>
+<span class="calibre4">tutorialspoint</span></p>
+<p><span class="calibre4">tomcat</span> <span class="text_6">.</span>
+<span class="calibre4">manager</span> <span class="text_6">.</span>
+<span class="calibre4">password</span> <span class="text_6">=</span>
+<span class="calibre4">secret</span></p>
+</div>
+<h3 class="block_14">build.xml</h3>
+<p>The file for build.xml is as follows −</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="text_6">?&gt;</span></p>
+<p><span class="text_8">&lt;project</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"fax"</span> <span class="text_9">basedir</span> <span
+class="text_6">=</span> <span class="text_7">"."</span> <span
+class="text_9">default</span> <span class="text_6">=</span> <span
+class="text_7">"usage"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">file</span> <span class="text_6">=</span> <span
+class="text_7">"build.properties"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"src.dir"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"src"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"web.dir"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"war"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"javadoc.dir"</span> <span class="text_9">value</span>
+<span class="text_6">=</span> <span class="text_7">"doc"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build.dir"</span> <span class="text_9">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/classes"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;property</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"name"</span> <span class="text_9">value</span> <span
+class="text_6">=</span> <span class="text_7">"fax"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;path</span> <span class="text_9">id</span>
+<span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/lib"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"*.jar"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;pathelement</span> <span
+class="text_9">path</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/path&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"javadoc"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;javadoc</span> <span
+class="text_9">packagenames</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.*"</span> <span class="text_9">sourcepath</span>
+<span class="text_6">=</span> <span
+class="text_7">"${src.dir}"</span></p>
+<p><span class="text_9">destdir</span> <span class="text_6">=</span>
+<span class="text_7">"doc"</span> <span class="text_9">version</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_9">windowtitle</span> <span class="text_6">=</span> <span
+class="text_7">"Fax Application"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;doctitle&gt;</span> <span
+class="calibre4">&lt;![CDATA[</span> <span
+class="text_8">&lt;h1&gt;</span> <span class="calibre4">= Fax
+Application=</span> <span class="text_8">&lt;/h1&gt;</span> <span
+class="calibre4">]]&gt;</span> <span
+class="text_8">&lt;/doctitle&gt;</span></p>
+<p><span class="text_8">&lt;bottom&gt;</span> <span
+class="calibre4">&lt;![CDATA[Copyright © 2011. All Rights
+Reserved.]]&gt;</span> <span class="text_8">&lt;/bottom&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"util packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.util.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"web packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.web.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;group</span> <span
+class="text_9">title</span> <span class="text_6">=</span> <span
+class="text_7">"data packages"</span> <span
+class="text_9">packages</span> <span class="text_6">=</span> <span
+class="text_7">"faxapp.entity.*:faxapp.dao.*"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/javadoc&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"usage"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"${name} build file"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"-----------------------------------"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"Available targets are:"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"deploy --&gt;</span> <span class="calibre4">Deploy
+application as directory"/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"deploywar --&gt;</span> <span class="calibre4">Deploy
+application as a WAR file"/&gt;</span></p>
+<p><span class="text_8">&lt;echo</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">""</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"build"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Compile main source
+tree java files"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;mkdir</span> <span class="text_9">dir</span>
+<span class="text_6">=</span> <span class="text_7">"${build.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;javac</span> <span
+class="text_9">destdir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span class="text_9">source</span>
+<span class="text_6">=</span> <span class="text_7">"1.5"</span> <span
+class="text_9">target</span> <span class="text_6">=</span> <span
+class="text_7">"1.5"</span> <span class="text_9">debug</span> <span
+class="text_6">=</span> <span class="text_7">"true"</span></p>
+<p><span class="text_9">deprecation</span> <span class="text_6">=</span>
+<span class="text_7">"false"</span> <span class="text_9">optimize</span>
+<span class="text_6">=</span> <span class="text_7">"false"</span> <span
+class="text_9">failonerror</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;src</span> <span class="text_9">path</span>
+<span class="text_6">=</span> <span class="text_7">"${src.dir}"</span>
+<span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"master-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/javac&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"deploy"</span> <span class="text_9">depends</span> <span
+class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_9">description</span> <span class="text_6">=</span> <span
+class="text_7">"Deploy application"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;copy</span> <span
+class="text_9">todir</span> <span class="text_6">=</span> <span
+class="text_7">"${deploy.path}/${name}"</span> <span
+class="text_9">preservelastmodified</span> <span class="text_6">=</span>
+<span class="text_7">"true"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.*"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/copy&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"deploywar"</span> <span class="text_9">depends</span>
+<span class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_9">description</span> <span class="text_6">=</span> <span
+class="text_7">"Deploy application as a WAR file"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;war</span> <span
+class="text_9">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"${name}.war"</span> <span class="text_9">webxml</span>
+<span class="text_6">=</span> <span
+class="text_7">"${web.dir}/WEB-INF/web.xml"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${web.dir}"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.*"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/war&gt;</span></p>
+<p><span class="text_8">&lt;copy</span> <span
+class="text_9">todir</span> <span class="text_6">=</span> <span
+class="text_7">"${deploy.path}"</span> <span
+class="text_9">preservelastmodified</span> <span class="text_6">=</span>
+<span class="text_7">"true"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"."</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"*.war"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/copy&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"clean"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Clean output
+directories"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;delete&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"**/*.class"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/delete&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p><span class="text_11">&lt;!--
+============================================================
+--&gt;</span></p>
+<p><span class="text_11">&lt;!-- Tomcat tasks --&gt;</span></p>
+<p><span class="text_11">&lt;!--
+============================================================
+--&gt;</span></p>
+<p><span class="text_8">&lt;path</span> <span class="text_9">id</span>
+<span class="text_6">=</span> <span
+class="text_7">"catalina-ant-classpath"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_11">&lt;!-- We need the Catalina jars for Tomcat
+--&gt;</span></p>
+<p><span class="text_11">&lt;!-- * for other app servers - check the
+docs --&gt;</span></p>
+<p><span class="text_8">&lt;fileset</span> <span
+class="text_9">dir</span> <span class="text_6">=</span> <span
+class="text_7">"${appserver.lib}"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;include</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"catalina-ant.jar"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/fileset&gt;</span></p>
+<p><span class="text_8">&lt;/path&gt;</span></p>
+<p><span class="text_8">&lt;taskdef</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"install"</span> <span class="text_9">classname</span>
+<span class="text_6">=</span> <span
+class="text_7">"org.apache.catalina.ant.InstallTask"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"catalina-ant-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/taskdef&gt;</span></p>
+<p><span class="text_8">&lt;taskdef</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"reload"</span> <span class="text_9">classname</span>
+<span class="text_6">=</span> <span
+class="text_7">"org.apache.catalina.ant.ReloadTask"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"catalina-ant-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/taskdef&gt;</span></p>
+<p><span class="text_8">&lt;taskdef</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"list"</span> <span class="text_9">classname</span> <span
+class="text_6">=</span> <span
+class="text_7">"org.apache.catalina.ant.ListTask"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"catalina-ant-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/taskdef&gt;</span></p>
+<p><span class="text_8">&lt;taskdef</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"start"</span> <span class="text_9">classname</span>
+<span class="text_6">=</span> <span
+class="text_7">"org.apache.catalina.ant.StartTask"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"catalina-ant-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/taskdef&gt;</span></p>
+<p><span class="text_8">&lt;taskdef</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"stop"</span> <span class="text_9">classname</span> <span
+class="text_6">=</span> <span
+class="text_7">"org.apache.catalina.ant.StopTask"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;classpath</span> <span
+class="text_9">refid</span> <span class="text_6">=</span> <span
+class="text_7">"catalina-ant-classpath"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/taskdef&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"reload"</span> <span class="text_9">description</span>
+<span class="text_6">=</span> <span class="text_7">"Reload application
+in Tomcat"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;reload</span> <span
+class="text_9">url</span> <span class="text_6">=</span> <span
+class="text_7">"${tomcat.manager.url}"</span> <span
+class="text_9">username</span> <span class="text_6">=</span> <span
+class="text_7">"${tomcat.manager.username}"</span></p>
+<p><span class="text_9">password</span> <span class="text_6">=</span>
+<span class="text_7">"${tomcat.manager.password}"</span> <span
+class="text_9">path</span> <span class="text_6">=</span> <span
+class="text_7">"/${name}"</span> <span class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>In this example, we have used Tomcat as our application server.</p>
+<p>First, in the build properties file, we have defined some additional
+properties which are explained below −</p>
+<ul>
+<li>The <strong>appserver.home</strong>  points to the installation path
+to the Tomcat application server.</li>
+<li>The <strong>appserver.lib</strong>  points to the library files in
+the Tomcat installation folder.</li>
+<li>The <strong>deploy.path</strong>  variable now points to the webapp
+folder in Tomcat.</li>
+</ul>
+<p>Applications in Tomcat can be stopped and started using the Tomcat
+manager application. The URL for the manager application, username and
+password are also specified in the build.properties file.</p>
+<p>Next, we declare a new CLASSPATH that contains
+the <strong>catalina-ant.jar</strong> . This jar file is required to
+execute Tomcat tasks through Apache Ant.</p>
+<h2 class="block_9">Tasks</h2>
+<p>The catalina-ant.jar provides the following tasks −</p>
+<table class="table_1">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_10"><p>Sr.No</p></td>
+<td class="td_11"><p>Properties &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_12"><p>1</p></td>
+<td class="td_13"><p>InstallTask</p>
+<p>Installs a web application. Class Name:
+org.apache.catalina.ant.InstallTask</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_12"><p>2</p></td>
+<td class="td_13"><p>ReloadTask</p>
+<p>Reload a web application. Class Name:
+org.apache.catalina.ant.ReloadTask</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_12"><p>3</p></td>
+<td class="td_13"><p>ListTask</p>
+<p>Lists all web applications. Class Name:
+org.apache.catalina.ant.ListTask</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_12"><p>4</p></td>
+<td class="td_13"><p>StartTask1</p>
+<p>Starts a web application. Class Name:
+org.apache.catalina.ant.StartTask</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_12"><p>5</p></td>
+<td class="td_13"><p>StopTask</p>
+<p>Stops a web application. Class Name:
+org.apache.catalina.ant.StopTask</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_12"><p>6</p></td>
+<td class="td_13"><p>ReloadTask</p>
+<p>Reloads a web application without stopping. Class Name:
+org.apache.catalina.ant.ReloadTask</p></td>
+</tr>
+</tbody>
+</table>
+<p>The reload task requires the additional parameters which are as
+follows −</p>
+<ul>
+<li>URL to the manager application.</li>
+<li>Username to restart the web application.</li>
+<li>Password to restart the web application.</li>
+<li>Name of the web application to be restarted.</li>
+</ul>
+<p>Let us issue the <strong>deploy-war</strong>  command to copy the
+webapp to the Tomcat webapps folder and then, let us reload the Fax Web
+application. The following outcome is the result of running the Ant file
+−</p>
+<p>C:\&gt;ant deploy-war</p>
+<p>Buildfile: C:\build.xml</p>
+<p> </p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 6.3 seconds</p>
+<p> </p>
+<p>C:\&gt;ant reload</p>
+<p>Buildfile: C:\build.xml</p>
+<p> </p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 3.1 seconds</p>
+<p>Once the above task is run, the web application is deployed and the
+web application is reloaded.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00015.html"></span></p>
+<h1 class="block_11"><span id="text00015.html_id_Toc67988461"
+class="calibre4">Executing Java code</span></h1>
+<p>You can use Ant to execute the Java code. In the following example,
+the java class takes in an argument (administrator's email address) and
+send out an email.</p>
+<div class="frame_">
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_9">NotifyAdministrator</span> <span
+class="text_6">{</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span class="calibre4">main</span>
+<span class="text_6">(</span> <span class="text_9">String</span> <span
+class="text_6">[]</span> <span class="calibre4">args</span> <span
+class="text_6">)</span> <span class="text_6">{</span></p>
+<p><span class="text_9">String</span> <span
+class="calibre4">email</span> <span class="text_6">=</span> <span
+class="calibre4">args</span> <span class="text_6">[</span> <span
+class="text_10">0</span> <span class="text_6">];</span></p>
+<p><span class="calibre4"> <span
+class="calibre7">notifyAdministratorviaEmail</span> </span> <span
+class="text_6">(</span> <span class="calibre4">email</span> <span
+class="text_6">);</span></p>
+<p><span class="text_9">System</span> <span class="text_6">.</span>
+<span class="text_8">out</span> <span class="text_6">.</span> <span
+class="calibre4">println</span> <span class="text_6">(</span> <span
+class="text_7">"Administrator "</span> <span class="text_6">+</span>
+<span class="calibre4">email</span> <span class="text_6">+</span> <span
+class="text_7">" has been notified"</span> <span
+class="text_6">);</span></p>
+<p><span class="text_6">}</span></p>
+<p><span class="text_8">public</span> <span class="text_8">static</span>
+<span class="text_8">void</span> <span
+class="calibre4">notifyAdministratorviaEmail</span> <span
+class="text_6">(</span> <span class="text_9">String</span> <span
+class="calibre4">email</span> <span class="text_6">{</span></p>
+<p><span class="text_11">//......</span></p>
+<p><span class="text_6">}</span></p>
+<p>}</p>
+</div>
+<p>Here is a simple build that executes this java class.</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="text_6">?&gt;</span></p>
+<p><span class="text_8">&lt;project</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"sample"</span> <span class="text_9">basedir</span> <span
+class="text_6">=</span> <span class="text_7">"."</span> <span
+class="text_9">default</span> <span class="text_6">=</span> <span
+class="text_7">"notify"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"notify"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;java</span> <span class="text_9">fork</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_9">failonerror</span> <span class="text_6">=</span> <span
+class="text_7">"yes"</span> <span class="text_9">classname</span> <span
+class="text_6">=</span> <span
+class="text_7">"NotifyAdministrator"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;arg</span> <span class="text_9">line</span>
+<span class="text_6">=</span> <span
+class="text_7">"admin@test.com"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/java&gt;</span></p>
+<p><span class="text_8">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>When the build is executed, it produces the following outcome −</p>
+<div class="frame_">
+<p><span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\&gt;ant</span></p>
+<p><span class="text_9">Buildfile</span> <span class="text_6">:</span>
+<span class="calibre4">C</span> <span class="text_6">:</span> <span
+class="calibre4">\build</span> <span class="text_6">.</span> <span
+class="calibre4">xml</span></p>
+<p><span class="calibre4">notify</span> <span class="text_6">:</span>
+<span class="text_6">[</span> <span class="calibre4">java</span> <span
+class="text_6">]</span> <span class="text_9">Administrator</span> <span
+class="calibre4">admin@test</span> <span class="text_6">.</span> <span
+class="calibre4">com has been notified</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p><span class="text_9">Total</span> <span class="calibre4">time</span>
+<span class="text_6">:</span> <span class="text_10">1</span> <span
+class="calibre4">second</span></p>
+</div>
+<p>In this example, the java code does a simple thing which is, to send
+an email. We could have used the built in the Ant task to do that.</p>
+<p>However, now that you have got the idea, you can extend your build
+file to call the java code that performs complicated things. For
+example: encrypts your source code.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00016.html"></span></p>
+<h1 class="block_11"><span id="text00016.html_id_Toc67988462"
+class="calibre4">Eclipse Integration</span></h1>
+<p>If you have downloaded and installed Eclipse already, you have very
+little to do to get started. Eclipse comes pre bundled with the Ant
+plugin, ready to use.</p>
+<p>Follow the simple steps, to integrate Ant into Eclipse.</p>
+<ul>
+<li>Make sure that the build.xml is a part of your java project, and
+does not reside at a location that is external to the project.</li>
+<li>Enable Ant View by following <strong>Window → Show View → Other →
+Ant → Ant</strong> .</li>
+<li>Open Project Explorer, drag the build.xml into the Ant View.</li>
+</ul>
+<p>Your Ant view looks similar to the one given below −</p>
+<p><img src="OEBPS/Image00000.jpg" class="calibre8" alt="Image" /></p>
+<p>Clicking on the targets, build / clean / usage will run Ant with the
+target.</p>
+<p>Clicking "fax" will execute the default target
+- <strong>usage</strong> .</p>
+<p>The Ant Eclipse plugin also comes with a good editor for editing
+build.xml files. The editor is aware of the build.xml schema and can
+assist you with code completion.</p>
+<p>To use the Ant editor, right click your build.xml (from the Project
+Explorer) and select Open with &gt; Ant Editor. The Ant editor should
+look something similar to−</p>
+<p><img src="OEBPS/Image00001.jpg" class="calibre8" alt="Image" /></p>
+<p>The Ant editor lists the targets on the right hand side. The target
+list serves as a bookmark that allows you to jump straight into editing
+a particular target.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00017.html"></span></p>
+<h1 class="block_11"><span id="text00017.html_id_Toc67988463"
+class="calibre4">JUnit Integration</span></h1>
+<p><span class="calibre4">JUnit is the commonly used unit testing
+framework for Java-based developments. It is easy to use and easy to
+extend. There are a number of JUnit extensions available. If you are
+unfamiliar with JUnit, you should download it from </span> <a
+href="https://junit.org/junit5/" class="text_5"
+target="_blank">www.junit.org</a> <span class="calibre4"> and read its
+manual.</span></p>
+<p>This chapter shows how to execute JUnit tests by using Ant. The use
+of Ant makes it straight forward through the JUnit task.</p>
+<p>The attributes of the JUnit task are presented below −</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre5">
+<tr class="calibre6">
+<td class="td_"><p>Sr.No</p></td>
+<td class="td_"><p>Properties &amp; Description</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>1</p></td>
+<td class="td_1"><p>dir</p>
+<p>Where to invoke the VM from. This is ignored when fork is
+disabled.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>2</p></td>
+<td class="td_1"><p>jvm</p>
+<p>Command used to invoke the JVM. This is ignored when fork is
+disabled.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>3</p></td>
+<td class="td_1"><p>fork</p>
+<p>Runs the test in a separate JVM.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>4</p></td>
+<td class="td_1"><p>errorproperty</p>
+<p>The name of the property to set if there is a JUnit error.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>5</p></td>
+<td class="td_1"><p>failureproperty</p>
+<p>The name of the property to set if there is a JUnit failure.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>6</p></td>
+<td class="td_1"><p>haltonerror</p>
+<p>Stops execution when a test error occurs.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>7</p></td>
+<td class="td_1"><p>haltonfailure</p>
+<p>Stops execution when a failure occurs.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>8</p></td>
+<td class="td_1"><p>printsummary</p>
+<p>Advises Ant to display simple statistics for each test.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>9</p></td>
+<td class="td_1"><p>showoutput</p>
+<p>Advises Ant to send the output to its logs and formatters.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>10</p></td>
+<td class="td_1"><p>tempdir</p>
+<p>Path to the temporary file that Ant will use.</p></td>
+</tr>
+<tr class="calibre6">
+<td class="td_1"><p>11</p></td>
+<td class="td_1"><p>timeout</p>
+<p>Exits the tests that take longer to run than this setting (in
+milliseconds).</p></td>
+</tr>
+</tbody>
+</table>
+<p>Let us continue the theme of the <strong>Hello World</strong>  Fax
+web application and add a JUnit target.</p>
+<p>The following example shows a simple JUnit test execution −</p>
+<div class="frame_">
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"unittest"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;junit</span> <span
+class="text_9">haltonfailure</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_9">printsummary</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;test</span> <span class="text_9">name</span>
+<span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint.UtilsTest"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;/junit&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>This example shows the execution of JUnit on the
+com.tutorialspoint.UtilsTest junit class.</p>
+<p>Running the above code produces the following output −</p>
+<p>test:</p>
+<p>[echo] Testing the application</p>
+<p>[junit] Running com.tutorialspoint.UtilsTest</p>
+<p>[junit] Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 16.2
+sec</p>
+<p>BUILD PASSED</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00018.html"></span></p>
+<h1 class="block_11"><span id="text00018.html_id_Toc67988464"
+class="calibre4">Extending Ant</span></h1>
+<p>Ant comes with a predefined set of tasks, however you can create your
+own tasks, as shown in the example below.</p>
+<p>Custom Ant Tasks should extend
+the <strong>org.apache.tools.ant.Task</strong>  class and should extend
+the execute() method.</p>
+<p>Below is a simple example −</p>
+<div class="frame_">
+<p><span class="text_8">package</span> <span class="calibre4">com</span>
+<span class="text_6">.</span> <span
+class="calibre4">tutorialspoint</span> <span class="text_6">.</span>
+<span class="calibre4">ant</span> <span class="text_6">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre4">org</span>
+<span class="text_6">.</span> <span class="calibre4">apache</span> <span
+class="text_6">.</span> <span class="calibre4">tools</span> <span
+class="text_6">.</span> <span class="calibre4">ant</span> <span
+class="text_6">.</span> <span class="text_9">Task</span> <span
+class="text_6">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre4">org</span>
+<span class="text_6">.</span> <span class="calibre4">apache</span> <span
+class="text_6">.</span> <span class="calibre4">tools</span> <span
+class="text_6">.</span> <span class="calibre4">ant</span> <span
+class="text_6">.</span> <span class="text_9">Project</span> <span
+class="text_6">;</span></p>
+<p><span class="text_8">import</span> <span class="calibre4">org</span>
+<span class="text_6">.</span> <span class="calibre4">apache</span> <span
+class="text_6">.</span> <span class="calibre4">tools</span> <span
+class="text_6">.</span> <span class="calibre4">ant</span> <span
+class="text_6">.</span> <span class="text_9">BuildException</span> <span
+class="text_6">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">class</span>
+<span class="text_9">MyTask</span> <span class="text_8">extends</span>
+<span class="text_9">Task</span> <span class="text_6">{</span></p>
+<p><span class="text_9">String</span> <span
+class="calibre4">message</span> <span class="text_6">;</span></p>
+<p><span class="text_8">public</span> <span class="text_8">void</span>
+<span class="calibre4">execute</span> <span class="text_6">()</span>
+<span class="text_8">throws</span> <span
+class="text_9">BuildException</span> <span class="text_6">{</span></p>
+<p><span class="calibre4"> <span class="calibre7">log</span> </span>
+<span class="text_6">(</span> <span class="text_7">"Message: "</span>
+<span class="text_6">+</span> <span class="calibre4">message</span>
+<span class="text_6">,</span> <span class="text_9">Project</span> <span
+class="text_6">.</span> <span class="calibre4">MSG_INFO</span> <span
+class="text_6">);</span></p>
+<p><span class="text_6">}</span></p>
+<p><span class="text_8">public</span> <span class="text_8">void</span>
+<span class="calibre4">setMessage</span> <span class="text_6">(</span>
+<span class="text_9">String</span> <span class="calibre4">message</span>
+<span class="text_6">)</span> <span class="text_6">{</span></p>
+<p><span class="text_8">this</span> <span class="text_6">.</span> <span
+class="calibre4">message</span> <span class="text_6">=</span> <span
+class="calibre4">message</span> <span class="text_6">;</span></p>
+<p><span class="text_6">}</span></p>
+<p>}</p>
+</div>
+<p>To execute the custom task, you need to add the following to
+the <strong>Hello World</strong>  Fax web application −</p>
+<div class="frame_">
+<p><span class="text_8">&lt;target</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"custom"</span> <span class="text_8">&gt;</span></p>
+<p><span class="text_8">&lt;taskdef</span> <span
+class="text_9">name</span> <span class="text_6">=</span> <span
+class="text_7">"custom"</span> <span class="text_9">classname</span>
+<span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint.ant.MyTask"</span> <span
+class="text_8">/&gt;</span></p>
+<p><span class="text_8">&lt;custom</span> <span
+class="text_9">message</span> <span class="text_6">=</span> <span
+class="text_7">"Hello World!"</span> <span
+class="text_8">/&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>Executing the above custom task prints the message 'Hello World!'</p>
+<div class="frame_">
+<p><span class="calibre4">c</span> <span class="text_6">:</span> <span
+class="calibre4">\&gt;ant custom</span></p>
+<p><span class="calibre4">test</span> <span class="text_6">:</span></p>
+<p><span class="text_6">[</span> <span class="calibre4">custom</span>
+<span class="text_6">]</span> <span class="text_9">Message</span> <span
+class="text_6">:</span> <span class="text_9">Hello</span> <span
+class="text_9">World</span> <span class="text_6">!</span></p>
+<p><span class="calibre4">elapsed</span> <span class="text_6">:</span>
+<span class="text_10">0.2</span> <span class="calibre4">sec</span></p>
+<p>BUILD PASSED</p>
+</div>
+<p>This is just a simple example. You can use the power of Ant to do
+whatever you want to improve your build and deployment process.</p>
+<p> </p>

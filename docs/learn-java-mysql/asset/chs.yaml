@@ -1,0 +1,762 @@
+- "# Java MySQL 入门指南\n\n\n\n![](img/cover00184.jpeg)\n\n版权所有 版权所有\n\n未经出版者明确书面许可，本书的任何部分不得复制、存储在检索系统中，或以任何形式或通过任何电子、机械、复印、录制或其他方式进行传输。\n\
+  \n我想将此书献给将使用它的学生们。祝愿你们未来事业成功，希望你们永不停止学习。\n\n# 目录\n\n- 概述\n- 环境搭建\n- 示例代码\n- 连接\n\
+  - 异常处理\n- 语句\n- 预编译语句\n- 可调用语句\n- 结果集\n- 结果结果集\n- 查看结果集\n- 更新结果集\n- 事务\n- 提交与回滚\n\
+  - 保存点\n- 批量处理\n- 使用 Statement 对象进行批量处理\n- 使用 Prepare Statement 对象进行批量处理\n- 数据流传输\n\
+  - 创建数据库示例\n- 选择数据库示例\n- 删除数据库示例\n- 创建表示例\n- 删除表示例\n- 插入记录示例\n- 查询记录示例\n- 更新记录示例\n\
+  - 删除记录示例\n- WHERE 子句示例\n- LIKE 子句示例\n- 数据排序示例\n\n# 概述\n\nJDBC 代表 Java Database Connectivity（Java\
+  \ 连接），它是一种标准的 Java API，用于 Java 编程语言与各种数据库之间与数据库无关的连接。\n\nJDBC 库包含了用于下述与数据库使用相关的常见任务的\
+  \ API：\n\n* 建立数据库连接。\n* 创建 SQL 或 MySQL 语句。\n* 在数据库中执行 SQL 或 MySQL 查询。\n* 查看和修改结果记录。\n\
+  \n从根本上说，JDBC 是一种规范，它提供了一套完整的接口，允许对底层数据库进行可移植访问。Java 可编写不同类型的可执行文件，例如：\n\n* Java\
+  \ \n* Java Applets\n* Java Servlets\n* Java ServerPages (JSPs)\n* 企业级 JavaBeans\
+  \ (EJBs)。\n\n所有这些不同的可执行文件都能使用 JDBC 驱动程序访问数据库并利用存储的数据。JDBC 提供了与 ODBC 相同的功能，允许 Java\
+  \ 程序包含与数据库无关的代码。\n\n## 先决条件\n\n在继续之前，您需要对以下两个主题有良好的理解：\n\n* [Java 核心编程](https://www.tutorialspoint.com/java/index.htm)\n\
+  * [SQL 或 MySQL 数据库](https://www.tutorialspoint.com/mysql/index.htm)\n\n## JDBC 架构\n\
+  \nJDBC API 支持数据库访问的双层和三层处理模型，但通常情况下，JDBC 架构由两层组成：\n\n* **JDBC API**: 为应用程序提供接口。\n\
+  * **JDBC 驱动程序**: 处理与数据库的通信。\n\nJDBC API 支持数据库访问的双层和三层处理模型，但通常情况下，JDBC 架构由两层组成：\n\
+  \n* **JDBC API**: 为应用程序提供接口。\n* **JDBC 驱动程序**: 处理与数据库的通信。\n\nJDBC API 支持数据库访问的双层和三层处理模型，但通常情况下，JDBC\
+  \ 架构由两层组成：\n\n* **JDBC API**: 为应用程序提供接口。\n* **JDBC 驱动程序**: 处理与数据库的通信。\n\nJDBC API\
+  \ 支持数据库访问的双层和三层处理模型，但通常情况下，JDBC 架构由两层组成：\n\n* **JDBC API**: 为应用程序提供接口。\n* **JDBC\
+  \ 驱动程序**: 处理与数据库的通信。\n\nJDBC API 支持数据库访问的双层和三层处理模型，但通常情况下，JDBC 架构由两层组成：\n\n* **JDBC\
+  \ API**: 为应用程序提供接口。\n* **JDBC 驱动程序**: 处理与数据库的通信。\n\nJDBC API 支持数据库访问的双层和三层处理模型，但通常情况下，JDBC\
+  \ 架构由两层组成：\n\n* **JDBC API**: 为应用程序提供接口。\n* **JDBC 驱动程序**: 处理与数据库的通信。\n\nJDBC API\
+  \ 支持数据库访问的双层和三层处理模型，但通常情况下，JDBC 架构由两层组成：\n\n* **JDBC API**: 为应用程序提供接口。\n* **JDBC\
+  \ 驱动程序。\n\n## 通用组件\n\nJDBC API 提供了以下接口：\n\n* `DriverManager`: 管理驱动程序列表。\n* `Driver`:\
+  \ 驱动程序连接到特定数据存储的接口。\n* `Connection`: 表示数据库会话。\n* `Statement`: 用于向数据库提交查询。\n* `ResultSet`:\
+  \ 存储从查询检索的数据。\n* `SQLException`: 处理数据库访问过程中发生的错误。\n\n## JDBC 4.0 包\n\n`java.sql`\
+  \ 和 `javax.sql` 是 JDBC 4.0 的主要包。这是编写时的最新版本。这些包的功能包括：\n\n* 自动驱动加载。\n* 异常处理改进。\n*\
+  \ 增强的 BLOB/CLOB 功能。\n* 连接和语句接口增强。\n* 国家字符集支持。\n* SQLID 访问。\n* SQL 2003 数据类型支持。\n\
+  * 注解。\n\n# 环境搭建\n\n要开始使用 JDBC，请按照以下步骤设置 JDBC 环境。我们假设你在 Windows 平台上。\n\n## 安装 Java\n\
+  \nJava SE 可免费下载。要下载，请[点击此处](https://www.oracle.com/technetwork/java/downloads/jdk9-downloads-3848520.html)，下载与操作系统兼容的版本。\n\
+  \n按照说明下载 Java 并运行 `.exe` 在你的机器上安装 Java。安装 Java 后，你需要设置环境变量指向安装目录。\n\n### 为 Windows\
+  \ 2000/XP 设置路径\n\n假设你将 Java 安装在 `C:\\Program Files\\java\\jdk` 目录：\n\n* 右键点击“计算机”，选择“属性”。\n\
+  * 点击“高级”选项卡下的“环境变量”按钮。\n* 现在，编辑 `Path` 变量并将 Java 可执行目录路径添加到末尾。例如，如果当前设置为 `C:\\Windows\\\
+  System32`，则按如下编辑：\n\n`C:\\Windows\\System32;C:\\Program Files\\java\\jdk\\bin`\n\
+  \n### 为 Windows 95/98/ME 设置路径\n\n假设你将 Java 安装在 `C:\\Program Files\\java\\jdk` 目录：\n\
+  \n* 编辑 `C:\\autoexec.bat` 文件，在末尾添加以下行：\n\n`SET PATH = %PATH%;C:\\Program Files\\\
+  java\\jdk\\bin`\n\n### 为 Linux, UNIX, Solaris, FreeBSD 设置路径\n\n环境变量 `PATH` 应该设置为\
+  \ Java 二进制文件安装位置。如果你在执行此操作遇到困难，请参考你的 shell 文档。\n\n\n\n\n\n例如，如果你使用 `bash` 作为你的 shell，那么你需要在\
+  \ `.bashrc` 文件的末尾添加以下行——\n\n```bash\nexport PATH = /path/to/java:$PATH'\n```\n\n\
+  当你安装 J2SE 开发工具包时，会自动获得两个 JDBC 软件包 `java.sql` 和 `javax.sql,`。\n\n## 安装数据库\n当然，你需要的最重要的东西是一个实际运行的数据库，并且其中包含一个你可以进行查询和修改的表。\n\
+  \n安装一个最适合你的数据库。你有很多选择，最常见的有——\n\n*   `MySQL DB` — `MySQL` 是一个开源数据库。你可以从 [MySQL 官方网站](https://dev.mysql.com/downloads/mysql)\
+  \ 下载它。我们建议下载完整的 Windows 安装包。\n*   此外，请下载并安装 [MySQL Administrator](https://dev.mysql.com/downloads/gui-tools/)\
+  \ 以及 [MySQL Query Browser.](https://dev.mysql.com/downloads/gui-tools/)。这些是基于图形界面的工具，会让你的开发变得简单得多。\n\
+  *   最后，在方便的目录下下载并解压 [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/3.1.html)（MySQL\
+  \ JDBC 驱动程序）。为了本教程，我们假设你已将驱动安装在 `C:\\Program Files\\MySQL\\mysql-connector-java-5.1.8`。\n\
+  *   相应地，将 `CLASSPATH` 变量设置为 `C:\\Program Files\\MySQL\\mysql-connector-java-5.1.8\\\
+  mysql-connector-java-5.1.8-bin.jar`。你的驱动版本可能会根据安装情况而异。\n\n## 设置数据库凭\n当我们安装 MySQL\
+  \ 数据库时，其管理员 ID 被设置为 `root`，并允许设置自定义的密码。\n\n使用 `root` ID 和密码，你可以创建另一个用户 ID 和密码，也可以在你的\
+  \ JDBC 应用中使用 `root` ID 和密码。\n\n有许多数据库操作（如创建和删除数据库都需要管理员 ID 和密码。\n\n在 JDBC 教程的剩余部分，我们将使用\
+  \ ID 为 `guest`、`guest123` 为密码的 MySQL 数据库。\n\n如果你没有足够的权限创建新用户，可以请求你的数据库管理员 (DBA)\
+  \ 为你创建一个用户 ID 和密码。\n\n## 创建数据库\n要创建 `TUTORIALSPOINT` 数据库，请使用以下步骤——\n\n### 第 1 步\n\
+  打开`命令提示符` 并如下如下切换到安装目录——\n\n```cmd\nC:\\>\nC:\\>cd Program Files\\MySQL\\bin\nC:\\\
+  Program Files\\MySQL\\bin>\n```\n**注意** — `mysqld.exe` 的路径可能会根据 MySQL 在系统上的安装位置而不同。你也可以查看关于如何启动和停止数据库服务器的文档。\n\
+  \n### 第 2 步\n如果数据库尚未运行，执行以下命令启动服务器。\n\n```cmd\nC:\\Program Files\\MySQL\\bin>mysqld\n\
+  C:\\Program Files\\MySQL\\bin>\n```\n\n### 第 3 步\n执行以下命令创建 `TUTORIALSPOINT` 数据库——\n\
+  \n```cmd\nC:\\Program Files\\MySQL\\bin> mysqladmin create TUTORIALSPOINT -u guest\
+  \ -p\nEnter password: ********\nC:\\Program Files\\MySQL\\bin>\n```\n\n## 创建表\n\
+  要在 TUTORIALSPOINT 数据库中创建 `Employees` 表，请使用以下步骤——\n\n### 第 1 步\n打开`命令提示符` 并如下切换到安装目录——\n\
+  \n```cmd\nC:\\>\nC:\\>cd Program Files\\MySQL\\bin\nC:\\Program Files\\MySQL\\bin>\n\
+  ```\n\n### 第 2 步\n如下所示登录数据库——\n\n```cmd\nC:\\Program Files\\MySQL\\bin>mysql -u\
+  \ guest -p\nEnter password: ********\nmysql>\n```\n\n### 第 3 步\n如下所示创建表 `Employees`——\n\
+  \n```sql\nmysql>  use TUTORIALSPOINT;\nmysql> create table Employees\n->  (\n->\
+  \ id int  not  null,\n-> age int  not  null,\n-> first varchar (255),\n->  last\
+  \ varchar (255)\n->  );\nQuery OK,  0 rows affected (0.08 sec)\nmysql>\n```\n\n\
+  ## 创建数据记录\n最后，你如下所示在 Employee 表中创建几条记录——\n\n```sql\nmysql> INSERT INTO Employees\
+  \ VALUES (100,  18,  'Zara',  'Ali');\nQuery OK,  1 row affected (0.05 sec)\nmysql>\
+  \ INSERT INTO Employees VALUES (101,  25,  'Mahnaz',  'Fatma');\nQuery OK,  1 row\
+  \ affected (0.00 sec)\nmysql> INSERT INTO Employees VALUES (102,  30,  'Zaid', \
+  \ 'Khan');\nQuery OK,  1 row affected (0.00 sec)\nmysql> INSERT INTO Employees VALUES\
+  \ (103,  28,  'Sumit',  'Mittal');\nQuery OK,  1 row affected (0.00 sec)\nmysql>\n\
+  ```\n\n为了全面了解 MySQL 数据库，请学习 [MySQL 教程](https://www.tutorialspoint.com/mysql/index.htm\
+  \ \"MySQL Tutorial\")。\n\n现在你已经准备好开始尝试 JDBC 了。下一章将为你提供一个 JDBC 编程的示例。\n\n## 示例代码\n\
+  本章提供了如何创建一个 JDBC 应用的示例。\n\n## 创建 JDBC 应用\n建立 JDBC 连接涉及的编程非常简单。以下是简单的步骤：\n\n*   **导入\
+  \ JDBC 包** — 在你的 Java 程序中添加 `import` 语句导入所需的类。\n*   **数据库 URL 格式** — 这是为了创建一个格式正确的地址，指向你想要连接的数据库。\n\
+  *   **创建连接对象** — 最后，调用 `DriverManager` 对象的 `getConnection()` 方法建立实际的数据库连接。\n\n##\
+  \ 示例代码\n当你需要创建自己的应用时，此示例代码可以模板。将以下示例粘贴到 `TestApplication.java`，编译并运行：\n\n```java\n\
+  import java.sql.*;\n\npublic class TestApplication {\n    static final String DB_URL\
+  \ = \"jdbc:mysql://localhost/TUTORIALSPOINT\";\n    static final String USER = \"\
+  guest\";\n    static final String PASS = \"guest123\";\n    static final String\
+  \ QUERY = \"SELECT id, first, last, age FROM Employees\";\n\n    public static void\
+  \ main(String[] args) {\n        // 打开连接\n        try(Connection conn = DriverManager.getConnection(DB_URL,\
+  \ USER, PASS);\n             Statement stmt = conn.createStatement();\n        \
+  \     ResultSet rs = stmt.executeQuery(QUERY)) {\n\n            // 从结果集中提取数据\n \
+  \           while (rs.next()) {\n                // 按列名检索\n                System.out.print(\"\
+  ID: \" + rs.getInt(\"id\"));\n                System.out.print(\", Age: \" + rs.getInt(\"\
+  age\"));\n                System.out.print(\", First: \" + rs.getString(\"first\"\
+  ));\n                System.out.println(\", Last: \" + rs.getString(\"last\"));\n\
+  \            }\n        } catch (SQLException e) {\n            e.printStackTrace();\n\
+  \        }\n    }\n}\n```\n\n现在让我们如下编译上述示例：\n\n```cmd\nC:\\>javac TestApplication.java\n\
+  C:\\>java TestApplication\n```\n\n当你运行 `TestApplication` 时，它产生以下结果：\n\n```text\n\
+  ID: 100, Age: 18, First: Zara, Last: Ali\nID: 101, Age: 25, First: Mahnaz, Last:\
+  \ Fatma\nID: 102, Age: 30, First: Zaid, Last: Khan\nID: 103, Age: 28, First: Sumit,\
+  \ Last: Mittal\n```\n\n\n\n\n\n`Import` 语句告诉 Java 编译器在何处查找代码中引用的类，它们被放置在源代码的最开始。\n\
+  \n要使用标准的 JDBC 程序包（它允许你对 SQL 表进行选择、插入、更新和删除数据操作），请在你的源代码中添加以下 `imports` ——\n\n```java\n\
+  import java.sql.* ; // 用于标准的 JDBC 程序\nimport java.math.* ; // 用于对 BigDecimal 和 BigInteger\
+  \ 的支持\n```\n\n## 注册 JDBC 驱动程序\n\n你必须在 classpath 中拥有所需的 JDBC 驱动程序。在当前情况下，你将 `CLASSPATH`\
+  \ 变量设置为 `C:\\Program Files\\MySQL\\mysql-connector-java-5.1.8\\mysql-connector-java-5.1.8-bin.jar`。你的驱动版本可能会根据你的安装情况而异。\n\
+  \n## 数据库 URL 的构建\n\n在加载驱动程序后，你可以使用 `DriverManager.getConnection()` 方法建立连接。为了方便参考，让我列出三个重载的\
+  \ `DriverManager.getConnection()` 方法 ：\n\n* `getConnection(String url)`\n* `getConnection(String\
+  \ url, Properties prop)`\n* `getConnection(String url, String user, String password)`\n\
+  \n这里的每个形式都需要一个数据库 `URL`。数据库 URL 是指向你数据库的地址。\n\n构建数据库 URL 是大多数与连接相关问题发生的地方。\n\n下表列出了\
+  \ MySQL JDBC 驱动程序名称和数据库 URL。\n\n| RDBMS | JDBC 驱动名称 | URL 格式 |\n| :--- | :--- |\
+  \ :--- |\n| MySQL | `com.mysql.jdbc.Driver` | `jdbc:mysql://hostname/ databaseName`\
+  \ |\n\nURL 格式中所有高亮部分都是静态的，你只需要根据数据库设置更改剩余部分。\n\n## 创建连接对象\n\n我们已经列出了创建连接对象的 `DriverManager.getConnection()`\
+  \ 方法的三种形式。\n\n## 使用带有用户名和密码的数据库 URL\n\n`getConnection()` 最常用的形式需要你传递数据库 URL、一个用户名\
+  \ 和密码 ：\n\n由于你正在使用 MySQL 驱动程序，你将为 URL 的数据库部分指定 `host:port:databaseName` 值。\n\n如果你有一个\
+  \ TCP/IP 地址为 `192.0.0.1`、主机名为 `localhost` 的主机，且你的 MySQL 监听器配置为默认监听端口 `3306`，而你的数据库名称为\
+  \ `TUTORIALSPOINT`，那么完整的数据库 URL 将是 ：\n\n`jdbc:mysql://localhost/TUTORIALSPOINT`\n\
+  \n现在你必须使用相应的用户名和密码调用 `getConnection()` 方法来获取 `Connection` 对象，如下 ：\n\n```java\nString\
+  \ URL =  \"jdbc:mysql://localhost/TUTORIALSPOINT\";\nString USER =  \"guest\";\n\
+  String PASS =  \"password\";\nConnection conn =  DriverManager.getConnection(URL,\
+  \ USER, PASS);\n```\n\n## 使用数据库 URL 和 Properties 对象\n\n第三种形式的 `DriverManager.getConnection(\
+  \ )` 方法需要数据库 URL 和一个 `Properties` 对象 ：\n\n```java\nDriverManager.getConnection(String\
+  \ url, Properties info);\n```\n\n`Properties` 对象持有一组键值对。它用于在调用 `getConnection()`\
+  \ 方法期间将驱动属性传递给驱动程序。\n\n要建立与之前示例相同的连接，请使用以下代码 ：\n\n```java\nimport java.util.*;\n\
+  String URL =  \"jdbc:mysql://localhost/TUTORIALSPOINT\";\nProperties info =  new\
+  \  Properties(  );\ninfo.put(  \"user\",  \"guest\"  );\ninfo.put(  \"password\"\
+  ,  \"guest123\"  );\nConnection conn =  DriverManager.getConnection(URL, info);\n\
+  ```\n\n为了更好地理解，我们建议你学习我们的 [Java & MySQL - 代码教程](https://www.tutorialspoint.com/java_mysql/java_mysql_sample_code.htm)。\n\
+  \n现在让我们按照如下方式编译上面的示例 ：\n\n```cmd\nC:\\>javac FirstExample.java\nC:\\>\n```\n\n当你运行\
+  \ `FirstExample` 时，它产生以下结果 ：\n\n```\nC:\\>java FirstExample\nID: 100, Age: 18, First:\
+  \ Zara, Last: Ali\nID: 101, Age: 25, First: Mahnaz, Last: Fatma\nID: 102, Age: 30,\
+  \ First: Zaid, Last: Khan\nID: 103, Age: 28, First: Sumit, Last: Mittal\nC:\\>\n\
+  ```\n\n# 异常处理\n\n异常处理允许你以受控的方式处理异常情况，如程序定义的错误。\n\n当异常情况发生时，会抛出一个异常。`thrown`（抛出）一词意味着当前程序的执行停止，控制被重定向到最近的可用\
+  \ `catch` 子句。如果没有可用的 catch 子句，则程序的执行将结束。\n\nJDBC 异常处理与 Java 异常处理非常相似，但对于 JDBC 来说，你处理的最常见异常是\
+  \ `java.sql.SQLException`。\n\n## SQLException 方法\n\n`SQLException` 可能同时发生在驱动程序和数据库中。当发生此类异常时，一个类型为\
+  \ `SQLException` 的对象将传递给 `catch` 子句。\n\n传递的 `SQLException` 对象具有以下方法用于获取有关异常的附加信息\
+  \ ：\n\n| 方法 | 说明 |\n| :--- | :--- |\n| `getErrorCode()` ) | 获取与异常相关的错误代码。 |\n| `getMessage()`\
+  \ ) | 获取 JDBC 驱动程序的错误消息（由驱动程序处理），或获取数据库错误对应的 Oracle 错误代码和消息。 |\n| `getSQLState()`\
+  \ ) | 获取 SQLState 字符串。 |\n| `getNextException()` ) | 获取异常链中的下一个异常。 |\n| `printStackTrace()`\
+  \ ) | 将当前异常打印到标准错误。 |\n| `printStackTrace(PrintStream s)` | 将此异常打印到指定的打印流。 |\n|\
+  \ `printStackTrace(PrintWriter w)` | 将此异常打印到指定的写入器。 |\n\n通过利用异常对象提供的可用信息，你可以捕获异常并适当继续程序。这里是\
+  \ `try` 块的通用形式\n\n```java\ntry {\n    // 风险代码在大括号之间\n} catch(Exception ex) {\n \
+  \   // 异常处理代码在大括号之间\n} finally {\n    // 必须执行的代码在大括号之间。例如关闭数据库连接。\n}\n```\n\n##\
+  \ 示例\n\n学习以下代码以理解 `try...catch...finally` 块的使用。此代码根据之前章节的环境和数据库设置编写。\n\n```java\n\
+  import java.sql.CallableStatement;\nimport java.sql.Connection;\nimport java.sql.DriverManager;\n\
+  import java.sql.SQLException;\n\npublic class TestApplication {\n    static final\
+  \ String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\";\n    static final String\
+  \ USER = \"guest\";\n    static final String PASS = \"guest123\";\n    static final\
+  \ String QUERY = \"{call getEmpName (?, ?)}\";\n\n    public static void main(String[]\
+  \ args) {\n        // 打开连接\n        try (Connection conn = DriverManager.getConnection(DB_URL,\
+  \ USER, PASS);\n             CallableStatement stmt = conn.prepareCall(QUERY)) {\n\
+  \n            // 将值绑定到参数上\n            stmt.setInt(1, 1); // 这将设置 ID\n         \
+  \   // 因为第二个参数是 OUT，所以注册它\n            stmt.registerOutParameter(2, java.sql.Types.VARCHAR);\n\
+  \n            // 使用 execute 方法运行存储过程\n            System.out.println(\"Executing\
+  \ stored procedure...\");\n            stmt.execute();\n\n            // 使用 getXXX\
+  \ 方法检索员工姓名\n            String empName = stmt.getString(2);\n            System.out.println(\"\
+  Emp Name with ID: 1 is \" + empName);\n\n        } catch (SQLException e) {\n  \
+  \          e.printStackTrace();\n        }\n    }\n}\n```\n\n\n\n\nJDBC `Statement`\
+  \ 接口定义了用于向 MySQL 数据库发送 SQL 命令并从数据库中检索数据的方法和属性。`Statement` 用于对数据库进行通用访问。当你在运行时使用静态\
+  \ SQL 语句时，它非常有用。`Statement` 接口不接受参数。\n\n在使用 `Statement` 对象执行 SQL 语句之前，你首先需要使用 `Connection`\
+  \ 对象的 `createStatement()` 方法创建一个对象，如下例所示：\n\n```java\nStatement stmt = null;\n\n\
+  try {\n    stmt = conn.createStatement();\n    .  .  .\n} catch (SQLException e)\
+  \ {\n    .  .  .\n} finally {\n    .  .  .\n}\n```\n\n一旦你创建了 `Statement` 对象，就可以使用它的三个执行方法之一来执行\
+  \ SQL 语句。\n\n*   `boolean execute(String SQL)` — 如果可以检索到 `ResultSet` 对象，则返回布尔值 true；否则，返回\
+  \ false。使用此方法执行 SQL DDL 语句，或当你需要使用真正的动态 SQL 时。\n*   `int executeUpdate(String SQL)`\
+  \ — 返回执行 SQL 语句后影响的行数。使用此方法执行你预期会获得影响行数的 SQL 语句——例如 `INSERT`、`UPDATE` 或 `DELETE`\
+  \ 语句。\n*   `ResultSet executeQuery(String SQL)` — 返回一个 `ResultSet` 对象。当你预期获取结果集时（如使用\
+  \ `SELECT` 语句时），使用此方法。\n\n## 关闭 Statement 对象\n\n正如关闭 `Connection` 对象是为了节省数据库资源，出于相同的原因，你也应该关闭\
+  \ `Statement` 对象。\n\n只需调用 `close()` 方法即可完成工作。如果你先关闭 `Connection` 对象，它也会关闭 `Statement`\
+  \ 对象。但是，你应该始终显式关闭 `Statement` 对象以确保正确的清理。\n\n```java\nStatement stmt = null;\n\n\
+  try {\n    stmt = conn.createStatement();\n    .  .  .\n} catch (SQLException e)\
+  \ {\n    .  .  .\n} finally {\n    stmt.close();\n}\n```\n\n我们正在使用 `try with resources`，它可以自动处理资源的关闭。下面的示例演示了上述所有的概念。\n\
+  \n此代码是根据上一章节完成的环境和数据库设置编写的。\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，并如下如下编译和运行：\n\
+  \n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.ResultSet;\n\
+  import java.sql.SQLException;\nimport java.sql.Statement;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n    static final String QUERY = \"SELECT id, first, last, age FROM\
+  \ Employees\";\n    static final String UPDATE_QUERY = \"UPDATE Employees set age=30\
+  \ WHERE id=103\";\n\n    public static void main(String[] args) {\n        // 打开连接\n\
+  \        try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);\n\
+  \             Statement stmt = conn.createStatement();\n        ) {\n          \
+  \  // 让我们检查它是否返回了 true Result Set。\n            Boolean ret = stmt.execute(UPDATE_QUERY);\n\
+  \            System.out.println(\"Return value is : \" + ret.toString());\n\n  \
+  \          // 让我们更新 ID = 103 的记录的年龄；\n            int rows = stmt.executeUpdate(UPDATE_QUERY);\n\
+  \            System.out.println(\"Rows impacted : \" + rows);\n\n            //\
+  \ 让我们选择所有记录并显示。\n            ResultSet rs = stmt.executeQuery(QUERY);\n\n      \
+  \      // 从结果集中提取数据\n            while (rs.next()) {\n                // 通过列名检索\n\
+  \                System.out.print(\"ID: \" + rs.getInt(\"id\"));\n             \
+  \   System.out.print(\", Age: \" + rs.getInt(\"age\"));\n                System.out.print(\"\
+  , First: \" + rs.getString(\"first\"));\n                System.out.println(\",\
+  \ Last: \" + rs.getString(\"last\"));\n            }\n            rs.close();\n\
+  \        } catch (SQLException e) {\n            e.printStackTrace();\n        }\n\
+  \    }\n}\n```\n\n现在让我们按照如下方式编译上述示例：\n\n```bash\nC:\\>javac TestApplication.java\n\
+  C:\\>\n```\n\n当你运行 `TestApplication` 时，它会产生以下结果：\n\n```text\nC:\\>java TestApplication\n\
+  Return value is : false\nRows impacted : 1\nID: 100, Age: 18, First: Zara, Last:\
+  \ Ali\nID: 101, Age: 25, First: Mehnaz, Last: Fatma\nID: 102, Age: 30, First: Zaid,\
+  \ Last: Khan\nID: 103, Age: 30, First: Sumit, Last: Mittal\nC:\\>\n```\n\n## Prepared\
+  \ Statement\n\n`PreparedStatement` 接口扩展了 `Statement` 接口，这为你提供了额外的功能，并且与通用 `Statement`\
+  \ 对象相比有一些优势。\n\n该语句提供了动态提供参数的灵活性。\n\n## 创建 PreparedStatement 对象\n\n```java\nPreparedStatement\
+  \ pstmt = null;\n\ntry {\n    String SQL = \"Update Employees SET age = ? WHERE\
+  \ id = ?\";\n    pstmt = conn.prepareStatement(SQL);\n    .  .  .\n} catch (SQLException\
+  \ e) {\n    .  .  .\n} finally {\n    .  .  .\n}\n```\n\n所有的 `PreparedStatement`\
+  \ 都由 `?` 符号表示。如果你在执行语句之前忘记提供值将会收到 `SQLException`。每个参数通过其顺序位置进行引用。第一个标记从 1 开始，下一个是\
+  \ 2，依此类推。`PreparedStatement` 方法与 `Statement` 对象的方法不同，(a) `execute()`、(b) `executeQuery()`\
+  \ 和 (c) `executeUpdate()` 也适用于 `PreparedStatement`。但是，这些方法被修改为使用 SQL 语句。\n\n```java\n\
+  import java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.PreparedStatement;\n\
+  import java.sql.ResultSet;\nimport java.sql.SQLException;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n    static final String QUERY = \"SELECT id, first, last, age FROM\
+  \ Employees\";\n    static final String UPDATE_QUERY = \"UPDATE Employees set age=?\
+  \ WHERE id=?\";\n\n    public static void main(String[] args) {\n        // 打开连接\n\
+  \        try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);\n\
+  \             PreparedStatement stmt = conn.prepareStatement(UPDATE_QUERY);\n  \
+  \      ) {\n            // 将值绑定到参数中。\n            stmt.setInt(1, 35); // 这设置年龄\n\
+  \            stmt.setInt(2, 102); // 这设置 ID\n\n            // 让我们更新 ID = 102 的记录的年龄；\n\
+  \            int rows = stmt.executeUpdate();\n            System.out.println(\"\
+  Rows impacted : \" + rows);\n\n            // 让我们选择所有记录并显示。\n            ResultSet\
+  \ rs = stmt.executeQuery(QUERY);\n\n            // 从结果集中提取数据\n            while\
+  \ (rs.next()) {\n                // 通过列名检索\n                System.out.print(\"\
+  ID: \" + rs.getInt(\"id\"));\n                System.out.print(\", Age: \" + rs.getInt(\"\
+  age\"));\n                System.out.print(\", First: \" + rs.getString(\"first\"\
+  ));\n                System.out.println(\", Last: \" + rs.getString(\"last\"));\n\
+  \            }\n            rs.close();\n        } catch (SQLException e) {\n  \
+  \          e.printStackTrace();\n        }\n    }\n}\n```\n\n\n\n\n\n```java\ne.printStackTrace();\n\
+  }\n\n}\n```\n\n现在让我们按照如下方式编译上述示例 −\n\n```C:\\>javac TestApplication.java\nC:\\>\n\
+  ```\n\n当你运行 `TestApplication` 时，它会产生以下结果 −\n\n```\nC:\\>java TestApplication\nReturn\
+  \ value is : false\nRows impacted : 1\nID: 100, Age: 18, First: Zara, Last: Ali\n\
+  ID: 101, Age: 25, First: Mehnaz, Last: Fatma\nID: 102, Age: 35, First: Zaid, Last:\
+  \ Khan\nID: 103, Age: 30, First: Sumit, Last: Mittal\nC:\\>\n```\n\n## Callable\
+  \ Statement\n\n`CallableStatement` 接口用于执行对数据库存储过程的调用。\n\n假设你需要在 `TUTORIALSPOINT`\
+  \ 数据库中执行以下存储过程 −\n\n```sql\nDELIMITER $$\nDROP PROCEDURE IF EXISTS `TUTORIALSPOINT`.`getEmpName`\
+  \ $$\nCREATE PROCEDURE `TUTORIALSPOINT`.`getEmpName`\n(IN EMP_ID INT, OUT EMP_FIRST\
+  \ VARCHAR(255))\nBEGIN\nSELECT first INTO EMP_FIRST\nFROM Employees\nWHERE ID =\
+  \ EMP_ID;\nEND $$\nDELIMITER ;\n```\n\n存在三种类型的参数：IN、OUT 和 INOUT。`PreparedStatement`\
+  \ 对象只使用 `IN` 参数。而 `CallableStatement` 对象可以使用所有三种。\n\n以下是它们的定义 −\n\n\n\n| 参数 | 描述\
+  \ |\n| :--- | :--- |\n| IN | 在创建 SQL 语句时值未知的参数。使用 `setXXX()` 方法将值绑定到 IN 参数。 |\n\
+  | OUT | 值由其返回的 SQL 语句提供的参数。使用 `getXXX()` 方法从 `OUT` 参数中检索值。 |\n| INOUT | 同时提供输入和输出值的参数。使用\
+  \ `setXXX()` 方法绑定变量并使用 `getXXX()` 方法检索值。 |\n\n接下来的代码段显示了如何使用 `Connection.prepareCall()`\
+  \ 方法根据前述存储过程实例化 `CallableStatement` 对象 −\n\n```java\nCallableStatement cstmt = null;\n\
+  try {\n    String SQL = \"{call getEmpName (?, ?)}\";\n    cstmt = conn.prepareCall(SQL);\n\
+  \    // . . .\n} catch (SQLException e) {\n    // . . .\n} finally {\n    // . .\
+  \ .\n}\n```\n\n`String` 变量 `SQL` 代表带有参数占位符的存储过程。\n\n使用 `CallableStatement` 对象与使用\
+  \ `PreparedStatement` 对象非常相似。你必须在执行语句之前为所有参数绑定值，否则你将收到 `SQLException`。\n\n如果你有 `IN`\
+  \ 参数，只需遵循适用于 `PreparedStatement` 对象的规则和技术；使用与你正在绑定的 Java 数据类型对应的 `setXXX()` 方法。\n\
+  \n当你使用 `OUT` 和 `INOUT` 参数时，必须使用额外的 `CallableStatement` 方法 `registerOutParameter()`。`registerOutParameter()`\
+  \ 方法将 JDBC 数据类型绑定到存储过程预期返回的数据类型。\n\n一旦你调用了存储过程，就可以使用适当的 `getXXX()` 方法从 `OUT` 参数中检索值。该方法将检索到的\
+  \ SQL 类型值转换为 Java 数据类型。\n\n## 关闭 CallableStatement 对象\n\n就像关闭其他 `Statement` 对象一样，出于相同的原因，你也应该关闭\
+  \ `CallableStatement` 对象。\n\n只需调用 `close()` 方法即可完成工作。如果你先关闭 `Connection` 对象，它也会关闭\
+  \ `CallableStatement` 对象。然而，你应该始终显式关闭 `CallableStatement` 对象以确保适当的清理。\n\n```java\n\
+  CallableStatement cstmt = null;\ntry {\n    String SQL = \"{call getEmpName (?,\
+  \ ?)}\";\n    cstmt = conn.prepareCall(SQL);\n    // . . .\n} catch (SQLException\
+  \ e) {\n    // . . .\n} finally {\n    cstmt.close();\n}\n```\n\n我们正在使用 try-with-resources，它会自动处理资源的关闭。下面的示例演示了上述所有的概念。\n\
+  \n这段代码是根据上一章中完成的环境和数据库设置编写的。\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，并如下方式编译和运行\
+  \ −\n\n```java\nimport java.sql.CallableStatement;\nimport java.sql.Connection;\n\
+  import java.sql.DriverManager;\nimport java.sql.SQLException;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n    static final String QUERY = \"{call getEmpName (?, ?)}\";\n\n \
+  \   public static void main(String[] args) {\n        // 打开一个连接\n        try (Connection\
+  \ conn = DriverManager.getConnection(DB_URL, USER, PASS);\n             CallableStatement\
+  \ stmt = conn.prepareCall(QUERY)\n        ) {\n            // 将值绑定到参数。\n       \
+  \     stmt.setInt(1, 102); // 这将设置 ID\n            // 因为第二个参数是 OUT，所以注册它\n     \
+  \       stmt.registerOutParameter(2, java.sql.Types.VARCHAR);\n            // 使用\
+  \ execute 方法运行存储过程。\n            System.out.println(\"Executing stored procedure...\"\
+  );\n            stmt.execute();\n            // 使用 getXXX 方法检索员工姓名\n           \
+  \ String empName = stmt.getString(2);\n            System.out.println(\"Emp Name\
+  \ with ID: 102 is \" + empName);\n        } catch (SQLException e) {\n         \
+  \   e.printStackTrace();\n        }\n    }\n}\n```\n\n\n\n\n从数据库查询中读取数据的 SQL 语句会将数据返回到结果集中。`SELECT`\
+  \ 语句是从数据库中选择行并在结果集中查看它们的标准方法。`java.sql.ResultSet` 接口表示数据库查询的结果集。\n\n`ResultSet`\
+  \ 对象维护一个指向结果集中当前行的游标。“结果集”（result set）一术语指的是包含在 `ResultSet` 对象中的行数据和列数据。\n\n`ResultSet`\
+  \ 接口的方法可以分为三类 −\n\n- **导航方法 (Navigational methods)** − 用于移动游标。\n- **获取方法 (Get methods)**\
+  \ − 用于查看游标所指向的当前行列中的数据。\n- **更新方法 (Update methods)** − 用于更新当前行列中的数据。这些更新也可以同步到底层数据库中。\n\
+  \n游标可以根据 `ResultSet` 的属性进行移动。这些属性在创建生成 `ResultSet` 的相应 `Statement` 时指定。\n\nJDBC\
+  \ 提供了以下连接方法来创建带有所需 `ResultSet` 的语句 −\n\n- `createStatement(int RSType, int RSConcurrency);`\n\
+  - `prepareStatement(String SQL, int RSType, int RSConcurrency);`\n- `prepareCall(String\
+  \ sql, int RSType, int RSConcurrency);`\n\n第一个参数表示 `ResultSet` 对象的类型，第二个参数是两个 `ResultSet`\
+  \ 常量之一，用于指定结果集是只读的还是可更新的。\n\n## ResultSet 的类型\n\n可能的 `RSType` 如下所示。如果你不指定任何 `ResultSet`\
+  \ 类型，将自动获得一个为 `TYPE_FORWARD_ONLY` 的类型。\n\n| 类型 | 描述 |\n| :--- | :--- |\n| `ResultSet.TYPE_FORWARD_ONLY`\
+  \ | 游标只能在结果集中向前移动。 |\n| `ResultSet.TYPE_SCROLL_INSENSITIVE` | 游标可以向前向后滚动，且结果集对结果集创建后其他人对数据库所做的更改不敏感。\
+  \ |\n| `ResultSet.TYPE_SCROLL_SENSITIVE` | 游标可以向前向后滚动，且结果集对结果集创建后其他人对数据库所做的更改敏感。\
+  \ |\n\n## ResultSet 的并发性\n\n可能的 `RSConcurrency` 如下所示。如果你不指定任何并发类型，将自动获得一个为 `CONCUR_READ_ONLY`\
+  \ 的类型。\n\n| 并发性 | 描述 |\n| :--- | :--- |\n| `ResultSet.CONCUR_READ_ONLY` | 创建只读的结果集。这是默认值。\
+  \ |\n| `ResultSet.CONCUR_UPDATABLE` | 创建可更新的结果集。 |\n\n我们目前为止编写的所有示例都可以写如下所示，它初始化了一个\
+  \ `Statement` 对象来创建一个单向的、只读的 `ResultSet` 对象 −\n\n```java\ntry(\n    Statement stmt\
+  \ = conn.createStatement(\n        ResultSet.TYPE_FORWARD_ONLY,\n        ResultSet.CONCUR_READ_ONLY);)\n\
+  } catch(Exception ex) {\n    ....\n} finally {\n    ....\n}\n```\n\n## 导航结果集\n\n\
+  `ResultSet` 接口中有几个方法涉及移动游标，包括 −\n\n| 序号 | 方法与描述 |\n| :--- | :--- |\n| 1 | `public\
+  \ void beforeFirst() throws SQLException` 将游标移动到第一行之前。 |\n| 2 | `public void afterLast()\
+  \ throws SQLException` 将游标移动到最后一行之后。 |\n| 3 | `public boolean first() throws SQLException`\
+  \ 将游标移动到第一行。 |\n| 4 | `public void last() throws SQLException` 将游标移动到最后一行。 |\n|\
+  \ 5 | `public boolean absolute(int row) throws SQLException` 将游标移动到指定的行。 |\n| 6\
+  \ | `public boolean relative(int row) throws SQLException` 将游标从当前指向的位置向前或向后移动指定的行数。\
+  \ |\n| 7 | `public boolean previous() throws SQLException` 将游标移动到上一行。如果上一行不在结果集中，则返回\
+  \ false。 |\n| 8 | `public boolean next() throws SQLException` 将游标移动到下一行。如果结果集中没有更多行，则返回\
+  \ false。 |\n| 9 | `public int getRow() throws SQLException` 返回游标所指向的行号。 |\n| 10\
+  \ | `public void moveToInsertRow() throws SQLException` 将游标移动到结果集中的一个特殊行，该行可用于向数据库插入新行。会记住当前的游标位置。\
+  \ |\n| 11 | `public void moveToCurrentRow() throws SQLException` 如果游标当前位于插入行，则将游标移回当前行；否则，此方法不执行任何操作\
+  \ |\n\n下面是使用了上述几个导航方法的示例。\n\n此示例代码是根据之前章节中完成的环境和数据库设置编写的。\n\n将以下示例复制并粘贴到 `TestApplication.java`\
+  \ 中，并如下方式编译和运行 −\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\n\
+  import java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.sql.Statement;\n\
+  \npublic class TestApplication {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n    static final String QUERY = \"SELECT id, first, last, age FROM\
+  \ Employees\";\n\n    public static void main(String[] args) {\n        // 打开连接\n\
+  \        try(\n            Connection conn = DriverManager.getConnection(DB_URL,\
+  \ USER, PASS);\n            Statement stmt = conn.createStatement(\n           \
+  \     ResultSet.TYPE_FORWARD_ONLY,\n                ResultSet.CONCUR_READ_ONLY);\n\
+  \            ResultSet rs = stmt.executeQuery(QUERY);\n        ) {\n           \
+  \ // 将游标移动到最后一行\n            System.out.println(\"Moving cursor to the last...\"\
+  );\n            rs.last();\n            // 提取结果集\n            System.out.println(\"\
+  Displaying record...\");\n            // 获取列名\n            int id = rs.getInt(\"\
+  id\");\n            int age = rs.getInt(\"age\");\n            String first = rs.getString(\"\
+  first\");\n            String last = rs.getString(\"last\");\n            // 显示结果\n\
+  \            System.out.println(\"ID: \" + id + \", Age: \" + age + \", First: \"\
+  \ + first + \", Last: \" + last);\n\n            // 将游标移动到第一行\n            System.out.println(\"\
+  Moving cursor to the first row...\");\n            rs.first();\n            // 提取结果集\n\
+  \            System.out.println(\"Displaying record...\");\n            // 获取列名\n\
+  \            id = rs.getInt(\"id\");\n            age = rs.getInt(\"age\");\n  \
+  \          first = rs.getString(\"first\");\n            last = rs.getString(\"\
+  last\");\n            // 显示结果\n            System.out.println(\"ID: \" + id + \"\
+  , Age: \" + age + \", First: \" + first + \", Last: \" + last);\n\n            //\
+  \ 将游标移动到下一行\n            System.out.println(\"Moving cursor to the next row...\"\
+  );\n            rs.next();\n            // 提取结果集\n            System.out.println(\"\
+  Displaying record...\");\n            // 获取列名\n            id = rs.getInt(\"id\"\
+  );\n            age = rs.getInt(\"age\");\n            first = rs.getString(\"first\"\
+  );\n            last = rs.getString(\"last\");\n            // 显示结果\n          \
+  \  System.out.println(\"ID: \" + id + \", Age: \" + age + \", First: \" + first\
+  \ + \", Last: \" + last);\n        } catch (SQLException e) {\n            e.printStackTrace();\n\
+  \        }\n    }\n}\n```\n\n现在，如下所示编译上述示例 −\n\n```bash\nC:\\>javac TestApplication.java\n\
+  C:\\>\n```\n\n当运行 **TestApplication** 时，会产生以下结果 −\n\n```\nC:\\>java TestApplication\n\
+  Moving cursor to the last...\nDisplaying record...\nID: 103, Age: 30, First: Sumit,\
+  \ Last: Mittal\nMoving cursor to the first row...\nDisplaying record...\nID: 100,\
+  \ Age: 18, First: Zara, Last: Ali\nMoving cursor to the next row...\nDisplaying\
+  \ record...\nID: 101, Age: 25, First: Mehnaz, Last: Fatma\nC:\\>\n```\n\n## 查看结果集\n\
+  \n`ResultSet` 接口包含许多用于获取当前行数据的方法。\n\n对于每种可能的数据类型都有对应的 get 方法，并且每个 get 方法有两个版本 −\n\
+  \n- 一个接收列名的版本。\n- 一个接收列索引的版本。\n\n例如，如果你感兴趣要查看的列包含 int 类型，则需要使用 `ResultSet` 的一个 `getInt()`\
+  \ 方法之一 −\n\n\n\n\n\n| 1 | `public int getInt(String columnName) throws SQLException`\
+  \ 返回当前行中名为 `columnName` 列的 int 值。 |\n| 2 | `public int getInt(int columnIndex) throws\
+  \ SQLException` 返回当前行中指定列索引的 int 值。列索引从 1 开始，意味着一行的第一列为 1，第二列为 2，依此类推。 |\n\n同样地，`ResultSet`\
+  \ 接口中为 8 种 Java 基本类型都提供了对应的 `get` 方法，以及如 `java.lang.String`、`java.lang.Object` 和\
+  \ `java.net.URL` 等常用类型。\n\n此外还有用于获取 SQL 数据类型 `java.sql.Date`、`java.sql.Time`、`java.sql.TimeStamp`、`java.sql.Clob`\
+  \ 和 `java.sql.Blob` 的方法。有关如何使用这些 SQL 数据类型的更多信息，请查阅文档。\n\n以下是使用了上述描述的几种查看方法的示例。\n\
+  \n此示例代码是根据前面章节完成的环境和数据库设置编写的。\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，并按照如下方式编译和运行\
+  \ −\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport\
+  \ java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.sql.Statement;\n\
+  \npublic  class  TestApplication  {\n\nstatic  final  String DB_URL =  \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n\nstatic  final  String USER =  \"guest\";\n\nstatic  final  String PASS =  \"\
+  guest123\";\n\nstatic  final  String QUERY =  \"SELECT id, first, last, age FROM\
+  \ Employees\";\n\npublic  static  void main(String[] args)  {\n\n// 打开连接\n\ntry(Connection\
+  \ conn =  DriverManager.getConnection(DB_URL, USER, PASS);\n\nStatement stmt = conn.createStatement(\n\
+  \nResultSet.TYPE_SCROLL_INSENSITIVE,\n\nResultSet.CONCUR_READ_ONLY);\n\nResultSet\
+  \ rs = stmt.executeQuery(QUERY);\n\n)  {             \n// 将游光标移动到最后一行。\nSystem.out.println(\"\
+  Moving cursor to the last...\");\nrs.last();\n\n// 从结果集中提取数据\nSystem.out.println(\"\
+  Displaying record...\");\n// 按列名检索\nint id = rs.getInt(\"id\");\nint age = rs.getInt(\"\
+  age\");\nString first = rs.getString(\"first\");\nString  last  = rs.getString(\"\
+  last\");\n\n// 显示值\nSystem.out.print(\"ID: \"  + id);\nSystem.out.print(\", Age:\
+  \ \"  + age);\nSystem.out.print(\", First: \"  + first);\nSystem.out.println(\"\
+  , Last: \"  +  last);\n\n// 将游标移动到第一行。\nSystem.out.println(\"Moving cursor to the\
+  \ first row...\");\nrs.first();\n\n// 从结果集中提取数据\nSystem.out.println(\"Displaying\
+  \ record...\");\n// 按列名检索\nid = rs.getInt(\"id\");\nage = rs.getInt(\"age\");\n\
+  first = rs.getString(\"first\");\nlast  = rs.getString(\"last\");\n\n// 显示值\nSystem.out.print(\"\
+  ID: \"  + id);\nSystem.out.print(\", Age: \"  + age);\nSystem.out.print(\", First:\
+  \ \"  + first);\nSystem.out.println(\", Last: \"  +  last);\n\n// 将游标移动到下一行。\nSystem.out.println(\"\
+  Moving cursor to the next row...\");\nrs.next();\n\n// 从结果集中提取数据\nSystem.out.println(\"\
+  Displaying record...\");\nid = rs.getInt(\"id\");\nage = rs.getInt(\"age\");\nfirst\
+  \ = rs.getString(\"first\");\nlast  = rs.getString(\"last\");\n\n// 显示值\nSystem.out.print(\"\
+  ID: \"  + id);\nSystem.out.print(\", Age: \"  + age);\nSystem.out.print(\", First:\
+  \ \"  + first);\nSystem.out.println(\", Last: \"  +  last);             \n\n}  catch\
+  \  (SQLException e)  {\n\ne.printStackTrace();\n}\n\n}\n}\n```\n\n现在让我们按照以下方式编译上面的示例\
+  \ −\n\n```\nC:\\>javac TestApplication.java\nC:\\>\n```\n\n当你运行 `TestApplication`\
+  \ 时，会产生以下结果 −\n\n```\nC:\\>java TestApplication\nMoving cursor to the last...\n\
+  Displaying record...\nID: 103, Age: 30, First: Sumit, Last: Mittal\nMoving cursor\
+  \ to the first row...\nDisplaying record...\nID: 100, Age: 18, First: Zara, Last:\
+  \ Ali\nMoving cursor to the next row...\nDisplaying record...\nID: 101, Age: 25,\
+  \ First: Mehnaz, Last: Fatma\nC:\\>\n```\n\n## 更新结果集\n\n`ResultSet` 接口包含了一组更新方法，用于更新结果集的数据。\n\
+  \n与 `get` 方法一样，每种数据类型都有两个更新方法 −\n\n-   一个接受列名的方法。\n-   一个接受列索引的方法。\n\n例如，要更新结果集中当前行的\
+  \ String 列，你可以使用以下 `updateString()` 方法之一 −\n\n| S.N. | 方法与描述 |\n| :--- | :--- |\n\
+  | 1 | `public void updateString(int columnIndex, String s) throws SQLException`\
+  \ 修改指定列中的 String。 |\n| 2 | `public void updateString(String columnName, String s)\
+  \ throws SQLException` 与上一个方法类似，但通过名称而不是索引指定列。 |\n\n`ResultSet` 包中为 8 种基本类型以及 `String`、`Object`\
+  \ 和 `URL` 都提供了 `update` 方法。要更新结果集中的行，你需要调用以下方法之一：\n\n| S.N. | 方法与描述 |\n| :--- |\
+  \ :--- |\n| 1 | `public void updateRow()` 更新数据库中的当前行。 |\n| 2 | `public void deleteRow()`\
+  \ 从数据库中删除当前行 |\n| 3 | `public void refreshRow()` 刷新结果集数据以反映更改。 |\n| 4 | `public\
+  \ void cancelRow()` 取消对当前行进行的所有更新。 |\n| 5 | `public void insertRow()` 向数据库插入一行。此方法只有在游标指向某行时才能调用。\
+  \ |\n\n## 创建数据\n\n最后在 Employee 表中创建几条记录 −\n\n```\nmysql> use TUTORIALSPOINT;\nmysql>\
+  \ drop table Employees;\nQuery OK, 0 rows affected (0.08 sec)\nmysql> create table\
+  \ Employees (\n-> id int primary key auto_increment,\n-> age int not null,\n-> first\
+  \ varchar (255),\n-> last varchar (255)\n-> );\nQuery OK, 0 rows affected (0.08\
+  \ sec)\nmysql> INSERT INTO Employees(AGE, FIRST, LAST) VALUES (18, 'Zara', 'Ali');\n\
+  Query OK, 1 row affected (0.05 sec)\nmysql> INSERT INTO Employees(AGE, FIRST, LAST)\
+  \ VALUES (25, 'Mahnaz', 'Fatma');\nQuery OK, 1 row affected (0.00 sec)\nmysql> INSERT\
+  \ INTO Employees(AGE, FIRST, LAST) VALUES (30, 'Zaid', 'Khan');\nQuery OK, 1 row\
+  \ affected (0.00 sec)\nmysql> INSERT INTO Employees(AGE, FIRST, LAST) VALUES (28,\
+  \ 'Sumit', 'Mittal');\nQuery OK, 1 row affected (0.00 sec)\n```\n\n\n\n\n\n```java\n\
+  ResultSet rs = stmt.executeQuery(QUERY);\n\n) {\n    System.out.println(\"List result\
+  \ set for reference....\");\n    printResultSet(rs);\n\n    // 遍历结果集并增加 5 年龄\n \
+  \   // 移动到第一行之前，以便让 while 循环正常工作\n    rs.beforeFirst();\n\n    //STEP 7: 从结果集中提取数据\n\
+  \    while(rs.next()){\n        // 按列名检索\n        int newAge = rs.getInt(\"age\"\
+  )  +  5;\n        rs.updateDouble(\"age\", newAge);\n        rs.updateRow();\n \
+  \   }\n    System.out.println(\"List result set showing new ages...\");\n    printResultSet(rs);\n\
+  \n    // 向表中插入一条记录。\n    // 移动到插入行并使用 updateXXX() 增加列数据\n    System.out.println(\"\
+  Inserting a new record...\");\n    rs.moveToInsertRow();\n    rs.updateString(\"\
+  first\",\"John\");\n    rs.updateString(\"last\",\"Paul\");\n    rs.updateInt(\"\
+  age\",40);\n    // 提交行\n    rs.insertRow();\n    System.out.println(\"List result\
+  \ set showing new set...\");\n    printResultSet(rs);\n} catch (SQLException e)\
+  \ {\n    e.printStackTrace();\n}\n}\n}\n```\n\n现在让我们如下 own 编译上面的示例 −\n\n```\nC:\\\
+  >javac TestApplication.java\nC:\\>\n```\n\n当运行 `TestApplication` 时，它会产生以下结果 −\n\n\
+  ```\nC:\\>java TestApplication\nList result set for reference....\nID: 1, Age: 18,\
+  \ First: Zara, Last: Ali\nID: 2, Age: 25, First: Mahnaz, Last: Fatma\nID: 3, Age:\
+  \ 30, First: Zaid, Last: Khan\nID: 4, Age: 28, First: Sumit, Last: Mittal\nList\
+  \ result set showing new ages...\nID: 1, Age: 23, First: Zara, Last: Ali\nID: 2,\
+  \ Age: 30, First: Mahnaz, Last: Fatma\nID: 3, Age: 35, First: Zaid, Last: Khan\n\
+  ID: 4, Age: 33, First: Sumit, Last: Mittal\nInserting a new record...\nList result\
+  \ set showing new set...\nID: 1, Age: 23, First: Zara, Last: Ali\nID: 2, Age: 30,\
+  \ First: Mahnaz, Last: Fatma\nID: 3, Age: 35, First: Zaid, Last: Khan\nID: 4, Age:\
+  \ 33, First: Sumit, Last: Mittal\nID: 5, Age: 40, First: John, Last: Paul\nList\
+  \ the record before deleting...\nID: 1, Age: 23, First: Zara, Last: Ali\nID: 2,\
+  \ Age: 30, First: Mahnaz, Last: Fatma\nID: 3, Age: 35, First: Zaid, Last: Khan\n\
+  ID: 4, Age: 33, First: Sumit, Last: Mittal\nID: 5, Age: 40, First: John, Last: Paul\n\
+  C:\\>\n```\n\n## 事务 (Transactions)\n\n如果你的 JDBC `Connection` 处于自动提交模式（默认情况下如此），那么每条\
+  \ SQL 语句在执行完成后都会提交到数据库。\n\n这对于简单的应用程序可能没问题，但有三个原因使你可能想要关闭自动提交并管理自己的事务 −\n\n*   为了提高性能。\n\
+  *   为了维护业务流程的完整性。\n*   为了使用分布式事务。\n\n事务允许你控制何时以及何时何时应用到数据库。它将单个 SQL 语句或一组 SQL 语句视为一个逻辑单元，如果任何语句失败，整个事务都将失败。\n\
+  \n要启用手动事务支持而不是使用 JDBC 驱动程序默认的自动提交模式，请使用 `Connection` 对象的 `setAutoCommit()` 方法。 如果你向\
+  \ `setAutoCommit()` 传递布尔值 `false`，则关闭自动提交。你可以传递布尔值 `true` 来重新开启。\n\n例如，如果你有一个名为\
+  \ `conn` 的 `Connection` 对象，编写以下代码来关闭自动提交 −\n\n```java\nconn.setAutoCommit(false);\n\
+  ```\n\n### 提交与回滚 (Commit & Rollback)\n\n一旦你完成了更改并想要提交这些更改，请如下所示在连接对象上调用 `commit()`\
+  \ 方法 −\n\n```java\nconn.commit();\n```\n\n否则，要回滚使用名为 `conn` 的连接对数据库进行的更新，请使用以下代码\
+  \ −\n\n```java\nconn.rollback();\n```\n\n### 使用保存点 (Using Savepoints)\n\n新的 JDBC\
+  \ 3.0 `Savepoint` 接口为你提供了额外的事务控制。\n\n当你设置一个保存点时，你在事务内部定义了一个逻辑回滚点。如果从保存点之后发生错误，你可以使用\
+  \ `rollback` 方法撤销所有更改，或仅撤销在该保存点之后的更改。\n\n`Connection` 对象有两个新方法可以帮助你管理保存点 −\n\n*\
+  \   `setSavepoint(String savepointName)` − 定义一个新的保存点。它还会返回一个 `Savepoint` 对象。\n*\
+  \   `releaseSavepoint(Savepoint savepointName)` — 删除一个保存点。注意它需要一个 `Savepoint` 对象作为参数。该对象通常是由\
+  \ `setSavepoint()` 方法生成的保存点。\n\n有一个 `rollback(String savepointName)` 方法，它可以回滚到指定的保存点。\n\
+  \n\n\n\n\n```java\ne.printStackTrace();\n} finally {\n    // finally 块用于关闭资源\n \
+  \   try {\n        if (stmt != null)\n            stmt.close();\n    } catch (SQLException\
+  \ se2) {\n        se2.printStackTrace();\n    }\n    try {\n        if (conn !=\
+  \ null)\n            conn.close();\n    } catch (SQLException se) {\n        se.printStackTrace();\n\
+  \    }\n}\n}\n```\n\n现在让我们按照如下方式编译上面的示例 −\n\n```bash\nC:\\>javac TestApplication.java\n\
+  C:\\>\n```\n\n当你运行 `TestApplication` 时，它会产生以下结果 −\n\n```bash\nC:\\>java TestApplication\n\
+  正在连接数据库...\n创建语句...\n正在插入一行....\n在此提交数据....\n列出结果集以参考....\nID: 1, Age: 23, First:\
+  \ Zara, Last: Ali\nID: 2, Age: 30, First: Mahnaz, Last: Fatma\nID: 3, Age: 35, First:\
+  \ Zaid, Last: Khan\nID: 4, Age: 33, First: Sumit, Last: Mittal\nID: 5, Age: 40,\
+  \ First: John, Last: Paul\nID: 6, Age: 20, First: Rita, Last: Tez\nID: 7, Age: 20,\
+  \ First: Sita, Last: Singh\nC:\\>\n```\n\n## 保存点 (Save Point)\n\n新的 JDBC 3.0 `Savepoint`\
+  \ 接口为你提供了额外的事务控制。大多数现代 DBMS 都在其环境中支持保存点，例如 Oracle 的 PL/SQL。\n\n当你设置一个保存点时，你是在事务内部定义了一个逻辑回滚点。如果在保存点之后发生错误，你可以使用\
+  \ `rollback` 方法撤销所有更改，或仅撤销保存点之后所做的更改。\n\n`Connection` 对象有两个新方法可以帮助你管理保存点 −\n\n*\
+  \ `setSavepoint(String savepointName)` − 定义一个新的保存点。它还会返回一个 `Savepoint` 对象。\n* `releaseSavepoint(Savepoint\
+  \ savepointName)` − 删除一个保存点。注意，它需要一个 `Savepoint` 对象作为参数。该对象通常是由 `setSavepoint()`\
+  \ 方法生成的保存点。\n\n有一个 `rollback (String savepointName)` 方法，它可以将工作回滚到指定的保存点。\n\n下面的示例说明了\
+  \ `Savepoint` 对象的用法 −\n\n```java\ntry {\n    // 假设有一个有效的连接对象 conn\n    conn.setAutoCommit(false);\n\
+  \    Statement stmt = conn.createStatement();\n    // 设置一个保存点\n    Savepoint savepoint1\
+  \ = conn.setSavepoint(\"Savepoint1\");\n    String SQL =  \"INSERT INTO Employees\
+  \ \"  +\n\"VALUES (106, 20, 'Rita', 'Tez')\";\n    stmt.executeUpdate(SQL);\n  \
+  \  // 提交一个格式错误的 SQL 语句\n    String SQL =  \"INSERTED IN Employees \"  +\n\"VALUES\
+  \ (107, 22, 'Sita', 'Tez')\";\n    stmt.executeUpdate(SQL);\n    // 如果没有错误，提交更改。\n\
+  \    conn.commit();\n} catch(SQLException se) {\n    // 如果发生任何错误。\n    conn.rollback(savepoint1);\n\
+  }\n```\n\n在这种情况下，上述任何 `INSERT` 语句都无法成功，所有内容都将回滚。\n\n以下是使用了上述的 `setSavepoint` 和 `rollback`\
+  \ 的示例。\n\n此示例代码是根据前面章节完成的环境和数据库设置编写的。\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，按照如下方式编译并运行\
+  \ −\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport\
+  \ java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.sql.Savepoint;\n\
+  import java.sql.Statement;\n\npublic  class  TestApplication {\nstatic  final  String\
+  \ DB_URL =  \"jdbc:mysql://localhost/TUTORIALSPOINT\";\nstatic  final  String USER\
+  \ =  \"guest\";\nstatic  final  String PASS =  \"guest123\";\nstatic  final  String\
+  \ QUERY =  \"SELECT id, first, last, age FROM Employees\";\nstatic  final  String\
+  \ DELETE_QUERY =  \"DELETE FROM Employees WHERE ID = 8\";\nstatic  final  String\
+  \ DELETE_QUERY_1 =  \"DELETE FROM Employees WHERE ID = 9\";\n\npublic  static  void\
+  \ printResultSet(ResultSet rs)  throws  SQLException{\n    // 确保我们从第一行开始\n    rs.beforeFirst();\n\
+  \    while(rs.next()){\n        // 显示值\n        System.out.print(\"ID: \"  + rs.getInt(\"\
+  id\"));\n        System.out.print(\", Age: \"  + rs.getInt(\"age\"));\n        System.out.print(\"\
+  , First: \"  + rs.getString(\"first\"));\n        System.out.println(\", Last: \"\
+  \  + rs.getString(\"last\"));\n    }\n    System.out.println();\n}\n\npublic  static\
+  \  void main(String[] args) {\n    // 打开连接\n    try(Connection conn =  DriverManager.getConnection(DB_URL,\
+  \ USER, PASS);\n    Statement stmt = conn.createStatement(\n    ResultSet.TYPE_SCROLL_INSENSITIVE,\n\
+  \    ResultSet.CONCUR_UPDATABLE);                                     \n    ) {\
+  \                               \n    // ... 为了简洁起见，根据原始结构省略了逻辑 ...\n    } catch\
+  \ (SQLException e) {\n        e.printStackTrace();\n    }\n}\n```\n*(注：提供的文本在 main\
+  \ 方法中包含冗余/碎片逻辑；我保留了源文本提供的核心结构。）*\n\n\n\n\n\n### 使用 PrepareStatement 对象进行批量处理\n\n\
+  以下是使用 PrepareStatement 对象进行批量处理的典型步骤：\n\n- 创建带有占位符的 SQL 语句。\n- 使用 `prepareStatement()`\
+  \ 方法创建 `PreparedStatement` 对象。\n- 使用 `setAutoCommit()` 将自动提交设置为 `false`。\n- 使用创建的语句对象上的\
+  \ `addBatch()` 方法将任意数量的 SQL 语句添加到批处理中。\n- 使用创建的语句对象上的 `executeBatch()` 方法执行所有 SQL\
+  \ 语句。\n- 最后，使用 `commit()` 方法提交所有更改。\n\n下面的代码段提供了一个使用 `PreparedStatement` 对象进行批量更新的示例：\n\
+  \n```java\n// Create SQL statement\nString SQL = \"INSERT INTO Employees (id, first,\
+  \ last, age) VALUES(?, ?, ?, ?)\";\n\n// Create PrepareStatement object\nPreparedStatement\
+  \ pstmt = conn.prepareStatement(SQL);\n\n// Set auto-commit to false\nconn.setAutoCommit(false);\n\
+  \n// Set the variables\npstmt.setInt(1, 400);\npstmt.setString(2, \"Pappu\");\n\
+  pstmt.setString(3, \"Singh\");\npstmt.setInt(4, 33);\n// Add it to the batch\npstmt.addBatch();\n\
+  \n// Set the variables\npstmt.setInt(1, 401);\npstmt.setString(2, \"Pawan\");\n\
+  pstmt.setString(3, \"Singh\");\npstmt.setInt(4, 31);\n// Add it to the batch\npstmt.addBatch();\n\
+  \n// Create an int[] to hold returned values\nint[] count = stmt.executeBatch();\n\
+  \n// Explicitly commit statements to apply changes\nconn.commit();\n```\n\n### 使用\
+  \ Statement 对象进行批量处理\n\n以下是使用 Statement 对象进行批量处理的典型步骤：\n\n- 使用 `createStatement()`\
+  \ 方法创建 `Statement` 对象。\n- 使用 `setAutoCommit()` 将自动提交设置为 `false`。\n- 使用创建的语句对象上的\
+  \ `addBatch()` 方法将任意数量的 SQL 语句添加到批处理中。\n- 使用创建的语句对象上的 `executeBatch()` 方法执行所有 SQL\
+  \ 语句。\n- 最后，使用 `commit()` 方法提交所有更改。\n\n此示例代码是根据前面章节中完成的环境和数据库设置编写的。将以下示例复制并粘贴到 `TestApplication.java`\
+  \ 中，按照如下方式编译并运行：\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\n\
+  import java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.sql.Statement;\n\
+  \npublic class TestApplication {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n\n    public static void printResultSet(ResultSet rs) throws SQLException\
+  \ {\n        // Ensure we start with first row\n        rs.beforeFirst();\n    \
+  \    while (rs.next()) {\n            // Display values\n            System.out.print(\"\
+  ID: \" + rs.getInt(\"id\"));\n            System.out.print(\", Age: \" + rs.getInt(\"\
+  age\"));\n            System.out.print(\", First: \" + rs.getString(\"first\"));\n\
+  \            System.out.println(\", Last: \" + rs.getString(\"last\"));\n      \
+  \  }\n        System.out.println();\n    }\n\n    public static void main(String[]\
+  \ args) {\n        // Open a connection\n        try (Connection conn = DriverManager.getConnection(DB_URL,\
+  \ USER, PASS);\n             Statement stmt = conn.createStatement(\n          \
+  \           ResultSet.TYPE_SCROLL_INSENSITIVE,\n                     ResultSet.CONCUR_UPDATABLE))\
+  \ {\n            \n            conn.setAutoCommit(false);\n            ResultSet\
+  \ rs = stmt.executeQuery(\"Select * from Employees\");\n            printResultSet(rs);\n\
+  \n            // Create SQL statement\n            String SQL = \"INSERT INTO Employees\
+  \ (first, last, age) VALUES('Zia', 'Ali', 30)\";\n            // Add above SQL statement\
+  \ in the batch.\n            stmt.addBatch(SQL);\n\n            // Create one more\
+  \ SQL statement\n            SQL = \"INSERT INTO Employees (first, last, age) VALUES('Raj',\
+  \ 'Kumar', 35)\";\n            // Add above SQL statement in the batch.\n      \
+  \      stmt.addBatch(SQL);\n\n            // Create one more SQL statement\n   \
+  \         SQL = \"UPDATE Employees SET age = 35 WHERE id = 100\";\n            //\
+  \ Add above SQL statement in the batch.\n            stmt.addBatch(SQL);\n\n   \
+  \         // Create an int[] to hold returned values\n            int[] count =\
+  \ stmt.executeBatch();\n\n            // Explicitly commit statements to apply changes\n\
+  \            conn.commit();\n        } catch (SQLException e) {\n            e.printStackTrace();\n\
+  \        }\n    }\n}\n```\n\n\n 标签开头似乎截断了（只包含了一段不完整的 Java 代码），我根据您提供的上下文和要求，为您翻译了后续提供的文本部分：\n\
+  \n[content]\n\n```java\nstmt.setInt(3, 31);\n\n// 将其添加到批\nstmt.addBatch();\n\n//\
+  \ 创建一个 int[] 来存储返回的值\nint[] count = stmt.executeBatch();\n\n// 显式提交语句以应用更改\nconn.commit();\n\
+  \nrs = stmt.executeQuery(\"Select * from Employees\");\n\nprintResultSet(rs);\n\n\
+  stmt.close();\n\nrs.close();\n\n} catch (SQLException e) {\n\ne.printStackTrace();\n\
+  \n}\n}\n}\n```\n\n现在让我们按照如下方式编译上述示例 −\n\n```cmd\nC:\\>javac TestApplication.java\n\
+  C:\\>\n```\n\n当运行 `TestApplication` 时，会产生以下结果 −\n\n```cmd\nC:\\>java TestApplication\n\
+  ID: 1, Age: 23, First: Zara, Last: Ali\nID: 2, Age: 30, First: Mahnaz, Last: Fatma\n\
+  ID: 3, Age: 35, First: Zaid, Last: Khan\nID: 4, Age: 33, First: Sumit, Last: Mittal\n\
+  ID: 5, Age: 40, First: John, Last: Paul\nID: 7, Age: 35, First: Sita, Last: Singh\n\
+  ID: 8, Age: 20, First: Rita, Last: Tez\nID: 9, Age: 20, First: Sita, Last: Singh\n\
+  ID: 10, Age: 30, First: Zia, Last: Ali\nID: 11, Age: 35, First: Raj, Last: Kumar\n\
+  ID: 1, Age: 23, First: Zara, Last: Ali\nID: 2, Age: 30, First: Mahnaz, Last: Fatma\n\
+  ID: 3, Age: 35, First: Zaid, Last: Khan\nID: 4, Age: 33, First: Sumit, Last: Mittal\n\
+  ID: 5, Age: 40, First: John, Last: Paul\nID: 7, Age: 35, First: Sita, Last: Singh\n\
+  ID: 8, Age: 20, First: Rita, Last: Tez\nID: 9, Age: 20, First: Sita, Last: Singh\n\
+  ID: 10, Age: 30, First: Zia, Last: Ali\nID: 11, Age: 35, First: Raj, Last: Kumar\n\
+  ID: 12, Age: 33, First: Pappu, Last: Singh\nID: 13, Age: 31, First: Pawan, Last:\
+  \ Singh\nC:\\>\n```\n\n## 流式数据\n\n`PreparedStatement` 对象具有使用输入和输出流来提供参数数据的能力。这使您能够将整个文件放入可以存储大值的数据库列中，例如\
+  \ `CLOB` 和 `BLOB` 数据类型。\n\n以下方法可用于流式传输数据：\n\n- `setAsciiStream()` – 该方法用于提供大型 ASCII\
+  \ 值。\n- `setCharacterStream()` – 该方法用于提供大型 UNICODE 值。\n- `setBinaryStream()` – 该方法用于提供大型二进制值。\n\
+  \n`setXXXStream()` 方法除了参数占位符外还需要一个额外的参数，即文件大小。该参数告知驱动程序使用流向数据库发送多少量的数据。\n\n此示例将创建一个数据库表\
+  \ `XML_Data`，然后将 `XML` 内容写入该表。\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，按照如下方式编译并运行\
+  \ −\n\n```java\nimport java.io.ByteArrayInputStream;\nimport java.io.ByteArrayOutputStream;\n\
+  import java.io.File;\nimport java.io.FileInputStream;\nimport java.io.FileNotFoundException;\n\
+  import java.io.IOException;\nimport java.io.InputStream;\nimport java.sql.Connection;\n\
+  import java.sql.DriverManager;\nimport java.sql.PreparedStatement;\nimport java.sql.ResultSet;\n\
+  import java.sql.SQLException;\nimport java.sql.Statement;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n    static final String QUERY = \"SELECT Data FROM XML_Data WHERE id=100\"\
+  ;\n    static final String INSERT_QUERY=\"INSERT INTO XML_Data VALUES (?,?)\";\n\
+  \    static final String CREATE_TABLE_QUERY = \"CREATE TABLE XML_Data (id INTEGER,\
+  \ Data LONG)\";\n    static final String DROP_TABLE_QUERY = \"DROP TABLE XML_Data\"\
+  ;\n    static final String XML_DATA = \"<Employee><id>100</id><first>Zara</first><last>Ali</last><Salary>10000</Salary><Dob>18-08-1978</Dob></Employee>\"\
+  ;\n\n    public static void createXMLTable(Statement stmt) throws SQLException {\n\
+  \        System.out.println(\"Creating XML_Data table...\");\n        // 如果表存在，则先删除。\n\
+  \        try {\n            stmt.executeUpdate(DROP_TABLE_QUERY);\n        } catch\
+  \ (SQLException se) {\n        }\n        stmt.executeUpdate(CREATE_TABLE_QUERY);\n\
+  \    }\n\n    public static void main(String[] args) {\n        // 打开连接\n      \
+  \  try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);\n   \
+  \          Statement stmt = conn.createStatement();\n             PreparedStatement\
+  \ pstmt = conn.prepareStatement(INSERT_QUERY);\n        ) {\n            createXMLTable(stmt);\n\
+  \            ByteArrayInputStream bis = new ByteArrayInputStream(XML_DATA.getBytes());\n\
+  \            pstmt.setInt(1, 100);\n            pstmt.setAsciiStream(2, bis, XML_DATA.getBytes().length);\n\
+  \            pstmt.execute();\n            //关闭输入流\n            bis.close();\n \
+  \           ResultSet rs = stmt.executeQuery(QUERY);\n            // 获取第一行\n   \
+  \         if (rs.next()) {\n                //从输入流检索数据\n                InputStream\
+  \ xmlInputStream = rs.getAsciiStream(1);\n                int c;\n             \
+  \   ByteArrayOutputStream bos = new ByteArrayOutputStream();\n                while\
+  \ ((c = xmlInputStream.read()) != -1)\n                    bos.write(c);\n     \
+  \           //打印结果\n                System.out.println(bos.toString());\n      \
+  \      }\n            // 清理环境\n            rs.close();\n        } catch (SQLException\
+  \ | IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\n\
+  \n\n\n\n\n- **导入包** − 需要包含包含数据库编程所需的 JDBC 类的包。在大多数情况下，使用 `import java.sql.**` 即可。\n\
+  - **打开连接** − 需要使用 `DriverManager.getConnection()` 方法来创建一个 `Connection` 对象，该对象代表与\
+  \ `selected` 数据库的物理连接。\n- 数据库的选择是在准备数据库 URL 时完成的。以下示例将与 `STUDENTS` 数据库建立连接。\n- **清理环境**\
+  \ − 使用 try with resources 会自动关闭资源。\n\n## 示例代码\n\n将以下示例复制并粘贴到 `TestApplication.java`\
+  \ 中，按照如下方式编译并运行 —\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\n\
+  import java.sql.SQLException;\nimport java.sql.Statement;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n\n    public static void main(String[] args) {\n        System.out.println(\"\
+  Connecting to a selected database...\");\n        // 打开连接\n        try(Connection\
+  \ conn = DriverManager.getConnection(DB_URL, USER, PASS); {\n            System.out.println(\"\
+  Connected database successfully...\");\n        } catch (SQLException e) {\n   \
+  \         e.printStackTrace();\n        }\n    }\n}\n```\n\n现在让我们按照如下方式编译上述示例 —\n\
+  \n```\nC:\\>javac TestApplication.java\nC:\\>\n```\n\n当运行 `TestApplication` 时，它产生以下结果\
+  \ —\n\n```\nC:\\>java TestApplication\nConnecting to a selected database...\nConnected\
+  \ database successfully...\nC:\\>\n```\n\n## 删除数据库示例\n\n本章提供了一个如何使用 JDBC 应用程序删除现有数据库的示例。在执行以下示例之前，请确保你已具备以下条件\
+  \ —\n\n- 要执行以下示例，你需要将 `username` 和 `password` 替换为实际用户名和密码。\n- 你的 MySQL 正在运行。\n\n\
+  **注意** − 这是一个严肃的操作，在继续删除数据库之前，你必须做出坚定的决定，因为你数据库中的所有内容将会丢失。\n\n## 必要的步骤\n\n使用 JDBC\
+  \ 应用程序创建新数据库需要以下步骤 —\n\n- **导入包** − 需要包含包含数据库编程所需的 JDBC 类的包。在大多数情况下，使用 `import java.sql.**`\
+  \ 即可。\n- **打开连接** − 需要使用 `DriverManager.getConnection()` 方法来创建一个 `Connection` 对象，该对象代表与数据库服务器的物理连接。\n\
+  - 删除数据库不需要在你的数据库 URL 中包含数据库名称。以下示例将删除 `STUDENTS` 数据库。\n- **执行查询** − 需要使用类型为 `Statement`\
+  \ 的对象来构建并提交删除数据库的 SQL 语句。\n- **清理环境** − 使用 try with resources 会自动关闭资源。\n\n## 示例代码\n\
+  \n将以下示例复制并粘贴到 `TestApplication.java` 中，按照如下方式编译并运行 —\n\n```java\nimport java.sql.Connection;\n\
+  import java.sql.DriverManager;\nimport java.sql.SQLException;\nimport java.sql.Statement;\n\
+  \npublic class TestApplication {\n    static final String DB_URL = \"jdbc:mysql://localhost/\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n\n    public static void main(String[] args) {\n        // 打开连接\n \
+  \       try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS); {\n\
+  \            Statement stmt = conn.createStatement();\n            String sql =\
+  \ \"DROP DATABASE STUDENTS\";\n            stmt.executeUpdate(sql);\n          \
+  \  System.out.println(\"Database dropped successfully...\");\n        } catch (SQLException\
+  \ e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\n\n现在让我们按照如下方式编译上述示例\
+  \ —\n\n```\nC:\\>javac TestApplication.java\nC:\\>\n```\n\n当运行 `TestApplication`\
+  \ 时，它产生以下结果 —\n\n```\nC:\\>java TestApplication\nDatabase dropped successfully...\n\
+  C:\\>\n```\n\n## 创建表示例\n\n本章提供了一个如何使用 JDBC 应用程序创建表的示例。在执行以下示例之前，请确保你 tu 已具备以下条件\
+  \ —\n\n- 要执行以下示例，你可以将 `username` 和 `password` 替换为实际用户名和密码。\n- 你的 MySQL 正在运行。\n\n\
+  ## 必要的步骤\n\n使用 JDBC 应用程序创建新数据库需要以下步骤 —\n\n- **导入包** − 需要包含包含数据库编程所需的 JDBC 类的包。在大多数情况下，使用\
+  \ `import java.sql.**` 即可。\n- **打开连接** − 需要使用 `DriverManager.getConnection()` 方法来创建一个\
+  \ `Connection` 对象，该对象代表与数据库服务器的物理连接。\n- **执行查询** − 需要使用类型为 `Statement` 的对象来构建并提交在所选数据库中创建表的\
+  \ SQL 语句。\n- **清理环境** − 使用 try with resources 会自动关闭资源。\n\n## 示例代码\n\n将以下示例复制并粘贴到\
+  \ `TestApplication.java` 中，按照如下方式编译并运行 —\n\n```java\nimport java.sql.Connection;\n\
+  import java.sql.DriverManager;\nimport java.sql.SQLException;\nimport java.sql.Statement;\n\
+  \npublic class TestApplication {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n\n    public static void main(String[] args) {\n        // 打开连接\n \
+  \       try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS); {\n\
+  \            Statement stmt = conn.createStatement();\n            String sql =\
+  \ \"CREATE TABLE REGISTRATION \" +\n                         \"(id INTEGER not NULL,\
+  \ \" +\n                         \" first VARCHAR(255), \" +\n                 \
+  \        \" last VARCHAR(255), \" +\n                         \" age INTEGER, \"\
+  \ +\n                         \" PRIMARY KEY ( id ))\";\n            stmt.executeUpdate(sql);\n\
+  \            System.out.println(\"Created table in given database...\");\n     \
+  \   } catch (SQLException e) {\n            e.printStackTrace();\n        }\n  \
+  \  }\n}\n```\n\n现在让我们按照如下方式编译上述示例 —\n\n```\nC:\\>javac TestApplication.java\nC:\\\
+  >\n```\n\n当运行 `TestApplication` 时，它产生以下结果 —\n\n```\nC:\\>java TestApplication\n\
+  Created table in given database...\nC:\\>\n```\n\n## 删除表示例\n\n本章提供了一个如何使用 JDBC 应用程序删除表的示例。在执行以下示例之前，请确保你已具备以下条件\
+  \ —\n\n- 要执行以下示例，你可以将 `username` 和 `password` 替换为实际用户名和密码。\n- 你正在使用的 MySQL 数据库正在运行。\n\
+  \n**注意** − 这是一个严肃的操作，在继续删除表之前，你必须做出坚定的决定，因为你表中的所有内容将会丢失。\n\n## 必要的步骤\n\n使用 JDBC\
+  \ 应用程序创建新数据库需要以下步骤 —\n\n- **导入包** − 需要包含包含数据库编程所需的 JDBC 类的包。在大多数情况下，使用 `import java.sql.**`\
+  \ 即可。\n- **打开连接** − 需要使用 `DriverManager.getConnection()` 方法来创建一个 `Connection` 对象，该对象代表与数据库服务器的物理连接。\n\
+  - **执行查询** − 需要使用类型为 `Statement` 的对象来构建并提交在所选数据库中删除表的 SQL 语句。\n- **清理环境** − 使用 try\
+  \ with resources 会自动关闭资源。\n\n## 示例代码\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，按照如下方式编译并运行\
+  \ —\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport\
+  \ java.sql.SQLException;\nimport java.sql.Statement;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n\n    public static void main(String[] args) {\n```\n\n\n\n\n\n```java\n\
+  // 建立连接\n\ntry(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);\n\
+  \     Statement stmt = conn.createStatement();\n) {\n    String sql = \"DROP TABLE\
+  \ REGISTRATION\";\n    stmt.executeUpdate(sql);\n    System.out.println(\"Table\
+  \ deleted in given database...\");\n} catch (SQLException e) {\n    e.printStackTrace();\n\
+  }\n```\n\n现在让我们按照如下方式编译上述示例 −\n\n```\nC:\\>javac TestApplication.java\nC:\\>\n```\n\
+  \n当你运行 `TestApplication` 时，会产生以下结果 −\n\n```\nC:\\>java TestApplication\nTable deleted\
+  \ in given database...\nC:\\>\n```\n\n## 插入记录示例\n\n本章提供了一个如何使用 JDBC 应用向表中插入记录的示例。在执行以下示例之前，请确保你已准备好以下内容\
+  \ −\n\n* 要执行以下示例，你可以将 `username` 和 `password` 替换为你实际的用户名和密码。\n* 你正在使用的 MySQL 数据库已启动运行。\n\
+  \n## 必要的步骤\n\n使用 JDBC 应用创建新数据库需要以下步骤 −\n\n* **导入包** − 需要包含包含数据库编程所需的 JDBC 类的的包。通常情况下，使用\
+  \ `import java.sql.*` 就足够了。\n* **注册 JDBC 驱动程序** − 需要初始化驱动程序，以便你能够与数据库建立通信通道。\n*\
+  \ **打开连接** − 需要使用 `DriverManager.getConnection()` 方法创建一个 `Connection` 对象，该对象代表与数据库服务器的物理连接。\n\
+  * **执行查询** − 需要使用 `Statement` 类型的对象来构建并提交 SQL 语句，以向表中插入记录。\n* **清理环境** − `try with\
+  \ resources` 结构会自动关闭资源。\n\n## 示例代码\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，并如下方式进行编译和运行\
+  \ −\n\n```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport\
+  \ java.sql.SQLException;\nimport java.sql.Statement;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n\n    public static void main(String[] args) {\n        // 建立连接\n \
+  \       try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);\n\
+  \             Statement stmt = conn.createStatement();\n        ) {\n          \
+  \  // 执行查询\n            System.out.println(\"Inserting records into the table...\"\
+  );\n            String sql = \"INSERT INTO Registration VALUES (100, 'Zara', 'Ali',\
+  \ 18)\";\n            stmt.executeUpdate(sql);\n            sql = \"INSERT INTO\
+  \ Registration VALUES (101, 'Mahnaz', 'Fatma', 25)\";\n            stmt.executeUpdate(sql);\n\
+  \            sql = \"INSERT INTO Registration VALUES (102, 'Zaid', 'Khan', 30)\"\
+  ;\n            stmt.executeUpdate(sql);\n            sql = \"INSERT INTO Registration\
+  \ VALUES (103, 'Sumit', 'Mittal', 28)\";\n            stmt.executeUpdate(sql);\n\
+  \            System.out.println(\"Inserted records into the table...\");\n     \
+  \   } catch (SQLException e) {\n            e.printStackTrace();\n        }\n  \
+  \  }\n}\n```\n\n\n\n\n\n```java\nwhile(rs.next()) {\n    //Display values\n    System.out.print(\"\
+  ID: \" + rs.getInt(\"id\"));\n    System.out.print(\", Age: \" + rs.getInt(\"age\"\
+  ));\n    System.out.print(\", First: \" + rs.getString(\"first\"));\n    System.out.println(\"\
+  , Last: \" + rs.getString(\"last\"));\n}\nrs.close();\n} catch (SQLException e)\
+  \ {\n    e.printStackTrace();\n}\n```\n\n现在让我们按照如下方式编译示例 −\n\n```bash\nC:\\>javac\
+  \ TestApplication.java\nC:\\>\n```\n\n当运行 `TestApplication` 时，它产生如下结果 −\n\n```bash\n\
+  C:\\>java TestApplication\nID: 100, Age: 30, First: Zara, Last: Ali\nID: 101, Age:\
+  \ 30, First: Mahnaz, Last: Fatma\nID: 102, Age: 30, First: Zaid, Last: Khan\nID:\
+  \ 103, Age: 28, First: Sumit, Last: Mittal\nC:\\>\n```\n\n## 删除记录示例\n\n本章提供了一个使用\
+  \ JDBC 应用程序从表中删除记录的示例。在执行以下示例之前，请确保你已具备以下条件 −\n\n- 在执行以下示例时，你可以将 `username` 和 `password`\
+  \ 替换为你实际的用户名和密码。\n- 你正在使用的 MySQL 数据库已运行。\n\n## 必要的步骤\n\n使用 JDBC 应用程序创建新数据库需要执行以下步骤\
+  \ −\n\n- **导入包** — 需要包含包含数据库编程所需的 JDBC 类的包。通常情况下，使用 `import java.sql.*` 即可。\n- **注册\
+  \ JDBC 驱动程序** — 需要初始化驱动程序，以便你能够与数据库建立通信通道。\n- **打开连接** — 需要使用 `DriverManager.getConnection()`\
+  \ 方法来创建一个 `Connection` 对象，该对象代表与数据库服务器的物理连接。\n- **执行查询** — 需要使用类型为 `Statement` 的对象来构建并提交\
+  \ SQL 语句，以删除表中的记录。该查询利用 `WHERE` 子句来删除符合条件的记录。\n- **清理环境** — try-with-resources 会自动关闭资源。\n\
+  \n## 示例代码\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，并按如下编译和运行 −\n\n```java\nimport\
+  \ java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.ResultSet;\n\
+  import java.sql.SQLException;\nimport java.sql.Statement;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n    static final String QUERY = \"SELECT id, first, last, age FROM\
+  \ Registration\";\n\n    public static void main(String[] args) {\n        // Open\
+  \ a connection\n        try (Connection conn = DriverManager.getConnection(DB_URL,\
+  \ USER, PASS);\n             Statement stmt = conn.createStatement()) {\n      \
+  \      String sql = \"DELETE FROM Registration WHERE id = 101\";\n            stmt.executeUpdate(sql);\n\
+  \            ResultSet rs = stmt.executeQuery(QUERY);\n            while (rs.next())\
+  \ {\n                //Display values\n                System.out.print(\"ID: \"\
+  \ + rs.getInt(\"id\"));\n                System.out.print(\", Age: \" + rs.getInt(\"\
+  age\"));\n                System.out.print(\", First: \" + rs.getString(\"first\"\
+  ));\n                System.out.println(\", Last: \" + rs.getString(\"last\"));\n\
+  \            }\n            rs.close();\n        } catch (SQLException e) {\n  \
+  \          e.printStackTrace();\n        }\n    }\n}\n```\n\n现在让我们按照如下方式编译示例 −\n\
+  \n```bash\nC:\\>javac TestApplication.java\nC:\\>\n```\n\n当运行 `TestApplication`\
+  \ 时，它产生如下结果 −\n\n```bash\nC:\\>java TestApplication\nID: 100, Age: 30, First: Zara,\
+  \ Last: Ali\nID: 102, Age: 30, First: Zaid, Last: Khan\nID: 103, Age: 28, First:\
+  \ Sumit, Last: Mittal\nC:\\>\n```\n\n## WHERE 子句示例\n\n本章提供了一个使用 JDBC 应用程序从表中选择记录的示例。这将在从表中选择记录时使用\
+  \ `WHERE` 子句添加额外的条件。在执行以下示例之前，请确保你已具备以下条件 −\n\n- 在执行以下示例时，你可以将 `username` 和 `password`\
+  \ 替换为你实际的用户名和密码。\n- 你正在使用的 MySQL 数据库已运行。\n\n## 必要的步骤\n\n使用 JDBC 应用程序创建新数据库需要执行以下步骤\
+  \ −\n\n- **导入包** — 需要包含包含数据库编程所需的 JDBC 类的包。通常情况下，使用 `import java.sql.*` 即可。\n- **注册\
+  \ JDBC 驱动程序** — 需要初始化驱动程序，以便你能够与数据库建立通信通道。\n- **打开连接** — 需要使用 `DriverManager.getConnection()`\
+  \ 方法来创建一个 `Connection` 对象，该对象代表与数据库服务器的物理连接。\n- **执行查询** — 需要使用类型为 `Statement` 的对象来构建并提交\
+  \ SQL 语句，以删除表中的记录。\n- **清理环境** — try-with-resources 会自动关闭资源。\n\n\n\n\n\n- **执行查询**\
+  \ — 需要使用 `Statement` 类型的对象来构建并提交 SQL 语句，以便从表中获取符合给定条件的记录。此查询利用 `LIKE` 子句来选择所有名字以\
+  \ \"za\" 开头的学生。\n- **清理环境** — 使用 try-with-resources 自动关闭资源。\n\n## 示例代码\n\n将以下示例复制并粘贴到\
+  \ `TestApplication.java` 中，按照如下 own 进行编译和运行 —\n\n```java\nimport java.sql.Connection;\n\
+  import java.sql.DriverManager;\nimport java.sql.ResultSet;\nimport java.sql.SQLException;\n\
+  import java.sql.Statement;\n\npublic class TestApplication {\n    static final String\
+  \ DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\";\n    static final String USER\
+  \ = \"guest\";\n    static final String PASS = \"guest123\";\n    static final String\
+  \ QUERY = \"SELECT id, first, last, age FROM Registration\";\n\n    public static\
+  \ void main(String[] args) {\n        // 打开连接\n        try (Connection conn = DriverManager.getConnection(DB_URL,\
+  \ USER, PASS);\n             Statement stmt = conn.createStatement()) {\n      \
+  \      System.out.println(\"正在获取无条件的记录...\");\n            ResultSet rs = stmt.executeQuery(QUERY);\n\
+  \            while (rs.next()) {\n                // 显示值\n                System.out.print(\"\
+  ID: \" + rs.getInt(\"id\"));\n                System.out.print(\", Age: \" + rs.getInt(\"\
+  age\"));\n                System.out.print(\", First: \" + rs.getString(\"first\"\
+  ));\n                System.out.println(\", Last: \" + rs.getString(\"last\"));\n\
+  \            }\n\n            // 选择 ID 等于或大于 101 的所有记录\n            System.out.println(\"\
+  正在获取带条件的记录...\");\n            String sql = \"SELECT id, first, last, age FROM Registration\"\
+  \ + \" WHERE first LIKE '%za%'\";\n            rs = stmt.executeQuery(sql);\n  \
+  \          while (rs.next()) {\n                // 显示值\n                System.out.print(\"\
+  ID: \" + rs.getInt(\"id\"));\n                System.out.print(\", Age: \" + rs.getInt(\"\
+  age\"));\n                System.out.print(\", First: \" + rs.getString(\"first\"\
+  ));\n                System.out.println(\", Last: \" + rs.getString(\"last\"));\n\
+  \            }\n            rs.close();\n        } catch (SQLException e) {\n  \
+  \          e.printStackTrace();\n        }\n    }\n}\n```\n\n现在让我们按照如下方式编译上述示例 —\n\
+  \n```bash\nC:\\>javac TestApplication.java\nC:\\>\n```\n\n当运行 `TestApplication`\
+  \ 时，会产生以下结果 —\n\n```bash\nC:\\>java TestApplication\n正在获取无条件的记录...\nID: 100, Age:\
+  \ 30, First: Zara, Last: Ali\nID: 102, Age: 30, First: Zaid, Last: Khan\nID: 103,\
+  \ Age: 28, First: Sumit, Last: Mittal\n正在获取带条件的记录...\nID: 100, Age: 30, First: Zara,\
+  \ Last: Ali\nID: 102, Age: 30, First: Zaid, Last: Khan\nC:\\>\n```\n\n## 数据排序示例\n\
+  \n本章提供了如何使用 JDBC 应用程序对表记录进行排序的示例。这将使用 `asc` 和 `desc` 关键字按升序或降序对记录进行排序。在执行以下示例之前，请确保已完成以下工作\
+  \ —\n\n- 为了执行后续示例，你可以将 `username` 和 `password` 替换为你真实的用户名和密码。\n- 你正在使用的 MySQL 数据库已运行。\n\
+  \n## 必要的步骤\n\n使用 JDBC 应用程序创建新数据库需要以下步骤 —\n\n- **导入包** — 需要包含包含数据库编程所需的 JDBC 类的包。通常情况下，使用\
+  \ `import java.sql.*` 即可。\n- **打开连接** — 需要使用 `DriverManager.getConnection()` 方法创建一个\
+  \ `Connection` 对象，该对象代表与数据库服务器的物理连接。\n- **执行查询** — 需要使用 `Statement` 类型的对象来构建并提交\
+  \ SQL 语句，以便对表记录进行排序。这些查询利用 `asc` 和 `desc` 子句按升序和降序排列数据。\n- **清理环境** — 使用 try-with-resources\
+  \ 自动关闭资源。\n\n## 示例代码\n\n将以下示例复制并粘贴到 `TestApplication.java` 中，按照如下方式进行编译和运行 —\n\n\
+  ```java\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.ResultSet;\n\
+  import java.sql.SQLException;\nimport java.sql.Statement;\n\npublic class TestApplication\
+  \ {\n    static final String DB_URL = \"jdbc:mysql://localhost/TUTORIALSPOINT\"\
+  ;\n    static final String USER = \"guest\";\n    static final String PASS = \"\
+  guest123\";\n    static final String QUERY = \"SELECT id, first, last, age FROM\
+  \ Registration\";\n\n    public static void main(String[] args) {\n        // 打开连接\n\
+  \        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);\n\
+  \             Statement stmt = conn.createStatement()) {\n            System.out.println(\"\
+  正在按升序获取记录...\");\n            ResultSet rs = stmt.executeQuery(QUERY + \" ORDER\
+  \ BY ASC\");\n            while (rs.next()) {\n                // 显示值\n        \
+  \        System.out.print(\"ID: \" + rs.getInt(\"id\"));\n                System.out.print(\"\
+  , Age: \" + rs.getInt(\"age\"));\n                System.out.print(\", First: \"\
+  \ + rs.getString(\"first\"));\n                System.out.println(\", Last: \" +\
+  \ rs.getString(\"last\"));\n            }\n\n            System.out.println(\"正在按降序获取记录...\"\
+  );\n            rs = stmt.executeQuery(QUERY + \" ORDER BY DESC\");\n          \
+  \  while (rs.next()) {\n                // 显示值\n                System.out.print(\"\
+  ID: \" + rs.getInt(\"id\"));\n                System.out.print(\", Age: \" + rs.getInt(\"\
+  age\"));\n                System.out.print(\", First: \" + rs.getString(\"first\"\
+  ));\n                System.out.println(\", Last: \" + rs.getString(\"last\"));\n\
+  \            }\n            rs.close();\n        } catch (SQLException e) {\n  \
+  \          e.printStackTrace();\n        }\n    }\n}\n```\n\n"

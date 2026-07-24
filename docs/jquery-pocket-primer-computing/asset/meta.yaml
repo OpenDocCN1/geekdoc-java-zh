@@ -1,0 +1,404 @@
+name: Jquery Pocket Primer (computing)
+name_cn: Jquery 入门指南
+slug: jquery-pocket-primer-computing
+toc:
+- - '#'
+  - jQuery 入门指南
+- - '##'
+  - CSS3 伪类
+- - '##'
+  - CSS3 属性选择
+- - '##'
+  - CSS3 阴影效果与圆角
+- - '##'
+  - 使用 RGB 和 HSL 指定颜色
+- - '##'
+  - CSS3 与文本阴影效果
+- - '###'
+  - 列表 2.1 TextShadow1.html
+- - '###'
+  - 列表 2.2 TextShadow1.css
+- - '##'
+  - CSS3 与外阴投影效果
+- - '##'
+  - CSS3 与圆角
+- - '###'
+  - 径向渐变
+- - '###'
+  - CSS3 2D 变换
+- - '##'
+  - 旋转变换
+- - '##'
+  - CSS3 媒体查询
+- - '##'
+  - 总结
+- - '##'
+  - 第 3 章
+- - '###'
+  - 使用 JQUERY 和 CSS3 实现动画效果
+- - '##'
+  - 在 jQuery 中处理 CSS3 选择器
+- - '###'
+  - jQuery 中的基础动画效果
+- - '###'
+  - 使用回调函数
+- - '##'
+  - jQuery 渐隐和滑动动画效果
+- - '##'
+  - fadeIn(), fadeOut(), 和 fadeToggle() 函数
+- - '###'
+  - 列表 3.1 FadeInOut.html
+- - '##'
+  - jQuery 滑动相关函数
+- - '###'
+  - 列表 3.2 QSlideUpDown.html
+- - '##'
+  - jQuery 中的缓动函数
+- - '##'
+  - jQuery .animate() 方法
+- - '##'
+  - 使用 .animate() 函数自定义 CSS 动画
+- - '###'
+  - 基于 CSS 的动画效果
+- - '##'
+  - 使用 CSS3 和 jQuery 进行 2D 变换
+- - '###'
+  - LISTING 3.4 JQTransforms2D1.css
+- - '###'
+  - LISTING 3.5 JQTransforms2D1.html
+- - '##'
+  - 使用 jQuery 的跟随鼠标示例
+- - '###'
+  - LISTING 3.6 JQSketchMouse1.html
+- - '##'
+  - 使用 jQuery 处理其他事件
+- - '##'
+  - 处理鼠标事件
+- - '##'
+  - 处理键盘事件
+- - '###'
+  - CD 上的额外代码示例
+- - '##'
+  - 动画：比较 CSS3 与 jQuery
+- - '##'
+  - 总结
+- - '##'
+  - 第 4 章：jQuery UI 控件
+- - '##'
+  - 本章中使用 jQuery 2.0
+- - '##'
+  - 手风琴效果
+- - '##'
+  - 按钮
+- - '###'
+  - 列表 4.3 jQueryButtons1.html
+- - '##'
+  - 复选框和单选框
+- - '###'
+  - 列表 4.4 jQueryUICheBoxRadio1.html
+- - '##'
+  - 组合框 (Combo Boxes)
+- - '###'
+  - 列表 4.5 jQueryComboBox1.html
+- - '##'
+  - 日期选择器 (Date Pickers)
+- - '###'
+  - 列表 4.6 JDatePicker1.html
+- - '##'
+  - 进度条 (Progress Bars)
+- - '###'
+  - 列表 4.7 JProgressBar1.html
+- - '##'
+  - W3C 审核流程的阶段
+- - '##'
+  - 处于 W3C 建议状态 (REC) 的 HTML5 APIs
+- - '##'
+  - HTML5 地理位置
+- - '##'
+  - 使用 getCurrentPosition() 获取用户位置
+- - '##'
+  - 使用 watchPosition() 跟踪用户位置
+- - '##'
+  - HTML5 跨源资源共享 (CORS)
+- - '##'
+  - W3C 候选建议状态 (CR) 中的 HTML5 API
+- - '##'
+  - 电池 API
+- - '##'
+  - XMLHttpRequest Level 2 (XHR2)
+- - '###'
+  - 不使用 jQuery 进行 AJAX 调用
+- - '###'
+  - 使用 jQuery 进行 AJAX 调用
+- - '###'
+  - 使用 XMLHttpRequest Level 2 (XHR2) 的 AJAX 请求
+- - '##'
+  - jQuery 与 HTML5 拖放
+- - '###'
+  - 列表 5.4 JQDragAndDrop1.html
+- - '##'
+  - jQuery 与 HTML5 本地存储
+- - '###'
+  - 列表 5.5 JQStorage1.html
+- - '##'
+  - HTML5 本地存储库
+- - '##'
+  - jQuery 和 HTML5 File APIs
+- - '###'
+  - 5.6 JQFileUpload2.html
+- - '##'
+  - HTML5 History APIs
+- - '##'
+  - HTML5 Offline Web Applications
+- - '###'
+  - 5.7 MyApp.appcache
+- - '##'
+  - Version 1.0.0
+- - '##'
+  - 检测在线和离线状态
+- - '##'
+  - 总结
+- - '##'
+  - 第 6 章：单页应用简介
+- - '##'
+  - 什么是 SPA？
+- - '##'
+  - 现代 Web 架构
+- - '##'
+  - MVC 和 MV* 模式
+- - '##'
+  - 在 SPA 中生成 Web 页面
+- - '##'
+  - 在 SPA 中处理模型相关事件
+- - '##'
+  - BackboneJS
+- - '##'
+  - BackboneJS 简介绍
+- - '###'
+  - 什么是模型（Model）？
+- - '###'
+  - 模型变化（Model Changes）
+- - '###'
+  - 什么是视图（View）？
+- - '###'
+  - 什么是集合（Collection）？
+- - '###'
+  - 什么是路由（Router）？
+- - '##'
+  - 有用链接（Useful Links）
+- - '##'
+  - Backbone Boilerplate
+- - '##'
+  - BackboneJS 的变体（Variations of Backbone）
+- - '###'
+  - SpineJS
+- - '###'
+  - EmberJS
+- - '###'
+  - Twitter Bootstrap
+- - '###'
+  - Jade
+- - '###'
+  - 带有 Jade 的极简代码
+- - '###'
+  - 列表 6.4 HelloWorld.js
+- - '##'
+  - Mongoose
+- - '##'
+  - Mongoose 连接到 MongoDB
+- - '##'
+  - 在 Mongoose 中创建模式
+- - '###'
+  - 代码
+- - '##'
+  - 最小化 jQuery Mobile 页面
+- - '##'
+  - jQuery 和 jQuery Mobile 的差异
+- - '##'
+  - jQuery Mobile 视图
+- - '###'
+  - jQuery Mobile 自定义属性
+- - '###'
+  - jQuery Mobile 切换
+- - '###'
+  - mobileinit 事件
+- - '##'
+  - jQuery Mobile 选项与自定义
+- - '##'
+  - 页面导航与切换页面
+- - '##'
+  - jqmData() 自定义选择器
+- - '##'
+  - 单页中的页面
+- - '##'
+  - 在页面视图中定位页头和页脚
+- - '##'
+  - 按钮组与列格
+- - '##'
+  - 使用主题渲染按钮
+- - '###'
+  - 列表 7.5 QMButtons1.html
+- - '###'
+  - 列表 7.6 CSSBackground.css
+- - '###'
+  - jQuery Mobile 中的列表视图
+- - '###'
+  - 列表 7.7 ListView.html
+- - '##'
+  - jQuery Mobile 与地理定位
+- - '##'
+  - 第 8 章
+- - '##'
+  - JQUERY MOBILE 中的用户势
+- - '###'
+  - 处理 jQuery Mobile 中的用户势
+- - '###'
+  - 检测用户势的两个 jQuery插件
+- - '##'
+  - JQUERY MOBILE 中的用户势
+- - '###'
+  - 处理 jQuery Mobile 中的用户势
+- - '###'
+  - 检测用户势的两个 jQuery插件
+- - '##'
+  - JQUERY MOBILE 中的用户势
+- - '###'
+  - 处理 jQuery Mobile 中的用户势
+- - '###'
+  - 检测用户势的两个 jQuery插件
+- - '##'
+  - jQuery Mobile 中的滚动事件
+- - '##'
+  - 竖屏模式与横屏模式
+- - '##'
+  - 淡入方法
+- - '##'
+  - 与滑动 jQuery 方法
+- - '##'
+  - jQuery Mobile 与过渡效果
+- - '###'
+  - 列表 8.2 QMTransition.html
+- - '##'
+  - 什么是 HTML5 Canvas
+- - '##'
+  - HTML5 Canvas对比 SVG
+- - '##'
+  - HTML5 Canvas 坐标系
+- - '##'
+  - 线段、矩形、圆形和阴影效果
+- - '##'
+  - HTML5 Canvas线性渐变
+- - '##'
+  - 水平、垂直和对角线渐变
+- - '##'
+  - 径向渐变
+- - '##'
+  - HTML5 Canvas变换与状态保存
+- - '##'
+  - 'jCanvas: 一个用于 HTML5 Canvas 的 jQuery插件'
+- - '##'
+  - 结合 CSS3 和 jQuery Mobile 的 HTML5 Canvas
+- - '###'
+  - jQuery Mobile 与图形
+- - '###'
+  - 其他 HTML5 工具包
+- - '###'
+  - 总结
+- - '##'
+  - 第 10 章
+- - '##'
+  - 使用 PHONEGAP 开发 HTML5移动应用
+- - '###'
+  - 列表 10.1 main.xml
+- - '###'
+  - 列表 10.2 AndroidCSS3.html
+- - '###'
+  - '列表 10.3: AndroidCSS3Activity.java'
+- - '##'
+  - HTML5 Canvas 与 Android 应用
+- - '###'
+  - 代码列表 10.5 AndroidCanvas.html
+- - '###'
+  - 列表 10.8 main.js
+- - '###'
+  - 列表 10.9 index.html
+- - '##'
+  - CSS3 关键帧与2D 变换
+- - '##'
+  - jQuery 渐入与滑动
+- - '##'
+  - 使用 jQuery Mobile
+- - '##'
+  - Apache Cordova
+- - '##'
+  - 属性
+- - '##'
+  - B
+- - '##'
+  - C
+- - '##'
+  - D
+- - '##'
+  - E
+- - '##'
+  - H
+- - '##'
+  - 使用
+- - '##'
+  - I
+- - '##'
+  - J
+- - '##'
+  - K
+- - '##'
+  - L
+- - '##'
+  - Mobile
+- - '##'
+  - 变体
+- - '##'
+  - 使用 CSS3 的动画效果
+- - '##'
+  - 地理定位
+- - '##'
+  - 在处理用户势与事件
+- - '##'
+  - 竖屏模式与横屏模式
+- - '##'
+  - 滚动事件
+- - '##'
+  - 用于检测用户势的两个 jQuery插件
+- - '##'
+  - jQuery Mobile 中的列表视图
+- - '##'
+  - AJAX 与
+- - '##'
+  - 在一个 HTML5 页面中显示多个页面
+- - '##'
+  - jQuery 与 jQuery Mobile 之间的更多差异
+- - '##'
+  - 与 CSS 相关的页面初始化
+- - '##'
+  - 自定义属性
+- - '##'
+  - 页面过渡
+- - '##'
+  - 页面视图
+- - '##'
+  - mobileinit 事件
+- - '##'
+  - 选项与自定义
+- - '##'
+  - 概述
+- - '##'
+  - 关键特性与组件在
+- - '##'
+  - 页面导航与切换页面
+- - '##'
+  - '`jqmData()` 自定义选择器'
+- - '##'
+  - 在页面视图中定位页头和页脚
+- - '##'
+  - 过渡效果
+- - '##'
+  - 虚拟鼠标事件

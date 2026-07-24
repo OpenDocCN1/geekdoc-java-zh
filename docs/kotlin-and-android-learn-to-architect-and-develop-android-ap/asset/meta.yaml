@@ -1,0 +1,415 @@
+name: Kotlin And Android： Learn To Architect And Develop Android Apps In The Kotlin
+  Programming Language
+name_cn: Kotlin 与 Android：学习使用 Kotlin 语言架构设计并开发 Android 应用
+slug: kotlin-and-android-learn-to-architect-and-develop-android-ap
+toc:
+- - '#'
+  - Kotlin 与 Android：学习使用 Kotlin 语言架构设计并开发 Android 应用
+- - '#'
+  - 第 1 章：Android Studio 入门
+- - '##'
+  - 选择语言
+- - '##'
+  - 你需要了解的知识
+- - '##'
+  - 开始之旅
+- - '##'
+  - 你的第一个程序
+- - '##'
+  - 初探
+- - '###'
+  - 问题？
+- - '###'
+  - IDE
+- - '##'
+  - 基础项目结构
+- - '##'
+  - Activity 的构造
+- - '###'
+  - 检查 XML
+- - '###'
+  - Kotlin
+- - '##'
+  - 开始使用模拟器
+- - '##'
+  - 总结
+- - '#'
+  - 第 2 章：Activity 与用户界面
+- - '##'
+  - MainActivity
+- - '###'
+  - Manifest（清单文件）
+- - '##'
+  - Inside Activity 内部
+- - '##'
+  - View and ViewGroup
+- - '##'
+  - 创建我们的第一个 UI
+- - '##'
+  - 属性与参数 (Properties & Attributes)
+- - '###'
+  - 属性和参数（Attribute）之间有什么区别？
+- - '##'
+  - 事件 (Events)
+- - '##'
+  - 查找 View 对象
+- - '##'
+  - 总结
+- - '##'
+  - 面板（Palette）中有什么
+- - '##'
+  - 按钮示例
+- - '##'
+  - 定位 —— ConstraintLayout（约束布局）
+- - '###'
+  - 推断约束选项 (Infer Constraints)
+- - '###'
+  - 多组件布局 (Multi-component Layouts)
+- - '###'
+  - 手动约束 (Manual Constraints)
+- - '###'
+  - 属性窗口 (The Attributes Window)
+- - '#'
+  - 第 5 章：约束布局 (Constraint Layout)
+- - '##'
+  - 尺寸 (Sizing)
+- - '##'
+  - 组件树 (The Component Tree)
+- - '##'
+  - 简单的按钮示例 – 基线对齐 (A Simple Button Example – Baseline Alignment)
+- - '##'
+  - 方向与分辨率 (Orientation and Resolution)
+- - '###'
+  - 按方向选择布局
+- - '###'
+  - 使用 Android Studio
+- - '###'
+  - 生命周期与状态管理
+- - '##'
+  - 第一个应用——简单计算器
+- - '##'
+  - 布局 (Layout)
+- - '#'
+  - 第 4 章：Android 事件
+- - '##'
+  - Java 如何传递函数
+- - '##'
+  - 事件在 Android 中如何执行
+- - '###'
+  - 在 Kotlin 中传递函数
+- - '####'
+  - 函数引用
+- - '####'
+  - 匿名函数
+- - '####'
+  - Lambda
+- - '####'
+  - 使用 Lambda 处理事件
+- - '##'
+  - 闭包 (Closure)
+- - '##'
+  - 使用断点 (Using Breakpoints)
+- - '###'
+  - 总结
+- - '#'
+  - 第 5 章：基本控件
+- - '###'
+  - 基本输入控件
+- - '###'
+  - 按钮样式和属性
+- - '##'
+  - 所有属性 (All Attributes)
+- - '##'
+  - 文本字段 (Text Fields)
+- - '##'
+  - onEditorAction 事件
+- - '##'
+  - 复选框 (Checkboxes)
+- - '###'
+  - 开关 (Switches) 和切换按钮 (Toggle buttons)
+- - '###'
+  - 单选按钮 (Radio Buttons)
+- - '###'
+  - 总结
+- - '#'
+  - 第 6 章 使用布局 (Working With Layouts)
+- - '###'
+  - 理解布局 (Layouts)
+- - '##'
+  - 布局属性
+- - '##'
+  - 宽度和高度
+- - '##'
+  - 单位
+- - '###'
+  - 控件仅仅是一个方框
+- - '###'
+  - 重力（Gravity）
+- - '###'
+  - FrameLayout
+- - '###'
+  - LinearLayout
+- - '###'
+  - Layout_weight
+- - '###'
+  - RelativeLayout
+- - '####'
+  - 边缘对齐
+- - '####'
+  - 相对于父布局
+- - '####'
+  - 相对于另一个组件的 layout_centerHorizontal
+- - '##'
+  - 边距偏移 (Margin Offsets)
+- - '##'
+  - RelativeLayout 与布局编辑器
+- - '##'
+  - 总结
+- - '##'
+  - 使用 ConstraintLayout
+- - '###'
+  - 自动约束
+- - '###'
+  - 推断约束
+- - '###'
+  - 手动约束
+- - '###'
+  - 偏置约束 (Bias Constraints)
+- - '###'
+  - 链 (Chains)
+- - '###'
+  - 链式键盘
+- - '###'
+  - 那么添加第 10 个按钮呢？
+- - '###'
+  - 指南线 (Guidelines)
+- - '###'
+  - 组 (Groups)
+- - '###'
+  - 尺寸 (Sizing)
+- - '##'
+  - Barriers（屏障）
+- - '###'
+  - 约束属性
+- - '###'
+  - 故障排除
+- - '###'
+  - 总结
+- - '#'
+  - 第 8 章：UI 设计
+- - '##'
+  - 编写 UI
+- - '###'
+  - UI 库
+- - '##'
+  - View (视图)
+- - '###'
+  - 总结
+- - '##'
+  - 使用 setContentView
+- - '##'
+  - ViewGroup (布局组)
+- - '##'
+  - View 层次结构 (View Hierarchy)
+- - '##'
+  - XML 布局
+- - '##'
+  - 膨胀理论 (Inflation Theory)
+- - '##'
+  - 查找 View 对象
+- - '##'
+  - 如何构建 UI？
+- - '###'
+  - 总结
+- - '#'
+  - 第 9 章：菜单 – 工具栏 (Toolbar)
+- - '###'
+  - 创建菜单资源
+- - '##'
+  - 显示菜单
+- - '##'
+  - 使用 Toolbar
+- - '##'
+  - 创建 App Bar
+- - '##'
+  - 我的 Toolbar 在哪里？
+- - '##'
+  - 响应菜单事件
+- - '##'
+  - onPrepareOptionsMenu
+- - '##'
+  - 控制 Toolbar
+- - '##'
+  - 总结
+- - '##'
+  - 2. 注册 View 视图
+- - '##'
+  - 上下文操作栏 (Contextual Action Bar)
+- - '###'
+  - 弹出菜单 (Popup Menu)
+- - '###'
+  - 总结
+- - '#'
+  - 第 11 章：资源 (Resources)
+- - '###'
+  - 为什么要使用资源？
+- - '###'
+  - 什么是资源（Resources）？
+- - '###'
+  - Drawables（可图资源）
+- - '###'
+  - Values（值）
+- - '##'
+  - 在代码中访问资源 – R 对象
+- - '##'
+  - 条件资源
+- - '###'
+  - 简单的本地化
+- - '###'
+  - Android Studio 翻译工具
+- - '###'
+  - 总结
+- - '#'
+  - 第 12 章：位图图形
+- - '###'
+  - 管理 Bitmap 对象
+- - '###'
+  - ImageView 控制器
+- - '###'
+  - 使用 Canvas
+- - '##'
+  - 变换
+- - '##'
+  - 变换的逻辑方法
+- - '##'
+  - 设置自定义坐标
+- - '##'
+  - 简单动画
+- - '##'
+  - 定时器与线程
+- - '###'
+  - UI 线程与同步
+- - '###'
+  - 代码实现
+- - '#'
+  - Activity 的生命周期
+- - '##'
+  - 生命周期与状态
+- - '##'
+  - 应用程序的生命周期
+- - '###'
+  - '`onCreate` 和 `onDestroy`'
+- - '###'
+  - '`onStart` 和 `onStop`'
+- - '###'
+  - '`onResume` 和 `onPause`'
+- - '##'
+  - 简单的方法
+- - '#'
+  - 生命周期探索器
+- - '#'
+  - 尝试一下
+- - '#'
+  - 保持状态 – Bundle
+- - '#'
+  - 保存额外的 UI 数据
+- - '#'
+  - 复杂 UI 元素
+- - '#'
+  - 高级状态管理
+- - '#'
+  - 第 14 章：下拉选择器 (Spinners)
+- - '##'
+  - 下拉选择器与布局编辑器
+- - '##'
+  - 介绍 ArrayAdapter
+- - '###'
+  - 创建簇
+- - '###'
+  - 连接适配器
+- - '###'
+  - 处理选择
+- - '###'
+  - 详细的 onItemSelected
+- - '##'
+  - getItemAtPosition 技术
+- - '###'
+  - 从资源创建 ArrayAdapter
+- - '###'
+  - 修改列表
+- - '###'
+  - 总结
+- - '#'
+  - 第 15 章：选择器 (Pickers)
+- - '###'
+  - 使用选择器
+- - '###'
+  - TimePicker
+- - '###'
+  - TimePicker
+- - '####'
+  - 更新时间
+- - '###'
+  - DatePicker
+- - '###'
+  - Number Picker
+- - '##'
+  - 多位数输入
+- - '###'
+  - 理解适配器 (Adapter)
+- - '###'
+  - 扩展 ListAdapter 类
+- - '###'
+  - 使用 ArrayAdapter
+- - '##'
+  - 与数据交互
+- - '###'
+  - 获取选择
+- - '###'
+  - 修改数据
+- - '###'
+  - 自定义布局
+- - '###'
+  - 自定义 ArrayAdapter
+- - '##'
+  - 复用、缓存与通用布局
+- - '##'
+  - 摘要
+- - '#'
+  - 第 17 章 Android 的 Kotlin 之路
+- - '##'
+  - 你不再需要输入的内容
+- - '###'
+  - 分号、类型指定符和换行
+- - '###'
+  - '`var` 和 `val`'
+- - '##'
+  - 不再有 get & set
+- - '##'
+  - 作为属性的 View 对象
+- - '##'
+  - 事件处理器
+- - '###'
+  - Data
+- - '###'
+  - Null Safety
+- - '###'
+  - Java Types and Null
+- - '###'
+  - Kotlin 旨在提供帮助
+- - '###'
+  - 总结
+- - '#'
+  - 索引
+- - '#'
+  - 索引
+- - '#'
+  - 索引列表
+- - '#'
+  - 对象
+- - '##'
+  - Methods
+- - '#'
+  - 索引列表
+- - '#'
+  - 索引

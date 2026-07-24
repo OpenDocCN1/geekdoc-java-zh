@@ -1,0 +1,182 @@
+name: Learn Apache Commons IO [Java Technologies]
+name_cn: Learn Apache Commons IO [Java 技术]
+slug: learn-apache-commons-io-java-technologies
+toc:
+- - '#'
+  - Learn Apache Commons IO [Java 技术]
+- - '#'
+  - 目录
+- - '#'
+  - 概述
+- - '##'
+  - 类
+- - '###'
+  - 过滤器类
+- - '###'
+  - 文件监控类
+- - '###'
+  - 比较器类
+- - '###'
+  - 输入流类
+- - '#'
+  - 环境搭建
+- - '##'
+  - 本地设置
+- - '###'
+  - Windows 2000/XP
+- - '###'
+  - Windows 95/98/ME
+- - '###'
+  - Linux, UNIX, Solaris, FreeBSD
+- - '##'
+  - 流行的 Java 编辑器
+- - '##'
+  - 下载 Common IO 归包
+- - '##'
+  - 设置 Apache Common IO 环境
+- - '##'
+  - 设置 CLASSPATH 变量
+- - '#'
+  - IOUtils
+- - '##'
+  - 类声明
+- - '##'
+  - IOUtils 的特性
+- - '##'
+  - IOUtils 类示例
+- - '##'
+  - 输出
+- - '#'
+  - FileUtils
+- - '##'
+  - 类声明
+- - '##'
+  - FileUtils 的特性
+- - '##'
+  - FileUtils 类示例
+- - '##'
+  - 输出
+- - '#'
+  - FilenameUtils
+- - '##'
+  - 类声明
+- - '##'
+  - FilenameUtils 的特性
+- - '##'
+  - FilenameUtils 类示例
+- - '##'
+  - 输出
+- - '#'
+  - IOCase
+- - '##'
+  - 枚举声明
+- - '##'
+  - IOCase 枚举示例
+- - '##'
+  - 输出
+- - '#'
+  - LineIterator
+- - '##'
+  - 类声明
+- - '##'
+  - LineIterator 类示例
+- - '##'
+  - 输出
+- - '#'
+  - NameFileFilter
+- - '##'
+  - 类声明
+- - '##'
+  - NameFileFilter 类示例
+- - '##'
+  - 输出
+- - '#'
+  - WildcardFilter
+- - '##'
+  - 类声明
+- - '##'
+  - WildcardFilter 类示例
+- - '##'
+  - 输出
+- - '#'
+  - SuffixFileFilter
+- - '##'
+  - 类声明
+- - '##'
+  - SuffixFileFilter 类示例
+- - '##'
+  - 输出
+- - '#'
+  - PrefixFileFilter
+- - '##'
+  - 类声明
+- - '##'
+  - PrefixFileFilter 类示例
+- - '##'
+  - 输出
+- - '#'
+  - OrFileFilter
+- - '##'
+  - 类声明
+- - '##'
+  - OrFileFilter 类示例
+- - '##'
+  - 输出
+- - '#'
+  - AndFileFilter
+- - '##'
+  - 类声明
+- - '##'
+  - AndFileFilter 示例
+- - '##'
+  - 输出
+- - '#'
+  - FileEntry
+- - '##'
+  - 类声明
+- - '##'
+  - 特性
+- - '##'
+  - FileEntry 类示例
+- - '#'
+  - FileAlterationObserver
+- - '##'
+  - 类声明
+- - '##'
+  - FileAlterationObserver 类示例
+- - '##'
+  - 输出
+- - '#'
+  - FileAlterationMonitor
+- - '##'
+  - 类声明
+- - '##'
+  - FileAlterationMonitor 类示例
+- - '##'
+  - '`SizeFileComparator` 类示例'
+- - '##'
+  - 输出
+- - '#'
+  - LastModifiedFileComparator
+- - '##'
+  - 类声明
+- - '##'
+  - '`LastModifiedFileComparator` 类示例'
+- - '##'
+  - 输出
+- - '#'
+  - TeeInputStream
+- - '##'
+  - 类声明
+- - '##'
+  - '`TeeInputStream` 类示例'
+- - '##'
+  - 输出
+- - '#'
+  - TeeOutputStream
+- - '##'
+  - 类声明
+- - '##'
+  - '`TeeOutputStream` 类示例'
+- - '##'
+  - 输出

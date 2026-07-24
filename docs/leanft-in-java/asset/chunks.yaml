@@ -1,0 +1,2798 @@
+- fmt: "\n![](image8.jpg)\n![](image8.jpg)\n\n# About the Author\nPaul Watson is a\
+    \ technology enthusiast and has massive experience in various technologies like\
+    \ web application development, automation testing, build automation, continuous\
+    \ integration and deployment technologies. He has worked on most of the technology\
+    \ stacks.\n\nHe has hands on experience on `UFT`, `LeanFT`, `Selenium` and `Appium`.\
+    \ He has used testing frameworks like `JUnit`, `TestNG`, `Cucumber` with `Selenium`.\
+    \ He has also worked on `Struts`, `Spring`, `Bootstratp`, `Angular JS`. His hobbies\
+    \ include travelling to new tourist places, watching basketball, cricket and learning\
+    \ latest technological stuff.\n\n## A special note of Thanks to My Wife\nI would\
+    \ like to dedicate this book to my lovely wife for loving me so much and helping\
+    \ me write this book. Without her support, this book would not have been a reality.\n\
+    \n# Who this book is for\nThis book is for automation engineers who want to learn\
+    \ `LeanFT` to automate the web and windows applications in `Java`. It is assumed\
+    \ that reader has basic programming skills in `Java` language. Whether you are\
+    \ a beginner or an experienced developer, this book will help you master the skills\
+    \ on `LeanFT`.\n\n## Book Overview\nThe book starts with introduction of `LeanFT`\
+    \ and then dives into key concepts as mentioned below:\nSupported applications,\
+    \ Installation, `LeanFT` settings, Core Concepts, New `LeanFT` project in `IntelliJ\
+    \ IDEA`, `LeanFT` Project in `Eclipse`, Object Identification and Management,\
+    \ Automating Web applications, Automating windows applications, Synchronization,\
+    \ Assertions and Reports, `LeanFT` Frameworks, Converting the `UFT` Object Repository\
+    \ to Application models in `LeanFT`, Integrating the `LeanFT` tests with CI servers\
+    \ like [Bamboo](http://www.softpost.org/bamboo/adding-maven-task-in-bamboo/),\
+    \ [Jenkins](http://www.softpost.org/jenkins/creating-and-configuring-the-builds-in-jenkins/)\
+    \ and [TeamCity](http://www.softpost.org/teamcity/build-steps-for-maven-project-in-teamcity/),\
+    \ Challenges and Solutions, `LeanFT` common issues and solutions, Comparing `LeanFT`\
+    \ with other tools, `LeanFT` Java References.\n\n# Table of Contents\n- [About\
+    \ the Author](#part0001.xhtml)\n- [A special note of Thanks to My Wife](#part0002.xhtml)\n\
+    - [Who this book is for](#part0003.xhtml)\n- [1. Introduction](#part0005.xhtml)\n\
+    - [2. Supported applications](#part0006.xhtml)\n- [3. Installation](#part0007.xhtml)\n\
+    \    - [3.1 Installation of LeanFT and plugins for IDEs](#part0007.xhtml_toc5_3.1_Installation_of_LeanFT_and_plugins_for_IDEs)\n\
+    \    - [3.2 Installing browser Extensions](#part0007.xhtml_toc6_3.2_Installing_browser_Extensions)\n\
+    - [4. Getting Started](#part0008.xhtml)\n    - [4.1 LeanFT settings](#part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1829)\n\
+    \    - [4.2 License types in LeanFT](#part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1830)\n\
+    - [5. Core Concepts](#part0009.xhtml)\n    - [5.1 Object identification Center](#part0009.xhtml_toc11_5.1_Object_identification_Center)\n\
+    \    - [5.2 Understanding LeanFT SDK API](#part0009.xhtml_toc12_5.2_Understanding_LeanFT_SDK_API)\n\
+    - [6. New LeanFT project in IntelliJ IDEA](#part0010.xhtml)\n    - [6.1 Installing\
+    \ the LeanFT jar files in Maven Repository](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1835)\n\
+    \    - [6.2 Creating LeanFT Maven Project](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1836)\n\
+    \    - [6.3 Creating LeanFT Project with Gradle and TestNG](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1837)\n\
+    \    - [6.4 LeanFT Properties](#part0010.xhtml_toc17_6.4_LeanFT_Properties)\n\
+    \    - [6.5 Setting up LeanFT project in IntelliJ IDEA](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1839)\n\
+    - [7. LeanFT Project in Eclipse](#part0011.xhtml)\n    - [7.1 Creating maven project\
+    \ with JUnit with LeanFT in Eclipse](#part0011.xhtml_toc20_7.1_Creating_maven_project_with_JUnit_with_LeanFT_in_Eclipse)\n\
+    \    - [7.2 Creating maven project with TestNG in Eclipse](#part0011.xhtml_lMgFRRDpRtGIftZBV7KV3A1842)\n\
+    - [8. Object Identification and Management](#part0012.xhtml)\n    - [8.1 Description\
+    \ programming](#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1844)\n    - [8.2 Application\
+    \ model](#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1845)\n    - [8.3 Using regular\
+    \ expression in property values](#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1846)\n\
+    - [9. Automating Web applications](#part0013.xhtml)\n    - [9.1 First web application\
+    \ test](#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1848)\n    - [9.2 Identifying the\
+    \ Web elements using XPATH and CSS](#part0013.xhtml_toc28_9.2_Identifying_the_Web_elements_using_XPATH_and_CSS)\n\
+    \    - [9.3 Identifying objects using Visual Relational Identifiers – VRI](#part0013.xhtml_toc29_9.3_Identifying_objects_using_Visual_Relational_Identifiers___VRI)\n\
+    \    - [9.4 Handling browser control in Windows app](#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1851)\n\
+    \    - [9.5 Firing events on Web using LeanFT](#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1852)\n\
+    \    - [9.6 Executing JavaScript in web page](#part0013.xhtml_toc32_9.6_Executing_JavaScript_in_web_page)\n\
+    - [10. Automating windows applications](#part0014.xhtml)\n    - [10.1 Automating\
+    \ standard application](#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1855)\n    - [10.2\
+    \ Automating Java Application](#part0014.xhtml_toc35_10.2_Automating_Java_Application)\n\
+    \    - [10.3 Automating WPF applications](#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1857)\n\
+    \    - [10.4 Automating SAP Application](#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1858)\n\
+    - [11. Synchronization](#part0015.xhtml)\n- [12. Assertions and Reports](#part0016.xhtml)\n\
+    \    - [12.1 Assertions in LeanFT](#part0016.xhtml_lMgFRRDpRtGIftZBV7KV3A1861)\n\
+    \    - [12.2 Generating reports with screenshots and recordings](#part0016.xhtml_toc41_12.2_Generating_reports_with_screenshots_and_recordings)\n\
+    - [13. LeanFT Frameworks](#part0017.xhtml)\n    - [13.1 LeanFT with Cucumber](#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1864)\n\
+    \    - [13.2 Keyword Driven frameworks](#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1865)\n\
+    \    - [13.3 Data Driven Frameworks](#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1866)\n\
+    - [14. Converting the UFT Object Repository to Application models in LeanFT](#part0018.xhtml)\n\
+    - [15. Integrating the LeanFT tests with CI servers](#part0019.xhtml)\n    - [15.1\
+    \ Adding maven task in Bamboo](#part0019.xhtml_toc48_15.1_Adding_maven_task_in_Bamboo)\n\
+    \    - [15.2 Creating and Configuring the builds in Jenkins](#part0019.xhtml_toc49_15.2_Creating_and_Configuring_the_builds_in_Jenkins)\n\
+    \    - [15.3 Build steps for Maven project in TeamCity](#part0019.xhtml_toc50_15.3_Build_steps_for_Maven_project_in_TeamCity)\n\
+    - [16. Challenges and Solutions](#part0020.xhtml)\n    - [16.1 Challenges of LeanFT\
+    \ automation](#part0020.xhtml_toc52_16.1_Challenges_of_LeanFT_automation)\n  \
+    \  - [16.2 Working with third party objects using](#part0020.xhtml_toc53_16.2_Working_with_third_party_objects_using)\n\
+    \    - [Native Object properties and methods](#part0020.xhtml_lMgFRRDpRtGIftZBV7KV3A1875)\n\
+    - [17. LeanFT common issues and solutions](#part0021.xhtml)\n- [18. Comparing\
+    \ LeanFT with other tools](#part0022.xhtml)\n    - [18.1 Difference between HP\
+    \ UFT and LeanFT](#part0022.xhtml_lMgFRRDpRtGIftZBV7KV3A1878)\n    - [18.2 Comparison\
+    \ of LeanFT with Selenium and Ranorex](#part0022.xhtml_toc58_18.2_Comparison_of_LeanFT_with_Selenium_and_Ranorex)\n\
+    - [19. LeanFT Java References](#part0023.xhtml)\n\n# 1. Introduction\nLeanFT stands\
+    \ for Lean Functional testing. This is a tool developed by HP and very similar\
+    \ to the Ranorex. Key points to note about LeanFT are given below.\n\n1. It's\
+    \ a licensed tool.\n2. Developed by HP in 2015.\n3. It's light version of `UFT`\
+    \ (`QTP`).\n4. With LeanFT, you can write tests in .Net language as well as Java.\n\
+    5. LeanFT plugin are available for Visual Studio and Eclipse.\n6. LeanFT uses\
+    \ description programming as well as Application models to identify the objects.\n\
+    \n## 2. Supported applications](http://www.softpost.org/automation-testing/leanft-with-c-net/supported-applications-by-leanft/)\n\
+    LeanFT supports below types of applications.\n\n1. Web applications on IE, Chrome,\
+    \ Firefox, Microsoft Edge\n2. Windows application - WPF, Silverlight and more\n\
+    3. SAP applications\n4. Java applications\n5. Standard windows and forms\n"
+  raw: '
+
+
+    ![](image8.jpg)
+
+
+    ![](image8.jpg)About the AuthorPaul Watson is a technology enthusiast and has
+    massive experience in various technologies like web application development, automation
+    testing, build automation, continuous integration and deployment technologies.
+    He has worked on most of the technology stacks.
+
+
+    He has hands on experience on UFT, LeanFT, Selenium and Appium. He has used testing
+    frameworks like JUnit, TestNG, Cucumber with Selenium. He has also worked on Struts,
+    Spring, Bootstratp, Angular JS.  His hobbies include travelling to new tourist
+    places, watching basketball, cricket and learning latest technological stuff.A
+    special note of Thanks to My WifeI would like to dedicate this book to my lovely
+    wife for loving me so much and helping me write this book. Without her support,
+    this book would not have been a reality.Who this book is forThis book is for automation
+    engineers who want to learn LeanFT to automate the web and windows applications
+    in Java.It is assumed that reader has basic programming skills in Java language.
+    Whether you are a beginner or an experienced developer, this book will help you
+    master the skills on LeanFT.
+
+
+    The book starts with introduction of LeanFT and then dives into key concepts as
+    mentioned below.Supported applications,Installation ,LeanFT settings,Core Concepts,New
+    LeanFT project in IntelliJ IDEA ,LeanFT Project in Eclipse,Object Identification
+    and Management ,Automating Web applications, Automating windows applications,Synchronization,Assertions
+    and Reports, LeanFT Frameworks,Converting the UFT Object Repository to Application
+    models in LeanFT,Integrating the LeanFT tests with CI servers like [Bamboo](http://www.softpost.org/bamboo/adding-maven-task-in-bamboo/)
+    , [Jenkins ](http://www.softpost.org/jenkins/creating-and-configuring-the-builds-in-jenkins/)
+    and [TeamCity](http://www.softpost.org/teamcity/build-steps-for-maven-project-in-teamcity/)
+    , Challenges and Solutions,LeanFT common issues and solutions,Comparing LeanFT
+    with other tools,LeanFT Java References.Table of Contents[About the Author](#part0001.xhtml)[A
+    special note of Thanks to My Wife](#part0002.xhtml)[Who this book is for](#part0003.xhtml)[1\.
+    Introduction](#part0005.xhtml)[2\. Supported applications](#part0006.xhtml)[3\.
+    Installation](#part0007.xhtml)[3.1 Installation of LeanFT and plugins for IDEs](#part0007.xhtml_toc5_3.1_Installation_of_LeanFT_and_plugins_for_IDEs)[3.2
+    Installing browser Extensions](#part0007.xhtml_toc6_3.2_Installing_browser_Extensions)[4\.
+    Getting Started](#part0008.xhtml)[4.1 LeanFT settings](#part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1829)[4.2
+    License types in LeanFT](#part0008.xhtml_lMgFRRDpRtGIftZBV7KV3A1830)[5\. Core
+    Concepts](#part0009.xhtml)[5.1 Object identification Center](#part0009.xhtml_toc11_5.1_Object_identification_Center)[5.2
+    Understanding LeanFT SDK API](#part0009.xhtml_toc12_5.2_Understanding_LeanFT_SDK_API)[6\.
+    New LeanFT project in IntelliJ IDEA](#part0010.xhtml)[6.1 Installing the LeanFT
+    jar files in Maven Repository](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1835)[6.2
+    Creating LeanFT Maven Project](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1836)[6.3
+    Creating LeanFT Project with Gradle and TestNG](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1837)[6.4
+    LeanFT Properties](#part0010.xhtml_toc17_6.4_LeanFT_Properties)[6.5 Setting up
+    LeanFT project in IntelliJ IDEA](#part0010.xhtml_lMgFRRDpRtGIftZBV7KV3A1839)[7\.
+    LeanFT Project in Eclipse](#part0011.xhtml)[7.1 Creating maven project with JUnit
+    with LeanFT in Eclips e](#part0011.xhtml_toc20_7.1_Creating_maven_project_with_JUnit_with_LeanFT_in_Eclipse)[7.2
+    Creating maven project with TestNG in Eclipse](#part0011.xhtml_lMgFRRDpRtGIftZBV7KV3A1842)[8\.
+    Object Identification and Management](#part0012.xhtml)[8.1 Description programming](#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1844)[8.2
+    Application model](#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1845)[8.3 Using regular
+    expression in property values](#part0012.xhtml_lMgFRRDpRtGIftZBV7KV3A1846)[9\.
+    Automating Web applications](#part0013.xhtml)[9.1 First web application test](#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1848)[9.2
+    Identifying the Web elements using XPATH and CSS](#part0013.xhtml_toc28_9.2_Identifying_the_Web_elements_using_XPATH_and_CSS)[9.3
+    Identifying objects using Visual Relational Identifiers – VRI](#part0013.xhtml_toc29_9.3_Identifying_objects_using_Visual_Relational_Identifiers___VRI)[9.4
+    Handling embedded browser control in Windows app](#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1851)[9.5
+    Firing events on Web Elements using LeanFT](#part0013.xhtml_lMgFRRDpRtGIftZBV7KV3A1852)[9.6
+    Executing JavaScript in web page](#part0013.xhtml_toc32_9.6_Executing_JavaScript_in_web_page)[10\.
+    Automating windows applications](#part0014.xhtml)[10.1 Automating standard windows
+    application](#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1855)[10.2 Automating Java
+    Application](#part0014.xhtml_toc35_10.2_Automating_Java_Application)[10.3 Automating
+    WPF applications](#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1857)[10.4 Automating
+    SAP Application](#part0014.xhtml_lMgFRRDpRtGIftZBV7KV3A1858)[11\. Synchronization](#part0015.xhtml)[12\.
+    Assertions and Reports](#part0016.xhtml)[12.1 Assertions in LeanFT](#part0016.xhtml_lMgFRRDpRtGIftZBV7KV3A1861)[12.2
+    Generating reports with screenshots and recording s](#part0016.xhtml_toc41_12.2_Generating_reports_with_screenshots_and_recordings)[13\.
+    LeanFT Frameworks](#part0017.xhtml)[13.1 LeanFT with Cucumber](#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1864)[13.2
+    Keyword Driven frameworks](#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1865)[13.3 Data
+    Driven Frameworks](#part0017.xhtml_lMgFRRDpRtGIftZBV7KV3A1866)[14\. Converting
+    the UFT Object Repository to Application models in LeanFT](#part0018.xhtml)[15\.
+    Integrating the LeanFT tests with CI servers](#part0019.xhtml)[15.1 Adding maven
+    task in Bamboo](#part0019.xhtml_toc48_15.1_Adding_maven_task_in_Bamboo)[15.2 Creating 
+    and Configuring the builds in Jenkins](#part0019.xhtml_toc49_15.2_Creating_and_Configuring_the_builds_in_Jenkins)[15.3
+    Build steps for Maven project in TeamCity](#part0019.xhtml_toc50_15.3_Build_steps_for_Maven_project_in_TeamCity)[16\.
+    Challenges and Solutions](#part0020.xhtml)[16.1 Challenges of LeanFT automation](#part0020.xhtml_toc52_16.1_Challenges_of_LeanFT_automation)[16.2
+    Working with third party objects using](#part0020.xhtml_toc53_16.2_Working_with_third_party_objects_using)[Native
+    Object properties and methods](#part0020.xhtml_lMgFRRDpRtGIftZBV7KV3A1875)[17\.
+    LeanFT common issues and solutions](#part0021.xhtml)[18\. Comparing LeanFT with
+    other tools](#part0022.xhtml)[18.1 Difference between HP UFT and LeanFT](#part0022.xhtml_lMgFRRDpRtGIftZBV7KV3A1878)[18.2
+    Comparison of LeanFT with Selenium and Ranorex](#part0022.xhtml_toc58_18.2_Comparison_of_LeanFT_with_Selenium_and_Ranorex)[19\.
+    LeanFT Java References](#part0023.xhtml)1\. IntroductionLeanFT stands for Lean
+    Functional testing. This is a tool developed by HP and very similar to the Ranorex.Key
+    points to note about LeanFT are given below.
+
+
+    1.  It''s a licensed tool.
+
+
+    2.  Developed by HP in 2015.
+
+
+    3.  It''s light version of UFT (QTP).
+
+
+    4.  With LeanFT, you can write tests in .Net language as well as Java.
+
+
+    5.  LeanFT plugin are available for Visual Studio and Eclipse.
+
+
+    6.  LeanFT uses description programming as well as Application models to identify
+    the objects.
+
+
+    2. [Supported applications](http://www.softpost.org/automation-testing/leanft-with-c-net/supported-applications-by-leanft/)LeanFT
+    supports below types of applications.
+
+
+    1.  Web applications on IE, Chrome, Firefox, Microsoft Edge
+
+
+    2.  Windows application - WPF, Silverlight and more
+
+
+    3.  SAP applications
+
+
+    4.  Java applications
+
+
+    5.  Standard windows and forms'
+  toc: []
+  trans: "\n\n![](img/image8.jpg)\n![](img/image8.jpg)\n\n# 关于作者\nPaul Watson 是一位技术爱好者，在\
+    \ Web 应用开发、自动化测试、构建自动化、持续集成和部署技术等多种技术领域拥有丰富的经验。他参与过大多数技术栈的工作。\n\n他在 `UFT`、`LeanFT`、`Selenium`\
+    \ 和 `Appium` 上拥有实战经验。他曾结合 `Selenium` 使用 `JUnit`、`TestNG` 和 `Cucumber` 等测试框架。他还接触过\
+    \ `Struts`、`Spring`、`Bootstrap` 和 `Angular JS`。他的爱好包括去新的旅游景点旅行、看篮球、板球以及学习最新的技术事物。\n\
+    \n## 给妻子的特别感谢\n我想将这本书献给我亲爱的妻子，感谢她对我如此深爱并帮助我完成了这本书。没有她的支持，这本书将无法实现。\n\n# 这本书适合谁读\n\
+    这本书适用于想要学习使用 `LeanFT` 在 `Java` 中实现 Web 和 Windows 应用程序自动化的自动化工程师。假设读者具备 `Java`\
+    \ 语言的基础编程技能。无论你是初学者还是经验丰富的开发者，这本书都将帮助你掌握 `LeanFT` 的技能。\n\n## 书籍概述\n本书从介绍 `LeanFT`\
+    \ 开始，然后深入探讨下述的核心概念：支持的应用程序、安装、`LeanFT` 设置、核心概念、在 `IntelliJ IDEA` 中创建新的 `LeanFT`\
+    \ 项目、在 `Eclipse` 中 `LeanFT` 项目、对象识别与管理、Web 应用自动化、Windows 应用程序自动化、同步、断言与报告、`LeanFT`\
+    \ 框架、将 `UFT` 对象库转换为 `LeanFT` 中的应用模型、将 `LeanFT` 测试与 CI 服务器集成（如 [Bamboo](http://www.softpost.org/bamboo/adding-maven-task-in-bamboo/)、[Jenkins](http://www.softpost.org/jenkins/creating-and-configuring-the-builds-in-jenkins/)\
+    \ 和 [TeamCity](http://www.softpost.org/teamcity/build-steps-for-maven-project-in-teamcity/)）、挑战与解决方案、`LeanFT`\
+    \ 常见问题及解决方案、`LeanFT`与其他工具的对比、`LeanFT` Java 参考。\n\n# 目录\n- 关于作者\n- 给妻子的特别感谢\n-\
+    \ 这本书适合谁读\n- 1. 简介\n- 2. 支持的应用程序\n- 3. 安装\n    - 3.1 安装 LeanFT 及 IDE 插件\n    -\
+    \ 3.2 安装浏览器扩展\n- 4. 入门\n    - 4.1 LeanFT 设置\n    - 4.2 LeanFT 中的许可证类型\n- 5. 核心概念\n\
+    \    - 5.1 对象识别中心\n    - 5.2 理解 LeanFT API\n- 6. 在 IntelliJ IDEA 中创建 LeanFT 项目\n\
+    \    - 6.1 在 Maven 仓库安装 LeanFT jar 文件\n    - 6.2 创建 LeanFT Maven 项目\n    - 6.3\
+    \ 使用 Gradle 和 TestNG 创建 LeanFT 项目\n    - 6.4 LeanFT 属性\n    - 6.5 在 IntelliJ IDEA\
+    \ 中设置 LeanFT 项目\n- 7. 在 Eclipse 中 LeanFT 项目\n    - 7.1 在 Eclipse 中使用 JUnit 创建\
+    \ maven 项目\n    - 7.2 在 Eclipse 中使用 TestNG 创建 maven 项目\n- 8. 对象识别与管理\n    - 8.1\
+    \ 描述编程\n    - 8.2 应用模型\n    - 8.3 在属性值中使用正则表达式\n- 9. Web 应用自动化\n    - 9.1 第一个\
+    \ Web 应用测试\n    - 9.2 使用 XPATH 和 CSS 识别 Web 元素\n    - 9.3 使用视觉关系标识符 VRI 识别对象\n\
+    \    - 9.4 Windows 应用中的浏览器控制\n    - 9.5 使用 LeanFT 在 Web 上触发事件\n    - 9.6 在网页中执行\
+    \ JavaScript\n- 10. Windows 应用程序自动化\n    - 10.1 标准应用程序自动化\n    - 10.2 Java 应用自动化\n\
+    \    - 10.3 WPF 应用自动化\n    - 10.4 SAP 应用自动化\n- 11. 同步\n- 12. 断言与报告\n    - 12.1\
+    \ LeanFT 中的断言\n    - 12.2 使用截图和录制生成报告\n- 13. LeanFT 框架\n    - 13.1 使用 Cucumber\
+    \ 的 LeanFT\n    - 13.2 关键字驱动框架\n    - 13.3 数据驱动框架\n- 14. 将 UFT 对象库转换为 LeanFT 中的应用模型\n\
+    - 15. 将 LeanFT 测试与 CI 服务器集成\n    - 15.1 在 Bamboo 中添加 Maven 任务\n    - 15.2 在 Jenkins\
+    \ 中创建和配置构建\n    - 15.3 在 TeamCity 中 Maven 项目的构建步骤\n- 16. 挑战与解决方案\n    - 16.1 LeanFT\
+    \ 自动化的挑战\n    - 16.2 使用第三方对象处理\n    - 原生对象属性和方法\n- 17. LeanFT 常见问题及解决方案\n- 18.\
+    \ LeanFT 与其他工具的对比\n    - 18.1 HP UFT 和 LeanFT 的区别\n    - 18.2 LeanFT 与 Selenium\
+    \ 和 Ranorex 的对比\n- 19. LeanFT Java 参考\n\n# 1. 简介\nLeanFT 代表功能测试。。由 HP 开发的工具，与\
+    \ Ranorex 非常相似。关于 LeanFT 的注意事项如下：\n\n1. 它是一项授权工具。\n2. 由 HP 在 2015 年开发。\n3. 它是\
+    \ `UFT` (`QTP`) 的轻量级版本。\n4. 通过 LeanFT，你可以使用 .Net 语言以及 Java 编写测试。\n5. LeanFT 为\
+    \ Visual Studio 和 Eclipse 提供了插件。\n6. LeanFT 使用描述编程以及应用模型来识别对象。\n\n## [2. 支持的应用程序](http://www.softpost.org/automation-testing/leanft-with-c-net/supported-applications-by-leanft/)\n\
+    LeanFT 支持以下类型的应用程序：\n\n1. IE、Chrome、Firefox、Microsoft Edge Web 应用程序\n2. Windows\
+    \ 应用程序 - WPF、Silverlight 等\n3. SAP 应用程序\n4. Java 应用程序\n5. 标准窗口和表单\n\n"
+- fmt: '
+
+    In fact, all applications supported by UFT (QTP) are also supported by LeanFT.
+
+
+    # 3. Installation
+
+
+    ## 3.1 Installation of LeanFT and plugins for IDEs
+
+    First visit [https://saas.hpe.com/en-us/software/leanft] and download the trail
+    version of LeanFT.
+
+    Before starting the installation process of LeanFT, ensure below things:
+
+
+    1. You have a `node.js` and IDE tools (`Visual Studio`, `IntelliJ IDEA`, `Eclipse`)
+    already installed on your system.
+
+    2. Anti-virus software is disabled.
+
+
+    At the time of installation, you will choose which plugins to be installed.
+
+
+    By default, LeanFT is installed at `C:\Program Files (x86)\HP\LeanFT`.
+
+
+    Once installed, start the LeanFT engine (from installation directory or from Start
+    menu of Windows). By default, LeanFT service runs on port `5095`. Below screen
+    shot shows the installation options during installation process. Please select
+    full installation with visual studio and Eclipse options checked.![](image163.jpg)
+
+
+    If you have got IntelliJ installed on your system, you will see below screen.
+    Just select the checkbox next to IntelliJ IDEA to install the LeanFT plugin for
+    IntelliJ IDEA.![](image168.jpg)
+
+
+    ### LeanFT plugins
+
+    After installation of LeanFT, start the runtime engine as shown in below image.
+    By default, engine runs on the port `5095`.![](image175.jpg)
+
+
+    ## 3.2 Installing browser Extensions
+
+    After installation of LeanFT, you can view the browser extension files at below
+    location in LeanFT installation directory.![](image182.jpg)
+
+
+    ### Browser extensions for LeanFT
+
+    Just drag and drop the extension files on the browsers. Browser will install these
+    extensions when you drop these extension files on it.
+
+    Without installing and enabling these extensions in browsers, you will not be
+    able to automate the web application.
+
+    Below image shows the LeanFT extension enabled in chrome browser.![](image190.jpg)
+
+
+    ### LeanFT extension in Chrome
+
+
+    # 4. Getting Started
+
+
+    ## 4.1 LeanFT settings
+
+    You can view and edit the LeanFT settings from within IntelliJ IDEA IDE as shown
+    in below image.![](image203.jpg)
+
+
+    ### LeanFT Engine and Object Identification Settings![](image208.jpg)
+
+    ### Add-ins in LeanFT[![](image214.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/Engine-connection-and-object-synchronization-timeout-in-LeanFT.png)
+
+    ### Engine connection and object synchronization timeout in LeanFT![](image220.jpg)
+
+
+    ### Object Identification settings in LeanFT
+
+    There are the most important LeanFT settings:
+
+
+    1. **Add-ins**: In this section, we can specify which add-ins you want to load.
+
+    2. **Engine connection and Run-time settings**: In this section, we can specify
+    the port of engine and Engine Idle time out. We can also specify object synchronization
+    timeout. LeanFT will wait for this much time before throwing the exception.
+
+    3. **Mobile Settings**: In this setting we can specify the mobile center server
+    address to automate the mobile applications with LeanFT.
+
+    4. **Object Identification settings**: In this tab, we can specify which properties
+    should be used to identify the objects.
+
+
+    ## 4.2 License types in LeanFT
+
+    LeanFT comes with 4 types of licenses as shown in below image:
+
+
+    1. **Seat License** - Tied to one machine
+
+    2. **Concurrent license** - Multiple machines can use this license
+
+    3. **Commuter license**
+
+    4. **Remote commuter license**
+
+    [![](image242.jpg)](http://www.softpost.org/wp-content/uploads/2015/09/license-wizard.jpg)
+
+
+    # 5. Core Concepts
+
+
+    ## 5.1 Object identification Center
+
+    Object Identification Center is just like Object Spy in QTP/UFT.
+
+    Object Identification Center runs in 2 modes:
+
+
+    1. `simple` - allows you to just view the object property - values
+
+    2. `edit` - allows you to view and edit the object property values
+
+
+    Object identification center allows you to do below things:
+
+
+    1. Inspect the objects.
+
+    2. Learn about the object parent details, hierarchy.
+
+    3. Learn about the object properties and values.
+
+    4. One cool feature of Object Identification center is that generation of code
+    snippets in Java or C#
+
+    5. Highlight the object.
+
+    6. We can also capture the screenshot of the object.
+
+    7. It also allows you to add the object to Application model.
+
+
+    You can launch the Object Identification center from IntelliJ IDEA as shown in
+    below image.![](image269.jpg)
+
+    **Launching LeanFT Object Identification Center in IntelliJ IDE**
+
+    Below image shows how to inspect the elements inside web page using Object Identification
+    Center.[![](image277.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/Object-Identification-Center-in-LeanFT.png)
+
+    ### Object Identification Center in LeanFT
+
+
+    ## 5.2 Understanding LeanFT SDK APIs
+
+    Some of the most important packages and classes in LeanFT API are mentioned below:
+
+
+    1. `com.hp.lft.report` - `Reporter` class can be used to dump data in report
+
+    2. `com.hp.lft.sdk` - Core functionality
+
+    3. `com.hp.lft.sdk.insight` - used to identify the objects based on images
+
+    4. `com.hp.lft.sdk.apitesting.uft` - UFT API used in LeanFT
+
+    5. `com.hp.lft.sdk.java` - API to automate Java application (`Swing`/`AWT` etc)
+
+    6. `com.hp.lft.sdk.mobile` - API to automate mobile applications
+
+    7. `com.hp.lft.sdk.sap.gui` and `com.hp.lft.sdk.sap.ui5` - API to automate SAP
+    applications
+
+    8. `com.hp.lft.sdk.stdwin` - API to automate Standard windows applications
+
+    9. `com.hp.lft.sdk.utils` - helper methods
+
+    10. `com.hp.lft.sdk.web` - API to automate Standard Web applications
+
+    11. `com.hp.lft.sdk.winforms` and `com.hp.lft.sdk.wpf` - API to automate .Net
+    applications
+
+    12. `com.hp.lft.unittesting` and `com.hp.lft.unittesting.datadriving` - API to
+    work with Unit testing framework of LeanFT
+
+    13. `com.hp.lft.verifications` - It provides `Verify` class that can be used to
+    assert the expected values
+
+    '
+  raw: 'In fact, all applications supported by UFT (QTP) are also supported by LeanFT.3\.
+    Installation3.1 Installation of LeanFT and plugins for IDEsFirst visit [https://saas.hpe.com/en-us/software/leanft ](https://saas.hpe.com/en-us/software/leanft)
+    and download the trail version of LeanFT.Before starting the installation process
+    of LeanFT, ensure below things
+
+
+    1.  You have a node.js and IDE tools (Visual Studio, IntelliJ IDEA, Eclipse) already
+    installed on your system.
+
+
+    2.  Anti-virus software is disabled
+
+
+    At the time of installation, you will choose which plugins to be installed.
+
+
+    By default, LeanFT is installed at C:\Program Files (x86)\HP\LeanFT
+
+
+    Once installed, start the LeanFT engine (from installation directory or from Start
+    menu of Windows). By default, LeanFT service runs on port 5095Below screen shot
+    shows the installation options during installation process. Please select full
+    installation with visual studio and Eclipse options checked.![](image163.jpg)If
+    you have got IntelliJ installed on your system, you will see below screen. Just
+    select the checkbox next to IntelliJ IDEA to install the LeanFT plugin for IntelliJ
+    IDEA.![](image168.jpg)LeanFT pluginsAfter installation of LeanFT, start the runtime
+    engine as shown in below image. By default, engine runs on the port 5095.![](image175.jpg)3.2
+    Installing browser ExtensionsAfter installation of LeanFT, you can view the browser
+    extension files at below location in LeanFT installation directory.![](image182.jpg)Browser
+    extensions for LeanFTJust drag and drop the extension files on the browsers. Browser
+    will install these extensions when you drop these extension files on it.Without
+    installing and enabling these extensions in browsers, you will not be able to
+    automate the web application.Below image shows the LeanFT extension enabled in
+    chrome browser.![](image190.jpg)LeanFT extension in Chrome4\. Getting Started4.1
+    LeanFT settingsYou can view and edit the LeanFT settings from within IntelliJ
+    IDEA IDE as shown in below image.![](image203.jpg)LeanFT Engine and Object Identification
+    Settings![](image208.jpg)Add-ins in LeanFT[![](image214.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/Engine-connection-and-object-synchronization-timeout-in-LeanFT.png)Engine
+    connection and object synchronization timeout in LeanFT![](image220.jpg)Object
+    Identification settings in LeanF THere are the most important LeanFT settings.
+
+
+    1.  Add-ins - In this section, we can specify which add-ins you want to load.
+
+
+    2.  Engine connection and Run-time settings - In this section, we can specify
+    the port of engine and Engine Idle time out. We can also specify object synchronization
+    timeout. LeanFT will wait for this much time before throwing the exception.
+
+
+    3.  Mobile Settings - In this setting we can specify the mobile center server
+    address to automate the mobile applications with LeanFT.
+
+
+    4.  Object Identification settings - In this tab, we can specify which properties
+    should be used to identify the objects.
+
+
+    4.2 License types in LeanFTLeanFT comes with 4 types of licenses as shown in below
+    image.
+
+
+    1.  Seat License - Tied to one machine
+
+
+    2.  Concurrent license - Multiple machines can use this license
+
+
+    3.  Commuter license
+
+
+    4.  Remote commuter license
+
+
+    [![](image242.jpg)](http://www.softpost.org/wp-content/uploads/2015/09/license-wizard.jpg)5\.
+    Core Concepts5.1 Object identification CenterObject Identification Center is just
+    like Object Spy in QTP/UFT
+
+
+    Object Identification Center runs in 2 modes.
+
+
+    1.  simple - allows you to just view the object property - values
+
+
+    2.  edit - allows you to view and edit the object property values
+
+
+    Object identification center allows you to do below things
+
+
+    1.  Inspect the objects.
+
+
+    2.  Learn about the object parent details, hierarchy.
+
+
+    3.  Learn about the object properties and values.
+
+
+    4.  One cool feature of Object Identification center is that generation of code
+    snippets in Java or C#
+
+
+    5.  Highlight the object
+
+
+    6.  We can also capture the screenshot of the object
+
+
+    7.  It also allows you to add the object to Application model
+
+
+    You can launch the Object Identification center from IntelliJ IDEA as shown in
+    below image.![](image269.jpg)Launching LeanFT Object Identification Center in
+    IntelliJ IDE ABelow image shows how to inspect the elements inside web page using
+    Object Identification Center.[![](image277.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/Object-Identification-Center-in-LeanFT.png)Object
+    Identification Center in LeanF T5.2 Understanding LeanFT SDK APISome of the most
+    important packages and classes  in LeanFT API are mentioned below.
+
+
+    1.  com.hp.lft.report - Reporter class can be used to dump data in report
+
+
+    2.  com.hp.lft.sdk - Core functionality
+
+
+    3.  com.hp.lft.sdk.insight - used to identify the objects based on images
+
+
+    4.  com.hp.lft.sdk.apitesting.uft - UFT API used in LeanFT
+
+
+    5.  com.hp.lft.sdk.java - API to automate Java application (Swing/AWT etc)
+
+
+    6.  com.hp.lft.sdk.mobile - API to automate mobile applications
+
+
+    7.  com.hp.lft.sdk.sap.gui and com.hp.lft.sdk.sap.ui5 - API to automate SAP applications
+
+
+    8.  com.hp.lft.sdk.stdwin - API to automate Standard windows applications
+
+
+    9.  com.hp.lft.sdk.utils - helper methods
+
+
+    10.  com.hp.lft.sdk.web - API to automate Standard Web applications
+
+
+    11.  com.hp.lft.sdk.winforms and com.hp.lft.sdk.wpf - API to automate .Net applications
+
+
+    12.  com.hp.lft.unittesting and com.hp.lft.unittesting.datadriving - API to work
+    with Unit testing framework of LeanFT
+
+
+    13.  com.hp.lft.verifications - It provides Verify class that can be used to assert
+    the expected values'
+  toc: []
+  trans: '
+
+
+    事实上，所有由 UFT (QTP) 支持的应用也都 LeanFT 支持。
+
+
+    # 3. 安装
+
+
+    ## 3.1 安装 LeanFT 及 IDE 插件
+
+    首先访问 [https://saas.hpe.com/en-us/software/leanft] 并下载 LeanFT 试用。
+
+    在开始 LeanFT 安装过程之前，请确保以下几点：
+
+
+    1. 你的系统中已经安装了 `node.js` 和 IDE 工具（`Visual Studio`、`IntelliJ IDEA`、`Eclipse`）。
+
+    2. 已禁用杀毒软件。
+
+
+    在安装时，你将选择安装哪些插件。
+
+
+    默认情况下，LeanFT 安装在 `C:\Program Files (x86)\HP\LeanFT`。
+
+
+    安装完成后，启动 LeanFT 引擎（从安装目录或 Windows 开始菜单）。默认情况下，LeanFT 服务运行在端口 `5095`。下图显示了安装过程中的安装选项。请选择勾选
+    visual studio 和 Eclipse 选项的完整安装![](img/image163.jpg)
+
+
+    如果你在系统中安装了 IntelliJ，将看到下面的界面。只需勾选 IntelliJ IDEA 旁边的复选框，即可为 IntelliJ IDEA 安装 LeanFT
+    插件![](img/image168.jpg)
+
+
+    ### LeanFT 插件
+
+    安装 LeanFT 后，如如下所示所示运行时引擎。默认情况下，引擎运行在端口 `5095`![](img/image175.jpg)
+
+
+    ## 3.2 安装浏览器扩展
+
+    安装 LeanFT 后，你可以在 LeanFT 安装目录下的以下位置查看浏览器扩展文件![](img/image182.jpg)
+
+
+    ### LeanFT 浏览器扩展
+
+    只需将扩展文件拖放到浏览器中。当你将这些扩展文件拖入浏览器时，浏览器将安装这些扩展。
+
+    如果没有在浏览器中安装并启用这些扩展，你将无法自动化 Web 应用。下图显示了在 Chrome 浏览器中启用的 LeanFT 扩展![](img/image190.jpg)
+
+
+    ### Chrome 中的 LeanFT 扩展
+
+
+    # 4. 入门
+
+
+    ## 4.1 LeanFT 设置
+
+    你可以从 IntelliJ IDEA IDE 内查看并编辑 LeanFT 设置，如下所示![](img/image203.jpg)
+
+
+    ### LeanFT 引擎和对象识别设置![](img/image208.jpg)
+
+    ### LeanFT 中的加载项![](http://www.softpost.org/wp-content/uploads/2016/07/Engine-connection-and-object-synchronization-timeout-in-LeanFT.png)
+
+    ### LeanFT 中的引擎连接和对象同步超时![](img/image220.jpg)
+
+
+    ### LeanFT 中的对象识别设置
+
+    以下是最重要的 LeanFT 设置：
+
+
+    1. **Add-ins (加载项)**：在此部分，我们可以指定想要加载的加载项。
+
+    2. **Engine connection and Run-time settings (引擎连接和运行时设置)**：在此部分，我们可以指定引擎端口和引擎空闲超时。我们还可以指定对象同步超时。LeanFT
+    在抛出异常之前将等待足够的时间。
+
+    3. **Mobile Settings (移动设置)**：在此设置中，我们可以指定移动中心服务器地址，以便使用 LeanFT 自动化移动应用。
+
+    4. **Object Identification settings (对象识别设置)**：在此选项卡中，我们可以指定使用哪些属性来识别对象。
+
+
+    ## 4.2 LeanFT 中的许可证类型
+
+    LeanFT 带有 4 种许可证，如下所示：
+
+
+    1. **Seat License (节点许可)** - 绑定到一台机器
+
+    2. **Concurrent license (并发许可)** - 多台机器可以使用此许可
+
+    3. **Commuter license (通勤型许可)**
+
+    4. **Remote commuter license (远程通勤型许可)**
+
+    ![](http://www.softpost.org/wp-content/uploads/2015/09/license-wizard.jpg)
+
+
+    # 5. 核心概念
+
+
+    ## 5.1 对象识别中心 (Object Identification Center)
+
+    对象识别中心就像 QTP/UFT 中的 Object Spy。
+
+    对象识别中心以两种模式运行：
+
+
+    1. `simple` - 允许你查看对象的属性值
+
+    2. `edit` - 允许你查看并编辑对象的属性值
+
+
+    对象识别中心允许你执行以下操作：
+
+
+    1. 检查对象。
+
+    2. 了解对象的父详情、层级结构。
+
+    3. 了解对象的属性和值。
+
+    4. 对象识别中心的一个酷功能是可以生成 Java 或 C# 代码段。
+
+    5. 高亮对象。
+
+    6. 我们还可以捕捉对象的截图。
+
+    7. 它还允许将对象添加到应用程序模型（Application model）。
+
+
+    你可以从 IntelliJ IDEA 启动对象识别中心，如下所示![](img/image269.jpg)
+
+    **在 IntelliJ IDE 中启动 LeanFT 对象识别中心**
+
+    下图显示了如何使用对象识别中心检查网页内部的元素![](http://www.softpost.org/wp-content/uploads/2016/07/Object-Identification-Center-in-LeanFT.png)
+
+    ### LeanFT 中的对象识别中心
+
+
+    ## 5.2 了解 LeanFT SDK API
+
+    以下列出了 LeanFT API 中一些重要的包和类：
+
+
+    1. `com.hp.lft.report` - `Reporter` 类可用于在报告中导出数据。
+
+    2. `com.hp.lft.sdk` - 核心功能。
+
+    3. `com.hp.lft.sdk.insight` - 用于根据图像识别对象。
+
+    4. `com.hp.lft.sdk.apitesting.uft` - LeanFT 中使用的 UFT API。
+
+    5. `com.hp.lft.sdk.java` - 用于自动化 Java 应用（`Swing`/`AWT` 等）的 API。
+
+    6. `com.hp.lft.sdk.mobile` - 用于移动应用的 API。
+
+    7. `com.hp.lft.sdk.sap.gui` 和 `com.hp.lft.sdk.sap.ui5` - 用于 SAP 应用的 API。
+
+    8. `com.hp.lft.sdk.stdwin` - 用于标准 Windows 应用的 API。
+
+    9. `com.hp.lft.sdk.utils` - 辅助方法。
+
+    10. `com.hp.lft.sdk.web` - 用于标准 Web 应用的 API。
+
+    11. `com.hp.lft.sdk.winforms` 和 `com.hp.lft.sdk.wpf` - 用于 .Net 应用的 API。
+
+    12. `com.hp.lft.unittesting` 和 `com.hp.lft.unittesting.datadriving` - 用于 LeanFT
+    单元测试框架的 API。
+
+    13. `com.hp.lft.verifications` - 它提供了 `Verify` 类，可用于断言预期值。
+
+
+    '
+- fmt: "\n# 6. New LeanFT project in IntelliJ IDEA\n\n## 6.1 Installing the LeanFT\
+    \ jar files in Maven Repository\nTo integrate the LeanFT with `Maven`, you will\
+    \ have to install the LeanFT library files in local maven repositories. Execute\
+    \ below commands to install the LeanFT jar files in a local repository.\n\n```bash\n\
+    mvn install:install-file -Dfile=\"com.hp.lft.sdk-standalone.jar\" -DgroupId=\"\
+    com.hp.lft\" -DartifactId=\"com.hp.lft.sdk\" -Dversion=\"12.53.0\" -Dpackaging=\"\
+    jar\" -DgeneratePom=true\nmvn install:install-file -Dfile=\"com.hp.lft.report.jar\"\
+    \ -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.report\" -Dversion=\"12.53.0\"\
+    \ -Dpackaging=\"jar\" -DgeneratePom=true\nmvn install:install-file -Dfile=\"com.hp.lft.unittesting.jar\"\
+    \ -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.unittesting\" -Dversion=\"\
+    12.53.0\" -Dpackaging=\"jar\" -DgeneratePom=true\nmvn install:install-file -Dfile=\"\
+    com.hp.lft.verifications.jar\" -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.verifications\"\
+    \ -Dversion=\"12.53.0\" -Dpackaging=\"jar\" -DgeneratePom=true\n```\n\nThen add\
+    \ below dependencies in your `POM` file.\n\n```xml\n<dependency>\n    <groupId>com.hp.lft</groupId>\n\
+    \    <artifactId>com.hp.lft.sdk</artifactId>\n    <version>12.53.0</version>\n\
+    </dependency>\n<dependency>\n    <groupId>com.hp.lft</groupId>\n    <artifactId>com.hp.lft.report</artifactId>\n\
+    \    <version>12.53.0</version>\n</dependency>\n<dependency>\n    <groupId>com.hp.lft</groupId>\n\
+    \    <artifactId>com.hp.lft.unittesting</artifactId>\n    <version>12.53.0</version>\n\
+    </dependency>\n<dependency>\n    <groupId>com.hp.lft</groupId>\n    <artifactId>com.hp.lft.verifications</artifactId>\n\
+    \    <version>12.53.0</version>\n</dependency>\n```\n\nSometimes you might need\
+    \ to deploy the jar files in organization central repository. Below sample command\
+    \ shows how to deploy LeanFT jar file to central repository.\n\n```bash\nmvn deploy:deploy-file\
+    \ -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.sdk\" -Dversion=\"12.53.0\"\
+    \ -Dpackaging=jar -Dfile=\"com.hp.lft.sdk-standalone.jar\" -DrepositoryId=<id-in-settings.xml>\
+    \ -Durl=<url-of-the-central-repository>\n```\n\n## 6.2 Creating LeanFT Maven Project\n\
+    We can create a new LeanFT maven project in IntelliJ IDEA as shown in below images.\
+    \ Note that once the project is created, you can add required dependencies in\
+    \ `POM.xml` file.\n\n![](image375.jpg)\nLeanFT Junit Maven project in IntelliJ\
+    \ IDE AT\n\nThen enter group id and artifact id for your project and also give\
+    \ the name of the project. Once the maven project is created, add LeanFT dependencies\
+    \ as shown in below image.\n\n![](image382.jpg)\nAdding LeanFT libraries to Maven\
+    \ project in IntelliJ IDEA\n\nAfter that, you can write your tests and enjoy automating\
+    \ applications using LeanFT.\n\n## 6.3 Creating LeanFT Project with Gradle and\
+    \ TestNG\nTo create a LeanFT project with `Gradle` and `TestNG`, follow below\
+    \ steps.\n\nFirst of all, create a sample Gradle project in IntelliJ IDEA. Then\
+    \ add `libs` directory under root directory and copy all LeanFT library files\
+    \ from `C:\\Program Files (x86)\\LeanFT\\SDK\\Java` in it.\n\nThen ensure that\
+    \ your `build.gradle` file contains below.\n\n```gradle\ngroup 'org.soft'\nversion\
+    \ '1.0-SNAPSHOT'\napply plugin: 'java'\nrepositories {\n    mavenCentral\n}\n\
+    dependencies {\n    testCompile group: 'org.testng', name: 'testng', version:\
+    \ '6.9.10'\n    compileTree (dir: 'libs', include: '*.jar')\n}\ntest {\n    useTestNG\
+    \ {\n        suites 'src/test/resources/testng.xml'\n    }\n}\n```\n\nAfter this,\
+    \ create a sample TestNG test class and add LeanFT test as shown in below example.\
+    \ Notice that you will have to initialize the LeanFT SDK before starting the tests\
+    \ and clean up SDK at the end of tests.\n\n```java\npackage soft ;\nimport com.hp.lft.report.Reporter;\n\
+    import org.testng.annotations.AfterClass;\nimport org.testng.annotations.AfterMethod;\n\
+    import org.testng.annotations.BeforeClass;\nimport org.testng.annotations.BeforeMethod;\n\
+    import org.testng.annotations.Test;\nimport com.hp.lft.sdk.*;\nimport com.hp.lft.verifications.*;\n\
+    import java.net.URI;\npublic class SimpleLeanFTTest{\n    @BeforeClass\n    public\
+    \ void beforeClass () {\n    }\n    @AfterClass\n    public void afterClass ()\
+    \ {\n    }\n    @BeforeMethod\n    public void beforeMethod () {\n        try\
+    \ {\n            ModifiableSDKConfiguration config = new ModifiableSDKConfiguration\
+    \ ();\n            config . setServerAddress ( new URI ( \"ws://localhost:5095\"\
+    \ ));\n            SDK . init ( config );\n            Reporter . init ();\n \
+    \       } catch ( Exception ex ){\n            System . out . println ( \"Exception\
+    \ occured \" + ex . toString());\n        }\n    }\n    @AfterMethod\n    public\
+    \ void afterMethod () throws Exception {\n        Reporter . generateReport ();\n\
+    \        SDK . cleanup ();\n    }\n    @Test\n    public void test () throws GeneralLeanFtException\
+    \ {\n        Verify . areEqual ( 22 , 22 , \"Verify that 22 == 22\" );\n    }\n\
+    }\n```\nAfter this build your project and then run the .\n\n## 6.4 LeanFT Properties\n\
+    When we create a LeanFT project using templates, one properties file (`leanft.properties`)\
+    \ is created and stored in resources directory. Here are the most important settings\
+    \ in this file that we can use.\n\n1. `serverAddress` - specify the LeanFT engine\
+    \ address\n2. `SDK Mode` - Replay or Interactive\n3. `LeanFT Service Address`\
+    \ - `ws://localhost:5095`\n4. `Connection timeout` - 60 sec\n5. `Response timeout`\
+    \ - 600 sec\n6. `Server autolaunch` - true\n\nHere are the most important settings\
+    \ related to LeanFT Report\n\n1. `title` - Name of the report. By default, it\
+    \ is Run Results.\n2. `description` - Description of the report. By default, it\
+    \ is empty.\n3. `targetDirectory` - Directory where report should be stored. By\
+    \ default it is current directory.\n4. `overrideExisting` - Whether to override\
+    \ existing report. By default, it's value is true.\n5. `report folder` - RunResults\n\
+    6. `override existing` - true\n7. `filter level` - All, Warning, Error, Off\n\
+    8. `snapshot level` - All, OnError, Off\n\n## 6.5 Setting up LeanFT project in\
+    \ IntelliJ IDEA\nIn this topic, we will see how to set up a LeanFT project in\
+    \ IntelliJ IDEA. We can create a new LeanFT project in 2 ways.\n\n1. Using LeanFT\
+    \ templates\n2. Custom framework\n"
+  raw: '6\. New LeanFT project in IntelliJ IDEA6.1 Installing the LeanFT jar files
+    in Maven RepositoryTo integrate the LeanFT with Maven, you will have to install
+    the LeanFT library files in local maven repositories.Execute below commands to
+    install the LeanFT jar files in a local repository.mvn install:install-file -Dfile="com.hp.lft.sdk-standalone.jar"
+    -DgroupId="com.hp.lft" -DartifactId="com.hp.lft.sdk" -Dversion="12.53.0" -Dpackaging="jar"
+    -DgeneratePom=truemvn install:install-file -Dfile="com.hp.lft.report.jar" -DgroupId="com.hp.lft"
+    -DartifactId="com.hp.lft.report" -Dversion="12.53.0" -Dpackaging="jar" -DgeneratePom=truemvn
+    install:install-file -Dfile="com.hp.lft.unittesting.jar" -DgroupId="com.hp.lft"
+    -DartifactId="com.hp.lft.unittesting" -Dversion="12.53.0" -Dpackaging="jar" -DgeneratePom=truemvn
+    install:install-file -Dfile="com.hp.lft.verifications.jar" -DgroupId="com.hp.lft"
+    -DartifactId="com.hp.lft.verifications" -Dversion="12.53.0" -Dpackaging="jar"
+    -DgeneratePom=tru eThen add below dependencies in your POM file.         <dependency>            
+    <groupId> com.hp.lft </groupId>             <artifactId> com.hp.lft.sdk </artifactId>            
+    <version> 12.53.0 </version>         </dependency>             <dependency>            
+    <groupId> com.hp.lft </groupId>             <artifactId> com.hp.lft.report </artifactId>            
+    <version> 12.53.0 </version>         </dependency>         <dependency>            
+    <groupId> com.hp.lft </groupId>             <artifactId> com.hp.lft.unittesting
+    </artifactId>             <version> 12.53.0 </version>         </dependency>        
+    <dependency>             <groupId> com.hp.lft </groupId>             <artifactId>
+    com.hp.lft.verifications </artifactId>             <version> 12.53.0 </version>        
+    </dependency>Sometimes you might need to deploy the jar files in organization
+    central repository. Below sample command shows how to deploy LeanFT jar file to
+    central repository.mvn deploy:deploy-file -DgroupId= "com.hp.lft" -DartifactId=
+    "com.hp.lft.sdk" -Dversion= "12.53.0" -Dpackaging=jar -Dfile= "com.hp.lft.sdk-standalone.jar"
+    -DrepositoryId=<id-in-settings.xml> -Durl=<url-of-the-central-repository>6.2 Creating
+    LeanFT Maven ProjectWe can create a new LeanFT maven project in IntelliJ IDEA
+    as shown in below images.Note that once the project is created, you can add required
+    dependencies in POM.xml file.![](image375.jpg)LeanFT Junit Maven project in IntelliJ
+    IDE AThen enter group id and artifact id for your project and also give the name
+    of the project. Once the maven project is created, add LeanFT dependencies as
+    shown in below image.![](image382.jpg)Adding LeanFT libraries to Maven project
+    in IntelliJ IDEAAfter that, you can write your tests and enjoy automating applications
+    using LeanFT.6.3 Creating LeanFT Project with Gradle and TestNGTo create a LeanFT
+    project with Gradle and TestNG, follow below steps.
+
+
+    First of all, create a sample Gradle project in IntelliJ IDEA. Then add a libs
+    directory under root directory and copy all LeanFT library files from C:\Program
+    Files (x86)\HP\LeanFT\SDK\Java in it.Then ensure that your build.gradle file contains
+    below configuration.group ''org.softpost''version ''1.0-SNAPSHOT''apply plugin:
+    ''java''repositories {    mavenCentral ()}dependencies {    testCompile group:
+    ''org.testng'' , name: ''testng'' , version: ''6.9.10''    compile fileTree (
+    dir: ''libs'' , include: ''*.jar'' )}test {    useTestNG {        suites ''src/test/resources/testng.xml''    
+    }}After this, create a sample TestNG test class and add LeanFT test as shown in
+    below example. Notice that you will have to initialize the LeanFT SDK before starting
+    the tests and clean up SDK at the end of tests.package org . softpost ;import
+    com.hp.lft.report.Reporter ;import org.testng.annotations.AfterClass ;import org.testng.annotations.AfterMethod
+    ;import org.testng.annotations.BeforeClass ;import org.testng.annotations.BeforeMethod
+    ;import org.testng.annotations.Test ;import com.hp.lft.sdk.* ;import com.hp.lft.verifications.*
+    ;import java.net.URI ;public class SimpleLeanFTTest{     @BeforeClass     public
+    void beforeClass ()     {     }     @AfterClass     public void afterClass ()    
+    {     }     @BeforeMethod     public void beforeMethod ()     {         try        
+    {            ModifiableSDKConfiguration config = new ModifiableSDKConfiguration
+    ();            config . setServerAddress ( new URI ( "ws://localhost:5095" ));            SDK
+    . init ( config );            Reporter . init ();         }          catch ( Exception
+    ex ){            System . out . println ( "Exception occured " + ex . toString
+    ());         }     }     @AfterMethod    public void afterMethod () throws Exception           
+    {        Reporter . generateReport ();        SDK . cleanup ();     }     @Test    
+    public void test () throws GeneralLeanFtException     {        Verify . areEqual
+    ( 22 , 22 , "Verify that 22 == 22" );     }}After this build your project and
+    then run the tests .6.4 LeanFT PropertiesWhen we create a LeanFT project using
+    templates, one properties file (leanft.properties) is created and stored in resources
+    directory.Here are the most important settings in this file that we can use.
+
+
+    1.  serverAddress - specify the LeanFT engine address
+
+
+    2.  SDK Mode - Replay or Interactive
+
+
+    3.  LeanFT Service Address - ws://localhost:5095
+
+
+    4.  Connection timeout - 60 sec
+
+
+    5.  Response timeout - 600 sec
+
+
+    6.  Server autolaunch - true
+
+
+    Here are the most important settings related to LeanFT Report
+
+
+    1.  title - Name of the report. By default, it is Run Results.
+
+
+    2.  description - Description of the report. By default, it is empty.
+
+
+    3.  targetDirectory - Directory where report should be stored. By default it is
+    current directory.
+
+
+    4.  overrideExisting - Whether to override existing report. By default, it''s
+    value is true.
+
+
+    5.  report folder - RunResults
+
+
+    6.  override existing - true
+
+
+    7.  filter level - All, Warning, Error, Off
+
+
+    8.  snapshot level - All, OnError, Of f
+
+
+    6.5 Setting up LeanFT project in IntelliJ IDEAIn this topic, we will see how to
+    set up a LeanFT project in IntelliJ IDEA.We can create a new LeanFT project in
+    2 ways.
+
+
+    1.  Using LeanFT templates
+
+
+    2.  Custom framework'
+  toc: []
+  trans: "\n\n# 6. 在 IntelliJ IDEA 中新建 LeanFT 项目\n\n## 6.1 在 Maven 仓库中安装 LeanFT jar\
+    \ 文件\n要将 LeanFT 与 `Maven` 集成，你必须将 LeanFT 库文件安装到本地 Maven 仓库。执行以下命令将 LeanFT jar\
+    \ 文件安装到本地仓库。\n\n```bash\nmvn install:install-file -Dfile=\"com.hp.lft.sdk-standalone.jar\"\
+    \ -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.sdk\" -Dversion=\"12.53.0\"\
+    \ -Dpackaging=\"jar\" -DgeneratePom=true\nmvn install:install-file -Dfile=\"com.hp.lft.report.jar\"\
+    \ -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.report\" -Dversion=\"12.53.0\"\
+    \ -Dpackaging=\"jar\" -DgeneratePom=true\nmvn install:install-file -Dfile=\"com.hp.lft.unittesting.jar\"\
+    \ -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.unittesting\" -Dversion=\"\
+    12.53.0\" -Dpackaging=\"jar\" -DgeneratePom=true\nmvn install:install-file -Dfile=\"\
+    com.hp.lft.verifications.jar\" -DgroupId=\"com.hp.lft\" -DartifactId=\"com.hp.lft.verifications\"\
+    \ -Dversion=\"12.53.0\" -Dpackaging=\"jar\" -DgeneratePom=true\n```\n\n然后将在你的\
+    \ `POM` 文件中添加以下依赖。\n\n```xml\n<dependency>\n    <groupId>com.hp.lft</groupId>\n\
+    \    <artifactId>com.hp.lft.sdk</artifactId>\n    <version>12.53.0</version>\n\
+    </dependency>\n<dependency>\n    <groupId>com.hp.lft</groupId>\n    <artifactId>com.hp.lft.report</artifactId>\n\
+    \    <version>12.53.0</version>\n</dependency>\n<dependency>\n    <groupId>com.hp.lft</groupId>\n\
+    \    <artifactId>com.hp.lft.unittesting</artifactId>\n    <version>12.53.0</version>\n\
+    </dependency>\n<dependency>\n    <groupId>com.hp.lft</groupId>\n    <artifactId>com.hp.lft.verifications</artifactId>\n\
+    \    <version>12.53.0</version>\n</dependency>\n```\n\n有时你可能需要将 jar 文件部署到组织中央仓库。下面的示例命令显示了如何将\
+    \ LeanFT jar 文件部署到中央仓库。\n\n```bash\nmvn deploy:deploy-file -DgroupId=\"com.hp.lft\"\
+    \ -DartifactId=\"com.hp.lft.sdk\" -Dversion=\"12.53.0\" -Dpackaging=jar -Dfile=\"\
+    com.hp.lft.sdk-standalone.jar\" -DrepositoryId=<id-in-settings.xml> -Durl=<url-of-the-central-repository>\n\
+    ```\n\n## 6.2 创建 LeanFT Maven 项目\n我们可以像下面的图片所示在 IntelliJ IDEA 中创建一个新的 LeanFT maven\
+    \ 项目。注意，一旦创建了项目，你就可以 `POM.xml` 文件中添加所需的依赖。\n\n![](img/image375.jpg)\nIntelliJ\
+    \ IDE 中的 LeanFT Junit Maven 项目\n\n然后为你的项目输入 group id 和 artifact id，并指定项目名称。一旦\
+    \ maven 项目创建完成，如如下所示添加 LeanFT 依赖。\n\n![](img/image382.jpg)\n在 IntelliJ IDEA 中向\
+    \ Maven 项目添加 LeanFT 库\n\n之后，你就可以编写测试用例并享受使用 LeanFT 进行自动化测试了。\n\n## 6.3 使用 Gradle\
+    \ 和 TestNG 创建 LeanFT 项目\n要使用 `Gradle` 和 `TestNG` 创建 LeanFT 项目，请遵循以下步骤。\n\n首先，在\
+    \ IntelliJ IDEA 中创建一个示例 Gradle 项目。然后在根目录下添加一个 `libs` 目录，并将来自 `C:\\Program Files\
+    \ (x86)\\LeanFT\\SDK\\Java` 的所有 LeanFT 库文件复制到该目录中。\n\n然后，确保你的 `build.gradle` 文件包含以下内容。\n\
+    \n```gradle\ngroup 'org.soft'\nversion '1.0-SNAPSHOT'\napply plugin: 'java'\n\
+    repositories {\n    mavenCentral\n}\ndependencies {\n    testCompile group: 'org.testng',\
+    \ name: 'testng', version: '6.9.10'\n    compileTree (dir: 'libs', include: '*.jar')\n\
+    }\ntest {\n    useTestNG {\n        suites 'src/test/resources/testng.xml'\n \
+    \   }\n}\n```\n\n此之后，创建一个示例 TestNG 测试类，并如下例所示添加 LeanFT 测试。注意，你必须在开始测试之前初始化 LeanFT\
+    \ SDK，并在测试结束后清理 SDK。\n\n```java\npackage soft ;\nimport com.hp.lft.report.Reporter;\n\
+    import org.testng.annotations.AfterClass;\nimport org.testng.annotations.AfterMethod;\n\
+    import org.testng.annotations.BeforeClass;\nimport org.testng.annotations.BeforeMethod;\n\
+    import org.testng.annotations.Test;\nimport com.hp.lft.sdk.*;\nimport com.hp.lft.verifications.*;\n\
+    import java.net.URI;\npublic class SimpleLeanFTTest{\n    @BeforeClass\n    public\
+    \ void beforeClass () {\n    }\n    @AfterClass\n    public void afterClass ()\
+    \ {\n    }\n    @BeforeMethod\n    public void beforeMethod () {\n        try\
+    \ {\n            ModifiableSDKConfiguration config = new ModifiableSDKConfiguration\
+    \ ();\n            config . setServerAddress ( new URI ( \"ws://localhost:5095\"\
+    \ ));\n            SDK . init ( config );\n            Reporter . init ();\n \
+    \       } catch ( Exception ex ){\n            System . out . println ( \"Exception\
+    \ occured \" + ex . toString());\n        }\n    }\n    @AfterMethod\n    public\
+    \ void afterMethod () throws Exception {\n        Reporter . generateReport ();\n\
+    \        SDK . cleanup ();\n    }\n    @Test\n    public void test () throws GeneralLeanFtException\
+    \ {\n        Verify . areEqual ( 22 , 22 , \"Verify that 22 == 22\" );\n    }\n\
+    }\n```\n此之后构建你的项目并运行。\n\n## 6.4 LeanFT 属性\n当我们使用模板创建 LeanFT 项目时，会创建一个属性文件 (`leanft.properties`)\
+    \ 并存储在 resources 目录中。以下是文件中我们可以使用的最重要的设置。\n\n1. `serverAddress` - 指定 LeanFT 引擎地址\n\
+    2. `SDK Mode` - 回放模式（Replay）或交互模式（Interactive）\n3. `LeanFT Service Address` -\
+    \ `ws://localhost:5095`\n4. `Connection timeout` - 60 秒\n5. `Response timeout`\
+    \ - 600 秒\n6. `Server autolaunch` - true\n\n以下是与 LeanFT 报告相关的最重要的设置\n\n1. `title`\
+    \ - 报告名称。默认为 Run Results。\n2. `description` - 报告描述。默认为空。\n3. `targetDirectory`\
+    \ - 报告存储的目录。默认是当前目录。\n4. `overrideExisting` - 是否覆盖现有报告。其默认值为 true。\n5. `report\
+    \ folder` - RunResults\n6. `override existing` - true\n7. `filter level` - 所有（All）、警告（Warning）、错误（Error）、关闭（Off）\n\
+    8. `snapshot level` - 所有（All）、错误时（OnError）、关闭（Off）\n\n## 6.5 在 IntelliJ IDEA 中配置\
+    \ LeanFT 项目\n在本主题中，我们将介绍如何在 IntelliJ IDEA 中配置 LeanFT 项目。我们可以通过 2 方式创建新的 LeanFT\
+    \ 项目。\n\n1. 使用 LeanFT 模板\n2. 自定义框架\n\n"
+- fmt: "\nIf you have installed the LeanFT plugin for IntelliJ IDEA, you can create\
+    \ new project from templates as shown in below image. Note that we can create\
+    \ a project based on 4 types of templates.\n\n[![](image570.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/New-LeanFT-project-in-IntelliJ-IDEA.png)\n\
+    New LeanFT project in IntelliJ IDEA\n\n[![](image576.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/Sample-LeanFT-project-structure.png)\n\
+    Sample LeanFT project structure\n\nTo create your own custom framework, you will\
+    \ have to initialize and clean up SDK as shown in below example. Note that in\
+    \ all upcoming examples, we have inherited `BaseTest` class.\n\n```java\npackage\
+    \ leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.sdk.ModifiableSDKConfiguration;\n\
+    import com.hp.lft.sdk.SDK;\nimport org.junit.After;\nimport org.junit.Before;\n\
+    import java.net.URI;\n\npublic class BaseTest {\n    @Before\n    public void\
+    \ test() throws Exception {\n        ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();\n\
+    \        config.setServerAddress(new URI(\"ws://localhost:5095\"));\n        SDK.init(config);\n\
+    \        Reporter.init();\n    }\n\n    @After\n    public void clean() throws\
+    \ Exception {\n        Reporter.generateReport();\n        SDK.cleanup();\n  \
+    \  }\n}\n```\n\nThen we can write test methods as shown in below example.\n\n\
+    ```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.ModifiableSDKConfiguration;\nimport com.hp.lft.sdk.SDK;\n\
+    import com.hp.lft.sdk.web.*;\nimport com.hp.lft.sdk.web.EditField;\nimport com.hp.lft.sdk.web.EditFieldDescription;\n\
+    import org.junit.Test;\nimport java.net.URI;\nimport static org.junit.Assert.assertEquals;\n\
+    \npublic class ChromeTest extends BaseTest {\n    @Test\n    public void test()\
+    \ throws Exception {\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n\
+    \        try {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate(\"http://www.softpost.org/selenium-test-page/\"\
+    );\n            browser.sync();\n        } catch (AssertionError ex) {\n     \
+    \       //Report the Exception\n            Reporter.reportEvent(\"Exception\"\
+    , \"Test failed\", Status.Failed, ex);\n            throw ex;\n        } finally\
+    \ {\n            //Close the browser\n            browser.close();\n        }\n\
+    \    }\n}\n```\n\n# 7. LeanFT Project in Eclipse\n\n## 7.1 Creating maven project\
+    \ with JUnit with LeanFT in Eclipse\nBelow images will help you understand how\
+    \ to create a maven project with JUnit and LeanFT in Eclipse. Click on New project\
+    \ menu and then click on Other.\n\n[![](image661.jpg)]\nLeanFT - Maven project\
+    \ with JUnit in Eclips e\n\nThen Select LeanFT JUnit Maven project as shown in\
+    \ below image.\n\n[![](image667.jpg)]\nLeanFT - Maven Junit Template in Eclips\
+    \ e\n\nProvide the group id and Artifact id for your project.\n\n[![](image674.jpg)]\n\
+    LeanFT - Maven JUnit project in Eclipse\n\nProject is created as shown in below\
+    \ image.\n\n[![](image680.jpg)]\nThen add external jars for LeanFT as shown in\
+    \ below image.\n\n[![](image685.jpg)]\nAdd LeanFT libraries as external jars\n\
+    \nAfter running maven build, you should be able to see the results in `RunResults`\
+    \ Directory.\n\n## 7.2 Creating maven project with TestNG in Eclipse\nBelow images\
+    \ will help you understand how to set up a LeanFT maven project with TestNG in\
+    \ Eclipse.\n\n[![](image693.jpg)]\nLeanFT - Maven project with JUnit in Eclipse\n\
+    \n[![](image698.jpg)]\nLeanFT TestNG group Id in Eclipse\n\n[![](image703.jpg)]\n\
+    LeanFT TestNG Maven Project in Eclipse\n\nLeanFT puts the tests in `src/main/java`\
+    \ directory. You should move those test classes to `src/test/java` because maven\
+    \ always looks in `src/text/java` directory for any tests to be executed.\n\n\
+    # 8. Object Identification and Management\n\n## 8.1 Description programming\n\
+    Usually in UFT, we use object repository (Application model in LeanFT) to store\
+    \ the objects inside application. So we can use those objects in automation code\
+    \ but we can also use description programming to define new test objects in the\
+    \ code itself.\n\nBelow example shows how to define new test object using description\
+    \ programming in LeanFT. We have used description programming to define 2 objects\
+    \ of type - `EditField` and `Link`. Note that we can multiple property-value pairs\
+    \ to identify the objects.\n\n```java\n//Navigate to http://www.softpost.org/selenium-test-page/\n\
+    browser.navigate(\"http://www.softpost.org/selenium-test-page/\");\nbrowser.sync();\n\
+    \n//Build edit box object and set value in it\nbrowser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder().id(\"fn\").build()).setValue(\"Sagar\");\n\
+    \n//Build link object and click on it.\nbrowser.describe(Link.class, new LinkDescription.Builder().tagName(\"\
+    A\").innerText(\"Home\").build()).click();\n```\n\n## 8.2 Application model\n\
+    Application models are similar to the object repository in UFT. We can create\
+    \ a new application model in IntelliJ IDEA as shown in below image.\n\n[![](image732.jpg)]\n\
+    Creating new LeanFT Application model item in IntelliJ IDE\n\n[![](image739.jpg)]\n\
+    Below image shows sample `AppModel.tsrx` file. In designer mode, we can add, remove\
+    \ objects in application model.\n\n[![](image745.jpg)]\nBelow image shows how\
+    \ to add the objects to application model using Object Identification Center.\n\
+    \nNote that 2 files are created after new Application model is created.\n\n1.\
+    \ `YourModel.tsrx` file -It is an XML file. We can also view this file in design\
+    \ mode where we can add and edit the objects.\n2. `YourModel.java` file containing\
+    \ the code representing the objects in the application model.\n"
+  raw: 'If you have installed the LeanFT plugin for IntelliJ IDEA, you can create
+    new project from templates as shown in below image. Note that we can create a
+    project based on 4 types of templates.[![](image570.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/New-LeanFT-project-in-IntelliJ-IDEA.png)New
+    LeanFT project in IntelliJ IDEA[![](image576.jpg)](http://www.softpost.org/wp-content/uploads/2016/07/Sample-LeanFT-project-structure.png)Sample
+    LeanFT project structureTo create your own custom framework, you will have to
+    initialize and clean up SDK as shown in below example. Note that in all upcoming
+    examples, we have inherited BaseTest class.package leanft;import com.hp.lft.report.Reporter;import
+    com.hp.lft.sdk.ModifiableSDKConfiguration;import com.hp.lft.sdk.SDK;import org.junit.After;import
+    org.junit.Before;import java.net.URI;public class BaseTest{@Before     public
+    void test() throws Exception     {         ModifiableSDKConfiguration config =
+    new ModifiableSDKConfiguration();        config.setServerAddress( new URI( "ws://localhost:5095"
+    ));SDK.init(config);Reporter.init();}@After     public void clean() throws Exception    
+    {Reporter.generateReport();SDK.cleanup();}}Then we can write test methods as shown
+    in below example.package leanft;import com.hp.lft.report.Reporter;import com.hp.lft.report.Status;import
+    com.hp.lft.sdk.ModifiableSDKConfiguration;import com.hp.lft.sdk.SDK;import com.hp.lft.sdk.web.
+    * ;import com.hp.lft.sdk.web.EditField;import com.hp.lft.sdk.web.EditFieldDescription;import
+    org.junit.Test;import java.net.URI;import static org.junit.Assert.assertEquals;public
+    class ChromeTest extends BaseTest{@Test     public void test() throws Exception
+    {Browser browser = BrowserFactory.launch(BrowserType.CHROME);         Try       
+    {             //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();}         catch
+    (AssertionError ex){            //Report the Exception           Reporter.reportEvent(
+    "Exception" , "Test failed" , Status.Failed, ex);            throw ex;}        
+    finally {             //Close the browserbrowser.close();}}}7\. LeanFT Project
+    in Eclipse7.1 Creating maven project with JUnit with LeanFT in EclipseBelow images
+    will help you understand how to create a maven project with JUnit and LeanFT in
+    Eclipse.Click on New project menu and then click on Other.![](image661.jpg)LeanFT
+    - Maven project with JUnit in Eclips eThen Select LeanFT JUnit Maven project as
+    shown in below image.![](image667.jpg)LeanFT - Maven Junit Template in Eclips
+    eProvide the group id and Artifact id for your project.![](image674.jpg)LeanFT
+    - Maven JUnit project in EclipseProject is created as shown in below image.![](image680.jpg)Then
+    add external jars for LeanFT as shown in below image.![](image685.jpg)Add LeanFT
+    libraries as external jarsAfter running maven build, you should be able to see
+    the results in RunResults Directory .7.2 Creating maven project with TestNG in
+    EclipseBelow images will help you understand how to set up a  LeanFT maven project
+    with TestNG in Eclipse.![](image693.jpg)LeanFT - Maven project with JUnit in Eclipse![](image698.jpg)LeanFT
+    TestNG group Id in Eclipse![](image703.jpg)LeanFT TestNG Maven Project in EclipseLeanFT
+    puts the tests in src/main/java directory. You should move those test classes
+    to src/test/java because maven always looks in src/text/java directory for any
+    tests to be executed.8\. Object Identification and Management8.1 Description programmingUsually
+    in UFT, we use object repository (Application model in LeanFT) to store the objects
+    inside application. So we can use those objects in automation code but we can
+    also use description programming to define new test objects in the code itself.Below
+    example shows how to define new test object using description programming in LeanFT.
+    We have used description programming to define 2 objects of type - EditField and
+    Link. Note that we can multiple property-value pairs to identify the objects.//Navigate
+    to http://www.softpost.org/selenium-test-page/            browser.navigate("http:
+    // www.softpost.org/selenium-test-page/ ");browser.sync();    //Build edit box
+    object and set value in itbrowser.describe(EditField.class,new EditFieldDescription.Builder().id("fn").build()).setValue("Sagar");   
+    //Build link object and click on it.browser.describe(Link.class, new LinkDescription.Builder().tagName("A").innerText("Home").build()).click()
+    ;8.2 Application modelApplication models are similar to the object repository
+    in UFT.We can create a new application model in IntelliJ IDEA as shown in below
+    image.![](image732.jpg)Creating new LeanFT Application model item in IntelliJ
+    IDE ABelow image shows sample AppModel.tsrx file. In designer mode, we can add,
+    remove objects in application model.![](image739.jpg)Below image shows how to
+    add the objects to application model using Object Identification Center.![](image745.jpg)Adding
+    objects in Application model in LeanFT projec tNote that 2 files are created after
+    new Application model is created.
+
+
+    1.  YourModel.tsrx file -It is an XML file. We can also view this file in design
+    mode where we can add and edit the objects.
+
+
+    2.  YourModel.java file containing the code representing the objects in the application
+    model.'
+  toc: []
+  trans: "\n\n如果你已经安装了 IntelliJ IDEA 的 LeanFT 插件，你可以像下图所示从模板创建新项目。注意，我们可以根据 4 种模板创建项目。\n\
+    \n![](http://www.softpost.org/wp-content/uploads/2016/07/New-LeanFT-project-in-IntelliJ-IDEA.png)\n\
+    IntelliJ IDEA 中新建 LeanFT 项目\n\n![](http://www.softpost.org/wp-content/uploads/2016/07/Sample-LeanFT-project-structure.png)\n\
+    LeanFT 项目结构示例\n\n要创建你自己的自定义框架，你必须像下面的示例所示初始化并清理 SDK。注意，在接下来的所有示例中，我们都继承了 `BaseTest`\
+    \ 类。\n\n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.sdk.ModifiableSDKConfiguration;\n\
+    import com.hp.lft.sdk.SDK;\nimport org.junit.After;\nimport org.junit.Before;\n\
+    import java.net.URI;\n\npublic class BaseTest {\n    @Before\n    public void\
+    \ test() throws Exception {\n        ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();\n\
+    \        config.setServerAddress(new URI(\"ws://localhost:5095\"));\n        SDK.init(config);\n\
+    \        Reporter.init();\n    }\n\n    @After\n    public void clean() throws\
+    \ Exception {\n        Reporter.generateReport();\n        SDK.cleanup();\n  \
+    \  }\n}\n```\n\n然后我们可以像下面的示例编写测试方法。\n\n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\n\
+    import com.hp.lft.report.Status;\nimport com.hp.lft.sdk.ModifiableSDKConfiguration;\n\
+    import com.hp.lft.sdk.SDK;\nimport com.hp.lft.sdk.web.*;\nimport com.hp.lft.sdk.web.EditField;\n\
+    import com.hp.lft.sdk.web.EditFieldDescription;\nimport org.junit.Test;\nimport\
+    \ java.net.URI;\nimport static org.junit.Assert.assertEquals;\n\npublic class\
+    \ ChromeTest extends BaseTest {\n    @Test\n    public void test() throws Exception\
+    \ {\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n  \
+    \      try {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate(\"http://www.softpost.org/selenium-test-page/\"\
+    );\n            browser.sync();\n        } catch (AssertionError ex) {\n     \
+    \       //Report the Exception\n            Reporter.reportEvent(\"Exception\"\
+    , \"Test failed\", Status.Failed, ex);\n            throw ex;\n        } finally\
+    \ {\n            //Close the browser\n            browser.close();\n        }\n\
+    \    }\n}\n```\n\n# 7. Eclipse 中的 LeanFT 项目\n\n## 7.1 在 Eclipse 中创建带有 JUnit 的\
+    \ LeanFT maven 项目\n下面的图片将帮助你理解如何在 Eclipse 中创建带有 JUnit 和 LeanFT 的 maven 项目。点击 New\
+    \ project 菜单然后点击 Other。\n\n![]\nEclipse 中的 LeanFT - 带有 JUnit 的 Maven 项目\n\n然后如如下所示选择\
+    \ LeanFT JUnit Maven project。\n\n![]\nEclipse 中的 LeanFT - Maven JUnit 模板\n\n为你的项目提供\
+    \ group id 和 Artifact id。\n\n![]\nEclipse 中的 LeanFT - Maven JUnit 项目\n\n项目创建如如下所示。\n\
+    \n![]\n然后如如下所示为 LeanFT 添加外部 jars 包。\n\n![]\n作为外部 jars 包添加 LeanFT 库\n\n在运行 maven\
+    \ build 之后，你应该能够在 `RunResults` 目录中看到结果。\n\n## 7.2 在 Eclipse 中创建带有 TestNG 的 maven\
+    \ 项目\n下面的图片将帮助你理解如何在 Eclipse 中设置带有 TestNG 的 LeanFT maven 项目。\n\n![]\nEclipse 中的\
+    \ LeanFT - 带有 JUnit Maven 项目\n\n![]\nEclipse 中的 LeanFT TestNG group Id\n\n![]\n\
+    Eclipse 中的 LeanFT TestNG Maven 项目\n\nLeanFT 将测试放在 `src/main/java` 目录中。你应该将这些测试类移动到\
+    \ `src/test/java`，因为 maven 总是会在 `src/text/java` 目录中查找任何执行的测试。\n\n# 8. 对象识别与管理\n\
+    \n## 8.1 描述编程\n通常在 UFT 中，我们使用对象库（LeanFT 中的应用程序模型）来存储应用程序内部的对象。因此，我们可以在自动化代码中使用这些对象，但我们也可以使用描述编程（description\
+    \ programming）在代码本身中定义新的测试对象。\n\n下面的示例展示了如何在 LeanFT 中使用描述编程定义新的测试对象。我们使用了描述编程来定义了\
+    \ 2 个类型为 `EditField` 和 `Link` 的对象。注意，我们可以使用多个属性-值对来识别这些对象。\n\n```java\n//Navigate\
+    \ to http://www.softpost.org/selenium-test-page/\nbrowser.navigate(\"http://www.softpost.org/selenium-test-page/\"\
+    );\nbrowser.sync();\n\n//Build edit box object and set value in it\nbrowser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder().id(\"fn\").build()).setValue(\"Sagar\");\n\
+    \n//Build link object and click on it.\nbrowser.describe(Link.class, new LinkDescription.Builder().tagName(\"\
+    A\").innerText(\"Home\").build()).click();\n```\n\n## 8.2 应用程序模型\n应用程序模型类似于 UFT\
+    \ 中的对象库。我们可以像下图所示在 IntelliJ IDEA 中创建新的应用程序模型。\n\n![]\nIntelliJ IDE 中新建 LeanFT\
+    \ 应用程序模型项\n\n![]\n下图显示了示例的 `AppModel.tsrx` 文件。在设计模式下，我们可以向应用程序模型添加或删除对象。\n\n![]\n\
+    下图展示了如何使用对象识别中心（Object Identification Center）将对象添加到应用程序模型中。\n\n注意，创建新的应用程序模型后会生成\
+    \ 2 个文件。\n\n1. `YourModel.tsrx` 文件 -这是一个 XML 文件。我们也可以在设计模式下查看此文件并在其中添加和编辑对象。\n\
+    2. `YourModel.java` 文件包含表示应用程序模型对象的代码。\n\n"
+- fmt: "\nBelow code shows how to use the application model to write the tests.\n\n\
+    ```java\npackage leanft;\nimport com.hp.lft.sdk.web.Browser;\nimport com.hp.lft.sdk.web.BrowserFactory;\n\
+    import com.hp.lft.sdk.web.BrowserType;\nimport org.junit.Test;\n/**\n  * Created\
+    \ by Sagar on 22 - 07 - 2016.\n*/\npublic class AppModelTest extends BaseTest{\n\
+    \    @Test\n    public void test1() throws Exception {\n        Browser browser\
+    \ = BrowserFactory.launch(BrowserType.CHROME);\n        browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n        AppModel model = new AppModel(browser);\n        model.SeleniumTestPage().firstName().setValue(\
+    \ \"Sagar\" );\n    }\n}\n```\n\nAnother important point to note is that we can\
+    \ use Application model together with description programming to identify the\
+    \ objects as shown in below sample code. Note that we have used `SeleniumTestPage`\
+    \ object from the Application model but we have used description programming to\
+    \ identify the `EditField` object inside `page.model.SeleniumTestPage().describe(EditField.class,new\
+    \ EditFieldDescription.Builder().id(\"fn\").build()).setValue(\"Salunke\");`.\n\
+    \n### 8.3 Using regular expression in property values\nTo define the property\
+    \ values of a object, we can use the regular expressions. Below example shows\
+    \ how to use regular expressions to define the property values. Note that we are\
+    \ clicking on such a link with inner text matching regular expression `.*Dev.*`.\n\
+    \n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.RegExpProperty;\nimport com.hp.lft.sdk.web.*;\nimport org.junit.Test;\n\
+    public class RegularExpressionTest extends BaseTest{\n    @Test\n    public void\
+    \ test() throws Exception {\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n\
+    \        Try {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box\n     \
+    \       browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .id( \"fn\" ).build()).setValue( \"Sagar\" );\n            //click\
+    \ on link containing Dev substring\n            browser.describe(Link.class, new\
+    \ LinkDescription.Builder()\n            .tagName( \"A\" ).index(1).innerText(\
+    \ RegExpProperty( \".*Dev.*\" )).build()).click();\n            //Wait until page\
+    \ loads\n            Thread .sleep(300);\n        } catch (AssertionError ex)\
+    \ {\n            //Report the Exception\n            Reporter.reportEvent( \"\
+    Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n \
+    \       } Finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\nWe can also use regular expressions to specify values\
+    \ of object properties in Application Models.\n\n---\n\n### 9. Automating Web\
+    \ applications\n\n#### 9.1 First web application test\nHere is the first web application\
+    \ test using LeanFT. In below code, we are launching the chrome browser then navigating\
+    \ to `http://www.softpost.org/selenium-test-page/`. After that we are entering\
+    \ value in edit box and clicking on Home link. Same code will work on other browsers\
+    \ (Firefox, Internet Explorer, Edge) as well. To launch other browsers, you need\
+    \ to change the browser type in launch method.\n\n```java\npackage leanft;\nimport\
+    \ com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\nimport com.hp.lft.sdk.ModifiableSDKConfiguration;\n\
+    import com.hp.lft.sdk.SDK;\nimport com.hp.lft.sdk.web.*;\nimport com.hp.lft.sdk.web.EditField;\n\
+    import com.hp.lft.sdk.web.EditFieldDescription;\nimport org.junit.Test;\nimport\
+    \ java.net.URI;\nimport static org.junit.Assert.assertEquals;\npublic class ChromeTest\
+    \ extends BaseTest{\n    @Test\n    public void test() throws Exception {\n  \
+    \      Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n        Try\
+    \ {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n \
+    \           browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box\n     \
+    \       browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .id( \"fn\" ).build()).setValue( \"Sagar\" );\n            //click\
+    \ on Home link\n            browser.describe(Link.class, new LinkDescription.Builder()\n\
+    \            .tagName( \"A\" ).innerText( \"Home\" ).build()).click();\n     \
+    \       //Wait until page loads\n            browser.sync();\n        } catch\
+    \ (AssertionError ex) {\n            //Report the Exception\n            Reporter.reportEvent(\
+    \ \"Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n\
+    \        } Finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\nNote that `BaseTest` class provides code to initialize\
+    \ and clean up the LeanFT SDK.\n\n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\n\
+    import com.hp.lft.sdk.ModifiableSDKConfiguration;\nimport com.hp.lft.sdk.SDK;\n\
+    import org.junit.After;\nimport org.junit.Before;\nimport java.net.URI;\npublic\
+    \ class BaseTest{\n    @Before\n    public void init() {\n        try {\n    \
+    \        ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();\n\
+    \            config.setServerAddress( new URI( \"ws://localhost:095\" ));\n  \
+    \          SDK.init(config);\n            Reporter.init();\n        } catch (\
+    \ Exception ex) {\n            System.out.println( \"Exception \" + ex.toString());\n\
+    \        }\n    }\n    @After\n    public void clean() throws Exception {\n  \
+    \      Reporter.generateReport();\n        SDK.cleanup();\n    }\n}\n```\n\n####\
+    \ 9.2 Identifying the Web elements using XPATH and CSS\nWe can use `XPATH` and\
+    \ CSS` selectors to identify the web elements. Below example illustrates how to\
+    \ use `XPATH` in LeanFT. In below example, we identified edit box using `XPATH`.\
+    \ For more advanced `XPATH` expressions, you can visit - `http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using-xpath-in.html`.\
+    \ For more advanced CSS expressions, you can visit - `http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using.html`.\n\
+    \n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.web.*;\nimport org.junit.Test;\npublic class CsspathTest\
+    \ extends BaseTest{\n    @Test\n    public void test() throws Exception {\n  \
+    \      Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n        Try\
+    \ {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n \
+    \           browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box using xpath\n\
+    \            browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .xpath( \"//input[@id='fn']\" ).build()).setValue( \"Sagar\" );\n\
+    \            //set value in edit box using css\n            browser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder()\n            .cssSelector( \"input[id='fn']\"\
+    \ ).build()).setValue( \"Salunke\" );\n        } catch (AssertionError ex) {\n\
+    \            //Report the Exception\n            Reporter.reportEvent( \"Exception\"\
+    \ , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n        } Finally\
+    \ {\n            //Close the browser\n            browser.close();\n        }\n\
+    \    }\n}\n```\n\n#### 9.3 Identifying objects using Visual Relational Identifiers\
+    \ – VRI\nThis is the advanced feature in UFT and LeanFT that allows you to identify\
+    \ the objects based upon the position of adjacent objects. For example in below\
+    \ image we can identify the edit box using text associated with it.\n\n####RI\
+    \ in LeanFT\nHere is the complete example that shows how to use VRI in LeanFT.\
+    \ Note that we can provide multiple visual relational identifiers to identify\
+    \ a object.\n\n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\n\
+    import com.hp.lft.report.Status;\nimport com.hp.lft.sdk.HorizontalVisualRelation;\n\
+    import com.hp.lft.sdk.VisualRelation;\nimport com.hp.lft.sdk.web.*;\nimport org.junit.Test;\n\
+    public class Vri extends BaseTest{\n    @Test\n    public void test() throws Exception\
+    \ {\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n  \
+    \      Try {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box\n     \
+    \       browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .id( \"fn\" ).build()).setValue( \"Sagar\" );\n            WebElement\
+    \ e2 = browser.describe(WebElement.class, new WebElementDescription.Builder()\n\
+    \            .xpath( \"//td[text()='Last Name']\" ).build());\n            browser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder()\n            .vri( new VisualRelation().setTestObject(e2).setHorizontalRelation(HorizontalVisualRelation.LEFT_AND_INLINE)).build())\n\
+    \            .setValue( \"Salunke\" );\n            //click on Home link\n   \
+    \         browser.describe(Link.class, new LinkDescription.Builder()\n       \
+    \     .tagName( \"A\" ).innerText( \"Home\" ).build()).click();\n            //Wait\
+    \ until page loads\n            browser.sync();\n        } catch (AssertionError\
+    \ ex) {\n            //Report the Exception\n            Reporter.reportEvent(\
+    \ \"Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n\
+    \        } Finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\n\n#### 9.4 Handling embedded browser control in Windows\
+    \ app\nSometimes, Windows application have elements that embed the browser control.\
+    \ To identify the elements inside the browser control as Web elements, you will\
+    \ have to register the browser control with LeanFT. To register the browser control\
+    \ with LeanFT, follow below steps.\n"
+  raw: Below code shows how to use the application model to write the tests.package
+    leanft;import com.hp.lft.sdk.web.Browser;import com.hp.lft.sdk.web.BrowserFactory;import
+    com.hp.lft.sdk.web.BrowserType;import org.junit.Test;/**  * Created by Sagar on
+    22 - 07 - 2016.*/public class AppModelTest extends BaseTest{@Test     public void
+    test1() throws Exception     {Browser browser = BrowserFactory.launch(BrowserType.CHROME);        browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );        AppModel model = new AppModel(browser);       
+     model.SeleniumTestPage().firstName().setValue( "Sagar" );}}Another important
+    point to note is that we can use Application model together with description programming
+    to identify the objects as shown in below sample code. Note that we have used
+    SeleniumTestPage object from the Application model but we have used description
+    programming to identify the EditField object inside page.model.SeleniumTestPage().describe(EditField.class,new
+    EditFieldDescription.Builder().id("fn").build()).setValue("Salunke");8.3 Using
+    regular expression in property valuesTo define the property values of a object,
+    we can use the regular expressions.Below example shows how to use regular expressions
+    to define the property values. Note that we are clicking on such a link with inner
+    text matching regular expression .*Dev.*package leanft;import com.hp.lft.report.Reporter;import
+    com.hp.lft.report.Status;import com.hp.lft.sdk.RegExpProperty;import com.hp.lft.sdk.web.
+    * ;import org.junit.Test;public class RegularExpressionTest extends BaseTest{@Test    
+    public void test() throws Exception     {Browser browser = BrowserFactory.launch(BrowserType.CHROME);        
+    Try         {             //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();             //set
+    value in edit box            browser.describe(EditField.class, new EditFieldDescription.Builder()            .id(
+    "fn" ).build()).setValue( "Sagar" );     //click on link containing Dev substring            browser.describe(Link.class,
+    new LinkDescription.Builder()                    .tagName( "A" ).index(1).innerText(
+    new RegExpProperty( ".*Dev.*" )).build()).click();              //Wait until page
+    loads             Thread .sleep(3000);}         catch (AssertionError ex){           
+    //Report the Exception     Reporter.reportEvent( "Exception" , "Test failed" ,
+    Status.Failed, ex);            throw ex;}         Finally         {            
+    //Close the browserbrowser.close();}}}We can also use regular expressions to specify
+    values of object properties in Application Models.![](image828.jpg)Regular expressions
+    in Application models in LeanFT9\. Automating Web applications9.1 First web application
+    testHere is the first web application test using LeanFT. In below code, we are
+    launching the chrome browser and then navigating to http://www.softpost.org/selenium-test-page/.
+    After that we are entering value in edit box and clicking on Home link. Same code
+    will work on other browsers (Firefox, Internet Explorer, Edge) as well. To launch
+    other browsers, you just need to change the browser type in launch method.package
+    leanft;import com.hp.lft.report.Reporter;import com.hp.lft.report.Status;import
+    com.hp.lft.sdk.ModifiableSDKConfiguration;import com.hp.lft.sdk.SDK;import com.hp.lft.sdk.web.
+    * ;import com.hp.lft.sdk.web.EditField;import com.hp.lft.sdk.web.EditFieldDescription;import
+    org.junit.Test;import java.net.URI;import static org.junit.Assert.assertEquals;public
+    class ChromeTest extends BaseTest{@Test     public void test() throws Exception    
+    {Browser browser = BrowserFactory.launch(BrowserType.CHROME);          Try        
+    {             //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();             //set
+    value in edit box   browser.describe(EditField.class, new EditFieldDescription.Builder()            .id(
+    "fn" ).build()).setValue( "Sagar" );             //click on Home link            browser.describe(Link.class,
+    new LinkDescription.Builder()                    .tagName( "A" ).innerText( "Home"
+    ).build()).click();             //Wait until page loadsbrowser.sync();}        
+    catch (AssertionError ex){            //Report the Exception           Reporter.reportEvent(
+    "Exception" , "Test failed" , Status.Failed, ex);            throw ex;}        
+    Finally         {             //Close the browserbrowser.close();}}}Note that
+    BaseTest class provides code to initialize and clean up the LeanFT SDK.package
+    leanft;import com.hp.lft.report.Reporter;import com.hp.lft.sdk.ModifiableSDKConfiguration;import
+    com.hp.lft.sdk.SDK;import org.junit.After;import org.junit.Before;import java.net.URI;public
+    class BaseTest{@Before     public void init(){         try{            ModifiableSDKConfiguration
+    config = new ModifiableSDKConfiguration();            config.setServerAddress(
+    new URI( "ws://localhost:5095" ));SDK.init(config);Reporter.init();}         catch
+    ( Exception ex){             System .out.println( "Exception occured " + ex.toString());}}@After    
+    public void clean() throws Exception     {Reporter.generateReport();SDK.cleanup();}}9.2
+    Identifying the Web elements using XPATH and CSSWe can use XPATH and CSS selectors
+    to identify the web elements. Below example illustrates how to use XPATH and CSS
+    in LeanFT.In below example, we have identified edit box using XPATH and CSS.For
+    more advanced XPATH expressions, you can visit - [http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using-xpath-in.html](http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using-xpath-in.html)For
+    more advanced CSS expressions, you can visit - [http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using.html](http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using.html)package
+    leanft;import com.hp.lft.report.Reporter;import com.hp.lft.report.Status;import
+    com.hp.lft.sdk.web. * ;import org.junit.Test;public class CssXpathTest extends
+    BaseTest{@Test     public void test() throws Exception     {Browser browser =
+    BrowserFactory.launch(BrowserType.CHROME);         Try         {             
+    //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();             //set
+    value in edit box using xpath            browser.describe(EditField.class, new
+    EditFieldDescription.Builder()            .xpath( "//input[@id='fn']" ).build()).setValue(
+    "Sagar" );             //set value in edit box using css            browser.describe(EditField.class,
+    new EditFieldDescription.Builder()                    .cssSelector( "input[id='fn']"
+    ).build()).setValue( "Salunke" );}         catch (AssertionError ex){           
+    //Report the Exception           Reporter.reportEvent( "Exception" , "Test failed"
+    , Status.Failed, ex);            throw ex;}         Finally         {            
+    //Close the browserbrowser.close();}}}9.3 Identifying objects using Visual Relational
+    Identifiers – VRIThis is the advanced feature in UFT and LeanFT that allows you
+    to identify the objects based upon the position of adjacent objects. For example
+    in below image we can identify the edit box using text associated with it.![](image964.jpg)VRI
+    in LeanFTHere is the complete example that shows how to use VRI in LeanFT. Note
+    that we can provide multiple visual relational identifiers to identify a object.package
+    leanft;import com.hp.lft.report.Reporter;import com.hp.lft.report.Status;import
+    com.hp.lft.sdk.HorizontalVisualRelation;import com.hp.lft.sdk.VisualRelation;import
+    com.hp.lft.sdk.web. * ;import org.junit.Test;public class VriTest extends BaseTest{@Test    
+    public void test() throws Exception     {Browser browser = BrowserFactory.launch(BrowserType.CHROME);        
+    Try         {             //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();             //set
+    value in edit box            browser.describe(EditField.class, new EditFieldDescription.Builder()            .id(
+    "fn" ).build()).setValue( "Sagar" );     WebElement e2 = browser.describe(WebElement.class,
+    new WebElementDescription.Builder()     .xpath( "//td[text()='Last Name']" ).build());            browser.describe(EditField.class,
+    new EditFieldDescription.Builder()                     .vri( new VisualRelation().setTestObject(e2).setHorizontalRelation(HorizontalVisualRelation.LEFT_AND_INLINE)).build())                    .setValue(
+    "Salunke" );             //click on Home link            browser.describe(Link.class,
+    new LinkDescription.Builder()                    .tagName( "A" ).innerText( "Home"
+    ).build()).click();             //Wait until page loadsbrowser.sync();}        
+    catch (AssertionError ex){            //Report the Exception           Reporter.reportEvent(
+    "Exception" , "Test failed" , Status.Failed, ex);            throw ex;}        
+    Finally         {             //Close the browserbrowser.close();}}}9.4 Handling
+    embedded browser control in Windows appSometimes, Windows application have elements
+    that embed the browser control. To identify the elements inside the browser control
+    as Web elements, you will have to register the browser control with LeanFT.To
+    register the browser control with LeanFT, follow below steps.
+  toc: []
+  trans: "\n以下代码展示了如何使用应用模型（application model）编写测试。\n\n```java\npackage leanft;\n\
+    import com.hp.lft.sdk.web.Browser;\nimport com.hp.lft.sdk.web.BrowserFactory;\n\
+    import com.hp.lft.sdk.web.BrowserType;\nimport org.junit.Test;\n/**\n  * Created\
+    \ by Sagar on 22 - 07 - 2016.\n*/\npublic class AppModelTest extends BaseTest{\n\
+    \    @Test\n    public void test1() throws Exception {\n        Browser browser\
+    \ = BrowserFactory.launch(BrowserType.CHROME);\n        browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n        AppModel model = new AppModel(browser);\n        model.SeleniumTestPage().firstName().setValue(\
+    \ \"Sagar\" );\n    }\n}\n```\n\n另一个需要注意的重要点是，我们可以应用模型结合描述编程（description programming）来识别对象，如下示例代码所示。注意，我们使用了应用模型中的\
+    \ `SeleniumTestPage` 对象，但我们使用了描述编程来识别 `page.model.SeleniumTestPage().describe(EditField.class,new\
+    \ EditFieldDescription.Builder().id(\"fn\").build()).setValue(\"Salunke\");` 的\
+    \ `EditField` 对象。\n\n### 8.3 在属性值中使用正则表达式\n要定义对象的属性值，我们可以使用正则表达式。下面的示例展示了如何使用正则表达式来定义属性值。注意，我们正在点击一个内部文本匹配正则表达式\
+    \ `.*Dev.*` 的链接。\n\n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\n\
+    import com.hp.lft.report.Status;\nimport com.hp.lft.sdk.RegExpProperty;\nimport\
+    \ com.hp.lft.sdk.web.*;\nimport org.junit.Test;\npublic class RegularExpressionTest\
+    \ extends BaseTest{\n    @Test\n    public void test() throws Exception {\n  \
+    \      Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n        Try\
+    \ {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n \
+    \           browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box\n     \
+    \       browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .id( \"fn\" ).build()).setValue( \"Sagar\" );\n            //click\
+    \ on link containing Dev substring\n            browser.describe(Link.class, new\
+    \ LinkDescription.Builder()\n            .tagName( \"A\" ).index(1).innerText(\
+    \ RegExpProperty( \".*Dev.*\" )).build()).click();\n            //Wait until page\
+    \ loads\n            Thread .sleep(300);\n        } catch (AssertionError ex)\
+    \ {\n            //Report the Exception\n            Reporter.reportEvent( \"\
+    Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n \
+    \       } Finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\n我们还可以使用正则表达式来指定应用模型中对象属性的值。\n\n---\n\n### 9. 自动化 Web\
+    \ 应用\n\n#### 9.1 第一个 Web 应用测试\n这里是使用 LeanFT 的第一个 Web 应用测试。在下面的代码中，我们启动了 Chrome\
+    \ 浏览器然后导航到 `http://www.softpost.org/selenium-test-page/`。之后，我们在编辑框中输入值并点击 Home\
+    \ 链接。相同的代码在其他浏览器（Firefox, Internet Explorer, Edge）上同样有效。要启动其他浏览器，你需要在启动方法中更改浏览器类型。\n\
+    \n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.ModifiableSDKConfiguration;\nimport com.hp.lft.sdk.SDK;\n\
+    import com.hp.lft.sdk.web.*;\nimport com.hp.lft.sdk.web.EditField;\nimport com.hp.lft.sdk.web.EditFieldDescription;\n\
+    import org.junit.Test;\nimport java.net.URI;\nimport static org.junit.Assert.assertEquals;\n\
+    public class ChromeTest extends BaseTest{\n    @Test\n    public void test() throws\
+    \ Exception {\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n\
+    \        Try {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box\n     \
+    \       browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .id( \"fn\" ).build()).setValue( \"Sagar\" );\n            //click\
+    \ on Home link\n            browser.describe(Link.class, new LinkDescription.Builder()\n\
+    \            .tagName( \"A\" ).innerText( \"Home\" ).build()).click();\n     \
+    \       //Wait until page loads\n            browser.sync();\n        } catch\
+    \ (AssertionError ex) {\n            //Report the Exception\n            Reporter.reportEvent(\
+    \ \"Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n\
+    \        } Finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\n注意，`BaseTest` 类提供了初始化和清理 LeanFT SDK 的代码。\n\n```java\n\
+    package leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.sdk.ModifiableSDKConfiguration;\n\
+    import com.hp.lft.sdk.SDK;\nimport org.junit.After;\nimport org.junit.Before;\n\
+    import java.net.URI;\npublic class BaseTest{\n    @Before\n    public void init()\
+    \ {\n        try {\n            ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();\n\
+    \            config.setServerAddress( new URI( \"ws://localhost:095\" ));\n  \
+    \          SDK.init(config);\n            Reporter.init();\n        } catch (\
+    \ Exception ex) {\n            System.out.println( \"Exception \" + ex.toString());\n\
+    \        }\n    }\n    @After\n    public void clean() throws Exception {\n  \
+    \      Reporter.generateReport();\n        SDK.cleanup();\n    }\n}\n```\n\n####\
+    \ 9.2 使用 XPATH 和 CSS 识别 Web 元素\n我们可以使用 `XPATH` 和 CSS` 选择器来识别 Web 元素。下面的示例说明了如何在\
+    \ LeanFT 中使用 `XPATH`。在下面的示例中，我们使用 `XPATH` 识别了编辑框。对于更高级的 `XPATH` 表达式，你可以访问 - `http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using-xpath-in.html`。对于更高级的\
+    \ CSS 表达式，你可以访问 - `http://selenium-interview-questions.blogspot.in/2014/02/how-to-identify-elements-using.html`。\n\
+    \n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.web.*;\nimport org.junit.Test;\npublic class CsspathTest\
+    \ extends BaseTest{\n    @Test\n    public void test() throws Exception {\n  \
+    \      Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n        Try\
+    \ {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n \
+    \           browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box using xpath\n\
+    \            browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .xpath( \"//input[id='fn']\" ).build()).setValue( \"Sagar\" );\n\
+    \            //set value in edit box using css\n            browser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder()\n            .cssSelector( \"input[id='fn']\"\
+    \ ).build()).setValue( \"Salunke\" );\n        } catch (AssertionError ex) {\n\
+    \            //Report the Exception\n            Reporter.reportEvent( \"Exception\"\
+    \ , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n        } Finally\
+    \ {\n            //Close the browser\n            browser.close();\n        }\n\
+    \    }\n}\n```\n\n#### 9.3 使用视觉标识符识别对象\n这是 UFT 和 LeanFT 中的一项高级功能，允许根据相邻对象的位置来识别对象。在下面的图中，我们可以通过关联的文本识别编辑框。\n\
+    \nLeanFT 中的 VRI\n这是一个完整的示例，展示了如何在 LeanFT 中使用 VRI。注意，我们可以为对象提供多个视觉标识符。\n\n```java\n\
+    package leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.HorizontalVisualRelation;\nimport com.hp.lft.sdk.VisualRelation;\n\
+    import com.hp.lft.sdk.web.*;\nimport org.junit.Test;\npublic class Vri extends\
+    \ BaseTest{\n    @Test\n    public void test() throws Exception {\n        Browser\
+    \ browser = BrowserFactory.launch(BrowserType.CHROME);\n        Try {\n      \
+    \      //Navigate to http://www.softpost.org/selenium-test-page/\n           \
+    \ browser.navigate( \"http://www.softpost.org/selenium-test-page/\" );\n     \
+    \       browser.sync();\n            //set value in edit box\n            browser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder()\n            .id( \"fn\" ).build()).setValue(\
+    \ \"Sagar\" );\n            WebElement e2 = browser.describe(WebElement.class,\
+    \ new WebElementDescription.Builder()\n            .xpath( \"//td[text()='Last\
+    \ Name']\" ).build());\n            browser.describe(EditField.class, new EditFieldDescription.Builder()\n\
+    \            .vri( new VisualRelation().setTestObject(e2).setHorizontalRelation(HorizontalVisualRelation.LEFT_AND_INLINE)).build())\n\
+    \            .setValue( \"Salunke\" );\n            //click on Home link\n   \
+    \         browser.describe(Link.class, new LinkDescription.Builder()\n       \
+    \     .tagName( \"A\" ).innerText( \"Home\" ).build()).click();\n            //Wait\
+    \ until page loads\n            browser.sync();\n        } catch (AssertionError\
+    \ ex) {\n            //Report the Exception\n            Reporter.reportEvent(\
+    \ \"Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n\
+    \        } Finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\n\n#### 9.4 处理 Windows 应用中的嵌入浏览器控件\n有时，Windows 应用包含嵌入浏览器控件的元素。要将浏览器控件内部的元素识别为\
+    \ Web 元素，你需要在 LeanFT 中注册该浏览器控件。要在 LeanFT 中注册浏览器控件，请按照以下步骤操作。\n\n"
+- fmt: '
+
+    # Registration Steps
+
+
+    1. Launch the utility - `C:\Program Files (x86)\HP\LeanFT\bin\SettingNewBrowserControlApplication.exe`
+
+
+    2. Then enter the path of the application that contains browser control in the
+    utility window and click on register
+
+
+    3. Finally you need to restart the LeanFT engine.
+
+    '
+  raw: '1.  Launch the utility - C:\Program Files (x86)\HP\LeanFT\bin\SettingNewBrowserControlApplication.exe
+
+
+    2.  Then enter the path of the application that contains browser control in the
+    utility window and click on register
+
+
+    3.  Finally you need to restart the LeanFT engine.'
+  toc: []
+  trans: '
+
+
+    # 注册步骤
+
+
+    1. 启动实用程序 - `C:\Program Files (x86)\HP\LeanFT\bin\SettingNewBrowserControlApplication.exe`
+
+
+    2. 然后在程序窗口中输入包含浏览器控制的应用程序路径并点击注册（register）
+
+
+    3. 最后，你需要重启 LeanFT 引擎。
+
+    '
+- fmt: "\n![](image1026.jpg)\n\n# Registering browser control with LeanFT\nOnce the\
+    \ browser control is registered, all objects inside it will be identified as web\
+    \ objects. Note that LeanFT can handle browser control based on IE engine only!\n\
+    \n## 9.5 Firing events on Web Elements using LeanFT\nWe can fire html events like\
+    \ `click`, `change` etc on any Web element using `EventInfo` class in LeanFT.\
+    \ Here is the complete example that illustrates how to fire events. \n\n```java\n\
+    package leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.NativeObject;\nimport com.hp.lft.sdk.web..*;\nimport org.junit.Test;\n\
+    import java.util.List;\npublic class ChromeNativeObjectTest extends BaseTest{\n\
+    \    @Test\n    public void test() throws Exception {\n        Browser browser\
+    \ = BrowserFactory.launch(BrowserType.CHROME);\n        try {\n            //Navigate\
+    \ to http://www.softpost.org/selenium-test-page/\n            browser.navigate(\"\
+    http://www.softpost.org/selenium-test-page/\");\n            browser.sync();\n\
+    \            //set value in edit box\n            browser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder()\n                .id(\"fn\").build()).setValue(\"\
+    Sagar\");\n            browser.describe(Link.class, new LinkDescription.Builder()\n\
+    \                .tagName(\"A\").innerText(\"Home\").build()).fireEvent(EventInfoFactory.createEvent(\"\
+    click\"));\n            Thread.sleep(3000);\n        } catch (AssertionError ex){\n\
+    \            //Report the Exception\n            Reporter.reportEvent(\"Exception\"\
+    , \"Test failed\", Status.Failed, ex);\n            throw ex;\n        } Finally\
+    \ {\n            //Close the browser\n            browser.close();\n        }\n\
+    \    }\n}\n```\n\nAlternatively, you can also execute custom JavaScript using\
+    \ below syntax.\n`String html = browser.getPage().runJavaScript(\"document.body.innerHTML;\"\
+    );`\n\nTo fire change event on element with id -fn, You can use below Javascript\
+    \ as argument to `runJavaScript()` method.\n```javascript\nvar evt = document.createEvent('HTMLEvents');\n\
+    evt.initEvent('change', true, true);\ndocument.findElementById('fn').dispatchEvent(evt);\n\
+    ```\n\n## 9.6 Executing JavaScript in web page\nWhile automating web applications,\
+    \ you might need to execute the JavaScript to perform certain operations. LeanFT\
+    \ allows you to execute custom JavaScript as shown in below example. We can use\
+    \ `runJavaScript` method of `Page` class to execute any valid JavaScript.\n\n\
+    ```java\npackage leanft ;\nimport com.hp.lft.report.Reporter ;\nimport com.hp.lft.report.Status\
+    \ ;\nimport com.hp.lft.sdk.web.*;\nimport com.hp.lft.verifications.Verify ;\n\
+    import org.junit.Test ;\npublic class ExecuteJavaScriptTest extends BaseTest{\n\
+    \    @Test\n    public void test () throws Exception {\n        Browser browser\
+    \ = BrowserFactory.launch(BrowserType.INTERNET_EXPLORER);\n        Try {\n   \
+    \         //Navigate to http://www.softpost.org/selenium-test-page/\n        \
+    \    browser.navigate(\"http://www.softpost.org/selenium-test-page/\");\n    \
+    \        browser.sync();\n            String html = browser.getPage().runJavaScript(\"\
+    document.body. innerHTML;\");\n            System.out.println(\"HTML Source of\
+    \ the page\" + html);\n            System.out.println(\"Scrolling to 20,100\"\
+    );\n            browser.getPage().runJavaScript(\"window.scrollTo(20,100);\");\n\
+    \            String documentState = browser.getPage().runJavaScript(\"document.readyState\"\
+    );\n            System.out.println(\"Document is \" + documentState);\n      \
+    \  } catch ( AssertionError ex ){\n            //Report the Exception\n      \
+    \      Reporter.reportEvent(\"Exception\", \"Test failed\", Status, ex);\n   \
+    \         throw ex;\n        } Finally {\n            //Close the browser\n  \
+    \          browser.close ();\n        }\n    }\n}\n```\n\n# 10. Automating windows\
+    \ applications\n\n## 10.1 Automating standard windows application\nTo automate\
+    \ the standard windows apps, you will need to import below packages in LeanFT\
+    \ projectcom.hp.lft.sdk.stdwinHere is the sample application that launches the\
+    \ notepad and enters text in it. Then it tries to close the notepad. After that\
+    \ it clicks on Don't save button on the Dialog.\n\n```java\npackage leanft;\n\
+    import com.hp.lft.sdk.Desktop;\nimport com.hp.lft.sdk.stdwin.*;\nimport org.junit.Test;\n\
+    import static org.junit.Assert.assertEquals;\npublic class NotepadTest extends\
+    \ BaseTest{\n    @Test\n    public void test() throws Exception {\n        new\
+    \ ProcessBuilder(\"C:\\\\Windows\\\\System32\\\\notepad.exe\").start();\n    \
+    \    Thread.sleep(3000);\n        Window notepadWin = Desktop.describe(Window.class,\n\
+    \            new WindowDescription.Builder().windowTitleRegExp(\"Notepad\").build());\n\
+    \        Editor editor = notepadWin.describe(Editor.class,\n            new EditorDescription.Builder().nativeClass(\"\
+    Edit\").windowClassRegExp(\"Edit\").build());\n        editor.sendKeys(\"This\
+    \ is automated text\");\n        Thread.sleep(3000);\n        notepadWin.close();\n\
+    \        Desktop.describe(Window.class, new WindowDescription.Builder()\n    \
+    \        .ownedWindow(false).childWindow(false).windowClassRegExp(\"Notepad\"\
+    ).windowTitleRegExp(\" Notepad\").build())\n            .describe(Dialog.class,\
+    \ new DialogDescription.Builder()\n            .ownedWindow(true).childWindow(false).text(\"\
+    Notepad\").nativeClass(\"#32770\").build())\n            .describe(Button.class,\
+    \ new ButtonDescription.Builder()\n            .text(\"Do&n't Save\").nativeClass(\"\
+    Button\").build()).click();\n    }\n}\n```\n\n## 10.2 Automating Java Application\n\
+    Automating the Java applications is just like that of Standard windows applications.\
+    \ Only difference is that you need to import classes in below package. `import\
+    \ com.hp.lft.sdk.java.*;`\nHere is the sample example that identifies the Java\
+    \ window with title - XYZ and then clicks on the check box with attached text\
+    \ as \"Gender\" inside a frame.\n\n```java\npackage leanft;\nimport com.hp.lft.sdk.CheckedState;\n\
+    import com.hp.lft.sdk.Desktop;\nimport com.hp.lft.sdk.java.*;\nimport org.junit.Test;\n\
+    public class JavaTest extends BaseTest{\n    @Test\n    public void test() throws\
+    \ Exception{\n        Window javaWin = Desktop.describe(Window.class, new WindowDescription.Builder()\n\
+    \            .title(\"XYZ\").build());\n        CheckBox checkBox = javaWin.describe(InternalFrame.class,\
+    \ new InternalFrameDescription.Builder()\n            .title(\"Frame\").build()).describe(CheckBox.class,\
+    \ new CheckBoxDescription.Builder()\n            .attachedText(\"Gender\").build());\n\
+    \        checkBox.setState(CheckedState.CHECKED);\n    }\n}\n```\n\n## 10.3 Automating\
+    \ WPF applications\nBelow example illustrates how to automate WPF application\
+    \ using LeanFT. Note that need to import classes from belowcom.hp.lft.sdk.wpfIn\
+    \ below example, we are first identifying the WPF window with title - Bus Application.\
+    \ After that we have identified the ComboBox with name sourceCity and finally\
+    \ we have listed all the options in sourceCity. \n\n```java\npackage leanft;\n\
+    import com.hp.lft.sdk.Desktop;\nimport com.hp.lft.sdk.wpf.ComboBox;\nimport com.hp.lft.sdk.wpf.ComboBoxDescription;\n\
+    import com.hp.lft.sdk.wpf.Window;\nimport com.hp.lft.sdk.wpf.WindowDescription;\n\
+    import org.junit.Test;\n/**\n * Created by Sagar on 20 - 07 - 2016.*/\npublic\
+    \ class WpfTest extends BaseTest{\n    @Test\n    public void test1() throws Exception\
+    \ {\n        Window win = Desktop.describe(Window.class, new WindowDescription.Builder()\n\
+    \            .objectName(\"Bus Application\").fullType(\"window\").windowTitleRegExp(\"\
+    Bus Application\").build());\n        ComboBox box= win.describe(ComboBox.class,\
+    \ new ComboBoxDescription.Builder()\n            .objectName(\"sourceCity\").build());\n\
+    \        for (String s :box.getItems()){\n            System.out.println(s);\n\
+    \        }\n    }\n}\n```\n\n## 10.4 Automating SAP Application\nAutomating SAP\
+    \ applications is very much similar to automation of standard windows applications.\
+    \ Please note that you will have to use classes from below SAP com.hp.lft.sdk.sap.gui.*;import\
+    \ com.hp.lft.sdk.sap.ui5.*; \n\n# 11. Synchronization\nBy default, LeanFT will\
+    \ wait for 20 seconds when trying to find the objects. If it doesn't identify\
+    \ the object with 20 seconds, exception is thrown. You can change this timeout\
+    \ from LeanFT settings dialog. Additionally you also add custom wait conditions.\n\
+    \n```java\npackage leanft;\nimport com.hp.lft.sdk.GeneralLeanFtException;\nimport\
+    \ com.hp.lft.sdk.*;\nimport com.hp.lft.sdk.stdwin.ToolBar;\nimport com.hp.lft.sdk.stdwin.Window;\n\
+    import com.hp.lft.sdk.stdwin.WindowDescription;\nimport org.junit.Assert;\nimport\
+    \ org.junit.Test;\n/**\n * Created by Sagar on 21 - 07 - 2016.*/\npublic class\
+    \ SynchTest extends BaseTest{\n    @Test\n    public void test1() throws Exception\
+    \ {\n        WaitUntilTestObjectState.WaitUntilEvaluator< Window > evaluator =\
+    \ new WaitUntilTestObjectState.WaitUntilEvaluator< Window >() {@Override\n   \
+    \         public boolean evaluate( Window testObject) throws GeneralLeanFtException{\n\
+    \                return testObject.getWindowState()==WindowState.MAXIMIZED;}};\n\
+    \        new ProcessBuilder(\"C:\\\\Windows\\\\System32\\\\notepad.exe\").start();\n\
+    \        Window notepadWindow = Desktop.describe(Window.class,\n            new\
+    \ WindowDescription.Builder().windowClassRegExp(\"Notepad\").windowTitleRegExp(\"\
+    Notepad\").build());\n        notepadWindow.maximize();\n        Assert.assertTrue(evaluator.evaluate(notepadWindow));\n\
+    \    }\n}\n```\n\n# 12. Assertions and Reports\n\n## 12.1 Assertions in LeanFT\n\
+    We can do assertions in LeanFT using `Verify` class in Validations namespace.\
+    \ This class allows you to put the assertions in the code. Here is the sample\
+    \ example showing usage of `Verify` class. Note that `Verify` class provides below\
+    \ methods.\n"
+  raw: '![](image1026.jpg)Registering browser control with LeanF TOnce the browser
+    control is registered, all objects inside it will be identified as web objects.Note
+    that LeanFT can handle browser control based on IE engine only!9.5 Firing events
+    on Web Elements using LeanFTWe can fire html events like click, change etc on
+    any Web element using EventInfo class in LeanFT.Here is the complete example that
+    illustrates how to fire events.package leanft;import com.hp.lft.report.Reporter;import
+    com.hp.lft.report.Status;import com.hp.lft.sdk.NativeObject;import com.hp.lft.sdk.web.
+    * ;import org.junit.Test;import java.util.List;public class ChromeNativeObjectTest
+    extends BaseTest{@Test     public void test() throws Exception     {Browser browser
+    = BrowserFactory.launch(BrowserType.CHROME);         try {             //Navigate
+    to http://www.softpost.org/selenium-test-page/            browser.navigate( "http://www.softpost.org/selenium-test-page/"
+    ) ;browser.sync();             //set value in edit box            browser.describe(EditField.class,
+    new EditFieldDescription.Builder()            .id( "fn" ).build()).setValue( "Sagar"
+    );           browser.describe(Link.class, new LinkDescription.Builder()                    .tagName(
+    "A" ).innerText( "Home" ).build()).fireEvent(EventInfoFactory.createEventInfo(
+    "click" ));             Thread .sleep(3000);}         catch (AssertionError ex){           
+    //Report the Exception           Reporter.reportEvent( "Exception" , "Test failed"
+    , Status.Failed, ex);            throw ex;}         Finally         {            
+    //Close the browserbrowser.close();}}}Alternatively, you can also execute custom
+    JavaScript using below syntax.String html =   browser . getPage (). runJavaScript
+    ( "document.body.innerHTML;" );To fire change event on element with id -fn, You
+    can use below Javascript as argument to runJavaScript() method.var evt = document
+    .createEvent( ''HTMLEvents'' );evt.initEvent ( ''change'' , true , true );document
+    .findElementById( ''fn'' ).dispatchEvent( evt);9.6 Executing JavaScript in web
+    pageWhile automating web applications, you might need to execute the JavaScript
+    to perform certain operations.LeanFT allows you to execute custom JavaScript as
+    shown in below example. We can use runJavaScript method of Page class to execute
+    any valid JavaScript.package leanft ;import com.hp.lft.report.Reporter ;import
+    com.hp.lft.report.Status ;import com.hp.lft.sdk.web.* ;import com.hp.lft.verifications.Verify
+    ;import org.junit.Test ;public class ExecuteJavaScriptTest extends BaseTest{    
+    @Test     public void test () throws Exception     {        Browser browser =
+    BrowserFactory . launch ( BrowserType . INTERNET_EXPLORER );         Try        
+    {             //Navigate to http://www.softpost.org/selenium-test-page/            browser
+    . navigate ( "http://www.softpost.org/selenium-test-page/" );         browser
+    . sync ();            String html =   browser . getPage (). runJavaScript ( "document.body.
+    innerHTML;" );            System . out . println ( "HTML Source of the page" +
+    html );            System . out . println ( "Scrolling to 120,100" );            browser
+    . getPage (). runJavaScript ( "window.scrollTo(120,100);" );            String
+    documentState = browser . getPage (). runJavaScript ( "document.readyState" );            System
+    . out . println ( "Document State is " + documentState );         }         catch
+    ( AssertionError ex ){            //Report the Exception           Reporter .
+    reportEvent ( "Exception" , "Test failed" , Status . Failed , ex );           
+    throw ex ;         }         Finally         {             //Close the browser            browser
+    . close ();         }     }}10\. Automating windows applications10.1 Automating
+    standard windows applicationTo automate the standard windows apps, you will need
+    to import below packages in LeanFT project.com.hp.lft.sdk.stdwinHere is the sample
+    application that launches the notepad and enters text in it. Then it tries to
+    close the notepad. After that it clicks on Don''t save button on the Dialog box.package
+    leanft;import com.hp.lft.sdk.Desktop;import com.hp.lft.sdk.stdwin. * ;import org.junit.Test;import
+    static org.junit.Assert.assertEquals;public class NotepadTest extends BaseTest{@Test    
+    public    void test() throws Exception     {         new ProcessBuilder( "C:\\Windows\\System32\\notepad.exe"
+    ).start();         Thread .sleep(3000);         Window notepadWin = Desktop.describe(
+    Window .class,                 new WindowDescription.Builder().windowTitleRegExp(
+    "Notepad" ).build()) ;Editor editor = notepadWin.describe(Editor.class,                
+    new EditorDescription.Builder().nativeClass( "Edit" ).windowClassRegExp( "Edit"
+    ).build());        editor.sendKeys( "This is automated text" );         Thread
+    .sleep(3000);notepadWin.close();        Desktop.describe( Window .class, new WindowDescription.Builder()                .ownedWindow(
+    false ).childWindow( false ).windowClassRegExp( "Notepad" ).windowTitleRegExp(
+    " Notepad" ).build())                .describe( Dialog .class, new DialogDescription.Builder()                .ownedWindow(
+    true ).childWindow( false ).text( "Notepad" ).nativeClass( "#32770" ).build())                .describe(
+    Button .class, new ButtonDescription.Builder()                .text( "Do&n''t
+    Save" ).nativeClass( "Button" ).build()).click();}}10.2 Automating Java ApplicationAutomating
+    the Java applications is just like that of Standard windows applications. Only
+    difference is that you need to import classes in below package.import com.hp.lft.sdk.java.*;Here
+    is the sample example that identifies the Java window with title - XYZ and then
+    clicks on the check box with attached text as "Gender" inside a frame.package
+    leanft;import com.hp.lft.sdk.CheckedState;import com.hp.lft.sdk.Desktop;import
+    com.hp.lft.sdk.java. * ;import org.junit.Test;public class JavaTest extends BaseTest{@Test    
+    public void test() throws Exception{         Window javaWin = Desktop.describe(
+    Window .class, new WindowDescription.Builder()                .title( "XYZ" ).build());        CheckBox
+    checkBox = javaWin.describe(InternalFrame.class, new InternalFrameDescription.Builder()                .title(
+    "Frame1" ).build()).describe(CheckBox.class, new CheckBoxDescription.Builder()                .attachedText(
+    "Gender" ).build()) ;checkBox.setState(CheckedState.CHECKED);}}10.3 Automating
+    WPF applicationsBelow example illustrates how to automate WPF application using
+    LeanFT. Note that we need to import classes from below package.com.hp.lft.sdk.wpfIn
+    below example, we are first identifying the WPF window with title - Bus Application.
+    After that we have identified the ComboBox with name sourceCity and finally we
+    have listed down all the options in sourceCity ComboBox.package leanft;import
+    com.hp.lft.sdk.Desktop;import com.hp.lft.sdk.wpf.ComboBox;import com.hp.lft.sdk.wpf.ComboBoxDescription;import
+    com.hp.lft.sdk.wpf.Window;import com.hp.lft.sdk.wpf.WindowDescription;import org.junit.Test;/** 
+    * Created by Sagar on 20 - 07 - 2016.*/public class WpfTest extends BaseTest{@Test    
+    public void test1() throws Exception     {         Window win = Desktop.describe(
+    Window .class, new WindowDescription.Builder()                .objectName( "Bus
+    Application" ).fullType( "window" ).windowTitleRegExp( "Bus Application" ).build());       ComboBox
+    box= win.describe(ComboBox.class, new ComboBoxDescription.Builder()                .objectName(
+    "sourceCity" ).build());         for ( String s :box.getItems()){            
+    System .out.println(s);}}}10.4 Automating SAP ApplicationAutomating SAP applications
+    is very much similar to automation of standard windows applications.Please note
+    that you will have to use classes from below SAP packages.import com.hp.lft.sdk.sap.gui.*
+    ;import com.hp.lft.sdk.sap.ui5.* ;11\. SynchronizationBy default, LeanFT will
+    wait for 20 seconds when trying to find the objects. If it doesn''t identify the
+    object withing 20 seconds, exception is thrown.You can change this timeout from LeanFT
+    settings dialog.Additionally you can also add custom wait conditions.package leanft;import
+    com.hp.lft.sdk.GeneralLeanFtException;import com.hp.lft.sdk. * ;import com.hp.lft.sdk.stdwin.ToolBar;import
+    com.hp.lft.sdk.stdwin.Window;import com.hp.lft.sdk.stdwin.WindowDescription;import
+    org.junit.Assert;import org.junit.Test;/**  * Created by Sagar on 21 - 07 - 2016.*/public
+    class SynchTest extends BaseTest{@Test     public void test1() throws Exception    
+    {        WaitUntilTestObjectState.WaitUntilEvaluator< Window > evaluator = new
+    WaitUntilTestObjectState.WaitUntilEvaluator< Window >() {@Override            
+    public boolean evaluate( Window testObject) throws GeneralLeanFtException{               
+      return testObject.getWindowState()==WindowState.MAXIMIZED;}};         new ProcessBuilder(
+    "C:\\Windows\\System32\\notepad.exe" ).start();         Window notepadWindow =
+    Desktop.describe( Window .class,                 new WindowDescription.Builder().windowClassRegExp(
+    "Notepad" ).windowTitleRegExp( "Notepad" ).build());notepadWindow.maximize();Assert.assertTrue(evaluator.evaluate(notepadWindow));}}12\.
+    Assertions and Reports12.1 Assertions in LeanFTWe can do assertions in LeanFT using
+    Verify class in Validations namespace.This class allows you to put the assertions
+    in the code. Here is the sample example showing usage of Verify class.Note that
+    Verify class provides below methods.'
+  toc: []
+  trans: "\n\n![](img/image1026.jpg)\n\n# 在 LeanFT 中注册浏览器控件\n一旦注册了浏览器控件，其内部的所有对象都将被识别为\
+    \ Web 对象。请注意，LeanFT 只能处理基于 IE 引擎的浏览器控件！\n\n## 9.5 使用 LeanFT 在 Web 元素上触发事件\n我们可以使用\
+    \ LeanFT 中的 `EventInfo` 类在任何 Web 元素上触发如 `click`、`change` 等 html 事件。这里是一个完整的示例，说明了如何触发事件。\n\
+    \n```java\npackage leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.NativeObject;\nimport com.hp.lft.sdk.web..*;\nimport org.junit.Test;\n\
+    import java.util.List;\npublic class ChromeNativeObjectTest extends BaseTest{\n\
+    \    @Test\n    public void test() throws Exception {\n        Browser browser\
+    \ = BrowserFactory.launch(BrowserType.CHROME);\n        try {\n            //Navigate\
+    \ to http://www.softpost.org/selenium-test-page/\n            browser.navigate(\"\
+    http://www.softpost.org/selenium-test-page/\");\n            browser.sync();\n\
+    \            //set value in edit box\n            browser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder()\n                .id(\"fn\").build()).setValue(\"\
+    Sagar\");\n            browser.describe(Link.class, new LinkDescription.Builder()\n\
+    \                .tagName(\"A\").innerText(\"Home\").build()).fireEvent(EventInfoFactory.createEvent(\"\
+    click\"));\n            Thread.sleep(3000);\n        } catch (AssertionError ex){\n\
+    \            //Report the Exception\n            Reporter.reportEvent(\"Exception\"\
+    , \"Test failed\", Status.Failed, ex);\n            throw ex;\n        } Finally\
+    \ {\n            //Close the browser\n            browser.close();\n        }\n\
+    \    }\n}\n```\n\n此外，你也可以使用以下语法执行自定义 JavaScript。\n`String html = browser.getPage().runJavaScript(\"\
+    document.body.innerHTML;\");`\n\n若要在 id 为 -fn 的元素上触发 change 事件，你可以将下面的 Javascript\
+    \ 作为 `runJavaScript()` 方法的参数。\n```javascript\nvar evt = document.createEvent('HTMLEvents');\n\
+    evt.initEvent('change', true, true);\ndocument.findElementById('fn').dispatchEvent(evt);\n\
+    ```\n\n## 9.6 在网页中执行 JavaScript\n在自动化 Web 应用时，你可能需要执行 JavaScript 来执行某些操作。LeanFT\
+    \ 允许你像下面的示例所示执行自定义 JavaScript。我们可以使用 `Page` 类的 `runJavaScript` 方法来执行任何有效的 JavaScript。\n\
+    \n```java\npackage leanft ;\nimport com.hp.lft.report.Reporter ;\nimport com.hp.lft.report.Status\
+    \ ;\nimport com.hp.lft.sdk.web.*;\nimport com.hp.lft.verifications.Verify ;\n\
+    import org.junit.Test ;\npublic class ExecuteJavaScriptTest extends BaseTest{\n\
+    \    @Test\n    public void test () throws Exception {\n        Browser browser\
+    \ = BrowserFactory.launch(BrowserType.INTERNET_EXPLORER);\n        Try {\n   \
+    \         //Navigate to http://www.softpost.org/selenium-test-page/\n        \
+    \    browser.navigate(\"http://www.softpost.org/selenium-test-page/\");\n    \
+    \        browser.sync();\n            String html = browser.getPage().runJavaScript(\"\
+    document.body. innerHTML;\");\n            System.out.println(\"HTML Source of\
+    \ the page\" + html);\n            System.out.println(\"Scrolling to 20,100\"\
+    );\n            browser.getPage().runJavaScript(\"window.scrollTo(20,100);\");\n\
+    \            String documentState = browser.getPage().runJavaScript(\"document.readyState\"\
+    );\n            System.out.println(\"Document is \" + documentState);\n      \
+    \  } catch ( AssertionError ex ){\n            //Report the Exception\n      \
+    \      Reporter.reportEvent(\"Exception\", \"Test failed\", Status, ex);\n   \
+    \         throw ex;\n        } Finally {\n            //Close the browser\n  \
+    \          browser.close ();\n        }\n    }\n}\n```\n\n# 10. 自动化 Windows \n\
+    \n## 10.1 自动化标准 Windows 应用\n要自动化标准的 Windows 应用，你需要在 LeanFT 项目中导入以下包 `com.hp.lft.sdk.stdwin`。这里是一个启动记事本并在其中输入文本的示例应用程序。然后它会尝试关闭记事本。之后，它点击了对话框上的“不保存”按钮。\n\
+    \n```java\npackage leanft;\nimport com.hp.lft.sdk.Desktop;\nimport com.hp.lft.sdk.stdwin.*;\n\
+    import org.junit.Test;\nimport static org.junit.Assert.assertEquals;\npublic class\
+    \ NotepadTest extends BaseTest{\n    @Test\n    public void test() throws Exception\
+    \ {\n        new ProcessBuilder(\"C:\\\\Windows\\\\System32\\\\notepad.exe\").start();\n\
+    \        Thread.sleep(3000);\n        Window notepadWin = Desktop.describe(Window.class,\n\
+    \            new WindowDescription.Builder().windowTitleRegExp(\"Notepad\").build());\n\
+    \        Editor editor = notepadWin.describe(Editor.class,\n            new EditorDescription.Builder().nativeClass(\"\
+    Edit\").windowClassRegExp(\"Edit\").build());\n        editor.sendKeys(\"This\
+    \ is automated text\");\n        Thread.sleep(3000);\n        notepadWin.close();\n\
+    \        Desktop.describe(Window.class, new WindowDescription.Builder()\n    \
+    \        .ownedWindow(false).childWindow(false).windowClassRegExp(\"Notepad\"\
+    ).windowTitleRegExp(\"Notepad\").build())\n            .describe(Dialog.class,\
+    \ new DialogDescription.Builder()\n                .text(\"Don't save\").build()).click();\n\
+    \    }\n}\n```\n\n## 10.2 自动化 Java 应用\n自动化 Java 应用与标准 Windows 应用非常相似。不同在于你需要导入下面的包\
+    \ `com.hp.lft.sdk.java`。这里有一个示例，它识别了窗口并点击了带有“Gender”文本的复选框。\n\n```java\npackage\
+    \ leanft;\nimport com.hp.lft.sdk.Desktop;\nimport com.hp.lft.sdk.java.*;\nimport\
+    \ org.junit.Test;\npublic class JavaTest extends BaseTest{\n    @Test\n    public\
+    \ void test() throws Exception {\n        new ProcessBuilder(\"C:\\\\Windows\\\
+    \\System32\\\\notepad.exe\").start();\n        Thread.sleep(3000);\n        Window\
+    \ javaWin = Desktop.describe(Window.class,\n            new WindowDescription.Builder().windowTitleRegExp(\"\
+    Notepad\").build());\n        Frame frame = javaWin.describe(Frame.class,\n  \
+    \          new FrameDescription.Builder().title(\"Frame\").build());\n       \
+    \ CheckBox checkBox = frame.describe(CheckBox.class,\n            new CheckBoxDescription.Builder().text(\"\
+    Gender\").build());\n        checkBox.select();\n    }\n}\n```\n\n## 10.3 自动化\
+    \ WPF 应用\n下面的示例展示了如何使用 LeanFT 自动化 WPF 应用。注意需要导入下面的包 `com.hp.lft.sdk.wpf`。我们首先识别了标题为“Bus\
+    \ Application”的窗口，然后列出了该窗口中的所有选项。\n\n```java\npackage leanft;\nimport com.hp.lft.sdk.Desktop;\n\
+    import com.hp.lft.sdk.wpf.*;\nimport org.junit.Test;\npublic class WpfTest extends\
+    \ BaseTest{\n    @Test\n    public void test() throws Exception {\n        new\
+    \ ProcessBuilder(\"C:\\\\Windows\\\\System32\\\\notepad.exe\").start();\n    \
+    \    Thread.sleep(3000);\n        Window win = Desktop.describe(Window.class,\n\
+    \            new WindowDescription.Builder().windowTitleRegExp(\"Bus Application\"\
+    ).build());\n        ComboBox box = win.describe(ComboBox.class,\n           \
+    \ new ComboBoxDescription.Builder().objectName(\"sourceCity\").build());\n   \
+    \     for (String s : box.getItems()){\n            System.out.println(s);\n \
+    \       }\n    }\n}\n```\n\n## 10.4 自动化 SAP 应用\n自动化 SAP 应用与标准 Windows 应用非常相似。请注意你需要使用下面的\
+    \ SAP 包 `com.hp.lft.sdk.sap.*`。\n\n# 11. 同步\n默认情况下，LeanFT 在尝试查找对象时等待 20 秒。如果 20\
+    \ 秒内未识别对象，则会抛出异常。你可以在 LeanFT 设置对话框中更改超时时间。此外，你还可以添加自定义等待条件。\n\n```java\npackage\
+    \ leanft;\nimport com.hp.lft.sdk.GeneralLeanFtException;\nimport com.hp.lft.sdk.*;\n\
+    import com.hp.lft.sdk.stdwin.ToolBar;\nimport com.hp.lft.sdk.stdwin.Window;\n\
+    import com.hp.lft.sdk.stdwin.WindowDescription;\nimport org.junit.Assert;\nimport\
+    \ org.junit.Test;\n/**\n * Created by Sagar on 21 - 07 - 2016.*/\npublic class\
+    \ SynchTest extends BaseTest{\n    @Test\n    public void test1() throws Exception\
+    \ {\n        WaitUntilTestObjectState.WaitUntilEvaluator< Window > evaluator =\
+    \ new WaitUntilTestObjectState.WaitUntilEvaluator< Window >() {@Override\n   \
+    \         public boolean evaluate( Window testObject) throws GeneralLeanFtException{\n\
+    \                return testObject.getWindowState()==WindowState.MAXIMIZED;}};\n\
+    \        new ProcessBuilder(\"C:\\\\Windows\\\\System32\\\\notepad.exe\").start();\n\
+    \        Thread.sleep(3000);\n        Window notepadWindow = Desktop.describe(Window.class,\n\
+    \            new WindowDescription.Builder().windowClassRegExp(\"Notepad\").windowTitleRegExp(\"\
+    Notepad\").build());\n        notepadWindow.maximize();\n        Assert.assertTrue(evaluator.evaluate(notepadWindow));\n\
+    \    }\n}\n```\n\n# 12. 断言与报告\n\n## 12.1 LeanFT 中的断言\n我们可以使用 Validations 命名空间下的\
+    \ `Verify` 类在 LeanFT 中进行断言。该类允许你在代码中放置断言。这里是一个显示 `Verify` 类用用的示例。注意 `Verify` 类提供了以下方法。\n\
+    \n"
+- fmt: "\n## Verification Methods\n\n1. `areEqual`, `areNotEqual`\n2. `isTrue`, `isFalse`\n\
+    3. `startsWith`, `contains`, `endsWith`\n4. `lessOrEqual`, `less`, `greater`,\
+    \ `greaterOrEqual`\n5. `isMatch`\n6. `isNullOrEmpty`, `isNotNullOrEmpty`\n\n```java\n\
+    package leanft;\nimport com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\n\
+    import com.hp.lft.sdk.ModifiableSDKConfiguration;\nimport com.hp.lft.sdk.SDK;\n\
+    import com.hp.lft.sdk.web.*;\nimport com.hp.lft.sdk.web.EditField;\nimport com.hp.lft.sdk.web.EditFieldDescription;\n\
+    import com.hp.lft.verifications.Verify;\nimport org.junit.Test;\nimport java.net.URI;\n\
+    import static org.junit.Assert.assertEquals;\npublic class ChromeTest extends\
+    \ BaseTest{\n    @Test\n    public void test() throws Exception    {\n       \
+    \ Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n        Try {\n\
+    \            //Navigate to http://www.softpost.org/selenium-test-page/\n     \
+    \       browser.navigate( \"http://www.softpost.org/selenium-test-page/\" );\n\
+    \            browser.sync();\n            //set value in edit box\n          \
+    \  browser.describe(EditField.class, new EditFieldDescription.Builder()\n    \
+    \            .id( \"fn\" ).build()).setValue( \"Sagar\" );\n            //click\
+    \ on Home link\n            browser.describe(Link.class, new LinkDescription.Builder()\n\
+    \                .tagName( \"A\" ).innerText( \"Home\" ).build()).click();\n \
+    \           //Wait until page loads\n            browser.sync();\n           \
+    \ Verify.isTrue(browser.getTitle().toLowerCase().contains( \"tutorial\" ), \"\
+    Verifying the title of Home page\" );\n        } catch (AssertionError ex){\n\
+    \            //Report the Exception\n            Reporter.reportEvent( \"Exception\"\
+    \ , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n        } Finally\
+    \ {\n            //Close the browser\n            browser.close();\n        }\n\
+    \    }\n}\n```\n\nHere is the HTML report showing verification point.\n![](image1384.jpg)\n\
+    Verify class in LeanFT.\n\n## 12.2 Generating reports with screenshots and recordings\n\
+    \nReports can be generated in 2 ways in LeanFT.\n\n1. Screenshots using `Reporter`\
+    \ and `TestObject.GetSnapshot`\n2. Video recordings of test execution using Microsoft\
+    \ expression encoder.\n\nBy default, LeanFT creates the reports in `RunResults`\
+    \ folder in the root directory of Java project. But you can change that using\
+    \ the `ModifiableReportConfiguration` class as shown in below example. You can\
+    \ also use below method to send your log messages to the report.\n\n### `Reporter.reportEvent`\
+    \ \n\n```java\npackage leanft;\nimport com.hp.lft.report.*;\nimport com.hp.lft.sdk.Desktop;\n\
+    import com.hp.lft.sdk.stdwin.Window;\nimport com.hp.lft.sdk.stdwin.WindowDescription;\n\
+    import com.hp.lft.sdk.web.*;\nimport com.hp.lft.verifications.Verify;\nimport\
+    \ org.junit.Test;\nimport java.awt.image.RenderedImage;\npublic class ChromeReportTest\
+    \ extends BaseTest {\n    @Test\n    public void test () throws Exception{\n \
+    \       ModifiableReportConfiguration reportConfig = ReportConfigurationFactory.createDefaultReportConfiguration();\n\
+    \        reportConfig.setOverrideExisting( true );\n        reportConfig.setTargetDirectory(\
+    \ \"RunResults\" ); // The folder must exist under C:\\\n        reportConfig.setReportFolder(\
+    \ \"myreportdirectory\" );\n        reportConfig.setTitle( \"My Report\" );\n\
+    \        reportConfig.setDescription( \"Report Description\" );\n        reportConfig.setSnapshotsLevel(Level.OnError);\n\
+    \        Reporter.init(reportConfig);\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n\
+    \        Try {\n            //Navigate to http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //set value in edit box\n     \
+    \       EditField firstName = browser.describe(EditField.class , EditFieldDescription.Builder()\n\
+    \                .id( \"fn\" ).build());\n            firstName.setValue( \"Sagar\"\
+    \ );\n            //take screenshot\n            RenderedImage img = browser.getPage().getSnapshot();\n\
+    \            if (firstName.getValue().equalsIgnoreCase( \"sagar\" )) {\n     \
+    \           Reporter.reportEvent( \"Verify Editbox\" , \"Value is sagar\" , Status.Passed,img);\n\
+    \            } else {\n                Reporter.reportEvent( \"Verify Editbox\"\
+    \ , \"Value is not sagar\" , Status.Failed,img);\n            }\n        } catch\
+    \ (AssertionError ex){\n            //Report the Exception\n            Reporter.reportEvent(\
+    \ \"Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n\
+    \        } Finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\n\nHere is the sample report generated by above code.\n\
+    ![](image1451.jpg)\nHTML report in LeanFT showing screenshot captured during run\n\
+    \n## 13. LeanFT Frameworks\n\n### 13.1 LeanFT with Cucumber\n\nWe can integrate\
+    \ LeanFT tests with Cucumber BDD framework. If you know how to use `JUnit` with\
+    \ Cucumber, you will find it very easier to integrate LeanFT with Cucumber. Please\
+    \ follow below steps to integrate the LeanFT with Cucumber.\n\n1. Create a maven\
+    \ project using LeanFT template.\n2. Add `cucumber` and `selenium` dependency\
+    \ in `POM.xml`.\n3. Write feature files and scenarios.\n4. Write the step definitions\
+    \ for steps in `Scenario`.\n5. Execute feature file.\n\nHere is the dependency\
+    \ that you will have to add for cucumber:\n\n```xml\n<dependency>\n    <groupId>\
+    \ info.cukes </groupId>\n    <artifactId> cucumber-java </artifactId>\n    <version>\
+    \ 1.2.4 </version>\n    <scope> test </scope>\n</dependency>\n```\n\nThen you\
+    \ have to create a feature file as shown in below example.\n\n```gherkin\nFeature:\
+    \ My feature\nScenario: My Scenario\nGiven I am on www.softpost.org page\nThen\
+    \ I verify that title contains tutorial word\n```\n\nAfter that you can create\
+    \ step definitions as shown in below example.\n\n```java\npackage org.softpost;\n\
+    import com.hp.lft.report.Reporter;\nimport com.hp.lft.sdk.ModifiableSDKConfiguration;\n\
+    import com.hp.lft.sdk.SDK;\nimport com.hp.lft.sdk.web.Browser;\nimport com.hp.lft.sdk.web.BrowserFactory;\n\
+    import com.hp.lft.sdk.web.BrowserType;\nimport cucumber.api.java.After;\nimport\
+    \ cucumber.api.java.Before;\nimport cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\n\
+    import org.junit.Assert;\nimport java.net.URI;\n/**\n * Created by Sagar on 23\
+    \ - 2016.*/\npublic class Steps{\n    Browser browser;\n    @Before\n    public\
+    \ void init() throws Exception {\n        ModifiableSDKConfiguration config =\
+    \ new ModifiableSDKConfiguration();\n        config.setServerAddress( new URI(\
+    \ \"ws://localhost:5095\" ));\n        SDK.init(config);\n        Reporter.init();\n\
+    \    }\n    @Given( \"^I am on www\\.softpost\\.org page$\" )\n    public void\
+    \ i_am_on_www_softpost_page() throws Throwable{\n        browser = BrowserFactory.launch(BrowserType.CHROME);\n\
+    \        browser.navigate( \"http://www.softpost.org\" );\n    }\n    @Then( \"\
+    ^I verify that title contains tutorial word$\" )\n    public void i_verify_that_title_contains_tutorial_word()\
+    \ throws Throwable {\n        Assert.assertTrue(browser.getTitle().toLowerCase().contains(\
+    \ \"tutorial\" ));\n    }\n    @After\n    public void clean() throws Exception\
+    \ {\n        browser.close();\n        SDK.cleanup();\n    }\n}\n```\n\n### 13.2\
+    \ Keyword Driven frameworks\n\nKeyword driven frameworks are very popular in LeanFT.\
+    \ Please follow below steps to create keyword driven framework.\n\n1. Find main\
+    \ operations and features of the application.\n2. Map each feature or operation\
+    \ to a keyword.\n3. Write a code to automate specific keyword.\n4. Create test\
+    \ sheet containing test cases made up of one or more keywords. You can store the\
+    \ test sheet in Excel file, Database or in the form of `JUnit` or `TestNG` test\
+    \ class.\n5. Unless you are using `JUnit` or `TestNG` to execute the tests, you\
+    \ might need to create a driver script to execute each test case.\n\nHere is the\
+    \ case study on WPF Flight application provided by HP. In this application, we\
+    \ can create a keyword for each major feature like log in to the application,\
+    \ searching a flight, selecting a flight, Placing a order, Searching a order,\
+    \ Deleting the order, Cancelling the order, Book a flight, Verify flights. Then\
+    \ we can create test cases for various user scenarios using same keywords as mentioned\
+    \ above. Here are couple of test cases created using above keywords. Note that\
+    \ in below test cases, we have re-used login keyword.\n\nHere is the test case\
+    \ to search for a flight.\n\n1. Login to the Flight application.\n2. Search for\
+    \ the flights from London to Paris in next week for one person.\n"
+  raw: '1.  areEqual , areNotEqual
+
+
+    2.  isTrue, isFalse
+
+
+    3.  startsWith, contains, endsWith
+
+
+    4.  lessOrEqual, less, greater, greaterOrEqual
+
+
+    5.  isMatch
+
+
+    6.  isNullOrEmpty, isNotNullOrEmpty
+
+
+    package leanft;import com.hp.lft.report.Reporter;import com.hp.lft.report.Status;import
+    com.hp.lft.sdk.ModifiableSDKConfiguration;import com.hp.lft.sdk.SDK;import com.hp.lft.sdk.web.
+    * ;import com.hp.lft.sdk.web.EditField;import com.hp.lft.sdk.web.EditFieldDescription;import
+    com.hp.lft.verifications.Verify;import org.junit.Test;import java.net.URI;import
+    static org.junit.Assert.assertEquals;public class ChromeTest extends BaseTest{@Test   
+      public void test() throws Exception     {Browser browser = BrowserFactory.launch(BrowserType.CHROME);        
+    Try         {             //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();             //set
+    value in edit box            browser.describe(EditField.class, new EditFieldDescription.Builder()            .id(
+    "fn" ).build()).setValue( "Sagar" );             //click on Home link            browser.describe(Link.class,
+    new LinkDescription.Builder()                    .tagName( "A" ).innerText( "Home"
+    ).build()).click();             //Wait until page loadsbrowser.sync();            Verify.isTrue(browser.getTitle().toLowerCase().contains(
+    "tutorial" ), "Verifying the title of Home page" );}         catch (AssertionError
+    ex){            //Report the Exception           Reporter.reportEvent( "Exception"
+    , "Test failed" , Status.Failed, ex);             throw ex;}         Finally        
+    {             //Close the browserbrowser.close();}}}Here is the HTML report showing
+    verification point.![](image1384.jpg)Verify class in LeanF T12.2 Generating reports
+    with screenshots and recordingsReports can be generated in 2 ways in LeanFT.
+
+
+    1.  Screenshots using Reporter and TestObject.GetSnapshot
+
+
+    2.  Video recordings of test execution using Microsoft expression encoder.
+
+
+    By default, LeanFT creates the reports in  RunResults folder in the root directory
+    of Java project. But you can change that using ModifiableReportConfiguration class
+    as shown in below example.You can also use below method to send your log messages
+    to the report.
+
+
+    Reporter.reportEventpackage leanft;import com.hp.lft.report.*;import com.hp.lft.sdk.Desktop;import
+    com.hp.lft.sdk.stdwin.Window;import com.hp.lft.sdk.stdwin.WindowDescription;import
+    com.hp.lft.sdk.web.*;import com.hp.lft.verifications.Verify;import org.junit.Test;import
+    java.awt.image.RenderedImage;public class ChromeReportTest extends BaseTest {@Test    
+    public void test () throws Exception{ModifiableReportConfiguration reportConfig
+    = ReportConfigurationFactory.createDefaultReportConfiguration();        reportConfig.setOverrideExisting(
+    true );        reportConfig.setTargetDirectory( "RunResults" ); // The folder
+    must exist under C:\        reportConfig.setReportFolder( "myreportdirectory"
+    );        reportConfig.setTitle( "My Report Title" );        reportConfig.setDescription(
+    "Report Description" );reportConfig.setSnapshotsLevel(CaptureLevel.OnError);Reporter.init(reportConfig);Browser
+    browser = BrowserFactory.launch(BrowserType.CHROME);         Try         {            
+    //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();             //set
+    value in edit box           EditField firstName = browser.describe(EditField.
+    class , new EditFieldDescription.Builder()            .id( "fn" ).build());            firstName.setValue(
+    "Sagar" );             //take screensho tRenderedImage img = browser.getPage().getSnapshot();            
+    if (firstName.getValue().equalsIgnoreCase( "sagar" ))                Reporter.reportEvent(
+    "Verify Editbox" , "Value is sagar" , Status.Passed,img);             else                Reporter.reportEvent(
+    "Verify Editbox" , "Value is not sagar" , Status.Failed,img);}         catch (AssertionError
+    ex){            //Report the Exception           Reporter.reportEvent( "Exception"
+    , "Test failed" , Status.Failed, ex);            throw ex;}         Finally        
+    {             //Close the browserbrowser.close();}}}Here is the sample report
+    generated by above code.![](image1451.jpg)HTML report in LeanFT showing screenshot
+    captured during run13\. LeanFT Frameworks13.1 LeanFT with CucumberWe can integrate
+    LeanFT tests with Cucumber BDD framework. If you know how to use JUnit with Cucumber,
+    you will find it very easier to integrate LeanFT with Cucumber.Please follow below
+    steps to integrate the LeanFT with Cucumber.
+
+
+    1.  Create a maven project using LeanFT template
+
+
+    2.  Add cucumber and selenium dependency in POM.xml
+
+
+    3.  Write feature files and scenarios
+
+
+    4.  Write the step definitions for steps in Scenario
+
+
+    5.  Execute feature file
+
+
+    Here is the dependency that you will have to add for cucumber.        <dependency>            
+    <groupId> info.cukes </groupId>             <artifactId> cucumber-java </artifactId>            
+    <version> 1.2.4 </version>             <scope> test </scope>         </dependency
+    >Then you have to create a feature file as shown in below example.Feature: My
+    featureScenario: My ScenarioGiven I am on www.softpost.org pageThen I verify that
+    title contains tutorial wordAfter that you can create step definitions as shown
+    in below example.package org.softpost;import com.hp.lft.report.Reporter;import
+    com.hp.lft.sdk.ModifiableSDKConfiguration;import com.hp.lft.sdk.SDK;import com.hp.lft.sdk.web.Browser;import
+    com.hp.lft.sdk.web.BrowserFactory;import com.hp.lft.sdk.web.BrowserType;import
+    cucumber.api.java.After;import cucumber.api.java.Before;import cucumber.api.java.en.Given;import
+    cucumber.api.java.en.Then;import org.junit.Assert;import java.net.URI;/**  * Created
+    by Sagar on 23 - 07 - 2016.*/public class Steps{Browser browser;@Before     public
+    void init() throws Exception     {         ModifiableSDKConfiguration config =
+    new ModifiableSDKConfiguration();        config.setServerAddress( new URI( "ws://localhost:5095"
+    ));SDK.init(config);Reporter.init();}    @Given( "^I am on www\\.softpost\\.org
+    page$" )     public void i_am_on_www_softpost_org_page() throws Throwable{browser
+    = BrowserFactory.launch(BrowserType.CHROME);        browser.navigate( "http://www.softpost.org"
+    );}    @Then( "^I verify that title contains tutorial word$" )     public void
+    i_verify_that_title_contains_tutorial_word() throws Throwable    {        Assert.assertTrue(browser.getTitle().toLowerCase().contains(
+    "tutorial" ));}@After     public void clean() throws Exception     {browser.close();SDK.cleanup();}}13.2
+    Keyword Driven frameworksKeyword driven frameworks are very popular in LeanFT.Please
+    follow below steps to create keyword driven framework.
+
+
+    1.  Find main operations and features of the application.
+
+
+    2.  Map each feature or operation to a keyword.
+
+
+    3.  Write a code to automate specific keyword.
+
+
+    4.  Create test sheet containing test cases made up of one or more keywords. You
+    can store the test sheet in Excel file, Database or in the form of JUnit or TestNG
+    test class.
+
+
+    5.  Unless you are using JUnit or TestNG to execute the tests, you might need
+    to create a driver script to execute each test case.
+
+
+    Here is the case study on WPF Flight application provided by HP.In this application,
+    we can create a keyword for each major feature like log in to the application,
+    searching a flight, selecting a flight, Placing a order, Searching a order, Deleting
+    the order, Cancelling the order, Book a flight, Verify flights.Then we can create
+    test cases for various user scenarios using same keywords as mentioned above.Here
+    are couple of test cases created using above keywords. Note that in below test
+    cases, we have re-used login keyword .Here is the test case to search for a flight.
+
+
+    1.  Login to the Flight application.
+
+
+    2.  Search for the flights from London to Paris in next week for one person.'
+  toc: []
+  trans: "\n\n## 验证方法\n\n1. `areEqual`, `areNotEqual`\n2. `isTrue`, `isFalse`\n3.\
+    \ `startsWith`, `contains`, `endsWith`\n4. `lessOrEqual`, `less`, `greater`, `greaterOrEqual`\n\
+    5. `isMatch`\n6. `isNullOrEmpty`, `isNotNullOrEmpty`\n\n```java\npackage leanft;\n\
+    import com.hp.lft.report.Reporter;\nimport com.hp.lft.report.Status;\nimport com.hp.lft.sdk.ModifiableSDKConfiguration;\n\
+    import com.hp.lft.sdk.SDK;\nimport com.hp.lft.sdk.web.*;\nimport com.hp.lft.sdk.web.EditField;\n\
+    import com.hp.lft.sdk.web.EditFieldDescription;\nimport com.hp.lft.verifications.Verify;\n\
+    import org.junit.Test;\nimport java.net.URI;\nimport static org.junit.Assert.assertEquals;\n\
+    public class ChromeTest extends BaseTest{\n    @Test\n    public void test() throws\
+    \ Exception    {\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n\
+    \        Try {\n            //导航到 http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //在输入框中设置值\n            browser.describe(EditField.class,\
+    \ new EditFieldDescription.Builder()\n                .id( \"fn\" ).build()).setValue(\
+    \ \"Sagar\" );\n            //点击 Home 链接\n            browser.describe(Link.class,\
+    \ new LinkDescription.Builder()\n                .tagName( \"A\" ).innerText(\
+    \ \"Home\" ).build()).click();\n            //等待页面加载\n            browser.sync();\n\
+    \            Verify.isTrue(browser.getTitle().toLowerCase().contains( \"tutorial\"\
+    \ ), \"Verifying the title of Home page\" );\n        } catch (AssertionError\
+    \ ex){\n            //报告异常\n            Reporter.reportEvent( \"Exception\" ,\
+    \ \"Test failed\" , Status.Failed, ex);\n            throw ex;\n        } Finally\
+    \ {\n            //关闭浏览器\n            browser.close();\n        }\n    }\n}\n\
+    ```\n\n这里是显示验证点的 HTML 报告。\n![](img/image1384.jpg)\nLeanFT 中的 Verify 类。\n\n## 12.2\
+    \ 生成带有截图和录屏的报告\n\nLeanFT 中可以通过两种方式生成报告。\n\n1. 使用 `Reporter` 和 `TestObject.GetSnapshot`\
+    \ 截屏。\n2. 使用 Microsoft expression encoder 进行测试执行的视频录制。\n\n默认情况下，LeanFT 在 Java\
+    \ 项目根目录下的 `RunResults` 文件夹中创建报告。但你可以像下面的示例一样使用 `ModifiableReportConfiguration`\
+    \ 类进行更改。你也可以使用以下方法将你的日志消息发送到报告。\n\n### `Reporter.reportEvent` \n\n```java\npackage\
+    \ leanft;\nimport com.hp.lft.report.*;\nimport com.hp.lft.sdk.Desktop;\nimport\
+    \ com.hp.lft.sdk.stdwin.Window;\nimport com.hp.lft.sdk.stdwin.WindowDescription;\n\
+    import com.hp.lft.sdk.web.*;\nimport com.hp.lft.verifications.Verify;\nimport\
+    \ org.junit.Test;\nimport java.awt.image.RenderedImage;\npublic class ChromeReportTest\
+    \ extends BaseTest {\n    @Test\n    public void test () throws Exception{\n \
+    \       ModifiableReportConfiguration reportConfig = ReportConfigurationFactory.createDefaultReportConfiguration();\n\
+    \        reportConfig.setOverrideExisting( true );\n        reportConfig.setTargetDirectory(\
+    \ \"RunResults\" ); // 该文件夹必须在 C:\\ 下存在\n        reportConfig.setReportFolder(\
+    \ \"myreportdirectory\" );\n        reportConfig.setTitle( \"My Report\" );\n\
+    \        reportConfig.setDescription( \"Report Description\" );\n        reportConfig.setSnapshotsLevel(Level.OnError);\n\
+    \        Reporter.init(reportConfig);\n        Browser browser = BrowserFactory.launch(BrowserType.CHROME);\n\
+    \        Try {\n            //导航到 http://www.softpost.org/selenium-test-page/\n\
+    \            browser.navigate( \"http://www.softpost.org/selenium-test-page/\"\
+    \ );\n            browser.sync();\n            //在输入框中设置值\n            EditField\
+    \ firstName = browser.describe(EditField.class , EditFieldDescription.Builder()\n\
+    \                .id( \"fn\" ).build());\n            firstName.setValue( \"Sagar\"\
+    \ );\n            //截图\n            RenderedImage img = browser.getPage().getSnapshot();\n\
+    \            if (firstName.getValue().equalsIgnoreCase( \"sagar\" )) {\n     \
+    \           Reporter.reportEvent( \"Verify Editbox\" , \"Value is sagar\" , Status.Passed,img);\n\
+    \            } else {\n                Reporter.reportEvent( \"Verify Editbox\"\
+    \ , \"Value is not sagar\" , Status.Failed,img);\n            }\n        } catch\
+    \ (AssertionError ex){\n            //报告异常\n            Reporter.reportEvent(\
+    \ \"Exception\" , \"Test failed\" , Status.Failed, ex);\n            throw ex;\n\
+    \        } Finally {\n            //关闭浏览器\n            browser.close();\n    \
+    \    }\n    }\n}\n```\n\n这里是使用上述代码生成的示例报告。\n![](img/image1451.jpg)\nLeanFT 中显示运行期间捕获截图的\
+    \ HTML 报告\n\n## 13. LeanFT 框架\n\n### 13.1 与 Cucumber 的 LeanFT\n\n我们可以将 LeanFT\
+    \ 测试与 Cucumber BDD 框架集成。如果你知道如何使用 Cucumber，就可以轻松地集成 LeanFT。请按照以下步骤操作：\n\n1. 使用\
+    \ Cucumber 创建 LeanFT 测试。\n2. 在 pom.xml 中添加 `cucumber` 和 `selenium` 依赖。\n3. 编写\
+    \ feature 文件。\n4. 为场景编写步骤定义。\n5. 执行 feature 文件。\n\n这里是需要添加 cucumber 的依赖：\n\n```xml\n\
+    <dependency>\n    <groupId>info</groupId>\n    <artifactId>cucumber-java</artifactId>\n\
+    \    <version>1.4</version>\n    <scope>test</scope>\n</dependency>\n```\n\n然后你需要按照下面的示例创建\
+    \ feature 文件：\n\n```gherkin\nFeature: My feature\nScenario: My Scenario\nGiven\
+    \ I am on softpost.org page\nThen I verify that title contains tutorial\n```\n\
+    \n之后你可以按照示例创建步骤定义：\n\n```java\npackage org.softpost;\nimport com.hp.lft.report.Reporter;\n\
+    import com.hp.lft.sdk.ModifiableReportConfiguration;\nimport com.hp.lft.sdk.SDK;\n\
+    import com.hp.lft.sdk.web.Browser;\nimport com.hp.lft.sdk.web.BrowserFactory;\n\
+    import com.hp.lft.sdk.web.BrowserType;\nimport cucumber.api.java.After;\nimport\
+    \ cucumber.api.java.Before;\nimport cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\n\
+    import org.junit.Assert;\nimport java.net.URI;\n/**\n * 由 Sagar 创建于 23 -2016.*/\n\
+    public class Steps{\n    Browser browser;\n    @Before\n    public void init()\
+    \ throws Exception {\n        ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();\n\
+    \        config.setServerAddress( new URI( \"ws://localhost:5095\" ));\n     \
+    \   SDK.init(config);\n        Reporter.init();\n    }\n    @Given( \"^I am on\
+    \ softpost\\.org page$\" )\n    public void i_am_on_softpost_page() throws Throwable{\n\
+    \        browser = BrowserFactory.launch(BrowserType.CHROME);\n        browser.navigate(\
+    \ \"http://www.softpost.org\" );\n    }\n    @Then( \"^I verify that title contains\
+    \ tutorial$\" )\n    public void i_verify_that_title_contains_tutorial() throws\
+    \ Throwable {\n        Assert.assertTrue(browser.getTitle().toLowerCase().contains(\
+    \ \"tutorial\" ));\n    }\n    @After\n    public void clean() throws Exception\
+    \ {\n        browser.close();\n        SDK.cleanup();\n    }\n}\n```\n\n### 13.2\
+    \ 关键字驱动框架\n\n关键字驱动框架在 LeanFT 中非常流行。请按照以下步骤创建关键字驱动框架：\n\n1. 查找应用程序的主要操作和功能。\n2.\
+    \ 将每个功能映射到关键字。\n3. 编写自动化特定关键字的代码。\n4. 创建由一个或多个关键字组成的测试用例。你可以将测试表存储在 Excel 文件、数据库或\
+    \ `JUnit` 或 `TestNG` 测试类中。\n5. 除非你使用 `JUnit` 或 `TestNG` 执行测试，否则你可能需要创建一个驱动脚本来执行每个用例。\n\
+    \n这里是 HP 提供的 WPF 应用程序案例研究。在此应用程序中我们可以为每个主要功能创建一个关键字，如登录应用程序、搜索航班、选择航班、下单、搜索订单、删除订单、取消订单、预订机票、验证航班。然后我们可以使用上述相同的关键字创建各种用户场景的测试用例。这里是使用上述关键字创建的两个用例。注意，在下面的用例中，我们重用了登录关键字。\n\
+    \n这里是搜索航班的测试用例：\n\n1. 登录航班应用程序。\n2. 搜索下周从伦敦飞往巴黎的单人航班。\n\n"
+- fmt: "\n### 3. Verify that flights are displayed from London to Paris only.\n\n\
+    Here is the test case to search for a order.\n\n1. Login to the `Flight` application.\n\
+    2. Book a flight and note down order number say `88`.\n3. Search for order with\
+    \ id `88`.\n4. Verify that flight details are correctly displayed.\n\n### 13.3\
+    \ Data Driven Frameworks\nData driven framework are used when you need to test\
+    \ the application with various types of data. You can store the data in below\
+    \ formats.\n\n1. Microsoft Excel Files\n2. Databases\n\nIn data driven frameworks,\
+    \ we test the same feature but with different set of data. For example, in HP\
+    \ flight application, we can test the `Login` functionality with various combination\
+    \ of `User Id` and `Password`. Note that here `Login` functionality is same but\
+    \ Test data is different during each run.\n\n### 14. Converting the UFT Object\
+    \ Repository to Application models in LeanFT\nWe can use below command line utility\
+    \ to convert the Object repository to Application models in LeanFT.\n![](image1586.jpg)\n\
+    \n#### OR2AppModelConverter in Java\nHere is the syntax of this utility.\n\n```\n\
+    OR2AppModelConverter myuftOR.tsr myAppModel.tsrx myLogFile.log\n```\n**Warning**:\
+    \ First argument is the path of the object repository file. Second argument is\
+    \ the path of the application model file. Third argument is the path of the log\
+    \ file and last argument is the log level (It can be `Info`, `Warning` or `Error`).\n\
+    \n### 15. Integrating the LeanFT tests with CI servers\n#### 15.1 Adding maven\
+    \ task in Bamboo\nThe important settings of `maven` task are given below.\n\n\
+    1. Provide the path of `maven` executable.\n2. Provide any valid [maven goal](http://www.softpost.org/maven/maven-commands/)\n\
+    \nBelow image shows how to configure the `maven` task in `Bamboo`. We have set\
+    \ up the clean test goal.\n![](image1605.jpg)\nmaven task in Bamboo\n\nBelow image\
+    \ shows the sample output of the build plan using `maven` task.\n![](image1611.jpg)\n\
+    maven output in Bamboo\n\n#### 15.2 Creating and Configuring the builds in Jenkins\n\
+    Now let us understand how to create and configure a typical build in `Jenkins`.\
+    \ To create new build (also called as job), click on `New Item` link on `Jenkins`\
+    \ Home page. It will open below page.\n![](image1620.jpg)\nNew Jenkins Build project\n\
+    \nThen enter name of project, select `freestyle project` option and click on `OK`.\
+    \ It will open Build configuration page as shown below. Enter project description\
+    \ and add parameter if you want pass any parameter to the build.\n![](image1625.jpg)\n\
+    Build configuration in Jenkins - Build name, description, parameters\n\nNext you\
+    \ need to configure the SCM like `git` as shown in below image. In this example,\
+    \ we are using repository on `GITHUB`. But you can use any other version control\
+    \ software.\n![](image1630.jpg)\ngit - Source code management in Jenkins build\n\
+    \nNext - you have to specify the build triggers. You can specify the trigger in\
+    \ the form of `Cron` expressions. You can also poll `SCM` at regular intervals\
+    \ and if changes are detected, build will be run.\n![](image1637.jpg)\nBuild triggers\
+    \ in Jenkins\n\nYour job/project is made up of multiple build steps. So you can\
+    \ add build steps as shown in below image. Note that you will not see all build\
+    \ steps as shown in below image unless you have installed proper plugins. For\
+    \ examples - `MSBuild` step will not be available unless you install `MSBuild`\
+    \ plugin in `Jenkins`.\n![](image1643.jpg)\nBuild steps in Jenkins\n![](image1648.jpg)\n\
+    maven build step in Jenkins\n\nLast thing you need to do is configure post-build\
+    \ actions. Below image shows possible post-build actions that you can do.\n![](image1654.jpg)\n\
+    post-build actions in Jenkins\n\nAbove step is optional. So just go ahead and\
+    \ click on `Save` button. Well done! You have just created a sample build in `Jenkins`.\
+    \ To view your build project, just go to homepage. You will see your build(Highlighted\
+    \ in yellow color) as shown in below image.\n![](image1660.jpg)\nJenkins build\
+    \ on Dashboard\n\n#### 15.3 Build steps for Maven project in TeamCity\nIn this\
+    \ topic, you will learn how to set up a build steps for `maven` project in `TeamCity`.\
+    \ As shown in below image, you have to select runner type as `Maven`. Then you\
+    \ have to provide the goals to be executed. By default, it uses `POM.xml` in the\
+    \ root directory of the project. You may also run code coverage process along\
+    \ with test goal which gives report on how many classes were covered by tests.\
+    \ Here is the list of some of the popular `maven` goals that can be used.\n\n\
+    1. `test` - execute tests using `surefire` plugin. We can also pass various parameters\
+    \ to `maven JUnit test goal` and `maven testNG test goal`\n2. `verify` - executes\
+    \ unit tests as well as does verification provided by plugins\n3. `install`\n\
+    4. `site`\n5. `deploy`\n\n![](image1675.jpg)\nmaven build step in TeamCity\n\n\
+    Below image shows that sample build log.\n![](image1682.jpg)\nmaven build log\
+    \ in TeamCity\n\n### 16. Challenges and Solutions\n#### 16.1 Challenges of LeanFT\
+    \ automation\nHere is the list of main `LeanFT` challenges.\n\n1. `LeanFT` does\
+    \ not support third party controls. We have to use `Native` objects to automate\
+    \ such third party objects.\n2. Dynamic Elements like check boxes, buttons, radio\
+    \ buttons inside nested tables. We have to use `HTML DOM` to handle such elements.\n\
+    \n#### 16.2 Working with third party objects using Native Object properties and\
+    \ methods\nBelow example illustrates how to access `native object properties`\
+    \ in `LeanFT`. In below example, we have set the value in edit box using `native\
+    \ value` property. We have also used `native click` method to click on.\n\n```java\n\
+    package leanft;\nimport com.hp.ft.report.Reporter;\nimport com.hp.ft.report.Status;\n\
+    import com.hp.ft.sdk.NativeObject;\nimport org.junit.Test;\nimport java.util.List;\n\
+    \npublic class ChromeTest extends BaseTest {\n    @Test\n    public void test()\
+    \ throws Exception {\n        Browser browser = BrowserFactory.launch(BrowserType.ROME);\n\
+    \        try {\n            //Navigate to http://soft.post.org/test-page/\n  \
+    \          browser.navigate(\"http://soft.post.org/test-page/\");\n          \
+    \  browser.sync();\n            //set value in edit box\n            browser.describe(EditField.class,\
+    \ new EditField.Builder()).id(\"fn\").build()).setValue(\"S\");\n            //get\
+    \ native object\n            NativeObject obj = browser.describe(EditField.class,\
+    \ new EditField.Builder()).id(\"fn\").build()).getNativeObject();\n          \
+    \  //list native members of the object\n            List<String> list = obj.getMembers();\n\
+    \            for (String s : list) {\n                System.out.println(s);\n\
+    \            }\n            obj.setProperty(\"value\", \"Native\");\n        \
+    \    Thread.sleep(3000);\n            //click on Home link using native method\n\
+    \            browser.describe(Link.class, new Link.Builder()).tagName(\"A\").innerText(\"\
+    Home\").build()).getNativeObject().invokeMethod(\"click\");\n        } catch (AssertionError\
+    \ ex) {\n            //Report the Exception\n            Reporter.reportEvent(\"\
+    Exception\", \"Test failed\", Status.Failed, ex);\n            throw ex;\n   \
+    \     } finally {\n            //Close the browser\n            browser.close();\n\
+    \        }\n    }\n}\n```\n\n### 17. LeanFT common issues and solutions\nI have\
+    \ listed down common issues and solutions that you may encounter while working\
+    \ with `LeanFT`.\n\n1. `Failed to connect to LeanFT run time engine on....` This\
+    \ exception comes when `LeanFT` run time engine is not running. Just start the\
+    \ engine and this error should vanish.\n2. `An Internal problem has occurred,\
+    \ please make sure the LeanFT SDK was properly initialized....` This exception\
+    \ comes when you have not initialized `LeanFT SDK`. To get rid of this exception,\
+    \ add below lines at the beginning of the code.\n\n```java\nModifiableSDKConfiguration\
+    \ config = new ModifiableSDKConfiguration();\nconfig.setServerAddress(new URI(\"\
+    ws://localhost:5095\"));\nSDK.init(config);\n```\n3. `IntelliJ IDEA does not start\
+    \ when LeanFT is plugin is enabled` – To fix this issue kill the `LeanFT` plugin\
+    \ for `IntelliJ IDEA` in process explorer.\n"
+  raw: '3.  Verify that flights are displayed from London to Paris only.
+
+
+    Here is the test case to search for a order.
+
+
+    1.  Login to the Flight application.
+
+
+    2.  Book a flight and note down order number say 88.
+
+
+    3.  Search for order with id 88.
+
+
+    4.  Verify that flight details are correctly displayed.
+
+
+    13.3 Data Driven FrameworksData driven framework are used when you need to test
+    the application with various types of data.You can store the data in below formats.
+
+
+    1.  Microsoft Excel Files
+
+
+    2.  Databases
+
+
+    In data driven frameworks, we test the same feature but with different set of
+    data. For example, in HP flight application, we can test the Login functionality
+    with various combination of User Id and Password.Note that here Login functionality
+    is same but Test data is different during each run.14\. Converting the UFT Object
+    Repository to Application models in LeanFTWe can use below command line utility
+    to convert the Object repository to Application models in LeanFT.![](image1586.jpg)OR2AppModelConverter
+    in JavaHere is the syntax of this utility.OR2AppModelConverter myuftOR.tsr  myAppModel.tsrx
+    myLogFile.log WarningFirst argument is the path of the object repository file.
+    Second argument is the path of the application model file. Third argument is the
+    path of the log file and last argument is the log level (It can be Info, Warning
+    or Error).15\. Integrating the LeanFT tests with CI servers15.1 Adding maven task
+    in BambooThe important settings of maven task are given below.
+
+
+    1.  Provide the path of maven executable
+
+
+    2.  Provide any valid [maven goal](http://www.softpost.org/maven/maven-commands/)
+
+
+    Below image shows how to configure the maven task in Bamboo. We have set up the
+    clean test goal.![](image1605.jpg)maven task in Bambo oBelow image shows the sample
+    output of the build plan using maven task.![](image1611.jpg)maven output in Bambo
+    o15.2 Creating  and Configuring the builds in JenkinsNow let us understand how
+    to create and configure a typical build in Jenkins.To create new build (also called
+    as job), click on New Item link on Jenkins Home page. It will open below page.![](image1620.jpg)New
+    Jenkins Build projec tThen enter name of project, select freestyle project option
+    and click on OK. It will open Build configuration page as shown below. Enter project
+    description and add parameter if you want pass any parameter to the build.![](image1625.jpg)Build
+    configuration in Jenkins - Build name, description, parameter sNext you need to
+    configure the SCM like git as shown in below image. In this example, we are using
+    repository on GITHUB. But you can use any other version control software.![](image1630.jpg)git
+    - Source code management in Jenkins buil dNext - you have to specify the build
+    triggers. You can specify the trigger in the form of Cron expressions. You can
+    also poll SCM at regular intervals and if changes are detected, build will be
+    run.![](image1637.jpg)Build triggers in JenkinsYour job/project is made up of
+    multiple build steps. So you can add build steps as shown in below image. Note
+    that you will not see all build steps as shown in below image unless you have
+    installed proper plugins. For examples - MSBuild step will not be available unless
+    you install MSBuild plugin in Jenkins.![](image1643.jpg)Build steps in Jenkins![](image1648.jpg)maven
+    build step in JenkinsLast thing you need to do is configure post-build actions.
+    Below image shows possible post-build actions that you can do.![](image1654.jpg)post-build
+    actions in JenkinsAbove step is optional. So just go ahead and click on Save button.
+    Well done! You have just created a sample build in Jenkins. To view your build
+    project, just go to homepage. You will see your build(Highlighted in yellow color)
+    as shown in below image.![](image1660.jpg)Jenkins build on Dashboard15.3 Build
+    steps for Maven project in TeamCityIn this topic, you will learn how to set up
+    a build steps for maven project in TeamCity.As shown in below image, you have
+    to select runner type as Maven. Then you have to provide the goals to be executed.
+    By default, it uses POM.xml in the root directory of the project. You may also
+    run code coverage process along with test goal which gives report on how many
+    classes were covered by tests .Here is the list of some of the popular maven goals
+    that can be used.
+
+
+    1.  test - execute tests using surefire plugin. We can also pass various parameters
+    to maven JUnit test goal  and maven testNG test goal
+
+
+    2.  verify - executes unit tests as well as does verification provided by plugins
+
+
+    3.  install
+
+
+    4.  site
+
+
+    5.  deploy
+
+
+    ![](image1675.jpg)maven build step in TeamCityBelow image shows that sample build
+    log.![](image1682.jpg)maven build log in TeamCity16\. Challenges and Solutions16.1
+    Challenges of LeanFT automationHere is the list of main LeanFT challenges.
+
+
+    1.  LeanFT does not support third party controls. We have to use Native objects
+    to automate such third party objects.
+
+
+    2.  Dynamic Elements like check boxes, buttons, radio buttons inside nested tables.
+    We have to use HTML DOM to handle such elements.
+
+
+    16.2 Working with third party objects usingNative Object properties and methodsBelow
+    example illustrates how to access native object properties in LeanFT. In below
+    example, we have set the value in edit box using native value property. We have
+    also used native click method to click on Home link.package leanft;import com.hp.lft.report.Reporter;import
+    com.hp.lft.report.Status;import com.hp.lft.sdk.NativeObject;import com.hp.lft.sdk.web.
+    * ;import org.junit.Test;import java.util.List;public class ChromeNativeObjectTest
+    extends BaseTest{@Test     public void test() throws Exception {Browser browser
+    = BrowserFactory.launch(BrowserType.CHROME);         Try         {            
+    //Navigate to http://www.softpost.org/selenium-test-page/            browser.navigate(
+    "http://www.softpost.org/selenium-test-page/" );browser.sync();             //set
+    value in edit box            browser.describe(EditField.class, new EditFieldDescription.Builder()            .id(
+    "fn" ).build()).setValue( "Sagar" );             //get native object            NativeObject
+    obj = browser.describe(EditField.class, new EditFieldDescription.Builder()                    .id(
+    "fn" ).build()).getNativeObject();             //list native members of the object            
+    List < String > list = obj.getMembers();             for ( String   s : list  ){                
+    System .out.println(s);}            obj.setProperty( "value" , "Native" );           
+      Thread .sleep(3000);             //click on Home link using native click method            browser.describe(Link.class,
+    new LinkDescription.Builder()                    .tagName( "A" ).innerText( "Home"
+    ).build()).getNativeObject().invokeMethod( "click" );}         catch (AssertionError
+    ex){            //Report the Exception           Reporter.reportEvent( "Exception"
+    , "Test failed" , Status.Failed, ex);            throw ex;}         Finally        
+    {             //Close the browserbrowser.close();}}}17\. LeanFT common issues
+    and solutionsI have listed down common issues and solutions that you may encounter
+    while working with LeanFT.
+
+
+    1.  Failed to connect to LeanFT run time engine on….This exception comes when
+    LeanFT run time engine is not running. Just start the engine and this error should
+    vanish.
+
+
+    2.  An Internal problem has occurred, please make sure the LeanFT SDK was properly
+    initialized….This exception comes when you have not initialized LeanFT SDK. To
+    get rid of this exception, add below lines at the beginning of the code.
+
+
+    ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();config.setServerAddress(new
+    URI("ws://localhost:5095"));SDK.init(config);
+
+
+    3.  IntelliJ IDEA does not start when LeanFT is plugin is enabled – To fix this
+    issue kill the LeanFT plugin for IntelliJ IDEA in process explorer'
+  toc: []
+  trans: "\n\n### 3. 验证仅显示从伦敦到巴黎的航班。\n\n这里是搜索订单的测试用例。\n\n1. 登录 `Flight` 应用程序。\n2.\
+    \ 预订航班并记录订单号，例如 `88`。\n3. 搜索 ID 为 `88` 的订单。\n4. 验证航班详情是否显示正确。\n\n### 13.3 数据驱动框架\n\
+    当你需要使用各种类型的数据对应用程序进行测试时，就会数据驱动框架。你可以按照以下格式存储数据。\n\n1. Microsoft Excel 文件\n2. 数据库\n\
+    \n在数据驱动框架中，我们测试同一个功能，但使用不同的数据集。例如，在 HP 航班应用程序中，我们可以使用 `User Id` 和 `Password` 的不同组合来测试\
+    \ `Login` 功能。请注意，此处的 `Login` 功能是相同的，但在每次运行期间测试数据是不同的。\n\n### 14. 将 UFT 对象库转换为\
+    \ LeanFT 中的应用程序模型\n我们可以使用下面的命令行工具将对象库转换为 LeanFT 中的应用程序模型。\n![](img/image1586.jpg)\n\
+    \n#### Java 版 OR2AppModelConverter\n以下是该工具的语法。\n\n```\nOR2AppModelConverter myuftOR.tsr\
+    \ myAppModel.tsrx myLogFile.log\n```\n**警告**：第一个参数是对象库文件的路径。第二个参数是应用程序模型文件的路径。第三个参数是日志文件的路径，最后一个参数是日志级别（可以是\
+    \ `Info`、`Warning` 或 `Error`）。\n\n### 15. 将 FT 测试集成到 CI 服务器\n#### 15.1 在 Bamboo\
+    \ 中添加 maven 任务\n`maven` 任务的重要设置如下所示。\n\n1. 提供 `maven` 可执行文件的路径。\n2. 提供任何有效的 [maven\
+    \ 目标](http://www.softpost.org/maven/maven-commands/)\n\n下图显示了如何在 `Bamboo` 中配置\
+    \ `maven` 任务。我们已经设置了 clean test 目标。\n![](img/image1605.jpg)\nBamboo 中的 maven 任务\n\
+    \n下图显示了使用 `maven` 任务的构建计划的示例输出。\n![](img/image1611.jpg)\nBamboo 中的 maven 输出\n\n\
+    #### 15.2 在 Jenkins 中创建和配置构建\n现在让我们了解如何在 `Jenkins` 中创建和配置一个典型的构建。要创建新构建（也称为任务），点击\
+    \ `Jenkins` 页上的 `New Item` 链接。它将打开下面的页面。\n![](img/image1620.jpg)\n新建 Jenkins 构建项目\n\
+    \n然后输入项目名称，选择 `freestyle project` 并点击 `OK`。它将打开如下所示的构建配置页面。输入项目描述，如果你想向构建传递任何参数，请添加参数。\n\
+    ![](img/image1625.jpg)\nJenkins 构建配置 - 构建名称、描述、参数\n\n接下来，你需要像下图所示配置 `git` 等 SCM。在这个示例中，我们使用\
+    \ `GITHUB` 上的仓库。但你可以使用任何其他版本控制软件。\n![](img/image1630.jpg)\nJenkins 构建中的 git -\
+    \ 源码管理\n\n接下来 - 你必须指定构建触发器。你可以以 `Cron` 表达式的形式指定触发器。你也可以定期轮询 `SCM`，如果检测到更改，将运行构建。\n\
+    ![](img/image1637.jpg)\nJenkins 构建触发器\n\n你的任务/项目由多个构建步骤组成。因此，你可以如下所示添加构建步骤。请注意，除非你安装了适当的插件，否则你将不会看到图中所示的所有构建步骤。例如\
+    \ - 除非你在 `Jenkins` 中安装了 `MSBuild` 插件，否则 `MSBuild` 步骤将不可。\n![](img/image1643.jpg)\n\
+    Jenkins 构建步骤\n![](img/image1648.jpg)\nJenkins 中的 maven 构建步骤\n\n最后你需要做的是配置构建后操作。下图显示了你可以执行可能的构建后操作。\n\
+    ![](img/image1654.jpg)\nJenkins 中的构建后操作\n\n上述步骤是可选的。所以只需点击 `Save` 按钮即可。做得好！你刚刚在\
+    \ `Jenkins` 中创建了一个示例构建。要查看你的构建项目，只需进入主页。你将看到如下所示的构建（黄色高亮）。\n![](img/image1660.jpg)\n\
+    仪表板上的 Jenkins 构建\n\n#### 15.3 TeamCity 中 Maven 项目的构建步骤\n在本主题中，你将学习如何在 `TeamCity`\
+    \ 中为 `maven` 项目设置构建步骤。如下所示，你必须选择运行器类型为 `Maven`。然后你必须提供要执行的目标。默认情况下，它使用项目根目录下的\
+    \ `POM.xml`。你也可以在运行测试目标的同时运行代码覆盖过程，这将提供关于测试覆盖了多少类的报告。这里是一些常用的 `maven` 目标的列表。\n\
+    \n1. `test` - 使用 `surefire` 插件执行测试。我们也可以向 `maven JUnit test goal` 和 `maven testNG\
+    \ test goal` 传递各种参数。\n2. `verify` - 执行单元测试并执行插件提供的验证。\n3. `install`\n4. `site`\n\
+    5. `deploy`\n\n![](img/image1675.jpg)\nTeamCity 中的 maven 构建步骤\n\n下图显示了示例构建日志。\n\
+    ![](img/image1682.jpg)\nTeamCity 中的 maven 构建日志\n\n### 16. 挑战与解决方案\n#### 16.1 LeanFT\
+    \ 自动化挑战\n以下是主要的 `LeanFT` 挑战列表。\n\n1. `LeanFT` 不支持第三方控件。我们必须使用 `Native` 对象。\n2.\
+    \ 嵌套表格中的动态元素如复选框、按钮、单选按钮。我们必须使用 `HTML DOM` 处理。\n\n#### 16.2 使用 Native 属性和方法操作第三方对象\n\
+    下面的示例说明了如何在 `LeanFT` 中访问 `native 属性`。在下面的示例中，我们使用 `native value` 属性设置输入框的值。我们还使用了\
+    \ `native click` 方法进行点击。\n\n```java\npackage leanft;\nimport com.hp.ft.report.Reporter;\n\
+    import com.hp.ft.report.Status;\nimport com.hp.ft.sdk.NativeObject;\nimport org.junit.Test;\n\
+    import java.util.List;\n\npublic class ChromeTest extends BaseTest {\n    @Test\n\
+    \    public void test() throws Exception {\n        Browser browser = BrowserFactory.launch(BrowserType.ROME);\n\
+    \        try {\n            //导航到 http://soft.post.org/test-page/\n          \
+    \  browser.navigate(\"http://soft.post.org/test-page/\");\n            browser.sync();\n\
+    \            //在输入框设置值\n            browser.describe(EditField.class, new EditField.Builder()).id(\"\
+    fn\").build()).setValue(\"S\");\n            //获取原生对象\n            NativeObject\
+    \ obj = browser.describe(EditField.class, new EditField.Builder()).id(\"fn\").build()).getNativeObject();\n\
+    \            //列出对象的成员\n            List<String> list = obj.getMembers();\n  \
+    \          for (String s : list) {\n                System.out.println(s);\n \
+    \           }\n            obj.setProperty(\"value\", \"Native\");\n         \
+    \   Thread.sleep(3000);\n            //使用原生方法点击 Home 链接\n            browser.describe(Link.class,\
+    \ new Link.Builder()).tagName(\"A\").innerText(\"Home\").build()).getNativeObject().invokeMethod(\"\
+    click\");\n        } catch (AssertionError ex) {\n            //报告异常\n       \
+    \     Reporter.reportEvent(\"Exception\", \"测试失败\", Status.Failed, ex);\n    \
+    \        throw ex;\n        } finally {\n            //关闭浏览器\n            browser.close();\n\
+    \        }\n    }\n}\n```\n\n### 17. LeanFT 常见问题与解决方案\n列出了在使用 `LeanFT` 工作期间可能遇到的常见问题及其解决方案。\n\
+    \n1. `无法连接到位于.... 的 LeanFT 运行时` 此异常发生在 `LeanFT` 运行时未运行时。只需启动引擎，该错误就会消失。\n2. `发生内部问题，请确保已正确初始化\
+    \ LeanFT SDK....` 此异常发生在你未初始化 `LeanFT SDK` 时。为了消除此异常，请在代码开头添加以下行。\n\n```java\n\
+    ModifiableSDKConfiguration config = new ModifiableSDKConfiguration();\nconfig.setServerAddress(new\
+    \ URI(\"ws://localhost:5095\"));\nSDK.init(config);\n```\n3. `启用 LeanFT 插件时 IntelliJ\
+    \ IDEA 无法启动` – 要修复此此问题，请在进程管理器中结束 `IntelliJ IDEA` 的 `LeanFT` 插件。\n\n"
+- fmt: '
+
+    ### 4. 异常说明
+
+    - `com.hp.lft.sdk.ReplayObjectNotUniqueException`: Object not unique – This exception
+    comes comes when LeanFT finds more than one object matching the description. To
+    fix this issue, you need to add more properties so that only one object is identified
+    .
+
+    - `Object not found` – This exception comes when LeanFT is not able to find the
+    object in the application. To fix this issue, ensure that object really exists
+    in the application and you are using correct description to identify the object.
+
+
+    ### 18. Comparing LeanFT with other tools
+
+
+    #### 18.1 Difference between HP UFT and LeanFT
+
+    Here is the list of main differences between UFT and LeanFT.
+
+
+    1. UFT scripts can be written in VBScript only.
+
+    2. LeanFT scripts can be written in languages like `Java`, `C#.Net` and Java script.
+
+    3. LeanFT does not support automation of various technologies like `Oracle`, `Siebel`,
+    `PeopleSoft`, `Delphi`, `Power Builder`, `Stingray`, `Flex`, `VisualAge`. UFT
+    supports all these platforms.
+
+
+    #### 18.2 Comparison of LeanFT with Selenium and Ranorex
+
+    Based upon my experience, I can say that LeanFT and Ranorex are equivalent in
+    terms of features.
+
+
+    ##### Difference between Selenium and LeanFT
+
+    1. Biggest difference between Selenium and LeanFT (and Ranorex) is that Selenium
+    can only support automation of web pages and not windows applications. But LeanFT
+    and Ranorex can automate the windows and forms very easily along with web application.
+
+    2. Another major difference between Selenium and other 2 tools is that Selenium
+    is free !
+
+
+    ##### Difference between LeanFT and Ranorex
+
+    1. LeanFT is developed by HP while Ranorex is developed by Ranorex Gmbh.
+
+    2. Ranorex coding can be done only in `C#.Net` While LeanFT can be coded in `C#.Net`
+    as well as `Java`.
+
+    3. Ranorex uses `xpath` to identify objects in windows as well as web applications.
+    LeanFT uses property value pairs to identify the objects in Windows apps. LeanFT
+    also supports `xpath` in web applications.
+
+
+    ### 19. LeanFT Java References
+
+    You can find the LeanFT resources at below urls.
+
+
+    1. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HelpCenterRoot/DemoApps.htm`
+    - Demo applications provided by HP
+
+    2. `http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReference/index.html?com/hp/lft/sdk/example-files/master-examples-list.html`
+    - Sample examples in Java
+
+    3. `http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReference/index.html` - LeanFT
+    Java SDK
+
+    4. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/UFT_OR_Converter.htm`
+    - Coverting UFT Object repository into Application models in LeanFT
+
+    5. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/RunRemotely.htm`
+    - Executing the tests remotely in LeanFT
+
+    6. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/CI_Tools.htm`
+    - Integrating LeanFT with CI servers like TeamCity
+
+    '
+  raw: '4.  com.hp.lft.sdk.ReplayObjectNotUniqueException: Object not unique – This
+    exception comes when LeanFT finds more than one object matching the description.
+    To fix this issue, you need to add more properties so that only one object is
+    identified .
+
+
+    5.  Object not found – This exception comes when LeanFT is not able to find the
+    object in the application. To fix this issue, ensure that object really exists
+    in the application and you are using correct description to identify the object.
+
+
+    18\. Comparing LeanFT with other tools18.1 Difference between HP UFT and LeanFTHere
+    is the list of main differences between UFT and LeanFT.
+
+
+    1.  UFT scripts can be written in VBScript only.
+
+
+    2.  LeanFT scripts can be written in languages like Java, C#.Net and Java script.
+
+
+    3.  LeanFT does not support automation of various technologies like Oracle, Siebel,
+    PeopleSoft, Delphi, Power Builder, Stingray, Flex, VisualAge. UFT supports all
+    these platforms.
+
+
+    18.2 Comparison of LeanFT with Selenium and RanorexBased upon my experience, I
+    can say that LeanFT and Ranorex are equivalent in terms of features.Difference
+    between Selenium and LeanFT
+
+
+    1.  Biggest difference between Selenium and LeanFT (and Ranorex) is that Selenium
+    can only support automation of web pages and not windows applications. But LeanFT
+    and Ranorex can automate the windows and forms very easily along with web application.
+
+
+    2.  Another major difference between Selenium and other 2 tools is that Selenium
+    is free !
+
+
+    Difference between LeanFT and Ranorex
+
+
+    1.  LeanFT is developed by HP while Ranorex is developed by Ranorex Gmbh.
+
+
+    2.  Ranorex coding can be done only in C#.Net While LeanFT can be coded in C#.Net
+    as well as Java.
+
+
+    3.  Ranorex uses xpath to identify objects in windows as well as web applications.
+    LeanFT uses property value pairs to identify the objects in Windows apps. LeanFT
+    also supports xpath in web applications.
+
+
+    19\. LeanFT Java ReferencesYou can find the LeanFT resources at below urls.
+
+
+    1.  http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HelpCenterRoot/DemoApps.htm -
+    Demo applications provided by HP
+
+
+    2.  http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReference/index.html?com/hp/lft/sdk/example-files/master-examples-list.html -
+    Sample examples in Java
+
+
+    3.  http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReferenc e/index.html - LeanFT
+    Java SDK
+
+
+    4.  http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/UFT_OR_Converter.htm -
+    Coverting UFT Object repository into Application models in LeanFT
+
+
+    5.  http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/RunRemotely.htm -
+    Executing the tests remotely in LeanFT
+
+
+    6.  http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/CI_Tools.htm -
+    Integrating LeanFT with CI servers like TeamCity'
+  toc: []
+  trans: '
+
+
+    ### 4. 异常说明
+
+    - `com.hp.lft.sdk.ReplayObjectNotUniqueException`: 对象不唯一 – 当 LeanFT 找到多个匹配描述的对象时抛出此异常。要解决此问题，你需要添加更多属性以便识别出唯一对象。
+
+    - `Object not found` – 未找到对象 – 当 LeanFT 无法在应用程序中找到对象时抛出此异常。要解决此问题，请确保该对象确实存在于应用程序中，并且使用的是正确的描述来识别该对象。
+
+
+    ### 18. LeanFT 与与其他工具对比
+
+
+    #### 18.1 HP UFT 与 LeanFT 的区别
+
+    以下是 UFT 和 LeanFT 之间的主要差异列表。
+
+
+    1. UFT 脚本只能使用 VBScript 编写。
+
+    2. LeanFT 脚本可以使用 `Java`、`C#.Net` 和 JavaScript 等。
+
+    3. LeanFT 不支持 `Oracle`、`Siebel`、`PeopleSoft`、`Delphi`、`Power Builder`、`Stingray`、`Flex`、`VisualAge`
+    等技术的自动化。UFT 支持所有这些平台。
+
+
+    #### 18.2 LeanFT 与 Selenium 及 Ranorex 的比较
+
+    根据我的经验，我可以说 LeanFT 和 Ranorex 在功能上是对同的。
+
+
+    ##### Selenium 与 LeanFT 的区别
+
+    1. Selenium 与 LeanFT（以及 Ranorex）之间最大的区别是 Selenium 仅支持网页自动化，不支持窗口应用程序。但 LeanFT
+    和 Ranorex 可以非常轻松地自动化 Web 应用以及窗口和表单。
+
+    2. Selenium 与另外两个工具的另一个主要区别是 Selenium 是免费的！
+
+
+    ##### LeanFT 与 Ranorex 的区别
+
+    1. LeanFT 由 HP 开发，而 Ranorex 由 Ranorex Gmbh 开发。
+
+    2. Ranorex 编码只能用 `C#.Net` 完成，而 LeanFT 既可以使用 `C#.Net` 也可以使用 `Java`。
+
+    3. Ranorex 使用 `xpath` 来识别窗口以及 Web 中的对象。LeanFT 使用属性值对来识别 Windows 应用中的对象。LeanFT
+    也支持 Web 应用中的 `xpath`。
+
+
+    ### 19. LeanFT Java 参考
+
+    你可以在以下 URL 找到 LeanFT 资源。
+
+
+    1. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HelpCenterRoot/DemoApps.htm`
+    - HP 提供的示例应用程序
+
+    2. `http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReference/index.html?com/hp/lft/sdk/example-files/master-examples-list.html`
+    - Java 示例
+
+    3. `http://leanft-help.saas.hpe.com/en/12.52/JavaSDKReference/index.html` - LeanFT
+    Java SDK
+
+    4. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/UFT_OR_Converter.htm`
+    - 将 UFT 对象库转换为 LeanFT 中的应用程序模型
+
+    5. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/RunRemotely.htm`
+    - 在 LeanFT 中远程执行测试
+
+    6. `http://leanft-help.saas.hpe.com/en/12.52/HelpCenter/Content/HowTo/CI_Tools.htm`
+    - 将 LeanFT 与 TeamCity 等 CI 服务器集成
+
+
+    '

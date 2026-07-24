@@ -1,0 +1,3356 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 318 454" preserveaspectratio="none">
+<image width="318" height="454" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="text00000.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>Copyright © All rights reserved</p>
+<p> </p>
+<p>No part of this book may be reproduced, or stored in a retrieval
+system, or transmitted in any form or by any means, electronic,
+mechanical, photocopying, recording, or otherwise, without express
+written permission of the publisher.</p>
+<p> </p>
+<p><span id="text00001.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>I would like to dedicate the book to the students who will be using
+it. I wish you future career success and hope you never stop
+learning.</p>
+<p><span class="text_"><br />
+</span></p>
+<p><span id="text00002.html"></span></p>
+<p><span class="text_1">TABLE OF CONTENT</span></p>
+<p> </p>
+<p><span id="text00002.html_id_toc" class="text_2"></span> <a
+href="#text00003.html_id_Toc68246419" class="calibre2"><span
+class="text_3">Overview</span></a></p>
+<p><a href="#text00004.html_id_Toc68246420" class="calibre2"><span
+class="text_4">Environment Setup</span></a></p>
+<p><a href="#text00005.html_id_Toc68246421" class="calibre2"><span
+class="text_4">IOUtils</span></a></p>
+<p><a href="#text00006.html_id_Toc68246422" class="calibre2"><span
+class="text_4">FileUtils</span></a></p>
+<p><a href="#text00007.html_id_Toc68246423" class="calibre2"><span
+class="text_4">FilenameUtils</span></a></p>
+<p><a href="#text00008.html_id_Toc68246424" class="calibre2"><span
+class="text_4">FileSystemUtils</span></a></p>
+<p><a href="#text00009.html_id_Toc68246425" class="calibre2"><span
+class="text_4">IOCase</span></a></p>
+<p><a href="#text00010.html_id_Toc68246426" class="calibre2"><span
+class="text_4">LineIterator</span></a></p>
+<p><a href="#text00011.html_id_Toc68246427" class="calibre2"><span
+class="text_4">NameFileFilter</span></a></p>
+<p><a href="#text00012.html_id_Toc68246428" class="calibre2"><span
+class="text_4">WildcardFileFilter</span></a></p>
+<p><a href="#text00013.html_id_Toc68246429" class="calibre2"><span
+class="text_4">SuffixFileFilter</span></a></p>
+<p><a href="#text00014.html_id_Toc68246430" class="calibre2"><span
+class="text_4">PrefixFileFilter</span></a></p>
+<p><a href="#text00015.html_id_Toc68246431" class="calibre2"><span
+class="text_4">OrFileFilter</span></a></p>
+<p><a href="#text00016.html_id_Toc68246432" class="calibre2"><span
+class="text_4">AndFileFilter</span></a></p>
+<p><a href="#text00017.html_id_Toc68246433" class="calibre2"><span
+class="text_4">FileEntry</span></a></p>
+<p><a href="#text00018.html_id_Toc68246434" class="calibre2"><span
+class="text_4">FileAlterationObserver</span></a></p>
+<p><a href="#text00019.html_id_Toc68246435" class="calibre2"><span
+class="text_4">FileAlterationMonitor</span></a></p>
+<p><a href="#text00020.html_id_Toc68246436" class="calibre2"><span
+class="text_4">NameFileComparator</span></a></p>
+<p><a href="#text00021.html_id_Toc68246437" class="calibre2"><span
+class="text_4">SizeFileComparator</span></a></p>
+<p><a href="#text00022.html_id_Toc68246438" class="calibre2"><span
+class="text_4">LastModifiedFileComparator</span></a></p>
+<p><a href="#text00023.html_id_Toc68246439" class="calibre2"><span
+class="text_4">TeeInputStream</span></a></p>
+<p><a href="#text00024.html_id_Toc68246440" class="calibre2"><span
+class="text_4">TeeOutputStream</span></a></p>
+<h1 class="block_6"><span class="text_5"><br />
+</span></h1>
+<p><span id="text00003.html"></span></p>
+<h1 class="block_6"><span id="text00003.html_id_Toc68246419"
+class="text_6">Overview</span></h1>
+<p>Apache Commons IO library provides various utility classes for common
+operations for File IO covering wide range of use cases. It helps avoid
+writing boilerplate code. Apache Commons IO library provides classes for
+following categories −</p>
+<h2 class="block_8">Classes</h2>
+<p>Apache Commons IO library provides classes for following categories
+−</p>
+<h3 class="block_9">Utility classes</h3>
+<p>These classes under <strong>org.apache.commons.io</strong>  package
+provides file and string comparison. Following are some of the
+examples.</p>
+<ul>
+<li><strong>IOUtils</strong>  − Provides utility methods for reading,
+writing and copying files. The methods works with InputStream,
+OutputStream, Reader and Writer.</li>
+<li><strong>FilenameUtils</strong>  − Provides method to work with file
+names without using File Object. It works on different operating systems
+in similar way.</li>
+<li><strong>FileUtils</strong>  − Provides method to manipulates files
+like moving, opening, checking existence, reading of file etc. These
+methods use File Object.</li>
+<li><strong>IOCase</strong>  − Provides method for string manipulation
+and comparison.</li>
+<li><strong>FileSystemUtils</strong>  − Provides method to get the free
+space on a disk drive.</li>
+<li><strong>LineIterator</strong>  − Provides a flexible way to work
+with a line-based file.</li>
+</ul>
+<h3 class="block_9">Filter classes</h3>
+<p>Filter classes
+under <strong>org.apache.commons.io.filefilter</strong>  package
+provides methods to filter files based on logical criteria instead of
+string based tedious comparisons. Following are some of the
+examples.</p>
+<ul>
+<li><strong>NameFileFilter</strong>  − Filters file-names for a
+name.</li>
+<li><strong>WildcardFileFilter</strong>  − Filters files using the
+supplied wildcards.</li>
+<li><strong>SuffixFileFilter</strong>  − Filters files based on suffix.
+This is used in retrieving all the files of a particular type.</li>
+<li><strong>PrefixFileFilter</strong>  − Filters files based on
+prefix.</li>
+<li><strong>OrFileFilter</strong>  − Provides conditional OR logic
+across a list of file filters. Returns true if any filters in the list
+return true. Otherwise, it returns false.</li>
+<li><strong>AndFileFilter</strong>  − Provides conditional And logic
+across a list of file filters. Returns false if any filters in the list
+return false. Otherwise, it returns true.</li>
+</ul>
+<h3 class="block_9">File Monitor classes</h3>
+<p>File monitor classes
+under <strong>org.apache.commons.io.monitor</strong>  package provides
+control to track changes in a specific file or folder and allows to do
+action accordingly on the changes. Following are some of the
+examples.</p>
+<ul>
+<li><strong>FileEntry</strong>  − Provides the state of a file or
+directory, File attributes at a point in time.</li>
+<li><strong>FileAlterationObserver</strong>  − Represents the state of
+files below a root directory, checks the filesystem and notifies
+listeners of create, change or delete events.</li>
+<li><strong>FileAlterationMonitor</strong>  − Represents a thread that
+spawns a monitoring thread triggering any registered
+FileAlterationObserver at a specified interval.</li>
+</ul>
+<h3 class="block_9">Comparator classes</h3>
+<p>File monitor classes under <em>org apache.commons.io.comparator</em>
+ package allow to compare and sort files and directories easily.</p>
+<ul>
+<li><strong>NameFileComparator</strong>  − Compare the names of two
+files.</li>
+<li><strong>SizeFileComparator</strong>  − Compare the size of two
+files.</li>
+<li><strong>LastModifiedFileComparator</strong>  − Compare the last
+modified dates of two files.</li>
+</ul>
+<h3 class="block_9">Stream classes</h3>
+<p>There are multiple implementation of InputStream
+under <strong>org.apache.commons.io.input</strong>  package and of
+OutputStream under <strong>org.apache.commons.io.output</strong>
+ package to do useful tasks on streams. Following are some of the
+examples.</p>
+<ul>
+<li><strong>NullOutputStream</strong>  − Absorbs all data sent with any
+error.</li>
+<li><strong>TeeOutputStream</strong>  − Sends output to two
+streams.</li>
+<li><strong>ByteArrayOutputStream</strong>  − Faster version of JDK
+class.</li>
+<li><strong>CountingOutputStream</strong>  − Counts the number of bytes
+passed through the stream.</li>
+<li><strong>CountingOutputStream</strong>  − Counts the number of bytes
+passed through the stream.</li>
+<li><strong>ProxyOutputStream</strong>  − Changes the calls to proxied
+stream.</li>
+<li><strong>LockableFileWriter</strong>  − A FileWriter to create lock
+files and allow simple cross thread file lock handling.</li>
+</ul>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00004.html"></span></p>
+<h1 class="block_13"><span id="text00004.html_id_Toc68246420"
+class="calibre6">Environment Setup</span></h1>
+<p>In this chapter, we will learn about the local environment setup of
+Apache Commons IO and how to set up the path of Commons IO for Windows
+2000/XP, Windows 95/98/ME etc. We will also understand about some
+popular java editors and how to download Commons IO archive.</p>
+<h2 class="block_8">Local Environment Setup</h2>
+<p>If you are still willing to set up your environment for Java
+programming language, then this section guides you on how to download
+and set up Java on your machine. Please follow the steps mentioned below
+to set up the environment.</p>
+<p>Java SE is freely available from the link <strong>Download
+Java</strong> . which is available
+at <strong>https://www.oracle.com/java/technologies/oracle-java-archivedownloads.
+html</strong> .So you download a version based on your operating
+system.</p>
+<p>Follow the instructions to download Java and run
+the <strong>.exe</strong>  to install Java on your machine. Once you
+have installed Java on your machine, you would need to set environment
+variables to point to correct installation directories −</p>
+<h2 class="block_8">Path for Windows 2000/XP</h2>
+<p>We are assuming that you have installed Java in <strong>c:\Program
+Files\java\jdk</strong>  directory −</p>
+<ul>
+<li>Right-click on 'My Computer' and select 'Properties'.</li>
+<li>Click on the 'Environment variables' button under the 'Advanced'
+tab.</li>
+<li>Now, alter the 'Path' variable so that it also contains the path to
+the Java executable. Example, if the path is currently set to
+'C:\WINDOWS\SYSTEM32', then change your path to read
+'C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin'.</li>
+</ul>
+<h2 class="block_8">Path for Windows 95/98/ME</h2>
+<p>We are assuming that you have installed Java in <strong>c:\Program
+Files\java\jdk</strong>  directory −</p>
+<ul>
+<li>Edit the 'C:\autoexec.bat' file and add the following line at the
+end − 'SET PATH=%PATH%;C:\Program Files\java\jdk\bin'</li>
+</ul>
+<h2 class="block_8">Path for Linux, UNIX, Solaris, FreeBSD</h2>
+<p>Environment variable PATH should be set to point to where the Java
+binaries have been installed. Refer to your shell documentation if you
+have trouble doing this.</p>
+<p>Example, if you use bash as your shell, then you would add the
+following line to the end of your '.bashrc: export
+PATH=/path/to/java:$PATH'</p>
+<h2 class="block_8">Popular Java Editors</h2>
+<p>To write your Java programs, you need a text editor. There are many
+sophisticated integrated development environment (IDEs) available in the
+market. But for now, you can consider one of the following −</p>
+<ul>
+<li><strong>Notepad</strong>  − On Windows machine you can use any
+simple text editor like Notepad (Recommended for this tutorial),
+TextPad.</li>
+<li><strong>Netbeans</strong>  − It is a Java IDE that is open-source
+and free which can be downloaded
+from <strong>https://www.netbeans.org/index.html</strong> .</li>
+<li><strong>Eclipse</strong>  − It is also a Java IDE developed by the
+eclipse open-source community and can be downloaded
+from <strong>https://www.eclipse.org/</strong> .</li>
+</ul>
+<h2 class="block_8">Download Common IO Archive</h2>
+<p>Download the latest version of Apache Common IO jar file
+from <strong>commons-io-2.8.0-bin.zip</strong> . At the time of writing
+this tutorial, we have
+downloaded <strong>commons-io-2.8.0-bin.zip</strong>  and copied it into
+C:\&gt;Apache folder.</p>
+<table class="table_">
+<tbody class="calibre7">
+<tr class="calibre8">
+<td class="td_"><p>OS</p></td>
+<td class="td_"><p>Archive name</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_1"><p>Windows</p></td>
+<td class="td_1"><p>commons-io-2.6-bin.zip</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_1"><p>Linux</p></td>
+<td class="td_1"><p>commons-io-2.6-bin.tar.gz</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_1"><p>Mac</p></td>
+<td class="td_1"><p>commons-io-2.6-bin.tar.gz</p></td>
+</tr>
+</tbody>
+</table>
+<h2 class="block_8">Set Apache Common IO Environment</h2>
+<p>Set the <strong>APACHE_HOME</strong>  environment variable to point
+to the base directory location where Apache jar is stored on your
+machine. Assuming, we've extracted <strong>commonsio-
+2.8.0-bin.zip</strong>  in Apache folder on various Operating Systems as
+follows.</p>
+<table class="table_1">
+<tbody class="calibre7">
+<tr class="calibre8">
+<td class="td_2"><p>OS</p></td>
+<td class="td_3"><p>Output</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_4"><p>Windows</p></td>
+<td class="td_5"><p>Set the environment variable APACHE_HOME to
+C:\Apache</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_4"><p>Linux</p></td>
+<td class="td_5"><p>export APACHE_HOME=/usr/local/Apache</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_4"><p>Mac</p></td>
+<td class="td_5"><p>export APACHE_HOME=/Library/Apache</p></td>
+</tr>
+</tbody>
+</table>
+<h2 class="block_8">Set CLASSPATH Variable</h2>
+<p>Set the <strong>CLASSPATH</strong>  environment variable to point to
+the Common IO jar location. Assuming, you have
+stored <strong>commons-io-2.8.0-bin.zip</strong>  in Apache folder on
+various Operating Systems as follows.</p>
+<table class="table_1">
+<tbody class="calibre7">
+<tr class="calibre8">
+<td class="td_6"><p>OS</p></td>
+<td class="td_7"><p>Output</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_8"><p>Windows</p></td>
+<td class="td_9"><p>Set the environment variable CLASSPATH to
+%CLASSPATH%;%APACHE_HOME%\commons-io-2.6.jar;.;</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_8"><p>Linux</p></td>
+<td class="td_9"><p>export
+CLASSPATH=$CLASSPATH:$APACHE_HOME/commons-io-2.6.jar:.</p></td>
+</tr>
+<tr class="calibre8">
+<td class="td_8"><p>Mac</p></td>
+<td class="td_9"><p>export
+CLASSPATH=$CLASSPATH:$APACHE_HOME/commons-io-2.6.jar:.</p></td>
+</tr>
+</tbody>
+</table>
+<h1 class="block_6"> </h1>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00005.html"></span></p>
+<h1 class="block_13"><span id="text00005.html_id_Toc68246421"
+class="calibre6">IOUtils</span></h1>
+<p>Provides utility methods for reading, writing and copying files. The
+methods works with InputStream, OutputStream, Reader and Writer.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.IOUtils</strong>  Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOUtils</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span></p>
+</div>
+<h2 class="block_8">Features of IOUtils</h2>
+<p>The features of IOUtils are given below −</p>
+<ul>
+<li>Provides static utility methods for input/output operations.</li>
+<li>toXXX() − reads data from a stream.</li>
+<li>write() − write data to a stream.</li>
+<li>copy() − copy all data to a stream to another stream.</li>
+<li>contentEquals − compare the contents of two streams.</li>
+</ul>
+<h2 class="block_8">Example of IOUtils Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">BufferedReader</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileInputStream</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">InputStream</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">InputStreamReader</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOUtils</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//Using BufferedReader</span></p>
+<p><span class="calibre6">readUsingTraditionalWay</span> <span
+class="text_9">();</span></p>
+<p><span class="text_10">//Using IOUtils</span></p>
+<p><span class="calibre6">readUsingIOUtils</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_10">//reading a file using buffered reader line by
+line</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">readUsingTraditionalWay</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">(</span> <span
+class="text_8">BufferedReader</span> <span
+class="calibre6">bufferReader</span></p>
+<p><span class="text_9">=</span> <span class="text_7">new</span> <span
+class="text_8">BufferedReader</span> <span class="text_9">(</span> <span
+class="text_7">new</span> <span class="text_8">InputStreamReader</span>
+<span class="text_9">(</span></p>
+<p><span class="text_7">new</span> <span
+class="text_8">FileInputStream</span> <span class="text_9">(</span>
+<span class="text_11">"input.txt"</span> <span class="text_9">)</span>
+<span class="text_9">)</span> <span class="text_9">))</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">String</span> <span class="calibre6">line</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">while</span> <span class="text_9">(</span> <span
+class="text_9">(</span> <span class="calibre6">line</span> <span
+class="text_9">=</span> <span class="calibre6">bufferReader</span> <span
+class="text_9">.</span> <span class="calibre6">readLine</span> <span
+class="text_9">()</span> <span class="text_9">)</span> <span
+class="text_9">!=</span> <span class="text_7">null</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">line</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_10">//reading a file using IOUtils in one
+go</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">readUsingIOUtils</span> <span class="text_9">()</span>
+<span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">(</span> <span
+class="text_8">InputStream</span> <span class="text_7">in</span> <span
+class="text_9">=</span> <span class="text_7">new</span> <span
+class="text_8">FileInputStream</span> <span class="text_9">(</span>
+<span class="text_11">"input.txt"</span> <span class="text_9">))</span>
+<span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_8">IOUtils</span> <span class="text_9">.</span> <span
+class="calibre6">toString</span> <span class="text_9">(</span> <span
+class="text_7">in</span> <span class="text_9">,</span> <span
+class="text_11">"UTF-8"</span> <span class="text_9">)</span> <span
+class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00006.html"></span></p>
+<h1 class="block_13"><span id="text00006.html_id_Toc68246422"
+class="calibre6">FileUtils</span></h1>
+<p>Provides method to manipulates files like moving, opening, checking
+existence, reading of file etc. These methods use File Object.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.FileUtils</strong>  Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">FileUtils</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span></p>
+</div>
+<h2 class="block_8">Features of FileUtils</h2>
+<p>The features of FileUtils are stated below −</p>
+<ul>
+<li>Methods to write to a file.</li>
+<li>Methods to read from a file.</li>
+<li>Methods to make a directory including parent directories.</li>
+<li>Methods to copy files and directories.</li>
+<li>Methods to delete files and directories.</li>
+<li>Methods to convert to and from a URL.</li>
+<li>Methods to list files and directories by filter and extension.</li>
+<li>Methods to compare file content.</li>
+<li>Methods to file last changed date.</li>
+<li>Methods to calculating a checksum.</li>
+</ul>
+<h2 class="block_8">Example of FileUtils Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">nio</span> <span
+class="text_9">.</span> <span class="calibre6">charset</span> <span
+class="text_9">.</span> <span class="text_8">Charset</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileUtils</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//Using FileUtils</span></p>
+<p><span class="calibre6">usingFileUtils</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingFileUtils</span> <span class="text_9">()</span>
+<span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the file object</span></p>
+<p><span class="text_8">File</span> <span class="calibre6">file</span>
+<span class="text_9">=</span> <span class="text_8">FileUtils</span>
+<span class="text_9">.</span> <span class="calibre6">getFile</span>
+<span class="text_9">(</span> <span class="text_11">"input.txt"</span>
+<span class="text_9">);</span></p>
+<p><span class="text_10">//get the temp directory</span></p>
+<p><span class="text_8">File</span> <span class="calibre6">tmpDir</span>
+<span class="text_9">=</span> <span class="text_8">FileUtils</span>
+<span class="text_9">.</span> <span
+class="calibre6">getTempDirectory</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">tmpDir</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_10">//copy file to temp directory</span></p>
+<p><span class="text_8">FileUtils</span> <span class="text_9">.</span>
+<span class="calibre6">copyFileToDirectory</span> <span
+class="text_9">(</span> <span class="calibre6">file</span> <span
+class="text_9">,</span> <span class="calibre6">tmpDir</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">//create a new file</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">newTempFile</span> <span class="text_9">=</span> <span
+class="text_8">FileUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getFile</span> <span class="text_9">(</span> <span
+class="calibre6">tmpDir</span> <span class="text_9">,</span> <span
+class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_10">//get the content</span></p>
+<p><span class="text_8">String</span> <span class="calibre6">data</span>
+<span class="text_9">=</span> <span class="text_8">FileUtils</span>
+<span class="text_9">.</span> <span
+class="calibre6">readFileToString</span> <span class="text_9">(</span>
+<span class="calibre6">newTempFile</span> <span class="text_9">,</span>
+<span class="text_8">Charset</span> <span class="text_9">.</span> <span
+class="calibre6">defaultCharset</span> <span
+class="text_9">());</span></p>
+<p><span class="text_10">//print the content</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">data</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Temp</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00007.html"></span></p>
+<h1 class="block_13"><span id="text00007.html_id_Toc68246423"
+class="calibre6">FilenameUtils</span></h1>
+<p>Provides method to work with file names without using File Object. It
+works on different operating systems in similar way. This class solves
+problems when moving from a Windows based development machine to a Unix
+based production machine.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.FilenameUtils</strong>  Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">FilenameUtils</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span></p>
+</div>
+<h2 class="block_8">Features of FilenameUtils</h2>
+<p>This class defines six components within a filename. Consider an
+example location as <strong>C:\dev\project\file.txt</strong> . Then the
+components are −</p>
+<ul>
+<li>Prefix - C:\</li>
+<li>Relative Path - dev\project\</li>
+<li>Absolute path - C:\dev\project\</li>
+<li>Name - file.txt</li>
+<li>Base name - file</li>
+<li>Extension - txt</li>
+</ul>
+<p>To identify a directory, add a separator to file name.</p>
+<h2 class="block_8">Example of FilenameUtils Class</h2>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FilenameUtils</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//Using FilenameUtils</span></p>
+<p><span class="calibre6">usingFilenameUtils</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingFilenameUtils</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_8">String</span> <span class="calibre6">path</span>
+<span class="text_9">=</span> <span
+class="text_11">"C:\\dev\\project\\file.txt"</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Full Path: "</span> <span class="text_9">+</span> <span
+class="text_8">FilenameUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getFullPath</span> <span class="text_9">(</span> <span
+class="calibre6">path</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Relative Path: "</span> <span class="text_9">+</span>
+<span class="text_8">FilenameUtils</span> <span class="text_9">.</span>
+<span class="calibre6">getPath</span> <span class="text_9">(</span>
+<span class="calibre6">path</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Prefix: "</span> <span class="text_9">+</span> <span
+class="text_8">FilenameUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getPrefix</span> <span class="text_9">(</span> <span
+class="calibre6">path</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Extension: "</span> <span class="text_9">+</span> <span
+class="text_8">FilenameUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getExtension</span> <span class="text_9">(</span> <span
+class="calibre6">path</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Base: "</span> <span class="text_9">+</span> <span
+class="text_8">FilenameUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getBaseName</span> <span class="text_9">(</span> <span
+class="calibre6">path</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Name: "</span> <span class="text_9">+</span> <span
+class="text_8">FilenameUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">(</span> <span
+class="calibre6">path</span> <span class="text_9">));</span></p>
+<p><span class="text_8">String</span> <span
+class="calibre6">filename</span> <span class="text_9">=</span> <span
+class="text_11">"C:/commons/io/../lang/project.xml"</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Normalized Path: "</span> <span class="text_9">+</span>
+<span class="text_8">FilenameUtils</span> <span class="text_9">.</span>
+<span class="calibre6">normalize</span> <span class="text_9">(</span>
+<span class="calibre6">filename</span> <span
+class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Full Path: C:\dev\project\</p>
+<p>Relative Path: dev\project\</p>
+<p>Prefix: C:\</p>
+<p>Extension: txt</p>
+<p>Base: file</p>
+<p>Name: file.txt</p>
+<p>Normalized Path: C:\commons\lang\project.xml</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00008.html"></span></p>
+<h1 class="block_13"><span id="text00008.html_id_Toc68246424"
+class="calibre6">FileSystemUtils</span></h1>
+<p>Provides method to get the free space on a disk drive.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.FileSystemUtils</strong>  Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">FileSystemUtils</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span></p>
+</div>
+<h2 class="block_8">Example of FileSystemUtils Class</h2>
+<p>Given below is the example of FileSystemUtils Class −</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileSystemUtils</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Free Space "</span> <span class="text_9">+</span> <span
+class="text_8">FileSystemUtils</span> <span class="text_9">.</span>
+<span class="calibre6">freeSpaceKb</span> <span class="text_9">(</span>
+<span class="text_11">"C:/"</span> <span class="text_9">)</span> <span
+class="text_9">+</span> <span class="text_11">" Bytes"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Free Space 61355640 kb</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00009.html"></span></p>
+<h1 class="block_13"><span id="text00009.html_id_Toc68246425"
+class="calibre6">IOCase</span></h1>
+<p>Enumeration of IO case sensitivity. Different Operating systems have
+different rules for case-sensitivity for file names. For example Windows
+is case-insensitive for file naming while Unix is case-sensitive. IOCase
+captures that difference, provides an enumeration to control how
+filename comparisons should be performed. It also provides methods to
+use the enumeration to perform comparisons.</p>
+<h2 class="block_8">Enum Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.IOCase</strong>  Enum −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">enum</span>
+<span class="text_8">IOCase</span></p>
+<p><span class="text_7">extends</span> <span class="text_8">Enum</span>
+<span class="text_9">&lt;</span> <span class="text_8">IOCase</span>
+<span class="text_9">&gt;</span> <span class="text_7">implements</span>
+<span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of IOCase Enum</h2>
+<p>An example of IOCase Enum is given below −</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOCase</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingIOCase</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingIOCase</span> <span class="text_9">()</span> <span
+class="text_7">throws</span> <span class="text_8">IOException</span>
+<span class="text_9">{</span></p>
+<p><span class="text_8">String</span> <span class="calibre6">text</span>
+<span class="text_9">=</span> <span class="text_11">"Welcome to
+TutorialsPoint. Simply Easy Learning."</span> <span
+class="text_9">;</span></p>
+<p><span class="text_8">String</span> <span
+class="calibre6">text1</span> <span class="text_9">=</span> <span
+class="text_11">"WELCOME TO TUTORIALSPOINT. SIMPLY EASY
+LEARNING."</span> <span class="text_9">;</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Ends with Learning (case sensitive): "</span> <span
+class="text_9">+</span></p>
+<p><span class="text_8">IOCase</span> <span class="text_9">.</span>
+<span class="calibre6">SENSITIVE</span> <span class="text_9">.</span>
+<span class="calibre6">checkEndsWith</span> <span
+class="text_9">(</span> <span class="calibre6">text1</span> <span
+class="text_9">,</span> <span class="text_11">"Learning."</span> <span
+class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Ends with Learning (case insensitive): "</span> <span
+class="text_9">+</span></p>
+<p><span class="text_8">IOCase</span> <span class="text_9">.</span>
+<span class="calibre6">INSENSITIVE</span> <span class="text_9">.</span>
+<span class="calibre6">checkEndsWith</span> <span
+class="text_9">(</span> <span class="calibre6">text1</span> <span
+class="text_9">,</span> <span class="text_11">"Learning."</span> <span
+class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11"> <span class="calibre9">"Equality Check (case
+sensitive): "</span> </span> <span class="text_9">+</span></p>
+<p><span class="text_8">IOCase</span> <span class="text_9">.</span>
+<span class="calibre6">SENSITIVE</span> <span class="text_9">.</span>
+<span class="calibre6">checkEquals</span> <span class="text_9">(</span>
+<span class="calibre6">text</span> <span class="text_9">,</span> <span
+class="calibre6">text1</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11"> <span class="calibre9">"Equality Check (case
+insensitive): "</span> </span> <span class="text_9">+</span></p>
+<p><span class="text_8">IOCase</span> <span class="text_9">.</span>
+<span class="calibre6">INSENSITIVE</span> <span class="text_9">.</span>
+<span class="calibre6">checkEquals</span> <span class="text_9">(</span>
+<span class="calibre6">text</span> <span class="text_9">,</span> <span
+class="calibre6">text1</span> <span class="text_9">));</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Ends with Learning (case sensitive): false</p>
+<p>Ends with Learning (case insensitive): true</p>
+<p>Equality <span class="calibre9">Check (</span> case sensitive):
+false</p>
+<p>Equality <span class="calibre9">Check (</span> case insensitive):
+true</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00010.html"></span></p>
+<h1 class="block_13"><span id="text00010.html_id_Toc68246426"
+class="calibre6">LineIterator</span></h1>
+<p>Provides a flexible way to work with a line-based file.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.LineIterator</strong>  Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">LineIterator</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span> <span class="text_7">implements</span>
+<span class="text_8">Iterator</span> <span class="text_9">&lt;</span>
+<span class="text_8">String</span> <span class="text_9">&gt;,</span>
+<span class="text_8">Closeable</span></p>
+</div>
+<h2 class="block_8">Example of LineIterator Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Learn web technologies,</p>
+<p>prepare exams,</p>
+<p>code online,</p>
+<p>all at one place.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileUtils</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">LineIterator</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingLineIterator</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingLineIterator</span> <span class="text_9">()</span>
+<span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the file object</span></p>
+<p><span class="text_8">File</span> <span class="calibre6">file</span>
+<span class="text_9">=</span> <span class="text_8">FileUtils</span>
+<span class="text_9">.</span> <span class="calibre6">getFile</span>
+<span class="text_9">(</span> <span class="text_11">"input.txt"</span>
+<span class="text_9">);</span></p>
+<p><span class="text_7">try</span> <span class="text_9">(</span> <span
+class="text_8">LineIterator</span> <span
+class="calibre6">lineIterator</span> <span class="text_9">=</span> <span
+class="text_8">FileUtils</span> <span class="text_9">.</span> <span
+class="calibre6">lineIterator</span> <span class="text_9">(</span> <span
+class="calibre6">file</span> <span class="text_9">))</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Contents of input.txt"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">while</span> <span class="text_9">(</span> <span
+class="calibre6">lineIterator</span> <span class="text_9">.</span> <span
+class="calibre6">hasNext</span> <span class="text_9">())</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">lineIterator</span> <span class="text_9">.</span> <span
+class="text_7">next</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Contents of input.txt</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Learn web technologies,</p>
+<p>prepare exams,</p>
+<p>code online,</p>
+<p>all at one place.</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00011.html"></span></p>
+<h1 class="block_13"><span id="text00011.html_id_Toc68246427"
+class="calibre6">NameFileFilter</span></h1>
+<p>Filters file-names for a name.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.filefilter.NameFileFilter</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">NameFileFilter</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">AbstractFileFilter</span> <span
+class="text_7">implements</span> <span
+class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of NameFileFilter Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Let's print all files and directories in the current directory and
+then filter a file whose name is Input.txt.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOCase</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">NameFileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingNameFileFilter</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingNameFileFilter</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">//get names of all files and directory in
+current directory</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">files</span> <span class="text_9">=</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">list</span> <span class="text_9">();</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"All files and Folders.\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">files</span> <span
+class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">files</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"\nFile with name input.txt\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">acceptedNames</span> <span
+class="text_9">=</span> <span class="text_9">{</span> <span
+class="text_11">"input"</span> <span class="text_9">,</span> <span
+class="text_11">"input.txt"</span> <span class="text_9">};</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">filesNames</span> <span class="text_9">=</span>
+<span class="calibre6">currentDirectory</span> <span
+class="text_9">.</span> <span class="calibre6">list</span> <span
+class="text_9">(</span> <span class="text_7">new</span> <span
+class="text_8">NameFileFilter</span> <span class="text_9">(</span> <span
+class="calibre6">acceptedNames</span> <span class="text_9">,</span>
+<span class="text_8">IOCase</span> <span class="text_9">.</span> <span
+class="calibre6">INSENSITIVE</span> <span class="text_9">)</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">filesNames</span>
+<span class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">filesNames</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>All files and Folders.</p>
+<p> </p>
+<p>.classpath</p>
+<p>.project</p>
+<p>.settings</p>
+<p>bin</p>
+<p>input.txt</p>
+<p>src</p>
+<p> </p>
+<p>File with name input.txt</p>
+<p> </p>
+<p>input.txt</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00012.html"></span></p>
+<h1 class="block_13"><span id="text00012.html_id_Toc68246428"
+class="calibre6">WildcardFileFilter</span></h1>
+<p>Filters files using the supplied wildcards.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.filefilter.WildcardFileFilter</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">WildcardFileFilter</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">AbstractFileFilter</span> <span
+class="text_7">implements</span> <span
+class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of WildcardFileFilter Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Let's print all files and directories in the current directory and
+then filter a file whose name ends with <strong>t</strong> .</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">WildcardFileFilter</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingWildcardFileFilter</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingWildcardFileFilter</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">//get names of all files and directory in
+current directory</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">files</span> <span class="text_9">=</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">list</span> <span class="text_9">();</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"All files and Folders.\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">files</span> <span
+class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">files</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"\nFile name ending with t.\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">filesNames</span> <span class="text_9">=</span>
+<span class="calibre6">currentDirectory</span> <span
+class="text_9">.</span> <span class="calibre6">list</span> <span
+class="text_9">(</span> <span class="text_7">new</span> <span
+class="text_8">WildcardFileFilter</span> <span class="text_9">(</span>
+<span class="text_11">"*t"</span> <span class="text_9">)</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">filesNames</span>
+<span class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">filesNames</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>All files and Folders.</p>
+<p> </p>
+<p>.classpath</p>
+<p>.project</p>
+<p>.settings</p>
+<p>bin</p>
+<p>input.txt</p>
+<p>src</p>
+<p> </p>
+<p>File name ending with t</p>
+<p> </p>
+<p>.project</p>
+<p>input.txt</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00013.html"></span></p>
+<h1 class="block_13"><span id="text00013.html_id_Toc68246429"
+class="calibre6">SuffixFileFilter</span></h1>
+<p>Filters files based on suffix. This is used in retrieving all the
+files of a particular type.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.filefilter.SuffixFileFilter</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">SuffixFileFilter</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">AbstractFileFilter</span> <span
+class="text_7">implements</span> <span
+class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of SuffixFileFilter Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Let's print all files and directories in the current directory and
+then filter a file with extension txt.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">SuffixFileFilter</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingSuffixFileFilter</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingSuffixFileFilter</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">//get names of all files and directory in
+current directory</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">files</span> <span class="text_9">=</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">list</span> <span class="text_9">();</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"All files and Folders.\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">files</span> <span
+class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">files</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"\nFile with extenstion txt\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">filesNames</span> <span class="text_9">=</span>
+<span class="calibre6">currentDirectory</span> <span
+class="text_9">.</span> <span class="calibre6">list</span> <span
+class="text_9">(</span> <span class="text_7">new</span> <span
+class="text_8">SuffixFileFilter</span> <span class="text_9">(</span>
+<span class="text_11">"txt"</span> <span class="text_9">)</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">filesNames</span>
+<span class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">filesNames</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>All files and Folders.</p>
+<p> </p>
+<p>.classpath</p>
+<p>.project</p>
+<p>.settings</p>
+<p>bin</p>
+<p>input.txt</p>
+<p>src</p>
+<p> </p>
+<p>File with extenstion txt</p>
+<p> </p>
+<p>input.txt</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00014.html"></span></p>
+<h1 class="block_13"><span id="text00014.html_id_Toc68246430"
+class="calibre6">PrefixFileFilter</span></h1>
+<p>Filters files based on prefix.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.filefilter.PrefixFileFilter</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">PrefixFileFilter</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">AbstractFileFilter</span> <span
+class="text_7">implements</span> <span
+class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of PrefixFileFilter Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Let's print all files and directories in the current directory and
+then filter a file with name starting with input.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">PrefixFileFilter</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingPrefixFileFilter</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingPrefixFileFilter</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">//get names of all files and directory in
+current directory</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">files</span> <span class="text_9">=</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">list</span> <span class="text_9">();</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"All files and Folders.\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">files</span> <span
+class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">files</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"\nFile starting with input\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">filesNames</span> <span class="text_9">=</span>
+<span class="calibre6">currentDirectory</span> <span
+class="text_9">.</span> <span class="calibre6">list</span> <span
+class="text_9">(</span> <span class="text_7">new</span> <span
+class="text_8">PrefixFileFilter</span> <span class="text_9">(</span>
+<span class="text_11">"input"</span> <span class="text_9">)</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">filesNames</span>
+<span class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">filesNames</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>All files and Folders.</p>
+<p> </p>
+<p>.classpath</p>
+<p>.project</p>
+<p>.settings</p>
+<p>bin</p>
+<p>input.txt</p>
+<p>src</p>
+<p> </p>
+<p>File with extenstion txt</p>
+<p> </p>
+<p>input.txt</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00015.html"></span></p>
+<h1 class="block_13"><span id="text00015.html_id_Toc68246431"
+class="calibre6">OrFileFilter</span></h1>
+<p>Provides conditional OR logic across a list of file filters. Returns
+true if any filters in the list return true. Otherwise, it returns
+false.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.filefilter.OrFileFilter</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">OrFileFilter</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">AbstractFileFilter</span> <span
+class="text_7">implements</span> <span
+class="text_8">ConditionalFileFilter</span> <span
+class="text_9">,</span> <span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of OrFileFilter Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Let's print all files and directories in the current directory and
+then filter a file with name starting with . or ends with t.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">OrFileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">PrefixFileFilter</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">WildcardFileFilter</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingOrFileFilter</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingOrFileFilter</span> <span class="text_9">()</span>
+<span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">//get names of all files and directory in
+current directory</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">files</span> <span class="text_9">=</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">list</span> <span class="text_9">();</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"All files and Folders.\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">files</span> <span
+class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">files</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"\nFile starting with . or ends with t\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">filesNames</span> <span class="text_9">=</span>
+<span class="calibre6">currentDirectory</span> <span
+class="text_9">.</span> <span class="calibre6">list</span> <span
+class="text_9">(</span></p>
+<p><span class="text_7">new</span> <span
+class="text_8">OrFileFilter</span> <span class="text_9">(</span> <span
+class="text_7">new</span> <span class="text_8">PrefixFileFilter</span>
+<span class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">),</span> <span class="text_7">new</span> <span
+class="text_8">WildcardFileFilter</span> <span class="text_9">(</span>
+<span class="text_11">"*t"</span> <span class="text_9">)));</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">filesNames</span>
+<span class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">filesNames</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>All files and Folders.</p>
+<p> </p>
+<p>.classpath</p>
+<p>.project</p>
+<p>.settings</p>
+<p>bin</p>
+<p>input.txt</p>
+<p>src</p>
+<p> </p>
+<p>File starting with . or ends with t</p>
+<p> </p>
+<p>.classpath</p>
+<p>.project</p>
+<p>.settings</p>
+<p>input.txt</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00016.html"></span></p>
+<h1 class="block_13"><span id="text00016.html_id_Toc68246432"
+class="calibre6">AndFileFilter</span></h1>
+<p>Provides conditional And logic across a list of file filters. Returns
+true if all filters in the list return true. Otherwise, it returns
+false.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.filefilter.AndFileFilter</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">AndFileFilter</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">AbstractFileFilter</span> <span
+class="text_7">implements</span> <span
+class="text_8">ConditionalFileFilter</span> <span
+class="text_9">,</span> <span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of AndFileFilter Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Let's print all files and directories in the current directory and
+then filter a file with name starting with . and ends with t.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">AndFileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">PrefixFileFilter</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">WildcardFileFilter</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingAndFileFilter</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingAndFileFilter</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_10">//get names of all files and directory in
+current directory</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">files</span> <span class="text_9">=</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">list</span> <span class="text_9">();</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"All files and Folders.\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">files</span> <span
+class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">files</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"\nFile starting with . and ends with t\n"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span class="text_9">[]</span>
+<span class="calibre6">filesNames</span> <span class="text_9">=</span>
+<span class="calibre6">currentDirectory</span> <span
+class="text_9">.</span> <span class="calibre6">list</span> <span
+class="text_9">(</span></p>
+<p><span class="text_7">new</span> <span
+class="text_8">AndFileFilter</span> <span class="text_9">(</span> <span
+class="text_7">new</span> <span class="text_8">PrefixFileFilter</span>
+<span class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">),</span> <span class="text_7">new</span> <span
+class="text_8">WildcardFileFilter</span> <span class="text_9">(</span>
+<span class="text_11">"*t"</span> <span class="text_9">)));</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_7">int</span> <span class="calibre6">i</span> <span
+class="text_9">=</span> <span class="text_12">0</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">&lt;</span> <span class="calibre6">filesNames</span>
+<span class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">;</span> <span class="calibre6">i</span> <span
+class="text_9">++</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">filesNames</span> <span class="text_9">[</span> <span
+class="calibre6">i</span> <span class="text_9">]);</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>All files and Folders.</p>
+<p> </p>
+<p>.classpath</p>
+<p>.project</p>
+<p>.settings</p>
+<p>bin</p>
+<p>input.txt</p>
+<p>src</p>
+<p> </p>
+<p>File starting with . or ends with t</p>
+<p> </p>
+<p>.project</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00017.html"></span></p>
+<h1 class="block_13"><span id="text00017.html_id_Toc68246433"
+class="calibre6">FileEntry</span></h1>
+<p>Provides the state of a file or directory, File attributes at a point
+in time.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.monitor.FileEntry</strong>  Class
+−</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">FileEntry</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span> <span class="text_7">implements</span>
+<span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Features</h2>
+<p>FileEntry class object provides following file attributes at a point
+in time.</p>
+<ul>
+<li>getName() − file name.</li>
+<li>exists() − checks if file exists or not.</li>
+<li>isDirectory() − checks if file is a directory.</li>
+<li>lastModified() − gives last modified date time.</li>
+<li>listFiles() − gives content of directory.</li>
+</ul>
+<h2 class="block_8">Example of FileEntry Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileUtils</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">monitor</span> <span
+class="text_9">.</span> <span class="text_8">FileEntry</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingFileEntry</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingFileEntry</span> <span class="text_9">()</span>
+<span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the file object</span></p>
+<p><span class="text_8">File</span> <span class="calibre6">file</span>
+<span class="text_9">=</span> <span class="text_8">FileUtils</span>
+<span class="text_9">.</span> <span class="calibre6">getFile</span>
+<span class="text_9">(</span> <span class="text_11">"input.txt"</span>
+<span class="text_9">);</span></p>
+<p><span class="text_8">FileEntry</span> <span
+class="calibre6">fileEntry</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span class="text_8">FileEntry</span> <span
+class="text_9">(</span> <span class="calibre6">file</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Monitored File: "</span> <span class="text_9">+</span>
+<span class="calibre6">fileEntry</span> <span class="text_9">.</span>
+<span class="calibre6">getFile</span> <span
+class="text_9">());</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"File name: "</span> <span class="text_9">+</span> <span
+class="calibre6">fileEntry</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Is Directory: "</span> <span class="text_9">+</span>
+<span class="calibre6">fileEntry</span> <span class="text_9">.</span>
+<span class="calibre6">isDirectory</span> <span
+class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Monitored File: input.txt</p>
+<p>File name: input.txt</p>
+<p>Is Directory: false</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00018.html"></span></p>
+<h1 class="block_13"><span id="text00018.html_id_Toc68246434"
+class="calibre6">FileAlterationObserver</span></h1>
+<p>Represents the state of files below a root directory, checks the
+filesystem and notifies listeners of create, change or delete
+events.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.monitor.FileAlterationObserver</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">FileAlterationObserver</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span> <span class="text_7">implements</span>
+<span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of FileAlterationObserver Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileDeleteStrategy</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileUtils</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">monitor</span> <span
+class="text_9">.</span> <span
+class="text_8">FileAlterationListenerAdaptor</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">monitor</span> <span
+class="text_9">.</span> <span
+class="text_8">FileAlterationMonitor</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">monitor</span> <span
+class="text_9">.</span> <span
+class="text_8">FileAlterationObserver</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingFileAlterationObserver</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingFileAlterationObserver</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the file object</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">inputFile</span> <span class="text_9">=</span> <span
+class="text_8">FileUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getFile</span> <span class="text_9">(</span> <span
+class="text_11">"input.txt"</span> <span class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span
+class="calibre6">absolutePath</span> <span class="text_9">=</span> <span
+class="calibre6">inputFile</span> <span class="text_9">.</span> <span
+class="calibre6">getAbsolutePath</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">String</span> <span
+class="calibre6">parent</span> <span class="text_9">=</span> <span
+class="calibre6">absolutePath</span> <span class="text_9">.</span> <span
+class="calibre6">substring</span> <span class="text_9">(</span> <span
+class="text_12">0</span> <span class="text_9">,</span> <span
+class="calibre6">absolutePath</span> <span class="text_9">.</span> <span
+class="calibre6">indexOf</span> <span class="text_9">(</span> <span
+class="text_11">"input.txt"</span> <span class="text_9">));</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">parentDirectory</span> <span class="text_9">=</span>
+<span class="text_8">FileUtils</span> <span class="text_9">.</span>
+<span class="calibre6">getFile</span> <span class="text_9">(</span>
+<span class="calibre6">parent</span> <span class="text_9">);</span></p>
+<p><span class="text_8">FileAlterationObserver</span> <span
+class="calibre6">observer</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span
+class="text_8">FileAlterationObserver</span> <span
+class="text_9">(</span> <span class="calibre6">parentDirectory</span>
+<span class="text_9">);</span></p>
+<p><span class="calibre6">observer</span> <span class="text_9">.</span>
+<span class="calibre6">addListener</span> <span class="text_9">(</span>
+<span class="text_7">new</span> <span
+class="text_8">FileAlterationListenerAdaptor</span> <span
+class="text_9">()</span> <span class="text_9">{</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onDirectoryCreate</span> <span
+class="text_9">(</span> <span class="text_8">File</span> <span
+class="calibre6">file</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Folder created: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onDirectoryDelete</span> <span
+class="text_9">(</span> <span class="text_8">File</span> <span
+class="calibre6">file</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Folder deleted: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onFileCreate</span> <span class="text_9">(</span>
+<span class="text_8">File</span> <span class="calibre6">file</span>
+<span class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"File created: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onFileDelete</span> <span class="text_9">(</span>
+<span class="text_8">File</span> <span class="calibre6">file</span>
+<span class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"File deleted: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">});</span></p>
+<p><span class="text_10">//create a monitor to check changes after every
+500 ms</span></p>
+<p><span class="text_8">FileAlterationMonitor</span> <span
+class="calibre6">monitor</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span
+class="text_8">FileAlterationMonitor</span> <span
+class="text_9">(</span> <span class="text_12">500</span> <span
+class="text_9">,</span> <span class="calibre6">observer</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">monitor</span> <span class="text_9">.</span>
+<span class="calibre6">start</span> <span class="text_9">();</span></p>
+<p><span class="text_10">//create a new directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">newFolder</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"test"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">newFile</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"test1"</span> <span
+class="text_9">);</span></p>
+<p><span class="calibre6">newFolder</span> <span class="text_9">.</span>
+<span class="calibre6">mkdirs</span> <span class="text_9">();</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="calibre6">newFile</span> <span class="text_9">.</span>
+<span class="calibre6">createNewFile</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="text_8">FileDeleteStrategy</span> <span
+class="text_9">.</span> <span class="calibre6">NORMAL</span> <span
+class="text_9">.</span> <span class="text_7">delete</span> <span
+class="text_9">(</span> <span class="calibre6">newFolder</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="text_8">FileDeleteStrategy</span> <span
+class="text_9">.</span> <span class="calibre6">NORMAL</span> <span
+class="text_9">.</span> <span class="text_7">delete</span> <span
+class="text_9">(</span> <span class="calibre6">newFile</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="calibre6">monitor</span> <span class="text_9">.</span>
+<span class="calibre6">stop</span> <span class="text_9">(</span> <span
+class="text_12">10000</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">InterruptedException</span>
+<span class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">Exception</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Folder created: test</p>
+<p>File created: test1</p>
+<p>Folder deleted: test</p>
+<p>File deleted: test1</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00019.html"></span></p>
+<h1 class="block_13"><span id="text00019.html_id_Toc68246435"
+class="calibre6">FileAlterationMonitor</span></h1>
+<p>Represents a thread that spawns a monitoring thread triggering any
+registered FileAlterationObserver at a specified interval.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.monitor.FileAlterationMonitor</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">final</span>
+<span class="text_7">class</span> <span
+class="text_8">FileAlterationMonitor</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span> <span class="text_7">implements</span>
+<span class="text_8">Runnable</span></p>
+</div>
+<h2 class="block_8">Example of FileAlterationMonitor Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileDeleteStrategy</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileUtils</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">monitor</span> <span
+class="text_9">.</span> <span
+class="text_8">FileAlterationListenerAdaptor</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">monitor</span> <span
+class="text_9">.</span> <span
+class="text_8">FileAlterationMonitor</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">monitor</span> <span
+class="text_9">.</span> <span
+class="text_8">FileAlterationObserver</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingFileAlterationMonitor</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingFileAlterationMonitor</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the file object</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">inputFile</span> <span class="text_9">=</span> <span
+class="text_8">FileUtils</span> <span class="text_9">.</span> <span
+class="calibre6">getFile</span> <span class="text_9">(</span> <span
+class="text_11">"input.txt"</span> <span class="text_9">);</span></p>
+<p><span class="text_8">String</span> <span
+class="calibre6">absolutePath</span> <span class="text_9">=</span> <span
+class="calibre6">inputFile</span> <span class="text_9">.</span> <span
+class="calibre6">getAbsolutePath</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">String</span> <span
+class="calibre6">parent</span> <span class="text_9">=</span> <span
+class="calibre6">absolutePath</span> <span class="text_9">.</span> <span
+class="calibre6">substring</span> <span class="text_9">(</span> <span
+class="text_12">0</span> <span class="text_9">,</span> <span
+class="calibre6">absolutePath</span> <span class="text_9">.</span> <span
+class="calibre6">indexOf</span> <span class="text_9">(</span> <span
+class="text_11">"input.txt"</span> <span class="text_9">));</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">parentDirectory</span> <span class="text_9">=</span>
+<span class="text_8">FileUtils</span> <span class="text_9">.</span>
+<span class="calibre6">getFile</span> <span class="text_9">(</span>
+<span class="calibre6">parent</span> <span class="text_9">);</span></p>
+<p><span class="text_8">FileAlterationObserver</span> <span
+class="calibre6">observer</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span
+class="text_8">FileAlterationObserver</span> <span
+class="text_9">(</span> <span class="calibre6">parentDirectory</span>
+<span class="text_9">);</span></p>
+<p><span class="calibre6">observer</span> <span class="text_9">.</span>
+<span class="calibre6">addListener</span> <span class="text_9">(</span>
+<span class="text_7">new</span> <span
+class="text_8">FileAlterationListenerAdaptor</span> <span
+class="text_9">(){</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onDirectoryCreate</span> <span
+class="text_9">(</span> <span class="text_8">File</span> <span
+class="calibre6">file</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Folder created: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onDirectoryDelete</span> <span
+class="text_9">(</span> <span class="text_8">File</span> <span
+class="calibre6">file</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Folder deleted: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onFileCreate</span> <span class="text_9">(</span>
+<span class="text_8">File</span> <span class="calibre6">file</span>
+<span class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"File created: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_12">@Override</span></p>
+<p><span class="text_7">public</span> <span class="text_7">void</span>
+<span class="calibre6">onFileDelete</span> <span class="text_9">(</span>
+<span class="text_8">File</span> <span class="calibre6">file</span>
+<span class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"File deleted: "</span> <span class="text_9">+</span>
+<span class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">});</span></p>
+<p><span class="text_10">//create a monitor to check changes after every
+500 ms</span></p>
+<p><span class="text_8">FileAlterationMonitor</span> <span
+class="calibre6">monitor</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span
+class="text_8">FileAlterationMonitor</span> <span
+class="text_9">(</span> <span class="text_12">500</span> <span
+class="text_9">,</span> <span class="calibre6">observer</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">monitor</span> <span class="text_9">.</span>
+<span class="calibre6">start</span> <span class="text_9">();</span></p>
+<p><span class="text_10">//create a new directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">newFolder</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"test"</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">newFile</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"test1"</span> <span
+class="text_9">);</span></p>
+<p><span class="calibre6">newFolder</span> <span class="text_9">.</span>
+<span class="calibre6">mkdirs</span> <span class="text_9">();</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="calibre6">newFile</span> <span class="text_9">.</span>
+<span class="calibre6">createNewFile</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="text_8">FileDeleteStrategy</span> <span
+class="text_9">.</span> <span class="calibre6">NORMAL</span> <span
+class="text_9">.</span> <span class="text_7">delete</span> <span
+class="text_9">(</span> <span class="calibre6">newFolder</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="text_8">FileDeleteStrategy</span> <span
+class="text_9">.</span> <span class="calibre6">NORMAL</span> <span
+class="text_9">.</span> <span class="text_7">delete</span> <span
+class="text_9">(</span> <span class="calibre6">newFile</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">Thread</span> <span class="text_9">.</span>
+<span class="calibre6">sleep</span> <span class="text_9">(</span> <span
+class="text_12">1000</span> <span class="text_9">);</span></p>
+<p><span class="calibre6">monitor</span> <span class="text_9">.</span>
+<span class="calibre6">stop</span> <span class="text_9">(</span> <span
+class="text_12">10000</span> <span class="text_9">);</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">InterruptedException</span>
+<span class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">Exception</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Folder created: test</p>
+<p>File created: test1</p>
+<p>Folder deleted: test</p>
+<p>File deleted: test1</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00020.html"></span></p>
+<h1 class="block_13"><span id="text00020.html_id_Toc68246436"
+class="calibre6">NameFileComparator</span></h1>
+<p>Compare the names of two files. NameFileComparator can be used to
+sort lists or arrays of files using their name either in a
+case-sensitive, case-insensitive or system dependent case sensitive
+way.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.comparator.NameFileComparator</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">NameFileComparator</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span> <span class="text_7">implements</span>
+<span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of NameFileComparator Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOCase</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">comparator</span> <span
+class="text_9">.</span> <span class="text_8">NameFileComparator</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">FileFileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingNameFileComparator</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingNameFileComparator</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">NameFileComparator</span> <span
+class="calibre6">comparator</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span class="text_8">NameFileComparator</span>
+<span class="text_9">(</span> <span class="text_8">IOCase</span> <span
+class="text_9">.</span> <span class="calibre6">INSENSITIVE</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">File</span> <span class="text_9">[]</span> <span
+class="calibre6">sortedFiles</span> <span class="text_9">=</span> <span
+class="calibre6">comparator</span> <span class="text_9">.</span> <span
+class="calibre6">sort</span> <span class="text_9">(</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">listFiles</span> <span class="text_9">((</span>
+<span class="text_8">FileFilter</span> <span class="text_9">)</span>
+<span class="text_8">FileFileFilter</span> <span class="text_9">.</span>
+<span class="calibre6">FILE</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Sorted By Name: "</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_8">File</span> <span class="calibre6">file</span> <span
+class="text_9">:</span> <span class="calibre6">sortedFiles</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Sorted By Name:</p>
+<p>.classpath</p>
+<p>.project</p>
+<p>input.txt</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00021.html"></span></p>
+<h1 class="block_13"><span id="text00021.html_id_Toc68246437"
+class="calibre6">SizeFileComparator</span></h1>
+<p>Compare the sizes of two files/directory. SizeFileComparator can be
+used to sort lists or arrays of files using their size or directories
+based on their no. of children.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.comparator.SizeFileComparator</strong>
+ Class -</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">SizeFileComparator</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span> <span class="text_7">implements</span>
+<span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of SizeFileComparator Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">comparator</span> <span
+class="text_9">.</span> <span class="text_8">SizeFileComparator</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">FileFileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingSizeFileComparator</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingSizeFileComparator</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">SizeFileComparator</span> <span
+class="calibre6">comparator</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span class="text_8">SizeFileComparator</span>
+<span class="text_9">();</span></p>
+<p><span class="text_8">File</span> <span class="text_9">[]</span> <span
+class="calibre6">sortedFiles</span> <span class="text_9">=</span></p>
+<p><span class="calibre6">comparator</span> <span
+class="text_9">.</span> <span class="calibre6">sort</span> <span
+class="text_9">(</span> <span class="calibre6">currentDirectory</span>
+<span class="text_9">.</span> <span class="calibre6">listFiles</span>
+<span class="text_9">((</span> <span class="text_8">FileFilter</span>
+<span class="text_9">)</span> <span class="text_8">FileFileFilter</span>
+<span class="text_9">.</span> <span class="calibre6">FILE</span> <span
+class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Sorted By Size: "</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_8">File</span> <span class="calibre6">file</span> <span
+class="text_9">:</span> <span class="calibre6">sortedFiles</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">()</span> <span
+class="text_9">+</span> <span class="text_11">", size(kb) :"</span>
+<span class="text_9">+</span> <span class="calibre6">file</span> <span
+class="text_9">.</span> <span class="calibre6">length</span> <span
+class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Sorted By Size:</p>
+<p>input.txt, size:124</p>
+<p>.project, size:382</p>
+<p>.classpath, size:441</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00022.html"></span></p>
+<h1 class="block_13"><span id="text00022.html_id_Toc68246438"
+class="calibre6">LastModifiedFileComparator</span></h1>
+<p>Compare the last modified dates of two files/directory.
+LastModifiedFileComparator can be used to sort lists or arrays of
+files/directories using their last modified dates.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.comparator.LastModifiedFileComparator</strong>
+ Class −</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">LastModifiedFileComparator</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">Object</span> <span class="text_7">implements</span>
+<span class="text_8">Serializable</span></p>
+</div>
+<h2 class="block_8">Example of LastModifiedFileComparator Class</h2>
+<p>Here is the input file we need to parse −</p>
+<p>Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">File</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">FileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">util</span> <span
+class="text_9">.</span> <span class="text_8">Date</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">comparator</span> <span
+class="text_9">.</span> <span
+class="text_8">LastModifiedFileComparator</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">filefilter</span> <span
+class="text_9">.</span> <span class="text_8">FileFileFilter</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingLastModifiedFileComparator</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingLastModifiedFileComparator</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_10">//get the current directory</span></p>
+<p><span class="text_8">File</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span class="text_8">File</span> <span
+class="text_9">(</span> <span class="text_11">"."</span> <span
+class="text_9">);</span></p>
+<p><span class="text_8">LastModifiedFileComparator</span> <span
+class="calibre6">comparator</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span
+class="text_8">LastModifiedFileComparator</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">File</span> <span class="text_9">[]</span> <span
+class="calibre6">sortedFiles</span> <span class="text_9">=</span> <span
+class="calibre6">comparator</span> <span class="text_9">.</span> <span
+class="calibre6">sort</span> <span class="text_9">(</span> <span
+class="calibre6">currentDirectory</span> <span class="text_9">.</span>
+<span class="calibre6">listFiles</span> <span class="text_9">((</span>
+<span class="text_8">FileFilter</span> <span class="text_9">)</span>
+<span class="text_8">FileFileFilter</span> <span class="text_9">.</span>
+<span class="calibre6">FILE</span> <span class="text_9">));</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Sorted By Last Modified date: "</span> <span
+class="text_9">);</span></p>
+<p><span class="text_7">for</span> <span class="text_9">(</span> <span
+class="text_8">File</span> <span class="calibre6">file</span> <span
+class="text_9">:</span> <span class="calibre6">sortedFiles</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">getName</span> <span class="text_9">()</span> <span
+class="text_9">+</span> <span class="text_11">", Modified on: "</span>
+<span class="text_9">+</span> <span class="text_7">new</span> <span
+class="text_8">Date</span> <span class="text_9">(</span> <span
+class="calibre6">file</span> <span class="text_9">.</span> <span
+class="calibre6">lastModified</span> <span
+class="text_9">()));</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Sorted By Last Modified date:</p>
+<p>.project, Modified on: Thu Oct 12 19:06:45 IST 2017</p>
+<p>.classpath, Modified on: Mon Nov 20 13:09:55 IST 2017</p>
+<p>input.txt, Modified on: Mon Nov 20 19:27:55 IST 2017</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00023.html"></span></p>
+<h1 class="block_13"><span id="text00023.html_id_Toc68246439"
+class="calibre6">TeeInputStream</span></h1>
+<p>It is an InputStream proxy that transparently writes a copy of all
+bytes read from the proxied stream to a given OutputStream. The proxied
+input stream is closed when the close() method on this proxy is called.
+It can be used to operate two streams collectively at a time.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.input.TeeInputStream</strong>  Class
+−</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">TeeInputStream</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">ProxyInputStream</span></p>
+</div>
+<h2 class="block_8">Example of TeeInputStream Class</h2>
+<p>In this example, closing a TeeInputStream closes the TeeInputStream
+as well as TeeOutputStream objects.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">ByteArrayInputStream</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span
+class="text_8">ByteArrayOutputStream</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">input</span> <span
+class="text_9">.</span> <span class="text_8">TeeInputStream</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">output</span> <span
+class="text_9">.</span> <span class="text_8">TeeOutputStream</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">private</span> <span
+class="text_7">static</span> <span class="text_7">final</span> <span
+class="text_8">String</span> <span class="calibre6">SAMPLE</span> <span
+class="text_9">=</span> <span class="text_11">"Welcome to
+TutorialsPoint. Simply Easy Learning."</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingTeeInputStream</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingTeeInputStream</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_8">TeeInputStream</span> <span
+class="calibre6">teeInputStream</span> <span class="text_9">=</span>
+<span class="text_7">null</span> <span class="text_9">;</span></p>
+<p><span class="text_8">TeeOutputStream</span> <span
+class="calibre6">teeOutputStream</span> <span class="text_9">=</span>
+<span class="text_7">null</span> <span class="text_9">;</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="text_8">ByteArrayInputStream</span> <span
+class="calibre6">inputStream</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span
+class="text_8">ByteArrayInputStream</span> <span class="text_9">(</span>
+<span class="calibre6">SAMPLE</span> <span class="text_9">.</span> <span
+class="calibre6">getBytes</span> <span class="text_9">(</span> <span
+class="text_11">"US-ASCII"</span> <span class="text_9">));</span></p>
+<p><span class="text_8">ByteArrayOutputStream</span> <span
+class="calibre6">outputStream1</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span
+class="text_8">ByteArrayOutputStream</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">ByteArrayOutputStream</span> <span
+class="calibre6">outputStream2</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span
+class="text_8">ByteArrayOutputStream</span> <span
+class="text_9">();</span></p>
+<p><span class="calibre6">teeOutputStream</span> <span
+class="text_9">=</span> <span class="text_7">new</span> <span
+class="text_8">TeeOutputStream</span> <span class="text_9">(</span>
+<span class="calibre6">outputStream1</span> <span
+class="text_9">,</span> <span class="calibre6">outputStream2</span>
+<span class="text_9">);</span></p>
+<p><span class="calibre6">teeInputStream</span> <span
+class="text_9">=</span> <span class="text_7">new</span> <span
+class="text_8">TeeInputStream</span> <span class="text_9">(</span> <span
+class="calibre6">inputStream</span> <span class="text_9">,</span> <span
+class="calibre6">teeOutputStream</span> <span class="text_9">,</span>
+<span class="text_7">true</span> <span class="text_9">);</span></p>
+<p><span class="calibre6">teeInputStream</span> <span
+class="text_9">.</span> <span class="calibre6">read</span> <span
+class="text_9">(</span> <span class="text_7">new</span> <span
+class="text_7">byte</span> <span class="text_9">[</span> <span
+class="calibre6">SAMPLE</span> <span class="text_9">.</span> <span
+class="calibre6">length</span> <span class="text_9">()]);</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Output stream 1: "</span> <span class="text_9">+</span>
+<span class="calibre6">outputStream1</span> <span
+class="text_9">.</span> <span class="calibre6">toString</span> <span
+class="text_9">());</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Output stream 2: "</span> <span class="text_9">+</span>
+<span class="calibre6">outputStream2</span> <span
+class="text_9">.</span> <span class="calibre6">toString</span> <span
+class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">finally</span>
+<span class="text_9">{</span></p>
+<p><span class="text_10">//teeIn.close() closes teeIn and teeOut <span
+class="calibre9">which in turn closes the out1 and out2.</span>
+</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">teeInputStream</span> <span
+class="text_9">.</span> <span class="calibre6">close</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Output stream 1: Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Output stream 2: Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<h1 class="block_13"><br />
+</h1>
+<p><span id="text00024.html"></span></p>
+<h1 class="block_13"><span id="text00024.html_id_Toc68246440"
+class="calibre6">TeeOutputStream</span></h1>
+<p>TeeOutputStream splits OutputStream. It is named after the unix 'tee'
+command. It allows a stream to be branched to two streams.</p>
+<h2 class="block_8">Class Declaration</h2>
+<p>Following is the declaration
+for <strong>org.apache.commons.io.output.TeeOutputStream</strong>  Class
+−</p>
+<div class="frame_">
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">TeeOutputStream</span></p>
+<p><span class="text_7">extends</span> <span
+class="text_8">ProxyOutputStream</span></p>
+</div>
+<h2 class="block_8">Example of TeeOutputStream Class</h2>
+<p>In this example, TeeOutputStream accepts two output streams as
+parameter and passing data to TeeOutputStream set data to both output
+streams.</p>
+<p>IOTester.java</p>
+<div class="frame_">
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">ByteArrayInputStream</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span
+class="text_8">ByteArrayOutputStream</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">java</span>
+<span class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="text_8">IOException</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">input</span> <span
+class="text_9">.</span> <span class="text_8">TeeInputStream</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">import</span> <span class="calibre6">org</span>
+<span class="text_9">.</span> <span class="calibre6">apache</span> <span
+class="text_9">.</span> <span class="calibre6">commons</span> <span
+class="text_9">.</span> <span class="calibre6">io</span> <span
+class="text_9">.</span> <span class="calibre6">output</span> <span
+class="text_9">.</span> <span class="text_8">TeeOutputStream</span>
+<span class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">class</span>
+<span class="text_8">IOTester</span> <span class="text_9">{</span></p>
+<p><span class="text_7">private</span> <span
+class="text_7">static</span> <span class="text_7">final</span> <span
+class="text_8">String</span> <span class="calibre6">SAMPLE</span> <span
+class="text_9">=</span> <span class="text_11">"Welcome to
+TutorialsPoint. Simply Easy Learning."</span> <span
+class="text_9">;</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span class="calibre6">main</span>
+<span class="text_9">(</span> <span class="text_8">String</span> <span
+class="text_9">[]</span> <span class="calibre6">args</span> <span
+class="text_9">)</span> <span class="text_9">{</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">usingTeeInputStream</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_7">public</span> <span class="text_7">static</span>
+<span class="text_7">void</span> <span
+class="calibre6">usingTeeInputStream</span> <span
+class="text_9">()</span> <span class="text_7">throws</span> <span
+class="text_8">IOException</span> <span class="text_9">{</span></p>
+<p><span class="text_8">TeeInputStream</span> <span
+class="calibre6">teeInputStream</span> <span class="text_9">=</span>
+<span class="text_7">null</span> <span class="text_9">;</span></p>
+<p><span class="text_8">TeeOutputStream</span> <span
+class="calibre6">teeOutputStream</span> <span class="text_9">=</span>
+<span class="text_7">null</span> <span class="text_9">;</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="text_8">ByteArrayInputStream</span> <span
+class="calibre6">inputStream</span> <span class="text_9">=</span> <span
+class="text_7">new</span> <span
+class="text_8">ByteArrayInputStream</span> <span class="text_9">(</span>
+<span class="calibre6">SAMPLE</span> <span class="text_9">.</span> <span
+class="calibre6">getBytes</span> <span class="text_9">(</span> <span
+class="text_11">"US-ASCII"</span> <span class="text_9">));</span></p>
+<p><span class="text_8">ByteArrayOutputStream</span> <span
+class="calibre6">outputStream1</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span
+class="text_8">ByteArrayOutputStream</span> <span
+class="text_9">();</span></p>
+<p><span class="text_8">ByteArrayOutputStream</span> <span
+class="calibre6">outputStream2</span> <span class="text_9">=</span>
+<span class="text_7">new</span> <span
+class="text_8">ByteArrayOutputStream</span> <span
+class="text_9">();</span></p>
+<p><span class="calibre6">teeOutputStream</span> <span
+class="text_9">=</span> <span class="text_7">new</span> <span
+class="text_8">TeeOutputStream</span> <span class="text_9">(</span>
+<span class="calibre6">outputStream1</span> <span
+class="text_9">,</span> <span class="calibre6">outputStream2</span>
+<span class="text_9">);</span></p>
+<p><span class="calibre6">teeInputStream</span> <span
+class="text_9">=</span> <span class="text_7">new</span> <span
+class="text_8">TeeInputStream</span> <span class="text_9">(</span> <span
+class="calibre6">inputStream</span> <span class="text_9">,</span> <span
+class="calibre6">teeOutputStream</span> <span class="text_9">,</span>
+<span class="text_7">true</span> <span class="text_9">);</span></p>
+<p><span class="calibre6">teeInputStream</span> <span
+class="text_9">.</span> <span class="calibre6">read</span> <span
+class="text_9">(</span> <span class="text_7">new</span> <span
+class="text_7">byte</span> <span class="text_9">[</span> <span
+class="calibre6">SAMPLE</span> <span class="text_9">.</span> <span
+class="calibre6">length</span> <span class="text_9">()]);</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Output stream 1: "</span> <span class="text_9">+</span>
+<span class="calibre6">outputStream1</span> <span
+class="text_9">.</span> <span class="calibre6">toString</span> <span
+class="text_9">());</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="text_11">"Output stream 2: "</span> <span class="text_9">+</span>
+<span class="calibre6">outputStream2</span> <span
+class="text_9">.</span> <span class="calibre6">toString</span> <span
+class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span> <span class="text_7">finally</span>
+<span class="text_9">{</span></p>
+<p><span class="text_10">//teeIn.close() closes teeIn and teeOut <span
+class="calibre9">which in turn closes the out1 and out2.</span>
+</span></p>
+<p><span class="text_7">try</span> <span class="text_9">{</span></p>
+<p><span class="calibre6">teeInputStream</span> <span
+class="text_9">.</span> <span class="calibre6">close</span> <span
+class="text_9">();</span></p>
+<p><span class="text_9">}</span> <span class="text_7">catch</span> <span
+class="text_9">(</span> <span class="text_8">IOException</span> <span
+class="calibre6">e</span> <span class="text_9">)</span> <span
+class="text_9">{</span></p>
+<p><span class="text_8">System</span> <span class="text_9">.</span>
+<span class="text_7">out</span> <span class="text_9">.</span> <span
+class="calibre6">println</span> <span class="text_9">(</span> <span
+class="calibre6">e</span> <span class="text_9">.</span> <span
+class="calibre6">getMessage</span> <span class="text_9">());</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p><span class="text_9">}</span></p>
+<p>}</p>
+</div>
+<h2 class="block_8">Output</h2>
+<p>It will print the following result.</p>
+<p>Output stream 1: Welcome to TutorialsPoint. Simply Easy Learning.</p>
+<p>Output stream 2: Welcome to TutorialsPoint. Simply Easy Learning.</p>
