@@ -386,6 +386,7 @@
 +   [Java：初学者快速学习 Java 编程完全指南](docs/java-the-complete-guide-for-beginners-to-learn-java-programm/README.md)
 +   [Java：快速学习 Java 编程入门指南（编程、数据库、Java 学者指南、编程书籍、Java 编程）（HTML、Javascript、编程、开发者、编码、CSS、PHP 书籍2）](docs/java-the-simple-guide-to-learn-java-programming-in-no-time-p/README.md)
 +   [Java：初学者终极速课程指南](docs/java-the-ultimate-crash-course-for-beginners/README.md)
++   [Java：学习 Java 编程与计算机黑客技术的终极指南（Java 初学者指南、傻瓜 Java、Java 应用、黑客技术）（HTML、Javascript、编程、开发者、编码、CSS、PHP 秘籍 2）](docs/java-the-ultimate-guide-to-learn-java-programming-and-comput/README.md)
 +   [Java：Java 编程技巧与秘籍](docs/java-tips-and-tricks-to-programming-code-with-java-java-java/README.md)
 +   [Java 开发人员工具：第 2 版](docs/java-tools-for-developers-2nd-edition/README.md)
 +   [Java 中文官方教程 2022 版](docs/java-tut-22/README.md)
