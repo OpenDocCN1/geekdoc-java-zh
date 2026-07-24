@@ -438,6 +438,7 @@
 +   [Learn Apache ANT [Java 技术]](docs/learn-apache-ant-java-technologies/README.md)
 +   [Learn Apache Avro [Java 技术]](docs/learn-apache-avy-java-technologies/README.md)
 +   [Learn Apache Commons IO [Java 技术]](docs/learn-apache-commons-io-java-technologies/README.md)
++   [快速上手 C# 与编程练习 - C 与 Java](docs/learn-c-quickly-and-coding-exercises---c-and-java/README.md)
 +   [学习编程：Python、Java、PHP 完整指南以及其他当下最推荐的编程语言初学者指南](docs/learn-coding-python-java-php-complete-guide-and-other-of-the/README.md)
 +   [Eclipse [Java 技术] 入门指南](docs/learn-eclipse-java-technologies/README.md)
 +   [Java MySQL 入门指南](docs/learn-java-mysql/README.md)
