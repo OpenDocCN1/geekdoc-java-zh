@@ -1,0 +1,11 @@
+name: Lambda expressions and streams made easy： A quick guide to functional programming
+  in Java (programming made easy Book 1)
+name_cn: 轻松掌握 Lambda 表达式与流：Java 函数式编程快速指南（编程入门系列 1）
+slug: lambda-expressions-and-streams-made-easy-a-quick-guide-to-fu
+toc:
+- - '##'
+  - 3.1 foreach
+- - '##'
+  - 10.3 Set
+- - '##'
+  - 10.4 Map

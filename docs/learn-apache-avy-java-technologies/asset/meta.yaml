@@ -1,0 +1,72 @@
+name: Learn Apache Avy [Java Technologies]
+name_cn: Learn Apache Avro [Java 技术]
+slug: learn-apache-avy-java-technologies
+toc:
+- - '#'
+  - Learn Apache Avro [Java 技术]
+- - '#'
+  - 概述
+- - '##'
+  - 特性
+- - '#'
+  - 环境搭建
+- - '##'
+  - 安装 Apache Ant
+- - '##'
+  - 验证 Apache Ant 安装
+- - '##'
+  - 安装 Apache Ivy
+- - '##'
+  - 验证 Apache Ivy 安装
+- - '##'
+  - 安装 Eclipse
+- - '#'
+  - 术语
+- - '##'
+  - Ivy 术语
+- - '#'
+  - 设置文件
+- - '##'
+  - Ivy 设置文件的标签
+- - '#'
+  - Eclipse Ivy 插件
+- - '#'
+  - Resolve 任务 (Resolve Task)
+- - '#'
+  - 安装任务 (Install Task)
+- - '##'
+  - 构建项目
+- - '##'
+  - Retrieve Task
+- - '##'
+  - 构建项目
+- - '##'
+  - Cache Task
+- - '#'
+  - 发布任务 (Publish Task)
+- - '##'
+  - 构建项目
+- - '#'
+  - 信息任务 (Info Task)
+- - '###'
+  - build.xml
+- - '###'
+  - ivy.xml
+- - '###'
+  - ivysettings.xml
+- - '##'
+  - 构建项目
+- - '###'
+  - ivysettings-shared.xml
+- - '#'
+  - 公共存储库
+- - '##'
+  - 覆盖 ivysettings 默认设置
+- - '###'
+  - ivysettings.xml
+- - '###'
+  - ivysettings.xml
+- - '###'
+  - 原始 - ivysetting-public.xml
+- - '###'
+  - 更新 - ivysetting-public.xml

@@ -1,0 +1,132 @@
+- "# 轻松掌握 Lambda 表达式与流：Java 函数式编程快速指南（编程入门系列 1）\n\n\n\n![](img/cover.jpeg)\n\n\n#\
+  \ 1. 引言\n\nLambda 存在于许多语言中。Lambda 是一种匿名函数（没有名字的），用于实现由函数式接口定义的函数。\n\nJava8 将 Lambda\
+  \ 引入了 Java。Lambda 表达式是一种不属于任何类的函数。如果 Java Lambda 表达式是一个对象，它可以被传递并按需执行（这允许我们以更简洁的方式传递逻辑）。`λ`\
+  \ 是代表 Lambda 的符号。\n\n## 1.1. Lambda 语法\n\n### 1.1.1 通用语法\n\nLambda 表达式在 Java 中引入了箭头。它将\
+  \ Lambda 表达式分为两个部分。左侧指定表达式所需的参数，如果没有参数，也可以为空。右侧是 Lambda 体，指定了 Lambda 表达式的动作：`(parameter1,\
+  \ parameter2) -> {code}`\n\n下面的示例是一个带有 2 个参数的 Lambda，它将这些参数打印到控制台：\n\n```java\n\
+  (int number, char) -> {System.out.println(number);}\n```\n\n### 1.1.2. 缩写\n\n- Lambda\
+  \ 中的参数是可选的：\n  `(number, character) -> {System.out.println(number);}`\n- 有 1 个参数的\
+  \ Lambda => 括号是可选的：\n  `number -> {System.out.println(number);}`\n- 无参数的 Lambda\
+  \ => 括号是强制的：\n  `() -> {System.out.println(\"Hello World\");}`\n- 只有一个指令的 Lambda\
+  \ => 大括号是可选的：\n  `number -> System.out.println(number);`\n- 只有一个返回指令的 Lambda =>\
+  \ 关键字 return 是可选的：\n  `number -> number;`\n\n## 1.2 Lambda 是函数式接口的实现\n\n函数式接口是一个包含且只有一个抽象方法的接口。Java\
+  \ 标准 `Runnable` 接口就是这样一个函数式接口。它定义了一个方法：`run()`。\n\n除了内置的函数式接口，我们还可以创建自己的函数式接口。下面的示例就是这样一个单方法接口：\n\
+  \n```java\npublic interface EvenNumber {\n    boolean isEven(int number);\n}\n```\n\
+  \n在 Java7 中，你必须使用像这样的匿名接口实现：\n\n```java\nclass Main {\n    public static void main(String[]\
+  \ args) {\n        EvenNumber myEvenNumber = new EvenNumber() {\n            public\
+  \ boolean isEven(int number) {\n                return number % 2 == 0;\n      \
+  \      }\n        };\n        System.out.println(myEvenNumber.isEven(7));\n    }\n\
+  }\n```\n\n在 Java8 中，你可以使用实现函数式接口的 Lambda 表达式：\n\n```java\nclass Main {\n    public\
+  \ static void main(String[] args) {\n        EvenNumber myEvenNumber = number ->\
+  \ number % 2 == 0;\n        System.out.println(myEvenNumber.isEven(7));\n    }\n\
+  }\n```\n\n## 1.3 @Functional interface\n\n建议所有函数式接口都带有 `@FunctionalInterface` 注解。这不仅能清晰地说明接口的目的，还允许编译器在标记接口不满足条件时生成错误。具有超过\
+  \ 1 个抽象方法的接口不再是函数式接口，并且无法用 Lambda 实现。当接口标记了 `@FunctionalInterface` 注解且函数有超过 1 个抽象方法时，编译器将生成错误。\n\
+  \n```java\n@FunctionalInterface\npublic interface EvenNumber {\n    boolean isEven(int\
+  \ number);\n}\n```\n\n# 2. Java 标准库与 lambda\n\n`comparator` 接口是一个函数式接口。它有 1 个抽象方法：`int\
+  \ compare(T object1, T object2);`。\n\n你不需要写一个类来实现这个接口，可以写一个简短的 Lambda 作为接口的实现。\n\
+  \n```java\nclass Main {\n    public static void main(String[] args) {\n        String[]\
+  \ fruits = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n        Arrays.sort(fruits,\
+  \ (fruit1, fruit2) -> -fruit1.compareTo(fruit2));\n        System.out.println(Arrays.toString(fruits));\n\
+  \    }\n}\n```\n\n你可以使用每个单词的长度对水果进行排序。你只需要将 Lambda 表达式更改为：\n\n```java\nfruit1.length()\
+  \ - fruit2.length()\n```\n\n# 3. Stream 和 forEach\n\n`Stream` 接口是 Java8 新引入的。流代表元素序列，并支持各种操作来对这些元素执行计算。Stream\
+  \ 可以从各种数据源创建，如数组、列表、集合等……\n\n`Stream` 接口中的方法接受 Lambda 作为参数，这使得代码变得非常短且易读。\n\n##\
+  \ 3.1.1.foreach\n\n\n\n\n\n`forEach` 遍历集合并对集合中的每个元素执行指定的操作，直到所有元素都处理完毕或操作抛出异常。下面的示例将把每种水果打印到控制台：\n\
+  \n```java\nclass Main {\n    public static void main(String[] args) {\n        String[]\
+  \ fruits = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n        Stream<String>\
+  \ stream = Arrays.stream(fruits);\n        stream.forEach(fruit -> System.out.println(fruit));\n\
+  \    }\n}\n```\n\n可以将最后两条指令合并为一条：\n\n```java\nclass Main {\n    public static void\
+  \ main(String[] args) {\n        String[] fruits = { \"apple\", \"cherries\", \"\
+  banana\", \"avocado\" };\n        Arrays.stream(fruits)\n        .forEach(fruit\
+  \ -> System.out.println(fruit));\n    }\n}\n```\n\n## 3.2 流的数据源\n\n### 3.2.1 List\n\
+  \n`List` 可以作为流的数据源\n\n```java\nclass Main {\n    public static void main(String[]\
+  \ args) {\n        List<String> fruits = Arrays.asList(\"apple\", \"cherries\",\
+  \ \"banana\", \"avocado\");\n        fruits.stream()\n        .forEach(fruit ->\
+  \ System.out.println(fruit));\n    }\n}\n```\n\n### 3.2.2 Set\n\n`Set` 可以作为流的数据源\n\
+  \n```java\nclass Main {\n    public static void main(String[] args) {\n        Set<Integer>\
+  \ numbers = new LinkedHashSet<>();\n        numbers.add(1);\n        numbers.add(3);\n\
+  \        numbers.add(4);\n        numbers.add(7);\n        numbers.stream().forEach(getal\
+  \ -> System.out.println(getal));\n    }\n}\n```\n\n### 3.2.3 Map\n\n`keySet`、`values`\
+  \ 或 `entrySet` 可以作为流的数据源。在下面的示例中，我们使用了 `entrySet`。\n\n```java\nclass Main {\n  \
+  \  public static void main(String[] args) {\n        Map<String, String> languages\
+  \ = new LinkedHashMap<>();\n        languages.put(\"ENG\", \"English\"); \n    \
+  \    languages.put(\"FRE\", \"French\");  \n        languages.entrySet().stream\n\
+  \        .forEach(entry -> System.out.println(entry.getKey() + ':' + entry.getValue()));\
+  \  \n    }\n}\n```\n\n## 3.3 String\n\n`String` 可以作为流的数据源。流中的值是 `String` 的字符。\n\n\
+  ```java\nclass Main {\n    public static void main(String[] args) {\n        \"\
+  Lambdafun\".chars()\n        .forEach(unicode->System.out.println((char) unicode));\
+  \ \n    }\n}\n```\n\n## 3.4 Files\n\n文件可以作为流的数据源。流中的值是代表文件行的 `Strings`。\n\n```java\n\
+  class Main {\n    private final static Path LANGUAGES_PATH = Paths.get(\"/data/languages.txt\"\
+  );\n    public static void main(String[] args) {\n        try (Stream<String> stream\
+  \ = Files.lines(LANGUAGES_PATH)) {\n            stream.forEach(line -> System.out.println(line));\n\
+  \        } catch (IOException ex) {\n            ex.printStackTrace();\n       \
+  \ }\n    }\n}\n```\n\n## 3.5 Directory\n\n目录（`directory`）可以作为流的数据源。流中的值是该目录下的文件和子目录的\
+  \ `paths`。\n\n```java\nclass Main {\n    private final static Path DATA_PATH = Paths.get(\"\
+  /data\");\n    public static void main(String[] args) {\n        try (Stream<Path>\
+  \ stream = Files.list(DATA_PATH)) {\n            stream.forEach(entry -> System.out.println(entry.getFileName()));\n\
+  \        } catch (Exception ex) {\n            ex.printStackTrace();\n        }\n\
+  \    }\n}\n```\n\n## 3.6 无限值序列\n\n无限值序列可以作为流的数据源。\n\n```java\nclass Main {\n   \
+  \ public static void main(String[] args) { \n        Stream.iterate(1, previousNumber\
+  \ -> previousNumber + 2)\n        .forEach(oddNumber->System.out.println(oddNumber));\
+  \  \n    }\n}\n```\n\n如果你想限制序列，请使用 `limit()` 方法：\n\n```java\nclass Main {\n    public\
+  \ static void main(String[] args) { \n        Stream.iterate(1, previousNumber ->\
+  \ previousNumber + 2)\n        .limit(10)\n        .forEach(oddNumber->System.out.println(oddNumber));\
+  \  \n    }\n}\n```\n\n## 3.7 数字序列\n\n```java\nclass Main {\n    public static void\
+  \ main(String[] args) {\n        IntStream.rangeClosed(1, 10).forEach(number ->\
+  \ System.out.println(number));\n        IntStream.range(1, 10).forEach(number ->\
+  \ System.out.println(number));\n    }\n}\n```\n\n## 4. Filter\n\n有时你可能只想处理元素的子集。要实现这一点，你可以使用\
+  \ `filter` 方法。\n\n例如，如果你想创建一个水果列表子集，其中包含长度大于 6 个字符的字符串，你可以使用 `filter`：\n\n```java\n\
+  class Main {\n    public static void main(String[] args) {\n        // 示例逻辑\n  \
+  \  }\n}\n```\n\n## 5. Sort\n\n你可以使用 `sorted` 方法对流中的值进行排序。\n\n## 6. 操作组合\n\n有时你可能想组合多个操作。例如\
+  \ `filter` 然后再 `sort`：\n\n## 7. Unique values\n\n`distinct()` 方法返回流中的唯一元素。\n\n##\
+  \ 8. Transform\n\n假设我们现在有一个可以转换的流，例如映射字符串。`map` 操作接收一个函数并返回其他内容。在下面的示例中，我们将字符串转换为长度：\n\
+  \n## 9. 检测所有值是否匹配谓词\n\n### 9.1 allMatch\n\n`allMatch` 方法在流中的所有值都匹配谓词时返回 true。我们将谓词作为\
+  \ `allMatch()` 方法的参数。\n\n### 9.2 anyMatch\n\n`anyMatch` 方法在任意一个值匹配谓词时返回 true。\n\n\
+  ## 10. Collect 流值\n\n可以将流的所有值收集到数组、列表、集合等\n\n### 10.1 Array\n\n将流转换为数组需要使用 `toArray()`\
+  \ 方法。该方法返回一个包含流元素的数组。\n\n### 10.2 List\n\n将流转换为列表需要使用流对象的 `collect()` 方法。`toList()`\
+  \ 收集器可将所有流元素收集到 List 实例中。\n\n\n\n\n\n```java\nclass Main {\n    public static void\
+  \ main(String[] args) {\n        System.out.println(\n            Stream.of(\"apple\"\
+  , \"cherries\", \"banana\", \"avocado\")\n            .sorted()\n            .collect(Collectors.toList()));\n\
+  \    }\n}\n```\n\n## 10.3 Set\n\n要将流转换为 `Set`，我们使用流对象的 `collect()` 方法。`toSet()`\
+  \ 收集器可将所有 `Stream` 元素收集到一个 `Set` 实例中。\n\n```java\nclass Main {\n    public static\
+  \ void main(String[] args) {\n        System.out.println(\n            Stream.of(\"\
+  apple\", \"cherries\", \"banana\", \"avocado\")\n            .collect(Collectors.toSet()));\n\
+  \    }\n}\n```\n\n## 10.4 Map\n\n在 map 中包含有一个键（key）和一个值（value）。在下面的示例中，我们将字符串的长度作为键，并根据名称长度对所有水果进行分组。\n\
+  \n```java\nclass Main {\n    public static void main(String[] args) {\n        Map<Integer,\
+  \ List<String>> fruitByLength =\n            Stream.of(\"apple\", \"mango\", \"\
+  lemon\", \"avocado\", \"cherries\")\n            .collect(Collectors.groupingBy(fruit\
+  \ -> fruit.length()));\n        fruitByLength.entrySet().stream()\n            .forEach(entry\
+  \ -> {\n                System.out.println(entry.getKey());\n                entry.getValue().stream()\n\
+  \                .forEach(fruit -> System.out.print(fruit + \" \"));\n         \
+  \       System.out.println();\n            });\n    }\n}\n```\n\n## 10.5 Stats\n\
+  \n### 10.5.1 Count\n\n返回流中值的数量\n\n```java\nclass Main {\n    public static void\
+  \ main(String[] args) {\n        System.out.println(\n            Stream.of(\"apple\"\
+  , \"mango\", \"lemon\", \"avocado\", \"cherries\").count());\n    }\n}\n```\n\n\
+  ### 10.5.2 Sum\n\n返回 `IntStream` 的和\n\n```java\nclass Main {\n    public static\
+  \ void main(String[] args) {\n        IntStream stream = IntStream.of(1, 3, 4, 7);\n\
+  \        System.out.println(stream.sum());\n    }\n}\n```\n\n### 10.5.3 Min, max,\
+  \ average\n\n返回 `IntStream` 的最小值、最大值或平均值\n\n```java\nclass Main {\n    public static\
+  \ void main(String[] args) {\n        IntStream stream = IntStream.of(1, 3, 4, 7);\n\
+  \        stream.min().ifPresent(smallest -> System.out.println(smallest));\n   \
+  \ }\n}\n```\n\n## 10.6 Stats on long values\n\n`LongStream` 接口是一个用于 long 类型值的流。方法与\
+  \ `IntStream` 相同。可以使用 `mapToLong()` 方法将 `IntStream` 转换为 `LongStream`。\n\n## 10.7\
+  \ Stats on double values\n\n`DoubleStream` 接口是一个用于 double 类型值的流。方法与 `IntStream`\
+  \ 相同。可以使用 `mapToDouble()` 方法将 `IntStream` 转换为 `DoubleStream`。\n\n## 10.8 Min and\
+  \ max of other values\n\n可以在 `min` 和 `max` 方法中传入 Lambda 表达式来确定哪些是最小值和最大值。该 lambda\
+  \ 将实现函数接口 `Comparator`。\n\n```java\nclass Main {\n    public static void main(String[]\
+  \ args) {\n        Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9), BigDecimal.valueOf(0.5))\n\
+  \        .min((number1, number2) -> number1.compareTo(number2))\n        .ifPresent(smallest\
+  \ -> System.out.println(smallest));\n    }\n}\n```\n\n# 11. Reduce\n\n`min`、`sum`、`max`…\
+  \ 等方法都将流的值归约为单个值。`reduce()` 方法执行相同的操作，但该方法能够将任何值归约为单个值（而不只是 `int`、`double`、`long`\
+  \ 值）。它是一个通用的归约方法。\n\n`reduce` 方法有两个版本：\n\n## 11.1 Stream.reduce() with Accumulator\n\
+  \n使用给定的累加函数对给定流的元素执行归约。\n\n```java\nclass Main {\n    public static void main(String[]\
+  \ args) {\n        System.out.println(Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9),\
+  \ BigDecimal.valueOf(0.5))\n        .reduce(BigDecimal.ZERO, (previousSum, number)\
+  \ -> previousSum.add(number)));\n    }\n}\n```\n\n## 11.2 Stream.reduce() with Identity\
+  \ and Accumulator\n\n使用给定的标识值（identity）、累加函数和组合函数对给定流的元素执行归约。标识值必须是 `combiner` 函数的恒元。`Combiner`\
+  \ 是聚合累加器结果的函数。`Combiner` 仅在并行模式下调用，用于减少来自不同线程的累加器结果。\n\n```java\nclass Main {\n\
+  \    public static void main(String[] args) {\n        Stream.of(BigDecimal.valueOf(1.1),\
+  \ BigDecimal.valueOf(0.9), BigDecimal.valueOf(0.5))\n        .reduce((previousSum,\
+  \ number) -> previousSum.add(number))\n        .ifPresent(sum -> System.out.println(sum));\n\
+  \    }\n}\n```\n\n# 12. Conclusion\n\n感谢阅读关于 Java Lambda 和流的短介绍。本指南包含了你开始开始使用 Lambda\
+  \ 所需的所有信息。希望你学到了很多，并准备好将 Lambda 集成到你的代码中。如果你有任何问题，可以通过 `programming_made_easy@outlook.be`\
+  \ 与我联系。\n\n祝你好运，编程愉快！\n\n"

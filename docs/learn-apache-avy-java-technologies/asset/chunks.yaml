@@ -1,0 +1,3070 @@
+- fmt: "\n![](cover.jpeg)\n\nCopyright © All rights reserved\n\nNo part of this book\
+    \ may be reproduced, or stored in a retrieval system, or transmitted in any form\
+    \ or by any means, electronic, mechanical, photocopying, recording, or otherwise,\
+    \ without express written permission of the publisher.\n\nI would like to dedicate\
+    \ the book to the students who will be using it. I wish you future career success\
+    \ and hope you never stop learning.\n\n# TABLE OF CONTENT\n\n- [Overview](#text00003.html_id_Toc68076075)\n\
+    - [Environment Setup](#text00004.html_id_Toc68076076)\n- [Terminology](#text00005.html_id_Toc68076077)\n\
+    - [Settings File](#text00006.html_id_Toc68076078)\n- [Eclipse Ivy Plugin](#text00007.html_id_Toc68076079)\n\
+    - [Resolve Task](#text00008.html_id_Toc68076080)\n- [Install Task](#text00009.html_id_Toc68076081)\n\
+    - [Retrieve Task](#text00010.html_id_Toc68076082)\n- [Cachepath Task](#text00011.html_id_Toc68076083)\n\
+    - [Publish Task](#text00012.html_id_Toc68076084)\n- [Info Task](#text00013.html_id_Toc68076085)\n\
+    - [Resolvers](#text00014.html_id_Toc68076086)\n- [Local Repository](#text00015.html_id_Toc68076087)\n\
+    - [Shared Repository](#text00016.html_id_Toc68076088)\n- [Public repository](#text00017.html_id_Toc68076089)\n\
+    \n# Overview\n\nApache Ivy is a very popular and very powerful dependency management\
+    \ tool used to manage dependencies in ANT based projects in the same fashion,\
+    \ how Apache Maven manages dependencies.\n\nApache Ivy is Apache ANT based, follows\
+    \ same design principles, is a subproject of Apache ANT and is actively managed\
+    \ and supported by Apache ANT Community.\n\n## Features\n\nFollowing are the important\
+    \ features of Apache Ivy.\n\n- **ANT Based** — Apache Ivy provides a dependencies\
+    \ management capability to ANT based projects. It is very simple to use as well.\n\
+    - **Dependency Reports** — Apache Ivy provides options to print dependencies graph\
+    \ in html as well as in reports format.\n- **Non-intrusive** — Apache Ivy don't\
+    \ impose any restrictions as to be part of distribution. Even build files are\
+    \ not dependent on Apache Ivy.\n- **Highly Flexible** — Apache Ivy provides lots\
+    \ of default configurations and can be configured as per the requirement very\
+    \ easily.\n- **Extendible** — Apache Ivy can be extended easily. You can define\
+    \ your own repository, conflict resolvers and latest strategy.\n- **Performance**\
+    \ — Apache Ivy is built towards performance. It keeps a cache of library already\
+    \ downloaded. Looks into local repositories first to resolve dependencies than\
+    \ look into other repositories.\n- **Transitive Dependencies** — Apache Ivy automatically\
+    \ manages transitive dependencies if one project or library depends upon other\
+    \ library which may need another library.\n- **Maven Repository** — Apache Ivy\
+    \ follows conventions similar to Maven repository conventions. Apache Ivy can\
+    \ resolve dependencies using maven global repository.\n- **Maven 2 POMs** — Apache\
+    \ Ivy can read Maven 2 POMs as module descriptors, can set ivy as module descriptor.\
+    \ Thus it makes easy to migrate existing projects to IVY managed projects.\n-\
+    \ **Publishing** — Apache Ivy provides supports to publish your project and simplifies\
+    \ the multi-project environment deployment process.\n- **Free to Use** — Apache\
+    \ Ivy is open source and is free to use.\n- **Documentation** — Apache Ivy has\
+    \ a very detailed documentation and tutorials available to learn.\n\n# Environment\
+    \ Setup\n\nApache Ivy needs Java and ANT installed on your machine as the only\
+    \ requirement.\n\nApache Ant is distributed under the Apache Software License,\
+    \ a fully-fledged open source license certified by the open source initiative.\n\
+    \nThe latest Apache Ant version, including its full-source code, class files,\
+    \ and documentation can be found at `http://ant.apache.org`.\n\n## Installing\
+    \ Apache Ant\n\nIt is assumed that you have already downloaded and installed Java\
+    \ Development Kit (JDK) on your computer. If not, please follow the instructions\
+    \ here.\n\n- Ensure that the `JAVA_HOME` environment variable is set to the folder\
+    \ where your JDK is installed.\n- Download the binaries from `https://ant.apache.org`\n\
+    - Unzip the zip file to a convenient location `c:\\folder`. using Winzip, winRAR,\
+    \ 7-zip or similar tools.\n- Create a new environment variable called `ANT_HOME`\
+    \ that points to the Ant installation folder, in this case `c:\\apache-ant-1.9.14-bin`\
+    \ folder.\n- Append the path to the Apache Ant batch file to the `PATH` environment\
+    \ variable. In our case this would be the `c:\\apache-ant-1.9.14-bin\\bin` folder.\n\
+    \n## Verifying Apache Ant Installation\n\nTo verify the successful installation\
+    \ of Apache Ant on your computer, type `ant` on your command prompt.\n\nYou should\
+    \ see an output similar to —\n\n```\nC:\\>ant -version\nApache Ant(TM) version\
+    \ 1.9.14 compiled on March 12 2019\n```\n\nIf you do not see the above output,\
+    \ then please verify that you have followed the installation steps properly.\n\
+    \n## Installing Apache Ivy\n\n- Download the binaries from `https://ant.apache.org/ivy`\n\
+    - Unzip the zip file to a convenient location `c:\\folder`. using Winzip, winRAR,\
+    \ 7-zip or similar tools.\n- Copy the `ivy-2.5.0.jar` to `c:\\apache-ant-1.9.14-bin/lib`\
+    \ folder.\n\n## Verifying Apache Ivy Installation\n\nTo verify the successful\
+    \ installation of Apache Ivy on your computer, create following build file in\
+    \ a folder `E: > ivy`.\n\n```xml\n<project name = \"test ivy installation\" default\
+    \ = \"test\" xmlns:ivy = \"antlib:org.apache.ivy.ant\" >\n  <target name = \"\
+    test\" description = \"Test ivy installation\" >\n    <ivy:settings />\n  </target>\n\
+    </project>\n```\n\nYou should see an output similar to —\n\n```\nC:\\>ant\nBuildfile:\
+    \ E:\\ivy\\build.xml\ntest:\nBUILD SUCCESSFUL\nTotal time: 2 seconds\n```\n\n\
+    ## Installing Eclipse\n\nThis tutorial also covers integration of Ant with Eclipse\
+    \ IDE. Hence, if you have not installed Eclipse already, please download and install\
+    \ Eclipse\n\nTo install Eclipse —\n\n- Download the latest Eclipse binaries from\
+    \ `www.eclipse.org`\n- Unzip the Eclipse binaries to a convenient location, say\
+    \ `c:\\folder`\n- Run Eclipse from `c:\\eclipse\\eclipse.exe`\n\n# Terminology\n\
+    \nConsider the following example `ivy.xml` to understand Ivy terminology.\n\n\
+    ```xml\n<?xml version = \"1.0\" encoding = \"ISO-8859-1\" ?>\n<ivy-module version\
+    \ = \"2.0\" xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation\
+    \ = \"http://ant.apache.org/ivy/schemas/ivy.xsd\" >\n  <info organisation = \"\
+    com.tutorialspoint\" module = \"ivy-test\" status = \"integration\" >\n  </info>\n\
+    \  <dependencies>\n    <dependency org = \"commons-lang\" name = \"commons-lang\"\
+    \ rev = \"2.6\" />\n  </dependencies>\n</ivy-module>\n```\n\n## Ivy Terms\n\n\
+    Following are the important terms of Ivy Eco-System.\n\n- **Organisation** — As\
+    \ name suggests, it refers to the name of the company, individual developer or\
+    \ team name who creates the project or library. For example, `com.tutorialspoint`.\n\
+    - **Module** — As name suggests, it refers to the reusable unit or module. A module\
+    \ generally have a version attached to it. For example `commons-lang`, or `ivy-test`\
+    \ etc.\n- **Module Descriptor** — Module descriptor refers to `ivy.xml` file which\
+    \ describes a module. A module descriptor contains the identifier (`org`, `name`,\
+    \ `branch` and `version`), artifacts published, configurations and dependencies.\n\
+    - **Artifact** — Artifact refers to a single file as deliverable. For example,\
+    \ a `jar` file. Artifact can be of type: `zip`, `gz`. Jar, Source Jar, Javadoc\
+    \ Jar are various artifacts of a module.\n- **Type** — Type identifies the artifact\
+    \ category like `jar`, `war`, `src`, `doc` etc.\n- **Artifact file name extension**\
+    \ — Artifact extension like `.jar`, `.zip`, `.gz` etc.\n- **Module Revision**\
+    \ — A unique revision number of the module or its version number.\n- **Status\
+    \ of Revision** — Status of revision indicates the stability of the revision.\
+    \ Following are the important value of status —\n  - **integration** — Represents\
+    \ continous development, nightly build etc.\n  - **milestone** — Represents a\
+    \ distribution but not finalized.\n  - **release** — Represents tested and completed,\
+    \ a major version.\n"
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    Copyright © All rights reserved
+
+
+    No part of this book may be reproduced, or stored in a retrieval system, or transmitted
+    in any form or by any means, electronic, mechanical, photocopying, recording,
+    or otherwise, without express written permission of the publisher.
+
+
+    I would like to dedicate the book to the students who will be using it. I wish
+    you future career success and hope you never stop learning.
+
+
+    TABLE OF CONTENT
+
+
+    [Overview](#text00003.html_id_Toc68076075)
+
+
+    [Environment Setup](#text00004.html_id_Toc68076076)
+
+
+    [Terminology](#text00005.html_id_Toc68076077)
+
+
+    [Settings File](#text00006.html_id_Toc68076078)
+
+
+    [Eclipse Ivy Plugin](#text00007.html_id_Toc68076079)
+
+
+    [Resolve Task](#text00008.html_id_Toc68076080)
+
+
+    [Install Task](#text00009.html_id_Toc68076081)
+
+
+    [Retrieve Task](#text00010.html_id_Toc68076082)
+
+
+    [Cachepath Task](#text00011.html_id_Toc68076083)
+
+
+    [Publish Task](#text00012.html_id_Toc68076084)
+
+
+    [Info Task](#text00013.html_id_Toc68076085)
+
+
+    [Resolvers](#text00014.html_id_Toc68076086)
+
+
+    [Local Repository](#text00015.html_id_Toc68076087)
+
+
+    [Shared Repository](#text00016.html_id_Toc68076088)
+
+
+    [Public repository](#text00017.html_id_Toc68076089)
+
+
+    # Overview
+
+
+    Apache Ivy is a very popular and very powerful dependency management tool used
+    to manage dependencies in ANT based projects in the same fashion, how Apache Maven
+    manages dependencies.
+
+
+    Apache Ivy is Apache ANT based, follows same design principles, is a subproject
+    of Apache ANT and is actively managed and supported by Apache ANT Community.
+
+
+    ## Features
+
+
+    Following are the important features of Apache Ivy.
+
+
+    *   **ANT Based**  − Apache Ivy provides a dependencies management capability
+    to ANT based projects. It is very simple to use as well.
+
+
+    *   **Dependency Reports**  − Apache Ivy provides options to print dependencies
+    graph in html as well as in reports format.
+
+
+    *   **Non-intrusive**  − Apache Ivy don''t impose any restrictions as to be part
+    of distribution. Even build files are not dependent on Apache Ivy.
+
+
+    *   **Highly Flexible**  − Apache Ivy provides lots of default configurations
+    and can be configured as per the requirement very easily.
+
+
+    *   **Extendible**  − Apache Ivy can be extended easily. You can define your own
+    repository, conflict resolvers and latest strategy.
+
+
+    *   **Performance**  − Apache Ivy is built towards performance. It keeps a cache
+    of library already downloaded. Looks into local repositories first to resolve
+    dependencies than look into other repositories.
+
+
+    *   **Transitive Dependencies**  − Apache Ivy automatically manages transitive
+    dependencies if one project or library depends upon other library which may need
+    another library.
+
+
+    *   **Maven Repository**  − Apache Ivy follows conventions similar to Maven repository
+    conventions. Apache Ivy can resolve dependencies using maven global repository.
+
+
+    *   **Maven 2 POMs**  − Apache Ivy can read Maven 2 POMs as module descriptors,
+    can set ivy as module descriptor. Thus it makes easy to migrate existing projects
+    to IVY managed projects.
+
+
+    *   **Publishing**  − Apache Ivy provides supports to publish your project and
+    simplifies the multi-project environment deployment process.
+
+
+    *   **Free to Use**  − Apache Ivy is open source and is free to use.
+
+
+    *   **Documentation**  − Apache Ivy has a very detailed documentation and tutorials
+    available to learn.
+
+
+    # Environment Setup
+
+
+    Apache Ivy needs Java and ANT installed on your machine as the only requirement.
+
+
+    Apache Ant is distributed under the Apache Software License, a fully-fledged open
+    source license certified by the open source initiative.
+
+
+    The latest Apache Ant version, including its full-source code, class files, and
+    documentation can be found at **http://ant.apache.org.**
+
+
+    ## Installing Apache Ant
+
+
+    It is assumed that you have already downloaded and installed Java Development
+    Kit (JDK) on your computer. If not, please follow the instructions **here** .
+
+
+    *   Ensure that the JAVA_HOME environment variable is set to the folder where
+    your JDK is installed.
+
+
+    *   Download the binaries from **https://ant.apache.org**
+
+
+    *   Unzip the zip file to a convenient location c:\folder. using Winzip, winRAR,
+    7-zip or similar tools.
+
+
+    *   Create a new environment variable called **ANT_HOME**  that points to the
+    Ant installation folder, in this case **c:\apache-ant-1.9.14-bin**  folder.
+
+
+    *   Append the path to the Apache Ant batch file to the PATH environment variable.
+    In our case this would be the **c:\apache-ant-1.9.14-bin\bin**  folder.
+
+
+    ## Verifying Apache Ant Installation
+
+
+    To verify the successful installation of Apache Ant on your computer, type ant
+    on your command prompt.
+
+
+    You should see an output similar to −
+
+
+    C:\>ant -version
+
+
+    Apache Ant(TM) version 1.9.14 compiled on March 12 2019
+
+
+    If you do not see the above output, then please verify that you have followed
+    the installation steps properly.
+
+
+    ## Installing Apache Ivy
+
+
+    *   Download the binaries from **https://ant.apache.org/ivy**
+
+
+    *   Unzip the zip file to a convenient location c:\folder. using Winzip, winRAR,
+    7-zip or similar tools.
+
+
+    *   Copy the ivy-2.5.0.jar to **c:\apache-ant-1.9.14-bin/lib**  folder.
+
+
+    ## Verifying Apache Ivy Installation
+
+
+    To verify the successful installation of Apache Ivy on your computer, create following
+    build file in a folder E: > ivy.
+
+
+    <project name = "test ivy installation"
+
+
+    default = "test" xmlns:ivy = "antlib:org.apache.ivy.ant" >
+
+
+    <target name = "test" description = "Test ivy installation" >
+
+
+    <ivy:settings />
+
+
+    </target>
+
+
+    </project>
+
+
+    You should see an output similar to −
+
+
+    C:\>ant
+
+
+    Buildfile: E:\ivy\build.xml
+
+
+    test:
+
+
+    BUILD SUCCESSFUL
+
+
+    Total time: 2 seconds
+
+
+    ## Installing Eclipse
+
+
+    This tutorial also covers integration of Ant with Eclipse IDE. Hence, if you have
+    not installed Eclipse already, please download and install Eclipse
+
+
+    To install Eclipse −
+
+
+    *   Download the latest Eclipse binaries from **www.eclipse.org**
+
+
+    *   Unzip the Eclipse binaries to a convenient location, say c:\folder
+
+
+    *   Run Eclipse from c:\eclipse\eclipse.exe
+
+
+    # Terminology
+
+
+    Consider the following example ivy.xml to understand Ivy terminology.
+
+
+    <? xml version = "1.0" encoding = "ISO-8859-1" ?>
+
+
+    <ivy-module version = "2.0"
+
+
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+
+
+    xsi:noNamespaceSchemaLocation = "http://ant.apache.org/ivy/schemas/ivy.xsd" >
+
+
+    <info organisation = "com.tutorialspoint" module = "ivy-test" status = "integration"
+    >
+
+
+    </info>
+
+
+    <dependencies>
+
+
+    <dependency org = "commons-lang" name = "commons-lang" rev = "2.6" />
+
+
+    </dependencies>
+
+
+    </ivy-module>
+
+
+    ## Ivy Terms
+
+
+    Following are the important terms of Ivy Eco-System.
+
+
+    *   **Organisation**  − As name suggests, it refers to the name of the company,
+    individual developer or team name who creates the project or library. For example,
+    com.tutorialspoint.
+
+
+    *   **Module**  − As name suggests, it refers to the reusable unit or module.
+    A module generally have a version attached to it. For example commons-lang, or
+    ivy-test etc.
+
+
+    *   **Module Descriptor**  − Module descriptor refers to ivy.xml file which describes
+    a module. A module descriptor contains the identifier (org, name, branch and version),
+    artifacts published, configurations and dependencies.
+
+
+    *   **Artifact**  − Artifact refers to a single file as deliverable. For example,
+    a jar file. Artifact can be of type: zip, gz etc. Jar, Source Jar, Javadoc Jar
+    are various artifacts of a module.
+
+
+    *   **Type**  − Type identifies the artifact category like jar, war , src, doc
+    etc.
+
+
+    *   **Artifact file name extension**  − Artifact extension like .jar, ,zip, .gz
+    etc.
+
+
+    *   **Module Revision**  − A unique revision number of the module or its version
+    number.
+
+
+    *   **Status of Revision**  − Status of revision indicates the stability of the
+    revision. Following are the important value of status −
+
+
+    *   **integration**  − Represents continous development, nightly build etc.
+
+
+    *   **milestone**  − Represents a distribution but not finalized.
+
+
+    *   **release**  − Represents tested and completed, a major version.'
+  toc: []
+  trans: "\n\n![](img/cover.jpeg)\n\n版权所有 © 保留所有\n\n未经出版者明确书面许可，本书的任何部分不得复制、存储在检索系统中，或以任何形式或通过任何手段（电子、机械、复印、录制或其他）进行传输。\n\
+    \n我想将这本书献给将使用这本书的学生们。祝愿你们未来职业成功，并希望你们永不停学习。\n\n# 目录\n\n- 概述\n- 环境搭建\n- 术语\n- 配置文件\n\
+    - Eclipse Ivy 插件\n- 解析任务 (Resolve Task)\n- 安装任务 (Install Task)\n- 检索任务 (Retrieve\
+    \ Task)\n- 缓存路径任务 (Cachepath Task)\n- 发布任务 (Publish Task)\n- 信息任务 (Info Task)\n\
+    - 解析器 (Resolvers)\n- 本地仓库 (Local Repository)\n- 共享仓库 (Shared Repository)\n- 公共仓库\
+    \ (Public repository)\n\n# 概述\n\nApache Ivy 是一个非常流行且强大的依赖管理工具，用于以类似于 Apache Maven\
+    \ 管理依赖的方式，管理基于 ANT (ANT based projects) 项目的依赖。\n\nApache Ivy 基于 Apache ANT，遵循相同的设计原则，是\
+    \ Apache ANT 的子项目，并由 Apache ANT 社区积极管理和支持。\n\n## 特性\n\n以下是 Apache Ivy 的重要特性。\n\
+    \n- **基于 ANT** — Apache Ivy 为基于 ANT 的项目提供了依赖管理能力。它用起来非常简单。\n- **依赖报告** — Apache\
+    \ Ivy 提供了选项，以 html 格式以及报告格式打印依赖图。\n- **非侵入性** — Apache Ivy 不会作为发行的一部分施加任何限制。即使是构建文件也不依赖于\
+    \ Apache Ivy。\n- **高度灵活** — Apache Ivy 提供了许多默认配置，可以根据需要非常容易地配置。\n- **可扩展** — Apache\
+    \ Ivy 可以很容易地扩展。你可以定义自己的仓库、冲突解析器和最新策略。\n- **性能** — Apache Ivy 针对性能而构建。它维护了已下载库的缓存。在解析依赖时，首先查找本地仓库，然后查找其他仓库。\n\
+    - **传递性依赖** — 如果一个项目或库依赖于另一个库，而后者可能还需要另一个库，Apache Ivy 会自动管理传递性依赖。\n- **Maven 仓库**\
+    \ — Apache Ivy 遵循类似于 Maven 仓库的约定。Apache Ivy 可以使用 maven 全局仓库解析依赖。\n- **Maven 2\
+    \ POM** — Apache Ivy 可以读取 Maven 2 POMs 作为模块描述符，并将 ivy 设置为模块描述符。因此，将现有项目迁移到 IVY\
+    \ 管理的项目变得简单。\n- **发布** — Apache Ivy 提供了发布项目的支持，并简化了多项目环境的部署过程。\n- **免费使用** — Apache\
+    \ Ivy 是开源的，可以免费使用。\n- **文档** — Apache Ivy 有非常详细的文档和教程供学习。\n\n# 环境搭建\n\nApache\
+    \ Ivy 的唯一要求是在你的机器上安装 Java 和 ANT。\n\nApache Ant 根据 Apache 软件许可分发，这是一种由开源倡议认证的完全开源许可。\n\
+    \n最新的 Apache Ant 版本，包括其完整源代码、类文件和文档可以在 `http://ant.apache.org` 找到。\n\n## 安装 Apache\
+    \ Ant\n\n假设你已经在计算机上下载并安装了 Java 开发包 (JDK)。如果没有，请遵循此处的说明。\n\n- 确保环境变量 `JAVA_HOME`\
+    \ 设置为安装 JDK 的文件夹。\n- 从 `https://ant.apache.org` 下载二进制文件。\n- 使用 Winzip、winRAR、7-zip\
+    \ 或类似工具将 zip 文件解压到方便的路径 `c:\\folder`。\n- 创建名为 `ANT_HOME` 的新环境变量，指向 Ant 的安装文件夹，在本例中为\
+    \ `c:\\apache-ant-1.9.14-bin` 文件夹。\n- 将 Apache Ant 批处理文件的路径添加到 `PATH` 环境变量。在我们的案例中，这将是\
+    \ `c:\\apache-ant-1.9.14-bin` 文件夹。\n\n## 验证 Apache Ant 安装\n\n要验证在计算机上成功安装 Apache\
+    \ Ant，请在命令提示符上输入 `ant`。\n\n你应该能看到类似下面的输出 —\n\n```\nC:\\>ant -version\nApache Ant(TM)\
+    \ version 1.9.14 compiled on March 12 2019\n```\n\n如果你没有看到上述输出，请验证你是否正确遵循了安装步骤。\n\
+    \n## 安装 Apache Ivy\n\n- 从 `https://ant.apache.org/ivy` 下载二进制文件。\n- 使用 Winzip、winRAR、7-zip\
+    \ 或类似工具将 zip 文件解压到方便的路径 `c:\\folder`。\n- 将 `ivy-2.5.0.jar` 复制到 `c:\\apache-ant-1.9.14-bin/lib`\
+    \ 文件夹。\n\n## 验证 Apache Ivy 安装\n\n要验证在计算机上成功安装 Apache Ivy，请在文件夹 `E: > ivy` 中创建以下构建文件。\n\
+    \n```xml\n<project name = \"test ivy installation\" default = \"test\" xmlns:ivy\
+    \ = \"antlib:org.apache.ivy.ant\" >\n  <target name = \"test\" description = \"\
+    Test ivy installation\" >\n    <ivy:settings />\n  </target>\n</project>\n```\n\
+    \n你应该看到类似下面的输出 —\n\n```\nC:\\>ant\nBuildfile: E:\\ivy\\build.xml\ntest:\nBUILD\
+    \ SUCCESSFUL\nTotal time: 2 seconds\n```\n\n## 安装 Eclipse\n\n本教程还涵盖了 Ant 与 Eclipse\
+    \ 的集成。如果你还没有安装 Eclipse，请下载并安装。\n\n安装 Eclipse —\n\n- 从 `www.eclipse.org` 下载最新的\
+    \ 二进制文件。\n- 将二进制文件解压到方便的路径，例如 `c:\\folder`。\n- 运行 `c:\\eclipse\\eclipse.exe`\n\
+    \n# 术语\n\n参考以下 `ivy.xml` 示例来理解 Ivy 术语。\n\n```xml\n<?xml version = \"1.0\" encoding\
+    \ = \"ISO-8859-1\" ?>\n<ivy-module version = \"2.0\" xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\
+    \ xsi:noNamespaceLocation = \"http://ant.apache.org/ivy/schemas/ivy.xsd\" >\n\
+    \  <info organisation = \"com.tutorialspoint\" module = \"ivy-test\" status =\
+    \ \"integration\" >\n  </info>\n  <dependencies>\n    <dependency org = \"commons-lang\"\
+    \ name = \"commons-lang\" rev = \"2.6\" />\n  </dependencies>\n</ivy-module>\n\
+    ```\n\n## Ivy 术语\n\n以下是 Ivy 生态系统的重要术语。\n\n- **组织 (Organisation)** — 如其名，它指的是创建项目或库的公司、个人开发者或团队名称。例如\
+    \ `com.tutorialspoint`。\n- **模块 (Module)** — 如其名，它指的是复用单元或模块。模块通常附有一个版本号。例如 `commons-lang`\
+    \ 或 `ivy-test` 等。\n- **模块描述符 (Module Descriptor)** — 模块描述符指的是描述模块的 `ivy.xml` 文件。模块描述符包含标识符、发布的制品、配置和依赖。\n\
+    - **制品 (Artifact)** — 制品指的是单个交付文件。例如 `jar` 文件。制品可以是 `zip` 或 `gz` 类型。Jar、Source\
+    \ Jar、Javadoc Jar 是模块的各种制品。\n- **类型 (Type)** — 类型识别制品类别，如 `jar`、`war`、`src`、`doc`\
+    \ 等。\n- **制品文件名后缀 (Artifact file name extension)** — 品的后缀，如 `.jar`、`.zip`、`.gz`\
+    \ 等。\n- **模块修订 (Module Revision)** — 模块唯一修订号或版本号。\n- **修订状态 (Status of Revision)**\
+    \ — 修订状态指示修订的稳定性。以下是状态的重要值 —\n  - **集成 (integration)** — 代表持续开发、每日构建等。\n  - **里程碑\
+    \ (milestone)** — 代表已发布但尚未最终确定。\n  - **发布 (release)** — 代表测试并完成，主版本。\n\n"
+- fmt: "\n*   **Repository** — Similar to Maven repositories, repository represents\
+    \ a distribution site where ivy can search a library, artifacts, modules etc.\
+    \ A repository can be public, private or shared.\n*   **Ivy Settings** — Apache\
+    \ Ivy follows Maven principles and comes with lot of default configurations. Default\
+    \ settings can be overridden by defining a `ivysettings.xml` file.\n\n# Settings\
+    \ File\n\nApache Ivy follows Maven principles and comes with lot of default configurations.\
+    \ Default settings can be overridden by defining a `ivysettings.xml` file.\n\n\
+    ```xml\n<ivysettings>\n<properties file = \"${ivy.settings.dir}/ivysettings-file.properties\"\
+    \ />\n<settings defaultCache = \"${cache.dir}\" defaultResolver = \"ibiblio\"\
+    \ checkUpToDate = \"false\" />\n<resolvers>\n <ibiblio name = \"ibiblio\" />\n\
+    \ <filesystem name = \"internal\" >\n  <ivy pattern = \"${repository.dir}/[module]/ivy-[revision].xml\"\
+    \ />\n  <artifact pattern = \"${repository.dir}/[module]/[artifact]-[revision].[ext]\"\
+    \ />\n </filesystem>\n</resolvers>\n<modules>\n <module organisation = \"tutorialspoint\"\
+    \ name = \".*\" resolver = \"internal\" />\n</modules>\n</ivysettings>\n```\n\n\
+    ## Tags of Ivy Settings File\n\nFollowing are the important tags of Ivy Setting\
+    \ file.\n\n*   **property** — To set an ivy variable. Cardinality: 0..n\n*   **properties**\
+    \ — To set an ivy variables using properties file. Cardinality: 0..n\n*   **settings**\
+    \ — To configure ivy with default values. Cardinality: 0..1\n*   **include** —\
+    \ To include another settings file. Cardinality: 0..n\n*   **classpath** — To\
+    \ add a location in the classpath used to load plugins. Cardinality: 0..n\n* \
+    \  **typedef** — To define new types in ivy. Cardinality: 0..n\n*   **lock-strategies**\
+    \ — To define lock strategies. Cardinality: 0..1\n*   **caches** — To define repository\
+    \ cache managers. Cardinality: 0..1\n*   **latest-strategies** — To define latest\
+    \ strategies. Cardinality: 0..1\n*   **parsers** — To define module descriptor\
+    \ parsers. Cardinality: 0..1\n*   **version-matchers** — To define new version\
+    \ matchers. Cardinality: 0..1\n*   **triggers** — To register triggers on ivy\
+    \ events. Cardinality: 0..1\n*   **namespaces** — To define new namespaces. Cardinality:\
+    \ 0..1\n*   **macrodef** — To define a new macro resolver. Cardinality: 0..n\n\
+    *   **resolvers** — To define dependency resolvers. Cardinality: 0..1\n*   **conflict-managers**\
+    \ — To define conflicts managers. Cardinality: 0..1\n*   **modules** — To define\
+    \ rules between modules and dependency resolvers. Cardinality: 0..1\n*   **outputters**\
+    \ — To define the list of available report outputters. Cardinality: 0..1\n*  \
+    \ **statuses** — To define the list of available statuses. Cardinality: 0..1\n\
+    \n# Eclipse Ivy Plugin\n\nIvyDE is an Eclipse plugin provided by Apache. To install\
+    \ IvyDE, start Eclipse and navigate to Help > Install New Software. It displays\
+    \ the Available Softwares window. Enter IvyDE update site `http://www.apache.org/dist/ant/ivyde/updatesite/`\
+    \ and press enter key. It displays the following plugins.\n\n![Image](OEBPS/Image00000.jpg)\n\
+    \nClick Next and you will see the following screen.\n\n![Image](OEBPS/Image00001.jpg)\n\
+    \nIf you are facing any error while installing the plugin then just restart the\
+    \ process. After successful installation, you will see the plugin in eclipe.\n\
+    \n![Image](OEBPS/Image00002.jpg)\n\nNow you can do the dependency management using\
+    \ Eclipse and Ivy.\n\n# Resolve Task\n\nResolve task is used to resolve dependencies\
+    \ described in ivy.xml, download and put them in ivy cache.\n\nLet's first create\
+    \ a java file `Tester.java` in `E: > ivy > src > com > tutorialspoint` folder\
+    \ which will act as source folder for ant project.\n\n```java\npackage com . tutorialspoint\
+    \ ;\n\nimport org . apache . commons . lang . StringUtils ;\n\npublic class Application\
+    \ {\npublic static void main ( String [] args ) {\nString string = StringUtils\
+    \ . upperCase ( \"Ivy Beginner Guide\" );\nSystem . out . println ( string );\n\
+    }\n}\n```\n\nAbove class is using apache commons lang library to use its class\
+    \ `StringUtils`. Ivy should download this library and thus it should be defined\
+    \ under dependencies section in ivy.xml. Following is the `ivy.xml` created in\
+    \ `E: > ivy` folder.\n\n```xml\n<? xml version = \"1.0\" encoding = \"ISO-8859-1\"\
+    \ ?>\n<ivy-module version = \"2.0\" xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\
+    \nxsi:noNamespaceSchemaLocation = \"http://ant.apache.org/ivy/schemas/ivy.xsd\"\
+    \ >\n<info\norganisation = \"com.tutorialspoint\"\nmodule = \"test\"\nstatus =\
+    \ \"integration\" >\n</info>\n<dependencies>\n<dependency org = \"org.apache.commons\"\
+    \ name = \"commons-lang3\" rev = \"3.9\" />\n</dependencies>\n</ivy-module>\n\
+    ```\n\nFollowing are the important terms.\n\n*   **ivy-module** — Root element\
+    \ to identify ivy version, namespace etc.\n*   **info** — element to identify\
+    \ the project as a unique entity.\n*   **organisation** — name of the organization\n\
+    *   **module** — name of the module\n*   **status** — status like release, integration\
+    \ or milestone.\n*   **dependencies** — element to contain project dependencies\
+    \ as dependency tags which has following attributes.\n*   **org** — name of the\
+    \ dependency's organization\n*   **name** — name of the dependency.\n*   **rev**\
+    \ — version of the dependency.\n\n```xml\n<project name = \"test\" default = \"\
+    resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\" >\n<target name = \"resolve\"\
+    \ description = \"resolve\" >\n<ivy:resolve />\n</target>\n</project>\n```\n\n\
+    Following are the important terms.\n\n*   **project** — Root element to identify\
+    \ project name, namespace etc.\n*   **target** — target element to create a new\
+    \ task. Its description.\n\n## Building the project\n\nAs we've all the files\
+    \ ready. Just go the console. Navigate to `E: > ivy` folder and run the `ant`\
+    \ command.\n\n`E:\\ivy > ant`\n will come into action, resolving the dependencies,\
+    \ you will see the following result.\n\n```\nBuildfile: E:\\ivy\\build.xml\n[ivy:resolve]\
+    \ :: Apache Ivy 2.5.0 - 201910204435 :: https://ant.apache.org/ivy/\n[ivy:resolve]\
+    \ :: loading settings :: jar:file:/E:/Apache/ant-1.9.14/lib/ivy-2.5.0.jar!/org/ivy/core/settings/ivysettings.xml\n\
+    [ivy:resolve] :: resolving dependencies :: com.tutorialspoint#test;working@Acer\n\
+    [ivy:resolve] confs: [default]\n[ivy:resolve] found commons-lang;2.6 in public\n\
+    [ivy:resolve] found junit;3.8.1 in public\n[ivy:resolve] :: resolution report\
+    \ :: resolve 375ms :: artifacts 79ms\n-----------------------------------------------------\n\
+    | | modules || artifacts |\n| conf | number|search|dwnlded|evicted|| number|dwnlded|\n\
+    -----------------------------------------------------\n| default | 2 | 2 | 0 |\
+    \ 0 || 4 | 0 |\n-----------------------------------------------------\n[ivy:retrieve]\
+    \ :: retrieving :: com.tutorialspoint#test [sync]\n[ivy:retrieve] confs: [default]\n\
+    [ivy:retrieve] 0 artifacts copied, 2 already retrieved (0kB/101ms)\nBUILD SUCCESSFUL\n\
+    Total time: 1 second\nE:\\ivy>\n```\n\n## Resolve Output\n\nFollowing are the\
+    \ important terms.\n\n*   **conf** — configuration, in our case we are using default\
+    \ configuration.\n*   **modules** — indicates the total number of modules, downloaded\
+    \ modules etc.\n*   **artifacts** — indicates the total number of artifacts, downloaded\
+    \ artifacts etc.\n\nYou can verify the downloaded files in ivy cache's default\
+    \ location in `${ivy.default.ivy.user_dir} > .ivy2 > cache` folder. And `${ivy.default.ivy.user_dir}`\
+    \ is by default user home: $HOME.\n\n# Install Task\n\nInstall task is used to\
+    \ install a module and its dependencies in a resolver. It is used when a public\
+    \ artifact is to be downloaded and used in private repository. By default, a user\
+    \ local repository is his/her private repository and is present in ${ivy.default.ivy.user_dir}/local.\n"
+  raw: "*   **Repository**  − Similar to Maven repositories, repository represents\
+    \ a distribution site where ivy can search a library, artifacts, modules etc.\
+    \ A repository can be public, private or shared.\n\n*   **Ivy Settings**  − Apache\
+    \ Ivy follows Maven principles and comes with lot of default configurations. Default\
+    \ settings can be overridden by defining a ivysettings.xml file.\n\n# Settings\
+    \ File\n\nApache Ivy follows Maven principles and comes with lot of default configurations.\
+    \ Default settings can be overridden by defining a ivysettings.xml file.\n\n<ivysettings>\n\
+    \n<properties file = \"${ivy.settings.dir}/ivysettings-file.properties\" />\n\n\
+    <settings defaultCache = \"${cache.dir}\" defaultResolver = \"ibiblio\" checkUpToDate\
+    \ = \"false\" />\n\n<resolvers>\n\n <ibiblio name = \"ibiblio\" />\n\n <filesystem\
+    \ name = \"internal\" >\n\n  <ivy pattern = \"${repository.dir}/[module]/ivy-[revision].xml\"\
+    \ />\n\n  <artifact pattern = \"${repository.dir}/[module]/[artifact]-[revision].[ext]\"\
+    \ />\n\n </filesystem>\n\n</resolvers>\n\n<modules>\n\n <module organisation =\
+    \ \"tutorialspoint\" name = \".*\" resolver = \"internal\" />\n\n</modules>\n\n\
+    </ivysettings>\n\n## Tags of Ivy Settings File\n\nFollowing are the important\
+    \ tags of Ivy Setting file.\n\n*   **property**  − To set an ivy variable. Cardinality:\
+    \ 0..n\n\n*   **properties**  − To set an ivy variables using properties file.\
+    \ Cardinality: 0..n\n\n*   **settings**  − To configure ivy with default values.\
+    \ Cardinality: 0..1\n\n*   **include**  − To include another settings file. Cardinality:\
+    \ 0..n\n\n*   **classpath**  − To add a location in the classpath used to load\
+    \ plugins. Cardinality: 0..n\n\n*   **typedef**  − To define new types in ivy.\
+    \ Cardinality: 0..n\n\n*   **lock-strategies**  − To define lock strategies. Cardinality:\
+    \ 0..1\n\n*   **caches**  − To define repository cache managers. Cardinality:\
+    \ 0..1\n\n*   **latest-strategies**  − To define latest strategies. Cardinality:\
+    \ 0..1\n\n*   **parsers**  − To define module descriptor parsers. Cardinality:\
+    \ 0..1\n\n*   **version-matchers**  − To define new version matchers. Cardinality:\
+    \ 0..1\n\n*   **triggers**  − To register triggers on ivy events. Cardinality:\
+    \ 0..1\n\n*   **namespaces**  − To define new namespaces. Cardinality: 0..1\n\n\
+    *   **macrodef**  − To define a new macro resolver. Cardinality: 0..n\n\n*   **resolvers**\
+    \  − To define dependency resolvers. Cardinality: 0..1\n\n*   **conflict-managers**\
+    \  − To define conflicts managers. Cardinality: 0..1\n\n*   **modules**  − To\
+    \ define rules between modules and dependency resolvers. Cardinality: 0..1\n\n\
+    *   **outputters**  − To define the list of available report outputters. Cardinality:\
+    \ 0..1\n\n*   **statuses**  − To define the list of available statuses. Cardinality:\
+    \ 0..1\n\n# Eclipse Ivy Plugin\n\nIvyDE is an Eclipse plugin provided by Apache.\
+    \ To install IvyDE, start Eclipse and navigate to Help > Install New Software.\
+    \ It displays the Available Softwares window. Enter IvyDE update site **http://www.apache.org/dist/ant/ivyde/updatesite/**\
+    \  and press enter key. It displays the following plugins.\n\n![Image](OEBPS/Image00000.jpg)\n\
+    \nClick Next and you will see the following screen.\n\n![Image](OEBPS/Image00001.jpg)\n\
+    \nIf you are facing any error while installing the plugin then just restart the\
+    \ process. After successful installation, you will see the plugin in eclipe.\n\
+    \n![Image](OEBPS/Image00002.jpg)\n\nNow you can do the dependency management using\
+    \ Eclipse and Ivy.\n\n# Resolve Task\n\nResolve task is used to resolve dependencies\
+    \ described in ivy.xml, download and put them in ivy cache.\n\nLet's first create\
+    \ a java file Tester.java in **E: > ivy > src > com > tutorialspoint ** folder\
+    \ which will act as source folder for ant project.\n\nApplication.java\n\npackage\
+    \ com . tutorialspoint ;\n\nimport org . apache . commons . lang . StringUtils\
+    \ ;\n\npublic class Application {\n\npublic static void main ( String [] args\
+    \ ) {\n\nString string = StringUtils . upperCase ( \"Ivy Beginner Guide\" );\n\
+    \nSystem . out . println ( string );\n\n}\n\n}\n\nAbove class is using apache\
+    \ commons lang library to use its class StringUtils. Ivy should download this\
+    \ library and thus it should be defined under dependencies section in ivy.xml.\
+    \ Following is the ivy.xml created in **E: > ivy ** folder.\n\nivy.xml\n\n<? xml\
+    \ version = \"1.0\" encoding = \"ISO-8859-1\" ?>\n\n<ivy-module version = \"2.0\"\
+    \ xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\n\nxsi:noNamespaceSchemaLocation\
+    \ = \"http://ant.apache.org/ivy/schemas/ivy.xsd\" >\n\n<info\n\norganisation =\
+    \ \"com.tutorialspoint\"\n\nmodule = \"test\"\n\nstatus = \"integration\" >\n\n\
+    </info>\n\n<dependencies>\n\n<dependency org = \"org.apache.commons\" name = \"\
+    commons-lang3\" rev = \"3.9\" />\n\n</dependencies>\n\n</ivy-module>\n\nFollowing\
+    \ are the important terms.\n\n*   **ivy-module**  − Root element to identify ivy\
+    \ version, namespace etc.\n\n*   **info**  − element to identify the project as\
+    \ a unique entity.\n\n*   **organisation**  − name of the organization\n\n*  \
+    \ **module**  − name of the module\n\n*   **status**  − status like release, integration\
+    \ or milestone.\n\n*   **dependencies**  − element to contain project dependencies\
+    \ as dependency tags which has following attributes.\n\n*   **org**  − name of\
+    \ the dependency's organization\n\n*   **name**  − name of the dependency.\n\n\
+    *   **rev**  − version of the dependency.\n\nbuild.xml\n\n<project name = \"test\"\
+    \ default = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\" >\n\n<target\
+    \ name = \"resolve\" description = \"resolve dependencies\" >\n\n<ivy:resolve\
+    \ />\n\n</target>\n\n</project<\n\nFollowing are the important terms.\n\n*   **project**\
+    \  − Root element to identify project name, default task namespace for ivy etc.\n\
+    \n*   **target**  − target element to create a new task and its description. This\
+    \ contains an ivy resolve task. When ant builds the project, it runs the ivy resolve\
+    \ task which then resolves the dependencies using ivy.\n\n## Building the project\n\
+    \nAs we've all the files ready. Just go the console. Navigate to **E: > ivy **\
+    \ folder and run the ant command.\n\nE:\\ivy > ant\n\nIvy will come into action,\
+    \ resolving the dependencies, you will see the following result.\n\nBuildfile:\
+    \ E:\\ivy\\build.xml\n\nresolve:\n\n[ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435\
+    \ :: https://ant.apache.org/ivy\n\n/ ::\n\n[ivy:resolve] :: loading settings ::\
+    \ url = jar:file:/E:/Apache/apache-ant-1.9.14\n\n/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n\
+    \n[ivy:resolve] :: resolving dependencies :: com.tutorialspoint#test;working@Acer-\n\
+    \nPC\n\n[ivy:resolve] confs: [default]\n\n[ivy:resolve] found commons-lang#commons-lang;2.6\
+    \ in public\n\n[ivy:resolve] found junit#junit;3.8.1 in public\n\n[ivy:resolve]\
+    \ :: resolution report :: resolve 375ms :: artifacts dl 79ms\n\n---------------------------------------------------------------------\n\
+    \n| | modules || artifacts |\n\n| conf | number| search|dwnlded|evicted|| number|dwnlded|\n\
+    \n---------------------------------------------------------------------\n\n| default\
+    \ | 2 | 2 | 0 | 0 || 4 | 0 |\n\n---------------------------------------------------------------------\n\
+    \n[ivy:retrieve] :: retrieving :: com.tutorialspoint#test [sync]\n\n[ivy:retrieve]\
+    \ confs: [default]\n\n[ivy:retrieve] 0 artifacts copied, 2 already retrieved (0kB/101ms)\n\
+    \nBUILD SUCCESSFUL\n\nTotal time: 1 second\n\nE:\\ivy>\n\n## Resolve Output\n\n\
+    Following are the important terms.\n\n*   **conf**  − configuration, in our case\
+    \ we are using default configuration.\n\n*   **modules**  − indicates the total\
+    \ number of modules, downloaded modules etc.\n\n*   **artifacts**  − indicates\
+    \ the total number of artifacts, downloaded artifacts etc.\n\nYou can verify the\
+    \ downloaded files in ivy cache's default location in **${ivy.default.ivy.user.dir}\
+    \ > .ivy2 > cache**  folder. And ${ivy.default.ivy.user.dir} is by default user\
+    \ home: $HOME.\n\n# Install Task\n\nInstall task is used to install a module and\
+    \ its dependencies in a resolver. It is used when a public artifact is to be downloaded\
+    \ and used in private repository. By default, a user local repository is his/her\
+    \ private repository and is present in ${ivy.default.ivy.user.dir}/local."
+  toc: []
+  trans: "\n\n*   **仓库 (Repository)** — 类似于 Maven 仓库，仓库代表一个 ivy 可以在其中搜索库、构件、模块等的分发站点。仓库可以是公共的、私有的或共享的。\n\
+    *   **Ivy 设置 (Ivy Settings)** — Apache Ivy 遵循 Maven 原则，并带有许多默认配置。可以通过定义 `ivysettings.xml`\
+    \ 文件来覆盖默认设置。\n\n# 设置文件\n\nApache Ivy 遵循 Maven 原则，并带有许多默认配置。可以通过定义 `ivysettings.xml`\
+    \ 文件来覆盖默认设置。\n\n```xml\n<ivysettings>\n<properties file = \"${ivy.settings.dir}/ivysettings-file.properties\"\
+    \ />\n<settings defaultCache = \"${cache.dir}\" defaultResolver = \"ibiblio\"\
+    \ checkUpToDate = \"false\" />\n<resolvers>\n <ibiblio name = \"ibiblio\" />\n\
+    \ <filesystem name = \"internal\" >\n  <ivy pattern = \"${repository.dir}/[module]/ivy-[revision].xml\"\
+    \ />\n  <artifact pattern = \"${repository.dir}/[module]/[artifact]-[revision].[ext]\"\
+    \ />\n </filesystem>\n</resolvers>\n<modules>\n <module organisation = \"tutorialspoint\"\
+    \ name = \".*\" resolver = \"internal\" />\n</modules>\n</ivysettings>\n```\n\n\
+    ## Ivy 设置文件的标签\n\n以下是 Ivy 设置文件中重要的标签。\n\n*   **property** — 用于设置 ivy 变量。基数：0..n\n\
+    *   **properties** — 用于使用属性文件设置 ivy 变量。基数：0..n\n*   **settings** — 使用默认值配置 ivy。基数：0..1\n\
+    *   **include** — 包含另一个设置文件。基数：0..n\n*   **classpath** — 在类路径中添加一个用于加载插件的路径。基数：0..n\n\
+    *   **typedef** — 在 ivy 中定义新类型。基数：0..n\n*   **lock-strategies** — 定义锁策略。基数：0..1\n\
+    *   **caches** — 定义仓库缓存管理器。基数：0..1\n*   **latest-strategies** — 定义最新策略。基数：0..1\n\
+    *   **parsers** — 定义模块描述符解析器。基数：0..1\n*   **version-matchers** — 定义新的版本匹配器。基数：0..1\n\
+    *   **triggers** — 在 ivy 事件上注册触发器。基数：0..1\n*   **namespaces** — 定义新的命名空间。基数：0..1\n\
+    *   **macrodef** — 定义一个新的宏解析器。基数：0..n\n*   **resolvers** — 定义依赖解析器。基数：0..1\n*\
+    \   **conflict-managers** — 定义冲突管理器。基数：0..1\n*   **modules** — 定义模块与依赖解析器之间的规则。基数：0..1\n\
+    *   **outputters** — 定义可用的报告输出器列表。基数：0..1\n*   **statuses** — 定义可用的状态列表。基数：0..1\n\
+    \n# Eclipse Ivy 插件\n\nIvyDE 是由 Apache 提供的 Eclipse 插件。要安装 IvyDE，启动 Eclipse 并导航到\
+    \ Help（帮助） > Install New Software（安装新软件）。它会显示可用软件（Available Softwares）窗口。输入 IvyDE\
+    \ 更新站点 `http://www.apache.org/dist/ant/ivyde/updatesite/` 并按回车。它将显示以下插件。\n\n![Image](img/Image00000.jpg)\n\
+    \n点击 Next（下一步），你将看到以下界面。\n\n![Image](img/Image00001.jpg)\n\n如果在安装插件时遇到任何错误，只需重新开始过程。安装成功后，你将在\
+    \ eclipse 中看到该插件。\n\n![Image](img/Image00002.jpg)\n\n现在你可以使用 Eclipse 和 Ivy 进行依赖管理。\n\
+    \n# Resolve 任务 (Resolve Task)\n\nResolve 任务用于解析 ivy.xml 中描述的依赖，下载并将它们放入 ivy 缓存。\n\
+    \n让我们首先在 `E: > ivy > src > com > tutorialspoint` 文件夹中创建一个 java 文件 `Tester.java`，它将作为\
+    \ ant 项目的源代码文件夹。\n\n```java\npackage com . tutorialspoint ;\n\nimport org . apache\
+    \ . commons . lang . StringUtils ;\n\npublic class Application {\npublic static\
+    \ void main ( String [] args ) {\nString string = StringUtils . upperCase ( \"\
+    Ivy Beginner Guide\" );\nSystem . out . println ( string );\n}\n}\n```\n\n上述类使用了\
+    \ apache commons lang 库中的其类 `StringUtils`。Ivy 需要下载此库，因此它应该在 ivy.xml 的 dependencies\
+    \ 部分下定义。以下是在 `E: > ivy` 文件夹中创建的 `ivy.xml`。\n\n```xml\n<? xml version = \"1.0\"\
+    \ encoding = \"ISO-8859-1\" ?>\n<ivy-module version = \"2.0\" xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\
+    \nxsi:noNamespaceSchemaLocation = \"http://ant.apache.org/ivy/schemas/ivy.xsd\"\
+    \ >\n<info\norganisation = \"com.tutorialspoint\"\nmodule = \"test\"\nstatus =\
+    \ \"integration\" >\n</info>\n<dependencies>\n<dependency org = \"org.apache.commons\"\
+    \ name = \"commons-lang3\" rev = \"3.9\" />\n</dependencies>\n</ivy-module>\n\
+    ```\n\n以下是重要的术。\n\n*   **ivy-module** — 识别 ivy 的根元素。\n*   **info** — 包含模块信息的元素。\n\
+    *   **organisation** — 组织名称。\n*   **module** — 模块名称。\n*   **status** — 状态。\n*\
+    \   **dependencies** — 包含依赖项的部分。\n*   **org** — 依赖的组织。\n*   **name** — 依赖名称。\n\
+    *   **rev** — 版本。\n*   **project** — 项目根元素。\n*   **target** — 目标元素。\n\n```xml\n\
+    <project name = \"test\" default = \"resolve\" xmlns:ivy=\"antlib:org.apache.ivy\"\
+    \ >\n<target name=\"resolve\">\n  ivy:settings defaultCache = \"${cache.dir}\"\
+    \ defaultResolver = \"ibiblio\" checkUpToDate = \"false\" />\n  <resolvers>\n\
+    \     <ibiblio name = \"ibiblio\" />\n     <filesystem name = \"internal\" >\n\
+    \      <ivy pattern = \"${repository.dir}/[module]/ivy-[revision].xml\" />\n \
+    \     <artifact pattern = \"${repository.dir}/[module]/[artifact]-[revision].[ext]\"\
+    \ />\n     </filesystem>\n  </resolvers>\n  <modules>\n     <module organisation\
+    \ = \"tutorialspoint\" name = \".*\" resolver = \"internal\" />\n  </modules>\n\
+    \  <ivy:retrieve pattern=\"lib/[artifact]-[revision].[ext]\"/>\n</target>\n</project>\n\
+    ```\n\n构建项目 (Building the project)\n\n我们已准备好所有文件。只需进入 `E: > ivy` 文件夹并运行 `ant`\
+    \ 命令。\n\n`E: > ivy >` 将执行操作，解析依赖，你将看到以下结果。\n\n```\nBuildfile: E:\\ivy\\build.xml\n\
+    [ivy:resolve] Apache Ivy 2.5.0 - 20191024435 :: https://ant.apache.org/ivy/\n\
+    [ivy:resolve] :: loading settings :: jar:E:/Apache/ant-1.9.14/lib/ivy-2.5.0.jar!/org/ivy/core/settings/ivysettings.xml\n\
+    [ivy:resolve] :: resolving dependencies :: com.tutorialspoint;test@Acer\n[ivy:resolve]\
+    \ confs: [default]\n[ivy:resolve] found commons-lang;2.6 in public\n[ivy:resolve]\
+    \ found junit;3.8.1 in public\n[ivy:resolve] :: resolution report :: resolve 375ms\
+    \ :: artifacts 79ms\n-------------------------------------\n| | modules || artifacts\
+    \ |\n| conf | number|search|dwnlded|evicted|| number|dwnlded|\n-------------------------------------\n\
+    | default | 2 | 2 | 0 | 0 || 4 | 0 |\n-------------------------------------\n\
+    [ivy:retrieve] :: retrieving :: com.tutorialspoint#test [sync]\n[ivy:retrieve]\
+    \ confs: [default]\n[ivy:retrieve] 0 artifacts copied, 2 already retrieved (0kB/101ms)\n\
+    BUILD SUCCESSFUL\nTotal time: 1 second\nE:\\ivy>\n```\n\n以下是重要的术。\n\n*   **conf**\
+    \ — 配置，在我们的案例中我们使用默认配置。\n*   **modules** — 表示模块的总数、下载的模块等。\n*   **artifacts**\
+    \ — 表示构件的总数、下载的构件等。\n\n你可以在 ivy 缓存的默认位置验证下载的文件，位于 `${ivy.default.ivy.user_dir}\
+    \ > .ivy2 > cache` 文件夹。而 `${ivy.default.ivy.user_dir}` 默认是用户目录：$HOME。\n\n# 安装任务\
+    \ (Install Task)\n\nInstall 任务用于将模块及其依赖安装到解析器中。当需要下载公共构件并用于私有仓库时使用它。默认情况下，用户本地仓库是用户的私有仓库，存在于\
+    \ ${ivy.default.ivy.user_dir}/local。\n\n"
+- fmt: "\nLet's create `Tester.java`, `build.xml` and `ivy.xml` as described in the\
+    \ `IVY - Resolve Task` chapter.\n\nUpdate the `build.xml` to use the `ivy` install\
+    \ task.\n\n```xml\n<project name = \"test\" default = \"resolve\" xmlns:ivy =\
+    \ \"antlib:org.apache.ivy.ant\" >\n  <target name = \"resolve\" description =\
+    \ \"resolve dependencies\" >\n    <ivy:resolve />\n  </target>\n  <target name\
+    \ = \"install\" description = \"install dependencies\" >\n    <ivy:install organisation\
+    \ = \"commons-lang\" module = \"commons-lang\"\n      revision = \"2.6\" transitive\
+    \ = \"true\" overwrite = \"false\"\n      from = \"public\" to = \"local\" />\n\
+    \  </target>\n</project>\n```\n\nFollowing are the important terms.\n\n* `organisation`\
+    \ — name of the organization.\n* `module` — module name of the project.\n* `revision`\
+    \ — version of the project.\n* `from` — from repository type.\n* `to` — to repository\
+    \ type.\n\n## Building the project\n\nAs we've all the files ready. Just go the\
+    \ console. Navigate to `E: > ivy` folder and run the `ant` command.\n\n```bash\n\
+    E:\\ivy > ant install\n```\n\nIvy will come into action, resolving the dependencies,\
+    \ you will see the following result.\n\n```bash\nBuildfile: E:\\ivy\\build.xml\n\
+    install:\n[ivy:install] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy\n\
+    / ::\n[ivy:install] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14\n\
+    /lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n[ivy:install]\
+    \ :: installing commons-lang#commons-lang;2.6 ::\n[ivy:install] :: resolving dependencies\
+    \ ::\n[ivy:install] found commons-lang#commons-lang;2.6 in public\n[ivy:install]\
+    \ found junit#junit;3.8.1 in public\n[ivy:install] :: downloading artifacts to\
+    \ cache ::\n[ivy:install] :: installing in local ::\n[ivy:install] published commons-\
+    \ lang to C:\\Users\\Acer\\.ivy2\\local\\commons-lang\n\\commons-lang\\2.6.part\\\
+    sources\\commons-lang.jar\n[ivy:install] published commons- lang to C:\\Users\\\
+    Acer\\.ivy2\\local\\commons-lang\n\\commons-lang\\2.6.part\\jars\\commons-lang.jar\n\
+    [ivy:install] published commons- lang to C:\\Users\\Acer\\.ivy2\\local\\commons-lang\n\
+    \\commons-lang\\2.6.part\\javadocs\\commons-lang.jar\n[ivy:install] published\
+    \ ivy to C:\\Users\\Acer\\.ivy2\\local\\commons-lang\\commons-\nlang\\2.6.part\\\
+    ivys\\ivy.xml\n[ivy:install] publish committed: moved C:\\Users\\Acer\\.ivy2\\\
+    local\\commons-lang\\\ncommons-lang\\2.6.part\n[ivy:install] to C:\\Users\\Acer\\\
+    .ivy2\\local\\commons-lang\\commons-lang\\2\n.6\n[ivy:install] published junit\
+    \ to C:\\Users\\Acer\\.ivy2\\local\\junit\\junit\\3.8.1.p\nart\\jars\\junit.jar\n\
+    [ivy:install] published ivy to C:\\Users\\Acer\\.ivy2\\local\\junit\\junit\\3.8.1.par\n\
+    t\\ivys\\ivy.xml\n[ivy:install] publish committed: moved C:\\Users\\Acer\\.ivy2\\\
+    local\\junit\\junit\\3\n.8.1.part\n[ivy:install] to C:\\Users\\Acer\\.ivy2\\local\\\
+    junit\\junit\\3.8.1\n[ivy:install] :: install resolution report ::\n[ivy:install]\
+    \ :: resolution report :: resolve 0ms :: artifacts dl 21ms\n---------------------------------------------------------------------\n\
+    | | modules || artifacts |\n| conf | number|search|dwnlded|evicted|| number|dwnlded|\n\
+    ---------------------------------------------------------------------\n| default\
+    \ | 2 | 0 | 0 | 0 || 4 | 0 |\n---------------------------------------------------------------------\n\
+    BUILD SUCCESSFUL\nTotal time: 43 seconds\n```\n\nYou can verify the downloaded\
+    \ files in ivy cache's default local repository location `${ivy.default.ivy.user.dir}\
+    \ > .ivy2 > local` directory.\n\n## Retrieve Task\n\nretrieve task is used to\
+    \ resolve dependencies to a specified location in project workspace.\n\nLet's\
+    \ create `Tester.java`, `build.xml` and `ivy.xml` as described in the `IVY - Resolve\
+    \ Task` chapter.\n\nUpdate the `build.xml` to use the `ivy` retrieve task.\n\n\
+    ``````xml\n<project name = \"test\" default = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\"\
+    \ >\n  <target name = \"resolve\" description = \"resolve dependencies\" >\n \
+    \   <ivy:resolve />\n    <ivy:retrieve sync = \"true\" type = \"jar\" />\n  </target>\n\
+    </project>\n```\n\nFollowing are the important terms.\n\n* `sync` — sync true\
+    \ ensure that lib directory is up-to-date and any extra file gets deleted.\n*\
+    \ `type` — type of the project.\n\n## Building the project\n\nAs we've all the\
+    \ files ready. Just go the console. Navigate to `E: > ivy` folder and run the\
+    \ `ant` command.\n\n## Cache Task\n\ncachepath task is used to resolve dependencies\
+    \ to a specified location in project workspace.\n\nLet's create `Tester.java`,\
+    \ `build.xml` and `ivy.xml` as described in the `IVY - Resolve Task` chapter.\n\
+    \nUpdate the `build.xml` to use the `ivy` retrieve task.\n\n```xml\n<project name\
+    \ = \"test\" default = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\" >\n\
+    \  <target name = \"resolve\" description = \"resolve dependencies\" >\n    <ivy:resolve\
+    \ />\n    <ivy:cachepath pathid=\"new.classpath\" />\n  </target>\n  <target name\
+    \ = \"compile\" depends = \"resolve\" description = \"Compile\" >\n    <mkdir\
+    \ dir=\"build/classes\" />\n    <javac srcdir=\"src\" destdir=\"build/classes\"\
+    \ >\n      <classpath refid=\"new.classpath\" />\n    </javac>\n  </target>\n\
+    </project>\n```\n\nFollowing are the important terms.\n\n* `pathid` — id of the\
+    \ classpath where cached jars are present.\n"
+  raw: 'Let''s create Tester.java, build.xml and ivy.xml as described in **IVY - Resolve
+    Task**  chapter.
+
+
+    Update the build.xml to use the ivy install task.
+
+
+    build.xml
+
+
+    <project name = "test" default = "resolve" xmlns:ivy = "antlib:org.apache.ivy.ant"
+    >
+
+
+    <target name = "resolve" description = "resolve dependencies" >
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    <target name = "install" description = "install dependencies" >
+
+
+    <ivy:install organisation = "commons-lang" module = "commons-lang"
+
+
+    revision = "2.6" transitive = "true" overwrite = "false"
+
+
+    from = "public" to = "local" />
+
+
+    </target>
+
+
+    </project>
+
+
+    Following are the important terms.
+
+
+    *   **organisation**  − name of the organization.
+
+
+    *   **module**  − module name of the project.
+
+
+    *   **revision**  − version of the project.
+
+
+    *   **from**  − from repository type.
+
+
+    *   **to**  − to repository type.
+
+
+    ## Building the project
+
+
+    As we''ve all the files ready. Just go the console. Navigate to **E: > ivy **
+    folder and run the ant command.
+
+
+    E:\ivy > ant install
+
+
+    Ivy will come into action, resolving the dependencies, you will see the following
+    result.
+
+
+    E:\ivy > ant install
+
+
+    Buildfile: E:\ivy\build.xml
+
+
+    install:
+
+
+    [ivy:install] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy
+
+
+    / ::
+
+
+    [ivy:install] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14
+
+
+    /lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+
+    [ivy:install] :: installing commons-lang#commons-lang;2.6 ::
+
+
+    [ivy:install] :: resolving dependencies ::
+
+
+    [ivy:install] found commons-lang#commons-lang;2.6 in public
+
+
+    [ivy:install] found junit#junit;3.8.1 in public
+
+
+    [ivy:install] :: downloading artifacts to cache ::
+
+
+    [ivy:install] :: installing in local ::
+
+
+    [ivy:install] published commons- lang to C:\Users\Acer\.ivy2\local\commons-lang
+
+
+    \commons-lang\2.6.part\sources\commons-lang.jar
+
+
+    [ivy:install] published commons- lang to C:\Users\Acer\.ivy2\local\commons-lang
+
+
+    \commons-lang\2.6.part\jars\commons-lang.jar
+
+
+    [ivy:install] published commons- lang to C:\Users\Acer\.ivy2\local\commons-lang
+
+
+    \commons-lang\2.6.part\javadocs\commons-lang.jar
+
+
+    [ivy:install] published ivy to C:\Users\Acer\.ivy2\local\commons-lang\commons-
+
+
+    lang\2.6.part\ivys\ivy.xml
+
+
+    [ivy:install] publish committed: moved C:\Users\Acer\.ivy2\local\commons-lang\
+
+
+    commons-lang\2.6.part
+
+
+    [ivy:install] to C:\Users\Acer\.ivy2\local\commons-lang\commons-lang\2
+
+
+    .6
+
+
+    [ivy:install] published junit to C:\Users\Acer\.ivy2\local\junit\junit\3.8.1.p
+
+
+    art\jars\junit.jar
+
+
+    [ivy:install] published ivy to C:\Users\Acer\.ivy2\local\junit\junit\3.8.1.par
+
+
+    t\ivys\ivy.xml
+
+
+    [ivy:install] publish committed: moved C:\Users\Acer\.ivy2\local\junit\junit\3
+
+
+    .8.1.part
+
+
+    [ivy:install] to C:\Users\Acer\.ivy2\local\junit\junit\3.8.1
+
+
+    [ivy:install] :: install resolution report ::
+
+
+    [ivy:install] :: resolution report :: resolve 0ms :: artifacts dl 21ms
+
+
+    ---------------------------------------------------------------------
+
+
+    | | modules || artifacts |
+
+
+    | conf | number| search|dwnlded|evicted|| number|dwnlded|
+
+
+    ---------------------------------------------------------------------
+
+
+    | default | 2 | 0 | 0 | 0 || 4 | 0 |
+
+
+    ---------------------------------------------------------------------
+
+
+    BUILD SUCCESSFUL
+
+
+    Total time: 43 seconds
+
+
+    You can verify the downloaded files in ivy cache''s default local repository location **${ivy.default.ivy.user.dir}
+    > .ivy2 > local**  directory.
+
+
+    # Retrieve Task
+
+
+    retrieve task is used to resolve dependencies to a specified location in project
+    workspace.
+
+
+    Let''s create Tester.java, build.xml and ivy.xml as described in **IVY - Resolve
+    Task**  chapter.
+
+
+    Update the build.xml to use the ivy retrieve task.
+
+
+    build.xml
+
+
+    <project name = "test" default = "resolve" xmlns:ivy = "antlib:org.apache.ivy.ant"
+    >
+
+
+    <target name = "resolve" description = "resolve dependencies" >
+
+
+    <ivy:resolve />
+
+
+    <ivy:retrieve sync = "true" type = "jar" />
+
+
+    </target>
+
+
+    </project>
+
+
+    Following are the important terms.
+
+
+    *   **sync**  − sync true ensure that lib directory is up-to-date and any extra
+    file gets deleted.
+
+
+    *   **type**  − type directs ivy to copy only specified type of artifacts like
+    jar. Source jar, javadoc jar will be ignored. type for source jar is src or source
+    and doc or bundle for javadoc jar.
+
+
+    retrieve tasks copies the resolved dependencies in the lib directory of the project
+    by default and can be changed using pattern attribute.
+
+
+    ## Building the project
+
+
+    As we''ve all the files ready. Just go the console. Navigate to **E: > ivy **
+    folder and run the ant command.
+
+
+    E:\ivy > ant
+
+
+    Ivy will come into action, resolving the dependencies, you will see the following
+    result.
+
+
+    Buildfile: E:\ivy\build.xml
+
+
+    resolve:
+
+
+    [ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy
+
+
+    / ::
+
+
+    [ivy:resolve] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14
+
+
+    /lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+
+    [ivy:resolve] :: resolving dependencies :: com.tutorialspoint#test;working@Acer-
+
+
+    PC
+
+
+    [ivy:resolve] confs: [default]
+
+
+    [ivy:resolve] found commons-lang#commons-lang;2.6 in public
+
+
+    [ivy:resolve] found junit#junit;3.8.1 in public
+
+
+    [ivy:resolve] :: resolution report :: resolve 316ms :: artifacts dl 18ms
+
+
+    ---------------------------------------------------------------------
+
+
+    | | modules || artifacts |
+
+
+    | conf | number| search|dwnlded|evicted|| number|dwnlded|
+
+
+    ---------------------------------------------------------------------
+
+
+    | default | 2 | 2 | 0 | 0 || 4 | 0 |
+
+
+    ---------------------------------------------------------------------
+
+
+    [ivy:retrieve] :: retrieving :: com.tutorialspoint#test [sync]
+
+
+    [ivy:retrieve] confs: [default]
+
+
+    [ivy:retrieve] 0 artifacts copied, 2 already retrieved (0kB/2756ms)
+
+
+    BUILD SUCCESSFUL
+
+
+    Total time: 31 seconds
+
+
+    You can verify the downloaded files in project lib directory.
+
+
+    # Cachepath Task
+
+
+    cachepath task is used to create an ANT classpath with resolved artifacts present
+    in the cache. As ANT needs jars to be classpath to compile java files, Ivy cachepath
+    builds the classpath.
+
+
+    Let''s create Tester.java, build.xml and ivy.xml as described in **IVY - Resolve
+    Task**  chapter.
+
+
+    Update the build.xml to use the ivy retrieve task.
+
+
+    build.xml
+
+
+    <project name = "test" default = "resolve" xmlns:ivy = "antlib:org.apache.ivy.ant"
+    >
+
+
+    <target name = "resolve" description = "resolve dependencies" >
+
+
+    <ivy:resolve />
+
+
+    <ivy:cachepath pathid = "new.classpath" />
+
+
+    </target>
+
+
+    <target name = "compile" depends = "resolve" description = "Compile" >
+
+
+    <mkdir dir = "build/classes" />
+
+
+    <javac srcdir = "src" destdir = "build/classes" >
+
+
+    <classpath refid = "new.classpath" />
+
+
+    </javac>
+
+
+    </target>
+
+
+    </project>
+
+
+    Following are the important terms.
+
+
+    *   **pathid**  − id of the classpath where cached jars are present.
+
+
+    retrieve tasks copies the resolved dependencies in the lib directory of the project
+    by default and can be changed using pattern attribute.
+
+
+    ## Building the project
+
+
+    As we''ve all the files ready. Just go the console. Navigate to **E: > ivy **
+    folder and run the ant command.
+
+
+    E:\ivy > ant compile
+
+
+    Ivy will come into action, resolving the dependencies, you will see the following
+    result.
+
+
+    Buildfile: E:\ivy\build.xml
+
+
+    resolve:
+
+
+    [ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy
+
+
+    / ::
+
+
+    [ivy:resolve] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14
+
+
+    /lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+
+    [ivy:resolve] :: resolving dependencies :: com.tutorialspoint#test;working@Acer-
+
+
+    PC
+
+
+    [ivy:resolve] confs: [default]
+
+
+    [ivy:resolve] found commons-lang#commons-lang;2.6 in public
+
+
+    [ivy:resolve] found junit#junit;3.8.1 in public
+
+
+    [ivy:resolve] :: resolution report :: resolve 2314ms :: artifacts dl 15ms
+
+
+    ---------------------------------------------------------------------
+
+
+    | | modules || artifacts |
+
+
+    | conf | number| search|dwnlded|evicted|| number|dwnlded|
+
+
+    ---------------------------------------------------------------------
+
+
+    | default | 2 | 2 | 0 | 0 || 4 | 0 |
+
+
+    ---------------------------------------------------------------------'
+  toc: []
+  trans: "\n按照 `IVY - Resolve Task` 章节中的描述创建 `Tester.java`、`build.xml` 和 `ivy.xml`。\n\
+    \n更新 `build.xml` 使用 `ivy` install 任务。\n\n```xml\n<project name = \"test\" default\
+    \ = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\" >\n  <target name =\
+    \ \"resolve\" description = \"resolve dependencies\" >\n    <ivy:resolve />\n\
+    \  </target>\n  <target name = \"install\" description = \"install dependencies\"\
+    \ >\n    <ivy:install organisation = \"commons-lang\" module = \"commons-lang\"\
+    \n      revision = \"2.6\" transitive = \"true\" overwrite = \"false\"\n     \
+    \ from = \"public\" to = \"local\" />\n  </target>\n</project>\n```\n\n以下是重要的术语。\n\
+    \n* `organisation` — 组织名称。\n* `module` — 项目的模块名称。\n* `revision` — 项目版本。\n* `from`\
+    \ — 源仓库类型。\n* `to` — 目标仓库类型。\n\n## 构建项目\n\n既然我们已经准备好了所有文件，只需进入控制台。进入 `E: > ivy`\
+    \ 文件夹并运行 `ant` 命令。\n\n```bash\nE:\\ivy > ant install\n```\n\nIvy 将开始工作解析依赖，你将看到以下结果。\n\
+    \n```bash\nBuildfile: E:\\ivy\\build.xml\ninstall:\n[ivy:install] :: Apache Ivy\
+    \ 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy\n/ ::\n[ivy:install] ::\
+    \ loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14\n/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n\
+    [ivy:install] :: installing commons-lang#commons-lang;2.6 ::\n[ivy:install] ::\
+    \ resolving dependencies ::\n[ivy:install] found commons-lang#commons-lang;2.6\
+    \ in public\n[ivy:install] found junit#junit;3.8.1 in public\n[ivy:install] ::\
+    \ downloading artifacts to cache ::\n[ivy:install] :: installing in local ::\n\
+    [ivy:install] published commons- lang to C:\\Users\\Acer\\.ivy2\\local\\commons-lang\n\
+    \\commons-lang\\2.6.part\\sources\\commons-lang.jar\n[ivy:install] published commons-\
+    \ lang to C:\\Users\\Acer\\.ivy2\\local\\commons-lang\n\\commons-lang\\2.6.part\\\
+    jars\\commons-lang.jar\n[ivy:install] published commons- lang to C:\\Users\\Acer\\\
+    .ivy2\\local\\commons-lang\n\\commons-lang\\2.6.part\\javadocs\\commons-lang.jar\n\
+    [ivy:install] published ivy to C:\\Users\\Acer\\.ivy2\\local\\commons-lang\\commons-\n\
+    lang\\2.6.part\\ivys\\ivy.xml\n[ivy:install] publish committed: moved C:\\Users\\\
+    Acer\\.ivy2\\local\\commons-lang\\\ncommons-lang\\2.6.part\n[ivy:install] to C:\\\
+    Users\\Acer\\.ivy2\\local\\commons-lang\\commons-lang\\2\n.6\n[ivy:install] published\
+    \ junit to C:\\Users\\Acer\\.ivy2\\local\\junit\\junit\\3.8.1.p\nart\\jars\\junit.jar\n\
+    [ivy:install] published ivy to C:\\Users\\Acer\\.ivy2\\local\\junit\\junit\\3.8.1.par\n\
+    t\\ivys\\ivy.xml\n[ivy:install] publish committed: moved C:\\Users\\Acer\\.ivy2\\\
+    local\\junit\\junit\\3\n.8.1.part\n[ivy:install] to C:\\Users\\Acer\\.ivy2\\local\\\
+    junit\\junit\\3.8.1\n[ivy:install] :: install resolution report ::\n[ivy:install]\
+    \ :: resolution report :: resolve 0ms :: artifacts dl 21ms\n---------------------------------------------------------------------\n\
+    | | modules || artifacts |\n| conf | number|search|dwnlded|evicted|| number|dwnlded|\n\
+    ---------------------------------------------------------------------\n| default\
+    \ | 2 | 0 | 0 | 0 || 4 | 0 |\n---------------------------------------------------------------------\n\
+    BUILD SUCCESSFUL\nTotal time: 43 seconds\n```\n\n你可以在 ivy 缓存的默认本地仓库位置 `${ivy.default.ivy.user.dir}\
+    \ > .ivy2 > local` 目录中验证下载的文件。\n\n## Retrieve Task\n\nretrieve 任务用于将依赖解析到项目工作区的指定位置。\n\
+    \n按照 `IVY - Resolve Task` 章节中的描述创建 `Tester.java`、`build.xml` 和 `ivy.xml`。\n\n\
+    更新 `build.xml` 使用 `ivy` retrieve 任务。\n\n``````xml\n<project name = \"test\" default\
+    \ = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\" >\n  <target name =\
+    \ \"resolve\" description = \"resolve dependencies\" >\n    <ivy:resolve />\n\
+    \    <ivy:retrieve sync = \"true\" type = \"jar\" />\n  </target>\n</project>\n\
+    ```\n\n以下是重要的术语。\n\n* `sync` — sync true 确保 lib 目录是最新的，任何多余的文件会被删除。\n* `type`\
+    \ — 项目类型。\n\n## 构建项目\n\n既然我们已经准备好了所有文件，只需进入控制台。进入 `E: > ivy` 文件夹并运行 `ant` 命令。\n\
+    \n## Cache Task\n\ncachepath 任务用于将依赖解析到项目工作区的指定位置。\n\n按照 `IVY - Resolve Task`\
+    \ 章节中的描述创建 `Tester.java`、`build.xml` 和 `ivy.xml`。\n\n更新 `build.xml` 使用 `ivy` retrieve\
+    \ 任务。\n\n```xml\n<project name = \"test\" default = \"resolve\" xmlns:ivy = \"\
+    antlib:org.apache.ivy.ant\" >\n  <target name = \"resolve\" description = \"resolve\
+    \ dependencies\" >\n    <ivy:resolve />\n    <ivy:cachepath pathid=\"new.classpath\"\
+    \ />\n  </target>\n  <target name = \"compile\" depends = \"resolve\" description\
+    \ = \"Compile\" >\n    <mkdir dir=\"build/classes\" />\n    <javac srcdir=\"src\"\
+    \ destdir=\"build/classes\" >\n      <classpath refid=\"new.classpath\" />\n \
+    \   </javac>\n  </target>\n</project>\n```\n\n以下是重要的术语。\n\n* `pathid` — 包含缓存 jar\
+    \ 包的路径 ID。\n\n"
+- fmt: "\ncompile:\n\n```\n[ javac ] E:\\ivy\\build.xml:13: warning: 'includeantruntime'\
+    \ was not set, defaulting to build.sysclasspath=last; set to false for repeatable\
+    \ builds\n[ javac ] Compiling 1 source file to E:\\ivy\\build\\classes\nBUILD\
+    \ SUCCESSFUL\nTotal time: 3 seconds\nYou can verify the compiled class file in\
+    \ project build directory.\n```\n\n# Publish Task\n\n`publish` task is used to\
+    \ publish current artifacts and its resolved descriptor files to mentioned repository.\n\
+    \nLet's create `Tester.java`, `build.xml` and `ivy.xml` as described in **IVY\
+    \ - Resolve Task** chapter.\n\nUpdate the `build.xml` to use the `ivy publish`\
+    \ task. First we'll create a jar file and then publish it.\n\nbuild.xml\n```xml\n\
+    <project name = \"test\" default = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\"\
+    \ >\n  <property name = \"build.dir\" value = \"build\" />\n  <target name = \"\
+    resolve\" description = \"resolve dependencies\" >\n    <ivy:resolve />\n  </target>\n\
+    \  <target name = \"jar\" >\n    <jar destfile = \"${build.dir}/lib/application.jar\"\
+    \ basedir = \"${build.dir}/classes\" >\n      <manifest>\n        <attribute name\
+    \ = \"Main-Class\" value = \"com.tutorialspoint.Application\" />\n      </manifest>\n\
+    \    </jar>\n  </target>\n  <target name = \"publish\" depends = \"jar\" >\n \
+    \   <ivy:resolve />\n    <ivy:publish resolver = \"local\" pubrevision = \"1.0\"\
+    \ overwrite = \"true\" >\n      <artifacts pattern = \"${build.dir}/lib/[artifact].[ext]\"\
+    \ />\n    </ivy:publish>\n  </target>\n</project>\n```\n\nFollowing are the important\
+    \ terms.\n\n- `resolver` — resolver to be used for publication.\n- `pattern` —\
+    \ pattern to locate the artifact.\n\nHere publish task first build the jar, then\
+    \ resolve the dependencies, set the information and then publish the artifact\
+    \ to local repository.\n\n## Building the project\n\nAs we've all the files ready.\
+    \ Just go the console. Navigate to **E: > ivy ** folder and run the `ant` command.\n\
+    \n```\nE:\\ivy > ant publish\n```\n\nIvy will come into action, resolving the\
+    \ dependencies, you will see the following result.\n\n```\nE:\\ivy > ant publish\n\
+    Buildfile: E:\\ivy\\build.xml\njar:\npublish:\n[ivy:resolve] :: Apache Ivy 2.5.0\
+    \ - 20191020104435 :: https://ant.apache.org/ivy/ ::\n[ivy:resolve] :: loading\
+    \ settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n\
+    [ivy:resolve] :: resolving dependencies :: com.tutorialspoint#test;1.0.0\n[ivy:resolve]\
+    \ confs: [default]\n[ivy:resolve] found commons-lang#commons-lang;2.6 in public\n\
+    [ivy:resolve] found junit#junit;3.8.1 in public\n[ivy:resolve] :: resolution report\
+    \ :: resolve 121ms :: artifacts dl 15ms\n---------------------------------------------------------------------\n\
+    | | modules || artifacts |\n| conf | number| search|dwnlded|evicted|| number|dwnlded|\n\
+    ---------------------------------------------------------------------\n| default\
+    \ | 2 | 2 | 0 | 0 || 4 | 0 |\n---------------------------------------------------------------------\n\
+    [ivy:publish] :: publishing :: com.tutorialspoint#test\n[ivy:publish] published\
+    \ application to C:\\Users\\Acer\\.ivy2\\local\\com.tutorialspoint\\test\\1.0\\\
+    jars\\application.jar\n[ivy:publish] published ivy to C:\\Users\\Acer\\.ivy2\\\
+    local\\com.tutorialspoint\\test\\1.0\\ivys\\ivy.xml\nBUILD SUCCESSFUL\nTotal time:\
+    \ 1 second\n```\n\nYou can verify the publish ivy artifacts in local repository.\n\
+    \n# Info Task\n\n`info` task is used to set ivy specific information in a file\
+    \ and can be used without any dependency resolution.\n\nLet's create `Tester.java`,\
+    \ `build.xml` and `ivy.xml` as described in **IVY - Resolve Task** chapter.\n\n\
+    Update the `build.xml` to use the `ivy publish` task. First we'll create a jar\
+    \ file and then publish it. Before publish task, we've set the required ivy information\
+    \ using `info` task.\n\nbuild.xml\n```xml\n<project name = \"test\" default =\
+    \ \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\" >\n  <property name =\
+    \ \"build.dir\" value = \"build\" />\n  <target name = \"resolve\" description\
+    \ = \"resolve dependencies\" >\n    <ivy:resolve />\n  </target>\n  <target name\
+    \ = \"jar\" >\n    <jar destfile = \"${build.dir}/lib/application.jar\" basedir\
+    \ = \"${build.dir}/classes\" >\n      <manifest>\n        <attribute name = \"\
+    Main-Class\" value = \"com.tutorialspoint.Application\" />\n      </manifest>\n\
+    \    </jar>\n  </target>\n  <target name = \"publish\" depends = \"jar\" >\n \
+    \   <ivy:info file = \"ivy.xml\" />\n    <ivy:publish resolver = \"local\" pubrevision\
+    \ = \"1.0\" overwrite = \"true\" >\n      <artifacts pattern = \"${build.dir}/lib/[artifact].[ext]\"\
+    \ />\n    </ivy:publish>\n  </target>\n</project>\n```\n\nHere publish task first\
+    \ build the jar, then resolve the dependencies, set the information and then publish\
+    \ the artifact to local repository.\n\n## Building the project\n\nAs we've all\
+    \ the files ready. Just go the console. Navigate to **E: > ivy ** folder and run\
+    \ the `ant` command.\n\n```\nE:\\ivy > ant publish\n```\n\nIvy will come into\
+    \ action, resolving the dependencies, you will see the following result.\n\n[Note:\
+    \ The text continues with \"If we do not put the info task then publish task will\
+    \ not work\" and repeats the build.xml logic in the source, which has been processed\
+    \ according to the flow above.]\n"
+  raw: 'compile:
+
+
+    [ javac] E:\ivy\build.xml:13: warning: ''includeantruntime'' was not set, defau
+
+
+    lting to build.sysclasspath=last; set to false for repeatable builds
+
+
+    [ javac] Compiling 1 source file to E:\ivy\build\classes
+
+
+    BUILD SUCCESSFUL
+
+
+    Total time: 3 seconds
+
+
+    You can verify the compiled class file in project build directory.
+
+
+    # Publish Task
+
+
+    publish task is used to publish current artifacts and its resolved descriptor
+    files to mentioned repository.
+
+
+    Let''s create Tester.java, build.xml and ivy.xml as described in **IVY - Resolve
+    Task**  chapter.
+
+
+    Update the build.xml to use the ivy publish task. First we''ll create a jar file
+    and then publish it.
+
+
+    build.xml
+
+
+    <project name = "test" default = "resolve" xmlns:ivy = "antlib:org.apache.ivy.ant"
+    >
+
+
+    <property name = "build.dir" value = "build" />
+
+
+    <target name = "resolve" description = "resolve dependencies" >
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    <target name = "jar" >
+
+
+    <jar destfile = "${build.dir}/lib/application.jar"
+
+
+    basedir = "${build.dir}/classes" >
+
+
+    <manifest>
+
+
+    <attribute name = "Main-Class" value = "com.tutorialspoint.Application" />
+
+
+    </manifest>
+
+
+    </jar>
+
+
+    </target>
+
+
+    <target name = "publish" depends = "jar" >
+
+
+    <ivy:resolve />
+
+
+    <ivy:publish resolver = "local" pubrevision = "1.0" overwrite = "true" >
+
+
+    <artifacts pattern = "${build.dir}/lib/[artifact].[ext]" />
+
+
+    </ivy:publish>
+
+
+    </target>
+
+
+    </project>
+
+
+    Following are the important terms.
+
+
+    *   **resolver**  − resolver to be used for publication.
+
+
+    *   **pattern**  − pattern to locate the artifact.
+
+
+    Here publish task first build the jar, then resolve the dependencies, set the
+    information and then publish the artifact to local repository.
+
+
+    ## Building the project
+
+
+    As we''ve all the files ready. Just go the console. Navigate to **E: > ivy **
+    folder and run the ant command.
+
+
+    E:\ivy > ant publish
+
+
+    Ivy will come into action, resolving the dependencies, you will see the following
+    result.
+
+
+    E:\ivy > ant publish
+
+
+    Buildfile: E:\ivy\build.xml
+
+
+    jar:
+
+
+    publish:
+
+
+    [ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy
+
+
+    / ::
+
+
+    [ivy:resolve] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14
+
+
+    /lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+
+    [ivy:resolve] :: resolving dependencies :: com.tutorialspoint#test;1.0.0
+
+
+    [ivy:resolve] confs: [default]
+
+
+    [ivy:resolve] found commons-lang#commons-lang;2.6 in public
+
+
+    [ivy:resolve] found junit#junit;3.8.1 in public
+
+
+    [ivy:resolve] :: resolution report :: resolve 121ms :: artifacts dl 15ms
+
+
+    ---------------------------------------------------------------------
+
+
+    | | modules || artifacts |
+
+
+    | conf | number| search|dwnlded|evicted|| number|dwnlded|
+
+
+    ---------------------------------------------------------------------
+
+
+    | default | 2 | 2 | 0 | 0 || 4 | 0 |
+
+
+    ---------------------------------------------------------------------
+
+
+    [ivy:publish] :: publishing :: com.tutorialspoint#test
+
+
+    [ivy:publish] published application to C:\Users\Acer\.ivy2\local\com.tutorials
+
+
+    point\test\1.0\jars\application.jar
+
+
+    [ivy:publish] published ivy to C:\Users\Acer\.ivy2\local\com.tutorialspoint\te
+
+
+    st\1.0\ivys\ivy.xml
+
+
+    BUILD SUCCESSFUL
+
+
+    Total time: 1 second
+
+
+    You can verify the publish ivy artifacts in local repository.
+
+
+    # Info Task
+
+
+    info task is used to set ivy specific information in a file and can be used without
+    any dependency resolution.
+
+
+    Let''s create Tester.java, build.xml and ivy.xml as described in **IVY - Resolve
+    Task**  chapter.
+
+
+    Update the build.xml to use the ivy publish task. First we''ll create a jar file
+    and then publish it. Before publish task, we''ve set the required ivy information
+    using info task.
+
+
+    build.xml
+
+
+    <project name = "test" default = "resolve" xmlns:ivy = "antlib:org.apache.ivy.ant"
+    >
+
+
+    <property name = "build.dir" value = "build" />
+
+
+    <target name = "resolve" description = "resolve dependencies" >
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    <target name = "jar" >
+
+
+    <jar destfile = "${build.dir}/lib/application.jar"
+
+
+    basedir = "${build.dir}/classes" >
+
+
+    <manifest>
+
+
+    <attribute name = "Main-Class" value = "com.tutorialspoint.Application" />
+
+
+    </manifest>
+
+
+    </jar>
+
+
+    </target>
+
+
+    <target name = "publish" depends = "jar" >
+
+
+    <ivy:info file = "ivy.xml" />
+
+
+    <ivy:publish resolver = "local" pubrevision = "1.0" overwrite = "true" >
+
+
+    <artifacts pattern = "${build.dir}/lib/[artifact].[ext]" />
+
+
+    </ivy:publish>
+
+
+    </target>
+
+
+    </project>
+
+
+    Here publish task first build the jar, then set the information using ivy:info
+    task and then publish the artifact to local repository.
+
+
+    ## Building the project
+
+
+    As we''ve all the files ready. Just go the console. Navigate to **E: > ivy **
+    folder and run the ant command.
+
+
+    E:\ivy > ant publish
+
+
+    Ivy will come into action, resolving the dependencies, you will see the following
+    result.
+
+
+    Buildfile: E:\ivy\build.xml
+
+
+    jar:
+
+
+    publish:
+
+
+    [ivy:info] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy/
+
+
+    ::
+
+
+    [ivy:info] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14/l
+
+
+    ib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+
+    [ivy:publish] :: publishing :: com.tutorialspoint#test
+
+
+    [ivy:publish] published application to C:\Users\Acer\.ivy2\local\com.tutorials
+
+
+    point\test\1.0\jars\application.jar
+
+
+    [ivy:publish] published ivy to C:\Users\Acer\.ivy2\local\com.tutorialspoint\te
+
+
+    st\1.0\ivys\ivy.xml
+
+
+    BUILD SUCCESSFUL
+
+
+    Total time: 0 seconds
+
+
+    If we do not put the info task then publish task will not work. Use the below
+    modified build.xml and see the error for missing organization attribute and so
+    on.
+
+
+    build.xml
+
+
+    <project name = "test" default = "resolve" xmlns:ivy = "antlib:org.apache.ivy.ant"
+    >
+
+
+    <property name = "build.dir" value = "build" />
+
+
+    <target name = "resolve" description = "resolve dependencies" >
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    <target name = "jar" >
+
+
+    <jar destfile = "${build.dir}/lib/application.jar"
+
+
+    basedir = "${build.dir}/classes" >
+
+
+    <manifest>
+
+
+    <attribute name = "Main-Class" value = "com.tutorialspoint.Application" />
+
+
+    </manifest>
+
+
+    </jar>
+
+
+    </target>
+
+
+    <target name = "publish" depends = "jar" >
+
+
+    <ivy:publish resolver = "local" pubrevision = "1.0" overwrite = "true" >
+
+
+    <artifacts pattern = "${build.dir}/lib/[artifact].[ext]" />
+
+
+    </ivy:publish>
+
+
+    </target>
+
+
+    </project>
+
+
+    Navigate to **E: > ivy ** folder and run the ant command.
+
+
+    E:\ivy > ant publish
+
+
+    Ivy will come into action, resolving the dependencies, you will see the following
+    result.
+
+
+    Buildfile: E:\ivy\build.xml
+
+
+    jar:
+
+
+    publish:
+
+
+    [ivy:publish] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy
+
+
+    / ::
+
+
+    [ivy:publish] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14
+
+
+    /lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+
+    BUILD FAILED
+
+
+    E:\ivy\build.xml:28: no organisation provided for ivy publish task: It can eithe
+
+
+    r be set explicitly via the attribute ''organisation'' or via ''ivy.organisation''
+    p
+
+
+    roperty or a prior call to <resolve/>
+
+
+    Total time: 3 seconds
+
+
+    # Resolvers
+
+
+    Resolvers are used to find locations from where a library is to be downloaded.
+    A dependency resolver also handles common tasks. Ivy provides two types of Resolvers.
+
+
+    *   **Composite**  − A resolver which uses other resolvers to do its tasks.
+
+
+    *   **Standard**  − A resolver performs the required tasks.
+
+
+    ## Standard Resolvers
+
+
+    Following table lists down the standard resolvers and their usage.
+
+
+    | Sr.No. | Name (Type) & Description |
+
+
+    | 1 | IvyRep (Standard)Locates Ivy files on ivyrep and artifacts on ibiblio. |
+
+
+    | 2 | IBiblio (Standard)Locates artifacts on ibiblio. |
+
+
+    | 3 | BinTray (Standard)Locates artifacts on bintray. |
+
+
+    | 4 | Packager (Standard)Locates Ivy files and packaging instructions via URLs,
+    creates artifacts using instructions. |
+
+
+    | 5 | FileSystem (Standard)Locates Ivy files and artifacts on local file system.
+    |
+
+
+    | 6 | URL (Standard)Locates Ivy files and artifacts on repositories which can
+    be accessed using URLs. |
+
+
+    | 7 | MirroredURL (Standard)Locates Ivy files and artifacts on repositories which
+    can be accessed using URLs from a mirror list. |'
+  toc: []
+  trans: "\n编译：\n\n```\n[ javac ] E:\\ivy\\build.xml:13: warning: 'includeantruntime'\
+    \ was not set, defaulting to build.sysclasspath=last; set to false for repeatable\
+    \ builds\n[ javac ] Compiling 1 source file to E:\\ivy\\build\\classes\nBUILD\
+    \ SUCCESSFUL\nTotal time: 3 seconds\nYou can verify the compiled class file in\
+    \ project build directory.\n```\n\n# 发布任务 (Publish Task)\n\n`publish` 任务用于将当前产物及其解析后的描述文件发布到指定的仓库。\n\
+    \n让我们按照 **IVY - 解析任务 (IVY - Resolve Task)** 章节中的描述创建 `Tester.java`、`build.xml`\
+    \ 和 `ivy.xml`。\n\n更新 `build.xml` 以使用 `ivy publish` 任务。首先我们将创建一个 jar 文件，然后将其发布。\n\
+    \nbuild.xml\n```xml\n<project name = \"test\" default = \"resolve\" xmlns:ivy\
+    \ = \"antlib:org.apache.ivy.ant\" >\n  <property name = \"build.dir\" value =\
+    \ \"build\" />\n  <target name = \"resolve\" description = \"resolve dependencies\"\
+    \ >\n    <ivy:resolve />\n  </target>\n  <target name = \"jar\" >\n    <jar destfile\
+    \ = \"${build.dir}/lib/application.jar\" basedir = \"${build.dir}/classes\" >\n\
+    \      <manifest>\n        <attribute name = \"Main-Class\" value = \"com.tutorialspoint.Application\"\
+    \ />\n      </manifest>\n    </jar>\n  </target>\n  <target name = \"publish\"\
+    \ depends = \"jar\" >\n    <ivy:resolve />\n    <ivy:publish resolver = \"local\"\
+    \ pubrevision = \"1.0\" overwrite = \"true\" >\n      <artifacts pattern = \"\
+    ${build.dir}/lib/[artifact].[ext]\" />\n    </ivy:publish>\n  </target>\n</project>\n\
+    ```\n\n以下是重要的术语。\n\n- `resolver` — 用于发布的解析器。\n- `pattern` — 用于定定产物的模式。\n\n此发布任务首先构建\
+    \ jar 包，然后解析依赖，设置信息，最后将产物发布到本地仓库。\n\n## 构建项目\n\n既然我们已经准备好了所有文件，只需进入控制台。导航到 **E:\
+    \ > ivy ** 文件夹并运行 `ant` 命令。\n\n```\nE:\\ivy > ant publish\n```\n\nIvy 将开始作用解析依赖，你将看到如下结果。\n\
+    \n```\nE:\\ivy > ant publish\nBuildfile: E:\\ivy\\build.xml\njar:\npublish:\n\
+    [ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy/\
+    \ ::\n[ivy:resolve] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n\
+    [ivy:resolve] :: resolving dependencies :: com.tutorialspoint#test;1.0.0\n[ivy:resolve]\
+    \ confs: [default]\n[ivy:resolve] found commons-lang#commons-lang;2.6 in public\n\
+    [ivy:resolve] found junit#junit;3.8.1 in public\n[ivy:resolve] :: resolution report\
+    \ :: resolve 121ms :: artifacts dl 15ms\n---------------------------------------------------------------------\n\
+    | | modules || artifacts |\n| conf | number| search|dwnlded|evicted|| number|dwnlded|\n\
+    ---------------------------------------------------------------------\n| default\
+    \ | 2 | 2 | 0 | 0 || 4 | 0 |\n---------------------------------------------------------------------\n\
+    [ivy:publish] :: publishing :: com.tutorialspoint#test\n[ivy:publish] published\
+    \ application to C:\\Users\\Acer\\.ivy2\\local\\com.tutorialspoint\\test\\1.0\\\
+    jars\\application.jar\n[ivy:publish] published ivy to C:\\Users\\Acer\\.ivy2\\\
+    local\\com.tutorialspoint\\test\\1.0\\ivys\\ivy.xml\nBUILD SUCCESSFUL\nTotal time:\
+    \ 1 second\n```\n\n你可以在本地仓库中验证发布的 ivy 产物。\n\n# 信息任务 (Info Task)\n\n`info` 任务用于在文件中设置\
+    \ Ivy 特有的信息，并可以在任何依赖解析的情况下使用。\n\n让我们按照 **IVY - 解析任务 (IVY - Resolve Task)** 章节中的描述创建\
+    \ `Tester.java`、`build.xml` 和 `ivy.xml`。\n\n更新 `build.xml` 以使用 `ivy publish` 任务。首先我们将创建一个\
+    \ jar 文件，然后将其发布。在发布任务之前，我们已经使用 `info` 任务设置了所需的 Ivy 信息。\n\nbuild.xml\n```xml\n\
+    <project name = \"test\" default = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\"\
+    \ >\n  <property name = \"build.dir\" value = \"build\" />\n  <target name = \"\
+    resolve\" description = \"resolve dependencies\" >\n    <ivy:resolve />\n  </target>\n\
+    \  <target name = \"jar\" >\n    <jar destfile = \"${build.dir}/lib/application.jar\"\
+    \ basedir = \"${build.dir}/classes\" >\n      <manifest>\n        <attribute name\
+    \ = \"Main-Class\" value = \"com.tutorialspoint.Application\" />\n      </manifest>\n\
+    \    </jar>\n  </target>\n  <target name = \"publish\" depends = \"jar\" >\n \
+    \   <ivy:info file = \"ivy.xml\" />\n    <ivy:publish resolver = \"local\" pubrevision\
+    \ = \"1.0\" overwrite = \"true\" >\n      <artifacts pattern = \"${build.dir}/lib/[artifact].[ext]\"\
+    \ />\n    </ivy:publish>\n  </target>\n</project>\n```\n\n此发布任务首先构建 jar 包，然后解析依赖，设置信息，最后将产物发布到本地仓库。\n"
+- fmt: "\n| ID | Name | Description |\n| :--- | :--- | :--- |\n| 8 | VFS (Standard)\
+    \ | Locates Ivy files and artifacts on repositories which can be accessed using\
+    \ Apache Commons VFS. |\n| 9 | SSH (Standard) | Locates Ivy files and artifacts\
+    \ on repositories which can be accessed using SSH. |\n| 10 | SFTP (Standard) |\
+    \ Locates Ivy files and artifacts on repositories which can be accessed using\
+    \ SFTP. |\n| 11 | Jar (Standard) | Locates Ivy files and artifacts on repositories\
+    \ within a jar. |\n| 12 | Chain (Composite) | Delegates the search to a chain\
+    \ of sub resolvers. |\n| 13 | Dual (Composite) | Delegates the search to a one\
+    \ resolver and artifacts to another. |\n| 14 | OBR (Standard) | Resolves modules\
+    \ as OSGi bundles listed by an OSGi `obr.xml`. |\n| 15 | Eclipse updatesite (Standard)\
+    \ | Resolves modules as OSGi bundles which are hosted on an Eclipse update site.\
+    \ |\n| 16 | OSGi-agg (Composite) | Delegates the search to a chain of sub resolvers\
+    \ supporting OSGi bundles. |\n\nLet's create `Tester.java`, `build.xml` and `ivy.xml`\
+    \ in a new project under `E: > ivy2` folder similar to as described in the `IVY\
+    \ - Resolve Task` chapter. Create a settings folder under `E: > ivy2`. Create\
+    \ the `ivysettings.xml` in the settings folder.\n\n### build.xml\n\n```xml\n<project\
+    \ name = \"test\" default = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\"\
+    >\n  <property name = \"build.dir\" value = \"build\" />\n  <property name = \"\
+    base.dir\" value = \"\" />\n  <target name = \"resolve\" description = \"resolve\
+    \ dependencies\">\n    <ivy:resolve />\n  </target>\n  <target name = \"compile\"\
+    \ depends = \"resolve\" description = \"Compile\">\n    <mkdir dir = \"build/classes\"\
+    \ />\n    <javac srcdir = \"src\" destdir = \"build/classes\">\n      <classpath\
+    \ refid = \"new.classpath\" />\n    </javac>\n  </target>\n</project>\n```\n\n\
+    ### ivy.xml\n\n```xml\n<?xml version = \"1.0\" encoding = \"ISO-8859-1\"?>\n<ivy-module\
+    \ version = \"2.0\" xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\
+    \ xsi:noNamespaceSchemaLocation = \"http://ant.apache.org/ivy/schemas/ivy.xsd\"\
+    >\n  <info organisation = \"org.apache\" module = \"chained-resolvers\" />\n \
+    \ <dependencies>\n    <dependency org = \"commons-lang\" name = \"commons-lang\"\
+    \ rev = \"2.6\" conf = \"default\" />\n    <dependency org = \"com.tutorialspoint\"\
+    \ name = \"test\" rev = \"1.0\" />\n  </dependencies>\n</ivy-module>\n```\n\n\
+    Here we've added two dependencies, one of `commons-lang` library and another as\
+    \ `test` which we published in the `IVY - Publish Task` chapter.\n\n### ivysettings.xml\n\
+    \n```xml\n<ivysettings>\n  <settings defaultResolver = \"multiresolver\" />\n\
+    \  <resolvers>\n    <chain name = \"multiresolver\">\n      <filesystem name =\
+    \ \"libraries\">\n        <artifact pattern = \"${ivy.settings.dir}/repository/[artifact]-[revision].[ext]\"\
+    \ />\n      </filesystem>\n      <ibiblio name = \"ibiblio\" m2compatible = \"\
+    true\" />\n    </chain>\n  </resolvers>\n</ivysettings>\n```\n\nHere we've created\
+    \ a composite resolver using `chain` resolver which has two resolvers, one named\
+    \ `libraries` to locate libraries on local repository and one named `ibiblio`\
+    \ on maven public repository.\n\n## Building the project\n\nAs we've all the files\
+    \ ready, just go to the console. Navigate to the `E: > ivy2` folder and run the\
+    \ `ant` command.\n\n```bash\nE:\\ivy > ant\n```\n\nIvy will come into action,\
+    \ resolving the dependencies, you will see the following result.\n\n```text\n\
+    Buildfile: E:\\ivy2\\build.xml\nresolve:\n[ivy:resolve] :: Apache Ivy 2.5.0 -\
+    \ 20191020104435 :: https://ant.apache.org/ivy\n/ ::\n[ivy:resolve] :: loading\
+    \ settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n\
+    [ivy:resolve] :: resolving dependencies :: org.apache#chained-resolvers;working@Acer-PC\n\
+    [ivy:resolve] confs: [default]\n[ivy:resolve] found commons-lang#commons-lang;2.6\
+    \ in public\n[ivy:resolve] found com.tutorialspoint#test;1.0 in local\n[ivy:resolve]\
+    \ found junit#junit;3.8.1 in public\n[ivy:resolve] downloading C:\\Users\\Acer\\\
+    .ivy2\\local\\com.tutorialspoint\\test\\1.0\\jars\\application.jar ...\n[ivy:resolve]\
+    \ .. (1kB)\n[ivy:resolve] .. (0kB)\n[ivy:resolve] [ SUCCESSFUL ] com.tutorialspoint#test;1.0!application.jar\
+    \ (13ms)\n[ivy:resolve] :: resolution report :: resolve 1085ms :: artifacts dl\
+    \ 22ms\n---------------------------------------------------------------------\n\
+    | | modules || artifacts |\n| conf | number| search|dwnlded|evicted||\n---------------------------------------------------------------------\n\
+    | default | 3 | | 1 ||\n---------------------------------------------------------------------\n\
+    BUILD SUCCESSFUL\nTotal time: 1.1 seconds\n```\n"
+  raw: '| 8 | VFS (Standard)Locates Ivy files and artifacts on repositories which
+    can be accessed using Apache Commons VFS. |
+
+
+    | 9 | SSH (Standard)Locates Ivy files and artifacts on repositories which can
+    be accessed using SSH. |
+
+
+    | 10 | SFTP (Standard)Locates Ivy files and artifacts on repositories which can
+    be accessed using SFTP. |
+
+
+    | 11 | Jar (Standard)Locates Ivy files and artifacts on repositories within a
+    jar. |
+
+
+    | 12 | Chain (Composite)Delegates the search to a chain of sub resolvers. |
+
+
+    | 13 | Dual (Composite)Delegates the search to a one resolver and artifacts to
+    another. |
+
+
+    | 14 | OBR (Standard)Resolve modules as OSGi bundles listed by an OSGi obr.xml.
+    |
+
+
+    | 15 | Eclipse updatesite (Standard)Resolve modules as OSGi bundles which are
+    hosted on an Eclipse update site. |
+
+
+    | 16 | OSGi-agg (Composite)Delegates the search to a chain of sub resolvers supporting
+    OSGi bundles. |
+
+
+    Let''s create Tester.java, build.xml and ivy.xml in a new project under **E: >
+    ivy2**  folder similar to as described in **IVY - Resolve Task**  chapter. Create
+    a settings folder under **E: > ivy2** . Create the ivysettings.xml in the settings
+    folder.
+
+
+    build.xml
+
+
+    <project name = "test" default = "resolve" xmlns:ivy = "antlib:org.apache.ivy.ant"
+    >
+
+
+    <property name = "build.dir" value = "build" />
+
+
+    <property name = "base.dir" value = "" />
+
+
+    <target name = "resolve" description = "resolve dependencies" >
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    <target name = "compile" depends = "resolve" description = "Compile" >
+
+
+    <mkdir dir = "build/classes" />
+
+
+    <javac srcdir = "src" destdir = "build/classes" >
+
+
+    <classpath refid = "new.classpath" />
+
+
+    </javac>
+
+
+    </target>
+
+
+    </project>
+
+
+    ivy.xml
+
+
+    <? xml version = "1.0" encoding = "ISO-8859-1" ?>
+
+
+    <ivy-module version = "2.0" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+
+
+    xsi:noNamespaceSchemaLocation = "http://ant.apache.org/ivy/schemas/ivy.xsd" >
+
+
+    <info organisation = "org.apache" module = "chained-resolvers" />
+
+
+    <dependencies>
+
+
+    <dependency org = "commons-lang" name = "commons-lang" rev = "2.6" conf = "default"
+    />
+
+
+    <dependency org = "com.tutorialspoint" name = "test" rev = "1.0" />
+
+
+    </dependencies>
+
+
+    </ivy-module>
+
+
+    Here we''ve added two dependencies,one of commons-lang library and another as
+    test which we published in **IVY - Publish Task**  chapter.
+
+
+    ivysettings.xml
+
+
+    <ivysettings>
+
+
+    <settings defaultResolver = "multiresolver" />
+
+
+    <resolvers>
+
+
+    <chain name = "multiresolver" >
+
+
+    <filesystem name = "libraries" >
+
+
+    <artifact pattern = "${ivy.settings.dir}/repository/[artifact]-[revision].[ext]"
+    />
+
+
+    </filesystem>
+
+
+    <ibiblio name = "ibiblio" m2compatible = "true" />
+
+
+    </chain>
+
+
+    </resolvers>
+
+
+    </ivysettings>
+
+
+    Here we''ve added created a composite resolver using chain resolver which has
+    two resolver, one named libraries to locate libaries on local repository and one
+    named ibiblio on maven public repository.
+
+
+    ## Building the project
+
+
+    As we''ve all the files ready. Just go the console. Navigate to **E: > ivy2 **
+    folder and run the ant command.
+
+
+    E:\ivy > ant
+
+
+    Ivy will come into action, resolving the dependencies, you will see the following
+    result.
+
+
+    Buildfile: E:\ivy2\build.xml
+
+
+    resolve:
+
+
+    [ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 :: https://ant.apache.org/ivy
+
+
+    / ::
+
+
+    [ivy:resolve] :: loading settings :: url = jar:file:/E:/Apache/apache-ant-1.9.14
+
+
+    /lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+
+
+    [ivy:resolve] :: resolving dependencies :: org.apache#chained-resolvers;working@
+
+
+    Acer-PC
+
+
+    [ivy:resolve] confs: [default]
+
+
+    [ivy:resolve] found commons-lang#commons-lang;2.6 in public
+
+
+    [ivy:resolve] found com.tutorialspoint#test;1.0 in local
+
+
+    [ivy:resolve] found junit#junit;3.8.1 in public
+
+
+    [ivy:resolve] downloading C:\Users\Acer\.ivy2\local\com.tutorialspoint\test\1.0\
+
+
+    jars\application.jar ...
+
+
+    [ivy:resolve] .. (1kB)
+
+
+    [ivy:resolve] .. (0kB)
+
+
+    [ivy:resolve] [ SUCCESSFUL ] com.tutorialspoint#test;1.0!application.jar (13ms)
+
+
+    [ivy:resolve] :: resolution report :: resolve 1085ms :: artifacts dl 22ms
+
+
+    ---------------------------------------------------------------------
+
+
+    | | modules || artifacts |
+
+
+    | conf | number| search|dwnlded|evicted|| number|dwnlded|
+
+
+    ---------------------------------------------------------------------
+
+
+    | default | 3 | 3 | 1 | 0 || 5 | 1 |
+
+
+    ---------------------------------------------------------------------
+
+
+    BUILD SUCCESSFUL
+
+
+    Total time: 9 seconds
+
+
+    In the logs you can verify that we have used both local and public repository
+    resolvers.
+
+
+    # Local Repository
+
+
+    A local repository is a private repository of a user. It is very useful in case
+    a user is using a library whose version has been changed on other places and have
+    breaking changes. In case of local repository, ivy will use the library present
+    in the local if found and will not look into public or shared repositories.
+
+
+    ## Default Location
+
+
+    By default, local repository is present in ${ivy.default.ivy.user.dir}/local folder.
+    If you want to change it, the use the ivy.local.default.root variable in ant file.
+
+
+    build.xml
+
+
+    <target name = "resolve" >
+
+
+    <property name = "ivy.local.default.root" value = "/opt/ivy/repository/local"
+    />
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    Other properties like ivy pattern and artifact pattern can also be customized
+    as follows −
+
+
+    build.xml
+
+
+    <target name = "resolve" >
+
+
+    <property name = "ivy.local.default.root" value = "/opt/ivy/repository/local"
+    />
+
+
+    <property name = "ivy.local.default.ivy.pattern" value = "[module]/[revision]/ivy.xml"
+    />
+
+
+    <property name = "ivy.local.default.artifact.pattern" value = "[module]/[revision]/[artifact].[ext]"
+    />
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    ## Overriding ivysettings defaults
+
+
+    By default ivy has its configurations in ivysettings.xml present in ivy.jar.
+
+
+    ivysettings.xml
+
+
+    <ivysettings>
+
+
+    <settings defaultResolver = "default" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-public.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+
+    </ivysettings>
+
+
+    To override local repository setting, update the contents of ivysettings-local.xml.
+
+
+    ivysettings-local.xml
+
+
+    <ivysettings>
+
+
+    <property name = "ivy.local.default.root" value = "${ivy.default.ivy.user.dir}/local"
+    override = "false" />
+
+
+    <property name = "ivy.local.default.ivy.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+
+    <property name = "ivy.local.default.artifact.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+
+    <resolvers>
+
+
+    <filesystem name = "local" >
+
+
+    <ivy pattern = "${ivy.local.default.root}/${ivy.local.default.ivy.pattern}" />
+
+
+    <artifact pattern = "${ivy.local.default.root}/${ivy.local.default.artifact.pattern}"
+    />
+
+
+    </filesystem>
+
+
+    </resolvers>
+
+
+    </ivysettings>
+
+
+    # Shared Repository
+
+
+    A shared repository is a team level shared repository of a team. It is very common
+    to be overridden in organizations.
+
+
+    ## Default Location
+
+
+    By default, shared repository is present in ${ivy.default.ivy.user.dir}/shared
+    folder. If you want to change it, the use the ivy.shared.default.root variable
+    in ant file.
+
+
+    build.xml
+
+
+    <target name = "resolve" >
+
+
+    <property name = "ivy.shared.default.root" value = "/opt/ivy/repository/shared"
+    />
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    Other properties like ivy pattern and artifact pattern can also be customized
+    as follows −
+
+
+    build.xml
+
+
+    <target name = "resolve" >
+
+
+    <property name = "ivy.shared.default.root" value = "/opt/ivy/repository/shared"
+    />
+
+
+    <property name = "ivy.shared.default.ivy.pattern" value = "[organisation]/[module]/[revision]/ivy.xml"
+    />
+
+
+    <property name = "ivy.shared.default.artifact.pattern" value = "[organisation]/[module]/[revision]/[artifact].[ext]"
+    />
+
+
+    <ivy:resolve />
+
+
+    </target>
+
+
+    ## Overriding ivysettings defaults
+
+
+    By default ivy has its configurations in ivysettings.xml present in ivy.jar.
+
+
+    ivysettings.xml
+
+
+    <ivysettings>'
+  toc: []
+  trans: "\n\n| ID | Name | Description |\n| :--- | :--- | :--- |\n| 8 | VFS (Standard)\
+    \ | 在可以使用 Apache Commons VFS 访问的仓库定位 Ivy 文件和产物。 |\n| 9 | SSH (Standard) | 在可以使用\
+    \ SSH 访问的仓库定位 Ivy 文件和产物。 |\n| 10 | SFTP (Standard) | 在可以使用 SFTP 访问的仓库定位 Ivy 文件和产物。\
+    \ |\n| 11 | Jar (Standard) | 在 jar 包内的仓库定位 Ivy 文件和产物。 |\n| 12 | Chain (Composite)\
+    \ | 将搜索委托给一个子解析器链。 |\n| 13 | Dual (Composite) | 将搜索委托给一个解析器，将产物委托给另一个。 |\n| 14\
+    \ | OBR (Standard) | 将 OSGi `obr.xml` 列出的模块解析为 OSGi 束包。 |\n| 15 | Eclipse updatesite\
+    \ (Standard) | 将托管在 Eclipse 更新站点上的模块解析为 OSGi 束包。 |\n| 16 | OSGi-agg (Composite)\
+    \ | 将搜索委托给一个支持 OSGi 束包的子解析器链。 |\n\n让我们在 `E: > ivy2` 文件夹下的新项目中创建 `Tester.java`、`build.xml`\
+    \ 和 `ivy.xml`，类似于 `IVY - Resolve Task` 章节中描述的。在 `E: > ivy2` 下创建一个 `settings` 文件夹。在\
+    \ settings 文件夹中创建 `ivysettings.xml`。\n\n### build.xml\n\n```xml\n<project name\
+    \ = \"test\" default = \"resolve\" xmlns:ivy = \"antlib:org.apache.ivy.ant\">\n\
+    \  <property name = \"build.dir\" value = \"build\" />\n  <property name = \"\
+    base.dir\" value = \"\" />\n  <target name = \"resolve\" description = \"resolve\
+    \ dependencies\">\n    <ivy:resolve />\n  </target>\n  <target name = \"compile\"\
+    \ depends = \"resolve\" description = \"Compile\">\n    <mkdir dir = \"build/classes\"\
+    \ />\n    <javac srcdir = \"src\" destdir = \"build/classes\">\n      <classpath\
+    \ refid = \"new.classpath\" />\n    </javac>\n  </target>\n</project>\n```\n\n\
+    ### ivy.xml\n\n```xml\n<?xml version = \"1.0\" encoding = \"ISO-8859-1\"?>\n<ivy-module\
+    \ version = \"2.0\" xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\"\
+    \ xsi:noNamespaceSchemaLocation = \"http://ant.apache.org/ivy/schemas/ivy.xsd\"\
+    >\n  <info organisation = \"org.apache\" module = \"chained-resolvers\" />\n \
+    \ <dependencies>\n    <dependency org = \"commons-lang\" name = \"commons-lang\"\
+    \ rev = \"2.6\" conf = \"default\" />\n    <dependency org = \"com.tutorialspoint\"\
+    \ name = \"test\" rev = \"1.0\" />\n  </dependencies>\n</ivy-module>\n```\n\n\
+    在这里我们添加了两个依赖：一个是 `commons-lang` 库，另一个是在 `IVY - Publish Task` 章节中发布的 `test`。\n\n\
+    ### ivysettings.xml\n\n```xml\n<ivysettings>\n  <settings defaultResolver = \"\
+    multiresolver\" />\n  <resolvers>\n    <chain name = \"multiresolver\">\n    \
+    \  <filesystem name = \"libraries\">\n        <artifact pattern = \"${ivy.settings.dir}/repository/[artifact]-[revision].[ext]\"\
+    \ />\n      </filesystem>\n      <ibiblio name = \"ibiblio\" m2compatible = \"\
+    true\" />\n    </chain>\n  </resolvers>\n</ivysettings>\n```\n\n在这里我们使用 `chain`\
+    \ 解析器创建了一个复合解析器，它包含两个解析器：一个名为 `libraries`，用于在本地仓库定位库；另一个名为 `ibiblio`，用于在 Maven\
+    \ 公共仓库定位。\n\n## 构建项目\n\n既然所有文件都已就绪，只需进入控制。导航到 `E: > ivy2` 文件夹并运行 `ant` 命令。\n\n\
+    ```bash\nE:\\ivy > ant\n```\n\nIvy 将开始解析依赖，你将看到以下结果。\n\n```text\nBuildfile: E:\\\
+    ivy2\\build.xml\nresolve:\n[ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435\
+    \ :: https://ant.apache.org/ivy\n/ ::\n[ivy:resolve] :: loading settings :: url\
+    \ = jar:file:/E:/Apache/apache-ant-1.9.14/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml\n\
+    [ivy:resolve] :: resolving dependencies :: org.apache#chained-resolvers;working@Acer-PC\n\
+    [ivy:resolve] confs: [default]\n[ivy:resolve] found commons-lang#commons-lang;2.6\
+    \ in public\n[ivy:resolve] found com.tutorialspoint#test;1.0 in local\n[ivy:resolve]\
+    \ found junit#junit;3.8.1 in public\n[ivy:resolve] downloading C:\\Users\\Acer\\\
+    .ivy2\\local\\com.tutorialspoint\\test\\1.0\\jars\\application.jar ...\n[ivy:resolve]\
+    \ .. (1kB)\n[ivy:resolve] .. (0kB)\n[ivy:resolve] [ SUCCESSFUL ] com.tutorialspoint#test;1.0!application.jar\
+    \ (13ms)\n[ivy:resolve] :: resolution report :: resolve 1085ms :: artifacts dl\
+    \ 22ms\n---------------------------------------------------------------------\n\
+    | | modules || artifacts |\n| conf | number|search|dwnlded|evicted||\n---------------------------------------------------------------------\n\
+    | default | 3 | | 1 ||\n---------------------------------------------------------------------\n\
+    BUILD SUCCESSFUL\nTotal time: 1.1 seconds\n```\n\n"
+- fmt: '
+
+    ```xml
+
+    <settings defaultResolver = "default" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-public.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+    </ivysettings>
+
+    ```
+
+
+    To override shared repository setting, update the contents of `ivysettings-shared.xml`.
+
+
+    ### ivysettings-shared.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <property name = "ivy.shared.default.root" value = "${ivy.default.ivy.user.dir}/shared"
+    override = "false" />
+
+    <property name = "ivy.shared.default.ivy.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+    <property name = "ivy.shared.default.artifact.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+    <resolvers>
+
+    <filesystem name = "shared" >
+
+    <ivy pattern = "${ivy.shared.default.root}/${ivy.shared.default.ivy.pattern}"
+    />
+
+    <artifact pattern = "${ivy.shared.default.root}/${ivy.shared.default.artifact.pattern}"
+    />
+
+    </filesystem>
+
+    </resolvers>
+
+    </ivysettings>
+
+    ```
+
+
+    # Public repository
+
+
+    A public repository is a repository accessible using internet and have third party
+    modules. By default `ibiblio` in m2 compatible mode is the public repository.
+    It is also referred as maven 2 public repository.
+
+
+    ## Overriding ivysettings defaults
+
+
+    By default ivy has its configurations in `ivysettings.xml` present in `ivy.jar`.
+
+
+    ### ivysettings.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <settings defaultResolver = "default" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-public.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+    </ivysettings>
+
+    ```
+
+
+    To override public repository setting, update the contents of `ivysettings-public.xml`
+    or create the `ivysettings.xml` in setting folder of your project.
+
+
+    ### ivysettings.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <settings defaultResolver = "default" />
+
+    <include url = "http://customserver/ivy/ivysettings-public.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+    </ivysettings>
+
+    ```
+
+
+    Update the default `ivysetting-public.xml` contents.
+
+
+    ### Original - ivysetting-public.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <resolvers>
+
+    <ibiblio name = "public" m2compatible = "true" />
+
+    </resolvers>
+
+    </ivysettings>
+
+    ```
+
+
+    ### Updated - ivysetting-public.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <resolvers>
+
+    <filesystem name = "public" >
+
+    <ivy pattern = "/path/to/my/public/rep/[organisation]/[module]/ivy-[revision].xml"
+    />
+
+    <artifact pattern = "/path/to/my/public/rep/[organisation]/[module]/[artifact]-[revision].[ext]"
+    />
+
+    </filesystem>
+
+    </resolvers>
+
+    </ivysettings>
+
+    ```
+
+    '
+  raw: '<settings defaultResolver = "default" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-public.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+
+    </ivysettings>
+
+
+    To override shared repository setting, update the contents of ivysettings-shared.xml.
+
+
+    ivysettings-shared.xml
+
+
+    <ivysettings>
+
+
+    <property name = "ivy.shared.default.root" value = "${ivy.default.ivy.user.dir}/shared"
+    override = "false" />
+
+
+    <property name = "ivy.shared.default.ivy.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+
+    <property name = "ivy.shared.default.artifact.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+
+    <resolvers>
+
+
+    <filesystem name = "shared" >
+
+
+    <ivy pattern = "${ivy.shared.default.root}/${ivy.shared.default.ivy.pattern}"
+    />
+
+
+    <artifact pattern = "${ivy.shared.default.root}/${ivy.shared.default.artifact.pattern}"
+    />
+
+
+    </filesystem>
+
+
+    </resolvers>
+
+
+    </ivysettings>
+
+
+    # Public repository
+
+
+    A public repository is a repository accessible using internet and have third party
+    modules. By default ibiblio in m2 compatible mode is the public repository. It
+    is also referred as maven 2 public repository.
+
+
+    ## Overriding ivysettings defaults
+
+
+    By default ivy has its configurations in ivysettings.xml present in ivy.jar.
+
+
+    ivysettings.xml
+
+
+    <ivysettings>
+
+
+    <settings defaultResolver = "default" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-public.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+
+    </ivysettings>
+
+
+    To override public repository setting, update the contents of ivysettings-public.xml
+    or create the ivysettings.xml in setting folder of your project.
+
+
+    ivysettings.xml
+
+
+    <ivysettings>
+
+
+    <settings defaultResolver = "default" />
+
+
+    <include url = "http://customserver/ivy/ivysettings-public.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+
+    </ivysettings>
+
+
+    Update the default ivysetting-public.xml contents.
+
+
+    Original - ivysetting-public.xml
+
+
+    <ivysettings>
+
+
+    <resolvers>
+
+
+    <ibiblio name = "public" m2compatible = "true" />
+
+
+    </resolvers>
+
+
+    </ivysettings>
+
+
+    Updated - ivysetting-public.xml
+
+
+    <ivysettings>
+
+
+    <resolvers>
+
+
+    <filesystem name = "public" >
+
+
+    <ivy pattern = "/path/to/my/public/rep/[organisation]/[module]/ivy-[revision].xml"
+    />
+
+
+    <artifact pattern = "/path/to/my/public/rep/[organisation]/[module]/[artifact]-[revision].[ext]"
+    />
+
+
+    </filesystem>
+
+
+    </resolvers>
+
+
+    </ivysettings>'
+  toc: []
+  trans: '
+
+
+    ```xml
+
+    <settings defaultResolver = "default" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-public.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+    </ivysettings>
+
+    ```
+
+
+    要覆盖共享存储库设置，请更新 `ivysettings-shared.xml` 的内容。
+
+
+    ### ivysettings-shared.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <property name = "ivy.shared.default.root" value = "${ivy.default.ivy.user.dir}/shared"
+    override = "false" />
+
+    <property name = "ivy.shared.default.ivy.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+    <property name = "ivy.shared.default.artifact.pattern" value = "[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"
+    override = "false" />
+
+    <resolvers>
+
+    <filesystem name = "shared" >
+
+    <ivy pattern = "${ivy.shared.default.root}/${ivy.shared.default.ivy.pattern}"
+    />
+
+    <artifact pattern = "${ivy.shared.default.root}/${ivy.shared.default.artifact.pattern}"
+    />
+
+    </filesystem>
+
+    </resolvers>
+
+    </ivysettings>
+
+    ```
+
+
+    # 公共存储库
+
+
+    公共存储库是指可以通过互联网访问并包含第三方模块的存储库。默认情况下，m2 兼容模式下的 `ibiblio` 是公共存储库。它也被 maven 2 公共存储库。
+
+
+    ## 覆盖 ivysettings 默认设置
+
+
+    默认情况下，Ivy 在 `ivy.jar` 中的 `ivysettings.xml` 中包含配置。
+
+
+    ### ivysettings.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <settings defaultResolver = "default" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-public.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+    </ivysettings>
+
+    ```
+
+
+    要覆盖公共存储库设置，请更新 `ivysettings-public.xml` 的内容，或者在项目的设置文件夹中创建 `ivysettings.xml`。
+
+
+    ### ivysettings.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <settings defaultResolver = "default" />
+
+    <include url = "http://customserver/ivy/ivysettings-public.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-shared.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-local.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-main-chain.xml" />
+
+    <include url = "${ivy.default.settings.dir}/ivysettings-default-chain.xml" />
+
+    </ivysettings>
+
+    ```
+
+
+    更新默认的 `ivysetting-public.xml` 内容。
+
+
+    ### 原始 - ivysetting-public.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <resolvers>
+
+    <ibiblio name = "public" m2compatible = "true" />
+
+    </resolvers>
+
+    </ivysettings>
+
+    ```
+
+
+    ### 更新 - ivysetting-public.xml
+
+    ```xml
+
+    <ivysettings>
+
+    <resolvers>
+
+    <filesystem name = "public" >
+
+    <ivy pattern = "/path/to/my/public/rep/[organisation]/[module]/ivy-[revision].xml"
+    />
+
+    <artifact pattern = "/path/to/my/public/rep/[organisation]/[module]/[artifact]-[revision].[ext]"
+    />
+
+    </filesystem>
+
+    </resolvers>
+
+    </ivysettings>
+
+    ```
+
+
+    '

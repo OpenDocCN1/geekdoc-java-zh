@@ -1,0 +1,6 @@
+name: Lambda Expressions in Java 8
+name_cn: Java 8 Lambda 表达式
+slug: lambda-expressions-in-java-8
+toc:
+- - '##'
+  - 带有推断泛型的单个参数

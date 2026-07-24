@@ -1,0 +1,250 @@
+<p><img src="images/00001.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 745 1186" preserveaspectratio="none">
+<image width="745" height="1186" xlink:href="images/00001.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3">Lambda Expressions in Java 8</span></p>
+<p><span class="calibre4"> </span></p>
+<p><span class="calibre5">VLIGHT</span></p>
+<div id="part0000_split_000.html_calibre_pb_0" class="calibre6">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div class="calibre1">
+<p><br />
+<span class="calibre4">Table Of Contents</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span id="part0000_split_001.html_toc"></span><a
+href="#part0000_split_002.html__Toc470969056"><span
+class="calibre10">Why Lambdas</span></a></p>
+<p><a href="#part0000_split_003.html__Toc470969057"><span
+class="calibre10">Standard syntax</span></a></p>
+<p><a href="#part0000_split_004.html__Toc470969058"><span
+class="calibre10">Parameter type can be inferred</span></a></p>
+<p><a href="#part0000_split_005.html__Toc470969059"><span
+class="calibre10">Multiple lines of code</span></a></p>
+<p><a href="#part0000_split_006.html__Toc470969060"><span
+class="calibre10">Single parameter with inferred types</span></a></p>
+<p><a href="#part0000_split_007.html__Toc470969061"><span
+class="calibre10">Method references</span></a></p>
+</div>
+<p><span id="part0000_split_002.html"></span></p>
+<section id="part0000_split_002.html_calibre_pb_2"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_002.html__Toc470969056" class="calibre14"><span
+class="calibre15">Why Lambdas</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">In Java 8, a </span><span
+class="calibre16">Lambda Expression</span><span class="calibre9"> is
+nothing but </span><span class="calibre17">a block of code</span><span
+class="calibre9"> which </span><span class="calibre18">can be passed
+around to execute</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">You need to create an object then pass the
+object around if you want a block of code to be executed</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre19">Lambda Expressions</span><span
+class="calibre9"> are very </span><span
+class="calibre17">powerful</span><span class="calibre9"> and
+</span><span class="calibre17">compelling</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">A </span><span class="calibre19">Lambda
+Expression</span><span class="calibre9"> can be declared in some ways as
+follows:</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Standard
+syntax</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Parameter
+type can be inferred</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Multiple
+lines of code</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Single
+parameter with inferred types</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Method
+references</span></p>
+</section>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_5"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_003.html__Toc470969057" class="calibre14"><span
+class="calibre15">Standard syntax</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">The standard syntax of a lambda expression has
+the following blocks:</span></p>
+<p><span class="calibre9">+ </span><span class="calibre17">A
+comma-separated list of formal parameters</span><span class="calibre9">
+which are enclosed in the parenthesis</span></p>
+<p><span class="calibre9">+ </span><span class="calibre17">The
+arrow</span><span class="calibre9"> (-&gt;)</span></p>
+<p><span class="calibre9">+ </span><span class="calibre17">A
+body</span><span class="calibre9"> which consists of a single expression
+or a block of code</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Sample Code</span></p>
+<p><span class="calibre21">String</span><span class="calibre9">[]
+friendList = {"Tuan", "Nam", "Lan"};</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre21">Arrays</span><span
+class="calibre9">.</span><span class="calibre22">sort</span><span
+class="calibre9">(friendList, </span></p>
+<p><span class="calibre9">(String friend01, String friend02)
+-&gt;</span></p>
+<p><span class="calibre9">    </span><span
+class="calibre21">Integer</span><span class="calibre9">.</span><span
+class="calibre22">compare</span><span
+class="calibre9">(friend01.</span><span
+class="calibre22">length</span><span class="calibre9">(),
+friend02.</span><span class="calibre22">length</span><span
+class="calibre9">()));</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">System.out.print(Arrays.</span><span
+class="calibre22">toString</span><span
+class="calibre9">(friendList));</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Output</span></p>
+<p><span class="calibre18">[Lan, Nam, Tuan]</span></p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_8"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_004.html__Toc470969058" class="calibre14"><span
+class="calibre15">Parameter type can be inferred</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre17">The parameter types can be
+omitted</span><span class="calibre9"> if they can be inferred from the
+context. This makes your code more cleaner</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Sample Code</span></p>
+<p><span class="calibre21">String</span><span class="calibre9">[]
+friendList = {"Tuan", "Nam", "Lan"};</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre21">Arrays</span><span
+class="calibre9">.</span><span class="calibre22">sort</span><span
+class="calibre9">(friendList, </span></p>
+<p><span class="calibre9">(friend01, friend02) -&gt;</span></p>
+<p><span class="calibre9">    </span><span
+class="calibre21">Integer</span><span class="calibre9">.</span><span
+class="calibre22">compare</span><span
+class="calibre9">(friend01.</span><span
+class="calibre22">length</span><span class="calibre9">(),
+friend02.</span><span class="calibre22">length</span><span
+class="calibre9">()));</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">System.out.print(Arrays.</span><span
+class="calibre22">toString</span><span
+class="calibre9">(friendList));</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Output</span></p>
+<p><span class="calibre18">[Lan, Nam, Tuan]</span></p>
+<p><span class="calibre9"> </span></p>
+</section>
+<p><span id="part0000_split_005.html"></span></p>
+<section id="part0000_split_005.html_calibre_pb_11"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_005.html__Toc470969059" class="calibre14"><span
+class="calibre15">Multiple lines of code</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">If your code cannot be written in 1 line, it
+can be enclosed in {} and your code now should explicitly contain a
+return statement</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Sample Code</span></p>
+<p><span class="calibre21">String</span><span class="calibre9">[]
+friendList = {"Tuan", "Nam", "Lan"};</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre21">Arrays</span><span
+class="calibre9">.</span><span class="calibre22">sort</span><span
+class="calibre9">(friendList, </span></p>
+<p><span class="calibre9">(</span><span
+class="calibre21">String</span><span class="calibre9"> friend01,
+</span><span class="calibre21">String</span><span class="calibre9">
+friend02) -&gt;</span></p>
+<p><span class="calibre24">{</span></p>
+<p><span class="calibre24">   if (friend01.length() &gt;
+friend02.length())</span></p>
+<p><span class="calibre24">      return -1;</span></p>
+<p><span class="calibre24">   else</span></p>
+<p><span class="calibre24">      return 0;</span></p>
+<p><span class="calibre24">}</span><span class="calibre9">);</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">System.out.print(Arrays.</span><span
+class="calibre22">toString</span><span
+class="calibre9">(friendList));</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Output</span></p>
+<p><span class="calibre18">[Lan, Nam, Tuan]</span></p>
+<p><span class="calibre9"> </span></p>
+</section>
+<p><span id="part0000_split_006.html"></span></p>
+<section id="part0000_split_006.html_calibre_pb_14"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_006.html__Toc470969060" class="calibre14"><span
+class="calibre15">Single parameter with inferred
+types</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">You can </span><span class="calibre17">omit
+the parenthesis for a single parameter</span><span class="calibre9">
+when its type can be inferred</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Sample Code</span></p>
+<p><span class="calibre21">String</span><span class="calibre9">[]
+friendList = {"Tuan", "Nam", "Lan"};</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre21">Stream</span><span
+class="calibre9">&lt;</span><span class="calibre18">String</span><span
+class="calibre9">&gt; friendStream = </span><span
+class="calibre21">Stream</span><span class="calibre9">.</span><span
+class="calibre22">of</span><span
+class="calibre9">(friendList);</span></p>
+<p><span class="calibre9">stream.</span><span
+class="calibre22">forEach</span><span class="calibre9">(friend -&gt;
+System.out.println(friend));</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Output</span></p>
+<p><span class="calibre18">Tuan</span></p>
+<p><span class="calibre18">Nam</span></p>
+<p><span class="calibre18">Lan</span></p>
+</section>
+<p><span id="part0000_split_007.html"></span></p>
+<section id="part0000_split_007.html_calibre_pb_17"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_007.html__Toc470969061" class="calibre14"><span
+class="calibre15">Method references</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">You can reduce code using the method reference
+(</span><span class="calibre25">::</span><span
+class="calibre9">)</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Sample Code</span></p>
+<p><span class="calibre21">String</span><span class="calibre9">[]
+friendList = {"Tuan", "Nam", "Lan"};</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre21">Stream</span><span
+class="calibre9">&lt;</span><span class="calibre18">String</span><span
+class="calibre9">&gt; friendStream = </span><span
+class="calibre21">Stream</span><span class="calibre9">.</span><span
+class="calibre22">of</span><span
+class="calibre9">(friendList);</span></p>
+<p><span class="calibre9">stream.</span><span
+class="calibre22">forEach</span><span
+class="calibre9">(System.out</span><span
+class="calibre25">::</span><span class="calibre19">println</span><span
+class="calibre9">);</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Output</span></p>
+<p><span class="calibre18">Tuan</span></p>
+<p><span class="calibre18">Nam</span></p>
+<p><span class="calibre18">Lan</span></p>
+<p><span class="calibre9"> </span></p>
+</section>

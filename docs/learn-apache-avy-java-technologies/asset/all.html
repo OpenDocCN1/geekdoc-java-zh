@@ -1,0 +1,1898 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 526 751" preserveaspectratio="none">
+<image width="526" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="text00000.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>Copyright © All rights reserved</p>
+<p> </p>
+<p>No part of this book may be reproduced, or stored in a retrieval
+system, or transmitted in any form or by any means, electronic,
+mechanical, photocopying, recording, or otherwise, without express
+written permission of the publisher.</p>
+<p> </p>
+<p><span id="text00001.html"></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p>I would like to dedicate the book to the students who will be using
+it. I wish you future career success and hope you never stop
+learning.</p>
+<p> </p>
+<p><span id="text00002.html"></span></p>
+<p>TABLE OF CONTENT</p>
+<p> </p>
+<p><span id="text00002.html_id_toc" class="text_"></span> <a
+href="#text00003.html_id_Toc68076075" class="calibre1"><span
+class="text_1">Overview</span></a></p>
+<p><a href="#text00004.html_id_Toc68076076" class="calibre1"><span
+class="text_2">Environment Setup</span></a></p>
+<p><a href="#text00005.html_id_Toc68076077" class="calibre1"><span
+class="text_2">Terminology</span></a></p>
+<p><a href="#text00006.html_id_Toc68076078" class="calibre1"><span
+class="text_2">Settings File</span></a></p>
+<p><a href="#text00007.html_id_Toc68076079" class="calibre1"><span
+class="text_2">Eclipse Ivy Plugin</span></a></p>
+<p><a href="#text00008.html_id_Toc68076080" class="calibre1"><span
+class="text_2">Resolve Task</span></a></p>
+<p><a href="#text00009.html_id_Toc68076081" class="calibre1"><span
+class="text_2">Install Task</span></a></p>
+<p><a href="#text00010.html_id_Toc68076082" class="calibre1"><span
+class="text_2">Retrieve Task</span></a></p>
+<p><a href="#text00011.html_id_Toc68076083" class="calibre1"><span
+class="text_2">Cachepath Task</span></a></p>
+<p><a href="#text00012.html_id_Toc68076084" class="calibre1"><span
+class="text_2">Publish Task</span></a></p>
+<p><a href="#text00013.html_id_Toc68076085" class="calibre1"><span
+class="text_2">Info Task</span></a></p>
+<p><a href="#text00014.html_id_Toc68076086" class="calibre1"><span
+class="text_2">Resolvers</span></a></p>
+<p><a href="#text00015.html_id_Toc68076087" class="calibre1"><span
+class="text_2">Local Repository</span></a></p>
+<p><a href="#text00016.html_id_Toc68076088" class="calibre1"><span
+class="text_2">Shared Repository</span></a></p>
+<p><a href="#text00017.html_id_Toc68076089" class="calibre1"><span
+class="text_2">Public repository</span></a></p>
+<h1 class="block_7"><span class="text_"><br />
+</span></h1>
+<p><span id="text00003.html"></span></p>
+<h1 class="block_7"><span id="text00003.html_id_Toc68076075"
+class="text_3">Overview</span></h1>
+<p>Apache Ivy is a very popular and very powerful dependency management
+tool used to manage dependencies in ANT based projects in the same
+fashion, how Apache Maven manages dependencies.</p>
+<p>Apache Ivy is Apache ANT based, follows same design principles, is a
+subproject of Apache ANT and is actively managed and supported by Apache
+ANT Community.</p>
+<h2 class="block_9">Features</h2>
+<p>Following are the important features of Apache Ivy.</p>
+<ul>
+<li><strong>ANT Based</strong>  − Apache Ivy provides a dependencies
+management capability to ANT based projects. It is very simple to use as
+well.</li>
+<li><strong>Dependency Reports</strong>  − Apache Ivy provides options
+to print dependencies graph in html as well as in reports format.</li>
+<li><strong>Non-intrusive</strong>  − Apache Ivy don't impose any
+restrictions as to be part of distribution. Even build files are not
+dependent on Apache Ivy.</li>
+<li><strong>Highly Flexible</strong>  − Apache Ivy provides lots of
+default configurations and can be configured as per the requirement very
+easily.</li>
+<li><strong>Extendible</strong>  − Apache Ivy can be extended easily.
+You can define your own repository, conflict resolvers and latest
+strategy.</li>
+<li><strong>Performance</strong>  − Apache Ivy is built towards
+performance. It keeps a cache of library already downloaded. Looks into
+local repositories first to resolve dependencies than look into other
+repositories.</li>
+<li><strong>Transitive Dependencies</strong>  − Apache Ivy automatically
+manages transitive dependencies if one project or library depends upon
+other library which may need another library.</li>
+<li><strong>Maven Repository</strong>  − Apache Ivy follows conventions
+similar to Maven repository conventions. Apache Ivy can resolve
+dependencies using maven global repository.</li>
+<li><strong>Maven 2 POMs</strong>  − Apache Ivy can read Maven 2 POMs as
+module descriptors, can set ivy as module descriptor. Thus it makes easy
+to migrate existing projects to IVY managed projects.</li>
+<li><strong>Publishing</strong>  − Apache Ivy provides supports to
+publish your project and simplifies the multi-project environment
+deployment process.</li>
+<li><strong>Free to Use</strong>  − Apache Ivy is open source and is
+free to use.</li>
+<li><strong>Documentation</strong>  − Apache Ivy has a very detailed
+documentation and tutorials available to learn.</li>
+</ul>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00004.html"></span></p>
+<h1 class="block_11"><span id="text00004.html_id_Toc68076076"
+class="calibre4">Environment Setup</span></h1>
+<p>Apache Ivy needs Java and ANT installed on your machine as the only
+requirement.</p>
+<p>Apache Ant is distributed under the Apache Software License, a
+fully-fledged open source license certified by the open source
+initiative.</p>
+<p>The latest Apache Ant version, including its full-source code, class
+files, and documentation can be found
+at <strong>http://ant.apache.org.</strong></p>
+<h2 class="block_9">Installing Apache Ant</h2>
+<p>It is assumed that you have already downloaded and installed Java
+Development Kit (JDK) on your computer. If not, please follow the
+instructions <strong>here</strong> .</p>
+<ul>
+<li>Ensure that the JAVA_HOME environment variable is set to the folder
+where your JDK is installed.</li>
+<li>Download the binaries
+from <strong>https://ant.apache.org</strong></li>
+<li>Unzip the zip file to a convenient location c:\folder. using Winzip,
+winRAR, 7-zip or similar tools.</li>
+<li>Create a new environment variable called <strong>ANT_HOME</strong>
+ that points to the Ant installation folder, in this
+case <strong>c:\apache-ant-1.9.14-bin</strong>  folder.</li>
+<li>Append the path to the Apache Ant batch file to the PATH environment
+variable. In our case this would be
+the <strong>c:\apache-ant-1.9.14-bin\bin</strong>  folder.</li>
+</ul>
+<h2 class="block_9">Verifying Apache Ant Installation</h2>
+<p>To verify the successful installation of Apache Ant on your computer,
+type ant on your command prompt.</p>
+<p>You should see an output similar to −</p>
+<p>C:\&gt;ant -version</p>
+<p>Apache Ant(TM) version 1.9.14 compiled on March 12 2019</p>
+<p>If you do not see the above output, then please verify that you have
+followed the installation steps properly.</p>
+<h2 class="block_9">Installing Apache Ivy</h2>
+<ul>
+<li>Download the binaries
+from <strong>https://ant.apache.org/ivy</strong></li>
+<li>Unzip the zip file to a convenient location c:\folder. using Winzip,
+winRAR, 7-zip or similar tools.</li>
+<li>Copy the ivy-2.5.0.jar
+to <strong>c:\apache-ant-1.9.14-bin/lib</strong>  folder.</li>
+</ul>
+<h2 class="block_9">Verifying Apache Ivy Installation</h2>
+<p>To verify the successful installation of Apache Ivy on your computer,
+create following build file in a folder E: &gt; ivy.</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test ivy installation"</span></p>
+<p><span class="text_5">default</span> <span class="text_6">=</span>
+<span class="text_7">"test"</span> <span class="text_5">xmlns:ivy</span>
+<span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"Test ivy
+installation"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:settings</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>You should see an output similar to −</p>
+<p>C:\&gt;ant</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>test:</p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 2 seconds</p>
+<h2 class="block_9">Installing Eclipse</h2>
+<p>This tutorial also covers integration of Ant with Eclipse IDE. Hence,
+if you have not installed Eclipse already, please download and install
+Eclipse</p>
+<p>To install Eclipse −</p>
+<ul>
+<li>Download the latest Eclipse binaries
+from <strong>www.eclipse.org</strong></li>
+<li>Unzip the Eclipse binaries to a convenient location, say
+c:\folder</li>
+<li>Run Eclipse from c:\eclipse\eclipse.exe</li>
+</ul>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00005.html"></span></p>
+<h1 class="block_11"><span id="text00005.html_id_Toc68076077"
+class="calibre4">Terminology</span></h1>
+<p>Consider the following example ivy.xml to understand Ivy
+terminology.</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="calibre4">encoding</span> <span
+class="text_6">=</span> <span class="text_7">"ISO-8859-1"</span> <span
+class="text_6">?&gt;</span></p>
+<p><span class="text_4">&lt;ivy-module</span> <span
+class="text_5">version</span> <span class="text_6">=</span> <span
+class="text_7">"2.0"</span></p>
+<p><span class="text_5">xmlns:xsi</span> <span class="text_6">=</span>
+<span
+class="text_7">"http://www.w3.org/2001/XMLSchema-instance"</span></p>
+<p><span class="text_5">xsi:noNamespaceSchemaLocation</span> <span
+class="text_6">=</span> <span
+class="text_7">"http://ant.apache.org/ivy/schemas/ivy.xsd"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;info</span> <span
+class="text_5">organisation</span> <span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint"</span> <span
+class="text_5">module</span> <span class="text_6">=</span> <span
+class="text_7">"ivy-test"</span> <span class="text_5">status</span>
+<span class="text_6">=</span> <span class="text_7">"integration"</span>
+<span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;/info&gt;</span></p>
+<p><span class="text_4">&lt;dependencies&gt;</span></p>
+<p><span class="text_4">&lt;dependency</span> <span
+class="text_5">org</span> <span class="text_6">=</span> <span
+class="text_7">"commons-lang"</span> <span class="text_5">name</span>
+<span class="text_6">=</span> <span class="text_7">"commons-lang"</span>
+<span class="text_5">rev</span> <span class="text_6">=</span> <span
+class="text_7">"2.6"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/dependencies&gt;</span></p>
+<p>&lt;/ivy-module&gt;</p>
+</div>
+<h2 class="block_9">Ivy Terms</h2>
+<p>Following are the important terms of Ivy Eco-System.</p>
+<ul>
+<li><strong>Organisation</strong>  − As name suggests, it refers to the
+name of the company, individual developer or team name who creates the
+project or library. For example, com.tutorialspoint.</li>
+<li><strong>Module</strong>  − As name suggests, it refers to the
+reusable unit or module. A module generally have a version attached to
+it. For example commons-lang, or ivy-test etc.</li>
+<li><strong>Module Descriptor</strong>  − Module descriptor refers to
+ivy.xml file which describes a module. A module descriptor contains the
+identifier (org, name, branch and version), artifacts published,
+configurations and dependencies.</li>
+<li><strong>Artifact</strong>  − Artifact refers to a single file as
+deliverable. For example, a jar file. Artifact can be of type: zip, gz
+etc. Jar, Source Jar, Javadoc Jar are various artifacts of a
+module.</li>
+<li><strong>Type</strong>  − Type identifies the artifact category like
+jar, war , src, doc etc.</li>
+<li><strong>Artifact file name extension</strong>  − Artifact extension
+like .jar, ,zip, .gz etc.</li>
+<li><strong>Module Revision</strong>  − A unique revision number of the
+module or its version number.</li>
+<li><strong>Status of Revision</strong>  − Status of revision indicates
+the stability of the revision. Following are the important value of
+status −</li>
+</ul>
+<ul>
+<li><strong>integration</strong>  − Represents continous development,
+nightly build etc.</li>
+<li><strong>milestone</strong>  − Represents a distribution but not
+finalized.</li>
+<li><strong>release</strong>  − Represents tested and completed, a major
+version.</li>
+</ul>
+<ul>
+<li><strong>Repository</strong>  − Similar to Maven repositories,
+repository represents a distribution site where ivy can search a
+library, artifacts, modules etc. A repository can be public, private or
+shared.</li>
+<li><strong>Ivy Settings</strong>  − Apache Ivy follows Maven principles
+and comes with lot of default configurations. Default settings can be
+overridden by defining a ivysettings.xml file.</li>
+</ul>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00006.html"></span></p>
+<h1 class="block_11"><span id="text00006.html_id_Toc68076078"
+class="calibre4">Settings File</span></h1>
+<p>Apache Ivy follows Maven principles and comes with lot of default
+configurations. Default settings can be overridden by defining a
+ivysettings.xml file.</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;properties</span> <span
+class="text_5">file</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.settings.dir}/ivysettings-file.properties"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;settings</span> <span
+class="text_5">defaultCache</span> <span class="text_6">=</span> <span
+class="text_7">"${cache.dir}"</span> <span
+class="text_5">defaultResolver</span> <span class="text_6">=</span>
+<span class="text_7">"ibiblio"</span> <span
+class="text_5">checkUpToDate</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;resolvers&gt;</span></p>
+<p><span class="calibre4"> <span class="tab">      </span> </span> <span
+class="text_4">&lt;ibiblio</span> <span class="text_5">name</span> <span
+class="text_6">=</span> <span class="text_7">"ibiblio"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="calibre4"> <span class="tab">      </span> </span> <span
+class="text_4">&lt;filesystem</span> <span class="text_5">name</span>
+<span class="text_6">=</span> <span class="text_7">"internal"</span>
+<span class="text_4">&gt;</span></p>
+<p><span class="calibre4"> <span class="tab">      </span> </span> <span
+class="calibre4"> <span class="tab">      </span> </span> <span
+class="text_4">&lt;ivy</span> <span class="text_5">pattern</span> <span
+class="text_6">=</span> <span
+class="text_7">"${repository.dir}/[module]/ivy-[revision].xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="calibre4"> <span class="tab">      </span> </span> <span
+class="calibre4"> <span class="tab">      </span> </span> <span
+class="text_4">&lt;artifact</span> <span class="text_5">pattern</span>
+<span class="text_6">=</span> <span
+class="text_7">"${repository.dir}/[module]/[artifact]-[revision].[ext]"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="calibre4"> <span class="tab">      </span> </span> <span
+class="text_4">&lt;/filesystem&gt;</span></p>
+<p><span class="text_4">&lt;/resolvers&gt;</span></p>
+<p><span class="text_4">&lt;modules&gt;</span></p>
+<p><span class="calibre4"> <span class="tab">      </span> </span> <span
+class="text_4">&lt;module</span> <span
+class="text_5">organisation</span> <span class="text_6">=</span> <span
+class="text_7">"tutorialspoint"</span> <span class="text_5">name</span>
+<span class="text_6">=</span> <span class="text_7">".*"</span> <span
+class="text_5">resolver</span> <span class="text_6">=</span> <span
+class="text_7">"internal"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/modules&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<h2 class="block_9">Tags of Ivy Settings File</h2>
+<p>Following are the important tags of Ivy Setting file.</p>
+<ul>
+<li><strong>property</strong>  − To set an ivy variable. Cardinality:
+0..n</li>
+<li><strong>properties</strong>  − To set an ivy variables using
+properties file. Cardinality: 0..n</li>
+<li><strong>settings</strong>  − To configure ivy with default values.
+Cardinality: 0..1</li>
+<li><strong>include</strong>  − To include another settings file.
+Cardinality: 0..n</li>
+<li><strong>classpath</strong>  − To add a location in the classpath
+used to load plugins. Cardinality: 0..n</li>
+<li><strong>typedef</strong>  − To define new types in ivy. Cardinality:
+0..n</li>
+<li><strong>lock-strategies</strong>  − To define lock strategies.
+Cardinality: 0..1</li>
+<li><strong>caches</strong>  − To define repository cache managers.
+Cardinality: 0..1</li>
+<li><strong>latest-strategies</strong>  − To define latest strategies.
+Cardinality: 0..1</li>
+<li><strong>parsers</strong>  − To define module descriptor parsers.
+Cardinality: 0..1</li>
+<li><strong>version-matchers</strong>  − To define new version matchers.
+Cardinality: 0..1</li>
+<li><strong>triggers</strong>  − To register triggers on ivy events.
+Cardinality: 0..1</li>
+<li><strong>namespaces</strong>  − To define new namespaces.
+Cardinality: 0..1</li>
+<li><strong>macrodef</strong>  − To define a new macro resolver.
+Cardinality: 0..n</li>
+<li><strong>resolvers</strong>  − To define dependency resolvers.
+Cardinality: 0..1</li>
+<li><strong>conflict-managers</strong>  − To define conflicts managers.
+Cardinality: 0..1</li>
+<li><strong>modules</strong>  − To define rules between modules and
+dependency resolvers. Cardinality: 0..1</li>
+<li><strong>outputters</strong>  − To define the list of available
+report outputters. Cardinality: 0..1</li>
+<li><strong>statuses</strong>  − To define the list of available
+statuses. Cardinality: 0..1</li>
+</ul>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00007.html"></span></p>
+<h1 class="block_11"><span id="text00007.html_id_Toc68076079"
+class="calibre4">Eclipse Ivy Plugin</span></h1>
+<p>IvyDE is an Eclipse plugin provided by Apache. To install IvyDE,
+start Eclipse and navigate to Help &gt; Install New Software. It
+displays the Available Softwares window. Enter IvyDE update
+site <strong>http://www.apache.org/dist/ant/ivyde/updatesite/</strong>
+ and press enter key. It displays the following plugins.</p>
+<p><img src="OEBPS/Image00000.jpg" class="calibre5" alt="Image" /></p>
+<p>Click Next and you will see the following screen.</p>
+<p><img src="OEBPS/Image00001.jpg" class="calibre5" alt="Image" /></p>
+<p>If you are facing any error while installing the plugin then just
+restart the process. After successful installation, you will see the
+plugin in eclipe.</p>
+<p><img src="OEBPS/Image00002.jpg" class="calibre5" alt="Image" /></p>
+<p>Now you can do the dependency management using Eclipse and Ivy.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00008.html"></span></p>
+<h1 class="block_11"><span id="text00008.html_id_Toc68076080"
+class="calibre4">Resolve Task</span></h1>
+<p>Resolve task is used to resolve dependencies described in ivy.xml,
+download and put them in ivy cache.</p>
+<p>Let's first create a java file Tester.java in <strong>E: &gt; ivy
+&gt; src &gt; com &gt; tutorialspoint </strong> folder which will act as
+source folder for ant project.</p>
+<p>Application.java</p>
+<div class="frame_">
+<p><span class="text_4">package</span> <span class="calibre4">com</span>
+<span class="text_6">.</span> <span
+class="calibre4">tutorialspoint</span> <span class="text_6">;</span></p>
+<p><span class="text_4">import</span> <span class="calibre4">org</span>
+<span class="text_6">.</span> <span class="calibre4">apache</span> <span
+class="text_6">.</span> <span class="calibre4">commons</span> <span
+class="text_6">.</span> <span class="calibre4">lang</span> <span
+class="text_6">.</span> <span class="text_5">StringUtils</span> <span
+class="text_6">;</span></p>
+<p><span class="text_4">public</span> <span class="text_4">class</span>
+<span class="text_5">Application</span> <span
+class="text_6">{</span></p>
+<p><span class="text_4">public</span> <span class="text_4">static</span>
+<span class="text_4">void</span> <span class="calibre4">main</span>
+<span class="text_6">(</span> <span class="text_5">String</span> <span
+class="text_6">[]</span> <span class="calibre4">args</span> <span
+class="text_6">)</span> <span class="text_6">{</span></p>
+<p><span class="text_5">String</span> <span class="text_4">string</span>
+<span class="text_6">=</span> <span class="text_5">StringUtils</span>
+<span class="text_6">.</span> <span class="calibre4">upperCase</span>
+<span class="text_6">(</span> <span class="text_7">"Ivy Beginner
+Guide"</span> <span class="text_6">);</span></p>
+<p><span class="text_5">System</span> <span class="text_6">.</span>
+<span class="text_4">out</span> <span class="text_6">.</span> <span
+class="calibre4">println</span> <span class="text_6">(</span> <span
+class="text_4">string</span> <span class="text_6">);</span></p>
+<p><span class="text_6">}</span></p>
+<p>}</p>
+</div>
+<p>Above class is using apache commons lang library to use its class
+StringUtils. Ivy should download this library and thus it should be
+defined under dependencies section in ivy.xml. Following is the ivy.xml
+created in <strong>E: &gt; ivy </strong> folder.</p>
+<p>ivy.xml</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="calibre4">encoding</span> <span
+class="text_6">=</span> <span class="text_7">"ISO-8859-1"</span> <span
+class="text_6">?&gt;</span></p>
+<p><span class="text_4">&lt;ivy-module</span> <span
+class="text_5">version</span> <span class="text_6">=</span> <span
+class="text_7">"2.0"</span> <span class="text_5">xmlns:xsi</span> <span
+class="text_6">=</span> <span
+class="text_7">"http://www.w3.org/2001/XMLSchema-instance"</span></p>
+<p><span class="text_5">xsi:noNamespaceSchemaLocation</span> <span
+class="text_6">=</span> <span
+class="text_7">"http://ant.apache.org/ivy/schemas/ivy.xsd"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;info</span></p>
+<p><span class="text_5">organisation</span> <span
+class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint"</span></p>
+<p><span class="text_5">module</span> <span class="text_6">=</span>
+<span class="text_7">"test"</span></p>
+<p><span class="text_5">status</span> <span class="text_6">=</span>
+<span class="text_7">"integration"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;/info&gt;</span></p>
+<p><span class="text_4">&lt;dependencies&gt;</span></p>
+<p><span class="text_4">&lt;dependency</span> <span
+class="text_5">org</span> <span class="text_6">=</span> <span
+class="text_7">"org.apache.commons"</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"commons-lang3"</span> <span class="text_5">rev</span>
+<span class="text_6">=</span> <span class="text_7">"3.9"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/dependencies&gt;</span></p>
+<p>&lt;/ivy-module&gt;</p>
+</div>
+<p>Following are the important terms.</p>
+<ul>
+<li><strong>ivy-module</strong>  − Root element to identify ivy version,
+namespace etc.</li>
+<li><strong>info</strong>  − element to identify the project as a unique
+entity.</li>
+</ul>
+<ul>
+<li><strong>organisation</strong>  − name of the organization</li>
+<li><strong>module</strong>  − name of the module</li>
+<li><strong>status</strong>  − status like release, integration or
+milestone.</li>
+</ul>
+<ul>
+<li><strong>dependencies</strong>  − element to contain project
+dependencies as dependency tags which has following attributes.</li>
+</ul>
+<ul>
+<li><strong>org</strong>  − name of the dependency's organization</li>
+<li><strong>name</strong>  − name of the dependency.</li>
+<li><strong>rev</strong>  − version of the dependency.</li>
+</ul>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&lt;</p>
+</div>
+<p>Following are the important terms.</p>
+<ul>
+<li><strong>project</strong>  − Root element to identify project name,
+default task namespace for ivy etc.</li>
+<li><strong>target</strong>  − target element to create a new task and
+its description. This contains an ivy resolve task. When ant builds the
+project, it runs the ivy resolve task which then resolves the
+dependencies using ivy.</li>
+</ul>
+<h2 class="block_9">Building the project</h2>
+<p>As we've all the files ready. Just go the console. Navigate
+to <strong>E: &gt; ivy </strong> folder and run the ant command.</p>
+<p>E:\ivy &gt; ant</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>resolve:</p>
+<p>[ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy</p>
+<p>/ ::</p>
+<p>[ivy:resolve] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14</p>
+<p>/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>[ivy:resolve] :: resolving dependencies ::
+com.tutorialspoint#test;working@Acer-</p>
+<p>PC</p>
+<p>[ivy:resolve<span class="tab">]</span> confs: [default]</p>
+<p>[ivy:resolve<span class="tab">] found commons-lang#commons-lang;2.6
+in public</span></p>
+<p>[ivy:resolve<span class="tab">] found junit#junit;3.8.1 in
+public</span></p>
+<p>[ivy:resolve] :: resolution report :: resolve 375ms :: artifacts dl
+79ms</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">| | modules || artifacts |</span></p>
+<p><span class="tab">|</span> conf <span class="tab">| number|</span>
+search|dwnlded|evicted|| number|dwnlded|</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">|</span> default <span class="tab">| 2 | 2 | 0 | 0
+|| 4 | 0 |</span></p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p>[ivy:retrieve] :: retrieving :: com.tutorialspoint#test [sync]</p>
+<p>[ivy:retrieve<span class="tab">]</span> confs: [default]</p>
+<p>[ivy:retrieve<span class="tab">] 0 artifacts copied, 2 already
+retrieved (0kB/101ms)</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 1 second</p>
+<p>E:\ivy&gt;</p>
+<h2 class="block_9">Resolve Output</h2>
+<p>Following are the important terms.</p>
+<ul>
+<li><strong>conf</strong>  − configuration, in our case we are using
+default configuration.</li>
+<li><strong>modules</strong>  − indicates the total number of modules,
+downloaded modules etc.</li>
+<li><strong>artifacts</strong>  − indicates the total number of
+artifacts, downloaded artifacts etc.</li>
+</ul>
+<p>You can verify the downloaded files in ivy cache's default location
+in <strong>${ivy.default.ivy.user.dir} &gt; .ivy2 &gt; cache</strong>
+ folder. And ${ivy.default.ivy.user.dir} is by default user home:
+$HOME.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00009.html"></span></p>
+<h1 class="block_11"><span id="text00009.html_id_Toc68076081"
+class="calibre4">Install Task</span></h1>
+<p>Install task is used to install a module and its dependencies in a
+resolver. It is used when a public artifact is to be downloaded and used
+in private repository. By default, a user local repository is his/her
+private repository and is present in
+${ivy.default.ivy.user.dir}/local.</p>
+<p>Let's create Tester.java, build.xml and ivy.xml as described
+in <strong>IVY - Resolve Task</strong>  chapter.</p>
+<p>Update the build.xml to use the ivy install task.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"install"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"install
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:install</span> <span
+class="text_5">organisation</span> <span class="text_6">=</span> <span
+class="text_7">"commons-lang"</span> <span class="text_5">module</span>
+<span class="text_6">=</span> <span
+class="text_7">"commons-lang"</span></p>
+<p><span class="text_5">revision</span> <span class="text_6">=</span>
+<span class="text_7">"2.6"</span> <span class="text_5">transitive</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_5">overwrite</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span></p>
+<p><span class="text_5">from</span> <span class="text_6">=</span> <span
+class="text_7">"public"</span> <span class="text_5">to</span> <span
+class="text_6">=</span> <span class="text_7">"local"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Following are the important terms.</p>
+<ul>
+<li><strong>organisation</strong>  − name of the organization.</li>
+<li><strong>module</strong>  − module name of the project.</li>
+<li><strong>revision</strong>  − version of the project.</li>
+<li><strong>from</strong>  − from repository type.</li>
+<li><strong>to</strong>  − to repository type.</li>
+</ul>
+<h2 class="block_9">Building the project</h2>
+<p>As we've all the files ready. Just go the console. Navigate
+to <strong>E: &gt; ivy </strong> folder and run the ant command.</p>
+<p>E:\ivy &gt; ant install</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>E:\ivy &gt; ant install</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>install:</p>
+<p>[ivy:install] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy</p>
+<p>/ ::</p>
+<p>[ivy:install] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14</p>
+<p>/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>[ivy:install] :: installing commons-lang#commons-lang;2.6 ::</p>
+<p>[ivy:install] :: resolving dependencies ::</p>
+<p>[ivy:install<span class="tab">] found commons-lang#commons-lang;2.6
+in public</span></p>
+<p>[ivy:install<span class="tab">] found junit#junit;3.8.1 in
+public</span></p>
+<p>[ivy:install] :: downloading artifacts to cache ::</p>
+<p>[ivy:install] :: installing in local ::</p>
+<p>[ivy:install<span class="tab">] published commons-</span> lang to
+C:\Users\Acer\.ivy2\local\commons-lang</p>
+<p>\commons-lang\2.6.part\sources\commons-lang.jar</p>
+<p>[ivy:install<span class="tab">] published commons-</span> lang to
+C:\Users\Acer\.ivy2\local\commons-lang</p>
+<p>\commons-lang\2.6.part\jars\commons-lang.jar</p>
+<p>[ivy:install<span class="tab">] published commons-</span> lang to
+C:\Users\Acer\.ivy2\local\commons-lang</p>
+<p>\commons-lang\2.6.part\javadocs\commons-lang.jar</p>
+<p>[ivy:install<span class="tab">] published ivy to
+C:\Users\Acer\.ivy2\local\commons-lang\commons-</span></p>
+<p>lang\2.6.part\ivys\ivy.xml</p>
+<p>[ivy:install<span class="tab">] publish committed: moved
+C:\Users\Acer\.ivy2\local\commons-lang\</span></p>
+<p>commons-lang\2.6.part</p>
+<p>[ivy:install<span class="tab">] to
+C:\Users\Acer\.ivy2\local\commons-lang\commons-lang\2</span></p>
+<p>.6</p>
+<p>[ivy:install<span class="tab">] published</span> junit to
+C:\Users\Acer\.ivy2\local\junit\junit\3.8.1.p</p>
+<p>art\jars\junit.jar</p>
+<p>[ivy:install<span class="tab">] published ivy to
+C:\Users\Acer\.ivy2\local\junit\junit\3.8.1.par</span></p>
+<p>t\ivys\ivy.xml</p>
+<p>[ivy:install<span class="tab">] publish committed: moved
+C:\Users\Acer\.ivy2\local\junit\junit\3</span></p>
+<p>.8.1.part</p>
+<p>[ivy:install<span class="tab">] to
+C:\Users\Acer\.ivy2\local\junit\junit\3.8.1</span></p>
+<p>[ivy:install] :: install resolution report ::</p>
+<p>[ivy:install] :: resolution report :: resolve 0ms :: artifacts dl
+21ms</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">| | modules || artifacts |</span></p>
+<p><span class="tab">|</span> conf <span class="tab">| number|</span>
+search|dwnlded|evicted|| number|dwnlded|</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">|</span> default <span class="tab">| 2 | 0 | 0 | 0
+|| 4 | 0 |</span></p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 43 seconds</p>
+<p>You can verify the downloaded files in ivy cache's default local
+repository location <strong>${ivy.default.ivy.user.dir} &gt; .ivy2 &gt;
+local</strong>  directory.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00010.html"></span></p>
+<h1 class="block_11"><span id="text00010.html_id_Toc68076082"
+class="calibre4">Retrieve Task</span></h1>
+<p>retrieve task is used to resolve dependencies to a specified location
+in project workspace.</p>
+<p>Let's create Tester.java, build.xml and ivy.xml as described
+in <strong>IVY - Resolve Task</strong>  chapter.</p>
+<p>Update the build.xml to use the ivy retrieve task.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:retrieve</span> <span
+class="text_5">sync</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_5">type</span> <span
+class="text_6">=</span> <span class="text_7">"jar"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Following are the important terms.</p>
+<ul>
+<li><strong>sync</strong>  − sync true ensure that lib directory is
+up-to-date and any extra file gets deleted.</li>
+<li><strong>type</strong>  − type directs ivy to copy only specified
+type of artifacts like jar. Source jar, javadoc jar will be ignored.
+type for source jar is src or source and doc or bundle for javadoc
+jar.</li>
+</ul>
+<p>retrieve tasks copies the resolved dependencies in the lib directory
+of the project by default and can be changed using pattern
+attribute.</p>
+<h2 class="block_9">Building the project</h2>
+<p>As we've all the files ready. Just go the console. Navigate
+to <strong>E: &gt; ivy </strong> folder and run the ant command.</p>
+<p>E:\ivy &gt; ant</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>resolve:</p>
+<p>[ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy</p>
+<p>/ ::</p>
+<p>[ivy:resolve] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14</p>
+<p>/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>[ivy:resolve] :: resolving dependencies ::
+com.tutorialspoint#test;working@Acer-</p>
+<p>PC</p>
+<p>[ivy:resolve<span class="tab">]</span> confs: [default]</p>
+<p>[ivy:resolve<span class="tab">] found commons-lang#commons-lang;2.6
+in public</span></p>
+<p>[ivy:resolve<span class="tab">] found junit#junit;3.8.1 in
+public</span></p>
+<p>[ivy:resolve] :: resolution report :: resolve 316ms :: artifacts dl
+18ms</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">| | modules || artifacts |</span></p>
+<p><span class="tab">|</span> conf <span class="tab">| number|</span>
+search|dwnlded|evicted|| number|dwnlded|</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">|</span> default <span class="tab">| 2 | 2 | 0 | 0
+|| 4 | 0 |</span></p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p>[ivy:retrieve] :: retrieving :: com.tutorialspoint#test [sync]</p>
+<p>[ivy:retrieve<span class="tab">]</span> confs: [default]</p>
+<p>[ivy:retrieve<span class="tab">] 0 artifacts copied, 2 already
+retrieved (0kB/2756ms)</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 31 seconds</p>
+<p>You can verify the downloaded files in project lib directory.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00011.html"></span></p>
+<h1 class="block_11"><span id="text00011.html_id_Toc68076083"
+class="calibre4">Cachepath Task</span></h1>
+<p>cachepath task is used to create an ANT classpath with resolved
+artifacts present in the cache. As ANT needs jars to be classpath to
+compile java files, Ivy cachepath builds the classpath.</p>
+<p>Let's create Tester.java, build.xml and ivy.xml as described
+in <strong>IVY - Resolve Task</strong>  chapter.</p>
+<p>Update the build.xml to use the ivy retrieve task.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:cachepath</span> <span
+class="text_5">pathid</span> <span class="text_6">=</span> <span
+class="text_7">"new.classpath"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"compile"</span> <span class="text_5">depends</span>
+<span class="text_6">=</span> <span class="text_7">"resolve"</span>
+<span class="text_5">description</span> <span class="text_6">=</span>
+<span class="text_7">"Compile"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;mkdir</span> <span class="text_5">dir</span>
+<span class="text_6">=</span> <span
+class="text_7">"build/classes"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;javac</span> <span
+class="text_5">srcdir</span> <span class="text_6">=</span> <span
+class="text_7">"src"</span> <span class="text_5">destdir</span> <span
+class="text_6">=</span> <span class="text_7">"build/classes"</span>
+<span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;classpath</span> <span
+class="text_5">refid</span> <span class="text_6">=</span> <span
+class="text_7">"new.classpath"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/javac&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Following are the important terms.</p>
+<ul>
+<li><strong>pathid</strong>  − id of the classpath where cached jars are
+present.</li>
+</ul>
+<p>retrieve tasks copies the resolved dependencies in the lib directory
+of the project by default and can be changed using pattern
+attribute.</p>
+<h2 class="block_9">Building the project</h2>
+<p>As we've all the files ready. Just go the console. Navigate
+to <strong>E: &gt; ivy </strong> folder and run the ant command.</p>
+<p>E:\ivy &gt; ant compile</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>resolve:</p>
+<p>[ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy</p>
+<p>/ ::</p>
+<p>[ivy:resolve] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14</p>
+<p>/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>[ivy:resolve] :: resolving dependencies ::
+com.tutorialspoint#test;working@Acer-</p>
+<p>PC</p>
+<p>[ivy:resolve<span class="tab">]</span> confs: [default]</p>
+<p>[ivy:resolve<span class="tab">] found commons-lang#commons-lang;2.6
+in public</span></p>
+<p>[ivy:resolve<span class="tab">] found junit#junit;3.8.1 in
+public</span></p>
+<p>[ivy:resolve] :: resolution report :: resolve 2314ms :: artifacts dl
+15ms</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">| | modules || artifacts |</span></p>
+<p><span class="tab">|</span> conf <span class="tab">| number|</span>
+search|dwnlded|evicted|| number|dwnlded|</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">|</span> default <span class="tab">| 2 | 2 | 0 | 0
+|| 4 | 0 |</span></p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p>compile:</p>
+<p><span class="tab">[</span> javac] E:\ivy\build.xml:13: warning:
+'includeantruntime' was not set, defau</p>
+<p>lting to build.sysclasspath=last; set to false for repeatable
+builds</p>
+<p><span class="tab">[</span> javac] Compiling 1 source file to
+E:\ivy\build\classes</p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 3 seconds</p>
+<p>You can verify the compiled class file in project build
+directory.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00012.html"></span></p>
+<h1 class="block_11"><span id="text00012.html_id_Toc68076084"
+class="calibre4">Publish Task</span></h1>
+<p>publish task is used to publish current artifacts and its resolved
+descriptor files to mentioned repository.</p>
+<p>Let's create Tester.java, build.xml and ivy.xml as described
+in <strong>IVY - Resolve Task</strong>  chapter.</p>
+<p>Update the build.xml to use the ivy publish task. First we'll create
+a jar file and then publish it.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"build.dir"</span> <span class="text_5">value</span>
+<span class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"jar"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;jar</span> <span
+class="text_5">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/lib/application.jar"</span></p>
+<p><span class="text_5">basedir</span> <span class="text_6">=</span>
+<span class="text_7">"${build.dir}/classes"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;manifest&gt;</span></p>
+<p><span class="text_4">&lt;attribute</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"Main-Class"</span> <span class="text_5">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint.Application"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/manifest&gt;</span></p>
+<p><span class="text_4">&lt;/jar&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"publish"</span> <span class="text_5">depends</span>
+<span class="text_6">=</span> <span class="text_7">"jar"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:publish</span> <span
+class="text_5">resolver</span> <span class="text_6">=</span> <span
+class="text_7">"local"</span> <span class="text_5">pubrevision</span>
+<span class="text_6">=</span> <span class="text_7">"1.0"</span> <span
+class="text_5">overwrite</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;artifacts</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/lib/[artifact].[ext]"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/ivy:publish&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Following are the important terms.</p>
+<ul>
+<li><strong>resolver</strong>  − resolver to be used for
+publication.</li>
+<li><strong>pattern</strong>  − pattern to locate the artifact.</li>
+</ul>
+<p>Here publish task first build the jar, then resolve the dependencies,
+set the information and then publish the artifact to local
+repository.</p>
+<h2 class="block_9">Building the project</h2>
+<p>As we've all the files ready. Just go the console. Navigate
+to <strong>E: &gt; ivy </strong> folder and run the ant command.</p>
+<p>E:\ivy &gt; ant publish</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>E:\ivy &gt; ant publish</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>jar:</p>
+<p>publish:</p>
+<p>[ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy</p>
+<p>/ ::</p>
+<p>[ivy:resolve] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14</p>
+<p>/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>[ivy:resolve] :: resolving dependencies ::
+com.tutorialspoint#test;1.0.0</p>
+<p>[ivy:resolve<span class="tab">]</span> confs: [default]</p>
+<p>[ivy:resolve<span class="tab">] found commons-lang#commons-lang;2.6
+in public</span></p>
+<p>[ivy:resolve<span class="tab">] found junit#junit;3.8.1 in
+public</span></p>
+<p>[ivy:resolve] :: resolution report :: resolve 121ms :: artifacts dl
+15ms</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">| | modules || artifacts |</span></p>
+<p><span class="tab">|</span> conf <span class="tab">| number|</span>
+search|dwnlded|evicted|| number|dwnlded|</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">|</span> default <span class="tab">| 2 | 2 | 0 | 0
+|| 4 | 0 |</span></p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p>[ivy:publish] :: publishing :: com.tutorialspoint#test</p>
+<p>[ivy:publish<span class="tab">] published application to
+C:\Users\Acer\.ivy2\local\com.tutorials</span></p>
+<p>point\test\1.0\jars\application.jar</p>
+<p>[ivy:publish<span class="tab">] published ivy to
+C:\Users\Acer\.ivy2\local\com.tutorialspoint\te</span></p>
+<p>st\1.0\ivys\ivy.xml</p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 1 second</p>
+<p>You can verify the publish ivy artifacts in local repository.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00013.html"></span></p>
+<h1 class="block_11"><span id="text00013.html_id_Toc68076085"
+class="calibre4">Info Task</span></h1>
+<p>info task is used to set ivy specific information in a file and can
+be used without any dependency resolution.</p>
+<p>Let's create Tester.java, build.xml and ivy.xml as described
+in <strong>IVY - Resolve Task</strong>  chapter.</p>
+<p>Update the build.xml to use the ivy publish task. First we'll create
+a jar file and then publish it. Before publish task, we've set the
+required ivy information using info task.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"build.dir"</span> <span class="text_5">value</span>
+<span class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"jar"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;jar</span> <span
+class="text_5">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/lib/application.jar"</span></p>
+<p><span class="text_5">basedir</span> <span class="text_6">=</span>
+<span class="text_7">"${build.dir}/classes"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;manifest&gt;</span></p>
+<p><span class="text_4">&lt;attribute</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"Main-Class"</span> <span class="text_5">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint.Application"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/manifest&gt;</span></p>
+<p><span class="text_4">&lt;/jar&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"publish"</span> <span class="text_5">depends</span>
+<span class="text_6">=</span> <span class="text_7">"jar"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:info</span> <span
+class="text_5">file</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.xml"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:publish</span> <span
+class="text_5">resolver</span> <span class="text_6">=</span> <span
+class="text_7">"local"</span> <span class="text_5">pubrevision</span>
+<span class="text_6">=</span> <span class="text_7">"1.0"</span> <span
+class="text_5">overwrite</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;artifacts</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/lib/[artifact].[ext]"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/ivy:publish&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Here publish task first build the jar, then set the information using
+ivy:info task and then publish the artifact to local repository.</p>
+<h2 class="block_9">Building the project</h2>
+<p>As we've all the files ready. Just go the console. Navigate
+to <strong>E: &gt; ivy </strong> folder and run the ant command.</p>
+<p>E:\ivy &gt; ant publish</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>jar:</p>
+<p>publish:</p>
+<p>[ivy:info] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy/</p>
+<p>::</p>
+<p>[ivy:info] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14/l</p>
+<p>ib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>[ivy:publish] :: publishing :: com.tutorialspoint#test</p>
+<p>[ivy:publish<span class="tab">] published application to
+C:\Users\Acer\.ivy2\local\com.tutorials</span></p>
+<p>point\test\1.0\jars\application.jar</p>
+<p>[ivy:publish<span class="tab">] published ivy to
+C:\Users\Acer\.ivy2\local\com.tutorialspoint\te</span></p>
+<p>st\1.0\ivys\ivy.xml</p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 0 seconds</p>
+<p>If we do not put the info task then publish task will not work. Use
+the below modified build.xml and see the error for missing organization
+attribute and so on.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"build.dir"</span> <span class="text_5">value</span>
+<span class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"jar"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;jar</span> <span
+class="text_5">destfile</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/lib/application.jar"</span></p>
+<p><span class="text_5">basedir</span> <span class="text_6">=</span>
+<span class="text_7">"${build.dir}/classes"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;manifest&gt;</span></p>
+<p><span class="text_4">&lt;attribute</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"Main-Class"</span> <span class="text_5">value</span>
+<span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint.Application"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/manifest&gt;</span></p>
+<p><span class="text_4">&lt;/jar&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"publish"</span> <span class="text_5">depends</span>
+<span class="text_6">=</span> <span class="text_7">"jar"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:publish</span> <span
+class="text_5">resolver</span> <span class="text_6">=</span> <span
+class="text_7">"local"</span> <span class="text_5">pubrevision</span>
+<span class="text_6">=</span> <span class="text_7">"1.0"</span> <span
+class="text_5">overwrite</span> <span class="text_6">=</span> <span
+class="text_7">"true"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;artifacts</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${build.dir}/lib/[artifact].[ext]"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/ivy:publish&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>Navigate to <strong>E: &gt; ivy </strong> folder and run the ant
+command.</p>
+<p>E:\ivy &gt; ant publish</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>Buildfile: E:\ivy\build.xml</p>
+<p>jar:</p>
+<p>publish:</p>
+<p>[ivy:publish] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy</p>
+<p>/ ::</p>
+<p>[ivy:publish] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14</p>
+<p>/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>BUILD FAILED</p>
+<p>E:\ivy\build.xml:28: no organisation provided for ivy publish task:
+It can eithe</p>
+<p>r be set explicitly via the attribute 'organisation' or via
+'ivy.organisation' p</p>
+<p>roperty or a prior call to &lt;resolve/&gt;</p>
+<p>Total time: 3 seconds</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00014.html"></span></p>
+<h1 class="block_11"><span id="text00014.html_id_Toc68076086"
+class="calibre4">Resolvers</span></h1>
+<p>Resolvers are used to find locations from where a library is to be
+downloaded. A dependency resolver also handles common tasks. Ivy
+provides two types of Resolvers.</p>
+<ul>
+<li><strong>Composite</strong>  − A resolver which uses other resolvers
+to do its tasks.</li>
+<li><strong>Standard</strong>  − A resolver performs the required
+tasks.</li>
+</ul>
+<h2 class="block_9">Standard Resolvers</h2>
+<p>Following table lists down the standard resolvers and their
+usage.</p>
+<table class="table_">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody class="calibre6">
+<tr class="calibre7">
+<td class="td_"><p>Sr.No.</p></td>
+<td class="td_1"><p>Name (Type) &amp; Description</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>1</p></td>
+<td class="td_3"><p>IvyRep (Standard)</p>
+<p>Locates Ivy files on ivyrep and artifacts on ibiblio.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>2</p></td>
+<td class="td_3"><p>IBiblio (Standard)</p>
+<p>Locates artifacts on ibiblio.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>3</p></td>
+<td class="td_3"><p>BinTray (Standard)</p>
+<p>Locates artifacts on bintray.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>4</p></td>
+<td class="td_3"><p>Packager (Standard)</p>
+<p>Locates Ivy files and packaging instructions via URLs, creates
+artifacts using instructions.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>5</p></td>
+<td class="td_3"><p>FileSystem (Standard)</p>
+<p>Locates Ivy files and artifacts on local file system.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>6</p></td>
+<td class="td_3"><p>URL (Standard)</p>
+<p>Locates Ivy files and artifacts on repositories which can be accessed
+using URLs.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>7</p></td>
+<td class="td_3"><p>MirroredURL (Standard)</p>
+<p>Locates Ivy files and artifacts on repositories which can be accessed
+using URLs from a mirror list.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>8</p></td>
+<td class="td_3"><p>VFS (Standard)</p>
+<p>Locates Ivy files and artifacts on repositories which can be accessed
+using Apache Commons VFS.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>9</p></td>
+<td class="td_3"><p>SSH (Standard)</p>
+<p>Locates Ivy files and artifacts on repositories which can be accessed
+using SSH.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>10</p></td>
+<td class="td_3"><p>SFTP (Standard)</p>
+<p>Locates Ivy files and artifacts on repositories which can be accessed
+using SFTP.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>11</p></td>
+<td class="td_3"><p>Jar (Standard)</p>
+<p>Locates Ivy files and artifacts on repositories within a
+jar.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>12</p></td>
+<td class="td_3"><p>Chain (Composite)</p>
+<p>Delegates the search to a chain of sub resolvers.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>13</p></td>
+<td class="td_3"><p>Dual (Composite)</p>
+<p>Delegates the search to a one resolver and artifacts to
+another.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>14</p></td>
+<td class="td_3"><p>OBR (Standard)</p>
+<p>Resolve modules as OSGi bundles listed by an OSGi obr.xml.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>15</p></td>
+<td class="td_3"><p>Eclipse updatesite (Standard)</p>
+<p>Resolve modules as OSGi bundles which are hosted on an Eclipse update
+site.</p></td>
+</tr>
+<tr class="calibre7">
+<td class="td_2"><p>16</p></td>
+<td class="td_3"><p>OSGi-agg (Composite)</p>
+<p>Delegates the search to a chain of sub resolvers supporting OSGi
+bundles.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Let's create Tester.java, build.xml and ivy.xml in a new project
+under <strong>E: &gt; ivy2</strong>  folder similar to as described
+in <strong>IVY - Resolve Task</strong>  chapter. Create a settings
+folder under <strong>E: &gt; ivy2</strong> . Create the ivysettings.xml
+in the settings folder.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;project</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">default</span> <span
+class="text_6">=</span> <span class="text_7">"resolve"</span> <span
+class="text_5">xmlns:ivy</span> <span class="text_6">=</span> <span
+class="text_7">"antlib:org.apache.ivy.ant"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"build.dir"</span> <span class="text_5">value</span>
+<span class="text_6">=</span> <span class="text_7">"build"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"base.dir"</span> <span class="text_5">value</span> <span
+class="text_6">=</span> <span class="text_7">""</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_5">description</span>
+<span class="text_6">=</span> <span class="text_7">"resolve
+dependencies"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"compile"</span> <span class="text_5">depends</span>
+<span class="text_6">=</span> <span class="text_7">"resolve"</span>
+<span class="text_5">description</span> <span class="text_6">=</span>
+<span class="text_7">"Compile"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;mkdir</span> <span class="text_5">dir</span>
+<span class="text_6">=</span> <span
+class="text_7">"build/classes"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;javac</span> <span
+class="text_5">srcdir</span> <span class="text_6">=</span> <span
+class="text_7">"src"</span> <span class="text_5">destdir</span> <span
+class="text_6">=</span> <span class="text_7">"build/classes"</span>
+<span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;classpath</span> <span
+class="text_5">refid</span> <span class="text_6">=</span> <span
+class="text_7">"new.classpath"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/javac&gt;</span></p>
+<p><span class="text_4">&lt;/target&gt;</span></p>
+<p>&lt;/project&gt;</p>
+</div>
+<p>ivy.xml</p>
+<div class="frame_">
+<p><span class="text_6">&lt;?</span> <span class="calibre4">xml
+version</span> <span class="text_6">=</span> <span
+class="text_7">"1.0"</span> <span class="calibre4">encoding</span> <span
+class="text_6">=</span> <span class="text_7">"ISO-8859-1"</span> <span
+class="text_6">?&gt;</span></p>
+<p><span class="text_4">&lt;ivy-module</span> <span
+class="text_5">version</span> <span class="text_6">=</span> <span
+class="text_7">"2.0"</span> <span class="text_5">xmlns:xsi</span> <span
+class="text_6">=</span> <span
+class="text_7">"http://www.w3.org/2001/XMLSchema-instance"</span></p>
+<p><span class="text_5">xsi:noNamespaceSchemaLocation</span> <span
+class="text_6">=</span> <span
+class="text_7">"http://ant.apache.org/ivy/schemas/ivy.xsd"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;info</span> <span
+class="text_5">organisation</span> <span class="text_6">=</span> <span
+class="text_7">"org.apache"</span> <span class="text_5">module</span>
+<span class="text_6">=</span> <span
+class="text_7">"chained-resolvers"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;dependencies&gt;</span></p>
+<p><span class="text_4">&lt;dependency</span> <span
+class="text_5">org</span> <span class="text_6">=</span> <span
+class="text_7">"commons-lang"</span> <span class="text_5">name</span>
+<span class="text_6">=</span> <span class="text_7">"commons-lang"</span>
+<span class="text_5">rev</span> <span class="text_6">=</span> <span
+class="text_7">"2.6"</span> <span class="text_5">conf</span> <span
+class="text_6">=</span> <span class="text_7">"default"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;dependency</span> <span
+class="text_5">org</span> <span class="text_6">=</span> <span
+class="text_7">"com.tutorialspoint"</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"test"</span> <span class="text_5">rev</span> <span
+class="text_6">=</span> <span class="text_7">"1.0"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/dependencies&gt;</span></p>
+<p>&lt;/ivy-module&gt;</p>
+</div>
+<p>Here we've added two dependencies,one of commons-lang library and
+another as test which we published in <strong>IVY - Publish
+Task</strong>  chapter.</p>
+<p>ivysettings.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;settings</span> <span
+class="text_5">defaultResolver</span> <span class="text_6">=</span>
+<span class="text_7">"multiresolver"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;resolvers&gt;</span></p>
+<p><span class="text_4">&lt;chain</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"multiresolver"</span> <span
+class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;filesystem</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"libraries"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;artifact</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.settings.dir}/repository/[artifact]-[revision].[ext]"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/filesystem&gt;</span></p>
+<p><span class="text_4">&lt;ibiblio</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ibiblio"</span> <span class="text_5">m2compatible</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/chain&gt;</span></p>
+<p><span class="text_4">&lt;/resolvers&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<p>Here we've added created a composite resolver using chain resolver
+which has two resolver, one named libraries to locate libaries on local
+repository and one named ibiblio on maven public repository.</p>
+<h2 class="block_9">Building the project</h2>
+<p>As we've all the files ready. Just go the console. Navigate
+to <strong>E: &gt; ivy2 </strong> folder and run the ant command.</p>
+<p>E:\ivy &gt; ant</p>
+<p>Ivy will come into action, resolving the dependencies, you will see
+the following result.</p>
+<p>Buildfile: E:\ivy2\build.xml</p>
+<p>resolve:</p>
+<p>[ivy:resolve] :: Apache Ivy 2.5.0 - 20191020104435 ::
+https://ant.apache.org/ivy</p>
+<p>/ ::</p>
+<p>[ivy:resolve] :: loading settings :: url =
+jar:file:/E:/Apache/apache-ant-1.9.14</p>
+<p>/lib/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml</p>
+<p>[ivy:resolve] :: resolving dependencies ::
+org.apache#chained-resolvers;working@</p>
+<p>Acer-PC</p>
+<p>[ivy:resolve<span class="tab">]</span> confs: [default]</p>
+<p>[ivy:resolve<span class="tab">] found commons-lang#commons-lang;2.6
+in public</span></p>
+<p>[ivy:resolve<span class="tab">] found com.tutorialspoint#test;1.0 in
+local</span></p>
+<p>[ivy:resolve<span class="tab">] found junit#junit;3.8.1 in
+public</span></p>
+<p>[ivy:resolve] downloading
+C:\Users\Acer\.ivy2\local\com.tutorialspoint\test\1.0\</p>
+<p>jars\application.jar ...</p>
+<p>[ivy:resolve] .. (1kB)</p>
+<p>[ivy:resolve] .. (0kB)</p>
+<p>[ivy:resolve<span class="tab">] [</span> SUCCESSFUL ]
+com.tutorialspoint#test;1.0!application.jar (13ms)</p>
+<p>[ivy:resolve] :: resolution report :: resolve 1085ms :: artifacts dl
+22ms</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">| | modules || artifacts |</span></p>
+<p><span class="tab">|</span> conf <span class="tab">| number|</span>
+search|dwnlded|evicted|| number|dwnlded|</p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p><span class="tab">|</span> default <span class="tab">| 3 | 3 | 1 | 0
+|| 5 | 1 |</span></p>
+<p><span
+class="tab">---------------------------------------------------------------------</span></p>
+<p>BUILD SUCCESSFUL</p>
+<p>Total time: 9 seconds</p>
+<p>In the logs you can verify that we have used both local and public
+repository resolvers.</p>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00015.html"></span></p>
+<h1 class="block_11"><span id="text00015.html_id_Toc68076087"
+class="calibre4">Local Repository</span></h1>
+<p>A local repository is a private repository of a user. It is very
+useful in case a user is using a library whose version has been changed
+on other places and have breaking changes. In case of local repository,
+ivy will use the library present in the local if found and will not look
+into public or shared repositories.</p>
+<h2 class="block_9">Default Location</h2>
+<p>By default, local repository is present in
+${ivy.default.ivy.user.dir}/local folder. If you want to change it, the
+use the ivy.local.default.root variable in ant file.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.local.default.root"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"/opt/ivy/repository/local"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>Other properties like ivy pattern and artifact pattern can also be
+customized as follows −</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.local.default.root"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"/opt/ivy/repository/local"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.local.default.ivy.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[module]/[revision]/ivy.xml"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.local.default.artifact.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[module]/[revision]/[artifact].[ext]"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<h2 class="block_9">Overriding ivysettings defaults</h2>
+<p>By default ivy has its configurations in ivysettings.xml present in
+ivy.jar.</p>
+<p>ivysettings.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;settings</span> <span
+class="text_5">defaultResolver</span> <span class="text_6">=</span>
+<span class="text_7">"default"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-public.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-shared.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-local.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-main-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-default-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<p>To override local repository setting, update the contents of
+ivysettings-local.xml.</p>
+<p>ivysettings-local.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.local.default.root"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.ivy.user.dir}/local"</span> <span
+class="text_5">override</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.local.default.ivy.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"</span>
+<span class="text_5">override</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.local.default.artifact.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"</span>
+<span class="text_5">override</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;resolvers&gt;</span></p>
+<p><span class="text_4">&lt;filesystem</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"local"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.local.default.root}/${ivy.local.default.ivy.pattern}"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;artifact</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.local.default.root}/${ivy.local.default.artifact.pattern}"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/filesystem&gt;</span></p>
+<p><span class="text_4">&lt;/resolvers&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00016.html"></span></p>
+<h1 class="block_11"><span id="text00016.html_id_Toc68076088"
+class="calibre4">Shared Repository</span></h1>
+<p>A shared repository is a team level shared repository of a team. It
+is very common to be overridden in organizations.</p>
+<h2 class="block_9">Default Location</h2>
+<p>By default, shared repository is present in
+${ivy.default.ivy.user.dir}/shared folder. If you want to change it, the
+use the ivy.shared.default.root variable in ant file.</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.shared.default.root"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"/opt/ivy/repository/shared"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<p>Other properties like ivy pattern and artifact pattern can also be
+customized as follows −</p>
+<p>build.xml</p>
+<div class="frame_">
+<p><span class="text_4">&lt;target</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"resolve"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.shared.default.root"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"/opt/ivy/repository/shared"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.shared.default.ivy.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[organisation]/[module]/[revision]/ivy.xml"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.shared.default.artifact.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[organisation]/[module]/[revision]/[artifact].[ext]"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;ivy:resolve</span> <span
+class="text_4">/&gt;</span></p>
+<p>&lt;/target&gt;</p>
+</div>
+<h2 class="block_9">Overriding ivysettings defaults</h2>
+<p>By default ivy has its configurations in ivysettings.xml present in
+ivy.jar.</p>
+<p>ivysettings.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;settings</span> <span
+class="text_5">defaultResolver</span> <span class="text_6">=</span>
+<span class="text_7">"default"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-public.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-shared.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-local.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-main-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-default-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<p>To override shared repository setting, update the contents of
+ivysettings-shared.xml.</p>
+<p>ivysettings-shared.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.shared.default.root"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.ivy.user.dir}/shared"</span> <span
+class="text_5">override</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.shared.default.ivy.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"</span>
+<span class="text_5">override</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;property</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"ivy.shared.default.artifact.pattern"</span> <span
+class="text_5">value</span> <span class="text_6">=</span> <span
+class="text_7">"[organisation]/[module]/[revision]/[type]s/[artifact].[ext]"</span>
+<span class="text_5">override</span> <span class="text_6">=</span> <span
+class="text_7">"false"</span> <span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;resolvers&gt;</span></p>
+<p><span class="text_4">&lt;filesystem</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"shared"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.shared.default.root}/${ivy.shared.default.ivy.pattern}"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;artifact</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.shared.default.root}/${ivy.shared.default.artifact.pattern}"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/filesystem&gt;</span></p>
+<p><span class="text_4">&lt;/resolvers&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<h1 class="block_11"><br />
+</h1>
+<p><span id="text00017.html"></span></p>
+<h1 class="block_11"><span id="text00017.html_id_Toc68076089"
+class="calibre4">Public repository</span></h1>
+<p>A public repository is a repository accessible using internet and
+have third party modules. By default ibiblio in m2 compatible mode is
+the public repository. It is also referred as maven 2 public
+repository.</p>
+<h2 class="block_9">Overriding ivysettings defaults</h2>
+<p>By default ivy has its configurations in ivysettings.xml present in
+ivy.jar.</p>
+<p>ivysettings.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;settings</span> <span
+class="text_5">defaultResolver</span> <span class="text_6">=</span>
+<span class="text_7">"default"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-public.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-shared.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-local.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-main-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-default-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<p>To override public repository setting, update the contents of
+ivysettings-public.xml or create the ivysettings.xml in setting folder
+of your project.</p>
+<p>ivysettings.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;settings</span> <span
+class="text_5">defaultResolver</span> <span class="text_6">=</span>
+<span class="text_7">"default"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"http://customserver/ivy/ivysettings-public.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-shared.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-local.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-main-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;include</span> <span
+class="text_5">url</span> <span class="text_6">=</span> <span
+class="text_7">"${ivy.default.settings.dir}/ivysettings-default-chain.xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<p>Update the default ivysetting-public.xml contents.</p>
+<p>Original - ivysetting-public.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;resolvers&gt;</span></p>
+<p><span class="text_4">&lt;ibiblio</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"public"</span> <span class="text_5">m2compatible</span>
+<span class="text_6">=</span> <span class="text_7">"true"</span> <span
+class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/resolvers&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>
+<p>Updated - ivysetting-public.xml</p>
+<div class="frame_">
+<p>&lt;ivysettings&gt;</p>
+<p><span class="text_4">&lt;resolvers&gt;</span></p>
+<p><span class="text_4">&lt;filesystem</span> <span
+class="text_5">name</span> <span class="text_6">=</span> <span
+class="text_7">"public"</span> <span class="text_4">&gt;</span></p>
+<p><span class="text_4">&lt;ivy</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"/path/to/my/public/rep/[organisation]/[module]/ivy-[revision].xml"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;artifact</span> <span
+class="text_5">pattern</span> <span class="text_6">=</span> <span
+class="text_7">"/path/to/my/public/rep/[organisation]/[module]/[artifact]-[revision].[ext]"</span>
+<span class="text_4">/&gt;</span></p>
+<p><span class="text_4">&lt;/filesystem&gt;</span></p>
+<p><span class="text_4">&lt;/resolvers&gt;</span></p>
+<p>&lt;/ivysettings&gt;</p>
+</div>

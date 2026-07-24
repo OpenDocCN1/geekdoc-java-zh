@@ -1,0 +1,842 @@
+- fmt: "\n![](cover.jpeg)\n\nCopyright © 2018\n\nAll rights reserved. No part of this\
+    \ publication may be reproduced, distributed, or transmitted in any form or by\
+    \ any means, including photocopying, recording, or other electronic or mechanical\
+    \ methods, without the prior written permission of the publisher, except in the\
+    \ case of brief quotations embodied in critical reviews and certain other noncommercial\
+    \ uses permitted by copyright law.\n\n# 1. Introduction\n\nLambda exist in many\
+    \ languages. A Lambda is an anonymous function (function without a name) and is\
+    \ used to implement a function defined by a functional interface.\n\nJava8 introduces\
+    \ Lambda into Java. A Lambda expression is a function which can be created without\
+    \ belonging to any class. A Java Lambda expression can be passed around if it\
+    \ was an object and executed on demand (which allows us to pass logic in a more\
+    \ compact way.) `λ` is the symbol that represents a Lambda.\n\n## 1.1. Lambda\
+    \ syntax\n\n### 1.1.1. General syntax\n\nLambda expressions introduce arrow into\
+    \ Java. It divides the lambda expression in two parts. The left side specifies\
+    \ the parameters required by the expression which could also be empty if no parameters\
+    \ are required. The right side is the lambda body which specifies the actions\
+    \ of the lambda expression: `(parameter1, parameter2) -> {code}`\n\nThe example\
+    \ below is a Lambda with 2 parameters that prints those parameters to the console:\n\
+    \n```java\n(int number, char) -> {System.out.println(number);}\n```\n\n### 1.1.2.\
+    \ Abbreviations\n\n- Parameters are optional in a Lambda:\n  `(number, character)\
+    \ -> {System.out.println(number);}`\n- A Lambda that has 1 parameter => the parentheses\
+    \ are optional:\n  `number -> {System.out.println(number);}`\n- A Lambda that\
+    \ hasn’t any parameters => the parentheses are obliged:\n  `() -> {System.out.println(\"\
+    Hello World\");}`\n- A Lambda that has only one instruction => the curly brackets\
+    \ are optional:\n  `number -> System.out.println(number);`\n- A Lambda that has\
+    \ only one instruction that is a return-instruction => the keyword return is optional:\n\
+    \  `number -> number;`\n\n## 1.2 Lambda is an implementation of a functional interface\n\
+    \nA functional interface is an interface that contains one and only one abstract\
+    \ method. The Java standard `Runnable` interface is such a functional interface.\
+    \ It defines one method: `run()`.\n\nAside from the built-in functional interfaces,\
+    \ we can create our own functional interfaces. The example below is such a single\
+    \ method interface:\n\n```java\npublic interface EvenNumber {\n    boolean isEven(int\
+    \ number);\n}\n```\n\nIn Java7 you would have to use an anonymous interface implementation\
+    \ like this:\n\n```java\nclass Main {\n    public static void main(String[] args)\
+    \ {\n        EvenNumber myEvenNumber = new EvenNumber() {\n            public\
+    \ boolean isEven(int number) {\n                return number % 2 == 0;\n    \
+    \        }\n        };\n        System.out.println(myEvenNumber.isEven(7));\n\
+    \    }\n}\n```\n\nIn Java8 you can use a Lambda expression that implements the\
+    \ functional interface:\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        EvenNumber myEvenNumber = number -> number % 2 == 0;\n    \
+    \    System.out.println(myEvenNumber.isEven(7));\n    }\n}\n```\n\n## 1.3 @Functional\
+    \ interface\n\nAll functional interfaces are recommended to have an informative\
+    \ `@FunctionalInterface` annotation. This not only clearly communicates the purpose\
+    \ of this interface, but also allows a compiler to generate an error if the annotated\
+    \ interface does not satisfy the conditions. An interface that has more than 1\
+    \ abstract method is no longer a functional interface and cannot be implemented\
+    \ with a Lambda. When the interface is annotated with the `@FunctionalInterface`\
+    \ annotation and the function has more than 1 abstract method, the compiler will\
+    \ generate an error.\n\n```java\n@FunctionalInterface\npublic interface EvenNumber\
+    \ {\n    boolean isEven(int number);\n}\n```\n\n# 2. Java standard library and\
+    \ lambda’s\n\nThe interface `comparator` is a functional interface. It has 1 abstract\
+    \ method: `int compare(T object1, T object2);`.\n\nYou don’t need to write a class\
+    \ to implement this interface, you can write a short lambda as implementation\
+    \ of the interface.\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        String[] fruits = { \"apple\", \"cherries\", \"banana\", \"\
+    avocado\" };\n        Arrays.sort(fruits, (fruit1, fruit2) -> -fruit1.compareTo(fruit2));\n\
+    \        System.out.println(Arrays.toString(fruits));\n    }\n}\n```\n\nYou could\
+    \ also use the length of each word to sort the fruits. You just need to change\
+    \ the lambda expression to:\n\n```java\nfruit1.length() - fruit2.length()\n```\n\
+    \n# 3. Stream and forEach\n\nThe interface `Stream` is new in Java8\\. A stream\
+    \ represents a sequence of elements and supports different kinds of operations\
+    \ to perform computations upon those elements. Streams can be created from various\
+    \ data sources like an array, a list, a set,…\n\nThe methods in the `Stream` interface\
+    \ accept a Lambda as parameter, which makes the code very short and readable.\n\
+    \n## 3.1.1.foreach\n"
+  raw: "\n\n![](cover.jpeg)\n\nCopyright © 2018\n\nAll rights reserved. No part of\
+    \ this publication may be reproduced, distributed, or transmitted in any form\
+    \ or by any means, including photocopying, recording, or other electronic or mechanical\
+    \ methods, without the prior written permission of the publisher, except in the\
+    \ case of brief quotations embodied in critical reviews and certain other noncommercial\
+    \ uses permitted by copyright law.\n\nTable of Contents\n\n[1.Introduction](#part0000_split_002.html__Toc518902959)\n\
+    \n[1.1.Lambda syntax](#part0000_split_003.html__Toc518902960)\n\n[1.1.1.General\
+    \ syntax](#part0000_split_003.html__Toc518902961)\n\n[1.1.2.Abbreviations](#part0000_split_003.html__Toc518902962)\n\
+    \n[1.2A Lambda is an implementation of a functional interface](#part0000_split_004.html__Toc518902963)\n\
+    \n[1.3 @Functional interface](#part0000_split_005.html__Toc518902964)\n\n[2.Java\
+    \ standard library and lambda’s](#part0000_split_006.html__Toc518902965)\n\n[3.Stream\
+    \ and forEach](#part0000_split_007.html__Toc518902966)\n\n[3.1.1.foreach](#part0000_split_008.html__Toc518902967)\n\
+    \n[3.2 Date sources of a stream](#part0000_split_009.html__Toc518902968)\n\n[3.2.1List](#part0000_split_009.html__Toc518902969)\n\
+    \n[3.2.2 Set](#part0000_split_009.html__Toc518902970)\n\n[3.2.3 Map](#part0000_split_009.html__Toc518902971)\n\
+    \n[3.3String](#part0000_split_010.html__Toc518902972)\n\n[3.4 Files](#part0000_split_011.html__Toc518902973)\n\
+    \n[3.5 Directory](#part0000_split_012.html__Toc518902974)\n\n[3.6Infinite sequence\
+    \ of values](#part0000_split_013.html__Toc518902975)\n\n[3.7Sequence of numbers](#part0000_split_014.html__Toc518902976)\n\
+    \n[4.Filter](#part0000_split_015.html__Toc518902977)\n\n[5.Sort](#part0000_split_016.html__Toc518902978)\n\
+    \n[6.Combining operations](#part0000_split_017.html__Toc518902979)\n\n[7.Unique\
+    \ values](#part0000_split_018.html__Toc518902980)\n\n[8.Transform](#part0000_split_019.html__Toc518902981)\n\
+    \n[9.Check if one or all values match with a given predicate](#part0000_split_020.html__Toc518902982)\n\
+    \n[9.1AllMatch](#part0000_split_020.html__Toc518902983)\n\n[9.2Anymatch](#part0000_split_021.html__Toc518902984)\n\
+    \n[10.Collect Stream values](#part0000_split_022.html__Toc518902985)\n\n[10.1\
+    \ Array](#part0000_split_023.html__Toc518902986)\n\n[10.2List](#part0000_split_024.html__Toc518902987)\n\
+    \n[10.3 Set](#part0000_split_025.html__Toc518902988)\n\n[10.4Map](#part0000_split_026.html__Toc518902989)\n\
+    \n[10.5Stats](#part0000_split_027.html__Toc518902990)\n\n[10.5.1Count](#part0000_split_027.html__Toc518902991)\n\
+    \n[10.5.2Sum](#part0000_split_027.html__Toc518902992)\n\n[10.5.3 Min, max, average](#part0000_split_027.html__Toc518902993)\n\
+    \n[10.6Stats on long values](#part0000_split_028.html__Toc518902994)\n\n[10.7Stats\
+    \ on double values](#part0000_split_029.html__Toc518902995)\n\n[10.8 Min and max\
+    \ of other valus](#part0000_split_030.html__Toc518902996)\n\n[11.Reduce](#part0000_split_031.html__Toc518902997)\n\
+    \n[11.1 Stream.reduce() with Accumulator](#part0000_split_032.html__Toc518902998)\n\
+    \n[11.2 Stream.reduce() with Identity and Accumulator](#part0000_split_033.html__Toc518902999)\n\
+    \n[12Conclusion](#part0000_split_034.html__Toc518903000)\n\n# 1. Introduction\n\
+    \nLambda’s exist in many coding languages. A Lambda is an anonymous function (function\
+    \ without a name) and is used to implement a function defined by a functional\
+    \ interface.\n\nJava8 introduces Lambda’s into Java. Lambda’s are Java’s first\
+    \ steps into functional programming. A Java Lambda expression is a function which\
+    \ can be created without belonging to any class. A Java Lambda expression can\
+    \ be passed around as if it was an object and executed on demand (which allows\
+    \ us to pass logic in a more compact way.)\n\nλ is the symbol that represents\
+    \ a Lambda.\n\n## 1.1. Lambda syntax\n\n### 1.1.1. General syntax\n\nLambda expressions\
+    \ introduce the arrow parameter into Java. It divides the lambda expression in\
+    \ two parts. The left side specifies the parameters required by the expression\
+    \ which could also be empty if no parameters are required. The right side is the\
+    \ lambda body which specifies the actions of the lambda expression:\n\n(parameter1,\
+    \ parameter2) -> {code of the function}\n\nThe example below is a Lambda with\
+    \ 2 parameters that prints those parameters to the console:\n\n(int number, char\
+    \ character) -> {System.out.println(number); System.out.println(character);}\n\
+    \n### 1.1.2. Abbreviations \n\n*   Parameters are optional in a Lambda\n\n   \
+    \ (number, character) -> {System.out.println(number); System.out.println(character);}\n\
+    \n*   A Lambda that has 1 parameter => the parentheses are optional\n\n    number\
+    \ -> {System.out.println(number);}\n\n*   A Lambda that hasn’t any parameters\
+    \ => the parentheses are obliged\n\n    () -> {System.out.println(“Hello World”);}\n\
+    \n*   A Lambda that has only one instruction => the curly brackets are optional\n\
+    \n    number -> System.out.println(number);\n\n*   A Lambda that has only one\
+    \ instruction that is a return-instruction => the keyword return is optional\n\
+    \n    number -> number * number;\n\n## 1.2A Lambda is an implementation of a functional\
+    \ interface\n\nA functional interface is an interface that contains one and only\
+    \ one abstract method. The Java standard [Runnable interface](https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html)\
+    \ is such a functional interface. It defines one method: run().\n\nAside from\
+    \ the built-in functional interfaces, we can create our own functional interfaces.\
+    \ The example below is such a single method interface:\n\npublic  interface EvenNumber\
+    \ {\n\nboolean isEven(int  number);\n\n}\n\nIn Java7 you would have to use an\
+    \ anonymous interface implementation like this:\n\npublic  class  Main {\n\npublic\
+    \  static  void main(String[] args) {\n\nEvenNumber myEvenNumber = new EvenNumber()\
+    \ {\n\npublic  boolean isEven(int  number) {\n\nreturn  number % 2 == 0;\n\n}};\n\
+    \nSystem.out.println(myEvenNumber.isEven(7));\n\n}}\n\nIn Java8 you can use a\
+    \ Lambda expression that implements the functional interface:\n\npublic  class\
+    \ Main {\n\npublic  static  void main(String[] args) {\n\nEvenNumber myEvenNumber\
+    \ =\n\n number -> number % 2 == 0;\n\n System.out.println(myEvenNumber.isEven(7)); \n\
+    \n } }\n\n## 1.3 @Functional interface\n\nAll functional interfaces are recommended\
+    \ to have an informative  @FunctionalInterface  annotation. This not only clearly\
+    \ communicates the purpose of this interface, but also allows a compiler to generate\
+    \ an error if the annotated interface does not satisfy the conditions. An interface\
+    \ that has more than 1 abstract method is no longer a functional interface and\
+    \ cannot be  implemented with a Lambda. When the interface is annotated with the\
+    \  @FunctionalInterface annotation and the function has more than 1 abstract method,\
+    \ the compiler will generate an error.\n\n@FunctionalInterface\n\npublic  interface\
+    \ EvenNumber {\n\nboolean isEven(int  number);\n\n}\n\n# 2. Java standard library\
+    \ and lambda’s\n\nThe interface comparator is a functional interface. It has 1\
+    \ abstract method:\n\nint compare(T object1, T object2);\n\nyou don’t need to\
+    \ write a class to implement this interface, you can write a short lambda as implementation\
+    \ of the interface.\n\nclass Main {\n\npublic  static  void main(String[] args)\
+    \ {\n\nString[] fruits = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n\
+    \nArrays.sort(fruits, (fruit1, fruit2) -> -fruit1.compareTo(fruit2));\n\nSystem.out.println(Arrays.toString(fruits));\n\
+    \n}}\n\n You could also use the length of each word to sort the fruits. You just\
+    \ need to change the lambda expression to:                           \n\nfruit1.length()\
+    \ - fruit2.length()\n\n# 3. Stream and forEach\n\nThe interface Stream is new\
+    \ in Java8\\. A stream represents a sequence of elements and supports different\
+    \ kinds of operations to perform computations upon those elements. Streams can\
+    \ be created from various data sources like an array, a list, a set,…\n\nThis\
+    \ guide teaches you how to work with Java 8 streams and how to use the different\
+    \ kinds of available stream operations like filter, map, reduce,…\n\nThe methods\
+    \ in the Stream interface accept a Lambda as parameter, which makes the code very\
+    \ short and readable.\n\n## 3.1.1. foreach"
+  toc: []
+  trans: "\n\n![](img/cover.jpeg)\n\nCopyright © 2018\n\n版权所有。未经出版者书面许可，不得以任何形式或通过任何手段复制、传播或传输本书的任何部分，包括复印、录制或其他电子或机械方法，但法律允许的评论性引用以及某些其他非商业用途。\n\
+    \n# 1. 引言\n\nLambda 存在于许多语言中。Lambda 是一种匿名函数（没有名字的），用于实现由函数式接口定义的函数。\n\nJava8 将\
+    \ Lambda 引入了 Java。Lambda 表达式是一种不属于任何类的函数。如果 Java Lambda 表达式是一个对象，它可以被传递并按需执行（这允许我们以更简洁的方式传递逻辑）。`λ`\
+    \ 是代表 Lambda 的符号。\n\n## 1.1. Lambda 语法\n\n### 1.1.1 通用语法\n\nLambda 表达式在 Java 中引入了箭头。它将\
+    \ Lambda 表达式分为两个部分。左侧指定表达式所需的参数，如果没有参数，也可以为空。右侧是 Lambda 体，指定了 Lambda 表达式的动作：`(parameter1,\
+    \ parameter2) -> {code}`\n\n下面的示例是一个带有 2 个参数的 Lambda，它将这些参数打印到控制台：\n\n```java\n\
+    (int number, char) -> {System.out.println(number);}\n```\n\n### 1.1.2. 缩写\n\n\
+    - Lambda 中的参数是可选的：\n  `(number, character) -> {System.out.println(number);}`\n\
+    - 有 1 个参数的 Lambda => 括号是可选的：\n  `number -> {System.out.println(number);}`\n- 无参数的\
+    \ Lambda => 括号是强制的：\n  `() -> {System.out.println(\"Hello World\");}`\n- 只有一个指令的\
+    \ Lambda => 大括号是可选的：\n  `number -> System.out.println(number);`\n- 只有一个返回指令的 Lambda\
+    \ => 关键字 return 是可选的：\n  `number -> number;`\n\n## 1.2 Lambda 是函数式接口的实现\n\n函数式接口是一个包含且只有一个抽象方法的接口。Java\
+    \ 标准 `Runnable` 接口就是这样一个函数式接口。它定义了一个方法：`run()`。\n\n除了内置的函数式接口，我们还可以创建自己的函数式接口。下面的示例就是这样一个单方法接口：\n\
+    \n```java\npublic interface EvenNumber {\n    boolean isEven(int number);\n}\n\
+    ```\n\n在 Java7 中，你必须使用像这样的匿名接口实现：\n\n```java\nclass Main {\n    public static\
+    \ void main(String[] args) {\n        EvenNumber myEvenNumber = new EvenNumber()\
+    \ {\n            public boolean isEven(int number) {\n                return number\
+    \ % 2 == 0;\n            }\n        };\n        System.out.println(myEvenNumber.isEven(7));\n\
+    \    }\n}\n```\n\n在 Java8 中，你可以使用实现函数式接口的 Lambda 表达式：\n\n```java\nclass Main {\n\
+    \    public static void main(String[] args) {\n        EvenNumber myEvenNumber\
+    \ = number -> number % 2 == 0;\n        System.out.println(myEvenNumber.isEven(7));\n\
+    \    }\n}\n```\n\n## 1.3 @Functional interface\n\n建议所有函数式接口都带有 `@FunctionalInterface`\
+    \ 注解。这不仅能清晰地说明接口的目的，还允许编译器在标记接口不满足条件时生成错误。具有超过 1 个抽象方法的接口不再是函数式接口，并且无法用 Lambda\
+    \ 实现。当接口标记了 `@FunctionalInterface` 注解且函数有超过 1 个抽象方法时，编译器将生成错误。\n\n```java\n@FunctionalInterface\n\
+    public interface EvenNumber {\n    boolean isEven(int number);\n}\n```\n\n# 2.\
+    \ Java 标准库与 lambda\n\n`comparator` 接口是一个函数式接口。它有 1 个抽象方法：`int compare(T object1,\
+    \ T object2);`。\n\n你不需要写一个类来实现这个接口，可以写一个简短的 Lambda 作为接口的实现。\n\n```java\nclass\
+    \ Main {\n    public static void main(String[] args) {\n        String[] fruits\
+    \ = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n        Arrays.sort(fruits,\
+    \ (fruit1, fruit2) -> -fruit1.compareTo(fruit2));\n        System.out.println(Arrays.toString(fruits));\n\
+    \    }\n}\n```\n\n你可以使用每个单词的长度对水果进行排序。你只需要将 Lambda 表达式更改为：\n\n```java\nfruit1.length()\
+    \ - fruit2.length()\n```\n\n# 3. Stream 和 forEach\n\n`Stream` 接口是 Java8 新引入的。流代表元素序列，并支持各种操作来对这些元素执行计算。Stream\
+    \ 可以从各种数据源创建，如数组、列表、集合等……\n\n`Stream` 接口中的方法接受 Lambda 作为参数，这使得代码变得非常短且易读。\n\n\
+    ## 3.1.1.foreach\n\n"
+- fmt: "\n`forEach` iterates over a collection and performs the given action for each\
+    \ element of the collection until all elements have been processed or the action\
+    \ throws an exception. The example below will print each fruit to the console:\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  String[] fruits = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n \
+    \       Stream<String> stream = Arrays.stream(fruits);\n        stream.forEach(fruit\
+    \ -> System.out.println(fruit));\n    }\n}\n```\n\nIt is possible to combine the\
+    \ last two instructions into one:\n\n```java\nclass Main {\n    public static\
+    \ void main(String[] args) {\n        String[] fruits = { \"apple\", \"cherries\"\
+    , \"banana\", \"avocado\" };\n        Arrays.stream(fruits)\n        .forEach(fruit\
+    \ -> System.out.println(fruit));\n    }\n}\n```\n\n## 3.2 Date sources of a stream\n\
+    \n### 3.2.1 List\n\nA `List` can be a date source of a stream\n\n```java\nclass\
+    \ Main {\n    public static void main(String[] args) {\n        List<String> fruits\
+    \ = Arrays.asList(\"apple\", \"cherries\", \"banana\", \"avocado\");\n       \
+    \ fruits.stream()\n        .forEach(fruit -> System.out.println(fruit));\n   \
+    \ }\n}\n```\n\n### 3.2.2 Set\n\nA `Set` can be a date source of a stream\n\n```java\n\
+    class Main {\n    public static void main(String[] args) {\n        Set<Integer>\
+    \ numbers = new LinkedHashSet<>();\n        numbers.add(1);\n        numbers.add(3);\n\
+    \        numbers.add(4);\n        numbers.add(7);\n        numbers.stream().forEach(getal\
+    \ -> System.out.println(getal));\n    }\n}\n```\n\n### 3.2.3 Map\n\nThe `keySet`,\
+    \ the `values` or the `entrySet` can be a date source of a stream. In the example\
+    \ below we use an `entrySet`.\n\n```java\nclass Main {\n    public static void\
+    \ main(String[] args) {\n        Map<String, String> languages = new LinkedHashMap<>();\n\
+    \        languages.put(\"ENG\", \"English\"); \n        languages.put(\"FRE\"\
+    , \"French\");  \n        languages.entrySet().stream()\n        .forEach(entry\
+    \ -> System.out.println(entry.getKey() + ':' + entry.getValue()));  \n    }\n\
+    }\n```\n\n## 3.3 String\n\nA `String` can be a date source of a stream. The values\
+    \ in the stream are the characters of the `String`.\n\n```java\nclass Main {\n\
+    \    public static void main(String[] args) {\n        \"Lambdafun\".chars()\n\
+    \        .forEach(unicode->System.out.println((char) unicode)); \n    }\n}\n```\n\
+    \n## 3.4 Files\n\nA file can be a date source of a stream. The values in the stream\
+    \ are `Strings` that represent the lines in the file.\n\n```java\nclass Main {\n\
+    \    private final static Path LANGUAGES_PATH = Paths.get(\"/data/languages.txt\"\
+    );\n    public static void main(String[] args) {\n        try (Stream<String>\
+    \ stream = Files.lines(LANGUAGES_PATH)) {\n            stream.forEach(line ->\
+    \ System.out.println(line));\n        } catch (IOException ex) {\n           \
+    \ ex.printStackTrace();\n        }\n    }\n}\n```\n\n## 3.5 Directory\n\nA `directory`\
+    \ can be a date source of a stream. The values in the stream are the `paths` of\
+    \ the files and the subdirectories in the directory.\n\n```java\nclass Main {\n\
+    \    private final static Path DATA_PATH = Paths.get(\"/data\");\n    public static\
+    \ void main(String[] args) {\n        try (Stream<Path> stream = Files.list(DATA_PATH))\
+    \ {\n            stream.forEach(entry -> System.out.println(entry.getFileName()));\n\
+    \        } catch (Exception ex) {\n            ex.printStackTrace();\n       \
+    \ }\n    }\n}\n```\n\n## 3.6 Infinite sequence of values\n\nAn infinite sequence\
+    \ of values can be a date source of a stream.\n\n```java\nclass Main {\n    public\
+    \ static void main(String[] args) { \n        Stream.iterate(1, previousNumber\
+    \ -> previousNumber + 2)\n        .forEach(oddNumber->System.out.println(oddNumber));\
+    \  \n    }\n}\n```\n\nUse the method `limit()` if you want to limit the sequence:\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) { \n     \
+    \   Stream.iterate(1, previousNumber -> previousNumber + 2)\n        .limit(10)\n\
+    \        .forEach(oddNumber->System.out.println(oddNumber));  \n    }\n}\n```\n\
+    \n## 3.7 Sequence of numbers\n\n```java\nclass Main {\n    public static void\
+    \ main(String[] args) {\n        IntStream.rangeClosed(1, 10).forEach(number ->\
+    \ System.out.println(number));\n        IntStream.range(1, 10).forEach(number\
+    \ -> System.out.println(number));\n    }\n}\n```\n\n## 4. Filter\n\nSometimes\
+    \ you might want to work with only a subset of the elements. To do so, you can\
+    \ use the `filter` method.\n\nFor example if you want to create a subset of the\
+    \ list with fruits, which contains only those strings whose length is more than\
+    \ 6 characters, you use a `filter`:\n\n```java\nclass Main {\n    public static\
+    \ void main(String[] args) {\n        Stream.of(\"apple\", \"cherries\", \"banana\"\
+    , \"avocado\")\n        .filter(fruit -> fruit.length()>6)\n        .forEach(fruit\
+    \ -> System.out.println(fruit));\n    }\n}\n```\n\n## 5. Sort\n\nYou can sort\
+    \ the values in a stream with the stream-method `sorted()`\n\n```java\nclass Main\
+    \ {\n    public static void main(String[] args) {\n        Stream.of(\"apple\"\
+    , \"cherries\", \"banana\", \"avocado\")\n        .sorted()\n        .forEach(fruit\
+    \ -> System.out.println(fruit));\n    }\n}\n```\n\nThis `sorted` method sorts\
+    \ the stream with natural ordering. It is also possible to use a `Comparator`.\
+    \ In the example below we sort by length:\n\n```java\nclass Main {\n    public\
+    \ static void main(String[] args) {\n        Stream.of(\"apple\", \"cherries\"\
+    , \"banana\", \"avocado\")\n        .sorted((fruit1, fruit2) -> fruit1.length()\
+    \ - fruit2.length())\n        .forEach(fruit -> System.out.println(fruit));\n\
+    \    }\n}\n```\n\n## 6. Combining operations\n\nSometimes you might want to combine\
+    \ multiple operations. For example, you can `filter` and then `sort`:\n\n```java\n\
+    class Main {\n    public static void main(String[] args) {\n        Stream.of(\"\
+    apple\", \"cherries\", \"banana\", \"avocado\")\n        .filter(fruit -> fruit.length()>6)\n\
+    \        .sorted()\n        .forEach(fruit -> System.out.println(fruit));\n  \
+    \  }\n}\n```\n\n## 7. Unique values\n\nThe `distinct()` method returns the unique\
+    \ elements of the stream.\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        Stream.of(\"apple\", \"cherries\", \"banana\", \"avocado\"\
+    , \"apple\")\n        .distinct()\n        .forEach(fruit -> System.out.println(fruit));\n\
+    \    }\n}\n```\n\n## 8. Transform\n\nAssume we now have a stream that we can transform,\
+    \ say mapping strings. The `map` operation takes a function and returns something\
+    \ else. In the example below we transform the strings to their lengths:\n\n```java\n\
+    class Main {\n    public static void main(String[] args) {\n        Stream.of(\"\
+    apple\", \"cherries\", \"banana\", \"avocado\")\n        .map(fruit -> fruit.length())\n\
+    \        .forEach(length -> System.out.println(length));\n    }\n}\n```\n\n##\
+    \ 9. Check if one or all values match with a predicate\n\n### 9.1 allMatch\n\n\
+    The `allMatch` method returns true if all the values of the stream match the predicate.\
+    \ We pass the predicate as an argument to the `allMatch()` method.\n\n```java\n\
+    class Main {\n    public static void main(String[] args) {\n        System.out.println(\n\
+    \            Stream.of(\"apple\", \"cherries\", \"banana\", \"avocado\")\n   \
+    \         .allMatch(fruit -> fruit.length() > 5)\n        );\n    }\n}\n```\n\n\
+    ### 9.2 anyMatch\n\nThe `anyMatch` method returns true if one of the values matches\
+    \ the predicate.\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        System.out.println(\n            Stream.of(\"apple\", \"cherries\"\
+    , \"banana\", \"avocado\")\n            .anyMatch(fruit -> fruit.length() > 6)\n\
+    \        );\n    }\n}\n```\n\n## 10. Collect Stream values\n\nIt is possible to\
+    \ collect all the values of a stream in an array, list, set,…\n\n### 10.1 Array\n\
+    \nTo convert a stream to an array we use the `toArray()` method. This method returns\
+    \ an array containing the elements of the stream.\n\n```java\nclass Main {\n \
+    \   public static void main(String[] args) {\n        Stream<String> stream =\
+    \ Stream.of(\"apple\", \"cherries\", \"banana\", \"avocado\");\n        String[]\
+    \ arr = stream.toArray(size -> new String[size]);\n        System.out.println(Arrays.toString(arr));\n\
+    \    }\n}\n```\n\n### 10.2 List\n\nTo convert a stream to a List we use the `collect()`\
+    \ method from stream objects. The `toList()` collector can be used for collecting\
+    \ all Stream elements into a List instance.\n\n```java\nclass Main {\n    public\
+    \ static void main(String[] args) {\n        List<String> list = Stream.of(\"\
+    apple\", \"cherries\", \"banana\", \"avocado\")\n                            \
+    \       .collect(Collectors.toList());\n        System.out.println(list);\n  \
+    \  }\n}\n```\n"
+  raw: "forEach iterates over a collection and performs the given action for each\
+    \ element of the collection until all elements have been processed or the action\
+    \ throws an exception. The example below will print each fruit to the console:\n\
+    \nclass Main {\n\npublic  static  void main(String[] args) {\n\nString[] fruits\
+    \ = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n\nStream<String> stream\
+    \ = Arrays.stream(fruits);\n\nstream.forEach(fruit -> System.out.println(fruit));\n\
+    \n}}\n\nIt is possible to combine the last two instructions into one:\n\nclass\
+    \ Main {\n\npublic  static  void main(String[] args) {\n\nString[] fruits = {\
+    \ \"apple\", \"cherries\", \"banana\", \"avocado\" };\n\nArrays.stream(fruits)\n\
+    \n.forEach(fruit -> System.out.println(fruit));\n\n}}\n\n## 3.2 Date sources of\
+    \ a stream\n\n### 3.2.1List\n\nA list can be a date source of a stream\n\nclass\
+    \ Main {\n\npublic  static  void main(String[] args) {\n\nList<String> fruits\
+    \ = Arrays.asList(\"apple\", \"cherries\", \"banana\", \"avocado\");\n\nfruits.stream()\n\
+    \n.forEach(fruit -> System.out.println(fruit));\n\n}}\n\n### 3.2.2 Set\n\nA Set\
+    \ can be a date source of a stream\n\nclass Main {\n\npublic  static  void main(String[]\
+    \ args) {\n\nSet<Integer> numbers = new LinkedHashSet<>();\n\nnumbers.add(1);\n\
+    \nnumbers.add(3);\n\nnumbers.add(4);\n\nnumbers.add(7);\n\nnumbers.stream().forEach(getal\
+    \ -> System.out.println(getal));\n\n}}\n\n### 3.2.3 Map\n\nThe keySet, the values\
+    \ or the entrySet can be a date source of a stream. In the example below we use\
+    \ an entrySet.\n\nclass Main {\n\npublic  static  void main(String[] args) {\n\
+    \nMap<String, String> languages = new LinkedHashMap<>();\n\nlanguages.put(\"ENG\"\
+    , \"English\"); \n\nlanguages.put(\"FRE\", \"French\");  \n\nlanguages.entrySet().stream()\n\
+    \n.forEach(entry -> System.out.println(entry.getKey() + ':' + entry.getValue()));  \
+    \ }\n\n}\n\n## 3.3String\n\nA String can be a date source of a stream. The values\
+    \ in the stream are the characters of the String.\n\nclass Main {\n\npublic  static\
+    \  void main(String[] args) {\n\n \"Lambdafun\".chars()\n\n    .forEach(unicode->System.out.println((char)\
+    \ unicode)); } }\n\n## 3.4 Files\n\nA file can be a date source of a stream. \
+    \ The values in the stream are Strings that represent the lines in the file.\n\
+    \nclass Main {\n\nprivate  final  static Path LANGUAGES_PATH = Paths.get(\"/data/languages.txt\"\
+    );\n\npublic  static  void main(String[] args) {\n\ntry (Stream<String> stream\
+    \ = Files.lines(LANGUAGES_PATH)) {\n\nstream.forEach(line -> System.out.println(line));\n\
+    \n} catch (IOException ex) {\n\nex.printStackTrace();\n\n}}}\n\n## 3.5 Directory\n\
+    \nA directory can be a date source of a stream.  The values in the stream are\
+    \ the paths of the files and the subdirectories in the directory.\n\nclass Main\
+    \ {\n\nprivate  final  static Path DATA_PATH = Paths.get(\"/data\");\n\npublic\
+    \  static  void main(String[] args) {\n\ntry (Stream<Path> stream = Files.list(DATA_PATH))\
+    \ {\n\nstream.forEach(entry -> System.out.println(entry.getFileName()));\n\n}\
+    \ catch (Exception ex) {\n\nex.printStackTrace();\n\n}}}\n\n## 3.6Infinite sequence\
+    \ of values\n\nAn infinite sequence of values can be a date source of a stream.\n\
+    \nclass Main {\n\npublic  static  void main(String[] args) { \n\nStream.iterate(1,\
+    \ previousNumber -> previousNumber + 2)\n\n.forEach(oddNumber->System.out.println(oddNumber));  \
+    \ }\n\n}\n\nUse the method limit() if you want to limit the sequence:\n\nclass\
+    \ Main {\n\npublic  static  void main(String[] args) { \n\nStream.iterate(1, previousNumber\
+    \ -> previousNumber + 2)\n\n.limit(10)\n\n.forEach(oddNumber->System.out.println(oddNumber));  \
+    \ }\n\n}\n\n## 3.7Sequence of numbers\n\nclass Main {\n\npublic  static  void\
+    \ main(String[] args) {\n\nIntStream.rangeClosed(1, 10).forEach(number -> System.out.println(number));\n\
+    \nIntStream.range(1, 10).forEach(number -> System.out.println(number));\n\n# 4.\
+    \ Filter\n\nSometimes you might want to work with only a subset of the elements.\
+    \ To do so, you can use the filter method.\n\nFor example if you want to create\
+    \ a subset of the list with fruits, which contains only those strings whose length\
+    \ is more than 6 characters, you use a filter:\n\nclass Main {\n\npublic  static\
+    \  void main(String[] args) {\n\nStream.of(\"apple\", \"cherries\", \"banana\"\
+    , \"avocado\")\n\n.filter(fruit -> fruit.length()>6)\n\n.forEach(fruit -> System.out.println(fruit));\n\
+    \n}}\n\n# 5. Sort\n\nYou can sort the values in a stream with the stream-method\
+    \ sorted()\n\nclass Main {\n\npublic  static  void main(String[] args) {\n\nStream.of(\"\
+    apple\", \"cherries\", \"banana\", \"avocado\")\n\n.sorted()\n\n.forEach(fruit\
+    \ -> System.out.println(fruit));\n\n}}\n\nThis method sorts the stream with natural\
+    \ ordering.\n\nOrdering provided by Comparator is possible as well. This Comparator\
+    \ can be instantiated using a Lambda expression. In the example below we will\
+    \ order by length of each string:\n\nclass Main {\n\npublic  static  void main(String[]\
+    \ args) {\n\nStream.of(\"apple\", \"cherries\", \"banana\", \"avocado\")\n\n.sorted((fruit1,\
+    \ fruit2)-> fruit1.length() - fruit2.length())\n\n.forEach(fruit -> System.out.println(fruit));\n\
+    \n}}\n\n# 6. Combining operations\n\nIn the example below we combine the filter,\
+    \ sorted and forEach operations:\n\nclass Main {\n\npublic  static  void main(String[]\
+    \ args) {\n\nStream.of(\"apple\", \"cherries\", \"banana\", \"avocado\")\n\n.filter(fruit\
+    \ -> fruit.length()>5)\n\n.sorted()\n\n.forEach(fruit -> System.out.println(fruit));\n\
+    \n}}\n\n# 7. Unique values\n\nThe Stream method distinct() returns the unique\
+    \ values\n\nclass Main {\n\npublic  static  void main(String[] args) {\n\nStream.of(\"\
+    apple\", \"cherries\", \"apple\", \"banana\", \"avocado\", \"apple\")\n\n.distinct()\n\
+    \n.sorted()\n\n.forEach(fruit -> System.out.println(fruit));\n\n}}\n\n# 8. Transform\n\
+    \nAssume we now have a filtered data that we can use for the real operations,\
+    \ say transforming the objects. The map operations allows us to apply a function\
+    \ that takes in a parameter of one type, and returns something else.\n\nIn the\
+    \ example below we will transform the list of strings to a list of numbers (the\
+    \ lengths of the strings)\n\nclass Main {\n\npublic  static  void main(String[]\
+    \ args) {\n\nStream.of(\"apple\", \"cherries\", \"banana\", \"avocado\")\n\n.map(fruit\
+    \ -> fruit.length())\n\n.forEach(fruit -> System.out.println(fruit));\n\n}}\n\n\
+    We can also use this map method if we want to transform a list of objects to a\
+    \ list of methods of that object. In the example below we get the surfaces of\
+    \ the rectangles in the stream.\n\nclass Rectangle {\n\nprivate  final  int  length;\n\
+    \nprivate  final  int  width; \n\nRectangle(int  length, int  width) {\n\nthis.length\
+    \ = length;   \n\nthis.width = width; \n\n} \n\nint getSurface() {\n\nreturn \
+    \ length * width; \n\n}\n\n}\n\nclass Main {\n\npublic  static  void main(String[]\
+    \ args) { \n\nStream.of(new Rectangle(6, 2), new Rectangle(3, 1), new Rectangle(5,\
+    \ 4))\n\n.map(rectangle -> rectangle.getSurface())\n\n.forEach(surface -> System.out.println(surface));}\
+    \ }\n\n# 9. Check if one or all values match with a given predicate\n\n## 9.1AllMatch\n\
+    \nThis method returns true if all the values of a stream match with the given\
+    \ predicate. We pass the predicate as an argument to the allmatch() method.\n\n\
+    class Main {\n\npublic  static  void main(String[] args) {\n\nSystem.out.println(\n\
+    \nStream.of(\"apple\", \"cherries\", \"banana\", \"avocado\")\n\n.allMatch(fruit\
+    \ -> fruit.length() == 6));\n\n}}\n\n## 9.2Anymatch\n\nThis method returns true\
+    \ if one of the values matches with the given predicate\n\nclass Main {\n\npublic\
+    \  static  void main(String[] args) {\n\nSystem.out.println(\n\nStream.of(\"apple\"\
+    , \"cherries\", \"banana\", \"avocado\")\n\n.anyMatch(fruit -> fruit.length()\
+    \ == 6));\n\n}}\n\n# 10.  Collect Stream values\n\nIt is possible to collect all\
+    \ the values of a stream in an array, list, set,…\n\n## 10.1 Array\n\nTo convert\
+    \ a stream to an array we use the toArray() method from stream objects. This method\
+    \ returns an array containing the elements of the stream.\n\nclass Main {\n\n\
+    public  static  void main(String[] args) {\n\nStream<String> stream = Stream.of(\"\
+    apple\", \"cherries\", \"banana\", \"avocado\");\n\nString[] arr = stream.toArray(size\
+    \ -> new String[size]);\n\nSystem.out.println(Arrays.toString(arr));\n\n}}\n\n\
+    ## 10.2List\n\nTo convert a stream to a List we use the collect() method from\
+    \ stream objects. The toList() collector can be used for collecting all Stream\
+    \ elements into a List instance."
+  toc: []
+  trans: "\n\n`forEach` 遍历集合并对集合中的每个元素执行指定的操作，直到所有元素都处理完毕或操作抛出异常。下面的示例将把每种水果打印到控制台：\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  String[] fruits = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n \
+    \       Stream<String> stream = Arrays.stream(fruits);\n        stream.forEach(fruit\
+    \ -> System.out.println(fruit));\n    }\n}\n```\n\n可以将最后两条指令合并为一条：\n\n```java\n\
+    class Main {\n    public static void main(String[] args) {\n        String[] fruits\
+    \ = { \"apple\", \"cherries\", \"banana\", \"avocado\" };\n        Arrays.stream(fruits)\n\
+    \        .forEach(fruit -> System.out.println(fruit));\n    }\n}\n```\n\n## 3.2\
+    \ 流的数据源\n\n### 3.2.1 List\n\n`List` 可以作为流的数据源\n\n```java\nclass Main {\n    public\
+    \ static void main(String[] args) {\n        List<String> fruits = Arrays.asList(\"\
+    apple\", \"cherries\", \"banana\", \"avocado\");\n        fruits.stream()\n  \
+    \      .forEach(fruit -> System.out.println(fruit));\n    }\n}\n```\n\n### 3.2.2\
+    \ Set\n\n`Set` 可以作为流的数据源\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        Set<Integer> numbers = new LinkedHashSet<>();\n        numbers.add(1);\n\
+    \        numbers.add(3);\n        numbers.add(4);\n        numbers.add(7);\n \
+    \       numbers.stream().forEach(getal -> System.out.println(getal));\n    }\n\
+    }\n```\n\n### 3.2.3 Map\n\n`keySet`、`values` 或 `entrySet` 可以作为流的数据源。在下面的示例中，我们使用了\
+    \ `entrySet`。\n\n```java\nclass Main {\n    public static void main(String[] args)\
+    \ {\n        Map<String, String> languages = new LinkedHashMap<>();\n        languages.put(\"\
+    ENG\", \"English\"); \n        languages.put(\"FRE\", \"French\");  \n       \
+    \ languages.entrySet().stream\n        .forEach(entry -> System.out.println(entry.getKey()\
+    \ + ':' + entry.getValue()));  \n    }\n}\n```\n\n## 3.3 String\n\n`String` 可以作为流的数据源。流中的值是\
+    \ `String` 的字符。\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        \"Lambdafun\".chars()\n        .forEach(unicode->System.out.println((char)\
+    \ unicode)); \n    }\n}\n```\n\n## 3.4 Files\n\n文件可以作为流的数据源。流中的值是代表文件行的 `Strings`。\n\
+    \n```java\nclass Main {\n    private final static Path LANGUAGES_PATH = Paths.get(\"\
+    /data/languages.txt\");\n    public static void main(String[] args) {\n      \
+    \  try (Stream<String> stream = Files.lines(LANGUAGES_PATH)) {\n            stream.forEach(line\
+    \ -> System.out.println(line));\n        } catch (IOException ex) {\n        \
+    \    ex.printStackTrace();\n        }\n    }\n}\n```\n\n## 3.5 Directory\n\n目录（`directory`）可以作为流的数据源。流中的值是该目录下的文件和子目录的\
+    \ `paths`。\n\n```java\nclass Main {\n    private final static Path DATA_PATH =\
+    \ Paths.get(\"/data\");\n    public static void main(String[] args) {\n      \
+    \  try (Stream<Path> stream = Files.list(DATA_PATH)) {\n            stream.forEach(entry\
+    \ -> System.out.println(entry.getFileName()));\n        } catch (Exception ex)\
+    \ {\n            ex.printStackTrace();\n        }\n    }\n}\n```\n\n## 3.6 无限值序列\n\
+    \n无限值序列可以作为流的数据源。\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) { \n        Stream.iterate(1, previousNumber -> previousNumber + 2)\n\
+    \        .forEach(oddNumber->System.out.println(oddNumber));  \n    }\n}\n```\n\
+    \n如果你想限制序列，请使用 `limit()` 方法：\n\n```java\nclass Main {\n    public static void\
+    \ main(String[] args) { \n        Stream.iterate(1, previousNumber -> previousNumber\
+    \ + 2)\n        .limit(10)\n        .forEach(oddNumber->System.out.println(oddNumber));\
+    \  \n    }\n}\n```\n\n## 3.7 数字序列\n\n```java\nclass Main {\n    public static\
+    \ void main(String[] args) {\n        IntStream.rangeClosed(1, 10).forEach(number\
+    \ -> System.out.println(number));\n        IntStream.range(1, 10).forEach(number\
+    \ -> System.out.println(number));\n    }\n}\n```\n\n## 4. Filter\n\n有时你可能只想处理元素的子集。要实现这一点，你可以使用\
+    \ `filter` 方法。\n\n例如，如果你想创建一个水果列表子集，其中包含长度大于 6 个字符的字符串，你可以使用 `filter`：\n\n```java\n\
+    class Main {\n    public static void main(String[] args) {\n        // 示例逻辑\n\
+    \    }\n}\n```\n\n## 5. Sort\n\n你可以使用 `sorted` 方法对流中的值进行排序。\n\n## 6. 操作组合\n\n\
+    有时你可能想组合多个操作。例如 `filter` 然后再 `sort`：\n\n## 7. Unique values\n\n`distinct()` 方法返回流中的唯一元素。\n\
+    \n## 8. Transform\n\n假设我们现在有一个可以转换的流，例如映射字符串。`map` 操作接收一个函数并返回其他内容。在下面的示例中，我们将字符串转换为长度：\n\
+    \n## 9. 检测所有值是否匹配谓词\n\n### 9.1 allMatch\n\n`allMatch` 方法在流中的所有值都匹配谓词时返回 true。我们将谓词作为\
+    \ `allMatch()` 方法的参数。\n\n### 9.2 anyMatch\n\n`anyMatch` 方法在任意一个值匹配谓词时返回 true。\n\
+    \n## 10. Collect 流值\n\n可以将流的所有值收集到数组、列表、集合等\n\n### 10.1 Array\n\n将流转换为数组需要使用 `toArray()`\
+    \ 方法。该方法返回一个包含流元素的数组。\n\n### 10.2 List\n\n将流转换为列表需要使用流对象的 `collect()` 方法。`toList()`\
+    \ 收集器可将所有流元素收集到 List 实例中。\n\n"
+- fmt: "\n```java\nclass Main {\n    public static void main(String[] args) {\n  \
+    \      System.out.println(\n            Stream.of(\"apple\", \"cherries\", \"\
+    banana\", \"avocado\")\n            .sorted()\n            .collect(Collectors.toList()));\n\
+    \    }\n}\n```\n\n## 10.3 Set\n\nTo convert a stream to a `Set` we use the `collect()`\
+    \ method from stream objects. The `toSet()` collector can be used for collecting\
+    \ all `Stream` elements into a `Set` instance.\n\n```java\nclass Main {\n    public\
+    \ static void main(String[] args) {\n        System.out.println(\n           \
+    \ Stream.of(\"apple\", \"cherries\", \"banana\", \"avocado\")\n            .collect(Collectors.toSet()));\n\
+    \    }\n}\n```\n\n## 10.4 Map\n\nIn a map there is a key and a value. In the example\
+    \ below we will use the length of the strings as key and group all the fruits\
+    \ by length of their names.\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        Map<Integer, List<String>> fruitByLength =\n            Stream.of(\"\
+    apple\", \"mango\", \"lemon\", \"avocado\", \"cherries\")\n            .collect(Collectors.groupingBy(fruit\
+    \ -> fruit.length()));\n        fruitByLength.entrySet().stream()\n          \
+    \  .forEach(entry -> {\n                System.out.println(entry.getKey());\n\
+    \                entry.getValue().stream()\n                .forEach(fruit ->\
+    \ System.out.print(fruit + \" \"));\n                System.out.println();\n \
+    \           });\n    }\n}\n```\n\n## 10.5 Stats\n\n### 10.5.1 Count\n\nReturns\
+    \ the number of values in a stream\n\n```java\nclass Main {\n    public static\
+    \ void main(String[] args) {\n        System.out.println(\n            Stream.of(\"\
+    apple\", \"mango\", \"lemon\", \"avocado\", \"cherries\").count());\n    }\n}\n\
+    ```\n\n### 10.5.2 Sum\n\nReturns the sum of an `IntStream`\n\n```java\nclass Main\
+    \ {\n    public static void main(String[] args) {\n        IntStream stream =\
+    \ IntStream.of(1, 3, 4, 7);\n        System.out.println(stream.sum());\n    }\n\
+    }\n```\n\n### 10.5.3 Min, max, average\n\nReturns the min, max or average of an\
+    \ `IntStream`\n\n```java\nclass Main {\n    public static void main(String[] args)\
+    \ {\n        IntStream stream = IntStream.of(1, 3, 4, 7);\n        stream.min().ifPresent(smallest\
+    \ -> System.out.println(smallest));\n    }\n}\n```\n\n## 10.6 Stats on long values\n\
+    \nThe interface `LongStream` is a stream for long values. The methods are the\
+    \ same as with the `IntStream`. It is possible to convert an `IntStream` to a\
+    \ `LongStream` with the method `mapToLong()`.\n\n## 10.7 Stats on double values\n\
+    \nThe interface `DoubleStream` is a stream for double values. The methods are\
+    \ the same as with the `IntStream`. It is possible to convert an `IntStream` to\
+    \ a `DoubleStream` with the method `mapToDouble()`.\n\n## 10.8 Min and max of\
+    \ other values\n\nIt is possible to give in a Lambda in the `min` and `max` methods\
+    \ to determine which are the min and max values. The lambda will implement the\
+    \ functional interface `Comparator`\n\n```java\nclass Main {\n    public static\
+    \ void main(String[] args) {\n        Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9),\
+    \ BigDecimal.valueOf(0.5))\n        .min((number1, number2) -> number1.compareTo(number2))\n\
+    \        .ifPresent(smallest -> System.out.println(smallest));\n    }\n}\n```\n\
+    \n# 11. Reduce\n\nThe methods `min`, `sum`, `max`,… all reduce the values of a\
+    \ stream to one single value. The method `reduce()` does the same thing, but this\
+    \ method is able to reduce any value to one single value (not only `int`, `double`,\
+    \ `long` values). It is a general-purpose reduction method.\n\nThere are 2 versions\
+    \ of the `reduce` method:\n\n## 11.1 Stream.reduce() with Accumulator\n\nIt performs\
+    \ a reduction on the elements of the given stream, using given accumulation function.\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  System.out.println(Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9),\
+    \ BigDecimal.valueOf(0.5))\n        .reduce(BigDecimal.ZERO, (previousSum, number)\
+    \ -> previousSum.add(number)));\n    }\n}\n```\n\n## 11.2 Stream.reduce() with\
+    \ Identity and Accumulator\n\nIt performs a reduction on the elements of the given\
+    \ stream, using given identity value, an accumulation function and combining functions.\
+    \ The identity value must be an identity for the `combiner` function. `Combiner`\
+    \ is a function which aggregates results of the accumulator. `Combiner` is called\
+    \ only in a parallel mode to reduce results of accumulators from different threads.\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9), BigDecimal.valueOf(0.5))\n\
+    \        .reduce((previousSum, number) -> previousSum.add(number))\n        .ifPresent(sum\
+    \ -> System.out.println(sum));\n    }\n}\n```\n\n# 12. Conclusion\n\nThank you\
+    \ for reading this short introduction to Lambda’s and streams in Java. This guide\
+    \ contains all the information you need to start using Lambda’s yourself. Hopefully\
+    \ you learned a lot and feel ready to start integrating Lamdba’s into your code.\
+    \ If you have any questions you can contact me at `programming_made_easy@outlook.be`.\n\
+    \nGood luck and have fun!\n"
+  raw: 'class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    System.out.println(
+
+
+    Stream.of("apple", "cherries", "banana", "avocado")
+
+
+    .sorted()
+
+
+    .collect(Collectors.toList()));  }}
+
+
+    ## 10.3 Set
+
+
+    To convert a stream to a Set we use the collect() method from stream objects.
+    The toSet() collector can be used for collecting all Stream elements into a Set
+    instance.
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    System.out.println(
+
+
+    Stream.of("apple", "cherries", "banana", "avocado")
+
+
+    .sorted()
+
+
+    .collect(Collectors.toSet()));
+
+
+    }}
+
+
+    ## 10.4Map
+
+
+    In a map there is a key and a value. In the example below we will use the length
+    of the strings as key and group all the fruits by length of their names.
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    Map<Integer, List<String>> fruitByLength =
+
+
+    Stream.of("apple", "mango", "lemon", "avocado", "cherries")
+
+
+    .collect(Collectors.groupingBy(fruit -> fruit.length()));
+
+
+    fruitByLength.entrySet().stream()
+
+
+    .forEach(entry -> {System.out.println(entry.getKey()); entry.getValue().stream()
+
+
+    .forEach(fruit -> System.out.print(fruit + " "));
+
+
+    System.out.println();});
+
+
+    }}
+
+
+    ## 10.5Stats
+
+
+    ### 10.5.1Count
+
+
+    Returns the number of values in a stream
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    System.out.println(
+
+
+    Stream.of("apple", "mango", "lemon", "avocado", "cherries").count());
+
+
+    }}
+
+
+    ### 10.5.2Sum
+
+
+    Returns the sum of an IntStream
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    IntStream stream = IntStream.of(1, 3, 4, 7);
+
+
+    System.out.println(stream.sum());
+
+
+    }}
+
+
+    ### 10.5.3 Min, max, average
+
+
+    Returns the min, max or average of an IntStream
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    IntStream stream = IntStream.of(1, 3, 4, 7);
+
+
+    stream.min().ifPresent(smallest -> System.out.println(smallest));
+
+
+    }}
+
+
+    ## 10.6Stats on long values
+
+
+    The interface LongStream is a stream for long values. The methods are the same
+    as with the IntStream. It is possible to convert an IntStream to a LongStream
+    with the method mapToLong()
+
+
+    ## 10.7Stats on double values
+
+
+    The interface DoubleStream is a stream for double values. The methods are the
+    same as with the IntStream. It is possible to convert an IntStream to a DoubleStream
+    with the method mapToDouble()
+
+
+    ## 10.8 Min and max of other valus
+
+
+    It is possible to give in a Lambda in the min and max methods to determine which
+    are the min and max values. The lambda will implement the functional interface
+    Comparator
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+        Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9), BigDecimal.valueOf(0.5))  
+
+
+        .min((number1, number2) -> number1.compareTo(number2))
+
+
+        .ifPresent(smallest -> System.out.println(smallest));
+
+
+        } }
+
+
+    # 11. Reduce
+
+
+    The methods min, sum, max,… all reduce the values of a stream to one single value.
+    The method reduce() does the same thing, but this method is able to reduce any
+    value to one single value (not only int, double, long values). It is a general-purpose
+    reduction method.
+
+
+    There are 2 versions of the reduce method :
+
+
+    ## 11.1 Stream.reduce() with Accumulator
+
+
+    It performs a reduction on the elements of the given stream, using given accumulation
+    function.
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    System.out.println(Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9),
+    BigDecimal.valueOf(0.5))
+
+
+    .reduce(BigDecimal.ZERO, (previousSum, number) -> previousSum.add(number)));
+
+
+    }}
+
+
+    ## 11.2 Stream.reduce() with Identity and Accumulator
+
+
+    It performs a reduction on the elements of the given stream, using given identity
+    value, an accumulation function and combining functions. The identity value must
+    be an identity for the combiner function. Combiner is a function which aggregates
+    results of the accumulator. Combiner is called only in a parallel mode to reduce
+    results of accumulators from different threads.
+
+
+    class Main {
+
+
+    public  static  void main(String[] args) {
+
+
+    Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9), BigDecimal.valueOf(0.5))
+
+
+    .reduce((previousSum, number) -> previousSum.add(number))
+
+
+    .ifPresent(sum -> System.out.println(sum));
+
+
+    }}
+
+
+    # 12Conclusion
+
+
+    Thank you for reading this short introduction to Lambda’s and streams in Java.
+    This guide contains all the information you need to start using Lambda’s yourself.
+    Hopefully you learned a lot and feel ready to start integrating Lamdba’s into
+    your code. If you have any questions you can contact me at [programming_made_easy@outlook.be](mailto:programming_made_easy@outlook.be)
+
+
+    Good luck and have fun!'
+  toc: []
+  trans: "\n\n```java\nclass Main {\n    public static void main(String[] args) {\n\
+    \        System.out.println(\n            Stream.of(\"apple\", \"cherries\", \"\
+    banana\", \"avocado\")\n            .sorted()\n            .collect(Collectors.toList()));\n\
+    \    }\n}\n```\n\n## 10.3 Set\n\n要将流转换为 `Set`，我们使用流对象的 `collect()` 方法。`toSet()`\
+    \ 收集器可将所有 `Stream` 元素收集到一个 `Set` 实例中。\n\n```java\nclass Main {\n    public static\
+    \ void main(String[] args) {\n        System.out.println(\n            Stream.of(\"\
+    apple\", \"cherries\", \"banana\", \"avocado\")\n            .collect(Collectors.toSet()));\n\
+    \    }\n}\n```\n\n## 10.4 Map\n\n在 map 中包含有一个键（key）和一个值（value）。在下面的示例中，我们将字符串的长度作为键，并根据名称长度对所有水果进行分组。\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  Map<Integer, List<String>> fruitByLength =\n            Stream.of(\"apple\"\
+    , \"mango\", \"lemon\", \"avocado\", \"cherries\")\n            .collect(Collectors.groupingBy(fruit\
+    \ -> fruit.length()));\n        fruitByLength.entrySet().stream()\n          \
+    \  .forEach(entry -> {\n                System.out.println(entry.getKey());\n\
+    \                entry.getValue().stream()\n                .forEach(fruit ->\
+    \ System.out.print(fruit + \" \"));\n                System.out.println();\n \
+    \           });\n    }\n}\n```\n\n## 10.5 Stats\n\n### 10.5.1 Count\n\n返回流中值的数量\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  System.out.println(\n            Stream.of(\"apple\", \"mango\", \"lemon\"\
+    , \"avocado\", \"cherries\").count());\n    }\n}\n```\n\n### 10.5.2 Sum\n\n返回\
+    \ `IntStream` 的和\n\n```java\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        IntStream stream = IntStream.of(1, 3, 4, 7);\n        System.out.println(stream.sum());\n\
+    \    }\n}\n```\n\n### 10.5.3 Min, max, average\n\n返回 `IntStream` 的最小值、最大值或平均值\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  IntStream stream = IntStream.of(1, 3, 4, 7);\n        stream.min().ifPresent(smallest\
+    \ -> System.out.println(smallest));\n    }\n}\n```\n\n## 10.6 Stats on long values\n\
+    \n`LongStream` 接口是一个用于 long 类型值的流。方法与 `IntStream` 相同。可以使用 `mapToLong()` 方法将 `IntStream`\
+    \ 转换为 `LongStream`。\n\n## 10.7 Stats on double values\n\n`DoubleStream` 接口是一个用于\
+    \ double 类型值的流。方法与 `IntStream` 相同。可以使用 `mapToDouble()` 方法将 `IntStream` 转换为 `DoubleStream`。\n\
+    \n## 10.8 Min and max of other values\n\n可以在 `min` 和 `max` 方法中传入 Lambda 表达式来确定哪些是最小值和最大值。该\
+    \ lambda 将实现函数接口 `Comparator`。\n\n```java\nclass Main {\n    public static void\
+    \ main(String[] args) {\n        Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9),\
+    \ BigDecimal.valueOf(0.5))\n        .min((number1, number2) -> number1.compareTo(number2))\n\
+    \        .ifPresent(smallest -> System.out.println(smallest));\n    }\n}\n```\n\
+    \n# 11. Reduce\n\n`min`、`sum`、`max`… 等方法都将流的值归约为单个值。`reduce()` 方法执行相同的操作，但该方法能够将任何值归约为单个值（而不只是\
+    \ `int`、`double`、`long` 值）。它是一个通用的归约方法。\n\n`reduce` 方法有两个版本：\n\n## 11.1 Stream.reduce()\
+    \ with Accumulator\n\n使用给定的累加函数对给定流的元素执行归约。\n\n```java\nclass Main {\n    public\
+    \ static void main(String[] args) {\n        System.out.println(Stream.of(BigDecimal.valueOf(1.1),\
+    \ BigDecimal.valueOf(0.9), BigDecimal.valueOf(0.5))\n        .reduce(BigDecimal.ZERO,\
+    \ (previousSum, number) -> previousSum.add(number)));\n    }\n}\n```\n\n## 11.2\
+    \ Stream.reduce() with Identity and Accumulator\n\n使用给定的标识值（identity）、累加函数和组合函数对给定流的元素执行归约。标识值必须是\
+    \ `combiner` 函数的恒元。`Combiner` 是聚合累加器结果的函数。`Combiner` 仅在并行模式下调用，用于减少来自不同线程的累加器结果。\n\
+    \n```java\nclass Main {\n    public static void main(String[] args) {\n      \
+    \  Stream.of(BigDecimal.valueOf(1.1), BigDecimal.valueOf(0.9), BigDecimal.valueOf(0.5))\n\
+    \        .reduce((previousSum, number) -> previousSum.add(number))\n        .ifPresent(sum\
+    \ -> System.out.println(sum));\n    }\n}\n```\n\n# 12. Conclusion\n\n感谢阅读关于 Java\
+    \ Lambda 和流的短介绍。本指南包含了你开始开始使用 Lambda 所需的所有信息。希望你学到了很多，并准备好将 Lambda 集成到你的代码中。如果你有任何问题，可以通过\
+    \ `programming_made_easy@outlook.be` 与我联系。\n\n祝你好运，编程愉快！\n\n"

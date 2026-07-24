@@ -1,0 +1,98 @@
+- fmt: "\n![](images/00001.jpeg)\n\n# Lambda Expressions in Java 8\nVLIGHT\n\n## Table\
+    \ Of Contents\n- [Why Lambdas](#why-lamb)\n- [Standard syntax](#standard-syntax)\n\
+    - [Parameter type can be inferred](#)\n- [Multiple lines of code](#)\n- [Single\
+    \ parameter with inferred types](#)\n- [Method references](#)\n\n## Why Lambdas\
+    \ \nIn Java 8, a Lambda Expression is nothing but a block of code which can be\
+    \ passed around to execute.\n\nYou need to create an object then pass the object\
+    \ around if you want a block of code to be executed.\n\nLambda Expressions are\
+    \ very powerful and compelling.\n\nA Lambda Expression can be declared in some\
+    \ ways as follows:\n- Standard syntax\n- Parameter type can be inferred\n- Multiple\
+    \ lines of code\n- Single parameter with inferred types\n- Method references\n\
+    \n## Standard syntax\nThe standard syntax of a lambda expression has the following\
+    \ blocks:\n- A comma-separated list of formal parameters which are enclosed in\
+    \ the parenthesis\n- The arrow (`->`)\n- A body which consists of a single expression\
+    \ or a block of code\n\n### Sample Code\n```java\nString[] friendList = {\"Tuan\"\
+    , \"Nam\", \"Lan\"};\n\nArrays.sort(friendList,\n(String friend01, String friend02)\
+    \ ->\n  Integer.compare(friend01.length(), friend02.length()));\n\nSystem.out.print(Arrays.toString(friendList));\n\
+    ```\n\n### Output\n`[Lan, Nam, Tuan]`\n\n## Parameter type can be inferred\nThe\
+    \ parameter types can be omitted if they can be inferred from the context. This\
+    \ makes your code more cleaner.\n\n### Sample Code\n```java\nString[] friendList\
+    \ = {\"Tuan\", \"Nam\", \"Lan\"};\n\nArrays.sort(friendList,\n(friend01, friend02)\
+    \ ->\n  Integer.compare(friend01.length(), friend02.length()));\n\nSystem.out.print(Arrays.toString(friendList));\n\
+    ```\n\n### Output\n`[Lan, Nam, Tuan]`\n\n## Multiple lines of code\nIf your code\
+    \ cannot be written in 1 line, it can be enclosed in `{}` and your code now should\
+    \ explicitly contain a return statement.\n\n### Sample Code\n```java\nString[]\
+    \ friendList = {\"Tuan\", \"Nam\", \"Lan\"};\n\nArrays.sort(friendList,\n(String\
+    \ friend01, String friend02) ->\n{\n  if (friend01.length() > friend02.length())\n\
+    \      return -1;\n  else\n      return 0;\n});\n\nSystem.out.print(Arrays.toString(friendList));\n\
+    ```\n\n### Output\n`[Lan, Nam, Tuan]`\n\n## Single parameter with inferred types\n\
+    You can omit the parenthesis for a single parameter when its type can be inferred.\n\
+    \n### Sample Code\n```java\nString[] friendList = {\"Tuan\", \"Nam\", \"Lan\"\
+    };\n\nStream<String> friendStream = Stream.of(friendList);\n\nstream.forEach(friend\
+    \ -> System.out.println(friend));\n```\n\n### Output\n`Tuan`\n`Nam`\n`Lan`\n\n\
+    ## Method references\nYou can reduce code using the method reference (`::`).\n\
+    \n### Sample Code\n```java\nString[] friendList = {\"Tuan\", \"Nam\", \"Lan\"\
+    };\n\nStream<String> friendStream = Stream.of(friendList);\n\nstream.forEach(System.out::println);\n\
+    ```\n\n### Output\n`Tuan`\n`Nam`\n`Lan`\n"
+  raw: "\n\n![](images/00001.jpeg)\n\nLambda Expressions in Java 8\n\nVLIGHT\n\nTable\
+    \ Of Contents\n\n[Why Lambdas](#part0000_split_002.html__Toc470969056)\n\n[Standard\
+    \ syntax](#part0000_split_003.html__Toc470969057)\n\n[Parameter type can be inferred](#part0000_split_004.html__Toc470969058)\n\
+    \n[Multiple lines of code](#part0000_split_005.html__Toc470969059)\n\n[Single\
+    \ parameter with inferred types](#part0000_split_006.html__Toc470969060)\n\n[Method\
+    \ references](#part0000_split_007.html__Toc470969061)\n\n# \n\nWhy Lambdas\n\n\
+    In Java 8, a Lambda Expression is nothing but a block of code which can be passed\
+    \ around to execute\n\nYou need to create an object then pass the object around\
+    \ if you want a block of code to be executed\n\nLambda Expressions are very powerful\
+    \ and compelling\n\nA Lambda Expression can be declared in some ways as follows:\n\
+    \n+ Standard syntax\n\n+ Parameter type can be inferred\n\n+ Multiple lines of\
+    \ code\n\n+ Single parameter with inferred types\n\n+ Method references\n\n# \n\
+    \nStandard syntax\n\nThe standard syntax of a lambda expression has the following\
+    \ blocks:\n\n+ A comma-separated list of formal parameters which are enclosed\
+    \ in the parenthesis\n\n+ The arrow (->)\n\n+ A body which consists of a single\
+    \ expression or a block of code\n\nSample Code\n\nString[] friendList = {\"Tuan\"\
+    , \"Nam\", \"Lan\"};\n\nArrays.sort(friendList,\n\n(String friend01, String friend02)\
+    \ ->\n\n Integer.compare(friend01.length(), friend02.length()));\n\nSystem.out.print(Arrays.toString(friendList));\n\
+    \nOutput\n\n[Lan, Nam, Tuan]\n\n# \n\nParameter type can be inferred\n\nThe parameter\
+    \ types can be omitted if they can be inferred from the context. This makes your\
+    \ code more cleaner\n\nSample Code\n\nString[] friendList = {\"Tuan\", \"Nam\"\
+    , \"Lan\"};\n\nArrays.sort(friendList,\n\n(friend01, friend02) ->\n\n Integer.compare(friend01.length(),\
+    \ friend02.length()));\n\nSystem.out.print(Arrays.toString(friendList));\n\nOutput\n\
+    \n[Lan, Nam, Tuan]\n\n# \n\nMultiple lines of code\n\nIf your code cannot be written\
+    \ in 1 line, it can be enclosed in {} and your code now should explicitly contain\
+    \ a return statement\n\nSample Code\n\nString[] friendList = {\"Tuan\", \"Nam\"\
+    , \"Lan\"};\n\nArrays.sort(friendList,\n\n(String friend01, String friend02) ->\n\
+    \n{\n\n   if (friend01.length() > friend02.length())\n\n      return -1;\n\n  \
+    \ else\n\n      return 0;\n\n});\n\nSystem.out.print(Arrays.toString(friendList));\n\
+    \nOutput\n\n[Lan, Nam, Tuan]\n\n# \n\nSingle parameter with inferred types\n\n\
+    You can omit the parenthesis for a single parameter when its type can be inferred\n\
+    \nSample Code\n\nString[] friendList = {\"Tuan\", \"Nam\", \"Lan\"};\n\nStream<String>\
+    \ friendStream = Stream.of(friendList);\n\nstream.forEach(friend -> System.out.println(friend));\n\
+    \nOutput\n\nTuan\n\nNam\n\nLan\n\n# \n\nMethod references\n\nYou can reduce code\
+    \ using the method reference (::)\n\nSample Code\n\nString[] friendList = {\"\
+    Tuan\", \"Nam\", \"Lan\"};\n\nStream<String> friendStream = Stream.of(friendList);\n\
+    \nstream.forEach(System.out::println);\n\nOutput\n\nTuan\n\nNam\n\nLan"
+  toc: []
+  trans: "\n\n![](img/00001.jpeg)\n\n# Java 8 中的 Lambda 表达式\nVLIGHT\n\n## 目录\n- 为什么使用\
+    \ Lambda\n- 标准语法\n- 参数类型可以推断\n- 多行代码\n- 带有推断泛的单个参数\n- 方法引用\n\n## 为什么使用 Lambda\
+    \ \n在 Java 8 中，Lambda 表达式本质上是一段可以被到处传递并执行的代码块。\n\n如果你想执行一段代码块，通常需要先创建一个对象，然后传递该对象。\n\
+    \nLambda 表达式非常强大且极具吸引力。\n\nLambda 表达式可以通过以下几种方式声明：\n- 标准语法\n- 参数类型可以推断\n- 多行代码\n\
+    - 带有推断泛的单个参数\n- 方法引用\n\n## 标准语法\nLambda 表达式的标准语法包含以下部分：\n- 括在括号内的、用逗号分隔的形参参数列表\n\
+    - 箭头 (`->`)\n- 由单个表达式或代码块组成的主体\n\n### 示例代码\n```java\nString[] friendList = {\"\
+    Tuan\", \"Nam\", \"Lan\"};\n\nArrays.sort(friendList,\n(String friend01, String\
+    \ friend02) ->\n  Integer.compare(friend01.length(), friend02.length()));\n\n\
+    System.out.print(Arrays.toString(friendList));\n```\n\n### 输出\n`[Lan, Nam, Tuan]`\n\
+    \n## 参数类型可以推断\n如果可以从上下文中推断，可以省略参数类型。这会让你的代码更加整洁。\n\n### 示例代码\n```java\nString[]\
+    \ friendList = {\"Tuan\", \"Nam\", \"Lan\"};\n\nArrays.sort(friendList,\n(friend01,\
+    \ friend02) ->\n  Integer.compare(friend01.length(), friend02.length()));\n\n\
+    System.out.print(Arrays.toString(friendList));\n```\n\n### 输出\n`[Lan, Nam, Tuan]`\n\
+    \n## 多行代码\n如果你的代码无法在一行内完成，可以将其包含在 `{}` 中，并且代码现在必须显式地包含一个 `return` 语句。\n\n### 示例代码\n\
+    ```java\nString[] friendList = {\"Tuan\", \"Nam\", \"Lan\"};\n\nArrays.sort(friendList,\n\
+    (String friend01, String friend02) ->\n{\n  if (friend01.length() > friend02.length())\n\
+    \      return -1;\n  else\n      return 0;\n});\n\nSystem.out.print(Arrays.toString(friendList));\n\
+    ```\n\n### 输出\n`[Lan, Nam, Tuan]`\n\n## 带有推断泛的单个参数\n当单个参数的类型可以推断时，你可以省略括号。\n\n\
+    ### 示例代码\n```java\nString[] friendList = {\"Tuan\", \"Nam\", \"Lan\"};\n\nStream<String>\
+    \ friendStream = Stream.of(friendList);\n\nstream.forEach(friend -> System.out.println(friend));\n\
+    ```\n\n### 输出\n`Tuan`\n`Nam`\n`Lan`\n\n## 方法引用\n你可以使用方法引用 (`::`) 来减少代码。\n\n###\
+    \ 示例代码\n```java\nString[] friendList = {\"Tuan\", \"Nam\", \"Lan\"};\n\nStream<String>\
+    \ friendStream = Stream.of(friendList);\n\nstream.forEach(System.out::println);\n\
+    ```\n\n### 输出\n`Tuan`\n`Nam`\n`Lan`\n\n"

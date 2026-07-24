@@ -1,0 +1,1830 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 745 1186" preserveaspectratio="none">
+<image width="745" height="1186" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<p> </p>
+<div class="calibre1">
+<p><span class="calibre3">Copyright © 2018</span></p>
+<p><span class="calibre3">All rights reserved. No part of this
+publication may be reproduced, distributed, or transmitted in any form
+or by any means, including photocopying, recording, or other electronic
+or mechanical methods, without the prior written permission of the
+publisher, except in the case of brief quotations embodied in critical
+reviews and certain other noncommercial uses permitted by copyright law.
+</span></p>
+<div id="part0000_split_000.html_calibre_pb_2" class="calibre7">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre10">Table of Contents</span></p>
+<p><span id="part0000_split_001.html_toc" class="calibre12"></span><a
+href="#part0000_split_002.html__Toc518902959" class="calibre13"><span
+class="calibre14">1.</span><span class="calibre15"><span
+class="calibre16"></span></span><span
+class="calibre14">Introduction</span></a></p>
+<p><a href="#part0000_split_003.html__Toc518902960"
+class="calibre13"><span class="calibre14">1.1.</span><span
+class="calibre18"><span class="calibre19"></span></span><span
+class="calibre14">Lambda syntax</span></a></p>
+<p><a href="#part0000_split_003.html__Toc518902961"
+class="calibre13"><span class="calibre14">1.1.1.</span><span
+class="calibre21"><span class="calibre22"></span></span><span
+class="calibre14">General syntax</span></a></p>
+<p><a href="#part0000_split_003.html__Toc518902962"
+class="calibre13"><span class="calibre14">1.1.2.</span><span
+class="calibre21"><span class="calibre23"></span></span><span
+class="calibre14">Abbreviations</span></a></p>
+<p><a href="#part0000_split_004.html__Toc518902963"
+class="calibre13"><span class="calibre14">1.2</span><span
+class="calibre18"><span class="calibre24"></span></span><span
+class="calibre14">A Lambda is an implementation of a functional
+interface</span></a></p>
+<p><a href="#part0000_split_005.html__Toc518902964"
+class="calibre13"><span class="calibre14">1.3</span><span
+class="calibre18"><span class="calibre25"></span></span><span
+class="calibre14"> @Functional interface</span></a></p>
+<p><a href="#part0000_split_006.html__Toc518902965"
+class="calibre13"><span class="calibre14">2.</span><span
+class="calibre15"><span class="calibre26"></span></span><span
+class="calibre14">Java standard library and lambda’s</span></a></p>
+<p><a href="#part0000_split_007.html__Toc518902966"
+class="calibre13"><span class="calibre14">3.</span><span
+class="calibre15"><span class="calibre27"></span></span><span
+class="calibre14">Stream and forEach</span></a></p>
+<p><a href="#part0000_split_008.html__Toc518902967"
+class="calibre13"><span class="calibre14">3.1.1.</span><span
+class="calibre28"><span class="calibre29"></span></span><span
+class="calibre14">foreach</span></a></p>
+<p><a href="#part0000_split_009.html__Toc518902968"
+class="calibre13"><span class="calibre14">3.2</span><span
+class="calibre18"><span class="calibre30"></span></span><span
+class="calibre14"> Date sources of a stream</span></a></p>
+<p><a href="#part0000_split_009.html__Toc518902969"
+class="calibre13"><span class="calibre14">3.2.1</span><span
+class="calibre21"><span class="calibre31"></span></span><span
+class="calibre14">List</span></a></p>
+<p><a href="#part0000_split_009.html__Toc518902970"
+class="calibre13"><span class="calibre14">3.2.2 </span><span
+class="calibre21"><span class="calibre32"></span></span><span
+class="calibre14">Set</span></a></p>
+<p><a href="#part0000_split_009.html__Toc518902971"
+class="calibre13"><span class="calibre14">3.2.3</span><span
+class="calibre21"><span class="calibre33"></span></span><span
+class="calibre14"> Map</span></a></p>
+<p><a href="#part0000_split_010.html__Toc518902972"
+class="calibre13"><span class="calibre14">3.3</span><span
+class="calibre18"><span class="calibre34"></span></span><span
+class="calibre14">String</span></a></p>
+<p><a href="#part0000_split_011.html__Toc518902973"
+class="calibre13"><span class="calibre14">3.4</span><span
+class="calibre18"><span class="calibre35"></span></span><span
+class="calibre14"> Files</span></a></p>
+<p><a href="#part0000_split_012.html__Toc518902974"
+class="calibre13"><span class="calibre14">3.5</span><span
+class="calibre18"><span class="calibre36"></span></span><span
+class="calibre14"> Directory</span></a></p>
+<p><a href="#part0000_split_013.html__Toc518902975"
+class="calibre13"><span class="calibre14">3.6</span><span
+class="calibre18"><span class="calibre37"></span></span><span
+class="calibre14">Infinite sequence of values</span></a></p>
+<p><a href="#part0000_split_014.html__Toc518902976"
+class="calibre13"><span class="calibre14">3.7</span><span
+class="calibre18"><span class="calibre38"></span></span><span
+class="calibre14">Sequence of numbers</span></a></p>
+<p><a href="#part0000_split_015.html__Toc518902977"
+class="calibre13"><span class="calibre14">4.</span><span
+class="calibre15"><span class="calibre39"></span></span><span
+class="calibre14">Filter</span></a></p>
+<p><a href="#part0000_split_016.html__Toc518902978"
+class="calibre13"><span class="calibre14">5.</span><span
+class="calibre15"><span class="calibre40"></span></span><span
+class="calibre14">Sort</span></a></p>
+<p><a href="#part0000_split_017.html__Toc518902979"
+class="calibre13"><span class="calibre14">6.</span><span
+class="calibre15"><span class="calibre41"></span></span><span
+class="calibre14">Combining operations</span></a></p>
+<p><a href="#part0000_split_018.html__Toc518902980"
+class="calibre13"><span class="calibre14">7.</span><span
+class="calibre15"><span class="calibre42"></span></span><span
+class="calibre14">Unique values</span></a></p>
+<p><a href="#part0000_split_019.html__Toc518902981"
+class="calibre13"><span class="calibre14">8.</span><span
+class="calibre15"><span class="calibre43"></span></span><span
+class="calibre14">Transform</span></a></p>
+<p><a href="#part0000_split_020.html__Toc518902982"
+class="calibre13"><span class="calibre14">9.</span><span
+class="calibre15"><span class="calibre44"></span></span><span
+class="calibre14">Check if one or all values match with a given
+predicate</span></a></p>
+<p><a href="#part0000_split_020.html__Toc518902983"
+class="calibre13"><span class="calibre14">9.1</span><span
+class="calibre18"><span class="calibre45"></span></span><span
+class="calibre14">AllMatch</span></a></p>
+<p><a href="#part0000_split_021.html__Toc518902984"
+class="calibre13"><span class="calibre14">9.2</span><span
+class="calibre18"><span class="calibre46"></span></span><span
+class="calibre14">Anymatch</span></a></p>
+<p><a href="#part0000_split_022.html__Toc518902985"
+class="calibre13"><span class="calibre14">10.</span><span
+class="calibre47"><span class="calibre48"></span></span><span
+class="calibre14">Collect Stream values</span></a></p>
+<p><a href="#part0000_split_023.html__Toc518902986"
+class="calibre13"><span class="calibre14">10.1 </span><span
+class="calibre28"><span class="calibre49"></span></span><span
+class="calibre14">Array</span></a></p>
+<p><a href="#part0000_split_024.html__Toc518902987"
+class="calibre13"><span class="calibre14">10.2</span><span
+class="calibre18"><span class="calibre50"></span></span><span
+class="calibre14">List</span></a></p>
+<p><a href="#part0000_split_025.html__Toc518902988"
+class="calibre13"><span class="calibre14">10.3 </span><span
+class="calibre28"><span class="calibre51"></span></span><span
+class="calibre14">Set</span></a></p>
+<p><a href="#part0000_split_026.html__Toc518902989"
+class="calibre13"><span class="calibre14">10.4</span><span
+class="calibre18"><span class="calibre52"></span></span><span
+class="calibre14">Map</span></a></p>
+<p><a href="#part0000_split_027.html__Toc518902990"
+class="calibre13"><span class="calibre14">10.5</span><span
+class="calibre18"><span class="calibre53"></span></span><span
+class="calibre14">Stats</span></a></p>
+<p><a href="#part0000_split_027.html__Toc518902991"
+class="calibre13"><span class="calibre14">10.5.1</span><span
+class="calibre21"><span class="calibre54"></span></span><span
+class="calibre14">Count</span></a></p>
+<p><a href="#part0000_split_027.html__Toc518902992"
+class="calibre13"><span class="calibre14">10.5.2</span><span
+class="calibre21"><span class="calibre55"></span></span><span
+class="calibre14">Sum</span></a></p>
+<p><a href="#part0000_split_027.html__Toc518902993"
+class="calibre13"><span class="calibre14">10.5.3 Min, max,
+average</span></a></p>
+<p><a href="#part0000_split_028.html__Toc518902994"
+class="calibre13"><span class="calibre14">10.6</span><span
+class="calibre18"><span class="calibre56"></span></span><span
+class="calibre14">Stats on long values</span></a></p>
+<p><a href="#part0000_split_029.html__Toc518902995"
+class="calibre13"><span class="calibre14">10.7</span><span
+class="calibre18"><span class="calibre57"></span></span><span
+class="calibre14">Stats on double values</span></a></p>
+<p><a href="#part0000_split_030.html__Toc518902996"
+class="calibre13"><span class="calibre14">10.8 </span><span
+class="calibre28"><span class="calibre58"></span></span><span
+class="calibre14">Min and max of other valus</span></a></p>
+<p><a href="#part0000_split_031.html__Toc518902997"
+class="calibre13"><span class="calibre14">11.</span><span
+class="calibre47"><span class="calibre59"></span></span><span
+class="calibre14">Reduce</span></a></p>
+<p><a href="#part0000_split_032.html__Toc518902998"
+class="calibre13"><span class="calibre14">11.1 </span><span
+class="calibre28"><span class="calibre60"></span></span><span
+class="calibre14">Stream.reduce() with Accumulator</span></a></p>
+<p><a href="#part0000_split_033.html__Toc518902999"
+class="calibre13"><span class="calibre14">11.2 </span><span
+class="calibre28"><span class="calibre61"></span></span><span
+class="calibre14">Stream.reduce() with Identity and
+Accumulator</span></a></p>
+<p><a href="#part0000_split_034.html__Toc518903000"
+class="calibre13"><span class="calibre14">12</span><span
+class="calibre47"><span class="calibre62"></span></span><span
+class="calibre14">Conclusion</span></a></p>
+<p><span class="calibre3"> </span></p>
+<div id="part0000_split_001.html_calibre_pb_4" class="calibre7">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_002.html"></span></p>
+<div id="part0000_split_002.html_8B-76846926b8d84ae6b8931131da53ff9f"
+style="height:0pt">
+
+</div>
+<section id="part0000_split_002.html_calibre_pb_6"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">1.</span><span
+class="calibre64">      </span><span
+id="part0000_split_002.html__Toc518902959" class="calibre12"><span
+class="calibre10">Introduction</span></span></h1>
+<p><span id="part0000_split_002.html__Hlk518564107"
+class="calibre12"><span class="calibre3">Lambda’s exist in many coding
+languages. A Lambda is an anonymous function (function without a name)
+and is used to implement a function defined by a functional interface.
+</span></span></p>
+<p><span class="calibre3">Java8 introduces Lambda’s into Java. Lambda’s
+are Java’s first steps into functional programming. A Java Lambda
+expression is a function which can be created without belonging to any
+class. A Java Lambda expression can be passed around as if it was an
+object and executed on demand (which allows us to pass logic in a more
+compact way.)</span></p>
+<p><span class="calibre65"></span><span class="calibre3">λ is the symbol
+that represents a Lambda.</span></p>
+<p><span class="calibre3"> </span></p>
+</section>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_7"
+class="calibre66 calibre1">
+<h2 class="calibre66"><span class="calibre10">1.1.</span><span
+class="calibre67">   </span><span
+id="part0000_split_003.html__Toc518902960" class="calibre12"><span
+class="calibre10">Lambda syntax</span></span></h2>
+<h3 class="calibre68"><span class="calibre69">1.1.1.</span><span
+class="calibre67">           </span><span
+id="part0000_split_003.html__Toc518902961" class="calibre12"><span
+class="calibre69">General syntax</span></span></h3>
+<p><span class="calibre3">Lambda expressions introduce the arrow
+parameter into Java. It divides the lambda expression in two parts. The
+left side specifies the parameters required by the expression which
+could also be empty if no parameters are required. The right side is the
+lambda body which specifies the actions of the lambda
+expression:</span><br />
+<span class="calibre3">(parameter1, parameter2) -&gt; {code of the
+function}</span></p>
+<p><br />
+<span class="calibre3">The example below is a Lambda with 2 parameters
+that prints those parameters to the console:</span><br />
+<span class="calibre71">(</span><span class="calibre72">int</span><span
+class="calibre71"> number, </span><span
+class="calibre72">char</span><span class="calibre71"> character) -&gt;
+{System.out.println(number); System.out.println(character);</span><span
+class="calibre73">}</span></p>
+<p><span class="calibre3"> </span></p>
+<h3 class="calibre68"><span class="calibre69">1.1.2.</span><span
+class="calibre67">          </span><span
+id="part0000_split_003.html__Toc518902962" class="calibre12"><span
+class="calibre69">Abbreviations</span></span><span class="calibre69"> 
+</span></h3>
+<ul>
+<li><span class="calibre3">Parameters are optional in a Lambda
+</span><br />
+<span class="calibre71">(number, character) -&gt;
+{System.out.println(number); System.out.println(character);</span><span
+class="calibre73">}</span></li>
+</ul>
+<p><span class="calibre77"> </span></p>
+<ul>
+<li><span class="calibre3">A Lambda that has 1 parameter =&gt; the
+parentheses are optional</span><br />
+<span class="calibre71">number -&gt;
+{System.out.println(number);</span><span class="calibre73">}</span></li>
+</ul>
+<p><span class="calibre3"> </span></p>
+<ul>
+<li><span class="calibre3">A Lambda that hasn’t any parameters =&gt; the
+parentheses are obliged</span><br />
+<span class="calibre71">() -&gt; {System.out.println(“Hello
+World”);</span><span class="calibre73">}</span></li>
+</ul>
+<p><span class="calibre3"> </span></p>
+<ul>
+<li><span class="calibre3">A Lambda that has only one instruction =&gt;
+the curly brackets are optional</span><br />
+<span class="calibre71">number -&gt;
+System.out.println(number);</span></li>
+</ul>
+<p><span class="calibre3"> </span></p>
+<ul>
+<li><span class="calibre3">A Lambda that has only one instruction that
+is a return-instruction =&gt; the keyword return is
+optional</span><br />
+<span class="calibre71">number -&gt; number * number;</span></li>
+</ul>
+<p><span class="calibre3"> </span></p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_8"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_004.html__Toc518902963"
+class="calibre12"><span class="calibre10">1.2</span><span
+class="calibre81"><span class="calibre82"></span></span><span
+class="calibre10">A Lambda is an implementation of a functional
+interface</span></span></h2>
+<p><span class="calibre3">A functional interface is an interface that
+contains one and only one abstract method. The Java standard </span><a
+href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html"
+class="calibre12" target="_blank"><span class="calibre83">Runnable
+interface</span></a><span class="calibre3"> is such a functional
+interface. It defines one method: run().</span></p>
+<p><span class="calibre3">Aside from the built-in functional interfaces,
+we can create our own functional interfaces. The example below is such a
+single method interface:</span></p>
+<p><span class="calibre72">public</span><span class="calibre71">
+</span><span class="calibre72">interface</span><span class="calibre71">
+EvenNumber {</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71"> </span><span class="calibre72">boolean</span><span
+class="calibre71"> isEven(</span><span class="calibre72">int</span><span
+class="calibre71"> </span><span class="calibre87">number</span><span
+class="calibre71">);</span></p>
+<p><span class="calibre89">}</span></p>
+<p><span class="calibre3">In Java7 you would have to use an anonymous
+interface implementation like this:</span></p>
+<p><span class="calibre72">public</span><span class="calibre71">
+</span><span class="calibre72">class</span><span class="calibre71">
+</span><span class="calibre73">Main</span><span class="calibre71">
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">EvenNumber </span><span
+class="calibre87">myEvenNumber</span><span class="calibre71"> =
+</span><span class="calibre72">new</span><span class="calibre71">
+EvenNumber() {</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">boolean</span><span class="calibre71">
+isEven(</span><span class="calibre72">int</span><span class="calibre71">
+</span><span class="calibre87">number</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">return</span><span class="calibre71"> </span><span
+class="calibre87">number</span><span class="calibre71"> % 2 ==
+0;</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}};</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre73">myEvenNumber</span><span
+class="calibre71">.isEven(7));</span></p>
+<p><span class="calibre71">}</span><span class="calibre91">}</span><span
+class="calibre71"> </span></p>
+<p><span class="calibre71"> </span></p>
+<p><span class="calibre3">In Java8 you can use a Lambda expression that
+implements the functional interface:</span></p>
+<p><span class="calibre72">public</span><span class="calibre71">
+</span><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre71">    EvenNumber </span><span
+class="calibre87">myEvenNumber</span><span class="calibre71"> =    
+</span></p>
+<p><span class="calibre71">    </span><span class="calibre85"><span
+class="calibre92"></span></span><span class="calibre85"><span
+class="calibre86"></span></span><span
+class="calibre87">number</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">number</span><span class="calibre71"> % 2
+== 0;     </span></p>
+<p><span class="calibre71">    </span><span class="calibre85"><span
+class="calibre92"></span></span><span class="calibre85"><span
+class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">myEvenNumber</span><span
+class="calibre71">.isEven(7));  </span></p>
+<p><span class="calibre71">    </span><span class="calibre85"><span
+class="calibre92"></span></span><span class="calibre85"><span
+class="calibre86"></span></span><span class="calibre71">} }</span></p>
+<p><br />
+<span class="calibre71"> </span></p>
+</section>
+<p><span id="part0000_split_005.html"></span></p>
+<section id="part0000_split_005.html_calibre_pb_9"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_005.html__Toc518902964"
+class="calibre12"><span class="calibre10">1.3</span><span
+class="calibre81"><span class="calibre93"></span></span><span
+class="calibre10"> @Functional interface</span></span></h2>
+<p><span class="calibre89">All functional interfaces are recommended to
+have an informative</span><span class="calibre95"> </span><span
+class="calibre96">@FunctionalInterfac</span><span
+class="calibre97">e</span><span class="calibre71"> </span><span
+class="calibre89">annotation. This not only clearly communicates the
+purpose of this interface, but also allows a compiler to generate an
+error if the annotated interface does not satisfy the conditions. An
+interface that has more than 1 abstract method is no longer a functional
+interface and cannot be  implemented with a Lambda. When the interface
+is annotated with the</span><span class="calibre95"> </span><span
+class="calibre96">@FunctionalInterfac</span><span
+class="calibre97">e</span><span class="calibre89"> annotation and the
+function has more than 1 abstract method, the compiler will generate an
+error. </span></p>
+<p><span class="calibre71"> </span></p>
+<p><span class="calibre96">@FunctionalInterface</span></p>
+<p><span class="calibre72">public</span><span class="calibre71">
+</span><span class="calibre72">interface</span><span class="calibre71">
+EvenNumber {</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71"> </span><span class="calibre72">boolean</span><span
+class="calibre71"> isEven(</span><span class="calibre72">int</span><span
+class="calibre71"> </span><span class="calibre87">number</span><span
+class="calibre71">);</span></p>
+<p><span class="calibre71">}</span></p>
+</section>
+<p><span id="part0000_split_006.html"></span></p>
+<section id="part0000_split_006.html_calibre_pb_10"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">2.</span><span
+class="calibre64">     </span><span
+id="part0000_split_006.html__Toc518902965" class="calibre12"><span
+class="calibre10">Java standard library and lambda’s</span></span></h1>
+<p><span class="calibre3">The interface comparator is a functional
+interface. It has 1 abstract method:</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71"> </span><span class="calibre72">int</span><span
+class="calibre71"> compare(T </span><span
+class="calibre87">object1</span><span class="calibre71">, T </span><span
+class="calibre87">object2</span><span class="calibre71">); </span></p>
+<p><span class="calibre3">you don’t need to write a class to implement
+this interface, you can write a short lambda as implementation of the
+interface.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">String[] </span><span
+class="calibre87">fruits</span><span class="calibre71"> = { </span><span
+class="calibre98">"apple"</span><span class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span class="calibre71">
+};</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Arrays.</span><span class="calibre99">sort</span><span
+class="calibre71">(</span><span class="calibre87">fruits</span><span
+class="calibre71">, (</span><span class="calibre87">fruit1</span><span
+class="calibre71">, </span><span class="calibre87">fruit2</span><span
+class="calibre71">) -&gt; -</span><span
+class="calibre87">fruit1</span><span
+class="calibre71">.compareTo(</span><span
+class="calibre87">fruit2</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(Arrays.</span><span
+class="calibre99">toString</span><span class="calibre71">(</span><span
+class="calibre87">fruits</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}}</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> You could also use the length of each word to
+sort the fruits. You just need to change the lambda expression
+to</span><span class="calibre100">:</span><span
+class="calibre71">                            </span></p>
+<p><span class="calibre89">fruit1.length() - fruit2.length(</span><span
+class="calibre101">)</span><span class="calibre102"
+data-amznremoved-m8="true" data-amznremoved="mobi7"></span></p>
+</section>
+<p><span id="part0000_split_007.html"></span></p>
+<section id="part0000_split_007.html_calibre_pb_11"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">3.</span><span
+class="calibre64">     </span><span
+id="part0000_split_007.html__Toc518902966" class="calibre12"><span
+class="calibre10">Stream and forEach</span></span></h1>
+<p><span class="calibre89">The interface Stream is new in Java8. A
+stream represents a sequence of elements and supports different kinds of
+operations to perform computations upon those elements. Streams can be
+created from various data sources like an array, a list, a
+set,…</span></p>
+<p><span class="calibre89"> </span></p>
+<p><span class="calibre103">This guide teaches you how to work with Java
+8 streams and how to use the different kinds of available stream
+operations like filter, map, reduce,…</span></p>
+<p><span class="calibre71"> </span></p>
+<p><span class="calibre89">The methods in the Stream interface accept a
+Lambda as parameter, which makes the code very short and
+readable.</span></p>
+<p><span class="calibre89"> </span></p>
+</section>
+<p><span id="part0000_split_008.html"></span></p>
+<section id="part0000_split_008.html_calibre_pb_12"
+class="calibre104 calibre1">
+<h2 class="calibre104"><span class="calibre10">3.1.1.</span><span
+class="calibre67">          </span><span
+id="part0000_split_008.html__Toc518902967" class="calibre12"><span
+class="calibre10">foreach</span></span></h2>
+<p><span class="calibre3">forEach iterates over a collection and
+performs the given action for each element of the collection until all
+elements have been processed or the action throws an exception. The
+example below will print each fruit to the console:</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">String[] </span><span
+class="calibre87">fruits</span><span class="calibre71"> = { </span><span
+class="calibre98">"apple"</span><span class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span class="calibre71">
+};</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream&lt;String&gt; </span><span
+class="calibre87">stream</span><span class="calibre71"> =
+Arrays.</span><span class="calibre99">stream</span><span
+class="calibre71">(</span><span class="calibre87">fruits</span><span
+class="calibre71">);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">stream</span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+<p><span class="calibre89">It is possible to combine the last two
+instructions into one:</span></p>
+<p><span class="calibre89"> </span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">String[] </span><span
+class="calibre87">fruits</span><span class="calibre71"> = { </span><span
+class="calibre98">"apple"</span><span class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span class="calibre71">
+};</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Arrays.</span><span
+class="calibre99">stream</span><span class="calibre71">(</span><span
+class="calibre87">fruits</span><span class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}}</span></p>
+<p><span class="calibre71"> </span></p>
+</section>
+<p><span id="part0000_split_009.html"></span></p>
+<section id="part0000_split_009.html_calibre_pb_13"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_009.html__Toc518902968"
+class="calibre12"><span class="calibre10">3.2</span><span
+class="calibre81"><span class="calibre106"></span></span><span
+class="calibre10"> Date sources of a stream</span></span></h2>
+<h3 class="calibre107"><span id="part0000_split_009.html__Toc518902969"
+class="calibre12"><span class="calibre69">3.2.1</span><span
+class="calibre81"><span class="calibre108"></span></span><span
+class="calibre69">List</span></span></h3>
+<p><span class="calibre3">A list can be a date source of a
+stream</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">List&lt;String&gt; </span><span
+class="calibre87">fruits</span><span class="calibre71"> =
+Arrays.</span><span class="calibre99">asList</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">fruits</span><span
+class="calibre71">.stream()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre3">}}</span></p>
+<p><span class="calibre3"> </span></p>
+<h3 class="calibre107"><span id="part0000_split_009.html__Toc518902970"
+class="calibre12"><span class="calibre69">3.2.2 </span><span
+class="calibre81"><span class="calibre110"></span></span><span
+class="calibre69">Set</span></span></h3>
+<p><span class="calibre3">A Set can be a date source of a
+stream</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Set&lt;Integer&gt; </span><span
+class="calibre87">numbers</span><span class="calibre71"> = </span><span
+class="calibre72">new</span><span class="calibre71">
+LinkedHashSet&lt;&gt;();</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">numbers</span><span
+class="calibre71">.add(1);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">numbers</span><span
+class="calibre71">.add(3);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">numbers</span><span
+class="calibre71">.add(4);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">numbers</span><span
+class="calibre71">.add(7);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">numbers</span><span
+class="calibre71">.stream().forEach(</span><span
+class="calibre87">getal</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">getal</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}}</span></p>
+<p><span class="calibre71"> </span></p>
+<p><span class="calibre71"> </span></p>
+<h3 class="calibre107"><span id="part0000_split_009.html__Toc518902971"
+class="calibre12"><span class="calibre69">3.2.3</span><span
+class="calibre81"><span class="calibre111"></span></span><span
+class="calibre69"> Map</span></span></h3>
+<p><span class="calibre3">The keySet, the values or the entrySet can be
+a date source of a stream. In the example below we use an
+entrySet.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Map&lt;String, String&gt; </span><span
+class="calibre87">languages</span><span class="calibre71"> =
+</span><span class="calibre72">new</span><span class="calibre71">
+LinkedHashMap&lt;&gt;();   </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">languages</span><span
+class="calibre71">.put(</span><span class="calibre98">"ENG"</span><span
+class="calibre71">, </span><span class="calibre98">"English"</span><span
+class="calibre71">);  </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">languages</span><span
+class="calibre71">.put(</span><span class="calibre98">"FRE"</span><span
+class="calibre71">, </span><span class="calibre98">"French"</span><span
+class="calibre71">);   </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">languages</span><span
+class="calibre71">.entrySet().stream() </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">entry</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">entry</span><span class="calibre71">.getKey() +
+</span><span class="calibre98">':'</span><span class="calibre71"> +
+</span><span class="calibre87">entry</span><span
+class="calibre71">.getValue()));   } </span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}</span></p>
+</section>
+<p><span id="part0000_split_010.html"></span></p>
+<section id="part0000_split_010.html_calibre_pb_14"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_010.html__Toc518902972"
+class="calibre12"><span class="calibre10">3.3</span><span
+class="calibre81"><span class="calibre112"></span></span><span
+class="calibre10">String</span></span></h2>
+<p><span class="calibre3">A String can be a date source of a stream. The
+values in the stream are the characters of the String.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">    </span><span
+class="calibre98">"Lambdafun"</span><span class="calibre71">.chars()
+</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">    .forEach(</span><span
+class="calibre87">unicode</span><span
+class="calibre71">-&gt;System.</span><span
+class="calibre90">out</span><span
+class="calibre71">.println((</span><span
+class="calibre72">char</span><span class="calibre71">) </span><span
+class="calibre87">unicode</span><span class="calibre71">)); }
+}</span></p>
+<p><span class="calibre71"> </span></p>
+</section>
+<p><span id="part0000_split_011.html"></span></p>
+<section id="part0000_split_011.html_calibre_pb_15"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_011.html__Toc518902973"
+class="calibre12"><span class="calibre10">3.4</span><span
+class="calibre81"><span class="calibre113"></span></span><span
+class="calibre10"> Files</span></span></h2>
+<p><span class="calibre3">A file can be a date source of a stream.  The
+values in the stream are Strings that represent the lines in the
+file.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">private</span><span class="calibre71"> </span><span
+class="calibre72">final</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> Path
+</span><span class="calibre90">LANGUAGES_PATH</span><span
+class="calibre71"> = Paths.</span><span
+class="calibre99">get</span><span class="calibre71">(</span><span
+class="calibre98">"/data/languages.txt"</span><span
+class="calibre71">);</span></p>
+<p><span class="calibre71"> </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">try</span><span class="calibre71">
+(Stream&lt;String&gt; </span><span class="calibre87">stream</span><span
+class="calibre71"> = Files.</span><span
+class="calibre99">lines</span><span class="calibre71">(</span><span
+class="calibre90">LANGUAGES_PATH</span><span class="calibre71">))
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">stream</span><span
+class="calibre71">.forEach(</span><span
+class="calibre114">line</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre114">line</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">} </span><span class="calibre72">catch</span><span
+class="calibre71"> (IOException </span><span
+class="calibre87">ex</span><span class="calibre71">) {</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">ex</span><span
+class="calibre71">.printStackTrace();</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}}</span></p>
+<p><span class="calibre89"> </span></p>
+</section>
+<p><span id="part0000_split_012.html"></span></p>
+<section id="part0000_split_012.html_calibre_pb_16"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_012.html__Toc518902974"
+class="calibre12"><span class="calibre10">3.5</span><span
+class="calibre81"><span class="calibre115"></span></span><span
+class="calibre10"> Directory</span></span></h2>
+<p><span class="calibre3">A directory can be a date source of a stream. 
+The values in the stream are the paths of the files and the
+subdirectories in the directory.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">private</span><span class="calibre71"> </span><span
+class="calibre72">final</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> Path
+</span><span class="calibre90">DATA_PATH</span><span class="calibre71">
+= Paths.</span><span class="calibre99">get</span><span
+class="calibre71">(</span><span class="calibre98">"/data"</span><span
+class="calibre71">);</span></p>
+<p><span class="calibre71"> </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">try</span><span class="calibre71"> (Stream&lt;Path&gt;
+</span><span class="calibre87">stream</span><span class="calibre71"> =
+Files.</span><span class="calibre99">list</span><span
+class="calibre71">(</span><span class="calibre90">DATA_PATH</span><span
+class="calibre71">)) {</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">stream</span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">entry</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">entry</span><span
+class="calibre71">.getFileName()));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">} </span><span class="calibre72">catch</span><span
+class="calibre71"> (Exception </span><span
+class="calibre87">ex</span><span class="calibre71">) {</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">ex</span><span
+class="calibre71">.printStackTrace();</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}}}</span></p>
+<p><span class="calibre71"> </span></p>
+</section>
+<p><span id="part0000_split_013.html"></span></p>
+<section id="part0000_split_013.html_calibre_pb_17"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_013.html__Toc518902975"
+class="calibre12"><span class="calibre10">3.6</span><span
+class="calibre81"><span class="calibre116"></span></span><span
+class="calibre10">Infinite sequence of values</span></span></h2>
+<p><span class="calibre3">An infinite sequence of values can be a date
+source of a stream.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">) { 
+</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span
+class="calibre99">iterate</span><span class="calibre71">(1, </span><span
+class="calibre87">previousNumber</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">previousNumber</span><span
+class="calibre71"> + 2) </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">oddNumber</span><span
+class="calibre71">-&gt;System.</span><span
+class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">oddNumber</span><span class="calibre71">));  
+}</span></p>
+<p><span class="calibre89">}</span></p>
+<p><span class="calibre3">Use the method limit() if you want to limit
+the sequence:</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">) { 
+</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span
+class="calibre99">iterate</span><span class="calibre71">(1, </span><span
+class="calibre87">previousNumber</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">previousNumber</span><span
+class="calibre71"> + 2) </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.limit(10)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">oddNumber</span><span
+class="calibre71">-&gt;System.</span><span
+class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">oddNumber</span><span class="calibre71">));  
+}</span></p>
+<p><span class="calibre89">}</span></p>
+</section>
+<p><span id="part0000_split_014.html"></span></p>
+<section id="part0000_split_014.html_calibre_pb_18"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_014.html__Toc518902976"
+class="calibre12"><span class="calibre10">3.7</span><span
+class="calibre81"><span class="calibre117"></span></span><span
+class="calibre10">Sequence of numbers</span></span></h2>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">IntStream.</span><span
+class="calibre99">rangeClosed</span><span class="calibre71">(1,
+10).forEach(</span><span class="calibre87">number</span><span
+class="calibre71"> -&gt; System.</span><span
+class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">number</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">IntStream.</span><span
+class="calibre99">range</span><span class="calibre71">(1,
+10).forEach(</span><span class="calibre114">number</span><span
+class="calibre71"> -&gt; System.</span><span
+class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre114">number</span><span class="calibre71">));</span></p>
+</section>
+<p><span id="part0000_split_015.html"></span></p>
+<section id="part0000_split_015.html_calibre_pb_19"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">4.</span><span
+class="calibre64">    </span><span
+id="part0000_split_015.html__Toc518902977" class="calibre12"><span
+class="calibre10">Filter</span></span></h1>
+<p><span class="calibre3">Sometimes you might want to work with only a
+subset of the elements. To do so, you can use the filter method.
+</span></p>
+<p><span class="calibre3">For example if you want to create a subset of
+the list with fruits, which contains only those strings whose length is
+more than 6 characters, you use a filter:</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.filter(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">fruit</span><span
+class="calibre71">.length()&gt;6)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+</section>
+<p><span id="part0000_split_016.html"></span></p>
+<section id="part0000_split_016.html_calibre_pb_20"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">5.</span><span
+class="calibre64">     </span><span
+id="part0000_split_016.html__Toc518902978" class="calibre12"><span
+class="calibre10">Sort</span></span></h1>
+<p><span class="calibre3">You can sort the values in a stream with the
+stream-method sorted()</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.sorted()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+<p><span class="calibre3">This method sorts the stream with natural
+ordering. </span></p>
+<p><span class="calibre3">Ordering provided by Comparator is possible as
+well. This Comparator can be instantiated using a Lambda expression. In
+the example below we will order by length of each string:</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.sorted((</span><span
+class="calibre87">fruit1</span><span class="calibre71">, </span><span
+class="calibre87">fruit2</span><span class="calibre71">)-&gt;
+</span><span class="calibre87">fruit1</span><span
+class="calibre71">.length() - </span><span
+class="calibre87">fruit2</span><span
+class="calibre71">.length())</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+</section>
+<p><span id="part0000_split_017.html"></span></p>
+<section id="part0000_split_017.html_calibre_pb_21"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">6.</span><span
+class="calibre64">     </span><span
+id="part0000_split_017.html__Toc518902979" class="calibre12"><span
+class="calibre10">Combining operations</span></span></h1>
+<p><span class="calibre3">In the example below we combine the filter,
+sorted and forEach operations:</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.filter(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">fruit</span><span
+class="calibre71">.length()&gt;5)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.sorted()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+</section>
+<p><span id="part0000_split_018.html"></span></p>
+<section id="part0000_split_018.html_calibre_pb_22"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">7.</span><span
+class="calibre64">     </span><span
+id="part0000_split_018.html__Toc518902980" class="calibre12"><span
+class="calibre10">Unique values</span></span></h1>
+<p><span class="calibre3">The Stream method distinct() returns the
+unique values </span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"apple"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span class="calibre71">,
+</span><span class="calibre98">"apple"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.distinct()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.sorted()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+</section>
+<p><span id="part0000_split_019.html"></span></p>
+<section id="part0000_split_019.html_calibre_pb_23"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">8.</span><span
+class="calibre64">     </span><span
+id="part0000_split_019.html__Toc518902981" class="calibre12"><span
+class="calibre10">Transform</span></span></h1>
+<p><span class="calibre3">Assume we now have a filtered data that we can
+use for the real operations, say transforming the objects. The map
+operations allows us to apply a function that takes in a parameter of
+one type, and returns something else.</span></p>
+<p><span class="calibre3">In the example below we will transform the
+list of strings to a list of numbers (the lengths of the
+strings)</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.map(</span><span class="calibre87">fruit</span><span
+class="calibre71"> -&gt; </span><span
+class="calibre87">fruit</span><span
+class="calibre71">.length())</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">fruit</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+<p><span class="calibre89"> </span></p>
+<p><span class="calibre3">We can also use this map method if we want to
+transform a list of objects to a list of methods of that object. In the
+example below we get the surfaces of the rectangles in the
+stream.</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre72">class</span><span class="calibre71">
+Rectangle {  </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">private</span><span class="calibre71"> </span><span
+class="calibre72">final</span><span class="calibre71"> </span><span
+class="calibre72">int</span><span class="calibre71"> </span><span
+class="calibre118">length</span><span class="calibre71">;</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">private</span><span class="calibre71"> </span><span
+class="calibre72">final</span><span class="calibre71"> </span><span
+class="calibre72">int</span><span class="calibre71"> </span><span
+class="calibre118">width</span><span class="calibre71">;  </span></p>
+<p><span class="calibre119" data-amznremoved-m8="true"
+data-amznremoved="mobi7"></span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Rectangle(</span><span
+class="calibre72">int</span><span class="calibre71"> </span><span
+class="calibre87">length</span><span class="calibre71">, </span><span
+class="calibre72">int</span><span class="calibre71"> </span><span
+class="calibre87">width</span><span class="calibre71">) { </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">this</span><span class="calibre71">.</span><span
+class="calibre118">length</span><span class="calibre71"> = </span><span
+class="calibre87">length</span><span class="calibre71">;    </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">this</span><span class="calibre71">.</span><span
+class="calibre118">width</span><span class="calibre71"> = </span><span
+class="calibre87">width</span><span class="calibre71">;  </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}  </span></p>
+<p><span class="calibre119" data-amznremoved-m8="true"
+data-amznremoved="mobi7"></span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">int</span><span class="calibre71"> getSurface() {  
+</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">return</span><span class="calibre71"> </span><span
+class="calibre118">length</span><span class="calibre71"> * </span><span
+class="calibre118">width</span><span class="calibre71">;  </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">} </span></p>
+<p><span class="calibre71"> </span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main {
+</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">) { 
+</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre72">new</span><span
+class="calibre71"> Rectangle(6, 2), </span><span
+class="calibre72">new</span><span class="calibre71"> Rectangle(3, 1),
+</span><span class="calibre72">new</span><span class="calibre71">
+Rectangle(5, 4))    </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.map(</span><span
+class="calibre87">rectangle</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">rectangle</span><span
+class="calibre71">.getSurface()) </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre114">surface</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre114">surface</span><span class="calibre71">));}
+}</span></p>
+</section>
+<p><span id="part0000_split_020.html"></span></p>
+<section id="part0000_split_020.html_calibre_pb_24"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">9.</span><span
+class="calibre64">     </span><span
+id="part0000_split_020.html__Toc518902982" class="calibre12"><span
+class="calibre10">Check if one or all values match with a given
+predicate</span></span></h1>
+<h2 class="calibre120"><span id="part0000_split_020.html__Toc518902983"
+class="calibre12"><span class="calibre10">9.1</span><span
+class="calibre81"><span class="calibre121"></span></span><span
+class="calibre10">AllMatch</span></span></h2>
+<p><span class="calibre3">This method returns true if all the values of
+a stream match with the given predicate. We pass the predicate as an
+argument to the allmatch() method. </span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.allMatch(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">fruit</span><span
+class="calibre71">.length() == 6));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+<p><span class="calibre89"> </span></p>
+</section>
+<p><span id="part0000_split_021.html"></span></p>
+<section id="part0000_split_021.html_calibre_pb_25"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_021.html__Toc518902984"
+class="calibre12"><span class="calibre10">9.2</span><span
+class="calibre81"><span class="calibre122"></span></span><span
+class="calibre10">Anymatch</span></span></h2>
+<p><span class="calibre3">This method returns true if one of the values
+matches with the given predicate</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.</span><span class="calibre123">anyMatch</span><span
+class="calibre71">(</span><span class="calibre87">fruit</span><span
+class="calibre71"> -&gt; </span><span
+class="calibre87">fruit</span><span class="calibre71">.length() ==
+6));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+</section>
+<p><span id="part0000_split_022.html"></span></p>
+<section id="part0000_split_022.html_calibre_pb_26"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">10.</span><span
+class="calibre64"> </span><span
+id="part0000_split_022.html__Toc518902985" class="calibre12"><span
+class="calibre10">Collect Stream values</span></span></h1>
+<p><span class="calibre3">It is possible to collect all the values of a
+stream in an array, list, set,…</span></p>
+</section>
+<p><span id="part0000_split_023.html"></span></p>
+<section id="part0000_split_023.html_calibre_pb_27"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_023.html__Toc518902986"
+class="calibre12"><span class="calibre10">10.1 </span><span
+class="calibre81"><span class="calibre124"></span></span><span
+class="calibre10">Array</span></span></h2>
+<p><span class="calibre3">To convert a stream to an array we use the
+toArray() method from stream objects. This method returns an array
+containing the elements of the stream.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream&lt;String&gt; </span><span
+class="calibre87">stream</span><span class="calibre71"> =
+Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">String[] </span><span
+class="calibre87">arr</span><span class="calibre71"> = </span><span
+class="calibre87">stream</span><span
+class="calibre71">.toArray(</span><span
+class="calibre87">size</span><span class="calibre71"> -&gt; </span><span
+class="calibre72">new</span><span class="calibre71"> String[</span><span
+class="calibre87">size</span><span class="calibre71">]);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(Arrays.</span><span
+class="calibre99">toString</span><span class="calibre71">(</span><span
+class="calibre87">arr</span><span class="calibre71">));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+</section>
+<p><span id="part0000_split_024.html"></span></p>
+<section id="part0000_split_024.html_calibre_pb_28"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_024.html__Toc518902987"
+class="calibre12"><span class="calibre10">10.2</span><span
+class="calibre81"><span class="calibre125"></span></span><span
+class="calibre10">List</span></span></h2>
+<p><span class="calibre3">To convert a stream to a List we use the
+collect() method from stream objects. The </span><span
+class="calibre77">toList()</span><span class="calibre3"> collector can
+be used for collecting all </span><span
+class="calibre77">Stream</span><span class="calibre3"> elements into a
+</span><span class="calibre77">List</span><span class="calibre3">
+instance. </span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.sorted()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.collect(Collectors.</span><span
+class="calibre99">toList</span><span class="calibre71">()));</span><span
+class="calibre71"> </span><span class="calibre71">}}</span></p>
+</section>
+<p><span id="part0000_split_025.html"></span></p>
+<section id="part0000_split_025.html_calibre_pb_29"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_025.html__Toc518902988"
+class="calibre12"><span class="calibre10">10.3 </span><span
+class="calibre81"><span class="calibre126"></span></span><span
+class="calibre10">Set</span></span></h2>
+<p><span class="calibre3">To convert a stream to a Set we use the
+collect() method from stream objects. The </span><span
+class="calibre77">toSet()</span><span class="calibre3"> collector can be
+used for collecting all </span><span
+class="calibre77">Stream</span><span class="calibre3"> elements into a
+</span><span class="calibre77">Set</span><span class="calibre3">
+instance.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">,
+</span><span class="calibre98">"banana"</span><span class="calibre71">,
+</span><span class="calibre98">"avocado"</span><span
+class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.sorted()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.collect(Collectors.</span><span
+class="calibre127">toSet</span><span class="calibre71">()));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+<p><span class="calibre89"> </span></p>
+</section>
+<p><span id="part0000_split_026.html"></span></p>
+<section id="part0000_split_026.html_calibre_pb_30"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_026.html__Toc518902989"
+class="calibre12"><span class="calibre10">10.4</span><span
+class="calibre81"><span class="calibre128"></span></span><span
+class="calibre10">Map</span></span></h2>
+<p><span class="calibre3">In a map there is a key and a value. In the
+example below we will use the length of the strings as key and group all
+the fruits by length of their names.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Map&lt;Integer, List&lt;String&gt;&gt; </span><span
+class="calibre87">fruitByLength</span><span class="calibre71"> =
+</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span class="calibre98">"mango"</span><span
+class="calibre71">, </span><span class="calibre98">"lemon"</span><span
+class="calibre71">, </span><span class="calibre98">"avocado"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span class="calibre71">)</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.collect(Collectors.</span><span
+class="calibre99">groupingBy</span><span class="calibre71">(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+</span><span class="calibre87">fruit</span><span
+class="calibre71">.length()));</span></p>
+<p><span class="calibre119" data-amznremoved-m8="true"
+data-amznremoved="mobi7"></span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">fruitByLength</span><span
+class="calibre71">.entrySet().stream()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">entry</span><span class="calibre71"> -&gt;
+{System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">entry</span><span class="calibre71">.getKey());
+</span><span class="calibre87">entry</span><span
+class="calibre71">.getValue().stream()</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.forEach(</span><span
+class="calibre87">fruit</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.print(</span><span
+class="calibre87">fruit</span><span class="calibre71"> + </span><span
+class="calibre98">" "</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println();});</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+<p><span class="calibre89"> </span></p>
+</section>
+<p><span id="part0000_split_027.html"></span></p>
+<section id="part0000_split_027.html_calibre_pb_31"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_027.html__Toc518902990"
+class="calibre12"><span class="calibre10">10.5</span><span
+class="calibre81"><span class="calibre129"></span></span><span
+class="calibre10">Stats</span></span></h2>
+<h3 class="calibre107"><span id="part0000_split_027.html__Toc518902991"
+class="calibre12"><span class="calibre69">10.5.1</span><span
+class="calibre81"><span class="calibre130"></span></span><span
+class="calibre69">Count</span></span></h3>
+<p><span class="calibre3">Returns the number of values in a
+stream</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(</span><span class="calibre98">"apple"</span><span
+class="calibre71">, </span><span class="calibre98">"mango"</span><span
+class="calibre71">, </span><span class="calibre98">"lemon"</span><span
+class="calibre71">, </span><span class="calibre98">"avocado"</span><span
+class="calibre71">, </span><span
+class="calibre98">"cherries"</span><span
+class="calibre71">).count());</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}}</span></p>
+<p><span class="calibre131" data-amznremoved-m8="true"
+data-amznremoved="mobi7"></span></p>
+<h3 class="calibre107"><span id="part0000_split_027.html__Toc518902992"
+class="calibre12"><span class="calibre69">10.5.2</span><span
+class="calibre81"><span class="calibre132"></span></span><span
+class="calibre69">Sum</span></span></h3>
+<p><span class="calibre3">Returns the sum of an IntStream</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71"> IntStream </span><span
+class="calibre87">stream</span><span class="calibre71"> =
+IntStream.</span><span class="calibre99">of</span><span
+class="calibre71">(1, 3, 4, 7); </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71"> </span><span class="calibre123">System</span><span
+class="calibre71">.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">stream</span><span
+class="calibre71">.sum());</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">}}</span></p>
+<p><span class="calibre89"> </span></p>
+<h3 class="calibre107"><span id="part0000_split_027.html__Toc518902993"
+class="calibre12"><span class="calibre69">10.5.3 Min, max,
+average</span></span></h3>
+<p><span class="calibre3">Returns the min, max or average of an
+IntStream</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">IntStream </span><span
+class="calibre87">stream</span><span class="calibre71"> =
+IntStream.</span><span class="calibre99">of</span><span
+class="calibre71">(1, 3, 4, 7);</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre87">stream</span><span
+class="calibre71">.min().ifPresent(</span><span
+class="calibre114">smallest</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre114">smallest</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}}</span></p>
+<p><span class="calibre3"> </span></p>
+</section>
+<p><span id="part0000_split_028.html"></span></p>
+<section id="part0000_split_028.html_calibre_pb_32"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_028.html__Toc518902994"
+class="calibre12"><span class="calibre10">10.6</span><span
+class="calibre81"><span class="calibre133"></span></span><span
+class="calibre10">Stats on long values</span></span></h2>
+<p><span class="calibre3">The interface LongStream is a stream for long
+values. The methods are the same as with the IntStream. It is possible
+to convert an IntStream to a LongStream with the method
+mapToLong()</span></p>
+<p><span class="calibre3"> </span></p>
+</section>
+<p><span id="part0000_split_029.html"></span></p>
+<section id="part0000_split_029.html_calibre_pb_33"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_029.html__Toc518902995"
+class="calibre12"><span class="calibre10">10.7</span><span
+class="calibre81"><span class="calibre134"></span></span><span
+class="calibre10">Stats on double values</span></span></h2>
+<p><span class="calibre3">The interface DoubleStream is a stream for
+double values. The methods are the same as with the IntStream. It is
+possible to convert an IntStream to a DoubleStream with the method
+mapToDouble()</span></p>
+<p><span class="calibre3"> </span></p>
+</section>
+<p><span id="part0000_split_030.html"></span></p>
+<section id="part0000_split_030.html_calibre_pb_34"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_030.html__Toc518902996"
+class="calibre12"><span class="calibre10">10.8 </span><span
+class="calibre81"><span class="calibre135"></span></span><span
+class="calibre10">Min and max of other valus</span></span></h2>
+<p><span class="calibre3">It is possible to give in a Lambda in the min
+and max methods to determine which are the min and max values. The
+lambda will implement the functional interface Comparator</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">    Stream.</span><span
+class="calibre99">of</span><span class="calibre71">(</span><span
+class="calibre123">BigDecimal</span><span
+class="calibre71">.</span><span class="calibre99">valueOf</span><span
+class="calibre71">(1.1), </span><span
+class="calibre123">BigDecimal</span><span
+class="calibre71">.</span><span class="calibre99">valueOf</span><span
+class="calibre71">(0.9), </span><span
+class="calibre123">BigDecimal</span><span
+class="calibre71">.</span><span class="calibre99">valueOf</span><span
+class="calibre71">(0.5))   </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">    .min((</span><span
+class="calibre87">number1</span><span class="calibre71">, </span><span
+class="calibre87">number2</span><span class="calibre71">) -&gt;
+</span><span class="calibre87">number1</span><span
+class="calibre71">.compareTo(</span><span
+class="calibre87">number2</span><span class="calibre71">)) </span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">    .ifPresent(</span><span
+class="calibre87">smallest</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">smallest</span><span class="calibre71">)); </span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre89">    } }</span></p>
+<div id="part0000_split_030.html_calibre_pb_35" class="calibre7">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_031.html"></span></p>
+<section id="part0000_split_031.html_calibre_pb_37"
+class="calibre63 calibre1">
+<h1 class="calibre63"><span class="calibre10">11.</span><span
+class="calibre64">  </span><span
+id="part0000_split_031.html__Toc518902997" class="calibre12"><span
+class="calibre10">Reduce</span></span></h1>
+<p><span class="calibre3">The methods min, sum, max,… all reduce the
+values of a stream to one single value. The method reduce() does the
+same thing, but this method is able to reduce any value to one single
+value (not only int, double, long values). It is a general-purpose
+reduction method.</span></p>
+<p><span class="calibre3">There are 2 versions of the reduce method
+:</span></p>
+</section>
+<p><span id="part0000_split_032.html"></span></p>
+<section id="part0000_split_032.html_calibre_pb_38"
+class="calibre136 calibre1">
+<h2 class="calibre136"><span id="part0000_split_032.html__Toc518902998"
+class="calibre12"><span class="calibre10">11.1 </span><span
+class="calibre81"><span class="calibre137"></span></span><span
+class="calibre138">Stream.reduce() with </span><span
+class="calibre3">Accumulator</span></span></h2>
+<p><span class="calibre3">It performs a reduction on the elements of the
+given stream, using given accumulation function.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(Stream.</span><span
+class="calibre99">of</span><span
+class="calibre71">(BigDecimal.</span><span
+class="calibre99">valueOf</span><span class="calibre71">(1.1),
+BigDecimal.</span><span class="calibre99">valueOf</span><span
+class="calibre71">(0.9), BigDecimal.</span><span
+class="calibre99">valueOf</span><span
+class="calibre71">(0.5))</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.reduce(BigDecimal.</span><span
+class="calibre90">ZERO</span><span class="calibre71">, (</span><span
+class="calibre87">previousSum</span><span class="calibre71">,
+</span><span class="calibre114">number</span><span class="calibre71">)
+-&gt; </span><span class="calibre87">previousSum</span><span
+class="calibre71">.add(</span><span
+class="calibre114">number</span><span class="calibre71">)));</span></p>
+<p><span class="calibre81"><span class="calibre105"></span></span><span
+class="calibre3">}}</span></p>
+</section>
+<p><span id="part0000_split_033.html"></span></p>
+<section id="part0000_split_033.html_calibre_pb_39"
+class="calibre80 calibre1">
+<h2 class="calibre80"><span id="part0000_split_033.html__Toc518902999"
+class="calibre12"><span class="calibre139">11.</span><span
+class="calibre140">2 </span><span class="calibre81"><span
+class="calibre141"></span></span><span
+class="calibre140">Stream.reduce() with Identity and
+Accumulator</span></span></h2>
+<p><span class="calibre3">It performs a reduction on the elements of the
+given stream, using given identity value, an accumulation function and
+combining functions. The identity value must be an identity for the
+combiner function. Combiner is a function which aggregates results of
+the accumulator. Combiner is called only in a parallel mode to reduce
+results of accumulators from different threads.</span></p>
+<p><span class="calibre72">class</span><span class="calibre71"> Main
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre72">public</span><span class="calibre71"> </span><span
+class="calibre72">static</span><span class="calibre71"> </span><span
+class="calibre72">void</span><span class="calibre71"> main(String[]
+</span><span class="calibre87">args</span><span class="calibre71">)
+{</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">Stream.</span><span class="calibre99">of</span><span
+class="calibre71">(BigDecimal.</span><span
+class="calibre99">valueOf</span><span class="calibre71">(1.1),
+BigDecimal.</span><span class="calibre99">valueOf</span><span
+class="calibre71">(0.9), BigDecimal.</span><span
+class="calibre99">valueOf</span><span
+class="calibre71">(0.5))</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.reduce((</span><span
+class="calibre87">previousSum</span><span class="calibre71">,
+</span><span class="calibre87">number</span><span class="calibre71">)
+-&gt; </span><span class="calibre87">previousSum</span><span
+class="calibre71">.add(</span><span class="calibre87">number</span><span
+class="calibre71">))</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">.ifPresent(</span><span
+class="calibre87">sum</span><span class="calibre71"> -&gt;
+System.</span><span class="calibre90">out</span><span
+class="calibre71">.println(</span><span
+class="calibre87">sum</span><span class="calibre71">));</span></p>
+<p><span class="calibre85"><span class="calibre86"></span></span><span
+class="calibre71">}}</span></p>
+<p><span class="calibre71"> </span></p>
+</section>
+<p><span id="part0000_split_034.html"></span></p>
+<section id="part0000_split_034.html_calibre_pb_40"
+class="calibre142 calibre1">
+<h1 class="calibre142"><span id="part0000_split_034.html__Toc518903000"
+class="calibre12"><span class="calibre10">12</span><span
+class="calibre81"><span class="calibre143"></span></span><span
+class="calibre10">Conclusion</span></span></h1>
+<p><span class="calibre3">Thank you for reading this short introduction
+to Lambda’s and streams in Java. This guide contains all the information
+you need to start using Lambda’s yourself. Hopefully you learned a lot
+and feel ready to start integrating Lamdba’s into your code. If you have
+any questions you can contact me at </span><a
+href="mailto:programming_made_easy@outlook.be" class="calibre144"><span
+class="calibre145">programming_made_easy@outlook.be</span></a></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">Good luck and have fun!</span></p>
+</section>
