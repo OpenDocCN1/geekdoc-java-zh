@@ -1,0 +1,640 @@
+- "# 快速学习 Java 与编程练习 - Python 和 C#\n\n\n\n![](img/cover00162.jpeg)\n\n\n## 目录\n- 学习\
+  \ Java\n- Java 简介\n- 在 Java 中运行简单的 Hello World 程序\n- Java 中的数据类型\n- 更多关于基本类型\n-\
+  \ Java 中的运算符\n- 算术运算符\n- 算术运算符：++, --\n- 条件运算符\n- 逻辑运算符\n- 位运算符\n- Java 中的其他运算符\n\
+  - 控制流语句：决策：if-then, if-else, if-else if-else\n- 控制流语句：决策：switch\n- 控制流语句：循环：while,\
+  \ do-while\n- 控制流语句：循环：for\n- 分支语句：break\n- PYTHON 编程练习\n- 获取 Python 版本\n- 显示当前日期和时间\n\
+  - 打印日历\n- 计算三角形面积 和 java 启动器 (`java`) 将出现在\n`C:\\Program Files\\Java\\jdk1.7.0_13\\\
+  bin`\n\n我们需要将 `C:\\Program Files\\Java\\jdk1.7.0_13\\bin` 添加到系统路径，然后我们可以从任何地方运行\
+  \ java 程序。按照以下步骤操作：\n\n步骤 1：右键点击计算机图标，打开属性窗口。\n![`2.bp.blogspot.com/-2eDkOF8rUJY/UvBxH2Fb7FI/AAAAAAAAAHI/gDMzQZsX0g/s1600/1.png`](img/image00155)\n\
+  \n步骤 2：点击所示的高级设置选项卡。这将打开系统属性窗口。\n![`1.bp.blogspot.com/-V36tJIqKE/UvSiRcKLI/AAAAAAAAAJs/ylgetPwy3k/s1600/set.png`](img/image0156)\n\
+  \n步骤 3：打开系统属性并选择“高级”。点击“环境变量”按钮。\n![`3.bp.blogspot.com/-mZPcjy2Kg/Uv0fRTRbAI/AAAAAAAAAIQ/tp0X-qpo4Y/s1600/3.bmp`](img/image00157)\n\
+  \n步骤 4：你将得到下面的窗口。它包含两个部分：用户变量和系统变量。\n![`1.bp.blogspot.com/-gVC3iM6ik/Uv0nqSLNNI/AAAAAAAAAIY/qVt-qN-sFE/s1600/4.bmp`](img/image0158)\n\
+  \n从系统变量部分编辑路径\n将 java bin 路径添加到系统变量 `path` 的值字段。\n在添加之前，像这样添加分号：\n`;C:\\Program\
+  \ Files\\Java\\jdk1.7.0_13\\bin`\n\n![`1.bp.blogspot.com/-irgAHkSs7cM/Uv0vO8_gWI/AAAAAAAAAIg/yzZ7diKRlc/s1600/5.bmp/image0159)###\
+  \ 如何检查路径是否设置正确点击确定。打开命令提示符并输入 `javac`。![https://4.bp.blogspot.com/-qAVfAmcL8dc/Uv1dv8NydI/AAAAAAAAAIs/4Y5LAk3g_0U/s1600/6.bmp`](img/image0160)\n\
+  \n### 关于和\n假设你将 java 安装在以下目录：\n`C:\\Program Files\\Java`\n\n那么 java 编译器 (`javac`)\
+  \ 和 java 启动器 (`java`) 将出现在\n`C:\\Program Files\\Java\\jdk1.7.0_13\\bin`\n\n我们需要将\
+  \ `C:\\Program Files\\Java\\jdk1.7.0_13\\bin` 添加到系统路径，这样我们就可以从任何地方运行 java 程序。按照以下步骤操作：\n\
+  步骤 1：右键点击计算机图标，打开属性窗口。\n![`2.bp.blogspot.com/-2eDkOF8rUJY/UvBxH2Fb7FI/AAAAAAAAAHI/gDMzQZsX0g/s1600/1.png`](img/image0155)\n\
+  \n步骤 2：点击所示的高级设置选项卡。这将打开系统属性窗口。\n![`1.bp.blogspot.com/-V36tJIqKE/UvSiRcKLI/AAAAAAAAAJs/ylgetPwy3k/s1600/set.png`](img/image0156)\n\
+  \n步骤 3：打开系统属性并选择“高级”。点击“环境变量”按钮。\n![`3.bp.blogspot.com/-mZPcjy2Kg/Uv0fRTRbAI/AAAAAAAAAIQ/tp0X-Gqpo4Y/s1600/3.bmp`](img/image0157)\n\
+  \n步骤 4：你将得到下面的窗口。它包含两个部分：用户变量和系统变量部分。\n![`1.bp.blogspot.com/-gVC3iM6ik/Uv0nqSLNNI/AAAAAAAAAIY/qVt-qN-sFE/s1600/4.bmp`](img/image0158)\n\
+  \n从系统变量部分编辑路径\n将 java bin 路径添加到系统变量 `path` 的值字段。\n在添加之前，像这样添加分号：\n`;C:\\Program\
+  \ Files\\Java\\jdk1.7.0_13\\bin`\n\n![`1.bp.blogspot.com/-irgAHkSs7cM/Uv0vO8_gWI/AAAAAAAAAIg/yzZ7diKRlc/s1600/5.bmp`](img/image0159)\n\
+  \n### 如何检查你是否正确设置了路径\n点击确定。打开命令提示符并输入 `javac`。\n![`4.bp.blogspot.com/-qAVfAmcL8dc/Uv1dv8NydI/AAAAAAAAAIs/4Y5LAk3g_0U/s1600/6.bmp`](img/image0160)\n\
+  \n## Hello World 应用\n从简单的打印 \"Hello World\" 的程序开始。\n\n打开记事本，输入以下代码：\n\n```java\n\
+  class Hello{\n    public static void main(String args[]){\n        System.out.println(\"\
+  Hello World\");\n    }\n}\n```\n\n将文件保存为 `Hello.java`。\n让文件保存在 `C:\\java Programs`。打开命令提示符并进入文件所在目录。\n\
+  ![`2.bp.blogspot.com/-HOHMB1ktew/Uv53FTFKmI/AAAAAAAAAJE/4Y5LAk3g_0U/s1600/7.bmp`](img/image0161)\n\
+  \n### 如何编译程序\n使用以下命令：\n```bash\njavac Hello.java\n```\n\n### 如何运行程序\n使用以下命令：\n```bash\n\
+  java Hello\n```\n当你运行命令 `java Hello` 程序后，你将在控制台上看到输出 \"Hello World\"。\n\n讨论\n1.\
+  \ 文件名应与你的 `class` 名称完全相同。这里 `class` 名称是 \"Hello\"，所以我将文件名保存为 `Hello.java`。\n\n##\
+  \ 详细观察 Hello World 程序\n--------------------------------------\nHello World 程序主要\
+  \ 3 个组件：\n1. 类定义\n2. `Main` 方法\n3. `println` 方法\n\n### 1. 类定义\n```java\nclass Hello{\n\
+  \    public static void main(String args[]){\n```\n\n\n\n\n\n```java\nSystem.out.println(\"\
+  Hello World\");\n}\n\n}\n```\n\nJava 是一种面向对象的语言。因此，你所编写的任何内容必须包含在类声明中。\n\n类的基本语法是：\n\
+  \n```java\nclass Class_Name{\n    // 语句\n}\n```\n\n按照习惯，类名 `Name` 始终以大字母开头，后跟小字母，例如\
+  \ `Abc`、`Hello`，类声明中的后续每个单词也以大字母开头，例如 `ThreadExample`。\n\n### 2. 主方法 (Main Method)\n\
+  \n```java\nclass Hello{\n    public static void main(String args[]){\n        System.out.println(\"\
+  Hello World\");\n    }\n}\n```\n\n在 Java 编程语言中，每个应用程序必须包含一个 `main` 方法，其签名为：\n`public\
+  \ static void main(String[] args)`\n\n不要担心 `main` 方法的签名，你稍后会学习。现在记住，程序的执行始终从 `main`\
+  \ 方法开始。\n\n### 3. `println` 方法\n\n它简单地将你传递给它的任何信息打印到终端或控制台。\n\n# Java 中的数据类型\n\n\
+  Java 主要支持两类数据类型：\n\n1. 基本类型 (Primitive Types)\n2. 引用类型 (Reference Types)\n\n###\
+  \ 1. 基本类型\n\nJava 语言支持 8 种基本数据类型。它们是：\n- `byte`, `short`, `int`, `long`\n- `float`,\
+  \ `double`\n- `boolean`\n- `char`\n\n- `byte`、`short`、`int` 和 `long` 用于存储整数。\n-\
+  \ `float` 和 `double` 用于存储实数值。\n- `boolean` 用于存储真或假值。\n- `char` 用于存储单个字符。\n\n####\
+  \ 如何定义变量\n\n语法：\n`dataType variableName = value;`\n\n示例：\n`int intVariable = 10;`\n\
+  \n这里：\n- `dataType` 是 `int`\n- `variableName` 是 `intVariable`\n- `value` 是 `10`\n\
+  \n变量是一个命名的内存位置，存储一个值。\n\n#### 定义变量的命名规范\n\n1. 变量名必须以字符或下划线开头。\n2. 变量名可以包含字母和数字。\n\
+  3. `variable` 名称不应该是 Java 的保留字或关键字。\n4. 按照习惯，变量名以小字母开头，每个后续单词以大字母开头。\n   例如：`noOfChar`、`mySalary`\
+  \ 等。\n\n#### Java 关键字\n\n关键字是一个保留字，具有为其定义的特殊含义。\n\n| abstract | continue | for |\
+  \ New | switch |\n\n注意：所有关键字均为小写。\n\n```java\n/* 打印变量值的简单程序 */\nclass DataTypes{\n\
+  \    public static void main(String args[]){\n        byte byteVariable = 10;\n\
+  \        short shortVariable = 20;\n        int intVariable = 30;\n        long\
+  \ longVariable = 40;\n        float floatVariable = 10;\n        double doubleVariable\
+  \ = 20.123;\n        boolean booleanVariable = false;\n        char charVariable\
+  \ ='A';\n        System.out.println(\"******************************************\"\
+  );\n        System.out.println(\"Value Of byte Variable is \" + byteVariable);\n\
+  \        System.out.println(\"Value Of short Variable is \" + shortVariable);\n\
+  \        System.out.println(\"Value Of int Variable is \" + intVariable);\n    \
+  \    System.out.println(\"Value Of long Variable is \" + longVariable);\n      \
+  \  System.out.println(\"Value Of float Variable is \" + floatVariable);\n      \
+  \  System.out.println(\"Value Of double Variable is \" + doubleVariable);\n    \
+  \    System.out.println(\"Value Of boolean Variable is \" + booleanVariable);\n\
+  \        System.out.println(\"Value Of char Variable is \" + charVariable);\n  \
+  \      System.out.println(\"******************************************\");\n   \
+  \ }\n}\n```\n**输出：**\n```\n******************************************\nValue Of\
+  \ byte Variable is 10\nValue Of short Variable is 20\nValue Of int Variable is 30\n\
+  Value Of long Variable is 40\nValue Of float Variable is 10\nValue Of double Variable\
+  \ is 20.123\nValue Of boolean Variable is false\nValue Of char Variable is A\n******************************************\n\
+  ```\n\n### 引用类型\n\n在 Java 中 `Strings`、`Arrays` 和 `Objects` 被视为引用类型。稍后会详细讨论这些内容。\n\
+  \n####一些需要需要的点\n\n1. 和许多语言一样，Java 不支持无符号数。Java 中没有无符号标识符。\n```java\nclass UnsignedEx{\n\
+  unsigned int a;\n}\n```\n当你尝试编译上面的类时，会抛出以下错误：\n```\nUnsignedEx.java:2: error: <identifier>\
+  \ expected\nunsigned int a;\nUnsignedEx.java:2: error: <identifier> expected\nunsigned\
+  \ int a;\n2 errors\n```\n\n2. 在 Java 中，所有的 `bytes`、`shorts` 在操作之前都会提升为 `int`，因此我们需要显式地进行强制转换。\n\
+  ```java\nclass ConversionEx{\n    public static void main(String args[]){\n    \
+  \    byte b1 = 1;\n        byte b2 = 2;\n        byte b = (b1 + b2);\n        System.out.println(b);\n\
+  \        short s1 = 1;\n        short s2 = 2;\n        short s = (s1 + s2);\n  \
+  \      System.out.println(s);\n    }\n}\n```\n当你尝试编译上面的程序时，编译器会抛出以下错误：\n```\nConversionEx.java:6:\
+  \ error: <identifier> expected\nbyte b = (b1 + b2);\nConversionEx.java:10: error:\
+  \ <identifier> expected\nshort s = (s1 + s2);\n2 errors\n```\n（注：此处原文错误信息与逻辑略有出入，已按逻辑意译）\n\
+  \n3. 在 Java 中，如果操作数中有一个 `double`，那么结果将是 `double`。\n```java\nclass ConversionEx{\n\
+  \    public static void main(String args[]){\n        float f1 = 1.1;\n        double\
+  \ f2 = 1.2;\n        float f = f1 + f2;\n        System.out.println(f);\n    }\n\
+  }\n```\n当你尝试编译上面的程序，会抛出以下错误：\n```\nConversionEx.java:6: error: loss of precision\n\
+  float f = f1 + f2;\n^\nrequired: float\nfound double\n```\n为了让运行运行，我们需要结果结果强制转换\
+  \ `float`\n\n```java\n\nExEx\n    publicpublic void main mainString args args\n\n\
+  \         b b1  ;;\n\n         = = = 2;\n        byte b = (byte)(b1 + b2);\n   \
+  \     System.out.println(b);\n        short s1 = 1;\n        short s2 = 2;\n   \
+  \     short s = (short)(s1 + s2);\n        System.out.println(s);\n    }\n}\n```\n\
+  **输出：**\n```\n3\n3\n```\n\n3. 在 Java 中，如果操作数中有一个 `double`，那么结果将是 `double`。\n```java\n\
+  class ConversionEx{\n    public static void main(String args[]){\n        float\
+  \ f1 = 1.1;\n        double f2 = 1.2;\n        float f = f1 + f2;\n        System.out.println(f);\n\
+  \    }\n}\n```\n当你尝试编译上面的程序，编译器会抛出以下错误：\n```\nConversionEx.java:6: error: loss of\
+  \ precision\nfloat f = f1 + f2;\n^\nrequired: float\nfound double\n```\n为了让程序运行，将结果强制转换为\
+  \ `float`：\n```java\nclass ConversionEx{\n    public static void main(String args[]){\n\
+  \        float f1 = 1.1;\n        double f2 = 1.2;\n        float f = (float)(f1\
+  \ + f2);\n        System.out.println(f);\n    }\n}\n```\n**输出：**\n```\n2.3\n```\n\
+  \n# 关于基本类型的更多信息\n\n1. 数据类型的大小（字节）\n\n数据类型：\n- `byte`: 1\n- `short`: 2\n- `int`:\
+  \ 4\n- `long`: 8\n- `float`: 4\n- `double`: 8\n- `boolean` 布尔类型只有两个可能的值：`true` 和\
+  \ `false`。这种数据类型表示位信息，但其“大小”没有精确定义。\n\n2. 如果你在局部变量中使用基本类型，必须初始化变量。否则编译器会报错。\n```java\n\
+  class PrimitiveDeclaration{\npublic static void main(String args[]){\n    int var1;\n\
+  \    System.out.println(var1);\n}\n}\n```\n当你编译上面的程序，抛出错误：\n```\nPrimitiveDeclaration.java:4:\
+  \ error: variable var1 might have been initialized\nSystem.out.println(var1);\n\
+  ^\n1 error\n```\n\n3. 将数据赋值给兼容类型\n\nJava 允许在类型兼容时将一种数据类型的值赋值给另一种类型的值。也就是说，我们可以将\
+  \ `float` 类型赋值给 `double`，`byte` 赋值给 `int`，`char` 赋值给 `int` 等。\n\n当你将字符变量赋值给 `int`\
+  \ 变量时，`int` 变量将存储变量的 Unicode 码。\n```java\nclass Compatible{\npublic static void\
+  \ main(String args[]){\n    char charVar = 'a';\n    int intCharVar = charVar;\n\
+  \    byte byteVar = 100;\n    short shortVar = byteVar;\n    int intVar = shortVar;\n\
+  \    long longVar = intVar;\n    float floatVar = longVar;\n    double doubleVar\
+  \ = floatVar;\n    System.out.println(charVar);\n    System.out.println(intCharVar);\n\
+  \    System.out.println(byteVar);\n    System.out.println(shortVar);\n    System.out.println(intVar);\n\
+  \    System.out.println(longVar);\n    System.out.println(floatVar);\n    System.out.println(doubleVar);\n\
+  }\n\n}\n```\n**输出：**\n```\na\n97\n100\n100\n100\n100\n100.0\n100.0\n```\n\n\n\n\n\
+  \n### 4. 如果你尝试将一种类型的数据赋值给另一个不兼容的类型，编译器将抛出错误。\n\n示例\n\n```java\nclass Compatible{\n\
+  \  public static void main(String args[]){\n  int intVar = 10;\n  boolean a = intVar;\n\
+  \  }\n}\n```\n\n编译时，你将得到下面的错误：\n\n```\nCompatible.java:6: error: incompatible types\n\
+  \  boolean a = floatVar;\n^\nrequired: boolean\nfound: float\n1 error\n```\n\n###\
+  \ 5. 如果你想将高数据类型的值赋值给兼容的低数据类型，那么你应该对其进行外部强制类型转换，否则编译器将抛出提示为“可能会丢失精度”的错误。\n\n语法：\n\
+  `dataType value1 = (dataType) value2;`\n\n```java\nclass Compatible{\n  public static\
+  \ void main(String args[]){\n  double doubleVar = 109.05;\n  char ch = doubleVar;\n\
+  \  System.out.println(doubleVar);\n  System.out.println(ch);\n  }\n}\n```\n\n编译时，你将得到下面的错误。\n\
+  ```\nCompatible.java:5: error: possible loss of precision\nchar ch = doubleVar;\n\
+  ^\nrequired: char\nfound: double\n1 error\n```\n\n为了解决上述错误，我们需要像下面一样显式转换：\n\n```java\n\
+  class Compatible{\n  public static void main(String args[]){\n  double doubleVar\
+  \ = 109.05;\n  char ch = (char)doubleVar;\n  System.out.println(doubleVar);\n  System.out.println(ch);\n\
+  \  }\n}\n```\n\n### 6. 始终通过在 float 变量后面添加“f”来给其赋值，如下所示：\n\n`float floatVar = 10.09f`\
+  \ \n否则编译器将抛出错误。\n\n```java\nclass Compatible{\n  public static void main(String\
+  \ args[]){\n  float floatVar = 10.09;\n  System.out.println(floatVar);\n  }\n}\n\
+  ```\n\n编译时，你将得到下面的错误：\n```\nCompatible.java:3: error: possible loss of precision\n\
+  float floatVar = 10.09;\n^\nrequired: float\nfound: double\n1 error\n```\n\n要解决上述错误，请如下定义\
+  \ float 变量：\n`float floatVar = 10.09f;`\n\n# Java 中的运算符\n\n运算符是执行操作的符号。\n\n如果运算符对单个操作数执行操作，则称为\
+  \ `一元运算符` (unary)。\n例如：\n```java\nint a = 10;\na++;\n```\n\n如果运算符对两个操作数执行操作，则称为\
+  \ `二元运算符` (binary)。\n例如：\n```java\nint a=10, b=20;\nint c = a-b;\n```\n\n如果运算符对三个操作数执行操作，则称为\
+  \ `三元运算符` (ternary)。\n例如：\n```java\nint a = 10, b=20, c;\nc= (a>b) ? a : b;\n```\n\
+  \nJava 中的运算符分为四大大类：\n- 算术运算符\n- 条件运算符\n- 逻辑运算符\n- 位运算符\n- 其他运算符（如赋值、逗号等）\n\n## 算术运算符\n\
+  \n| 运算符 | 执行的操作 |\n| :--- | :--- |\n| `+` | 加法（也用于字符串拼接） |\n| `-` | 减法 |\n| `/`\
+  \ | 除法 |\n| `*` | 乘法 |\n| `%` | 取余数 |\n| `++` | 前置或后自增 |\n| `--` | 前置或后自减 |\n\n\
+  ```java\nclass ArithmeticOperation{\n  public static void main(String args[]){\n\
+  \  int operand1 = 30;\n  int operand2 = 10;\n  System.out.println(\"Addition of\
+  \ operand1 and operand2 is \" + (operand1 + operand2));\n  System.out.println(\"\
+  Subtraction of operand1 and operand2 is \" + (operand1 - operand2));\n  System.out.println(\"\
+  Multiplication of operand1 and operand2 is \" + (operand1 * operand2));\n  System.out.println(\"\
+  Division of operand1 and operand2 is \" + (operand1 / operand2));\n  System.out.println(\"\
+  Remainder of operand1 and operand2 is \" + (operand1 % operand2));\n  }\n}\n```\n\
+  \n输出\n```\nAddition of operand1 and operand2 is 40\nSubtraction of operand1 and\
+  \ operand2 is 20\nMultiplication of operand1 and operand2 is 300\nDivision of operand1\
+  \ and operand2 is 3\nRemainder of operand1 and operand2 is 0\n```\n\n### 需要注意的点\n\
+  \n1. 乘法、除法和取余运算符的优先级高于加法和减法运算符。\n\n示例\n```java\nclass ArithmeticPriority{\n  public\
+  \ static void main(String args[]){\n  int var1 = 10, var2 = 20;\n  int result =\
+  \ var1+var2*var1;\n  System.out.println(result);\n  result = var1-var2/var1;\n \
+  \ System.out.println(result);\n  result = var1+var2%var1;\n  System.out.println(result);\n\
+  \  }\n}\n```\n\n输出\n```\n210\n8\n10\n```\n\n### 解析\n对于表达式 `result = var1+var2*var1`：\n\
+  - `10 + 20*10`\n- `10 + 200`\n- `210`\n\n对于表达式 `result = var1-var2/var1`：\n- `10\
+  \ - 20/10`\n- `10 - 2`\n- `8`\n\n对于表达式 `result = var1+var2%var1`：\n- `10 + 20%10`\n\
+  - `10 + 0`\n- `10`\n\n2. 取余运算符总是返回分子。\n例如：\n`5 % 2 = 1`\n\n```java\nclass RemainderEx{\n\
+  \  public static void main(String args[]){\n  int var1 = 25, var2 = 10;\n  System.out.println(var1%var2);\n\
+  \  var1= 25;\n  System.out.println(var1%var2);\n  }\n```\n\n#算术运算符：++, --\n\n`++`\
+  \ 自增运算符将值加 1\n`--` 自减运算符将值减 1\n\n### 前置自增\n语法：`++variable`\n前置自增立即将变量值加 1。\n示例：\n\
+  ```java\nclass PreIncrement{\n  public static void main(String args[]){\n  int var\
+  \ = 10;\n  System.out.println(++var);\n  }\n}\n```\n输出：`11`\n\n### 后置自增\n语法：`variable++`\n\
+  后置自增在执行当前语句后将变量值加 1。\n示例：\n```java\nclass PostIncrement{\n  public static void main(String\
+  \ args[]){\n  int var = 10;\n  System.out.println(var++);\n  System.out.println(var);\n\
+  \  }\n}\n```\n输出：\n```\n10\n11\n```\n\n### 前置自减\n语法：`--variable`\n前置自减立即将变量值减 1。\n\
+  示例：\n```java\nclass PreDecrement{\n  public static void main(String args[]){\n \
+  \ int var = 10;\n  System.out.println(--var);\n  }\n}\n```\n输出：`9`\n\n### 后置自减\n\
+  语法：`variable--`\n后置自减在执行当前语句后将变量值减 1。\n示例：\n```java\nclass PostDecrement{\n  public\
+  \ static void main(String args[]){\n  int var = 10;\n  System.out.println(var--);\n\
+  \  System.out.println(var);\n  }\n}\n```\n输出：\n```\n10\n9\n```\n\n### 更多示例\n```java\n\
+  class ArithmeticEx{\n  public static void main(String args[]){\n  int var = 10;\n\
+  \  int result = var++ + var++;\n  System.out.println(\"value of variable is \" +\
+  \ var);\n  System.out.println(\"Result is \" + result);\n  result = var++ + ++var;\n\
+  \  System.out.println(\"value of variable is \" + var);\n  System.out.println(\"\
+  Result is \" +result);\n  result = var++ + var--;\n  System.out.println(\"value\
+  \ of variable is \" + var);\n  System.out.println(\"Result is \" + result);\n  result\
+  \ = --var + var--;\n  System.out.println(\"value of variable is \" + var);\n  System.out.println(\"\
+  Result is \" + result);\n  }\n}\n```\n输出\n```\nvalue of variable is 12\nResult is\
+  \ 21\nvalue of variable is 14\nResult is 26\nvalue of variable is 14\nResult is\
+  \ 29\nvalue of variable is 12\nResult is 26\n```\n\n## 条件运算符\n\n条件运算符判断一个操作数是否大于、小于、等于或不等于另一个操作数。\n\
+  \n| 运算符 |  |\n| :--- | :--- |\n| `==` | 等于 |\n| `!=` | 不等于 |\n| `>` | 大于 |\n| `>=`\
+  \ | 大于 |\n| `<` | 小于 |\n| `<=` 小于 |\n\n条件运算符接收两个操作数，如果条件为真则返回 `true`，否则返回 `false`。\n\
+  \n示例\n```java\nclass ConditionalEx{\n  public static void main(String args[]){\n\
+  \  int a = 10, b=11;\n  System.out.println(\"is a equals to a \" + (a==a));\n  System.out.println(\"\
+  is a equals to b \" + (a==b));\n  System.out.println(\"is a not equals to a \" +\
+  \ (a!=a));\n  System.out.println(\"is a not equals to b \" + (a!=b));\n  System.out.println(\"\
+  is a less than a \" + (a<a));\n  System.out.println(\"is a less than b \" + (a<b));\n\
+  \  System.out.println(\"is a less than or equal to a \" + (a<=a));\n  System.out.println(\"\
+  is a less than or equal b \" + (a<=b));\n  System.out.println(\"is a greater than\
+  \ a \" + (a>a));\n  System.out.println(\"is a greater than b \" + (a>b));\n  System.out.println(\"\
+  is a greater than or equal to a \" + (a>=a));\n  System.out.println(\"is a greater\
+  \ than or equal to b \" + (a>=b));\n  }\n}\n```\n\n输出\n```\nis a equals to a true\n\
+  is a equals to b false\nis a not equals to a true\nis a not equals to b true\nis\
+  \ a less than a false\nis a less than b true\nis a less than or equal to a false\n\
+  is a less than or equal b true\nis a greater than a false\nis a greater than b false\n\
+  is a greater than or equal to a true\nis a greater than or equal to b false\n```\n\
+  \n\n\n\n`is a` 不等于 `a` 为假\n`is a` 不等于 `b` 为真\n`is a` 小于 `a` 为假\n`is a` 小于 `b` 为真\n\
+  `is a` 小于等于 `a` 为真\n`is a` 小于等于 `b` 为真\n`is a` 大于 `a` 为假\n`is a` 大于 `b` 为假\n`is\
+  \ a` 大于等于 `a` 为真\n`is a` 大于等于 `b` 为假\n\n### 注意事项\n\n1. 如果类型兼容，你可以将一种 `type` 类型的数据与另一种比较。\n\
+  \n```java\nclass ConditionalEx{\n    public static void main(String args[]){\n \
+  \     int a = 10;\n      float b = 1.09f;\n      char c = 'a';\n      System.out.println(\"\
+  a less than b \" + (a<b));\n      System.out.println(\"a less than c \" + (a<c));\n\
+  \    }\n}\n```\n输出\n```\na less than b false\na less than c true\n```\n\n2. 如果你尝试比较两个不兼容的类型值，编译器将抛错误。\n\
+  \n```java\nclass ConditionalEx{\n    public static void main(String args[]){\n \
+  \     int a = 10;\n      boolean b = true;\n      System.out.println(\"a less than\
+  \ b \" + (a<b));\n    }\n}\n```\n如果你尝试编译上面的程序，你将得到下面的错误\n```\nConditionalEx.java:8:\
+  \ error: bad operand types for binary operator '<'\n  System.out.println(\"a less\
+  \ than b \" + (a<b));\n^\nfirst type: int\nsecond type: boolean\n1 error\n```\n\n\
+  ## 逻辑运算符\n\nJava 提供了三种逻辑运算符，它们分别是 `&&`（与）、`||`（或）和 `!`（非）。\n\n逻辑与也称为条件与。\n逻辑或也称为条件或。\n\
+  逻辑与、或被称为短路运算符，我们很快就会知道为什么它们被称为短路。\n\n### 逻辑与运算符 (&&)\n\n| 操作数 1 | 操作数 2 | 结果为 |\n\
+  | :--- | :--- | :--- |\n| TRUE | TRUE | TRUE |\n| TRUE | FALSE | FALSE |\n| FALSE\
+  \ | TRUE | FALSE |\n| FALSE | FALSE | FALSE |\n\n如上表所示，如果两个操作数求值都真，`&&` 运算符返回 true，否则返回\
+  \ false。\n\n### 示例\n```java\nclass AndEx{\n    public static void main(String args[]){\n\
+  \      boolean operand1 = true;\n      boolean operand2 = true;\n      System.out.println((operand1\
+  \ && operand2));\n      operand1 = true;\n      operand2 = false;\n      System.out.println((operand1\
+  \ && operand2));\n      operand1 = false;\n      operand2 = true;\n      System.out.println((operand1\
+  \ && operand2));\n      operand1 = false;\n      operand2 = false;\n      System.out.println((operand1\
+  \ && operand2));\n    }\n}\n```\n输出\n```\ntrue\nfalse\nfalse\nfalse\n```\n\n####\
+  \ 为什么逻辑与被称为短路运算符\n因为如果表达式中的第一个语句求值为假，那么 Java 就不会求值整个表达式。因此，逻辑与被称为短路与。\n\n 示例\n```java\n\
+  class ShortCircuitAnd{\n    public static void main(String args[]){\n      int a\
+  \ = 10, b=21;\n      if( (a>b) && (a++ > b) ){\n        System.out.println(\"This\
+  \ statement not evaluated\");\n      }\n      System.out.println(\"a is not incremented\
+  \ \" + a);\n      if( (a<b) && (a++ < b) ){\n        System.out.println(\"This statement\
+  \ is evaluated\");\n      }\n      System.out.println(\"a is not incremented \"\
+  \ + a);\n    }\n}\n```\n输出\n```\na is not incremented 10\nThis statement is evaluated\n\
+  a is not incremented 11\n```\n### 观察\n在表达式 `(a>b) && (a++ > b)` 中，`a>b` 为假，所以 `&&`\
+  \ 运算符不会求值表达式中的第二个语句，因此 `a` 没有自增。\n\n### 逻辑或运算符 (||)\n\n| 操作数 1 | 操作数 2 | 结果为 |\n\
+  | :--- | :--- | :--- |\n| TRUE | TRUE | TRUE |\n| TRUE | FALSE | TRUE |\n| FALSE\
+  \ | TRUE | TRUE |\n| FALSE | FALSE | FALSE |\n\n如上表所示，如果任何一个操作数求值为真，`||` 运算符返回 true，否则返回\
+  \ false。\n\n### 示例\n```java\nclass OrEx{\n    public static void main(String args[]){\n\
+  \      boolean operand1 = true;\n      boolean operand2 = true;\n      System.out.println((operand1\
+  \ || operand2));\n      operand1 = true;\n      operand2 = false;\n      System.out.println((operand1\
+  \ || operand2));\n      operand1 = false;\n      operand2 = true;\n      System.out.println((operand1\
+  \ || operand2));\n      operand1 = false;\n      operand2 = false;\n      System.out.println((operand1\
+  \ || operand2));\n    }\n}\n```\n输出\n```\ntrue\ntrue\ntrue\nfalse\n```\n\n#### 为什么逻辑或被称为短路运算符\n\
+  因为如果第一个语句求值为真，那么 Java 就不会求值整个表达式。因此，逻辑或被称为短路或。\n\n### 示例\n```java\nclass ShortCircuitOr{\n\
+  \    public static void main(String args[]){\n      int a = 10, b=21;\n      if(\
+  \ (a<b) || (a++ < b) ){\n        System.out.println(\"This statement evaluated\"\
+  );\n      }\n      System.out.println(\"a is not incremented \" + a);\n      if(\
+  \ (a>b) || (a++ > b) ){\n        System.out.println(\"This statement is evaluated\"\
+  );\n      }\n      System.out.println(\"a is incremented \" + a);\n    }\n}\n```\n\
+  输出\n```\nThis statement evaluated\na is not incremented 10\na is incremented 11\n\
+  ```\n\n### 逻辑 (!) 运算符\n\n| 操作数 | 执行结果为 |\n| :--- | :--- |\n| FALSE | TRUE |\n| TRUE\
+  \ | FALSE |\n\n如果操作数为 FALSE，`!` 运算符将其求值为 TRUE。如果操作数为 TRUE，`!` 运算符将其求值为 FALSE。\n\n\
+  ### 示例\n```java\nclass LogicalNot{\n    public static void main(String args[]){\n\
+  \      boolean a = false;\n      System.out.println(!a);\n      a = true;\n    \
+  \  System.out.println(!a);\n    }\n}\n```\n输出\n```\ntrue\nfalse\n```\n\n## 位运算符\n\
+  \nJava 提供了位运算符，用于对整数类型执行位操作。\n\n| 运算符 | 描述 |\n| :--- | :--- |\n| `~` | 取反 |\n| `<<`\
+  \ | 左移 |\n| `>>` | 有符号右移 |\n| `>>>` | 无符号右移 |\n| `&` | 位与 |\n| `|` | 位或 |\n| `^`\
+  \ | 位异异 |\n\n### 取反运算符 (~)\n\n取反运算符翻转整数的每一个位（0 变 1，1 变 0）。例如，`int a = 5;` 的二进制表示为\
+  \ `00000000000000000000000000000101`，`~a` 的结果是 `11111111111111111111111111111010`。\n\
+  \n### 示例\n```java\nclass NotEx{\n    public static void main(String args[]){\n \
+  \     int a = 5;\n      System.out.println(~a);\n    }\n}\n```\n输出\n```\n-6\n```\n\
+  \n### 左移运算符 (<<)\n\n左移运算符将操作数的位向左移动指定的位数，右侧补 0。这相当于将操作数乘以 2 的 $n$ 次方。\n\n### 示例\n\
+  ```java\nclass LeftShiftEx{\n    public static void main(String args[]){\n     \
+  \ int a = 5;\n      System.out.println(a << 1);\n      System.out.println(a << 2);\n\
+  \    }\n}\n```\n输出\n```\n10\n20\n```\n\n### 有符号右移运算符 (>>)\n\n有符号右移运算符将操作数的位向右移动指定的位数，左侧补符号位（正数补\
+  \ 0，负数补 1）。\n\n### 示例\n```java\nclass RightShiftEx{\n    public static void main(String\
+  \ args[]){\n      int a = 20;\n      System.out.println(a >> 1);\n      System.out.println(a\
+  \ >> 2);\n    }\n}\n```\n输出\n```\n10\n5\n```\n\n### 无符号右移运算符 (>>>)\n\n无符号右移运算符将操作数的位向右移动指定的位数，左侧始终补\
+  \ 0，无论符号位如何。\n\n### 示例\n```java\nclass UnsignedRightShiftEx{\n    public static\
+  \ void main(String args[]){\n      int a = -20;\n      System.out.println(a >>>\
+  \ 1);\n    }\n}\n```\n输出\n```\n2147483638\n```\n\n### 位与运算符 (&)\n\n位与运算符比较两个操作数的位，只有当两个位都为\
+  \ 1 时，结果位才为 1，否则为 0。\n\n### 示例\n```java\nclass BitAndEx{\n    public static void\
+  \ main(String args[]){\n      int a = 5; // 101\n      int b = 3; // 011\n     \
+  \ System.out.println(a & b);\n    }\n}\n```\n输出\n```\n1\n```\n\n### 位或运算符 (|)\n\n\
+  位或运算符比较两个操作数的位，只要其中一个位为 1，结果位就为 1，否则为 0。\n\n### 示例\n```java\nclass BitOrEx{\n  \
+  \  public static void main(String args[]){\n      int a = 5; // 101\n      int b\
+  \ = 3; // 011\n      System.out.println(a | b);\n    }\n}\n```\n输出\n```\n7\n```\n\
+  \n### 位异异运算符 (^)\n\n位异异运算符比较两个操作数的位，只有当两个位不同时，结果位才为 1，如果相同则为 0。\n\n### 示例\n```java\n\
+  class BitXorEx{\n    public static void main(String args[]){\n      int a = 5; //\
+  \ 101\n      int b = 3; // 011\n      System.out.println(a ^ b);\n    }\n}\n```\n\
+  输出\n```\n6\n```\n\n\n右移运算符简单地将所有位向右移动一位，即它简单地将数值减半（除以 2）。\n\n### 语法\n`variable >>\
+  \ n`\n\n将 `variable` 向右移动 `'n'` 次。\n\n`Variable >> n` 等于 `variable = variable /\
+  \ 2 power n`\n\n```java\nint var = 128;\nvar >> 1 = 128 / (2 power 1) = 64\nvar\
+  \ >> 2 = 128 / (2 power 2) = 32\n```\n\n### 示例\n```java\nclass BitWiseEx{\n    public\
+  \ static void main(String args[]){\n      int intVar = 128;\n      System.out.println(\"\
+  Value of int variable is \" + intVar);\n      System.out.println(\"After shifting\
+  \ 1 bit Right \" + (intVar>>1));\n      System.out.println(\"After shifting 2 bits\
+  \ Right \" + (intVar>>2));\n      System.out.println(\"After shifting 3 bits Right\
+  \ \" + (intVar>>3));\n      System.out.println(\"After shifting 4 bits Right \"\
+  \ + (intVar>>4));\n      System.out.println(\"After shifting 5 bits Right \" + (intVar>>5));\n\
+  \      System.out.println(\"After shifting 6 bits Right \" + (intVar>>6));\n   \
+  \   System.out.println(\"After shifting 6 bits Right \" + (intVar>>7));\n      System.out.println(\"\
+  Value of int variable is \" + intVar);\n    }\n}\n```\n\n### 输出\n```\nValue of int\
+  \ variable is 128\nAfter shifting 1 bit Right 64\nAfter shifting 2 bits Right 32\n\
+  After shifting 3 bits Right 16\nAfter shifting 4 bits Right 8\nAfter shifting 5\
+  \ bits Right 4\nAfter shifting 6 bits Right 2\nAfter shifting 6 bits Right 1\nValue\
+  \ of int variable is 128\n```\n\n#### 位运算无符号右移(>>>)\n将所有位向右移动一位，并将最左侧位置零\n\n```java\n\
+  class BitWiseEx{\n    public static void main(String args[]){\n      int intVar\
+  \ = -128;\n      System.out.println(\"Value of int variable is \" + intVar);\n \
+  \     System.out.println(\"After shifting 1 bit Right \" + (intVar>>>1));\n    }\n\
+  }\n```\n\n### 输出\n```\nValue of int variable is -128\nAfter shifting 1 bit Right\
+  \ 2147483584\n```\n\n### 解释\n`-128` 在补码形式下为：\n`11111111 11111111 11111111 10000000`\n\
+  `>>>` 将位向右移动一位并将最左侧位替换为零\n所以 `(-128>>>1)` 的序列如下：\n`01111111 11111111 11111111 11000000`\n\
+  \n#### 位与与(&), 逻辑或(|), 异或(^)\n| 位 1 | 位 2 | & | | | ^ |\n| :--- | :--- | :--- |\
+  \ :--- | :--- |\n| 0 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 1 | 1 |\n| 1 | 0 | 0 | 1 |\
+  \ 1 |\n| 1 | 1 | 1 | 1 | 0 |\n\n### 示例\n```java\nclass BitWiseEx{\n    public static\
+  \ void main(String args[]){\n      byte a = 8;\n      byte b = 9;\n      System.out.println(\"\
+  a & b is \" + (a&b));\n      System.out.println(\"a | b is \" + (a|b));\n      System.out.println(\"\
+  a ^ b is \" + (a^b));\n    }\n}\n```\n\n### 输出\n```\na & b is 8\na | b is 9\na ^\
+  \ b is 1\n```\n\n### 解释\n- `a` = `0000 1000`\n- `b` = `0000 1001`\n- `a&b` = `0000\
+  \ 1000`\n- `a` = `0000 1000`\n- `b` = `0000 1001`\n- `a|b` = `0000 1001`\n- `a`\
+  \ = `0000 1000`\n- `b` = `0000 1001`\n- `a^b` = `0000 0001`\n\n**注意：**\n位运算符仅适用于整数值，如\
+  \ `byte`、`short` 等，这些不适用于 `float`、`double`、`Boolean`。\n\n# Java 中的其他运算符\n\n## 赋值运算符\n\
+  赋值运算符用于给变量赋值。\n\n### 语法\n`type variable = value;`\n\n### 示例\n```java\nint a = 10;\n\
+  int b = 20;\n```\n\n### 复合赋值\nJava 支持复合赋值。\n\n### 语法\n`variable operator= value`\n\
+  \n#### 示例：\n假设 `int a = 10;` `a+=10` 求值结果为 `a=a+10`\n\n| 复合运算符 | 示例 | 说明 |\n| :---\
+  \ | :--- | :--- |\n| `+=` | `a+=10` | `a=a+10` |\n| `-=` | `a-=10` | `a=a-10` |\n\
+  | `*=` | `a*=10` | `a=a*10` |\n| `/=` | `a/=10` | `a=a/10` |\n\n#### 示例程序\n```java\n\
+  class CompoundAssignment{\n    public static void main(String args[]){\n      int\
+  \ var1 = 100;\n      int sum=10, sub=10, mul=10, div=100;\n      System.out.println(\"\
+  sum+var1 is \" + (sum+=var1));\n      System.out.println(\"sub-var1 is \" + (sub-=var1));\n\
+  \      System.out.println(\"mul*var1 is \" + (mul*=var1));\n      System.out.println(\"\
+  div/var1 is\" + (div/=var1));\n    }\n}\n```\n\n### 输出\n```\nsum+var1 is 110\nsub-var1\
+  \ is 0\nmul*var1 is 100\ndiv/var1 is10\n```\n\n#### 类型比较运算符\n`instanceof` 运算符将对象与指定的类型进行比较。它可以测试对象是否是某个\
+  \ `class`、`subclass` 或 `interface` 的实例。\n\n### 示例\n```java\nclass InstanceOfEx{\n\
+  \    public static void main(String args[]){\n      Object obj = new Object();\n\
+  \      System.out.println(obj instanceof Object);\n      System.out.println(obj\
+  \ instanceof InstanceOfEx);\n    }\n}\n```\n\n### 输出\n```\ntrue\nfalse\n```\n\n\
+  #### 三元运算符\n根据条件返回两个表达式之一。\n\n### 语法\n`test ? expression1 : expression2`\n如果 `\"\
+  test\"` 条件为真，则返回 `expression1`，否则返回 `expression2`。\n\n### 示例\n```java\nclass TernaryEx{\n\
+  \    public static void main(String args[]){\n      int a = 100;\n      int flag\
+  \ = a>10 ? 1 : 0;\n      System.out.println(flag);\n    }\n}\n```\n\n### 输出\n```\n\
+  1\n```\n### 观察\n查看语句 `\"flag = a>10 ? 1 : 0\"`，`a>10` 为真，因此返回 `1` 并赋值给 `flag`。\n\
+  \n# 控制语句：决策：if-then, if-else, if-else-else\nJava 提供了用于决策（`if`、`if-else`、`switch`）和循环（`for`、`while`、`do-while`）的控制语句。\n\
+  \n### 语句块\n在 java 中，`{ }` 之间的语句被称为语句块。\n```\n{\n    // 代码块\n}\n```\n\n### 决策语句\n\
+  \n#### if 语句\n当条件为真时执行代码部分。\n\n### 语法\n```java\nif(condition){\n    // 条件为真时执行\n\
+  }\n```\n\n### 示例\n```java\nclass Grades{\n    public static void main(String args[]){\n\
+  \      int marks = 20;\n      if(marks < 35 ){\n        System.out.println(\"You\
+  \ failed in the Exam. Better luck time\");\n      }\n    }\n}\n```\n\n### 输出\n```\n\
+  You failed in the Exam. Better luck time\n```\n\n一些需要记忆的点\n1. 在 java 中，`if` 中的条件必须求值为布尔值，否则编译器会报错。\n\
+  \n### 示例\n```java\nclass Grades{\n    public static void main(String args[]){\n\
+  \      int var1;\n      if(var1 = 10){\n      }\n    }\n}\n```\n当你尝试编译上面的程序时，将得到下面的错误：\n\
+  ```\nGrades.java:5: error: incompatible types\nif(var1 = 10){\n^\nrequired: boolean\n\
+  found: int\n1 error\n```\n\n#### if-else 语句\n### 语法\n```java\nif(condition){\n}\n\
+  else{\n}\n```\n如果条件为真，则执行 if 块；否则执行 else 块。\n\n### 示例\n```java\nclass Grades{\n\
+  \    public static void main(String args[]){\n      int marks = 36;\n      if(marks\
+  \ < 35)\n        System.out.println(\"You are failed\");\n      else\n        System.out.println(\"\
+  You are passed\");\n    }\n}\n```\n\n### 输出\n```\nYou are passed\n```\n### 观察\n\
+  在上面的程序中，我们没有在 `{ }` 之间编写 if 和 else 块，因为块之间只有一条语句，我们可以省略 `{ }`。\n\n#### if-else if-else\n\
+  通过使用 `if-else if-else` 结构，你可以选择多个备方案。`if` 语句可以跟随可选的 `else if...else` 语句，这对于使用单个\
+  \ `if...else` 语句测试各种条件非常有用。\n\n```java\nclass Grades{\n    public static void main(String\
+  \ args[]){\n      int marks = 69;\n      if(marks < 35)\n        System.out.println(\"\
+  You are failed\");\n      else if( marks < 50)\n        System.out.println(\"You\
+  \ are passed and got third class\");\n      else if( marks < 60)\n        System.out.println(\"\
+  You are passed and got second class\");\n      else if( marks < 70)\n        System.out.println(\"\
+  You are passed and got first class\");\n      else\n        System.out.println(\"\
+  You are passed and got distinction\");\n    }\n}\n```\n\n### 输出\n```\nYou are passed\
+  \ and got first class\n```\n\n#### switch 语句\n`switch` 语句的主体被称为 `switch` 块。`switch`\
+  \ 块中的语句可以带有一个或多个 `case` 或 `default` 标签。`switch` 语句评估其表达式，然后执行匹配的 case 标签之后的所有语句。\n\
+  \n\n\n\n\nJava 7 在 switch case 评估中支持字符串，以及几个包装某些原始类型的特殊类：`Character`、`Byte`、`Short`\
+  \ 和 `Integer`。\n\n`Integer`、`Char`、`Byte`、`Short` 被包装类。将在后续文章中详细讨论这些内容。\n\n### Example\n\
+  \n```java\nclass SwitchEx{\n    public static void main(String args[]){\n      \
+  \  int day = 5;\n        switch(day){\n            case 1:\n                System.out.println(\"\
+  Sunday\");\n                break;\n            case 2:\n                System.out.println(\"\
+  Monday\");\n                break;\n            case 3:\n                System.out.println(\"\
+  Tueday\");\n                break;\n            case 4:\n                System.out.println(\"\
+  Wednesday\");\n                break;\n            case 5:\n                System.out.println(\"\
+  ThursDay\");\n                break;\n            case 6:\n                System.out.println(\"\
+  Friday\");\n                break;\n            case 7:\n                System.out.println(\"\
+  Saturday\");\n                break;\n            default:\n                System.out.println(\"\
+  You entered wrong day number\");\n        }\n    }\n}\n```\n\n**Output**\nThursDay\n\
+  \n### Explanation\n如你在上面的程序所示，变量 `day` 被设置为值 `5`。因此在 `switch` case 中，执行了 `case 5`。如果\
+  \ `day` 被设置为 `1`，则将执行 `case 1` 并跳出 `switch`。\n\n你可以在上面的程序中看到，每个 case 都有一个关联的 `break`\
+  \ 语句，这有必要吗？是的，当然有。如果你没有在 case 语句中指定 `break`，那么被评估 case 之后的所有 case 语句都会执行。\n\n还有一点是，case\
+  \ 语句不需要按顺序排列。它们可以用任何方式编写。\n\n```java\nclass SwitchEx{\n    public static void main(String\
+  \ args[]){\n        int day = 5;\n        switch(day){\n            case 2:\n  \
+  \              System.out.println(\"Monday\");\n            case 3:\n          \
+  \      System.out.println(\"Tueday\");\n            case 4:\n                System.out.println(\"\
+  Wednesday\");\n            case 5:\n                System.out.println(\"ThursDay\"\
+  );\n            case 6:\n                System.out.println(\"Friday\");\n     \
+  \       case 7:\n                System.out.println(\"Saturday\");\n           \
+  \ case 1:\n                System.out.println(\"Sunday\");\n            default:\n\
+  \                System.out.println(\"You entered wrong day number\");\n       \
+  \ }\n    }\n}\n```\n\n**Output**\nThursDay\nFriday\nSaturday\nSunday\nYou entered\
+  \ wrong day number\n\n如你在上面的程序所示，`day` 被设置为 `5`，并且对应的 cases 中没有 break。因此执行了 `case\
+  \ 5`、`6`、`7`、`1` 和 `default`。\n\n另外一点是在上面的程序中，`case 1` 在 `7` 之后，这在 Java 中是可以接受的行为。\n\
+  \n### 这里 default 的必要性是什么\n如果没有 case 被评估，则执行 `default`，就像 `if-else if-else` 阶链中的\
+  \ `else` 块一样。\n\n### Example\n\n```java\nclass SwitchEx{\n    public static void\
+  \ main(String args[]){\n        int day = 9;\n        switch(day){\n           \
+  \ case 1:\n                System.out.println(\"Sunday\");\n                break;\n\
+  \            case 2:\n                System.out.println(\"Monday\");\n        \
+  \        break;\n            case 3:\n                System.out.println(\"Tueday\"\
+  );\n                break;\n            case 4:\n                System.out.println(\"\
+  Wednesday\");\n                break;\n            case 5:\n                System.out.println(\"\
+  ThursDay\");\n                break;\n            case 6:\n                System.out.println(\"\
+  Friday\");\n                break;\n            case 7:\n                System.out.println(\"\
+  Saturday\");\n                break;\n            default:\n                System.out.println(\"\
+  You entered wrong day number\");\n        }\n    }\n}\n```\n\n**Output**\nYou entered\
+  \ wrong day number\n\n### 记忆点\n1. 什么时候使用 `if-else if -else` 阶链而不是 switch？\n   Switch\
+  \ case 不支持如 `age>30`、`year<2000` 等范围检查，在这些情况下最好使用 `if-else if-else` 阶链。\n\n# 控制流语句：循环：while,\
+  \ do-while\n\n### while\n`while` 语句执行一个语句块，直到特定条件为真。\n\n**Syntax**\n```\nwhile (expression)\
+  \ {\n    //statements\n}\n```\n`while` 语句中的 `expression` 必须评估为布尔值，否则编译器将抛出错误`While`\
+  \ 语句首先评估 `expression`，直到 `expression` 评估为真，它才会执行 `while` 内部的代码，否则将跳出 while 循环。\n\
+  \n**Example**: 使用 `while` 循环打印 0 到 9 的数字。\n```java\nclass WhileEx{\n    public static\
+  \ void main(String args[]){\n        int var1 = 0;\n        while(var1 < 10){\n\
+  \            System.out.println(var1);\n            var1++;\n        }\n    }\n\
+  }\n```\n**Output**\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n### do-while\n`do-while` 也是像\
+  \ `while` 一样的循环结构，但它在循环的底部评估其表达式。\n\n**Syntax**\n```\ndo {\n    //statement(s)\n\
+  } while (expression);\n```\n**Example**\n```java\nclass DoWhileEx{\n    public static\
+  \ void main(String args[]){\n        int var1 = 0;\n        do{\n            System.out.println(var1);\n\
+  \            var1++;\n        } while(var1<10);\n    }\n}\n```\n**Output**\n0\n\
+  1\n2\n3\n4\n5\n6\n7\n8\n9\n\n**记忆点**\n1. `while` 和 `do-while` 的区别是什么？\n   `do` 块中的语句即使表达式为假也会执行一次。\n\
+  \n**Example**\n```java\nclass CompareLoop{\n    public static void main(String args[]){\n\
+  \        boolean flag = false;\n        while(flag)\n            System.out.println(\"\
+  I am while loop\");\n        do\n            System.out.println(\"I am do-while\
+  \ loop\");\n        while(flag);\n    }\n}\n```\n**Output**\nI am do-while loop\n\
+  \n**Observation**\n注意即使表达式 `flag` 为假，`do-while` 也会执行。如果你只有一条语句，则不需要放在 `{ }` 中。\n\
+  \n# 控制流语句：循环： for\n`for` 语句提供迭代范围值的紧凑方式。\n\n**Syntax**\n```\nfor(initialization;\
+  \ condition; update){\n    //statements to executed\n}\n```\n`for` 循环执行语句直到条件为假。`Initialization`\
+  \ 部分在循环开始时执行一次。`Condition` 部分在执行语句前评估。`update` 部分在执行语句后执行。\n\n**Example**: 打印 0\
+  \ 到 9 的数字\n```java\nclass ForEx{\n    public static void main(String args[]){\n\
+  \        int var1;\n        for(var1 = 0; var1 < 10; var1++){\n            System.out.println(var1);\n\
+  \        }\n    }\n}\n```\n**Output**\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n**记忆点**\n\
+  1. 你可以在 for 循环内部声明变量：`for(int i=0; i<10; i++)` 是有效的构造。\n2. `for( ; )` 会无限循环。\n\n\
+  ## 分支语句: break\n\n### break 语句\n我们已经在 `switch` case 中见过 `break`。同样，`break` 也用于 `while`、`do-while`\
+  \ 和 `for` 循环。`Break` 在 Java 中有两种形式：\n1. 无标签 break (unlabelled break)\n2. 有标签 break\
+  \ (labelled break)\n\n#### 无标签 break\n**Example**\n```java\nclass BreakEx{\n   \
+  \ public static void main(String args[]){\n        for(int i=0; i < 10; i++){\n\
+  \            if(i==5) break;\n            System.out.println(i);\n        }\n  \
+  \      System.out.println(\"I am out of the loop\");\n    }\n}\n```\n**Output**\n\
+  0\n1\n2\n3\n4\nI am out of the loop\n\n如上面的程序所示，当变量 `i` 达到 5 时调用 `break`，跳出循环。\n\
+  \n#### 有标签 break\n`label` 是一个使用 `labelName` 标识的语句组。\n\n**Syntax**\n```\nlabelName:{\n\
+  \    statement 1\n    statement 2\n    ....\n    statement N\n}\n```\n**Example**\n\
+  ```java\nclass BreakEx{\n    public static void main(String args[]){\n        myLoop:\
+  \ {\n            for(int i=0; i < 10; i++){\n                if(i==5) break myLoop;\n\
+  \                System.out.println(i);\n            }\n            System.out.println(\"\
+  I am also label\");\n        }\n        System.out.println(\"I am out of the loop\"\
+  );\n    }\n}\n```\n**Output**\n0\n1\n2\n3\n4\nI am out of the loop\n\n如上面的程序所示，标签名为\
+  \ `myLoop`。当变量 `i` 的值达到 5 时，跳出标签。\n\n# Python 练习\n面向初学者的编程\nJJ TAM\n\nPYTHON 练习\n\
+  \n### 获取 Python 版本\n**CODE**\n```python\nimport sys\nprint(\"Python version\")\n\
+  print (sys.version)\nprint(\"Version info.\")\nprint (sys.version_info)\n```\n**OUTPUT**\n\
+  Python version\n3.6.6 (default, Jun 28 2018, 04:42:43)\n[GCC 5.4.0 20160609]\nVersion\
+  \ info.\nsys.version_info(major=3, minor=6, micro=6, releaselevel='final', serial=0)\n\
+  \n### 显示当前日期和时间\n**PYTHON 代码**\n```python\nimport datetime\nnow = datetime.datetime.now()\n\
+  print (\"Current date and time : \")\nprint (now.strftime(\"%Y-%m-%d %H:%M:%S\"\
+  ))\n```\n**OUTPUT**\nCurrent date and time :\n2020-10-22 10:35:31\n\n### 打印日历\n\
+  **PYTHON 代码**\n```python\nimport calendar\ny = int(input(\"Input the year : \"))\n\
+  m = int(input(\"Input the month : \"))\nprint(calendar.month(y, m))\n```\n**OUTPUT**\n\
+  Input the year : 2020\n\n\n\n\n\n## 输入月份：10\n\n2020 年 10 月\n\n```\nMo Tu We Th Fr\
+  \ Sa Su\n      1 2 3 4\n5 6 7 8 9 10 11\n12 13 14 15 16 17 18\n19 20 21 22 23 24\
+  \ 25\n26 27 28 29 30 31\n```\n\n## 计算 `n+nn+nnn` 的值\n\n### PYTHON 代码\n```python\n\
+  a = int(input(\"Input an integer : \"))\nn1 = int( \"%s\" % a )\nn2 = int( \"%s%s\"\
+  \ % (a,a) )\nn3 = int( \"%s%s%s\" % (a,a,a) )\nprint (n1+n2+n3)\n```\n\n### 输出\n\
+  ```\nInput an integer : 6\n738\n```\n\n### 计算天数\n\n### 程序\n```python\nfrom datetime\
+  \ import date\n\nf_date = date(2014, 7, 2)\nl_date = date(2015, 7, 11)\ndelta =\
+  \ l_date - f_date\nprint(delta.days)\n```\n\n### 输出\n```\n374\n```\n\n### Python\
+  \ 计算球体体积\n\n### 程序\n```python\npi = 3.1415926535897931\nr= 6.0\nV= 4.0/3.0*pi* r**3\n\
+  print('The volume of the sphere is: ',V)\n```\n\n### 输出\n```\nThe volume of the\
+  \ sphere is:  904.7786842338603\n```\n\n### 计算三角形面积\n\n### 程序\n```python\nb = int(input(\"\
+  Input the base : \"))\nh = int(input(\"Input the height : \"))\narea = b*h/2\nprint(\"\
+  area = \", area)\n```\n\n### 输出\n```\nInput the base : 20 \nInput the height : 40\n\
+  area =  400.0  \n```\n\n### 计算最大公约数 (GCD)\n\n### 程序\n```python\ndef gcd(x, y):\n\
+  \    gcd = 1\n    if x % y == 0:\n        return y\n    for k in range(int(y / 2),\
+  \ 0, -1):\n        if x % k == 0 and y % k == 0:\n            gcd = k\n        \
+  \    break \n    return gcd\nprint(gcd(12, 17))\nprint(gcd(4, 6))\n```\n\n### 输出\n\
+  ```\n1\n2\n```\n\n### 计算最小公倍数 (LCM)\n\n### 程序\n```python\ndef lcm(x, y):\n  if x\
+  \ > y:\n      z = x\n  else:\n      z = y\n  while(True):\n    if((z % x == 0) and\
+  \ (z % y == 0)):\n      lcm = z\n      break\n    z += 1\n  return lcm\nprint(lcm(4,\
+  \ 6))\nprint(lcm(15, 17))\n```\n\n### 输出\n```\n12\n25\n```\n\n### 将英尺和英寸转换为厘米\n\n\
+  ### 程序\n```python\nprint(\"Input your height: \")\nh_ft = int(input(\"Feet: \"))\n\
+  h_inch = int(input(\"Inches: \"))\nh_inch += h_ft * 12\nh_cm = round(h_inch * 2.5,\
+  \ 1)\nprint(\"Your height is : %d cm.\" % h_cm)\n```\n\n### 输出\n```\nInput your\
+  \ height: \n5\nInches: 3\nYour height is : 160 cm.\n```\n\n### 时间转换——秒\n\n### PYTHON\
+  \ 代码\n```python\ndays = int(input(\"Input days: \")) * 3600 * 24\nhours = int(input(\"\
+  Input hours: \")) * 3600\nminutes = int(input(\"Input minutes: \")) * 60\nseconds\
+  \ = int(input(\"Input seconds: \"))\ntime = days + hours + minutes + seconds\nprint(\"\
+  The amounts of seconds\", time)\n```\n\n### 输出\n```\nInput days: 4\nInput hours:\
+  \ 5\nInput minutes: 20\nInput seconds: 10\nThe amounts of seconds 364810\n```\n\n\
+  ### 秒转换为天\n\n### 程序\n```python\ntime = float(input(\"Input time in seconds: \"))\n\
+  day = time // (24 * 3600)\ntime = time % (24 * 3600)\nhour = time // 3600\ntime\
+  \ %= 3600\nminutes = time // 60\nseconds = time\nprint(\"d:h:m:s-> %d:%d:%d:%d\"\
+  \ % (day, hour, minutes, seconds))\n```\n\n### 输出\n```\nInput time in seconds: 123465\n\
+  d:h:m:s-> 14:6:56:5\n```\n\n### 计算 BMI (身体质量指数)\n\n### 程序\n```python\nheight = float(input(\"\
+  Input your height in meters: \"))\nweight = float(input(\"Input your weight in kilogram:\
+  \ \"))\nprint(\"Your body index is: \", round(weight / (height * height), 2)\n```\n\
+  \n### 输出\n```\nInput your height in meters: 6.2\nInput your weight in kilogram:\
+  \ 7\nYour body index is: 1.8\n```\n\n### 整数排序\n\n### 程序\n```python\nx = int(input(\"\
+  Input first number: \"))\ny = int(input(\"Input second number: \"))\nz = int(input(\"\
+  Input third number: \"))\na1 = min(x, y, z)\na3 = max(x, y, z)\na2 = (x + y + z)\
+  \ - a1 - a3\nprint(\"Numbers in sorted order: \", a1, a2, a3)\n```\n\n### 输出\n```\n\
+  Input first number: 2\nInput second number: 4\nInput third number: 5\n```\n\n###\
+  \ 获取系统时间\n\n### 程序\n```python\nimport time\nprint(time.ctime())\n```\n\n### 输出\n\
+  ```\nThu Oct 22 14:59:20\n\n\n### 检查数字正负\n\n### PYTHON 代码\n```python\nnum = float(input(\"\
+  Input a number: \"))\nif num > 0:\n    print(\"It is positive\")\nelif num == 0:\n\
+  \    print(\"It is Zero\")\nelse:\n    print(\"It a negative number\")\n```\n\n\
+  ### 输出\n```\nInput a number: 20\nIt is positive\n```\n\n### Python 删除元素\n\n### 程序\n\
+  ```python\ncolor = [\"Red\", \"Green\", \"Orange\"]\nprint(\"Color: \", color)\n\
+  del color[0]\nprint(\"After the first color: \", color)\n```\n\n### 输出\n```\nColor:\
+  \ ['Red', 'Green', 'Orange']\nAfter the first color: ['Green', 'Orange']\n```\n\n\
+  ### 过滤正数\n\n### PYTHON 代码\n```python\nnums = [34, -1, 23]\nprint(\"Original numbers\
+  \ in the list: \", nums)\nnew_nums = list(filter(lambda x: x > 0, nums))\nprint(\"\
+  Positive numbers in the list: \", new_nums)\n```\n\n### 输出\n```\nOriginal numbers\
+  \ in the list: [34, -1, 23]\nPositive numbers in the list: [34, 23]\n```\n\n###\
+  \ 统计列表中数字 4 的个数\n\n### 程序\n```python\ndef list_count_4(nums):\n  count = 0 \n  for\
+  \ num in nums:\n    if num == 4:\n      count = count + 1\n  return count\nprint(list_count_4([1,\
+  \ 4, 6, 7, 4]))\nprint(list_count_4([1, 4, 6, 7, 4]))\n```\n\n### 输出\n```\n2\n3\n\
+  ```\n\n### 判断奇偶数\n\n### 程序\n```python\nnum = int(input(\"Enter a number: \"))\n\
+  mod = num % 2\nif mod > 0:\n    print(\"This is an odd number.\")\nelse:\n    print(\"\
+  This is an even number.\")\n```\n\n### 输出\n```\nEnter a number: 5\nThis is an odd\
+  \ number.\n```\n\n### 列表之间的差异\n\n### PYTHON 代码\n```python\nlist1 = [1, 3, 5, 7,\
+  \ 9]\nlist2=[1, 2, 4, 6, 8]\ndiff_list1_list2 = set(list1) - set(list2)\ndiff_list2_list1\
+  \ = set(list2) - set(list1)\ntotal_diff = diff_list1_list2 + diff_list2_list1\n\
+  print(total_diff)\n```\n\n### 输出\n```\n[9, 3, 5, 2, 4, 6]\n```\n\n### 生成列表的所有排列\n\
+  \n### PYTHON 代码\n```python\nimport itertools\nprint(list(itertools.permutations([1,2,3])))\n\
+  ```\n\n### 输出\n```\n[(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3,\
+  \ 2, 1)]\n```\n\n### 列表中第二最小的数字\n\n### 程序\n```python\ndef second_smallest(numbers):\n\
+  \  if (len(numbers)<2):\n    return\n  if ((len(numbers)==2) and (numbers[0] ==\
+  \ numbers[1]) ):\n    return\n  dup_items = set()\n  uniq_items = []\n  for x in\
+  \ numbers:\n    if x not in dup_items:\n      uniq_items.append(x)\n      dup_items.add(x)\n\
+  \  uniq_items.sort()\n  return uniq_items[1]\nprint(second_smallest([1, 2, -8, 0,\
+  \ -2]))\nprint(second_smallest([1, 1, 0, 0, 2, -2]))\nprint(second_smallest([1,\
+  \ 1, 1, 0, 0, 0, 2, -2]))\nprint(second_smallest([2,2]))\nprint(second_smallest([2]))\n\
+  ```\n\n### 输出\n```\n-2\n0\nNone\nNone\n```\n\n### 获取列表中的唯一值\n\n### Python 代码\n```python\n\
+  my_list = [10, 20, 30, 40, 20, 50, 60, 40]\nprint(\"Original List : \",my_list)\n\
+  my_set = set(my_list)\nmy_new_list = list(my_set)\nprint(\"List of unique numbers\
+  \ : \",my_new_list)\n```\n\n### 输出\n```\nOriginal List : [10, 20, 30, 40, 20, 50,\
+  \ 60, 40]\nList of unique numbers : [40, 10, 50, 20, 60, 30]\n```\n\n\n\n\n\n[[],\
+  \ [10], [20], [30], [40], [10, 20], [10, 30], [10, 40], [20, 30], [20, 40], [30,\
+  \ 40], [10, 20, 30], [10, 20, 40], [10, 30, 40], [20, 30, 40], [10, 20, 30, 40]]\n\
+  \n### 上述列表的子列表：\n[[], [10], [20], [30], [40], [10, 20], [10, 30], [10, 40], [20,\
+  \ 30], [20, 40], [30, 40], [10, 20, 30], [10, 20, 40], [10, 30, 40], [20, 30, 40],\
+  \ [10, 20, 30, 40]]\n\n### 原始列表：\n['X', 'Y', 'Z']\n\n### 上述列表的子列表：\n[[], ['X'],\
+  \ ['Y'], ['Z'], ['X', 'Y'], ['X', 'Z'], ['Y', 'Z'], ['X', 'Y', 'Z']]\n\n### 从两个列表中查找共同元素\n\
+  Python 代码\n```python\ncolor1 = \"Red\", \"Green\", \"Orange\", \"White\"\ncolor2\
+  \ = \"Black\", \"Green\", \"White\", \"Pink\"\n\nprint(set(color1) & set(color2))\n\
+  ```\n**输出**\n'Green', 'White'\n\n### 创建一个包含无限元素的列表\nPython 代码\n```python\nimport\
+  \ itertools\n\nc = itertools.count()\n\nprint(next(c))\nprint(next(c))\nprint(next(c))\n\
+  print(next(c))\nprint(next(c))\n```\n**输出**\n0\n1\n2\n3\n4\n\n### 移除给定列表中的连续重复项\n\
+  Python 代码\n```python\nfrom itertools import groupby\ndef compress(l_nums):\n   \
+  \ return [key for key, group in groupby(l_nums)]\n\nn_list = [0, 0, 1, 2, 3, 4,\
+  \ 4, 5, 6, 6, 6, 7, 8, 9, 4, 4]\nprint(\"Original list:\")\nprint(n_list)\nprint(\"\
+  \\nAfter consecutive duplicates:\")\nprint(compress(n_list))\n```\n**输出**\nOriginal\
+  \ list: [0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4]\nAfter consecutive duplicates:\
+  \ [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4]\n\n### 展平化嵌套列表结构\nPython 代码\n```python\ndef\
+  \ flatten_list(n_list):\n    result_list = []\n    if not n_list: return result_list\n\
+  \    stack = [list(n_list)]\n    while stack:\n        c_num = stack.pop()\n   \
+  \     next = c_num.pop()\n        if c_num: stack.append(c_num)\n        if isinstance(next,\
+  \ list):\n            if next: stack.append(list(next))\n        else: result_list.append(next)\n\
+  \    result_list.reverse()\n    return result_list\n\nn_list = [0, 10, [20, 30],\
+  \ 40, 50, [60, 70, 80], [90, 100, 110, 120]]\nprint(\"Original list:\")\nprint(n_list)\n\
+  print(\"\\nFlatten list:\")\nprint(flatten_list(n_list))\n```\n**输出**\nOriginal\
+  \ list: [0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]]\nFlatten list:\
+  \ [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]\n\n# JAVA 编程练习 - 初学者编程\
+  \ JJ TAM\n\n# C# 编程练习\n### 在 C# 中分行打印 hello 和 你的名字\nC# 代码\n```csharp\npublic class\
+  \ Exercise1\n{\n    public static void Main( )\n    {\n        System.Console.WriteLine(\"\
+  Hello\");\n        System.Console.WriteLine(\"JJ TAM!\");\n    }\n}\n```\n**输出：**\n\
+  Hello\nJJ TAM\n\n### 打印指定操作的结果\nC# 代码\n```csharp\npublic class Exercise4\n{\n  \
+  \  public static void Main()\n    { \n        System.Console.WriteLine(-1+4*6);\
+  \ // -1 + 24 = 23\n        System.Console.WriteLine((3+5)%7); // 8 % 7 = 1 (8/7\
+  \ 的余数)\n        System.Console.WriteLine(4+-6/1); // 4 + (-6) = -2\n    }\n}\n```\n\
+  **输出：**\n23\n1\n-2\n\n### 交换两个数字\nC# 代码\n```csharp\nusing System;\npublic class\
+  \ Exercise5\n{\n    public static void Main(string[] args)\n    {\n        int number1,number2,temp;\n\
+  \        Console.Write(\"输入第一个数字：\");\n        number1 = int.Parse(Console.ReadLine());\n\
+  \        Console.Write(\"输入第二个数字：\");\n        number2 = int.Parse(Console.ReadLine());\n\
+  \        temp = number1;\n        number1 = number2;\n        number2 = temp;\n\
+  \        Console.Write(\"交换后的第一个数字：\");\n        Console.WriteLine(number1);\n \
+  \       Console.Write(\"交换后的第二个数字：\");\n        Console.WriteLine(number2);\n  \
+  \  }\n}\n```\n**输出：**\n输入第一个数字：2\n输入第二个数字：5\n交换后的第一个数字：5\n交换后的第二个数字：2\n\n### 打印用户输入的三个数字的乘积\n\
+  C# 代码\n```csharp\nusing System;\npublic class Exercise6\n{\n  public static void\
+  \ Main()\n  {\n    int num1,num2,num3;\n    Console.Write(\"输入第一个乘数数字： \");\n  \
+  \  num1 = Convert.ToInt32(Console.ReadLine());\n    Console.Write(\"输入第二个乘数数字： \"\
+  );\n    num2 = Convert.ToInt32(Console.ReadLine());\n    Console.Write(\"输入第三个乘数数字：\
+  \ \");\n    num3 = Convert.ToInt32(Console.ReadLine());\n    int result = num1 *\
+  \ num2 * num3;\n    Console.WriteLine(\"乘积结果：{0} x {1} x {2} = {3}\", num1, num2,\
+  \ num3, result);\n  }\n}\n```\n**输出：**\n输入第一个乘数数字：2\n输入第二个乘数数字：8\n输入第三个乘数数字：5\n\
+  乘积结果：2 x 8 x 5 = 80\n\n### 用户输入的两个数字的加法、减法、乘法和除法\nC# 代码\n```csharp\nusing System;\n\
+  public class Exercise7\n{\n  public static void Main()\n  {\n    Console.Write(\"\
+  输入一个数字：\");\n    int num1 = Convert.ToInt32(Console.ReadLine());\n    Console.Write(\"\
+  输入另一个数字：\");\n    int num2 = Convert.ToInt32(Console.ReadLine());\n    Console.WriteLine(\"\
+  {0} + {1} = {2}\", num1, num2);\n    Console.WriteLine(\"{0} - {1} = {2}\", num1,\
+  \ num2);\n    Console.WriteLine(\"{0} x {1} = {2}\", num1, num2);\n    Console.WriteLine(\"\
+  {0} / {1} = {2}\", num1, num2);\n  }\n}\n```\n**输出：**\n输入一个数字：0\n输入另一个数字：2\n0 +\
+  \ 2 = 2\n0 - 2 = -2\n0 x 2 = 0\n0 / 2 = 0\n\n### 打印四个数字的平均值\nC# 代码\n```csharp\n\
+  using System;\nusing System.IO;\npublic class Exercise9\n{\n  public static void\
+  \ Main()\n  {\n    double number1,number2,number3,number4;\n    Console.Write(\"\
+  输入第一个数字：\");\n    number1 = Convert.ToDouble(Console.ReadLine());\n    Console.Write(\"\
+  输入第二个数字：\");\n    number2 = Convert.ToDouble(Console.ReadLine());\n    Console.Write(\"\
+  输入第三个数字：\");\n    number3 = Convert.ToDouble(Console.ReadLine());\n    Console.Write(\"\
+  输入第四个数字：\");\n    number4 = Convert.ToDouble(Console.ReadLine());\n    double result\
+  \ = (number1 + number2 + number3 + number4) / 4;\n    Console.WriteLine(\"四个数字的平均值是：{0}\"\
+  , result);\n  }\n}\n```\n\n\n\n\n```csharp\nConsole.WriteLine(\"The average of {0},\
+  \ {1}, {2}, {3} is: {4} \",\n  number1, number2, number3, number4, result);\n```\n\
+  \n输出：\n输入第一个数字: 17\n输入第二个数字: 17\n输入第三个数字: 517\n输入第四个数字: 51\n17, 17, 517, 51 的平均值为:\
+  \ 150.5\n\n# 温度转换程序\n从摄度转换为开尔文和华氏度\n\n- `kelvin = celsius + 273`\n- `fahrenheit\
+  \ = celsius x 18 / 10 + 32`\n\n## C# 代码\n```csharp\nusing System;\n\npublic class\
+  \ Exercise14\n{\n  public static void Main( )\n  {\n        Console.Write(\"Enter\
+  \ the amount of celsius: \");\n        int celsius = Convert.ToInt32(Console.ReadLine());\n\
+  \        Console.WriteLine(\"Kelvin = {0}\", celsius + 273);\n        Console.WriteLine(\"\
+  Fahrenheit = {0}\", celsius * 18 / 10 + 32);\n  }\n}\n```\n输出：\n输入摄氏度: 40\nKelvin\
+  \ = 313\nFahrenheit = 104\n\n# 计算两个给定整数之和\n如果两个值相等，则返回它们和的倍倍\n\n## C# 代码\n```csharp\n\
+  using System;\nusing System.Collections.Generic;\npublic class Exercise19 {\n  static\
+  \ void Main(string[] args)\n    {\n        Console.WriteLine(SumTriple(2,2));\n\
+  \        Console.WriteLine(SumTriple(12,10));\n        Console.WriteLine(SumTriple(-5,2));\n\
+  \    }\n  public static int SumTriple(int a, int b)\n    {\n      return a == b\
+  \ ? (a + b)*3 : a + b;\n    }\n}\n```\n输出：\n12\n22\n-3\n\n# 计算整数数组中所有元素的和\n## C#\
+  \ 代码\n```csharp\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+  using System.Threading.Tasks;\npublic class Exercise47\n{\n  public static void\
+  \ Main()\n  {\n    int[] nums = {1, 2, 2, 3, 4, 5, 6, 5, 7, 7, 8, 8, 1};\n    Console.WriteLine(\"\
+  \\nArray: [{0}]\", string.Join(\", \", nums));\n    var sum = 0;\n    for (var i\
+  \ = 0; i < nums.Length; i++)\n    {\n      sum += nums[i];\n    }\n    Console.WriteLine(\"\
+  Sum: \"+ sum);\n  }\n}\n```\n输出：\nArray: [1, 2, 2, 3, 4, 5, 6, 5, 7, 7, 8, 8, 1]\n\
+  Sum: 69\n\n# 检查数组是否包含奇数的程序\n代码\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+  using System.Linq;\nusing System.Threading.Tasks;\npublic class Exercise53\n{ \n\
+  \  public static void Main()\n  {\n    int[] nums = {2, 4, 7, 8, 6};\n    Console.WriteLine(\"\
+  \\nOriginal array: [{0}]\", string.Join(\", \", nums));\n    Console.WriteLine(\"\
+  Check if an array contains an odd number? \"+even_odd(nums));\n  } \n  public static\
+  \ bool even_odd(int[] nums) \n  {\n    foreach (var n in nums)\n    {\n      if\
+  \ (n % 2 != 0)\n        return true;\n    }\n    return false;\n  }\n}\n```\n输出\n\
+  Original array: [2, 4, 7, 8, 6]\nCheck if an array contains an odd number? True\n\
+  \n# C# 程序：检查两个给定整数，如果其中一个为 30 或它们的和为 30 则返回 true\n## C# 代码\n```csharp\nusing System;\n\
+  namespace exercises\n{\n    class Program\n    {\n      static void Main(string[]\
+  \ args)\n      {\n        Console.WriteLine(test(30, 0));\n        Console.WriteLine(test(25,\
+  \ 5));\n        Console.WriteLine(test(20, 30));\n        Console.WriteLine(test(20,\
+  \ 25));\n        Console.ReadLine();\n      }\n      public static bool test(int\
+  \ x, int y)\n      {\n        return x == 30 || y == 30 || (x + y == 30);\n    \
+  \  }\n  }\n}\n```\n输出：\nTrue\nTrue\nFalse\n\n# C# 程序：检查给定数字是否为 3 的倍数或 7 的倍数\n##\
+  \ C# 代码\n```csharp\nusing System;\nnamespace exercises\n{\nclass Program\n    {\n\
+  \  static void Main(string[] args)\n  {\n    Console.WriteLine(test(3));\n    Console.WriteLine(test(4));\n\
+  \    Console.WriteLine(test(12));\n    Console.WriteLine(test(37));\n    Console.ReadLine();\n\
+  \  }\n  public static bool test(int n)\n  {\n    return n % 3 == 0 || n % 7 == 0;\n\
+  \  }\n}\n```\n输出：\nTrue\nTrue\nFalse\n\n# 检查给定字符串是否以 'C#' 开头\n## C# 代码\n```csharp\n\
+  using System;\nnamespace exercises\n{\nclass Program\n    {\n  static void Main(string[]\
+  \ args)\n  {\n    Console.WriteLine(test(\"C Sharp\"));\n    Console.WriteLine(test(\"\
+  C#\"));\n    Console.WriteLine(test(\"C++\"));\n    Console.ReadLine();\n  }\n \
+  \ public static bool test(string str)\n  {\n    return (str.Length < 3 && str.Equals(\"\
+  C#\")) || (str.StartsWith(\"C#\"));\n  }\n}\n```\n输出：\nTrue\nTrue\nFalse\n\n# C#\
+  \ 程序找出三个给定整数中的最大值\n## C# 代码\n```csharp\nusing System;\nnamespace exercises\n{\n\
+  \  class Program\n    {\n  static void Main(string[] args)\n      {\n        Console.WriteLine(test(1,2,3));\n\
+  \        Console.WriteLine(test(1,3,2));\n        Console.WriteLine(test(1,1,1));\n\
+  \        Console.WriteLine(test(1,2,2));\n        Console.ReadLine();\n      }\n\
+  \      public static int test(int x, int y, int z)\n      {\n        var max = Math.Max(x,\
+  \ Math.Max(y, z));\n        return max;\n      }\n    }\n}\n```\n输出：\n3\n3\n1\n\
+  2\n\n# 程序检查两个给定整数中哪一个最接近 100\n如果两个数字相等，则返回 0。\n\n## C# 代码\n```csharp\nusing System;\n\
+  namespace exercises\n{\n  class Program\n    {\n      static void Main(string[]\
+  \ args)\n      {\n        Console.WriteLine(test(78, 95));\n        Console.WriteLine(test(95,\
+  \ 95));\n        Console.WriteLine(test(99, 70));\n        Console.ReadLine();\n\
+  \      }\n      public static int test(int x, int y)\n      {\n        const int\
+  \ n = 100;\n        var val = Math.Abs(x - n);\n        var val2 = Math.Abs(y -\
+  \ n);\n        return val == val2 ? 0 : (val < val2 ? x : y);\n      }\n    }\n\
+  }\n```\n"

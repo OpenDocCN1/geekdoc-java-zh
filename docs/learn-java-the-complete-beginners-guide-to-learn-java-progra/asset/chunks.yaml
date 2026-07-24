@@ -1,0 +1,2484 @@
+- fmt: "\n![](cover.jpeg)\n\n# Learn Java\nThe Complete Beginner’s Guide To Learn\
+    \ Java Programming\nBruce Berke\n© 2017\n\n Copyright 2017 by Bruce Berke - All\
+    \ rights reserved.\n\nThis document is geared towards providing exact and reliable\
+    \ information in regards to the topic and issue covered. The publication is sold\
+    \ with the idea that the publisher is not required to render accounting, officially\
+    \ permitted, or otherwise, qualified services. If advice is necessary, legal or\
+    \ professional, a practiced individual in the profession should be ordered.\n\n\
+    - From a Declaration of Principles which was accepted and approved equally by\
+    \ a Committee of the American Bar Association and a Committee of Publishers and\
+    \ Associations.\n\nIn no way is it legal to reproduce, duplicate, or transmit\
+    \ any part of this document in either electronic means or in printed format. Recording\
+    \ of this publication is strictly prohibited and any storage of this document\
+    \ is not allowed unless with written permission from the publisher. All rights\
+    \ reserved.\n\nThe information provided herein is stated to be truthful and consistent,\
+    \ in that any liability, in terms of inattention or otherwise, by any usage or\
+    \ abuse of any policies, processes, or directions contained within is the solitary\
+    \ and utter responsibility of the recipient reader. Under no circumstances will\
+    \ any legal responsibility or blame be held against the publisher for any reparation,\
+    \ damages, or monetary loss due to the information herein, either directly or\
+    \ indirectly.\n\nRespective authors own all copyrights not held by the publisher.\n\
+    \nThe information herein is offered for informational purposes solely, and is\
+    \ universal as so. The presentation of the information is without contract or\
+    \ any type of guarantee assurance.\n\nThe trademarks that are used are without\
+    \ any consent, and the publication of the trademark is without permission or backing\
+    \ by the trademark owner. All trademarks and brands within this book are for clarifying\
+    \ purposes only and are the owned by the owners themselves, not affiliated with\
+    \ this document.\n\n# Table of Contents\n- Introduction\n- Chapter 1: Environmental\
+    \ Setup\n- Chapter 2: Basic Syntax\n- Chapter 3: Objects and Classes\n- Chapter\
+    \ 4: Basic Datatypes\n- Chapter 5: Variable Types\n- Chapter 6: Modifier types\n\
+    - Chapter 7: Basic Operators\n- Chapter 8: Loops\n- Chapter 9: Decision Making\n\
+    - Chapter 10: Numbers\n- Chapter 11: Characters\n- Chapter 12: Strings\n- Chapter\
+    \ 13: Arrays\n- Chapter 14: Date and Time\n- Chapter 15: Methods\n- Chapter 16:\
+    \ Exceptions\n- Chapter 17: Inner Classes\n- Conclusion\n\n# Introduction\nJava\
+    \ is a programming language used by more than 3 billion devices. Java is used\
+    \ to build desktop, web and mobile applications. It was developed by Sun Computers\
+    \ in 1995. Java runs on multiple platforms i.e. Windows, MAC and multiple versions\
+    \ of UNIX.\n\n## Audience\nThis book is intended for absolute beginners. If you\
+    \ haven’t done programming yet, then this is your book. This book will help you\
+    \ in understanding the basic concepts of not only programming in general but will\
+    \ also help you out in getting familiar with concepts of Java.\n\n# Chapter 1:\
+    \ Environmental Setup\nIf you haven’t ever installed Java on your computer, don’t\
+    \ worry I will guide you through the process of installing and running Java on\
+    \ your computer. You will need to do the following steps in order to setup your\
+    \ environment for Java Programing\n\n* Go to [http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)\n\
+    \n![](images/00001.jpeg)\n\nChoose an installation setup according to your operating\
+    \ system. X86 means that your operating system must be 32-bit. You can install\
+    \ x86 or x64 versions of Java development Kit if your operating system is 64-bit.\
+    \ The Java development Kit includes the libraries for development. It also has\
+    \ Java runtime environment which is used in order to run java based applications.\
+    \ After you download the setup, install it.\n\nNow that you have installed Java\
+    \ on your system you will need to install an IDE (Integrated Development Environment).\
+    \ An IDE is a tool you will use along with Java to build cool applications.\n\n\
+    I will use Eclipse as an IDE. Eclipse is a very popular IDE used by millions of\
+    \ java developers. There are other options available such as NETBEANS, IntelliJ\
+    \ etc. I would recommend you guys to install eclipse for now in order to avoid\
+    \ the hassles of installing other tools. Once you start understanding the basics\
+    \ of Java and how it works you can go ahead and install and play with these other\
+    \ tools too.\n\n* Go to [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/)\n\
+    \n![](images/00002.jpeg)\n\nDownload setup of Eclipse from the above mentioned\
+    \ link. It has a very simple installation. After Installation of eclipse you will\
+    \ see its icon on the desktop. Double Click on it to run Eclipse. It will ask\
+    \ you for a workspace. A workspace is a directory on your computer where all your\
+    \ java projects will be stored. Select a workspace of your choosing and click\
+    \ OK. Now you’ll see the following screen.![](images/00003.jpeg)\n\nIf you see\
+    \ a screen similar to the one above that means you have done everything according\
+    \ to my instructions and now you and your computer are ready for programming in\
+    \ java.\n\n# Chapter 2: Basic Syntax\nJava is a case sensitive language. Programs\
+    \ written in java contain objects, classes, variables and methods.\n\n### Object\n\
+    Consider an object as a real life entity with a behavior. For example a cat is\
+    \ an object its behavior can be its ability to walk, eat, sleep etc.\n\n### Class\n\
+    A class is a blueprint and based on that blue print you create multiple objects.\n\
+    \n### Variables\nVariable can be attributes of a class like its name, size, and\
+    \ etc. all the variables go into the class and are used once the class is instantiated.\
+    \ By instantiation I mean that you will create an object of a class and then use\
+    \ that object to assign values to its variables. I will explain these concepts\
+    \ in details as we go along this book.\n\nSo let’s go ahead and open your eclipse\
+    \ IDE, it’s time to write some code. When you open eclipse you will see a class\
+    \ names `TestOne` which is created by default when you start eclipse. You can\
+    \ create a new project and then do the same thing too.\n\n#### Example\n```java\n\
+    public class TestOne {\n  public static void main(String []args) {\n    System.out.println(\"\
+    Hello World\"); // prints Hello World\n  }\n}\n```\n\nThe code above, uses three\
+    \ basic things of Java Programming i.e. class, method and variable. The class\
+    \ `TestOne` contains a method. Now this method named as `main` is the origin of\
+    \ your java program. This is where your java program goes when you run your program.\
+    \ Inside the `main` method the `println` method prints “Hello World” to your console.\
+    \ The `public` keyword is an access specifier and it allows you the developer\
+    \ of the program to restrict access of a class, method or a variable. Other access\
+    \ specifier are `private`, `protected`, `default`. Go ahead and hit the Run button\
+    \ it will look like this![](images/00004.jpeg). After running the program you\
+    \ will see a console window at the bottom of your screen showing you the output\
+    \ of your first java program.\n\nAs I told you earlier that java is a case sensitive\
+    \ language. So the word `VOID` and `void` will have different meanings so you\
+    \ will have to be very careful when you use keywords or custom named identifiers\
+    \ for classes, variables, objects and methods. A java program file has a `.java`\
+    \ extension and the code written in this type of file will be known to the JRE.\
+    \ If you write your java code in a file whom extension is not `.java` then the\
+    \ JRE will not recognize that file or the code written inside it.\n\nJava Keywords:\n"
+  raw: "\n\n![](cover.jpeg)\n\nLearn Java\n\nThe Complete Beginner’s Guide To Learn\
+    \ Java Programming\n\nBruce Berke\n\n© 2017\n\n Copyright 2017 by Bruce Berke\
+    \ - All rights reserved.\n\nThis document is geared towards providing exact and\
+    \ reliable information in regards to the topic and issue covered. The publication\
+    \ is sold with the idea that the publisher is not required to render accounting,\
+    \ officially permitted, or otherwise, qualified services. If advice is necessary,\
+    \ legal or professional, a practiced individual in the profession should be ordered.\n\
+    \n- From a Declaration of Principles which was accepted and approved equally by\
+    \ a Committee of the American Bar Association and a Committee of Publishers and\
+    \ Associations.\n\nIn no way is it legal to reproduce, duplicate, or transmit\
+    \ any part of this document in either electronic means or in printed format. Recording\
+    \ of this publication is strictly prohibited and any storage of this document\
+    \ is not allowed unless with written permission from the publisher. All rights\
+    \ reserved.\n\nThe information provided herein is stated to be truthful and consistent,\
+    \ in that any liability, in terms of inattention or otherwise, by any usage or\
+    \ abuse of any policies, processes, or directions contained within is the solitary\
+    \ and utter responsibility of the recipient reader. Under no circumstances will\
+    \ any legal responsibility or blame be held against the publisher for any reparation,\
+    \ damages, or monetary loss due to the information herein, either directly or\
+    \ indirectly.\n\nRespective authors own all copyrights not held by the publisher.\n\
+    \nThe information herein is offered for informational purposes solely, and is\
+    \ universal as so. The presentation of the information is without contract or\
+    \ any type of guarantee assurance.\n\nThe trademarks that are used are without\
+    \ any consent, and the publication of the trademark is without permission or backing\
+    \ by the trademark owner. All trademarks and brands within this book are for clarifying\
+    \ purposes only and are the owned by the owners themselves, not affiliated with\
+    \ this document.\n\n# Table of Contents\n\nIntroduction\n\nChapter 1: Environmental\
+    \ Setup\n\nChapter 2: Basic Syntax\n\nChapter 3: Objects and Classes\n\nChapter\
+    \ 4: Basic Datatypes\n\nChapter 5: Variable Types\n\nChapter 6: Modifier types\n\
+    \nChapter 7: Basic Operators\n\nChapter 8: Loops\n\nChapter 9: Decision Making\n\
+    \nChapter 10: Numbers\n\nChapter 11: Characters\n\nChapter 12: Strings\n\nChapter\
+    \ 13: Arrays\n\nChapter 14: Date and Time\n\nChapter 15: Methods\n\nChapter 16:\
+    \ Exceptions\n\nChapter 17: Inner Classes\n\nConclusion\n\n# Introduction\n\n\
+    Java is a programming language used by more than 3 billion devices. Java is used\
+    \ to build desktop, web and mobile applications. It was developed by Sun Computers\
+    \ in 1995\\. Java runs on multiple platforms i.e. Windows, MAC and multiple versions\
+    \ of UNIX.\n\nAudience\n\nThis book is intended for absolute beginners. If you\
+    \ haven’t done programming yet, then this is your book. This book will help you\
+    \ in understanding the basic concepts of not only programming in general but will\
+    \ also help you out in getting familiar with concepts of Java.\n\n# Chapter 1:\
+    \ Environmental Setup\n\nIf you haven’t ever installed Java on your computer,\
+    \ don’t worry I will guide you through the process of installing and running Java\
+    \ on your computer. You will need to do the following steps in order to setup\
+    \ your environment for Java Programing\n\n*   Go to [http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)\n\
+    \n![](images/00001.jpeg)\n\nChoose an installation setup according to your operating\
+    \ system. X86 means that your operating system must be 32-bit. You can install\
+    \ x86 or x64 versions of Java development Kit if your operating system is 64-bit.\
+    \ The Java development Kit includes the libraries for development. It also has\
+    \ Java runtime environment which is used in order to run java based applications.\
+    \ After you download the setup, install it.\n\nNow that you have installed Java\
+    \ on your system you will need to install an IDE (Integrated Development Environment).\
+    \ An IDE is a tool you will use along with Java to build cool applications.\n\n\
+    I will use Eclipse as an IDE. Eclipse is a very popular IDE used by millions of\
+    \ java developers. There are other options available such as NETBEANS, IntelliJ\
+    \ etc. I would recommend you guys to install eclipse for now in order to avoid\
+    \ the hassles of installing other tools. Once you start understanding the basics\
+    \ of Java and how it works you can go ahead and install and play with these other\
+    \ tools too.\n\n*   Go to [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/)\n\
+    \n![](images/00002.jpeg)\n\nDownload setup of Eclipse from the above mentioned\
+    \ link. It has a very simple installation. After Installation of eclipse you will\
+    \ see its icon on the desktop. Double Click on it to run Eclipse. It will ask\
+    \ you for a workspace. A workspace is a directory on your computer where all your\
+    \ java projects will be stored. Select a workspace of your choosing and click\
+    \ OK. Now you’ll see the following screen.![](images/00003.jpeg)\n\nIf you see\
+    \ a screen similar to the one above that means you have done everything according\
+    \ to my instructions and now you and your computer are ready for programming in\
+    \ java.\n\n# Chapter 2: Basic Syntax\n\nJava is a case sensitive language. Programs\
+    \ written in java contain objects, classes, variables and methods.\n\n#### Object:\n\
+    \nConsider an object as a real life entity with a behavior. For example a cat\
+    \ is an object its behavior can be its ability to walk, eat, sleep etc.\n\n####\
+    \ Class:\n\nA class is a blueprint and based on that blue print you create multiple\
+    \ objects.\n\n#### Variables:\n\nVariable can be attributes of a class like its\
+    \ name, size, and etc. all the variables go into the class and are used once the\
+    \ class is instantiated. By instantiation I mean that you will create an object\
+    \ of a class and then use that object to assign values to its variables. I will\
+    \ explain these concepts in details as we go along this book.\n\nSo let’s go ahead\
+    \ and open your eclipse IDE, it’s time to write some code. When you open eclipse\
+    \ you will see a class names TestOne which is created by default when you start\
+    \ eclipse. You can create a new project and then do the same thing too.\n\n######\
+    \ Example:\n\npublic  class TestOne {\n\n public  static  void main(String []args)\
+    \ {\n\n      System.out.println(\"Hello World\"); // prints Hello World\n\n  \
+    \ }\n\n}\n\nThe code above, uses three basic things of Java Programming i.e. class,\
+    \ method and variable. The class TestOne contains a method. Now this method named\
+    \ as main is the origin of your java program. This is where your java program\
+    \ goes when you run your program. Inside the main method the println method prints\
+    \ “Hello World” to your console. The public keyword is an access specifier and\
+    \ it allows you the developer of the program to restrict access of a class, method\
+    \ or a variable. Other access specifier are private, protected, default. Go ahead\
+    \ and hit the Run button it will look like this![](images/00004.jpeg). After running\
+    \ the program you will see a console window at the bottom of your screen showing\
+    \ you the output of your first java program.\n\nAs I told you earlier that java\
+    \ is a case sensitive language. So the word VOID and void will have different\
+    \ meanings so you will have to be very careful when you use keywords or custom\
+    \ named identifiers for classes, variables, objects and methods. A java program\
+    \ file has a .java extension and the code written in this type of file will be\
+    \ known to the JRE. If you write your java code in a file whom extension is not\
+    \ .java then the JRE will not recognize that file or the code written inside it.\n\
+    \nJava Keywords:"
+  toc: []
+  trans: "\n\n![](img/cover.jpeg)\n\n# 学习 Java\nJava 编程初学者完全指南\nBruce Berke\n© 2017\n\
+    \n 版权所有 2017 Bruce Berke - 保留所有权利。\n\n本文旨在就其涵盖的主题和问题提供准确且可靠的信息。本书的销售是基于以下理念：即出版者不需要提供会计、官方许可或其他合规的服务。如果需要法律或专业建议，应当聘请该领域内具有执业经验的专业人士。\n\
+    \n- 摘自一份经由美国律师协会委员会和出版商及协会协会委员会共同接受并批准的《原则宣言》。\n\n凡以任何方式通过电子手段或打印格式复制、复隆或传输本文档的任何部分都是违法的。严禁录制出版物，除非获得出版者的书面许可，否则不允许对本文进行任何存储。保留所有权利。\n\
+    \n此处提供的信息被声明是真实且一致的，这意味着由于任何疏忽或其他原因，因使用或滥用其中包含的任何政策、流程或指令而产生的任何责任，完全由接收读者自行承担。在任何情况下，对于因此处信息导致的任何直接或间接的赔偿、损害或资金损失，出版者不承担任何法律责任或指责。\n\
+    \n相应作者拥有出版者未持有的版权。\n\n此地的信息仅供参考之用，且具有通用性。信息的呈现不带有任何合同或任何类型的保证性说明。\n\n所使用的商标均未经任何许可，且商标的发布未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，由其所有者拥有，与本文无关联。\n\
+    \n# 目录\n- 引言\n- 第 1 章：环境搭建\n- 第 2 章：基础语法\n- 第 3 章：对象与类\n- 第 4 章：基础数据类型\n- 第 5\
+    \ 章：变量类型\n- 第 6 章：修饰符类型\n- 第 7 章：基础运算符\n- 第 8 章：循环\n- 第 9 章：决策\n- 第 10 章：数字\n\
+    - 第 11 章：字符\n- 第 12 章：字符串\n- 第 13 章：数组\n- 第 14 章：日期与时间\n- 第 15 章：方法\n- 第 16 章：异常\n\
+    - 第 17 章：内部类\n- 结论\n\n# 引言\nJava 是一种被超过 30 亿设备使用的编程语言。Java 用于构建桌面、Web 和移动应用程序。它由太阳公司于\
+    \ 1995 年开发。Java 运行在多个平台上，即 Windows、MAC 和多个版本的 UNIX。\n\n## 目标读者\n本书专为绝对初学者设计。如果你还没有做过编程，那么这本书就是适合你的。这本书不仅将帮助你理解通义编程的基本概念，还将帮助你熟悉\
+    \ Java 的概念。\n\n# 第 1 章：环境搭建\n如果你从未在电脑上安装过 Java，不要担心，我将引导你完成在电脑上安装和运行 Java 的过程。你需要执行以下步骤来配置\
+    \ Java 编程环境：\n\n* 访问 [`www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)\n\
+    \n![](img/00001.jpeg)\n\n根据你的操作系统选择安装程序。X86 意味着你的操作系统必须是 32 位。如果你的操作系统是 64 位的，你可以安装\
+    \ x86 或 x64 版本的 Java 开发包（JDK）。Java 开发包包含了开发所需的库。它还包含了运行 Java 应用程序的 Java 运行环境。下载安装程序后，对其进行安装。\n\
+    \n现在你已经在系统中安装了 Java，你需要安装一个 IDE（集成开发环境）。IDE 是你配合 Java 一起构建酷应用程序的工具。\n\n我将使用 Eclipse\
+    \ 作为 IDE。Eclipse 是数百万 Java 开发者使用的非常流行的 IDE。还有其他选择，如 NETBEANS、IntelliJ 等。我建议你们现在安装\
+    \ Eclipse，以避免安装其他工具的麻烦。一旦你开始理解 Java 的基础及其工作原理，你也可以继续安装并尝试这些其他工具。\n\n* 访问 [`www.eclipse.org/downloads/`](https://www.eclipse.org/downloads/)\n\
+    \n![](img/00002.jpeg)\n\n从上述链接下载 Eclipse 的安装程序。它的安装非常简单。安装 Eclipse 之后，你会在桌面上看到它的图标。双击它运行\
+    \ Eclipse。它会要求你指定工作空间（workspace）。工作空间是你电脑上用于存储所有 Java 项目的目录。选择一个你喜欢的工作空间并点击 OK。现在你将看到以下画面![](img/00003.jpeg)\n\
+    \n如果你看到一个与上面类似的屏幕，意味着你已经按照我的说明完成了所有操作，现在你和你的电脑已经准备好进行 Java 编程了。\n\n# 第 2 章：基础语法\n\
+    Java 是一种区分大小写的语言。用 Java 编写的程序包含对象、类、变量和方法。\n\n### 对象\n将对象视为具有行为的现实实体。例如，猫是一个对象，它的行为可以是走路、吃东西、睡觉等能力。\n\
+    \n### 类\n类是一个蓝图，根据这个蓝图你可以创建多个对象。\n\n### 变量\n变量可以是类的属性，例如它的名称、大小等。所有变量都进入类中，并在类实例化（instantiation）后被使用。实例化指的是你创建一个类的对象，然后使用该对象对其变量赋值。我将在随后的书中详细解释这些概念。\n\
+    \n所以，让我们打开 Eclipse IDE，是时候编写代码了。当你打开 Eclipse 时，你会看到一个名为 `TestOne` 的类，这是在启动 Eclipse\
+    \ 时默认创建。你可以创建一个新项目并进行同样的操作。\n\n#### 示例\n```java\npublic class TestOne {\n  public\
+    \ static void main(String []args) {\n    System.out.println(\"Hello World\");\
+    \ // 输出 Hello World\n  }\n}\n```\n\n上面的代码使用了 Java 编程中的三个基础元素：类、方法和变量。`TestOne`\
+    \ 类包含一个方法。现在这个名为 `main` 的方法是 Java 程序的起点。这是当你运行程序时 Java 程序进入的地方。在 `main` 方法内部，`println`\
+    \ 方法向控制台打印“Hello World”。`public` 关键字是一个访问修饰符，它允许程序开发者限制对类、方法或变量的访问。其他访问修饰符有 `private`、`protected`、`default`。点击运行按钮，它看起来像这样![](img/00004.jpeg)。运行程序后，你会在屏幕底部看到一个控制台窗口，显示你第一个\
+    \ Java 程序的输出。\n\n正如我之前告诉你的，Java 是一种区分大小写的语言。所以 `VOID` 和 `void` 的含义不同，因此在你在使用关键字或为类、变量、对象和方法命名自定义标识符时，必须非常小心。Java\
+    \ 程序文件具有 `.java` 扩展名，编写在该类型文件中的代码会被 JRE 识别。如果你在一个扩展名不是 `.java` 的文件中编写 Java 代码，那么\
+    \ JRE 将无法识别该文件或其中编写的代码。\n\nJava 关键字：\n\n"
+- fmt: "\nA java keyword is a reserved word which is used by java itself and java\
+    \ doesn’t allow the programmers to use those words. The following list shows the\
+    \ reserved words in Java. These reserved words may not be used as constant or\
+    \ variable or any other identifier’s name, meaning you cannot name your attributes\
+    \ of a class (variables), the behavior of a class (methods) with the exact words\
+    \ described below.\n\n| continue | abstract | Switch | for | new |\n| default\
+    \ | assert | synchronized | goto | package |\n| do | boolean | this | if | private\
+    \ |\n| double | break | throw | implements | protected |\n| else | byte | throws\
+    \ | import | public |\n| enum | case | transient | instanceof | return |\n| extends\
+    \ | catch | try | int | short |\n| final | char | void | interface | static |\n\
+    | finally | class | volatile | long | strictfp |\n| float | const | while | native\
+    \ | super |\n\n### Comments\n\nThere are multiple types of comments in java. A\
+    \ single line comment and a block comment. The following example shows multiple\
+    \ type of comments in java.\n\n### Example\n\n```java\npublic  class TestOne {\n\
+    \n /* This is my first java program.\n     * This will print 'Hello World' as\
+    \ the output\n* This is an example of multi-line comments.\n     */\n\n public\
+    \  static  void main(String []args) {\n\n // This is an example of single line\
+    \ comment\n\n /* This is also an example of single line comment. */\n\n      System.out.println(\"\
+    Hello World\"); // prints Hello World\n\n  }\n\n}\n```\n\n# Chapter 3: Objects\
+    \ and Classes\n\nJava is an object oriented language which means that it will\
+    \ have objects and classes. You may have got a general idea of objects and classes\
+    \ by my previous discussion. Now I will explain these concepts in detail here.\n\
+    \n### Objects\n\nObject is something that has some attributes and behaviors. Consider\
+    \ human as a real life entity, now we will map human into our software object.\
+    \ A human has a name, age etc. he walks, talks and eats etc. all of these are\
+    \ its behaviors.\n\n### Class\n\nClass is a blueprint and by using these blueprints\
+    \ we create objects. Following is an example of a class in java. Feel free to\
+    \ tweak it if you want to.\n\n### Example\n\n```java\npublic  class Human {\n\n\
+    String name;\nint age;\nString gender;\n\nvoid walks() {\n// What happens when\
+    \ a person walks\n\n}\n\nvoid talks() {\n// What happens when a person talks\n\
+    }\n\nvoid eats() {\n// What happens when a person eats\n\n}\n\n}\n```\n\nNow we\
+    \ can use the above mentioned blueprint to create as many objects we want. A class\
+    \ can have multiple types of variables.\n\n### Local Variables\n\nLocal Variables\
+    \ are the variables that are declared inside of methods, constructors or blocks.\n\
+    \n### Instance Variables\n\nInstance Variables are the variables that are declared\
+    \ inside a class and are only allowed for use once the class is instantiated.\n\
+    \n### Class Variables\n\nClass Variables are declared with a keyword `static`\
+    \ and they can be used by directly via the name of a class.\n\n### Constructors\n\
+    \nA constructor is a method inside a class that gets called when we create an\
+    \ object of that class. Constructors are used to set values to attributes or to\
+    \ make calls to a method when we create an object of a class. Following is an\
+    \ example of a constructor:\n\n### Example\n\n```java\npublic  class Human {\n\
+    \nString name;\nint age;\nString gender;\n\npublic Human() {\n// This is constructor\
+    \ and this is where you can assign values to your variables.\n// or you can call\
+    \ functions.\n}\n\nvoid walks() {\n// What happens when a person walks\n}\n\n\
+    void talks() {\n// What happens when a person talks\n}\n\nvoid eats() {\n// What\
+    \ happens when a person eats\n\n}\n\n}\n```\n\nNow let us talk about creating\
+    \ object of our own. Create a class named `Human.java` in your IDE and write the\
+    \ content of the below mentioned Human class into your new class. Now go to you\
+    \ `TestOne.java` class and review the main method. This is the method we will\
+    \ use to instantiate our Human class object. Write the code written in the TestOne\
+    \ class below. Run the program and you will see John written on your console window.\n\
+    \n### Example\n\n**Human.java**\n```java\npublic  class Human {\n\nString name;\n\
+    int  age;\nString gender;\n\nvoid walks() {\n// What happens when a person walks\n\
+    }\n\nvoid talks() {\n// What happens when a person talks\n}\n\nvoid eats() {\n\
+    // What happens when a person eats\n\n}\n\n}\n```\n\n**TestOne.java**\n```java\n\
+    import java.io.Console;\n\npublic  class TestOne {\n\npublic  static  void main(String[]\
+    \ args) {\n// TODO Auto-generated method stub\nHuman human = new Human();\nhuman.name\
+    \ = \"John\";\nSystem.out.println(human.name);\n\n}\n\n}\n```\n\nGo ahead and\
+    \ assign values to age and gender variable and try printing them out. It will\
+    \ be a good exercise for you.\n\n# Chapter 4: Basic Datatypes\n\nVariables store\
+    \ values in themselves. They are just reserved memory locations inside which you\
+    \ can store multiple types of values. Java has two main types of variables and\
+    \ in this chapter we will cover not only those types but also their sub types.\
+    \ The main variable types in Java are:\n\n*   Primitive Data Types\n*   Reference\
+    \ Object/Data Types\n\n### Primitive Data Types\n\nPrimitive data types are those\
+    \ types that are defined in Java. Java has also devised some rules for these types\
+    \ i.e. what kind of a value they will store? What’s their range? Etc. Java has\
+    \ eight primitive types. Each primitive type is explained below in detail.\n\n\
+    #### byte\n\n*   `byte` is an 8-bit signed integer.\n*   Its range is from -128\
+    \ to 127.\n*   It is used to save memory when the value is small.\n\n#### Example\n\
+    ```java\nbyte b = 10;\n```\n\n#### short\n\n*   `short` is a 16-bit signed integer.\n\
+    *   Its range is from -32,768 to 32,767.\n\n#### Example\n```java\nshort s = 100;\n\
+    ```\n\n#### int\n\n*   `int` is a 32-bit signed integer.\n*   Its range is from\
+    \ -2,147,483,648 to 2,147,483,647.\n*   This is the most commonly used data type.\n\
+    \n#### Example\n```java\nint i = 1000;\n```\n\n#### long\n\n*   `long` is a 64-bit\
+    \ signed integer.\n*   Used when the integer value exceeds the range of `int`.\n\
+    *   Values are often suffixed with `L`.\n\n#### Example\n```java\nlong l = 15000000000L;\n\
+    ```\n\n#### float\n\n*   `float` is a 32-bit IEEE 754 floating point.\n*   Used\
+    \ for decimal numbers.\n*   Values are often suffixed with `f`.\n\n#### Example\n\
+    ```java\nfloat f = 10.99f;\n```\n\n#### double\n\n*   `double` is a 64-bit IEEE\
+    \ 754 floating point.\n*   The default type for decimal numbers in Java.\n\n####\
+    \ Example\n```java\ndouble d = 19.99;\n```\n\n#### char\n\n*   `char` represents\
+    \ a single 16-bit Unicode character.\n*   Used to store single characters.\n\n\
+    #### Example\n```java\nchar c = 'A';\n```\n\n#### boolean\n\n*   `boolean` stores\
+    \ only two values: `true` or `false`.\n\n#### Example\n```java\nboolean is = true;\n\
+    ```\n"
+  raw: "A java keyword is a reserved word which is used by java itself and java doesn’t\
+    \ allow the programmers to use those words. The following list shows the reserved\
+    \ words in Java. These reserved words may not be used as constant or variable\
+    \ or any other identifier’s name, meaning you cannot name your attributes of a\
+    \ class (variables), the behavior of a class (methods) with the exact words described\
+    \ below.\n\n| continue | abstract | Switch | for | new |\n\n| default | assert\
+    \ | synchronized | goto | package |\n\n| do | boolean | this | if | private |\n\
+    \n| double | break | throw | implements | protected |\n\n| else | byte | throws\
+    \ | import | public |\n\n| enum | case | transient | instanceof | return |\n\n\
+    | extends | catch | try | int | short |\n\n| final | char | void | interface |\
+    \ static |\n\n| finally | class | volatile | long | strictfp |\n\n| float | const\
+    \ | while | native | super |\n\n#### Comments:\n\nThere are multiple types of\
+    \ comments in java. A single line comment and a block comment. The following example\
+    \ shows multiple type of comments in java.\n\n###### Example:\n\npublic  class\
+    \ TestOne {\n\n /* This is my first java program.\n\n    * This will print 'Hello\
+    \ World' as the output\n\n* This is an example of multi-line comments.\n\n   \
+    \ */\n\n public  static  void main(String []args) {\n\n // This is an example\
+    \ of single line comment\n\n /* This is also an example of single line comment.\
+    \ */\n\n      System.out.println(\"Hello World\"); // prints Hello World\n\n  \
+    \ }\n\n}\n\n# Chapter 3: Objects and Classes\n\nJava is an object oriented language\
+    \ which means that it will have objects and classes. You may have got a general\
+    \ idea of objects and classes by my previous discussion. Now I will explain these\
+    \ concepts in detail here.\n\nObjects:\n\nObject is something that has some attributes\
+    \ and behaviors. Consider human as a real life entity, now we will map human into\
+    \ our software object. A human has a name, age etc. he walks, talks and eats etc.\
+    \ all of these are its behaviors.\n\n#### Class:\n\nClass is a blueprint and by\
+    \ using these blueprints we create objects. Following is an example of a class\
+    \ in java. Feel free to tweak it if you want to.\n\n###### Example:\n\npublic\
+    \  class Human {\n\nString name;\n\nint age;\n\nString gender;\n\nvoid walks()\
+    \ {\n\n// What happens when a person walks\n\n}\n\nvoid talks() {\n\n// What happens\
+    \ when a person talks\n\n}\n\nvoid eats() {\n\n// What happens when a person eats\n\
+    \n}\n\n}\n\nNow we can use the above mentioned blueprint to create as many objects\
+    \ we want. A class can have multiple types of variables.\n\n#### Local Variables:\n\
+    \nLocal Variables are the variables that are declared inside of methods, constructors\
+    \ or blocks.\n\n#### Instance Variables:\n\nInstance Variables are the variables\
+    \ that are declared inside a class and are only allowed for use once the class\
+    \ is instantiated.\n\n#### Class Variables:\n\nClass Variables are declared with\
+    \ a keyword static and they can be used by directly via the name of a class.\n\
+    \n#### Constructors:\n\nA constructor is a method inside a class that gets called\
+    \ when we create an object of that class. Constructors are used to set values\
+    \ to attributes or to make calls to a method when we create an object of a class.\
+    \ Following is an example of a constructor:\n\n###### Example:\n\npublic  class\
+    \ Human {\n\nString name;\n\nint age;\n\nString gender;\n\npublic Human() {\n\n\
+    // This is constructor and this is where you can assign values to your variables.\n\
+    \n// or you can call functions.\n\n}\n\nvoid walks() {\n\n// What happens when\
+    \ a person walks\n\n}\n\nvoid talks() {\n\n// What happens when a person talks\n\
+    \n}\n\nvoid eats() {\n\n// What happens when a person eats\n\n}\n\n}\n\nNow let\
+    \ us talk about creating object of our own. Create a class named Human.java in\
+    \ your IDE and write the content of the below mentioned Human class into your\
+    \ new class. Now go to you TestOne.java class and review the main method. This\
+    \ is the method we will use to instantiate our Human class object. Write the code\
+    \ written in the TestOne class below. Run the program and you will see John written\
+    \ on your console window.\n\n###### Example:\n\nHuman.java\n\npublic  class Human\
+    \ {\n\nString name;\n\nint  age;\n\nString gender;\n\nvoid walks() {\n\n// What\
+    \ happens when a person walks\n\n}\n\nvoid talks() {\n\n// What happens when a\
+    \ person talks\n\n}\n\nvoid eats() {\n\n// What happens when a person eats\n\n\
+    }\n\n}\n\nTestOne.java\n\nimport java.io.Console;\n\npublic  class TestOne {\n\
+    \npublic  static  void main(String[] args) {\n\n// TODO Auto-generated method\
+    \ stub\n\nHuman human = new Human();\n\nhuman.name = \"John\";\n\nSystem.out.println(human.name);\n\
+    \n}\n\n}\n\nGo ahead and assign values to age and gender variable and try printing\
+    \ them out. It will be a good exercise for you.\n\n# Chapter 4: Basic Datatypes\n\
+    \nVariables store values in themselves. They are just reserved memory locations\
+    \ inside which you can store multiple types of values. Java has two main types\
+    \ of variables and in this chapter we will cover not only those types but also\
+    \ their sub types. The main variable types in Java are:\n\n*   Primitive Data\
+    \ Types\n\n*   Reference Object/Data Types\n\n#### Primitive Data Types:\n\nPrimitive\
+    \ data types are those types that are defined in Java. Java has also devised some\
+    \ rules for these types i.e. what kind of a value they will store? What’s their\
+    \ range? Etc. Java has eight primitive types. Each primitive type is explained\
+    \ below in detail.\n\n##### byte:\n\n*   This one is an 8-bit signed two’s complement\
+    \ integer.\n\n*   Its minimum value is -128(-2^7).\n\n*   Its maximum value can\
+    \ be 127(2^7-1).\n\n*   By default its value is zero.\n\n*   Byte is used to save\
+    \ data in big arrays where there is a need to save some memory.\n\n*   You can\
+    \ use it instead of an int but you will have to keep in mind the range of this\
+    \ type as it is smaller than int.\n\n###### Example:\n\n*   byte  variableOfType_byte\
+    \ = 10; //this is how you declare a variable of type 'byte' in Java.\n\n*   byte\
+    \  variable2OfType_byte = -40; //Another example.\n\n##### short:\n\n*   short\
+    \ is a 16-bit signed two’s complement integer.\n\n*   Its minimum value is -32,768\
+    \ (-2^15).\n\n*   Its maximum value is 32,767 (2^15 -1).\n\n*   By default its\
+    \ value is zero.\n\n*   As short is two times smaller than an integer, it can\
+    \ also be used to save memory.\n\n###### Example:\n\n*   short  variableOfType_short\
+    \ = 40; //this is how you declare a variable of type 'short' in Java.\n\n*   short\
+    \  variable2ofType_short = -30; //Another example.\n\n##### int:\n\n*   int is\
+    \ a 32-bit signed two’s complement integer.\n\n*   Its minimum value is -2,147,483,648\
+    \ (-2^31).\n\n*   Its maximum value is 2,147,483,647 (2^31 -1).\n\n*   By default\
+    \ its value is zero.\n\n*   This type of variables is used for storing values\
+    \ of integer types.\n\n###### Example:\n\n*   int  variableOfType_int = 1024;\
+    \ //this is how you declare a variable of type 'int' in Java.\n\n*   int  variable2ofType_int\
+    \ = -1024; //Another example.\n\n##### long:\n\n*   long is a 64-bit signed two’s\
+    \ complement integer.\n\n*   Its minimum value is -9,223,372,036,854,775,808 (-2^63).\n\
+    \n*   Its maximum value is 9,223,372,036,854,775,807 (2^63 -1).\n\n*   By default\
+    \ its value is zero.\n\n*   This type of variables is used for storing values\
+    \ of integer types whom have a wider range.\n\n###### Example:\n\n*   long  variableOfType_long\
+    \ = 100000L; //this is how you declare a variable of type 'long' in Java.\n\n\
+    *   long  variable2ofType_long = -100000L; //Another example.\n\n##### float:\n\
+    \n*   float is a single-precision 32-bit IEEE 754 floating point.\n\n*   By default\
+    \ its value is ‘0.0f’.\n\n*   This type of variables is used for storing values\
+    \ of float types.\n\n###### Example:\n\n*   float  variableOfType_float = 100000.99f;\
+    \ //this is how you declare a variable of type 'float' in Java.\n\n*   float \
+    \ variable2ofType_float = 00.975333; //Another example.\n\n##### double:\n\n*\
+    \   double is a double-precision 64-bit IEEE 754 floating point.\n\n*   By default\
+    \ its value is ‘0.0d’.\n\n*   This type of variables is used for storing values\
+    \ of decimal types.\n\n###### Example:\n\n*   double  variableOfType_double =\
+    \ 235.99d; //this is how you declare a variable of type 'double' in Java."
+  toc: []
+  trans: "\n\nJava 关键字是 Java 语言本身使用的保留字，Java 不允许程序员使用这些单词。下面的列表显示了 Java 中的保留字。这些保留字不能作为常量、变量或任何标识符的名称，这意味着你不能使用下面描述的精确字汇来命名类的属性（变量）或类的行为（方法）。\n\
+    \n| continue | abstract | Switch | for | new |\n| default | assert | synchronized\
+    \ | goto | package |\n| do | boolean | this | if | private |\n| double | break\
+    \ | throw | implements | protected |\n| else | byte | throws | import | public\
+    \ |\n| enum | case | transient | instanceof | return |\n| extends | catch | try\
+    \ | int | short |\n| final | char | void | interface | static |\n| finally | class\
+    \ | volatile | long | strictfp |\n| float | const | while | native | super |\n\
+    \n### 注释\n\nJava 中有多种类型的注释。单行注释和块注释。下面的示例展示了 Java 中多种类型的注释。\n\n### 示例\n\n```java\n\
+    public  class TestOne {\n\n /* This is my first java program.\n     * This will\
+    \ print 'Hello World' as the output\n* This is an example of multi-line comments.\n\
+    \     */\n\n public  static  void main(String []args) {\n\n // This is an example\
+    \ of single line comment\n\n /* This is also an example of single line comment.\
+    \ */\n\n      System.out.println(\"Hello World\"); // prints Hello World\n\n \
+    \ }\n\n}\n```\n\n# 第 3 章：对象与类\n\nJava 是一种面向对象的语言，这意味着它拥有对象和类。通过我之前的讨论，你可能对对象和类有一个大致的概念。现在我将在这里详细解释这些概念。\n\
+    \n### 对象\n\n对象是具有某些属性和行为的东西。将人类视为现实生活中的实体，现在我们将人类映射到我们的软件对象。人类有名字、年龄等；他走路、说话、吃饭等，这些都是它的行为。\n\
+    \n### 类\n\n类是一个蓝图，通过使用这些蓝图我们创建对象。下面是一个 Java 类的示例。如果你愿意，可以随意修改。\n\n### 示例\n\n```java\n\
+    public  class Human {\n\nString name;\nint age;\nString gender;\n\nvoid walks()\
+    \ {\n// 人走路时会发生什么\n\n}\n\nvoid talks() {\n// 人说话时会发生什么\n}\n\nvoid eats() {\n//\
+    \ 人吃饭时会发生什么\n\n}\n\n}\n```\n\n现在我们可以使用上述蓝图来创建任意数量的对象。一个类可以有多种类型的变量。\n\n### 局部变量\n\
+    \n局部变量是在方法、构造函数或块内部声明的变量。\n\n### 实例变量\n\n实例变量是在类内部声明的变量，并且允许在类实例化后使用。\n\n### 类变量\n\
+    \n类变量使用 `static` 关键字声明，它们可以通过类名直接使用。\n\n### 构造函数\n\n构造函数是类内部的一个方法，当我们创建该类的对象时会被调用。构造函数用于在创建类对象时为属性赋值或调用某个方法。下面是一个构造函数的示例：\n\
+    \n### 示例\n\n```java\npublic  class Human {\n\nString name;\nint age;\nString gender;\n\
+    \npublic Human() {\n// 这是构造函数，你可以在这里给你的变量赋值。\n// 或者你可以调用函数。\n}\n\nvoid walks()\
+    \ {\n// 人走路时会发生什么\n}\n\nvoid talks() {\n// 人说话时会发生什么\n}\n\nvoid eats() {\n// 人吃饭时会发生什么\n\
+    \n}\n\n}\n```\n\n现在让我们谈谈创建我们自己的对象。在你的 IDE 中创建一个名为 `Human.java` 的类，并将下面的 Human\
+    \ 类的内容写入到你的新类中。现在回到你的 `TestOne.java` 类并查看 `main` 方法。这是我们将用于实例化 Human 类对象的方法。在下面的\
+    \ TestOne 类中编写对应的代码。运行程序，你将在控制台窗口看到 John。\n\n### 示例\n\n**Human.java**\n```java\n\
+    public  class Human {\n\nString name;\nint  age;\nString gender;\n\nvoid walks()\
+    \ {\n// 人走路时会发生什么\n}\n\nvoid talks() {\n// 人说话时会发生什么\n}\n\nvoid eats() {\n// 人吃饭时会发生什么\n\
+    \n}\n\n}\n```\n\n**TestOne.java**\n```java\nimport java.io.Console;\n\npublic\
+    \  class TestOne {\n\npublic  static  void main(String[] args) {\n// TODO Auto-generated\
+    \ method stub\nHuman human = new Human();\nhuman.name = \"John\";\nSystem.out.println(human.name);\n\
+    \n}\n\n}\n```\n\n继续给 `age` 和 `gender` 变量赋值并尝试打印它们。这对你来说是一个很好的练习。\n\n# 第 4 章：基本数据类型\n\
+    \n变量在内部存储值。它们只是预留的内存位置，你可以在其中存储多种类型的值。Java 有两种主要的变量，在本章中我们不仅涵盖这些类型，还将涵盖它们的子类型。Java\
+    \ 中的主要变量类型有：\n\n*   基本数据类型\n*   引用对象/数据类型\n\n### 基本数据类型\n\n基本数据类型是那些在 Java 中定义的类型。Java\
+    \ 还为这些类型制定了某些规则，例如它们将存储什么类型的值？它们的范围是多少？等。Java 有八种基本类型。下面将详细解释每种基本类型。\n\n#### byte\n\
+    \n*   `byte` 是一个 8 位有符号整数。\n*   范围是从 -128 到 127。\n*   当值较小时用于节省内存。\n\n#### 示例\n\
+    ```java\nbyte b = 10;\n```\n\n#### short\n\n*   `short` 是一个 16 位有符号整数。\n*   范围是从\
+    \ -32,768 到 32,767。\n\n#### 示例\n```java\nshort s = 100;\n```\n\n#### int\n\n*\
+    \   `int` 是一个 32 位有符号整数。\n*   范围是从 -2,147,483,648 到 2,147,483,647。\n*   这是最常用的数据类型。\n\
+    \n#### 示例\n```java\nint i = 1000;\n```\n\n#### long\n\n*   `long` 是一个 64 位有符号整数。\n\
+    *   当整数值超过 `int` 的范围时使用。\n*   值通常以 `L` 结尾。\n\n#### 示例\n```java\nlong l = 15000000000L;\n\
+    ```\n\n#### float\n\n*   `float` 是一个 32 位 IEEE 754 浮点数。\n*   用于小数。\n*   值通常以 `f`\
+    \ 结尾。\n\n#### 示例\n```java\nfloat f = 10.99f;\n```\n\n#### double\n\n*   `double`\
+    \ 是一个 64 位 IEEE 754 浮点数。\n*   Java 中小数的默认类型。\n\n#### 示例\n```java\ndouble d = 19.99;\n\
+    ```\n\n#### char\n\n*   `char` 代表单个 16 位的 Unicode 字符。\n*   用于存储单个字符。\n\n#### 示例\n\
+    ```java\nchar c = 'A';\n```\n\n#### boolean\n\n*   `boolean` 仅存储两个值：`true` 或 `false`。\n\
+    \n#### 示例\n```java\nboolean is = true;\n```\n\n"
+- fmt: "\n# Chapter 5: Variable Types\n\n* `double variable2ofType_double = 101.3d;`\
+    \ //Another example.\n\n### boolean:\n\n* `boolean` stores one-bit information.\n\
+    * By default its value is `false`.\n* This type of variables is used for storing\
+    \ `true/false` values.\n\n#### Example:\n\n* `boolean variableOfType_boolean =\
+    \ true;` //this is how you declare a variable of type 'boolean' in Java.\n* `boolean\
+    \ variable2ofType_boolean = false;` //Another example.\n\n### char:\n\n* `char`\
+    \ stores 16-bit Unicode characters.\n* `Char` is used to store characters.\n*\
+    \ Its minimum value is `\\u0000`.\n* Its maximum value is `\\uffff`.\n\n#### Example:\n\
+    \n* `char variableOfType_char = 'a';` //this is how you declare a variable of\
+    \ type 'char' in Java.\n* `char variable2ofType_char = 'c';` //Another example.\n\
+    \n### Reference Types:\n\nReference type variables are class objects. You can\
+    \ also consider arrays of different types an example of reference type variables.\
+    \ The default value of these kind of variables is `NULL`. See the following Example.\n\
+    \n```java\nimport java.sql.Date;\n\npublic class Employee {\n    String name;\n\
+    \    Date DateOfBirth; //Reference Variable\n    int Age; //Primitive Type Variable\n\
+    \    String Designation;\n}\n```\n\nVariables are used in java to store different\
+    \ type of values. Each variable has a type and value. The type of a variable tells\
+    \ java the type of value it will possess and the range of that value. It also\
+    \ helps us narrow down the type of operations that can be applied on that variable.\n\
+    \nA variable must be declared before it’s used. Following is a generic template\
+    \ for declaring a variable\n\n`Datatype Variable’s name = Variable’s Value;`\n\
+    \n`int Age = 24;`\n\nData type represents the type of data this variable will\
+    \ carry, `Variable’s name` will show its name and then after the equal sign you\
+    \ will assign it a value based on its type.\n\nThere are three kind of variables:\n\
+    \n* Local Variable.\n* Instance Variables.\n* Class/Static Variables.\n\n####\
+    \ Local Variables:\n\nLocal variables are the type of variables that are declared\
+    \ and used inside a block of code. Local variables can be declared inside methods,\
+    \ constructors and other code blocks like If-else, switch etc. these kind of variables\
+    \ are created when the compiler enters that block of code and are deleted when\
+    \ the compiler exists that block. Local variables cannot use access modifiers\
+    \ like `public/private` with them as they have a limited scope.\n\n###### Example:\n\
+    \nIn the following example the `Employee` Class has a method `calculateAge()`\
+    \ in which we are assigning a value to `Age` variable and are also printing it\
+    \ out on the console window.\n\n```java\nimport java.sql.Date;\n\npublic class\
+    \ Employee {\n    public void calculateAge() {\n        int Age = 0;\n       \
+    \ Age = Age + 24;\n        System.out.println(Age);\n    }\n}\n```\n\nThe employee\
+    \ class is instantiated in the main class and the function `calculateAge()` gets\
+    \ called.\n\n```java\nimport java.io.Console;\n\npublic class TestOne {\n    public\
+    \ static void main(String[] args) {\n        // TODO Auto-generated method stub\n\
+    \        Employee human = new Employee();\n        human.calculateAge();\n   \
+    \ }\n}\n```\n\nOutput:\n24\n\n#### Instance Variables:\n\nInstance variables are\
+    \ declared inside of a class and outside of any code block like if-else, methods\
+    \ etc. These variables are used when an object of a class is created. When an\
+    \ object of a class is created, memory in heap is allocated to that object and\
+    \ part of that heap are allocated to each instance variable. Instance variables\
+    \ life starts when an object is created and ends when that objects ends. You can\
+    \ set the access level of an instance variable. The default values of instance\
+    \ variables depend on its data type. Look at the previous chapter for variables\
+    \ data types and their default values.\n\n###### Example:\n\n```java\nimport java.sql.Date;\n\
+    \npublic class Employee {\n    String name; //Example of Instance Variables\n\
+    \    Date DateofBirth; //Example of Instance Variables\n    String Designation;\
+    \ //Example of Instance Variables\n\n    public void calculateAge() {\n      \
+    \  int Age = 0;\n        Age = Age + 24;\n        System.out.println(Age);\n \
+    \   }\n}\n```\n\n#### Class/Static Variables:\n\nClass variables or static variables\
+    \ are variables that are declared outside of block or methods but inside of class\
+    \ with a `static` keyword. Static variables will have only one value per class\
+    \ and the number of object that class has will not effect this static variable.\
+    \ The static variables are stored in static memory. The static variables are accessed\
+    \ by the following way\n\n`ClassName.StaticVariableName`\n\n`Employee.Name;`\n\
+    \n###### Example:\n\n```java\nimport java.sql.Date;\n\npublic class Employee {\n\
+    \    String name; //Example of Instance Variables\n    Date DateofBirth; //Example\
+    \ of Instance Variables\n    String Designation; //Example of Instance Variables\n\
+    \n    private static double salary; //Example of Class/Static Variables\n    private\
+    \ static String Department; //Example of Class/Static Variables\n\n    public\
+    \ void calculateAge() {\n        int Age = 0;\n        Age = Age + 24;\n     \
+    \   System.out.println(Age);\n    }\n}\n```\n\n# Chapter 6: Modifier types\n\n\
+    Java has two type of modifiers:\n\n* Access Modifiers\n* Non-Access Modifiers\n\
+    \n#### Access Modifiers:\n\nAccess modifiers are the type of modifiers that decide\
+    \ who can see a certain variable, class, method etc. It has multiple types.\n\n\
+    ##### public:\n\nThe `public` access modifier will allow any class, interface,\
+    \ method, etc.\n\n###### Example:\n\n```java\npublic class Employee {\n    int\
+    \ speed = 0;\n    public void calculateAge() {\n        int Age = 0;\n       \
+    \ Age = Age + 24;\n        System.out.println(Age);\n    }\n}\n```\n\n##### private:\n\
+    \nWhen the `private` keyword is attached with a variable it means that it will\
+    \ be accessed only from that class. Private is the most restricted level.\n\n\
+    ###### Example:\n\n```java\npublic class Car {\n    int speed = 0;\n    private\
+    \ String make = \"BMW\";\n    public void calculatespeed() {\n        speed =\
+    \ 24;\n        System.out.println(speed);\n    }\n}\n```\n\n##### protected:\n\
+    \nThe `protected` keyword is used to restrict access of variables and methods.\
+    \ The `protected` code of a parent class is only allowed to be accessed by its\
+    \ child class.\n\n###### Example:\n\n```java\nclass SongPlayer {\n    protected\
+    \ boolean PlaySongs(Songs s) {\n        // implementation details\n    }\n}\n\n\
+    class EnglishSongsPlayer extends SongPlayer {\n    public boolean PlaySongs(Songs\
+    \ s) {\n        // implementation details\n    }\n}\n```\n\n#### Non-Access Variables:\n\
+    \n##### static:\n\nYou can declare `static` variables or `static` methods. Use\
+    \ of word `static` will ensure that the declared variable or method would only\
+    \ be allowed to access by the name of class rather than its object.\n\n##### final:\n\
+    \nThe `final` keyword is used to restrict the use of a variable after its initialized.\
+    \ Meaning you cannot initialize an already initialized variable which has a `final`\
+    \ keyword attached with it.\n\n# Chapter 7: Basic Operators\n\nIn Java there are\
+    \ multiple types of operators and by using these operators you can perform mathematical\
+    \ or logical operations.\n\nLet’s suppose, there are two variables named `a` and\
+    \ `b`. `a` is equal to `10` and `b` is equal to `20`.\n\n### Arithmetic operators:\n\
+    \nThe following table contains all the info you need for arithmetic operators\
+    \ in java.\n\n| Operator | Description | Example |\n| :--- | :--- | :--- |\n|\
+    \ `+` (Addition) | For adding values | `a + b = 30` |\n| `-` (Subtraction) | For\
+    \ subtracting values | `a - b = -10` |\n| `*` (Multiplication) | For multiplying\
+    \ values | `a * b = 200` |\n| `/` (Division) | For dividing values | `b / a =\
+    \ 2` |\n| `%` (Modulus) | For getting remainders | `b % a = 0` |\n| `++` (Increment)\
+    \ | Add 1 to value. | `b++ gives 21` |\n| `--` (Decrement) | Subtract 1 from value.\
+    \ | `b-- gives 19` |\n"
+  raw: "*   double  variable2ofType_double = 101.3d; //Another example.\n\n##### boolean:\n\
+    \n*   boolean stores one-bit information.\n\n*   By default its value is false.\n\
+    \n*   This type of variables is used for storing true/false values.\n\n######\
+    \ Example:\n\n*   boolean  variableOfType_boolean = true; //this is how you declare\
+    \ a variable of type 'boolean' in Java.\n\n*   boolean  variable2ofType_boolean\
+    \ = false; //Another example.\n\n##### char:\n\n*   char stores 16-bit Unicode\
+    \ characters.\n\n*   Char is used to store characters.\n\n*   Its minimum value\
+    \ is ‘\\u0000’.\n\n*   Its minimum value is ‘\\uffff’.\n\n###### Example:\n\n\
+    *   char  variableOfType_char = 'a'; //this is how you declare a variable of type\
+    \ 'char' in Java.\n\n*   char  variable2ofType_char = 'c'; //Another example.\n\
+    \n#### Reference Types:\n\nReference type variables are class objects. You can\
+    \ also consider arrays of different types an example of reference type variables.\
+    \ The default value of these kind of variables is NULL. See the following Example.\n\
+    \nimport java.sql.Date;\n\npublic  class Employee {\n\nString name;\n\nDate DateOfBirth;\
+    \ //Reference Variable\n\nintAge; //Primitive Type Variable\n\nString Designation;\n\
+    \n# Chapter 5: Variable Types\n\nVariables are used in java to store different\
+    \ type of values. Each variable has a type and value. The type of a variable tells\
+    \ java the type of value it will possess and the range of that value. It also\
+    \ helps us narrow down the type of operations that can be applied on that variable.\n\
+    \nA variable must be declared before it’s used. Following is a generic template\
+    \ for declaring a variable\n\nDatatype Variable’s name = Variable’s Value;\n\n\
+    int Age        =             24;\n\nData type represents the type of data this\
+    \ variable will carry, Variable’s name will show its name and then after the equal\
+    \ sign you will assign it a value based on its type.\n\nThere are three kind of\
+    \ variables\n\n*   Local Variable.\n\n*   Instance Variables.\n\n*   Class/Static\
+    \ Variables.\n\n#### Local Variables:\n\nLocal variables are the type of variables\
+    \ that are declared and used inside a block of code. Local variables can be declared\
+    \ inside methods, constructors and other code blocks like If-else, switch etc.\
+    \ these kind of a variables are created when the compiler enters that block of\
+    \ code and are deleted when the compiler exists that block. Local variables cannot\
+    \ use access modifiers like public/private with them as they have a limited scope.\n\
+    \n###### Example:\n\nIn the following example the Employee Class has a method\
+    \ calculateAge() in which we are assigning a value to Age variable and are also\
+    \ printing it out on the console window.\n\nimport java.sql.Date;\n\npublic  class\
+    \ Employee {\n\npublic  void calculateAge(){\n\nint  Age = 0;\n\nAge = Age + 24;\n\
+    \nSystem.out.println(Age);\n\n}\n\n}\n\nThe employee class is instantiated in\
+    \ the main class and the function calculateAge gets called.\n\nimport java.io.Console;\n\
+    \npublic  class TestOne {\n\npublic  static  void main(String[] args) {\n\n//\
+    \ TODO Auto-generated method stub\n\nEmployee human = new Employee();\n\nhuman.calculateAge();\n\
+    \n}\n\n}\n\nOutput:\n\n24\n\n#### Instance Variables:\n\nInstance variables are\
+    \ declared inside of a class and outside of any code block like if-else, methods\
+    \ etc. These variables are used when an object of a class is created. When an\
+    \ object of a class is created, memory in heap is allocated to that object and\
+    \ part of that heap are allocated to each instance variable. Instance variables\
+    \ life starts when an object is created and ends when that objects ends. You can\
+    \ set the access level of an instance variable. The default values of instance\
+    \ variables depend on its data type. Look at the previous chapter for variables\
+    \ data types and their default values.\n\n###### Example:\n\nimport java.sql.Date;\n\
+    \npublic  class Employee {\n\nString name; //Example of Instance Variables\n\n\
+    Date DateofBirth; //Example of Instance Variables\n\nString Designation; //Example\
+    \ of Instance Variables\n\nPublic  void calculateAge(){\n\nint  Age = 0;\n\nAge\
+    \ = Age + 24;\n\nSystem.out.println(Age);\n\n}\n\n}\n\n#### Class/Static Variables:\n\
+    \nClass variables or static variables are variables that are declared outside\
+    \ of block or methods but inside of class with a static keyword. Static variables\
+    \ will have only one value per class and the number of object that class has will\
+    \ not effect this static variable. The static variables are stored in static memory.\
+    \ The static variables are accessed by the following way\n\nClassName.StaticVariableName\n\
+    \nEmployee.Name;\n\n###### Example:\n\nimport java.sql.Date;\n\npublic  class\
+    \ Employee {\n\nString name; //Example of Instance Variables\n\nDate DateofBirth;\
+    \ //Example of Instance Variables\n\nString Designation; //Example of Instance\
+    \ Variables\n\nprivate  static  double  salary; //Example of Class/Static Variables\n\
+    \nprivate  static String Department; //Example of Class/Static Variables\n\npublic\
+    \  void calculateAge(){\n\nint  Age = 0;\n\nAge = Age + 24;\n\nSystem.out.println(Age);\n\
+    \n}\n\n}\n\n# Chapter 6: Modifier types\n\nJava has two type of modifiers\n\n\
+    *   Access Modifiers\n\n*   Non-Access Modifiers\n\n#### Access Modifiers:\n\n\
+    Access modifiers are the type of modifiers that decide who can see a certain variable,\
+    \ class, method etc. It has multiple types.\n\n##### public:\n\nThe public access\
+    \ modifier will allow any class, interface, method or block to access this variable\
+    \ inside of the Java universe.\n\n###### Example:\n\npublic  class Car{\n\npublic\
+    \  int  speed = 0;\n\n/*see the public keyword? This keyword helps\n\njava is\
+    \ figuring out the access level of this variable*/\n\npublic  void calculatespeed(){\n\
+    \nspeed = 24;\n\nSystem.out.println(speed);\n\n}\n\n###### }\n\n##### private:\n\
+    \nWhen the private keyword is attached with a variable it means that, that particular\
+    \ variable will be accessed only from the inside of that class. Private is the\
+    \ most restricted access level in java.\n\n###### Example:\n\npublic  class Car{\n\
+    \npublic  int  topspeed = 0;\n\n/*see the public keyword? This keyword helps\n\
+    \nJava is figuring out the access level of this variable*/\n\n//this variable\
+    \ will be accessed only inside this class\n\nprivate  String  make = “BMW”;\n\n\
+    public  void calculatetopspeed(){\n\ntopspeed = 24;\n\nSystem.out.println(topspeed);\n\
+    \n}\n\n}\n\n##### protected:\n\nThe protected keyword is used to restrict access\
+    \ of variables and methods. The protected code of a parent class is only allowed\
+    \ to be accessed by its child class. Apart from the child class nothing else can\
+    \ access protected variables or methods.\n\n###### Example:\n\nclass SongPlayer\
+    \ {\n\n protected  boolean PlaySongs(Songs s) {\n\n // implementation details\n\
+    \n   }\n\n}\n\nclass EnglishSongsPlayer extends SongPlayer {\n\n boolean PlaySongs(Songs\
+    \ s) {\n\n // implementation details\n\n}\n\n}\n\nIn the above example the Playsongs\
+    \ method of AudioPlayerClass can be accessed only by its child class which in\
+    \ this case is StreamingAudioPlayer.\n\n#### Non-Access Variables:\n\n##### static:\n\
+    \nYou can declare static variables or static methods. Use of word static will\
+    \ ensure that the declared variable or method would only be allowed to access\
+    \ by the name of class rather than its object.\n\n##### final:\n\nThe final keyword\
+    \ is used to restrict the use of a variable after its initialized. Meaning you\
+    \ cannot initialize an already initialized variable which has a final keyword\
+    \ attached with it.\n\n# Chapter 7: Basic Operators\n\nIn Java there are multiple\
+    \ types of operators and by using these operators you can perform mathematical\
+    \ or logical operations.\n\nLet’s suppose, there are two variables named a and\
+    \ b. a is equal to 10 and b is equal to 20.\n\n##### Arithmetic operators:\n\n\
+    The following table contains all the info you need for arithmetic operators in\
+    \ java.\n\n| Operator | Description | Example |\n\n| + (Addition) | For adding\
+    \ values | a + b = 30 |\n\n| - (Subtraction) | For subtracting values | a - b\
+    \ = -10 |\n\n| * (Multiplication) | For multiplying values | a * b = 200 |\n\n\
+    | / (Division) | For dividing values | b / a = 2 |\n\n| % (Modulus) | For getting\
+    \ remainders | b % a = 0 |\n\n| ++ (Increment) | Add 1 to value. | b++ gives 21\
+    \ |\n\n| -- (Decrement) | Subtract 1 to value. | b-- gives 19 |"
+  toc: []
+  trans: "\n\n# 第 5 章：变量类型\n\n* `double variable2ofType_double = 101.3d;` //另一个示例。\n\
+    \n### boolean：\n\n* `boolean` 存储 1 位信息。\n* 它的默认值为 `false`。\n* 这种类型的变量用于存储 `true/false`\
+    \ 布值。\n\n#### 示例：\n\n* `boolean variableOfType_boolean = true;` //这就是在 Java 中声明一个\
+    \ 'boolean' 类型变量的方法。\n* `boolean variable2ofType_boolean = false;` //另一个示例。\n\n\
+    ### char：\n\n* `char` 存储 16 位的 Unicode 字符。\n* `Char` 用于存储字符。\n* 它的最小值为 `\\u0000`。\n\
+    * 它的最大值为 `\\uffff`。\n\n#### 示例：\n\n* `char variableOfType_char = 'a';` //这就是在\
+    \ Java 中声明一个 'char' 类型变量的方法。\n* `char variable2ofType_char = 'c';` //另一个示例。\n\n\
+    ### 引用类型：\n\n引用类型变量是类对象。你也可以将不同类型的数组视为引用类型变量的示例。这类变量的默认值为 `NULL`。请看下面的示例。\n\n\
+    ```java\nimport java.sql.Date;\n\npublic class Employee {\n    String name;\n\
+    \    Date DateOfBirth; //引用变量\n    int Age; //基本数据类型变量\n    String Designation;\n\
+    }\n```\n\nJava 中使用变量来存储不同类型的值。每个变量都有类型和值。变量的类型告诉 Java 它将拥有的值类型以及该值的范围。它还帮助我们缩小可以应用于该变量的操作类型范围。\n\
+    \n变量在使用之前必须对其进行声明。以下是声明变量的通用模板：\n\n`Datatype Variable’s name = Variable’s Value;`\n\
+    \n`int Age = 24;`\n\n数据类型表示该变量将携带的数据类型，`Variable’s name` 显示其名称，然后在等号之后你根据其类型分配一个值。\n\
+    \n有三种变量：\n\n* 局部变量。\n* 实例变量。\n* 类/静态变量。\n\n#### 局部变量：\n\n局部变量是在代码块内部声明并使用的变量类型。局部变量可以在方法、构造函数以及\
+    \ If-else、switch 等其他代码块内部声明；这类变量在编译器进入该代码块时创建，在编译器离开该代码块时删除。由于作用范围有限，局部变量不能使用\
+    \ `public/private` 等访问修饰符。\n\n###### 示例：\n\n在接下来的示例中，`Employee` 类有一个方法 `calculateAge()`，在方法中我们为\
+    \ `Age` 变量赋值，并在控制台窗口将其打印出来。\n\n```java\nimport java.sql.Date;\n\npublic class\
+    \ Employee {\n    public void calculateAge() {\n        int Age = 0;\n       \
+    \ Age = Age + 24;\n        System.out.println(Age);\n    }\n}\n```\n\n在主类中实例化\
+    \ `employee` 类并调用函数 `calculateAge()`。\n\n```java\nimport java.io.Console;\n\n\
+    public class TestOne {\n    public static void main(String[] args) {\n       \
+    \ // TODO 自动生成的方法存根\n        Employee human = new Employee();\n        human.calculateAge();\n\
+    \    }\n}\n```\n\n输出：\n24\n\n#### 实例变量：\n\n实例变量声明在类内部，但在任何代码块（如 if-else、方法等）之外。这些变量在创建类的对象时使用。当创建一个类的对象时，堆内存会为该对象分配空间，堆的一部分被分配给每个实例变量。实例变量的生命从对象创建时开始，到对象结束时结束。你可以设置实例变量的访问级别。实例变量的默认值取决于其数据类型。请查看上一章节关于变量数据类型及其默认值。\n\
+    \n###### 示例：\n\n```java\nimport java.sql.Date;\n\npublic class Employee {\n  \
+    \  String name; // 实例变量示例\n    Date DateofBirth; // 实例变量示例\n    String Designation;\
+    \ // 实例变量示例\n\n    public void calculateAge() {\n        int Age = 0;\n      \
+    \  Age = Age + 24;\n        System.out.println(Age);\n    }\n}\n```\n\n#### 类/静态变量：\n\
+    \n类变量或静态变量是在块或方法之外但在类内部且使用 `static` 关键字声明的变量。静态变量每个类只有一个值，该类拥有的对象数量不会影响该静态变量。静态变量存储在静态内存中。通过以下方式访问静态变量：\n\
+    \n`ClassName.StaticVariableName`\n\n`Employee.Name;`\n\n###### 示例：\n\n```java\n\
+    import java.sql.Date;\n\npublic class Employee {\n    String name; // 实例变量示例\n\
+    \    Date DateofBirth; // 实例变量示例\n    String Designation; // 实例变量示例\n\n    private\
+    \ static double salary; // 类/静态变量示例\n    private static String Department; //\
+    \ 类/静态变量示例\n\n    public void calculateAge() {\n        int Age = 0;\n       \
+    \ Age = Age + 24;\n        System.out.println(Age);\n    }\n}\n```\n\n# 第 6 章：修饰符类型\n\
+    \nJava 有两种修饰符：\n\n* 访问修饰符\n* 非访问修饰符\n\n#### 访问修饰符：\n\n访问修饰符是决定谁可以看到特定变量、类、方法等的修饰符类型。它有多种类型。\n\
+    \n##### public：\n\n`public` 访问修饰符允许任何类、接口、方法等。\n\n###### 示例：\n\n```java\npublic\
+    \ class Employee {\n    int Age = 0;\n    public void calculateAge() {\n     \
+    \   Age = Age + 24;\n        System.out.println(Age);\n    }\n}\n```\n\n#####\
+    \ private：\n\n当 `private` 关键字附加在变量上时，意味着只能在该类内部访问。这是最严格的限制。\n\n###### 示例：\n\n\
+    ```java\npublic class Car {\n    int speed = 0;\n    private String make = \"\
+    BMW\";\n    public void calculatespeed() {\n        // ...\n    }\n}\n```\n\n\
+    ##### protected：\n\n`protected` 关键字用于限制变量的访问。父类的 `protected` 代码仅允许子类访问。\n\n######\
+    \ 示例：\n\n```java\nclass SongPlayer {\n    protected boolean PlaySongs(Songs s)\
+    \ {\n        // 实现细节\n    }\n}\n\nclass EnglishSongsPlayer extends SongPlayer\
+    \ {\n    public boolean PlaySongs(Songs s) {\n        // 实现细节\n    }\n}\n```\n\
+    \n#### 非访问：\n\n##### static：\n\n你可以声明 `static` 变量或 `static` 方法。使用 `static` 确保声明的变量或方法可以通过类名而不是对象来访问。\n\
+    \n##### final：\n\n`final` 关键字用于限制初始化后的使用。意味着你不能初始化已经初始化且带有 `final` 关键字的变量。\n\n\
+    # 第 7 章：基础运算符\n\n在 Java 中有多种类型的运算符，通过使用这些运算符可以执行数学或逻辑操作。\n\n假设有两个变量 `a` 和 `b`。`a`\
+    \ 等于 `10`，`b` 等于 `20`。\n\n### 算术运算符：\n\n下表包含了 Java 中算术运算符的所有信息。\n\n| 运算符 | 描述\
+    \ | 示例 |\n| :--- | :--- | :--- |\n| `+` (加法) | 用于相加 | `a + b = 30` |\n| `-` (减法)\
+    \ | 用于相减 | `a - b = -10` |\n| `*` (乘法) | 用于相乘 | `a * b = 200` |\n| `/` (除法) |\
+    \ 用于除法 | `b / a = 2` |\n| `%` (模) | 用于获取余数 | `b % a = 0` |\n| `++` (自增) | 值加 1\
+    \ | `b++ 得到 21` |\n| `--` (递减) | 值减 1 | `b-- 得到 19` |\n\n"
+- fmt: "\n## Relational operators\n\nThe following table contains all the info you\
+    \ need for relational operators in java.\n\n| Operator | Description | Example\
+    \ |\n| :--- | :--- | :--- |\n| `==` (equal to) | This compares two values and\
+    \ If values are equal than it returns true. | `(a == b)` is not true. |\n| `!=`\
+    \ (not equal to) | This compares two values and if values are not equal then condition\
+    \ becomes true. | `(a!= b)` is true. |\n| `>` (greater than) | If the value on\
+    \ the left is greater than value on the right then condition becomes true. | `(a\
+    \ > b)` is not true. |\n| `<` (less than) | If value on the left is less than\
+    \ value on the right then condition becomes true. | `(a < b)` is true. |\n| `>=`\
+    \ (greater than or equal to) | If the value on the left is greater than or equal\
+    \ to the value on the right than it returns true. | `(a >= b)` is not true. |\n\
+    | `<=` (less than or equal to) | If the value on the left is less than or equal\
+    \ to the value on the right then condition becomes true. | `(a <= b)` is true.\
+    \ |\n\n## Logical Operators\n\nThe following table contains all the info you need\
+    \ for logical operators in java.\n\n| Operator | Description | Example |\n| :---\
+    \ | :--- | :--- |\n| `&&` (`’AND`) | This operator is known as Logical AND operator.\
+    \ If values on both sides of this operator are non-zero, then it returns true\
+    \ otherwise the result will be false. | `(a && a)` returns false |\n| `||` (`’OR`)\
+    \ | This operator is known as Logical OR Operator. If value on any side of this\
+    \ operator is non-zero, then it returns true otherwise it will return false. |\
+    \ `(a || b)` returns true |\n| `!` (`’NOT`) | This operator is known as Logical\
+    \ NOT Operator. This operator inverses the value of the operands it is used with.\
+    \ For example if the value is true it will make it false and if the value is false\
+    \ it will make it true. | `!(a && b)` returns true |\n\n## Assignment Operators\n\
+    \nThe following table contains all the info you need for assignment operators\
+    \ in java.\n\n| Operator | Description | Example |\n| :--- | :--- | :--- |\n|\
+    \ `=` | This is an assignment operator. It gets the value from right side and\
+    \ stores it into the left side. | `c = a + b` the sum of a and b will be stored\
+    \ in `c` |\n| `+=` | This operator not only adds a value but it also assigns it\
+    \ to the variable on the left side. | `b+= a` is equal to `b = b + a` |\n| `-=`\
+    \ | This operator not only subtracts a value but it also assigns it to the variable\
+    \ on the left side. | `b-= a` is equal to `b = b – a` |\n| `*=` | This operator\
+    \ not only multiplies a value but it also assigns it to the variable on the left\
+    \ side. | `b *= a` is equal to `b = b * a` |\n| `/=` | This operator not only\
+    \ divides a value but it also assigns it to the variable on the left side. | `b\
+    \ /= a` is equal to `b = b / a` |\n| `%=` | This operator not only takes modulus\
+    \ of a value but it also assigns it to the variable on the left side. | `b %=\
+    \ a` is equal to `b = b % a` |\n| `<<=` | This operator performs a left shift\
+    \ on a value and it also assigns it to the variable on the left side. | `b <<=\
+    \ 2` is same as `b = b << 2` |\n| `>>=` | This operator performs a right shift\
+    \ on a value and it also assigns it to the variable on the left side. | `b >>=\
+    \ 2` is same as `b = b >> 2` |\n| `&=` | This operator performs an AND operation\
+    \ on a value and it also assigns it to the variable on the left side. | `b &=\
+    \ 2` is same as `b = b & 2` |\n| `^=` | This operator performs an Exclusive OR\
+    \ operation on a value and it also assigns it to the variable on the left side.\
+    \ | `b ^= 2` is same as `b = b ^ 2` |\n| `|=` | This operator performs an OR operation\
+    \ on a value and it also assigns it to the variable on the left side. | `b |=\
+    \ 2` is same as `b = b | 2` |\n\n## Bitwise Operator\n\nThe following table contains\
+    \ all the info you need for bitwise operators in java.\n\n| Operator | Description\
+    \ | Example |\n| :--- | :--- | :--- |\n| `&` (bitwise AND) | This is a binary\
+    \ AND operator. It copies a bit to the result if it exists on both side of the\
+    \ operator. | `(a & b)` will give 12 which is 0000 1100 |\n| `|` (bitwise OR)\
+    \ | This is a binary OR operator. It copies a bit to the result if it exists on\
+    \ any side of the operator. | `(a | b)` will give 61 which is 0011 1101 |\n| `^`\
+    \ (bitwise XOR) | This is a binary XOR operator. It copies a bit to the result\
+    \ if it exists on one side and not on the other side of the operator. | `(a ^\
+    \ b)` will give 49 which is 0011 0001 |\n| `~` (bitwise Compliment) | This is\
+    \ binary Ones complement Operator and it is used to flip bits. | `(~a)` will give\
+    \ -61 |\n| `<<` (Left Shift) | This is a binary Left Shift operator. It shifts\
+    \ bits of the variable on the left to the left side by the number of bits specified\
+    \ on the right side of the operator. | `a << 2` will give 240 which is 1111 0000\
+    \ |\n| `>>` (Right Shift) | This is a binary Right Shift operator. | |\n| `>>>`\
+    \ (unsigned Right Shift) | This is an unsigned right shift operator. | |\n\n#\
+    \ Chapter 8: Loops\n\nIn real life, loop is something that goes over. In java\
+    \ there three kinds of loops:\n\n*   While loop\n*   Do-while loop\n*   For loop\n\
+    \n### While Loop\n\nWhen a while loop executes, it keeps over until the condition\
+    \ defined is true. When the condition becomes false the loop breaks.\n\n**Example:**\n\
+    \n```java\nint i = 0;\nwhile(i < 10) {\n    System.out.println(\"Programming is\
+    \ Fun \" + i);\n    i++;\n}\n```\n\nOutput:\n```\nProgramming is Fun 0\nProgramming\
+    \ is Fun 1\nProgramming is Fun 2\nProgramming is Fun 3\nProgramming is Fun 4\n\
+    Programming is Fun 5\nProgramming is Fun 6\nProgramming is Fun 7\nProgramming\
+    \ is Fun 8\nProgramming is Fun 9\n```\n\n### Do-while loop\n\nA do-while loop\
+    \ is similar to a while loop except that it executes at least one time. After\
+    \ its first iteration it checks whether the condition mentioned at the end of\
+    \ loop is true. If the condition is true it will keep on.\n\n**Example:**\n\n\
+    ```java\nint i = 0;\ndo {\n    System.out.println(\"Programming is Fun \" + i);\n\
+    \    i++;\n} while (i < 10);\n```\n\nOutput:\n```\nProgramming is Fun 0\nProgramming\
+    \ is Fun 1\nProgramming is Fun 2\nProgramming is Fun 3\nProgramming is Fun 4\n\
+    Programming is Fun 5\nProgramming is Fun 6\nProgramming is Fun 7\nProgramming\
+    \ is Fun 8\nProgramming is Fun 9\n```\n\n### For Loop\n\nA “for loop” is another\
+    \ kind of loop that java supports. In for loop you define the condition which\
+    \ must be met in order for the loop to execute. If the condition is false the\
+    \ loop will break. Otherwise for loop will keep on executing.\n\n**Example:**\n\
+    \n```java\nfor (int j = 0; j < 9; j++) {\n    System.out.println(\"This is for\
+    \ loop's iteration number \"+ j);\n}\n```\n\nOutput:\n```\nThis is for loop's\
+    \ iteration number 0\nThis is for loop's iteration number 1\nThis is for loop's\
+    \ iteration number 2\nThis is for loop's iteration number 3\nThis is for loop's\
+    \ iteration number 4\nThis is for loop's iteration number 5\nThis is for loop's\
+    \ iteration number 6\nThis is for loop's iteration number 7\nThis is for loop's\
+    \ iteration number 8\n```\n\n## Break and Continue\n\nIn loops the keywords break\
+    \ or continue can be used to perform certain operations.\n\n#### Break\n\nA break\
+    \ statement in any kind of loop will break the loop no matter if the condition\
+    \ of the loop was true or false. As soon as the loop hits the break statement\
+    \ it will stop executing.\n\n**Example:**\n\n```java\nint i = 0;\ndo {\n    if\
+    \ (i>5) {\n        break;\n    } else {\n        System.out.println(\"Programming\
+    \ is Fun \" + i);\n    }\n    i++;\n} while (i < 10);\n```\n\nOutput:\n```\nProgramming\
+    \ is Fun 0\nProgramming is Fun 1\n```\n"
+  raw: '##### Relational operators:
+
+
+    The following table contains all the info you need for relational operators in
+    java.
+
+
+    | Operator | Description | Example |
+
+
+    | == (equal to) | This compares two values and If values are equal than it returns
+    true. | (a == b is not true. |
+
+
+    | != (not equal to) | This compares two values and if values are not equal then
+    condition becomes true. | (a!= b) is true. |
+
+
+    | > (greater than) | If the value on the left is greater than value on the right
+    then condition becomes true. | (a > b) is not true. |
+
+
+    | < (less than) | If value on the left is less than value on the right then condition
+    becomes true. | (a < b) is true. |
+
+
+    | >= (greater than or equal to) | If value on the left is greater than or equal
+    to the value on the right than it returns true. | (a >= b) is not true. |
+
+
+    | <= (less than or equal to) | If the value on the left is less than or equal
+    to the value on the right then condition becomes true. | (a <= b) is true. |
+
+
+    ##### Logical Operators:
+
+
+    The following table contains all the info you need for logical operators in java.
+
+
+    | Operator | Description | Example |
+
+
+    | && (‘AND’) | This operator is known as Logical AND operator. If values on both
+    sides of this operator are non-zero, then it returns true otherwise the result
+    will be false. | (a && a) returns false |
+
+
+    | &#124;&#124; (‘OR’) | This operator is known as Logical OR Operator. If value
+    on any side of this operator is non-zero, then it returns true otherwise it will
+    return false. | (a &#124;&#124; b) returns true |
+
+
+    | ! (‘NOT’) | This operator is known as Logical NOT Operator. This operator inverses
+    the value of the operands it is used with. For example if the value is true it
+    will make it false and if the value is false it will make it true. | !(a && b)
+    returns true |
+
+
+    ##### Assignment Operators:
+
+
+    The following table contains all the info you need for assignment operators in
+    java.
+
+
+    | Operator | Description | Example |
+
+
+    | = | This is an assignment operator. It gets the value from right side and stores
+    it into the left side. | c = a + b the sum of a and b will be stored in c |
+
+
+    | += | This operator not only adds a value but it also assigns it to the variable
+    on the left side. | b+= a is equal to b = b + a |
+
+
+    | -= | This operator not only subtracts a value but it also assigns it to the
+    variable on the left side. |  b-= a is equal to b = b – a |
+
+
+    | *= | This operator not only multiplies a value but it also assigns it to the
+    variable on the left side. | b *= a is equal to b = b * a |
+
+
+    | /= | This operator not only divides a value but it also assigns it to the variable
+    on the left side. | b /= a is equal to b = b / a |
+
+
+    | %= | This operator not only takes modulus of a value but it also assigns it
+    to the variable on the left side. | b %= a is equal to b = b % a |
+
+
+    | <<= | This operator performs a left shift on a value and it also assigns it
+    to the variable on the left side. | b <<= 2 is same as b = b << 2 |
+
+
+    | >>= | This operator performs a right shift on a value and it also assigns it
+    to the variable on the left side. | b >>= 2 is same as b = b >> 2 |
+
+
+    | &= | This operator performs an AND operation on a value and it also assigns
+    it to the variable on the left side. | b &= 2 is same as b = b & 2 |
+
+
+    | ^= | This operator performs an Exclusive OR operation on a value and it also
+    assigns it to the variable on the left side. | b ^= 2 is same as b = b ^ 2 |
+
+
+    | &#124;= | This operator performs an OR operation on a value and it also assigns
+    it to the variable on the left side. | b &#124;= 2 is same as b = b &#124; 2 |
+
+
+    ##### Bitwise Operator:
+
+
+    The following table contains all the info you need for bitwise operators in java.
+
+
+    | Operator | Description | Example |
+
+
+    | & (bitwise AND) | This is a binary AND operator. It copies a bit to the result
+    if it exists on both side of the operator. | (a & b) will give 12 which is 0000
+    1100 |
+
+
+    | &#124; (bitwise OR) | This is a binary OR operator. It copies a bit to the result
+    if it exists on any side of the operator. | (a &#124; b) will give 61 which is
+    0011 1101 |
+
+
+    | ^ (bitwise XOR) | This is a binary XOR operator. It copies a bit to the result
+    if it exists on one side and not on the other side of the operator. | (a ^ b)
+    will give 49 which is 0011 0001 |
+
+
+    | ~ (bitwise Compliment) | This is binary Ones complement Operator and it is used
+    to flip bits. | (~a) will give -61 |
+
+
+    | << (Left Shift) | This is a binary Left Shift operator. It shifts bits of the
+    variable on the left to the left side by the number of bits specified on the right
+    side of the operator. | a << 2 will give 240 which is 1111 0000 |
+
+
+    | >> (Right Shift) | This is a binary Right Shift operator. It shifts bits of
+    the variable on the left to the right side by the number of bits specified on
+    the right side of the operator. | a >> 2 will give 15 which is 1111 |
+
+
+    | >>> (zero fill right shift) | This is right zero fill operator. The value on
+    the left side is move right by the number of bits specified on the other side
+    of this operator. The shifted values are replaced with zero after zero fill operation.
+    | a >>>2 will give 15 which is 0000 1111 |
+
+
+    # Chapter 8: Loops
+
+
+    In real life, loop is something that goes over and over. Loops work almost the
+    same in java. In java you have a condition and based on that condition you can
+    run a loop. There are three kinds of loops in java:
+
+
+    *   While loop
+
+
+    *   Do-while loop
+
+
+    *   For loop
+
+
+    #### While Loop:
+
+
+    When a while loop executes, it keeps on iterating and running the same block of
+    code over and over until the condition defined with the loop is true. When the
+    condition becomes false the loop breaks.
+
+
+    ###### Example:
+
+
+    int  i = 0;
+
+
+    while(i < 10) {
+
+
+    System.out.println("Programming is Fun " + i);
+
+
+    i++;
+
+
+    };
+
+
+    Output:
+
+
+    Programming is Fun 0
+
+
+    Programming is Fun 1
+
+
+    Programming is Fun 2
+
+
+    Programming is Fun 3
+
+
+    Programming is Fun 4
+
+
+    Programming is Fun 5
+
+
+    Programming is Fun 6
+
+
+    Programming is Fun 7
+
+
+    Programming is Fun 8
+
+
+    Programming is Fun 9
+
+
+    The above code will print the phrase Programming is fun 10 times.
+
+
+    #### Do-while loop:
+
+
+    A Do-while loop is similar to a while loop except that it executes at least one
+    time. After its first iteration it checks whether the condition mentioned at the
+    end of loop is true or not. If the condition is true it will keep on executing
+    otherwise the loop will break.
+
+
+    ###### Example:
+
+
+    int  i = 0;
+
+
+    do {
+
+
+    System.out.println("Programming is Fun " + i);
+
+
+    i++;
+
+
+    } while (i < 10);
+
+
+    Output:
+
+
+    Programming is Fun 0
+
+
+    Programming is Fun 1
+
+
+    Programming is Fun 2
+
+
+    Programming is Fun 3
+
+
+    Programming is Fun 4
+
+
+    Programming is Fun 5
+
+
+    Programming is Fun 6
+
+
+    Programming is Fun 7
+
+
+    Programming is Fun 8
+
+
+    Programming is Fun 9
+
+
+    The above code will have the same output as to the one in the while loop case.
+
+
+    #### For Loop:
+
+
+    A “For loop” is another kind of loop that java supports. In for loop you define
+    the condition which must be met in order for the loop to execute. If the condition
+    is false the loop will break. Otherwise for loop will keep on executing. The syntax
+    of for loop is following
+
+
+    ###### Example:
+
+
+    for (int  j = 0; j < 9; j++) {
+
+
+    System.out.println("This is for loop''s iteration number "+ j);
+
+
+    }
+
+
+    Output:
+
+
+    This is for loop''s iteration number 0
+
+
+    This is for loop''s iteration number 1
+
+
+    This is for loop''s iteration number 2
+
+
+    This is for loop''s iteration number 3
+
+
+    This is for loop''s iteration number 4
+
+
+    This is for loop''s iteration number 5
+
+
+    This is for loop''s iteration number 6
+
+
+    This is for loop''s iteration number 7
+
+
+    This is for loop''s iteration number 8
+
+
+    #### Break and Continue:
+
+
+    In loops the keywords break or continue can be used to perform certain operations.
+
+
+    ##### Break:
+
+
+    A break statement in any kind of loop will break the loop no matter if the condition
+    of the loop was true or false. As soon as the loop hits the break statement it
+    will stop executing.
+
+
+    ###### Example:
+
+
+    int  i = 0;
+
+
+    do {
+
+
+    if (i>5) {
+
+
+    break;
+
+
+    } else {
+
+
+    System.out.println("Programming is Fun " + i);
+
+
+    }
+
+
+    i++;
+
+
+    } while (i < 10);
+
+
+    Output:
+
+
+    Programming is Fun 0
+
+
+    Programming is Fun 1'
+  toc: []
+  trans: "\n\n## 关系运算符\n\n下表包含了 Java 中所有关系运算符所需的所有信息。\n\n| 运算符 | 描述 | 示例 |\n| :---\
+    \ | :--- | :--- |\n| `==` (等于) | 此运算符比较两个值，如果值相等，则返回 true。 | `(a == b)` 为 false。\
+    \ |\n| `!=` (不等于) | 此运算符比较两个值，如果值不相等，则条件为 true。 | `(a!= b)` 为 true。 |\n| `>` (大于)\
+    \ | 如果左侧的值大于右侧的值，则条件为 true。 | `(a > b)` 为 false。 |\n| `<` (小于) | 如果左侧的值小于右侧的值，则条件为\
+    \ true。 | `(a < b)` 为 true。 |\n| `>=` (大于等于) | 如果左侧的值大于或等于右侧的值，则返回 true。 | `(a\
+    \ >= b)` 为 false。 |\n| `<=` (小于等于) | 如果左侧的值小于或等于右侧的值，则条件为 true。 | `(a <= b)` 为\
+    \ true。 |\n\n## 逻辑运算符\n\n下表包含了 Java 中所有逻辑运算符所需的所有信息。\n\n| 运算符 | 描述 | 示例 |\n| :---\
+    \ | :--- | :--- |\n| `&&` (`’与’`) | 此运算符被称为逻辑与运算符。如果此运算符两边的值都非零，则返回 true，否则结果为\
+    \ false。 | `(a && a)` 返回 false |\n| `||` (`’或’`) | 此运算符被称为逻辑或运算符。如果此运算符的任一侧的值非零，则返回\
+    \ true，否则将返回 false。 | `(a || b)` 返回 true |\n| `!` (`’非’`) | 此运算符被称为逻辑非运算符。此运算符会反转它所用操作数数的值。例如，如果值是\
+    \ true，它会使其变为 false；如果值是 false，它会使其变为 true。 | `!(a && b)` 返回 true |\n\n## 赋值运算符\n\
+    \n下表包含了 Java 中所有赋值运算符所需的所有信息。\n\n| 运算符 | 描述 | 示例 |\n| :--- | :--- | :--- |\n|\
+    \ `=` |这是一个赋值运算符。它从右侧获取值并将其存储在左侧。 | `c = a + b` a 和 b 的和将存储在 `c` 中 |\n| `+=` |\
+    \ 此运算符不仅加上一个值，还将将其赋值给左侧的变量。 | `b+= a` 等于 `b = b + a` |\n| `-=` | 此运算符不仅减去一个值，还将将其赋值给左侧的变量。\
+    \ | `b-= a` 等于 `b = b – a` |\n| `*=` | 此运算符不仅乘以一个值，还将将其赋值给左侧的变量。 | `b *= a` 等于\
+    \ `b = b * a` |\n| `/=` | 此运算符不仅除以一个值，还将将其赋值给左侧的变量。 | `b /= a` 等于 `b = b / a`\
+    \ |\n| `%=` | 此运算符取模并将将其赋值给左侧的变量。 | `b %= a` 等于 `b = b % a` |\n| `<<=` | 此运算符对值进行左移，并将其赋值给左侧的变量。\
+    \ | `b <<= 2` 等于 `b = b << 2` |\n| `>>=` | 此运算符对值进行右移，并将其赋值给左侧的变量。 | `b >>= 2`\
+    \ 等于 `b = b >> 2` |\n| `&=` | 此运算符对值进行与运算，并将其赋值给左侧的变量。 | `b &= 2` 等于 `b = b &\
+    \ 2` |\n| `^=` | 此运算符对值进行异异运算，并将其赋值给左侧的变量。 | `b ^= 2` 等于 `b = b ^ 2` |\n| `|=`\
+    \ | 此运算符对值进行或运算，并将其赋值给左侧的变量。 | `b |= 2` 等于 `b = b | 2` |\n\n## 位运算运算符\n\n下表包含了\
+    \ Java 中所有位运算运算符所需的所有信息。\n\n| 运算符 | 描述 | 示例 |\n| :--- | :--- | :--- |\n| `&` (位与)\
+    \ | 这是一个二进制与运算符。如果一个位在运算符的侧都存在，则将其复制到结果中。 | `(a & b)` 将得到 12，即 0000 1100 |\n|\
+    \ `|` (位或) | 这是一个二进制或运算符。如果一个位在运算符的任一侧存在，则将其复制到结果中。 | `(a | b)` 将得到 61，即 0011\
+    \ 1101 |\n| `^` (位异异) | 这是一个二进制异异运算符。如果一个位在运算符的一侧存在而在另一侧不存在，则将其复制到结果中。 | `(a ^\
+    \ b)` 将得到 49，即 0011 0001 |\n| `~` (位取反) | 这是一个二进制取反运算符。它会翻转位。 | `~a` |\n| `<<`\
+    \ (左移) | 此运算符对值进行左移。 | `a << 2` 将左移 |\n| `>>` (右移) | 此运算符对值进行右移。 | |\n| `>>>`\
+    \ (无符号右移) | 这是一个无符号右移运算符。 | |\n\n# 章节：循环\n\n在现实生活中，循环是重复执行的操作。在 Java 中有三种循环：\n\
+    \n*   while 循环\n*   do-while 循环\n*   for 循环\n\n### while 循环\n\nwhile 循环在条件为真时持续执行。当条件变为假时，循环停止。\n\
+    \n**示例：**\n\n```java\nint i = 0;\nwhile(i < 10) {\n    System.out.println(\"Programming\
+    \ is Fun \" + i);\n    i++;\n}\n```\n\n输出：\n```\nProgramming is Fun 0\nProgramming\
+    \ is Fun 1\n...\nProgramming is Fun 9\n```\n\n### do-while 循环\n\ndo-while 循环与\
+    \ while 循环相似，区别在于它至少执行一次。在第一次迭代后，它会检查末尾条件是否为真。如果条件为真，它将继续执行。\n\n**示例：**\n\n```java\n\
+    int i = 0;\ndo {\n    System.out.println(\"Programming is Fun \" + i);\n    i++;\n\
+    } while (i < 10);\n```\n\n输出：\n```\nProgramming is Fun 0\n...\nProgramming is\
+    \ Fun 9\n```\n\n### for 循环\n\n“for 循环”是 Java 支持的另一种循环类型。在 for 循环中，你定义了必须满足才能执行的条件。如果条件为假，循环将中断；否则，for\
+    \ 循环将继续执行。\n\n**示例：**\n\n```java\nfor (int j = 0; j < 9; j++) {\n    System.out.println(\"\
+    This is for loop's iteration number \"+ j);\n}\n```\n\n输出：\n```\nThis is for loop's\
+    \ iteration number 0\n...\nThis is for loop's iteration number 8\n```\n\n## break\
+    \ 和 continue\n\n在循环中，可以使用 `break` 或 `continue` 关键字来执行特定的操作。\n\n#### break\n\n\
+    任何循环中的 `break` 语句都会终止循环，无论循环条件是真是假。一旦循环遇到 `break` 语句，就会停止执行。\n\n**示例：**\n\n```java\n\
+    int i = 0;\ndo {\n    if (i>5) {\n        break;\n    } else {\n        System.out.println(\"\
+    Programming is Fun \" + i);\n    }\n    i++;\n} while (i < 10);\n```\n\n输出：\n\
+    ```\nProgramming is Fun 0\nProgramming is Fun 1\nProgramming is Fun 2\nProgramming\
+    \ is Fun 3\nProgramming is Fun 4\nProgramming is Fun 5\n```\n\n"
+- fmt: "\nProgramming is Fun 2\nProgramming is Fun 3\nProgramming is Fun 4\nProgramming\
+    \ is Fun 5\n\nAs soon as the loop hits the `break` statement it will stop iterating.\n\
+    \n### Continue:\n\nWhen the code reaches a `continue` statement inside a loop\
+    \ it skips that iteration and the code below the `continue` statement and will\
+    \ jump to the next iteration.\n\n#### Example:\n\n```java\nint i = 0;\n\ndo {\n\
+    \    if (i>=5) {\n        continue;\n    } else {\n        System.out.println(\"\
+    Programming is Fun \" + i);\n    }\n    i++;\n} while (i < 10);\n```\n\n**Output:**\n\
+    \nProgramming is Fun 0\nProgramming is Fun 1\nProgramming is Fun 2\nProgramming\
+    \ is Fun 3\nProgramming is Fun 4\n\n# Chapter 9: Decision Making\n\nIn java decision\
+    \ making refers to block of codes which execute only if the condition mentioned\
+    \ before them is true. There are multiple kind of decision making blocks in java.\n\
+    \n* If Statement\n* If-else statement\n* Switch statement\n\n### If Statement:\n\
+    \nAn “If statement” is a block of code which comprises of a single or multiple\
+    \ conditions and the lines of code that execute if the conditions are met.\n\n\
+    #### Example:\n\n```java\nif (true) {\n    System.out.println(\"This is an if\
+    \ statement example\");\n}\n```\n\n**Output:**\n\nThis is an if statement example\n\
+    \n### If-Else Statement:\n\nAn “If-Else statement” is a block of code which comprises\
+    \ of a single or multiple conditions and the lines of code that execute if the\
+    \ conditions are met. If the conditions aren’t met the `else` block of this statement\
+    \ executes.\n\n#### Example:\n\n```java\nif (false) {\n    System.out.println(\"\
+    This is an if-else statement example\");\n}\nelse {\n    System.out.println(\"\
+    Else block's output\");\n}\n```\n\n**Output:**\n\nElse block's output\n\nThe condition\
+    \ inside the `if` statement above is false so the compiler will jump to the `else`\
+    \ block to print the above mentioned output.\n\n### Switch Statement:\n\nA switch\
+    \ is very much like an If statement and it works just like an if statement. But\
+    \ what if you have a lot of conditions and you want to do different operations\
+    \ for each condition, you’ll have to write multiple if statements to achieve your\
+    \ desired result but with a switch statement you can do all those things inside\
+    \ a single block of code.\n\n#### Example:\n\n```java\nString color = \"Blue\"\
+    ;\n\nswitch(color) {\n    case \"Red\" :\n        System.out.println(\"Red\");\n\
+    \        break;\n    case \"Violet\" :\n    case \"Blue\" :\n        System.out.println(\"\
+    Blue\");\n        break;\n    case \"Green\" :\n        System.out.println(\"\
+    Green\");\n    case \"Orange\" :\n        System.out.println(\"Orange\");\n  \
+    \      break;\n    default :\n        System.out.println(\"White\");\n}\nSystem.out.println(\"\
+    The Color you choose is \" + color);\n```\n\n**Output:**\n\nBlue\nThe Color you\
+    \ choose is Blue\n\nSee the above mentioned switch statement. I have stored the\
+    \ `Blue` color in the `color` variable. When I execute this code. It goes to each\
+    \ `case` statement and compares it with the value I have stored in the `color`\
+    \ variable. When it finds the match it runs the code inside that `case` and exits\
+    \ the statement.\n\n# Chapter 10: Numbers\n\nNormally in java when we have to\
+    \ deal with numbers we use `integer`, `float`, `decimal` etc. but you must know\
+    \ that all of these primitive types come from an abstract numbers class. When\
+    \ we create variables of primitive types what really happens behind the scene\
+    \ is that the primitive types gets wrapped around by the `Numbers` class and as\
+    \ a result an object is created. This process of creating an object from a primitive\
+    \ type is known as `boxing`. When we convert an object to a primitive type which\
+    \ most of the time what the compilers does to show us numbered values is known\
+    \ as `un-boxing`.\n\n### Number Methods:\n\nThe `Number` class has a lot of built\
+    \ in functions written for you. So you just have to call these methods and use\
+    \ them instead of writing these on your own.\n\n#### [xxxValue()](https://www.tutorialspoint.com/java/number_xxxvalue.htm)\n\
+    \nThis method converts the value of a `Number` object to the desired data type\
+    \ and returns the result.\n\n#### [compareTo()](https://www.tutorialspoint.com/java/number_compareto.htm)\n\
+    \nThis method compares a `Number` object to an argument.\n\n#### [equals()](https://www.tutorialspoint.com/java/number_equals.htm)\n\
+    \nThis method checks if the number object is equal to the argument.\n\n#### [valueOf()](https://www.tutorialspoint.com/java/number_valueof.htm)\n\
+    \nThis method return an object of integer type which has a value specified in\
+    \ a primitive variable.\n\n#### [toString()](https://www.tutorialspoint.com/java/number_tostring.htm)\n\
+    \nThis method converts the value into a string.\n\n#### [parseInt()](https://www.tutorialspoint.com/java/number_parseint.htm)\n\
+    \nThis method is used to convert a string into an `int`.\n\n#### [abs()](https://www.tutorialspoint.com/java/number_abs.htm)\n\
+    \nThis method returns the absolute value.\n\n#### [ceil()](https://www.tutorialspoint.com/java/number_ceil.htm)\n\
+    \nThis method returns a double greater than or equal to the argument.\n\n####\
+    \ [floor()](https://www.tutorialspoint.com/java/number_floor.htm)\n\nThis method\
+    \ returns a double which is lesser or equal to the argument.\n\n#### [rint()](https://www.tutorialspoint.com/java/number_rint.htm)\n\
+    \nThis method returns a double closer to the argument.\n\n#### [round()](https://www.tutorialspoint.com/java/number_round.htm)\n\
+    \nThis method returns a long or `int` value.\n\n#### [min()](https://www.tutorialspoint.com/java/number_min.htm)\n\
+    \nThis method return the smaller value among multiple values.\n\n#### [max()](https://www.tutorialspoint.com/java/number_max.htm)\n\
+    \nThis method return the biggest value among multiple values.\n\n#### [exp()](https://www.tutorialspoint.com/java/number_exp.htm)\n\
+    \nThis method return the base of `e`.\n\n#### [log()](https://www.tutorialspoint.com/java/number_log.htm)\n\
+    \nThis method performs a log operation on the argument.\n\n#### [pow()](https://www.tutorialspoint.com/java/number_pow.htm)\n\
+    \nThis method returns the value of the first argument to the power of the second\
+    \ argument.\n\n#### [sqrt()](https://www.tutorialspoint.com/java/number_sqrt.htm)\n\
+    \nThis method performs a square root operation on the argument.\n\n#### [sin()](https://www.tutorialspoint.com/java/number_sin.htm)\n\
+    \nThis method returns the sine of the argument.\n\n#### [cos()](https://www.tutorialspoint.com/java/number_cos.htm)\n\
+    \nThis method returns the cosine of the argument.\n\n#### [tan()](https://www.tutorialspoint.com/java/number_tan.htm)\n\
+    \nThis method returns the tan of the argument.\n\n#### [asin()](https://www.tutorialspoint.com/java/number_asin.htm)\n\
+    \nThis method returns the arcsine of the argument.\n\n#### [acos()](https://www.tutorialspoint.com/java/number_acos.htm)\n\
+    \nThis method returns the arccosine of the argument.\n\n#### [atan()](https://www.tutorialspoint.com/java/number_atan.htm)\n\
+    \nThis method returns the arctan of the argument.\n\n#### [toDegrees()](https://www.tutorialspoint.com/java/number_todegrees.htm)\n\
+    \nYou can convert an argument into degrees with the help of this method.\n\n####\
+    \ [toRadians()](https://www.tutorialspoint.com/java/number_toradians.htm)\n\n\
+    You can convert an argument into radians with the help of this method.\n\n####\
+    \ [random()](https://www.tutorialspoint.com/java/number_random.htm)\n\nThis helper\
+    \ method generates a random number. You can give it a range to restrict the outcome.\n\
+    \n# Chapter 11: Characters\n\nJust like numbers, in Java you can create objects\
+    \ of primitive type character by using its wrapper class `Character`. A character\
+    \ class creates an object in which you can store characters and you can also perform\
+    \ different actions on that particular object.\n\n#### Example\n\n```java\n//this\
+    \ is a primitive character type variable\nchar  mychar = 'a';\n\n// this is how\
+    \ you create a character object\nCharacter mycharobject = 'b';\n\n//this is a\
+    \ primitive character type variable\nchar  one = '1';\n\n// this is how you create\
+    \ a character object\nCharacter twoobj = '2';\n```\n\n#### Methods for Character\
+    \ Class:\n\n##### [isLetter()](https://www.tutorialspoint.com/java/character_isletter.htm)\n\
+    \nThis method checks if the argument passed to it is a letter or not.\n"
+  raw: "Programming is Fun 2\n\nProgramming is Fun 3\n\nProgramming is Fun 4\n\nProgramming\
+    \ is Fun 5\n\nAs soon as the loop hits the break statement it will stop iterating.\n\
+    \n##### Continue:\n\nWhen the code reaches a continue statement inside a loop\
+    \ it skips that iteration and the code below the continue statement and will jump\
+    \ to the next iteration.\n\n###### Example:\n\nint  i = 0;\n\ndo {\n\nif (i>=5)\
+    \ {\n\ncontinue;\n\n} else {\n\nSystem.out.println(\"Programming is Fun \" + i);\n\
+    \n}\n\ni++;\n\n} while (i < 10);\n\nOutput:\n\nProgramming is Fun 0\n\nProgramming\
+    \ is Fun 1\n\nProgramming is Fun 2\n\nProgramming is Fun 3\n\nProgramming is Fun\
+    \ 4\n\n# Chapter 9: Decision Making\n\nIn java decision making refers to block\
+    \ of codes which execute only if the condition mentioned before them is true.\
+    \ There are multiple kind of decision making blocks in java.\n\n*   If Statement\n\
+    \n*   If-else statement\n\n*   Switch statement\n\n#### If Statement:\n\nAn “If\
+    \ statement” is a block of code which comprises of a single or multiple conditions\
+    \ and the lines of code that execute if the conditions are met.\n\n###### Example:\n\
+    \nif (true) {\n\nSystem.out.println(\"This is an if statement example\");\n\n\
+    }\n\nOutput:\n\nThis is an if statement example\n\n#### If-Else Statement:\n\n\
+    An “If-Else statement” is a block of code which comprises of a single or multiple\
+    \ conditions and the lines of code that execute if the conditions are met. If\
+    \ the conditions aren’t met the else block of this statement executes.\n\n######\
+    \ Example:\n\nif (false) {\n\nSystem.out.println(\"This is an if-else statement\
+    \ example\");\n\n}\n\nelse {\n\nSystem.out.println(\"Else block's output\");\n\
+    \n}\n\nOutput:\n\nElse block's output\n\nThe condition inside the if statement\
+    \ above is false so the compiler will jump to the else block to print the above\
+    \ mentioned output.\n\n#### Switch Statement:\n\nA switch is very much like an\
+    \ If statement and it works just like an if statement. But what if you have a\
+    \ lot of conditions and you want to do different operations for each condition,\
+    \ you’ll have to write multiple if statements to achieve your desired result but\
+    \ with a switch statement you can do all those things inside a single block of\
+    \ code.\n\n###### Example:\n\nString color = \"Blue\";\n\n switch(color) {\n\n\
+    \ case  \"Red\" :\n\n            System.out.println(\"Red\");\n\n break;\n\n case\
+    \  \"Violet\" :\n\n case  \"Blue\" :\n\n            System.out.println(\"Blue\"\
+    );\n\n break;\n\n case  \"Green\" :\n\n            System.out.println(\"Green\"\
+    );\n\n case  \"Orange\" :\n\n            System.out.println(\"Orange\");\n\n break;\n\
+    \n default :\n\n            System.out.println(\"White\");\n\n      }\n\n     \
+    \ System.out.println(\"The Color you choose is \" + color);\n\n   }\n\nOutput:\n\
+    \nBlue\n\nThe Color you choose is Blue\n\nSee the above mentioned switch statement.\
+    \ I have stored the Blue color in the color variable. When I execute this code.\
+    \ It goes to each case statement and compares it with the value I have stored\
+    \ in the color variable. When it finds the match it runs the code inside that\
+    \ case and exits the statement.\n\n# Chapter 10: Numbers\n\nNormally in java when\
+    \ we have to deal with numbers we use integer, float, decimal etc. but you must\
+    \ know that all of these primitive types come from an abstract numbers class.\
+    \ When we create variables of primitive types what really happens behind the scene\
+    \ is that the primitive types gets wrapped around by the Numbers class and as\
+    \ a result an object is created. This process of creating an object from a primitive\
+    \ type is known as boxing. When we convert an object to a primitive type which\
+    \ most of the time what the compilers does to show us numbered values is known\
+    \ as un-boxing.\n\n#### Number Methods:\n\nThe Number class has a lot of built\
+    \ in functions written for you. So you just have to call these methods and use\
+    \ them instead of writing these on your own.\n\n##### [xxxValue()](https://www.tutorialspoint.com/java/number_xxxvalue.htm)\n\
+    \nThis method converts the value of  a Number object to the desired data type\
+    \ and returns the result.\n\n##### [compareTo()](https://www.tutorialspoint.com/java/number_compareto.htm)\n\
+    \nThis method compares a Number object to an argument.\n\n##### [equals()](https://www.tutorialspoint.com/java/number_equals.htm)\n\
+    \nThis method checks if the number object is equal to the argument.\n\n##### [valueOf()](https://www.tutorialspoint.com/java/number_valueof.htm)\n\
+    \nThis method return an object of integer type which has a value specified in\
+    \ a primitive variable.\n\n##### [toString()](https://www.tutorialspoint.com/java/number_tostring.htm)\n\
+    \nThis method converts the value into a string.\n\n##### [parseInt()](https://www.tutorialspoint.com/java/number_parseint.htm)\n\
+    \nThis method is used to convert a string into an int.\n\n##### [abs()](https://www.tutorialspoint.com/java/number_abs.htm)\n\
+    \nThis method return the absolute value.\n\n##### [ceil()](https://www.tutorialspoint.com/java/number_ceil.htm)\n\
+    \nThis method returns a double value greater than or equal to the argument.\n\n\
+    ##### [floor()](https://www.tutorialspoint.com/java/number_floor.htm)\n\nThe method\
+    \ returns the largest double value which is lesser than or equal to the argument.\n\
+    \n##### [rint()](https://www.tutorialspoint.com/java/number_rint.htm)\n\nThis\
+    \ method returns a double value closer to the argument.\n\n##### [round()](https://www.tutorialspoint.com/java/number_round.htm)\n\
+    \nThis method returns a long or int value.\n\n##### [min()](https://www.tutorialspoint.com/java/number_min.htm)\n\
+    \nThis method return the smaller value among multiple values.\n\n##### [max()](https://www.tutorialspoint.com/java/number_max.htm)\n\
+    \nThis method return the biggest value among multiple values.\n\n##### [exp()](https://www.tutorialspoint.com/java/number_exp.htm)\n\
+    \nThe method return the base of log e.\n\n##### [log()](https://www.tutorialspoint.com/java/number_log.htm)\n\
+    \nThis method performs a log operation on the argument given.\n\n##### [pow()](https://www.tutorialspoint.com/java/number_pow.htm)\n\
+    \nThis method returns the value of the first argument raised to the power of the\
+    \ second argument.\n\n##### [sqrt()](https://www.tutorialspoint.com/java/number_sqrt.htm)\n\
+    \nThis method performs a square root operation on the argument.\n\n##### [sin()](https://www.tutorialspoint.com/java/number_sin.htm)\n\
+    \nThis method returns the sine of the argument.\n\n##### [cos()](https://www.tutorialspoint.com/java/number_cos.htm)\n\
+    \nThis method returns the cosine of the argument.\n\n##### [tan()](https://www.tutorialspoint.com/java/number_tan.htm)\n\
+    \nThis method returns the tan of the argument.\n\n##### [asin()](https://www.tutorialspoint.com/java/number_asin.htm)\n\
+    \nThis method returns the arcsine of the argument.\n\n##### [acos()](https://www.tutorialspoint.com/java/number_acos.htm)\n\
+    \nThis method returns the arccosine of the argument.\n\n##### [atan()](https://www.tutorialspoint.com/java/number_atan.htm)\n\
+    \nThis method returns the arctan of the argument.\n\n##### [toDegrees()](https://www.tutorialspoint.com/java/number_todegrees.htm)\n\
+    \nYou can convert an argument into degrees with the help of this method.\n\n#####\
+    \ [toRadians()](https://www.tutorialspoint.com/java/number_toradians.htm)\n\n\
+    You can convert an argument into radians with the help of this method.\n\n#####\
+    \ [random()](https://www.tutorialspoint.com/java/number_random.htm)\n\nThis helper\
+    \ method generates a random number. You can give it a range to restrict the outcome.\n\
+    \n# Chapter 11: Characters\n\nJust like numbers, in Java you can create objects\
+    \ of primitive type character by using its wrapper class Character. A character\
+    \ class creates an object in which you can store characters and you can also perform\
+    \ different actions on that particular object.\n\n###### Example\n\n//this is\
+    \ a primitive character type variable\n\nchar  mychar = 'a';\n\n// this is how\
+    \ you create a character object\n\nCharacter mycharobject = 'b';\n\n//this is\
+    \ a primitive character type variable\n\nchar  one = '1';\n\n// this is how you\
+    \ create a character object\n\nCharacter twoobj = '2';\n\n#### Methods for Character\
+    \ Class:\n\n##### [isLetter()](https://www.tutorialspoint.com/java/character_isletter.htm)\n\
+    \nThis method checks if the argument passed to it is a letter or not."
+  toc: []
+  trans: "\n\n编程很有趣 2\n编程很有趣 3\n编程很有趣 4\n编程很有趣 5\n\n一旦循环遇到 `break` 语句，它将停止迭代。\n\n\
+    ### Continue:\n\n当代码在循环内部遇到 `continue` 语句时，它会跳过当前迭代以及 `continue` 语句之后的代码，并跳转到下一次迭代。\n\
+    \n#### 示例：\n\n```java\nint i = 0;\n\ndo {\n    if (i>=5) {\n        continue;\n\
+    \    } else {\n        System.out.println(\"Programming is Fun \" + i);\n    }\n\
+    \    i++;\n} while (i < 10);\n```\n\n**输出：**\n\n编程很有趣 0\n编程很有趣 1\n编程很有趣 2\n编程很有趣\
+    \ 3\n编程很有趣 4\n\n# 第 9 章：决策\n\n在 java 中，决策指的是只有在在其前面提到的条件为真时才会执行代码块。java 中有多种类型的决策代码块。\n\
+    \n* If 语句\n* If-else 语句\n* Switch 语句\n\n### If 语句：\n\n“If 语句”是一个代码块，它包含一个或多个条件以及在满足条件时执行的代码行。\n\
+    \n#### 示例：\n\n```java\nif (true) {\n    System.out.println(\"This is an if statement\
+    \ example\");\n}\n```\n\n**输出：**\n\nThis is an if statement example\n\n### If-Else\
+    \ 语句：\n\n“If-Else 语句”是一个代码块，它包含一个或多个条件以及在满足条件时执行的代码行。如果条件不满足，则执行该语句的 `else` 块。\n\
+    \n#### 示例：\n\n```java\nif (false) {\n    System.out.println(\"This is an if-else\
+    \ statement example\");\n}\nelse {\n    System.out.println(\"Else block's output\"\
+    );\n}\n```\n\n**输出：**\n\nElse block's output\n\n上述 `if` 语句内部条件为假，因此编译器将跳转到 `else`\
+    \ 块以打印上述输出。\n\n### Switch 语句：\n\nswitch 非常像 If 语句，它的工作方式和 if 语句一样。但如果你有很多条件，并且想对每个条件执行不同的操作，你将需要编写多个\
+    \ if 语句来实现所需的结果，但使用 switch 语句，你可以在单个代码块内完成所有工作。\n\n#### 示例：\n\n```java\nString\
+    \ color = \"Blue\";\n\nswitch(color) {\n    case \"Red\" :\n        System.out.println(\"\
+    Red\");\n        break;\n    case \"Violet\" :\n    case \"Blue\" :\n        System.out.println(\"\
+    Blue\");\n        break;\n    case \"Green\" :\n        System.out.println(\"\
+    Green\");\n    case \"Orange\" :\n        System.out.println(\"Orange\");\n  \
+    \      break;\n    default :\n        System.out.println(\"White\");\n}\nSystem.out.println(\"\
+    The Color you choose is \" + color);\n```\n\n**输出：**\n\nBlue\nThe Color you choose\
+    \ is Blue\n\n查看上述 switch 语句。我将 `Blue` 颜色存储在 `color` 变量中。当我执行这段代码时，它会进入每个 `case`\
+    \ 语句并与我在 `color` 变量中存储的值进行比较。当找到匹配项时，它运行该 `case` 内部的代码并退出语句。\n\n# 第 10 章：数字\n\n\
+    通常在 java 中，当我们必须处理数字时，我们使用 `integer`、`float`、`decimal` 等，但你必须知道所有这些基本类型都源于一个抽象的数字类。当我们创建基本类型的变量时，背后发生的真实情况是基本类型被\
+    \ `Numbers` 类封装，从而创建了一个对象。这种从基本类型创建对象的过程被称为 `装箱` (boxing)。当我们将对象转换为基本类型时（这通常是编译器向我们显示数值时所的操作），被称为\
+    \ `拆箱` (un-boxing)。\n\n### 数字方法：\n\n`Number` 类有很多许多为你编写的内置函数。因此你只需要调用这些方法并使用它们，而不是自己编写这些。\n\
+    \n#### [xxxValue()](https://www.tutorialspoint.com/java/number_xxxvalue.htm)\n\
+    \n此方法将 `Number` 对象的值转换为所需的数据类型并返回结果。\n\n#### [compareTo()](https://www.tutorialspoint.com/java/number_compareto.htm)\n\
+    \n此方法将 `Number` 对象与参数进行比较。\n\n#### [equals()](https://www.tutorialspoint.com/java/number_equals.htm)\n\
+    \n此方法检查数字对象是否等于参数。\n\n#### [valueOf()](https://www.tutorialspoint.com/java/number_valueof.htm)\n\
+    \n此方法返回一个在基本变量中指定值的整数类型对象。\n\n#### [toString()](https://www.tutorialspoint.com/java/number_tostring.htm)\n\
+    \n此方法将值转换为字符串。\n\n#### [parseInt()](https://www.tutorialspoint.com/java/number_parseint.htm)\n\
+    \n此方法用于将字符串转换为 `int`。\n\n#### [abs()](https://www.tutorialspoint.com/java/number_abs.htm)\n\
+    \n此方法返回绝对值。\n\n#### [ceil()](https://www.tutorialspoint.com/java/number_ceil.htm)\n\
+    \n此方法返回一个大于或等于参数的 double。\n\n#### [floor()](https://www.tutorialspoint.com/java/number_floor.htm)\n\
+    \n此方法返回一个小于或等于参数的 double。\n\n#### [rint()](https://www.tutorialspoint.com/java/number_rint.htm)\n\
+    \n此方法返回一个更接近参数的 double。\n\n#### [round()](https://www.tutorialspoint.com/java/number_round.htm)\n\
+    \n此方法返回一个 long 或 `int` 值。\n\n#### [min()](https://www.tutorialspoint.com/java/number_min.htm)\n\
+    \n此方法返回多个值中的较小值。\n\n#### [max()](https://www.tutorialspoint.com/java/number_max.htm)\n\
+    \n此方法返回多个值中的最大值。\n\n#### [exp()](https://www.tutorialspoint.com/java/number_exp.htm)\n\
+    \n此方法返回 `e` 的底。\n\n#### [log()](https://www.tutorialspoint.com/java/number_log.htm)\n\
+    \n此方法对参数执行对数运算。\n\n#### [pow()](https://www.tutorialspoint.com/java/number_pow.htm)\n\
+    \n此方法返回第一个参数的第二个参数的幂。\n\n#### [sqrt()](https://www.tutorialspoint.com/java/number_sqrt.htm)\n\
+    \n此方法对参数执行平方根运算。\n\n#### [sin()](https://www.tutorialspoint.com/java/number_sin.htm)\n\
+    \n此方法返回正弦值。\n\n#### [cos()](https://www.tutorialspoint.com/java/number_cos.htm)\n\
+    \n此方法返回余弦值。\n\n#### [tan()](https://www.tutorialspoint.com/java/number_tan.htm)\n\
+    \n此方法返回正切值。\n\n#### [asin()](https://www.tutorialspoint.com/java/number_asin.htm)\n\
+    \n此方法返回反正正弦。\n\n#### [acos()](https://www.tutorialspoint.com/java/number_acos.htm)\n\
+    \n此方法返回反余弦。\n\n#### [atan()](https://www.tutorialspoint.com/java/number_atan.htm)\n\
+    \n此方法返回反正正切。\n\n#### [toDegrees()](https://www.tutorialspoint.com/java/number_todegrees.htm)\n\
+    \n你可以通过此方法将参数转换为角度。\n\n#### [toRadians()](https://www.tutorialspoint.com/java/number_toradians.htm)\n\
+    \n你可以通过此方法将参数转换为弧度。\n\n#### [random()](https://www.tutorialspoint.com/java/number_random.htm)\n\
+    \n此辅助方法生成一个随机数。你可以提供一个范围来限制结果。\n\n# 第 11 章：字符\n\n就像数字一样，在 Java 中，你可以通过其包装类 `Character`\
+    \ 创建基本类型字符的对象。字符类创建了一个对象，你可以在其中存储字符，也可以对该对象执行不同的操作。\n\n#### 示例\n\n```java\n//这一个基本字符类型变量\n\
+    char  mychar = 'a';\n\n//这是如何创建一个字符对象的\nCharacter mycharobject = 'b';\n\n//这一个基本字符类型变量\n\
+    char  one = '1';\n\n//这是如何创建一个字符对象的\nCharacter twoobj = '2';\n```\n\n#### 字符类的方法：\n\
+    \n##### [isLetter()](https://www.tutorialspoint.com/java/character_isletter.htm)\n\
+    \n此方法检查传递给它的参数是否为字母。\n\n"
+- fmt: "\n### [isDigit()](https://www.tutorialspoint.com/java/character_isdigit.htm)\n\
+    This method checks if the char value in question is a digit or not.\n\n### [isWhitespace()](https://www.tutorialspoint.com/java/character_iswhitespace.htm)\n\
+    This method checks if the char value in question is a whitespace or not.\n\n###\
+    \ [isUpperCase()](https://www.tutorialspoint.com/java/character_isuppercase.htm)\n\
+    This method checks if the char value in question is uppercased or not.\n\n###\
+    \ [isLowerCase()](https://www.tutorialspoint.com/java/character_islowercase.htm)\n\
+    This method checks if the char value in question is lower cased or not.\n\n###\
+    \ [toUpperCase()](https://www.tutorialspoint.com/java/character_touppercase.htm)\n\
+    This method converts the char value in question to uppercase.\n\n### [toLowerCase()](https://www.tutorialspoint.com/java/character_tolowercase.htm)\n\
+    This method converts the char value in question to lowercase.\n\n### [toString()](https://www.tutorialspoint.com/java/character_tostring.htm)\n\
+    This method returns a string object containing the value of the character passed\
+    \ to it as an argument.\n\n# Chapter 12: Strings\n\nStrings are widely used in\
+    \ java. In java Strings are treated as objects. Java has built-in string class\
+    \ and that class contains many helper methods.\n\nHere’s how you define a string\
+    \ in java.\n\n```\nString name = \"John\";\n```\n\nWhen the compiler hit the above\
+    \ line of code it will create an object of type string whom value is John.\n\n\
+    #### Example:\n\n```java\nString name = \"John\";\nSystem.out.println(\"Hello\
+    \ guys my name is \"+ name);\n```\n\nOutput:\nHello guys my name is John\n\nIn\
+    \ the example above I have created a string object `name` and have assigned a\
+    \ value to it. The second line of code takes a string argument and prints it out\
+    \ on the console window. The string `Hello guys my name is ` and and the value\
+    \ of the `name` variable are both strings. The plus sign (`+`) I used above is\
+    \ for joining both strings. The process of joining strings together is known as\
+    \ concatenation. Here’s another example.\n\n#### Example:\n\n```java\nString greet1\
+    \ = \"Hello\";\nString greet2 = \"World\";\nSystem.out.println(greet1 + \" \"\
+    \ + greet2);\n```\n\nOutput:\nHello World\n\nIn the example above I joined two\
+    \ string variables named `greet1` and `greet2`. I also concatenated a space in\
+    \ between them to improve readability.\n\nYou can also format a string in java.\
+    \ Meaning you can use placeholders for values and can pass values to the print\
+    \ statement on the go. Have a look at the following example.\n\n#### Example:\n\
+    \n```java\nint number1 = 1;\nfloat number2 = 2.0f;\nSystem.out.printf(\"The value\
+    \ of number1 is %d and the value of number2 is %f\", number1, number2);\n```\n\
+    \nOutput:\nThe value of number1 is 1 and the value of number2 is 2.000000\n\n\
+    In the above example I passed two variables `number1` and `number2` to the `printf`\
+    \ statement. The `%d` is a place holder for integers and the `%f` is a place holder\
+    \ for float point values.\n\n#### String Methods:\n\nThe string class has multiple\
+    \ pre-defined helper methods.\n\n### [char charAt(int index)](https://www.tutorialspoint.com/java/java_string_charat.htm)\n\
+    This method returns a character on a specific index of a string.\n\n### [int compareTo(Object\
+    \ o)](https://www.tutorialspoint.com/java/java_string_compareto.htm)\nThis method\
+    \ compares two string objects.\n\n### [String concat(String str)](https://www.tutorialspoint.com/java/java_string_concat.htm)\n\
+    This method concatenates the specified string to the end of another string.\n\n\
+    ### [boolean contentEquals(StringBuffer sb)](https://www.tutorialspoint.com/java/java_string_contentequals.htm)\n\
+    This method return true if the sequence of characters in a string is same to the\
+    \ string buffer sequence.\n\n### [boolean endsWith(String suffix)](https://www.tutorialspoint.com/java/java_string_endswith.htm)\n\
+    This method checks if the string ends with the specified suffix.\n\n### [boolean\
+    \ equals(Object anObject)](https://www.tutorialspoint.com/java/java_string_equals.htm)\n\
+    This method takes two string objects and it returns true if they are a match.\n\
+    \n### [boolean equalsIgnoreCase(String anotherString)](https://www.tutorialspoint.com/java/java_string_equalsignorecase.htm)\n\
+    This method compares two strings but it does not take the case into consideration.\n\
+    \n### [byte getBytes()](https://www.tutorialspoint.com/java/java_string_getbytes.htm)\n\
+    This method converts a string into an array of bytes.\n\n### [void getChars(int\
+    \ srcBegin, int srcEnd, char[] dst, int dstBegin)](https://www.tutorialspoint.com/java/java_string_getchars.htm)\n\
+    This method copies a string into a character array.\n\n### [int hashCode()](https://www.tutorialspoint.com/java/java_string_hashcode.htm)\n\
+    This method generates a hash code for a given string.\n\n### [int indexOf(String\
+    \ str)](https://www.tutorialspoint.com/java/java_string_indexof_str.htm)\nThis\
+    \ method returns the index where a given substring starts.\n\n### [int lastIndexOf(int\
+    \ ch)](https://www.tutorialspoint.com/java/java_string_lastindex.htm)\nThis method\
+    \ returns the index where it was last found.\n\n### [int lastIndexOf(String str,\
+    \ int fromIndex)](https://www.tutorialspoint.com/java/java_string_lastindex_fromindex.htm)\n\
+    This method returns the index where it last occurred.\n\n### [int length()](https://www.tutorialspoint.com/java/java_string_length.htm)\n\
+    This method returns the length of the string.\n\n### [boolean matches(String regex)](https://www.tutorialspoint.com/java/java_string_matches.htm)\n\
+    This method returns true if the string matches a regular expression.\n\n### [String\
+    \ replace(char oldChar, char newChar)](https://www.tutorialspoint.com/java/java_string_replace.htm)\n\
+    This method replaces an existing character present in a string with a new character.\n\
+    \n### [String[] split(String regex)](https://www.tutorialspoint.com/java/java_string_split.htm)\n\
+    This method splits the string when it comes across a regular expression.\n\n###\
+    \ [boolean startsWith(String prefix)](https://www.tutorialspoint.com/java/java_string_startswith.htm)\n\
+    This method tests if the string starts with a given prefix.\n\n### [String substring(int\
+    \ beginIndex)](https://www.tutorialspoint.com/java/java_string_substring.htm)\n\
+    This method returns a string that is a substring of the given string.\n\n### [char[]\
+    \ toCharArray()](https://www.tutorialspoint.com/java/java_string_tochararray.htm)\n\
+    This method converts a string into a character array.\n\n### [String toLowerCase()](https://www.tutorialspoint.com/java/java_string_tolowercase.htm)\n\
+    This method converts the string to lowercase.\n\n### [String toUpperCase()](https://www.tutorialspoint.com/java/java_string_touppercase.htm)\n\
+    This method converts the string to uppercase.\n\n# Chapter 13: Arrays\n\nArrays\
+    \ are a data structure. Java allows the use of this data structure. Array is basically\
+    \ a fixed size sequential data structure. Array is used as a collection of data\
+    \ of a similar type.\n\nIn this chapter we will look at how you can declare an\
+    \ array. How you can assign values in it and then how you process the arrays.\n\
+    \n#### Creating an Array:\n\nJust like a variable you have to declare an array\
+    \ before you can use it. You will tell your compiler the type of the array and\
+    \ its name. The generic syntax for declaring an array is following:\n\n```\ndatatype[]\
+    \ arrayname = {\"value1\",\"value2\",\"value3\"};\n```\n\n```\ndatatype arrayname[]\
+    \ = {\"value1\",\"value2\",\"value3\"};\n```\n\nYou can use any one way mentioned\
+    \ above to declare an array.\n\nNow Open your Compiler and create a new class\
+    \ called Candies. Add the Following code into it.\n\n```java\npublic class Candies\
+    \ {\n    String[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n}\n```\n\n\
+    In the above example I have created a class named `Candies` and I have declared\
+    \ an array of type `String` in it. Then I assigned three values to that array.\n\
+    \nYou can also declare the above mentioned array like this too.\n\n```java\npublic\
+    \ class Candies {\n    String candies[] = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n}\n```\n"
+  raw: '##### [isDigit()](https://www.tutorialspoint.com/java/character_isdigit.htm)
+
+
+    This method checks if the char value in question is a digit or not.
+
+
+    ##### [isWhitespace()](https://www.tutorialspoint.com/java/character_iswhitespace.htm)
+
+
+    This method checks if the char value in question is a whitespace or not.
+
+
+    ##### [isUpperCase()](https://www.tutorialspoint.com/java/character_isuppercase.htm)
+
+
+    This method checks if the char value in question is uppercased or not.
+
+
+    ##### [isLowerCase()](https://www.tutorialspoint.com/java/character_islowercase.htm)
+
+
+    This method checks if the char value in question is lower cased or not.
+
+
+    ##### [toUpperCase()](https://www.tutorialspoint.com/java/character_touppercase.htm)
+
+
+    This method converts the char value in question to uppercase.
+
+
+    ##### [toLowerCase()](https://www.tutorialspoint.com/java/character_tolowercase.htm)
+
+
+    This method converts the char value in question to lowercase.
+
+
+    ##### [toString()](https://www.tutorialspoint.com/java/character_tostring.htm)
+
+
+    This method returns a string object containing the value of the character passed
+    to it as an argument.
+
+
+    # Chapter 12: Strings
+
+
+    Strings are widely used in java. In java Strings are treated as objects. Java
+    has built-in string class and that class contains many helper methods.
+
+
+    Here’s how you define a string in java.
+
+
+    String name = "John";
+
+
+    When the compiler hit the above line of code it will create an object of type
+    string whom value is John.
+
+
+    ###### Example:
+
+
+    String name = "John";
+
+
+    System.out.println("Hello guys my name is "+ name);
+
+
+    Output:
+
+
+    Hello guys my name is John
+
+
+    In the example above I have created a string object name and have assigned a value
+    to it. The second line of code takes a string argument and prints it out on the
+    console window. The string Hello guys my name is and the value of the name variable
+    are both strings. The plus sign (+) I used above is for joining both strings.
+    The process of joining strings together is known as concatenation. Here’s another
+    example.
+
+
+    ###### Example:
+
+
+    String greet1 = "Hello";
+
+
+    String greet2 = "World";
+
+
+    System.out.println(greet1 + " " + greet2);
+
+
+    Output:
+
+
+    Hello World
+
+
+    In the example above I joined two string variables named greet1 and greet2. I
+    also concatenated a space in between them to improve readability.
+
+
+    You can also format a string in java. Meaning you can use placeholders for values
+    and can pass values to the print statement on the go. Have a look at the following
+    example.
+
+
+    ###### Example:
+
+
+    int  number1 = 1;
+
+
+    float  number2 = 2.0f;
+
+
+    System.out.printf("The value of number1 is %d
+
+
+    and the value of number2 is %f", number1, number2);
+
+
+    Output:
+
+
+    The value of number1 is 1 and the value of number2 is 2.000000
+
+
+    In the above example I passed two variables number1 and number2 to the printf
+    statement. The “%d” is a place holder for integers and the “%f” is a place holder
+    for float point values.
+
+
+    #### String Methods:
+
+
+    The string class has multiple pre-defined helper methods.
+
+
+    ##### [char charAt(int index)](https://www.tutorialspoint.com/java/java_string_charat.htm)
+
+
+    This method returns a character on a specific index of a string.
+
+
+    ##### [int compareTo(Object o)](https://www.tutorialspoint.com/java/java_string_compareto.htm)
+
+
+    This method compares two string objects.
+
+
+    ##### [String concat(String str)](https://www.tutorialspoint.com/java/java_string_concat.htm)
+
+
+    This method concatenates the specified string to the end of another string.
+
+
+    ##### [boolean contentEquals(StringBuffer sb)](https://www.tutorialspoint.com/java/java_string_contentequals.htm)
+
+
+    This method return true if the sequence of characters in a string is same to the
+    string buffer sequence.
+
+
+    ##### [boolean endsWith(String suffix)](https://www.tutorialspoint.com/java/java_string_endswith.htm)
+
+
+    This method checks if the string ends with the specified suffix.
+
+
+    ##### [boolean equals(Object anObject)](https://www.tutorialspoint.com/java/java_string_equals.htm)
+
+
+    This method takes two string objects and it returns true if they are a match.
+
+
+    ##### [boolean equalsIgnoreCase(String anotherString)](https://www.tutorialspoint.com/java/java_string_equalsignorecase.htm)
+
+
+    This method compares two strings but it does not take the case into consideration.
+
+
+    ##### [byte getBytes()](https://www.tutorialspoint.com/java/java_string_getbytes.htm)
+
+
+    This method converts a string into an array of bytes.
+
+
+    ##### [void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)](https://www.tutorialspoint.com/java/java_string_getchars.htm)
+
+
+    This method copies a string into a character array.
+
+
+    ##### [int hashCode()](https://www.tutorialspoint.com/java/java_string_hashcode.htm)
+
+
+    This method generates a hash code for a given string.
+
+
+    ##### [int indexOf(String str)](https://www.tutorialspoint.com/java/java_string_indexof_str.htm)
+
+
+    This method returns the index where a given substring starts.
+
+
+    ##### [int lastIndexOf(int ch)](https://www.tutorialspoint.com/java/java_string_lastindexof.htm)
+
+
+    This method returns the index where the specified character was last found.
+
+
+    ##### [int lastIndexOf(String str, int fromIndex)](https://www.tutorialspoint.com/java/java_string_lastindexof_fromindex.htm)
+
+
+    This method returns the index of a substring where it last occurred.
+
+
+    ##### [int length()](https://www.tutorialspoint.com/java/java_string_length.htm)
+
+
+    This method returns the length of a specified string.
+
+
+    ##### [boolean matches(String regex)](https://www.tutorialspoint.com/java/java_string_matches.htm)
+
+
+    This method returns true if the string matches a specified regular expression.
+
+
+    ##### [String replace(char oldChar, char newChar)](https://www.tutorialspoint.com/java/java_string_replace.htm)
+
+
+    This method replaces an existing character present in a string with a new character.
+
+
+    ##### [String[] split(String regex)](https://www.tutorialspoint.com/java/java_string_split.htm)
+
+
+    This method splits the string when it comes across a regular expression.
+
+
+    ##### [boolean startsWith(String prefix)](https://www.tutorialspoint.com/java/java_string_startswith.htm)
+
+
+    This method tests if the string starts with a given prefix.
+
+
+    ##### [String substring (int beginIndex)](https://www.tutorialspoint.com/java/java_string_substring.htm)
+
+
+    This method returns a string that is a substring of the given string.
+
+
+    ##### [Char [] toCharArray()](https://www.tutorialspoint.com/java/java_string_tochararray.htm)
+
+
+    This method converts a string into a character array.
+
+
+    ##### [String toLowerCase()](https://www.tutorialspoint.com/java/java_string_tolowercase.htm)
+
+
+    This method converts the string to lowercase.
+
+
+    ##### [String toUpperCase()](https://www.tutorialspoint.com/java/java_string_touppercase.htm)
+
+
+    This method converts the string to uppercase.
+
+
+    # Chapter 13: Arrays
+
+
+    Arrays are a data structure. Java allows the use of this data structure. An array
+    is basically a fixed size sequential data structure. Array is used as a collection
+    of data of a similar type. You can store a set of integers in a single array instead
+    of storing them in different variables.
+
+
+    In this chapter we will look at how you can declare an array. How you can assign
+    values in it and then how can you process the arrays.
+
+
+    #### Creating an Array:
+
+
+    Just like a variable you have to declare an array before you can use it. You will
+    tell your compiler the type of the array and its name. The generic syntax for
+    declaring an array is following:
+
+
+    datatype[] arrayname = {“value1”,”value2”,”value3”}
+
+
+    datatype arrayname[] = {“value1”,”value2”,”value3”}
+
+
+    You can use any one way mentioned above to declare an array.
+
+
+    Now Open your Compiler and create a new class called Candies. Add the Following
+    code into it.
+
+
+    public  class Candies {
+
+
+    String[] candies = {"m&Ms","Yummybears","Mayfairs"};
+
+
+    }
+
+
+    In the above example I have created a class named Candies and I have declared
+    an array of type String in it. Then I assigned three values to that array.
+
+
+    You can also declare the above mentioned array like this too.
+
+
+    public  class Candies {
+
+
+    String candies[] = {"m&Ms","Yummybears","Mayfairs"};
+
+
+    }'
+  toc: []
+  trans: "\n\n### [isDigit()](https://www.tutorialspoint.com/java/character_isdigit.htm)\n\
+    该方法检查所指定的 char 值是否为数字。\n\n### [isWhitespace()](https://www.tutorialspoint.com/java/character_iswhitespace.htm)\n\
+    该方法检查所指定的 char 值是否为空白字符。\n\n### [isUpperCase()](https://www.tutorialspoint.com/java/character_isuppercase.htm)\n\
+    该方法检查所指定的 char 值是否为大写。\n\n### [isLowerCase()](https://www.tutorialspoint.com/java/character_islowercase.htm)\n\
+    该方法检查所指定的 char 值是否为小写。\n\n### [toUpperCase()](https://www.tutorialspoint.com/java/character_touppercase.htm)\n\
+    该方法将所指定的 char 值转换为大写。\n\n### [toLowerCase()](https://www.tutorialspoint.com/java/character_tolowercase.htm)\n\
+    该方法将所指定的 char 值转换为小写。\n\n### [toString()](https://www.tutorialspoint.com/java/character_tostring.htm)\n\
+    该方法返回一个包含作为参数传递的字符值的字符串对象。\n\n# 第 12 章：字符串\n\n字符串在 Java 中被广泛使用。在 Java 中，字符串被视为对象。Java\
+    \ 拥有内置的字符串类，该类包含许多辅助方法。\n\n以下是在 Java 中定义字符串的方法。\n\n```\nString name = \"John\"\
+    ;\n```\n\n当编译器遇到上述那行代码时，它会创建一个类型为 string 的对象，其值为 John。\n\n#### 示例：\n\n```java\n\
+    String name = \"John\";\nSystem.out.println(\"Hello guys my name is \"+ name);\n\
+    ```\n\n 输出：\nHello guys my name is John\n\n在上面的示例中，我创建了一个字符串对象 `name` 并给它赋 le\
+    \ 了一个值。第二行代码接收一个字符串参数并将其打印在控制台窗口上。字符串 `Hello guys my name is ` 和变量 `name` 的值都是字符串。我在上面使用的加号（`+`）用于连接这两个字符串。连接字符串的过程被称为拼接（concatenation）。这是另一个示例。\n\
+    \n#### 示例：\n\n```java\nString greet1 = \"Hello\";\nString greet2 = \"World\";\n\
+    System.out.println(greet1 + \" \" + greet2);\n```\n\n 输出：\nHello World\n\n在上面的示例中，我连接了两个名为\
+    \ `greet1` 和 `greet2` 的字符串变量。我还在它们之间拼接了一个空格以提高可读性。\n\n你还可以在 Java 中格式化字符串。这意味着你可以使用占位符作为值，并可以直接将值传递给打印语句。看下面的示例。\n\
+    \n#### 示例：\n\n```java\nint number1 = 1;\nfloat number2 = 2.0f;\nSystem.out.printf(\"\
+    The value of number1 is %d and the value of number2 is %f\", number1, number2);\n\
+    ```\n\n 输出：\nThe value of number1 is 1 and the value of number2 is 2.000000\n\n\
+    在上面的示例中，我将两个变量 `number1` 和 `number2` 传递给 `printf` 语句。`%d` 是整数的占位符，`%f` 是浮点数值的占位符。\n\
+    \n#### 字符串方法：\n\n字符串类有多个预定义的辅助方法。\n\n### [char charAt(int index)](https://www.tutorialspoint.com/java/java_string_charat.htm)\n\
+    该方法返回字符串中特定索引处的字符。\n\n### [int compareTo(Object o)](https://www.tutorialspoint.com/java/java_string_compareto.htm)\n\
+    该方法比较两个字符串对象。\n\n### [String concat(String str)](https://www.tutorialspoint.com/java/java_string_concat.htm)\n\
+    该方法将指定的字符串拼接到另一个字符串的末尾。\n\n### [boolean contentEquals(StringBuffer sb)](https://www.tutorialspoint.com/java/java_string_contentequals.htm)\n\
+    如果字符串中的字符序列与 StringBuffer 序列相同，则返回 true。\n\n### [boolean endsWith(String suffix)](https://www.tutorialspoint.com/java/java_string_endswith.htm)\n\
+    该方法检查字符串是否以指定的后缀结尾。\n\n### [boolean equals(Object anObject)](https://www.tutorialspoint.com/java/java_string_equals.htm)\n\
+    该方法接收两个字符串对象，如果它们匹配则返回 true。\n\n### [boolean equalsIgnoreCase(String anotherString)](https://www.tutorialspoint.com/java/java_string_equalsignorecase.htm)\n\
+    该方法比较两个字符串，但不考虑大小写。\n\n### [byte getBytes()](https://www.tutorialspoint.com/java/java_string_getbytes.htm)\n\
+    该方法将字符串转换为字节数组。\n\n### [void getChars(int srcBegin, int srcEnd, char[] dst, int\
+    \ dstBegin)](https://www.tutorialspoint.com/java/java_string_getchars.htm)\n该方法将字符串拷贝到字符数组。\n\
+    \n### [int hashCode()](https://www.tutorialspoint.com/java/java_string_hashcode.htm)\n\
+    该方法为给定字符串生成哈希码。\n\n### [int indexOf(String str)](https://www.tutorialspoint.com/java/java_string_indexof_str.htm)\n\
+    该方法返回指定字符串开始的索引。\n\n### [int lastIndexOf(int ch)](https://www.tutorialspoint.com/java/java_string_lastindex.htm)\n\
+    该方法返回指定字符最后出现的索引。\n\n### [int lastIndexOf(String str, int fromIndex)](https://www.tutorialspoint.com/java/java_string_lastindex_fromindex.htm)\n\
+    该方法返回指定字符串从指定索引开始最后出现的索引。\n\n### [int length()](https://www.tutorialspoint.com/java/java_string_length.htm)\n\
+    该方法返回字符串的长度。\n\n### [boolean matches(String regex)](https://www.tutorialspoint.com/java/java_string_matches.htm)\n\
+    如果字符串匹配正则表达式则返回 true。\n\n### [String replace(char oldChar, char newChar)](https://www.tutorialspoint.com/java/java_string_replace.htm)\n\
+    该方法将字符串中的现有字符替换为新字符。\n\n### [String[] split(String regex)](https://www.tutorialspoint.com/java/java_string_split.htm)\n\
+    该方法根据正则表达式分割字符串。\n\n### [boolean startsWith(String prefix)](https://www.tutorialspoint.com/java/java_string_startswith.htm)\n\
+    该方法测试字符串是否以指定的前缀开头。\n\n### [String substring(int beginIndex)](https://www.tutorialspoint.com/java/java_string_substring.htm)\n\
+    该方法返回给定字符串的子字符串。\n\n### [char[] toCharArray()](https://www.tutorialspoint.com/java/java_string_toCharArrayarray.htm)\n\
+    该方法将字符串转换为字符数组。\n\n### [String toLowerCase()](https://www.tutorialspoint.com/java/java_string_tolowercase.htm)\n\
+    该方法将字符串转换为小写。\n\n### [String toUpperCase()](https://www.tutorialspoint.com/java/java_string_touppercase.htm)\n\
+    该方法将字符串转换为大写。\n\n# 第 13 章：数组\n\n数组是一种数据结构。Java 使用这种数据结构。数组基本上是固定大小的顺序数据结构。数组用于相似类型的数据集合。\n\
+    \n在本章中，我们将学习如何声明数组、如何向其赋值以及如何处理数组。\n\n#### 创建数组：\n\n就像变量一样，在使用数组之前必须先声明它。你将告诉编译器数组的类型和名称。声明数组的通用语法如下：\n\
+    \n```\ndatatype[] arrayname = {\"value1\",\"value2\",\"value3\"};\n```\n\n```\n\
+    datatype arrayname[] = {\"value1\",\"value2\",\"value3\"};\n```\n\n你可以使用上述的任何一种方式来声明数组。\n\
+    \n现在打开你的编译器并创建一个名为 `Candies` 的类。在其中添加以下代码：\n\n```java\npublic class Candies {\n\
+    \    String[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n}\n```\n\n在上面的示例中，我了一个名为\
+    \ `Candies` 的类，并在其中声明了一个类型为 `String` 的数组。然后我给数组赋了三个值。\n\n你也可以像这样声明上述的数组：\n\n```java\n\
+    public class Candies {\n    String candies[] = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n}\n```\n\n"
+- fmt: "\nThe type of value stored in an array depends on the type of that array for\
+    \ example in the following example I have declared an array of interger type.\
+    \ This array will only contains integer type data and nothing else.\n\n```java\n\
+    public class Candies {\n    int[] myIntArray = {1,2,3};\n}\n```\n\n### Using Arrays:\n\
+    \nNow that we have seen how to declare different types of arrays and how to assign\
+    \ values to them let us go ahead and see how to process these array data structures.\
+    \ We can use the loops we read earlier in this book to traverse each index of\
+    \ an array and read , print or do anything else with the values inside of an array.\
+    \ For processing the array mostly we use `for` loop but you can do the same thing\
+    \ with other types of loops which we talked about.\n\n### Example:\n\n```java\n\
+    // Your Candies Class\npublic class Candies {\n    String[] candies = {\"m&Ms\"\
+    ,\"Yummybears\",\"Mayfairs\"};\n    int[] myIntArray = {1,2,3};\n\n    public\
+    \ void ShowMyCandies() {\n        for (int i = 0; i < candies.length; i++) {\n\
+    \            System.out.println(\"The name of my Candy is \" + candies[i]);\n\
+    \        }\n    }\n}\n\n// Main Class where you instantiate your Candies class\n\
+    import java.io.Console;\npublic class MainClass {\n    public static void main(String[]\
+    \ args) {\n        // TODO Auto-generated method stub\n        Candies myCandies\
+    \ = new Candies();\n        myCandies.ShowMyCandies();\n    }\n}\n```\n\nOutput:\n\
+    The name of my Candy is m&Ms\nThe name of my Candy is Yummybears\nThe name of\
+    \ my Candy is Mayfairs\n\n### Example #2:\n\n```java\n// Your Candies Class\n\
+    public class Candies {\n    String[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n    int[] myIntArray = {1,2,3};\n\n    public void ShowMyCandies() {\n   \
+    \     for (int i = 0; i < candies.length; i++) {\n            System.out.println(\"\
+    The name of my Candy is \" + candies[i]);\n        }\n    }\n\n    public void\
+    \ ShowMyNumbers() {\n        for (int i = 0; i < myIntArray.length; i++) {\n \
+    \           System.out.println(\"My Number Array Contains \" + myIntArray[i]);\n\
+    \        }\n    }\n}\n\n// Main Class where you instantiate your Candies class\n\
+    import java.io.Console;\npublic class MainClass {\n    public static void main(String[]\
+    \ args) {\n        // TODO Auto-generated method stub\n        Candies myCandies\
+    \ = new Candies();\n        //myCandies.ShowMyCandies();\n        myCandies.ShowMyNumbers();\n\
+    \    }\n}\n```\n\nOutput:\nMy Number Array Contains 1\nMy Number Array Contains\
+    \ 2\nMy Number Array Contains 3\n\n### Helper Methods:\n\nThe `Arrays` also have\
+    \ some helper methods that are built in java to make our life easier.\n\n####\
+    \ `public static int binarySearch(Object[] a, Object key)`\n\nThis method searches\
+    \ the array passed to it for a value using the Binary search algorithm. If this\
+    \ method finds the specific value it was looking for it returns the index where\
+    \ it is located inside the array.\n\n#### `public static boolean equals(long[]\
+    \ a, long[] a2)`\n\nThis method tells us whether the two arrays passed to it are\
+    \ equal. Arrays are only equal if their type is same, they have same number of\
+    \ elements and the elements are same in each array. This method can be used for\
+    \ any other primitive type of arrays.\n\n#### `public static void fill(int[] a,\
+    \ int val)`\n\nThis method sets the value of each index of an array to the value\
+    \ passed to this method along with the array to be effected. This method can be\
+    \ used for any other primitive type of array too.\n\n#### `public static void\
+    \ sort(Object[] a)`\n\nThis method sorts an array of any primitive type into ascending\
+    \ order.\n\n# Chapter 14: Date and Time\n\nIn the `java.util` package there exists\
+    \ a `Date` class along with other classes written with built in features. You\
+    \ can use `date` class for the date related operation like getting the current\
+    \ date, Performing different functions on that date string etc.\n\nIn this chapter\
+    \ we will talk about dates and the operations you can perform on dates by using\
+    \ `java`. Open up your compiler and create a class named `mydateclass`.\n\n```java\n\
+    public class myDateClass {\n}\n```\n\n### Current Date and Time:\n\nNow let us\
+    \ use the class we created to get our current date and time. Go ahead and add\
+    \ the following method to the class.\n\n```java\npublic void getDateTime() {\n\
+    \    Date date = new Date();\n    System.out.println(\"My Current Date and time\
+    \ is: \" + date.toString());\n}\n```\n\nThe Final code of `myDateClass` will look\
+    \ like the following.\n\n```java\nimport java.util.Date;\npublic class myDateClass\
+    \ {\n    public void getDateTime() {\n        Date date = new Date();\n      \
+    \  System.out.println(\"My Current Date and time is: \" + date.toString());\n\
+    \    }\n}\n```\n\nAfter completing the new `myDateClass` go to the main class\
+    \ and create an object of your `myDateClass` and call the `getDateTime()` method.\n\
+    \n```java\nimport java.io.Console;\npublic class MainClass {\n    public static\
+    \ void main(String[] args) {\n        // TODO Auto-generated method stub\n   \
+    \     myDateClass mydate = new myDateClass();\n        mydate.getDateTime();\n\
+    \    }\n}\n```\n\nWhen you run the above code you will get your current date.\
+    \ The output of this program will be shown in the console window and will look\
+    \ like the following.\n\nOutput:\nMy Current Date and time is: Sat Dec 24 16:58:13\
+    \ PKT 2016\n\n### Formatting Dates:\n\nYou can format your dates using the built\
+    \ in date formatting mechanisms.\n\n### Example:\n\n```java\nimport java.text.SimpleDateFormat;\n\
+    import java.util.Date;\npublic class myDateClass {\n    public void getDateTime()\
+    \ {\n        Date date = new Date();\n        SimpleDateFormat newFormat = new\
+    \ SimpleDateFormat (\"E yyyy-MM-dd 'at' hh:mm:ss a zzz\");\n        System.out.println(\"\
+    Current Date is: \" + newFormat.format(date));\n    }\n}\n\nimport java.io.Console;\n\
+    public class MainClass {\n    public static void main(String[] args) {\n     \
+    \   // TODO Auto-generated method stub\n        myDateClass mydate = new myDateClass();\n\
+    \        mydate.getDateTime();\n    }\n}\n```\n\nOutput:\nCurrent Date is: Sat\
+    \ 2016-12-24 at 05:18:02 PM PKT\n\nYou can also format the date using the `printf`\
+    \ statement in java.\n\n### Example:\n\n```java\nimport java.text.SimpleDateFormat;\n\
+    import java.util.Date;\npublic class myDateClass {\n    public void getDateTime()\
+    \ {\n        Date date = new Date();\n        String mystring = String.format(\"\
+    Current Date and Time is : %tc\",date);\n        System.out.printf(mystring);\n\
+    \    }\n}\n\nimport java.io.Console;\npublic class MainClass {\n    public static\
+    \ void main(String[] args) {\n        // TODO Auto-generated method stub\n   \
+    \     myDateClass mydate = new myDateClass();\n        mydate.getDateTime();\n\
+    \    }\n}\n```\n\nOutput:\nCurrent Date and Time is : Sat Dec 24 17:24:26 PKT\
+    \ 2016\n"
+  raw: "The type of value stored in an array depends on the type of that array for\
+    \ example in the following example I have declared an array of interger type.\
+    \ This array will only contains integer type data and nothing else.\n\npublic\
+    \  class Candies {\n\nint[] myIntArray =  {1,2,3};\n\n}\n\n#### Using Arrays:\n\
+    \nNow that we have seen how to declare different types of arrays and how to assign\
+    \ values to them let us go ahead and see how to process these array data structures.\
+    \ We can use the loops we read earlier in this book to traverse each index of\
+    \ an array and read , print or do anything else with the values inside of an array.\
+    \ For processing the array mostly we use for loop but you can do the same thing\
+    \ with other types of loops which we talked about.\n\n###### Example:\n\n// Your\
+    \ Candies Class\n\npublic  class Candies {\n\nString[] candies = {\"m&Ms\",\"\
+    Yummybears\",\"Mayfairs\"};\n\nint[] myIntArray =  {1,2,3};\n\npublic  void ShowMyCandies(){\n\
+    \nfor (int  i = 0; i < candies.length; i++) {\n\nSystem.out.println(\"The name\
+    \ of my Candy is \" + candies[i]);\n\n}\n\n   }\n\n}\n\n// Main Class where you\
+    \ instantiate your Candies class\n\nimport java.io.Console;\n\npublic  class MainClass\
+    \ {\n\npublic  static  void main(String[] args) {\n\n// TODO Auto-generated method\
+    \ stub\n\nCandies myCandies = new Candies();\n\nmyCandies.ShowMyCandies();\n\n\
+    }\n\n}\n\nOutput:\n\nThe name of my Candy is m&Ms\n\nThe name of my Candy is Yummybears\n\
+    \nThe name of my Candy is Mayfairs\n\n###### Example #2:\n\n// Your Candies Class\n\
+    \npublic  class Candies {\n\nString[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n\nint[] myIntArray =  {1,2,3};\n\npublic  void ShowMyCandies(){\n\nfor (int\
+    \  i = 0; i < candies.length; i++) {\n\nSystem.out.println(\"The name of my Candy\
+    \ is \" + candies[i]);\n\n}\n\n   }\n\npublic  void ShowMyNumbers(){\n\nfor (int\
+    \  i = 0; i < myIntArray.length; i++) {\n\nSystem.out.println(\"My Number Array\
+    \ Contains \" + myIntArray[i]);\n\n}\n\n   }\n\n}\n\n// Main Class where you instantiate\
+    \ your Candies class\n\nimport java.io.Console;\n\npublic  class MainClass {\n\
+    \npublic  static  void main(String[] args) {\n\n// TODO Auto-generated method\
+    \ stub\n\nCandies myCandies = new Candies();\n\n//myCandies.ShowMyCandies();\n\
+    \nmyCandies.ShowMyNumbers();\n\n}\n\n}\n\nOutput:\n\nMy Number Array Contains\
+    \ 1\n\nMy Number Array Contains 2\n\nMy Number Array Contains 3\n\n#### Helper\
+    \ Methods:\n\nThe Arrays also have some helper methods that are built in java\
+    \ to make our life easier.\n\n##### public static int binarySearch(Object[] a,\
+    \ Object key)\n\nThis method searches the array passed to it for a value using\
+    \ the Binary search algorithm. If this method finds the specific value it was\
+    \ looking for it returns the index where it is located inside the array.\n\n#####\
+    \ public static boolean equals(long[] a, long[] a2)\n\nThis methodstells us whether\
+    \ the two arrays passed to it are equal. Arrays are only equal if there type is\
+    \ same, they have same number of elements and the elements are same in each array.\
+    \ This method can be used for any other primitive type of arrays.\n\n##### public\
+    \ static void fill(int[] a, int val)\n\nThis method sets the value of each index\
+    \ of an array to the value passed to this method along with the array to be effected.\
+    \ This method can be used for any other primitive type of array too.\n\n#####\
+    \ public static void sort(Object[] a)\n\nThis method sorts an array of any primitive\
+    \ type into ascending order.\n\n# Chapter 14: Date and Time\n\nIn the java.util\
+    \ package there exists a Date class along with other classes written with built\
+    \ in features. You can use date class for the date related operation like getting\
+    \ the current date, Performing different functions on that date string etc.\n\n\
+    In this chapter we will talk about dates and the operations you can perform on\
+    \ dates by using java. Open up your compiler and create a class named mydateclass.\n\
+    \npublic  class myDateClass {\n\n}\n\n#### Current Date and Time:\n\nNow let us\
+    \ use the class we created to get our current date and time. Go ahead and add\
+    \ the following method to the class.\n\npublic  void getDateTime() {\n\nDate date\
+    \ = new Date();\n\nSystem.out.println(\"My Current Date and time is: \" + date.toString());\n\
+    \n}\n\nThe Final code of myDateClass will look like the following.\n\nimport java.util.Date;\n\
+    \npublic  class myDateClass {\n\npublic  void getDateTime() {\n\nDate date = new\
+    \ Date();\n\nSystem.out.println(\"My Current Date and time is: \" + date.toString());\n\
+    \n}\n\n}\n\nAfter completing the new myDateClass go to the main class and create\
+    \ an object of your myDateClass and call the getDateTime() method.\n\nimport java.io.Console;\n\
+    \npublic  class MainClass {\n\npublic  static  void main(String[] args) {\n\n\
+    // TODO Auto-generated method stub\n\nmyDateClass mydate = new myDateClass();\n\
+    \nmydate.getDateTime();\n\n}\n\n}\n\nWhen you run the above code you will get\
+    \ your current date. The output of this program will be shown in the console window\
+    \ and will look like the following.\n\nOutput:\n\nMy Current Date and time is:\
+    \ Sat Dec 24 16:58:13 PKT 2016\n\n#### Formatting Dates:\n\nYou can format your\
+    \ dates using the built in date formatting mechanisms.\n\n###### Example:\n\n\
+    import java.text.SimpleDateFormat;\n\nimport java.util.Date;\n\npublic  class\
+    \ myDateClass {\n\npublic  void getDateTime() {\n\nDate date = new Date();\n\n\
+    SimpleDateFormat newFormat = new SimpleDateFormat (\"E yyyy-MM-dd 'at' hh:mm:ss\
+    \ a zzz\");\n\nSystem.out.println(\"Current Date is: \" + newFormat.format(date));\n\
+    \n}\n\n}\n\nimport java.io.Console;\n\npublic  class MainClass {\n\npublic  static\
+    \  void main(String[] args) {\n\n// TODO Auto-generated method stub\n\nmyDateClass\
+    \ mydate = new myDateClass();\n\nmydate.getDateTime();\n\n}\n\n}\n\nOutput:\n\n\
+    Current Date is: Sat 2016-12-24 at 05:18:02 PM PKT\n\nYou can also format the\
+    \ date using the printf statement in java.\n\n###### Example:\n\nimport java.text.SimpleDateFormat;\n\
+    \nimport java.util.Date;\n\npublic  class myDateClass {\n\npublic  void getDateTime()\
+    \ {\n\nDate date = new Date();\n\nString mystring = String.format(\"Current Date\
+    \ and Time is : %tc\",date);\n\n System.out.printf(mystring);\n\n}\n\n}\n\nimport\
+    \  java.io.Console;\n\npublic  class MainClass {\n\npublic  static  void main(String[]\
+    \ args) {\n\n// TODO Auto-generated method stub\n\nmyDateClass mydate = new myDateClass();\n\
+    \nmydate.getDateTime();\n\n}\n\n}\n\nOutput:\n\nCurrent Date and Time is : Sat\
+    \ Dec 24 17:24:26 PKT 2016\n\n# Chapter 15: Methods\n\nThere comes a time when\
+    \ you need some lines of code over and over again. You can do that by just copying\
+    \ those lines again and again but that’s not a good way as it is tedious and inefficient.\n\
+    \nIn java we have methods which can perform or execute a set of programmatic lines\
+    \ as many times as you ask them. You can call a method over and over again anywhere\
+    \ inside your code and can get the same result. Let us talk about creating a method,\
+    \ calling it and other fun stuff related to methods in Java.\n\npublic  static\
+    \  int  methodName(int a,  int b) { // body }\n\nHere,\n\npublicstatic – these\
+    \ are the modifiers, we talked about them in earlier chapters.\n\nint – This is\
+    \ the type of value this method will return.\n\nmethodName – This is the name\
+    \ of the method or function.\n\na, b – These literals represent the parameters\
+    \ of a method they could be any letter or variable.\n\nFollowing is the generic\
+    \ template of methods for your future reference.\n\nmodifier return Type nameOfMethod\
+    \ (Parameter List) {\n\n  // method body\n\n }\n\n###### Example:\n\nWe have created\
+    \ a lot of methods so far in this book. I am going to use a familiar code so that\
+    \ you can understand the methods better. Let us take a look at the candies class\
+    \ we created earlier\n\n// Your Candies Class\n\npublic  class Candies {\n\nString[]\
+    \ candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n\nint[] myIntArray =  {1,2,3};\n\
+    \npublic  void ShowMyCandies(){\n\nfor (int  i = 0; i < candies.length; i++) {\n\
+    \nSystem.out.println(\"The name of my Candy is \" + candies[i]);\n\n}\n\n   }\n\
+    \n}\n\n// Main Class where you instantiate your Candies class\n\nimport java.io.Console;\n\
+    \npublic  class MainClass {\n\npublic  static  void main(String[] args) {\n\n\
+    // TODO Auto-generated method stub\n\nCandies myCandies = new Candies();\n\nmyCandies.ShowMyCandies();\n\
+    \n}\n\n}\n\nOutput:\n\nThe name of my Candy is m&Ms"
+  toc: []
+  trans: "\n\n数组中存储的值类型取决于该数组的类型。例如，在下面的示例中，我声明了一个整数类型的数组。此数组将只包含整数类型的数据，不再包含其他内容。\n\
+    \n```java\npublic class Candies {\n    int[] myIntArray = {1,2,3};\n}\n```\n\n\
+    ### 使用数组：\n\n现在我们已经学习了如何声明不同类型的数组以及如何为它们赋值，让我们继续看看如何处理这些数组数据结构。我们可以使用之前在本书中读过的循环来遍历数组的每个索引，并对数组内部的值进行读取、打印或进行任何其他操作。在处理数组时，我们主要使用\
+    \ `for` 循环，但你也可以使用我们讨论过的其他类型的循环来实现相同的功能。\n\n### 示例：\n\n```java\n// 你的 Candies\
+    \ 类\npublic class Candies {\n    String[] candies = {\"m&Ms\",\"Yummybears\",\"\
+    Mayfairs\"};\n    int[] myIntArray = {1,2,3};\n\n    public void ShowMyCandies()\
+    \ {\n        for (int i = 0; i < candies.length; i++) {\n            System.out.println(\"\
+    The name of my Candy is \" + candies[i]);\n        }\n    }\n}\n\n// 主类，在其中实例化你的\
+    \ Candies 类\nimport java.io.Console;\npublic class MainClass {\n    public static\
+    \ void main(String[] args) {\n        // TODO Auto-generated method stub\n   \
+    \     Candies myCandies = new Candies();\n        myCandies.ShowMyCandies();\n\
+    \    }\n}\n```\n\n输出:\nThe name of my Candy is m&Ms\nThe name of my Candy is Yummybears\n\
+    The name of my Candy is Mayfairs\n\n### 示例 #2：\n\n```java\n// 你的 Candies 类\npublic\
+    \ class Candies {\n    String[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n    int[] myIntArray = {1,2,3};\n\n    public void ShowMyCandies() {\n   \
+    \     for (int i = 0; i < candies.length; i++) {\n            System.out.println(\"\
+    The name of my Candy is \" + candies[i]);\n        }\n    }\n\n    public void\
+    \ ShowMyNumbers() {\n        for (int i = 0; i < myIntArray.length; i++) {\n \
+    \           System.out.println(\"My Number Array Contains \" + myIntArray[i]);\n\
+    \        }\n    }\n}\n\n// 主类，在其中实例化你的 Candies 类\nimport java.io.Console;\npublic\
+    \ class MainClass {\n    public static void main(String[] args) {\n        //\
+    \ TODO Auto-generated method stub\n        Candies myCandies = new Candies();\n\
+    \        //myCandies.ShowMyCandies();\n        myCandies.ShowMyNumbers();\n  \
+    \  }\n}\n```\n\n输出:\nMy Number Array Contains 1\nMy Number Array Contains 2\n\
+    My Number Array Contains 3\n\n### 辅助方法：\n\n`Arrays` 还包含一些 Java 内置的辅助方法，可以让我们的生活更轻松。\n\
+    \n#### `public static int binarySearch(Object[] a, Object key)`\n\n该方法使用二分查找算法在传递给它的数组中搜索值。如果该方法找到了正在查找的特定值，它将返回该值在数组中的索引。\n\
+    \n#### `public static boolean equals(long[] a, long[] a2)`\n\n该方法告诉我们传递给它的两个数组是否相等。只有当数组的类型相同、元素数量相同且每个数组中的元素也相同时，数组才视为相等。此方法也可以用于任何其他基本类型的数组。\n\
+    \n#### `public static void fill(int[] a, int val)`\n\n该方法将数组的每个索引的值设置为传递给该方法以及受影响数组的值。此方法也可以用于任何其他基本类型的数组。\n\
+    \n#### `public static void sort(Object[] a)`\n\n该方法将任何基本类型元素的数组按升序排序。\n\n# 第 14\
+    \ 章：日期和时间\n\n在 `java.util` 包中，存在一个 `Date` 类，以及其他使用内置功能编写的类。你可以使用 `date` 类进行与日期相关的操作，例如获取当前日期、对该日期字符串执行不同的函数等。\n\
+    \n在本章中，我们将讨论日期以及你可以使用 `java` 对日期所执行的操作。打开你的编译器并创建一个名为 `mydateclass` 的类。\n\n```java\n\
+    public class myDateClass {\n}\n```\n\n### 当前日期和时间：\n\n现在让我们使用创建的类来获取当前的日期和时间。请在类中添加以下方法。\n\
+    \n```java\npublic void getDateTime() {\n    Date date = new Date();\n    System.out.println(\"\
+    My Current Date and time is: \" + date.toString());\n}\n```\n\n`myDateClass` 的最终代码将如下。\n\
+    \n```java\nimport java.util.Date;\npublic class myDateClass {\n    public void\
+    \ getDateTime() {\n        Date date = new Date();\n        System.out.println(\"\
+    My Current Date and time is: \" + date.toString());\n    }\n}\n```\n\n完成新的 `myDateClass`\
+    \ 后，进入主类并创建一个 `myDateClass` 对象，然后调用 `getDateTime()` 方法。\n\n```java\nimport java.io.Console;\n\
+    public class MainClass {\n    public static void main(String[] args) {\n     \
+    \   // TODO Auto-generated method stub\n        myDateClass mydate = new myDateClass();\n\
+    \        mydate.getDateTime();\n    }\n}\n```\n\n当你运行上述代码时，你将获得当前日期。程序的输出将在控制窗口显示，并如下所示：\n\
+    \n输出:\nMy Current Date and time is: Sat Dec 24 16:58:13 PKT 2016\n\n### 格式化日期：\n\
+    \n你可以使用内置的日期格式化机制来格式化日期。\n\n### 示例：\n\n```java\nimport java.text.SimpleDateFormat;\n\
+    import java.util.Date;\npublic class myDateClass {\n    public void getDateTime()\
+    \ {\n        Date date = new Date();\n        SimpleDateFormat newFormat = new\
+    \ SimpleDateFormat (\"E yyyy-MM-dd 'at' hh:mm:ss a zzz\");\n        System.out.println(\"\
+    Current Date is: \" + newFormat.format(date));\n    }\n}\n\nimport java.io.Console;\n\
+    public class MainClass {\n    public static void main(String[] args) {\n     \
+    \   // TODO Auto-generated method stub\n        myDateClass mydate = new myDateClass();\n\
+    \        mydate.getDateTime();\n    }\n}\n```\n\n输出:\nCurrent Date is: Sat 2016-12-24\
+    \ at 05:18:02 PM PKT\n\n你也可以使用 Java 中的 `printf` 语句来格式化日期。\n\n### 示例：\n\n```java\n\
+    import java.text.SimpleDateFormat;\nimport java.util.Date;\npublic class myDateClass\
+    \ {\n    public void getDateTime() {\n        Date date = new Date();\n      \
+    \  String mystring = String.format(\"Current Date and Time is : %tc\",date);\n\
+    \        System.out.printf(mystring);\n    }\n}\n\nimport java.io.Console;\npublic\
+    \ class MainClass {\n    public static void main(String[] args) {\n        //\
+    \ TODO Auto-generated method stub\n        myDateClass mydate = new myDateClass();\n\
+    \        mydate.getDateTime();\n    }\n}\n```\n\n输出:\nCurrent Date and Time is\
+    \ : Sat Dec 24 17:24:26 PKT 2016\n\n"
+- fmt: "\nThe name of my Candy is Yummybears\n\nThe name of my Candy is Mayfairs\n\
+    \nIn the above example we have a class named `Candies`. Inside that class we declared\
+    \ a method called `ShowMyCandies` this method loops through the `candies` array\
+    \ and prints all the name of candies on the console screen. We call this function\
+    \ after making an object of the class in which this method resides. This is an\
+    \ instance method because it can only be used once you instantiate the class.\
+    \ We can also do this by a static method. Here’s how:\n\n### Example:\n\n```java\n\
+    // Your Candies Class\npublic class Candies {\n    String[] candies = {\"m&Ms\"\
+    ,\"Yummybears\",\"Mayfairs\"};\n    int[] myIntArray = {1,2,3};\n\n    public\
+    \ static void ShowMyCandies(){\n        for (int i = 0; i < candies.length; i++)\
+    \ {\n            System.out.println(\"The name of my Candy is \" + candies[i]);\n\
+    \        }\n    }\n}\n\n// Main Class where you instantiate your Candies class\n\
+    import java.io.Console;\n\npublic class MainClass {\n    public static void main(String[]\
+    \ args) {\n        // TODO Auto-generated method stub\n        Candies.ShowMyCandies();\n\
+    \    }\n}\n```\n\nOutput:\nThe name of my Candy is m&Ms\nThe name of my Candy\
+    \ is Yummybears\nThe name of my Candy is Mayfairs\n\nThe highlighted part in the\
+    \ above example are the changes I made to the original `Candies` class. Just by\
+    \ adding a keyword `static` to my method definition I have changed the way it’s\
+    \ called. Now you can call the `ShowMyCandies` method directly by using the class\
+    \ name.\n\nThe `Void` keyword used in the above methods means that the method\
+    \ above doesn’t return anything.\n\n# Chapter 16: Exceptions\n\nException are\
+    \ errors in our code. When an exception occurs it means that the flow of the program\
+    \ you were running has been disturbed. The exceptions cause the programs to behave\
+    \ abnormally so we should take some precautions in order to deal with these exceptions.\n\
+    \nSo far the code we dealt with was error free. But now in order to understand\
+    \ exceptions and how to deal with them, I will generate some errors in a code\
+    \ and then I will teach you guys how to deal with those errors so have a look\
+    \ at the following code:\n\n### Example:\n\n```java\nimport java.io.Console;\n\
+    \npublic class ErrorClass {\n    public static void main(String[] args) {\n  \
+    \      String[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n        System.out.println(candies[4]);\n\
+    \    }\n}\n```\n\nOutput:\nException in thread \"main\" java.lang.ArrayIndexOutOfBoundsException:\
+    \ 4\nat ErrorClass.main(ErrorClass.java:16)\n\nThe above error occurred because\
+    \ the array `candies` have three values stored at zero, first and second index\
+    \ of the array respectively. But in the second line where I try to print this\
+    \ array I pass it the index four which does not exist as an array is a fixed size\
+    \ data structure. I can correct this error just by updating the index of the array.\
+    \ Here’s how:\n\n### Example:\n\n```java\nimport java.io.Console;\n\npublic class\
+    \ ErrorClass {\n    public static void main(String[] args) {\n        String[]\
+    \ candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n        System.out.println(candies[1]);\n\
+    \    }\n}\n```\n\nOutput:\nYummybears\n\nNow How to avoid this? How do we make\
+    \ sure that we the programmers handle the exceptions rather than displaying the\
+    \ end user a lot of technical details which he doesn’t understand? The answer\
+    \ to that is also present in Java. In Java there is exception handling. Which\
+    \ is done by using the `try-catch` blocks available in java.\n\n```java\ntry {\n\
+    \  // Protected code\n}catch(ExceptionName e1) {\n  // Catch block\n}\n```\n\n\
+    The `try` block is the block where you write your code. And the `catch` block\
+    \ is the block where you handle your exceptions. I re-created the error inside\
+    \ a `try-catch` block.\n\n### Example:\n\n```java\nimport java.io.Console;\n\n\
+    public class ErrorClass {\n    public static void main(String[] args) {\n    \
+    \    try {\n            String[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n            System.out.println(candies[4]);\n        } catch (Exception e)\
+    \ {\n            System.out.println(\"Something went wrong\");\n        }\n  \
+    \  }\n}\n```\n\nOutput:\nSomething went wrong\n\nYou see? Now the code doesn’t\
+    \ show us the real exception but just the alternative text we added in our code.\
+    \ We can also see technical detail if we want to doing this.\n\n### Example:\n\
+    \n```java\nimport java.io.Console;\n\npublic class ErrorClass {\n    public static\
+    \ void main(String[] args) {\n        try {\n            String[] candies = {\"\
+    m&Ms\",\"Yummybears\",\"Mayfairs\"};\n            System.out.println(candies[4]);\n\
+    \        } catch (Exception e) {\n            System.out.println(\"Something went\
+    \ wrong: \" + e.getMessage());\n        }\n    }\n}\n```\n\nOutput:\nSomething\
+    \ went wrong: 4\n\nAs you can see now the exception is showing us the value that\
+    \ it thinks has caused the error. If you want to see more detail about the exception\
+    \ you can do this too:\n\n### Example:\n\n```java\nimport java.io.Console;\n\n\
+    public class ErrorClass {\n    public static void main(String[] args) {\n    \
+    \    try {\n            String[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n            System.out.println(candies[4]);\n        } catch (Exception e)\
+    \ {\n            throw e;\n        }\n    }\n}\n```\n\nOutput:\nException in thread\
+    \ \"main\" java.lang.ArrayIndexOutOfBoundsException: 4\nat ErrorClass.main(ErrorClass.java:16)\n\
+    \nThe cause of exception can be anything. It can be a logical mistake programmer\
+    \ made while writing the code, or it can be because of the system you are working\
+    \ on or the memory stack getting full. Sometimes Java Virtual Machine (`JVM`)\
+    \ also end up being the cause of unwanted behaviors.\n\nYou can use multiple catch\
+    \ blocks for a single try block. The reason you would want to do that is because\
+    \ you expect more than one type of exception occurring. So you de declare multiple\
+    \ catch blocks and attend each error accordingly. A general template for multiple\
+    \ catch blocks is given below.\n\n```java\ntry {\n  // Protected code\n}catch(ExceptionType1\
+    \ e1) {\n  // Catch block\n}catch(ExceptionType2 e2) {\n  // Catch block\n}catch(ExceptionType3\
+    \ e3) {\n  // Catch block\n}\n```\n\n# Chapter 17: Inner Classes\n\nIn java we\
+    \ can create nested classes just like nested if statements or nested functions.\
+    \ Inner Classes are kind of a security mechanism provided by java. Following is\
+    \ the general syntax for declaring an inner class:\n\n```java\nclass OuterClass\
+    \ {\n    class InnerClass {\n    }\n}\n```\n\nHere’s a real code example.\n\n\
+    ### Example:\n\n```java\nimport java.io.Console;\n\npublic class Candies {\n \
+    \   private class chocoCandies {\n        public void Hello(){\n            System.out.println(\"\
+    Hello from the inner Choco Candies Class\");\n        }\n    }\n\n    public void\
+    \ displayChocoClass() {\n        chocoCandies mychoco = new chocoCandies();\n\
+    \        mychoco.Hello();\n    }\n}\n\nimport java.io.Console;\n\npublic class\
+    \ MainClass {\n    public static void main(String[] args) {\n        Candies myCandies\
+    \ = new Candies();\n        myCandies.displayChocoClass();\n    }\n}\n```\n\n\
+    Output:\nHello from the inner Choco Candies Class\n\n# Conclusion\n\nNow that\
+    \ we have come to an end of this small book. I hope that you have learned something.\
+    \ You should not stop here because there is more to java than this book. Read\
+    \ as much as you can and most importantly code as much as you can. Only then you\
+    \ will be able to master java. Happy Coding!\n"
+  raw: "The name of my Candy is Yummybears\n\nThe name of my Candy is Mayfairs\n\n\
+    In the above example we have a class named Candies. Inside that class we declared\
+    \ a method called ShowMyCandies this method loops through the candy array and\
+    \ prints all the name of candies on the console screen. We call this function\
+    \ after making an object of the class in which this method resides. This is an\
+    \ instance method because it can only be used once you instantiate the class.\
+    \ We can also do this by a static method. Here’s how\n\n###### Example:\n\n//\
+    \ Your Candies Class\n\npublic  class Candies {\n\nString[] candies = {\"m&Ms\"\
+    ,\"Yummybears\",\"Mayfairs\"};\n\nint[] myIntArray =  {1,2,3};\n\npublic static\
+    \  void ShowMyCandies(){\n\n for (int  i = 0; i < candies.length; i++) {\n\nSystem.out.println(\"\
+    The name of my Candy is \" + candies[i]);\n\n}\n\n   }\n\n}\n\n// Main Class where\
+    \ you instantiate your Candies class\n\nimport  java.io.Console;\n\npublic  class\
+    \ MainClass {\n\npublic  static  void main(String[] args) {\n\n// TODO Auto-generated\
+    \ method stub\n\nCandies.ShowMyCandies();\n\n}\n\n}\n\nOutput:\n\nThe name of\
+    \ my Candy is m&Ms\n\nThe name of my Candy is Yummybears\n\nThe name of my Candy\
+    \ is Mayfairs\n\nThe highlighted part in the above example are the changes I made\
+    \ to the original Candies class. Just by adding a keyword “static” to my method\
+    \ definition I have changed the way it’s called. Now you can call the ShowMyCandies\
+    \ method directly by using the class name.\n\nThe Void keyword used in the above\
+    \ methods means that the method above doesn’t return anything.\n\n# Chapter 16:\
+    \ Exceptions\n\nException are errors in our code. When an exception occurs it\
+    \ means that the flow of the program you were running has been disturbed. The\
+    \ exceptions cause the programs to behave abnormally so we should take some precautions\
+    \ in order to deal with these exceptions.\n\nSo far the code we dealt with was\
+    \ error free. But now in order to understand exceptions and how to deal with them,\
+    \ I will generate some errors in a code and then I will teach you guys how to\
+    \ deal with those errors so have a look at the following code\n\n###### Example:\n\
+    \nimport  java.io.Console;\n\npublic  class ErrorClass {\n\npublic  static  void\
+    \ main(String[] args) {\n\nString[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"\
+    };\n\nSystem.out.println(candies[4]);\n\n}\n\n}\n\nOutput:\n\nException in thread\
+    \ \"main\" java.lang.ArrayIndexOutOfBoundsException: 4\n\nat ErrorClass.main(ErrorClass.java:16)\n\
+    \nThe above error occurred because the array candies have three values stored\
+    \ at zero, first and second index of the array respectively. But in the second\
+    \ line where I try to print this array I pass it the index four which does not\
+    \ exist as an array is a fixed size data structure. I can correct this error just\
+    \ by updating the index of the array. Here’s how:\n\n###### Example:\n\nimport\
+    \  java.io.Console;\n\npublic  class ErrorClass {\n\npublic  static  void main(String[]\
+    \ args) {\n\nString[] candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n\nSystem.out.println(candies[1]);\n\
+    \n}\n\n}\n\nOutput:\n\nYummybears\n\nNow How to avoid this? How do we make sure\
+    \ that we the programmers handle the exceptions rather than displaying the end\
+    \ user a lot of technical details which he doesn’t understand? The answer to that\
+    \ is also present in Java. In Java there is exception handling. Which is done\
+    \ by using the try-catch blocks available in java.\n\ntry {\n\n   // Protected\
+    \ code\n\n}catch(ExceptionName e1) {\n\n   // Catch block\n\n}\n\nThe try block\
+    \ is the block where you write your code. And the catch block is the block where\
+    \ you handle your exceptions. I re-created the error inside a try-catch block.\n\
+    \n###### Example:\n\nimport java.io.Console;\n\npublic  class ErrorClass {\n\n\
+    public  static  void main(String[] args) {\n\ntry{\n\nString[] candies = {\"m&Ms\"\
+    ,\"Yummybears\",\"Mayfairs\"};\n\nSystem.out.println(candies[4]);\n\n}\n\ncatch\
+    \ (Exception e) {\n\nSystem.out.println(\"Something went wrong\");\n\n}\n\n  \
+    \ }\n\n}\n\nOutput:\n\nSomething went wrong\n\nYou see? Now the code doesn’t show\
+    \ us the real exception but just the alternative text we added in our code. We\
+    \ can also see technical detail if we want to by doing this.             \n\n\
+    ###### Example:\n\nimport  java.io.Console;\n\npublic  class ErrorClass {\n\n\
+    public  static  void main(String[] args) {\n\ntry{\n\nString[] candies = {\"m&Ms\"\
+    ,\"Yummybears\",\"Mayfairs\"};\n\nSystem.out.println(candies[4]);\n\n}\n\ncatch\
+    \ (Exception e) {\n\nSystem.out.println(\"Something went wrong: \" + e.getMessage());\n\
+    \n}\n\n   }\n\n}\n\nOutput:\n\nSomething went wrong: 4\n\nAs you can see now the\
+    \ exception is showing us the value that it thinks has caused the error. If you\
+    \ want to see more detail about the exception you can do this too\n\n###### Example:\n\
+    \nimport  java.io.Console;\n\npublic  class ErrorClass {\n\npublic  static  void\
+    \ main(String[] args) {\n\ntry{\n\nString[] candies = {\"m&Ms\",\"Yummybears\"\
+    ,\"Mayfairs\"};\n\nSystem.out.println(candies[4]);\n\n}\n\ncatch (Exception e)\
+    \ {\n\nthrow  e;\n\n}\n\n   }\n\n}\n\nOutput:\n\nException in thread \"main\"\
+    \ java.lang.ArrayIndexOutOfBoundsException: 4\n\nat ErrorClass.main(ErrorClass.java:16)\n\
+    \nThe cause of exception can be anything. It can be a logical mistake programmer\
+    \ made while writing the code, or it can be because of the system you are working\
+    \ on or the memory stack getting full. Sometimes Java Virtual Machine (JVM) also\
+    \ end up being the cause of unwanted behaviors.\n\nYou can use multiple catch\
+    \ blocks for a single try block. The reason you would want to do that is because\
+    \ you expect more than one type of exception occurring in your code. So you declare\
+    \ multiple catch blocks and attend each error accordingly. A general template\
+    \ for multiple catch blocks is given below.\n\ntry {\n\n   // Protected code\n\
+    \n}catch(ExceptionType1 e1) {\n\n   // Catch block\n\n}catch(ExceptionType2 e2)\
+    \ {\n\n   // Catch block\n\n}catch(ExceptionType3 e3) {\n\n   // Catch block\n\
+    \n}\n\n# Chapter 17: Inner Classes\n\nIn java we can create nested classes just\
+    \ like nested if statements or nested functions. Inner Classes are kind of a security\
+    \ mechanism provided by java. Following is the general syntax for declaring an\
+    \ inner class\n\nclass OuterClass {\n\nclass InnerClass {\n\n   }\n\n}\n\nHere’s\
+    \ a real code example.\n\n######  Example:\n\nimport  java.io.Console;\n\npublic\
+    \  class Candies {\n\nprivate  class chocoCandies{\n\npublic  void Hello(){\n\n\
+    System.out.println(\"Hello from the inner Choco Candies Class\");\n\n}\n\n}\n\n\
+    public  void displayChocoClass(){\n\nchocoCandies mychoco = new chocoCandies();\n\
+    \nmychoco.Hello();\n\n}\n\n}\n\nimport  java.io.Console;\n\npublic  class MainClass\
+    \ {\n\npublic  static  void main(String[] args) {\n\nCandies myCandies = new Candies();\n\
+    \nmyCandies.displayChocoClass();\n\n}\n\n}\n\nOutput:\n\nHello from the inner\
+    \ Choco Candies Class\n\n# Conclusion\n\nNow that we have come to an end of this\
+    \ small book. I hope that you have learned something. You should not stop here\
+    \ because there is more to java than this book. Read as much as you can and most\
+    \ importantly code as much as you can. Only then you will be able to master java.\
+    \ Happy Coding!"
+  toc: []
+  trans: "\n我的糖果名字是 Yummybears\n\n我的糖果名字是 Mayfairs\n\n在上面的示例中，我们有一个名为 `Candies` 的类。在该类内部，我们声明了一个名为\
+    \ `ShowMyCandies` 的方法，该方法遍历 `candies` 数组并在控制屏幕上打印所有糖果的名字。我们在创建该方法所属类的对象后调用了此函数。这是一个实例方法，因为它只有在实例化该类后才能使用。我们也可以通过静态方法来实现这一点。方法如下：\n\
+    \n### 示例：\n\n```java\n// Your Candies Class\npublic class Candies {\n    String[]\
+    \ candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n    int[] myIntArray = {1,2,3};\n\
+    \n    public static void ShowMyCandies(){\n        for (int i = 0; i < candies.length;\
+    \ i++) {\n            System.out.println(\"The name of my Candy is \" + candies[i]);\n\
+    \        }\n    }\n}\n\n// Main Class where you instantiate your Candies class\n\
+    import java.io.Console;\n\npublic class MainClass {\n    public static void main(String[]\
+    \ args) {\n        // TODO Auto-generated method stub\n        Candies.ShowMyCandies();\n\
+    \    }\n}\n```\n\n输出：\nThe name of my Candy is m&Ms\nThe name of my Candy is Yummybears\n\
+    The name of my Candy is Mayfairs\n\n上述示例中高亮部分是我对原始 `Candies` 类所做的更改。通过仅在方法定义中添加\
+    \ `static` 关键字，我就改变了它的调用方式。现在，你可以直接通过类名调用 `ShowMyCandies` 方法。\n\n上述方法使用的 `Void`\
+    \ 关键字意味着该方法不返回任何内容。\n\n# 第 16 章：异常 (Exceptions)\n\n异常是我们代码中的错误。当异常发生时，意味着你正在运行的程序流被干扰。异常会导致程序行为异常，因此我们应该采取一些预防措施来处理这些异常。\n\
+    \n到目前为止，我们处理的代码没有错误。但现在为了理解异常以及如何处理它们，我将在代码中生成一些错误，然后教你们如何处理这些错误，请看以下代码：\n\n###\
+    \ 示例：\n\n```java\nimport java.io.Console;\n\npublic class ErrorClass {\n    public\
+    \ static void main(String[] args) {\n        String[] candies = {\"m&Ms\",\"Yummybears\"\
+    ,\"Mayfairs\"};\n        System.out.println(candies[4]);\n    }\n}\n```\n\n输出：\n\
+    Exception in thread \"main\" java.lang.ArrayIndexOutOfBoundsException: 4\nat ErrorClass.main(ErrorClass.java:16)\n\
+    \n上述错误的发生是因为 `candies` 数组分别在索引的零、第一和第二个处存储了三个值。但在第二行我尝试打印此数组时，我传递了索引四，这是不存在的，因为数组是固定大小的数据结构。我可以通过更新数组索引来纠正这个错误。方法如下：\n\
+    \n### 示例：\n\n```java\nimport java.io.Console;\n\npublic class ErrorClass {\n \
+    \   public static void main(String[] args) {\n        String[] candies = {\"m&Ms\"\
+    ,\"Yummybears\",\"Mayfairs\"};\n        System.out.println(candies[1]);\n    }\n\
+    }\n```\n\n输出：\nYummybears\n\n现在如何避免这种情况？我们如何确保由程序员来处理异常，而不是向终端用户显示大量他不理解的技术细节？答案也存在于\
+    \ Java 中。在 Java 中有异常处理机制，它通过使用 java 中提供的 `try-catch` 块来实现。\n\n```java\ntry {\n\
+    \  // Protected code\n}catch(ExceptionName e1) {\n  // Catch block\n}\n```\n\n\
+    `try` 块是你编写代码的地方。而 `catch` 块是你处理异常的地方。我在 `try-catch` 块中重新创建了该错误。\n\n### 示例：\n\n\
+    ```java\nimport java.io.Console;\n\npublic class ErrorClass {\n    public static\
+    \ void main(String[] args) {\n        try {\n            String[] candies = {\"\
+    m&Ms\",\"Yummybears\",\"Mayfairs\"};\n            System.out.println(candies[4]);\n\
+    \        } catch (Exception e) {\n            System.out.println(\"Something went\
+    \ wrong\");\n        }\n    }\n}\n```\n\n输出：\nSomething went wrong\n\n看到了吗？现在代码没有向我们显示真实的异常，而是显示了我们在代码中添加的备文本。如果我们想这样做，也可以看到技术细节。\n\
+    \n### 示例：\n\n```java\nimport java.io.Console;\n\npublic class ErrorClass {\n \
+    \   public static void main(String[] args) {\n        try {\n            String[]\
+    \ candies = {\"m&Ms\",\"Yummybears\",\"Mayfairs\"};\n            System.out.println(candies[4]);\n\
+    \        } catch (Exception e) {\n            System.out.println(\"Something went\
+    \ wrong: \" + e.getMessage());\n        }\n    }\n}\n```\n\n输出：\nSomething went\
+    \ wrong: 4\n\n现在你可以看到，异常向我们展示了它认为导致错误的值。如果你想看到关于异常的更多细节，也可以这样做：\n\n### 示例：\n\n\
+    ```java\nimport java.io.Console;\n\npublic class ErrorClass {\n    public static\
+    \ void main(String[] args) {\n        try {\n            String[] candies = {\"\
+    m&Ms\",\"Yummybears\",\"Mayfairs\"};\n            System.out.println(candies[4]);\n\
+    \        } catch (Exception e) {\n            throw e;\n        }\n    }\n}\n\
+    ```\n\n输出：\nException in thread \"main\" java.lang.ArrayIndexOutOfBoundsException:\
+    \ 4\nat ErrorClass.main(ErrorClass.java:16)\n\n异常的原因可能是任何的。它可以是程序员在编写代码时的逻辑错误，也可能是由于你运行的系统内存栈溢出。有时\
+    \ Java 虚拟机 (`JVM`) 也会导致异常行为。\n\n你可以对单个 `try` 块使用多个 `catch` 块。你这样做是因为你预计会发生多种类型的异常。因此你需要声明多个\
+    \ `catch` 块并相应地处理。下面是多个 catch 块的通用模板：\n\n```java\ntry {\n  // Protected code\n\
+    }catch(ExceptionType1 e1) {\n  // Catch block\n}catch(ExceptionType2 e2) {\n \
+    \ // Catch block\n}catch(ExceptionType3 e3) {\n  // Catch block\n}\n```\n\n# 第\
+    \ 17 章：内部类 (Inner Classes)\n\n在 Java 中，我们可以创建嵌套类，就像嵌套语句或嵌套函数一样。以下是声明内部类的通用语法：\n\
+    \n```java\nclass OuterClass {\n    class InnerClass {\n    }\n}\n```\n\n这是一个真实的代码示例。\n\
+    \n### 示例：\n\n```java\nimport java.io.Console;\n\npublic class Candies {\n    private\
+    \ class chocoCandies {\n        public void Hello(){\n            System.out.println(\"\
+    Hello from the inner Choco Candies Class\");\n        }\n    }\n\n    public void\
+    \ displayChocoClass() {\n        chocoCandies mychoco = new chocoCandies();\n\
+    \        mychoco.Hello();\n    }\n}\n\nimport java.io.Console;\n\npublic class\
+    \ MainClass {\n    public static void main(String[] args) {\n        Candies myCandies\
+    \ = new Candies();\n        myCandies.displayChocoClass();\n    }\n}\n```\n\n\
+    输出：\nHello from the inner Choco Candies Class\n\n# 结语\n\n现在我们来到了这本小书的结尾。我希望你学到了东西。你不应该在这里停止，因为\
+    \ Java 的内容远超这本书。尽可能多地阅读，最重要的是多地写代码。只有这样你才能精通 Java。编码愉快！\n"

@@ -1,0 +1,198 @@
+name: Learn CSS in One Day and Learn It Well (Includes HTML5)： CSS for Beginners with
+  Hands-on Project. The only book you need to start coding in CSS ... Coding Fast
+  with Hands-On Project) (Volume 2)
+name_cn: 一天学会并精通 CSS（包含 HTML5）：带实战项目的 CSS 初学者实用指南。你开始 CSS 编程所需的唯一书籍……（通过实战项目快速开发）（第
+  2 卷）
+slug: learn-css-in-one-day-and-learn-it-well-includes-html5-css-fo
+toc:
+- - '#'
+  - 一天学会并精通 CSS（包含 HTML5）：带实战项目的 CSS 初学者实用指南。你开始 CSS 编程所需的唯一书籍……（通过实战项目快速开发）（第 2 卷）
+- - '##'
+  - 前言
+- - '##'
+  - 联系信息
+- - '##'
+  - Jamie 的其他书籍
+- - '##'
+  - 第 4 章：CSS Box 模型
+- - '###'
+  - 什么是 CSS 盒模型
+- - '###'
+  - 宽度和高度属性
+- - '###'
+  - Overflow 属性
+- - '###'
+  - 内边距和外边距属性
+- - '###'
+  - 示例：
+- - '###'
+  - border-style（边框样式）
+- - '###'
+  - border-radius（圆角）
+- - '###'
+  - 示例：
+- - '###'
+  - Border Shorthand（边框简写）
+- - '###'
+  - 练习 4
+- - '###'
+  - 练习 4.1
+- - '###'
+  - 静态定位 (Static Positioning)
+- - '###'
+  - 相对定位 (Relative Positioning)
+- - '###'
+  - 固定定位 (Fixed Positioning)
+- - '###'
+  - 绝对定位 (Absolute Positioning)
+- - '###'
+  - 浮动定位 (Floating Positioning)
+- - '###'
+  - 练习 5
+- - '###'
+  - 练习 5.1
+- - '###'
+  - 练习 5.2
+- - '###'
+  - 练习 6
+- - '###'
+  - 练习 6.1
+- - '##'
+  - 第 7 章：背景
+- - '##'
+  - 背景颜色
+- - '##'
+  - 背景图像
+- - '###'
+  - background-image
+- - '###'
+  - background-repeat
+- - '###'
+  - background-attachment
+- - '###'
+  - background-position
+- - '##'
+  - 练习 7
+- - '###'
+  - 练习 7.1
+- - '##'
+  - 第 8 章：文本与字体
+- - '##'
+  - 字体属性
+- - '###'
+  - font-family
+- - '##'
+  - font-size
+- - '###'
+  - 使用 px
+- - '###'
+  - 使用 em
+- - '###'
+  - 使用百分比
+- - '###'
+  - 使用关键字
+- - '##'
+  - font-style
+- - '##'
+  - font-weight
+- - '##'
+  - Text Properties
+- - '###'
+  - color
+- - '###'
+  - text-alignment
+- - '###'
+  - text-decoration
+- - '###'
+  - letter-spacing
+- - '###'
+  - word-spacing
+- - '###'
+  - line-height
+- - '##'
+  - Exercise
+- - '###'
+  - Exercise 8
+- - '###'
+  - Exercise 8.1
+- - '##'
+  - 7. 修改 CSS 属性 `text-align` 并观察示例文本的变化。默认情况下，此段落的文字是左对齐的。现在尝试以下各项：
+- - '##'
+  - 8. 修改 CSS 属性 `text-decoration` 并观察示例文本的变化。尝试：
+- - '##'
+  - 9. 修改 CSS 属性 `letter-spacing` 并观察示例文本的变化。尝试：
+- - '##'
+  - 10. 将 `letter-spacing` 改回 `0px`。修改 CSS 属性 `word-spacing` 并观察示例文本的变化。尝试：
+- - '##'
+  - 11. 将 `word-spacing` 改回 `0px`。修改 CSS 属性 `line-height` 并观察示例文本的变化。尝试：
+- - '##'
+  - 第 9 章：列表、链接与导航栏
+- - '##'
+  - CSS 列表
+- - '###'
+  - list-style-type
+- - '###'
+  - list-style-image
+- - '###'
+  - list-style-position
+- - '###'
+  - list-style
+- - '##'
+  - CSS 链接
+- - '##'
+  - 导航栏
+- - '##'
+  - 练习 9
+- - '###'
+  - 练习 9.1
+- - '###'
+  - 练习 9.2
+- - '##'
+  - 第 10 章：表格
+- - '##'
+  - 边框、内边距和外边距
+- - '##'
+  - 高和宽
+- - '##'
+  - 文字对齐
+- - '##'
+  - 背景、字体和文字
+- - '##'
+  - nth-child 选择器
+- - '###'
+  - 练习 10
+- - '###'
+  - 练习 10.1
+- - '##'
+  - 7. 分别在第一个、第二个和第三个 `<th>` 开始标签添加 `id="firstColumn"`、`id="secondColumn"` 和 `id="thirdColumn"`
+    属性。接下来，添加以下 CSS 规则来分别调整三列的宽度：
+- - '##'
+  - 8. 修改 `tr` 的 CSS 声明并观察表格发生了什么。尝试添加：
+- - '##'
+  - 9. 修改 `tr` 的 CSS 声明并观察表格发生了什么。尝试添加：
+- - '##'
+  - 10. 最后，让我们尝试交替行上色。首先从 `td` 中移除 `background-color` 和 `color` 规则。接下来，添加以下代码并观察发生了什么。
+- - '##'
+  - Bonus 项目
+- - '##'
+  - 感谢
+- - '##'
+  - 录录：练习源代码
+- - '###'
+  - 练习 3.1
+- - '###'
+  - 练习 4.1
+- - '###'
+  - 练习 5.1
+- - '###'
+  - 练习 5.2
+- - '###'
+  - 练习 7.1
+- - '###'
+  - 练习 8.1
+- - '###'
+  - 练习 9.1
+- - '###'
+  - 练习 9.2
+- - '###'
+  - 练习 10.1

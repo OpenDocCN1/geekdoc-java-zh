@@ -1,0 +1,68 @@
+name: Learn Enterprise Java Beans [Java Technologies]
+name_cn: Enterprise Java Beans 入门指南 [Java 技术]
+slug: learn-enterprise-java-beans-java-technologies
+toc:
+- - '#'
+  - Enterprise Java Beans 入门指南 [Java 技术]
+- - '#'
+  - 目录
+- - '#'
+  - 概述
+- - '#'
+  - 环境配置
+- - '#'
+  - 创建应用
+- - '#'
+  - 无状态 Bean (Stateless Bean)
+- - '##'
+  - 无状态 Bean (Stateless Bean)
+- - '#'
+  - 有状态 Bean
+- - '##'
+  - Create Table
+- - '##'
+  - Create Entity class
+- - '##'
+  - CreateDataSource and Persistence Unit
+- - '##'
+  - Create Stateless EJB Having EntityManager Instance
+- - '##'
+  - Example Application
+- - '##'
+  - EJB (EJB Module)
+- - '##'
+  - 运行客户端以访问 EJB
+- - '##'
+  - 再次运行客户端以访问 EJB
+- - '##'
+  - 项目步骤
+- - '##'
+  - EJBComponent (EJB 模块)
+- - '##'
+  - EJBTester (EJB 客户端)
+- - '##'
+  - 运行客户端以访问 EJB
+- - '#'
+  - 注解 (Annotations)
+- - '#'
+  - 回调
+- - '#'
+  - 1. 学习 Java
+- - '#'
+  - 定时服务 (Timer Service)
+- - '#'
+  - 依赖注入 (Dependency Injection)
+- - '#'
+  - 拦截器 (Interceptors)
+- - '#'
+  - 可嵌入对象
+- - '##'
+  - Blobs/Clobs
+- - '#'
+  - 安全性
+- - '#'
+  - JNDI 绑定
+- - '#'
+  - 异常处理
+- - '#'
+  - Web Services

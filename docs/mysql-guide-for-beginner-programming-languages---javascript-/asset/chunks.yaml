@@ -1,0 +1,6088 @@
+- fmt: "\n![](image_rsrc43A.jpg)\n\n# Preface\n\n# Overview of MySQL\n\n# Chapter\
+    \ 1: Introduction to MySQL\n## 1.1 Introduction\n## 1.2 Installation of MySQL\n\
+    \n# Chapter 2: MySQL syntax\n## 2.1 Data Types in MySQL\n### 2.1.1 Numeric data\
+    \ type\n### 2.1.2 String data type\n### 2.1.3 Date and Time data type\n## 2.2\
+    \ Operators in MySQL\n### 2.2.1 Arithmetic operators\n### 2.2.2 Logical operators\n\
+    ### 2.2.3 Comparison operators\n### 2.2.4 Bitwise operators\n### 2.2.5 Set operators\n\
+    \n# Chapter 3: Data Definition Language (DDL)\n## 3.1 Integrity constraints in\
+    \ MySQL\n## 3.2 Introduction to MySQL DDL\n### 3.2.1 `CREATE` command\n### 3.2.2\
+    \ `RENAME` command\n### 3.2.3 `DROP` command\n### 3.2.4 `ALTER` command\n\n# Chapter\
+    \ 4: Data Manipulation Language (DML)\n## 4.1 Introduction to MySQL DML\n## 4.2\
+    \ DML command execution\n### 4.2.1 `INSERT` command\n### 4.2.2 `SELECT` command\n\
+    ### 4.2.3 `UPDATE` command\n### 4.2.4 `DELETE` command\n\n# Chapter 5: Data Control\
+    \ Language (DCL)\n## 5.1 Introduction to MySQL DCL\n## 5.2 DCL command execution\n\
+    ### 5.2.1 `GRANT` command\n### 5.2.2 `REVOKE` command\n\n# Chapter 6: Transaction\
+    \ Control Language (TCL)\n## 6.1 Introduction to MySQL TCL\n## 6.2 TCL command\
+    \ execution\n\n# Chapter 7: Data Query Language (DQL)\n## 7.1 Introduction to\
+    \ MySQL DQL\n### 7.1.1 Syntax 1\n### 7.1.2 Syntax 2\n### 7.1.3 Syntax 3\n### 7.1.4\
+    \ Syntax 4\n## 7.2 Current Date and Time using MySQL\n\n# Chapter 8: Role of Constraints\
+    \ in MySQL\n## 8.1 UNIQUE constraint\n## 8.2 NOT NULL constraint\n## 8.3 CHECK\
+    \ constraint\n## 8.4 DEFAULT constraint\n## 8.5 PRIMARY KEY constraint\n## 8.6\
+    \ Auto increment attribute\n## 8.7 FOREIGN KEY constraint\n## 8.8 JOIN clause\n\
+    \n# Chapter 9: Functions and Logical operators in MySQL\n## 9.1 Functions in MySQL\n\
+    ## 9.2 Logical operators in MySQL\n### 9.2.1 `AND` operator\n### 9.2.2 `OR` operator\n\
+    ### 9.2.3 `NOT` operator\n### 9.2.4 `Between` operator\n### 9.2.5 `IN` operator\n\
+    \n# Chapter 10: Some important MySQL commands\n## 10.1 Wild card character\n##\
+    \ 10.2 `Order by` clause\n## 10.3 `Limit` clause\n## 10.4 `Union` operator\n##\
+    \ 10.5 Views in MySQL\n## 10.6 Indexes in MySQL\n## 10.7 Subqueries\n## 10.8 `Group\
+    \ by` clause\n## 10.9 `Roll up` clause\n## 10.10 `On delete` clause\n\n# Preface\n\
+    \n`SQL` is one of the most powerful programming language which handles the tasks\
+    \ of `RDBMS` (Relational Data Management System). It uses a compact-English-statements\
+    \ to create, define, insert, update, and control the relational database.\n\n\
+    `SQL` is used to store and process information in a relational database whereas\
+    \ `MySQL` is used in open-source relational database. In this eBook are going\
+    \ discuss about both `SQL` and `MySQL`.\n\n`MySQL` is best suitable for client-Server\
+    \ Environment. It provides a flexible transaction management. It serves as the\
+    \ primary relational database for many applications, websites as well as commercial\
+    \ products.\n\nAs an eBook, this would be a good reference on how to use `MySQL`\
+    \ to extract, organize, manage, and manipulate data stored in relational databases.\
+    \ We have discussed in details with several examples about `DDL`, `DQL`, `DML`,\
+    \ `DCL` and `TCL`.\n\nThis eBook covers a good range of Database tasks in a way\
+    \ that is more accessible, painless and effective. You will not be bored. If you\
+    \ find most programming books to be too dry, this could be an excellent book for\
+    \ you to get started in `MySQL`.\n\n# Overview of MySQL\n\n`SQL` (Structured query\
+    \ language) is initially created by IBM and first commercially implemented by\
+    \ Oracle corporation in 1979 but there were no official standards so later 1986\
+    \ it was improved and jointly published by `ANSI` and `ISO`. In 1992, `SQL’92`\
+    \ was published. It is organised in much better way, Data is contained in table,\
+    \ tables are grouped into schemas and schemas are grouped into catalogues and\
+    \ catalogues are grouped into clusters. The first version of `MySQL` was developed\
+    \ by Monty Widenius, David Axmark and Allan. It was appeared in 1995. Many versions\
+    \ of the `MySQL` were released by 2000. These versions were compatible with almost\
+    \ all the major platforms.\n\n`MySQL` is a `RDBMS` (Relational Database management\
+    \ system) which is based on structured query language (`SQL`). A relational database\
+    \ stores information in tabular form, with rows and columns representing different\
+    \ data attributes and the various relationships between the data values.\n\nWe\
+    \ use commands to create, define, Insert, extract, update and control the database.\
+    \ Following are the types of SQL commands:\n\n* `DDL` (Data Definition Language)\n\
+    * `DQL` (Data Query Language)\n* `DML` (Data Manipulation Language)\n* `DCL` (Data\
+    \ Control Language)\n* `TCL` (Transaction Control Language)\n\nWe will discuss\
+    \ about all in upcoming chapters.\n\n# Following are the Top 10 applications using\
+    \ MySQL\n\n1. online gaming\n2. digital marketing\n3. retail point-of-sale systems\n\
+    4. Internet of Things monitoring systems\n5. SaaS applications\n6. Facebook\n\
+    7. Flickr\n8. Web development\n9. Twitter\n10. YouTube\n\n# Chapter 1: Introduction\
+    \ to MySQL\n## 1.1 Introduction\n\n`MySQL` is a software which employs `SQL` (Structured\
+    \ query language). It is very fast, reliable, scalable, and easy to use for both\
+    \ small and large applications. The name MySQL suggested by the co-founder Widenius's\
+    \ daughter.\n\nIn day-to-day life if we visit a mall, we see that a shopkeeper\
+    \ is handling a product database using a scanner. Another example, let us consider\
+    \ a bank, they are handling customer database. Third example is in schools they\
+    \ are handling student’s database. Henceforth the database can be handled either\
+    \ manually in a register or through computer software such as `MySQL`.\n\n# What\
+    \ is Database?\n\nData is a raw fact and figure that is used everywhere in our\
+    \ real world. A group of data makes a specific information or database. `SQL`\
+    \ is used to store and process information in a relational database. \n\n# What\
+    \ is relational database?\n\nIt is a collection of organized data stored in one\
+    \ or more tables. We can easily see and understand how different data structures\
+    \ relate to each other.\n\n# Difference between MySQL and SQL\n\nWe can create,\
+    \ read, update, and delete the database using `MySQL`. But `SQL` (structured query\
+    \ language) is a Compact-English-Statement used to access, manipulate, and coordinate\
+    \ the database. In this eBook we are going to discuss about interactive environment\
+    \ that is how to work on entered database.\n"
+  raw: '
+
+
+    ![](image_rsrc43A.jpg)
+
+
+    Content
+
+
+    # [Preface](#part0002.xhtml)
+
+
+    # [Overview of MySQL](#part0003.xhtml)
+
+
+    # Chapter 1: Introduction to MySQL
+
+
+    # [1.1 Introduction](#part0004.xhtml_a3CX)
+
+
+    # [1.2 Installation of MySQL](#part0005.xhtml)
+
+
+    # [Chapter 2: MySQL syntax](#part0006.xhtml)
+
+
+    # [2.1 Data Types in MySQL](#part0007.xhtml)
+
+
+    # [2.1.1 Numeric data type](#part0008.xhtml)
+
+
+    # [2.1.2 String data type](#part0009.xhtml)
+
+
+    # [2.1.3 Date and Time data type](#part0010.xhtml)
+
+
+    # [2.2 Operators in MySQL](#part0011.xhtml)
+
+
+    # [2.2.1 Arithmetic operators](#part0012.xhtml)
+
+
+    # [2.2.2 Logical operators](#part0013.xhtml)
+
+
+    # [2.2.3 Comparison operators](#part0014.xhtml)
+
+
+    # [2.2.4 Bitwise operators](#part0015.xhtml)
+
+
+    # [2.2.5 Set operators](#part0016.xhtml)
+
+
+    # [Chapter 3: Data Definition Language (DDL)](#part0017.xhtml)
+
+
+    # [3.1 Integrity constraints in MySQL](#part0018.xhtml)
+
+
+    # [3.2 Introduction to MySQL DDL](#part0019.xhtml)
+
+
+    # [3.2.1 CREATE command](#part0020.xhtml)
+
+
+    # [3.2.2 RENAME command](#part0021.xhtml)
+
+
+    # [3.2.3 DROP command](#part0022.xhtml)
+
+
+    # [3.2.4 ALTER command](#part0023.xhtml)
+
+
+    # [Chapter 4: Data Manipulation Language (DML)](#part0024.xhtml)
+
+
+    # [4.1 Introduction to MySQL DML](#part0025.xhtml)
+
+
+    # [4.2 DML command execution](#part0026.xhtml)
+
+
+    # [4.2.1 INSERT command](#part0027.xhtml)
+
+
+    # [4.2.2 SELECT command](#part0028.xhtml)
+
+
+    # [4.2.3 UPDATE command](#part0029.xhtml)
+
+
+    # [4.2.4 DELETE command](#part0030.xhtml)
+
+
+    # [Chapter 5: Data Control Language (DCL)](#part0031.xhtml)
+
+
+    # [5.1 Introduction to MySQL DCL](#part0032.xhtml)
+
+
+    # [5.2 DCL command execution](#part0033.xhtml)
+
+
+    # [5.2.1 GRANT command](#part0034.xhtml)
+
+
+    # [5.2.2 REVOKE command](#part0035.xhtml)
+
+
+    # [Chapter 6: Transaction Control Language (TCL)](#part0036.xhtml)
+
+
+    # [6.1 Introduction to MySQL TCL](#part0037.xhtml)
+
+
+    # [6.2 TCL command execution](#part0038.xhtml)
+
+
+    # [Chapter 7: Data Query Language (DQL)](#part0039.xhtml)
+
+
+    # [7.1 Introduction to MySQL DQL](#part0040.xhtml)
+
+
+    # [7.1.1 Syntax 1](#part0041.xhtml)
+
+
+    # [7.1.2 Syntax 2](#part0042.xhtml)
+
+
+    # [7.1.3 Syntax 3](#part0043.xhtml)
+
+
+    # [7.1.4 Syntax 4](#part0044.xhtml)
+
+
+    # [7.2 Current Date and Time using MySQL](#part0045.xhtml)
+
+
+    # [Chapter 8: Role of Constraints in MySQL](#part0046.xhtml)
+
+
+    # [8.1 UNIQUE constraint in MySQL](#part0047.xhtml)
+
+
+    # [8.2 NOT NULL constraint](#part0048.xhtml)
+
+
+    # [8.3 CHECK constraint](#part0049.xhtml)
+
+
+    # [8.4 DEFAULT constraint](#part0050.xhtml)
+
+
+    # [8.5 PRIMARY KEY constraint](#part0051.xhtml)
+
+
+    # [8.6 Auto increment attribute in MYSQL](#part0052.xhtml)
+
+
+    # [8.7 FOREIGN KEY constraint](#part0053.xhtml)
+
+
+    # [8.8 JOIN clause in MySQL](#part0054.xhtml)
+
+
+    # [Chapter 9: Functions and Logical operators in MySQL](#part0055.xhtml)
+
+
+    # [9.1 Functions in MySQL](#part0056.xhtml)
+
+
+    # [9.2 Logical operators in MySQL](#part0057.xhtml)
+
+
+    # ​[9.2.1 AND operator](#part0058.xhtml)
+
+
+    # ​[9.2.2 OR operator](#part0059.xhtml)
+
+
+    # ​[9.2.3 NOT operator](#part0060.xhtml)
+
+
+    # ​[9.2.4 Between operator](#part0061.xhtml)
+
+
+    # ​[9.2.5 IN operator](#part0062.xhtml)
+
+
+    # [Chapter 10: Some important MySQL commands](#part0063.xhtml)
+
+
+    # [10.1 Wild card character](#part0064.xhtml)
+
+
+    # [10.2 Order by clause](#part0065.xhtml)
+
+
+    # [10.3 Limit clause](#part0066.xhtml)
+
+
+    # [10.4 Union operator](#part0067.xhtml)
+
+
+    # [10.5 Views in MySQL](#part0068.xhtml)
+
+
+    # [10.6 Indexes in MySQL](#part0069.xhtml)
+
+
+    # [10.7 Subqueries](#part0070.xhtml)
+
+
+    # [10.8 Group by clause](#part0071.xhtml)
+
+
+    # [10.9 Roll up clause](#part0072.xhtml)
+
+
+    # [10.10 On delete clause](#part0073.xhtml)
+
+
+    Preface
+
+
+    # SQL is one of the most powerful programming language which handles the tasks
+    of RDBMS (Relational Data base Management System). It uses a compact-English-statements
+    to create, define, insert, update, and control the relational database.
+
+
+    # SQL is used to store and process information in a relational database whereas
+    MySQL is used in open-source relational database. In this eBook we are going discuss
+    about both SQL and MySQL.
+
+
+    # MySQL is best suitable for client-Server Environment. It provides a flexible
+    transaction management.  It serves as the primary relational database for many
+    applications,  websites as well as commercial products.
+
+
+    # As an eBook, this would be a good reference on how to use MySQL to extract,
+    organize, manage, and manipulate data stored in relational databases. We have
+    discussed in details with several examples about DDL, DQL, DML, DCL and TCL.
+
+
+    # This eBook covers a good range of Database tasks in a way that is more accessible,
+    painless and effective. You will not be bored. If you find most programming books
+    to be too dry, this could be an excellent book for you to get started in MySQL.
+
+
+    Overview of MySQL
+
+
+    # SQL (Structured query language) is initially created by IBM and first commercially
+    implemented by Oracle corporation in 1979 but there were no official standards
+    so later 1986 it was improved and jointly published by ANSI and ISO. In 1992,
+    SQL’92’ was published. It is organised in much better way, Data is contained in
+    table, tables are grouped into schemas and schemas are grouped into catalogues
+    and catalogues are grouped into clusters.  The first version of MySQL was developed
+    by Monty Widenius, David Axmark and Allan. It was appeared in 1995.  Many versions
+    of the MySQL were released by 2000\. These versions were compatible with almost
+    all the major platforms.
+
+
+    # MySQL is a RDBMS (Relational Database management system) which is based on structured
+    query language (SQL).  A relational database stores information in tabular form,
+    with rows and columns representing different data attributes and the various relationships
+    between the data values.
+
+
+    # We use commands to create, define, Insert, extract, update and control the database.
+    Following are the types of SQL commands:
+
+
+    # •          DDL (Data Definition Language)
+
+
+    # •          DQL (Data Query Language)
+
+
+    # •          DML (Data Manipulation Language)
+
+
+    # •          DCL (Data Control Language)
+
+
+    # •          TCL (Transaction Control Language)
+
+
+    # We will discuss about all these in upcoming chapters.
+
+
+    # Following are the Top 10 popular applications using MySQL
+
+
+    # 1.      online gaming,
+
+
+    # 2.      digital marketing,
+
+
+    # 3.      retail point-of-sale systems,
+
+
+    # 4.      Internet of Things monitoring systems.
+
+
+    # 5.      SaaS applications
+
+
+    # 6.      Facebook,
+
+
+    # 7.      Flickr,
+
+
+    # 8.      Web development
+
+
+    # 9.      Twitter
+
+
+    # 10.  YouTube.
+
+
+    Chapter 1:  Introduction to MySQL
+
+
+    1.1 Introduction
+
+
+    # MySQL is a software which employs SQL (Structured query language). It is very
+    fast, reliable, scalable, and easy to use for both small and large applications.
+    The name MySQL suggested by the co-founder  Widenius''s daughter.
+
+
+    # What is Database?
+
+
+    # Data is a raw fact and figure that is used everywhere in our real world. A group
+    of data makes a specific information or database. In our day-to-day life if we
+    visit a mall, we see that a shopkeeper is handling a product database using a
+    scanner. Another example, let us consider a bank, they are handling customer database.
+    Third example is in schools they are handling student’s database. Henceforth the
+    database can be handled either manually in a register or through computer software
+    such as MySQL.
+
+
+    # What is relational database?
+
+
+    # It is a collection of organized data stored in one or more tables. We can easily
+    see and understand how different data structures relate to each other.
+
+
+    # Difference between MySQL and SQL
+
+
+    # We can create, read, update, and delete the database using MySQL. But SQL (structured
+    query language) is a Compact-English-Statement used to access, manipulate, and
+    coordinate the database. In this eBook we are going to discuss about interactive
+    environment that is how to work on entered database.
+
+
+    # Types of Command used in MySQL
+
+
+    # Following are the types of commands used in MySQL
+
+
+    # •          DDL (Data definition language)- These commands are used to create,
+    drop, alter and describe the Table.'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrc43A.jpg)
+
+
+    # 前言
+
+
+    # MySQL 概述
+
+
+    # 第 1 章：MySQL 简介
+
+    ## 1.1 简介
+
+    ## 1.2 MySQL 安装
+
+
+    # 第 2 章：MySQL 语法
+
+    ## 2.1 MySQL 中的数据类型
+
+    ### 2.1.1 数型数据类型
+
+    ### 2.1.2 字符串数据类型
+
+    ### 2.1.3 日期数据类型
+
+    ## 2.2 MySQL 中的运算符
+
+    ### 2.2.1 算术运算符
+
+    ### 2.2.2 逻辑运算符
+
+    ### 2.2.3 比较运算符
+
+    ### 2.2.4 位运算符
+
+    ### 2.2.5 集合运算符
+
+
+    # 第 3 章：数据定义语言 (DDL)
+
+    ## 3.1 MySQL 中的完整性约束
+
+    ## 3.2 MySQL DDL 简介
+
+    ### 3.2.1 `CREATE` 命令
+
+    ### 3.2.2 `RENAME` 命令
+
+    ### 3.2.3 `DROP` 命令
+
+    ### 3.2.4 `ALTER` 命令
+
+
+    # 第 4 章：数据操语言 (DML)
+
+    ## 4.1 MySQL DML 简介
+
+    ## 4.2 DML 命令执行
+
+    ### 4.2.1 `INSERT` 命令
+
+    ### 4.2.2 `SELECT` 命令
+
+    ### 4.2.3 `UPDATE` 命令
+
+    ### 4.2.4 `DELETE` 命令
+
+
+    # 第 5 章：数据控制语言 (DCL)
+
+    ## 5.1 MySQL DCL 简介
+
+    ## 5.2 DCL 命令执行
+
+    ### 5.2.1 `GRANT` 命令
+
+    ### 5.2.2 `REVOKE` 命令
+
+
+    # 第 6 章：事务控制语言 (TCL)
+
+    ## 6.1 MySQL TCL 简介
+
+    ## 6.2 TCL 命令执行
+
+
+    # 第 7 章：数据查询语言 (DQL)
+
+    ## 7.1 MySQL DQL 简介
+
+    ### 7.1.1 语法 1
+
+    ### 7.1.2 语法 2
+
+    ### 7.1.3 语法 3
+
+    ### 7.1.4 语法 4
+
+    ## 7.2 使用 MySQL 获取当前日期和时间
+
+
+    # 第 8 章：约束在 MySQL 中的作用
+
+    ## 8.1 UNIQUE 约束
+
+    ## 8.2 NOT NULL 约束
+
+    ## 8.3 CHECK 约束
+
+    ## 8.4 DEFAULT 约束
+
+    ## 8.5 PRIMARY KEY 约束
+
+    ## 8.6 自增属性
+
+    ## 8.7 FOREIGN KEY 约束
+
+    ## 8.8 JOIN 子句
+
+
+    # 第 9 章：MySQL 中的函数和逻辑运算符
+
+    ## 9.1 MySQL 中的函数
+
+    ## 9.2 MySQL 中的逻辑运算符
+
+    ### 9.2.1 `AND` 运算符
+
+    ### 9.2.2 `OR` 运算符
+
+    ### 9.2.3 `NOT` 运算符
+
+    ### 9.2.4 `Between` 运算符
+
+    ### 9.2.5 `IN` 运算符
+
+
+    # 第 10 章：重要的 MySQL 命令
+
+    ## 10.1 通配符
+
+    ## 10.2 `Order by` 子句
+
+    ## 10.3 `Limit` 子句
+
+    ## 10.4 `Union` 运算符
+
+    ## 10.5 MySQL 中的视图
+
+    ## 10.6 MySQL 中的索引
+
+    ## 10.7 子查询
+
+    ## 10.8 `Group by` 子句
+
+    ## 10.9 `Roll up` 子句
+
+    ## 10.10 `On delete` 子句
+
+
+    # 前言
+
+
+    `SQL` 是最强大的编程语言之一，用于处理 `RDBMS`（关系型数据库管理系统）的任务。它使用紧凑的英语语句来创建、定义、插入、更新和控制关系型数据库。
+
+
+    `SQL` 用于在关系型数据库中存储和处理信息，而 `MySQL` 则用于开源关系型数据库。本电子书将同时讨论 `SQL` 和 `MySQL`。
+
+
+    `MySQL` 最适合客户端-服务器环境。它提供了灵活的事务管理。它是许多应用程序、网站以及商业产品的主要关系型数据库。
+
+
+    作为一本电子书，这将是关于如何使用 `MySQL` 提取、组织、管理和处理存储在关系型数据库中的数据的良好参考。我们已经通过多个示例详细讨论了 `DDL`、`DQL`、`DML`、`DCL`
+    和 `TCL`。
+
+
+    本电子书涵盖了广泛的数据库任务，方式更加易于理解、无痛且高效。你不会感到无聊。如果你觉得大多数编程书籍太枯燥，那么这可能是你入门 `MySQL` 的绝佳书籍。
+
+
+    # MySQL 概述
+
+
+    `SQL`（结构查询语言）最初由 IBM 创建，并于 1979 年由 Oracle 公司首次商业化实施，但当时没有官方标准，因此在后 1986 年由 `ANSI`
+    和 `ISO` 改进并联合发布。1992 年发布了 `SQL’92`。它的组织方式改进得多：数据包含在表中，表分组在模式（schemas）中，模式分组在目录（catalogues）中，目录分组在集群（clusters）。`MySQL`
+    的第一个版本由 Monty Widenius、David Axmark 和 Allan 开发，于 1995 年出现。到 2000 年，发布了多个版本的 `MySQL`。这些版本兼容几乎所有主要平台。
+
+
+    `MySQL` 是一种基于结构查询语言（`SQL`）的 `RDBMS`（关系数据库管理系统）。关系型数据库以表格的形式存储信息，行和列表示不同的数据属性以及数据值之间的各种关系。
+
+
+    我们使用命令来创建、定义、插入、提取、更新和控制数据库。以下是 SQL 命令的类型：
+
+
+    * `DDL`（数据定义语言）
+
+    * `DQL`（数据查询语言）
+
+    * `DML`（数据操语言）
+
+    * `DCL`（数据控制语言）
+
+    * `TCL`（事务控制语言）
+
+
+    我们将在接下来的章节中讨论所有内容。
+
+
+    # 以下是使用 MySQL 的前 10 个应用程序
+
+
+    1. 在线游戏
+
+    2. 数字营销
+
+    3. 零售销售点系统
+
+    4. 物联网监控系统
+
+    5. SaaS 应用
+
+    6. Facebook
+
+    7. Flickr
+
+    8. Web 开发
+
+    9. Twitter
+
+    10. YouTube
+
+
+    # 第 1 章：MySQL 简介
+
+    ## 1.1 简介
+
+
+    `MySQL` 是一种采用 `SQL`（结构查询语言）的软件。对于小型和大型应用程序都是非常快速、可靠、可扩展且易用。MySQL 是创始人 Widenius
+    的女儿建议的名字。
+
+
+    在日常生活中，如果我们访问商场，会看到店主使用扫描枪处理产品数据库。另一个例子，让我们考虑银行，他们正在处理客户数据库。第三个例子是学校，他们正在处理学生数据库。因此，数据库既可以手动在笔记本上处理，也可以通过如
+    `MySQL` 等计算机软件进行处理。
+
+
+    # 什么是数据库？
+
+
+    数据是现实世界中到处使用的原始事实和数字。一组数据构成特定的信息或数据库。`SQL` 用于在关系型数据库中存储和处理信息。
+
+
+    # 什么是关系型数据库？
+
+
+    它是存储在一个或多个表中的组织数据集合。我们可以很容易看到并理解不同数据结构之间的相互关系。
+
+
+    # MySQL 和 SQL 的区别
+
+
+    我们使用 `MySQL` 创建、读取、更新和删除数据库。但 `SQL`（结构查询语言）是用于访问、处理和协调数据库的紧凑英语语句。在本电子书中，我们将讨论如何在输入的数据库上进行交互式操作。
+
+
+    '
+- fmt: "\n# • DML (Data manipulation language) - These commands are used to manipulate\
+    \ data such as sum, average and many more. \n\n# • DCL (Data control language)\
+    \ – It provides security to the database such as `Grant` and `Revoke`.\n\n# •\
+    \ DQL (Data query language) – It allows user to pass query to the relational database.\n\
+    \n# • TCL (Transaction Control Language) – It allows user to save and restore\
+    \ databases.\n\n**Note:** We are about to discuss these commands in upcoming chapters.\n\
+    \n## 1.2 Installation of MySQL\n\nIn this section you will learn the installation\
+    \ of MySQL work bench. Let’s get started by downloading MySQL from `dev.mysql.com`.\
+    \ Select the operating system and download MySQL installer `8.0.19`. Save it in\
+    \ appropriate location for e.g. Desktop.\n\n![](image_rsrc43B.jpg)\n\nClick on\
+    \ saved file, now choose a setup type, I am choosing according to my requirement\
+    \ – Full than click on next button\n\n![](image_rsrc43C.jpg)\n\nSelect the location\
+    \ for MySQL and data. Click on next button, check requirement screen appears you\
+    \ can select the requirement or just click next.\n\n![](image_rsrc43D.jpg)\n\n\
+    If we do not select the requirements than screen shown below will appear, just\
+    \ click on “Yes” than next\n\n![](image_rsrc43E.jpg)\n\nNext features of MySQL\
+    \ screen will appear, click on `Execute` and wait for few minutes\n\n![](image_rsrc43F.jpg)\n\
+    \nAll products installed successfully on our PC, now click on next button twice,\
+    \ select standalone MySQL server than click on next button.\n\n![](image_rsrc43G.jpg)\n\
+    \nSkip type and networking/Authentication by clicking on next button\n\nNow set\
+    \ password for your account, click on next button\n\n![](image_rsrc43H.jpg)\n\n\
+    Click next and reach to Apply configuration screen, click on `execute` than hit\
+    \ `Finish`. We have successfully configured the MySQL. Next skip the product configuration\n\
+    \n![](image_rsrc43J.jpg)\n\nNext Connect to the server screen will appear, enter\
+    \ your account password and check whether you have connected to the server or\
+    \ not – Connection succeeded, click on next button\n\n![](image_rsrc43K.jpg)\n\
+    \nGo to Apply configuration click on `execute` than click on `Finish`. We are\
+    \ successfully configured and installed MySQL in our PC.\n\nMySQL work bench is\
+    \ successfully installed, connect to the server using your password and start\
+    \ working on MySQL.\n\n## Chapter 2: MySQL Syntax\n\nJust like other programming\
+    \ language MySQL follows the unique set of rules and guidelines known as MySQL\
+    \ syntax. It is very easy to run and execute as well.\n\n### 2.1 Data Types in\
+    \ MySQL\n\nMySQL data types specify the type of value that can be store in database\
+    \ table. Data types are mainly classified into three categories.\n\n* • Numeric\n\
+    * • String\n* • Date and Time\n\n### 2.1.1 Numeric data type\n\nIt refers to the\
+    \ data that is in the form of numbers such as Integer, Float and Boolean. The\
+    \ following table lists the MySQL Numeric data type.\n\n| Numeric data Type |\
+    \ Range |\n| :--- | :--- |\n| BIT | 0-1 |\n| TINYINT | 0-255 |\n| SMALLINT | -32,768\
+    \ - 32,767 |\n| BIGINT | -9,223,372,036,854,775,808 - 9,223,372,036,854,775,807\
+    \ |\n| FLOAT | -1.79E+308 - 1.79E+308 |\n| REAL | -3.40E+38 - 3.40E+38 |\n\n###\
+    \ 2.1.2 String data type\n\nIt allows us to store fixed or variable character\
+    \ values such as `char`, `varchar`, and `text`. The following table lists the\
+    \ MySQL String data type.\n\n| String data Type | Description |\n| :--- | :---\
+    \ |\n| CHAR | Fixed length of 8000 characters |\n| VARCHAR | Variable- length\
+    \ of 8000 characters |\n| TEXT | Variable- length of 2GB data |\n\n### 2.1.3 Date\
+    \ and Time data type\n\nIt is used for storing values that can contain both date\
+    \ as well as time. The following table lists the MySQL Date and Time data type.\n\
+    \n| Date and Time data Type | Description |\n| :--- | :--- |\n| DATE | It stores\
+    \ date in the format (YYYY-MM-DD) |\n| TIME | It stores time in the format (HH:MI:SS)\
+    \ |\n| DATETIME | It stores date and time information (YYYY-MM-DD HH:MI:SS) |\n\
+    \n## 2.2 Operators in MySQL\n\nMySQL operators use to specify certain condition\
+    \ in statement. Operators are broadly classified in five categories -\n\n* • Arithmetic\
+    \ operator\n* • Logical operator\n* • Comparison operator\n* • Bitwise operator\n\
+    * • Set operator\n\n### 2.2.1 Arithmetic operators\n\nIt performs arithmetical\
+    \ operation on numerical data as well. The following table lists the operators.\n\
+    \n| Arithmetic operators | Description |\n| :--- | :--- |\n| + | Addition |\n\
+    | - | Subtraction |\n| * | Multiplication |\n| / | Division |\n| % | Modulus |\n\
+    \n### 2.2.2 Logical operators\n\nIt performs Boolean operation which gives results\
+    \ true or false. The following table lists the.\n\n| Logical operators | Description\
+    \ |\n| :--- | :--- |\n| AND | True if both expressions |\n| IN | if operand is\
+    \ equal to any from list |\n| OR | True if one value |\n| NOT | Reverses the value\
+    \ |\n| LIKE | if operand matches a pattern |\n| BETWEEN | if operand is within\
+    \ range |\n\n### 2.2.3 Comparison operators\n\nIt is also known as relational\
+    \ operator which compare values in table. The following table lists.\n\n| Comparison\
+    \ operators | Description |\n| :--- | :--- |\n| = | Equal to |\n| > | Greater\
+    \ than |\n| < | Less than |\n| >= | Greater than or equal |\n| <= | Less than\
+    \ or equal |\n| <> | Not equal to |\n\n### 2.2.4 Bitwise operators\n\nIt converts\
+    \ two integer values to binary, perform the AND, OR, NOT on each bit. The following\
+    \ table lists.\n\n| Bitwise operators | Description |\n| :--- | :--- |\n| AND\
+    \ | True if both values |\n| OR | True if any value |\n| NOT | Reverses the |\n\
+    \n### 2.2.5 Set operators\n\nSet operators used to combine rows from two or more.\
+    \ The following table lists.\n\n| Set operators | Description |\n| :--- | :---\
+    \ |\n| UNION | Combines two or more result set without duplicating |\n| UNION\
+    \ ALL | Combines two or more result set including duplicating |\n| INTERSECT |\
+    \ It includes only common values present in |\n| EXCEPT | It includes only results\
+    \ from first set that are not included |\n\n## Chapter 3: Data Definition Language\
+    \ (DDL)\n\nIn previous chapter we have seen the syntax of MySQL which includes\
+    \ datatypes and operators used in MySQL, now we will learn about integrity constraints\
+    \ used in MySQL than we will learn about DDL and create a table using DDL commands.\n\
+    \n### 3.1 Integrity constraints in MySQL\n\nIntegrity constraints are set of rules\
+    \ that a table’s data or column must follow. We can use integrity Constraints\
+    \ with commands at the column or table level. The table-level Integrity constraints\
+    \ will be applied to the entire table, but the column level constraints are only\
+    \ applied to one column. Table shows the list of used in MySQL.\n\n| Integrity\
+    \ constraints | Description |\n| :--- | :--- |\n| NOT NULL | It prevents a column\
+    \ from having a NULL value |\n| DEFAULT | When no value is defined for a column,\
+    \ the `DEFAULT` Constraint provides a default value. |\n| UNIQUE | It ensures\
+    \ that any value in a column is unique. |\n| PRIMARY KEY | Uniquely identifies\
+    \ each row/record. |\n| FOREIGN KEY | It recognizes a row/record in any database\
+    \ table. |\n\n### 3.2 Introduction to MySQL DDL\n\nMySQL DDL statements are used\
+    \ to define and manipulate database structure. It allows us to create a table,\
+    \ modify and maintain databases using commands.\n\nFollowing are the commands\
+    \ of DDL.\n\n* • `CREATE` - It is used to create a table and schema.\n* • `ALTER`\
+    \ - It is used to add, modify or delete columns or constraints from the database\
+    \ table.\n* • `TRUNCATE` - It is used to delete the data present in the table\
+    \ but this will not delete the table.\n* • `DROP` – It is used to delete the entire\
+    \ Table.\n* • `RENAME` – It is used to rename the Table.\n\n#### 3.2.1 CREATE\
+    \ command\n"
+  raw: '# •          DML (Data manipulation language) -These commands are used to
+    manipulate data such sum, average and many more
+
+
+    # •          DCL (Data control language) – It provides security to the database
+    such as Grant and Revoke.
+
+
+    # •          DQL (Data query language) – It allows user to pass query to the relational
+    database.
+
+
+    # •          TCL (Transaction Control Language) – It allows user to save and restore
+    databases.
+
+
+    # Note: We are about to discuss these commands in upcoming chapters.
+
+
+    1.2 Installation of MySQL
+
+
+    # In this section you will learn the installation of MySQL work bench. Let’s get
+    started by downloading MySQL from dev.mysql.com. Select the operating system and
+    download MySQL installer 8.0.19\. Save it in appropriate location for e.g. Desktop.
+
+
+    # ![](image_rsrc43B.jpg)
+
+
+    # Click on saved file, now choose a setup type, I am choosing according to my
+    requirement – Full than click on next button
+
+
+    # ![](image_rsrc43C.jpg)
+
+
+    # Select the location for MySQL and data. Click on next button, check requirement
+    screen appears you can select the requirement or just click next.
+
+
+    # ![](image_rsrc43D.jpg)
+
+
+    # If we do not select the requirements than screen shown below will appear, just
+    click on “Yes” than next
+
+
+    # ![](image_rsrc43E.jpg)
+
+
+    # Next features of MySQL screen will appear, click on Execute and wait for few
+    minutes
+
+
+    # ![](image_rsrc43F.jpg)
+
+
+    # All products installed successfully on our PC, now click on next button twice,
+    select standalone MySQL server than click on next button.
+
+
+    # ![](image_rsrc43G.jpg)
+
+
+    # Skip type and networking/Authentication by clicking on next button
+
+
+    # Now set password for your account, click on next button
+
+
+    # ![](image_rsrc43H.jpg)
+
+
+    # Click next and reach to Apply configuration screen, click on execute than hit
+    Finish. We have successfully configured the MySQL. Next skip the product configuration
+
+
+    # ![](image_rsrc43J.jpg)
+
+
+    # Next Connect to the server screen will appear, enter your account password and
+    check whether you have connected to the server or not – Connection succeeded,
+    click on next button
+
+
+    # ![](image_rsrc43K.jpg)
+
+
+    # Go to Apply configuration click on execute than click on Finish. We are successfully
+    configured and installed MySQL in our PC.
+
+
+    # MySQL work bench is successfully installed, connect to the server using your
+    password and start working on MySQL.
+
+
+    Chapter 2: MySQL Syntax
+
+
+    # Just like other programming language MySQL follows the unique set of rules and
+    guidelines known as MySQL syntax. It is very easy to run and execute as well.
+
+
+    2.1 Data Types in MySQL
+
+
+    # MySQL data types specify the type of value that can be store in database table.
+    Data types are mainly classified into three categories.
+
+
+    # •          Numeric
+
+
+    # •          String
+
+
+    # •          Date and Time
+
+
+    2.1.1 Numeric data type
+
+
+    # It refers to the data that is in the form of numbers such as Integer, Float
+    and Boolean. The following table lists the MySQL Numeric data type.
+
+
+    | Numeric data Type | Range |
+
+
+    | BIT | 0-1 |
+
+
+    | TINYINT | 0-255 |
+
+
+    | SMALLINT | -32,768 - 32,767 |
+
+
+    | BIGINT | -9,223,372,036,854,775,808 - 9,223,372,036,854,775,807 |
+
+
+    | FLOAT | -1.79E+308 - 1.79E+308 |
+
+
+    | REAL | -3.40E+38 - 3.40E+38 |
+
+
+    2.1.2 String data type
+
+
+    # It allows us to store fixed or variable character values such as char, varchar,
+    and text.  The following table lists the MySQL String data type.   
+
+
+    | String data Type | Description |
+
+
+    | CHAR | Fixed length of 8000 characters |
+
+
+    | VARCHAR | Variable- length of 8000 characters |
+
+
+    | TEXT | Variable- length of 2GB data |
+
+
+    2.1.3 Date and Time data type
+
+
+    # It is used for storing values that can contain both date as well as time. The
+    following table lists the MySQL Date and Time data type.
+
+
+    | Date and Time data Type | Description |
+
+
+    | DATE | It stores date in the format (YYYY-MM-DD) |
+
+
+    | TIME | It stores time in the format (HH:MI:SS) |
+
+
+    | DATETIME | It stores date and time information (YYYY-MM-DD HH:MI:SS) |
+
+
+    2.2 Operators in MySQL
+
+
+    # MySQL operators use to specify certain condition in statement. Operators are
+    broadly classified in five categories -
+
+
+    # •          Arithmetic operator
+
+
+    # •          Logical operator
+
+
+    # •          Comparison operator
+
+
+    # •          Bitwise operator
+
+
+    # •          Set operator
+
+
+    2.2.1 Arithmetic operators
+
+
+    # It performs the arithmetical operation on numerical data in a table as well
+    as SQL queries.  The following table lists the MySQL Arithmetic operators.
+
+
+    | Arithmetic operators | Description |
+
+
+    | + | Addition |
+
+
+    | - | Subtraction |
+
+
+    | * | Multiplication |
+
+
+    | / | Division |
+
+
+    | % | Modulus |
+
+
+    2.2.2 Logical operators
+
+
+    # The Logical operator performs Boolean operation which gives two results either
+    true or false. The following table lists the MySQL Logical operators.
+
+
+    | Logical operators | Description |
+
+
+    | AND | True if both expressions are true |
+
+
+    | IN | TRUE if the operand is equal to any one from the list of expression |
+
+
+    | OR | One expression must be true to get TRUE result |
+
+
+    | NOT | Reverses the value |
+
+
+    | Like | if the operand matches a pattern than true |
+
+
+    | BETWEEN | if operand is within a range than true |
+
+
+    2.2.3 Comparison operators
+
+
+    # It is also known as relational operator which compare values in a Database table.
+    The following table lists the MySQL Comparison operators.
+
+
+    | Comparison operators | Description |
+
+
+    | = | Equal to |
+
+
+    | > | Greater than |
+
+
+    | < | Less than |
+
+
+    | >= | Greater than or equal to |
+
+
+    | <= | Less than or equal to |
+
+
+    | <> | Not equal to |
+
+
+    2.2.4 Bitwise operators
+
+
+    # It converts two integer values to binary bits, perform the AND, OR, and NOT
+    operation on each bit. The following table lists the MySQL Bitwise operators.
+
+
+    | Bitwise operators | Description |
+
+
+    | AND | True if both values are true |
+
+
+    | OR | True if any one value is true |
+
+
+    | NOT | Reverses the value |
+
+
+    2.2.5 Set operators
+
+
+    # Set operators used to combine rows from two or more table. The following table
+    lists the MySQL Set operators.
+
+
+    | Set operators | Description |
+
+
+    | UNION | Combines two or more result set without duplicating values |
+
+
+    | UNION ALL | Combines two or more result set including duplicating values |
+
+
+    | INTERSECT | It includes only the common values present in two or more result
+    set |
+
+
+    | EXCEPT | It includes only results from first result set that are not included
+    in second result set |
+
+
+    Chapter 3: Data Definition Language (DDL)
+
+
+    # In previous chapter we have seen the syntax of MySQL which includes datatypes
+    and operators used in MySQL, now we will learn about integrity constraints used
+    in MySQL than we will learn about DDL and create a table using DDL commands.
+
+
+    3.1 Integrity constraints in MySQL
+
+
+    # Integrity constraints are set of rules that a table’s data or column must follow.
+    We can use integrity Constraints with commands at the column or table level. The
+    table-level Integrity constraints will be applied to the entire table, but the
+    column level constraints are only applied to one column. Table shows the list
+    of Integrity constraints used in MySQL.
+
+
+    | Integrity constraints | Description |
+
+
+    | NOT NULL | It prevents a column from having a NULL value |
+
+
+    | DEFAULT | When no value is defined for a column, the DEFAULT Constraint provides
+    a default value. |
+
+
+    | UNIQUE | It ensures that any value in a column is unique. |
+
+
+    | PRIMARY KEY | Uniquely identifies each row/record. |
+
+
+    | FOREIGN KEY | It recognizes a row/record in any database table uniquely. |
+
+
+    3.2 Introduction to MySQL DDL
+
+
+    # MySQL DDL statements are used to define and manipulate data base structure.
+    It allows us to create a table, modify and maintain databases using commands.
+
+
+    # Following are the commands of DDL.
+
+
+    # •          CREATE- It is used to create a table and schema.
+
+
+    # •          ALTER - It is used to add, modify or delete columns or constraints
+    from the database table.
+
+
+    # •          TRUNCATE - It is used to delete the data present in the table but
+    this will not delete the table.
+
+
+    # •          DROP – It is used to delete the entire Table.
+
+
+    # •          RENAME – It is used to rename the Table.
+
+
+    3.2.1 CREATE command'
+  toc: []
+  trans: '
+
+
+    # • DML（数据操纵语言）这些命令用于操纵数据，如和、平均值等。
+
+
+    # • DCL（数据控制语言）– 它为数据库提供安全保护，如 `Grant`（授权）和 `Revoke`（撤销权限）。
+
+
+    # • DQL（数据查询语言）– 它允许用户向关系型数据库发送查询语句。
+
+
+    # • TCL（事务控制语言）– 它允许用户保存和恢复数据库。
+
+
+    **注意：** 我们将在接下来的章节中讨论这些命令。
+
+
+    ## 1.2 安装 MySQL
+
+
+    在本节中，你将学习安装 MySQL Workbench。让我们从 `dev.mysql.com` 下载 MySQL 开始。选择相应的操作系统并下载 MySQL
+    安装程序 `8.0.19`。将它保存到合适的位置，例如桌面。
+
+
+    ![](img/image_rsrc43B.jpg)
+
+
+    点击保存的文件，现在选择一种安装类型，我根据我的需求选择“Full”（完整安装），然后点击 next（下一步）按钮。
+
+
+    ![](img/image_rsrc43C.jpg)
+
+
+    选择 MySQL 和数据存储的位置。点击 next（下一步）按钮，出现需求检查界面，你可以选择需求或直接点击 next（下一步）。
+
+
+    ![](img/image_rsrc43D.jpg)
+
+
+    如果我们不选择需求，将出现下面的界面，只需点击“Yes”（是），然后点击 next（下一步）。
+
+
+    ![](img/image_rsrc43E.jpg)
+
+
+    将出现 MySQL 的功能界面，点击 `Execute`（执行）并等待几分钟。
+
+
+    ![](img/image_rsrc43F.jpg)
+
+
+    所有产品已成功安装在我们的电脑上，现在双击 next（下一步）按钮，选择 standalone MySQL server（独立 MySQL 服务器），然后点击
+    next（下一步）。
+
+
+    ![](img/image_rsrc43G.jpg)
+
+
+    点击 next（下一步）跳过类型选择和网络/身份验证设置。
+
+
+    现在为你的账户设置密码，点击 next（下一步）。
+
+
+    ![](img/image_rsrc43H.jpg)
+
+
+    点击 next（下一步）到达 Apply configuration（应用配置）界面，点击 `execute`（执行）然后点击 `Finish`（完成）。我们成功配置了
+    MySQL。接下来跳过产品配置。
+
+
+    ![](img/image_rsrc43J.jpg)
+
+
+    将出现 Connect to the server（连接服务器）界面，输入你的账户密码并检查是否已连接到服务器 – Connection succeeded（连接成功），点击
+    next（下一步）按钮。
+
+
+    ![](img/image_rsrc43K.jpg)
+
+
+    回到 Apply configuration（应用配置），点击 `execute`（执行）然后点击 `Finish`（完成）。我们已经在电脑上成功配置并安装了
+    MySQL。
+
+
+    MySQL Workbench 安装成功，使用你的密码连接服务器并开始使用 MySQL。
+
+
+    ## 第 2 章：MySQL 语法
+
+
+    和其他编程语言一样，MySQL 遵循一套独特的规则和指南，即 MySQL 语法。它也非常容易运行和执行。
+
+
+    ### 2.1 MySQL 数据类型
+
+
+    MySQL 数据类型指定了存储在数据库表中数值类型。数据类型主要分为三类。
+
+
+    * • 数型
+
+    * • 字符串型
+
+    * • 日期和时间
+
+
+    ### 2.1.1 数型
+
+
+    它指的是以数字形式的数据，如整数（Integer）、浮点数（Float）和布尔值（Boolean）。下表列出了 MySQL 数型。
+
+
+    | 数型类型 | 范围 |
+
+    | :--- | :--- |
+
+    | BIT | 0-1 |
+
+    | TINYINT | 0-255 |
+
+    | SMALLINT | -32,768 - 32,767 |
+
+    | BIGINT | -9,223,372,036,854,775,808 - 9,223,372,036,854,775,807 |
+
+    | FLOAT | -1.79E+308 - 1.79E+308 |
+
+    | REAL | -3.40E+38 - 3.40E+38 |
+
+
+    ### 2.1.2 字符串类型
+
+
+    它允许我们存储固定或可变的字符值，如 `char`、`varchar` 和 `text`。下表列出了 MySQL 字符串类型。
+
+
+    | 字符串类型 | 说明 |
+
+    | :--- | :--- |
+
+    | CHAR | 固定长度 8000 个字符 |
+
+    | VARCHAR | 可变长度 8000 个字符 |
+
+    | TEXT | 可变长度 2GB 数据 |
+
+
+    ### 2.1.3 日期和时间类型
+
+
+    它用于存储包含日期和时间的数值。下表列出了 MySQL 日期和时间类型。
+
+
+    | 日期和时间类型 | 说明 |
+
+    | :--- | :--- |
+
+    | DATE | 以格式 (YYYY-MM-DD) 存储日期 |
+
+    | TIME | 以格式 (HH:MI:SS) 存储时间 |
+
+    | DATETIME | 存储日期和时间信息 (YYYY-MM-DD HH:MI:SS) |
+
+
+    ## 2.2 MySQL 运算符
+
+
+    MySQL 运算符用于在语句中指定特定条件。运算符分为五类：
+
+
+    * • 算术运算符
+
+    * • 逻辑运算符
+
+    * • 比较运算符
+
+    * • 位运算符
+
+    * • 集合运算符
+
+
+    ### 2.2.1 算术运算符
+
+
+    它对对数值数据执行算术运算。下表列出了这些运算符。
+
+
+    | 算术运算符 | 说明 |
+
+    | :--- | :--- |
+
+    | + | 加法 |
+
+    | - | 减法 |
+
+    | * | 乘法 |
+
+    | / | 除法 |
+
+    | % | 取模 |
+
+
+    ### 2.2.2 逻辑运算符
+
+
+    它执行布尔运算，给出真（true）或假（false）的结果。下表列出了这些。
+
+
+    | 逻辑运算符 | 说明 |
+
+    | :--- | :--- |
+
+    | AND | 如果两个表达式都为真 |
+
+    | IN | 如果操作数等于列表中的任意一个 |
+
+    | OR | 如果任一表达式为真 |
+
+    | NOT | 取反 |
+
+    | LIKE | 如果操作数匹配模式 |
+
+    | BETWEEN | 如果操作数在范围内 |
+
+
+    ### 2.2.3 比较运算符
+
+
+    也被称为关系运算符，比较表中的值。下表列出了。
+
+
+    | 比较运算符 | 说明 |
+
+    | :--- | :--- |
+
+    | = | 等于 |
+
+    | > | 大于 |
+
+    | < | 小于 |
+
+    | >= | 大于等于 |
+
+    | <= | 小于等于 |
+
+    | <> | 不等于 |
+
+
+    ### 2.2.4 位运算符
+
+
+    它将整数转换为二进制，对每个位执行 AND、OR、NOT 操作。下表列出了。
+
+
+    | 位运算符 | 说明 |
+
+    | :--- | :--- |
+
+    | AND | 如果两个值... |
+
+    | OR | 如果任一值... |
+
+    | NOT | 取反... |
+
+
+    ### 2.2.5 集合运算符
+
+
+    集合运算符用于合并两个或多个集的行。下表列出了。
+
+
+    | 集合运算符 | 说明 |
+
+    | :--- | :--- |
+
+    | UNION | 不去重复地合并两个或多个集 |
+
+    | UNION ALL | 包含重复合并两个或多个集 |
+
+    | INTERSECT | 仅包含存在于... |
+
+    | EXCEPT | 仅包含来自第一个集但不包含在... |
+
+
+    ## 第 3 章：数据定义语言 (DDL)
+
+
+    在上一章节中学习了 MySQL 的语法，包括数据类型和运算符，现在我们将学习 MySQL 中的完整性约束，然后学习 DDL 创建表。
+
+
+    ### 3.1 MySQL 中的完整性约束
+
+
+    完整性约束是表数据或列必须遵循的规则。我们可以在列级或表级使用完整性约束。表级约束适用于整个表，而列级约束仅适用于某一列。表显示了 MySQL 中使用的。
+
+
+    | 完整性约束 | 说明 |
+
+    | :--- | :--- |
+
+    | NOT NULL | 防止列具有空值 |
+
+    | DEFAULT | 当列没有定义值时，`DEFAULT` 约束提供一个默认值 |
+
+    | UNIQUE | 确保列中的任何值都是唯一的 |
+
+    | PRIMARY KEY | 唯一标识每行/记录 |
+
+    | FOREIGN KEY | 识别任何数据库表中的行/记录 |
+
+
+    ### 3.2 MySQL DDL 简介
+
+
+    MySQL DDL 语句用于定义和操作数据库结构。它允许我们使用命令创建、修改和维护数据库。
+
+
+    以下是 DDL 命令。
+
+
+    * • `CREATE` - 用于创建表和模式 |
+
+    * • `ALTER` - 用于从表中添加、修改或删除列或约束 |
+
+    * • `TRUNCATE` - 用于删除表中的数据，但不会删除表本身 |
+
+    * • `DROP` – 用于删除整个表 |
+
+    * • `RENAME` – 用于重命名表 |
+
+
+    #### 3.2.1 CREATE 命令
+
+
+    '
+- fmt: "\n# MySQL allows us to create a database table using `CREATE` command. Let’s\
+    \ create a table of employees. If we execute the sequence of statement in MySQL\
+    \ workbench as shown below than a table of employees can be created.\n\n```sql\n\
+    CREATE TABLE employees (\n  employee_id INT,\n  first_name VARCHAR (50),\n  last_name\
+    \ VARCHAR (50),\n  hourly_pay DECIMAL (5,2),\n  hire_date DATE\n);\n```\n\nI am\
+    \ going to show you how we can make some tables in MySQL. A table in a relational\
+    \ database they consist of rows and columns kind of like an Excel spreadsheet.\
+    \ In this topic we are going to create the table and the column.\n\nJust type\
+    \ `CREATE TABLE` than the name of table, I am going to create a table named `employees`\
+    \ then add a set of parentheses semicolon at the end within the set of parentheses\
+    \ we will list the columns for employees, let’s have an `employee_id`, `first_name`,\
+    \ `hourly_pay`, `hire_date`. Now each column we need to set the data type of what\
+    \ we are storing within each column.\n\n### Let’s set the data type for each and\
+    \ every column:\n- `employee_id INT` – Data going to be whole integer\n- `first_name\
+    \ VARCHAR (50)` – series of max 50 characters\n- `last_name VARCHAR (50)` – series\
+    \ of max 50 characters\n- `hourly_pay Decimal (5,2)` – max 5 before decimal and\
+    \ 2 after decimal point (99999.99)\n- `hire_date DATE` – date format (dd-mm-yyyy)\n\
+    \nIf you need to select the table than type:\n**Syntax:** `SELECT * FROM table\
+    \ name;`\n**Implementation:** `SELECT * FROM employees;`\n\n| employee_id | first_name\
+    \ | last_name | hourly_pay | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n\
+    \nWe have successfully created a table of Employees with five columns.\n\n## 3.2.2\
+    \ RENAME command\n\nIf we need to rename the above table than type:\n**Syntax:**\
+    \ `RENAME TABLE original name TO new name;`\n**Implementation:** `RENAME TABLE\
+    \ employees TO workers;`\n\nExecute and get the result in MYSQL workbench.\n\n\
+    ## 3.2.3 DROP command\n\nIf we need to drop the above table than type:\n**Syntax:**\
+    \ `DROP TABLE name of table;`\n**Implementation:** `DROP TABLE employees;`\n\n\
+    Execute and get the result in MYSQL workbench.\n\n## 3.2.4 ALTER command\n\nIf\
+    \ we need to alter the table, let’s add the new column `phone_number`, type:\n\
+    ```sql\nALTER TABLE employees\nADD phone_number VARCHAR (15);\n```\nExecute and\
+    \ get the result in MYSQL workbench.\n\nLet’s rename the `phone_number` to `email`,\
+    \ type:\n```sql\nALTER TABLE employees\nRENAME COLUMN phone_number to email;\n\
+    ```\nExecute and get the result in MYSQL workbench.\n\nLet’s add data type to\
+    \ `email` column, here we have to use `MODIFY` command, type:\n```sql\nALTER TABLE\
+    \ employees\nMODIFY COLUMN email VARCHAR (100)\n```\nExecute and get the result\
+    \ in MYSQL workbench.\n\nLet’s add `email` after `last_name`, type:\n```sql\n\
+    ALTER TABLE employees\nMODIFY email VARCHAR (100)\nAFTER last_name;\n```\nExecute\
+    \ and get the result in MYSQL workbench.\n\nLet’s drop the column `email`, type:\n\
+    ```sql\nALTER TABLE employees\nDROP COLUMN email;\n```\nExecute and get the result\
+    \ in MYSQL workbench.\n\n# Chapter 4: Data Manipulation Language (DML)\n\n## 4.1\
+    \ Introduction to MySQL DML\n\nMySQL DML deals with the modification of data within\
+    \ the tables of a database. DML statements used for adding(inserting), deleting,\
+    \ and modifying (updating) data in a database.\n\nFollowing are the commands of\
+    \ DML:\n- `INSERT` – It is used to add rows to a table manually.\n- `SELECT` –\
+    \ We can access and manipulate data using `Select` command.\n- `DELETE` – We can\
+    \ remove rows of existing table using `Delete` command.\n- `UPDATE` - To change\
+    \ the actual data in a table.\n\n## 4.2 DML command execution\n\nIn previous chapter\
+    \ we have created an `employees` table, now let’s manipulate the table using DML\
+    \ commands.\n\n### 4.2.1 INSERT command\n\nIn this topic, I am going to discuss\
+    \ about how we can insert rows into a table. We have a table named `employees`.\
+    \ I will select everything from my table `employees`.\n\n```sql\nSELECT * FROM\
+    \ employees;\n```\n\n| employee_id | first_name | last_name | hourly_pay | hire_date\
+    \ |\n| :--- | :--- | :--- | :--- | :--- |\n\nLet’s insert a row of data using\
+    \ `INSERT` command.\n\nTo insert a row into a table we would type `INSERT INTO`\
+    \ the name of the table followed by `VALUES` parentheses semicolon, between this\
+    \ set of parentheses we will add all of the data for a row. We will follow this\
+    \ order beginning with `employee_id`, `first_name`, `last_name` so on but we do\
+    \ have to pay attention to the data types. Each piece of data will be separated\
+    \ with a comma.\n\nLet’s insert a row of data in `Employees` table:\n```sql\n\
+    INSERT INTO employees\nVALUES (1, \"Eugene\", \"Krabs\", 25.50, \"2023-01-02\"\
+    );\n```\n\nNow we can execute these statements and get the result as shown below.\n\
+    \n| employee_id | first_name | last_name | hourly_pay | hire_date |\n| :--- |\
+    \ :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs | 25.50 | 2023-01-02 |\n\n\
+    Let’s insert multiple rows at once, to do this MySQL allows us to add another\
+    \ set of parentheses each separated with a comma:\n```sql\nINSERT INTO employees\n\
+    VALUES (2, \"idward\", \"Tentacles\", 15.00, \"2023-01-03\"),\n(3, \"Spongebob\"\
+    , \"Squarepants\", 12.50, \"2023-01-04\"),\n(4, \"Patrick\", \"Star\", 12.50,\
+    \ \"2023-01-05\"),\n(5, \"Sandy\", \"Cheeks\", 17.25, \"2023-01-06\");\n```\n\
+    ```sql\nSELECT * FROM employees;\n```\n\n| employee_id | first_name | last_name\
+    \ | hourly_pay | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene\
+    \ | Krabs | 25.50 | 2023-01-02 |\n| 2 | Squidward | Tentacles | 15.00 | 2023-01-03\
+    \ |\n| 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |\n| 4 | Patrick | Star\
+    \ | 12.50 | 2023-01-05 |\n| 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |\n\n### 4.2.2\
+    \ SELECT command\n\nIn this section, we are going to discuss how to select data\
+    \ in a table. To select entire rows and columns in `employees` table, type:\n\
+    ```sql\nSELECT * FROM employees;\n```\nSometimes you may not want all of the data.\
+    \ We can select specific columns:\n```sql\nSELECT first_name, last_name FROM employees;\n\
+    ```\n\n| first_name | last_name |\n| :--- | :--- |\n| Eugene | Krabs |\n| Squidward\
+    \ | Tentacles |\n| Spongebob | Squarepants |\n| Patrick | Star |\n| Sandy | Cheeks\
+    \ |\n\nWe can also change the order of column:\n```sql\nSELECT last_name, first_name\
+    \ FROM employees;\n```\nThere is a `WHERE` clause if we are looking for something\
+    \ specific. Let’s select all from `employees` where `employee_id` equals one:\n\
+    ```sql\nSELECT * FROM employees\nWHERE employee_id = 1;\n```\nThis will give us\
+    \ a specific employee, the employee that has an ID of one.\n\nSimilarly, we can\
+    \ take reference of any column and their corresponding data such as `first_name`,\
+    \ `last_name` and so on. We can also add conditions using comparison operator\
+    \ to `WHERE` clause. Let’s find all employees that have an hourly pay greater\
+    \ than or equal to 15:\n```sql\nSELECT * FROM employees\nWHERE hourly_pay >= 15;\n\
+    ```\n\nWe can also add integrity constraints to `WHERE` clause. `NULL` means no\
+    \ data, let’s display the data of every employee that does have a hire date:\n\
+    ```sql\nSELECT * FROM employees\nWHERE hire_date IS NOT NULL;\n```\n\n| employee_id\
+    \ | first_name | last_name | hourly_pay | hire_date |\n| :--- | :--- | :--- |\
+    \ :--- | :--- |\n| 1 | Eugene | Krabs | 25.50 | 2023-01-02 |\n| 2 | Squidward\
+    \ | Tentacles | 15.00 | 2023-01-03 |\n| 3 | Spongebob | Squarepants | 12.50 |\
+    \ 2023-01-04 |\n| 4 | Patrick | Star | 12.50 | 2023-01-05 |\n| 5 | Sandy | Cheeks\
+    \ | 17.25 | 2023-01-06 |\n\n### 4.2.3 UPDATE command\n\nIn this section, we are\
+    \ going discuss how to update data from a table. In our table employee `Id` 6\
+    \ is missing some data.\n\n| employee_id | first_name | last_name | hourly_pay\
+    \ | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs |\
+    \ 25.50 | 2023-01-02 |\n| 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |\n|\
+    \ 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |\n| 4 | Patrick | Star | 12.50\
+    \ | 2023-01-05 |\n| 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |\n| 6 | Sheldon |\
+    \ Plankton |  |  |\n"
+  raw: '# MySQL allows us to create a database table using CREATE command. Let’s create
+    a table of employees. If we execute the sequence of statement in MySQL workbench
+    as shown below than a table of employees can be created.
+
+
+    # 1 CREATE TABLE employees (
+
+
+    # 2 ​employee_id INT,
+
+
+    # 3​first_name VARCHAR (50),
+
+
+    # 4​last_name VARCHAR (50),
+
+
+    # 5​hourly_pay DECIMAL (5,2),
+
+
+    # 6​hire_date DATE
+
+
+    # 7​);
+
+
+    # I am going to show you how we can make some tables in MySQL. A table in a relational
+    database they consist of rows and columns kind of like an Excel spreadsheet. In
+    this topic we are going to create the table and the column.
+
+
+    # Just type CREATE TABLE than the name of table, I am going to create a table
+    named employees then add a set of parentheses semicolon at the end within the
+    set of parentheses we will list the columns for employees, let’s have an employee_id,
+    first_name, hourly_pay, hire_date. Now each column we need to set the data type
+    of what we are storing within each column
+
+
+    # Let’s set the data type for each and every column:
+
+
+    # Employee_id INT – Data going to be whole integer
+
+
+    # First_name VARCHAR (50) – series of max 50 characters
+
+
+    # Last_name VARCHAR (50) – series of max 50 characters
+
+
+    # Hourly_pay Decimal (5,2) – max 5 before decimal and 2 after decimal point (99999.99)
+
+
+    # Hire_data DATE – date format (dd-mm-yyyy)
+
+
+    # If you need to select the table than type
+
+
+    # Syntax: SELECT * FROM table name;
+
+
+    # Implementation: SELECT * FROM employees;
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    # We have successfully created a table of Employees with five columns.
+
+
+    3.2.2 RENAME command
+
+
+    # If we need to rename the above table than type
+
+
+    # Syntax: RENAME TABLE original name TO new name;
+
+
+    # Implementation: RENAME TABLE employees TO workers;
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    3.2.3 DROP command
+
+
+    # If we need to drop the above table than type
+
+
+    # Syntax: DROP TABLE name of table;
+
+
+    # Implementation: DROP TABLE employees;
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    3.2.4 ALTER command
+
+
+    # If we need to alter the table, let’s add the new column phone_number, type
+
+
+    # ALTER TABLE employees
+
+
+    # ADD phone_number VARCHAR (15);
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    # Let’s rename the phone_number to email , type
+
+
+    # ALTER TABLE employees
+
+
+    # RENAME COLUMN phone_number to email;
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    # Let’s add data type to email column, here we have to use MODIFY command, type
+
+
+    # ALTER TABLE employees
+
+
+    # MODIFY COLUMN email VARCHAR (100)
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    # Let’s add email after last_name, type
+
+
+    # ALTER TABLE employees
+
+
+    # MODIFY email VARCHAR (100)
+
+
+    # AFTER last_name;
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    # Let’s drop the column email, type
+
+
+    # ALTER TABLE employees
+
+
+    # DROP COLUMN email;
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    Chapter 4: Data Manipulation Language (DML)
+
+
+    4.1 Introduction to MySQL DML
+
+
+    # MySQL DML deals with the modification of data within the tables of a database.
+    DML statements used for adding(inserting), deleting, and modifying (updating)
+    data in a database.
+
+
+    # Following are the commands of DML
+
+
+    # •          INSERT – It is used to add rows to a table manually.
+
+
+    # •          SELECT – We can access and manipulate data using Select command.
+
+
+    # •          DELETE – We can remove rows of existing table using Delete command.
+
+
+    # •          UPDATE - To change the actual data in a table.
+
+
+    4.2 DML command execution
+
+
+    # In previous chapter we have created an employees table, now let’s manipulate
+    the table using DML commands.
+
+
+    4.2.1 INSERT command
+
+
+    # In this topic, I am going to discuss about how we can insert rows into a table.
+    We have a table named employees. I will select everything from my table employees.
+
+
+    # SELECT * FROM employees;
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    # Let’s insert a row of data using INSERT command.
+
+
+    # To insert a row into a table we would type INSERT INTO the name of the table
+    followed by VALUES parentheses semicolon, between this set of parentheses we will
+    add all of the data for a row. We will follow this order beginning with employee
+    ID, first name, last name so on but we do have to pay attention to the data types.
+    Each piece of data will be separated with a comma.
+
+
+    # Let’s insert a row of data in Employees table
+
+
+    # INSERT INTO employees
+
+
+    # VALUES (1, “Eugene”, “Krabs”, 25.50, “2023-01-02”);
+
+
+    # Now we can execute these statements and get the result as shown below.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    # Let’s insert multiple rows at once, to do this MySQL allows us to add another
+    set of parentheses each separated with a comma as shown below.
+
+
+    # 1 INSERT INTO employees
+
+
+    # 2 VALUES ​(2, “Squidward”, “Tentacles”, 15.00, “2023-01-03”),
+
+
+    # 3​​(3, “Spongebob”, “Squarepants”, 12.50, “2023-01-04”),
+
+
+    # 4​​(4, “Patrick”, “Star”, 12.50, “2023-01-05”),
+
+
+    # 5​​(5, “Sandy”, “Cheeks”, 17.25, “2023-01-06”);
+
+
+    # 6
+
+
+    # 7 SELECT * FROM employees;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    4.2.2 SELECT command
+
+
+    # In this section, we are going to discuss how to select data in a table. To select
+    entire rows and columns in employees table, type
+
+
+    # SELECT * FROM employees;
+
+
+    # Sometimes you may not want all of the data. We can select specific columns.
+
+
+    # To retrieve full name of employees, type
+
+
+    # SELECT first_name, last_name FROM employees;
+
+
+    # Output
+
+
+    | first_name | last_name |
+
+
+    | Eugene | Krabs |
+
+
+    | Squidward | Tentacles |
+
+
+    | Spongebob | Squarepants |
+
+
+    | Patrick | Star |
+
+
+    | Sandy | Cheeks |
+
+
+    # We can also change the order of column, type
+
+
+    # SELECT last_name, first_name FROM employees;
+
+
+    # Execute and get the result in MYSQL workbench.
+
+
+    # There is a WHERE clause if we are looking for something specific.
+
+
+    # Let’s select all from employees where employee ID equals one.
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM employees
+
+
+    # 3 WHERE employee_id =1;
+
+
+    # This will give us a specific employee, the employee that has an ID of one.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    # Note: Similarly, we can take reference of any column and their corresponding
+    data such as first name, last name and so on.
+
+
+    # We can also add conditions using comparison operator to WHERE clause.
+
+
+    # Let’s find all employees that have an hourly pay greater than or equal to 15.
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM employees
+
+
+    # 3 WHERE hourly_pay >= 15;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    # We can also add integrity constraints to WHERE clause.
+
+
+    # NULL means no data, let’s display the data of every employee that does have
+    a hire date.
+
+
+    # SELECT *FROM employees
+
+
+    # WHERE hire_date IS NOT NULL;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    4.2.3 UPDATE command
+
+
+    # In this section, we are going discuss how to update data from a table. In our
+    table employee Id 6 missing some data.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton |  |  |'
+  toc: []
+  trans: "\n\n# MySQL 允许我们使用 `CREATE` 命令创建数据库表。让我们创建一个员工表。如果我们在 MySQL Workbench 中执行如下所示的语句序列，就可以创建一个员工表。\n\
+    \n```sql\nCREATE TABLE employees (\n  employee_id INT,\n  first_name VARCHAR (50),\n\
+    \  last_name VARCHAR (50),\n  hourly_pay DECIMAL (5,2),\n  hire_date DATE\n);\n\
+    ```\n\n我将向你展示如何在 MySQL 中创建一些表。关系型数据库中的表表由行和列组成，类似于 Excel 表格。在本主题中，我们将创建表和列。\n\n\
+    只需输入 `CREATE TABLE` 然后是表名，我将创建一个名为 `employees` 的表，然后在末尾添加一组括号和分号；在括号内，我们将列出员工的列，让我们有\
+    \ `employee_id`、`first_name`、`hourly_pay` 和 `hire_date`。现在，我们需要为每一列设置在每个列中存储的数据的类型。\n\
+    \n### 让我们为每一列设置数据类型：\n- `employee_id INT` – 数据将为整数\n- `first_name VARCHAR (50)`\
+    \ – 最多 50 个字符序列\n- `last_name VARCHAR (50)` – 最多 50 个字符序列\n- `hourly_pay Decimal\
+    \ (5,2)` – 小数点前最多 5 位，后 2 位 (99999.99)\n- `hire_date DATE` – 日期格式 (dd-mm-yyyy)\n\
+    \n如果你需要选择表，请输入：\n**语法：** `SELECT * FROM table name;`\n**实现：** `SELECT * FROM employees;`\n\
+    \n| employee_id | first_name | last_name | hourly_pay | hire_date |\n| :--- |\
+    \ :--- | :--- | :--- | :--- |\n\n我们已成功创建了一个包含五列的员工表。\n\n## 3.2.2 RENAME 命令\n\n\
+    如果我们需要重命名上面的表，请输入：\n**语法：** `RENAME TABLE original name TO new name;`\n**实现：**\
+    \ `RENAME TABLE employees TO workers;`\n\n在 MYSQL workbench 执行并获取结果。\n\n## 3.2.3\
+    \ DROP 命令\n\n如果我们需要删除上面的表，请输入：\n**语法：** `DROP TABLE name of table;`\n**实现：** `DROP\
+    \ TABLE employees;`\n\n在 MYSQL workbench 执行并获取结果。\n\n## 3.2.4 ALTER 命令\n\n如果我们需要修改表，让我们添加新列\
+    \ `phone_number`，输入：\n```sql\nALTER TABLE employees\nADD phone_number VARCHAR\
+    \ (15);\n```\n在 MYSQL workbench 执行并获取结果。\n\n让我们将 `phone_number` 重命名为 `email`，输入：\n\
+    ```sql\nALTER TABLE employees\nRENAME COLUMN phone_number to email;\n```\n在 MYSQL\
+    \ workbench 执行并获取结果。\n\n让我们为 `email` 列添加数据类型，这里我们必须使用 `MODIFY` 命令，输入：\n```sql\n\
+    ALTER TABLE employees\nMODIFY COLUMN email VARCHAR (100)\n```\n在 MYSQL workbench\
+    \ 执行并获取结果。\n\n让我们在 `last_name` 之后添加 `email`，输入：\n```sql\nALTER TABLE employees\n\
+    MODIFY email VARCHAR (100)\nAFTER last_name;\n```\n在 MYSQL workbench 执行并获取结果。\n\
+    \n让我们删除 `email` 列，输入：\n```sql\nALTER TABLE employees\nDROP COLUMN email;\n```\n\
+    在 MYSQL workbench 执行并获取结果。\n\n# 第 4 章：数据操语言 (DML)\n\n## 4.1 MySQL DML 绪览\n\nMySQL\
+    \ DML 处理数据库表内数据的修改。DML 语句用于向数据库中添加（插入）、删除和修改（更新）数据。\n\n以下是 DML 命令：\n- `INSERT`\
+    \ – 用于手动向表中添加行。\n- `SELECT` – 我们可以使用 `Select` 命令访问和操作数据。\n- `DELETE` – 我们可以使用\
+    \ `Delete` 命令删除现有表的行。\n- `UPDATE` - 用于更改表中的实际数据。\n\n## 4.2 DML 命令执行\n\n在上一章中，我们创建了一个\
+    \ `employees` 表，现在让我们使用 DML 命令操作该表。\n\n### 4.2.1 INSERT 命令\n\n在本主题中，我将讨论如何向表中插入行。我们有一个名为\
+    \ `employees` 的表。我将从我的表 `employees` 中选择所有内容。\n\n```sql\nSELECT * FROM employees;\n\
+    ```\n\n| employee_id | first_name | last_name | hourly_pay | hire_date |\n| :---\
+    \ | :--- | :--- | :--- | :--- |\n\n让我们使用 `INSERT` 命令插入一行数据。\n\n要向表中插入一行，我们将输入\
+    \ `INSERT INTO` 紧跟表名，然后是 `VALUES` 括号和分号；在这组括号之间，我们将添加该行的所有数据。我们将按照此顺序，从 `employee_id`、`first_name`、`last_name`\
+    \ 等以此类推，但我们必须注意数据类型。每条数据之间将用逗号分隔。\n\n在 `Employees` 表中插入一行数据：\n```sql\nINSERT INTO\
+    \ employees\nVALUES (1, \"Eugene\", \"Krabs\", 25.50, \"2023-01-02\");\n```\n\n\
+    现在我们可以执行这些语句并获得所示结果。\n\n| employee_id | first_name | last_name | hourly_pay |\
+    \ hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs | 25.50\
+    \ | 2023-01-02 |\n\n一次性插入多行：\n```sql\nINSERT INTO employees\nVALUES (1, \"Eugene\"\
+    , \"Krabs\", 25.50, \"2023-01-02\"),\n(2, \"Squidward\", \"Tentacles\", 15.00,\
+    \ \"2023-01-03\"),\n(3, \"Spongebob\", \"Squarepants\", 12.50, \"2023-01-04\"\
+    ),\n(4, \"Patrick\", \"Star\", 12.00, \"2023-01-05\"),\n(5, \"Sandy\", \"Cheeks\"\
+    , 17.25, \"2023-01-06\");\n```\n执行后：\n```sql\nSELECT * FROM employees;\n```\n\n\
+    | employee_id | first_name | last_name | hourly_pay | hire_date |\n| :--- | :---\
+    \ | :--- | :--- | :--- |\n| 1 | Eugene | Krabs | 25.50 | 2023-01-02 |\n| 2 | Squidward\
+    \ | Tentacles | 15.00 | 2023-01-03 |\n| 3 | Spongebob | Squarepants | 12.50 |\
+    \ 2023-01-04 |\n| 4 | Patrick | Star | 12.00 | 2023-01-05 |\n| 5 | Sandy | Cheeks\
+    \ | 17.25 | 2023-01-06 |\n\n### 4.2.3 UPDATE 命令\n\n在本节中，我们将讨论如何更新表中的数据。在我们的表中，员工\
+    \ `Id` 6 缺少部分数据。\n\n```sql\nUPDATE employees SET first_name = \"Sheldon\", last_name\
+    \ = \"Plankton\", hourly_pay = 20.00, hire_date = \"2023-01-07\" WHERE employee_id\
+    \ = 6;\n```\n\n| employee_id | first_name | last_name | hourly_pay | hire_date\
+    \ |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs | 25.50 | 2023-01-02\
+    \ |\n| 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |\n| 3 | Spongebob | Squarepants\
+    \ | 12.50 | 2023-01-04 |\n| 4 | Patrick | Star | 12.00 | 2023-01-05 |\n| 5 | Sandy\
+    \ | Cheeks | 17.25 | 2023-01-06 |\n| 6 | Sheldon | Plankton | 20.00 | 2023-01-07\
+    \ |\n\n"
+- fmt: "\n# Let’s update single column `hourly_pay = 10.25`, `type`\n\n```sql\nUPDATE\
+    \ employees\nSET hourly_pay = 10.25\nWHERE employee_id = 6;\n```\n\n### Output\n\
+    \n| employee_id | first_name | last_name | hourly_pay | hire_date |\n| :--- |\
+    \ :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs | 25.50 | 2023-01-02 |\n|\
+    \ 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |\n| 3 | Spongebob | Squarepants\
+    \ | 12.50 | 2023-01-04 |\n| 4 | Patrick | Star | 12.50 | 2023-01-05 |\n| 5 | Sandy\
+    \ | Cheeks | 17.25 | 2023-01-06 |\n| 6 | Sheldon | Plankton | 10.25 | |\n\n# Let’s\
+    \ update multiple columns `hourly_pay` and `hire_date`, `type`\n\n```sql\nUPDATE\
+    \ employees\nSET hourly_pay = 10.25,\n    hire_date = \"2023-01-07\"\nWHERE employee_id\
+    \ = 6;\n```\n\n### Output\n\n| employee_id | first_name | last_name | hourly_pay\
+    \ | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs |\
+    \ 25.50 | 2023-01-02 |\n| 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |\n|\
+    \ 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |\n| 4 | Patrick | Star | 12.50\
+    \ | 2023-01-05 |\n| 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |\n| 6 | Sheldon |\
+    \ Plankton | 10.25 | 2023-01-07 |\n\n# We can UPDATE all of the rows within a\
+    \ column.\n\n# Let’s update `hourly_pay = 10.25` to all employees, `type`\n\n\
+    ```sql\nUPDATE employees\nSET hourly_pay = 10.25;\n```\n\n### Output\n\n| employee_id\
+    \ | first_name | last_name | hourly_pay | hire_date |\n| :--- | :--- | :--- |\
+    \ :--- | :--- |\n| 1 | Eugene | Krabs | 10.25 | 2023-01-02 |\n| 2 | Squidward\
+    \ | Tentacles | 10.25 | 2023-01-03 |\n| 3 | Spongebob | Squarepants | 10.25 |\
+    \ 2023-01-04 |\n| 4 | Patrick | Star | 10.25 | 2023-01-05 |\n| 5 | Sandy | Cheeks\
+    \ | 10.25 | 2023-01-06 |\n| 6 | Sheldon | Plankton | 10.25 | |\n\n# We can also\
+    \ use integrity constraints with `UPDATE` command\n\n# Let' set a field to `NULL`\
+    \ meaning no value, as in above example Sheldon Plankton’s `hire_date` is blank,\
+    \ `type`\n\n```sql\nUPDATE employees\nSET hire_date = NULL\nWHERE employee_id\
+    \ = 6;\n```\n\n### Output\n\n| employee_id | first_name | last_name | hourly_pay\
+    \ | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs |\
+    \ 10.25 | 2023-01-02 |\n| 2 | Squidward | Tentacles | 10.25 | 2023-01-03 |\n|\
+    \ 3 | Spongebob | Squarepants | 10.25 | 2023-01-04 |\n| 4 | Patrick | Star | 10.25\
+    \ | 2023-01-05 |\n| 5 | Sandy | Cheeks | 10.25 | 2023-01-06 |\n| 6 | Sheldon |\
+    \ Plankton | 10.25 | |\n\nNote: Plankton’s `hire_date` is now `NULL`.\n\n## 4.2.4\
+    \ `DELETE` command\n\n# To delete all rows in `employees` table, type\n\n```sql\n\
+    DELETE FROM employees;\n```\n\nNote: Be alert! entire rows in a table will be\
+    \ deleted.\n\n# To delete 6th row in `employees` table, type\n\n```sql\nDELETE\
+    \ FROM employees\nWHERE employee_id = 6;\n```\n\n### Output\n\n| employee_id |\
+    \ first_name | last_name | hourly_pay | hire_date |\n| :--- | :--- | :--- | :---\
+    \ | :--- |\n| 1 | Eugene | Krabs | 10.25 | 2023-01-02 |\n| 2 | Squidward | Tentacles\
+    \ | 10.25 | 2023-01-03 |\n| 3 | Spongebob | Squarepants | 10.25 | 2023-01-04 |\n\
+    | 4 | Patrick | Star | 10.25 | 2023-01-05 |\n| 5 | Sandy | Cheeks | 10.25 | 2023-01-06\
+    \ |\n\n# Chapter 5: Data Control Language (DCL)\n\n## 5.1 Introduction to MySQL\
+    \ DCL\n\nMySQL DCL used to implement security on objects. `GRANT` command gives\
+    \ the permission to access the database and `REVOKE` command is used to remove\
+    \ previously granted access.\n\nThe primary DCL commands in MySQL include:\n-\
+    \ `GRANT`: It allows users to perform specified tasks.\n- `REVOKE`: To remove\
+    \ user rights.\n\n## 5.2 DCL execution\n\nLet us control the root database by\
+    \ giving access. DCL gives us facility to implement security on created database.\n\
+    \n### 5.2.1 `GRANT` command\n\nWe have already created a root database (`employees`\
+    \ table), now let’s give access privileges to a new user (`user1`) using `GRANT`\
+    \ command. To create a dummy user, let’s move on to Workbench. We can click on\
+    \ connection, we have already created a database (`employees` table), to create\
+    \ a new user click on server and go to Users and Privileges.\n\nIn “User and Privileges”\
+    \ section we have all the users created, now I will add an account, enter `user1`\
+    \ and password `12345`, confirm the password and apply. Now go to Home of MySQL\
+    \ Workbench, click on database, and connect to database, enter `user1` and password\
+    \ `12345`, a blank screen will appear. There is no database here because there\
+    \ is no access which is given to the user, we must close this application and\
+    \ go to database (`hr_emp`) which is already created by us (`employees` table).\n\
+    \nEnter `Grant` command, type:\n\n```sql\nUSE hr_emp;\nGRANT SELECT, INSERT, DELETE\
+    \ ON hr_emp TO 'user1';\n```\n\nExecute the sequence of statements:\n\n```sql\n\
+    USE hr_emp;\nGRANT SELECT ON employee TO 'user1';\n```\n\nNow, Logout from MySQL\
+    \ Workbench, Login and reconnect with `User1` and password `12345`. `User1` got\
+    \ the access to the employee data, type:\n\n```sql\nUSE hr_emp;\nSELECT * FROM\
+    \ employees;\n```\n\n### Output\n\n| employee_id | first_name | last_name | hourly_pay\
+    \ | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs |\
+    \ 25.50 | 2023-01-02 |\n| 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |\n|\
+    \ 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |\n| 4 | Patrick | Star | 12.50\
+    \ | 2023-01-05 |\n| 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |\n| 6 | Sheldon |\
+    \ Plankton | 10.25 | 2023-01-07 |\n\nNote: New user (`User_1`) having permission\
+    \ to access, insert and delete data from root database.\n\n### 5.2.2 `REVOKE`\
+    \ command\n\nLet’s remove the permission of inserting data into a `employees`\
+    \ table, login to the root database, press `ctrl+V` and type:\n\n```sql\nUSE hr_emp;\n\
+    REVOKE INSERT ON employees FROM 'User_1';\n```\n\nExecute and get the result:\
+    \ User access rights for `INSERT` command is successfully removed. Note: Now the\
+    \ new user (`User_1`) is unable to insert data in root database (`employees` table).\n\
+    \n# Chapter 6: Transaction Control Language (TCL)\n\n## 6.1 Introduction to MySQL\
+    \ TCL\n\nMySQL TCL is a subset of SQL commands used to manage transactions in\
+    \ a database. It allows us to roll back the changes made in database during transaction.\n\
+    \nFollowing are the applications of MySQL TCL:\n1. **Committing Transactions**:\
+    \ TCL allows us to save the changes made in database.\n2. **Rolling Back Transactions**:\
+    \ TCL used to undo the changes made during the transaction and restores the database\
+    \ to its previous state.\n3. **Setting Transaction Isolation Levels**: TCL used\
+    \ to set the transaction isolation level. We can determine the level of concurrency\
+    \ and consistency.\n4. **Savepoints**: TCL allows us to set savepoints within\
+    \ a transaction, allowing for partial rollback if needed.\n5. **Managing Transactions\
+    \ in Stored Procedures**: We can use manage transactions within the scope of the\
+    \ procedure.\n\n## 6.2 TCL command execution\n\nIn this section we are going to\
+    \ explain `auto commit`, `commit` and `rollback`. `auto commit` is a mode by default,\
+    \ `auto commit` is set to on whenever you execute a transaction within MySQL that\
+    \ transaction is saved. what if we were to make a transaction and we need to undo\
+    \ a transaction, for example what if we accidentally delete all of the rows of\
+    \ the table?\n\nLet’s take an example of `employees` table which we have already\
+    \ created, I accidentally deleted all rows because I forgot to add a `WHERE` clause\
+    \ so all rows are now gone, how to undo these changes, type:\n\n```sql\nDELETE\
+    \ FROM employees;\n```\n\nTo undo follow these steps, type:\n\n```sql\nSET AUTOCOMMIT\
+    \ = OFF;\n```\n\nNow, transaction will not save automatically, we would need to\
+    \ manually save each transaction, type:\n\n```sql\nCOMMIT;\n```\n\nExecute it,\
+    \ Now I am going to select my table, type:\n\n```sql\nSELECT * FROM employees;\n\
+    ```\n\nNow if I delete the rows and to undo the changes, type:\n\n```sql\nROLLBACK\n\
+    ```\n\nThis will restore my current transaction back to previous save point where\
+    \ we used `commit`, type:\n\n```sql\nSELECT * FROM employees;\n```\n\nOur table\
+    \ is back to what it previously was\n\n| employee_id | first_name | last_name\
+    \ | hourly_pay | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene\
+    \ | Krabs | 25.50 | 2023-01-02 |\n| 2 | Squidward | Tentacles | 15.00 | 2023-01-03\
+    \ |\n| 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |\n| 4 | Patrick | Star\
+    \ | 12.50 | 2023-01-05 |\n| 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |\n| 6 | Sheldon\
+    \ | Plankton | 10.25 | 2023-01-07 |\n"
+  raw: '# Let’s update single column hourly_pay = 10.25, type
+
+
+    # 1 UPDATE employees
+
+
+    # 2 SET hourly_pay = 10.25
+
+
+    # 3 WHERE employee_id = 6;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 |  |
+
+
+    # Let’s update multiple columns hourly_pay and hire_date, type
+
+
+    # 1 UPDATE employees
+
+
+    # 2 SET hourly_pay = 10.25,
+
+
+    # 3        hire_date = “2023-01-07”
+
+
+    # 4 WHERE employee_id = 6;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    # We can UPDATE all of the rows within a column.
+
+
+    # Let’s update hourly_pay = 10.25 to all employees, type
+
+
+    # 1 UPDATE employees
+
+
+    # 2 SET hourly_pay = 10.25;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 10.25 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 10.25 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 10.25 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 10.25 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 10.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 |  |
+
+
+    # We can also use integrity constraints with UPDATE command
+
+
+    # Let’ set a field to NULL meaning no value, as in above example Sheldon Plankton’s
+    hire_date is blank, type
+
+
+    # 1 UPDATE employees
+
+
+    # 2 SET hire_date = NULL
+
+
+    # 3 WHERE employee_id = 6;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 10.25 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 10.25 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 10.25 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 10.25 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 10.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 |  |
+
+
+    # Note: Plankton’s hire_date is now NULL.
+
+
+    4.2.4 DELETE command
+
+
+    # To delete all rows in employees table, type
+
+
+    # 1 DELETE FROM employees;
+
+
+    # Note: Be alert! entire rows in a table will be deleted.
+
+
+    # To delete 6th row in employees table, type
+
+
+    # 1 DELETE FROM employees;
+
+
+    # 2 WHERE employee_id = 6;
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 10.25 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 10.25 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 10.25 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 10.25 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 10.25 | 2023-01-06 |
+
+
+    Chapter 5:  Data Control Language (DCL)
+
+
+    5.1 Introduction to MySQL DCL
+
+
+    # MySQL DCL used to implement security on database objects. GRANT command gives
+    the permission to access the database and REVOKE command is used to remove previously
+    granted access privileges from a user.
+
+
+    # The primary DCL commands in MySQL include:
+
+
+    # GRANT: It allows users to perform specified tasks.
+
+
+    # REVOKE: To remove user access rights.
+
+
+    5.2 DCL command execution
+
+
+    # Let us control the root database by giving access permission. DCL gives us facility
+    to implement security on created database.
+
+
+    5.2.1 GRANT command
+
+
+    # We have already created a root database (employees table), now Let’s give access
+    privileges to a new user(user1) using GRANT command.
+
+
+    # To create new dummy user, let’s move on to the MySQL workbench. We can click
+    on one connection, we have already created a data base (employees table), to create
+    a new user click on server and go to Users and Privileges
+
+
+    # ![](image_rsrc43M.jpg)
+
+
+    # In “User and privileges” section we have all the users already created, now
+    I will add an account, enter login Name – user_1 and password – 12345, confirm
+    the password and apply.
+
+
+    # Now go to Home of MySQL workbench, click on data base, and connect to database,
+    enter user- User_1 and password – 12345 a blank screen will appear. There is no
+    database over here because there is no access which is given to the user, we must
+    close this application and go to the root data base(hr_emp) which is already created
+    by us (employees table).
+
+
+    # Enter the Grant command, type
+
+
+    # 1 USE hr_emp;
+
+
+    # 2 GRANT SELECT, INSERT, DELETE
+
+
+    # 3 On hr_emp
+
+
+    # 4 TO “User_1”;
+
+
+    # Execute the sequence of statements
+
+
+    # 1 USE hr_emp;
+
+
+    # 2 GRANT SELECT
+
+
+    # 3 On employee
+
+
+    # 4 TO “User_1”;
+
+
+    # Execute the sequence of statements
+
+
+    # Now, Logout from MySQL workbench,
+
+
+    # Login and reconnect with User- User_1 and password- 12345.
+
+
+    # User_1 got the access to the employee data, Type
+
+
+    # 1 USE hr_emp
+
+
+    # 2 SELECT * FROM employees
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    # Note: New user (User_1) having permission to access, insert and delete data
+    from root database.
+
+
+    5.2.2 REVOKE command
+
+
+    # Let’s remove the permission of inserting data in to a employees table, login
+    to the root database, press ctrl+V and type
+
+
+    # USE hr_emp;
+
+
+    # REVOKE INSERT
+
+
+    # ON employees
+
+
+    # FROM ‘User_1’;
+
+
+    # Execute and get the result
+
+
+    # User access rights for INSERT command is successfully removed.
+
+
+    # Note: Now, the new user (User_1) is unable to insert data in root database (employees
+    table).
+
+
+    Chapter 6: Transaction Control Language (TCL)
+
+
+    6.1 Introduction to MySQL TCL
+
+
+    # MySQL TCL is a subset of SQL commands used to manage transactions in a database.
+    It allows us to roll back the changes made in database during transaction.
+
+
+    # Following are the applications of MySQL TCL:
+
+
+    # 1. Committing Transactions: TCL allows us to save the changes made in database.
+
+
+    # 2. Rolling Back Transactions: TCL used to undo the changes made during the transaction
+    and restores the database to its previous state.
+
+
+    # 3. Setting Transaction Isolation Levels: TCL used to set the transaction isolation
+    level. We can determine the level of concurrency and consistency.
+
+
+    # 4. Savepoints: TCL allows us to set savepoints within a transaction, allowing
+    for partial rollback if needed.
+
+
+    # 5. Managing Transactions in Stored Procedures: We can use manage transactions
+    within the scope of the procedure.
+
+
+    6.2 TCL command execution
+
+
+    # In this section we are going to explain auto commit, commit and rollback. Auto
+    commit is a mode by default, Auto commit is set to on whenever you execute a transaction
+    within MySQL that transaction is saved what if we were to make a transaction and
+    we need to undo a transaction, for example what if we accidently delete all of
+    the rows of the table.
+
+
+    # Let’s take an example of employees table which we have already created, I accidently
+    deleted all rows because I forgot to add a WHERE clause so all rows are now gone,
+    how to undo these changes, type
+
+
+    # 1 DELETE FROM employees;
+
+
+    # To undo follow these steps, type
+
+
+    # 1 SET AUTOCOMMIT = OFF;
+
+
+    # Now, transaction will not save automatically, we would need to manually save
+    each transaction, type
+
+
+    # 1 COMMIT;
+
+
+    # Execute it, Now I am going to select my table, type
+
+
+    # 1 SELECT * FROM employees;
+
+
+    # Now if I delete the rows and to undo the changes, type
+
+
+    # 1 ROLLBACK
+
+
+    # This will restore my current transaction back to previous save point where we
+    used commit, type
+
+
+    # 1 SELECT * FROM employees;
+
+
+    # Our table is back to what it previously was
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |'
+  toc: []
+  trans: "\n\n# 让我们更新单列 `hourly_pay = 10.25`, `type`\n\n```sql\nUPDATE employees\n\
+    SET hourly_pay = 10.25\nWHERE employee_id = 6;\n```\n\n### 输出\n\n| employee_id\
+    \ | first_name | last_name | hourly_pay | hire_date |\n| :--- | :--- | :--- |\
+    \ :--- | :--- |\n| 1 | Eugene | Krabs | 25.50 | 2023-01-02 |\n| 2 | Squidward\
+    \ | Tentacles | 15.00 | 2023-01-03 |\n| 3 | Spongebob | Squarepants | 12.50 |\
+    \ 2023-01-04 |\n| 4 | Patrick | Star | 12.50 | 2023-01-05 |\n| 5 | Sandy | Cheeks\
+    \ | 17.25 | 2023-01-06 |\n| 6 | Sheldon | Plankton | 10.25 | |\n\n# 让我们更新多列 `hourly_pay`\
+    \ 和 `hire_date`, `type`\n\n```sql\nUPDATE employees\nSET hourly_pay = 10.25,\n\
+    \    hire_date = \"2023-01-07\"\nWHERE employee_id = 6;\n```\n\n### 输出\n\n| employee_id\
+    \ | first_name | last_name | hourly_pay | hire_date |\n| :--- | :--- | :--- |\
+    \ :--- | :--- |\n| 1 | Eugene | Krabs | 25.50 | 2023-01-02 |\n| 2 | Squidward\
+    \ | Tentacles | 15.00 | 2023-01-03 |\n| 3 | Spongebob | Squarepants | 12.50 |\
+    \ 2023-01-04 |\n| 4 | Patrick | Star | 12.50 | 2023-01-05 |\n| 5 | Sandy | Cheeks\
+    \ | 17.25 | 2023-01-06 |\n| 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |\n\n\
+    # 我们可以更新某一列中的所有行。\n\n# 让我们为所有员工更新 `hourly_pay = 10.25`, `type`\n\n```sql\nUPDATE\
+    \ employees\nSET hourly_pay = 10.25;\n```\n\n### 输出\n\n| employee_id | first_name\
+    \ | last_name | hourly_pay | hire_date |\n| :--- | :--- | :--- | :--- | :--- |\n\
+    | 1 | Eugene | Krabs | 10.25 | 2023-01-02 |\n| 2 | Squidward | Tentacles | 10.25\
+    \ | 2023-01-03 |\n| 3 | Spongebob | Squarepants | 10.25 | 2023-01-04 |\n| 4 |\
+    \ Patrick | Star | 10.25 | 2023-01-05 |\n| 5 | Sandy | Cheeks | 10.25 | 2023-01-06\
+    \ |\n| 6 | Sheldon | Plankton | 10.25 | |\n\n# 我们还可以在 `UPDATE` 命令中用完整性约束\n\n#\
+    \ 让我们将某个字段设置为 `NULL`（无值），如上例所示，Sheldon Plankton 的 `hire_date` 是空的，`type`\n\n```sql\n\
+    UPDATE employees\nSET hire_date = NULL\nWHERE employee_id = 6;\n```\n\n### 输出\n\
+    \n| employee_id | first_name | last_name | hourly_pay | hire_date |\n| :--- |\
+    \ :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs | 10.25 | 2023-01-02 |\n|\
+    \ 2 | Squidward | Tentacles | 10.25 | 2023-01-03 |\n| 3 | Spongebob | Squarepants\
+    \ | 10.25 | 2023-01-04 |\n| 4 | Patrick | Star | 10.25 | 2023-01-05 |\n| 5 | Sandy\
+    \ | Cheeks | 10.25 | 2023-01-06 |\n| 6 | Sheldon | Plankton | 10.25 | |\n\n注意：Plankton\
+    \ 的 `hire_date` 现在是 `NULL`。\n\n## 4.2.4 `DELETE` 命令\n\n# 要删除 `employees` 表中的所有行，输入\n\
+    \n```sql\nDELETE FROM employees;\n```\n\n注意：警小心！表中的所有行将被删除。\n\n# 要删除 `employees`\
+    \ 表中的第 6 行，输入\n\n```sql\nDELETE FROM employees\nWHERE employee_id = 6;\n```\n\n\
+    ### 输出\n\n| employee_id | first_name | last_name | hourly_pay | hire_date |\n\
+    | :--- | :--- | :--- | :--- | :--- |\n| 1 | Eugene | Krabs | 10.25 | 2023-01-02\
+    \ |\n| 2 | Squidward | Tentacles | 10.25 | 2023-01-03 |\n| 3 | Spongebob | Squarepants\
+    \ | 10.25 | 2023-01-04 |\n| 4 | Patrick | Star | 10.25 | 2023-01-05 |\n| 5 | Sandy\
+    \ | Cheeks | 10.25 | 2023-01-06 |\n\n# 第 5 章：数据控制语言 (DCL)\n\n## 5.1 DCL 简介\n\n\
+    MySQL DCL 是用于管理权限的。主要包括：\n- **GRANT**: 授予用户特定的权限。\n- **REVOKE**: 撤销已授予的权限。\n\n\
+    # 第 6 章：事务控制语言 (TCL)\n\n## 6.1 事务简介\n\nTCL 是用于管理数据库事务的命令集。核心操作包括：\n- **COMMIT**:\
+    \ 提交事务，将更改永久保存到数据库。\n- **ROLLBACK**: 回滚事务，撤销未提交的更改。\n- **SAVEPOINT**: 在事务中设置保存点，允许部分回滚。\n\
+    \n## 6.2 自动提交 (Autocommit)\n\n在 MySQL 中，默认提交默认是开启的。这意味着每一条 SQL 语句都会被视为一个独立的事务。我们可以关闭它：\n\
+    \n```sql\nSET AUTOCOMMIT = OFF;\n```\n\n关闭后，我们需要手动控制事务：\n- 使用 `COMMIT` 提交更改。\n\
+    - 使用 `ROLLBACK` 撤销更改。\n\n"
+- fmt: '
+
+    # Note: If we want to save the change, use `COMMIT` command.
+
+
+    # Chapter 7: Data Query Language (DQL)
+
+
+    ## 7.1 Introduction to MySQL DQL
+
+
+    `DQL` in `MySQL` is a part of the base grouping of SQL sub-languages. It is used
+    to pass query to the data base schema. It offers maximum flexibility of using
+    `SELECT` command to retrieve the information from database according to requirement
+    of user. We are going to discuss in details about `SELECT` command.
+
+
+    When a `SELECT` statement is fired against a table the result is compiled into
+    a further temporary table according to requirements.
+
+
+    We can use `SELECT` commands only if table is created and values are inserted.
+    Let’s take an example of employees table which is already created.
+
+
+    ### 7.1.1 Syntax1
+
+
+    ```sql
+
+    SELECT * FROM table_name;
+
+    ```
+
+
+    Implementation: To retrieve all information from employees table.
+
+
+    ```sql
+
+    SELECT * FROM employees;
+
+    ```
+
+
+    Execute and get the result
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    ### 7.1.2 Syntax 2
+
+
+    ```sql
+
+    SELECT Col1, Col2,…. FROM table_name;
+
+    ```
+
+
+    Implementation: To retrieve specific column of table.
+
+
+    ```sql
+
+    SELECT employee_id, first_name, last_name FROM employees;
+
+    ```
+
+
+    Execute and get the result
+
+
+    | employee_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs |
+
+    | 2 | Squidward | Tentacles |
+
+    | 3 | Spongebob | Squarepants |
+
+    | 4 | Patrick | Star |
+
+    | 5 | Sandy | Cheeks |
+
+    | 6 | Sheldon | Plankton |
+
+
+    Note: The order of column will be decided by the user.
+
+
+    ### 7.1.3 Syntax 3
+
+
+    ```sql
+
+    SELECT * FROM table_name WHERE condition;
+
+    ```
+
+
+    Implementation: It will retrieve all the rows of data related to `WHERE` clause
+
+
+    ```sql
+
+    SELECT * FROM employees WHERE employee_id< 4;
+
+    ```
+
+
+    Execute and get the result
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    Note: `WHERE` clause use to filter the rows depending upon condition.
+
+
+    ### 7.1.4 Syntax 4
+
+
+    ```sql
+
+    SELECT col1, col2, …… FROM table_name WHERE condition;
+
+    ```
+
+
+    Implementation: Here `first_name`, `last_name` and `hourly_pay` of employees will
+    be retrieved, depending upon `WHERE` clause.
+
+
+    ```sql
+
+    SELECT first_name, last_name, hourly_pay FROM employees WHERE hourly_pay<15;
+
+    ```
+
+
+    Execute and get the result
+
+
+    | first_name | Last_name | hourly_pay |
+
+    | :--- | :--- | :--- |
+
+    | Spongebob | Squarepants | 12.50 |
+
+    | Patrick | Star | 12.50 |
+
+    | Sheldon | Plankton | 10.25 |
+
+
+    ## 7.2 Current date and time using MySQL
+
+
+    Let’s create a temporary demo table, type
+
+
+    ```sql
+
+    CREATE TABLE demo(
+
+    my_date DATE,
+
+    my_time TIME,
+
+    my_datetime DATETIME
+
+    );
+
+    ```
+
+
+    Execute it, we have successfully created a table with three columns – `my_date`,
+    `my_time`, `my_datetime`.
+
+
+    If we want to get the current date than we need to create a timestamp
+
+
+    Let’s insert data into a `DEMO` table, type
+
+
+    ```sql
+
+    INSERT INTO demo
+
+    VALUE(CURRENT_DATE(), CURRENT_TIME(), NOW());
+
+
+    SELECT * FROM demo;
+
+    ```
+
+
+    Execute it and get the current date and time.
+
+
+    | my_date | my_time | my_datetime |
+
+    | :--- | :--- | :--- |
+
+    | 2024-07-23 | 07:27:58 | 2024-07-23 07:27:58 |
+
+
+    Let’s add a day to current date, type
+
+
+    ```sql
+
+    INSERT INTO demo
+
+    VALUES(CURRENT_DATE() + 1, NULL, NULL)
+
+
+    SELECT * FROM demo;
+
+    ```
+
+
+    Execute and get the result
+
+
+    | my_date | my_time | my_datetime |
+
+    | :--- | :--- | :--- |
+
+    | 2024-07-23 | 07:27:58 | 2024-07-23 07:27:58 |
+
+    | 2024-07-24 | | |
+
+
+    Note: Here time and datetime set to `NULL`.
+
+
+    # Chapter 8: Role of Constraints
+
+
+    In this section we will discuss about the constraints.
+
+
+    ### 8.1 UNIQUE constraint
+
+
+    The `UNIQUE` constraint in `MySQL` ensures that all values in a column are different.
+    We can add it during table creation:
+
+
+    ```sql
+
+    CREATE TABLE products (
+
+    product_id INT,
+
+    product_name VARCHAR(25),
+
+    price DECIMAL(4,2)
+
+    );
+
+    ```
+
+
+    After creation, we can add it to an existing table:
+
+
+    ```sql
+
+    ALTER TABLE products
+
+    ADD CONSTRAINT UNIQUE (product_name);
+
+    ```
+
+
+    ### 8.2 NOT NULL constraint
+
+
+    `NOT NULL` constraint ensures that a column cannot have `NULL` values.
+
+
+    ### 8.3 CHECK constraint
+
+
+    The `CHECK` constraint is used to limit the values that can be placed in a column.
+
+
+    ```sql
+
+    CREATE TABLE employees (
+
+    employee_id INT,
+
+    first_name VARCHAR(50),
+
+    last_name VARCHAR(50),
+
+    hourly_pay DECIMAL(5,2),
+
+    hire_date DATE,
+
+    CONSTRAINT chk_hourly_pay CHECK (hourly_pay >= 10)
+
+    );
+
+    ```
+
+
+    To remove the constraint:
+
+
+    ```sql
+
+    ALTER TABLE employees
+
+    DROP CHECK chk_hourly_pay;
+
+    ```
+
+
+    ### 8.4 DEFAULT constraint
+
+
+    `DEFAULT` constraint provides a default value for a column when none is specified
+    during insertion.
+
+
+    ```sql
+
+    CREATE TABLE products (
+
+    product_id INT,
+
+    product_name VARCHAR(25),
+
+    price DECIMAL(4,2) DEFAULT 0
+
+    );
+
+    ```
+
+
+    ```sql
+
+    INSERT INTO products (product_id, product_name)
+
+    VALUES (10, "spoon"), (11, "fork");
+
+    ```
+
+
+    ### 8.5 PRIMARY KEY constraint
+
+
+    The `PRIMARY KEY` is applied to a column (or columns) where each value must be
+    both unique and not `NULL`.
+
+
+    ```sql
+
+    CREATE TABLE transactions(
+
+    transaction_id INT PRIMARY KEY,
+
+    amount DECIMAL(5,2)
+
+    );
+
+    ```
+
+
+    ### 8.6 Auto increment attribute in MYSQL
+
+    '
+  raw: '# Note: If we want to save the change, use COMMIT command.
+
+
+    Chapter 7: Data Query Language (DQL)
+
+
+    7.1 Introduction to MySQL DQL
+
+
+    # DQL in MySQL is a part of the base grouping of SQL sub-languages. It is used
+    to pass query to the data base schema. It offers maximum flexibility of using
+    SELECT command to retrieve the information from database according to requirement
+    of user. We are going to discuss in details about SELECT command.
+
+
+    # When a SELECT statement is fired against a table the result is compiled into
+    a further temporary table according to requirements.
+
+
+    # We can use SELECT commands only if table is created and values are inserted.
+    Let’s take an example of employees table which is already created.
+
+
+    7.1.1 Syntax1
+
+
+    # SELECT * FROM table_name;
+
+
+    # Implementation: To retrieve all information from employees table.
+
+
+    # SELECT * FROM employees;
+
+
+    # Execute and get the result
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    7.1.2 Syntax 2
+
+
+    # SELECT Col1, Col2,…. FROM table_name;
+
+
+    # Implementation: To retrieve specific column of table.
+
+
+    # SELECT employee_id, first_name, last_name FROM employees;
+
+
+    # Execute and get the result
+
+
+    | employee_id | first_name | last_name |
+
+
+    | 1 | Eugene | Krabs |
+
+
+    | 2 | Squidward | Tentacles |
+
+
+    | 3 | Spongebob | Squarepants |
+
+
+    | 4 | Patrick | Star |
+
+
+    | 5 | Sandy | Cheeks |
+
+
+    | 6 | Sheldon | Plankton |
+
+
+    # Note: The order of column will be decided by the user.
+
+
+    7.1.3 Syntax 3
+
+
+    # SELECT * FROM table_name WHERE condition;
+
+
+    # Implementation: It will retrieve all the rows of data related to WHERE clause
+
+
+    # SELECT * FROM employees WHERE employee_id< 4;
+
+
+    # Execute and get the result
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    # Note: WHERE clause use to filter the rows depending upon condition.
+
+
+    7.1.4 Syntax 4
+
+
+    # SELECT col1, col2, …… FROM table_name WHERE condition;
+
+
+    # Implementation: Here first_name, last_name and hourly_pay of employees will
+    be retrieved, depending upon WHERE clause.
+
+
+    # SELECT first_name, last_name, hourly_pay FROM employees WHERE hourly_pay<15;
+
+
+    # Execute and get the result
+
+
+    | first_name | Last_name | hourly_pay |
+
+
+    | Spongebob | Squarepants | 12.50 |
+
+
+    | Patrick | Star | 12.50 |
+
+
+    | Sheldon | Plankton | 10.25 |
+
+
+    7.2 Current date and time using MySQL
+
+
+    # Let’s create a temporary demo table, type
+
+
+    # 1 CREATE TABLE demo(
+
+
+    # 2 my_date DATE,
+
+
+    # 3 my_time TIME,
+
+
+    # 4 my_datetime DATETIME
+
+
+    # 5 );
+
+
+    # Execute it, we have successfully created a table with three columns – my_date,
+    my_time, my_datetime.
+
+
+    # If we want to get the current date than we need to create a timestamp
+
+
+    # Let’s insert data into a DEMO table, type
+
+
+    # 1 INSERT INTO demo
+
+
+    # 2 VALUE(CURRENT_DATE(), CURRENT_TIME(), NOW());
+
+
+    # 3
+
+
+    # 4 SELECT * FROM demo;
+
+
+    # Execute it and get the current date and time.
+
+
+    | my_date | my_time | my_datetime |
+
+
+    | 2024-07-23 | 07:27:58 | 2024-07-23 07:27:58 |
+
+
+    # Let’s add a day to current date, type
+
+
+    # 1 INSERT INTO demo
+
+
+    # 2 VALUES(CURRENT_DATE() + 1, NULL, NULL)
+
+
+    # 3
+
+
+    # 4 SELECT * FROM demo;
+
+
+    # Execute and get the result
+
+
+    | my_date | my_time | my_datetime |
+
+
+    | 2024-07-23 | 07:27:58 | 2024-07-23 07:27:58 |
+
+
+    | 2024-07-24 |  |  |
+
+
+    # Note: Here time and datetime set to NULL.
+
+
+    Chapter 8: Role of Constraints in MySQL
+
+
+    # In this section we will discuss about the constraints in MySQL.
+
+
+    8.1 UNIQUE constraint in MySQL
+
+
+    # The unique constraint shows the values of a column are all different. We add
+    this constraint when we create a table, so let’s a create a new table
+
+
+    # 1 CREATE TABLE products (
+
+
+    # 2 ​product_id INT,
+
+
+    # 3 ​product_name VARCHAR (25) UNIQUE,
+
+
+    # 4 ​price DECIMAL (4,2)
+
+
+    # 5 );
+
+
+    # Since we have used UNIQUE constraint so we cannot insert any product names that
+    are the same they all have to be unique.
+
+
+    # In case if we forgot to add UNIQUE constraint during table creation than we
+    can use the following sequence of commands to add UNIQUE constraint
+
+
+    # 1 ALTER TABLE products
+
+
+    # 2 ADD CONSTRAINT
+
+
+    # 3 UNIQUE (product_name);
+
+
+    # Execute and get the result.
+
+
+    # UNIQUE constraint is successfully added to column product_name.
+
+
+    # If we insert the same product twice in product_name column than an error message
+    will be displayed. So, all the values in product_name need to be different.
+
+
+    8.2 NOT NULL constraint
+
+
+    # If we use NOT NULL constraint than the value within a specific column should
+    not be null. If we forgot to add value than error will occur. We cannot enter
+    a null value. We can set to be zero that’s acceptable. It’s a useful constraint
+    to verify input if there’s any column that you don’t want to have any null values.
+
+
+    8.3 CHECK constraint
+
+
+    # The CHECK constraint is used to limit what values can be placed in a column,
+    for example I live in a United States depending on which state you live in there
+    is a minimum hourly wage that employers must pay in this example let’s set an
+    hourly pay to our employees table, every employee needs to be paid at least minimum
+    wage in that region, we can do that with the CHECK constraint.
+
+
+    # Let’s create employees table with constraint CHECK
+
+
+    # 1 CREATE TABLE employees (
+
+
+    # 2 ​employee_id INT,
+
+
+    # 3​first_name VARCHAR (50),
+
+
+    # 4​last_name VARCHAR (50),
+
+
+    # 5​hourly_pay DECIMAL (5,2),
+
+
+    # 6​hire_date DATE
+
+
+    # 7​CONSTRAINT chk_hourly_pay CHECK (hourly_pay >= 10.00)
+
+
+    # 8​);
+
+
+    # Here, check constraint check hourly pay will be violated if hourly_pay is less
+    than 10.00\. so after executing the above sequence of statement a user must be
+    alert not to enter any value less than 10 in hourly_pay column.
+
+
+    # We can also remove the CHECK constraint, type
+
+
+    # 1 ALTER TABLE employees
+
+
+    # 2 DROP CHECK chk_hourly_pay;
+
+
+    # Execute and get the result
+
+
+    8.4 DEFAULT constraint
+
+
+    # When we are inserting a new row if we do not specify a value for a column by
+    default, we can add some value that we set here’s an example. Let’s create products
+    table and set the price default value to 0\. Type
+
+
+    # 1 CREATE TABLE products (
+
+
+    # 2 ​product_id INT,
+
+
+    # 3 ​product_name VARCHAR(25),
+
+
+    # 4 ​price DECIMAL(4,2) DEFAULT 0
+
+
+    # 5 );
+
+
+    # Here, if we insert product id and product name in the table than the price 0
+    will be automatically included due to DEFAULT constraint.
+
+
+    # Let’s insert some values in to the products table, type
+
+
+    # 1 INSERT INTO products (product_id, product_name)
+
+
+    # 2 VALUES (10, “spoon”),
+
+
+    # 3 ​(11, “fork”);
+
+
+    # 4 SELECT * FROM products;
+
+
+    # Output
+
+
+    | product_id | product_name | price |
+
+
+    | 10 | spoon | 0.00 |
+
+
+    | 11 | fork | 0.00 |
+
+
+    8.5 PRIMARY KEY constraint
+
+
+    # The PRIMARY KEY is applied to a column where each value in that column must
+    both be unique and not NULL. It is typically used as a unique identifier, for
+    example I live in United States each citizen within the United States has a unique
+    social security number. There is a strong possibility that two citizens in the
+    United States shares the same first name and last name. Let us take an example
+    “John Smith”, if we search for a citizen with a unique social security number
+    than we know for sure we have the right person. A table can have only one primary
+    key constraint.
+
+
+    # Let’s create a table of transactions with two columns and PRIMARY KEY constraint,
+    type
+
+
+    # 1 CREATE TABLE transactions(
+
+
+    # 2​transaction_id INT PRIMARY KEY,
+
+
+    # 3​amount DECIMAL(5,2)
+
+
+    # 4 );
+
+
+    # Execute and get the result
+
+
+    # We can also add primary key to any table, type
+
+
+    # 1 ALTER TABLE products
+
+
+    # 2 ADD CONSTRAINT
+
+
+    # 3 PRIMARY KEY (transaction_id);
+
+
+    8.6 Auto increment attribute in MYSQL'
+  toc: []
+  trans: '
+
+
+    # 注意：如果我们想保存更改，请使用 `COMMIT` 命令。
+
+
+    # 第 7 章：数据查询语言 (DQL)
+
+
+    ## 7.1 MySQL DQL 简介
+
+
+    `MySQL` 中的 `DQL` 是 SQL 子语言基础分组的一部分。它用于向数据库架构发送查询指令。它提供了使用 `SELECT` 命令的最大灵活性，可以根据用户的需求从数据库中检索信息。我们将详细讨论
+    `SELECT` 命令。
+
+
+    当对表执行 `SELECT` 语句时，结果将根据要求编译成一个进一步的临时表。
+
+
+    只有在创建表并插入了值的情况下，我们才能使用 `SELECT` 命令。让我们以已经创建的 `employees` 表为例。
+
+
+    ### 7.1.1 语法 1
+
+
+    ```sql
+
+    SELECT * FROM table_name;
+
+    ```
+
+
+    实现：从 `employees` 表中检索所有信息。
+
+
+    ```sql
+
+    SELECT * FROM employees;
+
+    ```
+
+
+    执行并获取结果
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    ### 7.1.2 语法 2
+
+
+    ```sql
+
+    SELECT Col1, Col2,…. FROM table_name;
+
+    ```
+
+
+    实现：检索表中的特定列。
+
+
+    ```sql
+
+    SELECT employee_id, first_name, last_name FROM employees;
+
+    ```
+
+
+    执行并获取结果
+
+
+    | employee_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs |
+
+    | 2 | Squidward | Tentacles |
+
+    | 3 | Spongebob | Squarepants |
+
+    | 4 | Patrick | Star |
+
+    | 5 | Sandy | Cheeks |
+
+    | 6 | Sheldon | Plankton |
+
+
+    注意：列的顺序将由用户决定。
+
+
+    ### 7.1.3 语法 3
+
+
+    ```sql
+
+    SELECT * FROM table_name WHERE condition;
+
+    ```
+
+
+    实现：它将检索所有与 `WHERE` 子句相关的行行
+
+
+    ```sql
+
+    SELECT * FROM employees WHERE employee_id< 4;
+
+    ```
+
+
+    执行并获取结果
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    注意：`WHERE` 子句用于根据条件过滤行。
+
+
+    ### 7.1.4 语法 4
+
+
+    ```sql
+
+    SELECT col1, col2, …… FROM table_name WHERE condition;
+
+    ```
+
+
+    实现：这里将根据 `WHERE` 子句检索员工的 `first_name`、`last_name` 和 `hourly_pay`。
+
+
+    ```sql
+
+    SELECT first_name, last_name, hourly_pay FROM employees WHERE hourly_pay<15;
+
+    ```
+
+
+    执行并获取结果
+
+
+    | first_name | Last_name | hourly_pay |
+
+    | :--- | :--- | :--- |
+
+    | Spongebob | Squarepants | 12.50 |
+
+    | Patrick | Star | 12.50 |
+
+    | Sheldon | Plankton | 10.25 |
+
+
+    ## 7.2 使用 MySQL 获取当前日期和时间
+
+
+    让我们创建一个临时演示表，输入：
+
+
+    ```sql
+
+    CREATE TABLE demo(
+
+    my_date DATE,
+
+    my_time TIME,
+
+    my_datetime DATETIME
+
+    );
+
+    ```
+
+
+    执行它，我们成功创建了一个包含三列的表——`my_date`、`my_time`、`my_datetime`
+
+
+    如果我们想获取当前日期，我们需要创建一个时间戳
+
+
+    向 `DEMO` 表中插入数据，输入：
+
+
+    ```sql
+
+    INSERT INTO demo
+
+    VALUE(CURRENT_DATE(), CURRENT_TIME(), NOW());
+
+
+    SELECT * FROM demo;
+
+    ```
+
+
+    执行它并获取当前日期和时间。
+
+
+    | my_date | my_time | my_datetime |
+
+    | :--- | :--- | :--- |
+
+    | 2024-07-23 | 07:27:58 | 2024-07-23 07:27:58 |
+
+
+    让我们为当前日期增加一天，输入：
+
+
+    ```sql
+
+    INSERT INTO demo
+
+    VALUES(CURRENT_DATE() + 1, NULL, NULL)
+
+
+    SELECT * FROM demo;
+
+    ```
+
+
+    执行并获取结果
+
+
+    | my_date | my_time | my_datetime |
+
+    | :--- | :--- | :--- |
+
+    | 2024-07-23 | 07:27:58 | 2024-07-23 07:27:58 |
+
+    | 2024-07-24 | | |
+
+
+    注意：这里 datetime 设置为 `NULL`。
+
+
+    # 第 8 章：约束的作用
+
+
+    在本节中，我们将讨论约束。
+
+
+    ### 8.1 UNIQUE 约束
+
+
+    `MySQL` 中的 `UNIQUE` 约束确保列中的所有值都是唯一的。我们可以在创建表时添加它：
+
+
+    ```sql
+
+    CREATE TABLE products (
+
+    product_id INT,
+
+    product_name VARCHAR(25),
+
+    price DECIMAL(4,2)
+
+    );
+
+    ```
+
+
+    创建后，我们可以将其添加到现有表中：
+
+
+    ```sql
+
+    ALTER TABLE products
+
+    ADD CONSTRAINT UNIQUE (product_name);
+
+    ```
+
+
+    ### 8.2 NOT NULL 约束
+
+
+    `NOT NULL` 约束确保列不能有 `NULL` 值。
+
+
+    ### 8.3 CHECK 约束
+
+
+    `CHECK` 约束用于限制列列的值。
+
+
+    ```sql
+
+    CREATE TABLE employees (
+
+    employee_id INT,
+
+    first_name VARCHAR(50),
+
+    last_name VARCHAR(50),
+
+    hourly_pay DECIMAL(5,2),
+
+    hire_date DATE,
+
+    CONSTRAINT chk_hourly_pay CHECK (hourly_pay >= 10)
+
+    );
+
+    ```
+
+
+    删除该约束：
+
+
+    ```sql
+
+    ALTER TABLE employees
+
+    DROP CHECK chk_hourly_pay;
+
+    ```
+
+
+    ### 8.4 DEFAULT 约束
+
+
+    `DEFAULT` 约束在插入时未指定值时为列提供默认值。
+
+
+    ```sql
+
+    CREATE TABLE products (
+
+    product_id INT,
+
+    product_name VARCHAR(25),
+
+    price DECIMAL(4,2) DEFAULT 0
+
+    );
+
+    ```
+
+
+    ```sql
+
+    INSERT INTO products (product_id, product_name)
+
+    VALUES (10, "spoon"), (11, "fork");
+
+    ```
+
+
+    ### 8.5 PRIMARY KEY 约束
+
+
+    `PRIMARY KEY` 应用于列（或列），其中每个值必须是唯一的且不为 `NULL`。
+
+
+    ```sql
+
+    CREATE TABLE transactions(
+
+    transaction_id INT PRIMARY KEY,
+
+    amount DECIMAL(5,2)
+
+    );
+
+    ```
+
+
+    ### 8.6 MYSQL 中的自增属性
+
+
+    '
+- fmt: "\n# The `auto increment` attribute can be applied to a column that is set\
+    \ as a key whenever we insert a new row our primary key can be populated automatically\
+    \ then each subsequent row is auto incremented.\n\n# Let’s drop the transaction\
+    \ table and recreate with auto increment feature, type\n\n```sql\nCREATE TABLE\
+    \ transactions (\n  transaction_id INT PRIMARY KEY AUTO_INCREMENT,\n  amount DECIMAL\
+    \ (5,2)\n);\n```\n\nNote: By default, `auto increment` will set to `1`.\n\n# Let’s\
+    \ insert some values in transaction table, no need to insert `transaction_id`,\
+    \ it will be automatically assigned.\n\n```sql\nINSERT INTO transactions (amount)\n\
+    VALUES (2.56);\nSELECT * FROM transactions;\n```\n\n| transaction_id | amount\
+    \ |\n| 1 | 2.56 |\n\nNote: Here `transaction_id` automatically inserted.\n\n#\
+    \ We could set our primary key to begin at a different value, type\n\n```sql\n\
+    ALTER TABLE transactions\nAUTO_INCREMENT = 1000;\n```\n\nExecute and get the result,\
+    \ `transaction ID` set to `1000` onwards. We must delete entire rows and insert\
+    \ new values.\n\n## 8.7 FOREIGN KEY constraint\n\nForeign key is a `PRIMARY KEY`\
+    \ from one table that can be found within a different table using a `foreign key`\
+    \ we can establish a link between two tables. There are two primary benefits to\
+    \ this in our transaction table if I were to take a look at the `customer ID`\
+    \ of who initiated this transaction, I could refer to the `customers` table then\
+    \ find the first and last name of that customer.\n\n# Let’s create transaction\
+    \ and customer table, establish a link between them using foreign key\n\n# I am\
+    \ going to create a new table of `customers`, type\n\n```sql\nCREATE TABLE customers\
+    \ (\n  customer_id INT PRIMARY KEY AUTO_INCREMENT,\n  first_name VARCHAR (50),\n\
+    \  last_name VARCHAR (50)\n);\n```\n\nExecute and get the result\n\n# Now insert\
+    \ some values in to the table, type\n\n```sql\nINSERT INTO customers (first_name,\
+    \ last_name)\nVALUES (“Fred”, “Fish”),\n(“Larry”, “Lobster”),\n(“Bubble”, “Bass”);\n\
+    \nSELECT * FROM customers;\n```\n\nOutput\n\n| customer_id | first_name | last_name\
+    \ |\n| 1 | Fred | Fish |\n| 2 | Larry | Lobster |\n| 3 | Bubble | Bass |\n\n#\
+    \ Now, we are going to create a link between our `customers` table and our `transactions`\
+    \ table via `customer ID`. Let’s create a transaction table with `FOREIGN KEY`\
+    \ constraint, type\n\n```sql\nCREATE TABLE transactions (\n  transaction_id INT\
+    \ PRIMARY KEY AUTO_INCREMENT,\n  amount DECIMAL (5,2),\n  customer_id INT,\n \
+    \ FOREIGN KEY (customer_id) REFERENCES customers(customer_id)\n);\n```\n\nExecute\
+    \ and get the result\n\n| transaction_id | amount | customer_id |\n\nNote: Here\
+    \ `customer_id` column is `FOREIGN KEY`.\n\n# Link between two table using foreign\
+    \ key is shown below\n\n| customer_id | first_name | last_name |\n| 1 | Fred |\
+    \ Fish |\n| 2 | Larry | Lobster |\n| 3 | Bubble | Bass |\n\n| transaction_id |\
+    \ amount | customer_id |\n| 1000 | 4.89 | 2 |\n| 1001 | 2.68 | 3 |\n| 1002 | 3.32\
+    \ | 1 |\n| 1003 | 4.99 | 3 |\n\n## 8.8 JOIN clause in MySQL\n\nA `JOIN` is a clause\
+    \ that is used to combine rows from two or more tables based on a related column\
+    \ between them such as a `foreign key`. Let’s join two previously created table.\
+    \ We have two tables a table of `transaction` and a table of `customers`.\n\n\
+    ### 1. Table of Transaction\n\n| transaction_id | amount | customer_id |\n| 1000\
+    \ | 4.89 | 2 |\n| 1001 | 2.68 | 3 |\n| 1002 | 3.32 | 1 |\n| 1003 | 4.99 | 3 |\n\
+    \n### 2. Table of Customers\n\n| customer_id | first_name | last_name |\n| 1 |\
+    \ Fred | Fish |\n| 2 | Larry | Lobster |\n| 3 | Bubble | Bass |\n\n# Let’s inner\
+    \ join both table, type\n\n```sql\nSELECT *\nFROM transactions INNER JOIN customers\n\
+    ON transaction.customer_id = customer.customer_id;\n```\n\nExecute and get the\
+    \ result\n\nOutput\n\n| transaction_id | amount | customer_id | customer_id |\
+    \ first_name | last_name |\n| 1000 | 4.89 | 2 | 2 | Larry | Lobster |\n| 1001\
+    \ | 2.68 | 3 | 3 | Bubble | Bass |\n| 1002 | 3.32 | 1 | 1 | Fred | Fish |\n| 1003\
+    \ | 4.99 | 3 | 3 | Bubble | Bass |\n\n# Chapter 9: Functions and Logical operators\
+    \ in MySQL\n\n## 9.1 Functions in MySQL\n\nA stored program that accepts parameter\
+    \ from the user and returns the value known as `Function`. MySQL provides lot\
+    \ of functions. Some of them shown below.\n\n# Let’s count number of rows in `amount`\
+    \ column of `transaction` table, type\n\n```sql\nSELECT COUNT (amount)\nFROM transaction;\n\
+    ```\n\nExecute and get the result\n\n# Let’s find the maximum value in `amount`\
+    \ column, type\n\n```sql\nSELECT MAX(amount) AS maximum\nFROM transaction;\n```\n\
+    \nExecute and get the result\n\nNote: Here column name will be changed in output\
+    \ “maximum”.\n\n# Let’s find the minimum value in `amount` column, type\n\n```sql\n\
+    SELECT MIN(amount) AS minimum\nFROM transaction;\n```\n\nExecute and get the result\n\
+    \n# Let’s find average value of `amount` column, type\n\n```sql\nSELECT AVG(amount)\
+    \ AS average\nFROM transaction;\n```\n\nExecute and get the result\n\n# Let’s\
+    \ find sum of `amount` column, type\n\n```sql\nSELECT SUM(amount) AS sum\nFROM\
+    \ transaction;\n```\n\nExecute and get the result\n\n# Let’s concatenate the first\
+    \ and last name of employees, type\n\n```sql\nSELECT CONCAT (first_name, last_name)\
+    \ AS full_name\nFROM employees;\n```\n\nExecute and get the result\n\n## 9.2 Logical\
+    \ operators in MySQL\n\n# Logical operators are used to combine multiple conditions.\n\
+    \n# Let’s use logical operators in our `employees` table.\n\n```sql\nSELECT *\n\
+    FROM employees\nWHERE salary > 50000 AND department = 'Sales';\n```\n\nExecute\
+    \ and get the result\n\n| employee_id | first_name | last_name | salary | department\
+    \ |\n| 1 | John | Doe | 60000 | Sales |\n| 2 | Jane | Smith | 45000 | Marketing\
+    \ |\n| 3 | Bob | Brown | 55000 | Sales |\n\n### 9.2.1 AND operator\n\n```sql\n\
+    SELECT *\nFROM employees\nWHERE salary > 50000 AND department = 'Sales';\n```\n\
+    \n# It returns rows where both conditions are true.\n\n| employee_id | first_name\
+    \ | last_name | salary | department |\n| 1 | | | | | |\n\n### 9.2.2 OR operator\n\
+    \n```sql\nSELECT *\nFROM employees\nWHERE salary > 50000 OR department = 'Marketing';\n\
+    ```\n\n# It returns rows where either condition is true.\n\n| employee_id | first_name\
+    \ | last_name | salary | department |\n| 1 | John | Doe | 60000 | Sales |\n| 2\
+    \ | Jane | Smith | 45000 | Marketing |\n\n### 9.2.3 NOT operator\n\n```sql\nSELECT\
+    \ *\nFROM employees\nWHERE NOT department = 'Sales';\n```\n\n# It returns rows\
+    \ where the condition is not true.\n\n| employee_id | first_name | last_name |\
+    \ salary | department |\n| 2 | Jane | Smith | 45000 | Marketing |\n| 4 | Alice\
+    \ | White | 70000 | IT |\n\n### 9.2.4 BETWEEN operator\n\n```sql\nSELECT *\nFROM\
+    \ employees\nWHERE salary BETWEEN 40000 AND 60000;\n```\n\n# It returns rows within\
+    \ a specified range.\n\n| employee_id | first_name | last_name | salary | department\
+    \ |\n| 1 | John | Doe | 60000 | Sales |\n| 2 | Jane | Smith | 45000 | Marketing\
+    \ |\n| 3 | Bob | Brown | 55000 | Sales |\n\n### 9.2.5 IN operator\n\n```sql\n\
+    SELECT *\nFROM employees\nWHERE department IN ('Sales', 'IT');\n```\n\n# It returns\
+    \ rows that match any value in a list.\n\n| employee_id | first_name | last_name\
+    \ | salary | department |\n| 1 | John | Doe | 60000 | Sales |\n| 3 | Bob | Brown\
+    \ | 55000 | Sales |\n| 4 | Alice | White | 70000 | IT |\n\n# Chapter 10: Some\
+    \ important MySQL commands\n\n# In this section, we are going to discuss about\
+    \ some important clauses used in MySQL to handle databases or schema object.\n\
+    \n## 10.1 Wild card character\n\n# Wild card is a special character used to handle\
+    \ the database. There are two wild card character – percent and underscore.\n\n\
+    # Let’s use `%` in our `employees` table to retrieve first name begins with S,\
+    \ type\n\n```sql\nSELECT * FROM employees\nWHERE first_name LIKE “s%”;\n```\n\n\
+    Execute and get the result\n"
+  raw: '# The auto increment attribute can be applied to a column that is set as a
+    key whenever we insert a new row our primary key can be populated automatically
+    then each subsequent row is auto incremented.
+
+
+    # Let’s drop the transaction table and recreate with auto increment feature, type
+
+
+    # 1 CREATE TABLE transactions (
+
+
+    # 2​transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+
+
+    # 3​amount DECIMAL (5,2)
+
+
+    # 4 );
+
+
+    # Note: By default, auto increment will set to 1.
+
+
+    # Let’s insert some values in transaction table, no need to insert transaction_id,
+    it will be automatically assigned.
+
+
+    # 1 INSERT INTO transactions (amount)
+
+
+    # 2 VALUES (2.56);
+
+
+    # 3 SELECT * FROM transactions;
+
+
+    | transaction_id | amount |
+
+
+    | 1 | 2.56 |
+
+
+    # Note: Here transaction id automatically inserted.
+
+
+    # We could set our primary key to begin at a different value, type
+
+
+    # 1 ALTER TABLE transactions
+
+
+    # 2 AUTO_INCREMENT = 1000;
+
+
+    # Execute and get the result, transaction ID set to 1000 onwards. We must delete
+    entire rows and insert new values.
+
+
+    8.7 FOREIGN KEY constraint
+
+
+    # Foreign key is a PRIMARY KEY from one table that can be found within a different
+    table using a foreign key we can establish a link between two tables. There are
+    two primary benefits to this in our transaction table if I were to take a look
+    at the customer ID of who initiated this transaction, I could refer to the customers
+    table then find the first and last name of that customer.
+
+
+    # Let’s create transaction and customer table, establish a link between them using
+    foreign key
+
+
+    # I am going to create a new table of customers, type
+
+
+    # 1 CREATE TABLE customers (
+
+
+    # 2​customer_id INT PRIMARY KEY AUTO_INCREMENT.
+
+
+    # 3​first_name VARCHAR (50),
+
+
+    # 4​last_name VARCHAR (50)
+
+
+    # 5 );
+
+
+    # Execute and get the result
+
+
+    # Now insert some values in to the table, type
+
+
+    # 1 INSERT INTO customers (first_name, last_name)
+
+
+    # 2 VALUES (“Fred”, “Fish”),
+
+
+    # 3​(“Larry”, “Lobster”),
+
+
+    # 4​(“Bubble”, “Bass”);
+
+
+    # 5
+
+
+    # 6 SELECT * FROM customers;
+
+
+    # Output
+
+
+    | customer_id | first_name | last_name |
+
+
+    | 1 | Fred | Fish |
+
+
+    | 2 | Larry | Lobster |
+
+
+    | 3 | Bubble | Bass |
+
+
+    # Now, we are going to create a link between our customers table and our transactions
+    table via customer ID. Let’s create a transaction table with FOREIGN KEY constraint,
+    type
+
+
+    # 1 CREATE TABLE transactions (
+
+
+    # 2​transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+
+
+    # 3​amount DECIMAL (5,2),
+
+
+    # 4​customer_id INT,
+
+
+    # 5​FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+
+
+    # 6 );
+
+
+    # Execute and get the result
+
+
+    | transaction_id | amount | customer_id |
+
+
+    # Note: Here customer_id column is FOREIGN KEY.
+
+
+    # Link between two table using foreign key is shown below
+
+
+    | customer_id | first_name | last_name |
+
+
+    | 1 | Fred | Fish |
+
+
+    | 2 | Larry | Lobster |
+
+
+    | 3 | Bubble | Bass |
+
+
+    | transaction_id | amount | customer_id |
+
+
+    | 1000 | 4.89 | 2 |
+
+
+    | 1001 | 2.68 | 3 |
+
+
+    | 1002 | 3.32 | 1 |
+
+
+    | 1003 | 4.99 | 3 |
+
+
+    8.8 JOIN clause in MySQL
+
+
+    # A JOIN is a clause that is used to combine rows from two or more tables based
+    on a related column between them such as a foreign key. Let’s join two previously
+    created table. We have two tables a table of transaction and a table of customers.
+
+
+    # 1\. Table of Transaction
+
+
+    | transaction_id | amount | customer_id |
+
+
+    | 1000 | 4.89 | 2 |
+
+
+    | 1001 | 2.68 | 3 |
+
+
+    | 1002 | 3.32 | 1 |
+
+
+    | 1003 | 4.99 | 3 |
+
+
+    # 2\. Table of Customers
+
+
+    | customer_id | first_name | last_name |
+
+
+    | 1 | Fred | Fish |
+
+
+    | 2 | Larry | Lobster |
+
+
+    | 3 | Bubble | Bass |
+
+
+    # Let’s inner join both table, type
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM transactions INNER JOIN customers
+
+
+    # 3 ON transaction.customer_id = customer.customer_id;
+
+
+    # Execute and get the result
+
+
+    # Output
+
+
+    | transaction_id | amount | customer_id | customer_id | first_name | last_name
+    |
+
+
+    | 1000 | 4.89 | 2 | 2 | Larry | Lobster |
+
+
+    | 1001 | 2.68 | 3 | 3 | Bubble | Bass |
+
+
+    | 1002 | 3.32 | 1 | 1 | Fred | Fish |
+
+
+    | 1003 | 4.99 | 3 | 3 | Bubble | Bass |
+
+
+    Chapter 9: Functions and Logical operators in MySQL
+
+
+    9.1 Functions in MySQL
+
+
+    # A stored program that accepts parameter from the user and returns the value
+    known as Function . MySQL provides lot of functions. Some of them shown below.
+     
+
+
+    # Let’s count number of rows in amount column of transaction table, type
+
+
+    # 1 SELECT COUNT (amount)
+
+
+    # 2 FROM transaction;
+
+
+    # Execute and get the result
+
+
+    # Let’s find the maximum value in amount column, type
+
+
+    # 1 SELECT MAX(amount) AS maximum
+
+
+    # 2 FROM transaction;
+
+
+    # Execute and get the result
+
+
+    # Note: Here column name will be changed in output “maximum”.
+
+
+    # Let’s find the minimum value in amount column, type
+
+
+    # 1 SELECT MIN(amount) AS minimum
+
+
+    # 2 FROM transaction;
+
+
+    # Execute and get the result
+
+
+    # Let’s find average value of amount column, type
+
+
+    # 1 SELECT AVG(amount) AS average
+
+
+    # 2 FROM transaction;
+
+
+    # Execute and get the result
+
+
+    # Let’s find sum of amount column, type
+
+
+    # 1 SELECT SUM(amount) AS sum
+
+
+    # 2 FROM transaction;
+
+
+    # Execute and get the result
+
+
+    # Let’s concatenate the first and last name of employees, type
+
+
+    # 1 SELECT CONCAT (first_name, last_name) AS full_name
+
+
+    # 2 FROM employees;
+
+
+    # Execute and get the result
+
+
+    # Note: Here, I have explained the process of using functions in MySQL.
+
+
+    9.2 Logical operators in MySQL
+
+
+    # The Logical operator is a keyword use to combine more than one condition.
+
+
+    # Let’s use our employees table to demonstrate logical operators.
+
+
+    # SELECT * FROM employees;
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    9.2.1 AND operator
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM employees
+
+
+    # 3 WHERE hire_date< “2023-01-6” AND hourly_pay<15;
+
+
+    # It will return any results that match these two criteria.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    9.2.2 OR operator
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM employees
+
+
+    # 3 WHERE hire_date< “2023-01-6” OR hourly_pay<15;
+
+
+    # It will return any results that match one of these two criteria.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    9.2.3 NOT operator
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM employees
+
+
+    # 3 WHERE NOT hourly_pay = 12.50;
+
+
+    # Here, NOT basically reverses anything you say.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    9.2.4 Between operator
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM employees
+
+
+    # 3 WHERE hire_date BETWEEN “2023-01-04” AND “2023-01-07”;
+
+
+    # Execute and get the result according to criteria.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    9.2.5 IN operator
+
+
+    # 1 SELECT *
+
+
+    # 2 FROM employees
+
+
+    # 3 WHERE hourly_pay IN (17.25,10.25);
+
+
+    # We can find any values that are within a set.
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    Chapter 10: Some important MySQL commands
+
+
+    # In this section, we are going to discuss about some important clauses used in
+    MySQL to handle databases or schema object.
+
+
+    10.1 Wild card character
+
+
+    # Wild card is a special character used to handle the database. There are two
+    wild card character – precent and underscore.
+
+
+    # Let’s use % in our employees table to retrieve first name begins with S, type
+
+
+    # 1 SELECT * FROM employees
+
+
+    # 2 WHERE first_name LIKE “s%”;
+
+
+    # Execute and get the result'
+  toc: []
+  trans: "\n\n# `auto increment` 属性可以应用于设置为主键的列，每当我们插入新行时，我们的主键会自动填充，然后随后的每一行都会自动递增。\n\
+    \n# 让我们删除 transactions 表并使用自动递增功能重新创建，类型：\n\n```sql\nCREATE TABLE transactions\
+    \ (\n  transaction_id INT PRIMARY KEY AUTO_INCREMENT,\n  amount DECIMAL (5,2)\n\
+    );\n```\n\n注意：默认情况下，`auto increment` 将设置为 `1`。\n\n# 让我们在 transactions 表中插入一些值，不需要插入\
+    \ `transaction_id`，它将被自动分配。\n\n```sql\nINSERT INTO transactions (amount)\nVALUES\
+    \ (2.56);\nSELECT * FROM transactions;\n```\n\n| transaction_id | amount |\n|\
+    \ 1 | 2.56 |\n\n注意：这里 `transaction_id` 是自动插入的。\n\n# 我们可以设置主键从不同的值开始，类型：\n\n```sql\n\
+    ALTER TABLE transactions\nAUTO_INCREMENT = 1000;\n```\n\n执行并获取结果，`transaction\
+    \ ID` 从 `1000` 开始设置。我们必须删除整行并插入新值。\n\n## 8.7 FOREIGN KEY 外键约束\n\n外键是其中一个表中的 `PRIMARY\
+    \ KEY`，可以通过 `foreign key` 在另一个表中找到它，我们可以在两个表之间建立连接。在我们的交易表里，这样做有两个主要好处：如果我想查看发起此交易的\
+    \ `customer ID`，我可以引用 `customers` 表，然后找到该客户的姓和名。\n\n# 让我们创建 transaction 和 customer\
+    \ 表，使用外键在它们之间建立连接\n\n# 我将创建一个新的 `customers` 表，类型：\n\n```sql\nCREATE TABLE customers\
+    \ (\n  customer_id INT PRIMARY KEY AUTO_INCREMENT,\n  first_name VARCHAR (50),\n\
+    \  last_name VARCHAR (50)\n);\n```\n\n执行并获取结果\n\n# 现在向表中插入一些值，类型：\n\n```sql\n\
+    INSERT INTO customers (first_name, last_name)\nVALUES (“Fred”, “Fish”),\n(“Larry”,\
+    \ “Lobster”),\n(“Bubble”, “Bass”);\n\nSELECT * FROM customers;\n```\n\n输出\n\n\
+    | customer_id | first_name | last_name |\n| 1 | Fred | Fish |\n| 2 | Larry | Lobster\
+    \ |\n| 3 | Bubble | Bass |\n\n# 现在，我们将通过 `customer ID` 在我们的 `customers` 表和 `transactions`\
+    \ 表之间建立连接。让我们创建一个带有 `FOREIGN KEY` 约束的 transactions 表，类型：\n\n```sql\nCREATE TABLE\
+    \ transactions (\n  transaction_id INT PRIMARY KEY AUTO_INCREMENT,\n  amount DECIMAL\
+    \ (5,2),\n  customer_id INT,\n  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)\n\
+    );\n```\n\n执行并获取结果\n\n| transaction_id | amount | customer_id |\n\n注意：这里 `customer_id`\
+    \ 列是 `FOREIGN KEY`。\n\n# 使用外键在两个表之间的连接所示所示：\n\n| customer_id | first_name | last_name\
+    \ |\n| 1 | Fred | Fish |\n| 2 | Larry | Lobster |\n| 3 | Bubble | Bass |\n\n|\
+    \ transaction_id | amount | customer_id |\n| 1000 | 4.89 | 2 |\n| 1001 | 2.68\
+    \ | 3 |\n| 1002 | 3.32 | 1 |\n| 1003 | 4.99 | 3 |\n\n## 8.8 MySQL 中的 JOIN 子句\n\
+    \n`JOIN` 是一个用于根据两个或多个表之间的相关列（例如 `foreign key`）合并来自这些表的行的子句。让我们连接之前创建的两个表。我们有两个表：一个\
+    \ `transaction` 表和一个 `customers` 表。\n\n### 1. Transaction 表\n\n| transaction_id\
+    \ | amount | customer_id |\n| 1000 | 4.89 | 2 |\n| 1001 | 2.68 | 3 |\n| 1002 |\
+    \ 3.32 | 1 |\n| 1003 | 4.99 | 3 |\n\n### 2. Customers 表\n\n| customer_id | first_name\
+    \ | last_name |\n| 1 | Fred | Fish |\n| 2 | Larry | Lobster |\n| 3 | Bubble |\
+    \ Bass |\n\n# 让我们内连接两个表，类型：\n\n```sql\nSELECT *\nFROM transactions INNER JOIN\
+    \ customers\nON transaction.customer_id = customer.customer_id;\n```\n\n```\n\n\
+    输出\n\n| transaction_id | amount | customer_id | customer_id | first_name | last_name\
+    \ |\n| 1000 | 4.89 | 2 | 2 | Larry | Lobster |\n| 1001 | 2.68 | 3 | 3 | Bubble\
+    \ | Bass |\n| 1002 | 3.32 | 1 | 1 | Fred | Fish |\n| 1003 | 4.99 | 3 | 3 | Bubble\
+    \ | Bass |\n\n# 第 9 章：MySQL 中的函数和逻辑运算符\n\n## 9.1 MySQL 中的函数\n\n一种接受用户提供的参数并返回返回值的存储程序称为\
+    \ `Function`。MySQL 提供了许多函数。下面显示了一些。\n\n# 让我们统计 transaction 表中 `amount` 列的行数，类型：\n\
+    \n```sql\nSELECT COUNT (amount)\nFROM transaction;\n```\n\n执行并获取结果\n\n# 查找 transaction\
+    \ 表 `amount` 列中的最大值，类型：\n\n```sql\nSELECT MAX(amount)\nFROM transaction;\n```\n\
+    \n执行并获取结果\n\n# 查找 transaction 表 `amount` 列中的平均值，类型：\n\n```sql\nSELECT AVG(amount)\n\
+    FROM transaction;\n```\n\n执行并获取结果\n\n# 查找 transaction 表 `amount` 列中的总和，类型：\n\n\
+    ```sql\nSELECT SUM(amount)\nFROM transaction;\n```\n\n执行并获取结果\n\n# 统计 transaction\
+    \ 表 `amount` 列的行数，类型：\n\n```sql\nSELECT COUNT (amount)\nFROM transaction;\n```\n\
+    \n执行并获取结果\n\n# 拼接 customers 表中的姓和名，类型：\n\n```sql\nSELECT CONCAT(first_name, '\
+    \ ', last_name)\nFROM customers;\n```\n\n执行并获取结果\n\n## 9.2 逻辑运算符\n\n# 逻辑运算符用于组合多个条件。\n\
+    \n# 让我们在 `employees` 表中使用逻辑运算符。\n\n```sql\nSELECT *\nFROM employees\nWHERE salary\
+    \ > 50000 AND department = 'Sales';\n```\n\n执行并获取结果\n\n| employee_id | first_name\
+    \ | last_name | salary | department |\n| 1 | John | Doe | 60000 | Sales |\n\n\
+    ### 9.2.1 AND 运算符\n\n它返回两个条件都为真的行。\n\n```sql\nSELECT *\nFROM employees\nWHERE\
+    \ salary > 50000 AND department = 'Sales';\n```\n\n### 9.2.2 OR 运算符\n\n它返回至少一个条件为真的行。\n\
+    \n```sql\nSELECT *\nFROM employees\nWHERE salary > 50000 OR department = 'Marketing';\n\
+    ```\n\n### 9.2.3 NOT 运算符\n\n它返回条件不为真的行。\n\n```sql\nSELECT *\nFROM employees\n\
+    WHERE NOT department = 'Sales';\n```\n\n### 9.2.4 BETWEEN 运算符\n\n它返回指定范围内的行。\n\
+    \n```sql\nSELECT *\nFROM employees\nWHERE salary BETWEEN 40000 AND 60000;\n```\n\
+    \n### 9.2.5 IN 运算符\n\n它返回匹配列表中任何值的行。\n\n```sql\nSELECT *\nFROM employees\nWHERE\
+    \ department IN ('Sales', 'IT');\n```\n\n# 第 10 章：一些重要的 MySQL 命令\n\n# 在本节中，我们将讨论用于处理数据库或架构对象的\
+    \ MySQL 中重要子句。\n\n## 10.1 通配符字符\n\n# 通配符是用于处理数据库的特殊字符。有两种通配符——百分比和下划线。\n\n# 让我们在\
+    \ `employees` 表中使用 `%` 来检索以 S 开头的第一个名，类型：\n\n```sql\nSELECT * FROM employees\n\
+    WHERE first_name LIKE “s%”;\n```\n\n执行并获取结果\n\n"
+- fmt: '
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    ## Let’s find the employee hired in January from employees table, type
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    WHERE hire_date LIKE “____-01-__”;
+
+    ```
+
+
+    Note: Year uses four underscore and month uses two underscore.
+
+
+    ### Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    ## 10.2 Order by clause
+
+
+    The `ORDER BY` clause sorts the results of a query in either ascending or descending
+    order based on which column we list.
+
+
+    ### Let’s change the order of our employees table’s first name, type
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    ORDER BY first_name DESC;
+
+    ```
+
+
+    Execute and get the result:
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    ORDER BY first_name ASC;
+
+    ```
+
+
+    Execute and get the result.
+
+
+    ## 10.3 Limit clause
+
+
+    The `LIMIT` clause use to limit the number of records. It is very useful if you
+    are working with a large database.
+
+
+    ### Let’s limit the number of employees that are displayed from employees table,
+    type
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    LIMIT 2;
+
+    ```
+
+
+    Note: Only first two employee’s details will be displayed.
+
+
+    ### Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    ## 10.4 Union operator
+
+
+    The `UNION` operator combines the results of two or more select statements.
+
+
+    ### Let’s combine the `first_name` and `last_name` of our two tables- Employees
+    table and Customers table.
+
+
+    #### Employees table
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    #### Customers table
+
+
+    | customer_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 1 | Fred | Fish |
+
+    | 2 | Larry | Lobster |
+
+    | 3 | Bubble | Bass |
+
+
+    ### To combine using `UNION`, type
+
+
+    ```sql
+
+    SELECT first_name, last_name FROM employees
+
+    UNION
+
+    SELECT first_name, last_name FROM customers
+
+    ```
+
+
+    ### Output
+
+
+    | first_name | last_name |
+
+    | :--- | :--- |
+
+    | Eugene | Krabs |
+
+    | Squidward | Tentacles |
+
+    | Spongebob | Squarepants |
+
+    | Patrick | Star |
+
+    | Sandy | Cheeks |
+
+    | Sheldon | Plankton |
+
+    | Fred | Fish |
+
+    | Larry | Lobster |
+
+    | Bubble | Bass |
+
+
+    Note: If we want to combine duplicate values than use `UNION ALL` instead of `UNION`.
+
+
+    ## 10.5 Views in MySQL
+
+
+    We can create a virtual table using `VIEWS` in MySQL. The fields in a view are
+    fields from one or more real tables in the database.
+
+
+    ### Let’s view our employees table as `employees_attendance` table, type
+
+
+    ```sql
+
+    CREATE employees_attendance AS
+
+    SELECT first_name, last_name
+
+    FROM employees;
+
+    ```
+
+
+    So everything was successful, we have a new view, type:
+
+
+    ```sql
+
+    SELECT * FROM employees_attendance;
+
+    ```
+
+
+    ### Output
+
+
+    | first_name | last_name |
+
+    | :--- | :--- |
+
+    | Eugene | Krabs |
+
+    | Squidward | Tentacles |
+
+    | Spongebob | Squarepants |
+
+    | Patrick | Star |
+
+    | Sandy | Cheeks |
+
+    | Sheldon | Plankton |
+
+
+    ## 10.6 Indexes in MySQL
+
+
+    Indexes are used to find the values within a column more quickly. MySQL normally
+    searches through a column.
+
+
+    #### Customer’s table
+
+
+    | customer_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 1 | Fred | Fish |
+
+    | 2 | Larry | Lobster |
+
+    | 3 | Bubble | Bass |
+
+
+    ### Let’s create index our customer table’s last name, type
+
+
+    ```sql
+
+    CREATE INDEX last_name_idx ON customers(last_name);
+
+    ```
+
+
+    Execute and get the result. If I want to search for a customer by `last_name`,
+    type:
+
+
+    ```sql
+
+    SELECT * FROM customers
+
+    WHERE last_name = “Bass”;
+
+    ```
+
+
+    ### Output
+
+
+    | customer_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 3 | Bubble | Bass |
+
+
+    ## 10.7 Subqueries
+
+
+    A query within the query is called subquery.
+
+
+    ### Let’s display the name of employees whose hourly pay is equal to average pay
+    from employees table, type
+
+
+    ```sql
+
+    SELECT first_name, last_name, hourly_pay, (SELECT AVG (hourly_pay) FROM employees)
+    AS avg_pay FROM employees;
+
+    ```
+
+
+    Execute and get the result.
+
+
+    ## 10.8 Group by clause
+
+
+    A `GROUP BY` clause will aggregate all rows by a specific column often used with
+    aggregate functions such as `SUM()`, `MAX()`, `MIN()`, `COUNT()` etc.
+
+
+    #### Transaction table
+
+
+    | transaction_id | amount | Order_date |
+
+    | :--- | :--- | :--- |
+
+    | 1000 | 4.89 | 2023-01-01 |
+
+    | 1001 | 2.68 | 2023-01-01 |
+
+    | 1002 | 3.32 | 2023-01-02 |
+
+    | 1003 | 4.99 | 2023-01-02 |
+
+
+    ### Let’s apply a group by clause in transaction table to calculate transaction
+    per day, type
+
+
+    ```sql
+
+    SELECT SUM (amount), order_date
+
+    FROM transactions
+
+    GROUP BY order_date;
+
+    ```
+
+
+    ### Output
+
+
+    | SUM(amount) | order_date |
+
+    | :--- | :--- |
+
+    | 7.57 | 2023-01-01 |
+
+    | 8.31 | 2023-01-02 |
+
+
+    ## 10.9 Roll up clause
+
+
+    It is an extension of `GROUP BY` clause which produces another row and shows the
+    super aggregate values.
+
+
+    ### Let’s calculate the grand total of transaction made in transaction table using
+    `ROLLUP`, type
+
+
+    ```sql
+
+    SELECT SUM (amount), order_date
+
+    FROM transactions
+
+    GROUP BY order_date WITH ROLLUP;
+
+    ```
+
+
+    ### Output
+
+
+    | SUM(amount) | order_date |
+
+    | :--- | :--- |
+
+    | 7.57 | 2023-01-01 |
+
+    | 8.31 | 2023-01-02 |
+
+    | 15.88 | |
+
+
+    ## 10.10 On delete clause
+
+
+    There are two versions of `ON DELETE` clause:
+
+
+    1. `ON DELETE SET NULL`
+
+    2. `ON DELETE CASCADE`
+
+
+    When a foreign key is deleted than we can replace the foreign key with the value
+    0.
+
+
+    ### Let’s take an example of customer table where customer id is a foreign key,
+    so to delete the entire selected row, type
+
+
+    ```sql
+
+    SET foreign_key_checks = 0;
+
+    DELETE FROM customers
+
+    WHERE customer_id = 4;
+
+    SELECT * FROM customers;
+
+    ```
+
+
+    Execute and get the result.
+
+
+    # THE END
+
+    '
+  raw: '| employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    # Let’s find the employee hired in January from employees table, type
+
+
+    # 1 SELECT * FROM employees
+
+
+    # 2 WHERE hire_date LIKE “____-01-__”;
+
+
+    # Note: Year uses four underscore and month uses two underscore.
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    10.2 Order by clause
+
+
+    # The ORDER BY clause sorts the results of a query in either ascending or descending
+    order based on which column we list.
+
+
+    # Let’s change the order of our employees table’s first name, type
+
+
+    # 1 SELECT * FROM employees
+
+
+    # 2 ORDER BY first_name DESC;
+
+
+    # Execute and get the result
+
+
+    # 1 SELECT * FROM employees
+
+
+    # 2 ORDER BY first_name ASC;
+
+
+    # Execute and get the result
+
+
+    10.3 Limit clause
+
+
+    # The LIMIT clause use to limit the number of records. It is very useful if you
+    are working with a large database.
+
+
+    # Let’s limit the number of employees that are displayed from employees table,
+    type
+
+
+    # 1 SELECT * FROM employees
+
+
+    # 2 LIMIT 2;
+
+
+    # Note: Only first two employee’s details will be displayed.
+
+
+    # Output
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    10.4 Union operator
+
+
+    # The UNION operator combines the results of two or more select statements.
+
+
+    # Let’s combine the first_name and last_name of our two tables- Employees table
+    and Customers table.
+
+
+    # Employees table
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    # Customers table
+
+
+    | customer_id | first_name | last_name |
+
+
+    | 1 | Fred | Fish |
+
+
+    | 2 | Larry | Lobster |
+
+
+    | 3 | Bubble | Bass |
+
+
+    # To combine using UNION, type
+
+
+    # 1 SELECT first_name, last_name FROM employees
+
+
+    # 2 UNION
+
+
+    # 3 SELECT first_name, last_name FROM customers
+
+
+    # Output
+
+
+    | first_name | last_name |
+
+
+    | Eugene | Krabs |
+
+
+    | Squidward | Tentacles |
+
+
+    | Spongebob | Squarepants |
+
+
+    | Patrick | Star |
+
+
+    | Sandy | Cheeks |
+
+
+    | Sheldon | Plankton |
+
+
+    | Fred | Fish |
+
+
+    | Larry | Lobster |
+
+
+    | Bubble | Bass |
+
+
+    # Note: If we want to combine duplicate values than use UNION ALL instead of UNION.
+
+
+    10.5 Views in MySQL
+
+
+    # We can create a virtual table using VIEWS in MySQL. The fields in a view are
+    fields from one or more real tables in the database.
+
+
+    # Let’s view our employees table as employees_attendance table, type
+
+
+    # 1 CREATE employees_attendance AS
+
+
+    # 2 SELECT first_name, last_name
+
+
+    # 3 FROM employees;
+
+
+    # So everything was successful, we have a new view, type
+
+
+    # 1 SELECT * FROM employees_attendance;
+
+
+    # Output
+
+
+    | first_name | last_name |
+
+
+    | Eugene | Krabs |
+
+
+    | Squidward | Tentacles |
+
+
+    | Spongebob | Squarepants |
+
+
+    | Patrick | Star |
+
+
+    | Sandy | Cheeks |
+
+
+    | Sheldon | Plankton |
+
+
+    10.6 Indexes in MySQL
+
+
+    # Indexes are used to find the values within a specific column more quickly. MySQL
+    normally searches sequentially through a column.
+
+
+    # Customer’s table
+
+
+    | customer_id | first_name | last_name |
+
+
+    | 1 | Fred | Fish |
+
+
+    | 2 | Larry | Lobster |
+
+
+    | 3 | Bubble | Bass |
+
+
+    # Let’s create index in our customer table’s last name, type
+
+
+    # 1 CREATE INDEX last_name_idx
+
+
+    # 2 ON customers(last_name);
+
+
+    # Execute and get the result
+
+
+    # If I want to search for a customer by last name, type
+
+
+    # 1 SELECT * FROM customers
+
+
+    # 2 WHERE last_name = “Bass”;
+
+
+    # Output
+
+
+    | customer_id | first_name | last_name |
+
+
+    | 3 | Bubble | Bass |
+
+
+    10.7 Subqueries
+
+
+    # A query within the query is called the subquery.
+
+
+    # Let’s display the name of employees whose hourly pay is equal to average hourly_pay
+    from our employees table, type
+
+
+    # 1 SELECT first_name, last_name, hourly_pay,
+
+
+    # 2​(SELECT AVG (hourly_pay) FROM employees) AS avg_pay
+
+
+    # 3 FROM employees;
+
+
+    # Execute and get the result
+
+
+    10.8 Group by clause
+
+
+    # A GROUP BY clause will aggregate all rows by a specific column often used with
+    aggregate functions such as SUM(), MAX(), MIN(), AVG(), COUNT() etc.
+
+
+    # Transaction table
+
+
+    | transaction_id | amount | Order_date |
+
+
+    | 1000 | 4.89 | 2023-01-01 |
+
+
+    | 1001 | 2.68 | 2023-01-01 |
+
+
+    | 1002 | 3.32 | 2023-01-02 |
+
+
+    | 1003 | 4.99 | 2023-01-02 |
+
+
+    # Let’s apply a group by clause in transaction table to calculate transaction
+    per day, type
+
+
+    # 1 SELECT SUM (amount), order_date
+
+
+    # 2 FROM transactions
+
+
+    # 3 GROUP BY order_date;
+
+
+    # Output
+
+
+    | SUM(amount) | order_date |
+
+
+    | 7.57 | 2023-01-01 |
+
+
+    | 8.31 | 2023-01-02 |
+
+
+    10.9 Roll up clause
+
+
+    # It is an extension of GROUP BY clause which produces another row and shows the
+    super aggregate values.
+
+
+    # Let’s calculate the grand total of transaction made in transaction table using
+    ROLLUP, type
+
+
+    # 1 SELECT SUM (amount), order_date
+
+
+    # 2 FROM transactions
+
+
+    # 3 GROUP BY order_date WITH ROLLUP;
+
+
+    # Output
+
+
+    | SUM(amount) | order_date |
+
+
+    | 7.57 | 2023-01-01 |
+
+
+    | 8.31 | 2023-01-02 |
+
+
+    | 15.88 |  |
+
+
+    10.10 On delete clause
+
+
+    # There are two versions of ON DELETE clause
+
+
+    # 1\. ON DELETE SET NULL
+
+
+    # 2\. ON DELETE CASCADE
+
+
+    # When a foreign key is deleted than we can replace the foreign key with the value
+    0.
+
+
+    # Let’s take an example of customer table where customer id is a foreign key,
+    so to delete the entire selected row, type
+
+
+    # 1 SET foreign_key_checks = 0;
+
+
+    # 2 DELETE FROM customers
+
+
+    # 3 WHERE customer_id = 4;
+
+
+    # 4 SELECT * FROM customers;
+
+
+    # Execute and get the result
+
+
+    # THE END'
+  toc: []
+  trans: '
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    ## 让我们从 employees 表中找到 1 月入职的员工，输入
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    WHERE hire_date LIKE “____-01-__”;
+
+    ```
+
+
+    注意：年份使用四个下划线，月份使用两个下划线。
+
+
+    ### 输出
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    ## 10.2 Order by 子句
+
+
+    `ORDER BY` 子句根据我们列出的列对查询结果进行升序或降序排序。
+
+
+    ### 让我们改变 employees 表中姓名的顺序，输入
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    ORDER BY first_name DESC;
+
+    ```
+
+
+    执行并获取结果：
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    ORDER BY first_name ASC;
+
+    ```
+
+
+    执行并获取结果。
+
+
+    ## 10.3 Limit 子句
+
+
+    `LIMIT` 子句用于限制记录的数量。如果你正在处理大型数据库，它非常有用。
+
+
+    ### 让我们限制 employees 表中显示的员工数量，输入
+
+
+    ```sql
+
+    SELECT * FROM employees
+
+    LIMIT 2;
+
+    ```
+
+
+    注意：只会显示前两个位员工的详情。
+
+
+    ### 输出
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+
+    ## 10.4 Union 运算符
+
+
+    `UNION` 运算符合并两个或多个 select 语句的结果。
+
+
+    ### 让我们合并两个表（Employees 表和 Customers 表）的 `first_name` 和 `last_name`。
+
+
+    #### Employees 表
+
+
+    | employee_id | first_name | last_name | hourly_pay | hire_date |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | 1 | Eugene | Krabs | 25.50 | 2023-01-02 |
+
+    | 2 | Squidward | Tentacles | 15.00 | 2023-01-03 |
+
+    | 3 | Spongebob | Squarepants | 12.50 | 2023-01-04 |
+
+    | 4 | Patrick | Star | 12.50 | 2023-01-05 |
+
+    | 5 | Sandy | Cheeks | 17.25 | 2023-01-06 |
+
+    | 6 | Sheldon | Plankton | 10.25 | 2023-01-07 |
+
+
+    #### Customers 表
+
+
+    | customer_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 1 | Fred | Fish |
+
+    | 2 | Larry | Lobster |
+
+    | 3 | Bubble | Bass |
+
+
+    ### 使用 `UNION` 进行合并，输入
+
+
+    ```sql
+
+    SELECT first_name, last_name FROM employees
+
+    UNION
+
+    SELECT first_name, last_name FROM customers
+
+    ```
+
+
+    ### 输出
+
+
+    | first_name | last_name |
+
+    | :--- | :--- |
+
+    | Eugene | Krabs |
+
+    | Squidward | Tentacles |
+
+    | Spongebob | Squarepants |
+
+    | Patrick | Star |
+
+    | Sandy | Cheeks |
+
+    | Sheldon | Plankton |
+
+    | Fred | Fish |
+
+    | Larry | Lobster |
+
+    | Bubble | Bass |
+
+
+    注意：如果我们要合并包含重复值，请使用 `UNION ALL` 而不是 `UNION`。
+
+
+    ## 10.5 MySQL 中的视图 (Views)
+
+
+    我们可以在 MySQL 中使用 `VIEWS` 创建虚拟表。视图中的字段是数据库中一个或多个真实表中的字段。
+
+
+    ### 让我们将 employees 表视为 `employees_attendance` 表，输入
+
+
+    ```sql
+
+    CREATE employees_attendance AS
+
+    SELECT first_name, last_name
+
+    FROM employees;
+
+    ```
+
+
+    这样一切都成功了，我们有一个新的视图，输入：
+
+
+    ```sql
+
+    SELECT * FROM employees_attendance;
+
+    ```
+
+
+    ### 输出
+
+
+    | first_name | last_name |
+
+    | :--- | :--- |
+
+    | Eugene | Krabs |
+
+    | Squidward | Tentacles |
+
+    | Spongebob | Squarepants |
+
+    | Patrick | Star |
+
+    | Sandy | Cheeks |
+
+    | Sheldon | Plankton |
+
+
+    ## 10.6 MySQL 中的索引 (Indexes)
+
+
+    索引用于更快速地找到列中的值。MySQL 通常会搜索整个列。
+
+
+    #### Customers 表
+
+
+    | customer_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 1 | Fred | Fish |
+
+    | 2 | Larry | Lobster |
+
+    | 3 | Bubble | Bass |
+
+
+    ### 让我们为客户表的姓创建索引，输入
+
+
+    ```sql
+
+    CREATE INDEX last_name_idx ON customers(last_name);
+
+    ```
+
+
+    执行并获取结果。如果我想通过 `last_name` 搜索客户，输入：
+
+
+    ```sql
+
+    SELECT * FROM customers
+
+    WHERE last_name = “Bass”;
+
+    ```
+
+
+    ### 输出
+
+
+    | customer_id | first_name | last_name |
+
+    | :--- | :--- | :--- |
+
+    | 3 | Bubble | Bass |
+
+
+    ## 10.7 子查询 (Subqueries)
+
+
+    查询内部的查询被称为子查询。
+
+
+    ### 让我们显示薪资等于平均薪资的员工姓名，输入
+
+
+    ```sql
+
+    SELECT first_name, last_name, hourly_pay, (SELECT AVG (hourly_pay) FROM employees)
+    AS avg_pay FROM employees;
+
+    ```
+
+
+    执行并获取结果。
+
+
+    ## 10.8 Group by 子句
+
+
+    `GROUP BY` 子句将按特定列聚合行，通常与聚合函数如 `SUM()`、`MAX()`、`MIN()`、`COUNT()` 使用。
+
+
+    #### 交易表 (Transaction table)
+
+
+    | transaction_id | amount | Order_date |
+
+    | :--- | :--- | :--- |
+
+    | 1000 | 4.89 | 2023-01-01 |
+
+    | 1001 | 2.68 | 2023-01-01 |
+
+    | 1002 | 3.32 | 2023-01-02 |
+
+    | 1003 | 4.99 | 2023-01-02 |
+
+
+    ### 让我们在交易表上应用 group by 子句来计算每日交易额，输入
+
+
+    ```sql
+
+    SELECT SUM (amount), order_date
+
+    FROM transactions
+
+    GROUP BY order_date;
+
+    ```
+
+
+    ### 输出
+
+
+    | SUM(amount) | order_date |
+
+    | :--- | :--- |
+
+    | 7.57 | 2023-01-01 |
+
+    | 8.31 | 2023-01-02 |
+
+
+    ## 10.9 Roll up 子句
+
+
+    它是 `GROUP BY` 子句的扩展，产生另一行并显示超级聚合值。
+
+
+    ### 让我们使用 `ROLLUP` 计算交易表中的总额，输入
+
+
+    ```sql
+
+    SELECT SUM (amount), order_date
+
+    FROM transactions
+
+    GROUP BY order_date WITH ROLLUP;
+
+    ```
+
+
+    ### 输出
+
+
+    | SUM(amount) | order_date |
+
+    | :--- | :--- |
+
+    | 7.57 | 2023-01-01 |
+
+    | 8.31 | 2023-01-02 |
+
+    | 15.88 | |
+
+
+    ## 10.10 On delete 子句
+
+
+    `ON DELETE` 子句有两个版本：
+
+
+    1. `ON DELETE SET NULL`
+
+    2. `ON DELETE CASCADE`
+
+
+    当外键被删除时，我们可以将外键替换为值 0。
+
+
+    ### 让我们以客户表为例，其中 customer_id 是外键，因此要删除整个选定行，输入
+
+
+    ```sql
+
+    SET foreign_key_checks = 0;
+
+    DELETE FROM customers
+
+    WHERE customer_id = 4;
+
+    SELECT * FROM customers;
+
+    ```
+
+
+    执行并获取结果。
+
+
+    # 结束
+
+
+    '

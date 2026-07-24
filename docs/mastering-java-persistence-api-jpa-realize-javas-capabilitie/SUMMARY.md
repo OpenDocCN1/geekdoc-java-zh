@@ -1,0 +1,2 @@
++   [精通 Java Persistence API (JPA)：释放跨 RDBMS、ORM、JDBC、缓存、锁、事务管理和 JPQL 的 Java 能力（英文版）](README.md)
++   [精通 Java Persistence API (JPA)：释放跨 RDBMS、ORM、JDBC、缓存、锁、事务管理和 JPQL 的 Java 能力（英文版）](mastering-java-persistence-api-jpa-realize-javas-capabilitie_0.md)

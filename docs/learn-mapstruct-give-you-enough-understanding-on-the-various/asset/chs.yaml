@@ -1,0 +1,800 @@
+- "# 学习 MapStruct：通过示例带你深入 MapStruct 的各种功能\n\n\n\n![](img/Image00001.jpg)\n\n\n我想将这本书献给将使用这本书的学生们。祝你们未来职业成功，并希望你们永不停学习。\n\
+  \n\n# 概述\n\nMapStruct 是一个插件到 Java 编译器的注解处理器。一旦插件完成后，就可以被 `maven`、`gradle` 等命令行工具来处理映射注解，从而在编译时创建映射器类。\n\
+  \n## 什么时候需要映射？\n\n在多层应用中，数据对象被用于从数据库获取数据，而 UI 与 Model 交互。现在，将获取到数据模型中的数据需要映射到 `Model`\
+  \ 或 `java beans` 以传递给 UI。考虑以下情况。\n\n与数据库连接的实体类。\n\n`StudentEntity.java`\n\n```java\n\
+  @Entity\nclass StudentEntity {\n    String id ;\n    String name ;\n}\n```\n\n与\
+  \ UI 连接的模型类。\n\n`Student.java`\n\n```java\nclass Student {\n    String id ;\n  \
+  \  String name ;\n}\n```\n\n## MapStruct 如何工作？\n\nMapStruct 通过注解自动化创建映射器的过程，用于将数据对象映射到模型对象。它在编译时创建一个映射器实现，这有助于开发者在开发过程中发现错误并使其易于理解。例如——\n\
+  \n`StudentMapper.java`\n\n```java\n@Mapper\nclass StudentMapper {\n    StudentMapper\
+  \ INSTANCE = Mappers . getMapper ( StudentMapper . class );\n    StudentEntity modelToEntity\
+  \ ( Student student );\n}\n```\n\n现在可以使用 `StudentMapper.INSTANCE` 轻松地获取映射后的对象。\n\
+  \n```java\nStudentEntity studentEntity = StudentMapper.INSTANCE.modelToEntity(student);\n\
+  ```\n\n# 环境搭建\n\nMapStruct 是基于 Java 的库，因此第一个要求是在你的机器上安装 JDK。\n\n## 第 1 步 - 安装 Java\
+  \ 开发包 (JDK)\n\n你可以从 Oracle 的 Java 网站下载最新版本的 SDK —— **Java SE Downloads.**。你将在下载的文件找到安装\
+  \ JDK 的说明，按照给定的说明进行安装和配置设置。最后设置 `PATH` 和 `JAVA_HOME` 环境变量指向包含 `java` 和 `javac` 的目录，通常分别为\
+  \ `java_install_dir/bin` 和 `java_install_dir`。\n\n如果你正在运行 Windows 并且 JDK 安装在 `C:\\\
+  jdk-9.0.1`，你将需要在你的 `C:\\autoexec.bat` 文件中放入以下行。\n\n```batch\nset PATH=C:\\jdk-9.0.1\\\
+  bin;%PATH%\nset JAVA_HOME=C:\\jdk-9.0.1\n```\n\n或者，在 Windows NT/2000/XP 上，你将需要右键点击“我的电脑”，选择属性\
+  \ → 高级 → 环境变量。然后，你必须更新 `PATH` 值并点击确定按钮。\n\n在 Unix 上，如果你将 JDK 安装在 `/usr/local/jdk-9.0.1`\
+  \ 并且使用 c shell，你将需要在 `.cshrc` 中放入以下内容：\n\n```bash\nsetenv PATH /usr/local/jdk-9.0.1/bin\n\
+  setenv JAVA_HOME /usr/local/jdk-9.0.1\n```\n\n或者，如果你使用集成开发环境 (IDE) 如 Eclipse、IntelliJ\
+  \ IDEA 或 Sun Studio，你将编译并运行一个简单的程序。\n\n## 第 2 步 - 安装 mapstruct 库\n\n从 Maven 仓库下载\
+  \ mapstruct 依赖项，并将它们添加到你的类路径中。\n\n- `mapstruct-1.3.Final`\n- `mapstruct-processor-1.3.Final`\n\
+  \n## 第 3 步 - 设置 IDE\n\n要安装 Eclipse，从 `https://www.eclipse.org/downloads/` 下载最新的\
+  \ Eclipse。下载后将二进制发行版解压到一个方便的位置。例如，在 Windows 上通过执行 `C:\\eclipse\\eclipse.exe` 启动。在\
+  \ Unix (Solaris, Linux) 上，如果一切正常应该显示以下结果：\n\n## 第 4 步 - 创建 Maven 项目\n\n运行以下命令来创建一个\
+  \ Maven 项目。\n\n```bash\nmvn archetype:generate -DgroupId=com.tutorialoint.mapping\
+  \ -DartifactId=mapping -DarchetypeId=maven-archetype-quickstart -DinteractiveMode=false\n\
+  ```\n\n这将创建一个 Maven 项目。现在更新 `pom.xml` 文件如下：\n\n```xml\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\
+  \ xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  xsi:schemaLocation=\"\
+  http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n\
+  \  <groupId>com.tutorialoint.mapping</groupId>\n  <artifactId>mapping</artifactId>\n\
+  \  <packaging>jar</packaging>\n  <version>1.0-SNAPSHOT</version>\n  <name>mapping</name>\n\
+  \  <url>http://maven.apache.org</url>\n  <dependencies>\n    <dependency>\n    \
+  \  <groupId>org.junit.jupiter</groupId>\n      <artifactId>junit-jupiter-engine</artifactId>\n\
+  \      <version>5.0.0</version>\n      <scope>test</scope>\n    </dependency>\n\
+  \    <dependency>\n      <groupId>org.mapstruct</groupId>\n      <artifactId>mapstruct</artifactId>\n\
+  \      <version>1.3.1.Final</version>\n    </dependency>\n  </dependencies>\n  <build>\n\
+  \    <plugins>\n      <plugin>\n        <groupId>org.apache.maven.plugins</groupId>\n\
+  \        <artifactId>maven-compiler-plugin</artifactId>\n        <version>3.8.1</version>\n\
+  \        <configuration>\n          <source>1.9</source>\n          <target>1.9</target>\n\
+  \          <annotationProcessorPaths>\n            <path>\n              <groupId>org.mapstruct</groupId>\n\
+  \              <artifactId>mapstruct-processor</artifactId>\n              <version>1.3.1.Final</version>\n\
+  \            </path>\n          </annotationProcessorPaths>\n        </configuration>\n\
+  \      </plugin>\n    </plugins>\n  </build>\n</project>\n```\n\n运行以下命令来更新 Maven\
+  \ 依赖并构建项目。\n\n```bash\nmvn package\n```\n\n一旦命令成功。将基于 Maven 的项目导入到 Eclipse 作为 Maven\
+  \ 项目。其余部分由 Eclipse 处理。\n\n# 基础映射\n\n使用 MapStruct 非常简单。要创建映射器，在接口上使用 `org.mapstruct.Mapper`\
+  \ 注解。\n\n```java\n@Mapper\npublic interface StudentMapper {...}\n```\n\n现在在接口中创建一个转换方法。\n\
+  \n```java\n@Mapper\npublic interface StudentMapper {\n    Student getModelFromEntity\
+  \ ( StudentEntity student );\n}\n```\n\n\n\n\n如果源对象和目标对象的属性具有相同的名称，这些属性将自动映射。如果属性名称不同，请使用如下\
+  \ `@Mapping` 注解 −\n\n```java\n@Mapper\npublic interface StudentMapper {\n    @Mapping\
+  \ ( target = \"className\" , source = \"classVal\" )\n    Student getModelFromEntity\
+  \ ( StudentEntity student );\n}\n```\n\n在这里，`className` 是 `Student` 中的属性名（目标对象），而\
+  \ `classVal` 是 `StudentEntity` 中的属性名（源对象）。\n\n## 示例\n\n在 Eclipse 中打开在 `Environment\
+  \ Setup` 章节中创建的项目映射。\n\n使用以下代码创建 `Student.java` −\n\n```java\npackage com . tutorialspoint\
+  \ . model ;\n\npublic class Student {\n    private int id ;\n    private String\
+  \ name ;\n    private String className ;\n\n    public int getId () {\n        return\
+  \ id ;\n    }\n\n    public void setId ( int id ) {\n        this . id = id ;\n\
+  \    }\n\n    public String getName () {\n        return name ;\n    }\n\n    public\
+  \ void setName ( String name ) {\n        this . name = name ;\n    }\n\n    public\
+  \ String getClassName () {\n        return className ;\n    }\n\n    public void\
+  \ setClassName ( String className ) {\n        this . className = className ;\n\
+  \    }\n}\n```\n\n使用以下代码创建 `StudentEntity.java` −\n\n```java\npackage com . tutorialspoint\
+  \ . entity ;\n\npublic class StudentEntity {\n    private int id ;\n    private\
+  \ String name ;\n    private String classVal ;\n\n    public int getId () {\n  \
+  \      return id ;\n    }\n\n    public void setId ( int id ) {\n        this .\
+  \ id = id ;\n    }\n\n    public String getName () {\n        return name ;\n  \
+  \  }\n\n    public void setName ( String name ) {\n        this . name = name ;\n\
+  \    }\n\n    public String getClassVal () {\n        return classVal ;\n    }\n\
+  \n    public void setClassVal ( String classVal ) {\n        this . classVal = classVal\
+  \ ;\n    }\n}\n```\n\n使用以下代码创建 `StudentMapper.java` −\n\n```java\npackage com .\
+  \ tutorialspoint . mapper ;\n\nimport org . mapstruct . Mapper ;\nimport org . mapstruct\
+  \ . Mapping ;\nimport com . tutorialspoint . entity . StudentEntity ;\nimport com\
+  \ . tutorialspoint . model . Student ;\n\n@Mapper\npublic interface StudentMapper\
+  \ {\n    @Mapping ( target = \"className\" , source = \"classVal\" )\n    Student\
+  \ getModelFromEntity ( StudentEntity student );\n\n    @Mapping ( target = \"classVal\"\
+  \ , source = \"className\" )\n    StudentEntity getEntityFromModel ( Student student\
+  \ );\n}\n```\n\n使用以下代码创建 `StudentMapperTest.java` −\n\n```java\npackage com . tutorialspoint\
+  \ . mapping ;\n\nimport static org . junit . jupiter . api . Assertions . assertEquals\
+  \ ;\nimport org . junit . jupiter . api . Test ;\nimport org . mapstruct . factory\
+  \ . Mappers ;\nimport com . tutorialspoint . entity . StudentEntity ;\nimport com\
+  \ . tutorialspoint . mapper . StudentMapper ;\nimport com . tutorialspoint . model\
+  \ . Student ;\n\npublic class StudentMapperTest {\n    private StudentMapper studentMapper\
+  \ = Mappers . getMapper ( StudentMapper . class );\n\n    @Test\n    public void\
+  \ testEntityToModel () {\n        StudentEntity entity = new StudentEntity ();\n\
+  \        entity . setClassVal ( \"X\" );\n        entity . setName ( \"John\" );\n\
+  \        entity . setId ( 1 );\n        Student model = studentMapper . getModelFromEntity\
+  \ ( entity );\n        assertEquals ( entity . getClassVal (), model . getClassName\
+  \ ());\n        assertEquals ( entity . getName (), model . getName ());\n     \
+  \   assertEquals ( entity . getId (), model . getId ());\n    }\n\n    @Test\n \
+  \   public void testModelToEntity () {\n        Student model = new Student ();\n\
+  \        model . setId ( 1 );\n        model . setName ( \"John\" );\n        model\
+  \ . setClassName ( \"X\" );\n        StudentEntity entity = studentMapper . getEntityFromModel\
+  \ ( model );\n        assertEquals ( entity . getClassVal (), model . getClassName\
+  \ ());\n        assertEquals ( entity . getName (), model . getName ());\n     \
+  \   assertEquals ( entity . getId (), model . getId ());\n    }\n}\n```\n\n运行以下命令来测试映射。\n\
+  \n```bash\nmvn clean test\n```\n\n## 输出\n\n一旦命令执行成功，验证输出。\n\n```bash\nmvn clean\
+  \ test\n\n[INFO] Scanning for projects...\n...\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n-------------------------------------------------------\n\
+  T E S T S\n-------------------------------------------------------\nRunning com.tutorialspoint.mapping.StudentMapperTest\n\
+  Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec\n...\n\
+  ```\n\n## 自定义映射\n\n我们还可以为使用 `org.mapstruct.Mapper` 注解创建的 Mapper 添加自定义方法。我们也可以创建抽象类而不是接口。Mapstruct\
+  \ 会自动创建相应的映射器类。\n\n现在在接口中创建一个默认的转换方法。\n\n```java\n@Mapper\npublic interface StudentMapper\
+  \ {\n    default Student getModelFromEntity ( StudentEntity studentEntity ){\n \
+  \       Student student = new Student ();\n        student . setId ( studentEntity\
+  \ . getId ());\n        student . setName ( studentEntity . getName ());\n     \
+  \   student . setClassName ( studentEntity . getClassVal ());\n        return student\
+  \ ;\n    }\n}\n```\n\n同样地，我们也可以创建一个抽象类作为映射器。\n\n```java\n@Mapper\npublic absgract\
+  \ class StudentMapper {\n    Student getModelFromEntity ( StudentEntity studentEntity\
+  \ ){\n        Student student = new Student ();\n        student . setId ( studentEntity\
+  \ .getId ());\n        student . setName ( studentEntity . getName ());\n      \
+  \  student . setClassName ( studentEntity . getClassVal ());\n        return student\
+  \ ;\n    }\n}\n```\n\n\n\n\n\n```java\nmodel.setName ( \"John\" );\n\nmodel.setClassName\
+  \ ( \"X\" );\n\nStudentEntity entity = studentMapper.getEntityFromModel ( model\
+  \ );\n\nassertEquals ( entity.getClassVal (), model.getClassName ());\n\nassertEquals\
+  \ ( entity.getName (), model.getName ());\n\nassertEquals ( entity.getId (), model.getId\
+  \ ());\n\n}\n\n}\n```\n\n运行以下命令来测试映射。\n\n```bash\nmvn clean test\n```\n\n## 输出\n\
+  \n一旦命令执行成功，验证输出。\n\n```bash\nmvn clean test\n\n[INFO] Scanning for projects...\n\
+  \n...\n\n[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ mapping ---\n\
+  \n[INFO] Surefire report directory: \\mvn\\mapping\\target\\surefire-reports\n\n\
+  -------------------------------------------------------\n\nT E S T S\n\n-------------------------------------------------------\n\
+  \nRunning com.tutorialspoint.mapping.StudentMapperTest\n\nTests run: 2, Failures:\
+  \ 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec\n\n...\n```\n\n# 映射多个对象\n\n\
+  我们也可以添加映射多个对象的映射。例如，我们想要使用 `Student` 和 `Address` 对象来获取一个 `DeliveryAddress` 对象。\n\
+  \n现在创建一个映射接口，它可以将两个对象映射到一个对象。\n\n```java\n@Mapper\n\npublic interface DeliveryAddressMapper\
+  \ {\n@Mapping ( source = \"student.name\" , target = \"name\" )\n@Mapping ( source\
+  \ = \"address.houseNo\" , target = \"houseNumber\" )\nDeliveryAddress getDeliveryAddress\
+  \ ( StudentEntity student , AddressEntity address );\n\n}\n```\n\n## 示例\n\n在 Eclipse\
+  \ 中按照`映射多个对象`章节中的更新打开项目映射。\n\n使用以下代码创建 `DeliveryAddress.java` ——\n\nDeliveryAddress.java\n\
+  ```java\npackage . tutorialspoint . model ;\n\npublic class DeliveryAddress {\n\
+  private String name ;\n\nprivate int houseNumber ;\n\nprivate String city ;\n\n\
+  private String state ;\n\npublic String getName () {\nreturn name ;\n}\n\npublic\
+  \ void setName ( String name ) {\nthis . name = name ;\n}\n\npublic int getHouseNumber\
+  \ () {\nreturn houseNumber ;\n}\n\npublic void setHouseNumber ( int houseNumber\
+  \ ) {\nthis . houseNumber = houseNumber ;\n}\n\npublic String getCity () {\nreturn\
+  \ city ;\n}\n\npublic void setCity ( String city ) {\nthis . city = city ;\n}\n\n\
+  public String getState () {\nreturn state ;\n}\n\npublic void setState ( String\
+  \ state ) {\nthis . state = state ;\n}\n\n}\n```\n\n使用以下代码创建 `AddressEntity.java`\
+  \ ——\n\nAddressEntity.java\n```java\npackage . tutorialspoint . entity ;\n\npublic\
+  \ class AddressEntity {\nprivate int houseNo ;\n\nprivate String city ;\n\nprivate\
+  \ String state ;\n\npublic int getHouseNo () {\nreturn houseNo ;\n}\n\npublic void\
+  \ setHouseNo ( int houseNo ) {\nthis . houseNo = houseNo ;\n}\n\npublic String getCity\
+  \ () {\nreturn city ;\n}\n\npublic void setCity ( String city ) {\nthis . city =\
+  \ city ;\n}\n\npublic String getState () {\nreturn state ;\n}\n\npublic void setState\
+  \ ( String state ) {\nthis . state = state ;\n}\n\n}\n```\n\n使用以下代码创建 `DeliveryAddressMapper.java`\
+  \ ——\n\nDeliveryAddressMapper.java\n```java\npackage . tutorialspoint . mapper ;\n\
+  \nimport org . mapstruct . Mapper ;\n\nimport org . mapstruct . Mapping ;\n\nimport\
+  \ com . tutorialspoint . entity . AddressEntity ;\n\nimport com . tutorialspoint\
+  \ . entity . StudentEntity ;\n\nimport com . tutorialspoint . model . DeliveryAddress\
+  \ ;\n\n@Mapper\n\npublic interface DeliveryAddressMapper {\n@Mapping ( source =\
+  \ \"student.name\" , target = \"name\" )\n@Mapping ( source = \"address.houseNo\"\
+  \ , target = \"houseNumber\" )\nDeliveryAddress getDeliveryAddress ( StudentEntity\
+  \ student , AddressEntity address );\n\n}\n```\n\n使用以下代码创建 `DeliveryAddressMapperTest.java`\
+  \ ——\n\nDeliveryAddressMapperTest.java\n```java\npackage . tutorialspoint . mapping\
+  \ ;\n\nimport static org . junit . jupiter . api . Assertions . assertEquals ;\n\
+  \nimport org . junit . jupiter . api . Test ;\n\nimport org . mapstruct . factory\
+  \ . Mappers ;\n\nimport com . tutorialspoint . entity . AddressEntity ;\n\nimport\
+  \ com . tutorialspoint . entity . StudentEntity ;\n\nimport com . tutorialspoint\
+  \ . mapper . DeliveryAddressMapper ;\n\nimport com . tutorialspoint . model . DeliveryAddress\
+  \ ;\n\npublic class DeliveryAddressMapperTest {\nprivate DeliveryAddressMapper deliveryAddressMapper\
+  \ = Mappers . getMapper ( DeliveryAddressMapper . class );\n\n@Test\n\npublic void\
+  \ testEntityToModel () {\nStudentEntity student = new StudentEntity ();\nstudent\
+  \ . setClassVal ( \"X\" );\nstudent . setName ( \"John\" );\nstudent . setId ( 1\
+  \ );\nAddressEntity address = new AddressEntity ();\naddress . setCity ( \"Y\" );\n\
+  address . setState ( \"Z\" );\naddress . setHouseNo ( 1 );\nDeliveryAddress deliveryAddress\
+  \ = deliveryAddressMapper . getDeliveryAddress ( student , address );\nassertEquals\
+  \ ( deliveryAddress .getName (), student . getName ());\nassertEquals ( deliveryAddress\
+  \ .getCity (), address . getCity ());\nassertEquals ( deliveryAddress .getState\
+  \ (), address . getState ());\nassertEquals ( deliveryAddress .getHouseNumber (),\
+  \ address . getHouseNo ());\n}\n\n}\n```\n\n运行以下命令来测试映射。\n\n```bash\nmvn clean test\n\
+  ```\n\n## 输出\n\n一旦命令执行成功，验证输出。\n\n```bash\nmvn clean test\n\n[INFO] Scanning for\
+  \ projects...\n\n...\n\n[INFO] --- maven-surefire-plugin:2.12.4:test (default-test)\
+  \ @ mapping ---\n\n[INFO] Surefire report directory: \\mvn\\mapping\\target\\surefire-reports\n\
+  \n-------------------------------------------------------\n\nT E S T S\n\n-------------------------------------------------------\n\
+  \nRunning com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\nTests run: 1,\
+  \ Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\n\nRunning com.tutorialspoint.mapping.StudentMapperTest\n\
+  \nTests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\n\n\
+  Results :\n\nTests run: 3, Failures: 0, Errors: 0, Skipped: 0\n```\n\n# 映射嵌套 Bean\n\
+  \nMapStruct 处理嵌套映射。例如，一个带有 `Subject` 作为嵌套 Bean 的 `Student`。\n\n现在创建一个映射接口，它可以对嵌套对象进行映射。\n\
+  \n```java\n@Mapper\n\npublic interface StudentMapper {\n@Mapping ( target = \"className\"\
+  \ , source = \"classVal\" )\n@Mapping ( target = \"subject.name\" , source = \"\
+  subject\" )\nStudentEntity getModelFromEntity ( StudentEntity student );\n\n}\n\
+  ```\n\n\n\n\n```java\npackage com.tutorialspoint.mapper ;\n\nimport org.mapstruct.Mapper\
+  \ ;\nimport org.mapstruct.Mapping ;\nimport com.tutorialspoint.entity.StudentEntity\
+  \ ;\nimport com.tutorialspoint.model.Student ;\n\n@Mapper\npublic interface StudentMapper\
+  \ {\n\n    @Mapping ( target = \"className\" , source = \"classVal\" )\n    @Mapping\
+  \ ( target = \"subject\" , source = \"subject.name\" )\n    Student getModelFromEntity\
+  \ ( StudentEntity studentEntity );\n\n    @Mapping ( target = \"classVal\" , source\
+  \ = \"className\" )\n    @Mapping ( target = \"subject.name\" , source = \"subject\"\
+  \ )\n    StudentEntity getEntityFromModel ( Student student );\n}\n```\n\n使用以下代码更新\
+  \ `StudentMapperTest.java`：\n\n```java\nStudentMapperTest.java\n\npackage com.tutorialspoint.mapping\
+  \ ;\n\nimport static org.junit.jupiter.api.Assertions.assertEquals ;\nimport org.junit.jupiter.api.Test\
+  \ ;\nimport org.mapstruct.factory.Mappers ;\nimport com.tutorialspoint.entity.StudentEntity\
+  \ ;\nimport com.tutorialspoint.entity.SubjectEntity ;\nimport com.tutorialspoint.mapper.StudentMapper\
+  \ ;\nimport com.tutorialspoint.model.Student ;\n\npublic class StudentMapperTest\
+  \ {\n    private StudentMapper studentMapper = Mappers.getMapper ( StudentMapper.class\
+  \ );\n\n    @Test\n    public void testEntityToModel () {\n        StudentEntity\
+  \ entity = new StudentEntity ();\n        entity.setClassVal ( \"X\" );\n      \
+  \  entity.setName ( \"John\" );\n        entity.setId ( 1 );\n        SubjectEntity\
+  \ subject = new SubjectEntity ();\n        subject.setName ( \"Computer\" );\n \
+  \       entity.setSubject ( subject );\n        Student model = studentMapper.getModelFromEntity\
+  \ ( entity );\n        assertEquals ( entity.getClassVal (), model.getClassName\
+  \ ());\n        assertEquals ( entity.getName (), model.getName ());\n        assertEquals\
+  \ ( entity.getId (), model.getId ());\n        assertEquals ( entity.getSubject\
+  \ ().getName (), model.getSubject ());\n    }\n\n    @Test\n    public void testModelToEntity\
+  \ () {\n        Student model = new Student ();\n        model.setId ( 1 );\n  \
+  \      model.setName ( \"John\" );\n        model.setClassName ( \"X\" );\n    \
+  \    model.setSubject ( \"Science\" );\n        StudentEntity entity = studentMapper.getEntityFromModel\
+  \ ( model );\n        assertEquals ( entity.getClassVal (), model.getClassName ());\n\
+  \        assertEquals ( entity.getName (), model.getName ());\n        assertEquals\
+  \ ( entity.getId (), model.getId ());\n        assertEquals ( entity.getSubject\
+  \ ().getName (), model.getSubject ());\n    }\n}\n```\n\n运行以下命令来测试映射。\n\n```bash\n\
+  mvn clean test\n```\n\n## 输出\n\n一旦命令执行成功，请验证输出。\n\n```bash\nmvn clean test\n```\n\
+  \n```text\n[INFO] Scanning for projects...\n...\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n-------------------------------------------------------\n\
+  T E S T S\n-------------------------------------------------------\nRunning com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\
+  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec\nRunning\
+  \ com.tutorialspoint.mapping.StudentMapperTest\nTests run: 2, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0.002 sec\nResults :\nTests run: 3, Failures: 0,\
+  \ Errors: 0, Skipped: 0\n...\n```\n\n# 映射直接字段\n\nMapStruct 轻松地处理直接字段映射。例如，一个 `section`\
+  \ 为私有属性的 `Student`，以及一个 `section` 为公共属性的 `StudentEntity`。要实现 get getter/setter 映射，属性应该是公共的。如果是\
+  \ `public final` 类型，则只存在 getter 方法用于映射。\n\n现在创建一个映射器接口。我们将使用 `@InheritInverseConfiguration`\
+  \ 注解来现在复制反向配置。\n\n```java\n@Mapper\npublic interface StudentMapper {\n    @Mapping\
+  \ ( target = \"className\" , source = \"classVal\" )\n    @Mapping ( target = \"\
+  subject\" , source = \"subject.name\" )\n    Student getModelFromEntity ( StudentEntity\
+  \ studentEntity );\n\n    @InheritInverseConfiguration\n    StudentEntity getEntityFromModel\
+  \ ( Student student );\n}\n```\n\n## 示例\n\n在 Eclipse 中像**映射嵌套对象**章节中更新的那样打开项目映射。\n\
+  \n使用以下代码更新 `StudentEntity.java`：\n\n```java\nStudentEntity.java\n\npackage com.tutorialspoint.entity\
+  \ ;\n\npublic class StudentEntity {\n    private int id ;\n    private String name\
+  \ ;\n    private String classVal ;\n    private SubjectEntity subject ;\n    public\
+  \ String section ;\n\n    public int getId () {\n        return id ;\n    }\n\n\
+  \    public void setId ( int id ) {\n        this.id = id ;\n    }\n\n    public\
+  \ String getName () {\n        return name ;\n    }\n\n    public void setName (\
+  \ String name ) {\n        this.name = name ;\n    }\n\n    public String getClassVal\
+  \ () {\n        return classVal ;\n    }\n\n    public void setClassVal ( String\
+  \ classVal ) {\n        this.classVal = classVal ;\n    }\n\n    public SubjectEntity\
+  \ getSubject () {\n        return subject ;\n    }\n\n    public void setSubject\
+  \ ( SubjectEntity subject ) {\n        this.subject = subject ;\n    }\n}\n```\n\
+  \n使用以下代码更新 `Student.java`：\n\n```java\nStudent.java\n\npackage com.tutorialspoint.model\
+  \ ;\n\npublic class Student {\n    private int id ;\n    private String name ;\n\
+  \    private String className ;\n    private String subject ;\n    private String\
+  \ section ;\n\n    public int getId () {\n        return id ;\n    }\n\n    public\
+  \ void setId ( int id ) {\n        this.id = id ;\n    }\n\n    public String getName\
+  \ () {\n        return name ;\n    }\n\n    public void setName ( String name )\
+  \ {\n        this.name = name ;\n    }\n\n    public String getClassName () {\n\
+  \        return className ;\n    }\n\n    public void setClassName ( String className\
+  \ ) {\n        this.className = className ;\n    }\n\n    public String getSubject\
+  \ () {\n        return subject ;\n    }\n\n    public void setSubject ( String subject\
+  \ ) {\n        this.subject = subject ;\n    }\n\n    public String getSection ()\
+  \ {\n        return section ;\n    }\n\n    public void setSection ( String section\
+  \ ) {\n        this.section = section ;\n    }\n}\n```\n\n使用以下代码更新 `StudentMapper.java`：\n\
+  \n```java\nStudentMapper.java\n\npackage com.tutorialspoint.mapper ;\n\nimport org.mapstruct.InheritInverseConfiguration\
+  \ ;\nimport org.mapstruct.Mapper ;\nimport org.mapstruct.Mapping ;\nimport com.tutorialspoint.entity.StudentEntity\
+  \ ;\nimport com.tutorialspoint.model.Student ;\n\n@Mapper\npublic interface StudentMapper\
+  \ {\n    @Mapping ( target = \"className\" , source = \"classVal\" )\n    @Mapping\
+  \ ( target = \"subject\" , source = \"subject.name\" )\n    Student getModelFromEntity\
+  \ ( StudentEntity studentEntity );\n\n    @InheritInverseConfiguration\n    StudentEntity\
+  \ getEntityFromModel ( Student student );\n}\n```\n\n\n\n\n\n```java\nassertEquals\
+  \ ( entity .getId (), model .getId ());\n\nassertEquals ( entity . getSubject ().getName\
+  \ (), model . getSubject ());\n\nassertEquals ( entity . section , model . getSection\
+  \ ());\n\n}\n\n}\n```\n\n运行以下命令来测试映射。\n\n```bash\nmvn clean test\n```\n\n## 输出\n\
+  \n一旦命令执行成功，验证输出。\n\n```bash\nmvn clean test\n\n[INFO] Scanning for projects...\n\
+  \n...\n\n[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ mapping ---\n\
+  \n[INFO] Surefire report directory: \\mvn\\mapping\\target\\surefire-reports\n\n\
+  -------------------------------------------------------\n\nT E S T S\n-------------------------------------------------------\n\
+  \nRunning com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\nTests run: 1,\
+  \ Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec\n\nRunning com.tutorialspoint.mapping.StudentMapperTest\n\
+  \nTests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec\n\n\
+  Results :\n\nTests run: 3, Failures: 0, Errors: 0, Skipped: 0\n\n...\n```\n\n# 使用\
+  \ Builder\n\nMapStruct 允许使用 Builder。我们可以使用 Builder 框架，也可以使用自定义的 builder。在下面的示例中，我们正在使用自定义的\
+  \ builder。\n\n## 示例\n\n在 Eclipse 中按照 `直接映射字段 (Mapping Direct Fields)` 章节更新项目映射。\n\
+  \n使用以下代码更新 `Student.java` ：\n\n```java\nStudent.java\npackage com . tutorialspoint\
+  \ . model ;\n\npublic class Student {\n\nprivate final String name ;\n\nprivate\
+  \ final int id ;\n\nprotected Student ( Student . Builder builder ) {\nthis . name\
+  \ = builder . name ;\nthis . id = builder . id ;\n}\n\npublic static Student . Builder\
+  \ builder () {\n\nreturn new Student . Builder ();\n}\n\npublic static class Builder\
+  \ {\n\nprivate String name ;\n\nprivate int id ;\n\npublic Builder name ( String\
+  \ name ) {\nthis . name = name ;\nreturn this ;\n\n}\n\npublic Builder id ( int\
+  \ id ) {\nthis . id = id ;\nreturn this ;\n}\n\npublic Student create () {\nreturn\
+  \ new Student ( this );\n}\n\n}\n\npublic String getName () {\nreturn name ;\n}\n\
+  \npublic int getId () {\nret + urn id ;\n}\n\n}\n```\n\n使用以下代码更新 `StudentMapper.java`\
+  \ ：\n\n```java\nStudentMapper.java\npackage com . tutorialspoint . mapper ;\n\n\
+  import org . mapstruct . Mapper ;\n\nimport org . mapstruct . Mapping ;\nimport\
+  \ com . tutorialspoint . entity . StudentEntity ;\n\nimport com . tutorialspoint\
+  \ . model . Student ;\n\n@Mapper\npublic interface StudentMapper {\n\nStudent getModelFromEntity\
+  \ ( StudentEntity studentEntity );\n\n@Mapping ( target = \"id\" , source = \"id\"\
+  \ )\n@Mapping ( target = \"name\" , source = \"name\" )\nStudentEntity getEntityFromModel\
+  \ ( Student student );\n\n}\n```\n\n使用以下代码更新 `StudentMapperTest.java` ：\n\n```java\n\
+  StudentMapperTest.java\npackage com . tutorialspoint . mapping ;\n\nimport static\
+  \ org . junit . jupiter . api . Assertions . assertEquals ;\n\nimport org . junit\
+  \ . jupiter . api . Test ;\nimport org . mapstruct . factory . Mappers ;\nimport\
+  \ com . tutorialspoint . entity . StudentEntity ;\n\nimport com . tutorialspoint\
+  \ . entity . SubjectEntity ;\nimport com . tutorialspoint . mapper . StudentMapper\
+  \ ;\nimport com . tutorialspoint . model . Student ;\n\npublic class StudentMapperTest\
+  \ {\n\nprivate StudentMapper studentMapper = Mappers . getMapper ( StudentMapper\
+  \ . class );\n\n@Test\npublic void testEntityToModel () {\n\nStudentEntity entity\
+  \ = new StudentEntity ();\n\nentity . setName ( \"John\" );\nentity . setId ( 1\
+  \ );\nStudent model = studentMapper . getModelFromEntity ( entity );\nassertEquals\
+  \ ( entity . getName (), model . getName ());\nassertEquals ( entity .getId (),\
+  \ model . getId ());\n}\n\n@Test\npublic void testModelToEntity () {\n\nStudent\
+  \ . Builder builder = Student . builder (). id ( 1 ). name ( \"John\" );\nStudent\
+  \ model = builder . create ();\nStudentEntity entity = studentMapper . getEntityFromModel\
+  \ ( model );\nassertEquals ( entity . getName (), model . getName ());\nassertEquals\
+  \ ( entity .getId (), model .getId ());\n}\n\n}\n\n```\n\n运行以下命令来测试映射。\n\n```bash\n\
+  mvn clean test\n```\n\n## 输出\n\n一旦命令执行成功，验证输出。\n\n```bash\nmvn clean test\n\n[INFO]\
+  \ Scanning for projects...\n\n...\n\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n\n-------------------------------------------------------\n\
+  \nT E S T S\n-------------------------------------------------------\n\nRunning\
+  \ com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\nTests run: 1, Failures:\
+  \ 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec\n\nRunning com.tutorialspoint.mapping.StudentMapperTest\n\
+  \nTests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec\n\n\
+  Results :\n\nTests run: 3, Failures: 0, Errors: 0, Skipped: 0\n\n...\n```\n\n# 隐式类型转换\n\
+  \nMapStruct 在大多数情况下会自动处理类型转换。例如，`int` 到 `Long` 的转换。MapStruct 也会处理空值。以下是一些重要的自动转换情况：\n\
+  \n- 基本类型到包装类。\n- 基本类型到 `String`。\n- 枚举类型到 `String`。\n- `Integer` 到 `BigDecimal`。\n\
+  - `Calendar` 到 `XMLGregCalendar`。\n- `date` 到 `String`。\n\n## 示例\n\n在 Eclipse 中按照\
+  \ `Builder` 章节更新项目映射。\n\n使用以下代码更新 `StudentEntity.java` ：\n\n```java\nStudentEntity.java\n\
+  package com . tutorialspoint . entity ;\n\npublic class StudentEntity {\n\nprivate\
+  \ String id ;\n\nprivate String name ;\n\nprivate String classVal ;\n\nprivate SubjectEntity\
+  \ subject ;\n\nprivate String section ;\n\npublic String getId () {\nreturn id ;\n\
+  }\n\npublic void setId ( String id ) {\nthis . id = id ;\n}\n\npublic String getName\
+  \ () {\nreturn name ;\n}\n\npublic void setName ( String name ) {\nthis . name =\
+  \ name ;\n}\n\npublic String getClassVal () {\nreturn classVal ;\n}\n\npublic void\
+  \ setClassVal ( String classVal ) {\nthis . classVal = classVal ;\n}\n\npublic SubjectEntity\
+  \ getSubject () {\nreturn subject ;\n}\n\npublic void setSubject ( SubjectEntity\
+  \ subject ) {\nthis . subject = subject ;\n}\n\npublic String getSection () {\n\
+  return section ;\n}\n\npublic void setSection ( String section ) {\nthis . section\
+  \ = section ;\n}\n\n}\n```\n\n`Student.java` 的代码保持不变：\n\n```java\nStudent.java\n\
+  package com . tutorialspoint . model ;\n\npublic class Student {\n\nprivate final\
+  \ String name ;\n\nprivate final int id ;\n\nprotected Student ( Student . Builder\
+  \ builder ) {\nthis . name = builder . name ;\nthis . id = builder . id ;\n}\n\n\
+  public static Student . Builder builder () {\n\nreturn new Student . Builder ();\n\
+  }\n\npublic static class Builder {\n\nprivate String name ;\n\nprivate int id ;\n\
+  \npublic Builder name ( String name ) {\nthis . name = name ;\nreturn this ;\n\n\
+  }\n\npublic Builder id ( int id ) {\nthis . id = id ;\nreturn this ;\n}\n\npublic\
+  \ Student create () {\nreturn new Student ( this );\n}\n\n}\n\npublic String getName\
+  \ () {\nreturn name ;\n}\n\npublic int getId () {\nret + urn id ;\n}\n\n}\n```\n\
+  \n使用以下代码更新 `DeliveryAddressMapperTest.java` ：\n\n```java\nDeliveryAddressMapperTest.java\n\
+  package com . tutorialspoint . mapping ;\n\nimport static org . junit . jupiter\
+  \ . api . Assertions . assertEquals ;\n\nimport org . junit . jupiter . api . Test\
+  \ ;\nimport org . mapstruct . factory . Mappers ;\nimport com . tutorialspoint .\
+  \ entity . AddressEntity ;\n\nimport com . tutorialspoint . entity . StudentEntity\
+  \ ;\nimport com . tutorialspoint . mapper . DeliveryAddressMapper ;\nimport com\
+  \ . tutorialspoint . model . DeliveryAddress ;\n\npublic class DeliveryAddressMapperTest\
+  \ {\n\nprivate DeliveryAddressMapper deliveryAddressMapper = Mappers . getMapper\
+  \ ( DeliveryAddressMapper . class );\n\n@Test\npublic void testEntityToModel ()\
+  \ {\n\nStudentEntity entity = new StudentEntity ();\n\nentity . setClassVal ( \"\
+  X\" );\nentity . setName ( \"John\" );\nentity . setId ( \"1\" );\nAddressEntity\
+  \ address = new AddressEntity ();\n\naddress . setCity ( \"Y\" );\naddress . setState\
+  \ ( \"Z\" );\naddress . setHouseNo ( 1 );\nDeliveryAddress deliveryAddress = deliveryAddressMapper\
+  \ . getDeliveryAddress ( entity , address );\n\nassertEquals ( deliveryAddress .\
+  \ getName(), student . getName ());\n}\n\n}\n\n```\n\n\n\n\n\n```java\nassertEquals\
+  \ ( deliveryAddress . getCity (), address . getCity ());\n\nassertEquals ( deliveryAddress\
+  \ . getState (), address . getState ());\n\nassertEquals ( deliveryAddress . getHouseNumber\
+  \ (), address . getHouseNo ());\n\n}\n\n}\n```\n\n使用以下代码更新 `StudentMapperTest.java`\
+  \ −\n\n`StudentMapperTest.java`\n\n```java\npackage com . tutorialspoint . mapping\
+  \ ;\n\nimport static org . junit . jupiter . api . Assertions . assertEquals ;\n\
+  \nimport org . junit . jupiter . api . Test ;\n\nimport org . mapstruct . factory\
+  \ . Mappers ;\n\nimport com . tutorialspoint . entity . StudentEntity ;\n\nimport\
+  \ com . tutorialspoint . entity . SubjectEntity ;\n\nimport com . tutorialspoint\
+  \ . mapper . StudentMapper ;\n\nimport com . tutorialspoint . model . Student ;\n\
+  \npublic class StudentMapperTest {\n    private StudentMapper studentMapper = Mappers\
+  \ . getMapper ( StudentMapper . class );\n\n    @Test\n    public void testEntityToModel\
+  \ () {\n        StudentEntity entity = new StudentEntity ();\n        entity . setName\
+  \ ( \"John\" );\n        entity . setId ( \"1\" );\n        Student model = studentMapper\
+  \ . getModelFromEntity ( entity );\n        assertEquals ( entity . getName (),\
+  \ model . getName ());\n        assertEquals ( Integer . parseInt ( entity .getId\
+  \ ()), model . getId ());\n    }\n\n    @Test\n    public void testModelToEntity\
+  \ () {\n        Student . Builder builder = Student . builder (). id ( 1 ). name\
+  \ ( \"John\" );\n        Student model = builder . create ();\n        StudentEntity\
+  \ entity = studentMapper . getEntityFromModel ( model );\n        assertEquals (\
+  \ entity . getName (), model . getName ());\n        assertEquals ( Integer . parseInt\
+  \ ( entity . getId ()), model . getId ());\n    }\n}\n```\n\n运行以下命令来测试映射。\n\n```bash\n\
+  mvn clean test\n```\n\n## 输出\n\n一旦命令执行成功，验证输出。\n\n```bash\nmvn clean test\n```\n\
+  \n```\n[INFO] Scanning for projects...\n...\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n-------------------------------------------------------\n\
+  T E S T S\n-------------------------------------------------------\nRunning com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\
+  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec\nRunning\
+  \ com.tutorialspoint.mapping.StudentMapperTest\nTests run: 2, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0.002 sec\nResults :\nTests run: 3, Failures: 0,\
+  \ Errors: 0, Skipped: 0\n...\n```\n\n# 使用数字格式 Format\n\nMapStruct 可以无缝地处理数字转换为所需格式的字符串。我们可以在\
+  \ `@Mapping` 注解中通过 `numberFormat` 传递所需的格式。例如，考虑一种将存储在数字中的金额显示以货币格式显示的情况。\n\n- **源**\
+  \ — 实体体的价格为 350。\n- **目标** — 模型将价格显示为 $350.00。\n- **numberFormat** — 使用格式 `$#.00`\n\
+  \n## 示例\n\n在 Eclipse 中按照**映射隐式类型转换 (Mapping Implicit Type Conversions)** 章节中的更新打开项目。\n\
+  \n使用以下代码创建 `CarEntity.java` −\n\n`CarEntity.java`\n\n```java\npackage com . tutorialspoint\
+  \ . entity ;\npublic class CarEntity {\n    private int id ;\n    private double\
+  \ price ;\n    public int getId () {\n        return id ;\n    }\n    public void\
+  \ setId ( int id ) {\n        this . id ;\n    }\n    public double getPrice ()\
+  \ {\n        return price ;\n    }\n    public void setPrice ( double price ) {\n\
+  \        this . price ;\n    }\n}\n```\n\n使用以下代码创建 `Car.java` −\n\n`Car.java`\n\n\
+  ```java\npackage com . tutorialspoint . model ;\npublic class Car {\n    private\
+  \ int id ;\n    private String price ;\n    public int getId () {\n        return\
+  \ id ;\n    }\n    public void setId ( int id ) {\n        this . id ;\n    }\n\
+  \    public String getPrice () {\n        return price ;\n    }\n    public void\
+  \ setPrice ( String price ) {\n        this . price ;\n    }\n}\n```\n\n使用以下代码创建\
+  \ `CarMapper.java` −\n\n`CarMapper.java`\n\n```java\npackage com . tutorialspoint\
+  \ . mapper ;\nimport org . mapstruct . Mapper ;\nimport org . mapstruct . Mapping\
+  \ ;\nimport com . tutorialspoint . entity . CarEntity ;\nimport com . tutorialspoint\
+  \ . model . Car ;\n@Mapper\npublic interface CarMapper {\n    @Mapping ( source\
+  \ = \"price\" , target = \"price\" , numberFormat = \"$#.00\" )\n    Car getModelFromEntity\
+  \ ( CarEntity carEntity );\n}\n```\n\n使用以下代码创建 `CarMapperTest.java` −\n\n`CarMapperTest.java`\n\
+  \n```java\npackage com . tutorialspoint . mapping ;\nimport static org . junit .\
+  \ jupiter . api . Assertions . assertEquals ;\nimport org . junit . jupiter . api\
+  \ . Test ;\nimport org . mapstruct . factory . Mappers ;\nimport com . tutorialspoint\
+  \ . entity . CarEntity ;\nimport com . tutorialspoint . mapper . CarMapper ;\nimport\
+  \ com . tutorialspoint . model . Car ;\npublic class CarMapperTest {\n    private\
+  \ CarMapperMapper studentMapper = Mappers . getMapper ( StudentMapper . class );\n\
+  \n    @Test\n    public void testEntityToModel () {\n        StudentEntity entity\
+  \ = new StudentEntity ();\n        entity . setName ( \"John\" );\n        entity\
+  \ . setId ( \"1\" );\n        Student model = studentMapper . getModelFromEntity\
+  \ ( entity );\n        assertEquals ( entity . getName (), model . getName ());\n\
+  \        assertEquals ( Integer . parseInt ( entity .getId ()), model . getId ());\n\
+  \    }\n\n    @Test\n    public void testModelToEntity () {\n        Student . Builder\
+  \ builder = Student . builder (). id ( 1 ). name ( \"John\" );\n        Student\
+  \ model = builder . create ();\n        StudentEntity entity = studentMapper . getEntityFromModel\
+  \ ( model );\n        assertEquals ( entity . getName (), model . getName ());\n\
+  \        assertEquals ( Integer . parseInt ( entity .getId ()), model . getId ());\n\
+  \    }\n}\n```\n\n# 使用日期格式 Format\n\nMapStruct 可以无缝地将日期转换为所需格式的字符串。我们可以在 `@Mapping`\
+  \ 注解中通过 `dateFormat` 传递所需的格式。例如，考虑一种将存储在数字中的日期以特定格式显示的情况。\n\n- **源** — 实体的日期为 `GregorianCalendar(2015,\
+  \ 3, 5)`。\n- **目标** — 模型将日期显示为 05.04.2015。\n- **dateFormat** — 使用格式 `dd.MM.yyyy`\n\
+  \n\n\n\n\n@Mapping ( source = \"manufacturingDate\" , target = \"manufacturingDate\"\
+  \ , dateFormat = \"dd.MM.yyyy\" )\n\n`Car getModelFromEntity ( CarEntity carEntity\
+  \ );`\n\n}\n\n使用以下代码更新 `CarMapperTest.java` −\n\n`CarMapperTest.java`\n\n```java\n\
+  package com . tutorialspoint . mapping ;\n\nimport static org . junit . jupiter\
+  \ . api . Assertions . assertEquals ;\n\nimport java . util . GregorianCalendar\
+  \ ;\n\nimport org . junit . jupiter . api . Test ;\n\nimport org . mapstruct . factory\
+  \ . Mappers ;\n\nimport com . tutorialspoint . entity . CarEntity ;\n\nimport com\
+  \ . tutorialspoint . mapper . CarMapper ;\n\nimport com . tutorialspoint . model\
+  \ . Car ;\n\npublic class CarMapperTest {\nprivate CarMapper carMapper = Mappers\
+  \ . getMapper ( CarMapper . class );\n\n@Test\n\npublic void testEntityToModel ()\
+  \ {\nCarEntity entity = new CarEntity ();\n\nentity . setPrice ( 345000 );\n\nentity\
+  \ . setId ( 1 );\nentity . setManufacturingDate ( new GregorianCalendar ( 2015 ,\
+  \ 3 , 5 ));\nCar model = carMapper . getModelFromEntity ( entity );\n\nassertEquals\
+  \ ( model . getPrice (), \"$345000.00\" );\n\nassertEquals ( entity . getId (),\
+  \ model . getId ());\n\nassertEquals ( \"05.04.2015\" , model . getManufacturingDate\
+  \ ());\n}\n\n}\n```\n\n运行以下命令来测试映射。\n\n`mvn clean test`\n\n## 输出\n\n一旦命令执行成功，验证输出。\n\
+  \n`mvn clean test`\n\n```\n[INFO] Scanning for projects...\n...\n\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n\n-------------------------------------------------------\n\
+  T E S T S\n-------------------------------------------------------\nRunning com.tutorialspoint.mapping.CarMapperTest\n\
+  \nTests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec\n\n\
+  Running com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\nTests run: 1, Failures:\
+  \ 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec\n\nRunning com.tutorialspoint.mapping.StudentMapperTest\n\
+  \nTests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\n\n\
+  Results :\n\nTests run: 4, Failures: 0, Errors: 0, Skipped: 0\n...\n```\n\n# 使用表达式\n\
+  \nMapStruct 允许调用转换方法来实现自定义逻辑。我们可以使用表达式来实现相同的功能，其中可以传递任何 java 对象并调用其方法来完成转换。\n\n\
+  ## 语法\n\n```java\n@Mapping(target = \"target-property\",\nexpression = \"java(target-method())\"\
+  )\n```\n\n这里：\n\n* `target-property` — 我们正在进行映射的属性。\n* `expression` — mapper 将调用表达式中编写的\
+  \ java 方法。\n* `target-method` — `target-method` 是要调用的方法。如果方法在不同的类中，请使用 `new class-name.target-method()`。\n\
+  \n## 示例\n\n在 Eclipse 中打开在 **Mapping Using dateFormat** 章节中更新的项目映射。\n\n使用以下代码更新 `CarEntity.java`\
+  \ −\n\n`CarEntity.java`\n\n```java\npackage com . tutorialspoint . entity ;\n\n\
+  import java . util . GregorianCalendar ;\n\npublic class CarEntity {\nprivate int\
+  \ id ;\nprivate double price ;\nprivate GregorianCalendar manufacturingDate ;\n\n\
+  public int getId () {\nreturn id ;\n}\n\npublic void setId ( int id ) {\nthis .\
+  \ id = id ;\n}\n\npublic double getPrice () {\nreturn price ;\n}\n\npublic void\
+  \ setPrice ( double price ) {\nthis . price = price ;\n}\n\npublic GregorianCalendar\
+  \ getManufacturingDate () {\nreturn manufacturingDate ;\n}\n\npublic void setManufacturingDate\
+  \ ( GregorianCalendar manufacturingDate ) {\nthis . manufacturingDate = manufacturingDate\
+  \ ;\n}\n\n}\n```\n\n使用以下代码更新 `Car.java` −\n\n`Car.java`\n\n```java evenpackage com\
+  \ . tutorialspoint . model ;\n\npublic class Car {\nprivate int id ;\nprivate String\
+  \ price ;\nprivate String manufacturingDate ;\n\npublic int getId () {\nreturn id\
+  \ ;\n}\n\npublic void setId ( int id ) {\nthis . id = id ;\n}\n\npublic String getPrice\
+  \ () {\nreturn price ;\n}\n\npublic void setPrice ( String price ) {\nthis . price\
+  \ = price ;\n}\n\npublic String getManufacturingDate () {\nreturn manufacturingDate\
+  \ ;\n}\n\npublic void setManufacturingDate ( String manufacturingDate ) {\nthis\
+  \ . manufacturingDate = manufacturingDate ;\n}\n\n}\n```\n\n使用以下代码更新 `CarMapper.java`\
+  \ −\n\n`CarMapper.java`\n\n```java\npackage com . tutorialspoint . mapper ;\n\n\
+  import java . text . SimpleDateFormat ;\nimport java . util . Date ;\nimport java\
+  \ . util . GregorianCalendar ;\nimport org . mapstruct . Mapper ;\nimport org .\
+  \ mapstruct . Mapping ;\nimport com . tutorialspoint . entity . CarEntity ;\nimport\
+  \ com . tutorialspoint . model . Car ;\n\n@Mapper\npublic interface CarMapper {\n\
+  @Mapping ( source = \"price\" , target = \"price\" , numberFormat = \"$#.00\" )\n\
+  @Mapping ( target = \"manufacturingDate\" ,\nexpression = \"java(getManufacturingDate(carEntity.getManufacturingDate()))\"\
+  \ )\n\nCar getModelFromEntity ( CarEntity carEntity );\n\ndefault String getManufacturingDate(GregorianCalendar\
+  \ manufacturingDate) {\nif (manufacturingDate == null) {\nreturn null;\n}\nSimpleDateFormat\
+  \ sdf = new SimpleDateFormat(\"dd.MM.yyyy\");\nreturn sdf.format(manufacturingDate);\n\
+  }\n\n}\n```\n\n\n\n使用以下代码更新 `Car.java` −\n\n`Car.java`\n\n```java\npackage com .\
+  \ tutorialspoint . model ;\n\npublic class Car {\n\nprivate int id ;\n\nprivate\
+  \ String price ;\n\nprivate String manufacturingDate ;\n\nprivate String brand ;\n\
+  \npublic int getId () {\n\nreturn id ;\n\n}\n\npublic void setId ( int id ) {\n\n\
+  this . id = id ;\n\n}\n\npublic String getPrice () {\n\nreturn price ;\n\n}\n\n\
+  public void setPrice ( String price ) {\n\nthis . price = price ;\n\n}\n\npublic\
+  \ String getManufacturingDate () {\n\nreturn manufacturingDate ;\n\n}\n\npublic\
+  \ void setManufacturingDate ( String manufacturingDate ) {\n\nthis . manufacturingDate\
+  \ = manufacturingDate ;\n\n}\n\npublic String getBrand () {\n\nreturn brand ;\n\n\
+  }\n\npublic void setBrand ( String brand ) {\n\nthis . brand = brand ;\n\n}\n\n\
+  }\n```\n\n使用以下代码更新 `CarMapper.java` −\n\n`CarMapper.java`\n\n```java\npackage com\
+  \ . tutorialspoint . mapper ;\n\nimport org . mapstruct . Mapper ;\n\nimport org\
+  \ . mapstruct . Mapping ;\n\nimport com . tutorialspoint . entity . CarEntity ;\n\
+  \nimport com . tutorialspoint . model . Car ;\n\n@Mapper\n\npublic interface CarMapper\
+  \ {\n\n@Mapping ( target = \"brand\" , constant = \"BMW\" )\n\n@Mapping ( source\
+  \ = \"price\" , target = \"price\" , numberFormat = \"$#.00\" )\n\n@Mapping ( source\
+  \ = \"manufacturingDate\" , target = \"manufacturingDate\" , dateFormat = \"dd.MM.yyyy\"\
+  \ )\n\nCar getModelFromEntity ( CarEntity carEntity );\n\n}\n```\n\n使用以下代码更新 `CarMapperTest.java`\
+  \ −\n\n`CarMapperTest.java`\n\n```java\npackage com . tutorialspoint . mapping ;\n\
+  \nimport static org . junit . jupiter . api . Assertions . assertEquals ;\n\nimport\
+  \ java . util . GregorianCalendar ;\n\nimport org . junit . jupiter . api . Test\
+  \ ;\n\nimport org . mapstruct . factory . Mappers ;\n\nimport com . tutorialspoint\
+  \ . entity . CarEntity ;\n\nimport com . tutorialspoint . mapper . CarMapper ;\n\
+  \nimport com . tutorialspoint . model . Car ;\n\npublic class CarMapperTest {\n\n\
+  private CarMapper carMapper = Mappers . getMapper ( CarMapper . class );\n\n@Test\n\
+  \npublic void testEntityToModel () {\n\nCarEntity entity = new CarEntity ();\n\n\
+  entity . setPrice ( 345000 );\n\nentity . setId ( 1 );\n\nentity . setManufacturingDate\
+  \ ( new GregorianCalendar ( 2015 , 3 , 5 ));\n\nCar model = carMapper . getModelFromEntity\
+  \ ( entity );\n\nassertEquals ( model . getPrice (), \"$345000.00\" );\n\nassertEquals\
+  \ ( entity . getId (), model . getId ());\n\nassertEquals ( \"05.04.2015\" , model\
+  \ . getManufacturingDate ());\n\nassertEquals ( \"BMW\" , model . getBrand ());\n\
+  \n}\n\n}\n```\n\n运行以下命令来测试映射。\n\n`mvn clean test`\n\n## 输出\n\n一旦命令执行成功，请验证输出。\n\n\
+  `mvn clean test`\n\n```\n[INFO] Scanning for projects...\n\n...\n\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n\n-------------------------------------------------------\n\
+  \nT E S T S\n\n-------------------------------------------------------\n\nRunning\
+  \ com.tutorialspoint.mapping.CarMapperTest\n\nTests run: 1, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0.035 sec\n\nRunning com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\
+  \nTests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec\n\nRunning\
+  \ com.tutorialspoint.mapping.StudentMapperTest\n\nTests run: 2, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0.001 sec\n\nResults :\n\nTests run: 4, Failures:\
+  \ 0, Errors: 0, Skipped: 0\n\n...\n```\n\n# 使用默认值\n\n使用 Mapstruct，我们可以通过 `@Mapping`\
+  \ 注解的 `defaultValue` 属性，在源属性为 null 时传递默认值。\n\n## 语法\n\n`@Mapping(target = \"target-property\"\
+  , source=\"source-property\" defaultValue = \"default-value\")`\n\n这里：\n\n* `default-value`\
+  \ − 当 `source-property` 为 null 时，`target-property` 将设置为 `default-value`。\n\n接后的示例演示了这一点。\n\
+  \n在 Eclipse 中按照**使用常量映射 (Mapping Using Constant)** 章节更新更新项目映射。\n\n使用以下代码更新 `CarEntity.java`\
+  \ −\n\n`CarEntity.java`\n\n```java\npackage com . tutorialspoint . entity ;\n\n\
+  import java . util . GregorianCalendar ;\n\npublic class CarEntity {\n\nprivate\
+  \ int id ;\n\nprivate double price ;\n\nprivate GregorianCalendar manufacturingDate\
+  \ ;\n\nprivate String name ;\n\npublic int getId () {\n\nreturn id ;\n\n}\n\npublic\
+  \ void setId ( int id ) {\n\nthis . id = id ;\n\n}\n\npublic double getPrice ()\
+  \ {\n\nreturn price ;\n\n}\n\npublic void setPrice ( double price ) {\n\nthis .\
+  \ price = price ;\n\n}\n\npublic GregorianCalendar getManufacturingDate () {\n\n\
+  return manufacturingDate ;\n\n}\n\npublic void setManufacturingDate ( GregorianCalendar\
+  \ manufacturingDate ) {\n\nthis . manufacturingDate = manufacturingDate ;\n\n}\n\
+  \npublic String getName () {\n\nreturn name ;\n\n}\n\npublic void setName ( String\
+  \ name ) {\n\nthis . name = name ;\n\n}\n\n```\n（注：由于原文在 `CarEntity.java` 代码块结束处截断，翻译已按原文结尾结束）\n\
+  \n\n\n\n测试运行：2, 失败：0, 错误：0, 跳过：0, 耗时：0.001 秒\n\n结果：\n\n测试运行：4, 失败：0, 错误：0, 跳过：0\n\
+  \n...\n\n# 使用默认表达式 (Expression)\n\n通过 `Mapstruct`，我们可以使用 `@Mapping` 注解的 `defaultExpression`\
+  \ 属性，在源属性为空时通过 `defaultExpression` 传递一个计算后的值。\n\n## 语法\n\n```java\n@Mapping(target\
+  \ = \"target-property\", source=\"source-property\"\ndefaultExpression = \"default-value-method\"\
+  )\n```\n\n此处\n\n* `default-value-method` − 如果 `source-property` 为空，`target-property`\
+  \ 将被设置为 `default-value-method` 的结果。\n\n接下来的示例演示了相同的用法。\n\n## 示例\n\n在 Eclipse 中按照\
+  \ **使用默认值进行映射**章节中的更新打开项目映射。\n\n使用以下代码更新 `CarEntity.java` ：\n\n```java\nCarEntity.java\n\
+  package com . tutorialspoint . entity ;\n\nimport java . util . GregorianCalendar\
+  \ ;\n\npublic class CarEntity {\nprivate int id ;\nprivate double price ;\nprivate\
+  \ GregorianCalendar manufacturingDate ;\nprivate String name ;\n\npublic int getId\
+  \ () {\nreturn id ;\n}\n\npublic void setId ( int id ) {\nthis . id = id ;\n}\n\n\
+  public double getPrice () {\nreturn price ;\n}\n\npublic void setPrice ( double\
+  \ price ) {\nthis . price = price ;\n}\n\npublic GregorianCalendar getManufacturingDate\
+  \ () {\nreturn manufacturingDate ;\n}\n\npublic void setManufacturingDate ( GregorianCalendar\
+  \ manufacturingDate ) {\nthis . manufacturingDate = manufacturingDate ;\n}\n\npublic\
+  \ String getName () {\nreturn name ;\n}\n\npublic void setName ( String name ) {\n\
+  this . name = name ;\n}\n}\n```\n\n使用以下代码更新 `Car.java` ：\n\n```java\nCar.java\n\
+  package com . tutorialspoint . model ;\n\npublic class Car {\nprivate int id ;\n\
+  private String price ;\nprivate String manufacturingDate ;\nprivate String brand\
+  \ ;\nprivate String name ;\n\npublic int getId () {\nreturn id ;\n}\n\npublic void\
+  \ setId ( int id ) {\nthis . id = id ;\n}\n\npublic String getPrice () {\nreturn\
+  \ price ;\n}\n\npublic void setPrice ( String price ) {\nthis . price = price ;\n\
+  }\n\npublic String getManufacturingDate () {\nreturn manufacturingDate ;\n}\n\n\
+  public void setManufacturingDate ( String manufacturingDate ) {\nthis . manufacturingDate\
+  \ = manufacturingDate ;\n}\n\npublic String getBrand () {\nreturn brand ;\n}\n\n\
+  public void setBrand ( String brand ) {\nthis . brand = brand ;\n}\n\npublic String\
+  \ getName () {\nreturn name ;\n}\n\npublic void setName ( String name ) {\nthis\
+  \ . name = name ;\n}\n}\n```\n\n使用以下代码更新 `CarMapper.java` ：\n\n```java\nCarMapper.java\n\
+  package com . tutorialspoint . mapper ;\n\nimport org . mapstruct . Mapper ;\nimport\
+  \ org . mapstruct . Mapping ;\nimport com . tutorialspoint . entity . CarEntity\
+  \ ;\nimport com . tutorialspoint . model . Car ;\nimport java . util . List ;\n\
+  import java . util . UUID ;\n\n@Mapper ( imports = UUID . class )\npublic interface\
+  \ CarMapper {\n@Mapping ( source = \"name\" , target = \"name\" , defaultExpression\
+  \ = \"java(UUID.randomUUID().toString())\" )\n@Mapping ( target = \"brand\" , constant\
+  \ = \"BMW\" )\n@Mapping ( source = \"price\" , target = \"price\" , numberFormat\
+  \ = \"$#.00\" )\n@Mapping ( source = \"manufacturingDate\" , target = \"manufacturingDate\"\
+  \ , dateFormat = \"dd.MM.yyyy\" )\nCar getModelFromEntity ( CarEntity carEntity\
+  \ );\n}\n```\n\n使用以下代码更新 `CarMapperTest.java` ：\n\n```java\nCarMapperTest.java\n\
+  package com . tutorialspoint . mapping ;\n\nimport static org . junit . jupiter\
+  \ . api . Assertions .assertEquals ;\nimport java . util . GregorianCalendar ;\n\
+  import org . junit . jupiter . api . Test ;\nimport org . mapstruct . factory .\
+  \ Mappers ;\nimport com . tutorialspoint . entity . CarEntity ;\nimport com . tutorialspoint\
+  \ . mapper . CarMapper ;\nimport com . tutorialspoint . model . Car ;\n\npublic\
+  \ class CarMapperTest {\nprivate CarMapper carMapper = Mappers . getMapper ( CarMapper\
+  \ . class );\n\n@Test\npublic void testEntityToModel () {\nCarEntity entity = new\
+  \ CarEntity (\nentity . setPrice ( 345000 );\nentity . setId ( 1 );\nentity . setManufacturingDate\
+  \ ( new GregorianCalendar ( 2015 , 3 , 5));\nCar model = carMapper . getModelFromEntity\
+  \ ( entity );\nassertEquals ( model . getPrice (), \"$345000.00\" );\nassertEquals\
+  \ ( entity . getId (), model . getId ());\nassertEquals ( \"05.04.2015\" , model\
+  \ . getManufacturingDate ());\nassertNotNull ( model . getName ());\nassertEquals\
+  \ ( \"BMW\" , model . getBrand ());\n}\n}\n```\n\n运行以下命令来测试映射。\n\n`mvn clean test`\n\
+  \n## 输出\n\n一旦命令成功，请验证输出。\n\n```bash\nmvn clean test\n```\n\n```text\n[INFO] Scanning\
+  \ for projects...\n...\n[INFO] --- maven-surefire-plugin:2.12.4:test (default-test)\
+  \ @ mapping ---\n[INFO] Surefire report directory: \\mvn\\mapping\\target\\surefire-reports\n\
+  -------------------------------------------------------\nT E S T S\n-------------------------------------------------------\n\
+  Running com.tutorialspoint.mapping.CarMapperTest\nTests run: 1, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0 sec\nRunning com.tutorialspoint.mapping.DeliveryMapperTest\n\
+  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec\nRunning com.tutorialspoint.mapping.StudentMapperTest\n\
+  Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\n```\n\
+  \n\n\n\n```java\n@Mapping ( source = \"manufacturingDate\" , target = \"manufacturingDate\"\
+  \ , dateFormat = \"dd.MM.yyyy\" )\n\nCar getModelFromEntity ( CarEntity carEntity\
+  \ );\n\nList < String > getListOfStrings ( List < Integer > listOfIntegers );\n\n\
+  List < Car > getCars ( List < CarEntity > carEntities );\n\n```\n\n使用以下代码更新 `CarMapperTest.java`\
+  \ −\n\n`CarMapperTest.java`\n\n```java\npackage com.tutorialspoint.mapping;\n\n\
+  import static org.junit.jupiter.api.Assertions.assertEquals;\n\nimport static org.junit.jupiter.api.Assertions.assertNotNull;\n\
+  \nimport java.util.Arrays;\n\nimport java.util.GregorianCalendar;\n\nimport java.util.List;\n\
+  \nimport org.junit.jupiter.api.Test;\n\nimport org.mapstruct.factory.Mappers;\n\n\
+  import com.tutorialspoint.entity.CarEntity;\n\nimport com.tutorialspoint.mapper.CarMapper;\n\
+  \nimport com.tutorialspoint.model.Car;\n\npublic class CarMapperTest {\nprivate\
+  \ CarMapper carMapper = Mappers.getMapper(CarMapper.class);\n\n@Test\npublic void\
+  \ testEntityToModel () {\n    CarEntity entity = new CarEntity();\n    entity.setPrice(345000);\n\
+  \    entity.setId(1);\n    entity.setManufacturingDate(new GregorianCalendar(2015,\
+  \ 3, 5));\n    CarEntity entity1 = new CarEntity();\n    entity1.setPrice(445000);\n\
+  \    entity1.setId(2);\n    entity1.setManufacturingDate(new GregorianCalendar(2015,\
+  \ 3, 5));\n    List<CarEntity> carEntities = Arrays.asList(entity, entity1);\n \
+  \   Car model = carMapper.getModelFromEntity(entity);\n    assertEquals(\"$345000.00\"\
+  , model.getPrice());\n    assertEquals(entity.getId(), model.getId());\n    assertEquals(\"\
+  BMW\", model.getBrand());\n    assertEquals(\"05.04.2015\", model.getManufacturingDate());\n\
+  \    List<Integer> list = Arrays.asList(1, 2, 3);\n    List<String> listOfStrings\
+  \ = carMapper.getListOfStrings(list);\n    List<Car> listOfCars = carMapper.getCars(carEntities);\n\
+  \    assertEquals(3, listOfStrings.size());\n    assertEquals(2, listOfCars.size());\n\
+  }\n\n}\n```\n\n运行以下命令来测试映射。\n\n`mvn clean test`\n\n## 输出\n\n一旦命令成功，请验证输出。\n\n`mvn\
+  \ clean test`\n\n```text\n[INFO] Scanning for projects...\n...\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n-------------------------------------------------------\n\
+  T E S T S\n-------------------------------------------------------\nRunning com.tutorialspoint.mapping.CarMapperTest\n\
+  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec\nRunning\
+  \ com.tutorialspoint.mapping.DeliveryAddressMapperTest\nTests run: 1, Failures:\
+  \ 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec\nRunning com.tutorialspoint.mapping.StudentMapperTest\n\
+  Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\nResults\
+  \ :\nTests run: 4, Failures: 0, Errors: 0, Skipped: 0\n...\n```\n\n# 映射 Map\n\n\
+  使用 Mapstruct 我们可以使用 `@MapMapping` 注解创建 map 对象的映射。其他映射规则与我们之前看到的相同。\n\n## 语法\n\n\
+  ```java\n@Mapper\npublic interface UtilityMapper {\n@MapMapping ( valueDateFormat\
+  \ = \"dd.MM.yyyy\" )\nMap < String , String > getMap ( Map < Long , GregorianCalendar\
+  \ > source );\n}\n```\n\n以下示例演示了相同的内容。\n\n## 示例\n\n在 Eclipse 中打开**映射列表**章节中更新后的项目映射。\n\
+  \n使用以下代码创建 `UtilityMapper.java` −\n\n`UtilityMapper.java`\n\n```java\npackage com.tutorialspoint.mapper;\n\
+  \nimport java.util.GregorianCalendar;\nimport java.util.Map;\nimport org.mapstruct.MapMapping;\n\
+  import org.mapstruct.Mapper;\n\n@Mapper\npublic interface UtilityMapper {\n@MapMapping\
+  \ ( valueDateFormat = \"dd.MM.yyyy\" )\nMap < String , String > getMap ( Map < Long\
+  \ , GregorianCalendar > source );\n}\n```\n\n使用以下代码创建 `UtilityMapperTest.java` −\n\
+  \n`UtilityMapperTest.java`\n\n```java\npackage com.tutorialspoint.mapping;\n\nimport\
+  \ static org.junit.jupiter.api.Assertions.assertEquals;\n\nimport java.util.GregorianCalendar;\n\
+  import java.util.HashMap;\nimport java.util.Map;\nimport org.junit.jupiter.api.Test;\n\
+  import org.mapstruct.factory.Mappers;\nimport com.tutorialspoint.mapper.UtilityMapper;\n\
+  \npublic class UtilityMapperTest {\nprivate UtilityMapper utilityMapper = Mappers.getMapper(UtilityMapper.class);\n\
+  \n@Test\npublic void testMapMapping () {\n    Map<Long, GregorianCalendar> source\
+  \ = new HashMap<>();\n    source.put(1L, new GregorianCalendar(2015, 3, 5));\n \
+  \   Map<String, String> target = utilityMapper.getMap(source);\n    assertEquals(\"\
+  05.04.2015\", target.get(\"1\"));\n}\n\n@Test\npublic void testGetStream () {\n\
+  \    Stream<Integer> numbers = Arrays.asList(1, 2, 3, 4).stream();\n    Stream<String>\
+  \ strings = utilityMapper.getStream(numbers);\n    assertEquals(4, strings.count());\n\
+  }\n\n}\n```\n\n# 映射 Stream\n\n使用 Mapstruct 我们可以像处理集合一样创建流的映射。\n\n## 语法\n\n```java\n\
+  @Mapper\npublic interface UtilityMapper {\n@MapMapping ( valueDateFormat = \"dd.MM.yyyy\"\
+  \ )\nMap < String , String > getMap ( Map < Long , GregorianCalendar > source );\n\
+  \nStream < String > getStream ( Stream < Integer > source );\n}\n```\n\n以下示例演示了相同的内容。\n\
+  \n## 示例\n\n在 Eclipse 中打开**映射列表**章节中更新后的项目映射。\n\n使用以下代码创建 `UtilityMapper.java` −\n\
+  \n`UtilityMapper.java`\n\n```java\npackage com.tutorialspoint.mapper;\n\nimport\
+  \ java.util.GregorianCalendar;\nimport java.util.Map;\nimport java.util.stream.Stream;\n\
+  import org.mapstruct.MapMapping;\nimport org.mapstruct.Mapper;\n\n@Mapper\npublic\
+  \ interface UtilityMapper {\n@MapMapping ( valueDateFormat = \"dd.MM.yyyy\" )\n\
+  Map < String , String > getMap ( Map < Long , GregorianCalendar > source );\n\n\
+  Stream < String > getStream ( Stream < Integer > source );\n}\n```\n\n使用以下代码创建 `UtilityMapperTest.java`\
+  \ −\n\n`UtilityMapperTest.java`\n\n```java\npackage com.tutorialspoint.mapping;\n\
+  \nimport static org.junit.jupiter.api.Assertions.assertEquals;\n\nimport java.util.Arrays;\n\
+  import java.util.GregorianCalendar;\nimport java.util.HashMap;\nimport java.util.Map;\n\
+  import java.util.stream.Stream;\nimport org.junit.jupiter.api.Test;\nimport org.mapstruct.factory.Mappers;\n\
+  import com.tutorialspoint.mapper.UtilityMapper;\n\npublic class UtilityMapperTest\
+  \ {\nprivate UtilityMapper utilityMapper = Mappers.getMapper(UtilityMapper.class);\n\
+  \n@Test\npublic void testMapMapping () {\n    Map<Long, GregorianCalendar> source\
+  \ = new HashMap<>();\n    source.put(1L, new GregorianCalendar(2015, 3, 5));\n \
+  \   Map<String, String> target = utilityMapper.getMap(source);\n    assertEquals(\"\
+  05.04.2015\", target.get(\"1\"));\n}\n\n@Test\npublic void testGetStream () {\n\
+  \    Stream<Integer> numbers = Arrays.asList(1, 2, 3, 4).stream();\n    Stream<String>\
+  \ strings = utilityMapper.getStream(numbers);\n    assertEquals(4, strings.count());\n\
+  }\n\n}\n```\n\n\n\n\n[INFO] Surefire 报告目录：`\\mvn\\mapping\\target\\surefire-reports`\n\
+  \n-------------------------------------------------------\n\nT E S T S\n\n-------------------------------------------------------\n\
+  \n运行 `com.tutorialspoint.mapping.CarMapperTest`\n\n测试运行: 1, 失败: 0, 错误: 0, 跳过: 0,\
+  \ 耗时: 0.327 sec\n\n运行 `com.tutorialspoint.mapping.DeliveryAddressMapperTest`\n\n\
+  测试运行: 1, 失败: 0, 错误: 0, 跳过: 0, 耗时: 0.001 sec\n\n运行 `com.tutorialspoint.mapping.StudentMapperTest`\n\
+  \n测试运行: 2, 失败: 0, 错误: 0, 跳过: 0, 耗时: 0.001 sec\n\n运行 `com.tutorialspoint.mapping.UtilityMapperTest`\n\
+  \n测试运行: 1, 失败: 0, 错误: 0, 跳过: 0, 耗时: 0.001 sec\n\n结果 :\n\n测试运行: 5, 失败: 0, 错误: 0,\
+  \ 跳过: 0\n\n...\n\n# 映射枚举 (Mapping Enum)\n\nMapstruct 自动映射枚举。同名的枚举会被自动映射。在名称不同的情况下，我们可以使用\
+  \ `@ValueMapping` 注解来进行映射。\n\n## 语法\n\n```java\n@Mapper\n\npublic interface UtilityMapper\
+  \ {\n\n@ValueMapping(source = \"EXTRA\", target = \"SPECIAL\")\n\nPlacedOrderType\
+  \ getEnum(OrderType order);\n\n}\n```\n\n接下来的示例演示了相同的操作。\n\n## 示例\n\n在 Eclipse 中按照\
+  \ **映射流（Mapping Stream）** 章节中更新的那样打开 mapping 项目。\n\n使用以下代码更新 `UtilityMapper.java`\
+  \ −\n\n```java\nUtilityMapper.java\npackage com . tutorialspoint . mapper ;\n\n\
+  import java . util . GregorianCalendar ;\n\nimport java . util . Map ;\n\nimport\
+  \ java . util . stream . Stream ;\nimport org . mapstruct . MapMapping ;\n\nimport\
+  \ org . mapstruct . Mapper ;\nimport org . mapstruct . ValueMapping ;\nimport com\
+  \ . tutorialspoint . enums . OrderType ;\n\nimport com . tutorialspoint . enums\
+  \ . PlacedOrderType ;\n\n@Mapper\npublic interface UtilityMapper {\n\n@MapMapping\
+  \ ( valueDateFormat = \"dd.MM.yyyy\" )\nMap < String , String > getMap ( Map < Long\
+  \ , GregorianCalendar > source );\n\nStream < String > getStream ( Stream < Integer\
+  \ > source );\n\n@ValueMapping ( source = \"EXTRA\" , target = \"SPECIAL\" )\nPlacedOrderType\
+  \ getEnum ( OrderType order );\n\n}\n```\n\n使用以下代码更新 `UtilityMapperTest.java` −\n\
+  \n```java\nUtilityMapperTest.java\npackage com . tutorialspoint . mapping ;\n\n\
+  import static org . junit . jupiter . api . Assertions . assertEquals ;\nimport\
+  \ java . util . Arrays ;\n\nimport java . util . GregorianCalendar ;\nimport java\
+  \ . util . HashMap ;\nimport java . util . Map ;\nimport java . util . stream .\
+  \ Stream ;\nimport org . junit . jupiter . api . Test ;\nimport org . mapstruct\
+  \ . factory . Mappers ;\nimport com . tutorialspoint . enums . OrderType ;\n\nimport\
+  \ com . tutorialspoint . enums . PlacedOrderType ;\nimport com . tutorialspoint\
+  \ . mapper . UtilityMapper ;\n\npublic class UtilityMapperTest {\nprivate UtilityMapper\
+  \ utilityMapper = Mappers . getMapper ( UtilityMapper . class );\n\n@Test\npublic\
+  \ void testMapMapping () {\nMap < Long , GregorianCalendar > source = new HashMap\
+  \ <>();\nsource . put ( 1L , new GregorianCalendar ( 2015 , 3 , 5 ));\nMap < String\
+  \ , String > target = utilityMapper . getMap ( source );\nassertEquals ( \"05.04.2015\"\
+  \ , target . get ( \"1\"));      \n}\n\n@Test\npublic void testGetStream () {\n\
+  Stream < Integer > numbers = Arrays . asList ( 1 , 2 , 3 , 4 ). stream ();\nStream\
+  \ < String > strings = utilityMapper . getStream ( numbers );\nassertEquals ( 4\
+  \ , strings . count ());      \n}\n\n@Test\npublic void testGetEnum () {\nPlacedOrderType\
+  \ placedOrderType = utilityMapper . getEnum ( OrderType . EXTRA );\nPlacedOrderType\
+  \ placedOrderType1 = utilityMapper . getEnum ( OrderType . NORMAL );\nPlacedOrderType\
+  \ placedOrderType2 = utilityMapper . getEnum ( OrderType . STANDARD );\nassertEquals\
+  \ ( PlacedOrderType . SPECIAL . name (), placedOrderType . name ());\nassertEquals\
+  \ ( PlacedOrderType . NORMAL . name (), placedOrderType1 . name ());\nassertEquals\
+  \ ( PlacedOrderType . STANDARD . name (), placedOrderType2 . name ());\n}\n\n}\n\
+  ```\n\n运行以下命令来测试映射。\n\n`mvn clean test`\n\n## 输出\n\n一旦命令成功，验证输出。\n\n`mvn clean test`\n\
+  \n```\n[INFO] Scanning for projects...\n...\n[INFO] --- maven-surefire-plugin:2.12.4:test\
+  \ (default-test) @ mapping ---\n\n[INFO] Surefire report directory: \\mvn\\mapping\\\
+  target\\surefire-reports\n\n-------------------------------------------------------\n\
+  \nT E S T S\n\n-------------------------------------------------------\n\nRunning\
+  \ com.tutorialspoint.mapping.CarMapperTest\n\nTests run: 1, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0.256 sec\n\nRunning com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\
+  \nTests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\n\n\
+  Running com.tutorialspoint.mapping.StudentMapperTest\n\nTests run: 2, Failures:\
+  \ 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\n\nRunning com.tutorialspoint.mapping.UtilityMapperTest\n\
+  \nTests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\n\n\
+  Results :\n\nTests run: 5, Failures: 0, Errors: 0, Skipped: 0\n```\n\n# 抛出异常 (Throwing\
+  \ Exception)\n\nMapstruct 允许抛出特定异常。考虑一种自定义映射的情况，我们希望数据无效时希望抛出自定义异常。\n\n## 语法\n\n\
+  ```java\n@Mapper(uses=DateMapper.class)\npublic interface UtilityMapper {\n\nCarEntity\
+  \ getCarEntity(Car car) throws ParseException;\n\n}\n```\n\n接下来的示例演示了相同的操作。\n\n\
+  ## 示例\n\n在 Eclipse 中按照 **映射流（Mapping Stream）** 章节中更新的那样打开 mapping 项目。\n\n使用以下代码更新\
+  \ `UtilityMapper.java` −\n\n```java\nUtilityMapper.java\npackage com . tutorialspoint\
+  \ . mapper ;\n\nimport java . text . ParseException ;\nimport java . text . SimpleDateFormat\
+  \ ;\nimport java . util . GregorianCalendar ;\nimport java . util . Map ;\nimport\
+  \ java . util . stream . Stream ;\nimport org . mapstruct . MapMapping ;\nimport\
+  \ org . mapstruct . Mapper ;\nimport org . mapstruct . ValueMapping ;\nimport com\
+  \ . tutorialspoint . entity . Car ;\nimport com . tutorialspoint . enums . OrderType\
+  \ ;\nimport com . tutorialspoint . enums . PlacedOrderType ;\n\n@Mapper(uses=DateMapper.class)\n\
+  public interface UtilityMapper {\n\n@MapMapping ( valueDateFormat = \"dd.MM.yyyy\"\
+  \ )\nMap < String , String > getMap ( Map < Long , GregorianCalendar > source );\n\
+  \nStream < String > getStream ( Stream < Integer > source );\n\n@ValueMapping (\
+  \ source = \"EXTRA\" , target = \"SPECIAL\" )\nPlacedOrderType getEnum ( OrderType\
+  \ order );\n\nCarEntity getCarEntity( Car car ) throws ParseException;\n\n}\n\n\
+  class DateMapper {\n\npublic String asString( GregorianCalendar date ) {\n    if\
+  \ ( date == null ) return null;\n    return new SimpleDateFormat(\"dd.MM.yyyy\"\
+  ).format(date);\n}\n\npublic GregorianCalendar asDate( String date ) throws ParseException\
+  \ {\n    if ( date == null ) return null;\n    return new SimpleDateFormat(\"dd.MM.yyyy\"\
+  ).parse(date);\n}\n\n}\n```\n\n使用以下代码更新 `UtilityMapperTest.java` −\n\n```java\n\
+  UtilityMapperTest.java\npackage com . tutorialspoint . mapping ;\n\nimport static\
+  \ org . junit . jupiter . api . Assertions . assertEquals ;\nimport static org .\
+  \ junit . jupiter . api . Assertions . assertTrue ;\nimport java . util . Arrays\
+  \ ;\n\nimport java . util . GregorianCalendar ;\nimport java . util . HashMap ;\n\
+  import java . util . Map ;\nimport java . util . stream . Stream ;\nimport org .\
+  \ junit . jupiter . api . Test ;\nimport org . mapstruct . factory . Mappers ;\n\
+  import com . tutorialspoint . enums . OrderType ;\n\nimport com . tutorialspoint\
+  \ . enums . PlacedOrderType ;\nimport com . tutorialspoint . mapper . UtilityMapper\
+  \ ;\nimport com . tutorialspoint . entity . Car ;\n\npublic class UtilityMapperTest\
+  \ {\nprivate UtilityMapper utilityMapper = Mappers . getMapper ( UtilityMapper .\
+  \ class );\n\n@Test\npublic void testMapMapping () {\nMap < Long , GregorianCalendar\
+  \ > source = new HashMap <>();\nsource . put ( 1L , new GregorianCalendar ( 2015\
+  \ , 3 , 5 ));\nMap < String , String > target = utilityMapper . getMap ( source\
+  \ );\nassertEquals ( \"05.04.2015\" , target . get ( \"1\"));      \n}\n\n@Test\n\
+  public void testGetStream () {\nStream < Integer > numbers = Arrays . asList ( 1\
+  \ , 2 , 3 , 4 ). stream ();\nStream < String > strings = utilityMapper . getStream\
+  \ ( numbers );\nassertEquals ( 4 , strings . count ());      \n}\n\n@Test\npublic\
+  \ void testGetEnum () {\nPlacedOrderType placedOrderType = utilityMapper . getEnum\
+  \ ( OrderType . EXTRA );\nPlacedOrderType placedOrderType1 = utilityMapper . getEnum\
+  \ ( OrderType . NORMAL );\nPlacedOrderType placedOrderType2 = utilityMapper . getEnum\
+  \ ( OrderType . STANDARD );\nassertEquals ( PlacedOrderType . SPECIAL . name (),\
+  \ placedOrderType . name ());\nassertEquals ( PlacedOrderType . NORMAL . name (),\
+  \ placedOrderType1 . name ());\nassertEquals ( PlacedOrderType . STANDARD . name\
+  \ (), placedOrderType2 . name ());\n}\n\n@Test\npublic void testGetCarEntity ()\
+  \ throws ParseException {\nCar car = new Car();\nCarEntity carEntity = utilityMapper\
+  \ . getCarEntity ( car );\nassertTrue(carEntity != null);\n}\n\n}\n```\n\n\n\n\n\
+  ```java\nMap < String , String > target = utilityMapper . getMap ( source );\n\n\
+  assertEquals ( \"2015-04-05\" , target . get ( \"1\" ));      \n\n}\n\n@Test\n\n\
+  public void testGetStream () {\n\nStream < Integer > numbers = Arrays . asList (\
+  \ 1 , 2 , 3 , 4 ). stream ();\n\nStream < String > strings = utilityMapper . getStream\
+  \ ( numbers );\n\nassertEquals ( 4 , strings . count ());      \n}\n\n@Test\npublic\
+  \ void testGetEnum () {\n\nPlacedOrderType placedOrderType = utilityMapper . getEnum\
+  \ ( OrderType . EXTRA );\nPlacedOrderType placedOrderType1 = utilityMapper . getEnum\
+  \ ( OrderType . NORMAL );\nPlacedOrderType placedOrderType2 = utilityMapper . getEnum\
+  \ ( OrderType . STANDARD );\n\nassertEquals ( PlacedOrderType . SPECIAL . name (),\
+  \ placedOrderType . name ());\nassertEquals ( PlacedOrderType . NORMAL . name (),\
+  \ placedOrderType1 . name ());\nassertEquals ( PlacedOrderType . STANDARD . name\
+  \ (), placedOrderType2 . name ());\n\n}\n\n@Test\npublic void testGetCar () {\n\n\
+  Car car = new Car ();\ncar . setId ( 1 );\ncar . setManufacturingDate ( \"11/10/2020\"\
+  \ );\nboolean exceptionOccured = false ;\ntry {\nCarEntity carEntity = utilityMapper\
+  \ . getCarEntity ( car );\n} catch ( ParseException e ) {\nexceptionOccured = true\
+  \ ;\n}\nassertTrue ( exceptionOccured );\n\n}\n}\n```\n\n运行以下命令来测试映射。\n\n`mvn clean\
+  \ test`\n\n## 输出\n\n一旦命令执行成功，验证输出。\n\n`mvn clean test`\n\n```\n[INFO] Scanning for\
+  \ projects...\n...\n[INFO] --- maven-surefire-plugin:2.12.4:test (default-test)\
+  \ @ mapping ---\n[INFO] Surefire report directory: \\mvn\\mapping\\target\\surefire-reports\n\
+  -------------------------------------------------------\nT E S T S\n-------------------------------------------------------\n\
+  Running com.tutorialspoint.mapping.CarMapperTest\nTests run: 1, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0.256 sec\nRunning com.tutorialspoint.mapping.DeliveryAddressMapperTest\n\
+  Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec\nRunning\
+  \ com.tutorialspoint.mapping.StudentMapperTest\nTests run: 2, Failures: 0, Errors:\
+  \ 0, Skipped: 0, Time elapsed: 0 sec\nRunning com.tutorialspoint.mapping.UtilityMapperTest\n\
+  Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec\nResults :\n\
+  Tests run: 8, Failures: 0, Errors: 0, Skipped: 0\n...\n```\n\n\n\n\n运行 `com.tutorialspoint.mapping.UtilityMapperTest`\n\
+  \n测试运行次数：5，失败：0，错误：0，跳过：0，耗时：0 秒\n\n### 结果：\n\n测试运行次数：9，失败：0，错误：0，跳过：0\n\n...\n\n"

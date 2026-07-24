@@ -1,0 +1,321 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 472 751" preserveaspectratio="none">
+<image width="472" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3">New Concepts in Java 8</span></p>
+<p><span class="calibre4"> </span></p>
+<p><span class="calibre5">VLIGHT</span></p>
+<div id="part0000_split_000.html_calibre_pb_0" class="calibre6">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div class="calibre1">
+<p><br />
+<span class="calibre4">Table Of Contents</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span id="part0000_split_001.html_toc"></span><a
+href="#part0000_split_002.html__Toc469750618"><span
+class="calibre10">Behavior Parameterization</span></a></p>
+<p><a href="#part0000_split_003.html__Toc469750619"><span
+class="calibre10">Lambda Expressions</span></a></p>
+<p><a href="#part0000_split_004.html__Toc469750620"><span
+class="calibre10">Functional Interfaces</span></a></p>
+<p><a href="#part0000_split_005.html__Toc469750621"><span
+class="calibre10">Predicate</span></a></p>
+<p><a href="#part0000_split_006.html__Toc469750622"><span
+class="calibre10">Customer</span></a></p>
+<p><a href="#part0000_split_007.html__Toc469750623"><span
+class="calibre10">Streams</span></a></p>
+</div>
+<p><span id="part0000_split_002.html"></span></p>
+<section id="part0000_split_002.html_calibre_pb_2"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_002.html__Toc469750618" class="calibre14"><span
+id="part0000_split_002.html_12-3361ad27600d4124be1ed2dfcc2e7178"
+class="calibre15">Behavior Parameterization</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre16">Behavior Parameterization</span><span
+class="calibre9"> is nothing but </span><span class="calibre17">a
+software development pattern</span><span class="calibre9"> which
+</span><span class="calibre18">lets you handle frequent requirement
+changes</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Behavior Parameterization</span><span
+class="calibre9"> means </span><span class="calibre17">taking a block of
+code</span><span class="calibre9">, which </span><span
+class="calibre18">can be called later by other parts of your
+programs</span><span class="calibre9">, and </span><span
+class="calibre18">making it available without executing it</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Behavior Parameterization</span><span
+class="calibre9"> is the ability for a method to </span><span
+class="calibre17">take multiple different behaviors as
+parameters</span><span class="calibre9"> and </span><span
+class="calibre18">use them internally to accomplish different
+behaviors</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre19">For example</span><span class="calibre9">,
+you could pass the block of code as an argument to another method which
+will execute it later so the method's behavior is parameterized based on
+that block of code</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Behavior Parameterization</span><span
+class="calibre9"> is a useful pattern, which lets you </span><span
+class="calibre17">encapsulate a behavior</span><span class="calibre9">
+and </span><span class="calibre17">parameterize the behavior of
+methods</span><span class="calibre9"> by </span><span
+class="calibre18">passing and using these behaviors you
+create</span><span class="calibre9">, to easily adapt to changing your
+customer requirements</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">Many methods, which are often used together
+with </span><span class="calibre17">anonymous classes</span><span
+class="calibre9">, in Java API can be parameterized with different
+behaviors including:</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Sorting with
+a Comparator</span><span class="calibre9">: This is nothing but a
+recurring programming task</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Executing a
+block of code with Runnable</span><span class="calibre9">: You can use
+the Runnable interface to represent a block of code, which will return
+no result, to be executed</span></p>
+<p><span class="calibre9">+ </span><span class="calibre20">Handling GUI
+events</span><span class="calibre9">: A typical pattern in GUI
+programming is to perform an action in response to a certain event such
+as clicking a button or hovering over a text</span></p>
+</section>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_5"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_003.html__Toc469750619" class="calibre14"><span
+class="calibre15">Lambda Expressions</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">Passing code with </span><span
+class="calibre4">behavior parameterization</span><span
+class="calibre9">, which lets you </span><span class="calibre18">define
+a block of code that represents a behavior</span><span class="calibre9">
+and then pass it around, is useful for coping with frequent requirement
+changes in your code. You can decide to run that block of code when a
+certain event happens or at a certain point in an algorithm</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">Using </span><span class="calibre4">anonymous
+classes</span><span class="calibre9"> </span><span class="calibre18">to
+represent different behaviors</span><span class="calibre9"> is verbose
+which does not encourage programmers to use behavior parameterization in
+practice</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre16">Lambda Expressions</span><span
+class="calibre9"> in Java 8 let you </span><span
+class="calibre17">represent a behavior</span><span class="calibre9"> or
+</span><span class="calibre17">pass a block of code</span><span
+class="calibre9"> in a concise way</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Lambda Expressions</span><span
+class="calibre9"> in Java 8 can be understood as a </span><span
+class="calibre17">concise representation of an anonymous
+function</span><span class="calibre9">, which does not have a name but
+it has a list of parameters and a body and a return type and also
+possibly a list of exceptions that can be thrown, can be passed
+around</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">A </span><span class="calibre4">Lambda
+Expression</span><span class="calibre9"> is composed of</span></p>
+<p><span class="calibre9">+ </span><span class="calibre17">A list of
+parameters</span><span class="calibre9">: This list mirrors the
+parameters of the compare method of a Comparator</span></p>
+<p><span class="calibre9">+ </span><span class="calibre17">An
+arrow</span><span class="calibre9">: The arrow </span><span
+class="calibre21">-&gt;</span><span class="calibre9"> separates the list
+of parameters from the body of the Lambda Expression</span></p>
+<p><span class="calibre9">+ </span><span class="calibre17">A body of the
+Lambda Expression</span><span class="calibre9">: The expression is
+considered the Lambda's return value</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Lambda Expressions</span><span
+class="calibre9"> in Java 8 let you </span><span
+class="calibre17">provide the implementation of the abstract method in a
+functional interface directly inline</span><span class="calibre9"> then
+</span><span class="calibre18">treat the whole expression as an instance
+of a functional interface</span></p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_8"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_004.html__Toc469750620" class="calibre14"><span
+class="calibre15">Functional Interfaces</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">A </span><span class="calibre16">functional
+interface</span><span class="calibre9"> is nothing but </span><span
+class="calibre17">an interface which specifies only 1 abstract
+method</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">There are several functional interfaces in the
+Java API such as </span><span class="calibre4">Comparator</span><span
+class="calibre9"> and </span><span class="calibre4">Runnable</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">In Java 8, an interface is still a functional
+interface if it has many </span><span class="calibre17">default
+methods</span><span class="calibre9">, which are methods with a body
+that provide some default implementation for methods in case they are
+not implemented by a class, as long as it has only 1 abstract
+method</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">The signature of the abstract method in a
+functional interface essentially describes the signature of the Lambda
+Expression</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">In Java 8, </span><span
+class="calibre4">functional interfaces</span><span class="calibre9"> are
+annotated with </span><span
+class="calibre4">@FunctionalInterface</span><span class="calibre9">
+which is used </span><span class="calibre17">to indicate that the
+interface is intended to be a functional interface</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Functional Intefaces</span><span
+class="calibre9"> are useful because the signature of the abstract
+method in a functional interface is called a </span><span
+class="calibre17">function descriptor</span><span class="calibre9">. So
+</span><span class="calibre17">if you want to use different lambda
+expressions</span><span class="calibre9"> </span><span
+class="calibre18">you need a set of functional interfaces which can
+describe common function descriptors</span></p>
+</section>
+<p><span id="part0000_split_005.html"></span></p>
+<section id="part0000_split_005.html_calibre_pb_11"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_005.html__Toc469750621" class="calibre14"><span
+class="calibre15">Predicate</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">In Java 8, the java.util.function.</span><span
+class="calibre16">Predicate</span><span
+class="calibre4">&lt;T&gt;</span><span class="calibre9"> interface
+defines an abstract method named </span><span
+class="calibre22">test</span><span class="calibre9"> which </span><span
+class="calibre17">accepts an object of generic type T</span><span
+class="calibre9"> and returns a boolean</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">This interface is used if you need to
+represent a boolean expression which uses an object of type T</span></p>
+</section>
+<p><span id="part0000_split_006.html"></span></p>
+<section id="part0000_split_006.html_calibre_pb_14"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_006.html__Toc469750622" class="calibre14"><span
+class="calibre15">Customer</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">In Java 8, the java.util.function.</span><span
+class="calibre23">Consumer</span><span
+class="calibre4">&lt;T&gt;</span><span class="calibre9"> interface
+defines an abstract method named </span><span
+class="calibre24">accept</span><span class="calibre9"> which takes an
+object of </span><span class="calibre17">generic type</span><span
+class="calibre9"> T and returns void</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">If you need to access an object of type T and
+perform some operations on it, you must use the </span><span
+class="calibre4">Consumer</span><span class="calibre9">
+interface</span></p>
+</section>
+<p><span id="part0000_split_007.html"></span></p>
+<section id="part0000_split_007.html_calibre_pb_17"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_007.html__Toc469750623" class="calibre14"><span
+class="calibre15">Streams</span></span></h1>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">In Java 8, a </span><span
+class="calibre16">stream</span><span class="calibre9"> is nothing but
+</span><span class="calibre17">a sequence of elements from a
+source</span><span class="calibre9"> which supports </span><span
+class="calibre18">data processing operations</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">What is a </span><span
+class="calibre17">sequence of elements</span><span
+class="calibre9">?</span></p>
+<p><span class="calibre9">It likes a collection, a </span><span
+class="calibre4">stream</span><span class="calibre9"> provides an
+interface to a sequenced set of values of a specific element type.
+</span><span class="calibre4">Streams</span><span class="calibre9"> are
+</span><span class="calibre17">expressing computations</span><span
+class="calibre9"> such as </span><span
+class="calibre4">filter</span><span class="calibre9">, </span><span
+class="calibre4">sorted</span><span class="calibre9">, and </span><span
+class="calibre4">map</span><span class="calibre9">. </span><span
+class="calibre4">Collections</span><span class="calibre9"> are
+</span><span class="calibre17">about data</span><span class="calibre9">
+but </span><span class="calibre25">streams</span><span class="calibre9">
+are </span><span class="calibre20">about computations</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">What is a </span><span
+class="calibre17">source</span><span class="calibre9">?</span></p>
+<p><span class="calibre9">Streams consume from a data-providing source
+such as collections, arrays, or I/O resources</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">What are </span><span class="calibre17">data
+processing operations</span><span class="calibre9">?</span></p>
+<p><span class="calibre9">Streams support database-like operations and
+common operations from functional programming languages to manipulate
+data such as </span><span class="calibre4">filter</span><span
+class="calibre9">, </span><span class="calibre4">map</span><span
+class="calibre9">, </span><span class="calibre4">reduce</span><span
+class="calibre9">, </span><span class="calibre4">find</span><span
+class="calibre9">, </span><span class="calibre4">match</span><span
+class="calibre9">, </span><span class="calibre4">sort</span><span
+class="calibre9">, etc.</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Streams</span><span class="calibre9"> support
+a </span><span class="calibre16">filter</span><span class="calibre9">
+method which is </span><span class="calibre17">an operation takes an
+argument as Predicate then returns a stream</span><span
+class="calibre9"> including all elements that match the </span><span
+class="calibre4">Predicate</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre4">Streams</span><span class="calibre9"> also
+support the </span><span class="calibre16">map</span><span
+class="calibre9"> method which </span><span class="calibre17">takes a
+function as an argument</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">How to </span><span class="calibre17">build a
+stream</span><span class="calibre9">?</span></p>
+<p><span class="calibre9">+ </span><span class="calibre26">Buiding a
+stream from </span><span class="calibre23">values</span><span
+class="calibre9">: You can </span><span class="calibre17">create a
+stream</span><span class="calibre9"> with </span><span
+class="calibre18">explicit values</span><span class="calibre9"> by using
+the static method </span><span class="calibre4">Stream.of()</span><span
+class="calibre9"> which can take any number of parameters</span></p>
+<p><span class="calibre9">+ </span><span class="calibre26">Building a
+stream from </span><span class="calibre23">an array</span><span
+class="calibre9">: You can also </span><span class="calibre17">create a
+stream</span><span class="calibre9"> </span><span class="calibre18">from
+an array</span><span class="calibre9"> using the static method named
+</span><span class="calibre4">Arrays.stream()</span><span
+class="calibre9"> which takes an array as a parameter</span></p>
+<p><span class="calibre9">+ </span><span class="calibre26">Building a
+stream from </span><span class="calibre23">a file</span><span
+class="calibre9">: You can also </span><span class="calibre17">create a
+stream</span><span class="calibre9"> </span><span class="calibre18">from
+a file</span><span class="calibre9"> using the method named </span><span
+class="calibre4">Files.lines()</span><span class="calibre9"> which
+returns a stream of lines as strings from the given file</span></p>
+<p><span class="calibre9">+ </span><span class="calibre26">Building a
+stream from </span><span class="calibre23">a function</span><span
+class="calibre9">: You can also </span><span class="calibre17">create a
+stream</span><span class="calibre9"> </span><span class="calibre18">from
+a function</span><span class="calibre9"> using 2 static methods to
+generate a stream named </span><span
+class="calibre4">Stream.iterate()</span><span class="calibre9"> and
+</span><span class="calibre4">Stream.generate()</span></p>
+</section>

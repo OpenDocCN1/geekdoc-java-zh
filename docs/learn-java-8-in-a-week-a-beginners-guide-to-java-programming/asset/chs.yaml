@@ -1,0 +1,644 @@
+- "# 一周学会 Java 8：Java 编程初学者指南（黑书）\n\n\n\n![](img/00081.jpeg)\n\n\n## Mahavir DS Rathore\
+  \ 著作\n1. Java 8 异常处理\n2. Java 8 异常处理测试\n\n## 版权\n`Learn JavaTM 8 in a Week` 由 `Mahavir\
+  \ DS Rathore` 编写。在准备本书时已采取一切预防措施，但作者对书中出现的错误或遗漏，或因使用本文所包含的信息而造成的损害不承担任何责任。\n\n##\
+  \ 关于作者\n在过去的 18 年里，我一直在编写和教授 Java 程序。这本书是我记录自己的知识并与世界各地的人分享的努力。我可以在世界上任何地方提供 Java\
+  \ 培训服务。我的邮箱地址是 `gurumahaveer@gmail.com`。\n\n## 谁应该读这本书？\n这本书适合已经掌握某些编程语言并热于学习 `Java`\
+  \ 的程序员。\n\n## 所需软件\n`Java 8` (`JDK 1.8`) 和 `Notepad++` 编辑器。\n\n## 致谢\n`Java` 归 Oracle\
+  \ 所有，商标已认可。\n\n## 献词\n献给我的导师 `Shri Amrite`。\n\n## 源代码\n如需本书的源代码，请发送邮件至 `gurumahaveer@gmail.com`。\n\
+  \n## 反馈\n请分享您的反馈，这将帮助我改进此书。\n\n## 目录\n| 序号 | 章节 | 链接链接 |\n| --- | --- | --- |\n\
+  | 1 | 什么是 `Java`？ | 跳转 |\n| 2 | `JDK` 和 `JRE` | 跳转 |\n| 3 | 设置环境变量 | 跳转 |\n| 4 |\
+  \ 编译器与解释器 | 跳转 |\n| 5 | 第一个程序 | 跳转 |\n| 6 | `HelloWorld` 程序 | 跳转 |\n| 7 | `HelloWorld`\
+  \ 程序的结构 | 跳转 |\n| 8 | 多个 main 方法 | 跳转 |\n| 9 | 公共 `Class` 与文件名 | 跳转 |\n| 10 | 运行时执行\
+  \ | 跳转 |\n| 11 | 另一种 `HelloWorld` 程序 | 跳转 |\n| 12 | 数值数据类型 | 跳转 |\n| 13 | 非数值数据类型\
+  \ | 跳转 |\n| 14 | 字面量与常量 | 跳转 |\n| 15 | 转义序列 | 跳转 |\n| 16 | 不可变 `String` | 跳转 |\n\
+  | 17 | `StringBuilder` `Class` | 跳转 |\n| 18 | 包装类 `Classes` | 跳转 |\n| 19 | `If...\
+  \ Else` | 跳转 |\n| 20 | `Switch... Case` | 跳转 |\n| 21 | `For... Loop` | 跳转 |\n| 22\
+  \ | `While... Loop` | 跳转 |\n| 23 | `Break` 与 `Continue` | 跳转 |\n| 24 | 转换与类型转换 |\
+  \ 跳转 |\n| 25 | 算术与关系运算符 | 跳转 |\n| 26 | 逻辑与三元运算符 | 跳转 |\n| 27 | `Arrays` | 跳转 |\n\
+  | 28 | 锯齿数组 `Array` | 跳转 |\n| 29 | `For Each Loop` | 跳转 |\n\n![](img/0001.jpeg)\n\
+  \n# 第 1 章：什么是 `Java`？\n## 话题\n- 引言\n- `Java` 作为平台\n- `Java` 作为编程语言\n- 影响 `Java`\
+  \ 的语言\n- 受 `Java` 影响\n- 总结\n\n## 引言\n`Java` 归 Oracle 所有，商标已认可。\n\n## 献词\n献给我的导师\
+  \ `Shri Amrite`。\n\n## `Java` 作为平台\n在过去的 18 年里，我一直在编写和教授 Java 程序。这本书是我记录自己的知识并与世界各地的人分享的努力。我可以在世界上任何地方提供\
+  \ Java 培训服务。我的邮箱地址是 `gurumahaveer@gmail.com`。\n\n## 谁应该读这本书？\n这本书适合已经掌握某些编程语言并热于学习\
+  \ `Java` 的程序员。\n\n## 所需软件\n`Java 8` (`JDK 1.8`) 和 `Notepad++` 编辑器。\n\n## 致谢\n`Java`\
+  \ 归 Oracle 所有，商标已认可。\n\n## 源代码\n如需本书的源代码，请发送邮件至 `gurumahaveer@gmail.com`。\n\n##\
+  \ 反馈\n请分享您的反馈，这将帮助我改进此书。\n\n## `Java` 作为编程语言\n`Java` 归 Oracle 所有，商标已认可。\n\n## 影响\
+  \ `Java` 的语言\n`Java` 归 Oracle 所有，商标已认可。\n\n## 受 `Java` 影响\n`Java` 归 Oracle 所有，商标已认可。\n\
+  \n## 总结\n# 第 2 章：`JDK` 和 `JRE`\n## 话题\n- 引言\n- `JDK` 和 `JRE`\n- 设置环境变量\n- 编译器与解释器\n\
+  - 第一个程序\n\n## 引言\n`Java` 归 Oracle 所有，商标已认可。\n\n## 什么是 `Java`？\n`Java` 归 Oracle 所有，商标已认可。\n\
+  \n## `Java` 作为平台\n`Java` 归 Oracle 所有，商标已认可。\n\n## `Java` 作为编程语言\n`Java` 归 Oracle\
+  \ 所有，商标已认可。\n\n## 影响 `Java` 的语言\n`Java` 归 Oracle 所有，商标已认可。\n\n## 受 `Java` 影响\n`Java`\
+  \ 归 Oracle 所有，商标已认可。\n\n## 总结\n（注：由于原文包含大量重复章节和占位符描述，我根据指令优先处理了结构以及变量/路径术语的格式。）\n\
+  \n***\n\n![](img/0081.jpeg)\n\n# 黑皮书 Blac\n# 一周学会 JavaTM 8\n## Java 编程入门指南\n**Mahavir\
+  \ DS Rathore**\n\n## Mahavir DS Rathore 著作\n1. Java 8 异常处理\n2. Java 8 异常处理测试\n\n\
+  ## 版权\n`Learn JavaTM 8 in a Week` 由 `Mahavir DS Rathore` 编写。在准备本书时已采取一切预防措施，但作者对书中出现的错误或遗漏，或因使用本文所包含的信息而造成的损害不承担任何责任。\n\
+  \n## 关于作者\n在过去的 18 年里，我一直在编写和教授 Java 程序。这本书是我记录自己的知识并与世界各地的人分享的努力。我可以在世界上任何地方提供\
+  \ Java 培训服务。我的邮箱地址是 `gurumahaveer@gmail.com`。\n\n## 谁应该读这本书？\n这本书适合已经掌握某些编程语言并热于学习\
+  \ `Java` 的程序员。\n\n## 所需软件\n`Java 8` (`JDK 1.8`) 和 `Notepad++` 编辑器。\n\n## 致谢\n`Java`\
+  \ 归 Oracle 所有，商标已认可。\n\n## 献词\n献给我的导师 `Shri Amrite`。\n\n## 源代码\n如需本书的源代码，请发送邮件至\
+  \ `gurumahaveer@gmail.com`。\n\n## 反馈\n请分享您的反馈，这将帮助我改进此书。\n\n## 目录\n| 序号 | 章节 | 链接链接\
+  \ |\n| --- | --- | --- |\n| 1 | 什么是 `Java`？ | 跳转 |\n| 2 | `JDK` 和 `JRE` | 跳转 |\n\
+  | 3 | 设置环境变量 | 跳转 |\n| 4 | 编译器与解释器 | 跳转 |\n| 5 | 第一个程序 | 跳转 |\n| 6 | `HelloWorld`\
+  \ 程序 | 跳转 |\n| 7 | `HelloWorld` 程序的结构 | 跳转 |\n| 8 | 多个 main 方法 | 跳转 |\n| 9 | 公共\
+  \ `Class` 与文件名 | 跳转 |\n| 10 | 运行时执行 | 跳转 |\n| 11 | 另一种 `HelloWorld` 程序 | 跳转 |\n\
+  | 12 | 数值数据类型 | 跳转 |\n| 13 | 非数值数据类型 | 跳转 |\n| 14 | 字面量与常量 | 跳转 |\n| 15 | 转义序列 |\
+  \ 跳转 |\n| 16 | 不可变 `String` | 跳转 |\n| 17 | `StringBuilder` `Class` | 跳转 |\n| 18\
+  \ | 包装类 `Classes` | 跳转 |\n| 19 | `If... Else` | 跳转 |\n| 20 | `Switch... Case` |\
+  \ 跳转 |\n| 21 | `For... Loop` | 跳转 |\n| 22 | `While... Loop` | 跳转 |\n| 23 | `Break`\
+  \ 与 `Continue` | 跳转 |\n| 24 | 转换与类型转换 | 跳转 |\n| 25 | 算术与关系运算符 | 跳转 |\n| 26 | 逻辑与三元运算符\
+  \ | 跳转 |\n| 27 | `Arrays` | 跳转 |\n| 28 | 锯齿数组 `Array` | 跳转 |\n| 29 | `For Each Loop`\
+  \ | 跳转 |\n\n![](img/0001.jpeg)\n\n# 第 1 章：什么是 `Java`？\n## 话题\n- 引言\n- `Java` 作为平台\n\
+  - `Java` 作为编程语言\n- 影响 `Java` 的语言\n- 受 `Java` 影响\n- 总结\n\n## 引言\n`Java` 归 Oracle\
+  \ 所有，商标已认可。\n\n## 献词\n献给我的导师 `Shri Amrite`。\n\n## `Java` 作为平台\n在过去的 18 年里，我一直在编写和教授\
+  \ Java 程序。这本书是我记录自己的知识并与世界各地的人分享的努力。我可以在世界上任何地方提供 Java 培训服务。我的邮箱地址是 `gurumahaveer@gmail.com`。\n\
+  \n## 谁应该读这本书？\n这本书适合已经掌握某些编程语言并热于学习 `Java` 的程序员。\n\n## 所需软件\n`Java 8` (`JDK 1.8`)\
+  \ 和 `Notepad++` 编辑器。\n\n## 致谢\n`Java` 归 Oracle 所有，商标已认可。\n\n## 源代码\n如需本书的源代码，请发送邮件至\
+  \ `gurumahaveer@gmail.com`。\n\n## 反馈\n请分享您的反馈，这将帮助我改进此书。\n\n## `Java` 作为编程语言\n`Java`\
+  \ 归 Oracle 所有，商标已认可。\n\n## 影响 `Java` 的语言\n`Java` 归 Oracle 所有，商标已认可。\n\n## 受 `Java`\
+  \ 影响\n`Java` 归 Oracle 所有，商标已认可。\n\n## 总结\n# 第 2 章：`JDK` 和 `JRE`\n## 话题\n- 引言\n-\
+  \ `JDK` 和 `JRE`\n- 设置环境变量\n- 编译器与解释器\n- 第一个程序\n\n## 引言\n`Java` 归 Oracle 所有，商标已认可。\n\
+  \n## 什么是 `Java`？\n`Java` 归 Oracle 所有，商标已认可。\n\n## `Java` 作为平台\n`Java` 归 Oracle 所有，商标已认可。\n\
+  \n## `Java` 作为编程语言\n`Java` 归 Oracle 所有，商标已认可。\n\n## 影响 `Java` 的语言\n`Java` 归 Oracle\
+  \ 所有，商标已认可。\n\n## 受 `Java` 影响\n`Java` 归 Oracle 所有，商标已认可。\n\n## 总结\nJRE 无法用于开发 Java\
+  \ 应用程序，但它被用于执行它们。 JRE 由以下组件组成：\n- 解释器：它理解二进制 Java 代码（例如 `java.exe`）。\n- 工具：它们提供各种功能，如安全、核心服务、国际化、RMI（例如\
+  \ `keytool`、`rmiregistry`、`javacpl`）。\n- 库：Java 应用程序接口（`rt.jar`、`jce.jar`、`jsse.jar`）。\n\
+  \nJava 开发工具包 (JDK) 无非就是 Java 标准版，用于开发桌面、用户界面、通信和 applet 类型的应用程序。\n\n\n\n\n\n## 3.\
+  \ 工具\n它们提供了如 `RMI`、国际化、核心服务、安全等功能。\n\n## 4. 库\n可重用的预定义 Java API（`rt.jar`, `jce.jar`,\
+  \ `jsse.jar` 等）。\n\nJDK 是 JRE 的超集。JDK 包含了 JRE 的所有组件，并额外包含一个编译器。\n\n## 安装 JDK\nJDK\
+  \ 可以从 `http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads151.html`\
+  \ 下载。\n\nJDK 适用于许多操作系统，如 Windows、Linux、Mac OS 和 Solaris 等。在下载时，确保选择正确的 Java 8 架构，JRE\
+  \ 适用于 32/64 位。下载 JDK 后，双击它进行安装。\n\n在 Windows OS 32 位，Java 将安装在 `C:\\Program Files\
+  \ (x86)\\Jdk1.8.xxx` 文件夹。\n\n在 Windows OS 64 位，Java 将安装在 `C:\\Program Files\\Jdk1.8.xxx`\
+  \ 文件夹。请确保你已经下载并安装了 JDK。请不要下载 JRE。## 安装 Notepad++\nNotepad++ 是一款通用代码编辑器，支持 20 多种编程语言。最新版本是\
+  \ v6.9。编辑器可以从 `https://notepad-plus-plus.org/download/v6.9` 下载。## 总结\nJDK 是开发 Java\
+  \ 应用所需的最小环境。JDK 可以从 oracle 网站下载。\n\n![](img/00001.jpeg)\n\n# 第 3 章\n## 设置环境变量\n\
+  ## 主题\n- 简介\n- 什么是环境变量？\n- 总结\n\n## 简介\n环境变量是特殊的 Windows 变量，具有动态性质。它们包含了程序使用的安装目录、临时文件位置和设置。环境变量的值是可以更改和更新的，因此被称为动态。\n\
+  \n一些常见的环境变量有：\n1. `%appdata%`: 用户 Application Data 文件夹位置。\n2. `%commonfiles%`: Common\
+  \ Files 文件夹位置。\n3. `%path%`: 各 Java 工具的位置。\n4. `%programfiles%`: 程序安装的位置。\n5. `%temp%`:\
+  \ 临时文件位置。\n6. `%windir%`: Windows 系统文件位置。\n\n`SET` 命令从命令行提供所有环境变量的完整列表。\n\n![](img/00002.jpeg)\n\
+  \n`SET` 后接环境变量将显示该变量的值。\n\n![](img/00003.jpeg)\n\n## 设置 “PATH”变量\n`PATH` 变量包含了工具的位置，具体来说\
+  \ Java 解释器 (`Java.exe`)、Java 编译器 (`javac.exe`) 和 Java 工具链。\n\nPATH 变量可以通过两种方式设置：\n\
+  1. 命令行\n2. 控制面板\n\n### 命令行设置\n可以使用 `SET` 命令设置 PATH 变量。`SET` 命令不区分大小写。\n\n此技术仅适用于当前的命令行会话。让我们如何在命令行设置\
+  \ PATH 变量。\n\n例如：\n`Set path=\"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\"`\n解释：上述命令将用\
+  \ JDK 1.8 的位置覆盖 PATH 变量。对于包含空格的目录使用双引号。设置 PATH 变量时不需要指定工具名称，只需指定位置。\n\n`Set PATH\
+  \ = \"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\"`\n解释：Path 变量不区分大小写。但目录区分大小写。\n\
+  \n`Set PATH = %path%; \"C:\\Program Files\\Java\\jdk1.8.0_65\\bin\"`\n解释：上述命令会将位置追加到\
+  \ PATH 变量。\n\n### 使用控制面板设置 PATH\n这是设置 PATH 变量优的方法，因为它是永久的。\n\n使用控制面板设置 PATH 变量遵循以下步骤：\n\
+  1. 打开控制面板 -> 选择 系统。\n2. 点击高级设置。\n3. 在环境变量对话框中选择高级选项卡。\n4. 点击环境变量按钮。\n5. 找到系统变量中的\
+  \ Path 变量并编辑值。\n6. 如果没有 PATH 变量，则创建一个新的 PATH 并添加值。\n\n![](img/00004.jpeg)\n\n##\
+  \ 总结\nPath 环境变量标识了 Java 编译器和 Java 解释器的位置。Path 可以通过命令行或控制面板设置。控制面板的方法比命令行更好，因为它是永久的。\n\
+  \n![](img/00001.jpeg)\n\n# 第 4 章\n## Java 编译器和 Java 解释器\n## 主题\n- 简介\n- Java 编译器\n\
+  - Java 解释器\n- 总结\n\n## 简介\nJava 程序员使用的最基础的工具是 Java 编译器 (`javac.exe`) 和 Java 解释器\
+  \ (`java.exe`)。PATH 环境应该设置为 JDK bin 文件夹的位置，该文件夹包含了编译器和解释器。如果你不确定 PATH 是否已设置，请参考上一章关于\
+  \ PATH 环境变量的内容。\n\n## Java 编译器\nJava 编译器用于编译 Java 程序。编译过程产生字节码。字节码是 Java 虚拟机 (`JVM`)\
+  \ 可识别的二进制代码。\n\n可以通过命令行使用 `javac.exe` 命令来激活 Java 编译器。\n\n一些编译器选项有：\n1. `-help`:\
+  \ 显示所有编译器。\n2. `-version`: 返回编译器版本。\n3. `-verbose`: 输出编译器信息。\n4. `-deprecation`:\
+  \ 识别已弃用的 API。\n5. `-nowarn`: 不生成警告。\n\n编译器选项区分大小写。\nJava 选项快照。\n\n![](img/00005.jpeg)\n\
+  \n## Java 解释器\n它用于执行 Java 程序，即解释器接收字节码作为输入，并通过原生代码执行该代码。\n\nJava 解释器通过 `java` 命令调用。\n\
+  \n一些解释器选项有：\n1. `-version`: 显示解释器版本。\n2. `-verbose`: 显示解释器信息。\n3. `-help`: 显示解释器选项。\n\
+  \n解释器选项区分大小写。\nJava 选项快照。\n\n![](img/00006.jpeg)\n\n## 总结\nJava 编译器通过 `javac.exe`\
+  \ 命令调用，用于编译 Java 程序。Java 解释器通过 `java` 命令调用，用于执行 Java 程序。\n\n![](img/00001.jpeg)\n\
+  \n# 第 5 章\n##第一个程序\n## 主题\n- 简介\n- 第一个程序\n- 注释\n- 总结\n\n## 简介\nJava 程序以 .java 扩展名保存。扩展名区分大小写。Java\
+  \ 程序使用 Java 编译器 (`javac.exe`) 编译，使用 Java 解释器 (`java.exe`) 执行。\n\n###第一个程序\n让我们编写第一个\
+  \ Java 程序并将其保存为 `Prg.ca`。没有有效扩展名 (.java) 的 Java 程序会导致 编译器产生错误。\n\n// 名称：`Prg.ca`\n\
+  // 描述：有效的 Java 程序具有 .java 扩展名\n```java\nclass Program {\n}\n```\n`javac Prg.ca`\n\
+  \n![](img/00007.jpeg)\n\n如果 Java 程序以 `.jAva` 扩展名保存，编译器也会产生错误，因为文件扩展名区分大小写。\n\n//\
+  \ 名称：`Prg.jAva`\n// 描述：Java 程序的扩展名区分大小写。\n// 正确的扩展名是 .java\n```java\nclass Program\
+  \ {\n}\n```\n`javac Prg.jAva`\n\n![](img/00008.jpeg)\n\nJava 程序的有效扩展名是 .java。编译器在编译过程中生成\
+  \ .class 文件。.class 文件包含由 Java 解释器解释的字节码。现在让我们编写一个命名正确的 Java 程序并研究字节码。\n\n// 描述：有效的\
+  \ java 程序具有 .java 扩展名。\n// 字节码是二进制 java 指令。\n// 将此程序保存为 `Prg2.java`\n```java\nclass\
+  \ Program {\n}\n```\n上述程序编译后将生成一个名为 `Prg2.class` 的 .class 文件。此代码无法执行，因为它没有 `main`\
+  \ 方法，而 `main` 方法是程序的入口。\n\n\n\n\n字节码是只有 Java 解释器才能理解的二进制代码。在编辑器中打开 `Prg2.class`\
+  \ 文件进行检查。\n\n![](img/00009.jpeg)\n\n## 注释\nJava 程序中的注释有两种方式：\n\n1. 单行注释 - `// This\
+  \ is a comment`\n2. 多行注释 –\n```java\n/*\n此注释跨越了\n多\n行\n*/\n```\n\n## 总结\nJava 程序的扩展名为为\
+  \ `.java`。Java 程序编译成字节码。字节码由 Java 解释器处理。\n\n![](img/00001.jpeg)\n\n# 第 6 章：HelloWorld\
+  \ 程序\n\n## 话题\n- 引言\n- HelloWorld 程序\n- 总结\n\n## 引言\n一个可执行的 Java 程序具有具有有效签名格式的 `main`\
+  \ 方法，该方法作为程序的入口。`main` 方法必须封装在一个类中。\n\n## HelloWorld 程序\n让我们写一个 HelloWorld 程序。写好程序后，使用\
+  \ `Javac.exe`（编译器）对其进行编译，并使用 `Java.exe`（解释器）执行它。\n\n```java\n//Prg.java\n// Description:\
+  \ HelloWorld Program\nclass Program {\n    public static void main(String args[])\
+  \ {\n        System.out.println(\"Namaskar - HelloWorld - Java\");\n    }\n}\n```\n\
+  \n命令行中的命令：\n1. `Javac Prg.java`\n2. `Java Program`\n\n输出：\n![](img/00010.gif)\n\n\
+  ### 尝试：\n1. 将 `main` 方法改为大写。\n结果：编译器错误。\n\nJava 中可以使用的有效 `main` 方法有：\n1. `public\
+  \ static void main(String[] args)`。\n2. `public static void main(String args[])`。\n\
+  3. `public static void main(String ...a)`。\n\n类中一次只能使用上述其中一个 `main` 方法。\n\n让我们通过示例来验证上述内容。\n\
+  \n```java\n//Prg2.java\n//Description: Helloworld program using “main(String[] args)”\
+  \ method as entry point\nclass Program {\n    public static void main(String args[])\
+  \ {\n        System.out.println(\"Namaskar - HelloWorld - Java\");\n    }\n}\n```\n\
+  输出：\n![](img/00010.gif)\n\n```java\n//Prg3.java\n//Description : Using “main(String\
+  \ …a)” method as entry point.\nclass Program {\n    public static void main(String\
+  \ ...a) {\n        System.out.println(\"Namaskar - HelloWorld - Java\");\n    }\n\
+  }\n```\n输出：\n![](img/00010.gif)\n\n### 解释：\n1. `main(String …a)` 代表 Java 语法，告知编译器允许向\
+  \ `main` 方法传递任意数量的字符串参数。\n\n 尝试：\n1. 创建一个没有有效签名的 `main` 方法。\n结果：程序将编译但不会执行。\n\n\
+  ## 总结\n`main` 方法只有在它具有有效签名时才是程序的入口，否则它的行为就像类中的普通方法一样。\n\n![](img/00001.jpeg)\n\n\
+  # 第 7 章：HelloWorld 程序的内部结构\n\n## 话题\n- 引言\n- 命令行参数\n- Main 方法\n- `System.out.println()`\
+  \ 的内部结构\n- 总结\n\n## 引言\n在本章中，你将理解 HelloWorld 程序的内部结构。\n\n## 命令行参数\n`main` 方法是一个入口，它接收字符串数组作为参数。在\
+  \ Java 中对数组会进行边界检查。程序员可以在命令行向 `main` 方法传递任何类型的数据。传递的数据将被捕获为字符串。程序员必须对该数据进行类型转换以进行后续处理。\n\
+  \n让我们了解如何在程序中传递命令行参数并捕获它们。\n\n```java\n//Prg.java\n//Description: Passing and capturing\
+  \ command line arguments\nclass Program {\n    public static void main(String args[])\
+  \ {\n        System.out.println(\"HelloWorld :\" + args[0]); \n        System.out.println(\"\
+  HelloWorld \" + args[0] + \",\" + args[1]);\n    }\n}\n```\n输出：\n![](img/00011.gif)\n\
+  \n当程序员只传递 \"Ram\" 作为参数时，Java 解释器会抛出 `Array Exception`，因为数组经过了边界检查，即程序预期有两个参数。\n\n\
+  输出：\n![](img/00012.jpeg)\n\n现在让我们通过传递整数来更好地理解 `main` 方法的行为。传递给 `main` 方法的所有参数都被接受为字符串。如果传递了整数，则必须进行转换以供后续处理。下一个程序解释了如何实现这一点。\n\
+  \n```java\n//Prg2.java\n//Description: Passing integers at command line\nclass Program\
+  \ {\n    public static void main(String args[]) {\n        int i = Integer.parseInt(args[0]);\
+  \ // 字符串转换为整数\n        int j = Integer.parseInt(args[1]);\n        System.out.println(\"\
+  The sum is :\" + (i+j)); \n    }\n}\n```\n输出：\n![](img/00013.gif)\n\n如果传递的参数之一是字符，Java\
+  \ 解释器将抛出异常。这是因为字符无法转换为整数。\n\n输出：\n![](img/00014.jpeg)\n\n## Main 方法\n`main` 方法的签名不能更改，即“void”不能放在“static”之前。`main`\
+  \ 方法的修饰只能是 `public`，即不能是 `protected` 或 `default`。\n\n```java\n//Prg3.java\n//Description:\
+  \ Using main signature\nclass Program {\n    public void main(String args[]){ //\
+  \ 错误\n        System.out.println(\"Namaskar\");\n}\n```\n输出：\n![](img/00015.jpeg)\n\
+  \n当 `main` 方法不是 `public` 时，它将不是入口。如果 `main` 非公开的，编译器将报告错误。\n\n```java\n//Prg4.java\n\
+  //Description: Using main specifier\nclass Program {\n    protected void main(String\
+  \ args[]){\n        System.out.println(\"Namaskar\");\n}\n```\n输出：\n![](img/00016.jpeg)\n\
+  \n### System.out.println() 的内部结构\n`System` 是属于 `java.lang` 包的类。`java.lang` 是默认包，因此不需要导入。`out`\
+  \ 是 `PrintStream` 类的一个静态对象。`println` 是属于该类的方法，用于在标准输出上打印数据。\n\n## 总结\n`main` 方法接收字符串数组作为参数。`main`\
+  \ 方法必须是 `public`。\n`java.lang` 是默认包。\n\n![](img/00001.jpeg)\n\n# 第 8 章：多个 main 方法\n\
+  \n## 话题\n- 引言\n- 单类中的多个 main 方法\n- 多个类与方法\n\n## 引言\n一个 Java 程序可以包含多个类。当包含多个类的 Java\
+  \ 程序被编译时，它会产生许多 `.class` 文件，即 Java 中的每个类都会编译成特定的类。`.class` 文件名与程序中的类名相同。由于 Java\
+  \ 支持方法重载（类中可以有许多名称相同但签名不同的方法），一个类可以包含多个类，且其中一个将是入口。\n\n## 单类中的多个 main 方法\nJava 类可以拥有任意数量的\
+  \ `main` 方法，因为 Java 支持方法重载，但只能有一个具有特定签名的入口（参阅第 6 章）。让我们通过示例了解如何在单类中创建多个 `main` 方法。\n\
+  \n```java\n//Prg.java\n//Description: Multiple Main methods in a single class\n\
+  class Program {\n    // 这是入口\n    public static void main(String args[]) {\n   \
+  \     System.out.println(\"Namaskar - Helloworld - Java\");\n    }\n\n    /* \n\
+  \    public static void main(String ... args) {\n        System.out.println(\"\"\
+  );\n    }\n    */\n\n    // 这不是入口\n    public static void main() { \n}\n```\n\n\n\
+  \n\n```java\n            System.out.println (\"Main() method\");\n\n         }\n\
+  \n         public void main(String ar) { // 这不是入口点\n                           \
+  \  System.out.println(\"String argument-main\");\n\n         }\n}\n```\n\n上述程序编译并执行时没有任何错误。\n\
+  \n输出：\n\n![](img/00017.gif)\n\n如果取消注释代码的注释，编译器将产生错误，因为一个类中只能有一个入口点。\n\n输出：\n\n![](img/00018.jpeg)\n\
+  \n# 多个类与 main 方法\n\n一个 Java 程序可以有多个类，每个类只能有一个入口点，但类可以有许多不作为入口点的 `main` 方法。程序中的每个类都会被编译成一个\
+  \ `.class` 文件。\n\n要执行特定的 `main` 方法，请执行命令 `“Java <classname>`。\n\n让我们了解如何在多个类中创建\
+  \ `main` 方法。\n\n```java\n//Prg2.java\n\n//Description：程序中的多个类\n\nclass Program {\n\
+  \npublic static void main(String args[] ) { // 这是入口点\n\n    System.out.println(\"\
+  Program class - Main method\");\n\n}\n\npublic static void main() { // 这不是入口点\n\n\
+  \             System.out.println (\"Program class - Main() method\");\n\n}\n\npublic\
+  \ void main(String ar) { // 这不是入口点\n\n             System.out.println(\"Program\
+  \ class - String argument-main\");\n\n}\n\n}\n\nclass Test {\n\n             public\
+  \ static void main(String[] args) { // 这是入口点\n\n                               System.out.println(\"\
+  Test class - Main method\");\n\n             }\n\n             public static void\
+  \ main() { // 这不是入口点\n\n                               System.out.println (\"Test\
+  \ class-Main() method\");\n\n             }\n\n             public void main(String\
+  \ ar) { // 这不是入口点\n\n                               System.out.println(\"Test2 class-String\
+  \ argument-main\");\n\n             }\n}\n\nclass Test2 {\n\n      public static\
+  \ void main(String[] args) { // 这是入口点\n\n                             System.out.println(\"\
+  Test2 class - Main method\");\n\n             }\n\n             public static void\
+  \ main() { // 这不是入口点\n\n                             System.out.println (\"Test2\
+  \ class - Main() method\");\n\n             }\n\n             public void main(String\
+  \ ar) { // 这不是入口点\n\n                             System.out.println(\"Test2 class-String\
+  \ argument-main\");\n\n             }\n}\n```\n\n要执行所需的 `main` 方法，请使用命令 `Java <classname>`。\n\
+  \n输出：\n\n1. `Java Program`![](img/00019.gif)\n2. `Java Test`![](img/00020.gif)\n\
+  3. `Java Test2`![](img/00021.gif)\n\n## 总结\n一个类只能有一个入口点。程序可以包含多个类，每个类可以有自己的入口点。每个类都编译成独立的类文件。![](img/00001.jpeg)\n\
+  \n# 第 9 章 公有类与文件名\n\n## 引言\n- 程序中的公有类\n- 总结\n\n在本章中，我们将讨论 Java 程序以及其中类的类的命名规则。\n\
+  \n## 程序中的公有类\n一个类只能有两种访问修饰符之一，即类可以声明为 `public` 或 `default`（包级）访问修饰符。类不能被声明为 `private`\
+  \ 或 `protected`。\n\n在声明类或为 Java 程序（文件）命名时，必须遵循以下规则：\n1. 每个 Java 文件中只能有一个 `public`\
+  \ 类。\n2. `public` 类名与 Java 文件名必须相同。\n3. Java 文件（名）与类（名）之间的大小写必须匹配。\n\n让我们通过程序来理解这些规则。\n\
+  \n```java\n//Prg.java\n//Description：类不能声明为 private 或 protected\n\npublic class\
+  \ Prg { // 公有类名和文件名必须相同\n// 程序的名称将是 Prg.java\npublic static void main(string args[])\
+  \ {\n  System.out.println(\"Namaste Java\");\n}\n\nclass Test {\n\n    public static\
+  \ void main(string args[]) {\n             System.out.println(\"Test class\");\n\
+  \             }\n}\n```\n\n命令：`Java Prg`\n\n输出：![](img/00022.gif)\n\n如果将 `Test`\
+  \ 类声明为 `private`，编译器将报告一个错误。\n\n输出：![](img/00023.jpeg)\n\n## 总结\n类不能被声明为 `private`\
+  \ 或 `protected`。每个 Java 文件中只能有一个 `public` 类。![](img/00001.jpeg)\n\n# 第 10 章 运行时\n\
+  \n## 引言\n- Java 解释器的角色\n- 什么是 JIT 编译？\n- 平台无关性\n- 总结\n\n在本章中，我们将讨论程序在运行时的行为，即程序正在执行时的状态。我们还将讨论解释器的作用。了解什么是\
+  \ `JIT` 并学习什么让 Java 具有平台无关性。\n\n## Java 解释器的角色\n可以通过从命令行执行 `Java.exe` 命令来激活解释器。解释器也被称为\
+  \ `JVM`（Java 虚拟机）。解释器的职责如下：\n1. 接收 `bytecode` 作为输入。\n2. 将 `bytecode` 处理为原生代码（针对特定操作系统的可执行代码）。\n\
+  3. 执行原生代码。\n\n## 什么是 JIT 编译？\n`JIT` 代表 Just In Time compilation（即时编译）。它是 `JVM` 执行的一项操作，其中\
+  \ `bytecode` 被转换为原生代码。由于它是按需执行的，因此被称为即时编译。\n\n代表即时编译的图示![](img/images24.gif)\n\n\
+  ## 平台无关性\n当二进制代码不是原生的且不针对特定操作系统时，程序被称为平台无关的。因为 Java 程序被编译成 `bytecode`，而不同的操作系统都有相应的\
+  \ `JVM`。这使得 Java 程序具有平台无关性。\n\n代表 Java 平台无关性的图示![](img/images25.jpeg)\n\n## 总结\n\
+  Java 虚拟机也被称为伪操作系统。JVM 将 `bytecode` 转换为原生代码。`bytecode` 到原生代码的转换被称为 `JIT`。![](img/images00001.jpeg)\n\
+  \n# 第 11 章 HelloWorld 程序\n\n## 引言\n- 使用 PrintStream 类\n- 总结\n\n在本章中，我们将讨论在屏幕上打印数据的替代方法，即不使用\
+  \ `System.out.println()` 方法打印数据。为了实现这一点，我将使用 `PrintStream` 类。\n\n## 使用 PrintStream\
+  \ 类\n要创建 `PrintStream` 类对象，我们需要将 `OutputStream` 对象传递给 `PrintStream` 类的构造函数。输出流句柄是通过\
+  \ `FileDescriptor` 类的 `out` 字段建立的，它是作为 `FileInputStream`OutputStream 类的子类）构造函数的参数传递的。让我们通过示例来理解。由于使用的类位于\
+  \ `java.io` 包中，因此需要导入该包。\n\n```java\n//Prg.java\n//Description：替代 World 程序\n\nimport\
+  \ java.io.*;\n\nclass Program {\n\npublic static void main(String args[]) {\n  \
+  \           FileOutputStream obj = new FileOutputStream(FileDescriptor.out);\n \
+  \            PrintStream obj2 = new PrintStream(obj);\n             obj2.println(\"\
+  Alternative Namaste Java\");\n\n}\n\n}\n```\n\n输出：![](img/00026.gif)\n\n## 总结\n\
+  `FileDescriptor.out` 属性标识标准输出。`PrintStream` 在创建时接收 `OutputStream` 类对象![](img/00001.jpeg)\n\
+  \n# 第 12 章 数字数据类型\n\n## 引言\n- 什么是变量？\n- 数据类型的分类\n- 整数类型\n- 浮点类型\n- 总结\n\n在本章中，将讨论如何创建和使用数值变量。由于\
+  \ Java 是静态类型语言，变量的类型在编译时已知，因此变量具有类型。核心数据类型也被称为原始类型。Java 支持的原始数据类型为\n\n\n\n\n\n#\
+  \ 数据类型\n\n1. `char`\n2. `byte`\n3. `short`\n4. `int`\n5. `long`\n6. `float`\n7.\
+  \ `double`\n8. `boolean`\n\n根据变量的数据类型，`JVM` 将分配内存。\n\n## 数据类型的分类\n\n广泛来说，Java 支持两种类型：\n\
+  \n* 原生数据类型（Primitive data types） – 它们是核心数据类型。\n* 引用/对象数据类型（Reference/Object data\
+  \ types） – 它们直接或间接继承自 `Object` 类。\n\n## 整数类型\n\n由于 Java 是静态类型，变量在使用之前必须声明。`Integer`\
+  \ 类型只能包含整数。默认的整数类型是 `'int'`。支持的整数类型有：\n\n| 数据类型 | 大小(字节) | 符号 |\n| :--- | :--- |\
+  \ :--- |\n| `Byte` | 1 | 有符号 |\n| `Short` | 2 | 有符号 |\n| `Int` | 4 | 有符号 |\n| `long`\
+  \ | 8 | 有符号 |\n\n让我们通过示例来了解如何使用整数类型。\n\n```java\n//Prg.java\n//Description : Integer\
+  \ data type behaviour\nclass Program {\n    public static void show() {\n      byte\
+  \ b=12;\n      short sh= 124;\n      int i = 256;\n      long l = 459;\n      System.out.println(\"\
+  Byte value :\"+b);\n      System.out.println(\"Short value :\"+sh);\n      System.out.println(\"\
+  Int value :\"+ i);\n      System.out.println(\"Long value :\" + l);\n    }\n   \
+  \ public static void main(String args[]){\n      show();\n    }\n}\n```\n\n输出：\n\
+  ![](img/00027.gif)\n\n```java\n//Prg2.java\n//Description : Checking integer data\
+  \ type value range\nclass Program {\n    public static void show() {\n      byte\
+  \ b=-128;  // -128 to 127 (包含)\n      short sh= 124; //  -32,768 to 32,767\n   \
+  \   int i = 256; //  -2³¹ 且最大值为 2³¹-1\n      long l = 459; //  -2⁶³ to 2⁶³-1\n \
+  \     System.out.println(\"Byte value :\"+b);\n      System.out.println(\"Short\
+  \ value :\"+sh);\n      System.out.println(\"Int value :\"+ i);\n      System.out.println(\"\
+  Long value :\" + l);\n    }\n    public static void main(String args[]){\n     \
+  \ show();\n    }\n}\n```\n\n输出：\n![](img/00028.gif)\n\n如果为 `byte` 变量赋值 `-129`，它将生成编译器输出。\n\
+  \n![](img/00029.jpeg)\n\n## 浮点类型\n\n浮点数值类型可以包含小数。Java 支持 2 浮点类型，即 `float` 和 `double`。`float`\
+  \ 类型必须带有后缀 `'f'`，因为默认的浮点类型是 `double`。\n\n| 数据类型 | 大小(字节) | 符号 |\n| :--- | :--- |\
+  \ :--- |\n| `Float` | 4 | 有符号 |\n| `Double` | 8 | 有符号 |\n\n让我们通过示例来了解浮点类型的用法。\n\n\
+  ```java\n//Prg3.java\n//Description : Checking floating data type\nclass Program\
+  \ {\n    public static void show() {\n      float f = 10.10f; // 通过后缀 'f' 识别浮点值\n\
+  \      double d = 20.20d; // double 的后缀 'd' 是可选的\n      System.out.println(\"Byte\
+  \ value :\"+f);\n      System.out.println(\"Short value :\"+d);\n    }\n    public\
+  \ static void main(String args[]){\n      show();\n    }\n}\n```\n\n输出：\n![](img/00030.gif)\n\
+  \n如果浮点变量的值没有带后缀 `'f'`，编译器将生成错误。\n\n输出：\n![](img/00031.jpeg)\n\n### 同时使用浮点类型和整数类型。\n\
+  \n```java\n//Prg4.java\n//Description: Using float and integer type together\nclass\
+  \ Program {\n    public static void intOps() {\n      int i=10;\n      byte b=34;\n\
+  \      i= i*b;\n      System.out.println(\"i= i*b :\" + i);\n    }           \n\
+  \    public static void fltOps() {\n      float f = 10.45f;\n      double d = 45.5d;\n\
+  \      d = f*d;\n      System.out.println(\"d = f*d :\" + d);\n    }\n    public\
+  \ static void mixedOps() {\n      float f = 10.10f;\n      int j =10;\n      f =\
+  \ f * j;\n      System.out.println(\"f = j :\" + f);\n    }\n    public static void\
+  \ main(String args[]){\n      intOps();\n      fltOps();\n      mixedOps();\n  \
+  \  }\n}\n```\n\n结论：\na. 高类型可以包含表达式的结果。\nb. 浮点类型可以包含表达式的结果（整数类型不能）。\n\n输出：\n![](img/00032.gif)\n\
+  \n如果表达式的结果被存入无法容该值的变量中，编译器将生成错误。\n\n```java\n//Prg4.java\n//Description: Using float\
+  \ and integer type\nclass Program {\n    public static void intOps() {\n      int\
+  \ i=10;\n      byte b=34;\n      i= i*b;\n      System.out.println(\"i= i*b :\"\
+  \ + i);\n    }           \n    public static void fltOps() {\n      float f = 10.45f;\n\
+  \      double d = 45.5d;\n      d = f*d;\n      System.out.println(\"d = f*d :\"\
+  \ + d);\n    }\n    public static void mixedOps() {\n      float f = 10.10f;\n \
+  \     int j =10;\n      f = f * j;\n      System.out.println(\"f = j :\" + f);\n\
+  \    }\n    public static void main(String args[]){\n      intOps();\n      fltOps();\n\
+  \      mixedOps();\n    }\n}\n```\n\n\n\n\n```java\npublic static void main(String\
+  \ args[]) {\n    dataOps();\n}\n}\n```\nOutput:\n![](img/00037.gif)\n\n## 总结\n字符类型的大小为\
+  \ 2 字节。`Boolean` 数据类型的大小为 1 字节。\n\n![](img/00001.jpeg)\n\n# 第 14 章：字面量与常量\n\n##\
+  \ 目录\n- 引言\n- 使用字面量\n- 使用常量\n- 总结\n\n## 引言\n在本章中我将讨论如何创建和使用字面量与常量\n\n## 使用字面量\n\
+  存储在变量中的固定或常量称为字面量（Literal）。字面量用于 Java 支持的所有原始类型。字面量也可以用于引用类型 `String`。\n\n字面量有 3\
+  \ 种方式用于 `Integer`:\n1. **十进制**: 以数字开头，例如 `int I = 889;`。\n2. **八进制**: 以 `'0'` 开头，例如\
+  \ `int i= 0123;`。\n3. **十六进制**: 以 `0x/0X` 开头，例如 `int i=0x1234;`。\n\n让我们通过示例来更好地理解这一点。\n\
+  \n```java\n//Prg.java\n//Description: Integer literal 量用法.\nclass Program {\n  static\
+  \ void prgOps() {\n    int i=234;\n    int j=01;\n    int k=0xa;\n    System.out.println(\"\
+  \\n int--\");\n    System.out.println(\"Decimal Literal :\"+ i);\n    System.out.println(\"\
+  Octal Literal :\" + j);\n    System.out.println(\"Hexadecimal Liternal :\" + k);\n\
+  \  }\n  static void prgOps2() {\n    short i=2834;\n    short j=071;\n    short\
+  \ k=0xab;\n    System.out.println(\"\\n short--\");\n    System.out.println(\"Decimal\
+  \ Literal :\"+ i);\n    System.out.println(\"Octal Literal :\" + j);\n    System.out.println(\"\
+  Hexadecimal Liternal :\" + k);\n  }\npublic static void main(String args[]) {\n\
+  \  prgOps();\n  prgOps2();\n}\n}\n```\nOutput:\n![](img/00038.gif)\n\n如果十六进制给出错误的值，编译器会报告错误。\n\
+  \n![](img/00039.jpeg)\n\n浮点数字面量默认类型为 `double`。通过在值后识别 float 类型后缀 `'f/F'`，例如 `float\
+  \ f = 10.45f`。如果需要，在值后识别 double 后缀 `'d/D'`，例如 `double d= 45.231d`。可以使用 `'e'` 来识别幂次。让我们通过示例来更好地理解这一点。\n\
+  \n```java\n//Prg2.java\n// Description : 浮点数字面量用法\nclass Program {\n  static void\
+  \ prgOps() {\n    float i=234.3423f;\n    double j=79879.345d;\n    double k= 686868e4;\n\
+  \    System.out.println(\"Decimal Literal :\"+ i);\n    System.out.println(\"Octal\
+  \ Literal :\" + j);\n    System.out.println(\"Hexadecimal Liternal :\" + k);\n \
+  \ }\n  public static void main(String args[]) {\n    prgOps();\n  }\n}\n```\nOutput:\n\
+  ![](img/0040.gif)\n\n字符字面量用单引号括起来，字符串字面量放在双引号中。布尔类型可以是 2 种字面量之一，即 `true` 或 `false`。Java\
+  \ 还支持 `null` 字面量，它不能用于原始类型，但可以用于引用类型。让我们通过示例来更好地理解。\n\n```java\n//Prg3.java\n//Description\
+  \ : char、String 和 boolean 类型的字面量用法.\nclass Program {\n  static void prgOps() {\n\
+  \    char c = 'a';\n    String str = \"Vanakkam\";\n    // c=null; // 错误不能用于原始类型\n\
+  \    str = null;\n    boolean b = true;\n    // b= null; // 错误\n    System.out.println(\"\
+  Char literal:\"+c);\n    System.out.println(\"String literal:\"+str);\n    System.out.println(\"\
+  Boolean literal:\"+b);\n  }\n  public static void main(String args[]) {\n    prgOps();\n\
+  \  }\n}\n```\nOutput:\n![](img/0041.gif)\n\n## 使用常量\n常量是一个一旦赋值就不能更改的变量。常量变量使用 `final`\
+  \ 关键字声明。\n\n### 用法\n- `final int i=10;`\n- `final char c='a';`\n- `final boolean\
+  \ b = true;`\n\n让我们通过示例来更好地理解这一点。\n\n```java\n//Prg4.java\n//Description: 创建常量变量\n\
+  class Program {\npublic static void main(String args[]) {\n  final int i=10; //\
+  \ final 使变量变为常量\n  final float f= 10.10f;\n  final double d = 20.20;\n  final char\
+  \ c = 'a';\n  final boolean b = true;\n  final String str = \"Namaste\";\n  System.out.println(\"\
+  i :\"+i);\n  System.out.println(\"f :\"+f);\n  System.out.println(\"d :\"+d);\n\
+  \  System.out.println(\"c :\"+c);\n  System.out.println(\"b :\"+b);\n  System.out.println(\"\
+  str :\"+str);\n}\n}\n```\nOutput:\n![](img/0042.gif)\n\n## 总结\n常量是一个一旦赋值就不能更改的变量。常量变量使用\
+  \ `final` 关键字声明。\n\n# 第 15 章：转义序列\n\n## 目录\n- 引言\n- 什么是转义序列\n- 总结\n\n## 引言\n在本章中我们将学习转义序列的使用。\n\
+  \n## 什么是转义序列？\n转义序列是特殊的字符。它们也被称为控制序列。转义序列以反斜杠开头。\n\n![](img/0043.jpeg)\n\n## 总结\n\
+  存储在变量中的固定或常量称为字面量。\n\n![](img/00001.jpeg)\n\n# 第 16 章：不可变字符串\n转义序列在 Java 中提供了特殊含义。支持的转义序列包括：\n\
+  1. `\\t` - 制表符。\n2. `\\b` - 退格符。\n3. `\\n` - 换行符。\n4. `\\r` - 回车符。\n5. `\\f` - 换页符。\n\
+  6. `\\'` - 单引号。\n7. `\\\"` - 双引号。\n8. `\\\\` - 反斜杠。\n\n让我们通过示例来更好地理解转义序列。\n\n\n\n\
+  \n```java\n              System.out.println(\"String are same(case sensitive) :\"\
+  + str2.equals(str));\n              System.out.println(\"String are same(case insensitive)\
+  \ :\" + str.equalsIgnoreCase(str2));\n          }\n\n  static void strOps2() {\n\
+  \    String str = \"Namaste\";\n    String str2 = \"namaste\";\n    if (str==str2)\
+  \ { // Reference comparison\n      System.out.println(\"Strings share same reference\"\
+  );\n    } else {\n      System.out.println(\"Strings do not share same reference\"\
+  );\n    }\n  }\n\n  public static void main(String args[]) {\n    strOps();\n  }\n\
+  }\n```\n\nOutput:\n\n![](img/00045.gif)\n\n## 总结\nString 是不可变类型。String 可以作为值或引用进行比较。\n\
+  \n![](img/00001.jpeg)\n\n# 第 17 章：StringBuilder 类\n\n## \n- 引言\n- 使用 StringBuilder\
+  \ 类\n- 总结\n\n## 引言\n在本章中，我们将讨论如何使用 `StringBuilder` 类。这是一种在不 way 在内存中创建新字符串的情况下初始化和重新初始化字符串的机制，简而言之\
+  \ `StringBuilder` 不是不可变的。\n\n## 使用 StringBuilder 类\n它是一个可变的字符序列。`StringBuilder`\
+  \ 类不像 `String` 类那样不可变。\n\n`StringBuilder` 类的主要方法有：\n- `Append()`\n- `Insert()`\n\
+  \n`StringBuilder` 位于 `java.io` 包中，因此必须进行导入。\n\n让我们通过示例来理解 `StringBuilder` 类的用法。\n\
+  \n```java\n//Prg.java\n//Description: Using StringBuilder class\n\nimport java.lang.*;\n\
+  \nclass Program {\n  public static void main(String[] args) {\n    StringBuilder\
+  \ str = new StringBuilder(\"Namaste\");\n    str.append(\" Java\");\n    System.out.println(\"\
+  Using Append() method:\" + str);\n    str.insert(5,\" Vanakkam\");\n    System.out.println(\"\
+  Using Insert() method:\" + str);\n    str.delete(2,5);\n    System.out.println(\"\
+  Using Delete() method: \"+ str);\n  }\n}\n```\n\nOutput:\n\n![](img/00046.gif)\n\
+  \n## 总结\nStringBuilder 是可变的。`Delete()` 方法用于从字符串中删除字符。\n\n![](img/00001.jpeg)\n\n\
+  # 第 18 章：包装类\n\n## \n- 引言\n- 使用包装类\n- 自动装箱和拆箱\n- 总结\n\n## 引言\n在本章中，你将学习如何将原始数据类型转换为对象。这种转换是通过包装类实现的。在本章中，我还将讨论自动装箱（Autoboxing）和拆箱（Unboxing）的概念。\n\
+  \n## 使用包装类\n包装类用于将核心数据类型转换为对象。8 种数据类型对应 8 种包装类。包装类列表如下：\n\n| 原始类型 | 包装类 |\n| :---\
+  \ | :--- |\n| boolean | Boolean |\n| char | Character |\n| byte | Byte |\n| short\
+  \ | Short |\n| int | Integer |\n| long | Long |\n| float | Float |\n| double | Double\
+  \ |\n\n包装类主要用于：\n1. 在需要时将数据表示为 `null`\n2. 在集合中使用数据\n\n让我们通过示例来理解包装类的用法。\n\n```java\n\
+  //Prg.java\n//Description : Wrapper class\nclass Program {\n  static void wrapperOps()\
+  \ {\n    int i=10;\n    Integer iw = Integer.valueOf(i); // int to Integer\n   \
+  \ System.out.println(\"After(primitive to wrapper) :\"+ iw);\n    int j = iw.intValue();\n\
+  \    System.out.println(\"After(wrapper to primitive) :\"+j);\n  }\n  public static\
+  \ void main(String args[]) {\n    wrapperOps();\n  }\n}\n```\n\nOutput:\n\n![](img/00047.gif)\n\
+  \n## 自动装箱和拆箱\n编译器将原始类型转换为等效包装类型的自动转换称为自动装箱（Autoboxing）。\n例如：\n`int i=10;`\n`Integer\
+  \ j=i;`\n\n编译器将包装类型转换为等效原始类型的自动转换称为拆箱（Unboxing）。\n例如：\n`Integer j= new Integer(50);`\n\
+  `int i=j;`\n\n让我们通过示例更好地理解这一点。\n\n```java\n//Prg2.java\n//Description : Autoboxing\
+  \ and Unboxing\nclass Program {\n  static void boxOps() {\n    int i=20;\n    Integer\
+  \ j=i; // Autoboxing\n    Integer m = new Integer(77);\n    int k=m; // Unboxing\n\
+  \    System.out.println(\"Value of i(primitive) :\"+i);\n    System.out.println(\"\
+  Value of j(wrapper - Autoboxing) :\"+j);\n    System.out.println(\"Value of k(primitive-\
+  \ Unboxing) :\"+k);\n  }\n  public static void main(String args[]) {\n    boxOps();\n\
+  \  }\n}\n```\n\nOutput:\n\n![](img/00048.gif)\n包装类只能自动转换为等效类型。如果我们尝试转换为任何其他类型，编译器将报错。\n\
+  \n```java\n// snapshot\nInteger m = new Integer(77);\nint k=m; // Unboxing\nshort\
+  \ sh = m; // 编译错误\n```\n\nOutput:\n\n![](img/00049.jpeg)\n\n## 总结\n包装类用于在集合中表示数据。从原始类型到包装类的自动转换是自动装箱，从包装类到原始类型的自动转换被称为拆箱。\n\
+  \n![](img/0051.jpeg)\n\n# 第 19 章：If...else\n\n## \n- 引言\n- 使用 Else 语句\n- 总结\n\n\
+  ## 引言\n在本章中，你将学习如何使用 `if` 语句。`if` 语句用于检查条件并据此做出决策。\n\n## 使用 Else 语句\n`if` 是 Java\
+  \ 中基础且重要的结构。它用于根据条件做决策。`if` 结构有三种形式：\n- `if(condition)`\n- `if(condition) else`\n\
+  - `if(condition) elseif else`\n\n`condition` 必须求值为布尔 `true`。当匹配多个条件时，执行第一个匹配的代码，其他匹配的代码将不会执行。让我们通过示例来理解。\n\
+  \n```java\n//Prg.java\n//Description: Using 'if' condition\nclass Program {\n  static\
+  \ void ifOps() {\n    int i=10;\n    if (i > 5) System.out.println(\"i is greater\
+  \ than 5\");\n  }\n  static void ifOps2() {\n    boolean b=true;\n    if (b) System.out.println(\"\
+  b is true\");\n    else System.out.println(\"b is false\");\n  }\n  static void\
+  \ ifOps3() {\n    int i=8;\n    if (i == 5) // == 是相等运算符\n      System.out.println(\"\
+  i value is 5\");\n    else if(i==6)\n      System.out.println(\"i value is 5\");\n\
+  \    else if(i==7)\n      System.out.println(\"i is 7\");\n    else\n      System.out.println(\"\
+  The value of i \"+i);\n  }\n  public static void main(String args[]) {\n    ifOps();\n\
+  \    ifOps2();\n    ifOps3();\n  }\n}\n```\n\nOutput:\n\n![](img/00050.gif)\n`if`\
+  \ 结构只能接受布尔条件，如果条件不是布尔值，将产生编译错误。以下代码将产生编译错误：\n\n```java\n// Code snapshot\nint i=8;\n\
+  if (i) // 不是布尔条件\n  System.out.println(\"i value is 5\");\n```\n\n\n\n\n\n`if` 条件用于决策。`if`\
+  \ 条件的输入是布尔值，且仅执行第一个匹配的条件。\n\n![](img/00001.jpeg)\n\n# 第 20 章：Switch.. Case\n\n##\
+  \ 目录\n* 引言\n* 使用 Switch…case 语句\n* 总结\n\n## 引言\n在本章中我将讨论如何使用 `Switch.. case` 语句。`Switch..case`\
+  \ 用于根据条件执行代码。\n\n## 使用 Switch..case 语句\n`Switch.. case` 是 `if .. else` 语句的替代方案。`switch`\
+  \ 语句可以有任意数量的执行路径。`switch..case` 支持以下基本类型：\n* `byte`\n* `short`\n* `char`\n* `int`\n\
+  \n`case` 必须包含 `break` 语句，否则控制将贯到下一个 `case`。`switch..case` 还可以 `default` 语句，当没有 case\
+  \ 条件匹配时将执行该语句。\n\n让我们通过一个示例来理解 `switch.. case`。\n\n在这个示例中，我展示了如何在 `switch..case`\
+  \ 中使用整数。\n\n```java\n//Prg.java\n//Description : Using Switch..case with integer\n\
+  \nclass Program {\n    public static void switchOps() {\n        int day=1;\n  \
+  \      switch(day) {\n            case 1:\n                System.out.println(\"\
+  Sunday\");\n                break;\n            case 2:\n                System.out.println(\"\
+  Monday\");\n                break;\n            case 3:\n                System.out.println(\"\
+  Tuesday\");\n                break;\n            case 4:\n                System.out.println(\"\
+  Wednesday\");\n                break;\n            case 5:\n                System.out.println(\"\
+  Thursday\");\n                break;\n            case 6:\n                System.out.println(\"\
+  Thursday\");\n                break;\n            case 7:\n                System.out.println(\"\
+  Thursday\");\n                break;\n            default:\n                System.out.println(\"\
+  Invalid day\");\n        }\n    }\n    public static void main(String args[]) {\n\
+  \        switchOps();\n    }\n}\n```\n输出：\n![](img/0052.gif) 如果变量 `day` 的值为 9，则将执行\
+  \ `default` case。\n输出：\n![](img/0053.gif) 如果变量 `day` 的值为 1 且 `case 1:` 没有 `break`\
+  \ 语句，则控制将贯穿并执行 `case 2:` 的代码。\n输出：\n![](img/0054.gif) 下一个示例演示了如何在 `switch..case`\
+  \ 中使用 `char` 和 `String` 类型。\n\n```java\n//Prg2.java\n//Description : Switch..case\
+  \ with char & String\nclass Program {\n    static void switchOps() {\n        char\
+  \ day='i';\n        switch(day) {\n            case 'i':\n                System.out.println(\"\
+  One\");\n                break;\n            case 'x':\n                System.out.println(\"\
+  Ten\");\n                break;\n            default:\n                System.out.println(\"\
+  Invalid number\");\n        }\n    }\n    public static void switchOps2() {\n  \
+  \      String state=\"TN\";\n        switch(state) {\n            case \"KA\":\n\
+  \                System.out.println(\"Karnataka\");\n                break;\n  \
+  \          case \"TN\":\n                System.out.println(\"Tamil Nadu\");\n \
+  \               break;\n            default:\n                System.out.println(\"\
+  Invalid state\");\n        }\n    }\n    public static void main(String args[])\
+  \ {\n        switchOps();\n        switchOps2();\n    }\n}\n```\n输出：\n![](img/0055.gif)\
+  \ 现在让我们来学习如何在 `switch..case` 中使用 `enum`。\n\n```java\n//Prg3.java\n//Description\
+  \ : Using enum with switch case\nenum Metro {\n    Delhi,\n    Kolkata,\n    Mumbai,\n\
+  \    Bengaluru\n}\nclass Program {\n    static void switchOps() {\n        Metro\
+  \ city;\n        city = Metro.Mumbai;\n        switch(city) {\n            case\
+  \ Delhi:\n                System.out.println(\"Delhi is in north of India\");\n\
+  \                break;\n            case Mumbai:\n                System.out.println(\"\
+  Mumbai is in west of India\");\n                break;\n            case Kolkata:\n\
+  \                System.out.println(\"Kolkata is in east of India\");\n        \
+  \        break;\n            case Bengaluru:\n                System.out.println(\"\
+  Bengaluru is in south of India\");\n                break;\n            default:\n\
+  \                System.out.println(\"This is not a metro city\");\n        }\n\
+  \    }\n    public static void main(String args[]) {\n        switchOps();\n   \
+  \ }\n}\n```\n输出：\n![](img/0056.gif)\n\n## 总结\n`Switch case` 可以与基本类型和引用类型配合工作。`case`\
+  \ 中必须使用 `break` 关键字，否则逻辑将贯穿。`Enum` 可以用于 `switch case`。\n\n![](img/0001.jpeg)\n\n\
+  # 第 21 章 For Loop\n\n## 目录\n* 引言\n* 使用 for. Loop\n* 总结\n\n## 引言\n在本章中，我们将讨论如何使用\
+  \ `for loop`。`for loop` 有助于按照指定的次数执行和迭代某些指令。\n\n## 使用 for…loop\n它用于多次执行一个代码块（固定）。\n\
+  \n### 语法\n```\nfor (initialization; condition; increment) {\n   instructions;\n\
+  }\n```\n它包含三个部分：\n* **Initialization**：在循环开始时执行一次。\n* **Condition**：只有当条件为真时，循环才会执行。\n\
+  * **Increment**：变量可以递增或递减。\n\n让我们通过一个示例来更好地理解。\n\n```java\n//Prg.java\n//Description\
+  \ : Behaviour of for Loop\nclass Program {\n    static void forOps() {\n       \
+  \ for(int i=10; i>0;i--) {\n            System.out.println(\"Value of i :\"+ i);\n\
+  \        }\n    }\n    static void forOps2() {\n        for(;;) {\n            System.out.println(\"\
+  Infinite loop\");\n        }\n    }\n    public static void main(String args[])\
+  \ {\n        forOps();\n        //forOps2();\n    }\n}\n```\n`for` 循环并不强制为三个部分提供所有值。如果缺少条件，循环将变为无限。取消\
+  \ `forOps2()` 方法以查看无限循环的执行。\n\n输出：\n![](img/0057.jpeg)\n\n我们可以在 `for` 循环的三个部分任何一个编写合法的\
+  \ Java 指令。\n\n下一个程序演示了这种行为。\n\n```java\n//Prg2.java\n//Description : Using for loop\n\
+  class Program {\n    static void forOps() {\n        for (int i=0;i < 10 ; i++,System.out.println(\"\
+  In loop\"))\n    }\n}\n```\n\n\n\n\n\n```java\n            System.out.println(\"\
+  Value of i :\"+i);\n        }\n\n         public static void main(String args[])\
+  \ {\n                            forOps();\n    }\n}\n```\nOutput:\n![](img/00058.jpeg)\n\
+  \n## 总结\nfor 循环主要用于固定迭代。for 循环包含 3 部分，即：初始化、条件和增量。\n\n![](img/00001.jpeg)\n\n# 第\
+  \ 22 章：While 和 Do. While 循环\n\n## 话题\n- 引言\n- 使用 While 循环\n- 使用 Do...While 循环\n\
+  - 总结\n\n## 引言\n在本章中，我将讨论 `while` 和 `do .. while` 循环。这两个循环都会执行一段指令，直到条件为真；当条件为假时循环退出。\n\
+  \n### 使用 While 循环\n在 `while` 循环中，条件会在循环执行之前检查。`while` 的语法如下：\n\n语法：\n```java\nwhile(Boolean_expression)\
+  \ {\n    //Statements\n}\n```\n让我们通过示例来更好地理解 `while` 循环。\n\n//Prg.java\n//Description：使用\
+  \ While 循环\n```java\nclass Program {\n    static void whileOps() {\n        int\
+  \ i=10;\n        while (i > 0) {\n            System.out.println(\"The value of\
+  \ i:\"+i);\n            i--;\n        }\n    }\n\n    public static void main(String\
+  \ args[]) {\n        whileOps();\n    }\n}\n```\nOutput:\n![](img/00059.jpeg)\n\n\
+  ### 使用 Do..While 循环\n`Do.. while` 循环保证至少执行一次，然后检查条件。\n\n`do..while` 循环的语法：\n```java\n\
+  do {\n    statement(s)\n} while (expression);\n```\n让我们通过示例来理解 `do..while` 循环。\n\
+  \n//Prg2.java\n//Description：使用 Do.. While\n```java\nclass Program {\n    static\
+  \ void dowhileOps() {\n        int i=0;\n        System.out.println(\"Do..while\
+  \ loop demo\");\n        do {\n            System.out.println(\"The value of i:\"\
+  +i);\n            i++;\n        } while (i<10);\n    }\n\n    public static void\
+  \ main(String args[]) {\n        dowhileOps();\n    }\n}\n```\nOutput:\n![](img/00060.jpeg)\n\
+  \n## 总结\n`while` 循环在执行前检查条件。`Do while` 循环至少执行一次代码块，然后检查条件。\n\n![](img/00001.jpeg)\n\
+  \n# 第 23 章：Break 和 Continue 关键字\n\n## 话题\n- 引言\n- 使用 Break 关键字\n- 使用 Continue 关键字\n\
+  - 总结\n\n## 引言\n在本章中，我将讨论 `break` 和 `continue` 关键字。这两个关键字都用于 `for`、`while` 和 `do...while`\
+  \ 循环中，`break` 关键字也用于 `switch...case` 中。\n\n### 使用 Break 关键字\n它用于退出循环或 switch 中的\
+  \ case。`break` 关键字可以是：\n1. 带标签的（Labeled）：用于标识代码块内的区域。\n2. 无标签的：没有标识符。\n\n让我们通过示例来理解\
+  \ `break` 关键字。\n\n//Prg.java\n//Description：使用 break\n```java\nclass Program {\n\
+  \    static void breakOps() {\n        int k=0;\n        while (k<0) {\n       \
+  \     if (k==5) {\n                break;\n            }\n            k++;\n   \
+  \     }\n        System.out.println(\"The value of 'k' after break:\"+ k);\n   \
+  \ }\n\n    static void breakOps2() {\n        first: // 标签\n        for( int i =\
+  \ 0; i < 3; i++) {\n            second: // 标签\n            for(int j = 0; j < 4;\
+  \ j ) {\n                System.out.println(\"Value of i:\"+i);\n              \
+  \  System.out.println(\"Value of j:\"+j);\n                break first;\n      \
+  \      }\n        }\n\n        third: // 标签\n        for( int a = 0; a < 4; a++)\
+  \ {\n            System.out.println(\"The value of a:\"+a);\n        }\n    }\n\n\
+  \    public static void main(String args[]) {\n        breakOps();\n        breakOps2();\n\
+  \    }\n}\n```\nOutput:\n![](img/0061.gif)\n\n### 使用 Continue 关键字\n`continue` 语句跳过循环的当前迭代。执行\
+  \ `continue` 语句后，控制将返回到循环的开始。它可以有两种类型：\n1. 带标签的\n2. 无标签的\n\n让我们通过示例来理解 `Continue`\
+  \ 关键字。\n\n//Prg2.java\n//Description：使用 continue - 带标签和无标签\n```java\nclass Program\
+  \ {\n    static void contiOps() {\n        int limit = 10;\n        int facto =\
+  \ 1;\n        OutLoop: for (int i = 1; i <= limit; i++) {\n            facto = 1;\n\
+  \            for (int j = 2; j <= i; j++) {\n                if (i > 10 && i % 2\
+  \ == 1) {\n                    continue OutLoop;\n                }\n          \
+  \      facto *= j;\n            }\n            System.out.println(i + \" factorial\
+  \ is \" + facto);\n        }\n    }\n\n    public static void main(String args[])\
+  \ {\n        contiOps();\n    }\n}\n```\nOutput:\n![](img/0062.gif)\n\n## 总结\n`Break`\
+  \ 语句用于终止循环。`Continue` 语句用于跳过循环的后续指令。\n\n![](img/00001.jpeg)\n\n# 第 24 章：类型转换\n\n\
+  ## 话题\n- 引言\n- 什么是类型转换？\n- 什么是强制转换（转型）？\n- 总结\n\n## 引言\n在本章中，你将学习类型转换和强制转换。当所需的数据格式不是当前格式时，则必须进行转换或强制转换。\n\
+  \n### 什么是类型转换？\n将某种类型变量的值赋值给兼容类型的变量被称为类型转换。例如 `byte` 到 `int`、`int` 到 `long`、`int`\
+  \ 到 `double`。类型转换不会发生在不兼容类型之间。例如 `boolean` 到 `int`，或者 `string` 无法转换为 `int`。\n\n\
+  类型转换具有扩大的性质，即它发生在小内存类型到大内存类型之间，例如 `byte` 到 `int` 或 `int` 到 `long`。\n\n让我们通过示例来理解类型转换。\n\
+  \n//Prg.java\n//Description：关于类型的操作\n```java\nclass Program {\n    static void tcOps()\
+  \ { // 小到大\n        byte b=5;\n        int i=b; // 自动\n        float f=b;\n    \
+  \    double d=b;\n        System.out.println(\"The value after int :\" + i);\n \
+  \       System.out.println(\"The value after double :\" + d);\n    }\n\n    public\
+  \ static void main(String args[]) {\n        tcOps();\n    }\n}\n```\nOutput:\n\
+  ![](img/0063.gif) 如果在大类型到小类型之间进行转换将会导致编译错误。\n![](img/0064.jpeg)\n\n### 什么是强制转换？\n\
+  如果目标类型小于源类型，则必须显式转换，这被称为强制转换。例如 `int i=10; byte b = (byte) i;`。\n\n让我们通过示例来理解强制转换。\n\
+  \n//Prg2.java\n//Description：关于强制转换的操作\n```java\nclass Program {\n    static void\
+  \ tcOps() { // 大到小\n        double d= 45.7899;\n        float f = (float)d;\n  \
+  \      int i = (int) d;\n        long l = (long) d;\n        //boolean b = (boolean)\
+  \ d; // 编译错误\n        System.out.println(\"The value after type casting(double to\
+  \ float) \"+ f);\n        System.out.println(\"The value after type casting(double\
+  \ to int) \"+ i);\n    }\n}\n```\n\n\n\n\n\n```java\n            System.out.println(\"\
+  类型转换后的值(double to long) \"+l);\n         }\n\n    public static void main(String\
+  \ args[]) {\n            tcOps();\n    }\n}\n```\n\nOutput:\n![](img/00065.jpeg)\n\
+  \n无关类型之间无法进行强制转换，例如从 `float` 到 `boolean`（这将导致编译器错误）。\n\n```java\n// code\ndouble\
+  \ d= 45.78979;\n\nboolean b = (boolean) d; // compiler error\n```\n\nOutput:\n![](img/00066.jpeg)\n\
+  \n## 总结\n类型转换是从一种类型到另一种兼容类型的自动转换。类型强制转换是从一种类型到另一种类型的显式转换。类型强制转换无法在无关类型之间进行。\n\n\
+  ![](img/00001.jpeg)\n\n# 第 25 章：算术运算符和关系运算符\n\n## 目录\n- 引言\n- 什么是运算符？\n- 使用算术运算符\n\
+  - 使用关系运算符\n- 总结\n\n## 引言\n在本章中，我将讨论如何使用算术运算符和关系运算符。算术运算符和关系运算符构成了 Java 数学计算的核心。\n\
+  \n## 什么是运算符？\n它们是执行特定操作的特殊符号。运算符可以与多个操作数一起工作。\n\nJava 支持 5 类运算符：\n- 算术\n- 关系\n-\
+  \ 位运算\n- 逻辑\n- 赋值\n\n## 使用算术运算符\n它们用于创建数学表达式。一些算术运算符包括：\n\n- `+` : 加法（作用于 2 个操作数）\n\
+  - `-` : 减法（作用于 2 个操作数）\n- `/` : 除法（作用于 2 个操作数）\n- `*` : 乘法（作用于 2 个操作数）\n- `%` :\
+  \ 取模（取余-作用于 2 个操作数）\n- `++` : 一元递增（作用于 1 个操作数）\n- `--` : 一元递减（作用于 1 个操作数）\n\n让我们通过示例来理解算术运算符。\n\
+  \n```java\n//Prg.java\n//Description :使用算术运算符\nclass Program {\n    static void\
+  \ ariOps() {\n        int i=20,j=10;\n        int sum = i+j;\n        int subs =\
+  \ i-j;\n        int prod = i*j;\n        int div = i/j;\n        int rem = i % j;\n\
+  \        i++;\n        --j;\n        System.out.println(\" The sum is :\"+ sum);\n\
+  \        System.out.println(\" The substraction is :\"+ subs);\n        System.out.println(\"\
+  \ The multiplication is :\"+ prod);\n        System.out.println(\" The division\
+  \ is :\"+ div);\n        System.out.println(\" The remainder is :\"+ rem);\n   \
+  \ }\n    public static void main(String args[]) {\n        ariOps();\n    }\n}\n\
+  ```\nOutput:\n![](img/0067.gif)\n\n## 关系运算符\n关系运算符作用于 2 个操作数。它用于判断两者之间的关系。它们用于控制结构，例如\
+  \ `if`、`while` 等。关系表达式的结果是布尔值。\n\n关系运算符列表如下：\n\n| 表达式 | 结果 |\n| :--- | :--- |\n\
+  | `op > op2` | `op` 大于 `op2` |\n| `op >= op2` | `op` 大于或等于 `op2` |\n| `op < op2`\
+  \ | `op` 小于 `op2` |\n| `op <= op2` | `op` 小于或等于 `op2` |\n| `op == op2` | `op` 和\
+  \ `op2` 相等 |\n| `op != op2` | `op` 和 `op2` 不相等 |\n\n让我们通过示例来理解关系运算符的使用。\n\n```java\n\
+  //Prg2.java\n//Description :关系表达式\nclass Program {\n    static void relOps() {\n\
+  \        int i=10;\n        int j=20;\n        if ( i == j ) {\n            System.out.println(\"\
+  i is equal to j\");\n        }\n        if (i > j) {\n            System.out.println(\"\
+  i is greater than j\");\n        }\n        if (i < j) {\n            System.out.println(\"\
+  i is less than j\");\n        }\n        System.out.println(\"i==j \"+(i==j));\n\
+  \        System.out.println(\"i > j \"+(i>j));\n        System.out.println(\"i <\
+  \ j \"+(i<j));\n    }\n    public static void main(String args[]) {\n        relOps();\n\
+  \    }\n}\n```\nOutput:\n![](img/0068.gif)\n\n## 总结\n运算符是执行特定操作的特殊符号。关系表达式的结果是布尔值。算术运算符用于数学运算。\n\
+  \n![](img/0001.jpeg)\n\n# 第 26 章：逻辑运算符和三元运算符\n\n## 目录\n- 引言\n- 使用逻辑运算符\n- 使用三元运算符\n\
+  - 使用 instanceof 运算符\n- 总结\n\n## 引言\n在本章中，我将讨论如何使用逻辑运算符、三元运算符和 instanceof 运算符。\n\n\
+  ## 使用逻辑运算符\n它们用于将多个条件绑定在一起。关系运算符通过逻辑运算符结合在一起。Java 中有 4 种逻辑运算符。\n\n| 运算符符号 | 运算符名称\
+  \ |\n| :--- | :--- |\n| `&&` | 与 (AND) |\n| `||` | 或 (OR) |\n| `!` | 非 (NOT) |\n\
+  | `^` | 异或 (XOR) |\n\n逻辑运算符描述：\n1. `与` 运算符 (`&&`) - 当两个条件都为真时返回真。\n2. `或` 运算符 (`||`)\
+  \ - 当任意一个条件为真时返回真。\n3. `非` 运算符 (`!`) - 反转布尔值。\n4. `异或` 运算符 (`^`) - 当两个条件不同时返回真。\n\
+  \n让我们通过示例来理解逻辑运算符。\n\n```java\n//Prg.java\n//Description:使用“与”运算符\nclass Program\
+  \ {\n    static void andOps() {\n        int a=10;\n        int b=20;\n        if\
+  \ (a > 5 && b < 25) // 当两个条件都为真时执行\n            System.out.println(\"Value of a,b\
+  \ is greater than 5 and less than 25\");\n        else {\n            System.out.println(\"\
+  Value of a:\" + a);\n            System.out.println(\"Value of b:\" + b);\n    \
+  \    }\n    }\n    public static void main(String args[]) {\n        andOps();\n\
+  \    }\n}\n```\nOutput:\n![](img/0069.gif)\n\n```java\n//Prg2.java\n//Description:使用“或”运算符和“非”运算符\n\
+  class Program {\n    static void orOps() {\n        int a=10;\n        int b=20;\n\
+  \        if (a > 5 || b < 25) // 当任意一个条件为真时执行\n            System.out.println(\"\
+  Value of a,b is greater than 5 and less than 25\");\n        else {\n          \
+  \  System.out.println(\"Value of a:\" + a);\n            System.out.println(\"Value\
+  \ of b:\" + b);\n        }\n    }\n    static void notOps() {\n        boolean b=true;\n\
+  \        if (!b)\n            System.out.println(\"Value of b is false\");\n   \
+  \     else\n            System.out.println(\"Value of b is true\");\n    }\n   \
+  \ public static void main(String args[]) {\n        orOps();\n        notOps();\n\
+  \    }\n}\n```\nOutput:\n![](img/0070.gif)\n\n## 使用三元运算符\n它用于根据布尔表达式为变量赋值。它可以作为\
+  \ if/else 语句的替代方案。\n\n语法：\n`result = 某些条件 ? value1 : value2;`\n\n如果条件为真，则返回 `value1`，否则返回\
+  \ `value2` 并存储在 `result` 变量中。\n\n让我们通过示例更好地理解三元运算符。\n\n```java\n//Prg3.java\n//Description\
+  \ :使用三元运算符\nclass Program {\n    static void terOps() {\n        int j=10;\n   \
+  \     String result = false ? \"Superman is the greatest\" : \"Batman is better\"\
+  ;\n    }\n}\n```\n\n\n\n\n\n```java\nSystem.out.println(result);\nresult = j>20\
+  \ ? \"J is greater than 20\" : \"J is not less than 20\";\nSystem.out.println(result);\n\
+  }\n\npublic static void main(String args[]) {\n    terOps();\n}\n}\n```\n\nOutput:\n\
+  ![](img/00071.gif)\n\n## 使用 instanceof 运算符\n\n它用于检查给定的变量是否属于给定的类型。它也被称为比较运算符，即它将变量与类型进行比较。\n\
+  \n让我们通过示例来理解 `instanceof` 运算符。\n\n```java\n//Prg4.java\n//Description : Using instanceof\
+  \ operator\n\nclass Program {\n    static void instOps() {\n        Program obj\
+  \ = new Program();\n        if (obj instanceof Program)\n            System.out.println(\"\
+  obj is typeof Program\");\n        else\n            System.out.println(\"obj is\
+  \ not typeof Program\");\n    }\n\n    public static void main(String args[]) {\n\
+  \        instOps();\n    }\n}\n```\n\nOutput:\n![](img/00072.gif)\n\n如果与 null 值一起使用，它将返回\
+  \ false。\n\n```java\n//Prg5.java\n//Description : Using instanceof operator with\
+  \ null\n\nclass Program {\n    static void instOps() {\n        Program obj=null;\n\
+  \        if (obj instanceof Program)\n            System.out.println(\"obj is typeof\
+  \ Program\");\n        else\n            System.out.println(\"obj is not typeof\
+  \ Program\");\n    }\n\n    public static void main(String args[]) {\n        instOps();\n\
+  \    }\n}\n```\n\nOutput:\n![](img/00073.gif)\n\n## 总结\n\n逻辑运算符用于共同检查多个条件。`instanceof`\
+  \ 运算符用于检查给定的变量是否属于给定类型。\n\n![](img/00001.jpeg)\n\n# 第 27 章：数组\n\n字体 目录\n- 简介\n-\
+  \ 什么是数组？\n- 使用一维数组\n- 使用多维数组\n- 总结\n\n## 简介\n\n在本章中，你将学习如何对数组进行操作。数组被用作内存中大量数据的实体。我还将讨论一维数组和多维数组。\n\
+  \n## 什么是数组？\n\n它是一个在运行时存储在内存中的数据容器。数组的属性如下：\n\n1. 固定大小 – 在使用之前已知以字节为的大小。\n2. 单一类型\
+  \ – 它只能是单一类型。\n3. 使用索引访问。\n4. 索引从 0 开始。\n\n因此，数组可以定义为内存中的数据容器，具有固定大小并属于给定的数据类型。Java\
+  \ 数组是安全的，也就是说它们经过边界检查。如果用户访问超出边界，`JVM` 将抛出异常。\n\n数组定义的语法：\n`Datatype arobj=new Datatype[size];`\n\
+  \n数组用于快速方便地访问数据。它消除了创建许多变量的需要。位于数组中的数据可以使用索引访问。\n\n数组有 2 类型，即：\n1. 一维。\n2. 多维。\n\
+  \n## 使用一维数组\n\n它们拥有一行和固定数量的列。`Length` 属性用于获取数组的长度。\n\n### 数组声明\n- `Datatype ar[];`\n\
+  - `Datatype []ar;`\n\n### 数组定义\n- `Datatype obj[]=new Datatype[size];`\n- `Datatype\
+  \ []obj=new Datatype[size];`\n\n让我们通过示例来理解一维数组的使用。\n\n```java\n//Prg.java\n//Description\
+  \ : Working with dimension arrays\n\nclass Program {\n    static void sdOps() {\n\
+  \        int []ar2;\n        int ar3[] = {1,2,5,6,7,8};\n    }\n    static void\
+  \ sd2() {\n        int []ar = new int [5];\n        ar[0]= 20;\n        ar[1]=40;\n\
+  \        ar[2]=50;\n        ar[3]=60;\n        ar[4]=70;\n        System.out.println(\"\
+  The length of the array is:\"+ ar.length);\n        for (int i=0;i< ar.length;i++)\n\
+  \            System.out.println(\"The location : \"+ i + \" has value:\"+ ar[i]);\n\
+  \    }\n    static int[] sqArray(int ar[]) {\n        for (int i=0;i<ar.length;i++)\n\
+  \            ar[i]= ar[i]*ar[i];\n        return ar;\n    }\n    static void show(int\
+  \ ar[]) {\n        System.out.println(\"\\n\");\n        for (int i=0;i< ar.length;i++)\n\
+  \            System.out.println(\"The location : \"+ i + \" has value:\"+ ar[i]);\n\
+  \    }\n    public static void main(String args[]) {\n        sdOps();\n       \
+  \ sd2();\n        int ar[] = {1,2,5,6,7};\n        int sq[] = sqArray(ar);\n   \
+  \     show(sq);\n    }\n}\n```\n\nOutput:\n![](img/00074.gif)\n\n如果访问超出数组的边界，`JVM`\
+  \ 将抛出异常。\n\n```java\n// code snapshot\nint []ar = new int [5];\nar[0]= 20;\nar[1]=40;\n\
+  ar[2]=50;\nar[3]=60;\nar[4]=70;\n\nOutput:\n![](img/00075)\n\n## 多维数组\n\n数据存储在行和列的组合中。MD\
+  \ 数组可以是 2、3 或 N 维。\n\nMD 声明：\n- `dataType[][] ar;`\n- `dataType [][] ar;`\n- `dataType\
+  \ ar][];`\n- `dataType ar[];`\n\n让我们理解如何创建和访问 2 维数组。\n\n```java\n//Prg2.java\n//Description\
+  \ : Working with multidimension array\n\nclass Program {\n    static void muldOps()\
+  \ {\n        int ar[][] = {{2,3},{3,4},{6,7}};\n        int []ar2[] = {{4,5},{6,7}};\n\
+  \    }\n    static void muldOps2() {\n        int ar[][] = new int [2][2];\n   \
+  \     ar[0][0]=5;\n        ar[0][1]=1;\n        ar[1][0]=3;\n        ar[1][1]=7;\n\
+  \        for (int i=0;i< ar.length;i++) // 获取行长度\n            for (int j=0;j < ar[0].length;j++)\
+  \ // 获取列长度\n                System.out.println(\"The value at location :\"+i+\"\
+  ][\"+j+\"] is :\" + ar[i][j]);\n    }\n    static int [][]dOps3(int ar[][]) {\n\
+  \        ar[0][0]=ar[0][0]*ar[0][0];\n        ar[0][1]=ar[0][1]*ar[0][1];\n    \
+  \    ar[1][0]=ar[1][0]*ar[1][0];\n        ar[1][1]=ar[1][1]*ar[1][1];\n        return\
+  \ ar;\n    }\n    static void show(int ar[][]) {\n        for (int i=0;i< ar.length;i++)\
+  \ // 获取行长度\n            for (int j=0;j < ar[0].length;j++) // 获取列长度\n          \
+  \      System.out.println(\"The value at location :\"+i+\"][\"+j+\"] is :\" + ar[i][j]);\n\
+  \    }\n    public static void main(String args[]) {\n        muldOps();\n     \
+  \   muldOps2();\n        int ar[][] = {{2,3},{3,4},{6,7}};\n        System.out.println(\"\
+  \\n Before square\");\n        show(ar);\n        System.out.println(\"\\n After\
+  \ square\");\n        int ar2[][] = dOps3(ar);\n        show(ar2);\n    }\n}\n```\n\
+  \nOutput:\n![](img/00076.gif)\n\n让我们理解如何创建和访问 3 维数组。`Length` 属性用于获取给定维度的大小。\n`ar[0].length`\
+  \ // 获取第一行的列长度\n\n```java\n//Prg3.java\n//Description : Working with multidimension\
+  \ array(3D)\n\nclass Program {\n    static void muldOps() {\n        int ar[][][]\
+  \ = new int [2][2][2];\n        ar[0][0][0]=5;\n        ar[0][0][1]=1;\n       \
+  \ ar[0][1][0]=3;\n        ar[0][1][1]=8;\n        ar[1][0][0]=2;\n        ar[1][0][1]=9;\n\
+  \        ar[1][1][0]=6;\n        ar[1][1][1]=4;\n        for (int i=0;i< ar.length;i++)\
+  \ // 获取行长度\n            for (int j=0;j < ar[0].length;j++) // 获取列长度\n          \
+  \      for (int k=0;k < ar[0][0].length;k++)\n    }\n}\n```\n\n\n\n\n```java\n \
+  \                   System.out.println(\"The value at location :ar[\"+i+\"]+\"[\"\
+  +j+\"]+\"[\"+k+\"] \" is :\" + ar[i][j][k]);\n}\n\npublic static void main(String\
+  \ args[]) {\n\n  muldOps();  \n}\n\n}\n```\n\n输出:\n\n![](img/00077.gif)\n\n## 总结\n\
+  数组是内存中的数据容器。它是固定大小且具有特定数据类型的。`Length` 属性返回当前维度的大小。\n\n![](img/00001.jpeg)\n\n# 第\
+  \ 28 章: 锯齿数组 (Jagged Arrays)\n\n## 主题\n- 引言\n- 使用锯齿数组\n- 总结\n\n## 引言\n在本章中，我将讨论如何创建和使用锯齿数组。锯齿数组通过允许创建用户需要的数组来更好地利用内存。\n\
+  \n## 使用锯齿数组\n这是一种多维数组，其中每一行的列数可以不同。首先标识行，然后为每行标识列。这有助于根据需求分配内存，从而减少内存浪费。\n\n###\
+  \ 语法\n```java\nint ar[][] = new int[2][];\n\nar[0] = new int[2];  // 第一行将有 2 列\n\
+  \nar[1] = new int[3];  // 第二行将有 3 列\n```\n\n让我们通过示例来理解锯齿数组。\n\n```java\n//Prg.java\n\
+  //Description : 锯齿数组操作\n\nclass Program {\n    static void jaggOps() {\n       \
+  \ int ar[][] = new int[3][];\n        ar[0]=new int [1];\n        ar[1] = new int[2];\n\
+  \        ar[2] = new int [3];\n        for(int i=0;i<ar.length;i++)\n          \
+  \  for(int j=0;j<ar[i].length;j++)\n                ar[i][j] = i*j;\n        for(int\
+  \ i=0;i<ar.length;i++)\n            for(int j=0;j<ar[i].length;j++)\n          \
+  \      System.out.println(\"The value at location :ar[\"+i+\"]+\"[\"+j+\"] is :\"\
+  \ + ar[i][j]);\n    public static void main(String args[]) {\n        jaggOps();\n\
+  \    }\n}\n```\n\n![](img/00078.gif)\n行数为 2。第一行有 2 列，第二行有 3 列。\n\n## 总结\n在锯齿数组中，列数可以不同。锯齿数组有助于优化内存。\n\
+  \n![](img/00001.jpeg)\n\n# 第 29 章: For Each 循环 (For Each Loop)\n\n## 主题\n- 引言\n\
+  - 使用 For Loop\n- 总结\n\n## 引言\n在本章中，我们将讨论如何使用 For Each 循环遍历数组。对于聚合类型，for each 循环比\
+  \ for 循环更好且简单。\n\n## 使用 For Loop\n这是在 Java 5 中引入的。for each 循环用于遍历数组和集合，即它是专门用于聚合类型的循环。与\
+  \ `for`、`while` 和 `do..while` 循环相比，for each 循环不容易出错，因为没有条件检查，因此使用起来更简单更安全。\n\n####\
+  \ 主要特性\n1. 不需要递增\n2. 无条件检查\n\n### 语法\n```java\nfor(data_type variable : array) {\
+  \ }\n```\n\n让我们通过示例来理解 for each 循环的使用。\n\n### 在单维数组上使用 each\n```java\n//Prg.java\n\
+  //Description : 单维数组的 for.. each 循环\n\nclass Program {\n    static void foreachOps()\
+  \ {\n        int ar[] = {1,2,3,4,5,6,7};\n        for(int i : ar)\n            System.out.print(i+\"\
+  \ \");\n    }\npublic static void main(String args[]) {\n        foreachOps();\n\
+  \    }\n}\n```\n\n输出:\n\n![](img/00079.gif)\n\nfor each 循环也可以用于多维数组。外层循环遍历行，内层循环遍历列。\n\
+  \n```java\n//Prg2.java\n//Description 使用多维数组的 for.. each 循环\n\nclass Program {\n\
+  \    static void foreachOps() {\n        int ar[][] = {{13,22},{36,43},{56,68},{71,83}};\n\
+  \        for(int i[] : ar)\n            for (int j : i)\n                System.out.print(j+\"\
+  \ \");\n    }\npublic static void main(String args[]) {\n        foreachOps();\n\
+  \    }\n}\n```\n"

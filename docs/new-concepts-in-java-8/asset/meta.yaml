@@ -1,0 +1,12 @@
+name: New Concepts in Java 8
+name_cn: Java 8 新概念
+slug: new-concepts-in-java-8
+toc:
+- - '##'
+  - 什么是元素序列？
+- - '##'
+  - 什么是源？
+- - '##'
+  - 什么是数据处理操作？
+- - '##'
+  - 如何构建流？

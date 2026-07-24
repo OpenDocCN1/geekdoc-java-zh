@@ -1,0 +1,190 @@
+name: Modern Java - A Guide to Java 8
+name_cn: 现代 Java - Java 8 指南指南
+slug: modern-java---a-guide-to-java-8
+toc:
+- - '#'
+  - 现代 Java - Java 8 指南
+- - '#'
+  - 介绍
+- - '##'
+  - 接口的默认方法
+- - '##'
+  - Lambda 表达式
+- - '##'
+  - 函数式接口
+- - '##'
+  - 方法和构造函数引用
+- - '#'
+  - Lambda 作用域
+- - '###'
+  - 访问局部变量
+- - '###'
+  - 访问字段和静态变量
+- - '###'
+  - 访问接口默认方法
+- - '#'
+  - 内置函数式接口
+- - '###'
+  - 谓词 (Predicates)
+- - '###'
+  - 函数 (Functions)
+- - '###'
+  - 生产者 (Suppliers)
+- - '###'
+  - 消费者 (Consumers)
+- - '###'
+  - 比较器 (Comparators)
+- - '#'
+  - 可选容器 (Optionals)
+- - '#'
+  - 流 (Streams)
+- - '###'
+  - 过滤 (Filter)
+- - '###'
+  - Map
+- - '###'
+  - Match
+- - '###'
+  - Count
+- - '###'
+  - Reduce
+- - '###'
+  - Parallel Streams
+- - '###'
+  - Sequential Sort
+- - '###'
+  - Parallel Sort
+- - '###'
+  - Maps
+- - '###'
+  - Date API
+- - '###'
+  - Clock
+- - '###'
+  - Timezones
+- - '###'
+  - LocalTime
+- - '###'
+  - LocalDate
+- - '###'
+  - LocalDateTime
+- - '##'
+  - 注解 (Annotations)
+- - '###'
+  - 变体 1：使用容器注解（旧式）
+- - '###'
+  - 变体 2：使用重复注解（新式）
+- - '##'
+  - 接下来该去哪里？
+- - '###'
+  - 不同类型的流
+- - '###'
+  - 处理顺序
+- - '###'
+  - 重用流
+- - '###'
+  - 高级操作
+- - '###'
+  - Collect
+- - '###'
+  - FlatMap
+- - '###'
+  - Reduce
+- - '##'
+  - 使用 Nashorn
+- - '##'
+  - 从 Java 用 JavaScript 函数
+- - '##'
+  - 从 JavaScript 调用 Java 方法
+- - '##'
+  - ScriptObjectMirror
+- - '###'
+  - 类型数组 (Typed Arrays)
+- - '###'
+  - 集合与 For Each 循环 (Collections and For Each)
+- - '###'
+  - Lambda 表达式与流 (Lambda expressions and Streams)
+- - '###'
+  - 类扩展 (Extending classes)
+- - '###'
+  - 参数重载 (Parameter overloading)
+- - '###'
+  - Java Beans
+- - '###'
+  - 函数字面量 (Function Literals)
+- - '###'
+  - 就此
+- - '#'
+  - Java 8 并发教程：线程与执行器
+- - '###'
+  - 线程与 Runnable
+- - '###'
+  - 执行器 (Executors)
+- - '###'
+  - Callables 和 Futures
+- - '###'
+  - 超时
+- - '###'
+  - InvokeAll
+- - '###'
+  - InvokeAny
+- - '###'
+  - 定时执行器
+- - '#'
+  - Java 8 并发教程：同步与锁
+- - '##'
+  - Synchronized
+- - '##'
+  - Locks
+- - '###'
+  - ReentrantLock
+- - '###'
+  - ReadWriteLock
+- - '###'
+  - StampedLock
+- - '###'
+  - 信号量 (Semaphores)
+- - '#'
+  - Java 8 并发教程：原子变量与并发 Map
+- - '###'
+  - AtomicInteger
+- - '###'
+  - LongAdder
+- - '###'
+  - LongAccumulator
+- - '###'
+  - ConcurrentMap
+- - '###'
+  - ConcurrentHashMap
+- - '#'
+  - 示例 Java 8 API：字符串、数字、数学与文件
+- - '##'
+  - 切割字符串
+- - '##'
+  - 计算数字
+- - '##'
+  - 读取和写入文件
+- - '#'
+  - 在 Java 8 中避免空值检查
+- - '###'
+  - 提高 Java 8 中的空安全性
+- - '#'
+  - 使用 IntelliJ IDEA 修复 Java 8 Stream 陷阱
+- - '##'
+  - IntelliJ IDEA 救场
+- - '##'
+  - 设置你自己的 Live Templates
+- - '###'
+  - Join
+- - '###'
+  - GroupBy
+- - '#'
+  - 在 Nashorn 中使用 Backbone.js
+- - '###'
+  - Java 模型
+- - '###'
+  - 骨架模型 (Backbone Model)
+- - '###'
+  - 将两者结合
+- - '###'
+  - 结论

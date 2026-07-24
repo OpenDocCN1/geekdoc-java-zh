@@ -1,0 +1,696 @@
+name: Learn Selenium WebDriver Automation With Java language： Technique of Success
+name_cn: Java 语言 Selenium WebDriver 自动化：成功技巧
+slug: learn-selenium-webdriver-automation-with-java-language-techn
+toc:
+- - '#'
+  - Java 语言 Selenium WebDriver 自动化：成功技巧
+- - '#'
+  - 什么是 Selenium
+- - '#'
+  - Selenium 基础术语
+- - '#'
+  - 为什么自动化测试是必要的？
+- - '#'
+  - Selenium 特性
+- - '#'
+  - Selenium WebDriver 安装
+- - '##'
+  - 选项 1：从 Selenium 网站下载
+- - '##'
+  - 选项 2：使用构建工具（Maven 或 Gradle）
+- - '#'
+  - Selenium WebDriver- 第一个测试用例
+- - '#'
+  - Selenium WebDriver- 命令
+- - '#'
+  - Selenium WebDriver- 定位策略
+- - '###'
+  - 1. 通过 ID
+- - '###'
+  - 2. 通过 Name
+- - '###'
+  - 3. 通过 XPath
+- - '###'
+  - 4. 通过 CSS 选择器
+- - '###'
+  - 5. 通过链接文本和部分链接文本
+- - '###'
+  - 6. 通过标签名
+- - '###'
+  - 7. 通过类名
+- - '###'
+  - 8. 通过自定义函数
+- - '#'
+  - Selenium WebDriver- 处理下拉列表
+- - '###'
+  - 1. 处理单选下拉列表
+- - '###'
+  - 2. 处理多选下拉列表
+- - '#'
+  - Selenium WebDriver- 处理 Alert
+- - '###'
+  - 1. 处理 JavaScript Alert
+- - '##'
+  - 2. 处理 JavaScript 确认框 (Configs)
+- - '##'
+  - 3. 处理 JavaScript 提示框 (Prompts)
+- - '###'
+  - 1. `void dismiss()`
+- - '###'
+  - 2. `void accept()`
+- - '###'
+  - 3. `String getText()`
+- - '###'
+  - 4. `void sendKeys(String stringToSend)`
+- - '#'
+  - Selenium Webdriver - 处理单选框 (Radio buttons)
+- - '###'
+  - 1. 定位单选框
+- - '###'
+  - 2. 选择单选框
+- - '###'
+  - 3. 验证选择
+- - '####'
+  - 组选择单选框的示例
+- - '#'
+  - Selenium Webdriver - 处理复选框 (Checkbox)
+- - '###'
+  - 1. 定位复选框元素
+- - '###'
+  - 2. 选择（勾选）复选框
+- - '###'
+  - 3. 验证复选框状态
+- - '####'
+  - 处理多个复选框的示例
+- - '#'
+  - Selenium Webdriver - 断言 (Assertions)
+- - '###'
+  - JUnit 断言
+- - '###'
+  - TestNG Assertions
+- - '###'
+  - AssertJ Assertions
+- - '###'
+  - 硬断言
+- - '###'
+  - 软断言
+- - '#'
+  - 什么是 Selenium Grid？
+- - '###'
+  - Hub
+- - '###'
+  - Node
+- - '#'
+  - Selenium Webdriver - 如何截图
+- - '#'
+  - Selenium Webdriver - 如何读取 Excel 文件数据
+- - '###'
+  - 添加 Apache POI 依赖
+- - '###'
+  - 编写代码读取 Excel 数据
+- - '###'
+  - 运行代码
+- - '###'
+  - 异常处理
+- - '###'
+  - 清理
+- - '#'
+  - Selenium Webdriver - 如何连接 SQL 和 MySQL 数据库
+- - '###'
+  - 1. 下载并包含 MySQL JDBC Driver
+- - '###'
+  - 2. 导入必要的 Java 包
+- - '###'
+  - 3. 设置数据库连接参数
+- - '###'
+  - 4. 建立数据库连接
+- - '###'
+  - 5. 执行查询
+- - '###'
+  - 6. 关闭数据库连接
+- - '##'
+  - 4. 验证工具框内容：
+- - '##'
+  - 5. 完成测试用例：
+- - '#'
+  - Selenium WebDriver - 处理动态 Web 表格
+- - '##'
+  - Web 表格类型
+- - '###'
+  - 1. 静态 Web 表
+- - '###'
+  - 2. 动态 Web 表
+- - '##'
+  - 处理 Web 表的完整 Selenium 代码
+- - '#'
+  - 什么是 TestNG
+- - '#'
+  - 在 Eclipse 中安装和配置 TestNG
+- - '###'
+  - 前提条件
+- - '###'
+  - 安装步骤
+- - '###'
+  - 配置步骤
+- - '#'
+  - XML 文件在 TestNG 配置中的重要
+- - '#'
+  - TestNG 组
+- - '###'
+  - 定义组
+- - '###'
+  - TestNG XML 配置
+- - '#'
+  - 基于组运行测试
+- - '#'
+  - 使用组的优势
+- - '#'
+  - 什么是 TestNG 注解？
+- - '###'
+  - '`@Test`'
+- - '###'
+  - '`@BeforeSuite` 和 `@AfterSuite`'
+- - '###'
+  - '`@BeforeTest` 和 `@AfterTest`'
+- - '###'
+  - '`@BeforeClass` 和 `@AfterClass`'
+- - '###'
+  - '`@BeforeMethod` 和 `@AfterMethod`'
+- - '###'
+  - '`@DataProvider`'
+- - '###'
+  - '`@Parameters`'
+- - '###'
+  - '`@Factory`'
+- - '###'
+  - '`@Listeners`'
+- - '###'
+  - '`@ParametersProvider`'
+- - '###'
+  - '`@ParametersMethod`'
+- - '###'
+  - '`@TestInstance`'
+- - '###'
+  - '`@BeforeGroups` 和 `@AfterGroups`'
+- - '###'
+  - '`@Listeners` (用于方法)'
+- - '###'
+  - '`@BeforeGroups` 和 `@AfterGroups` (用于方法)'
+- - '###'
+  - '`@BeforeSuite` 和 `@AfterSuite` (用于方法)'
+- - '#'
+  - TestNG 注解的层级结构：
+- - '#'
+  - '![](img/image_rsrc241.jpg)'
+- - '#'
+  - 使用 TestNG 注解的优势：
+- - '#'
+  - TestNG 注解属性
+- - '##'
+  - 1. `@Test` 注解属性：
+- - '##'
+  - 2. `@DataProvider` 和 `@Parameters` 属性：
+- - '##'
+  - '`@Before` 和 `@After` 注解属性（如 `@BeforeMethod` 等）：'
+- - '##'
+  - 3. `@Listeners` 注解属性：
+- - '##'
+  - 4. `@Factory` 属性：
+- - '##'
+  - 5. `@ParametersProvider` 和 `@ParametersMethod` ：
+- - '#'
+  - TestNG 监听器
+- - '#'
+  - Selenium 自动化 QA 面试题
+- - '##'
+  - 1. 什么是 Selenium WebDriver？
+- - '##'
+  - 2. 如何在 Java 中使用 Selenium WebDriver 启动浏览器？
+- - '##'
+  - 3. `findElement` 和 `findElements` 方法之间有什么区别？
+- - '##'
+  - 4. 如何使用 Selenium WebDriver 与 Web 元素交互？
+- - '##'
+  - 5. 如何处理具有动态 ID 或属性的 Web 元素？
+- - '##'
+  - 6. Selenium WebDriver 中的隐式等待（Implicit Wait）和显式等待（Explicit Wait）分别什么？
+- - '##'
+  - 7. 如何使用 WebDriver 在框架（frames）和窗口（windows）之间切换？
+- - '##'
+  - 8. 如何使用 Actions 类执行鼠标悬停操作？
+- - '##'
+  - 9. 如何使用 WebDriver 处理警报框（alerts）和弹出框？
+- - '##'
+  - 10. 如何使用 Selenium WebDriver 进行数据测试？
+- - '##'
+  - 11. Selenium WebDriver 中的页面模型 (POM)？
+- - '##'
+  - 12. 如何使用 WebDriver 处理 Cookie？
+- - '##'
+  - 13. 什么是 TestNG，它如何增强自动化的？
+- - '##'
+  - 14. 如何处理 Selenium 中的同步问题？
+- - '##'
+  - 15. 什么是无头浏览器（headless browser），为什么要使用它？
+- - '##'
+  - 16. 如何使用 WebDriver 处理下拉菜单和选项？
+- - '##'
+  - 17. 与 Selenium RC 相比，WebDriver 的优势是什么？
+- - '##'
+  - 18. 如何在 Java 中使用截图？
+- - '##'
+  - 19. Selenium WebDriver 中的 Factory 模式？
+- - '##'
+  - 20. 如何处理 WebDriver 中的同步错误？
+- - '##'
+  - 21. 如何使用 WebDriver 模拟键盘操作？
+- - '##'
+  - 22. 什么是 DesiredCapabilities？
+- - '##'
+  - 23. 如何使用 WebDriver 执行拖放操作？
+- - '##'
+  - 24. 如何使用 WebDriver 处理导航？
+- - '##'
+  - 25. 如何并行运行 Selenium WebDriver？
+- - '##'
+  - 26. 如何使用 WebDriver 捕获网络流量并进行测试？
+- - '##'
+  - 27. 使用 Selenium 自动化时常见挑战？
+- - '##'
+  - 28. 如何使用 ExpectedConditions 在 WebDriver 中动态等待？
+- - '##'
+  - 29. 如何使用 WebDriver 处理相关的测试？
+- - '##'
+  - 30. 如何将 WebDriver 测试到持续集成 (CI) 工具中？
+- - '##'
+  - 31. 如何在 Java 中使用 WebDriver 处理 Cookie？
+- - '##'
+  - 32. WebDriver 中的 `close()` 方法和 `quit()` 方法有什么区别？
+- - '##'
+  - 33. 如何使用 WebDriver 处理多个窗口或标签页？
+- - '##'
+  - 34. 什么是 GeckoDriver？你什么时候使用它？
+- - '##'
+  - 35. 如何使用 WebDriver 处理通知？
+- - '##'
+  - 36. 如何使用 WebDriver 和 Java 进行数据库测试？
+- - '##'
+  - 37. Selenium WebDriver 中的断言（Assertions）是什么？
+- - '##'
+  - 38. 在处理基于 AJAX 的应用程序时，如何处理同步？
+- - '##'
+  - 39. WebDriver 中 CSS 选择器和 XPath 表达式有什么区别？
+- - '##'
+  - 40. 如何处理加载时 JavaScript 加载的动态网页？
+- - '##'
+  - 41. WebDriver 中 `getAttribute()` 方法的目的是？
+- - '##'
+  - 42. 在使用 WebDriver 进行自动化时处理错误？
+- - '##'
+  - 43. 你能解释 TestNG 注解的概念及其用法吗？
+- - '##'
+  - 44. 如何捕捉测试中的 JavaScript 错误或控制日志？
+- - '##'
+  - 45. 你能维护良好的定位器（locators）吗？
+- - '##'
+  - 46. 如何处理 AJAX 加载的动态网页？
+- - '##'
+  - 47. 如何在 Selenium WebDriver 脚本中处理异常？
+- - '##'
+  - 48. 你能解释 TestNG 数据提供（data providers）的概念及其用法吗？
+- - '##'
+  - 49. 如何确保 WebDriver 测试中的跨兼容性？
+- - '##'
+  - 50. WebDriver 中 `isEnabled()` 方法的目的是？
+- - '##'
+  - 51. 如何使用 WebDriver 处理警框（alerts）和身份弹窗？
+- - '##'
+  - 52. 你能解释页面对象模型（POM）设计的好处吗？
+- - '##'
+  - 53. 如何处理页面上改变位置或布局的动态内容？
+- - '##'
+  - 54. WebDriver 中 `getText()` 方法的目的是？
+- - '##'
+  - 55. 如何使用 TestNG 实现测试套件（test suites）和依赖？
+- - '##'
+  - 56. 如何使用 WebDriver 模拟浏览器导航？
+- - '##'
+  - 57. WebDriver `clear()` 方法的目的是？
+- - '##'
+  - 58. 如何使用 TestNG 执行并行？
+- - '##'
+  - 59. 如何使用 Java WebDriver 验证链接或 URL？
+- - '##'
+  - 60. 你能解释 TestNG 中依赖注入（dependency injection）的概念吗？
+- - '##'
+  - 61. 如何处理根据用户输入加载的动态列表？
+- - '##'
+  - 62. 你能解释 TestNG 监听器（listeners）的概念及其应用吗？
+- - '##'
+  - 63. 如何使用 TestNG 数据提供进行数据驱动测试？
+- - '##'
+  - 64. WebDriver 中 `submit()` 方法的目的是？
+- - '##'
+  - 65. 如何在 Selenium WebDriver 中处理超时和等待？
+- - '##'
+  - 66. 你能解释如何使用 WebDriver 执行拖放操作吗？
+- - '##'
+  - 67. 在 WebDriver 中处理动态 URL 或带有查询参数的 URL？
+- - '##'
+  - 68. GeckoDriver 在针对 Firefox 的 Selenium WebDriver 中起什么作用？
+- - '##'
+  - 69. 如何使用 WebDriver 获取 Web 表格的行数和列数？
+- - '##'
+  - 70. WebDriver 中用于复选框和单选按钮的 isSelected() 方法的作用是什么？
+- - '##'
+  - 71. 如何在 WebDriver 中使用键盘快捷键执行导航？
+- - '##'
+  - 72. 能解释 FluentWait 的概念及其在 WebDriver 中的用法吗？
+- - '##'
+  - 73. 如何使用 WebDriver 模拟右键点击（上下文菜单）操作？
+- - '##'
+  - 74. WebDriver 中用于下拉列表的 getText() 方法的作用是什么？
+- - '##'
+  - 75. 在处理网页上的动画和过渡时，如何处理同步？
+- - '##'
+  - 76. 如何使用 WebDriver 处理文件上传和下载？
+- - '##'
+  - 77. WebDriver 中的页面加载策略（Page Load Strategy）是什么？它如何影响测试执行？
+- - '##'
+  - 78. 如何使用 WebDriver 捕获并验证具有动态 ID 或属性的元素？
+- - '##'
+  - 79. 能解释 WebDriver 中 navigate().refresh() 方法的作用吗？
+- - '##'
+  - 80. 如何使用 WebDriver 模拟网页内的滚动？
+- - '##'
+  - 81. WebDriver 中 getTagName() 方法的作用是什么？
+- - '##'
+  - 82. 如何使用 WebDriver 对动态和响应式 Web 应用进行测试？
+- - '##'
+  - 83. 在移动设备上运行 WebDriver 的常见挑战？
+- - '##'
+  - 84. 如何处理访问网页时出现的弹窗？
+- - '##'
+  - 85. 你能解释 WebDriver 中 getLocation() 方法吗？
+- - '##'
+  - 86. 如何使用 WebDriver 处理网页上缺失的图片？
+- - '##'
+  - 87. WebDriver 中 getCssValue() 方法的作用是什么？
+- - '##'
+  - 88. 如何处理测试动态变化同步问题？
+- - '##'
+  - 89. 如何使用 WebDriver 模拟浏览器的后退和前进？
+- - '##'
+  - 90. 如何使用 WebDriver 模拟 Ctrl+C 和 Ctrl+V 等快捷键？
+- - '##'
+  - 91. WebDriver 中输入框的 getAttribute("value") 方法的目的是？
+- - '##'
+  - 92. 如何使用 WebDriver 模拟双击操作？
+- - '##'
+  - 93. WebDriver 中 Web 元素的 getSize() 方法的作用？
+- - '##'
+  - 94. 如何使用 WebDriver 处理嵌套的 frames 或 iframes？
+- - '##'
+  - 95. 能解释如何使用 WebDriver 执行 JavaScript？
+- - '##'
+  - 96. 如何使用 WebDriver 自动化测试？
+- - '##'
+  - 97. 如何使用 WebDriver 验证网页上特定文本？
+- - '##'
+  - 98. WebDriver 中 getWindowTitle() 方法的作用是什么？
+- - '##'
+  - 99. 如何使用 WebDriver 处理弹出窗口或标签页？
+- - '##'
+  - 100. 能解释 Selenium WebDriver 处理代理吗？
+- - '##'
+  - 101. 如何使用 WebDriver 处理带有建议的下拉列表？
+- - '##'
+  - 102. WebDriver 中 getCssValue("property") 方法的目的是？
+- - '##'
+  - 103. 如何使用 WebDriver 执行右键点击并选择？
+- - '##'
+  - 104. WebDriver 中 getAttribute("href") 方法的目的是？
+- - '##'
+  - 105. 如何使用 WebDriver 模拟窗口的最大化和调整大小？
+- - '##'
+  - 106. 如何使用 WebDriver 处理 Session 和 Cookie？
+- - '##'
+  - 107. WebDriver 中 getAttribute("src") 方法的作用是什么？
+- - '##'
+  - 108. 如何使用 WebDriver 模拟滚动到页面？
+- - '##'
+  - 109. 如何使用 WebDriver 通过地址栏导航？
+- - '##'
+  - 110. WebDriver 中 clear() 方法的目的是？
+- - '##'
+  - 111. 如何使用 TestNG 处理属性文件和配置？
+- - '##'
+  - 112. 如何使用 WebDriver 处理没有固定定位器的动态测试？
+- - '##'
+  - 113. WebDriver 中 getFirstSelected() 方法的作用？
+- - '##'
+  - 114. 如何使用 Actions 类模拟鼠标悬停操作？
+- - '##'
+  - 115. 如何使用 WebDriver 处理警报、提示框和确认框？
+- - '##'
+  - 116. WebDriver 中 getWindowHandle() 方法的作用？
+- - '##'
+  - 117. 如何使用 WebDriver 模拟 Shift 键？
+- - '##'
+  - 118. 如何使用 WebDriver 处理网页上隐藏或不可见的元素？
+- - '##'
+  - 119. WebDriver 中 getPageSource() 方法的作用？
+- - '##'
+  - 120. 如何在未找到元素时不抛出异常？
+- - '##'
+  - 121. 如何使用 WebDriver 模拟多个键？
+- - '##'
+  - 122. WebDriver 中 getTagName() 方法的作用？
+- - '##'
+  - 123. 如何使用 WebDriver 验证网页上显示的消息？
+- - '##'
+  - 124. WebDriver 中 isDisplayed() 方法的目的是？
+- - '##'
+  - 125. 如何使用 WebDriver 处理 <select> 标签下拉列表？
+- - '##'
+  - 126. 如何使用 WebDriver 处理身份弹窗？
+- - '##'
+  - 127. WebDriver 中 getAttribute("class") 方法的作用？
+- - '##'
+  - 128. 如何使用 WebDriver 模拟滚动到网页上的特定元素或锚点？
+- - '##'
+  - 129. 如何使用 WebDriver 通过 Tab 和 Enter 等快捷键与 Web 元素交互？
+- - '##'
+  - 130. WebDriver 中 getAttribute("style") 方法的作用？
+- - '##'
+  - 131. 如何使用 WebDriver 模拟窗口焦点或窗口切换？
+- - '##'
+  - 132. 如何使用 WebDriver 处理没有固定定位器的动态弹窗？
+- - '##'
+  - 133. WebDriver 中 isDisplayed() 方法用于验证可见性？
+- - '##'
+  - 134. 如何使用 WebDriver 通过链接和锚点模拟浏览器导航？
+- - '##'
+  - 135. 如何使用 WebDriver 执行 JavaScript 代码在 Web 页面上复杂的交互？
+- - '##'
+  - 136. 你如何在 WebDriver 中处理多个窗口或标签页？
+- - '##'
+  - 137. 如何使用 WebDriver 捕屏？
+- - '##'
+  - 138. 如何使用 WebDriver 执行数据测试？
+- - '##'
+  - 139. 什么是 WebDriverManager？
+- - '##'
+  - 140. 如何将 WebDriver 与 TestNG 或 JUnit 等框架集成？
+- - '##'
+  - 141. 使用 Selenium WebDriver 相比 Selenium IDE 有优势？
+- - '##'
+  - 142. 如何使用 WebDriver 定位元素？
+- - '##'
+  - 143. findElement() 和 findElements 方法之间的区别是什么？
+- - '##'
+  - 144. 如何使用 WebDriver 执行点击按钮或填充表单操作？
+- - '##'
+  - 145. 你如何处理属性或 ID 变化的动态元素？
+- - '##'
+  - 146. WebDriver 的隐式等待（implicit wait）和显式等待（explicit wait）是什么？
+- - '##'
+  - 147. 如何使用 WebDriver 处理警框（alerts）、弹出窗口和框架（frames）？
+- - '##'
+  - 148. 如何使用 WebDriver 执行鼠标操作？
+- - '##'
+  - 149. 如何使用 WebDriver 处理浏览器 Cookie？
+- - '##'
+  - 150. WebDriver 的 get() 和 navigate().to() 有什么区别？
+- - '##'
+  - 151. 你如何处理 Ajax 调用和页面加载延迟等同步问题？
+- - '##'
+  - 152. WebDriver 的 WebDriverWait 是什么？它是如何工作的？
+- - '##'
+  - 153. 如何使用 WebDriver 处理下拉框（dropdowns）？
+- - '##'
+  - 154. WebDriver 的 DesiredCapabilities 是什么？什么时候使用？
+- - '##'
+  - 155. 你如何使用 WebDriver 执行输入文本或按下键等键盘操作？
+- - '##'
+  - 156. 你如何使用 WebDriver 执行 JavaScript 代码？
+- - '##'
+  - 157. 你如何使用 WebDriver 处理 SSL 证书错误？
+- - '##'
+  - 158. WebDriver 的 quit() 和 close() 有什么区别？
+- - '##'
+  - 159. 你如何使用 WebDriver 模拟滚动页面等用户交互？
+- - '##'
+  - 160. 你如何使用 WebDriver 处理浏览器 Cookie 和本地存储（local storage）？
+- - '##'
+  - 161. 你如何使用 WebDriver 和 TestNG 执行并行测试？
+- - '##'
+  - 162. 在 WebDriver 中如何处理 SSL 证书？
+- - '##'
+  - 163. 你如何使用 WebDriver 执行文件和下载？
+- - '##'
+  - 164. 如何在 WebDriver 中处理动态元素测试？
+- - '##'
+  - 165. 如何使用 WebDriver 捕获网络流量并分析？
+- - '##'
+  - 166. 什么是无头浏览器？如何使用它？
+- - '##'
+  - 167. 如何使用 WebDriver 处理 iframe？
+- - '##'
+  - 168. WebDriver 的页面加载策略是什么？
+- - '##'
+  - 169. 如何在 WebDriver 测试中进行同步？
+- - '##'
+  - 170. 如何使用 WebDriver 模拟浏览器的后退、前进？
+- - '##'
+  - 171. 如何使用 WebDriver 处理警框（alerts）、提示框（prompts）和确认框（confirmations）？
+- - '##'
+  - 172. `driver.findElement()` 和 `element.findElement()` 有什么区别？
+- - '##'
+  - 173. 如何在 WebDriver 中处理页面加载和同步问题？
+- - '##'
+  - 174. 如何使用 WebDriver 在类之间之间切换？
+- - '##'
+  - 175. WebDriver 中的 Factory 模式是什么？它是如何工作的？
+- - '##'
+  - 176. 如何使用 WebDriver 执行测试？
+- - '#'
+  - TestNG 面试题与解答
+- - '##'
+  - 1. 什么是 TestNG？为什么在自动化中使用？
+- - '##'
+  - 2. TestNG 和 JUnit 有不同？
+- - '##'
+  - 3. TestNG 的主要注解有哪些？
+- - '##'
+  - 4. 如何使用 TestNG 实现数据驱动？
+- - '##'
+  - 5. 如何使用 TestNG 分组并选择性执行？
+- - '##'
+  - 6. 如何使用 TestNG 按照特定顺序执行类？
+- - '##'
+  - 7. TestNG 的并行模式有哪些？
+- - '##'
+  - 8. 如何使用 TestNG XML 配置文件的用途？
+- - '##'
+  - 9. 如何使用 TestNG 处理失败和重试？
+- - '##'
+  - 10. 解释 TestNG 监听器（listeners）的概念，并提供示例。
+- - '##'
+  - 11. 如何在 TestNG 中按顺序执行测试？
+- - '##'
+  - 12. TestNG 注解中 `alwaysRun` 属性是什么？
+- - '##'
+  - 13. 你能解释 TestNG Factory 概念吗？
+- - '##'
+  - 14. 如何使用 TestNG 生成详细报告？
+- - '##'
+  - 15. 如何使用 TestNG 与其他工具（如 Maven 和 Jenkins）集成？
+- - '##'
+  - 16. 如何使用 TestNG 处理方法参数化？
+- - '##'
+  - 17. 如何解释 TestNG 监听器（listeners）的概念及其应用？
+- - '##'
+  - 18. 如何在 TestNG 中执行类级别的设置（setup）和拆卸（teardown）？
+- - '##'
+  - 19. TestNG 注解 @DataProvider 的目的是什么？
+- - '##'
+  - 20. 如何在 TestNG 中指定测试方法的顺序？
+- - '##'
+  - 21. 你能解释 TestNG 依赖关系以及如何工作的？
+- - '##'
+  - 22. 如何在 TestNG 中满足特定条件运行测试？
+- - '##'
+  - 23. 如何使用 TestNG 监听器（listeners）实现自定义？
+- - '##'
+  - 24. 如何使用 TestNG DataProvider 进行参数化测试？
+- - '##'
+  - 25. 如何解释 TestNG 处理依赖关系及其影响？
+- - '##'
+  - 26. 如何使用 TestNG 按照特定顺序执行多个类？
+- - '##'
+  - 27. TestNG 的 @Listeners 注解目的是什么？如何使用它？
+- - '##'
+  - 28. 如何在 TestNG 中执行单个类的并行执行？
+- - '##'
+  - 29. 如何控制 TestNG 并行执行线程大小？
+- - '##'
+  - 30. TestNG 的 @Factory 注解目的是什么？它是如何工作的？
+- - '##'
+  - 31. 如何在 TestNG 中跳过特定的方法或整个类？
+- - '##'
+  - 32. TestNG 注解 `dataProviderClass` 属性的目的是什么？
+- - '##'
+  - 33. 如何使用 TestNG 在运行时地分组方法？
+- - '##'
+  - 34. 你能解释 TestNG 监听器（listeners）的概念以及如何帮助报告？
+- - '##'
+  - 35. 如何使用 TestNG 在测试套件中从多个 XML 文件执行？
+- - '##'
+  - 36. TestNG @Parameters 注解的目的是什么？与 DataProviders 有区别？
+- - '##'
+  - 37. 如何使用 TestNG 对失败的方法重试？
+- - '##'
+  - 38. 你能解释 TestNG @BeforeTest 和 @AfterTest 注解的意义吗？
+- - '##'
+  - 39. 如何使用 TestNG XML 创建数据驱动套件？
+- - '##'
+  - 40. TestNG 如何处理并行执行时的同步？
+- - '##'
+  - 41. 如何配置 TestNG 按类的特定顺序运行测试？
+- - '##'
+  - 42. XML 配置文件中 suite 标签的目的是什么？
+- - '##'
+  - 43. 如何配置 TestNG 使用优先级（priority）和依赖关系按特定顺序执行？
+- - '##'
+  - 44. 如何配置 TestNG 并行执行，同时管理共享资源的线程安全？
+- - '##'
+  - 45. 如何在 TestNG 中创建和管理测试组（groups），它们的意义是什么？
+- - '##'
+  - 46. TestNG 的 @Listeners 注解目的是什么？如何使用它？
+- - '##'
+  - 47. 如何使用 TestNG 对多个类进行并行执行？
+- - '##'
+  - 48. 如何使用 TestNG 为特定的测试跳过某些方法的执行？
+- - '##'
+  - 49. 如何实现用于报告和日志的 TestNG 监听器？
+- - '##'
+  - 50. 如何在 TestNG 中实现软断言（soft assertions）和硬断言（hard assertions）以获得更好的报告？
+- - '##'
+  - 51. TestNG 的 @BeforeSuite 和 @AfterSuite 注解目的是什么？
+- - '##'
+  - 52. 如何使用 TestNG 进行跨浏览器测试？
+- - '##'
+  - 53. 如何在 TestNG 中为测试方法实现超时（timeouts）？
+- - '##'
+  - 54. 如何使用 TestNG 监听器为失败的测试方法实现重试（retries）？
+- - '##'
+  - 55. 如何配置 TestNG 使用测试组和依赖关系按特定顺序执行测试？
+- - '##'
+  - 56. TestNG 的 `dependsOnGroups` 属性是什么？它是如何控制测试执行顺序的？
+- - '##'
+  - 57. 如何使用 TestNG 的 @DataProvider 注解对测试方法进行参数化？
+- - '##'
+  - 58. 如何创建和使用 TestNG XML suite 套件来组织和执行测试？
+- - '##'
+  - 59. 如何配置 TestNG 结合优先级和依赖关系按特定顺序执行测试？

@@ -1,0 +1,455 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # New Concepts in Java 8
+
+    VLIGHT
+
+
+    ## Table Of Contents
+
+    - [Behavior Parameterization](#
+
+    - [Lambda Expressions](#
+
+    - [Functional Interfaces](#
+
+    - [Predicate](#
+
+    - [Customer](#
+
+    - [Streams](#
+
+
+    # Behavior Parameterization
+
+
+    Behavior Parameterization is nothing but a software development pattern which
+    lets you handle frequent requirement changes.
+
+
+    Behavior Parameterization means taking a block of code, which can be called later
+    by other parts of your programs, and making it available without executing it.
+
+
+    Behavior Parameterization is the ability for a method to take multiple different
+    behaviors as parameters and use them internally to accomplish different behaviors.
+
+
+    For example, you could pass the block of code as an argument to another method
+    which will execute it later so the method''s behavior is parameterized based on
+    that block of code.
+
+
+    Behavior Parameterization is a useful pattern, which lets you encapsulate a behavior
+    and parameterize the behavior of methods by passing and using these behaviors
+    you create, to easily adapt to changing your customer requirements.
+
+
+    Many methods, which are often used together with anonymous classes, in Java API
+    can be parameterized with different behaviors including:
+
+
+    - Sorting with a `Comparator`: This is nothing but a recurring programming task.
+
+    - Executing a block of code with `Runnable`: You can use the `Runnable` interface
+    to represent a block of code, which will return no result, to be executed.
+
+    - Handling GUI events: A typical pattern in GUI programming is to perform an action
+    in response to a certain event such as clicking a button or hovering over a text.
+
+
+    # Lambda Expressions
+
+
+    Passing code with behavior parameterization, which lets you define a block of
+    code that represents a behavior and then pass it around, is useful for coping
+    with frequent requirement changes in your code. You can decide to run that block
+    of code when a certain event happens or at a certain point in an algorithm.
+
+
+    Using anonymous classes to represent different behaviors is verbose which does
+    not encourage programmers to use behavior parameterization in practice.
+
+
+    Lambda Expressions in Java 8 let you represent a behavior or pass a block of code
+    in a concise way.
+
+
+    Lambda Expressions in Java 8 can be understood as a concise representation of
+    an anonymous function, which does not have a name but it has a list of parameters
+    and a body and a return type and also possibly a list of exceptions that can be
+    thrown, can be passed around.
+
+
+    A Lambda Expression is composed of:
+
+
+    - A list of parameters: This list mirrors the parameters of the `compare` method
+    of a `Comparator`.
+
+    - An arrow: The arrow `->` separates the list of parameters from the body of the
+    Lambda Expression.
+
+    - A body of the Lambda Expression: The expression is considered the Lambda''s
+    return value.
+
+
+    Lambda Expressions in Java 8 let you provide the implementation of the abstract
+    method in a functional interface directly inline then treat the whole expression
+    as an instance of a functional interface.
+
+
+    # Functional Interfaces
+
+
+    A functional interface is nothing but an interface which specifies only 1 abstract
+    method.
+
+
+    There are several functional interfaces in the Java API such as `Comparator` and
+    `Runnable`.
+
+
+    In Java 8, an interface is still a functional interface if it has many default
+    methods, which are methods with a body that provide some default implementation
+    for methods in case they are not implemented by a class, as long as it has only
+    1 abstract method.
+
+
+    The signature of the abstract method in a functional interface essentially describes
+    the signature of the Lambda Expression.
+
+
+    In Java 8, functional interfaces are annotated with `@FunctionalInterface` which
+    is used to indicate that the interface is intended to be a functional interface.
+
+
+    Functional Intefaces are useful because the signature of the abstract method in
+    a functional interface is called a function descriptor. So if you want to use
+    different lambda expressions you need a set of functional interfaces which can
+    describe common function descriptors.
+
+
+    # Predicate
+
+
+    In Java 8, the `java.util.function.Predicate<T>` interface defines an abstract
+    method named `test` which accepts an object of generic type `T` and returns a
+    boolean.
+
+
+    This interface is used if you need to represent a boolean expression which uses
+    an object of type `T`.
+
+
+    # Customer
+
+
+    In Java 8, the `java.util.function.Consumer<T>` interface defines an abstract
+    method named `accept` which takes an object of generic type `T` and returns void.
+
+
+    If you need to access an object of type `T` and perform some operations on it,
+    you must use the `Consumer` interface.
+
+
+    # Streams
+
+
+    In Java 8, a stream is nothing but a sequence of elements from a source which
+    supports data processing operations.
+
+
+    ### What is a sequence of elements?
+
+    It likes a collection, a stream provides an interface to a sequenced set of values
+    of a specific element type. Streams are expressing computations such as `filter`,
+    `sorted`, and `map`. Collections are about data but streams are about computations.
+
+
+    ### What is a source?
+
+    Streams consume from a data-providing source such as collections, arrays, or I/O
+    resources.
+
+
+    ### What are data processing operations?
+
+    Streams support database-like operations and common operations from functional
+    programming languages to manipulate data such as `filter`, `map`, `reduce`, `find`,
+    `match`, `sort`, etc.
+
+
+    Streams support a `filter` method which is an operation takes an argument as `Predicate`
+    then returns a stream including all elements that match the `Predicate`.
+
+
+    Streams also support the `map` method which takes a function as an argument.
+
+
+    ### How to build a stream?
+
+    - Building a stream from values: You can create a stream with explicit values
+    by using the static method `Stream.of()` which can take any number of parameters.
+
+    - Building a stream from an array: You can also create a stream from an array
+    using the static method named `Arrays.stream()` which takes an array as a parameter.
+
+    - Building a stream from a file: You can also create a stream from a file using
+    the method named `Files.lines()` which returns a stream of lines as strings from
+    the given file.
+
+    - Building a stream from a function: You can also create a stream from a function
+    using 2 static methods to generate a stream named `Stream.iterate()` and `Stream.generate()`.
+
+    '
+  raw: "\n\n![](cover.jpeg)\n\nNew Concepts in Java 8\n\nVLIGHT\n\nTable Of Contents\n\
+    \n[Behavior Parameterization](#part0000_split_002.html__Toc469750618)\n\n[Lambda\
+    \ Expressions](#part0000_split_003.html__Toc469750619)\n\n[Functional Interfaces](#part0000_split_004.html__Toc469750620)\n\
+    \n[Predicate](#part0000_split_005.html__Toc469750621)\n\n[Customer](#part0000_split_006.html__Toc469750622)\n\
+    \n[Streams](#part0000_split_007.html__Toc469750623)\n\n# \n\nBehavior Parameterization\n\
+    \nBehavior Parameterization is nothing but a software development pattern which\
+    \ lets you handle frequent requirement changes\n\nBehavior Parameterization means\
+    \ taking a block of code, which can be called later by other parts of your programs,\
+    \ and making it available without executing it\n\nBehavior Parameterization is\
+    \ the ability for a method to take multiple different behaviors as parameters\
+    \ and use them internally to accomplish different behaviors\n\nFor example, you\
+    \ could pass the block of code as an argument to another method which will execute\
+    \ it later so the method's behavior is parameterized based on that block of code\n\
+    \nBehavior Parameterization is a useful pattern, which lets you encapsulate a\
+    \ behavior and parameterize the behavior of methods by passing and using these\
+    \ behaviors you create, to easily adapt to changing your customer requirements\n\
+    \nMany methods, which are often used together with anonymous classes, in Java\
+    \ API can be parameterized with different behaviors including:\n\n+ Sorting with\
+    \ a Comparator: This is nothing but a recurring programming task\n\n+ Executing\
+    \ a block of code with Runnable: You can use the Runnable interface to represent\
+    \ a block of code, which will return no result, to be executed\n\n+ Handling GUI\
+    \ events: A typical pattern in GUI programming is to perform an action in response\
+    \ to a certain event such as clicking a button or hovering over a text\n\n# \n\
+    \nLambda Expressions\n\nPassing code with behavior parameterization, which lets\
+    \ you define a block of code that represents a behavior and then pass it around,\
+    \ is useful for coping with frequent requirement changes in your code. You can\
+    \ decide to run that block of code when a certain event happens or at a certain\
+    \ point in an algorithm\n\nUsing anonymous classes  to represent different behaviors\
+    \ is verbose which does not encourage programmers to use behavior parameterization\
+    \ in practice\n\nLambda Expressions in Java 8 let you represent a behavior or\
+    \ pass a block of code in a concise way\n\nLambda Expressions in Java 8 can be\
+    \ understood as a concise representation of an anonymous function, which does\
+    \ not have a name but it has a list of parameters and a body and a return type\
+    \ and also possibly a list of exceptions that can be thrown, can be passed around\n\
+    \nA Lambda Expression is composed of\n\n+ A list of parameters: This list mirrors\
+    \ the parameters of the compare method of a Comparator\n\n+ An arrow: The arrow\
+    \ -> separates the list of parameters from the body of the Lambda Expression\n\
+    \n+ A body of the Lambda Expression: The expression is considered the Lambda's\
+    \ return value\n\nLambda Expressions in Java 8 let you provide the implementation\
+    \ of the abstract method in a functional interface directly inline then treat\
+    \ the whole expression as an instance of a functional interface\n\n# \n\nFunctional\
+    \ Interfaces\n\nA functional interface is nothing but an interface which specifies\
+    \ only 1 abstract method\n\nThere are several functional interfaces in the Java\
+    \ API such as Comparator and Runnable\n\nIn Java 8, an interface is still a functional\
+    \ interface if it has many default methods, which are methods with a body that\
+    \ provide some default implementation for methods in case they are not implemented\
+    \ by a class, as long as it has only 1 abstract method\n\nThe signature of the\
+    \ abstract method in a functional interface essentially describes the signature\
+    \ of the Lambda Expression\n\nIn Java 8, functional interfaces are annotated with\
+    \ @FunctionalInterface which is used to indicate that the interface is intended\
+    \ to be a functional interface\n\nFunctional Intefaces are useful because the\
+    \ signature of the abstract method in a functional interface is called a function\
+    \ descriptor. So if you want to use different lambda expressions  you need a set\
+    \ of functional interfaces which can describe common function descriptors\n\n\
+    # \n\nPredicate\n\nIn Java 8, the java.util.function.Predicate<T> interface defines\
+    \ an abstract method named test which accepts an object of generic type T and\
+    \ returns a boolean\n\nThis interface is used if you need to represent a boolean\
+    \ expression which uses an object of type T\n\n# \n\nCustomer\n\nIn Java 8, the\
+    \ java.util.function.Consumer<T> interface defines an abstract method named accept\
+    \ which takes an object of generic type T and returns void\n\nIf you need to access\
+    \ an object of type T and perform some operations on it, you must use the Consumer\
+    \ interface\n\n# \n\nStreams\n\nIn Java 8, a stream is nothing but a sequence\
+    \ of elements from a source which supports data processing operations\n\nWhat\
+    \ is a sequence of elements?\n\nIt likes a collection, a stream provides an interface\
+    \ to a sequenced set of values of a specific element type. Streams are expressing\
+    \ computations such as filter, sorted, and map. Collections are about data but\
+    \ streams are about computations\n\nWhat is a source?\n\nStreams consume from\
+    \ a data-providing source such as collections, arrays, or I/O resources\n\nWhat\
+    \ are data processing operations?\n\nStreams support database-like operations\
+    \ and common operations from functional programming languages to manipulate data\
+    \ such as filter, map, reduce, find, match, sort, etc.\n\nStreams support a filter\
+    \ method which is an operation takes an argument as Predicate then returns a stream\
+    \ including all elements that match the Predicate\n\nStreams also support the\
+    \ map method which takes a function as an argument\n\nHow to build a stream?\n\
+    \n+ Buiding a stream from values: You can create a stream with explicit values\
+    \ by using the static method Stream.of() which can take any number of parameters\n\
+    \n+ Building a stream from an array: You can also create a stream  from an array\
+    \ using the static method named Arrays.stream() which takes an array as a parameter\n\
+    \n+ Building a stream from a file: You can also create a stream  from a file using\
+    \ the method named Files.lines() which returns a stream of lines as strings from\
+    \ the given file\n\n+ Building a stream from a function: You can also create a\
+    \ stream  from a function using 2 static methods to generate a stream named Stream.iterate()\
+    \ and Stream.generate()"
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # Java 8 新概念
+
+    VLIGHT
+
+
+    ## 目录
+
+    - 行为参数化
+
+    - Lambda 表达式
+
+    - 函数式接口
+
+    - Predicate
+
+    - Consumer
+
+    - Streams
+
+
+    # 行为参数化
+
+
+    行为参数化是一种软件开发模式，允许你处理频繁的需求变更。
+
+
+    行为参数化意味着获取一段代码（该代码稍后可以由程序的其他部分调用），并在不执行它的情况下使其可用。
+
+
+    行为参数化是指方法能够接受多个不同的行为作为参数，并在内部使用它们来完成不同的行为。
+
+
+    例如，你可以将代码块作为参数传递给另一个方法，该方法稍后执行它，使得方法的行为基于该代码块进行参数化。
+
+
+    行为参数化是一种非常有用的模式，它允许你封装行为，并通过传递和使用创建的行为来实现方法的行为参数化，从而轻松适应变化的客户需求。
+
+
+    Java API 中许多经常与匿名类一起使用的方法都可以用行为进行参数化，包括：
+
+
+    - 使用 `Comparator` 进行排序：这是一种反复的编程任务。
+
+    - 使用 `Runnable` 执行代码块：你可以使用 `Runnable` 接口表示一段不返回结果的待执行代码块。
+
+    - 处理 GUI 事件：GUI 编程中的一种典型模式是响应特定事件（如点击按钮或悬停在文本上）来执行操作。
+
+
+    # Lambda 表达式
+
+
+    通过行为参数化传递代码（这允许你定义一个表示行为的代码块并将其在各处传递），对于应对代码中频繁的需求变更非常有用。你可以决定在特定事件发生时或算法的某个特定点运行该代码块。
+
+
+    使用匿名类来表示不同的行为是繁琐的，这不会鼓励程序员在实践中使用行为参数化。
+
+
+    Java 8 中的 Lambda 表达式允许你以一种简洁的方式表示行为或传递代码块。
+
+
+    Java 8 中的 Lambda 表达式可以理解为匿名函数的简洁表示，它没有名称，但有一有一个参数列表、方法体、返回类型，以及可能抛出的异常列表，这些是可以传递的。
+
+
+    一个 Lambda 表达式由以下部分组成：
+
+
+    - 参数列表：此列表反映了 `Comparator` 中 `compare` 方法的参数。
+
+    - 箭头：箭头 `->` 将参数列表与 Lambda 表达式的体隔离开。
+
+    - Lambda 表达式的体：该表达式被视为 Lambda 的返回值。
+
+
+    Java 8 中的 Lambda 表达式允许你直接内联地提供函数式接口中抽象方法的实现，然后将整个表达式视为函数式接口的实例。
+
+
+    # 函数式接口
+
+
+    函数式接口无非仅指定了 1 个抽象方法的接口。
+
+
+    Java API 中有多个函数式接口，例如 `Comparator` 和 `Runnable`。
+
+
+    在 Java 8 中，如果一个接口具有许多默认方法，它仍然是函数式接口（默认方法是带有体的方法，在类未实现方法时提供某些默认实现），只要它只有 1 个抽象方法。
+
+
+    函数式接口中抽象方法的签名本质上描述了 Lambda 表达式的签名。
+
+
+    在 Java 8 中，函数式接口带有 `@FunctionalInterface` 注解，用于该接口是一个函数式接口。
+
+
+    函数式接口非常有用，因为函数式接口中抽象方法的签名被称为函数描述符。因此，如果你想使用不同的 lambda 表达式，你需要一组能够描述通用函数描述符的函数式接口。
+
+
+    # Predicate
+
+
+    在 Java 8 中，`java.util.function.Predicate<T>` 接口定义了一个名为 `test` 的抽象方法，该方法接受一个泛型类型
+    `T` 的对象并返回布尔值。
+
+
+    如果你需要表示一个使用类型 `T` 对象的布尔表达式，则使用此接口。
+
+
+    # Consumer
+
+
+    在 Java 8 中，`java.util.function.Consumer<T>` 接口定义了一个名为 `accept` 的抽象方法，它接受一个泛型类型
+    `T` 的对象并返回 void。
+
+
+    如果你需要访问类型 `T` 的对象并对其执行某些操作，必须使用 `Consumer` 接口。
+
+
+    # Streams
+
+
+    在 Java 8 中，流（stream）无非来自源的元素序列，它支持数据处理操作。
+
+
+    ### 什么是元素序列？
+
+    它类似于集合，流提供了一个针对特定元素类型的有序值集的接口。流表达了计算，如 `filter`、`sorted` 和 `map`。集合关注数据，而流关注计算。
+
+
+    ### 什么是源？
+
+    流从数据提供源（如集合、数组或 I/O 资源）消耗数据。
+
+
+    ### 什么是数据处理操作？
+
+    流支持类似数据库的操作以及函数式编程语言中的常用操作，用于操作数据，例如 `filter`、`map`、`reduce`、`find`、`match`、`sort`
+    等。
+
+
+    流支持 `filter` 方法，该操作接受 `Predicate` 作为参数，然后返回包含所有匹配 `Predicate` 元素的流。
+
+
+    流还支持 `map` 方法，它接受一个函数作为参数。
+
+
+    ### 如何构建流？
+
+    - 从值构建流：你可以使用静态方法 `Stream.of()` 创建带有显式值的流，它可以接受任意数量的参数。
+
+    - 从数组构建流：你还可以使用名为 `Arrays.stream()` 的静态方法从数组创建流，该方法接受数组作为参数。
+
+    - 从文件构建流：你还可以使用名为 `Files.lines()` 的方法从文件创建流，它返回来自给定文件的字符串流。
+
+    - 从函数构建流：你还可以使用两个静态方法从函数创建流，分别为 `Stream.iterate()` 和 `Stream.generate()`。
+
+
+    '

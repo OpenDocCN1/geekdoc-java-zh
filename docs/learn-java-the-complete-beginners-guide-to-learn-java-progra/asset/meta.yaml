@@ -1,0 +1,353 @@
+name: Learn Java： The Complete Beginner’s Guide To Learn Java Programming (Computer
+  Programming Basics Book 1)
+name_cn: 学习 Java：Java 编程学习完整初学者指南（计算机编程基础系列 1）
+slug: learn-java-the-complete-beginners-guide-to-learn-java-progra
+toc:
+- - '#'
+  - 学习 Java：Java 编程学习完整初学者指南（计算机编程基础系列 1）
+- - '#'
+  - 引言
+- - '##'
+  - 目标读者
+- - '#'
+  - 第 1 章：环境搭建
+- - '#'
+  - 第 2 章：基础语法
+- - '##'
+  - 对象
+- - '##'
+  - 类
+- - '##'
+  - 变量
+- - '###'
+  - 示例
+- - '##'
+  - 注释
+- - '###'
+  - 示例
+- - '#'
+  - 第 3 章：对象与类
+- - '##'
+  - 对象
+- - '##'
+  - 类
+- - '##'
+  - 示例
+- - '##'
+  - 局部变量
+- - '##'
+  - 实例变量
+- - '##'
+  - 类变量
+- - '##'
+  - 构造函数
+- - '##'
+  - 示例
+- - '##'
+  - 示例
+- - '#'
+  - 第 4 章：基本数据类型
+- - '##'
+  - 基本数据类型
+- - '###'
+  - byte
+- - '###'
+  - 示例
+- - '###'
+  - short
+- - '###'
+  - 示例
+- - '###'
+  - int
+- - '###'
+  - 示例
+- - '###'
+  - long
+- - '###'
+  - 示例
+- - '###'
+  - float
+- - '###'
+  - 示例
+- - '###'
+  - double
+- - '###'
+  - 示例
+- - '###'
+  - char
+- - '###'
+  - 示例
+- - '###'
+  - boolean
+- - '###'
+  - 示例
+- - '#'
+  - 第 5 章：变量类型
+- - '##'
+  - boolean：
+- - '###'
+  - 示例：
+- - '###'
+  - char：
+- - '###'
+  - 示例：
+- - '##'
+  - 引用类型：
+- - '###'
+  - 局部变量：
+- - '###'
+  - 示例
+- - '###'
+  - 实例变量：
+- - '###'
+  - 示例
+- - '###'
+  - 类/静态变量：
+- - '###'
+  - 示例
+- - '#'
+  - 第 6 章：修饰符类型
+- - '##'
+  - 访问修饰符：
+- - '###'
+  - public：
+- - '###'
+  - 示例
+- - '###'
+  - private：
+- - '###'
+  - 示例
+- - '###'
+  - protected：
+- - '###'
+  - 示例
+- - '##'
+  - 非访问：
+- - '###'
+  - static：
+- - '###'
+  - final：
+- - '#'
+  - 第 7 章：基础运算符
+- - '##'
+  - 算术运算符：
+- - '##'
+  - 关系运算符
+- - '##'
+  - 逻辑运算符
+- - '##'
+  - 赋值运算符
+- - '##'
+  - 位运算运算符
+- - '#'
+  - 章节：循环
+- - '##'
+  - while 循环
+- - '##'
+  - do-while 循环
+- - '##'
+  - for 循环
+- - '##'
+  - break 和 continue
+- - '###'
+  - break
+- - '###'
+  - 'continue:'
+- - '###'
+  - 示例：
+- - '#'
+  - 第 9 章：决策
+- - '##'
+  - If 语句：
+- - '###'
+  - 示例
+- - '##'
+  - If-Else 语句：
+- - '###'
+  - 示例
+- - '##'
+  - Switch 语句：
+- - '###'
+  - 示例
+- - '#'
+  - 第 10 章：数字
+- - '##'
+  - 数字方法：
+- - '###'
+  - '[xxxValue()](https://www.tutorialspoint.com/java/number_xxxvalue.htm)'
+- - '###'
+  - '[compareTo()](https://www.tutorialspoint.com/java/number_compareto.htm)'
+- - '###'
+  - '[equals()](https://www.tutorialspoint.com/java/number_equals.htm)'
+- - '###'
+  - '[valueOf()](https://www.tutorialspoint.com/java/number_valueof.htm)'
+- - '###'
+  - '[toString()](https://www.tutorialspoint.com/java/number_tostring.htm)'
+- - '###'
+  - '[parseInt()](https://www.tutorialspoint.com/java/number_parseint.htm)'
+- - '###'
+  - '[abs()](https://www.tutorialspoint.com/java/number_abs.htm)'
+- - '###'
+  - '[ceil()](https://www.tutorialspoint.com/java/number_ceil.htm)'
+- - '###'
+  - '[floor()](https://www.tutorialspoint.com/java/number_floor.htm)'
+- - '###'
+  - '[rint()](https://www.tutorialspoint.com/java/number_rint.htm)'
+- - '###'
+  - '[round()](https://www.tutorialspoint.com/java/number_round.htm)'
+- - '###'
+  - '[min()](https://www.tutorialspoint.com/java/number_min.htm)'
+- - '###'
+  - '[max()](https://www.tutorialspoint.com/java/number_max.htm)'
+- - '###'
+  - '[exp()](https://www.tutorialspoint.com/java/number_exp.htm)'
+- - '###'
+  - '[log()](https://www.tutorialspoint.com/java/number_log.htm)'
+- - '###'
+  - '[pow()](https://www.tutorialspoint.com/java/number_pow.htm)'
+- - '###'
+  - '[sqrt()](https://www.tutorialspoint.com/java/number_sqrt.htm)'
+- - '###'
+  - '[sin()](https://www.tutorialspoint.com/java/number_sin.htm)'
+- - '###'
+  - '[cos()](https://www.tutorialspoint.com/java/number_cos.htm)'
+- - '###'
+  - '[tan()](https://www.tutorialspoint.com/java/number_tan.htm)'
+- - '###'
+  - '[asin()](https://www.tutorialspoint.com/java/number_asin.htm)'
+- - '###'
+  - '[acos()](https://www.tutorialspoint.com/java/number_acos.htm)'
+- - '###'
+  - '[atan()](https://www.tutorialspoint.com/java/number_atan.htm)'
+- - '###'
+  - '[toDegrees()](https://www.tutorialspoint.com/java/number_todegrees.htm)'
+- - '###'
+  - '[toRadians()](https://www.tutorialspoint.com/java/number_toradians.htm)'
+- - '###'
+  - '[random()](https://www.tutorialspoint.com/java/number_random.htm)'
+- - '#'
+  - 第 11 章：字符
+- - '##'
+  - 示例
+- - '##'
+  - 字符类的方法：
+- - '###'
+  - '[isLetter()](https://www.tutorialspoint.com/java/isletter.htm)'
+- - '###'
+  - '[isDigit()](https://www.tutorialspoint.com/java/isdigit.htm)'
+- - '###'
+  - '[isWhitespace()](https://www.tutorialspoint.com/java/iswhitespace.htm)'
+- - '###'
+  - '[isUpperCase()](https://www.tutorialspoint.com/java/uppercase.htm)'
+- - '###'
+  - '[isLowerCase()](https://www.tutorialspoint.com/java/lowercase.htm)'
+- - '###'
+  - '[toUpperCase()](https://www.tutorialspoint.com/java/uppercase.htm)'
+- - '###'
+  - '[toLowerCase()](https://www.tutorialspoint.com/java/lowercase.htm)'
+- - '###'
+  - '[toString()](https://www.tutorialspoint.com/java/tostring.htm)'
+- - '#'
+  - 第 12 章：字符串
+- - '##'
+  - 示例
+- - '##'
+  - 示例
+- - '##'
+  - 示例
+- - '##'
+  - 字符串方法：
+- - '###'
+  - '[charAt(int index)](https://www.tutorialspoint.com/java/char.htm)'
+- - '###'
+  - '[compareTo(Object o)](https://www.tutorialspoint.com/java/compareto.htm)'
+- - '###'
+  - '[concat(String sb)](https://www.tutorialspoint.com/java/concat.htm)'
+- - '###'
+  - '[contentEquals(String sb)](https://www.tutorialspoint.com/java/equals.htm)'
+- - '###'
+  - '[endsWith(String suffix)](https://www.tutorialspoint.com/java/endswith.htm)'
+- - '###'
+  - '[equals(Object an)](https://www.tutorialspoint.com/java/equals.htm)'
+- - '###'
+  - '[equalsIgnoreCase(String anotherString)](https://www.tutorialspoint.com/java/equals.htm)'
+- - '###'
+  - '[getBytes()](https://www.tutorialspoint.com/java/bytes.htm)'
+- - '###'
+  - '[getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)](https://www.tutorialspoint.com/java/getchars.htm)'
+- - '###'
+  - '[hashCode()](https://www.tutorialspoint.com/java/hashcode.htm)'
+- - '###'
+  - '[indexOf(String str)](https://www.tutorialspoint.com/java/indexof.htm)'
+- - '###'
+  - '[lastIndexOf(int ch)](https://www.tutorialspoint.com/java/lastindex.htm)'
+- - '###'
+  - '[lastIndexOf(String str, int fromIndex)](https://www.tutorialspoint.com/java/lastindex_fromindex.htm)'
+- - '###'
+  - '[length()](https://www.tutorialspoint.com/java/length.htm)'
+- - '###'
+  - '[matches(String regex)](https://www.tutorialspoint.com/java/matches.htm)'
+- - '###'
+  - '[replace(char oldChar, char newChar)](https://www.tutorialspoint.com/java/replace.htm)'
+- - '###'
+  - '[split(String regex)](https://www.tutorialspoint.com/java/split.htm)'
+- - '###'
+  - '[startsWith(String prefix)](https://www.tutorialspoint.com/java/startswith.htm)'
+- - '###'
+  - '[substring(int beginIndex)](https://www.tutorialspoint.com/java/substring.htm)'
+- - '###'
+  - '[toCharArray()](https://www.tutorialspoint.com/java/toCharArrayarray.htm)'
+- - '###'
+  - '[toLowerCase()](https://www.tutorialspoint.com/java/lowercase.htm)'
+- - '###'
+  - '[toUpperCase()](https://www.tutorialspoint.com/java/uppercase.htm)'
+- - '#'
+  - 第 13 章：数组
+- - '##'
+  - 创建数组：
+- - '##'
+  - 使用数组：
+- - '###'
+  - 示例
+- - '###'
+  - '示例 #2：'
+- - '##'
+  - 辅助方法：
+- - '###'
+  - '`public static int binarySearch(Object[] a, Object key)`'
+- - '###'
+  - '`public static boolean equals(long[] a, long[] a2)`'
+- - '###'
+  - '`public static void fill(int[] a, int val)`'
+- - '###'
+  - '`public static void sort(Object[] a)`'
+- - '#'
+  - 第 14 章：日期和时间
+- - '##'
+  - 当前日期和时间：
+- - '##'
+  - 格式化日期：
+- - '###'
+  - 示例
+- - '###'
+  - 示例
+- - '###'
+  - 示例
+- - '#'
+  - 第 16 章：异常 (Exceptions)
+- - '###'
+  - 示例
+- - '###'
+  - 示例
+- - '###'
+  - 示例
+- - '###'
+  - 示例
+- - '###'
+  - 示例
+- - '#'
+  - 第 17 章：内部类 (Inner Classes)
+- - '###'
+  - 示例
+- - '#'
+  - 结语
