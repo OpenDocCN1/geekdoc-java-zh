@@ -1,0 +1,77 @@
+name: Java： Programming Bootcamp The Crash Course for Understanding the Basics of
+  Java Computer Language
+name_cn: Java 编程训练营：Java 语言基础快速上手指南
+slug: java-programming-bootcamp-the-crash-course-for-understanding
+toc:
+- - '#'
+  - Java 编程训练营：Java 语言基础快速上手指南
+- - '#'
+  - 赠送书籍：
+- - '##'
+  - （点击下方任何链接进入免费赠送书籍！）
+- - '##'
+  - 本地环境
+- - '###'
+  - Windows 路径
+- - '###'
+  - Linux, UNIX, Solaris, FreeBSD 路径
+- - '##'
+  - 流行的 Java 编辑器
+- - '##'
+  - 第 2 章：“Hello Java”，初次接触
+- - '###'
+  - Hello Java 基础语法
+- - '##'
+  - 整数 (int)
+- - '##'
+  - 布尔值 (true 或 false)
+- - '##'
+  - 字符 (char)
+- - '##'
+  - 使用变量
+- - '##'
+  - 第 4 章：实用表格，随手备用
+- - '###'
+  - Java 数值运算符
+- - '###'
+  - Java 比较运算符（称为关系运算符）
+- - '###'
+  - 布尔逻辑运算符
+- - '###'
+  - 不同的真值表
+- - '####'
+  - “非”的真值表
+- - '####'
+  - “与”的真值表
+- - '####'
+  - “或”的真值表
+- - '####'
+  - “异或”的真值表
+- - '##'
+  - 尝试 Java 加法
+- - '##'
+  - 尝试 Java 减法和其他数学运算
+- - '##'
+  - 比较运算符
+- - '##'
+  - 一些尝试性的练习
+- - '##'
+  - 第 6 章：选择语句
+- - '###'
+  - 选择语句
+- - '###'
+  - 处理 if 语句
+- - '###'
+  - 理解 if-else（或嵌套 if）语句
+- - '#'
+  - Switch 语句（分支语句）
+- - '#'
+  - 循环语句
+- - '##'
+  - while 语句
+- - '##'
+  - do-while 语句
+- - '##'
+  - for 循环或语句
+- - '###'
+  - 修复说明：

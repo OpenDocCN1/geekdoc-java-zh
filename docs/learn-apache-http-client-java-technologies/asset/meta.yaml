@@ -1,0 +1,70 @@
+name: Learn Apache HTTP Client (JAVA TECHNOLOGIES)
+name_cn: 学习 Apache HTTP Client (JAVA 技术)
+slug: learn-apache-http-client-java-technologies
+toc:
+- - '##'
+  - 第一步 - 下载依赖 JAR 文件
+- - '##'
+  - 第 1 步 - 创建 HttpClient 对象
+- - '##'
+  - 第 2 步 - 启动 try-finally 块
+- - '##'
+  - 第 3 步 - 创建 HttpGet 对象
+- - '##'
+  - 第 4 步 - 执行 Get 请求
+- - '##'
+  - 第 5 步 - 启动另一个（嵌套）try-finally
+- - '##'
+  - 拦截器
+- - '##'
+  - 请求拦截器
+- - '###'
+  - 创建请求拦截器
+- - '####'
+  - 步骤 1 - 创建 `HttpRequestInterceptor` 对象
+- - '####'
+  - 步骤 2 - 实例化 `CloseableHttpClient` 对象
+- - '###'
+  - 示例
+- - '####'
+  - 输出
+- - '##'
+  - 响应拦截器
+- - '###'
+  - 创建响应拦截器
+- - '####'
+  - 步骤 1 - 创建 `HttpResponseInterceptor` 对象
+- - '####'
+  - 步骤 2 - 实例化 `CloseableHttpClient` 对象
+- - '###'
+  - 示例
+- - '##'
+  - 步骤 4 - 设置 credentialsProvider
+- - '##'
+  - 第 3 - 将路由规划器设置客户端构建器
+- - '##'
+  - 第 4 - 构建 CloseableHttpClient 对象
+- - '##'
+  - 第 5 - 创建一个 HttpGet 对象
+- - '##'
+  - 第 6 - 执行请求
+- - '##'
+  - 第 9 - 执行请求
+- - '###'
+  - 第 3 - 为 cookie 设置值
+- - '###'
+  - 第 4 - 将 cookie 添加到 cookie 存储
+- - '###'
+  - 第 1 - 创建连接池管理器
+- - '###'
+  - 第 2 - 设置最大连接数
+- - '###'
+  - 第 3 - 创建 ClientBuilder 对象
+- - '###'
+  - 第 4 - 创建 HttpGet 请求对象
+- - '###'
+  - 第 5 - 实现 run 方法
+- - '###'
+  - 第 6 - 创建线程对象
+- - '###'
+  - 第 7 - 启动并合并线程
