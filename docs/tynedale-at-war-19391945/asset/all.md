@@ -1,0 +1,2203 @@
+![](Images/cover.jpg)
+
+![image](Images/cover.jpg)
+
+YOUR TOWNS & CITIES IN WORLD WAR TWO
+
+TYNEDALE
+
+AT WAR 1939-45
+
+This book is dedicated to all the men and women of Tynedale who stood together against the might of Hitler’s war machine, whether as members of the armed forces, serving with the Women’s Land Army, Home Guard or Civil Defence Corps, or simply by opening their homes to the thousands of evacuees who poured into the district. You all did your bit.
+
+YOUR TOWNS & CITIES IN WORLD WAR TWO
+
+# TYNEDALE
+
+# AT WAR 1939-45
+
+BRIAN TILLEY
+
+![Image](Images/logo.jpg)
+
+First published in Great Britain in 2017 by
+
+PEN & SWORD MILITARY
+
+an imprint of
+
+Pen and Sword Books Ltd
+
+47 Church Street
+
+Barnsley
+
+South Yorkshire S70 2AS
+
+Copyright © Brian Tilley, 2017
+
+ISBN 978 1 47386 395 8
+
+eISBN 978 1 47386 397 2
+
+Mobi ISBN 978 1 47386 396 5
+
+The right of Brian Tilley to be identified as the author of this work has been asserted by him in accordance with the Copyright, Designs and Patents Act 1988.
+
+A CIP record for this book is available from the British Library
+
+All rights reserved. No part of this book may be reproduced or transmitted in any form or by any means, electronic or mechanical including photocopying, recording or by any information storage and retrieval system, without permission from the Publisher in writing.
+
+Pen & Sword Books Ltd incorporates the imprints of
+
+Pen & Sword Archaeology, Atlas, Aviation, Battleground, Discovery, Family History, History, Maritime, Military, Naval, Politics, Railways, Select, Social History, Transport, True Crime, Claymore Press, Frontline Books, Leo Cooper, Praetorian Press, Remember When, Seaforth Publishing and Wharncliffe.
+
+For a complete list of Pen and Sword titles please contact
+
+Pen and Sword Books Limited
+
+47 Church Street, Barnsley, South Yorkshire, S70 2AS, England
+
+E-mail: [enquiries@pen-and-sword.co.uk](mailto:enquiries@pen-and-sword.co.uk)
+
+Website: [www.pen-and-sword.co.uk](http://www.pen-and-sword.co.uk)
+
+# Contents
+
+## [Acknowledgements](../Text/06_Acknowledgements.xhtml)
+
+## [Chapter 1: The Gathering Storm](../Text/07_Chapter_1.xhtml)
+
+## [Chapter 2: Tynedale Braced for Invasion](../Text/08_Chapter_2.xhtml)
+
+## [Chapter 3: Taking Stock and Fighting Back](../Text/09_Chapter_3.xhtml)
+
+## [Chapter 4: Women Help to Turn the Tide](../Text/10_Chapter_4.xhtml)
+
+## [Chapter 5: The Rocky Road to Normandy](../Text/11_Chapter_5.xhtml)
+
+## [Chapter 6: The Empire Strikes Back](../Text/12_Chapter_6.xhtml)
+
+## [Chapter 7: Managing the Peace](../Text/13_Chapter_7.xhtml)
+
+## [Bibliography](../Text/14_Bibliography.xhtml)
+
+## Acknowledgements
+
+The bound volumes of the Hexham Courant newspaper covering the years before, during and immediately after the Second World War provide a unique contemporaneous treasure house of facts on how the conflict impacted on the lives of people living in this part of rural Northumberland. I am once again eternally grateful to the editor, proprietors and staff of this wonderful newspaper for allowing me unrestricted access to the files for the purpose of compiling this book.
+
+I would also like to thank Muriel Sobo for permission to use her fine photographs of Land Girls based in the district; my brother Michael Tilley for photographic assistance; Terry Robson for the loan of photographs and information about the Home Guard and all the many other people who have helped in any way.
+
+Special mention also to book editor and former colleague Irene Moore for her generous help and encouragement, and most importantly to my wife Maureen for her unfailing patience and forbearance in tolerating large and dusty volumes in the house, and my frequent lengthy disappearances upstairs to slave over a hot computer.
+
+## CHAPTER ONE
+
+## The Gathering Storm
+
+The two squadrons of German bombers swooped on Hexham out of the setting sun one evening in late May. Thwarted in their intended plan to blitz industrial Tyneside, the Luftwaffe pilots broke to the northwest and then headed for home along the Tyne Valley and, in order to lighten their heavy payload, opened their bomb doors over defenceless Hexham. Hardly had the newly-installed air raid siren on top of the police station in Beaumont Street begun to wail before the bombs started to rain down, causing havoc throughout the town.
+
+The first high explosive bomb fell at Lowgate, blocking the Allendale Road, and seconds later, a mustard gas bomb exploded in woodland to the west of the Hydro building. There was a direct hit on Tynedale Cricket Club’s pavilion at Prior’s Flat by an incendiary bomb, and within seconds the wooden structure was a mass of flames. The upper storey of a house in Hextol Terrace was also ablaze after being hit by an incendiary bomb, while in Shaftoe Crescent, a high explosive bomb fractured a gas main which was belching flames high into the sky.
+
+The destruction continued in the Market Place, where a strong smell of garlic indicated that a 250lb bomb dropped there had been packed with gas. The road surface, the market cross and the roof of the Shambles covered market stalls were all splashed with a brown liquid, as were two members of the public.
+
+![Image](Images/f0007-01.jpg)
+
+The Northumberland Hussars at summer training in Welbeck in July 1939\. The Hussars were one of the few units to have retained their horses.
+
+Incendiaries continued to rain down, with one lying unexploded in Beaumont Street while yet another set fire to a house close to the gates of Hexham Hospital. Another hit Gibson’s sawmill yard and huge stacks of timber were well alight. A high explosive bomb landed close to the entrance of Hexham’s Queen Elizabeth Grammar School, but failed to go off, and the deadly device was lying deeply embedded in gravel.
+
+There were casualties in Priestpopple where more bombs had severed water mains and cut off the electricity supply. Many shop windows were blown in, and disgracefully, a number of teenage boys were seen looting the damaged shops.
+
+Thankfully, there were no fatalities and indeed damage was entirely superficial – those looters were in fact Boy Scouts doing their good deeds for the day for the ‘air raids’ happened in May 1939, several months before the Second World War began. It was all part of a major exercise, planned in total secrecy, to test the readiness of the civil defence and air raid precaution services of the town as Germany flexed its military muscles across the English Channel.
+
+The event was deemed a great success, for when the new air raid siren began to moan, motorists and pedestrians alike showed commendable zeal and promptitude in seeking shelter and the streets were cleared in a remarkably quick time. There was a total of fifteen supposed incidents, with police, fire, ambulance, decontamination units and military authorities all dispatched to deal with the chaos caused.
+
+A post mortem on the mock raid was held the following week at Hexham Infants School, where chief organiser Major MacVicar Munro said: ‘The exercise reflected considerable credit on those who were involved. I was pleased too with the way in which members of the general public co-operated. Even passing motorists got out of their cars and sheltered until the all clear signal.’
+
+Major Munro acknowledged there had been errors, the identifying of which had been one of the main reasons for the exercise. He urged wardens to be as quick and concise as possible with their messages, saying: ‘Remember that the control room is the heart and pulse of the whole exercise, and if there is not complete cohesion between the wardens and the control room, then the practices will be a complete fiasco.’
+
+![Image](Images/f0009-01.jpg)
+
+The newly installed air raid siren on the roof of Hexham police station in Beaumont Street in May 1939.
+
+Chairman of Hexham Urban Council, Councillor Tom Wheatley, said the air raid had made it plain there was a shortage of twenty to thirty volunteers to make the warden services in Hexham complete.
+
+It was the first time the new air raid siren, weighing 5.5cwt, had been used since its installation on the police station roof, which had to be specially reinforced to bear the weight. It was quickly pointed out that the new siren could not be heard at Lowgate, only a mile outside Hexham, while it was clearly audible at Ovington, 12 miles further away down the Tyne. A strong west wind was blamed for the problem.
+
+Back in 1939 Tynedale, like the rest of the country, was starting to come to terms with the fact that the ‘Peace in Our Time’ pronouncement of Prime Minister Neville Chamberlain a year earlier might not be worth the piece of paper it was written on, as Hitler and the Third Reich were behaving in an ever more provocative manner.
+
+However, there were still hopes for peace, decorated First World War soldier Benny Plummer, proprietor of the Hexham Courant newspaper, told fellow members of Hexham Rotary Club after a visit to Freiburg in Germany’s Black Forest region. With a reference to the German re-armament mantra ‘guns, not butter’, Mr Plummer commented wryly: ‘Although we saw plenty of butter, we did not see a single gun, except in a railway siding on the way home.’
+
+Mr Plummer said he found the German people warm-hearted and he had met with nothing but friendliness and kindness. He added: ‘You might force people to be cordial by propaganda, but you cannot beat human kindness into people if it is not there already. I was left with the feeling that the German people do not want war any more than we do and the last thing they want to contemplate is war with us. The German regular army is against the war, but it appears that by degrees, the Nazi storm troopers will become top dogs and the regular army will be pushed into the background.’
+
+Mr Plummer said that in Freiburg at least, British Prime Minister Neville Chamberlain was looked upon as a god, as the one man whose efforts had averted war in September 1938, while Herr Hitler was also seen as something sacred. ‘His photograph is everywhere. He must have had thousands taken because there seemed to be a different one in every place we visited.’
+
+While Hitler was revered, the other German leaders were not so popular, with Mr Plummer declaring: ‘Goebbels is hated and Streicher is cordially disliked, while Goering is treated as a general joke. Whenever he appears on the screen the audiences break into howls of laughter. If they can laugh at a man like Goering, perhaps there is hope for them.’
+
+He also noted that everywhere in Germany was spotlessly clean and everyone wore a uniform of some kind, so he never knew whether he was speaking to a soldier or a postman. He was also aware that while Freiburg lay only 10 miles from the French border, there was no sign of any air raid precautions being taken.
+
+![Image](Images/f0011-01.jpg)
+
+Ready for action – men of the Hexham, Haltwhistle, Newburn, Bellingham and Prudhoe detachments of the 4th Battalion Royal Northumberland Fusiliers on the march for their St George’s Day parade in April 1939\. St George was the regiment’s patron saint.
+
+It was clear the ordinary Germans did not even pretend to like the Jews, but he felt that many of them were unaware of the atrocities being committed against them. The Germans made it clear though that they preferred the Jews to the Italians. Shortly after the Axis agreement was signed, a party of Italians had gone into Freiburg for a night out, but the young women of the town had refused to leave their homes after seven o’clock at night.
+
+However, in other quarters there was still a deep mistrust of Germany and its Italian allies, with Judge John Richardson warning the annual dinner of the Corbridge branch of the British Legion in February of the unpredictable nature of the dictators Hitler and Mussolini. He said:
+
+‘There is no doubt that the individual German desires to be friendly but when you get a lunatic dictator in charge, anything can happen. There is no doubt that Hitler and Mussolini have done a good job for their countries but they have got their people under their thumbs. If they question anything their government does, it means the concentration camp or worse.
+
+There are authenticated cases where children have reported their parents to the authorities for private conversations in their own houses, for the children have been brought up to believe there is only one loyalty and that is to the German nation. I cannot believe that the majority of the German people approve of the horrible persecution of the Jews, but they dare not say anything because of the thraldom they are under.
+
+It is quite clear that the only thing which will avoid war is to show them we are prepared, and then these dictator nations will not dare to trample on the lion’s tail.’
+
+Even though memories of the First World War were still all too fresh in the memory, with empty chairs round every fireside, a call to register for National Service – the civil defence force – was met with an eager response across Tynedale. Among those registering, within the first days of booklets being issued, were an 84-year-old man and his wife.
+
+At Prudhoe, there was concern the town was right on the edge of the Tyneside heavy industry zone and would be in potential danger from German air raids. Prudhoe Urban District Council therefore launched an investigation into whether any of the local disused coal mines could be employed as air raid shelters.
+
+While protective trenches had been dug at Castle Dene, they were only capable of accommodating around 10 per cent of the population and Councillor T. Peel asked: ‘Where are the other 90 per cent to go? Despite all the instructions, panic would occur when there is an air raid, and I think the disused drift mines would be the natural place to which the people of the district would flee.’
+
+It was noted that the trenches were not intended to serve the whole town, but only those who might be caught in the open during an air raid. Council chairman Councillor Ada Blackburn pointed out the question of using the old mines for shelter had been considered before, and it was felt the pits were too far away from the main part of the town. In addition, a moving line of people would present an easy target for the raiders.
+
+In April of that year, the leader of the British Union of Fascists, Sir Oswald Mosley, was warmly applauded when he addressed a meeting of the Rotary Club of Hexham at the Royal Hotel in the town, where he insisted that war with Germany was not inevitable. ‘We have nothing to fear from Germany if we have the wit to hold and develop the resources which our grandfathers had the courage to win for us,’ he said.
+
+He had a four-point plan to maintain peace in Europe, starting with the need to show disinterest in the east of the continent, asking: ‘Why do we have to be allied to every little country in the east?’
+
+In return for staying out of affairs in the east, Mosley said that Britain should enter into a disarmament pact with Germany:
+
+‘We must look after and build up the greatest heritage known to man: the Empire of Great Britain. Who are we to cower in fear before any foreign power and to believe that we cannot face Germany unless we have Colonel Beck [Polish foreign minister] holding one hand, and King Carol [of Romania] the other? Why should we run round seeking alliances with every little country in Europe, and telling them we would come to their aid when attacked if they would send their army to help? Why are we guaranteeing the independence of Poland and Romania?’
+
+He pointed out that Poland was undercutting the British coal industry with coal obtained by sweated labour from mines developed by British finance from the City of London. Romania exported wheat, every grain of which meant less money for British and Canadian farmers.
+
+He went on: ‘The greatest moral question is whether a million British youths have to die through intervening in an unjust quarrel on the continent. Before we run to the aid of a smaller nation against a bully, we have to be sure there is a bully.’
+
+Despite Mosley’s words, Tynedale was still on a war footing, with the Hexham Scout Troop among the first in the region to be enrolled as air raid wardens.
+
+It wasn’t all war talk though, for Hexham Urban Council rejected a plea for children to be allowed to use the swings on the Sele pleasure grounds on a Sunday. Councillor Joe Cullen spoke in favour of the application, noting that Sunday golf was already allowed on Tyne Green, and he would like to see Sunday bowling too. He said: ‘I don’t think this would keep children away from Sunday School or chapel, or that there would be any desecration of the Sabbath.’
+
+However, Councillor Miss Iveson was opposed to the move, saying: ‘There are six days in the week when the children can use the swings and I think they can easily do without them on Sundays.’ The request was turned down.
+
+As the nation prepared for war, there was a grim taste of things to come when a Wark sailor was among the ninety-nine dead when the ill-fated submarine HMS Thetis sank while undergoing trials off the Welsh coast. He was Petty Officer John Adam Hope, who lived with his mother in Elliott Terrace. He was 36 years old and had been in the Royal Navy for twenty-two years, fifteen of them in the submarine service.
+
+The introduction of conscription in June 1939 went very smoothly, with no problems at any of the Labour Exchanges across the district where men were required to register for military training. An official at the Hexham Exchange said: ‘The men rolled up well and were in a good frame of mind. Two things were noticeable – the good spirit in which they came, and their excellent physique.’ One man had walked six miles to the Exchange to sign up and others included a man from Harrogate, in Hexham for a wedding, and a bronzed man in shorts who was in the area on a hiking holiday. There were few requests to register as conscientious objectors, although there was a marked preference to serve with the RAF.
+
+The ever-present threat of war was cranked up to an even higher level at the end of August, when the worsening international situation saw all air raid posts in the district manned and the switching off of all street lights. The blackout also caused kerbs and street corners to be painted white. Business came to a virtual standstill, except for the shops, which experienced a great demand for tinned goods and materials with which to black out windows. Residents who had not been issued with gas masks were urged to go to the offices of Hexham Urban Council to collect one without delay.
+
+When war was finally declared on 3 September the news was received calmly, with the air raid siren sounded and special constables taking to the streets of Hexham with their gas masks and tin helmets. They were dispatched to guard bridges and other strategic points across the district, as well as ensuring blackout regulations were strictly observed.
+
+![Image](Images/f0015-01.jpg)
+
+Devastated Prime Minister Neville Chamberlain.
+
+There were strong words from the chairman of Hexham Urban District Council, Councillor Tom Wheatley, who said: ‘I have come to the conclusion that the policy of appeasement is no good when you have a mad dog like Hitler loose in the world. I am very pleased we are going to try to put this mad dog down.’
+
+### Evacuees
+
+By the first week in September, as the first German bombs fell on Poland, Hexham was already receiving the first of its scheduled 4,000 evacuees from Newcastle and Gateshead. Five trainloads of children arrived at Hexham railway station to board a fleet of buses to convey them to the senior school, where preparations were made to transfer them to various parts of the rural areas. Car owners were also asked to turn up at the railway station to assist with conveying the bewildered children to their new temporary homes.
+
+The evacuees for Hexham came from St Dominic’s RC School (690); Cowgate (300); West Walker Council (733) and East Walker Council (476). Bellingham’s allocation comprised 450 children from Heaton Park Road Council, while Haltwhistle had 700 from Delaval Council, and Allendale 307 from Whickham Road Council School and 214 from Pendower Bridge.
+
+The children arrived at the station ‘choking with excitement’ according to the Hexham Courant, accompanied by their teachers. Each child had a gas mask and an identification disc. Medical inspections were carried out by a team of doctors and nurses under Dr Patton, with hands, teeth and hair all coming under close scrutiny.
+
+![Image](Images/f0016-01.jpg)
+
+Thousands of evacuees start to pour into Tynedale as war is declared.
+
+They were then issued with their rations, which comprised biscuits, a tin of corned beef, two bars of chocolate, a tin of unsweetened milk and a tin of condensed milk.
+
+The children were made very welcome, with one Hexham mother telling the Courant: ‘It is of the children we must think, not of ourselves. We are comparatively comfortable, but these children have left their homes, friends and everything. I am willing to do my share to ease their burden.’
+
+Her views were shared by a man, who added: ‘Many of these youngsters cannot help their circumstances. They may not be of the wealthier classes but I am sure they will not be of the least trouble to those of us who will have to look after their welfare.’
+
+The city children were soon billeted on local families, although some residents refused to take in any evacuees. A boy wrote to his mother: ‘Hexham is a nice place. There are plenty of plums, pears and brambles. The woman is very kind to us and feeds us well. This is a nice holiday – we just play in the park all day.’
+
+Country life was a mystery to many of the evacuees, with tales of two boys tramping the roads of Hexhamshire in a vain search for a sweet shop, while the absence of a picture house was also keenly felt. Secretary of Hexham War Memorial Hospital, Michael Green, appealed for books and magazines to set up a library for the evacuees, as well as arranging football matches between the town and city children. There was also an appeal for parlour games to keep the children amused.
+
+The Courant reported that in Corbridge the evacuation process had gone ‘fairly smoothly’, but some people had refused to take in children and there had been difficulties with some mothers. At Haltwhistle, buses and a fleet of private cars were used to take the children to the Olympic Hall – made from materials salvaged from RMS Titanic’s sister ship the SS Olympic when it was broken up at Wallsend – at the Smith and Walton paint factory, where they were given a delicious meal of meat soup and buns before being introduced to their host families. The Ministry of Transport noted that Haltwhistle was one of the first places in the region to get the children billeted and the correct paperwork filled in.
+
+After the children and their mothers had been dealt with, with nearly every household in the town opening its doors, there was still a welcome in Haltwhistle later in the week for ‘expectant mothers, cripples and blind people’.
+
+More than 200 children and 75 mothers were welcomed to Wylam with open arms, with children in particular having no difficulty in finding billets, so much so that some families were disappointed not to have any evacuees to take home. Billeting officer Colonel W.E. Keys reported that the children all appeared wonderfully well cared for, clean and ‘extraordinarily nice’.
+
+Things did not go so smoothly at Haydon Bridge, where some householders refused to provide shelter for the children sent to them, and some of the older evacuees ‘were inclined to give more trouble than was necessary to those providing them with shelter.’
+
+Not everyone was prepared to take in evacuees and, after persistently turning away people from his nine-room vicarage at Wall, where he lived with his mother and one domestic servant, the vicar of St Oswald in Lee, the Reverend Frederic Cecil Westgarth, was fined £5 by Hexham Magistrates – and was told it could have been £50, or three months in prison. Chairman of the bench Brigadier Sir Loftus Bates said: ‘I cannot help regretting that this charge should be preferred against a minister of religion.’
+
+Chief billeting officer for the Hexham Rural District Selby Wood was full of praise for the way the district had responded to the emergency. He said 99 per cent of households had co-operated wholeheartedly, and added: ‘No praise can be too high for the splendid voluntary work of the billeting officers. They had a most complex and difficult task to carry out, and they carried it through with a cheerfulness and efficiency which was truly laudable. Their task would have been impossible without the co-operation of the householders. Many of the householders tell me that some of the mothers who have been evacuated are only too willing to do something in return for the hospitality provided. Many of their husbands have volunteered for service and the children have been moved from familiar surroundings.’
+
+A two shift system was introduced at the Hexham schools, with local children taught from 9am to 12-30pm, swapping desks with the evacuees in the afternoon, as they were taught from 1-30 to 5pm. Positions were reversed in subsequent weeks, with the evacuees taught in the morning and the locals in the afternoon.
+
+By the second week of the war though, several of the evacuees and their mothers found they could not cope with country life and preferred to brave the bombs back in Newcastle.
+
+An appeal went out for blood donors and the matron of Hexham Hospital also called for donations of old nightdresses and pyjamas.
+
+There was bitterness at Prudhoe, where the town’s volunteer air raid precaution wardens were furious to find that when hostilities broke out, a number of full time ARP wardens were appointed to paid positions – and the volunteers were being asked to train them. Councillor Mrs Ada Blackburn told Prudhoe Urban Council: ‘Our wardens are very sore about the matter. They volunteered, and now someone else who did not come forward when there was a call for volunteers is given a full time paid post. It is a very unusual position to ask a man who volunteered to train someone else who is being paid for the job.’
+
+### Escape after U-boat attack
+
+An early taste of the horrors of war came when a German U-boat sank the liner SS Athenia on 10 September as it was travelling to Canada from Liverpool. Among those on board was Mrs A. Butterley of Windsor, Ontario, who grew up in Humshaugh and had been visiting her sister in Wall. Mrs Butterley told a Courant reporter: ‘Everyone was in good spirits, because we were heading for home before the war broke out. The ship was so crowded that one of the dining rooms had to be converted into a dormitory. Suddenly, there was an indescribable thud and all the lights went out. No-one was thinking about torpedoes or submarines but we instinctively knew what had happened. The children were terrified, but on the whole there was little in the way of panic.’
+
+She managed to grope her way through the darkened ship to reach the deck, but had to wait for an hour and a half for a lifeboat. A davit broke when one of the lifeboats was being lowered into the water and a number of passengers drowned, she reported. Another boat was filled entirely with women and children, with no men to row it, but Mrs Butterley had no idea whether they had survived.
+
+She was finally able to scramble aboard the last lifeboat to leave the ship, one of seventy-five people crammed into a craft designed for just fifty, and she reported that the submarine had surfaced and fired two shots before submerging again. ‘It was nightmare experience,’ she said. ‘We were packed together, scarcely daring to move for fear of upsetting the boat. Every wave washed over the boat and we were soon drenched to the skin. Those who had shoes on took them off and used them to bale out the water.’
+
+After twelve hours in an open boat on the wild Atlantic, their increasingly weak cries of ‘Ahoy’ were heeded by a passing Royal Navy destroyer and they were picked up. Mrs Butterley said she felt dazed and weary and was deeply grateful for the hot drinks served by the crew. She believed everyone in her boat was saved, although a significant number were suffering from broken limbs.
+
+Mrs Butterley felt herself doubly fortunate to have been saved, for she had crossed the Atlantic on the Athenia, and had tried to get the same cabin for the return journey, but it had already been booked. She later learned that her cabin of choice had been blown to pieces in the U-boat attack.
+
+She had crossed the Atlantic seven times, but said: ‘Once I get safely back to Canada, I will cross it no more.’
+
+An appeal went out for women aged between 18 and 43 to enlist with the Women’s Auxiliary Air Force, where there were vacancies for cooks, mess orderlies, motor transport drivers, clerks, telephone and teleprinter orderlies and fabric workers. The daily rates of pay ranged from 7s 10d for a junior officer to £1 2s 4d for a senior officer.
+
+The war was only two weeks old when the district suffered its first casualty blamed on the blackout, when an 89-year-old evacuee was killed after being struck by a bus at Widehaugh, east of Hexham. United Bus Company driver William Eade told the inquest into the death of Benjamin Chambers that he had been driving his bus from Hexham to Newcastle just after 9pm on a dark and rainy night. He was showing the permitted lights, side lights masked over, which would have been visible to anyone coming towards him. He was travelling between 10-15 mph when he felt something hit his offside headlamp. He stopped the bus within its own length and found Mr Chambers lying close to the white line in the centre of the road. A post mortem examination showed he had suffered multiple injuries, any one of which could have killed him.
+
+Coroner for South Northumberland P.M. Dodds heard that Mr Chambers was both deaf and short-sighted and in returning his verdict, commented: ‘It seems a great pity that a man of 89, suffering from short sightedness and deafness, should be out unattended in the dark at this time.’
+
+He suggested that during the blackout, people should not walk in the centre of the road, but stick to the footpath, and should also wear or carry something white or light coloured so that they would be distinguishable.
+
+![Image](Images/f0021-01.jpg)
+
+Even Hitler couldn’t stifle the Christmas spirit in Hexham in 1939.
+
+The blackout regulations were stringently enforced and at Haydon Bridge the landlords of the Haydon Hotel and the Scotch Arms were each fined 10s for having lights visible at their premises, with a similar fine imposed on the landlord of the Grey Bull Inn at Hexham.
+
+After closing at the outbreak of war, cinemas and dance halls across the district started to reopen three weeks later, with the proviso that all patrons brought their own gas masks with them. Lessons at the various schools were curtailed, with woodwork lessons devoted to making splints to form part of the ambulance facilities at the schools. Splinter and gas proof air raid shelters were also provided at the Sele School and St Mary’s Roman Catholic School. Eight shelters were provided at the senior school, six for each section of the Queen Elizabeth Grammar School and six for the junior school. Parents were advised that in the event of an air raid, the local schools were the safest place for their children to be.
+
+Corbridge meanwhile was prepared for the worst by utilising safety facilities which were already many hundreds of years old. The Vicar’s Pele Tower, built in 1318 with walls 4ft 3in thick as a defence against invading Scots, was pressed into service as an ARP post, while even older was a 2,000-year-old underground treasure chamber unearthed at the Corstopitum Roman site, earmarked for use as an air raid shelter.
+
+By the end of September a hospital supplies depot had been established in Hexham, following a meeting at the Abbey Hotel, continuing the fine tradition of the depot set up for the Great War twenty-five years earlier. The meeting was organised by Mrs Norman D. Newall of Newbrough, whose sister Mrs Clarence D. Smith of Loughbrow, had been the driving force behind the first depot. The various local branches of the Women’s Institute had intimated their willingness to form working parties to help out.
+
+![Image](Images/f0022-01.jpg)
+
+Staff at the Hexham Group Hospital supply depot sorting and packing comforts for servicemen abroad.
+
+Mrs Smith was sure that the initiative would be a great success, for people had had time to prepare for hostilities, unlike in 1914 when the war had started with great suddenness. She was delighted that many of the ladies who had been involved with the original depot had come forward again, often accompanied by their children and other relatives. She said: ‘I never thought that after 1918 I would have to stand up again and ask for a hospital depot to be started in Hexham. I think it is marvellous that on the last occasion we had 600 people – not counting the branch depots – working together, and never once in the four years was there a cross word nor the smallest trouble. Everybody was most willing, and I know they still will be today. Some of the original ladies are not as well or as strong as they once were, but they bring with them invaluable experience.’
+
+The supply depot was swift to issue a book of wartime recipes and handy hints. Costing sixpence, the pick of the innumerable recipes was one for sheep’s head broth – the brains to be cooked separately – while tips were provided on how to cook nettles, how to cure warts and how to preserve beech leaves ‘for a year or two’.
+
+By the end of September, petrol was being strictly rationed and one local dealer reported that his usual weekly sale of 1,500 gallons of fuel had slumped to a little over 50 gallons. He said: ‘We as dealers are being severely tested and some of us will find it very difficult to carry on.’ The fuel shortage led to many motorists laying up their cars and reverting to bicycles, resulting in an overwhelming demand for new and second hand bikes, with the latter particularly hard to obtain.
+
+![Image](Images/f0023-01.jpg)
+
+The cookery book produced by the Hexham Group Hospital supply depot which included advice on how to cook a sheep’s head.
+
+The novelty of the evacuees was starting to fade by mid-October when Bellingham’s Medical Officer of Health blamed the incomers for the spread of a number of infectious diseases in the area, including scarlet fever, chickenpox, impetigo and scabies, as well as louse infestations.
+
+Around a quarter of children from the Cowgate area had returned to Newcastle by the middle of the month, often against their wishes, but because their parents wanted them back at home. Most had gained weight while in the country and their studies were also going well.
+
+The district’s air raid sirens moaned for real on 17 October when unidentified aircraft were detected off the North East coast. Those villages without sirens relied on the ringing of church bells and it was some ninety minutes before the all-clear was sounded. Wardens in Hexham were frustrated by the fact that while the shoppers at the busy Market Place vanished almost instantly, the pavement in Priestpopple remained crowded with people.
+
+The implementation of the National Service Act, under which all men aged between 20 and 22 had to register for the armed forces, saw 216 men register – only one of whom put his name down as a conscientious objector.
+
+Only six weeks after it started, the war was over for Corporal Alfred Gunton (20) of Round Close, Hexham, a wireless operator in the RAF, who failed to return from a mission over Germany on 15 October 1939\. His parents had an anxious wait of almost three weeks before hearing he had been captured and was being held as a prisoner of war. ‘Air-minded’ since his schooldays at Hexham Queen Elizabeth Grammar School, he had previously had two lucky escapes, once when forced to parachute from an aircraft which caught fire at high altitude, and another just two days into the war, when the plane he was crewing was forced to make an emergency landing in France when it ran low on fuel.
+
+Corporal Gunton was one of the first recipients of a comforts parcel provided by the hospital supply depot and was also allowed to broadcast to Britain over the German shortwave radio. In a letter to his parents from the prisoner of war camp he revealed his aircraft had been shot down by anti-aircraft fire and said: ‘We had to jump for it by parachute. The pilot was killed by shrapnel and never left the machine, but no-one else was hurt. We are being treated very well here. It has been snowing lately to a depth of two inches, but I have been given plenty of warm clothing.’
+
+![Image](Images/f0024-01.jpg)
+
+After being captured in the second month of the war, Warrant Officer Alfred Ronald Gunton of the RAF, was repatriated back to his Hexham home in September 1944 after being held in a prisoner of war camp for almost five years.
+
+Asking his parents for parcels to be sent out to him, Corporal Gunton wrote in his uncensored letter, written in pencil: ‘I could do with some chocolate, biscuits, bully beef and a tin of fruit, and if you can, try to raise some tinned margarine. See you after the war!’
+
+There were two black cats aboard the cargo steamer Cairnmona when it set sail from Montreal for the UK, but they brought no luck, as the vessel sank within fifteen minutes of being torpedoed off the northeast coast of Scotland. Among the survivors was Cadet C.D. Boyd of Hexham, who lost all his possessions in what was his thirty-sixth crossing of the Atlantic. The Sunderland built SS Cairnmona belonged to the Cairn Line, of which Major T. Russell Cairns of Dukes House, Hexham, was chairman of the board of directors.
+
+There was much excitement in the North Tyne on 29 October, when an early morning bus from Bellingham was ‘buzzed’ by a low-flying German aircraft. The roar of the aircraft’s diesel engines brought people out of their homes, and workers in the fields stopped what they were doing in amazement as the aircraft swooped by just 30ft off the ground. One worker was so convinced the plane was going to crash he flung himself into a ditch, while the driver of the 8.15am service bus feared for his life as the aircraft circled his vehicle twice, before roaring across the road just 10 yards in front of the bus. The German insignia on the wings and tail were clearly discernible.
+
+One witness said: ‘I suppose we should have taken cover, but instead, everyone rushed out of doors to see the plane.’
+
+Hexham Courant readers were given an early insight into the horrors of the concentration camps by a German who had spent two months in one before managing to escape to Hexham shortly before the war started. Referred to only as Herr X to protect his identity, the man told a reporter that the camps had been set up to bring old people to their death by slow torture. He said: ‘It is most terrible. People who are sent to a concentration camp are lost to the world. There is no law in a concentration camp and all manner of evil deeds are committed by those in charge, chiefly thieves and murderers. Himmler seems to have sole control and what he says must be carried out.’
+
+Herr X witnessed old people being beaten to death and sadistic crimes of every form of cruelty being perpetrated. On several occasions, all 20,000 prisoners in a camp built to hold 5,000 were woken in the middle of the night to witness mass hangings. Everyone who died in the camp was cremated and their ashes sent to relatives, who were not allowed to ask how or why they had died. Relatives were allowed to send parcels, but inmates had to queue for them, sometimes for as long as a whole day. If parcels contained tobacco or fruit they were confiscated by camp officials and letters from home were torn up in front of their intended recipients.
+
+Food consisted of a drink the colour of coffee and a quarter of a piece of bread for breakfast, soup with the faintest trace of meat for lunch and small pieces of heavily salted sausage and salted herring for evening meal. Herr X said: ‘This was another form of torture, for we were not allowed water and if you took your supper, you suffered a terrible thirst all night.’
+
+He spoke of the despair of the majority of the German people who had been dragged into a war they did not want by a government which ruthlessly put down any hint of resistance to the Nazi party.
+
+There was much sympathy for the plight of Second Officer Cyril Clemitson of Brigwood, Haydon Bridge, who was close to the end of a 50,000-mile journey to the Far East and back in the Newcastle steamer Dalryan when it struck a mine just off the south-east coast of England.
+
+He told the Courant: ‘I was having forty winks in my cabin before getting the landing gear ready when I was aroused by a terrifying noise. The metal side of the ship was ripped apart like so much paper. My cabin was completely shattered; my radio, wardrobe and other furnishings were turned to matchwood. I groped around for my torch and lifebelt and ran up on deck where a second explosion occurred and we had to take cover from falling wreckage.’
+
+Fortunately, all thirty-eight crew members were rescued, as the explosion had been seen from the shore and, in Second Officer Clemitson’s words, the only casualties were ‘my goldfish and somebody else’s canaries’.
+
+The first Christmas of the war brought quiet defiance, with the shops reporting better trade than before the conflict. The Post Office reported a big increase in the number of greetings cards exchanged. Many local men serving with the forces were home on leave so there were some happy family reunions. And while many of the evacuees went home for the festive season, others remained in Tynedale, with one big party for the incomers held at the Masonic Hall in Hexham where dance music was provided by the Jolly Millers.
+
+A major feature of Christmas Day was the Empire link-up programme on the wireless, in which the Corbridge Carol Singers took part, concluding with a message to the Empire from King George VI. The Corbridge broadcast took place from the home of 84-year-old J.T. Mail at Roecliffe Lodge. The carols sung were Silent Night and We Three Kings of Orient Are, accompanied by Jack Armstrong, the well-known Northumbrian piper.
+
+The wards of Hexham War Memorial Hospital were gaily decorated with streamers and other items made by the nurses and the patients themselves. Several soldier patients received gifts of woollens knitted by the nurses. The Post Office coped well with the avalanche of mail despite the problems caused by the blackout, with most people heeding the plea to post early for Christmas.
+
+### 1940
+
+Despite being thought of as more of a retreat for safety than a hive of activity during the Second World War, Tynedale is not entirely devoid of evidence that the conflict took place. The district is littered with boggy craters and overgrown hillocks disguising torn wreckage, providing proof aplenty that the area has witnessed its fair share of tragedy over the years.
+
+### Air crashes
+
+Sadly, very few of the local crash sites have revealed enemy aircraft – the majority tell sad stories of the multiple loss of young Allied lives. In October 1940 a Whitley bomber was returning from a raid on the Stettin oil plant in Poland when it ran out of fuel. The five-strong crew baled out safely but for some unknown reason their plane had not been pointed out to sea and flew on as the crew slowly descended to earth. Three miles south-west of Bellingham, the stricken bomber hit high ground and eventually crashed at the Meslings. Among the crew of the Whitley was Sergeant Mark Alfred Niman, who began serving as a wireless operator with 10 Squadron at RAF Leeming, where the aircraft was based. The crew eventually landed eight miles south at Ladyhill, near Stonehaugh, and spent a cold night sleeping wrapped in their parachutes.
+
+Only two weeks after the Whitley crashed, a Vickers Wellington bomber from RAF Newmarket came down on its return from a mission to bomb Berlin. Poor weather conditions and low visibility caused the aircraft to crash on Blakehope Fell, west of Otterburn. It is thought that the pilot opted to descend through the cloud in order to pinpoint their position when the Wellington struck high ground. The aircraft crashed through a dry stone wall and caught fire on impact, taking the life of one of the six crew.
+
+In July 1941 a Hurricane crashed into woods at Fairley Farm, Whittonstall, the pilot breaking his ankle parachuting to safety. A Spitfire crashed at Wallington Hall in August 1941, killing the pilot, the same day that Mootlaw Farm at Ryal was hit by five bombs.
+
+In September 1941, a Hawker Hurricane from Crosby-on-Eden was forced to make a wheels-up landing after the fuel level became low in bad weather. The Hurricane was on a camera gun exercise when the French pilot, Sous-Lieutenant Jean de Tedesco, came down successfully at Yarrow, Falstone. A local man reported seeing an aircraft flying very low up the North Tyne Valley from the direction of Bellingham and saw it come down in a field at the foot of Yarrow Bank. By the time the man reached the aircraft, Jean de Tedesco was sitting on the wing, having already contacted his base, and was allowing local children to sit in the cockpit.
+
+Another Hurricane crashed into the summit of Peel Fell at Kielder, killing the pilot in November that same year. Pilot Officer Hukum Chand Mehta (24) of the Royal Indian Air Force was piloting one of four Hurricanes which took off from RAF Acklington for a formation flying exercise. Mehta, of 43 Squadron, was leading the formation but went missing on the return journey. The next two days were spent searching for the aircraft to no avail until a local shepherd reported seeing the aircraft crash into the hillside at incredible speed, leaving only the tail unit visible. Mehta’s body was found some distance from the point of impact, buried under 8ft of peat. He was the son of Karam Chand Mehta, of Lyallpur, Pakistan; he was cremated at Newcastle’s West Road Crematorium.
+
+There was no let-up for Christmas in 1941, with another Hurricane crashing while flying low near Ovingham. Also in December a Westland Lysander came down at Otterburn while taking part in an artillery cooperation exercise over the ranges. The pilot, Flying Officer J.K. Astin, noticed the engine beginning to cut out after arriving at Otterburn from RAF Clifton. Unable to rectify the problem, he was forced to land on soft, uneven ground, causing the aircraft to overturn on landing. Luckily Astin escaped without injury and the aircraft was later salvaged.
+
+On 22 March 1942, residents of Wark heard the sound of a single aircraft engine overhead. Australian Sergeant Clarrie Harker was the pilot of a Hurricane from RAF Usworth, which went on to dive vertically towards the ground when it failed to pull out of a loop successfully. He managed to bale out, leaving the Hurricane to complete its descent into a field on Moat Hill Farm, where it exploded in a ball of flames. Harker’s parachute became snagged in a tree nearby, leaving him suspended. Local children raced to the scene to find one of the village’s elderly female residents shouting obscenities at him, mistaking him for a German.
+
+One of the North Tyne’s most famous crashes occurred in February 1943, when an American Mustang flew into a boggy hillside at Hareshaw Head near Bellingham, at an estimated 400mph. The pilot, 22-year-old Flying Officer Johnny Fisher, was killed and an RAF recovery crew dug 16ft into the bog to recover his body.
+
+A crew of six came down in a Vickers Wellington in March 1943\. After taking off from RAF Harwell, the cause of the crash remains a mystery, but it came down while on fire on Comb Moor at Greenhaugh. Investigations suggest that the pilot may have lost control, causing the aircraft to dive into a peat bog on the moor, killing the entire crew.
+
+A Hurricane from RAF Milfield, near Wooler, Northumberland crashed at Ottercops Moss, Elsdon, in June 1943\. The pilot, Flight Sergeant John Gates, was knocked unconscious during the crash, but came to just as the aircraft stopped moving. He was rescued from the wreckage by soldiers travelling nearby after he was unable to recover from a low diving manoeuvre.
+
+It wasn’t only Allied aircraft which met a sad fate, for on 25 March 1943 a German Dornier bomber was shot down by a night fighter at Steel Rigg, near Twice Brewed on the Roman Wall. The four-man crew were all killed and are buried at Carlisle.
+
+![Image](Images/f0030-01.jpg)
+
+The reality of rationing explained in this poster from January 1940.
+
+The mayhem continued into 1944 when in April a pilot aged just 20, Sergeant Cyril Jack Jewell, died when his Spitfire slammed into Houxty Woods at Wark.
+
+The new year of 1940 brought new rationing regulations, with coupons required for butter, bacon, ham and sugar. The basic ration for butter, ham and bacon was 4oz per person per week, with the allowance for sugar 12oz per person per week. Additional supplies of sugar were made available for those wishing to make marmalade or for people who kept bees. Those working away from home were also told they would be able to order bacon and eggs, a roll and butter without parting with any coupons and their tea would have sugar supplied with it.
+
+‘Coupon Monday’, as it was dubbed by shopkeepers, took place in an orderly manner, but there was no rush to take up the offer of a double bacon ration. One butcher said: ‘Our bacon counters have been quiet and there has been little demand for extra rations. The price of bacon, set by the government, is preventing people from purchasing it. The normal housewife regards bacon and ham as something of a luxury which can easily be done without – shoppers cannot afford to spend 1s 8d on a pound of bacon. The average housewife is doing without, and feeding her family on cheaper things which provide equal nourishment.’
+
+The early years of the war drew to the public attention the braying tones of William Joyce, whose ‘Gairmany Calling’ broadcasts from the Third Reich earned him the moniker Lord Haw-Haw. It was soon established that Joyce was no stranger to Hexham, having been in the town not long before the war to spread propaganda on behalf of the British Union of Fascists. He had even called at the Courant office to promote a meeting he was holding in the town in 1936.
+
+Columnist Hextol recalled in March 1940: ‘I learned from his own lips that he had deputised for the Fascist leader Sir Oswald Mosley on several occasions. I did not cover his meeting personally, but the records show he made a plea for the ending of international finance and the Jewish control of the markets. He argued that an open dictatorship of a leader of whom the people have approved is infinitely preferable to a hidden dictatorship of international finance.’
+
+By the turn of the year, the Hexham Hospital Supply Depot had dispatched over 7,000 items and from the beginning of November, the depot had delivered 1,000 pairs of socks, 370 pairs of mittens, 310 helmets, 300 mufflers and 104 knitted blankets. The knitters were using white wool to make balaclava helmets for troops in Finland and sea boot stockings for the Royal Navy. Slipper makers were also urgently required.
+
+The South Northumberland Pony Club held its annual ball at the Hydro Hotel, which was decorated in the club colours of purple and gold. Dance music was provided by the Clement Millard Orchestra, with The Siegfried Line, Boomps a Daisy, The Lambeth Walk and The Chestnut Tree proving very popular.
+
+The weather took a turn for the worse in February, with 34 degrees of frost recorded and roads blocked by heavy snow at Allendale and in the North Tyne.
+
+There was an air raid warning on 29 January which saw children at all Hexham schools file into the air raid shelters, where their songs included Roll Out the Barrel and Run, Rabbit Run. No enemy aircraft made it up the Tyne Valley and the all clear was sounded after 25 minutes.
+
+The blackout continued to cause many problems for Tynedale people, with several fatalities as motorists and pedestrians alike struggled to cope with dark nights and negligible lighting on the streets or on vehicles. One of the most prominent men to lose his life was the recently retired chief reporter of the Hexham Courant, Fred Guthrie, who suffered a fractured skull after being struck by a tandem bicycle just yards from his home in Leazes Crescent. He was 71 and worked at the Hexham Herald before joining the Courant, being employed as a reporter for over half a century.
+
+![Image](Images/f0032-01.jpg)
+
+One of the first victims of the blackout in Tynedale was veteran journalist Fred Guthrie, knocked down and killed by a tandem bicycle just a few yards from his Hexham home.
+
+Deaths in the blackout were becoming so common that the government introduced a 20mph speed limit for all vehicles.
+
+### Sailors’ tales
+
+One of the early British triumphs in the first full year of the war was the hunting down of the German pocket battleship the Admiral Graf Spee, in what became known as the Battle of the River Plate – and a Fourstones sailor had a role to play in the destruction of the pride of the German fleet. He was Stoker Andrew Charlton, who was aboard HMS Ajax which, in company with HMS Achilles and HMS Exeter, penned the raider in the South Atlantic until she was finally scuttled off the coast of Montevideo.
+
+Enjoying twenty-six days at home on his return from South American waters, Stoker Charlton said the victory had been won because the Graf Spee had been crewed by young Nazis, who had no fight in them when they discovered their intended victims could fight back.
+
+He told the Courant: ‘Their captain was a real gentleman, and one of the old school, but the crew was made up of young members of the Hitler Youth movement. After they had had one go at us, they had no fight left in them. They did not want to fight when they saw we could fight back.’
+
+The Admiralty knew that a German raider was operating in the South Atlantic, doing a lot of damage, and the three ships were sent to hunt it down. The Exeter was first to engage the £4m supership and the Graf Spee returned fire with interest, its 8-inch guns out-gunning the 6-inch weapons on the destroyer.
+
+![Image](Images/f0033-01.jpg)
+
+Stoker Andrew Charlton from Fourstones was aboard HMS Ajax in the hunt for the German pocket battleship Admiral Graf Spee, eventually scuttled at the Battle of the River Plate in Montevideo.
+
+Stoker Charlton said: ‘The Spee concentrated its fire on the Exeter, but all three of us were peppering away at her and she had little chance of escape. We kept at her, rarely ceasing fire, despite having one gun turret put out of action, and having the main mast shot away, bringing down the wireless mast and aerial. The Spee’s shells burst all round us, spraying us with shrapnel, and our men on the upper deck were extremely fortunate to escape with only one dead and a few wounded.’
+
+Charlton had a lucky escape when an 11-inch shell passed through the compartment in which he was working without touching him, but he was kept busy for the remainder of the battle, repairing broken pipes and electric leads as the shells continued to rain down. ‘Eventually the firing ceased,’ he said, ‘and we all caught a glimpse of the battered hulk, once the pride of the German Navy, limping away on the dark horizon in the direction of Montevideo.’
+
+The British ships could not enter the waters of neutral Uruguay, but waited outside the three-mile limit for the Graf Spee to emerge, which she did – only to blow herself up rather than surrender.
+
+Three weeks later, when the Ajax returned to Montevideo on a courtesy visit, the hulk of the Graf Spee was still burning and the crew of the Ajax were guests of honour at a party thrown by the British community in the city. As well as the Uruguayan feast known as a saadre, where six sheep were barbecued and eaten with bare hands, the sailors also attended a dance when Stoker Charlton performed his first Boomps a Daisy.
+
+On his return to Fourstones, Stoker Charlton was presented with an inscribed stainless steel watch by the Fourstones Parcels Fund at a ceremony in Newbrough Town Hall.
+
+Another South Tyne stoker, Joseph Charlton Wylie, from Haydon Bridge told the Courant of his encounter with the so-called German hell-ship the Altmark, a tanker aboard which British prisoners of war from ships sunk by the Graf Spee were being held in appalling conditions. He was serving on HMS Ivanhoe when they came across the Altmark in Norwegian waters and a warning shot was fired across her bows.
+
+![Image](Images/f0034-01.jpg)
+
+First class Stoker Joseph Charlton Wylie of Haydon Bridge who was aboard HMS Ivanhoe for the pursuit of the so-called German hell ship, the Altmark.
+
+He said: ‘The Altmark ignored the warning, so we closed in on her, and were just a few yards away ready to jump aboard, when a Norwegian torpedo boat intervened and protested we were in Norwegian waters. The Nazi skipper took advantage of the opportunity offered him and turned sharply to enter a fjord. There was not the slightest sign of any Britishers aboard, and after the intervention of the neutral captain, the German skipper strutted around his bridge, cigarette in his mouth.’
+
+The Ivanhoe was left powerless, but under cover of darkness HMS Cossack returned to the fjord and her crew boarded the Altmark and freed more than 300 prisoners.
+
+On the home front there was a drive for salvage to help the war effort, when Hexham Urban District Council agreed to scrap its old fire engine; among items handed in by the public were two German machine guns salvaged from the last war, which were sold for five guineas.
+
+The lighter nights of early summer also brought a warning from the police about ‘marked slackness’ in the observation of blackout regulations, particularly in business premises. Meanwhile, the Rector of St John Lee Church at Acomb, the Rev. W.H.S. Wood, said the decision to hold services in the afternoon to meet the exigencies of the blackout regulations had been a complete failure, so the church windows would be darkened should the war go on until the next winter.
+
+At Haydon Bridge, the parish council wrote to Hexham RDC demanding that an air raid siren be provided for the village, for although more than 100 men and women had signed up for ARP duties, there was no way of summoning them to their posts in the event of an air raid.
+
+Two Newcastle men out for a jaunt in the country by motorcycle stopped to take a picture – and found themselves before Hexham Magistrates. For in the background of the shot was a wireless mast and taking pictures of such facilities without a written permit from the Secretary of State for War was forbidden under the Emergency Powers Defence Regulations (Control of Photographs Order No.1). The two men said they had given no thought to what might be in the background of their photographs, but they were both fined £1, with 9s costs. Chairman of the bench Sir Loftus Bates accepted there had been no ulterior motive behind the men’s actions, but said they had been very careless and could have been fined £100.
+
+## CHAPTER TWO
+
+## Tynedale Braced for Invasion
+
+With abrupt suddenness, the ‘Phoney War’ ended in the late spring of 1940, with Hitler’s Panzer divisions rolling irresistibly across Europe. The creation of a Government of National Unity in May 1940, with Winston Churchill succeeding Neville Chamberlain as Prime Minister, was warmly welcomed by the Courant, with editor Teddy Taylor saying in his leading article:
+
+‘In the hour in which Hitler has struck on the battlefield, the nation has received a much needed tonic on the Home Front. As Neville Chamberlain said to us over the wireless last Friday, if Hitler had counted on our internal divisions to help him, he has miscalculated the mind of this people. The one thing needed to close the ranks and gird our loins for the great struggle now upon us, was this call to battle. In the true Churchillian manner, our new Prime Minister has summed up the issue for us. Through blood, toil, tears and sweat lies victory for our army. Winston Churchill’s spirit is indomitable. No man of his time has suffered the slings and arrows of fortune, and no man more than he has so courageously fought back to victory. In him today we see the personification of every quality the British race possesses which time and again have wrested victory against overwhelming odds. Now is the time to spread his energy and driving force into every branch of our endeavour.
+
+The red tape which has been enmeshing our war effort for the past nine months must be cut. Sacrifice of leisure, of convenience and of consideration of profit must be made to meet the insistent call from the battlefield. If the Churchill spirit dominates our every act, the saving of the lives of our men in the fighting forces will be our immediate gain, and the overthrowing of bestial Nazidom the ultimate end. In the dark days which must inevitably lie before us. As the present conflict increases its fury, let us all remember the courageous spirit of our leader, and draw from it inspiration to inform our every act, and serve our every purpose, until victory is finally assured.’
+
+The new-look Government was not the only change – for the first time in its 76-year history, the Hexham Courant’s front page was not filled with advertisements for the likes of Nostroline catarrh remover from Gibson’s the chemists, Old Mother Riley at the Rio in Prudhoe, or someone to adopt a 10-month-old baby girl.
+
+As part of the war effort, the small ads were swept off page one to make way for news of the war. A notice from the editor explained that the changeover was to meet the exigencies of newspaper production in wartime. He assured the readers: ‘The changeover will in no way affect the character of the paper, which will continue to give a full and complete local news service together with popular regular features. The new make-up will no doubt be unfamiliar to readers at first, but we feel sure that the decision to print the principal local news of the week on the front page will help readers, and the changeover will be welcomed by them.’
+
+One of the main stories on that historic front page was a warning of the depths to which Nazi paratroopers would sink. Readers were told that one despicable Hun had used a cellophane parachute to land in Belgium and, as well as his machine gun, he was carrying a milking stool. On landing, he rushed to the nearest cow, and began milking it, but his Boche trickery failed to deceive the locals who took him prisoner.
+
+There were also appeals for more ARP volunteers and a request for help with hospital supplies. Readers were warned that the sugar ration was to be cut from 12oz per head to 8oz per head per week. However, there were special concessions for people making jam from fruit they had grown in their own gardens. Hexham Urban Council asked for 11.5 tons of jam-making sugar and Bellingham RDC wanted 19 tons.
+
+Ordinary life went on, however, and two of the biggest cases in the paper were of two Prudhoe farmers fined £4 and £5 respectively for watering down their milk, and a Mickley couple who were jailed for neglecting their children. They were unsure whether they had thirteen or fourteen offspring.
+
+![Image](Images/f0038-01.jpg)
+
+For the first time in its 74-year history, the Hexham Courant featured news on its front page rather than adverts on 25 May 1940\. Featured prominently is a warning to beware of Nazi paratroopers carrying milking stools as cover.
+
+Canon J.V.C. Farquhar was Rector of Hexham from 1919 to 1944, and at the outbreak of hostilities in 1939, he had a loudspeaker system installed in the Abbey so that the congregation at Matins could hear the sonorous tones of Neville Chamberlain announcing that a state of war existed between Britain and Germany.
+
+Mr Farquhar had a horror of incendiary bombs destroying the Abbey, so he organised a team of firewatchers who slept on the premises. He spent many a night himself on a camp bed at the top of the night stair. Local historian Rowland Charlton was a member of the Home Guard and used to sleep at the Moot Hall on fire-watching duties. At first, the Home Guard was known as the Local Defence Volunteers, or LDV – Mr Charlton always contended that the initials really stood for Look, Duck and Vanish!
+
+### Home Guard exploits
+
+As the ‘Phoney War’ ended, the activities of the LDV in Hexham were stepped up, with all ex-servicemen who had volunteered for service issued with their equipment which comprised a khaki overall, forage cap and a rifle. More than 1,000 men had volunteered and to their intense disappointment, it soon became clear that not all would be required to serve. Lieutenant Colonel Sir Archibald White of Otterburn, who was commanding the Hexham group, said that everything was progressing well and patrols would start as soon as the various sections had brushed up on their shooting. He added: ‘I cannot say how many volunteers will be called upon; it depends on the number of sets of equipment we are to be allowed. However, it is certain that nothing like the full number of volunteers will be required.’
+
+Those in charge of the various units were assistant group commander Major Charles Beck Hornby of Anick; Hexham – Lieutenant Colonel J. Ridley Robb; Bellingham – Brigadier General J.D. Jebb and Bavington – Colonel H.S. Bell.
+
+Redesdale residents remember the exploits of the West Woodburn and Ridsdale Home Guard with much fondness. They used to have weekly training exercises and parades in the field behind All Saints’ Church under the watchful eye of commanding officer Major Anderson of Kirkharle. Among those involved were Robert and Thomas Tait, Hugh Snaith, Jim Wilson, Willie Robson, Jack Brodie and Harry Comer. One of the favourite exercises was live hand grenade drill, when the volunteers had to throw a grenade over the crest of a hill and into a convenient hollow to explode safely.
+
+![Image](Images/f0040-01.jpg)
+
+The Hexham Home Guard ready to do their bit should the Germans invade.
+
+![Image](Images/f0040-02.jpg)
+
+Wark Home Guard on parade.
+
+Needless to say, on one famous occasion a particularly inept recruit’s grenade failed to clear the crest and rolled gently back down towards the rest of the platoon, which scattered in horror.
+
+On another exercise the platoon was required to ascend the long bank out of Woodburn to the top of the quarry, to look out for enemy parachutists. The same hapless recruit was nominated as despatch rider and ordered to wheel a heavy bicycle from the centre of the village to the quarry. He had hardly time to recover his breath when he was ordered by the sergeant to ride the machine back down to company headquarters – better known as the much-missed Fox and Hounds pub. The sorry soldier gulped and refused the order, and when asked why by his purple-faced NCO, was obliged to reply: ‘Because I can’t ride a bloody bike, sarge!’
+
+Others remember the famous night of the supposed German invasion of the North East coast. The order of command was that the commanding officer, Major Anderson, would telephone Tommy Thompson of Clock Mill, Capheaton, who would in turn ring platoon member Tommy Walton. He would then telephone the next down the line and so on, thus all would get the alert.
+
+On the suspected night of the invasion Tommy Walton received a phone call from Major Anderson, to say that the invasion was suspected. However, the major could not raise Tommy Thompson and asked Mr Walton if he would please go round in the car and rouse him. Mr Walton duly went to Clock Mill, but there was no wakening Mr Thompson, despite hammering on the door and throwing stones at the windows. Finally, Mr Walton got back in the car and went home to bed, so perhaps it was just as well the Germans decided not to invade that night.
+
+![Image](Images/f0042-01.jpg)
+
+Eddie Waite – who went on to be chairman of Tynedale Council in the 1980s – is on the left here, with Harold Robson on the right. In the middle is Captain Keith.
+
+The Home Guard training was taken more seriously in some areas than others, as an unfortunate evacuee discovered to his cost when he inadvertently became involved in an exercise involving the Humshaugh and Newbrough unit. The company was operated by the headmaster of Humshaugh village school, Edward Waite, who had organised his men into two groups – his side being the English, and the others, led by First World War Northumberland Fusiliers Sergeant Major Harold Robson, the enemy.
+
+Waite set up an ambush on the Haughton Road for the ‘Germans’ but the evacuee, who had spotted Waite and his men hiding behind oil drums and under bushes, innocently informed Robson of what he had seen. The wily sergeant major was then able to sneak up on Waite’s men and capture them all, to the headmaster’s incandescent fury.
+
+At school the next day, while the evacuees were having their morning lessons, Waite demanded to know who had tipped off the others about the ambush, and when the youngster confessed it had been him, Waite’s wrath was terrible. He harangued the terrified boy about careless talk costing lives and informed him that the Home Guard had a short way of dealing with Fifth Columnists – they would be shot.
+
+He then sent another evacuee to his home alongside the school to fetch his pistol and Sam Browne belt, and then blindfolded the boy before asking if he had any last words.
+
+The child lost control of his bladder before the headmaster relented.
+
+There was also another tale that Major Anderson decided to hide all Home Guard ammunition and explosives on his estate in case of invasion. Unfortunately, the old major forgot where he had buried it and word is that it has never been found.
+
+At Corbridge Home Guard, Laurence Best, was sergeant major’s runner at the age of 14\. When well into his 80s, he recalled: ‘Some of the lads took it very seriously, which is perhaps just as well, but there was an Awkward Squad – of which I was an honorary member – who treated it as a big joke.’
+
+As a schoolboy Laurence was issued with a wooden rifle, but it was confiscated by the sergeant because his genuine .303 was too heavy for drill. There were also the mock battles with the Hexham Home Guard, where the Awkward Squad always had the same objective – to capture the local pub.
+
+Laurence remembers: ‘We captured Mr Pearson, the station master at Corbridge, and got the train to Hexham, where we secured the old Station Hotel. When our officer asked us what we were doing, we told him we were interrogating a prisoner. He said he should be doing it, and we said he could – but only if he bought pints all round! I didn’t drink of course – I had to make do with pop and crisps.’
+
+![Image](Images/f0043-01.jpg)
+
+Ready for action are the men of the Corbridge Home Guard.
+
+On another occasion an officer let slip he was planning a 2am inspection of the guard – and he fled in terror when on his approach he was greeted by a series of explosions from blank cartridges!
+
+### Local Casualties
+
+The grim distinction of being the first local casualties in the war fell to two 20-year-olds: Fusilier Albert Thompson, the youngest son of Mr and Mrs W. Thompson of Tyne Green, Hexham, and Fusilier Cornelius Newton, of Wanless Close, both killed in action on 19 May while serving with the Royal Northumberland Fusiliers.
+
+As the British Expeditionary Force was swept back to the sea and the beaches of Dunkirk by the mighty German war machine, the nation went down on its knees in a national day of prayer at the request of the king. More than 2,000 people attended Sunday services at Hexham Abbey and churches across the district were full to the doors.
+
+Casualties started to mount and convoys of wounded soldiers snatched from Dunkirk began to arrive at the Emergency Hospital in Hexham. The collection of wooden buildings was established in the early months of the war to take in military casualties injured overseas, as well as to deal with civilian and military air raid casualties. For a while, it took in local ‘peace-time’ emergencies, and acute and surgical cases which were on the waiting list for treatment at the Royal Victoria Infirmary in Newcastle. But on 1 June 1940 the first 269 military casualties arrived from the Dunkirk evacuation and from then on the hospital was full until 1945\. Always known by Hexham people as the Military Hospital, it was supposed to close at the end of the war, but it was absorbed into the new National Health Service in 1948 and those wooden buildings did sterling service until Hexham got a new hospital, opened by Prime Minister Tony Blair in 2004.
+
+The arrival of the Dunkirk casualties was supposed to be a secret, but many people turned out in the early hours of the morning to welcome the wounded who were tired and weary, and in many cases critically ill, but still maintained a remarkable spirit of cheerfulness. Many had no personal belongings other than the clothes they were wearing, but collections were immediately taken and within a few hours of their arrival, the men were given gifts of clothing, razors, tobacco, matches, food and fruit. ‘I am being treated like a king,’ one Tommy wrote to his family.
+
+The regular hospital staff were supplemented by a large contingent of Red Cross workers and every effort was made to care for the wounded and ease their suffering. It was obvious that all the men had gone through experiences of which they did not care to speak, but their amazing cheerfulness astounded nurses and doctors.
+
+Among the wounded was a contingent of French soldiers who, despite the fact they were seriously wounded themselves and their homes may have been razed and their wives and children scattered across France, also maintained a wonderful spirit of cheerfulness. One said via his interpreter: ‘Another ten days and I’ll be back showing Fritz what’s what.’
+
+Among those sent to Hexham was a Royal Northumberland Fusilier called William Ormston, who had suffered a badly crushed foot and who had had a trying 40-hour journey by ambulance to get to Dunkirk, during which the ambulance had twice stopped when the drivers took cover from Nazi bombs and machine-gun bullets. Finally reaching England, he was put on an ambulance train with other wounded personnel, when he first heard the name Hexham mentioned as the final destination of the train. Despite his injuries he was delighted, for Hexham was his home town and his parents would only have to go a couple of hundred yards to visit him.
+
+A ‘put you up’ service for relatives visiting wounded soldiers was set up by the Hexham Free Churches, who appealed for local families to provide accommodation for the visitors and had many offers of help.
+
+Not everyone made it; a British Tommy and a French marine who arrived in the convoy of wounded died soon after admission. The victims – Private Rex Martin (21) of the Middlesex Regiment, and Marine Paul Ruel – were buried side by side in Hexham cemetery. Separate services were held with the Rector of Hexham. the Rev. J.V.C. Farquhar conducting the service for the Englishman and Catholic priest Father Cunningham conducting that of the Frenchman. The coffins were draped with the Union Flag and the French Tricolore and among the mourners was the French consul from Newcastle.
+
+There was also a great demand for linguists to help translate for the French nationals and colonials, including the French teachers from Queen Elizabeth boys’ and girls’ grammar schools.
+
+Men were reluctant to speak about their experiences at Dunkirk on the record, but one Hexham Fusilier told the Courant that when the water supply was cut off at Dunkirk, he still managed to get his first wash in five days – using two bottles of champagne. He said: ‘I had a really good wash – inside and out.’
+
+Life went on though, and an air raid warden from Haydon Bridge was fined 12s 6d for breaching blackout regulations at his home. He blamed his wife for taking down blackout material so she could clean the windows.
+
+Bellingham farmer William James Dodd (60) of the Riding found himself on the wrong side of the law when he refused to obey an instruction from the War Office to plough out all his land to increase food production and was fined £40 with £10 costs. He told the court he could not agree to plough all his land, because he had kept back his best two hayfields to produce fodder for his dairy cattle. He had a contract with the Milk Marketing Board to provide 50 gallons of milk per day and could not do that if his cattle were not properly fed in the winter months. When sentence was passed, Dodd said he would go to prison rather than pay a fine but was told that was not an option, and if necessary, his land would be compulsorily purchased and ploughed for food.
+
+A police constable at Prudhoe was accused of behaving ‘more like a stormtrooper than a broad-minded British policemen’ during the arrest of three men for alleged drunkenness. However, magistrates refused to accept allegations he had sworn at the men and punched one in the stomach and the miscreants were all fined.
+
+There was dismay in Hexham when popular local sportsman Second Lieutenant Thomas Benson Bland was reported missing. He had played both rugby and cricket for Tynedale, helping the rugby club to a hat-trick of Northumberland Senior Cup successes, as well as playing for Northumberland more than thirty times. He was a member of the joint Northumberland and Durham team which played the New Zealand All Blacks in 1936 and was an equally talented cricketer, also representing Northumberland and Tynedale and once scoring 155 in 129 minutes for Tynedale against Benwell Hill.
+
+It was later learned that he had been taken prisoner but died from his wounds in a German hospital in January 1941.
+
+With invasion an ever-present threat, Tynedale residents were warned to step up their blackout procedures and the standard fine for breaches of the blackout regulations was increased from 12s 6d to a more hefty £2\. The public were also warned to take air raid warnings more seriously. Northern Regional Commissioner Sir Arthur Lambert said: ‘There is a fairly numerous section of the public who do not seem to realise the risk from bursting bombs, which may follow almost immediately from an air raid warning. Large numbers appear at the doors and windows of their homes. Many come outside and even bring their children with them. The chances of a direct hit from a bomb are small, but the splinters after a burst can do terrible damage over a distance of 70-80 yards.’
+
+People were also warned to obey instructions from sentries posted at various sensitive locations around the district. Major J. MacVicar Munro warned: ‘We are at war, and these sentries are warned to halt people approaching their posts and, if the order is not obeyed, to fire. The fact that you are a loyal subject, and that you may be on some perfectly loyal errand, is not known to the sentry. One person recently thought the sentry was joking when ordering him to halt and kept his car moving even when challenged a second time, and only came to halt when a bayonet pierced his front tyre. People who are deaf should not approach any guarded point unless accompanied by a friend.’
+
+Questions were raised about the effectiveness of the air raid shelters at the council schools in Hexham, with a complaint to the authorities that at a recent drill, the ventilation in the shelters proved inadequate and the children almost suffocated. Many children also suffered severe headaches because of the extreme heat inside the shelters. The explanation was the doors had to be secure or they would not keep the gas out.
+
+Householders were also warned to conserve water for firefighting purposes, and there was a ban on washing cars, watering gardens or swilling down paths and yards.
+
+A decision was taken to fell trees at one of the North’s great beauty spots, Hareshaw Linn at Bellingham, to further the war effort. Chairman of Bellingham Rural District Council, Councillor T. Simpson said he had inspected the wooded dene leading to a spectacular waterfall, and said: ‘It is a very pretty place – it looks very beautiful and it seems a pity we should have to spoil it.’ Nevertheless, it was agreed to fell all the oaks and soft woods on the south side of the burn, leaving a narrow strip of trees to preserve the beauty of the wood as far as possible.
+
+### A Military Medal and more casualties
+
+Back at the front, a 20-year-old fusilier from Fourstones became the first from the district to be decorated for bravery. Private Christopher Wilson of the Royal Northumberland Fusiliers, was awarded the Military Medal for conspicuous gallantry at Arras on 21 May, when he put two tanks out of action with his anti-tank gun, which he continued firing until it burst.
+
+Grim news continued to come from across the Channel, with the family of Fusilier William Walker of Mickley being told he had been killed in action – on the anniversary of the death of his father on the Somme. Serving with the Royal Northumberland Fusiliers, Second Lieutenant Edwin Johnson of Bellingham was also reported missing. He was a renowned sportsman, helping Tynedale Rugby Club win the Northumberland Senior Cup in 1935 and 1936 and winning his cap for Northumberland; he was also a county golfer. It was later confirmed he had been taken prisoner and was in a PoW camp.
+
+![Image](Images/f0048-01.jpg)
+
+Military Medal winner Christopher Wilson of Fourstones.
+
+The family of Prudhoe doctor Surgeon Lieutenant Commander Hugh Adare Lockhart, serving aboard HMS Glorious refused to accept the official notice from the Admiralty that he was presumed killed, with his mother speaking of his fine swimming qualities and the fact he had an exceptionally good lifebelt. Sadly their faith was misplaced – he was killed in action.
+
+![Image](Images/f0049-01.jpg)
+
+Three Tynedale officers confirmed as being held in German prisoner of war camps in May 1940 were (from left) Lieutenant Colonel F.B. Clarke, from Prudhoe; Major Kenneth Seth-Smith of Hexham and Major Kenneth Clark of Haltwhistle.
+
+The Prudhoe district also lost one of its most promising footballers when Sergeant John Railton Yielder of the Royal Army Ordnance Corps, died from wounds at the age of 22\. He was being watched by the scouts of many big clubs before the war and was on the amateur books of Middlesbrough AFC.
+
+Hexham UDC was notified in July 1940 it may have to find accommodation for another 800 evacuees from the coastal towns – and if people did not accept them on a voluntary basis, compulsory powers would be used. Meanwhile Haltwhistle Rural District Council was seeking permission from the Ministry of Health to put evacuees up in empty houses which had been condemned as being unfit for human habitation.
+
+The accommodation of extra evacuees in Hexham was reported to be ‘bristling with difficulties’ as the town was already crowded with war workers and the wives of families of business people from Tyneside who had moved away from the danger areas. The Courant noted that the recent census was now totally useless because of the large number of people who had moved into the area. Evidence of the influx was the fact that 1,500 emergency ration books had been issued by the Hexham Food Centre over the previous three weeks.
+
+There was reluctance among householders to accommodate more strangers, as a circular seeking volunteers which went out to 3,000 homes in the area produced offers of just thirty places. Many children evacuated to Allendale were being provided with emergency accommodation in the Temperance Hall in Allendale and in Catton Reading Room. The population of Bellingham had also doubled, leading to concerns about the adequacy of the water supply.
+
+Bellingham Rural District Council sent a strong protest to the Ministry of Health when a large number of children evacuated from a North East coastal town arrived in Bellingham at less than an hour’s notice. Most of them were verminous and four were suffering from scabies. The council was compelled to accommodate them in one large room, and provide beds, bedding and a meal. An approach was made to the recently established camp school at Brownrigg, where there was a hospital and nursing staff, to expedite the cleansing of the children, but the camp would not have them. They were eventually moved to an institution in Morpeth, 30 miles away, with Bellingham councillors pointing out that they should never have been sent to Bellingham in such a condition in the first place.
+
+Brownrigg was still in the process of being built by the National Camps Corporation when it was pressed into service as a centre for evacuees. It was part of a chain of schools across the country designed to give city children a taste of rural life, but that idea was put on hold for the duration of the war. The half-completed Brownrigg became home to 400 girls from elementary schools in Newcastle from the spring of 1940 and, although there was mains water on the site, it was not piped to the five dormitories, so the girls had to wash in the stream which ran through the school grounds in the early days.
+
+Once building work was complete though, they were more fortunate than most, for Brownrigg’s substantial grounds meant the staff could grow their own vegetables, meaning that while food was scarce in the days of rationing, Brownrigg girls could often have seconds. The children thrived and were soon laying on entertainment for local residents, including pantomimes, with Peter Pan being a particular favourite.
+
+Throughout the war there was only one air raid warning, when the girls spent an uncomfortable night cuddling their teddies in the air raid shelter, waiting for the all clear. The girls spent four years at the school, but following the D-Day landings, they returned home, taking with them many happy memories.
+
+The call for salvage brought a ready response across the district, with salvage dumps being set up in every town and village. Among the items handed in at the Hexham depot at Prospect House were an old lady’s aluminium hot water bottle, a solid copper bath and a farmer’s chicken incubator, while a child offered up the lines of his clockwork train set. Also handed in were a Victorian metal fireplace, a large number of brass oil lamps, prams, toys, boilers and thousands of tins, along with two whaling harpoons, relics of the Tyne whaling fleet, and a German helmet salvaged from the last war.
+
+The Rector of Hexham was forced to defend the fact that the Abbey’s metal railings remained in place, pointing out that the parochial church council had wanted to offer them as salvage, but had been denied consent by the bishop’s office in Newcastle. The bishop’s stance was supported by a Courant correspondent, who said the railings were necessary to protect the integrity of the church. He wrote: ‘Imagine a special occasion, such as an interesting wedding. People would be climbing on the wall, and the assistance of the police would be required to prevent them from rushing the doors. The police have plenty to do without adding to their duties.’
+
+It wasn’t until mid-October that the diocese relented and a faculty was granted for the removal of the railings. Railings around all the town’s public parks were removed, however, as well as the cemetery.
+
+### Local tragedies
+
+There were tragedies on the Home Front with two soldiers drowning in separate incidents while swimming in the Tyne – one at Riding Mill and one at Hexham. Private Richard Welding, of Warrington, was on bathing parade with around thirty other soldiers on the Tyne at Riding Mill, when he got into difficulty. The subsequent inquest heard he was not a strong swimmer and the area where he had been swimming was dangerous to bathe in, as there were back eddies and a whirlpool and the water was 10-12ft deep, with an unstable silt bottom.
+
+An officer of his regiment told the coroner that as a result of the incident, there would be no further bathing parades on the Tyne and the public baths would be used instead.
+
+Just three days later, 20-year-old Gunner James Radcliffe of Manchester, drowned when he also got into difficulties when swimming in the Tyne at Hexham. Witnesses said he had been washing himself in the river and told friends he was going to swim to the other side, even though he was not a strong swimmer. He got halfway across when he went under the water and resurfaced with a shout, ‘Save me, I am drowning!’ Despite attempts by companions to save him, he drowned, even though the area where he was swimming was said to be very popular with bathers for generations.
+
+There were deaths in the barracks too, with a soldier from Birmingham, William Joseph Murphy (22) charged with murdering fellow soldier George Eric Ward, of Manchester, after a drunken row in the village outside Hexham where they were stationed. Trouble flared when two half crowns went missing from his bed. He loaded his rifle and said he would shoot whoever had taken his money. Several people tried to take the gun away from him, including Ward, said to be his best friend, who ended up being fatally shot through the stomach.
+
+Murphy claimed the gun had gone off accidentally, but he was still committed to Newcastle Assizes to stand trial in August 1940\. He was later found not guilty of murder but guilty of manslaughter and sentenced to nine months hard labour.
+
+It was a traumatic August for Mrs T.C. Urwin of Wanless Close, Hexham, for in the space of two months both her husband and her son were aboard ships sunk by German torpedoes. Her husband was aboard the liner Mohamed Ali El Kebir which set sail from a British port with both troops and naval ratings aboard when it was struck by a torpedo two days out from port. The ship sank within two hours and, with its lifeboats damaged, Mr Urwin had to scramble down rope pulleys to board a raft in heavy seas and was adrift for five hours before being picked up by a destroyer.
+
+Meanwhile, the couple’s 18-year-old son Michael was aboard HMS Calypso when it too was torpedoed and the family had an anxious wait before it was confirmed he had been picked up and was recuperating in Egypt.
+
+![Image](Images/f0053-01.jpg)
+
+As well as fighting the Nazis abroad, Tynedale folk were urged to tackle another enemy on the Home Front – the rat. Note the Hitler hairstyle and toothbrush moustache on the specimen on show.
+
+Among those doing their bit was Hexham’s oldest resident Mary Jane Robson, who at the age of 97 was still knitting socks for soldiers. Mrs Robson had lived through five wars and was the last surviving member of a family of nine, noted for their longevity. She had succeeded her brother Dr C.R. Kendal as the town’s oldest resident, following his death at the age of 97\. Her husband had been killed in the opening weeks of the Great War. To buy the ninety-seven candles for her birthday cake would have cost 12s 6d, but Mrs Robson asked that the money should be donated to war charities rather than on the purchase of candles.
+
+In August the ‘Hit Back, Buy A Spitfire’ campaign was launched in Hexham with an ambitious target of £5,000\. It had the backing of Air Commodore Milne Robb, shortly after he had received the Air Force Cross. Robb said:
+
+‘The recent unsuccessful mass attacks by the German air force had as the main objective the wearing down of our fighter defences which must have brought home to everyone the great responsibility which is being borne by our fighter squadrons. So far in these attacks the enemy has largely relied on medium and dive bombers, escorted by large formations of fighters, and has only employed a comparatively small proportion of heavy bombers, of which he has large numbers. Any weakening of our defences would allow him to use these heavy bombers in daylight.
+
+The great destruction wrought in Poland and Rotterdam was the work of the heavy bombers and was only possible because they were able to operate during the day without any opposition. This is the state of affairs which the enemy hopes to bring about in this country. He has had little success to date, but he cannot give up now without acknowledging a major defeat.
+
+I welcome the proposal to open a Spitfire fund in Hexham, both as proof that the work and responsibility of our fighters are being recognised, and as a practical means of adding to our defences.’
+
+A leading member of Hexham Townswomen’s Guild, Sadie Dodd, urged women to get involved in the Spitfire fund, saying: ‘It is a grand bit of propaganda. Here are those Germans coming across here every night to break our morale and the only effect it has had is to make large groups of people, unasked, to club together to buy Spitfires to beat them off. It must be very discouraging for them to find us so full of fight.’
+
+Collecting tins went out to pubs and shops, personal letters were sent to hoped-for benefactors and it was announced there would be a mile of 10s notes campaign. Within less than a week, more than £200 had been donated and in less than two months the total was £2,000\. By the beginning of January 1941, in just over five months, the target had been exceeded, with the cash coming in at the rate of £1,000 per month from special fundraising efforts to personal donations. The organising secretary was J.F. Macgregor who headed a willing band of assistants.
+
+The Spitfire campaign really captured the imagination of the public and the giving was generous at a time when the annual wage for a working man was around £3 per week. When the fund was wrapped up in February 1941, a total of £5,250 had been raised with administrative expenses only £34 16s 3d – just 0.76 per cent of the total.
+
+A breakdown of funds raised across the district showed where the cash had come from: Acomb, £54; Allendale £163; Barrasford £110; Bellingham £75; Blanchland £17; Corbridge £595; Fourstones £74; Haydon Bridge £116; Hexham £2,658; Horsley £50; Humshaugh £34; Langley £21; Lowgate £61; Matfen £40; Newton £69; North Tyne £114; Ovingham and Ovington £29; Riding Mill £175; Hexhamshire £59; Slaley £61; Stamfordham £7; Stocksfield £170; Wall £45; Wark £99; Colonial and foreign £356.
+
+Some of the donations and fundraising efforts raised relatively minor sums – a ‘hoy oot’ at a wedding at Stocksfield bringing in a modest 2s and a dance just £5 – but the community efforts brought in £3,588 which was further boosted by schools and schoolchildren bringing in £240, social events, sales and concerts £784, collecting boxes £240, weekly contributions from employers and staff £107, competitions £91 and a district-wide flag day £199.
+
+It had been hoped that the Minister for Aircraft Production, Lord Beaverbrook, would come to Hexham to collect the cheque in person, but this was not possible, so the cheque was sent in the post with a request that when the aircraft was built, the name ‘Hexham and District’ should be displayed on the fuselage.
+
+### U-boat attack
+
+While the Battle of Britain was raging in the skies, German U-boats continued to take a heavy toll at sea. The Courant carried a graphic account of the ordeal of Haltwhistle’s Third Officer John Francis Blakie (25) who was one of thirty-nine merchant seaman aboard an oil tanker which was torpedoed 120 miles west of the Hebrides. He told the Courant that the U-boat had surfaced about 8.30 at night, and said: ‘They appeared to receive quite as big a shock as we did. We tried to turn round in order to deploy our guns, but before we could she submerged, leaving us, so we hoped to continue our journey.’
+
+Their hopes were in vain, for two hours later, around 10.30, the tanker was struck amidships by a torpedo, which also wrecked one of the lifeboats. Blakie said:
+
+‘We were left with one lifeboat and the jolly boat into which we all crowded. Fourteen of us were packed into the jolly boat with little room to move and only a small supply of ship’s biscuits and water. The ship was going down very slowly, but as we got clear, a second explosion broke her back – I think it may have hit our magazines.
+
+‘As we cast clear, we picked up two more shipmates, including a 16-year-old cabin boy on his first sea voyage, who during the subsequent days became the life and soul of the party. Shortly after the second explosion, the submarine resurfaced and drew alongside our boat, when the captain asked me, as the man in charge of the jolly boat, the name of our ship. I provided the necessary information to the commander, who spoke perfect English. Several of the men said afterwards they thought about giving the commander a little insight into the German air losses the previous day, but they thought it better to keep a still tongue under the circumstances.’
+
+The men were at sea for three days in the open boat in very rough seas, usually having a couple of biscuits and a little water a day, although some of the men had nothing at all. Blakie reported that spirits were excellent, and said: ‘The cabin boy was amazingly cheerful, and led the men in singing to keep their spirits up.’
+
+They finally manoeuvred the little craft to within sight of the island of Barra where they were picked up by the trawler Newlands. Blakie said:
+
+‘Several of us were feeling the effects of exposure, but we were thankful to know that our nightmare had ended. We landed in the few clothes we had been wearing when the torpedo struck, and some of those who had been been in bed had neither shoes nor socks. At Tobermory, we were given food before proceeding to Oban where residents in a hotel volunteered their beds for us, and we were provided with clothes.’
+
+Fusilier Roy Clarke (19) of Stagshaw, was given leave from the Northumberland Fusiliers to be guest of honour at a special event at Stagshaw Church Hut, where he was feted for the actions which led to his being awarded the Military Medal for two separate acts of bravery with the British Expeditionary Force (BEF) on May 28 and May 31\. He continued to carry messages, both on foot and on his motor cycle, when under heavy shellfire and mortar attack. He never took cover or rested, but continued on all his journeys with dauntless courage, ensuring the rapid delivery of vital information. He was presented with a suitably inscribed gold watch from the Corbridge War Services Fund, at the conclusion of a whist drive.
+
+![Image](Images/f0057-01.jpg)
+
+Military Medal winner Fusilier Roy Clarke (19) of Stagshaw who gained the award for bravery in delivering messages on foot and on his motor bike under heavy shell and mortar fire serving with the British Expeditionary Force at Viestraat and Moeres in May 1940.
+
+The courts were becoming increasingly severe on breaches of the blackout restrictions, with fines stepped up to as high as £4 – even for those not directly involved in closing curtains. Among those penalised that amount was the landlord of the Wheatsheaf Inn at Corbridge, who had ensured that all thirty-five windows at the hotel were adequately screened. A maid had been instructed to go round half an hour before blackout times to ensure all curtains were drawn, but on this occasion, a guest had opened a door and left a light on, which had shone through.
+
+A German refugee living in Riding Mill, Pauline Mainzer, was fined £2 for having an unobscured light at the Terrace in Riding Mill, but the court was satisfied it was not a deliberate attempt to guide the enemy.
+
+A hostile crowd gathered in Prudhoe, threatening to break the windows of premises in West Road, where a light was blazing through the skylight of Fewster’s Garage and could be seen from 150 yards away. Police eventually broke into the premises to extinguish the light. Proprietor James Fewster was fined £2 when he admitted the offence, but blamed an apprentice whose job it was to lock up for not turning out the light.
+
+The residents of Prudhoe raised £241 10s 11d by way of donations and special subscriptions to buy three cars for £135, with a further £100 being spent on converting them to ambulances for the local ARP group.
+
+A failed lead mining scheme on the Rowley Burn in Hexhamshire paid dividends seventy years after its inception. Lead prospectors sank their money into a mining operation known as Cobblers Venture, but it yielded only a small seam of lead and the works were abandoned and left derelict. Among the abandoned machinery was a huge water wheel, weighing around five tons, which was spotted in 1940 and taken away for the salvage scheme.
+
+The war supplies depot at Hexham had to redouble its efforts to provide comforts for soldiers, after many of the thousands of items they had made were abandoned at Dunkirk. Balaclava helmets and minesweepers’ gloves were in particularly short supply. To raise money for more equipment a memorable exhibition was put together by the local gentry, where items on display included a blue brocade coat worn by the ill-fated Earl of Derwentwater; a bed cover worked by Mary, Queen of Scots while a prisoner at Loch Leven Castle; a patchwork quilt made by Warden’s famous murder victim Joe the Quilter and an apron worn by Dorothy Forster of Blanchland, heroine of Sir Walter Beasant’s famous novel. The exhibition took place in the hall of Hexham Catholic Schools.
+
+One of the more bizarre decisions which had been taken was the silencing of the bells at St Andrew’s Church in Corbridge so they no longer chimed the hours, for the duration of the war. The decision was taken by the vice chairman of Corbridge Parish Council Councillor R.R. Ridley as ‘a security measure’ but without the knowledge of the vicar, the Rev. M.M. Barlow, who was on holiday at the time. The decision had caused some consternation in the village, especially as Big Ben was still booming out over London. The vicar felt the parish council did not have the powers to order the silencing of the clock, without reference to him or the church wardens. He said: ‘I am the last person to be concerned about my rights, but I am concerned about the honour of the Church, of which I am the personal representative in the parish. I am surprised the clock was stopped striking without consulting me.’
+
+No order had been issued by the Home Office with regard to the striking of clocks and it was agreed that the clock chimes should be restored.
+
+At Bellingham Magistrates’ Court, Ellen Charlton, of Pasture House, Wark, appeared on a charge of selling eggs at 4d each, rather than the Government stipulated maximum price of 3d each. Charlton told the court she was aware of the provisions of the Maximum Prices for Home Produced Eggs order, but felt she was entitled to charge more, because the eggs bought in a test purchase by Sidney Clough of the Bellingham Food Control Committee were particularly large and might have been double yolked.
+
+She was fined £1, with £1 costs, and chairman of the bench Major G.D. Anderson told her she could have been fined £100\. In response to her plea that she only had a few hens which laid very few eggs, Major Anderson said: ‘It does not matter how many poultry you have. If you have only one hen which lays only one egg a day, and you sell that egg above the maximum price, then an offence has been committed. However irksome the regulations might be, they have been made in the best interests of the country as a whole, and it is up to everyone to carry out those regulations as cheerfully as they can.’
+
+He asked the press to publicise the case as a deterrent, as there had been suggestions – which could not be proved – that other poultry keepers in the North Tyne had been selling eggs above the permitted price.
+
+There was good news for Mr and Mrs J. Atkinson, of Dilston Haugh, Corbridge, who had been told a month earlier that their eldest son, Able Bodied Seaman Joseph Atkinson, was missing, presumed killed, following the sinking of the destroyer HMS Esk either by torpedo or mine. They were overjoyed when they received confirmation that he had been picked up and was now in a prisoner of war camp.
+
+![Image](Images/f0059-01.jpg)
+
+Able Bodied Seaman Joseph Atkinson (22) of Corbridge wrongly reported killed in action when his ship HMS Esk was sunk. Note on his cap tally the name of his ship has been scratched out to avoid giving information to the enemy.
+
+As well as being the bearer of bad news in wartime the Courant could also spread good news, as in the case of RAF Sergeant Harold Robson, of Hexham, for it was a Courant reporter who told his family that he had been awarded the Distinguished Flying Medal in recognition of his forty-one daylight missions over occupied territory. While stressing that the award was for teamwork by the whole crew of his Bristol Blenheim bomber, the observer had experienced some hair-raising experiences in raids over Holland, Belgium and Northern France.
+
+![Image](Images/f0060-01.jpg)
+
+Sergeant Harold Robson (26) of Hexham was awarded the Distinguished Flying Medal in October 1940 after taking part in 41 flights over enemy occupied territory.
+
+The most exciting incident came when the Nazis broke through the Maginot Line in France and the RAF was sent to check the advance of the mechanised German columns. Robson’s Blenheim was separated from the rest of the squadron by anti-aircraft fire. He said: ‘We found ourselves hedge-hopping, being harassed from the ground by machine gun and rifle fire, and with five Messerschmitts on our tail. Our gunner shot down one of the enemy planes and after that the others left us alone, as they seemed to have run out of ammunition. We came home with one or two bullet holes in the Blenheim, but that was all.’
+
+On another occasion, he felt a sharp pain in his leg, and looked down to see his leather flying boot had been torn by shrapnel. But that was nothing – only part of a day’s work.
+
+One of his more satisfying moments in the air was a raid on an airfield in occupied Holland, where he said: ‘We dropped out of the clouds to about 1,000 feet and then released our bombs. We saw them burst on a hangar in the middle of the aerodrome, and then flew back into the clouds before they could get the anti-aircraft guns into action.’
+
+He paid high tribute to the manufacturers of the Blenheim, one of the first British aircraft to have all-metal stressed-skin construction, retractable landing gear, flaps, a powered gun turret and variable-pitch propellers. He observed: ‘I have seen Blenheims returning after receiving terrible punishment from the anti-aircraft guns and Nazi fighter planes, and although they have been almost shot to ribbons, they have somehow or other got back. This is due to the skill of our pilots as well as the character of the machines they fly.’
+
+On the Home Front, there was devastating news for the ladies of Tynedale in that the Board of Trade had announced there would be a ban on the sale of silk stockings from 1 December 1940, as silk was needed for the war effort, notably the production of parachutes. The Courant’s Women’s Topics column reported:
+
+‘Overnight, a pair of silk stockings became the most sought after commodity in Hexham, and soon after the opening of the ladies’ shops on Saturday morning, queues were forming at the stockings counters. By Monday morning, a pair of silk stockings was as scarce as snow in summer. There was further disappointment for those who intended investing in a nest egg of silks, for in order to ensure that all customers got a fair share of the available stocks, customers were restricted to one pair only. One shop even resorted to taking the names of all stocking buyers to confound would-be hoarders. The shopkeeper said: “The restriction is just one more sacrifice – a small one in comparison with others that are being made – that women are being called upon to make in the name of freedom.”’
+
+At the first annual meeting of the Hexham War Supplies depot, it was reported that 10 miles of material had been used to make 3,051 garments, 25 miles of gauze had been turned into 44,000 swabs and 12.5 miles of material been rolled into 3,685 bandages. The depot was turning out 3,000 items per week, and the total output for the year was 109,000 items, made up by 33 different working parties. Among them was the woodwork class from Hexham Senior School, which was making wooden splints, bed rests and crutches.
+
+The crackdown on blackout offences continued, with the owner of the Stagshaw Colliery at Corbridge being fined £5 for allowing the pit heap to smoulder, giving out a glow which could be seen for a considerable distance. Corbridge fire brigade used 1,000 gallons of water to extinguish the blaze. Owner Thomas English of Hexham said he knew the heap was heating up and was in the process of assembling an electric pump to keep the fire under control. He had blanketed the heap in clay to damp down the fire but high winds had fanned the flames.
+
+George Stoker of River View, Prudhoe was fined £1 for a blackout breach when a chip pan on the hearth overturned and the blazing fat set fire to the chimney, creating a 3ft flame which could be seen from a considerable distance.
+
+Parked cars in Hexham’s Beaumont Street were also a problem in the blackout, as they were often left with the bonnets hanging over the pavement, causing unsuspecting pedestrians to walk into them and bark their shins. There were often more than sixty cars parked in the street and if lights were left on, it would create a bigger illumination than a street light, according to police.
+
+Councillor Joe Cullen called on Hexham UDC to ban parking in the street and accused the offending drivers of gross selfishness, saying: ‘If they had the brains of a haddock, they could see perfectly well that parking their vehicles in such a manner constitutes a danger to pedestrians.’
+
+The blackout was also being used as cover by thieves who raided the allotments in Hexham to steal produce planted as part of the Dig for Victory campaign. Indignant allotment holders said the thefts were particularly despicable at a time when vegetables were hard to obtain. A plot created by local Boy Scouts, to provide fresh vegetables for Hexham Emergency Hospital as well as their parents, had more than half its produce taken.
+
+One gardener said: ‘During the blackout, it is very difficult to catch those who raid our gardens in their despicable way. We cannot be in our gardens every night standing guard over our vegetables. I counted ten turnips taken from one garden in one night.’
+
+There was an early Christmas present for Mr and Mrs William Bell, of Acomb, whose son Ivan, of the Argyll and Sutherland Highlanders, had been reported missing since July when he was involved in the Dunkirk evacuation. They were delighted to receive a letter from him in November to say that although he was wounded, he was in a prison camp and progressing well.
+
+![Image](Images/f0063-01.jpg)
+
+Farmers across Tynedale responded well to the Government plea to plough out grassland for planting crops to aid the war effort.
+
+Despite repeated reminders both in the press and over the wireless, many Tynedale people had failed to apply for the new issue of ration books, leaving them with the possibility of facing a bleak Christmas. More than 40 per cent of Hexham residents had failed to complete applications and at Bellingham, less than half the populace had applied – and many of those who had applied had filled in their forms incorrectly.
+
+Food Executive officer J. Robinson said: ‘This failure causes great inconvenience to the smooth working of the Food Office, and I therefore urge all members of the public who have not done so to make application at once, otherwise the issue of books cannot be guaranteed.’
+
+There was amusement at Hexham Petty Sessions when a retired ‘clerk in holy orders’, William Kerr Smyth (64) appeared on a charge of being drunk and disorderly in Hexham. A Ministry of Information official was addressing an open air public meeting in the Market Place when a clearly inebriated Smyth pushed him to one side and knocked over his microphone stand before being forcibly removed by police. Smyth denied being either drunk or disorderly and told the court that he could not hear himself think because of the terrible noises coming from the loudspeaker. He had merely approached the official and asked him to ‘shut up his gabble’. Found guilty and fined the maximum of £2, Smyth told the court: ‘That’s a pity – the speaker should have been fined £6.’
+
+In the run up to Christmas, the ladies of the Corbridge War Servicemen’s Gift Fund were putting together 10s packages for the 200-plus men from the village on active service. Each parcel contained a 2lb fruit loaf, fifty cigarettes, two slabs of chocolate, a packet of biscuits and either a hand-knitted pair of socks or a balaclava helmet.
+
+## CHAPTER THREE
+
+## Taking Stock and Fighting Back
+
+Australian soldiers billeted in the Tynedale area took part in a sporting jamboree at Dene Park in Hexham and exhibited the sort of sporting superiority over the UK sportsmen we have become used to.
+
+A log chopping competition was won by six members of the Imperial forces, who hacked their way through their log in just fifty-one seconds; the men from Down Under also won a tug o’war competition against Hexham Police by two straight pulls. A three-legged race, a relay and a 100 yards sprint were all won by the colonials too. The Australians also gave an exhibition of Australian Rules football.
+
+On stage the celebrated BBC contralto Essie Ackland headed a troupe of ENSA artistes who performed to wounded soldiers at the Emergency Hospital in Hexham. She was supported by her Australian husband Reg Morphan, an accomplished baritone.
+
+It wasn’t only the human population who were suffering the effects of rationing. The many budgerigar breeders around the district were being forced to consider drastically reducing the number of birds in their aviaries or disposing of their birds altogether due to a Government crack down on the importation of the foreign seeds which were their staple diet. Breeders had managed to continue their hobbies by economising with the stocks they had, but it was just about all gone and major problems were anticipated in the New Year.
+
+One Hexham breeder said: ‘So far we have not been too short of food, but I am experimenting with other cereals to see if I can persuade the birds to change their diet. It is most difficult to get budgerigars to eat other seeds. Coarse oatmeal mixed with the seeds does eke out the supply, and I hope they take to the mixture. Inability to obtain these imported seeds will undoubtedly necessitate a reduction in the number of birds we keep.’
+
+Christmas shoppers found themselves short of farthings, for despite the Royal Mint producing adequate numbers of the little coins, they were not finding their way into general circulation as traders were not paying them into banks and housewives were not spending them.
+
+There was a Christmas tragedy at Acomb, where a 67-year-old man slipped in the blackout, while making his way home by the side of the Birkey Burn on Christmas Eve and tumbled into a burn, where he drowned in just four inches of water.
+
+There was somewhat surprising praise for Hitler in a Christmas address to Hexham Rotarians by the Rector of Hexham, the Rev. J.V.C. Farquhar, who described the Führer as a genius who under different circumstances could have been a second John the Baptist. He pointed out that while Britain was by and large a peace-loving nation, Germany had been warlike since long before Hitler was born. He said:
+
+‘What he has done is very cleverly exploit that passion, so that now he is master – probably the greatest master the world has ever known – of that country. He has done that by such ruthless measures that in the process he has developed a heart of iron and a passion for world conquest. We made a great mistake when we called Hitler a lunatic. He might have the obsessions of lunacy, but he also has a great genius.
+
+If Hitler had been sent to some religious institution or a monastery as a child, where his soul could have lived in communion with God, he might have been a second John the Baptist.’
+
+The threat of invasion did not deter Tynedale folk from heading to the shops as Hexham traders enjoyed one their best Christmases for many years. Many shops, especially confectioners and tobacconists, were denuded of all stock by early on Christmas Eve. The only grumble of the traders was their inability to meet the demands of their customers because of wartime restrictions. One businessman told the Courant: ‘There is more money about than I have ever seen before. Price increases brought about by the introduction of Purchase Tax did not seem to matter, and for every five people I served, two had to go away empty-handed.’
+
+The continued presence of many evacuees meant there was a keen demand for toys, with toy soldiers, anti-aircraft guns and dolls in service uniforms particularly popular. Jewellers noted a strong demand for cigarette cases and other novelties bearing regimental crests.
+
+### 1941
+
+The Royal Air Force was rightly credited with saving Britain’s bacon in the dark days of 1940\. The British Expeditionary Force had just been contemptuously swept into the sea at Dunkirk by the mighty German war machine. Hermann Goering’s Luftwaffe was pounding London and it seemed only a matter of time before Britain joined the rest of Europe under Hitler’s jackboot.
+
+But rising from little airfields around the country, like a flock of songbirds harrying a raptor, came clouds of Spitfires and Hurricanes which savaged the German bombers and the escorts and blunted the German war effort to such a degree the invasion was put on hold. And although it was airfields like Biggin Hill and Duxford in Kent which stick in the national conscience, Tynedale too played its own part in inspiring Churchill’s immortal words: ‘Never in the field of human conflict was so much owed by so many to so few.’
+
+### RAF Ouston
+
+What is now Albemarle Barracks at Harlow Hill began life as RAF Ouston. It was built in the early years of World War Two, as a fighter station and was one of the busiest in the North East. The airfield was formally opened on 10 March 1941 and its first operational unit was 317 (Wilenski) Squadron of Hurricanes, one of the new Polish fighter units which arrived at the end of April. The Poles quickly became bored by the routine work of convoy patrols, and were constantly complaining about the lack of German aircraft to attack in the area.
+
+They didn’t have long to wait, for on 7 May twenty-eight enemy aircraft attacked Tyneside – and Ouston was on the hit list. The airfield was subjected to a concerted attack by a lone Junkers 88 fighter bomber, which dropped a dozen bombs, before circling low and machine-gunning the aerodrome. It was eventually driven off by Lewis gun fire from the watch tower, but it left sixteen airmen injured and three damaged aircraft.
+
+Mickley’s Ivan Seymour, who worked on the airfield as a 15-year-old apprentice joiner, witnessed the bombing. He said:
+
+‘It was a wily intruder and I watched him from the landing window of Rosedale where I then lived in Mickley. This was a vantage point from which I could watch all the goings on over Ouston.
+
+Five 500lb bombs were dropped and fortunately the only one that might have done serious damage didn’t explode. It skimmed through the archway into the yard at the rear of the NAAFI building and came to a stop before doing any really serious damage. Anyone who is aware of the vital role of the NAAFI in wartime will understand the gravity of the consequences if this bomb had exploded!
+
+As it was there was a serious shortage of “tea and wads” until the bomb had been defused and removed and the mess cleared.’
+
+The Polish pilots’ thirst for action was satisfied on 2 June when two Ouston fliers shot down a Junkers 88 off Tynemouth. Ouston’s role as a league of nations airfield continued when the Poles were replaced with a Spitfire squadron which, despite being called the County of Kent, was actually staffed almost exclusively by Belgian pilots.
+
+In September 1941 Ouston was under attack again and a bomb left a 20ft wide 6ft deep crater in the centre of the airfield. The bomb fractured a water main and blew out several windows, but there were no casualties among personnel or aircraft.
+
+In the same month a Spitfire crashed while approaching Ouston, killing the Canadian pilot, who is buried in Stamfordham Parish Church cemetery. Another Canadian pilot was killed in a forced landing in his Hurricane near the WAAF quarters at Ouston. There was a bad start to 1942 at the base – a civilian worker clearing snow from the runway was killed by a skidding Spitfire, and another pilot died in a collision between a Spitfire and a Tiger Moth the following day.
+
+The famous night fighter, the Boulton Paul Defiant, came to Ouston in October for a brief stay but made no contact with the enemy.
+
+In 1942 Ouston took on a new role as an air-sea rescue unit, initially using adapted Defiants, which could drop dinghies to stranded airmen, but later with the amphibious Walrus, another biplane from an earlier age, and then the better equipped Avro Anson.
+
+One of the less successful units based at Ouston was 226 Squadron, with the new American-built twin-engined Douglas Boston bombers. Bad weather delayed the arrival of the twelve aircraft and before the day was out three of them had crashed, with one fatality. One crashed on approach when an engine cut out, another made a belly landing in a field at Great Whittington when both engines expired and the third made a spectacular forced landing on the airfield.
+
+Another tragedy occurred at Ouston in June 1943, when two Spitfires collided in mid-air on approaching the airfield, both Belgian pilots being killed instantly.
+
+Further roles for Ouston involved towing drogues for target practice and then as an air observation post. It was also one of the pioneer stations in the use of airborne radar and, incredibly, more than fifty Ansons were based there at one stage. Wellington bombers were also adapted as radar trainers, twenty-nine being based at Ouston, along with nearly two dozen Hurricanes to provide moving targets for the radar trainees.
+
+Four days before the end of the war in Europe, Ouston lost its one and only Hurricane, when the aircraft suffered engine failure and performed a belly landing at Eshott Farm.
+
+Unusually for the time, the accommodation at RAF Ouston was centrally heated and had running water, which made it popular with airmen and officers alike. A large station headquarters and elaborate, heavily protected control rooms were constructed, indicating a potentially important role for the airfield once opened. There were also comfortable messes for officers, sergeants and airmen.
+
+The airfield had three runways, the longest 1,400 yards long and, unusually for the period, they were built so they almost intersected at one point. It was a design that was frowned upon, as in the event of an enemy attack a well-aimed stick of bombs could close all three runways at a stroke. The chance of an enemy attack was so high that Ouston had its own decoy airfield build at Berwick Hill, north of Ponteland.
+
+Even before the tarmac was laid, the RAF was making use of the levelled grass at Ouston. It was home to light aircraft of the 13 Group Communications Flight, which used a collection of aircraft, including civilian planes that had been pressed into service at the outbreak of hostilities. As well as the trusty military bi-planes like the Gloster Gladiator, there were long forgotten craft such as the Percival Vega Gull and a Miles Whitney Straight. Ouston was also used by the Calibration Flight of the No.3 Radio Serving Section, based at Hallington Hall.
+
+The end of the war didn’t mean the end of Ouston. The airfield entered the jet age with the arrival of the de Havilland Vampires of 607 (County of Durham) Squadron, which necessitated the extension of the main runway. During the 1950s and 1960s Ouston was used by a variety of small units and the RAF Gliding School became the last RAF unit to occupy the site before it was taken over by the Army in 1975\. Eerily, although it has not been used as an airfield since 1975, the runways and perimeter track remain intact and even the control tower is still standing.
+
+### Rudolf Hess
+
+Tynedale also had a role to play, albeit a minor one, when Deputy Führer Rudolf Hess took it upon himself to fly to Scotland in a fighter plane in a bid to negotiate peace. For as Hess flew his Messerschmitt to Scotland on 10 May 1941 his aircraft was picked up by the radar station at Ottercops Moss, one of twenty-three radar stations between John O’Groats and Plymouth, nestled on a site beside the A696, southeast of Otterburn.
+
+However, its reports of a lone Messerschmitt flying in low over the Northumberland moors were laughed off by staff at RAF Fighter Command in Middlesex, for Ottercops did not enjoy a reputation for reliability – it was known for its inability to distinguish between thunderstorms and incoming aircraft. Designed to provide long-range early warning of enemy attack, the intelligence it provided had been questioned the previous year when, in August 1940, it reported thirty hostile aircraft approaching the coast from the north. But when the four Spitfires scrambled by Ottercops got into the skies, they were horrified to discover ninety German bombers escorted by a further twenty-one fighter planes!
+
+Women’s Auxiliary Air Force Corporal Felicity Ashbee remembered there had been little to do on the evening of 10 May 1940, until a single counter was put down on the map at Fighter Command – far out in the North Sea, off the coast of Northumberland – picked up by Ottercops Moss. The three members on duty laughed and thought the country bumpkins were confused again.
+
+When first plotted, the height of the Messerschmitt was about 15,000ft, travelling almost due west at 300mph. Ottercops reported the potential raid as ‘three plus’ but, as the aircraft approached, four other stations (Danby Beacon, Douglas Wood, Bamburgh and Cresswell) correctly identified it as a single aircraft. The aircraft was designated ‘Raid 42’. By the time it was 50 miles off the coast, it had been reported to the RAF’s 13 Fighter Group at RAF Ouston and at 22.30 hours a Spitfire was scrambled.
+
+It was a full two days later when a BBC broadcast revealed that Hess – the deputy führer and Hitler’s right-hand man – had landed, somewhat unceremoniously – on the outskirts of Glasgow, where Hess revealed he wanted to meet the Duke of Hamilton, a man he believed he could do business with. Although Wing Commander Hamilton later professed himself bewildered about why he had been chosen, Hess believed their common interest in aviation, their pre-war desire to avoid war between Britain and Germany and their mutual friendship with Albrecht Haushofer (son of Karl Haushofer, professor of geopolitics and main architect of the Lebensraum philosophy hijacked by Hitler) would pave the way to talks.
+
+Hess dressed himself in the uniform of a hauptmann (a captain) in the Luftwaffe and equipped himself with a Leica camera and numerous pills for both his real and his imaginary ailments – he was known to be something of a hypochondriac. He had memorised his flight route and then strapped his flight plan to his right thigh. Hess flew over the North Sea on a course that kept him well below the horizon of British radar, at least 200 miles from the English coast. The weather was clear and a full moon was rising by the time he turned due west and began approaching the North East coast, but with an hour to go before sunset, he feared being spotted and shot down by an RAF fighter.
+
+He later told the Duke of Hamilton he had compensated by circling just off the coast for forty minutes until the sun began to set. Hess was travelling too fast to be intercepted and in letters he later wrote to his wife, he said he was enjoying himself at that stage, flying at full throttle. He climbed the slope of The Cheviot, which rises to 2,676ft, and slid down the other side into Scotland, he said. Hess failed to spot Hamilton’s Dungavel House in the darkness and overshot his mark. As his fuel began to run out, he took the decision to bale out.
+
+The plane crashed on to Bonnyton Moor, 10 miles south of Glasgow, while he landed on a farm nearby. He was found by head ploughman David McLean, who asked him ‘Are you German?’ Hess replied: ‘Yes, I am Hauptmann Alfred Horn – I have an important message for the Duke of Hamilton.’
+
+McLean’s elderly mother made the finicky Hess a pot of tea (but he declined it in favour of a glass of water) while admiring his well-cut uniform and his expensive watch. A farmhand had been dispatched to find someone in authority and Hess was soon on his way to the Tower of London, the first of three prisons where he was held during the following months. He tried to commit suicide twice. In the meantime, an announcement on German radio said Hess had flown the country, adding that the deputy führer had been suffering hallucinations and mental illness for several years.
+
+Despite strong evidence that he was indeed psychotic, Hess was found fit to plead at the Nuremberg War Trials. He was accused of many crimes, including plotting to wage war and issuing the directive that allied airmen baling out over German territory should be ‘liquidated’. He was found guilty and sentenced to life in prison. He served his time in Spandau Prison in Berlin, where he finally succeeded in committing suicide in August 1987, at the age of 93.
+
+The new year came in with a fancy dress ball at Hexham Hydro, where one brave soul turned up as Mussolini and was summarily drummed out of the hall.
+
+There was a lucky escape for a 26-year-old Hexham man, who was crossing the Newcastle Carlisle railway line at Quality Cottages, near Warden, when his car stalled on the line. As John Longstaff tried to restart the engine, the vehicle was smashed into by a goods train and carried half a mile along the track on the buffers of the engine.
+
+His mother-in-law, Mrs I. Huddlestone, witnessed the incident from her bedroom window as she waved him off and was convinced he had been killed. She told the Courant: ‘The goods train was heavy laden and was travelling quite fast. I saw the train before John did, but was too shocked to call out. I closed my eyes at the moment of impact, and then called out to my daughter that John was gone. All that was left on the track was the hub cap off one of the car wheels and I never expected to see John alive again.’
+
+However, John not only survived with minor cuts and bruises, but was able to return home the same day. He said: ‘The car had been running perfectly, but then stalled in the middle of the line. I was examining the dashboard and the self starter when I heard the train coming. I looked up and the engine was just 20 yards from the car. I hadn’t time to do anything other than remain in the driving seat with eyes closed, hoping for the best. The next thing I knew I was outside the car, having pieces of sticking plaster affixed to the small cuts on my face. I remember nothing of the accident at all.’
+
+January 1941 also saw the introduction of school meals, known as communal feeding on their inception, which were served in the pleasant canteen in the Queen Elizabeth Grammar School. Some 140 children were catered for in two sittings, at a cost of 4d per single meal, 1s 3d for a week and 2s 4d for a week’s meals for two children from the same family. The charges covered only the cost of buying the foodstuffs, with the remainder of the cost met by the county education committee.
+
+A Corbridge café proprietor was fined 10s and order to pay costs of 30s, when she was discovered to be selling watered down milk. A test purchase at the River View Cafe of a glass of hot milk served to a man from the county weights and measures department was found to contain 36 per cent added water. It emerged that a pint of water had been added to two pints of milk, but the defendant said the hot milk had been served in error, as it had been set aside to be used in the making of coffee.
+
+Those irresistible funmakers of stage and screen, Jack Hulbert and Cicely Courtneidge, made a personal appearance at the Forum Theatre in Hexham, where they gave a special free matinee performance for all forces personnel. The entire downstairs accommodation in the theatre was reserved for servicemen and women in a performance made possible by the fact the West End stars were personal friends of Major and Mrs P.P. Phillips of Summerrods, Hexham.
+
+The stars had been appearing in The Hulberts Follies in Newcastle and, despite their strenuous schedule, agreed to give up their Sunday afternoon in the name of friendship. The use of the theatre was given free by the Hexham Entertainments Company and all profits went to local war charities. They were supported by the Jesmond Jesters, whose antics had been popular with troops since the Great War.
+
+The stars were in their brightest and merriest mood, and received a prolonged ovation from the delighted crowd. Speaking from the stage at his curtain call, Jack said: ‘It’s grand to have been able to come out to Hexham this afternoon, and we have loved every minute of it.’ The ticket sales to non-service members of the audience amounted to £52 19s which was split by the Hexham Group Hospital Supply depot, the Hexham branch of the British Red Cross and the Hexham Aid Society.
+
+The importance to Hexham of its 1300-year-old Abbey was called into question when an appeal for volunteers to act as firewatchers attracted only a handful of names, to the great displeasure of the rector, the Rev. J.V.C. Farquhar. Only ten volunteers had come forward, despite a number of appeals. He said: ‘It’s not just a matter for the church authorities, it is up to the whole parish and the townspeople. We all ought to do our best in guarding the Abbey for in doing so, we are guarding our own homes. It is something which concerns the whole town.’
+
+Sidesman George Reah said that it was ‘a disgrace’ that out of a town with a population of 10,000 only ten could be found to safeguard its most notable building.
+
+At the Hexham Police Court, a local sailor was remanded in custody to await military escort after being absent from his ship without leave. Assistant cook Benjamin Jameson claimed he had returned to where his ship had been berthed, but it wasn’t there, so he decided to come home. In another hearing, Glaswegian James Townsley (25) was sentenced to six months’ hard labour for stealing property from Allerwash Farm, Newbrough, where he had been allowed to sleep in a barn with a 19-year-old female companion. It transpired he was a deserter from the Cameron Highlanders, who had been on the run for three months, and he was told by chairman of the bench John Charlton: ‘You are a disgrace to Scotland. You are a deserter from the Army, and you go about the country living a life of thieving.’
+
+There was also a place in history for Francis Volante, who was brought before Hexham Magistrates for being drunk and disorderly in Fore Street in the town, where he was singing at the top of his voice and using obscene language. When asked to be quiet, he became abusive and was arrested. Police Superintendent William Goodfellow said he regretted having to prefer the charge, as it was the first against any member of the armed forces in the Hexham division since the war started. By spoiling that record, Volante had not only brought disgrace upon himself, but on all the troops stationed in the district.
+
+Wounded soldiers and nurses joined forces to fight a fire which broke out in the Emergency Hospital at Hexham in February. A nurse and a soldier saw smoke coming from a bathroom. The fire had started in a boiler room, broken through into the bathroom and had travelled along the roof space above a ward where wounded soldiers were lying. The ward was evacuated and convalescing soldiers, nurses and hospital workers tackled the flames with stirrup pumps and chemical extinguishers, until the hospital’s own fire brigade took over. Three hoses were in play when the town fire brigade arrived, and the fire was extinguished. The bathroom was gutted and, apart from the damage to the roof, a quantity of bedding was destroyed.
+
+People who were not doing their bit for the war effort were given a tongue lashing by old soldier Brigadier General E.P.A. Riddell at the opening of a YMCA canteen at Riding Mill, when he called them ‘parasitical individuals’. He declared the nation had no use for those who would not play their part in the war effort, and added: ‘There is a niche for everyone and those who say they cannot serve because they don’t know where to go simply have not bothered to look. We all have to fight and serve if we are to beat the Nazis and the Fascists. We have given the Italians something to think about, and now have to get on with the job of thrashing the Germans.’
+
+One person who was doing his bit was Robert Baty (30), a former Hexham Scoutmaster, who was awarded the George Medal for his bravery during the Blitz in London. Working as a full time ARP warden, he and a colleague, J.B. Milne, scaled a lead water pipe to climb into the third storey of a house which had been hit by a bomb, as other bombs rained down from the bombers still circling and flames from a ruptured gas main roared close to them. They searched the property for two hours, knowing that three people were believed to be inside, and a woman found alive in the debris was lowered to the ground via a rope made of knotted sheets and taken to hospital.
+
+![Image](Images/f0076-01.jpg)
+
+Former Hexham Scoutmaster Robert Baty (30) was awarded the George Medal for heroism while working as an ARP warden in Westminster in the London Blitz.
+
+Before moving to London, Mr Baty had been stage manager with Hexham Amateur Stage Society and went to London to work as a theatrical engineer with a particular interest in lighting. Among those he worked for were the renowned producer C.B. Cochran and the noted actress Nancy Price.
+
+### A ‘Robinson Crusoe’ experience
+
+There was real life drama for Merchant Navy gunner Eric Rowlands (23) from Bardon Mill, whose first trip aboard ship ended in disaster when the vessel was torpedoed and sank – and he finished up living the life of Robinson Crusoe. He told the Courant: ‘I felt the ship shudder and immediately start to list to port, and it seemed as though she would turn turtle. I grabbed a packet with a couple of cigarettes in it, and I was almost swept away when I got on deck.’
+
+He managed to get into a lifeboat and was aware of the possibility of being sucked under the water when the ship sank. That didn’t happen, but the survivors were sprayed with machine bullets, he believed by the crew of the U-boat which had sunk the ship. They survived, and then fell in with another lifeboat from a Dutch merchantman which had suffered a similar fate. The boat was only 20ft long and crammed with so many men it was impossible to lie down. Not knowing how long they would be adrift in the high seas, survivors were restricted to two dippers of water – about two wine glassfuls – two ship’s biscuits, a little corned beef and condensed milk per day.
+
+Mr Rowlands said: ‘I quite enjoyed the sailing during the day, but at night it was terrible. You couldn’t lie down and it was bitterly cold, and I was only wearing my jacket and a pair of gunners’ trousers.’
+
+After two days in the open boat, they spotted an island, but could not find a suitable landing ground. After another night at sea, they made the decision to beach the craft, but hit a rock on the way in and the lifeboat was smashed to pieces. They somehow managed to scramble ashore, salvaging what stores they could and after making a meal, they slept ashore for the first time in four nights.
+
+The next day they went exploring and came across a village of small windowless clay houses with straw roofs, with goats and pigs wandering inside and outside the houses. The natives emerged, giving them a warm welcome and feeding them with coffee and fruit. The women went to their landing site and brought their possessions to the village, balanced on their heads. They spent a couple of days in the village, before taking a 20-mile donkey ride to the capital of the group of islands on which they were marooned, to catch a steamboat that had been sent to pick them up.
+
+They received a great welcome, Europeans and natives alike lining the harbour and shouting: ‘Long Live England!’ Mr Rowlands said the men had come through their ordeal remarkably well, apart from suffering from exposure and sunburn eating into their salt-caked skin. He said: ‘It was quite exciting and an interesting experience, but one of these is sufficient for a lifetime.’
+
+The first bombing raid on the Allen Valleys was recorded on the night of Saturday, 26 April 1941, shortly before midnight. A single Luftwaffe bomber, apparently lost, roamed the skies above Tynedale for some time, scattering bombs seemingly at random. In the Allen Valleys the aircraft dropped 200 incendiaries on open ground between High Acton and Knockshield Farms, and a further 50 between Thornley Gate and Bishopfield, none of which caused any casualties. Later, four of the containers which had held the incendiaries in the aircraft were also found in the area.
+
+Former Allendale resident and centenarian Allen Smith remembered his uncle’s reaction to the bombing. ‘The night they dropped the bombs, my uncle – Everest Charlton from Burnfoot near Sinderhope – heard the explosions and got his double-barrelled gun out because he thought the Germans were coming. He sat with his wife and the gun and he was going to shoot the first German to come up the garden path – it’s lucky that no-one walked by that night!’
+
+Another raid took place in the Allen Valleys later in 1941, on Sunday, 12 October. Several German bombers, returning from a raid on Manchester, chose the Tyne Gap as their return route, which was often used in raids on Merseyside and Clydeside. At 10.51pm a lights warning was issued in the North East, followed by the sirens at 11.05pm. Although there was no air-raid siren in Allendale or Allenheads during the war, there were several in the district, including one at Hexham which was just audible on a quiet night across the ’Dale.
+
+At 11.25pm an aircraft released a single bomb which landed in a quarry one mile west of Allendale on Oustley Farm, Keenley. It was a very large bomb and it made a crater 30ft in diameter and 20ft deep. The blast caused slight damage to windows and a door at the farm. Former Allendale resident June Walker was only three when war broke out, but she can remember her father taking her to see the damage caused by the bomb. ‘I remember going to see the bomb crater because my father was in the Home Guard and he took me along to see it,’ she said.
+
+### War Weapons Week
+
+The Tynedale district, saving at the rate of £1,000 per day via the National Savings Movement, had already contributed more than half a million pounds to the war effort since hostilities broke out, as well as raising £5,000 to buy its Spitfire. However the district prepared to do even more when a War Weapons Week was planned from 26 April to 3 May 1941 with a target of a staggering £60,000 in seven days. It was stated that every sixpence raised would buy a heavy machine gun bullet and would therefore be another nail in Hitler’s coffin.
+
+![Image](Images/f0079-01.jpg)
+
+Scores of Hexham businesses supported the Hexham and District War Weapons Week in the spring of 1941.
+
+![Image](Images/f0080-01.jpg)
+
+A packed Hexham Market place at the launch of Hexham War Weapons Week by Lord Eustace Percy.
+
+The War Department’s shopping list ranged from £8m for a battleship to £3m for an aircraft carrier to £4 10s for a Webley pistol and 4s for a hand grenade – not to mention those sixpenny machine gun bullets.
+
+The week began with a parade from Dene Park rugby field in the east of the town to the Market Place, where a vast crowd welcomed the turnout of soldiers, the Home Guard, the Auxiliary Fire Service, Red Cross Detachment, the ARP and other Civil Defence personnel, headed by a military band. Taking the salute was Brigadier General Sir Loftus Bates who was accompanied by Brigadier General Edward Riddell. Addressing the crowd, War Weapons Week organiser Lord Eustace Percy said that the war was costing £50m per week and this sort of money could not be raised by taxation alone. Additional voluntary contributions were required in the form of savings which could be redeemed once the war was over.
+
+It soon became clear that the target was a deliberately modest one because on the very first day of the campaign £90,856 was raised, with the town’s banks – Barclays, Midland, Lloyds, Martins, and the National Provincial – alone pledging £10,000 each.
+
+Four days into the campaign, the total stood at in excess of £150,000 and the final total was £236,959 19s 11d – almost four times the target – which earned a warm thank you letter from Chancellor of the Exchequer, Sir Kingsley Wood. Chairman of the Hexham and District War Weapons Committee Anthony Emerson added: ‘It shows that the Heart of All England is as sound and loyal as ever.’
+
+A forestry worker from Otterburn, John Walton (25) was fined £5 by Bellingham Magistrates for failing to register under the National Service Act of 1939\. He told the court he had not registered because he was a conscientious objector, who felt that the war was ‘entirely unnecessary’. He refused to pay the fine and when he asked what the alternative was, he was told by the chairman of the bench Major G.D Anderson: ‘There is no alternative; you will be forced to pay the fine and given a month to do so. Your personal views on the subject do not affect us. The National Service Act is just as much the law of the land as any other law, and you know perfectly well you failed to comply with that law. We are not concerned with your views, because as a citizen of this country, you have to comply with its laws.’
+
+Walton did not pay the fine and was brought back to court two months later, when he told the bench he still had no intention of paying the fine. He was sent to prison for a month and told the court: ‘It does not matter if it is six months or six years; it is immaterial.’
+
+Air raid precautions continued to occupy local authorities, with Hexham UDC applying to the Ministry of Home Security for a grant towards the provision of home air raid shelters. Councillor H.H. Darlington said that while Hexham had some excellent public air raid shelters, very few people used them ‘because they were unwilling to leave a warm bed to go into the shelters at night’.
+
+There was also grave dissatisfaction at Haydon Bridge at the method of raising the alarm when enemy aircraft threatened, which involved the chief air raid warden Mr E. Kirsopp running round the village knocking on the doors of his wardens. Appeals to the Northumberland Air Raid Committee for an air raid siren had repeatedly been turned down, even though a siren cost just £20\. A local councillor asked ‘Is it not time we ended this farce and told the county council not to be so niggardly in its interpretation of air raid precautions?’
+
+The German nation was vilified by Judge John Richardson when he addressed a smoking concert arranged by the Corbridge branch of the British Legion. He said: ‘It’s all very well to say nice things about the German people, but I have never met a nice German – certainly not when I was in Germany in 1938\. There can be no good in people who show such slavish devotion to people of the Hitler type and temperament. People of that kind are not to be trusted for the sake of Europe, and Germany has to be kept down for all time.’
+
+There was bad news for the Tynedale hunting fraternity when they were told that they would have to cut the number of hounds in their packs to just one sixth of pre-war strength in a new Government directive. The Tynedale would be obliged to operate on just two days per week, rather than the traditional four, and the number of hounds would be reduced to eight and a half or nine couple. A huntsman said: ‘Hunts have been making sacrifices in the national interest since the war began, and while this new order will greatly curtail our activities, it is nothing compared to the sacrifices which millions are making to win the war.’
+
+### Drunk, disorderly and other crimes
+
+The behaviour of members of the Australian Imperial Forces when they came to Hexham on a Saturday night was an increasing cause of concern to the Hexham Court, and after fining one Australian the maximum of £2 for being drunk and disorderly, chairman of the Bench Alderman John Brogdon warned that any more unruly roisterers would be sent to prison, without the option of a fine. Local police superintendent William Goodfellow told the court that the behaviour of the Australians with regard to drunkenness fell far below the standard expected of men in uniform. The police had great difficulty in getting them out of town before midnight or 1am, and their behaviour was unfair to the many other troops stationed in the area, about whom there were no complaints. An officer from the man’s unit said: ‘Situations like this are very disturbing to us, for we are very jealous of our good name.’
+
+Later that month, magistrates refused to grant a late drinks licence for a dance at Hexham in aid of the Overseas League because of the risk of disorder, giving as the reason the large number of troops from many different countries who were stationed near Hexham. Police opposed the application following an increased amount or disorderly behaviour from off duty servicemen, which included the breaking and throwing of glasses.
+
+It wasn’t only the Australians who found themselves in court. A Polish airman who had shot down a German aircraft earlier in the week, appeared in the dock charged with the theft of an Aylesbury duck worth 12s, which belonged to a local policeman. The flight sergeant appeared in the dock in full flying kit and spoke no English, so the services of an interpreter were required. The arresting officer accepted that the Pole had not stolen the duck for food, but wanted it as a mascot and the case was dismissed. The airman was however ordered to pay 5s in costs, but a member of the bench said that in recognition of the fact the man had brought down a Luftwaffe plane, he would pay the costs out of his own pocket.
+
+An unnamed Army officer also appeared in court charged with fishing for salmon in the Tyne at Corbridge without a licence. When approached by a bailiff he asked: ‘Is this what we are fighting for? I thought the fishing was free; this is very petty.’ Although he told the court he was used to fishing in Scotland, where no licence was required, he was fined 15s, with 5s costs.
+
+The activities of the Hexham Auxiliary Fire Service in mid 1941 caused great alarm at Hexham UDC, when a call was made for the sacking of all full time personnel over the alleged theft of petrol from the unit’s fire engine. Concerns were raised over the excessively high amount of fuel used by the fire engine, and an investigation by council officials revealed that over a period between 5 April and 20 May, the vehicle had covered just 46 miles – but the amount of fuel drawn was 44 gallons. Checks showed that a pipe from the foam apparatus had been used to siphon petrol from the fire engine and into a receptacle. It was believed that at one stage, the petrol tank of the vehicle was left completely dry while it was on call.
+
+Calling for the sacking of all full time members of the AFS, vice chairman of the council Joe Cullen said: ‘The very least that we can say is there has been sheer negligence in the care and custody of a very valuable commodity, which is brought to this country by the blood, sweat and lives of the men in our tankers. You may feel that my proposal is a drastic one, but drastic evils demand drastic remedies and these things cannot be permitted under the present circumstances.’
+
+The police had been called, but it proved impossible to identify the culprits – just as it had when there were inexplicable disappearances of fuel from the AFS stocks on other occasions.
+
+![Image](Images/f0084-01.jpg)
+
+Acting Petty Officer Norman P. McKie of Hexham, was posthumously mentioned in despatches for volunteering to stay on board HMS Somali after she had been torpedoed while on Arctic convoy duty. He remained on board as part of a steaming party after nearly all the ratings had left the ship. The citation said: ‘The zeal, courage and devotion to duty of Petty Officer McKie during the three and a half days before the ship sank were a fine example to all who were with him.’
+
+Other councillors were equally concerned about the loss of fuel, but questioned the wisdom at a time of national crisis of dispensing with the services of men who were well trained and capable firefighters. The sacking proposal was rejected, but it was agreed that discipline and security would have to be stepped up.
+
+On the food front, tomatoes were in such short supply that shopkeepers were reserving them for regular customers who had standing orders, leading one housewife to inquire: ‘Does that mean working class people cannot have tomatoes as they cannot afford to place regular order?’
+
+A Hexham shopkeeper commented: ‘When you come home from the market with tomatoes, people nearly knock your windows in trying to get them, and if you refuse, you really are in trouble.’
+
+Sugar for jam remained a bone of contention, but jam-making was left in the capable hands of the women’s institutes of Tynedale. Centres for the preservation of surplus fruit were set up across the district. The scheme was strictly for the preservation of fruit which would otherwise have been wasted, and fruit producers were encouraged to eat, bottle or make jam of their fruit in the way they would have done before the war. Only surplus produce was to be taken to the various centres, where prices were set by the government. Gooseberries could be sold at a maximum price of 30s per hundredweight, raspberries 47s 6d, blackcurrants 90s, strawberries 75s and loganberries 50s.
+
+The scheme was launched at Bellingham, but initially proved an anti-climax as no fruit was forthcoming. The first jam produced under the scheme was at Stocksfield, where ladies of the Bywell and Branch End institutes made 100lb of gooseberry jam, the fruit having been bought at the fixed rate of 3½d per lb. As well as cleaning and boiling the fruit, the ladies had the task of washing and sterilising more than 2,000 jam jars collected for the scheme by local schoolchildren.
+
+Other centres soon followed suit, with the joint Corbridge, Dilston and Stagshaw WIs producing 154lb of rhubarb and gooseberry jam which was rapidly snapped up by local shopkeepers. The Dowager Viscountess Allendale lent her kitchen at Bywell Hall to the enterprise and business was brisk.
+
+There was a shock for residents of the Tynedale Hydropathic Establishment, when residents rose from the evening meal to find a notice had been posted in reception saying that the hotel was in the process of being sold, and that they would have to find alternative accommodation. While details were sparse, it was understood the sale had been forced on the owners, because the building was being requisitioned by the government as a children’s sanitorium.
+
+Many residents had made the hotel their permanent home, some because of the fact their homes elsewhere in the North East had been bombed and they had nowhere else to go,
+
+The Hydro had operated for around seventy years and its former guest list included the first Labour Prime Minister Ramsay Macdonald and his daughter Ishbel, and film stars Charles Laughton, Elsa Lanchester, Douglas Fairbanks Junior, Raymond Massey, Evelyn Laye and Dodie Smith.
+
+One of the more unusual cases to come before Hexham Magistrates in 1941 was that of a man accused of ill treating an elephant as it was being walked along the Corbridge to Haltwhistle Road. Corbridge vet Frederick Crudace was driving his car along the road when he saw elephant keeper Ivor Gordon Ross, of Ilkley, riding the animal. He was belabouring it with a very heavy ash stick and from time to time jabbing the animal behind the ears with the steel point of the implement. When the vet remonstrated with Ross over what he felt was gross cruelty, he merely laughed and smiled.
+
+On reaching Hexham Mr Crudace reported what he had seen to the police, as a result of which the RSPCA brought a charge of cruelty against Ross. A witness told the court that the elephant had not squealed or trumpeted while struck or jabbed, but it had ‘looked very tired’.
+
+Ross told the court he had been an elephant trainer for ten years and if he had mistreated the animal in the way Mr Crudace suggested, it would not have performed for him in the ring, where the act included a young girl putting her head in the elephant’s mouth. The case was dismissed.
+
+### Perils at Sea
+
+The U-boat menace struck again when the ship Third Officer Derek Gilchrist, of Hexham, was aboard was sunk by a flotilla of submarines off the West African coast. The Hexham Queen Elizabeth Grammar School old boy spent thirty days in an open boat – a record for a journey of that type without a single casualty. Gilchrist told the Courant: ‘It was about 10pm when I heard the zoomp and thud, and knew that we had been pipped.’
+
+![Image](Images/f0086-01.jpg)
+
+Third Officer Derek Gilchrist of Hexham who spent 30 days at sea in an open lifeboat after his vessel was torpedoed and shelled by U-boats off the African coast.
+
+The lifeboats were lowered and Gilchrist found himself in charge of a boat crewed by nine Europeans and twenty-one Indians. As the dawn broke, they realised they had been separated from the other two lifeboats and the last they saw of their ship was a faint red glow as it burned in the far distance. With only a compass and a roughly improvised sextant to calculate their latitude Gilchrist set a rough course, and a gruelling journey of rowing and sailing got under way.
+
+Food and water was limited and strict rationing was imposed from day one. Half a ship’s biscuit and a third of a dipper of water was the basic ratio, augmented by a teaspoonful of condensed milk twice a day. The little corned beef on board was shared out every third or fourth day while a tin of sardines and some fish paste was eked out until it was finished on the very day they were picked up. Frequent bursts of torrential rain kept the water supplies topped up.
+
+Gilchrist said: ‘It was a pretty gruelling experience. We got weaker and weaker, and by the end found it difficult to stand. We only saw birds and flotsam and jetsam from wrecks as well as lots of sharks. The Indians took turns at baling out the boat as we had rather a bad leak at the stern. At night we played cards to pass the time. During the day it was unbearably hot and many of us suffered from scorching but during the night, especially after the heavy rain, we just sat and shivered.’
+
+Speaking of the crew, Gilchrist said he could not have wished for a better set of companions although he said: ‘We were rather afraid that the natives would not be able to stand the strain, and might cause trouble but they behaved splendidly. Tempers got a bit frayed at times but in spite of the mental stress, there were never any rifts. At no time was there any doubt of our reaching safety. We were always certain of being picked up and much of our conversation was about what we would do when we got back.’
+
+There was one false alarm when the crew saw a light on the far horizon and lit flares to attract attention, but it finally dawned as the light got brighter and rose higher in the sky that it was a star.
+
+They were eventually picked up when an Indian lookout spotted smoke from a ship and they sailed across its bows to attract attention. They were taken to a west African port, where some of the crew required medical attention, but there were no lasting ill effects. Gilchrist commented: ‘Looking back, I quite enjoyed it as an experience, but it was an experience no-one would wish to have repeated. While it lasted, it could only be described as hell.’
+
+It could easily have ended in the blazing wreckage of the British cruiser HMS Fiji, blown apart by German dive bombers during the Battle of Crete in 1941\. But a young lieutenant clung to a spar from the ship’s capstan and somehow survived three hours in a dangerous sea still being raked by Luftwaffe bombs and bullets. That young sailor was Robert Johnson, who not only survived, but went on to forge a good career in the Bank of England, as well as becoming chairman of Tynedale Council, living to the ripe old age of 99.
+
+![Image](Images/f0088-01.jpg)
+
+Dame Beryl Oliver, head of the Voluntary Aid Detachment department in London, inspects nurses from the Hexham branch of the British Red Cross Society in Corbridge in May 1941.
+
+He was born at Whitley Bay in 1916, the younger of twins, but sadly his brother Brian died tragically while walking in the Italian Dolomites at the age of 41\. The young Robert attended Tynemouth School before going on to the Royal Grammar School in Newcastle.
+
+His working life began in insurance and banking in Newcastle, before he obtained a director’s nomination to join the Old Lady of Threadneedle Street and started work in London in 1936\. However, the cost of living in the capital did not appeal and he was glad to be posted to the bank’s Newcastle branch, where, as events took a turn for the worse in Europe, he joined the Tyne Division Royal Naval Volunteer Reserve at HMS Calliope on the Tyne as a sub-lieutenant.
+
+In August 1939, a month before the war started, he was ordered to join a Royal Navy cruiser on the East Indies station – but before he was allowed to leave, he had to arrange for someone to do his job at the bank. He had a week to train an 18-year-old girl called Joan to fill his shoes and, although they only met once in the next six and a half years, he remembered her radiant smile and gentle nature. They were subsequently married for 68 years.
+
+He first served on the cruiser HMS Manchester and was involved in the 1940 invasion and evacuation of Norway, as well as taking part in the Battle of Cape Spartivento when the Italian fleet was driven off. Then came traumatic involvement in the Battle of Crete, when he was a gunnery officer aboard the Royal Navy light cruiser HMS Fiji which was operating with the destroyers HMS Kandahar and HMS Kingston shortly after the loss of the cruiser HMS Gloucester. These ships fought on and shot down one attacker and damaged two others before running out of anti-aircraft ammunition, becoming sitting ducks for the Luftwaffe who, according to contemporary accounts, were so numerous as to turn the sky black.
+
+After being hit by several bombs from Messerschmitt Bf 109s Fiji lost power and came to a standstill, and was then struck by three bombs dropped by a Junkers Ju 88 dive bomber. Soon after the order to abandon ship was given Fiji rolled over and sank, and Robert was thrown into the water. He managed to grab hold of a capstan spar, to which he clung for several hours as the other two ships were driven off after dropping life rafts.
+
+HMS Kandahar returned under cover of darkness and picked up Robert, now unconscious but still clinging to the capstan. He was among 523 survivors, but 241 men were killed when the ship sank to the seabed.
+
+Robert later said when he regained consciousness in a hammock he was so full of the rum he was plied with by the crew of the Kandahar he thought he had died and gone to heaven!
+
+He was sent home to Hexham on survivors’ leave, but returned to action with HMS Kent and Anson, protecting the Arctic convoys to Russia, and later joined HMS Abercrombie which was mined when preparing for the Allied landings in France. He also had a short time ashore at Menton in France, using his gunnery officer skills to direct naval gunfire onto the German held Italian border area.
+
+When he was demobbed in 1946, he had twice been mentioned in despatches.
+
+Five Prudhoe schoolboys aged between nine and 13, felt the wrath of Hexham Juvenile Court when they flew in the face of the national Dig for Victory campaign by wreaking havoc on the garden of local policeman John L. Richardson. The policeman had spent the morning working in his garden at Prospect Terrace, but when he returned four hours later, two holes had been made in the hedge, and 150 onions had been uprooted and carried away. Two rows of peas, 8 yards long, had been uprooted, three rows each of carrots and spring onions had been damaged beyond use and a bed of summer cabbage trampled to nothing. Several branches had also been ripped off his apple trees, and the apples stolen.
+
+On making enquiries, PC Richardson heard a young girl had been seen selling onions from door to door in Prudhoe and when he spoke to her she said they had been given to her by her brother. The brother was arrested, along with his friends and all were charged with causing malicious damage to the tune of £3.
+
+Chairman of the bench J.M. Heslop told them that damaging garden produce in wartime was a very serious matter indeed. They were each ordered to pay damages of 12s and bound over to be of good behaviour for two years in the sum of £1.
+
+## CHAPTER FOUR
+
+## Women Help to Turn the Tide
+
+Much is made of the role played by women in modern day warfare, but the notion that the nation’s womenfolk stayed dutifully at home wringing their hankies while waiting for their men to return from the front in the Second World War is a false one. Many women saw active service as Wrens, WAAFs or in the ATS, including the future Queen Elizabeth II, but only in support roles.
+
+People sometimes forget there was another women’s force which played just as big a part in Britain’s victory over the might of Germany. This was the Women’s Land Army, a specially created force designed to keep the country’s farms producing food while so many men were away. Many land girls came to Tynedale and their wartime efforts to master the intricacies and sheer hard graft of farming were well depicted in the book Land Girls of Northumberland 1940-50 compiled by Ponteland’s Muriel Sobo, whose family farm immediately after the war included a recently vacated Land Army hostel.
+
+![Image](Images/f0091-01.jpg)
+
+Women were wanted across the country to carry out war work, as this advert aimed at Tynedale girls shows.
+
+Muriel painted a perfect picture of the groups of bewildered girls, some of whom had never been away from their pit villages or other urban areas and others from privileged backgrounds, all pitched into the back-breaking toil of farm work.
+
+![Image](Images/f0092-01.jpg)
+
+Overalls on and ready to get to work are some of the Land Army girls stationed in Tynedale.
+
+There were Land Army hostels at Haydon Bridge, Colwell, Stocksfield and Stamfordham. The Haydon Bridge hostel was purpose-built, but had no electric lighting and was heated by two coke ovens at either end of the common room. The first warden was Muriel Fleming from Haltwhistle, a well-known local councillor, who was very protective of her girls and made sure the butcher supplied only the best meat for them.
+
+The Stocksfield hostel stood at the end of Painshawfield Road and among its many features was a wooden contraption featuring rubber gloves dangling from a woollen bag – to teach the girls how to milk a cow.
+
+Some girls joined the Land Army full of romantic notions of farm life which involved nothing more than strolling round sunny hayfields, surrounded by gambolling lambs and handsome farm hands, but harsh reality was much different.
+
+Sarah Ogle was a typical land girl, who at the age of 19 went from working in a chemist’s shop straight to the hostel at Haydon Bridge. On her first day, she caught the 7.15am bus to Allendale and worked all day at Henderson’s of Burnt Tongues, muck spreading. The following day, she was spreading lime – but it had set like concrete and had to be broken up by hand first. After a day’s threshing corn on a different farm, Sarah spent the next three days in a field sorting potatoes. When she went home for the weekend, Sarah declared she wasn’t going back – only to be told by her mother that as she had washed and ironed her uniform, she’d better get on with it!
+
+![Image](Images/f0093-01.jpg)
+
+Taking a brief rest from duty are three members of the Land Army.
+
+![Image](Images/f0094-01.jpg)
+
+Slouch hats and trousers were the uniform of the day.
+
+Lily Carey joined the Land Army to get away from a broken romance and the strictures of home life and was sent to the Stamfordham hostel. On her first day, she cycled eight miles in the snow, without benefit of waterproofs, to a farm at Ryal, only to be told when she got there that the farmer had changed his mind and didn’t need her after all. There was nothing for it but to turn round and cycle back again.
+
+There was a branch of the Land Army called the Timber Corps, which worked in the forests, providing timber for pit props for the still booming Northumberland mines. The corn sheaf motif on the Land Army badges was replaced by a spruce tree logo, and the usual hat by a beret. Timber girl Mary Haining made a special friend when she was working in the woods of Whitley Chapel – a red squirrel which she tamed to live inside her coat. She even took it back on visits to her home in Newcastle, which eventually proved fatal for the squirrel one wet winter night, when it was crushed under her coat on a crowded bus!
+
+Land Army girls were responsible for planting many acres of Kielder Forest, ten of them living in a bothy in Kielder village. One of the key duties of the land girls was hoeing turnips, to provide winter feed for sheep, and it has to be said that they didn’t always get it right. Having been told to leave the width of the hoe between plants, one girl opted for the 6ft length of the implement, rather than the 6ins of the blade!
+
+Farming was no place for the squeamish, for there are tales of mass rat hunts, with 200 of the scaly-tailed rodents slaughtered at a time, with a bonus of a penny per tail. Other girls from privileged backgrounds struggled with the Northumbrian dialect, but were too polite to say to the farmers they couldn’t understand a word they were saying about ‘shawing bagies’ or plugging their navels against barley ants. One girl had to deal with horses so flatulent that she actually wet her knickers with laughter.
+
+There was outrage after the war, when it became clear that while other women in the Armed Forces were better paid, got more clothing coupons and were supplied with underwear, the Land Army girls were very much second-class citizens. Not only were there no medals, gratuities or training, they also had to return their uniforms.
+
+Some Northumberland girls who protested were summoned to a disciplinary meeting in London – their punishment was being sent to Penzance which they loved!
+
+Sarah Bell of Millersfield, Acomb, worked as a parlour maid up until 1939 in rural Ridsdale and was quick to volunteer for the Land Army. Her first billet was at East Shaftoe Farm, near Belsay. She worked seven days a week milking, feeding the cattle and driving tractors – and she became a dab hand at manoeuvring a horse-drawn plough, too. But there was also time for a little fun, too. Each week the girls would head off to the local village hall, usually in either Belsay or Kirkwhelpington, for the Friday night dance. Strong friendships were also made during those years, and that was certainly true for Mrs Bell. Her fellow Land Army member at East Shaftoe Farm, Mary Thompson, became her best friend and later on her bridesmaid.
+
+There were some social experiences, though, that Mrs Bell wasn’t so keen on. On one occasion, the group of Land Army girls gathered in Morpeth to receive the diamond-shaped pins that denoted their level of service, much in the same way as soldiers’ stripes. After much cajoling, she was eventually persuaded to join them for a celebration in a public house afterwards. She was 25 and it was the first time she had ever entered a pub. She said: ‘I was brought up against that sort of thing and I didn’t stay long – some of them were just after the drink. I was terrified somebody would come in that knew me.’
+
+She was none too impressed, either, by the jobbing workforce who were brought in to help out with the harvest. ‘They used to get people from Ashington to help pick the potatoes, and everyone was given their own length to do. If you didn’t keep your eye on them, though, they would give you their stretch to do as well. They were a rum lot from Ashington!’
+
+The work of the Land Girls was praised by Hexham’s MP Douglas Clifton Brown when he addressed a Land Army rally in the town, and said that the land girls were just as important as the crews of food ships or the ships that guard convoys. While he did not wish to belittle the work of the WAAFs on predictors, the ATS on gun sites and the WRNS in other theatres of war, in many cases they were doing the same jobs they had done before the war. Many of the land girls had taken up jobs which were completely new to them, and which were not easy or pleasant.
+
+![Image](Images/f0097-01.jpg)
+
+Girls across Tynedale were encouraged to join the Auxiliary Territorial Service to do their bit for the war effort.
+
+It wasn’t only with the Land Army that women were doing their bit. In October 1941, there was a plea for Tynedale women to join the Auxiliary Territorial Service, the branch of the armed services set up to let women do the routine jobs of soldiering, allowing the men to be released for combat duties.
+
+Tynedale had an allocation of 300 women to fill, aged between 17½ and 43, or 50 if they were ex-service-women. A message to local women from the Ministry of Labour and National Service via the Courant said: ‘Remind the women of Hexham of the fine record of their famous county regiment the Royal Northumberland Fusiliers and tell them not to let their menfolk down.’
+
+The basic rate of pay was 1s 8d per day which, while still a private, could be increased to 2s 10d or even 3s 4d according to the job undertaken and the proficiency tests passed. A sergeant drew about 4s 6d per day, according to her trade, while a sergeant major’s pay could reach 9s 4d per day.
+
+### Spitfire Pilot
+
+Former Hexham Courant reporter Sergeant Pilot Woodrow Raine, of Greenhead, made the news himself when he was pictured in the cockpit of the Spitfire Venture 1 which had been bought by donations from members of staff at the Midland Bank. In a letter to bank staff, Sergeant Pilot Raine wrote in true dashing RAF style:
+
+‘Sorry for not replying immediately, but as you can imagine, we are rather busy these days holidaying over France and enjoying tea parties with Messerschmitt 109s.
+
+Venture I is a grand machine. I have had it for about six months, and during the last two or three weeks, we have certainly seen life together, and it can practically fly itself over France now. The only damage it has received is a bullet through the elevator which I collected machine gunning 109s on an aerodrome in France. I flew over at a height of 30 feet, spraying a couple of 109s and some Nazis standing on the tarmac. Judging by the amount of fire they put up at me, someone must have objected, but we escaped with just that one bullet hole.’
+
+![Image](Images/f0098-01.jpg)
+
+Former Courant reporter Sergeant Pilot Woodrow Raine, in his Spitfire ‘Venture I’ paid for by staff of the Midland Bank, in which he ‘enjoyed holidaying over France and enjoying tea parties with Messerschmitt 109s’. Sergeant Raine was shot down and killed on 21 August 1941 and is buried at St Omer, Pas de Calais.
+
+Sadly, Raine’s luck did not last; he was killed on 21 August 1941 when his Spitfire was shot down near Dunkirk by a Me109\. He is buried in Longuenesse Souvenir Cemetery, St Omer. He had survived scrapes before though, after joining the RAFVR in February 1939 as a trainee pilot. He was called up on 1 September and, after completing his training, converted to Spitfires at 7 OTU Hawarden, where he survived a forced landing in his Spitfire on 18 September.
+
+He was posted to 610 Squadron at Acklington in Northumberland on 5 October 1940, and on 19 November that year he had another escape when his Spitfire burst a tyre on landing at Acklington, the undercarriage leg collapsed and the aircraft tipped on its nose.
+
+![Image](Images/f0099-01.jpg)
+
+A ‘Penny a Week’ campaign to raise money to supply Red Cross parcels for prisoners of war was launched in June 1942.
+
+In the later summer of 1941, there was a gathering of beribboned veterans of old wars in the shadow of Hadrian’s Wall, when the NCOs of the 4th Battalion Home Guard got together to brush up on modern methods of warfare. They arrived by private car, lorry and bicycle from Prudhoe, Haltwhistle, Slaggyford and Blanchland. A Hexham Courant reporter who looked in on the camp wrote: ‘For some it was their first experience of army life since the Great War, but as the rows of multi-coloured ribbons on the chests testified, it brought back many memories of 25 years ago. Britain’s civilian army of Great War campaigners and Old Sweats, despite many years of regular soldiering, found they had much to learn about methods of modern warfare.’
+
+There were no lectures, just talks on the giving and receiving of orders, the dangers and methods of Fifth Columnists and parachutists, and how to deal with them. The use of the shotgun in guerilla warfare was demonstrated but when each man was issued with a shotgun, the shredded and riddled targets showed that these veterans of the trenches showed they needed no guidance on their use.
+
+The King’s Regulations were explained by a regular officer and after further exercises. they fell into their beds, the Courant man noting: ‘For many, sleeping under canvas was none too comfortable a novelty, but with a strenuous day behind them, and a never-ending fund of anecdotes and yarns of past war experiences as a nightcap, blissful sleep soon fell upon them.’
+
+![Image](Images/f0100-01.jpg)
+
+Margaret Peaden, of Ramshaw Hunstanworth, who spent her 91st birthday knitting socks for soldiers.
+
+The weekend proved so popular with Home Guard members than several booked themselves in for further sessions.
+
+### Sunday games – sinful or not?
+
+The vexed question of whether the playing of games should be allowed in Prudhoe’s parks on Sunday brought a theological rift at a meeting of Prudhoe UDC, where the vicar, the Rev. R.E. Robson was in favour, while strong opposition was registered by the Methodist Churches of St John and Prudhoe Station, as well as the Lord’s Day Observance Society which said that the observance of the Lord’s Day had never been more important.
+
+The debate followed a request from Prudhoe Working Men’s Club debating society for a ruling on the matter, and the vicar said he saw nothing at all wrong in the park being open for those who wished to play games on a Sunday. He said: ‘If I played games on a Sunday, I would not consider myself to be committing a sin. I think if people don’t agree with my way of life, and don’t come to church on Sunday, they should be allowed to play games if they wish. People should be allowed to do as they please on a Sunday, and just because the park is open for the playing of games, it does not mean that people will actually play them. I don’t think there is any risk of any branch of the Christian faith being imperilled by the park being open.’
+
+He was supported by Mickley’s Councillor Ada Blackburn, who said that in St Mark’s Gospel, it was stated that the Sabbath was made for man, not man for the Sabbath. She said that with a lot of people working long hours on war work, any increase in outdoor recreation provision was to be welcomed. The pragmatic Councillor John Currey noted that while he had no objection to the park being open seven days a week, there was the question of double pay on Sundays for park staff to consider, as the park was already costing the ratepayers of Prudhoe a lot of money.
+
+In response to Councillor Blackburn’s biblical quotation, Councillor J.W. Lee responded by pointing out that the bible also stated that ‘six days thou shalt labour, and rest on the seventh’. He pointed out that the park was already open at the weekend for people wishing to rest and enjoy its beauty, and walkers would not appreciate the tranquillity being disturbed by noise from the playing of games.
+
+Councillor T. Peel added: ‘I think we have enjoyed too much sport in the past and we have forgotten the more serious things in life. The Sabbath Day was made for rest and worship.’ With the exception of the vicar and Councillor Blackburn, the council voted there should be no Sunday games.
+
+Allegations of complacency were levelled at Hexham’s readiness to deal with any air attack by the town’s deputy chief ARP warden, Mr G.W. Umpleby. He told Hexham Rotarians: ‘At any time during any night bombs could fall and the time for sitting back and saying it will never happen has gone. We have got to be ready for anything. Too many firewatchers have no idea what to do in the event of a bomb falling. Are we going to present to Hitler all we have because we have not taken the trouble to look after it?’
+
+He urged all business houses to ensure that at least three or four members of staff were trained in the use of stirrup pumps and knew how to tackle incendiary bombs.
+
+There was a special award for 39-year-old Prudhoe seaman Thomas Newton of Castle Road, who saved the lives of thirty members of the crew of his ship after it had been hit by an enemy bomb. He commanded a lifeboat which took survivors off the stricken vessel and delivered them to a warship standing by, before volunteering to return to the sinking ship to rescue more survivors. It was the unanimous opinion of his shipmates that Newton’s conduct during and after the bombing had been exemplary. The ship owners recognised his extreme bravery by forwarding Newton a cheque and a letter of appreciation.
+
+A letter from her husband Corporal Harry McBride, proved sweet music for a Prudhoe woman, for she learned that he was not only safe in a German prisoner of war camp, but was also the leader of the prison camp band, where a piano had been provided especially for him.
+
+On the home front, brawling Australians again found themselves in court, following an incident at a pub in Riding Mill, where furniture was smashed and four dozen glasses broken. After being thrown out of the pub, they continued to fight and cause a disturbance outside using obscene language of a disgusting nature. The three soldiers and a sailor were charged with riotous conduct and committing damage to the tune of £5 9s to the pub. They were fined 12s each and told by the chairman of the Hexham Petty Sessions John Charlton: ‘We are glad to have you from the Commonwealth of Australia as guests of this country, and we know what excellent work you are doing here. However, we want you to behave yourselves and not go round painting places red.’
+
+Restrictions on the use of paraffin caused concern in the rural areas, where it was heavily used for both cooking and lighting, as well as for farm work. Farmers were being restricted to one or two gallons of paraffin a month, when in practice they needed three or four gallons a week to carry out their work. One Haydon Bridge farmer protested: ‘If more paraffin is not forthcoming, the feeding and milking of stock will have to be carried out in daylight hours, when the men should be on the land.’
+
+![Image](Images/f0102-01.jpg)
+
+Acting Petty Officer R.S.T. Scott of Bellingham, awarded the Distinguished Conduct Medal for gallantry at sea while serving aboard the destroyer HMS Havelock.
+
+An Allendale farmer added: ‘How is the farmer supposed to get his stock fed and milked without light? The present paraffin allocation doesn’t cover the needs of the house, never mind the byres.’
+
+The Hexham Courant was credited with saving the life of a former Hexham widow, Mrs George Riddell, who had moved to the coast following the death of her husband. She was debating with herself whether to go into the garden to pick fruit with her four-year-old granddaughter, or to start preparing a meal in the kitchen, when the Courant arrived by post, and she decided to read the paper instead. She took the little girl with her into the dining room, shortly before a ‘tip and run’ raider unleashed a stick of bombs on the town, which landed just 30 yards away from the garden where she would have been.
+
+![Image](Images/f0103-01.jpg)
+
+Top pre-war footballer Ronnie Heppell, from Acomb, was serving with the RAF in India, and was selected to represent the service in a match against a Bombay XI, playing alongside six full internationals and other professionals.
+
+Several people caught outside were killed and the force of the blast tore the kitchen door from its hinges, and caused considerable damage to the kitchen itself. Mrs Riddell’s daughter said: ‘It is certain that if Mother had not gone into the dining room to read the Courant, she would not have been alive today.’
+
+Three drivers in Hexham were fined between £1 and 15s each by the town’s magistrates for using cars at night that did not have white paint on the bumpers and running boards, in contravention of blackout regulations.
+
+For the first time in twenty-two years the two minutes’ silence was not universally observed in Hexham on 11 November 1941\. There was no bugle call to herald the start of the tribute, with the authorities relying on the striking of the Abbey clock to let people know, and the unannounced changes to procedure caused much confusion. Apart from the British Legion, few public bodies were represented at the war memorial, and the chairman of the urban council did not lay a wreath.
+
+### Evictions and road deaths
+
+The callous attitude of some coalmine owners to their workers was sharply criticised by Mickley’s Councillor Ada Blackburn, after a number of families were evicted from colliery houses in the village without alternative accommodation being made available for them. She said it was ‘one of the great tragedies of the district’, and likened the plight of the displaced families to that of bombed out families in cities. She said several families had been split up, with mother, father and children from one family all living in separate temporary accommodation. She called on the Mickley Coal Company to repair a number of houses currently standing empty to ease the problem.
+
+There was a double tragedy in Hencotes, Hexham, when an army truck went out of control, killing a military policeman and a young Hexham woman. The driver, Fusilier George Farrand, was fined £5 for driving a wagon to the public danger, with £1 18s 9d costs. He was also banned from holding a civilian driving licence for three years.
+
+Hexham magistrates heard that the truck was driven along Hencotes at an excessive speed and hit a stationary car being driven by an ATS private, killing military policeman Lance Corporal William Hanley of the Grenadier Guards, who was talking to her at the time. The lorry then veered onto the pavement, scattering pedestrians, and killing the young woman, 23-year-old Winifred Taylor, of Osborne Avenue, Hexham. At the subsequent inquest, the coroner remarked on the irony of the fact that while Farrand could not drive a private car, he could continue to drive army vehicles.
+
+On a less serious note, seven boys were each fined 10s by Hexham Juvenile Court for playing football in the street. The boisterous game took place in Beaumont Street and in the Market Place, as well as in front of the Abbey. The court heard the ball on occasion went dangerously close to shop windows and that pedestrians were inconvenienced.
+
+A military despatch rider was brought before Hexham Magistrates for riding his machine through Howden Dene at Corbridge at a speed in excess of 60 mph – and without lights. Signaller Peter Green of the Royal Artillery was fined £1 on each charge, but his commanding officer told the court that he believed it was a case of excessive zeal rather than riding to the public danger. A despatch rider’s job was to get through at all costs and Green had had the best traditions of the corps at heart.
+
+Christmas 1941 was again a bright affair, despite the shortages caused by rationing and coupon requirements. One retailer said: ‘Stockings may not contain the variety of other years, but they certainly won’t be completely empty. There has been a keen demand for warlike toys, but it has been impossible to meet that demand.’
+
+Shoe shops were particularly busy, one interesting development being the resurgence in demand for clogs, which were not subject to rationing and could be bought without coupons. One boot and shoe dealer said: ‘If there had been more available, I am sure half the women in Hexham would be wearing clogs, not just in the garden, but in the street.’
+
+The biggest shortage was in children’s footwear, especially for toddlers and young children.
+
+### 1942
+
+The new year began with the tragic death of Leading Aircraftsman John Nattress (22) of Beech Grove, Prudhoe, who sportingly gave up his leave to accommodate a colleague and was killed in an accident. He was a member of Prudhoe Cycling Club before the war as well as being a chorister at St Mary Magdalene’s Church.
+
+### A grim warning about Hitler
+
+There was also a grim warning to Hexham Rotarians from the deputy controller of ARP Services in Northumberland, Major J. McVicar Munro who said that as the tide of the war started to turn against Hitler, the dictator would not hesitate to launch a deadly gas attack against Britain.
+
+He said:
+
+‘I am convinced that when Hitler the tiger is properly netted – and that will be before very much longer – he will use every possible means he can to launch a gas attack on Britain. It is only with an element of surprise he will be able to succeed though and a nation armed with effective respirators, and a ready supply of number two anti-gas ointment, and taking simple but necessary precautions, can laugh at any attack Hitler may launch.’
+
+Major Munro said that Hitlerism should not be regarded as a present day phase, but something that was ingrained in the German psyche. He added:
+
+‘The Huns of the present day are no different from the old Huns of Atilla. When we win the war we will be told by the Germans that it was the canker of Hitlerism that caused the trouble. Don’t let us believe that. Hitler at the beginning was allowed to attain power because he was thought by the German military authorities to be a suitable pawn in their hands.
+
+The machine behind Nazism has the same kind of gear wheels as have been working for centuries, and this time, we have to see that the wheels do not simply have a few cogs knocked out but are filed down with a very coarse rasp.’
+
+### Ossie Chipchase’s ordeal
+
+January 1942 saw the beginning of a nightmare for draper Ossie Chipchase, who had left school at the age of 16 to work in a drapery warehouse. When the warehouse closed down in the depression year of 1933, he set up his own drapery business at the age of 23\. Shortly before war broke out in 1939, he married Hexham lass Dorothy and two years later was called up into the Royal Signals Corps as a wireless operator. He was attached to an anti-aircraft section which, in November that year, set sail for Singapore which was facing an imminent Japanese attack. He arrived at the outpost of the British Empire in January 1942 and was posted to a camp near the Royal Naval base, before being transferred to the Argyll and Sutherland Highlanders.
+
+On Sunday, 15 February 1942, Singapore was surrendered to the Japanese Imperial Army and Ossie was taken prisoner. He was then transferred to a school near the infamous Changi camp, and was put to work building a road. Then he was sent on a five-day train journey to Thailand, to work on the building of a railway line. There was little in the way of food or clothes and he was forced to live and work in bare feet, wearing nothing other than a loincloth. He was frequently beaten with bamboo canes by the guards.
+
+In an interview in 2005, he said: ‘For the first 18 months as a prisoner, my wife Dorothy did not know where I was. The Japanese were not interested in Geneva Conventions and they did as they liked. They did not send word that we were prisoners. Eventually we received a card which had the pre-written messages “I am well, I am working for pay, or I am in hospital.” We had to tick the correct box, but were not allowed to write anything. Dorothy used to write every week but I didn’t receive the letters.’
+
+She even received the Widow’s Payment Form on the basis that he was missing presumed dead.
+
+But Ossie was still very much alive and in June 1944 was taken back to Singapore to be transferred by ship to Japan. He was one of 1,200 prisoners on board a ship for three months – and was very nearly killed by his own side. The ship was bombed in Manila harbour in the Philippines by American aircraft. Around 750 prisoners were drowned, but Ossie swam to the top of the hold and, after a desperate struggle removed the hatch cover, he escaped just as the ship sank. Together with three companions Ossie used the hatch covers and wooden panels to get to shore – where he was recaptured by the Japanese.
+
+He was then put aboard another ship bound for Japan, which again came under attack from the US Air Force. The Japanese battened down the hatches – and of the 800 men in the hold, 300 died of suffocation. Ossie only just survived and was put on one of two ships bound for Taiwan. One of the ships was sunk, with no survivors, but Ossie’s made it to southern Japan, where he was put to work in a coal mine near the Japanese city of Nagasaki.
+
+Six months later Ossie witnessed a huge glow in the sky – the second atomic bomb of the war had been dropped on Nagasaki. The war was over and the guards fled. A month later, the Americans arrived overland and Ossie was put on a hospital ship bound for San Francisco. He then travelled across the US and took ship to England.
+
+On 28 November 1945, Ossie and Dorothy were finally united, against all the odds, on the pedestrian footbridge at Newcastle Central Station.
+
+Dorothy had kept the drapery business going and Ossie was soon back plying his trade around the villages and farmers of Northumberland. The couple moved to Hexham in 1946 and were happily married for 59 years until Dorothy’s death. Ossie retired in 1969 and was still driving a car well into his 90s.
+
+Members of Uncle Fred’s Children’s Corner in the Hexham Courant who joined forces with the district’s women’s institutes, Women’s Voluntary Service and other bodies to rake the hedgerows for rose hips, heard that nationally, the effort had yielded 200 tons of the orange bounty, which was packed with the infection fighting vitamin C. Estimated at the rate of 300 hips to the pound this meant that some 143 million hips had been plucked from thorny branches across the country, enough to make 600,000 bottles of syrup, which were being sold in six ounce bottles for 1s 9d or eight ounces for 2s 4d. A spoonful per day was enough to give a child half its vitamin requirement.
+
+A spiv from Edgewell in Prudhoe, picked on the wrong man to approach to buy a lottery ticket for the prize of a fat goose. The would-be purchaser was an off-duty policeman and when asked if he would like a ticket, he said he was taking the lot and arrested the wide boy for conducting an illegal lottery. He was fined 10s at Hexham Petty Sessions.
+
+At the same court, a motorist who was fined for not having white paint on the bumper of his car complained that he had been summonsed following a police raid on a car park in Hexham around midnight on Christmas Eve. He said the timing of the raid was ill-chosen, in strong contrast to the customary spirit of goodwill and carol singing on this one night of the year.
+
+Fines of £5 each were imposed on two men for the misuse of petrol – one on a man who had used his works furniture van to drive from Hexham to attend a dance in Humshaugh five miles away and another who had illicitly driven three miles from Corbridge to go to the pictures in Hexham.
+
+Although they were captured at different times and were frequently moved to different PoW camps, two soldiers in Corbridge met up in the same camp, families of both men heard in welcome Christmas cards home. In the same camp with Lieutenant H. Brodie Cochrane of the Royal Engineers and Lieutenant Fenick Deane Hammond of the Royal Artillery was Haltwhistle’s Major Kenneth Clark, of the Royal Northumberland Fusiliers.
+
+Lieutenant Hammond reported the meeting in his Christmas card, in which he said he was well and asked to be remembered to friends in Corbridge. He also reported that the camp had a good dance band as well as a symphony orchestra.
+
+### Warship Week and HMS Tynedale
+
+February of 1942 saw the launch of Hexham Warship Week when the district was charged with raising £200,000 to sponsor the Royal Navy destroyer HMS Tynedale. The destroyer had not been named directly after the district, but as a Hunt class vessel, it was named after the Tynedale Hunt, whose hounds were kennelled at Stagshaw, near Corbridge. In the wardroom of the ship was the mask of a Northumberland fox, presented to the ship by the master of the hunt.
+
+The appeal was launched with a grand parade through the town, led by the band of the Home Guard, and included representatives of Home Guard, military and civil defence movements as well as National Fire Service, Red Cross, Air Training Corps, Women’s Land Army, Boy Scouts and Girl Guides.
+
+Numerous events were held across the district, with collections, concerts and whist drives, while the pupils of Keenley Council School near Allendale raised £93 13s – which worked out at £5 10s 2d per head – with similar sums coming in from other schools.
+
+After a week’s hectic fundraising, the organisers got together four local war heroes to formally unveil the total raised – Third Officer Derek Gilchrist MBE, Pilot Officer Harold Robson DFM, Pilot Officer Arthur Garwell DFM and Robert Baty GM – and there were huge cheers when it was revealed that £268,476 had been banked on Armed Forces Day. By the end of the week the final figure was £325,099.
+
+![Image](Images/f0110-01.jpg)
+
+There was great support from local businesses for the launch of Hexham Warship Week in 1942.
+
+Asked what comforts they would like from their newly adopted ‘family’ the crew of HMS Tynedale asked Hexham Townswomen’s Guild for socks, jerseys, football boots, minesweeping gloves, dartboards, board games, cribbage board, books and playing cards – as well as a piano to assist with the ship’s theatrical productions. Within a week they had been given a piano by Mr and Mrs Leslie Mann of High Reins, Hexham, whose only son had been killed while serving in the Fleet Air Arm a few months earlier.
+
+HMS Tynedale was ordered from Alexander Stephen and Sons on the Clyde in Glasgow on 11 April 1939 and laid down on 27 July 1939\. She was launched on 5 June 1940 and commissioned on 2 December 1940, with total building cost of £425,000\. She had a displacement of 904 tons and carried armament of four 4-inch anti-aircraft guns and eight smaller guns.
+
+Tynedale was mostly employed on convoy and escort duties, initially as part of the First Destroyer Flotilla based at Portsmouth, but on 11 March 1941 she sustained damage by a Luftwaffe air raid on Portsmouth’s docks which put her out of action for nine days.
+
+On 15 December she was transferred to the 15th Flotilla based at Plymouth. The Tynedale’s finest hour came on 27 March 1942, when she took part in the famous St Nazaire Raid as one of the escorts for the obsolete, explosive-packed destroyer HMS Campbeltown which was rammed into the lock gates at the Normandie dry dock in the German held French port. This audacious combined operations attack put the port out of action not only for the rest of the war, but for five years afterwards. South-west of Ushant Tynedale sighted the U-boat U-593 and attacked her, initially with depth charges and then when the submarine was forced to the surface, with a deck gun. However the U-boat managed to dive again and escaped – only to return with deadly vengeance the following year.
+
+![Image](Images/f0111-01.jpg)
+
+HMS Tynedale.
+
+When rendezvousing with the surviving small craft from the raid outside the harbour Tynedale and another destroyer, HMS Atherstone engaged the five German torpedo boats of the 5th Flotilla.
+
+Tynedale returned to Plymouth on 29 March, along with the rest of the convoy that had survived. She underwent repairs and resumed duties on 18 April, continuing with convoy escorts in the Southwest Approaches. On 14 May, she encountered the German auxiliary cruiser Stier, and was part of the task force that sank it, albeit only as a support vessel. She also participated in a support role in the sinking of the German auxiliary cruiser Komet in October.
+
+Tynedale was nominated for service in the Mediterranean and, as part of Destroyer Division 59 (which she joined on 8 March 1943), she guarded convoys between Gibraltar and Algeria. She acted as an interceptor during the Allied invasion of Sicily and aided in the rescuing of 218 passengers from the Dutch freighter Felix Jan Van Manix which was torpedoed and sunk in October 1943.
+
+At 6am on 12 December 1943, HMS Tynedale was escorting a convoy off the coast of Algeria when she was spotted and attacked by the German submarine U-593 – the U-boat she had engaged with during the St Nazaire raid. The noise-seeking torpedo went straight for the boiler room amidships and tore the vessel in two, leaving more than 90 of the 134 crew dead; some who were injured later died on shore.
+
+One man who survived the sinking was Ron Babb who, speaking in 1995, recalled how the people of Hexham and the surrounding areas took HMS Tynedale to their hearts, sending out letters, cards and games to the vessel to help keep the officers upbeat during the war.
+
+He said: ‘She was a lovely little ship and of course all the people of Hexham and Northumberland had paid for her and adopted her. She had a very interesting career, but when she was sunk two thirds of the crew were lost. Out of those that did survive there were a number that died back on shore. When I went overboard I took off all of my heavy clothing, including my boots. But when I was found they recognised me straight away – still had my Navy cap on. It was the last thing I thought about taking off!’
+
+Engineer Ron told how the incident was a remarkable coincidence after Tynedale had opened fire against the same U-boat about eighteen months earlier and thought they had sunk it, which was not the case. The U-boat exacted its revenge on Tynedale but was in turn sunk by allied forces the following day.
+
+But the war was between countries, not individuals, and captain of the U-593 Gerd Kelbling, who survived the sinking, and Ron exchanged Christmas cards for many years after the war
+
+While Hexham had HMS Tynedale Haltwhistle had its own Warship Week to raise £52,000 to sponsor the trawler minesweeper HMS Hornpipe and succeeded in bringing in over £86,000, while Prudhoe had to raise £15,000 to equip a motor launch, and in fact raised £37,700\. The North Tyne district was charged with raising £40,000 to adopt and equip the trawler minesweeper HMS Birdlip, and succeeded in bringing in £65,000, representing in the region of £10 per head of the population.
+
+As the tide of the war started to turn, in the Middle East, a Hexham soldier’s medical skills were given as the reason for his being kept prisoner by the Germans while others of his unit were turned loose by their German captors. Corporal Leonard C.B. Ward, the son of well known solicitor Septimus G. Ward, was captured by the Germans during a battle in the Middle East. A colleague wrote to his sister that during the battle Corporal Ward had behaved in an exemplary manner, showing an entire disregard for danger. He said:
+
+‘When resistance was no longer possible, and we were surrounded, he remained calm, and as soon as his captors allowed, he proceeded to attend to the wounded, both British and German.
+
+I am convinced he saved the lives of at least two men, by his prompt action performed under very intense fire, and it was this very humane work which was responsible for him remaining a prisoner. When the Germans found they were losing the battle, they released us, no doubt on the grounds that we would be a hindrance to them in their withdrawal. However, Corporal Ward was kept by the enemy, and I can only supposed the reason was to look after the enemy wounded.’
+
+![Image](Images/f0114-01.jpg)
+
+Somehow finding time for football in Western Desert are men of the Recce Regiment, Royal Northumberland Fusiliers, as they prepared to go into Libya. The picture was taken by Captain Lionel Stephenson of Hexham, who had been killed in action two months before the picture was published, Fusilier Matt Young (back row, second left) of Hexham, was subsequently taken prisoner, while Company Sergeant Major David Forster (back row, third from right), also of Hexham, was killed in action on 17 July and is buried in Tripoli.
+
+As a housing crisis gripped the district, Prudhoe UDC wrote to the Ministry of Health with a view to reopening some houses that had been deemed unfit for human inhabitation before the conflict. Town vicar Councillor the Rev. R.E. Robson said more and more people were being crowded into the district, but there was not so much accommodation as an empty soap box available to them.
+
+Two men were killed when the tank on which they were riding overturned when it failed to negotiate an S-bend on Bewclay Bank, near Stagshaw. They were engine fitter Ronald Crole, of Littlehoughton, Alnwick, and mechanical examiner Edward Nettleton, of Newcastle. The driver, tank tester Oliver Richardson of Blaydon, escaped with cuts and bruises.
+
+More than 1,000 schoolchildren packed into the Central Methodist Hall in Hexham to hear a nature talk, illustrated by blackboard sketches, delivered by legendary broadcaster Romany of the BBC. He began his talk by apologising for the absence of his famous spaniel Raq and explained: ‘With the shortage of petrol, I am not able to use a car, and if I take Raq on the crowded buses people clamber in on his feet, which he does not like, so I have had to leave him at home.’
+
+Romany was the first ever wildlife broadcaster and had an immense following as he wandered the country in his gypsy caravan, pulled by his horse Comma, and his two young companions Muriel and Doris.
+
+In real life, Romany was Methodist minister the Rev. George Bramwell Evens, most famous for his Out with the Romany programmes (later Out with Romany), which started in 1933 on the BBC’s Children’s Hour. His posts included a twelve-year spell at the Methodist Central Hall, Carlisle.
+
+### RAF hero taken prisoner
+
+In May 1942 Hexham held its breath when local hero Pilot Officer Arthur Garwell DFM was reported missing following the famous low-level raid by Lancaster bombers on the M.A.N. diesel factory at Augsburg in southern Germany – and there was a sigh of relief when it was confirmed he had been taken prisoner after making a perfect crash landing in his burning Lancaster after being hit by shellfire over the target.
+
+![Image](Images/f0115-01.jpg)
+
+Pilot Officer Arthur John Garwell of Oakwood, who was awarded the Distinguished Flying Medal after completing thirty bombing raids over enemy territory.
+
+Garwell was the epitome of the dashing ‘Brylcreem Boys’ of the RAF. Born in February 1920, he enlisted in the Royal Air Force Volunteer Reserve in May 1939 and after gaining his wings and was posted to 83 Squadron, a Hampden unit operating out of Scampton, in September 1940. Between then and March 1941, Garwell completed a full tour of operations, more often than not attacking well-defended German targets – thus a brace of trips to Berlin, Bremen and Cologne, and no less than three outings to Hamburg, Magdeburg and Wilhelmshaven.
+
+Unusually, too, he flew a night-fighter sortie over Birmingham in December 1940\. On the night of 22-23 December he was compelled to divert to Emden from Dessau – and made a forced-landing on his return as a result of near-empty fuel tanks. He was posted as an instructor to No. 25 OTU at Finningley and awarded the DFM.
+
+Garwell joined the Intensive Flying (Lancaster) Flight at Boscombe Down in November 1941, at which establishment he flew on occasion as second pilot to Squadron Leader J.D. Nettleton. By April 1942 he had become Nettleton’s right-hand man. On the way out to dispersal in a squadron truck for the Augsburg Raid, the pair of them agreed that they would not take evasive action if attacked by fighters, but rather hold their course. Garwell said: ‘The only thing to do is press straight on and keep flat on the ground. If anyone gets crippled I suggest he throttles back and belly-lands straight ahead.’
+
+During the daring daylight hedge-hopping raid, the Lancasters were attacked by waves of German fighters and of his group, Garwell was the only one to reach the target and unleash his four 1,000lb bombs. No sooner had he done so than he was hit by anti-aircraft fire. What happened next is recounted in Ralph Barker’s book Strike Hard, Strike Sure:
+
+‘As Garwell heard Flux, his wireless operator, yelling in his ear. “We’re on fire!” Flux kept pointing over his shoulder, and Garwell took a quick look behind him. The armour-plated door leading into the fuselage was open and the interior was a mass of flames. “Shut the door!” ordered Garwell who decided to crash-land at once rather than attempt to climb and bale out. Five of the crew had crowded into the front cockpit but there were still two more men behind the wall of fire.
+
+Garwell could see Nettleton and some of his crew staring at the burning Lancaster and he gave an impolite version of the V-sign, which they instantly returned. Then he turned to port into the wind and made for a patchwork of fields south of the town. As he throttled back and lowered the flaps, smoke started to pour into the cabin, blinding him so that he couldn’t see out or read the instruments, and choking him so that he could hardly breathe. All five men in the front cabin were coughing violently, and Flux opened the escape hatch over the navigator’s table to get some air.
+
+Garwell kept the aircraft going at what he thought was the same angle, and then a sudden down-draught from the hatch cleared the smoke for a fraction of a second and he saw a line of tall trees straight ahead of them, blocking their path. He opened up the engines and pulled back on the stick, but already the smoke had closed again.
+
+Garwell was flying her into the ground blind at 80mph an hour, but when the impact came she settled down like an old hen, sliding on her belly for about 50 yards and then stopping gently. They made a dash for the hatch. Outside they found Flux lying dead under the starboard inner engine. He had been thrown out on impact. His quick action in opening the hatch had probably saved their lives. The whole body of the aircraft was burning furiously and they couldn’t get near, and the death toll rose to three.’
+
+Garwell was awarded the Distinguished Flying Cross for his exploits, while Nettleton, the only one to get his Lancaster back home after the Augsburg Raid, was awarded the Victoria Cross.
+
+Garwell was interned at the infamous Stalag Luft III, where he remained until liberated in May 1945, but he was not a model prisoner. He participated in at least one escape attempt, which he described laconically in his post-war PoW de-brief as: ‘Escaped with 25 others as a de-lousing party. Prisoners dressed as guards. Recaptured after one day. Threatened with court martial for sabotage and espionage by Germans. Held in jail 56 days 12 June – 8 August 1943.’
+
+He again found himself in solitary confinement from 26 December 1943 to 17 January 1944 according to his wartime log and, although he makes no mention of it there has been speculation that he had been involved in the legendary ‘Great Escape’ from Stalag Luft III in March 1944. However, he was not one of the seventy-six who did get away – or one of the fifty who were subsequently murdered in cold blood by the Gestapo.
+
+![Image](Images/f0118-01.jpg)
+
+The strain on local families waiting for news of their loved ones missing in action with the Recce Regiment Royal Northumberland Fusiliers in the Middle East was eased to a degree with news they were being held in Italian prisoner of war camps. Among those from Hexham were (from left): Company Sergeant Major R. Riley, Corporal Joseph Thompson, Corporal John Edward Rourke and Fusilier Samuel Wilson.
+
+After the war Garwell joined the investigations department of HM Customs and Excise and in 1957 he joined East African Customs and Excise, living in Mombasa and Nairobi, becoming head of the service before Kenya won independence in 1963\. He stayed on in Kenya, taking Kenyan citizenship in 1964 and starting his own business growing mushrooms for the hotel trade.
+
+He died in Kenya in 1969, still only 49 years old. When his medals and wartime papers came up for auction in London in 2006, they realised £8,800, almost twice the estimate.
+
+### Home Guard tragedy
+
+There was tragedy in the cemetery in Bellingham when a Home Guard exercise in June 1942 went badly wrong. A forestry worker, George William Glendinning (31) from Bewshaugh, Kielder, was killed when a hand grenade being used in an exercise exploded close to him and he suffered fatal injuries.
+
+An inquest heard that Mr Glendinning was a member of the Home Guard and was taking part in the exercise, which also involved members of the regular army. A sergeant with the regulars had thrown a grenade as a warning to others to clear the way, but Glendinning had been caught in the blast. The Home Guard contingent were unaware that live ammunition was being used rather than just smoke bombs. Glendinning’s legs were shattered by the explosion and he died of shock and haemorrhage.
+
+Recording a finding of accidental death, Coroner for South Northumberland P.M. Dodds said: ‘Glendinning was loyally attempting to do his duty for his King and country and to train himself for the defence of the district if the occasion arose.’
+
+Other members of the 4th Battalion Northumberland Home Guard, including contingents from Hexham, Acomb, Lowgate, Whitley Chapel and Slaley held a drumhead service at Prior’s Flat in Hexham. The men were told by the commanding officer Lieutenant Colonel J. Ridley Robb: ‘The Home Guard are no longer just civilians in uniform, but an integral part of the Armed Forces, well armed and trained, and I don’t hesitate to say, an efficient fighting force. We are not here simply to repel invasion, but being strong and well trained, we will allow regular troops to be moved abroad. The stronger and better trained we are, the more regular troops can be sent overseas, and the sooner this war will be over.’
+
+A rogue kipper was blamed for the death of 21-year-old farm worker Thomas Hutchinson, of Coanwood. Hutchinson took ill a week after eating a kipper served by the wife of the farmer for whom he was working. Even though the farmer ate a kipper from the same pan, without any ill effects, Hutchinson became ill some days later and on being admitted to hospital said he had eaten a kipper which ‘tasted badly’. He said: ‘If ever I get over this, I will never eat a kipper again.’ He died in Haltwhistle War Memorial Hospital from streptococcal infection of the bowel, but local doctor J.M. Glasse said it was impossible to say whether the kipper had been responsible for the death.
+
+For many years Allendale styled itself as the centre of Britain, but despite its distance from the sea, it became home for seafarers from many lands with the opening of Britain’s first country holiday and rest home in which merchant seaman who had suffered from enemy action or from illness were able to regain their health.
+
+Set in a former residential hotel on the banks of River Allen, the facility was operated by the Missions to Seamen, with the intention of providing a fortnight’s holiday, free of charge, for all sailors who had suffered at the hands of the Nazis. A special fund known as the Merchant Seamen’s Holiday Rest Home Fund, was established and the facility was soon adopted by the people of Allendale, with inmates experiencing hospitality in many houses in the Dale.
+
+There were men of all nationalities in the home, with the common bond of the sea, and one Norwegian sailor declared: ‘This is a lovely and peaceful place. People are all so very kind – it is like heaven to me.’
+
+Some had been torpedoed several times and had suffered grievous injuries, but the underlying impression was that once they had recovered from their wounds and illnesses, they could not wait to return to the fray.
+
+The war continued to take a grim toll of Tynedale servicemen, with several local men killed in the Libyan desert, including Lieutenant Colonel Edward Des Graz, commander of the Reconnaissance Battalion of the Royal Northumberland Fusiliers, and Major John Pearson, of South Wylam, serving with the same regiment.
+
+The Recce Corps, as it was fondly known, was made up largely of territorials who had served with the Royal Northumberland Fusiliers. It was regarded as ‘the eyes of the army’ and seen as a successor to the Scouts who had served with such distinction in the Boer War and the cavalry of the last war. The Recce Corps was classed as a cavalry squadron, mounted in Bren carriers, armoured cars or trucks. The men were expected to be able to drive any vehicles, as well as being able to repair them. Their job was to find out what lay ahead for other troops, and to report back on the situation. It was said that men country born and bred, who had an eye for the countryside and knew woodcraft, would be admirably suited for the work.
+
+![Image](Images/f0121-01.jpg)
+
+Recce Regiment Royal Northumberland Fusiliers from Hexham held in Italian prison camps in Italy in September 1942 were from left: Fusilier T.H. Whitfield, Lance Corporal George Clark, Company Sergeant Major Leslie Dodds and Corporal R. Brotherton.
+
+While local men continued to fall in the Middle East, there was tragedy on the Home Front, when former serviceman and member of the Hexham Home Guard Benjamin Gunton heard a terrific explosion as he came into the garden of his home in Round Close in the town, and found his 18-year-old son Desmond had accidentally blown himself up with a hand grenade.
+
+Mr Gunton told the inquest that the teenager had been given four grenades by a soldier as a souvenir and kept them in a hut at the bottom of the garden. He was in the habit of taking them to pieces and reassembling them. He accepted he should have confiscated them from the boy, but never got round to it.
+
+Tynedale’s first British Restaurant was established in the Wesley Hall in Prudhoe, which was converted at the cost of £600 to provide cheap and nourishing meals for 100 people at a time. It was open from 11-45am to 2-15pm Monday to Saturday, and offered a four course meal comprising soup at 2d, meat and vegetables 7d (4d for children), 2d for pudding and 1d for a cup of tea.
+
+![Image](Images/f0122-01.jpg)
+
+Reported to be held in an Italian PoW camp was Lance Corporal William Foster (left) of Corbridge, while Petty Officer Fred Barrable of Hexham, (second from right) was interned in Algeria following the sinking of his ship HMS Manchester, in the Mediterranean. However, Pilot Officer Sidney Melvin (second left) of Haydon Bridge and his RAF colleague, Sergeant John Ridley Elliott (right) of Corbridge were both missing in action.
+
+British Restaurants were communal kitchens created in 1940 to help people who had been bombed out of their homes, had run out of ration coupons or otherwise needed help. There was a political dimension as well, as the Labour Party saw them as a permanent solution to equalising consumption across the class line and guarantee a nourishing diet to the poor.
+
+Originally called ‘Community Feeding Centres’, the name British Restaurants was coined by the Prime Minister, Winston Churchill. They were set up by the Ministry of Food and run by local government or voluntary agencies on a non-profit basis.
+
+### Matters of conscience
+
+A veteran of the First World War, Robert WIlliam Marriner of Prudhoe, was jailed for two months with hard labour by Hexham Magistrates for failing to comply with an order from a National Service Officer to take up work of national importance. Marriner told that court that if he had taken up the job he was directed to it would have cost him 20s to 30s per week in lost wages from his present job. He said: ‘I fought in the last war for sixpence a day and was promised I would come back to something better – now I come back to treatment like this.’
+
+At the same court 25-year-old Kathleen Margo Jupp, of Haydon Bridge, read her bible in the dock when she was charged with failing to attend an interview to carry out work of national importance. Giving her job as a full time Jehovah’s Witness, she said when asked what her plea was: ‘Technically I am guilty; morally, I am not guilty.’ She had earlier asked to be registered as a conscientious objector, but was told this was not possible under the provisions of the Registration of Employment Order. The court was told that Miss Jupp had some ‘peculiar religious belief’ which made it difficult for her to take up the work to which she was directed, even when it had nothing to do with the war.
+
+National Service Officer Charles Welburn told the court that because of her beliefs, Miss Jupp had not been directed towards munitions work or anything directly related to the war, and had been asked to go to work at the children’s sanitorium at Hexham, but had refused to attend an interview with the matron. When asked by the chairman of the bench John Charlton whether she was not a British subject who came under the law in England, she said: ‘I am under the law of God first.’
+
+The court heard she had been a member of the Women’s Land Army but had resigned ‘when she came under the influence of the Jehovah’s Witness movement.’ After a two-week adjournment, she was fined £20.
+
+Addressing Hexham Rotary Club later, chairman of the Northumberland and Durham Conscientious Objectors Tribunal, Judge T. Richardson, said that in his opinion, all conscientious objectors who refused to do anything for the war effort should be cold shouldered once hostilities were over. The same applied to companies which employed ‘conshies’, often promoting them in their jobs while other employees were laying down their lives for their country. The judge said in recent times more and more young women were claiming to be conscientious objectors and he found them ‘more poisonous’ than the men, as they were so self-assertive.
+
+He said: ‘The great proportion are not genuine COs at all, but are nothing less than shirkers. There are also those who use so-called religious societies as a cloak to get out of doing anything for their country. In the main, these religious societies are composed of very ignorant, but dangerous people, who go round getting a hold of people who don’t have a great deal of brain.’
+
+A 19-year-old soldier, Sergeant Hugh Weir was drowned in the Tyne at Haydon Bridge when an army exercise went badly wrong. Weir was asked to wade across the river carrying a wire rope, which was to be secured on the far bank, to allow other soldiers to cross. However, the river started to rise quickly and the order was given to abandon the exercise. Sadly, the change of plan was not relayed to Weir who, dressed in his trousers and gym vest, waded into the swollen river with one end of the wire attached to his belt, and the other to a drum. He only got four yards into the river when he was swept away by the current. The other end of the wire unravelled from the drum and no-one was able to grab the end of it.
+
+Weir’s body was recovered 50 yards down river, and the coroner found it ‘unfortunate’ that the cancellation message had not got through.
+
+## CHAPTER FIVE
+
+## The Rocky Road to Normandy
+
+A 15-year-old girl from Stocksfield was sent to an approved school by Hexham Juvenile Court, which was staggered by her ‘scandalous’ behaviour in what was described as a very sordid case. Described as being out of control by her father, she was sent to a diocesan retreat in Newcastle but escaped by climbing out of a top floor window and shinning down a drainpipe onto the roof of an air raid shelter.
+
+She turned up at a Newcastle hotel in the company of a sailor, claiming she was his wife, but when the ‘husband’ returned to his ship, she took up with another resident at the same hotel, telling the affronted manageress that her husband did not mind her associating with other men in a friendly manner. She declined to pay her hotel bill of 45s, but the bill was settled by the other man with whom she was now sharing a room.
+
+The girl also went on a shopping trip in Newcastle, where she ordered a dance dress for 14 guineas and an evening coat for 10 guineas, offering a 10s deposit, which was refused.
+
+### Monty’s success and local heroes
+
+While Lieutenant General Bernard Montgomery’s successes with his Desert Rats in Egypt were excellent news, Hexham’s MP Douglas Clifton Brown warned against any premature celebrating. He said: ‘Rommel is a brave and wily soldier, and whatever sacrifices he may have to make, he will see to it that his famed Afrika Korps is preserved as far as possible. It is always when a badger is right at the end of his sett that he is most dangerous. We have won a victory, which is something new for us in this war, but we have not won the war. There should be no Mafeking shouting just yet.’
+
+However, the Hexham Courant was quick to point out that ‘Monty’ had strong links with Hexham, in that he was the nephew of former Rector of Hexham, Canon Sidney Savage, whose wife was the sister of Montgomery’s mother.
+
+Montgomery’s success at El Alamein saw church bells which had been silent for two years ringing out all over England, including those of Hexham Abbey. Seven of the Abbey’s nine regular bellringers were away on active service, but the two survivors were joined by long retired campanologists, and locally billeted ringers from as far away as Truro, Whitchurch and Northampton. Victory peals were also rung at Newton Hall, Allendale, Corbridge and Wylam.
+
+An ATS private from Haltwhistle was mentioned in despatches for staying at her post with another girl when it was struck by a bomb on the south coast. Mary Howe was reluctant to talk about the matter when approached by the Courant, but eventually said: ‘We were working as usual in our room, when all of a sudden, without warning, the doors were blown off, and I was thrown into a corner. I managed to get back to the switchboard and continued putting calls through until we were given orders to evacuate. We had just left the room when the floor fell in so I suppose we had a rather lucky escape. We did no more than anyone else would have done.’
+
+Another tale came from Hexham’s Petty Officer Fred Barrable, who swam ashore when his ship HMS Manchester was sunk off the Algerian coast and was taken prisoner. He was put on a train with other prisoners and sent to Laghouat prison camp in Saharan Algeria operated by Vichy France, where once all their belongings had been confiscated, twenty-six men were crowded into a hut supposed to accommodate twelve people.
+
+The Arab guards played dirty tricks on the prisoners, said Barrable, recalling one taking a gold watch from a stoker, saying that in exchange for the watch, he would allow the sailor to escape. He did not get far, for they shot him as he was getting through the barbed wire.
+
+The staple diet at the camp was lentils, olive oil and black bread supplemented by ‘coffee’ made from date stones. They were occasionally given wine, which tasted more like vinegar, which the French authorities said was to keep down the diseases which were rampant in the camp. Barrable noted: ‘The hospital was poorly equipped, with a pony and trap used as an ambulance, but to make matters worse, flies of every description bothered us ceaselessly.’
+
+![Image](Images/f0127-01.jpg)
+
+Awarded an OBE in July 1943 was Chief Engineer Thomas Cuthbert Gorman of Hexhamshire who commanded a lifeboat with 23 men on board for 49 days in the South Atlantic, after his Merchant Navy vessel had been torpedoed, sinking in less than seven minutes.
+
+The prisoners eventually managed to get hold of a radio, from which they learned of the Allied troop landings in Algeria, which brought loud cheers from soldiers, sailors and airmen alike – but not the French camp commandant, for he was unaware of the invasion! The camp was liberated soon afterwards.
+
+More horrors were related by Chief Engineer Thomas Gorman, of Hexhamshire, who spent forty-nine days adrift in an open boat after his ship was hit by three torpedoes 700 miles away from land out in the South Atlantic. The ship sank in six minutes, but two lifeboats were launched, before the U-boat surfaced and took off the ship’s captain as a prisoner of war.
+
+The two lifeboats, one containing twenty-six men and the other twelve, stayed together for five days, before being separated in high seas. Some time later, they found the second lifeboat empty and replenished their own meagre stores and waters from its lockers, as well as acquiring a second sail.
+
+Gorman related: ‘We only had the ship’s compass to guide us and were mainly at the mercy of the prevailing winds, although we occasionally took to the oars. After eight days we sighted a ship, but although we fired flares and did everything possible to attract attention she failed to see us.’
+
+The initial rations were two ships biscuits per man morning and night, a spoonful of pemmican, a little chocolate and a stick of Horlicks, but for the last sixteen days, they were reduced to surviving on three quarters of a gill of water per day. One of the gunners made a set of dominoes and they also made playing cards out of photographs to pass the time. When they were picked up, Gorman had lost three stones in weight and he could encircle the legs of the 16-year-old apprentice on board between his thumb and forefinger.
+
+As Christmas 1942 approached, with gifts in short supply and ration books ever more stretched, the fact that local farms were replete with specially fattened geese and turkeys for the Christmas table proved too much of a temptation for some. Many farms suffered serious rustling problems, with organised gangs said to be using cars and wagons to carry off geese, chickens and turkeys. The Langley area was particularly badly hit, with one farmer losing eleven turkeys in one night and another twenty-seven chickens. One farmer said: ‘The loss of valuable poultry is serious at any time, but it is more keenly felt when we have scratched and scraped on meagre rations to fatten the birds for Christmas.’
+
+The Christmas of 1942 was again marked by austerity, stringent food rations, scanty shop dressings and transport restrictions – but the fourth Christmas of the war was one of the merriest. Rare good news from the battlegrounds meant that the church bells rang out on Christmas morning across the district after three silent Yuletides. Efforts were made to ensure the many servicemen and women billeted in the district enjoyed as happy a Christmas as possible. The YMCA hall was bedecked with holly and mistletoe and a party was thrown for troops, involving some energetic team games which caused great merriment. The Mission to Seamen Rest and Holiday Home at Allendale held a house party for residents and friends, as well as numerous other events.
+
+Few families were fortunate enough to obtain a turkey for the Christmas table, but every ward in the Hexham Emergency Hospital had one. The celebrations started on Christmas Eve, with a tour of the wards by a choir of nurses whose path through the darkened wards was illuminated by coloured lanterns. Father Christmas made an appearance, accompanied unusually for the time by Mother Christmas, who distributed gifts to every patient of cigarettes, chocolate, sweets and writing materials. They went down so well that few noticed the red-coated and bewhiskered visitors were in reality the military registrar at the hospital Major R.C.H. Baker, of the Royal Northumberland Fusiliers, and the assistant matron Sister E.A. Hodgeson.
+
+### 1943
+
+The vexed question of sacrificing metal railings to be turned into tanks and warships caused a stir in Corbridge in January 1943, when a councillor complained that while ordinary people were giving up their garden fences and gates, the great gates around the homes of the local gentry were being left untouched.
+
+Councillor Edward Pigg of Corbridge, told Hexham Rural District Council there was strong local feeling that while railings had been removed from cottage gardens and terraced houses, those of the big estates, some of which were guarded by large metal gates which would yield much valuable iron, had been left in situ. He said: ‘People are getting very annoyed about this. Why should the poor people have to give up their rails, while the big estates get off scot free? Something needs to be done about it.’
+
+He was supported by Councillor M.S. Burdus, who said that on one estate alone, there were over 100 metal tree guards supposedly protecting trees which in fact were ‘as old as Methusalah’.
+
+In the King’s New Year Honours List, Merchant Navy captain John Thomson, of Allendale, was made an OBE in recognition of his heroism when his ship was not only torpedoed, but then subjected to a dive bombing attack. His vessel was seriously damaged in the U-boat attack, and there was grave danger of an explosion from the benzine fumes rising from both the ship and the sea. Captain Thomson and his crew managed to get the stricken vessel into port, but there it was again attacked by German dive bombers and suffered further damage. The citation noted that Captain Thomson had exercised fine powers of leadership during both actions and it was largely through his determination, resource and skill that the ship had been saved.
+
+![Image](Images/f0129-01.jpg)
+
+Captain John Thomson of Allendale (40) was awarded an OBE in the King’s New Year Honours List of 1943, for his bravery in saving his oil tanker after it had been torpedoed and dive bombed. There was always grave danger of fire and explosion, not only from the falling bombs, but also fumes from the cargo, with the deck and sea around the vessel awash with benzine.
+
+Also honoured was Trooper Peter MacDonald (25) of Birtley, who gained the Military Medal for distinguished bravery in saving the lives of several of his comrades in the Battle of El Alamein. Trooper MacDonald, who was serving with the Notts Sherwood Rangers Yeomanry, lost a leg in the battle.
+
+![Image](Images/f0130-01.jpg)
+
+Trooper Peter MacDonald (25) of Birtley, near Wark, was awarded the Military Medal for saving the lives of several comrades at the Battle of El Alamein. Serving with the Nottinghamshire Sherwood Rangers Yeomanry, he lost a leg in the action.
+
+Observance of the blackout in Hexham was described as ‘ludicrous’ by Councillor Joe Cullen at a meeting of Hexham UDC with particular reference to the practice of carrying large torches, which were flashed in people’s faces. He said: ‘It does not matter what time of night you are out, you are likely to meet one of these comatose cockroaches. Some of these so-called torches are not torches at all, but more like portable searchlights. I hope people are not lulling themselves in a false sense of security. This war is not over yet and anything may still happen.’
+
+Councillor J.M. Heslop grumbled: ‘I would love to know where these people with big torches manage to get their batteries ...’
+
+### Seven killed in grenade accident
+
+The biggest local loss of life in the war came at Coanwood on 21 January 1943 when seven men were killed, and seventeen others injured when a rifle grenade exploded during a training exercise. The dead were two officers, four NCOs and a gunner in an accident which was never satisfactorily explained.
+
+The dead men were Captain Mark Francis Shackle (25) of Northwood, Middlesex; Second Lieutenant Alfred James Bell (30) of Harlesden, London; Regimental Sergeant Major Herbert William Revel-Burroughes DCM (38) of Birkenhead; Battery Quartermaster Sergeant John Stanley Wilks (31) of High Wykeham; Lance Bombardier William John Wright (25) of Luton; Sergeant Raymond Porritt (32) of Darlington and Gunner Edward John Weston (32) of London.
+
+The inquest at Haltwhistle heard that a group of soldiers were being instructed in the use of the rifle grenade by Battery Sergeant Major F.J. Jenkins, and were gathered in a semi-circle around him as he explained the use of the weapon, which was supposed to fire the grenade a distance of 200 yards. The grenade was fitted to a dispenser cup and the men were told to retreat to a distance of six to seven yards away when the weapon was discharged. A witness saw the sergeant major pull the pin out of the grenade and put in into the dispenser correctly, but when the trigger was pulled there was ‘a terrific explosion and blinding flash’ and the blast left twenty-four people lying dead or injured.
+
+The battery sergeant major survived the explosion, but was lying critically ill in hospital and could not give evidence, although it was clear that the grenade had never left the dispenser cup.
+
+In reaching his verdict, Coroner P.M. Dodds said that the only possible explanations were that the grenade had not been fitted in the dispenser correctly – which witnesses said was not the case – or there had been some defect with the grenade itself. He recorded findings of death by multiple injuries through the explosion of a grenade, the cause of which was unascertained.
+
+History was made at Hexham Magistrates’ Court in January when auxiliary policewoman Greta Arthur became the first female officer to give evidence there. She told magistrates she had seen big sparks belching from the chimney of a house in Round Close in Hexham, thereby creating a breach of the blackout regulations. Defendant Thomas Cowan said the sparks were caused by his putting water on the fire to damp it down and this had set fire to the chimney. He was fined 10s.
+
+At the same court, it was reported there had been ‘considerable trafficking in clothing coupons’ in Hexham when the first case involving a breach of the Consumer Rationing Order came before the local bench. It involved 74-year-old pensioner Thomas Akenhead from Gilesgate, Hexham, 64-year-old labourer Thomas Bracken from Newcastle and Mrs N. Robson from Princes Street in Corbridge.
+
+Akenhead reported to staff at the Assistance Board that he had lost his clothing ration book from a locker at the lodging house in which he was staying. When questioned though, he admitted selling it for £1 to fellow lodger Bracken, who in turn had sold it on to Robson for 25s, spending the profit on beer. Robson was fined £10 with £2 costs, while the two men were bound over in the sum of £5 to be of good behaviour.
+
+Stamfordham farmer John Dodds of Brixter Hill was also taken to court for failing to plough out sufficient land on his farm as instructed under the Defence (General) Regulations. He was ordered to plough out 44 of the 134 acres on his farm, but had only ploughed 33\. Prosecuting on behalf of the War Agricultural Committee, barrister Richard Ellis said there was a requirement for 165,000 acres to be ploughed out in Northumberland, and if all farmers had followed Dodds’ example of failing to carry out a quarter of the work demanded, there would have been chaos.
+
+Dodds told the court he felt he had been given an unreasonably heavy allocation and, because of the weather and other issues, he had been unable to meet his target in the time available, although he had ploughed it out since. He said: ‘We had a bumper harvest – 50 large stacks of corn – which was a great contribution to the national larder. We have done all that is humanly possible to help the national cause. We have done our duty as farmers.’
+
+![Image](Images/f0132-01.jpg)
+
+After being reported missing believed killed in action during fighting in the Middle East, Captain Kit Patterson of the Recce Corps of the Royal Northumberland Fusiliers, was confirmed as being a prisoner in an Italian transit camp in July 1942.
+
+The bench did not agree and Dodds was fined £5, with five guineas costs.
+
+### Potato Week
+
+Tynedale unearthed a new weapon against the Nazis in February, with the launch of Hexham and District Potato Week when local housewives were urged to stop using bread and serve potato scones instead. The event was supported by Minister for Food Lord Woolton, who said in a telegram to the president of the Hexham branch of the Retail Fruit Trade Federation, S.F. Robinson: ‘By recognising the importance of consuming home grown food and freeing our wheat shipping space for sterner cargoes, Hexham is setting a fine example.’ He also put up a prize of two guineas for the best original potato recipe. Bakers in the district played their part by offering for sale scones, cakes and pastries, all made from potatoes, and numerous traders took part in a rhyming advertising feature on Potato Week in the Courant.
+
+Pride of place went to the ode by the West Wylam and Prudhoe Cooperative Society, whose resident rhymer wrote:
+
+Hitler said to Goebbels,
+
+The British Folk are Duds,
+
+He forgot the Tyneside Geordies
+
+Were demons for their spuds
+
+They proved it out in Egypt
+
+With Rommel on the run
+
+He wired back to Hitler,
+
+Mein Gott we had to run.
+
+Grocer W. Civil, of Wark’s contribution was:
+
+You cannot fly an aeroplane,
+
+Or command a British sub
+
+But you can defeat the Nazis
+
+By eating the local spud.
+
+Merchant E. Dawson, of Woodbine Terrace Hexham wrote:
+
+![Image](Images/f0134-01.jpg)
+
+A major drive for housewives to use home-grown potatoes rather than imported flour when preparing meals saw the launch of Hexham Potato Week with the Ministry of Food offering a two guinea prize for the best potato recipe.
+
+Save wheat and eat potatoes
+
+And help to win the fight
+
+It will aid our gallant navy
+
+And put the Hun to flight.
+
+Haltwhistle fruiterer E. Carrick wrote:
+
+Eat less bread and use more spuds
+
+For nourishment they are the goods
+
+Let the ships bring guns and tanks
+
+And earn Lord Woolton’s warmest thanks.
+
+In the accompanying editorial, the Courant wrote:
+
+‘The humble potato, the real treasure of the Incas, may be one of the chief factors in defeating the U-boats which menace our shipping. By eating more potatoes and less bread, much shipping space used for wheat importation will be released for vital war supplies. Local traders, women’s institutes and schools throughout the district and are linking up in an effort to make the food value of the common spud better known. Although sadly neglected in England, potatoes have long been the staple diet of the Irish peasantry and on the Continent they are much more widely used than in this country.’
+
+It was pointed out there was a statue in Offenberg in Germany to English sea dog Sir Francis Drake, in recognition of the fact he had introduced the potato to mainland Europe,
+
+The Potato Week proved a great success, although local councillor Miss I.M. Iveson commented: ‘I think if Lord Woolton had banned potatoes for a month, he would have achieved his objective of popularising them much better because when potatoes were scarce in the last war, it was then they were worth their weight in gold. I think we are on the last lap in this war but that is always the hardest.’
+
+A total of forty-one traders took part in a potato-related shop window competition, the winners of the five guineas first prize being Messrs. R. Wright and Son of Haltwhistle. Consolation prizes went to the London and Newcastle Tea Company of Battle Hill in Hexham and Walter Willson’s store in Prudhoe. Special commendations also went to Brough’s of Hexham and the Tynedale Nurseries.
+
+Lord Woolton’s two guinea prize for the best original potato recipe went to Mrs Stanley of Acomb House, Hexham, with her potato mould, described by the judge as being ‘a really practical war-time recipe’.
+
+Refusal to let his Boy Scouts take part in a count of wood pigeons around Hexham brought censure for District Commissioner Major T. Russell Cairns from the Edward Grey Institute of Field Ornithology, who accused him of being ‘hyper-cautious and short-sighted’. Major Cairns retorted the institute believed that wood pigeons – known locally as cushats – nested in hedges, when it was common knowledge that they preferred the tops of high trees, and he considered it too dangerous for Scouts to be involved, as well as throwing great responsibility on the Scoutmasters. He concluded: ‘I told the institute that instead of climbing high trees two or three times to count nestlings, it would be better to make just one climb and put the resultant findings in a pie.’
+
+He felt that Scouts were doing much more important National Service work locally, such as acting as ARP messengers, signallers for the Home Guard, orderlies for the YMCA and as gatherers of herbs. There had also been a rat tail collection, with one Scout alone collecting 106 tails to earn a National Service badge.
+
+The attractions of Hexham’s shops meant that people from outside the town were coming into the town by bus early in the morning and clearing the shelves of unrationed goods, complained Councillor Ned Fenwick at a meeting of Hexham UDC. He said it was ‘a proper stampede’ every Tuesday – market day – and Saturday, and by the time Hexham people went out to do their shopping, there was very little left. He said the early morning shoppers returned to the bus stand to pool their purchases and called for steps to be taken to protect the interests of Hexham residents.
+
+Chairman of the council’s food control committee Councillor Tom Wheatley said the council had no power to intervene in the matter, and added: ‘It seems to me that if people from the outlying areas can come into town by bus to make their purchases, people living in the town are not getting out of their beds soon enough.’
+
+There was a singular honour for Hexham when its Conservative MP Colonel Douglas Clifton-Brown, was appointed the ‘First Commoner of the Realm’ as the 139th Speaker of the House of Commons. He assured the voters who had first elected him Hexham’s MP in 1918 that although his new office meant he would have to spend a lot more time in Westminster, he would not be moving to London, preferring instead to remain at his family home at Ruffside, near Blanchland. He had been Deputy Speaker since 1938, and served as Speaker until 1951, when he retired, taking the title of Viscount Ruffside of Hexham in the County of Northumberland.
+
+Hexham Golf Club, scene of many county and championship events, and regarded as one of the best inland courses in the country, was facing a battle for survival. So many members had joined the forces that subscriptions were down by £530 and green fees slumped from £538 in 1938 to just £71\. Despite stringent economies, the club still had many commitments it was struggling to fill, so a £2,000 appeal for launched to secure the future of the Spittal course for the servicemen’s return when the war was won.
+
+### Wings for Victory
+
+Wings for Victory campaigns were launched in both Hexham and Prudhoe in the summer of 1943, with Hexham setting itself a target of £250,000 to provide four squadrons of Hawker Hurricane fighters, while Prudhoe was aiming for £40,000 to launch an Avro Lancaster bomber. Prudhoe was first to hit its target, raising a total of £52,039, thanks in no small measure to an investment of £15,000 from the Mickley Combined Collieries. There was also a celebratory concert at the Rio Cinema, featuring Australian soprano Florence Austral and English bass Norman Allin, along with local choir, the Prudhoe Gleemen.
+
+Hexham’s campaign was launched by the newly appointed Speaker of the House of Commons Douglas Clifton-Brown with a stirring speech about the turning tide of the war in Africa, with the Northumberland Yeomanry, of which he was a former commanding officer, doing good work as an anti-tank unit.
+
+There was a big parade through the streets of Hexham, which were packed with people as a pipe band headed a vast cavalcade of military men, the Home Guard, RAF, WAAF, ATC, National Fire Service, Girls’ Training Corps, British Legion, Civil Defence, British Red Cross, Girl Guides and Boy Scouts. There was also a smartly dressed contingent from the Women’s Land Army and the Home Guard band was on parade. Tradesmen in the town joined in by decorating their windows in patriotic style and one popular feature was the sticking of National Savings stamps on a bomb, which was later to be dropped on Germany.
+
+![Image](Images/f0138-01.jpg)
+
+Raising £250,000 to pay for four squadrons of Hawker Hurricane fighters was the target for Hexham Wings Week in the summer of 1943.
+
+The Wings for Victory Week was again a great success, with the £250,000 target in Hexham exceeded by more than £100,000\. The final total was £339,106, of which £79,206 came from National Savings certificates; £46,030 from deposits at the Tindale Ward Bank or Post Office; £54,885 through Defence Bonds; £4,615 through Savings Stamps; £67,150 through War Bonds and £86,900 through Savings Bonds.
+
+The forty-eight schools in the area were set a target of raising £5,000 between them, but in fact raised £9,941\. The thirty-nine post offices in the area brought in subscriptions of £94,089.
+
+Many places in the district exceeded their targets, including Acomb (target £1,000, total £4,082); Allendale (£6,000, £18,227); Blanchland (£1,500, £3,542); Corbridge (£10,000, £23, 607) Colwell (£150, £287 10s); Haydon Bridge (£3,000, £11,506); Humshaugh £6,000, £9,348); Newbrough and Fourstones (£759, £8,567); Ovingham (£350, £1,291); Riding Mill (£500, £11,160); Simonburn (£1,000, £1,654); Stocksfield (£12,000, £32,420) and Wylam (£16,000, £19,508).
+
+Bellingham’s Wings for Victory Week took place a week later, with a target of £40,000 to buy a Lancaster bomber. The North Tyne folk not only hit that target, but raised an additional £25,000 to provide five protective fighter planes to escort the Lanc on its raids on Germany.
+
+One of the lesser known events of 1943 was a private visit to the district by King George VI and Queen Elizabeth, who spent the night on the Royal Train on the Haltwhistle–Alston line at Featherstone. The queen, the former Elizabeth Bowes-Lyon, had family links with the Bardon Mill and Beltingham areas. Ridley Hall at Bardon Mill, now the boarding wing of Haydon Bridge High School, was owned by Francis Bowes-Lyon, the queen’s uncle, up to 1948\. He was a great benefactor to the area, carrying out a major rebuilding programme at Ridley Hall, and providing the lych gate and stained glass windows at St Cuthbert’s Church in Beltingham. He was also a survivor of the infamous ‘Wet Review’ of Scottish troops in Edinburgh in 1881 where, as Master of the Queen’s Archers, he had the honour of holding an umbrella over Queen Victoria for four hours as the rain teemed down mercilessly.
+
+### Medal winners and other local heroes
+
+Corbridge provided a double war hero in Captain John Richardson of the King’s Dragoon Guards, who was awarded a bar to his Military Cross. He was awarded the MC for his part in an attack on enemy positions south of Bir Hacheim in the Libyan desert near Tobruk in May 1942, and gained the bar following an action in the Marble Arch area of Libya when he volunteered to lead a 370-mile patrol which succeeded in cutting off a large part of the German army.
+
+![Image](Images/f0140-01.jpg)
+
+Corbridge’s Lieutenant John David Benbow Richardson, of the King’s Dragoon Guards was Awarded the Military Cross for gallantry while serving with the Eighth Army in the Middle East. He was the great great grandson of Sir Alexander James Gordon, the last surviving captain who had served with Nelson.
+
+In recognition of his exemplary service, Captain Richardson was presented with a silver cigarette case through Corbridge War Servicemen’s Gift Fund, but accepting it on his behalf, his father Judge John Richardson, of Cliffe House, Corbridge, said his son was still serving in the Western Desert. The judge said: ‘He could have been here, because he was offered a job back home as an instructor, but he said it was impossible to accept the post, because he felt he had to stay on and finish the job he had started.’
+
+There was a Distinguished Conduct Medal for Langley’s Private John Armstrong (23) of the Green Howards in recognition of his outstanding bravery at the Munasin Depression near El Alamein in October 1942, when his platoon came under attack from an enemy machine-gun post. His platoon commander was wounded and unable to continue and, with complete disregard for his own safety, Armstrong attacked the post and destroyed it, enabling the attack to continue. Later in the day, the Allied patrol was again held up by machine-gun fire and flash bombs, but Armstrong and another private stormed the position, putting it out of action and killing or wounding seven Italians. The following day, under intense mortar fire, Armstrong kept up a withering hail of fire on an enemy sniper post, killing at least one sniper and forcing the others to abandon the post,
+
+![Image](Images/f0141-01.jpg)
+
+Private John Armstrong of Langley was awarded the Distinguished Conduct Medal after destroying two enemy machine gun posts at the Munnasib Depression in North Africa. Fighting in his fifth campaign in North West Europe in 1944 though, he died of his wounds.
+
+RAF brothers Jim and Thomas Robinson travelled halfway round the world after fleeing Japanese forces following the fall of Singapore – but said that nowhere on their travels had they seen anything to compare with Hexham. Warrant Officer Jim and Corporal Thomas fled Singapore for Java when the island fell, but the Japanese were soon swarming all over Java too, and the brothers became separated, one finding his way to Australia and the other to India. Thomas stayed in Australia for six weeks before travelling to Ceylon, from where he went to Bombay, and a happy reunion with brother Jim, whom he had not seen for eighteen months before making their way back to Hexham.
+
+Jim, a former member of the machine room staff at the Courant, said: ‘No matter where we were in the world, we always seemed to find a copy of the Courant, which was read with the greatest of interest. The Courant seemed to follow us wherever we went.
+
+‘Before the war, we used to get copies of the Courant when they were three weeks old, but on one occasion we got one which had come off the press a full sixteen months earlier. That did not matter; it was read with great interest just the same.’
+
+The invasion of Sicily saw Hexham’s Lance Corporal Tom Newton in the thick of the action with the Highland Division machine gunners and during the fighting, he and just one fellow soldier captured seventy Italian prisoners. The incident occurred when the Highlanders had winkled two Italians out of a slit trench and they pointed to a wadi – a dried up river bed. The platoon sergeant sent Newton to investigate with another soldier and the seventy men came out with their hands up.
+
+![Image](Images/f0142-01.jpg)
+
+Hexham’s Lance Corporal Tom Newton, who took seventy Italian prisoners hiding in a wadi in Sicily.
+
+Advances in Italy brought mixed feelings for Lance Corporal George Clark, who had been captured during the Battle of Knightsbridge, near Tobruk, in 1942 while serving with the Recce Regiment of the Royal Northumberland Fusiliers. He had been held in an Italian prisoner of war camp for twelve months, only to be transferred to another camp in Germany. In a letter to his wife Doris in Round Close, Hexham, he wrote: ‘I had an idea it might not be long before we were back home, but that has been knocked on the head. However we are in a very decent camp, and are much better off for grub. All I want now is some sort of work to fill in the time, which drags heavily.’
+
+Lance Corporal Clark was one of the twenty-three signatories from the Tynedale area of a letter from the Italian camp, singing the praises of the various organisations in Hexham working on behalf of prisoners of war. The letter said: ‘We are very grateful for all that is being done. We are all fit and well and looking forward to an early return to the Heart of All England. Often, we wish we could see the Hexham Courant.’
+
+Writing from the same camp, Stalag IVB, after being transferred from Italy, Corporal Leonard Ward, also of Hexham, said the food and treatment in Germany was far better than it had been in Italy.
+
+![Image](Images/f0142-02.jpg)
+
+Haydon Bridge’s Sister Jessie Waugh was a popular figure when she was among twenty-one British nurses who landed in Sicily, not only providing nursing services, but also entertaining the troops in concerts, where her talents earned her an invitation to join the Entertainments National Service Association, better known as ENSA.
+
+![Image](Images/f0143-01.jpg)
+
+Taking a break from the fighting in the Middle East by doing a little boating are Corporal E. Horlington of Hexham (left) and Private F.H. Ward of Haydon Bridge (right) with Regimental Sergeant Major Warner Smith of Fulham in the centre.
+
+Back on the home front, there was sadness when a 21-year-old member of the Women’s Land Army was found dead in a deep pool in the Devil’s Water at Steel in Hexhamshire. The girl, from the Thropton area, had been working at Slaley, when she went for a cycle ride and never returned. She left a note addressed to her mother, saying: ‘I am sick of life – everyone is against me. They hate me, and I cannot go on; I may be happy where I am going.’ A verdict of suicide was returned by the coroner.
+
+### Ammunition explosion at Hexham Station
+
+Hexham escaped relatively unscathed from the Nazi bombs which fell on the industrial complexes of the Tyne, Tees and Wear during World War Two, but it was British ammunition which caused the town’s only loss of life on the home front.
+
+Three soldiers were killed in an explosion at Hexham Railway Station as they were unloading ammunition from a train. No-one really knows the full story of what happened on that fateful day, 9 September 1943, but there were some remarkable examples of heroism, as worthy of recognition as anything happening overseas. What is known is that a box of ammunition was dropped, and exploded, killing two 19-year-old Royal Scots Fusilier officers and a 24-year-old driver from the Royal Army Service Corps.
+
+Lieutenant John Middlemass of Leven, Fife, and driver Stanley Dowse of Peterborough, were killed instantly. Lieutenant Patrick Wilson of Peebles died later in Hexham hospital. Another soldier, who was caught in the blast, was injured, and a civilian, Mrs Daglish, who was standing outside her nearby home, was struck by a fragment of exploding ammunition.
+
+All rail traffic was held up and, owing to the great danger of further explosions, all houses in the vicinity were evacuated. Commuters arrived home many hours late, after being taken off the trains further up the line and brought home by bus. Fire heightened the danger and military personnel were joined by the National Fire Service and the police in battling the flames licking round the ammunition boxes.
+
+At great risk to themselves, a group of five soldiers uncoupled one of the fully laden wagons, and dragged it to safety. Bomb disposal squads worked throughout the night to clear the station premises of unexploded ammunition, which included various types of infantry armament, including hand grenades.
+
+Shunter Robert Henry Thompson (50) and his two colleagues, engine driver Robert Norris and fireman Edward Liddle, also played their part. Shunter Thompson attempted to withdraw the loaded ammunition wagons from the loading dock. He intercepted a pilot engine and went back to the four ammunition wagons, coupling them up so they could be drawn away. By this time, some of the wagons were on fire and Thompson had to push away burning material from the roof of one wagon with his shunter’s pole.
+
+After the wagons had been well isolated, Thompson uncoupled them from the pilot engine and withdrew. At the inquest which followed, a witness said he had seen a box which had been placed on the back of the lorry slip off on to the ground. The driver appeared to have slipped on the cobbles. The box fell only two or three feet, but exploded immediately. Minutes afterwards, there was a second explosion from the rear of the Army truck, followed by a fire. Ammunition and phosphorus was strewn about and throughout the incident, there were minor explosions from both the railway wagon and the Army truck, as the fire raged.
+
+What caused the explosion remained a mystery, however, as experts told the inquest that the ammunition should not have gone off merely through the box being dropped. Regimental Sergeant Major Thomas Kirby of the Royal Scots said the ammunition was in sealed cases and the grenades did not have the detonators inserted. Asked for a theory for the explosion, RSM Kirby told the inquest: ‘I cannot account for it at all.’ When pressed, he could only assume there was a problem with a constituent of the ammunition, or a defect in it.
+
+Shunter Thompson’s bravery resulted in his being awarded the British Empire Medal, while Norris and Liddle were also highly commended. Their actions were regarded as being ‘of the highest order’ by the General Officer Commanding Northern Command, who thanked them on behalf of the Army.
+
+There was also formal recognition of the gallantry of the soldiers who were involved in uncoupling the carriages. British Empire Medals ‘for gallantry during the explosion of ammunition at Hexham’ went to Fusilier William Chassels and Fusilier Andrew McMichael, while commendations went to Lance Corporal W. Symington, Lance Corporal Jimmy Saunderson and Fusilier J. Montgomery.
+
+Unhappily, neither of the BEM winning fusiliers survived the war. William Chassels was killed in Normandy on 16 July 1944\. He was 21 years old and came from Hamilton, Lanarkshire.
+
+Andrew McMichael was killed during the Rhine crossing on 24 March 1945\. He was 37 and came from Maybole, Ayrshire.
+
+Ayrshire man Lance Corporal Jimmy Saunderson did survive the war, only to drown along with two others trying to cross a river in the Newcastle area some years later.
+
+One of the more unusual cases to come before Hexham Magistrates was heard in October, when the Acomb Coal Company issued summonses against forty-seven pitmen for breach of contract, when they failed to turn up for work. The case was brought against mine workers aged between 19 and 66 who hailed from the West Wylam, Prudhoe, Mickley and Branch End districts, who were taken to work at Acomb Colliery by a specially laid on bus.
+
+On 11 August however, a new bus was put on the run, and the operator asked the twenty-two men on the back shift on board to get out in the coalyard, 200 yards away from the pit as he did not wish to risk scratching his new vehicle on the tree branches which overhung the lane on the way to the pit proper. The men refused to get off and after an impasse, said they were not prepared to work under such circumstances and went home.
+
+The twenty-five nightshift men coming up from underground downed tools in sympathy when they heard what had happened. The company claimed £1 in damages from each man, but the case was withdrawn following negotiations with the Northumberland Miners Association, which negotiated a settlement whereby each man had to pay 10s, to be deducted from their wages at 2s 6d per week.
+
+Hexham played its part in a scheme to help exhausted women war workers from Tyneside, with the opening of a rest break centre at West Quarter, where accommodation was provided for forty women. The centre was opened by George Tomlinson, the joint parliamentary secretary to the Ministry of Labour and National Service,
+
+Mr Tomlinson said the centre would be invaluable as it would provide a fortnight’s holiday for workers before they became too ill and suffered a complete breakdown and thus they saved thousands of valuable industrial hours. Chairman of the North East Rest Breaks Committee, Dr Sheila Bevington, said that in the fifth year of the war the need for rest breaks was psychological as well as physical. She said the Hexham centre was particularly needed as the stamina of North East war workers was poor – a reflection of the under-nourishment of girls and a legacy of the ghastly period of unemployment and black depression in the area.
+
+![Image](Images/f0147-01.jpg)
+
+The ship’s company of the Canadian destroyer Restigouche gave a helping hand with the harvest in the Beaufront and Anick area, mingling with the locals while the ship was in for a refit at Jarrow further down the Tyne.
+
+Two Canadian seamen, who lent a hand with the harvest in the Anick area while their ship was docked in Jarrow for a re-fit, celebrated their pending return to sea rather too well at one of the local pubs. Able Seaman Samuel Patton of Toronto and Leading Seaman James Fitzgerald of Montreal, decided to take a couple of souvenirs in the form of two bronze roe deer, which they wrenched from their settings in the Italian gardens at Beaufront Castle. The deer were each valued at £50 and the damage caused in their violent removal could not be repaired. When questioned by police, the men at first denied any involvement, but later admitted taking one each.
+
+Police Superintendent William Goodfellow told Hexham magistrates that the two men had done exceptionally good work in a voluntary capacity with the harvest and were well liked and well treated by the local community. It was therefore unfortunate that they had brought disgrace on themselves and on the ship’s company by their behaviour.
+
+Representing both men, solicitor K.H. Bolam said that after taking more drink than was good for them, they had gone to the castle, where people had been very kind to them, and decided to take the deer.
+
+Mr Bolam said: ‘When the men came to their sober senses, they were deeply embarrassed to find they had stolen the deer. How, in view of their weight, they managed to get them back to their billet is a matter of some conjecture.’
+
+He said they were very sorry for their actions, and were anxious to pay for repairs. They had spent several nights in Durham Gaol as a result of their actions and that had had a lasting effect on them. He also pointed out that while the landowner, Captain Harold Cuthbert, was serving abroad, his mother Lady Rayleigh, who had power of attorney, was not pressing for a heavy sentence, nor was she seeking any compensation.
+
+The magistrates agreed that the spell in gaol had been sufficient punishment for the theft and dismissed the charges. He thanked the men for doing their bit for Britain by helping with the harvest.
+
+The men were from the Canadian destroyer HMCS Restigouche and the entire crew lent a hand with the harvest at the castle and at nearby Anick Grange.
+
+### Killed by a ‘rogue’ balloon
+
+On Thursday, 4 November 1943, two barrage balloons – used to prevent low level attacks and pinpoint bombing by the Luftwaffe – escaped from their moorings near the coast and drifted inland over Tynedale. One of the rogue balloons came to a halt over the Allendale fells near Sparty Lea, with its mooring ropes becoming caught up in a drystone wall.
+
+The first balloon was quickly deflated by police officers, who then set off to deflate the second which had come to rest further up the fell. A number of onlookers gathered to watch the operation, and one of them, Robert Batey (47), a council employee from Broadgate Cottage, Sinderhope, decided to have a closer look. Mr Batey was seen entering the field and kneeling down next to the balloon and seemingly start to roll it up. However, the balloon then exploded, fatally wounding him. He died later in Hexham Hospital from his injuries.
+
+Giving evidence at the inquest which followed, Marjorie Gilmour, of Low Hayrake, Sparty Lea, said that as the police left the first balloon they warned people to keep away from it. The crowd, including an elderly man and two children, were standing behind a wall looking at the balloon when it exploded.
+
+John Wright (79) of Thorndene House, Swinhope Mill, Sparty Lea, was taken to the Royal Victoria Infirmary in Newcastle suffering from a lacerated left eye, as was Annie Featherstone (28), also from Swinhope Mill, who suffered multiple injuries. Seven-year-old Vera Nixon of Chapel Cottages, Allenheads, was taken to Hexham Hospital suffering from slight lacerations, while Harold Nixon (14) of White Ridge, Sparty Lea, was taken to Shotley Bridge Hospital suffering from a puncture wound to his chest and numerous shrapnel injuries.
+
+Speaking in 2006, Mr Nixon, then 77, said he was in hospital for almost two months after the explosion and still carried the scars. ‘I remember there were the two barrage balloons that got caught up on the moor,’ he recalled. ‘There were a few people around and the police were there. They had got the gas out of one but then all of a sudden there was a bang, and the next thing I knew I was 50 yards away! I was in hospital at Shotley Bridge for seven weeks and I still carry the shrapnel today.’
+
+After the explosion the balloon was on fire at the rear end and gradually the flames spread to the nose until it was entirely burnt up. An expert from the Air Ministry told the inquest that he thought the explosion could have been caused by a small pocket of gas and air in the balloon which had been ignited by friction. Some versions of barrage balloons carried small explosive charges that could be set off by entangled enemy aircraft to ensure their destruction, and this was another possible cause of the explosion.
+
+### Local heroes in action
+
+The fighting spirit of Prudhoe’s Private William Henry Charlesworth, serving with the South Staffordshire Regiment, earned him the Military Medal for conspicuous gallantry in Sicily. He was part of a group who took part in a glider attack, the objective of which was to capture a bridge called Ponte Grande, but known by the troops as Waterloo Bridge.
+
+The bridge was captured and demolition charges were removed and telephone wires cut, ensuring that the vital bridge could not be blown. Fifteen minutes after the capture of the bridge, a party of ten German soldiers in a lorry tried to force the northern end of the bridge, but Charlesworth swung into action with his Bren gun, taking out five of them. When his magazine ran out, he gallantly charged the remainder using his Bren as a club, and in doing so helped to ensure that the work of removing the charges was not interrupted.
+
+![Image](Images/f0150-01.jpg)
+
+Private William Henry Charlesworth of Prudhoe was awarded the Military Medal for gallantry in Sicily when he refused to surrender to the enemy, despite being shot in the stomach.
+
+On another occasion he ran 50 yards under heavy fire with his Bren to enable his section to disengage themselves from the action. During the afternoon of the following day Charlesworth was wounded in the stomach and remained 24 hours without medical attention, spending his time cleaning and maintaining his Bren. When the bridge was temporarily recaptured by the enemy, he refused to surrender and remained in hiding, later rejoining his platoon.
+
+Air gunner Flight Sergeant George Milburn (25), a native of Allendale, living in Branch End, was awarded the Distinguished Flying Medal for his cool actions over enemy territory, where he was involved in over forty operational flights, after switching to aircrew following two and a half years with the balloon barrage. The citation noted that during an attack on Hanover, his aircraft was trapped in the beam of a searchlight for eight minutes, when it was under attack from German fighters. Milburn’s cool directions and accurate fire, even when he was dazzled by the searchlight, enabled his pilot to take the necessary evasive action.
+
+Stretcher-bearer Private Ernest Hulse, of Corbridge, was also given the Military Medal for outstanding bravery in rescuing wounded men when under heavy shellfire and mortar fire in a battle in Italy.
+
+### 1944
+
+There was a grim start to 1944, with two major tragedies in rapid succession causing much distress throughout the district. The Courant of 22 January reported not only the sinking of HMS Tynedale, but also the fatal injuries sustained by popular Hexham Queen Elizabeth Grammar School master and Tynedale rugby star K.W.D. Hodgson, while on exercise with the Home Guard.
+
+![Image](Images/f0151-01.jpg)
+
+Tynedale Rugby Club star and Hexham Queen Elizabeth Grammar School history master Major K.W.D. Hodgson, who died after being caught up in an explosion at a Home Guard training exercise.
+
+Major Hodgson was the commanding officer of the headquarters company of the Hexham Home Guard, and on 16 January 1944, he was in charge of a practice and demonstration session of Home Guard weapons. The training session took place at the company’s weapons training school, where several practices were carried out using Blacker Bombards (otherwise known as a spigot mortar, an anti-tank device), bombs and other explosive devices. The session ended when Major Hodgson laid a mine to demonstrate its action to the men, assisted by Company Sergeant Major George Douglas.
+
+Douglas, a railway signalman in ‘civvy street’, told the subsequent inquest that he had helped the major set the mine, which was buried in the ground, with wires attached so that it could be exploded by remote control. They then walked some 20 yards away from the mine and took cover behind an embankment, which was some 15ft below the level of the mine. The mine was of the type that exploded on the ground and then launched a projectile which exploded in the air.
+
+Douglas said: ‘We both took cover, and then I heard an explosion, which was quickly followed by second one, so I knew the mine had exploded. I had my head covered by my arms all the time and, after the second explosion, I asked Major Hodgson if he was all right. I received no reply.’
+
+Douglas went over and found him lying face down on the embankment, and when he turned him over, it was clear he had been seriously injured. There was a puncture wound to his forehead just above the bridge of his nose and he was semi-conscious.
+
+Other members of the Home Guard gave first aid, before he was taken to Hexham Hospital and later transferred to another hospital in Newcastle. Major Hodgson fought for his life for thirteen days, but eventually succumbed to his injuries. The official cause of death was septic meningitis following a compound fracture of the skull.
+
+Douglas told Newcastle City coroner Sir Alfred Appleby that the mine had not exploded in the usual way. The mine was supposed to explode with an umbrella effect, but the shrapnel had only come down from two directions, instead of spreading all round.
+
+‘Two or three inches either way, and the piece of shrapnel which caused the fatal injury would have missed Major Hodgson,’ he said. Asked for an opinion on what had happened, Douglas said it was possible Major Hodgson had mistaken the second explosion for the first and had looked up too soon.
+
+A verdict of accidental death was recorded, but the tragedy cut short a remarkable life, at just 38 years old.
+
+His full name was Kingsley Wallsworth David Hodgson, but he was always known only by his initials. He was one of the finest sportsmen in Tynedale’s history, earning undying fame as the captain of Tynedale Rugby Club first XV when they won the prestigious Northumberland Senior Cup for four years in succession from 1933-36\. He had the rare distinction of having played rugby for three different counties, captaining Northumberland against Cheshire in 1933, as well as playing for both Yorkshire and Durham.
+
+Although he had officially retired as a player, taking over as team secretary, he still turned out for Tynedale in war-time fixtures. He was also a cricketer of no mean ability, having played many forceful innings for the Tynedale club. He was the history and games master at QEGS for thirteen years, and his memorial service at Hexham Abbey was one of the best attended of the year.
+
+Also in January, another member of the Courant editorial staff, Sergeant Pilot Harry Annan, was killed in action on flying duties. He was flying a Halifax bomber on a training exercise, crashing just two minutes into the flight, ending upside down in the River Ouse near Fairfield Sanatorium below Skelton, four miles from the centre of York. He was one of ten members of the newspaper’s staff in the RAF out of a total of nineteen serving in the forces.
+
+One of the Courant staff did find use for his Beaumont Street skills though, with reporter Sidney Foxcroft, who was serving as a corporal with the Royal Corps of Signals, being appointed a forward area reporter with the Eighth Army News, and the forces’ newspaper, The Crusader.
+
+In a letter to his parents in Windsor Terrace, Hexham, Corporal Foxcroft said: ‘The last five days have probably been the most interesting since I joined up. I have travelled extensively and am hopeful of making regular visits to our forward positions collecting material for articles. Of the editorial staff, I am the sole member forward, and anxious to prove my worth. I spent today in the most forward of our hospitals and with the nurses as interpreters, chatting with men of all nationalities evacuated from the front line.’
+
+![Image](Images/f0153-01.jpg)
+
+Sergeant Harry Annan, a former member of the Courant editorial staff, who was killed in a flying accident.
+
+Before the war Sid Foxcroft was much involved with the Scouting movement. A King’s Scout himself, he was Cubmaster of the 3rd Hexham pack of Wolf Cubs. After the war, he returned to journalism proper, and for many years, was the North East correspondent of the People newspaper.
+
+There was some good news in January though, when Fusilier William Jasper Carruthers (33) from Langley, arrived back home after escaping from an Italian prisoner of war camp and trekking over 200 miles, much of his journey taking place behind German lines. An estate worker with the Straker family on the Leazes Estate at Hexham, he joined the Royal Northumberland Fusiliers at the outbreak of war serving in France and being evacuated from Dunkirk, before returning to the fray in the Middle East, where he was captured at the Battle of Knightsbridge.
+
+![Image](Images/f0153-02.jpg)
+
+Fusilier William Jasper Carruthers of Langley, who trekked 200 miles back to Allied lines after escaping from an Italian prisoner of war camp.
+
+He was held in prison camp PG53, but on the night of Italy’s capitulation and the overthrow of Mussolini, 500 new guards were drafted in to guard the prisoners. By the next day all the guards had disappeared and the prisoners had broken down the fences surrounding the compounds. Most inmates took to their heels, only to be recaptured very quickly when German troops arrived to round them up and take them to Germany. However, Carruthers, who was with two other men, managed to avoid recapture but after ten days on the run, the three decided they would be better on their own and went their separate ways.
+
+Carruthers told the Courant: ‘I managed to get away with two Red Cross prisoner of war parcels, which kept me going for quite a while, but after that I had to forage for food as best I could. At times the going was not too difficult, as the hill slopes were full of grapes and peaches.
+
+‘The Italians we met were mostly friendly and gave us food and shelter at great risk to their own personal safety. They did not know whether I was English or German. When they found out I was English, they warned me of any Fascists nearby and how to avoid them. I had many narrow escapes from being retaken. For four weeks of the seven I was at liberty, I was behind German lines.’
+
+He managed to find his way to Switzerland and rejoined the Allied lines.
+
+Not all escapes from Italian PoW camps ended so successfully, Company Sergeant Major David Forster (29) of the Royal Northumberland Fusiliers, from Hexham was shot and killed as he tried to escape following his capture at Knightsbridge in June 1942\. Like his father, Sergeant David Forster – a First World War Military Medallist – he was a prominent member of Tynedale Rugby Club. He was posthumously mentioned in despatches for gallant and distinguished conduct in the Middle East campaign.
+
+![Image](Images/f0154-01.jpg)
+
+Shot and killed while trying to escape from an Italian prisoner of war camp, Company Sergeant Major David Forster of Hexham was posthumously mentioned in despatches for gallant and distinguished conduct in the field during the Middle East campaign.
+
+Land Army girls were blamed for getting the licensee of the Crown Inn at Stannersburn into trouble. A visit to the North Tyne pub by weights and measures officers found that the gin being sold by landlady Mary Wear Nevin had been significantly watered down, the strength being some six per cent less than it should have been.
+
+The magistrates were told that water had been added to the gin because Mrs Nevin felt that in its neat form, the gin was too strong for the Land Army girls who frequented the inn. The inspector told the court: ‘Mrs Nevin may have felt she was looking after the land girls by ensuring they did not get too much strong drink, but she was quite unjustified in watering down the gin.’ Mrs Nevin was fined £4, with 15s costs.
+
+## CHAPTER SIX
+
+## The Empire Strikes Back
+
+Many Tynedale men were involved in the D-Day landings on 6 June, as the 50th (Northumbrian) Division was in the spearhead of the landing parties on the Normandy beaches. As the invasion gathered pace, General Bernard Montgomery singled them out for special mention.
+
+Journalist turned soldier Captain Donald Leslie told the Courant that Northumbrians had played a big part in winning the last war and would do so again over the next few months. Describing the D-Day landing fleet, the greatest armada of invasion vessels ever assembled, he said:
+
+‘It was a stupendous spectacle, with ships big and small, stretching as far as the eye could see – from 10,000 tonners to little motor launches – and with a mighty air umbrella over us. We had been warned to expect attacks from both Nazi E-boats and U-boats but the night passed almost without incident – a lasting tribute to the support we got from both the Royal Navy and the Royal Air Force. Just before dawn, the sky flickered with light and we knew the bombers were finding their targets.’
+
+As the coast of France neared, Captain Leslie recalled hearing an unmistakably Northumbrian voice calling out: ‘Wah not far away from them noo. It’ll not be lang afore wah’re amang them agyen.’
+
+The 50th Division attacked over a 5,000 yard front, onto Gold Beach which was studded with steel spikes and deadly weapons buried beneath the water line. Although they were exposed to terrible fire from the shore, they succeeded in getting back onto French soil four years after the Dunkirk evacuation. Captain Leslie said:
+
+‘We did it the hard way, because this was not a dry-shod landing. We went into the sea, some of us up to our waists, some up to our necks, and others out of their depth completely, but by 2pm, we had twelve battalions ashore, and by last light, a beachhead had been established, and we had made inroads three to four miles inland.’
+
+He paid tribute to a Private Clark of Quatre Bras, Hexham, who, although wounded, asked to be left behind on the beach so that he would not hamper his comrades as they advanced.
+
+### Salute the Soldier fundraising
+
+The invasion coincided with timely Salute the Soldier fundraising drives in virtually every town and village across the district. The stirring slogan was: ‘Repay your debt for the mighty deeds achieved by our soldiers by lending to the point of great personal sacrifice.’
+
+There were parades and special efforts – and the money poured in. At Hexham, the week was launched by the Speaker of the House of Commons, the town’s MP Colonel Douglas Clifton Brown, who said he was delighted to see American GIs in the phalanx of uniforms on parade through the town centre. Colonel Brown said: ‘I would like to offer them a warm welcome and to say how proud we are that these gallant allies are with us today. You have probably read how well they are doing across the Channel, and how well they did in Italy. We are proud to serve under a great American, General Eisenhower, one of the world’s great generals.’
+
+![Image](Images/f0157-01.jpg)
+
+Mickley’s Flight Sergeant Sidney Ross Anderson was awarded the Distinguished Flying Medal for his role in bombing operations over enemy occupied territory. He was a member of the RAF Dambusters team as well as being involved in the sinking of the German battleship Tirpitz in a Norwegian fjord. He was killed in action in January 1945 when his aircraft was lost in a raid on U-boat nests at Bergen in Norway.
+
+Hexham’s target for the patriotic effort was £275,000, which was to be used to maintain an infantry battalion of the 50th Division for a year. The project was launched with a parade involving units of the Royal Navy, the Army. Home Guard, ATS, RAF, WAAFs, Civil Defence, NFS, British Legion, Red Cross cadets, Scouts and Guides, Salvation Army, Boys’ and Girls’ Brigades, the Land Army and the NAAFI, among others, in a parade led by the Hexham Home Guard band.
+
+A daily update of the Hexham total was given and on the first day alone more than £106,000 was pledged, the total being announced by seven-year-old Barbara Armstrong, of Hexham Infants School, at a Merrie England day of Maypole dancing and others festivities.
+
+There was a fitness display by the fire service and Home Guard despatch riders gave a display in the Sele. By the end of the week, the total was £413,875, as Hexham exceeded its target by some distance. It was the same across Tynedale, as every family and business dug deep to support the cause. At Bellingham the target was £45,000 to buy three Churchill tanks and the total was £70,000, raised through whist drives, dances, football matches, gymnastic displays and a performance by the Flares and Flashes Concert Party from Bellingham.
+
+Targets across the district were: Acomb £2,500, to be achieved through efforts including a concert by the Home Guard band, comic football match and fancy dress parade; Allendale £6,000, through a concert by the band of the Royal Northumberland Fusiliers; Blanchland £1,000; Corbridge £15,000, through concerts, dances and a garden fete; Fourstones and Newbrough £5,000, through five-a-side football match, concerts, treasure hunt and bowling tournament; Haydon Bridge £5,000, to be achieved through a barn dance, lantern lecture, sports day and whist drives; Stocksfield £20,000, with a sandcastle competition, whist drives, children’s sports, a team shooting competition and a concert by Prudhoe Gleemen; Riding Mill £10,000 through a dance, drumhead service, variety concert, film show, cricket match, children’s sports and gymkhana, and Wylam £15,000 where special events included a display of Morris dancing,
+
+Virtually all exceeded their targets as a note of optimism started to creep into the everyday life of the district. It was agreed the saving would go on though, as hardly had the Salute the Soldier cash been banked than a new drive was launched to raise money to replace lost HMS Tynedale with another destroyer bearing the same name within six months. The Admiralty though declined the offer, pointing out it was not possible to name naval vessels with regards to local savings campaigns. Ships could only be named in accordance with pre-arranged schemes.
+
+Life went on though and a 31-year-old woman from Haydon Bridge, Dorothy Charlton, was jailed for two months for refusing to take up work as a shorthand typist as it would clash with her beliefs as a Jehovah’s Witness. Chairman of the Hexham bench J.M. Heslop said Charlton’s stance was a ‘rank defiance of the law’.
+
+A sentence of three months with hard labour was imposed on Russell Alexander, of Allendale, a 22-year-old painter and decorator, who refused to take up a job as an agricultural labourer as required by the National Service Office. He had already served a year for refusing to submit himself for medical examination, but Alexander said he was a pacifist and refused to take any part in the war effort.
+
+A private in the Royal Army Ordnance Corps was fined 10s for driving an army wagon to the danger of the public, and a further £1 for being drunk in charge of the vehicle. John Philip Metcalfe (36) was seen driving the liberty wagon through Acomb at excessive speed, on the wrong side of the road, with his offside wheels in a ditch. He travelled in the ditch for 60 yards, before hitting a telegraph pole, which was snapped in half, and then mounting an embankment. The vehicle then veered to the opposite side of the road where it crashed through a garden fence and came to a halt festooned in telegraph wires and pieces of broken fence.
+
+The owner of the fence came out to remonstrate with Metcalfe, who refused to get out of the vehicle, but reversed it back onto the road before setting off towards Hexham at a furious pace, swaying from side to side. His journey ended when he failed to take the bend at St John Lee corner and crashed through the fence into a field, where he ploughed on for 60 yards before coming to a final halt. When he tried to get out of the vehicle, he fell to the ground and was clearly totally drunk.
+
+Speaking on Metcalfe’s behalf at court, solicitor John Baty said that he was not used to drinking, and his condition was brought about by ‘excessive treating’ by other people. An officer from his regiment told the court that on his usual pay, Metcalfe would have been unable to afford to buy the amount of liquor he had clearly consumed.
+
+Northumberland Quarter Sessions heard the tale of a man who had lost his wife and two children in the London Blitz, and found himself in Catton where he was given free board and lodgings by a kindly widow. Labourer Arthur Wharton (54) of no fixed abode, responded to her kindness by stealing a gold watch, silver cigarette case and other items together worth £30\. He was sentenced to four years’ penal servitude.
+
+The first recipient of an award from the Bellingham Welcome Home Fund was 19-year-old Corporal James Daley, of the Seaforth Highlanders, who was awarded the Military Medal for gallantry in action in Italy. During a period of heavy fighting, he saved many lives by silencing two German machine-gun posts. He had already had spells in hospital after being wounded twice. He was presented with a cheque for £30 by the fund in a ceremony at the town hall, along with another cheque from the Bellingham company of the Home Guard, of which he had been a member before joining up. The presentations were followed by a party at the Black Bull Inn, where he lived with his mother and stepfather.
+
+![Image](Images/f0160-01.jpg)
+
+Corporal James Daley (19) of Bellingham was awarded the Military Medal for gallantry in Italy, where he silenced two machine gun posts. He was twice wounded and spent time in hospitals.
+
+A soldier from Wall owed his life to the new technique of plasma transfusion, it was claimed. Trooper N. Craig lost both legs when the slit trench he was occupying at Anzio in Italy took a direct hit from a German 88mm shell. He was suffering catastrophic blood loss as well as shock when he was carried into a casualty station, but after an emergency plasma transfusion, he made a remarkable recovery. Within ten days, he was well enough to be carried out of hospital on a stretcher to watch a football match.
+
+### Racketeering at Haltwhistle
+
+A major fiddle was uncovered at Haltwhistle, where a spot check on the stores of an army unit stationed in the area found that enormous quantities of property was missing. As a result, sixteen local people found themselves before magistrates charged with unlawful possession of everything from army clothing and blankets to a iron bed, complete with mattress, all the property of HM War Department.
+
+Police Superintendent William Goodfellow told the town’s magistrates: ‘There has been what may be described as a proper ramp in the buying and selling of army property in Haltwhistle and it has been going on for some considerable time.’
+
+The racket came to light when an army unit based in the Haltwhistle area moved on and a large discrepancy came to light when an audit was made of the base stores. It was soon established that it was common practice for Haltwhistle people to buy whatever property they needed from willing soldiers. Search warrants were obtained and property recovered from various homes included army blankets, socks, shirts, towels, pullovers, wellington boots, khaki tunics, boots, greatcoats and even a complete bed and mattress. The bench was shown women’s and children’s coats which had been made from army blankets, as had a child’s dressing gown.
+
+Sixteen people – eight men and eight women – appeared in court, fifteen of them pleading guilty to receiving stolen goods, and fines totalling £62 were announced by chairman of the bench J.R. Blackett-Ord who said the magistrates took a serious view of the wholesale theft of government property and were determined to put a stop to it.
+
+At a later court, four more civilians from the Haltwhistle area were convicted of possessing Army property including boots, socks, shirts, blankets and greatcoats. The officers who had conducted the case, Detective Constable Scott and PC Halliday, were commended by the bench for the diligent work in unravelling a complex case of wholesale thievery.
+
+Heralded by a peal of bells from the Abbey, Hexham’s second Home Holiday Week saw 13-year-old Betty Ambler, whose parents ran the Sun Inn in Fore Street, crowned Holiday Queen in a ceremony in the Abbey Grounds, which was followed by a band contest organised by the Northumberland Band League.
+
+A rabbit show in St Wilfrid’s Institute attracted 134 entries, and other attractions included a sword dancing display by the 2nd Hexham Girl Guides and a gymnastics display by the 3rd Hexham Presbyterian Scout Troop, as well as a pantomime ballet. There was a baby show and a walking contest staged by the Hexham Home Guard, over a course between Dilston, Corbridge and Beaufront, won by 18-year-old Home Guard George Elliott, of the Whitley Chapel company of the Home Guard in a time of ninety minutes, beating forty-seven other competitors.
+
+A Holiday Ball at the Queen’s Hall attracted more than 500 people to dance to the music of Jos Q. Atkinson and his Orchestra. On the sporting front there was six-a-side football and rugby sevens, as well as the novelty of a display of baseball in the Abbey Grounds provided by locally based American troops with a commentary explaining to baffled locals just what was going on.
+
+Meanwhile the real fighting was continuing on many different fronts. Lieutenant John Rudd Mackie of Fellside, Corbridge, was on patrol in the Tilly–Caen sector, when he captured two Germans. However, he was then injured when a trip wire activated a German booby trap and the two prisoners tried to flee. Despite his injuries, Mackie managed to open fire with his Sten gun and winged them both, allowing them to be recaptured. He was the holder of a certificate signed by Field Marshal Montgomery for outstandingly good service, but was killed in action just weeks after the foiled escape bid.
+
+There was a Distinguished Service Order for Brigadier R.C. Osborne Hedley, for his exemplary leadership of an Indian Army brigade fighting the Japanese in the Chin Hills of Burma, notably at the Battle of Sakawng Hill, one of the key turning points of the war in the Far East. Hedley’s Gurkha troops carved their way through impenetrable jungle to outflank the Japanese, at one stage using their rifle butts to create an improvised ladder to scale cliffs and open up the road to Imphal.
+
+Escapees from Italian prison camps following the capitulation were starting to return to Tynedale after many months on the run, hiding from the Nazis. Among them was Captain Kit Patterson, of the Royal Northumberland Fusiliers, who made a 250-mile trek back to Allied lines, which took nine and a half months. He was one a party of five who escaped; the other four were all recaptured. He was delayed by weather and lived on his wits in the hills, whilst being fed by Italian peasants, whom he found very friendly and helpful. The first thing he noticed on his return to Hexham was the fact that all the railings had disappeared from around buildings.
+
+![Image](Images/f0163-01.jpg)
+
+Sergeant John Oswald Nolan, of Henshaw, who used his ‘best Italian’ to trick Nazi troops after escaping from a prisoner of war camp.
+
+Another escapee was Sergeant John Nolan, of Henshaw, who was also at large for nine months, running the gauntlet of German patrols. On one occasion he was confronted by a party of German troops on bicycles, but he just waved his arms and jabbered at them in mock Italian and they allowed him to go on his way. After that he took care to keep away from main roads and head for freedom under the cover of hedges and woodland. Like Captain Patterson, he was looked after by locals, who shared their meagre food supplies with him. He worked for one Italian family who broke down and wept when he said he was heading for home. Having been held at prison camps in Tripoli, Brindisi and Macerata, he said the food in many Italian camps was very poor and had it not been for Red Cross food parcels, many British prisoners would not have survived.
+
+Sergeant Nolan was taken prisoner at Knightsbridge in 1942, but he had already seen action, being evacuated from Dunkirk, and was mentioned in despatches for gallantry at Arras for driving a truck full of men to safety under heavy fire. The fire was so fierce the truck tyres were blown off and he drove many miles on the wheel rims.
+
+![Image](Images/f0163-02.jpg)
+
+Former Acomb miner Sergeant Sidney Cooper who saved many lives when he picked up a case of burning bombs and made them safe at Cagny in France.
+
+There were more heroics from ex-Acomb miner Sergeant Sidney Cooper (32) serving with an armoured division at Caen, taking on crack German Panzer troops and a parachute division. During one sticky day at Cagny, a German 88mm landed five yards from his position, setting fire to the cordite from a pile of twenty mortar bombs. They could have exploded at any time, but the quick-thinking Sergeant Cooper ripped the cases off the burning bombs and shovelled a mound of earth over them to extinguish the flames. An officer told a military observer: ‘Sergeant Cooper’s actions saved valuable equipment and lives. It was one of the coolest, pluckiest jobs I have ever come across.’
+
+As the Allies raced across France, Trooper Robert MacFarlane of the Grapes Hotel in Hexham wrote to his parents of the welcome which they were being given by the French. He said: ‘We went into the outskirts of one village and we were surrounded by the inhabitants, who threw flowers and brought us wine, as we were the first British soldiers into the village. One old woman was crying with joy, so I jumped out of my tank to give her some chocolate and she kissed me and hugged me as though I were her own son.’
+
+Trooper Macfarlane was wounded soon after writing his letter and had been transferred to a military hospital in South Wales.
+
+In the air, the work of the rocket-firing Hawker Typhoon aircraft was described by Flight Lieutenant D. Murray, of Bingfield, who was involved in an attack on a factory on the south bank of the Rhine, near Arnhem, which was being used by the Germans as both a barracks and a strongpoint.
+
+He told the Courant: ‘It was a very big factory and two squadrons were put onto it, each section being given a particular part of the factory to demolish. The aiming was particularly good and each section sent its rockets bang on target so that by the time we had finished the whole factory was pretty thoroughly wrecked. The Huns ran out when the attacks began and our own troops potted them as they came out into the open.’
+
+Despite the fact the Home Guard was being gradually run down as the threat of invasion faded, there was no relaxation in the rules covering the service. Plashetts shepherd George William Robson told Bellingham Magistrates he had been left alone to manage a 1,000 acre farm, where he looked after 400 ewes and 300 lambs. He found it virtually impossible to attend Home Guard parades in Falstone, as a private in the 10th Battalion Northumberland Home Guard, and had not been to a parade for two years. Nevertheless he was found guilty of being absent without leave and was fined £6.
+
+Speaking after the case, the officer commanding the 4th Battalion Northumberland Home Guard, Lieutenant Colonel J. Ridley Robb likened the position of the Home Guard in late 1944 to that of a goalkeeper in a football team. Addressing a crowd of 500 people at a Home Guard sports day at Corbridge, he said: ‘The Home Guard had a very active time when the other side was pressing, and now they are on the winning side, it would be tempting for a goalkeeper to lean on a goalpost, but they have to be very aware of the possibility of a fast forward on the opposing side breaking through. The Home Guard, like the goalkeeper, must remain alert until the final whistle blows.’
+
+![Image](Images/f0165-01.jpg)
+
+Pictured at a Red Cross garden fete at Corbridge which raised £200 are (from left) Mrs R.D. Glass, who hosted the event at Howden Close, Viscountess Brackley who opened it, Mrs Dickinson of Styford Hall, who presided over the occasion, and Northumberland County Red Cross director Miss M.M. Williamson.
+
+The final whistle did come on 19 November, when to the rousing strains of the Blaydon Races, played by the band of the Royal Northumberland Fusiliers, the 4th Battalion Northumberland Home Guard staged their farewell parade in Priestpopple, Hexham.
+
+A total of 1,200 men, representing companies from over the district, proudly marched past the saluting dais in front of the Tindale Ward Savings Bank, and were told by the man taking the salute, Colonel A.E. Hawkins, Northumberland Sub District Commander of the Home Guard, that one of the reasons Hitler had not carried through his invasion plans in the dark days of 1940 was that he knew that in addition to regular forces, he would have the two million men of the Home Guard to overcome as well.
+
+![Image](Images/f0166-01.jpg)
+
+One of the key leaders in the Far Eastern campaign was the future Chief of the Imperial General Staff, Field Marshal Sir Francis Festing, better known as ‘Front Line Frankie’.
+
+### Sir Francis Festing, a natural born leader
+
+In Burma too, Tynedale men were making their presence felt to great effect, none more so than Major General Francis W. Festing of Humshaugh, who was cutting a swathe through the army which ended with his appointment as Field Marshal Sir Francis Festing – Chief of the Imperial General Staff during the late 1950s.
+
+His huge ash walking stick symbolised the burning spirit of a man who was a giant in the military arena. During the war he chased a Japanese sniper with it, and thirty years later he shook it in the North Tyne valley in protest at the plans to build Kielder Reservoir. The walking stick was even mentioned in a citation for a Distinguished Service Order he earned in Madagascar in 1942.
+
+At 6ft 4in with ginger hair and all the sartorial elegance of an unmade bed, he had an arresting appearance, but it was the indefinable aura of a natural born leader that really distinguished him from the crowd. With field marshals Montgomery and Slim, Festing formed the triumvirate of Britain’s best three wartime generals. While not an intellectual, he was highly intelligent; he was noted – perhaps his efficient chief of staff would have used the word ‘notorious’ – for reading the bare minimum in paperwork and books he could get away with.
+
+He wasn’t interested in details, but he was an arch strategist; his reputation was sealed during the Second World War when, at the head of the 36th Division of the 14th Army, his skilful tactics were largely responsible for driving the Japanese out of Burma. And although he didn’t like politics, civil servants or committee meetings, he could be the most subtle of diplomats when necessary. A complex character embracing many a contradiction, but to the troops on the ground, he was the most straightforward of men. Brave and resolute, he was known universally as Front Line Frankie, prepared to send his men only where he himself would go; he always led from the front.
+
+Used to being in the heart of the world’s trouble spots and something of a nomad, he made his final home in far from anywhere Tynedale. The connection was his wife, Mary Cecilia Riddell, of Swinburne Castle and estate. The couple were married in the Riddells’ private chapel in 1937, when he was 35\. Seven years later, determined to establish a base for their growing brood amid a globe-trotting existence, the couple bought a large country house in Tarset, not far from her family seat. They returned to it time and again over the years, until eventually they settled there permanently following Sir Francis’s retirement.
+
+While Sir Francis himself hailed from an Oxfordshire family, he was actually born in Dublin in August 1902\. The only child of Brigadier General Francis Leycester Festing and his wife, Charlotte; his father was serving in Dublin at the time. Despite being the scion of a long line of army generals, Sir Francis, like his father before him, eschewed the usual military schools. They both attended Winchester College instead.
+
+From a staunchly Protestant background, he converted to Catholicism as a precocious 16-year-old, largely due to the influence of his paternal aunt. Eccentric Aunt Eleanor, or Nello as she was affectionately known, lived most of her adult life in the Basque region of Spain. She would appear vision-like in the streets of St Jean de Luz, zipping by on a bicycle powered by a tiny motor, dressed in the flowing black garb of a French peasant woman.
+
+Devout throughout his days, Sir Francis owed not only his religion to Aunt Nello, but the fact he was bilingual, too. As a boy he spent most of his school holidays with her, so she employed a French tutor who endowed him with a major advantage during his time at Supreme Headquarters Allied Powers Europe.
+
+His happiest, most carefree years proved to be the period he spent in the Rifle Brigade, which he joined as a young officer straight out of Sandhurst Military College in 1921\. There were plenty of opportunities to indulge in his hobbies of fencing, hunting, point-to-point and sailing. As an accomplished yachtsman, he took part in the trans-Atlantic Bermuda Race in 1932.
+
+After many years of frustratingly slow progress through the ranks, Sir Francis finally came into his own at the outbreak of the Second World War, when he took over command of the 2nd Battalion of the East Lancashire Regiment. He was endowed with a natural manner and an infectious grin and won the trust and respect of his men as he led them through skirmish and battle in France, Norway and then Madagascar. In Burma, he took over on the ground when the commanding officer of the unit leading the push was killed – he was described as being ‘indifferent to danger’.
+
+A man ideally suited in temperament and ability to military action, the end of the war left Whitehall mandarins wondering what to do with their prizefighter. His subsequent posting to the War Office as director of weapons and development wasn’t the answer. He was a man of the people, not cold hardware, so in 1949 he was sent to Hong Kong to become general in charge of a unified command of all sea, land and air forces. However, the posting was dramatically cut short later that year when, aged 47, he was nearly killed by a blood clot in his brain. A horrified witness recounted seeing the lion tamed, as soldiers loaded him on to a Dakota, strapped to a stretcher with a doctor and nurse hovering over him. Mary, who was expecting their fourth child at the time, wrote that he had taken just ten days’ leave during the previous decade. He needed a good, long break, she told Whitehall.
+
+King George VI was one of the many who sent their best wishes to Sir Francis, who, after several relaxing months, made a full recovery. On his return to duty, he spent a short interlude as president of Britain’s Regular Commissions Board, a platform he used to lobby for the end of National Service. The only basis for an advanced fighting force fit for the 1950s was voluntary enlistment, he said.
+
+A series of postings in the years that followed took him back to mainland Europe, Egypt and the Far East, and by the end of the decade, he held the post of chief of the Imperial General Staff and the rank of field marshal. In 1961, the war horse retired and settled into a peaceable existence in his remote corner of Tynedale.
+
+He took with him his renowned collection of valuable Japanese swords, assembled during his postings in the Far East. Legend has it that he always hoped he would be burgled, so he could try them out. As many of them were lethal, his family were thankful he was never given the opportunity. Sir Francis died at home on 3 August 1976\. By then, the many titles he held included Commander of the Order of the British Empire, Knight Commander of the Order of the British Empire, and Knight Grand Cross of the Order of the Bath.
+
+### In action at Arnhem
+
+Although they were on the retreat, the Germans were far from finished, as they demonstrated with their strong resistance to the attack on Arnhem in Holland. What was supposed to be a relatively easy exercise proved anything but, as men of the 9th SS and 10th SS Panzer divisions gave the invading British paratroop and glider divisions such a bloody nose they were driven back in full retreat after nine days of fierce fighting.
+
+![Image](Images/f0169-01.jpg)
+
+Bombardier Leslie O’Neill of Hexham, who described the Arnhem airborne raid in 1944 as ‘like Hell let loose’.
+
+Among those in action at Arnhem was Bombardier Leslie O’Neill (20) of Hexham who had been with the Airborne Division in North Africa and Italy. He told the Courant: ‘We had a rather rough time and were very lucky to get out. We were plastered with mortar and shellfire, and the worst thing about it was the Germans shelled the woods, so the trees crashed and splintered about us. It was like hell let loose.’
+
+Private Ronald Newton, of Crawcrook, who was in the first wave of landings, said that all the glider pilots involved should have been awarded the Victoria Cross for their bravery. He added that men retreating from the German offensive had to have their boots blanketed so they could get safely back to the Rhine.
+
+The Arnhem raid brought the death of Wylam’s Captain William N. Barrie (26) of the Glider Pilot Regiment, who was already the holder of the Distinguished Flying Cross for gallant and distinguished service in Sicily. Captain Barrie’s wife Margaret, serving in the ATS, had gone with him to Buckingham Palace for his investiture a few months earlier.
+
+![Image](Images/f0170-01.jpg)
+
+Shortly after having the Distinguished Flying Cross pinned on his chest in a ceremony at Buckingham Palace, Captain William Barrie of Wylam was killed in action while serving with the Glider Pilot Regiment at Arnhem.
+
+He was training as an accountant when war broke out but was commissioned in the Royal Northumberland Fusiliers, before transferring to the Army Air Corps. In civilian life, he was very much involved in the Boy Scouts movement and was Hexham’s first-ever King’s Scout. He also played rugby for Tynedale.
+
+Two men who grew up together in Wanless Close, Hexham, went to war together with the Recce Regiment, Sergeant John James Skelton (24) and Trooper Thomas William Hudson (23), were both awarded the Military Medal for gallantry in North West Europe, and had the medal ribbons pinned on their chests by Field Marshal Bernard Montgomery at a special ceremony in Brussels.
+
+The awards came following a patrol in Vemraij, which came under heavy fire, leaving a sergeant so severely wounded he had to be left behind. On their return to base, Sergeant Skelton volunteered to try to rescue the sergeant and Trooper Hudson volunteered to go with him. They boarded an armoured car and got within 50 yards of the wounded man before coming under such withering fire from rifles and machine guns they had to stop. However, the two pals got out of the vehicle with the enemy less than 100 yards away and managed to reach their wounded comrade and drag him back to the armoured car.
+
+![Image](Images/f0171-01.jpg)
+
+Two Hexham men who were peacetime neighbours were both awarded the Military Medal for gallantry in Europe while serving with the Recce Corps of the Royal Northumberland Fusiliers. Trooper Thomas Hudson (left) and Sergeant John James Skelton had their medals pinned on their tunics by Field Marshal Bernard Montgomery at a ceremony in Brussels.
+
+The citation read: ‘Sergeant Skelton, by his superb act of gallantry, and complete disregard for his own safety prevented his comrade from being made a prisoner, and may well have been responsible for saving his life. Trooper Hudson remained completely calm and his outstanding example of bravery proved a great inspiration to all serving with him.’
+
+In the week before Christmas, the manager of the West End Inn in Hexham was fined £20, with £5 16s costs, in what was described by a weights and measures officer as ‘a disgracefully serious case of gross adulteration – the worst I have ever come across in 40 years doing this job.’ The licensee, John William Burns, was found to be selling whisky which was up to 34 per cent watered down, and gin with 33.4 per cent added water. He claimed the diluted spirits were for his own use, so that he could accept drinks from customers without becoming intoxicated, but magistrates rejected his claim.
+
+### 1945
+
+There was a grim start to 1945, when a Hexham women who was engaged on war work in Birmingham was found murdered, with £75 in cash jammed into her throat. She was Agnes Dooley, and beside her body was that a former porter at Hexham Hospital, one J. Johnson. An inquest jury decided Johnson had murdered Miss Dooley and then taken his own life.
+
+It was also confirmed that the replacement vessel for the stricken HMS Tynedale sponsored by the Hexham district was the frigate HMS Loch Eck, built in Middlesbrough, with many of its ship’s company from the region. Her skipper, Lieutenant Commander R.C Freaker, spoke of his pride in succeeding HMS Tynedale in the district’s affections and hoped his ship would do as well against the enemy. She was an immediate hit with local schoolchildren and more than fifty pupils at Hexham Senior School wrote letters to the ship’s company seeking pen pals.
+
+HMS Loch Eck was a successful U-boat killer, pinpointing the presence of the German submarines thanks to information gleaned from the Enigma code crackers at Bletchley Park. Based at Scapa Flow on the north-western approaches, she helped sink three U-boats in February 1945 alone. She survived the war, and was later transferred to the New Zealand Navy as HMNZS Hawea.
+
+![Image](Images/f0172-01.jpg)
+
+HMS Lock Eck, the destroyer adopted by the Hexham district following the sinking of HMS Tynedale.
+
+A conman was jailed for six months after playing ‘a mean trick’ on the occupants of Chipchase Castle, near Wark. Kenneth McManus appeared at the family seat of the Taylor family wearing the uniform of a lieutenant in the Canadian Army. He said he was a personal friend of Captain Robert Taylor, who was serving with the Irish Guards, and had fought with him at the Anzio beachhead. He claimed that Captain Taylor had urged him to stop by the castle if he was ever in the North. He was welcomed with open arms as an officer and a gentleman and allocated a suite of rooms at the castle, with free access to the property. He was taken out shooting and fishing and spent four days living a life of luxury before moving on.
+
+It was only after he had gone that Mr and Mrs Taylor realised that jewellery worth over £200 was missing, along with a rifle and a revolver from the gun room.
+
+The police were called, and McManus was arrested in Edinburgh some weeks later. It turned out he was a native of Bootle on Merseyside, had never been to Canada, Anzio or any other theatre of war and was in fact an army deserter in the run. It was assumed he had met Captain Taylor while on the run and had managed to find out where he lived. He had sold some of the stolen jewellery in a Hexham pub, saying it had been left to him by an aunt.
+
+Meanwhile, as the Allied forces closed in on Germany, a 21-year-old soldier from Simonburn serving with the Argyll and Sutherland Highlanders snuffed out a German counter-attack in bold fashion. Private Edward Jeffrey had been part of a group which had taken a farmhouse redoubt with the support of tanks, but when the tanks withdrew, the Germans regrouped and tried to take it back. Private Jeffrey let them get close and then killed six of them with his Bren gun, causing the others to retreat.
+
+### German PoWs escape
+
+It wasn’t only British prisoners who escaped from prison camps, for on 1 April 1945, Austrian Josef Kirchdorfer (19) and seven fellow prisoners broke out of the PoW camp at Featherstone Castle near Haltwhistle. Kirchdorfer was arrested while on a spying mission behind enemy lines in Holland in 1944\. Thanks to the fact he had a letter in his pocket from the world’s first female test pilot – the celebrated Hanna Reitsch, who was awarded the Iron Cross and the Luftwaffe Diamond Clasp by Hitler – he was dispatched to England for interrogation.
+
+After two weeks in London, he was sent to Featherstone, where he was soon at the centre of a plot to escape. They broke out in the middle of the night with the intention of stealing an aeroplane to return to the Fatherland. With at least a couple of pilots in the group, the plan might have been feasible but the venture turned to catastrophe.
+
+The eight of them split into two groups, with Josef and two of his comrades following the River South Tyne up to Alston. However, the local bobby PC Wilson stopped three men and ‘found they were Germans’ and with the assistance of John Fawcett, a soldier home on leave, took the men to the police station. The redoubtable PC Wilson also arrested four of the other five escapees at Haldon’s Mill near Alston. That group had chosen to cross the river so that any dogs being used to track them would lose their scent, but one of the group, Karl Kropp of the Luftwaffe, was last seen attempting to wade across the swollen River South Tyne, with the water up to his waist.
+
+His body was recovered from the Tyne at Hexham three days later, and he was buried in the war graves section of Hexham Cemetery in a coffin draped with a swastika flag, carried by six of his Luftwaffe comrades. Six other German PoWs walked behind the coffin under armed escort. All the Germans gave a military salute as the coffin was lowered into the grave and bared their heads. At the conclusion of the service, each PoW walked to the graveside, saluted, and sprinkled three handfuls of soil each on the coffin, before saluting again and returning to their ranks.
+
+Klopp’s body was disinterred in 1958, and returned to Germany with those of other PoWs who had died in Hexham.
+
+## CHAPTER SEVEN
+
+## Managing the Peace
+
+As the victorious Allied forces homed in on Berlin, many prisoners of war were repatriated to Tynedale, each with a tale to tell of the privations they had suffered. Among them was Lance Corporal George Clark of Hexham, who was taken prisoner at Knightsbridge in 1942 while serving with the Royal Northumberland Fusiliers.
+
+He had been held for a year in Italy, before being transferred to a camp at Silesia, which was liberated by the Americans in April 1945\. He told the Courant that as the Americans approached, the German guards withdrew, and white flags were flown, but the doughboys by-passed the town in hot pursuit of the retreating German army. There were no guards on duty for two days, but when it was clear the US troops were not coming back for a while, the guards were reinstated and the white flags pulled down.
+
+When the Americans finally did return, the Union Flag and Stars and Stripes flew over the camp, where the prisoners had made PoW signs from their bedsheets. Lance Corporal Clark said: ‘The cheering was deafening.’
+
+![Image](Images/f0175-01.jpg)
+
+After three years as a prisoner of war, Lance Corporal George Clark of Hexham, lost three and a half stones in weight after a 530-mile trek from Silesia, following the camp’s liberation by American forces.
+
+His ordeal was not quite over though, for on his release he faced a thirty-nine day trek of 530 miles to get back home, and in doing so he lost three and a half stones in weight. Perhaps surprisingly, he appeared to hold no hard feelings about his captors, whom he said honoured the dead and did what they could for the wounded.
+
+He said that England did not seem much different to the country he had left behind, especially as rumours round the prison camp were to the effect that the country was on the verge of starvation, with people having nothing to eat but black bread.
+
+![Image](Images/f0176-01.jpg)
+
+How the Hexham Courant greeted the news of VE day on its front page.
+
+### Victory in Europe
+
+When Victory in Europe was finally confirmed on 8 May 1945, the news in Tynedale was received with restrained jollification rather than wild hilarity. Apart from gaily-bedecked streets and decorated shop windows, and the fact that most people wore patriotic emblems on their coats, it was just like a normal market day in Hexham. The judge at Hexham County Court dispensed with his wig and gown, and wore a red, white and blue rosette instead while giving judgements.
+
+A loudspeaker was erected in the Abbey Grounds to hear Prime Minister Winston Churchill declare the ceasefire and the bells of Hexham Abbey rang out a victory peal. That night, more than 1,000 people crowded into the Abbey for a service of thanksgiving led by the rector, Canon A.G. Hardie, and similar services were held across the district. A number of bonfires were lit, including one in the grounds of the Emergency Hospital, where so many men were still having treatment for war wounds. On VE Day pubs, clubs and other licensed premises were allowed to stay open until 11.30pm, but in practice, most closed at the normal time, because of the shortage of beer and spirits.
+
+At Allendale there was a massive bonfire built by local schoolchildren, which was lit by a former prisoner of war, Lance Sergeant Tommy Shield, while at Haydon Bridge the youth detachment of the local Red Cross burned an effigy of Hitler on their victory bonfire. There were open air dances, sports days and other celebrations across the district, but none on the scale of the partying which marked the end of the First World War.
+
+There was tragedy at Allendale where 26-year-old Harold Phillipson chose to walk home to Sinderhope over the moors from a VE Day party and fell over the parapet of a bridge, plunging 30ft to his death.
+
+There was also concern about the generous food allowances being given to German prisoners of war at a time when the British people were having to get by on restricted rations. The chairman of Hexham UDC, Councillor Joe Cullen, said it was an effrontery that Germans were being better fed than Britons, and added: ‘Without any violation of the Geneva Convention, I am sure the German prisoners could be brought down to the rations of the British civilians. We are a curious and remarkable people who always seem to be very generous to our enemies. We in this country have not taken any hurt on the rations we have been allowed and the Germans will not do so either. These men will go back to Germany full of beans and as fit as fire; heaven knows what to do in years to come.’
+
+![Image](Images/f0178-01.jpg)
+
+A victory tea was held at Peth Head, Hexham, with every household making a contribution of foodstuffs. After a fancy dress competition, there was a parade.
+
+On the Sunday after VE Day, there was another service of thanksgiving at the Abbey, which was preceded by a parade of civil defence services and other organisations, including members of Hexham Urban District Council. Also on parade were members of the Hexham Divisional Police and special constabulary the British Legion, Home Guard, men’s women’s and youth detachments of the Red Cross, Army Cadet Force, Air Training Corps, Boy Scouts, Girl Guides and the Women’s Auxiliary Service.
+
+The euphoria of victory in Europe was tempered by the fact that Tynedale men were still fighting the Japanese in the Far East and lives were still being lost. There was a hint of a return to some sort of normality though, with a general election to be fought, and there was outrage when the Labour Party announced it would be putting up a candidate against Hexham’s MP Douglas Clifton-Brown, who had been elected Speaker of the House of Commons in 1943\. By tradition, the political parties did not put up candidates against the Speaker, as he was a representative of the House of Commons as a whole, not any one party.
+
+Nevertheless, Labour adopted Harold Smith, a pioneer of the Northern Labour movement, as their candidate, but Smith later withdrew ‘for private reasons’ and the baton was passed to Ernest Kavanagh, a tutor from Leeds, who was the youngest member of Leeds City Council. The Labour tactics brought condemnation from Churchill himself, as the Prime Minister growled that opposing the Speaker was ‘neither consonant with British Parliamentary custom or with ordinary fair play’ while the Liberals said they would not be fielding a candidate. Also speaking passionately on behalf of the Speaker was Liberal Victor Finney, the only man to beat Clifton-Brown in an election in Hexham since he first won the seat in 1918.
+
+![Image](Images/f0179-01.jpg)![Image](Images/f0179-02.jpg)
+
+Convention was turned on its head when the Labour Party announced it would be opposing Hexham’s MP, Colonel Douglas Clifton-Brown, at the 1945 General Election. Colonel Clifton-Brown was Speaker of the House of Commons, and it was traditional that the Speaker was returned unopposed. The Labour candidate was Ernest Cavanagh, of Leeds but the Speaker was returned with a 4,645 majority.
+
+Mr Kavanagh argued he was not opposing the Speaker, as Colonel Clifton Brown had vacated that position when Parliament was dissolved, and he was simply the Conservative candidate. Colonel Clifton-Brown did not stand under any party label, just as The Speaker, and he was returned with a majority of 4,645\. He polled 16,431, while Mr Kavanagh registered a creditable 11,786.
+
+The Hexham Group Hospital Supply Depot, which was established in the early days of the war, closed at the end of June 1945, by which time it had dispatched more one million comforts and surgical supplies to servicemen, hospital patients and needy civilians. More than 1,000 miles of bandages had been rolled, 1,000 miles of material used in the surgical department and 200 tons of wool knitted into comforts. An average of 300 people were working at the depot throughout the war, and more than 4,000 had contributed to the work of the depot over the years. Around £20,800 had been raised for the depot by way of subscriptions and voluntary efforts, but the initiative was largely self-financing because of the fact the canteen at the depot, run by Mrs T.M. Robson, had served more than 26,000 meals.
+
+Chairman of the depot committee Mrs Norman D. Newall said: ‘It is totally illogical, but there is complete gloom at the closing of the depot, because it will be a big wrench for many workers who have worked so happily and willingly together during the war years, and made so many friendships.’
+
+As the trickle of prisoners returning home from PoW camps in Germany became a flood, there was embarrassment for Hexham police when four prisoners awaiting trial on housebreaking charges escaped from Hexham Police Station by removing bricks and stones from their cells and clambering to freedom through the hole in the wall. The four were at large for twelve hours, before being recaptured in Whitfield.
+
+Hexham Magistrates heard that the four men had been allowed to use the exercise yard at the rear of the police station, as it was a warm night. They were checked at 7pm and found to be all present, but a further check at 9pm revealed that both cells and exercise yard were empty. They had prised stones and bricks out of the wall of the exercise yard using a iron bar wrenched from shutters in the cell passage, as well as a drainpipe ripped from the wall of the exercise yard. They created a hole 2ft long, 18in high and 18in wide.
+
+Three months after VE Day, people were were dancing in the streets of Hexham in the early hours of the morning when news of the Japanese surrender spread. Bonfires were lit and fireworks were in great demand, not only by the children, but also by the blue clad convalescent patients from the Emergency Hospital, who took great delight in dropping firecrackers where least expected. One young man from Stocksfield, Bevin Boy Alan Lynn (19), found himself in court when he set off a celebratory thunderflash during the showing of a film in the Prince’s Cinema in Corbridge, and was fined £2.
+
+Allendale really let its hair down, with the usual bonfire and fireworks supplemented by a parade of tableaux, featuring Churchill, Uncle Sam, Stalin, Chiang Kai-shek, and, bringing up the rear, Hitler and Japanese leader Hideki Tojo, roped together. There were street parties and dances across the district despite the shortage of food through rationing.
+
+### David Bell
+
+As one of the dashing young men who were among the first to fly aeroplanes from ships in time of war, Stocksfield’s David Bell belonged to an elite class of fliers. But David had his own special claim to fame, even among the top notch aces of the Fleet Air Arm. As a Navy pilot he took off from an aircraft carrier in the final stages of the war in the Far East. His squadron was due to carry out bombing raids on Japan, but just days before, the dropping of the atom bomb brought hostilities to a close. However, he still had to fly missions uncomfortably aware that news of the surrender had not reached all members of the Japanese forces.
+
+Following VJ day, David flew one of twelve aircraft sent on a reconnaissance mission to Kai Tak airport in Hong Kong, still in Japanese hands. With little more than fumes in his fuel tank, he touched down at Hong Kong airport – and was more than a little alarmed to see a Japanese staff car bearing down on his aircraft as it came to a halt. He clambered out of the cockpit just as a number of senior Japanese officers were getting out of the car. One of them came up to David and handed him his ceremonial sword – he had surrendered the entire airport to David’s tender care! The sword was among David’s proudest possessions and was displayed for the best part of forty years in the hallway of his home in Batt House Road, Stocksfield.
+
+David was born in Wallsend in 1924, and at the beginning of the Second World War he was evacuated to Alnwick with the rest of Wallsend Grammar School. At 18, with the RAF Volunteer Reserve, David began training in Ontario, Canada, to be a pilot in the Fleet Air Arm of the Royal Navy, flying Tiger Moth biplanes and more modern Harvard aircraft. After 186 hours in the air he was awarded his wings, and returned to Britain to continue training, before joining 814 Naval Air Squadron in July 1944.
+
+Known to his colleagues as ‘Dinger’, he flew Fairey Barracudas, mostly in Scotland, practising low flying, night formation, dive bombing and much more. In March 1945, he embarked on HMS Venerable in the Clyde before heading to the Far East and his date with destiny. Later that year, doing exercises over the Pacific and China Sea, a faulty landing on the aircraft carrier resulted in David being admitted to hospital in Sydney followed by recuperative leave in Adelaide.
+
+His time in hospital led to his being separated from his squadron, leaving him to ‘hitch’ home, which involved him spending some time in New Guinea, where the Japanese were still fighting on, unaware the war was over.
+
+After the war David became head teacher of Broomley County Primary School in 1958, finishing up as a lecturer at Durham University. He was surprised to learn that, as head teacher, he was expected to become a member of Stocksfield Parish Council – partly because the council met in his study. Duties also included making sure the fire had plenty of coal and that tea was laid on halfway through the meeting. It was the beginning of a thirty-year political career which saw him move on from the parish council to become chairman of Tynedale Council for two years from 1985-86.
+
+### The horrors of Japanese prison camps
+
+Many weeks after VJ day, men were coming home with tales of horror at the hands of the Japanese in PoW camps. Captain N.T. Bewick arrived back to his family home in Corbridge after being held prisoner for three and a half years – and one of the first things he read was a notification of his own death on an official list of casualties. He was captured by the Japanese at the Fall of Singapore in 1942 after being injured in the fighting, On repatriation, he said:
+
+‘Conditions in Singapore were grim. There was a woeful lack of food and we used to exist by feeding from the hedgerows and pulverising grass to extract vitamins and moisture to quench our raging thirst. We used to live on stuff which would normally be regarded as pigswill. The Japanese ate well and the stuff they put out for swill was considerably better than what we were given to eat. The officers were made to do the work of horses. They would be banded together into teams of twenty, to pull trucks, and had to dig out trees and collect their own firewood.’
+
+In the camp hospital, the British doctors and surgeons did magnificent work, despite being deprived of medical supplies by their captors and left without bandages, serums and vaccines.
+
+Captain Bewick said the Japanese could never understand how they failed to break the British spirit, with their cruelty and inhumane treatment, with their prisoners generally sharing a laugh at the end of the day. The camp was never without radio communication, via three wireless sets, none of which the Japanese guards ever found.
+
+Also back home was Hexham’s Fusilier Ian Weir, of the Royal Northumberland Fusiliers, who was also captured in Singapore, and sent to work at the notorious Changi prison camp, and then Keppel Harbour where he worked on the docks for six months. He said:
+
+![Image](Images/f0183-01.jpg)
+
+Japanese prisoner of war Fusilier Ian Weir from Hexham, who used his letters from home as cigarette papers to smoke weeds in the absence of tobacco.
+
+‘We had to exist on Jap rations, which were just rice with a little vegetable water. And we sometimes had to work thirty-six hours on just one meal. In some camps, we were not allowed to talk and just had to sit on our beds. We often got up in the dark to go to work and were still working past nightfall. Conditions in the jungle camps were terrible, but the spirit of everyone was wonderful. The Japs could never understand it. They did all kinds of things to undermine that spirit, from cancelling concerts and preventing us from having entertainment, but it never succeeded in getting us down.’
+
+During his incarceration, Fusilier Weir received eighty-four letters from home but did not keep any of them; he used the paper to fashion homemade cigarettes, filled with weeds.
+
+Another prisoner back home in Corbridge was Major Alan H. McQueen, of the Royal Artillery after being held in a prison camp in Thailand following his capture in Singapore. He spent much of his captivity working on the construction of a railway. The prisoners lived in squalor, with no clothes to replace the ones in which they were captured, they had to make their own from sacks. Food was not a problem however, with the camp canteen selling a cup of hot water for five cents, or a duck egg for anything from five to fifty cents. Meat was plentiful, usually in the form of duck with lots of rice, and the prisoners were able to grow lettuce, tomatoes and spring onions in plots they had made themselves.
+
+On the home front, there was a crisis at the Emergency Hospital in Hexham as men who had served with the forces were demobilised, and their wives who had been working as nurses at the hospital during hostilities handed in their notice to make homes for their menfolk. A total of twenty-one resignations, including eleven trained nurses, meant that two wards had to close.
+
+The fact that German prisoners of war were being allowed to sketch the historic bridge at Corbridge ruffled civic feathers at the parish council which lodged a formal complaint with the Chief Constable. The matter was raised by Edward Pigg, who said villagers were up in arms about the freedom allowed these men, who were supposed to be working on farms, not drawing pictures. The vicar, the Rev. M.M. Barlow said there had also been concerns that the PoWs had been going round Corbridge asking locals for tea and coffee.
+
+The parish council’s attitude infuriated Agnes Gilbey of Hallington, who said in a letter to the Courant she was disgusted by the absence of fair play in Corbridge, She said: ‘Parish councils should be uniting to clear the chaos caused by the war, rather than airing paltry protests about prisoners of war finding peace in our England by painting and enjoying our lovely village. Where is the British justice we pride ourselves on?’
+
+The postscript to the complaint was that in December of that year, the parish council was presented with a painting of the bridge executed by one of the PoWs, in a frame made by another prisoner and French polished by the commandant of the prisoner of war camp at Ponteland, Lieutenant Colonel R.F. Pitz to hang in the council chamber. Col Pitz explained that the men allowed to paint were known anti-Nazis and the creator of this picture was completely non-political. Colonel Pitz went on: ‘There are two views about prisoners of war, one of which is to exterminate them, but that is not the British way. We prefer to reeducate them, and this is what we are trying to do.’
+
+It was not evident three miles down the road at Hexham, where chairman of the council Councillor Joe Cullen was still ‘simmering with indignation’ after discovering all the first class accommodation on an express train from Newcastle to Carlisle had been allocated to German officers who were prisoners of war. Councillor Cullen said that business people who used the train had great difficulty in boarding because of the German presence, and added: ‘What was particularly annoying was the space allocated to them to stretch their elegant Teutonic limbs and the steps taken to ensure a high degree of comfort for their Germanic bodies. The British public often have to travel packed together like sardines. On this train, service personnel, business people and workmen, returning tired after a hard day’s work, had to stand in the corridor, or pack tightly into a compartment, so these German officers could enjoy de luxe travel.’
+
+### The unique role of Camp 18
+
+While the war was over, the peace was still to be managed and Featherstone Castle was chosen to fulfil a key role in the immediate post war years. It started life in 1944, as a temporary garrison for American troops preparing for the D-Day landings in Normandy. With Operation Overlord under way, it was then used for a few months to house Italian prisoners-of-war. But as the Allies made their relentless advance into Germany, it was decided to give Featherstone a pivotal post-war role – and Camp 18 was born.
+
+It was chosen to house those German PoWs classified as the most dangerous. Senior Nazis, suspected of war crimes, were to be tried at Nuremburg. Others, according to their level of support for the Führer’s regime, were categorised into black, grey or white. It was decided Camp 18 would house ‘blacks’, who would be repatriated only after an intensive course of ‘denazification’ ensured they had cast aside any fascist tendencies.
+
+The most senior German to find himself at Featherstone was General Ferdinand Heim, former chief of the general staff of the Sixth Army, who commanded the Boulogne garrison when it was captured in 1944\. Earlier in the war, on the Eastern front, he led an attack on Stalingrad in 1942. Joining him on the banks of the South Tyne were U-boat commanders, Wehrmacht officers, some of the Luftwaffe’s ace pilots and several Third Reich bureaucrats and diplomats, including senior ambassadors.
+
+The threat from the former enemy proved so low that the barbed wire perimeter fence at Featherstone was pulled down at the beginning of 1947\. Many of the PoWs who spent time at Featherstone spent their days helping out at farms across Tynedale during the day. At night many of them studied and Camp 18 had all the hallmarks of a university campus, rather than a prison.
+
+Camp 18 was, with Camp 186 in South Wales, the largest officers’ camp in Britain. Its population rose, at times, to 4,000 or more officer PoWs and up to 600 German orderlies. Around 200 huts in four compounds (A to D) were needed to house this sizeable population. Apart from the accommodation blocks, there was a theatre, library, chapel, medical centre, bakery and a rudimentary sewerage system.
+
+The camp had its own newspaper – Die Zeit am Tyne – which had seventeen editions, all printed at the Hexham Courant offices and distributed throughout Britain. The last one came off the press in March 1948 as the process of sending home prisoners got under way.
+
+![Image](Images/f0187-01.jpg)
+
+Bringing a taste of Germany to Tynedale was Zeit Am Tyne the newspaper of the Prisoner of War camp at Featherstone in the South Tyne Valley.
+
+The camp ran university courses, led by academics from neighbouring Newcastle and Durham universities, and even hosted a few special visits by Oxford dons.
+
+For the German orderlies, there were vocational courses to prepare them for repatriation and a new career when they returned home. The camp housed some of the most talented German musicians and artists of their generation. It had three different orchestras and even a puppet theatre, all of which entertained audiences across the North of England. The cultural reputation of the camp was such that famous violinist Yehudi Menuhin is known to have dropped in at Featherstone some time between 1946 and 1948\. Just why he took time out from his major tours during those years of America and Europe and engagements with the Berlin Philharmonic Orchestra, to come to Haltwhistle remains a mystery.
+
+In his book, Channel Islands Occupation Review Engelbert Hoppe from Eschweiler, near Aachen, describes what it was like to be taken prisoner in Jersey and shipped off to England on the long journey to Haltwhistle. After a smooth voyage, the Channel Islands prisoners landed at Southampton and were marched from the harbour to a railway station. On their way, they passed Polish refugees, who shouted abuse at the German soldiers and even threw stones at them. ‘Who could blame them after all their terrible experiences and suffering?’ asked Engelbert. ‘However, I do remember how the British guards put a stop to it and protected their prisoners, which made quite an impression on us.’
+
+Engelbert did not forget how he felt when he saw the Vlasov army people, who had changed sides to fight with the Germans against Stalin, being shouted at by a Russian political officer. ‘Looking at their faces, full of fear, anxiety and terror, it seems to me now that they were aware of what was coming – being shipped from Hull to Vladivostok or some other Siberian harbour to be tortured and executed, or left to starve in a gulag.’
+
+After three weeks of seeing nobody but the guards, Engelbert and his compatriots were marched to another railway station which would take the men to Northumberland. They arrived at Haltwhistle and were taken along the River South Tyne, over a bridge and through what Engelbert describes as idyllic remote landscape surrounded by rolling hills with grazing cows and sheep.
+
+With high barbed wire fences and thick rolls of wire around the fences on the ground, the huge camp had four compounds to cater for the prisoners. After a harsh roll-call, Engelbert and the other officers were taken to their different compounds and to the Nissen huts, each of which housed up to 100 PoWs. The following morning they were shown films about concentration camps in Germany and in the Eastern European countries that had been occupied. This went on for more than a week. ‘It was so cruel and shocking that hardly anyone would believe it,’ he said. ‘Some of us collapsed, while others shouted “will you stop your bloody Hollywood fakes?” But discussion in the hut began: “If this is true what will happen to us?”’
+
+During the first few weeks, the men had little food and were faced with a strict regime, but Engelbert knew that lying idle in the huts would not do any good. Small study groups had already begun, and via the Red Cross, a maturity course was founded for young prisoners who had been given the so-called ‘war maturity’ of being drafted into the army instead of taking exams. Engelbert joined one of these courses, which had a curriculum standard equal to the final year of a German grammar school. ‘We were told the course would last one year,’ he said. ‘We started with almost no books, scribbling notes on toilet paper.’
+
+Other officers who wanted to work were allowed to work as farmhands, gardeners and builders.
+
+In the autumn of 1945, Engelbert recalls a new batch of prisoners being brought to Camp 18\. For no reason, their belongings were confiscated and they were beaten by the guards, who were Poles of the Anders Army. There were letters of outrage in the Hexham Courant and, after a few days, a commission of British officers and Red Cross representatives appeared. The cases were brought to court, the offenders punished and the prisoners’ belongings restored. Engelbert said: ‘This incident, and the correctness with which it was dealt, made such a great impression even among the few Nazis or militarists among us that they spoke of it with the highest respect.’
+
+Before Christmas, Featherstone Park got a wonderful gift in the shape of Lieutenant Colonel Vickers. The new commandant had been a PoW as a wounded British officer in France in 1916 and immediately earned the trust and respect of thousands of prisoners at Featherstone. He said to the men: ‘In the First World War, I was in a German prisoner-of-war camp and was treated like a gentleman. I will therefore treat you in the same way.’
+
+The following year Vickers was joined by Herbert Sulzbach, a Jewish refugee from Germany, given the rank of captain in the British Army, who went on to be a mainstay of reconciliation between Britain and Germany during the post-war years. Fears of a Nazi revival were unfounded. Under the watchful eye of Herbert Sulzbach, a Jewish refugee given the rank of captain by the British Army, the ‘reconciliation’ experiment at Camp 18 was a spectacular success. Sulzbach went on to become a leading figure in the development of the Federal Republic of West Germany, founded in 1949, as, ironically, did many of his star students, who ‘graduated’ from Camp 18.
+
+He too was a leading light among the Featherstone Park prisoners, and it was his strong dislike of the screening teams, who came to categorise the men into different groups, that struck Engelbert the most. ‘He did not believe this was in accordance with the Geneva Convention,’ said Engelbert. ‘It opened the doors for packs of lies, for discrimination and for mistrust.’
+
+Referred to in Engelbert’s book as ‘the knights of humanity’, Sulzbach and Vickers managed to set up an orchestra, library, study group and even a university. They opened up the compounds in 1946, removed the large rolls of barbed wire and sent the huge watch towers crashing down. Instead a token wire was erected as a fence ‘to keep the sheep and cows out’.
+
+Thereafter things at the camp increasingly improved. Two theatre workshops had been founded and Engelbert, who had been interested in theatre since his schooldays, joined the cast of the Theater am Tyne (Theatre on Tyne) for a number of performances. The theatre had professional producers and one or two professional actors, but the big crunch came when the female parts were decided! ‘There was a lot of fun in the game, although we were very much aware of living up to the Old Vic tradition,’ Engelbert said. ‘Our performances were so successful that we went on tour to various places from Newcastle to Carlisle, to many camps, but also to English audiences.’
+
+Barely a year after the end of the Second World War and only a week after Remembrance Sunday, when the town’s usual, less populous congregation paid its respects to loved ones who had sacrificed their lives in the defeat of Hitler, there was one of the most poignant occasions witnessed in the Abbey’s long history. The prisoners-of-war from Featherstone were brought to Hexham as their reward for helping to bring in the harvest on 300 farms stretching across the south of Northumberland.
+
+It was a unique service which attracted a huge amount of interest. Apart from the German prisoners, there was room for only 300 members of the public. Some queued for hours to guarantee themselves a seat. Many were turned away as the door was locked. Those locals lucky to attend sat next to some of Hitler’s most loyal and ardent lieutenants. The service featured some of the finest music and singing ever heard in the Abbey. The seventy-strong prisoners’ choir included pre-war members of German opera houses. Former leading members of the Berlin and Leipzig State Opera orchestras were in an orchestra under the direction of the one-time conductor of the Saarbrucken Opera Company.
+
+Speaking in German, the Rev. John Ramsbotham, of St George’s, Jesmond, delivered the sermon. He told PoWs that on their eventual return to Germany they would take with them the gratitude of Northumberland’s people for their work on the farms. ‘I know that many real friendships have been formed and hope that they may help to build up understanding between the two nations,’ he said.
+
+Two years later, inmates were informed that Featherstone Park would be closed. They were still about 1,800 in number, with quite a few living in hostels without any guards. During his last months in England, Engelbert stayed outside the camp with friends he had made at Lambley and Halton Lea Gate. At the end of April, he was told to prepare for repatriation, the departure date being 11 May. ‘I remember the strange feelings I had – of being happy to see my family again, but at the same time being overcome by a melancholy feeling of leaving all these people I had grown so fond of,’ he said.
+
+Now the only indication of Camp 18’s former presence is a plaque on a wall at the former entrance dedicated to Herbert Sulzbach.
+
+Jurgen Oestens was a highly successful operator in the dark days of the war, earning the coveted Knight’s Cross for his exploits against the Allies, which included the sinking of eighteen Allied ships. He survived the war, and after his spell at Camp 18 at Featherstone, he became a successful industrialist. He had fond memories of his enforced residence in the South Tyne, as he has revealed in a letter to Stocksfield’s Ian Maclean, who managed to track the old sea wolf down after reading an article on Camp 18 in the Courant.
+
+Herr Oestens wrote: ‘German officers could work outside the camp, although they were not obliged to do so. As most of the prisoners had qualified civilian professions, we had experts on almost all technical and other fields. The camp was approached if anything went wrong in the area at a power station or a mine – we even could supply water diviners! As the relevant British experts were still busy in the war, the camp could do a lot of good.’
+
+He said that the British employers had to pay the same wages they would for British labour, otherwise the war-agricultural committee and the trade unions would have ‘played hell’. Some farmers in Northumberland were very pleased that a German PoW was working on their farm, he said.
+
+The PoWs also created a unique piece of sporting history at Featherstone, in the shape of what is believed to be the first 400m running track in the UK. Current owner of the castle, John Clark, was a schoolboy at the private Hillbrow School, based in the castle at the time, and remembers the enormous popularity of the track.
+
+He said: ‘As far as I can see, every athletics track in Britain, until around 1965 and 1966, was in yards and not metres. But the Germans designed and built a 400m track out of cinder while at Featherstone, which was something different for the time. I can remember up in the big school room, looking out of the window and seeing them all on the athletics track or doing long-distance running.’
+
+The story behind the creation of the track is an intriguing one, with the Germans given permission to build it for leisure activities by the British commandant Lieutenant Colonel Vickers.
+
+Mr Clark said: ‘When the Germans came here, the commandant said he had been a PoW in World War One and the greatest problem was boredom. He said “I am going to do everything in my power to make sure you don’t get bored and have every opportunity to develop your skills.” So basically they developed their athletics and football, although they didn’t play cricket like the British officers did.’
+
+From there, the popularity of athletics with the young PoWs – they were generally aged between 18 and 24 – mushroomed and it was a permanent feature throughout. Mr Clark said: ‘I can remember, more than anything, hearing the sound of the pistol to start the races, because they had quite big events within the PoW camps. Whether they had competitions with other PoWs brought in, I am not sure, but it is highly likely.’
+
+One person who did flourish as a result of his time at Featherstone was a young man named Günter Behnisch, who studied architecture at the camp for two years. He hit the big time as an architect following his spell in the district, designing the Munich Olympic Stadium.
+
+As well as Featherstone there were other satellite PoW camps around the district. Men from Germany, Italy and other Axis countries found themselves living within the quiet communities, working the land, doing manual labour and improving infrastructure. Despite living under guard in the camps, inmates were generally accepted by the locals.
+
+Some camps, like the one at Byrness, even opened their doors to the public to share special celebrations such as Christmas. Opposite the site of the old camp – now the Border Forest Caravan Park – is a road leading up to the Otterburn Ranges, which was built by German PoWs.
+
+Located on the roadside is a large rock which is carved with the words ‘POW Camp 667 1945/46’, a lasting reminder of the part played by the prisoners in the local area.
+
+In Byrness, village resident Ian Scott recalls life alongside the prisoners from the camp, which would often be open to residents. He said: ‘It was an interesting time, especially for the children, as it was always a fascination. I can remember the camp was fenced with barbed wire and you could see a guard walking around with a rifle on his shoulder. They had dances and had their own band, and there were parties at Christmas time. The first prisoners were Italian who panicked when they heard the Germans were coming. They didn’t want them there, but most of the Italians had gone by the time the Germans arrived.’
+
+At Christmas the children of the village were given presents made by the PoWs, and Ian recalls the joy of being handed a new toy each year. ‘They were very clever with their hands,’ he explained. ‘I had a model submarine made out of wood which even had a ship with it; they were brilliant with things like that. We never had any worries with them. They were pleasant people and glad to be out of the war.’
+
+Derek MacDonald of Otterburn had a small wooden wheelbarrow made for him by a prisoner, which he had for almost seventy years. His father Tommy MacDonald drove for haulage company Forster’s, based in the village, and got to know the PoWs while transporting them from the local camp to jobs at the ranges.
+
+As a teenager, former Sinderhope farmer Cyril Forsyth got to know an Italian PoW, Alberto Catena, who joined a dozen other imprisoned Italians doing drainage work at his father, Alec’s, farm, High Acton. Alberto was the only one who talked to the family and shared a drink with them and before leaving Alberto presented the teenage Cyril with a hand-made cigarette tin engraved with his name alongside Alberto’s, with the date 6-5-1944, ‘Catton’, some holly sprigs, an old fashioned lantern and a cat. Cyril recalled: ‘He never talked about how he got captured or anything. I thought it was very nice what he did. He must have had a little pin and hammer. I think he probably gave it to me because of the kindness my family showed to him and it would have been something to entertain him.’
+
+Cyril remembered seeing the PoWs around the village and at the age of 17, even worked on Catton’s Stone Hall Farm, where the PoW camp was based. Although he recalls no problems with the Italian prisoners, who were not under constant guard, he was frightened by the Germans who were often more heavily guarded. He said: ‘I was ploughing the land in Catton when I was about 17 and couldn’t keep straight for the sight of the Germans. They were working surrounded by sentries with guns,’ he added. ‘The Italians didn’t want to be in the war. They never talked about home. It would’ve been very difficult left in a strange country.’
+
+Catton’s Italian prisoners also left a mark by carving their PoW IDs into beech trees in Allen Banks woodland, and prisoners in the Byrness PoW satellite camp 667 did something similar.
+
+There was an interesting development at Wylam, where German prisoners had their headquarters in Nissen huts while working on local farms. Among them were a carpenter and stonemason, who decided to augment the neat gardens they had created around the huts with something special. Over a period of just eight days, they built a mini castle in the gardens, with four towers, electric lighting and elaborate tapestries and carpets they had made themselves.
+
+The three-foot high masterpiece was made using stones lifted from the bed of the Tyne by fellow prisoners, and the roof was made out of tins salvaged from the camp kitchens. Prisoners also constructed the furniture, embroidered tapestries and wove the carpet for the grand banqueting hall. Electricity was piped in from the Nissen huts and an ingenious homemade device allowed the front door to be opened and closed electronically. Wylam Castle even had its own ornamental fountain.
+
+A discreet panel above the front door read ‘Built by German prisoners’ and it was intended as a lasting reminder of their stay in Wylam. Completed in 1947, it attracted hundreds of sightseers over the next two years, but some villagers were unhappy about this reminder of the war years, no matter how cleverly constructed. One day in May 1949, a lorry appeared on the site, and the castle was lifted from its foundations and driven away, never to be seen again … although rumours persist it still has pride of place in someone’s back garden in the district!
+
+![Image](Images/f0195-01.jpg)
+
+Wylam Castle, the three-foot high edifice built by German PoWs after the war.
+
+## Bibliography
+
+The Hexham Courant newspaper files 1939-46.
+
+Land Girls of Northumberland 1940-1950 by Muriel Sobo. Northern Heritage, 1 April 2003.
+
+Air Crash Northumberland by Russell Gray, Neil Anderson, Jonathan Shipley and Jim Corbett. Countryside Books, 2008.
+
+Strike Hard, Strike Sure by Ralph Barker. Pen & Sword Military Classics, 2003.
