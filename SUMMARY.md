@@ -632,6 +632,7 @@
 +   [Java 的力量 (编程的力量)](docs/the-power-of-java-power-of-coding/README.md)
 +   [Scalyr 快速上手日志指南：Java,Log4j2,PHP,Ruby,Rails,Swift,Scala,Django,Angular & Meteor 日志快速启动指南](docs/the-scalyr-guide-to-getting-started-logging-as-quickly-as-po/README.md)
 +   [布雷斯弗朗索瓦·勒瓜亚前往罗德里格斯岛、毛里求斯、爪哇和好望角的旅行记 1](docs/the-voyage-of-françois-leguat-of-bresse-to-rodriguez-mauriti/README.md)
++   [实实的 Java 开发者，第二版](docs/the-well-grounded-java-developer-second-edition/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Tony Gaddis Godfrey Muganda Java 入门：从控制结构到数据结构复习题答案 Addison Wesley 2012](docs/tony-gaddis-godfrey-muganda-starting-out-with-java-from-cont/README.md)
 +   [爪哇的旅游、遗产与国家文化：当地社区的困境](docs/tourism-heritage-and-national-culture-in-java-dilemmas-of-a-/README.md)
