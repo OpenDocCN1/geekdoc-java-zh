@@ -573,6 +573,7 @@
 +   [实战 Java：助你掌握 Java 生态系统](docs/real-world-java-helping-you-navigate-the-java-ecosystem/README.md)
 +   [REST 实战](docs/rest-ia/README.md)
 +   [库系统逆向工程（第1版）：从 Java 代码到 UML 图表](docs/reverse-engineering-of-a-library-system-1st-edition-from-jav/README.md)
++   [机器人编程：自主机器人控制指南](docs/robot-programming-ǂa-ǂguide-to-controlling-autonomous-robots/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
 +   [Scala 急速指南（第三版，ePub 版）](docs/scala-for-the-impatient-third-edition-for-true-epub/README.md)
 +   [初学者脚本超级包：Python、Powershell、Bash 和 Java 精通指南](docs/scripting-superpack-for-beginners-python-powershell-bash-and/README.md)
