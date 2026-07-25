@@ -522,6 +522,7 @@
 +   [Oracle Hospitality OPERA 酒店管理系统 (PMS) 参考手册 - 酒店软件培训支持与 Java JEE AWS Amazon云开发精通：参考手册手册](docs/oracle-hospitality-opera-property-management-system-pms-refe/README.md)
 +   [Apache Shira 与 Java EE7 配对](docs/pairing-apache-shira-and-java-ee7/README.md)
 +   [(Part 1) 初学者指南：Java 4 Selenium WebDriver：学习自动化测试编程](docs/part-1-absolute-beginner-java-4-selenium-webdriver-come-lear/README.md)
++   [PHP 和 MySQL 初学者指南](docs/php-and-mysql-for-beginners/README.md)
 +   [REST 实战](docs/rest-ia/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
 +   [Spring Boot 参考指南](docs/sprbt-refgd/README.md)
