@@ -640,6 +640,7 @@
 +   [1939–1945年战争中的泰恩代尔](docs/tynedale-at-war-19391945/README.md)
 +   [泰恩代尔战争 1939–1945（二战中的你的城镇）](docs/tynedale-at-war-19391945-your-towns-cities-in-world-war-two/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
++   [企业 ChatGPT 终极手册：利用 AI 能力与提示词工程转型企业格局，Python 和 Java 版 ChatGPT 解决方案周期](docs/ultimate-chatgpt-handbook-for-enterprises-transform-the-ente/README.md)
 +   [Ultimate Java 数据分析与机器学习：使用 WEKA、JavaML、JFreeChart 和 Deeplearning4j 解锁用于数据分析与机器学习的 Java 生态（英文版）](docs/ultimate-java-for-data-analytics-and-machine-learning-unlock/README.md)
 +   [Ultimate Selenium WebDriver 测试自动化指南：使用 Java、Selenium WebDriver 和 Selenium Grid 为电子商务、医疗、教育科技、银行和 SAAS 构建自动化 Web 测试框架（英文版）](docs/ultimate-selenium-webdriver-for-test-automation-build-and-im/README.md)
 +   [在爪之月下（世界大战 #01）](docs/under-the-java-moon-world-war-ii-01/README.md)
