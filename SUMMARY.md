@@ -579,6 +579,7 @@
 +   [库系统逆向工程（第1版）：从 Java 代码到 UML 图表](docs/reverse-engineering-of-a-library-system-1st-edition-from-jav/README.md)
 +   [机器人编程：自主机器人控制指南](docs/robot-programming-ǂa-ǂguide-to-controlling-autonomous-robots/README.md)
 +   [Ruby on Rails 教程：使用 Rails 学习 Web 开发，第 4 版](docs/ruby-on-rails-tutorial-learn-web-development-with-rails-4th-/README.md)
++   [Ruby on Rails 教程：使用 Rails学习 Web 开发 (Addison-Wesley Professional Ruby 系列)](docs/ruby-on-rails-tutorial-learn-web-development-with-rails-addi/README.md)
 +   [Java 城乡融合：对区域发展与就业的影响](docs/rural-urban-integration-in-java-consequences-for-regional-de/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
 +   [Sams 21 天教你 Java（涵盖 Java 8）](docs/sams-teach-yourself-java-in-21-days-covering-java-8-sams-tea/README.md)
