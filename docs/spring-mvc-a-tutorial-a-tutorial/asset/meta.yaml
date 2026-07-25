@@ -1,0 +1,516 @@
+name: Spring MVC： A Tutorial ： A Tutorial
+name_cn: Spring MVC 入门指南
+slug: spring-mvc-a-tutorial-a-tutorial
+toc:
+- - '#'
+  - Spring MVC 入门指南
+- - '##'
+  - 关于作者
+- - '##'
+  - 重定向与闪属性（Flash Attributes）
+- - '##'
+  - 请求参数和路径变量
+- - '##'
+  - '@ModelAttribute'
+- - '##'
+  - 总结
+- - '#'
+  - 第 5 章：数据绑定与表单标签库
+- - '##'
+  - 数据绑定概述
+- - '##'
+  - 表单标签库
+- - '##'
+  - form 标签
+- - '##'
+  - input 标签
+- - '##'
+  - password 标签
+- - '##'
+  - hidden 标签
+- - '##'
+  - textarea 标签
+- - '##'
+  - checkbox 标签
+- - '##'
+  - radiobutton 标签
+- - '##'
+  - checkboxes 标签
+- - '##'
+  - radiobuttons 标签
+- - '##'
+  - select 标签
+- - '##'
+  - option 标签
+- - '##'
+  - options 标签
+- - '##'
+  - errors 标签
+- - '##'
+  - 数据绑定示例
+- - '##'
+  - 目录结构
+- - '##'
+  - 领域类
+- - '##'
+  - 控制器类
+- - '##'
+  - 服务类
+- - '##'
+  - 视图
+- - '###'
+  - 列表 5.7：BookList.jsp 页面
+- - '###'
+  - 列表 5.8：BookAddForm.jsp 页面
+- - '###'
+  - '列表 5.9：BookEditForm.jsp 页面 '
+- - '##'
+  - 使用 Registrar 注册 Formatter
+- - '##'
+  - 在 Converters 和 Formatters 之间选择
+- - '##'
+  - 总结
+- - '#'
+  - 第 7 章：验证器（Validators）
+- - '##'
+  - 验证概述
+- - '##'
+  - Spring 验证器
+- - '##'
+  - ValidationUtils 类
+- - '##'
+  - Spring 校验器示例
+- - '###'
+  - 列表 7.2：`Product` 类
+- - '###'
+  - 列表 7.3：`ProductValidator` 类
+- - '##'
+  - 资源文件
+- - '###'
+  - 列表 7.4：`messages.properties` 文件
+- - '##'
+  - Controller 类
+- - '###'
+  - 列表 7.5：`ProductController` 类
+- - '##'
+  - 测试校验器
+- - '##'
+  - JSR 303 验证器示例
+- - '##'
+  - 总结
+- - '#'
+  - 第 8 章
+- - '##'
+  - 表达式语言
+- - '##'
+  - 表达式语言简史
+- - '##'
+  - 表达式语言语法
+- - '##'
+  - 保留字
+- - '##'
+  - '[ ] 和 . 运算符'
+- - '##'
+  - 评估规则
+- - '##'
+  - 访问 JavaBeans
+- - '##'
+  - EL 隐式对象
+- - '###'
+  - pageContext
+- - '###'
+  - initParam
+- - '###'
+  - param
+- - '###'
+  - paramValues
+- - '###'
+  - header
+- - '###'
+  - headerValues
+- - '###'
+  - cookie
+- - '###'
+  - applicationScope, sessionScope, requestScope and pageScope
+- - '##'
+  - 使用其他 EL 运算符
+- - '###'
+  - 算术运算符
+- - '###'
+  - 关系运算符
+- - '###'
+  - 逻辑运算符
+- - '###'
+  - 条件运算符
+- - '###'
+  - empty 运算符
+- - '###'
+  - 字符串拼接运算符
+- - '###'
+  - 分号运算符
+- - '###'
+  - 引用静态字段和方法
+- - '###'
+  - limit
+- - '###'
+  - sorted
+- - '###'
+  - average
+- - '###'
+  - sum
+- - '###'
+  - count
+- - '###'
+  - min
+- - '###'
+  - max
+- - '###'
+  - map
+- - '###'
+  - filter
+- - '###'
+  - forEach
+- - '##'
+  - Formatting Collections
+- - '##'
+  - Using HTML Comments
+- - '##'
+  - 格式化日期
+- - '##'
+  - 在 JSP 2.0 及更高版本中配置 EL
+- - '##'
+  - 实现不包含脚本的 JSP 页面
+- - '###'
+  - 注意
+- - '##'
+  - 禁用 EL 评估
+- - '##'
+  - 总结
+- - '#'
+  - 第 9 章：JSTL
+- - '##'
+  - 下载 JSTL
+- - '##'
+  - JSTL 库
+- - '###'
+  - 注意
+- - '##'
+  - 通用动作
+- - '##'
+  - out 标签
+- - '###'
+  - 注意
+- - '##'
+  - url 标签
+- - '##'
+  - set 标签
+- - '###'
+  - Note
+- - '##'
+  - remove 标签
+- - '##'
+  - 条件动作
+- - '##'
+  - if 标签
+- - '##'
+  - choose, when 和 otherwise 标签
+- - '##'
+  - 迭代器操作 (Iterator Actions)
+- - '###'
+  - forEach 标签
+- - '##'
+  - 格式化操作
+- - '###'
+  - formatNumber 标签
+- - '###'
+  - setTimeZone 标签
+- - '###'
+  - parseNumber 标签
+- - '###'
+  - parseDate 标签
+- - '##'
+  - Functions
+- - '###'
+  - contains 函数
+- - '###'
+  - containsIgnoreCase 函数
+- - '###'
+  - endsWith 函数
+- - '###'
+  - escapeXml 函数
+- - '###'
+  - indexOf 函数
+- - '###'
+  - join 函数
+- - '###'
+  - length 函数
+- - '###'
+  - replace 函数
+- - '###'
+  - split 函数
+- - '###'
+  - startsWith 函数
+- - '###'
+  - substring 函数
+- - '###'
+  - substringAfter 函数
+- - '###'
+  - substringBefore 函数
+- - '###'
+  - toLowerCase 函数
+- - '###'
+  - toUpperCase 函数
+- - '###'
+  - trim 函数
+- - '##'
+  - 总结
+- - '##'
+  - 区域 (Locales)
+- - '##'
+  - Spring MVC 应用程序国际化
+- - '##'
+  - 将文本组件隔离到属性文件中
+- - '##'
+  - 读取属性文件
+- - '##'
+  - 告诉 Spring MVC 使用哪种语言区域
+- - '##'
+  - 使用 message 标签
+- - '##'
+  - 示例
+- - '##'
+  - 总结
+- - '#'
+  - 第 11 章：文件上传
+- - '##'
+  - 客户端编程
+- - '##'
+  - MultipartFile 接口
+- - '##'
+  - 使用 Commons FileUpload 上文件
+- - '##'
+  - 领域类
+- - '##'
+  - 控制器
+- - '##'
+  - 配置文件
+- - '##'
+  - JSP 页面
+- - '##'
+  - 测试应用程序
+- - '##'
+  - 使用 Servlet 3 或更高版本进行上传
+- - '##'
+  - 上传客户端
+- - '###'
+  - 列表：11.10：the html5.jsp 页面
+- - '##'
+  - 总结
+- - '#'
+  - 第 12 章：文件下载
+- - '##'
+  - 文件下载概述
+- - '##'
+  - 示例 1：隐藏资源
+- - '##'
+  - 示例 2：防止交叉引用
+- - '#'
+  - 第 13 章：测试你的应用程序
+- - '##'
+  - 单元测试概述
+- - '##'
+  - 状态测试与 行为测试
+- - '##'
+  - 使用 JUnit
+- - '##'
+  - 编写 JUnit 测试
+- - '##'
+  - 运行单元测试
+- - '##'
+  - 使用测试套件运行所有或多个测试
+- - '##'
+  - 使用测试替换（Test Doubles）
+- - '###'
+  - Dummies（空桩）
+- - '###'
+  - Stubs（存根）
+- - '###'
+  - Spies（间谍）
+- - '###'
+  - 伪造 (Fakes）
+- - '###'
+  - 模拟对象 (Mocks)
+- - '##'
+  - Spring MVC Controller 的单元测试
+- - '##'
+  - MockHttpServletRequest 和 MockHttpServletResponse
+- - '##'
+  - ModelAndViewAssert
+- - '##'
+  - 使用 Spring MVC Test 进行集成测试
+- - '##'
+  - API
+- - '##'
+  - Spring MVC 测试类的骨架
+- - '##'
+  - 示例
+- - '##'
+  - 在集成测试中更改 Web Root
+- - '##'
+  - 总结
+- - '##'
+  - 启动和停止 Tomcat
+- - '##'
+  - 定义 Context
+- - '##'
+  - 定义 Resource
+- - '##'
+  - 安装 TLS 证书
+- - '#'
+  - 附录 B：配合 Maven 使用 Spring Tool Suite
+- - '##'
+  - 安装 Spring Tool Suite (STS)
+- - '##'
+  - 创建 Spring MVC 应用
+- - '##'
+  - 选择 Java 版本
+- - '##'
+  - 创建 index.html 文件
+- - '##'
+  - 更新项目
+- - '##'
+  - 运行应用
+- - '#'
+  - 附录 C：Servlet API
+- - '##'
+  - Servlet API 概述
+- - '##'
+  - javax.servlet 包
+- - '###'
+  - Servlet
+- - '##'
+  - 编写并编译 Servlet 类
+- - '##'
+  - 应用程序目录结构
+- - '##'
+  - 调用 Servlet
+- - '##'
+  - ServletRequest
+- - '##'
+  - ServletResponse
+- - '##'
+  - ServletConfig
+- - '##'
+  - ServletContext
+- - '##'
+  - GenericServlet
+- - '##'
+  - HTTP Servlets
+- - '##'
+  - HttpServlet
+- - '###'
+  - '列表 C.4: FormServlet 类'
+- - '##'
+  - 使用部署描述符（Deployment Descriptor）
+- - '##'
+  - 总结
+- - '#'
+  - D JavaServer Pages (JSP)
+- - '##'
+  - 注意
+- - '##'
+  - JSP 概述
+- - '###'
+  - 注意
+- - '###'
+  - 注释
+- - '###'
+  - 隐式对象
+- - '###'
+  - 示例 D.3：`implicitObjects.jsp` 页面
+- - '##'
+  - 指令
+- - '##'
+  - page 指令
+- - '##'
+  - include 指令
+- - '##'
+  - 脚本元素
+- - '##'
+  - 脚本段 (Scriptlets)
+- - '##'
+  - 表达式 (Expressions)
+- - '##'
+  - 声明 (Declarations)
+- - '##'
+  - 禁用脚本元素
+- - '##'
+  - Actions
+- - '##'
+  - useBean
+- - '##'
+  - setProperty 和 getProperty
+- - '##'
+  - include
+- - '##'
+  - forward 转发
+- - '##'
+  - 错误处理
+- - '##'
+  - 总结
+- - '#'
+  - 附录 E：部署
+- - '##'
+  - 部署描述符概述
+- - '##'
+  - 核心元素
+- - '##'
+  - context-param
+- - '###'
+  - distributable
+- - '###'
+  - error-page
+- - '###'
+  - filter
+- - '###'
+  - filter-mapping
+- - '###'
+  - listener
+- - '###'
+  - locale-encoding-mapping-list and locale-encoding-mapping
+- - '###'
+  - login-config
+- - '###'
+  - mime-mapping
+- - '###'
+  - security-constraint
+- - '##'
+  - 概述
+- - '##'
+  - security-role
+- - '##'
+  - servlet
+- - '##'
+  - servlet-mapping
+- - '##'
+  - session-config
+- - '##'
+  - welcome-file-list
+- - '##'
+  - JSP 特有元素
+- - '###'
+  - taglib
+- - '###'
+  - jsp-property-group
+- - '##'
+  - 部署
+- - '##'
+  - Web Fragments
+- - '###'
+  - Listing E.2：`web-fragment.xml`文件的结构
+- - '###'
+  - Listing E.3：`FragmentServlet` 类
+- - '###'
+  - Listing E.4：project fragment 中的 `web-fragment.xml`
+- - '##'
+  - 总结
