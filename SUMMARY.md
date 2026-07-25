@@ -567,6 +567,7 @@
 +   [Python、Java、SQL、JavaScript编码：初学者掌握最热门编程语言的完整课程](docs/pythonjava-sql-javascript-coding-the-complete-course-for-beg/README.md)
 +   [JavaScript 面频面试问题：学习常见问题解答](docs/quick-javascript-interview-questions-learn-frequently-asked-/README.md)
 +   [Apache Kafka、Spark 和 Storm 实时流处理：构建能够快速处理数据并为用户提供实时分析的平台（英文版）](docs/real-time-streaming-with-apache-kafka-spark-and-storm-create/README.md)
++   [实战 Java：助你掌握 Java 生态系统](docs/real-world-java-helping-you-navigate-the-java-ecosystem/README.md)
 +   [REST 实战](docs/rest-ia/README.md)
 +   [库系统逆向工程（第1版）：从 Java 代码到 UML 图表](docs/reverse-engineering-of-a-library-system-1st-edition-from-jav/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
