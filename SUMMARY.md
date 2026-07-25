@@ -631,3 +631,4 @@
 +   [Java 入门指南：掌握你的 Java 技能](docs/understading-java-for-beginners-master-your-java-programming/README.md)
 +   [Java 8 升级指南](docs/upgrading-to-java-8/README.md)
 +   [Web 应用开发指南：Ember.js 指南](docs/web-app-development-book-guide-to-emberjs/README.md)
++   [像专家一样编写代码：创建工作应用程序](docs/write-code-like-a-pro-create-working-applications/README.md)
