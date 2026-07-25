@@ -518,6 +518,7 @@
 +   [Java 面向对象编程实战：在家听课](docs/object-oriented-programming-in-java-attend-class-lecturers-f/README.md)
 +   [Java 面向对象编程使用指南](docs/object-oriented-programming-using-java---chb-books/README.md)
 +   [稀有王国：汤加、奥曼、尼日利亚、斯瓦士兰、爪哇岛](docs/obscure-kingdoms-tonga-oman-nigeria-swaziland-java/README.md)
++   [OCA／OCP Java®：SE 8 程序员：实践指南](docs/ocaocpjava-se-8-programmer-practice-tests/README.md)
 +   [OCM Java EE 6 企业架构师考试指南 (Exams 1Z0-807, 1Z0-865 & 1Z0-866) (Oracle Press)](docs/ocm-java-ee-6-enterprise-architect-exam-guide-exams-1z0-807-/README.md)
 +   [Oracle Hospitality OPERA 酒店管理系统 (PMS) 参考手册 - 酒店软件培训支持与 Java JEE AWS Amazon云开发精通：参考手册手册](docs/oracle-hospitality-opera-property-management-system-pms-refe/README.md)
 +   [Apache Shira 与 Java EE7 配对](docs/pairing-apache-shira-and-java-ee7/README.md)
