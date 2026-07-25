@@ -505,6 +505,7 @@
 +   [Java 8 简明教程](docs/modern-java/README.md)
 +   [现代 Java - Java 8 指南指南](docs/modern-java---a-guide-to-java-8/README.md)
 +   [现代 Web 开发：理解领域、技术与用户体验（开发者参考）](docs/modern-web-development-understanding-domains-technologies-an/README.md)
++   [摩卡杀案（Java 探探探系列，#5）](docs/murder-over-mochas-a-java-jive-mystery-5/README.md)
 +   [我的中国、日本与爪哇之旅，1903 (kegan Paul 旅行者系列)](docs/my-travels-in-china-japan-and-java-1903-kegan-paul-traveller/README.md)
 +   [MySQL 入门指南（编程语言 - JavaScript, Java, MySQL, PHP 及 Python 自动化）](docs/mysql-guide-for-beginner-programming-languages---javascript-/README.md)
 +   [Nailing 1Z0-808：Oracle Java SE8 程序员 I 认证实用指南](docs/nailing-1z0-808-practical-guide-to-oracle-java-se8-programme/README.md)
