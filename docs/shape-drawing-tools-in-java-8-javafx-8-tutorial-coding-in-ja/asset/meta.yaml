@@ -1,0 +1,318 @@
+name: SHAPE DRAWING TOOLS in Java 8： JavaFX 8 Tutorial (Coding in JavaFX Step by Step
+  Build Graphics Toolkit Book 2)
+name_cn: Java 8 形状绘图工具：JavaFX 8 教程（JavaFX 逐步编码构建图形工具包指南第 2 卷）
+slug: shape-drawing-tools-in-java-8-javafx-8-tutorial-coding-in-ja
+toc:
+- - '#'
+  - Java 8 形状绘图工具：JavaFX 8 教程（JavaFX 逐步编码构建图形工具包指南第 2 卷）
+- - '##'
+  - JavaFX 历史
+- - '##'
+  - 前提条件
+- - '#'
+  - JavaFX 概览
+- - '##'
+  - Scene（场景）与 Stage（舞台）
+- - '##'
+  - Nodes（节点）
+- - '##'
+  - JavaFX 与 Swing
+- - '##'
+  - JavaFX 的精髓
+- - '###'
+  - 内置布局面板（Layout Panes）
+- - '####'
+  - 参考 Oracle 在线文档“Working with Layouts in JavaFX”：
+- - '###'
+  - 使用 CSS 自定义
+- - '##'
+  - 对演示样式设计者的优势
+- - '##'
+  - 对软件开发人员的优势
+- - '##'
+  - JavaFX 中 CSS 与 HTML 中 CSS 的相似性
+- - '####'
+  - 参考 Oracle 在线文档“使用 CSS 装饰 JavaFX 应用程序”：
+- - '##'
+  - 使用 FXML 创建用户界面
+- - '####'
+  - '参考 Oracle 在线文档“JavaFX: 掌握 FXML”：'
+- - '##'
+  - 属性与绑定的吸引人能力
+- - '####'
+  - '参考 Oracle 在线文档“JavaFX: 属性与绑定教程”：'
+- - '##'
+  - 变换与过渡的复杂机制
+- - '####'
+  - '参考 Oracle 在线文档“JavaFX: 变换、动画和视觉效果”：'
+- - '##'
+  - 2D 几何原语和文本都是 JavaFX 节点
+- - '####'
+  - 参考 Oracle 在线文档“在 JavaFX 中使用文本”：
+- - '##'
+  - '对 Oracle 在线文档“JavaFX: Adding HTML Content to JavaFX Applications”的参考：'
+- - '###'
+  - 用于编辑 HTML 页的 `HTMLEditor` 类
+- - '##'
+  - '对 Oracle 在线文档“JavaFX: Working with JavaFX UI Components -- HTML Editor”的参考：'
+- - '###'
+  - 用于渲染数据的图表组件
+- - '##'
+  - '对 Oracle 在线文档“JavaFX: Working with JavaFX UI Components -- Working with JavaFX
+    Charts”的参考：'
+- - '###'
+  - 用于播放媒体的 `MediaView` 类
+- - '##'
+  - '对 Oracle 在线文档“JavaFX: Incorporating Media Assets Into JavaFX Applications”的参考：'
+- - '##'
+  - JavaFX 基础 UI 组件
+- - '##'
+  - '对 Oracle 在线文档“JavaFX: Working with JavaFX UI Components”的参考：'
+- - '#'
+  - 第 1 章：折段绘制 (Line Drawer)
+- - '##'
+  - 前言
+- - '###'
+  - 1.1 创建 `Application` 的子类 `LineDrawer`
+- - '###'
+  - 总结
+- - '####'
+  - 1.1.1 在 `BorderPane` 的中心添加 `Pane` 作为画板
+- - '###'
+  - 1.2 注册处理鼠标事件和按键事件的处理器
+- - '####'
+  - 1.2.1 使用便利方法注册处理器
+- - '###'
+  - 1.3 `LineDrawer` 中的属性与绑定
+- - '####'
+  - 1.3.1 定义存储鼠标事件位置的属性
+- - '####'
+  - 1.3.2 定义存储草图的 `ObjectProperty<Shape>`
+- - '####'
+  - 1.3.3 绑定线条终点的属性
+- - '###'
+  - 1.4 获取按键事件的键码
+- - '###'
+  - 1.5 `LineDrawer` 的完整源代码
+- - '###'
+  - 1.6 总结
+- - '#'
+  - 第 2 章：折线绘制 (Polyline Drawer)
+- - '##'
+  - 2.1 创建 `Polyline` 实例
+- - '###'
+  - 'Import Statements:'
+- - '###'
+  - Listing 2-6. 实现 `onMouseDragStarted()` 方法，该方法由 MOUSE_DRAGGED 事件的事件处理程序调用：
+- - '###'
+  - 2.1.4 实现 `onMouseDragFinished()` 方法
+- - '###'
+  - Listing 2-7. 实现 `onMouseDragFinished()` 方法，该方法由 MOUSE_RELEASED 事件的事件处理程序调用：
+- - '##'
+  - 2.2 `PolylineDrawer` 类的完整源代码
+- - '###'
+  - Listing 2-8. 创建 `PolylineDrawer` 类，其继承自 `Application` 类，重写 `start` 方法，创建 `BorderPane`
+    作为场景的根节点，并将 `Pane` 放置在 `BorderPane` 的中心作为绘制板：
+- - '##'
+  - 图 2-3. 使用 `Polyline Drawer` 模块绘制草图的截图
+- - '##'
+  - 2.3 总结
+- - '#'
+  - 第 3 章：多边形绘制 (Polygon Drawer)
+- - '##'
+  - 创建 `Polygon` 实例
+- - '##'
+  - '`PolygonDrawer` 完整源代码'
+- - '##'
+  - 在命令行中编译和运行程序的输出：
+- - '##'
+  - 3.3 总结
+- - '##'
+  - 图 3-3. 使用 `Polygon Drawer` 模块绘制草图的截图
+- - '#'
+  - 第 4 章：路径绘制 (Path Drawer)
+- - '##'
+  - 4.1 创建 `Path` 实例
+- - '###'
+  - 4.1.1 创建 `Path` 实例：
+- - '###'
+  - 导入语句：
+- - '###'
+  - 列表 4-1. 创建由 8 个 `PathElement` 组成的 `Path`（共 4 笔画）：
+- - '###'
+  - 列表 4-2. 创建由 8 个 `PathElement` 组成的 `Path`（共 4 笔画）：
+- - '###'
+  - 导入语句：
+- - '###'
+  - 列表 4-3. 创建由 4 个 `PathElement` 组成的 `Path`（共 4 笔画）：
+- - '##'
+  - 4.2 实现 `MouseClicked(Pane)` 方法
+- - '###'
+  - 4.2.1 向 `Path` 中添加 `MoveTo` 元素
+- - '##'
+  - 4.3 总结
+- - '#'
+  - 第 5 章：贝塞尔曲线绘制 (Bezier Curve Drawer)
+- - '##'
+  - 5.1 介绍贝塞尔曲线
+- - '###'
+  - 5.1.1 介绍贝塞尔曲线
+- - '###'
+  - 5.1.2 注册鼠标拽事件处理器
+- - '###'
+  - 5.1.3 注册鼠标释放事件处理器
+- - '##'
+  - 5.2 实现 `onMouseDragStart(Pane)` 方法
+- - '###'
+  - 5.2.1 向 `Path` 添加 `QuadCurveTo` 元素
+- - '###'
+  - 5.2.2 绘制二次曲线
+- - '##'
+  - 5.3 实现 `onMouseDragFinished(Pane)` 方法
+- - '###'
+  - 5.3.1 向 `Path` 添加 `QuadCurveTo` 元素
+- - '###'
+  - 5.3.2 绘制二次曲线
+- - '##'
+  - 5.4 实现 `OnMouseDragFinished(Pane)` 方法
+- - '##'
+  - 5.5 注册按键事件
+- - '###'
+  - 5.5.1 实现 `deleteLastPath(Pane*, Path*)` 方法
+- - '###'
+  - 列表 5-13. 实现 `deleteLastPath` 方法，从给定的 `PathElement` 列表，从列表中移除元素，并更新起始点：
+- - '##'
+  - 5.6 `BezierCurDrawer` 类的完整源代码
+- - '###'
+  - 列表 5-14. 创建 `Application` 类的 `BezierDrawer` 类，重写 `start` 方法，创建 `BorderPane` 作为场景的根节点，并将
+    `Pane` 放置在 `BorderPane` 的中心作为画板：
+- - '##'
+  - 图 5-4. 使用 `Bezier Curve Drawer` 模块绘制图标的截图。
+- - '##'
+  - 5.7 总结
+- - '#'
+  - 第 6 章：基础绘制
+- - '##'
+  - 前言
+- - '##'
+  - 6.1 创建 `ShapeDrawer` 类
+- - '###'
+  - 6.1.1 定义属性
+- - '###'
+  - 6.1.2 定义方法
+- - '###'
+  - 6.1.3 `ShapeDrawer` 类的完整源代码
+- - '###'
+  - 列表 6-5 创建 `ShapeDrawer` 类：
+- - '##'
+  - ShapeDrawer.java
+- - '##'
+  - 6.2 创建 `DrawPane` 类
+- - '###'
+  - 6.2.1 定义属性
+- - '###'
+  - '`startX`'
+- - '###'
+  - '`startY`'
+- - '###'
+  - '`dragX`'
+- - '###'
+  - '`dragY`'
+- - '###'
+  - '`dragged`'
+- - '###'
+  - '`drawer`'
+- - '###'
+  - 6.2.2 在默认构造函数内部注册处理器
+- - '###'
+  - 6.2.3 定义 `drawOnMouseDragged` 方法
+- - '###'
+  - 6.2.4 对 `ENTER` 键、`ESCAPE` 键和 `DELETE` 键执行默认操作
+- - '###'
+  - 6.2.5 定义带有 `ShapeDrawer` 参数的构造函数
+- - '###'
+  - 6.2.6 `DrawPane` 类的完整源代码
+- - '##'
+  - 6.3 使用 Draw APIs 开发绘制器
+- - '###'
+  - 6.3.1 创建 `Application` 的子类 `RectangleDrawer` 类
+- - '###'
+  - 6.3.2 创建 `Application` 的子类 `CircleDrawer` 类
+- - '###'
+  - 列表 6-17. `EllipseDrawer` 类的完整源代码：
+- - '#'
+  - 第 7 章：增强绘制
+- - '##'
+  - 7.1 增强 `ShapeDrawer` 类
+- - '###'
+  - 7.1.1 定义形状渲染属性
+- - '###'
+  - 7.1.2 定义布尔属性 `polySegment`
+- - '###'
+  - 7.1.3 增强型 `ShapeDrawer` 类的完整源代码
+- - '##'
+  - 7.2 创建 `ShapeDrawer` 的子类
+- - '###'
+  - 7.2.1 实现 `LineDrawer` 类
+- - '###'
+  - 7.2.1.1 创建线条绘制应用程序
+- - '###'
+  - 7.2.2 实现 `PolylineDrawer` 类
+- - '###'
+  - 7.2.2.1 创建折线绘制应用程序
+- - '###'
+  - 7.2.3 实现 `PolygonDrawer` 类
+- - '###'
+  - 7.2.3.1 创建多边形绘制应用程序
+- - '###'
+  - 7.2.4 实现 `PathDrawer` 类
+- - '###'
+  - 7.2.4.1 创建路径绘制应用程序
+- - '###'
+  - 7.2.5 Implement `BezierCurveDrawer` 类
+- - '###'
+  - 7.2.5.1 创建贝塞尔曲线绘制应用程序
+- - '###'
+  - 7.2.6 Implement `RectangleDrawer` 类
+- - '###'
+  - 7.2.6.1 创建矩形绘制应用程序
+- - '###'
+  - 7.2.7 Implement `CircleDrawer` 类
+- - '###'
+  - 7.2.7.1 创建圆形绘制应用程序
+- - '###'
+  - 7.2.8 Implement `EllipseDrawer` 类
+- - '###'
+  - 7.2.8.1 创建椭圆绘制应用程序
+- - '###'
+  - 7.2.9 实现 `ShapeMover` 类
+- - '###'
+  - 列表 7-20. 实现 `ShapeMover` 类，它是 `ShapeDrawer` 的直接子类：
+- - '##'
+  - 7.3 增强 `DrawPane` 类
+- - '###'
+  - 列表 7-21. 增强 `DrawPane` 类：
+- - '##'
+  - 7.4 总结
+- - '#'
+  - 第 8 章：主应用
+- - '##'
+  - 8.1 创建 `JFXDrawTools` 类
+- - '###'
+  - 8.1.2 创建状态栏
+- - '###'
+  - 8.1.3 创建菜单
+- - '###'
+  - 8.1.4 设置菜单项的快捷键
+- - '###'
+  - 8.1.5 定义枚举类型 `DrawTools`
+- - '###'
+  - 8.1.6 `JFXDrawTools` 类骨架的完整源代码
+- - '##'
+  - 8.2 创建形状绘制器的实例
+- - '###'
+  - 8.2.1 为绘制面板激活绘制器
+- - '##'
+  - 8.3 JFXDrawTools 类的完整源代码
+- - '#'
+  - 结语
