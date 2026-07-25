@@ -1,0 +1,38 @@
+name: Programming Java, JavaScript Coding For Beginners – Learn In A Day · 2nd Edition
+name_cn: Java 与 JavaScript 编程：初学者指南 - 一天学会 · 第2版
+slug: programming-java-javascript-coding-for-beginners-learn-in-a-
+toc:
+- - '#'
+  - 第 4 章：控制语句
+- - '##'
+  - If else
+- - '##'
+  - Switch case
+- - '##'
+  - While ()
+- - '##'
+  - Do - while ()
+- - '##'
+  - For 循环
+- - '##'
+  - '`for` 循环与 `while` 循环的区别：'
+- - '##'
+  - 虚拟方法
+- - '#'
+  - 第 7 章：对象的生存与死亡
+- - '###'
+  - Java 中的垃圾回收
+- - '#'
+  - 第 8 章：类型转换
+- - '##'
+  - 通过对象引用进行类型转换
+- - '##'
+  - 对象引用转换：显式转换
+- - '##'
+  - 非受检异常 (Unchecked exceptions)
+- - '##'
+  - 异常 (Exception) 与错误 (Error) 之间的区别：
+- - '##'
+  - 异常处理 (Exception Handling)
+- - '#'
+  - JavaScript 基础
