@@ -624,5 +624,6 @@
 +   [布雷斯弗朗索瓦·勒瓜亚前往罗德里格斯岛、毛里求斯、爪哇和好望角的旅行记 1](docs/the-voyage-of-françois-leguat-of-bresse-to-rodriguez-mauriti/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Tony Gaddis Godfrey Muganda Java 入门：从控制结构到数据结构复习题答案 Addison Wesley 2012](docs/tony-gaddis-godfrey-muganda-starting-out-with-java-from-cont/README.md)
++   [现代 Java 中的传统音乐：变革社会中的甘美兰](docs/traditional-music-in-modern-java-gamelan-in-a-changing-socie/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
 +   [Java 入门指南：掌握你的 Java 技能](docs/understading-java-for-beginners-master-your-java-programming/README.md)
