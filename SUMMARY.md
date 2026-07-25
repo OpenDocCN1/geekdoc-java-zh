@@ -620,3 +620,4 @@
 +   [Scalyr 快速上手日志指南：Java,Log4j2,PHP,Ruby,Rails,Swift,Scala,Django,Angular & Meteor 日志快速启动指南](docs/the-scalyr-guide-to-getting-started-logging-as-quickly-as-po/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
++   [Java 入门指南：掌握你的 Java 技能](docs/understading-java-for-beginners-master-your-java-programming/README.md)
