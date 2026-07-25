@@ -572,6 +572,7 @@
 +   [REST 实战](docs/rest-ia/README.md)
 +   [库系统逆向工程（第1版）：从 Java 代码到 UML 图表](docs/reverse-engineering-of-a-library-system-1st-edition-from-jav/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
++   [Scala 急速指南（第三版，ePub 版）](docs/scala-for-the-impatient-third-edition-for-true-epub/README.md)
 +   [初学者脚本超级包：Python、Powershell、Bash 和 Java 精通指南](docs/scripting-superpack-for-beginners-python-powershell-bash-and/README.md)
 +   [使用 Sensei 进行安全高质量的 Java 编码：使用 Secure Code Warrior Sensei IntelliJ 插件编写安全高质量代码指南](docs/secure-and-quality-java-coding-using-sensei-a-how-to-guide-f/README.md)
 +   [Java Selenium 初学者指南：使用 Java Selenium 进行 浏览器自动化测试，第一版](docs/selenium-with-java-a-beginners-guide-web-browser-automation-/README.md)
