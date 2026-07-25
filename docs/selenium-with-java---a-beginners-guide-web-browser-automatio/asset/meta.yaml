@@ -1,0 +1,61 @@
+name: SELENIUM WITH JAVA - A BEGINNER'S GUIDE web browser automation for testing using
+  selenium... with java
+name_cn: Java Selenium 初学者指南：使用 Selenium 和 Java 进行 Web 浏览器自动化测试
+slug: selenium-with-java---a-beginners-guide-web-browser-automatio
+toc:
+- - '#'
+  - Java Selenium 初学者指南：使用 Selenium 和 Java 进行 Web 浏览器自动化测试
+- - '#'
+  - 责任限制与免责声明
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于评审员
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '##'
+  - '`By` 类的异常'
+- - '##'
+  - 结论
+- - '##'
+  - 问题
+- - '#'
+  - 第 4 章：同步概念
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 理解同步及其重要性
+- - '##'
+  - 同步的类型
+- - '##'
+  - 场景
+- - '##'
+  - 实现显式等待
+- - '##'
+  - 遇到异常
+- - '#'
+  - 第 5 章：处理 WebElements——表单、表格和下拉列表
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 处理表单元素
+- - '##'
+  - 问题
+- - '##'
+  - 操作下拉列表
+- - '#'
+  - 第 6 章：操作 WebElement—警报框（Alert）、框架（Frame）、IFrame 和窗口（Window）
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 操作 JavaScript 警报框
+- - '##'
+  - 操作 Frame 和 IFrame 元素
