@@ -1,0 +1,85 @@
+name: Secure and quality Java coding using Sensei： A ‘How-To’ guide for writing secure
+  and quality code with Secure Code Warrior’s Sensei IntelliJ plugin
+name_cn: 使用 Sensei 进行安全高质量的 Java 编码：使用 Secure Code Warrior Sensei IntelliJ 插件编写安全高质量代码指南
+slug: secure-and-quality-java-coding-using-sensei-a-how-to-guide-f
+toc:
+- - '#'
+  - 使用 Sensei 进行安全高质量的 Java 编码：使用 Secure Code Warrior Sensei IntelliJ 插件编写安全高质量代码指南
+- - '#'
+  - 引言
+- - '##'
+  - 什么是 Sensei？
+- - '##'
+  - 什么是静态分析？
+- - '##'
+  - 示例 Recipe 仓库
+- - '##'
+  - 有用文档和链接
+- - '##'
+  - Sensei 团队支持
+- - '##'
+  - 从持续集成中运行 IntelliJ 检查
+- - '##'
+  - Sensei GUI 概述
+- - '##'
+  - 章节 - 用例
+- - '##'
+  - POJO 用例
+- - '##'
+  - Junit 5 用例
+- - '##'
+  - Guice 用例
+- - '##'
+  - 下一步
+- - '##'
+  - 关于 Secure Code Warrior
+- - '##'
+  - 关于作者
+- - '##'
+  - 什么是静态分析？
+- - '##'
+  - 基于 IDE 的静态分析工具
+- - '##'
+  - 示例仓库
+- - '##'
+  - JetBrains 市场上的 IntelliJ
+- - '##'
+  - Secure Code Warrior Sensei 博客
+- - '##'
+  - Secure Code Warrior 视频
+- - '##'
+  - 有用的 Github 仓库
+- - '##'
+  - Sensei 团队支持
+- - '##'
+  - 在持续集成中运行 IntelliJ 检查
+- - '#'
+  - Sensei GUI 概述
+- - '#'
+  - 章节 - 用例
+- - '##'
+  - POJO 用例
+- - '##'
+  - 下一步
+- - '##'
+  - 总结
+- - '##'
+  - 代码链接
+- - '##'
+  - 观看 Sensei 演示
+- - '#'
+  - Junit 5 用例
+- - '##'
+  - 实现 `goto` URL
+- - '##'
+  - 多操作
+- - '##'
+  - 谁会受益？
+- - '#'
+  - Guice 用例
+- - '##'
+  - 下一步
+- - '#'
+  - 关于 Secure Code Warrior
+- - '#'
+  - 关于作者

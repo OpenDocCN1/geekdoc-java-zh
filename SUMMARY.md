@@ -570,6 +570,8 @@
 +   [REST 实战](docs/rest-ia/README.md)
 +   [库系统逆向工程（第1版）：从 Java 代码到 UML 图表](docs/reverse-engineering-of-a-library-system-1st-edition-from-jav/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
++   [使用 Sensei 进行安全高质量的 Java 编码：使用 Secure Code Warrior Sensei IntelliJ 插件编写安全高质量代码指南](docs/secure-and-quality-java-coding-using-sensei-a-how-to-guide-f/README.md)
++   [Java 开发者软件设计模式：专家级构建可重用软件与企业级应用指南](docs/software-design-patterns-for-java-developers-expert-led-appr/README.md)
 +   [Spark：一天学会 Spark！从入门到 Spark 基础的终极速成课程 (Spark 课程、Spark 开发、Spark 书籍、Spark 初学者指南)](docs/spark-learn-spark-in-a-day---the-ultimate-crash-course-to-le/README.md)
 +   [Spring Boot 参考指南](docs/sprbt-refgd/README.md)
 +   [Spring Boot 入门指南：一本不后悔的入门：[实用指南]从基础学习 Spring Boot 2.4——Java, Spring Data JPA, Spring MVC, Spring Security, Spring Web, Mybatis, Spring Framework](docs/spring-boot-primer-an-introductory-book-to-not-regret-hands-/README.md)

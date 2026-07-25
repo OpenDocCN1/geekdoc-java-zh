@@ -1,0 +1,2163 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 555 751" preserveaspectratio="none">
+<image width="555" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="text00000.html"></span></p>
+<h1 class="title">Secure and Quality Java Coding using Sensei</h1>
+<p>A ‘How To’ Guide for Writing Secure and Quality Code with Secure Code
+Warrior’s Sensei IntelliJ Plugin</p>
+<p>Alan Richardson, Head of Developer Relations at Secure Code
+Warrior</p>
+<p>SecureCodeWarrior.com</p>
+<p><span id="text00001.html"></span></p>
+<nav id="toc">
+<h1 class="title" id="text00001.html_toc-title">Secure and Quality Java
+Coding using Sensei</h1>
+<ol>
+<li><span id="text00001.html_toc-li-1"><a
+href="#text00002.html_introduction">Introduction</a></span>
+<ol>
+<li><span id="text00001.html_toc-li-2"><a
+href="#text00002.html_what-is-sensei">What is Sensei?</a></span></li>
+<li><span id="text00001.html_toc-li-3"><a
+href="#text00002.html_what-is-static-analysis">What is Static
+Analysis?</a></span></li>
+<li><span id="text00001.html_toc-li-4"><a
+href="#text00002.html_example-recipe-repositories">Example Recipe
+Repositories</a></span></li>
+<li><span id="text00001.html_toc-li-5"><a
+href="#text00002.html_useful-documentation-and-links">Useful
+Documentation and Links</a></span></li>
+<li><span id="text00001.html_toc-li-6"><a
+href="#text00002.html_sensei-team-support">Sensei Team
+Support</a></span></li>
+<li><span id="text00001.html_toc-li-7"><a
+href="#text00002.html_running-intellij-inspections-from-continuous-integration">Running
+IntelliJ Inspections From Continuous Integration</a></span></li>
+</ol></li>
+<li><span id="text00001.html_toc-li-8"><a
+href="#text00003_split_000.html_sensei-gui-overview">Sensei GUI
+Overview</a></span>
+<ol>
+<li><span id="text00001.html_toc-li-9"><a
+href="#text00003_split_000.html_sensei-menu">Sensei Menu</a></span></li>
+<li><span id="text00001.html_toc-li-10"><a
+href="#text00003_split_000.html_cookbook-manager">Cookbook
+Manager</a></span></li>
+<li><span id="text00001.html_toc-li-11"><a
+href="#text00003_split_001.html_manage-recipes">Manage
+Recipes</a></span></li>
+<li><span id="text00001.html_toc-li-12"><a
+href="#text00003_split_001.html_cookbook-recipe-editor-list">Cookbook
+Recipe Editor List</a></span></li>
+<li><span id="text00001.html_toc-li-13"><a
+href="#text00003_split_002.html_recipe-editor">Recipe
+Editor</a></span></li>
+<li><span id="text00001.html_toc-li-14"><a
+href="#text00003_split_002.html_general-settings">General
+Settings</a></span></li>
+<li><span id="text00001.html_toc-li-15"><a
+href="#text00003_split_002.html_recipe-settings---search">Recipe
+Settings - Search</a></span></li>
+<li><span id="text00001.html_toc-li-16"><a
+href="#text00003_split_002.html_quickfix-settings">QuickFix
+Settings</a></span></li>
+<li><span id="text00001.html_toc-li-17"><a
+href="#text00003_split_002.html_creating-a-recipe">Creating A
+Recipe</a></span></li>
+<li><span id="text00001.html_toc-li-18"><a
+href="#text00003_split_002.html_spotting-issues-in-the-ide">Spotting
+Issues in the IDE</a></span></li>
+<li><span id="text00001.html_toc-li-19"><a
+href="#text00003_split_002.html_triggering-a-quick-fix">Triggering a
+Quick Fix</a></span></li>
+</ol></li>
+<li><span id="text00001.html_toc-li-20"><a
+href="#text00004.html_section---use-cases">Section -
+Use-Cases</a></span></li>
+<li><span id="text00001.html_toc-li-21"><a
+href="#text00005.html_pojo-use-cases">POJO Use-Cases</a></span>
+<ol>
+<li><span id="text00001.html_toc-li-22"><a
+href="#text00005.html_converting-system.out.println-to-logger">Converting
+System.out.println to logger</a></span></li>
+</ol></li>
+<li><span id="text00001.html_toc-li-23"><a
+href="#text00006.html_junit-5-use-cases">Junit 5 Use-Cases</a></span>
+<ol>
+<li><span id="text00001.html_toc-li-24"><a
+href="#text00006.html_adding-annotations-and-method-renaming">Adding
+Annotations and Method Renaming</a></span></li>
+<li><span id="text00001.html_toc-li-25"><a
+href="#text00006.html_adding-parameters-to-annotations-using-rewrite-actions">Adding
+Parameters to Annotations Using Rewrite Actions</a></span></li>
+<li><span id="text00001.html_toc-li-26"><a
+href="#text00006.html_documentation-links">Documentation
+Links</a></span></li>
+</ol></li>
+<li><span id="text00001.html_toc-li-27"><a
+href="#text00007.html_guice-use-cases">Guice Use-cases</a></span>
+<ol>
+<li><span id="text00001.html_toc-li-28"><a
+href="#text00007.html_how-to-catch-and-fix-a-dependency-injection-issue-using-sensei">How
+to catch and fix a dependency injection issue using
+Sensei</a></span></li>
+</ol></li>
+<li><span id="text00001.html_toc-li-29"><a
+href="#text00008.html_next-steps-1">Next Steps</a></span>
+<ol>
+<li><span id="text00001.html_toc-li-30"><a
+href="#text00008.html_install-sensei">Install Sensei</a></span></li>
+<li><span id="text00001.html_toc-li-31"><a
+href="#text00008.html_study-some-examples">Study Some
+Examples</a></span></li>
+<li><span id="text00001.html_toc-li-32"><a
+href="#text00008.html_read-the-documentation">Read the
+Documentation</a></span></li>
+<li><span id="text00001.html_toc-li-33"><a
+href="#text00008.html_experiment">Experiment</a></span></li>
+<li><span id="text00001.html_toc-li-34"><a
+href="#text00008.html_summary-6">Summary</a></span></li>
+</ol></li>
+<li><span id="text00001.html_toc-li-35"><a
+href="#text00009.html_about-secure-code-warrior">About Secure Code
+Warrior</a></span></li>
+<li><span id="text00001.html_toc-li-36"><a
+href="#text00010.html_about-the-author">About the Author</a></span></li>
+</ol>
+</nav>
+<nav id="landmarks" hidden="hidden">
+<ol>
+<li><a href="#text00000.html">Title Page</a></li>
+<li><a href="Image00000.jpg">Cover</a></li>
+<li><a href="#text00001.html_toc">Table of Contents</a></li>
+</ol>
+</nav>
+<p><span id="text00002.html"></span></p>
+<h1 class="title" data-number="1"
+id="text00002.html_introduction">Introduction</h1>
+<p><a href="https://scw.buzz/38n5uPu">Sensei</a> is a free IntelliJ
+plugin from <a href="https://scw.buzz/2PBhLJp">Secure Code Warrior</a>
+that helps you codify quality coding practices as real-time warnings in
+your IDE, and create Quick Fix solutions to educate you or rewrite your
+code.</p>
+<ul>
+<li><a
+href="https://scw.buzz/3qvDvDt">securecodewarrior.com/sensei</a></li>
+</ul>
+<p>This document has example recipes and explanations to help you get
+started using Sensei to write better quality code.</p>
+<p>Numerous staff from Secure Code Warrior have been involved in the
+creation of this document:</p>
+<ul>
+<li>Charlie Eriksen and Robin Claerhout created the Guice example</li>
+<li>Nathan Desmet created the <code
+class="calibre4">System.out.println</code> to <code
+class="calibre4">Logger</code> example</li>
+<li>Additional help, recipes, code and reviews were provided by:
+Matthieu Calie, Brysen Ackx, Downey Robersscheuten.</li>
+</ul>
+<p>For a quick overview of what Sensei can do, watch: <a
+href="https://youtu.be/HPj1Lo97aTQ">youtu.be/HPj1Lo97aTQ</a></p>
+<p><a href="https://www.youtube.com/watch?v=HPj1Lo97aTQ"><img
+src="OEBPS/Image00001.jpg" class="calibre5" /></a></p>
+<h2 class="calibre6" data-number="1.1"
+id="text00002.html_what-is-sensei">What is Sensei?</h2>
+<p>The Sensei plugin provides an easy way to find specific code patterns
+in your source code and apply rewrite rules to amend the matching code -
+all within the Intellij IDE, and in real-time.</p>
+<p>For example, you could create a rule that matches on JUnit <code
+class="calibre4">@Disabled</code> annotations which do not have a
+reason. Sensei would then tell you about the issue by highlighting the
+code in the IDE.</p>
+<p>Additionally, when you <code class="calibre4">alt+enter</code> , you
+can have the option to <code
+class="calibre4">Add a todo comment parameter</code> .</p>
+<p>When selected, this will amend the code to add a boilerplate reason,
+which you can then amend. If you don’t, it will show up in your TODO
+panel.</p>
+<p>e.g. <code class="calibre4">@Disabled</code> would become <code
+class="calibre4">@Disabled("TODO: add a description here")</code></p>
+<p>Sensei combines the functionality of a Static Analysis code scanner
+with a code rewriting engine.</p>
+<h3 class="calibre7" data-number="1.1.1"
+id="text00002.html_intellij-intention-actions">IntelliJ Intention
+Actions</h3>
+<p>Based on the above description, the obvious alternative (if you were
+not using Sensei) is to use the IntelliJ Intention Actions
+functionality.</p>
+<p>Sensei differs from IntelliJ Intention Actions because the aim with
+Sensei is to provide a way to create matchers and rewriters which are
+project specific, or even local to an individual developer.</p>
+<p>We have tried to put together a GUI that makes both the matching and
+rewrite rules easy to write and experiment with.</p>
+<h3 class="calibre7" data-number="1.1.2"
+id="text00002.html_how-can-it-help-me-personally-improve">How can it
+help me personally improve?</h3>
+<p>When I’m learning a new library, it takes me time to build up muscle
+memory around the methods and formatting. So I might choose to create
+personal recipes which</p>
+<ul>
+<li>link off to the official documentation or tutorial pages</li>
+<li>have boilerplate templates which are most effective</li>
+<li>fix poor coding practices</li>
+<li>add boilerplate code to help use a library</li>
+</ul>
+<p>I can use Sensei to build temporary recipes which prompt me for the
+current practices I’ve chosen to use and help me build up effective
+habits. The recipes are temporary because I can remove them when I
+outgrow them.</p>
+<h3 class="calibre7" data-number="1.1.3"
+id="text00002.html_how-can-it-help-my-team-improve">How can it help my
+team improve?</h3>
+<p>In the same way, we can help teams build up muscle memory around
+agreed coding standards.</p>
+<p>Creating cookbooks of recipes that we apply when we find the same
+comments in pull request reviews. Since the cookbooks are stored in
+version control with the project, they are available to everyone on the
+project and we can switch them off when we no longer need prompting.</p>
+<h3 class="calibre7" data-number="1.1.4"
+id="text00002.html_sensei-helps-provide-feedback-early">Sensei helps
+provide feedback early</h3>
+<p>We’ve tried to build a way of pulling the feedback that helps us
+improve and provide reminders of corrective action as early on in the
+coding process as we can with Sensei.</p>
+<p>Rather than wait for:</p>
+<ul>
+<li>the results of a static analyser</li>
+<li>the comments from a code review</li>
+</ul>
+<p>We can instead see the feedback for custom standards we want to
+enforce as we code.</p>
+<p>We provide either reminders, or actual rewrite rules, to help us
+write code that complies with the standards.</p>
+<h3 class="calibre7" data-number="1.1.5"
+id="text00002.html_sensei-is-flexible">Sensei is flexible</h3>
+<p>Sensei is a mix of:</p>
+<ul>
+<li>part Static Analyser</li>
+<li>part coding tutor</li>
+<li>part rewrite engine</li>
+</ul>
+<p>Sensei is so flexible that it makes it hard to answer the question:
+“What is Sensei?”</p>
+<h3 class="calibre7" data-number="1.1.6"
+id="text00002.html_sensei-fills-a-gap-in-the-programming-workflow">Sensei
+fills a gap in the programming workflow</h3>
+<p>We’ve tried to make Sensei the missing piece of the programmer
+workflow that helps you improve specific elements in your coding style,
+or library use, that you and your team are currently working with.</p>
+<p>This flexibility means that it takes a little more time to get to
+grips with Sensei than a static analysis tool or the built-in IntelliJ
+Intensions. By spending the time to experiment, you will gain a new way
+of speeding up your learning in your personal development process.</p>
+<h3 class="calibre7" data-number="1.1.7"
+id="text00002.html_how-to-experiment">How to experiment?</h3>
+<p>Download and install Sensei from the <a
+href="https://plugins.jetbrains.com/plugin/14015">Intellij
+Marketplace</a> . We recommend installing Sensei via the plugins manager
+in IntelliJ preferences (just search for ‘Sensei secure code’ and you’ll
+find it).</p>
+<p>We have also created a getting started guide on the Intellij
+Marketplace - <a href="https://scw.buzz/3rveXvC">get started page</a>
+.</p>
+<p>Once you’ve downloaded and installed Sensei, the easiest way to make
+it work for you is to look at your coding process and consider:</p>
+<ul>
+<li>What documentation do you keep looking up?
+<ul>
+<li>You could add some Sensei recipes that link back to that
+documentation.<br />
+</li>
+</ul></li>
+<li>What simple mistakes do you keep making?
+<ul>
+<li>You can temporarily codify that poor coding pattern as a matcher and
+write a Quick Fix rewrite that amends the code to be what you really
+want to write.</li>
+</ul></li>
+<li>What boilerplate code do you write to use a library?
+<ul>
+<li>You can create a Quick Fix rule to write the code for you.</li>
+</ul></li>
+</ul>
+<p>Sensei is designed to work alongside whatever static analysis tool
+you’re using. That means that if you find that the same violations are
+being reported from static analysis, then you could replicate the
+condition in a Sensei recipe. You can then add a Quick Fix to help train
+you not to just identify the mistake, but also to move quickly to
+writing the correct code.</p>
+<h2 class="calibre6" data-number="1.2"
+id="text00002.html_what-is-static-analysis">What is Static
+Analysis?</h2>
+<p>Static Analysis is the automated analysis of source code without
+executing the application.</p>
+<p>When the analysis is performed during program execution then it is
+known as Dynamic Analysis.</p>
+<p>Static Analysis is often used to detect:</p>
+<ul>
+<li>Security vulnerabilities.</li>
+<li>Performance issues.</li>
+<li>Non-compliance with standards.</li>
+<li>Use of out of date programming constructs.</li>
+</ul>
+<h3 class="calibre7" data-number="1.2.1"
+id="text00002.html_how-does-a-static-analysis-tool-work">How does a
+Static Analysis tool work?</h3>
+<p>The basic concept common to all Static Analysis tools is searching
+source code to identify specific coding patterns that have some sort of
+warning or information associated with them.</p>
+<p>This could be as simple as “JUnit 5 test classes do not need to be
+‘public’” or something complex to identify like “Untrusted String input
+being used in an SQL execution statement”.</p>
+<p>Static Analysis tools vary in how they implement this
+functionality.</p>
+<ul>
+<li>Source code parsing technology to create an Abstract Syntax Tree
+(AST),</li>
+<li>Text Regular Expression matching,</li>
+<li>A combination of the above.</li>
+</ul>
+<p>Regular Expression matching on text is very flexible and easy to
+write rules to match, but can often lead to a lot of false positives and
+the matching rules are ignorant of the surrounding code context.</p>
+<p>AST matching treats the source code as program code and not just
+files filled with text. This allows for more specific, contextual
+matching and can reduce the number of false positives reported against
+the code.</p>
+<h3 class="calibre7" data-number="1.2.2"
+id="text00002.html_static-analysis-in-continuous-integration">Static
+Analysis in Continuous Integration</h3>
+<p>Static Analysis is often performed during the Continuous Integration
+(CI) process to generate a report of compliance issues which can be
+reviewed to receive an objective view of the code-base over time.</p>
+<p>Some people use Static Analysis as an objective measure of their code
+quality by configuring the static analysis tool to only measure specific
+parts of the code, and only report on a subset of rules.</p>
+<p>The objectivity is provided by the rules used since these do not vary
+in their evaluation of code over time. Clearly, the combination of rules
+used and their configuration is a subjective decision and different
+teams choose to use different rules at different times.</p>
+<p>Having the Static Analysis performed in CI is useful but might delay
+the feedback to the programmer. Programmers don’t receive feedback when
+coding, they receive feedback later when the code is run through the
+Static Analysis tool. Another side-effect of running the Static Analysis
+in CI is that the results are easier to ignore.</p>
+<p>To help make teams pay more attention to the results from Static
+Analysis it is usually possible to configure a threshold metric in the
+build process to fail the build if the metric is exceeded e.g. a number
+of rules triggered.</p>
+<h3 class="calibre7" data-number="1.2.3"
+id="text00002.html_static-analysis-in-the-ide">Static Analysis in the
+IDE</h3>
+<p>To receive feedback faster, there are many IDE plugins that run the
+Static Analysis rules in the IDE on demand, or periodically as the code
+changes.</p>
+<p>The rule violations can then be seen in the IDE as the programmer is
+writing code, and to make the rules harder to ignore, the violations can
+often be configured to render as underlined code in the editor.</p>
+<p>I personally find this a useful way to improve my coding,
+particularly when working with a new library that is covered by the
+Static Analysis tool. Although it can be ‘noisy’ with false positives,
+or rules you are not interested in. But this is solved by taking the
+extra step to configure the Static Analysis tool to ignore certain
+rules.</p>
+<h3 class="calibre7" data-number="1.2.4"
+id="text00002.html_fixing-code-based-on-static-analysis-rules">Fixing
+Code Based on Static Analysis Rules</h3>
+<p>With most Static Analysis tools, the fixing of the rule is left to
+the programmer, so they have to understand the cause of the rule
+violation and how to fix it.</p>
+<p>Very few static analysis tools also include the ability to fix the
+violations because the fix is so often contextual to the team and the
+technology used and their agreed coding styles.</p>
+<h3 class="calibre7" data-number="1.2.5"
+id="text00002.html_default-rules">Default Rules</h3>
+<p>False confidence in the quality of the rules may arise when the
+Static Analysis tools come with default rules. It is tempting to believe
+that they cover all the issues that a programmer might encounter and all
+the circumstances that rule should apply. Sometimes the circumstances in
+which a rule should apply can be subtle and may not be easy to
+detect.</p>
+<p>The hope is that by using a Static Analysis tool and researching the
+rules and violations in more detail, programmers will develop the skill
+to detect and avoid the issue in the context of their specific
+domain.</p>
+<p>When the domain requires contextual rules, the Static Analysis tools
+may not have any rules that match your domain or library. Additionally,
+the tools can often be difficult to configure and expand.</p>
+<h3 class="calibre7" data-number="1.2.6"
+id="text00002.html_annoyances">Annoyances</h3>
+<p>None of these ‘annoyances’ are insurmountable. These include:</p>
+<ul>
+<li>False positives</li>
+<li>Lack of fixes</li>
+<li>Configuration to ignore rules</li>
+<li>Adding context-specific rules</li>
+</ul>
+<p>They are often used as excuses to avoid using the Static Analysis
+tools in the first place, which is a pity because the use of Static
+Analysis can be enormously useful as a way to:</p>
+<ul>
+<li>Highlight better approaches to junior developers.</li>
+<li>Gain fast feedback on clear coding violations.</li>
+<li>Identify obscure issues that the programmer has not encountered
+before.</li>
+<li>Reinforce that the programmer has adopted a good coding approach
+(when no violations are reported).</li>
+</ul>
+<h3 class="calibre7" data-number="1.2.7"
+id="text00002.html_ide-based-static-analysis-tools">IDE Based Static
+Analysis Tools</h3>
+<p>As an individual contributor to a project, I like to use Static
+Analysis tools that run from within the IDE so that I receive fast
+feedback on my code.</p>
+<p>This supplements any pull request review process and CI integration
+that a project may have.</p>
+<p>I try to identify tools that will give me an edge and improve my
+individual workflow.</p>
+<p>When tools run in the IDE, because they tend to share the same basic
+GUI and configuration approach, it can be tempting to view them
+interchangeably.</p>
+<p>The tools may have overlapping functionality or rule sets. To gain
+maximum advantage I install multiple tools to take advantage of their
+strengths.</p>
+<p>The Static Analysis IDE tools I actively use when coding are:</p>
+<ul>
+<li>The inbuilt IntelliJ Inspections - common coding patterns.</li>
+<li>SpotBugs - common errors.</li>
+<li>SonarLint - common usage patterns.</li>
+<li>CheckStyle - common style patterns.</li>
+<li>Sensei from Secure Code Warrior - custom rule creation.</li>
+</ul>
+<p>I use them all because they work well together to augment and
+supplement each other.</p>
+<h4 class="calibre10" data-number="1.2.7.1"
+id="text00002.html_intellij-inspections">IntelliJ Inspections</h4>
+<p>If you use IntelliJ, then you are already using their
+Inspections.</p>
+<p>These are Static Analysis rules which are flagged in the IDE. Some of
+them also have QuickFix options to rewrite the code to address the
+issue.</p>
+<p>The rules are configurable on and off, and to choose the error level
+used to highlight it in the IDE.</p>
+<p><img src="OEBPS/Image00002.jpg" class="calibre5" /></p>
+<p>There are a lot of good IntelliJ Inspections. I know that because I
+read through them while writing this. I use the IntelliJ Inspections as
+the defaults and haven’t configured them, but to gain full value from
+the Inspections you should read through them, identify those relevant to
+your coding style, and configure the warning level so that you notice
+them in the code.</p>
+<p>The great thing about the IntelliJ Inspections is that they come free
+with the IDE and they help build the muscle memory of:</p>
+<ul>
+<li>Noticing warnings and errors in the source as you write code.</li>
+<li>Hovering the mouse over flagged code to learn the rule
+violations.</li>
+<li>Using <code class="calibre4">alt+enter</code> to apply a QuickFix
+for the issue.</li>
+</ul>
+<p><img src="OEBPS/Image00003.jpg" class="calibre5" /></p>
+<h4 class="calibre10" data-number="1.2.7.2"
+id="text00002.html_spotbugs">SpotBugs</h4>
+<p>The <a
+href="https://plugins.jetbrains.com/plugin/14014-spotbugs">SpotBugs</a>
+IntelliJ plugin uses Static Analysis to try and alert you to bugs in
+your code.</p>
+<p>SpotBugs can be configured from the IntelliJ Preferences to scan your
+code. The actual rules used can be found in the Detector tab.</p>
+<p><img src="OEBPS/Image00004.jpg" class="calibre5" /></p>
+<p>I tend to use SpotBugs after I’ve written and reviewed my code. I’ll
+then run the ‘Analyze Project Files Including Test Sources’.</p>
+<p><img src="OEBPS/Image00005.jpg" class="calibre5" /></p>
+<p>This does help me identify bugs, dead code, and obvious
+optimizations. It also forces me to research some of the flagged
+violations to help me decide what to do.</p>
+<p>SpotBugs will find issues but does not offer any QuickFix actions to
+attempt to resolve the issues.</p>
+<p>SpotBugs is easy to configure and I find it to be a useful objective
+second opinion to consult in my IDE.</p>
+<h4 class="calibre10" data-number="1.2.7.3"
+id="text00002.html_sonarlint">SonarLint</h4>
+<p>The <a
+href="https://plugins.jetbrains.com/plugin/7973-sonarlint">SonarLint</a>
+plugin.</p>
+<p>SonarLint can be configured from the IntelliJ Preferences to select
+which rules the code is validated against.</p>
+<p><img src="OEBPS/Image00006.jpg" class="calibre5" /></p>
+<p>By default, SonarLint runs in realtime and shows issues for the
+current code that you are editing.</p>
+<p>SonarLint does not offer quick fixes, but the documentation
+associated with the violation reports is usually clear and well
+documented.</p>
+<p>I’ve found SonarLint to be useful in the past for alerting me to new
+Java features that I was aware of in the newer versions of Java.</p>
+<h4 class="calibre10" data-number="1.2.7.4"
+id="text00002.html_checkstyle">CheckStyle</h4>
+<p>The <a
+href="https://plugins.jetbrains.com/plugin/1065-checkstyle-idea">CheckStyle</a>
+plugin offers a mix of formatting and code-quality rules.</p>
+<p>The CheckStyle plugin comes bundled with ‘Sun Checks’ and ‘Google
+Checks’.</p>
+<p>The definitions of these can be easily <a
+href="https://checkstyle.sourceforge.io/style_configs.html">found
+online</a> .</p>
+<p>CheckStyle adds the most value when a project has spent the time
+creating its own ruleset. Then the IDE plugin can be configured to use
+that ruleset and programmers can perform a scan, prior to committing the
+code to CI.</p>
+<p>CheckStyle is very often used as a build failing plugin for CI
+processes when the number of CheckStyle violations exceeds a
+threshold.</p>
+<h3 class="calibre7" data-number="1.2.8"
+id="text00002.html_sensei">Sensei</h3>
+<p><a href="https://scw.buzz/38n5uPu">Sensei</a> uses Static Analysis
+based on an Abstract Syntax Tree (AST) for matching code and for
+creating Quick Fixes, this allows for very specific identification of
+code with issues.</p>
+<p>The AST allows Quick Fixes associated with a recipe to understand the
+surrounding code e.g. when adding a new class into the code any import
+for that class will only be added to the source file once, and not for
+each replacement.</p>
+<p>Sensei was created to make it easy to build custom matching rules
+which may not exist, or which would be hard to configure, in other
+tools.</p>
+<p>Rather than amend a configuration file, all the configuration can be
+performed in the GUI. When creating new recipes the GUI makes it easy to
+see which code the recipe matches. When defining the Quick Fixes the
+before and after state of the code can be compared immediately. This
+makes it easier to create very contextual recipes i.e. unique to teams,
+or technology, and even individual programmers.</p>
+<p><img src="OEBPS/Image00007.jpg" class="calibre5" /></p>
+<p>I use Sensei in combination with other Static Analysis tools
+e.g. most Static Analysis tools will find issues, but not fix them. A
+common use case for Sensei is to replicate the other tool’s matching
+search in Sensei and expand it with a Quick Fix. This has the benefit
+that the custom fix applied already meets the coding standards for your
+project.</p>
+<p>I periodically find myself creating Sensei recipes that already exist
+in the IntelliJ Intensions set because the Intension report doesn’t
+quite match the context I’ve created or because the QuickFix provided by
+IntelliJ doesn’t match the code pattern I want to use.</p>
+<p>I augment the existing tools, rather than attempt to fully replace
+them.</p>
+<p>Sensei can also be very useful when you identify a contextual variant
+of a common rule e.g. if you are using an SQL library not supported by
+the Static Analysis tool, but the common SQL rules in the Static
+Analysis engine still apply, then you can create library-specific
+variants of those rules using Sensei.</p>
+<p>Sensei does not come out-of-the-box with a lot of generic recipes
+like the Static Analysis tools mentioned, its strength is in making it
+easy to create new recipes, complete with Quick Fixes configured to
+match your specific coding style and use-cases.</p>
+<p><em>NOTE: we are working on a public repository of recipes to cover
+generic use-cases, and <a href="https://scw.buzz/30pk1FN">you can find
+it here</a> .</em></p>
+<h3 class="calibre7" data-number="1.2.9"
+id="text00002.html_summary">Summary</h3>
+<p>I tend to pick tools that work together, are configurable, and easy
+to expand to meet my specific context. I’ve used Static Analysis tools
+in the IDE for years to help me identify issues, and learn more about
+the programming languages and libraries I use.</p>
+<p>I use all of the tools mentioned in combination:</p>
+<ul>
+<li>IntelliJ Intentions helps flag common code issues out the box, often
+with associated Quick Fixes.</li>
+<li>SpotBugs finds simple bugs I might have missed and alerts me to
+performance issues.</li>
+<li>SonarLint identifies Java features I was unaware of and prompts me
+to additional ways of modelling my code.</li>
+<li>CheckStyle helps me conform to an agreed coding style that is also
+enforced during CI.</li>
+<li>Sensei helps me create Quick Fixes to augment common scenarios found
+by Static Analysis tools and create specific project or technology
+recipes that can be hard to configure in another tool.</li>
+</ul>
+<h2 class="calibre6" data-number="1.3"
+id="text00002.html_example-recipe-repositories">Example Recipe
+Repositories</h2>
+<p>We have created some example repositories on GitHub that you might
+find useful for learning Sensei.</p>
+<ul>
+<li><a
+href="https://scw.buzz/3cixLrq">github.com/SecureCodeWarrior/sensei-blog-examples</a></li>
+<li><a
+href="https://scw.buzz/30pk1FN">github.com/SecureCodeWarrior/public-cookbooks</a></li>
+</ul>
+<h3 class="calibre7" data-number="1.3.1"
+id="text00002.html_blog-examples">Blog Examples</h3>
+<p>This project has example recipes and code to experiment with.</p>
+<ul>
+<li><a
+href="https://scw.buzz/3cixLrq">github.com/SecureCodeWarrior/sensei-blog-examples</a></li>
+</ul>
+<p><strong>How to Use:</strong></p>
+<ul>
+<li><a href="https://scw.buzz/3rveXvC">Install Sensei Plugin</a> .</li>
+<li>Clone or download project.</li>
+<li>Open in IDE.</li>
+<li>Example Sensei recipes in <code class="calibre4">.sensei</code> will
+be loaded.</li>
+<li>Read through Use Cases to see how recipes identify issues and fix
+code.</li>
+</ul>
+<p><em>This is a Multi-module maven project. When you clone this
+project, or download it as a zip, remember to open the top level <code
+class="calibre4">pom.xml</code> as the project. The <code
+class="calibre4">.sensei</code> folder contains example recipes which
+support the examples and embedded <code
+class="calibre4">readme.md</code> files.</em></p>
+<h3 class="calibre7" data-number="1.3.2"
+id="text00002.html_public-cookbooks">Public Cookbooks</h3>
+<p>The Public Cookbooks repo is a list of all the public Sensei
+Cookbooks that we know of.</p>
+<ul>
+<li><a
+href="https://scw.buzz/30pk1FN">github.com/SecureCodeWarrior/public-cookbooks</a></li>
+<li><a
+href="https://scw.buzz/3btJZhV">securecodewarrior.github.io/public-cookbooks</a></li>
+</ul>
+<p>Full instructions and documentation for the cookbooks should be in
+the listing for each cookbook.</p>
+<p>The cookbooks in the public listing are useful:</p>
+<ul>
+<li>To use as cookbooks for the technology they cover.</li>
+<li>For studying to see how to create recipes.</li>
+<li>To understand the range of domains that Sensei recipes can be
+applied to.</li>
+</ul>
+<h2 class="calibre6" data-number="1.4"
+id="text00002.html_useful-documentation-and-links">Useful Documentation
+and Links</h2>
+<p>The documentation for Sensei:</p>
+<ul>
+<li><a href="https://scw.buzz/3emSI7l">Official Documentation</a></li>
+<li><a
+href="https://scw.buzz/3emSI7l">https://sensei-docs-beta.securecodewarrior.com/</a></li>
+</ul>
+<p>IntelliJ on the JetBrains marketplace:</p>
+<ul>
+<li><a href="https://scw.buzz/3rveXvC">Instructions to install the
+plugin from the IntelliJ Marketplace</a></li>
+<li><a
+href="https://scw.buzz/3rveXvC">https://plugins.jetbrains.com/plugin/14015-sensei-by-secure-code-warrior-/getstarted</a></li>
+</ul>
+<p>The Secure Code Warrior Sensei Blog:</p>
+<ul>
+<li><a href="https://scw.buzz/2OBxgk0">Blog Posts</a></li>
+<li>Also on <a
+href="https://dev.to/securecodewarrior">dev.to/securecodewarrior</a></li>
+</ul>
+<p><a
+href="https://scw.buzz/2OBxgk0">securecodewarrior.com/blog-tags/sensei</a></p>
+<p>Videos from Secure Code Warrior:</p>
+<ul>
+<li><a
+href="https://www.youtube.com/c/SecureCodeWarrior/videos">youtube.com/c/SecureCodeWarrior/videos</a></li>
+</ul>
+<p>To see the Sensei videos, select the <a
+href="https://www.youtube.com/playlist?list=PL7KK7fPcGxbbmIxZJzkJKXbjtc6K_nJjX">Sensei
+playlist</a> .</p>
+<p>Useful Github Repositories:</p>
+<ul>
+<li><a href="https://scw.buzz/3cixLrq">Examples Project on Github</a>
+<ul>
+<li><a
+href="https://scw.buzz/3cixLrq">github.com/SecureCodeWarrior/sensei-blog-examples</a></li>
+</ul></li>
+<li><a href="https://scw.buzz/30pk1FN">Public Sensei Cookbooks Index</a>
+<ul>
+<li><a
+href="https://scw.buzz/30pk1FN">github.com/SecureCodeWarrior/public-cookbooks</a></li>
+<li><a
+href="https://scw.buzz/3btJZhV">securecodewarrior.github.io/public-cookbooks/</a></li>
+</ul></li>
+</ul>
+<h2 class="calibre6" data-number="1.5"
+id="text00002.html_sensei-team-support">Sensei Team Support</h2>
+<p>When one person creates a recipe to improve their code quality or
+productivity, everyone on the team can benefit when the cookbooks are
+shared.</p>
+<p>Sensei provides a number of mechanisms for sharing cookbooks:</p>
+<ul>
+<li>Store Cookbooks in the Project Under Version Control.</li>
+<li>Storing Cookbooks in a shared folder.</li>
+<li>Store Cookbooks in Github.</li>
+<li>Zipped files over HTTP(s).</li>
+</ul>
+<p>By sharing the cookbooks, Sensei helps teams collaborate on knowledge
+sharing. The collaboration helps improve communication and embed the
+agreed code quality approaches.</p>
+<p>For example, sharing a cookbook allows:</p>
+<ul>
+<li>Team members to share useful recipes with each other.</li>
+<li>Team leads to codify agreed coding practices for junior staff.
+<ul>
+<li>To identify common violations with a quick fix for the agreed
+version.</li>
+</ul></li>
+<li>Increased Inter-team co-operation.
+<ul>
+<li>An AppSec team might create recipes to highlight a problem in the
+code, and the development team could write the quick fix.</li>
+</ul></li>
+</ul>
+<p>The next few sections explain how to implement each of the sharing
+mechanisms.</p>
+<h3 class="calibre7" data-number="1.5.1"
+id="text00002.html_store-cookbooks-in-the-project-under-version-control">Store
+Cookbooks in the Project Under Version Control</h3>
+<p>The project <code class="calibre4">.sensei</code> folder is the
+default option when creating a cookbook file.</p>
+<ul>
+<li>`project://.sensei’</li>
+</ul>
+<p>All cookbooks and recipes would be stored in a <code
+class="calibre4">.sensei</code> folder in your project.</p>
+<p>The easiest approach to sharing is to add the project <code
+class="calibre4">.sensei</code> folder to version control.</p>
+<p>Then the <code class="calibre4">.sensei</code> folder can be managed
+like any other shared code artifact associated with the project. The
+cookbooks are stored as YAML configuration, making them easy to merge
+during any commit and review process.</p>
+<p>This is the approach taken for the public <code
+class="calibre4">sensei-blog-examples</code> project.</p>
+<p>https://github.com/SecureCodeWarrior/sensei-blog-examples</p>
+<p>The <code class="calibre4">.sensei</code> folder contains the
+cookbook with all the recipes, and they are available to anyone that
+clones the repository.</p>
+<h3 class="calibre7" data-number="1.5.2"
+id="text00002.html_store-cookbooks-in-any-folder">Store Cookbooks in Any
+Folder</h3>
+<p>Teams can also use cookbooks stored in central locations.</p>
+<p>Saving the cookbook to any folder with shared write access
+permissions will allow the whole team to update the recipes, and import
+them into any project that they happen to be working on.</p>
+<p>The location would be set to the directory path.</p>
+<h3 class="calibre7" data-number="1.5.3"
+id="text00002.html_store-recipes-in-github">Store Recipes in Github</h3>
+<p>Sensei can also access recipes that are stored in a Github repo. Both
+private and public repositories are supported.</p>
+<h4 class="calibre10" data-number="1.5.3.1"
+id="text00002.html_github-over-ssh">Github over SSH</h4>
+<p>SSH Repository access is configured using the following syntax for
+the <code class="calibre4">Location</code></p>
+<p><code
+class="calibre4">git@github.com:SecureCodeWarrior/acookbook.git</code></p>
+<p>For this to work, the repository would contain the contents of a
+cookbook folder.</p>
+<p>e.g. our Basic Protection Cookbook takes this approach and could be
+added as a “Locally configured Cookbook” using the location</p>
+<p><code
+class="calibre4">git@github.com:SecureCodeWarrior/cookbook-basic-protection-set.git</code></p>
+<p>It is also possible to configure the branch and the subfolder for the
+cookbook e.g. in the <code class="calibre4">master</code> branch in the
+<code class="calibre4">cookbook</code> subfolder</p>
+<p>e.g.</p>
+<p><code
+class="calibre4">git@github.com:SecureCodeWarrior/sensei-blog-examples.git|master|.sensei</code></p>
+<p>An SSH key needs to be configured for private repositories.</p>
+<ul>
+<li>https://github.com/settings/keys</li>
+</ul>
+<p>And the key should not have a passphrase.</p>
+<h4 class="calibre10" data-number="1.5.3.2"
+id="text00002.html_github-over-https">Github over HTTPS</h4>
+<p>It is also possible to access public repositories over HTTPS, and the
+same <code class="calibre4">repo.git|branch|folder</code> syntax is used
+e.g.</p>
+<p><code
+class="calibre4">https://github.com/SecureCodeWarrior/sensei-blog-examples.git|master|.sensei</code></p>
+<h4 class="calibre10" data-number="1.5.3.3"
+id="text00002.html_zipped-over-https">Zipped over HTTP(s)</h4>
+<p>Sensei can also access cookbooks that are zipped, over HTTP or
+HTTPS.</p>
+<p>e.g.</p>
+<p><code
+class="calibre4">http://localhost:8000/rules.sensei.zip</code></p>
+<p>The zip cookbook file should contain the contents of a cookbook
+folder e.g the <code class="calibre4">rules.sensei</code> file.</p>
+<h3 class="calibre7" data-number="1.5.4"
+id="text00002.html_sharing-summary">Sharing Summary</h3>
+<p>Sensei supports using multiple cookbooks so that an individual
+programmer can have recipes that support their own learning and
+productivity.</p>
+<p>More importantly, we know that teams work most effectively when
+knowledge is shared. Having shared team repositories, e.g. for a
+specific project, or a specific library, or for a shared set of
+migration patterns, can help boost team productivity and codify the
+team’s experience.</p>
+<p>When a cookbook is shared, multiple teams can use the same cookbook
+which can also improve inter-team collaboration from different
+disciplines e.g. AppSec to development.</p>
+<p>With four core sharing mechanisms available, Sensei hopefully has at
+least one approach you can use to increase collaboration on knowledge
+sharing.</p>
+<h2 class="calibre6" data-number="1.6"
+id="text00002.html_running-intellij-inspections-from-continuous-integration">Running
+IntelliJ Inspections From Continuous Integration</h2>
+<p>IntelliJ IDEA offers functionality to help improve our coding, within
+the IDE when writing code as Intentions. Intentions can be used in batch
+to inspect code for patterns throughout the source and even extending to
+Command-Line analysis or added to Continuous Integration. This section
+covers the out-of-the-box IntelliJ functionality and expanding with
+custom Intentions created in Sensei.</p>
+<h3 class="calibre7" data-number="1.6.1"
+id="text00002.html_intellij-inspections-1">IntelliJ Inspections</h3>
+<p>The Inspections feature of IntelliJ drives the display of many of the
+errors that are reported dynamically in the IDE when coding e.g.</p>
+<ul>
+<li>Detecting abstract classes that can be converted to interfaces.</li>
+<li>Identifying redundant class fields which can be local.</li>
+<li>Warning about uses of deprecated methods.</li>
+<li>etc.</li>
+</ul>
+<p>These Inspections highlight code that matches in the IDE as Intention
+Actions which often have an associated QuickFix.</p>
+<p><img src="OEBPS/Image00008.jpg" class="calibre5" /></p>
+<p>The real-time IDE highlighting when code matches an Inspection can
+help us improve our coding dynamically. After identifying the issue in
+the code, using IntelliJ Intention Actions to QuickFix the code can
+reinforce better patterns.</p>
+<h3 class="calibre7" data-number="1.6.2"
+id="text00002.html_inspections-profile">Inspections Profile</h3>
+<p>Inspections can run as a batch from within the IDE and from the
+Command Line or in a Continuous Integration process.</p>
+<p>The key to working with IntelliJ inspections in a batch is through
+the use of an Inspections Profile.</p>
+<p>IntelliJ has two default Inspection Profiles: one stored in the
+Project, and one stored in the IDE.</p>
+<p>New Inspection Profiles can be created to configure specific plugins
+or use-cases e.g.</p>
+<ul>
+<li>Run Checkstyle real-time scan only</li>
+<li>Run a specific set of Sensei rules</li>
+<li>Run the HTML checks</li>
+</ul>
+<p>The Inspections in a profile can be enabled or disabled from the
+IntelliJ Preferences. The Preferences dialog is also an easy way to
+learn the range of Inspections available.</p>
+<p><img src="OEBPS/Image00009.jpg" class="calibre5" /></p>
+<p>The ‘tool’ icon allows you to duplicate a Profile and create a new
+Profile to collect a specific set of rules.</p>
+<p><img src="OEBPS/Image00010.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="1.6.3"
+id="text00002.html_running-an-inspection-profile-in-the-ide">Running an
+Inspection Profile in the IDE</h3>
+<p>Inspection Profiles can be run from within the IDE using the <code
+class="calibre4">Analyze \ Inspect Code...</code> menu.</p>
+<p><img src="OEBPS/Image00011.jpg" class="calibre5" /></p>
+<p>The Analyze functionality allows you to control the scope that the
+Inspection will run against e.g. the whole project, including or
+excluding test sources, or against a specific set of files.</p>
+<p><img src="OEBPS/Image00012.jpg" class="calibre5" /></p>
+<p>You can also manage the Inspection Profiles from here to create or
+configure a particular profile.</p>
+<p>Clicking <code class="calibre4">[OK]</code> on the “Specify
+Inspection Scope” dialog will trigger IntelliJ into running all the
+selected Inspections in the profile across the defined scope.</p>
+<p>IntelliJ will report the results of running the Inspections in the
+<code class="calibre4">Inspection Results</code> tab.</p>
+<p><img src="OEBPS/Image00013.jpg" class="calibre5" /></p>
+<p>The <a href="https://scw.buzz/3qvDvDt">Sensei</a> plugin from Secure
+Code Warrior allows you to create custom code matching recipes. Sensei
+tightly integrates with IntelliJ to make these custom recipes as natural
+to use as the IntelliJ Intention Actions. This means they are loaded
+into IntelliJ as Inspections and can be grouped, enabled, and disabled
+using Inspection Profiles. Creating a custom Inspection Profile and then
+using the Analyze Inspect Code functionality is the recommended way of
+running Sensei recipes in bulk across a project.</p>
+<h3 class="calibre7" data-number="1.6.4"
+id="text00002.html_running-an-inspection-profile-from-the-command-line">Running
+an Inspection Profile from the Command Line</h3>
+<p>IntelliJ has the ability to run inspections from the command line as
+documented by JetBrains:</p>
+<ul>
+<li>https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html</li>
+</ul>
+<p>I primarily use Mac OS, and can run a single instance of IntelliJ
+from the command line with:</p>
+<pre class="calibre13"><code>
+open -na &quot;IntelliJ IDEA CE.app&quot;</code></pre>
+<p>To support easier execution I add this to a shell command script.</p>
+<p><code class="calibre4">vi /usr/local/bin/idea</code></p>
+<p>The contents of the script are from the official documentation
+provided by IntelliJ.</p>
+<pre class="calibre13"><code>
+#!/bin/sh
+
+open -na &quot;IntelliJ IDEA CE.app&quot; --args &quot;$@&quot;</code></pre>
+<p>I then made this executable to allow me to simplify the command line
+inspection process.</p>
+<p><code class="calibre4">chmod 755 /usr/local/bin/idea</code></p>
+<p>The official intellij docs describe the general form of the
+inspection command as:</p>
+<p><code
+class="calibre4">idea inspect &lt;project&gt; &lt;inspection-profile&gt; &lt;output&gt; [&lt;options&gt;]</code></p>
+<p>In practice, I fully qualify the paths:</p>
+<pre class="calibre13"><code>
+idea inspect /Users/user/GitHub/sensei-blog-examples /Users/user/GitHub/sensei-blog-examples/.idea/inspectionProfiles/senseiprofile.xml /Users/user/GitHub/sensei-blog-examples/scan-results</code></pre>
+<p>Or use them relative to my user directory:</p>
+<pre class="calibre13"><code>
+idea inspect ~/Documents/GitHub/sensei-blog-examples ~/Documents/GitHub/sensei-blog-examples/.idea/inspectionProfiles/senseiprofile.xml scan-results</code></pre>
+<p>This runs all the Inspections I added to the <code
+class="calibre4">senseiprofile</code> and reports the results in the
+<code class="calibre4">scan-results</code> folder.</p>
+<p><img src="OEBPS/Image00014.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="1.6.5"
+id="text00002.html_viewing-inspection-results">Viewing Inspection
+Results</h3>
+<p>We can report these results from within Continuous Integration, as
+we’ll see later.</p>
+<p>We can also view them within IntelliJ itself using the <code
+class="calibre4">Analyse \ View Offline Inspection Results…</code>
+feature.</p>
+<p><img src="OEBPS/Image00015.jpg" class="calibre5" /></p>
+<p>This will load the results into the <code
+class="calibre4">Inspection Results</code> tab.</p>
+<p><img src="OEBPS/Image00016.jpg" class="calibre5" /></p>
+<p>This is officially documented on the JetBrains site:</p>
+<ul>
+<li>https://www.jetbrains.com/help/idea/command-line-code-inspector.html#inspection-results</li>
+</ul>
+<p>This might be used during a code review process if the command line
+execution was incorporated into a Continuous Integration process and the
+reviewers wanted to check the full source context of any of the
+Inspection result entries.</p>
+<h3 class="calibre7" data-number="1.6.6"
+id="text00002.html_inspection-profiles-in-continuous-integration">Inspection
+Profiles in Continuous Integration</h3>
+<p>When adding the Command Line inspection into Continuous Integration
+we ideally want a report to be generated automatically and there are a
+number of options open to us.</p>
+<p>TeamCity offers out-of-the-box support for Inspection Profiles in
+Continuous Integration.</p>
+<ul>
+<li>https://www.jetbrains.com/help/teamcity/inspections.html</li>
+</ul>
+<p>The Jenkins Warnings NG plugin supports the Command Line output from
+IntelliJ Inspections as one of the report formats.</p>
+<ul>
+<li>https://github.com/jenkinsci/warnings-ng-plugin</li>
+<li>https://github.com/jenkinsci/warnings-ng-plugin/blob/master/SUPPORTED-FORMATS.md</li>
+</ul>
+<p>Community projects like <code
+class="calibre4">idea CLI Inspector</code> exist to support using
+Inspection Profiles in other CI tooling i.e.</p>
+<ul>
+<li>https://github.com/bentolor/idea-cli-inspector</li>
+</ul>
+<p>The future of Inspection Profiles in a CI process looks even brighter
+with the introduction of the JetBrains Qodana project. The Qodana
+project is a headless version of IntelliJ with official Github Actions
+and Docker images.</p>
+<ul>
+<li>https://github.com/JetBrains/Qodana</li>
+</ul>
+<p><em>Qodana is currently in beta, but the Sensei team is monitoring it
+so that it becomes an officially supported platform for running Sensei
+rules as part of Continuous Integration.</em></p>
+<h3 class="calibre7" data-number="1.6.7"
+id="text00002.html_summary-1">Summary</h3>
+<p>Intention Actions allow us to reinforce coding patterns and quickly
+fix them in the IDE when we make mistakes during coding.</p>
+<p>Inspection Profiles allow us to collect these into profiles which can
+run in batch as an Analyze and Inspect Code action. This can be useful
+if we encounter a pattern and want to double-check if we have missed
+that anywhere else in our code.</p>
+<p>Inspection Profiles can be run from the command line and even
+incorporated into Continuous Integration processes supporting a “trust,
+but verify” model and catch any accidental slippage.</p>
+<p>All of the above is built in IntelliJ functionality and JetBrains are
+improving their Continuous Integration process with the introduction of
+Qodana.</p>
+<p>Sensei recipes are loaded into IntelliJ to act as native Intention
+Actions and be collected into Inspection Profiles to support batch
+checking through Inspect Code and Continuous Integration support
+provided by the official JetBrains Command Line execution
+functionality.</p>
+<h3 class="calibre7" data-number="1.6.8"
+id="text00002.html_watch-on-youtube">Watch On YouTube</h3>
+<p>We created a YouTube video showing all the steps and tools in this
+section.</p>
+<p><a href="https://www.youtube.com/watch?v=Gk0ASNhKH2Q"><img
+src="OEBPS/Image00017.jpg" class="calibre5" /></a></p>
+<p><a href="https://youtu.be/Gk0ASNhKH2Q">youtu.be/Gk0ASNhKH2Q</a></p>
+<p><span id="text00003_split_000.html"></span></p>
+<h1 class="title" data-number="2"
+id="text00003_split_000.html_sensei-gui-overview">Sensei GUI
+Overview</h1>
+<p>The Sensei IntelliJ plugin lets me create searches to match on code
+implementing a pattern I want to change, and then create Code amendment
+Quick Fixes to automatically change the code.</p>
+<p>This section will walk through the main parts of the GUI and how we
+can use them.</p>
+<h2 class="calibre6" data-number="2.1"
+id="text00003_split_000.html_sensei-menu">Sensei Menu</h2>
+<p>When Sensei has been installed, we will see the Sensei menu in the
+Tools menu.</p>
+<p><img src="OEBPS/Image00018.jpg" class="calibre5" /></p>
+<section id="text00003_split_000.html_cookbook-manager"
+data-number="2.2">
+<div id="text00003_split_000.html_calibre_pb_0" class="calibre9">
+
+</div>
+</section>
+<p><span id="text00003_split_001.html"></span></p>
+<section id="text00003_split_001.html_sensei-gui-overview"
+data-number="2">
+<h2 class="calibre6" data-number="2.2"
+id="text00003_split_001.html_cookbook-manager">Cookbook Manager</h2>
+<p>From here we can show the Cookbook Manager tool which will list all
+the ‘cookbooks’, or lists of recipes, that I have available to me.</p>
+<p><img src="OEBPS/Image00019.jpg" class="calibre5" /></p>
+<p>I can use this dialog to switch cookbooks on and off. And can use the
+<code class="calibre4">Sensei Cookbooks</code> tab on the bottom of the
+screen to navigate back here when I need to. I don’t have to use the
+main Sensei menu.</p>
+<h2 class="calibre6" data-number="2.3"
+id="text00003_split_001.html_manage-recipes">Manage Recipes</h2>
+<p>Since this is the example project from Github, I have some Recipes
+stored in the project’s <code class="calibre4">.sensei</code> folder and
+these have been automatically loaded.</p>
+<p>I can manage them to see what recipes are available to me by clicking
+the <code class="calibre4">[Manage recipes]</code> button.</p>
+<section id="text00003_split_001.html_cookbook-recipe-editor-list"
+data-number="2.4">
+<div id="text00003_split_001.html_calibre_pb_1" class="calibre9">
+
+</div>
+</section>
+</section>
+<p><span id="text00003_split_002.html"></span></p>
+<section id="text00003_split_002.html_sensei-gui-overview"
+data-number="2">
+<h2 class="calibre6" data-number="2.4"
+id="text00003_split_002.html_cookbook-recipe-editor-list">Cookbook
+Recipe Editor List</h2>
+<p>Each recipe has a configuration with the name and description and
+warning level which all configure how they are rendered in the IDE when
+code matches the pattern in the search.</p>
+<p><img src="OEBPS/Image00020.jpg" class="calibre5" /></p>
+<p>By clicking on a Recipe, I can edit it.</p>
+<h2 class="calibre6" data-number="2.5"
+id="text00003_split_002.html_recipe-editor">Recipe Editor</h2>
+<p>The Recipe Editor has four main components.</p>
+<ul>
+<li>The list of recipes where we can add, delete, and duplicate
+recipes.</li>
+<li>The General Settings tab where we can configure the recipe.</li>
+<li>Recipe Settings tab where we create the search and matching
+conditions.</li>
+<li>QuickFix settings where we configure the Quick Fix changes to amend
+or generate code.</li>
+</ul>
+<p><img src="OEBPS/Image00021.jpg" class="calibre5" /></p>
+<h2 class="calibre6" data-number="2.6"
+id="text00003_split_002.html_general-settings">General Settings</h2>
+<p>General Settings is where we primarily configure the:</p>
+<ul>
+<li><code class="calibre4">Name</code> and <code
+class="calibre4">Description</code> are shown in the intentions Quick
+Fix popup when we use <code class="calibre4">alt+enter</code> .</li>
+<li><code class="calibre4">Level</code> defines how the matching Recipe
+is rendered in the IDE.</li>
+</ul>
+<p>If I mark a recipe as ‘Error’, then the code will have a red
+underline and show as a syntax error, but a warning will have a light
+highlighting.</p>
+<p>There are other settings but these are for more advanced use and will
+be covered in the documentation.</p>
+<ul>
+<li>Documentation - <a
+href="https://scw.buzz/3emSI7l">sensei-docs-beta.securecodewarrior.com</a></li>
+</ul>
+<p><img src="OEBPS/Image00022.jpg" class="calibre5" /></p>
+<h2 class="calibre6" data-number="2.7"
+id="text00003_split_002.html_recipe-settings---search">Recipe Settings -
+Search</h2>
+<p>The ‘Recipe Settings’ contains the search configuration.</p>
+<p>This is the search we perform in the code to match coding
+patterns.</p>
+<p>In this example, I am searching for any annotations on a method which
+are a Junit 5 Test annotation.</p>
+<p>And you can see the annotations in the code have been highlighted in
+the code itself.</p>
+<p><img src="OEBPS/Image00023.jpg" class="calibre5" /></p>
+<p>If I changed the annotation type then the code would not match, so we
+can visually see if our searches are valid or not for the code we are
+working with.</p>
+<p><img src="OEBPS/Image00024.jpg" class="calibre5" /></p>
+<h2 class="calibre6" data-number="2.8"
+id="text00003_split_002.html_quickfix-settings">QuickFix Settings</h2>
+<p>The QuickFix Settings are the Quick Fixes that are shown in IntelliJ
+when I use alt+enter to fix the problem.</p>
+<p>And you can see at the bottom of the screen a diff view that shows
+the results of applying a QuickFix.</p>
+<p>The recipe shown in the screenshot adds a <code
+class="calibre4">Logger</code> into the class and the diff view shows
+the before and after state in the code.</p>
+<p><img src="OEBPS/Image00025.jpg" class="calibre5" /></p>
+<h2 class="calibre6" data-number="2.9"
+id="text00003_split_002.html_creating-a-recipe">Creating A Recipe</h2>
+<p>In the code, usually at the point you want to start a search.</p>
+<p>Pressing <code class="calibre4">alt+enter</code> shows the context
+menu to create a recipe.</p>
+<p><img src="OEBPS/Image00026.jpg" class="calibre5" /></p>
+<p>Often we ‘start from scratch’ with an empty recipe.</p>
+<p><img src="OEBPS/Image00027.jpg" class="calibre5" /></p>
+<h2 class="calibre6" data-number="2.10"
+id="text00003_split_002.html_spotting-issues-in-the-ide">Spotting Issues
+in the IDE</h2>
+<h3 class="calibre7" data-number="2.10.1"
+id="text00003_split_002.html_in-the-code">In the Code</h3>
+<p>When recipes have been activated, they will be marked in the
+code.</p>
+<p>The following code shows some ‘errors’ and some ‘warnings’.</p>
+<p><img src="OEBPS/Image00028.jpg" class="calibre5" /></p>
+<p>I’ll save this now, then we can use it in the IDE.</p>
+<h3 class="calibre7" data-number="2.10.2"
+id="text00003_split_002.html_problem-icons">Problem Icons</h3>
+<p>Issues will also be shown with the Sensei problem icons in the top
+right corner.</p>
+<p><img src="OEBPS/Image00029.jpg" class="calibre5" /></p>
+<p>I could right-click here to fix the problem via the Problems tab.</p>
+<p><img src="OEBPS/Image00030.jpg" class="calibre5" /></p>
+<h2 class="calibre6" data-number="2.11"
+id="text00003_split_002.html_triggering-a-quick-fix">Triggering a Quick
+Fix</h2>
+<p>There are many ways to trigger a QuickFix.</p>
+<h3 class="calibre7" data-number="2.11.1"
+id="text00003_split_002.html_using-problems-tab">Using Problems Tab</h3>
+<p>In the Problems Tab.</p>
+<p>Right-click on the reported problem and choose “Show Quick Fixes”</p>
+<p><img src="OEBPS/Image00031.jpg" class="calibre5" /></p>
+<p>Then choose the Quick Fix from the list.</p>
+<p><img src="OEBPS/Image00032.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="2.11.2"
+id="text00003_split_002.html_contextual-altenter">Contextual <code
+class="calibre14">alt+enter</code></h3>
+<p>The most common way to fix code is with an <code
+class="calibre4">alt+enter</code> where we will see any Intellij
+suggestions and Sensei Quick Fixes.</p>
+<p><img src="OEBPS/Image00033.jpg" class="calibre5" /></p>
+<p>And if I choose the action then the code will be amended.</p>
+<h3 class="calibre7" data-number="2.11.3"
+id="text00003_split_002.html_fixing-multiple-actions">Fixing Multiple
+Actions</h3>
+<p>If there were multiple occurrences in the file then I could fix them
+all at once.</p>
+<p>Pressing <code class="calibre4">alt+enter</code> and navigating to
+the next menu level down on the QuickFix, we find the option to fix all
+problems in the current source file.</p>
+<p><img src="OEBPS/Image00034.jpg" class="calibre5" /></p>
+</section>
+<p><span id="text00004.html"></span></p>
+<h1 class="title" data-number="3"
+id="text00004.html_section---use-cases">Section - Use-Cases</h1>
+<p>Sensei can help improve the writing of Quality Code, regardless of
+the underlying domain or technology.</p>
+<p>This section is split into sub-sections categorised by technology to
+help demonstrate:</p>
+<ul>
+<li>Some features of Sensei.</li>
+<li>How those features can be applied.</li>
+</ul>
+<p>The technology examples have been kept as small as possible to
+illustrate the interaction with the technology, but still keep the
+learning curve small. That way, even if you don’t know the technology
+you should still be able to follow along.</p>
+<p>The descriptions here have full code examples in the Github repo:</p>
+<ul>
+<li><a
+href="https://scw.buzz/3cixLrq">github.com/SecureCodeWarrior/sensei-blog-examples</a></li>
+</ul>
+<p>Links or descriptions of the specific code to look at will be
+contained in the use-case description.</p>
+<p><span id="text00005.html"></span></p>
+<h1 class="title" data-number="4"
+id="text00005.html_pojo-use-cases">POJO Use-Cases</h1>
+<p>The use-cases which follow use plain old Java.</p>
+<p>No external dependencies are required so they are a good introduction
+to the basic functionality of Sensei.</p>
+<h2 class="calibre6" data-number="4.1"
+id="text00005.html_converting-system.out.println-to-logger">Converting
+System.out.println to logger</h2>
+<p>When writing the code below I made a bunch of mistakes:</p>
+<pre class="calibre13"><code>
+    private String getCountdownString() {
+        
+        String output = &quot;&quot;;
+        String prefix=&quot;&quot;;
+        
+        for(int countdown = 10; countdown &gt; 0; countdown-- ){
+
+            output = output + prefix + countdown;
+
+            System.out.println(output);
+            
+            prefix=&quot;, &quot;;
+        }
+
+        System.out.println(output);
+        
+        return output;
+    }</code></pre>
+<p>Initially, I had <code class="calibre4">countdown++</code> and the
+loop didn’t finish.</p>
+<p>And I used <code class="calibre4">countdown &gt; 1</code> , so I
+didn’t get the output I wanted.</p>
+<p>In the end, I littered my code with <code
+class="calibre4">System.out.println</code> to help me debug.</p>
+<p>Then I realised, I really need to learn how to use a logger.</p>
+<h3 class="calibre7" data-number="4.1.1"
+id="text00005.html_research">Research</h3>
+<p>Fortunately, I read through the <a
+href="https://scw.buzz/3emSI7l">Sensei documentation</a> and decided to
+use the “Getting Started” guide to help me create a recipe to convert
+from <code class="calibre4">System.out.println</code> and encourage me
+to use a logger:</p>
+<ul>
+<li><code class="calibre4">java.util.logging.Logger</code></li>
+</ul>
+<h3 class="calibre7" data-number="4.1.2"
+id="text00005.html_creating-a-recipe-1">Creating a Recipe</h3>
+<p>The first thing I do is click on the <code
+class="calibre4">println</code> then <code
+class="calibre4">alt+enter</code> to create a new recipe.</p>
+<p><img src="OEBPS/Image00035.jpg" class="calibre5" /></p>
+<p>I create it with the following details:</p>
+<pre class="calibre13"><code>
+Name: Logger: use logger instead of println
+Description: use logger instead of println - remember stop using System.out.println
+Level: Error</code></pre>
+<p>And I’ll start by matching a <code class="calibre4">methodcall</code>
+with the name <code class="calibre4">println</code></p>
+<pre class="calibre13"><code>
+search:
+  methodcall:
+    name: &quot;println&quot;</code></pre>
+<p>And the preview shows me all the matches in my code.</p>
+<p><img src="OEBPS/Image00036.jpg" class="calibre5" /></p>
+<p>I can see that all the matches in my code are for <code
+class="calibre4">System.out.println</code> but I don’t trust that long
+term this will be the only match. I want to match a more qualified
+statement I want to change.</p>
+<p>I expand the matcher to search for a <code
+class="calibre4">methodcall</code> on a <code
+class="calibre4">field</code> named <code class="calibre4">out</code> in
+the class <code class="calibre4">System</code> .</p>
+<pre class="calibre13"><code>
+search:
+  methodcall:
+    name: &quot;println&quot;
+    &quot;on&quot;:
+      field:
+        in:
+          class:
+            name: &quot;System&quot;
+        name: &quot;out&quot;</code></pre>
+<p>I could, if I wanted, fully qualify the <code
+class="calibre4">System</code> name to <code
+class="calibre4">java.lang.System</code></p>
+<p><img src="OEBPS/Image00037.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="4.1.3"
+id="text00005.html_amending-the-code-to-log">Amending the Code to
+log</h3>
+<p>Next, I want to create the QuickFix.</p>
+<p>First I want to amend the line of code that logs the output:</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;use Logger&quot;
+  actions:
+  - rewrite:
+      to: &quot;logger.log(Level.INFO, {{{ arguments.0 }}})&quot;</code></pre>
+<p>I don’t have to remember the mustache format. I used the <code
+class="calibre4">Show Variables</code> in the GUI to show me the
+argument and double-clicked on it. Then the GUI filled in the
+appropriate matching mustache template.</p>
+<p><img src="OEBPS/Image00038.jpg" class="calibre5" /></p>
+<p>When I try it out, I can see that I still have to <code
+class="calibre4">alt+enter</code> to import the <code
+class="calibre4">Level</code> enum. But if I amend my QuickFix to have a
+fully qualified item then Sensei will add the import for me e.g.</p>
+<ul>
+<li>It will replace <code
+class="calibre4">System.out.println(output);</code> with</li>
+</ul>
+<pre class="calibre13"><code>
+logger.log(Level.INFO, output);</code></pre>
+<ul>
+<li>And add an import for the enum:</li>
+</ul>
+<pre class="calibre13"><code>
+import java.util.logging.Level;</code></pre>
+<ul>
+<li>If I rewrite to:</li>
+</ul>
+<pre class="calibre13"><code>
+logger.log(java.util.logging.Level.INFO, {{{ arguments.0 }}})</code></pre>
+<p>And this will work, but I will still have to remember the syntax to
+instantiate the logger in the first place.</p>
+<p><img src="OEBPS/Image00039.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="4.1.4"
+id="text00005.html_amending-the-code-to-add-the-logger-field">Amending
+the code to add the logger field</h3>
+<p>I can amend my QuickFix to create the <code
+class="calibre4">logger</code> field for me as well.</p>
+<p>I will code the <code class="calibre4">logger</code> first, and then
+add that to my recipe so I never have to code it again.</p>
+<pre class="calibre13"><code>
+Logger logger2 = Logger.getLogger(SysOutTest.class.getName());</code></pre>
+<p>I tend to write the code first because then I can use IntelliJ code
+completion and syntax checking to make sure I get it right. As a
+side-effect, it will then be in the code preview when I edit the recipe
+to add the QuickFix lines that will create that code.</p>
+<p>And when I write the code, I want to use a different field name (here
+I’m using <code class="calibre4">logger2</code> ) because Sensei is
+clever enough not to add a duplicate field, so I have to fool it by
+using a different name.</p>
+<p>So I’ll amend the recipe to create this code by adding a field called
+logger.</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;use Logger&quot;
+  actions:
+  - rewrite:
+      to: &quot;logger.log(java.util.logging.Level.INFO, {{{ arguments.0 }}})&quot;
+  - addField:
+      field: &quot;java.util.logging.Logger logger = Logger.getLogger({{{ containingClass.name\
+        \ }}}.class.getName())&quot;
+      target: &quot;parentClass&quot;</code></pre>
+<p>Note that I changed <code class="calibre4">SysOutTest</code> to be a
+mustache variable so that it picks up the name of any class I use this
+recipe in. And again, I didn’t remember the mustache syntax, I used the
+GUI <code class="calibre4">show variables</code> to find the replacement
+I needed.</p>
+<p>And by fully qualifying the <code class="calibre4">Logger</code> to
+<code class="calibre4">java.util.logging.Logger</code> , Sensei will add
+the import and write the line of code that I want i.e.</p>
+<pre class="calibre13"><code>
+Logger logger = Logger.getLogger(SysOutTest.class.getName());</code></pre>
+<p><img src="OEBPS/Image00040.jpg" class="calibre5" /></p>
+<p>One useful thing about this recipe is that because it will only add
+the logger field once, I can use this on any existing code where I have
+used <code class="calibre4">System.out.println</code> and use Sensei to
+change all the occurrences in my code.</p>
+<p><img src="OEBPS/Image00041.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="4.1.5"
+id="text00005.html_next-steps">Next Steps</h3>
+<p>Once I get used to this, I’ll eventually train myself away from using
+<code class="calibre4">System.out.println</code> .</p>
+<p>And I can use Sensei to help me proactively write code by creating a
+second recipe which helps me create a logger.</p>
+<p>e.g. I can match on a class, where there is no field called logger,
+and add one.</p>
+<p>I created a recipe of level <code
+class="calibre4">Information</code></p>
+<pre class="calibre13"><code>
+Name: Logger: add logger
+Description: Add logger to class
+Level: Information</code></pre>
+<p>To match on a class without a logger field:</p>
+<pre class="calibre13"><code>
+search:
+  class:
+    without:
+      child:
+        field:
+          name: &quot;logger&quot;</code></pre>
+<p>And then I will reuse part of the QuickFix we saw earlier</p>
+<pre class="calibre13"><code>
+availableFixes:
+  - name: &quot;Add Logger&quot;
+    actions:
+      - addField:
+          field: &quot;java.util.logging.Logger logger = Logger.getLogger({{{ containingClass.name\
+        \ }}}.class.getName())&quot;
+          target: &quot;self&quot;</code></pre>
+<p><em>Note the difference in <code class="calibre4">target</code> here
+compared to the first QuickFix. This uses <code
+class="calibre4">self</code> because our Search matched the class. The
+first QuickFix uses <code class="calibre4">parentClass</code> because we
+matched code within the class itself.</em></p>
+<h3 class="calibre7" data-number="4.1.6"
+id="text00005.html_summary-2">Summary</h3>
+<p>This represents one of the key flows associated with using Sensei to
+help improve your personal programming skillset:</p>
+<ul>
+<li>Create a recipe to help with your immediate ‘best practice’.</li>
+<li>Once you know how to use that best practice… create a recipe to make
+your workflow faster.</li>
+</ul>
+<h3 class="calibre7" data-number="4.1.7"
+id="text00005.html_code-links">Code Links</h3>
+<p>In the Github repo:</p>
+<ul>
+<li>https://github.com/SecureCodeWarrior/sensei-blog-examples</li>
+<li>module: <code class="calibre4">pojoexamples</code></li>
+<li><code class="calibre4">src\test\java\logging</code></li>
+</ul>
+<p><code class="calibre4">AddLoggerTest.java</code> has some
+instructions for applying the recipe.</p>
+<p><code class="calibre4">SysOutTest.java</code> is an example of a
+class that you can experiment with.</p>
+<h3 class="calibre7" data-number="4.1.8"
+id="text00005.html_see-sensei-in-action">See Sensei In Action</h3>
+<p><a href="https://www.youtube.com/watch?v=qPlNm0yaSto"><img
+src="OEBPS/Image00042.jpg" class="calibre5" /></a></p>
+<p><a href="https://youtu.be/qPlNm0yaSto">youtu.be/qPlNm0yaSto</a></p>
+<p><span id="text00006.html"></span></p>
+<h1 class="title" data-number="5"
+id="text00006.html_junit-5-use-cases">Junit 5 Use-Cases</h1>
+<p><a href="https://junit.org/junit5/">JUnit 5</a> is a popular Unit
+Testing Framework for Java.</p>
+<p>The use-cases which follow, all use JUnit 5 as their implementation,
+but the basic concepts can be applied to JUnit 4, or other unit testing
+frameworks, with minor amendments to the recipes.</p>
+<h2 class="calibre6" data-number="5.1"
+id="text00006.html_adding-annotations-and-method-renaming">Adding
+Annotations and Method Renaming</h2>
+<p><em>Improving A Personal Programming Process Using Sensei</em></p>
+<p>For this section, I’ve recreated a ‘bad’ coding approach that I used
+when I was learning JUnit, and will demonstrate how to convert the ‘bad’
+pattern to an agreed, and “better”, coding pattern using Sensei.</p>
+<p>When I was learning JUnit, I could only keep so much in my head at
+any one time. I constantly forgot how to skip tests when they were not
+working.</p>
+<p>If we are working in a Team then we can use code reviews on pull
+requests to help enforce coding styles. And we can shorten the feedback
+cycle when pair programming with a more experienced programmer.</p>
+<p>We can also augment our process with tooling and have the tools
+prompt us to do the right thing. Thoughtworks describe this as “tools
+over rules,” in their <a
+href="https://www.thoughtworks.com/radar/tools/sensei">Technology Radar
+listing for Sensei</a> :</p>
+<blockquote>
+<p>“make it easy to do the right thing over applying checklist-like
+governance rules and procedures”</p>
+</blockquote>
+<h3 class="calibre7" data-number="5.1.1"
+id="text00006.html_disabling-a-junit-test">Disabling a JUnit Test</h3>
+<p>Ideally, I would, as we all know, use the <code
+class="calibre4">@Disabled</code> annotation and write:</p>
+<pre class="calibre13"><code>
+    @Disabled
+    @Test
+    void canWeAddTwoNumbers(){
+        Assertions.fail(&quot;this test was skipped and should not run&quot;);
+    }</code></pre>
+<p>But, when learning, I had to train myself to use <code
+class="calibre4">@Disabled</code> .</p>
+<p>When I forgot how to disable a Test method I would remove the <code
+class="calibre4">@Test</code> annotation and rename the test:</p>
+<pre class="calibre13"><code>
+class SkipThisTest {
+
+    void SKIPTHIScanWeAddTwoNumbers(){
+        Assertions.fail(&quot;this test was skipped and should not run&quot;);
+    }   
+}</code></pre>
+<p>It wasn’t good, but it got the job done. I didn’t have something like
+Sensei to help me remember and so I fell into using poor coding
+patterns.</p>
+<p>The tasks I’ve taken on board for this readme are to:</p>
+<ul>
+<li>Create a rule which finds methods that have been ‘skipped’ or
+‘disabled’ by renaming the method.</li>
+<li>Create a QuickFix to rename the method and add both an <span
+data-cites="Test">@Test</span> and <span
+data-cites="Disabled">@Disabled</span> annotation.</li>
+</ul>
+<h3 class="calibre7" data-number="5.1.2"
+id="text00006.html_recipe-settings">Recipe Settings</h3>
+<p>The first step I take with Sensei is to “add new recipe” and search
+for the coding pattern I want the recipe to act on.</p>
+<pre class="calibre13"><code>
+Name: JUnit: Make @Disabled @Test from SKIPTHIS
+Short Description: Stop naming methods SKIPTHIS, use @Disabled @Test instead</code></pre>
+<p>And my search is very simple. I use a basic regex to match the method
+name.</p>
+<pre class="calibre13"><code>
+search:
+  method:
+    name:
+      matches: &quot;SKIPTHIS.*&quot;</code></pre>
+<p><img src="OEBPS/Image00043.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="5.1.3"
+id="text00006.html_quickfix-settings-1">QuickFix Settings</h3>
+<p>The QuickFix is a little more complicated because it will rewrite the
+code, and I’ll use a few steps to achieve my final code.</p>
+<p>I want to:</p>
+<ul>
+<li>Add an <code class="calibre4">@Test</code> annotation to the
+method.</li>
+<li>Add an <code class="calibre4">@Disabled</code> annotation to the
+method.</li>
+<li>Amend the method name.</li>
+</ul>
+<p>Adding the annotations is simple enough using the <code
+class="calibre4">addAnnotation</code> fix. If I use a fully qualified
+name for the annotation then Sensei will automatically add the imports
+for me.</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;Add @Disabled and @Test Annotation&quot;
+  actions:
+  - addAnnotation:
+       annotation: &quot;@org.junit.jupiter.api.Test&quot;
+  - addAnnotation:
+      annotation: &quot;@org.junit.jupiter.api.Disabled&quot;</code></pre>
+<p>The actual renaming seems a little more complicated but I’m just
+using a regex replacement, and the generic way to do this with Sensei is
+to use <code class="calibre4">sed</code> in a rewrite action.</p>
+<p>Because the rewrite actions a Mustache templates, Sensei has some
+functional extensions in the template mechanism. A function is
+represented with <code class="calibre4">{{#...}}</code> so for <code
+class="calibre4">sed</code> the function is <code
+class="calibre4">{{#sed}}</code> . The function takes two arguments
+which are comma-separated.</p>
+<p>The first argument is the <code class="calibre4">sed</code>
+statement:</p>
+<ul>
+<li><code class="calibre4">s/(.*) SKIPTHIS(.*)/$1 $2/</code></li>
+</ul>
+<p>The second argument is the String to apply the <code
+class="calibre4">sed</code> statement to, which in this case is the
+method itself, and this is represented in the Mustache variables as:</p>
+<ul>
+<li><code class="calibre4">{{{.}}}</code></li>
+</ul>
+<pre class="calibre13"><code>
+  - rewrite:
+       to: &quot;{{#sed}}s/(.*) SKIPTHIS(.*)/$1 $2/,{{{.}}}{{/sed}}&quot;</code></pre>
+<p><img src="OEBPS/Image00044.jpg" class="calibre5" /></p>
+<p>The <code class="calibre4">sed</code> implementation requires that
+when the arguments themselves contain commas, that they are wrapped with
+<code class="calibre4">{{#encodeString}}</code> and <code
+class="calibre4">{{/encodeString}}</code> - e.g. <code
+class="calibre4">{{#encodeString}}{{{.}}}{{/encodeString}}</code></p>
+<h3 class="calibre7" data-number="5.1.4"
+id="text00006.html_reverse-recipe">Reverse Recipe</h3>
+<p>Since this is an example, and we might want to use this in demos, I
+wanted to explore how to reverse out the above change using a Sensei
+recipe.</p>
+<p>Thinking it through I want to find a method annotated with <code
+class="calibre4">@Disabled</code> but only in the class <code
+class="calibre4">SkipThisTest</code> where I do the demo:</p>
+<pre class="calibre13"><code>
+Name: JUnit: demo in SkipThisTest remove @Disabled and revert to SKIPTHIS
+Short Description: remove @Disabled and revert to SKIPTHIS for demo purposes in the project
+Level: warning</code></pre>
+<p>The Recipe Settings Search is very simple, matching the annotation in
+a specific class.</p>
+<pre class="calibre13"><code>
+search:
+  method:
+    annotation:
+      type: &quot;Disabled&quot;
+    in:
+      class:
+        name: &quot;SkipThisTest&quot;</code></pre>
+<p>To avoid making the code look like it is an error I defined the
+general setting on the recipe to be a Warning. Warnings are shown with
+highlights in the code and it doesn’t make the code look like it has a
+major problem.</p>
+<p>For the Quick fix, since we have matched the method, I use the
+rewrite action and populate the template using the variables.</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;Remove Disabled and rename to SKIPTHIS...&quot;
+  actions:
+  - rewrite:
+      to: &quot;{{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
+        \ }}}{{{ body }}}&quot;</code></pre>
+<p>I basically add every variable except the modifier (since I want to
+get rid of the annotations) and add the <code
+class="calibre4">SKIPTHIS</code> text into the template.</p>
+<p>This fix has the weakness that by removing the modifiers, I remove
+any other annotations as well.</p>
+<h3 class="calibre7" data-number="5.1.5"
+id="text00006.html_add-another-action">Add another Action</h3>
+<p>I can add another named fix, to give me a choice when the <code
+class="calibre4">alt+enter</code> is used to display the QuickFix.</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;Remove Disabled and rename to SKIPTHIS...&quot;
+  actions:
+  - rewrite:
+      to: &quot;{{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
+        \ }}}{{{ body }}}&quot;
+      target: &quot;self&quot;
+- name: &quot;Remove Disabled, keep other annotations, and rename to SKIPTHIS...&quot;
+  actions:
+  - rewrite:
+      to: &quot;{{#sed}}s/(@Disabled\n.*@Test)//,{{{ modifierList }}}{{/sed}}\n\
+        {{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
+        \ }}}{{{ body }}}&quot;
+      target: &quot;self&quot;</code></pre>
+<p>Here, I added an additional line in the new Quick Fix.</p>
+<pre class="calibre13"><code>
+{{#sed}}s/(@Disabled\n.*@Test)//,{{{ modifierList }}}{{/sed}}</code></pre>
+<p>This takes the modifier list, encodes it as a string, then uses <code
+class="calibre4">sed</code> to remove the line with <code
+class="calibre4">@Disabled</code> from the string, but leaves all other
+lines in the modifier, i.e. it leaves all other annotations alone.</p>
+<p><em>NOTE: Remember to add the “,” in the <code
+class="calibre4">sed</code> , otherwise you will see a comment added to
+your preview because this is how Sensei alerts you to syntax errors in
+the <code class="calibre4">sed</code> command.</em></p>
+<h3 class="calibre7" data-number="5.1.6"
+id="text00006.html_nested-sed-calls">Nested <code
+class="calibre14">sed</code> calls</h3>
+<p>I was lucky that I could match both the <code
+class="calibre4">@Disabled</code> and <code
+class="calibre4">@Test</code> in a single search and replace.</p>
+<p>In the event that the code is more complicated and I wanted to have a
+sequence of sed commands then I can do that by nesting them:</p>
+<pre class="calibre13"><code>
+{{#sed}}s/@Test//,{{#sed}}s/@Disabled\n//,{{{ modifierList }}}{{/sed}}{{/sed}}</code></pre>
+<p>In the above example, I apply the <code class="calibre4">@Test</code>
+replacement to the results of applying the <code
+class="calibre4">@Disabled</code> replacement on the <code
+class="calibre4">{{{ modifierList }}}</code> .</p>
+<h3 class="calibre7" data-number="5.1.7"
+id="text00006.html_summary-3">Summary</h3>
+<p><code class="calibre4">sed</code> is a very flexible way to achieve
+code rewriting and it is possible to nest the <code
+class="calibre4">sed</code> function calls for complicated rewrite
+conditions.</p>
+<p>Recipes like this often end up being temporary because we are using
+them to improve our programming process, and once we have built up the
+muscle memory and no longer use the poor programming pattern we can
+remove or disable them in the Cookbook.</p>
+<p><em>NOTE: Rather than add two available fixes, I could clone the
+recipe, but if I do, then I have to remember to uncheck the “Add disable
+entry for cloned recipe” checkbox, otherwise only the cloned recipe will
+be available for use.</em></p>
+<h2 class="calibre6" data-number="5.2"
+id="text00006.html_adding-parameters-to-annotations-using-rewrite-actions">Adding
+Parameters to Annotations Using Rewrite Actions</h2>
+<p>In this example, we will:</p>
+<ul>
+<li>Demonstrate searching and matching annotations.</li>
+<li>Amend annotations using mustache templates.</li>
+</ul>
+<p>Sensei provides the ability to match problematic code patterns and
+then amend them to agreed implementations. In this example, I am using
+<code class="calibre4">@Disabled</code> without a parameter as the
+problematic code pattern.</p>
+<h3 class="calibre7" data-number="5.2.1"
+id="text00006.html_see-this-in-action-on-youtube">See This In Action on
+YouTube</h3>
+<p><a href="https://www.youtube.com/watch?v=mjXGliXJ7M8"><img
+src="OEBPS/Image00045.jpg" class="calibre5" /></a></p>
+<p><a href="https://youtu.be/mjXGliXJ7M8">youtu.be/mjXGliXJ7M8</a></p>
+<h3 class="calibre7" data-number="5.2.2"
+id="text00006.html_disabled-test-annotation">Disabled Test
+Annotation</h3>
+<p>Disabled tests without a specified reason can prove problematic over
+the long term because we forget why we disabled them.</p>
+<pre class="calibre13"><code>
+@Disabled
+void thisTestMethodHasNoDisabledReason(){
+    Assertions.fail(&quot;This test is disabled and should not run&quot;);
+}</code></pre>
+<p>The risk is that, over time, the code base moves on, the disabled
+test is not updated in step with the purpose of the code and eventually
+becomes redundant and irrelevant, and potentially never re-enabled.</p>
+<p>During code reviews, we will often point out that it is a good idea
+to add an explanatory description as the annotation parameter.</p>
+<pre class="calibre13"><code>
+@Disabled(&quot;Disabled to demonstrate adding a reason&quot;)
+void thisTestMethodHasDisabledReason(){
+    Assertions.fail(&quot;This test is disabled and should not run&quot;);
+}</code></pre>
+<h3 class="calibre7" data-number="5.2.3"
+id="text00006.html_a-sensei-recipe">A Sensei Recipe</h3>
+<p>We can write a recipe to detect when <code
+class="calibre4">@Disabled</code> is added without explanation and a
+Quick Fix that reminds us to add the actual reason explaining why we
+disabled it.</p>
+<p>When I think about what I’m going to do, I have to:</p>
+<ul>
+<li>Match the <code class="calibre4">Disabled</code> annotation without
+any parameters.</li>
+<li>Change the <code class="calibre4">Disabled</code> annotation to have
+a parameter with marker text “TODO: add a description here”.</li>
+</ul>
+<h3 class="calibre7" data-number="5.2.4"
+id="text00006.html_create-a-warning-recipe">Create a Warning Recipe</h3>
+<p>I use <code class="calibre4">Alt+Enter</code> to Create a new
+Recipe.</p>
+<p><img src="OEBPS/Image00046.jpg" class="calibre5" /></p>
+<p>Then add the basic descriptive text in the general information.</p>
+<p><img src="OEBPS/Image00047.gif" class="calibre5" /></p>
+<p>General:</p>
+<pre class="calibre13"><code>
+name: remember to add disabled description
+short description: @Disabled should really have a description explaining why
+Level: Warning</code></pre>
+<p>By making the rule a warning, any matching code is highlighted but
+not shown as a glaring error.</p>
+<p><img src="OEBPS/Image00048.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="5.2.5"
+id="text00006.html_find-the-annotation">Find the Annotation</h3>
+<p>In the recipe editor, I change the Search to match an annotation.</p>
+<p>This will highlight all annotations in the preview.</p>
+<p><img src="OEBPS/Image00049.jpg" class="calibre5" /></p>
+<p>Having done that, I want to filter on the <code
+class="calibre4">type</code> . I could just use <code
+class="calibre4">Disabled</code> but I fully qualify the class with the
+package so that it only matches the annotation from JUnit 5. Because the
+preview is displayed, I can easily copy and paste this from the
+code.</p>
+<p>I then want to match only annotations without Parameters, and I can
+use the GUI to do that.</p>
+<p><img src="OEBPS/Image00050.jpg" class="calibre5" /></p>
+<p>i.e. Search:</p>
+<pre class="calibre13"><code>
+search:
+  annotation:
+    type: &quot;org.junit.jupiter.api.Disabled&quot;
+    without:
+      parameters:
+      - {}</code></pre>
+<h3 class="calibre7" data-number="5.2.6"
+id="text00006.html_create-a-rewrite-quick-fix-action">Create a Rewrite
+Quick Fix Action</h3>
+<p>For my QuickFix I will use a rewrite action.</p>
+<p>I use the <code class="calibre4">Show Variables</code> functionality
+to show me the Mustache variables and preview the contents.</p>
+<p><img src="OEBPS/Image00051.jpg" class="calibre5" /></p>
+<p>And then I add the extra code needed to create the place marker
+comment.</p>
+<p><img src="OEBPS/Image00052.jpg" class="calibre5" /></p>
+<p>i.e. QuickFix:</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;Add a todo comment parameter&quot;
+  actions:
+  - rewrite:
+      to: &quot;{{{ . }}}(\&quot;TODO: add a description here\&quot;)&quot;
+      target: &quot;self&quot;</code></pre>
+<h3 class="calibre7" data-number="5.2.7"
+id="text00006.html_summary-4">Summary</h3>
+<p>When building a rewrite Quick Fix, it is easier when we can search
+for the code element that we want to rewrite, because it is then the
+<code class="calibre4">self</code> entity we can act on.</p>
+<p>In this example, I used a rewrite action to amend the Annotation.
+Rewrite is a general-purpose action that can apply to any code element
+and is a good default to explore.</p>
+<h2 class="calibre6" data-number="5.3"
+id="text00006.html_documentation-links">Documentation Links</h2>
+<p>One of the difficulties with learning a new library, or sharing
+agreed upon practices across our team is documenting and creating
+examples.</p>
+<p>Very often we create small example projects, but we don’t have them
+open when working with actual code.</p>
+<p>I’ve often thought it would be great to have the ability to link to
+our examples or online examples and be able to go to a URL for more
+explanation when needed.</p>
+<p>With Java, we have JavaDoc comments, which can have a <code
+class="calibre4">see</code> annotation:</p>
+<pre class="calibre13"><code>
+/**
+ * @see &lt;a href=&quot;https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations&quot;&gt;Junit 5 Annotation docs&lt;/a&gt;
+ */</code></pre>
+<p>JavaDoc like this in 3rd party libraries is a great help because we
+can use the <code class="calibre4">Quick Documentation</code>
+functionality in IntelliJ to have access to more detailed examples.</p>
+<p><img src="OEBPS/Image00053.jpg" class="calibre5" /></p>
+<p>But, we all know that comments don’t get updated as often as code,
+and web presence maintenance is often disconnected from library
+maintenance and sometimes performed by a different team entirely.</p>
+<h3 class="calibre7" data-number="5.3.1"
+id="text00006.html_how-sensei-helps">How Sensei Helps</h3>
+<p>Sensei provides the ability to match on library annotations and
+methods to provide links to long-form documentation on a wiki or
+third-party tutorial site.</p>
+<p>As an example, I’m using the <code class="calibre4">@Test</code>
+annotation from JUnit.</p>
+<p>The JavaDoc is very detailed, and the <code
+class="calibre4">Quick Documentation</code> view explains how to use the
+annotation.</p>
+<p>But the official documentation on the website is often easier to read
+and has more examples.</p>
+<p>When a team starts learning a library, having a set of recommended
+tutorials can be very useful.</p>
+<p>Sensei has a <code class="calibre4">goto</code> action that can open
+a URL, allowing us to link to external sites and examples for
+documentation that we, as a team, find useful.</p>
+<h3 class="calibre7" data-number="5.3.2"
+id="text00006.html_implementing-the-goto-url">Implementing the <code
+class="calibre14">goto</code> URL</h3>
+<p>To implement this I would create a search that matches the <code
+class="calibre4">@Test</code> annotation from Junit.</p>
+<pre class="calibre13"><code>
+search:
+  annotation:
+    owner:
+      method: {}
+    type: &quot;org.junit.jupiter.api.Test&quot;</code></pre>
+<p>And then I would add <code class="calibre4">goto</code> actions for
+each of the URLs I find useful.</p>
+<p>e.g.</p>
+<ul>
+<li>https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations</li>
+<li>https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods</li>
+</ul>
+<p>The example below would create a single Action <code
+class="calibre4">JUnit Annotations (learn)</code> which would open both
+URLs in a browser at the same time.</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;Learn about JUnit Annotations&quot;
+  actions:
+  - goto:
+      type: &quot;URL&quot;
+      value: &quot;https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations&quot;
+  - goto:
+      type: &quot;URL&quot;
+      value: &quot;https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods&quot;</code></pre>
+<p>When I activate it in IntelliJ with <code
+class="calibre4">alt+Enter</code> I see the context menu which I can
+select to jump to the documentation.</p>
+<p><img src="OEBPS/Image00054.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="5.3.3"
+id="text00006.html_multiple-actions">Multiple Actions</h3>
+<p>I might choose to have multiple Actions so that each URL or tutorial
+has its own option in the <code class="calibre4">alt+enter</code>
+QuickFix pop-up menu.</p>
+<p>For example, for the <code class="calibre4">@Parameterized</code>
+annotation, I might want to link to the official documentation and a set
+of online example code.</p>
+<ul>
+<li>https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests</li>
+<li>https://github.com/eviltester/junitexamples/blob/master/src/test/java/parameterized/junit5/InitialExampleTest.java</li>
+</ul>
+<p>I would simply create a recipe that searches for the annotation:</p>
+<pre class="calibre13"><code>
+search:
+  annotation:
+    owner:
+      method: {}
+    type: &quot;org.junit.jupiter.params.ParameterizedTest&quot;</code></pre>
+<p>And links off to the sites I identified as being useful:</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;JUnit Annotations (learn)&quot;
+  actions:
+  - goto:
+      type: &quot;URL&quot;
+      value: &quot;https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations&quot;
+- name: &quot;What is a JUnit Test? (learn)&quot;
+  actions:
+  - goto:
+      type: &quot;URL&quot;
+      value: &quot;https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods&quot;</code></pre>
+<p>Both links would then appear in the pop-up dialog.</p>
+<p><img src="OEBPS/Image00055.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="5.3.4"
+id="text00006.html_who-would-benefit">Who would benefit?</h3>
+<p>I would have found this useful when using and learning libraries,
+especially when leading teams and helping them adopt a new library.</p>
+<p>This could also benefit teams creating libraries by creating a
+standard set of documentation recipes to help guide people through the
+adoption of the library or new features in the library.</p>
+<p>This would be especially useful if the code maintenance and
+documentation maintenance are performed by different teams.</p>
+<p><span id="text00007.html"></span></p>
+<h1 class="title" data-number="6"
+id="text00007.html_guice-use-cases">Guice Use-cases</h1>
+<p>Every new technology adds risk to a project. Dependency Injection can
+save time when coding and adds additional flexibility around
+configuration, but there is always the risk that we forget to wire
+something up, or inject the wrong thing.</p>
+<p>The use-case in this section explores ways in which Sensei can
+help.</p>
+<h2 class="calibre6" data-number="6.1"
+id="text00007.html_how-to-catch-and-fix-a-dependency-injection-issue-using-sensei">How
+to catch and fix a dependency injection issue using Sensei</h2>
+<p>The Sensei project itself has its own set of recipes that have built
+up over time, this is an example of one of the scenarios the Sensei team
+built a recipe to cover. A misconfiguration of Guice, which led to a
+<code class="calibre4">NullPointerException</code> being reported at
+runtime during our testing.</p>
+<p>This could be generalised to many Dependency Injection scenarios
+where code is syntactically correct, but because the wiring
+configuration was incorrect, an error slips through.</p>
+<p>This often happens when we are learning the technology, and we keep
+making the simple mistake of forgetting to wire things up. But this also
+happens to experienced professionals because, well… we all make
+mistakes, and we may not have Unit Tests to cover everything.</p>
+<h3 class="calibre7" data-number="6.1.1"
+id="text00007.html_runtime-exceptions-from-incorrect-dependency-injection-wiring">RunTime
+Exceptions from Incorrect Dependency Injection Wiring</h3>
+<p>The code below fails at runtime with a <code
+class="calibre4">NullPointerException</code> .</p>
+<pre class="calibre13"><code>
+Injector injector = Guice.createInjector(new SystemOutModule());
+CountReporter reporter = injector.getInstance(CountReporter.class);
+
+String [] lines5 = {&quot;1: line&quot;, &quot;2: line&quot;, &quot;3: line&quot;, &quot;4: line&quot;, &quot;5: line&quot;};
+
+reporter.reportThisMany(Arrays.asList(lines5));
+Assertions.assertEquals(5, reporter.getCount());</code></pre>
+<p>The code is syntactically correct but fails because we missed out a
+<code class="calibre4">requestStaticInjection</code> in our <code
+class="calibre4">SystemOutModule</code> configuration.</p>
+<pre class="calibre13"><code>
+public class SystemOutModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        binder().bind(ILineReporter.class).to(SystemOutReporter.class);
+    }
+}</code></pre>
+<p>When we try to use the <code class="calibre4">reporter</code> ,
+created using the <code class="calibre4">Injector</code> , it is not
+fully instantiated and we receive a <code
+class="calibre4">NullPointerException</code> when we call <code
+class="calibre4">reportThisMany</code> .</p>
+<p>We may well have missed that in our code review or we didn’t have
+unit tests that triggered the dependency injection, and it slipped out
+into our build.</p>
+<h3 class="calibre7" data-number="6.1.2"
+id="text00007.html_warning-signs">Warning Signs</h3>
+<p>In this case there is a warning sign, the <code
+class="calibre4">CountReporter</code> has a static field annotated with
+<code class="calibre4">@Inject</code> but… the <code
+class="calibre4">CountReporter</code> class itself is <code
+class="calibre4">package private</code> . In a complicated code base
+this could be a warning sign that it isn’t used because the Module class
+configuring the bindings needs to be in the same package for this to
+work.</p>
+<pre class="calibre13"><code>
+class CountReporter {
+
+    @Inject
+    private static ILineReporter reporter;</code></pre>
+<p>Another error that we made, which we might have picked up in a code
+review, is that we forgot to actually bind the fields in the <code
+class="calibre4">SystemOutModule</code> <code
+class="calibre4">configure</code> method.</p>
+<pre class="calibre13"><code>
+binder().requestStaticInjection(CountReporter.class);</code></pre>
+<p>Had we written the <code
+class="calibre4">requestStaticInjection</code> code then the Syntax
+Error generated when trying to use the <code
+class="calibre4">CountReporter</code> would have alerted us to the
+simple error.</p>
+<pre class="calibre13"><code>
+&gt; &#39;reporters.CountReporter&#39; is not public in &#39;reporters&#39;.
+  Cannot be accessed from outside package</code></pre>
+<p>Sadly we forgot, and there were no syntactic warning signs in the
+code.</p>
+<h3 class="calibre7" data-number="6.1.3"
+id="text00007.html_how-could-sensei-help">How could Sensei help?</h3>
+<p>We probably wouldn’t use Sensei to pick up the missing <code
+class="calibre4">requestStaticInjection</code> , since all our Guice
+configuration wiring would need to use that method and we can’t
+guarantee that all wiring is going to be as simple as this use-case.</p>
+<p>We could write a Sensei rule to look for some warning signs that our
+code is not up to scratch.</p>
+<p>In this case that would mean:</p>
+<ul>
+<li>Find any classes with <code class="calibre4">@Inject</code>
+annotated fields</li>
+<li>Where the classes are not public.</li>
+</ul>
+<p>The above was the warning sign that they were unlikely to have been
+wired up.</p>
+<p>By creating a recipe, we get an early warning sign during the coding
+and can therefore reduce the reliance on our pull requests or resolving
+our tech debt to allow us to add Unit Tests.</p>
+<h3 class="calibre7" data-number="6.1.4"
+id="text00007.html_how-to-create-a-recipe">How to create a recipe?</h3>
+<p>The task I want to complete is:</p>
+<ul>
+<li>Create a recipe that matches fields annotated with <code
+class="calibre4">@Inject</code> which are in <code
+class="calibre4">protected private</code> classes</li>
+</ul>
+<p>That should hopefully give us enough warning to identify any Modules
+using it and add the missing wiring code.</p>
+<p>In my <code class="calibre4">CountReporter</code> class, I will use
+<code class="calibre4">Alt+Enter</code> to <code
+class="calibre4">Create a new Recipe</code> and I will <code
+class="calibre4">start from scratch</code></p>
+<p>I will name this and add a description:</p>
+<pre class="calibre13"><code>
+Name: Guice: Injected Field Not Public
+Description: If the Injected field is not public then the code might not be wired up
+Level: Warning</code></pre>
+<p>The search I write looks for a field with the <code
+class="calibre4">Inject</code> annotation which has not been scoped as
+<code class="calibre4">public</code> .</p>
+<pre class="calibre13"><code>
+search:
+  field:
+    with:
+      annotation:
+        type: &quot;com.google.inject.Inject&quot;
+    in:
+      class:
+        without:
+          modifier: &quot;public&quot;</code></pre>
+<p><img src="OEBPS/Image00056.jpg" class="calibre5" /></p>
+<h3 class="calibre7" data-number="6.1.5"
+id="text00007.html_fix">Fix</h3>
+<p>The QuickFix in the recipe will amend the injected class, but that is
+not the only code I have to change.</p>
+<pre class="calibre13"><code>
+availableFixes:
+- name: &quot;Change class to public. Remember to also request injection on this class&quot;
+  actions:
+  - changeModifiers:
+      visibility: &quot;public&quot;
+      target: &quot;parentClass&quot;</code></pre>
+<p>When the recipe is triggered I still have a manual step to perform in
+my code, adding the line containing <code
+class="calibre4">requestStaticInjection</code> to fully instantiate the
+object.</p>
+<pre class="calibre13"><code>
+public class SystemOutModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        binder().bind(ILineReporter.class).to(SystemOutReporter.class);
+        // instantiate via dependency injection
+        binder().requestStaticInjection(CountReporter.class);
+    }
+}</code></pre>
+<p>I could potentially write another recipe to pick this up. I probably
+wouldn’t do that unless forgetting to add the static injection became a
+semi-regular error that I made when coding.</p>
+<h3 class="calibre7" data-number="6.1.6"
+id="text00007.html_summary-5">Summary</h3>
+<p>If we ever find ourselves making a mistake with a common root
+pattern, then Sensei can help codify the knowledge around detecting and
+fixing the issue. It will then, hopefully, not slip through code reviews
+and into production.</p>
+<p>Sometimes the recipes we write identify heuristic patterns
+i.e. matching them doesn’t guarantee that there is a problem, but is
+likely that there is a problem.</p>
+<p>The recipes and Quick Fixes that we write,don’t have to be fully
+comprehensive, but they need to be good enough that they help us
+identify and fix problems without being overly complicated. When they
+become overly complicated, they become harder to understand and harder
+to maintain.</p>
+<p><span id="text00008.html"></span></p>
+<h1 class="title" data-number="7" id="text00008.html_next-steps-1">Next
+Steps</h1>
+<ul>
+<li>Install Sensei</li>
+<li>Study Some Examples</li>
+<li>Read the Documentation</li>
+<li>Experiment</li>
+</ul>
+<h2 class="calibre6" data-number="7.1"
+id="text00008.html_install-sensei">Install Sensei</h2>
+<p>If you haven’t already then, install Sensei. You can do this from the
+Jetbrains marketplace, either from in the IDE, or at
+jetbrains.marketplace.com</p>
+<p><em>To install within the IDE, use “Preferences  Plugins” (Mac)
+“Settings  Plugins” (Windows) and search for “sensei secure code”, then
+Install.</em></p>
+<ul>
+<li><a href="https://scw.buzz/38n5uPu">Sensei plugin on marketplace</a>
+<ul>
+<li><a
+href="https://scw.buzz/38n5uPu">plugins.jetbrains.com/plugin/14015-sensei-by-secure-code-warrior-</a></li>
+</ul></li>
+</ul>
+<p>For support in installing IntelliJ plugins, consider reading the
+Jetbrains support documentation:</p>
+<ul>
+<li><a
+href="https://www.jetbrains.com/help/idea/managing-plugins.html">jetbrains.com/help/idea/managing-plugins.html</a></li>
+</ul>
+<h2 class="calibre6" data-number="7.2"
+id="text00008.html_study-some-examples">Study Some Examples</h2>
+<p>Earlier in the text, we mentioned two main Github Repositories.</p>
+<p>The <a href="https://scw.buzz/3cixLrq">Sensei Blog Examples</a>
+contains sample code, recipes that apply to that code, and readme.md
+files explaining the use-case.</p>
+<p>The <a href="https://scw.buzz/30pk1FN">Public Cookbooks</a> index
+lists publicly accessible cookbooks with sample recipes and
+documentation.</p>
+<ul>
+<li><a
+href="https://scw.buzz/3cixLrq">github.com/SecureCodeWarrior/sensei-blog-examples</a></li>
+<li><a
+href="https://scw.buzz/30pk1FN">github.com/SecureCodeWarrior/public-cookbooks</a></li>
+</ul>
+<p>Both of these repositories contain a lot of recipes to study to
+understand how Sensei works.</p>
+<h2 class="calibre6" data-number="7.3"
+id="text00008.html_read-the-documentation">Read the Documentation</h2>
+<p>The <a href="https://scw.buzz/3emSI7l">Official Documentation</a>
+includes a reference guide to all the Sensei features and functions.
+Additionally, it contains a walkthrough getting started tutorial to help
+you create your own recipe from scratch.</p>
+<ul>
+<li><a
+href="https://scw.buzz/3emSI7l">https://sensei-docs-beta.securecodewarrior.com/</a></li>
+</ul>
+<h2 class="calibre6" data-number="7.4"
+id="text00008.html_experiment">Experiment</h2>
+<p>Sensei adds the most value when you create recipes that help you
+improve your own process or codify knowledge from your team.</p>
+<p>A few things you might want to try:</p>
+<ul>
+<li>Replicate some of the rules that Static Analysis tools warn you
+about, but create a QuickFix for the most used code changes you
+apply.</li>
+<li>Create some helper code to generate boilerplate code for some of the
+libraries that you often use.</li>
+<li>Make notes about the type of errors you make as you code. Create a
+recipe with a fix to help you avoid the problem next time.</li>
+</ul>
+<h2 class="calibre6" data-number="7.5"
+id="text00008.html_summary-6">Summary</h2>
+<p>The <a href="https://scw.buzz/30pk1FN">Public Cookbooks</a> index
+lists recipes that you can immediately use. The maximum value from
+Sensei comes, however, when you create recipes that help you write
+better quality code to your own standards for the technology you work
+with.</p>
+<p>Codify your knowledge in Sensei and share it with your team, or with
+the world, by contributing your cookbooks to the <a
+href="https://scw.buzz/30pk1FN">Public Cookbooks</a> index.</p>
+<p>Be sure to visit us to find out what else is new in Sensei at:</p>
+<ul>
+<li><a
+href="https://scw.buzz/3qvDvDt">securecodewarrior.com/sensei</a></li>
+</ul>
+<p><span id="text00009.html"></span></p>
+<h1 class="title" data-number="8"
+id="text00009.html_about-secure-code-warrior">About Secure Code
+Warrior</h1>
+<p>Secure Code Warrior is a global security company that makes software
+development better and more secure. Our vision is to empower developers
+to be the first line of defense in their organization by making security
+highly visible and providing them with the skills and tools to write
+secure code from the beginning. Our powerful platform moves the focus
+from reaction to prevention, training and equipping developers to think
+and act with a security mindset as they build and verify their skills,
+gain real-time advice and monitor skill development. Our customers
+include financial institutions, telecommunications providers and global
+technology companies in Europe, North America and Asia Pacific.</p>
+<p><a href="https://scw.buzz/2PBhLJp">SecureCodeWarrior.com</a></p>
+<p><span id="text00010.html"></span></p>
+<h1 class="title" data-number="9"
+id="text00010.html_about-the-author">About the Author</h1>
+<p>Alan Richardson is Head of Developer Relations at Secure Code
+Warrior. Alan has over twenty years of professional software development
+experience and author of the books “Automating and Testing a REST API”,
+and “Java For Testers”.</p>
+<p>For more information about Alan visit <a
+href="https://eviltester.com">EvilTester.com</a></p>
