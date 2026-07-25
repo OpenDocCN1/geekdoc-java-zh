@@ -629,4 +629,5 @@
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
 +   [Ultimate Java 数据分析与机器学习：使用 WEKA、JavaML、JFreeChart 和 Deeplearning4j 解锁用于数据分析与机器学习的 Java 生态（英文版）](docs/ultimate-java-for-data-analytics-and-machine-learning-unlock/README.md)
 +   [Java 入门指南：掌握你的 Java 技能](docs/understading-java-for-beginners-master-your-java-programming/README.md)
++   [Java 8 升级指南](docs/upgrading-to-java-8/README.md)
 +   [Web 应用开发指南：Ember.js 指南](docs/web-app-development-book-guide-to-emberjs/README.md)

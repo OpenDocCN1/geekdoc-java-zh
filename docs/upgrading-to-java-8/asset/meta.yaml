@@ -1,0 +1,226 @@
+name: Upgrading to Java 8
+name_cn: Java 8 升级指南
+slug: upgrading-to-java-8
+toc:
+- - '#'
+  - Java 8 升级指南
+- - '##'
+  - 关于作者
+- - '##'
+  - 商标
+- - '#'
+  - 接口的更改
+- - '##'
+  - 默认方法 (Default Methods)
+- - '##'
+  - 静态方法 (Static Methods)
+- - '##'
+  - 函数式接口 (Functional Interfaces)
+- - '#'
+  - Lambda 表达式
+- - '##'
+  - 预定义的函数式接口
+- - '##'
+  - '表 1.1: 核心函数接口'
+- - '##'
+  - Function, BiFunction 及其他变体
+- - '###'
+  - 代码列表 1.2：`FunctionDemo1` 类
+- - '###'
+  - 代码列表 1.3：`BiFunctionDemo1` 类
+- - '###'
+  - 代码列表 1.4：`IntToDoubleFunctionDemo1` 类
+- - '##'
+  - Predicate
+- - '###'
+  - 代码列表 1.5：`PredicateDemo1` 类
+- - '##'
+  - Supplier
+- - '###'
+  - 代码列表 1.6：`SupplierDemo1` 类
+- - '##'
+  - Consumer
+- - '###'
+  - 代码列表 1.7：Consumer 示例
+- - '#'
+  - 总结
+- - '#'
+  - 第 2 章
+- - '##'
+  - 方法引用
+- - '##'
+  - 概述
+- - '###'
+  - 静态方法的引用
+- - '###'
+  - 列表 2.3：`WithBiFunction` 类
+- - '###'
+  - 引用对象引用可用的实例方法
+- - '###'
+  - 列表 2.4：在对象中引用实例方法
+- - '###'
+  - 引用对象引用不可用的实例方法
+- - '###'
+  - 列表 2.5：`MethodReferenceDemo3` 类
+- - '###'
+  - 引用构造函数
+- - '###'
+  - 列表 2.6：`MethodReferenceDemo4` 类
+- - '#'
+  - 总结
+- - '#'
+  - 第 3 章：Optional 及相似类
+- - '##'
+  - 概述
+- - '###'
+  - 列表 3.1：检查空值的繁琐方法
+- - '###'
+  - OptionalInt, OptionalLong 和 OptionalDouble
+- - '###'
+  - 总结
+- - '#'
+  - 第 4 章
+- - '##'
+  - Stream API
+- - '##'
+  - 概述
+- - '##'
+  - 创建和获取流
+- - '###'
+  - 列表 4.1：ObtainStreamDemo 类
+- - '###'
+  - 合并流
+- - '###'
+  - 列表 4.2：合并流
+- - '###'
+  - 过滤
+- - '###'
+  - 列表 4.3：StreamFilterDemo1 类
+- - '###'
+  - 列表 4.4：example.txt 文件
+- - '###'
+  - 列表 4.5：StreamFilterDemo2 类
+- - '###'
+  - 映射
+- - '###'
+  - 列表 4.6：StreamMapDemo 类
+- - '##'
+  - 规约 (Reduction)
+- - '##'
+  - 可变归约 (Mutable Reductions)
+- - '###'
+  - '列表 4.9: StreamCollectDemo1 类'
+- - '###'
+  - '列表 4.10: StreamCollectDemo2 类'
+- - '###'
+  - 并行流
+- - '###'
+  - 总结
+- - '#'
+  - 第 5 章：日期时间 API
+- - '##'
+  - 概述
+- - '##'
+  - Instant 类
+- - '##'
+  - LocalDate
+- - '##'
+  - Period 类
+- - '###'
+  - 表 5.2 `Period` 的重要方法
+- - '###'
+  - 列表 5.3：使用 `Period`
+- - '##'
+  - LocalDateTime
+- - '###'
+  - 表 5.3：`LocalDateTime` 的更多重要方法
+- - '###'
+  - 时区
+- - '###'
+  - 列表 5.4：列出所有区域标识符
+- - '###'
+  - ZonedDateTime
+- - '###'
+  - Duration
+- - '##'
+  - 格式化日期-时间
+- - '###'
+  - 列表 5.8：格式化日期
+- - '##'
+  - 解析日期-时间
+- - '###'
+  - 列表 5.9：一个年龄计算器
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章 JavaFX 8
+- - '##'
+  - 概述
+- - '###'
+  - 设置
+- - '###'
+  - '你的第一个 JavaFX '
+- - '###'
+  - '列表 6.1: `FirstApp` 类'
+- - '###'
+  - Application, Stage 和 Scene
+- - '###'
+  - Application
+- - '###'
+  - Stage
+- - '###'
+  - Scene
+- - '#'
+  - Controls
+- - '#'
+  - Regions
+- - '##'
+  - 事件处理
+- - '##'
+  - 使用 CSS 样式
+- - '###'
+  - 使用 DatePicker
+- - '#'
+  - 第 7 章：使用 FXML 的 JavaFX
+- - '##'
+  - 概述
+- - '###'
+  - 注意事项
+- - '##'
+  - 一个简单的基于 FXML 的应用程序
+- - '##'
+  - 使用 FXML 处理事件
+- - '###'
+  - 列表 7.4：`example2.fxml` 文件
+- - '###'
+  - 列表 7.5：`Example2Controller` 类
+- - '###'
+  - 列表 7.6：`Example2` 类
+- - '###'
+  - 总结
+- - '#'
+  - 第 8 章：Nashorn
+- - '##'
+  - 概述
+- - '##'
+  - 使用 jjs 命令
+- - '###'
+  - '列表 8.1: `test1.js` 文件'
+- - '###'
+  - 在 Java 代码中使用 Nashorn
+- - '###'
+  - 列表 8.2：`ScriptEngineDemo1` 类
+- - '###'
+  - 在 JavaScript 中调用 Java
+- - '###'
+  - 列表 8.3：评估文件
+- - '###'
+  - 列表 8.4：在 JavaScript 使用 Java
+- - '###'
+  - 列表 8.5：等效的 Java 代码
+- - '###'
+  - 列表 8.6：一个 JavaFX 脚本 (`test1.js`)
+- - '###'
+  - 使用 Nashorn 替代 Shell 脚本
+- - '###'
+  - 总结
