@@ -556,6 +556,7 @@
 +   [Java 编程（精通编程语言系列）](docs/programming-with-java-mastering-programming-languages-series/README.md)
 +   [Python 与 Java 编程练习：零基础学者基础指南](docs/python-and-java-coding-with-exercises-basics-for-absolute-be/README.md)
 +   [Python：Python 高级指南](docs/python-become-a-master-in-python-python-python-programming-c/README.md)
++   [Python 编程最佳实践](docs/python-best-practices-to-programming-code-with-python/README.md)
 +   [经验丰富的 Java 开发者的 Python 指南](docs/python-for-experienced-java-developers/README.md)
 +   [Python, Java, SQL & JavaScript：初学者掌握 4 种最畅需求编程语言、脱颖而出并寻找高薪工作的终极速成指南](docs/python-java-sql-javascript-the-ultimate-crash-course-for-beg/README.md)
 +   [Python：学习 Python 编程 – 初学者指南 (初学者的 Python，HTML,PHP, C,Java,Ruby,SQL 书籍 1)](docs/python-learn-python-programming-beginner-guide-python-for-be/README.md)
