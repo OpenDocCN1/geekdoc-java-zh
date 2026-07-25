@@ -1,0 +1,5626 @@
+- fmt: '
+
+    ![](Images/cover00286.jpeg)
+
+
+    # JAVA CRASH COURSE
+
+    ## Beginner’s Course To Learn The Basics Of Java Programming Language
+
+
+    # Table Of Contents
+
+    - [Introduction](#introduction)
+
+    - [Chapter 1: Getting Acquainted with Java](#chapter-1)
+
+    - [Chapter 2: It Always Starts with “Hello”](#2)
+
+    - [Chapter 3: Getting to Know the Different Data Types, Variables, and Reserved
+    Words]
+
+    - [Chapter 4: Useful Pocket Tables and the Different Operators]
+
+    - [Chapter 5: All About the Math]
+
+    - [Chapter 6: Talk About Taking Control]
+
+    - [Chapter 7: More Practice]
+
+    - [Chapter 8: Your Own Java in your Computer]
+
+    - [Conclusion](#conclusion)
+
+
+    ## Introduction
+
+    I want to thank you and congratulate you for downloading the book, “Java Crash
+    Course – Beginner’s Course To Learn the Basics of Java Programming Language”.
+
+
+    This book contains basic steps and strategies in learning Java programming, and
+    helps you create your own program. It is this book’s best interest to teach you
+    everything you need to know about the basics of Java programming. After reading
+    each chapter, you will be a step closer to understanding, and eventually mastering
+    this programming language. I wrote this book using simple terminologies, with
+    a bit of programming jargon, to make it easier to understand.
+
+
+    You should be able to grasp the essence of each lesson within a day. There are
+    lessons that you can fully understand within 5 hours, but then again, some might
+    take you a day or two to grasp fully. You need to allot a bit of your time every
+    day, and also have a bit more patience than usual, for the lessons that you find
+    challenging to meet the goal of learning Java within seven days or less.
+
+
+    You can double the time that you want to allot in learning Java if you are a fast
+    learner. You can choose to take two lessons at a time, but it is not advisable.
+    While you learn the language, don’t take away the fun in learning. Pushing yourself
+    too hard might wear you out quickly before you get to the more fun part of learning
+    Java.
+
+
+    This book will give you lots of sample programs with accompanying explanations.
+    It is always better to learn by example. There are programming or coding exercises
+    that you need to do on your own. But you will be provided with an output so you
+    will know if you got it right.
+
+
+    Your Java journey starts right here, right now.
+
+
+    Thanks again for downloading this book, I hope you enjoy it!
+
+
+    �© Copyright 2015 by LIFE-STYLE EBOOKS - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    ## Chapter 1: Getting Acquainted with Java
+
+    You are here now because you are interested to know and learn Java programming.
+    It is best to start right away, but you need to understand a few things before
+    you can start your Java journey. For online coding it is recommended to go to
+    this site: `https://www.compilejava.net/`.
+
+
+    The link provided is an online Java IDE (Integrated Development Environment).
+    You need to clear the written codes on the online Java IDE prior to writing your
+    own codes. It is also advisable to type your codes directly on the online Java
+    IDE.
+
+
+    If you know a few things about Java, then you must have learned that when you
+    install this programming language to your computer, you need to use a text editor.
+    But, if you choose to write your codes on the online Java IDE, then you don’t
+    need to use a text editor. Copy-pasting your work from a text editor to the online
+    IDE might introduce characters or symbols that the online Java IDE might not recognize,
+    such as the quotation marks. The online IDE only accepts these symbols for quotation
+    marks: `''` and `"` .
+
+
+    Take this sample program that has been written on a text editor and copy-pasted
+    on the online Java IDE:
+
+
+    ```java
+
+    | 1 | public class CompareData { |
+
+    | 2 |     public static void main(String []arqs) { |
+
+    | 3 |         char tChar=''r’; |
+
+    | 4 |         int tDigit=3; |
+
+    | 5 |         system.out.println(tChar==tDigit); |
+
+    | 6 |     } |
+
+    | 7 | } |
+
+    ```
+
+
+    The sample program gave this error:
+
+    ```
+
+    /tmp/CompareData.java:3: error: unmappable character for encoding
+
+    ```
+
+    The error means the program used unacceptable quotation marks; you need to change
+    it directly on the online IDE.
+
+    '
+  raw: '
+
+
+    ![](Images/cover00286.jpeg)
+
+
+    JAVA CRASH COURSE
+
+
+    Beginner’s Course To Learn The Basics Of Java Programming Language
+
+
+    # Table Of Contents
+
+
+    Introduction
+
+
+    Chapter 1: Getting Acquainted with Java
+
+
+    Chapter 2: It Always Starts with “Hello”
+
+
+    Chapter 3: Getting to Know the Different Data Types, Variables, and Reserved Words
+
+
+    Chapter 4: Useful Pocket Tables and the Different Operators
+
+
+    Chapter 5: All About the Math
+
+
+    Chapter 6: Talk About Taking Control
+
+
+    Chapter 7: More Practice
+
+
+    Chapter 8: Your Own Java in your Computer
+
+
+    Conclusion
+
+
+    Introduction
+
+
+    I want to thank you and congratulate you for downloading the book, “Java Crash
+    Course – Beginner’s Course To Learn the Basics of Java Programming Language”.
+
+
+    This book contains basic steps and strategies in learning Java programming, and
+    helpsyou create your own program.  It is this book’s best interest to teach you
+    everything you need to know about the basics of Java programming.  After reading
+    each chapter, you will be a step closer to understanding, and eventually mastering
+    this programming language.  I wrote this book using simple terminologies, with
+    a bit of programming jargon, to make it easier to understand.    
+
+
+    You should be able to grasp the essence of each lesson within a day.  There are
+    lessons that you can fully understand within 5 hours, but then again, some might
+    take you a day or two to grasp fully.  You need to allot a bit of your time every
+    day, and also have a bit more patience than usual, for the lessons that you find
+    challenging to meet the goal of learning Java within seven days or less. 
+
+
+    You can double the time that you want to allot in learning Java if you are a fast
+    learner.  You can choose to take two lessons at a time, but it is not advisable. 
+    While you learn the language, don’t take away the fun in learning.  Pushing yourself
+    too hard might wear you out quickly before you get to the more fun part of learning
+    Java.
+
+
+    This book will give you lots of sample programs with accompanying explanations. 
+    It is always better to learn by example.  There are programming or coding exercises
+    that you need to do on your own.  But you will be provided with an output so you
+    will know if you got it right.
+
+
+    Your Java journey starts right here, right now. 
+
+
+    Thanks again for downloading this book, I hope you enjoy it!
+
+
+     Copyright 2015 by LIFE-STYLE EBOOKS - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    Chapter 1: Getting Acquainted with Java
+
+
+    You are here now because you are interested to know and learn Java programming. 
+    It is best to start right away, but you need to understand a few things before
+    you can start your Java journey.  For online coding it is recommended to go to
+    this site: [https://www.compilejava.net/](https://www.compilejava.net/).
+
+
+    The link provided is an online Java IDE (Integrated Development Environment). 
+    You need to clear the written codes on the online Java IDE prior to writing your
+    own codes.  It is also advisable to type your codes directly on the online Java
+    IDE. 
+
+
+    If you know a few things about Java, then you must have learned that when you
+    install this programming language to your computer, you need to use a text editor. 
+    But, if you choose to write your codes on the online Java IDE, then you don’t
+    need to use a text editor.  Copy-pasting your work from a text editor to the online
+    IDE might introduce characters or symbols that the online Java IDE might not recognize,
+    such as the quotation marks.  The online IDE only accepts these symbols for quotation
+    marks: ''  '' and  "  ". 
+
+
+    Take this sample program that has been written on a text editor and copy-pasted
+    on the online Java IDE :
+
+
+    | 1 | public class CompareData { |  |  |  |  |  |
+
+
+    | 2 |      public static void main(String []arqs) { |  |  |  |
+
+
+    | 3 |        char tChar=‘r’; |  |  |  |  |  |  |
+
+
+    | 4 |        int tDigit=3; |  |  |  |  |  |  |
+
+
+    | 5 |        system.out.prntln(tChar==tDigit); |  |  |  |
+
+
+    | 6 |      } |  |  |  |  |  |  |  |  |
+
+
+    | 7 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    The sample program gave this error:
+
+
+    | /tmp/java_hZowrg/CompareData.java:3: error: unmappable character for encoding
+    ASCII |
+
+
+    |       char testSampChar = ???R???;; |  |  |  |  |  |  |
+
+
+    |                           ^ |  |  |  |  |  |  |  |
+
+
+    The error means the program used unacceptable quotation marks; you need to change
+    it directly on the online Java IDE.  
+
+
+    Before you can proceed to learning Java, you must have at least a basic understanding
+    of how to operate a computer.  It would take you less than 7 days to learn Java
+    if you already know a particular programming language and knows how to write the
+    codes for that language.
+
+
+    If you are a beginner at coding, you need to draw a flowchart because it will
+    serve as your guide in creating your program or writing your codes.  A flowchart
+    is a diagram that uses different shapes or boxes.  Each shape represents a certain
+    process.  You need to put the instructions, data, or variable inside each box. 
+
+
+    You can use a particular flowchart for one programming language and then use the
+    same flowchart for another programming language.
+
+
+    This is what a flow chart looks like:
+
+
+    ![](Images/image00278.jpeg)
+
+
+    You can use the sample flowchart to create a Java program, and use it again for
+    your C+ program. 
+
+
+    The Meaning of Each Shape in Flowchart
+
+
+    You only need to learn the basic flowcharting shapes and their use so you can
+    make your own.
+
+
+    | ![](Images/image00279.jpeg)  | process | You use this symbol to indicate internal
+    operation in the memory or processor. |
+
+
+    |  ![](Images/image00280.jpeg) | predefined process | You use this symbol to call
+    on a subroutine. |
+
+
+    | ![](Images/image00281.jpeg)  | decision | You use this symbol if there''s a
+    decision that must be made.  It should be answerable by yes or no, true or false.
+    |
+
+
+    |  ![](Images/image00282.jpeg) | input/output | You use this symbol for input/
+    output.  Your program tells the computer to obtain data. |
+
+
+    | ![](Images/image00283.jpeg)  | terminal | You use this symbol to indicate the
+    start or end of the program flow. |'
+  toc: []
+  trans: '
+
+
+    ![](img/cover00286.jpeg)
+
+
+    # JAVA 速成
+
+    ## 学习 Java 编程语言基础的入门课程
+
+
+    # 目录
+
+    - 介绍
+
+    - 第 1 章：接触 Java
+
+    - 第 2 章：一切从“Hello”开始
+
+    - [第 3 章：了解不同的数据类型、变量和保留字]
+
+    - [第 4 章：实用的速表和不同的操作符]
+
+    - [第 5 章：关于数学的一切]
+
+    - [第 6 章：论谈控制]
+
+    - [第 7 章：更多练习]
+
+    - [第 8 章：在你的电脑上运行自己的 Java]
+
+    - 结语
+
+
+    ## 介绍
+
+    感谢你的下载并欢迎阅读《Java 速成 – 学习 Java 编程语言基础的入门课程》。
+
+
+    这本书包含了学习 Java 编程的基本步骤和策略，帮助你创建自己的程序。本书的核心目标是教你关于 Java 编程基础所需的所有知识。在读完每一章后，你将离理解并最终掌握这门编程语言更近。我使用了简单的术语，并辅以少量的编程术语，以使其更易理解。
+
+
+    你应该能够在一天内掌握每节课的精髓。有些课程可以在 5 小时内完全理解，但另一些可能需要你花一两天才能完全掌握。为了实现七天或更短时间内学会 Java 的目标，你每天需要投入一些时间，并且比平时更有耐心。
+
+
+    如果你是一个学习速度快的人，可以双倍你投入到学习 Java 中的时间。你可以选择一次学两节课，但不建议这样做。在学习语言的过程中，不要剥夺学习的乐趣。过度强迫自己可能会在你进入学习
+    Java 有趣的部分之前就精疲力竭。
+
+
+    本书将提供大量的示例程序以及附带的解释。通过示例学习总是更好的。你需要独立完成一些编程或编码练习，但我们会提供输出结果，这样你就能知道自己是否正确。
+
+
+    你的 Java 之旅从现在这里开始。
+
+
+    再次感谢下载本书，希望你读得愉快！
+
+
+    © Copyright 2015 LIFE-STYLE EBOOKS - 版权所有。
+
+
+    本文档旨在就其涵盖的主题和问题提供准确可靠的信息。本出版物的销售理念是，出版者不需要提供会计、官方许可或其他专业服务。如果需要法律或专业建议，应聘请该领域的资深人士。
+
+
+    - 源自一份由美国律师协会委员会和出版者及协会委员会共同接受并批准的原则声明。
+
+
+    严禁以电子手段或打印格式复制、复制或传输本文档的任何部分。严禁录制出版物，除非获得出版者的书面许可，否则不允许存储本文档。版权所有。
+
+
+    此处提供的信息据称是真实且一致的，任何由于疏忽或其他原因，使用或滥用其中包含的任何政策、流程或指示而导致的任何责任，均由接收读者承担全部责任。在任何情况下，出版者不对由于本文中的信息直接或间接导致的任何赔偿、损害或资金损失承担任何法律责任或指责。
+
+
+    相应作者拥有出版者未持有的所有版权。
+
+
+    此处的信息仅供参考，且具有通用性。信息的呈现不带有任何合同或任何类型的保证说明。
+
+
+    所使用的商标均未经任何许可，且该商标的发布未经商标所有者的许可或支持。本书中的所有商标和品牌仅用于说明目的，由其所有者拥有，与本文无关联。
+
+
+    ## 第 1 章：接触 Java
+
+    你现在这里是因为你对学习 Java 编程感兴趣。最好立即开始，但在开启你的 Java 之之旅之前，你需要了解几点。对于在线编码，建议访问此网站：`https://www.compilejava.net/`。
+
+
+    所提供的链接是一个在线 Java IDE（集成开发环境）。在编写自己的代码之前，你需要清除在线 Java IDE 上的已有代码。同时，建议直接在在线 Java
+    IDE 上输入你的代码。
+
+
+    如果你对 Java 有所了解，那么你一定学过在计算机上安装这门编程语言时，需要使用文本编辑器。但如果你选择在在线 Java IDE 上编写代码，就不需要使用文本编辑器了。从文本编辑器将工作复制粘贴到在线
+    IDE 可能会引入在线 Java IDE 无法识别的字符或符号，例如引号。在线 IDE 仅接受这些符号作为引号：`''` 和 `"` 。
+
+
+    参考这个在文本编辑器中编写并复制粘贴到在线 Java IDE 的示例程序：
+
+
+    ```java
+
+    | 1 | public class CompareData { |
+
+    | 2 |     public static void main(String []arqs) { |
+
+    | 3 |         char tChar=''r’; |
+
+    | 4 |         int tDigit=3; |
+
+    | 5 |     system.out.println(tChar==tDigit); |
+
+    | 6 |     } |
+
+    | 7 | } |
+
+    ```
+
+
+    示例程序输了此错误：
+
+    ```
+
+    /tmp/CompareData.java:3: error: unmappable character for encoding
+
+    ```
+
+    该错误意味着程序使用了不可接受的引号；你需要在在线 IDE 上直接修改。
+
+
+    '
+- fmt: '
+
+    | ![](Images/image00284.jpeg) | connector | You use this symbol to indicate the
+    continuation of the flow to the next page or routine. |
+
+    | ![](Images/image00285.jpeg) | flow lines | These lines show the direction of
+    the flow. |
+
+
+    Learning a programming language is like learning a spoken language. You need to
+    familiarize yourself with the syntax of a particular programming language that
+    you want to learn and use. Otherwise, your program won’t run.
+
+
+    # A Glimpse of the Past
+
+
+    Java is a high-level programming language that can create powerful and secure
+    applications. It runs on a variety of platforms or operating systems (OS), such
+    as Linux, Windows, Mac OS X, and numerous versions of UNIX. It is a programming
+    language that is flexible, scalable, and easy to maintain. It is not difficult
+    to learn Java and you will be able to write your simple code before you reach
+    the last page of this ebook.
+
+
+    James Gosling started the Java programming language project in June, 1991. Back
+    then it was called Oak and then a bit later, Green. It ended up with the name
+    Java for no specific reason. In 1995, Sun Microsystems developed and introduced
+    the programming language called Java 1.0. The latest version of Java that programmers
+    use today is already at version 8.
+
+
+    # The Java Advantages
+
+
+    Java is much simpler and easier to learn if you have a basic understanding of
+    OOP (Object Oriented Programming). An OOP programmer can create or code different
+    modules that don’t need any modification or alteration even when there’s an addition
+    of a new type of object.
+
+
+    Unlike C, C++, and other programming languages, Java is platform independent or
+    does not interact with the operating system of your computer during compilation.
+    You don’t compile your Java source file into platform independent codes; you compile
+    it into byte code. You can carry the compiled Java program via flash drive, unlike
+    the other programming languages that need to use a compiler.
+
+
+    Java has the ability to generate a virus-free and tamper-free system. Java is
+    also portable. You can execute the compiled code on different operating systems
+    just as long as they have Java runtime environment.
+
+
+    Many programmers believe that Java is more dynamic than C language and its other
+    variations. It can effectively and easily adapt to any type of environment.
+
+
+    That will be all for day one, and for your assignment, make sure read more about
+    object oriented programming. A little more information can help a lot to better
+    understand how Java works.
+
+
+    # Chapter 2: It Always Starts with“Hello”
+
+
+    It is clear from the beginning that this book will use as many examples as necessary
+    to teach Java basics. If you have tried learning a programming language prior
+    to this one then you might have encountered a“Hello”program. Most programming
+    language tutorials start with a“Hello”program as a sample program. Let us start
+    with a simple“Hello Java” as our sample program. You can click the provided link
+    now and start writing your codes or you can do that later–anything is acceptable,
+    whichever is more comfortable to you.
+
+
+    At the end of this tutorial, you will receive different links that you can access
+    in order to install Java into your own computer. You can still opt to use the
+    online Java IDE, whichever you prefer is fine.
+
+
+    The online Java console has different font colors. For the purpose of simplification,
+    we will only use one font color in all the examples.
+
+
+    # The Basic Java Syntax
+
+
+    We will start with the sample program below and analyze what each line means.
+    It is imperative to remember that Java is case sensitive. When you use an identifier
+    and write it using lower cases, make sure that the identifier you use is written
+    in the same manner all throughout the program.
+
+
+    If you have an identifier called ‘Hello’ that begins with a capital letter H,
+    then don’t write the same identifier using a lower case h as in ‘hello’. Even
+    though it is obvious that you are referring to the same identifier, the Java program
+    does not recognize it as such. It will treat `Hello` as different from `hello`.
+
+
+    Now look at the first sample program below:
+
+
+    ```java
+
+    1 | public class FirstCoding {
+
+    2 |
+
+    3 |     /* This is our first program sample.
+
+    4 |     * This should print ''Hello Java'' later
+
+    5 |     */
+
+    6 |
+
+    7 |     public static void main(String []args) {
+
+    8 |         System.out.println("Hello Java"); // prints Hello Java
+
+    9 |     }
+
+    10 | }
+
+    ```
+
+
+    Also, look at line 7 and 9. The beginning curly bracket in line 7 to the closing
+    curly bracket in line 9 is called a block of codes. Anything inside a pair of
+    curly brackets is a block of codes.
+
+
+    ## Dissecting the First Line of the Program
+
+
+    The first line should always begin with `public class` written in lower cases
+    immediately followed by the class name, in this case we use `FirstCoding` as the
+    class name.
+
+
+    When writing the class name, make sure that there is no space in between the previous
+    word and the next word of the name. Every first letter of the word in a class
+    name must be in upper case.
+
+
+    At the end of the class name is an open or beginning curly bracket, which prompts
+    the computer that the succeeding lines or sentences must be executed.
+
+
+    ## Explanation for the Second and Sixth Lines
+
+
+    The second and sixth lines don’t contain any codes. The blank lines create readability.
+    It is also easier for the assigned programmer or team of programmers to maintain
+    the system or modify the program should a problem suddenly occurs.
+
+
+    ## Analyzing the Third, Fourth, and Fifth Lines
+
+
+    The third line is indented and starts with `/*`, which marks the start of a multi-line
+    comment. You use the asterisk `*` if you need to insert a multi-line comment.
+    After the `/*`, you write the comment that you would like to put. The comment
+    serves as reminder about the program. It can be used to inform the programmer
+    about the task that the program or needs to accomplish.
+
+
+    The fourth line is also indented and has asterisk `*` to signify the continuation
+    of the comment in line 3.
+
+
+    The fifth line is indented and has this symbol `*/` that signifies the end of
+    the multi-line comment. The computer does not consider the comments as part of
+    the program and won’t bother with it when you run the program.
+
+
+    ## The Seventh and Ninth Lines
+
+
+    The seventh line is indented and it contains the method name. Remember to write
+    the method name always in lower case, like this:
+
+    `public static void main(String []args) {`
+
+
+    The ninth line is indented and only contains the closing curly bracket. The seventh
+    line’s curly bracket at the end of the method name and the closing bracket in
+    the ninth line are indicators that tell the computer to execute the codes within
+    the brackets.
+
+
+    ## What the Eighth Line Tells
+
+
+    The eighth line should be indented and it contains the command that instructs
+    the computer to print or write ‘Hello Java’ on your computer screen. It should
+    appear like this:
+
+    `System.out.println("Hello Java");`
+
+
+    The command starts with an upper case, and the semi colon `;` at the end of the
+    sentence means that there could be other things that the block of codes needs
+    to do. In our example, the next line (the ninth line) bears the closing bracket,
+    which means the program has reached the end of the block.
+
+
+    The `//` symbol means that the written code after it is a single line comment.
+
+
+    The `.println` is the command that you use if you want to print something on screen.
+    It is usually written like this:
+
+    `println("Hello Java")`
+
+
+    It tells the computer to print the characters inside the parentheses. When printing
+    a string, make sure to enclose it in quotes like you see above.
+
+
+    The Tenth Line
+
+    '
+  raw: '| ![](Images/image00284.jpeg)  | connector | You use this symbol to indicate
+    the continuation of the flow to the next page or routine. |
+
+
+    | ![](Images/image00285.jpeg)  | flow lines | These lines show the direction of
+    the flow. |
+
+
+    Learning a programming language is like learning a spoken language.  You need
+    to familiarize yourself with the syntax of a particular programming language that
+    you want to learn and use.  Otherwise, your program won’t run.
+
+
+    A Glimpse of the Past
+
+
+    Java is a high-level programming language that can create powerful and secure
+    applications.  It runs on a variety of platforms or operating systems (OS), such
+    as Linux, Windows, Mac OS X, and numerous versions of UNIX.  It is a programming
+    language that is flexible, scalable, and easy to maintain.  It is not difficult
+    to learn Java and you will be able to write your simple code before you reach
+    the last page of this ebook.
+
+
+    James Gosling started the Java programming language project in June, 1991.  Back
+    then it was called Oak and then a bit later, Green.  It ended up with the name
+    Java for no specific reason. In 1995, Sun Microsystems developed and introduced
+    the programming language called Java 1.0.  The latest version of Java that programmers
+    use today is already at version 8.
+
+
+    The Java Advantages
+
+
+    Java is much simpler and easier to learn if you have a basic understanding of
+    OOP (Object Oriented Programming).  An OOP programmer can create or code different
+    modules that don’t need any modification or alteration even when there’s an addition
+    of a new type of object. 
+
+
+    Unlike C, C++, and other programming languages, Java is platform independent or
+    does not interact with the operating system of your computer during compilation. 
+    You don’t compile your Java source file into platform independent codes; you compile
+    it into byte code.  You can carry the compiled Java program via flash drive, unlike
+    the other programming languages that need to use a compiler.
+
+
+    Java has the ability to generate a virus-free and tamper-free system.  Java is
+    also portable.  You can execute the compiled code on different operating systems
+    just as long as they have Java runtime environment.
+
+
+    Many programmers believe that Java is more dynamic than C language and its other
+    variations.  It can effectively and easily adapt to any type of environment.
+
+
+    That will be all for day one, and for your assignment, make sure read more about
+    object oriented programming.  A little more information can help a lot to better
+    understand how Java works.
+
+
+    Chapter 2: It Always Starts with“Hello”
+
+
+    It is clear from the beginning that this book will use as many examples as necessary
+    to teach Java basics.  If you have tried learning a programming language prior
+    to this one then you might have encountered a“Hello”program.  Most programming
+    language tutorials start with a“Hello”program as a sample program.  Let us start
+    with a simple“Hello Java”as our sample program.  You can click the provided link
+    now and start writing your codes or you can do that later–anything is acceptable,
+    whichever is more comfortable to you.
+
+
+    At the end of this tutorial, you will receive different links that you can access
+    in order to install Java into your own computer.  You can still opt to use the
+    online Java IDE, whichever you prefer is fine.
+
+
+    The online Java console has different font colors.  For the purpose of simplification,
+    we will only use one font color in all the examples.
+
+
+    The Basic Java Syntax
+
+
+    We will start with the sample program below and analyze what each line means. 
+    It is imperative to remember that Java is case sensitive.  When you use an identifier
+    and write it using lower cases, make sure that the identifier you use is written
+    in the same manner all throughout the program.   
+
+
+    If you have an identifier called ‘Hello’ that begins with a capital letter H,
+    then don’t write the same identifier using a lower caseh as in‘hello’.  Even though
+    it is obvious that you are referring to the same identifier, the Java program
+    does not recognize it as such.  It will treat‘Hello’as different from‘hello’.
+
+
+    Now look at the first sample program below:
+
+
+    | 1 | public class FirstCoding { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |    /* This is our first program sample.  |  |  |  |
+
+
+    | 4 |     * This should print ''Hello Java'' later |  |  |  |
+
+
+    | 5 |     */ |  |  |  |  |  |  |  |  |
+
+
+    | 6 |  |  |  |  |  |  |  |  |
+
+
+    | 7 |     public static void main(String []args) { |  |  |  |
+
+
+    | 8 |        System.out.println("Hello Java"); // prints Hello Java |  |
+
+
+    | 9 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 10 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Also, look at line 7 and 9.  The beginning curly bracket in line 7 to the closing
+    curly bracket in line 9 is called a block of codes.  Anything inside a pair of
+    curly brackets is a block of codes.  
+
+
+    Dissecting the First Line of the Program
+
+
+    The first line should always begin with‘public class’written in lower cases immediately
+    followed by the class name, in this case we use‘FirstCoding’ as the class name. 
+
+
+    When writing the class name, make sure that there is no space in between the previous
+    word and the next word of the name.  Every first letter of the word in a class
+    name must be in upper case.
+
+
+    At the end of the class name is an open or beginning curly bracket, which prompts
+    the computer that the succeeding lines or sentences must be executed.
+
+
+    Explanation for the Second and Sixth Lines
+
+
+    Thesecond and sixth lines don’t contain any codes.  The blank lines create readability. 
+    It is also easier for the assigned programmer or team of programmers to maintain
+    the system or modify the program should a problem suddenly occurs. 
+
+
+    Analyzing the Third, Fourth, and Fifth Lines
+
+
+    The third line is indented and starts with ‘/*’, which marks the start of a multi-line
+    comment.  You use the asterisk (*) if you need to insert a multi-line comment. 
+    After the‘/*’symbol, you write the comment that you would like to put.  The comment
+    serves as reminder about the program.  It can be used to inform the programmer
+    about the task that the program or module needs to accomplish.  
+
+
+    The fourth line is also indented and has asterisk to signify the continuation
+    of the comment in line 3.
+
+
+    The fifth line is indented and has this symbol‘*/’that signifies the end of the
+    multi-line comment.  The computer does not consider the comments as part of the
+    program and won’t bother with it when you run the program.
+
+
+    The Seventh and Ninth Lines
+
+
+    The seventh line is indented and it contains the method name.  Remember to write
+    the method name always in lower case, like this:
+
+
+    public static void main(String []args) {
+
+
+    The ninth line is indented and only contains the closing curly bracket.  The seventh
+    line’s curly bracket at the end of the method name and the closing bracket in
+    the ninth line are indicators that tell the computer to execute the codes within
+    the brackets. 
+
+
+    What the Eighth Line Tells
+
+
+    The eighth line should be indented and it contains the command that instructs
+    the computer to print or write ‘Hello Java’ on your computer screen.  It should
+    appear like this:
+
+
+    System.out.println("Hello Java");
+
+
+    The command starts with an upper case, and the semi colon (;) at the end of the
+    sentence means that there could be other things that the block of codes needs
+    to do.  In our example, the next line (the ninth line) bears the closing bracket,
+    which means the program has reached the end of the block.
+
+
+    The ‘//’ symbol means that the written code after it is a single line comment. 
+
+
+    The ‘.println’ is the command that you use if you want to print something on screen. 
+    It is usually written like this:
+
+
+    println("Hello Java")
+
+
+    It tells the computer to print the characters inside the parentheses.  When printing
+    a string, make sure to enclose it in quotes like you see above.
+
+
+    The Tenth Line'
+  toc: []
+  trans: '
+
+
+    | ![](img/image00284.jpeg) | 连接器 | 你使用此符号来表示流程向下一页或例程序的延续。 |
+
+    | ![](img/image00285.jpeg) | 流线 | 这些线显示了流程的方向。 |
+
+
+    学习一种编程语言就像学习一种口语。你需要熟悉你想要学习和使用的特定编程语言的语法。否则，你的程序将无法运行。
+
+
+    # 回顾过去
+
+
+    Java 是一种高级编程语言，可以创建强大且安全的应用程序。它运行在各种平台或操作系统（OS）上，例如 Linux、Windows、Mac OS X 以及许多版本的
+    UNIX。它是一种灵活、可扩展且易于维护的编程语言。学习 Java 并不困难，在你读完这本电子书的最后一页之前，你就能能够编写简单的代码了。
+
+
+    James Gosling 在 1991 年 6 月启动了 Java 编程语言项目。当时它被称为 Oak，稍后一段时间又被称为 Green。最后由于没有特定原因被命名为
+    Java。1995 年，太阳微系统（Sun Microsystems）开发并引入了名为 Java 1.0 的编程语言。今天程序员使用的 Java 最新版本已经到了版本
+    8。
+
+
+    # Java 的优势
+
+
+    如果你对 OOP（面向对象编程）有基础了解，Java 会变得简单得多且更容易学习。OOP 程序员可以创建或编写不同的模块，即使增加了新类型的对象，这些模块也不需要任何修改或更改。
+
+
+    与 C、C++ 和其他编程语言不同，Java 是平台无关的，在编译期间它不与你的计算机操作系统交互。你不是将 Java 源文件编译成平台无关的代码，而是将其编译成字节码（byte
+    code）。你可以通过优存盘携带编译后的 Java 程序，而其他需要使用编译器的编程语言则不行。
+
+
+    Java 具有无病毒和防篡改系统的能力。Java 也具有可移植性。只要操作系统具有 Java 运行环境，你就可以在不同的操作系统上执行编译代码。
+
+
+    许多程序员认为 Java 比 C 语言及其其他变体更动态。它可以有效地、轻松地适应任何类型的环境。
+
+
+    第一天的内容就到这里，对于你的作业，请确保阅读更多关于面向对象编程的内容。更多信息有助于更好地理解 Java 是如何工作的。
+
+
+    # 第 2 章：一切总是从“Hello”开始
+
+
+    从一开始就可以看出，本书将尽可能地使用示例来教授 Java 基础。如果你在此之前尝试过学习编程语言，那么你可能遇到过“Hello”程序。大多数编程语言教程都以“Hello”程序作为示例程序开始。让我们从简单的“Hello
+    Java”作为我们的示例程序开始。你现在可以点击提供的链接开始编写代码，或者以后再做——任何方式都可以，取决于你哪种更方便。
+
+
+    在教程的结束处，你将获得不同的链接，可以通过这些链接将 Java 安装到你自己的计算机中。你仍然可以选择使用在线 Java IDE，随你的喜好即可。
+
+
+    在线 Java 控制台有不同的字体颜色。为了简化起见，我们在所有示例中只使用一种字体颜色。
+
+
+    # Java 基础语法
+
+
+    我们将从下面的示例程序开始，分析每一行的含义。必须记住，Java 是区分大小大小的。当你使用标识符并用小写编写它时，请确保你使用的标识符在整个程序中以相同的方式编写。
+
+
+    如果你有一个以大字母 H 开头的标识符‘Hello’，不要用小写 h 编写相同的标识符，如‘hello’。尽管显而易见你指的是同一个标识符，但 Java 程序并不认为它是那样。它会将
+    `Hello` 视为与 `hello` 不同。
+
+
+    现在看下面的第一个示例程序：
+
+
+    ```java
+
+    1 | public class FirstCoding {
+
+    2 |
+
+    3 |     /* 这是我们的第一个程序示例。
+
+    4 |     * 稍后这应该打印 ''Hello Java''
+
+    5 |     */
+
+    6 |
+
+    7 |     public static void main(String []args) {
+
+    8 |         System.out.println("Hello Java"); // prints Hello Java
+
+    9 |     }
+
+    10 | }
+
+    ```
+
+
+    再看第 7 行和第 9 行。第 7 行的左括号到第 9 行的右括号被称为代码块（block of codes）。一对大括号内的任何内容都是代码块。
+
+
+    ## 剖析程序的第一行
+
+
+    第一行始终应该以小写的 `public class` 开头，紧接着是类名，在本例中我们使用 `FirstCoding` 作为类名。
+
+
+    编写类名时，确保该名称中的上一个单词和下一个单词之间没有空格。类名中每个单词的首字母必须大大写。
+
+
+    在类名的末尾是一个左括号（或起始大括号），它提示计算机随后的行或句子必须执行。
+
+
+    ## 第二行和第六行的解释
+
+
+    第二行和第六行不包含任何代码。空行增加了可读性。对于分配的程序员或程序员团队来说，如果突然出现问题，维护系统或修改程序也会更容易。
+
+
+    ## 分析第三、第四行和第五行
+
+
+    第三行有缩进，并以 `/*` 开头，这标记了多行注释的开始。如果你需要插入多行注释，请使用星号 `*`。在 `/*` 之后，编写你想放置的注释。注释作为对程序的提醒。它可以用来告知程序员程序或需要完成的任务。
+
+
+    第四行也缩进了，并带有星号 `*`，表示第 3 行注释的延续。
+
+
+    第五行有缩进，并带有此符号 `*/`，表示多行注释的结束。计算机不将注释视为程序的一部分，并且在你运行程序时不会理会它。
+
+
+    ## 第七行和第九行
+
+
+    第七行有缩进，它包含方法名。记住始终将方法名写为小写，如下：
+
+    `public static void main(String []args) {`
+
+
+    第九行有缩进，只包含右括号。第 7 行方法名末尾的大括号和第 9 行的右括号是指示计算机执行括号内代码的标记。
+
+
+    ## 第八行告诉了我们
+
+
+    第八行应该有缩进，它包含了指令计算机在你的计算机屏幕上打印或写入“Hello Java”的命令。它看起来应该是这样：
+
+    `System.out.println("Hello Java");`
+
+
+    命令以大写字母开头，句子末尾的分号 `;` 表示代码块可能还需要其他需要需要执行的事情。在我们的示例中，下一行（第 9 行）带有右括号，这意味着程序已到达代码块的结束。
+
+
+    `//` 符号意味着其后编写的代码是单行注释。
+
+
+    `.println` 是当你想在屏幕上打印内容时使用的命令。它通常这样写：
+
+    `println("Hello Java")`
+
+
+    它告诉计算机打印括号内的字符。在打印字符串时，请确保像上面看到的那样将其包含在引号中。
+
+
+    第十行
+
+
+    '
+- fmt: "\nThe tenth line contains the closing bracket that signifies the end of the\
+    \ entire program. It is important to keep in mind that a beginning curly bracket\
+    \ must always have a closing curly bracket. When you look at the example, the\
+    \ first line’s curly bracket has a corresponding closing curly bracket in the\
+    \ tenth line. The beginning curly bracket in line 7 has a closing curly bracket\
+    \ in line 9.\n\n## Saving your File\n\nIf you are using the online Java IDE to\
+    \ write your program, then you don’t need to save your work. However if you want\
+    \ to keep your work as reference, you need to open a text editor and copy-paste\
+    \ your work in the text editor.\n\nIn saving your file, write the class name that\
+    \ you used in your program and just add ``.java` at the end of the class name.\
+    \ The file name of the sample program above should be:\n\n`FirstCoding.java`\n\
+    \nLook at this second sample program:\n\n```java\npublic class SamplePrint {\n\
+    \    public static void main(String []args) {\n        System.out.println(\"I\
+    \ will now print this sentence.\");\n    }\n}\n```\n\nThe sample program prints\
+    \ this result:\n\n```\nI will now print this sentence.\n```\n\nIndention does\
+    \ not affect how the program runs, it just makes it easier to read. A well-structured\
+    \ program is easier to maintain and modify. There’s also a possibility that you\
+    \ might forget what your program does, you can add a comment on your program to\
+    \ serve as your reference or reminder.\n\n## Important Notes to Remember\n\n-\
+    \ Java is case sensitive, so make sure to write your codes properly. Most of the\
+    \ time, an error occurs due to incorrect use of upper and lower cases.\n- Make\
+    \ sure that each beginning bracket has a closing bracket. If you forget to put\
+    \ one, then expect an error to occur.\n- The semi-colon (`;`) must be present\
+    \ at the end of each line that contains a command.\n\n## It’s Time for some Practice\n\
+    \nLook at the second sample program once more. For this exercise, you also need\
+    \ to print this sentence:\n\n`I will now print another sentence.`\n\nYour output\
+    \ should look like this:\n\n```\nI will now print this sentence.\nI will now print\
+    \ another sentence.\n```\n\nYou will find the answer on the next chapter as well\
+    \ as learn about the data types and variables. You should practice more to hone\
+    \ your skill.\n\n## Chapter 3: Getting to Know the Different Data Types, Variables,\
+    \ and Reserved Words\n\nBefore proceeding with today’s lesson, let us first reveal\
+    \ the answer to the practice exercise in the last chapter. Your answer should\
+    \ look like this:\n\n```java\npublic class SamplePrint {\n    public static void\
+    \ main(String []args) {\n        System.out.println(\"I will now print this sentence.\"\
+    );\n        System.out.println(\"I will now print another sentence.\");\n    }\n\
+    }\n```\n\nDid you notice the semi-colon at the end of line 5? If you remove that,\
+    \ you will get an error message.\n\nNow let us discuss today’s lesson, it’s time\
+    \ to learn the different data types that you need to work on when coding your\
+    \ Java program. This chapter also covers the topic about assigning value to a\
+    \ variable.\n\nThere are reserved words in Java that you should not use as variable\
+    \ name. You need to know and memorize those reserved words and avoid using them\
+    \ as names of your variables.\n\n### The Data Type Integer (int)\n\nAn integer\
+    \ can be a positive or negative number, even zero is an integer. If you need to\
+    \ include a variable that contains integer, then you need to put `int` before\
+    \ the name of your variable to identify it as an integer. The data type integer\
+    \ or `int` can only accept the numbers between `-2,147,483,648` and `2,147,483,647`.\
+    \ Note: You’t need to put the integer in quotes if you want to print it. Take\
+    \ a look at this program:\n\n```java\nclass PrintingInteger {\n    public static\
+    \ void main(String []args) {\n        System.out.println(15);\n        System.out.println(14);\n\
+    \        System.out.println(13);\n    }\n}\n```\n\nIt will print this result:\n\
+    \n```\n15\n14\n13\n```\n\nAny number, within the allowed range of numbers, that\
+    \ you want to place inside the parentheses in `System.out.println()` will be printed.\
+    \ Make sure to follow the correct syntax, like in the given example.\n\n### Data\
+    \ Type Boolean (true or false)\n\nThe `boolean` data type has specific values,\
+    \ and it is either `true` or `false`; it will not give any other answer. There’s\
+    \ also no need for you to put anything in quotes because the program automatically\
+    \ assigns `true` or `false` (depending on the given condition) as the legit value\
+    \ of boolean. Take a look at this sample program:\n\n```java\nclass PrintBoolean\
+    \ {\n    public static void main(String []args) {\n        System.out.println(false);\n\
+    \    }\n}\n```\n\nIt prints this result:\n\n```\nfalse\n```\n\nWhen you try to\
+    \ replace the value inside the parentheses with `jabberwocky`, like this:\n\n\
+    ```java\nclass PrintBoolean {\n    public static void main(String []args) {\n\
+    \        System.out.println(jabberwocky);\n    }\n}\n```\n\nIt yields this result:\n\
+    \n```\n/tmp/java_J0wki9/PrintBoolean.java:4: error: cannot find symbol\n    System.out.println(jabberwocky);\n\
+    \                          ^\n  symbol: variable jabberwocky\nlocation: class\
+    \ PrintBoolean\n1 error\nUnable to execute program; could not compile!\n```\n\n\
+    Java did not treat the word `jabberwocky` as `Boolean`, and it did not print it\
+    \ because it is a string. The rule for string is that you need to put it in quotes\
+    \ so the program can recognize it as string and prints it.\n\n### The Data Type\
+    \ Character (char)\n\nThe data type character or `char` represents a single character.\
+    \ All characters must be enclosed in single quotes (' '), otherwise you will get\
+    \ an error message. It is a string after all, but you only need to use single\
+    \ quotes. Take a look at the sample:\n\n```java\nclass PrintCharacter {\n    public\
+    \ static void main(String []args) {\n        System.out.println('a');\n    }\n\
+    }\n```\n\nIt prints this result:\n\n```\na\n```\n\n## Variables\n\nJava and other\
+    \ programming languages use variables to store data. You can store any data type\
+    \ in a variable, and you just need to make sure to specify the data type by following\
+    \ the right syntax in declaring them.\n\nBelow is the list of Java reserved words\
+    \ that you need to avoid using as variable name:\n"
+  raw: 'The tenth line contains the closing bracket that signifies the end of the
+    entire program.  It is important to keep in mind that a beginning curly bracket
+    must always have a closing curly bracket.  When you look at the example, the first
+    line’s curly bracket has a corresponding closing curly bracket in the tenth line. 
+    The beginning curly bracket in line 7 has a closing curly bracket in line 9.
+
+
+    Saving your File
+
+
+    If you are using the online Java IDE to write your program, then you don’t need
+    to save your work.  However if you want to keep your work as reference, you need
+    to open a text editor and copy-paste your work in the text editor.
+
+
+    In saving your file, write the class name that you used in your program and just
+    add ‘.java’ at the end of the class name.  The file name of the sample program
+    above should be:
+
+
+    FirstCoding.java
+
+
+    Look at this second sample program:
+
+
+    | 1 | public class SamplePrint { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |     public static void main(String []args) { |  |  |  |
+
+
+    | 4 |        System.out.println("I will now print this sentence."); |  |
+
+
+    | 5 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 6 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    The sample program prints this result:
+
+
+    | I will now print this sentence. |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Indention does not affect how the program runs, it just makes it easier to read. 
+    A well-structured program is easier to maintain and modify.  There’s also a possibility
+    that you might forget what your program does, you can add a comment on your program
+    to serve as your reference or reminder.
+
+
+    Important Notes to Remember
+
+
+    Java is case sensitive, so make sure to write your codes properly.  Most of the
+    time, an error occurs due to incorrect use of upper and lower cases.
+
+
+    Make sure that each beginning bracket has a closing bracket.  If you forget to
+    put one, then expect an error to occur.
+
+
+    The semi-colon (;) must be present at the end of each line that contains a command.
+
+
+    It’s Time for some Practice
+
+
+    Look at the second sample program once more.  For this exercise, you also need
+    to print this sentence:
+
+
+    I will now print another sentence.
+
+
+    Your output should look like this:
+
+
+    | I will now print this sentence. |  |  |  |  |  |
+
+
+    | I will now print another sentence. |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    You will find the answer on the next chapter as well as learn about the data types
+    and variables.  You should practice more to hone your skill.
+
+
+    Chapter 3: Getting to Know the Different Data Types, Variables, and Reserved Words
+
+
+    Before proceeding with today’s lesson, let us first reveal the answer to the practice
+    exercise in the last chapter.  Your answer should look like this:
+
+
+    | 1 | public class SamplePrint { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |   public static void main(String []args) { |  |  |  |
+
+
+    | 4 |      System.out.println("I will now print this sentence."); |  |
+
+
+    | 5 |      System.out.println("I will now print another sentence."); |  |
+
+
+    | 6 |   } |  |  |  |  |  |  |  |  |
+
+
+    | 7 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Did you notice the semi-colon at the end of line 5? If you remove that, you will
+    get an error message.
+
+
+    Now let us discuss today’s lesson, it’s time to learn the different data types
+    that you need to work on when coding your Java program.  This chapter also covers
+    the topic about assigning value to a variable. 
+
+
+    There are reserved words in Java that you should not use as variable name.  You
+    need to know and memorize those reserved words and avoid using them as names of
+    your variables.
+
+
+    The Data Type Integer (int)
+
+
+    An integer can be a positive or negative number, even zero is an integer.  If
+    you need to include a variable that contains integer, then you need to put int
+    before the name of your variable to identify it as an integer. The data type integer
+    or int can only accept the numbers between -2,147,483,648 and 2,147,483,647.
+
+
+    Note:  You don’t need to put the integer in quotes if you want to print it.
+
+
+    Take a look at this program:
+
+
+    | 1 | public class PrintingInteger { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |   public static void main(String []args) { |  |  |  |
+
+
+    | 4 |      System.out.println(15); |  |  |  |  |  |
+
+
+    | 5 |      System.out.println(14); |  |  |  |  |  |
+
+
+    | 6 |      System.out.println(13); |  |  |  |  |  |
+
+
+    | 7 |   } |  |  |  |  |  |  |  |  |
+
+
+    | 8 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    It will print this result:
+
+
+    | 15 |  |  |  |  |  |  |  |  |  |
+
+
+    | 14 |  |  |  |  |  |  |  |  |  |
+
+
+    | 13 |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Any number, within the allowed range of numbers, that you want to place inside
+    the parentheses in‘System.out.println();’ will be printed.  Make sure to follow
+    the correct syntax, like in the given example.
+
+
+    The Data Type Boolean (true or false)
+
+
+    The“boolean" data type has specific values, and it is either true or false; it
+    will not give any other answer.  There’s also no need for you to put anything
+    in quotes because the program automatically assigns true or false (depending on
+    the given condition) as the legit value of boolean expression.
+
+
+    Take a look at this sample program:
+
+
+    | 1 | public class PrintBoolean { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 4 |        System.out.println(false); |  |  |  |  |
+
+
+    | 5 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 6 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    It prints this result:
+
+
+    | false |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    When you try to replace the value inside the parentheses with‘jabberwocky’, like
+    this:
+
+
+    | 1 | public class PrintBoolean { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 4 |        System.out.println(jabberwocky); |  |  |  |
+
+
+    | 5 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 6 | } |  |  |  |  |  |  |  |  |
+
+
+    It yields this result:
+
+
+    | /tmp/java_J0wki9/PrintBoolean.java:4: error: cannot find symbol |  |
+
+
+    |        System.out.println(jabberwocky); |  |  |  |  |
+
+
+    |                           ^ |  |  |  |  |  |
+
+
+    |   symbol:   variable jabberwocky |  |  |  |  |  |
+
+
+    |   location: class PrintBoolean |  |  |  |  |  |
+
+
+    | 1 error |  |  |  |  |  |  |  |  |
+
+
+    | Unable to execute program; could not compile! |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Java did not treat the word‘jabberwocky’ as Boolean, and it did not print it because
+    it is a string.  The rule for string is that you need to put it in quotes so the
+    program can recognize it as string and prints it.
+
+
+    The Data Type Character (char) 
+
+
+    The data type character or char represents a single character.  All characters
+    must be enclosed in single quotes ('' ''), otherwise you will get an error message. 
+    It is a string after all, but you only need to use single quotes.
+
+
+    Take a look at the sample below:
+
+
+    | 1 | public class PrintCharacter { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 4 |        System.out.println(''a''); |  |  |  |  |
+
+
+    | 5 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 6 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |
+
+
+    It prints this result:
+
+
+    | a |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Keep in mind that Java’s basic data types are int, boolean, and char.  You will
+    almost always encounter these data types while you learn Java.  Expect to see
+    more of them later.
+
+
+    Variables
+
+
+    Java and other programming languages use variables to store data.  You can store
+    any data type in a variable, and you just need to make sure to specify the data
+    type by following the right syntax in declaring them.
+
+
+    Below is the list of Java reserved words that you need to avoid using as variable
+    name:'
+  toc: []
+  trans: "\n第十行包含了标志整个程序结束的右括号。务必记住，每一个左大括号都必须有一个对应的右大括号。观察示例，第一行的大括号在第十行有一个对应的右大括号。第\
+    \ 7 行的左大括号在第 9 行有一个右大括号。\n\n## 保存文件\n\n如果你正在使用在线 Java IDE 编写程序，那么你不需要保存你的工作。但是，如果你想保留你的工作作为参考，你需要打开一个文本编辑器并将你的工作复制粘贴到编辑器中。\n\
+    \n在保存文件时，编写你在程序中使用的类名，并在类名末尾添加 `` .java`。上述示例程序的文件名应该是：\n\n`FirstCoding.java`\n\
+    \n看这第二个示例程序：\n\n```java\npublic class SamplePrint {\n    public static void main(String\
+    \ []args) {\n        System.out.println(\"I will now print this sentence.\");\n\
+    \    }\n}\n```\n\n示例程序输出结果如下：\n\n```\nI will now print this sentence.\n```\n\n\
+    缩进不会影响程序的运行，它只是为了让代码更易读。结构良好的程序更容易维护和修改。此外，你可能会忘记程序的作用，你可以在程序中添加注释来作为你的参考或提醒。\n\
+    \n## 需要记住的重要注意事项\n\n- Java 是大小写敏感的，因此请确保正确编写代码。大多数情况下，错误是由于大小写使用不当导致的。\n- 确保每个左括号都有对应的右括号。如果你忘记写，请预料会发生错误。\n\
+    - 在每个包含命令的行末尾必须有分号（`;`）。\n\n## 是时候进行练习了\n\n再次查看第二个示例程序。在本次练习中，你还需要打印下面这个句子：\n\n\
+    `I will now print another sentence.`\n\n你的输出应该像这样：\n\n```\nI will now print this\
+    \ sentence.\nI will now print another sentence.\n```\n\n你将在下一章找到答案，并学习关于数据类型和变量。你应该多练习以磨练你的技能。\n\
+    \n## 第 3 章：了解不同的数据类型、变量和保留字\n\n在继续今天的课程之前，让我们先揭晓上一章练习题的答案。你的答案应该如下：\n\n```java\n\
+    public class SamplePrint {\n    public static void main(String []args) {\n   \
+    \     System.out.println(\"I will now print this sentence.\");\n        System.out.println(\"\
+    I will now print another sentence.\");\n    }\n}\n```\n\n你注意到第 5 行末尾的分号了吗？如果你删掉它，将会得到一个错误信息。\n\
+    \n现在让我们讨论今天的课程，是时候学习在编写 Java 程序时需要使用的不同数据类型了。本章还涵盖了关于给变量赋值的主题。\n\nJava 中有一些保留字，你不应该将它们作为变量名。你需要了解并记忆这些保留字，并避免将它们用作变量名。\n\
+    \n### 整数数据类型 (int)\n\n整数可以是正数也可以是负数，甚至零也是整数。如果你需要包含一个包含整数的变量，你需要在变量名之前加上 `int`\
+    \ 以将其标识为整数。整数数据类型或 `int` 只能接受于 `-2,147,483,648` 和 `2,147,483,647` 之间的数字。注意：如果你想打印整数，不需要给它加上引号。看这个程序：\n\
+    \n```java\nclass PrintingInteger {\n    public static void main(String []args)\
+    \ {\n        System.out.println(15);\n        System.out.println(14);\n      \
+    \  System.out.println(13);\n    }\n}\n```\n\n它将输出结果：\n\n```\n15\n14\n13\n```\n\
+    \n在允许的数字范围内，任何你想放入 `System.out.println()` 括号内的数字都会被打印出来。请确保遵循正确的语法，如给示例所示。\n\n\
+    ### 布尔数据类型 (true 或 false)\n\n`boolean` 数据类型有特定的值，它要么是 `true` 要是 `false`；它不会给出其他答案。你不需要给任何内容加上引号，因为程序会自动（根据给定条件）将\
+    \ `true` 或 `false` 赋值为布尔值的合法值。看这个示例程序：\n\n```java\nclass PrintBoolean {\n    public\
+    \ static void main(String []args) {\n        System.out.println(false);\n    }\n\
+    }\n```\n\n它输出结果：\n\n```\nfalse\n```\n\n当你尝试将括号内的值替换为 `jabberwocky` 时，如下所示：\n\n\
+    ```java\nclass PrintBoolean {\n    public static void main(String []args) {\n\
+    \        System.out.println(jabberwocky);\n    }\n}\n```\n\n产生如下结果：\n\n```\n/tmp/java_J0wki9/PrintBoolean.java:4:\
+    \ error: cannot find symbol\n    System.out.println(jabberwocky);\n          \
+    \                ^\n  symbol: variable jabberwocky\nlocation: class PrintBoolean\n\
+    1 error\nUnable to execute program; could not compile!\n```\n\nJava 没有将 `jabberwocky`\
+    \ 视为 `Boolean`，它也没有打印它，因为它是一个字符串。字符串的规则是你需要加上引号，以便程序将其识别为字符串并打印。\n\n### 字符数据类型\
+    \ (char)\n\n字符数据类型或 `char` 表示单个字符。所有字符必须包含在单引号（' ') 中，否则你将得到错误信息。它终究是一个字符串，但你只需要使用单引号。看这个示例：\n\
+    \n```java\nclass PrintCharacter {\n    public static void main(String []args)\
+    \ {\n        System.out.println('a');\n    }\n}\n```\n\n它输出结果：\n\n```\na\n```\n\
+    \n## 变量\n\nJava 和其他编程语言使用变量来存储数据。你可以将任何数据类型存储在变量中，你只需要确保在声明它们时遵循正确的语法来指定数据类型。\n\
+    \n以下是你需要避免作为变量名的 Java 保留字列表：\n\n"
+- fmt: "\n| `abstract` | `assert` | `boolean` | `break` |\n| `byte` | `case` | `catch`\
+    \ | `char` |\n| `class` | `const` | `continue` | `default` |\n| `do` | `double`\
+    \ | `else` | `enum` |\n| `extends` | `final` | `finally` | `float` |\n| `for`\
+    \ | `goto` | `if` | `implements` |\n| `import` | `instanceof` | `int` | `interface`\
+    \ |\n| `transient` | `protected` | `public` | `return` |\n| `long` | `private`\
+    \ | `short` | `throws` |\n| `switch` | `native` | `volatile` | `while` |\n| `synchronized`\
+    \ | `new` | `package` | `super` |\n| `try` | `this` | `static` | `strictfp` |\n\
+    | `void` | `throw` | | |\n\nWhen you use any of the reserved words as a variable\
+    \ name, your program will surely recognize it as something else. Expect to get\
+    \ an error message when you inadvertently use any of the reserved words as your\
+    \ variable name.\n\nIt is also important to remember to write the variable name\
+    \ in lower cases. Do not capitalize the first letter of your variable name–it\
+    \ is one of Java’s programming rules. Ignoring the rules can only get you in trouble.\
+    \ However, you can use an upper case letter within your variable name, like so:\n\
+    \n```java\nint mostUsefulNum = 7;\n```\n\nIf you are using integers, then you\
+    \ need to write `int` before the name of your variable to identify the data type\
+    \ that you need to store in your variable `mostUsefulNum`. In the above sample,\
+    \ we store `7` in the variable.\n\n### Try this practice exercise:\n\n1. Create\
+    \ a class name of your choice.\n2. Add a multi-line comment that goes: This is\
+    \ my first sample program using everything that I have learned so far.\n3. Make\
+    \ sure that your program is readable; don’t forget to include blank lines.\n4.\
+    \ Assign `int` data type to `myFirstSampleInt`.\n5. `myFirstSampleInt` must be\
+    \ equal to `7`.\n6. Assign `boolean` data type to `myFirstSampleBool`.\n7. `myFirstSampleBoolean`\
+    \ must be equal to `false`.\n8. Assign `char` data type to `myFirstSampleChar`.\n\
+    9. `myFirstSampleChar` must be equal to `A`.\n10. Print `myFirstSampleInt`.\n\
+    11. Print `myFirstSampleBool`.\n12. Print `myFirstSampleChar`.\n\nRead and analyze\
+    \ the instruction carefully and do exactly what the instruction tells you to do.\
+    \ This practice exercise is a sort of review about the lessons we’ve covered so\
+    \ far. After doing this, you can try something on your own. If there’s an error\
+    \ message, see if you can detect and fix the problem.\n\nThe answer to this practice\
+    \ exercise is on the next page, so don’t cheat. Create your own program first,\
+    \ and only turn the page if you have finished your code. Answering this practice\
+    \ exercise can help you evaluate yourself. You can always go back to the past\
+    \ lessons if you need to clarify something.\n\nNow, your program should look like\
+    \ this:\n\n```java\npublic class NameofYourChoice {\n    public static void main(String\
+    \ []args) {\n        /*This is my first sample program using\n         *everything\
+    \ that I have learned so far\n         */\n        int myFirstSampleInt = 7;\n\
+    \        boolean myFirstSampleBool = false;\n        char myFirstSampleChar =\
+    \ 'A';\n        System.out.println(myFirstSampleInt);\n        System.out.println(myFirSampleBool);\n\
+    \        System.out.println(myFirstSampleChar);\n    }\n}\n```\n\nYour output\
+    \ should look like this:\n\n```\n7\nfalse\nA\n```\n\nDid you get the same answer?\
+    \ There are times when writing it differently yields the same result. Look at\
+    \ this program:\n\n```java\npublic class NameOfChoice {\n    public static void\
+    \ main(String []args) {\n        /*This is my first sample program using\n   \
+    \      *everything that I have learned so far\n         */\n        int myFirstSampleInt;\n\
+    \        myFirstSampleInt = 7;\n        boolean myFirstSampleBool;\n        myFirstSampleBoolean\
+    \ = false;\n        char myFirstSampleChar;\n        myFirstSampleChar = 'A';\n\
+    \        System.out.println(myFirstSampleInt);\n        System.out.println(myFirstSampleBool);\n\
+    \        System.out.println(myFirstSampleChar);\n    }\n}\n```\n\nYou will still\
+    \ get the same output if you did not write the program the same as the first.\
+    \ Did you notice the differences between the two programs? The codes are two lines\
+    \ longer in the second program and you need to write the variable names again.\
+    \ Keep in mind that in programming, the fewer lines that you use in writing your\
+    \ codes, the better. If you can write the codes module within one sheet then do\
+    \ it. The fewer lines you use, the easier it will be to spot the errors. It is\
+    \ also easier to maintain the system.\n\n### It’s Time to Detect the Errors\n\n\
+    ```java\npublic class NameofYourChoice {\n    public static void main(String []args)\
+    \ {\n        /*This is my first sample program using\n         *everything that\
+    \ I have learned so far\n         */\n        myFirstSampleInt = 7;\n        myFirstSampleBool\
+    \ = false;\n        myFirstSampleChar = A;\n        System.out.println(myFirstSampleInt);\n\
+    \        System.out.println(myFirstSampleBool);\n        System.out.println(myFirstSampleChar);\n\
+    \    }\n}\n```\n\nWithout looking at the previous practice exercise, try detecting\
+    \ the errors in the given program above. You can try running this program and\
+    \ you to see the error message. For your assignment, try practicing more during\
+    \ your free time and you will notice that things become easier.\n\n# Chapter 4:\
+    \ Useful Pocket Tables and the Different Operators\n\nIn using Java as your programming\
+    \ language, it is best if you keep a table for Java numeric operators, comparison\
+    \ operators, and logical operators. There are also different truth tables. It\
+    \ is likewise advisable to keep the different tables handy. For now it may sound\
+    \ a bit too much, but as the days go by you will be able to learn everything like\
+    \ the back of your hand.\n\nThe different tables serve as quick references. It\
+    \ is better if you can memorize them immediately, but even if you have memorized\
+    \ them you still need to keep the tables handy.\n\n## Numeric Operators\n\nThe\
+    \ different programming languages share the same symbols for their numeric operators.\
+    \ If you already know a programming language, then you can see that the symbols\
+    \ used in Java programming and the programming language that you know are mostly\
+    \ (if not all) the same. There might be slight differences with the other programming\
+    \ language.\n\n| NUMERIC OPERATORS |\n| Sign | Operand | Example |\n| :--- | :---\
+    \ | :--- |\n| `+` | Addition | `5 + 9` |\n| `-` | Subtraction | `35 - 24` |\n\
+    | `*` | Multiplication | `7*6` |\n| `/` | Division | `168/3` |\n| `%` | Remainder\
+    \ | `15%2` |\n\nIt is better if you can quickly memorize all the numeric operators\
+    \ and how to use them properly. You will almost always need them when you start\
+    \ coding a more complex program.\n\nFor samples of Java program using the mathematical\
+    \ operators, please refer to Chapter 5.\n\n## Comparison Operators or Relational\
+    \ Operators\n"
+  raw: '| abstract | assert | boolean | break |
+
+
+    | byte | case | catch | char |
+
+
+    | class | const | continue | default |
+
+
+    | do | double | else | enum |
+
+
+    | extends | final | finally | float |
+
+
+    | for | goto | if | implements |
+
+
+    | import | instanceof | int | interface |
+
+
+    | transient | protected | public | return |
+
+
+    | long | private | short | throws |
+
+
+    | switch | native | volatile | while |
+
+
+    | synchronized | new | package | super |
+
+
+    | try | this | static | strictfp |
+
+
+    | void | throw |  |  |
+
+
+    When you use any of the reserved words as a variable name, your program will surely
+    recognize it as something else.  Expect to get an error message when you inadvertently
+    use any of the reserved words as your variable name.
+
+
+    It is also important to remember to write the variable name in lower cases.  Do
+    not capitalize the first letter of your variable name–it is one of Java’s programming
+    rules.  Ignoring the rules can only get you in trouble.  However, you can use
+    an upper case letter within your variable name, like so:
+
+
+    int mostUsefulNum = 7;
+
+
+    If you are using integers, then you need to write int before the name of your
+    variable to identify the data typethat you need to store in your variable‘mostUsefulNum’. 
+    In the above sample, we store‘7’ in the variable. 
+
+
+    Try this practice exercise:
+
+
+    1.  Create a class name of your choice.
+
+
+    2.  Add a multi-line comment that goes: This is my first sample program using
+    everything that I have learned so far.
+
+
+    3.  Make sure that your program is readable;don’t forget to include blank lines.
+
+
+    4.  Assign int data type to myFirstSampleInt.
+
+
+    5.  myFirst SampleInt must be equal to 7.
+
+
+    6.  Assign boolean data type to myFirstSampleBool.
+
+
+    7.  myFirstSampleBoolean must be equal to false.
+
+
+    8.  Assign char data type to myFirstSampleChar.
+
+
+    9.  myFirstSampleChar must be equal to A.
+
+
+    10.  Print myFirstSampleInt.
+
+
+    11.  Print myFirstSampleBoolean.
+
+
+    12.  Print myFirstSampleChar.
+
+
+    Read and analyze the instruction carefully and do exactly what the instruction
+    tells you to do.  This practice exercise is a sort of review about the lessons
+    we’ve covered so far.  After doing this, you can try something on your own.  If
+    there’s an error message, see if you can detect and fix the problem. 
+
+
+    The answer to this practice exercise is on the next page, so don’t cheat.  Create
+    your own program first, and only turn the page if you have finished your code. 
+
+
+    Answering this practice exercise can help you evaluate yourself.  You can always
+    go back to the past lessons if you need to clarify something.
+
+
+    Now, your program should look like this:
+
+
+    | 1 | public class NameofYourChoice { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |   public static void main(String []args) { |  |  |  |
+
+
+    | 4 |      /*This is my first sample program using |  |  |  |
+
+
+    | 5 |      *everything that I have learned so far |  |  |  |
+
+
+    | 6 |      */ |  |  |  |  |  |  |  |
+
+
+    | 7 |      int myFirstSampleInt = 7; |  |  |  |  |  |
+
+
+    | 8 |      boolean myFirstSampleBool = false; |  |  |  |
+
+
+    | 9 |      char myFirstSampleChar  = ''A''; |  |  |  |  |
+
+
+    | 10 |      System.out.println(myFirstSampleInt); |  |  |  |
+
+
+    | 11 |      System.out.println(myFirSampleBool);                             |  |  |  |  |
+
+
+    | 12 |      System.out.println(myFirstSampleChar); |  |  |  |  |
+
+
+    | 13 |    } |  |  |  |  |  |  |  |  |
+
+
+    | 14 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Your output should look like this:
+
+
+    | 7 |  |  |  |  |  |  |  |  |  |
+
+
+    | false |  |  |  |  |  |  |  |  |
+
+
+    | A |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Did you get the same answer? There are times when writing it differently still
+    yields the same result.
+
+
+    Look at this program:
+
+
+    | 1 | public class NameOfYourChoice { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |   public static void main(String []args) { |  |  |  |
+
+
+    | 4 |    /*This is my first sample program using |  |  |  |
+
+
+    | 5 |    *everything that I have learned so far |  |  |  |
+
+
+    | 6 |    */ |  |  |  |  |  |  |  |  |
+
+
+    | 7 |    int myFirstSampleInt; |  |  |  |  |  |
+
+
+    | 8 |    myFirstSampleInt = 7; |  |  |  |  |  |
+
+
+    | 9 |    boolean myFirstSampleBool; |  |  |  |  |
+
+
+    | 10 |    myFirstSampleBoolean = false; |  |  |  |  |
+
+
+    | 11 |    char myFirstSampleChar; |  |  |  |  |  |
+
+
+    | 12 |    myFirstSampleChar  = ''A''; |  |  |  |  |  |
+
+
+    | 13 |    System.out.println(myFirstSampleInt); |  |  |  |
+
+
+    | 14 |    System.out.println(myFirstSampleBool); |  |  |  |  |
+
+
+    | 15 |    System.out.println(myFirstSampleChar); |  |  |  |  |
+
+
+    | 16 | } |  |  |  |  |  |  |  |  |
+
+
+    | 17 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    You will still get the same output even if you did not write the program the same
+    way as the first.  Did you notice the differences between the two programs? The
+    codes are two lines longer in the second program and you need to write the variable
+    names again.
+
+
+    Keep in mind that in programming, the fewer lines that you use in writing your
+    codes, the better.  If you can write the codes or program module within one sheet
+    then do it.  The fewer lines you use, the easier it will be to spot the errors. 
+    It is also easier to maintain the system.
+
+
+    It’s Time to Detect the Errors
+
+
+    | 1 | public class NameofYourChoice { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |   public static void main(String []args) { |  |  |  |
+
+
+    | 4 |      /*This is my first sample program using |  |  |  |
+
+
+    | 5 |      *everything that I have learned so far |  |  |  |
+
+
+    | 6 |      */ |  |  |  |  |  |  |  |
+
+
+    | 7 |      myFirstSampleInt = 7; |  |  |  |  |  |
+
+
+    | 8 |      myFirstSampleBool = false; |  |  |  |
+
+
+    | 9 |      myFirstSampleChar  = A; |  |  |  |  |
+
+
+    | 10 |      System.out.println(myFirstSampleInt); |  |  |  |
+
+
+    | 11 |      System.out.println(myFirstSampleBool);                            
+    |  |  |  |  |
+
+
+    | 12 |      System.out.println(myFirstSampleChar); |  |  |  |  |
+
+
+    | 13 |    } |  |  |  |  |  |  |  |  |
+
+
+    | 14 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Without looking at the previous practice exercise, try detecting the errors in
+    the given program above.  You can try running this program and you to see the
+    error message.
+
+
+    For your assignment, try practicing more during your free time and you will notice
+    that things become easier.
+
+
+    Chapter 4: Useful Pocket Tables and the Different Operators
+
+
+    In using Java as your programming language, it is best if you keep a table for
+    Java numeric operators, comparison operators, and logical operators.  There are
+    also different truth tables.  It is likewise advisable to keep the different tables
+    handy.  For now it may sound a bit too much, but as the days go by you will be
+    able to learn everything like the back of your hand.
+
+
+    The different tables serve as quick references.  It is better if you can memorize
+    them immediately, but even if you have memorized them you still need to keep the
+    tables handy. 
+
+
+    The Numeric Operators
+
+
+    The different programming languages share the same symbols for their numeric operators. 
+    If you already know a programming language, then you can see that the symbols
+    used in Java programming and the programming language that you know are mostly
+    (if not all) the same.  There might be slight differences with the other programming
+    language.      
+
+
+    | NUMERIC OPERATORS |
+
+
+    | Sign | Operand | Example |
+
+
+    | + | Addition | 5 + 9 |
+
+
+    | - | Subtraction | 35 - 24 |
+
+
+    | * | Multiplication | 7*6 |
+
+
+    | / | Division | 168/3 |
+
+
+    | % | Remainder | 15%2 |
+
+
+    It is better if you can quickly memorize all the numeric operators and how to
+    use them properly.  You will almost always need them when you start coding a more
+    complex program. 
+
+
+    For samples of Java program using the mathematical operators, please refer to
+    Chapter 5\.
+
+
+    The Comparison Operators or Relational Operators'
+  toc: []
+  trans: "\n\n| `abstract` | `assert` | `boolean` | `break` |\n| `byte` | `case` |\
+    \ `catch` | `char` |\n| `class` | `const` | `continue` | `default` |\n| `do` |\
+    \ `double` | `else` | `enum` |\n| `extends` | `final` | `finally` | `float` |\n\
+    | `for` | `goto` | `if` | `implements` |\n| `import` | `instanceof` | `int` |\
+    \ `interface` |\n| `transient` | `protected` | `public` | `return` |\n| `long`\
+    \ | `private` | `short` | `throws` |\n| `switch` | `native` | `volatile` | `while`\
+    \ |\n| `synchronized` | `new` | `package` | `super` |\n| `try` | `this` | `static`\
+    \ | `strictfp` |\n| `void` | `throw` | | |\n\n当你将任何保留字作为变量名时，你的程序将会将其识别为其他内容。当你无意中将任何保留字用变量名时，预计会收到一条错误信息。\n\
+    \n记住用小写字母写变量名。不要将变量名的首字母大写——这是 Java 编程规则之一。忽略这些规则只会给你带来麻烦。不过，你可以在变量名中使用大写字母，如下：\n\
+    \n```java\nint mostUsefulNum = 7;\n```\n\n如果你正在使用整数，那么你需要在变量名之前编写 `int`，以标识你需要存储在变量\
+    \ `mostUsefulNum` 中的数据类型。在上面的示例中，我们将 `7` 存储在变量中。\n\n### 尝试这个练习题：\n\n1. 创建一个你喜欢的类名。\n\
+    2. 添加一个多行注释，内容为：这是我使用目前所学一切编写的第一个示例程序。\n3. 确保你的程序具有可读性；不要忘记留空。\n4. 为 `myFirstSampleInt`\
+    \ 分配 `int` 数据类型。\n5. `myFirstSampleInt` 必须等于 `7`。\n6. 为 `myFirstSampleBool` 分配\
+    \ `boolean` 数据类型。\n7. `myFirstSampleBoolean` 必须等于 `false`。\n8. 为 `myFirstSampleChar`\
+    \ 分配 `char` 数据类型。\n9. `myFirstSampleChar` 必须等于 `A`。\n10. 打印 `myFirstSampleInt`。\n\
+    11. 打印 `myFirstSampleBool`。\n12. 打印 `myFirstSampleChar`。\n\n仔细阅读并分析指令，并完全按照指令要求执行操作。这个练习题是对我们目前涵盖的课程的一种回顾。完成之后，你可以尝试自己做一些事情。如果有错误信息，看看你是否能检测并修复问题。\n\
+    \n这个练习题的答案在下一页，所以请不要作弊。先创建你自己的程序，只有在完成代码后才翻页。回答这个练习题可以帮助你评估自己。如果你需要澄清某些内容，可以随时回到之前的课程。\n\
+    \n现在，你的程序应该是这样的：\n\n```java\npublic class NameofYourChoice {\n    public static\
+    \ void main(String []args) {\n        /*This is my first sample program using\n\
+    \         *everything that I have learned so far\n         */\n        int myFirstSampleInt\
+    \ = 7;\n        boolean myFirstSampleBool = false;\n        char myFirstSampleChar\
+    \ = 'A';\n        System.out.println(myFirstSampleInt);\n        System.out.println(myFirSampleBool);\n\
+    \        System.out.println(myFirstSampleChar);\n    }\n}\n```\n\n你的输出应该像这样：\n\
+    \n```\n7\nfalse\nA\n```\n\n你得到的答案相同吗？有时不同的写法会产生相同的结果。看这个程序：\n\n```java\npublic\
+    \ class NameOfChoice {\n    public static void main(String []args) {\n       \
+    \ /*This is my first sample program using\n         *everything that I have learned\
+    \ so far\n         */\n        int myFirstSampleInt;\n        myFirstSampleInt\
+    \ = 7;\n        boolean myFirstSampleBool;\n        myFirstSampleBoolean = false;\n\
+    \        char myFirstSampleChar;\n        myFirstSampleChar = 'A';\n        System.out.println(myFirstSampleInt);\n\
+    \        System.out.println(myFirstSampleBool);\n        System.out.println(myFirstSampleChar);\n\
+    \    }\n}\n```\n\n如果你没有按照第一个程序那样写程序，你仍然会得到相同的输出。你注意发现两个程序之间的区别了吗？第二个程序的代码多了两行，而且你需要重新编写变量名。记住，在编程中，编写代码时使用的行数越少越好。如果你可以在一个页面内完成代码，就尽管这样做。行数越少，越容易发现错误。维护系统也变得更容易。\n\
+    \n### 是时候检测错误了\n\n```java\npublic class NameofYourChoice {\n    public static\
+    \ void main(String []args) {\n        /*This is my first sample program using\n\
+    \         *everything that I have learned so far\n         */\n        myFirstSampleInt\
+    \ = 7;\n        myFirstSampleBool = false;\n        myFirstSampleChar = A;\n \
+    \       System.out.println(myFirstSampleInt);\n        System.out.println(myFirstSampleBool);\n\
+    \        System.out.println(myFirstSampleChar);\n    }\n}\n```\n\n在不看之前的练习题的情况下，尝试检测上述给定程序中的错误。你可以尝试运行这个程序并查看错误信息。对于你的作业，尝试在空闲时间多练习，你会发现事情变得越来越容易。\n\
+    \n# 第 4 章：实用的口袋表和不同的运算符\n\n在用 Java 作为你的编程语言时，最好为 Java 数值运算符、比较运算符和逻辑运算符保留一个表格。还有不同的真值表。同样建议将这些不同的表格备在手边。现在听起来可能有点太多，但随着时间的推移，你将能够像了指掌一样熟悉所有内容。\n\
+    \n不同的表格可以作为快速参考。如果你能立即记住它们会更好，但即使你背了，仍然需要将这些表格备在手边。\n\n## 数值运算符\n\n不同的编程语言在数值运算符上共享相同的符号。如果你已经熟悉一种编程语言，那么你会发现\
+    \ Java 编程中使用的符号与你熟悉的编程语言中的符号大部分（如果不是全部）是相同的。与其他编程语言可能存在细微差异。\n\n| 数值运算符 |\n| 符号\
+    \ | 操作数 | 示例 |\n| :--- | :--- | :--- |\n| `+` | 加法 | `5 + 9` |\n| `-` | 减法 | `35\
+    \ - 24` |\n| `*` | 乘法 | `7*6` |\n| `/` | 除法 | `168/3` |\n| `%` | 余数 | `15%2` |\n\
+    \n如果你能快速记住所有数值运算符以及如何正确使用它们会更好。当你开始编写更复杂的程序时，几乎总是需要它们。\n\n关于使用数学运算符的 Java 程序示例，请参阅第\
+    \ 5 章。\n\n## 比较运算符或关系运算符\n\n"
+- fmt: "\nIt is easier to memorize the table below if you are already familiar with\
+    \ any of the programming languages. All programming languages practically use\
+    \ the same symbols for their comparison operators. You will definitely need this\
+    \ when coding a more complex program.\n\n| COMPARISON OPERATORS |\n| :--- | :---\
+    \ |\n| less than | `<` |\n| less than or equal to | `<=` |\n| greater than | `>`\
+    \ |\n| greater than or equal to | `>=` |\n| equal to | `==` |\n| not equal to\
+    \ | `!=` |\n\nIt is easier to use the operators instead of thinking of another\
+    \ way to write the program. Memorizing the different tables should be your priority.\n\
+    \n## Boolean Logical Operators\n\nThe boolean logical operators are different\
+    \ from the comparison operators. The logical operators are commonly used to find\
+    \ the final outcome of the conditional statement or test the arguments.\n\n| BOOLEAN\
+    \ LOGICAL OPERATORS |\n| :--- | :--- |\n| NOT | `!` |\n| AND | `&&` |\n| OR |\
+    \ `||` |\n| EXCLUSIVE OR | `^` |\n\n## The Different Truth Tables\n\nThis section\
+    \ is dedicated to the different truth tables that you can use as quick reference.\
+    \ Keep them handy because you’ll never know when you’ll need them again.\n\nIn\
+    \ Chapter 6, you will learn how to use the different Java control statements,\
+    \ and that’s where the truth tables come in. The control statements usually tell\
+    \ the program to execute a certain block of codes as long as the conditional statement\
+    \ above the block remains true. If the statement returns a false answer, then\
+    \ the program will stop executing the loop for that particular block. The program\
+    \ will execute the succeeding lines of your code until it encounters a condition\
+    \ that tells it to stop.\n\n### Truth Table for AND\n\n| TRUTH TABLE FOR 'AND'\
+    \ |\n| :--- | :--- | :--- |\n| `A` | `B` | `A && B` |\n| FALSE | FALSE | FALSE\
+    \ |\n| FALSE | TRUE | FALSE |\n| TRUE | FALSE | FALSE |\n| TRUE | TRUE | TRUE\
+    \ |\n\n#### Explanation on How to Use the AND Table\n\n`A` and `B` rows are the\
+    \ condition of each argument in a statement, and the `A&&B` row shows the final\
+    \ answer in case argument `A` is true/false and argument `B` is true/false.\n\n\
+    If `A` is false and `B` is false then the statement will return false for an answer.\
+    \ If `A` is false and `B` is true, then the statement will return false. The same\
+    \ explanation goes with the rest of the arguments.\n\n### Truth Table for OR\n\
+    \n| TRUTH TABLE FOR 'OR' |\n| :--- | :--- | :--- |\n| `C` | `D` | `C || D` |\n\
+    | FALSE | FALSE | FALSE |\n| FALSE | TRUE | TRUE |\n| TRUE | FALSE | TRUE |\n\
+    | TRUE | TRUE | TRUE |\n\n#### Explanation on How to Use the OR Table\n\n`C` and\
+    \ `D` rows are the condition of each argument in a statement, and the `C||D` row\
+    \ shows the final answer in case argument `C` is true/false or argument `D` is\
+    \ true/false.\n\nIf `C` is false or `D` is false then the statement will return\
+    \ false for an answer. If `C` is false or `D` is true, then the statement will\
+    \ return true. The same explanation goes with the rest of the arguments.\n\n###\
+    \ Truth Table for NOT\n\n| TRUTH TABLE FOR 'NOT' |\n| :--- | :--- |\n| `A` | `!A`\
+    \ |\n| FALSE | TRUE |\n| TRUE | FALSE |\n\nThe NOT table gives the opposite of\
+    \ the argument or expression as its final answer. If `A` is false, then `!A`’s\
+    \ final answer is true.\n\n### Truth Table for EXCLUSIVE OR\n\n| TRUTH TABLE FOR\
+    \ 'EXCLUSIVE OR' |\n| :--- | :--- | :--- |\n| `A` | `B` | `A ^ B` |\n| FALSE |\
+    \ FALSE | FALSE |\n| FALSE | TRUE | TRUE |\n| TRUE | FALSE | TRUE |\n| TRUE |\
+    \ TRUE | FALSE |\n\nThe exclusive OR works like the previous OR table, except\
+    \ when both arguments are true, the final answer that exclusive OR gives is false.\n\
+    \nIt is not easy to memorize all the tables right away. You need to do it one\
+    \ at a time. If you have memorized the first table, then you can proceed with\
+    \ the next one.\n\nFor your next assignment, find an easier method of remembering\
+    \ the different truth tables. You should find it. Hint: remember the instances\
+    \ when the answer is mostly true or mostly false.\n\n## Chapter 5: All About the\
+    \ Math\n\nTime sure does fly when you’re having fun, it is now the fifth day of\
+    \ your Java lessons. This time you need to deal purely with numbers, it’s time\
+    \ to do the Math. You can add, subtract, multiply, and divide in Java as well\
+    \ as get the remainder. This lesson is not difficult to understand. In fact, it\
+    \ is similar to doing your math on paper. The remainder or modulo may look useless\
+    \ now, but you will appreciate it when the time comes.\n\nBefore proceeding to\
+    \ the lessons in this chapter, make sure that you have memorized most of the tables\
+    \ in Chapter 4. Make sure that you understood the previous lesson before going\
+    \ to the next one.\n\n### Addition via Java\n\nWhen learning how each numeric\
+    \ operator works in Java, it is best to show sample programs using numeric operators.\n\
+    \nTake this sample program:\n\n```java\npublic class AddingProgSamp {\n    public\
+    \ static void main(String []args) {\n        System.out.println(11 + 12);\n  \
+    \  }\n}\n```\n\nYou can also write it like this:\n\n```java\nclass AddingProgSamp\
+    \ {\n    public static void main(String []args) {\n        int e = 11;\n     \
+    \   int f = 12;\n        System.out.println(e + f);\n    }\n}\n```\n\n### Subtraction\
+    \ via Java\n\nIt’s better to see the visuals than read the explanation. We will\
+    \ use the same sample program as explaining the rest of the mathematical operations.\n\
+    \nLook at this sample program:\n\n```java\nclass MinusProgSamp {\n    public static\
+    \ void main(String []args) {\n        System.out.println(21 - 10);\n    }\n}\n\
+    ```\n\nYou can also code it like this:\n\n```java\nclass MinusProgSamp {\n   \
+    \ public static void main(String []args) {\n        int c = 21;\n        int d\
+    \ = 10;\n        System.out.println(c - d);\n    }\n}\n```\n\n### Multiplication\
+    \ via Java\n\nLook at this sample program for multiplication:\n\n```java\nclass\
+    \ MultProgSamp {\n    public static void main(String []args) {\n        System.out.println(45\
+    \ * 2);\n    }\n}\n```\n\nYou can also code it like this:\n\n```java\nclass MultProgSamp\
+    \ {\n    public static void main(String []args) {\n        int unoNum = 45;\n\
+    \        int secNum = 2;\n        System.out.println(unoNum * secNum);\n    }\n\
+    }\n```\n\nYou can use a single character variable name for small programs, and\
+    \ it is more convenient to use. However, it is advisable to use a variable name\
+    \ that gives a hint regarding the usage of a particular variable if you have a\
+    \ long program.\n\n### Division via Java\n\nLook at this sample program for division:\n\
+    \n```java\npublic class DivProgSamp {\n    public static void main(String []args)\
+    \ {\n        System.out.println(21 / 3);\n    }\n}\n```\n\nYou can also code it\
+    \ like this:\n\n```java\nclass DivProgSamp {\n    public static void main(String\
+    \ []args) {\n        int m = 21;\n        int n = 3;\n        System.out.println(m\
+    \ / n);\n    }\n}\n```\n\n### The Modulo or Remainder\n\nThis is how you get the\
+    \ remainder using Java programming:\n"
+  raw: 'It is easier to memorize the table below if you are already familiar with
+    any of the programming languages.  All programming languages practically use the
+    same symbols for their comparison operators.  You will definitely need this when
+    coding a more complex program. 
+
+
+    | COMPARISON OPERATORS |
+
+
+    | less than | <  |
+
+
+    | less than or equal to | <= |
+
+
+    | greater than | >  |
+
+
+    | greater than or equal to | >= |
+
+
+    | equal to | == |
+
+
+    | not equal to | != |
+
+
+    It is easier to use the operators instead of thinking of another way to write
+    the program.  Memorizing the different tables should be your priority.
+
+
+    Boolean Logical Operators
+
+
+    The boolean logical operators are different from the comparison operators.  The 
+    logical operators are commonly used to find the final outcome of the conditional
+    statement or test the arguments.
+
+
+    | BOOLEAN LOGICAL OPERATORS |
+
+
+    | NOT | ! |
+
+
+    | AND | && |
+
+
+    | OR | &#124;&#124; |
+
+
+    | EXCLUSIVE OR | ^ |
+
+
+    The Different Truth Tables
+
+
+    This section is dedicated to the different truth tables that you can use as quick
+    reference.  Keep them handy because you’ll never know when you’ll need them again.
+
+
+    In Chapter 6,you will learn how to use the different Java control statements,
+    and that’s where the truth tables come in handy.  The control statements usually
+    tell the program to execute a certain block of codes as long as the conditional
+    statement above the block remains true.  If the statement returns a false answer,
+    then the program will stop executing the loop for that particular block.  The
+    program will execute the succeeding lines of your code until it encounters a condition
+    that tells it to stop.
+
+
+    Truth Table for AND
+
+
+    | TRUTH TABLE FOR ''AND'' |
+
+
+    | A | B | A && B |
+
+
+    | FALSE | FALSE | FALSE |
+
+
+    | FALSE | TRUE | FALSE |
+
+
+    | TRUE | FALSE | FALSE |
+
+
+    | TRUE | TRUE | TRUE |
+
+
+    Explanation on How to Use the AND Table
+
+
+    A and B rows are the condition of each argument in a statement, and the A&&B row
+    shows the final answer in case argument A is true/false and argument B is true/false.
+
+
+    If A is false and B is false then the statement will return false for an answer. 
+    If A is false and B is true, then the statement will return false.  The same explanation
+    goes with the rest of the arguments.
+
+
+    Truth Table for OR
+
+
+    | TRUTH TABLE FOR ''OR'' |
+
+
+    | C | D | C &#124;&#124; D |
+
+
+    | FALSE | FALSE | FALSE |
+
+
+    | FALSE | TRUE | TRUE |
+
+
+    | TRUE | FALSE | TRUE |
+
+
+    | TRUE | TRUE | TRUE |
+
+
+    Explanation on How to Use the OR Table
+
+
+    C and D rows are the condition of each argument in a statement, and the CǁD row
+    shows the final answer in case argument C is true/false or argument D is true/false.
+
+
+    If C is false or D is false then the statement will return false for an answer. 
+    If C is false or D is true, then the statement will return true.  The same explanation
+    goes with the rest of the arguments.
+
+
+    Truth Table for NOT
+
+
+    | TRUTH TABLE FOR ''NOT'' |
+
+
+    | A | !A |
+
+
+    | FALSE | TRUE |
+
+
+    | TRUE | FALSE |
+
+
+    The NOT table gives the opposite of the argument or expression as its final answer. 
+    If A is false, then !A’s final answer is true.
+
+
+    Truth Table for EXCLUSIVE OR
+
+
+    | TRUTH TABLE FOR ''EXCLUSIVE OR'' |
+
+
+    | A | B | A ^ B |
+
+
+    | FALSE | FALSE | FALSE |
+
+
+    | FALSE | TRUE | TRUE |
+
+
+    | TRUE | FALSE | TRUE |
+
+
+    | TRUE | TRUE | FALSE |
+
+
+    The exclusive OR works like the previous OR table, except when both arguments
+    are true, the final answer that exclusive OR gives is false.
+
+
+    It is not easy to memorize all the tables right away.  You need to do it one at
+    a time.  If you have memorized the first table, then you can proceed with the
+    next one. 
+
+
+    For your next assignment, find an easier method of remembering the different truth
+    tables.  You should find it. Hint: remember the instances when the answer is mostly
+    true or mostly false.
+
+
+    Chapter 5: All About the Math
+
+
+    Time sure does fly when you’re having fun, it is now the fifth day of your Java
+    lessons.  This time you need to deal purely with numbers, it’s time to do the
+    Math.  You can add, subtract, multiply, and divide in Java as well as get the
+    remainder.  This lesson is not difficult to understand.  In fact, it is similar
+    to doing your math on paper.  The remainder or modulo may look useless now, but
+    you will appreciate it when the time comes.
+
+
+    Before proceeding to the lessons in this chapter, make sure that you have memorized
+    most of the tables in Chapter 4.  Make sure that you understood the previous lesson
+    before going to the next one.
+
+
+    Addition via Java
+
+
+    When learning how each numeric operator works in Java, it is best to show sample
+    programs using numeric operators.  
+
+
+    Take this sample program:
+
+
+    | 1 | public class AddingProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |        System.out.println(11 + 12); |  |  |  |  |
+
+
+    | 4 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 5 | } |  |  |  |  |  |  |  |  |
+
+
+    You can also write it like this:
+
+
+    | 1 | public class AddingProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |  |
+
+
+    | 4 |        int e = 11; |  |  |  |  |  |  |
+
+
+    | 5 |        int f = 12; |  |  |  |  |  |  |
+
+
+    | 6 |        System.out.println(e + f); |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |  |
+
+
+    | 8 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 9 | } |  |  |  |  |  |  |  |  |
+
+
+    Subtraction via Java
+
+
+    It’s better to see the visuals than read the explanation.  We will use the same
+    sample program as pattern in explaining the rest of the mathematical operations.
+
+
+    Look at this sample program for subtraction:
+
+
+    | 1 | public class MinusProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |        System.out.println(21 - 10); |  |  |  |  |
+
+
+    | 4 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 5 | } |  |  |  |  |  |  |  |  |
+
+
+    You can also code it like this:
+
+
+    | 1 | public class MinusProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |  |
+
+
+    | 4 |        int c = 21; |  |  |  |  |  |  |
+
+
+    | 5 |        int d = 10; |  |  |  |  |  |  |
+
+
+    | 6 |        System.out.println(c - d); |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |  |
+
+
+    | 8 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 9 | } |  |  |  |  |  |  |  |  |
+
+
+    Multiplication via Java
+
+
+    Look at this sample program for multiplication:
+
+
+    | 1 | public class MultProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |        System.out.println(45 * 2); |  |  |  |  |
+
+
+    | 4 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 5 | } |  |  |  |  |  |  |  |  |
+
+
+    You can also code it like this:
+
+
+    | 1 | public class MultProgSamp { |  |  |  |  |  |
+
+
+    | 2 | public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |  |
+
+
+    | 4 |   int unoNum = 45; |  |  |  |  |  |  |
+
+
+    | 5 |   int secNum = 2; |  |  |  |  |  |  |
+
+
+    | 6 |   System.out.println(unoNum * secNum); |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |  |
+
+
+    | 8 | } |  |  |  |  |  |  |  |  |
+
+
+    | 9 | } |  |  |  |  |  |  |  |  |
+
+
+    You can use a single character variable name for small programs, and it is more
+    convenient to use.  However, it is advisable to use a variable name that gives
+    a hint regarding the usage of a particular variable if you have a long program.
+
+
+    Division via Java
+
+
+    Look at this sample program for division:
+
+
+    | 1 | public class DivProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |        System.out.println(21 / 3); |  |  |  |  |
+
+
+    | 4 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 5 | } |  |  |  |  |  |  |  |  |
+
+
+    You can also code it like this:
+
+
+    | 1 | public class DivProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |  |
+
+
+    | 4 |        int m = 21; |  |  |  |  |  |  |
+
+
+    | 5 |        int n = 3; |  |  |  |  |  |  |
+
+
+    | 6 |        System.out.println(m / n); |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |  |
+
+
+    | 8 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 9 | } |  |  |  |  |  |  |  |  |
+
+
+    The Modulo or Remainder
+
+
+    This is how you get the remainder using Java programming:'
+  toc: []
+  trans: "\n\n如果你已经熟悉了任何一种编程语言，那么记忆下表会更容易。几乎所有的编程语言在用于比较运算符时都使用相同的符号。在编写更复杂的程序时，你绝对会需要它们。\n\
+    \n| 比较运算符 |\n| :--- | :--- |\n| 小于 | `<` |\n| 小于等于 | `<=` |\n| 大于 | `>` |\n| 大于等于\
+    \ | `>=` |\n| 等于 | `==` |\n| 不等于 | `!=` |\n\n使用运算符比思考另一种编写程序的方法要容易。记忆这些不同的表格应该是你的首要任务。\n\
+    \n## 布尔逻辑运算符\n\n布尔逻辑运算符与比较运算符不同。逻辑运算符通常用于查找条件语句的最终结果或测试参数。\n\n| 布尔逻辑运算符 |\n| :---\
+    \ | :--- |\n| 非 (NOT) | `!` |\n| 与 (AND) | `&&` |\n| 或 (OR) | `||` |\n| 异或 (EXCLUSIVE\
+    \ OR) | `^` |\n\n## 不同的真值表\n\n本节专门介绍你可以作为快速参考的不同真值表。请随手保存，因为你永远不知道何时会再次需要它们。\n\
+    \n在第 6 章，你将学习如何使用不同的 Java 控制语句，真值表就会大显用场。控制语句通常告诉程序，只要块上面的条件语句保持真，就执行该块的代码。如果语句返回假值，程序将停止执行该特定块的循环。程序将继续执行你代码的后续行，直到遇到告诉它停止的条件。\n\
+    \n### AND（与）真值表\n\n| 'AND' 的真值表 |\n| :--- | :--- | :--- |\n| `A` | `B` | `A &&\
+    \ B` |\n| FALSE | FALSE | FALSE |\n| FALSE | TRUE | FALSE |\n| TRUE | FALSE |\
+    \ FALSE |\n| TRUE | TRUE | TRUE |\n\n#### 关于如何使用 AND 表格的说明\n\n`A` 和 `B` 行是语句中每个参数的条件，`A&&B`\
+    \ 行显示了当参数 `A` 为真/假且参数 `B` 为真/假时的最终答案。\n\n如果 `A` 为假且 `B` 为假，则语句将返回假作为答案。如果 `A`\
+    \ 为假且 `B` 为真，则语句将返回假。其他参数的解释也相同。\n\n### OR（或）真值表\n\n| 'OR' 的真值表 |\n| :--- | :---\
+    \ | :--- |\n| `C` | `D` | `C || D` |\n| FALSE | FALSE | FALSE |\n| FALSE | TRUE\
+    \ | TRUE |\n| TRUE | FALSE | TRUE |\n| TRUE | TRUE | TRUE |\n\n#### 关于如何使用 OR\
+    \ 表格的说明\n\n`C` 和 `D` 行是语句中每个参数的条件，`C||D` 行显示了当参数 `C` 为真/假或参数 `D` 为真/假时的最终答案。\n\
+    \n如果 `C` 为假或 `D` 为假，则语句将返回假作为答案。如果 `C` 为假或 `D` 为真，则语句将返回真。其他参数的解释也相同。\n\n### NOT（非）真值表\n\
+    \n| 'NOT' 的真值表 |\n| :--- | :--- |\n| `A` | `!A` |\n| FALSE | TRUE |\n| TRUE |\
+    \ FALSE |\n\nNOT 表将参数或表达式的反面作为其最终答案。如果 `A` 为假，则 `!A` 的最终答案为真。\n\n### EXCLUSIVE\
+    \ OR（异或）真值表\n\n| 'EXCLUSIVE OR' 的真值表 |\n| :--- | :--- | :--- |\n| `A` | `B` |\
+    \ `A ^ B` |\n| FALSE | FALSE | FALSE |\n| FALSE | TRUE | TRUE |\n| TRUE | FALSE\
+    \ | TRUE |\n| TRUE | TRUE | FALSE |\n\n异或的原理与之前的 OR 表类似，但当两个参数都为真时，异或给出的最终答案为假。\n\
+    \n立刻记住所有表格并不容易。你需要一个一个地记。如果你记住了第一张表，就可以继续下一个。\n\n对于你的下一个作业，请找到一种更容易的方法来记忆不同的真值表。你应该能找到的。提示：记住答案大部分为真或大部分为假的实例。\n\
+    \n## 第 5 章：关于数学\n\n当你玩得开心时，时间过得真快，现在已经是你 Java 课程的第五天了。这次你需要纯粹处理数字，是时候学习数学了。在 Java\
+    \ 中，你可以进行加、减、乘、除法，还可以得到余数。这课并不难理解。事实上，它类似于在纸上做数学题。余数或模现在看起来可能没用，但等到了你会感激它的。\n\n\
+    在继续本章的课程之前，确保你已经记住了第 4 章中的大多数表格。在进入下一节之前，确保你理解了上一节。\n\n### 通过 Java 加法\n\n在学习 Java\
+    \ 中每个数值运算符如何运行时，最好使用数值运算符显示示例程序。\n\n参考这个示例程序：\n\n```java\npublic class AddingProgSamp\
+    \ {\n    public static void main(String []args) {\n        System.out.println(11\
+    \ + 12);\n    }\n}\n```\n\n你也可以这样写：\n\n```java\nclass AddingProgSamp {\n    public\
+    \ static void main(String []args) {\n        int e = 11;\n        int f = 12;\n\
+    \        System.out.println(e + f);\n    }\n}\n```\n\n### 通过 Java 减法\n\n视觉效果比阅读解释更好。我们将使用示例程序解释其余数学操作。\n\
+    \n参考这个示例程序：\n\n```java\nclass MinusProgSamp {\n    public static void main(String\
+    \ []args) {\n        System.out.println(21 - 10);\n    }\n}\n```\n\n你也可以这样写：\n\
+    \n```java\nclass MinusProgSamp {\n    public static void main(String []args) {\n\
+    \        int c = 21;\n        int d = 10;\n        System.out.println(c - d);\n\
+    \    }\n}\n```\n\n### 通过 Java 乘法\n\n参考这个乘法的示例程序：\n\n```java\nclass MultProgSamp\
+    \ {\n    public static void main(String []args) {\n        System.out.println(45\
+    \ * 2);\n    }\n}\n```\n\n你也可以这样写：\n\n```java\nclass MultProgSamp {\n    public\
+    \ static void main(String []args) {\n        int unoNum = 45;\n        int secNum\
+    \ = 2;\n        System.out.println(unoNum * secNum);\n    }\n}\n```\n\n### 通过\
+    \ Java 除法\n\n参考这个除法的示例程序：\n\n```java\npublic class DivProgSamp {\n    public static\
+    \ void main(String []args) {\n        Era.out.println(21 / 3);\n    }\n}\n```\n\
+    \n你也可以这样写：\n\n```java\nclass DivProgSamp {\n    public static void main(String\
+    \ []args) {\n        int m = 21;\n        int n = 3;\n        System.out.println(m\
+    \ / n);\n    }\n}\n```\n\n### 模或余数\n\n这是使用 Java 编程获取余数的方法：\n\n"
+- fmt: "\n```java\npublic class ModuloProgSamp {\n    public static void main(String\
+    \ []args) {\n        System.out.println(27 % 5);\n    }\n}\n```\n\nYou can also\
+    \ code it like this:\n\n```java\npublic class ModuloProgSamp {\n    public static\
+    \ void main(String []args) {\n        int q = 27;\n        int d = 5;\n      \
+    \  System.out.println(q % d);\n    }\n}\n```\n\n## Using Comparison Operators\n\
+    \nComparison operators, also known as relational operators, compare data types,\
+    \ and always yield a boolean value (`true` or `false`) for an answer. You should\
+    \ be familiar with the different truth tables at this point because you will be\
+    \ using them a lot from here on out. It is true that you can always go back and\
+    \ look at the table, but going back every now and then takes so much time. It\
+    \ makes you less productive.\n\nWhen there’s a presence of a comparison operator\
+    \ between two data (known as operands), the answer you need to expect from this\
+    \ is always `true` or `false`. Look at the sample statement below:\n\n```java\n\
+    System.out.println(56<77);\n```\n\nWhen the program executes it, expect that it\
+    \ will print `true` on your computer screen instead of `'56<77'`. Why? It’s because\
+    \ the sentence used a comparison operator that automatically prompts the system\
+    \ to look only for `true` or `false` answer. A Java program is quick to recognize\
+    \ it as something that looks for boolean answer and the presence of print command\
+    \ prompts it to print the boolean answer on screen.\n\nThe comparison operators\
+    \ equal to (`==`) and not equal to (`!=`) are also known as equality operators.\
+    \ A Java programmer uses the equality operators to see the equality of the data.\
+    \ The programmer has the option to test the equality of data that has `int`, `boolean`,\
+    \ or `char` type. You can only get a `true` or `false` answer when you use comparison\
+    \ operator between the data. If you want to print the ones inside the parentheses,\
+    \ you need to put them in quotes, and the program will treat them as string. To\
+    \ explain further, look at the example below:\n\n```java\npublic class CompareData\
+    \ {\n    public static void main(String []args) {\n        char testSampChar='r';\n\
+    \        int testSampDigit=3;\n        System.out.println(testSampChar==testSampDigit);\n\
+    \    }\n}\n```\n\nWhat do you think will be printed on screen? You are correct\
+    \ if your answer is this: `false`. This is just a simple example. Expect ones\
+    \ that are more complicated when you begin your own program. There are times when\
+    \ testing the equality among the different data is the only way to go. Look at\
+    \ this program:\n\n```java\npublic class CompareData {\n    public static void\
+    \ main(String []args) {\n        char testSampChar='r';\n        int testSampDigit=3;\n\
+    \        System.out.println(testSampChar!=testSampDigit);\n    }\n}\n```\n\nThis\
+    \ time, you will be asking the program to test the inequality between `testSampChar`\
+    \ and `testSampDigit`. Since we already know they are not equal, the statement\
+    \ is: `true`.\n\n## Try this Practice Exercise\n\nIt is time to test what you\
+    \ learned in this chapter. You might not be aware, but you have been doing simple\
+    \ coding for quite time now. This awareness (if you are still not aware of it)\
+    \ should enhance your motivation to go further. There’s no way for you to reach\
+    \ this chapter if you did not understand anything. Doing the practice exercises\
+    \ and accomplishing your assignments without fail definitely contribute a lot\
+    \ to your advancement.\n\nYou need to practice what you have learned immediately\
+    \ so you won’t forget. If you keep the habit, then you won’t have trouble except\
+    \ trying to figure out a way of improving the flow of your program. You need to\
+    \ be careful when writing your codes, and always keep in mind that Java is case\
+    \ sensitive.\n\nIf you assign a value to variable `greatNum`, then make sure to\
+    \ declare it properly and write it correctly all throughout the program. The program\
+    \ recognizes the declared variable `greatNum`, but not `greatnum`. A slight difference,\
+    \ the manner of writing included, can break your program.\n\nNow try writing the\
+    \ codes for the program below, and make sure to observe proper capitalization\
+    \ and syntax.\n\n1. Use `want this program` as the class name of your program.\n\
+    2. On the third line, write a single line comment that goes: Let’s start here.\n\
+    3. Create a boolean variable `iWantThis` and make it `true`.\n4. Assign `'450\
+    \ + 60'` to the int variable `iAlsoWant`.\n5. Assign the value of `iAlsoWant`\
+    \ divided by 3 to `int` variable `isThatIt`.\n6. Print the value `iWantThis`,\
+    \ `iAlsoWant`, and `isThatIt`.\n\nTry coding the given sample on your own before\
+    \ looking at the answer. You can also try practicing more. Did you get the same\
+    \ answer as the one?\n\n```java\npublic class WantThisProgram {\n    // let’s\
+    \ start here.\n    public static void main(String []args) {\n        boolean iWantThis\
+    \ = true;\n        int iAlsoWant = 450 + 60;\n        int isThatIt = iAlsoWant\
+    \ / 3;\n        System.out.println(iWantThis);\n        System.out.println(iAlsoWant);\n\
+    \        System.out.println(isThatIt);\n    }\n}\n```\n\nYou will get this output:\n\
+    ```\ntrue\n510\n170\n```\n\nFor your next assignment you only need to practice\
+    \ more. Do you think you’re ready for the next lesson?\n\n## Chapter 6: Talk About\
+    \ Taking Control\n\nThere are control statements in Java programming that can\
+    \ help regulate the program’s order of execution. The control statements that\
+    \ we will discuss in this ebook are:\n\n1. The `if` statement.\n2. The `if-else`\
+    \ statement.\n3. The `switch` statement.\n4. The `while` statement.\n5. The `do-while`\
+    \ statement.\n6. The `for` statement.\n\n### Understanding the If Statement\n\n\
+    The `if` statement tells the computer to continue executing the block of codes\
+    \ as long as the expression within the `if` statement remains true. If under a\
+    \ certain event the statement becomes false, then it should prompt the computer\
+    \ to stop executing that particular block of codes. If there are other `if` statements\
+    \ somewhere in the program, the computer will continue executing them as long\
+    \ as the condition or expression within the block of codes is true.\n\nThe `if`\
+    \ statements follow this syntax:\n\n```java\nif <conditional expression>\n\n<statement\
+    \ action>\n```\n"
+  raw: '| 1 | public class ModuloProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |        System.out.println(27 % 5); |  |  |  |  |
+
+
+    | 4 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 5 | } |  |  |  |  |  |  |  |  |
+
+
+    You can also code it like this:
+
+
+    | 1 | public class ModuloProgSamp { |  |  |  |  |  |
+
+
+    | 2 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |  |
+
+
+    | 4 |        int q = 27; |  |  |  |  |  |  |
+
+
+    | 5 |        int d = 5; |  |  |  |  |  |  |
+
+
+    | 6 |        System.out.println(q % d); |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |  |
+
+
+    | 8 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 9 | } |  |  |  |  |  |  |  |  |
+
+
+    Using Comparison Operators
+
+
+    Comparison operators, also known as relational operators, compare data types,
+    and always yield a boolean value (true or false) for an answer.  You should be
+    familiar with the different truth tables at this point because you will be using
+    them a lot from here on out.  It is true that you can always go back and look
+    at the table, but going back every now and then takes so much time.  It makes
+    you less productive. 
+
+
+    Whenthere’s a presence of a comparison operator between two data (known as operands),
+    the answer you need to expect from this is always true or false.  Look at the
+    sample statement below:
+
+
+    System.out.println(56<77);
+
+
+    When the program executes it, expect that it will print trueon your computer screen
+    instead of‘56<77’.  Why? It’s because the sentence used a comparison operator
+    that automatically prompts the system to look only for a true or false answer
+    and nothing else.
+
+
+    A Java program is quick to recognize it as something that looks for a boolean
+    answer and the presence of the print command prompts it to print the boolean answer
+    on screen.
+
+
+    The comparison operators equal to (==) and not equal to (!=) are also known as
+    equality operators.  A Java programmer uses the equality operators to test and
+    see the equality of the data.  The programmer has the option to test the equality
+    of data that has int, boolean, or char data type.  You can only get a true or
+    false answer when you use a comparison operator between the data.
+
+
+    If you want to print the ones inside the parentheses, then you need to put them
+    in quotes, and the program will treat them as string.  
+
+
+    To explain further, look at the example below:
+
+
+    | 1 | public class CompareData { |  |  |  |  |  |
+
+
+    | 2 |      public static void main(String []arqs) { |  |  |  |
+
+
+    | 3 |        char testSampChar=''r''; |  |  |  |  |  |
+
+
+    | 4 |        int testSampDigit=3; |  |  |  |  |  |
+
+
+    | 5 |        system.out.prntln(testSampChar==testSampDigit); |  |  |
+
+
+    | 6 |      } |  |  |  |  |  |  |  |  |
+
+
+    | 7 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    What do you think will be printed on screen? You are correct if your answer is
+    this one:
+
+
+    | false |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    This is just a simple example.  Expect ones that are more complicated when you
+    begin coding your own program.  There are times when testing the equality among
+    the different data is the only way to go.
+
+
+    Look at this program:
+
+
+    | 1 | public class CompareData { |  |  |  |  |  |
+
+
+    | 2 |      public static void main(String []arqs) { |  |  |  |
+
+
+    | 3 |        char testSampChar=''r''; |  |  |  |  |  |
+
+
+    | 4 |        int testSampDigit=3; |  |  |  |  |  |
+
+
+    | 5 |        system.out.prntln(testSampChar!=testSampDigit); |  |  |
+
+
+    | 6 |      } |  |  |  |  |  |  |  |  |
+
+
+    | 7 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    This time, you will be asking the program to test the inequality between testSampChar
+    and testSampDigit.  Since we already know they are not equal, the statement is:
+
+
+    | true |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Try this Practice Exercise
+
+
+    It is time to test what you learned in this chapter.  You might not be aware,
+    but you have been doing simple coding for quite some time now.  This awareness
+    (if you are still not aware of it) should enhance your motivation to go further. 
+    There’s no way for you to reach this chapter if you did not understand anything. 
+    Doing the practice exercises and accomplishing your assignments without fail definitely
+    contribute a lot to your advancement.
+
+
+    You need to practice what you have learned immediately so you won’t forget.  If
+    you keep the habit, then you won’t have trouble except trying to figure out a
+    way of improving the flow of your program.  You need to be careful when writing
+    your codes, and always keep in mind that Java is case sensitive.
+
+
+    If you assign a value to variable greatNum, then make sure to declare it properly
+    and write it correctly all throughout the program.  The program recognizes the
+    declared variable greatNum, but not greatnum.  A slight difference, the manner
+    of writing included, can break your program.
+
+
+    Now try writing the codes for the program below, and make sure to observe proper
+    capitalization and syntax.
+
+
+    1.  Use‘want this program’as the class name of your program.
+
+
+    2.  On the third line, write a single line commentthat goes: Let’s start here.
+
+
+    3.  Create a boolean variable iWantThis and make it true.
+
+
+    4.  Assign‘450 + 60’to the int variable iAlsoWant.
+
+
+    5.  Assign the value of iAlsoWant divided by 3 to int variable isThatIt.
+
+
+    6.  Print the value iWantThis, iAlsoWant, and isThatIt.
+
+
+    Try coding the given sample on your own before looking at the answer.  You can
+    also try practicing more.
+
+
+    Did you get the same answer as the one below?
+
+
+    | 1 | public class WantThisProgram { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |   //let''s start here. |  |  |  |  |  |  |
+
+
+    | 4 |     public static void main(String  []args) { |  |  |  |
+
+
+    | 5 |        boolean iWantThis = true; |  |  |  |  |
+
+
+    | 6 |        int iAlsoWant = 450 + 60; |  |  |  |  |
+
+
+    | 7 |        int isThatIt = iAlsoWant / 3; |  |  |  |  |
+
+
+    | 8 |        System.out.println(iWantThis); |  |  |  |  |
+
+
+    | 9 |        System.out.println(iAlsoWant); |  |  |  |  |
+
+
+    | 10 |        System.out.println(isThatIt); |  |  |  |  |
+
+
+    | 11 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 12 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    You will get this output:
+
+
+    | true |  |  |  |  |  |  |  |  |  |
+
+
+    | 510 |  |  |  |  |  |  |  |  |  |
+
+
+    | 170 |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    For your next assignment you only need to practice some more.  Do you think you’re
+    ready for the next lesson?
+
+
+    Chapter 6: Talk About Taking Control
+
+
+    There are control statements in Java programming that can help regulate the program’s
+    order of execution.  The control statements that we will discuss in this ebook
+    are:
+
+
+    1.  The if statement.
+
+
+    2.  The if-else statement.
+
+
+    3.  The switch statement.
+
+
+    4.  The while statement.
+
+
+    5.  The do-while statement.
+
+
+    6.  The for statement.
+
+
+    You can use any of the mentioned control statements depending on what you want
+    your program to do.  These control statements are enough for now since you are
+    only a beginner.  They are also the widely used control statements in Java programming.
+
+
+    Understanding the If Statement
+
+
+    The if statement tells the computer to continue executing the block of codes as
+    long as the expression within the if statement remains true.  If under a certain
+    event that the statement becomes false, then it should prompt the computer to
+    stop executing that particular block of codes.  If there are other if statements
+    somewhere in the program, the computer will continue executing them as long as
+    the condition or expression within the block of codes is true.
+
+
+    There are cases when the execution of the if statement might not continue unless
+    a separate block of codes within the if block is satisfied.  Upon meeting all
+    of the conditions and the expression within the block returns false as reply,
+    then the computer will stop executing that block of codes.
+
+
+    The if statements follow this syntax:
+
+
+    if <conditional expression>
+
+
+    <statement action>
+
+
+    if <conditional expression>
+
+
+    <statement action>
+
+
+    Look at the sample below:'
+  toc: []
+  trans: "\n\n```java\npublic class ModuloProgSamp {\n    public static void main(String\
+    \ []args) {\n        System.out.println(27 % 5);\n    }\n}\n```\n\n你也可以这样编写代码：\n\
+    \n```java\npublic class ModuloProgSamp {\n    public static void main(String []args)\
+    \ {\n        int q = 27;\n        int d = 5;\n        System.out.println(q % d);\n\
+    \    }\n}\n```\n\n## 使用比较运算符\n\n比较运算符，也称为关系运算符，用于比较数据类型，并始终产生布尔值（`true` 或 `false`）作为答案。此时，你应该已经熟悉不同的真值表了，因为从以后你将经常使用它们。确实，你可以随时回头查看表格，但频繁回回查看会花费大量时间，这会降低你的工作效率。\n\
+    \n当两个数据（称为操作数）之间存在比较运算符时，你预期的答案始终是 `true` 或 `false`。看下方的示例语句：\n\n```java\nSystem.out.println(56<77);\n\
+    ```\n\n当程序执行它时，预计它会在你的电脑屏幕上打印 `true`，而不是 `'56<77'`。为什么？因为该语句使用了比较运算符，它会自动提示系统只寻找\
+    \ `true` 或 `false` 答案。Java 程序能快速识别出这是一个寻找布尔答案的操作，而打印命令的存在会提示它在屏幕上打印该布尔答案。\n\n\
+    等等于 (`==`) 和不等于 (`!=`) 比较运算符也称为相等性运算符。Java 程序员使用相等运算符来检查数据的相等性。程序员可以选择测试 `int`、`boolean`\
+    \ 或 `char` 类型数据的相等性. 只有当在数据之间使用比较运算符时，你才能得到 `true` 或 `false` 答案。如果你想打印括号内的内容，你需要将它们放在引号中，程序将把它们视为字符串。为了进一步解释，请看下面的示例：\n\
+    \n```java\npublic class CompareData {\n    public static void main(String []args)\
+    \ {\n        char testSampChar='r';\n        int testSampDigit=3;\n        System.out.println(testSampChar==testSampDigit);\n\
+    \    }\n}\n```\n\n你认为屏幕上会打印什么？如果你的答案是这个：`false`，那么你是正确的。这只是一个简单的例子。当你开始编写自己的程序时，请预期会有更复杂的情况。有时，测试不同数据之间的相等性是唯一的方法。看这个程序：\n\
+    \n```java\npublic class CompareData {\n    public static void main(String []args)\
+    \ {\n        char testSampChar='r';\n        int testSampDigit=3;\n        System.out.println(testSampChar!=testSampDigit);\n\
+    \    }\n}\n```\n\n这一次，你是在要求程序测试 `testSampChar` 和 `testSampDigit` 之间的不相等性。由于我们已经知道它们不等，所以结果是：`true`。\n\
+    \n## 尝试这个练习题\n\n是时候测试你在这一章中学到的东西了。你可能没有意识到，但你已经编写了相当长时间简单代码了。这种意识（如果你还没有意识到的话）应该增强你进一步学习的动力。如果你什么都看不读懂，是不可能到达这一章的。毫无遗漏地完成练习题并完成作业对你的进步绝对有帮助。\n\
+    \n你需要立即练习所学的内容，以防忘记。如果你能保持这个习惯，除了尝试寻找改进程序流程的方法外，你将不会遇到麻烦。编写代码时需要小心，并始终记住 Java\
+    \ 是区分大小写的。\n\n如果你给变量 `greatNum` 赋值，请确保在整个程序中都正确声明并正确书写它。程序能识别声明的变量 `greatNum`，但不能识别\
+    \ `greatnum`。微小的差别（包括书写方式）就会破坏你的程序。\n\n现在尝试编写下面程序的代码，并确保遵守正确的大小写和语法。\n\n1. 使用\
+    \ `want this program` 作为程序的类名。\n2. 在第三行，写一行单行注释：Let’s start here.。\n3. 创建一个布尔变量\
+    \ `iWantThis` 并将其设置为 `true`。\n4. 将 `'450 + 60'` 赋值给 int 变量 `iAlsoWant`。\n5. 将\
+    \ `iAlsoWant` 的值除以 3 后赋值给 int 变量 `isThatIt`。\n6. 打印值 `iWantThis`、`iAlsoWant` 和\
+    \ `isThatIt`。\n\n在看答案之前，尝试自己编写给示例。你也可以尝试更多练习。你得到的答案和示例的一样吗？\n\n```java\npublic\
+    \ class WantThisProgram {\n    // let’s start here.\n    public static void main(String\
+    \ []args) {\n        boolean iWantThis = true;\n        int iAlsoWant = 450 +\
+    \ 60;\n        int isThatIt = iAlsoWant / 3;\n        System.out.println(iWantThis);\n\
+    \        System.out.println(iAlsoWant);\n        System.out.println(isThatIt);\n\
+    \    }\n}\n```\n\n你将得到这个输出：\n```\ntrue\n510\n170\n```\n\n对于你的下一个作业，你只需要更多练习。你准备好学习下一课了吗？\n\
+    \n## 第 6 章：谈谈控制\n\nJava 编程中的控制语句可以帮助调节程序的执行顺序。我们在本电子书中讨论的控制语句有：\n\n1. `if` 语句。\n\
+    2. `if-else` 语句。\n3. `switch` 语句。\n4. `while` 语句。\n5. `do-while` 语句。\n6. `for`\
+    \ 语句。\n\n### 理解 if 语句\n\n`if` 语句告诉计算机，只要 `if` 语句中的表达式为真，就继续执行该代码块。如果在某些特定情况下该语句变为假，那么它应该提示计算机停止执行特定的代码块。如果程序其他地方还有其他\
+    \ `if` 语句，只要代码块中的条件或表达式为真，计算机就会继续执行它们。\n\n`if` 语句遵循以下语法：\n\n```java\nif <conditional\
+    \ expression>\n\n<statement action>\n```\n\n"
+- fmt: "\n```java\npublic class SampleStatementIf {\n    public static void main(String[]\
+    \ args) {\n        int a = 40, b = 50;\n        if (a > b) {\n            System.out.println(\"\
+    a is greater than b\");\n        }\n        if (a < b) {\n            System.out.println(\"\
+    b is greater than a\");\n        }\n    }\n}\n```\n\nThis will print:\n\n`b is\
+    \ greater than a`\n\nLet us analyze:\n\nIn line 4, the variables are declared\
+    \ as `int` together with their corresponding value.\n\nIn line 5, there’s an `if`\
+    \ statement that says, ‘a is greater b’. Since the statement is false, the program\
+    \ prompts the computer to bypass the next statement. It stops executing that particular\
+    \ `if` statement because the condition is not true. Hence, it did not print anything.\n\
+    \nIn line 7, there’s an `if` statement that says, ‘b is greater a’. Since the\
+    \ statement is true, the program allows the execution of the next statement, which\
+    \ tells the computer to print ‘b is greater than a’. Since the condition in `if`\
+    \ statement this time is true, the computer finally prints the output.\n\nThe\
+    \ closing bracket in line 9 informs the computer that the task has been satisfied\
+    \ and there are no more codes to execute.\n\nIn case the condition in the first\
+    \ `if` statement is true, the computer will still execute the next `if` statement\
+    \ and will do what the codes tell it to do as long as the statement is true. It\
+    \ will only stop when it finally encountered the corresponding closing bracket.\n\
+    \n## Dealing with the If-Else (or Nested If) Statement\n\nJust like the `if` statement,\
+    \ the `if-else` statement also tells the computer to execute the `if-else` block\
+    \ of codes only if the condition of the statement is true. In case the statement\
+    \ is false, then the `else` statement will be executed provided that the condition\
+    \ in the `else` statement is true.\n\nThe `if-else` statement follows this syntax:\n\
+    \n```java\nif <conditional expression> {\n    <statement action>\n} else {\n \
+    \   <statement action>\n} else {\n    <statement action>\n}\n```\n\nTake the sample\
+    \ program below:\n\n```java\npublic class IfElseSample {\n    public static void\
+    \ main(String[] args) {\n        int g = 50, h = 20;\n        if (g > h) {\n \
+    \           System.out.println(\"g is greater than h\");\n        } else if (g\
+    \ < h){\n            System.out.println(\"h is greater than g\");\n        } else\
+    \ {\n            System.out.println(\"g is equal to h\");\n        }\n    }\n\
+    }\n```\n\nThis will print:\n\n`g is greater than h`\n\nLet us analyze:\n\nIn line\
+    \ 4, the variables are declared as `int` together with their value.\n\nIn line\
+    \ 5, there’s an `if` statement that says, ‘g is greater h’. Since the statement\
+    \ is true the program prompts the computer to stop executing the rest of the codes.\
+    \ The nested `if` or `if-else` statement stops executing the rest of the codes\
+    \ once the program encounters a condition that proves to be true. In an `if` statement,\
+    \ the program will still execute the other lines if it has already encountered\
+    \ a condition that proves to be true; there’s a sample program below that explains\
+    \ this in a more detailed manner. In case the first `if` statement is false, the\
+    \ program will then execute the first `else` statement only if it’s true. Otherwise,\
+    \ it will execute the last `else` statement that has no conditional statement,\
+    \ just an instruction to proceed with ‘g is equal to h’.\n\nBut, if you have this\
+    \ program:\n\n```java\npublic class IfElseSample {\n    public static void main(String[]\
+    \ args) {\n        int g = 50, h = 20;\n        if (g > h) {\n            System.out.println(\"\
+    g is greater than h\");\n            if (g > h){\n                System.out.println(\"\
+    h is greater than g\");\n            } else {\n                System.out.println(\"\
+    g is equal to h\");\n            }\n        }\n    }\n}\n```\n\nIt will print\
+    \ this one:\n\n`g is greater than h`\n`h is greater than g`\n\nThe second statement\
+    \ is false, but the program doesn’t care what it prints as long as the conditional\
+    \ statement is true. Also, the program is compelled to execute the next `if` statement\
+    \ even though the first one is already true. The reason is because both `if` statements\
+    \ are independent, unlike in nested `if`. It is safe to say that the `if-else`\
+    \ statements give you more control over your program, especially if there are\
+    \ many available options, but the program must only execute one specific choice.\n\
+    \n### Try this practice exercise using if-else statement:\n\n1. The class name\
+    \ of your program is `MyOwnProg`.\n2. Skip the second line for readability.\n\
+    3. Declare the following boolean variables: `a = true, b = false, c = false`.\n\
+    4. If `a` is equal to `b`, then print: `a is equal to b`.\n5. If `b` is equal\
+    \ to `c`, then print: `b is equal to c`.\n6. If `a` is equal to `c`, then print:\
+    \ `a is equal to c`.\n\nAfter running the code, you should get this result:\n\n\
+    `b is equal to c.`\n\nIf you did not get it, then just this once, here is the\
+    \ answer:\n\n```java\npublic class MyOwnProg {\n    public static void main(String[]\
+    \ args) {\n        boolean a = true, b = false, c = false;\n        if (a == b)\
+    \ {\n            System.out.println(\"a is equal to b\");\n        }\n       \
+    \ if (b == c) {\n            System.out.println(\"b is equal to c\");\n      \
+    \  }\n        if (a == c) {\n            System.out.println(\"a is equal to c\"\
+    );\n        }\n    }\n}\n```\n\nYou can also try the if-else statement version\
+    \ of this program if you want.\n\nBefore we proceed to the next topic, you can\
+    \ choose to do the next one right away, practice some of `if` and nested `if`\
+    \ statement, or take a break and have the next one tomorrow.\n\n## Switch\n\n\
+    The `switch` statement is also called the `case` statement. The programmer provides\
+    \ different options or choices for the program to execute. You can say that the\
+    \ `switch` statement is similar to `if-else` statement but it looks more organized\
+    \ than the nested `if`. The program will only execute the statement that proves\
+    \ to be true. will appreciate the orderliness of the `switch` statement and it\
+    \ is easier to update and maintain as compared to the nested `if` statement. If\
+    \ you need to provide a lot of choices or options, it is advisable to use the\
+    \ `switch` statement instead of `if-else` statement.\n\nBelow is the syntax for\
+    \ the `switch` statement:\n\n```java\nswitch <non-long integral expression> {\n\
+    \    case 1:\n        <statement 1>\n        break;\n    case 2:\n        <statement\
+    \ 2>\n        break;\n    case 3:\n        <statement 3>\n        break;\n   \
+    \ ...\n    case n:\n        <statement n>\n        break;\n    default:\n    \
+    \    <statement>\n} // end of switch or case statement\n```\n\nLook at the sample\
+    \ program below:\n\n```java\npublic class SwitchStatementDemo {\n    // This is\
+    \ a practice program.\n    public static void main(String[] args) {\n    }\n}\n\
+    ```\n"
+  raw: '| 1 | public class SampleStatementIf { |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |         public static void main(String[] args) { |  |  |
+
+
+    | 4 |             int a = 40, b = 50; |  |  |  |  |
+
+
+    | 5 |             if (a > b) |  |  |  |  |  |
+
+
+    | 6 |                 System.out.println("a is greater than b"); |
+
+
+    | 7 |             if (a < b) |  |  |  |  |  |
+
+
+    | 8 |                 System.out.println("b is greater than a"); |
+
+
+    | 9 |         } |  |  |  |  |  |  |  |
+
+
+    | 10 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    This will print:
+
+
+    | b is greater than a |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Let us analyze:
+
+
+    In line 4, the variables are declared as int together with their corresponding
+    value.
+
+
+    In line 5, there’s if statement that says, ‘a is greater b’.  Since the statement
+    is false the program prompts the computer to bypass the next statement.  It stops
+    executing that particular if statement because the condition is not true.  Hence,
+    it did not print anything.
+
+
+    In line 7, there’s an if statement that says, ‘b is greater a’.  Since the statement
+    is true the program allows the execution of the next statement, which tells the
+    computer to print ‘b is greater than a’.  Since the condition in if statement
+    this time is true, the computer finally prints the output.
+
+
+    The closing bracket in line 9 informs the computer that the task has been satisfied
+    and there are no more codes to execute.
+
+
+    In case the condition in the first if statement is true, the computer will still
+    execute the next if statement and will do what the codes tell it to do as long
+    as the statement is true.  It will only stop when it finally encountered the corresponding
+    closing bracket.
+
+
+    Dealing with the If-Else (or Nested If) Statement
+
+
+    Just like the if statement, the if-else statement also tells the computer to execute
+    the if-else block of codes only if the condition of the statement is true.  In
+    case the statement is false, then the else statement will be executed provided
+    that the condition in the else statement is true.
+
+
+    The if-else statement follows this syntax:
+
+
+    if <conditional expression> {
+
+
+    <statement action>
+
+
+    } else {
+
+
+    <statement action>
+
+
+    }else {
+
+
+    <statement action>
+
+
+    Take the sample program below:
+
+
+    | 1 | public class IfElseSample { |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |     public static void main(String[] args) { |  |  |
+
+
+    | 4 |             int g = 50, h = 20; |  |  |  |  |
+
+
+    | 5 |             if (g > h) { |  |  |  |  |  |
+
+
+    | 6 |                     System.out.println("g is greater than h"); |
+
+
+    | 7 |             } else if (g < h){ |  |  |  |  |
+
+
+    | 8 |                     System.out.println("h is greater than g"); |
+
+
+    | 9 |             } else { |  |  |  |  |  |
+
+
+    | 10 |                     System.out.println("g is equal to h"); |  |
+
+
+    | 11 |             } |  |  |  |  |  |  |
+
+
+    | 12 |     } |  |  |  |  |  |  |  |
+
+
+    | 13 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    This will print:
+
+
+    | g is greater than h |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Let us analyze:
+
+
+    In line 4, the variables are declared as int together with their corresponding
+    value.
+
+
+    In line 5, there’s an if statement that says, ‘g is greater h’.  Since the statement
+    is true the program prompts the computer to stop executing the rest of the codes. 
+    The nested if or if-else statement stops executing the rest of the codes once
+    the program encounters a condition that proves to be true.  In an if statement,
+    the program will still execute the other lines even if it has already encountered
+    a condition that proves to be true; there’s a sample program below that explains
+    this in a more detailed manner.
+
+
+    In case the first if statement is false, the program will then execute the first
+    else statement only if it’s true.  Otherwise, it will execute the last else statement
+    that has no conditional statement, just an instruction to proceed with printing
+    ‘g is equal to h’.
+
+
+    But, if you have this program:
+
+
+    | 1 | public class IfElseSample { |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |     public static void main(String[] args) { |  |  |
+
+
+    | 4 |             int g = 50, h = 20; |  |  |  |  |
+
+
+    | 5 |             if (g > h) |  |  |  |  |  |
+
+
+    | 6 |                     System.out.println("g is greater than h"); |
+
+
+    | 7 |             if (g > h){ |  |  |  |  |
+
+
+    | 8 |                     System.out.println("h is greater than g"); |
+
+
+    | 9 |             } else { |  |  |  |  |  |
+
+
+    | 10 |                     System.out.println("g is equal to h"); |  |
+
+
+    | 11 |             } |  |  |  |  |  |  |
+
+
+    | 12 |     } |  |  |  |  |  |  |  |
+
+
+    | 13 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    It will print this one:
+
+
+    | g is greater than h |  |  |  |  |  |  |
+
+
+    | h is greater than g |  |  |  |  |  |  |
+
+
+    The second statement is false, but the program doesn’t care what it prints as
+    long as the conditional statement is true.  Also, the program is compelled to
+    execute the next if statement even though the first one is already true.  The
+    reason is because both if statements are independent, unlike in nested if.  It
+    is safe to say that the if-else statements give you more control over your program,
+    especially if there are many available options, but the program must only execute
+    one specific choice.
+
+
+    Try this practice exercise using if-else statement:
+
+
+    1.  The class name of your program is‘MyOwnProg’.
+
+
+    2.  Skip the second line for readability.
+
+
+    3.  Declare the following boolean variables:
+
+
+         a = true, b = false, c = false
+
+
+    4.  If a is equal to b, then print: a is equal to b.
+
+
+    5\. If b is equal to c, then print: b is equal to c.
+
+
+    6.  If a is equal to c, then print: a is equal to c.
+
+
+    After running the code, you should get this result:
+
+
+    | b is equal to c. |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    If you did not get it, then just this once, here is the answer:
+
+
+    | 1 | public class MyOwnProg { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 | public static void main(String  []args) { |  |  |  |
+
+
+    | 4 |      boolean a = true, b = false, c = false; |  |  |  |
+
+
+    | 5 |      if (a==b) |  |  |  |  |  |  |  |
+
+
+    | 6 |        System.out.println("a is equal to b"); |  |  |  |
+
+
+    | 7 |      if (b==c) |  |  |  |  |  |  |  |
+
+
+    | 8 |        System.out.println("b is equal to c"); |  |  |  |
+
+
+    | 9 |      if (a==c) |  |  |  |  |  |  |  |
+
+
+    | 10 |        System.out.println("a is equal to c"); |  |  |  |
+
+
+    | 11 |     } |  |  |  |  |  |  |  |  |
+
+
+    | 12 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    You can also try doing the if-else statement version of this program if you want.
+
+
+    Before we proceed to the next topic, you can choose to do the next one right away,
+    practice some more of the if and nested if statement, or take a break and have
+    the next one tomorrow.
+
+
+    The Switch
+
+
+    The switch statement is also called the case statement.  The programmer provides
+    different options or choices for the program to execute.  You can say that the
+    switch statement is similar to if-else statement but it looks more organized than
+    the nested if.  The program will only execute the statement that proves to be
+    true.    
+
+
+    You will appreciate the orderliness of the switch statement and it is easier to
+    update and maintain as compared to the nested if statement.  If you need to provide
+    a lot of choices or options, it is advisable to use the switch statement instead
+    of if-else statement.
+
+
+    Below is the syntax for the switch statement:
+
+
+      switch <non-long integral expression> {
+
+
+         case 1: 
+
+
+    <statement  1>
+
+
+    break;
+
+
+         case 2: 
+
+
+    <statement  2>
+
+
+    break;
+
+
+         case 3: 
+
+
+    <statement  3>
+
+
+    break;
+
+
+         .
+
+
+         .
+
+
+         .
+
+
+        case n: 
+
+
+    <statement  n>
+
+
+    break;
+
+
+        default:
+
+
+    <statement>
+
+
+    } // end of switch or case statement
+
+
+    Look at the sample program below:
+
+
+    | 1 | public class SwitchStatementDemo { |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |
+
+
+    | 3 |     //This is a practice program. |  |  |  |
+
+
+    | 4 |     public static void main(String  []args) { |  |  |'
+  toc: []
+  trans: "\n```java\npublic class SampleStatementIf {\n    public static void main(String[]\
+    \ args) {\n        int a = 40, b = 50;\n        if (a > b) {\n            System.out.println(\"\
+    a is greater than b\");\n        }\n        if (a < b) {\n            System.out.println(\"\
+    b is greater than a\");\n        }\n    }\n}\n```\n\n这将会输出：\n\n`b is greater than\
+    \ a`\n\n让我们来分析：\n\n第 4 行，变量被声明为 `int` 并赋了相应的值。\n\n第 5 行，有一个 `if` 语句判断为“a 大于 b”。由于该语句为假，程序提示计算机跳过下一条语句。因为条件不成立，程序停止执行该特定的\
+    \ `if` 语句。因此，它没有打印任何内容。\n\n第 7 行，有一个 `if` 语句判断为“b 大于 a”。由于该语句为真，程序允许执行下一条语句，告诉计算机打印“b\
+    \ is greater than a”。由于这次 `if` 语句中的条件为真，计算机最终输出了输出。\n\n第 9 行的右括号告知计算机任务已完成，没有更多代码需要执行。\n\
+    \n如果第一个 `if` 语句中的条件为真，计算机仍然会执行下一个 `if` 语句，只要语句为真，它就会按照代码指令操作。它只在最后遇到对应的右括号时才会停止。\n\
+    \n## 处理 If-Else（或嵌套 If）语句\n\n与 `if` 语句一样，`if-else` 语句也告诉计算机只有在语句条件为真时才执行 `if-else`\
+    \ 代码块。如果语句为假，则只要 `else` 语句中的条件为真，就会执行 `else` 语句。\n\n`if-else` 语句遵循以下语法：\n\n```java\n\
+    if <conditional expression> {\n    <statement action>\n} else {\n    <statement\
+    \ action>\n} else {\n    <statement action>\n}\n```\n\n参考下面的示例程序：\n\n```java\n\
+    public class IfElseSample {\n    public static void main(String[] args) {\n  \
+    \      int g = 50, h = 20;\n        if (g > h) {\n            System.out.println(\"\
+    g is greater than h\");\n        } else if (g < h){\n            System.out.println(\"\
+    h is greater than g\");\n        } else {\n            System.out.println(\"g\
+    \ is equal to h\");\n        }\n    }\n}\n```\n\n这将会输出：\n\n`g is greater than\
+    \ h`\n\n让我们来分析：\n\n第 4 行，变量被声明为 `int` 并赋了它们的值。\n\n第 5 行，有一个 `if` 语句判断为“g 大于 h”。由于该语句为真，程序提示计算机停止执行剩余代码。一旦程序遇到一个证明为真的条件，嵌套的\
+    \ `if` 或 `if-else` 语句就会停止执行剩余代码。在 `if` 语句中，如果程序已经遇到一个证明为真的条件，它仍然会执行其他行代码；下面有一个示例程序将更详细地解释这一点。如果第一个\
+    \ `if` 语句为假，程序只有在第一个 `else` 语句为真时才会执行第一个 `else` 语句。否则，它将执行最后一个没有条件语句的 `else` 语句，那只是一个继续执行“g\
+    \ is equal to h”的指令。\n\n但是，如果你有这个程序：\n\n```java\npublic class IfElseSample {\n\
+    \    public static void main(String[] args) {\n        int g = 50, h = 20;\n \
+    \       if (g > h) {\n            System.out.println(\"g is greater than h\");\n\
+    \            if (g > h){\n                System.out.println(\"h is greater than\
+    \ g\");\n            } else {\n                System.out.println(\"g is equal\
+    \ to h\");\n            }\n        }\n    }\n}\n```\n\n它将会输出：\n\n`g is greater\
+    \ than h`\n`h is greater than g`\n\n第二条语句为假，但只要条件语句为真，程序并不在乎打印什么。此外，即使第一个语句已经为真，程序也被强制执行下一个\
+    \ `if` 语句。这是因为两个 `if` 语句是独立的，与嵌套的 `if` 不同。可以说，`if-else` 语句让你对程序有更多的控制力，特别是当有许多可用选项时，但程序必须执行其中一个特定的选择。\n\
+    \n### 尝试使用 if-else 语句这个练习题：\n\n1. 你的程序类名为 `MyOwnProg`。\n2. 为了可读性，跳过第二行。\n3. 声明以下布尔变量：`a\
+    \ = true, b = false, c = false`。\n4. 如果 `a` 等于 `b`，则打印：`a is equal to b`。\n5.\
+    \ 如果 `b` 等于 `c`，则打印：`b is equal to c`。\n6. 如果 `a` 等于 `c`，则打印：`a is equal to c`。\n\
+    \n运行代码后，你应该得到这个结果：\n\n`b is equal to c.`\n\n如果你没有得到，那么这一次这里是答案：\n\n```java\npublic\
+    \ class MyOwnProg {\n    public static void main(String[] args) {\n        boolean\
+    \ a = true, b = false, c = false;\n        if (a == b) {\n            System.out.println(\"\
+    a is equal to b\");\n        }\n        if (b == c) {\n            System.out.println(\"\
+    b is equal to c\");\n        }\n        if (a == c) {\n            System.out.println(\"\
+    a is equal to c\");\n        }\n    }\n}\n```\n\n如果你愿意，也可以尝试这个程序的 if-else 语句版本。\n\
+    \n在进入下一个主题之前，你可以选择直接进行下一个，练习 `if` 和嵌套 `if` 语句，或者休息明天进行。\n\n## Switch\n\n`switch`\
+    \ 语句也称为 `case` 语句。程序员提供了不同的选项供程序执行。你可以说 `switch` 语句类似于 `if-else` 语句，但比嵌套的 `if`更有组织。程序只会执行证明为真的语句。你会喜欢\
+    \ `switch` 语句的有序性，与嵌套的 `if` 语句相比，更容易更新和维护。如果你需要提供很多选择或选项，建议使用 `switch` 语句代替 `if-else`\
+    \ 语句。\n\n下面是 `switch` 语句的语法：\n\n```java\nswitch <non-long integral expression>\
+    \ {\n    case 1:\n        <statement 1>\n        break;\n    case 2:\n       \
+    \ <statement 2>\n        break;\n    case 3:\n        <statement 3>\n        break;\n\
+    \    ...\n    case n:\n        <statement n>\n        break;\n    default:\n \
+    \       <statement>\n} // end of switch or case statement\n```\n\n看下面的示例程序：\n\n\
+    ```java\npublic class SwitchStatementDemo {\n    // 这是一个练习程序。\n    public static\
+    \ void main(String[] args) {\n    }\n}\n```\n"
+- fmt: '
+
+    ```java
+
+    5:    boolean a=false, b=false, c=true, d=false;
+
+    6:    int answer = 0;
+
+    7:    System.out.println("This is My Sample Output");
+
+    8:    if (a == c) {
+
+    9:    answer = 1;
+
+    10:    } else if (b == a) {
+
+    11:        answer = 2;
+
+    12:    } else if (c == b){
+
+    13:        answer = 3;
+
+    14:    } else if (d == b) {
+
+    15:        answer = 4;
+
+    16:    }
+
+    17:    switch (answer) {
+
+    18:        case 1:
+
+    19:            System.out.println("a is the same as c");
+
+    20:            break;
+
+    21:        case 2:
+
+    22:            System.out.println("b is the same as a");
+
+    23:            break;
+
+    24:        case 3:
+
+    25:            System.out.println("c is the same as b");
+
+    26:            break;
+
+    27:        case 4:
+
+    28:            System.out.println("d is the same as b");
+
+    29:            break;
+
+    30:        default:
+
+    31:            System.out.println("Error encountered, try again");
+
+    32:        }
+
+    33:  }
+
+    34: }
+
+    ```
+
+
+    Let us analyze the program. You need to declare the variables that you need to
+    use as well as their assigned values. There’s also a need for you to initialize
+    the int `answer`. As you can see, you need it for your `switch` statement. If
+    you won’t initialize it, your program will not run.
+
+
+    The first `if` statement bears a condition that `a` is equal to `c`. Since the
+    statement is false, the program will no longer execute it. However, if the answer
+    is true, then 1 will be assigned to the variable `answer`.
+
+
+    Else if `b` is equal to `a`, then 2 will be assigned to the variable `answer`.
+    The same explanation goes to the rest of the nested ifs.
+
+
+    Next is the `switch` part of the program. There are different options, and each
+    option corresponds to each value of the variable `answer`. In this case, the clear
+    answer is 2 and the program has no choice but to execute the print under it. You
+    can change the assigned value if you want to see the result. You can also try
+    the condition in each `if-else` statement and see what happens. You can re-write
+    your codes or modify them, but make sure that the changes are consistent throughout
+    the program, i.e the variable name and corresponding data type. Expect your program
+    to yield a different result or won’t run at all if you failed to change all the
+    things you need to change.
+
+
+    ### While Statement
+
+
+    The `while` loop compels the program to keep doing the block of codes under it
+    as long as the condition in the `while` statement remains true. The program automatically
+    stops doing the instructions once the `while` statement yields a false.
+
+
+    You will find the syntax for the `while` statement or loop below:
+
+
+    ```
+
+    while (<loop condition>)
+
+    <statement>
+
+    ```
+
+
+    To illustrate it further, take a look at the sample program:
+
+
+    ```java
+
+    1: public class WhileDemo {
+
+    2:   public static void main(String[] args) {
+
+    3:     int count = 10;
+
+    4:     System.out.println("Numbers 10 to 1");
+
+    5:     while (count != 0) {
+
+    6:         System.out.println(count--);
+
+    7:     }
+
+    8:   }
+
+    9: }
+
+    ```
+
+
+    The sample program prints this output:
+
+    ```
+
+    Numbers 10 to 1
+
+    10
+
+    9
+
+    8
+
+    7
+
+    6
+
+    5
+
+    4
+
+    3
+
+    2
+
+    1
+
+    ```
+
+
+    The variable `count` must be declared as `int` with an initial value of 10. In
+    line 5, the heading must be printed. In line 6, the program must execute the block
+    of codes while the variable `count` is not yet equal to zero.
+
+
+    It will print the initial number 10 on screen and this symbol `--` means that
+    `count` must decrement by 1. The next time it goes back to the loop, the variable
+    `count` will be equal to 9 and it gets printed. The variable `count` decreases
+    by 1, and the next time it goes back to the loop its value becomes 8 until the
+    value of the variable `count` turns 0.
+
+
+    The moment the variable `count` acquires the value 0, it stops doing the block
+    of code and exits the program.
+
+
+    Try re-writing the sample program, but this time print the numbers 1 to 10 in
+    ascending order.
+
+
+    ### Do-While Statement
+
+
+    The `do-while` loop or statement is just the same as `while` statement, except
+    the action is given first and the checking of the actual condition comes later.
+    The presence of `while` signifies the start of the loop for the program. The `do-while`
+    statement allows you to gain more control because it makes sure that the action
+    happens at least once.
+
+
+    Below is the syntax for the `do-while` statement:
+
+
+    ```
+
+    do
+
+    <loop body>
+
+    while <loop condition>;
+
+    ```
+
+
+    Look at this sample program:
+
+
+    ```java
+
+    1: public class SampleDoWhileStatement {
+
+    2:   public static void main(String[] args) {
+
+    3:     int rabbit = 10;
+
+    4:     System.out.println("Numerals 10 to 1");
+
+    5:     do {
+
+    6:         System.out.println(rabbit--);
+
+    7:     } while (rabbit >= 1);
+
+    8:   }
+
+    9: }
+
+    ```
+
+
+    It will give this output:
+
+    ```
+
+    Numerals 10 to 1
+
+    10
+
+    9
+
+    8
+
+    7
+
+    6
+
+    5
+
+    4
+
+    3
+
+    2
+
+    1
+
+    ```
+
+
+    The variable `rabbit` must be declared as `int` with an initial value of 10. In
+    line 5, the heading must be printed. In line 6, the program must print the value
+    of `rabbit`, which is 10, and then decrement it by 1. Again, the symbol `--` tells
+    the program to decrement the value of the variable by 1.
+
+
+    It then checks if the value of `rabbit` is still greater than or equal to 1. The
+    value of `rabbit` this time is 9, which is still greater than or equal to 1. It
+    will go back to do the block of codes once more and print 9 on screen. The program
+    will keep doing the loop until the value of variable `rabbit` turns 0.
+
+
+    When `rabbit` becomes less than 1, the loop stops and the program ends.
+
+
+    ### For Loop
+
+
+    You can use the `for` loop when you want to repeat executing a block of codes
+    for a certain number of times. The program will continue executing the block of
+    codes as long as the condition proves to be true.
+
+
+    Instead of writing repetitive statements or codes, you can just write a line or
+    two and the program will keep doing the same thing within a specified number of
+    times. You also gain more control because the program stops when it has repeated
+    the number of times that it supposed to execute the block of codes.
+
+
+    Below is the syntax for the `for` loop:
+
+
+    ```
+
+    for <initialization>; <loop condition>; <increment/decrement expression>
+
+    <loop body>
+
+    ```
+
+
+    Here is the sample program:
+
+
+    ```java
+
+    1: public class SampleForLoop {
+
+    ```
+
+    '
+  raw: '| 5 |     boolean a=false, b=false, c=true, d=false; |  |  |
+
+
+    | 6 |     int answer = 0; |  |  |  |  |  |
+
+
+    | 7 |     System.out.println("This is My Sample Output"); |  |
+
+
+    | 8 |     if (a == c) { |  |  |  |  |  |  |
+
+
+    | 9 |     answer = 1; |  |  |  |  |  |
+
+
+    | 10 |     } else if (b == a) { |  |  |  |  |
+
+
+    | 11 |        answer = 2; |  |  |  |  |  |
+
+
+    | 12 |     } else if (c == b){ |  |  |  |  |  |
+
+
+    | 13 |        answer = 3; |  |  |  |  |  |  |
+
+
+    | 14 |     } else if (d == b) { |  |  |  |  |
+
+
+    | 15 |        answer = 4; |  |  |  |  |  |
+
+
+    | 16 |     } |  |  |  |  |  |  |  |
+
+
+    | 17 |        switch (answer) { |  |  |  |  |
+
+
+    | 18 |        case 1: |  |  |  |  |  |  |
+
+
+    | 19 |           System.out.println("a is the same as c"); |  |
+
+
+    | 20 |           break; |  |  |  |  |  |  |
+
+
+    | 21 |        case 2: |  |  |  |  |  |  |
+
+
+    | 22 |           System.out.println("b is the same as a"); |  |
+
+
+    | 23 |           break; |  |  |  |  |  |  |
+
+
+    | 24 |        case 3: |  |  |  |  |  |  |
+
+
+    | 25 |           System.out.println("c is the same as b"); |  |
+
+
+    | 26 |           break; |  |  |  |  |  |
+
+
+    | 27 |        case 4: |  |  |  |  |  |  |
+
+
+    | 28 |           System.out.println("d is the same as b"); |  |
+
+
+    | 29 |           break; |  |  |  |  |  |
+
+
+    | 30 |        default: |  |  |  |  |  |  |
+
+
+    | 31 |           System.out.println("Error encountered, try again"); |
+
+
+    | 32 |        } |  |  |  |  |  |  |
+
+
+    | 33 |    } |  |  |  |  |  |  |  |
+
+
+    | 34 | } |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |
+
+
+    Let us analyze the program.  You need to declare the variables that you need to
+    use as well as their assigned values.  There’s also a need for you to initialize
+    the int answer.  As you can see, you need it for your switch statement.  If you
+    won’t initialize it, your program will not run.
+
+
+    The first if statement bears a condition that a is equal to c.  Since the statement
+    is false, the program will no longer execute it.  However, if the answer is true,
+    then 1 will be assigned to the variable answer.
+
+
+    Else ifb is equal to a, then 2 will be assigned to the variable answer.  The same
+    explanation goes to the rest of the nested ifs.
+
+
+    Next is the switch part of the program.  There are different options, and each
+    option corresponds to each value of the variable answer.  In this case, the clear
+    answer is 2 and the program has no choice but to execute the print command under
+    it.  
+
+
+    You can change the assigned boolean value if you want and see the result.  You
+    can also try changing the condition in each if-else statement and see what happens.
+
+
+    You can re-write your codes or modify them, but make sure that the changes are
+    consistent throughout the program, i.e the declared variable name and corresponding
+    data type.  Expect your program to yield a different result or won’t run at all
+    if you failed to change all the things that you need to change.
+
+
+    The While Statement
+
+
+    The while loop compels the program to keep doing the block of codes under it as
+    long as the condition in the while statement remains true.  The program automatically
+    stops doing the instructions once the while statement yields a false response.
+
+
+    You will find the syntax for the while statement or loop below:
+
+
+    while (<loop condition>)
+
+
+    <statement>
+
+
+    <statement>
+
+
+    To illustrate it further, take a look at the sample program:
+
+
+    | 1 | public class WhileLoopDemo { |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |    public static void main(String[] args) { |  |  |
+
+
+    | 4 |       int count = 10; |  |  |  |  |  |
+
+
+    | 5 |      System.out.println("Numbers 10 to 1"); |  |
+
+
+    | 6 |       while (count != 0) { |  |  |  |  |
+
+
+    | 7 |           System.out.println(count--); |  |  |
+
+
+    | 8 |      } |  |  |  |  |  |  |
+
+
+    | 9 |    } |  |  |  |  |  |  |  |
+
+
+    | 10 | } |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    The sample program prints this output:
+
+
+    | Numbers 10 to 1 |  |  |  |  |  |  |
+
+
+    | 10 |  |  |  |  |  |  |  |  |  |
+
+
+    | 9 |  |  |  |  |  |  |  |  |  |
+
+
+    | 8 |  |  |  |  |  |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |  |
+
+
+    | 6 |  |  |  |  |  |  |  |  |  |
+
+
+    | 5 |  |  |  |  |  |  |  |  |  |
+
+
+    | 4 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 1 |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    The variable count must be declared as int with an initial value of 10.  In line
+    5, the heading must be printed.  In line 6, the program must execute the block
+    of codes while the variable count is not yet equal to zero.
+
+
+    It will print the initial number 10 on screen and this symbol ‘--’ means that
+    variable count must decrement by 1.  The next time it goes back to the loop, the
+    variable count will be equal to 9 and it gets printed.  The variable count decreases
+    by 1, and the next time it goes back to the loop its value becomes 8 until the
+    value of the variable count turns 0.
+
+
+    The moment the variable count acquires the value 0, it stops doing the block of
+    code and exits the program.
+
+
+    Try re-writing the sample program, but this time print the numbers 1 to 10 in
+    ascending order.
+
+
+    The Do-While Statement
+
+
+    The do-while loop or statement is just the same as while statement, except the
+    action is given first and the checking of the actual condition comes later.  The
+    presence of while signifies the start of the loop for the program.  The do-while
+    statement allows you to gain more control because it makes sure that the action
+    happens at least once.
+
+
+    Below is the syntax for the do-while statement:
+
+
+    do
+
+
+    <loop body>
+
+
+    while <loop condition>;
+
+
+    Look at this sample program:
+
+
+    | 1 | public class SampleDoWhileStatement { |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |
+
+
+    | 3 |    public static void main(String[] args) { |  |  |
+
+
+    | 4 |       int rabbit = 10; |  |  |  |  |  |
+
+
+    | 5 |       System.out.println("Numerals 10 to 1"); |  |  |
+
+
+    | 6 |       do { |  |  |  |  |  |  |
+
+
+    | 7 |              System.out.println(rabbit--); |  |  |
+
+
+    | 8 |       } while (rabbit >= 1); |  |  |  |  |
+
+
+    | 9 |   } |  |  |  |  |  |  |  |
+
+
+    | 10 | } |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |
+
+
+    It will give this output:
+
+
+    | Numerals 10 to 1 |  |  |  |  |  |
+
+
+    | 10 |  |  |  |  |  |  |  |  |
+
+
+    | 9 |  |  |  |  |  |  |  |  |
+
+
+    | 8 |  |  |  |  |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |
+
+
+    | 6 |  |  |  |  |  |  |  |  |
+
+
+    | 5 |  |  |  |  |  |  |  |  |
+
+
+    | 4 |  |  |  |  |  |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |
+
+
+    | 1 |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |
+
+
+    The variable rabbit must be declared as int with an initial value of 10.  In line
+    5, the program prints the heading.  In line 6, the program must print the value
+    of variable rabbit, which is 10, and then decrement it by 1.  Again, the symbol
+    ‘--’ tells the program to decrement the value of the variable by 1.
+
+
+    It then checks if the value of variable rabbit is still greater than or equal
+    to 1.  The value of variable rabbit this time is 9, which is still greater than
+    1.  It will go back to do the block of codes once more and print 9 on screen. 
+    The program will keep doing the loop until the value of variable rabbit turns
+    0.
+
+
+    When variable rabbit becomes less than 1, the loop stops and the program ends.
+
+
+    Now, try re-writing the sample program and print the numbers 1 to 10 in ascending
+    order.  Be careful about the numbers that you need to use.
+
+
+    The For Loop
+
+
+    You can use the for loop when you want to repeat executing a block of codes for
+    a certain number of times.  The program will continue executing the block of codes
+    as long as the condition proves to be true.
+
+
+    Instead of writing repetitive statements or codes, you can just write a line or
+    two and the program will keep doing the same thing within a specified number of
+    times.  You also gain more control because the program stops when it has repeated
+    the number of times that it supposed to execute the block of codes.
+
+
+    Below is the syntax for the for loop:
+
+
+    for <initialization>; <loop condition>; <increment/decrement expression)
+
+
+    <loop body>
+
+
+    Here is the sample program:
+
+
+    | 1 | public class SampleForLoop { |  |  |  |  |'
+  toc: []
+  trans: '
+
+
+    ```java
+
+    5:    boolean a=false, b=false, c=true, d=false;
+
+    6:    int answer = 0;
+
+    7:    System.out.println("This is My Sample Output");
+
+    8:    if (a == c) {
+
+    9:    answer = 1;
+
+    10:    } else if (b == a) {
+
+    11:        answer = 2;
+
+    12:    } else if (c == b){
+
+    13:        answer = 3;
+
+    14:    } else if (d == b) {
+
+    15:        answer = 4;
+
+    16:    }
+
+    17:    switch (answer) {
+
+    18:        case 1:
+
+    19:            System.out.println("a is the same as c");
+
+    20:            break;
+
+    21:        case 2:
+
+    22:            System.out.println("b is the same as a");
+
+    23:            break;
+
+    24:        case 3:
+
+    25:            System.out.println("c is the same as b");
+
+    26:            break;
+
+    27:        case 4:
+
+    28:            System.out.println("d is the same as b");
+
+    29:            break;
+
+    30:        default:
+
+    31:            System.out.println("Error encountered, try again");
+
+    32:        }
+
+    33:  }
+
+    34: }
+
+    ```
+
+
+    让我们分析一下这个程序。你需要声明需要使用的变量以及它们赋值的值。你还需要初始化整型变量 `answer`。如你所见，你在 `switch` 语句中需要它。如果不初始化它，程序将无法运行。
+
+
+    第一个 `if` 语句包含一个 `a` 等于 `c` 的条件。由于该条件为假（false），程序将不再执行它。然而，如果条件为真（true），那么 1 将赋值给变量
+    `answer`。
+
+
+    如果 `b` 等于 `a`，那么 2 将赋值给变量 `answer`。剩余的嵌套 `if` 语句也是同样的原理。
+
+
+    接下来是程序的 `switch` 部分。有不同的选项，每个选项对应变量 `answer` 的一个值。在这种情况下，明确的答案是 2，程序别选择选择执行下面的打印语句。如果你想查看结果，可以更改赋值的值。你也可以尝试每个
+    `if-else` 语句中的条件并观察会发生什么。你可以重写或修改你的代码，但要确保更改在整个程序中是一致的，即变量名和对应的数据类型。如果你未能更改所有需要更改的地方，你的程序可能会产生不同的结果，或者根本无法运行。
+
+
+    ### While 语句
+
+
+    `while` 循环强制程序只要 `while` 语句中的条件保持为真（true），就一直执行其下方的代码块。一旦 `while` 语句返回假（false），程序会自动停止执行指令。
+
+
+    下面是 `while` 语句或循环的语法格式：
+
+
+    ```
+
+    while (<loop condition>)
+
+    <statement>
+
+    ```
+
+
+    为了进一步说明，请看示例程序：
+
+
+    ```java
+
+    1: public class WhileDemo {
+
+    2:   public static void main(String[] args) {
+
+    3:     int count = 10;
+
+    4:     System.out.println("Numbers 10 to 1");
+
+    5:     while (count != 0) {
+
+    6:         System.out.println(count--);
+
+    7:     }
+
+    8:   }
+
+    9: }
+
+    ```
+
+
+    示例程序打印此输出：
+
+    ```
+
+    Numbers 10 to 1
+
+    10
+
+    9
+
+    8
+
+    7
+
+    6
+
+    5
+
+    4
+
+    3
+
+    2
+
+    1
+
+    ```
+
+
+    变量 `count` 必须声明为 `int` 且初始值为 10。在第 5 行，必须打印标题。在第 6 行，只要变量 `count` 不等于 0，程序就必须执行代码块。
+
+
+    它会在屏幕上打印初始数字 10，这个符号 `--` 意味着 `count` 必须减 1。当下一次回到循环时，变量 `count` 将等于 9 并被打印出来。变量
+    `count` 每次减少 1，下次回到循环时，其值变为 8，直到变量 `count` 的值变为 0。
+
+
+    一旦变量 `count` 获得值 0，它就会停止执行该代码块并退出程序。
+
+
+    尝试重写这个示例程序，但这次请按升序打印数字 1 到 10。
+
+
+    ### Do-While 语句
+
+
+    `do-while` 循环或语句与 `while` 语句相同，不同在于先执行动作，后检查实际条件。`while` 的出现标志着程序循环的开始。`do-while`
+    语句允许你获得更多控制权，因为它确保了动作至少发生一次。
+
+
+    下面是 `do-while` 语句的语法：
+
+
+    ```
+
+    do
+
+    <loop body>
+
+    while <loop condition>;
+
+    ```
+
+
+    看这个示例程序：
+
+
+    ```java
+
+    1: public class SampleDoWhileStatement {
+
+    2:   public static void main(String[] args) {
+
+    3:     int rabbit = 10;
+
+    4:     System.out.println("Numerals 10 to 1");
+
+    5:     do {
+
+    6:         System.out.println(rabbit--);
+
+    7:     } while (rabbit >= 1);
+
+    8:   }
+
+    9: }
+
+    ```
+
+
+    它将给出输出：
+
+    ```
+
+    Numerals 10 to 1
+
+    10
+
+    9
+
+    8
+
+    7
+
+    6
+
+    5
+
+    4
+
+    3
+
+    2
+
+    1
+
+    ```
+
+
+    变量 `rabbit` 必须声明为 `int` 且初始值为 10。在第 5 行，必须打印标题。在第 6 行，程序必须打印 `rabbit` 的值（10），然后将其减
+    1。再次，符号 `--` 告诉程序将变量的值减 1。
+
+
+    然后它检查 `rabbit` 的值是否大于或等于 1。此时 `rabbit` 的值为 9，仍然大于或等于 1。它将再次执行代码块并在屏幕上打印 9。程序将一直循环，直到变量
+    `rabbit` 的值变为 0。
+
+
+    当 `rabbit` 小于 1 时，循环停止，程序结束。
+
+
+    ### For 循环
+
+
+    当你想要按固定次数重复执行代码块时，可以使用 `for` 循环。只要条件证明为真（true），程序就会继续执行该代码块。
+
+
+    与其编写重复的语句或代码，你只需要写一两行，程序就会指定的次数内执行相同的操作。你也获得了更多控制权，因为程序在完成预期执行代码块的次数后就会停止。
+
+
+    下面是 `for` 循环的语法：
+
+
+    ```
+
+    for <initialization>; <loop condition>; <increment/decrement expression>
+
+    <loop body>
+
+    ```
+
+
+    这是示例程序：
+
+
+    ```java
+
+    1: public class SampleForLoop {
+
+    ```
+
+
+    '
+- fmt: "\n```java\npublic static void main(String[] args) {\n    System.out.println(\"\
+    Output Numbers 10 to 1\");\n    for (int number = 10; number >= 1; number--) {\n\
+    \        System.out.println(number);\n    }\n}\n```\n\nThe program prints this\
+    \ output:\n\n```\nOutput Numbers 10 to 1\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n```\n\
+    \nAt Line 5, you need to initialize your counter `number` to `10`, set the condition\
+    \ that the number must be greater than or equal to `1`, and decrease `number`\
+    \ by `1`. The next statement prints the counter number, which is `10`.\n\nIn the\
+    \ next loop, the counter number has a value of `9`, which still proves the condition\
+    \ to be true, so the counter number must decrement by `1` once more. The next\
+    \ statement will print the number `9` on screen.\n\nThe loop will keep doing the\
+    \ block of coded until the counter number is equal to `1`. When the counter number\
+    \ turns less than `1`, it will no longer print the value of the counter and the\
+    \ program ends the routine. It won’t print any number once it has reached its\
+    \ goal. The `for` loop sees to it that the program terminates once the specific\
+    \ number of repetition has been satisfied.\n\nYou can try re-writing the different\
+    \ codes for practice. You can add some more to the printed output. Let your imagination\
+    \ run wild and try to design something out of your own effort and idea.\n\nJava\
+    \ is fun to learn. Don’t stop here. Keep improving yourself and discover more\
+    \ wonderful and amazing things you can do with Java.\n\n# Chapter 7: More Practice\n\
+    \nYou have learned all the Java basics that you need to learn. You can now write\
+    \ your own simple codes.\n\nPractice makes perfect–remember that. Whenever you\
+    \ have free time, make sure to practice what you have learned.\n\nYou can get\
+    \ ideas for programs from everyday tasks or chores that you do and other simple\
+    \ things. Here are some ideas that you can use to create a program that you might\
+    \ like to try your hands on:\n\n1. Plotting your budget.\n2. Creating a uniform\
+    \ mathematical formula for the calculations that you routinely do.\n3. Creating\
+    \ a simple puzzle that can help take the boredom away at some days.\n4. Writing\
+    \ a story with different endings depending on the choice that the reader makes.\n\
+    \nYou can search the net for more sample programs if you want to advance. However,\
+    \ be warned that not all the programs you can find online will not always work.\
+    \ Although it can actually provide a good training by finding the errors and correcting\
+    \ them. There’s nothing more fulfilling than being able to make a certain program\
+    \ run even if you did not code it.\n\n## Importance of Comments for a Team of\
+    \ Programmers\n\nComments in a program are actually helpful, especially if you\
+    \ are thinking about working in an IT company or a company that has its own IT\
+    \ experts that maintains their system. It is usual for companies to have an in-house\
+    \ team that will code or develop a certain part of the system, and another team\
+    \ for maintaining the system.\n\nThe team that maintains or upgrades the system\
+    \ will benefit a lot from the comments in the code about the task that a particular\
+    \ block of codes must accomplish. If there’s a bug in the system, then the maintenance\
+    \ team would be able to point out the problem in a matter of time.\n\nSometimes,\
+    \ testing the efficiency of the program for a few days is not enough. There are\
+    \ cases where the problems only begin to occur after several months of running\
+    \ the program. If you leave comments within the codes, then it would be easier\
+    \ to trace the possible problem and correct it before it gets worse.\n\n## The\
+    \ Best Time to Practice and Other Tips\n\nYou can practice your newly acquired\
+    \ skill in Java programming whenever you have free time. It is best to allot a\
+    \ schedule for it to compel yourself to practice at your allotted schedule. It\
+    \ is important to practice so you can familiarize yourself well with the different\
+    \ commands of Java and make programming easier. You can use your skill in different\
+    \ things and might even learn to develop your own game when you get better at\
+    \ Java.\n\nIf you’t feeling well, but your schedule states that you should practice\
+    \ your coding, then you should just rest and do nothing. You need to pour your\
+    \ full attention when coding a program. It could be so frustrating when your program\
+    \ failed. Always remember the important things you need to keep in mind while\
+    \ working with Java. The most important one being that Java is extremely case\
+    \ sensitive; you also need to be careful in declaring variables. It is important\
+    \ to remain consistent so as not confuse the program. When it comes to Java, what\
+    \ you regard as a slight difference is actually a huge thing. If you can’t install\
+    \ Java in your computer, you can still use the online platform. There is a possibility\
+    \ that you might lose any enthusiasm that you have in learning when you get frustrated.\
+    \ You need to keep a high level of enthusiasm in anything you do to make the activity\
+    \ work less stressful.\n\n### One Last Try\n\nHave you heard of the `Fibonacci`\
+    \ sequence? Look at this sequence of numbers: `0, 1, 1, 2, 3, 5, 8, 13, 21, .....`\
+    \ Start with `0` followed by `1`. The third number is the sum of the two numbers\
+    \ before it–add `0` and `1`, you get `1`. The fourth number is the sum of the\
+    \ two numbers before it–add `1` and `1`, you get `2`. The same goes to the rest\
+    \ of the numbers.\n\nNow, let us try to create a program that prints the `Fibonacci`\
+    \ sequence that should not exceed `90`. Try this this on your own before looking\
+    \ at the next page. Your program should look like this:\n\n```java\nclass FibonacciSeq\
+    \ {\n    // This program prints the Fibonacci sequence < 90\n    public static\
+    \ void main(String[] args) {\n        int loNum = 0;\n        int hiNum = 1;\n\
+    \        while (hiNum < 90) {\n            System.out.println(loNum);\n      \
+    \      hiNum = loNum + hiNum; // new hiNum\n            loNum = hiNum - loNum;\
+    \ // new loNum, the former hiNum\n        }\n    }\n}\n```\n\nIt should print\
+    \ this output:\n\n```\n0\n1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n```\n\nNow, try\
+    \ the same program using `if`, or nested `if` statements. You need to generate\
+    \ the same output. It is quite challenging, but it is also a good training.\n\n\
+    This ebook only covers the basics of Java programming. There are still more advanced\
+    \ commands that you can learn, although most of them are not always necessary.\n\
+    \nThe commands that you have learned in this book are the ones that are widely\
+    \ used. You can still achieve the results that you want to get even if you only\
+    \ use the things that you have learned so far. The more advanced commands, however,\
+    \ can make the program less complicated and more organized.\n"
+  raw: '| 2 |  |  |  |  |  |  |  |  |
+
+
+    | 3 |    public static void main(String[] args) { |  |  |
+
+
+    | 4 |        System.out.println("Output Numbers 10 to 1"); |  |
+
+
+    | 5 |        for (int number = 10; number >= 1; number--) { |  |
+
+
+    | 6 |            System.out.println(number); |  |  |  |
+
+
+    | 7 |        } |  |  |  |  |  |  |
+
+
+    | 8 |    } |  |  |  |  |  |  |  |
+
+
+    | 9 | } |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |
+
+
+    The program prints this output:
+
+
+    | Output Numbers 10 to 1 |  |  |  |  |  |
+
+
+    | 10 |  |  |  |  |  |  |  |  |
+
+
+    | 9 |  |  |  |  |  |  |  |  |
+
+
+    | 8 |  |  |  |  |  |  |  |  |
+
+
+    | 7 |  |  |  |  |  |  |  |  |
+
+
+    | 6 |  |  |  |  |  |  |  |  |
+
+
+    | 5 |  |  |  |  |  |  |  |  |
+
+
+    | 4 |  |  |  |  |  |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |
+
+
+    | 1 |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |
+
+
+    At Line 5, you need to initialize your counter ‘number’ to 10, set the condition
+    that the number must be greater than or equal to 1, and decrease number by 1. 
+    The next statement prints the counter number, which is 10.
+
+
+    In the next loop, the counter number has a value of 9, which still proves the
+    condition to be true, so the counter number must decrement by 1 once more.  The
+    next statement will print the number 9 on screen.
+
+
+    The loop will keep doing the block of coded until the counter number is equal
+    to 1.  When the counter number turns less than 1, it will no longer print the
+    value of the counter and the program ends the routine.  It won’t print any number
+    once it has reached its goal.  The for loop sees to it that the program terminates
+    once the specific number of repetition has been satisfied.
+
+
+    You can try re-writing the different codes for practice.  You can add some more
+    to the printed output.  Let your imagination run wild and try to design something
+    out of your own effort and idea.
+
+
+    Java is fun to learn.  Don’t stop here.  Keep improving yourself and discover
+    more wonderful and amazing things that you can do with Java.
+
+
+    Chapter 7: More Practice
+
+
+    You have learned all the Java basics that you need to learn. You can now write
+    your own simple codes.
+
+
+    Practice makes perfect–remember that.  Whenever you have free time, make sure
+    to practice what you have learned.
+
+
+    You can get ideas for programs from everyday tasks or chores that you do and other
+    simple things.  Here are some ideas that you can use to create a program that
+    you might like to try your hands on:
+
+
+    1.  Plotting your budget.
+
+
+    2\. Creating a uniform mathematical formula for the calculations that you routinely
+    do.
+
+
+    3.  Creating a simple puzzle that can help take the boredom away at some days.
+
+
+    4.  Writing a story with different endings depending on the choice that the reader
+    makes.
+
+
+    You can search the net for more sample programs if you want to advance. However,
+    be warned that not all the programs you can find online will not always work. 
+    Although it can actually provide a good training by finding the errors and correcting
+    them.  There’s nothing more fulfilling than being able to make a certain program
+    run even if you did not code it.
+
+
+    Importance of Comments for a Team of Programmers
+
+
+    Comments in a program are actually helpful, especially if you are thinking about
+    working in an IT company or a company that has its own IT experts that maintains
+    their system.   It is usual for companies to have an in-house team that will code
+    or develop a certain part of the system, and another team for maintaining the
+    system.
+
+
+    The team that maintains or upgrades the system will benefit a lot from the comments
+    in the code about the task that a particular block of codes must accomplish. 
+    If there’s a bug in the system, then the maintenance team would be able to point
+    out the problem in a matter of time.
+
+
+    Sometimes, testing the efficiency of the program for a few days is not enough. 
+    There are cases where the problems only begin to occur after several months of
+    running the program.  If you leave comments within the codes, then it would be
+    easier to trace the possible problem and correct it before it gets worse.
+
+
+    The Best Time to Practice and Other Tips
+
+
+    You can practice your newly acquired skill in Java programming whenever you have
+    free time.  It is best to allot a schedule for it to compel yourself to practice
+    at your allotted schedule.
+
+
+    It is important to practice so you can familiarize yourself well with the different
+    commands of Java and make programming more fun and easier.  You can use your skill
+    in different things and you might even learn to develop your own online game when
+    you get better at Java programming.
+
+
+    If you aren’t feeling well, but your schedule states that you should practice
+    your coding, then you should just rest and do nothing.  You need to pour your
+    full attention when coding a program.  It could be so frustrating when your program
+    failed to work. 
+
+
+    Always remember the important things that you need to keep in mind while working
+    with Java.  The most important one being that Java is extremely case sensitive;
+    one . 
+
+
+    You also need to be careful in declaring your variables.  It is important to remain
+    consistent so as to not confuse the program.  When it comes to Java programming,
+    what you regard as a slight difference is actually a huge thing.
+
+
+    If you can’t install Java in your computer, you can still use the online Java
+    coding platform. There is a possibility that you might lose any initial enthusiasm
+    that you have in learning Java when you get frustrated.  You need to keep a high
+    level of enthusiasm in anything you do to make the activity or work more fun and
+    less stressful.
+
+
+    One Last Try
+
+
+    Have you heard of the Fibonacci sequence? Look at this sequence of numbers:
+
+
+    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, .....
+
+
+    You start with 0 followed by 1.  The third number is the sum of the two numbers
+    before it –add 0 and 1, you get 1.  The fourth number is the sum of the two numbers
+    before it –add 1 and 1, you get 2.  The same goes to the rest of the numbers in
+    the series.
+
+
+    Now, let us try to create a program that prints the Fibonacci sequence that should
+    not exceed 90.  Try solving this one on your own before looking at the next page.
+
+
+    Your program should look like this:
+
+
+    | 1 | public class FibonacciSeq { |  |  |  |  |  |
+
+
+    | 2 | //This program prints the Fibonacci sequence < 90 |  |  |
+
+
+    | 3 |   public static void main(String[] args) { |  |  |  |
+
+
+    | 4 |    int loNum = 0; |  |  |  |  |  |  |
+
+
+    | 5 |    int hiNum = 1; |  |  |  |  |  |  |
+
+
+    | 6 |    System.out.println(loNum); |  |  |  |  |  |
+
+
+    | 7 |    while (hiNum < 90) { |  |  |  |  |  |  |
+
+
+    | 8 |       System.out.println(hiNum); |  |  |  |  |
+
+
+    | 9 |       hiNum = loNum + hiNum; //new hiNum |  |  |  |
+
+
+    | 10 |       loNum = hiNum - loNum; //new loNum, the former hiNum |  |
+
+
+    | 11 |  |  |  |  |  |  |  |  |
+
+
+    | 12 |    } |  |  |  |  |  |  |  |  |
+
+
+    | 13 | } |  |  |  |  |  |  |  |  |
+
+
+    | 14 | }  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    It should print this output:
+
+
+    | 0 |  |  |  |  |  |  |  |  |  |
+
+
+    | 1 |  |  |  |  |  |  |  |  |  |
+
+
+    | 1 |  |  |  |  |  |  |  |  |  |
+
+
+    | 2 |  |  |  |  |  |  |  |  |  |
+
+
+    | 3 |  |  |  |  |  |  |  |  |  |
+
+
+    | 5 |  |  |  |  |  |  |  |  |  |
+
+
+    | 8 |  |  |  |  |  |  |  |  |  |
+
+
+    | 13 |  |  |  |  |  |  |  |  |  |
+
+
+    | 21 |  |  |  |  |  |  |  |  |  |
+
+
+    | 34 |  |  |  |  |  |  |  |  |  |
+
+
+    | 55 |  |  |  |  |  |  |  |  |  |
+
+
+    | 89 |  |  |  |  |  |  |  |  |  |
+
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+
+    Now, try the same program using if, or nested if statements.  You need to generate
+    the same output.  It is quite challenging, but it is also a good training.
+
+
+    This ebook only covers the basics of Java programming.  There are still more advanced
+    commands that you can learn, although most of them are not always necessary. 
+
+
+    The commands that you have learned in this book are the ones that are widely used. 
+    You can still achieve the results that you want to get even if you only use the
+    things that you have learned so far.  The more advanced commands, however, can
+    make the program less complicated and more organized.'
+  toc: []
+  trans: "\n\n```java\npublic static void main(String[] args) {\n    System.out.println(\"\
+    Output Numbers 10 to 1\");\n    for (int number = 10; number >= 1; number--) {\n\
+    \        System.out.println(number);\n    }\n}\n```\n\n该程序输出以下内容：\n\n```\nOutput\
+    \ Numbers 10 to 1\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n```\n\n在第 5 行，你需要将计数器 `number`\
+    \ 初始化为 `10`，设置数字必须大于或等于 `1` 的条件，并将 `number` 减去 `1`。下一条语句打印计数器的数值，即为 `10`。\n\n\
+    在下一次循环中，计数器数值的值为 `9`，这仍然证明条件为真，因此计数器数值必须再次递减 `1`。下一条语句将在屏幕上打印数字 `9`。\n\n循环将继续执行该代码块，直到计数器数值等于\
+    \ `1`。当计数器数值小于 `1` 时，它将不再打印计数器的值，程序将结束运行。一旦达到目标，它将不再打印任何数字。`for` 循环确保了程序在满足特定重复次数后能够终止。\n\
+    \n你可以尝试编写不同的代码进行练习。你可以在输出结果中添加更多内容。释放你的想象力，尝试根据自己的努力和想法设计一些东西。\n\n学习 Java 是件很有趣的事。不要停于此。继续提升自己，发现更多用\
+    \ Java 可以做到的精彩且惊人的事情。\n\n# 第 7 章：更多练习\n\n你已经学习了需要的所有 Java 基础知识。你现在可以编写自己的简单代码了。\n\
+    \n熟能生巧——记住这一点。每当你有空闲时，务必练习你所学的内容。\n\n你可以从日常任务、家务或其他简单的事情中获取程序灵感。这里是一些你可以用来创建一个你可能想尝试的程序的灵感：\n\
+    \n1. 绘制你的预算表。\n2. 为你经常进行的计算创建一个统一的数学公式。\n3. 创建一个简单的谜题，帮助在某些日子里解解闷。\n4. 编写一个根据读者选择而有不同结局的故事。\n\
+    \n如果你想进阶，可以在网上搜索更多示例程序。但请注意，你在网上找到的所有程序并不总是可以运行。尽管通过发现错误并纠正它们，这实际上可以提供很好的训练。没有什么比能够让某个程序运行（即使它不是你编写的）更有成就感了。\n\
+    \n## 注释对程序员团队的重要性\n\n程序中的注释实际上非常有帮助，特别是当你考虑在 IT 公司或有自己的 IT 专家来维护其系统的公司工作时。公司通常会有一个内部团队负责编写代码或开发系统的某部分，而另一个团队负责维护系统。\n\
+    \n维护或升级系统的团队将从代码中关于特定代码块必须完成的任务的注释中获益匪浅。如果系统中存在 Bug（漏洞），维护团队能够在短时间内指出问题。\n\n有时，测试几天的程序效率是不够的。在某些情况下，问题在程序运行几个月后才开始出现。如果你在代码中留下注释，将更容易追踪可能的问题并在其恶化之前对其进行纠正。\n\
+    \n## 练习的最佳时机建议\n\n你可以在任何空闲时间练习新学到的 Java 编程技能。最好为此安排一个计划，强迫自己在安排的时间内进行练习。练习非常重要，因为可以让你充分熟悉\
+    \ Java 的不同命令，让编程变得更容易。你可以将你的技能应用到不同的事情中，当你更擅长 Java 时，甚至可以学习开发自己的游戏。\n\n如果你感觉状态不好，但计划规定你应该练习编码，那么你应该休息，什么都不做。在编写程序时，你需要投入全部注意力。程序失败时，可能会非常沮丧。始终记住在处理\
+    \ Java 时需要注意的重要事项。最重要的一点是 Java 对大小写极其敏感；你需要在声明变量时也需要小心。保持一致性非常重要，以免让程序产生混淆。对于\
+    \ Java，你认为的细微差别实际上是一个巨大的问题。如果你无法在电脑上安装 Java，你仍然可以使用在线平台。当你感到挫败时，可能会失去学习的热情。在你所做的任何事情中都需要保持高水平的热情，让活动变得不那么轻松。\n\
+    \n### 最后的尝试\n\n你听过 `Fibonacci`（斐波那契）数列吗？看看这组数字：`0, 1, 1, 2, 3, 5, 8, 13, 21, .....`\
+    \ 从 `0` 开始，后面跟着 `1`。第三个数字是前两个数字之和——将 `0` 和 `1` 相加，得到 `1`。第四个数字是前两个数字之和——将 `1`\
+    \ 和 `1` 相加，得到 `2`。其余数字也是如此。\n\n现在，让我们尝试创建一个打印不不超过 `90` 的 `Fibonacci` 数列的程序。在看下一页之前，尝试自己完成。你的程序看起来应该是这样的：\n\
+    \n```java\nclass FibonacciSeq {\n    // 这个程序打印小于 90 的斐波那契数列\n    public static\
+    \ void main(String[] args) {\n        int loNum = 0;\n        int hiNum = 1;\n\
+    \        while (hiNum < 90) {\n            System.out.println(loNum);\n      \
+    \      hiNum = loNum + hiNum; // 新 hiNum\n            loNum = hiNum - loNum; //\
+    \ 新 loNum，之前的 hiNum\n        }\n    }\n}\n```\n\n它应该打印以下内容：\n\n```\n0\n1\n1\n\
+    2\n3\n5\n8\n13\n21\n34\n55\n89\n```\n\n现在，尝试使用 `if` 或嵌套 `if` 语句来实现相同的程序。你需要生成相同的输出。这很有挑战性，但也是一种很好的训练。\n\
+    \n本电子书仅涵盖了 Java 编程的基础知识。你还有更多高级的命令可以学习，尽管大多数命令并不总是必要的。\n\n你在本书中学习的命令是那些广泛使用的。即使你只使用目前学到的内容，仍然可以获得想要的结果。然而，更高级的命令可以让程序不那么复杂且更有组织。\n\
+    \n"
+- fmt: '
+
+    # Chapter 8: Your Own Java in your Computer
+
+
+    You can install Java in your computer so you can have unlimited access to it even
+    though you’re not online. However, your computer must fulfill a couple of basic
+    requirements before you can install Java.
+
+
+    ## System Requirements
+
+
+    It is important that your computer runs on `Pentium 200-MHz` or better. It is
+    also necessary for it to have a minimum of `64 MB RAM` (Random Access Memory).
+    These are the most basic system requirements for Java, and as you can see they
+    are quite low, even the most basic computer systems available today have more
+    than enough power.
+
+
+    Your computer needs to have an Operating System (OS) like `Windows XP`, `Windows
+    7`, `Windows 8`, or `Linux`. It is also fine if you are using `Mac`. This book
+    has included the set up paths for the different platforms. Choose `Java JDK8`
+    when installing Java in your computer.
+
+
+    It is also recommended to have a `Microsoft Notepad` or other text editor handy.
+    It is best to use a text editor when coding your Java program.
+
+
+    ## Local Environment
+
+
+    If you would like to create a local environment set up for your Java programming,
+    then you need to go to this link: `http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`
+
+
+    You can download the Java programming language for free. Just choose the version
+    of Java that’s compatible to your operating system.
+
+
+    After making the right Java that’s compatible to your operating system, follow
+    the instructions on how to download Java to your computer system. Run the `.exe`
+    file that makes installation of Java to your computer possible. Once the Java
+    programming language is properly installed the next thing that you need to do
+    is set the path that is appropriate to your platform.
+
+
+    ### Setting the Path for Windows
+
+
+    If you have successfully installed Java to your computer, then you will see something
+    like the one below when you view your directory:
+
+
+    ```
+
+    c:\Program Files\java\jdk
+
+    ```
+
+
+    You need to point your cursor to `My Computer` and click on it. You need to open
+    it and once it has been opened it, right-click your mouse and choose `Properties`
+    (it is located at the bottom part of the available choices).
+
+
+    Below the tab that says `Advance`, you will see a button with a label `Environment
+    variables` on it. Click on that button.
+
+
+    The next step you need to make is to modify the `Path` variable. It should contain
+    the path to `Java.exe`. If the current path you see is set to this one:
+
+
+    ```
+
+    C:\WINDOWS\SYSTEM32
+
+    ```
+
+
+    Then there’s a need for you to change or modify the path into this one:
+
+
+    ```
+
+    C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin
+
+    ```
+
+
+    Once you set the right path for Windows OS you can start coding your Java program.
+
+
+    ### Setting the Path for Linux, UNIX, Solaris, FreeBSD
+
+
+    For `Linux`, `UNIX`, `Solaris`, or `FreeBSD`, you need to properly set the environment
+    variable `PATH` to accurately point the location of the installed Java binaries.
+    You have a shell documentation that serves as your reference in case you encounter
+    some problem or difficulty in setting the path.
+
+
+    If you prefer to use `bash`, for example, then you also need to add `export PATH=/path/to/java:
+    $PATH`. It looks like this:
+
+
+    ```bash
+
+    .bashrc: export PATH=/path/to/java:$PATH
+
+    ```
+
+
+    ## Popular Java Editors
+
+
+    The earlier batches of programming language don’t use any text editor, unlike
+    most modern programming languages today. Java requires the programmers to code
+    or write the Java program using a text editor. There are several sophisticated
+    Integrated Development Environments or IDEs that you can use for your Java programming.
+
+
+    IDE is a software application that provides or presents comprehensive facilities
+    for the software development or creation that the programmers will benefit a lot
+    from. IDE usually have build automation tools, text editor, and debugger.
+
+
+    Below is the list of some of the most popular text editors that a Java programmer
+    can use:
+
+
+    1. **Notepad** – if you have a Windows OS in your computer, then you can use the
+    built-in `Notepad` editor that comes with Windows and code your program. There’s
+    also `TextPad` that you can choose if you prefer it. The beauty of `Notepad` is
+    that you don’t need to worry if ever you need to copy paste something with picture.
+    `Notepad` only allows text and it won’t accept the picture even if you try to
+    paste it.
+
+
+    2. **Netbeans** – this is actually one of the Java IDEs that you can download
+    for free from this link: `http://www.netbeans.org/index.html`
+
+
+    3. **Eclipse** – another recommended Java IDE that is created by the eclipse open-source
+    community. You can get it from this link: `http://www.eclipse.org/`
+
+
+    You can explore the net for other IDEs that you might like to try or want to keep.
+    Once you have installed the Java programming language in your computer, you got
+    no more reason to put off your practice session. Your success depends on your
+    diligence and hunger to learn more about Java.
+
+
+    ## Conclusion
+
+
+    Thank you again for downloading this book!
+
+
+    I hope this book was able to help you start your Java programming journey and
+    has kept you motivated till the end of this book. There are more things that Java
+    can offer and you can advance further if you continue to explore the many wonderful
+    things about Java.
+
+
+    You might want to take advance lessons when you feel like are ready to do them.
+    You only need to know the proper syntax for the additional commands. The right
+    work attitude and views in solving certain problems have been instilled within
+    you, and it should aid you in tackling the problem with positivity.
+
+
+    I hope this book has served its purpose real well and made you understand the
+    Java basics that you need to know to help you code a Java program with ease.
+
+
+    The next step is to continue practicing what you have learned and share the knowledge
+    with your loved ones if needed. You can take on another programming language if
+    you choose, and discover the many things that you can do.
+
+
+    Finally, if you enjoyed this book, then I’d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It’d be greatly
+    appreciated!
+
+
+    Thank you and good luck!
+
+    '
+  raw: 'Chapter 8: Your Own Java in your Computer
+
+
+    You can install Java in your computer so you can have unlimited access to it even
+    though you’re not online.  However, your computer must fulfill a couple of basic
+    requirements before you can install Java.
+
+
+    System Requirements
+
+
+    It is important that your computer runs on Pentium 200-MHz or better.  It is also
+    necessary for it to have a minimum of 64 MB RAM (Random Access Memory).  These
+    are the most basic system requirements for Java, and as you can see they are quite
+    low, even the most basic computer systems available today have more than enough
+    power.
+
+
+    Your computer needs to have an Operating System (OS) like Windows XP, Windows
+    7, Windows 8, or Linux.  It is also fine if you are using Mac.  This book has
+    included the set up paths for the different platforms.  Choose Java JDK8 when
+    installing Java in your computer.
+
+
+    It is also recommended to have a Microsoft Notepad or other text editor handy. 
+    It is best to use a text editor when coding your Java program.
+
+
+    Local Environment
+
+
+    If you would like to create a local environment set up for your Java programming,
+    then you need to go to this link: [http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html%20)
+
+
+    You can download the Java programming language for free.  Just choose the version
+    of Java that’s compatible to your operating system.
+
+
+    After making the right Java that’s compatible to your operating system, follow
+    the instructions on how to download Java to your computer system.  Run the “.exe”
+    file that makes installation of Java to your computer possible.  Once the Java
+    programming language is properly installed the next thing that you need to do
+    is set the path that is appropriate to your platform.
+
+
+    Setting the Path for Windows
+
+
+    If you have successfully installed Java to your computer, then you will see something
+    like the one below when you view your directory:
+
+
+    c:\Program Files\java\jdk
+
+
+    You need to point your cursor to ‘My Computer’ and click on it.  You need to open
+    it and once it has been opened it, right-click your mouse and choose ‘Properties’
+    (it is located at the bottom part of the available choices).
+
+
+    Below the tab that says ‘Advance’, you will see a button with a label ‘Environment
+    variables’ on it.  Click on that button.
+
+
+    The next step you need to make is to modify the ‘Path’ variable.  It should contain
+    the path to Java.exe.  If the current path you see is set to this one:
+
+
+    C:\WINDOWS\SYSTEM32
+
+
+    Then there’s a need for you to change or modify the path into this one:
+
+
+    C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin
+
+
+    Once you set the right path for Windows OS you can start coding your Java program.
+
+
+    Setting the Path for Linux, UNIX, Solaris, FreeBSD
+
+
+    For Linux, UNIX, Solaris, or FreeBSD, you need to properly set the environment
+    variable PATH to accurately point the location of the installed Java binaries. 
+    You have a shell documentation that serves as your reference in case you encounter
+    some problem or difficulty in setting the path.
+
+
+    If you prefer to use ‘bash’, for example, then you also need to add ‘export PATH=/path/to/java:
+    $PATH''.  It looks like this:
+
+
+    .bashrc: export PATH=/path/to/java:$PATH
+
+
+    Popular Java Editors
+
+
+    The earlier batches of programming language don’t use any text editor, unlike
+    most modern programming languages today.  Java requires the programmers to code
+    or write the Java program using a text editor.  There are several sophisticated
+    Integrated Development Environments or IDEs that you can use for your Java programming. 
+
+
+    IDE is a software application that provides or presents comprehensive facilities
+    for the software development or creation that the programmers will benefit a lot
+    from.  IDE usually have build automation tools, text editor, and debugger.
+
+
+    Below is the list of some of the most popular text editors that a Java programmer
+    can use:
+
+
+    1.  Notepad – if you have a Windows OS in your computer, then you can use the
+    built-in Notepad editor that comes with Windows and code your program.  There’s
+    also TextPad that you can choose if you prefer it.  The beauty of Notepad is that
+    you don’t need to worry if ever you need to copy paste something with picture. 
+    Notepad only allows text and it won’t accept the picture even if you try to paste
+    it.
+
+
+    2.  Netbeans – this is actually one of the Java IDEs that you can download for
+    free from this link [http://www.netbeans.org/index.html](http://www.netbeans.org/index.html).
+
+
+    3.  Eclipse – another recommended Java IDE that is created by the eclipse open-source
+    community.  You can get it from this link [http://www.eclipse.org/](http://www.eclipse.org/). 
+
+
+    You can explore the net for other IDEs that you might like to try or want to keep. 
+    Once you have installed the Java programming language in your computer, you got
+    no more reason to put off your practice session.  Your success depends on your
+    diligence and hunger to learn more about Java.
+
+
+    Conclusion
+
+
+    Thank you again for downloading this book! 
+
+
+    I hope this book was able to help you start your Java programming journey and
+    has kept you motivated till the end of this book.  There are more things that
+    Java can offer and you can advance further if you continue to explore the many
+    wonderful things about Java.
+
+
+    You might want to take advance lessons when you feel like you are ready to do
+    them.  You only need to know the proper syntax for the additional commands.  The
+    right work attitude and views in solving certain problems have been instilled
+    within you, and it should aid you in tackling the problem with positivity.
+
+
+    I hope this book has served its purpose real well and made you understand the
+    Java basics that you need to know to help you code a Java program with ease.
+
+
+    The next step is to continue practicing what you have learned and share the knowledge
+    with your loved ones if needed.  You can take on another programming language
+    if you choose, and discover the many things that you can do.
+
+
+    Finally, if you enjoyed this book, then I’d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It’d be greatly
+    appreciated!
+
+
+    Thank you and good luck!'
+  toc: []
+  trans: '
+
+
+    # 第 8 章：在电脑上使用 Java
+
+
+    你可以在电脑上安装 Java，这样即使在离线状态下也可以无限访问。不过在安装 Java 之前，你的电脑必须满足几项基本要求。
+
+
+    ## 系统要求
+
+
+    你的电脑运行 `Pentium 200-MHz` 或更高性能是至关重要的。此外，它至少需要 `64 MB RAM`（随机存存储器）。这些是 Java 最基本的系统要求，正如你所看到的，它们非常低，即使是今天最基础的计算机系统也绰绰有余。
+
+
+    你的电脑需要一个操作系统（OS），例如 `Windows XP`、`Windows 7`、`Windows 8` 或 `Linux`。使用 `Mac` 也可以。本书包含了不同平台的设置路径。在电脑上安装
+    Java 时，请选择 `Java JDK8`。
+
+
+    此外建议准备一个 `Microsoft Notepad`（微软记事本）或其他文本编辑器。编写 Java 程序时，最好使用文本编辑器。
+
+
+    ## 本地环境
+
+
+    如果你想为 Java 编程创建一个本地环境，你需要访问此链接：`http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`
+
+
+    你可以免费下载 Java 编程语言。只需选择与你的操作系统兼容的 Java 版本即可。
+
+
+    选择好与操作系统兼容的 Java 后，按照说明将 Java 下载到你的电脑系统中。运行 `.exe` 文件以实现 Java 的安装。一旦 Java 编程语言正确安装完成，你需要做的下一件事就是设置适用于你平台的路径。
+
+
+    ### 设置 Windows 路径
+
+
+    如果你已成功在电脑上安装了 Java，查看目录时会看到类似下面的内容：
+
+
+    ```
+
+    c:\Program Files\java\jdk
+
+    ```
+
+
+    你需要将光标指向“我的电脑”并点击它。你需要打开它，打开后，右键点击鼠标并选择“属性”（Properties）（它位于可用选项的底部）。
+
+
+    在“高级”（Advance）选项卡下方，你会看到一个标记为“环境变量”（Environment variables）的按钮。点击该按钮。
+
+
+    接下来的步骤是修改 `Path` 变量。它应该包含 `Java.exe` 的路径。如果你看到的当前路径设置为：
+
+
+    ```
+
+    C:\WINDOWS\SYSTEM32
+
+    ```
+
+
+    那么你就需要将路径更改或修改为：
+
+
+    ```
+
+    C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin
+
+    ```
+
+
+    一旦为 Windows 系统设置了正确的路径，你就可以开始编写 Java 程序了。
+
+
+    ### 设置 Linux, UNIX, Solaris, FreeBSD 路径
+
+
+    对于 `Linux`、`UNIX`、`Solaris` 或 `FreeBSD`，你需要正确设置环境变量 `PATH`，以准确指向已安装 Java 二进制文件的位置。如果你在设置路径时遇到问题或困难，可以使用
+    Shell 文档作为参考。
+
+
+    如果你喜欢使用 `bash`，你还需要添加 `export PATH=/path/to/java: $PATH`。它看起来如下：
+
+
+    ```bash
+
+    .bashrc: export PATH=/path/to/java:$PATH
+
+    ```
+
+
+    ## 流行的 Java 编辑器与大多数现代编程语言不同，早期的语言并不使用文本编辑器。Java 要求程序员使用文本编辑器来编写或编写 Java 程序。有许多复杂的集成开发环境（IDE）可以用于你的
+    Java 编程。
+
+
+    IDE 是一种提供或展示软件开发或创建全面功能的应用程序，程序员从中受益匪浅。IDE 通常具有构建自动化工具、文本编辑器和调试器。
+
+
+    以下是 Java 程序员可以使用的一些常用文本编辑器列表：
+
+
+    1. **Notepad（记事本）** – 如果你的电脑上有 Windows 系统，你可以使用可以使用 Windows 自带的 `Notepad` 编辑器并编写程序。如果你更喜欢，也可以选择
+    `TextPad`。`Notepad` 的优点是，即使你需要复制粘贴带图片的内容，也不用担心。`Notepad` 只允许文本，即使你尝试粘贴，它也不会接受图片。
+
+
+    2. **Netbeans** – 这实际上是你可以从此链接免费下载的 Java IDE 之一：`http://www.netbeans.org/index.html`
+
+
+    3. **Eclipse** – 另一个推荐的 Java IDE，由 eclipse 开源社区创建。你可以从此链接获取中获取它：`http://www.eclipse.org/`
+
+
+    你可以在网上寻找其他你可能想要尝试或留存的 IDE。一旦你已经在电脑上安装了 Java 编程语言，就再也没有理由推迟你的练习了。你的成功取决于你的勤奋以及对学习更多
+    Java 知识的渴望。
+
+
+    ## 结语
+
+
+    感谢你下载这本书！
+
+
+    希望这本书能够帮助你开启 Java 编程之旅，并一直激励你读到书最后。Java 还能提供更多内容，如果你继续探索 Java 的许多奇妙之处，你可以进一步进阶。
+
+
+    当你觉得准备好学习时，可能想要参加一些进阶课程。你只需要了解额外命令的正确语法即可。解决特定问题的正确工作态度和观点已经灌输在你的心中，这应该帮助你以积极的心态应对问题。
+
+
+    我希望这本书很好地完成了它的目的，并让你理解了编写 Java 程序所需的 Java 基础知识，帮助你轻松编写代码。
+
+
+    下一步是继续练习你所学的知识，并在需要时将知识分享给你爱的人。如果你愿意，你还可以学习另一种编程语言，并发现你可以做的很多事情。
+
+
+    最后，如果你喜欢这本书，我想请你帮个忙，你是否愿意在亚马逊上为这本书留个评价？将不胜感激！
+
+
+    感谢你并祝你好运！
+
+
+    '

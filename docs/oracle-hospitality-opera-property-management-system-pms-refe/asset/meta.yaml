@@ -1,0 +1,86 @@
+name: Oracle Hospitality OPERA Property Management System (PMS) Reference Manual -
+  Mastering Hotel Software Training Support and Java JEE AWS Amazon Cloud Development：
+  Reference Manual HANDBOOK
+name_cn: Oracle Hospitality OPERA 酒店管理系统 (PMS) 参考手册 - 酒店软件培训支持与 Java JEE AWS Amazon云开发精通：参考手册手册
+slug: oracle-hospitality-opera-property-management-system-pms-refe
+toc:
+- - '#'
+  - Oracle Hospitality OPERA 酒店管理系统 (PMS) 参考手册 - 酒店软件培训支持与 Java JEE AWS Amazon云开发精通：参考手册手册
+- - '#'
+  - 从 Opera PMS 中开具凭证、发票和票据
+- - '#'
+  - Opera PMS 中通过贷单制作贷记（Credit Notes）
+- - '#'
+  - Opera PMS 中的房价策略配置与演示
+- - '##'
+  - 1. 用户资料 (USER PROFILES)
+- - '###'
+  - 前台资料
+- - '###'
+  - 预订资料
+- - '##'
+  - 2. 系统参数 (SYSTEM PARAMETERS)
+- - '##'
+  - 3. 房价策略定义
+- - '##'
+  - 4. 入住水平与预测处理器 (OCCUPANCY LEVEL AND FORECAST PROCESSOR)
+- - '##'
+  - 5. 房价代码配置 (RATE CODE CONFIGURATION)
+- - '##'
+  - 6. 预订类型的配置
+- - '##'
+  - 7. 进行预订
+- - '##'
+  - 8. 与价格策略相关的报告
+- - '#'
+  - 使用 Opera PMS 和 Oracle Reports Developer 创建报告
+- - '#'
+  - Opera PMS 每日付款报表的设计与创建
+- - '#'
+  - Opera PMS 中交易明细表报告的创建
+- - '##'
+  - 可用于对账的其他报告摘要
+- - '##'
+  - Oracle 的 SQL 查询
+- - '##'
+  - 差异 (Discrepancies)
+- - '##'
+  - Opera PMS 中分配给交易代码的会计科目
+- - '##'
+  - Opera PMS 中更改房间类型
+- - '##'
+  - Opera 管理中有用的 Oracle 查询
+- - '###'
+  - 按活动产量 (Production by event)
+- - '###'
+  - 锁定房间 (Habitaciones blocked)
+- - '###'
+  - 已预订住房
+- - '###'
+  - 按公司和市场收入
+- - '###'
+  - 每日房间数
+- - '###'
+  - 按市场代码每月预测
+- - '###'
+  - 每日订量
+- - '###'
+  - 按销售主管产出
+- - '###'
+  - 每房间产出
+- - '###'
+  - 按公司和房型类型的产出
+- - '###'
+  - 按市场和执行人员划分月产出
+- - '###'
+  - 按执行人员、房间的产出
+- - '###'
+  - 按市场代码预测
+- - '###'
+  - 活动搜索 - 执行人员和客人的备注
+- - '###'
+  - 取消的订单
+- - '###'
+  - 按公司的联系人
+- - '###'
+  - 在 Material Controls Micros Fidelio 中创建价值实物账

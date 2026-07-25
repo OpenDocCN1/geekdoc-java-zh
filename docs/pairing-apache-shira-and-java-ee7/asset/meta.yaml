@@ -1,0 +1,56 @@
+name: Pairing Apache Shira and Java EE7
+name_cn: Apache Shira 与 Java EE7 配对
+slug: pairing-apache-shira-and-java-ee7
+toc:
+- - '##'
+  - 1：项目
+- - '###'
+  - 1.1：创建项目
+- - '###'
+  - 1.2：设计示例应用程序
+- - '####'
+  - 1.2.1：BCE/ECB 模式
+- - '####'
+  - 1.2.2：BCE 实现
+- - '##'
+  - 2：JPA 实体
+- - '##'
+  - 3：Apache Shiro
+- - '##'
+  - /login.jsp 不限制为已验证的用户（否则没人能登录！），
+- - '##'
+  - '### 但必须为其指定 ''authc'' 过滤器以便处理该 URL 的登录提交。'
+- - '##'
+  - '### 它 足够智能，可以允许上述 shiro.loginUrl 指定的请求通过。'
+- - '##'
+  - 第 4 步：Shiro：深入阶
+- - '###'
+  - 第 4.1 步：消除 web.xml 配置
+- - '####'
+  - 第 4.1.1 步：从过滤器到 @WebFilter
+- - '####'
+  - 第 4.1.2 步：从监听器到 @WebListener
+- - '###'
+  - 第 4.2 步：消除 INI 配置文件
+- - '####'
+  - 4.2.1：编写 SecurityManager 生产者
+- - '#####'
+  - 4.2.1.1：编写 Realm
+- - '#####'
+  - 4.2.1.2：编写 CredentialsMatcher
+- - '#####'
+  - 4.2.1.3：编写 RememberMeManager
+- - '####'
+  - 4.2.1.4：编写 CacheManager
+- - '####'
+  - 4.2.1.5：组装组件
+- - '####'
+  - 4.2.2：编写 FilterChainResolver 生产者
+- - '##'
+  - 第 5 步：将 Shiro 操作暴露为 REST 服务
+- - '###'
+  - 5.1 节：启用 JAX-RS
+- - '###'
+  - 第 5.2 步：测试你的 RESTful 服务
+- - '###'
+  - 第 5.2.1 步：创建客户端项目

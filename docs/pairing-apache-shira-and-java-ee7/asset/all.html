@@ -1,0 +1,2961 @@
+<p><img src="images/jacket/cover.jpg" /></p>
+<p><span id="cover.xhtml"></span></p>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewbox="0 0 1050 1600" preserveaspectratio="xMidYMid meet">
+<image width="1050" height="1600" xlink:href="images/jacket/cover.jpg"></image>
+</svg>
+<p><span id="pairing-apache-shiro-and-java-ee-7.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<p>© 2016 Nebrass Lamouchi. All rights reserved. Version 1.0.</p>
+<p>Published by C4Media, publisher of InfoQ.com.</p>
+<p>No part of this publication may be reproduced, stored in a retrieval
+system or transmitted in any form or by any means, electronic,
+mechanical, photocopying, recoding, scanning or otherwise except as
+permitted under Sections 107 or 108 of the 1976 United States Copyright
+Act, without the prior written permission of the publisher.</p>
+<p>Production Editor: Ana Ciobotaru<br />
+Copy Editor: Lawrence Nyveen<br />
+Cover and Interior Design: Dragos Balasoiu</p>
+<p>Library of Congress Cataloguing-in-Publication Data: ISBN:
+978-1-365-12404-4</p>
+<p><span id="dedication.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<p>To Mom, it’s impossible to thank you adequately for everything you’ve
+done.</p>
+<p>To the soul of Dad, I miss you every day…​</p>
+<p>To Firass, you are the best, may God bless you…​</p>
+<p>To my sweetheart, since you’ve come into my life, there are so many
+new emotions and feelings begging to come out..</p>
+<p><span id="acknowledgements.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<p>I would like to express my gratitude to the many people who saw me
+through this book. To all those who provided support, read, wrote,
+offered comments and assisted in the editing and design.</p>
+<p>To my friends thank you for always being there when I need you.</p>
+<p>To Jérome Salles, thank you for teaching me the Java EE Art and for
+your support and guidance.</p>
+<p>To Paul Bernardi and Geertjan Wielenga, thank you for believing in my
+skills and for the chances that you are offering to me.</p>
+<p>To Victor Grazi and Laurie Nyveen, the great technical reviewers who
+worked on this book. Thank you for the great job that you did.</p>
+<p>To Ana Ciobotaru and Charles Humble, thank you for making the idea of
+this book come true. Thank you for all the help &amp; support that you
+have provided me.</p>
+<p>Last and not least, I beg forgiveness of all those who have been with
+me over the course of the years and whose names I have failed to
+mention.</p>
+<p><span id="preface.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<p>Over the last few years, I’ve been working on many projects and
+companies that used Java to develop their applications. On those
+applications, I tried to implement the authentication &amp;
+authorization modules and sometimes using the Spring Security or JBoss
+Picketlink.</p>
+<p>My M.Sc studies of the IT Security and my experience with the OWASP
+Foundation gave me more motivation to explore the security frameworks
+such as JAAS, JASPIC, Spring Security and Picketlink.</p>
+<p>When I heard about Apache Shiro, I was motivated to use it right
+away. It combined my most-often-used frameworks into an easy-to-use
+package. I wanted to write this book because I saw that it will be very
+helpful for junior Java developers to find some quick introduction for
+starting securing their apps. I wanted to further the knowledge of this
+wonderful project. I wanted to show them how security isn’t scary, it’s
+just another framework that can improve your Application Security
+eXperience.</p>
+<section id="preface.xhtml_what-is-in-an-infoq-mini-book" class="sect1"
+title="What is in an InfoQ mini-book?">
+<h2>What is in an InfoQ mini-book?</h2>
+<p>InfoQ mini-books are designed to be concise, intending to serve
+technical architects looking to get a firm conceptual understanding of a
+new technology or technique in a quick yet in-depth fashion. You can
+think of these books as covering a topic strategically or essentially.
+After reading a mini-book, the reader should have a fundamental
+understanding of a technology, including when and where to apply it, how
+it relates to other technologies, and an overall feeling that they have
+assimilated the combined knowledge of other professionals who have
+already figured out what this technology is about. The reader will then
+be able to make intelligent decisions about the technology once their
+projects require it, and can delve into sources of more detailed
+information (such as larger books or tutorials) at that time.</p>
+</section>
+<section id="preface.xhtml_who-this-book-is-for" class="sect1"
+title="Who this book is for">
+<h2>Who this book is for</h2>
+<p>This book is aimed specifically at Java developers who want a rapid
+introduction to Apache Shiro by learning how to couple it with the Java
+EE 7.</p>
+</section>
+<section id="preface.xhtml_what-you-need-for-this-book" class="sect1"
+title="What you need for this book">
+<h2>What you need for this book</h2>
+<p>To try code samples in this book, you will need a computer running an
+up-to-date operating system (Windows, Linux, or Mac OS X). You will need
+Node.js and Java installed. The book code was tested against Node.js
+v0.12 and JDK 8, but newer versions should also work.</p>
+</section>
+<section class="sect1" title="Conventions">
+<h2 id="preface.xhtml_conventions">Conventions</h2>
+<p>We use a number of typographical conventions within this book that
+distinguish between different kinds of information.</p>
+<p>Code in the text, including commands, variables, file names, XML
+configuration files, and property names are shown as follows: "The
+ShiroFilterActivator extends the <code
+class="literal">ShiroFilter</code>﻿ class. Its annotation <code
+class="literal">@WebFilter("/*")</code>﻿ enables the filter for all the
+requests."</p>
+<p>A block of code is set out as follows. It may be colored, depending
+on the format in which you’re reading this book.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+        xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd&quot;
+        bean-discovery-mode=&quot;all&quot;&gt;
+&lt;/beans&gt;</code></pre>
+<figcaption>Listing 1. src/main/webapp/WEB-INF/beans.xml</figcaption>
+</figure>
+<figure class="listing">
+<pre class="source language-java"><code>@ApplicationPath(&quot;api&quot;)
+public class JaxRsConfiguration extends Application {
+    // JAX-RS Configuration Class
+}</code></pre>
+<figcaption>Listing 2.
+src/main/java/demo/DemoApplication.java</figcaption>
+</figure>
+<p>When we want to draw your attention to a particular part of the code,
+it’s called out with numbers.</p>
+<figure class="listing">
+<pre class="source language-java"><code>private String getCredentials(AuthenticationInfo info) { ①
+
+    Object credentials = info.getCredentials(); ②
+    return toString(credentials); ③
+}</code></pre>
+</figure>
+<div class="callout-list">
+<ol>
+<li><em>①</em> We are passing the fundamental AuthenticationInfo object
+to the <code class="literal">getCredentials()</code>﻿ method.</li>
+<li><em>②</em> <code class="literal">info.getCredentials()</code>﻿ is a
+function called in the <code class="literal">getCredentials()</code>﻿
+method, used to grab the <code class="literal">credentials</code>﻿ object
+from the <code class="literal">AuthenticationInfo</code>﻿ instance.</li>
+<li><em>③</em> The textual format of the <code
+class="literal">credentials</code>﻿ instance is returned to the <code
+class="literal">getCredentials()</code>﻿ caller.</li>
+</ol>
+</div>
+<aside class="admonition tip" title="Tip" epub:type="help">
+<div class="content">
+<p>Tips are shown using callouts like this.</p>
+</div>
+</aside>
+<aside class="admonition warning" title="Warning" epub:type="warning">
+<div class="content">
+<p>Warnings are shown using callouts like this.</p>
+</div>
+</aside>
+<aside class="sidebar titled" title="Sidebar" epub:type="sidebar">
+<h2>SIDEBAR</h2>
+<div class="content">
+<p>Additional information about some topics may be displayed using a
+sidebar like this.</p>
+</div>
+</aside>
+<p>Finally, this text shows what a quote looks like.</p>
+<div class="blockquote">
+<blockquote>
+<p><span class="open-quote">“</span>In the end, it’s not the years in
+your life that count. It’s the life in your years.<span
+class="close-quote">”</span></p>
+<footer>
+<p>~ Abraham Lincoln</p>
+</footer>
+</blockquote>
+</div>
+</section>
+<section id="preface.xhtml_reader-feedback" class="sect1"
+title="Reader feedback">
+<h2>Reader feedback</h2>
+<p>We always welcome feedback from our readers. Let us know what you
+think about this book — what you liked or disliked. Reader feedback
+helps us develop titles that you get the most out of. To send us
+feedback, e-mail us at <a href="mailto:feedback@infoq.com"
+class="link">feedback@infoq.com</a>﻿.</p>
+<p>If you have a topic that you have expertise in and you are interested
+in either writing or contributing to a book, please take a look at our
+mini-book guidelines at <a
+href="http://www.infoq.com/minibook-guidelines"
+class="link">http://www.infoq.com/minibook-guidelines</a>﻿.</p>
+</section>
+<p><span id="introduction.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<p>Security is essential for every enterprise application. In many
+cases, securing the application costs more than any other part of the
+project.</p>
+<p>To be able to protect the application functionalities and the data
+stored, the team has to divide tasks to fulfil the security duties.
+Developers have to write secure code and implement cryptographic layers,
+authentication and authorization mechanisms, and session-management
+strategies. Sysadmins have to implement firewalls, VPNs, and anti-virus,
+anti-adware, and all other anti-* solutions.</p>
+<div class="blockquote">
+<blockquote>
+<p><span class="open-quote">“</span>If you know yourself but not your
+enemy, for every victory gained you will also suffer a defeat.<span
+class="close-quote">”</span></p>
+<footer>
+<p>~ Sun Tzu <cite title="The Art of War">The Art of War</cite></p>
+</footer>
+</blockquote>
+</div>
+<p>Every competent Java EE developer knows that you must have security
+APIs in the platform, either natively or offered by third-party
+frameworks. But since the birth of the Java EE platform on December 12,
+1999, Java EE has lacked a full, dedicated security specification.
+JSR-375 has been created to provide a complete specification for Java EE
+security, one that covers all needs, but will only be available in the
+Java EE 8 release, estimated to arrive in 2017.</p>
+<p>One of the most desired of security features are authentication and
+authorization. I will refer to authentication and authorization in this
+article as "Auth²". The platform hasn’t provided a useful solution for
+these despite attempts like JAAS (2001-2003) and JASPIC (2009) to allow
+Java EE folks to do some "standardized" Auth².</p>
+<p>As usual, when the community demands a feature that is unfortunately
+not provided by the platform, third parties try to satisfy the need. The
+most popular stars for Auth² in Java EE are Spring Security, JBoss’s
+PicketLink, and Apache Shiro.</p>
+<p>Many developers implement their own Auth² mechanisms rather than
+taking the time to understand and implement these weird third-party
+solutions. I write "weird" because every third-party solution is tightly
+linked to its creator, such as Spring Security and JBoss PicketLink or
+poorly documented and ambiguous, which is the case for Apache Shiro.</p>
+<section id="introduction.xhtml_personal-case" class="sect1"
+title="Personal case">
+<h2>Personal case</h2>
+<p>I decided to share my personal experience with Auth² frameworks. I am
+trying to build my own up-to-date security framework for Java EE 7. My
+implementation will be handy until the release of a reference
+implementation for JSR-375. I will try to explain every choice made and
+I hope this it is useful to you.</p>
+<p>I have tried many APIs but every one disappointed me. Either the
+solution was hard to implement (implementing Spring Security with EJB,
+using JAAS and JASPIC is not exactly terrific) or the solution was
+vendor specific (PicketLink is usable only in a JBoss server) or the API
+was poorly documented (Apache Shiro).</p>
+<p>I discovered Apache Shiro in December 2012. At that time, it wasn’t
+popular. It was hard to use and suffered from poor documentation and
+references. I tried to use it but ended up dropping it.</p>
+</section>
+<section id="introduction.xhtml_professional-experience" class="sect1"
+title="Professional experience">
+<h2>Professional experience</h2>
+<p>Since starting my career as a Java developer, every client has asked
+me to help implementing their own Auth² solution, except for one who
+asked me to implement Spring Security on his web app. Every time I work
+on the security level, I keep asking myself "Why do I have to do this
+again? Why there is no efficient solution? Where is the reusability? Why
+I am repeating myself?"</p>
+<p>The last time I implemented an Auth² mechanism, I used older Java EE
+6 technologies: JSP 2.5, Servlets 3.0, JMS 1.1, EJB 3.1, and JPA 2.0. It
+was an amazing experience to implement the Open Web Application Security
+Project (OWASP) specifications using Java EE APIs.</p>
+</section>
+<section id="introduction.xhtml_motivation-for-writing-this-tutorial"
+class="sect1" title="Motivation for writing this tutorial">
+<h2>Motivation for writing this tutorial</h2>
+<p>After finishing that last project, I decided to revisit Apache Shiro,
+that mysterious framework that I could not use three years earlier.</p>
+<p>Oddly, I found that the Shiro website pages had not changed over the
+years. There were no new sections, no new tutorials, and no new
+documentation. Obviously, I looked on YouTube, Vimeo, and Dailymotion
+for Shiro video tutorials, with no success. I looked for any relevant
+books or articles, with no significant result. This was so strange for
+an Apache project. Usually, any Apache project rapidly gets well
+covered. But this wasn’t the case for Shiro.</p>
+<p>I tried to use Shiro in a sample project, and here’s my initial
+feedback:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">There is the use for an INI file, which
+differs from Spring Security style, which uses XML files for
+configuration.</span></li>
+<li><span class="principal">There is not enough official documentation
+and resources. For example, the official tutorial on the website focuses
+only on Stormpath.</span></li>
+<li><span class="principal">The JavaDoc website of the latest Shiro
+version is almost always inaccessible (I reported that to the Apache
+Shiro Twitter account).</span></li>
+</ul>
+</div>
+<p>I decided to write this tutorial to help fill in the gap.</p>
+</section>
+<p><span id="chapter-1.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<section id="chapter-1.xhtml_what-is-shiro" class="sect1"
+title="What is Shiro?">
+<h2>What is Shiro?</h2>
+<p>Apache Shiro is an open-source software-security framework that
+performs authentication, authorization, cryptography, and session
+management. Originally known as JSecurity, Shiro has been designed to
+provide robust security features with intuitive and easy
+implementation.</p>
+<p>The tutorial detailed in this book is targeted at Java developers
+seeking an Auth² framework for use on contemporary technology
+stacks.</p>
+<p>The project got its name ("shiro" is Japanese for castle") in 2008
+when it was pushed to the Apache Community. The "castle" mandate aims to
+provide a standardized framework that satisfies the full gamut of
+security considerations for any Java project.</p>
+</section>
+<section id="chapter-1.xhtml_plan-of-the-castle" class="sect1"
+title="Plan of the castle">
+<h2>Plan of the castle</h2>
+<p>Apache Shiro covers the main four concerns of application
+security:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Authentication, sometimes called "login", is
+the act of proving that a user is who they say they are.</span></li>
+<li><span class="principal">Authorization is the process of access
+control, i.e. determining who has access to what.</span></li>
+<li><span class="principal">Session management is managing user-specific
+sessions, even in non-web or Enterprise JavaBeans (EJB)
+applications.</span></li>
+<li><span class="principal">Cryptography is keeping data secure using
+cryptographic algorithms while still maintaining ease of
+use.</span></li>
+</ul>
+</div>
+<p><img src="images/ShiroFeatures.png" alt="ShiroFeatures" /></p>
+<p>Supported environments include:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Web support — Shiro’s web support APIs help
+easily secure web applications.</span></li>
+<li><span class="principal">Caching — caching is a first-class citizen
+in Apache Shiro’s API and ensures that security operations remain fast
+and efficient.</span></li>
+<li><span class="principal">Concurrency — Apache Shiro concurrency
+features are designed to support multi-threaded
+applications.</span></li>
+<li><span class="principal">Testing — testing support simplifies the
+creation of unit and integration tests and ensures that your code will
+be secured as expected.</span></li>
+<li><span class="principal">"Run As" — Shiro allows users to assume the
+identity of another user (if entitled), a feature that can be useful in
+administrative scenarios.</span></li>
+<li><span class="principal">"Remember Me" — Shiro remembers users'
+identities across sessions so they only need to log in when
+mandatory.</span></li>
+</ul>
+</div>
+</section>
+<section id="chapter-1.xhtml_why-not-jaas-or-spring-security"
+class="sect1" title="Why not JAAS or Spring Security ?">
+<h2>Why not JAAS or Spring Security ?</h2>
+<p>Existing Java security mechanisms (like JAAS) are confusing and fall
+short in the area of application-level security. Some, for example
+PicketLink, are server-dependent. Others, such as Spring Security,
+require tedious XML configuration.</p>
+<p>Apache Shiro aims to address these challenges by providing a
+user-friendly, standardized API for implementing security in your
+projects.</p>
+</section>
+<p><span id="chapter-2.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<div class="abstract preamble">
+<p><img src="images/logo-shiro.png" alt="logo shiro" /></p>
+</div>
+<section id="chapter-2.xhtml_technologies" class="sect1"
+title="Technologies">
+<h2>Technologies</h2>
+<p>This tutorial uses:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Apache Shiro 1.2.4</span></li>
+<li><span class="principal">Java EE 7 back end with JPA 2.1, EJB 3.2,
+and JAX-RS 2.0</span></li>
+<li><span class="principal">Payara Server</span></li>
+<li><span class="principal">NetBeans 8.1 IDE</span></li>
+</ul>
+</div>
+</section>
+<section id="chapter-2.xhtml_apache-shiro" class="sect1"
+title="Apache Shiro">
+<h2>Apache Shiro</h2>
+<p>Apache Shiro is a powerful, easy-to-use Java security framework that
+allows your applications to perform authentication, authorization,
+cryptography, and session management. You can use it to secure any kind
+of application, from command-line scripts to mobile apps to the largest
+web and enterprise applications.</p>
+<p>The framework landscape has changed quite a bit since JSecurity,
+Shiro’s predecessor, was released in 2004, but there are still
+compelling reasons to use Shiro today. It’s easy to use, comprehensive,
+web-capable, pluggable, and well supported.</p>
+<p>For more information or for official documentation, see the <a
+href="http://shiro.apache.org/" class="link">Apache Shiro website</a>﻿.
+And be sure to follow the <a href="https://twitter.com/apacheshiro"
+class="link">offical Twitter account</a>﻿.</p>
+</section>
+<section id="chapter-2.xhtml_java-ee-7" class="sect1" title="Java EE 7">
+<h2>Java EE 7</h2>
+<p>Java Platform Enterprise Edition (Java EE) is the standard in
+community-driven enterprise software. Java EE is ever expanding via the
+Java Community Process, with contributions from industry experts,
+commercial and open-source organizations, Java user groups, and
+countless individuals. Each release integrates new features that align
+with industry requirements, increases developer productivity, and
+improves application portability.</p>
+<p>The latest version of Java EE is Java EE 7, released in June 2013.
+The Java EE 7 platform added first-class support for recent developments
+in web standards, including WebSockets and JSON, which provide the
+underpinnings for HTML 5 support in Java EE. Java EE 7 also adds a
+modern HTTP client API as defined by JAX-RS 2.0.</p>
+<p>The Java EE 7 specifications include:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=356" class="link">Java API
+for WebSockets — JSR-356</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=353" class="link">Java API
+for JSON Processing — JSR-353</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/ja/jsr/detail?id=352" class="link">Batch
+Applications for Java Platform — JSR-352</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/ja/jsr/detail?id=236" class="link">Concurrency
+Utilities for Java EE — JSR-236</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=311" class="link">Java API
+for RESTful Web Services — JSR-311</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=343" class="link">Java
+Message Service 2.0 — JSR-343</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=341" class="link">Expression
+Language 3.0 — JSR-341</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=345" class="link">Enterprise
+JavaBeans 3.2 — JSR-345</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=338" class="link">Java
+Persistence 2.1 — JSR-338</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.jcp.org/en/jsr/detail?id=344" class="link">JavaServer
+Faces 2.2 — JSR-344</a>﻿</span></li>
+</ul>
+</div>
+<p>You can find all necessary information about the Java EE 7
+specifications on the umbrella <a
+href="https://jcp.org/en/jsr/detail?id=342" class="link">JSR-342</a>﻿
+page.</p>
+<p><strong>Java EE 7 specifications.</strong> <img
+src="images/javaee7.jpg" alt="javaee7" /></p>
+</section>
+<section id="chapter-2.xhtml_payara-server" class="sect1"
+title="Payara Server">
+<h2>Payara Server</h2>
+<p>Payara Server is a drop-in replacement for the GlassFish server with
+guaranteed quarterly releases. The Payara team provides enhancements,
+bug fixes, and patches to upstream GlassFish server and dependent
+libraries. This is what makes Payara Server one of the best application
+servers for production in the Java EE ecosystem. The Payara team also
+provides 24/7 dedicated incident and software support delivered by the
+best middleware engineers in the industry. The team is open to
+contributions and publicly reports its progress in writing features or
+fixing bugs. There also a responsive community that reacts quickly to
+any request. Payara Server tweaks GlassFish but keeps its ease of use
+and its beautiful administration features.</p>
+<p>You can grab the latest version of Payara Server from the <a
+href="http://www.payara.fish/downloads" class="link">project
+website</a>﻿.</p>
+<p><img src="images/payara-logo.jpg" alt="payara logo" /></p>
+</section>
+<section id="chapter-2.xhtml_netbeans-ide" class="sect1"
+title="NetBeans IDE">
+<h2>NetBeans IDE</h2>
+<p>NetBeans IDE is the free Java IDE from Oracle, and is designed to
+limit coding errors and optimize productivity without configuration or
+plugins. NetBeans can interact with all of your environment components
+such as databases, automation servers, application servers, quality
+tools, etc. without requiring a lot of your time to prepare the
+environment.</p>
+<p>NetBeans IDE has awesome debugger functionalities to optimize the
+refactoring and debugging processes. It includes a powerful text editor
+with refactoring tools and code completion, snippets and analyzers, and
+even a multilingual spelling checker. NetBeans also offers powerful
+multisystem versioning using out-of-the-box integration with tools such
+as Git, SVN, CVS, and Mercurial. Beyond Java and JavaFX, NetBeans IDE
+supports C/C++, PHP, and HTML5/JavaScript. NetBeans IDE is available for
+all operating systems that support a compatible JVM.</p>
+<p>NetBeans organizes many free conferences and meetings all over the
+world, in the US, France, UK, Netherlands, Brazil, and more countries.
+Attending these events will let you acquire skills not only with
+NetBeans but for general programming, too.</p>
+<p>You can download the latest version of NetBeans IDE at the <a
+href="https://netbeans.org/downloads/index.html" class="link">NetBeans
+website</a>﻿.</p>
+<p><img src="images/netbeans-logo.png" alt="netbeans logo" /></p>
+</section>
+<p><span id="chapter-3.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<p>The remainder of this book is a tutorial presented in steps designed
+to let you easily follow along.</p>
+<p>First, install the tutorial tool set so that you can follow the
+screenshots:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><a
+href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+class="link">JDK 8</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://maven.apache.org/download.cgi" class="link">Maven
+3</a>﻿</span></li>
+<li><span class="principal">a relational database such as <a
+href="https://www.mysql.com/" class="link">MySQL</a>﻿ or <a
+href="http://www.postgresql.org/" class="link">PostgreSQL</a>﻿
+(recommended)</span></li>
+<li><span class="principal"><a href="http://www.payara.fish/"
+class="link">Payara Server</a>﻿ (recommended), <a
+href="http://wildfly.org/" class="link">WildFly</a>﻿, or any Java EE 7
+server</span></li>
+<li><span class="principal">an IDE, and I prefer <a
+href="https://netbeans.org/" class="link">NetBeans</a>﻿</span></li>
+<li><span class="principal">lots of hot coffee!</span></li>
+</ul>
+</div>
+<p>Before starting the project, configure your system. Install the JDK,
+database, etc., and create and configure the project environment and
+IDE</p>
+<section id="chapter-3.xhtml_step-1-the-project" class="sect1"
+title="Step 1: The project">
+<h2>Step 1: The project</h2>
+<section id="chapter-3.xhtml_step-1-1-creating-the-project"
+class="sect2" title="Step 1.1: Creating the project">
+<h3>Step 1.1: Creating the project</h3>
+<p>Start the tutorial by creating a new Maven project — a web
+application.</p>
+<p><img src="images/nb1.png" alt="nb1" /></p>
+<hr />
+<p>Next, complete the Name and Location pane.</p>
+<p><img src="images/nb2.png" alt="nb2" /></p>
+<p>And next, fill in the server and Java EE settings.</p>
+<p><img src="images/nb3.png" alt="nb3" /></p>
+<hr />
+<p>After creating the project, go to the pom.xml file and edit it.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.targa.dev&lt;/groupId&gt;
+    &lt;artifactId&gt;ShiroTutorial&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+
+    &lt;name&gt;ShiroTutorial&lt;/name&gt;
+
+    &lt;properties&gt;
+        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+        &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax&lt;/groupId&gt;
+            &lt;artifactId&gt;javaee-api&lt;/artifactId&gt;
+            &lt;version&gt;7.0&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;finalName&gt;ShiroTutorial&lt;/finalName&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;</code></pre>
+</figure>
+<aside class="admonition note" title="Note" epub:type="note">
+<div class="content">
+<p>We need only these lines. The thinner your pom.xml is, the lighter
+your WAR file will be.</p>
+</div>
+</aside>
+</section>
+<section id="chapter-3.xhtml_step-1-2-designing-the-sample-application"
+class="sect2" title="Step 1.2: Designing the sample application">
+<h3>Step 1.2: Designing the sample application</h3>
+<section id="chapter-3.xhtml_step-1-2-1-the-bce-ecb-pattern"
+class="sect3" title="Step 1.2.1: The BCE/ECB pattern">
+<h4>Step 1.2.1: The BCE/ECB pattern</h4>
+<p>We will be using the entity-control-boundary (ECB) pattern, a
+variation of the ubiquitous model-view-controller (MVC) pattern. When
+identifying the elements for an execution sequence in your system, you
+can classify each participating element into one of three categories:
+entity, control, or boundary.</p>
+<p>An entity is a long-lived, passive element that is responsible for
+some meaningful chunk of information. This is not to say that entities
+are "data" while other design elements are "function", just that
+entities perform behavior that is organized around some cohesive sets of
+data.</p>
+<p>A control element manages the flow of interaction within a scenario.
+A control element can manage the end-to-end behavior of a scenario or it
+can manage the interactions between a subset of the elements. You should
+classify as entities those behavior and business rules relevant to the
+scenario that relate to the information; control elements are
+responsible only for the flow of the scenario.</p>
+<p>A boundary element lies just within the periphery of a system or
+subsystem. For any scenario being considered either across the whole
+system or within some subsystem, some boundary elements will be
+front-end elements that accept input from outside the area under design
+and other elements will be back end, managing communication to
+supporting elements outside the system or subsystem.</p>
+<p><strong>Boundary-control-entity pattern.</strong> <img
+src="images/bce-structure.png" alt="bce structure" /></p>
+</section>
+<section id="chapter-3.xhtml_step-1-2-2-bce-implementation"
+class="sect3" title="Step 1.2.2: BCE implementation">
+<h4>Step 1.2.2: BCE implementation</h4>
+<p>Create some empty Java packages just to highlight the BCE-pattern
+implementation in your application. The packages will take this
+format:</p>
+<p><strong>BCE-pattern package structure.</strong> <img
+src="images/bce-package-structure.png"
+alt="bce package structure" /></p>
+<p>Let’s call the functional layer for the authentication and
+authorization needs "security". This is the output:</p>
+<p><img src="images/nb4.png" alt="nb4" /></p>
+<aside class="admonition note" title="Note" epub:type="note">
+<div class="content">
+<p>In NetBeans, you can simplify the view of the packages by choosing
+"Reduced Tree" view for the packages. On the project view, right-click →
+View Java Packages as → Reduced Tree.</p>
+</div>
+</aside>
+<p><img src="images/nb5.png" alt="nb5" /></p>
+<p>Now start making your entities.</p>
+</section>
+</section>
+</section>
+<section id="chapter-3.xhtml_step-2-jpa-entities" class="sect1"
+title="Step 2: JPA entities">
+<h2>Step 2: JPA entities</h2>
+<p>Use JPA 2.1 for your persistent entities. Create two entities in the
+<strong>com.targa.dev.shirotutorial.security.entity</strong>﻿
+package.</p>
+<p>For our Auth<sup>²</sup>﻿ implementation, we will have two
+entities:</p>
+<p><strong>User</strong>﻿, which refers to the client of the application,
+and <strong>Role</strong>﻿, which refers to the authorization level of
+the user.</p>
+<p><strong>Class diagram of <strong>User</strong>﻿ and
+<strong>Role</strong>﻿ entities.</strong> <img
+src="images/bce-user-role.png" alt="bce user role" /></p>
+<p>You can extend the "roles and rights" strategy (for permission-based
+authorization) by adding a <strong>Permission</strong>﻿ entity that
+contains the rights attributed for the associated <strong>Role</strong>﻿
+— for example, "Read only" or "Control". The resulting class diagram
+is:</p>
+<p><strong>Class diagram of <strong>Role</strong>﻿ and
+<strong>Permission</strong>﻿ entities.</strong> <img
+src="images/bce-role-permission.png" alt="bce role permission" /></p>
+<figure class="listing">
+<pre class="source language-java"><code>@Entity ①
+@NamedQueries({ ②
+    @NamedQuery(name = &quot;User.findAll&quot;, query = &quot;select u from User u&quot;),
+    @NamedQuery(name = &quot;User.findByUsername&quot;, query = &quot;SELECT u FROM User u WHERE u.username = :username&quot;) ③
+})
+public class User {
+    private static final long serialVersionUID = 1L;
+    @Id ④
+    @GeneratedValue ⑤
+    @Column(name = &quot;id&quot;, nullable = false, updatable = false) ⑥
+    private long id;
+    @NotNull ⑦
+    @Column(name = &quot;username&quot;, length = 50, nullable = false)
+    private String username;
+    @NotNull
+    @Column(name = &quot;password&quot;, nullable = false)
+    private String password;
+    @OneToOne(cascade = CascadeType.PERSIST) ⑧
+    private Role role;
+    @Column(name = &quot;enabled&quot;, nullable = false)
+    private Boolean enabled;
+    @Version ⑨
+    @Column(name = &quot;version&quot;, nullable = false)
+    private Timestamp version; ⑩
+
+//Getters &amp; setters
+}</code></pre>
+<figcaption>Listing 1. <strong>User</strong>﻿:</figcaption>
+</figure>
+<div class="callout-list">
+<ol>
+<li><em>①</em> Declares the annotated class as a JPA entity.</li>
+<li><em>②</em> Declares a list of <strong>NamedQuery</strong>﻿
+elements.</li>
+<li><em>③</em> The minimal <strong>NamedQuery</strong>﻿ declaration =
+query name + JPQL query.</li>
+<li><em>④</em> Defines the attribute as the entity’s <strong>id</strong>﻿
+field.</li>
+<li><em>⑤</em> Used on the entity’s <strong>id</strong>﻿ field to specify
+the <strong>id</strong>﻿ generation strategy.</li>
+<li><em>⑥</em> Specifies the definition of the corresponding table’s
+column.</li>
+<li><em>⑦</em> Defines a validation contraint for the corresponding
+field value → username is not null.</li>
+<li><em>⑧</em> Defines the relation between the entities.</li>
+<li><em>⑨</em> Specifies the version field of an entity class that
+serves as its optimistic lock value. The version is used to ensure
+integrity when performing the merge operation and for optimistic
+concurrency control.</li>
+<li><em>⑩</em> The <strong>Timestamp</strong>﻿ is the version property
+type.</li>
+</ol>
+</div>
+<figure class="listing">
+<pre class="source language-java"><code>@Entity
+@NamedQueries({
+    @NamedQuery(name = &quot;Role.findAll&quot;, query = &quot;SELECT r FROM Role r&quot;)
+})
+public class Role {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue
+    @Column(name = &quot;id&quot;, nullable = false, updatable = false)
+    private long id;
+    @NotNull
+    @Column(name = &quot;name&quot;, length = 50, nullable = false)
+    private String name;
+    @NotNull
+    @Past ①
+    @Column(name = &quot;creation&quot;, nullable = false, updatable = false)
+    @Temporal(TemporalType.TIMESTAMP) ②
+    private Date creation;
+    @Column(name = &quot;enabled&quot;, nullable = false)
+    private Boolean enabled;
+
+//Getters &amp; setters
+}</code></pre>
+<figcaption>Listing 2. <strong>Role</strong>﻿:</figcaption>
+</figure>
+<div class="callout-list">
+<ol>
+<li><em>①</em> Creation date must occur in the past.</li>
+<li><em>②</em> Indicates this is a date or time column.</li>
+</ol>
+</div>
+<p>Next, create a service for every entity. Your services will be
+created in the
+<strong>com.targa.dev.shirotutorial.security.control</strong>﻿ package.
+The <strong>EntityManager</strong>﻿ is an object that packages the CRUD
+operations needed to handle the entity:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Save/Edit</span></li>
+<li><span class="principal">Delete</span></li>
+<li><span class="principal">Find</span></li>
+</ul>
+</div>
+<figure class="listing">
+<pre class="source language-java"><code>@Stateless
+public class UserService {
+    @PersistenceContext
+    EntityManager em;
+
+    public User save(User entity) {
+        return this.em.merge(entity);
+    }
+
+    public void delete(long id) {
+        try {
+            User reference = this.em.getReference(User.class, id);
+            this.em.remove(reference);
+        } catch (EntityNotFoundException e) {
+            //It doesn&#39;t exist already
+        }
+    }
+
+    public User findById(long id) {
+        return this.em.find(User.class, id);
+    }
+
+    public List&lt;User&gt; findAll() {
+        return this.em.createNamedQuery(&quot;User.findAll&quot;, User.class)
+                .getResultList();
+    }
+}</code></pre>
+<figcaption>Listing 3. <strong>UserService</strong>﻿:</figcaption>
+</figure>
+<figure class="listing">
+<pre class="source language-java"><code>@Stateless
+public class RoleService {
+    @PersistenceContext
+    EntityManager em;
+
+    public Role save(Role entity) {
+        return this.em.merge(entity);
+    }
+
+    public void delete(long id) {
+        try {
+            Role reference = this.em.getReference(Role.class, id);
+            this.em.remove(reference);
+        } catch (EntityNotFoundException e) {
+            // It doesn&#39;t exist already
+        }
+    }
+
+    public Role findById(long id) {
+        return this.em.find(Role.class, id);
+    }
+
+    public List&lt;Role&gt; findAll() {
+        return this.em.createNamedQuery(&quot;Role.findAll&quot;, Role.class)
+                .getResultList();
+    }
+}</code></pre>
+<figcaption>Listing 4. <strong>RoleService</strong>﻿:</figcaption>
+</figure>
+<p>Your services are now ready to use. For simpler and more flexible
+context dependency injection (CDI), create a beans.xml file, and change
+the <strong>bean-discovery-mode</strong>﻿ from <strong>annotated</strong>﻿
+to <strong>all</strong>﻿.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd&quot;
+    bean-discovery-mode=&quot;all&quot;&gt;
+
+&lt;/beans&gt;</code></pre>
+</figure>
+<p>This recommended step lets you inject <strong>all</strong>﻿ the
+components, not only the <strong>annotated</strong>﻿ object.</p>
+</section>
+<section id="chapter-3.xhtml_step-3-apache-shiro-prime-view"
+class="sect1" title="Step 3: Apache Shiro prime view">
+<h2>Step 3: Apache Shiro prime view</h2>
+<p>First, add the Apache Shiro dependency to your project pom:</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.shiro&lt;/groupId&gt;
+    &lt;artifactId&gt;shiro-web&lt;/artifactId&gt;
+    &lt;version&gt;1.2.4&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</figure>
+<p>Apache Shiro uses an INI configuration file to define parameters.
+Here is an example of a shiro.ini file:</p>
+<figure class="listing">
+<pre class="source language-ini"><code>[main]
+authc.loginUrl = /login.jsp ①
+authc.successUrl = /home.jsp
+
+passwordMatcher = org.apache.shiro.authc.credential.TempFixPasswordMatcher ②
+passwordService = org.apache.shiro.authc.credential.DefaultPasswordService
+passwordMatcher.passwordService = $passwordService
+
+ds = com.jolbox.bonecp.BoneCPDataSource ③
+ds.driverClass=com.mysql.jdbc.Driver
+ds.jdbcUrl=jdbc:mysql://localhost:3306/simple_shiro_web_app
+ds.username = root
+ds.password = 123qwe
+
+jdbcRealm = org.apache.shiro.realm.jdbc.JdbcRealm ④
+jdbcRealm.permissionsLookupEnabled = true
+jdbcRealm.authenticationQuery = SELECT password FROM USERS WHERE username = ?
+jdbcRealm.userRolesQuery = SELECT role_name FROM USERS_ROLES WHERE username = ?
+jdbcRealm.permissionsQuery = SELECT permission_name FROM ROLES_PERMISSIONS WHERE role_name = ?
+jdbcRealm.credentialsMatcher = $passwordMatcher
+jdbcRealm.dataSource=$ds
+
+securityManager.realms = $jdbcRealm ⑤
+
+[urls] ⑥
+# The /login.jsp is not restricted to authenticated users (otherwise no one could log in!), but
+# the &#39;authc&#39; filter must still be specified for it so it can process that url&#39;s
+# login submissions. It is &#39;smart&#39; enough to allow those requests through as specified by the
+# shiro.loginUrl above.
+/login.jsp = authc
+/home.jsp = anon, authc
+/logout = logout
+/account/** = authc</code></pre>
+</figure>
+<div class="callout-list">
+<ol>
+<li><em>①</em> Configuration for the <a
+href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html"
+class="link"><strong>authc</strong>﻿ authentication filer</a>﻿.</li>
+<li><em>②</em> Configuration for the <a
+href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/credential/PasswordMatcher.html"
+class="link"><strong>passwordMatcher</strong>﻿</a>﻿ and <a
+href="http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/credential/PasswordService.html"
+class="link"><strong>passwordService</strong>﻿</a>﻿, which are components
+for password verification and matching.</li>
+<li><em>③</em> The definition of the <strong>Datasource</strong>﻿ in this
+example is a JDBC <strong>DataSource</strong>﻿.</li>
+<li><em>④</em> Configuration for the <strong>Realm</strong>﻿ in this
+example is a JDBC <strong>Realm</strong>﻿.</li>
+<li><em>⑤</em> This assigns the configured <strong>Realm</strong>﻿ to the
+Siro <strong>SecurityManager</strong>﻿.</li>
+<li><em>⑥</em> This assigns URL patterns to the appropriate
+filters.</li>
+</ol>
+</div>
+<p>This shiro.ini file has to be placed
+in <strong>src/main/webapp/WEB-INF</strong>﻿ or
+<strong>src/main/resources</strong>﻿. To enable the Shiro framework, you
+have to configure your web.xml file.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;listener&gt;
+    &lt;listener-class&gt;
+        org.apache.shiro.web.env.EnvironmentLoaderListener
+    &lt;/listener-class&gt;
+&lt;/listener&gt;
+
+&lt;filter&gt;
+    &lt;filter-name&gt;ShiroFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.apache.shiro.web.servlet.ShiroFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;ShiroFilter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
+    &lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;
+    &lt;dispatcher&gt;INCLUDE&lt;/dispatcher&gt;
+    &lt;dispatcher&gt;ERROR&lt;/dispatcher&gt;
+&lt;/filter-mapping&gt;</code></pre>
+</figure>
+<p>I hear your protests! These configuration files totally conflict with
+the Java EE "convention over configuration" approach!</p>
+<p>In every new Java EE release, you should strive to minimize
+configuration files. One focus of this tutorial will be to build our
+Shiro framework application without messy configuration files. You can
+try to circumvent the problem with some innovative solutions. For
+example, you can use the Servlet 3.0 features instead of the web.xml
+file to define the filter in the code:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">You can increase pluggability with methods
+to add servlets, filters, web fragments, etc.</span></li>
+<li><span class="principal">You can improve ease of development with
+annotations for servlets, servlet filters, and servlet-context
+listeners.</span></li>
+</ul>
+</div>
+</section>
+<section id="chapter-3.xhtml_step-4-shiro-getting-serious" class="sect1"
+title="Step 4: Shiro: Getting serious">
+<h2>Step 4: Shiro: Getting serious</h2>
+<section
+id="chapter-3.xhtml_step-4-1-eliminating-the-web-xml-configuration"
+class="sect2" title="Step 4.1: Eliminating the web.xml configuration">
+<h3>Step 4.1: Eliminating the web.xml configuration</h3>
+<section
+id="chapter-3.xhtml_step-4-1-1-from-the-filter-to-the-webfilter"
+class="sect3" title="Step 4.1.1: From the filter to the @WebFilter">
+<h4>Step 4.1.1: From the filter to the @WebFilter</h4>
+<p>A filter is an object that can transform the header and content (or
+both) of a request or response. Filters differ from web components in
+that filters usually do not themselves create a response. Instead, a
+filter provides functionality that can be attached to any kind of web
+resource. Consequently, a filter should not have any dependencies on a
+web resource for which it is acting as a filter; this way, it can be
+composed with more than one type of web resource.</p>
+<p>The main tasks that a filter can perform are:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Query the request and act
+accordingly.</span></li>
+<li><span class="principal">Block the request-and-response pair from
+passing any further.</span></li>
+<li><span class="principal">Modify the request headers and data. You do
+this by providing a customized version of the request.</span></li>
+<li><span class="principal">Modify the response headers and data. You do
+this by providing a customized version of the response.</span></li>
+<li><span class="principal">Interact with external
+resources.</span></li>
+</ul>
+</div>
+<p>The Shiro filter is the primary filter for web applications
+implementing the Shiro framework.</p>
+<p>To do so, introduce the class <strong>ShiroFilterActivator</strong>﻿
+that extends <strong>org.apache.shiro.web.servlet.ShiroFilter</strong>﻿,
+and apply the filter to all requests ("/*").</p>
+<figure class="listing">
+<pre class="source language-java"><code>@WebFilter(&quot;/*&quot;)
+public class ShiroFilterActivator extends ShiroFilter {
+    private ShiroFilterActivator() {
+    }
+}</code></pre>
+</figure>
+</section>
+<section id="chapter-3.xhtml_step-4-1-2-the-listener-to-the-weblistener"
+class="sect3" title="Step 4.1.2: The listener to the @WebListener">
+<h4>Step 4.1.2: The listener to the @WebListener</h4>
+<p>Create a <strong>ShiroListener</strong>﻿ class that extends
+<strong>org.apache.shiro.web.env.EnvironmentLoaderListener</strong>﻿. In
+the <strong>contextInitialized()</strong>﻿ method, initialize
+<strong>ENVIRONMENT_CLASS_PARAM</strong>﻿
+(<strong>shiroEnvironmentClass</strong>﻿) with the
+<strong>DefaultWebEnvironment</strong>﻿ class’s name. It is used to
+define the <strong>WebEnvironment</strong>﻿ implementation class to use
+in the servlet context.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@WebListener
+public class ShiroListener extends EnvironmentLoaderListener {
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+        sce.getServletContext()
+           .setInitParameter(ENVIRONMENT_CLASS_PARAM, DefaultWebEnvironment.class.getName());
+        super.contextInitialized(sce);
+    }
+}</code></pre>
+</figure>
+<hr />
+</section>
+</section>
+<section
+id="chapter-3.xhtml_step-4-2-eliminating-the-ini-configuration-file"
+class="sect2" title="Step 4.2: Eliminating the INI configuration file">
+<h3>Step 4.2: Eliminating the INI configuration file</h3>
+<p>To eliminate the use of the INI configuration file, use the
+<strong>createEnvironment(ServletContext sc)</strong>﻿ method to define
+the <strong>WebEnvironment</strong>﻿.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Override
+protected WebEnvironment createEnvironment(ServletContext sc)
+    DefaultWebEnvironment webEnvironment = (DefaultWebEnvironment) super.createEnvironment(sc);
+    ...
+    return webEnvironment;
+}</code></pre>
+</figure>
+<p>Within the <strong>WebEnvironment</strong>﻿ component, you must define
+two parameters: the <strong>FilterChainResolver</strong>﻿ and the
+<strong>SecurityManager</strong>﻿. But before defining the
+<strong>FilterChainResolver</strong>﻿, you first must understand the
+concept of a <strong>FilterChain</strong>﻿.</p>
+<p>To paraphrase the Java EE 5 JavaDoc, the servlet container provides
+the <strong>FilterChain</strong>﻿ object to allow the developer to view
+the invocation chain of a filtered request for a resource. Filters use
+the <strong>FilterChain</strong>﻿ to invoke the next filter in the chain
+or, if the calling filter is the last filter in the chain, to invoke the
+resource at the end of the chain.</p>
+<p>The official Shiro JavaDoc defines some
+<strong>WebEnvironment</strong>﻿ components.</p>
+<p>It states that a <strong>FilterChainResolver</strong>﻿ can resolve an
+appropriate <strong>FilterChain</strong>﻿ to execute during
+a <strong>ServletRequest</strong>﻿. It allows resolution of arbitrary
+filter chains which can be executed for any given request or
+URI/URL.</p>
+<p>This mechanism allows for more flexible <strong>FilterChain</strong>﻿
+resolution than normal web.xml servlet filter definitions. It allows you
+to define arbitrary filter chains per URL in a more concise and
+easy-to-read manner, and even allows filter chains to be dynamically
+resolved or constructed at run time if the underlying implementation
+supports it.</p>
+<p>The <strong>SecurityManager</strong>﻿ executes all security operations
+for all <strong>Subjects</strong>﻿ (i.e. users) across a single
+application. The interface itself primarily exists as a convenience —t
+extends the <strong>Authenticator</strong>﻿, <strong>Authorizer</strong>﻿,
+and <strong>SessionManager</strong>﻿ interfaces, thereby consolidating
+these behaviors into a single point of reference. In most cases, this
+simplifies configuration by allowing developers to interact with a
+single <strong>SecurityManager</strong>﻿ instead of having to
+reference <strong>Authenticator</strong>﻿, <strong>Authorizer</strong>﻿,
+and <strong>SessionManager</strong>﻿ instances separately.</p>
+<p>Obviously, you have to create these components:
+<strong>FilterChainResolver</strong>﻿ &amp;
+<strong>SecurityManager</strong>﻿.</p>
+<hr />
+<p>Start by creating a new class to hold the configuration for your
+<strong>ShiroConfiguration</strong>﻿ class. The class will have two
+public getters.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class ShiroConfiguration {
+    private ShiroConfiguration() {
+    }
+
+    public WebSecurityManager getSecurityManager() {
+    }
+
+    public FilterChainResolver getFilterChainResolver() {
+    }
+}</code></pre>
+</figure>
+<p>But this solution is still incomplete; you want to use dependency
+injection to set the <strong>FilterChainResolver</strong>﻿ and the
+<strong>SecurityManager</strong>﻿ instances. To enable injection for the
+two configuration components, bind the instance to your session by
+annotating the two getter methods with the <strong>@Produces</strong>﻿
+annotation.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class ShiroConfiguration {
+    private ShiroConfiguration() {
+    }
+
+    @Produces
+    public WebSecurityManager getSecurityManager() {
+    }
+
+    @Produces
+    public FilterChainResolver getFilterChainResolver() {
+    }
+}</code></pre>
+</figure>
+<hr />
+<p>You can create a more elegant <strong>ShiroListener</strong>﻿ that
+sports <strong>@Inject</strong>﻿ for both parameters.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@WebListener
+public class ShiroListener extends EnvironmentLoaderListener {
+    @Inject
+    WebSecurityManager webSecurityManager;
+    @Inject
+    FilterChainResolver filterChainResolver;
+
+    @Override
+    protected WebEnvironment createEnvironment(ServletContext sc) {
+        DefaultWebEnvironment webEnvironment = (DefaultWebEnvironment) super.createEnvironment(sc);
+
+        webEnvironment.setSecurityManager(securityManager);
+        webEnvironment.setFilterChainResolver(filterChainResolver);
+
+        return webEnvironment;
+    }
+
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+        sce.getServletContext()
+            .setInitParameter(ENVIRONMENT_CLASS_PARAM, DefaultWebEnvironment.class.getName());
+        super.contextInitialized(sce);
+    }
+}</code></pre>
+</figure>
+<p>The <strong>ShiroListener</strong>﻿ class is now ready, and it’s time
+to move on to defining your
+<strong>ShiroWebEnvironmentConfiguration</strong>﻿ class.</p>
+<section
+id="chapter-3.xhtml_step-4-2-1-writing-the-securitymanager-producer"
+class="sect3" title="Step 4.2.1: Writing the SecurityManager producer">
+<h4>Step 4.2.1: Writing the SecurityManager producer</h4>
+<p>The Shiro <strong>SecurityManager</strong>﻿ has many features and
+options for tweaking your security experience. For web-based
+applications, Shiro provides a default <strong>SecurityManager</strong>﻿
+implementation called <strong>DefaultWebSecurityManager</strong>﻿, which
+features many preconfigured options. This choice is especially useful
+for newbies as well as for applications with minor functional
+requirements. I recommend that you start with the default implementation
+and modify each option as the need arises.</p>
+<p>The following are the most important core elements of the Apache
+Shiro framework:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><strong>SessionManager</strong>﻿</span></li>
+<li><span class="principal"><strong>Realm</strong>﻿</span></li>
+<li><span class="principal"><strong>Authenticator</strong>﻿</span></li>
+<li><span class="principal"><strong>Authorizer</strong>﻿</span></li>
+<li><span class="principal"><strong>CacheManager</strong>﻿</span></li>
+<li><span class="principal"><strong>SubjectDAO</strong>﻿</span></li>
+<li><span
+class="principal"><strong>CredentialsMatcher</strong>﻿</span></li>
+</ul>
+</div>
+<p>Before we get into the code, let’s review the definitions as
+specificed in the official Shiro Javadoc:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><strong>SessionManager</strong>﻿ manages the
+creation, maintenance, and clean-up of all
+application sessions.</span></li>
+<li><span class="principal"><strong>Realm</strong>﻿ is a security
+component that can access application-specific security entities such as
+users, roles, and permissions to determine authentication and
+authorization operations. A <strong>Realm</strong>﻿ usually has a
+one-to-one correspondence with a datasource such as a relational
+database, file system, or similar resource. As such, implementations of
+this interface use datasource-specific APIs to determine authorization
+data (roles, permissions, etc.), such as JDBC, File IO, Hibernate or
+JPA, or any other data-access API. A <strong>Realm</strong>﻿ is
+essentially a security-specific DAO.</span></li>
+<li><span class="principal"><strong>Authenticator</strong>﻿ is
+responsible for authenticating accounts in an application. It is one of
+the primary entry points into the Shiro API.</span></li>
+<li><span class="principal"><strong>Authorizer</strong>﻿ performs
+authorization (access control) operations for any given
+<strong>Subject</strong>﻿ (i.e. application user). Each method requires a
+subject principal to perform the action for the corresponding
+user.</span></li>
+<li><span class="principal"><strong>CacheManager</strong>﻿ provides and
+maintains the lifecycles of cache instances. Shiro doesn’t implement a
+full cache mechanism itself, since that falls outside the core
+competency of a security framework. Instead, this interface provides an
+abstraction (wrapper) API on top of an underlying cache framework’s main
+manager component (e.g. JCache, Ehcache, JCS, OSCache, JBoss Cache,
+Terracotta, Coherence, GigaSpaces, etc.), allowing Shiro users to
+configure any cache mechanism they choose.</span></li>
+<li><span class="principal"><strong>SubjectDAO</strong>﻿ is a
+data-access-object design-pattern specification to enable session access
+to an enterprise information system (EIS). It provides the usual CRUD
+methods:</span>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">create
+(<strong>org.apache.shiro.session.Session</strong>﻿)</span></li>
+<li><span class="principal">readSession
+(<strong>java.io.Serializable</strong>﻿)</span></li>
+<li><span class="principal">update
+(<strong>org.apache.shiro.session.Session</strong>﻿)</span></li>
+<li><span class="principal">delete
+(<strong>org.apache.shiro.session.Session</strong>﻿)</span></li>
+</ul>
+</div></li>
+<li><span class="principal"><strong>CredentialsMatcher</strong>﻿ is an
+interface implemented by classes that can determine if an
+<strong>AuthenticationToken</strong>﻿'s provided credentials match a
+corresponding account’s credentials stored in the system.</span></li>
+<li><span class="principal"><strong>PasswordMatcher</strong>﻿ is a
+<strong>CredentialsMatcher</strong>﻿ that employs best-practices
+comparisons for hashed text passwords.</span></li>
+<li><span class="principal"><strong>RememberMeManager</strong>﻿ is the
+Shiro framework’s default concrete implementation of the
+<strong>SecurityManager</strong>﻿ interface, based around a collection of
+<strong>Realms</strong>﻿. This implementation delegates its
+authentication, authorization, and session operations to wrapped
+<strong>Authenticator</strong>﻿, <strong>Authorizer</strong>﻿, and
+<strong>SessionManager</strong>﻿ instances respectively via superclass
+implementation.</span></li>
+</ul>
+</div>
+<p>The Shiro JavaDoc leaves something to be desired, but hopefully our
+explanations will improve that.</p>
+<p>For your <strong>SecurityManager</strong>﻿, you will:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Use
+<strong>DefaultWebSecurityManager</strong>﻿ as
+implementation.</span></li>
+<li><span class="principal">Create your own customized
+<strong>Realm</strong>﻿ (we will see why later).</span></li>
+<li><span class="principal">Use <strong>PasswordMatcher</strong>﻿ with
+your own <strong>PasswordService</strong>﻿ as the
+<strong>CredentialsMatcher</strong>﻿.</span></li>
+<li><span class="principal">Use <strong>CookieRememberMeManager</strong>﻿
+as the <strong>RememberMeManager</strong>﻿, because your implementation
+will use cookies to remember and track users
+(<strong>Subjects</strong>﻿). You will add a <strong>CipherKey</strong>﻿
+to the <strong>RememberMeManager</strong>﻿ to improve cookie
+naming.</span></li>
+<li><span class="principal">And for the big surprise, you will use a
+cache manager, namely <strong>EhCacheManager</strong>﻿! (Shiro promises
+to provide native support for caching providers such as Hazelcast in
+future releases).</span></li>
+</ul>
+</div>
+<section id="chapter-3.xhtml_step-4-2-1-1-writing-the-realm"
+class="sect4" title="Step 4.2.1.1: Writing the Realm">
+<h5>Step 4.2.1.1: Writing the Realm</h5>
+<p>To create the <strong>Realm</strong>﻿, you must create a class that
+extends the <strong>org.apache.shiro.realm.AuthorizingRealm</strong>﻿
+abstract class and implement the critical methods:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">The <strong>AuthenticationInfo
+doGetAuthenticationInfo(AuthenticationToken token)</strong>﻿ method is
+the "getter" of the authentication information (username and password in
+our case) sitting in the storage system (DB, LDAP, etc.).</span></li>
+<li><span class="principal">The <strong>AuthorizationInfo
+doGetAuthorizationInfo(PrincipalCollection principals)</strong>﻿ method
+is the "getter" of the authorization information (roles only in our
+case, but can be roles and permissions or only permissions, based on the
+authorization strategy selected for the project).</span></li>
+</ul>
+</div>
+<p>As this project uses Java EE features with the Shiro framework, you
+will be using EJB to deal with data. So we will use the injection (or
+try to) to call your EJBs. As the context dependency injection (CDI) is
+not enabled for the Shiro components, the Shiro <strong>Realm</strong>﻿
+is not a CDI-aware component, because of some final methods incoming
+from the inheritance tree.</p>
+<p>Let’s take full advantage of the Java EE and use EJB to deal with
+data, and try to use dependency injection to call your EJB. Note that
+context dependency injection (CDI) is not enabled for Shiro components
+because the Shiro <strong>Realm</strong>﻿ is not a CDI-aware component,
+because some final methods are inherited.</p>
+<p>Stack Overflow has some posts that shed light on the problem:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><a
+href="http://stackoverflow.com/questions/15605038"
+class="link">http://stackoverflow.com/questions/15605038</a>﻿</span></li>
+<li><span class="principal"><a
+href="http://stackoverflow.com/questions/18507629"
+class="link">http://stackoverflow.com/questions/18507629</a>﻿</span></li>
+</ul>
+</div>
+<p>But not to worry — there are some tricks to make this work! There are
+at least two options to inject our EJB: <strong>UserService</strong>﻿ and
+<strong>RoleService</strong>﻿.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class ShiroConfiguration {
+    @Inject
+    UserService userService;
+
+    @Produces
+    public WebSecurityManager getSecurityManager() {
+        DefaultWebSecurityManager securityManager = null;
+        if (securityManager == null) {
+            AuthorizingRealm realm = new SecurityRealm(userService);
+            …
+            securityManager = new DefaultWebSecurityManager(realm);
+        }
+        return securityManager;
+    }
+}</code></pre>
+<figcaption>Listing 5. Method 1) Inject the EJB into the
+<strong>ShiroConfiguration</strong>﻿ class and pass it to the
+<strong>Realm</strong>﻿'s constructor.</figcaption>
+</figure>
+<p>Unfortunately, this strategy violates proper separation of concerns,
+so let’s look at another approach.</p>
+<p><strong>Method 2) Use a classic JNDI lookup in the
+<strong>Realm</strong>﻿ to grab an access to the EJB:</strong> The Java
+EE 6 specification provides for EJB JNDI lookup names of the general
+form <strong>java:global[/appName]/moduleName/beanName</strong>﻿.</p>
+<p>The <strong>appName</strong>﻿ component of the lookup name is shown as
+optional because it does not apply to beans deployed in standalone
+modules. Only beans packaged in .ear files contain
+the <strong>appName</strong>﻿ component in the
+<strong>java:global</strong>﻿ lookup name. As your application is
+packaged as a WAR, you will not have the <strong>appName</strong>﻿ value
+in the JNDI names of your EJB. Your <strong>moduleName</strong>﻿
+is "ShiroTutorial" (see the pom.xml).</p>
+<p>So, your EJB’s JNDI names are:</p>
+<figure class="listing">
+<pre class="source language-java"><code>java:global/ShiroTutorial/UserService
+java:global/ShiroTutorial/RoleService</code></pre>
+</figure>
+<hr />
+<p>Now, you can write your <strong>SecurityRealm</strong>﻿ as:</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class SecurityRealm extends AuthorizingRealm {
+    private Logger logger;
+    private UserService userService;
+
+    public SecurityRealm() {
+        super();
+        this.logger = Logger.getLogger(SecurityRealm.class.getName());
+
+        try {
+            InitialContext ctx = new InitialContext();
+            this.userService = (UserService) ctx.lookup(&quot;java:global/ShiroTutorial/UserService&quot;);
+        } catch (NamingException ex) {
+            logger
+                .warning(&quot;Cannot do the JNDI Lookup to instantiate the User service : &quot; + ex);
+        }
+    }
+}</code></pre>
+</figure>
+<p>The specification has fixed predefined JNDI names for the
+<strong>appName</strong>﻿ and the <strong>moduleName</strong>﻿, so you can
+grab them dynamically.</p>
+<figure class="listing">
+<pre class="source language-java"><code>java:app/AppName
+java:module/ModuleName</code></pre>
+</figure>
+<p>Using that, you can write your JNDI lookup code as:</p>
+<figure class="listing">
+<pre class="source language-java"><code>try {
+    InitialContext ctx = new InitialContext();
+    String moduleName = (String) ctx.lookup(&quot;java:module/ModuleName&quot;);
+    this.userService = (UserService) ctx.lookup(String.format(&quot;java:global/%s/UserService&quot;, moduleName));
+} catch (NamingException ex) {
+    logger
+        .warning(&quot;Cannot do the JNDI Lookup to instantiate the User service : &quot; + ex);
+}</code></pre>
+</figure>
+<aside class="admonition note" title="Note" epub:type="note">
+<div class="content">
+<p>I only used the <strong>UserService</strong>﻿ in this
+<strong>SecurityRealm</strong>﻿. There’s no need for the
+<strong>RoleService</strong>﻿ in this context.</p>
+</div>
+</aside>
+<hr />
+<p>Now, use your EJB in the <strong>doGetAuthenticationInfo()</strong>﻿
+and <strong>doGetAuthorizationInfo()</strong>﻿ methods.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Override
+protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+    // Identify account to log to
+    UsernamePasswordToken userPassToken = (UsernamePasswordToken) token;
+    String username = userPassToken.getUsername();
+    if (username == null) {
+        logger.warning(&quot;Username is null.&quot;);
+        return null;
+    }
+
+    // Read the user from DB
+    User user = this.userService.findByUsername(username);
+    if (user == null) {
+        logger.warning(&quot;No account found for user [&quot; + username + &quot;]&quot;);
+        throw new IncorrectCredentialsException();
+    }
+
+    return new SimpleAuthenticationInfo(username, user.getPassword(), getName());
+}
+
+@Override
+protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
+    //null usernames are invalid
+    if (principals == null) {
+        throw new AuthorizationException(&quot;PrincipalCollection method argument cannot be null.&quot;);
+    }
+
+    String username = (String) getAvailablePrincipal(principals);
+    Set&lt;String&gt; roleNames = new HashSet&lt;&gt;();
+    roleNames.add(this.userService.findByUsername(username).getRole().getName());
+    AuthorizationInfo info = new SimpleAuthorizationInfo(roleNames);
+
+    /**
+    * If you want to do Permission Based authorization, you can grab the Permissions List associated to your user:
+    * Set&lt;String&gt; permissions = new HashSet&lt;&gt;();
+    * permissions.add(this.userService.findByUsername(username).getRole().getPermissions());
+    * ((SimpleAuthorizationInfo)info).setStringPermissions(permissions);
+    */
+    return info;
+}</code></pre>
+</figure>
+<p>The code is straightforward and the components names tell the whole
+story.</p>
+</section>
+<section
+id="chapter-3.xhtml_step-4-2-1-2-writing-the-credentialsmatcher"
+class="sect4" title="Step 4.2.1.2: Writing the CredentialsMatcher">
+<h5>Step 4.2.1.2: Writing the CredentialsMatcher</h5>
+<p><strong>CredentialsMatcher</strong>﻿ is the component that validates
+credentials and checks if access can be granted. The
+<strong>CredentialsMatcher</strong>﻿ interface has many
+implementations:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">AllowAllCredentialsMatcher</span></li>
+<li><span class="principal">HashedCredentialsMatcher</span></li>
+<li><span class="principal">Md2CredentialsMatcher</span></li>
+<li><span class="principal">Md5CredentialsMatcher</span></li>
+<li><span class="principal">PasswordMatcher</span></li>
+<li><span class="principal">Sha1CredentialsMatcher</span></li>
+<li><span class="principal">Sha256CredentialsMatcher</span></li>
+<li><span class="principal">Sha384CredentialsMatcher</span></li>
+<li><span class="principal">Sha512CredentialsMatcher</span></li>
+<li><span class="principal">SimpleCredentialsMatcher</span></li>
+</ul>
+</div>
+<p>Each implementation of <strong>CredentialsMatcher</strong>﻿ has
+specific properties and functionality. For example,
+<strong>SimpleCredentialsMatcher</strong>﻿ is used for direct, plain
+comparison. <strong>PasswordMatcher</strong>﻿ uses an internal
+<strong>PasswordService</strong>﻿ to compare the passwords. The Shiro
+JavaDoc describes the <strong>PasswordMatcher</strong>﻿ as
+"a <strong>CredentialsMatcher</strong>﻿ that employs best-practices
+comparisons for hashed text passwords."</p>
+<p>Choose <strong>PasswordMatcher</strong>﻿ as the implementation of
+<strong>CredentialsMatcher</strong>﻿ so that you can define a customized
+<strong>PasswordService</strong>﻿ for password verification.</p>
+<p>Let’s talk a little bit about about the password itself. We have to
+choose a hash algorithm for storing and comparing passwords. After some
+research, I chose bcrypt as a hash algorithm. Based on the Blowfish
+symmetric-key block-cipher cryptographic algorithm, bcrypt is an
+adaptive hash function that introduces a work factor (also known as
+security factor) that allows you to determine the cost of the hash
+function.</p>
+<p>Let’s use the <strong>jBCrypt</strong>﻿ implementation of bcrypt, and
+you must add that dependency to the pom.xml file.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;dependency&gt;
+    &lt;groupId&gt;de.svenkubiak&lt;/groupId&gt;
+    &lt;artifactId&gt;jBCrypt&lt;/artifactId&gt;
+    &lt;version&gt;0.4&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</figure>
+<hr />
+<p>Next, write your customized <strong>PasswordService</strong>﻿ class.
+Call the class <strong>BCryptPasswordService</strong>﻿ and implement the
+<strong>PasswordService</strong>﻿ interface and its two methods,
+<strong>encryptPassword()</strong>﻿ and
+<strong>passwordsMatch()</strong>﻿.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class BCryptPasswordService implements PasswordService {
+    public static final int DEFAULT_BCRYPT_ROUND = 10;
+    private int logRounds;
+
+    public BCryptPasswordService() {
+        this.logRounds = DEFAULT_BCRYPT_ROUND;
+    }
+
+    public BCryptPasswordService(int logRounds) {
+        this.logRounds = logRounds;
+    }
+
+    @Override
+    public String encryptPassword(Object plaintextPassword) {
+        if (plaintextPassword instanceof String) {
+            String password = (String) plaintextPassword;
+            return BCrypt.hashpw(password, BCrypt.gensalt(logRounds));
+        }
+        throw new IllegalArgumentException(
+                &quot;BCryptPasswordService encryptPassword only support java.lang.String credential.&quot;);
+    }
+
+    @Override
+    public boolean passwordsMatch(Object submittedPlaintext, String encrypted) {
+        if (submittedPlaintext instanceof char[]) {
+            String password = String.valueOf((char[]) submittedPlaintext);
+            return BCrypt.checkpw(password, encrypted);
+        }
+        throw new IllegalArgumentException(
+                &quot;BCryptPasswordService passwordsMatch only support char[] credential.&quot;);
+    }
+
+    public void setLogRounds(int logRounds) {
+        this.logRounds = logRounds;
+    }
+
+    public int getLogRounds() {
+        return logRounds;
+    }
+}</code></pre>
+</figure>
+<hr />
+<p>This class will be used in the <strong>CredentialsMatcher</strong>﻿ by
+its <strong>passwordMatch()</strong>﻿ method. But it can also be used in
+the registration process of a new user, before invoking the
+<strong>UserService</strong>﻿'s save method.</p>
+<p>So, update your <strong>ShiroConfiguration</strong>﻿ class.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class ShiroConfiguration {
+    @Inject
+    UserService userService;
+
+    @Produces
+    public WebSecurityManager getSecurityManager() {
+        DefaultWebSecurityManager securityManager = null;
+        if (securityManager == null) {
+            AuthorizingRealm realm = new SecurityRealm(userService);
+            CredentialsMatcher credentialsMatcher = new PasswordMatcher();
+            ((PasswordMatcher) credentialsMatcher).setPasswordService(new BCryptPasswordService());
+            realm.setCredentialsMatcher(credentialsMatcher);
+            …
+            securityManager = new DefaultWebSecurityManager(realm);
+        }
+        return securityManager;
+    }
+}</code></pre>
+</figure>
+</section>
+<section id="chapter-3.xhtml_step-4-2-1-3-writing-the-remembermemanager"
+class="sect4" title="Step 4.2.1.3: Writing the RememberMeManager">
+<h5>Step 4.2.1.3: Writing the RememberMeManager</h5>
+<p>Next, add to <strong>SecurityManager</strong>﻿ a
+<strong>RememberMeManager</strong>﻿ that will use cookies to remember
+security sessions. Use the <strong>CookieRememberMeManager</strong>﻿
+implementation for this.</p>
+<p>The cookie value is a Base64-encoded representation of an
+AES-encrypted representation of a serialized representation of a
+collection of principals. Basically, it contains the necessary user
+information, which can be decrypted with the right key. Using the
+default key will never do, since a hacker could easily figure that out
+by looking at Shiro’s source code, so specify a custom AES cipher
+key.</p>
+<p>Your customized <strong>RememberMeManager</strong>﻿ will look like
+this:</p>
+<figure class="listing">
+<pre class="source language-java"><code>byte[] cypherKey = String.format(&quot;0x%s&quot;, Hex.encodeToString(new AesCipherService().generateNewKey().getEncoded())).getBytes();
+
+RememberMeManager rememberMeManager = new CookieRememberMeManager();
+((CookieRememberMeManager) rememberMeManager).setCipherKey(cypherKey);
+
+securityManager.setRememberMeManager(rememberMeManager);</code></pre>
+</figure>
+<p>Your customized <strong>RememberMeManager</strong>﻿ is ready for
+use.</p>
+</section>
+<section id="chapter-3.xhtml_step-4-2-1-4-writing-the-cachemanager"
+class="sect4" title="Step 4.2.1.4: Writing the CacheManager">
+<h5>Step 4.2.1.4: Writing the CacheManager</h5>
+<p>Shiro has started supporting caching systems, and although the
+support currently is somewhat lacking, it should become more robust in
+upcoming releases. But Shiro supports EhCache, and that works nicely for
+this project’s needs. Let’s add that dependency to the pom.xml file.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;!-- EhCache Dependencies --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.shiro&lt;/groupId&gt;
+    &lt;artifactId&gt;shiro-ehcache&lt;/artifactId&gt;
+    &lt;version&gt;1.2.4&lt;/version&gt;
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+    &lt;groupId&gt;net.sf.ehcache&lt;/groupId&gt;
+    &lt;artifactId&gt;ehcache&lt;/artifactId&gt;
+    &lt;version&gt;2.10.1&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</figure>
+<p>Next, create the EhCache configuration file in the
+<strong>src/main/resources</strong>﻿ folder. You can call it, for
+example, ehcache.xml.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;ehcache name=&quot;shiro&quot; updateCheck=&quot;false&quot;&gt;
+    &lt;diskStore path=&quot;/Users/nebrass/shiro-ehcache&quot;/&gt;
+
+    &lt;defaultCache
+        maxElementsInMemory=&quot;10000&quot;
+        eternal=&quot;false&quot;
+        timeToIdleSeconds=&quot;120&quot;
+        timeToLiveSeconds=&quot;120&quot;
+        overflowToDisk=&quot;false&quot;
+        diskPersistent=&quot;false&quot;
+        diskExpiryThreadIntervalSeconds=&quot;120&quot;/&gt;
+
+&lt;/ehcache&gt;</code></pre>
+</figure>
+<p>I suggest that you avoid the defaults and always specify the
+<strong>diskStore</strong>﻿ value as the path to the cache storage.</p>
+<hr />
+<p>Now, you can define the <strong>CacheManager</strong>﻿ for your
+<strong>SecurityManager</strong>﻿ in the
+<strong>ShiroConfiguration</strong>﻿ class.</p>
+<figure class="listing">
+<pre class="source language-java"><code>CacheManager cacheManager = new EhCacheManager();
+((EhCacheManager) cacheManager).setCacheManagerConfigFile(&quot;classpath:ehcache.xml&quot;);
+securityManager.setCacheManager(cacheManager);</code></pre>
+</figure>
+<p>The <strong>classpath:ehcache.xml</strong>﻿ snippet indicates that the
+ehcache.xml file is already available in the classpath. You’ve just set
+the <strong>EhCacheManager</strong>﻿ to be the
+<strong>CacheManager</strong>﻿ for your <strong>SecurityManager</strong>﻿.
+The cache will be handled according the settings defined in the
+specified configuration file.</p>
+</section>
+<section id="chapter-3.xhtml_step-4-2-1-5-assembling-the-pieces"
+class="sect4" title="Step 4.2.1.5: Assembling the pieces">
+<h5>Step 4.2.1.5: Assembling the pieces</h5>
+<p>Your <strong>SecurityManager</strong>﻿ is just about ready. Your
+<strong>SecurityManager</strong>﻿ getter method will be:</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Produces
+public WebSecurityManager getSecurityManager() {
+    DefaultWebSecurityManager securityManager = null;
+    if (securityManager == null) {
+        AuthorizingRealm realm = new SecurityRealm();
+
+        CredentialsMatcher credentialsMatcher = new PasswordMatcher();
+        ((PasswordMatcher) credentialsMatcher).setPasswordService(new BCryptPasswordService());
+        realm.setCredentialsMatcher(credentialsMatcher);
+
+        securityManager = new DefaultWebSecurityManager(realm);
+
+        CacheManager cacheManager = new EhCacheManager();
+        ((EhCacheManager) cacheManager).setCacheManagerConfigFile(&quot;classpath:ehcache.xml&quot;);
+        securityManager.setCacheManager(cacheManager);
+
+        byte[] cypherKey = String.format(&quot;0x%s&quot;,
+Hex.encodeToString(new AesCipherService().generateNewKey().getEncoded()))
+                    .getBytes();
+
+        RememberMeManager rememberMeManager = new CookieRememberMeManager();
+        ((CookieRememberMeManager) rememberMeManager).setCipherKey(cypherKey);
+        securityManager.setRememberMeManager(rememberMeManager);
+    }
+    return securityManager;
+}</code></pre>
+</figure>
+<p>The CDI <strong>@Produces</strong>﻿ annotation identifies a "producer"
+method or field, which means that it will identify the
+<strong>getSecurityManager()</strong>﻿ method as a producer of
+<strong>WebSecurityManager</strong>﻿ instances in the CDI context.</p>
+<p>The <strong>WebSecurityManager</strong>﻿ producer is ready for use.
+The next step is to define your
+<strong>FilterChainResolver</strong>﻿.</p>
+</section>
+</section>
+<section
+id="chapter-3.xhtml_step-4-2-2-writing-the-filterchainresolver-producer"
+class="sect3"
+title="Step 4.2.2: Writing the FilterChainResolver producer">
+<h4>Step 4.2.2: Writing the FilterChainResolver producer</h4>
+<p>The <strong>FilterChainResolver</strong>﻿ producer method provides the
+ability to define ad hoc filter chains for any matching URL path in your
+application. This approach is far more flexible, powerful, and concise
+than the familiar strategy for defining filter chains in web.xml; even
+if you never use any other Shiro feature, this alone would justify its
+use. The <strong>&lt;URL path expression, filterName&gt;</strong>﻿ maps
+each filter to its applied URL path expression.</p>
+<p>The URL path expressions are evaluated against an incoming request in
+the order in which they are defined, and the first match wins.</p>
+<p>Shiro provides a large selection of predefined filters.</p>
+<div class="table">
+<div class="content">
+<table class="table table-framed-topbot table-grid-rows"
+style="width: 100%;">
+<thead>
+<tr>
+<th>Filter Name</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+<tr>
+<td><div>
+
+</div></td>
+<td><div>
+
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>This project mainly uses <strong>anon</strong>﻿,
+<strong>authc</strong>﻿, and <strong>user</strong>﻿:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><strong>anon</strong>﻿ allows access to a
+path immediately, without performing security checks of any
+kind.</span></li>
+<li><span class="principal"><strong>authc</strong>﻿ requires the
+requesting user to be authenticated for the request to continue, forcing
+the user to log in by redirecting them to
+the <strong>loginUrl</strong>﻿ you’ve configured.</span></li>
+<li><span class="principal"><strong>user</strong>﻿ allows access to
+resources if the accessor is a known user, which is defined as having a
+known principal. This means that any user authenticated or remembered
+via a "remember me" feature will be allowed access via this
+filter.</span></li>
+</ul>
+</div>
+<hr />
+<p>After selecting your filters, specify your selections in the
+<strong>FilterChainManager</strong>﻿.</p>
+<figure class="listing">
+<pre class="source language-java"><code>FormAuthenticationFilter authc = new FormAuthenticationFilter();
+AnonymousFilter anon = new AnonymousFilter();
+UserFilter user = new UserFilter();
+
+FilterChainManager fcMan = new DefaultFilterChainManager();
+fcMan.addFilter(&quot;authc&quot;, authc);
+fcMan.addFilter(&quot;anon&quot;, anon);
+fcMan.addFilter(&quot;user&quot;, user);</code></pre>
+</figure>
+<p>Next, define the properties needed for the filters. For example, your
+<strong>authc</strong>﻿ and <strong>user</strong>﻿ filters need to have
+the <strong>loginUrl</strong>﻿ defined.</p>
+<figure class="listing">
+<pre class="source language-java"><code>authc.setLoginUrl(&quot;/login.html&quot;);
+user.setLoginUrl(&quot;/login.html&quot;);</code></pre>
+</figure>
+<p>Next, map the URL path expressions with the associated filter
+name.</p>
+<figure class="listing">
+<pre class="source language-java"><code>fcMan.createChain(&quot;/index.html&quot;, &quot;anon&quot;);
+fcMan.createChain(&quot;/css/**&quot;, &quot;anon&quot;);
+fcMan.createChain(&quot;/api/auth&quot;, &quot;anon&quot;);
+fcMan.createChain(&quot;/login.html&quot;, &quot;authc&quot;);
+fcMan.createChain(&quot;/**&quot;, &quot;user&quot;);</code></pre>
+</figure>
+<p>Set your <strong>fcMan</strong>﻿ <strong>(FilterChainManager)</strong>﻿
+to the <strong>FilterChainResolver</strong>﻿ that you are producing.</p>
+<figure class="listing">
+<pre class="source language-java"><code>PathMatchingFilterChainResolver resolver = new PathMatchingFilterChainResolver();
+resolver.setFilterChainManager(fcMan);
+filterChainResolver = resolver;
+
+return filterChainResolver;</code></pre>
+</figure>
+<hr />
+<p>Finally, here’s the <strong>FilterChainResolver</strong>﻿ producer
+method.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Produces
+public FilterChainResolver getFilterChainResolver() {
+    FilterChainResolver filterChainResolver = null;
+    if (filterChainResolver == null) {
+        FormAuthenticationFilter authc = new FormAuthenticationFilter();
+        AnonymousFilter anon = new AnonymousFilter();
+        UserFilter user = new UserFilter();
+
+        authc.setLoginUrl(WebPages.LOGIN_URL);
+        user.setLoginUrl(WebPages.LOGIN_URL);
+
+        FilterChainManager fcMan = new DefaultFilterChainManager();
+        fcMan.addFilter(&quot;authc&quot;, authc);
+        fcMan.addFilter(&quot;anon&quot;, anon);
+        fcMan.addFilter(&quot;user&quot;, user);
+
+        fcMan.createChain(&quot;/index.html&quot;, &quot;anon&quot;);
+        fcMan.createChain(&quot;/css/**&quot;, &quot;anon&quot;);
+        fcMan.createChain(&quot;/api/auth&quot;, &quot;anon&quot;);
+        fcMan.createChain(WebPages.LOGIN_URL, &quot;authc&quot;);
+        fcMan.createChain(&quot;/**&quot;, &quot;user&quot;);
+
+        PathMatchingFilterChainResolver resolver = new PathMatchingFilterChainResolver();
+        resolver.setFilterChainManager(fcMan);
+        filterChainResolver = resolver;
+    }
+    return filterChainResolver;
+}</code></pre>
+</figure>
+<hr />
+<p>At this point, your <strong>WebSecurityManager</strong>﻿ and
+<strong>FilterChainResolver</strong>﻿ CDI producers are ready for use and
+you can update your <strong>ShiroListener</strong>﻿ class.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@WebListener
+public class ShiroListener extends EnvironmentLoaderListener {
+    @Inject
+    WebSecurityManager securityManager;
+
+    @Inject
+    FilterChainResolver filterChainResolver;
+
+    @Override
+    protected WebEnvironment createEnvironment(ServletContext sc) {
+        DefaultWebEnvironment webEnvironment = (DefaultWebEnvironment) super.createEnvironment(sc);
+
+        webEnvironment.setSecurityManager(securityManager);
+        webEnvironment.setFilterChainResolver(filterChainResolver);
+
+        return webEnvironment;
+    }
+
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+        sce.getServletContext().setInitParameter(ENVIRONMENT_CLASS_PARAM, DefaultWebEnvironment.class.getName());
+        super.contextInitialized(sce);
+    }
+}</code></pre>
+</figure>
+<p>As you see, CDI awareness is enabled in your
+<strong>ShiroListener</strong>﻿.</p>
+</section>
+</section>
+</section>
+<section
+id="chapter-3.xhtml_step-5-exposing-shiro-operations-as-rest-services"
+class="sect1"
+title="Step 5: Exposing Shiro operations as REST services">
+<h2>Step 5: Exposing Shiro operations as REST services</h2>
+<p>Java EE 7 introduced strong support for REST web services, HTML5,
+WebSockets, and much more. To interact with our application from the
+client side, let’s use JAX-RX to create some RESTful web services to
+expose server operations such as:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">login</span></li>
+<li><span class="principal">logout</span></li>
+<li><span class="principal">list connected users</span></li>
+<li><span class="principal">get information for a connected
+user</span></li>
+<li><span class="principal">etc.</span></li>
+</ul>
+</div>
+<section id="chapter-3.xhtml_step-5-1-enable-jax-rs" class="sect2"
+title="Step 5.1: Enable JAX-RS">
+<h3>Step 5.1: Enable JAX-RS</h3>
+<p>To enable JAX-RS services, you must define a JAX-RS application
+class. Create a class called <strong>JaxRsConfiguration</strong>﻿ in the
+root of the <strong>com.targa.dev.shirotutorial.security</strong>﻿
+package. But why in the root?</p>
+<p>In proper conformity with the BCE pattern, this class is
+configuration; it is not boundary, controller, or entity. Since it
+concerns the configuration of the application, it belongs in the package
+root.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@ApplicationPath(&quot;api&quot;)
+public class JaxRsConfiguration extends Application {
+}</code></pre>
+</figure>
+<p>The root URL of the RESTful web services will
+be <strong>http://[ApplicationPath]/api/</strong>﻿.</p>
+<p>You want to have two services: the <strong>Authentication</strong>﻿
+web service for login, logout, listing connected users, and getting
+connected user information and the <strong>User Management</strong>﻿ web
+service for CRUD users.</p>
+<p>The web services will be created in the
+<strong>com.targa.dev.shirotutorial.security.boundary</strong>﻿ as they
+are boundaries of your application and will help in interacting with
+external clients.</p>
+<p>Start by creating the <strong>Authentication</strong>﻿ web service
+with the following functionalities:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><strong>login()</strong>﻿</span></li>
+<li><span class="principal"><strong>logout()</strong>﻿</span></li>
+<li><span
+class="principal"><strong>getSubjectInfo()</strong>﻿</span></li>
+<li><span
+class="principal"><strong>getConnectedUsers()</strong>﻿</span></li>
+</ul>
+</div>
+<figure class="listing">
+<pre class="source language-java"><code>@Path(&quot;auth&quot;)
+public class AuthenticationResource {
+    public Response login(){}
+    public Response logout(){}
+    public Response getSubjectInfo(){}
+    public Response getConnectedUsers(){}
+}</code></pre>
+</figure>
+<p>This web service will be accessed at
+<strong>http://[ApplicationPath]/api/auth</strong>﻿.</p>
+<hr />
+<p>To log in, use this:</p>
+<figure class="listing">
+<pre class="source language-java"><code>try {
+    SecurityUtils.getSubject().login(new UsernamePasswordToken(username, password, rememberMe));
+} catch (AuthenticationException e) {
+    throw new IncorrectCredentialsException(&quot;Unknown user, please try again&quot;);
+}</code></pre>
+</figure>
+<p>In the code above, <strong>username</strong>﻿ and
+<strong>password</strong>﻿ are strings and <strong>rememberMe</strong>﻿ is
+a boolean. The user supplies these values through an HTML form, for
+example. So the <strong>login()</strong>﻿ method is:</p>
+<figure class="listing">
+<pre class="source language-java"><code>@POST
+@Path(&quot;login&quot;)
+public Response login(@NotNull @FormParam(&quot;username&quot;) String username, ①
+                      @NotNull @FormParam(&quot;password&quot;) String password, ②
+                      @NotNull @FormParam(&quot;rememberMe&quot;) boolean rememberMe,
+                      @Context HttpServletRequest request) { ③
+
+    boolean justLogged = false;
+    if (!SecurityUtils.getSubject().isAuthenticated() ) { ④
+        justLogged = true;
+    }
+
+    try {
+        SecurityUtils.getSubject().login(new UsernamePasswordToken(username, password, rememberMe));
+    } catch (AuthenticationException e) {
+        throw new IncorrectCredentialsException(&quot;Unknown user, please try again&quot;);
+    }
+
+   SavedRequest savedRequest = WebUtils.getAndClearSavedRequest(request); ⑤
+
+    if (savedRequest != null) {
+        return this.getRedirectResponse(savedRequest.getRequestUrl(), request);
+    } else {
+        if (justLogged) {
+            return this.getRedirectResponse(WebPages.DASHBOARD_URL, request); ⑦
+        }
+        return this.getRedirectResponse(WebPages.HOME_URL, request); ⑥
+    }
+}</code></pre>
+</figure>
+<div class="callout-list">
+<ol>
+<li><em>①</em> <strong>@NotNull</strong>﻿ is used for bean validation;
+validation is defined here to be performed at the earliest possible
+moment.</li>
+<li><em>②</em> <strong>@FormParam("paramName")</strong>﻿ grabs the
+parameter for the HTTP request.</li>
+<li><em>③</em> <strong>@Context</strong>﻿ injects an instance of a
+supported resource. Here, it injects the
+<strong>HttpServletRequest</strong>﻿.</li>
+<li><em>④</em> This checks whether the user is authenticated.</li>
+<li><em>⑤</em> This gets the request URL from a previously saved
+request. If there is no saved request or fallback URL, this method
+throws an <strong>IllegalStateException</strong>﻿. This method is
+primarily used to support a common login scenario — if an
+unauthenticated user accesses a page that requires authentication, it is
+expected that the request is saved while the user gets directed to the
+login page. After a successful log in, this method can be called to
+redirect the user to their originally requested URL, a handy usability
+feature.</li>
+<li><em>⑥</em> We will create a <strong>WebPages</strong>﻿ class that
+will hold useful page URLs such as <strong>HOME_URL</strong>﻿ (home page
+of the application), <strong>DASHBOARD_URL</strong>﻿ (a welcome page for
+connected users), and <strong>LOGIN_URL</strong>﻿ (the login page).</li>
+<li><em>⑦</em> I created this method to perform the redirection to the
+specified URL:</li>
+</ol>
+</div>
+<figure class="listing">
+<pre class="source language-java"><code>private Response getRedirectResponse(String requestedPath, HttpServletRequest request) {
+
+    String appName = request.getContextPath();
+    String baseUrl = request.getRequestURL().toString().split(request.getRequestURI())[0] + appName;
+
+    try {
+        if (requestedPath.split(appName).length &gt; 1) {
+            baseUrl += requestedPath.split(appName)[1];
+        } else {
+            baseUrl += requestedPath;
+        }
+        return Response.seeOther(new URI(baseUrl)).build();
+    } catch (URISyntaxException ex) {
+        logger.warning(&quot;URL redirection failed for request[&quot; + request + &quot;] : &quot; + ex);
+        return Response.serverError()
+                       .status(404)
+                       .type(MediaType.TEXT_HTML)
+                       .build();
+    }
+}</code></pre>
+</figure>
+<hr />
+<p>The <strong>logout()</strong>﻿ method is simpler.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@GET
+@Path(&quot;logout&quot;)
+public Response logout(@Context HttpServletRequest request) {
+    SecurityUtils.getSubject().logout();
+    return this.getRedirectResponse(WebPages.HOME_URL, request);
+}</code></pre>
+</figure>
+<p>Here’s the <strong>getSubjectInfo()</strong>﻿.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@GET
+@Path(&quot;me&quot;)
+public Response getSubjectInfo() {
+    Subject subject = SecurityUtils.getSubject();
+    if (subject != null &amp;&amp; subject.isAuthenticated()) {
+        User connectedUser = this.userService.findByUsername(subject.getPrincipal().toString());
+        return Response.ok(connectedUser).build();
+    } else {
+        return Response.serverError()
+                       .type(MediaType.TEXT_HTML)
+                       .build();
+    }
+}</code></pre>
+</figure>
+<p>The idea behind the <strong>getConnectedUsers()</strong>﻿ is to create
+a collection that holds all connected users. When a user is logged in,
+the user is added to the collection. When the user logs out, the user is
+removed from the collection. We will leverage a nice benefit of CDI: the
+CDI events mechanism.</p>
+<p>Start by injecting <strong>Event&lt;T&gt;</strong>﻿ to listen for
+fired events of type T.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Inject
+private Event&lt;AuthenticationEvent&gt; monitoring;
+
+@Inject
+private AuthenticationEventMonitor authenticationEventMonitor;</code></pre>
+</figure>
+<p>The <strong>AuthenticationEventMonitor</strong>﻿ class is a holder
+class for the event producer and monitoring.</p>
+<hr />
+<p>Create the <strong>AuthenticationEvent</strong>﻿ event class as
+follows.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class AuthenticationEvent {
+    public enum Type { LOGIN, LOGOUT }
+
+    private String username;
+    private Date creation;
+    private Type type;
+
+    public AuthenticationEvent(String username, Type type) {
+        this.username = username;
+        this.type = type;
+        this.creation = new Date();
+    }
+
+    ...
+
+    @Override
+    public String toString() {
+        return &quot;AuthenticationEvent{&quot; +
+                &quot;username=&#39;&quot; + username + &#39;\&#39;&#39; +
+                &quot;, creation=&quot; + creation +
+                &quot;, type=&quot; + type + &#39;}&#39;;
+    }
+}</code></pre>
+</figure>
+<hr />
+<p>Next, create a holder for the events producer and manager.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class AuthenticationEventMonitor {
+    @Inject
+    private Logger logger;
+
+    private CopyOnWriteArrayList&lt;String&gt; connectedUsers;
+
+    @PostConstruct
+    public void init() {
+        this.connectedUsers = new CopyOnWriteArrayList&lt;&gt;();
+    }
+
+    public void onAuthenticationEvent(@Observes AuthenticationEvent event) {
+        if (event != null &amp;&amp;
+                ((event.getType() == AuthenticationEvent.Type.LOGIN) ||
+                        (event.getType() == AuthenticationEvent.Type.LOGOUT))) {
+            if (event.getType() == AuthenticationEvent.Type.LOGIN) {
+                if (!connectedUsers.contains(event.getUsername())) {
+                    this.connectedUsers.add(event.getUsername());
+                }
+            } else {
+                if (connectedUsers.contains(event.getUsername())) {
+                    this.connectedUsers.remove(event.getUsername());
+                }
+            }
+        } else {
+            logger.warning(&quot;Unrecognized AuthenticationEvent : [&quot; + event + &quot;]&quot;);
+        }
+    }
+
+    public boolean isUserAlreadyConnected(String username) {
+        return this.connectedUsers.contains(username);
+    }
+
+    public List&lt;String&gt; getConnectedUsers() {
+        return connectedUsers;
+    }
+}</code></pre>
+</figure>
+<hr />
+<p>The <strong>AuthenticationResource</strong>﻿ class becomes the
+following.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Path(&quot;auth&quot;)
+@Produces(MediaType.APPLICATION_JSON)
+public class AuthenticationResource {
+    @Inject
+    private Logger logger;
+
+    @Inject
+    private UserService userService;
+
+    @Inject
+    private Event&lt;AuthenticationEvent&gt; monitoring;
+
+    @Inject
+    private AuthenticationEventMonitor authenticationEventMonitor;
+
+    @POST
+    @Path(&quot;login&quot;)
+    public Response login(@NotNull @FormParam(&quot;username&quot;) String username,
+                          @NotNull @FormParam(&quot;password&quot;) String password,
+                          @NotNull @FormParam(&quot;rememberMe&quot;) boolean rememberMe,
+                          @Context HttpServletRequest request) {
+        boolean justLogged = false;
+        if (!SecurityUtils.getSubject().isAuthenticated()) {
+            justLogged = true;
+        }
+
+        try {
+            SecurityUtils.getSubject().login(new UsernamePasswordToken(username, password, rememberMe));
+        } catch (Exception e) {
+            throw new IncorrectCredentialsException(&quot;Unknown user, please try again&quot;);
+        }
+
+        SavedRequest savedRequest = WebUtils.getAndClearSavedRequest(request);
+        if (savedRequest != null) {
+            return this.getRedirectResponse(savedRequest.getRequestUrl(), request);
+        } else {
+            if (justLogged) {
+                return this.getRedirectResponse(WebPages.DASHBOARD_URL, request);
+            }
+            return this.getRedirectResponse(WebPages.HOME_URL, request);
+        }
+    }</code></pre>
+</figure>
+<hr />
+<figure class="listing">
+<pre class="source language-java"><code>    @GET
+    @Path(&quot;logout&quot;)
+    public Response logout(@Context HttpServletRequest request) {
+        SecurityUtils.getSubject().logout();
+        return this.getRedirectResponse(WebPages.HOME_URL, request);
+    }
+
+    @GET
+    @Path(&quot;me&quot;)
+    public Response getSubjectInfo() {
+        Subject subject = SecurityUtils.getSubject();
+        if (subject != null &amp;&amp; subject.isAuthenticated()) {
+            User connectedUser = this.userService.findByUsername(subject.getPrincipal().toString());
+            return Response.ok(connectedUser).build();
+        } else {
+            return Response.serverError().type(MediaType.TEXT_HTML).build();
+        }
+    }
+
+    @GET
+    @Path(&quot;users&quot;)
+    public Response getConnectedUsers() {
+        List&lt;String&gt; connectedUsers = this.authenticationEventMonitor.getConnectedUsers();
+        return Response.ok(connectedUsers).build();
+    }
+
+    private Response getRedirectResponse(String requestedPath, HttpServletRequest request) {
+        String appName = request.getContextPath();
+        String baseUrl = request.getRequestURL().toString().split(request.getRequestURI())[0] + appName;
+
+        try {
+            if (requestedPath.split(appName).length &gt; 1) {
+                baseUrl += requestedPath.split(appName)[1];
+            } else {
+                baseUrl += requestedPath;
+            }
+            return Response.seeOther(new URI(baseUrl)).build();
+        } catch (URISyntaxException ex) {
+            return Response.serverError().status(404).type(MediaType.TEXT_HTML).build();
+        }
+    }
+}</code></pre>
+</figure>
+<hr />
+<p>Then, create the <strong>UserResource</strong>﻿ class.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Path(&quot;users&quot;)
+@Produces(MediaType.APPLICATION_JSON)
+public class UserResource {
+    @Inject
+    private UserService userService;
+
+    @POST
+    public Response addUser(@Valid User user, @Context UriInfo info) {
+        User saved = this.userService.save(user);
+        long id = saved.getId();
+        URI uri = info.getAbsolutePathBuilder().path(&quot;/&quot; + id).build();
+        return Response.created(uri).build();
+    }
+
+    @DELETE
+    @Path(&quot;{id}&quot;)
+    public Response deleteUser(@PathParam(&quot;id&quot;) long id) {
+        this.userService.delete(id);
+        return Response.ok().build();
+    }
+
+    @PUT
+    public Response editUser(@Valid User user, @Context UriInfo info) {
+        User searched = this.userService.save(user);
+        return Response.ok(searched).build();
+    }
+
+    @GET
+    @Path(&quot;{id}&quot;)
+    public Response findUser(@PathParam(&quot;id&quot;) long id) {
+        User searched = this.userService.findById(id);
+        return Response.ok(searched).build();
+    }
+
+    @GET
+    public Response listUsers() {
+        List&lt;User&gt; all = this.userService.findAll();
+        return Response.ok(all).build();
+    }
+}</code></pre>
+</figure>
+<hr />
+<p>The last item in the JAX-RS layer is the
+<strong>ExceptionMapper</strong>﻿ class.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Provider
+public class ShiroExceptionMapper implements ExceptionMapper&lt;Exception&gt; {
+
+    private static final String CAUSE = &quot;cause&quot;;
+
+    @Override
+    public Response toResponse(Exception ex) {
+        if (ex instanceof UnknownAccountException) {
+            return Response.status(Response.Status.FORBIDDEN)
+            .header(ShiroExceptionMapper.CAUSE, &quot;Your username wrong&quot;)
+                    .type(MediaType.TEXT_HTML)
+                    .build();
+        }
+        if (ex instanceof IncorrectCredentialsException) {
+            return Response.status(Response.Status.UNAUTHORIZED)
+                    .header(ShiroExceptionMapper.CAUSE, &quot;Password is incorrect&quot;)
+                    .type(MediaType.TEXT_HTML)
+                    .build();
+        }
+        if (ex instanceof LockedAccountException) {
+            return Response.status(Response.Status.CONFLICT)
+                    .header(ShiroExceptionMapper.CAUSE, &quot;This username is locked&quot;)
+                    .type(MediaType.TEXT_HTML)
+                    .build();
+        }
+        if (ex instanceof AuthenticationException) {
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .header(ShiroExceptionMapper.CAUSE, ex.getMessage())
+                    .type(MediaType.TEXT_HTML)
+                    .build();
+        }
+
+        return Response.serverError().
+                header(ShiroExceptionMapper.CAUSE, ex.toString()).build();
+    }
+}</code></pre>
+</figure>
+<p>At this point, your JAX-RS services are ready for use, and all of
+your Shiro services are exposed via RESTful services.</p>
+<aside class="admonition important" title="Important" epub:type="warning">
+<div class="content">
+<p>When applying this configuration, you will add a
+<strong>;jsessionid</strong>﻿ param to the HTTP URL for every webpage
+request in the application. This parameter is used for tracking the
+session using cookies.</p>
+</div>
+</aside>
+<p><strong>JSESSIONID</strong>﻿ is a cookie generated by a servlet
+container, such as Tomcat or Jetty, and is used for session management
+in Java EE web apps for HTTP. Since HTTP is a stateless protocol, a
+webserver must work to relate separate requests coming from a single
+client. Session management is the process of tracking a user session
+using standard techniques such as cookies and URL rewriting.</p>
+<p>Once a session is created, the container sends the
+<strong>JSESSIONID</strong>﻿ cookie in the client response. In the case
+of HTML access, no user session is created. If the client has disabled
+cookies, then the container uses URL rewriting to manage the session,
+where the <strong>JSESSIONID</strong>﻿ is appended to the URL like this:
+<a href="https://localhost:8080/ShiroTutorial/login.htm"
+class="link">https://localhost:8080/ShiroTutorial/login.htm</a>﻿;<strong>jsessionid</strong>﻿<strong>=9e934f9330d5081e34ce607b478a8e32dd9b0297dbb8</strong>﻿</p>
+<aside class="admonition note" title="Note" epub:type="note">
+<div class="content">
+<p>To solve this, just ask the container to handle the session using
+<strong>COOKIES</strong>﻿ by adding this node to the web.xml file:</p>
+</div>
+</aside>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;session-config&gt;
+    &lt;session-timeout&gt;
+        30
+    &lt;/session-timeout&gt;
+    &lt;tracking-mode&gt;COOKIE&lt;/tracking-mode&gt;
+&lt;/session-config&gt;</code></pre>
+</figure>
+<hr />
+</section>
+<section id="chapter-3.xhtml_step-5-2-test-your-restful-services"
+class="sect2" title="Step 5.2: Test your RESTful services">
+<h3>Step 5.2: Test your RESTful services</h3>
+<p>Let’s write a small client in the form of a small Java SE app to test
+the web services. The client app will send requests to our web services
+and you will use JUnit to check that all goes well.</p>
+<p>For testing the web services we are going to write a small client in
+the form of a small Java SE app. Our client app, will make some requests
+to our webservices to check if it is ok. This check will be done using
+<strong>JUnit</strong>﻿.</p>
+<section id="chapter-3.xhtml_step-5-2-1-create-the-client-project"
+class="sect3" title="Step 5.2.1: Create the client project">
+<h4>Step 5.2.1: Create the client project</h4>
+<p>Now that everything is explained, assemble the pieces into a working
+project:</p>
+<p><img src="images/nb6.png" alt="nb6" /></p>
+<hr />
+<p>And next…​</p>
+<p><img src="images/nb7.png" alt="nb7" /></p>
+<p>After creating the project, go to the pom.xml and change it as
+follows.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;com.targa.dev&lt;/groupId&gt;
+  &lt;artifactId&gt;ShiroTutorialClient&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;
+
+  &lt;build&gt;
+    &lt;finalName&gt;ShiroTutorialClient&lt;/finalName&gt;
+  &lt;/build&gt;
+&lt;/project&gt;</code></pre>
+</figure>
+<hr />
+<p>Add the JUnit dependency to your pom.xml.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;version&gt;4.12&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
+      &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+      &lt;version&gt;1.3&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;</code></pre>
+</figure>
+<p>After adding these dependencies with the "Test" scope, NetBeans will
+add a new section called "Test Packages" to the project.</p>
+<p><img src="images/nb8.png" alt="nb8" /></p>
+<p>Create rour first JUnit class. Right-click on Test Packages and
+choose New → JUnit Test.</p>
+<hr />
+<p>Since you’ll test the login feature in the authentication web
+service, you must place your <strong>LoginTest</strong>﻿ class in the
+same package as the <strong>Authentication</strong>﻿ class, the
+<strong>com.targa.dev.shirotutorial.security.boundary</strong>﻿
+package.</p>
+<p><img src="images/nb10.png" alt="nb10" /></p>
+<p>To make a RESTful client, you have to add the dependencies. The
+following assumes you are using Payara Server and uses its bundled
+Jersey module as the JAX-RS implementation:</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.glassfish.jersey.core&lt;/groupId&gt;
+  &lt;artifactId&gt;jersey-client&lt;/artifactId&gt;
+  &lt;version&gt;2.22.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.glassfish.jersey.media&lt;/groupId&gt;
+  &lt;artifactId&gt;jersey-media-json-processing&lt;/artifactId&gt;
+  &lt;version&gt;2.22.1&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</figure>
+<hr />
+<p>Define the first version of your <strong>LoginTest</strong>﻿
+class.</p>
+<figure class="listing">
+<pre class="source language-java"><code>public class LoginTest {
+
+  private Client client;
+  private WebTarget target;
+
+  @Before
+  public void setUp() {
+    client = ClientBuilder.newClient();
+    target = client.target(&quot;http://localhost:8080/ShiroTutorial/&quot;)
+                   .path(&quot;api/auth/login&quot;); ①
+  }
+  ...
+}</code></pre>
+</figure>
+<div class="callout-list">
+<ol>
+<li><em>①</em> The target URL of your client is the login RESTful API
+URL <a href="http://localhost:8080/ShiroTutorial/api/auth/login"
+class="link">http://localhost:8080/ShiroTutorial/api/auth/login</a>﻿
+.</li>
+</ol>
+</div>
+<p>Use this class to test the login operation. Verify that a successful
+login and a failed login work as expected.</p>
+<p>For a successful login attempt:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Send the login params (username, password,
+and <strong>rememberMe</strong>﻿) to the login RESTful
+service</span></li>
+<li><span class="principal">→ get the "OK" HTTP response code
+(200)</span></li>
+</ul>
+</div>
+<p>For a failing login attempt:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Send the login params (username, password,
+and <strong>rememberMe</strong>﻿) to the login RESTful
+service</span></li>
+<li><span class="principal">→ get the "Unauthorized" HTTP response code
+(401)</span></li>
+</ul>
+</div>
+<hr />
+<p>Before testing the login operations, we create a new
+<strong>User</strong>﻿ record. There are many ways to do that but let’s
+build an initializer EJB that inserts a new user when the application
+starts.</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Singleton
+@Startup
+public class InsertUser {
+    @Inject
+    UserService us; ①
+    @Inject
+    BCryptPasswordService passwordService; ②
+
+    @PostConstruct ③
+    public void insert() {
+        User craftsman  = new User(&quot;shiro&quot;, passwordService.encryptPassword(&quot;netbeans&quot;));
+        Role role = new Role();
+        role.setName(&quot;ADMIN&quot;);
+        craftsman.setRole(role);
+
+        this.us.save(craftsman);
+    }
+}</code></pre>
+</figure>
+<div class="callout-list">
+<ol>
+<li><em>①</em> The CRUD service for the user entities.</li>
+<li><em>②</em> The <strong>BCryptPassword</strong>﻿ utility class created
+for matching the passwords in the <strong>PasswordMatcher</strong>﻿.</li>
+<li><em>③</em> <strong>@PostConstruct</strong>﻿ executes the annotated
+method (<strong>public void insert(){}</strong>﻿) after the EJB is
+contructed.</li>
+</ol>
+</div>
+<p>The EJB is a <strong>@Singleton</strong>﻿ marked with the
+<strong>@Startup</strong>﻿ annotation, which means it starts when the
+application starts — every time our application starts. To avoid
+duplicating records on every restart, we can ask the ORM to
+<strong>drop-and-create</strong>﻿ tables each time the application
+starts. To do so, just add the following line to the properties section
+of your persistence.xml file.</p>
+<figure class="listing">
+<pre class="source language-xml"><code>&lt;property name=&quot;javax.persistence.schema-generation.database.action&quot; value=&quot;drop-and-create&quot;/&gt;</code></pre>
+</figure>
+<aside class="admonition warning" title="Warning" epub:type="warning">
+<div class="content">
+<p>You must remove this configuration from the production environment or
+you will lose all your data every time you restart your app/server.</p>
+</div>
+</aside>
+<hr />
+<p>The test methods will be :</p>
+<figure class="listing">
+<pre class="source language-java"><code>@Test
+public void testSuccessfulLogin() {
+  Form form = new Form();
+  form.param(&quot;username&quot;, &quot;shiro&quot;);
+  form.param(&quot;password&quot;, &quot;netbeans&quot;);
+  form.param(&quot;rememberMe&quot;, &quot;false&quot;);
+
+  Response response = target.request(MediaType.APPLICATION_JSON_TYPE)
+          .post(Entity.entity(form, MediaType.APPLICATION_FORM_URLENCODED));
+
+  assertEquals(response.getStatus(), Response.Status.OK.getStatusCode());
+}
+
+@Test
+public void testFailingLogin() {
+  Form form = new Form();
+  form.param(&quot;username&quot;, &quot;shiro&quot;);
+  form.param(&quot;password&quot;, &quot;netbeans2&quot;);
+  form.param(&quot;rememberMe&quot;, &quot;false&quot;);
+
+  Response response = target.request(MediaType.APPLICATION_JSON_TYPE)
+          .post(Entity.entity(form, MediaType.APPLICATION_FORM_URLENCODED));
+
+  assertEquals(response.getStatus(), Response.Status.UNAUTHORIZED.getStatusCode());
+}</code></pre>
+</figure>
+<aside class="admonition tip" title="Tip" epub:type="help">
+<div class="content">
+<p>Sending the <strong>rememberMe</strong>﻿ parameter is not mandatory
+for false values, as the null value will be mapped to false at the
+RESTful boundary.</p>
+</div>
+</aside>
+<hr />
+<p>Execute the test.</p>
+<p><img src="images/nb11.png" alt="nb11" /></p>
+<p>You will get the following result.</p>
+<p><img src="images/nb12.png" alt="nb12" /></p>
+<p>You can keep making JUnit tests to check your RESTful services, which
+I recommend because you can easily debug them. In contrast, browser
+plugins such as Postman can make debugging more difficult.</p>
+<p><img src="images/postman.png" alt="postman" /></p>
+</section>
+</section>
+</section>
+<p><span id="chapter-4.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<section id="chapter-4.xhtml_how-to-consume-shiro-s-web-services"
+class="sect1" title="How to consume Shiro’s web services">
+<h2>How to consume Shiro’s web services</h2>
+<p>Our RESTful web services can be consumed using every client that can
+make HTTP requests:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">HTML5 pages</span></li>
+<li><span class="principal">Swing applications</span></li>
+<li><span class="principal">mobile applications on iOS, Android,
+etc.</span></li>
+<li><span class="principal">etc.</span></li>
+</ul>
+</div>
+<p>For example, we can make an AngularJS single-page application (SPA)
+as the view layer of our JavaEE7 application:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Make the REST calls in the services
+layer.</span></li>
+<li><span class="principal">Manage your Auth<sup>2</sup>﻿ operations
+depending on the HTTP response codes.</span></li>
+<li><span class="principal">For the authorization, you can use AngularJS
+authorization plugins (angular-route-authorisation, angular-http-auth,
+angular-permission, etc.)</span></li>
+</ul>
+</div>
+<p>You may have to tweak your code to make it coherent with your
+authorization mechanism.</p>
+</section>
+<section id="chapter-4.xhtml_what-can-you-add-to-the-implementation"
+class="sect1" title="What can you add to the implementation?">
+<h2>What can you add to the implementation?</h2>
+<p>Our implementation of Apache Shiro framework is basic. We did not try
+concepts such as LDAP, ActiveDirectory, CAS SSO, OAuth, or others.</p>
+<p>The community offers many integrations:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal">Pairing <a
+href="http://www.stormpath.com/blog/user-management-java-web-apps-stormpath-and-apache-shiro"
+class="link">Stormpath User Management</a>﻿ with Shiro provides a full
+application-security and user-management system with little to no
+coding.</span></li>
+<li><span class="principal"><a href="http://grails.org/plugins/shiro"
+class="link">Grails</a>﻿ offers up-to-date Grails/Shiro integration,
+including Grails 2.0 and Shiro 1.2. The plugin adds easy authentication
+and access control to Grails applications.</span></li>
+<li><span class="principal"><a
+href="https://github.com/FeedTheCoffers/shiro-oauth"
+class="link">OAuth</a>﻿ provides source code for an OAuth module for
+Apache Shiro, based on Scribe.</span></li>
+<li><span class="principal">A <a
+href="https://github.com/cilogi/gaeshiro" class="link">Google App
+Engine</a>﻿ plugin demonstrates one way to integrate Shiro with Google
+App Engine and Google Guice, and comes with front-end user registration
+and password management.</span></li>
+<li><span class="principal"><a
+href="https://github.com/wsargent/play-shiro" class="link">Play Shiro
+Integration</a>﻿ simply integrates Apache Shiro and Play 2.0. If you want
+to play with it, this project could use an update handling statelessness
+since the Shiro 1.2 release.</span></li>
+<li><span class="principal"><a
+href="https://github.com/55minutes/fiftyfive-wicket" class="link">The 55
+Minutes Wicket project</a>﻿ is a nifty set of tools and libraries for
+enhancing productivity with the Apache Wicket Java web framework,
+including Shiro integration.</span></li>
+<li><span class="principal"><a
+href="https://github.com/timperrett/lift-shiro" class="link">Lift
+Shiro</a>﻿ integrates Shiro and the Lift Web framework, using Lift’s
+sitemap locs instead of Shiro’s built-in web.xml resource filters to
+control access to URLs.</span></li>
+</ul>
+</div>
+</section>
+<section id="chapter-4.xhtml_recommendations" class="sect1"
+title="Recommendations">
+<h2>Recommendations</h2>
+<div class="ordered-list arabic">
+<ol>
+<li><span class="principal">Handle every HTTP error code (404, 400, 500,
+etc.) and try to have an explicit error message in the HTTP headers of
+every response.</span></li>
+<li><span class="principal">Ensure that your design covers the maximum
+use cases and be sure that all resources that get anonymous access are
+neither vulnerable nor sensitive.</span></li>
+<li><span class="principal">Activate and configure SSL when
+possible.</span></li>
+<li><span class="principal">Avoid transmitting the
+<strong>JSESSIONID</strong>﻿ parameter over plain old HTTP.</span></li>
+<li><span class="principal">Avoid using URL parameters for session
+tracking.</span></li>
+<li><span class="principal">Be sure to define a session-timeout value
+that is rational for your needs.</span></li>
+<li><span class="principal">Try to build your knowledge of
+Auth<sup>2</sup>﻿ mechanisms and strategies. Take a look at <a
+href="http://www.owasp.org" class="link">OWASP</a>﻿'s useful
+resources:</span>
+<div class="ordered-list loweralpha">
+<ol>
+<li><span class="principal"><a
+href="https://www.owasp.org/index.php/Authentication_Cheat_Sheet"
+class="link">OWASP Authentication Cheat Sheet</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.owasp.org/index.php/Guide_to_Authorization"
+class="link">OWASP Guide to Authorization</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.owasp.org/index.php/REST_Security_Cheat_Sheet"
+class="link">OWASP REST Security Cheat Sheet</a>﻿</span></li>
+<li><span class="principal"><a
+href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet"
+class="link">OWASP Session Management Cheat Sheet</a>﻿</span></li>
+</ol>
+</div></li>
+<li><span class="principal">Penetration-test your web application to be
+sure that your security mechanisms are powerful. You can use the <a
+href="https://www.owasp.org/index.php/Web_Application_Penetration_Testing"
+class="link">OWASP Pentesting Guide</a>﻿.</span></li>
+</ol>
+</div>
+</section>
+<p><span id="action.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<section id="action.xhtml_additional-reading" class="sect1"
+title="Additional reading">
+<h2>Additional reading</h2>
+<p>I suggest that you start diving into the official documentation of
+the Shiro framework. It’s true that its documentation is poor in
+comparison to other frameworks such as Spring Security or PicketLink,
+which have more resources and more support:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><a
+href="https://shiro.apache.org/static/latest/apidocs/"
+class="link">https://shiro.apache.org/static/latest/apidocs/</a>﻿</span></li>
+<li><span class="principal"><a
+href="http://shiro.apache.org/tutorial.html"
+class="link">http://shiro.apache.org/tutorial.html</a>﻿</span></li>
+</ul>
+</div>
+<p>There are some useful tutorials, including older Shiro stuff, like
+for INI and XML configuration:</p>
+<div class="itemized-list">
+<ul>
+<li><span class="principal"><a
+href="http://meri-stuff.blogspot.fr/2011/03/apache-shiro-part-1-basics.html"
+class="link">http://meri-stuff.blogspot.fr/2011/03/apache-shiro-part-1-basics.html</a>﻿</span></li>
+<li><span class="principal"><a
+href="http://en.kodcu.com/2013/10/java-security-framework-apache-shiro-2/"
+class="link">http://en.kodcu.com/2013/10/java-security-framework-apache-shiro-2/</a>﻿</span></li>
+<li><span class="principal"><a
+href="http://www.jjoe64.com/2014/01/apache-shiro-with-hibernatesql-full.html"
+class="link">http://www.jjoe64.com/2014/01/apache-shiro-with-hibernatesql-full.html</a>﻿</span></li>
+<li><span class="principal"><a
+href="http://balusc.omnifaces.org/2013/01/apache-shiro-is-it-ready-for-java-ee-6.html"
+class="link">http://balusc.omnifaces.org/2013/01/apache-shiro-is-it-ready-for-java-ee-6.html</a>﻿</span></li>
+</ul>
+</div>
+<p>You can learn tips and tricks from these tutorials, and you can adopt
+these modifications in any JavaEE7 project.</p>
+</section>
+<p><span id="the-end.xhtml"></span></p>
+<div>
+<div class="chapter-header">
+<p><img src="images/avatars/default.jpg" /> <strong>Nebrass
+Lamouchi</strong></p>
+<h1 class="chapter-title"><span class="small"><strong>PAIRING</strong>
+<strong>APACHE</strong> <strong>SHIRO</strong> <strong>WITH</strong>
+<strong>JAVA</strong> <strong>EE</strong> <strong>7</strong></span></h1>
+</div>
+</div>
+<p>This was my first mini-book. I have tried to explain a subject I find
+interesting. I hope you find some useful information and tips.</p>
+<div class="blockquote">
+<blockquote>
+<p><span class="open-quote">“</span>Greatness is a road leading towards
+the unknown.<span class="close-quote">”</span></p>
+<footer>
+<p>~ Charles de Gaulle</p>
+</footer>
+</blockquote>
+</div>
+<div class="blockquote">
+<blockquote>
+<p><span class="open-quote">“</span>Far better it is to dare mighty
+things, to win glorious triumphs, even though checkered by failure, than
+to take rank with those poor spirits who neither enjoy much nor suffer
+much, because they live in the gray twilight that knows not victory nor
+defeat.<span class="close-quote">”</span></p>
+<footer>
+<p>~ Theodore Roosevelt</p>
+</footer>
+</blockquote>
+</div>
+<div class="table">
+<div class="content">
+<table class="table table-framed-topbot table-grid-rows"
+style="width: 70%;">
+<caption>Table 1. Book Editions &amp; Releases</caption>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>1.0</p></td>
+<td><p>January 2016</p></td>
+</tr>
+</tbody><tfoot>
+<tr>
+<td colspan="2" class="halign-left"><p><em>This book was written using
+<a href="http://asciidoctor.org/"
+class="link">AsciiDoctor</a>﻿</em>﻿</p></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<p>I am available for any suggestion or corrections at <a
+href="mailto:lnibrass@gmail.com"
+class="link">lnibrass@gmail.com</a>﻿.</p>
+<p>Best regards,</p>
+<p>Nebrass</p>

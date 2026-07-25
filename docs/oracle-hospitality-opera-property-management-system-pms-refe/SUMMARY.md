@@ -1,0 +1,2 @@
++   [Oracle Hospitality OPERA 酒店管理系统 (PMS) 参考手册 - 酒店软件培训支持与 Java JEE AWS Amazon云开发精通：参考手册手册](README.md)
++   [Oracle Hospitality OPERA 酒店管理系统 (PMS) 参考手册 - 酒店软件培训支持与 Java JEE AWS Amazon云开发精通：参考手册手册](oracle-hospitality-opera-property-management-system-pms-refe_0.md)
