@@ -626,4 +626,5 @@
 +   [Tony Gaddis Godfrey Muganda Java 入门：从控制结构到数据结构复习题答案 Addison Wesley 2012](docs/tony-gaddis-godfrey-muganda-starting-out-with-java-from-cont/README.md)
 +   [现代 Java 中的传统音乐：变革社会中的甘美兰](docs/traditional-music-in-modern-java-gamelan-in-a-changing-socie/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
++   [Ultimate Java 数据分析与机器学习：使用 WEKA、JavaML、JFreeChart 和 Deeplearning4j 解锁用于数据分析与机器学习的 Java 生态（英文版）](docs/ultimate-java-for-data-analytics-and-machine-learning-unlock/README.md)
 +   [Java 入门指南：掌握你的 Java 技能](docs/understading-java-for-beginners-master-your-java-programming/README.md)
