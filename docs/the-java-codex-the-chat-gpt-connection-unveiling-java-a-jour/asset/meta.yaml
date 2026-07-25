@@ -1,0 +1,875 @@
+name: The Java Codex： The Chat-GPT Connection： Unveiling Java： A Journey Through Fundamental
+  Concepts with CHAT-GPT Prompts
+name_cn: Java 典：Chat-GPT 连接：揭秘 Java：基于 CHAT-GPT 提示词的基础概念之旅
+slug: the-java-codex-the-chat-gpt-connection-unveiling-java-a-jour
+toc:
+- - '#'
+  - Java 典：Chat-GPT 连接：揭秘 Java：基于 CHAT-GPT 提示词的基础概念之旅
+- - '##'
+  - 卷首
+- - '#'
+  - 集合与数据结构
+- - '##'
+  - 数组 (Arrays)
+- - '##'
+  - ArrayList
+- - '##'
+  - LinkedList
+- - '##'
+  - HashSet
+- - '##'
+  - TreeSet
+- - '##'
+  - HashMap
+- - '##'
+  - TreeMap
+- - '##'
+  - 队列接口 (Queue Interface)
+- - '##'
+  - 优先级队列 (PriorityQueue)
+- - '##'
+  - 栈接口 (Stack Interface)
+- - '##'
+  - 双端队列接口 (Deque Interface)
+- - '##'
+  - Java 集合框架 (JCF)
+- - '##'
+  - 比较器与比较 (Comparators and Comparable)
+- - '##'
+  - 并发集合 (Concurrent Collections)
+- - '##'
+  - 集合挑战
+- - '##'
+  - 数据结构权衡
+- - '##'
+  - 真实场景中的集合
+- - '##'
+  - 集合与 Stream API
+- - '##'
+  - 集合与函数式编程
+- - '##'
+  - 集合与内存管理
+- - '##'
+  - 集合与线程安全
+- - '##'
+  - 集合与时间复杂度
+- - '##'
+  - 集合设计与用例
+- - '#'
+  - 6. 异常处理
+- - '##'
+  - 异常基础
+- - '##'
+  - Try-Catch 块
+- - '##'
+  - 检查异常与运行时异常
+- - '##'
+  - 抛出异常
+- - '##'
+  - 自定义异常
+- - '##'
+  - Try-With-Resources
+- - '##'
+  - Finally 块
+- - '##'
+  - 异常处理最佳实践
+- - '##'
+  - 处理多个异常
+- - '##'
+  - 异常链
+- - '##'
+  - 方法中的异常传播与处理
+- - '##'
+  - 异常处理挑战
+- - '##'
+  - 现实场景中的异常处理
+- - '##'
+  - 异常处理与日志记录
+- - '##'
+  - 多线程程序中的异常处理
+- - '##'
+  - 异常处理与流程控制
+- - '##'
+  - 异常处理与清理
+- - '##'
+  - GUI 中的异常处理
+- - '##'
+  - 异常处理与测试
+- - '#'
+  - 7. 文件处理
+- - '##'
+  - 文件基础
+- - '##'
+  - 文件输入输出流
+- - '##'
+  - 缓冲区流
+- - '##'
+  - FileReader 和 FileWriter
+- - '##'
+  - FileReader 和 FileWriter 挑战
+- - '##'
+  - 对象输入流与输出流
+- - '##'
+  - 文本文件的读取与写入
+- - '##'
+  - 二进制文件的读取与写入
+- - '##'
+  - 文件操作
+- - '##'
+  - 文件与目录操作
+- - '##'
+  - CSV 文件的读取与写入
+- - '##'
+  - 文件权限与安全
+- - '##'
+  - 文件处理最佳实践
+- - '##'
+  - 文件处理与异常
+- - '##'
+  - 线程基础知识
+- - '##'
+  - 线程创建
+- - '##'
+  - Runnable 接口与 Thread 类
+- - '##'
+  - 线程启动与运行
+- - '##'
+  - 线程生命周期
+- - '##'
+  - 线程优先级
+- - '##'
+  - 同步
+- - '##'
+  - 锁与互斥
+- - '##'
+  - 线程安全与竞态
+- - '##'
+  - volatile 关键字
+- - '##'
+  - 线程中断
+- - '##'
+  - 线程通信
+- - '##'
+  - 线程死锁
+- - '##'
+  - 线程池
+- - '##'
+  - 线程本地
+- - '##'
+  - 并发集合
+- - '##'
+  - Fork-Join 框架
+- - '##'
+  - 现实场景中的多线程
+- - '##'
+  - 线程安全与性能
+- - '##'
+  - 多线程与 CPU 核心
+- - '##'
+  - 线程执行顺序
+- - '##'
+  - 多线程与 I/O 操作
+- - '##'
+  - 多线程与并行算法
+- - '##'
+  - 多线程与死锁避免
+- - '#'
+  - 9. 网络编程
+- - '##'
+  - 网络基础
+- - '##'
+  - 套接字编程
+- - '##'
+  - TCP 和 UDP 套接字
+- - '##'
+  - 客户端-服务器通信
+- - '##'
+  - HTTP 请求与 URL 连接
+- - '##'
+  - 网络挑战
+- - '##'
+  - 服务端套接字与多线程
+- - '##'
+  - 网络与异常处理
+- - '##'
+  - 网络协议
+- - '##'
+  - HTTP 库与 API
+- - '##'
+  - Java NIO (新 I/O)
+- - '##'
+  - WebSocket 通信
+- - '##'
+  - 网络安全与 SSL/TLS
+- - '##'
+  - 远程方法调用 (RMI)
+- - '##'
+  - 网络与序列化
+- - '##'
+  - 网络的多线程挑战
+- - '##'
+  - 现实场景中的网络
+- - '##'
+  - 网络与可扩展性
+- - '##'
+  - 网络与错误处理
+- - '##'
+  - 网络与数据序列化挑战
+- - '##'
+  - WebSocket 挑战
+- - '##'
+  - JDBC 基础
+- - '##'
+  - 连接数据库
+- - '##'
+  - 执行 SQL 查询
+- - '##'
+  - 处理结果集
+- - '##'
+  - 预编译语句
+- - '##'
+  - 批处理
+- - '##'
+  - 事务与 ACID 特性
+- - '##'
+  - 数据库元数据
+- - '##'
+  - ResultSetMetaData
+- - '##'
+  - 连接池
+- - '##'
+  - JDBC 与对象关系映射 (ORM)
+- - '##'
+  - JDBC 挑战
+- - '##'
+  - 现实场景中的 JDBC
+- - '##'
+  - JDBC 与性能优化
+- - '##'
+  - JDBC 与事务挑战
+- - '##'
+  - JDBC 与连接管理
+- - '##'
+  - JDBC 与数据访问模式
+- - '##'
+  - JDBC 与数据迁移
+- - '##'
+  - JDBC 与存储过程
+- - '##'
+  - JDBC 与错误处理
+- - '##'
+  - JDBC 与连接池挑战
+- - '##'
+  - JDBC 与实时分析
+- - '#'
+  - 11. Lambda 表达式与 Streams
+- - '##'
+  - Lambda 表达式基础
+- - '##'
+  - 函数式接口
+- - '##'
+  - Lambda 表达式 vs 匿名类
+- - '##'
+  - Lambda 表达式与方法引用
+- - '##'
+  - Stream 基础
+- - '##'
+  - 流的
+- - '##'
+  - 中间流操作
+- - '##'
+  - 终端流操作
+- - '##'
+  - 流与并行处理
+- - '##'
+  - 收集器 (Collectors)
+- - '##'
+  - 流的挑战
+- - '##'
+  - 现实场景中的流
+- - '##'
+  - 流的性能与优化
+- - '##'
+  - 流与惰性求
+- - '##'
+  - 流与错误处理
+- - '##'
+  - 流与数据转换
+- - '##'
+  - 流与数据聚合
+- - '##'
+  - 流与过滤挑战
+- - '##'
+  - 流与数据操作
+- - '##'
+  - 流与数据验证
+- - '##'
+  - 流与数据聚合挑战
+- - '##'
+  - 流与自定义操作
+- - '##'
+  - 流与多线程
+- - '#'
+  - 12. 正则表达式
+- - '##'
+  - 正则表达式基础
+- - '##'
+  - 使用 `Pattern` 和 `Matcher` 类进行模式匹配
+- - '##'
+  - 字符类与量符
+- - '##'
+  - 锚点与边界
+- - '##'
+  - 转义与特殊字符
+- - '##'
+  - 捕获组与反引用
+- - '##'
+  - 正则表达式与 `String` 类方法
+- - '##'
+  - 预定义字符类
+- - '##'
+  - 否定与前瞻/后断言
+- - '##'
+  - 正则与验证
+- - '##'
+  - 正则与字符串分割
+- - '##'
+  - 正则挑战
+- - '##'
+  - 现实场景中的正则
+- - '##'
+  - 正则与提取
+- - '##'
+  - 正则与 URL 解析
+- - '##'
+  - 正则与行模式
+- - '##'
+  - 正则表达式与自定义模式
+- - '##'
+  - 正则表达式与替换
+- - '##'
+  - 正则表达式与动态模式
+- - '##'
+  - 正则表达式与错误处理
+- - '##'
+  - 正则表达式与性能优化
+- - '##'
+  - 正则表达式与大小敏感
+- - '#'
+  - 13. 序列化
+- - '##'
+  - 序列化基础
+- - '##'
+  - Serializable 接口
+- - '##'
+  - 序列化过程
+- - '##'
+  - 反序列化
+- - '##'
+  - 瞬态字段 (Transient Fields)
+- - '##'
+  - 自定义序列化
+- - '##'
+  - 序列化 UID
+- - '##'
+  - 序列化的挑战
+- - '##'
+  - 现实场景中的序列化
+- - '##'
+  - 序列化与兼容性
+- - '##'
+  - 序列化与安全
+- - '##'
+  - 序列化与数组
+- - '##'
+  - 序列化单例模式
+- - '##'
+  - 序列化与多线程
+- - '##'
+  - 序列化与外部化 (Externalization)
+- - '##'
+  - 序列化与方法调用 (RMI)
+- - '##'
+  - 序列化与持久化
+- - '##'
+  - 序列化与交换
+- - '##'
+  - 序列化与性能
+- - '##'
+  - 序列化与错误处理
+- - '##'
+  - 序列化与循环
+- - '##'
+  - 序列化与深度引用
+- - '#'
+  - 14. 注解
+- - '##'
+  - 注解基础
+- - '##'
+  - 内置注解
+- - '##'
+  - 定义自定义注解
+- - '##'
+  - 注留策略
+- - '##'
+  - 元注解（Meta-Annotations）
+- - '##'
+  - 注解与反射
+- - '##'
+  - 注解与框架
+- - '##'
+  - 注解与测试
+- - '##'
+  - 注解与Java EE
+- - '##'
+  - 注解与生成
+- - '##'
+  - 注解与面向编程 (AOP)
+- - '##'
+  - 注解与工具
+- - '##'
+  - 注解与RESTful API
+- - '##'
+  - 注解与身份验证
+- - '##'
+  - 注解与配置
+- - '##'
+  - 注解与管理
+- - '##'
+  - 注解与设计模式
+- - '##'
+  - 注解与单例
+- - '##'
+  - 注解与代码质量
+- - '##'
+  - 注解与类型
+- - '##'
+  - 注解与策略
+- - '##'
+  - 注解与可维护性
+- - '##'
+  - 注解与并发
+- - '#'
+  - 16. 并发工具类
+- - '##'
+  - 并发基础
+- - '##'
+  - 线程安全与同步
+- - '##'
+  - 线程安全问题
+- - '##'
+  - Java Thread 类
+- - '##'
+  - Runnable 接口
+- - '##'
+  - 线程周期
+- - '##'
+  - 线程池
+- - '##'
+  - Callable 和 Future
+- - '##'
+  - 并发集合
+- - '##'
+  - 并发与并行
+- - '##'
+  - 读写锁
+- - '##'
+  - 信号量与计数器
+- - '##'
+  - 信号障与 Phaser
+- - '##'
+  - 并发工具面临
+- - '##'
+  - 并发工具的挑战
+- - '#'
+  - 17. 设计模式
+- - '##'
+  - 设计模式介绍
+- - '##'
+  - 创建型设计模式
+- - '##'
+  - 结构型设计模式
+- - '##'
+  - 行为型设计模式
+- - '##'
+  - 单例模式
+- - '##'
+  - 原型模式
+- - '##'
+  - 构建器模式
+- - '##'
+  - 适配器模式
+- - '##'
+  - 桥接模式
+- - '##'
+  - 组合模式
+- - '##'
+  - 外观模式
+- - '##'
+  - 装饰模式
+- - '##'
+  - 代理模式
+- - '##'
+  - 享量者模式
+- - '##'
+  - 状态模式
+- - '##'
+  - 责任链模式
+- - '##'
+  - 命令模式
+- - '##'
+  - 解释器模式
+- - '##'
+  - 迭代器模式
+- - '##'
+  - 编写代码实现遍历集合的 `Iterator` 模式
+- - '##'
+  - 中调者模式 (Mediator Pattern)
+- - '##'
+  - 备忘录 (Memento Pattern)
+- - '##'
+  - 观察者模式 (Observer Pattern)
+- - '##'
+  - 状态模式 (State Pattern)
+- - '##'
+  - 策略模式 (Strategy Pattern)
+- - '##'
+  - 模板方法模式 (Template Method Pattern)
+- - '##'
+  - 访问者模式 (Visitor Pattern)
+- - '##'
+  - 真实场景中的设计模式 (Design Patterns in Real-World Scenarios)
+- - '##'
+  - 设计模式与可维护性 (Design Patterns and Maintainability)
+- - '##'
+  - 设计模式与反模式 (Design Patterns and Anti-Patterns)
+- - '##'
+  - 设计模式与 SOLID 原则 (Design Patterns and SOLID Principles)
+- - '##'
+  - 设计模式与框架 (Design Patterns and Frameworks)
+- - '##'
+  - 设计模式与重构 (Design Patterns and Refactoring)
+- - '##'
+  - 设计模式与可测试性 (Design Patterns and Testability)
+- - '##'
+  - 设计模式与架构 (Design Patterns and Architecture)
+- - '##'
+  - 设计模式与性能 (Design Patterns and Performance)
+- - '##'
+  - 设计模式与团队协作 (Design Patterns and Team Collaboration)
+- - '##'
+  - 设计模式与领域特定语言 (DSLs) (Design Patterns and Domain-Specific Languages (DSLs))
+- - '##'
+  - 设计模式与版本控制 (Design Patterns and Versioning)
+- - '##'
+  - 设计模式与软件复用性 (Design Patterns and Software Reusability)
+- - '##'
+  - 设计模式与现代 Java 特性 (Design Patterns and Modern Java Features)
+- - '#'
+  - 9. 流处理 描述流处理中 `distinct()`、`sorted()` 和 `peek()` 等操作的作用
+- - '##'
+  - 终端操作 (Terminal Operations)
+- - '##'
+  - 过滤与映射 (Filtering and Mapping)
+- - '##'
+  - 排序与归约 (Sorting and Reducing)
+- - '##'
+  - 收集器与收集 (Collectors and Collecting)
+- - '##'
+  - 流 API 与 Lambda 表达式 (Stream APIs and Lambdas)
+- - '##'
+  - 并行流 (Parallel Streams)
+- - '##'
+  - 流与传统循环 (Stream vs. Traditional Loops)
+- - '##'
+  - 流 API 挑战 (Stream API Challenges)
+- - '##'
+  - 流流水线优化 (Stream Pipeline Optimization)
+- - '##'
+  - 流 API 与错误处理 (Stream API and Error Handling)
+- - '##'
+  - 现实场景中的流 API (Stream API in Real-World Scenarios)
+- - '##'
+  - 流 API 与外部迭代 (Stream API and External Iteration)
+- - '##'
+  - 流 API 与不可变性 (Stream API and Immutability)
+- - '##'
+  - 流 API 与方法引用 (Stream API and Method References)
+- - '##'
+  - 流 API 与 Optional (Stream API and Optional)
+- - '#'
+  - 19. JavaFX (图形界面)
+- - '##'
+  - JavaFX 简介
+- - '##'
+  - 创建 JavaFX 应用
+- - '##'
+  - JavaFX 控件
+- - '##'
+  - 布局管理
+- - '##'
+  - JavaFX 中的事件处理
+- - '##'
+  - JavaFX 样式与 CSS
+- - '##'
+  - JavaFX 场景与阶段
+- - '##'
+  - JavaFX 属性
+- - '##'
+  - JavaFX 绑定
+- - '##'
+  - JavaFX 对话框
+- - '##'
+  - JavaFX 警报
+- - '##'
+  - JavaFX 图表
+- - '##'
+  - JavaFX 列表视图
+- - '##'
+  - JavaFX 动画
+- - '##'
+  - JavaFX 工具栏
+- - '##'
+  - JavaFX 拖放 (Drag-and-Drop)
+- - '##'
+  - JavaFX 场景图 (Scene Graph)
+- - '##'
+  - JavaFX Canvas (Custom Graphics)
+- - '##'
+  - JavaFX 与 WebEngine
+- - '##'
+  - JavaFX 国际化 (Internationalization)
+- - '##'
+  - JavaFX 与本地化 (Localization)
+- - '##'
+  - JavaFX 与并行性 (Parallelism)
+- - '##'
+  - JavaFX 与无限流 (Infinite Streams)
+- - '##'
+  - JavaFX 与外部库 (External Libraries)
+- - '##'
+  - JavaFX 与数据转换 (Data Transformation)
+- - '##'
+  - JavaFX 与其他类型 (Other Data Types)
+- - '##'
+  - JavaFX 与无状态 (Statelessness)
+- - '##'
+  - JavaFX 与流源 (Stream Sources)
+- - '##'
+  - JavaFX 与自定义收集 (Custom Collectors)
+- - '##'
+  - JavaFX 与内存效率 (Memory Efficiency)
+- - '##'
+  - JavaFX 与性能优化 (Performance Optimization)
+- - '##'
+  - JavaFX 与重用 (Usability)
+- - '##'
+  - JavaFX 与错误处理 (Error Handling)
+- - '##'
+  - JavaFX 与数据验证 (Data Validation)
+- - '##'
+  - JavaFX 与比较器 (Comparators)
+- - '##'
+  - JavaFX 与自定义模式 (Custom Patterns)
+- - '##'
+  - JavaFX 与自定义操作 (Custom Operations)
+- - '##'
+  - JavaFX 与自定义过滤器 (Custom Filters)
+- - '##'
+  - JavaFX 与自定义动画 (Custom Animations)
+- - '##'
+  - JavaFX 与自定义控件 (Custom Controls)
+- - '##'
+  - JavaFX 与自定义主题 (Custom Themes)
+- - '##'
+  - JavaFX 与自定义标 (Custom Cursor)
+- - '##'
+  - JavaFX 与并发编程 (Concurrent Programming)
+- - '##'
+  - JavaFX 与媒体播放 (Media Playback)
+- - '##'
+  - JavaFX 与自定义渲染器 (Custom Renderers)
+- - '##'
+  - JavaFX 与 MVC 架构 (MVC Architecture)
+- - '##'
+  - JavaFX 与撤销/重做功能 (Undo/Redo Functionality)
+- - '##'
+  - JavaFX 与打印支持 (Printing Support)
+- - '##'
+  - JavaFX 与应用生命周期 (Application Lifecycle)
+- - '##'
+  - JavaFX 与数据可视化库
+- - '##'
+  - JavaFX 与虚拟化 (Virtualization)
+- - '##'
+  - JavaFX 与序列化 (Serialization)
+- - '##'
+  - JavaFX 与上下文帮助
+- - '##'
+  - JavaFX 与离线应用 (Offline Applications)
+- - '##'
+  - JavaFX 与实时数据可视化 (Real-Time Data Visualization)
+- - '##'
+  - JavaFX 与打印与报告 (Printing and Reporting)
+- - '##'
+  - JavaFX 与无障碍支持与辅助技术 (Accessibility and Assistive Technologies)
+- - '##'
+  - JavaFX 与移动与嵌入式应用 (Mobile and Embedded Applications)
+- - '##'
+  - JavaFX 与 3D 图形 (3D Graphics)
+- - '##'
+  - JavaFX 与数据绑定 (Data Binding)
+- - '##'
+  - JavaFX 与自定义动画 (Custom Animations)
+- - '##'
+  - JavaFX 与 FXML
+- - '##'
+  - JavaFX 与 SceneBuilder
+- - '##'
+  - JavaFX 与国际化 (Internationalization)
+- - '##'
+  - JavaFX 与本地化 (Localization)
+- - '##'
+  - JavaFX 与并行性 (Parallelism)
+- - '##'
+  - JavaFX 与无限流 (Infinite Streams)
+- - '##'
+  - JavaFX 与外部库 (External Libraries)
+- - '##'
+  - JavaFX 与数据转换 (Data Transformation)
+- - '##'
+  - JavaFX 与其他类型 (Other Data Types)
+- - '##'
+  - JavaFX 与无状态 (Statelessness)
+- - '##'
+  - JavaFX 与流源 (Stream Sources)
+- - '##'
+  - JavaFX 与自定义收集 (Custom Collectors)
+- - '##'
+  - JavaFX 与内存效率 (Memory Efficiency)
+- - '##'
+  - JavaFX 与性能优化 (Performance Optimization)
+- - '##'
+  - JavaFX 与重用 (Usability)
+- - '##'
+  - JavaFX 与错误处理 (Error Handling)
+- - '##'
+  - JavaFX 与数据验证 (Data Validation)
+- - '##'
+  - JavaFX 与比较器 (Comparators)
+- - '##'
+  - JavaFX 与自定义模式 (Custom Patterns)
+- - '##'
+  - JavaFX 与自定义操作 (Custom Operations)
+- - '##'
+  - JavaFX 与自定义过滤器 (Custom Filters)
+- - '##'
+  - JavaFX 与自定义动画 (Custom Animations)
+- - '##'
+  - JavaFX 与自定义控件 (Custom Controls)
+- - '##'
+  - JavaFX 与自定义主题 (Custom Themes)
+- - '##'
+  - JavaFX 与自定义标 (Custom Cursor)
+- - '##'
+  - JavaFX 与并发编程 (Concurrent Programming)
+- - '##'
+  - JavaFX 与媒体播放 (Media Playback)
+- - '##'
+  - JavaFX 与自定义渲染器 (Custom Renderers)
+- - '##'
+  - JavaFX 与 MVC 架构 (MVC Architecture)
+- - '##'
+  - JavaFX 与撤销/重做功能 (Undo/Redo Functionality)
+- - '##'
+  - JavaFX 与打印支持 (Printing Support)
+- - '##'
+  - JavaFX 与应用生命周期 (Application Lifecycle)
+- - '##'
+  - JavaFX 与数据可视化库
+- - '##'
+  - JavaFX 与虚拟化 (Virtualization)
+- - '##'
+  - JavaFX 与序列化 (Serialization)
+- - '##'
+  - JavaFX 与上下文帮助
+- - '##'
+  - JavaFX 与离线应用 (Offline Applications)
+- - '#'
+  - 单元测试
+- - '##'
+  - 单元简介
+- - '##'
+  - 设置测试环境
+- - '##'
+  - 测试方法剖析
+- - '##'
+  - 断言与验证
+- - '##'
+  - 测试固件与设置/拆理
+- - '##'
+  - 参数化测试
+- - '##'
+  - 测试套件与测试组
+- - '##'
+  - 忽略与禁用测试
+- - '##'
+  - 异常测试
+- - '##'
+  - 模拟与存桩（Mocking and Stubbing）
+- - '##'
+  - 测试驱动开发 (TDD)
+- - '##'
+  - 代码覆盖率分析
+- - '##'
+  - 测试数据管理
+- - '##'
+  - 集成 vs 单元测试
+- - '##'
+  - 测试私有方法
+- - '##'
+  - 测试框架对比
+- - '##'
+  - 测试驱动的重构
+- - '##'
+  - 测试命名与文档化
+- - '##'
+  - 持续集成与测试
+- - '##'
+  - 测试替体与间谍者（Test Doubles and Spies）
+- - '##'
+  - 测试驱动的完善
+- - '##'
+  - 测试框架的扩展性
+- - '##'
+  - 测试报告与可视化
+- - '##'
+  - 模拟 final 和静态方法
+- - '##'
+  - 测试注解与配置
+- - '##'
+  - 并发测试
+- - '##'
+  - 测试遗留代码
+- - '##'
+  - 测试驱动 Bug 修复
+- - '##'
+  - 使用依赖注入进行测试
+- - '##'
+  - 模拟数据库交互
+- - '##'
+  - 代码异味与测试改进
+- - '##'
+  - 测试框架注解与生命周期
+- - '##'
+  - 测试不可达代码
+- - '##'
+  - 测试枚举和常量
+- - '##'
+  - 测试 UI 和 GUI 组件
+- - '##'
+  - 测试 Java Streams 和 Lambdas
+- - '##'
+  - 测试安全与边界情况
+- - '##'
+  - 结语

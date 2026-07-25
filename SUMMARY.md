@@ -598,5 +598,6 @@
 +   [SQL：初学者易 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
 +   [初学者 Java 测验大师练习答案：教师指南](docs/the-answers-of-the-assignments-of-java-quizmaster-for-beginn/README.md)
 +   [美容师与亿万富翁 · 第一集 · 交易](docs/the-beautician-and-the-billionaire-episode-1-the-deal/README.md)
++   [Java 典：Chat-GPT 连接：揭秘 Java：基于 CHAT-GPT 提示词的基础概念之旅](docs/the-java-codex-the-chat-gpt-connection-unveiling-java-a-jour/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
