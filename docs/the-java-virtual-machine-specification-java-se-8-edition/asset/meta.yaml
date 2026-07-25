@@ -1,0 +1,594 @@
+name: The Java Virtual Machine Specification, Java SE 8 Edition
+name_cn: Java SE 8 版 Java 虚拟机规范
+slug: the-java-virtual-machine-specification-java-se-8-edition
+toc:
+- - '#'
+  - Java SE 8 版 Java 虚拟机规范
+- - '#'
+  - 关于本 eBook
+- - '#'
+  - 3 为 Java 虚拟机编译
+- - '##'
+  - 3.1 示例的格式
+- - '##'
+  - 3.2 常量、局部变量和控制结构的使用
+- - '##'
+  - 3.3 算术运算
+- - '##'
+  - 3.4 访问运行时常量池
+- - '##'
+  - 3.5 更多控制示例
+- - '##'
+  - 3.6 接收参数
+- - '##'
+  - 3.7 调用方法
+- - '##'
+  - 3.8 get 类实例的操作
+- - '##'
+  - 3.9 数组
+- - '##'
+  - 3.10 编译 switch
+- - '##'
+  - 3.11 操作数栈上的操作
+- - '##'
+  - 3.12 抛出和处理异常
+- - '##'
+  - 3.13 编译 `finally`
+- - '##'
+  - 3.14 同步
+- - '##'
+  - 3.15 注解
+- - '#'
+  - 4 `class` 文件格式
+- - '##'
+  - 4.1 `ClassFile` 结构
+- - '##'
+  - 4.2 内部形式
+- - '###'
+  - 4.2.1 二进制类名和接口名
+- - '###'
+  - 4.2.2 非限定名
+- - '##'
+  - 4.3 描述符
+- - '###'
+  - 4.3.1 语法表示法
+- - '###'
+  - 4.3.2 字段描述符
+- - '###'
+  - 4.3.3 方法描述符
+- - '##'
+  - 4.4 常量池
+- - '###'
+  - 4.4.1 `CONSTANT_Class_info` 结构
+- - '###'
+  - 4.4.2 `CONSTANT_Fieldref_info`、`CONSTANT_Methodref_info` 和 `CONSTANT_InterfaceMethodref_info`
+    结构
+- - '###'
+  - 4.4.3 `CONSTANT_String_info` 结构
+- - '###'
+  - 4.4.4 `CONSTANT_Integer_info` 和 `CONSTANT_Float_info` 结构
+- - '###'
+  - 4.4.5 `CONSTANT_Long_info` 和 `CONSTANT_Double_info` 结构
+- - '###'
+  - 4.4.6 `CONSTANT_NameAndType_info` 结构
+- - '###'
+  - 4.4.7 `CONSTANT_Utf8_info` 结构
+- - '###'
+  - 4.4.8 `CONSTANT_MethodHandle_info` 结构
+- - '###'
+  - 4.4.9 `CONSTANT_MethodType_info` 结构
+- - '###'
+  - 4.4.10 `CONSTANT_InvokeDynamic_info` 结构
+- - '##'
+  - 4.5 字段
+- - '##'
+  - 4.6 方法
+- - '##'
+  - 4.7 属性
+- - '###'
+  - 4.7.1 定义和命名属性
+- - '###'
+  - 4.7.2 `ConstantValue` 属性
+- - '###'
+  - 4.7.3 `Code` 属性
+- - '###'
+  - 4.7.4 `StackMapTable` 属性
+- - '###'
+  - 4.7.5 `Exceptions` 属性
+- - '###'
+  - 4.7.6 `InnerClasses` 属性
+- - '###'
+  - 4.7.7 `EnclosingMethod` 属性
+- - '###'
+  - 4.7.8 `Synthetic` 属性
+- - '###'
+  - 4.7.9 `Signature` 属性
+- - '###'
+  - 4.7.10 `SourceFile` 属性
+- - '###'
+  - 4.7.11 `SourceDebug` 属性
+- - '###'
+  - 4.7.12 `LineNumberTable` 属性
+- - '###'
+  - 4.7.13 `LocalVariableTable` 属性
+- - '###'
+  - 4.7.14 `LocalVariableTable` 属性
+- - '###'
+  - 4.7.15 `Deprecated` 属性
+- - '###'
+  - 4.7.16 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.17 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.18 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.19 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.20 `RuntimeType` 属性
+- - '###'
+  - 4.7.21 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.22 `AnnotationDefault` 属性
+- - '###'
+  - 4.7.23 `BootstrapMethods` 属性
+- - '###'
+  - 4.7.24 `Parameters` 属性
+- - '##'
+  - 4.8 格式
+- - '##'
+  - 4.9 约束
+- - '###'
+  - 4.9.1 静态
+- - '###'
+  - 4.9.2 结构性
+- - '##'
+  - 4.10 验证
+- - '###'
+  - 4.10.1 类型验证
+- - '###'
+  - 4.10.2 指令验证
+- - '###'
+  - 4.10.3 帧验证
+- - '###'
+  - 4.10.4 代码验证
+- - '###'
+  - 4.10.5 约束验证
+- - '###'
+  - 4.10.6 类型约束验证
+- - '###'
+  - 4.10.7 方法验证
+- - '###'
+  - 4.10.8 类型检查验证
+- - '###'
+  - 4.10.9 类型约束验证
+- - '###'
+  - 4.10.10 验证器验证
+- - '###'
+  - 4.10.11 字节码验证
+- - '###'
+  - 4.10.12 抽象方法验证
+- - '###'
+  - 4.10.13 类型约束验证
+- - '###'
+  - 4.10.14 成员验证
+- - '#'
+  - 第 1 章 引言
+- - '##'
+  - 1.1 背景
+- - '##'
+  - 1.3 结构
+- - '##'
+  - 1.5 反馈
+- - '#'
+  - 第 2 章 虚拟机的结构
+- - '##'
+  - 2.1 类格式
+- - '##'
+  - 2.2 数据类型
+- - '##'
+  - 2.3 原始类型
+- - '##'
+  - 2.4 引用类型
+- - '##'
+  - 2.5 运行时区域
+- - '##'
+  - 2.6 原生方法 (Native Stacks)
+- - '##'
+  - 2.7 帧 (Frames)
+- - '##'
+  - 2.8 局部变量 (Local Variables)
+- - '##'
+  - 2.9 操作栈 (Operand Stacks)
+- - '##'
+  - 2.10 动态链接
+- - '##'
+  - 2.11 指令集
+- - '##'
+  - 2.12 加载和存储
+- - '##'
+  - 2.13 公共、私有实现
+- - '##'
+  - 2.14 同步
+- - '##'
+  - 2.15 注解
+- - '##'
+  - 4 `class` 文件格式
+- - '##'
+  - 4.1 `ClassFile` 结构
+- - '##'
+  - 4.2 内部形式
+- - '##'
+  - 4.3 描述符
+- - '##'
+  - 4.4 常量池 (Constant Pool)
+- - '###'
+  - 4.4.1 `CONSTANT_Class_info` 结构
+- - '###'
+  - 4.4.2 `CONSTANT_Fieldref_info`、`CONSTANT_Methodref_info` 和 `CONSTANT_InterfaceMethodref_info`
+    结构
+- - '###'
+  - 4.4.3 `CONSTANT_String_info` 结构
+- - '###'
+  - 4.4.4 `CONSTANT_Integer_info` 和 `CONSTANT_Float_info` 结构
+- - '###'
+  - 4.4.5 `CONSTANT_Long_info` 和 `CONSTANT_Double_info` 结构
+- - '###'
+  - 4.4.6 `CONSTANT_NameAndType_info` 结构
+- - '###'
+  - 4.4.7 `CONSTANT_Utf8_info` 结构
+- - '###'
+  - 4.4.9 `CONSTANT_MethodType_info` 结构
+- - '###'
+  - 4.4.10 `CONSTANT_InvokeDynamic_info` 结构
+- - '##'
+  - 4.5 字段 (Fields)
+- - '##'
+  - 4.7 属性
+- - '###'
+  - 4.7.1 定义和命名新属性
+- - '###'
+  - 4.7.2 `ConstantValue` 属性
+- - '###'
+  - 4.7.3 `Code` 属性
+- - '###'
+  - 4.7.4 `StackMapTable` 属性
+- - '###'
+  - 4.7.5 `Exceptions` 属性
+- - '###'
+  - 4.7.6 `InnerClasses` 属性
+- - '###'
+  - 4.7.7 `EnclosingMethod` 属性
+- - '###'
+  - 4.7.8 `Synthetic` 属性
+- - '###'
+  - 4.7.9.1 签名 (Signatures)
+- - '###'
+  - 4.7.10 `SourceFile` 属性
+- - '###'
+  - 4.7.11 `SourceDebug` 属性
+- - '###'
+  - 4.7.12 `LineNumberTable` 属性
+- - '###'
+  - 4.7.13 `LocalVariableTable` 属性
+- - '###'
+  - 4.7.14 `LocalVariableTable` 属性
+- - '###'
+  - 4.7.15 `Deprecated` 属性
+- - '###'
+  - 4.7.16 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.17 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.18 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.19 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.20 `RuntimeType` 属性
+- - '###'
+  - 4.7.21 `RuntimeAnnotations` 属性
+- - '###'
+  - 4.7.22 `AnnotationDefault` 属性
+- - '###'
+  - 4.7.23 `BootstrapMethods` 属性
+- - '###'
+  - 4.7.24 `Parameters` 属性
+- - '##'
+  - 4.8 格式
+- - '##'
+  - 4.9 约束
+- - '###'
+  - 4.9.1 静态
+- - '###'
+  - 4.9.2 结构性
+- - '##'
+  - 4.10 验证
+- - '###'
+  - 4.10.1 类型验证
+- - '###'
+  - 4.10.2 指令验证
+- - '###'
+  - 4.10.3 帧验证
+- - '###'
+  - 4.10.4 代码验证
+- - '###'
+  - 4.10.5 约束验证
+- - '###'
+  - 4.10.6 类型约束验证
+- - '###'
+  - 4.10.7 方法验证
+- - '###'
+  - 4.10.8 类型检查验证
+- - '###'
+  - 4.10.9 类型约束验证
+- - '###'
+  - 4.10.10 验证器验证
+- - '###'
+  - 4.10.11 字节码验证
+- - '###'
+  - 4.10.12 抽象方法验证
+- - '###'
+  - 4.10.13 类型约束验证
+- - '###'
+  - 4.10.14 成员验证
+- - '#'
+  - 第 7 章 按操作码划分助记符
+- - '##'
+  - 索引
+- - '###'
+  - A
+- - '#'
+  - 第 6 章 虚拟机指令集
+- - '##'
+  - 6.1 含义
+- - '##'
+  - 6.2 操作码
+- - '##'
+  - 6.3 错误
+- - '##'
+  - 6.4 指令格式
+- - '##'
+  - 6.5 指令
+- - '###'
+  - aaload
+- - '###'
+  - aastore
+- - '###'
+  - aload
+- - '###'
+  - anewarray
+- - '###'
+  - areturn
+- - '###'
+  - arraylength
+- - '###'
+  - astore
+- - '###'
+  - astore_n
+- - '###'
+  - athrow
+- - '###'
+  - baload
+- - '###'
+  - bastore
+- - '###'
+  - bipush
+- - '###'
+  - caload
+- - '###'
+  - castore
+- - '###'
+  - checkcast
+- - '###'
+  - d2f
+- - '###'
+  - d2i
+- - '###'
+  - d2l
+- - '###'
+  - dadd
+- - '###'
+  - daload
+- - '###'
+  - dastore
+- - '###'
+  - dcmp
+- - '###'
+  - dconst
+- - '###'
+  - ddiv
+- - '###'
+  - defineclass
+- - '###'
+  - dload
+- - '###'
+  - dload_n
+- - '###'
+  - dmul
+- - '###'
+  - dneg
+- - '###'
+  - drem
+- - '###'
+  - dreturn
+- - '###'
+  - dstore
+- - '###'
+  - dstore_n
+- - '###'
+  - dsub
+- - '###'
+  - dup
+- - '###'
+  - dup_x1
+- - '###'
+  - f2d
+- - '###'
+  - f2i
+- - '###'
+  - f2l
+- - '###'
+  - fadd
+- - '###'
+  - faload
+- - '###'
+  - fastore
+- - '###'
+  - fcmp
+- - '###'
+  - fcmpl
+- - '###'
+  - fconst
+- - '###'
+  - fdiv
+- - '###'
+  - fload
+- - '###'
+  - fload_n
+- - '###'
+  - fmul
+- - '###'
+  - fneg
+- - '###'
+  - frem
+- - '###'
+  - freturn
+- - '###'
+  - fstore
+- - '###'
+  - fstore_n
+- - '###'
+  - fsub
+- - '###'
+  - getfield
+- - '###'
+  - goto
+- - '###'
+  - goto_w
+- - '###'
+  - i2b
+- - '###'
+  - i2c
+- - '###'
+  - i2d
+- - '###'
+  - i2f
+- - '###'
+  - i2l
+- - '###'
+  - i2s
+- - '###'
+  - iadd
+- - '###'
+  - iaload
+- - '###'
+  - iand
+- - '###'
+  - iastore
+- - '###'
+  - if_acmp
+- - '###'
+  - if_icmp
+- - '###'
+  - if
+- - '###'
+  - ifnonnull
+- - '###'
+  - ifnull
+- - '###'
+  - iinc
+- - '###'
+  - iload
+- - '###'
+  - iload_n
+- - '###'
+  - imul
+- - '###'
+  - ineg
+- - '###'
+  - instanceof
+- - '###'
+  - invokedynamic
+- - '###'
+  - invokeinterface
+- - '###'
+  - invokespecial
+- - '###'
+  - invokestatic
+- - '###'
+  - invokevirtual
+- - '###'
+  - ior
+- - '###'
+  - irem
+- - '###'
+  - ireturn
+- - '###'
+  - ishl
+- - '###'
+  - ishr
+- - '###'
+  - iushr
+- - '###'
+  - istore
+- - '###'
+  - istore_n
+- - '###'
+  - isub
+- - '###'
+  - ixor
+- - '###'
+  - l2d
+- - '###'
+  - l2f
+- - '###'
+  - l2i
+- - '###'
+  - ladd
+- - '###'
+  - land
+- - '###'
+  - lastore
+- - '###'
+  - lcmp
+- - '###'
+  - ldc
+- - '###'
+  - ldc_w
+- - '###'
+  - ldc2_w
+- - '###'
+  - ldiv
+- - '###'
+  - load
+- - '###'
+  - load_n
+- - '###'
+  - lmul
+- - '###'
+  - lneg
+- - '###'
+  - lookupswitch
+- - '###'
+  - lor
+- - '###'
+  - rem
+- - '###'
+  - lreturn
+- - '###'
+  - lshl
+- - '###'
+  - lshr
+- - '###'
+  - store
+- - '###'
+  - store_n
+- - '###'
+  - sub
+- - '###'
+  - lushr
+- - '###'
+  - lxor
+- - '###'
+  - monitoren
+- - '###'
+  - monitxit
