@@ -581,6 +581,7 @@
 +   [Java 城乡融合：对区域发展与就业的影响](docs/rural-urban-integration-in-java-consequences-for-regional-de/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
 +   [Sams 21 天教你 Java（涵盖 Java 8）](docs/sams-teach-yourself-java-in-21-days-covering-java-8-sams-tea/README.md)
++   [21天自学 Java (涵盖 Java 11／12), 第 8 版](docs/sams-teach-yourself-java-in-21-days-covers-java-1112-8th-edi/README.md)
 +   [Sams 24 小时学会 Java，第八版](docs/sams-teach-yourself-java-in-24-hours-eighth-edition/README.md)
 +   [Sams 24 小时教你 Minecraft Mod 开发](docs/sams-teach-yourself-mod-development-for-minecraft-in-24-hour/README.md)
 +   [Scala 急速指南（第三版，ePub 版）](docs/scala-for-the-impatient-third-edition-for-true-epub/README.md)
