@@ -1,0 +1,2284 @@
+<p><img src="cover_image.jpg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 1200 1600" preserveaspectratio="none">
+<image width="1200" height="1600" xlink:href="cover_image.jpg"></image>
+</svg>
+</div>
+<p><span id="index_split_000.html"></span></p>
+<p><span id="index_split_000.html_1"></span><img src="index-1_1.jpg"
+class="calibre2" /></p>
+<p>Web Services</p>
+<p>Author: Antonio J. Martín &amp; Ramón Egido</p>
+<p><span
+id="index_split_000.html_2"></span><strong>CONTENTS</strong></p>
+<p><a href="#index_split_000.html_5"><strong>1.</strong>
+<strong>INTRODUCTION
+...................................................................................................
+5</strong></a></p>
+<p><a href="#index_split_000.html_5"><strong>2.</strong> <strong>SOA
+ARCHITECTURE
+.........................................................................................
+6</strong></a></p>
+<p><a href="#index_split_001.html_6">2.1.</a></p>
+<p><a href="#index_split_001.html_6">SERVICES
+...........................................................................................................
+6</a></p>
+<p><a href="#index_split_001.html_7">2.2.</a></p>
+<p><a href="#index_split_001.html_7">WEB SERVICE
+....................................................................................................
+7</a></p>
+<p><a href="#index_split_001.html_7">2.3.</a></p>
+<p><a href="#index_split_001.html_7">STRUCTURE OF A WEB SERVICE
+........................................................................
+7</a></p>
+<p><a href="#index_split_001.html_8"><strong>3.</strong> <strong>WEB
+SERVICES ARCHITECTURE STANDARDS
+.......................................... 9</strong></a></p>
+<p><a href="#index_split_001.html_9">3.1.</a></p>
+<p><a href="#index_split_001.html_9">SOAP
+.................................................................................................................
+9</a></p>
+<p><a href="#index_split_001.html_9"><em>3.1.1.</em> <em>SOAP messages
+...........................................................................................
+9</em></a></p>
+<p><a href="#index_split_001.html_11"><em>3.1.2.</em> <em>Types of SOAP
+messages
+...........................................................................
+11</em></a></p>
+<p><a href="#index_split_001.html_11">3.1.2.1. RPC Messages.
+...................................................................................
+11</a></p>
+<p><a href="#index_split_001.html_12">3.1.2.2. Document Oriented
+Messages ............................................................
+12</a></p>
+<p><a href="#index_split_001.html_12"><em>3.1.3.</em> <em>Error messages
+..........................................................................................
+12</em></a></p>
+<p><a href="#index_split_001.html_12">3.2.</a></p>
+<p><a href="#index_split_001.html_12">WSDL
+.............................................................................................................
+12</a></p>
+<p><a href="#index_split_001.html_15"><em>3.2.1.</em> <em>Structure of a
+WSDL document
+.................................................................
+15</em></a></p>
+<p><a href="#index_split_001.html_15">3.2.1.1.
+types....................................................................................................
+15</a></p>
+<p><a href="#index_split_001.html_16">3.2.1.2. message
+..............................................................................................
+16</a></p>
+<p><a href="#index_split_001.html_16">3.2.1.3. portType
+.............................................................................................
+16</a></p>
+<p><a href="#index_split_001.html_16">3.2.1.4. binding
+................................................................................................
+16</a></p>
+<p><a href="#index_split_001.html_17">3.2.1.5. service
+.................................................................................................
+17</a></p>
+<p><a href="#index_split_001.html_17">3.3.</a></p>
+<p><a href="#index_split_001.html_17">UDDI
+...............................................................................................................
+17</a></p>
+<p><a href="#index_split_001.html_18"><em>3.3.1.</em> <em>UDDI schema
+............................................................................................
+18</em></a></p>
+<p><a href="#index_split_001.html_19"><em>3.3.2.</em> <em>UDDI API
+..................................................................................................
+19</em></a></p>
+<p><a href="#index_split_001.html_21"><strong>4.</strong>
+<strong>IMPLEMENTATING APPLICATIONS BASED ON WEB SERVICES
+WITH</strong></a></p>
+<p><a href="#index_split_001.html_21"><strong>JAVA / JAVA EE
+......................................................................................................................
+22</strong></a></p>
+<p><a href="#index_split_001.html_22">4.1.</a></p>
+<p><a href="#index_split_001.html_22">CREATION AND DEPLOYMENT OF A WEB
+SERVICE USING NETBEANS ........... 22</a></p>
+<p><a href="#index_split_001.html_22"><em>4.1.1.</em> <em>Creating a Web
+service from scratch
+........................................................ 22</em></a></p>
+<p><a href="#index_split_001.html_27">EXERCISE 1
+..................................................................................................
+27</a></p>
+<p><a href="#index_split_001.html_29">4.1.1.1. Complex return types
+.........................................................................
+29</a></p>
+<p><a href="#index_split_001.html_31"><em>4.1.2.</em> <em>Creating a Web
+service from an EJB
+........................................................ 31</em></a></p>
+<p><span id="index_split_000.html_3"></span> <a
+href="#index_split_001.html_33"><em>4.1.3.</em> <em>Creating a Web
+service from a WSDL document ......................................
+33</em></a></p>
+<p><a href="#index_split_001.html_34">4.2.</a></p>
+<p><a href="#index_split_001.html_34">DEVELOPING A CLIENT APPLICATION OF
+A WEB SERVICE .......................... 34</a></p>
+<p><a href="#index_split_001.html_34"><em>4.2.1.</em> <em>Proxy objects
+.............................................................................................
+34</em></a></p>
+<p><a href="#index_split_001.html_35"><em>4.2.2.</em> <em>Creating a
+client application with NetBeans
+............................................. 35</em></a></p>
+<p><a href="#index_split_001.html_38">EXERCISE 2
+..................................................................................................
+39</a></p>
+<p><a href="#index_split_001.html_40">EXERCISE 3
+..................................................................................................
+41</a></p>
+<p><a href="#index_split_001.html_43">4.3.</a></p>
+<p><a href="#index_split_001.html_43">INVOKING A WEB SERVICE’S METHODS
+ASYNCHRONOUSLY ......................... 43</a></p>
+<p><a href="#index_split_001.html_43"><em>4.3.1.</em> <em>Proxy object
+configuration
+........................................................................
+43</em></a></p>
+<p><a href="#index_split_001.html_45"><em>4.3.2.</em> <em>Calling
+methods aysynchronously
+.............................................................
+45</em></a></p>
+<p><a href="#index_split_001.html_46"><strong>5.</strong> <strong>USING
+THE GOOGLE SEARCH WEB SERVICE .........................................
+47</strong></a></p>
+<p><a href="#index_split_001.html_47">5.1.</a></p>
+<p><a href="#index_split_001.html_47">USING THE AJAX API
+.....................................................................................
+47</a></p>
+<p><a href="#index_split_001.html_47"><em>5.1.1.</em> <em>Using Google’s
+search control
+..................................................................
+47</em></a></p>
+<p><a href="#index_split_001.html_50"><em>5.1.2.</em> <em>Personalized
+Search Control
+.....................................................................
+50</em></a></p>
+<p><span id="index_split_000.html_4"></span> <span
+id="index_split_000.html_5"></span><strong>1.</strong></p>
+<p><span id="index_split_001.html"></span></p>
+<h2 class="calibre5"
+id="index_split_001.html_calibre_pb_0">INTRODUCTION</h2>
+<p>When we think of a Web application, the first thing that springs to
+mind is a program that</p>
+<p>executes in an application server in response to a request sent from
+a browser, and whose</p>
+<p>ultimate aim is to create an HTML or XHTML page with information
+obtained from a data</p>
+<p>source, that is then delivered back to the client’s browser in the
+HTTP response.</p>
+<p>Despite being an accurate interpretation of what a Web application
+is, it’s also a</p>
+<p>somewhat limited model in that it restricts the only purpose of the
+response generated by the</p>
+<p>application to that of displaying information on screen.</p>
+<p>Web services represent a new kind of Web application, whose purpose
+isn’t to deliver</p>
+<p>HTML/XHTML pages to a screen, but to offer a service to other
+applications connected to the</p>
+<p>same network, providing these with a series of functions that carry
+out common tasks. This</p>
+<p>means that the response data generated by the Web service doesn’t
+adhere to any specific</p>
+<p>format or presentation language, but instead to an all-purpose
+“neutral” language.</p>
+<p>This new concept of service-oriented applications that can be
+consumed by other</p>
+<p>programs (or even other services), expands the capabilities of
+Web-based development to allow</p>
+<p>such wide-ranging possibilities from distributed task automation to
+business applications</p>
+<p>integration.</p>
+<p>In this unit we will analyze in detail the working principles and
+purpose of a Web service,</p>
+<p>as well as the different technologies and standards in which its
+architecture is based. From a</p>
+<p>practical point of view, we will study how to implement applications
+based on Web services</p>
+<p>using Java / Java EE.</p>
+<p><strong></strong></p>
+<p><span id="index_split_001.html_6"></span><img src="index-6_1.jpg"
+class="calibre2" /></p>
+<p><strong>2.</strong></p>
+<p><strong>SOA ARCHITECTURE</strong></p>
+<p>Service-oriented architecture (SOA) is a set of design principles for
+building applications</p>
+<p>by integrating existing software modules (services).</p>
+<p>The result is a distributed application that integrates diverse
+programs, each one with a</p>
+<p>different implementation responsible for adding a different feature
+to the application.</p>
+<p>For example, imagine you want to develop a banking application that
+handles credit</p>
+<p>approvals using SOA architecture. We could have a module or service
+responsible for receiving</p>
+<p>the user’s application, another which does a credit check based on
+their personal details,</p>
+<p>another which adds their application to an internal database,
+etc.</p>
+<p><strong>Figure. 1.</strong></p>
+<p>Essentially, building the application simply entails organizing how
+to process calls to the</p>
+<p>services.</p>
+<p><strong>2.1.</strong></p>
+<p><strong>SERVICES</strong></p>
+<p>A service can be defined as an application function, packaged as a
+reusable</p>
+<p>autonomous component, that can then be used when building other
+applications.</p>
+<p>In order for a service to be used in building SOA applications, it
+must comply with the</p>
+<p>following requirements:</p>
+<p> Well-defined interfaces: SOA services expose their functionality
+through</p>
+<p>interfaces that describe the operations provided by the service as
+well as the</p>
+<p>information that they should receive and return, hiding the
+service</p>
+<p>implementation details.</p>
+<p> Technology independence: SOA services must be able to be consumed
+by any</p>
+<p>client application, independently of the languages and technologies
+with which</p>
+<p>each are implemented and of the platform on which they are
+running.</p>
+<p><span id="index_split_001.html_7"></span><img src="index-7_1.jpg"
+class="calibre2" /></p>
+<p><img src="index-7_2.jpg" class="calibre2" /></p>
+<p> Communication by messages: Clients communicate with the service
+by</p>
+<p>interchanging messages containing information whose format should
+be</p>
+<p>described in the service’s interface.</p>
+<p><strong>2.2.</strong></p>
+<p><strong>WEB SERVICE</strong></p>
+<p>A Web service is a special type of SOA service deployed on an
+application server that</p>
+<p>client applications connect to through the Web using XML and HTTP
+standards.</p>
+<p>More specifically, a Web service can be defined as a software module
+that exposes its</p>
+<p>functionality on the Web in the form of methods that client
+applications can call by sending XML</p>
+<p>documents in an HTTP request (figure 2).</p>
+<p><strong>Figure. 2.</strong></p>
+<p>The data generated by the Web service, resulting from the execution
+of its methods, is</p>
+<p>then delivered to the client in the HTTP response, also in XML
+format.</p>
+<p>The capability of Web services to communicate with client
+applications using XML</p>
+<p>allows them to be completely independent of each other. This means
+that a Web service could</p>
+<p>be implemented, for example, in Java, whilst the application could be
+in C or VB. In this case</p>
+<p>the XML document, generated by the Java service, could be interpreted
+correctly by the C/VB</p>
+<p>application and vice versa.</p>
+<p><strong>2.3.</strong></p>
+<p><strong>STRUCTURE OF A WEB SERVICE</strong></p>
+<p>From a technical point of view, a Web service is just a Web
+application deployed on an</p>
+<p>Application Server.</p>
+<p><strong>Figure. 3.</strong></p>
+<p><span id="index_split_001.html_8"></span>That application consists of
+two well-defined layers, as shown in figure 3:</p>
+<p> <strong>Application Logic:</strong> Contains the implementation, in
+whatever language you</p>
+<p>choose, of the methods exposed by the Web service. In the case of
+a</p>
+<p>Java/Java EE application this layer would be implemented by EJBs or
+standard</p>
+<p>classes.</p>
+<p> <strong>XML Adaptor:</strong> Responsible for interpreting XML
+documents, received in the</p>
+<p>HTTP request, using the service’s method call information. Once
+the</p>
+<p>documents have been deciphered and from these the method name and</p>
+<p>arguments have been extracted for the service we want to invoke, from
+this</p>
+<p>component the appropriate calls are made to the Application Layer
+objects.</p>
+<p>Therefore, from the data returned by these objects the XML adaptor
+constructs</p>
+<p>the XML response document that will be sent to the client in the body
+of the</p>
+<p>HTTP message.</p>
+<p> This layer would be implemented by Servlets and JSPs in a Java/Java
+EE</p>
+<p>application. Although, to help build them, Java EE includes an API
+for XML</p>
+<p>known as JAX-RPC, with which it is possible to create simple
+mappings</p>
+<p>between Java objects and XML documents and vice versa, facilitating
+their</p>
+<p>manipulation.</p>
+<p><strong></strong></p>
+<p><span id="index_split_001.html_9"></span><img src="index-9_1.jpg"
+class="calibre2" /></p>
+<p><strong>3.</strong></p>
+<p><strong>WEB SERVICES ARCHITECTURE STANDARDS</strong></p>
+<p>Apart from XML and HTTP that form the basic standards from which all
+Web services</p>
+<p>architecture is derived, it was necessary for the international
+community, governed by the W3C</p>
+<p>organization, to define additional standards that address the issues
+that arise when</p>
+<p>implementing applications based on this schema. For example, how to
+structure the XML</p>
+<p>documents that are used when interacting with a Web service, or how a
+service should define</p>
+<p>its interface.</p>
+<p>These standards are:</p>
+<p> SOAP</p>
+<p> WSDL</p>
+<p> UDDI</p>
+<p><strong>3.1.</strong></p>
+<p><strong>SOAP</strong></p>
+<p>SOAP, or the <strong>S</strong>imple <strong>O</strong>bject
+<strong>A</strong>ccess <strong>P</strong>rotocol, is a protocol
+specification for the transport</p>
+<p>of XML messages in computer networks.</p>
+<p>SOAP defines the <strong>format that XML documents should
+have</strong> in order to Exchange</p>
+<p>information between Web services and client applications, i.e. it
+establishes the structure of</p>
+<p>both the XML document used to call a service’s methods and the one
+generated by the service</p>
+<p>containing the response (figure 4).</p>
+<p><strong>Figure. 4.</strong></p>
+<p>Although SOAP is independent of the network transport protocols used,
+the current</p>
+<p>specification (SOAP 1.2) concentrates on the use of HTTP in a
+request/response scenario and</p>
+<p>JMS for the asynchronous invocation of the service’s methods.</p>
+<p><em><strong>3.1.1. SOAP messages</strong></em></p>
+<p>The request and response XML documents defined by the SOAP standard
+are also</p>
+<p>known as SOAP messages.</p>
+<p>A SOAP message consists of two parts:</p>
+<p><span id="index_split_001.html_10"></span> <strong>Header:</strong>
+Includes optional control information for intermediate applications.</p>
+<p> <strong>Body:</strong> Contains the message itself, i.e. the
+information to be transmitted from</p>
+<p>one application to another.</p>
+<p>The structure of an XML SOAP document is as follows:</p>
+<p><em><strong>&lt;Envelope&gt;</strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong>&lt;Header&gt;</strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong>&lt;!-- control information--&gt;</strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong>&lt;/Header&gt;</strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong>&lt;Body&gt;</strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong>&lt;!--message--&gt;</strong></em></p>
+<p><em><strong></strong></em></p>
+<p><em><strong>&lt;/body&gt;</strong></em></p>
+<p><em><strong>&lt;/Envelope&gt;</strong></em></p>
+<p>From this we can see that there are three main elements in the SOAP
+specification,</p>
+<p>defined in the namespace:</p>
+<p>http://schemas.xmlsoap.org/soap/envelope/</p>
+<p>These elements are:</p>
+<p> <strong>Envelope:</strong> Represents the root element of all SOAP
+documents.</p>
+<p> <strong>Header:</strong> An optional element, which includes header
+parameters.</p>
+<p> <strong>Body</strong>. The compulsory <em>body</em> element
+contains the contents of the message.</p>
+<p>This includes elements specific to the actual application that
+describe the</p>
+<p>information exchanged between the Web service and the client
+application.</p>
+<p>Apart from these application elements, the SOAP specification also
+allows for a</p>
+<p><em>fault</em> element within the <em>body</em> that is used for
+error management.</p>
+<p>The following XML is an example of a request SOAP document used to
+invoke a</p>
+<p>function called <em>login</em> provided by a Web service, to which
+user credentials (user and password)</p>
+<p>are passed as parameters.</p>
+<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p><strong>&lt;soapenv:Envelope</strong></p>
+<p>xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"</p>
+<p>xmlns:serv="http://www.myservice.com/"&gt;</p>
+<p><strong>&lt;soapenv:Header&gt;</strong></p>
+<p><strong></strong></p>
+<p><strong>&lt;/soapenv:Header&gt;</strong></p>
+<p><strong>&lt;soapenv:Body&gt;</strong></p>
+<p>&lt;serv:login&gt;</p>
+<p>&lt;serv:user&gt;teacher&lt;/q0:user&gt;</p>
+<p>&lt;serv:password&gt;admin&lt;/q0:password&gt;</p>
+<p>&lt;/serv:login&gt;</p>
+<p><span id="index_split_001.html_11"></span></p>
+<p><strong>&lt;/soapenv:Body&gt;</strong></p>
+<p><strong>&lt;/soapenv:Envelope&gt;</strong></p>
+<p>As you can see, the <em>login</em> element included within the
+<em>body</em> represents the method to be</p>
+<p>invoked, within which the values of the method’s parameters appear
+within their respective</p>
+<p>parameter element. All these elements are defined in a specific
+namespace belonging to the</p>
+<p>application.</p>
+<p>Once the method has been invoked, the following listing shows a
+possible SOAP</p>
+<p>response XML document generated by the validation Web service:</p>
+<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p>&lt;soapenv:Envelope</p>
+<p>xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"</p>
+<p>xmlns="http://www.myservice.com/"&gt;</p>
+<p>&lt;soapenv:Header&gt;</p>
+<p>&lt;/soapenv:Header&gt;</p>
+<p>&lt;soapenv:Body&gt;</p>
+<p>&lt;loginResponse&gt;</p>
+<p>&lt;result&gt;true&lt;/result&gt;</p>
+<p>&lt;/loginResponse&gt;</p>
+<p>&lt;/soapenv:Body&gt;</p>
+<p>&lt;/soapenv:Envelope&gt;</p>
+<p>In the above we can see how the <em>body</em> structure is made up of
+a root element, typically</p>
+<p>called <em>service_nameResponse</em>, which contains a child element
+holding the return value. Just</p>
+<p>like request documents, the elements included in the body of a
+response are also defined in the</p>
+<p>namespace of the application.</p>
+<p><em><strong>3.1.2. Types of SOAP messages</strong></em></p>
+<p>According to how the information is going to be processed by a Web
+service, there are</p>
+<p>two kinds of SOAP message style.</p>
+<p><em>3.1.2.1. RPC Messages.</em></p>
+<p>RPC messages are based on a type of interaction known as
+<strong>Remote Procedure Call</strong></p>
+<p><strong>(RPC)</strong>, where the Web service request XML document
+represents the call to a method or</p>
+<p>procedure with its corresponding input parameters, whilst the XML
+document generated as a</p>
+<p>response represents the return value of this method.
+<strong></strong></p>
+<p>This is the simplest and most common type of Web service, where the
+client and</p>
+<p>service communicate synchronously.</p>
+<p><span id="index_split_001.html_12"></span> <em>3.1.2.2. Document
+Oriented Messages</em></p>
+<p>The <strong>body</strong> of this type of document can contain one or
+more child elements structured</p>
+<p>according to whatever application they represent.</p>
+<p>These XML documents are processed entirely by the Web service, which
+can involve</p>
+<p>calls to the server’s different internal methods. The applications
+that process this type of</p>
+<p>document need to access a schema that defines their structure and
+syntax.</p>
+<p>An example of this type of document could be used in a Web service
+for processing</p>
+<p>purchase orders. In this case the client sends an XML document to the
+Web service with the</p>
+<p>product code to be bought, their bank details and the delivery
+address. Once the message is</p>
+<p>decoded, the Web service begins executing the various tasks, like
+checking the client’s bank</p>
+<p>details, informing the distributor etc. Finally, the Web service
+sends a response document with</p>
+<p>confirmation or rejection of the purchase order.</p>
+<p><em><strong>3.1.3. Error messages</strong></em></p>
+<p>An error may occur when processing a SOAP request, in which case the
+client</p>
+<p>application should be informed by sending a special message known as
+a SOAP error.</p>
+<p>This message contains a &lt;fault&gt; element that describes the
+characteristics of the error</p>
+<p>via a series of child elements, each of which are defined by the SOAP
+specification.</p>
+<p>The following are the child elements of &lt;fault&gt;:</p>
+<p> <strong>faultcode</strong>: The error source. Can have one of the
+following four values:</p>
+<p>o <strong>mustUnderstand</strong>: Indicates that a value flagged as
+mustUnderstand</p>
+<p>in the document’s header wasn’t able to be interpreted by the
+target</p>
+<p>node or some intermediate node.</p>
+<p>o <strong>versionmismatch</strong>: The SOAP version specified in the
+response</p>
+<p>message isn’t recognized by some of the nodes.</p>
+<p>o <strong>server</strong>: An error occurred in the server whilst
+processing the message.</p>
+<p>o <strong>client</strong>: An error occurred because of errors within
+the client request</p>
+<p>message.</p>
+<p> <strong>faultstring</strong>: Explanatory error message.</p>
+<p> <strong>faultfactor</strong>: Indicates the role that caused the
+error.</p>
+<p> <strong>detail</strong>: Error information specific to the
+application. Only present if the error</p>
+<p>occurred in the <em>body</em>, not in the <em>header</em>.</p>
+<p><strong>3.2.</strong></p>
+<p><strong>WSDL</strong></p>
+<p>WSDL (Web Service Description Language) is a language based on XML
+that is used to</p>
+<p>describe a Web service’s interface. Web service providers use this
+language to define, with an</p>
+<p>XML document with a .wsdl extension, the methods exposed by the
+service and the data they</p>
+<p>receive and return.</p>
+<p>A WSDL document contains the following information about a Web
+service:</p>
+<p> Methods provided by the service.</p>
+<p><span id="index_split_001.html_13"></span> The input and output
+parameters for each method.</p>
+<p> Protocol that should be used to connect to the service and its
+URL.</p>
+<p>The following listing shows a WSDL document for an example Web
+service called</p>
+<p>Operations, which exposes a method that, with <em>user</em> and
+<em>password</em>, carries out the process of</p>
+<p>verifying user credentials:</p>
+<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p>&lt;wsdl:definitions targetNamespace="http://services"</p>
+<p>xmlns:impl="http://services" xmlns:intf="http://services"</p>
+<p>xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"</p>
+<p>xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"</p>
+<p>xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd"</p>
+<p>xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+<p>&lt;wsdl:types&gt;</p>
+<p>&lt;schema targetNamespace="http://services"</p>
+<p>xmlns="http://www.w3.org/2001/XMLSchema"</p>
+<p>xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"</p>
+<p>xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+<p>&lt;element name="loginResponse"&gt;</p>
+<p>&lt;complexType&gt;</p>
+<p>&lt;sequence&gt;</p>
+<p>&lt;element name="loginReturn" type="xsd:boolean"/&gt;</p>
+<p>&lt;/sequence&gt;</p>
+<p>&lt;/complexType&gt;</p>
+<p>&lt;/element&gt;</p>
+<p>&lt;element name="login"&gt;</p>
+<p>&lt;complexType&gt;</p>
+<p>&lt;sequence&gt;</p>
+<p>&lt;element name="email" nillable="true" type="xsd:string"/&gt;</p>
+<p>&lt;element name="password" nillable="true"</p>
+<p>type="xsd:string"/&gt;</p>
+<p>&lt;/sequence&gt;</p>
+<p>&lt;/complexType&gt;</p>
+<p>&lt;/element&gt;</p>
+<p>&lt;/schema&gt;</p>
+<p>&lt;/wsdl:types&gt;</p>
+<p>&lt;wsdl:message name="loginRequest"&gt;</p>
+<p>&lt;wsdl:part element="intf:login" name="parameters"/&gt;</p>
+<p>&lt;/wsdl:message&gt;</p>
+<p>&lt;wsdl:message name="loginResponse"&gt;</p>
+<p><span id="index_split_001.html_14"></span> &lt;wsdl:part
+element="intf:loginResponse"</p>
+<p>name="parameters"/&gt;</p>
+<p>&lt;/wsdl:message&gt;</p>
+<p>&lt;wsdl:portType name="Operations"&gt;</p>
+<p>&lt;wsdl:operation name="login"&gt;</p>
+<p>&lt;wsdl:input message="intf:loginRequest"</p>
+<p>name="loginRequest"/&gt;</p>
+<p>&lt;wsdl:output message="intf:loginResponse"</p>
+<p>name="loginResponse"/&gt;</p>
+<p>&lt;/wsdl:operation&gt;</p>
+<p>&lt;/wsdl:portType&gt;</p>
+<p>&lt;wsdl:binding name="OperationsSoapBinding"</p>
+<p>type="intf:Operations"&gt;</p>
+<p>&lt;wsaw:UsingAddressing wsdl:required="false"</p>
+<p>xmlns:wsaw="http://www.w3.org/</p>
+<p>2006/05/addressing/wsdl"/&gt;</p>
+<p>&lt;wsdlsoap:binding style="document"</p>
+<p>transport="http://schemas.</p>
+<p>xmlsoap.org/soap/http"/&gt;</p>
+<p>&lt;wsdl:operation name="login"&gt;</p>
+<p>&lt;wsdlsoap:operation soapAction="login"/&gt;</p>
+<p>&lt;wsdl:input name="loginRequest"&gt;</p>
+<p>&lt;wsdlsoap:body use="literal"/&gt;</p>
+<p>&lt;/wsdl:input&gt;</p>
+<p>&lt;wsdl:output name="loginResponse"&gt;</p>
+<p>&lt;wsdlsoap:body use="literal"/&gt;</p>
+<p>&lt;/wsdl:output&gt;</p>
+<p>&lt;/wsdl:operation&gt;</p>
+<p>&lt;/wsdl:binding&gt;</p>
+<p>&lt;wsdl:service name="OperationsService"&gt;</p>
+<p>&lt;wsdl:port binding="intf:OperationsSoapBinding"</p>
+<p>name="Operations"&gt;</p>
+<p>&lt;wsdlsoap:address location=</p>
+<p>"http://localhost:9080/login_ws/</p>
+<p>services/Operations"/&gt;</p>
+<p>&lt;/wsdl:port&gt;</p>
+<p>&lt;/wsdl:service&gt;</p>
+<p>&lt;/wsdl:definitions&gt;</p>
+<p><span id="index_split_001.html_15"></span> <em><strong>3.2.1.
+Structure of a WSDL document</strong></em></p>
+<p>Every WSDL document is made up of a root element called
+<strong>definitions</strong>, within which</p>
+<p>the different namespaces to be used in the document are declared
+(figure 5).</p>
+<p>Root element</p>
+<p>&lt;wsdl:definitions targetNamespace=”http://services”</p>
+<p>xmlns:impl=”http://services” xmlns:intf=”http://services”</p>
+<p>xmlns:wsdl=”http://schemas.xmlsoap.org/wdsl/”</p>
+<p>xmlns:wsdlsoap=”http://schemas.xmlsoap.org/wsdl/soap/”</p>
+<p>xmlns:wsi=”http://ws-i.org/profiles/basic/1.1/xsd”</p>
+<p>xmlns:xsd=”http://www.w3.org/2001/XMLSchema”&gt;</p>
+<p>definition of the namespaces</p>
+<p><strong>Figure. 5.</strong></p>
+<p>To complete the definition of the service, the rest of the child
+elements included in</p>
+<p><em>definitions</em> are <em>types</em>, <em>message</em>,
+<em>portType</em>, <em>binding</em> and <em>service.</em></p>
+<p><em>3.2.1.1. types</em></p>
+<p>This element defines the types of data that will be used by the
+service, both method</p>
+<p>arguments and their return values. When defining a Web service’s data
+types, an XML Schema</p>
+<p>is used:</p>
+<p>&lt;wsdl:types&gt;</p>
+<p>&lt;schema targetNamespace="http://services"</p>
+<p>xmlns="http://www.w3.org/2001/XMLSchema"</p>
+<p>xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"</p>
+<p>xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;</p>
+<p>&lt;element name="loginResponse"&gt;</p>
+<p>&lt;complexType&gt;</p>
+<p>&lt;sequence&gt;</p>
+<p>&lt;element name="loginReturn" type="xsd:boolean"/&gt;</p>
+<p>&lt;/sequence&gt;</p>
+<p>&lt;/complexType&gt;</p>
+<p>&lt;/element&gt;</p>
+<p>&lt;element name="login"&gt;</p>
+<p>&lt;complexType&gt;</p>
+<p>&lt;sequence&gt;</p>
+<p>&lt;element name="email" nillable="true" type="xsd:string"/&gt;</p>
+<p>&lt;element name="password" nillable="true"</p>
+<p>type="xsd:string"/&gt;</p>
+<p>&lt;/sequence&gt;</p>
+<p>&lt;/complexType&gt;</p>
+<p><span id="index_split_001.html_16"></span> &lt;/element&gt;</p>
+<p>&lt;/schema&gt;</p>
+<p>&lt;/wsdl:types&gt;</p>
+<p><em>3.2.1.2. message</em></p>
+<p>Every <em><strong>message</strong></em> element defines the
+information messages that will be exchanged</p>
+<p>between the Web service and its clients, messages that are made up of
+the data defined in</p>
+<p><em>types</em>. In fact, every message consists of a child element
+<em>part</em> in which the data types that it contains are
+specified.</p>
+<p>&lt;wsdl:message name="loginRequest"&gt;</p>
+<p>&lt;wsdl:part element="intf:login" name="parameters"/&gt;</p>
+<p>&lt;/wsdl:message&gt;</p>
+<p>&lt;wsdl:message name="loginResponse"&gt;</p>
+<p>&lt;wsdl:part element="intf:loginResponse"</p>
+<p>name="parameters"/&gt;</p>
+<p>&lt;/wsdl:message&gt;</p>
+<p><em>3.2.1.3. portType</em></p>
+<p>The <em><strong>portType</strong></em> element describes the
+operations exposed by the Web service. In fact,</p>
+<p>each operation is defined by the <em>operation</em> element and is
+associated with an input and an</p>
+<p>output message:</p>
+<p>&lt;wsdl:portType name="Operations"&gt;</p>
+<p>&lt;wsdl:operation name="login"&gt;</p>
+<p>&lt;wsdl:input message="intf:loginRequest"</p>
+<p>name="loginRequest"/&gt;</p>
+<p>&lt;wsdl:output message="intf:loginResponse"</p>
+<p>name="loginResponse"/&gt;</p>
+<p>&lt;/wsdl:operation&gt;</p>
+<p>&lt;/wsdl:portType&gt;</p>
+<p><em>3.2.1.4. binding</em></p>
+<p>Once the operations that the Web service will perform have been
+defined, they should</p>
+<p>be bound to a specific protocol. This is achieved by the
+<em>binding</em> element, in which we can</p>
+<p>specify the type of transport (SOAP or JMS), the network access
+points for executing a specific</p>
+<p>operation and the style (document or RPC):</p>
+<p>&lt;wsdl:binding name="OperationsSoapBinding"</p>
+<p>type="intf:Operations"&gt;</p>
+<p>&lt;wsaw:UsingAddressing wsdl:required="false"</p>
+<p>xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/&gt;</p>
+<p>&lt;wsdlsoap:binding style="document"</p>
+<p>transport="http://schemas.xmlsoap.org/soap/http"/&gt;</p>
+<p><span id="index_split_001.html_17"></span> &lt;wsdl:operation
+name="login"&gt;</p>
+<p>&lt;wsdlsoap:operation soapAction="login"/&gt;</p>
+<p>&lt;wsdl:input name="loginRequest"&gt;</p>
+<p>&lt;wsdlsoap:body use="literal"/&gt;</p>
+<p>&lt;/wsdl:input&gt;</p>
+<p>&lt;wsdl:output name="loginResponse"&gt;</p>
+<p>&lt;wsdlsoap:body use="literal"/&gt;</p>
+<p>&lt;/wsdl:output&gt;</p>
+<p>&lt;/wsdl:operation&gt;</p>
+<p>&lt;/wsdl:binding&gt;</p>
+<p><em>3.2.1.5. service</em></p>
+<p>Final y, we need to specify the Web service’s address or entry point
+within the <em><strong>service</strong></em></p>
+<p>element.</p>
+<p>Within the <em>port</em> child element, the address of each
+<em>binding</em> element is specified. In the</p>
+<p>case of SOAP, the <em>location</em> attribute within the
+<em>address</em> element contains the actual address.</p>
+<p>&lt;wsdl:service name="OperationsService"&gt;</p>
+<p>&lt;wsdl:port binding="intf:OperationsSoapBinding"</p>
+<p>name="Operations"&gt;</p>
+<p>&lt;wsdlsoap:address location=</p>
+<p>"http://localhost:9080/login_ws/</p>
+<p>services/Operations"/&gt;</p>
+<p>&lt;/wsdl:port&gt;</p>
+<p>&lt;/wsdl:service&gt;</p>
+<p><strong>3.3.</strong></p>
+<p><strong>UDDI</strong></p>
+<p>The purpose of the UDDI (Universal Description Discovery and
+Integration project)</p>
+<p>specification is to define the standard for publishing and locating a
+Web service in a services</p>
+<p>registry compatible with UDDI.</p>
+<p>A UDDI registry is a kind of “<em>Golden/Yellow Pages</em>” style
+database, which stores</p>
+<p>information pertinent to published Web services. This means that two
+types of application can</p>
+<p>access this type of registry:</p>
+<p> <strong>Service providers</strong>: Publish the services. UDDI
+provides mechanisms so that</p>
+<p>providers can register their WSDL descriptions and other relevant
+information</p>
+<p>for their Web services.</p>
+<p> <strong>Service consumers</strong>: Use the registry to locate a
+service and to use it (service</p>
+<p>binding). UDDI supports service search mechanisms.</p>
+<p>For publishing, editing and searching, SOAP messages are used to
+access the UDDI</p>
+<p>registry.</p>
+<p><span id="index_split_001.html_18"></span> <em><strong>3.3.1. UDDI
+schema</strong></em></p>
+<p>Identifies the type of XML data structure that makes up a Web
+service’s registry entry.</p>
+<p>The UDDI XML schema defines four basic data types that describe the
+information</p>
+<p>stored in the UDDI registry. This data is represented by the
+following elements for all to see:</p>
+<p> <strong>businessEntity</strong>: Describes information about an
+entity that provides services.</p>
+<p>Among this information are the name of the entity, description, list
+of services</p>
+<p>provided, categories and a list of identifiers that can be used for
+searching</p>
+<p>(figure 6).</p>
+<p>&lt;businessEntity businessKey=”35AF7F00-1419-11D6-A0DC-</p>
+<p>000C0E00ACDD” authorizedName=”0100002CAL” operator=”www-</p>
+<p>3.ibm.com/services/uddi”&gt;</p>
+<p>&lt;name&gt;Shop&lt;/name&gt;</p>
+<p>&lt;description xml:lang=”en”&gt;</p>
+<p>All kind of product sales</p>
+<p>&lt;/description&gt;</p>
+<p>&lt;contacts&gt;</p>
+<p>&lt;contact&gt;</p>
+<p>&lt;personName&gt;Jhon Cook&lt;/personName&gt;</p>
+<p>&lt;phone&gt;918890234&lt;/phone&gt;</p>
+<p>&lt;/contact&gt;</p>
+<p>&lt;/contacts&gt;</p>
+<p>&lt;businessServices&gt;</p>
+<p>…</p>
+<p><strong>Figure. 6.</strong></p>
+<p> <strong>businessService</strong>: Indentifies a Web service
+provided by an entity. As an</p>
+<p>entity can provide more than one Web service, a
+<em>businessEntity</em> can contain</p>
+<p>several <em>businessService</em> elements, all of which are enclosed
+within</p>
+<p><em>businessServices</em>. Each <em>businessService</em> entry
+contains a description of the</p>
+<p>service and, optionally, a list of categories to which the service
+belongs. The</p>
+<p>main child element of <em>businessService</em> is
+<em>bindingTemplates</em>, which provides the</p>
+<p>technical information for binding to the service..</p>
+<p>&lt;businessServices&gt;</p>
+<p>&lt; <strong>businessService</strong>
+serviceKey=”2AB346C0-2282-43B0-756B-0003CC35CC1D”&gt;</p>
+<p>&lt;name&gt;Prices&lt;/name&gt;</p>
+<p>&lt;description xml:lang=”en”&gt;</p>
+<p>Calculate product prices</p>
+<p>&lt;/description&gt;</p>
+<p>&lt;categoryBag&gt;</p>
+<p>ntis-gov:naic</p>
+<p>&lt;/categoryBag&gt;</p>
+<p>&lt;bindingTemplates&gt;</p>
+<p>…</p>
+<p><strong>Figure. 7.</strong></p>
+<p> <strong>bindingTemplate</strong>: Each <em>bindingTemplates</em> is
+made up of one or several</p>
+<p><em>bindingTemplate</em> elements. The <em>bindingTemplate</em>
+element provides two types</p>
+<p>of information about the service:</p>
+<p>o Technical specifications, like protocols and interchange formats
+used</p>
+<p>to communicate with the service. This information is defined in
+the</p>
+<p><em>tModel</em> structures, which are referenced by the
+<em>tModelInstanceDetails</em></p>
+<p>child element of <em>bindingTemplate.</em></p>
+<p><span id="index_split_001.html_19"></span>o Access point, which
+represents the URL at which the Web service can</p>
+<p>be invoked. This is specified in the <em>accessPoint</em> child
+element.</p>
+<p>&lt;bindingTemplates&gt;</p>
+<p>&lt; <strong>bindingTemplate</strong>
+bindingKey=”4BC7C340-2398-12E6-887C-</p>
+<p>0005AC33CC2D”&gt;</p>
+<p>Access Point</p>
+<p>&lt;description&gt;</p>
+<p>to the Service</p>
+<p>JAXRPC (SOAP/HTTP) based binding</p>
+<p>&lt;/description&gt;</p>
+<p>&lt;accessPoint&gt;</p>
+<p>http://localhost:8080/first-jaxrpc/first</p>
+<p>&lt;/accessPoint&gt;</p>
+<p>&lt;tModelInstanceDetails&gt;</p>
+<p>&lt;tModelInstanceInfo tModelKey=”UUID:36E13526-4553-3265-B5F7-</p>
+<p>C4B522E75A05” /&gt;</p>
+<p>&lt;/tModelInstanceDetails&gt;</p>
+<p>tModel</p>
+<p>reference</p>
+<p><strong>Figure. 8.</strong></p>
+<p> <strong>tModel</strong>: Basically, <em>tModel</em> includes the
+WSDL document address that contains</p>
+<p>the service’s technical specifications (figure 9). This information
+is included in</p>
+<p><em>overviewURL,</em> child element of <em>overviewDoc</em>. Apart
+from this, an optional</p>
+<p><em>description</em> element and a list of categories (
+<em>categoryBag</em> element) to which the</p>
+<p>service belongs can be included. Each <em>tModel</em> element should
+define a</p>
+<p><em>tModelKey</em> attribute that links it to
+<em>tModelInstanceDetails</em>.</p>
+<p>&lt;tModel tModelKey="uuid:36E13526-4553-3265-B5F7-C4B522E75A05"</p>
+<p>operator="www.ibm.com/services/uddi"
+authorizedName="0100001QS1"&gt;</p>
+<p>&lt;name&gt;Price calculation&lt;/name&gt;</p>
+<p>&lt;description xml:lang="en"&gt;Calculate product
+prices&lt;/description&gt;</p>
+<p>&lt;overviewDoc&gt;</p>
+<p>&lt;description xml:lang="en"&gt;Link to WSDL
+document&lt;/description&gt;</p>
+<p>&lt;overviewURL&gt;</p>
+<p>http://localhost:8080/first-jaxrpc/first?WSDL</p>
+<p>&lt;/overviewURL&gt;</p>
+<p>&lt;/overviewDoc&gt;</p>
+<p>&lt;categoryBag&gt;</p>
+<p>&lt;keyedReference
+tModelKey="uuid:clacf26d-9672-4404-9d70-39b756e62ab4"</p>
+<p>keyName="uddi-org:types" keyValue="wsdlSpec" /&gt;</p>
+<p>&lt;/categoryBag&gt;</p>
+<p>&lt;/tModel&gt;</p>
+<p><strong>Figure. 9.</strong></p>
+<p>As you can see the <em>businessEntity</em>, <em>businessService</em>
+and <em>tModel</em> structures can be</p>
+<p>classified in a list of categories specified in <em>categoryBag</em>,
+each category to which the structure</p>
+<p>belongs is defined in the child element <em>KeyedReference</em>.</p>
+<p>A category is established based on a particular classification
+scheme. Several</p>
+<p>classification schemes are valid in UDDI. The scheme name to be used
+should be stored in the</p>
+<p><em>keyName</em> attribute, while <em>keyValue</em> defines the
+category to which the structure belongs</p>
+<p>according to the classification scheme used.</p>
+<p><em><strong>3.3.2. UDDI API</strong></em></p>
+<p>For applications to interact with a UDDI registry, the latter should
+expose a series of</p>
+<p>functions in the form of SOAP Web services. These Web services allow
+search operations and</p>
+<p>the publication of other Web services within the registry.</p>
+<p><span id="index_split_001.html_20"></span>Depending on the type of
+operation carried out, UDDI functions are grouped into two</p>
+<p>categories: Inquiry functions and Publication functions. Figure 10
+shows the main functions and</p>
+<p>the category to which they belong.</p>
+<p><strong>Function</strong></p>
+<p><strong>Category</strong></p>
+<p>find_business</p>
+<p>Inquiry</p>
+<p>find_service</p>
+<p>Inquiry</p>
+<p>find_binding</p>
+<p>Inquiry</p>
+<p>find_tModel</p>
+<p>Inquiry</p>
+<p>get_businessDetail</p>
+<p>Inquiry</p>
+<p>get_serviceDetail</p>
+<p>Inquiry</p>
+<p>get_bindingDetail</p>
+<p>Inquiry</p>
+<p>get_tModelDetail</p>
+<p>Inquiry</p>
+<p>save_business</p>
+<p>Publication</p>
+<p>save_service</p>
+<p>Publication</p>
+<p>save_binding</p>
+<p>Publication</p>
+<p>save_tModel</p>
+<p>Publication</p>
+<p>delete_business</p>
+<p>Publication</p>
+<p>delete_service</p>
+<p>Publication</p>
+<p>delete_binding</p>
+<p>Publication</p>
+<p>delete_tModel</p>
+<p>Publication</p>
+<p><strong>Figure. 10.</strong></p>
+<p>To invoke these functions from an application, you should send SOAP
+messages with</p>
+<p>the appropriate content within the body. For example, to find a
+company called “Shop” you</p>
+<p>would have to include the XML block, shown in figure 11, within the
+<em>body</em>.</p>
+<p>&lt;find_business generic=”2.0” xmlns=”urn:uddi-org:api_v2”&gt;</p>
+<p>&lt;name&gt;Shop&lt;/name&gt;</p>
+<p>&lt;/find_business&gt;</p>
+<p><strong>Figure. 11.</strong></p>
+<p>The response generated by the registry is also a SOAP document, which
+includes an</p>
+<p>XML block in its <em>body</em> with the information found by the
+search criteria.</p>
+<p>For the message in figure 12 the registry would generate a response
+with a</p>
+<p><strong>businessList</strong> element in which would appear a set of
+<strong>businessInfo</strong> child elements with each</p>
+<p>one of the companies registered that are called Shop.</p>
+<p>&lt;businessList generic="2.0" operator="uddi.sourceOperator"</p>
+<p>truncated="true" xmlns="urn:uddi-org:api_v2"&gt;</p>
+<p>&lt;businessInfos&gt;</p>
+<p>&lt;businessInfo
+businessKey="35AF7F00-1419-11D6-A0DC-000C0E00ACDD"&gt;</p>
+<p>&lt;name&gt;Shop&lt;/name&gt;</p>
+<p>&lt;servicesInfos&gt;</p>
+<p>&lt;serviceInfo
+serviceKey="2AB346C0-2282-43B0-756B-0003CC35CC1D"&gt;</p>
+<p>&lt;name&gt;Prices&lt;name&gt;</p>
+<p>&lt;/serviceInfo&gt;</p>
+<p>&lt;/serviceInfos&gt;</p>
+<p>&lt;/businessInfo&gt;</p>
+<p>[&lt;businessInfo/&gt;...]</p>
+<p><span id="index_split_001.html_21"></span> &lt;/businessInfos&gt;</p>
+<p>&lt;/buseinessList&gt;</p>
+<p><strong>Figure. 12.</strong></p>
+<p><strong></strong></p>
+<p><span id="index_split_001.html_22"></span><img src="index-22_1.jpg"
+class="calibre2" /></p>
+<p><strong>4.</strong></p>
+<p><strong>IMPLEMENTATING APPLICATIONS BASED ON</strong></p>
+<p><strong>WEB SERVICES WITH JAVA / JAVA EE</strong></p>
+<p>As mentioned earlier, the Java EE platform provides an API that
+facilitates the</p>
+<p>construction of applications based on Web services, known as JAX-RPC.
+However, the</p>
+<p>majority of recent development environments contain assistants that
+greatly simplify the job of</p>
+<p>building a Web service, reducing the process to simply that of
+implementing the application logic</p>
+<p>layer.</p>
+<p>This is the case for NetBeans. Using this IDE the programmer only
+needs to take care</p>
+<p>of implementing the EJB or class with the required business methods,
+leaving NetBeans to</p>
+<p>dynamically generate both the XML adaptor and the WSDL document that
+describe the</p>
+<p>interface.</p>
+<p><strong>4.1.</strong></p>
+<p><strong>CREATION AND DEPLOYMENT OF A WEB SERVICE USING
+NETBEANS</strong></p>
+<p>With the help of NetBeans we can create and deploy a Web service in
+an application</p>
+<p>server. How we go about doing this depends on what we already have or
+not, giving us three</p>
+<p>starting points:</p>
+<p> <strong>Creating a Web service from scratch</strong>: Doesn’t use
+any existing application</p>
+<p>logic nor any type of specification and the Web service is created
+from scratch.</p>
+<p> <strong>Creating a Web service from an existing EJB</strong>: The
+application logic is</p>
+<p>already implemented in an EJB and we want to expose it as a Web
+service.</p>
+<p> <strong>Creating a Web service from a WSDL document</strong>. The
+description of the</p>
+<p>methods that the Web service should expose are already defined in a
+WSDL</p>
+<p>interface.</p>
+<p><em><strong>4.1.1. Creating a Web service from
+scratch</strong></em></p>
+<p>In order to explain the process of creating a Web service with
+NetBeans, we are going</p>
+<p>to develop a simple example Web service called CalcWS, which will
+expose a method called</p>
+<p>factorial, whose function is to calculate the factorial of a number
+passed as a parameter.</p>
+<p>First of all, as all Web services are Web applications, we will
+create a Web Application</p>
+<p>type project that we will call ExampleProyectWS (figure 13)</p>
+<p><strong>Figure. 13.</strong></p>
+<p><span id="index_split_001.html_23"></span><img src="index-23_1.jpg"
+class="calibre2" /></p>
+<p>For deployment purposes, we could use either Tomcat or GlassFish as
+application</p>
+<p>servers.</p>
+<p>Once the project is created, using the mouse, right-click within the
+Project window and</p>
+<p>choose <em>New -&gt; Web Service</em> from the pop-up menu. The
+dialog box shown in figure 14 will</p>
+<p>appear.</p>
+<p><strong>Figure. 14.</strong></p>
+<p>In this dialog box we should enter the Web service name and the
+package where it will</p>
+<p>be located, also choosing whether to create the Web service from
+scratch (the default) or from</p>
+<p>an existing session bean EJB.</p>
+<p>Supposing we create a Web service from scratch, on clicking
+“<em>Finish”</em> we will see the</p>
+<p>CalcWS class (figure 15) in the NetBeans editor. Here we implement
+the methods that we want</p>
+<p>to expose in the Web service.</p>
+<p>package services;</p>
+<p>import javax.jws.WebService;</p>
+<p>Web Service</p>
+<p>class annotation</p>
+<p>@WebService()</p>
+<p>public class CalcWS {</p>
+<p>}</p>
+<p><strong>Figure. 15.</strong></p>
+<p><span id="index_split_001.html_24"></span><img src="index-24_1.jpg"
+class="calibre2" /></p>
+<p><img src="index-24_2.jpg" class="calibre2" /></p>
+<p>As we can see, the implementation class with its service methods is a
+normal Java</p>
+<p>class, with the difference being that it has to be declared with the
+<strong>@WebService</strong> annotation as</p>
+<p>defined by the javax.jws.WebService package. Using this annotation,
+the runtime environment</p>
+<p>generates everything required so that the class methods are exposed
+as Web service methods.</p>
+<p>Just at the top of the editor window there is a button called
+“<em>Design</em>” that al ows you to</p>
+<p>switch to the class Design view (figure 16).</p>
+<p><strong>Figure. 16.</strong></p>
+<p>Using the button “<em>Add Operation”</em> we can add the service’s
+methods graphically,</p>
+<p>entering the method names, parameters and return types (figure
+17).</p>
+<p><strong>Figure. 17.</strong></p>
+<p><span id="index_split_001.html_25"></span><img src="index-25_1.jpg"
+class="calibre2" /></p>
+<p>On clicking the OK button, returning to our class’s source code view,
+we can see the</p>
+<p>declaration of the factorial method, where we can confirm that both
+the method and the</p>
+<p>parameters have been labeled with the respective
+<strong>@WebMethod</strong> and <strong>@WebParam</strong></p>
+<p>annotations.</p>
+<p>Now we complete the implementation of the factorial method, leaving
+the class looking</p>
+<p>as follows:</p>
+<p>package services;</p>
+<p>import javax.jws.WebMethod;</p>
+<p>import javax.jws.WebParam;</p>
+<p>import javax.jws.WebService;</p>
+<p>@WebService()</p>
+<p>public class CalculosWS {</p>
+<p>@WebMethod(operationName = "factorial")</p>
+<p>public double factorial(@WebParam(name = "num") int num) {</p>
+<p>double result=1.0;</p>
+<p>for(int i=1;i&lt;=num;i++){</p>
+<p>result*=i;</p>
+<p>}</p>
+<p>return result;</p>
+<p>}</p>
+<p>}</p>
+<p>This is all that is required to implement a Web service with
+NetBeans. Next we proceed</p>
+<p>with the deployment of the Web application in the application server
+using the <em>Deploy</em> pop-up</p>
+<p>menu option.</p>
+<p>Once the application is deployed, the Web service is ready to be used
+by client</p>
+<p>applications. From NetBeans itself we can test that the Web service
+works. To do this, inside</p>
+<p>the application’s Web service folder, we right-click on our Web
+service and select “<em>Test Web</em></p>
+<p><em>Service</em>” from the pop-up menu (figure 18).</p>
+<p>To test the Web service, NetBeans opens an instance of a Web browser
+and launches</p>
+<p>a request from this to the Web service, including the <em>tester</em>
+parameter in the URL. Given this</p>
+<p>parameter, the application knows that it’s a request from a browser
+and generates a test HTML</p>
+<p>page that allows you to choose the method to be executed and input
+its respective parameters</p>
+<p>(figure 19).</p>
+<p><strong>Figure. 18.</strong></p>
+<p><span id="index_split_001.html_26"></span><img src="index-26_1.jpg"
+class="calibre2" /></p>
+<p><img src="index-26_2.jpg" class="calibre2" /></p>
+<p><strong>Figure. 19.</strong></p>
+<p>On executing the method, the response comes back in the form of a
+page containing</p>
+<p>both the return value and the SOAP messages exchanged between the
+test page and the Web</p>
+<p>service (figure 20).</p>
+<p><strong>Figure. 20.</strong></p>
+<p><span id="index_split_001.html_27"></span><strong>EXERCISE
+1</strong></p>
+<p>In this exercise we are going to develop a Web service that validates
+a user against a</p>
+<p>database, a Web service that could be reutilized in many other
+applications that need to do the</p>
+<p>same.</p>
+<p>For this exercise we will use any database that includes a table with
+username and</p>
+<p>password fields.</p>
+<p>To begin, once we have created the Web application where the Web
+service will reside,</p>
+<p>we wil create a class encompassing al the application’s data access
+logic. The source code</p>
+<p>for this class, which we will call Operations, is shown below:</p>
+<p>package model;</p>
+<p>import java.sql.*;</p>
+<p>public class Operations {</p>
+<p>//se establecen unos valores por defecto</p>
+<p>//para la conexión con la BD</p>
+<p>private String driver="com.mysql.jdbc.Driver";</p>
+<p>private String sCon="jdbc:mysql://localhost:3306/books";</p>
+<p>private String user="root";</p>
+<p>private String pwd="root";</p>
+<p>public Operations(){}</p>
+<p>public Operations(String driver, String sCon,</p>
+<p>String user, String pwd){</p>
+<p>this.driver=driver;</p>
+<p>this.sCon=sCon;</p>
+<p>this.user=user;</p>
+<p>this.pwd=pwd;</p>
+<p>}</p>
+<p>private Connection getConnection() throws SQLException{</p>
+<p>Connection cn=null;</p>
+<p>try{</p>
+<p>Class.forName(driver);</p>
+<p>cn=DriverManager.getConnection(sCon, user, pwd);</p>
+<p>}</p>
+<p>catch(ClassNotFoundException ex){</p>
+<p>ex.printStackTrace();</p>
+<p>}</p>
+<p>catch(SQLException ex){</p>
+<p>ex.printStackTrace();</p>
+<p>throw ex;</p>
+<p>}</p>
+<p><span id="index_split_001.html_28"></span> return cn;</p>
+<p>}</p>
+<p>public boolean login(String user, String password){</p>
+<p>boolean result=false;</p>
+<p>try{</p>
+<p>Connection cn;</p>
+<p>Statement st;</p>
+<p>ResultSet rs;</p>
+<p>String sql;</p>
+<p>//Clients table contains the user and password</p>
+<p>//fields with the user credentials</p>
+<p>sql="select user, password from Clients where ";</p>
+<p>sql+="user='"+user+"' and password='"+password+"'";</p>
+<p>cn= getConnection();</p>
+<p>st=cn.createStatement();</p>
+<p>rs=st.executeQuery(sql);</p>
+<p>//if user exists, next() method will return true</p>
+<p>result=rs.next();</p>
+<p>}</p>
+<p>catch(Exception ex){</p>
+<p>ex.printStackTrace();</p>
+<p>}</p>
+<p>return result;</p>
+<p>}</p>
+<p>}</p>
+<p>From here, following the steps outlined in the previous section, we
+will create a Web</p>
+<p>service called <em>ValidationsWS</em>, which exposes a method
+<em>login()</em> that, making use of the</p>
+<p><em>Operations</em> class, checks if the user exists in the database.
+The Web service’s implementation</p>
+<p>class source code should look as follows:</p>
+<p>package service;</p>
+<p>import javax.jws.WebMethod;</p>
+<p>import javax.jws.WebParam;</p>
+<p>import javax.jws.WebService;</p>
+<p>import model.*;</p>
+<p>@WebService()</p>
+<p>public class ValidationsWS {</p>
+<p>private String driver="com.mysql.jdbc.Driver";</p>
+<p>private String sCon="jdbc:mysql://localhost:3306/books";</p>
+<p>private String buser="root";</p>
+<p><span id="index_split_001.html_29"></span> private String
+bpwd="root";</p>
+<p>@WebMethod(operationName = "login")</p>
+<p>public boolean login(</p>
+<p>@WebParam(name = "user") String user,</p>
+<p>@WebParam(name = "password") String password) {</p>
+<p>Operations op=new Operations(</p>
+<p>driver,sCon,buser, bpwd);</p>
+<p>if(op.login(user, password)){</p>
+<p>return true;</p>
+<p>}</p>
+<p>else{</p>
+<p>return false;</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p><em>4.1.1.1. Complex return types</em></p>
+<p>Web service methods aren’t limited to just returning primitive types,
+they can also return</p>
+<p>complex types. In the case of a Web service implemented in Java, the
+method can return</p>
+<p>JavaBean type objects, which means, from a SOAP response perspective,
+an entry containing</p>
+<p>a set of XML child elements that represent each of the bean’s
+fields.</p>
+<p>For example, suppose we want to add a new method called
+<em>loginClient</em> to the Web</p>
+<p>service in the previous exercise, which, instead of returning a
+simple Boolean, returns a</p>
+<p>complete dataset associated with the client, e.g. user, password and
+email. The first thing to do</p>
+<p>is to implement a class called Client with a default constructor that
+encapsulates the required</p>
+<p>fields. This class could be coded as follows:</p>
+<p>package beans;</p>
+<p>public class Client {</p>
+<p>private String user;</p>
+<p>private String password;</p>
+<p>private String email;</p>
+<p>public Client(){}</p>
+<p>public Client(String user, String password, String email) {</p>
+<p>this.user = user;</p>
+<p>this.password = password;</p>
+<p>this.email = email;</p>
+<p>}</p>
+<p>public String getUser() {</p>
+<p>return user;</p>
+<p>}</p>
+<p>public void setUser(String user) {</p>
+<p><span id="index_split_001.html_30"></span> this.user = user;</p>
+<p>}</p>
+<p>public String getPassword() {</p>
+<p>return password;</p>
+<p>}</p>
+<p>public void setPassword(String password) {</p>
+<p>this.password = password;</p>
+<p>}</p>
+<p>public String getEmail() {</p>
+<p>return email;</p>
+<p>}</p>
+<p>public void setEmail(String email) {</p>
+<p>this.email = email;</p>
+<p>}</p>
+<p>}</p>
+<p>The next step is to modify the <em>Operations</em> class to include
+the following <em>loginClient</em>()</p>
+<p>method:</p>
+<p>public Client loginClient(String user, String password){</p>
+<p>Client c=null;</p>
+<p>try{</p>
+<p>Connection cn;</p>
+<p>Statement st;</p>
+<p>ResultSet rs;</p>
+<p>String sql;</p>
+<p>//Clients table contains the user and password</p>
+<p>//fields with the user credentials</p>
+<p>sql="select * from Clients where ";</p>
+<p>sql+="user='"+user+"' and password='"+password+"'";</p>
+<p>cn= getConnection();</p>
+<p>st=cn.createStatement();</p>
+<p>rs=st.executeQuery(sql);</p>
+<p>if(rs.next()){</p>
+<p>c=new Client(rs.getString("user"),</p>
+<p>rs.getString("password"),</p>
+<p>rs.getString("email"));</p>
+<p>}</p>
+<p>}</p>
+<p>catch(Exception ex){</p>
+<p>ex.printStackTrace();</p>
+<p>}</p>
+<p><span id="index_split_001.html_31"></span> return c;</p>
+<p>}</p>
+<p>As for the Web service’s new method, it will look like this:</p>
+<p>@WebMethod(operationName = "loginClient")</p>
+<p>public Client loginClient(</p>
+<p>@WebParam(name = "user") String user,</p>
+<p>@WebParam(name = "password") String password) {</p>
+<p>Operations op=new Operations(driver, sCon, buser, bpwd);</p>
+<p>return op.loginClient(user, password);</p>
+<p>}</p>
+<p>If we test the Web service, we can check that the SOAP document
+generated by the</p>
+<p>Web service in response to invoking the new method looks like the
+following listing:</p>
+<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p>&lt;S:Envelope
+xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"&gt;</p>
+<p>&lt;S:Body&gt;</p>
+<p>&lt;ns2:loginClientResponse mlns:ns2="http://service/"&gt;</p>
+<p>&lt;return&gt;</p>
+<p>&lt;email&gt;test1@gmail.com&lt;/email&gt;</p>
+<p>&lt;password&gt;test1&lt;/password&gt;</p>
+<p>&lt;user&gt;test1&lt;/user&gt;</p>
+<p>&lt;/return&gt;</p>
+<p>&lt;/ns2:loginClientResponse&gt;</p>
+<p>&lt;/S:Body&gt;</p>
+<p>&lt;/S:Envelope&gt;</p>
+<p>We can see from this that the <em>Client</em> bean is transformed
+into an XML document with</p>
+<p>three elements.</p>
+<p><em><strong>4.1.2. Creating a Web service from an
+EJB</strong></em></p>
+<p>If the application logic is implemented in an EJB, we can create a
+Web service whose</p>
+<p>methods redirect calls to the EJB’s methods, therefore exposing the
+component logic of any</p>
+<p>application.</p>
+<p>The first thing to do is to open an enterprise project within the IDE
+in which we already</p>
+<p>have defined the EJB module.</p>
+<p>Suppose, for example, that we have a simple EJB module called
+Calculator-ejb, with a</p>
+<p>stateless session EJB that exposes two methods, one that calculates
+the sum of two numbers</p>
+<p>and one that multiplies them. The source code for the implementation
+component class would</p>
+<p>be as follows:</p>
+<p>package ejbs;</p>
+<p>import javax.ejb.Stateless;</p>
+<p><span id="index_split_001.html_32"></span><img src="index-32_1.jpg"
+class="calibre2" /></p>
+<p>@Stateless</p>
+<p>public class Calculator implements CalculatorLocal {</p>
+<p>public int add(int x, int y) {</p>
+<p>return x+y;</p>
+<p>}</p>
+<p>public long multiplication(int x, int y) {</p>
+<p>return x*y;</p>
+<p>}</p>
+<p>}</p>
+<p>To create the Web service that “wraps” the EJB’s methods, we create a
+Web</p>
+<p>application, either within the same Enterprise application as the EJB
+module or as an</p>
+<p>independent application.</p>
+<p>Next, we follow the same steps as in the previous case for creating a
+Web service,</p>
+<p>although when we get to the “<em>New Web Service</em>” dialog box, we
+should choose the <em>“Create Web</em></p>
+<p><em>Service From Existing Session Bean</em>” option and click the
+<em>“browse”</em> button to choose the</p>
+<p>session EJB (into the “<em>Enterprise Bean</em>” field) which
+implements the application logic (figure 21).</p>
+<p><strong>Figure. 21.</strong></p>
+<p>The code generated for the Web service class will look as
+follows:</p>
+<p>package services;</p>
+<p>import ejbs.CalculatorLocal;</p>
+<p>import javax.ejb.EJB;</p>
+<p>import javax.jws.WebMethod;</p>
+<p>import javax.jws.WebParam;</p>
+<p>import javax.jws.WebService;</p>
+<p><span id="index_split_001.html_33"></span><img src="index-33_1.jpg"
+class="calibre2" /></p>
+<p>@WebService()</p>
+<p>public class CalculatorWS {</p>
+<p>@EJB</p>
+<p>private CalculatorLocal ejbRef;</p>
+<p>@WebMethod(operationName = "add")</p>
+<p>public int add(@WebParam(name = "x")</p>
+<p>int x, @WebParam(name = "y")</p>
+<p>int y) {</p>
+<p>return ejbRef.add(x, y);</p>
+<p>}</p>
+<p>@WebMethod(operationName = "multiplication")</p>
+<p>public long multiplication(@WebParam(name = "x")</p>
+<p>int x, @WebParam(name = "y")</p>
+<p>int y) {</p>
+<p>return ejbRef. multiplication(x, y);</p>
+<p>}</p>
+<p>}</p>
+<p><em><strong>4.1.3. Creating a Web service from a WSDL
+document</strong></em></p>
+<p>Although a bottom-up development approach is more common, i.e. create
+a Web</p>
+<p>service from a predefined set of methods, other times, what is know
+as top-down development</p>
+<p>is required.</p>
+<p>In top-down development, the starting point is a WSDL inteface that
+describes the</p>
+<p>functionality of the Web service that we want to implement, from
+which we develop the code for</p>
+<p>Web service’s methods and the XML adaptor.</p>
+<p>With NetBeans it’s very easy to build the implementation class for a
+Web service from a</p>
+<p>WSDL interface. To do this, choose the “<em>New -&gt; Web Service
+From WSDL”</em> option from the</p>
+<p>project pop-up menu, which opens a dialog box (figure 22) in which we
+should enter, in addition</p>
+<p>to the Web service name, the address of the WSDL document that
+defines its methods.</p>
+<p><strong>Figure. 22.</strong></p>
+<p><span id="index_split_001.html_34"></span><img src="index-34_1.jpg"
+class="calibre2" /></p>
+<p>On clicking “<em>Finish</em>”, a class declared with the annotation
+@WebService is generated,</p>
+<p>containing the methods that the Web service should expose according
+to the WSDL document</p>
+<p>specifications:</p>
+<p>@WebService(serviceName = "OperationsWS",</p>
+<p>portName = "Operations",</p>
+<p>endpointInterface = "services.Operations",</p>
+<p>targetNamespace = "http://services",</p>
+<p>wsdlLocation = "WEB-INF/wsdl/</p>
+<p>service_from_wsdl/Operations.wsdl")</p>
+<p>public class service_from_wsdl {</p>
+<p>public boolean login(String email, String password) {</p>
+<p>//TODO implement this method</p>
+<p>}</p>
+<p>}</p>
+<p>Obviously, it is the programmer’s responsibility to implement the
+code for those</p>
+<p>methods.</p>
+<p>Once completed, the Web service can be deployed normally as in the
+previous section.</p>
+<p><strong>4.2.</strong></p>
+<p><strong>DEVELOPING A CLIENT APPLICATION OF A WEB SERVICE</strong></p>
+<p>As we have previously seen for a Web service, in a client application
+there are also two</p>
+<p>separate well-defined modules. On the one hand, we have the
+application logic, i.e., the part of</p>
+<p>the program that performs the application’s specific task using the
+Web service’s methods. On</p>
+<p>the other hand, we have the module that interacts with the service,
+whose task is to encode and</p>
+<p>decode SOAP messages. This module is known as the
+<strong>proxy</strong> (figure 23).</p>
+<p><strong>Figure. 23.</strong></p>
+<p><em><strong>4.2.1. Proxy objects</strong></em></p>
+<p>The majority of development environments also provide everything you
+need so that</p>
+<p>you don’t have to worry about implementing the proxy module, so
+<strong>we only need to</strong></p>
+<p><strong>concentrate on the application logic</strong>.</p>
+<p><span id="index_split_001.html_35"></span><img src="index-35_1.jpg"
+class="calibre2" /></p>
+<p><img src="index-35_2.jpg" class="calibre2" /></p>
+<p>This is the case for NetBeans that, when the time comes to create a
+client application of</p>
+<p>a Web service, automatically creates a set of classes for creating
+the proxy from the address of</p>
+<p>the WSDL document that describes the Web service.</p>
+<p>The <strong>proxy object provides the Java version of the methods
+exposed by the Web</strong></p>
+<p><strong>service</strong>. This means that the way the application
+gains access to the Web service’s methods is</p>
+<p>simply via an instance of a normal Java class (figure 24). This
+class’s methods internally take</p>
+<p>care of all the necessary work to connect to the remote Web service,
+generate the SOAP</p>
+<p>invocation messages and process the SOAP response messages.</p>
+<p><strong>Figure. 24.</strong></p>
+<p><em><strong>4.2.2. Creating a client application with
+NetBeans</strong></em></p>
+<p>A Java client application of a Web service could be a console
+application, a servlet or</p>
+<p>even another Web service, etc.</p>
+<p>In any case, once the client’s type of project has been chosen, to
+create the proxy class</p>
+<p>we click on the “<em>New -&gt; Web Service Client</em>” option from
+the project pop-up menu (figure 25).</p>
+<p>If the “<em>Web Service Client”</em> option isn’t available in this
+menu, you can choose “<em>Other</em>”</p>
+<p>and in the dialog box that follows, within the <em>Web Service</em>
+category, you will also find the same</p>
+<p>option.</p>
+<p>In the resulting dialog box, it will ask us to specify the WSDL
+document that describes</p>
+<p>the Web service (figure 26). NetBeans will build the proxy using the
+information provided by</p>
+<p>this. Our WSDL document could be published on a server, in which case
+we would enter the</p>
+<p>server’s URL. We could also provide a local copy located in the
+actual client project, or even be</p>
+<p>located in another already loaded project.</p>
+<p><strong>Figure. 25.</strong></p>
+<p><span id="index_split_001.html_36"></span><img src="index-36_1.jpg"
+class="calibre2" /></p>
+<p><img src="index-36_2.jpg" class="calibre2" /></p>
+<p>Within the same dialog box, we also need to specify the package
+within the client</p>
+<p>application, where we want to store the proxy and helper classes, as
+well as the invocation</p>
+<p>style.</p>
+<p><strong>Figure. 26.</strong></p>
+<p>On clicking “Finish”, the process of generating the proxy begins. If
+we look at the</p>
+<p>projects explorer window, we will see that, inside our client
+application project, a new folder</p>
+<p>called “Generated sources (jax-ws)” has been created, containing the
+classes and interfaces</p>
+<p>that make up the proxy (figure 27).</p>
+<p><strong>Figure. 27.</strong></p>
+<p>The interface whose name conincides with that of the Web service, in
+our case</p>
+<p>CalcWS.java, defines the Java version of the methods exposed by the
+service. The proxy object</p>
+<p>would then be an object of any class that implements this interface,
+an object which we can</p>
+<p>obtain using the &lt;ServiceName&gt;Service.java class (in our
+example, CalcWSService.java).</p>
+<p><span id="index_split_001.html_37"></span>Therefore, to get the proxy
+object, we should follow these steps:</p>
+<p>1. Create a CalcWSService object: Using the class’s constructor
+without</p>
+<p>parameters Utilizando we can create an instance of it:</p>
+<p>CalcWSService cservice = new CalcWSService ();</p>
+<p>2. Get the proxy object: We invoke the getCalcWSPort() method on the
+previous</p>
+<p>object that returns an object that implements the CalculosWS
+interface:</p>
+<p>CalcWS proxy = cservice.getCalcWSPort();</p>
+<p>We are now at the point where we can invoke the Web service’s methods
+using the</p>
+<p>Java instance referenced by the <em>proxy</em> variable.</p>
+<p>The following code belongs to a Java console application that
+requires the user to enter</p>
+<p>a number and with this calculates its factorial using the example Web
+service we already</p>
+<p>created:</p>
+<p>package example_clientws;</p>
+<p>import proxy.*;</p>
+<p>import java.util.Scanner;</p>
+<p>public class Main {</p>
+<p>public static void main(String[] args) {</p>
+<p>Scanner sc=new Scanner(System.in);</p>
+<p>CalcWSService cservice = new CalcWSService();</p>
+<p>CalcWS proxy=cservice.getCalcWSPort();</p>
+<p>System.out.println("Type a number ");</p>
+<p>int num = sc.nextInt();</p>
+<p>System.out.println("Factorial is "+</p>
+<p>proxy.factorial(num));</p>
+<p>}</p>
+<p>}</p>
+<p>When the client application of a Web service is a servlet running in
+a Java EE container,</p>
+<p>we use the <em>@WebServiceRef</em> annotation from the
+<em>javax.xml.ws</em> package to inject a reference to</p>
+<p>the <em>service</em> object. All that is required is to specify, in
+its <em>wsdlLocation</em> attribute, the local address of the WSDL
+document that NetBeans creates in the the client application (normally
+in</p>
+<p>the WDSL folder within the WEB-INF directory):</p>
+<p>@WebServiceRef(</p>
+<p>wsdlLocation = "WEB-INF\wsdl\localhost_36272\</p>
+<p>ExampleProyectWS\CalcWSService.wsdll")</p>
+<p>private CalcWSService service;</p>
+<p>protected void service(HttpServletRequest request,</p>
+<p>HttpServletResponse response)</p>
+<p>throws ServletException, IOException {</p>
+<p>response.setContentType("text/html;charset=UTF-8");</p>
+<p>PrintWriter out = response.getWriter();</p>
+<p><span id="index_split_001.html_38"></span> try {</p>
+<p>CalcWS proxy=service.getCalcWSPort();</p>
+<p>:</p>
+<p><strong></strong></p>
+<p><span id="index_split_001.html_39"></span><strong>EXERCISE
+2</strong></p>
+<p>Next we will develop a client application of the validation Web
+service that we previously</p>
+<p>implemented in exercise 1.</p>
+<p>We are required to create a Web application with a login page
+requesting the user’s</p>
+<p>credentials. This page will contact a servlet that, making use of the
+existing Web service we</p>
+<p>developed, validates the user and, if the user exists, shows a
+welcome message; otherwise the</p>
+<p>login page will again be displayed.</p>
+<p>Here is the code for the login page:</p>
+<p>&lt;%@page contentType="text/html" pageEncoding="UTF-8"%&gt;</p>
+<p>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"</p>
+<p>"http://www.w3.org/TR/html4/loose.dtd"&gt;</p>
+<p>&lt;html&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta http-equiv="Content-Type" content="text/html;</p>
+<p>charset=UTF-8"&gt;</p>
+<p>&lt;title&gt;JSP Page&lt;/title&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;center&gt;</p>
+<p>&lt;h1&gt;Authentication Form&lt;/h1&gt;</p>
+<p>&lt;form action="login"&gt;</p>
+<p>User:&lt;input type="text" name="user"/&gt;</p>
+<p>&lt;br/&gt;&lt;br/&gt;</p>
+<p>Password: &lt;input type="text" name="password"/&gt;</p>
+<p>&lt;br/&gt;&lt;br/&gt;</p>
+<p>&lt;input type="submit" value="Enter"/&gt;</p>
+<p>&lt;/form&gt;</p>
+<p>&lt;/center&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>And the servlet client of the Web service would look like this:</p>
+<p>package servlets;</p>
+<p>import java.io.*;</p>
+<p>import javax.servlet.*;</p>
+<p>import javax.servlet.http.*;</p>
+<p>import javax.xml.ws.WebServiceRef;</p>
+<p>import proxy.ValidationsWSService;</p>
+<p><span id="index_split_001.html_40"></span></p>
+<p>public class Login extends HttpServlet {</p>
+<p>@WebServiceRef(wsdlLocation =</p>
+<p>"WEB-INF/wsdl/localhost_36272/</p>
+<p>Exercise1/ValidationsWSService.wsdl")</p>
+<p>private ValidationsWSService service;</p>
+<p>protected void service(HttpServletRequest request,</p>
+<p>HttpServletResponse response)</p>
+<p>throws ServletException, IOException {</p>
+<p>response.setContentType("text/html;charset=UTF-8");</p>
+<p>PrintWriter out = response.getWriter();</p>
+<p>try {</p>
+<p>proxy.ValidationsWS port =</p>
+<p>service.getValidationsWSPort();</p>
+<p>String user = request.getParameter("user");</p>
+<p>String password = request.getParameter("password");</p>
+<p>boolean result = port.login(user, password);</p>
+<p>if(result){</p>
+<p>out.println("&lt;html&gt;");</p>
+<p>out.println("&lt;body&gt;");</p>
+<p>out.println("&lt;h1&gt;Welcome to my page&lt;/h1&gt;");</p>
+<p>out.println("&lt;/body&gt;");</p>
+<p>out.println("&lt;/html&gt;");</p>
+<p>}</p>
+<p>else{</p>
+<p>response.sendRedirect("login.jsp");</p>
+<p>}</p>
+<p>}</p>
+<p>catch(Exception e){e.printStackTrace();}</p>
+<p>}</p>
+<p>Among the classes included in the proxy module, we can see the
+<em>Client</em> class, which</p>
+<p>comes in handy when invoking the <em>loginClient</em>() method of the
+<em>ValidationsWS</em> object. In other</p>
+<p>words, <strong>the complex data returned by a Web service is mapped
+by the client proxy to</strong></p>
+<p><strong>JavaBean objects</strong>.</p>
+<p><strong></strong></p>
+<p><span id="index_split_001.html_41"></span><strong>EXERCISE
+3</strong></p>
+<p>In this exercise we will develop a Web application, making use of an
+external Web</p>
+<p>service, that checks if the email address, entered by the user in a
+text field, is valid or not.</p>
+<p>We are going to use a free-to-use public Web service belonging to
+CDYNE Corporation</p>
+<p><a href="http://www.cdyne.com/">(www.cdyne.com)</a>, a Web service
+that has been implemented in .NET and that we can access from our Java
+application. The address of the WSDL document that describes its
+interface is:</p>
+<p><a
+href="http://ws.cdyne.com/emailverify/Emailvernotestemail.asmx?wsdl">http://ws.cdyne.com/emailverify/Emailvernotestemail.asmx?wsdl</a></p>
+<p>On the <a
+href="http://www.xmethods.org/"><strong>http://www.xmethods.org</strong></a>
+Web page we can find information about the different public use Web
+services offering common functionality.</p>
+<p>The email verification Web service exposes four methods, of which we
+will use</p>
+<p><em>verifyEmail()</em>. This method takes an email address and a
+licence key (being free you can enter</p>
+<p>an empty string) and returns a complex data type with the
+verification results. When creating</p>
+<p>the Java proxy, this data type is mapped to a JavaBean of the class
+<strong>ReturnIndicator</strong>, which</p>
+<p>provides the following methods that return information about the
+verification:</p>
+<p> getResponseText(): Returns a string with information about the
+verification just</p>
+<p>completed.</p>
+<p> getResponseCode(): Returns a code with the result of the
+verification.</p>
+<p> isGoodEmail(): Indicates if the email is valid or not.</p>
+<p>Following the process already discussed, we generate the proxy class
+from a NetBeans</p>
+<p>Web application.</p>
+<p>Out of all the clases generated, EmailVerNoTestEmail and
+EmailVerNoTestEmailSoap</p>
+<p>will be the ones we use to create the proxy object.</p>
+<p>The Web application consists of a Web page implemented as a JSP with
+a text field and</p>
+<p>a <em>submit</em> button asking the user to enter the email address
+to be checked. The code for this</p>
+<p>page is shown below:</p>
+<p>&lt;%@page contentType="text/html" pageEncoding="UTF-8"%&gt;</p>
+<p>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"</p>
+<p>"http://www.w3.org/TR/html4/loose.dtd"&gt;</p>
+<p>&lt;html&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta http-equiv="Content-Type" content="text/html;</p>
+<p>charset=UTF-8"&gt;</p>
+<p>&lt;title&gt;JSP Page&lt;/title&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;center&gt;</p>
+<p>&lt;form action="Verify" method="post"&gt;</p>
+<p>Email:&lt;input type="text"</p>
+<p><span id="index_split_001.html_42"></span>
+name="email"/&gt;&lt;br/&gt;</p>
+<p>&lt;input type="submit" value="Verify"/&gt;</p>
+<p>&lt;/form&gt;</p>
+<p>&lt;/center&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>The purpose of the <em>verify</em> servlet will be to call the
+<em>verifyEmail()</em> Web service method</p>
+<p>and generate a page with the message returned by the verification.
+The code for the servlet</p>
+<p>would be as follows:</p>
+<p>package servlets;</p>
+<p>import java.io.*;</p>
+<p>import javax.servlet.*;</p>
+<p>import javax.servlet.http.*;</p>
+<p>import proxy.*;</p>
+<p>public class Verify extends HttpServlet {</p>
+<p>protected void service(HttpServletRequest request,</p>
+<p>HttpServletResponse response)</p>
+<p>throws ServletException, IOException {</p>
+<p>response.setContentType("text/html;charset=UTF-8");</p>
+<p>PrintWriter out = response.getWriter();</p>
+<p>try {</p>
+<p>EmailVerNoTestEmail service=</p>
+<p>new EmailVerNoTestEmail();</p>
+<p>EmailVerNoTestEmailSoap port =</p>
+<p>service.getEmailVerNoTestEmailSoap();</p>
+<p>String email = request.getParameter("email");</p>
+<p>String licenseKey = "";</p>
+<p>ReturnIndicator result =</p>
+<p>port.verifyEmail(email, licenseKey);</p>
+<p>out.println("&lt;html&gt;&lt;body&gt;");</p>
+<p>out.println("&lt;h1&gt;Result = "+</p>
+<p>result.getResponseText()+"&lt;/h1&gt;");</p>
+<p>out.println("&lt;/body&gt;&lt;/html&gt;");</p>
+<p>}</p>
+<p>catch (Exception ex) {ex.printStackTrace();}</p>
+<p>finally {</p>
+<p>out.close();</p>
+<p>}</p>
+<p><span id="index_split_001.html_43"></span><img src="index-43_1.jpg"
+class="calibre2" /></p>
+<p>}</p>
+<p>}</p>
+<p><strong>4.3.</strong></p>
+<p><strong>INVOKING A WEB SERVICE’S METHODS ASYNCHRONOUSLY</strong></p>
+<p>Natural y, when calling a Web service’s methods via a proxy object,
+following the steps</p>
+<p>already outlined, the program remains locked in the instruction that
+calls the method, waiting for</p>
+<p>the result to be returned by the HTTP response generated by the Web
+service. This is what is</p>
+<p>known as synchronous mode.</p>
+<p>However, there are times when we don’t need the value returned by the
+method to be</p>
+<p>able to continue executing the client application. It would be
+interesting in this case to be able</p>
+<p>to invoke the methods asynchronously, which would mean that the
+program would call the</p>
+<p>method and continue executing normally without waiting for it to
+return a result.</p>
+<p>To do this, the client application should provide a callback method
+that gets executed by</p>
+<p>the proxy as soon as the reponse value is received from the Web
+service.</p>
+<p><em><strong>4.3.1. Proxy object configuration</strong></em></p>
+<p>There are no special steps when developing a Web service in order to
+asynchronously</p>
+<p>invoke it, but you do have to suitably configure the proxy to allow
+this possibility.</p>
+<p>Therefore, once the proxy has been created in the client application,
+in order to be able</p>
+<p>to make asynchronous method calls, we select the reference to our Web
+service within the</p>
+<p>“<em>Web Service References</em>” folder and in the pop-up menu click
+the “Edit Web Service Attributes”</p>
+<p>option (figure 28).</p>
+<p><strong>Figure. 28.</strong></p>
+<p>In the dialog box that follows, click the “<em>WSDL
+Customization</em>” tab, open up the <em>“Port</em></p>
+<p><em>Type Operations”</em> folder and within the method that we want
+to invoke asynchronously, check</p>
+<p>the “<em>Enable Asynchronous Client</em>” option (figure 29).</p>
+<p><span id="index_split_001.html_44"></span><img src="index-44_1.jpg"
+class="calibre2" /></p>
+<p><img src="index-44_2.jpg" class="calibre2" /></p>
+<p><strong>Figure. 29.</strong></p>
+<p>On clicking “OK”, an informational dialog box wil appear, tel ing us
+that the proxy</p>
+<p>classes will be regenerated.</p>
+<p>If we open the <em>“Web Service References”</em> folder in the client
+Project, notice that, apart</p>
+<p>from the synchronous version of the method, two new versions have
+been created allowing</p>
+<p>asynchronous calls. One of these methods is for use with a callback
+function, the one we would</p>
+<p>normally use, and the other uses polling, which would periodically
+poll the proxy checking if the</p>
+<p>response has arrived.</p>
+<p><strong>Figure. 30.</strong></p>
+<p><span id="index_split_001.html_45"></span> <em><strong>4.3.2. Calling
+methods aysynchronously</strong></em></p>
+<p>To make an asynchrous call to a Web service, we drag the “Async
+Callback” element to</p>
+<p>the client class within the Web service references, generating the
+application skeleton shown in</p>
+<p>figure 31.</p>
+<p>public static void main(String[] args) {</p>
+<p>try { //Call Web Service Operation(async.callback)</p>
+<p>proxy.CalcWSService service = new proxy.CalcWSService();</p>
+<p>object proxy</p>
+<p>proxy.CalcWSport = service.getCalcWSPort();</p>
+<p>creation</p>
+<p>//TODO initialize WS operation arguments here</p>
+<p>int num = 0;</p>
+<p>javax.xml.ws.AsyncHandler &lt;proxy.FactorialResponse&gt;asyncHandler
+=</p>
+<p>new javax.xml.ws.AsyncHandler&lt;proxy.FactorialResponse&gt;(){</p>
+<p>public void
+handleResponse(javax.xml.ws.Response&lt;proxy.FactorialResponse&gt;
+response){</p>
+<p>try {</p>
+<p>//TODO process aynchronous response here</p>
+<p>System.out.println("Result = " + response.get());</p>
+<p>} catch (Exception ex) {</p>
+<p>//TODO handle exception</p>
+<p>}</p>
+<p>}</p>
+<p>anonymous class</p>
+<p>that defines the</p>
+<p>};</p>
+<p>callback method</p>
+<p>asynchronous</p>
+<p>java.util.concurrent.Future&lt;? extendsjava.lang.Object&gt; result
+=</p>
+<p>call to the method</p>
+<p>port.factorialAsync(num,asyncHandler);</p>
+<p>while (!result.isDone()) {</p>
+<p>//do someting</p>
+<p>Checks if there</p>
+<p>Thread.sleep(100);</p>
+<p>is a result</p>
+<p>}</p>
+<p>} catch (Exception ex) {</p>
+<p>//TODO handle custom exceptions here</p>
+<p>}</p>
+<p>}</p>
+<p><strong>Figure. 31.</strong></p>
+<p>As you can see from the above code, the callback method
+<em>handleResponse()</em> is defined</p>
+<p>in the <em>javax.xml.ws.AsyncHandler</em> interface. In this method
+you should include the instructions</p>
+<p>that you want to execute when the result, returned by calling the WS
+method, is available. This</p>
+<p>result can be retrieved through the Response object received in the
+<em>handleResponse()</em> method.</p>
+<p>In the code generated by NetBeans, the <em>handleResponse()</em>
+method is implemented in</p>
+<p>an anonymous class, whose instance is reference by the
+<em>asyncHandler</em> variable.</p>
+<p>On the other hand, we can see that the asynchronous call should be
+made by the proxy</p>
+<p>object’s <em>factorialAsync()</em> method:</p>
+<p>java.util.concurrent.Future&lt;? extends java.lang.Object&gt; result
+=</p>
+<p>port.factorialAsync(num, asyncHandler);</p>
+<p>In addition to the Web service’s own parameters, this method takes
+the object that</p>
+<p>implements the AsyncHandler interface. The call to this method
+returns a <em>Future</em> object that</p>
+<p>allows us to check, using the method <em>isDone()</em>, if the result
+has been returned to the client.</p>
+<p>For example, the following program calculates the factorial of 7
+using the CalcWS Web</p>
+<p>service, and while this calculation is in progress, the client
+program displays a message</p>
+<p>“waiting” message every tenth of a second:</p>
+<p>package client;</p>
+<p>import javax.xml.ws.*;</p>
+<p>import proxy.*;</p>
+<p><span id="index_split_001.html_46"></span>import
+java.uti.concurrent.*;</p>
+<p>public class Test {</p>
+<p>public static void main(String[] args) {</p>
+<p>try {</p>
+<p>CalcWSService service = new CalcWSService();</p>
+<p>CalcWS port = service.getCalcWSPort();</p>
+<p>int num = 7;</p>
+<p>AsyncHandler&lt;FactorialResponse&gt; asyncHandler =</p>
+<p>new AsyncHandler&lt;FactorialResponse&gt;() {</p>
+<p>public void handleResponse(</p>
+<p>Response&lt;FactorialResponse&gt; response) {</p>
+<p>try {</p>
+<p>System.out.println("Result = "+</p>
+<p>response.get().getReturn());</p>
+<p>} catch(Exception ex) {}</p>
+<p>}</p>
+<p>};</p>
+<p>Future&lt;? extends Object&gt; result =</p>
+<p>port.factorialAsync(num, asyncHandler);</p>
+<p>while(!result.isDone()) {</p>
+<p>System.out.println("waiting");</p>
+<p>Thread.sleep(100);</p>
+<p>}</p>
+<p>} catch (Exception ex) { }</p>
+<p>}</p>
+<p>}</p>
+<p><strong></strong></p>
+<p><span id="index_split_001.html_47"></span><strong>5.</strong></p>
+<p><strong>USING THE GOOGLE SEARCH WEB SERVICE</strong></p>
+<p>Google has a wide variety of Web services that can be used by
+developers to integrate</p>
+<p>their powerful search engine within their applications.</p>
+<p>In 2003 Google published their first Web service, the classic Google
+search. This Web</p>
+<p>service exposes a WSDL interface that defines its functionality,
+however from 2006 this became</p>
+<p>obsolete and from March 2009 Google no longer supports this Web
+service.</p>
+<p>Nowadays, the various Web services provided by Google <strong>should
+be accessed using</strong></p>
+<p><strong>special APIs created by Google themselves</strong>, removing
+the need to rely on proxy objects</p>
+<p>created by the many development environments.</p>
+<p>These are some of the main APIs available to access Google’s
+services:</p>
+<p> <strong>AJAX API</strong>: A set of JavaScript objects that provide
+access to the classic</p>
+<p>Google search service from any Web page, also integrating AJAX
+functionality.</p>
+<p> <strong>Google maps API</strong>: Lets you integrate interactive
+maps in your Web site.</p>
+<p> <strong>Google Web ToolKit</strong>: Java API for integrating the
+search service in any</p>
+<p>application.</p>
+<p>As an example of how to use thse Web services, we are going to
+analyse the Google</p>
+<p>AJAX API with which we can implement a Google search engine within
+our own Web pages.</p>
+<p><strong>5.1.</strong></p>
+<p><strong>USING THE AJAX API</strong></p>
+<p>In order to use this service, you need to get a licence key that is
+available without</p>
+<p>charge from the following link:</p>
+<p><a
+href="http://code.google.com/intl/es/apis/ajaxsearch/signup.html">http://code.google.com/intl/es/apis/ajaxsearch/signup.html</a></p>
+<p>Once you have this key, it’s very easy to access Google’s JavaScript
+objects that we</p>
+<p>will use to implement our own search page.</p>
+<p><em><strong>5.1.1. Using Google’s search control</strong></em></p>
+<p>The easiest way to implement a search page is by including Google’s
+own search</p>
+<p>control.</p>
+<p>The first thing to do is to add the following script to the header of
+the page that</p>
+<p>references Google’s AJAX API loader:</p>
+<p>&lt;script type="text/javascript"</p>
+<p>src="http://www.google.com/jsapi?key=mykey"&gt;</p>
+<p>&lt;/script&gt;</p>
+<p>Here “mykey” represents the key Google supplies us with in URL above.
+This key can</p>
+<p>be used by all the pages in our applications where we want to use the
+AJAX API.</p>
+<p>Next we load the search API using the load method from the google
+object:</p>
+<p>&lt;script type="text/javascript"&gt;</p>
+<p>google.load("search", "1");</p>
+<p><span id="index_split_001.html_48"></span>&lt;/script&gt;</p>
+<p>The loader, which is actually the google object, can load several
+different APIs. The</p>
+<p>search API is obviously loaded by passing the string “search” as the
+first parameter, whereas if</p>
+<p>we wanted to load the Google Maps API we would enter “maps” here.</p>
+<p>Next, we will create an instance of SerachControl, the object that
+represents the Google</p>
+<p>search control, i.e. the text field with the search button:</p>
+<p>var searchControl = new google.search.SearchControl();</p>
+<p>In order to carry out searches, the control needs to know where to
+search, i.e. whether</p>
+<p>it’s a local search, a Web search, searching a newsgroup, etc. To
+define where you want to</p>
+<p>search, you have to instanciate the relevant search objects and add
+them to the search</p>
+<p>collection using the <em>addSearcher()</em> method.</p>
+<p>For example, to do Web searches, include the following
+instruction:</p>
+<p>searchControl.addSearcher(new google.search.WebSearch());</p>
+<p>To finish, all that remains is to indicate where we want to show the
+Google search</p>
+<p>control. This would be a &lt;div&gt; element, where apart from the
+control, the search results will be</p>
+<p>displayed. For example, if the id of the &lt;div&gt; element is
+<em>search</em>, the following instruction should</p>
+<p>be included:</p>
+<p>searchControl.draw(document.getElementById("search"));</p>
+<p>This is all that is required to enhance our page with a search
+control that, using</p>
+<p>Google’s Web service, displays search results on the same page using
+AJAX technology.</p>
+<p>The following code is for the .html page in figure 32, which includes
+Google’s search</p>
+<p>control.</p>
+<p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"</p>
+<p>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</p>
+<p>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta http-equiv="content-type" content="text/html;</p>
+<p>charset=utf-8"/&gt;</p>
+<p>&lt;title&gt;Hello World - Google AJAX Search API
+Sample&lt;/title&gt;</p>
+<p>&lt;style type="text/css"&gt;</p>
+<p>#searchcontrol .gsc-control { width : 400px; }</p>
+<p>&lt;/style&gt;</p>
+<p>&lt;script src="http://www.google.com/jsapi?key=</p>
+<p>ABQIAAAAL_EMEkkdOlc7VvLS2ScrhRT2yXp_ZAY8_</p>
+<p>ufC3CFXhHIE1NvwkxSNF3RR2EXs8VTzACmPCCglKJVMpQ"</p>
+<p>type="text/javascript"&gt;&lt;/script&gt;</p>
+<p>&lt;script type="text/javascript"&gt;</p>
+<p>//Loads the search</p>
+<p>google.load('search', '1.0');</p>
+<p>function OnLoad() {</p>
+<p><span id="index_split_001.html_49"></span><img src="index-49_1.jpg"
+class="calibre2" /></p>
+<p>// Creates search control</p>
+<p>var searchControl = new google.search.SearchControl();</p>
+<p>searchControl.addSearcher(</p>
+<p>new google.search.WebSearch());</p>
+<p>//Draws control into page</p>
+<p>searchControl.draw(</p>
+<p>document.getElementById("search"));</p>
+<p>}</p>
+<p>&lt;/script&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body onload="OnLoad();"&gt;</p>
+<p>&lt;center&gt;&lt;h1&gt;Using the Google search
+control&lt;/h1&gt;&lt;/center&gt;</p>
+<p>&lt;br /&gt;</p>
+<p>&lt;div id="search"&gt;Loading&lt;/div&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p><strong>Figure. 32.</strong></p>
+<p><span id="index_split_001.html_50"></span> <em><strong>5.1.2.
+Personalized Search Control</strong></em></p>
+<p>If we would like to use our own search control instead of using
+Google’s, we would need</p>
+<p>to include, within the JavaScript code, the same instructions as
+those performed by the</p>
+<p>searches using the API objects.</p>
+<p>To carry out Web searches, we need an instance of the
+<strong>google.search.WebSearch</strong></p>
+<p>class, whose <em>execute()</em> method performs the search on the Web
+using the string provided as a</p>
+<p>parameter.</p>
+<p>As</p>
+<p><em>execute()</em></p>
+<p>is executed asynchronously, we should use WebSearch’s</p>
+<p><em>setSearchCompleteCallback()</em> method to specify the callback
+function where the repsonse will</p>
+<p>be processed once its been received by the browser.</p>
+<p>Access to the reponse data is acheived using WebSearch’s
+<em>results()</em> method, which</p>
+<p>contains an array of results of type <strong>GwebResult</strong>.
+GwebResult exposes a series of properties</p>
+<p>like <em>title</em> or <em>url</em> that provide us with the title of
+the page found and its URL, respectively.</p>
+<p>The following code is for the page in figure 33, which implements a
+personalized search</p>
+<p>control that uses simple HTML controls to iteract with the user:</p>
+<p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"</p>
+<p>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</p>
+<p>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</p>
+<p>&lt;head&gt;</p>
+<p>&lt;meta http-equiv="content-type" content="text/html;</p>
+<p>charset=utf-8"/&gt;</p>
+<p>&lt;style type="text/css"&gt;</p>
+<p>#searchcontrol .gsc-control { width : 400px; }</p>
+<p>&lt;/style&gt;</p>
+<p>&lt;script src="http://www.google.com/jsapi?key=</p>
+<p>ABQIAAAAL_EMEkkdOlc7VvLS2ScrhRT2yXp_</p>
+<p>ZAY8_ufC3CFXhHIE1NvwkxSNF3RR2EXs8VTzACmPCCglKJVMpQ"</p>
+<p>type="text/javascript"&gt;&lt;/script&gt;</p>
+<p>&lt;script type="text/javascript"&gt;</p>
+<p>//Loads the search</p>
+<p>google.load('search', '1.0');</p>
+<p>var searchControl;</p>
+<p>function search() {</p>
+<p>searchControl = new google.search.WebSearch();</p>
+<p>//process is the callback function</p>
+<p>searchControl.setSearchCompleteCallback(this,</p>
+<p>process);</p>
+<p>searchControl.execute("servers");</p>
+<p>}</p>
+<p>function process() {</p>
+<p><span id="index_split_001.html_51"></span> for (var i = 0; i &lt;
+searchControl.results.length;</p>
+<p>i++) {</p>
+<p>//For each result, it creates several customized</p>
+<p>//elements showing the info of each result</p>
+<p>var p = document.createElement('p');</p>
+<p>var a = document.createElement('a');</p>
+<p>var b = document.createElement('b');</p>
+<p>var c = document.createElement('c');</p>
+<p>a.href = searchControl.results[i].url;</p>
+<p>a.innerHTML = searchControl.results[i].title;</p>
+<p>b.innerHTML = "&lt;br&gt;" +</p>
+<p>searchControl.results[i].url;</p>
+<p>c.innerHTML = "&lt;br&gt;" + searchControl.results[i].</p>
+<p>content;</p>
+<p>//Builds a <em>tree of elements</em> with the results</p>
+<p>p.appendChild(a);</p>
+<p>p.appendChild(b);</p>
+<p>p.appendChild(c);</p>
+<p>document.getElementById("result").</p>
+<p>appendChild(p);</p>
+<p>}</p>
+<p>}</p>
+<p>&lt;/script&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body &gt;</p>
+<p>&lt;center&gt;&lt;h1&gt;Using the Google search
+control&lt;/h1&gt;</p>
+<p>Text to search: &lt;input type="text" id="text" /&gt;&lt;br /&gt;</p>
+<p>&lt;input type="button" onclick="search();" value="Search" /&gt;</p>
+<p>&lt;/center&gt;</p>
+<p>&lt;br /&gt;</p>
+<p>&lt;div id="result"&gt;&lt;/div&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p><strong></strong></p>
+<p><span id="index_split_001.html_52"></span><img src="index-52_1.jpg"
+class="calibre2" /></p>
+<p><strong>Figure. 33.</strong></p>
+<p><span
+id="index_split_001.html_53"></span><strong>SELF-TEST</strong></p>
+<p>1. A Web service implemented in Java and a client application
+communicates by:</p>
+<p>A. HTTP.</p>
+<p>B. RMI</p>
+<p>C. FTP.</p>
+<p>D. HTML</p>
+<p>2. The SOAP protocol defines:</p>
+<p>A. The programming language for implementing a Web service.</p>
+<p>B. The methods exposed by the service and the data types interchanged
+with</p>
+<p>client applications.</p>
+<p>C. The way in which the client should access the Web service.</p>
+<p>D. The format of the Web service’s request and response XML
+documents.</p>
+<p>3. Choose which of the following statements is INCORRECT</p>
+<p>A. It’s possible to develop a client application of a Web service,
+only having its</p>
+<p>WSDL document.</p>
+<p>B. A Web service developed in Java can be used from a .NET
+application.</p>
+<p>C. A Web service’s methods can only be accessed synchronously.</p>
+<p>D. A UDDI registry entry can be looked up from an application, using
+the UDDI</p>
+<p>API.</p>
+<p>4. Which of the following SOAP document elements is optional?</p>
+<p>A. Envelope</p>
+<p>B. Header</p>
+<p>C. Body</p>
+<p>D. Todos son opcionales</p>
+<p>5. The data types handled by a Web service are described in its
+interface document</p>
+<p>using:</p>
+<p>A. The native language with which the Web service is implemented.</p>
+<p>B. Specific tags from the SOAP specification.</p>
+<p>C. UDDI</p>
+<p>D. XML Schema</p>
+<p>6. The following code belongs to a servlet that uses a proxy object
+to invoke the</p>
+<p>methods of a Web service called SearchWS:</p>
+<p>public class TestServlet extends HttpServlet {</p>
+<p>//**missing line of code goes here</p>
+<p>private SearchWSservice service;</p>
+<p>protected void service(HttpServletRequest request,</p>
+<p>HttpServletResponse response)</p>
+<p>throws ServletException, IOException {</p>
+<p>response.setContentType("text/html;charset=UTF-8");</p>
+<p><span id="index_split_001.html_54"></span> PrintWriter out =
+response.getWriter();</p>
+<p>try {</p>
+<p>SearchWS proxy = service.getSearchWSPort();</p>
+<p>//rest of the servlet</p>
+<p>Which of the following would successfully complete the code
+(replacing the</p>
+<p>commented missing line)?</p>
+<p>A. @WebServiceRef(wsdlLocation = "dirección doc wsdl")</p>
+<p>B. @WebService(name= SearchWSservice);</p>
+<p>C. new SearchWSService();</p>
+<p>D. No code is missing</p>
+<p>7. To access the information returned by a Web service after calling
+its methods</p>
+<p>asynchronously:</p>
+<p>A. We should call the proxy object’s <em>result()</em> method.</p>
+<p>B. The <em>handleResponse()</em> method would have to be
+implemented.</p>
+<p>C. The proxy object would put the result in the variable marked with
+the @Result</p>
+<p>annotation.</p>
+<p>D. A subclass of WebService should be created.</p>
+<p>8. To make personalized searches from JavaScript code using the
+Google AJAX API,</p>
+<p>we need:</p>
+<p>A. A google.search.Searcher object.</p>
+<p>B. A google.search.GoogleMap object.</p>
+<p>C. A google.search.WebSearch object.</p>
+<p>D. A google object.</p>
+<p><span id="index_split_001.html_55"></span><strong>Proposed
+Exercises</strong></p>
+<p>1. Suppose you have a table of books with the following fields: isbn,
+title, author,</p>
+<p>pages. Create a Web service that exposes a method that, using the
+book’s ISBN,</p>
+<p>returns all its data. Then, create a console client application of
+the Web service</p>
+<p>that asks the user for an ISBN and displays the book’s data returned
+by the Web</p>
+<p>service.</p>
+<p> The method call should be asynchronous, so that when the client
+application is</p>
+<p>waiting for the result, the message “awaiting response” should be
+displayed every</p>
+<p>tenth of a second.</p>
+<p>2. Develop a Web application that, using one of the Web services
+published on</p>
+<p><a href="http://www.xmethods.org/">www.xmethods.org,</a> allows its
+users to send SMS messages to mobile phones.</p>
+<p><span id="index_split_001.html_56"></span><strong>Self-Test Answer
+Key</strong></p>
+<p>1.</p>
+<p>A</p>
+<p>2.</p>
+<p>D</p>
+<p>3.</p>
+<p>C</p>
+<p>4.</p>
+<p>B</p>
+<p>5.</p>
+<p>B</p>
+<p>6.</p>
+<p>A</p>
+<p>7.</p>
+<p>B</p>
+<p>8.</p>
+<p>C</p>
+<p> </p>
